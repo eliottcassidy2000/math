@@ -2,23 +2,24 @@
 id: THM-2811
 title: "Special-image linear intertwiner rigidity and JC degree wall"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Every output-compatible affine-linear substitution intertwining
-  the special-image contractions has matrices L,S satisfying L S^T=I.
-  Hence it can only embed, never lower, the number of variable pairs and it
-  preserves the separate derivative/coordinate top degrees.  The two
-  THM-2801 witnesses therefore cannot enter Zhao's xi-linear cubic or
-  separable quartic sectors through any such substitution.  Independently,
-  every admissible two-pole e=2 response has no totally ramified fibre, its
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every
+  output-compatible affine-linear substitution intertwining the
+  special-image contractions has matrices L,S satisfying L S^T=I.  Hence it
+  can only embed, never lower, the number of variable pairs and it preserves
+  the separate derivative/coordinate top degrees.  The two THM-2801
+  witnesses therefore cannot enter Zhao's xi-linear cubic or separable
+  quartic sectors through any such substitution.  Independently, every
+  admissible two-pole e=2 response has no totally ramified fibre, its
   potential has degree 2N and at least two projective roots.  Across the
   complete e=2 response layer, h=1 and h=3 are polynomializable while h=2
-  is not, but both polynomializable chambers have multiple projective
-  roots and hence miss the binary Hessian-nilpotent pure-power locus.  The
-  two degree-four boundary polynomials fail Hessian nilpotence explicitly.
+  is not, but both polynomializable chambers have multiple projective roots
+  and hence miss the binary Hessian-nilpotent pure-power locus.  The two
+  degree-four boundary polynomials fail Hessian nilpotence explicitly.
   Response and SIC cancellations do share an exact barycentric-stencil
   mechanism, but their residue alphabets and, crucially, their
   fixed-versus-growing grading are different.
 source: root/jc-sic-intertwiner-2026-07-28
+audit: thm2811-independent-hostile-audit-2026-07-28
 depends_on:
   - THM-2801-sharp-special-image-boundary-and-beta-shift-witness
   - THM-2796-balanced-response-stieltjes-pade-normal-form-and-one-double-zero-classification
@@ -32,13 +33,16 @@ script: 04-computation/sic_jc_intertwiner_response_stencil_thm2811.py
 output: 05-knowledge/results/sic_jc_intertwiner_response_stencil_thm2811.out
 script_sha256: 534fc539da0efeccd446f4f22ab84b425b4dc771c6012d76128b6d7b23f37ee0
 output_sha256: e8d61aab5ca40bc270afcf1e2ad818a917a2405a1627d31d8fd3adb79c3f5270
+independent_script: 04-computation/sic_jc_intertwiner_response_stencil_independent_audit_thm2811.py
+independent_output: 05-knowledge/results/sic_jc_intertwiner_response_stencil_independent_audit_thm2811.out
+independent_script_sha256: 8c6c586694d0733caab5acd789beac699d3e9cef78e75f6fbf233fae079f41a1
+independent_output_sha256: 96b2e568583f5761f7379c0e226a0f047d6bf3c202371bd6c35d1a6d6b828fc7
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2811 -- special-image linear intertwiner rigidity and JC degree wall
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 There is a real common mechanism behind the newest special-image and planar
 response calculations: both use a maximal-order Lagrange annihilator.  The
@@ -562,9 +566,9 @@ flux functional on a response should first be reduced modulo `M`; equation
 `(28)` shows that only its `x^r` remainder coefficient can survive
 (`r=N-1` in the two-pole chamber).
 
-## 6. Exact audit and scope
+## 6. Exact audits and scope
 
-The lightweight companion checks:
+The primary lightweight companion checks:
 
 1. the mixed contraction matrix `L S^T` on the generators;
 2. the two-pole fibre defects/potential degree and the complete
@@ -581,6 +585,21 @@ Run
 python 04-computation/sic_jc_intertwiner_response_stencil_thm2811.py
 python -O 04-computation/sic_jc_intertwiner_response_stencil_thm2811.py
 ```
+
+The independent companion does not import the primary.  It uses a direct
+monomial implementation of `E`, a separate rational-polynomial remainder
+engine, a different signed node family for `(28)`, and scalar symbolic
+Hessian calculations.  It checks the affine identity on a full small
+monomial box, all three passport ledgers, both quartic hostiles, and the
+stencil boundary in `20,163` exact gates.  Run
+
+```bash
+python 04-computation/sic_jc_intertwiner_response_stencil_independent_audit_thm2811.py
+python -O 04-computation/sic_jc_intertwiner_response_stencil_independent_audit_thm2811.py
+```
+
+Normal, optimized, and stored transcripts agree for both companions, and
+neither script contains an `assert` AST node.
 
 The finite controls support but do not replace the all-degree chain-rule,
 Riemann--Hurwitz, binary-harmonic, and Lagrange proofs.
