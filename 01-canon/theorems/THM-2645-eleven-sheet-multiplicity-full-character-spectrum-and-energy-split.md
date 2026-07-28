@@ -2,9 +2,7 @@
 id: THM-2645
 title: "Eleven-sheet multiplicity full-character spectrum and energy split"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
-  POST-PROMOTION PURITY/RETURN TRANSVERSALITY COROLLARY VERIFIED-EXACT,
-  AWAITING INDEPENDENT RE-AUDIT.  Let p be
+  PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.  Let p be
   odd, let S=F_p\A and T=F_p\B with A,B two-point sets, and let
   r=1_S*1_T be the two-edge representation multiplicity.  Every nonzero
   normalized Fourier coefficient satisfies
@@ -34,9 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2645 -- multiplicity restores every charged carry colour
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
-POST-PROMOTION PURITY/RETURN TRANSVERSALITY COROLLARY VERIFIED-EXACT,
-AWAITING INDEPENDENT RE-AUDIT.**
+**PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.**
 
 THM-2642 proves that two eleven-sheet relations on `C_13` have positive
 sections for every affine clutch.  Support has therefore become useless for
@@ -333,7 +329,10 @@ transition-count table is genuinely absent from current LRC canon.  Normal
 and optimized executions byte-match the stored transcript, and the declared
 LF-normalized hashes were independently reproduced.
 
-The post-promotion transversality corollary in Section 5 and its new exact
-guards await independent re-audit.
+An independent re-audit of the post-promotion transversality corollary
+recomputed `E_raw=1,129/1,131`, `delta=13,512/13,510`, the reversal
+Cauchy bound, the attained `max R=1,131`, and the sharp minimum deficit
+`12,379` across all `6,084` pairs.  It replayed normal and optimized modes,
+matched the stored transcript, and independently reproduced the new hashes.
 
 QED.
