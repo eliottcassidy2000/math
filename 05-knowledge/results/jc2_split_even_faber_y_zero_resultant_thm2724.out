@@ -1,0 +1,14 @@
+split even-Faber y-zero exact resultant
+flux_specialization=y=0:Z=q^4
+first_flux=G1=q*N1+7496192*lambda:degree_u1
+second_flux=N2:degree_u3:leading_u=-1190488992
+independent_paths=direct_resultant,linear_root_substitution:match=True
+resultant_content=505447028499293771
+primitive_q_degree=23:q_coefficients=12:monomials=34
+q_support=0,1,2,3,5,6,7,10,11,15,19,23
+leading_q23=96059601:parameter_independent_nonzero=True
+constant_q0=-992137445376*lambda^3:nonzero_when_lambda_nonzero=True
+primitive_digest=e50e733ec85df8c1aff2bf805a6442424b82b3c3dbb4cb5563cea363c9f7b6e0
+constant_field_consequence=q_constant_then_u_constant
+scope=EXACT_Y_ZERO_EVEN_FABER_BOUNDARY_NOT_ODD_BANK_NOT_JC2
+ALL CHECKS PASSED
