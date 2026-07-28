@@ -2,8 +2,8 @@
 id: THM-2809
 title: "Sharp labelwise eleven-label maximum on fourteen marked rails"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  On each of the first fourteen THM-2749 rails, scan the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On each of the
+  first fourteen THM-2749 rails, scan the
   full 104-member THM-2640 configuration bank.  A source-label-zero packet
   at carry 12 can meet the marked source deep band through only two half
   geometries.  The exact unit gate leaves the unique configuration
@@ -37,8 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2809 -- eleven labels survive exactly; twelve never do
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2797 excludes all forty-two maximal fixed-configuration attempts to
 attach a source-carry-twelve facet to THM-2749's marked semantic source, but
@@ -431,11 +430,11 @@ that the edge choices impose no extra cut.  It uses exact integer arithmetic,
 explicit exception gates, and no truth-bearing Python assertions or floating
 point.
 
-Promotion requires an immutable independent hostile audit of the
-label typing, strict circular half endpoints, full unit-bank classification,
-anchor polarity, pulled-back future-coordinate identity, delayed-prefix
-disjointness, twelve-face census, normal/optimized replay, dependency hashes,
-the positive eleven-face construction, all `2^11` edge choices, sharp
-cardinality/dimension wording, and documentation gates.
+An immutable independent hostile audit checked the label typing, strict
+circular half endpoints, full unit-bank classification, anchor polarity,
+pulled-back future coordinate, delayed-prefix disjointness, twelve-face
+census, the positive eleven-face construction, all `2^11` edge choices,
+dependency pins, normal/optimized/stored replay, LF hashes, and documentation
+gates.
 
-QED, pending independent hostile audit.
+QED.
