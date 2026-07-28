@@ -1,0 +1,13 @@
+MARKED D3 SIX-ROOT DETERMINANT TOURNAMENT AUDIT
+W(D3)_order=24 h_orbit=4 stabilizer=W(A2)=S3_order6
+half_Hadamard_edge_map=a12:23,b12:14,a13:24,b13:13,a23:34,b23:12
+pair_determinants=abs1:9,abs2:3,abs3:3 ties=0
+binary_opposite_pairs=a12-b12,a13-b13,a23-b23
+ternary_A2_pairs=a12-a13,a12-a23,a13-a23
+Smith_cokernels=trivial:9,Z2:3,Z3:3
+tournament_scores=(3,2,3,4,1,2) sorted=(1,2,2,3,3,4)
+directed_3cycles=6 Hamilton_paths=23 automorphisms=1
+chamber_parity=even:same,odd:converse
+unoriented_root_line_switching_class=32
+SCOPE=marked_oriented_frame_not_canonical_unmarked_tournament
+FAILED CHECKS: NONE
