@@ -1,0 +1,22 @@
+LRC14 FULLY MARKED ROOT-ZERO CLUTCH AND TARGET PROFILE
+status=PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT
+dependency_pins=LF-normalized count=7
+R=4826809 T=297836897838480 tau=7/4826809 shift_grid=431933040 deep_shift=14
+source_seam=H^R_12_intersect_H^L_0=(169,181)/182
+target_seam=H^R_0_intersect_H^L_1=(1,13)/182
+witness=47850889647341/100360982066072->47851035194197/100360982066072 deep=125553481/742586->799033/742586
+retained=two-sided common E3/lawful-(ell,s,t) section + D^6 Q_(3,{1,2}) + relative present + rail8 + h6/kappa1
+t_support=(3,4,5,6,7,8,9,10,11); zeros=(0,1,2,12); common_grid_mass=6320326320
+raw_source_target_vector=(0, 339633525654239542165440, 339633525654239542165440, 339633525654239542165440, 339633525654239542165440, 339633525654239542165440, 339633525654239542165440)
+C=339633525654239542165440 v13(C)=1 (C/26)_mod13=9
+root_profiles=source12:(9,0,0,0,0,0),det1 target1:(4,0,0,0,0,0),det1 gain=12=-1
+target_window=W=z^3+...+z^11 all_primitive_characters=12/12
+bezout_inverse=V=z^2+z^6+z^10 resultant_norm=1
+positive_three_section_circular_recombination=(3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)
+recombination_scope=coefficient-derived lawful t-tables; not three physical translates of one Boolean packet
+char13_target_unit=W(1)=9 det=1 inverse_V(1)=3 det=1
+formal_root_times_target_72d_determinants=(1, 1)
+inherited_unmarked_boundary=THM2744 target nonunits rails1,3; eleven gain-1 rails; rail13 gain8
+single_sheet_boundary=the natural U_(0,3) coefficients are unequal (profiles 5 versus 9); no single-sheet naturality
+SCOPE: one two-sided fully marked partial Cech clutch and coefficient target decoder; no global transporter, endpoint current, row exclusion, or LRC14
+ALL CHECKS PASSED
