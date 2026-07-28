@@ -85,7 +85,7 @@
     `12/13` cap for the full slope-seven family.  Carry-forgetting still turns
     thirteen disjoint `Delta^11`s into a false `boundary Delta^12`; do not infer
     pointwise endpoint emptiness or export the cap to another carrier.
-27g. **Projection labels are not physical emptiness.** THM-2744/2749 give overlap, not current. The `81`-label chamber has a `7 x 7` rectangle, unit target and gains `0/2/11`, but no carrier map. THM-2763's `(r,k,l)` address is `13^4` (`13^3` after loss), not THM-2625's plane or factor allocation. THM-2779's faithful `169`-state action is not a same-ancestry root lift; every `13`-root permutation kills the commutator.
+27g. **Projection labels are not physical emptiness.** THM-2744/2749 give overlap, not current; THM-2763's `13^4` address loses allocation. THM-2782's three positive arms are distinct atoms: all `567` opposite cofibres are disjoint and the nonzero determinant sector is virtual. THM-2779's degree-`169` Heisenberg model is not a same-ancestry root lift; THM-2788's physical odometer is modular, separated by carry Bockstein.
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211 and

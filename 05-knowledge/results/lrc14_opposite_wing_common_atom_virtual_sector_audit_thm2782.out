@@ -1,0 +1,19 @@
+THM-2782 OPPOSITE-WING COMMON-ATOM / VIRTUAL-SECTOR AUDIT
+dependency_sha256=(('lrc14_root_zero_full_target_semantic_clutch_20260728.py', '208f71020efa19fa47f66d2da061ab03fa7bc87beeb077b4008c069f499736d8'), ('lrc14_natural_single_sheet_root_zero_target_bank_20260728.py', '591241e912c452b1985c7fc700884183a6e50440a579e1d853123d276cd416a8'), ('lrc14_extended_carrier_endpoint_lib.py', '4b3f9f195b1634e1e84a1bc8bccb878a1c8c44aec13f24d197f92547c9e36c57'))
+aligned_object_typing=A=source_one_sided;B=pullback(target_one_sided);common=A_intersect_B;wings=(A_minus_B,B_minus_A)
+all_81x7_cells=decompositions:567/567;opposite_wing_intersections_empty:567/567
+nonempty_wing_supports=(source:193/567,target:193/567)
+natural_e1_one_sided_exact_matches=81/81;gain11_is_inherited_from_the_separate_canonical_sidecar
+selected_D=(0, 10, 3);first_failure_order=(shifted_E3,shifted_clock,shifted_q1,shifted_q2,shifted_c2,shifted_c3)
+selected_D_coefficients=(source:2853968755527296447040,target:5707937511054592894080,gain:2)
+selected_D_first_failure_masses=(source:(2188067024426754240, 0, 0, 0, 0, 0),target:(1458711349617836160, 0, 0, 0, 0, 0))
+selected_D_simultaneous_failure_masses=(source:(2188067024426754240, 0, 729355674808918080, 0, 1458711349617836160, 0),target:(1458711349617836160, 0, 0, 0, 1458711349617836160, 0))
+selected_D_geometry=(pieces:3/2,masses:2188067024426754240/1458711349617836160,chart_translate:False)
+field_1=prime:352341050142921841;dual_support:(641, 510);sector_q(1, 0)_Delta1_k0_l0:64970359711488738;edge_support:13/13
+field_2=prime:956354278959359281;dual_support:(641, 510);sector_q(1, 0)_Delta1_k0_l0:578986423856957328;edge_support:13/13
+representative_gauge_exhaustive=left_and_right:2197/2197
+fixed_carrier_gauge_hostiles=left:((0, 0), 0, 136208899724200714, 0);right:((0, 0), 0, 177701812651845879, 0)
+CHARACTERISTIC_ZERO_CERTIFICATE=NONZERO_IN_TWO_CERTIFIED_EXACT_ORDER_SPECIALIZATIONS
+STRONGEST_CONCLUSION=the_opposite_physical_wing_cofibres_cannot_supply_one_common_ancestry_(1,1)_allocation_atom;the_independent_endpoint_product_is_only_a_virtual_pullback_sector
+OPEN_SIDECAR=one_atom_dependent_one-sided/common_four-corner_lift_with_allocation_factor_origins_endpoint_origin_clock_semantic_owner_and_root-deck_intertwiner
+ALL EXACT CHECKS PASSED

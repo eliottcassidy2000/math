@@ -13,7 +13,10 @@ status: >
   coefficient fails to descend around that quotient and the adjacent
   low-digit cospan alternates zero/nonzero endpoint coefficients.  No full
   physical H13 action, allocated THM-2625 endpoint, chart/root transition,
-  row exclusion, or LRC(14) conclusion is proved.
+  row exclusion, or LRC(14) conclusion is proved.  Independently, all 567
+  aligned physical cells show that the two opposite wing cofibres never
+  share an atom; one exact gain-two endpoint product survives only as a
+  virtual determinant sector.
 source: root/semantic-arm-right-wing-attachment-2026-07-28
 audit: >
   audit-2782-2026-07-28 independently replayed normal, optimized, and stored
@@ -22,12 +25,20 @@ audit: >
   digit-action identities, central-lift spectrum, quotient-descent hostile,
   and adjacent-base cospan; and audited root-one/carry-six, inherited
   root-zero-gauge, and nonallocated-endpoint scope: ACCEPT.
+boundary_audit: >
+  jc-chart-entry/thm2782-opposite-wing-audit independently reconstructed all
+  81 labels and seven clocks, simultaneous factor failures, both complete
+  endpoint banks and their representative gauge, and the same virtual sector
+  in two certified exact fields.  Normal, optimized, and stored transcripts
+  agree: ACCEPT.
 depends_on:
   - THM-2712-semantic-following-congruence-lock-and-address-coboundary-descent
   - THM-2749-fully-marked-root-zero-clutch-and-target-character-profile
   - THM-2751-root-zero-clutch-mayer-vietoris-wing-shear
   - THM-2771-joint-c7-c13-right-wing-mixed-spectrum-and-commuting-square-no-go
   - THM-2779-bockstein-symplectic-decoder-frame-torsor-and-heisenberg-root-degree-gate
+  - THM-2763-carrier-equivariant-endpoint-address-extension-and-gauge-obstruction
+  - THM-2772-carrier-allocation-pullback-k4-segre-and-mixed-face-obstruction
 related:
   - THM-2657-odometer-carry-root-lift-nonsplit-extension-and-cech-cocycle
   - THM-2697-filtered-affine-handoff-germ-category-and-base-signature-holotopy-boundary
@@ -35,6 +46,10 @@ script: 04-computation/lrc14_semantic_arm_right_wing_central_digit_thm2782.py
 output: 05-knowledge/results/lrc14_semantic_arm_right_wing_central_digit_thm2782.out
 script_sha256: 7fbc6bb1ec303ded98eaad6e5d8205eb3d247258ada32b6f9904fc439ebb11fb
 output_sha256: 13f570d63f212808171cecdb4d8f9aa41884fbdc7ed571dbfe27122b412fadc4
+boundary_script: 04-computation/lrc14_opposite_wing_common_atom_virtual_sector_audit_thm2782.py
+boundary_output: 05-knowledge/results/lrc14_opposite_wing_common_atom_virtual_sector_audit_thm2782.out
+boundary_script_sha256: f696867c5242e86593de64f3ee7944bf44a3887e7818291ed059c7358f959c1a
+boundary_output_sha256: b0b3edf9c1b3eb986d5020557b47100acace9e94e0d42825aaa7ed2ca4eefb40
 hash_basis: LF-normalized bytes
 ---
 
@@ -385,7 +400,85 @@ THM-2640's carry coordinate; `v` is the mod-`169` address digit; and the
 selected packet has root one.  Congruence `(30)` supplies no map among these
 typed labels.
 
-## 8. Exact source, target, and remaining square
+## 8. Opposite wings never supply the common allocation atom
+
+There is a complementary all-chamber boundary.  In each of the `81` lawful
+full-target labels and seven physical clock sheets, align the target
+one-sided rail-eight carrier with the source chart.  Write
+
+```text
+A = source one-sided carrier,
+B = pullback(target one-sided carrier),
+M = A intersect B,
+L = A minus B,
+R = B minus A.                                             (31a)
+```
+
+The exact physical constructors agree with `(31a)` in all `567/567` cells.
+Exactly `193/567` left wings and `193/567` right wings are nonempty, but
+
+```text
+L intersect R = empty                                     (31b)
+```
+
+in every cell.  Thus the two **opposite wing cofibres** cannot realize one
+common-ancestry `(1,1)` vertex of THM-2772's allocation `K4`.  This does not
+obstruct the positive right-wing/semantic atoms in Sections 1--5, nor an
+atom-dependent one-sided/common lift.  The three positive arms above remain
+three distinct atoms, not one atom transported three times.
+
+The gain-two cell
+
+```text
+(sigma,t,e)=(0,10,3)
+```
+
+has exact source/target coefficients
+
+```text
+2853968755527296447040,
+5707937511054592894080 = 2 * source.                       (31c)
+```
+
+Under the declared ordered first-failure partition, both masses first fail
+at shifted `E3`.  That is not intrinsic factor purity.  The simultaneous
+failure masses are
+
+```text
+source: (2188067024426754240,0,729355674808918080,0,
+         1458711349617836160,0),
+target: (1458711349617836160,0,0,0,1458711349617836160,0), (31d)
+```
+
+in factor order `(E3,clock,q1,q2,c2,c3)`.  Source atoms also fail `q1,c2`,
+and target atoms also fail `c2`; a lawful future lift must retain the whole
+failure subset rather than only its first element.
+
+Separately allocating the two endpoint banks gives the sector
+
+```text
+(q,Delta,k,l)=((1,0),1,0,0)
+```
+
+with all `13` endpoint edges nonzero and values
+
+```text
+64970359711488738  mod 352341050142921841,
+578986423856957328 mod 956354278959359281.                 (31e)
+```
+
+The representative gauge passes on all `2197` cells of each bank; holding
+the carrier fixed fails.  Either nonzero exact-order specialization proves
+characteristic-zero nonvanishing.  Because `(31b)` forbids a shared physical
+atom, `(31e)` is precisely THM-2772's **virtual mixed face**, not a physical
+determinant current.
+
+The remaining positive object is now sharply typed: one ancestry atom must
+retain all four allocation amplitudes before Fourier, its complete factor
+signature, exact `(r,k,l,L,R)`, four endpoint-difference sectors, clock,
+semantic owner, carry, and the root-deck/Cech intertwiner.
+
+## 9. Exact source, target, and remaining square
 
 The result has the following invoice:
 
@@ -422,7 +515,7 @@ It is one of:
 3. a corrected `Y` cospan whose coefficient, not only its cylinder, glues
    across `(25)`.
 
-## 9. Exact companion and scope
+## 10. Exact companions and scope
 
 Run
 
@@ -435,6 +528,19 @@ Both modes byte-match
 
 ```text
 05-knowledge/results/lrc14_semantic_arm_right_wing_central_digit_thm2782.out.
+```
+
+The all-`567` boundary and two-field virtual sector replay independently via
+
+```bash
+python 04-computation/lrc14_opposite_wing_common_atom_virtual_sector_audit_thm2782.py
+python -O 04-computation/lrc14_opposite_wing_common_atom_virtual_sector_audit_thm2782.py
+```
+
+against
+
+```text
+05-knowledge/results/lrc14_opposite_wing_common_atom_virtual_sector_audit_thm2782.out.
 ```
 
 The companion uses exact integers and `Fraction`s.  It reconstructs the
@@ -457,5 +563,11 @@ the two cospan mismatches.  It also verified that the selected target is
 literally root one/carry six, while root zero is only the inherited clutch
 gauge, and that the central segment is not an allocated endpoint-origin orbit.
 No defect remained.
+
+The second independent audit additionally reconstructed every aligned
+one-sided/common/wing decomposition, simultaneous failure signature,
+representative-gauge cell, and both exact-field sector images.  It found the
+opposite-wing obstruction and virtual-sector survivor stated in Section 8,
+with no further defect.
 
 QED.
