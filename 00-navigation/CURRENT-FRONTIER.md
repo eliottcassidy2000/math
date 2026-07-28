@@ -125,9 +125,12 @@ Post-THM-2602 canon separates four `F_13` axes. Audited THM-2605 gives one affin
 
 Audited THM-2615 proves physical-diagonal restriction kills the relation lattice in every target class: the THM-2334 consumer is an independent present/conjugated-bare-endpoint square with a Radon diagonal, not a chronological future shift. Audited THM-2618 gives the THM-2537 selected source a presentation-relative Möbius orbit and free thirteen-atom spectrum, but MISTAKE-300 keeps THM-2569's distinct whole head `A_h(x)A_h(T^N x)` frozen.
 
-Audited THM-2614 gives dense punctured same-event cosupport but no deck. Candidate THM-2616 has a positive framed cross-time diagonal `q'=h`, yet omits digits `0,12`. Audited THM-2619's PSL2(F13) norm cycles seven decks and its Bruhat wall is target-zero. Provisional THM-2620 exposes endpoint-pair transvection data discarded by target difference, but is not a proved dependency.
+Audited THM-2614 gives dense same-event cosupport but no deck; audited THM-2616's positive cross-time diagonal structurally loses digits `0,12` to its guard.
+Audited THM-2619 cycles seven decks.  Audited THM-2620 restores the endpoint pair and determinant erased by target difference.
+Audited THM-2625 proves the canonical current fills all `28,561` endpoint cells and all `2,016` nondegenerate parabolic sectors.
 
-The target is a labelled orbit of `A_h(x)A_h(T^N x)`, an independent present/bare square before Radon restriction, and a nonzero fixed frequency or THM-2573 logarithmic normal at an allowed deep offset, all with adjacent clock, positivity, and semantic endpoint. Marginals, numerical diagonals, and projective identities do not suffice. No row is removed; ledger `165`.
+The target remains a positive chronological whole-head lift preserving one THM-2625 sector through adjacent clocks to a semantic root.
+Marginals and numerical diagonals do not suffice.  No row is removed; `165`.
 
 ### Independent routes that remain live
 

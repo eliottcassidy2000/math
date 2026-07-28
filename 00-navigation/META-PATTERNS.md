@@ -98,7 +98,9 @@
 **Trigger / action:** when a diagonal moment or total count is said to encode a multigraded target, expose the omitted grading or add an observer; test translates preserving the diagonal but changing the target.
 **Mechanism:** diagonalization fixes a hidden conservation law: `CT[P^m Pbar^m]` sees augmentation zero, while mixed `CT[P^r Pbar^s]` restores grade `r-s`.
 **Counterindication:** the diagonal suffices only when the target is proved invariant under the discarded grade.
-**Evidence:** MISTAKE-226/209, THM-2352's q-adic plateau spectrum, and audited THM-2615's present/bare-endpoint Radon square. Provisional THM-2620 is a current test case, not yet evidence: its target difference discards a determinant/endpoint-origin coordinate and awaits final audit.
+**Evidence:** MISTAKE-226/209, THM-2352, and audited THM-2615/2620/2625:
+target difference loses endpoint origin/determinant, while the restored joint
+current fills every cell and every admissible parabolic sector.
 
 ## A local factorization transfers only through a stated functor
 
