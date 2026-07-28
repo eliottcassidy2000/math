@@ -1,0 +1,27 @@
+THM-2796 BALANCED RESPONSE STIELTJES-PADE CLASSIFICATION
+N=1:all_dessins=1,genuine=1,passports=1,noncyclic=0
+N=2:all_dessins=3,genuine=2,passports=2,noncyclic=0
+N=3:all_dessins=3,genuine=3,passports=3,noncyclic=2
+N=4:all_dessins=7,genuine=6,passports=6,noncyclic=5
+N=5:all_dessins=10,genuine=10,passports=9,noncyclic=9
+N=6:all_dessins=26,genuine=25,passports=18,noncyclic=24
+N=7:all_dessins=49,genuine=49,passports=24,noncyclic=48
+N=8:all_dessins=127,genuine=126,passports=44,noncyclic=125
+e0_cyclic_census_rows=8
+eh1_full_symmetric_census_rows=6
+e1h2_chord_census_rows=15
+cyclic_symbolic_family_rows=10
+symmetric_symbolic_family_rows=9
+chord_symbolic_family_rows=25
+smallest_genuine_noncyclic_degree=3
+smallest_noncyclic_F=(x-1)^2(x+2)/x^3
+smallest_noncyclic_V=x^5(x+2)/9
+balanced_factor_Stieltjes_identity=PASS
+differentiated_Heine_Stieltjes_operator=PASS
+constant_numerator_Pade_identity=PASS
+weighted_moments_through_rminus1=ZERO
+first_active_moment=lambda^-1*2kappa
+exact_square_prefix_defect_degree=r+2
+assert_nodes=0
+exact_gates=1485
+FAILED CHECKS: NONE

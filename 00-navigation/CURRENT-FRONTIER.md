@@ -401,9 +401,10 @@ Classify profiles under support operations; study analytic continuation and auto
   `V(F')^2=4kappa^2F`, equivalently `F=VG^2` and
   `2VG'+V'G=2kappa`.  Double roots of `V` are impossible, every squarefree
   `V` is linear, and every mixed survivor has a clean three-value passport
-  with `h<=e+1`.  The linear boundary, repeated-root passports, intersection
-  with the two flux equations, nonpolynomial prefixes, and chart entry remain
-  open.
+  with `h<=e+1`.  THM-2796 proves `F'/F=C/(SET)`, the moment/square-defect
+  law, and the all-degree `e<=1` classification; passport data first collide
+  at `N=5,e=2`.  Its carrier is `A(R_Q/q)=VG=lambda SET`.  Degree 26,
+  `e>=2`, flux intersection, nonpolynomial prefixes, and chart entry are open.
 
   This is not `JC(2)`: arbitrary Keller pairs need not enter this quartic,
   split polynomial exact-prefix chart.  Nonsplit and nonpolynomial-prefix
