@@ -1,0 +1,9 @@
+THM-2705 polynomial-graph linear target planes containing d
+Jac(alpha*A+beta*B,d)=2*((alpha-beta*y)*f_x+(alpha*x-beta*f)*f_y)
+beta=0:f=(kappa/(2*alpha))*x+H(y-x^2/2);triangular automorphism
+alpha=0,beta!=0:EMPTY by scaled LND/divergence contradiction
+mixed:q^2=-alpha/beta;h=kappa/(2*beta*q);P=(h-g)g_t-(q^2+qx+t)g_x-qg
+mixed_solutions=f_plus:-q^2*x+q*y+q^3-h;f_minus:-q^2*x-q*y+h-q^3
+degree_gate=r>=3 unique 2r-1 term;r=2 polynomial Riccati;linear roots 0,-q,-2q
+mixed_inverse_checks=plus:PASS;minus:PASS;square_root_gauge=SWAP
+ALL CHECKS PASSED

@@ -1,5 +1,11 @@
 # Script Results Index
 
+- `jacobian_s4_polynomial_graph_mixed_d_planes_thm2705.py` -> matching `.out`
+  [THM-2705 PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
+  HOSTILE AUDIT].  Every linear target plane containing `d` is classified on
+  arbitrary polynomial graphs: the scaled pure-`A` triangular family, the
+  empty pure-`B` direction, and exactly two affine mixed solutions.  Hashes:
+  `cfaf4135` / `2a7ae1bc`.
 - `jacobian_danielewski_s3_resolvent_thm2700.py` -> matching `.out`
   [THM-2700 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  For
   `R_g=C[x,r,s]/(rs-g)`, the exact `S3` quotient is
