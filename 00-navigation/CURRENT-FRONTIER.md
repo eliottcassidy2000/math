@@ -345,13 +345,19 @@ Classify profiles under support operations; study analytic continuation and auto
   `S_(F o F)=V(LH)` with `L,H` distinct irreducibles.  Composite
   discriminant parity is exact on three slices (`H` odd, `L` even) but remains
   outside global canon; all higher component counts remain open.
-  For G1, THM-2598/MISTAKE-297 leave `D4,A4,S4`.  THM-2627 forces `D4` to
-  have at least two Jelonek components; THM-2628 classifies deck-pole
-  opposite-pair ownership.  THM-2633's separation/two-component form is
-  **RESERVED**.  Corrected THM-2621 gives the marked-quartic PDE and
-  sheet-defect poles.  Its trace is `d Tr(H)`; a shear forces `H-tau(H)` polar
-  at any chosen deck-pole prime, but exactness kills residues.  No
-  contradiction follows.
+  For G1, THM-2598/MISTAKE-297 originally left `D4,A4,S4`.
+  [THM-2633](../01-canon/theorems/THM-2633-derangement-character-obstruction-and-d4-keller-exclusion.md)
+  now excludes `D4` geometric monodromy for polynomial Keller maps in every
+  dimension: openness and constant source units force an inertia-fixed finite
+  branch over every divisor, while the nonzero source-deck character is
+  supported entirely on derangements.  The live quartic list is therefore
+  `A4,S4`.  Moreover `A4` character support must occur on a three-cycle
+  component with `k=1`, while `S4` sign support must occur on a transposition
+  component with `k=1` or `2`.  THM-2612/2627/2628's `D4` pole, character,
+  and opposite-pair ledgers remain exact near-miss controls but are no longer
+  a live lane.  Corrected THM-2621's exact trace and zero residues explain why
+  residue refinement was downstream of the simpler image-incidence
+  contradiction.  No `A4/S4`, `JC(2)`, or `DC(2)` closure follows.
   THM-2465 makes the affine point-cap face planar degree four; G1 remains open.
   At degree eighteen, THM-2314/2316 close sparse supports,
   THM-2371/2376 close `H_2`, and audited THM-2406 forces THM-2389's `H_4`
