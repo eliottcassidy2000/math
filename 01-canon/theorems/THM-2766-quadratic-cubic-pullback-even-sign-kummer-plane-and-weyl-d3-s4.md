@@ -2,8 +2,8 @@
 id: THM-2766
 title: "Quadratic-cubic pullback, even-sign Kummer plane, and the Weyl D3=S4 coincidence"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Let R have three distinct nonzero roots t_i and let H(V)=R(V^2).
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let R have three
+  distinct nonzero roots t_i and let H(V)=R(V^2).
   Its ambient signed-root symmetry is B3=C2^3 semidirect S3.  If t1*t2*t3
   is a square in the base field, the six-root discriminant is a square and
   monodromy lies in the even-sign subgroup W(D3)=V4 semidirect S3, which
@@ -31,8 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2766 -- the binary pullback over a ternary resolvent
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The recurring primes two and three have an exact common carrier here.  A
 quadratic pullback of a cubic has three binary root pairs.  Its unconstrained
@@ -224,7 +223,7 @@ subspaces of `F2^3`, verifies the rank-two/product relation has annihilator
 quartic specialization on all `210` distinct root quadruples in `[-4,5]`.
 
 ```text
-PROVED HERE (candidate):  signed-wreath ambient group for R(V^2);
+PROVED HERE:              signed-wreath ambient group for R(V^2);
                           Kummer rank/sign-kernel dictionary;
                           product-square even-sign cut;
                           exact discriminant formula;
@@ -240,4 +239,4 @@ NOT PROVED:               a free-product PSL2(Z) action;
                           JC(2), DC(2), or LRC(14).                       (19)
 ```
 
-QED (candidate).
+QED.
