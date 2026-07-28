@@ -20,6 +20,9 @@ composition, and edge restriction coexist.
   oriented common-middle return.
 - **Canonical hostile:** THM-2642.  Every affine clutch has positive support,
   so support alone cannot select a carry or origin.
+- **Closest physical selector:** THM-2640.  The predecessor carry gives a
+  private singleton root in every refined cell, but it is target-neutral;
+  covariance would require the unsupported clutch `c->c+7 delta`.
 - **Corrected near miss:** THM-2645.  Exact representation multiplicity has
   all twelve charged `C13` characters, but retains a free common-origin
   gauge and is not a physical transition table.
@@ -103,14 +106,18 @@ matching graph a measurable LRC subset.
 
 ## 5. Cheapest decisive test
 
-For one exact surviving row and one THM-2549 same-base chronology cell:
+For one exact surviving row, refine a THM-2549 same-base chronology cell by
+the physical predecessor carry of THM-2640, and then:
 
-1. enumerate the induced common-origin histogram `mu(u)` on `C13`;
+1. enumerate the induced common-origin histogram `mu(u)` on `C13`, retaining
+   the same carry observer at both adjacent clocks;
 2. print exact `M,E,delta,R`, retaining the common middle and orientation;
 3. test `E=M^2` and `R>delta` before any Fourier scalarization;
-4. if the branch lands, reconstruct `(A,B)` by (2) and test whether both
+4. verify that the selected root commutes with the lawful target action,
+   rather than imposing the missing `c->c+7 delta` clutch;
+5. if the branch lands, reconstruct `(A,B)` by (2) and test whether both
    THM-2648 edge indicators are events in the original sigma-algebra;
-5. if it fails, preserve the first failed predicate: impurity, absent return,
+6. if it fails, preserve the first failed predicate: impurity, absent return,
    gauge mismatch, or nonmeasurable edge restriction.
 
 A positive result would compose existing theorems into a genuine carry
