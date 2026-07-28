@@ -12,6 +12,15 @@
   is neutralized.  All eleven odd Faber seeds `E1,E3,...,E21` were set to
   zero; the scout is neither the full split branch nor `JC(2)`.  Hashes begin
   `1bbadb90` / `2c22072a`.
+- `jacobian_s4_affine_plane_linear_projection_thm2699.py` -> matching `.out`
+  [THM-2699 PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
+  HOSTILE AUDIT].  The adjugate identity classifies every affine source plane
+  and affine-linear rank-two target projection of the THM-2696 quotient with
+  nonzero constant planar Jacobian.  Exactly three projective families
+  survive, and each has a displayed triangular polynomial inverse; nonlinear
+  source/target slices and general `JC(2)` remain open.  Raw `F_5/F_7`
+  censuses reproduce all `976/4572` survivors.  Hashes begin
+  `d53a81c3` / `709f5487`.
 - `jc2_degree22_full_support_order12_toric_hensel.py` -> matching `.out`
   [THM-2692 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
   order-eleven terminal equations descend through the lossless simultaneous-

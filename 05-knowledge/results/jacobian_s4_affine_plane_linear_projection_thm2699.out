@@ -1,0 +1,10 @@
+THM-2699 affine-plane/linear-projection Keller slice classification
+adjugate=[[2*y, 2, 4*x], [2*z, 2*x, 4*x**2], [0, 0, 4*x*y - 4*z]]
+universal_K=2*l1*n1*y + 2*l1*n2*z + 2*l2*n1 + 2*l2*n2*x + 4*l3*n1*x + 4*l3*n2*x**2 + 4*l3*n3*x*y - 4*l3*n3*z
+families=I:n2=0,n1*n3!=0,ell~e2;II:n~e1,ell1=0;III:n~(a^2,ab,b^2),ell~(b^2,a^2,0)
+triangular_jacobians=I:2;II:2*(L2 + 2*L3*x0);III:2*(a**3 + b*delta)/a
+F_5:raw_nonzero_constant=976:I=320:II=400:III=256
+F_7:raw_nonzero_constant=4572:I=1512:II=1764:III=1296
+zero_boundaries=II:L2+2*L3*x0;III:a^3+b*delta
+nonlinear_constant_different_slice=outside_affine_plane_scope
+ALL CHECKS PASSED
