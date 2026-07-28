@@ -1,0 +1,14 @@
+LRC14 PAIRED QUARTER-TURN DEBT LOCAL-SYSTEM AUDIT
+status=PROVED-ELEMENTARY ALGEBRA + VERIFIED-EXACT CONNECTION
+integral_quarter_turn=((0, -1), (1, 0)) square=((-1, 0), (0, -1)) symmetric_sum=((0, 0), (0, 0))
+rank_one_GL1Z_symmetric_sums=(-2, 2)
+C17_phase_orbit=(4, 1, 13, 16, 4) i17=13 i17^2=-1 inverse_sum=0
+endpoint_ghost_unsigned_incidence=((1, 1), (1, 1)) reflection_quotient_multiplier=2
+Phi7_F13_factors=((1, 3, 1), (1, 5, 1), (1, 6, 1))
+conditional_BABA_unit_product=(9, 2, 8, 7, 6, 9)
+unit_component_data=((3, (7, 0), 12, (12, 0), (11, 0)), (5, (4, 5), 168, (8, 0), (0, 0)), (6, (5, 4), 28, (12, 0), (11, 0)))
+middle_component_quarter_turn=i13=8 i13^2=-1 inverse_sum=0
+integral_J_reductions=roots13=(5, 8) roots17=(4, 13) roots221=(21, 47, 174, 200) selected_i221=47
+loss_ledger=quarter cancellation uses signed/local coefficients; middle Phi7 projection discards the other two components; the four unit rows have no proved transport
+SCOPE: no nonnegative current, semantic cospan, row exclusion, or LRC14 conclusion
+ALL CHECKS PASSED
