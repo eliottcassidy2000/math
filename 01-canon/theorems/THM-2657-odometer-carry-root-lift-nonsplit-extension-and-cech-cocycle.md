@@ -1,5 +1,5 @@
 ---
-id: THM-2656
+id: THM-2657
 title: "Odometer carry/root lift, nonsplit extension, and Cech cocycle"
 status: >
   RESERVED / UNPROVED EMPTY STUB.  Namespace reservation only for the exact
@@ -10,7 +10,7 @@ source: carry-transition-cell-2026-07-28-odometer-clutch
 depends_on: []
 ---
 
-# THM-2656 -- reserved odometer carry/root lift and Cech cocycle
+# THM-2657 -- reserved odometer carry/root lift and Cech cocycle
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
