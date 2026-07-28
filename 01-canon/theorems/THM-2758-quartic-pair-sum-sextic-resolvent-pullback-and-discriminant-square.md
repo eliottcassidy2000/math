@@ -2,8 +2,8 @@
 id: THM-2758
 title: "Quartic pair-sum sextic, resolvent pullback, and discriminant square"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For a monic quartic with elementary root functions e1,e2,e3, the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a monic
+  quartic with elementary root functions e1,e2,e3, the
   sextic whose roots are its six pair sums becomes, after translation by
   e1/2, the quadratic pullback of the standard cubic resolvent translated by
   e1^2/4-e2.  With lexicographic edge ordering its Vandermonde is exactly the
@@ -14,6 +14,10 @@ status: >
   -4,-2,0,0,2,4.  This is a universal quartic identity, not a Keller
   exclusion.
 source: a4-resolvent-next-gate-scout-2026-07-28
+audit: >
+  root/2026-07-28 (independent pullback, resolvent convention,
+  Vandermonde sign, characteristic scope, separability boundary, hostile,
+  and normal/-O/LF-hash replay: ACCEPT)
 depends_on: []
 related:
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
@@ -30,8 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2758 -- the quartic pair-sum sextic is a resolvent pullback
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2753 and THM-2756 describe the six edges of a four-sheet set at the level
 of finite representations.  Edge complementation produces three opposite
@@ -279,7 +282,7 @@ The generic row `(0,1,3,7)` and hostile `(20)` are printed explicitly.
 ## 7. Boundary ledger
 
 ```text
-PROVED HERE (candidate):  exact centered pair-sum/resolvent pullback;
+PROVED HERE:              exact centered pair-sum/resolvent pullback;
                           explicit integral standard resolvent convention;
                           disc(resolvent)=disc(quartic);
                           signed edge Vandermonde=disc(quartic)*T;
@@ -296,4 +299,4 @@ NOT PROVED:               a new restriction on arbitrary quartics;
                           JC(2), DC(2), or LRC(14).                       (22)
 ```
 
-QED (candidate).
+QED.
