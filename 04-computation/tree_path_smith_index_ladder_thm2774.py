@@ -166,6 +166,7 @@ def main():
             frame_histogram[(dimension, value)] += 1
 
     canonical_frames = 0
+    torus_kernel_points = 0
     for length in range(2, 14):
         frame = path_frame(length)
         value = abs(determinant(frame))
@@ -176,6 +177,14 @@ def main():
                 "path Smith frame lost its primitive codimension-one minor")
         require(all(sum(row) % length == 0 for row in frame),
                 "path frame stopped lying in the sum-mod-k kernel")
+        diagonal_kernel = tuple(tuple([residue] * length)
+                                for residue in range(length))
+        require(all(all(sum(frame[row][column] * point[column]
+                                for column in range(length)) % length == 0
+                            for row in range(length))
+                        for point in diagonal_kernel),
+                "a diagonal k-torsion point left the torus kernel")
+        torus_kernel_points += len(diagonal_kernel)
         canonical_frames += 1
 
     tree_controls = 0
@@ -252,6 +261,14 @@ def main():
             and abs(determinant(ternary)) == 3,
             "binary/ternary first frames changed")
 
+    p4_roots = b_roots(3) + ((1, 1, 1),)
+    p4_minor_histogram = Counter(
+        abs(determinant(selection))
+        for selection in combinations(p4_roots, 3)
+    )
+    require(p4_minor_histogram == Counter({1: 73, 2: 25, 0: 19, 3: 3}),
+            "P4 arithmetic-frame spectrum changed")
+
     histogram_text = ";".join(
         f"m{dimension}:" + ",".join(
             f"det{value}={frame_histogram[(dimension, value)]}"
@@ -274,11 +291,14 @@ def main():
     print("B_frame_histogram=" + histogram_text)
     print(f"canonical_path_frames_k2_to_k13={canonical_frames}")
     print("path_frame_Smith=diag(1^(k-1),k) quotient=sum_mod_k")
+    print(f"torus_diagonal_kernel_points_k2_to_k13={torus_kernel_points}")
+    print("torus_kernel={(j/k,...,j/k):j_mod_k}")
     print(f"recursive_tree_controls_n2_to_n8={tree_controls}")
     print(f"geodesic_frames={geodesic_frames} full_ambient_extensions={full_extensions}")
     print("geodesic_length_histogram=" + length_text)
     print("partial_cube_map=root_path_indicators endpoint_support=tree_distance")
     print("binary_frame=k2_det2 ternary_first_long_frame=k3_det3")
+    print("P4_full_minor_histogram=det0:19,det1:73,det2:25,det3:3")
     print("diameter>=p supplies a frame quotient Z/p")
     print("SCOPE: frame-local lattice cokernels; not PSL2Z or graceful existence")
     print("FAILED CHECKS: NONE")

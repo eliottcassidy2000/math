@@ -7,8 +7,9 @@ status: >
   Smith form.  A k-edge tree geodesic, however, canonically combines k-1
   D-root differences with its endpoint A-root to give Smith form
   diag(1^(k-1),k), with explicit quotient the signed coordinate sum mod k.
-  Off-path coordinate roots extend this to a full ambient frame.  Thus the
-  first nonstar path P4 carries the first Z/3 defect, and diameter at least p
+  Dually, its torus kernel is the k-point diagonal torsion fibre.  Off-path
+  coordinate roots extend this to a full ambient frame.  Thus the first
+  nonstar path P4 carries the first Z/3 defect, and diameter at least p
   supplies a Z/p frame quotient.  These are frame-local partial-cube lattice
   cokernels, not PSL2(Z), graceful existence, Keller, or LRC(14).
 source: a4-resolvent-next-gate/tree-path-smith-index-2026-07-28
@@ -21,8 +22,8 @@ related:
   - THM-2768-modular-c2-c3-quotients-to-a4-s4-and-bass-serre-cycle-ranks
 script: 04-computation/tree_path_smith_index_ladder_thm2774.py
 output: 05-knowledge/results/tree_path_smith_index_ladder_thm2774.out
-script_sha256: 9465218e665e6caac850188f3755d62a3a574b00aa86d651a6f978595a358457
-output_sha256: 78b30726198f7bdc1d7218c4b227995c0e3032bc5751a88d5379b75fbb7f32e0
+script_sha256: cb03096719be3bb157969a680a92b59f700a6615e9a9d1b19ed76597f26bb296
+output_sha256: 451962ea3951719f1876dde80c660d26b55328d3610614f6aba8d5edaf97ba60
 hash_basis: LF-normalized bytes
 ---
 
@@ -169,6 +170,18 @@ Smith(C_k)=diag(1^(k-1),k),
 Z^k / rowspan_Z(C_k) isomorphic_to Z/k.                 (13)
 ```
 
+The dual root-of-unity picture is equally explicit.  On the additive torus
+`T=R/Z`, equations `C_k theta=0` first force
+`theta_1=...=theta_k=t`, and the last row forces `kt=0`.  Hence
+
+```text
+ker(C_k:T^k -> T^k)
+ ={(j/k,...,j/k):j in Z/k}.                              (13a)
+```
+
+So the Smith defect is literally a `k`-point common-root fibre, not merely
+an abstract determinant.
+
 This is the promised source-to-target map.  In the original edge gauge, the
 rows in `(9)` become `+/-e_i +/-e_(i+1)`, still lawful `D` roots, and the
 last row becomes the actual endpoint root `(4)`.
@@ -204,6 +217,20 @@ binary signed-pair defect: Z/2,
 ternary long-path defect:  Z/3.                          (16)
 ```
 
+Dually, `(8)` has the two diagonal torus points `0,1/2`, while `(15)` has
+the three diagonal points `0,1/3,2/3`.  Among all `120` triples of the ten
+distinct `P4` clutch normals, the complete determinant histogram is
+
+```text
+det 0:19,              det 1:73,
+det 2:25,              det 3:3.                         (16a)
+```
+
+The three index-three frames are the three spanning-tree choices of two
+difference roots on the three edge coordinates, together with the long-path
+root.  This makes the ternary fibre robust under the choice of comparison
+tree, but still frame-local.
+
 This is the lattice-index shadow of the rank-three `D3=A3` coincidence in
 THM-2766.  It is not that theorem's `V4 semidirect S3` action: `(16)` consists
 of two selected-frame cokernels, with no multiplication or monodromy action
@@ -226,8 +253,9 @@ there is no theorem here that only two and three can occur.
 The frame construction preserves:
 
 - the chosen tree geodesic and its partial-cube cut coordinates;
-- the exact `A` endpoint wall and `D` comparison walls;
-- the integral frame index and the explicit cyclic character `(11)`;
+  - the exact `A` endpoint wall and `D` comparison walls;
+  - the integral frame index and the explicit cyclic character `(11)`;
+  - the diagonal torsion fibre `(13a)`;
 - every prime divisor of the path length.
 
 It destroys the rest of the hyperplane arrangement, polynomial coefficient
@@ -257,14 +285,16 @@ for `m<=5`; all `26,431` nonsingular frames satisfy `(7)`.  It verifies
 `(10)--(13)` for `2<=k<=13`, and on all `5,913` recursive trees through
 eight vertices it checks `118,004` geodesic frames, their partial-cube
 supports, their full ambient extensions, and the complete shorter-path
-ladder inside every diameter.  Normal and optimized runs byte-match the
-stored transcript.
+ladder inside every diameter.  It also checks the diagonal torus kernels for
+`2<=k<=13` and the full `P4` minor histogram `(16a)`.  Normal and optimized
+runs byte-match the stored transcript.
 
 ```text
 PROVED HERE (candidate):  elementary two-Smith form for every pure-B frame;
                           partial-cube endpoint-root map;
                           path frame determinant and Smith form;
                           explicit quotient sum mod k;
+                          exact diagonal k-torsion torus kernel;
                           full ambient extension;
                           P4 first Z/3 defect;
                           all path lengths/prime divisors through diameter.

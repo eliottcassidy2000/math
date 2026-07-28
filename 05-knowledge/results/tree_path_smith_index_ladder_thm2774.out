@@ -4,11 +4,14 @@ B_nonzero_Smith=diag(1,...,1,2,...,2)
 B_frame_histogram=m1:det1=1;m2:det1=5,det2=1;m3:det0=16,det1=49,det2=19;m4:det0=682,det1=729,det2=406,det4=3;m5:det0=27912,det1=14641,det2=10402,det4=175
 canonical_path_frames_k2_to_k13=12
 path_frame_Smith=diag(1^(k-1),k) quotient=sum_mod_k
+torus_diagonal_kernel_points_k2_to_k13=90
+torus_kernel={(j/k,...,j/k):j_mod_k}
 recursive_tree_controls_n2_to_n8=5913
 geodesic_frames=118004 full_ambient_extensions=118004
 geodesic_length_histogram=k2=50296,k3=40500,k4=20200,k5=5984,k6=960,k7=64
 partial_cube_map=root_path_indicators endpoint_support=tree_distance
 binary_frame=k2_det2 ternary_first_long_frame=k3_det3
+P4_full_minor_histogram=det0:19,det1:73,det2:25,det3:3
 diameter>=p supplies a frame quotient Z/p
 SCOPE: frame-local lattice cokernels; not PSL2Z or graceful existence
 FAILED CHECKS: NONE
