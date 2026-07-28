@@ -136,11 +136,11 @@ current fills every cell and every admissible parabolic sector.
 
 **Trigger:** quotienting, projecting, folding, taking moments, or replacing an object by an invariant.
 **Action:** name the next consumer, preserved predicate, lost coordinate, and legal sidecar; test that consumer on the quotient kernel.
-**Mechanism:** a kernel is gauge only when every consumer kills it. Otherwise retain a separating response or a termination, height, depth, constant-field, or affine-origin coordinate. THM-840 gives linear repair rank `dim N(ker R)`; THM-2355 gives the quadratic phase repair.
+**Mechanism:** a kernel is gauge only when every consumer kills it. Otherwise retain a separating response or a termination, height, depth, constant-field, affine-origin, or central-height coordinate. THM-840 gives linear repair rank `dim N(ker R)`; THM-2355 gives the quadratic phase repair.
 **Counterindication:** no sidecar is needed when every consumer factors through the quotient; autocorrelation alone can still miss a full-support array.
 **Evidence:** THM-840/2355; THM-2237/2240 (defect rank); THM-2163/2174/2228
 (carry/termination); THM-2411/2419 (fixed origin); and corrected
-THM-2621/MISTAKE-301 (trace loses branch residues and the `D_4` action potential).
+THM-2621/MISTAKE-301 (trace loses branch residues and the `D_4` action potential); and THM-2646/HYP-2033 (the ordinary braid centre changes knot closure, while the annular LRC centre is target-invisible only after a literal descent check).
 
 ## After a scalar quotient, choose between a coherent lift and orbit incidence
 

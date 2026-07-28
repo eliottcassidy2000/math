@@ -2,8 +2,8 @@
 id: THM-2646
 title: "Braid-three modular central pullback and full-twist knot fibre"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING FINAL EVIDENCE AUDIT.
-  The exponent/modular map identifies B3 with the fibre product
+  PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.  The
+  exponent/modular map identifies B3 with the fibre product
   PSL2(Z) x_(C6) Z and classifies its conjugacy classes.  The missing integer
   central height is sharp: two shortest knot-closing lifts over one exact
   modular point close to the unknot and trefoil, and one modular fibre
@@ -16,12 +16,14 @@ status: >
   Markov stabilization, and proves no LRC, G1, JC, DC, or knot-additivity
   conjecture.
 source: root-2026-07-28-braid-modular-central-pullback
-depends_on: []
-related:
+depends_on:
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
   - THM-2632-farey-v4-theta-channel-and-hurwitz-crt-parity-sidecar
+related:
+  - THM-2455-quartic-swallowtail-scaffold-and-endpoint-corrections
   - THM-2641-modular-abelianization-theta-blindness-and-637-residue-no-go
   - HYP-2033-lrc-annular-braid-center-is-shift
+external: "Birman--Menasco, arXiv:0802.1072, Theorem 1 (closed three-braid classification)."
 script: 04-computation/braid3_modular_central_pullback_thm2646.py
 output: 05-knowledge/results/braid3_modular_central_pullback_thm2646.out
 script_sha256: 0466bc89f1be31feb3442de166273baa18c8883e3bda8a6d3f8295d40b8f3a5b
@@ -31,8 +33,8 @@ hash_basis: LF-normalized bytes
 
 # THM-2646 -- the modular hexagon is a quotient of a braid helix
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING FINAL EVIDENCE
-AUDIT.**  This theorem makes the user's binary/ternary co-occurrence literal:
+**PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.**  This theorem
+makes the user's binary/ternary co-occurrence literal:
 the order-two and order-three modular generators are roots of one central
 full twist before that twist is killed.
 
@@ -149,10 +151,13 @@ The integral braid state lies on the `Z`-cover of that hexagon: a helix over
 2 e(x)=3 e(y)=e(z)=6.                                    (12)
 ```
 
-THM-2632 proves that the invariant modular `C6` itself is nongraceful and
-that deleting any edge makes it graceful.  The pullback explains the
-deletion: cutting the quotient cycle chooses one interval in its `Z`-cover.
-Every finite interval is a path; for `n` edges the alternating labels
+After forgetting group action and THM-2632's `L/R`--theta colouring, the
+Cayley graph of modular abelianization is an abstract `C6`.  THM-2632 notes
+that this uncoloured graph is nongraceful and every edge deletion is
+graceful.  The pullback lifts only that uncoloured cycle to a `Z`-line:
+cutting it chooses one interval in the cover.  It neither identifies the
+abelianization with THM-2632's `S3` permutahedral action nor selects one of
+its edges.  Every finite interval is a path; for `n` edges the labels
 
 ```text
 0,n,1,n-1,2,n-2,...                                      (13)
@@ -183,7 +188,7 @@ V^(S3)=0,                                                 (15)
 ```
 
 so every such affine lift kills `z`.  THM-2632's `V4` theta cuts, strand
-permutation, and every invariant affine-origin construction are therefore
+permutation, and every such equivariant affine lift are therefore
 centre-blind.
 
 Surjectivity in (14) is load-bearing.  With
@@ -248,9 +253,11 @@ so this `SL2(Z)` shadow remembers only the parity of `k`.
 The following is a **CITED** consequence, not reproved here.  Birman and
 Menasco's closed-three-braid classification says that a link of braid index
 exactly three has either one `B3` conjugacy class of representatives or
-exactly two, the latter precisely for a nondegenerate flype.  Combined with
-(6), compatible modular conjugacy plus integral exponent classifies such a
-link up to at most the explicit involution
+exactly two, the latter precisely for a nondegenerate flype.  By (6), one
+compatible pair `([g],n)` already determines one braid conjugacy class and
+therefore its closure.  In the reverse direction, the fibre from compatible
+pairs to a fixed braid-index-three link has size one or two; the two-point
+case is exactly the involution
 
 ```text
 sigma1^u sigma2^v sigma1^w sigma2^eps
@@ -279,9 +286,13 @@ meridian around a divisor `D` therefore has
 e(beta_D)=ord_D(Disc);                                     (24)
 ```
 
-at crossings one uses the full signed intersection-number sum.  For a
-nonmonic cubic, the right side additionally contains four times the winding
-of the leading coefficient.
+at crossings one uses the full signed intersection-number sum.  For
+`f=a prod_i(T-r_i)`, the exact nonmonic formula is
+
+```text
+wind(Disc(f))=e(beta)+4 wind(a),
+e(beta)=wind(Disc(f))-4 wind(a).                            (25)
+```
 
 THM-2598 proves exact equality between the general quartic discriminant and
 its **monic integral resolvent** cubic discriminant.  Hence the quartic gives

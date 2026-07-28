@@ -348,6 +348,7 @@ Classify profiles under support operations; study analytic continuation and auto
   [THM-2348](../01-canon/theorems/THM-2348-prime-type-rectangularity-and-target-token-conditioning.md) equates robust prime-type factorization with mixed-tensor/rectangle vanishing, gives exact token conditioning, and makes the two-prime correction a bounded continuation of `-sigma`.
   THM-2374 inverts the squared complete-subcube Walsh bank; THM-2383 recovers complex coefficients exactly from labelled spanning references. Physical references, owners, and knot realization remain open.
   THM-2351 proves the canonical self-target ANOVA is exactly an affine reparameterization of the directional catalysis--bypass ledger; its optimum and skew pair sector add no information. Positive catalysis and the stable diagonal remain open.
+  [THM-2646](../01-canon/theorems/THM-2646-braid-three-modular-central-pullback-and-full-twist-knot-fibre.md) proves `B3=PSL2(Z) x_(C6) Z`: modular class plus exponent classifies braid conjugacy. One fibre contains an unknot, trefoil, and torus knots of unbounded genus; at braid index three only the cited flype `C2` remains. Exponent is not Markov-invariant.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
 - **Jacobian/Dixmier:** THM-1300/1315's three-dimensional collision has
   unsettled provenance (MISTAKE-205); `DC(2)` remains open.  On that fixed
@@ -362,8 +363,11 @@ Classify profiles under support operations; study analytic continuation and auto
   identifies failure exactly with a regular sheet quotient.  It excludes
   regular `C5` and nine of sixteen sextic actions; an induced `S3` block
   action is not fatal by itself, and quartic/resolvent actions must not be
-  conflated.  No degree bound, `A4/S4`, `G1`, `JC(2)`, or `DC(2)` closure
-  follows.  At degree eighteen, THM-2314/2316 close sparse supports,
+  conflated.  THM-2646 identifies monic cubic discriminant order as the
+  integer central height of the local resolvent root braid, but only after
+  its full modular braid class is retained; finite `S3` inertia plus height
+  is insufficient.  No degree bound, `A4/S4`, `G1`, `JC(2)`, or `DC(2)`
+  closure follows.  At degree eighteen, THM-2314/2316 close sparse supports,
   THM-2371/2376 close `H_2`, and audited THM-2406 sends `H_4` to the closed
   common-root wall; branches outside THM-2262 remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.

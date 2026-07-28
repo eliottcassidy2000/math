@@ -1,7 +1,7 @@
 ---
 title: "Two and three on one object: the modular order-six fork and its missing sidecars"
 date: 2026-07-27
-status: RESEARCH SYNTHESIS; current proved corrections route through THM-2632, THM-2633, and THM-2641; older frontier paragraphs below preserve provenance
+status: RESEARCH SYNTHESIS; current proved corrections route through THM-2632, THM-2633, THM-2641, and THM-2646; older frontier paragraphs below preserve provenance
 source: codex-2026-07-27-modular-v4-session
 ---
 
@@ -18,6 +18,33 @@ source: codex-2026-07-27-modular-v4-session
 > `C4,V4,D4` quartic Keller monodromy, so later sentences treating `D4` as
 > live are historical and superseded.  The surviving quartic types are
 > `A4,S4`; the cubic resolvent remains action data, not an affine Keller map.
+
+## The common object is the braid helix
+
+THM-2646 supplies the literal object that the earlier synthesis was missing:
+
+```text
+B3=<x,y | x^2=y^3>,       z=x^2=y^3,
+B3/<z>=C2*C3=PSL2(Z).                                      (0)
+```
+
+Thus the binary and ternary generators are roots of one common full twist
+*before* quotienting.  Exponent sum makes this exact:
+
+```text
+B3 = PSL2(Z) x_(C6) Z.                                    (0a)
+```
+
+The modular hexagon records only height modulo six; the braid lives on its
+integer helix.  This is consequential, not decorative: `(sigma1 sigma2)^-1`
+and `(sigma1 sigma2)^2` occupy the same exact modular point but close to the
+unknot and trefoil, and their central fibre contains torus knots of unbounded
+genus.  The standard affine `V4:S3` shadow kills the full twist, so Feuerbach
+origins, theta cuts, and uncoloured graceful repairs cannot recover it.  A
+monic cubic discriminant winding does recover the missing integer height,
+but only together with the full modular braid class; finite `S3` inertia is
+still too coarse.  This is the sharp form of the recurring rule: a quotient
+kernel is a gauge only for consumers that literally annihilate it.
 
 The recurring `2,3,4,6` pattern has a rigorous core, but it is not one
 universal tree.  There are two natural order-six quotients of
