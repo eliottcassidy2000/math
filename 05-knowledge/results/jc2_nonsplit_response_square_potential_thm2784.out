@@ -1,0 +1,15 @@
+NONSPLIT RESPONSE SQUARE-POTENTIAL EXACT REFEREE
+named_positive_rows=3
+bounded_polynomial_potential_rows=23
+bounded_squarefree_rows=3
+large_squarefree_part_hostiles=6
+maximal_hostile_squarefree_part_degree=7
+finite_root_valuation_rows=56
+global_infinity_ledger_rows=32
+squarefree_degree_rows=8
+infinity_order_rows=16
+degree1_boundary=dx/U=(2/c)dU
+degree2_residues=(-1/c,+1/c)
+assert_nodes=0
+exact_gates=316
+ALL EXACT CHECKS PASSED

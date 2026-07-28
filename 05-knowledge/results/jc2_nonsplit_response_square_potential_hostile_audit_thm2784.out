@@ -1,0 +1,27 @@
+THM-2784 INDEPENDENT NONSPLIT SQUARE-POTENTIAL HOSTILE AUDIT
+named_solutions=3
+atlas_polynomial_potentials=36
+atlas_nonsquare_potentials=20
+hostile_family_rows=9
+maximal_hostile_radical_degree=10
+solution_local_factor_rows=96
+balanced_solution_maps=34
+unbalanced_solution_maps=14
+integer_local_cases=275
+integer_infinity_ledgers=1568
+integer_balanced_ledgers=96
+integer_unbalanced_ledgers=8
+squarefree_degree_rows=12
+faber_reduced_rows=30
+faber_odd_rows_killed=20
+faber_even_rows_surviving=10
+assert_nodes=0
+exact_gates=3185
+square_potential_both_directions=PASS
+finite_DVR_ledger=PASS
+infinity_signs_and_valuations=PASS
+passport_and_Riemann_Hurwitz=PASS
+squarefree_linear_classification=PASS
+large_squarefree_part_hostile=PASS
+Faber_response_transfer=PASS
+FAILED CHECKS: NONE

@@ -9,6 +9,21 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-316 (2026-07-28, provisional THM-2784 passport wording) -- a distinguished degree-one cycle is not nontrivial inertia
+
+- **What was written:** the balanced square-potential passport was described
+  as having an involution over zero and one nontrivial cycle over the third
+  value.
+- **Minimal boundary witness / first failed implication:** the sharp map
+  `F=4x/(x-1)`, `V=x(x-1)^3` has degree `N=1`, with `e=0` and `r=1`.
+  Every permutation is the identity.  A displayed length-`r` distinguished
+  cycle need not be nontrivial, and `2^e1^s` may likewise be identity.
+- **Repair / survivor:** the product-one passport is correct with “involution
+  or identity” over zero and “at most one nontrivial cycle” over the third
+  distinguished value.  The Riemann--Hurwitz ledger, transitivity, and all
+  divisor classifications survive; the independent `3185`-gate audit checks
+  the repaired degree-one boundary explicitly.
+
 ## MISTAKE-315 (2026-07-28, THM-2781 exact companion) -- degree four does not certify non-fourth-power status
 
 - **What was done:** the unreduced-exponent hostile `f=(1+z^2)^2`, displayed
