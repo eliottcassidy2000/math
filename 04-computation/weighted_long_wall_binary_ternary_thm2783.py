@@ -232,7 +232,11 @@ def main():
             gram = [[sum(rows[a][t] * rows[b][t] for t in range(k))
                      for b in range(k - 1)] for a in range(k - 1)]
             require(determinant(gram) != 0, "constructed witness frame lost rank")
-            for h in (tuple(2**i for i in range(k)), tuple(range(1, k + 1))):
+            for h in (
+                tuple(2**i for i in range(k)),
+                tuple(3**i for i in range(k)),
+                tuple(range(1, k + 1)),
+            ):
                 actual = abs(determinant(rows + [h]))
                 require(actual == abs(signed_value(delta, h)),
                         "constructed witness frame has wrong determinant")
