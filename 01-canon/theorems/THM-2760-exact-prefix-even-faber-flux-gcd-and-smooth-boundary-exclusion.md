@@ -2,7 +2,7 @@
 id: THM-2760
 title: "Exact-prefix even Faber flux gcd and smooth-boundary exclusion"
 status: >
-  PROVED + CITED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.  For
+  PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For
   every m=4k-2, exact-prefix specialization with nonzero square-root residue
   omega gives gcd(Phi_m/q,Psi_m)=r^(k-1) after q=r omega^3 and localization
   at omega.  The residual factors are coprime because one explicit carrier
@@ -15,7 +15,12 @@ status: >
   classify the full h=0
   intersection, derive another response chart, or close another degree.
 source: jc-even-zero-flux-next-2026-07-28
-audit: independent hostile audit pending
+audit: >
+  all-degree-split-hostile-audit-2026-07-28 independently replayed the
+  specialized recurrence and root-zero lane through k=30, checked the
+  load-bearing multiplicity, hyperbolicity, and simple-B-root statements
+  against the primary Kostov--Shapiro TeX source, and verified that the
+  proof uses the strict multiplicity threshold correctly: PASS.
 external_input: >
   Kostov--Shapiro, On Schur--Szego composition of polynomials,
   arXiv:math/0605377, Propositions 4--5 and Theorem 6(ii)
@@ -33,7 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2760 -- the exact-prefix even flux gcd is uniform
 
-**PROVED + CITED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + CITED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The degree-22 resultant `-76608 omega^6` is one specialization of an
 all-degree fact.  Once the exact-prefix square-root residue is nonzero, the
@@ -340,6 +345,18 @@ candidate.  The theorem neither removes that candidate nor turns its
 nonzero response into a componentwise pole-count conclusion.
 
 ## 7. Exact reproduction and failure boundary
+
+The independent audit checked the load-bearing external input directly in
+the primary Kostov--Shapiro TeX source.  Proposition `th:mult` gives a
+product-root only when the input multiplicity sum is strictly greater than
+the degree and explicitly excludes equality; Proposition `prop:comp`
+preserves hyperbolicity for the relevant negative-root factor; and Theorem
+`th:ordpart(ii)` makes every remaining `B`-root simple.  The two degree-`n`
+Jacobi factors used here have simple negative roots, so for `n>=2` they
+create no `A`-roots and all output roots are simple; `n=1` is immediate.
+The audit also independently replayed the specialized recurrence and the
+root-zero congruence through `k=30`.  Those finite checks corroborate, but do
+not replace, the all-degree Schur--Szego proof.
 
 Run
 

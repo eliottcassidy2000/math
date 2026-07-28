@@ -365,15 +365,23 @@ Classify profiles under support operations; study analytic continuation and auto
   gcd: for `m=4k-2`, `gcd(Phi_m/q,Psi_m)=r^(k-1)` after localizing the square-
   root residue.  The omitted projective root-zero chart (`omega=0,q!=0`)
   survives both fluxes exactly at `m=6 mod12`, with nonzero third response;
-  the affine all-zero corner is outside that chart.  THM-2767 now closes the
-  complete split banks in degrees `10,14,18`: its exact finite atlas excludes
-  every nonzero-root end, the unique `-21q_aff^6/1024` section pole kills the
-  degree-18 root-zero survivor, and the full-bank slope-four lemma makes
-  `q/h^3` globally zero.  The vertical bank is then triangularly impossible.
+  the affine all-zero corner is outside that chart.  THM-2778 now replaces
+  the finite-degree atlas by an all-degree mechanism.  Simultaneous vanishing
+  of the two top fluxes and the top response truncates the coefficient
+  recurrence; an odd-power UFD argument forces the quartic series to be a
+  square, so `P_infty` is the unique common top triple zero for every
+  `M=4k-2`.  THM-2760 excludes the nonzero exact-prefix roots, while the
+  nonzero half-binomial `binom(M/4,M/3)q_aff^(M/3)` kills every root-zero
+  survivor at `M=6 mod12`.  The full odd/even bank then forces slope four at
+  `P_infty`, makes `q/h^3` globally zero, and leaves the vertical bank
+  triangularly impossible.  Thus the complete chosen-sheet split polynomial
+  exact-square-prefix terminal family is closed in every reduced degree
+  `M=4k-2`; THM-2759/2767 remain finite independent instances.
 
   This is not `JC(2)`: arbitrary Keller pairs need not enter this quartic,
-  split exact-prefix chart.  Split and nonsplit degrees `>=26`, other
-  Newton/Jelonek/source-fibre branches, and degree descent/raising stay open.
+  split polynomial exact-prefix chart.  Nonsplit and nonpolynomial-prefix
+  degrees `>=26`, chart entry for arbitrary Keller pairs, other Newton/
+  Jelonek/source-fibre branches, and degree descent/raising stay open.
   THM-2206's `2`-adic first-grade and THM-2446's six-bracket shortcuts are
   refuted.  `JC(2)`/`DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

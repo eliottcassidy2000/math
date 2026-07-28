@@ -48,14 +48,15 @@ with two additions: finite exact augmented-ideal exclusion of every
 nondegenerate top end, and a uniform sub-slope-four response-pole lemma for
 the full odd/even bank.  The finite atlas needed to verify prefix exclusion,
 response activity, and transversality is checked by the exact companion; the
-DVR and projective steps are proved here.  THM-2760 independently
-corroborates the prefix exclusion in all degrees, but is related rather than
-load-bearing here because its independent hostile audit is still pending.
+DVR and projective steps are proved here.  The now independently audited
+THM-2760 corroborates the prefix exclusion in all degrees, but remains
+related rather than load-bearing because this proof reconstructs its finite
+instances directly.
 
-The reserved THM-2764 advertises only the all-even, zero-first-flux family
-away from `6 mod 12`: it would therefore cover the corresponding slices in
-degrees `10` and `14`, but not degree `18`.  The argument here additionally
-handles the degree-18 root-zero point, every odd row, and nonzero first flux.
+The former THM-2764 reservation advertised only the all-even, zero-first-
+flux family away from `6 mod 12`; it is now superseded by the stronger
+all-degree THM-2778.  The finite argument here remains an independently
+audited proof in degrees `10,14,18`.
 
 This does not derive the quartic terminal chart for an arbitrary Keller pair,
 does not treat a nonsplit or nonpolynomial prefix, and does not yet claim any
@@ -295,8 +296,8 @@ The proof uses four exact row facts.
 
 For these three degrees, every fact in this list is also reconstructed
 directly from the finite Faber recurrence by the exact companion: the proof
-does not need to inherit a finite identity from either THM-2760's pending
-hostile audit or an unaudited extrapolation of `(15)`.
+does not need to inherit a finite identity from THM-2760 or from an unaudited
+extrapolation of `(15)`.
 
 Here is the exhaustive valuation argument.  If `s` has smaller valuation,
 the pure `s^k` term is the unique top `Psi` term at order `kb`.  Any odd
