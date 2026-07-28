@@ -5,12 +5,14 @@ status: >
   PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
   AUDIT.  For every rooted tree, reduced integral incidence is unimodular and
   identifies the graceful obstruction with an A_(n-1) vertex discriminant
-  clutched to a D_(n-1) edge discriminant.  At n=4, D3=A3: the star supports
-  the B3 fan with 48 chambers, while the path adds one diagonal which makes
-  twelve unimodular Farey splits and 60 chambers.  Nevertheless the unique
-  balanced coefficient is 120 for the star and zero for the path, although
-  P4 is graceful.  Fan unimodularity is therefore not a signed coefficient
-  selector.  No Graceful Tree, Keller, modular-action, or LRC closure follows.
+  clutched to a D_(n-1) edge discriminant.  Its distinct support is B_(n-1)
+  plus exactly one wall for every vertex pair at distance at least three; it
+  is B_(n-1) alone exactly for stars.  At n=4, D3=A3: the star has 48
+  chambers, while the path adds one diagonal which makes twelve unimodular
+  Farey splits and 60 chambers.  Nevertheless the unique balanced
+  coefficient is 120 for the star and zero for the path, although P4 is
+  graceful.  Fan unimodularity is not a signed coefficient selector.  No
+  Graceful Tree, Keller, modular-action, or LRC closure follows.
 source: a4-resolvent-next-gate/tree-incidence-weyl-clutch-2026-07-28
 depends_on:
   - THM-2761-graph-edge-sum-discriminant-codegree-factorization-and-graceful-sign-gauge
@@ -22,8 +24,8 @@ related:
   - THM-2768-modular-c2-c3-quotients-to-a4-s4-and-bass-serre-cycle-ranks
 script: 04-computation/tree_incidence_a_d_weyl_clutch_thm2770.py
 output: 05-knowledge/results/tree_incidence_a_d_weyl_clutch_thm2770.out
-script_sha256: e61c3b20b3eb8fbef3872e9840a1b6cb7f04bf3b0469f5cd46b26e4e272c654b
-output_sha256: 5d8c651cb7e0b27ed60f5da9fe2fb7546199fa84e136711c09d39b9f48bc0b01
+script_sha256: 4e70b3478db36a8f654c25616e57c879ed6b1e4b77e241a303d2c42f58cff6ab
+output_sha256: ef48db64c058d02c0cacba1643f65fe0cc89a00baec6bb48b18f9fb3b0852843
 hash_basis: LF-normalized bytes
 ---
 
@@ -116,6 +118,43 @@ deg Phi_T
  = (n-1)(3n-4)/2.                                       (9)
 ```
 
+There is also an exact support classification.  Put `m=n-1`.  The
+`D_m` factor supplies all pair hyperplanes
+
+```text
+y_e-y_f=0,                    y_e+y_f=0,                 (9a)
+```
+
+and the `A_(n-1)` factor supplies `y_e=0` for each edge.  These are exactly
+the `m^2` hyperplanes of `B_m`.  For a nonedge vertex pair `{u,v}`, its
+`A`-root is the signed sum along the unique tree path:
+
+```text
+L_uv(y)=sum_(e in path(u,v)) epsilon_e y_e.              (9b)
+```
+
+At distance two this is already one of `(9a)`.  At distance at least three
+its normal has at least three nonzero coordinates, so it is not a `B_m`
+root.  Different unoriented tree paths have different edge supports and
+hence give different hyperplanes.  Therefore
+
+```text
+support(Phi_T)
+ = B_m union {L_uv=0:dist_T(u,v)>=3},
+#support(Phi_T)=m^2+#{u<v:dist_T(u,v)>=3}.                (9c)
+```
+
+In particular
+
+```text
+support(Phi_T)=B_m
+iff diameter(T)<=2
+iff T is a star.                                        (9d)
+```
+
+Thus stars are the unique pure signed-permutation clutches, and long tree
+geodesics are exactly the extra fan data.
+
 For an integral point, `Delta_A!=0` says all vertex labels are distinct.
 It also forces every edge gradient to be nonzero, because parent and child
 are vertices.  Conditional on that, `Delta_D!=0` says no two gradients are
@@ -165,7 +204,8 @@ not the modular free product `C2*C3`; THM-2768 treats that distinct carrier.
 
 ## 4. The two four-vertex tree clutches
 
-There are two unlabelled four-vertex trees.  Root the star at its centre and
+There are two unlabelled four-vertex trees.  By `(9d)`, they are the last
+pure `B` case and the first possible long-path refinement.  Root the star at its centre and
 write `y_i=x_i-x_0` on its three edges.  Equations `(7)--(8)` give
 
 ```text
@@ -309,9 +349,10 @@ python -O 04-computation/tree_incidence_a_d_weyl_clutch_thm2770.py
 ```
 
 The exact companion uses explicit exceptions and no truth-bearing Python
-assertions.  It checks the incidence/path-sum inverse on all `5,913`
-recursive parent arrays through eight vertices, the positive-root degree
-identity through twelve vertices, the half-Hadamard `D3=A3` map, the
+assertions.  It checks the incidence/path-sum inverse and the long-path
+support formula on all `5,913` recursive parent arrays through eight
+vertices (`67,708` extra-wall instances), the positive-root degree identity
+through twelve vertices, the half-Hadamard `D3=A3` map, the
 `B3`/diagonal supports, all `48` signed-order chambers, the twelve cut
 chambers and their two unimodular determinants, both independent central
 coefficient extractions, all six recursive four-vertex presentations, and
@@ -321,6 +362,8 @@ stored transcript.
 ```text
 PROVED HERE (candidate):  integral tree-incidence isomorphism;
                           exact A_(n-1)/D_(n-1) clutch;
+                          B_(n-1)-plus-long-path support formula;
+                          pure-B iff star classification;
                           graceful nonvanishing equivalence;
                           D3=A3 half-Hadamard realization;
                           star B3 and path B3+diagonal supports;

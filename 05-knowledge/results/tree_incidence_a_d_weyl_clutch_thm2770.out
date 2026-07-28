@@ -1,6 +1,10 @@
 TREE INCIDENCE A/D WEYL CLUTCH AUDIT
 reduced_incidence_parent_arrays_n2_to_n8=5913
 reduced_incidence=unimodular path_sum_inverse=exact
+support_parent_arrays_n2_to_n8=5913
+long_path_extra_hyperplane_instances=67708
+support=B_(n-1)_plus_one_wall_per_vertex_pair_at_distance>=3
+B_only_iff_tree_is_star
 degree=|A_(n-1)^+|+|D_(n-1)^+|=(n-1)(3n-4)/2
 D3_to_A3_half_hadamard_root_hyperplanes=6
 star_support=B3 hyperplanes=9 chambers=48

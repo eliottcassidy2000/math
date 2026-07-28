@@ -136,6 +136,22 @@ def canonical_normal(vector):
     return reduced
 
 
+def b_hyperplanes(edge_count):
+    out = set()
+    for index in range(edge_count):
+        vector = [0] * edge_count
+        vector[index] = 1
+        out.add(canonical_normal(tuple(vector)))
+    for first in range(edge_count):
+        for second in range(first + 1, edge_count):
+            for sign in (-1, 1):
+                vector = [0] * edge_count
+                vector[first] = 1
+                vector[second] = sign
+                out.add(canonical_normal(tuple(vector)))
+    return out
+
+
 def direct_vertex_polynomial(parents):
     vertex_count = len(parents)
     forms = []
@@ -186,6 +202,8 @@ def determinant_three(columns):
 
 def main():
     incidence_controls = 0
+    support_controls = 0
+    long_path_hyperplanes = 0
     for vertex_count in range(2, 9):
         for parents in parent_arrays(vertex_count):
             incidence, paths = reduced_incidence_and_paths(parents)
@@ -201,6 +219,39 @@ def main():
                     "reduced incidence stopped being unit lower triangular")
             incidence_controls += 1
 
+            edge_count = vertex_count - 1
+            potentials = (tuple([0] * edge_count),) + paths
+            a_support = set()
+            long_pairs = 0
+            for first in range(vertex_count):
+                for second in range(first + 1, vertex_count):
+                    normal = tuple(potentials[second][index]
+                                   - potentials[first][index]
+                                   for index in range(edge_count))
+                    support_size = sum(value != 0 for value in normal)
+                    require(all(value in (-1, 0, 1) for value in normal),
+                            "a tree-path root acquired a nonunit coefficient")
+                    if support_size >= 3:
+                        long_pairs += 1
+                    a_support.add(canonical_normal(normal))
+            b_support = b_hyperplanes(edge_count)
+            extras = a_support - b_support
+            require(len(b_support) == edge_count * edge_count,
+                    "B_m hyperplane count changed")
+            require(len(extras) == long_pairs
+                    and len(a_support | b_support)
+                    == edge_count * edge_count + long_pairs,
+                    "long paths stopped parametrizing the extra clutch walls")
+            degrees = [0] * vertex_count
+            for child in range(1, vertex_count):
+                degrees[child] += 1
+                degrees[parents[child]] += 1
+            is_star = (vertex_count <= 2 or max(degrees) == edge_count)
+            require((not extras) == is_star,
+                    "B_m-only support stopped characterizing stars")
+            support_controls += 1
+            long_path_hyperplanes += long_pairs
+
     for vertex_count in range(2, 13):
         a_roots = vertex_count * (vertex_count - 1) // 2
         d_roots = (vertex_count - 1) * (vertex_count - 2)
@@ -208,18 +259,7 @@ def main():
         require(a_roots + d_roots == expected,
                 "A/D positive-root degree identity changed")
 
-    b3 = set()
-    for index in range(3):
-        vector = [0, 0, 0]
-        vector[index] = 1
-        b3.add(canonical_normal(tuple(vector)))
-    for first in range(3):
-        for second in range(first + 1, 3):
-            for sign in (-1, 1):
-                vector = [0, 0, 0]
-                vector[first] = 1
-                vector[second] = sign
-                b3.add(canonical_normal(tuple(vector)))
+    b3 = b_hyperplanes(3)
     diagonal = canonical_normal((1, 1, 1))
     star_support = {canonical_normal(form) for form in edge_forms("star")}
     path_support = {canonical_normal(form) for form in edge_forms("path")}
@@ -316,6 +356,10 @@ def main():
     print("TREE INCIDENCE A/D WEYL CLUTCH AUDIT")
     print(f"reduced_incidence_parent_arrays_n2_to_n8={incidence_controls}")
     print("reduced_incidence=unimodular path_sum_inverse=exact")
+    print(f"support_parent_arrays_n2_to_n8={support_controls}")
+    print(f"long_path_extra_hyperplane_instances={long_path_hyperplanes}")
+    print("support=B_(n-1)_plus_one_wall_per_vertex_pair_at_distance>=3")
+    print("B_only_iff_tree_is_star")
     print("degree=|A_(n-1)^+|+|D_(n-1)^+|=(n-1)(3n-4)/2")
     print("D3_to_A3_half_hadamard_root_hyperplanes=6")
     print("star_support=B3 hyperplanes=9 chambers=48")
