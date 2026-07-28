@@ -2,7 +2,7 @@
 id: THM-2644
 title: "Odd-torsor purity/return gate and nonlinear fixed-branch decoder"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT.  For a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a
   nonnegative weight mu on a finite group, put M=sum mu, E=sum mu^2,
   delta=M^2-E, and R=(mu*mu)(e).  The squared mass on involutions is at least
   R-delta.  Hence on an odd group R>delta forces positive identity mass.  If
@@ -28,7 +28,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2644 -- two quadratic rungs recover an odd-torsor fixed branch
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Private coefficient rows are not the only algebraic way to locate a branch.
 There is a sharp nonlinear alternative: first prove that a nonnegative
@@ -232,4 +232,9 @@ algebra compositions, all six sharp hostiles, and every cyclic singleton
 return for `2<=k<=26`.  Normal and optimized executions must byte-match the
 stored transcript and end in `PASS`.
 
-QED (candidate; independent audit pending).
+Two independent hostile audits rederived the involution inequality and its
+equality cases, the odd-group and cyclic return gates, every sharp hostile,
+the group-algebra/Fourier signs, the physical typing boundary, and both exact
+transcripts and hashes.
+
+QED.
