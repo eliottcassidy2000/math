@@ -247,6 +247,11 @@ def main():
     switching_keys = {switched_key(adjacency, mask) for mask in range(1 << 6)}
     require(len(switching_keys) == 32,
             "unoriented root-line switching class changed")
+    converse_keys = {
+        tuple(1 - value for value in key) for key in switching_keys
+    }
+    require(len(converse_keys) == 32 and switching_keys.isdisjoint(converse_keys),
+            "volume-reversed converse entered the fixed-volume switching orbit")
 
     binary_text = ",".join(
         f"{names[first]}-{names[second]}"
@@ -267,7 +272,8 @@ def main():
     print("tournament_scores=(3,2,3,4,1,2) sorted=(1,2,2,3,3,4)")
     print(f"directed_3cycles={triangles} Hamilton_paths={paths} automorphisms={automorphisms}")
     print("chamber_parity=even:same,odd:converse")
-    print(f"unoriented_root_line_switching_class={len(switching_keys)}")
+    print(f"fixed_h_volume_reorientation_orbit={len(switching_keys)} "
+          "converse_orbit=distinct")
     print("SCOPE=marked_oriented_frame_not_canonical_unmarked_tournament")
     print("FAILED CHECKS: NONE")
 

@@ -8,6 +8,6 @@ Smith_cokernels=trivial:9,Z2:3,Z3:3
 tournament_scores=(3,2,3,4,1,2) sorted=(1,2,2,3,3,4)
 directed_3cycles=6 Hamilton_paths=23 automorphisms=1
 chamber_parity=even:same,odd:converse
-unoriented_root_line_switching_class=32
+fixed_h_volume_reorientation_orbit=32 converse_orbit=distinct
 SCOPE=marked_oriented_frame_not_canonical_unmarked_tournament
 FAILED CHECKS: NONE
