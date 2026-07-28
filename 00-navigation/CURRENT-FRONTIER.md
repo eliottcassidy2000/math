@@ -65,41 +65,28 @@ overlap a balanced gain section.  THM-2672/2687 leave an 11-dimensional
 slope-seven family, while THM-2688 separates its simplex, diagonal, lens, and
 Bockstein quotients.  These are sidecars, not physical gluing.
 
-THM-2680--2694 separate positive local legs, vertical slope length, and genuine
-chronology: every integral decoration induces the same delayed map, whose old
-word dies.  THM-2697 formalizes the affine germ/root filtration and this
-kernel no-go.  THM-2698 changes the base signature by a central half-turn and
-gets a strict full two-cycle, but its parity-forgotten `D^2` endpoint loop has
-no allowed `D` midpoint.  THM-2706 identifies the exact fixed-grading defect
-`R1*R1 < R2`: the physical `D^2` macro cycle has a minimal ghost midpoint,
-thousands of strict pre-word/all-safe split lifts, and integral debt `E -> 2G`,
-but its inherited word is empty.  THM-2701 proves the ordinary literal word
-sharply nilpotent at six; THM-2710 proves the half-shifted word also vanishes
-by six and that the half phase is exactly invisible at prescribed clocks
-`2,4,6`.  Thus neither recurrent ghost is a THM-2305 word cospan unchanged.
-
-The intrinsic `BABA` guard-debt carrier likewise has integral quotient map
-`A -> 2B`; Boolean/mod-two support erases the nonnegative multiplicity.  Its
-conditional unit product has exact order `168`, still without target
-transport.  THM-2707 exhausts the physical lift fibre: `3346` packets share
-one interval and form a complete eleven-partite SCC with closed words and
-trivial bare translation holonomy, but the following semantic atom fails.
-The residual is a coloured transit/private-row grammar, common-ancestry cone,
-enriched `C2`/direct macro, or re-rooted exclusive-owner section that restores
-semantic current and amplitude—not more endpoint recurrence.  Ledger `165`;
-no row is excluded.
+THM-2680--2697 separate formal clock paths from physical chronology and prove
+the inherited word dies for every integral decoration.  THM-2698 obtains a
+strict central-half two-cycle, but its parity-forgotten `D^2` loop has no `D`
+midpoint.  THM-2706 identifies the exact defect `R1*R1 < R2`: the physical
+macro cycle has a minimal ghost midpoint, strict pre-word/all-safe lifts, and
+integral debt `E -> 2G`, yet its old word is empty.  THM-2701/2710 make the
+ordinary and half-shifted literal languages nilpotent by six (the half phase
+is invisible at clocks `2,4,6`).  The analogous `BABA` quotient has
+`A -> 2B`; Boolean/mod-two support loses its multiplicity.  THM-2707 finds
+`3346` lift packets in a complete eleven-partite SCC, but no following semantic
+atom.  The live residual is a coloured transit/private-row grammar,
+common-ancestry cone, enriched `C2` macro, or re-rooted owner section carrying
+semantic current and amplitude.  Ledger `165`; no row is excluded.
 
 ### Independent routes that remain live
 
 - **Orthogonal routes.** THM-1017's AP-core extraction remains HYP-6820;
   THM-2047/2050 retain phase/first exit; THM-731/2048 saturate six-comb
   pruning; THM-1290 is exact only through speed `55`; HYP-8900 is not uniform.
-- **Foreign-base phase.** The exact `C_221` stalk combines delayed mod `17`
-  phase with the old carry/root coordinate and supports a reflection-symmetric,
-  rail/present/root/unit-typed two-cycle at `4/17 <-> 13/17`.  This is
-  FINITE-EXACT local support, not a lawful scalar-return operation: the
-  displayed centres are not exclusive sources and no semantic endpoint
-  current has yet been composed through the cycle.
+- **Foreign-base phase.** The FINITE-EXACT `C_221` stalk carries a typed
+  two-cycle at `4/17 <-> 13/17`, but its centres are not exclusive sources and
+  no lawful scalar return or semantic endpoint current is known.
 - **Artanh/Gibbs.** THM-2143's criterion is exact, but current fugacities fail
   defect-seven hostiles and signed log-Riesz shortcuts are unsound.
 
@@ -358,20 +345,16 @@ Classify profiles under support operations; study analytic continuation and auto
   support-four chart, and THM-2692 the full-support BCDEW chart by order-twelve
   root/pair-field emptiness.  Hence the inherited polynomial exact-square-prefix
   genuine nonsplit degree-twenty-two branch is empty.  Split/even edges and
-  integral `2`-adic raising remain.  In the exact split **even-Faber subchart**
-  with nonzero first-flux constant `lambda`, THM-2704 proves that the
-  prime-23 weighted complete intersection has arithmetic genus `254`, five
-  universal `(4,23)` cusps of total delta `165`, and integral generic
-  normalization genus `89`; the all-one specialization has the same genus,
-  with `69` additional ordinary projection nodes.  Hence a rational special
-  integral member must acquire at least `89` further delta, become reducible
-  or nonflat, or leave the chart.  Its physical fourth root is already
-  rational, so THM-2636's Kummer genus gate remains neutralized.  THM-2704
-  omits the eleven split odd seeds `E1,E3,...,E21`; the full frontier is the
-  exceptional genus-drop locus plus `lambda + odd bank`, not the generic
-  prime-23 curve alone.  THM-2206
-  blocks field-valued `C_2` Hasse repair.  THM-2446's six-bracket cone shortcut
-  is refuted.  `JC(2)` and `DC(2)` remain open.
+  integral `2`-adic raising remain.  In the split **even-Faber subchart** with
+  first flux `lambda != 0`, THM-2704 gives arithmetic genus `254`, five
+  `(4,23)` cusps (total delta `165`), and generic normalization genus `89`; the
+  all-one member instead has `69` additional projection nodes.  A rational
+  special integral member must gain at least `89` delta, become
+  reducible/nonflat, or leave the chart.  The physical fourth root neutralizes
+  THM-2636, and eleven odd seeds remain, so the frontier is the exceptional
+  genus-drop locus plus `lambda + odd bank`, not the generic prime-23 curve.
+  THM-2206 blocks field-valued `C_2` Hasse repair; THM-2446's six-bracket
+  shortcut is refuted.  `JC(2)` and `DC(2)` are open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

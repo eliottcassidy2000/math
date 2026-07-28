@@ -67,19 +67,18 @@
     THM-2187/2193 force rank seven; THM-2196/2199 force rank twelve but do not enumerate its finite box. THM-2203 closes scalar transport only in dyadic rank eight. THM-2250/2257 empty final depth-three `(3,4,5)`, leaving exactly `165` first-depth-one rows. THM-2349 now puts all `165` on one delayed marked-current/inverse-correlation frontier, but excludes no row; cross-axis noncancellation, all-unit visibility, and phase transport remain. None proves LRC(14).
 27d. **Refined graph activity is not coarse target landing.** MISTAKE-261: THM-2356 reconstructs each planar graph only up to its own phase, while the THM-2334 target is the cross-graph row sum. Its zero-only kernel has dimension `28,393`; vertical tensors form only the `169`-dimensional refined-zero subspace.
     THM-2363 is a derived coefficient detector with `D_graph >= E_coarse/169`, not a converse or a lawful physical probe. MISTAKE-260 separately forbids recovering an anchored nonzero-mode sum from an unordered inverse-root count.
-27e. **Formal clock paths are not chronology; the full inherited `D` path is
-    now closed.** THM-2670's Boolean products forget physical witnesses.
-    THM-2680's `D(x)={13x}` pullback restores them: `146/252` generic triples
-    compose formally but only `10` physically. THM-2682 proves some two-event
-    product survives while every three-event product is empty because the
-    central arrival return preserves a forbidden repeated shallow clock.
-    THM-2684 closes the apparent endpoint bypass: all `324` rails have the three-tooth envelope `[0,1/28)`, `[13/28,15/28)`, `[27/28,1)`; `D` has
-    identity arrival adjacency and its raw three-returns are clock-diagonal.
-    The reflected `rho o D` swaps endpoint teeth but has the same raw return
-    cylinders and the correctly reflected clock diagonal.
-    No downstream restriction revives that unshifted support. THM-2689 restores intrinsic support but not global clock labels; THM-2691 closes the central lift at present depth six.
-    THM-2693 has a labelled positive three-event lift but proves the inherited delayed word empty at four for every integer lift/clock word.  One finer phase digit gives twelve recurrent nodes to the minimal target/speed-14 carrier, yet the full word is still uniformly empty at four because the unchanged high guard is `338` times the target; common translation only swaps the killer.
-    THM-2701/2710 make the unshifted/half literal languages nilpotent by six and the half phase invisible at clocks `2,4,6`; THM-2707's packet SCC is support, not semantic current. The `BABA` quotient has integral debt `A->2B`, which Boolean/mod-two views erase. Change the relative factor phase, high guard, base slope, word, or edge, not merely the carry/phase alphabet. No row is excluded.
+27e. **Formal clock paths are not chronology; the inherited `D` path is
+    closed.** THM-2670 forgets witnesses.  THM-2680 restores them and finds
+    `146/252` formal but only `10` physical triples; THM-2682 leaves two-event
+    products but kills every three-event product.  THM-2684's `324` rails have
+    one three-tooth envelope and clock-diagonal raw returns; reflection changes
+    labels, not cylinders.  THM-2689 restores support without global clocks,
+    THM-2691 closes the depth-six central lift, and THM-2693's positive
+    three-event lift still has empty inherited word at four.  THM-2701/2710
+    make the unshifted/half literal languages nilpotent by six; THM-2707's SCC
+    is support, not semantic current.  The `BABA` debt `A->2B` is erased by
+    Boolean/mod-two views.  Change phase, guard, slope, word, or edge—not only
+    the carry alphabet.  No row is excluded.
 27f. **A disconnected label nerve is not physical Cech topology.** THM-2672 finds honest twelve-fold components in all `534` maximal fixed
     configurations.  Edge switching defeats its fixed root-zero proof, but
     THM-2687's enlarged-envelope scan independently restores a global positive
