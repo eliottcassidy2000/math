@@ -2,6 +2,7 @@ QUARTIC PAIR-SUM SEXTIC / RESOLVENT PULLBACK AUDIT
 edge_pair_partition=12_adjacent+3_opposite
 adjacent_factor_counts=each_of_6_root_differences_twice
 T=product_opposite_differences=e1^3-4*e1*e2+8*e3
+sum_i(4*r_i-e1)^3=24*T centered_cubic_invariant=exact
 centered_roots=+-d_m/2 t_m=d_m^2/4
 t_m=z_m+e1^2/4-e2 standard_resolvent_translate=exact
 disc(resolvent)=disc(quartic)

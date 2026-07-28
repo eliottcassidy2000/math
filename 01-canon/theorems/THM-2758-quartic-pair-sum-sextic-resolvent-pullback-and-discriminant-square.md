@@ -23,8 +23,8 @@ related:
   - THM-2756-opposite-edge-projectors-parity-cancellation-and-integral-clutch
 script: 04-computation/quartic_pair_sum_resolvent_discriminant_thm2758.py
 output: 05-knowledge/results/quartic_pair_sum_resolvent_discriminant_thm2758.out
-script_sha256: 6ee768328c79b3791f701900565142db3dc7e5f52f6c3161eb1adfcbe0e7d11c
-output_sha256: 0f0c4b34d733728f1c42c798566a1d68a2f9f24bb8c08d059aba464ea0f2a54e
+script_sha256: 5675989aeb6b02475e2699fdf63ad6315e243ea0123caf2e99e0ca83899bbc16
+output_sha256: a7ecc7ed38b40a3ecba3bae0fe108c72b834ebe7370a78807c06634cdffd7b86
 hash_basis: LF-normalized bytes
 ---
 
@@ -91,6 +91,18 @@ one has `T=-(a^3-4ab+8c)`, so the wall `T=0` is
 ```text
 a^3-4ab+8c=0.                                              (6)
 ```
+
+The cubic factor is also the first odd centered root invariant.  Direct
+Newton expansion gives the integral identity
+
+```text
+sum_i (4r_i-e1)^3=24T.                                    (6a)
+```
+
+Over characteristic zero, equivalently
+`sum_i(r_i-e1/4)^3=(3/8)T`.  Thus the opposite-sum collision wall is exactly
+the zero centered-cubic-skewness wall; for a depressed quartic it is simply
+the vanishing of its linear coefficient.
 
 ## 2. Exact centered pullback of the cubic resolvent
 
@@ -254,11 +266,11 @@ python 04-computation/quartic_pair_sum_resolvent_discriminant_thm2758.py
 python -O 04-computation/quartic_pair_sum_resolvent_discriminant_thm2758.py
 ```
 
-Both executions byte-match the stored `16`-line transcript
+Both executions byte-match the stored `17`-line transcript
 `05-knowledge/results/quartic_pair_sum_resolvent_discriminant_thm2758.out`.
 The companion uses explicit exceptions and no truth-bearing Python assertions.
-It works in a custom exact polynomial ring to prove `(5)`, all three instances
-of `(9)`, and the factorizations `(13)`; it classifies all fifteen edge pairs,
+It works in a custom exact polynomial ring to prove `(5)`, `(6a)`, all three
+instances of `(9)`, and the factorizations `(13)`; it classifies all fifteen edge pairs,
 including the exact Vandermonde sign in `(16)`.  It then checks `(9)`, `(14)`,
 and `(16)--(17)` on all `210` distinct quadruples from `[-4,5]`, including
 `50` opposite-sum walls, and on `65` repeated-root controls from `[-2,2]`.
@@ -272,6 +284,7 @@ PROVED HERE (candidate):  exact centered pair-sum/resolvent pullback;
                           disc(resolvent)=disc(quartic);
                           signed edge Vandermonde=disc(quartic)*T;
                           disc(pair-sum sextic)=disc(quartic)^2*T^2;
+                          T as the normalized centered cubic root invariant;
                           separability iff and two collision mechanisms;
                           separable-quartic/multiple-sextic hostile.
 

@@ -199,6 +199,12 @@ def main():
     )
     require(opposite_product == symmetric_t,
             "T stopped being e1^3-4e1e2+8e3")
+    centered_third_numerator = poly_sum(
+        poly_power(poly_subtract(poly_scale(root, 4), e1), 3)
+        for root in ROOTS
+    )
+    require(centered_third_numerator == poly_scale(symmetric_t, 24),
+            "T stopped being the normalized centered third root moment")
 
     z_polys = tuple(
         poly_add(poly_multiply(ROOTS[a], ROOTS[b]),
@@ -303,6 +309,7 @@ def main():
     print("edge_pair_partition=12_adjacent+3_opposite")
     print("adjacent_factor_counts=each_of_6_root_differences_twice")
     print("T=product_opposite_differences=e1^3-4*e1*e2+8*e3")
+    print("sum_i(4*r_i-e1)^3=24*T centered_cubic_invariant=exact")
     print("centered_roots=+-d_m/2 t_m=d_m^2/4")
     print("t_m=z_m+e1^2/4-e2 standard_resolvent_translate=exact")
     print("disc(resolvent)=disc(quartic)")
