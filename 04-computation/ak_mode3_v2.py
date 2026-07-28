@@ -151,10 +151,11 @@ def anneal(dims, steps, seed, log=print):
         slots = [dict() for _ in range(k)]
         for i0 in range(k):
             for key in slotkeys[i0]:
+                import os
                 z = rng.random()
                 if z < 0.45:
                     slots[i0][key] = rng.choice(POOL5)
-                elif z < 0.58:
+                elif z < 0.58 and not os.environ.get('AK_NO_MERGE'):
                     slots[i0][key] = MERGE
         return slots
 
@@ -173,7 +174,8 @@ def anneal(dims, steps, seed, log=print):
                 continue
             key = rng.choice(slotkeys[i0])
             cval = ns[i0].get(key)
-            opts = [None, MERGE] + POOL5
+            import os
+            opts = ([None] + POOL5) if os.environ.get('AK_NO_MERGE') else [None, MERGE] + POOL5
             nv = rng.choice([o for o in opts if o != cval])
             if nv is None:
                 ns[i0].pop(key, None)
