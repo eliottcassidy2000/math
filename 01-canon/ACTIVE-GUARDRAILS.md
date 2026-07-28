@@ -85,7 +85,7 @@
     `12/13` cap for the full slope-seven family.  Carry-forgetting still turns
     thirteen disjoint `Delta^11`s into a false `boundary Delta^12`; do not infer
     pointwise endpoint emptiness or export the cap to another carrier.
-27g. **Projection labels are not physical emptiness.** THM-2744 recharts root zero on an open overlap; THM-2749 is fully marked only on the two-sided sheet/pullback intersection.  Its frozen and clock-coindexed banks differ, and coindexed entries are counterfactual fibres, not an endpoint current.  Separate raw `t=2..11`, attached `t=3..11`, sign `-1`, single-sheet shear, and inherited divisor from exact gcd.  Next is the fixed-triangle THM-2334 address transplant.
+27g. **Projection labels are not physical emptiness.** THM-2744/2749 give a marked overlap, not an endpoint current; MISTAKE-313 separates two repairs, neither with gain `2`. Collapsed harmonics retain only `pi(r mod 13)`; exact address lives on `(r,k,l)`, `r.W=l-k`, so retain harmonic origins or a Bezout section.
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211 and

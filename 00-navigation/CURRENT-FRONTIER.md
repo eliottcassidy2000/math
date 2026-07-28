@@ -87,8 +87,20 @@ bilinear profiles.  Frozen and coindexed sections must not be conflated: the
 one-sided sheet shears and no common selector reaches the endpoint current or
 semantic arm.  THM-2750 proves every external-`C3`-equivariant clutch has zero
 invariant-to-charged block; the unbuilt escapes are a marked-arm gain or fixed
-fourth reference.  Next: transplant a fixed `R=13^6` THM-2334 triangle while
-retaining its exact address and a THM-2625 determinant sector.
+fourth reference.  MISTAKE-313 retracts THM-2751's proposed wing gain `2` at
+the first typing comparison: its legacy natural-sheet helper omitted the
+source-one clock factor used by THM-2749.  The actual fixed-clock source equals
+the common coefficient, so its left wing is coefficient-null and the folded
+target/source ratio is `11`, not `7`.  A second, full-unclocked retyping also
+fails: the literal intersection is `disjoint-union_e M_e`, its `e=2,3` pieces
+are nonzero, and its target wing profile `(9,2,2)` augments to zero.  Thus no
+  wing unit, cross-wing map, or phase survives.  On a fixed THM-2334 triangle,
+  an exhaustive endpoint-address probe likewise finds no carrier-only affine
+  covariance; exact address instead lies on the extended harmonic lattice
+  `(r,k,l)` with `r.W=l-k`, while the collapsed bank retains only
+  `pi(r mod 13)`.  Transporting every endpoint factor gives reciprocal
+  nontrivial phases.  Next: retain factor-level harmonic origins (or a declared
+  Bezout section) and one THM-2625 determinant sector in that fixed triangle.
 THM-2727 is **PROVED** as a fixed-rail realization no-go, but supplies no
 rail/owner/support/address map.  Ledger `165`; no row is excluded.
 

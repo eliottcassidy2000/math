@@ -1,5 +1,15 @@
 # Script Results Index
 
+- `lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.py` -> matching
+  `.out` [THM-2751 RESERVED / REFUTED PROVISIONAL; VERIFIED-EXACT
+  CLOCK-BLIND CALCULATION; MISTAKE-313].  The legacy outer-sheet helper omits
+  THM-2749's source-one clock factor, so its exact `12/2/7` arithmetic cannot
+  be compared with the fully marked common section.  The properly clocked
+  left wing is coefficient-null and the folded ratio is `11`.  Independently,
+  treating the outer sheets as full unclocked unions requires
+  `M=disjoint-union_e M_e`; its target profile `(9,2,2)` augments to zero.
+  Thus neither repair supplies wing gain `2`, a cross-wing map, or an endpoint
+  current.  Hashes: `aae8759f` / `6ae353d3`.
 - `jc2_degree22_all_even_zero_flux_componentwise_closure_thm2755.py` ->
   matching `.out` [THM-2755 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  Every even first and third Faber response is globally

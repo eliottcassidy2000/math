@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""Exact weighted-piece Mayer--Vietoris wing shear (THM-2751).
+"""Exact replay of the refuted THM-2751 clock-blind wing calculation.
 
-This companion independently reconstructs the natural source and target
-single-sheet carriers and the THM-2749 two-sided common carrier.  It then
-forms the two one-sided wings as actual weighted interval differences,
-rather than inferring them only by subtracting final coefficients.  All
-weighted-piece identities and delayed-prefix coefficient identities are
-checked before content division and root normalization.
+This companion reconstructs the legacy clock-blind source and target sheets
+and subtracts THM-2749's marked common section.  MISTAKE-313 proves that these
+objects are not lawfully comparable: the legacy source helper omits the
+source-one clock factor.  The program remains as an exact hostile replay of
+the arithmetic that produced the false global interpretation.
 
 The final C3 calculation is deliberately typed as a boundary: the displayed
 internal chart strata are arm-blind.  A hypothetical external selector with
@@ -28,7 +27,7 @@ sys.path.insert(0, str(COMP))
 
 DEPENDENCIES = {
     "lrc14_fully_marked_root_zero_target_profile_thm2749.py":
-        "12f150dc8e0fc543cc36fafaa2b84dd57a2dde6e40ce3cbadd8d057817bce3dc",
+        "d67c852c52f88feaadb2fcaa0a9a07a212f2e47018040b455855df886200595e",
     "lrc14_root_zero_overlap_clutch_20260728.py":
         "e10fa7c9a5a238461ef422ea314dc334f7e65ec1787cf65d4e4bea12b96aefb8",
     "lrc14_semantic_root_zero_clutch_refinement_probe_20260728.py":
@@ -470,8 +469,8 @@ def main():
     require(len(set(piece_counts)) == 1,
             "weighted-piece census stopped being clock-constant")
 
-    print("LRC14 ROOT-ZERO CLUTCH MAYER-VIETORIS WING SHEAR")
-    print("status=PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT")
+    print("LRC14 ROOT-ZERO CLOCK-BLIND WING REPLAY")
+    print("status=REFUTED_GLOBAL_CLAIM;VERIFIED_EXACT_CLOCK_BLIND_CALCULATION")
     print(f"dependency_pins=LF-normalized count={len(DEPENDENCIES)}")
     print("prefix_identity=natural_Q_(3,{1,2}) equals THM2749_marked_prefix for all_7_clocks")
     print(f"piece_counts=(A,M,L;B,M,R)={piece_counts[0]}")
@@ -492,8 +491,8 @@ def main():
     print("actual_external_arm_typing=I_arm_tensor_internal_T; Q(I_tensor_T)Pi=0")
     print("conditional_external_formula=if_Q3(S_i)=0_on_one_common_carrier_then_Q3(T_i)=10*Q3(M_i); carrier_not_constructed")
     print(f"conditional_ANOVA_exhaustive={anova_checks}_2x3_tables rectangles_zero_iff_Q3T_zero")
-    print("FIRST_FAILURE: no canonical physical identification or relative phase pairs the one-sided wings L and R")
-    print("SCOPE: exact additive internal-chart decomposition and signed wing current; no external C3 selector, endpoint current, row exclusion, or LRC14")
+    print("FIRST_FAILURE: legacy natural source omits the source-one clock factor of the marked common section")
+    print("SCOPE: exact hostile replay on mismatched carriers; no physical wing decomposition, external C3 selector, endpoint current, row exclusion, or LRC14")
     print("ALL CHECKS PASSED")
 
 

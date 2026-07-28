@@ -1,5 +1,5 @@
-LRC14 ROOT-ZERO CLUTCH MAYER-VIETORIS WING SHEAR
-status=PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT
+LRC14 ROOT-ZERO CLOCK-BLIND WING REPLAY
+status=REFUTED_GLOBAL_CLAIM;VERIFIED_EXACT_CLOCK_BLIND_CALCULATION
 dependency_pins=LF-normalized count=3
 prefix_identity=natural_Q_(3,{1,2}) equals THM2749_marked_prefix for all_7_clocks
 piece_counts=(A,M,L;B,M,R)=(1275, 239, 1036, 1275, 239, 1036)
@@ -20,6 +20,6 @@ hypothetical_external_arm_gains=(12, 2, 2) mean=1 Qg=(11, 1, 1) normalized_C3=(1
 actual_external_arm_typing=I_arm_tensor_internal_T; Q(I_tensor_T)Pi=0
 conditional_external_formula=if_Q3(S_i)=0_on_one_common_carrier_then_Q3(T_i)=10*Q3(M_i); carrier_not_constructed
 conditional_ANOVA_exhaustive=28561_2x3_tables rectangles_zero_iff_Q3T_zero
-FIRST_FAILURE: no canonical physical identification or relative phase pairs the one-sided wings L and R
-SCOPE: exact additive internal-chart decomposition and signed wing current; no external C3 selector, endpoint current, row exclusion, or LRC14
+FIRST_FAILURE: legacy natural source omits the source-one clock factor of the marked common section
+SCOPE: exact hostile replay on mismatched carriers; no physical wing decomposition, external C3 selector, endpoint current, row exclusion, or LRC14
 ALL CHECKS PASSED

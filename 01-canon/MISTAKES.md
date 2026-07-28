@@ -39,6 +39,27 @@ Format per entry:
   General rule: before subtracting two exact interval tables, compare the
   complete factor constructors, not merely their prefix banks and output
   hashes.
+- **Independent retyping check:** if the two legacy outer sheets are instead
+  treated honestly as full unclocked unions, their literal intersection is
+  `M=disjoint-union_e M_e`, not `M_1`; the same-clock `e=2,3` pieces are
+  nonzero and all cross-clock pieces are empty.  The resulting wings have
+  `v_13(L)=1`, `v_13(R)=2`, with source profile `(0,0,0,12,0,0,0)` and target
+  profile `(0,9,2,2,0,0,0)`.  The target augments to zero, so this second
+  repair also has no target wing unit or gain `2`.  Its full-sheet ratio `7`
+  is a property of the unclocked union, not of the fully marked fixed-clock
+  carrier.  Thus the two valid repairs are distinct and neither supplies a
+  physical `L -> R` map, relative phase, endpoint current, or LRC exclusion.
+- **Endpoint/address hostile:** on the fixed THM-2334 triangle, exhaustive
+  search finds no scalar-times-character-times-quotient-shift covariance for
+  either endpoint wing or even the two common carriers.  Transporting every
+  present endpoint factor does restore an exact scalar, paired with its
+  reciprocal in the reverse chart.  The reason is structural: left/right
+  carrier harmonics `k,l` satisfy `r.W=l-k`, so exact address lives on the
+  extended lattice `Lambda_tilde={(r,k,l):r.W=l-k}`; the old `Lambda` is only
+  its diagonal `k=l`.  Interval collapse remembers merely `pi(r mod 13)`.
+  A Bezout correction is noncanonical and changes the address.  Hence the
+  factor-level harmonic origin (or a declared Bezout section) is an essential
+  sidecar, and the formal gain is one moment rather than an addresswise map.
 
 ## MISTAKE-312 (2026-07-28, root-zero clutch dependency pins) -- LF evidence hashes were checked against raw platform bytes
 

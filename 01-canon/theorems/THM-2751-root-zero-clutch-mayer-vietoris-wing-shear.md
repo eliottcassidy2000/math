@@ -1,31 +1,41 @@
 ---
 id: THM-2751
-title: "Root-zero clutch Mayer--Vietoris wing shear"
+title: "Fixed-clock root-zero wing subtraction; global Mayer--Vietoris claim refuted"
 status: >
   RESERVED / REFUTED PROVISIONAL CANDIDATE.  The legacy natural-sheet
   constructor used below inserted E3 and the four target-sheet gates but
   omitted the source-one clock factor d_(1,ell).  It therefore cannot be
   compared with THM-2749's fully marked common section.  The internally exact
   12/2/7 calculation belongs to that clock-blind hostile carrier, not to the
-  claimed physical Mayer--Vietoris decomposition.  No result may depend on
+  claimed physical Mayer--Vietoris decomposition.  A full-unclocked retyping
+  fails independently because the true intersection includes nonzero e=2,3
+  pieces and its target-wing augmentation is zero.  No result may depend on
   this file.  The corrected clocked computation has coefficient-null left
   wing and a one-sided charged right wing; see MISTAKE-313.
 source: root/root-zero-clutch-mayer-vietoris-2026-07-28
+audit: >
+  The first hostile audit replicated the pinned legacy constructor and is
+  superseded on typing.  Direct factor-list comparison locates the omitted
+  source clock; an independent full-unclocked audit verifies same-clock
+  unions, cross-clock emptiness, amplitudes, valuations, profiles, and the
+  target augmentation rank drop.  Both reject the global claim.
+mistake: MISTAKE-313
 depends_on: []
 related:
   - THM-830-b3-deletion-deck-mirror-current-calculus
   - THM-2657-odometer-carry-root-lift-nonsplit-extension-and-cech-cocycle
   - THM-2716-c4-arm-transporter-groupoid-and-relative-degree-holotopy-boundary
   - THM-2750-arm-blind-clutch-no-go-and-minimal-marked-leakage
+  - THM-2754-diagonal-clock-81-label-root-zero-clutch-addendum
   - THM-2348-prime-type-rectangularity-and-target-token-conditioning
 script: 04-computation/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.py
 output: 05-knowledge/results/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.out
-script_sha256: b84d1d1a2942a3470cba86b7ab9d31c62a21451cd674977553cd008fa49db780
-output_sha256: 92af039314386bd55d0d6e0854c13c1d03da86966d1fc913fc2751421b12520d
+script_sha256: aae8759fcf4289912866f91615f430974c6984dbe62987fb972bdc0651602a54
+output_sha256: 6ae353d31a9ed568e8939d54c98c46ecc124678bf9e2d5ffc94655bfdfc3c17e
 hash_basis: LF-normalized bytes
 ---
 
-# THM-2751 -- the natural root-zero shear is a one-sided wing boundary
+# THM-2751 -- the fixed-clock wing subtraction does not globalize
 
 **RESERVED / REFUTED PROVISIONAL CANDIDATE.**
 
@@ -42,16 +52,61 @@ only for a clock-blind hostile carrier and cannot be combined with THM-2749.
 They are retained as correction history.  The correctly clocked calculation
 has source coefficient equal to the common coefficient, hence a physically
 nonempty but coefficient-null left wing; the right wing carries the entire
-one-sided shear.  See MISTAKE-313.  Nothing below this banner is a proved
-dependency.
+one-sided shear.  Its normalized source, target, and right-wing profiles are
+`9,8,4`, and its folded target/source ratio is `11`, not `7`.
 
-THM-2749 identifies an exact signed clutch after the natural root-zero sheet
-is intersected with its translated pullback.  The same theorem records that
-the unsplit natural source and target coefficients are unequal.  The point of
-this candidate is to compare those calculations at the level of the actual
-weighted interval functions.  The mismatch is neither numerical noise nor a
-subtraction of unrelated tables: it is carried entirely by the two
-one-sided complements of the common section.
+There is a second lawful hostile interpretation.  If `A,B` are retained as
+full unclocked unions, then the common object is not the selected `M_1` but
+`M=disjoint-union_e M_e`; the `e=2,3` same-clock pieces are nonzero.  That
+repair produces a target wing whose profile augments to zero.  Nothing below
+this banner is a proved dependency.
+
+Under that second interpretation, the additional false implication is
+
+```text
+THM-2749 fixed present-clock section M_1 = A intersect B.   (false)
+```
+
+The unclocked sheets decompose by the physical-present clock, and the literal
+common object is
+
+```text
+M=A intersect B=disjoint-union_(e in F_7) M_e.
+```
+
+All cross-clock intersections vanish, but the same-clock pieces at `e=2,3`
+do not.  Subtracting only `M_1` therefore produces a labelled local
+subtraction, not the natural Mayer--Vietoris wings.
+
+The full-present hostile audit gives
+
+```text
+A=1812281403506324508838080,
+M=1809427434750797212391040,
+B=1826551436254490256030720,
+
+L=A-M= 2853968755527296447040,       v_13(L)=1,
+R=B-M=17124001503693043639680,       v_13(R)=2.
+```
+
+After content and root normalization, the true wing profiles are
+
+```text
+source=(0,0,0,12,0,0,0),
+target=(0,9,2,2,0,0,0).
+```
+
+The target profile augments to `9+2+2=0 mod 13`; after the delayed-clock
+cyclotomic quotient it is zero.  Thus there is no target wing unit and no
+wing gain `2`.  The common gain `12=-1` and whole-sheet gain `7` survive.
+See MISTAKE-313 and the full two-clock hostile audit for the correction.
+
+The material below is preserved only as the rejected clock-blind calculation
+with a selected `e=1` common section.  Its displayed arithmetic is
+finite-exact, but every identification of that selected complement with a
+fully marked or full-unclocked natural wing is superseded.
+
+# Historical rejected candidate -- do not cite as a theorem
 
 ## 1. The weighted Mayer--Vietoris cover
 
@@ -102,7 +157,7 @@ source A               1275         239       1036
 target B               1275         239       1036,       (5)
 ```
 
-and their weighted masses are
+and their raw grid-weighted masses are
 
 ```text
 mu_w(A)=929934280541992017600,
@@ -350,5 +405,4 @@ shear valuation, checks both sides of the external-`C3` boundary, and
 exhausts the `28561` conditional ANOVA tables.  No
 truth-bearing Python `assert` is used.
 
-`QED` for the provisional theorem; the file remains reserved until
-independent promotion.
+QED.
