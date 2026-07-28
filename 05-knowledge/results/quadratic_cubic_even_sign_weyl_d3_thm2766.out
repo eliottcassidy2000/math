@@ -1,0 +1,15 @@
+QUADRATIC-CUBIC PULLBACK / EVEN-SIGN WEYL D3 AUDIT
+ambient_signed_wreath_order=48
+six_root_sign=sign_flip_parity
+even_sign_subgroup_order=24
+even_sign_four_state_action=S4=W(D3)=W(A3)
+cyclic_base_preimage_order=12 action=A4
+F2^3_subspaces=16
+product_relation_111_annihilator=000,011,101,110=V4
+pullback_triple_census=120 discriminant_formula=exact
+disc_RV2=4^3*product_roots*disc_R^2
+quartic_census=210 T_nonzero=160
+quartic_product_ti=(T/8)^2
+rank2+C3=A4 rank2+S3=S4
+SCOPE=semidirect_binary_over_ternary_not_free_product_not_JC2
+FAILED CHECKS: NONE
