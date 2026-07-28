@@ -5,6 +5,7 @@ wall_zero_counts_binary_ternary_linear_odd={2: (0, 0, 0, 0), 3: (0, 0, 3, 0), 4:
 constructed_signed_state_witnesses_k1_to_k6=1086
 binary_minimum_sum_uniqueness_k1_to_k6={1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
 ternary_minimum_sum_uniqueness_k1_to_k4={1: 1, 2: 1, 3: 1, 4: 1}
+general_radix_uniqueness_q2_to_q6_k1_to_k3={(2, 1): 1, (2, 2): 1, (2, 3): 1, (3, 1): 1, (3, 2): 1, (3, 3): 1, (4, 1): 1, (4, 2): 1, (4, 3): 1, (5, 1): 1, (5, 2): 1, (5, 3): 1, (6, 1): 1, (6, 2): 1, (6, 3): 1}
 binary_wall=(1,2,4): regular_but_signed_states_alias
 linear_wall=(1,2,3): delta=(1,1,-1), determinant=0
 linear_zero_frames_total_k2_to_k5=145

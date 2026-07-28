@@ -128,6 +128,13 @@ def balanced_sums(h):
     return {signed_value(delta, h) for delta in product((-1, 0, 1), repeat=len(h))}
 
 
+def digit_sums(h, alphabet):
+    return {
+        sum(digit * x for digit, x in zip(digits, h))
+        for digits in product(range(alphabet), repeat=len(h))
+    }
+
+
 def partitions(total, length, minimum=1):
     if length == 0:
         if total == 0:
@@ -251,6 +258,22 @@ def main():
                 "ternary radix polynomial identity failed")
         ternary_minima[k] = len(good)
 
+    radix_minima = {}
+    for alphabet in range(2, 7):
+        for k in range(1, 4):
+            total = (alphabet**k - 1) // (alphabet - 1)
+            good = [
+                h for h in partitions(total, k)
+                if len(digit_sums(h, alphabet)) == alphabet**k
+            ]
+            expected = tuple(alphabet**i for i in range(k))
+            require(good == [expected],
+                    f"radix equality classification failed at q={alphabet}, k={k}: {good}")
+            require(polynomial_product(expected, alphabet) ==
+                    [1] * ((alphabet - 1) * total + 1),
+                    "general radix polynomial identity failed")
+            radix_minima[(alphabet, k)] = len(good)
+
     require(len(subset_sums((1, 2, 4))) == 8, "binary positive control failed")
     require(len(balanced_sums((1, 2, 4))) < 27,
             "binary state-reconstruction hostile did not collide")
@@ -267,6 +290,7 @@ def main():
     print(f"constructed_signed_state_witnesses_k1_to_k6={witness_checks}")
     print(f"binary_minimum_sum_uniqueness_k1_to_k6={binary_minima}")
     print(f"ternary_minimum_sum_uniqueness_k1_to_k4={ternary_minima}")
+    print(f"general_radix_uniqueness_q2_to_q6_k1_to_k3={radix_minima}")
     print("binary_wall=(1,2,4): regular_but_signed_states_alias")
     print("linear_wall=(1,2,3): delta=(1,1,-1), determinant=0")
     print(f"linear_zero_frames_total_k2_to_k5={zero_linear}")

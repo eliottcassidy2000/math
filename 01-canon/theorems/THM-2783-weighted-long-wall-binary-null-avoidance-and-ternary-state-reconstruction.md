@@ -12,8 +12,10 @@ status: >
   up to permutation, (1,2,...,2^(k-1)).  If the stronger requirement is to
   reconstruct every {-1,0,1} tree state, the unique minimum-L1 wall is
   (1,3,...,3^(k-1)).  Thus binary is the optimal zero detector and ternary
-  the optimal full signed-state address.  These are coding theorems, not a
-  PSL2(Z), graceful-tree, Keller, or LRC action.
+  the optimal full signed-state address.  More generally, every q-symbol
+  digit alphabet has the unique minimum-L1 radix wall
+  (1,q,...,q^(k-1)).  These are coding theorems, not a PSL2(Z),
+  graceful-tree, Keller, or LRC action.
 source: root/weighted-long-wall-coding-2026-07-28
 depends_on: []
 related:
@@ -21,8 +23,8 @@ related:
   - THM-2776-one-long-wall-signed-component-imbalance-determinant-classification
 script: 04-computation/weighted_long_wall_binary_ternary_thm2783.py
 output: 05-knowledge/results/weighted_long_wall_binary_ternary_thm2783.out
-script_sha256: e6280567d7e895a54061fb1610ab9493f7509eb3a6e65a45dbd041194cf9bd6c
-output_sha256: 9543c166f90d9ab3a7da6b09e1d2034f8e72f952fc53a24d65cd1afe1ceb684c
+script_sha256: 0f7d8a0a6491db1abd13f141b35d3f62cdd3121782ef9b5a24c8fdd9b59b68d5
+output_sha256: 0c586cdf8d44929c2809728e6bea5ce3a8e19497056bdb1709dbb97e6c89f718
 hash_basis: LF-normalized bytes
 ---
 
@@ -232,13 +234,47 @@ address and the cycle count `c`.  Even balanced ternary does not promise to
 recover `c` from the single product `2^c<epsilon,h>`; a complete frame state
 must retain `c` separately.
 
-## 5. What this does—and does not—say about two and three
+## 5. The general radix theorem
+
+The same extremal argument is not confined to two and three.  Fix any
+integer `q>=2` and require
+
+```text
+{0,1,...,q-1}^k -> Z,             a |-> a dot h          (19)
+```
+
+to be injective for a positive integral wall.  Its `q^k` values lie in
+`[0,(q-1)H]`, so
+
+```text
+H>=(q^k-1)/(q-1).                                        (20)
+```
+
+Equality holds for `h=(1,q,...,q^(k-1))`, and only for that wall up to
+permutation.  Indeed equality gives
+
+```text
+product_i(1+x^(h_i)+...+x^((q-1)h_i))
+  =1+x+...+x^(q^k-1).                                   (21)
+```
+
+The coefficient of `x` forces the least weight to be one.  Divide by
+`1+x+...+x^(q-1)`; the quotient contains exactly the powers whose exponents
+are divisible by `q`.  Positivity forces every remaining `h_i` to be
+divisible by `q`, and induction finishes the classification.
+
+Binary null avoidance is `(19)` at `q=2`.  Balanced-ternary reconstruction
+is `(19)` at `q=3` after shifting every digit by one.  Thus two and three are
+the first two exact radix layers, while their geometric importance here
+comes from the particular state alphabets supplied by signed frames.
+
+## 6. What this does—and does not—say about two and three
 
 The exact state alphabets are
 
 ```text
 {absent,present}                  of size 2;
-{absent,positive,negative}        of size 3.              (19)
+{absent,positive,negative}        of size 3.              (22)
 ```
 
 Equations `(10)--(18)` show that radices two and three are the optimal
@@ -269,7 +305,7 @@ The same scope boundary matters elsewhere.
 - The `D3`/quartic wall in THM-2775 is Weyl-geometric.  A radix wall breaks
   that symmetry and is not an affine operation on a Keller map.
 
-## 6. Exact verification
+## 7. Exact verification
 
 Run
 
@@ -285,7 +321,8 @@ nonzero signed-state witness frames through `k=6`; verifies that binary and
 ternary walls never vanish there; finds the expected `145` linear-wall
 zeros; exhausts the minimum-sum binary equality cases through `k=6` and the
 ternary equality cases through `k=4`; and checks the radix polynomial
-identities and sharp hostiles.  Normal and optimized runs byte-match the
+identities, the general `q=2,...,6` equality theorem through three
+coordinates, and sharp hostiles.  Normal and optimized runs byte-match the
 stored transcript.
 
 ```text
@@ -294,6 +331,7 @@ PROVED HERE (candidate):  arbitrary-wall determinant formula (5);
                           an explicit frame for every signed-sum zero;
                           sharp binary minimum and unique equality wall;
                           sharp ternary minimum and unique equality wall;
+                          general q-symbol minimum radix theorem;
                           binary null-detection / ternary reconstruction fork;
                           cycle-count and modular-action stopping boundaries.
 
@@ -302,7 +340,7 @@ NOT PROVED:               a canonical radix deformation of the graceful wall;
                           a PSL2(Z) action or free-factor realization;
                           a Keller, JC(2), or DC(2) consequence;
                           an LRC relation, endpoint, or current;
-                          LRC(14).                                      (20)
+                          LRC(14).                                      (23)
 ```
 
 QED (candidate).
