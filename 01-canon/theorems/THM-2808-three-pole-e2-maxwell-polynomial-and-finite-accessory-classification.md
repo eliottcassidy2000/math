@@ -127,7 +127,22 @@ resultants.
 
 ### Proof of the factor and degree
 
-Polynomial reduction by `E` shows `R in Q[lambda]`.  The recurrence
+Polynomial reduction by `E` shows `R in Q[lambda]`.  Explicitly, put
+
+```text
+sigma=U/N,                    pi=a lambda/N,
+h_(-1)=0, h_0=1, h_1=sigma,
+h_j=sigma h_(j-1)-pi h_(j-2).
+```
+
+Then
+
+```text
+x^m=h_(m-1)x-pi h_(m-2)                     modulo E,
+```
+
+so expanding `(x-1)^b(x-lambda)^c` gives `R` by a finite all-degree
+recurrence.  In particular, the recurrence
 
 ```text
 x^k=h_(k-1)x-p h_(k-2)       modulo E,
@@ -190,6 +205,13 @@ and the other is `delta=a/d+O(lambda^(-1))`.  Equation `(7)` gives
 R(lambda)
  =[(d/N)^(d-1)(-c/N)^c] lambda^(N-1)
   +O(lambda^(N-2)).                                    (14)
+```
+
+Since the leading coefficient of `Delta` is `d^2`, this also gives
+
+```text
+[lambda^(N-3)]Q
+ =(-1)^c d^(d-3)c^c/N^(N-1) !=0.                      (14a)
 ```
 
 Thus `deg R=N-1`; removing the exact quadratic factor proves `(9)`.
