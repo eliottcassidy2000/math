@@ -2,8 +2,8 @@
 id: THM-2702
 title: "Polynomial-graph coordinate-projection Keller classification"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  On an arbitrary polynomial graph s_3=f(s_1,s_2), the three
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On an arbitrary
+  polynomial graph s_3=f(s_1,s_2), the three
   coordinate-pair projections of the THM-2696 S3<S4 quotient have a complete
   constant-Jacobian classification.  The (A,d) pair gives exactly the
   triangular family f=(kappa/2)x+H(y-x^2/2); the (B,d) pair has no nonzero-
@@ -26,8 +26,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2702 -- all three coordinate-pair graph slices are triangular or empty
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2699 closes every affine source plane and every affine-linear target
 projection of the reflection quotient.  Polynomial source graphs are already
@@ -224,5 +223,10 @@ has seven free `H(t)` coefficients, twenty forced non-slice coefficients, and
 Euler spectrum `1,...,7`.  This finite control supports but does not replace
 the all-degree arguments in Sections 2--4.
 
-Promotion awaits an independent hostile audit of the LND/unit-Jacobian step,
-the all-degree PDE solutions, signs, inverses, graph typing, and exact replay.
+An independent hostile audit rederived `(3)`--`(5)`, checked the
+`D=partial_x` normal form in `(x,t)`, the `L+1` spectrum, the LND generator
+nilpotence and `exp(TE)` unit-Jacobian/divergence step, both inverses, graph
+and target scope, normal/`-O`/stored replay, and both exact hashes.  No defect
+was found.
+
+QED.

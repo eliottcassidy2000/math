@@ -35,10 +35,10 @@ both retain deck, owner, clock, phase, and endpoint.  Gate failure means
   [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
 - **PROVED:** THM-2051 gives positive safe measure or a support-3..5 relation
   of height `2^20`; THM-965/2074 supply its pair floor and finite ledger.
-- **PROVED atlas:** THM-2052--2059 force the rank-12 box or rank-11 two-anchor
-  star and retain deck/Farey/CRT data.  Later nodes are THM-2081, THM-2082,
-  THM-2083, THM-2085/2087 (including THM-2085), THM-2086, THM-2088,
-  THM-2089, THM-2090, and THM-2092; THM-2148/2168 reach scalar `5+3`.
+- **PROVED atlas:** THM-2052--2092 force the rank-12 box or rank-11 two-anchor
+  star while retaining deck/Farey/CRT data; THM-2148/2168 reach scalar `5+3`.
+  Routed nodes: THM-2081, THM-2082, THM-2083, THM-2085/2087, THM-2086,
+  THM-2088, THM-2089, THM-2090, THM-2092.
 - **PROVED decorrelation:** THM-2054 clears recorded margins at `H=2^19`;
   MISTAKE-080/082 still require shape-specific tori.
 - **Comb ceiling:** THM-1252--1274 saturate six-comb arguments.  The live move
@@ -47,27 +47,22 @@ both retain deck, owner, clock, phase, and endpoint.  Gate failure means
 ### Exact live obligation
 
 Rank-twelve boxes/rank-eleven stars remain open (HYP-8871).  Exactly `165` rows
-survive in `nu_7(c_3)<=M`; THM-2417/2426/2436 empty its complement.  THM-2440--2539
-close supplied-root local seams but do not identify the later semantic root
-(THM-2356 kernel `28,393`; THM-2363/THM-2368 are sidecars).  THM-2545/2549 give the
-Hall gate and positive same-base chronology on all rows, still old-target
-neutral.  THM-2555 separates old root from immediate-future root; THM-2547 is
-only a **FINITE-EXACT EXTERNAL CONTROL** after MISTAKE-281.
+survive; THM-2417/2426/2436 empty the complementary valuation lane.
+THM-2440--2539 close supplied-root seams but not the later semantic-root
+identification (kernel `28,393`; THM-2363 and THM-2368 are sidecars).
+THM-2545/2549 give the Hall gate and positive same-base
+chronology, still old-target neutral; THM-2547 is only a **FINITE-EXACT
+EXTERNAL CONTROL** after MISTAKE-281.
 
-The audited THM-2551--2602 chain says why refinements do not descend: transfer
-preserves the projector kernel, gains are coboundaries, duty curvature is the
-first non-product square, and an ordered positive edge kernel is still needed.
-THM-2571/2579 retain the carry torsor; THM-2586 reaches a later root;
-THM-2587/2591 lose its wall; THM-2600 supplies unit vertices, not transitions.
+THM-2551--2602 explain the descent failure: transfer preserves the projector
+kernel, gains are coboundaries, and an ordered positive edge kernel is still
+needed.  The chain reaches carry, later-root, and unit-vertex data but loses
+the wall or transition.
 
-THM-2614/2616 supply dense same-event cosupport and a positive cross-time
-diagonal, but omit future digits `0,12` and deep root `0`.  THM-2624 proves
-two-clock signed tomography yet every row is dense, so no positive decoder
-exists.  THM-2629's optimum graph `r=-q-1` still hits deep zero; THM-2623 fills
-the future digits but leaves four unit holes.  THM-2630 makes predecessor carry
-load-bearing.  THM-2635's half-edge has global content `26` and units at
-`h=3,8,10`; its clock-two addendum kills `h=3` but retains an `h=10` endpoint.
-The graph and second semantic root remain untransported.
+THM-2614--2635 reach dense cosupport, positive cross-time diagonals, two-clock
+tomography, future digits, predecessor carry, and a half-edge, but each loses
+a deep root, a unit, or the target graph.  The second semantic root remains
+untransported.
 
 THM-2615/2618 refute Radon/free-orbit recovery (MISTAKE-300); THM-2620/2625
 restore the determinant and THM-2634 retains two carries without a transverse
@@ -202,8 +197,7 @@ design without pretending a preserver supplies the seed.
 
 - THM-1805 makes directed triangles the Vandermonde-cancellation atom; THM-1862/1936 make `H` and signed Rédei data multiplicative under order-join while `c3` is additive.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md) makes `d_iso` exactly `l1` on fixed order-join patches by image-swap uncrossing; the ambient quotient still has triangles and is not a partial cube.
-- [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) classifies the universal product iff transitive. Marked partial-automorphism cost is a weighted Hamming derivative and PSD-Gram permutation-trace defect; THM-2242/2249 close the transitive response and give every quotient a forced-pair envelope with one scaled-automorphism zero set.
-  THM-2256's scale dichotomy is bounded under zero-cost automorphism/nonautomorphism contact and linear otherwise. The transitive quotient has exact gap one; `C_3` has THM-2249's sharp linear floor. Residual `G-F_R`, larger nontransitive quotients, and unpinned transport remain open.
+- [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) classifies the universal product iff transitive. THM-2242/2249 give the transitive response and universal forced-pair envelope; THM-2256 separates bounded contact from linear scale. Nontransitive quotients and unpinned transport remain open.
 - THM-1880/1885 give the Chebyshev--Pell/`BS(1,2)^+` transitive frame.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
@@ -254,8 +248,6 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
 
 ### Established landmarks
 
-- Hostile-audited [THM-2422](../01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md) separates operation shadows from labelled fibres: strict closure from `{2,3}` is `N\{1,4,6}`, and synchronous growth is `M_t=27*2^(t-4)+1`.
-  Every twin centre through `10^8` has distinct earlier parents (FINITE-EXACT; all-centre extension OPEN). Polygonal supports have digamma/trigamma clocks.
 - Hostile-audited [THM-2433](../01-canon/theorems/THM-2433-operation-fibre-deletion-incidence-and-startup-scar.md) gives the finite-hole Burnside calculus. The additive scar stabilizes at three lost pairs, while multiplication propagates along `4N` and `6N`; internal transitive closures, four exceptional divisibility covers, and the unique artificial twin-centre atom `12` are exact. Chain difference and divisor Möbius inversion are analogues, not a Stirling identification.
 - Hostile-audited [THM-2438](../01-canon/theorems/THM-2438-poisson-newton-ternary-half-and-harmonic-divisor-incidence.md)
   gives the exact Poisson--Newton EGF conjugacy. Central-binomial Newton
@@ -334,7 +326,10 @@ Classify profiles under support operations; study analytic continuation and auto
   that quotient family and slice, not arbitrary `S4` resolvents or `JC(2)`.
   THM-2699 further classifies every affine source-plane/affine-linear target
   slice with constant planar Jacobian into three explicit triangular
-  automorphism families; nonlinear slices remain open.
+  automorphism families.  THM-2702 closes the three literal coordinate-pair
+  projections on arbitrary polynomial graphs: two explicit triangular
+  families and one locally-nilpotent-derivation impossibility.  Arbitrary
+  target projections and polynomial surfaces remain open.
   THM-2690 separately excludes the
   reduced normal-crossing cyclic-cubic toric normalizations
   `z^3=product x_i^(alpha_i)`, `alpha_i in {1,2}`: their class groups are

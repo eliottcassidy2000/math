@@ -19,8 +19,8 @@
   `D4` and determinant-`27` stars are the sharp controls.  Hashes begin
   `1db2ae94` / `8e6207f3`.
 - `jacobian_s4_polynomial_graph_coordinate_pairs_thm2702.py` -> matching
-  `.out` [THM-2702 PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT].  On `z=f(x,y)`, the `(A,d)` projection has
+  `.out` [THM-2702 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  On `z=f(x,y)`, the `(A,d)` projection has
   an arbitrary triangular `H(y-x^2/2)` family, `(B,d)` is excluded by
   a locally nilpotent derivation/divergence contradiction, and `(A,B)` has one
   explicit cubic triangular family.  This closes the three literal coordinate
