@@ -26,6 +26,7 @@ related:
   - THM-1770-the-localisation-lemma-as-first-return-renewal-and-the-pair-only-closure
   - THM-2020-gmc2-finite-place-channel-separation
   - THM-2624-two-clock-root-tomography-and-disjoint-carrier-holotopy-boundary
+  - THM-2639-gmc-equal-mass-two-rung-persistent-collision-certificate
   - HYP-8765-gmc2-radial-channel-return-tower
 script: 04-computation/gmc2_wick_channel_linear_decoder_thm2631.py
 output: 05-knowledge/results/gmc2_wick_channel_linear_decoder_thm2631.out
@@ -231,6 +232,13 @@ rows; and THM-2022 deliberately retains the complete tied face, reduces it
 modulo a good prime, and obtains its nonzero Frobenius power.  None asks a
 single homogeneous scalar row to behave as several equations.
 
+THM-2639 realizes the first option sharply.  Its free equal-mass two-ray face
+has `k+1` channels at every nonempty level `k*ell`, so the present linear
+decoder fails forever.  Nevertheless a polynomial multiple of `T_ell`
+eliminates the mixed and `y^2` terms of `T_(2ell)` and leaves a nonzero torus
+monomial.  Thus the linear no-go and nonlinear two-rung certificate meet at
+an exact boundary rather than competing conclusions.
+
 In the holotopy language suggested by THM-2624, the balanced channels form a
 multi-point fibre over one degree, while `M_m` collapses that entire fibre to
 one weighted scalar.  Different degrees are disjoint graded components, not
@@ -265,6 +273,6 @@ This theorem proves no new NC2 or GMC(2) conclusion.  Those statements are
 already PROVED by THM-2022.  It strengthens the corrected interpretation of
 MISTAKE-211 and narrows the effective-method frontier: raw scalar moments do
 not furnish a linear channel selector unless the decoded degree was already
-singleton.
+singleton.  THM-2639 is the proved nonlinear survivor.
 
 `QED.`

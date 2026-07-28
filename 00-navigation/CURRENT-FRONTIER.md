@@ -208,13 +208,19 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   embeds every Laurent polynomial as a horizontal face; its aperiodic dihedral
   control has cofinite returns but infinitely many zero constant terms, killing
   the S222/S223 saddle and semigroup shortcuts.
+- [THM-2639](../01-canon/theorems/THM-2639-gmc-equal-mass-two-rung-persistent-collision-certificate.md)
+  gives a DvdK-free persistent-collision class: a free equal-mass two-ray face
+  has `k+1` channels at level `k*ell`, yet its first two return polynomials
+  generate a nonzero torus monomial by an explicit negative-determinant Bezout
+  identity.  This is nonlinear ideal elimination, not a raw-moment decoder.
 
 ### Live work
 
 Package THM-2022 for publication and sharpen THM-2111's compound degree from
 the binomial bound toward the conjecturally sharp `M+N`. The external DvdK
 dependency is removed both on paper and in the unconditional Lean front door.
-Formalizing THM-2101's additive monodromy, transcendental, and t-adic packet
+Formalize THM-2639's ring identity and binomial sign as a compact independent
+leaf.  Formalizing THM-2101's additive monodromy, transcendental, and t-adic packet
 routes remains useful independent corroboration, not a dependency of
 `GMC2Main.gmc2`. Positive/two-charge/unique-channel leaves are reusable special cases, not the general mechanism.
 But HYP-8931's `LowestFaceUniqueChannel P` class is inconsistent by the empty

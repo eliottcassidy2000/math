@@ -1,0 +1,14 @@
+GMC equal-mass two-rung collision referee
+corrected_hypothesis=balanced semigroup free on two primitive equal-mass rays; equal-mass extreme rays alone are insufficient
+bezout_identity=B^2*T_2ell-[E*B*y+(D*B-E*A)*x]*T_ell=Delta*x^2
+delta= C*B^2-D*A*B+E*A^2; exact all-range proof gives Delta<0 for positive a,b,c,d with a+c=b+d and a!=b
+positive_tuple_census_ell_le_80=164320 closest_to_zero=((1, 2, 2, 1), -270)
+primitive_charge_census_abs_le_40=equal_mass:169,unimodular:50,nonunimodular:119
+minimal_missing_hypothesis_hostile=((1, 6, -4), (4, 0, 1), (0, 2, 3), 5, 2, ((0, 2, 3), (2, 1, 2), (4, 0, 1)))
+canonical_q_1_9_neg3_counts_m1_to48=(0, 0, 0, 2, 0, 0, 0, 3, 0, 0, 0, 4, 0, 0, 0, 5, 0, 0, 0, 6, 0, 0, 0, 7, 0, 0, 0, 8, 0, 0, 0, 9, 0, 0, 0, 10, 0, 0, 0, 11, 0, 0, 0, 12, 0, 0, 0, 13)
+affine_face_identity=C8-7*a*(a^2*c+9*b^3)*C4={(2, 6, 0): -224}
+gaussian_transfer=P=a*Z^6+b*Z^6*W^8+c*Z^6*W^24 has M4=24!*C4 and M8=48!*C8
+noninjective_boundary_delta_a_eq_b_eq1_c1_to20=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+noninjective_negative_controls_a_eq_b_2_to8_c_eq_d_eq3=(-84000, -6652800, -250149900, -6278272000, -120770552448, -1914433920000, -26139269286900)
+verdict=PASS: the corrected free/unimodular equal-mass two-ray class is DvdK-free in two rungs
+SCOPE: applies to the isolated Laurent face (and hence an affine Wick face up to its common factorial), not an unfiltered full polynomial with off-face channels

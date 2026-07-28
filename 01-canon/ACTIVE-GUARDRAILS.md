@@ -90,8 +90,8 @@
 
 ## NC2 / GMC
 
-28. **Scalar moments do not separate return atoms.** MISTAKE-211; use a
-    whole-face theorem or genuinely independent data.
+28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211 and
+    THM-2631; THM-2639 shows nonlinear two-rung ideal elimination can survive.
 29. **Tournament dominance is sufficient, not iff.** MISTAKE-212.
 30. **Vandermonde nodes are not tournament scores.** MISTAKE-214; repeated
     nodes do not imply a Paley/regular wall.
