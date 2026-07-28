@@ -12,6 +12,9 @@ from __future__ import annotations
 
 from itertools import combinations_with_replacement, product
 
+import sympy as sp
+from sympy.matrices.normalforms import smith_normal_form
+
 
 def require(condition: bool, message: str) -> None:
     if not condition:
@@ -99,6 +102,32 @@ def is_power_of_four(value: int) -> bool:
     while value % 4 == 0:
         value //= 4
     return value == 1
+
+
+def bit_span(generators: tuple[int, ...]) -> frozenset[int]:
+    values = {0}
+    for generator in generators:
+        values |= {value ^ generator for value in tuple(values)}
+    return frozenset(values)
+
+
+def bit_permute(vector: int, permutation: tuple[int, ...]) -> int:
+    result = 0
+    for source, target in enumerate(permutation):
+        if (vector >> source) & 1:
+            result |= 1 << target
+    return result
+
+
+def lattice_pairing_bit(matrix: list[list[int]], left: int, right: int) -> int:
+    size = len(matrix)
+    numerator = sum(
+        ((left >> i) & 1) * matrix[i][j] * ((right >> j) & 1)
+        for i in range(size)
+        for j in range(size)
+    )
+    require(numerator % 2 == 0, "lattice order-two pairing numerator even")
+    return (numerator // 2) % 2
 
 
 def f4_add(left: int, right: int) -> int:
@@ -198,6 +227,51 @@ def main() -> None:
     require(elementary_orthogonal == elementary_metabolizer,
             "elementary diagonal self-orthogonal")
 
+    # Integral S3-stable nullity-one control.  One orbit has standard sector
+    # O/4; the extra fixed -2 coordinate repairs the trivial sector and makes
+    # the total discriminant metabolic.
+    integral_matrix = [
+        [-2, 2, 2, 0],
+        [2, -2, 2, 0],
+        [2, 2, -2, 0],
+        [0, 0, 0, -2],
+    ]
+    integral_sp = sp.Matrix(integral_matrix)
+    smith = smith_normal_form(integral_sp, domain=sp.ZZ)
+    smith_diagonal = tuple(abs(int(smith[i, i])) for i in range(4))
+    require(abs(int(integral_sp.det())) == 64, "integral nullity-one determinant")
+    require(smith_diagonal == (2, 2, 4, 4), "integral nullity-one Smith form")
+    require(integral_sp.eigenvals() == {-4: 2, -2: 1, 2: 1},
+            "integral nullity-one signature")
+    integral_metabolizer = bit_span((0b0011, 0b0110, 0b1111))
+    require(len(integral_metabolizer) == 8, "integral metabolizer order")
+    require(
+        all(
+            lattice_pairing_bit(integral_matrix, left, right) == 0
+            for left in integral_metabolizer
+            for right in integral_metabolizer
+        ),
+        "integral metabolizer isotropic",
+    )
+    for permutation in ((1, 2, 0, 3), (1, 0, 2, 3)):
+        require(
+            {bit_permute(value, permutation) for value in integral_metabolizer}
+            == set(integral_metabolizer),
+            "integral metabolizer S3 stable",
+        )
+    transform = sp.Matrix(
+        [
+            [1, sp.Rational(1, 2), 0, sp.Rational(1, 2)],
+            [0, sp.Rational(1, 2), sp.Rational(1, 2), sp.Rational(1, 2)],
+            [0, 0, sp.Rational(1, 2), sp.Rational(1, 2)],
+            [0, 0, 0, sp.Rational(1, 2)],
+        ]
+    )
+    overlattice_gram = sp.simplify(transform.T * integral_sp * transform)
+    require(abs(transform.det()) == sp.Rational(1, 8), "integral index eight")
+    require(overlattice_gram.det() == -1, "integral unimodular overlattice")
+    require(overlattice_gram[3, 3] == 1, "integral overlattice is odd")
+
     # Bounded invariant-factor audit of the parity and unique-plane laws.
     profiles = []
     for number_of_factors in range(1, 7):
@@ -237,6 +311,7 @@ def main() -> None:
     print("cyclic_r2_exponent4_Horder16_secondary=LIFTABLE")
     print("cyclic_r3_exponent6_Horder64_secondary=LIFTABLE")
     print("elementary_W2_diagonal_metabolizer=YES")
+    print("s3_integral_nullity1_det=64 smith=(2,2,4,4) Horder=8 overlattice=I_(1,3)")
     print("d4_single_W_length1_metabolizer=NO")
     print("boundary_realization_and_reflection_not_tested")
     print("PASS")

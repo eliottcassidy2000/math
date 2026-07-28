@@ -11,6 +11,9 @@ status: >
   is at least two.  At nullity one the only possible standard sector is
   O/2^(2r), its metabolizer is 2^r O/2^(2r), and the canonical plane is at
   THM-2695 secondary level one exactly for r=1 and level two for r>=2.
+  The integral S3-stable matrix `2(J_3-2I_3) direct_sum [-2]` realizes the
+  sharp nullity-one `r=1` escape and has an index-eight odd unimodular
+  overlattice of signature `(1,3)`.
   This is a necessary discriminant-module gate, not geometric realization,
   reflection completion, or a general A4/S4/JC2/DC2 conclusion.
 source: a4-resolvent-next-gate-scout-2026-07-28
@@ -24,8 +27,8 @@ related:
   - THM-2703-c3-boundary-tree-arm-determinant-standard-plane-gate
 script: 04-computation/c3_metabolic_length_parity_thm2714.py
 output: 05-knowledge/results/c3_metabolic_length_parity_thm2714.out
-script_sha256: 0e824fc5012a1fa0d26a54f8db2d20f85dc404059c9413f23d80e1098ae4b251
-output_sha256: 55355e4814b952c2bf8ce374a7df0c6e7df2d946961e3568c50e2be0bcc7a53a
+script_sha256: 948ae7f5dfedd40d86e22e697744e7e57d293e906393d8d578c54ca2dc6347df
+output_sha256: f2e42da14d2bc17b7eb4017f9b232d02be981d8cf82b1eb30fb56a91a854b335
 hash_basis: LF-normalized bytes
 ---
 
@@ -328,6 +331,65 @@ of `(27)` exactly.  These are finite discriminant-form controls; no claim is
 made that every `(30)` is realized by an effective boundary configuration
 or a Keller resolvent.
 
+### 6.4 A concrete integral and reflection-stable nullity-one control
+
+The `M_iso` half of THM-2711's mod-two-identical pair becomes a full
+metabolic lattice after adding one fixed `-2` coordinate.  Explicitly, take
+
+```text
+M_*=2(J_3-2I_3) direct_sum [-2]
+
+   =[-2  2  2  0]
+    [ 2 -2  2  0]
+    [ 2  2 -2  0]
+    [ 0  0  0 -2].                                       (33)
+```
+
+The full `S3` permutes the first three coordinates and fixes the fourth.
+One computes
+
+```text
+abs(det M_*)=64,
+Smith(M_*)=(2,2,4,4).                                    (34)
+```
+
+Its standard sector is `O/4`, so exactly one standard plane is visible.
+The trivial sector is `(Z/2)^2`.  In the order-two coordinate model of
+THM-2711, let `W` be the even-sum plane on the first three coordinates and
+put
+
+```text
+H_*=W + <(1,1,1,1)>.                                     (35)
+```
+
+Then `|H_*|=8`, its discriminant pairing vanishes identically, and `(34)`
+makes it a metabolizer.  Both `C3` and every coordinate reflection preserve
+`H_*`.
+
+A basis for the corresponding overlattice is
+
+```text
+e_1,
+(e_1+e_2)/2,
+(e_2+e_3)/2,
+(e_1+e_2+e_3+f)/2.                                      (36)
+```
+
+The change-of-basis determinant is `1/8`, and the new Gram matrix is
+
+```text
+[-2  0  2  1]
+[ 0  0  1  1]
+[ 2  1  0  1]
+[ 1  1  1  1],                                           (37)
+```
+
+with determinant `-1` and signature `(1,3)`.  Hence it is the odd
+unimodular lattice `I_(1,3)`.  This proves the nullity-one `r=1` escape and
+its reflection stability are sharp already for an integral lattice of
+rational-surface signature.  Effectivity of the four basis classes as a
+boundary and realization by a quartic resolvent remain separate.
+
 ## 7. Exact companion
 
 Run
@@ -351,6 +413,9 @@ raises.  It verifies:
 - the `C3` orbit on the three nonzero vectors of every visible plane;
 - the secondary nonliftable/liftable split at `r=1` versus `r>=2`;
 - the two-elementary diagonal metabolizer `(28)`--`(29)`;
+- the integral `S3`-stable nullity-one matrix `(33)`, its Smith form,
+  order-eight metabolizer, reflection invariance, and index-eight odd
+  unimodular overlattice `(37)`;
 - all `3,002` invariant-factor profiles with at most six factors and
   exponents at most eight, including the parity law and the unique-factor
   exponents `2,4,6,8` in that box.
@@ -384,7 +449,7 @@ comparison:
 2. split its C3-standard O-primary invariant factors;
 3. reject odd total O-length;
 4. at nullity one, identify r and compare the forced THM-2695 level (27);
-5. only then test semilinear reflection and effective realization.        (33)
+5. only then test semilinear reflection and effective realization.        (38)
 ```
 
 This is a precise realization of the user's `2`/`3` clue: the order-three
