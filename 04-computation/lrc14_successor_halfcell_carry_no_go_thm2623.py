@@ -260,6 +260,9 @@ def main():
             "successor half-cell unit census changed")
     require(len(violations) == 20_778 and tuple(violations[:4]) == expected_first,
             "false singleton census changed")
+    require(all(size in (11,12) for sector in supports
+                for edge in sector for counter in edge for size in counter),
+            "a fixed-clock successor half-cell row became private")
     require(all(size in (11,12) for sector in slice_supports
                 for edge in sector for counter in edge for size in counter),
             "a successor half-cell slice became private")
