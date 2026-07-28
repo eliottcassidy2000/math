@@ -10,100 +10,65 @@ Status: **PROVED** in-repo proof; **CITED** scoped import; **FINITE-EXACT** exha
 **OPEN.** The standard reduction has 13 nonzero relative speeds; known work
 settles at most 13 total runners.  The residue is not a routine finite scan.
 
-Proof graph:
-
-```text
-counterexample
-  -> genuine support-3..5 relation, height <= 2^20       [THM-2051]
-  -> bounded sparse relation code of rank >= 11          [THM-2052]
-       |-- rank 12 -> finite maximal-minor box
-       `-- rank 11 -> finite two-anchor star atlas
-            -> deck + sufficient gate / indexed open 26-disk failure carrier [THM-2053]
-            -> signed-hull owner fan / Kelvin-Farey certificate [THM-2055/2056]
-            -> primitive packets + one coprime owner interval [THM-2058]
-            -> exact core/tail CRT compatibility on each clock [THM-2059]
-            -> clock, pair-sum, Fejer, Euler, or rank discharge [OPEN]
-```
-
-Rank eleven is a huge labelled intersection and rank twelve a separate box;
-both retain deck, owner, clock, phase, and endpoint.  Gate failure means
-**uncertified**, not unsafe.
+THM-2051/2052 reduce a counterexample to a support-`3..5`, height-`2^20`
+relation and then a bounded sparse code of rank at least eleven.  Rank twelve
+is a finite maximal-minor box; rank eleven is a two-anchor star retaining
+deck, owner, clock, phase, endpoint, and THM-2053/2055/2056/2058/2059's
+gate/Farey/CRT sidecars.  The last clock, pair-sum, Fejer, Euler, or rank
+discharge is open; failed sufficient gates are **uncertified**, not unsafe.
 
 ### Proved reductions and terminals
 
 - **CITED:** LRC through 13 total runners; see
   [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
-- **PROVED:** THM-2051 gives positive safe measure or a support-3..5 relation
-  of height `2^20`; THM-965/2074 supply its pair floor and finite ledger.
-- **PROVED atlas:** THM-2052--2092 force the rank-12 box or rank-11 two-anchor
-  star while retaining deck/Farey/CRT data; THM-2148/2168 reach scalar `5+3`.
-  Routed nodes: THM-2081, THM-2082, THM-2083, THM-2085/2087, THM-2086,
-  THM-2088, THM-2089, THM-2090, THM-2092.
-- **PROVED decorrelation:** THM-2054 clears recorded margins at `H=2^19`;
-  MISTAKE-080/082 still require shape-specific tori.
-- **Comb ceiling:** THM-1252--1274 saturate six-comb arguments.  The live move
-  is endpoint/child transport, not another local-comb pass.
+- **PROVED:** THM-965/2051--2092/2074 give the relation, pair floor, rank atlas
+  and ledger; THM-2148/2168 reach scalar `5+3`.  THM-2054 decorrelates
+  recorded margins at `H=2^19`, subject to MISTAKE-080/082's shape-specific
+  tori.  THM-1252--1274 saturate six-comb arguments, leaving endpoint/child
+  transport as the live move.
+  Routed nodes: THM-2081, THM-2082, THM-2083, THM-2085/2087, THM-2085,
+  THM-2086, THM-2088, THM-2089, THM-2090, THM-2092.
 
 ### Exact live obligation
 
-Rank-twelve boxes/rank-eleven stars remain open (HYP-8871).  Exactly `165` rows
-survive; THM-2417/2426/2436 empty the complementary valuation lane.
-THM-2440--2539 close supplied-root seams but not the later semantic-root
-identification (kernel `28,393`; THM-2363 and THM-2368 are sidecars).
-THM-2545/2549 give the Hall gate and positive same-base
-chronology, still old-target neutral; THM-2547 is only a **FINITE-EXACT
-EXTERNAL CONTROL** after MISTAKE-281.
+HYP-8871 leaves exactly `165` rows.  THM-2363 and THM-2368 are sidecars;
+THM-2417/2426/2436 close the other
+valuation lane; THM-2440--2539 close supplied-root seams but not semantic-root
+identification (kernel `28,393`).  THM-2545/2549 give Hall and chronology gates,
+still old-target neutral; THM-2547 is only an external control after
+MISTAKE-281.  THM-2551--2688 recover determinant, carries, private roots and
+quotient sidecars but no transverse physical gluing (Radon recovery is
+refuted by MISTAKE-300).  THM-2680--2712 make inherited word/chronology
+nilpotent by six; THM-2721's positive `C3` corolla is current-zero and misses
+all `1134` formal successor placements.
 
-THM-2551--2635 expose descent loss: tomography reaches carry/later-root/unit
-data but drops a wall, transition, deep root, or target graph.  Radon/free-orbit
-recovery is refuted (MISTAKE-300); THM-2620/2625 restore the determinant,
-THM-2634 two carries, and THM-2640 private roots, not a transverse section.
+THM-2720/2742 restore the missing target (`936/1183` sections and every
+primitive character); MISTAKE-310 preserves the half-tooth overlap.  The
+THM-2744 `7/13^6` clutch preserves raw private units, and THM-2749 inserts the
+full `E3 -> D^6 -> Q_(3,{1,2})` fork with both endpoint masks.  Its frozen,
+coindexed, one-sided and clock-blind sections are distinct.
 
-THM-2657/2658 give the nonsplit `C_(13^6)` class `7` and balanced overlap.
-THM-2672/2687 leave an 11-dimensional slope-seven family; THM-2688 separates
-its simplex/diagonal/lens/Bockstein quotients.  None is physical gluing.
+MISTAKE-313 restores physical clock `e=1`.  **PROVED THM-2751** now shows a
+terminally empty left coefficient and right coefficient `GQ`: the shape `Q`
+is rational/localized and mod-`91` invertible, but raw `GQ` is zero mod `91`
+and `G/26` is only an `F_13` unit.  Its all-label direct-target and terminal
+checks give no physical wing map.  The lawful one-sided endpoint bank has
+gain `11`; the older rank-three table is clock-blind.
 
-THM-2680--2712 make the inherited word/chronology languages nilpotent by six;
-their `3346` packets and `304` residue-zero successors form multipartite SCCs
-with cocycle `7`.  THM-2721's positive `C3` corolla has zero charged current,
-and its lone formal successor misses all `1134` rail/future placements.
+THM-2754's two-clock carrier has
+`B_(e,j)=a_e 1_(j!=0)` on all `3969` cells.  The full wing chamber is a
+`7 x 7` source rectangle feeding an everywhere-unit target: its `49` unit
+pairs have four multipliers and gains `0:10,2:19,11:20`, with all `168` label
+modes alive, but no carrier action.  THM-2750 blocks arm-blind charging and
+THM-2757's marked `K4` transgression still lacks a physical carrier.
 
-THM-2720 identifies the old wall as `t=0`; THM-2742 restores the second target:
-`936/1183` sections and every primitive `t`-character survive.  Edge transport
-reaches root zero, but MISTAKE-310 retracts emptiness because the half-tooth
-charts overlap.  THM-2744 gives a partial clutch: the `7/13^6` shift preserves
-raw private-unit vectors on ten rail overlaps/all fourteen equal-weight loci,
-while normalized endpoint classes differ by `-1`.  THM-2749 puts the full
-`E3 -> D^6 -> Q_(3,{1,2})` fork and both lawful target/present pairs in a
-two-sided integral.  Its frozen rail-8 window is `t=3..11` with a norm-one
-unit; its coindexed `(0,4)` bank has equal primitive vectors on all fourteen
-rails, gain `-1`, and raw support `t=2..11`, reduced to `3..11` by the
-transported cylinder, with all twelve primitive characters in linear and
-bilinear profiles.  Frozen, coindexed, one-sided, and clock-blind sections must
-not be conflated.  MISTAKE-313 restores fixed physical clock `e=1`: the left
-wing is nonempty but coefficient-null and the right carries the defect.
-Rebuilt THM-2751 remains a repaired proof-complete candidate: its right
-cofiber has ten-label `91`-unit spectrum and a positive rational/localized or
-mod-`91` quotient decoder, but no integral, linear, or physical decoder.  The
-independently audited source-clock-one bank has gain `11` on all `81` labels,
-but only equality of coefficient vectors, not carriers.  The older table
-omitted physical `c1` and is only a clock-blind quotient hostile.
-
-THM-2754 keeps physical-present clock `e` and delayed coefficient clock `j`
-independent: its `3969` cells have `B_(e,j)=a_e 1_(j!=0)`, all `81` matrices
-rank one, and no scalar augmented gain.  The full all-`81` audit has a `7 x 7`
-source-unit rectangle and `32`-cell null cross feeding a unit target chamber;
-the `49` unit pairs have four multipliers, gains `0:10,2:19,11:20`, and all
-`168` normalized modes survive.  No multiplier is a carrier or address current.
-THM-2750 blocks arm-blind charging; THM-2757's marked `K4` transgression has no
-physical carrier.  THM-2763 proves the exact gauge repair: address `(r,k,l)`,
-`r.W=l-k`, gives a two-sided quotient of size `13^4` and a `13^3` quotient
-after common-harmonic loss.  One diagonal fibre has dual support `{0,2,10}`
-but all thirteen primal residues.  This is not THM-2625's endpoint plane and
-still loses factor labels.  Next: attach the chamber selector and exact-address
-sidecar to one marked carrier and determinant sector.
-THM-2727 is **PROVED** as a fixed-rail realization no-go, but supplies no
-rail/owner/support/address map.  Ledger `165`; no row is excluded.
+THM-2763 repairs the endpoint gauge with `(r,k,l)`, `r.W=l-k`: the faithful
+two-sided quotient has size `13^4`, and common-harmonic loss gives `13^3`.
+One diagonal fibre has dual support `{0,2,10}` but all thirteen primal
+residues; it is not THM-2625's endpoint plane and loses factor allocation.
+Next: attach one chamber selector and allocation sidecar to a marked carrier
+and determinant sector.  THM-2727 is the fixed-rail realization no-go.
+Ledger `165`; no row is excluded.
 
 ### Independent routes that remain live
 
@@ -122,8 +87,7 @@ rail/owner/support/address map.  Ledger `165`; no row is excluded.
   scans; AP13 and its `12->26` lift share local germs but not maxima.
 - THM-2058 preserves every prescribed finite lift depth while escaping at
   `47/113`; raw jets, bad Farey rays, and fixed lift depth are not certificates.
-- Determinant polygons are basis-dependent; no Heegner or Bessel analogy proves
-  LRC.
+- Determinant polygons are basis-dependent; analogy does not prove LRC.
 - Test columns, gaps, clocks, residues, wall events, endpoints, circuits, and
   proof obligations as vertices; record each quotient's lost sidecar.
 
