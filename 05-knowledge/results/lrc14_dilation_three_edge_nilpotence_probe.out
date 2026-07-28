@@ -1,0 +1,15 @@
+LRC14 exact D-compatible three-edge nilpotence probe
+scope=THM-2616 arrival-six raw nonnegative carrier; all sharp/predecessor-carry restrictions downstream
+object=E0(x) AND E1(Dx) AND E2(D^2x), D(x)={13x}
+typing=owner_i=shallow_(i+1), h_i=j_(i+1); sources may drift independently
+rails=162 rail_weighted_pieces=1050 dilation_clock_covariance_checks=7 shallow_next_phase_checks=7
+two_arrival_phase_interval=[84/169,85/169) mass=1/169
+phase_clock_pair_support=(((3, 3), 1), ((4, 4), 1)) units_of_1/338
+nonzero_clock_edge_phase_support=empty (diagonal repeat clocks only)
+clock_quadruples=1512 source_triples=1728 clock_source_candidates=2612736 survivors=0
+rail_triple_multiplicity_hist=((1, 900), (2, 36612), (4, 483948), (8, 2091276))
+rail_labelled_three_event_candidates=18740124 nominal_predecessor_carry_atom_triples=1596358722816
+positive_two_edge_numerator_certificate=126816337986097204341478787325120 base_pieces=23 delayed_joint_pieces=66
+verdict=PASS: D-compatible support transfer has exact nilpotence index three on the inherited nonzero-clock-edge carrier
+mechanism=arrival-six return preserves the lower/upper half, forcing ell0=ell1 against the first stored edge (shallow ell0, owner ell1)
+semantics=all longer D-chains vanish already at the arrival/clock skeleton; no Bockstein, endpoint, Perron, scalar-cover, or LRC claim
