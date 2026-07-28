@@ -1,5 +1,5 @@
 ---
-id: THM-2819
+id: THM-2820
 title: "Boolean idempotent rigidity and norm-top cotangent-jet no-go"
 status: RESERVED / UNPROVED EMPTY STUB
 source: root/boolean-norm-cotangent-boundary-2026-07-28
@@ -12,7 +12,7 @@ related:
   - THM-2814-projective-allocation-square-holonomy-and-idempotent-provenance-no-go
 ---
 
-# THM-2819 -- a Boolean norm remembers the top augmentation class, not a jet
+# THM-2820 -- a Boolean norm remembers the top augmentation class, not a jet
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
