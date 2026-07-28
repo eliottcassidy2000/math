@@ -1,0 +1,8 @@
+THM-2628 D4 opposite-pair escape exact controls
+D4_elements=8 opposite_pairing=(02)(13) central=PASS
+survivor_shapes: empty=1 singleton=4 adjacent_pairs=4 opposite_pairs=2 triple=4 full=1
+deck_pole_branches: k1=1 k2_adjacent=2 k2_opposite=0 k3=1
+inertia: k1=id|diagonal k2_adjacent=id k2_opposite=id|diagonal k3=id
+local_controls: R1=(k1,e2,diagonal) R2=(k2,e2,p0|p2) R3=(k3,e1,id)
+same_k2_resultant_and_pole_order_support_both_p=0_and_p=2
+exact assertions passed: 47

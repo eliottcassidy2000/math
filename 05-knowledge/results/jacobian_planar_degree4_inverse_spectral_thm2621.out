@@ -3,7 +3,11 @@ quartic_remainder_coefficients=4 PASS
 rational_C4_hostile: Jacobian=-1 resultant=f companion=b PDE=PASS
 projection_discriminant=-256*u**3*(16*u*v**2 - 1)**2*(16*u*v**2 + 1)**4
 companion_denominator=-(16*u*v**2 - 1)*(16*u*v**2 + 1) Jelonek_lead=1
+rational_D4_hostile: Jacobians=1 resultant_lead=2-u surviving_sheets=3 companion_denominator=1 PDE=PASS
+D4_hostile_raw_discriminant=-16*u*(4*u + 1)**2
+D4_hostile_trace_Liouville=exact+lambda*dlog(2-u) residue=lambda
+D4_hostile_deck: tau^2=1 Jacobian=1 fixes=(u,v) pole=(2X+1=0)->u=2
 sheet_defect_valuation_controls=12
 trace_form=4*v*du curvature=-4*du^dv for kappa=-1
 trace_Liouville_SL2_change=exact_quadratic
-exact assertions passed: 42
+exact assertions passed: 65

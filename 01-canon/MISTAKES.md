@@ -31,7 +31,11 @@ Format per entry:
   the Keller PDE, but a polynomial planar Keller realization must also have
   zero trace--Liouville class and zero residue at every prime.  In power-sum
   coordinates this is the explicit residue cancellation recorded in the
-  repaired THM-2621.  A quotient-side closed form must always be pulled back
+  repaired THM-2621.  Its rational `D4` hostile satisfies the full quartic
+  PDE, the one-sheet coefficient pole law, and polynomial companion
+  coefficients while realizing the arbitrary class
+  `lambda dlog(2-u)`; this proves the residue gate is independent and sharp.
+  A quotient-side closed form must always be pulled back
   to the claimed affine source before being promoted to an independent
   boundary invariant.
 
