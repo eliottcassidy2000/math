@@ -13,9 +13,11 @@ status: >
   minimal quotient triangle, balanced voltage lifts give 3K3, determinant
   8, and one standard plane; nontrivial holonomy gives C9, determinant 2,
   and none.  This removes the tree restriction from the full-rank rational-
-  surface class-group gate, but leaves units, reflection completion,
+  surface gate.  Independence of the boundary classes also forces every
+  unit to be constant, so det(B)=1 directly excludes a quartic Kummer
+  carrier in that scope.  Boundary relations, reflection completion,
   geometric realization, physical LRC homology, and all general
-  A4/S4/JC2/DC2 conclusions open.
+  A4/S4/JC2/DC2 conclusions remain open.
 source: a4-resolvent-next-gate-scout-2026-07-28
 depends_on:
   - THM-2655-quartic-keller-resolvent-v4-quasietale-torsor-and-kummer-class-group-gate
@@ -270,10 +272,24 @@ L subset P=P^* subset L^*,
 Pic(U) injects C3-equivariantly into L^*/L=A_M.             (25)
 ```
 
+The same localization row computes the units:
+
+```text
+O(U)^*/C^*
+ =ker(Z^{components of D} -> Pic(Xbar)).                   (26)
+```
+
+The component classes are independent, so this kernel is zero.  Since every
+nonzero complex constant is a square,
+
+```text
+O(U)^*/O(U)^(*)2=0.                                        (27)
+```
+
 Therefore
 
 ```text
-Pic(U)[2] contains W  ==>  det(B)=0.                       (26)
+Pic(U)[2] contains W  ==>  det(B)=0.                       (28)
 ```
 
 For a quartic `A4/S4` Keller resolvent in the scope of THM-2655, its required
@@ -282,14 +298,13 @@ Consequently
 
 ```text
 det(B)=1
- ==> the class-group branch is impossible;                (27)
-
-det(B)=1 and O(U)^*/O(U)^(*)2 has no W
- ==> this completion cannot be the full quartic resolvent. (28)
+ ==> this completion cannot be the full quartic resolvent. (29)
 ```
 
-This removes THM-2703's tree restriction from the class-group gate.  It does
-not remove the full-rank, independence, or rational-completion hypotheses.
+This removes THM-2703's tree restriction and closes both Kummer alternatives
+inside the stated completion box.  It does not remove the full-rank,
+independence, or rational-completion hypotheses.  When boundary classes have
+relations, `(26)` shows exactly how a unit-standard plane can return.
 
 ## 6. What the gain theorem does not identify
 
@@ -310,7 +325,7 @@ physical homology.
 
 The present theorem leaves open:
 
-- standard planes in global unit squareclasses;
+- unit-standard planes when boundary classes have relations;
 - the reflection action needed for a prescribed full `S3` module;
 - boundary component relations or non-full-rank lattices;
 - geometric realization of a singular Hermitian block by a Keller
@@ -359,11 +374,11 @@ preserved predicate:
   exact multiplicity of the standard plane in discriminant two-torsion;
 
 destroyed information:
-  units, reflection, boundary-lattice saturation, geometric realization,
-  and every physical LRC current;
+  reflection, boundary-lattice saturation outside the independent case,
+  geometric realization, and every physical LRC current;
 
 needed sidecars:
-  a full-rank equivariant completion plus unit computation for quartics;
+  a full-rank independent equivariant completion for quartics;
   a physical component/owner/phase lift for LRC;
 
 cheapest decisive next test:

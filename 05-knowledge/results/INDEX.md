@@ -38,7 +38,9 @@
   whose `F4` nullity is exactly the standard-plane multiplicity in
   discriminant two-torsion.  Forest gains recover THM-2703.  The sharp
   balanced/unbalanced quotient-triangle pair lifts to `3K3/C9`, with Smith
-  forms `(1^6,2^3)/(1^8,2)`.  The full-rank surface gate is algebraic, not
+  forms `(1^6,2^3)/(1^8,2)`.  Independent full-rank boundary classes also
+  kill all nonconstant units, so an invertible Hermitian block directly
+  excludes the quartic Kummer carrier in that scope.  This is algebraic, not
   physical LRC homology.  Hashes begin `f46c10dc` / `3df42b1e`.
 - `jacobian_s4_polynomial_graph_coordinate_pairs_thm2702.py` -> matching
   `.out` [THM-2702 PROVED + VERIFIED-EXACT + INDEPENDENTLY
