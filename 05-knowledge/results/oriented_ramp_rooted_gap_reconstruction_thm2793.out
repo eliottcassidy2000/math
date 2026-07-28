@@ -1,0 +1,8 @@
+THM2793 ORIENTED RAMP / ROOTED GAP EXACT REFEREE
+interval families: {1: 1, 2: 2, 3: 6, 4: 24, 5: 120, 6: 720, 7: 5040, 8: 40320} total= 46233
+graceful labelings: {2: 2, 3: 4, 4: 16, 5: 68, 6: 376, 7: 2184} total= 2650
+rooted threshold-cut inversions: 15314
+marked gap-tail decisions: 140516
+Gram-only ordered hostile ramp moments: (1, 3, 6) (2, 3, 6)
+one-edge root-anchor hostile: common_gap=1 two_complements=1
+ALL EXACT CHECKS PASSED
