@@ -1,0 +1,28 @@
+THM2750 ARM-BLIND C3 CLUTCH AND MINIMAL MARKED LEAKAGE
+THM2721_A_denominator=13^11 cleared_numerator_mod13=5
+naive_THM2721_to_F13=undefined_without_lattice_choice
+group_ring_no_go_checks=343
+scalar_minus_offdiag_rank=0
+arbitrary_arm_blind_aux_offdiag_rank=0
+unsigned_three_arm_offdiag_ranks=[0, 0, 0, 0, 0, 0]
+sign_pattern_rows=(signs,rank,HS2,generated_group_order)
+((-1, -1, -1), 0, Fraction(0, 1), 6)
+((-1, -1, 1), 1, Fraction(8, 9), 12)
+((-1, 1, -1), 1, Fraction(8, 9), 12)
+((-1, 1, 1), 1, Fraction(8, 9), 24)
+((1, -1, -1), 1, Fraction(8, 9), 12)
+((1, -1, 1), 1, Fraction(8, 9), 24)
+((1, 1, -1), 1, Fraction(8, 9), 24)
+((1, 1, 1), 0, Fraction(0, 1), 3)
+one_arm_sign_offdiag=[-4/9,-4/9,-4/9;2/9,2/9,2/9;2/9,2/9,2/9]
+one_arm_sign_F13_fourier=(9, 8, 8)
+S4_offdiag=[0,0,0,0;2/3,-2/9,-2/9,-2/9;-1/3,1/9,1/9,1/9;-1/3,1/9,1/9,1/9]
+S4_general_input=(x,A,A,A)->(0,2(x-A)/3,(A-x)/3,(A-x)/3)
+S4_offdiag_rank=1 HS2=8/9 group_order=24
+four_point_involutions=(moves_fixed,rank,HS2,group_order):count
+(False, 0, Fraction(0, 1), 3):1
+(False, 0, Fraction(0, 1), 6):3
+(True, 1, Fraction(8, 9), 12):3
+(True, 1, Fraction(8, 9), 24):3
+central_minus_times_S4=-S4_offdiag
+PASS
