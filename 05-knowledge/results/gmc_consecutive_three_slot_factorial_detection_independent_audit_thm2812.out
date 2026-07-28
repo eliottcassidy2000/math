@@ -1,0 +1,11 @@
+THM-2812 INDEPENDENT HOSTILE AUDIT (NO CAS)
+cleared_first_moment=PASS
+cleared_second_conic=PASS
+division_free_cubic_remainder=PASS
+resultant=(n+1)^4*(16*n^5+344*n^4+865*n^3+731*n^2+247*n+29)
+sharp_projective_lines=both conjugates exact
+hostile_translates=(0, 1, 2, 3, 7, 31, 257, 1000000)
+boundary_two_slot_pairs=861
+direct_gaussian_contraction_cases=18
+scope_guard=genuinely two-charge lift only (H != 0)
+ALL INDEPENDENT EXACT CHECKS PASSED
