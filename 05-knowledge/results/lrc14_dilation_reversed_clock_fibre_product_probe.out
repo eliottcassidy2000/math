@@ -1,0 +1,16 @@
+LRC14 exact dilation-handoff reversed-clock fibre-product probe
+scope=THM-2616 raw nonnegative guard-safe carrier; sharp graph and predecessor/carry labels
+handoff=D(x)={13x}; owner_current=shallow_following and h_current=j_following
+clock_orientation=D-compatible candidate chronology traverses printed (owner,shallow) edges backwards
+direct_owner_disjoint_checks=42 dilation_clock_covariance_checks=7
+refined_grid_formula_controls=8
+triple_(shallow,current_owner,next_owner)=(3,1,0) source_pair_positive_rail_labelled_atom_pair_count_hist=((0, 12), (20, 132)) zero_pairs=((s,6):s=1..12)
+triple_310_first_positive_numerator_certificate=(1, 1, 126816337986097204341478787325120, (2, 5, 2, 0, 0), (0, 2, 6, 1, 1))
+triple_(shallow,current_owner,next_owner)=(4,0,1) source_pair_positive_rail_labelled_atom_pair_count_hist=((0, 12), (14, 132)) zero_pairs=((s,7):s=1..12)
+triple_401_first_positive_numerator_certificate=(1, 1, 90407221954729505049108909024000, (1, 11, 3, 0, 0), (3, 3, 5, 1, 0))
+inherited_zero_edge_control_(shallow,current_owner,next_owner)=(3,1,2) source_pair_positive_rail_labelled_atom_pair_count_hist=((0,144),)
+sharp_formal_positive_D_empty_hostile_(shallow,current_owner,next_owner)=(0,1,0) formal_support_at_source_pair_11=29 physical_source_pair_hist=((0,144),)
+generic_source_pair_11_two_edge_clock_census=(edge_positive=146,formal_positive=146,physical_positive=10,total=252)
+generic_source_pair_11_physical_clock_support=((3, 0, 3, 6), (3, 0, 4, 10), (3, 0, 5, 10), (3, 0, 6, 12), (3, 1, 0, 20), (4, 0, 1, 14), (4, 0, 2, 14), (4, 0, 3, 14), (4, 0, 4, 12), (4, 6, 0, 18))
+verdict=PASS: a correctly typed two-edge fibre product is nonempty, but sparse and source-sensitive
+semantics=the former fixed-offset Boolean zero is not a physical chronology no-go; the next gate is iterated D-coherence with source drift
