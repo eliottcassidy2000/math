@@ -1,0 +1,15 @@
+TREE INCIDENCE A/D WEYL CLUTCH AUDIT
+reduced_incidence_parent_arrays_n2_to_n8=5913
+reduced_incidence=unimodular path_sum_inverse=exact
+degree=|A_(n-1)^+|+|D_(n-1)^+|=(n-1)(3n-4)/2
+D3_to_A3_half_hadamard_root_hyperplanes=6
+star_support=B3 hyperplanes=9 chambers=48
+path_support=B3_plus_diagonal hyperplanes=10
+path_diagonal_cut_chambers=12 path_chambers=60
+farey_flank_determinants=(1, -1)
+star_balanced_contributions=9 coefficient=120
+path_balanced_contributions=6 coefficient=0
+four_vertex_recursive_shapes=2_star_coeff_abs120,4_path_coeff0
+P4_graceful_control=labels(0,3,1,2)_differences(3,2,1)
+SCOPE: Weyl/fan/coefficient theorem; no graceful-tree closure
+FAILED CHECKS: NONE
