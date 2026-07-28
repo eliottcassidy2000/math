@@ -1,5 +1,5 @@
 ---
-id: THM-2639
+id: THM-2641
 title: "Modular abelianization theta blindness and the 637-residue no-go"
 status: RESERVED / UNPROVED EMPTY STUB
 source: root-2026-07-28-modular-connector-probe
@@ -8,7 +8,7 @@ related:
   - THM-2632-farey-v4-theta-channel-and-hurwitz-crt-parity-sidecar
 ---
 
-# THM-2639 -- reserved namespace
+# THM-2641 -- reserved namespace
 
 **RESERVED / UNPROVED EMPTY STUB.**  No mathematical claim is made here.
 The intended target is the exact failure of modular abelianization to recover
