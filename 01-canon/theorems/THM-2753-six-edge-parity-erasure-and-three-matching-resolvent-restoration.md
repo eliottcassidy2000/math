@@ -1,5 +1,5 @@
 ---
-id: THM-2752
+id: THM-2753
 title: "Six-edge parity erasure and three-matching resolvent restoration"
 status: >
   RESERVED / UNPROVED EMPTY STUB.  Reserved for the exact comparison of the
@@ -21,7 +21,7 @@ related:
   - THM-2746-c3-quotient-affine-v4-lifts-and-a4-projector-defect
 ---
 
-# THM-2752 -- six edges forget the parity that three matchings restore
+# THM-2753 -- six edges forget the parity that three matchings restore
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
