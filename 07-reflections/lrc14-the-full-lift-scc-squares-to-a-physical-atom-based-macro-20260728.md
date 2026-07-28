@@ -137,8 +137,10 @@ The next object should be a fibre product, not an identification:
 ```
 
 It must retain the left and right Fourier multiindices `(u,v)`, test the true
-difference character `eta.(u-v)`, and sum over the full endpoint constraint
-`X`.  Treating a packet address or lift residue as `u` would discard exactly
+difference character `eta.(u-v)`, and fix one marked frequency `X` while
+summing its decomposition fibre.  Summing over all `X` is the recombination
+that THM-2568 kills.  Treating a packet address or lift residue as `u` would
+discard exactly
 the coordinate that THM-2563 and the THM-2701 paired-cylinder addendum say is
 missing.
 
