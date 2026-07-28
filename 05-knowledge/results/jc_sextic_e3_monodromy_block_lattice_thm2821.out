@@ -1,11 +1,23 @@
-THM-2821 SEXTIC E3 MONODROMY / BLOCK-LATTICE AUDIT
-power_passport=(3,1,1,1); group_order=18; group=(C3xC3)semidirectC2
-power_blocks_containing_0=((0, 2, 4),)
-power_decomposition=degree3_then_degree2; no_degree2_inner_block
-power_modular_boundary=C2*C3_surjects_via_tauP_and_(0,2,4)
-chebyshev_passport=(2,2,1,1); group_order=12; group=C6_semidirect_C2_dihedral
-chebyshev_blocks_containing_0=((0, 3), (0, 2, 4))
-chebyshev_decompositions=degree3_then2_and_degree2_then3
-chebyshev_modular_boundary=no_C2*C3_surjection; abelianization=C2xC2
-noncrossing_matchings=5; unmarked_rotation_orbits=2
-scope=response block lattice only; no Keller-map decomposition, JC2, or DC2
+THM-2821 SEXTIC MONODROMY AND BLOCK-LATTICE AUDIT
+power branch tuple: sigma_0=((1, 4), (2, 5), (3, 6)), sigma_infinity=((1, 2, 3),), sigma_1=((1, 4, 3, 6, 2, 5),)
+power cycle types: (2^3), (3,1^3), (6)
+power group: (C3 x C3) semidirect C2 (factor swap), order=18
+power nontrivial block systems: ((1, 2, 3), (4, 5, 6))
+power point-stabilizer interval orders: (3, 9, 18)
+power nontrivial decomposition degrees: 3 then 2 only
+power infinity fibre: 4*x**3*(x - 1)*(x**2 + x + 1)
+power polynomialized cover: -4*x**3*(x - 1)*(x**2 + x + 1)
+Chebyshev branch tuple: sigma_0=((1, 6), (2, 5), (3, 4)), sigma_infinity=((2, 6), (3, 5)), sigma_1=((1, 2, 3, 4, 5, 6),)
+Chebyshev cycle types: (2^3), (2^2,1^2), (6)
+Chebyshev group: Dih(C6), order=12
+Chebyshev size-two block system: ((1, 4), (2, 5), (3, 6))
+Chebyshev size-three block system: ((1, 3, 5), (2, 4, 6))
+Chebyshev point-stabilizer interval orders: (2, 4, 6, 12)
+Chebyshev nontrivial decomposition degrees: 3 then 2; 2 then 3
+Chebyshev infinity fibre: (y - 1)*(y + 1)*(2*y - 1)**2*(2*y + 1)**2
+Chebyshev polynomialized cover: -(y - 1)*(y + 1)*(2*y - 1)**2*(2*y + 1)**2
+reverse y^2 outer map: u*(4*u - 3)**2/((u - 1)*(4*u - 1)**2)
+five noncrossing matchings / two rotation orbits: [((2, 2, 1, 1), 12, (2, 3)), ((3, 1, 1, 1), 18, (3,))]
+all uniform block systems and intermediate subgroups: PASS
+accessory identities and both functional decompositions: PASS
+assert_nodes=0
