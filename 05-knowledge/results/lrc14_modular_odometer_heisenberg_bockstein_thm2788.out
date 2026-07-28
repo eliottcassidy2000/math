@@ -1,0 +1,17 @@
+THM-2788 MODULAR ODOMETER / HEISENBERG BOCKSTEIN EXTENSION
+status=FINITE-EXACT candidate; no LRC conclusion
+p=2 order=8 intersection=8 M_orders=((1, 1), (2, 5), (4, 2)) H_orders=((1, 1), (2, 5), (4, 2)) cocycle_checks=16 wreath_order=8 mu=4 minimal_classes=2
+p=3 order=27 intersection=9 M_orders=((1, 1), (3, 8), (9, 18)) H_orders=((1, 1), (3, 26)) cocycle_checks=81 wreath_order=81 mu=9 minimal_classes=1
+p=5 order=125 intersection=25 M_orders=((1, 1), (5, 24), (25, 100)) H_orders=((1, 1), (5, 124)) cocycle_checks=625 wreath_order=15625 mu=25 minimal_classes=1
+p=7 order=343 intersection=49 M_orders=((1, 1), (7, 48), (49, 294)) H_orders=((1, 1), (7, 342)) cocycle_checks=2401 wreath_order=5764801 mu=49 minimal_classes=1
+p=13 order=2197 intersection=169 M_orders=((1, 1), (13, 168), (169, 2028)) H_orders=((1, 1), (13, 2196)) cocycle_checks=28561 wreath_order=3937376385699289 mu=169 minimal_classes=1
+extension=common commutator ad-cb; c_M-c_H=floor((b+d)/p), and M power map is b
+join=<H_p,M_p>=C_p wr C_p; carry C=O Y^-1 is one column delta, its conjugates give all p columns
+p=13 depth=2 order=2197 derived=13 centre=13 class=2 kernel_to_depth2=1 commutators=(13, 0)
+p=13 depth=3 order=371293 derived=169 centre=13 class=3 kernel_to_depth2=169 commutators=(13, 169, 0)
+p=13 depth=4 order=62748517 derived=2197 centre=13 class=4 kernel_to_depth2=28561 commutators=(13, 169, 2197, 0)
+p=13 depth=5 order=10604499373 derived=28561 centre=13 class=5 kernel_to_depth2=4826809 commutators=(13, 169, 2197, 28561, 0)
+p=13 depth=6 order=1792160394037 derived=371293 centre=13 class=6 kernel_to_depth2=815730721 commutators=(13, 169, 2197, 28561, 371293, 0)
+THM2782=arm +13 is Z1=O^13; j=13 hostile +169 is Z2=[X,Z1], killed only after reduction mod169
+scope=physical address-action tower and exact extension boundary, not factor/current covariance or endpoint-origin allocation
+ALL EXACT CHECKS PASSED
