@@ -2,17 +2,19 @@
 id: THM-2643
 title: "Degree-five/six Keller stabilizer gate and regular block-quotient census"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For a transitive action Omega=G/H and N the normal closure of H,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a transitive
+  action Omega=G/H and N the normal closure of H,
   N is proper exactly when Omega has a nontrivial quotient G-set on which
   the induced quotient group acts regularly; the canonical such quotient is
   G/N.  THM-2633 therefore excludes precisely one of the five transitive
   quintic groups (regular C5) and nine of the sixteen transitive sextic
   groups.  In degree six every two-block C2 quotient and every three-block
-  C3 quotient is fatal, while the imprimitive S3 block actions survive
-  because their reflection stabilizer normally generates S3.  This is the
-  exact C2/C3 free-factor content: an isolated cyclic tower is forbidden,
-  not a coupled S3 tower.  The census is action-sensitive; natural quartic
+  C3 quotient is fatal.  An S3 block action is not fatal by itself: the
+  three nonregular imprimitive actions 6T7, 6T8, and 6T11 survive because
+  their reflection stabilizer normally generates S3, while 6T3 is killed by
+  a separate regular C2 quotient.  This is the exact
+  C2/C3 free-factor content: an isolated cyclic tower is forbidden, not an
+  S3 block action solely as such.  The census is action-sensitive; natural quartic
   A4 survives although its sextic C2-coset action is excluded.  No degree
   bound, A4/S4 quartic exclusion, JC(2), general JC, or DC(2) follows.
 source: root-2026-07-28-keller-stabilizer-census
@@ -30,8 +32,8 @@ hash_basis: LF-normalized bytes
 
 # THM-2643 -- regular sheet quotients are forbidden Keller shadows
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**  THM-2633 says that a point stabilizer in the geometric sheet action
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  THM-2633 says
+that a point stabilizer in the geometric sheet action
 of a polynomial Keller map must normally generate the full monodromy group.
 The present theorem identifies the exact permutation-theoretic failure and
 classifies every transitive action through degree six.
@@ -158,8 +160,8 @@ three blocks: induced S3 is not regular and can survive.   (9)
 The imprimitive survivors `6T7`, `6T8`, and `6T11` have an induced `S3`
 action on three blocks.  A block stabilizer maps to a reflection `C2`; its
 conjugates normally generate `S3`.  By contrast, the isolated `C3` block
-actions in `6T4` and `6T6` have trivial block stabilizer, so the ternary
-tower itself is a forbidden regular quotient.
+actions in `6T4` and `6T6` have trivial point stabilizer in the induced
+`C3` action, so the ternary tower itself is a forbidden regular quotient.
 
 This is the rigorous `C2*C3` interpretation: the problem is not that a
 ternary tree exists, but that its reflection sidecar has been forgotten.

@@ -1,11 +1,23 @@
 ---
 title: "Two and three on one object: the modular order-six fork and its missing sidecars"
 date: 2026-07-27
-status: RESEARCH SYNTHESIS; theorem claims are routed to THM-2595--2598, THM-2603, THM-2606, and THM-2612
+status: RESEARCH SYNTHESIS; current proved corrections route through THM-2632, THM-2633, and THM-2641; older frontier paragraphs below preserve provenance
 source: codex-2026-07-27-modular-v4-session
 ---
 
 # The answer is a fork, not a coincidence
+
+> **Current correction (2026-07-28).**  THM-2632 proves that the Farey
+> six-state object is the `S3` permutahedral hexagon with three intrinsic
+> `V4` theta cuts, whereas the simultaneous integral `2/3` lift has cyclic
+> abelianization `C6`; their uncoloured hexagons are not canonically the same.
+> THM-2641 strengthens this to a no-go: `T^1274` preserves the live mod-2,
+> mod-49, and mod-91 residue skeleton while traversing the missing `C3`
+> fibre, and the three conjugates of `T` keep one abelianized class while
+> exhausting the theta directions.  THM-2633 independently excludes
+> `C4,V4,D4` quartic Keller monodromy, so later sentences treating `D4` as
+> live are historical and superseded.  The surviving quartic types are
+> `A4,S4`; the cubic resolvent remains action data, not an affine Keller map.
 
 The recurring `2,3,4,6` pattern has a rigorous core, but it is not one
 universal tree.  There are two natural order-six quotients of
