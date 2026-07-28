@@ -2,17 +2,17 @@
 id: THM-2750
 title: "Arm-blind clutch no-go and minimal marked leakage"
 status: >
-  RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT AUDIT.  On a common C3 arm carrier, every transition commuting
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On a common C3
+  arm carrier, every transition commuting
   with the arm rotation has zero invariant-to-charged block.  Hence the
   scalar root-normalized gain -1 of THM-2744 can reverse an already charged
   class but cannot charge THM-2721's equal corolla.  The minimal signed
   escape is an unequal arm gain; the minimal positive permutation escape
   adds one C3-fixed reference and moves it into an arm.  The bare four-point
   leakage detects both A4 and S4 fixed-point-moving involutions, in agreement
-  with THM-2746/2743, and does not distinguish them.  No result may depend on
-  this candidate before independent promotion.
+  with THM-2746/2743, and does not distinguish them.
 source: clutch-c3-holotopy-2026-07-28
+audit: root-zero-clutch-audit/arm-blind-c3-hostile-audit-2026-07-28 (independent centralizer/normalizer, sign/group, four-point involution, field/lattice, cross-theorem scope, and normal/-O/hash replay: ACCEPT; post-audit script change is docstring-only)
 depends_on: []
 related:
   - THM-2567-deep-coloured-duty-replica-cycle-and-augmentation-cancellation
@@ -25,15 +25,14 @@ related:
   - THM-2749-fully-marked-root-zero-clutch-and-target-character-profile
 script: 04-computation/lrc14_arm_blind_clutch_no_go_thm2750.py
 output: 05-knowledge/results/lrc14_arm_blind_clutch_no_go_thm2750.out
-script_sha256: 651303ce477f4040d0ac66f90333708be038f8a1bee7997aefc1b5a6b405d2f4
+script_sha256: 0104ce30b5f17697a767e277ac5ba66e403c75eecfed04732625d676bc3be699
 output_sha256: 2e3ae1472dc285d4b1cc359567b567c8a1d08e60d882e4aa777e075c9be7beb2
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2750 -- arm-blind clutches preserve the equal-arm sector
 
-**RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2721 gives a positive equal three-arm corolla.  THM-2744 gives a genuine
 open physical chart overlap whose recomputed raw coefficient vectors agree,
@@ -368,7 +367,7 @@ four-point involutions including the `A4/S4` split, and the fact that central
 agree after LF normalization, and the declared hashes match.
 
 ```text
-PROVED IN THIS CANDIDATE: arm-blind/normalizer clutch no-go;
+PROVED HERE:              arm-blind/normalizer clutch no-go;
                           exact unequal-arm rank-one formula;
                           minimal positive four-state formula;
                           complete A4/S4 involution census;
@@ -381,5 +380,12 @@ NOT CONSTRUCTED:          a common THM-2721/2744 carrier or lattice;
                           or LRC(14) proof.                              (24)
 ```
 
-The LRC residual ledger remains `165`.  `QED` for the abstract theorem; the
-file remains reserved until independent promotion.
+An independent hostile audit rederived the centralizer and normalizer gate,
+the unequal-diagonal rank formula, all sign/group and four-point involution
+censuses, the characteristic and lattice boundaries, and the scope against
+THM-2743/2746/2749.  Its normal and optimized runs byte-matched the stored
+`28`-line transcript.  The final script hash differs only because the stale
+"scratch evidence" docstring was changed to "canonical exact companion"
+after that audit; executable code and output are unchanged.
+
+The LRC residual ledger remains `165`.  `QED.`

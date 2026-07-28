@@ -1,5 +1,14 @@
 # Script Results Index
 
+- `lrc14_arm_blind_clutch_no_go_thm2750.py` -> matching `.out` [THM-2750
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  On any common
+  `C3` arm carrier, every centralizer or normalizer clutch preserves the
+  equal-arm sector, so THM-2744/2749's scalar `-1` cannot charge THM-2721's
+  equal corolla.  An unequal arm sign has rank-one leakage and squared norm
+  `8/9`; the minimal positive permutation repair adds one fixed reference.
+  The full four-point census shows bare leakage for both fixed-point-moving
+  `A4` and `S4` involutions, so it does not distinguish them.  Hashes:
+  `0104ce30` / `2e3ae147`.
 - `lrc14_fully_marked_root_zero_target_profile_thm2749.py` -> matching `.out`
   [THM-2749 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  On the
   rail-8 two-sided common section, the full semantic fork, lawful target

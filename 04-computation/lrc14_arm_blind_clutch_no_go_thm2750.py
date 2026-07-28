@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Exact controls for THM-2750.
 
-This is scratch evidence only.  It checks, over Q and F_13, that an
+This canonical exact companion checks, over Q and F_13, that an
 arm-blind scalar (indeed any arm-blind auxiliary operator) cannot move the
 C3-invariant line into a charged summand.  It also finds the two smallest
 escapes: a signed three-arm diagonal and the positive four-point S4 carrier.

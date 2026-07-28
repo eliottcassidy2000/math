@@ -86,9 +86,14 @@ factors, rail, and seam inside a two-sided common-section integral.  Precisely
 `u^2+u^6+u^10`, so all twelve primitive target characters survive.  The sharp
 boundary is categorical: the natural single sheet shears (gain `7`) and no
 common-selector map into the canonical endpoint current or external semantic
-arm carrier is known.  THM-2727 is **PROVED** as a fixed-rail realization
-no-go, but supplies no rail/owner/support/address map.  Ledger `165`; no row is
-excluded.
+arm carrier is known.  THM-2750 proves that this last qualifier is
+load-bearing: every clutch commuting with the external `C3` arm rotation,
+including the scalar `-1` and any target/clock operator confined to the
+auxiliary factor, has zero invariant-to-charged block.  The minimal escapes
+are an unequal marked-arm gain or a fourth fixed reference with a lawful swap;
+neither is yet physically typed.  THM-2727 is **PROVED** as a fixed-rail
+realization no-go, but supplies no rail/owner/support/address map.  Ledger
+`165`; no row is excluded.
 
 ### Independent routes that remain live
 

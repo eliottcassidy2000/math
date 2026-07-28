@@ -156,6 +156,20 @@ semantic `C_2` bibundle open; the split-lambda prime-23 scout makes its restored
 anti-invariant coordinate rational, trivializing rather than strengthening the
 Kummer gate.
 
+## Test a clutch on isotypic blocks, not by holonomy alone
+
+**Trigger / action:** when a nontrivial chart gain or Cech cocycle is proposed
+to repair a vanished character, write the invariant projector `Pi`, charged
+projector `Q`, and compute `Q C Pi`.  Central or arm-blind holonomy may twist a
+line local system while leaving this off-diagonal block zero.  Seek an unequal
+marked-arm gain or add a fixed reference with a lawful swap.
+**Counterindication:** a scalar clutch may orient or negate a charged class that
+already exists; the no-go concerns creating charge from the invariant sector.
+**Evidence:** THM-2750 proves the abstract `C3` centralizer/normalizer gate and
+its minimal repairs; THM-2743/2746 supply the distinct marked `S4`/`A4`
+off-diagonal models; THM-2749's full `C13` target unit remains auxiliary and
+does not itself provide the external arm selector.
+
 ## The same representation is not the same carrier
 
 **Trigger / action:** when two frontiers contain the same group module, identify the module exactly, then separately type the realization functor and test whether the module lifts through it.
