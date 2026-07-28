@@ -168,6 +168,12 @@ linear_coefficient = sp.factor(sp.Poly(linear_subresultant, u).coeff_monomial(u)
 expected_linear = 4 * At**2 * dt**2 - At * Bt**2 + Bt * c**2 - 2 * Bt * c * dt - 3 * Bt * dt**2
 require(sp.expand(linear_coefficient - expected_linear) == 0,
         "birational linear subresultant failure")
+coefficient_domain = sp.QQ.frac_field(c)
+relation_poly = sp.Poly(R_c, At, Bt, dt, domain=coefficient_domain)
+exception_poly = sp.Poly((dt + c) * expected_linear, At, Bt, dt,
+                         domain=coefficient_domain)
+require(sp.polys.polytools.gcd(relation_poly, exception_poly).total_degree() == 0,
+        "an image component is trapped in the exceptional resultant locus")
 
 t = sp.symbols("t", nonzero=True)
 singular_target = {At: -2 * t, Bt: t**2, dt: -c}
@@ -188,5 +194,6 @@ for label, preimage in (("first", first_preimage), ("second", second_preimage)):
                     for value, target in zip(values, (-2 * t, t**2, -c)))
     require(reduced == (0, 0, 0), f"{label} singular preimage failure")
 print("constant_J0_slice_image_relation_resultant_and_birational_recovery: PASS")
+print("constant_J0_slice_no_extraneous_component_gcd: PASS")
 print("constant_J0_slice_singular_double_preimage_t^3=-8c^2: PASS")
 print("scope=fixed_S4_quotient_and_polynomial_coordinate_family_only; general_S4_JC2_DC2_open")

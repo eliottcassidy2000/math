@@ -19,7 +19,7 @@
   polynomial generator change retains the nonconstant factor.  The sharp
   level `s_1s_2-s_3=c!=0` has source `A2`, but its coefficient image is an
   explicit singular nonnormal surface with two normalization preimages.
-  Hashes: `034a3308` / `ee84c14e`.
+  Hashes: `7158a8cc` / `2e55ad6e`.
 - `lrc14_lawful_odometer_alternating_rail_horizon_probe.py` and
   `lrc14_lawful_odometer_alternating_unit_line_boundary.py` -> matching
   `.out` files [THM-2691 PROVED + VERIFIED-EXACT + INDEPENDENTLY
