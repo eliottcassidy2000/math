@@ -14,10 +14,10 @@ status: >
   sharp width histogram 2^60,3^22,4^2.  Thus two charts give a rational
   signed left inverse.  They do not give physical descent: the clock strata
   are disjoint, every available row is strictly positive on all twelve roots,
-  and hence no nonnegative left inverse exists.  A labelled guard wall cospan
-  refines each chart but supplies neither a common clock overlap nor a
-  positive root transport.  No ancestry connector, row exclusion, or proof
-  of LRC(14) follows.
+  and hence no nonnegative left inverse exists.  Any Boolean wall cospan
+  internal to one clock chart still supplies no common clock overlap; it gives
+  positive root tomography only if its refinement creates private root rows.
+  No ancestry connector, row exclusion, or proof of LRC(14) follows.
 source: wild-holotopy-mining-2026-07-28-two-clock-tomography
 depends_on:
   - THM-2614-punctured-target-root-cosupport-and-principal-deck-no-go
@@ -273,22 +273,32 @@ missing clock-overlap map is the corresponding phase/reference debt.  In both
 cases tomography is valid on the refined carrier and invalid after forgetting
 the label that made the reconstruction meaningful.
 
-## 6. Comparison with the guard wall cospan
+## 6. Conditional wall-cospan comparison
 
-THM-2616's delayed guard-safe word and its guard-danger complement are
-disjoint Boolean sectors with an exact guard-omitted common parent before the
-unit test.  This is a genuine wall cospan *inside each fixed clock chart*.
-It does not change the conclusion above.
+This section records a proved structural implication, not a dependency on
+the still-reserved THM-2623 guard computation.  Suppose a lawful Boolean wall
+bit refines each row of a fixed clock chart into nonnegative sectors
 
-First, the wall bit refines a fixed `(s,ell_4)` stratum; it creates no overlap
-between different `ell_4` strata in (8).  Second, every nonzero fixed
-`(rail,q,ell_5,h=q)` row in either labelled sector still has full support on
-all `r=1,...,12`.  Hence the nonnegative-left-inverse obstruction (18)
-survives sectorwise.  Third, raw Boolean tensors add across the cospan, but
-the predicate "the seven-clock Bockstein is a unit" is nonlinear.  A union of
-unit-support atlases is not the unit atlas of the summed parent tensor.
+```text
+W_(s,ell)=W^0_(s,ell)+W^1_(s,ell).                         (21)
+```
 
-Thus a common wall-edge name is not yet affine descent data.  A successful
+Such a split is a genuine cospan *inside that fixed clock chart*.  It does not
+create an overlap between distinct `ell` strata in (8), so (21) alone cannot
+turn the signed two-clock inverse into affine descent data.
+
+The positive-inverse criterion (17) gives the exact second gate.  If the
+refined sector rows still have support on at least two root columns, then they
+are not private and no nonnegative left inverse follows.  If a refinement
+does create one private physical row for every root column, it repairs the
+positive-tomography obstruction, but a chronological overlap/cocycle is still
+needed to identify the root origins of two disjoint clocks.
+
+Finally, raw Boolean tensors add in (21), while the predicate "the
+seven-clock Bockstein is a unit" is nonlinear.  Unit-support atlases therefore
+cannot be unioned or recombined without a separate exact calculation.
+
+Thus a common wall-edge name is not by itself descent data.  A successful
 sidecar must supply at least one of:
 
 1. a positive root-atomic row or selector, rather than another full-support
@@ -298,8 +308,8 @@ sidecar must supply at least one of:
 3. an affine transition cocycle whose translations are physically typed and
    satisfy the cycle law.
 
-The guard wall is useful retained structure, but carrier absence remains
-absolute for the present two-clock stack.
+This conditional test is the precise interface offered to THM-2623 and later
+wall refinements.  No numerical guard-sector census is asserted here.
 
 ## 7. Exact evidence and scope
 
