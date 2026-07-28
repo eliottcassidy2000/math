@@ -11,7 +11,7 @@ status: >
   target maps are explicit triangular automorphisms.  Target planes not
   containing d, nonlinear target projections, arbitrary polynomial source
   surfaces, JC(2), and DC(2) remain open.
-source: root/reflection-quotient-mixed-target-graph-2026-07-28
+source: root/reflection-quotient-mixed-target-graph-2026-07-28; root-long-frontiers independent audit 2026-07-28
 depends_on:
   - THM-2696-reflection-completed-s4-relative-different-and-coordinate-invariant-jacobian-gate
   - THM-2699-affine-plane-linear-projection-keller-slice-classification
