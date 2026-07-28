@@ -245,10 +245,14 @@ For a character `chi` of `C_(13^6)`,
 
 ```text
 Fhat_tau(chi)
- =c chi(n_0)^(-1)(1+chi(689364)^(-1)).                  (21)
+ =c(1+chi(689364)^(-1)).                                (21)
 ```
 
-The last character value has odd prime-power order and cannot equal `-1`.
+Here the transform uses the offset coordinate `k` from Section 1.  If one
+instead regards the same row as an absolute-address function supported at
+`n_0` and `n_0+689364`, its transform acquires the harmless common phase
+`chi(n_0)^(-1)`.  The last character value has odd prime-power order and
+cannot equal `-1`.
 Thus **every one of the `13^6` full-address characters survives**.  The
 same argument on `(18)` gives every central-arm character.  In particular,
 all primitive conductors
