@@ -121,17 +121,16 @@ charts.  Its matched wall has a fourteen-edge ternary `S3` frame, while
 unrestricted nonlinear charts attain thirteen edges via a binary four-cycle
 (MISTAKE-302/303).  Audited THM-2656 proves selector moduli: equivariance pays
 a forced midpoint; dropping individual reflection permits edge-disjointness.
-Audited THM-2670 retains the predecessor state before integration.  Its exact
-clock graph has 92 generic Hamilton cycles, but constant-step products hit a
-zero clock, no positive edge is equivariant, and formal cycles service all 13
-displacements without gluing physical witnesses.  Distinct owner-clock
-strata are disjoint: the live target is a typed handoff or shared-boundary
-fibre product, not literal same-`x` intersection.  Candidate `D(x)={13x}` gives
-`j(Dx)=h(x)` and reverses the artifact's clock-arrow convention.  The reversed
-formal audit keeps all 92 generic cycles but changes safe/free support ranges
-to `45..100`/`82..144`, so orientation is substantive.  Audit all source-pair
-`D`-pullback fibre products before THM-2644, THM-2637, or rainbow restriction;
-marginals, support, and signed inversion do not supply that transition. Ledger `165`.
+Audited THM-2670 retains the predecessor state: 92 generic Hamilton cycles
+exist, but constant-step products hit zero, no positive edge is equivariant,
+and disjoint clock strata do not glue.  Audited THM-2658 gives the exact
+holotopy test after component refinement: a common positive simplex is the
+same as a complete triangle-balanced integer-gain section, and its component
+mass is the least selected pair overlap.  Candidate `D(x)={13x}` reverses the
+clock-arrow convention (safe/free ranges `45..100`/`82..144`), so orientation
+is substantive.  Audit component gains in every source-pair `D`-pullback
+fibre product before THM-2644/2637 or rainbow restriction; marginals and
+signed inversion do not supply the transition. Ledger `165`.
 
 ### Independent routes that remain live
 

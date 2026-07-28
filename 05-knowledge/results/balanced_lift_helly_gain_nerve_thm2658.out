@@ -1,0 +1,8 @@
+THM2658 BALANCED LIFT HELLY GAIN NERVE EXACT REFEREE
+grid_arcs=20 unordered_family_checks=10605 by_size=((2, 210), (3, 1540), (4, 8855))
+positive_families=3810 balanced_sections=3935 measure_checksum=990
+switch_checks=1540
+wrap_gains=((0,), (0,), (1,)) pair_lengths=(Fraction(3, 20), Fraction(3, 20), Fraction(1, 5)) balanced_sections=0
+disconnected_pair_measures=(Fraction(1, 10), Fraction(1, 10), Fraction(1, 10)) triple=0
+endpoint_open_gain=() incomplete_path_gains=((0,), (0,)) full_balanced=0
+PASS
