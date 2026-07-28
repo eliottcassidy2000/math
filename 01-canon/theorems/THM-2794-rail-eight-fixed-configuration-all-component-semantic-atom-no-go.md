@@ -2,13 +2,15 @@
 id: THM-2794
 title: "Rail-eight fixed-configuration all-component semantic-atom no-go"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; UNDER INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the fixed THM-2672 configuration
   (rail,sector,edge,kappa,h)=(8,0,1,1,6), source carry 12 omits label one
   and has positive twelve-label facet mass exactly on clocks 1,2,3.  The
   matching THM-2749 fully marked rail-eight source carrier is also positive
-  exactly on those clocks.  Nevertheless their strict open pre-prefix bases
-  are disjoint on every clock.  Exhaustive delayed-prefix refinement gives
+  exactly on those clocks.  Nevertheless the facet base retains
+  F_(ell,7), whereas the marked base retains its complement, so their strict
+  open pre-prefix bases are disjoint on every clock.  Exhaustive
+  delayed-prefix refinement gives
   165291,356973,356973 positive facet components, respectively, and zero
   positive overlap for all 879237 components.  There are 503 closure-only
   contacts, all oriented from a facet right endpoint to a marked-carrier
@@ -32,8 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2794 -- one full fixed rail-eight facet misses the semantic carrier
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; UNDER INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2785 proves that one selected component of the rail-eight slope-seven
 facet misses THM-2749's semantic carrier.  That could have been an artefact
@@ -87,9 +88,16 @@ For each delayed clock `ell in F_7`, define the **fixed-facet base**
 2. the twelve matching relative-present supports at clock `ell`; and
 3. the edge-one private half with root `12`.
 
-No delayed carry prefix has yet been applied.  Thus `B_ell` retains the
-rail, sector, edge, `kappa`, `h`, source carry/root typing, and all twelve
-target labels, but not yet the predecessor-carry word cylinder.
+No delayed carry prefix has yet been applied.  Since `-h=7 mod 13`,
+the label-zero anchor in item 2 gives
+
+```text
+B_ell subset F_(ell,7).                                               (6)
+```
+
+Thus `B_ell` retains the rail, sector, edge, `kappa`, `h`, source
+carry/root typing, and all twelve target labels, but not yet the
+predecessor-carry word cylinder.
 
 Let `D_ell` be the strict open subset obtained from `B_ell` by imposing the
 clock-`ell`, sector-zero, `h=6`, `kappa=1`, carry-`12` delayed prefix.
@@ -104,12 +112,19 @@ source and pulled-back target rail profiles with equal weight;
 both relative-present complements;
 the source/root-12 and pulled-back target root halves;
 S_(ell,0,4)=E3 intersect F_(ell,0,4);
-the pulled-back target copy of that semantic section.                 (6)
+the pulled-back target copy of that semantic section.
 ```
 
-The THM-2749 source coefficient applies its semantic delayed prefix to
-`M_ell`.  The comparison is therefore clock-matched and source-coordinate
-matched; it is not a comparison of unrelated coefficient marginals.
+The THM-2749 relative-overlap construction instead contains
+
+```text
+M_ell subset F_(ell,7)^c.                                             (7)
+```
+
+The THM-2749 source coefficient then applies its semantic delayed prefix to
+`M_ell`.  The comparison is clock-matched and source-coordinate matched,
+but the two banks have opposite anchor-present polarity.  It is not a
+comparison of unrelated coefficient marginals.
 
 ## 2. Both banks are positive on the same three clocks
 
@@ -122,13 +137,13 @@ Exact delayed integration of the fixed facet gives
  1509311690628117483066960,
  3259498009127699308489520,
  3259498009127699308489520,
- 0,0,0).                                                            (7)
+ 0,0,0).                                                            (8)
 ```
 
 The sum is
 
 ```text
-8028307708883516100046000,                                           (8)
+8028307708883516100046000,                                           (9)
 ```
 
 the carry-`12` positive numerator already present in THM-2785.
@@ -142,13 +157,13 @@ The matching fully marked THM-2749 source vector is
  339633525654239542165440,
  750593782703678965571520,
  719200126392878704654080,
- 0,0,0).                                                            (9)
+ 0,0,0).                                                           (10)
 ```
 
 Thus both exact positive-clock supports are
 
 ```text
-{1,2,3}.                                                            (10)
+{1,2,3}.                                                            (11)
 ```
 
 This is the load-bearing positive control.  The no-go below is not caused
@@ -168,10 +183,10 @@ The exact positive weighted-piece counts of `B_ell` and `M_ell` are
 | 5 | 0 | 0 |
 | 6 | 0 | 0 |
 
-Direct rational interval intersection gives
+The literal polarity `(6)--(7)` already gives
 
 ```text
-B_ell intersect M_ell=empty                       for every ell.      (11)
+B_ell intersect M_ell=empty                       for every ell.     (12)
 ```
 
 Here `empty` means the strict open intersection used by the physical
@@ -179,24 +194,24 @@ carriers.  Their closures do meet.  On clocks `1,2,3`, respectively, there
 are
 
 ```text
-189, 416, 406                                                        (12)
+189, 416, 406                                                       (13)
 ```
 
 shared base endpoints.  Every one has the same orientation:
 
 ```text
 right endpoint of a fixed-facet base interval
-  = left endpoint of a marked semantic interval.                     (13)
+  = left endpoint of a marked semantic interval.                    (14)
 ```
 
-There is no contact of the opposite orientation.  Hence `(11)` is a
+There is no contact of the opposite orientation.  Hence `(12)` is a
 strict-seam separation rather than a large metric gap.
 
 Because `D_ell` is obtained by intersecting `B_ell` with another predicate,
-`(11)` already proves
+`(12)` already proves
 
 ```text
-D_ell intersect M_ell=empty.                                         (14)
+D_ell intersect M_ell=empty.                                        (15)
 ```
 
 The delayed component enumeration below is an exact independent refinement
@@ -232,19 +247,19 @@ Therefore
 ```text
 total positive delayed components =879237,
 total positive overlap             =0,
-total closure-only seams           =503.                            (15)
+total closure-only seams           =503.                            (16)
 ```
 
-The `503` contacts again all have the orientation `(13)`.  Since every set
+The `503` contacts again all have the orientation `(14)`.  Since every set
 is strict open, a closure contact contributes neither a component
 intersection nor positive coefficient mass.
 
-Equations `(11)` and `(15)` are two exact verification routes:
+Equations `(12)` and `(16)` are two exact verification routes:
 
 ```text
 base route:       intersect first, then observe the empty base;
 component route:  apply every delayed prefix interval, enumerate all
-                  components, and sweep them against the marked carrier. (16)
+                  components, and sweep them against the marked carrier. (17)
 ```
 
 Both give the same zero conclusion.
@@ -265,13 +280,13 @@ a successful attachment must leave at least one of
   source carry 12,
   twelve-label facet A,
   exact strict seam orientation,
-  or THM-2749 semantic source base.                                  (17)
+  or THM-2749 semantic source base.                                 (18)
 ```
 
-Configuration/edge switching is the cheapest live option because the
-closures already touch.  But `(12)--(13)` do not prove that a switched
-component opens a positive overlap; they only identify the boundary where
-one could.
+A configuration/edge switch can help only if it changes or removes the
+anchor polarity `(6)--(7)`.  The closure contacts show where such a repair
+could open, but `(13)--(14)` do not prove that any lawful switch does open a
+positive overlap.
 
 ## 6. Compatibility with THM-2782 and THM-2785
 
@@ -279,7 +294,7 @@ There is no contradiction with either theorem.
 
 - THM-2785's all-twelve carry colours are ordinary Fourier coefficients of
   the fixed-facet component indicators.  Fourier integration retains their
-  character ratios while forgetting semantic membership.  Equation `(11)`
+  character ratios while forgetting semantic membership.  Equation `(12)`
   is the exact lost sidecar.
 - THM-2782 constructs positive fully marked semantic arm packets and
   explicitly withholds a full physical root-deck/current attachment.  It
@@ -293,8 +308,8 @@ The source-to-target contract is now:
 | source | all delayed components of one carry-`12` fixed facet |
 | target | THM-2749 fully marked rail-eight source carrier |
 | proposed map | literal same-clock physical intersection |
-| preserved | rail, clock, carry/root, present supports, semantic label |
-| first failure | strict pre-prefix bases are disjoint |
+| preserved | physical coordinate, rail, clock, source carry/root, target-label facet |
+| first failure | anchor polarity `F_(ell,7)` versus `F_(ell,7)^c` |
 | surviving boundary | `503` one-sided closure seams |
 | needed next sidecar | a lawful configuration/edge switch opening a seam |
 
@@ -328,10 +343,13 @@ point, and no truth-bearing Python assertions.  It pins the audited
 THM-2785 and THM-2749 helpers; checks the primitive content, metadata, root,
 carry, missing label, and active labels; rebuilds both positive vectors;
 checks every base and marked piece; enumerates all `879,237` delayed
-components; and independently verifies `(11)` before prefix refinement.
+components; and independently verifies `(12)` before prefix refinement.
 
-The theorem remains a candidate until an immutable independent hostile audit
-rebuilds the universe and confirms both enumeration routes, the strict-seam
-orientation, normal/optimized/stored replay, and LF hashes.
+An immutable independent hostile audit rebuilt the universe and both
+enumeration routes.  It reproduced the positive clocks, every piece and
+component count, all `503` delayed seams and `1,011` base seams with their
+one-sided orientation, normal/optimized/stored replay, dependency hashes,
+and LF hashes.  The audit also exposed `(6)--(7)` as the actual first
+obstruction; that typing repair is incorporated above.
 
-QED, conditional only on candidate status promotion after independent audit.
+QED.
