@@ -10,15 +10,15 @@ status: >
   each have a fixed sheet has character-trivial holonomy.  If chi is
   injective on the holonomy image, the local system is trivial and has
   |Omega| parallel sections.  For the regular C13 carry torsor, a
-  common-carry fixed branch on each fundamental transition forces zero
+  common-carry fixed branch on each fundamental-cycle holonomy forces zero
   holonomy and thirteen sections.  The common carry gauge and the fact that
-  one is testing a single transition are load-bearing: separate endpoint
+  one is testing one selected holonomy component are load-bearing: separate endpoint
   marginals, full determinant-sector support, a private row at only one
   endpoint, or a diagonal contribution inside a mixture of translations do
-  not imply trivial holonomy.  This abstracts the mechanism behind the D4
-  Keller exclusion and identifies the exact conditional consumer of an LRC
-  endpoint pair twist; it proves no common-carry branch, row exclusion, or
-  LRC(14) conclusion.
+  not imply trivial holonomy.  This abstracts the abelian
+  derangement-character hinge inside the stronger D4 Keller exclusion and
+  identifies the exact conditional consumer of an LRC endpoint pair twist;
+  it proves no common-carry branch, row exclusion, or LRC(14) conclusion.
 source: root-2026-07-28-derangement-holotopy-bridge
 depends_on: []
 related:
@@ -30,6 +30,7 @@ related:
   - THM-2623-guard-safe-danger-cospan-and-residual-unit-wall
   - THM-2633-derangement-character-obstruction-and-d4-keller-exclusion
   - THM-2634-endpoint-pair-two-carry-cospan-and-single-carry-no-go
+  - THM-2635-half-tooth-opposite-graph-unit-section-and-reversed-digit-closure
 ---
 
 # THM-2637 -- a charged derangement cannot carry a fixed branch
@@ -133,22 +134,27 @@ principal carry local system whose fundamental holonomies each have a
 same-carry fixed branch has zero holonomy and exactly thirteen parallel
 sections.
 
-For a single transition known to be translation by `a`, a physical joint
-array `K_a(c_L,c_R)` is supported on
+After trivializing transport on a spanning tree, a selected non-tree edge
+represents its fundamental-cycle holonomy.  Equivalently, a common physical
+cospan may identify both endpoint fibres in the same gauge.  If that selected
+holonomy is translation by `a`, a physical joint array `K_a(c_L,c_R)` is
+supported on
 
 ```text
 c_R=c_L+a.                                                (10)
 ```
 
-A common-carry entry
+A common-carry entry in this common gauge
 
 ```text
 K_a(c,c)>0                                                (11)
 ```
 
 is possible only for `a=0`.  Thus a lawful pair twist or cross-correlation
-which recovers (11) for the *selected translation component* supplies the
-fixed branch required by Section 2.
+which recovers (11) for the *selected translation component*, after the
+spanning-tree trivialization or equivalent cospan, supplies the fixed branch
+required by Section 2.  An arbitrary open-edge diagonal without this gauge
+identification is not itself a cycle-holonomy witness.
 
 This is the exact consumer of a two-carry endpoint refinement.  It is not a
 claim that such a branch is already present in the LRC canon.  In particular,
@@ -224,16 +230,18 @@ open affine image:    that same inertia element fixes a finite sheet.    (13)
 ```
 
 For the `D_4` source-deck character, (2) holds, so (13) is contradictory.
-This recovers the logical core of the `D_4` exclusion without replacing any
-of THM-2633's geometric work.
+This is the abelian derangement-character hinge of the `D_4` exclusion,
+without replacing THM-2633's geometric inputs or its stronger conclusion
+that affine Jelonek inertia normally generates the full monodromy group.
 
 For LRC, THM-2622 classifies the consequence once a carry holonomy is
 supplied, but current results do not provide the analogue of both lines in
-(13).  Proved THM-2623 records carry-forgetting rows, while the current
-THM-2635 proof candidate records an imposed half-tooth section.  Neither is
-used as a dependency here, and both remain one-endpoint data.  THM-2625
-fills allocated endpoint sectors after separate endpoint aggregation.  A
-theorem applying Section 3 must
+(13).  Proved and independently audited THM-2623 records carry-forgetting
+rows.  Proved and independently audited THM-2635 records imposed
+half-tooth/seven-clock data, but lacks both paired endpoint carries and a
+selected cycle-holonomy component.  Neither is used as a dependency here.
+THM-2625 fills allocated endpoint sectors after separate endpoint
+aggregation.  A theorem applying Section 3 must
 instead retain
 
 ```text
