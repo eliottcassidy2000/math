@@ -173,6 +173,10 @@ is not automatically a tournament equivalence.
 collapses the guard-top types; THM-2413 makes addition/multiplication
 transitivity into composition through an explicit intermediate witness.
 
+After a positive cospan, compute its next Čech nerve before iterating the
+adjacency grammar.  THM-2680 has a Fibonacci one-skeleton but THM-2682 kills
+its two-simplex; THM-2658 says a true simplex needs a common gain section.
+
 ## Existence is a maximum or tail question, not automatically a mean question
 
 **Trigger / action:** for existence, covering, or near-extremality, identify the actual max/tail event before averaging and test whether a saturated exceptional rung is mean-invisible.

@@ -1,0 +1,10 @@
+THM-2681 A4 RESOLVENT FIELD-TYPE REFEREE
+orders S4/A4/V4=24/12/4
+matching images S4/A4=6/3
+matching kernels S4/A4=4/4
+A4 matching stabilizer=4, normal=1
+S4 matching stabilizer=8, core=4
+THM1310 root stabilizer=2, normal=0, core=1
+local divisor Kummer plane size=4
+VERDICT: A4 gives a cyclic cubic; the actual THM-1310 cubic is nonnormal S3
+ALL CHECKS PASSED

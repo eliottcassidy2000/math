@@ -24,6 +24,7 @@ depends_on:
   - THM-2624-two-clock-root-tomography-and-disjoint-carrier-holotopy-boundary
   - THM-2670-sharp-graph-clock-incidence-atlas-and-physical-gluing-boundary
 related:
+  - THM-2596-modular-free-factor-farey-gram-owner-cocycle
   - THM-2634-endpoint-pair-two-carry-cospan-and-single-carry-no-go
   - THM-2637-derangement-character-fixed-branch-holotopy-principle
   - THM-2640-predecessor-carry-private-root-atlas-and-target-action-clutching-no-go
@@ -256,7 +257,7 @@ Only shallow clocks `3,4` occur in `(21)`.  This concentration is explained
 and promoted by THM-2682: the central arrival return preserves precisely
 those two half-clock labels and kills every three-event continuation.
 
-## 5. Complete cospan and the empty physical two-simplex
+## 5. Complete cospan and an independent empty-two-simplex certificate
 
 The independent complete atomwise audit extends `(21)` across both delayed
 guard sectors.  The ordered sector-pair census is
@@ -350,9 +351,26 @@ E_0 intersect D^(-1)E_1 intersect D^(-2)E_2              (31)
 
 would project to both adjacent positive two-edge events, a contradiction.
 Thus the full physical guard-cospan handoff has a nonempty one-skeleton but
-no two-simplex.  THM-2682 explains this more strongly by the central-arrival
-clock trap, before the sector restrictions.  Neither proof needs a
-source-transition hypothesis.
+no two-simplex.  This conclusion needs no source-transition hypothesis.
+It is an exact finite clock-shadow proof of the same support nilpotence that
+THM-2682 proves directly from the central-arrival identity
+`z-1/2=(Dz-1/2)/13`.  The latter proof is stronger conceptually: it eliminates
+every three-event atom before the sector, source, sharp-state, and delayed-word
+labels are inspected.  The value of `(22)`--`(30)` is therefore the complete
+positive **two-edge** atlas and its Fibonacci one-skeleton, not a claim that a
+binary transition grammar can be iterated.
+
+There is a precise quotient failure behind that warning.  Let `P` be the
+directed graph whose vertices are physical event atoms and whose edges are
+positive `D`-fibre products, and label each vertex by its safe/danger sector.
+The induced edge map from `P` onto the two-state graph `(29)` is surjective:
+all three allowed sector edges occur.  But `P` has no directed path of length
+two, whereas `(29)` has walks of every length (already `safe->safe->safe`).
+Thus the sector quotient is edge-surjective and **not path-lifting**.  Its
+Fibonacci adjacency matrix is a faithful one-edge census but not a symbolic
+dynamics, a Bass--Serre action, or evidence that the modular `C_2*C_3` normal
+forms act on these atoms.  THM-2596's actual modular tree retains paths; the
+lost clock coordinate here is exactly what prevents that promotion.
 
 ## 6. What this changes, and what remains
 
@@ -364,12 +382,13 @@ inherited source exceptions `(11)`, `(15)` and the sharp physical/formal gap
 `(19)`--`(21)` simultaneously show why one positive overlap is far from a
 transition.
 
-Equation `(31)` is now proved empty, so iterating this particular quotient is
-finished.  A replacement must change the object: a common endpoint fibre
-product, a larger source/rail natural extension, a configuration-switching
-atlas, or a phase-retaining correspondence not equal to `D`.  No Bockstein
-unit, endpoint owner, Perron-sheet selector, global positive transition,
-holonomy trivialization, scalar row exclusion, or LRC(14) conclusion follows.
+Equation `(31)` is now proved empty, and THM-2682 identifies the load-bearing
+central-arrival reason, so iterating this particular quotient is finished.
+A replacement must change the object: a common endpoint fibre product, a
+larger source/rail natural extension, a configuration-switching atlas, or a
+phase-retaining correspondence not equal to `D`.  No Bockstein unit, endpoint owner,
+Perron-sheet selector, global positive transition, holonomy trivialization,
+scalar row exclusion, or LRC(14) conclusion follows.
 
 ## 7. Reproduction
 

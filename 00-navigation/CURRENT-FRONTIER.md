@@ -357,13 +357,15 @@ Classify profiles under support operations; study analytic continuation and auto
   is projective over `F2[C3]` and `F2[S3]`, so an equivariant unit or `Cl(R)[2]`
   copy is also sufficient for an abstract connected Kummer carrier and
   `H^2(Q,W)=0`.  The `d^2=abc` hostile realizes the class-group branch but has
-  nonconstant Jacobian.  THM-2681 computes the actual THM-1310 cubic's full
-  `S3` normalization on `g!=0` as `G_m x A^2`; its procyclic etale fundamental
-  group admits no connected `V4` torsor.  Thus that exact cubic field cannot
-  be an `S4` Keller resolvent under affine/polynomial target identification.
-  Shared `-L`, cusp, Jelonek, and odd-valuation shadows and the `A4` branch
-  survive.  Next test affine/Jelonek realization for other resolvents; no
-  degree, `A4/S4`, `G1`, `JC(2)`, or `DC(2)` closure.
+  nonconstant Jacobian.  THM-2681 excludes the actual THM-1310 cubic as an
+  `A4/S4` quartic resolvent under the stated target-field/base-ring
+  identification: the A4 quotient is cyclic cubic, while the actual cubic is
+  nonnormal `S3`; the S4 route lacks a global connected etale `V4` torsor.
+  Its `D(a)` hostile realizes the local Kummer plane but ramifies when the
+  `r_i=0` divisors return.  This is not a general monodromy result, and the A4
+  obstruction disappears after adjoining the discriminant square root.  Next
+  test unrelated affine/Jelonek resolvent realizations; no degree, `A4/S4`,
+  `G1`, `JC(2)`, or `DC(2)` closure.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
