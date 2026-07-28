@@ -23,6 +23,15 @@
   level `s_1s_2-s_3=c!=0` has source `A2`, but its coefficient image is an
   explicit singular nonnormal surface with two normalization preimages.
   Hashes: `56e954b8` / `db38a15b`.
+- `lrc14_mixed_slope_long_word_probe.py` and its independent referee ->
+  matching `.out` files [THM-2694 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  One THM-2680 D edge extends on a single open cylinder to
+  94 canonical slope-seven edges, retaining rail/present/delayed/carry/root/
+  unit data: 95 private vertices and 96 vertices total.  The residue grammar
+  is the cyclic word `(1^6,3,1^4)`, but its ninth lift fails the present factor
+  for all twelve next representatives.  The selected `P_95` is a partial cube
+  while its height-forgetting quotient is the odd `C_11`.  Hashes begin
+  `35259924`/`2e426f74` and `a79bcd4a`/`1d261bc9`.
 - `lrc14_lawful_odometer_alternating_rail_horizon_probe.py` and
   `lrc14_lawful_odometer_alternating_unit_line_boundary.py` -> matching
   `.out` files [THM-2691 PROVED + VERIFIED-EXACT + INDEPENDENTLY

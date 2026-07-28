@@ -89,10 +89,10 @@ the thirteen-simplex normalization, `boundary Delta^12` vertical image,
 `Delta^11` diagonal quotient, and lens quotient `L^11(13;1,...,6)`.  Its
 Bockstein is the same nonzero odometer class `7`, not physical gluing.
 
-THM-2680 has `25,344` positive `D(x)={13x}` legs but no path-lifting quotient;
-THM-2682/2684 kill every third event, including reflection.  THM-2689 proves
-every affine shift except `0,1/2` restores intrinsic support, yet no nontrivial
-odometer lift globally moves the seven clocks.  THM-2691's canonical central
+THM-2680's positive D legs have no path lift; THM-2682/2684 kill every third
+event, including reflection.  THM-2689 restores intrinsic support off
+`0,1/2`, yet no nontrivial odometer lift moves the seven clocks globally.
+THM-2691's central
 cycle keeps rail/clock support forever but its dynamic present product dies at
 `H=6`.  THM-2693's nearby lift has a fully labelled three-event packet, while
 the common delayed base map `y->{13y}` makes every lift/clock word empty at
@@ -101,7 +101,11 @@ recurrent, but all `13^3` phase policies for the full word still die at four:
 the unchanged high guard is `338` times the target.  Unshifted slope `14`
 survives through fourteen states and dies at fifteen.  Change relative-factor
 phase, the high guard, delayed grammar, or heterogeneous edge; the mixed
-`D`/slope face remains positive.  Ledger `165`.
+`D`/slope face remained open.  THM-2694 gives D plus 94 slope edges on one
+open cylinder retaining data.  Its 11-state word cycles eight
+times; lift nine fails present.
+`P_95 -> C_11` shows height-forgetting can destroy partial cubes.  This is a
+finite/fixed word, not endpoint transport or switching. Ledger `165`.
 
 ### Independent routes that remain live
 

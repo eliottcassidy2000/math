@@ -1,0 +1,23 @@
+LRC14 MIXED D/SLOPE-SEVEN LONG-WORD ORBIT PROBE
+R=4826809 z=46873542509301/100360982066072 orbit_step=7/R
+D_component=(Fraction(960117507257, 1930018885886), Fraction(324519717452867, 652346383429468)) x=649039434905733/1304692766858936 z=D(x)
+unit_root_residues_mod13=(0, 1, 2, 3, 4, 5, 6, 9, 10, 11, 12)
+good_orbit_points=3346
+gap_hist=((1, 3016), (3, 295), (45, 3), (46, 12), (47, 3), (48, 3), (3564, 4), (3565, 1), (3566, 1), (3567, 1), (685282, 1), (685283, 5), (685285, 1)) max_gap=685285
+cyclic_components=35 sizes=(11, 11, 11, 11, 11, 11, 12, 48, 48, 48, 50, 50, 50, 51, 84, 84, 84, 84, 85, 86, 86, 104, 104, 104, 105, 106, 106, 107, 227, 227, 227, 227, 228, 229, 229)
+largest_component=(size=229,start=1379246,end=1379514)
+component_through_mixed_D_endpoint=(size=104,forward_size=95,forward_prefix=(0, 1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 22, 23),end=110)
+heterogeneous_word=(D_edges=1,slope_edges=94,total_edges=95,vertices=96)
+forward_step_hist=((1,86),(3,8))
+common_initial_cylinder=(960117507257/1930018885886,324519717452867/652346383429468) radius=1/1304692766858936 length=1/652346383429468
+first_post_component_admissible_address=113:rail=True:present=False:fails=present
+terminal_continuation_table=(n,residue,root_unit,rail_meets,present_meets)=((111, 7, False, True, False), (112, 8, False, True, False), (113, 9, True, True, False), (114, 10, True, True, False), (115, 11, True, True, False), (116, 12, True, True, False), (117, 0, True, True, False), (118, 1, True, True, False), (119, 2, True, True, False), (120, 3, True, True, False), (121, 4, True, True, False), (122, 5, True, True, False))
+local_vertices=(0, 1, 2, 3, 4, 5, 6, 9, 10, 11, 12) local_steps=(1, 1, 1, 1, 1, 1, 3, 1, 1, 1)
+projected_residue_cycle=(0, 1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 0) steps=(1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1) completed_lifts=8
+selected_chronology=P_95:partial_cube=True;residue_quotient=C_11:bipartite=False:partial_cube=False
+graceful_control=P_95:True;C_11:True;C_11_labels=(0, 4, 6, 5, 8, 3, 9, 2, 10, 1, 11)
+coarse_C91_return=(addresses=0,91,heights=0,7,drift=49/371293,retained_metadata_equal=True,base_points_equal=False)
+endpoint_character_boundary=same_phase_iff_13^5_divides_integer_frequency
+first_projected_cycle_lift_failure=(height=8,address=110->113,residue=6->9,step=3,reason=present)
+closed_all_depth_word=False; criterion=max circular gap <=12
+ALL CHECKS PASSED

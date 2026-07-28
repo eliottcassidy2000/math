@@ -1,0 +1,10 @@
+LRC14 MIXED D/SLOPE-SEVEN LONG-WORD INDEPENDENT REFEREE
+rebuilt_D_component=(Fraction(960117507257, 1930018885886), Fraction(324519717452867, 652346383429468)) radius=1/1304692766858936
+direct_path=(vertices=95,slope_edges=94,step1=86,step3=8,end=110)
+all_95_vertices_preserve=rail,present,delayed,carry,half-digit,root,unit
+terminal_all_delta_1_to_12=((111, False, True, False), (112, False, True, False), (113, True, True, False), (114, True, True, False), (115, True, True, False), (116, True, True, False), (117, True, True, False), (118, True, True, False), (119, True, True, False), (120, True, True, False), (121, True, True, False), (122, True, True, False))
+projected_cycle=(0,1,2,3,4,5,6,9,10,11,12,0);completed_lifts=8;first_failure=110->113
+selected_chronology=P_95:partial_cube=True;residue_quotient=C_11:bipartite=False:partial_cube=False
+graceful_control=P_95:True;C_11:True;C_11_labels=(0, 4, 6, 5, 8, 3, 9, 2, 10, 1, 11)
+C91_return=(0,91):drift=49/371293:metadata_equal=True:endpoint_phase_equal_iff_13^5_divides_X
+ALL CHECKS PASSED
