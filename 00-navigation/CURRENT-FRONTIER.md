@@ -66,9 +66,15 @@ THM-2763 repairs the endpoint gauge with `(r,k,l)`, `r.W=l-k`: the faithful
 two-sided quotient has size `13^4`, and common-harmonic loss gives `13^3`.
 One diagonal fibre has dual support `{0,2,10}` but all thirteen primal
 residues; it is not THM-2625's endpoint plane and loses factor allocation.
-Next: attach one chamber selector and allocation sidecar to a marked carrier
-and determinant sector.  THM-2727 is the fixed-rail realization no-go.
-Ledger `165`; no row is excluded.
+THM-2771/2772's decoder and determinant torsors now meet abstractly in
+THM-2779's Heisenberg center.  Every normalized endpoint coefficient square
+survives, and the endpoint-origin fibre has the sharp faithful `169`-state
+action/two-digit odometer; every literal `13`-root permutation action kills
+the commutator center, while a flat dilation-natural target/root map is zero.
+This is a typing obstruction, not the missing same-ancestry lift.  Next:
+attach an atom-dependent chamber/allocation sidecar to the marked determinant
+sector with root depth retained.  THM-2727 is the fixed-rail no-go.  Ledger
+`165`; no row is excluded.
 
 ### Independent routes that remain live
 

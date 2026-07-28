@@ -1,0 +1,17 @@
+THM-2779 INDEPENDENT HOSTILE AUDIT
+p=2: order=8; sharp_degree=4; frames=6; faithful_degree_p2_classes=2; all_transitive_degree_p2_classes=3
+p=3: order=27; sharp_degree=9; frames=24; faithful_degree_p2_classes=4; all_transitive_degree_p2_classes=5
+p=5: order=125; sharp_degree=25; frames=120; faithful_degree_p2_classes=6; all_transitive_degree_p2_classes=7
+p=7: order=343; sharp_degree=49; frames=336; faithful_degree_p2_classes=8; all_transitive_degree_p2_classes=9
+p=11: order=1331; sharp_degree=121; frames=1320; faithful_degree_p2_classes=12; all_transitive_degree_p2_classes=13
+p=13: order=2197; sharp_degree=169; frames=2184; faithful_degree_p2_classes=14; all_transitive_degree_p2_classes=15
+p=2_boundary=D8; order_census=1^1,2^5,4^2
+decoder_all_unit_censuses=((2, 2), (3, 18), (5, 2500))
+decoder_p13=13 gauges; local columns distinct; uniform sum=-1
+convention=(A,B,C)=(-y,x,z) verified for p=2,3,5,7,11,13
+endpoint_generators=X->(x,y,z)=(0,-1,0),Y->(1,0,0),Z->(0,0,1)
+odometer_addresses=169; nonwrap=156; carry=13
+cocycle_normalization=class1 --kernel*7--> class7; class7 --kernel*2--> class1
+normalized_endpoint_squares=62377224; inference=edge-factor products
+dilation_flat_intertwiners=(0,); graded_chain_maps=13
+verdict=PASS_AFTER_FAITHFUL_ACTION_WORDING_REPAIR

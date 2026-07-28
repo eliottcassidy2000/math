@@ -2,9 +2,7 @@
 id: THM-2779
 title: "Bockstein--symplectic decoder/frame torsor and Heisenberg root-degree gate"
 status: >
-  PROVED CORE + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
-  PROOF-COMPLETE ALL-PRIME ADDENDUM + VERIFIED-EXACT, AWAITING INDEPENDENT
-  AUDIT.  The THM-2771
+  PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.  The THM-2771
   augmentation decoders and the THM-2772 normalized transverse frames are
   exact affine F13-torsors with the same gauge-invariant -aN7 transgression.
   Their determinant face is the central phase of H_13: it survives on the
@@ -30,6 +28,14 @@ audit: >
   endpoint-edge banks per field, the 62,377,224-square reduction, witnesses,
   Pluecker identities, characteristic-zero inference, all four LF hashes,
   and both companions under normal/-O/stored replay: ACCEPT.
+addendum_audit: >
+  lrc-address-chamber/independent-audit-2026-07-28 independently checked the
+  all-prime group conventions, center and commutator, p=2 D8 boundary,
+  normalized frames, sharp degree-p^2 actions and faithful stabilizer-class
+  wording, decoder socles and all p=13 gauges, endpoint generators,
+  two-digit odometer and class-7 normalization, 62,377,224-square reduction,
+  and conditional dilation gate: ACCEPT after inserting "faithful" in the
+  exact-degree action classification.
 depends_on:
   - THM-2771-joint-c7-c13-right-wing-mixed-spectrum-and-commuting-square-no-go
   - THM-2772-carrier-allocation-pullback-k4-segre-and-mixed-face-obstruction
@@ -54,14 +60,16 @@ tertiary_script: 04-computation/lrc14_heisenberg_decoder_frame_root_degree_thm27
 tertiary_output: 05-knowledge/results/lrc14_heisenberg_decoder_frame_root_degree_thm2779.out
 tertiary_script_sha256: ef6e9f9bcb4f11152d291342a11ae215245d1d19b96c49940a01ba9ea850cbd9
 tertiary_output_sha256: 1feb463864015035ab8d7fcfcddf9cfe8b0ec0a3ed36481f2f66d6a9149182e6
+independent_script: 04-computation/lrc14_heisenberg_decoder_frame_root_degree_hostile_audit_thm2779.py
+independent_output: 05-knowledge/results/lrc14_heisenberg_decoder_frame_root_degree_hostile_audit_thm2779.out
+independent_script_sha256: 5019f87b24500a5a13825d3be01908ea983a08b360a384fd614107f476201f46
+independent_output_sha256: 1b9ad37b35e92a14dd90d0db8c1d0cf225761e2c37ca8e2fe2120bd0f64c47d4
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2779 -- the twin transgressions have the same gauge space, but not yet the same carrier
 
-**PROVED CORE + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
-PROOF-COMPLETE ALL-PRIME ADDENDUM + VERIFIED-EXACT, AWAITING INDEPENDENT
-AUDIT.**
+**PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.**
 
 THM-2771 and THM-2772 independently reached the same seven-chart correction:
 
@@ -414,14 +422,14 @@ noncentral order-`p` subgroup has trivial intersection with the center.
 Hence every minimal faithful action is a coset action on a noncentral
 order-`p` subgroup.
 
-For odd `p`, these minimal faithful transitive sets have `p+1` isomorphism classes,
-one for each projected line in `P^1(F_p)`; above a fixed line the `p`
-stabilizers form one conjugacy orbit.  At `p=2`, the anisotropic line
+For odd `p`, these minimal faithful transitive sets have `p+1` isomorphism
+classes, one for each projected line in `P^1(F_p)`; above a fixed line the
+`p` stabilizers form one conjugacy orbit.  At `p=2`, the anisotropic line
 `(1,1)` has only order-four lifts, leaving two minimal `D_8`-set classes,
 each with two conjugate reflection stabilizers.  Formula `(28)` realizes one
 class and proves `mu_perm(H_2)=4` as well.
 
-THM-2772's pullback has exactly `169` endpoint origins over every faithful
+THM-2772's pullback has exactly `169` endpoint origins over every
 carrier address.  After choosing oriented coordinates, `(28)` gives an
 abstract faithful Heisenberg action on that origin fibre.  This cardinal
 match is now structural rather than accidental: `169` is the first
@@ -440,6 +448,12 @@ On these `169` origins define
 X=T_(s,1): R |-> R+det(s,R)s,
 Y=tau_t:    R |-> R+t,
 Z=tau_s:    R |-> R+s.                                    (31)
+```
+
+Relative to the convention `(28)`, these generators are explicitly
+
+```text
+X=rho(0,-1,0),          Y=rho(1,0,0),          Z=rho(0,0,1).  (31a)
 ```
 
 In `(v,w)` coordinates,
@@ -576,7 +590,9 @@ section at the carry wall.
 This is, up to the inherited unit normalization of the central/kernel
 generator, the two-digit pushout of THM-2657's length-six nonsplit odometer
 extension.  THM-2657 records class `7` in its fixed root normalization,
-whereas `(33i)` records class `1`; multiplication by `7` identifies them.
+whereas `(33i)` records class `1`; multiplying the kernel generator by `7`
+sends class `1` to class `7`, and the inverse rescaling by `2` sends class
+`7` back to class `1` in `F_13`.
 It identifies the **abstract form** of the endpoint Heisenberg
 carrier with a root-depth address model after choosing both a normalized
 frame and the digit section `(33e)`.  It does not identify THM-2625 endpoint
@@ -676,6 +692,8 @@ python 04-computation/lrc14_bockstein_symplectic_endpoint_gate_thm2779.py
 python -O 04-computation/lrc14_bockstein_symplectic_endpoint_gate_thm2779.py
 python3 04-computation/lrc14_heisenberg_decoder_frame_root_degree_thm2779.py
 python3 -O 04-computation/lrc14_heisenberg_decoder_frame_root_degree_thm2779.py
+python3 04-computation/lrc14_heisenberg_decoder_frame_root_degree_hostile_audit_thm2779.py
+python3 -O 04-computation/lrc14_heisenberg_decoder_frame_root_degree_hostile_audit_thm2779.py
 ```
 
 Each normal/optimized pair byte-matches its stored transcript:
@@ -684,6 +702,7 @@ Each normal/optimized pair byte-matches its stored transcript:
 05-knowledge/results/lrc14_bockstein_symplectic_heisenberg_gate_thm2779.out
 05-knowledge/results/lrc14_bockstein_symplectic_endpoint_gate_thm2779.out
 05-knowledge/results/lrc14_heisenberg_decoder_frame_root_degree_thm2779.out
+05-knowledge/results/lrc14_heisenberg_decoder_frame_root_degree_hostile_audit_thm2779.out
 ```
 
 The primary no-`assert`, integer-only companion verifies:
@@ -729,7 +748,22 @@ tertiary_output_sha256 = 1feb463864015035ab8d7fcfcddf9cfe8b0ec0a3ed36481f2f66d6a
 hash_basis             = LF-normalized bytes
 ```
 
+The second independent audit reimplements rather than imports all three
+conventions.  It checks primes `2,3,5,7,11,13`, explicitly separates the
+`p+1` faithful degree-`p^2` classes from the additional central-stabilizer
+transitive class, exhausts small decoder units, verifies the convention map
+`(A,B,C)=(-y,x,z)`, identifies the endpoint generators, and independently
+rechecks the odometer, cocycle rescaling, endpoint-square product inference,
+and dilation boundary.  It has `46` explicit exception gates, no `assert`
+node, and exact normal/optimized/stored agreement.
+
+```text
+independent_script_sha256 = 5019f87b24500a5a13825d3be01908ea983a08b360a384fd614107f476201f46
+independent_output_sha256 = 1b9ad37b35e92a14dd90d0db8c1d0cf225761e2c37ca8e2fe2120bd0f64c47d4
+hash_basis               = LF-normalized bytes
+```
+
 No physical same-ancestry endpoint lift, root-deck map, semantic transition,
 positive current, scalar-row exclusion, or LRC(14) conclusion is proved.
 
-Core QED.  The all-prime addendum awaits its independent audit.
+QED.

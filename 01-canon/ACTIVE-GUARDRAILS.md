@@ -85,7 +85,7 @@
     `12/13` cap for the full slope-seven family.  Carry-forgetting still turns
     thirteen disjoint `Delta^11`s into a false `boundary Delta^12`; do not infer
     pointwise endpoint emptiness or export the cap to another carrier.
-27g. **Projection labels are not physical emptiness.** THM-2744/2749 give an overlap, not an endpoint current.  The `81`-label audit is a `7 x 7` source rectangle feeding an everywhere-unit target, with four ratios and gains `0,2,11`; none is a carrier map.  THM-2763 restores address `(r,k,l)`, `r.W=l-k`, of size `13^4` two-sided or `13^3` after harmonic loss; neither is THM-2625's plane or a factor allocation.
+27g. **Projection labels are not physical emptiness.** THM-2744/2749 give overlap, not current. The `81`-label chamber has a `7 x 7` rectangle, unit target and gains `0/2/11`, but no carrier map. THM-2763's `(r,k,l)` address is `13^4` (`13^3` after loss), not THM-2625's plane or factor allocation. THM-2779's faithful `169`-state action is not a same-ancestry root lift; every `13`-root permutation kills the commutator.
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211 and
