@@ -24,7 +24,7 @@ related:
   - THM-2721-semantic-inner-triangle-equal-following-amplitude-and-current-reanchoring-no-go
 script: 04-computation/c2_c3_projector_compatibility_thm2743.py
 output: 05-knowledge/results/c2_c3_projector_compatibility_thm2743.out
-script_sha256: 47357490434ffee2f440167c5b5144e7f1927847dbc9a26f070667fa64db523f
+script_sha256: bf76bbcb60b5129643b9526bc009043455070cfad93532462d6a9e69d9128fff
 output_sha256: 09582cce4a676a594241fd8a7d34f322f855bca31a1fe6343fbd34c0cc86c9e5
 hash_basis: LF-normalized bytes
 ---
@@ -265,8 +265,9 @@ Both executions byte-match the stored `15`-line transcript
 companion uses exact rational arithmetic and explicit exceptions, with no
 optimized-away assertions.  It independently enumerates all eight affine
 cocycles and four coboundaries, constructs both permutation generators and
-the Reynolds projector, enumerates each generated image, and verifies every
-rank, norm, and relation-defect value in `(12)--(13)`.
+the Reynolds projector, verifies the isolated subgroup orders `2` and `3`
+before enumerating each joint image, and checks every rank, norm, and
+relation-defect value in `(12)--(13)`.
 
 ## 7. Boundary ledger
 

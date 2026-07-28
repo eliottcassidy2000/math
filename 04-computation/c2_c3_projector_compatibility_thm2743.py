@@ -60,10 +60,10 @@ def generated_group(generators):
         x = frontier.pop()
         if x in group:
             continue
-        old = tuple(group)
         group.add(x)
-        frontier.extend(pcompose(x, g) for g in old)
-        frontier.extend(pcompose(g, x) for g in old)
+        current = tuple(group)
+        frontier.extend(pcompose(x, g) for g in current)
+        frontier.extend(pcompose(g, x) for g in current)
     return frozenset(group)
 
 
@@ -169,6 +169,10 @@ def main() -> None:
                 "affine involution")
         require(pcompose(pcompose(tau_perm, tau_perm), tau_perm) == ID4_PERM,
                 "affine order-three generator")
+        require(len(generated_group((sigma_perm,))) == 2,
+                "affine involution subgroup order")
+        require(len(generated_group((tau_perm,))) == 3,
+                "affine order-three subgroup order")
 
         sigma = perm_matrix(sigma_perm)
         tau = perm_matrix(tau_perm)
