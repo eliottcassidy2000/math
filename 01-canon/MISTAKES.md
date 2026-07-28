@@ -41,15 +41,17 @@ Format per entry:
   “THM-2717 formula.”
 - **Why it was wrong:** the tracked LF-normalized script hashes to
   `a6368190...`; normal and optimized executions still byte-match the stored
-  transcript.  THM-2717 remains an `UNPROVED EMPTY STUB`, while the formula
-  `r=2c+floor(d/13)+1_(edge=left) mod13` is proved in THM-2640.  The same
+  transcript.  At the time of the bad attribution THM-2717 was still an
+  `UNPROVED EMPTY STUB`; after its independent promotion, the formula
+  `r=2c+floor(d/13)+1_(edge=left) mod13` remains sourced directly to the
+  earlier proved THM-2640.  The same
   synthesis also blurred fourteen coefficient-only constant matches with the
   physical signature census, whose intersection is actually zero.
-- **Repair / survivor:** THM-2727 now depends explicitly on THM-2640, names
-  THM-2717 only as related provisional work, declares the tracked hash, and
+- **Repair / survivor:** THM-2727 now depends explicitly on THM-2640 and the
+  subsequently proved THM-2717 bank, declares the tracked hash, and
   separates fourteen non-source constant coefficient matches from zero
   same-clock physical signature matches.  Its exact fixed-rail Frobenius
-  no-go survives unchanged and remains reserved/provisional; it does not
+  no-go survives unchanged and is now independently audited and proved; it does not
   constrain THM-2742, prove THM-2744, or decide the joint `C13` coefficient.
 
 ## MISTAKE-308 (2026-07-28, THM-2636/2692 Kummer field typing) -- a spectral nonsquare was identified with its physical square before pullback

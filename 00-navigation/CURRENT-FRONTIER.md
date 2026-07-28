@@ -82,8 +82,9 @@ rail-8 witness has the literal `E3 -> D^6 -> Q_(3,{1,2})` record and common
 lawful `(s,t)`, but the semantic fork and target factors have not yet been
 inserted inside the coefficient integral.  The live debt is exactly that
 refinement, followed by an endpoint-current attachment; nonzero marginals do
-not decide it.  THM-2727 remains **RESERVED / PROVISIONAL** without a
-rail/owner map.  Ledger `165`; no row is excluded.
+not decide it.  THM-2727 is **PROVED** as a fixed-rail realization no-go,
+but supplies no rail/owner/support/address map.  Ledger `165`; no row is
+excluded.
 
 ### Independent routes that remain live
 

@@ -195,7 +195,9 @@ The constant vector is killed by `M`.  Direct orthogonal projection gives
 ||M w||^2 / ||w||^2 = (32/3)/12 = 8/9.                    (18)
 ```
 
-Thus `M` has rank one and squared Hilbert--Schmidt norm `8/9`.  The same
+Here `c` and `w` are orthogonal, and `M=QsPi` kills
+`Fix(tau)^perp=ker(Pi)`.  Thus `M` has rank one and its squared
+Hilbert--Schmidt norm is exactly the single displayed ratio `8/9`.  The same
 four-by-four matrices give the two rank-two defects in `(13)`.  Translation
 conjugacy preserves all these ranks and the Hilbert--Schmidt norm.  This
 proves `(12)--(13)`.
@@ -216,6 +218,11 @@ survives scrutiny.  It says where the missing `V4` extension class sits: not
 in the cubic equal-arm sector itself, but in its binary off-diagonal leakage.
 THM-2741's exact real/imaginary sixth-power response is a useful quadrature
 analogy, but neither theorem supplies the other's geometric realization.
+
+The equivalence `(19)` concerns the fixed standard **marked**, order-preserving
+affine `C2*C3` lift whose image is the full `S3` quotient.  It does not classify
+`A4/C3`, `D4/C2`, arbitrary unmarked global monodromy, or a change of marking;
+those require separate representations and sidecars.
 
 It does **not** construct a degree-four graph quartic for a Keller map,
 identify affine Jelonek inertia with the abstract generators, impose the
@@ -246,6 +253,8 @@ The missing sidecar is therefore concrete:
 
 ```text
 one common amplitude space;
+one lawful ternary action and an embedding of the abstract three-arm corolla
+  into the four-point torsor, including the fixed-coordinate value;
 one lawful physical involution on it;
 a nonzero off-diagonal block on the retained equal-arm vector;
 an endpoint-current/owner typing for the charged output.                   (21)

@@ -2,8 +2,8 @@
 id: THM-2727
 title: "Fixed-rail target-deck Frobenius realization no-go"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT + INDEPENDENTLY
-  HOSTILE-AUDITED.  On the complete two-slice c2-safe bank, the maximal
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the complete
+  two-slice c2-safe bank, the maximal
   formal fixed-semantic coefficient extension of the THM-2716 target deck
   fixes rail, owner, support, and private edge, sends digit (0,1) to (12,0),
   shifts carry by +6, and applies z -> z^(-1) in F13[C7].  It does not pair
@@ -13,15 +13,16 @@ status: >
   clock-constant units on rail 104.  This is a realization no-go, not a row
   exclusion, endpoint current, semantic-owner transport, or LRC(14) result.
 source: root/bs13-fixed-rail-target-deck-2026-07-28
+audit: root/lrc-spectral-cospan-2026-07-28 (independent dependency, theorem-ID, exact-replay, hash, hostile-control, and scope audit: ACCEPT)
 depends_on:
   - THM-2041-frobenius-stability-of-exact-period-projectors
   - THM-2640-predecessor-carry-private-root-atlas-and-target-action-clutching-no-go
   - THM-2698-central-half-odometer-full-local-cycle-and-semantic-sidecar-boundary
   - THM-2706-relative-segal-macro-cycle-and-minimal-ghost-midpoint-completion
   - THM-2716-c4-arm-transporter-groupoid-and-relative-degree-holotopy-boundary
+  - THM-2717-minimal-c2-safe-ghost-transit-rebuild-and-deletion-cancellation-boundary
 related:
   - THM-2697-filtered-affine-handoff-germ-category-and-base-signature-holotopy-boundary
-  - THM-2717-minimal-c2-safe-ghost-transit-rebuild-and-deletion-cancellation-boundary
 script: 04-computation/lrc14_fixed_rail_target_deck_frobenius_no_go_thm2727.py
 output: 05-knowledge/results/lrc14_fixed_rail_target_deck_frobenius_no_go_thm2727.out
 script_sha256: a636819051de5b8b7045e1b5eb1ca694d1408b227e33dad17f17d236a70a91fc
@@ -33,10 +34,10 @@ hash_basis: LF-normalized bytes
 
 ## Status and scope
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT + INDEPENDENTLY
-HOSTILE-AUDITED.**  This theorem tests the cheapest possible physicalization
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem
+tests the cheapest possible physicalization
 of the proved THM-2716 arm bitorsor on the complete two-slice `c2`-safe bank
-which THM-2717 is separately packaging.
+proved by THM-2717 and independently rebuilt here.
 It defines the maximal formal fixed-semantic coefficient extension already
 licensed by the delayed `C4` orbit, the private-root law, and Frobenius on
 `F13[C7]`, while deliberately leaving rails and semantic supports fixed.  That
@@ -46,9 +47,8 @@ or row consequence follows.
 
 The companion is self-contained relative to the immutable THM-2698 exact
 carrier and pins that dependency's LF hash.  It does not import a THM-2717
-implementation detail.  Canonical promotion is intentionally deferred until
-THM-2717 itself is promoted and the theorem ID is rechecked against the live
-remote namespace.
+implementation detail; the independent rebuild is a hostile control on that
+proved carrier, not a replacement for the declared dependency.
 
 ## 1. The lawful domain of the target deck
 
@@ -317,4 +317,30 @@ The companion directly rebuilds the two safe digit slices on all 162 rails,
 checks private-root support and global-content divisibility, verifies the
 Frobenius determinant identity profile by profile, classifies exact/scalar/
 affine-clock matches, proves `(12)--(17)`, and scans all four same-clock cell
-banks in `(18)`.
+banks in `(18)`.  Normal and optimized executions byte-match the stored
+transcript.  The tracked LF-normalized hashes are
+
+```text
+script  a636819051de5b8b7045e1b5eb1ca694d1408b227e33dad17f17d236a70a91fc
+output  f4cc6e406d8361a856aafab52fdba5fad8578904007da5d80825c5ae53f00504.
+```
+
+The independent audit also rechecked every dependency status, found no theorem
+ID collision in repository history, replayed both execution modes, and
+confirmed that the fourteen coefficient matches and the empty physical
+signature intersections are different universes.
+
+## 7. Boundary ledger
+
+```text
+PROVED HERE:        the fixed-rail coefficient deck (9);
+                    the exact coefficient censuses (10)--(17);
+                    zero same-clock physical-signature intersections (18)--(19).
+
+NOT PROVED:         a rail/owner/support/address action;
+                    a physical transit functor or endpoint current;
+                    any consequence for THM-2742's joint C13 coefficient;
+                    a row exclusion or LRC(14).                           (22)
+```
+
+QED.
