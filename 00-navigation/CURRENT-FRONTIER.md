@@ -112,9 +112,11 @@ root has been transported to this clock.
 THM-2615/2618 show Radon restriction and a free Möbius orbit do not identify
 the whole head (MISTAKE-300).  THM-2620/2625 restore the endpoint determinant;
 THM-2634 keeps `(c_L,c_R)` but still needs a physical transverse section.
-THM-2640 makes each predecessor-carry root private; audited THM-2657 puts every
-slope-seven lift in a nonsplit `C_(13^6)` odometer with cocycle class `7`.
-Neither supplies the target action.  THM-2642 saturates eleven-sheet hulls;
+THM-2640 makes each predecessor-carry root private.  Its audited clock-two
+addendum kills the old `h=3` unit but finds a positive endpoint atom at
+`h=10,c=0,r=2`; equivariant/orbit-labelled gauges repair coefficient descent,
+not the missing target transition.  THM-2657 puts every slope-seven lift in a
+nonsplit `C_(13^6)` odometer with cocycle class `7`.  THM-2642 saturates eleven-sheet hulls;
 THM-2645 retains every charged colour.  Audited THM-2647 gives two-set endpoint
 deconvolution with signed norm `13/2`; repaired THM-2648 gives two rainbow
 charts.  Its matched wall has a fourteen-edge ternary `S3` frame, while
@@ -126,11 +128,15 @@ exist, but constant-step products hit zero, no positive edge is equivariant,
 and disjoint clock strata do not glue.  Audited THM-2658 gives the exact
 holotopy test after component refinement: a common positive simplex is the
 same as a complete triangle-balanced integer-gain section, and its component
-mass is the least selected pair overlap.  Candidate `D(x)={13x}` reverses the
-clock-arrow convention (safe/free ranges `45..100`/`82..144`), so orientation
-is substantive.  Audit component gains in every source-pair `D`-pullback
-fibre product before THM-2644/2637 or rainbow restriction; marginals and
-signed inversion do not supply the transition. Ledger `165`.
+mass is the least selected pair overlap.  THM-2680 types the canonical
+`D(x)={13x}` handoff: genuine two-event fibres exist, but only `10/252`
+generic clock triples survive versus `146` positive formal products, and a
+formal-positive all-source hostile is physically empty.  THM-2682 then closes
+iteration on this carrier: arrival-six return preserves the shallow clock, so
+every three-event `D`-chain repeats a forbidden clock label.  Downstream units,
+rainbows, endpoints, and carry cocycles cannot repair empty support.  Any new
+chronology must change the arrival stratum, handoff, boundary semantics, or
+nonzero-step grammar; the independent AP/phase/rank routes remain live. Ledger `165`.
 
 ### Independent routes that remain live
 
@@ -354,8 +360,13 @@ Classify profiles under support operations; study analytic continuation and auto
   is projective over `F2[C3]` and `F2[S3]`, so an equivariant unit or `Cl(R)[2]`
   copy is also sufficient for an abstract connected Kummer carrier and
   `H^2(Q,W)=0`.  The `d^2=abc` hostile realizes the class-group branch but has
-  nonconstant Jacobian.  Next test affine/Jelonek realization in an actual
-  Keller graph quartic; no degree, `A4/S4`, `G1`, `JC(2)`, or `DC(2)` closure.
+  nonconstant Jacobian.  THM-2681 computes the actual THM-1310 cubic's full
+  `S3` normalization on `g!=0` as `G_m x A^2`; its procyclic etale fundamental
+  group admits no connected `V4` torsor.  Thus that exact cubic field cannot
+  be an `S4` Keller resolvent under affine/polynomial target identification.
+  Shared `-L`, cusp, Jelonek, and odd-valuation shadows and the `A4` branch
+  survive.  Next test affine/Jelonek realization for other resolvents; no
+  degree, `A4/S4`, `G1`, `JC(2)`, or `DC(2)` closure.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.

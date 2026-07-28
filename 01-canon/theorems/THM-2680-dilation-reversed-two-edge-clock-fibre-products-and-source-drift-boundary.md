@@ -12,10 +12,11 @@ status: >
   exceptions.  A sharp all-source hostile has positive one-edge relations
   and formal product but zero D-fibre product.  At source pair (1,1), 146 of
   252 clock triples compose formally, while only 10 survive physically.  The
-  formal fixed-offset zero is therefore not a physical
-  chronology no-go, but a two-edge support fibre product is not an iterated
-  transition: source transport, three-edge coherence, units, endpoints, and
-  LRC(14) remain open.
+  formal fixed-offset zero is therefore not a physical chronology no-go.
+  THM-2682 subsequently proves that every three-event D-chain on this same
+  arrival-six carrier is empty by a central-phase clock trap.  Alternate
+  carriers/handoffs, source transport there, units, endpoints, and LRC(14)
+  remain open.
 source: root-2026-07-28-dilation-clock-fibre-product
 depends_on:
   - THM-2616-cross-time-target-future-diagonal-and-principal-action-no-go
@@ -25,6 +26,7 @@ related:
   - THM-2637-derangement-character-fixed-branch-holotopy-principle
   - THM-2644-odd-torsor-purity-return-gate-and-nonlinear-fixed-branch-decoder
   - THM-2657-odometer-carry-root-lift-nonsplit-extension-and-cech-cocycle
+  - THM-2682-central-arrival-clock-trap-and-three-event-dilation-nilpotence
 script: 04-computation/lrc14_dilation_reversed_clock_fibre_product_probe.py
 output: 05-knowledge/results/lrc14_dilation_reversed_clock_fibre_product_probe.out
 script_sha256: 56347893caa028a8d9f1b72c6e886dd38c617019f53e746e966bee65cb91a2ad
@@ -236,8 +238,9 @@ tuple records `(a,b,c,positive rail-labelled atom-pair occurrence count)`:
 (4,0,4,12), (4,6,0,18).                                  (21)
 ```
 
-Only shallow clocks `3,4` occur in `(21)`.  This concentration is a candidate
-for an iterated nilpotence mechanism, but no three-edge claim is made here.
+Only shallow clocks `3,4` occur in `(21)`.  This concentration is explained
+and promoted by THM-2682: the central arrival return preserves precisely
+those two half-clock labels and kills every three-event continuation.
 
 ## 5. What this changes, and what remains
 
@@ -255,11 +258,13 @@ The next typed object is
 E_0 intersect D^(-1)E_1 intersect D^(-2)E_2,              (22)
 ```
 
-with a lawful rule for the source labels and retained component data.  A
-cycle further requires coherent iteration, not independently chosen source
-pairs.  No Bockstein unit, endpoint owner, Perron-sheet selector, global
-positive transition, holonomy trivialization, scalar row exclusion, or
-LRC(14) conclusion follows.
+with a lawful rule for the source labels and retained component data.
+THM-2682 now proves this object empty uniformly on the same arrival-six
+carrier, before source/private labels or later restrictions.  Hence no cycle
+can be obtained by refining this `D`-chain.  One must change the arrival
+carrier, handoff, boundary semantics, or nonzero-step grammar.  No Bockstein
+unit, endpoint owner, Perron-sheet selector, global positive transition,
+holonomy trivialization, scalar row exclusion, or LRC(14) conclusion follows.
 
 ## 6. Reproduction
 

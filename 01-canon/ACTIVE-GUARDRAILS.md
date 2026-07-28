@@ -67,7 +67,14 @@
     THM-2187/2193 force rank seven; THM-2196/2199 force rank twelve but do not enumerate its finite box. THM-2203 closes scalar transport only in dyadic rank eight. THM-2250/2257 empty final depth-three `(3,4,5)`, leaving exactly `165` first-depth-one rows. THM-2349 now puts all `165` on one delayed marked-current/inverse-correlation frontier, but excludes no row; cross-axis noncancellation, all-unit visibility, and phase transport remain. None proves LRC(14).
 27d. **Refined graph activity is not coarse target landing.** MISTAKE-261: THM-2356 reconstructs each planar graph only up to its own phase, while the THM-2334 target is the cross-graph row sum. Its zero-only kernel has dimension `28,393`; vertical tensors form only the `169`-dimensional refined-zero subspace.
     THM-2363 is a derived coefficient detector with `D_graph >= E_coarse/169`, not a converse or a lawful physical probe. MISTAKE-260 separately forbids recovering an anchored nonzero-mode sum from an unordered inverse-root count.
-27e. **A matrix-labelled clock path is not chronology.** THM-2670's edge means one common-`x` event exists; Boolean products use unrelated witnesses in physically disjoint owner-clock strata. Constant-step zeros come from a zero factor, while varying Hamilton cycles survive. Construct a typed chart handoff or boundary fibre product before holonomy; direct intersection is empty and equivariant closure destroys the obstruction.
+27e. **Formal clock paths are not chronology; the typed arrival-six path is
+    now closed.** THM-2670's Boolean products forget physical witnesses.
+    THM-2680's `D(x)={13x}` pullback restores them: `146/252` generic triples
+    compose formally but only `10` physically. THM-2682 proves some two-event
+    product survives while every three-event product is empty because the
+    central arrival return preserves a forbidden repeated shallow clock. No
+    downstream restriction can revive that support; change arrival, handoff,
+    boundary semantics, or edge grammar.
 
 ## NC2 / GMC
 
@@ -161,6 +168,7 @@
     preserve Haar mass across opposite slopes, not a primitive recurrence.
 63. **Degree-four `D4` is excluded, but not by Smith.** THM-2633 gives `normal_closure_G(H)=G` and `1<=k_D<=d-1`, leaving only `A4,S4`; retain old `D4` ledgers as hostiles and never reuse MISTAKE-297's deck extension.
 64. **A resolvent discriminant is not its Kummer carrier.** THM-2655 forces the live quartic `V4` kernel into a quasi-etale torsor on the full Galois resolvent normalization.  Test the `C3/S3`-equivariant unit squareclasses and `Cl(R)[2]`; do not transfer grade-three Keller anatomy from a shared discriminant or from one non-Galois cubic root field.
+65. **The actual THM-1310 field is excluded only as an exact `S4` resolvent.** THM-2681 identifies its full normalization on `g!=0` with `G_m x A^2`, whose procyclic etale fundamental group has no `V4` quotient. This survives polynomial target automorphisms or an explicit base-ring identification, not arbitrary birational transport. Shared `-L`, cusp/Jelonek, odd-valuation shadows, unrelated `S3` fields, and the quartic `A4` branch remain open.
 
 ## Promotion checklist
 Audit types, quantifiers, symmetries, direction, quotient loss, hostiles,

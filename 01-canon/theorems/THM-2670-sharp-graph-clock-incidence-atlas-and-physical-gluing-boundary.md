@@ -30,6 +30,8 @@ related:
   - THM-2637-derangement-character-fixed-branch-holotopy-principle
   - THM-2640-predecessor-carry-private-root-atlas-and-target-action-clutching-no-go
   - THM-2657-odometer-carry-root-lift-nonsplit-extension-and-cech-cocycle
+  - THM-2680-dilation-reversed-two-edge-clock-fibre-products-and-source-drift-boundary
+  - THM-2682-central-arrival-clock-trap-and-three-event-dilation-nilpotence
 scripts:
   - 04-computation/lrc14_successor_private_sharp_graph_clock_collapse.py
   - 04-computation/lrc14_guard_cospan_successor_private_clock_collapse.py
@@ -325,6 +327,12 @@ Thus equivariant closure immediately saturates the desired obstruction.  It
 is a hostile quotient, not a repair of the missing transition.
 
 ## 7. The missing object is a typed chart handoff
+
+> **Subsequent resolution (THM-2680/2682).**  The candidate `D` below does
+> produce positive physical two-edge fibre products, but the arrival-six
+> return forces a repeated shallow clock and makes every three-event product
+> empty.  Thus the formal/physical distinction established here was
+> load-bearing; this particular handoff is now closed at the next iterate.
 
 An entry of `(6)` means
 

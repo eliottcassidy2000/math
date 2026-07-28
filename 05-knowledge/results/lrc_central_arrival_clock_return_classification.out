@@ -1,0 +1,16 @@
+Central-arrival q-clock return classification for p=2q-1
+convention=I_m=[m/p,(m+1)/p); C_l=[(2l-1)/(2q),(2l+1)/(2q)) mod1
+clock_label=floor(q*{x}+1/2) mod q; claims concern positive interval support
+general_exact_controls=q=2..64 same_arrival_cases=4095 clock_boundary_digit_checks=2079
+general_same_arrival_offdiagonal_iff=m even and m!=q-1
+central_diagonal_all_q=yes; unique_diagonal_boundary_digit_requires=q odd
+general_fixed_arrival_nearest=q odd: distance2; q even: distance1
+general_varying_arrival_nearest=q odd: (q-2,q-1),(q,q-1); q even: also (q-1,q-2),(q-1,q)
+p13_q7_same_arrival_atlas_units_1_over_2366=((0, (((0, 0), 13), ((0, 1), 1))), (1, (((1, 1), 14),)), (2, (((1, 1), 11), ((1, 2), 3))), (3, (((2, 2), 14),)), (4, (((2, 2), 9), ((2, 3), 5))), (5, (((3, 3), 14),)), (6, (((3, 3), 7), ((4, 4), 7))), (7, (((4, 4), 14),)), (8, (((5, 4), 5), ((5, 5), 9))), (9, (((5, 5), 14),)), (10, (((6, 5), 3), ((6, 6), 11))), (11, (((6, 6), 14),)), (12, (((0, 0), 13), ((0, 6), 1))))
+p13_q7_same_arrival_evasions=(0, 2, 4, 8, 10, 12) nearest=(4, 8) distance=2
+p13_q7_varying_arrival_nearest=((5, 6, Fraction(1, 338)), (7, 6, Fraction(1, 338))) distance=1
+p13_q7_reflection_raw_vs_typed=(((3, 4), 1), ((4, 3), 1)) -> (((3, 3), 1), ((4, 4), 1))
+inverse_central_branch=diagonal; typed_reflected_handoff=diagonal
+minimal_actual_LRC_evasions=change arrival carrier (fixed 4/8 or varying 5->6/7->6), allow a repeat clock, or prove a genuinely different typed transporter
+verdict=PASS: arrival six is the odd-q fixed-point-aligned boundary digit; forward D, the central inverse branch, and typed rho_o_D do not bypass its diagonal trap
+scope=phase support only; off-diagonal intervals do not supply a positive rail, unit, endpoint, scalar exclusion, or LRC(14)

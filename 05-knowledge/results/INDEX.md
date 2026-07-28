@@ -1,5 +1,44 @@
 # Script Results Index
 
+- `lrc_central_arrival_clock_return_classification.py` -> matching `.out`
+  [THM-2682 PROVED SYMBOLIC EXTENSION + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  For every `q>=2`, `p=2q-1`, a same-arrival nearest-clock
+  return has off-diagonal positive support exactly when the arrival digit is
+  even and noncentral.  The central return is diagonal for both parities; the
+  stronger unique boundary-straddling description requires odd `q`.  At
+  `p=13,q=7`, fixed-arrival evasions are `0,2,4,8,10,12`; the nearest are
+  `4,8`.  Hashes begin `1d794246` / `d762f0cc`.
+- `lrc14_alternate_arrival_rail_phase_filter.py` -> matching `.out`
+  [THM-2682 VERIFIED-EXACT SUPPORT FILTER + INDEPENDENTLY HOSTILE-AUDITED].
+  All `2,184` inherited arrival/deep/source/clock cells show rail arrival
+  support only at `0,6,12`; intersecting arrival labels with the phase-evasion
+  labels leaves endpoint candidates `0,12`.  Their projected static-label
+  banks have sizes `81,81`, overlap `78`, union `84`, and an a.e. reflected
+  identification of `537` constituent intervals.  Rail and phase positivity
+  remain separate marginals.  Hashes begin `c910fa1b` / `b16575f6`.
+- `lrc14_dilation_three_edge_nilpotence_probe.py` -> matching `.out`
+  [THM-2682 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  A positive two-event `D(x)={13x}` atom product exists, but every three-event
+  product on the THM-2616 arrival-six carrier is empty.  The exact return
+  cylinder `[84/169,85/169)` preserves the lower/upper half and forces equal
+  consecutive shallow clocks against the nonzero-edge rule.  This eliminates
+  `2,612,736` clock/source and `18,740,124` rail-labelled candidates before
+  later restrictions.  Hashes begin `59475b5b` / `f7dd4dc9`.
+- `lrc14_dilation_reversed_clock_fibre_product_probe.py` -> matching `.out`
+  [THM-2680 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Dilation identifies current owner with following shallow clock and
+  `j(Dx)=h(x)`. Exact two-event fibres are positive, but at source pair
+  `(1,1)` only `10/252` clock triples survive physically versus `146` formal
+  products; `(0,1,0)` is formal-positive yet D-empty for all 144 source pairs.
+  Hashes begin `56347893` / `1e7fb8ba`.
+- `jacobian_thm1310_resolvent_galois_open_v4_no_go.py` -> matching `.out`
+  [THM-2681 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  On the THM-1310 target chart `g!=0`, the actual cubic root field has full
+  `S3` normalization `C[g^+-1,r,s]`; the displayed root has transposition
+  stabilizer and trivial core.  The chart is `G_m x A^2`, with Kummer rank
+  one and no connected etale `V4` torsor, excluding it as an exact
+  dimension-three quartic `S4` Keller resolvent.  Hashes begin `b1a4ad05` /
+  `d16de1da`.
 - `lrc14_dilation_canonical_unit_atlas_no_go_20260728.py` -> matching `.out`
   [VERIFIED-EXACT SCOUT; THM-2680 INPUT; NOT A PHYSICAL FIBRE PRODUCT].
   Under only the numerical dilation handoff `j'=h`, the state-independent
