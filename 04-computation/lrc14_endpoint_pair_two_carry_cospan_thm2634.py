@@ -29,6 +29,7 @@ def require(condition, message):
 
 P = 53
 ROOT = 16
+require(all(P % divisor for divisor in range(2, 8)), "modulus is not prime")
 INV13 = pow(13, P - 2, P)
 INV169 = INV13 * INV13 % P
 require(pow(ROOT, 13, P) == 1 and ROOT != 1, "root has wrong order")
@@ -138,14 +139,19 @@ def main():
     print("THM-2634 exact endpoint-pair two-carry cospan certificate")
     print(f"field=F_{P}; primitive13root={ROOT}; endpoint_plane=F13^2")
 
-    # Right-continuous endpoint digit: only the quotient j=floor(n/T_DEN)
-    # matters.  A representative shift x->x+s/13 adds 13s to j.
+    # Right-continuous endpoint digit on an exact toy N=169*T_DEN grid.  A
+    # representative shift x->x+s/13 adds 13s*T_DEN to the numerator.
     carry_checks = 0
+    toy_denominator = 17
+    toy_order = 169 * toy_denominator
     for j in range(169):
-        for fractional_marker in (0, 1, 2):
+        for remainder in (0, 1, toy_denominator - 1):
+            numerator = j * toy_denominator + remainder
             for s in range(13):
-                shifted_j = (j + 13 * s) % 169
-                require(shifted_j % 13 == j % 13, "endpoint carry gauge failure")
+                shifted = (numerator + 13 * s * toy_denominator) % toy_order
+                original_carry = (numerator // toy_denominator) % 13
+                shifted_carry = (shifted // toy_denominator) % 13
+                require(shifted_carry == original_carry, "endpoint carry gauge failure")
                 carry_checks += 1
     print(f"right-continuous carry quotient-gauge checks={carry_checks}: PASS")
 

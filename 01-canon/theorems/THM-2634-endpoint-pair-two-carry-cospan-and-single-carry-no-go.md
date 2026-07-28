@@ -28,7 +28,7 @@ related:
   - THM-2633-derangement-character-obstruction-and-d4-keller-exclusion
 script: 04-computation/lrc14_endpoint_pair_two_carry_cospan_thm2634.py
 output: 05-knowledge/results/lrc14_endpoint_pair_two_carry_cospan_thm2634.out
-script_sha256: 657d968fba6e4f5beba9be0a285cf57cfdd8a6931876a358061d5a7d95867fd0
+script_sha256: 282dded26f7e1f8084f095043eb41df16bf06f87e94ef8a288b3f3af5401ed39
 output_sha256: 5bf8bf63cd3b7487216138b0d9076d84ace77be4b30eee2f90a9455c2e8f1287
 hash_basis: LF-normalized bytes
 ---
@@ -205,12 +205,14 @@ The THM-2380 pair-twist mechanism states exactly what would realize it.  If
 one can place the two endpoint arrays in one common physical gauge and form
 
 ```text
-E_d(t)=1/13 sum_c |L_(c+d)+zeta_13^t conj(R_c)|^2.           (17)
+E_(q,Delta,d)(t)
+ =1/13 sum_(r:det(q,r)=Delta) sum_c
+   |L_(c+d)(r+q)+zeta_13^t conj(R_c(r))|^2.                 (17)
 ```
 
 Here THM-2625's `R_c` is already the conjugated endpoint factor, so the
 physical second amplitude in (17) is `conj(R_c)`.  After subtracting the
-singleton norms, the `t=-1` Fourier mode recovers `C_d`.  One nontrivial
+singleton norms, the `t=-1` Fourier mode recovers `C_d(q,Delta)`.  One nontrivial
 quadrature plus the norms suffices.  Separate
 intensities do not.  THM-2420 gives the parallel same-shell statement: a
 residue-zero reference can preserve the correlation, but such a reference
