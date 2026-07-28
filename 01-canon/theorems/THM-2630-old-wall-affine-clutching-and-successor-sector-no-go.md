@@ -2,7 +2,7 @@
 id: THM-2630
 title: "Old-wall affine clutching and successor-sector no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On the old THM-2587 speed-two wall, if t is the absolute deep digit,
   tau=t+epsilon is a chosen incident translated-gate edge, and
   theta=t-2v, then the THM-2586/2600 physical root and THM-2616 framed
@@ -469,4 +469,10 @@ future clock, exhaust all `156` affine bijections, and check (29c)--(29e).
 A separate rational construction verifies (22)--(26).  Every logical
 decision is an explicit optimized-mode guard.
 
-QED (candidate; independent hostile audit pending).
+Two independent hostile audits rederived the old-wall affine law and its
+typing boundary, replayed the expanded future-clock and all-`156`-affine-map
+censuses, and checked the candidate-partition evidence scope.  Normal and
+optimized runs byte-match the stored transcript and the declared
+LF-normalized hashes.
+
+QED.
