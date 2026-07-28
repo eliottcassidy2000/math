@@ -239,10 +239,12 @@ def build_edge_index(events, sector):
     return index
 
 
-def formal_chains(index, a, b, c, source0, source1):
+def formal_chains(index0, a, b, c, source0, source1, index1=None):
     """Return formal (j,h,k) chains for E_(b,a), E_(c,b)."""
-    first = index.get((a, b, source0), {})
-    raw_second = index.get((b, c, source1), {})
+    if index1 is None:
+        index1 = index0
+    first = index0.get((a, b, source0), {})
+    raw_second = index1.get((b, c, source1), {})
     second = defaultdict(list)
     for output, entries in raw_second.items():
         for predecessor, key in entries:
@@ -255,25 +257,48 @@ def formal_chains(index, a, b, c, source0, source1):
     )
 
 
-def delayed_pair_prefix(prefixes, sector, a, h, b, k):
-    q0 = prefix_intervals(prefixes[sector][a][h])
-    q1 = prefix_intervals(prefixes[sector][b][k])
+def delayed_pair_prefix(prefixes, sector0, a, h, b, k, sector1=None):
+    if sector1 is None:
+        sector1 = sector0
+    q0 = prefix_intervals(prefixes[sector0][a][h])
+    q1 = prefix_intervals(prefixes[sector1][b][k])
     joint = intersect_sorted(lift_first(q0), pullback_D(q1))
     return make_prefix(joint)
 
 
-def physical_chain_value(prefixes, events, sector, chain):
+def physical_chain_value(prefixes, events, sector0, chain, sector1=None,
+                         delayed_cache=None, lift_cache=None,
+                         pullback_cache=None):
+    if sector1 is None:
+        sector1 = sector0
+    if delayed_cache is None:
+        delayed_cache = {}
+    if lift_cache is None:
+        lift_cache = {}
+    if pullback_cache is None:
+        pullback_cache = {}
     j, h, k, key0, key1 = chain
     a, b, _, _, _ = key0
     b1, c, _, _, _ = key1
     require(b1 == b, "formal middle clock mismatch")
+    lift_key = (sector0, key0)
+    pullback_key = (sector1, key1)
+    if lift_key not in lift_cache:
+        lift_cache[lift_key] = lift_first(events[sector0][key0])
+    if pullback_key not in pullback_cache:
+        pullback_cache[pullback_key] = pullback_D(events[sector1][key1])
     base = intersect_sorted(
-        lift_first(events[sector][key0]),
-        pullback_D(events[sector][key1]),
+        lift_cache[lift_key],
+        pullback_cache[pullback_key],
     )
     if not base:
         return 0, 0, 0
-    delayed = delayed_pair_prefix(prefixes, sector, a, h, b, k)
+    delayed_key = (sector0, a, h, sector1, b, k)
+    if delayed_key not in delayed_cache:
+        delayed_cache[delayed_key] = delayed_pair_prefix(
+            prefixes, sector0, a, h, b, k, sector1
+        )
+    delayed = delayed_cache[delayed_key]
     if delayed[2][-1] == 0:
         return 0, len(base), 0
     value = delayed_overlap_numerator(base, delayed)
@@ -302,14 +327,18 @@ def intersect_weighted_D(first, second):
     return tuple(out)
 
 
-def atom_pair_witnesses(prefixes, occurrences, sector, chain):
+def atom_pair_witnesses(prefixes, occurrences, sector0, chain, sector1=None):
     """Return every positive labelled atom pair beneath one union chain."""
+    if sector1 is None:
+        sector1 = sector0
     _, h, k, key0, key1 = chain
     a, b, _, _, _ = key0
     witnesses = []
-    delayed = delayed_pair_prefix(prefixes, sector, a, h, b, k)
-    for label0, _, weighted0, _ in occurrences[sector][key0]:
-        for label1, _, weighted1, _ in occurrences[sector][key1]:
+    delayed = delayed_pair_prefix(
+        prefixes, sector0, a, h, b, k, sector1
+    )
+    for label0, _, weighted0, _ in occurrences[sector0][key0]:
+        for label1, _, weighted1, _ in occurrences[sector1][key1]:
             base = intersect_weighted_D(weighted0, weighted1)
             if not base:
                 continue
@@ -397,6 +426,51 @@ def exhaustive_sector_census(prefixes, events, occurrences, sector):
     return totals, tuple(sorted(state_support)), first_witness
 
 
+def fixed_cell_cross_census(prefixes, events, occurrences,
+                            sector0, sector1, cell=(3, 1, 0)):
+    """Exhaust both source labels in one ordered clock triple."""
+    a, b, c = cell
+    index0 = build_edge_index(events, sector0)
+    index1 = build_edge_index(events, sector1)
+    delayed_cache = {}
+    lift_cache = {}
+    pullback_cache = {}
+    by_source = {}
+    support = set()
+    witness = None
+    for source0 in range(1, P):
+        for source1 in range(1, P):
+            chains = formal_chains(
+                index0, a, b, c, source0, source1, index1
+            )
+            physical = []
+            for chain in chains:
+                value, _, _ = physical_chain_value(
+                    prefixes, events, sector0, chain, sector1,
+                    delayed_cache, lift_cache, pullback_cache,
+                )
+                if value:
+                    physical.append(chain)
+                    support.add(chain[:3])
+                    if witness is None:
+                        atom_witnesses = atom_pair_witnesses(
+                            prefixes, occurrences,
+                            sector0, chain, sector1,
+                        )
+                        require(atom_witnesses,
+                                "cross-sector union has no atom witness")
+                        witness = (
+                            (source0, source1), chain[:3],
+                            atom_witnesses[0],
+                        )
+            by_source[source0, source1] = (
+                len(chains), len(physical)
+            )
+    return Counter(by_source.values()), tuple(
+        pair for pair, counts in sorted(by_source.items()) if counts[1] == 0
+    ), tuple(sorted(support)), witness
+
+
 def main():
     prefixes, events, labels, occurrences, positive_occurrences = (
         build_physical_events()
@@ -471,7 +545,22 @@ def main():
     print(f"danger_exhaustive_totals={tuple(sorted(danger_totals.items()))}")
     print(f"danger_exhaustive_state_support={danger_states}")
     print(f"danger_exhaustive_first_witness={danger_witness}")
-    print("verdict=SCOUT: union-level D-pullback census only; atom-pair refinement pending")
+    for sector0, sector1 in (
+        ("safe", "safe"),
+        ("safe", "danger"),
+        ("danger", "safe"),
+        ("danger", "danger"),
+    ):
+        histogram, zero_sources, support, witness = fixed_cell_cross_census(
+            prefixes, events, occurrences, sector0, sector1
+        )
+        print(
+            f"fixed_cell_310_legs={sector0}->{sector1} "
+            f"source_hist={tuple(sorted(histogram.items()))} "
+            f"zero_source_pairs={zero_sources} "
+            f"state_support_size={len(support)} witness={witness}"
+        )
+    print("verdict=SCOUT: positive atomwise D-pullback exists; cospan and iteration remain open")
 
 
 if __name__ == "__main__":
