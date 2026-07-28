@@ -1,5 +1,5 @@
 ---
-id: THM-2754
+id: THM-2755
 title: "All-even zero-flux componentwise global-regularity closure"
 status: >
   RESERVED / UNPROVED EMPTY STUB.  Reserved for the proposed componentwise
@@ -13,7 +13,7 @@ related:
   - THM-2752-all-even-zero-first-flux-response-regularization-closure
 ---
 
-# THM-2754 -- all-even zero-flux componentwise global regularity
+# THM-2755 -- all-even zero-flux componentwise global regularity
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
