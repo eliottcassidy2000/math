@@ -2,22 +2,30 @@
 id: THM-2780
 title: "Marked D3 weight-colouring torsor descent and affine inertia gate"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  The four marked determinant-weight colourings of the six D3 root
-  lines are S4-equivariantly the four quartic root states themselves: the
-  weight-three triangle uniquely recovers the omitted marked state.
-  Their S4/A4 stabilizers are S3/C3, and V4 acts simply transitively.  Hence
-  one colouring over the cubic matching field contains the full quartic
-  Kummer extension rather than an auxiliary invariant.  At a prime divisor,
-  a colouring is inertia-fixed iff the even Kummer row is 000; a nonzero row
-  pairs the four colourings and fixes one weight-two opposite root-line pair.
-  The determinant-two frame has that row as its unique mod-two null vector,
-  whereas every determinant-three A2 frame is invertible mod two.
-  Orbit symmetrization retains only opposition and loses this placement.
-  This repackages, but does not strengthen, the THM-2685 parity gate; no
-  A4/S4, JC(2), or DC(2) exclusion follows.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The four absolute
+  determinant-weight colourings of the six D3 root lines are W(D3)-
+  equivariantly the four quartic Kummer states: the weight-three triangle
+  recovers the mark and V4 acts simply transitively.  A retained chamber
+  gives a chiral tournament, but its weighted switching class is self-
+  converse after chamber gauge, so directed sign does not descend.  For a
+  given Kummer plane, all normalized divisor rows vanish iff the colouring
+  cover is quasi-etale.  A nonzero row is the unique mod-two null of its
+  determinant-two frame; determinant-three frames are mod-two units.  Even
+  the complete zero-row collection, common root sum, chamber, and finite
+  frame do not reconstruct the torsor: two distinct simultaneous-S3 unit
+  Kummer planes on one four-torus are an exact unramified twin.  The missing
+  coordinate is the embedded equivariant Kummer H1-class, not another finite
+  mark.  No A4/S4, JC(2), or DC(2) exclusion follows.
 source: jc2-v4-affine-gate/marked-weight-descent-2026-07-28
+audit: >
+  d3-torsor-descent/THM-2780-audit-2026-07-28 independently reconstructed
+  all four colourings, Weyl covariance, stabilizers, inertia/Smith gates,
+  retained-chamber chirality, the weighted self-converse witness, inverse
+  quartic descent, and the distinct unramified S3-standard unit planes;
+  replayed both companions under normal and optimized Python against stored
+  output with zero assert nodes: ACCEPT.
 depends_on:
+  - THM-2655-quartic-keller-resolvent-v4-quasietale-torsor-and-kummer-class-group-gate
   - THM-2685-equivariant-kummer-boundary-parity-completion-and-divisor-residue-gate
   - THM-2766-quadratic-cubic-pullback-even-sign-kummer-plane-and-weyl-d3-s4
   - THM-2769-full-s4-pair-sum-affine-divisor-parity-hostile
@@ -30,13 +38,16 @@ script: 04-computation/marked_d3_weight_torsor_descent_thm2780.py
 output: 05-knowledge/results/marked_d3_weight_torsor_descent_thm2780.out
 script_sha256: 22cbd2e0097e9a48f5695deae2bbd881142cedafcd5048d8001d11bb1be599f1
 output_sha256: 2ab9c0ceca0993263f62c3637b58d13f0101af7c1c3d810b3ff8a1565642fe76
+secondary_script: 04-computation/marked_d3_weight_torsor_descent_hostile_thm2780.py
+secondary_output: 05-knowledge/results/marked_d3_weight_torsor_descent_hostile_thm2780.out
+secondary_script_sha256: 20104ad6ddc7bfa83c743ef6d41977965c6b41bd62aeaaddc3b4fce0a24b8dbe
+secondary_output_sha256: d11e6703f207d8c7b93fbcaf416b5bdb326fcb0c1573dac3b539c3be9f62a2ec
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2780 -- marked `D3` weight colourings and affine inertia
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2777 obtains a genuine weighted tournament only after marking one of the
 four half-Hadamard states.  The mark is not a harmless gauge.  Its
@@ -120,6 +131,37 @@ chamber and ambient volume orientation.  But it contains `w_h` as its arc
 magnitude.  Hence descent of that weighted tournament already implies
 descent of `h`; the chamber and orientation cannot repair a missing mark.
 
+### 1.1 The chamber-free weighted switching class loses sign
+
+The directed information has a sharper failure than orbit symmetrization.
+Fix `h=(1,1,1)`, the chamber `1<2<3`, and the root names
+
+```text
+a_ij=e_i-e_j,                 b_ij=e_i+e_j.            (9a)
+```
+
+With these choices retained, the determinant tournament is chiral: an
+exhaustion of all `6!` vertex relabellings finds no isomorphism to its
+converse.  Now switch the single vertex `a_12`, meaning reverse every arc
+incident to it, and then relabel
+
+```text
+a_23 <-> a_13,                b_13 <-> b_23.           (9b)
+```
+
+The result is the global converse, and `(9b)` preserves all absolute arc
+weights.  Therefore
+
+```text
+retained chamber:       chiral weighted tournament;
+chamber quotient:       self-converse weighted switching class.        (9c)
+```
+
+This refines THM-2777's labelled boundary: its converse is not in the same
+labelled switching orbit, but it becomes switching-isomorphic after the
+allowed chamber relabelling.  Thus directed sign is not an additional
+chamber-free torsor coordinate; only the absolute colouring `(7)` survives.
+
 ## 2. Exact field-of-definition consequence
 
 Let `L/K` be a separable quartic splitting field with transitive group
@@ -152,6 +194,39 @@ Stab_V4(w_h)=1,                  E_0(w_h)=L.             (12)
 So over the cubic matching field an individual colouring contains the
 entire rank-two Kummer extension.  It is not a new invariant living on
 `E_0`.
+
+An explicit inverse makes the descent map literal.  Suppose in a field `E`
+
+```text
+s_i^2=tau_i,            s_1s_2s_3=c,
+dim_F2 <[tau_1],[tau_2],[tau_3]>=2.                   (12a)
+```
+
+For the four even sign states `delta`, and a common root sum `e_1`, put
+
+```text
+r_delta=e_1/4+(delta_1s_1+delta_2s_2+delta_3s_3)/2.   (12b)
+```
+
+Their centered polynomial is
+
+```text
+prod_delta (Z-(delta.s)/2)
+ =Z^4-(sum tau_i)Z^2/2-cZ
+  +((sum tau_i)^2-4sum_(i<j)tau_itau_j)/16.           (12c)
+```
+
+Conversely, complementary pair sums recover each `s_i`.  Even sign change
+sends `r_delta` to `r_(epsilon delta)`, so
+
+```text
+w_delta |-> r_delta                                    (12d)
+```
+
+is a `V4`-equivariant isomorphism from the twist of the four-colouring set
+to the quartic root scheme.  Rank two prevents collisions.  The abstract
+label `delta` is base-independent; the evaluated quantity `delta.s` already
+uses the actual Kummer square roots upstairs and is not a new finite sidecar.
 
 This is a useful typing test.  A proposed *canonical* marked determinant
 colouring on the matching normalization has already supplied a section of
@@ -300,7 +375,58 @@ fixing the binary pair `{a_12,b_12}`.  Thus the complete marked-weight
 construction coexists with failure of quasi-etaleness; only a separately
 supplied inertia-free extension makes it an affine positive tool.
 
-## 6. Connection contract and exact scope
+## 6. Complete divisor rows do not reconstruct the unramified torsor
+
+Criterion `(15)` tests ramification of a **given** Kummer plane; it does not
+identify that plane.  This loss persists with full `S3` covariance.  Work on
+the four-torus
+
+```text
+R=C[x_1^+-,x_2^+-,x_3^+-,y_1^+-,y_2^+-,y_3^+-]/
+  (x_1x_2x_3-1, y_1y_2y_3-1),                         (22a)
+```
+
+where `+-` means that each variable is inverted, and let `S3` permute the
+three indices simultaneously.  In `R*/R*2`, define
+
+```text
+W_x=<[x_1],[x_2],[x_3]>,       W_y=<[y_1],[y_2],[y_3]>. (22b)
+```
+
+Both are rank-two standard `F2[S3]` planes because each triple has product
+one.  Yet
+
+```text
+R*/R*2=<[x_1],[x_2],[y_1],[y_2]>=F2^4,
+W_x intersect W_y=0,                                  (22c)
+```
+
+so they are distinct even after changing the `V4` basis.  All six defining
+classes are units.  Consequently every height-one divisor row for both
+planes is zero, while the connected `V4` covers are nonisomorphic over the
+identity of `R`.  Taking `e_1=0` and `c=1` in `(12c)` gives two explicit
+`S3`-invariant quartics with the same common sum, abstract marked frame,
+chamber choices, and complete residue collection, but different Kummer
+torsors.
+
+Thus
+
+```text
+(marked D3 fibre, chamber, e_1, every divisor row)     (22d)
+```
+
+does not determine the cover.  The missing coordinate is the embedded
+equivariant class
+
+```text
+W -> H^1_et(R_reg,mu_2),                               (22e)
+```
+
+equivalently the actual squareclass plane and its unit or class-group
+realization.  Divisor rows record only the residues of `(22e)` and have a
+large unramified kernel.
+
+## 7. Connection contract and exact scope
 
 The proved candidate connection is
 
@@ -311,9 +437,10 @@ map:          recover the point omitted by the weight-three triangle;
 preserved:    S4/A4 action, stabilizer, and codimension-one inertia;
 destroyed
  by orbiting: the marked point and inertia placement;
-sidecar:      a genuine quartic section, or equivalently the normalized
-              THM-2685 divisor rows plus global torsor class;
-hostile:      THM-2769's full-S4 row 110.                (23)
+sidecar:      the embedded equivariant Kummer H1-class, together with its
+              normalized divisor rows and unit/class-group realization;
+hostiles:     THM-2769's full-S4 row 110 (ramified), and the distinct
+              unit planes W_x,W_y in (22b) (unramified). (23)
 ```
 
 Run
@@ -321,6 +448,8 @@ Run
 ```bash
 python 04-computation/marked_d3_weight_torsor_descent_thm2780.py
 python -O 04-computation/marked_d3_weight_torsor_descent_thm2780.py
+python3 04-computation/marked_d3_weight_torsor_descent_hostile_thm2780.py
+python3 -O 04-computation/marked_d3_weight_torsor_descent_hostile_thm2780.py
 ```
 
 The integer/set-only companion uses explicit exceptions and no truth-bearing
@@ -328,18 +457,24 @@ assertions.  It checks all `24` sheet permutations, all four marks, all
 fifteen root-line pairs, both `S4/A4` stabilizers, simple transitivity of
 `V4`, every even sign word on the half-Hadamard states and six root lines,
 all sixty marked determinant frames and their complete mod-two kernels, and
-the symmetrized profile `(21)`.  Normal and optimized runs byte-match the
-stored transcript.
+the complete symmetrized profile `(21)`.  The independent companion
+additionally exhausts retained-chamber chirality, checks the explicit
+weighted self-converse witness, reconstructs `(12c)`, and verifies the twin
+unit planes `(22b)--(22c)`.  Both normal/optimized pairs byte-match their
+stored transcripts, with zero Python `assert` nodes.
 
 ```text
-PROVED HERE (candidate):  the four marked weightings are the V4 torsor;
+PROVED HERE:              the four marked weightings are the V4 torsor;
                           exact S3/C3 stabilizers and field degrees;
+                          explicit inverse quartic descent map;
+                          chamber-free weighted self-converse boundary;
                           local fixed-colouring iff zero parity row;
                           fixed binary root-line pair for each nonzero row;
                           determinant-two null-word alignment;
                           determinant-three mod-two-unit stopping rule;
                           complete orbit-symmetrized no-go;
-                          THM-2769 sharp affine hostile.
+                          THM-2769 ramified hostile;
+                          unramified equivariant unit-plane twins.
 
 NOT PROVED:               a global marked section from quasi-etaleness;
                           vanishing of the Kummer boundary rows;
@@ -348,4 +483,4 @@ NOT PROVED:               a global marked section from quasi-etaleness;
                           JC(2), DC(2), Graceful Tree, or LRC(14).       (24)
 ```
 
-QED (candidate).
+QED.
