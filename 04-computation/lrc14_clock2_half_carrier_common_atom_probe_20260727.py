@@ -421,6 +421,42 @@ def main():
             common = intersect_weighted(lifted, packet)
             value = delayed_numerator(common, digit_prefixes[ell5][alt_q])
             alternate_closure.append((bool(common), value))
+
+    expected_half_atlas = {
+        (0, 1): (49, 0, 0),
+        (0, 2): (0, 0, 0), (0, 3): (0, 0, 0),
+        (0, 4): (0, 0, 0), (0, 5): (0, 0, 0),
+        (0, 6): (0, 0, 0), (0, 7): (0, 0, 0),
+        (0, 8): (0, 0, 0), (0, 9): (0, 0, 0),
+        (0, 10): (0, 0, 0),
+        (0, 11): (49, 49, 8880815857730136806889257400),
+        (0, 12): (49, 0, 0),
+        (1, 1): (49, 0, 0), (1, 2): (49, 0, 0),
+        (1, 3): (0, 0, 0), (1, 4): (0, 0, 0),
+        (1, 5): (0, 0, 0), (1, 6): (0, 0, 0),
+        (1, 7): (0, 0, 0), (1, 8): (0, 0, 0),
+        (1, 9): (0, 0, 0), (1, 10): (0, 0, 0),
+        (1, 11): (0, 0, 0),
+        (1, 12): (49, 49, 8880815857730136806889257400),
+    }
+    require(len(packet) == 188056, "clock-two packet interval census changed")
+    require((rail_stage_positive["E"], rail_stage_positive["Q"],
+             rail_stage_positive["packet"]) == (49, 72, 49),
+            "rail-stage clock factor census changed")
+    require((present_packet_positive, e_only_half_positive,
+             q_only_half_positive, prefuture_positive_entries)
+            == (49, 49, 0, 0),
+            "first empty common-intersection stage changed")
+    require((e_only_h3_positive, q_only_h3_positive,
+             e_only_h3_total, q_only_h3_total)
+            == (49, 0, 38396806827878145878778587040, 0),
+            "factor-relaxed h3 atlas changed")
+    require(len(empty_cells) == 84 and len(zero_entries) == 588,
+            "h3 empty-cell census changed")
+    require(half_atlas == expected_half_atlas,
+            "q=3 half-tooth clock-two atlas changed")
+    require(not any(before or value for before, value in alternate_closure),
+            "alternate h=7 chronological closure acquired a common atom")
     print("THM-2625 clock-two / THM-2635 h=3 common-x probe")
     print(f"T={T} G=169*T={G} delayed_clock={R6}")
     print(f"clock_two_packet_intervals={len(packet)}")
@@ -449,8 +485,8 @@ def main():
         f"positive_entries={positive_entries}/588 "
         f"positive_cell_count_hist={tuple(sorted(positive_cell_counts.items()))}"
     )
-    print(f"empty_cells={empty_cells}")
-    print(f"zero_entry_count={len(zero_entries)} zero_entries={zero_entries}")
+    print(f"empty_cell_count={len(empty_cells)} minimal_empty_cell={empty_cells[0]}")
+    print(f"zero_entry_count={len(zero_entries)} minimal_zero_entry={zero_entries[0]}")
     print(
         f"h3_slice_common_content={common_content} "
         f"baseline_h3_content={baseline_content} "

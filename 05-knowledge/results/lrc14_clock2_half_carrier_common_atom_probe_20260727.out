@@ -1,0 +1,21 @@
+THM-2625 clock-two / THM-2635 h=3 common-x probe
+T=297836897838480 G=169*T=50334435734703120 delayed_clock=4826809
+clock_two_packet_intervals=188056
+selected_rows=84 common_piece_count=0
+rail_stage_positive(E,Q,EmeetQ)/84=(49,72,49)
+present_packet_positive=49/588 half_stage_positive(E,Q,EmeetQ)/588=(49,0,0)
+h3_relaxed_positive(E_only,Q_only)/588=(49,0) h3_relaxed_totals=(38396806827878145878778587040,0)
+prefuture_positive_entries=0/588 prefuture_weighted_length=0
+positive_entries=0/588 positive_cell_count_hist=((0, 84),)
+empty_cell_count=84 minimal_empty_cell=(1, 0)
+zero_entry_count=588 minimal_zero_entry=((1, 0), 0)
+h3_slice_common_content=0 baseline_h3_content=5208840 slice_unit_cells=0/84
+common_total_numerator=0
+off_diagonal_digit_totals=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) global_digit_support=()
+cell_digit_support_hist=(((), 84),) common_future_digits=()
+q3_half_atlas(epsilon,probe:before,after,total)=(((0, 1), (49, 0, 0)), ((0, 2), (0, 0, 0)), ((0, 3), (0, 0, 0)), ((0, 4), (0, 0, 0)), ((0, 5), (0, 0, 0)), ((0, 6), (0, 0, 0)), ((0, 7), (0, 0, 0)), ((0, 8), (0, 0, 0)), ((0, 9), (0, 0, 0)), ((0, 10), (0, 0, 0)), ((0, 11), (49, 49, 8880815857730136806889257400)), ((0, 12), (49, 0, 0)), ((1, 1), (49, 0, 0)), ((1, 2), (49, 0, 0)), ((1, 3), (0, 0, 0)), ((1, 4), (0, 0, 0)), ((1, 5), (0, 0, 0)), ((1, 6), (0, 0, 0)), ((1, 7), (0, 0, 0)), ((1, 8), (0, 0, 0)), ((1, 9), (0, 0, 0)), ((1, 10), (0, 0, 0)), ((1, 11), (0, 0, 0)), ((1, 12), (49, 49, 8880815857730136806889257400)))
+neighbor_tooth_equal_traces(piece,value)/588=(539,588)
+alternate_h7_closure(before,after,total)=(0,0,0)
+typed verdict: the fixed zero-address clock-two / h=3 diagonal is empty
+non-verdict: endpoint Fourier survival and quotient equivariance remain open
+all exact checks passed

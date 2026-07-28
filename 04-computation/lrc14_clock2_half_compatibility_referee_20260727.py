@@ -408,6 +408,22 @@ H10_UNIT_DETERMINANT = cross.old.sat.multiplication_determinant_7(
 )
 require(H10_UNIT_DETERMINANT == 1, "selected h=10 source unit changed")
 
+# Type the reroute in THM-2640's predecessor-carry notation.  Here ``b=1``
+# is THM-2635's coarse ``floor(2u)`` quotient.  It is not THM-2640's fine
+# half digit ``kappa=floor(26y)-2h``: both fine-kappa values give b=1 at
+# h=10, and this common-atom computation does not select between them.
+# Epsilon is the half label, and the inverse of two is seven in F_13.
+H10_H, H10_B, H10_EPSILON, H10_ROOT = (10, 1, 1, 2)
+H10_CARRY = 7 * (H10_ROOT - H10_B - H10_EPSILON) % P
+H10_OUTGOING = (-H10_ROOT) % P
+H10_ORIGIN_OFFSET = (H10_OUTGOING - H10_CARRY) % P
+require(tuple((2 * H10_H + fine_kappa) // P for fine_kappa in (0, 1))
+        == (H10_B, H10_B),
+        "h=10 coarse quotient changed across the fine half digits")
+require((H10_CARRY, H10_B, H10_EPSILON, H10_ROOT,
+         H10_OUTGOING, H10_ORIGIN_OFFSET) == (0, 1, 1, 2, 11, 11),
+        "h=10 private-root/origin labels changed")
+
 DELAYED_H10 = DelayedEndpointEvaluator(PREFIXES[0][10])
 
 
@@ -441,6 +457,20 @@ require(FIXED_GAUGE_ENDPOINTS
         == (WITNESS_ENDPOINT,) * 4 + (0,) * 5 + (WITNESS_ENDPOINT,) * 4,
         "fixed-carrier thirteen-gauge endpoint pattern changed")
 
+FIXED_GAUGE_SUPPORT = tuple(
+    index for index, mass in enumerate(FIXED_GAUGE_MASSES) if mass
+)
+MASK_MASS = len(FIXED_GAUGE_SUPPORT)
+MASK_ENERGY = MASK_MASS  # the gauge mask is an indicator
+MASK_DEFECT = MASK_MASS**2 - MASK_ENERGY
+MASK_RETURN = len(set(FIXED_GAUGE_SUPPORT).intersection(
+    {(-index) % P for index in FIXED_GAUGE_SUPPORT}
+))
+require((FIXED_GAUGE_SUPPORT, MASK_MASS, MASK_ENERGY,
+         MASK_DEFECT, MASK_RETURN)
+        == ((0, 1, 2, 3, 9, 10, 11, 12), 8, 8, 56, 7),
+        "fixed-gauge purity/return hostile changed")
+
 
 # ---------------------------------------------------------------------------
 # Lawful equivariant translation and orbit saturation
@@ -461,6 +491,8 @@ EQUIVARIANT_RESULTS = tuple(
 require(all(row[2:] == (WITNESS_MASS, WITNESS_ENDPOINT)
             for row in EQUIVARIANT_RESULTS),
         "equivariantly translated carrier failed to preserve the witness")
+require(current.W[current.TB] % P == 0 and R6 % P == 0,
+        "gauge translation changed the deep/future labels")
 
 # Translation by 1/13 is invisible to the clock-six digit and preserves each
 # of the seven raw source coefficients.  The orbit label is kept explicitly.
@@ -504,12 +536,17 @@ def main():
           "[113,126) lies strictly between 26 and 156")
     print(f"h10_source_normalized_mod13={NORMALIZED_H10_VECTOR}; "
           f"unit_determinant={H10_UNIT_DETERMINANT}")
+    print("h10_private_labels(c,b,epsilon,r,outgoing,offset)="
+          f"({H10_CARRY},{H10_B},{H10_EPSILON},{H10_ROOT},"
+          f"{H10_OUTGOING},{H10_ORIGIN_OFFSET})")
     print(f"field_prime={FIELD_PRIME}; exact_N6_root={ROOT}; "
           "Lucas/order_gate=PASS")
     print(f"h10_witness_mass={WITNESS_MASS}; "
           f"endpoint_mod_p={WITNESS_ENDPOINT}")
     print(f"fixed_gauge_mass_hist={tuple(sorted(Counter(FIXED_GAUGE_MASSES).items()))}; "
           f"positive_gauges={(0, 1, 2, 3, 9, 10, 11, 12)}")
+    print(f"fixed_mask(M,E,delta,R)=({MASK_MASS},{MASK_ENERGY},"
+          f"{MASK_DEFECT},{MASK_RETURN}); purity_return_gate=NO")
     print(f"equivariant_gauges=13/13; mass={WITNESS_MASS}; "
           f"endpoint_mod_p={WITNESS_ENDPOINT}")
     print(f"orbit_saturated_mass={ORBIT_MASS}; "

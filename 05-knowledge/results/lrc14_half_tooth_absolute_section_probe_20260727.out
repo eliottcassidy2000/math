@@ -1,0 +1,9 @@
+epsilon=0 canonical_positive_common=(3, 4, 5, 6, 7, 8, 9, 10) canonical_unit_common=(9,)
+epsilon=0 either_positive_common=(3, 4, 5, 6, 7, 8, 9, 10) either_unit_common=(3, 5, 6, 7, 9)
+epsilon=0 size_hists=(((8, 19), (9, 65)), ((4, 1), (7, 9), (8, 22), (9, 52)), ((8, 2), (9, 82)), ((7, 2), (8, 6), (9, 76)))
+epsilon=1 canonical_positive_common=(3, 4, 5, 6, 7, 8, 9, 10) canonical_unit_common=(9,)
+epsilon=1 either_positive_common=(3, 4, 5, 6, 7, 8, 9, 10) either_unit_common=(3, 5, 6, 7, 9)
+epsilon=1 size_hists=(((8, 19), (9, 65)), ((4, 1), (7, 9), (8, 21), (9, 53)), ((8, 2), (9, 82)), ((7, 2), (8, 6), (9, 76)))
+h3_reroute(epsilon,r,j)=((0, 11, 12), (1, 12, 12)); adjacent_predecessor=4
+coefficient_digest=fa251e5427a6cd90ab807c3d976afd59e5ff86fada71bae9c8f2f12111127a03
+all exact checks passed

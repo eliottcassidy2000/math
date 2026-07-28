@@ -1,0 +1,16 @@
+field=1 p=352341050142921841 pointed_support=26208 reversed_support=26208 constant_reversal_sectors=0 distinct_ratio_hist=((13, 2016),)
+field=1 ratio_digest=3aaeebf1ad57458e3e345626fea34629f519b4bbee9a94e89c98d5a8fdb6c372
+field=1 spectral_support_hist=((13, 2016),) mobius_label_sectors=0 mobius_character_sectors=0 cross_ratio_profiles=2016
+field=2 p=956354278959359281 pointed_support=26208 reversed_support=26208 constant_reversal_sectors=0 distinct_ratio_hist=((13, 2016),)
+field=2 ratio_digest=d1953a4518963fbd0d7f07e9ad91ac9e499bddd54615a5eabec206de8f6c510f
+field=2 spectral_support_hist=((13, 2016),) mobius_label_sectors=0 mobius_character_sectors=0 cross_ratio_profiles=2016
+witness_sector=(q=(0, 1),Delta=1), R0=(12, 0), h_pair=(0,1), cross_differences=(98876734886111000, 382444748747993057)
+ratio_histograms=(((13, 2016),), ((13, 2016),))
+spectral_histograms=(((13, 2016),), ((13, 2016),))
+mobius_label_counts=(0, 0)
+mobius_character_counts=(0, 0)
+cross_ratio_profile_counts=(2016, 2016)
+ratio_digests=('3aaeebf1ad57458e3e345626fea34629f519b4bbee9a94e89c98d5a8fdb6c372', 'd1953a4518963fbd0d7f07e9ad91ac9e499bddd54615a5eabec206de8f6c510f')
+pointed-origin conclusion: every h, including h=3, survives
+reversal conclusion: support survives, current does not descend to a sector scalar
+all exact checks passed

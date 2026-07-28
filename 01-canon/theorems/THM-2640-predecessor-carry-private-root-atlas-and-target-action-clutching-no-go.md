@@ -16,11 +16,19 @@ status: >
   carry selector is target-neutral, while THM-2365 moves r, so preserving
   the graph would require the unsupported translation c->c+7 delta.  No
   common transition branch, holonomy trivialization, row exclusion, or
-  LRC(14) conclusion follows.
+  LRC(14) conclusion follows.  An exact clock-two addendum proves that the
+  old h=3 chronological unit is atomwise incompatible with Q_a, while the
+  h=10 left-half unit is the private cell (c,b,epsilon,r)=(0,1,1,2) and has
+  a positive common atom with nonzero endpoint coefficient.  A fixed rail
+  fails quotient descent; an equivariantly translated rail family and its
+  orbit-labelled saturation repair coefficient descent, but still do not
+  supply the same-component target transition.
 source: carry-transition-cell-2026-07-28-private-carry-atlas
 depends_on:
   - THM-2365-lawful-target-coshift-and-h-drift-dichotomy
   - THM-2623-guard-safe-danger-cospan-and-residual-unit-wall
+  - THM-2625-canonical-endpoint-current-full-transvection-sector-survival
+  - THM-2635-half-tooth-opposite-graph-unit-section-and-reversed-digit-closure
 related:
   - THM-2555-natural-extension-sheet-charge-and-future-digit-boundary
   - THM-2611-principal-c13-bibundle-lift-torsor-and-holonomy-section-obstruction
@@ -28,10 +36,30 @@ related:
   - THM-2630-old-wall-affine-clutching-and-successor-sector-no-go
   - THM-2637-derangement-character-fixed-branch-holotopy-principle
   - THM-2639-gmc-equal-mass-two-rung-persistent-collision-certificate
+  - THM-2634-endpoint-pair-two-carry-cospan-and-single-carry-no-go
+  - THM-2644-odd-torsor-purity-return-gate-and-nonlinear-fixed-branch-decoder
+  - THM-2645-eleven-sheet-multiplicity-full-character-spectrum-and-energy-split
+  - THM-2647-endpoint-anchored-two-point-deconvolution-and-the-thirteen-halves-signed-tax
 script: 04-computation/lrc14_predecessor_carry_private_root_atlas_thm2640.py
 output: 05-knowledge/results/lrc14_predecessor_carry_private_root_atlas_thm2640.out
 script_sha256: a28b03a5903256c1c1c294ea5af389c7991fc0a5ad6908f0f25a5b0cc6e71abf
 output_sha256: b3c1f5106a4f7c908435862e4a5824758128b8d42f833f0a7701b7d36b69a940
+secondary_scripts:
+  - 04-computation/lrc14_clock2_half_compatibility_referee_20260727.py
+  - 04-computation/lrc14_clock2_half_carrier_common_atom_probe_20260727.py
+  - 04-computation/lrc14_half_tooth_absolute_section_probe_20260727.py
+secondary_outputs:
+  - 05-knowledge/results/lrc14_clock2_half_compatibility_referee_20260727.out
+  - 05-knowledge/results/lrc14_clock2_half_carrier_common_atom_probe_20260727.out
+  - 05-knowledge/results/lrc14_half_tooth_absolute_section_probe_20260727.out
+secondary_script_sha256s:
+  04-computation/lrc14_clock2_half_compatibility_referee_20260727.py: 41d51452564e812e8cca606307eb6ebc06f6d6af474a5a99c9c6f392c960f3fb
+  04-computation/lrc14_clock2_half_carrier_common_atom_probe_20260727.py: a9fc9f4f3f4d6ad70ba544ad705834f762b907c6d72db246411551baa8e1a91c
+  04-computation/lrc14_half_tooth_absolute_section_probe_20260727.py: e994beb790ffaaa32e8ada1f5c180fe9e15da1cc5b937076dc9c6004f41a8c19
+secondary_output_sha256s:
+  05-knowledge/results/lrc14_clock2_half_compatibility_referee_20260727.out: 99b7758414fce28c55c8a496aa4a58d7d978587525d1a8ab23e25649deb395b1
+  05-knowledge/results/lrc14_clock2_half_carrier_common_atom_probe_20260727.out: 8033a1146d4c1eeab9f53ce0cd93cbf71d31d1f9a2088948ac3a30b25517b3aa
+  05-knowledge/results/lrc14_half_tooth_absolute_section_probe_20260727.out: 5704dbdfd4d66cf7923b71678a5ee9dfc2789487e445bf96ce7e1afa6a0aa698
 hash_basis: LF-normalized bytes
 ---
 
@@ -437,6 +465,222 @@ clock R private chart + clock 13R private chart
  -> test the resulting carry holonomy.                    (25)
 ```
 
+### 7.1 Exact clock-two exclusion and the surviving private-root atom
+
+There is now one exact common-atom refinement of this frontier.  Write
+
+```text
+c2=13^3,                 c3=2*13^5=2*169*c2.              (26)
+```
+
+THM-2625's clock-two word `Q_a(169x)` contains the target-`a` danger
+
+```text
+D=[-1/14,1/14) mod 1.
+```
+
+Put `c3 x=n+z`, where `n` is integral and `0<=z<1`.  Then
+
+```text
+{c2*169x}=z/2             if n is even,
+{c2*169x}=1/2+z/2         if n is odd.                    (27)
+```
+
+With the half-open convention above, membership in `D` projects exactly to
+
+```text
+z in U=[0,1/7) union [6/7,1)
+      =[0,26/182) union [156/182,182/182).                (28)
+```
+
+The two literal halves of a nonzero root `r` are
+
+```text
+epsilon=0: [14r,14r+13)/182,
+epsilon=1: [14r-13,14r)/182.                              (29)
+```
+
+Consequently the complete clock-two compatibility atlas is
+
+```text
+epsilon=0: r in {1,11,12},
+epsilon=1: r in {1,2,12}.                                 (30)
+```
+
+This gives a structural zero, not a cancellation.  THM-2635's unique
+canonical unit/reversed-digit closure has `(h,epsilon,r)=(3,1,9)`, whose
+half is `[113,126)/182`.  Since
+
+```text
+26<113<126<156,                                           (31)
+```
+
+its intersection with `Q_a(169x)` is empty before imposing `E^ell`, any
+rail weight, or the delayed `Q_b` digit.  Every endpoint Fourier coefficient
+restricted to that purported common atom is therefore identically zero.
+
+On THM-2635's opposite graph `r=-h-1`, its canonical left-half units are
+`h in {3,8,10}`, with roots `9,4,2`.  Equation `(30)` leaves exactly
+
+```text
+(h,epsilon,r)=(10,1,2).                                  (32)
+```
+
+In the notation of `(13)`, `b=1`; this is THM-2635's coarse quotient
+`floor(2u)`, not this theorem's fine half-digit
+`kappa=floor(26y)-2h`.  Both fine-`kappa` values are allowed by the present
+common-atom data, and no finer restriction is claimed.  Hence
+
+```text
+c=7(r-b-epsilon)=0,
+(c,b,epsilon,r)=(0,1,1,2).                               (33)
+```
+
+Thus `(32)` is not merely an off-graph witness: it is the genuine `c=0`
+private-root cell in this theorem's atlas.  Its normalized seven-clock source
+vector and multiplication determinant are
+
+```text
+(0,0,0,1,0,0,0),                  determinant=1.          (34)
+```
+
+On the selected `(s,ell4,ell5)=(1,3,0)` carrier, the exact two-clock atom has
+mass numerator
+
+```text
+320917389308122335557400>0.                               (35)
+```
+
+Its frequency-`X=13` endpoint numerator is nonzero in the exact specialization
+
+```text
+N6=13^6*T_DEN=1437601819018855810320,
+p=5*N6+1=7188009095094279051601,
+zeta_N6 -> 656356768,
+endpoint -> 1441723002435168223705 !=0 mod p.              (36)
+```
+
+A Lucas certificate proves `p` prime and the displayed image has exact order
+`N6`; hence `(36)` proves that the characteristic-zero cyclotomic endpoint
+sum is nonzero.  This is one lawful common endpoint atom.  It is not the full
+two-endpoint product current of THM-2625.
+
+The reroute pays an exact chronology invoice.  Its predecessor carry is
+`c=0`, while the pointed opposite-graph outgoing coordinate is `-r=11`.
+The affine offset is therefore
+
+```text
+(-r)-c=11.                                                (37)
+```
+
+Both labels are unchanged by every quotient-gauge translation `x->x+s/13`,
+because `c3*s/13=2*13^4s` and `13^6*s/13=13^5s` are integral.  What remains
+open is a map identifying that physical outgoing coordinate with a
+THM-2620 endpoint covector.  Equation `(37)` is a retained origin sidecar,
+not a silent relabelling.
+
+### 7.2 Fixed-rail non-descent and two lawful coefficient repairs
+
+Keeping the physical `h=10` carrier fixed while replacing the endpoint
+representative by `ell=sW` gives the exact gauge mask
+
+```text
+S={0,1,2,3,9,10,11,12}.                                  (38)
+```
+
+The mass and endpoint coefficient equal `(35)`--`(36)` on those eight gauges
+and vanish on `s=4,5,6,7,8`.  Thus a fixed rail does not descend through the
+endpoint quotient; `s=0` versus `s=4` is a minimal witness.
+
+There are two lawful coefficient-side repairs.  Let `tau_s x=x+s/13` and
+translate the *whole* retained carrier equivariantly:
+
+```text
+H_s(x)=H_0(tau_s x).                                      (39)
+```
+
+The interval builders give
+
+```text
+1_(E^(ell+sW))(x)=1_(E^ell)(tau_s x),
+Q_a(169 tau_s x)=Q_a(169x),
+Q_b(13^6 tau_s x)=Q_b(13^6x).                             (40)
+```
+
+Moreover `X=13`, so the endpoint phase acquired under `(39)` is one.  The
+allocation phase is also fixed because the deep coordinate is zero modulo
+thirteen.  The referee therefore obtains the same positive mass, the same
+nonzero endpoint coefficient, and the same vector `(34)` in all thirteen
+labelled gauges.
+
+Alternatively,
+
+```text
+H_orb=sum_(s in F13) H_s                                 (41)
+```
+
+is `1/13`-periodic and its coefficient descends without choosing `s`.  It has
+
+```text
+mass numerator =2567339114464978684459200,
+endpoint       =4345774924387066738039 !=0 mod p.          (42)
+```
+
+The orbit label is load-bearing for the unit: each of its thirteen labelled
+copies has vector `(34)`, whereas forgetting the label gives
+`13*(34)=0` over `F_13`.  No unit claim is made after that nonlinear
+forgetting.
+
+These repairs do not contradict the target-action no-go in Section 6.
+They transport common-origin endpoint gauges; they do not prove that the
+lawful THM-2365 action preserves one same-component private-root transition.
+The fixed mask `(38)` also fails THM-2644's nonlinear return gate:
+
+```text
+(M,E,delta,R)=(8,8,56,7),       R<=delta, E!=M^2.          (43)
+```
+
+Likewise THM-2645's charged multiplicity is blind to common-origin gauge.
+The retained label `c=0` is the right type of missing sidecar, but no map from
+this carrier to THM-2645's same-base two-edge relations is proved.
+
+THM-2647 sharpens that invoice.  If `c=0` could be mapped to one absolute
+marked member of its endpoint two-set, the origin ambiguity would fall from
+thirteen choices to two, not to one.  The retained half label `epsilon=1`
+is a plausible ordering bit for selecting between those two members, after
+which the signed two-point inverse would determine the other endpoint set.
+No map from this half-edge carrier into THM-2647's endpoint-hole set is
+proved.  Thus the exact status is
+
+```text
+unanchored multiplicity: 13 origins;
+one absolute marked member: 2 endpoint sets;
+ordered half/endpoint incidence: potentially 1, but still OPEN.          (44)
+```
+
+The independent common-grid hostile also found the off-graph incident pair
+`(epsilon,r)=(0,11),(1,12)`, both with absolute tooth `a=r-epsilon=11=1-h`
+at `h=3`.  Its all-`h` affine section is canonically positive but has a
+canonical unit only at `h=9`; at `h=3` it needs an adaptive either-rail choice
+and has predecessor label `12`, not the adjacent label `4`.  This toothpick
+self-similarity is therefore a control on `(29)`, not the canonical reroute
+in `(32)`.
+
+The exact referee and its independent common-grid hostile are
+
+```bash
+python 04-computation/lrc14_clock2_half_compatibility_referee_20260727.py
+python -O 04-computation/lrc14_clock2_half_compatibility_referee_20260727.py
+python 04-computation/lrc14_clock2_half_carrier_common_atom_probe_20260727.py
+python 04-computation/lrc14_half_tooth_absolute_section_probe_20260727.py
+```
+
+The first two executions byte-match their frozen transcript.  The common-grid
+hostile materializes all `188,056` clock-two packet intervals, locates the
+first empty intersection before the delayed clock, and reproduces
+`(30)`--`(32)` without using the parity proof `(27)`.  The separately frozen
+absolute-tooth companion proves the final all-`h` toothpick control above.
+
 If direct positive matching still fails, THM-2639 suggests a genuinely
 different test: eliminate the carry between the first two clock-compatibility
 polynomials and compute their resultant/Bezout ideal.  Its Gaussian-moment
@@ -457,10 +701,12 @@ The gain/loss ledger is:
 | fixed-c coverage | all and only `(17)` |
 | target action | does not preserve the graph |
 | consecutive-clock identity | `c_next=h`, but no same-component second chart |
+| clock-two common atom | `h=3` empty; `h=10,c=0,r=2` positive/nonzero |
+| endpoint quotient gauge | fixed rail fails; equivariant/orbit-labelled coefficients descend |
 | holonomy/LRC exit | absent |
 
 In particular, this theorem proves no canonical owner/root transition,
-same-component adjacent-clock branch, equivariant carry translation,
+same-component adjacent-clock branch, equivariant **target/carry** translation,
 holonomy trivialization, row exclusion, or LRC(14).
 
 The exact companion runs as

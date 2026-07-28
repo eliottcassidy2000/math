@@ -14,8 +14,12 @@ status: >
   A transverse carry-equivariant physical endpoint section would make
   Delta=beta+alpha c and trivialize the carry torsor exactly when alpha is
   nonzero, but canon supplies neither that section nor the endpoint-matched
-  pair twist / same-shell reference needed to form the diagonal.  No
-  chronology, row exclusion, or LRC(14) conclusion follows.
+  pair twist / same-shell reference needed to form the diagonal.  On every
+  pointed nondegenerate sector the row-reversal ratio is the exact vertex
+  coboundary psi(R_h)/psi(R_(h+1)); it has trivial full-cycle product but
+  thirteen distinct, full-spectrum values.  The quadratic two-copy product
+  J(l,r)J(r,l) is the canonical reversal-invariant survivor.  No chronology,
+  row exclusion, or LRC(14) conclusion follows.
 source: deep-energy-audit-2026-07-28-endpoint-two-carry
 depends_on:
   - THM-2620-endpoint-pair-parabolic-transvection-and-translation-gauge-boundary
@@ -27,10 +31,15 @@ related:
   - THM-2622-affine-torsor-holonomy-fixed-section-spectrum-and-v4-c13-dictionary
   - THM-2630-old-wall-affine-clutching-and-successor-sector-no-go
   - THM-2633-derangement-character-obstruction-and-d4-keller-exclusion
+  - THM-2647-endpoint-anchored-two-point-deconvolution-and-the-thirteen-halves-signed-tax
 script: 04-computation/lrc14_endpoint_pair_two_carry_cospan_thm2634.py
 output: 05-knowledge/results/lrc14_endpoint_pair_two_carry_cospan_thm2634.out
 script_sha256: 282dded26f7e1f8084f095043eb41df16bf06f87e94ef8a288b3f3af5401ed39
 output_sha256: 5bf8bf63cd3b7487216138b0d9076d84ace77be4b30eee2f90a9455c2e8f1287
+secondary_script: 04-computation/lrc14_endpoint_current_reversal_probe_20260727.py
+secondary_output: 05-knowledge/results/lrc14_endpoint_current_reversal_probe_20260727.out
+secondary_script_sha256: f047dff94a7ba6a87c0b57c2236e955fb5c473cfe26acd658f117f441b388bcf
+secondary_output_sha256: 354b654e775d34dbdfcda54263792dd81dd0d3e28a0e5bdccff864213c42d08f
 hash_basis: LF-normalized bytes
 ---
 
@@ -322,6 +331,113 @@ candidate sidecar for it, not a proof.  This is the `C_13` analogue of
 THM-2633's proved derangement-character gate, but the analogy is conditional:
 THM-2633 supplies no endpoint pairing, positivity, or branch-survival premise
 for this LRC packet.
+
+### 4.1 Pointed origins and the exact reversal coboundary
+
+THM-2625's full joint support makes the coefficient-side origin question
+strictly easier than the physical-section problem.  Fix `q!=0`, `Delta!=0`,
+choose **any** `R_0` with `det(q,R_0)=Delta`, and enumerate the fibre by
+
+```text
+R_h=R_0+hq,                  L_h=R_(h+1),       h in F_13. (22c)
+```
+
+Every one of the thirteen coefficients `J(L_h,R_h)` is nonzero.  Thus any
+externally proposed origin, including the `h=3` chart used by THM-2635,
+survives automatically.  Choosing a covector `lambda(q)=1` is only an
+enumeration gauge; it contributes no further nonvanishing theorem.
+
+Because THM-2625 factors
+
+```text
+J(l,r)=C Lstar(l)Rstar(r),
+psi(x)=Lstar(x)/Rstar(x),                                 (22d)
+```
+
+row reversal has the exact functional form
+
+```text
+rho_h=J(R_h,L_h)/J(L_h,R_h)
+     =psi(R_h)/psi(R_(h+1)).                              (22e)
+```
+
+It is a multiplicative coboundary, not a sector scalar.  Hence
+
+```text
+product_(h in F13) rho_h=1.                               (22f)
+```
+
+On THM-2635's punctured eleven-edge path `h=1,...,11`, the same telescoping
+retains only the boundary drift
+
+```text
+product_(h=1)^11 rho_h=psi(R_1)/psi(R_12).                (22g)
+```
+
+This is the exact `H`-drift functional form: there is no interior curvature
+on the full cycle, while deleting the two boundary edges exposes one endpoint
+ratio.
+
+An independent reconstruction in both Lucas-certified THM-2625 embeddings
+finds more than mere nonconstancy.  Use the coordinate-pivot origin
+`canonical_origin(q,Delta)` from the companion to point each of the `2,016`
+nondegenerate `(q,Delta)` fibres.  Then:
+
+```text
+the thirteen rho_h are pairwise distinct;
+all thirteen cyclic Fourier modes of h -> rho_h are nonzero;
+rho_h is neither Mobius in h nor a degree-one Mobius transform of one
+  cyclic character;
+the resulting canonical-pivot cross-ratio profile is distinct from all
+  other 2,015 canonical-pivot sector profiles.
+                                                               (22h)
+```
+
+The first cross-multiplied witness uses
+
+```text
+q=(0,1), Delta=1, R_0=(12,0), h=0,1,
+differences=(98876734886111000,382444748747993057)         (22i)
+```
+
+in the two fields.  These are nonzero polynomial differences, so the
+cyclotomic characteristic-zero ratios differ.  The computation therefore
+rules out every sector-dependent scalar reversal law; the symbolic survivor
+is exactly the nonconstant coboundary `(22e)`.
+
+There is a gauge-free reversal invariant, but it is quadratic:
+
+```text
+K(l,r)=J(l,r)J(r,l)
+      =C^2[Lstar(l)Rstar(l)][Lstar(r)Rstar(r)].            (22j)
+```
+
+It is nonzero on all `13^4` endpoint pairs and satisfies `K(l,r)=K(r,l)`.
+This is an honest two-copy current, not the original linear relation current,
+not a positivity statement, and not a common physical atom.
+
+A balanced linear symmetrization would require a vertex gauge `a` with
+`a(x)^2=psi(x)` and would replace `J(l,r)` by
+`J(l,r)a(r)/a(l)`.  Such a square-root lift carries an unavoidable sign/
+central-`C_2` invoice and is not supplied by the packet.  Dividing one factor
+by `psi` would also make a symmetric expression, but only by discarding the
+left/right allocation rather than intertwining it.
+
+Finally, `(l,r)->(r,l)` here is the transpose of an already allocated
+coefficient and sends `(q,Delta)` to `(-q,-Delta)`.  It is **not** the analytic
+time reversal of THM-2620 followed by a fresh left-deep allocation: that
+operation can move the deep leg and the determinant origin.  The computation
+proves support/value statements for coefficient transpose only.
+
+The independent exact referee is
+
+```bash
+python 04-computation/lrc14_endpoint_current_reversal_probe_20260727.py
+python -O 04-computation/lrc14_endpoint_current_reversal_probe_20260727.py
+```
+
+Both modes byte-match the frozen transcript and independently recheck the
+full THM-2625 banks before evaluating `(22e)`--`(22j)`.
 
 ## 5. Exact canonical control
 
