@@ -8,23 +8,28 @@ status: >
   Edge-preserving scalar transport sends right root 12 to the forbidden
   right-root-zero label, but the right-root-zero and left-root-one physical
   half-tooth charts overlap openly.  Translation by 7/13^6 and recharting on
-  that overlap give an exact partial coefficient intertwiner.  Ten of fourteen
-  rails work without an auxiliary cut and all fourteen on their equal-weight
+  that overlap give exact equality of the two recomputed raw coefficient
+  vectors.  Their root-normalized classes differ by the sign -1.  Ten of
+  fourteen rails work without an auxiliary cut and all fourteen on their equal-weight
   loci; rail 8 carries a strict E3-to-D^6-Q_(3,{1,2}) witness and the identical
   vector (0,a,a,a,a,a,a), which is a private unit at roots 12 and 1.  This is
   not a global action, endpoint current, row exclusion, or LRC(14) proof.
 source: root/relative-present-root-zero-overlap-clutch-2026-07-28
-audit: coordinate-first-audit/root-zero-overlap-2026-07-28 (independent counterexample to the zero-label inference, fourteen-rail reconstruction, hostile controls, and immutable replay)
+audit: coordinate-first-audit/root-zero-overlap-2026-07-28; semantic-present-wall-hostile-audit-2026-07-28 (independent counterexample, direct complement and polynomial-gcd unit reconstruction, count/overlap/scope audit, and normal/-O/hash replay: ACCEPT)
 depends_on:
   - THM-2305-canonical-blocker-word-handoff-hypergraph
   - THM-2640-predecessor-carry-private-root-atlas-and-target-action-clutching-no-go
   - THM-2657-odometer-carry-root-lift-nonsplit-extension-and-cech-cocycle
   - THM-2672-slope-seven-carry-nerve-exact-eleven-simplex-and-root-zero-cap
+  - THM-2698-central-half-odometer-full-local-cycle-and-semantic-sidecar-boundary
   - THM-2707-full-physical-lift-fibre-common-simplex-and-packet-scc
-  - THM-2742-full-two-target-present-sheet-deepest-source-semantic-current
-related:
   - THM-2712-semantic-following-congruence-lock-and-address-coboundary-descent
   - THM-2720-unshifted-deepest-source-present-packet-global-disjointness
+  - THM-2742-full-two-target-present-sheet-deepest-source-semantic-current
+related:
+  - THM-2635-half-tooth-opposite-graph-unit-section-and-reversed-digit-closure
+  - THM-2716-c4-arm-transporter-groupoid-and-relative-degree-holotopy-boundary
+  - THM-2727-fixed-rail-target-deck-frobenius-realization-no-go
 script: 04-computation/lrc14_root_zero_overlap_clutch_20260728.py
 output: 05-knowledge/results/lrc14_root_zero_overlap_clutch_20260728.out
 script_sha256: e27981478cd30c8e3cceada128049b145b254410c8d0b6d525a8a1830545d55f
@@ -66,12 +71,14 @@ residue 7: 6404,                 residue 8: 6444.       (2)
 Every point has one source-one rail and one strict private half-tooth and is
 outside all thirteen frozen one-target present labels.
 
-For one rail and each of the seven clocks, let
+For one rail and each of the seven clocks, let `Present_(ell,7)` denote the
+single frozen one-target packet with label `7`, and set
 
 ```text
-V_old  = coefficient on rail intersect Present,
-V_free = coefficient on rail with Present omitted,
-V_rel  = coefficient on rail intersect Present^c.      (3)
+V_old  = L_(rho,ell)(rail intersect H_rho intersect Present_(ell,7)),
+V_free = L_(rho,ell)(rail intersect H_rho),
+V_rel  = L_(rho,ell)(rail intersect H_rho
+                     intersect Present_(ell,7)^c).      (3)
 ```
 
 Exact delayed-carry linearity, before determinants, gives
@@ -79,6 +86,13 @@ Exact delayed-carry linearity, before determinants, gives
 ```text
 V_free=V_old+V_rel.                                    (4)
 ```
+
+This complement is the complement of the **fixed label `7`**, not the
+complement of the union of all thirteen one-target labels.  Separately, the
+`12,848` semantic midpoints above happen to lie outside that entire union.
+The independent audit constructed `[0,T)\Present_(ell,7)` directly as its gap
+union and applied the nonnegative functional, without using subtraction; all
+`14*2*7=196` coefficients agreed with `(3)--(4)`.
 
 The raw gcd of each complete coefficient bank is
 `2,122,120=26*81,620`; unit tests remain in THM-2640's inherited
@@ -95,8 +109,16 @@ Thus `V_rel` leaves `6404+6178=12,582` unit endpoints.  It has
 `79,127,824` directed cross-residue scalar pairs and `2,166,112` directed
 reverse-clock pairs.  Every endpoint retains its inherited open cylinder and
 has between nine and eleven lawful nonzero second-target labels `t`; none has
-`t=0`.  The relative unit and THM-2742's full `(s,t)` sheet therefore coexist
-pointwise.
+`t=0` at its midpoint.  The full-target assertion for all `12,582` endpoints
+is midpoint-pointwise only; stability of a common `(s,t)` on the whole open
+cylinder is proved below only for the displayed rail-`8` pair.
+
+Here “unit endpoint” means that the endpoint inherits the unit of its
+rail/residue **aggregate coefficient vector**.  It is not a pointwise
+transition amplitude.  Likewise `79,127,824` counts all directed raw
+cross-address translations; it does not assert a common rail, reverse clock,
+target label, coefficient equality, or current for each pair.  The separate
+`2,166,112` count imposes only the reverse-clock equality condition.
 
 ## 2. The sharp edge-preserving no-go
 
@@ -110,7 +132,10 @@ residue 8: carry  6, left  edge, root  1.               (6)
 A forward scalar numerator has `2k=1 mod13`; its edge-preserving root action
 sends right root `12` to right root `0`.  The reverse has `2k=-1` and sends
 left root `1` to left root `0`.  Hence the unrestricted labelled
-edge-preserving private-root relation is empty.
+edge-preserving **nonzero-root label relation** is empty.  The precursor
+transcript's line `private_root_transport=EMPTY` is retained only as this
+fixed-edge label statement; MISTAKE-310 forbids reading it as physical-support
+emptiness.
 
 It is false to infer that the physical support is empty.  In the THM-2640
 convention the open half-tooth charts are
@@ -189,8 +214,10 @@ target t=(3,4,5,6,7,8,9,10,11,12).                    (14)
 ```
 
 In particular `(s,t)=(0,3)` is lawful and stable on both endpoint
-cylinders.  The extra target label `t=12` is retained as a real sidecar
-difference; the two banks are not silently identified.
+cylinders.  The independent hostile margin is `1,541,619` times the inherited
+open-cylinder radius.  This whole-cylinder full-target statement is asserted
+only for the pair `(13)`.  The extra target label `t=12` is retained as a real
+sidecar difference; the two banks are not silently identified.
 
 ## 5. Coefficient intertwining before the determinant
 
@@ -226,7 +253,11 @@ classes in `F_13[z]/(Phi_7)` are the nonzero constants
 source root 12: 11,                 target root 1: 2. (18)
 ```
 
-Both determinants are therefore nonzero.  In characteristic zero, if
+Since `2=-11 mod13`, the raw equality `(17)` is **not** equality of the two
+root-normalized rows: those classes differ by `-1`.  Both determinants are
+nevertheless nonzero.  Calling `(17)` a normalized intertwiner would require
+an additional typed root gauge `-1`, which is not constructed here.  In
+characteristic zero, if
 `P(X)=a(X+...+X^6)`, then
 
 ```text
@@ -249,9 +280,10 @@ Restricting each rail to its exact equal-weight locus gives a positive vector
 of shape `(0,a_j,...,a_j)` and private units at roots `12` and `1` on all
 fourteen rails.  The four added cuts are lawful derived subcarriers, not a
 canonical global action.  Rail `8` is stronger: no such cut is needed and it
-contains `(13)`.
+contains `(13)`.  Semantic/common-full-target/whole-cylinder verification is
+proved only for that rail-`8` pair, not uniformly over either rail census.
 
-Three controls are sharp:
+Four controls are sharp:
 
 - on the unrestricted half-tooths, the rail-`8` source and target relative
   rows have support sizes seven and six and do not intertwine;
@@ -259,6 +291,8 @@ Three controls are sharp:
   edge rechart;
 - the physical identity changes chart labels, so it does not contradict the
   edge-preserving no-go of Section 2.
+- the root-normalized endpoint classes are negatives, so the raw equality
+  does not silently supply a normalized-row action.
 
 The proved chain is therefore
 
@@ -266,7 +300,7 @@ The proved chain is therefore
 semantic scalar lift + relative-present unit endpoint
  + open adjacent-tooth overlap
  -> partial physical chart isomorphism
- -> equal recomputed coefficient vector
+ -> equal recomputed raw coefficient vector
  -> private units at roots 12 and 1.                  (21)
 ```
 
@@ -299,6 +333,32 @@ found the open overlap `(8)` instead.  It independently reconstructed the
 forward and reverse translations, caught and repaired an overstatement that
 the two `t`-label banks were identical, recomputed every rail before unit
 testing, replayed both modes and stored bytes, and verified the exact hashes.
-The root audit and a second root replay found no remaining hypothesis gap.
+The second hostile audit directly reconstructed the fixed-label-`7`
+complement on all `196` rail/residue/clock cells and obtained exactly the same
+coefficients.  It independently used Euclidean polynomial gcd with `Phi_7`
+over `F_13`, rather than the determinant helper, to reproduce the unit table;
+it also rederived every endpoint, address, reverse-clock, overlap, margin, and
+normalized-sign count.  The two audits found no remaining hypothesis gap.
+
+## 8. Boundary ledger
+
+```text
+PROVED HERE:       fixed-label-7 complement identity and content;
+                   aggregate unit table and endpoint/address/clock counts;
+                   fixed-edge zero-label law, not physical emptiness;
+                   all-root adjacent-chart overlap;
+                   one strict rail-8 semantic/full-target cylinder pair;
+                   equality of its restricted raw vectors and two unit tests;
+                   natural 10/14 and derived equal-weight 14/14 rail censuses.
+
+DESTROYED:         edge label and root label under rechart;
+                   equality of unrestricted half-tooth rows;
+                   normalized-row equality without a typed -1 gauge.
+
+NOT CONSTRUCTED:   a global clutch functor or C13 action;
+                   semantic/full-target factors inside the integrated vector;
+                   pointwise endpoint amplitude or spectral endpoint pair;
+                   endpoint current, row exclusion, or LRC(14).           (22)
+```
 
 QED.

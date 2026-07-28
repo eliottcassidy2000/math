@@ -32,8 +32,9 @@
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Translation by
   `7/13^6` sends the relative-present right-root-12 chart into right root zero,
   whose physical half-tooth overlaps the lawful left-root-1 chart on
-  `(1,13)/182`.  Ten whole rail overlaps intertwine naturally and exact
-  equal-weight cuts repair all fourteen.  Rail `8` contains a strict semantic
+  `(1,13)/182`.  Ten whole rail overlaps have equal recomputed raw vectors and
+  exact equal-weight cuts repair all fourteen; the root-normalized endpoint
+  classes differ by `-1`.  Rail `8` contains a strict semantic
   `E3 -> D^6 -> Q_(3,{1,2})` pair with common lawful `(s,t)` and identical
   vector `(0,a,...,a)`, a private unit at both roots with all six nontrivial
   clock characters.  The fork/target factors are not yet inside the integral;

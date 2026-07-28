@@ -28,11 +28,14 @@ Format per entry:
   common rail, clock, relative-present, semantic, and full-target support.
 - **Repair / survivor:** landing at the zero **label** proves only that the
   full edge-preserving labelled row does not intertwine.  It does not prove
-  physical emptiness after a chart change.  THM-2744 is reserved for the
-  corrected partial Cech-clutch theorem.  The relative coefficient census,
-  unit tables, endpoint counts, full-target coexistence, and empty unrestricted
-  edge-preserving relation survive; a global target action, endpoint current,
-  row exclusion, and LRC(14) still do not follow.
+  physical emptiness after a chart change.  THM-2744 now proves the corrected
+  partial Cech clutch: the restricted raw vectors agree and are units, while
+  their root-normalized classes differ by `-1`.  The relative coefficient
+  census, aggregate unit tables, endpoint counts, midpoint full-target
+  coexistence, and empty unrestricted fixed-edge nonzero-root label relation
+  survive.  Whole-cylinder target stability is proved only for the displayed
+  rail-`8` pair; a global target action, endpoint current, row exclusion, and
+  LRC(14) still do not follow.
 
 ## MISTAKE-311 (2026-07-28, THM-2727 evidence and provenance) -- a reserved candidate carried a stale script hash and cited an empty namespace for a proved formula
 

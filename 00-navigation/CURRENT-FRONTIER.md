@@ -76,8 +76,9 @@ THM-2720 identifies the old wall as `t=0`; THM-2742 restores the second target:
 `936/1183` sections and every primitive `t`-character survive.  Edge transport
 reaches a root-zero label, but MISTAKE-310 retracts physical emptiness: the
 half-tooth charts overlap.  THM-2744 proves the resulting partial physical
-clutch: translation by `7/13^6` intertwines equal recomputed private-unit
-vectors on ten whole rail overlaps and all fourteen equal-weight loci.  Its
+clutch: translation by `7/13^6` gives equal recomputed raw private-unit
+vectors on ten whole rail overlaps and all fourteen equal-weight loci; the
+root-normalized endpoint classes differ by `-1`.  Its
 rail-8 witness has the literal `E3 -> D^6 -> Q_(3,{1,2})` record and common
 lawful `(s,t)`, but the semantic fork and target factors have not yet been
 inserted inside the coefficient integral.  The live debt is exactly that
