@@ -5,8 +5,9 @@ On each of the first fourteen THM-2749 rails, enumerate the full
 2*2*2*13 THM-2640 configuration bank.  A source-label-zero packet at carry
 12 can meet the marked source deep band only through two half geometries.
 The exact THM-2640 unit table leaves one configuration, whose present anchor
-has the opposite polarity from the marked source.  The companion also
-records the unique wrapped label-one configuration as the sharp boundary.
+has the opposite polarity from the marked source.  The unique wrapped
+label-one configuration has future digit 12, disjoint from the marked
+source's digit 6.  Together these gates close all thirteen twelve-faces.
 """
 
 import hashlib
@@ -40,6 +41,7 @@ for dependency, expected_hash in DEPENDENCIES.items():
 
 import lrc14_predecessor_carry_private_root_atlas_thm2640 as atlas
 import lrc14_slope7_fixed_configuration_carry_nerve_thm2672 as fixed
+import lrc14_fully_marked_root_zero_clutch_thm2749 as marked
 
 
 P = 13
@@ -76,6 +78,29 @@ def strict_intersection(left, right):
     low = max(left[0], right[0])
     high = min(left[1], right[1])
     return (low, high) if low < high else None
+
+
+def prefix_intervals(prefix):
+    return tuple(
+        (left, left + length)
+        for left, length in zip(prefix[0], prefix[1])
+    )
+
+
+def interval_intersection(left, right):
+    out = []
+    i = 0
+    j = 0
+    while i < len(left) and j < len(right):
+        low = max(left[i][0], right[j][0])
+        high = min(left[i][1], right[j][1])
+        if low < high:
+            out.append((low, high))
+        if left[i][1] <= right[j][1]:
+            i += 1
+        else:
+            j += 1
+    return tuple(out)
 
 
 def compatible_rows(flags, rail_index, label):
@@ -212,7 +237,57 @@ def main():
         "source-compatible anchor changed",
     )
 
-    print("THM2809 UNIVERSAL SOURCE-LABEL PRIVATE-HALF CLOSURE EXACT REFEREE")
+    # The sole label-one-compatible row has h=12,kappa=1.  Its ordinary
+    # future-half prefix lies in (25/26,1).  THM-2749's complete marked source
+    # prefix has h=6,kappa=1 and lies in (13/26,14/26).  The slope-seven
+    # pullback fixes y={R*x}, so the comparison is in one literal coordinate.
+    module, _prefixes, _whole, _masses, _rails, _present, _starts = (
+        atlas.core.build_carrier_data()
+    )
+    ordinary_prefixes = atlas.build_pair_prefixes(module)
+    terminal_fork = marked.semantic.deepest_fork(module)
+    marked_prefixes = marked.build_semantic_prefixes(
+        module, terminal_fork
+    )
+    prefix_rows = []
+    for clock in range(7):
+        label_one_prefix = prefix_intervals(
+            ordinary_prefixes[1][clock][12][1]
+        )
+        marked_prefix = prefix_intervals(
+            marked_prefixes[0][clock][1]
+        )
+        require(
+            all(
+                25 * atlas.T // 26 <= left < right <= atlas.T
+                for left, right in label_one_prefix
+            ),
+            "label-one future digit escaped (25/26,1)",
+        )
+        require(
+            all(
+                13 * atlas.T // 26 <= left < right
+                <= 14 * atlas.T // 26
+                for left, right in marked_prefix
+            ),
+            "marked future digit escaped (13/26,14/26)",
+        )
+        meet = interval_intersection(
+            label_one_prefix, marked_prefix
+        )
+        require(
+            not meet,
+            f"label-one and marked delayed prefixes met at clock {clock}",
+        )
+        prefix_rows.append((
+            clock,
+            len(label_one_prefix),
+            len(marked_prefix),
+            len(meet),
+        ))
+    prefix_rows = tuple(prefix_rows)
+
+    print("THM2809 UNIVERSAL LABELWISE TWELVE-FACE CLOSURE EXACT REFEREE")
     print(f"first14_rail_metadata={tuple(metadata)}")
     print("configuration_universe_per_rail=2*2*2*13=104")
     print(f"source_unit_config_counts={tuple(source_unit_counts)}")
@@ -222,10 +297,13 @@ def main():
     print(f"unique_wrapped_label1_row={label_one_rows[0]}")
     print("source_label0_anchor=F_(ell,7)")
     print("marked_source_anchor=F_(ell,7)^c")
-    print("consequence=every labelwise configuration mixture containing "
-          "source label0 has empty marked-source intersection")
-    print("boundary=faces omitting label0 are not source attachments; "
-          "label1 wrapped row is not asserted positive after all factors")
+    print("label1_future_half_digit=(25,26)/26")
+    print("marked_future_half_digit=(13,14)/26")
+    print(f"delayed_prefix_piece_rows={prefix_rows}")
+    print("twelve_face_failure_census=12_label0_anchor+1_label1_digit")
+    print("consequence=all13 arbitrary-configuration twelve-faces have "
+          "empty full marked-source intersection")
+    print("boundary=an eleven-face omitting labels0,1 remains open")
     print("scope=first14 THM2749 source rails/carry12; no target endpoint, "
           "outside-rail, row, or LRC14 exclusion")
     print("ALL EXACT CHECKS PASSED")

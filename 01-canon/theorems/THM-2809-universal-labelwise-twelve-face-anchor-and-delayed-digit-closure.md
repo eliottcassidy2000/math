@@ -1,6 +1,6 @@
 ---
 id: THM-2809
-title: "Universal source-label private-half forcing and anchor closure"
+title: "Universal labelwise twelve-face anchor and delayed-digit closure"
 status: >
   PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
   HOSTILE AUDIT.  On each of the first fourteen THM-2749 rails, scan the
@@ -11,9 +11,13 @@ status: >
   F_(ell,7), while the marked source retains F_(ell,7)^c.  Hence any
   arbitrary labelwise configuration mixture containing the source label is
   empty against the marked source.  The unique wrapped label-one
-  configuration is retained as the sharp boundary for faces omitting label
-  zero.  No target-endpoint, outside-rail, row, or LRC(14) claim is made.
-source: lrc-a12-carry-bridge/universal-source-label-forcing-2026-07-28
+  configuration has future digit 12, while the complete marked source has
+  future digit 6; slope-seven pullback fixes that coordinate, so the two
+  delayed prefixes are disjoint.  Consequently all thirteen arbitrary-
+  configuration twelve-faces are empty against the full marked source.  An
+  eleven-face omitting labels zero and one remains open.  No target-endpoint,
+  outside-rail, row, or LRC(14) claim is made.
+source: lrc-a12-carry-bridge/universal-labelwise-twelve-face-closure-2026-07-28
 depends_on:
   - THM-2672-slope-seven-carry-nerve-exact-eleven-simplex-and-root-zero-cap
   - THM-2749-fully-marked-root-zero-clutch-and-target-character-profile
@@ -21,14 +25,14 @@ related:
   - THM-2687-slope-seven-global-configuration-switching-positive-thirteenfold-no-go
   - THM-2797-fourteen-rail-source-twelve-configuration-switch-semantic-base-no-go
   - THM-2804-fourteen-rail-v4-configuration-completion-and-eleven-carry-anchor-defect
-script: 04-computation/lrc14_universal_source_label_private_half_closure_thm2809.py
-output: 05-knowledge/results/lrc14_universal_source_label_private_half_closure_thm2809.out
-script_sha256: d02cec64a45cb89a9d88ccdd68e4c2d03fae8490caf0a49cabdb78da8d4927b7
-output_sha256: 964fd5edabddf80ccee9cba43ef9c3efcf360d0a5fef2263075639010afa1536
+script: 04-computation/lrc14_universal_labelwise_twelve_face_closure_thm2809.py
+output: 05-knowledge/results/lrc14_universal_labelwise_twelve_face_closure_thm2809.out
+script_sha256: f6dd8ba6e1909cd24f0532b1822b5ac6697a18e9871703820ccce4bd43eccfa3
+output_sha256: 3b2dda93c766c2186cd8b90871b70e7270dac528f8895c6a047232c6f9982408
 hash_basis: LF-normalized bytes
 ---
 
-# THM-2809 -- the marked source label has one possible half and the wrong anchor
+# THM-2809 -- every twelve-face meets either the wrong anchor or the wrong digit
 
 **PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
 HOSTILE AUDIT.**
@@ -40,10 +44,13 @@ leaves two apparent freedoms:
 1. use a nonmaximal configuration for a label; or
 2. choose configurations independently from label to label.
 
-Both freedoms disappear at the source label itself.  This theorem scans all
-`104` configurations on every one of the first fourteen rails and proves
+The first freedom disappears at the source label itself.  This theorem scans
+all `104` configurations on every one of the first fourteen rails and proves
 that only one source-label packet can reach the marked deep band.  Its
-present anchor has exactly the forbidden polarity.
+present anchor has exactly the forbidden polarity.  The unique twelve-face
+which omits that source label must contain label one; its sole
+band-compatible configuration occupies a future half-digit disjoint from
+the complete marked source.
 
 The result is stronger than the four-vertex `V4` corollary suggested by
 THM-2804: no information about the other labels is needed.
@@ -76,7 +83,8 @@ packet back by `tau_delta` to the common source coordinate.
 
 A **source-labelled attachment** contains the label `delta=0` packet.  This
 is load-bearing terminology: a disconnected twelve-face which omits label
-zero is not a source attachment and is outside the theorem.
+zero is not a source attachment and is outside this first subargument.
+Section 5 treats that unique face separately.
 
 Every other factor in a proposed common atom is an intersection.  It
 therefore suffices to compare label zero's private half and present anchor
@@ -127,8 +135,9 @@ iff (edge,r_e(12)) is (0,0) or (1,12).                            (9)
 ```
 
 The two possible intersections are respectively all of `H_mark` and
-`(169,181)/182`.  No null seam is being promoted: every failed half ends at
-`168/182` or starts at `181/182` or later.
+`(169,181)/182`.  No null seam is being promoted.  Both surviving
+intersections equal `H_mark=(169,181)/182`.  The nearest failed half ends at
+`168/182`; every other failed half lies farther from the open marked band.
 
 ## 3. The full 104-configuration unit bank leaves one row
 
@@ -174,7 +183,7 @@ for every one of the first fourteen rails and every clock.  All translated
 labels, delayed prefixes, words, owners, and component selections are later
 intersections and cannot repair `(14)`.
 
-## 4. Universal labelwise consequence
+## 4. Every family containing label zero dies
 
 Consider any family of label packets on one of the first fourteen rails.
 The configurations may vary arbitrarily with the labels; they need not be
@@ -190,14 +199,14 @@ every arbitrary labelwise configuration mixture containing source label 0
 has empty intersection with the matching marked source base.           (15)
 ```
 
-This includes every twelve-of-thirteen mixture except the face which omits
-label zero.  It also includes smaller source-labelled families.  The
-four-vertex THM-2804 statement is an immediate corollary rather than a
-dependency.
+This includes twelve of the thirteen twelve-of-thirteen mixtures.  It also
+includes smaller source-labelled families.  The four-vertex THM-2804
+statement is an immediate corollary rather than a dependency.
 
-## 5. Sharp wrapped-label boundary
+## 5. The wrapped label-one row dies at the delayed digit
 
-The excluded face omitting label zero has a genuine geometric distinction.
+The sole twelve-face not covered by Section 4 omits label zero and therefore
+contains label one.  That label has a genuine geometric distinction.
 For label one,
 
 ```text
@@ -216,14 +225,68 @@ private half=(169,182)/182.                                      (17)
 
 Thus the wrapped root-zero half is not a fictitious endpoint artifact.  It
 is an honest unit after translation because the **target** root is one.
-Equation `(17)` does not assert that its rail, present factors, delayed
-prefix, or the other eleven labels meet.  It records the cheapest boundary
-which any theorem about faces omitting label zero must retain.
 
-In particular, one may not silently call such a face a source attachment or
-reuse the label-zero anchor `(12)`.
+But this unique row has
 
-## 6. Information ledger and modular reframe
+```text
+h=12,                    kappa=1,                                 (18)
+```
+
+so its ordinary delayed prefix is contained in the future half-digit
+
+```text
+25/26 < y={R x} < 1.                                             (19)
+```
+
+THM-2749's complete marked source prefix has `h=6,kappa=1`, hence is
+contained in
+
+```text
+13/26 < y={R x} < 14/26.                                        (20)
+```
+
+The slope-seven pullback does not change this coordinate:
+
+```text
+R tau_1=7 in Z
+implies {R(x+tau_1)}={R x}.                                      (21)
+```
+
+Therefore `(19)` and `(20)` are literal disjoint open intervals in the same
+source `y`-coordinate.  Exact reconstruction of the ordinary and semantic
+prefixes gives zero intersection on all seven clocks.  The label-one packet
+and the **full delayed** marked source are disjoint.
+
+This conclusion is intentionally not stated for the bare pre-prefix marked
+base.  The delayed future digit is load-bearing.
+
+## 6. Complete twelve-face classification
+
+Let `L` be any twelve-element subset of `F_13`, and choose arbitrary
+THM-2640 configurations independently for every label in `L`.
+
+- If `0 in L`, Section 4 kills the intersection at label zero's anchor.
+- If `0 notin L`, then `L=F_13\{0}` contains label one, and Section 5 kills
+  the full intersection at the future half-digit.
+
+Thus
+
+```text
+all thirteen arbitrary-configuration twelve-faces have empty intersection
+with the matching full THM-2749 marked source.                    (22)
+```
+
+The exact failure census is
+
+```text
+12 faces: label-zero anchor F_(ell,7) versus its complement;
+ 1 face:  label-one digit (25,26)/26 versus (13,14)/26.           (23)
+```
+
+An eleven-face omitting both labels zero and one avoids both arguments.
+It is the sharp residual; no positivity is asserted.
+
+## 7. Information ledger and modular reframe
 
 The connection from the configuration bank to the marked source is:
 
@@ -236,7 +299,8 @@ The connection from the configuration bank to the marked source is:
 | first reduction | marked deep band leaves two edge/root types |
 | second reduction | unit gate leaves the unique row `B` |
 | first failure | `F_(ell,7)` versus `F_(ell,7)^c` |
-| destroyed by omitting label zero | source anchor and source-attachment typing |
+| repair after omitting label zero | label-one future digit remains |
+| residual after both gates | an at-most-eleven face omitting labels zero and one |
 
 THM-2804's abstract `V4` and quotient `S3` organize four notable
 configurations, but the physical marked-band observable collapses the entire
@@ -244,41 +308,42 @@ configurations, but the physical marked-band observable collapses the entire
 abstract permutation: it is the distinguished source label together with
 its strict half and anchor polarity.
 
-## 7. Scope
+## 8. Scope
 
 The theorem does **not** prove:
 
-- a no-go for a twelve-face omitting label zero;
 - a no-go for the target marked endpoint;
 - a no-go outside the first fourteen THM-2749 rails;
 - a no-go for a different source carry or marked band;
-- positivity or emptiness of the wrapped label-one row after all factors;
+- a no-go for an eleven-face omitting labels zero and one;
 - a row exclusion or LRC(14).
 
-It proves a complete, arbitrary-configuration no-go for attaching any
-source-labelled THM-2640 family on the first fourteen rails to the
-corresponding THM-2749 marked source.
+It proves a complete arbitrary-configuration no-go for every twelve-label
+THM-2640 family on the first fourteen rails against the corresponding full
+THM-2749 marked source.
 
-## 8. Exact companion
+## 9. Exact companion
 
 Run
 
 ```bash
-python 04-computation/lrc14_universal_source_label_private_half_closure_thm2809.py
-python -O 04-computation/lrc14_universal_source_label_private_half_closure_thm2809.py
+python 04-computation/lrc14_universal_labelwise_twelve_face_closure_thm2809.py
+python -O 04-computation/lrc14_universal_labelwise_twelve_face_closure_thm2809.py
 ```
 
 Both modes must byte-match the stored transcript.  The companion pins the
 proved THM-2672 and THM-2749 scripts, rebuilds the first-fourteen-rail unit
 flags, verifies the pulled-root law for all `52*13` edge/kappa/height/label
 tuples, classifies all `26` strict half types, scans every one of the
-`14*104` source configurations, and independently records the wrapped
-label-one boundary.  It uses exact integer arithmetic, explicit exception
+`14*104` source configurations, independently records the wrapped label-one
+row, reconstructs both delayed prefix banks, and proves their disjointness
+on all seven clocks.  It uses exact integer arithmetic, explicit exception
 gates, and no truth-bearing Python assertions or floating point.
 
 Promotion requires an immutable independent hostile audit of the
-source-label typing, strict circular half endpoints, full unit-bank
-classification, anchor polarity, wrapped-label boundary, normal/optimized
-replay, dependency hashes, and documentation gates.
+label typing, strict circular half endpoints, full unit-bank classification,
+anchor polarity, pulled-back future-coordinate identity, delayed-prefix
+disjointness, twelve-face census, normal/optimized replay, dependency hashes,
+and documentation gates.
 
 QED, pending independent hostile audit.
