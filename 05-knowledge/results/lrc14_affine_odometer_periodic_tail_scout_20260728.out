@@ -1,0 +1,21 @@
+LRC14 affine-odometer periodic-tail scout
+status=VERIFIED-EXACT SCOUT; tail/clock/rail-present level
+p=13; R=4826809; S=371293; lift_alphabet=(-371295, -371294, 371294, 371295)
+tail_skew=y_next={13y}; N_next=13N+k+floor(13y) mod R; unique_periodic_fibre=True
+symmetric_two_cycle=speed14_resonant_FORCED_BY_13_PLUS_1
+period_search_n=3:words=64:central=64:clock_compatible=0:minimal_period_hist=():speed14_resonant=0
+period_search_n=4:words=256:central=256:clock_compatible=32:minimal_period_hist=((1, 2), (2, 6), (4, 24)):speed14_resonant=4
+period_search_n=5:words=1024:central=1024:clock_compatible=0:minimal_period_hist=():speed14_resonant=0
+period_search_n=6:words=4096:central=4096:clock_compatible=128:minimal_period_hist=((1, 2), (2, 6), (6, 120)):speed14_resonant=4
+period_search_n=7:words=16384:central=16384:clock_compatible=0:minimal_period_hist=():speed14_resonant=0
+current_filters_n=4:(rail_hits,present_hits,word_hits)_hist=(((4, 2, 0), 4), ((4, 3, 0), 16), ((4, 4, 0), 4)):min_target_a_failure_margin=1433/4080
+current_filters_n=6:(rail_hits,present_hits,word_hits)_hist=(((6, 3, 0), 12), ((6, 4, 0), 48), ((6, 5, 0), 48), ((6, 6, 0), 12)):min_target_a_failure_margin=847565/2413404
+period4_witness_lifts=(-371295, 371294, -371295, 371295)
+period4_witness_x=(Fraction(69684274489, 137853665040), Fraction(68169392917, 137853665040), Fraction(69684274321, 137853665040), Fraction(68169390733, 137853665040))
+period4_witness_y=(Fraction(16489, 28560), Fraction(14437, 28560), Fraction(16321, 28560), Fraction(12253, 28560))
+period4_witness_edges=((4, 3), (3, 4), (4, 3), (3, 4)); carries=(7, 5, 7, 5); future_digits=(7, 6, 7, 5); root_steps=(9, 2, 9, 4)
+period4_witness_common_source=1; rail_digits=(0, 12, 0, 12); rail_present_all_strict=True
+period4_witness_min_margins=rail:58260191/137853665040;present:15143/137853665040
+delayed_word_hostile=every exact n=4,6 state fails first word factor D_c2; witness margins=(Fraction(1459, 4080), Fraction(1433, 4080), Fraction(12083, 28560), Fraction(1457, 4080))
+verdict=PASS: variable carries create exact nonresonant periods 4/6 and evade scalar-dilation clock nilpotence, but the inherited delayed word kills this finite near-carry alphabet
+SCOPE: no full packet transition, unit transport, endpoint gluing, row exclusion, or LRC14
