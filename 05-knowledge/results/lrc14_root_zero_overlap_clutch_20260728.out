@@ -1,0 +1,32 @@
+LRC14 ROOT-ZERO OVERLAP CLUTCH AUDIT
+status=FINITE-EXACT partial physical chart isomorphism with recomputed unit
+R=4826809 T=297836897838480 tau_grid=431933040 deep_shift=14
+chart_convention=script edge1:right epsilon0; edge0:left epsilon1
+adjacent_chart_law=H^R_r intersect H^L_(r+1)=(14r+1,14r+13)/182 for all 13 roots
+forward_reverse_overlap=H^R_12 intersect T^-1(H^L_1)=(169,181)/182 <-> (1,13)/182=H^R_0 intersect H^L_1
+delayed=11195237/20792408 eta=799033/10396204 eta_minus_1/14=56447/10396204
+witness=n6715->n6716 q=47850889647341/100360982066072 qprime=47851035194197/100360982066072 tau=7/4826809
+deep_coordinates=(125553481/742586,799033/742586) overlap_grid_margin=56447/742586
+overlap_q_margin=56447/100360982066072 inherited_radius=1/100360982066072 ratio=56447
+witness_semantics=E3->D6 Q_(3,{1,2}) at both endpoints
+rail8_metadata=(1, 4, 12) common_segment=(141869054887560, 142120818960120, 27581135604)
+reverse_clock=(1,4) delayed_active_clocks=(1, 2, 3, 4, 5, 6)
+source_full_target_labels=s(0, 1, 2, 3, 8, 9, 10, 11, 12) t(3, 4, 5, 6, 7, 8, 9, 10, 11)
+target_full_target_labels=s(0, 1, 2, 3, 8, 9, 10, 11, 12) t(3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+common_full_target_labels=s(0, 1, 2, 3, 8, 9, 10, 11, 12) t(3, 4, 5, 6, 7, 8, 9, 10, 11) chosen=(0,3)
+local_relative_radii=(Fraction(1, 100360982066072), Fraction(1, 100360982066072)) coefficient_carrier_slack=56447/100360982066072
+natural_uncut_equal_rails=(0, 4, 5, 6, 7, 8, 9, 10, 11, 12) count=10/14
+equal_weight_restricted_unit_rails=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) count=14/14
+equal_weight_amplitude_range=(5356995209425705080755520,5582473764269438064188160)
+rail8_overlap_vector_source=(0, 5359949020444386606638400, 5359949020444386606638400, 5359949020444386606638400, 5359949020444386606638400, 5359949020444386606638400, 5359949020444386606638400)
+rail8_overlap_vector_target=(0, 5359949020444386606638400, 5359949020444386606638400, 5359949020444386606638400, 5359949020444386606638400, 5359949020444386606638400, 5359949020444386606638400)
+rail8_profiles_mod13=source_root12:(11, 0, 0, 0, 0, 0) target_root1:(2, 0, 0, 0, 0, 0)
+clock_character_law=P mod Phi_7=(-5359949020444386606638400, 0, 0, 0, 0, 0); P(zeta_7^k)=-5359949020444386606638400 for k=1..6
+full_half_control=UNEQUAL source_support=7 target_support=6
+outside_overlap_control=R0\L1=(0,1) and L1\R0=(13,14) have no opposite-edge rechart
+old_flank_control=THM2672 strip=(Fraction(181, 1), Fraction(67204045, 371293)) lies beyond overlap endpoint181
+edge_label_control=physical point fixed but (right,root0)->(left,root1); not edge-preserving
+mechanism=translate by 7/R; restrict to both rail/present-complement supports and the open tooth overlap; rechart; recompute before determinant
+next_test=retain one common U_(s,t), e.g. (0,3), and D^-6 Q_(3,{1,2}) inside the overlap integral, then recompute equality and both units
+SCOPE: all 13 geometric adjacent overlaps; natural coefficient equality on 10/14 source-one rails; equal-weight restricted units on 14/14; one explicit semantic rail8 pair; no global action, endpoint amplitude, row exclusion, or LRC14
+ALL CHECKS PASSED
