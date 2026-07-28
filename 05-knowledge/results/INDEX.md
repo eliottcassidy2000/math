@@ -19,13 +19,25 @@
   `h` and endpoint-dipole `tau` remain distinct dual groups; semantic root
   `6` is a non-dual packet label, and their joint coefficient is open.  Hashes:
   `fdbd62c3` / `07b5ba7c`.
+- `lrc14_root_zero_overlap_clutch_20260728.py` -> matching `.out` [THM-2744
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Translation by
+  `7/13^6` sends the relative-present right-root-12 chart into right root zero,
+  whose physical half-tooth overlaps the lawful left-root-1 chart on
+  `(1,13)/182`.  Ten whole rail overlaps intertwine naturally and exact
+  equal-weight cuts repair all fourteen.  Rail `8` contains a strict semantic
+  `E3 -> D^6 -> Q_(3,{1,2})` pair with common lawful `(s,t)` and identical
+  vector `(0,a,...,a)`, a private unit at both roots with all six nontrivial
+  clock characters.  The fork/target factors are not yet inside the integral;
+  no endpoint current or row exclusion follows.  Hashes: `e2798147` /
+  `ba9d0a67`.
 - `lrc14_relative_present_semantic_lift_probe_20260728.py` -> matching `.out`
-  [FINITE-EXACT RELATIVE-PRESENT BOUNDARY].  Fourteen source-one rails contain
-  `12848` genuine deepest semantic forks.  The relative-present coefficient
-  retains `12582` unit endpoints and `2,166,112` directed reverse-clock scalar
-  pairs, but every lift crosses the zero-root half-tooth clutch while the lawful
-  endpoint lies on the opposite edge.  This is not THM-2716's endpoint/ghost
-  arm and supplies no private-root edge.  Hashes: `f16754bd` / `861e920b`.
+  [FINITE-EXACT PRECURSOR INCORPORATED IN THM-2744].  Fourteen source-one rails
+  contain `12848` genuine deepest semantic forks.  The relative-present
+  coefficient retains `12582` unit endpoints and `2,166,112` directed
+  reverse-clock scalar pairs.  Edge-preserving transport reaches root label
+  zero, but MISTAKE-310 retracts the former inference of physical emptiness;
+  THM-2744 supplies the partial overlap rechart.  Hashes: `f16754bd` /
+  `861e920b`.
 - `jc_boundary_relation_presentation_f4_scout_20260728.py` -> matching `.out`
   [PROOF-QUALITY CANDIDATE + VERIFIED-EXACT, NOT CANON].  For a
   `C3`-equivariant rational SNC completion,

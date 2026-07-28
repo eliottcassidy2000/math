@@ -85,6 +85,7 @@
     `12/13` cap for the full slope-seven family.  Carry-forgetting still turns
     thirteen disjoint `Delta^11`s into a false `boundary Delta^12`; do not infer
     pointwise endpoint emptiness or export the cap to another carrier.
+27g. **Projection and atlas labels are not physical emptiness.** THM-2720 closes only frozen `t=0`; THM-2742 restores `t` and makes `936/1183` sections positive.  MISTAKE-310/THM-2744 likewise separate an edge-preserving right-root-zero label from its open physical overlap with left root one.  Keep full-row failure, overlap-subcarrier success, target activity, private-root transport, and endpoint current distinct; recompute coefficients after every chart restriction and before unit tests.
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211 and
