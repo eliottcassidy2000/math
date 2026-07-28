@@ -317,7 +317,8 @@ support.  Start from THM-2616's raw positive `q=h` diagonal **before** the
 seven-clock unit test.  For every one of its `162` rails, every future clock,
 every `h`, and every nonzero later probe `r`, split (17) into the two halves
 in (19) before delayed integration.  All `61,248` nonempty fine tooth
-restrictions split exactly into left plus right.
+partition candidates over nonempty pre-probe overlaps split exactly into left
+plus right; a candidate half may itself be empty.
 
 For a base rail cell retain the support signature
 
@@ -462,9 +463,9 @@ Both executions byte-match
 The companion rebuilds the old wall independently from the exact packet,
 checks the strict seams, all affine gauges, both frozen-carrier censuses, and
 the full common-`x` middle restriction.  Four deterministic shards then
-split every nonempty later probe tooth on the raw `q=h` carrier, check all
-`61,248` additive partitions, and reproduce (28)--(29b).  It retains the
-future clock, exhausts all `156` affine bijections, and checks (29c)--(29e).
+check all `61,248` candidate additive partitions over nonempty pre-probe
+overlaps on the raw `q=h` carrier and reproduce (28)--(29b).  They retain the
+future clock, exhaust all `156` affine bijections, and check (29c)--(29e).
 A separate rational construction verifies (22)--(26).  Every logical
 decision is an explicit optimized-mode guard.
 
