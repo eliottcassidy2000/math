@@ -69,11 +69,14 @@ kills it.  THM-2782 has three positive physical arms, but all `567` opposite
 cofibres are disjoint and its surviving determinant sector is virtual.
 THM-2788 separates the physical modular odometer by its carry Bockstein;
 `+169` is `Z2`.  THM-2790 makes every canonical endpoint central response and
-mode nonzero, but only on the coefficient quotient.  THM-2791 now transports
-every literal rail-sheet ancestry copy along one physical graded chord, but
-constructs no endpoint origin.  Next: map that fixed rail sheet to one
-allocated endpoint atom and the root/Cech correction.  THM-2727 is the
-fixed-rail no-go.  Ledger `165`; no row is excluded.
+mode nonzero, but only on the coefficient quotient.  THM-2792/2802 close
+abstract coefficient transport/origin.  THM-2803 makes thirteen profiles
+projective `13`-arcs; each pair is `[13,2,12]` MDS, excluding
+scalar-translation transport.  THM-2791/2807 give a same-ancestry chord and
+address simplex, still without endpoint allocation.  THM-2797 exhausts fixed
+source-twelve switches.  Next is **RESERVED / UNPROVED
+THM-2806** fixed-sheet allocation plus filtered root/Cech correction.
+Ledger `165`; no row is excluded.
 
 ### Independent routes that remain live
 
