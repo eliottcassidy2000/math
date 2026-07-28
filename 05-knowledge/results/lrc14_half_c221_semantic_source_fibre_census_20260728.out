@@ -1,0 +1,38 @@
+LRC14 HALF/C221 FULL PACKET-FIBRE SEMANTIC SOURCE CENSUS
+status=FINITE-EXACT STOPPING/RE-ROOT CERTIFICATE; canonical typed row
+row=(1, 14, 27, 40, 53, 66, 13, 2197, 742586); clocks=(2, 4, 6)
+semantic_chronology=E_j at x -> ordinary D^(2j)(x) in Q_(j,word); affine cycle edges are separate arrows
+half_candidate_semantics=(((Fraction(11, 24), 0, None), 139314), ((Fraction(11, 24), 2, None), 17484), ((Fraction(13, 24), 0, None), 154648), ((Fraction(13, 24), 2, None), 21222))
+half_unique_filter_counts=((('present', Fraction(11, 24), 0), 75865), (('present', Fraction(11, 24), 2), 10090), (('present', Fraction(13, 24), 0), 77324), (('present', Fraction(13, 24), 2), 10611), (('primitive_unit', Fraction(11, 24), 0), 69657), (('primitive_unit', Fraction(11, 24), 2), 8742), (('primitive_unit', Fraction(13, 24), 0), 77324), (('primitive_unit', Fraction(13, 24), 2), 10611), (('private_root', Fraction(11, 24), 0), 75865), (('private_root', Fraction(11, 24), 2), 10090), (('private_root', Fraction(13, 24), 0), 77324), (('private_root', Fraction(13, 24), 2), 10611), (('rail', Fraction(11, 24), 0), 75865), (('rail', Fraction(11, 24), 2), 10090), (('rail', Fraction(13, 24), 0), 77324), (('rail', Fraction(13, 24), 2), 10611), (('rail_without_present', Fraction(11, 24), 0), 293997), (('rail_without_present', Fraction(11, 24), 2), 11406), (('rail_without_present', Fraction(11, 24), 3), 12848), (('rail_without_present', Fraction(13, 24), 0), 293997), (('rail_without_present', Fraction(13, 24), 2), 11406), (('rail_without_present', Fraction(13, 24), 3), 12848), (('raw', Fraction(11, 24), 0), 308783), (('raw', Fraction(11, 24), 1), 38256), (('raw', Fraction(11, 24), 2), 11406), (('raw', Fraction(11, 24), 3), 12848), (('raw', Fraction(13, 24), 0), 308783), (('raw', Fraction(13, 24), 1), 38256), (('raw', Fraction(13, 24), 2), 11406), (('raw', Fraction(13, 24), 3), 12848), (('shallow_nonzero', Fraction(11, 24), 0), 293997), (('shallow_nonzero', Fraction(11, 24), 2), 11406), (('shallow_nonzero', Fraction(11, 24), 3), 12848), (('shallow_nonzero', Fraction(13, 24), 0), 293997), (('shallow_nonzero', Fraction(13, 24), 2), 11406), (('shallow_nonzero', Fraction(13, 24), 3), 12848))
+half_E3_reroot_counts=((('E3_rail_and_private_root_without_present', Fraction(11, 24)), 12848), (('E3_rail_and_private_root_without_present', Fraction(13, 24)), 12848))
+half_E3_present_union=EMPTY across all 13 present labels; all E3 rows retain rail+private-root support when present is removed
+half_reciprocal_cycle_count=417971564
+half_cycle_source_pairs=(((0, 0), 312418764), ((0, 2), 98768480), ((2, 2), 6784320))
+half_participating_semantics=(((0, None), 147140), ((2, None), 21832))
+half_displayed_sources=(0, 0)
+half_pair_stage_counts=(('both_root_legs', 417971564), ('nonzero_deltas', 417971564), ('one_root_leg', 417971564), ('reverse_clock', 506308912))
+half_E3_pair_stage_counts=()
+half_E3_stage_participating_candidates=()
+half_E3_witness=(first,second,lifts,semantic_radius,one_cycle_radius)=None
+half_strict_E3_to_fork_cospan=(candidate,radius)=((Fraction(54102827, 115843416), Fraction(11, 24), (1, 2)), Fraction(1, 301082946198216))
+C221_candidate_semantics=(((Fraction(13, 17), 0, None), 5377), ((Fraction(13, 17), 2, None), 589), ((Fraction(4, 17), 0, None), 5623), ((Fraction(4, 17), 2, None), 637))
+C221_unique_filter_counts=((('full_fibre', Fraction(13, 17), 0), 4262288), (('full_fibre', Fraction(13, 17), 1), 313680), (('full_fibre', Fraction(13, 17), 2), 119089), (('full_fibre', Fraction(13, 17), 3), 131752), (('full_fibre', Fraction(4, 17), 0), 4262288), (('full_fibre', Fraction(4, 17), 1), 313680), (('full_fibre', Fraction(4, 17), 2), 119089), (('full_fibre', Fraction(4, 17), 3), 131752), (('nonconstant_clock_sector', Fraction(13, 17), 0), 260740), (('nonconstant_clock_sector', Fraction(13, 17), 2), 8555), (('nonconstant_clock_sector', Fraction(4, 17), 0), 260740), (('nonconstant_clock_sector', Fraction(4, 17), 2), 8555), (('present', Fraction(13, 17), 0), 56578), (('present', Fraction(13, 17), 2), 7144), (('present', Fraction(4, 17), 0), 56490), (('present', Fraction(4, 17), 2), 7183), (('primitive_unit', Fraction(13, 17), 0), 5377), (('primitive_unit', Fraction(13, 17), 2), 589), (('primitive_unit', Fraction(4, 17), 0), 5623), (('primitive_unit', Fraction(4, 17), 2), 637), (('rail', Fraction(13, 17), 0), 5615), (('rail', Fraction(13, 17), 2), 637), (('rail', Fraction(4, 17), 0), 5623), (('rail', Fraction(4, 17), 2), 637), (('raw_forced_carry', Fraction(13, 17), 0), 331973), (('raw_forced_carry', Fraction(13, 17), 1), 28534), (('raw_forced_carry', Fraction(13, 17), 2), 10786), (('raw_forced_carry', Fraction(4, 17), 0), 331973), (('raw_forced_carry', Fraction(4, 17), 1), 28534), (('raw_forced_carry', Fraction(4, 17), 2), 10786))
+C221_E3_reroot_counts=((('E3_predecessor_carry', Fraction(13, 17), 12), 65653), (('E3_predecessor_carry', Fraction(13, 17), 6), 66099), (('E3_predecessor_carry', Fraction(4, 17), 0), 65653), (('E3_predecessor_carry', Fraction(4, 17), 6), 66099))
+C221_reciprocal_pair_count=902300; paired_initial_states=3441
+C221_cycle_source_pairs=(((0, 0), 668922), ((0, 2), 218306), ((2, 2), 15072))
+C221_participating_semantics=(((0, None), 6275), ((2, None), 890))
+C221_pair_stage_counts=(('common_active_rail_source', 902300), ('common_primitive_unit_source', 902300), ('reverse_clock', 902300))
+C221_E3_pair_stage_counts=()
+C221_E3_stage_participating_candidates=()
+C221_E3_witness=(start,following,common/lifts/radii)=None
+C221_variable_root_E3_filter_counts=((('E3_carry', Fraction(13, 17), 12), 65653), (('E3_carry', Fraction(13, 17), 6), 66099), (('E3_carry', Fraction(4, 17), 0), 65653), (('E3_carry', Fraction(4, 17), 6), 66099), (('clock_sector', Fraction(13, 17), 12), 53227), (('clock_sector', Fraction(13, 17), 6), 53590), (('clock_sector', Fraction(4, 17), 0), 53227), (('clock_sector', Fraction(4, 17), 6), 53590))
+C221_variable_root_E3_candidate_counts=()
+C221_extremal_root_law=phase4/17:carries(0,6)->(left1,right12);phase13/17:carries(6,12)->(left1,right12);the complementary edge has root0
+C221_variable_root_E3_pair_census=(0, (), (0, 0))
+C221_variable_root_E3_witness=None
+C221_strict_E3_to_fork_cospan=(candidate,radius)=((Fraction(13074908, 82055753), Fraction(4, 17), (1, 2)), Fraction(11, 853068347561612))
+bridge_verdict=both raw D^6 fibres contain strict E3-to-fork semantic cospans; inherited half/C221 root-6 candidate universes contain no E3, and the complete extremal-root 1/12 C221 re-root also dies exactly at the present factor
+THM2305_vs_sidecars=only E3, ordinary D^6, and the terminal fork are required by the semantic cospan; rail/present/clock/carry/root/unit conditions are auxiliary local-cycle compatibility sidecars and may be re-rooted without changing THM2305
+attachment_scope=the ordinary E3-to-D^6-fork cospan is strict and positive, but no retained affine-cycle state shares its E3 source; half first loses E3 at present typing, inherited C221 first loses it at forced carry/root6, and all-carry C221 again loses it at present typing
+SCOPE: canonical typed row and declared packet fibres only; no uniform row reduction, endpoint current, row exclusion, or LRC14
+ALL CHECKS PASSED
