@@ -2,8 +2,8 @@
 id: THM-2776
 title: "One-long-wall signed-component imbalance determinant classification"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For k-1 independent B_k roots and the long wall h=(1,...,1),
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For k-1
+  independent B_k roots and the long wall h=(1,...,1),
   the signed support graph has one deficient unanchored tree U; every other
   component is a half-edge tree or an unbalanced signed cycle.  If c is the
   number of cycle components and epsilon is the +/-1 tree kernel, then the
@@ -17,6 +17,13 @@ status: >
 source: >
   a4-resolvent-next-gate/one-long-wall-imbalance-2026-07-28;
   root/one-long-wall-classification-completion-2026-07-28
+audit: >
+  thm2777-hostile-audit/2026-07-28 independently rederived the signed-
+  multigraph component classification, cofactor formula, zero boundary,
+  attainable values, prime/path consequences, and character no-go; checked
+  the complete census arithmetic; replayed normal/-O/stored output and LF
+  hashes; and tested 12,000 additional random frames in ranks 7 through 12
+  with an independent exact-rank routine: ACCEPT.
 depends_on:
   - THM-2770-tree-incidence-a-d-weyl-clutch-and-four-vertex-fan-dichotomy
   - THM-2774-tree-path-smith-index-ladder-and-binary-ternary-lattice-defects
@@ -31,8 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2776 -- one long wall and the signed-component imbalance
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2774 isolates the canonical path frame and its `Z/k` quotient.  The
 surrounding one-long-wall arithmetic admits a complete classification.
@@ -67,9 +73,11 @@ rank_Z N=k-1.                                             (4)
 ```
 
 Represent `e_i` by a half-edge at vertex `i`, and represent
-`e_i-s e_j`, `s in {+/-1}`, by a signed ordinary edge.  Connected
-components refer to the ordinary support graph; an isolated vertex is a
-component, and half-edges do not join vertices.
+`e_i-s e_j`, `s in {+/-1}`, by a signed ordinary edge.  This is a signed
+**multigraph**: the opposite-sign rows `e_i-e_j,e_i+e_j` are retained as
+two parallel ordinary edges.  Connected components refer to this ordinary
+multigraph after forgetting signs but not multiplicities; an isolated
+vertex is a component, and half-edges do not join vertices.
 
 For a component let
 
@@ -96,8 +104,9 @@ The inequalities in `(5)--(6)` leave only three row-independent types.
    graph is a tree.  This is the unique component `U`.
 2. **Anchored tree.**  Here `r=v`, `a=1`, and `q=v-1`.  Leaf elimination
    against the half-edge gives determinant `+/-1`.
-3. **Unbalanced cycle.**  Here `r=v`, `a=0`, and `q=v`.  The graph is
-   unicyclic.  Switching signs along a spanning tree reduces its last row to
+3. **Unbalanced cycle.**  Here `r=v`, `a=0`, and `q=v`.  The multigraph is
+   unicyclic, including the possible two-edge parallel cycle.  Switching
+   signs along a spanning tree reduces its last row to
    `1-product_cycle(s)`.  Row independence forces the cycle unbalanced, so
    the determinant is `+/-2`.
 
@@ -143,9 +152,10 @@ In particular, under the rank hypothesis `(4)`,
 det[N;h]=0  iff  sum_U epsilon=0.                        (11)
 ```
 
-This is the sharp zero boundary: `U` has even size and its two switched
-sign classes have equal cardinality.  If `(4)` fails, the full determinant
-is of course also zero, but for the earlier row-dependence reason.
+This is the sharp zero boundary: `U` has even size and its `+1` and `-1`
+kernel vertex classes have equal cardinality.  If `(4)` fails, the full
+determinant is of course also zero, but for the earlier row-dependence
+reason.
 
 ## 4. Exact attainable magnitudes
 
@@ -239,7 +249,7 @@ tree extremizers.  Normal and optimized runs byte-match the stored
 transcript.
 
 ```text
-PROVED HERE (candidate):  unique deficient signed-tree component;
+PROVED HERE:              unique deficient signed-tree component;
                           anchored-tree/unbalanced-cycle square blocks;
                           exact determinant factorization (10);
                           full-rank zero boundary (11);
@@ -254,4 +264,4 @@ NOT PROVED:               a global arrangement cokernel;
                           Graceful Tree, JC(2), DC(2), or LRC(14).       (18)
 ```
 
-QED (candidate).
+QED.
