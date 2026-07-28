@@ -34,6 +34,24 @@ Format per entry:
   edge-preserving relation survive; a global target action, endpoint current,
   row exclusion, and LRC(14) still do not follow.
 
+## MISTAKE-311 (2026-07-28, THM-2727 evidence and provenance) -- a reserved candidate carried a stale script hash and cited an empty namespace for a proved formula
+
+- **What was recorded:** reserved/provisional THM-2727 declared a script
+  SHA-256 beginning `1e95f268` and called its private-root equation the
+  “THM-2717 formula.”
+- **Why it was wrong:** the tracked LF-normalized script hashes to
+  `a6368190...`; normal and optimized executions still byte-match the stored
+  transcript.  THM-2717 remains an `UNPROVED EMPTY STUB`, while the formula
+  `r=2c+floor(d/13)+1_(edge=left) mod13` is proved in THM-2640.  The same
+  synthesis also blurred fourteen coefficient-only constant matches with the
+  physical signature census, whose intersection is actually zero.
+- **Repair / survivor:** THM-2727 now depends explicitly on THM-2640, names
+  THM-2717 only as related provisional work, declares the tracked hash, and
+  separates fourteen non-source constant coefficient matches from zero
+  same-clock physical signature matches.  Its exact fixed-rail Frobenius
+  no-go survives unchanged and remains reserved/provisional; it does not
+  constrain THM-2742, prove THM-2744, or decide the joint `C13` coefficient.
+
 ## MISTAKE-308 (2026-07-28, THM-2636/2692 Kummer field typing) -- a spectral nonsquare was identified with its physical square before pullback
 
 - **What was recorded:** the first promoted THM-2692 text wrote

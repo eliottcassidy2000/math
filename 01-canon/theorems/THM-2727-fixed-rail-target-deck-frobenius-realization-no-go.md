@@ -15,6 +15,7 @@ status: >
 source: root/bs13-fixed-rail-target-deck-2026-07-28
 depends_on:
   - THM-2041-frobenius-stability-of-exact-period-projectors
+  - THM-2640-predecessor-carry-private-root-atlas-and-target-action-clutching-no-go
   - THM-2698-central-half-odometer-full-local-cycle-and-semantic-sidecar-boundary
   - THM-2706-relative-segal-macro-cycle-and-minimal-ghost-midpoint-completion
   - THM-2716-c4-arm-transporter-groupoid-and-relative-degree-holotopy-boundary
@@ -23,7 +24,7 @@ related:
   - THM-2717-minimal-c2-safe-ghost-transit-rebuild-and-deletion-cancellation-boundary
 script: 04-computation/lrc14_fixed_rail_target_deck_frobenius_no_go_thm2727.py
 output: 05-knowledge/results/lrc14_fixed_rail_target_deck_frobenius_no_go_thm2727.out
-script_sha256: 1e95f2688f74e6791577b5fdb0078f9db701bcb78ea27f5437776f6633633b2b
+script_sha256: a636819051de5b8b7045e1b5eb1ca694d1408b227e33dad17f17d236a70a91fc
 output_sha256: f4cc6e406d8361a856aafab52fdba5fad8578904007da5d80825c5ae53f00504
 hash_basis: LF-normalized bytes
 ---
@@ -76,7 +77,7 @@ Thus the two forced slices are
 (h,kappa)=(0,1) -> (12,0).                               (4)
 ```
 
-The THM-2717 private-root formula is
+The proved THM-2640 private-root formula is
 
 ```text
 r=2c+floor(d/13)+1_(edge=left) mod 13.                   (5)
