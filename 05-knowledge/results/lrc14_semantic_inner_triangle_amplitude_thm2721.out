@@ -1,0 +1,15 @@
+LRC14 SEMANTIC INNER TRIANGLE AMPLITUDE AUDIT
+p=13 R=4826809 T=297836897838480 semantic_nodes=304
+triangle=(0, 13, 26) gains=(91, 91, -182) gain_sum=0
+following_grid_shift=5615129520
+following_pieces=((139104562225860, 139104590874480, 27582102210), (139110177355380, 139110206004000, 27582102210), (139115792484900, 139115821133520, 27582102210))
+following_piece_length=28648620
+current_piece=(148163522522400, 148163551171020, 27580222516)
+raw_density=760720516410855360360 raw_integral=2089891528601250990/1792160394037
+abstract_C3_nontrivial_DFT=(Fraction(0, 1), Fraction(0, 1)),(Fraction(0, 1), Fraction(0, 1))
+following_support_intersect_current_rail2=empty
+following_support_intersect_current_atom=empty
+endpoint_current_reanchor=midpoint_hits=0 whole_I_hits=0
+changed_source_whole_I_hits=(0, 169, 338, 507)
+scope=equal_raw_parallel_arms_not_chronological_endpoint_current
+ALL CHECKS PASSED
