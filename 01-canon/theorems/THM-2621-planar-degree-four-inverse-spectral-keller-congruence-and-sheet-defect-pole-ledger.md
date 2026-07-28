@@ -19,7 +19,10 @@ status: >
   and every divisor residue is zero.  Branchwise Laurent cancellation, a
   localized power-sum potential, and in the D4 lane a relative opposite-pair
   potential survive before the full trace; these are explicit realization
-  gates absent from the PDE alone.  A rational D4 sheet-defect hostile permits
+  gates absent from the PDE alone.  At every D4 deck-pole prime, some affine
+  determinant-one source gauge makes the anti-invariant potential polar
+  there, although its differential remains exact with zero residue.  A
+  rational D4 sheet-defect hostile permits
   arbitrary residue once polynomial realization is removed.  An exact
   punctured C4 hostile also satisfies the entire
   PDE with c=1 but has primitive-coordinate discriminant and b-denominator
@@ -34,6 +37,8 @@ related:
   - THM-2546-integral-coordinate-dichotomy-and-parity-lens-scope
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
   - THM-2612-d4-deck-pole-tax-and-depressed-resolvent-gcd-gate
+  - THM-2627-d4-jelonek-quadratic-character-rank-and-component-gate
+  - THM-2628-d4-opposite-pair-escape-and-deck-pole-census
   - MISTAKE-301
 script: 04-computation/jacobian_planar_degree4_inverse_spectral_thm2621.py
 output: 05-knowledge/results/jacobian_planar_degree4_inverse_spectral_thm2621.out
@@ -589,12 +594,33 @@ G_tau^2 in E_2=L^tau,       Norm_(L/E_2)(G_tau)=-G_tau^2. (33b)
 For deck transformations `g`, the family `G_g=H_F-g(H_F)` obeys the action
 cocycle identity `G_(gh)=G_g+g(G_h)`.  A shear `y -> y+s x` changes `G_tau`
 by `(s/2)(x^2-tau(x)^2)` (and the transverse shear does the analogous job for
-`y`).  This gives a gauge-dependent exact probe for the coordinate pole from
-THM-2612; proving that some gauge forces a surviving pole in `G_tau` is a
-separate open step, since leading anti-invariant terms can cancel.  The
-descended square lives in the root-field
-quadratic intermediate `E_2`, not automatically in THM-2598's distinct
-matching quadratic.  This is a typed next object, not a monodromy exclusion.
+`y`).  This closes the gauge-existence step.  Let `mathfrak e` be a pole prime
+of `tau`.  The affine functions `x,y` are regular at `mathfrak e`, while at least one of
+`tau(x),tau(y)` is polar by THM-2612.  If `tau(x)` is polar, then
+`x^2-tau(x)^2` is polar, and in the quotient of the local field by its
+valuation ring at `mathfrak e` at most one scalar `s` can cancel the principal
+part of `G_tau`.  Thus all but at most one shear parameter make the new
+`G_tau` polar at `mathfrak e`.  If only `tau(y)` is polar, use
+`x -> x+s y`.  If one also wants to retain the primitive/monic chart of
+Section 1, exclude its finite set of bad shear parameters as well; the ground
+field is infinite.  Consequently,
+
+```text
+for every deck-pole prime mathfrak e, some affine SL_2 source gauge
+makes G_tau polar at mathfrak e.                         (33b')
+```
+
+This is still an exact-potential pole, not a residue obstruction:
+`dG_tau` has zero residue at every divisor.
+
+In the notation of THM-2627, `L=E=Omega^H`, and the intermediate called
+`E_2=L^tau` here is exactly `M_deck=Omega^J=E^tau`, not the distinct
+matching/discriminant field `M_Delta=Omega^V`.  Moreover
+when `G_tau!=0`, its squareclass in `M_deck` describes the upper quadratic
+extension `E/M_deck`; the pole-forcing gauge above guarantees this nonzero
+condition.  It does not say that this squareclass
+generates `M_deck/K` or has the deck-character parity vector.  The square may
+even lie in `K`.  This is a typed pole probe, not a monodromy exclusion.
 
 There is a complementary invariant-channel gate before the quadratic
 `M/K` trace.  Put

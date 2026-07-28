@@ -348,13 +348,13 @@ Classify profiles under support operations; study analytic continuation and auto
   `S_(F o F)=V(LH)` with `L,H` distinct irreducibles.  Composite
   discriminant parity is exact on three slices (`H` odd, `L` even) but remains
   outside global canon; all higher component counts remain open.
-  For G1, THM-2598/MISTAKE-297 leave `D4,A4,S4`; THM-2612
-  forces the `D4` deck involution to pay a Jelonek pole but does not exclude it.
-  Corrected THM-2621 encodes degree four by a marked inverse quartic `(f,b)`,
-  four symplectic PDEs, and exact sheet-defect poles.  MISTAKE-301 repairs its
-  trace lane: `x dy-kappa^(-1)P dQ=dH`, so `omega=d Tr(H)` and every traced
-  residue vanishes.  Retain branchwise `Res(x dy)=0` and the anti-invariant
-  `H-tau(H)`; their compatibility with the resolvent boundary is open.
+  For G1, THM-2598/MISTAKE-297 leave `D4,A4,S4`.  THM-2627 forces `D4` to
+  have at least two Jelonek components; THM-2628 classifies deck-pole
+  opposite-pair ownership.  THM-2633's separation/two-component form is
+  **RESERVED**.  Corrected THM-2621 gives the marked-quartic PDE and
+  sheet-defect poles.  Its trace is `d Tr(H)`; a shear forces `H-tau(H)` polar
+  at any chosen deck-pole prime, but exactness kills residues.  No
+  contradiction follows.
   THM-2465 makes the affine point-cap face planar degree four; G1 remains open.
   At degree eighteen, THM-2314/2316 close sparse supports,
   THM-2371/2376 close `H_2`, and audited THM-2406 forces THM-2389's `H_4`

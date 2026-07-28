@@ -7,10 +7,11 @@ status: >
   monodromy D4 has at least two irreducible components in its reduced
   Jelonek hypersurface.  The source-deck and resolvent/discriminant
   quadratic characters give two independent Kummer parity vectors on those
-  components.  Their supports may overlap, central inertia is invisible to
-  both characters, and neither quadratic normalization is thereby a
-  polynomial source quotient or a Keller map.  The theorem is dimension
-  independent; no D4 exclusion, JC(2), G1, or DC(2) closure follows.
+  components.  More generally dim Hom(G,C_l) is bounded by the number of
+  Jelonek components for every prime l.  Their supports may overlap, central
+  inertia is invisible to both D4 characters, and neither quadratic
+  normalization is thereby a polynomial source quotient or a Keller map.
+  No D4 exclusion, JC(2), G1, or DC(2) closure follows.
 source: codex-2026-07-27-d4-jelonek-parity-rank
 depends_on:
   - THM-2465-g1-exclusion-package-for-degree-four-twojet-keller
@@ -41,11 +42,14 @@ complement, Kummer theory has nowhere else to put them.
 Let
 
 ```text
-F: A^n_C -> A^n_C                                         (1)
+F: A^n_C -> A^n_C,                   n>=1,                (1)
 ```
 
 be a polynomial Keller map of generic degree four whose geometric monodromy
-in the four-sheet action is `D4`.  Write the reduced Jelonek hypersurface as
+in the four-sheet action is `D4`.  A degree-four Keller map cannot be proper:
+otherwise it would give a nontrivial connected finite-etale cover of affine
+space.  Purity of the Jelonek set therefore gives a nonempty reduced
+hypersurface.  Write it as
 
 ```text
 A_F = V(f_1 ... f_c),       U = A^n_C \ A_F,              (2)
@@ -93,6 +97,19 @@ Thus `2 <= c`.  Notice that projective infinity cannot replace an affine
 coordinate in (4): a rational function in `C(t_1,...,t_n)` having even
 valuation at every affine prime is a square up to a nonzero complex constant.
 
+The same proof has a useful general form.  If the connected finite-etale
+Galois closure over `U` has finite monodromy group `G`, then for every prime
+`l` the Kummer sequence gives
+
+```text
+Hom(G,C_l) injects into H^1_et(U,mu_l)=F_l^c,
+
+dim_(F_l) Hom(G,C_l) <= c.                                (7a)
+```
+
+Consequently the minimum number of generators of `G^ab` is at most `c`.
+The `D4` result is the `l=2` instance of (7a).
+
 The Keller hypothesis is load-bearing here.  It removes finite critical-value
 divisors, leaving the Jelonek boundary as the complete affine branch support.
 
@@ -111,19 +128,24 @@ J=N_D4(H)=<s,z>,
 V=D4 intersect A4=<z,rs>.                                 (9)
 ```
 
-If `L/K` is the Galois closure and `E=L^H` the quartic source field, then
+If `Omega/K` is the Galois closure and `E=Omega^H` the quartic source field,
+then
 
 ```text
-M_deck=L^J,            M_Delta=L^V,
+M_deck=Omega^J=E^tau,  M_Delta=Omega^V,
 J intersect V=<z>=[D4,D4],
-M_deck M_Delta=L^{<z>}.                                  (10)
+M_deck M_Delta=Omega^{<z>},                              (10)
 ```
 
-Thus the two quadratic fields are distinct and linearly disjoint over `K`;
-their compositum is the maximal biquadratic quotient.  The first character is
-the fixed field of the unique nontrivial automorphism of `E/K`.  The second is
-the sign character, equivalently the quadratic field of the cubic resolvent
-and quartic discriminant.
+where `tau=zH` is the unique nontrivial element of
+`Aut_K(E)=J/H`.  Thus the two quadratic fields are distinct and linearly
+disjoint over `K`; their compositum is the maximal biquadratic quotient.
+The field `M_deck` is the fixed field of the kernel of the deck character and
+also the fixed field `E^tau` inside the source quartic.  The field `M_Delta`
+is the sign-character field, equivalently the quadratic field of the cubic
+resolvent and quartic discriminant.  The representative
+`z in [D4,D4]` of `tau=zH` is killed by both abelian characters; a quotient
+character is not a second source deck transformation.
 
 For a depressed quartic
 
@@ -253,8 +275,19 @@ component gate.
 The quadratic normalizations are finite-etale over `U`, not over the entire
 target.  Neither is automatically a polynomial source quotient or a Keller
 map; in particular Campbell's theorem cannot be applied to them.  The theorem
-also does not produce two source deck transformations: the two involutions
-live on the `V4` quotient of the Galois closure, while only one normalizes the
-chosen point stabilizer.  This is exactly the distinction between the
-`C2*C2` grammar of the quartic torsor and the `C2*C3` grammar of the modular
-group.
+also does not produce two source deck transformations: the two characters
+are dual to `D4/<z>`, whereas the unique source deck involution is
+`zH in J/H`.  The quotient characters are not two source automorphisms.  This
+is a direct-product abelian quotient `D4/<z> = C2 x C2`, not a free-product
+or modular-group assertion.
+
+The exact companion verifies the subgroup lattice, both characters, every
+tame inertia row, the depressed-resolvent squareclasses, the central blind
+spot, and the sharp non-Keller hostile.  Normal and optimized executions
+byte-match the stored transcript.  Two independent hostile audits rederived
+the Kummer injection, field identifications, and tame-inertia table.
+
+No `D4` exclusion, component irreducibility theorem, JC(2), G1, or DC(2)
+closure follows.
+
+QED.
