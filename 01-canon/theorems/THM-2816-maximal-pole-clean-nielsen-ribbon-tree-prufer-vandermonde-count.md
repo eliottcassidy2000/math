@@ -21,6 +21,10 @@ script: 04-computation/jc_maximal_pole_clean_nielsen_ribbon_tree_thm2816.py
 output: 05-knowledge/results/jc_maximal_pole_clean_nielsen_ribbon_tree_thm2816.out
 script_sha256: 0fcb7f8b9f6a197e83fa4c1818c338a4e643b387c124f4b188b8bb1c0c605f6a
 output_sha256: f1a3eca7773e09a4c6affef92656c73f21191e024a1038cd58f3d83fb6f812b8
+independent_script: 04-computation/jc_maximal_pole_clean_nielsen_ribbon_tree_independent_audit_thm2816.py
+independent_output: 05-knowledge/results/jc_maximal_pole_clean_nielsen_ribbon_tree_independent_audit_thm2816.out
+independent_script_sha256: d71738c32875847115869a720e357d9a4aece22e860e3b9964e41f559e6f223d
+independent_output_sha256: a3a068435e84ef771dac2f39a56c67f5ad2abb0d924d6f457fc7122c9a427713
 hash_basis: LF-normalized bytes
 ---
 
@@ -35,7 +39,7 @@ completely that the final ordered count depends only on `e` and `N`.
 
 ## 1. Exact Nielsen statement
 
-Fix integers
+Work over the complex numbers.  Fix integers
 
 ```text
 e>=1,                       N>=2e,
@@ -165,10 +169,17 @@ In THM-2796's balanced notation, take the maximal possible pole count
 h=e+1.                                                (10)
 ```
 
-Then the third partition is `(N)`.  Every Nielsen class above is realized
-by a genus-zero rational cover with branch values normalized to
-`0,infinity,1`.  After ordering the poles, put the full-cycle preimage at
-infinity, send `beta_1,beta_2` to `0,1`, and normalize
+Then the third partition is `(N)`.  By the Riemann existence theorem,
+every Nielsen class above is realized by a genus-zero rational cover: the
+transitive product-one triple is
+`(tau,rho,(tau rho)^(-1))`, and `(4)` gives source genus zero.  First use a
+**target** Möbius transformation to put these three branch values at
+`0,1,infinity`, respectively.  Then use the independent and unique
+**source** Möbius transformation which sends the full-cycle preimage of
+`1` to source infinity and the first two ordered pole points
+`beta_1,beta_2` to source `0,1`.  The three source points are distinct and
+`e+1>=2`, so this normalization exists in every stated case and leaves no
+residual source automorphism.  In this source coordinate, normalize
 
 ```text
 F=B/D,             F(infinity)=1,             B-D=A, (11)
@@ -182,9 +193,10 @@ D=product_i(x-beta_i)^(p_i),
 T=product_i(x-beta_i).                                (12)
 ```
 
-The derivative has zeros of total order `N-(e+1)` at the poles and one
-simple zero at each of the `e` double zeros.  These already exhaust
-`deg D'=N-1`, so
+The polynomial derivative `D'` has zeros of total order `N-(e+1)` at the
+poles.  Since `F'= -A D'/D^2`, it also has one simple zero at each of the
+`e` double zeros of `B`; clean order-two inertia makes these zeros simple.
+These already exhaust `deg D'=N-1`, so
 
 ```text
 D'=N D E/T.                                           (13)
@@ -236,7 +248,7 @@ co-occurrence boundary.
 
 ## 7. Exact controls
 
-The companion independently:
+The primary companion:
 
 1. enumerates every noncrossing chord matching and labelled pole-cycle
    orbit in declared ranges through `e=5`;
@@ -253,6 +265,18 @@ It uses exact integer/permutation arithmetic and contains no Python
 ```text
 python 04-computation/jc_maximal_pole_clean_nielsen_ribbon_tree_thm2816.py
 python -O 04-computation/jc_maximal_pole_clean_nielsen_ribbon_tree_thm2816.py
+```
+
+The hostile audit uses a separate unrestricted matching generator, checks
+the genus of crossing as well as noncrossing matchings, and compares every
+enumerated rotation orbit with a separately generated abstract
+tree/cyclic-order/corner-composition signature.  It also checks the
+source-normalized response identities on exact rational controls.  Its
+normal, optimized, and stored transcripts agree:
+
+```text
+python 04-computation/jc_maximal_pole_clean_nielsen_ribbon_tree_independent_audit_thm2816.py
+python -O 04-computation/jc_maximal_pole_clean_nielsen_ribbon_tree_independent_audit_thm2816.py
 ```
 
 The finite controls support but do not replace the all-degree bijection.
