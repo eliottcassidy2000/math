@@ -74,10 +74,11 @@ integral debt `E -> 2G`, yet its old word is empty.  THM-2701/2710 make the
 ordinary and half-shifted literal languages nilpotent by six (the half phase
 is invisible at clocks `2,4,6`).  The analogous `BABA` quotient has
 `A -> 2B`; Boolean/mod-two support loses its multiplicity.  THM-2707 finds
-`3346` lift packets in a complete eleven-partite SCC, but no following semantic
-atom.  The live residual is a coloured transit/private-row grammar,
-common-ancestry cone, enriched `C2` macro, or re-rooted owner section carrying
-semantic current and amplitude.  Ledger `165`; no row is excluded.
+  `3346` lift packets in a complete eleven-partite SCC.  THM-2712 finds exactly
+`304` following packets at `n=0 mod13`: their outer graph is edgeless, while
+division by 13 yields a 13-partite SCC and cocycle `7`.  Live debt: amplitude
+on that inner cycle or a branch outside the fixed box.  Ledger `165`; no row
+is excluded.
 
 ### Independent routes that remain live
 
@@ -314,7 +315,9 @@ Classify profiles under support operations; study analytic continuation and auto
   projections on arbitrary polynomial graphs.  THM-2705/2709 then classify
   the full linear target Grassmannian: planes containing `d` give the scaled
   triangular/affine families; the remaining planes give one shifted cubic or
-  are empty.  Nonlinear targets and nongraph polynomial surfaces remain open.
+  are empty.  THM-2715 exhausts the first nonlinear family `(A,B+H(d))`:
+  only a shifted cubic and a two-section quadratic wall survive, all
+  triangular.  Mixed nonlinear targets and nongraph surfaces remain open.
   THM-2690 separately excludes the
   reduced normal-crossing cyclic-cubic toric normalizations
   `z^3=product x_i^(alpha_i)`, `alpha_i in {1,2}`: their class groups are
@@ -333,10 +336,9 @@ Classify profiles under support operations; study analytic continuation and auto
   adds the mod-four gate: the standard plane must be isotropic inside a
   `C3`-stable discriminant metabolizer; `D4` triality fails, while a doubled
   `-2` triple is sharp.  THM-2714 proves that the standard `Z_2[omega]`
-  sector has even total length: a two-elementary carrier needs two planes,
-  while nullity one survives only through `O/2^(2r)`.  An explicit
-  `S3`-stable `r=1` lattice makes that four-adic escape sharp; effective
-  boundary realization remains open.
+  sector has even length: exponent two needs two planes, while nullity one
+  requires `O/2^(2r)`.  An `S3`-stable `r=1` lattice makes this escape sharp;
+  effective realization remains open.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.

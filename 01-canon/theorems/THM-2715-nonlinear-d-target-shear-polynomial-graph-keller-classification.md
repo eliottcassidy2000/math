@@ -2,8 +2,8 @@
 id: THM-2715
 title: "Nonlinear d-target shear polynomial-graph Keller classification"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For every H in C[d], all nonzero-constant-Jacobian polynomial
+  PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.  For every H in
+  C[d], all nonzero-constant-Jacobian polynomial
   graph solutions for the nonlinear target pair (A,B+H(d)) are classified.
   Linear H gives the unique shifted cubic of THM-2709.  Quadratic H gives
   exactly two explicit quadratic sections on one sharp coefficient wall;
@@ -26,8 +26,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2715 -- nonlinear `d`-target shears have only a quadratic wall
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.**
 
 THM-2709 classifies every *linear* target plane on a polynomial graph in the
 THM-2696 quotient.  The first nonlinear family is not harder by degree-by-
@@ -298,4 +297,4 @@ system, both sections, the common triangular target and inverse, the degree-
 four terminal contradiction, and the linear positive control.  The general
 degree argument is Section 3, not a finite computation.
 
-QED (candidate; independent hostile audit pending).
+QED.

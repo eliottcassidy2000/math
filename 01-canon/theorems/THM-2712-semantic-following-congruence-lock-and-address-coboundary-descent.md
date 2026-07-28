@@ -2,8 +2,8 @@
 id: THM-2712
 title: "Semantic following congruence lock and address-coboundary descent"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Of the 3,346 THM-2707 whole-cylinder packet addresses, exactly
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Of the 3,346
+  THM-2707 whole-cylinder packet addresses, exactly
   304 retain the full frozen THM-2680 following atom.  They are precisely
   n=0 mod13, one in each of 304 following components, and share the whole
   inherited cylinder.  Their required nonzero-root THM-2657 graph is
@@ -30,8 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2712 -- semantic following congruence lock and address-coboundary descent
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2707 proves an enormous fixed-skeleton support SCC, but its frozen
 THM-2680 following atom is absent on the displayed outer cycles.  The exact
@@ -337,3 +336,5 @@ The companion has no optimized-away assertions.  It checks the label gate,
 scans all `13^5` compatible addresses, proves whole-cylinder containment,
 prints every semantic row, verifies the component/weight/sibling censuses,
 and exhausts all `46,056` unordered semantic pairs for `(21)`.
+
+QED.
