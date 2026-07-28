@@ -1,408 +1,293 @@
 ---
 id: THM-2751
-title: "Fixed-clock root-zero wing subtraction; global Mayer--Vietoris claim refuted"
+title: "Frozen source-clock-one root-zero wing spectrum and positive quotient decoder"
 status: >
-  RESERVED / REFUTED PROVISIONAL CANDIDATE.  The legacy natural-sheet
-  constructor used below inserted E3 and the four target-sheet gates but
-  omitted the source-one clock factor d_(1,ell).  It therefore cannot be
-  compared with THM-2749's fully marked common section.  The internally exact
-  12/2/7 calculation belongs to that clock-blind hostile carrier, not to the
-  claimed physical Mayer--Vietoris decomposition.  A full-unclocked retyping
-  fails independently because the true intersection includes nonzero e=2,3
-  pieces and its target-wing augmentation is zero.  No result may depend on
-  this file.  The corrected clocked computation has coefficient-null left
-  wing and a one-sided charged right wing; see MISTAKE-313.
-source: root/root-zero-clutch-mayer-vietoris-2026-07-28
-audit: >
-  The first hostile audit replicated the pinned legacy constructor and is
-  superseded on typing.  Direct factor-list comparison locates the omitted
-  source clock; an independent full-unclocked audit verifies same-clock
-  unions, cross-clock emptiness, amplitudes, valuations, profiles, and the
-  target augmentation rank drop.  Both reject the global claim.
-mistake: MISTAKE-313
-depends_on: []
+  RESERVED PROOF-COMPLETE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
+  AUDIT.  On the canonical rail-8 source_clock=1 fibre, the physical left
+  wing is nonempty but its marked delayed coefficient is identically zero,
+  while the right wing has a ten-label 91-unit target spectrum.  No linear
+  wing decoder exists.  Nevertheless a positive coefficient-derived
+  convolution transports the full fixed-clock source profile to the target
+  profile modulo the uniform target-null line.  This is not the full
+  unclocked Mayer--Vietoris decomposition, a physical packet action, an
+  endpoint current, a row exclusion, or LRC(14).
+source: root/fixed-clock-root-zero-wing-spectrum-2026-07-28
+depends_on:
+  - THM-2749-fully-marked-root-zero-clutch-and-target-character-profile
 related:
   - THM-830-b3-deletion-deck-mirror-current-calculus
-  - THM-2657-odometer-carry-root-lift-nonsplit-extension-and-cech-cocycle
-  - THM-2716-c4-arm-transporter-groupoid-and-relative-degree-holotopy-boundary
+  - THM-2542-seven-chart-cech-holonomy-and-c91-arrival-obstruction
+  - THM-2591-theta-zero-selector-cech-coboundary-and-c91-holonomy-no-go
   - THM-2750-arm-blind-clutch-no-go-and-minimal-marked-leakage
-  - THM-2754-diagonal-clock-81-label-root-zero-clutch-addendum
-  - THM-2348-prime-type-rectangularity-and-target-token-conditioning
 script: 04-computation/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.py
 output: 05-knowledge/results/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.out
-script_sha256: aae8759fcf4289912866f91615f430974c6984dbe62987fb972bdc0651602a54
-output_sha256: 6ae353d31a9ed568e8939d54c98c46ecc124678bf9e2d5ffc94655bfdfc3c17e
+script_sha256: dbc0a3098fb16c15f6508fcd4fa27a93666edd7150664221a158a4ac6d28883f
+output_sha256: 43cb4e96393b49dbdf00b416a0194533bcb002ea971bf6820737c7e3fa70eb9f
 hash_basis: LF-normalized bytes
 ---
 
-# THM-2751 -- the fixed-clock wing subtraction does not globalize
+# THM-2751 -- the frozen source-clock-one wing is coefficientally one-sided
 
-**RESERVED / REFUTED PROVISIONAL CANDIDATE.**
+> **RESERVED PROOF-COMPLETE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
+> AUDIT.**  This candidate
+> repairs the fixed-clock boundary paragraph of promoted THM-2749 and the
+> numerical premise of the former THM-2751 provisional body.  It does not change the
+> proved two-sided common-section theorem.
 
-## Retraction boundary
+## 1. First failed implication: the legacy carrier omitted the source-one factor
 
-The construction called `A` below is not the fully marked natural source
-sheet.  Its helper `restrict_e3_and_sheet` never intersects the carrier with
-the source-one clock comb `d_(1,ell)`, whereas THM-2749's common section uses
-`source_present_section(...,source_clock=1,...)`.  The two delayed prefix banks
-are identical; this missing factor is the first failed implication.
-
-Consequently the weighted decompositions and `12/2/7` ratios below are exact
-only for a clock-blind hostile carrier and cannot be combined with THM-2749.
-They are retained as correction history.  The correctly clocked calculation
-has source coefficient equal to the common coefficient, hence a physically
-nonempty but coefficient-null left wing; the right wing carries the entire
-one-sided shear.  Its normalized source, target, and right-wing profiles are
-`9,8,4`, and its folded target/source ratio is `11`, not `7`.
-
-There is a second lawful hostile interpretation.  If `A,B` are retained as
-full unclocked unions, then the common object is not the selected `M_1` but
-`M=disjoint-union_e M_e`; the `e=2,3` same-clock pieces are nonzero.  That
-repair produces a target wing whose profile augments to zero.  Nothing below
-this banner is a proved dependency.
-
-Under that second interpretation, the additional false implication is
+Promoted THM-2749 defines
 
 ```text
-THM-2749 fixed present-clock section M_1 = A intersect B.   (false)
+A_t = E3 intersect F_(1,0,t),
+M_t = A_t intersect T_tau^(-1) A_t.
 ```
 
-The unclocked sheets decompose by the physical-present clock, and the literal
-common object is
+The canonical constructor for `F_(1,0,t)` is
+`two.source_present_section(..., source_clock=1, ...)`.  Its first operation is
+
+```python
+intersect_sorted(source_intervals, clock_comb[source_clock])
+```
+
+and therefore inserts the load-bearing source-one danger factor
+`d_(c1,1)`.  By contrast, the historical comparator
+`lrc14_semantic_root_zero_clutch_refinement_probe_20260728.py` calls
+`restrict_e3_and_sheet`, whose signature has no source-clock argument and
+whose body contains only the `E3` and four `U_(s,t)` cuts.  It never intersects
+`clock_comb[1]`.
+
+This is the entire constructor mismatch.  It is **not** a delayed-word
+mismatch: direct exact comparison of the historical `build_q3_pair_prefixes`
+with THM-2749's `marked_prefixes(..., deepest_fork)` gives equality on all
+fourteen `(ell,kappa)` cells.  Their masses are zero for `ell=0` and
+`206986279500` for both half-digits at every `ell=1,...,6`.
+
+Consequently the historical amplitudes
 
 ```text
-M=A intersect B=disjoint-union_(e in F_7) M_e.
+1812281403506324508838080,
+1826551436254490256030720
 ```
 
-All cross-clock intersections vanish, but the same-clock pieces at `e=2,3`
-do not.  Subtracting only `M_1` therefore produces a labelled local
-subtraction, not the natural Mayer--Vietoris wings.
+belong to the clock-unrestricted carrier.  They cannot be subtracted from
+THM-2749's source-one common amplitude.  The old wing gains `2` and `7` in the
+THM-2751 reservation are therefore retracted premises, not candidate facts.
 
-The full-present hostile audit gives
+## 2. Correct fixed-clock common-coordinate decomposition
+
+Fix the promoted rail `8`, `(source_clock,s)=(1,0)`, the actual terminal fork
+`D^6 Q_(3,{1,2})`, both relative-present factors, and the source seam
+`Sigma_-=(169,181)/182`.  In one source coordinate put
 
 ```text
-A=1812281403506324508838080,
-M=1809427434750797212391040,
-B=1826551436254490256030720,
-
-L=A-M= 2853968755527296447040,       v_13(L)=1,
-R=B-M=17124001503693043639680,       v_13(R)=2.
+A_t = rail_common intersect E3 intersect F_(1,0,t),
+B_t = rail_common intersect T_tau^(-1)(E3 intersect F_(1,0,t)),
+M_t = A_t intersect B_t,
+L_t = A_t minus B_t,
+R_t = B_t minus A_t.
 ```
 
-After content and root normalization, the true wing profiles are
+The script constructs these five interval unions first, checks
+`A_t=M_t disjoint-union L_t` and `B_t=M_t disjoint-union R_t` exactly, and
+only then applies the common terminal/relative/seam functional.  The interval
+lengths below are exact numerator lengths on the canonical `T`-grid before
+the clock-dependent relative cut; divide by `T=297836897838480` for Haar
+measure.
+
+| target labels | `|A|` | `|B|` | `|M|` | `|L|` | `|R|` |
+|---|---:|---:|---:|---:|---:|
+| `t=0,1,2` | 0 | 0 | 0 | 0 | 0 |
+| each `t=3,...,11` | 13751337600 | 13808634840 | 6320326320 | 7431011280 | 7488308520 |
+| `t=12` | 7404566400 | 7435418760 | 0 | 7404566400 | 7435418760 |
+
+Thus both wings are genuine nonempty physical interval unions.  Their marked
+coefficient functionals are radically asymmetric.
+
+Let
 
 ```text
-source=(0,0,0,12,0,0,0),
-target=(0,9,2,2,0,0,0).
+C = 339633525654239542165440,
+G = C/119 = 2854063240791928925760,
+W = z^3+...+z^11,
+U = z^3+...+z^12,
+Q = 2(z^3+...+z^11)+121 z^12.
 ```
 
-The target profile augments to `9+2+2=0 mod 13`; after the delayed-clock
-cyclotomic quotient it is zero.  Thus there is no target wing unit and no
-wing gain `2`.  The common gain `12=-1` and whole-sheet gain `7` survive.
-See MISTAKE-313 and the full two-clock hostile audit for the correction.
-
-The material below is preserved only as the rejected clock-blind calculation
-with a selected `e=1` common section.  Its displayed arithmetic is
-finite-exact, but every identification of that selected complement with a
-fully marked or full-unclocked natural wing is superseded.
-
-# Historical rejected candidate -- do not cite as a theorem
-
-## 1. The weighted Mayer--Vietoris cover
-
-Use THM-2749's canonical row, translation and open seams
+Every nonzero seven-clock vector has shape `(0,c,c,c,c,c,c)`.  The exact full
+target profiles are
 
 ```text
-(H,q1,...,q5,c1,c2,c3)
-  =(1,14,27,40,53,66,13,13^3,2*13^5),
-
-tau=7/13^6,
-Sigma_-=(169,181)/182,
-Sigma_+=(1,13)/182.                                    (1)
+S(A)  = C W,
+T(B)  = 121 G U,
+S(M)  = T(M) = C W,
+S(L)  = 0,
+T(R)  = G Q.                                             (1)
 ```
 
-Fix target label `t=3`, rail `8`, the full `E3` source condition, lawful
-sheet `U_(0,3)`, both relative-present factors, and the actual delayed
-terminal fork `D^6 Q_(3,{1,2})`.  For each delayed clock `ell`, let
+In particular, for `t=3,...,11`, the right-wing amplitude is
+`2G=5708126481583857851520`; at `t=12` it is
+`121G=345341652135823400016960`.  The left wing is physically nonempty but
+lies in the kernel of this delayed coefficient functional for every target
+label.  The raw fixed-clock shear is one-sided:
 
 ```text
-A_ell = the natural source-coordinate E3/U_(0,3) weighted carrier,
-B_ell = the natural forward target-coordinate E3/U_(0,3) weighted carrier.
-                                                                  (2)
+T(B)-S(A) = T(R), not T(R)-S(L) with two charged endpoints. (2)
 ```
 
-The source uses carry `12` and right root `12`; the target uses carry `6`
-and lawful left root `1`.  Let `M^-_ell` be the source-coordinate common
-carrier of THM-2749 and let
+## 3. Root units and target characters
+
+After content `26`, root normalization, and reduction modulo `Phi_7`, the
+per-label profiles are:
+
+| channel | labels | root | reduced constant | determinant |
+|---|---|---:|---:|---:|
+| `A` | `3..11` | source `12` | 9 | 1 |
+| `B` | `3..12` | target `1` | 8 | 12 |
+| `M_source` | `3..11` | source `12` | 9 | 1 |
+| `M_target` | `3..11` | target `1` | 4 | 1 |
+| `L` | none | source `12` | 0 | 0 |
+| `R` | `3..11` | target `1` | 4 | 1 |
+| `R` | `12` | target `1` | 8 | 12 |
+
+Hence the common gain remains `4/9=12=-1`.  On common fixed-clock labels the
+source-to-target ratio is `8/9=11`, but it cannot extend globally because
+`B` has the extra nonzero label `12`.  Target rotations and reflections
+preserve support cardinality, so no scalar/dihedral map sends the nine-label
+source profile to the ten-label target profile.
+
+The primitive cyclotomic norms are
 
 ```text
-M^+_ell=T_tau(M^-_ell)                                  (3)
+Norm(W)=1,
+Norm(U)=1,
+Norm(Q)=8492431042211308167354471.                       (3)
 ```
 
-be its direct forward-coordinate target copy.  Thus the symbol `M` below
-means the one common physical section represented in the appropriate chart;
-it does not identify arbitrary points in the complements.  Put
+In particular `Norm(Q)=1 mod91`, so the right-wing target polynomial is a
+`91`-unit in every primitive target-character fibre.
+
+Therefore all twelve primitive target characters survive for `A`, `B`, both
+common rows, and `R`; every target character of `L` vanishes.  Factoring the
+raw amplitudes gives
 
 ```text
-L_ell=A_ell\M^-_ell,
-R_ell=B_ell\M^+_ell.                                   (4)
+Res(Phi13,S(A)) = C^12,
+Res(Phi13,T(B)) = (121G)^12,
+Res(Phi13,S(M)) = Res(Phi13,T(M)) = C^12,
+Res(Phi13,S(L)) = 0,
+Res(Phi13,T(R)) = G^12 Norm(Q).                          (4)
 ```
 
-The exact companion constructs all six profiles directly.  In every clock
-their canonical weighted-piece counts are
+The proposed cross-wing character bank is identically zero:
 
 ```text
-                     whole       common       wing
-source A               1275         239       1036
-target B               1275         239       1036,       (5)
+sum_t chi(t) S(L_t) conjugate(T(R_t)) = 0               (5)
 ```
 
-and their raw grid-weighted masses are
+for the trivial and all twelve primitive characters.  This is not a
+cyclotomic cancellation: the left coefficient is already zero labelwise.
+
+## 4. Decoder boundary
+
+There is no scalar, dihedral, convolutional, or positive **wing decoder**
+from `L` to `R`: every linear operator sends the zero left-wing coefficient
+profile to zero, while `R` is nonzero.
+
+There are useful coefficient-algebra decoders after forgetting the wing
+decomposition:
 
 ```text
-mu_w(A)=929934280541992017600,
-mu_w(M^-)=174321777293450297280,
-mu_w(L)=755612503248541720320,
-
-mu_w(B)=929934304688494607040,
-mu_w(M^+)=174321777293450297280,
-mu_w(R)=755612527395044309760.                           (6)
+W^(-1) = z^2+z^6+z^10,      W W^(-1)=delta_0+2N,
+U^(-1) = z+z^4+z^7+z^10,    U U^(-1)=delta_0+3N,
 ```
 
-Before any coefficient evaluation, canonical interval comparison proves
+where `N=1+z+...+z^12`.  With
 
 ```text
-A_ell=M^-_ell disjoint-union L_ell,
-B_ell=M^+_ell disjoint-union R_ell                      (7)
+K=U W^(-1)=(3,3,2,2,2,3,2,2,2,3,2,2,2),
 ```
 
-as weighted step functions, for all seven clocks.  In particular, `(7)` is
-an additive Cech/Mayer--Vietoris decomposition, not a formal difference of
-the two final vectors.
-
-## 2. Exact additivity of the delayed functional
-
-The natural `Q_(3,{1,2})` prefix and THM-2749's fully marked prefix agree as
-exact interval prefixes for all seven clocks.  Let `S` denote the source
-carry-`12` functional and `T` the target carry-`6` functional, using that
-common prefix bank.  Since the delayed integral is additive on disjoint
-weighted interval unions, `(7)` gives
+one has `W K=U+20N`, hence
 
 ```text
-S(A)=S(M^-)+S(L),
-T(B)=T(M^+)+T(R).                                      (8)
+121 [S(A)*K] = 119 [T(B)]  modulo the uniform target-null line. (6)
 ```
 
-Direct exact evaluation of every summand gives
+This is a positive coefficient-section recombination, not a physical packet
+action: the marked `t`-sections were not proved target-covariant as whole
+Boolean packets, and it erases precisely the one-sided wing data.
+
+The right wing alone also has a positive integer adjugate decoder because
+`Norm(Q)` is nonzero.  The exact vector and convolution are printed by the
+companion.  That fact preserves one-sided target activity but does not repair
+the zero cross-wing pairing.
+
+More precisely, the printed nonnegative decoder `K_Q` satisfies
 
 ```text
-S(A)=(0,a,a,a,a,a,a),
-a=1812281403506324508838080,
-
-T(B)=(0,b,b,b,b,b,b),
-b=1826551436254490256030720,                            (9)
-
-S(M^-)=T(M^+)=(0,C,C,C,C,C,C),
-C=339633525654239542165440,                            (10)
-
-S(L)=(0,l,l,l,l,l,l),
-l=1472647877852084966672640,
-
-T(R)=(0,r,r,r,r,r,r),
-r=1486917910600250713865280.                           (11)
+Q*K_Q = delta_Q delta_0 + cN,
+delta_Q=943603449134589796372719=81 mod91.               (7)
 ```
 
-Equations `(8)`--`(11)` are checked twice: first as the actual weighted-piece
-unions and then as the resulting integer coefficient identities.
+Both `Norm(Q)` and `delta_Q` are units modulo `91`.  Thus the **right
+cofiber**, by itself, generates the `C_13` augmentation quotient
+coefficientwise: after scalar multiplication it can synthesize any prescribed
+nonzero correction, including a correction of the form `-7a`.  This is the
+strongest holotopy survivor.  Its connection to the common-ancestry vertical
+edge debts of THM-2542 and THM-2591 is conditional on a new physical
+attachment theorem selecting one common-ancestry semantic vertical edge.
+Nothing here realizes `K_Q` as a whole-packet action, retains an external arm
+or endpoint phase, or supplies that attachment.
 
-## 3. The graded transition and the folded natural ratio
+## 5. Fixed fibre versus the full unclocked cover
 
-Divide by the inherited content `26`, normalize by the indicated nonzero
-root in `F_13`, and reduce in `F_13[z]/(Phi_7)`.  The six classes are
-constants, with multiplication determinants
+Every result above is on the frozen physical-present fibre
+`source_clock=1`.  It must not be augmented into a claim about the unclocked
+one-sided sheet.  The independently exact reflection
+`07-reflections/lrc14-full-present-intersection-wing-rank-drop-hostile-audit-20260728.md`
+(commit `bd53dc4c5`) constructs the full cover as
 
 ```text
-piece                     constant mod13       determinant
-common source, root 12           9                  1
-common target, root 1            4                  1
-left wing, root 12               9                  1
-right wing, root 1               5                 12
-natural source, root 12          5                 12
-natural target, root 1           9                  1.    (12)
+M_full = disjoint-union_e M_e
 ```
 
-Consequently
+with nonzero same-clock pieces at `e=1,2,3` and empty cross-clock pieces.
+On that larger object the source wing is nonzero and the target wing loses a
+unit only **after augmentation** in the present-clock coordinate.  That is a
+different rank-drop theorem.  The reflection's cited full-unclocked companion
+was not present when this candidate was written, so its larger exact table is
+related hostile evidence rather than a dependency of THM-2751.
 
-```text
-common clutch gain       =4/9=12=-1,
-formal wing ratio        =5/9=2,
-folded natural ratio     =9/5=7             in F_13.       (13)
-```
+## 6. Scope and reproduction
 
-The exact coefficient grading is therefore
+The result is theorem-grade as a **repair/no-go**:
 
-```text
-(M,L)_source=(9,9),
-(M,R)_target=(4,5)=(12*9,2*9).                         (13a)
-```
+- it preserves the proved THM-2749 two-sided common clutch and its norm-one
+  target window;
+- it retracts only the legacy single-sheet comparison and the reserved
+  THM-2751 numerical premise;
+- it proves that the fixed-`e=1` defect is a coefficient-null physical left
+  wing paired with a charged right wing;
+- it supplies a positive coefficient-derived transporter on the target
+  augmentation quotient, and a `91`-unit right-cofiber correction generator;
+- it supplies no endpoint current, physical target action, owner/root
+  provenance, row exclusion, or LRC(14) decrement.
 
-This is an exact coefficient-diagonal **comparison** after naming separate
-source and target summands, not an operator on one physical carrier.  Its
-second entry is only a formal normalized wing ratio, because no physical
-`L -> R` identification has been supplied.
-No single scalar intertwines both additive summands in `(7)`: the common
-section requires `12`, whereas the formally paired wing endpoints require
-`2`.
-After the non-equivariant fold `(x,y)->x+y`, the particular source vector
-becomes `5` and the target becomes `9`, producing the effective ratio `7`.
-Thus `7` belongs only to this unsplit folded vector.  It is not a third local
-transition, and the fold does not conjugate `diag(12,2)` to a scalar map.
+Run from the repository root:
 
-## 4. The exact wing boundary current
-
-Subtracting the source functional from the target functional and using
-`(8)` gives the exact identity
-
-```text
-T(B)-S(A)=T(R)-S(L)
-          =(0,d,d,d,d,d,d),
-
-d=14270032748165747192640,
-v_13(d)=1,
-(d/26) mod13=12.                                      (14)
-```
-
-Thus the natural single-sheet defect is supported entirely on the one-sided
-wings.  The two-sided overlap itself has no raw shear: it is the signed
-root-normalized mirror clutch of THM-2749.
-
-This is the sharp positive conclusion and also the sharp categorical
-boundary.  Equations `(4)` and `(7)` supply an additive common-section
-cover, but neither THM-2744 nor THM-2749 gives a canonical physical map
-
-```text
-                         L_ell ---> R_ell               (15)
-```
-
-or a relative phase between the two wing functionals.  Therefore `(14)` is
-a signed boundary current, not yet a physical cross-wing current.  A lawful
-pairing, mapping-cone reference, or endpoint selector is still required.
-
-## 5. Internal chart strata are not external C3 arms
-
-There is a tempting but invalid relabelling.  If a future physical selector
-assigned the three gains
-
-```text
-g=(12,2,2)                                             (16)
-```
-
-to three externally rotated equal arms, then over `F_13`, with primitive
-cube root `omega=3`, its normalized Fourier profile would be
-
-```text
-g_hat=(1,12,12),
-Pi_3 g=(1,1,1),
-Q_3 g=(11,1,1).                                       (17)
-```
-
-Such a selector would charge both nontrivial `C3` modes.  Nothing in this
-candidate constructs it.  The pieces `M,L,R` are internal source/target
-chart strata.  If they are formally replicated in the same way on every
-external arm, the only tautological external typing is
-
-```text
-                         I_arm tensor C_internal.       (18)
-```
-
-It commutes with external arm rotation, so directly
-
-```text
-Q_3 (I_arm tensor C_internal) Pi_3=0.                  (19)
-```
-
-This is an algebraic arm-blind boundary, not an existing physical operator:
-neither the external carrier nor the internal `L -> R` wing map has been
-constructed.  Formula `(19)` is proved independently by `Q_3 Pi_3=0` and is
-the boundary proved abstractly by THM-2750; THM-2750 remains a related result,
-not a dependency.  In particular, the natural ratio `7` is an
-aggregate sheet scalar, not the external Fourier mean `1` in `(17)`.
-
-There is one useful **conditional diagnostic**, not an LRC construction.  If
-future work supplied one common external three-arm carrier, a lawful armwise
-realization/pairing of the formal common/wing diagonal rule, and source totals
-
-```text
-S_i=M_i+L_i
-```
-
-were arm-invariant, then the internal diagonal rule `(13a)` would give
-
-```text
-T_i=12M_i+2L_i=2S_i+10M_i,
-Q_3 T=10 Q_3 M.                                        (20)
-```
-
-Hence external charge would be exactly the variation of the common-section
-share among the arms.  The present theorem supplies neither a common lattice
-nor such a carrier, so `(20)` is a scoped target for a selector theorem, not
-a consequence about the existing physical packet.
-
-The same conditional statement has an exact THM-2348 rectangle form.  Regard
-`(M_i,L_i)` as a formal `2 x 3` table.  Under the arm-invariant-total
-hypothesis `M_i+L_i=S`, its rectangle difference for arms `i,j` is
-
-```text
-Delta_ij=M_i+L_j-M_j-L_i=2(M_i-M_j).                   (21)
-```
-
-Because `2` and `10` are units in `F_13`, all mixed rectangles vanish iff
-the `M_i` are constant iff `Q_3T=0`; a nonzero rectangle is exactly the
-arm-dependent common-share interaction detected by `(20)`.  The companion
-exhausts all `13^4=28561` such formal tables.  This is a conditional ANOVA
-corollary analogous to THM-2348, not evidence that the required physical
-two-by-three table already exists.
-
-## 6. Connection contract and scope
-
-| item | exact content |
-|---|---|
-| source | natural source carrier `A`, carry `12`, right root `12` |
-| target | natural forward target carrier `B`, carry `6`, left root `1` |
-| map | common-section translation `M^- -> M^+` plus the additive decompositions `(7)` |
-| preserved | rail `8`, `E3`, lawful `U_(0,3)`, relative present, terminal fork, prefix bank, open seam, and raw additivity |
-| destroyed or absent | canonical `L -> R` point map, wing relative phase, external-arm label, owner endpoint |
-| first failure | the common clutch gain is `12`, while the formal wing endpoint ratio is `2`, so one scalar cannot transport both |
-| strongest survivor | exact signed wing current `(14)` with primitive content residue |
-| cheapest next test | a lawful cross-wing pairing through the target/clock character bank, retaining a common endpoint reference |
-
-No external `C3` selector, noncentral transporter, endpoint current,
-owner/root provenance, row exclusion, scalar-ledger decrement, or proof of
-LRC(14) follows.
-
-## 7. Exact reproduction
-
-Run
-
-```bash
+```powershell
 python 04-computation/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.py
 python -O 04-computation/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.py
 ```
 
+The companion imports only the promoted THM-2749 companion and its pinned
+proved dependencies.  The historical script is a comparator named in this
+report, not an imported dependency or truth source.
+
 Both modes must byte-match
+`05-knowledge/results/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.out`.
+No truth-bearing Python `assert` is used.
 
-```text
-05-knowledge/results/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.out.
-```
-
-The companion pins the THM-2749, root-zero overlap, and natural-sheet
-reconstruction scripts by LF-normalized SHA-256.  It verifies the seven
-prefix identities, reconstructs all `1275` whole and `239` common weighted
-pieces per chart and clock, proves the two `1036`-piece complements are
-literal disjoint differences, checks weighted mass and functional
-additivity, recomputes the six unit profiles and determinants, verifies the
-shear valuation, checks both sides of the external-`C3` boundary, and
-exhausts the `28561` conditional ANOVA tables.  No
-truth-bearing Python `assert` is used.
-
-QED.
+`QED` for the proof-complete candidate; it remains reserved until independent
+hostile audit.

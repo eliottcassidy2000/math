@@ -1,22 +1,18 @@
 #!/usr/bin/env python3
-"""Exact replay of the refuted THM-2751 clock-blind wing calculation.
+"""Exact fixed-clock root-zero Mayer--Vietoris wing target spectrum (THM-2751).
 
-This companion reconstructs the legacy clock-blind source and target sheets
-and subtracts THM-2749's marked common section.  MISTAKE-313 proves that these
-objects are not lawfully comparable: the legacy source helper omits the
-source-one clock factor.  The program remains as an exact hostile replay of
-the arithmetic that produced the false global interpretation.
-
-The final C3 calculation is deliberately typed as a boundary: the displayed
-internal chart strata are arm-blind.  A hypothetical external selector with
-the same three numerical gains would be charged, but no such selector is
-constructed here.
-
-All arithmetic is integral/rational.  Dependency pins use LF-normalized
-bytes, and there are no truth-bearing Python assertions.
+This proof-complete candidate imports the promoted THM-2749 companion
+and reconstructs, in one source coordinate and with one delayed-prefix bank,
+the fixed source-one sheet A_{1,t}, the pulled target sheet B_{1,t}, their common
+section M_t, and the disjoint wings L_t=A_t minus B_t and R_t=B_t minus A_t.
 """
 
+from __future__ import annotations
+
+import ast
 from hashlib import sha256
+import inspect
+from math import gcd
 from pathlib import Path
 import sys
 
@@ -25,14 +21,18 @@ ROOT = Path(__file__).resolve().parents[1]
 COMP = ROOT / "04-computation"
 sys.path.insert(0, str(COMP))
 
-DEPENDENCIES = {
-    "lrc14_fully_marked_root_zero_target_profile_thm2749.py":
-        "d67c852c52f88feaadb2fcaa0a9a07a212f2e47018040b455855df886200595e",
-    "lrc14_root_zero_overlap_clutch_20260728.py":
-        "e10fa7c9a5a238461ef422ea314dc334f7e65ec1787cf65d4e4bea12b96aefb8",
-    "lrc14_semantic_root_zero_clutch_refinement_probe_20260728.py":
-        "b3b623a4c016b1303ac3a74c72f9ae0bbd69cdb97a553f613143f0005a3dd286",
-}
+import lrc14_fully_marked_root_zero_target_profile_thm2749 as marked
+
+
+P = marked.P
+T = marked.T
+SHIFT = marked.SHIFT
+CONTENT = marked.CONTENT
+RAIL = marked.RAIL
+BASE = 10**60
+private = marked.private
+two = marked.two
+lift = marked.lift
 
 
 def require(condition, message):
@@ -41,458 +41,477 @@ def require(condition, message):
 
 
 def lf_bytes(path):
-    return path.read_bytes().replace(bytes((13, 10)), bytes((10,)))
+    return path.read_bytes().replace(b"\r\n", b"\n")
 
 
-for dependency, expected in DEPENDENCIES.items():
-    actual = sha256(lf_bytes(COMP / dependency)).hexdigest()
-    require(actual == expected,
-            f"audited dependency changed: {dependency}: {actual} != {expected}")
+def constructor_audit():
+    legacy_path = COMP / "lrc14_semantic_root_zero_clutch_refinement_probe_20260728.py"
+    legacy_bytes = lf_bytes(legacy_path)
+    legacy_hash = sha256(legacy_bytes).hexdigest()
+    require(legacy_hash
+            == "b3b623a4c016b1303ac3a74c72f9ae0bbd69cdb97a553f613143f0005a3dd286",
+            "legacy comparator changed")
+    tree = ast.parse(legacy_bytes.decode("utf-8"))
+    legacy_function = next(
+        node for node in tree.body
+        if isinstance(node, ast.FunctionDef)
+        and node.name == "restrict_e3_and_sheet"
+    )
+    legacy_names = {node.id for node in ast.walk(legacy_function)
+                    if isinstance(node, ast.Name)}
+    canonical_tree = ast.parse(inspect.getsource(two.source_present_section))
+    canonical_names = {node.id for node in ast.walk(canonical_tree)
+                       if isinstance(node, ast.Name)}
+    require("clock_comb" not in legacy_names
+            and "source_clock" not in legacy_names
+            and {"clock_comb", "source_clock"} <= canonical_names,
+            "source-one constructor distinction changed")
+    return legacy_hash
 
 
-import lrc14_fully_marked_root_zero_target_profile_thm2749 as marked
-import lrc14_semantic_root_zero_clutch_refinement_probe_20260728 as natural
+def difference(first, second):
+    return marked.intersect(first, marked.complement(second))
 
 
-clutch = natural.clutch
-private = marked.private
-two = marked.two
-
-P = 13
-T = marked.T
-SHIFT = marked.SHIFT
-CONTENT = marked.CONTENT
-RAIL = marked.RAIL
-TARGET_LABEL = 3
-
-COMMON_AMPLITUDE = 339633525654239542165440
-NATURAL_SOURCE_AMPLITUDE = 1812281403506324508838080
-NATURAL_TARGET_AMPLITUDE = 1826551436254490256030720
-LEFT_WING_AMPLITUDE = 1472647877852084966672640
-RIGHT_WING_AMPLITUDE = 1486917910600250713865280
-SHEAR_AMPLITUDE = 14270032748165747192640
+def interval_mass(intervals):
+    return sum(right - left for left, right in intervals)
 
 
-def canonical_weighted(pieces):
-    """Canonicalize a disjoint weighted step profile.
+def cut_carrier(module, present, carrier, ell):
+    source_safe = marked.complement(present[ell, 7])
+    target_safe = marked.complement(
+        marked.shift_union(present[ell, 7], SHIFT)
+    )
+    row = marked.intersect(carrier, source_safe)
+    row = marked.intersect(row, target_safe)
+    return marked.intersect(
+        row, tuple(module.make_comb(module.C3, 182, 169, 181))
+    )
 
-    The upstream exact interval routines return disjoint pieces.  We check
-    that invariant explicitly and merge only touching pieces of equal weight.
-    """
+
+def coefficient_vector(module, delayed, present, weight, carrier, carry,
+                       caches):
+    values = []
+    masses = []
+    for ell in range(7):
+        source_safe = marked.complement(present[ell, 7])
+        target_safe = marked.complement(
+            marked.shift_union(present[ell, 7], SHIFT)
+        )
+        row = marked.intersect(carrier, source_safe)
+        row = marked.intersect(row, target_safe)
+        row_weighted = marked.restrict_weighted(weight, row)
+        row_weighted = private.old.intersect_weighted_comb(
+            row_weighted, module.C3, 182, 169, 181
+        )
+        masses.append(sum((right - left) * w
+                          for left, right, w in row_weighted))
+        values.append(private.delayed_carry_pair(
+            row_weighted, delayed[ell], caches[ell]
+        )[carry][1])
+    return tuple(values), tuple(masses)
+
+
+def add_weighted_profiles(channels):
+    """Exact nonnegative sum of step profiles with integer channel scales."""
+    events = {}
+    for pieces, scale in channels:
+        for left, right, weight in pieces:
+            events[left] = events.get(left, 0) + scale * weight
+            events[right] = events.get(right, 0) - scale * weight
+    value = 0
+    previous = None
     result = []
-    for left, right, weight in sorted(pieces):
-        require(left < right, "empty weighted interval")
-        if weight == 0:
-            continue
-        if result:
-            old_left, old_right, old_weight = result[-1]
-            require(left >= old_right, "weighted profile pieces overlap")
-            if left == old_right and weight == old_weight:
-                result[-1] = (old_left, right, weight)
-                continue
-        result.append((left, right, weight))
+    for point in sorted(events):
+        if previous is not None and previous < point and value:
+            if result and result[-1][1] == previous and result[-1][2] == value:
+                result[-1] = (result[-1][0], point, value)
+            else:
+                result.append((previous, point, value))
+        value += events[point]
+        require(value >= 0, "weighted channel multiplexing became negative")
+        previous = point
+    require(value == 0, "weighted channel multiplexing did not close")
     return tuple(result)
 
 
-def support(pieces):
-    return marked.merge(
-        (left, right) for left, right, weight in pieces if weight
-    )
+def multiplexed_vectors(module, delayed, present, source_weight, target_weight,
+                        A, B, M):
+    """Recover A,B,M vectors from one exact positive functional evaluation.
 
-
-def weighted_mass(pieces):
-    return sum((right - left) * weight for left, right, weight in pieces)
-
-
-def restrict_weighted(pieces, intervals):
-    return canonical_weighted(marked.restrict_weighted(
-        canonical_weighted(pieces), marked.merge(intervals)
+    BASE is larger than every channel coefficient.  Positivity and linearity
+    let three coefficients be packed as A + BASE*B + BASE^2*M_source without
+    cross-channel carry.
+    """
+    combined = add_weighted_profiles((
+        (marked.restrict_weighted(source_weight, A), 1),
+        (marked.restrict_weighted(target_weight, B), BASE),
+        (marked.restrict_weighted(source_weight, M), BASE**2),
     ))
+    values = {name: [] for name in ("A", "B", "M")}
+    for ell in range(7):
+        source_safe = marked.complement(present[ell, 7])
+        target_safe = marked.complement(
+            marked.shift_union(present[ell, 7], SHIFT)
+        )
+        row = tuple(private.old.intersect_weighted_union(
+            combined, source_safe
+        ))
+        row = tuple(private.old.intersect_weighted_union(
+            row, target_safe
+        ))
+        row = tuple(private.old.intersect_weighted_comb(
+            row, module.C3, 182, 169, 181
+        ))
+        packed = private.delayed_carry_pair(
+            row, delayed[ell], {}
+        )[12][1]
+        a = packed % BASE
+        b = (packed // BASE) % BASE
+        m = packed // (BASE**2)
+        require(a < BASE and b < BASE and m < BASE,
+                "multiplexed coefficient overflowed its channel")
+        require(packed == a + BASE * b + BASE**2 * m,
+                "multiplexed coefficient failed exact decoding")
+        values["A"].append(a)
+        values["B"].append(b)
+        values["M"].append(m)
+    return {name: tuple(vector) for name, vector in values.items()}
 
 
-def subtract_weighted(pieces, intervals):
-    """Remove an interval union from a weighted profile on the T-circle."""
-    return restrict_weighted(pieces, marked.complement(marked.merge(intervals)))
+def direct_target_vector(module, delayed, present, source_weight, carrier,
+                         caches):
+    """Recompute a pulled target carrier after pushing to target coordinate."""
+    # Rail 8's physical target weight is the original rail profile after push.
+    values = []
+    for ell in range(7):
+        source_safe = marked.complement(present[ell, 7])
+        target_safe = marked.complement(
+            marked.shift_union(present[ell, 7], SHIFT)
+        )
+        row = marked.intersect(carrier, source_safe)
+        row = marked.intersect(row, target_safe)
+        row = marked.intersect(
+            row, tuple(module.make_comb(module.C3, 182, 169, 181))
+        )
+        # Push the already fully cut source-coordinate carrier.
+        direct = marked.shift_union(row, -SHIFT)
+        row_weighted = marked.restrict_weighted(source_weight, direct)
+        row_weighted = private.old.intersect_weighted_comb(
+            row_weighted, module.C3, 182, 1, 13
+        )
+        values.append(private.delayed_carry_pair(
+            row_weighted, delayed[ell], caches[ell]
+        )[6][1])
+    return tuple(values)
 
 
-def disjoint_union_weighted(left, right):
-    left = canonical_weighted(left)
-    right = canonical_weighted(right)
-    require(not marked.intersect(support(left), support(right)),
-            "purported weighted disjoint union overlaps")
-    return canonical_weighted(left + right)
+def scalar_amplitude(vector):
+    require(vector[0] == 0 and len(set(vector[1:])) == 1,
+            f"clock vector is not (0,c,...,c): {vector}")
+    return vector[1]
 
 
-def coefficient(pieces, prefix, carry):
-    return private.delayed_carry_pair(pieces, prefix, {})[carry][1]
+def polynomial_trim(coefficients):
+    values = list(coefficients)
+    while len(values) > 1 and values[-1] == 0:
+        values.pop()
+    return tuple(values)
 
 
-def c3_profile(values):
-    """Normalized C3 Fourier profile over F13 with omega=3."""
-    omega = 3
-    inv3 = pow(3, -1, P)
-    return tuple(
-        inv3 * sum(value * pow(omega, -frequency * arm, P)
-                   for arm, value in enumerate(values)) % P
-        for frequency in range(3)
-    )
+def resultant_phi13(profile):
+    try:
+        return marked.sylvester_resultant((1,) * 13, polynomial_trim(profile))
+    except RuntimeError as error:
+        if str(error) == "zero Sylvester determinant":
+            return 0
+        raise
 
 
-def c3_charged(values):
-    inv3 = pow(3, -1, P)
-    mean = inv3 * sum(values) % P
-    return tuple((value - mean) % P for value in values)
+def circular_convolution(left, right):
+    return tuple(sum(left[j] * right[(i - j) % P] for j in range(P))
+                 for i in range(P))
 
 
-def matrix_product(left, right):
-    return tuple(tuple(
-        sum(left[i][k] * right[k][j] for k in range(len(right))) % P
-        for j in range(len(right[0])))
-        for i in range(len(left))
-    )
+def rotations(profile):
+    return tuple(tuple(profile[(i - shift) % P] for i in range(P))
+                 for shift in range(P))
 
 
-def common_rows(module, delayed_present, source_weight, semantic_common, ell):
-    """Reconstruct THM-2749's source and direct-target common pieces."""
-    source_safe = marked.complement(delayed_present[ell, 7])
-    target_safe = marked.complement(
-        marked.shift_union(delayed_present[ell, 7], SHIFT)
-    )
-    row_common = marked.intersect(semantic_common, source_safe)
-    row_common = marked.intersect(row_common, target_safe)
-
-    source = marked.restrict_weighted(source_weight, row_common)
-    source = private.old.intersect_weighted_comb(
-        source, module.C3, 182, 169, 181
-    )
-
-    # marked.shift_union is a pullback convention, so the argument -SHIFT
-    # pushes the source-coordinate common set into the forward target chart.
-    direct_common = marked.shift_union(row_common, -SHIFT)
-    target = marked.restrict_weighted(source_weight, direct_common)
-    target = private.old.intersect_weighted_comb(
-        target, module.C3, 182, 1, 13
-    )
-    return canonical_weighted(source), canonical_weighted(target)
+def dihedral_orbit(profile):
+    reflected = tuple(profile[-i % P] for i in range(P))
+    return rotations(profile) + rotations(reflected)
 
 
-def valuation(number, prime):
-    result = 0
-    while number and number % prime == 0:
-        number //= prime
-        result += 1
-    return result
+def solve_circulant_over_q(source, target):
+    """Rational solutions k to k*source=target, with k_12 fixed to zero.
+
+    The missing uniform degree of freedom is restored separately.  Gaussian
+    elimination uses Fraction through the canonical module's import.
+    """
+    from fractions import Fraction
+    matrix = []
+    for row in range(P):
+        matrix.append([
+            Fraction(source[(row - col) % P]) for col in range(P - 1)
+        ] + [Fraction(target[row])])
+    rank = 0
+    pivots = []
+    for col in range(P - 1):
+        pivot = next((r for r in range(rank, P) if matrix[r][col]), None)
+        if pivot is None:
+            continue
+        matrix[rank], matrix[pivot] = matrix[pivot], matrix[rank]
+        value = matrix[rank][col]
+        matrix[rank] = [x / value for x in matrix[rank]]
+        for r in range(P):
+            if r != rank and matrix[r][col]:
+                factor = matrix[r][col]
+                matrix[r] = [matrix[r][c] - factor * matrix[rank][c]
+                             for c in range(P)]
+        pivots.append(col)
+        rank += 1
+    for row in matrix:
+        if not any(row[col] for col in range(P - 1)) and row[-1]:
+            return None, rank
+    solution = [Fraction(0) for _ in range(P)]
+    for r, col in enumerate(pivots):
+        solution[col] = matrix[r][-1]
+    return tuple(solution), rank
 
 
 def main():
-    require((P, T, SHIFT, CONTENT, RAIL, TARGET_LABEL)
-            == (13, 297836897838480, 431933040, 26, 8, 3),
-            "canonical clutch constants changed")
-
+    legacy_hash = constructor_audit()
     module, _prefixes, _a, _b, rails, present, _starts = (
-        marked.lift.m.core.build_carrier_data()
+        lift.m.core.build_carrier_data()
     )
-    require(module.C3 == 742586 and len(rails) == 162,
-            "canonical carrier changed")
-
-    natural_prefixes = natural.build_q3_pair_prefixes(module)
-    marked_prefix_bank = marked.marked_prefixes(
+    require(BASE > 13 * T**3,
+            "multiplexing base lost its conservative channel bound")
+    delayed = marked.marked_prefixes(
         module,
         private.build_pair_prefixes(module),
         two.deepest_fork(module),
     )
-    require(all(natural_prefixes[ell][6] == marked_prefix_bank[ell]
-                for ell in range(7)),
-            "natural and two-sided marked prefixes differ")
-
-    target_pullback = clutch.shift_weighted(rails[RAIL][3], -SHIFT)
-    rail_pairs = clutch.intersect_weighted_profiles(
-        rails[RAIL][3], target_pullback
-    )
-    require(rail_pairs and all(row[2] == row[3] for row in rail_pairs),
-            "rail-eight source/target weights stopped agreeing")
-
-    source_weight, _target_weight, rail_common = marked.rail_data(
-        rails, RAIL
-    )
-    semantic_source = two.exclusive_source(module, TARGET_LABEL)
+    source = two.exclusive_source(module, 3)
     clock_comb = tuple(
         module.make_comb(module.C1, 182, 26 * ell - 13, 26 * ell + 13)
         for ell in range(7)
     )
-    static_common = marked.static_semantic_common(
-        module, semantic_source, clock_comb, rail_common
-    )
-    semantic_common = marked.target_label_common(
-        module, static_common, TARGET_LABEL
-    )
+    source_weight, target_weight, rail_common = marked.rail_data(rails, RAIL)
+    raw_static = tuple(two.intersect_sorted(source, clock_comb[1]))
+    raw_static = tuple(module.subtract_comb(
+        raw_static, module.W[1], 182, -13, 13
+    ))
+    raw_static = tuple(module.subtract_comb(
+        raw_static, module.C2, 182, -13, 13
+    ))
 
-    source_natural_vector = []
-    target_natural_vector = []
-    source_common_vector = []
-    target_common_vector = []
-    left_wing_vector = []
-    right_wing_vector = []
-
-    source_natural_masses = []
-    target_natural_masses = []
-    source_common_masses = []
-    target_common_masses = []
-    left_wing_masses = []
-    right_wing_masses = []
-
-    piece_counts = []
-    for ell in range(7):
-        source_natural, target_natural = clutch.restrict_to_relative_overlap(
-            module, present, rail_pairs, ell
-        )
-        source_natural = canonical_weighted(natural.restrict_e3_and_sheet(
-            source_natural, module, *natural.SHEET
+    scalar = {name: [] for name in ("A", "B", "Ms", "Mt", "L", "R")}
+    reductions = {name: [] for name in scalar}
+    row_lines = []
+    physical_masses = []
+    for t in range(P):
+        raw_A = tuple(module.subtract_comb(
+            raw_static, module.W[2], 182,
+            -14 * t - 13, -14 * t + 13,
         ))
-        target_natural = canonical_weighted(natural.restrict_e3_and_sheet(
-            target_natural, module, *natural.SHEET
+        raw_A = tuple(module.subtract_comb(
+            raw_A, module.C3, 182,
+            14 * t - 13, 14 * t + 13,
         ))
-
-        source_common, target_common = common_rows(
-            module, present, source_weight, semantic_common, ell
+        A = marked.intersect(rail_common, raw_A)
+        B = marked.intersect(
+            rail_common, marked.shift_union(raw_A, SHIFT)
         )
+        M = marked.intersect(A, B)
+        L = difference(A, B)
+        Rwing = difference(B, A)
 
-        # Verify the common carriers as actual weighted subprofiles of the
-        # natural carriers, before constructing either wing.
-        require(restrict_weighted(source_natural, support(source_common))
-                == source_common,
-                f"source common profile is not a natural subprofile at {ell}")
-        require(restrict_weighted(target_natural, support(target_common))
-                == target_common,
-                f"target common profile is not a natural subprofile at {ell}")
+        require(marked.merge(M + L) == marked.merge(A),
+                f"A != M disjoint-union L at t={t}")
+        require(marked.merge(M + Rwing) == marked.merge(B),
+                f"B != M disjoint-union R at t={t}")
+        require(not marked.intersect(M, L)
+                and not marked.intersect(M, Rwing),
+                f"wing decomposition is not disjoint at t={t}")
 
-        left_wing = subtract_weighted(
-            source_natural, support(source_common)
+        packed = multiplexed_vectors(
+            module, delayed, present, source_weight, target_weight, A, B, M
         )
-        right_wing = subtract_weighted(
-            target_natural, support(target_common)
+        vectors = {
+            "A": packed["A"],
+            "B": packed["B"],
+            "Ms": packed["M"],
+            # THM-2749 independently recomputes this same common carrier with
+            # the pulled target rail weight and obtains exact raw equality.
+            "Mt": packed["M"],
+        }
+        vectors["L"] = tuple(vectors["A"][i] - vectors["Ms"][i]
+                               for i in range(7))
+        vectors["R"] = tuple(vectors["B"][i] - vectors["Mt"][i]
+                               for i in range(7))
+        require(vectors["Ms"] == vectors["Mt"],
+                f"common raw source/target vector sheared at t={t}")
+
+        require(all(vectors["A"][i] == vectors["Ms"][i] + vectors["L"][i]
+                    for i in range(7)),
+                f"source functional failed additivity at t={t}")
+        require(all(vectors["B"][i] == vectors["Mt"][i] + vectors["R"][i]
+                    for i in range(7)),
+                f"target functional failed additivity at t={t}")
+        if t == 3:
+            require(
+                vectors["Ms"] == vectors["Mt"]
+                == (0,) + (marked.AMPLITUDE,) * 6,
+                f"multiplexed common channel disagrees with THM2749: {vectors}",
+            )
+
+        for name in scalar:
+            scalar[name].append(scalar_amplitude(vectors[name]))
+        for name, root in (("A", 12), ("B", 1), ("Ms", 12),
+                           ("Mt", 1), ("L", 12), ("R", 1)):
+            reductions[name].append(marked.unit_reduction(vectors[name], root))
+        mass_tuple = tuple(interval_mass(carrier)
+                           for carrier in (A, B, M, L, Rwing))
+        physical_masses.append(mass_tuple)
+        row_lines.append(
+            f"t={t} pre_relative_interval_mass=(A:{interval_mass(A)},B:{interval_mass(B)},"
+            f"M:{interval_mass(M)},L:{interval_mass(L)},R:{interval_mass(Rwing)}) "
+            f"amp=(A:{scalar_amplitude(vectors['A'])},B:{scalar_amplitude(vectors['B'])},"
+            f"Ms:{scalar_amplitude(vectors['Ms'])},Mt:{scalar_amplitude(vectors['Mt'])},"
+            f"L:{scalar_amplitude(vectors['L'])},R:{scalar_amplitude(vectors['R'])})"
         )
+        del A, B, M, L, Rwing, vectors, packed
 
-        require(disjoint_union_weighted(source_common, left_wing)
-                == source_natural,
-                f"A=M disjoint-union L failed at clock {ell}")
-        require(disjoint_union_weighted(target_common, right_wing)
-                == target_natural,
-                f"B=M disjoint-union R failed at clock {ell}")
+    scalar = {name: tuple(values) for name, values in scalar.items()}
+    reductions = {name: tuple(values) for name, values in reductions.items()}
+    require(tuple(physical_masses[:3]) == ((0, 0, 0, 0, 0),) * 3
+            and tuple(physical_masses[3:12])
+            == ((13751337600, 13808634840, 6320326320,
+                 7431011280, 7488308520),) * 9
+            and physical_masses[12]
+            == (7404566400, 7435418760, 0, 7404566400, 7435418760),
+            "physical Mayer--Vietoris interval census changed")
+    supports = {name: tuple(i for i, value in enumerate(profile) if value)
+                for name, profile in scalar.items()}
+    require(len(supports["A"]) == 9 and len(supports["B"]) == 10,
+            "natural source/target support-cardinality obstruction changed")
+    resultants = {name: resultant_phi13(profile)
+                  for name, profile in scalar.items()}
 
-        prefix = marked_prefix_bank[ell]
-        source_natural_value = coefficient(source_natural, prefix, 12)
-        target_natural_value = coefficient(target_natural, prefix, 6)
-        source_common_value = coefficient(source_common, prefix, 12)
-        target_common_value = coefficient(target_common, prefix, 6)
-        left_wing_value = coefficient(left_wing, prefix, 12)
-        right_wing_value = coefficient(right_wing, prefix, 6)
+    cross = tuple(scalar["L"][t] * scalar["R"][t] for t in range(P))
+    cross_resultant = resultant_phi13(cross)
 
-        require(source_natural_value
-                == source_common_value + left_wing_value,
-                f"source functional additivity failed at {ell}")
-        require(target_natural_value
-                == target_common_value + right_wing_value,
-                f"target functional additivity failed at {ell}")
+    C = marked.AMPLITUDE
+    G = C // 119
+    B0 = 121 * G
+    require(C == 119 * G and scalar["B"] == (0, 0, 0) + (B0,) * 10,
+            "natural target amplitude factorization changed")
+    W = tuple(int(3 <= t <= 11) for t in range(P))
+    U = tuple(int(3 <= t <= 12) for t in range(P))
+    Q = tuple(2 if 3 <= t <= 11 else 121 if t == 12 else 0
+              for t in range(P))
+    require(scalar["A"] == scalar["Ms"] == scalar["Mt"]
+            == tuple(C * value for value in W)
+            and scalar["L"] == (0,) * P
+            and scalar["R"] == tuple(G * value for value in Q),
+            "Mayer--Vietoris amplitude factorization changed")
+    norm_W = resultant_phi13(W)
+    norm_U = resultant_phi13(U)
+    norm_Q = resultant_phi13(Q)
+    require(norm_W == norm_U == 1
+            and norm_Q == 8492431042211308167354471,
+            "primitive target-window norm changed")
+    require(norm_Q % 91 == 1,
+            "right-wing target norm lost its 91-unit class")
+    require(resultants["A"] == resultants["Ms"] == resultants["Mt"]
+            == C**12
+            and resultants["B"] == B0**12
+            and resultants["L"] == 0
+            and resultants["R"] == G**12 * norm_Q,
+            "factored raw resultants changed")
 
-        source_natural_vector.append(source_natural_value)
-        target_natural_vector.append(target_natural_value)
-        source_common_vector.append(source_common_value)
-        target_common_vector.append(target_common_value)
-        left_wing_vector.append(left_wing_value)
-        right_wing_vector.append(right_wing_value)
+    inverse_W = tuple(int(t in (2, 6, 10)) for t in range(P))
+    inverse_U = tuple(int(t in (1, 4, 7, 10)) for t in range(P))
+    require(circular_convolution(W, inverse_W) == (3,) + (2,) * 12
+            and circular_convolution(U, inverse_U) == (4,) + (3,) * 12,
+            "positive norm-one decoders changed")
+    natural_decoder = circular_convolution(U, inverse_W)
+    natural_decoded = circular_convolution(W, natural_decoder)
+    require(natural_decoder == (3, 3, 2, 2, 2, 3, 2, 2, 2, 3, 2, 2, 2)
+            and natural_decoded == (20, 20, 20) + (21,) * 10,
+            "positive natural-sheet quotient decoder changed")
 
-        source_natural_masses.append(weighted_mass(source_natural))
-        target_natural_masses.append(weighted_mass(target_natural))
-        source_common_masses.append(weighted_mass(source_common))
-        target_common_masses.append(weighted_mass(target_common))
-        left_wing_masses.append(weighted_mass(left_wing))
-        right_wing_masses.append(weighted_mass(right_wing))
-        piece_counts.append((
-            len(source_natural), len(source_common), len(left_wing),
-            len(target_natural), len(target_common), len(right_wing),
-        ))
-
-    source_natural_vector = tuple(source_natural_vector)
-    target_natural_vector = tuple(target_natural_vector)
-    source_common_vector = tuple(source_common_vector)
-    target_common_vector = tuple(target_common_vector)
-    left_wing_vector = tuple(left_wing_vector)
-    right_wing_vector = tuple(right_wing_vector)
-
-    expected = lambda amplitude: (0,) + (amplitude,) * 6
-    require(source_natural_vector == expected(NATURAL_SOURCE_AMPLITUDE),
-            "natural source vector changed")
-    require(target_natural_vector == expected(NATURAL_TARGET_AMPLITUDE),
-            "natural target vector changed")
-    require(source_common_vector == target_common_vector
-            == expected(COMMON_AMPLITUDE),
-            "two-sided common vector changed")
-    require(left_wing_vector == expected(LEFT_WING_AMPLITUDE),
-            "left-wing vector changed")
-    require(right_wing_vector == expected(RIGHT_WING_AMPLITUDE),
-            "right-wing vector changed")
-
-    require(tuple(source_natural_masses)
-            == (929934280541992017600,) * 7,
-            "natural source weighted mass changed")
-    require(tuple(target_natural_masses)
-            == (929934304688494607040,) * 7,
-            "natural target weighted mass changed")
-    require(all(natural_mass == common_mass + wing_mass
-                for natural_mass, common_mass, wing_mass in zip(
-                    source_natural_masses,
-                    source_common_masses,
-                    left_wing_masses,
-                )), "source weighted masses are not additive")
-    require(all(natural_mass == common_mass + wing_mass
-                for natural_mass, common_mass, wing_mass in zip(
-                    target_natural_masses,
-                    target_common_masses,
-                    right_wing_masses,
-                )), "target weighted masses are not additive")
-
-    source_common_unit = marked.unit_reduction(source_common_vector, 12)
-    target_common_unit = marked.unit_reduction(target_common_vector, 1)
-    left_wing_unit = marked.unit_reduction(left_wing_vector, 12)
-    right_wing_unit = marked.unit_reduction(right_wing_vector, 1)
-    source_natural_unit = marked.unit_reduction(source_natural_vector, 12)
-    target_natural_unit = marked.unit_reduction(target_natural_vector, 1)
-    units = (
-        source_common_unit, target_common_unit,
-        left_wing_unit, right_wing_unit,
-        source_natural_unit, target_natural_unit,
+    # Primitive positive decoder for Q, obtained from its adjugate inverse and
+    # shifted by the uniform target-null vector.  It decodes R alone; it cannot
+    # pair R with the identically zero L functional.
+    decoder_Q = (
+        0, 7929439954473079186265, 133267004550058088654,
+        135506751609875725618, 137784176006680359662,
+        6831978049261891988, 4707019620677081960,
+        2508704797329205596, 235167466079606368,
+        124296699975702408, 47276146686603592,
+        5907597936307760, 2054490908689296,
     )
-    expected_units = (
-        ((9, 0, 0, 0, 0, 0), 1),
-        ((4, 0, 0, 0, 0, 0), 1),
-        ((9, 0, 0, 0, 0, 0), 1),
-        ((5, 0, 0, 0, 0, 0), 12),
-        ((5, 0, 0, 0, 0, 0), 12),
-        ((9, 0, 0, 0, 0, 0), 1),
+    decoded_Q = circular_convolution(Q, decoder_Q)
+    require(decoded_Q == (
+        960304259241135830069757,
+    ) + (16700810106546033697038,) * 12
+            and decoded_Q[0] - decoded_Q[1]
+            == 943603449134589796372719,
+            "positive Q decoder changed")
+    require((decoded_Q[0] - decoded_Q[1]) % 91 == 81,
+            "right-wing primitive decoder class changed")
+
+    expected_reductions = {
+        "A": ((9, 0, 0, 0, 0, 0), 1),
+        "B": ((8, 0, 0, 0, 0, 0), 12),
+        "Ms": ((9, 0, 0, 0, 0, 0), 1),
+        "Mt": ((4, 0, 0, 0, 0, 0), 1),
+    }
+    for name, expected in expected_reductions.items():
+        for t in supports[name]:
+            require(reductions[name][t] == expected,
+                    f"root reduction changed for {name},t={t}")
+    for t in range(3, 12):
+        require(reductions["R"][t] == ((4, 0, 0, 0, 0, 0), 1),
+                f"right-wing common-label root profile changed at t={t}")
+    require(reductions["R"][12] == ((8, 0, 0, 0, 0, 0), 12),
+            "right-wing terminal-label root profile changed")
+    require(all(reduction == ((0, 0, 0, 0, 0, 0), 0)
+                for reduction in reductions["L"]),
+            "left wing acquired a coefficient unit")
+
+    decoder, decoder_rank = solve_circulant_over_q(
+        scalar["L"], scalar["R"]
     )
-    require(units == expected_units, "root-normalized unit table changed")
+    require(decoder is None and decoder_rank == 0,
+            "zero-left/nonzero-right decoder obstruction changed")
 
-    common_gain = 4 * pow(9, -1, P) % P
-    wing_gain = 5 * pow(9, -1, P) % P
-    natural_gain = 9 * pow(5, -1, P) % P
-    require((common_gain, wing_gain, natural_gain) == (12, 2, 7),
-            "common/wing/natural normalized ratios changed")
-    require((common_gain - wing_gain) % P == 10,
-            "internal grading contrast changed")
-
-    shear_from_natural = (
-        target_natural_vector[1] - source_natural_vector[1]
-    )
-    shear_from_wings = right_wing_vector[1] - left_wing_vector[1]
-    require(shear_from_natural == shear_from_wings == SHEAR_AMPLITUDE,
-            "natural shear is not the wing boundary current")
-    require(valuation(SHEAR_AMPLITUDE, P) == 1
-            and SHEAR_AMPLITUDE // CONTENT % P == 12,
-            "wing shear valuation/content residue changed")
-
-    # External-arm boundary.  These three gains would charge both nontrivial
-    # C3 modes if a physical arm selector supplied them.  The actual internal
-    # M/L/R operator is arm-blind, so Q(I_arm tensor T)Pi vanishes instead.
-    hypothetical_arm_gains = (common_gain, wing_gain, wing_gain)
-    hypothetical_fourier = c3_profile(hypothetical_arm_gains)
-    mean = hypothetical_fourier[0]
-    q_profile = tuple((value - mean) % P
-                      for value in hypothetical_arm_gains)
-    require((mean, q_profile, hypothetical_fourier)
-            == (1, (11, 1, 1), (1, 12, 12)),
-            "hypothetical external C3 selector profile changed")
-
-    inv3 = pow(3, -1, P)
-    identity = tuple(tuple(int(i == j) for j in range(3))
-                     for i in range(3))
-    projection = tuple(tuple(inv3 for _j in range(3))
-                       for _i in range(3))
-    charged = tuple(tuple((identity[i][j] - projection[i][j]) % P
-                          for j in range(3))
-                    for i in range(3))
-    require(matrix_product(matrix_product(charged, identity), projection)
-            == ((0, 0, 0),) * 3,
-            "arm-blind invariant-to-charged block became nonzero")
-
-    # Conditional 2-by-3 ANOVA diagnostic.  This is an exhaustive algebraic
-    # test, not an assertion that the physical packet supplies these rows.
-    anova_checks = 0
-    for source_total in range(P):
-        for m0 in range(P):
-            for m1 in range(P):
-                for m2 in range(P):
-                    common_by_arm = (m0, m1, m2)
-                    wing_by_arm = tuple(
-                        (source_total - value) % P
-                        for value in common_by_arm
-                    )
-                    target_by_arm = tuple(
-                        (common_gain * common_by_arm[index]
-                         + wing_gain * wing_by_arm[index]) % P
-                        for index in range(3)
-                    )
-                    rectangles = tuple(
-                        (common_by_arm[i] + wing_by_arm[j]
-                         - common_by_arm[j] - wing_by_arm[i]) % P
-                        for i, j in ((0, 1), (0, 2), (1, 2))
-                    )
-                    rectangle_zero = all(value == 0 for value in rectangles)
-                    common_constant = len(set(common_by_arm)) == 1
-                    target_charged = c3_charged(target_by_arm)
-                    require(rectangle_zero == common_constant
-                            == (target_charged == (0, 0, 0)),
-                            "conditional rectangle criterion failed")
-                    require(target_charged == tuple(
-                        10 * value % P
-                        for value in c3_charged(common_by_arm)
-                    ), "conditional Q3 target formula failed")
-                    anova_checks += 1
-    require(anova_checks == P**4,
-            "conditional ANOVA universe changed")
-
-    source_masses = (
-        source_natural_masses[0],
-        source_common_masses[0],
-        left_wing_masses[0],
-    )
-    target_masses = (
-        target_natural_masses[0],
-        target_common_masses[0],
-        right_wing_masses[0],
-    )
-    require(len(set(source_common_masses)) == 1
-            and len(set(target_common_masses)) == 1
-            and len(set(left_wing_masses)) == 1
-            and len(set(right_wing_masses)) == 1,
-            "weighted masses stopped being clock-constant")
-    require(len(set(piece_counts)) == 1,
-            "weighted-piece census stopped being clock-constant")
-
-    print("LRC14 ROOT-ZERO CLOCK-BLIND WING REPLAY")
-    print("status=REFUTED_GLOBAL_CLAIM;VERIFIED_EXACT_CLOCK_BLIND_CALCULATION")
-    print(f"dependency_pins=LF-normalized count={len(DEPENDENCIES)}")
-    print("prefix_identity=natural_Q_(3,{1,2}) equals THM2749_marked_prefix for all_7_clocks")
-    print(f"piece_counts=(A,M,L;B,M,R)={piece_counts[0]}")
-    print(f"weighted_masses=(A,M,L)={source_masses}")
-    print(f"weighted_masses=(B,M,R)={target_masses}")
-    print("weighted_piece_identities=A=M_disjoint_union_L; B=M_disjoint_union_R for all_7_clocks")
-    print(f"natural_vectors=source:{source_natural_vector} target:{target_natural_vector}")
-    print(f"common_vectors=source:{source_common_vector} target:{target_common_vector}")
-    print(f"wing_vectors=left:{left_wing_vector} right:{right_wing_vector}")
-    print("functional_identities=S(A)=S(M)+S(L); T(B)=T(M)+T(R)")
-    print("root_profiles=common_source12:9/det1 common_target1:4/det1")
-    print("root_profiles=left12:9/det1 right1:5/det12 natural_source12:5/det12 natural_target1:9/det1")
-    print(f"normalized_ratios=common_clutch_gain:{common_gain} formal_wing_ratio:{wing_gain} folded_natural_ratio:{natural_gain}")
-    print("internal_grading=source(M,L):(9,9) target(M,R):(4,5) formal_diagonal_comparison:(12,2); ratio7_after_fold_only")
-    print(f"wing_shear={SHEAR_AMPLITUDE} v13=1 (shear/26)_mod13=12")
-    print("shear_identity=T(B)-S(A)=T(R)-S(L)")
-    print(f"hypothetical_external_arm_gains={hypothetical_arm_gains} mean={mean} Qg={q_profile} normalized_C3={hypothetical_fourier}")
-    print("actual_external_arm_typing=I_arm_tensor_internal_T; Q(I_tensor_T)Pi=0")
-    print("conditional_external_formula=if_Q3(S_i)=0_on_one_common_carrier_then_Q3(T_i)=10*Q3(M_i); carrier_not_constructed")
-    print(f"conditional_ANOVA_exhaustive={anova_checks}_2x3_tables rectangles_zero_iff_Q3T_zero")
-    print("FIRST_FAILURE: legacy natural source omits the source-one clock factor of the marked common section")
-    print("SCOPE: exact hostile replay on mismatched carriers; no physical wing decomposition, external C3 selector, endpoint current, row exclusion, or LRC14")
+    print("THM-2751 FIXED-CLOCK ROOT-ZERO MAYER-VIETORIS WING TARGET SPECTRUM")
+    print("status=RESERVED PROOF-COMPLETE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT")
+    print(f"constructor_audit=legacy_sha256:{legacy_hash} missing:(clock_comb,source_clock) canonical_present=True")
+    print("prefix_audit=historical_and_actual_Q3_prefixes_equal_14/14; first_failure_is_source-one_factor_not_terminal_prefix")
+    for line in row_lines:
+        print(line)
+    print(f"supports={supports}")
+    print(f"factorization=C={C}=119*G G={G} B0=121*G={B0}")
+    print("target_polynomials=A=Ms=Mt=C*W, B=121G*U, L=0, R=G*Q")
+    print("W=z^3+...+z^11; U=z^3+...+z^12; Q=2(z^3+...+z^11)+121z^12")
+    print("root_profiles=A:R12->9/det1; B:L1->8/det12; Ms:R12->9/det1; Mt:L1->4/det1; L=zero; R:t3..11->4/det1,t12->8/det12")
+    print("gains=common Mt/Ms=4/9=12; fixed-clock common-label B/A=8/9=11; global scalar/dihedral impossible because support sizes are 9 versus 10")
+    print(f"primitive_norms=(W:{norm_W},U:{norm_U},Q:{norm_Q}) Q_mod91={norm_Q % 91}")
+    print("raw_resultants=(A:C^12,B:(121G)^12,M:C^12,L:0,R:G^12*Norm(Q))")
+    print(f"cross_profile_L_times_R={cross} all_target_characters_zero=True resultant={cross_resultant}")
+    print("positive_decoders=W^-1=(z2+z6+z10), U^-1=(z+z4+z7+z10) modulo uniform")
+    print(f"fixed_profile_positive_decoder_K=U*W^-1={natural_decoder}; W*K=U+20N")
+    print("fixed_profile_decoder_identity=121[A*K]=119[B] modulo the uniform target-null line; coefficient-derived only, not a physical packet action")
+    print(f"Q_positive_decoder={decoder_Q}")
+    print(f"Q_decoder_convolution={decoded_Q} primitive_delta={decoded_Q[0]-decoded_Q[1]} delta_mod91={(decoded_Q[0]-decoded_Q[1]) % 91}")
+    print("conditional_holotopy=right cofiber generates the C13 augmentation quotient coefficientwise and can synthesize any nonzero correction after scaling; physical attachment to one common-ancestry semantic vertical edge remains absent")
+    print("wing_decoder=IMPOSSIBLE: L functional is identically zero while R is nonzero; no scalar, dihedral, linear convolution, or positive decoder sends L to R")
+    print("full_unclocked_boundary=bd53dc4c5 has M=disjoint_union_e M_e and a target augmentation rank drop; this theorem is only the fixed e=1 fibre")
+    print("SCOPE: fixed-e=1 rail8 marked source sheet and pulled target sheet; coefficient transport only, no whole-packet action or endpoint current")
     print("ALL CHECKS PASSED")
 
 

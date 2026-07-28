@@ -2,8 +2,8 @@
 id: THM-2757
 title: "Marked-reference opposite-edge clutch transgression"
 status: >
-  RESERVED / PROOF-COMPLETE PROVISIONAL CANDIDATE + VERIFIED-EXACT;
-  AWAITING INDEPENDENT AUDIT.  One marked vertex and three arms canonically
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  One marked vertex
+  and three arms canonically
   orient the three opposite-edge pairs of K4 into a 2-by-3 star/opposite
   table.  The opposite-edge difference is a scaled Hadamard transform with
   D D^T=4I and D^T D=4I-J.  Every column total is automatically constant, so
@@ -14,6 +14,10 @@ status: >
   on the equal corolla.  This is a finite representation/design theorem; it
   constructs no physical LRC four-point carrier or wing-diagonal operator.
 source: root/marked-reference-opposite-edge-transgression-2026-07-28
+audit: >
+  root-zero-clutch-audit/2026-07-28 (independent marked table, Hadamard,
+  general transgression, F13 charge/census, A4/S4 hostile, representation
+  scope, and normal/-O/hash replay: ACCEPT after field/source repairs)
 depends_on: []
 related:
   - THM-2721-semantic-inner-triangle-equal-following-amplitude-and-current-reanchoring-no-go
@@ -30,8 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2757 -- marked-reference opposite-edge clutch transgression
 
-**RESERVED / PROOF-COMPLETE PROVISIONAL CANDIDATE + VERIFIED-EXACT;
-AWAITING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2750 isolates the smallest positive way to charge an equal three-arm
 corolla: add one fixed reference and move it into an arm.  THM-2753 identifies
@@ -95,8 +98,12 @@ D D^T=4 I_3,                       D^T D=4 I_4-J_4.    (6)
 Consequently over a field of characteristic different from two, `D` induces
 a scaled isomorphism from the four-point standard quotient
 `k^4/k(1,1,1,1)` to the three marked opposite-edge differences.  Formula
-`(6)` is the marked-coordinate form of THM-2756's negative edge block; no
-claim here depends on that candidate.
+`(6)` is the marked-coordinate form of THM-2756's negative edge block.  More
+precisely, the vertex-sum edge tables `(3)` form only the four-dimensional
+`1 direct-sum [31]` submodule of the full six-edge module: their constant
+matching totals kill the `[22]` summand.  This theorem does not identify its
+marked chart with all of THM-2756's
+`1 direct-sum [22] direct-sum [31]` carrier.
 
 ## 2. Exact two-row clutch transgression
 
@@ -112,8 +119,8 @@ The division-free identity is
 2T_i=(alpha+beta)sigma(v)+(alpha-beta)D_i.             (8)
 ```
 
-If two is invertible and `Q_3` denotes projection away from the equal-column
-line, then
+If two **and three** are invertible and `Q_3` denotes the mean-zero projector
+away from the equal-column line, then
 
 ```text
 Q_3 T=((alpha-beta)/2) Q_3 D
@@ -245,7 +252,7 @@ The closest physical candidates each miss one datum:
 |---|---|---|
 | THM-2721 | positive equal three-arm corolla and four changed-source controls | no four-point `S4` action, edge-incidence table, or target reanchoring |
 | THM-2749 | marked root-zero common clutch and primitive `C13` target characters | its target colours are not external `C3` arms or four vertices |
-| repaired THM-2751 | a genuine one-sided target cofiber in one frozen clock chart | no linear left-to-right wing gain or marked four-point carrier |
+| MISTAKE-313 frozen-clock `FINITE-EXACT` repair | a genuine one-sided target cofiber in one frozen clock chart | no linear left-to-right wing gain or marked four-point carrier; THM-2751 remains unavailable until separately re-promoted |
 | THM-2756 | canonical rational/integral `2/3` edge splitting | no physical LRC six-edge packet or endpoint current |
 
 Therefore the theorem solves the **finite representation design** but not its
@@ -270,7 +277,7 @@ exceptions and no truth-bearing assertions.  It checks `(4)--(12)`, all
 distinct matching actions in `(21)`.
 
 ```text
-PROVED HERE (candidate): marked-reference 2 x 3 edge table;
+PROVED HERE:             marked-reference 2 x 3 edge table;
                          scaled Hadamard/opposite-edge identities;
                          exact general clutch transgression and rectangles;
                          complete F13 charge criterion and census;
@@ -283,5 +290,12 @@ NOT CONSTRUCTED:         a physical unequal root-zero wing operator;
                          row exclusion or LRC(14).                       (22)
 ```
 
-`QED` for the provisional theorem; no result may depend on it before an
-independent audit and status promotion.
+An independent hostile audit rederived the integral Hadamard identities,
+general clutch and rectangle laws, exact field hypotheses, complete `F_13`
+census, marked-swap characters, and the equal-corolla `A4/S4` collision.  It
+also checked that the vertex-sum carrier omits THM-2756's `[22]` block and
+that MISTAKE-313 supplies only finite-exact frozen-clock context.  Normal,
+optimized and stored outputs byte-match after LF normalization, and both
+declared hashes are exact.  No physical LRC realization was inferred.
+
+QED.
