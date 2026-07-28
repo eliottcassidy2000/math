@@ -1,0 +1,8 @@
+THM-2811 independent exact audit
+affine intertwiner/rank wall: PASS (monomials=81, rank rows=30)
+e=2 passport/Mobius trichotomy: PASS (rows=5481)
+binary Hessian-nilpotent formula: PASS (degrees=11)
+both N=4 polynomialized Hessian hostiles: PASS
+custom rational barycentric identities: PASS (rows=205)
+SIC stencil/response mismatch: PASS (stencil rows=2700, mismatch rows=623)
+PASS checks=20163
