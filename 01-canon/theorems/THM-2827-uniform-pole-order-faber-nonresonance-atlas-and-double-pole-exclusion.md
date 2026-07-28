@@ -2,8 +2,8 @@
 id: THM-2827
 title: "Uniform pole-order Faber nonresonance atlas and double-pole exclusion"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For every normalized reduced Faber degree m=4R-2, R>=7,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  normalized reduced Faber degree m=4R-2, R>=7,
   and every local pair (ord V,ord M)=(nu,1), nu>=3, the nonsplit
   polynomial exact-square-prefix chart is impossible when R is 0 or 1
   mod 3.  For R=3k+2 it is impossible off the exact H-resonance rays
@@ -13,6 +13,11 @@ status: >
   degrees.  MISTAKE-317 records why unique-face support alone did not
   close the resonance.
 source: root/uniform-pole-order-faber-nonresonance-atlas-2026-07-28
+audit: >
+  thm2827-hostile-audit independently rederived the target normalization,
+  H extraction, complete valuation trichotomy, exact resonance equivalence
+  and local witness, passport divisibility, and primitive Farey boundary;
+  normal, optimized, stored, LF hashes, and documentation all pass.
 depends_on:
   - THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient
   - THM-2411-degree-twenty-two-first-flux-pole-divisor-square-class-reduction
@@ -31,8 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2827 -- the all-order Faber obstruction has one exact resonance ray
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2826 excludes the triple-pole pair `(ord V,ord M)=(3,1)`.  The same
 Newton architecture extends to arbitrary `ord V`, but not as an
@@ -428,5 +432,14 @@ python -O 04-computation/jc_uniform_pole_order_faber_nonresonance_thm2827.py
 
 Normal, optimized, and stored transcripts agree exactly.
 
-Until a proof, exact companion, and independent hostile audit are installed,
-this reservation is not a proved result or proved dependency.
+## 9. Independent hostile audit
+
+An independent audit rederived the target translation, formula `(9)`, the
+three-cone exhaustion (including `b=infinity`), every polar endpoint and
+unit-residue case, pure-face separation, the iff resonance arithmetic, and
+the formal local witness.  It separately checked the THM-2796 local typing,
+passport divisibility, cyclic boundary, and primitive Farey interpretation.
+Both execution modes byte-match the stored output, both LF hashes match,
+and the companion has no truth-bearing assertion or floating literal.
+
+**QED.**
