@@ -9,10 +9,12 @@ status: >
   Z1 Z2^10 Z3 Z4^11 Z5, with first lower-central transgression 10 in
   Z2/Z3.  The coefficient has full period and every address conductor;
   its canonical pushforward to the 169-address quotient is the positive
-  central unit c z^6(1+z).  This is transfer along a genuine partial
-  graded-chord germ, not pointwise descent, pure-Z1 packet covariance, or
-  an endpoint-origin allocation.  Until independent promotion, no proved
-  result may depend on this candidate.
+  two-point chain c z^6(1+z), whose permitted scalar or coefficient-
+  Bockstein normalization is a central group-algebra unit.  This is
+  transfer along a genuine partial graded-chord germ, not pointwise
+  descent, pure-Z1 packet covariance, or an endpoint-origin allocation.
+  Until independent promotion, no proved result may depend on this
+  candidate.
 source: root/graded-semantic-arm-transfer-2026-07-28
 depends_on:
   - THM-2782-semantic-arm-right-wing-local-unit-and-endpoint-deck-boundary
@@ -38,7 +40,8 @@ THM-2782 finds a three-point physical central-direction segment and one
 same-`Omega` descent failure.  The complete orbit is substantially more
 rigid.  Its main raw target columns are two-point coefficient chains with
 full cyclotomic spectrum, and the remote second point differs from the
-canonical central successor by one explicit lower-central word.  Quotient
+canonical central successor by one explicit lower-central word.  After
+the permitted scalar or coefficient-Bockstein normalization, quotient
 pushforward turns that chord into a unit on the THM-2779 central cycle.
 
 The positive result is a **transfer**, not a descent.  The two coarse
@@ -263,7 +266,7 @@ all primitive conductors
 
 survive.
 
-## 5. Positive quotient transfer is a central unit
+## 5. Positive quotient transfer normalizes to a central unit
 
 Reduction modulo `169` sends the addresses in `(3)` to
 
@@ -294,10 +297,12 @@ in `K[C_13]`.  Hence
 (1+z)^(-1)=1/2(1-z+z^2-z^3+...+z^12).                  (26)
 ```
 
-After dividing by a nonzero scalar `c`, or after the inherited unit
-Bockstein normalization in characteristic thirteen, convolution by `(24)`
-is an automorphism of the whole thirteen-coordinate central coefficient
-module.  It is a cyclic algebraic generator.
+After dividing by the nonzero scalar `c`, or after the inherited
+coefficient-Bockstein normalization `(c/13) mod13=2` in characteristic
+thirteen, convolution by the normalized version of `(24)` is an
+automorphism of the whole thirteen-coordinate central coefficient module.
+It is a cyclic module generator.  The raw integral chain in `(24)` is not
+itself a unit of `Z[C_13]`.
 
 This is a **pushforward**, not a pullback descent.  Descent would require
 constancy on the `13^4`-point fibres and already fails at
@@ -329,14 +334,15 @@ pushforward to `C_13`, in the normalized `j mod13` coordinate, is
 It has minimal period `13^5`, and all five primitive conductors in `(22)`
 survive.
 
-Let
+After dividing the complete raw target table by its common positive content
+`c`, let
 
 ```text
 A=delta_0+delta_53028
 ```
 
 be the raw chord, and let `B` be the exceptional 121-cell profile.  Applying
-the displayed integral lift of THM-2771's `K_beta` to the complete target
+the displayed integral lift of THM-2771's `K_beta` to this normalized target
 table gives
 
 ```text
@@ -364,7 +370,8 @@ source:
   the complete physical clock-one THM-2782 coefficient array on Z/13^6;
 
 target:
-  one positive two-vertex coefficient unit on the central Omega cycle;
+  one positive two-vertex coefficient chain on the central Omega cycle
+  whose scalar/Bockstein normalization is a group-algebra unit;
 
 map:
   exact address-chain pushforward modulo 169;
