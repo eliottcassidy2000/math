@@ -2,8 +2,8 @@
 id: THM-2745
 title: "Single response-branch ramification and monomial-composition boundary"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  A rational primitive on the source P1 that factors through a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A rational
+  primitive on the source P1 that factors through a
   projective integral response component with one response pole forces the
   component normalization to be P1.  After placing the two pole points at
   infinity, both the response and the normalization map are pure powers.
@@ -28,8 +28,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2745 -- one response pole forces a monomial composition
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2741 records the degree identity `m-1=eP` on a hypothetical reducible
 component carrying only one of its response poles.  The same argument has a
@@ -217,4 +216,4 @@ composition.  It also checks the constant-`U` degree-one boundary and the
 necessity of the source/target translations.  The proof for arbitrary
 degrees is Section 2, not a finite computation.
 
-QED (candidate; independent hostile audit pending).
+QED.

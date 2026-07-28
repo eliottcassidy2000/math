@@ -1,8 +1,8 @@
 # Script Results Index
 
 - `jc2_one_pole_response_composition_thm2745.py` -> matching `.out`
-  [PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; THM-2745; INDEPENDENT HOSTILE
-  AUDIT PENDING].  A one-pole response component dominated by the source
+  [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2745].  A
+  one-pole response component dominated by the source
   rational primitive has rational normalization; after moving its source and
   target poles to infinity, both the response and normalization map are pure
   powers.  Thus constant `U` forces pole order and cover degree one, while
