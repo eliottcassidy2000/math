@@ -2,7 +2,9 @@
 id: THM-2779
 title: "Bockstein--symplectic decoder/frame torsor and Heisenberg root-degree gate"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The THM-2771
+  PROVED CORE + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  PROOF-COMPLETE ALL-PRIME ADDENDUM + VERIFIED-EXACT, AWAITING INDEPENDENT
+  AUDIT.  The THM-2771
   augmentation decoders and the THM-2772 normalized transverse frames are
   exact affine F13-torsors with the same gauge-invariant -aN7 transgression.
   Their determinant face is the central phase of H_13: it survives on the
@@ -14,6 +16,9 @@ status: >
   carry-suppressed H_13 action on Z/169, whose central step is +13 and whose
   +1 odometer differs at the carry wall.  A flat dilation-natural
   target-to-root map must vanish; a graded digit lift is the sharp survivor.
+  Uniformly for every prime p, the minimal faithful
+  permutation degree is p^2; p=2 is the D8 quadratic-refinement boundary,
+  and exact-degree actions are classified by core-free order-p stabilizers.
   No physical
   same-ancestry lift, semantic edge, row exclusion, or LRC(14) conclusion is
   proved.
@@ -45,12 +50,18 @@ secondary_script: 04-computation/lrc14_bockstein_symplectic_endpoint_gate_thm277
 secondary_output: 05-knowledge/results/lrc14_bockstein_symplectic_endpoint_gate_thm2779.out
 secondary_script_sha256: 004e06c617f9305e2f0bc30871926e3faa7843f47dcf63af1fd8a892e63101e4
 secondary_output_sha256: a89c00a3830ee9ff282cc5e4557d41293af5d6f0e7feabd5d3c7e7808591e754
+tertiary_script: 04-computation/lrc14_heisenberg_decoder_frame_root_degree_thm2779.py
+tertiary_output: 05-knowledge/results/lrc14_heisenberg_decoder_frame_root_degree_thm2779.out
+tertiary_script_sha256: ef6e9f9bcb4f11152d291342a11ae215245d1d19b96c49940a01ba9ea850cbd9
+tertiary_output_sha256: 1feb463864015035ab8d7fcfcddf9cfe8b0ec0a3ed36481f2f66d6a9149182e6
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2779 -- the twin transgressions have the same gauge space, but not yet the same carrier
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED CORE + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+PROOF-COMPLETE ALL-PRIME ADDENDUM + VERIFIED-EXACT, AWAITING INDEPENDENT
+AUDIT.**
 
 THM-2771 and THM-2772 independently reached the same seven-chart correction:
 
@@ -133,6 +144,35 @@ Conversely `epsilon N_13=0`, so every point in `(8)` is a solution.
 Thus `Dec(S_beta)` is an affine `F_13`-torsor, not a unique inverse.
 The ambiguity is exactly the target norm mode.
 
+This socle law is uniform.  For any prime `p`, in
+
+```text
+R_p=F_p[C_p]=F_p[epsilon]/(epsilon^p),
+S=epsilon V,                         V(0)!=0,             (9a)
+```
+
+the complete decoder fibre of `SK=epsilon` is
+
+```text
+V^(-1)+F_p epsilon^(p-1)=K_0+F_pN_p,
+N_p=1+u+...+u^(p-1)=epsilon^(p-1).                       (9b)
+```
+
+Multiplication by `S` has rank `p-1` and kernel the one-dimensional socle
+`F_pN_p`.  Requiring any one chosen target coefficient to vanish selects a
+unique point because every coefficient of `N_p` is one; that section depends
+on the chosen target label.
+
+For the printed `p=13` section the unit-qualified identity is sharper:
+
+```text
+V_beta K_beta=1+3epsilon^12,
+V_beta^(-1)=K_beta+3N_13.                               (9c)
+```
+
+Thus the terminal `3epsilon^12` is precisely the chosen socle gauge, not a
+failed inversion.
+
 This gauge does not change the final chart invoice.  If `B_e` denotes one
 physical chart row before target decoding, replacing `K_beta` by
 `K_beta+cN_13` adds
@@ -153,6 +193,16 @@ convolution remains
 ```text
 C*N_7=-N_7,                 N_7=1+x+...+x^6.              (12)
 ```
+
+The exact local dependence is
+
+```text
+C(c)=(0,2,0,10,0,0,0)+c(0,3,3,7,0,0,0).              (12a)
+```
+
+All thirteen columns are distinct, while their augmentations and uniform
+convolution are the same.  This is the precise information erased by the
+passage from the decoder torsor to the scalar invoice.
 
 The decoder gauge loses provenance and cannot change the holotopy invoice.
 
@@ -245,7 +295,7 @@ identification, not that missing physical square.
 
 ## 4. The determinant face is a Heisenberg central phase
 
-For any odd prime `p`, define the finite Heisenberg group
+For any prime `p`, define the finite Heisenberg group
 
 ```text
 H_p=F_p^3,
@@ -272,6 +322,35 @@ More generally, the central exponent in a commutator is
 xy'-x'y=det((x,y),(x',y')).                               (25)
 ```
 
+For every prime,
+
+```text
+Z(H_p)=[H_p,H_p]=<Z> isomorphic F_p,
+H_p/<Z> isomorphic F_p^2.                                (25a)
+```
+
+At `p=2`, this group is `D_8`, not an odd-exponent Heisenberg group:
+
+```text
+(x,y,z)^2=Z^(xy),
+order census = 1^1, 2^5, 4^2.                           (25b)
+```
+
+The quotient plane then carries the quadratic refinement `q(x,y)=xy`.
+The determinant commutator remains correct, but a frame change lifts to a
+center-fixing automorphism only when it preserves `q`.
+
+Uniformly, the ordered normalized frames
+
+```text
+Fr_1(F_p^2)={(s,t):det(s,t)=1}                          (25c)
+```
+
+form a principal homogeneous `SL_2(F_p)`-set of size `p(p^2-1)`.  For fixed
+nonzero `s`, the completions are the affine shear torsor `t_0+F_ps`.  This
+is a frame torsor for every `p`; by `(25b)` it is not uniformly an
+automorphism torsor of `H_p`.
+
 Thus THM-2772's determinant Mobius face is the exponent of the Heisenberg
 commutator.
 
@@ -292,6 +371,9 @@ The central element is visible as a phase.  After forgetting phases to the
 underlying Boolean root permutation, however, `M` fixes every root and the
 commutator in `(27)` disappears.  This is the exact distinction between the
 coefficient success in `(22)` and the missing physical root-deck lift.
+A `p`-dimensional Schrodinger/phase representation is therefore not a
+`p`-point permutation carrier: the center acts by scalars, and
+projectivization kills exactly that scalar center.
 
 ## 5. Thirteen roots are impossible; 169 endpoint origins are minimal
 
@@ -322,6 +404,22 @@ transitive, and an element fixing every `(r,w)` has successively
 ```text
 mu_perm(H_p)=p^2,                  mu_perm(H_13)=169.      (29)
 ```
+
+The equality case is also rigid.  A faithful action on exactly `p^2` points
+cannot be a union of `1`- and `p`-orbits, since all such orbits kill the
+center by the preceding argument.  It is therefore transitive, with an
+order-`p` stabilizer.  Such a stabilizer is core-free exactly when it is
+noncentral: an order-`p` normal subgroup of `H_p` is central, while a
+noncentral order-`p` subgroup has trivial intersection with the center.
+Hence every minimal faithful action is a coset action on a noncentral
+order-`p` subgroup.
+
+For odd `p`, these minimal faithful transitive sets have `p+1` isomorphism classes,
+one for each projected line in `P^1(F_p)`; above a fixed line the `p`
+stabilizers form one conjugacy orbit.  At `p=2`, the anisotropic line
+`(1,1)` has only order-four lifts, leaving two minimal `D_8`-set classes,
+each with two conjugate reflection stabilizers.  Formula `(28)` realizes one
+class and proves `mu_perm(H_2)=4` as well.
 
 THM-2772's pullback has exactly `169` endpoint origins over every faithful
 carrier address.  After choosing oriented coordinates, `(28)` gives an
@@ -576,6 +674,8 @@ python 04-computation/lrc14_bockstein_symplectic_heisenberg_gate_thm2779.py
 python -O 04-computation/lrc14_bockstein_symplectic_heisenberg_gate_thm2779.py
 python 04-computation/lrc14_bockstein_symplectic_endpoint_gate_thm2779.py
 python -O 04-computation/lrc14_bockstein_symplectic_endpoint_gate_thm2779.py
+python3 04-computation/lrc14_heisenberg_decoder_frame_root_degree_thm2779.py
+python3 -O 04-computation/lrc14_heisenberg_decoder_frame_root_degree_thm2779.py
 ```
 
 Each normal/optimized pair byte-matches its stored transcript:
@@ -583,6 +683,7 @@ Each normal/optimized pair byte-matches its stored transcript:
 ```text
 05-knowledge/results/lrc14_bockstein_symplectic_heisenberg_gate_thm2779.out
 05-knowledge/results/lrc14_bockstein_symplectic_endpoint_gate_thm2779.out
+05-knowledge/results/lrc14_heisenberg_decoder_frame_root_degree_thm2779.out
 ```
 
 The primary no-`assert`, integer-only companion verifies:
@@ -614,7 +715,21 @@ the two exact edge banks and universal-square reduction, replayed both
 companions under normal and optimized Python against their stored outputs,
 and verified all four LF-normalized hashes.
 
+The tertiary implementation uses the isomorphic convention
+`(A,B,C)=(-y,x,z)` and independently checks the uniform prime rows
+`p=2,3,5,7,13`, the `D_8` boundary, every normalized frame, the sharp
+`p^2` actions and their stabilizer classes, the complete decoder-socle law,
+the full inverse `(9c)`, and all thirteen local columns `(12a)`.  It has
+`46` explicit exception gates, no Python `assert` node, and exact
+normal/optimized/stored agreement.
+
+```text
+tertiary_script_sha256 = ef6e9f9bcb4f11152d291342a11ae215245d1d19b96c49940a01ba9ea850cbd9
+tertiary_output_sha256 = 1feb463864015035ab8d7fcfcddf9cfe8b0ec0a3ed36481f2f66d6a9149182e6
+hash_basis             = LF-normalized bytes
+```
+
 No physical same-ancestry endpoint lift, root-deck map, semantic transition,
 positive current, scalar-row exclusion, or LRC(14) conclusion is proved.
 
-QED.
+Core QED.  The all-prime addendum awaits its independent audit.

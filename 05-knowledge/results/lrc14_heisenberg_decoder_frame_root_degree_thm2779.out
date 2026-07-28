@@ -1,0 +1,16 @@
+THM-2779 HEISENBERG / DECODER / FRAME EXACT CERTIFICATE
+p=2: |H_p|=8; sharp_degree=4; normalized_frames=6; one_line_conjugates=2; minimal_Hset_classes=2; z_cycles=2,2
+p=3: |H_p|=27; sharp_degree=9; normalized_frames=24; one_line_conjugates=3; minimal_Hset_classes=4; z_cycles=3,3,3
+p=5: |H_p|=125; sharp_degree=25; normalized_frames=120; one_line_conjugates=5; minimal_Hset_classes=6; z_cycles=5,5,5,5,5
+p=7: |H_p|=343; sharp_degree=49; normalized_frames=336; one_line_conjugates=7; minimal_Hset_classes=8; z_cycles=7,7,7,7,7,7,7
+p=13: |H_p|=2197; sharp_degree=169; normalized_frames=2184; one_line_conjugates=13; minimal_Hset_classes=14; z_cycles=13,13,13,13,13,13,13,13,13,13,13,13,13
+p=2 boundary: H_2=D8; order_census=1^1,2^5,4^2; minimal_degree=4
+decoder: rank(mult_Sbeta)=12; kernel=<N13>; solutions=13; normalized_K_last=0
+decoder epsilon law: Vbeta*Kbeta=1+3*epsilon^12; Kbeta+3*N13=Vbeta^-1
+decoder hostile: local_chart_columns_vary=13; uniform_chart_sum=-1 for all gauges
+frame torsor: Fr_1 is an SL2(F13)-torsor of size 2184; fixed-first-vector fibres=13
+commutator: [lift(s),lift(t)]=z^det(s,t); normalized frames give z
+standard 13-label quotient: image_size=13; kernel_size=169; center_killed=yes
+general 13-label gate: every H_13 action kills Z(H_13) and factors through <=C13
+sharp control: H_13 on F13^2 has degree=169, is transitive and faithful
+status=VERIFIED-EXACT; no physical ancestry, deck intertwiner, row exclusion, or LRC claim
