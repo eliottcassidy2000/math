@@ -7,7 +7,7 @@ exceptions, integer arithmetic only, and no truth-bearing assertions.
 """
 
 from collections import Counter
-from itertools import combinations, product
+from itertools import combinations, permutations, product
 
 
 def require(condition, message):
@@ -167,6 +167,7 @@ def main():
 
     canonical_frames = 0
     torus_kernel_points = 0
+    weight_root_controls = 0
     for length in range(2, 14):
         frame = path_frame(length)
         value = abs(determinant(frame))
@@ -184,6 +185,21 @@ def main():
                             for row in range(length))
                         for point in diagonal_kernel),
                 "a diagonal k-torsion point left the torus kernel")
+        fundamental_numerator = (length - 1,) + tuple([-1] * (length - 1))
+        require(sum(fundamental_numerator) == 0,
+                "the first A-weight numerator left the sum-zero plane")
+        for multiple in range(1, length):
+            require(any((multiple * value) % length
+                        for value in fundamental_numerator),
+                    "the A-weight class acquired order below k")
+        for first in range(length):
+            for second in range(first + 1, length):
+                difference = [0] * length
+                difference[first] = 1
+                difference[second] = -1
+                require(sum(difference) == 0,
+                        "a projected basis difference left the A-root lattice")
+        weight_root_controls += 1
         torus_kernel_points += len(diagonal_kernel)
         canonical_frames += 1
 
@@ -269,6 +285,21 @@ def main():
     require(p4_minor_histogram == Counter({1: 73, 2: 25, 0: 19, 3: 3}),
             "P4 arithmetic-frame spectrum changed")
 
+    h = (1, 1, 1)
+    d3_images = set()
+    h_stabilizer = 0
+    for permutation in permutations(range(3)):
+        for signs in product((-1, 1), repeat=3):
+            if sum(sign < 0 for sign in signs) % 2:
+                continue
+            image = tuple(signs[index] * h[permutation[index]]
+                          for index in range(3))
+            d3_images.add(image)
+            if image == h:
+                h_stabilizer += 1
+    require(len(d3_images) == 4 and h_stabilizer == 6,
+            "the D3 body-diagonal orbit/stabilizer changed")
+
     histogram_text = ";".join(
         f"m{dimension}:" + ",".join(
             f"det{value}={frame_histogram[(dimension, value)]}"
@@ -293,12 +324,15 @@ def main():
     print("path_frame_Smith=diag(1^(k-1),k) quotient=sum_mod_k")
     print(f"torus_diagonal_kernel_points_k2_to_k13={torus_kernel_points}")
     print("torus_kernel={(j/k,...,j/k):j_mod_k}")
+    print(f"A_weight_root_quotient_controls_k2_to_k13={weight_root_controls}")
+    print("Z^k/(Q_A+Z*h)=P_A/Q_A=Z/k")
     print(f"recursive_tree_controls_n2_to_n8={tree_controls}")
     print(f"geodesic_frames={geodesic_frames} full_ambient_extensions={full_extensions}")
     print("geodesic_length_histogram=" + length_text)
     print("partial_cube_map=root_path_indicators endpoint_support=tree_distance")
     print("binary_frame=k2_det2 ternary_first_long_frame=k3_det3")
     print("P4_full_minor_histogram=det0:19,det1:73,det2:25,det3:3")
+    print("D3_body_diagonal_orbit=4 stabilizer=S3_order6")
     print("diameter>=p supplies a frame quotient Z/p")
     print("SCOPE: frame-local lattice cokernels; not PSL2Z or graceful existence")
     print("FAILED CHECKS: NONE")

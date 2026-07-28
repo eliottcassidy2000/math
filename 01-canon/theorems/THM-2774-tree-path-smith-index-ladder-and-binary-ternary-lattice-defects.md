@@ -7,11 +7,13 @@ status: >
   Smith form.  A k-edge tree geodesic, however, canonically combines k-1
   D-root differences with its endpoint A-root to give Smith form
   diag(1^(k-1),k), with explicit quotient the signed coordinate sum mod k.
-  Dually, its torus kernel is the k-point diagonal torsion fibre.  Off-path
-  coordinate roots extend this to a full ambient frame.  Thus the first
-  nonstar path P4 carries the first Z/3 defect, and diameter at least p
-  supplies a Z/p frame quotient.  These are frame-local partial-cube lattice
-  cokernels, not PSL2(Z), graceful existence, Keller, or LRC(14).
+  The quotient is canonically the A_(k-1) weight/root quotient P/Q, and
+  dually its torus kernel is the centre mu_k, the k-point diagonal torsion
+  fibre.  Off-path coordinate roots extend this to a full ambient frame.
+  Thus the first nonstar path P4 carries the first Z/3 defect, and diameter
+  at least p supplies a Z/p frame quotient.  These are frame-local
+  partial-cube lattice cokernels, not PSL2(Z), graceful existence, Keller,
+  or LRC(14).
 source: a4-resolvent-next-gate/tree-path-smith-index-2026-07-28
 depends_on:
   - THM-2766-quadratic-cubic-pullback-even-sign-kummer-plane-and-weyl-d3-s4
@@ -22,8 +24,8 @@ related:
   - THM-2768-modular-c2-c3-quotients-to-a4-s4-and-bass-serre-cycle-ranks
 script: 04-computation/tree_path_smith_index_ladder_thm2774.py
 output: 05-knowledge/results/tree_path_smith_index_ladder_thm2774.out
-script_sha256: cb03096719be3bb157969a680a92b59f700a6615e9a9d1b19ed76597f26bb296
-output_sha256: 451962ea3951719f1876dde80c660d26b55328d3610614f6aba8d5edaf97ba60
+script_sha256: 6dc6983ccc506da978354a010b7da48e6e43f18dc99c6b3689f3cd014eaea6fe
+output_sha256: 9be974965a92b4cb9a5294e53cb86ac878ef888573f928edadacf52980380d10
 hash_basis: LF-normalized bytes
 ---
 
@@ -47,7 +49,8 @@ not exclusive.
 ## 1. The partial-cube source map
 
 Let `T` be a tree with root `r`, edge set `E`, and root-outward edge
-coordinates `y_e`.  Define
+coordinates `y_e`.  Work in the root-zero representative `x_r=0` of vertex
+potentials modulo common translation.  Define
 
 ```text
 iota_r(v)_e=1 if e lies on path(r,v), and 0 otherwise.   (1)
@@ -103,10 +106,10 @@ Smith(M)=diag(1^(m-c),2^c),
 ```
 
 *Proof.*  Regard a row `e_i` as a half-edge at vertex `i` and a row
-`e_i-s e_j` as a signed edge `ij`.  Split the support signed graph into
-connected components and permute rows and columns accordingly.  A nonzero
-square determinant forces every component block to have equally many rows
-and vertices.
+`e_i-s e_j` as a signed edge `ij`.  Parallel edges with opposite signs are
+allowed, so this is a signed multigraph.  Split it into connected components
+and permute rows and columns accordingly.  A nonzero square determinant
+forces every component block to have equally many rows and vertices.
 
 Suppose a connected block has `v` vertices, `q` ordinary edges, and `h`
 half-edges.  Then `q+h=v`.  Its ordinary edges must connect all `v`
@@ -127,6 +130,9 @@ smallest binary frame is
 ```text
 C_2=[[1,-1],[1,1]],             Smith(C_2)=diag(1,2).    (8)
 ```
+
+It is the length-two unbalanced cycle consisting of the two parallel edges
+with opposite signs.
 
 Pure signed-pair geometry can create several independent `C2` defects, but
 it cannot create odd torsion in a full root frame.
@@ -170,17 +176,46 @@ Smith(C_k)=diag(1^(k-1),k),
 Z^k / rowspan_Z(C_k) isomorphic_to Z/k.                 (13)
 ```
 
+There is a canonical Lie-lattice interpretation of the same quotient.  Put
+
+```text
+V={x in R^k:sum_i x_i=0},
+Q_A={x in Z^k:sum_i x_i=0},
+P_A={x in V:x_i-x_j in Z for all i,j}.                  (13a)
+```
+
+Here `Q_A` and `P_A` are the root and weight lattices of `A_(k-1)`.  The
+orthogonal projection
+
+```text
+pi:Z^k -> V,          pi(z)=z-(sum_i z_i/k)h,
+h=(1,...,1),                                             (13b)
+```
+
+has kernel `Z h` and image exactly `P_A`.  The difference rows `(9)` map
+onto `Q_A`.  Therefore
+
+```text
+Z^k/(Q_A+Z h)  isomorphic_to  P_A/Q_A  isomorphic_to Z/k. (13c)
+```
+
+The class of `pi(e_1)` generates: all `pi(e_i)` differ by roots, and
+`j*pi(e_1)` lies in `Q_A` first at `j=k`.  Thus `(13c)` proves the kernel,
+surjectivity, and exact order without a choice of Smith operations.
+
 The dual root-of-unity picture is equally explicit.  On the additive torus
 `T=R/Z`, equations `C_k theta=0` first force
 `theta_1=...=theta_k=t`, and the last row forces `kt=0`.  Hence
 
 ```text
 ker(C_k:T^k -> T^k)
- ={(j/k,...,j/k):j in Z/k}.                              (13a)
+ ={(j/k,...,j/k):j in Z/k}.                              (13d)
 ```
 
 So the Smith defect is literally a `k`-point common-root fibre, not merely
-an abstract determinant.
+an abstract determinant.  In type-`A` language, `(13c)` is the character
+group of the centre `mu_k` of the simply connected `A_(k-1)` group, and
+`(13d)` is that centre in diagonal torus coordinates.
 
 This is the promised source-to-target map.  In the original edge gauge, the
 rows in `(9)` become `+/-e_i +/-e_(i+1)`, still lawful `D` roots, and the
@@ -228,8 +263,13 @@ det 2:25,              det 3:3.                         (16a)
 
 The three index-three frames are the three spanning-tree choices of two
 difference roots on the three edge coordinates, together with the long-path
-root.  This makes the ternary fibre robust under the choice of comparison
-tree, but still frame-local.
+root.  Under THM-2766's half-Hadamard `D3=A3` identification, `h=(1,1,1)` is
+one of the four even-sign body diagonals.  `W(D3)=S4` permutes those four
+diagonals, and the stabilizer of the marked `h` is the coordinate
+`S3=W(A2)`.  Thus the three comparison trees, the `A2` weight/root quotient,
+and the ternary fibre are the same marked-rank-three structure.  Marking
+`h` selects one `V4`-torsor state; it still does not select modular
+generators or an affine monodromy action.
 
 This is the lattice-index shadow of the rank-three `D3=A3` coincidence in
 THM-2766.  It is not that theorem's `V4 semidirect S3` action: `(16)` consists
@@ -253,9 +293,9 @@ there is no theorem here that only two and three can occur.
 The frame construction preserves:
 
 - the chosen tree geodesic and its partial-cube cut coordinates;
-  - the exact `A` endpoint wall and `D` comparison walls;
-  - the integral frame index and the explicit cyclic character `(11)`;
-  - the diagonal torsion fibre `(13a)`;
+- the exact `A` endpoint wall and `D` comparison walls;
+- the integral frame index and the explicit cyclic character `(11)`;
+- the weight/root quotient `(13c)` and diagonal torsion fibre `(13d)`;
 - every prime divisor of the path length.
 
 It destroys the rest of the hyperplane arrangement, polynomial coefficient
@@ -285,15 +325,17 @@ for `m<=5`; all `26,431` nonsingular frames satisfy `(7)`.  It verifies
 `(10)--(13)` for `2<=k<=13`, and on all `5,913` recursive trees through
 eight vertices it checks `118,004` geodesic frames, their partial-cube
 supports, their full ambient extensions, and the complete shorter-path
-ladder inside every diameter.  It also checks the diagonal torus kernels for
-`2<=k<=13` and the full `P4` minor histogram `(16a)`.  Normal and optimized
-runs byte-match the stored transcript.
+ladder inside every diameter.  It also checks the weight/root generator
+orders and diagonal torus kernels for `2<=k<=13`, the `D3` body-diagonal
+orbit/stabilizer, and the full `P4` minor histogram `(16a)`.  Normal and
+optimized runs byte-match the stored transcript.
 
 ```text
 PROVED HERE (candidate):  elementary two-Smith form for every pure-B frame;
                           partial-cube endpoint-root map;
                           path frame determinant and Smith form;
                           explicit quotient sum mod k;
+                          A_(k-1) weight/root quotient realization;
                           exact diagonal k-torsion torus kernel;
                           full ambient extension;
                           P4 first Z/3 defect;
