@@ -1,0 +1,10 @@
+THM-2812 CONSECUTIVE THREE-SLOT FACTORIAL DETECTION
+symbolic_moments=PASS
+Q_discriminant=-4*(n + 1)**2*(2*n + 1)
+cubic_remainder_A=36*n**4 + 57*n**3 + 15*n**2 - 9*n - 3
+cubic_remainder_B=52*n**3 + 49*n**2 + 8*n - 1
+positive_integer_control=n=1..200
+sharp_L1_L2_L3=(0, 0, -2*I*(2*sqrt(3) - 9*I))
+sharp_gaussian_M6=-40*I*(2*sqrt(3) - 9*I)
+scope=all n>=0 factorial theorem; polynomial Gaussian lift for n>=1; arbitrary three-slot supports and HYP-8765 remain open
+ALL EXACT CHECKS PASSED

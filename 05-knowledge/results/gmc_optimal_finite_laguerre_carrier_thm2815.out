@@ -1,0 +1,10 @@
+THM-2815 OPTIMAL FINITE LAGUERRE CARRIER
+laguerre_D_range=1..12
+laguerre_last_first_failure=229442532802560000
+carrier_exact_degree=2D-1; minimum_dimension=D; unique_relation=ell_D
+selector_d_range=0..10
+mistake211_scalar=0
+mistake211_private_coefficients=(4, -1/2223046425600)
+mistake211_selector_recovery=(4, -1/2223046425600)
+scope=finite-height optimal carrier and extra multiplier selectors; scalar moment nullity alone does not provide selector access
+ALL EXACT CHECKS PASSED
