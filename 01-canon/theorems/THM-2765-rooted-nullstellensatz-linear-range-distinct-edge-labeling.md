@@ -2,11 +2,12 @@
 id: THM-2765
 title: "Rooted Nullstellensatz linear-range distinct-edge labeling"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Every forest with n vertices and m>0 edges has an injective integer
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every forest with
+  n vertices and m>0 edges has an injective integer
   vertex labeling in {0,...,n+2m-3} whose absolute edge differences are
-  pairwise distinct.  In particular every n-vertex tree has such a labeling
-  in {0,...,3n-5}, a range strictly below three times the graceful range.
+  pairwise distinct.  In particular every nontrivial n-vertex tree (n>=2)
+  has such a labeling in {0,...,3n-5}, a range strictly below three times the
+  graceful range.
   The proof roots every component, orders parents before children, and uses
   the coefficient-one top monomial of the vertex Vandermonde times the
   squared edge-difference discriminant.  Its exponent ladder is exactly one
@@ -29,8 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2765 -- rooted leading monomials give a linear graceful range
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2761 turns graceful labeling into nonvanishing of an explicit product,
 but it does not construct a point outside that hyperplane arrangement.  A
@@ -166,14 +166,15 @@ We have proved:
 > whose absolute edge differences are pairwise distinct.
 
 For an edgeless forest, `0,1,...,n-1` is immediate and also follows from the
-Vandermonde part alone.  For a tree, `(14)` becomes
+Vandermonde part alone.  For a nontrivial tree (`n>=2`), `(14)` becomes
 
 ```text
 ell:V(F)->{0,1,...,3n-5}.                              (15)
 ```
 
-Since a tree has `m=n-1` edges, its graceful target range is `{0,...,n-1}`;
-the range in `(15)` is `3m-2<3m`.  Thus every tree has a strict
+Since a nontrivial tree has `m=n-1` edges, its graceful target range is
+`{0,...,n-1}`;
+the range in `(15)` is `3m-2<3m`.  Thus every nontrivial tree has a strict
 factor-three range-relaxed graceful labeling.
 
 ## 4. Why both channels are necessary
@@ -228,10 +229,10 @@ hostiles.
 ## 6. Boundary ledger
 
 ```text
-PROVED HERE (candidate):  coefficient-one rooted-forest top monomial;
+PROVED HERE:              coefficient-one rooted-forest top monomial;
                           exact 1+2 exponent decomposition;
                           every forest with m>0 has range n+2m-3;
-                          every n-vertex tree has range 3n-5;
+                          every nontrivial n-vertex tree has range 3n-5;
                           oriented/absolute and edge/injection hostiles.
 
 NOT PROVED:               optimality of n+2m-3 or 3n-5;
@@ -242,4 +243,4 @@ NOT PROVED:               optimality of n+2m-3 or 3n-5;
                           action or consequence.                         (18)
 ```
 
-QED (candidate).
+QED.
