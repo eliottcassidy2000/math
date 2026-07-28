@@ -67,14 +67,17 @@
     THM-2187/2193 force rank seven; THM-2196/2199 force rank twelve but do not enumerate its finite box. THM-2203 closes scalar transport only in dyadic rank eight. THM-2250/2257 empty final depth-three `(3,4,5)`, leaving exactly `165` first-depth-one rows. THM-2349 now puts all `165` on one delayed marked-current/inverse-correlation frontier, but excludes no row; cross-axis noncancellation, all-unit visibility, and phase transport remain. None proves LRC(14).
 27d. **Refined graph activity is not coarse target landing.** MISTAKE-261: THM-2356 reconstructs each planar graph only up to its own phase, while the THM-2334 target is the cross-graph row sum. Its zero-only kernel has dimension `28,393`; vertical tensors form only the `169`-dimensional refined-zero subspace.
     THM-2363 is a derived coefficient detector with `D_graph >= E_coarse/169`, not a converse or a lawful physical probe. MISTAKE-260 separately forbids recovering an anchored nonzero-mode sum from an unordered inverse-root count.
-27e. **Formal clock paths are not chronology; the typed arrival-six path is
+27e. **Formal clock paths are not chronology; the full inherited `D` path is
     now closed.** THM-2670's Boolean products forget physical witnesses.
     THM-2680's `D(x)={13x}` pullback restores them: `146/252` generic triples
     compose formally but only `10` physically. THM-2682 proves some two-event
     product survives while every three-event product is empty because the
-    central arrival return preserves a forbidden repeated shallow clock. No
-    downstream restriction can revive that support; change arrival, handoff,
-    boundary semantics, or edge grammar.
+    central arrival return preserves a forbidden repeated shallow clock.
+    THM-2684 closes the apparent endpoint bypass: all `324` rails have the
+    three-tooth envelope `[0,1/28)`, `[13/28,15/28)`, `[27/28,1)`; `D` has
+    identity arrival adjacency and its raw three-returns are clock-diagonal.
+    No downstream restriction can revive that support; change parent carrier,
+    handoff, boundary semantics, or edge grammar.
 
 ## NC2 / GMC
 

@@ -14,8 +14,9 @@ status: >
   252 clock triples compose formally, while only 10 survive physically.  The
   formal fixed-offset zero is therefore not a physical chronology no-go.
   THM-2682 subsequently proves that every three-event D-chain on this same
-  arrival-six carrier is empty by a central-phase clock trap.  Alternate
-  carriers/handoffs, source transport there, units, endpoints, and LRC(14)
+  arrival-six carrier is empty by a central-phase clock trap, and THM-2684
+  extends the no-go to both endpoint arrivals and the full THM-2584 rail bank.
+  Different parent carriers/handoffs, source transport there, and LRC(14)
   remain open.
 source: root-2026-07-28-dilation-clock-fibre-product
 depends_on:
@@ -27,6 +28,7 @@ related:
   - THM-2644-odd-torsor-purity-return-gate-and-nonlinear-fixed-branch-decoder
   - THM-2657-odometer-carry-root-lift-nonsplit-extension-and-cech-cocycle
   - THM-2682-central-arrival-clock-trap-and-three-event-dilation-nilpotence
+  - THM-2684-three-tooth-rail-envelope-diagonal-arrival-law-and-full-dilation-nilpotence
 script: 04-computation/lrc14_dilation_reversed_clock_fibre_product_probe.py
 output: 05-knowledge/results/lrc14_dilation_reversed_clock_fibre_product_probe.out
 script_sha256: 56347893caa028a8d9f1b72c6e886dd38c617019f53e746e966bee65cb91a2ad

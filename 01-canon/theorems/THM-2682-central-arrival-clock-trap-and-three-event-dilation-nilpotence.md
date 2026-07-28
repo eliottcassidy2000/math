@@ -30,6 +30,7 @@ related:
   - THM-2635-half-tooth-opposite-graph-unit-section-and-reversed-digit-closure
   - THM-2657-odometer-carry-root-lift-nonsplit-extension-and-cech-cocycle
   - THM-2670-sharp-graph-clock-incidence-atlas-and-physical-gluing-boundary
+  - THM-2684-three-tooth-rail-envelope-diagonal-arrival-law-and-full-dilation-nilpotence
 script: 04-computation/lrc14_dilation_three_edge_nilpotence_probe.py
 output: 05-knowledge/results/lrc14_dilation_three_edge_nilpotence_probe.out
 script_sha256: 59475b5b4fe236960252e533f728d2d02a774089fb2e72f482f7d8b7adae2578
@@ -409,6 +410,13 @@ particular, the `78`-cell overlap in (33) is only a projected static-label
 overlap; the endpoint rails themselves occupy disjoint base-time digit
 intervals.  The next lawful object is their actual pulled-back same-`x` rail
 intersection with typed owner/shallow clocks.
+
+> **Subsequent resolution (THM-2684).**  That physical intersection is now
+> exact.  The complete rail envelope has only three teeth, `0,6,12`, and `D`
+> has identity arrival adjacency on them, so all six varying projected arrows
+> in (35) vanish.  Each positive raw diagonal three-return—including both
+> endpoints—is then forced clock-illegal by equal consecutive clocks.  Hence
+> no endpoint escape survives inside the inherited parent bank.
 
 ## 8. Reproduction and hostile audit
 

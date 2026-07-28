@@ -32,6 +32,7 @@ related:
   - THM-2657-odometer-carry-root-lift-nonsplit-extension-and-cech-cocycle
   - THM-2680-dilation-reversed-two-edge-clock-fibre-products-and-source-drift-boundary
   - THM-2682-central-arrival-clock-trap-and-three-event-dilation-nilpotence
+  - THM-2684-three-tooth-rail-envelope-diagonal-arrival-law-and-full-dilation-nilpotence
 scripts:
   - 04-computation/lrc14_successor_private_sharp_graph_clock_collapse.py
   - 04-computation/lrc14_guard_cospan_successor_private_clock_collapse.py
@@ -328,11 +329,13 @@ is a hostile quotient, not a repair of the missing transition.
 
 ## 7. The missing object is a typed chart handoff
 
-> **Subsequent resolution (THM-2680/2682).**  The candidate `D` below does
+> **Subsequent resolution (THM-2680/2682/2684).**  The candidate `D` below does
 > produce positive physical two-edge fibre products, but the arrival-six
 > return forces a repeated shallow clock and makes every three-event product
-> empty.  Thus the formal/physical distinction established here was
-> load-bearing; this particular handoff is now closed at the next iterate.
+> empty.  The full inherited rail bank is a three-tooth envelope on which `D`
+> has only diagonal arrival transitions; its endpoint three-returns also force
+> a repeated clock.  Thus the formal/physical distinction established here
+> was load-bearing; this handoff is closed on the entire parent rail bank.
 
 An entry of `(6)` means
 

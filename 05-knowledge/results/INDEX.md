@@ -1,5 +1,14 @@
 # Script Results Index
 
+- `lrc14_alternate_arrival_physical_rail_handoff.py` -> matching `.out`
+  [THM-2684 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  The full `324`-profile THM-2584 bank has exact envelope
+  `[0,1/28) union [13/28,15/28) union [27/28,1)`.  Dilation admits only
+  equal-arrival rail handoffs; its three positive raw return cylinders are
+  `[0,1/4732)`, `[2365/4732,2367/4732)`, and `[4731/4732,1)`, all on the
+  forbidden first-clock diagonal.  Legal two-event counts are
+  `2,376,4,224,2,376`, but all `27` clock-legal three-arrival words vanish.
+  Hashes begin `ac4d7f0a` / `de5e5dd9`.
 - `lrc_central_arrival_clock_return_classification.py` -> matching `.out`
   [THM-2682 PROVED SYMBOLIC EXTENSION + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  For every `q>=2`, `p=2q-1`, a same-arrival nearest-clock

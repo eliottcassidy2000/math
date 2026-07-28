@@ -131,11 +131,15 @@ same as a complete triangle-balanced integer-gain section, and its component
 mass is the least selected pair overlap.  THM-2680 types the canonical
 `D(x)={13x}` handoff: genuine two-event fibres exist, but only `10/252`
 generic clock triples survive versus `146` positive formal products, and a
-formal-positive all-source hostile is physically empty.  THM-2682 then closes
-iteration on this carrier: arrival-six return preserves the shallow clock, so
-every three-event `D`-chain repeats a forbidden clock label.  Downstream units,
-rainbows, endpoints, and carry cocycles cannot repair empty support.  Any new
-chronology must change the arrival stratum, handoff, boundary semantics, or
+formal-positive all-source hostile is physically empty.  THM-2682 first closes
+the arrival-six iterate and classifies all `p=2q-1` same-arrival clock returns.
+THM-2684 then identifies the full inherited rail bank with the three-tooth
+envelope `[0,1/28) union [13/28,15/28) union [27/28,1)`: dilation has identity
+arrival adjacency, and every positive raw three-return cylinder lies on a
+forbidden clock diagonal.  Thus every clock-legal three-event `D`-chain in the
+complete THM-2584 parent bank is empty, including both endpoint candidates.
+Downstream units, rainbows, endpoints, and carries cannot repair it.  A new
+chronology must change the parent carrier, handoff, boundary semantics, or
 nonzero-step grammar; the independent AP/phase/rank routes remain live. Ledger `165`.
 
 ### Independent routes that remain live
