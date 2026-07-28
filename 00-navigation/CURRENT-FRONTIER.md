@@ -410,8 +410,9 @@ Classify profiles under support operations; study analytic continuation and auto
   law and `e<=1` classification; passport data first collide at `N=5,e=2`,
   with carrier `A(R_Q/q)=VG=lambda SET`.  THM-2823/2826 close the local
   simple-pole pair.  THM-2827 empties balanced passports unless
-  `R=3k+2` and every part is divisible by `4k+3`.  The first residual is
-  `(R,ord V,ord A)=(8,13,6)`; global chart entry and other fluxes stay open.
+  `R=3k+2` and every part is divisible by `4k+3`; THM-2831 excludes the
+  cyclic residual whenever `d=s=0`.  Nonzero `d` or `s`, other carriers,
+  global chart entry, and other fluxes stay open.
 
   This is not `JC(2)`: arbitrary Keller pairs need not enter this quartic,
   split polynomial exact-prefix chart.  Nonsplit and nonpolynomial-prefix

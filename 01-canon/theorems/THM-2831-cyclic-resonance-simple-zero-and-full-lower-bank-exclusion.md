@@ -2,13 +2,18 @@
 id: THM-2831
 title: "Cyclic resonance simple-zero and full-lower-bank exclusion"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
-  In every normalized R=3k+2 Faber bank with d=s=0, a common simple
-  zero of V and M is incompatible with A_src K_Q=lambda M, even when all
-  retained lower Faber rows are present.  Consequently the cyclic
-  THM-2796 carrier cannot realize any THM-2827 resonance in this chart.
-  Nonzero d or s and other chart-entry mechanisms remain open.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In every
+  normalized R=3k+2 Faber bank with d=s=0, a common simple zero of V and
+  M is incompatible with A_src K_Q=lambda M, even when all retained
+  lower Faber rows are present.  Consequently the cyclic THM-2796
+  carrier cannot realize any THM-2827 resonance in this chart.  Nonzero
+  d or s and other chart-entry mechanisms remain open.
 source: root/cyclic-resonance-simple-zero-2026-07-28
+audit: >
+  uniform-all-pole-audit independently rederived the zero-source Faber
+  specialization, unique top/least active terms, both simple-zero
+  valuation regimes, cyclic and UFD typing, and sharp c=0/v=0
+  boundaries; normal, optimized, stored, LF hashes, AST, and docs pass.
 depends_on:
   - THM-2796-balanced-response-stieltjes-pade-normal-form-and-one-double-zero-classification
   - THM-2827-uniform-pole-order-faber-nonresonance-atlas-and-double-pole-exclusion
@@ -23,8 +28,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2831 -- cyclic resonance simple-zero exclusion
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2827 leaves a formal local resonance whenever `R=2 mod 3`.  Its
 first witness has `(R,ord(V),ord(A_src))=(8,13,6)`.  The witness satisfies
@@ -262,4 +266,14 @@ python -O 04-computation/jc_cyclic_resonance_simple_zero_thm2831.py
 
 The universal proof is Sections 2--4, not the finite replay.
 
-**QED, pending independent hostile audit.**
+## 7. Independent hostile audit
+
+An independent audit rederived `(10)` directly from THM-2827, checked
+that arbitrary lower coefficients cannot cancel either controlling
+term, and separately verified the two simple-zero regimes,
+`A_src=0` boundary, cyclic THM-2796 factor typing, top-only UFD
+valuation, and the formal `c=0` and `v=0` hostiles.  Normal,
+optimized, and stored transcripts agree; both LF hashes, the
+assert/float AST audit, and the documentation gate pass.
+
+**QED.**
