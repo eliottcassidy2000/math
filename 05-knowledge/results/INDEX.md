@@ -1,12 +1,13 @@
 # Script Results Index
 
 - `jacobian_fixed_d_nonlinear_target_boundary_thm2722.py` -> matching `.out`
-  [THM-2722 PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT].  On polynomial graphs, every fixed-`d` nonlinear target
+  [THM-2722 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  On
+  polynomial graphs, every fixed-`d` nonlinear target
   `(P(A,d),d)` is forced to `F=ax+R(t)`, `P=alpha A+K(d)` and is triangular.
   With both outputs free in `C[A,d]`, the same factorization identifies the
   residue exactly with an ordinary planar Keller pair rather than closing
-  `JC(2)`.  Hashes: `a2eac3f6` / `c71107ac`.
+  `JC(2)`.  Hashes: `a2eac3f6` / `c71107ac`.  Independent audit:
+  root-2026-07-28.
 - `lrc14_phase_cycle_semantic_gate_probe_20260728.py` -> matching `.out`
   [THM-2710 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
   central-half map is identical to ordinary dilation at prescribed clocks

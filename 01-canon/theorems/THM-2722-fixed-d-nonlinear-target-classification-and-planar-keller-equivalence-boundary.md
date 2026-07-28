@@ -2,8 +2,8 @@
 id: THM-2722
 title: "Fixed-d nonlinear target classification and planar Keller equivalence boundary"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  On every polynomial graph, a nonzero-constant-Jacobian target
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On every
+  polynomial graph, a nonzero-constant-Jacobian target
   pair (P(A,d),d) forces d=ax+R(y-x^2/2) and
   P=alpha A+K(d), and is a triangular polynomial automorphism.  For an
   unrestricted pair (P(A,d),Q(A,d)), the same unit argument first makes
@@ -27,8 +27,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2722 -- fixed-`d` nonlinear targets and the exact planar boundary
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2705 classifies linear target planes containing `d`.  Allowing an
 arbitrary polynomial in `A,d` looks much larger, but the Jacobian factors
@@ -262,4 +261,4 @@ planar Keller composition, a variable-Jacobian hostile, and both zero-response
 boundaries.  The unit and all-degree integration arguments are Sections 2--3,
 not finite computations.
 
-QED (candidate; independent hostile audit pending).
+QED.

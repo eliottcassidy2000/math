@@ -317,7 +317,9 @@ Classify profiles under support operations; study analytic continuation and auto
   triangular/affine families; the remaining planes give one shifted cubic or
   are empty.  THM-2715 exhausts the first nonlinear family `(A,B+H(d))`:
   only a shifted cubic and a two-section quadratic wall survive, all
-  triangular.  Mixed nonlinear targets and nongraph surfaces remain open.
+  triangular.  THM-2722 closes every fixed-`d` pair `(P(A,d),d)` and proves
+  the unrestricted `C[A,d]^2` family is exactly JC(2) after a coordinate
+  change.  Targets involving `B` and nongraph surfaces remain open.
   THM-2690 separately excludes the
   reduced normal-crossing cyclic-cubic toric normalizations
   `z^3=product x_i^(alpha_i)`, `alpha_i in {1,2}`: their class groups are
