@@ -10,8 +10,9 @@ status: >
   The homogenized third response has a pole on every branch, with order at
   least eight.  Pullback would give the source rational primitive at least
   three poles, whereas THM-2723 permits at most one.  Reducible/nonreduced
-  response members, the all-even zero-flux boundary, JC(2), and DC(2) remain
-  open.
+  response members were the boundary of this theorem; THM-2745 now closes
+  them componentwise.  The all-even zero-flux boundary, JC(2), and DC(2)
+  remain open.
 source: root/highest-odd-faber-response-pole-capacity-2026-07-28
 audit: thm2705-2709-audit-2026-07-28 and thm2694-full-lift-fibre-scout-2026-07-28 (independent recurrence/multinomial, weighted-branch, quotient-parity, response-pole, pullback, replay, and docs audits)
 depends_on:
@@ -20,6 +21,7 @@ depends_on:
 related:
   - THM-2725-split-even-faber-nonzero-first-flux-unified-closure
   - THM-2726-a21-transverse-integral-split-response-three-pole-closure
+  - THM-2745-highest-odd-faber-componentwise-exact-prefix-closure
 script: 04-computation/jc2_degree22_highest_odd_response_poles_thm2741.py
 output: 05-knowledge/results/jc2_degree22_highest_odd_response_poles_thm2741.out
 script_sha256: 6f0a940c71b8b0e890e7c9cb51fc4a2b55a9b2eabbea6a4ecad946269672c4dc
@@ -259,14 +261,13 @@ both flux constants.  Combined with THM-2725, it makes the all-even
 nonzero-first-flux chart and every geometrically integral odd deformation
 empty.
 
-It does **not** exclude a reducible or nonreduced odd response member.  Its
-infinity branches can lie on different components, while a physical
-trajectory sees only one image component.  It also does not remove the
-all-even zero-first-flux boundary, justify this degree-22 normal form for an
-arbitrary Keller pair, or prove `JC(2)` or `DC(2)`.  The sharp next target is
-therefore componentwise: prove that any component carrying the third-flux
-trajectory inherits at least two response branches, or classify the
-factorization locus on which the `3g` branches split into one-pole pieces.
+This pole-count proof by itself does **not** exclude a reducible or nonreduced
+odd response member: its infinity branches can lie on different components,
+while a physical trajectory sees only one image component.  THM-2745 now
+closes that boundary by combining the complete infinity divisor with the two
+polynomial exact-prefix lift equations at the forced finite source pole.  The
+all-even zero-first-flux boundary, justification of this degree-22 normal form
+for an arbitrary Keller pair, `JC(2)`, and `DC(2)` remain open.
 
 There is already a sharp arithmetic constraint on the latter escape.  If a
 physical component contains exactly one response pole of order

@@ -1,5 +1,5 @@
 ---
-id: THM-2745
+id: THM-2748
 title: "Single response-branch ramification and monomial-composition boundary"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A rational
@@ -19,6 +19,7 @@ depends_on:
 related:
   - THM-2214-nonsplit-terminal-quartic-spectral-curve-closure-through-degree-ten
   - THM-2726-a21-transverse-integral-split-response-three-pole-closure
+  - THM-2745-highest-odd-faber-componentwise-exact-prefix-closure
 script: 04-computation/jc2_one_pole_response_composition_thm2745.py
 output: 05-knowledge/results/jc2_one_pole_response_composition_thm2745.out
 script_sha256: 7abb11dfed2ee12e4367489ebff8acc305c1812aca37daba548ab493bf36d0cb
@@ -26,7 +27,7 @@ output_sha256: e891aadabbe9af77f69062470ffe9e3626bca6fa661d60bac91b1ce7e8671ad6
 hash_basis: LF-normalized bytes
 ---
 
-# THM-2745 -- one response pole forces a monomial composition
+# THM-2748 -- one response pole forces a monomial composition
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
@@ -181,13 +182,19 @@ This strictly strengthens the divisibility sentence in THM-2741: not only
 the pole order, but the entire target response and normalization map are
 pure powers after affine/Mobius gauge.
 
+THM-2745 subsequently closed the complete degree-22 highest-odd physical
+boundary by retaining the polynomial exact-prefix identities on every
+component.  Thus the application above is no longer needed to close that
+family.  The present candidate survives as a sharp abstract classification
+after those lift equations are forgotten.
+
 ## 4. Boundaries
 
-The one-pole hypothesis is load-bearing.  The theorem does not prove that a
-reducible or nonreduced degree-22 member has a component containing one of
-the forced THM-2741 branches.  A component avoiding that singular branch
-requires a separate global `h=0` divisor analysis.  A component containing
-more than one pole is excluded, not classified by `(5)`.
+The one-pole hypothesis is load-bearing.  This theorem alone does not prove
+that a reducible or nonreduced degree-22 member has a component containing
+one of the forced THM-2741 branches.  THM-2745 supplies that separate global
+`h=0` divisor analysis and closes the physical boundary.  A component
+containing more than one pole is excluded here, not classified by `(5)`.
 
 The coordinate changes are also load-bearing.  Before placing the unique
 source and target poles at infinity, the two maps need not look like literal

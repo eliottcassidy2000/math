@@ -1,8 +1,7 @@
 # The exact square prefix kills every one-pole odd response component
 
-**Status:** PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT SIDECAR + INDEPENDENTLY
-HOSTILE-AUDITED; canon promotion remains separate.  This strengthens the
-current THM-2741 theorem from geometrically integral members to arbitrary
+**Status:** PROVED as THM-2745 + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.  This strengthens THM-2741 from geometrically integral members to arbitrary
 reducible or nonreduced members of the same highest-odd response family.
 It uses the polynomial exact-square-prefix sidecar, which the abstract
 response curve deliberately forgets.  It does not edit or promote THM-2741.
@@ -23,7 +22,7 @@ and let `j` be the largest such index.  Put
 r=22-j,                         g=gcd(r,6).
 ```
 
-The proposed conclusion is
+The proved conclusion is
 
 ```text
 no irreducible component of the reduced response curve can carry a
@@ -373,7 +372,7 @@ script  863923b4886f6ec7dee44e28e152109acc51fcfd778d550d391ee02fc577b48a
 output  619d2e49acdf60f5e2aa3ba9076957e2e38e9078363c833f7484f38311df3bb9
 ```
 
-The exact surviving chart after combining this candidate with THM-2725 is
+The exact surviving chart after combining THM-2745 with THM-2725 is
 
 ```text
 split polynomial exact-square prefix;
