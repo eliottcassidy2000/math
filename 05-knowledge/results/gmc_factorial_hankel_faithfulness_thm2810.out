@@ -1,0 +1,11 @@
+THM-2810 FACTORIAL-HANKEL FAITHFULNESS
+status=VERIFIED-EXACT candidate; NC2/GMC2 already proved elsewhere
+identity=H_d=D*Pascal*Pascal^T*D; det(H_d)=product_(j=0)^d(j!)^2
+char0_degrees=0..10 determinants_nonzero=11/11 det_d10=44337041641882947649156022595410930014617600000000000000
+consequence=Ann(L)=0; no proper algebra quotient or fixed finite-dimensional linear/Prony carrier
+finite_state_invoice=matching moments 0..2d forces state_dimension>=d+1
+cyclic_alias_checks=96; L(s*(1-s^13))=-87178291199; two_charge=-174356582398
+characteristic_p_boundary=p2:det=1,rank_p=2,rank_p1=2;p3:det=1,rank_p=3,rank_p1=3;p5:det=4,rank_p=5,rank_p1=5;p7:det=1,rank_p=7,rank_p1=7;p11:det=1,rank_p=11,rank_p1=11;p13:det=12,rank_p=13,rank_p1=13; Ann(L_p)=(s^p)
+same_support_control=L(H-)=0,L(H-^2)=504,L(H+)=12; Gaussian=(M2-,M4-,M2+)=(0,3024,24)
+scope=no fixed tower-wide bounded carrier; growing-height, clock-dependent, nonlinear-resultant, and Frobenius whole-face mechanisms remain available; HYP-8765 not refuted
+ALL EXACT CHECKS PASSED
