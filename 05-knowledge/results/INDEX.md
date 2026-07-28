@@ -8,6 +8,14 @@
   line, never the standard plane forced by THM-2655.  The `D4` Smith
   diagonal `(1,1,2,2)` with triality is the sharp hostile.  Hashes:
   `9b772fcb` / `c3ce859e`.
+- `jacobian_s4_polynomial_graph_coordinate_pairs_thm2702.py` -> matching
+  `.out` [THM-2702 PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING
+  INDEPENDENT HOSTILE AUDIT].  On `z=f(x,y)`, the `(A,d)` projection has
+  an arbitrary triangular `H(y-x^2/2)` family, `(B,d)` is excluded by
+  a locally nilpotent derivation/divergence contradiction, and `(A,B)` has one
+  explicit cubic triangular family.  This closes the three literal coordinate
+  pairs, not arbitrary nonlinear surfaces or target projections.  Hashes
+  begin `c7a4cf1e` / `7fefddc4`.
 - `jc2_degree22_split_lambda_prime23_scout.py` -> matching `.out`
   [VERIFIED-EXACT STRUCTURAL SCOUT; SPLIT EVEN-FABER SUBCHART ONLY].  On the
   chosen split sheet the retained first-flux constant gives
