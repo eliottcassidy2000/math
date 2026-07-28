@@ -2,8 +2,8 @@
 id: THM-2770
 title: "Tree-incidence A/D Weyl clutch and the four-vertex fan dichotomy"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For every rooted tree, reduced integral incidence is unimodular and
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every rooted
+  tree, reduced integral incidence is unimodular and
   identifies the graceful obstruction with an A_(n-1) vertex discriminant
   clutched to a D_(n-1) edge discriminant.  Its distinct support is B_(n-1)
   plus exactly one wall for every vertex pair at distance at least three; it
@@ -31,8 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2770 -- the graceful polynomial is an `A/D` Weyl clutch
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The factor three in THM-2765 is not merely a count of convenient polynomial
 factors.  After quotienting translation, a tree gives an integral change of
@@ -360,7 +359,7 @@ the graceful `P4` hostile `(28)`.  Normal and optimized runs byte-match the
 stored transcript.
 
 ```text
-PROVED HERE (candidate):  integral tree-incidence isomorphism;
+PROVED HERE:              integral tree-incidence isomorphism;
                           exact A_(n-1)/D_(n-1) clutch;
                           B_(n-1)-plus-long-path support formula;
                           pure-B iff star classification;
@@ -380,4 +379,4 @@ NOT PROVED:               a balanced coefficient for larger trees;
                           a physical LRC(14) carrier or closure.         (30)
 ```
 
-QED (candidate).
+QED.
