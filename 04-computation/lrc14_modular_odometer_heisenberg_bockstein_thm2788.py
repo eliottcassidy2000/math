@@ -8,8 +8,9 @@ The two actions have the same centre and alternating commutator, but for
 odd p their p-power maps and extension cocycles differ by the ordinary
 second-coordinate carry/Bockstein.
 
-The script also checks the carry-wall join, the exact minimal-action
-stabilizer census, and the full odd-prime metacyclic tower on Z/p^k.
+The script also checks the carry-wall join, the exact modular-group
+minimal-action stabilizer census, and the full odd-prime metacyclic tower
+on Z/p^k.  The Heisenberg action-class count is inherited from THM-2779.
 It uses only exact integer/permutation arithmetic, explicit exception
 gates, and no Python ``assert`` statement.
 """

@@ -26,7 +26,7 @@ related:
   - THM-2695-secondary-kummer-bockstein-picard-divisibility-spectrum-and-prime-alignment-boundary
 script: 04-computation/lrc14_modular_odometer_heisenberg_bockstein_thm2788.py
 output: 05-knowledge/results/lrc14_modular_odometer_heisenberg_bockstein_thm2788.out
-script_sha256: ec900a9865d670fe0fa3885156823a30437d34150808ab848c7b5507d833faaf
+script_sha256: d414bf2afb6aa3e40de9378ae20f03db1cb7bff75f59f13a60ac96e56cb95a89
 output_sha256: 99ad33904617d45d76a285de5467b96408dc164839cb4168905c7fe678db8f66
 hash_basis: LF-normalized bytes
 ---
@@ -298,11 +298,15 @@ Z_r=O^(p^r),                       r=0,...,k.                (26)
 Then
 
 ```text
-[X,Z_r]=Z_(r+1),
-gamma_(r+1)(G_(p,k))=<Z_r>=<O^(p^r)>,
+[X,Z_r]=Z_(r+1),                    0<=r<=k-1,
+gamma_(r+1)(G_(p,k))=<Z_r>=<O^(p^r)>,   1<=r<=k,
 Z(G_(p,k))=<Z_(k-1)>,
 class(G_(p,k))=k.                                            (27)
 ```
+
+Here `Z_k=1`, so the last displayed lower-central term is
+`gamma_(k+1)=1`; the formula deliberately starts at `gamma_2`, since
+`gamma_1=G_(p,k)` is not the cyclic odometer subgroup.
 
 In particular `Z_1=O^p` is central only after truncating to `k=2`.
 Upstairs it has the next commutator
@@ -437,13 +441,15 @@ Both modes byte-match
 
 The companion exhausts the two `p^3` permutation groups for
 `p=2,3,5,7,13`, their relations, intersections, element orders, carry-wall
-columns, minimal stabilizers, and all `p^4` ordered cocycle pairs.  It checks
-the wreath identities and the exact odd-prime tower invoices for
-`p=13,k=2,...,6`.  It uses explicit exception gates and no Python `assert`
-statement.
+columns, the modular group's minimal stabilizers, and all `p^4` ordered
+cocycle pairs.  The `H_p` action-class count in `(18)` is inherited from
+the independently audited all-prime addendum to THM-2779 rather than
+recomputed here.  The companion checks the wreath identities and the exact
+odd-prime tower invoices for `p=13,k=2,...,6`.  It uses explicit exception
+gates and no Python `assert` statement.
 
 ```text
-script_sha256 = ec900a9865d670fe0fa3885156823a30437d34150808ab848c7b5507d833faaf
+script_sha256 = d414bf2afb6aa3e40de9378ae20f03db1cb7bff75f59f13a60ac96e56cb95a89
 output_sha256 = 99ad33904617d45d76a285de5467b96408dc164839cb4168905c7fe678db8f66
 hash_basis    = LF-normalized bytes
 ```
