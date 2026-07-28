@@ -16,7 +16,9 @@ status: >
   types.  THM-2621 identifies the full coefficient pole a_k there, but k and
   its pole order do not determine the opposite-pair ownership.  Counts are
   geometric branch counts, not numbers or orders of irreducible pole divisors.
-  No D4 exclusion, component count, JC(2), or DC(2) follows.
+  This theorem alone gives no D4 exclusion; THM-2633 later excludes the whole
+  D4 Keller lane and makes the k=0 rows nonrealizable there.  No component
+  count, JC(2), or DC(2) follows.
 source: root-long-frontiers-2026-07-28-d4-opposite-pairs
 depends_on:
   - THM-2612-d4-deck-pole-tax-and-depressed-resolvent-gcd-gate
@@ -24,6 +26,7 @@ depends_on:
 related:
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
   - THM-2627-d4-jelonek-quadratic-character-rank-and-component-gate
+  - THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion
 script: 04-computation/jacobian_d4_opposite_pair_escape_thm2628.py
 output: 05-knowledge/results/jacobian_d4_opposite_pair_escape_thm2628.out
 script_sha256: 43bdd6faeeebf52d7298cfe18f5891c348a124ab2f2a4825ad6e71a6312e9ce9
@@ -104,6 +107,10 @@ Finally
 ```text
 0<=k_D<=3.                                                (5)
 ```
+
+The zero row is a valid local normalization possibility, but THM-2633 proves
+that it cannot occur on a target divisor of an affine-space Keller map.  In
+the polynomial Keller scope one therefore has `1<=k_D<=3`.
 
 If all four branches remained finite generically, the four local inverses
 would account for the full degree in a neighborhood of `D`, leaving no
@@ -328,9 +335,11 @@ argument, the valuation equivalence (7), every group-theoretic row, and the
 decomposition/residue guardrail.  It supplied (15) and (19) as positive local
 models and (18) as the same-resultant ownership hostile.
 
-The theorem proves no lower bound on the number of Jelonek components, pole
-order beyond THM-2621, integral gcd gate, global compactification model,
-`D_4` exclusion, JC(2), or DC(2).  It isolates the exact missing coordinate:
+The theorem itself proves no lower bound on the number of Jelonek components,
+pole order beyond THM-2621, integral gcd gate, global compactification model,
+JC(2), or DC(2).  THM-2633 independently excludes `D_4`, so this census is now
+a conditional/local boundary atlas rather than a live Keller lane.  It
+isolates the exact missing coordinate:
 
 ```text
 surviving-sheet degree + coefficient pole

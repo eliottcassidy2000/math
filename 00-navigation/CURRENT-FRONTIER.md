@@ -354,16 +354,16 @@ Classify profiles under support operations; study analytic continuation and auto
   For G1, THM-2598/MISTAKE-297 originally left `D4,A4,S4`.
   [THM-2633](../01-canon/theorems/THM-2633-derangement-character-obstruction-and-d4-keller-exclusion.md)
   now excludes `D4` geometric monodromy for polynomial Keller maps in every
-  dimension: openness and constant source units force an inertia-fixed finite
-  branch over every divisor, while the nonzero source-deck character is
-  supported entirely on derangements.  The live quartic list is therefore
-  `A4,S4`.  Moreover `A4` character support must occur on a three-cycle
-  component with `k=1`, while `S4` sign support must occur on a transposition
-  component with `k=1` or `2`.  THM-2612/2627/2628's `D4` pole, character,
-  and opposite-pair ledgers remain exact near-miss controls but are no longer
-  a live lane.  Corrected THM-2621's exact trace and zero residues explain why
-  residue refinement was downstream of the simpler image-incidence
-  contradiction.  No `A4/S4`, `JC(2)`, or `DC(2)` closure follows.
+  dimension.  Equivalently, every Keller point stabilizer surjects onto
+  monodromy abelianization: openness and constant source units force
+  `1<=k_D<=d-1` and an inertia-fixed sheet over every Jelonek divisor, while
+  Kummer support forbids a character trivial on the stabilizer.  Thus
+  `C4,V4,D4` fail and only `A4,S4` remain at degree four.  `A4` character
+  support has three-cycle inertia and `k=1`; `S4` sign support has
+  transposition inertia and `k=1` or `2`.  THM-2612/2627/2628's `D4` ledgers
+  are conditional near-miss controls.  Corrected THM-2621's exact trace and
+  zero residues explain why residue refinement was downstream of this image-
+  incidence contradiction.  No `A4/S4`, `JC(2)`, or `DC(2)` closure follows.
   THM-2465 makes the affine point-cap face planar degree four; G1 remains open.
   At degree eighteen, THM-2314/2316 close sparse supports,
   THM-2371/2376 close `H_2`, and audited THM-2406 forces THM-2389's `H_4`

@@ -6,11 +6,12 @@ status: >
   non-injective (the three collision points still share an image), and untwisted
   (target weight vector = source weight vector = (1,-1,-2)).  My own hypothesis,
   killed before it was claimed.
-  (I) CORRECTED / PARTLY SUPERSEDED by THM-2598 and MISTAKE-297.  The
+  (I) CORRECTED / PARTLY SUPERSEDED by THM-2598, MISTAKE-297, and THM-2633.  The
   geometric-to-Galois chain and Campbell's Galois exclusion survive, but the
   claimed unconditional Smith self-normalizing rule does not: THM-1365 assumes
-  that generic deck transformations extend polynomially.  D4 therefore remains
-  a live degree-four monodromy type alongside A4,S4.
+  that generic deck transformations extend polynomially.  MISTAKE-297 therefore
+  restored D4 provisionally; THM-2633 later excludes it by affine openness and
+  point-stabilizer abelianization, leaving A4,S4.
   (II) PROVED (modulo the cited Campbell 1973), and it strictly upgrades the
   salvage catalog's grade for the same statement from VERIFIED (0/8316) to PROVED.
   (III) PROVED -- elementary group theory (A_3 regular; A_4 on 4 points transitive
@@ -27,18 +28,20 @@ depends_on:
   - THM-1310    # fibre geometry: S_3 resolvent, cyclic 3-tournament, Jelonek quartic
   - THM-1330    # Keller monoid; the cusp selection rule
   - THM-127     # Paley D_2p: rotations are automorphisms, reflections anti-automorphisms
-related: [THM-1305, THM-1345, THM-2598, MISTAKE-196, MISTAKE-197, MISTAKE-297]
+related: [THM-1305, THM-1345, THM-2598, THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion, MISTAKE-196, MISTAKE-197, MISTAKE-297]
 script: 04-computation/reflection_driven_keller_kps_S128c105.py (+ .out), equivariant_reduced_jc_kps_S128c105.py
 ---
 
 # THM-1375 — the reduced-Jacobian lattice, and the reflection that drives every counterexample
 
-> **CORRECTION (THM-2598 / MISTAKE-297).**  The original §1 treated the
+> **CORRECTION LINEAGE (THM-2598 / MISTAKE-297 / THM-2633).**  The original §1 treated the
 > generic deck group `N_G(H)/H` as a polynomial automorphism group of affine
 > space.  That extension across the Jelonek set is not automatic and is an
 > explicit hypothesis in THM-1365.  The unconditional self-normalizing rule,
-> its “maximal element” claim, and its deletion of `D4` are retracted.  The
-> corrected current statements appear below; §§2--4 are unaffected.
+> its “maximal element” claim, and its deletion of `D4` by Smith are retracted.
+> THM-2633 subsequently excludes `D4` through a separate openness/Kummer gate
+> that never extends a deck map.  The corrected current statements appear
+> below; §§2--4 are unaffected.
 
 ## 0. Self-refutation, stated first
 
@@ -107,13 +110,15 @@ The corrected small-degree table is:
 | 3 | `A3` | 3 | 1 | `A3` | yes | excluded by Campbell |
 | 3 | `S3=D3` | 6 | 2 | 1 | no | not excluded; §2 forces this type for a counterexample |
 | 4 | `C4,V4` | 4 | 1 | `C4,V4` | yes | excluded by Campbell |
-| 4 | `D4` | 8 | 2 | `C2` | no | **OPEN: generic involution need not extend polynomially** |
+| 4 | `D4` | 8 | 2 | `C2` | no | excluded by THM-2633; Smith/deck-extension test itself is inconclusive |
 | 4 | `A4,S4` | 12,24 | 3,6 | 1 | no | not excluded by this test |
 
 THM-2598 independently enumerates this table and proves that the `D4`
-matching resolvent has type `1+2`.  Thus the honest degree-four live list is
-`D4,A4,S4`, while at degree three the only non-Galois transitive type remains
-`S3`.
+matching resolvent has type `1+2`.  That conditionally correct field atlas
+survives, but THM-2633 later proves that any affine Keller point stabilizer
+surjects onto monodromy abelianization, which `C2 < D4` fails.  Thus the
+current degree-four live list is `A4,S4`, while at degree three the only
+non-Galois transitive type remains `S3`.
 
 ## 2. A status upgrade: the discriminant law is PROVED, not verified
 

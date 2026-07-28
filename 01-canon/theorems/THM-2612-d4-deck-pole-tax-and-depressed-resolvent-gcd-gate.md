@@ -14,14 +14,16 @@ status: >
   exact denominator norm are explicit. Separately, at every tame odd-residue
   divisor, positive quartic-to-resolvent order-index tax is possible only
   when that divisor divides both q and p^2-4r. The gcd gate is necessary, not
-  sufficient. No boundary component, pole order, D4 exclusion, degree-22
-  mixed-support closure, split/even descent, 2-adic order raising, JC(2), or
-  DC(2) follows.
+  sufficient. This theorem alone gives no D4 exclusion; THM-2633 later
+  excludes D4 by the independent point-stabilizer abelianization gate. No
+  boundary component, pole order, degree-22 mixed-support closure, split/even
+  descent, 2-adic order raising, JC(2), or DC(2) follows here.
 source: klein-2026-07-28-d4-jelonek-boundary
 depends_on:
   - THM-2465-g1-exclusion-package-for-degree-four-twojet-keller
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
 related:
+  - THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion
   - MISTAKE-297
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
 script: 04-computation/jacobian_d4_deck_pole_tax_thm2612.py
@@ -42,9 +44,10 @@ source unless the action first extends across the omitted divisor.  In the
 involution cannot extend, so it must acquire a genuine divisorial pole over
 the Jelonek boundary.
 
-This gives a lawful replacement for the discarded argument.  It does **not**
-exclude the `D4` lane: a pole is precisely what allows the open involution to
-avoid the fixed-point contradiction.
+This gives a lawful replacement for the discarded argument.  It does **not by
+itself** exclude the `D4` lane: a pole is precisely what allows the open
+involution to avoid the fixed-point contradiction.  THM-2633 later excludes
+`D4` by a different argument that never extends the involution.
 
 ## 1. Exact statement
 
@@ -389,7 +392,8 @@ The tame proof deliberately excludes residue characteristic two.  It does
 not address integral `2`-adic order raising.  It also does not address the
 split/even short-edge descent or any degree-twenty-two mixed-support
 stratum.  No `D4` witness is constructed or excluded, and `JC(2)` and
-`DC(2)` remain open.
+`DC(2)` remain open in this theorem.  THM-2633 independently proves that the
+hypothetical `D4` polynomial Keller scope is empty.
 
 **QED.**
 
@@ -413,5 +417,6 @@ declared LF hashes
 `ad6f6f02a119b9cb049274da99fdd47cf7f2fa824068292d7b45618753faf8cf`
 and
 `62370d58cc8a47df041609359e2befa72e0fde6c5cf916ca771a28264cd90a88`.
-No pole component, pole order, gcd converse, `D_4` exclusion, mixed-support
-closure, wild residue-two claim, or Jacobian conclusion entered the audit.
+No pole component, pole order, gcd converse, mixed-support closure, wild
+residue-two claim, or Jacobian conclusion entered the audit.  The later
+`D_4` exclusion is THM-2633 and is not retroactively attributed to this proof.

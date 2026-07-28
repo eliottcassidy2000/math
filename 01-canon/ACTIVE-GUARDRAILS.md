@@ -172,16 +172,16 @@
     has four variables and no NC2/GMC-to-JC chain.
 59. **THM-1330 is a necessary atlas, not a classification.** MISTAKE-236;
     inverse realization and irreducible Keller seeds remain open.
-60. **THM-2071 closes the quadratic-fiber locus, not JC(2).** Centered parity
-    and pole noncancellation force the square factor constant and the reduced
-    complement fiber-linear, hence tame. Survivors have fiber degree at least
-    three; THM-2084's cubic lower bound is likewise a source-fiber statement,
-    not generic cover degree, Jelonek geometry, VC(4), or full JC(2).
-61. **Spectral/factor-support walls are not JC(2).** THM-2202 removes every
-    twice-odd finite pole; THM-2214 closes only nonsplit terminal degrees
-    `2,6,10`, and THM-2217 gives only an odd-leading factor-support inequality. Split/even descent, other short edges, `JC(2)`, and `DC(2)` remain open.
-62. **Safe-torus mass is not primitive-line recurrence.** THM-2193 gives a uniform Haar floor and many septimal torsion points, while its THM-2188
-    factorization preserves these across opposite primitive-slope outcomes.
+60. **THM-2071 closes the quadratic-fiber locus, not JC(2).** It makes the
+    reduced complement fiber-linear; THM-2084's cubic floor is also a source-
+    fiber statement, not generic degree, Jelonek geometry, VC(4), or JC(2).
+61. **Spectral/factor-support walls are not JC(2).** THM-2202/2214/2217 leave
+    split/even descent, other short edges, `JC(2)`, and `DC(2)` open.
+62. **Safe-torus mass is not primitive-line recurrence.** THM-2188/2193
+    preserve Haar mass across opposite slopes, not a primitive recurrence.
+63. **Degree-four `D4` is excluded, but not by Smith.** THM-2633 gives
+    `H -> G^ab` surjective and `1<=k_D<=d-1`, leaving only `A4,S4`; retain old
+    `D4` ledgers as hostiles and never reuse MISTAKE-297's deck extension.
 
 ## Promotion checklist
 Audit types, quantifiers, dimensions, symmetries, logical direction, quotient

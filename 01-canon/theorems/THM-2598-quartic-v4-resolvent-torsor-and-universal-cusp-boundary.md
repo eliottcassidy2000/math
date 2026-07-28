@@ -13,14 +13,17 @@ status: >
   branch list C4,V4,D4,A4,S4 has matching images C2,1,C2,C3,S3; only
   S4 has a full S3 quotient.  The D4 branch has a generic deck C2 whose
   polynomial extension is not proved, correcting THM-1375/2465's deletion
-  of D4.  The S4/A4/D4 field lattice,
+  of D4 by that route.  THM-2633 later excludes D4 by the independent affine
+  point-stabilizer abelianization gate, without extending the deck map.  The
+  S4/A4/D4 field lattice,
   tame inertia table, and local order-index tax prove that the cubic
   resolvent is a Galois-closure correspondence, not an intermediate cover
   of the quartic source.  The Zariski-main model further pins the D4
   extension gap to an antipodal present/omitted unramified divisor pair in
   the finite normalization.  Consequently no grade-three Keller anatomy
   descends without an additional affine/Keller realization and V4-origin
-  sidecar.  No live D4/A4/S4 branch, G1, JC(2), or DC(2) is excluded.
+  sidecar.  This theorem alone excludes no D4/A4/S4 branch; after THM-2633
+  only A4/S4 remain live.  G1, JC(2), and DC(2) remain open.
 source: codex-2026-07-27-quartic-resolvent-transfer
 depends_on:
   - THM-2455-quartic-swallowtail-scaffold-and-endpoint-corrections
@@ -37,6 +40,7 @@ related:
   - THM-2596-modular-free-factor-farey-gram-owner-cocycle
   - THM-2597-six-vertex-bicycle-modular-abelianization-cycle
   - THM-2606-affine-v4-parity-channels-partial-cubes-and-feuerbach-origin
+  - THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
   - MISTAKE-297
 script: 04-computation/jacobian_quartic_v4_resolvent_thm2598.py
@@ -440,6 +444,13 @@ not only `A4,S4` (MISTAKE-297).  This restores a quadratic intermediate to
 the quartic root field and invalidates any unconditional “no intermediate
 field” statement outside the `A4/S4` primitive branches.
 
+> **SUPERSEDING UPDATE (THM-2633).**  The correction above remains the right
+> repair of the old Smith argument, but it is no longer the final monodromy
+> list.  THM-2633 proves that the point stabilizer of any affine-space Keller
+> map surjects onto monodromy abelianization.  `D4` fails that gate, so the
+> live degree-four list is now `A4,S4`.  The `D4` normalization and split-owner
+> analysis below remains a correct conditional atlas on an empty Keller lane.
+
 The missing extension arrow has an exact Zariski-main formulation.  Write a
 Keller map as
 
@@ -608,14 +619,14 @@ root products; no amplitude theorem transfers from the common carrier alone.
 - THM-2455 proves the monic depressed discriminant/cusp scaffold.  This
   theorem adds the general integral formula, explicit reconstruction torsor,
   homogeneous leading drop, residual valuation gate, and normalization loss.
-- THM-2465's maximality/no-intermediate-field statement survives only on its
-  `S4/A4` primitive branches.  Its live list now includes `D4`; the matching
-  quadratic and the root-field quadratic intermediate are distinct.  The new
-  content here is the exact field lattice, inertia/index ledger, and proof
-  that the matching field is not a cover of the quartic source.
+- THM-2465's maximality/no-intermediate-field statement applies to both live
+  branches `S4/A4`.  This theorem correctly restored `D4` after MISTAKE-297;
+  THM-2633 later excludes it by a different gate.  The exact `D4` field
+  lattice and distinction between matching and root-field quadratics remain
+  valid conditional algebra.
 - HYP-9027 remains open.  Formula (22) identifies the first residual
   collision its odd-valuation strategy must control; it does not control it.
-- No G1 witness is constructed and no live `D4,A4,S4` branch is excluded.
+- No G1 witness is constructed and no live `A4,S4` branch is excluded here.
 
 ## 9. Reproduction
 

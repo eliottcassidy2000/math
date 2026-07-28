@@ -2,9 +2,11 @@
 id: THM-1440
 title: "Sheet-loss placement and the exact defect-two Keller witness"
 status: >
-  (0) CORRECTED BY MISTAKE-297.  Properness, nodal-Jelonek, and
+  (0) CORRECTED BY MISTAKE-297 AND SUPERSEDED IN PART BY THM-2633.
+  Properness, nodal-Jelonek, and
   Galois/Campbell remain the proved placement chain.  The former fifth Smith
-  rung, its claimed strictness, and its D4 exclusion are RETRACTED.
+  rung, its claimed strictness, and its D4 exclusion by deck extension are
+  RETRACTED.  THM-2633 later excludes D4 by a distinct openness/Kummer gate.
   (I) VERIFIED-EXACT by elimination (solve F₃ for z, resultant in y, count distinct
   roots, x = 0 branch handled separately), with the instrument validated on BOTH the
   known control and five generic targets before any drop was reported — all six give
@@ -20,7 +22,7 @@ source: kind-pasteur-2026-07-20-S128c113 (owner: is the no-loss-of-sheets statem
 depends_on:
   - THM-1375    # corrected proper/nodal/Galois chain
   - THM-1315    # the 3 -> 2 drop this partially disagrees with
-related: [THM-1330, THM-1430, MISTAKE-297]
+related: [THM-1330, THM-1430, THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion, MISTAKE-297]
 script: 04-computation/sheet_defect_sharpness_kps_S128c113.py (+ .out)
 ---
 
@@ -29,8 +31,9 @@ script: 04-computation/sheet_defect_sharpness_kps_S128c113.py (+ .out)
 > **MISTAKE-297 CORRECTION.** The former non-self-normalizing-stabilizer
 > endpoint of the displayed lattice is retracted. Deck transformations on
 > the punctured source were not shown to extend freely over affine space.
-> The defect-two computation and every statement in Sections I--III are
-> unaffected.
+> THM-2633 later excludes `D4` without that extension, by proving the separate
+> point-stabilizer abelianization gate.  The defect-two computation and every
+> statement in Sections I--III are unaffected.
 
 ## 0. The answer to the comparison
 
@@ -47,9 +50,9 @@ injective  ⟹  PROPER  ⟹  nodal Jelonek  ⟹  Galois  ⟹  automorphism
               statement
 ```
 
-Each arrow *weakens* the hypothesis.  The former further Smith rung and the
-claimed `D4` strictness are false as stated; `D4` remains an open degree-four
-monodromy lane. "No loss of sheets at infinity" is precisely "the Jelonek set is
+Each arrow *weakens* the hypothesis.  The former further Smith rung and its
+claimed proof of `D4` strictness are false as stated; THM-2633 now excludes
+`D4` by an independent openness/Kummer argument. "No loss of sheets at infinity" is precisely "the Jelonek set is
 empty", and THM-1330 records that a counterexample's Jelonek set is *always* non-empty, so
 the quoted statement is the trivial direction of that fact.
 

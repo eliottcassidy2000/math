@@ -27,8 +27,9 @@ status: >
   punctured C4 hostile also satisfies the entire
   PDE with c=1 but has primitive-coordinate discriminant and b-denominator
   divisors, proving that the PDE alone does not encode affine polynomial
-  realization.  This reduces but does not solve the D4/A4/S4 planar degree-four
-  frontier, JC(2), or DC(2).
+  realization.  THM-2633 independently excludes D4 monodromy and the k_D=0
+  boundary row for polynomial Keller maps.  The A4/S4 planar degree-four
+  frontier, JC(2), and DC(2) remain open.
 source: codex-2026-07-28-planar-degree-four-inverse-spectral
 depends_on:
   - THM-2241-monic-transverse-response-depth-and-resultant-nonproper-quotient
@@ -39,6 +40,7 @@ related:
   - THM-2612-d4-deck-pole-tax-and-depressed-resolvent-gcd-gate
   - THM-2627-d4-jelonek-quadratic-character-rank-and-component-gate
   - THM-2628-d4-opposite-pair-escape-and-deck-pole-census
+  - THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion
   - MISTAKE-301
 script: 04-computation/jacobian_planar_degree4_inverse_spectral_thm2621.py
 output: 05-knowledge/results/jacobian_planar_degree4_inverse_spectral_thm2621.out
@@ -53,8 +55,9 @@ hash_basis: working-tree bytes (LF)
 MISTAKE-301 SCOPE REPAIR.**
 
 The planar field-degree-four branch is open.  THM-2465 reduces every affine
-point-cap instance to it, while THM-2598 leaves geometric monodromy
-`D_4,A_4,S_4`.  Abstract quartic-resolvent identities do not remember the
+point-cap instance to it.  THM-2598 historically left geometric monodromy
+`D_4,A_4,S_4`, and THM-2633 now excludes `D_4`, leaving `A_4,S_4`.
+Abstract quartic-resolvent identities do not remember the
 second inverse coordinate or the symplectic connection.
 
 This theorem supplies exactly that missing marked sidecar.  It replaces an
@@ -248,6 +251,16 @@ By THM-2241 this is the generic geometric fibre cardinality along `D`.
 Coincident `x` values are counted with the sum of their simple point
 multiplicities, so (17) remains valid when the primitive projection
 specializes noninjectively.
+
+THM-2633 proves that every target divisor of an affine-space Keller map has a
+generic affine inverse branch.  Hence an actual polynomial realization has
+
+```text
+k_D in {1,2,3}.                                           (17a)
+```
+
+The `k_D=0` controls in the companion remain correct abstract local
+resultants, but they are not polynomial-Keller-realizable.
 
 By definition of the specialized degree,
 
@@ -850,16 +863,17 @@ the anti-invariant action potential and invariant opposite-pair gate (33a)--(33d
 and which normalization branches remain in the affine source.             (34)
 ```
 
-Thus `(b,(9),(31c)--(31m),(33a)--(33d))` is the missing marked-origin sidecar for transferring any
-grade-three resolvent anatomy back to a quartic Keller map.  In the `D_4`
-lane, it must coexist with THM-2612's birational deck-involution pole and the
-present/omitted boundary ownership of THM-2598.  These are compatible
-invoices, not yet a contradiction.
+Thus `(b,(9),(31c)--(31m),(33a)--(33d))` is the missing marked-origin sidecar
+for transferring any grade-three resolvent anatomy back to a quartic Keller
+map.  In the now-excluded `D_4` lane, it coexists conditionally with
+THM-2612's birational deck-involution pole and THM-2598's present/omitted
+boundary ownership.  Those invoices remain useful hostiles, not a live
+polynomial Keller branch.
 
 The degree-four planar frontier is now the following typed classification
 problem: classify rational pairs `(f,b)` satisfying (9), the pole law (19),
 the polynomial exactness, support, branch, and pair laws (31c)--(33d), monodromy
-`D_4,A_4`, or `S_4`, and extension of their total space to `A^2` with
+`A_4` or `S_4`, and extension of their total space to `A^2` with
 `u,v in C[x,y]`.  This is strictly smaller than an unrestricted planar
 coefficient search, but no lane is excluded here.
 
@@ -901,8 +915,9 @@ separate boundary ledgers in (21).  A subsequent hostile audit caught the
 closed-versus-exact gap and supplied (31a)--(31f); MISTAKE-301 records the
 failed implication and repair.
 
-No polynomial degree-four Keller map, monodromy lane exclusion, JC(2), DC(2),
-or GMC-to-JC interface follows.  In particular, a nonzero divisor residue of
+No polynomial degree-four Keller map, `A4/S4` exclusion, JC(2), DC(2), or
+GMC-to-JC interface follows.  THM-2633, not the present theorem, supplies the
+`D4` exclusion.  In particular, a nonzero divisor residue of
 `omega_F` is impossible rather than merely unproved; useful residue data must
 be retained branchwise or pairwise before trace as in (31e)--(31f) and
 (33d).  No local mechanism forcing the support and exactness gates is proved

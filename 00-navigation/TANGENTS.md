@@ -9,8 +9,10 @@
 > self-normalizing-stabilizer rule below is not proved: deck transformations
 > are free only over the complement of the Jelonek divisor and need not
 > extend freely across it. Campbell still excludes degree two and regular
-> `C4/V4` degree-four monodromy. The honest wild degree-four list is
-> `D4/A4/S4`, with `D4` retaining a quadratic intermediate.
+> `C4/V4` degree-four monodromy.  THM-2633 now proves, without extending any
+> deck map, that a Keller point stabilizer surjects onto monodromy
+> abelianization; this also excludes `D4`.  The live degree-four list is
+> `A4/S4`.  Historical `D4` tangents remain conditional algebra only.
 
 **T1555** [kind-pasteur-2026-07-20-S128c104] #problem-atlas #post-jc #priorities #under-radar #HYP-8185. THE PROBLEM ATLAS (00-navigation/PROBLEM-ATLAS-2026-07-20.md): 12 problem areas, honest novel-results ledgers, five-session priority queue (JC_2 both-ends; 2-jet d=4; Zhao explicit fall-line; DC_1 atom; {7,21}+OEIS+unit-distance). Discoveries during compilation: unit distance has FORGOTTEN canon (THM-408/412); Poisson has the s604/605 coimage atlas; the A_5 triangle of threads (Kakeya x Keller quintic x Pisano) unbraided; {7,21} is now a three-thread crossroads. Maintain the atlas: update blocks as results land. -> HYP-8185, T1549, T1554.
 

@@ -1,0 +1,15 @@
+THM-2633 affine Keller point-stabilizer abelianization controls
+group_gate_rows=(name,order,point_stabilizer,derived,passes)
+('C3', 3, 1, 1, False)
+('S3', 6, 2, 3, True)
+('C4', 4, 1, 1, False)
+('V4', 4, 1, 1, False)
+('D4', 8, 2, 2, False)
+('A4', 12, 3, 4, True)
+('S4', 24, 6, 12, True)
+degree4_excluded_by_gate=('C4','V4','D4')
+degree4_survivors=('A4','S4')
+D4_deck_character_trivial_on_H=PASS odd_elements=4 all_derangements=PASS
+D4_fixed_sheet_hist=((0,5),(2,2),(4,1))
+S3_positive_control=H_order_2_maps_onto_abelianization_C2
+exact assertions passed

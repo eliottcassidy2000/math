@@ -11,7 +11,9 @@ status: >
   Jelonek components for every prime l.  Their supports may overlap, central
   inertia is invisible to both D4 characters, and neither quadratic
   normalization is thereby a polynomial source quotient or a Keller map.
-  No D4 exclusion, JC(2), G1, or DC(2) closure follows.
+  No D4 exclusion follows from this theorem alone; THM-2633 combines its
+  Kummer mechanism with affine openness to exclude D4.  No JC(2), G1, or
+  DC(2) closure follows.
 source: codex-2026-07-27-d4-jelonek-parity-rank
 depends_on:
   - THM-2465-g1-exclusion-package-for-degree-four-twojet-keller
@@ -19,6 +21,7 @@ depends_on:
   - THM-2612-d4-deck-pole-tax-and-depressed-resolvent-gcd-gate
 related:
   - THM-2241-monic-transverse-response-depth-and-resultant-nonproper-quotient
+  - THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
 script: 04-computation/jacobian_d4_jelonek_parity_rank_thm2627.py
 output: 05-knowledge/results/jacobian_d4_jelonek_parity_rank_thm2627.out
@@ -287,7 +290,9 @@ spot, and the sharp non-Keller hostile.  Normal and optimized executions
 byte-match the stored transcript.  Two independent hostile audits rederived
 the Kummer injection, field identifications, and tame-inertia table.
 
-No `D4` exclusion, component irreducibility theorem, JC(2), G1, or DC(2)
-closure follows.
+This theorem alone does not exclude `D4`.  THM-2633 supplies the missing
+affine fact -- every target divisor has a generic affine branch -- and then
+uses the present Kummer character to exclude the `D4` lane.  No component
+irreducibility theorem, JC(2), G1, or DC(2) closure follows here.
 
 QED.

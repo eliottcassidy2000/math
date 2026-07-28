@@ -147,6 +147,16 @@ Format per entry:
   map needs an unramified missing boundary divisor exchanged with an included
   divisor over the same target component; normalizer data alone cannot see
   that ownership sidecar.
+- **Later superseding repair (THM-2633):** restoring `D4` was the correct
+  response to the invalid Smith proof, but it was not the final classification.
+  THM-2633 excludes `D4` by a different mechanism: etale openness and the
+  absence of nonconstant units on affine space give a fixed affine sheet for
+  every boundary inertia group, while Kummer support forbids a nonzero
+  monodromy character that is trivial on the point stabilizer.  Equivalently,
+  a Keller point stabilizer surjects onto `G^ab`; `C2 -> D4^ab=C2^2` cannot.
+  No deck transformation is extended across the Jelonek divisor, so this does
+  not revive the failed implication recorded here.  The current degree-four
+  list is `A4,S4`; the `D4` ledgers remain conditional hostile controls.
 
 ## MISTAKE-296 (2026-07-28, concurrent theorem reservation) -- a later empty stub reused the live THM-2604 accessibility ID
 

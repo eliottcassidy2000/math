@@ -6,11 +6,11 @@ status: >
   A x B == 0; B != 0 always; universal z-rationality -- for A != 0
   the generic fiber injects into the (x,y)-plane, so field degree =
   degree of a plane 0-cycle and the z-quadratic never doubles it; on
-  the A4/S4 branches there are no proper intermediate fields (A3 max
-  in A4, S3 max in S4), while the corrected live D4 branch has a
-  root-field quadratic intermediate distinct from its auxiliary matching
-  quadratic but still forces at least one of x,y to generate the quartic
-  root field; every quadratic Keller map is injective, so any G1
+  THM-2633 excludes C4,V4,D4, leaving A4/S4; on both surviving branches
+  there are no proper intermediate fields (A3 max in A4, S3 max in S4).
+  The historical D4 root-field and matching quadratics remain valid
+  conditional algebra but no longer define a live Keller lane.  Every
+  quadratic Keller map is injective, so any G1
   witness has total degree >= 3) + PROVED (stratum exclusions,
   QQ-exact Groebner with cross-prime adversarial re-derivation:
   point-cap b == 0 face empty; line-cap doubly-degenerate face
@@ -34,11 +34,10 @@ status: >
   exclusion on those strata implies the degree-4 case of the order-{1,3}
   conjecture) + PROVED (typed tower constraints: purity forces
   a nonempty Jelonek set and a nontrivial matching-quotient layer to ramify
-  over it; D4 has a 1+2 matching algebra and auxiliary quadratic layer, S4
-  witnesses need odd Jelonek valuation of Delta_4, and A4 witnesses
-  have square Delta_4 with cyclic cubic layer; any D4 witness additionally
-  needs an unramified missing divisor in the finite normalization exchanged
-  with an included divisor by the generic deck involution; a
+  over it; S4 witnesses need odd Jelonek valuation of Delta_4, and A4
+  witnesses have square Delta_4 with cyclic cubic layer.  The now-excluded
+  D4 lane conditionally has a 1+2 matching algebra, an auxiliary quadratic,
+  and an unramified split owner pair.  A
   THM-1310-as-resolvent witness must satisfy the five conditions
   (N1)-(N5)). VERDICT: no witness found; G1 remains OPEN with
   detection floors recorded per box. Nothing here resolves G1,
@@ -52,6 +51,7 @@ related:
   - THM-1310-conic-pair-fibers-and-design-equations
   - THM-1340-engine-trichotomy-zaffine-keller
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
+  - THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
   - MISTAKE-297
 script: 04-computation/jacobian_g1_stratum_exclusions_kps_S134.py
@@ -83,9 +83,12 @@ QQ and fresh primes by the adversarial pass, with zero refutations.
 > **MONODROMY CORRECTION (THM-2598 / MISTAKE-297).**  The original
 > synthesis inherited THM-1375's unconditional self-normalizing rule and
 > silently removed `D4`.  THM-1365 proves only the polynomial-deck case.
-> The live degree-four list is `D4,A4,S4`; every no-intermediate-field and
-> irreducible-resolvent assertion below is now explicitly restricted to its
-> `A4/S4` branch.  The graded exclusions and computations are unchanged.
+> That correction restored the provisional list `D4,A4,S4`.  THM-2633 now
+> removes `D4` by a different point-stabilizer abelianization argument that
+> never extends the deck map.  The live list is `A4,S4`; every
+> no-intermediate-field assertion applies to both.  The graded exclusions and
+> computations are unchanged, and the D4 paragraphs remain conditional
+> field-theory controls.
 
 ## 1. Universal layer (PROVED)
 
@@ -98,7 +101,7 @@ the `(x,y)`-plane: **field degree = degree of the plane 0-cycle
 `{g1 = 0} intersect {lambda = mu^2}`** -- the z-quadratic shape
 never doubles the degree; (U3) on the `S4` and `A4` branches there is
 no proper intermediate field (`S3` maximal in `S4`, `A3` in `A4`).
-On the corrected live `D4` branch the point stabilizer `C2` lies in an
+On the historical conditional `D4` branch the point stabilizer `C2` lies in an
 order-four subgroup, so a quadratic intermediate layer exists and the
 matching resolvent factors `1+2`; THM-2598 proves that its auxiliary
 matching quadratic is distinct from that root-field intermediate.  A quartic
@@ -106,8 +109,9 @@ matching quadratic is distinct from that root-field intermediate.  A quartic
 `K_4=K(x,y)`, if neither coordinate generated `K_4`, then both `K(x)` and
 `K(y)` would lie in that same quadratic intermediate, forcing
 `K(x,y)` to lie there as well.  Hence at least one of `x,y` is a primitive
-quartic coordinate in the `D4` lane too; the old no-intermediate-field proof
-was false, but its useful coordinate conclusion survives by uniqueness.
+quartic coordinate in the `D4` model too; the old no-intermediate-field proof
+was false, but its useful conditional coordinate conclusion survives by
+uniqueness.  THM-2633 excludes this model from affine Keller realization.
 
 The elementary quartic
 
@@ -427,13 +431,14 @@ Purity (Zariski-Nagata) plus `pi_1^et(A^3) = 1` re-proves that a
 wild Keller map has nonempty Jelonek set `A_F`, and forces the
 quartic field, its nontrivial matching quotient, and the Galois closure
 to be unramified in codimension one off `A_F` while that nontrivial
-quotient must ramify over some Jelonek component.  The quotient is a
-quadratic layer for `D4`, a cyclic cubic for `A4`, and a full-`S3`
-cubic for `S4` (THM-2598). `S4` witnesses have odd
+quotient must ramify over some Jelonek component.  On the two live lanes the
+quotient is cyclic cubic for `A4` and full-`S3` cubic for `S4` (THM-2598).
+`S4` witnesses have odd
 `v_D(Delta_4)` along a Jelonek component (the HYP-9027 shape), while
 `A4` witnesses have square `Delta_4` with order-3 inertia.
 
-The corrected `D4` row has a further necessary boundary invoice.  Its
+For historical comparison, the now-excluded `D4` row has a further
+conditional boundary invoice.  Its
 generic deck involution always extends over the finite Zariski-main
 normalization.  It can evade the polynomial-deck fixed-point exclusion only
 by failing to preserve the open copy of `A^3`.  Because normalization
