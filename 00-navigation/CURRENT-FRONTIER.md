@@ -327,8 +327,11 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2681 excludes the actual THM-1310 cubic under the stated base
   identification: its nonnormal `S3` field is not the cyclic `A4` resolvent,
   while its `S4` normalization has no global etale `V4` torsor.  The local
-  `D(a)` Kummer plane ramifies when `r_i=0` returns, and the `A4` obstruction
-  disappears after discriminant base change.  THM-2686 proves the general
+  `D(a)` Kummer plane ramifies when `r_i=0` returns.  THM-2685 makes this an
+  exact divisor test: the quartic characters carry the even-weight `[3,2,2]`
+  parity code, the maximal codimension-one-unramified quotient has rank
+  `2-rank(P)`, and a surviving standard plane lies in units or `Cl(R)[2]`.
+  Even ramified base change can erase the code.  THM-2686 proves the general
   coprime invariant-Kummer law
   `H^1(R_reg,mu_ell)^Gal(E/K)=0` for affine-target Galois normalizations with
   `ell` prime to the Galois degree.  In the cyclic cubic branch this removes

@@ -1,7 +1,7 @@
 ---
 title: "Two and three are local generators; the theorem lives in the extension data"
 date: 2026-07-28
-status: RESEARCH SYNTHESIS FROM PROVED THM-2595/2596/2646/2680/2681/2682 AND SCOPED THM-2672 CANDIDATE SIGNAL; NO LRC OR JACOBIAN CLOSURE
+status: RESEARCH SYNTHESIS FROM PROVED THM-2595/2596/2646/2672/2680/2681/2682/2685/2686; NO LRC OR JACOBIAN CLOSURE
 source: root-2026-07-28-modular-path-lifting-synthesis
 ---
 
@@ -105,6 +105,21 @@ valuations force codimension-one ramification.  On the full chart,
 `B^*=C^*c^Z` and `Cl(B)=0`, so no standard two-dimensional Kummer plane
 remains.
 
+THM-2685 identifies the missing coordinate invariantly.  On the canonical
+quartic resolvent normalization, the three nonzero `V4` characters carry the
+even-weight binary divisor code
+
+```text
+{000,110,101,011}.                                       (8a)
+```
+
+Its boundary-matrix row span is codimension-one inertia, and the surviving
+quotient rank is `2-rank(P)`.  THM-2686 supplies the complementary coprime
+fact: on a cyclic cubic affine-target normalization there is no invariant
+quadratic line, but standard planes may remain.  Thus the live `A4` test is
+neither a discriminant comparison nor total cohomology vanishing; it is the
+standard-plane part of units/`Cl[2]` after all divisor rows are restored.
+
 This separates the live quartic cases sharply.  An `A4` canonical resolvent
 is cyclic Galois of degree three and therefore cannot equal THM-1310's
 nonnormal cubic root field.  In the `S4` case the field type matches, but
@@ -148,10 +163,10 @@ The fixed arrival-six `D` chronology is finished by THM-2682.  Decorating its
 edges cannot create a missing two-simplex.  The next lawful target is a
 **configuration-switching** correspondence: change the arrival chart or the
 handoff itself, retain the predecessor/carry label, and ask for one positive
-three-event fibre.  The `PROVED CANDIDATE + VERIFIED-EXACT` THM-2672 signal is
-the higher-nerve version of the same warning: retaining source carry gives
-thirteen disjoint filled `Delta^11` pieces, while forgetting it manufactures
-a coarse `boundary Delta^12`.  It is not a proved dependency and its
+three-event fibre.  PROVED THM-2672 is the higher-nerve version of the same
+warning: retaining source carry gives thirteen disjoint filled `Delta^11`
+pieces, while forgetting it manufactures a coarse `boundary Delta^12`.
+These are disjoint carry strata, not physical homology, and the
 configuration-switching thirteen-fold problem remains open.  The cheapest
 experiment is a
 bigraded incidence table
