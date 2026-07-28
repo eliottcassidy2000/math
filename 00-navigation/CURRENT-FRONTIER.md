@@ -33,23 +33,17 @@ both retain deck, owner, clock, phase, and endpoint.  Gate failure means
 
 - **CITED:** LRC through 13 total runners; see
   [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
-- **PROVED finite-circuit alternative:**
-  [THM-2051](../01-canon/theorems/THM-2051-fejer-bv-small-relation-alternative-for-lrc14.md)
-  gives a support-3..5 relation of height `2^20` or positive safe measure;
-  THM-965 supplies the sharp pair floor and THM-2074 the density-one finite
-  ledger.  Its descent/AP boundary remains open.
-- **PROVED rank descent and residual atlas:** THM-2052 forces a rank-twelve
-  box or rank-eleven two-anchor star; THM-2053--2059 retain deck/Farey/CRT
-  sidecars.  Later route nodes are THM-2081, THM-2082, THM-2083,
-  THM-2085/2087 (including THM-2085), THM-2086, THM-2088, THM-2089,
-  THM-2090, and THM-2092.  THM-2148/2168 reduce the last profile to scalar
-  `5+3`; THM-2121 still needs Toeplitz/Fejer and phase.
-- **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
-  lifts bounded scalar relations; `H=2^19` clears recorded margins, but
+- **PROVED:** THM-2051 gives positive safe measure or a support-3..5 relation
+  of height `2^20`; THM-965/2074 supply its pair floor and finite ledger.
+- **PROVED atlas:** THM-2052--2059 force the rank-12 box or rank-11 two-anchor
+  star and retain deck/Farey/CRT data.  Later nodes are THM-2081, THM-2082,
+  THM-2083, THM-2085/2087 (including THM-2085), THM-2086, THM-2088,
+  THM-2089, THM-2090, and THM-2092; THM-2148/2168 reach scalar `5+3`.
+- **PROVED decorrelation:** THM-2054 clears recorded margins at `H=2^19`;
   MISTAKE-080/082 still require shape-specific tori.
-- **Local-comb ceiling:** THM-1252--1274 saturate six-comb arguments; pursue
-  endpoint/child transport or a phase-located turn tax.  THM-1149 separates
-  tight deletion from the all-loose crown.
+- **Comb ceiling:** THM-1252--1274 saturate six-comb arguments.  The live move
+  is endpoint/child transport, not another local-comb pass.
+
 ### Exact live obligation
 
 Rank-twelve boxes/rank-eleven stars remain open (HYP-8871).  Exactly `165` rows
@@ -90,16 +84,14 @@ the thirteen-simplex normalization, `boundary Delta^12` vertical image,
 Bockstein is the same nonzero odometer class `7`, not physical gluing.
 
 THM-2680's positive D legs have no path lift; THM-2682/2684 kill every third
-event, including reflection.  THM-2689 restores intrinsic support off
-`0,1/2`, yet no nontrivial odometer lift moves the seven clocks globally.
-THM-2691's central cycle keeps rail/clock support but its present product dies
-at `H=6`.  THM-2693 has a labelled three-event lift, yet its common delayed
-map kills every full policy at four; unshifted slope `14` dies at fifteen.
-THM-2694 gives one D edge plus 94 slope edges on a cylinder.
-Its 11-state quotient cycles eight times before present failure, and
-`P_95 -> C_11` shows that forgetting height can destroy partial-cube
-structure.  It is finite, not endpoint transport or switching.
-Ledger `165`.
+event.  THM-2689 restores support off `0,1/2`, but not a global clock lift.
+THM-2691 keeps rail/clocks and loses the present product; THM-2693 reaches
+three labelled events before the delayed word dies.  THM-2694 instead gives
+one D edge plus 94 vertical slope edges over one base state.  THM-2698 adds a
+central half-turn and proves a strict full two-cycle; forgetting parity gives
+a positive `D^2` endpoint loop whose forced `D` midpoint is outside the word.
+The residual is semantic path subdivision or a lawful direct endpoint-current
+cospan, not more endpoint recurrence.  Ledger `165`.
 
 ### Independent routes that remain live
 
