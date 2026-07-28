@@ -200,6 +200,25 @@ def xor_vectors(*vectors):
     return tuple(sum(entries) % 2 for entries in zip(*vectors))
 
 
+def matrix_vector(a, v):
+    return tuple(
+        sum((a[i][j] * v[j] for j in range(len(v))), Fraction(0))
+        for i in range(len(a))
+    )
+
+
+def permute_vector(p, v):
+    answer = [0] * len(v)
+    for source, target in enumerate(p):
+        answer[target] = v[source]
+    return tuple(answer)
+
+
+def determinant_pairing(x, y):
+    """The canonical GL(2,F2)-invariant alternating pairing on V."""
+    return (x[0] * y[1]) ^ (x[1] * y[0])
+
+
 def cyclic_orbits(p):
     group = generated_group((p,))
     unseen = set(range(4))
@@ -251,6 +270,8 @@ def main() -> None:
     nonzero_mod_two_ranks = []
     nonzero_mod_two_orbit_spans = []
     canonical_mod_two_lines = []
+    leakage_characters = {b: {} for b in V}
+    scaled_leakage_rows = 0
 
     for a, b in cocycles:
         sigma_perm = affine_perm(I2, a)
@@ -277,6 +298,41 @@ def main() -> None:
         commutator = msub(mmul(sigma, projector), mmul(projector, sigma))
         require(mmul(projector, projector) == projector,
                 "Reynolds idempotent")
+
+        fixed_index = next(i for i in range(4) if tau_perm[i] == i)
+        fixed_point = V[fixed_index]
+        fixed_contrast = tuple(
+            Fraction(3 if x == fixed_point else -1) for x in V
+        )
+        scaled_leakage = tuple(
+            Fraction(3, 4) * entry
+            for entry in matrix_vector(off, fixed_contrast)
+        )
+        expected_leakage = [Fraction(0)] * 4
+        expected_leakage[V.index(vadd(fixed_point, a))] += 2
+        expected_leakage[
+            V.index(vadd(fixed_point, mact(T2, a)))
+        ] -= 1
+        expected_leakage[
+            V.index(vadd(fixed_point, mact(t2, a)))
+        ] -= 1
+        require(scaled_leakage == tuple(expected_leakage),
+                "integral scaled leakage formula")
+        require(all(entry.denominator == 1 for entry in scaled_leakage),
+                "scaled leakage is integral")
+
+        leakage_mod_two = tuple(int(entry) % 2 for entry in scaled_leakage)
+        character_table = tuple(
+            determinant_pairing(a, vadd(x, fixed_point)) for x in V
+        )
+        require(leakage_mod_two == character_table,
+                "scaled leakage is the determinant character")
+        require(leakage_mod_two[fixed_index] == 0,
+                "character vanishes at the marked origin")
+        require(sum(leakage_mod_two) % 2 == 0,
+                "character lies in the three-orbit augmentation plane")
+        leakage_characters[b][a] = leakage_mod_two
+        scaled_leakage_rows += 1
 
         group = generated_group((sigma_perm, tau_perm))
         if a == ZERO:
@@ -319,6 +375,30 @@ def main() -> None:
             if b == ZERO:
                 canonical_mod_two_lines.append(image_vector)
 
+    for b in V:
+        tau_perm = affine_perm(T2, b)
+        fixed_index = next(i for i in range(4) if tau_perm[i] == i)
+        characters = leakage_characters[b]
+        for a, c in product(V, repeat=2):
+            require(
+                characters[vadd(a, c)]
+                == tuple(x ^ y for x, y in zip(characters[a], characters[c])),
+                "leakage-character map is F2-linear",
+            )
+        for a in V:
+            require(
+                characters[mact(T2, a)]
+                == permute_vector(tau_perm, characters[a]),
+                "leakage-character map is C3-equivariant",
+            )
+        augmentation_plane = {
+            bits
+            for bits in product((0, 1), repeat=4)
+            if bits[fixed_index] == 0 and sum(bits) % 2 == 0
+        }
+        require(set(characters.values()) == augmentation_plane,
+                "leakage characters fill the augmentation plane")
+
     require(zero_orders == [3] * 4, "zero-class C3 images")
     require(nonzero_orders == [12] * 12, "nonzero-class A4 images")
     require(zero_orbits == [(1, 3)] * 4, "zero-class orbit type")
@@ -342,6 +422,60 @@ def main() -> None:
     require(canonical_mod_two_lines
             == [(0, 0, 1, 1), (0, 1, 0, 1), (0, 1, 1, 0)],
             "canonical three standard-plane lines")
+    require(scaled_leakage_rows == 16, "all scaled leakage rows")
+
+    invertible_linear_maps = tuple(
+        matrix
+        for entries in product((0, 1), repeat=4)
+        for matrix in ((entries[:2], entries[2:]),)
+        if len({mact(matrix, x) for x in V}) == 4
+    )
+    linear_reflections = tuple(
+        matrix
+        for matrix in invertible_linear_maps
+        if mmul2(matrix, matrix) == I2
+        and mmul2(mmul2(matrix, T2), matrix) == t2
+    )
+    require(len(linear_reflections) == 3,
+            "three C3-inverting linear reflections")
+
+    reflection_rows = 0
+    reflection_completion_orders = []
+    for b in V:
+        tau_perm = affine_perm(T2, b)
+        tau_inverse = pcompose(tau_perm, tau_perm)
+        a4_group = generated_group(
+            tuple(affine_perm(I2, a) for a in V) + (tau_perm,)
+        )
+        require(len(a4_group) == 12, "marked A4 subgroup order")
+        compatible = []
+        for reflection in linear_reflections:
+            for translation in V:
+                candidate = affine_perm(reflection, translation)
+                if (
+                    pcompose(candidate, candidate) == I4P
+                    and pcompose(
+                        pcompose(candidate, tau_perm), candidate
+                    ) == tau_inverse
+                ):
+                    compatible.append(candidate)
+                    require(cycle_type(candidate) == (1, 1, 2),
+                            "compatible reflection is a transposition")
+                    require(candidate not in a4_group,
+                            "compatible reflection lies outside A4")
+                    completion_order = len(
+                        generated_group(tuple(a4_group) + (candidate,))
+                    )
+                    require(completion_order == 24,
+                            "compatible reflection completes A4 to S4")
+                    reflection_completion_orders.append(completion_order)
+        require(len(compatible) == 3,
+                "three affine reflections for each marked C3 lift")
+        reflection_rows += len(compatible)
+
+    require(reflection_rows == 12, "twelve compatible reflection rows")
+    require(reflection_completion_orders == [24] * 12,
+            "every compatible reflection gives S4")
 
     print("THM-2746 C3-QUOTIENT A4 PROJECTOR AUDIT")
     print("affine_lifts=16 coboundaries=4 H1_classes=4")
@@ -361,6 +495,12 @@ def main() -> None:
     print("canonical_mod2_image_lines=[0011,0101,0110]")
     print("binary_cycle_types=zero:1^4 nonzero:2^2")
     print("triangle_relation=(sigma*tau)^3=1 for all 16 lifts")
+    print("scaled_leakage_formula=(3/4)M_a*w_p=2e_(p+a)-e_(p+Ta)-e_(p+T2a)")
+    print("scaled_leakage_mod2=det(a,x-p) on all 16 lifts")
+    print("leakage_character_plane=F2-linear C3-equivariant isomorphism x4 gauges")
+    print("compatible_reflections=12 per_C3_lift=3 cycle_type=1^2+2")
+    print("reflection_completion_orders=[24]*12")
+    print("boundary_scope=character_plane_to_ker(delta_mod2);unit_vs_saturation_unresolved")
     print("quartic_scope=marked_A4_detector_not_Keller_exclusion")
     print("LRC_scope=no_common_physical_involution_or_endpoint_current")
     print("PASS")

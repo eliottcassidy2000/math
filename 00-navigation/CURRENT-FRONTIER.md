@@ -348,7 +348,9 @@ Classify profiles under support operations; study analytic continuation and auto
   independence, nondegeneracy, and metabolic gates.  The live geometric debt
   is the saturated divisor map and missing `C2` reflection.
   THM-2743 detects split `S3` versus transitive `S4` marked fibres by projector
-  rank `0/1`, but supplies neither a completion nor a common LRC carrier.
+  rank `0/1`.  THM-2746 identifies the `A4` leakage plane with the `V4` Kummer
+  character plane and proves every compatible reflection completes it to
+  `S4`; neither supplies the completion or `delta`'s unit/saturation coordinate.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.

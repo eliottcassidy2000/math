@@ -2,36 +2,42 @@
 id: THM-2746
 title: "C3-quotient affine V4 lifts and A4 projector defect"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For the marked quotient C2*C3 -> C3 acting on V4, all 16 affine
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the marked
+  quotient C2*C3 -> C3 acting on V4, all 16 affine
   lifts split into four translation coboundaries and four H1 classes, with
   H1 isomorphic to V4.  The zero class has image C3 and orbit type 1+3;
   every nonzero class has image A4, is transitive, and changes the binary
-  generator into a fixed-point-free double translation.  On Q[V4], the
-  equal-arm-to-charged block has rank one and squared Hilbert--Schmidt norm
-  8/9 exactly in the A4 classes.  Modulo two, the three nonzero class images
-  are the three lines of the standard F2[C3] plane.  Unlike the S4 class of
-  THM-2743, this class is already detected on the binary factor.  This is a
-  marked finite monodromy detector and a precise Kummer realization target,
-  not an A4 Keller exclusion or an LRC current.
+  generator into a fixed-point-free nonzero translation, of cycle type 2+2.
+  On Q[V4], the equal-arm-to-charged block has rank one and squared
+  Hilbert--Schmidt norm 8/9 exactly in the A4 classes.  Modulo two, the three
+  nonzero class images are the three lines of the standard F2[C3] plane.  A canonical integral
+  rescaling identifies each line with the determinant character of the same
+  V4 translation class.  Every compatible marked C2 reflection lies outside
+  A4 and completes it to S4.  Unlike the S4 class of THM-2743, the affine
+  class is already detected on the binary factor.  This is a marked finite
+  monodromy/Kummer interface, not an A4 Keller exclusion or an LRC current.
 source: a4-resolvent-next-gate-scout-2026-07-28
+audit: root-jc-boundary-promotion-2026-07-28 (independent cohomology,
+  contingency, scaled-character, reflection-completion, boundary typing,
+  and normal/optimized replay audit)
 depends_on:
   - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
+  - THM-2655-quartic-keller-resolvent-v4-quasietale-torsor-and-kummer-class-group-gate
 related:
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
   - THM-2633-derangement-character-obstruction-and-d4-keller-exclusion
+  - THM-2685-equivariant-kummer-boundary-parity-completion-and-divisor-residue-gate
   - THM-2743-c2-c3-off-diagonal-projector-rank-and-s3-s4-compatibility-defect
 script: 04-computation/c3_quotient_a4_projector_defect_thm2746.py
 output: 05-knowledge/results/c3_quotient_a4_projector_defect_thm2746.out
-script_sha256: 0d3b1c4ef8a44714691a16a3b7da7105a40abb082a9eba9ab14d7f4dc7476f1f
-output_sha256: ffedcfdf40d0a4e5deed61e072a980de67e38e171043420b1cce75645ec53742
+script_sha256: c2d33aba99c51aa418195104368239f87a08695a194b1d775109aec8086f2be8
+output_sha256: 3f9e46e47daecad329c1b7c214b30f931ce235ec506b5b17c100423ac02ae472
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2746 -- the C3 quotient has an A4 translation defect
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2743 treats affine lifts of the full `S3` quotient and finds the
 transitive `S4` extension as a compatibility class invisible on either free
@@ -139,7 +145,8 @@ Q=I-Pi,                 M=Q sigma Pi,
 a_ij=|sigma(O_i) intersection O_j|.                         (11)
 ```
 
-Then over the standard real or rational Euclidean permutation module,
+Then over the standard real Euclidean permutation module, or over the
+rational module after scalar extension to the reals,
 
 ```text
 ||M||_HS^2 = m-sum_(i,j) a_ij^2/(n_i n_j),
@@ -152,7 +159,7 @@ Moreover
 M=0  iff  sigma permutes the tau-orbit blocks.               (13)
 ```
 
-To prove `(12)`, use the normalized orbit indicators
+To prove `(12)`, scalar-extend if necessary and use the normalized orbit indicators
 `u_i=1_(O_i)/sqrt(n_i)`.  The compression `Pi sigma Pi` has matrix
 
 ```text
@@ -203,42 +210,130 @@ rank M=1,                    rank[sigma_a,Pi]=2.              (17)
 Equations `(15)--(17)` hold on all `12` raw lifts representing the three
 nonzero cohomology classes.
 
-### 4.1 The three mod-two image lines are the standard plane
+### 4.1 The primitive leakage vector is the `V4` character
 
-The Reynolds denominators are powers of three, so reduction modulo two is
-well defined.  Equivalently, over `F2` the same projector is
+The Reynolds denominators are powers of three, so the whole operator reduces
+modulo two.  Equivalently,
 
 ```text
 Pi_2=I+tau+tau^2.                                           (18)
 ```
 
-Gauge `b=0` and order the delta basis by
-`V=((0,0),(1,0),(0,1),(1,1))`.  The three nonzero translation classes have
+There is a more precise integral statement.  Let `p` be the unique fixed
+point of `tau_b`, and put
 
 ```text
-im((I-Pi_2)sigma_(1,0)Pi_2) = <(0,0,1,1)>,
-im((I-Pi_2)sigma_(0,1)Pi_2) = <(0,1,0,1)>,
-im((I-Pi_2)sigma_(1,1)Pi_2) = <(0,1,1,0)>.                 (19)
+w_p=3e_p-sum_(x!=p)e_x.                                    (19)
 ```
 
-These are exactly the three nonzero lines in
+For every `a in V`, including `a=0`, direct projection gives
 
 ```text
-W_perm={x in F2^4 : x_0=0, x_1+x_2+x_3=0}.                (20)
+z_a=(3/4)M_(a,b)w_p
+   =2e_(p+a)-e_(p+Ta)-e_(p+T^2a) in Z[V].                 (20)
 ```
 
-The order-three generator cycles them, and the orbit of any one line spans
-the two-dimensional standard `F2[C3]` module.  The exact companion verifies
-rank one and orbit-span two on all twelve raw nonzero lifts, not only the
-displayed gauge.
+The factor `3/4` is an **integral renormalization of this particular image
+vector**, not a scalar to be reduced modulo two.  For `a!=0`, `z_a` is a
+primitive generator of the rational image line.  Reducing that primitive
+vector gives
 
-This is the representation type required by THM-2655/2685 on the geometric
-Kummer side.  It is not yet that geometric carrier.  The permutation module
-of a marked root fibre and `H^1_et(R_reg,mu_2)` of the full resolvent
-normalization are different objects.  A Keller application still needs an
-equivariant realization map from `(20)` into that cohomology, together with
-the boundary-unit/class-group conditions of THM-2685.  Equations
-`(18)--(20)` identify the missing map; they do not manufacture it.
+```text
+bar(z_a)(p+x)=det(a,x),                  x in V.            (21)
+```
+
+Indeed `Ta,T^2a` are the other two nonzero vectors, and the determinant
+functional vanishes on `0,a` and equals one on those other two.  Since every
+element of `GL_2(F2)` has determinant one, this alternating pairing is
+canonical and invariant.  Consequently
+
+```text
+V -> W_p,
+a |-> bar(z_a),
+
+W_p={f in F2^V : f(p)=0, sum_(x!=p) f(x)=0}              (22)
+```
+
+is an `F2`-linear `C3`-equivariant isomorphism.  It is literally the truth-
+table realization of
+
+```text
+V isomorphic_to Hom(V,C2),
+a |-> chi_a,                 chi_a(x)=det(a,x).            (23)
+```
+
+In the gauge `b=0`, the three nonzero vectors are
+
+```text
+0011, 0101, 0110,                                             (24)
+```
+
+which are also the three mod-two image lines of `(I-Pi_2)sigma_a Pi_2`.
+Thus the projector does not merely have the same representation type as the
+quartic character plane: after the marked `C3` fixed point chooses the
+origin, `(20)--(23)` give the exact self-duality map.
+
+Now assume there is an **actual connected `V4` torsor** over the regular
+locus `U` of a full Galois resolvent normalization.  THM-2655 dualizes its
+monodromy to the canonical equivariant injection
+
+```text
+i:Hom(V,C2) -> H^1_et(U,mu_2).                             (25)
+```
+
+Only under that geometric torsor hypothesis may `(23)` be composed with
+`i`.  If moreover `U=Xbar\D` has a smooth projective rational
+`C3`-equivariant SNC completion, with boundary-class map
+
+```text
+delta:C=Z^(Irr D) -> P=Pic(Xbar),
+K=ker(delta), L=im(delta), L_sat=P intersection (L tensor Q),
+```
+
+the Kummer localization row and torsion-freeness of `P` give
+
+```text
+H^1_et(U,mu_2) isomorphic_to ker(delta mod 2),
+0 -> K/2K -> ker(delta mod 2) -> (L_sat/L)[2] -> 0.       (26)
+```
+
+For completeness, the last arrow sends `x mod 2C`, with `delta(x)=2p`, to
+`p+L`; its kernel is `K/2K`, and the torsion of `P/L` is `L_sat/L`.
+Therefore `(20)--(26)` put the scaled leakage plane into the exact boundary
+kernel whenever the actual torsor and completion exist.
+
+They still do **not** determine its integral source.  Since the plane is
+irreducible under `C3`, it may lie wholly in `K/2K` (unit relations) or map
+injectively to `(L_sat/L)[2]` (Picard saturation).  The finite marked fibre
+and its projector see the common standard plane but not this dichotomy; the
+integral presentation `delta` is the required sidecar.
+
+### 4.2 A compatible reflection completes `A4` to `S4`
+
+The binary generator `sigma_a` above is a vertical deck translation.  It is
+not the order-two reflection which inverts the `C3` quotient.  Fix `tau_b`
+and ask instead for an affine involution `j` satisfying
+
+```text
+j tau_b j=tau_b^(-1).                                     (27)
+```
+
+Equation `(27)` forces `j` to fix the unique `tau_b`-fixed point and to act
+as one of the three transpositions on its three-cycle.  Hence there are
+exactly three such `j` for each `b`; every one has cycle type `1+1+2`, is an
+odd permutation outside `A4`, and satisfies
+
+```text
+<A4,j>=S4.                                                (28)
+```
+
+The companion enumerates all affine linear parts and translations: it finds
+`12` reflection rows over the four gauges and order `24` in every completion.
+Thus an actual `C2` reflection on a completion can be connected to this root-
+fibre projector only if it lifts compatibly to the marked torsor.  At the
+finite-fibre level such a lift is already an `S4` completion; the internal
+`A4` involution supplies no reflection on the base or on `delta`.  An abstract
+semilinear reflection of the standard plane is not a geometric lift.
 
 ## 5. The two live quartic branches need two coordinates
 
@@ -260,7 +355,7 @@ coordinate.
 For a marked quartic root fibre, the pair
 
 ```text
-(binary linear shadow, rank((I-Pi_3)sPi_3))                  (21)
+(binary linear shadow, rank((I-Pi_3)sPi_3))                  (29)
 ```
 
 therefore distinguishes the two live affine lift mechanisms from their
@@ -294,7 +389,7 @@ python 04-computation/c3_quotient_a4_projector_defect_thm2746.py
 python -O 04-computation/c3_quotient_a4_projector_defect_thm2746.py
 ```
 
-Both executions byte-match the stored `21`-line transcript
+Both executions byte-match the stored `27`-line transcript
 `05-knowledge/results/c3_quotient_a4_projector_defect_thm2746.out`.  The
 companion uses exact rational arithmetic and explicit exceptions, with no
 optimized-away assertions.  It enumerates all `16` cocycles and four
@@ -303,23 +398,31 @@ generated group, computes every orbit and binary cycle type, and verifies
 all `16` projector ranks plus the twelve contingency matrices and exact
 norms.  It also reduces every off-diagonal block modulo two and checks the
 twelve rank-one image lines, their two-dimensional `C3` orbit spans, and the
-three canonical vectors in `(19)`.
+three canonical vectors in `(24)`.  Finally it verifies `(20)--(23)` in all
+`16` gauges, including integrality, linearity, and equivariance, and exhausts
+all `12` compatible affine reflections and their `S4` completions.
 
 ## 8. Boundary ledger
 
 ```text
-PROVED HERE (candidate):  H1(C2*C3,V)=V for the cyclic quotient;
+PROVED HERE:              H1(C2*C3,V)=V for the cyclic quotient;
                           C3 versus transitive A4 image dichotomy;
                           general orbit-contingency norm formula;
                           exact A4 rank-one / 8/9 leakage;
                           mod-two standard-plane image orbit;
+                          primitive leakage = determinant character;
+                          conditional map to the exact SNC boundary kernel;
+                          reflection-completion-to-S4 census;
                           two-coordinate A4/S4 marked detector.
 
 NOT PROVED:               polynomial/Keller realization of the marked lift;
+                          existence of the rational equivariant SNC completion;
+                          whether the Kummer plane is unit or saturation born;
+                          a compatible geometric C2 reflection in the A4 case;
                           exclusion of A4 or S4 monodromy;
                           common physical LRC binary/ternary torsor;
                           endpoint-current or owner-phase transport;
-                          JC(2), DC(2), or LRC(14).                         (22)
+                          JC(2), DC(2), or LRC(14).                         (30)
 ```
 
-QED (candidate).
+QED.

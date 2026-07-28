@@ -16,6 +16,12 @@ nonzero_class_mod2_standard_orbit_spans=[2]*12
 canonical_mod2_image_lines=[0011,0101,0110]
 binary_cycle_types=zero:1^4 nonzero:2^2
 triangle_relation=(sigma*tau)^3=1 for all 16 lifts
+scaled_leakage_formula=(3/4)M_a*w_p=2e_(p+a)-e_(p+Ta)-e_(p+T2a)
+scaled_leakage_mod2=det(a,x-p) on all 16 lifts
+leakage_character_plane=F2-linear C3-equivariant isomorphism x4 gauges
+compatible_reflections=12 per_C3_lift=3 cycle_type=1^2+2
+reflection_completion_orders=[24]*12
+boundary_scope=character_plane_to_ker(delta_mod2);unit_vs_saturation_unresolved
 quartic_scope=marked_A4_detector_not_Keller_exclusion
 LRC_scope=no_common_physical_involution_or_endpoint_current
 PASS
