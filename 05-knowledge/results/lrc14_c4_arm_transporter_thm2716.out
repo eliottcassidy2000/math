@@ -1,0 +1,11 @@
+C4 ARM TRANSPORTER EXACT REFEREE
+objects=2; arrows=8; hom_degrees={(0, 0): (0, 2), (0, 1): (1, 3), (1, 0): (1, 3), (1, 1): (0, 2)}
+cross_hom=(1, 3); target_deck_swap=(3, 1); sections=((1, 3), (3, 1))
+macro_phases=(4, 1, 13, 16); debt_phases=(7, 91, 163, 79); alignments=(1, 3)
+norm_matrix=((1, 1), (1, 1)); invariant_image=(2, 2); sign_image=(0, 0)
+half_components=(((0, 0), (1, 1)), ((0, 1), (1, 0))); half_character_boundaries=(2, -2)
+thm2707_R=4826809; order2_translation_count=1; order4_translation_count=1
+F13_C7_frobenius=(0, 6, 5, 4, 3, 2, 1); inverse_pairs=((1, 6), (2, 5), (3, 4))
+displayed_transit_banks_raw=(5850, 4958); safe=(5850, 4386); exchange_involution=false
+scope=relative_Z2_degree and finite C4 support/incidence groupoid; no physical current
+verdict=PASS
