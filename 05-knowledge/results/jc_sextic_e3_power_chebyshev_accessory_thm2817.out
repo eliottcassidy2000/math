@@ -1,0 +1,17 @@
+THM-2817 SEXTIC E=3 MAXIMAL-POLE ACCESSORY AUDIT
+(a,b,c,d) | saturated linear relation | saturated quadratic
+(1, 1, 1, 3) | -(lambda - 3*mu + 1)/3 | lambda**2 - lambda + 1
+(1, 1, 2, 2) | lambda + mu - 1 | (4*lambda - 3)*(4*lambda - 1)/16
+(1, 1, 3, 1) | -3*lambda + mu + 1 | (3*lambda**2 - 3*lambda + 1)/3
+(1, 2, 1, 2) | -lambda + mu + 1 | (lambda - 4)*(3*lambda - 4)/3
+(1, 2, 2, 1) | -lambda + mu - 1 | (lambda - 3)*(3*lambda - 1)/3
+(1, 3, 1, 1) | lambda + mu - 3 | lambda**2 - 3*lambda + 3
+(2, 1, 1, 2) | -lambda + mu - 1 | (lambda + 3)*(3*lambda + 1)/3
+(2, 1, 2, 1) | -lambda + mu + 1 | (lambda + 2)*(3*lambda - 2)/3
+(2, 2, 1, 1) | lambda + mu - 1 | (2*lambda - 3)*(2*lambda + 1)/4
+(3, 1, 1, 1) | lambda + mu + 1 | lambda**2 + lambda + 1
+ordered passports=10, accessory points/passport=2, Nielsen classes=2
+power carrier: P3=2*x^3-1, F=P3^2/(P3^2-1)
+Chebyshev carrier: P3=T3(x-1/2), F=P3^2/(P3^2-1)
+saturated ideals, response identities, and ternary atlas: PASS
+assert_nodes=0
