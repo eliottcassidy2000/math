@@ -21,37 +21,60 @@ u_2=169u+14tau.
 ```
 
 Their zeroes differ by `|tau|/169`.  Thus every nonzero fixed lift opens a
-positive three-event clock-flip window that scalar `D` did not have.  But the
-next zero lies on the same side as the second: a fixed affine lift crosses the
-central clock wall at most once.  It cannot support two consecutive clock
-flips.
+positive flip window for nearest-clock values *along the affine orbit*.  But
+this is not yet the stored event edge: the intrinsic shallow and owner are
+`c_7(Dx)` and `c_7(D^2x)`, and a handoff must identify the owner at `x` with
+the shallow at `T_kx`.
 
-The decisive operation is therefore not “add a translation”; it is “retain
-the translation digit on every edge.”  The two valid lifts
+This distinction kills the first attractive cycle.  The valid lifts
 
 ```text
 k_0=-14,                 k_1=14
 ```
 
-give the exact cycle
+exchange `1/2+1/13^6` and `1/2-1/13^6`, but their stored edges are `4->4`
+and `3->3`, and neither owner equals the following shallow clock.  The full
+rail bank is positive at both points, while the THM-2640 present packet is
+already zero there because the speed-66 safe factor excludes a neighbourhood
+of `1/2`.  This is a useful hostile, not an escape.
+
+The arithmetic also gives the repair.  Put `S=13^5` and use
 
 ```text
-1/2+1/13^6  --T_-14-->  1/2-1/13^6
-1/2-1/13^6  --T_+14-->  1/2+1/13^6.
+k_0=-(S+1),             k_1=S+1,
+a=(S+1)/(14*13^6).
 ```
 
-The nearest-seven clocks alternate `4,3`; the predecessor carries alternate
-`7,5`; both future digits are `6`.  Relative to THM-2657's quotient map, the
-two lift labels are root steps `11,2`.  A perturbation grows by a factor of
-thirteen per edge, so the exact cycle is repelling, but for every finite
-horizon `H` the initial interval of radius
+Then
+
+```text
+1/2+a  --T_(-(S+1))-->  1/2-a,
+1/2-a  --T_(S+1)----->  1/2+a.
+```
+
+Since
+
+```text
+13a =1/14+1/(14S),
+169a=13/14+13/(14S),
+```
+
+the intrinsic stored edges are exactly `4->3` and `3->4`.  Each owner is the
+next event's shallow clock, so this uses the existing nonconstant edge grammar
+rather than inventing a new observable.  The predecessor carries again
+alternate `7,5`, both future digits are `6`, and the THM-2657 quotient labels
+are root steps `11,2`.
+
+A perturbation grows by a factor of thirteen per edge, so the exact cycle is
+repelling, but for every finite horizon `H` the initial interval of radius
 
 ```text
 1/(3*13^6*13^H)
 ```
 
-remains inside the central tooth and keeps every consecutive clock distinct.
-This is positive support at every prescribed finite depth, not merely one
+remains inside the central tooth, keeps each stored edge nonconstant, and
+preserves every owner-to-next-shallow identification.  This is positive
+clock/state support at every prescribed finite depth, not merely one
 exceptional point.
 
 The new object is a controlled affine cocycle, not a single circle map:
@@ -59,7 +82,7 @@ The new object is a controlled affine cocycle, not a single circle map:
 ```text
 state       = (x, odometer lift k),
 transition  = x -> {13x+k/13^6},
-observable  = nearest-seven clock plus base-thirteen carry/future digit.
+interface   = intrinsic shallow/owner clocks plus carry/future digit.
 ```
 
 Projecting away `k` recovers THM-2684's nilpotent scalar picture and destroys
@@ -71,6 +94,7 @@ The remaining hostile is physical and sharp.  The three-tooth envelope is a
 union over labelled rails; it does not say that one source/owner/deep packet
 survives along the alternating affine fibre product.  Present factors are not
 translation-covariant, and primitive units have not been transported.  The
-next decisive test is therefore the actual `(-14,+14)` labelled rail product,
-beginning with the THM-2640 `h=10,c=0,r=2` atom and retaining every source,
-carry, half-edge, and global-content label.
+next decisive test is the actual `(-(13^5+1),13^5+1)` labelled rail product,
+retaining every source, carry, half-edge, present factor, and global-content
+label.  The small-lift hostile shows why checking only the aggregate envelope
+or the orbit clock is insufficient.

@@ -1,14 +1,14 @@
 # Script Results Index
 
 - `lrc14_odometer_twisted_central_clock_escape_20260728.py` -> matching `.out`
-  [VERIFIED-EXACT SCOUT; ENVELOPE/CLOCK/STATE SCOPE].  A fixed nonzero affine
-  twist `T_k(x)={13x+k/13^6}` creates one positive central clock flip but
-  cannot sustain a second.  Alternating the THM-2657 lifts `k=-14,+14`
-  exchanges `1/2+1/13^6` and `1/2-1/13^6`, with clock labels `4,3` and
-  quotient root steps `11,2`; positive clock-alternating neighbourhoods exist
-  for every finite horizon.  Actual labelled rails, present factors, units,
-  and semantic transition remain untested.  Hashes begin `52254d72` /
-  `caa7a9bf`.
+  [VERIFIED-EXACT SCOUT; ENVELOPE/INTRINSIC-CLOCK/STATE SCOPE].  The minimal
+  alternating lifts `-14,+14` give only a cosmetic orbit-clock cycle: their
+  stored edges are diagonal and do not glue.  The lawful lifts
+  `k=+/-(13^5+1)` instead exchange two central points with intrinsic edges
+  `4->3` and `3->4`, exact owner-to-next-shallow gluing, quotient root steps
+  `11,2`, and positive neighbourhoods at every finite horizon.  Actual
+  labelled rail fibres, present factors, units, and semantic endpoints remain
+  untested.  Hashes begin `05a439d4` / `9f3bbfd7`.
 - `lrc14_endpoint_arrival_guard_danger_bypass_20260728.py` -> matching `.out`
   [VERIFIED-EXACT SCOUT; ONE-EVENT COEFFICIENT/COMMON-`x` SCOPE].  The full
   `162x13` endpoint guard-danger bank has global content `86814`, exactly
