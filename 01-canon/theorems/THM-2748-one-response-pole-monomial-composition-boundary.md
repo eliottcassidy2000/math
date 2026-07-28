@@ -13,6 +13,7 @@ status: >
   is subject to this full monomial-composition normal form.  This does not
   prove that a reducible component contains a forced branch or close JC(2).
 source: thm2694-full-lift-fibre-scout-2026-07-28
+audit: jc-one-pole-audit-2026-07-28 (independent Luroth/function-field, pole-divisor, pure-power factorization, reduction/normalization-lift, fibre-pullback, THM-2741 table, and normal/optimized/hash audit: ACCEPT)
 depends_on:
   - THM-2723-split-exact-square-prefix-rational-primitive-pole-capacity
   - THM-2741-highest-odd-faber-response-pole-capacity-closure
@@ -149,34 +150,66 @@ For `(3a)`, `N=1`, proving `(4)`.  For `(3b)`, `N=m-1`, proving `(5)`.
 
 ## 3. Highest-odd response application
 
-Let a physical trajectory land on the normalization of an irreducible
-component of a THM-2741 highest-odd response member.  Suppose that component
-contains one of THM-2741's forced infinity branches and that the response
-has no other pole on the component.  Write
+Let `X_a` be a THM-2741 highest-odd response member, possibly reducible or
+nonreduced, and let `D` be the closure in `(X_a)_red` of the generic image of
+a physical source trajectory.  Because `P1_x` is reduced, the trajectory
+kills target nilpotents and factors through `(X_a)_red`.  Moreover
+
+```text
+R_source'=kappa/U != 0,                                  (12)
+```
+
+so its generic image is not a point.  Since the response member is a
+projective curve, `D` is a reduced irreducible curve component.  Let `Cbar`
+be its smooth projective normalization.  The induced inclusion
+`C(D) -> C(x)` lifts the generic trajectory to a rational map
+`P1_x ---> Cbar`; properness extends it across every source point, and
+nonconstancy makes the extension a finite surjective morphism
+
+```text
+nu:P1_x -> Cbar,             R_source=nu^*R,              (13)
+```
+
+where `R` is the affine response restricted to `Cbar`.
+
+Suppose `Cbar` has a normalization point `P_infty` representing one of
+THM-2741's forced formal infinity branches, with exact valuation
+
+```text
+ord_(P_infty)(R)=-P_j.                                   (14)
+```
+
+Write
 
 ```text
 j=max{odd k:a_k!=0},       r=22-j,       g=gcd(r,6),
-P_j=(150-6r)/g.                                          (12)
+P_j=(150-6r)/g.                                          (15)
 ```
 
 THM-2741 gives the exact table
 
 ```text
 j       21  19  17  15  13  11   9   7   5   3   1
-P_j    144  44 120 108  32  84  72  20  48  36   8.    (13)
+P_j    144  44 120 108  32  84  72  20  48  36   8.    (16)
 ```
 
-The source equation is precisely `(2)` by THM-2723.  Since every entry in
-`(13)` is at least eight, case `(3a)` is impossible.  Thus every surviving
-one-pole component must satisfy the monomial normal form `(5)` with
+Both rational-primitive alternatives in `(3)` have exactly one pole on
+`P1_x`.  For every target pole `Q` of `R` and every `p in nu^(-1)(Q)`,
 
 ```text
-m=1+eP_j.                                                (14)
+ord_p(nu^*R)=e_p ord_Q(R)<0.                              (17)
 ```
 
-If the component has two or more response poles, their pairwise disjoint,
-nonempty fibres already contradict `(3)`.  Therefore `(5)` is the complete
-equality boundary for any physical component that contains a forced branch.
+Surjectivity makes each pole fibre nonempty, and fibres over distinct target
+points are disjoint.  Hence a physical component can have at most one
+response pole.  Since `P_infty` is already one, it is the unique pole and the
+abstract theorem applies.  Every entry in `(16)` is at least eight, so the
+constant-`U` conclusion `P_j=deg(nu)=1` is impossible.  Thus every surviving
+component carrying such a branch satisfies `(5)` with
+
+```text
+m=1+eP_j,                       e=deg(nu).                (18)
+```
 
 This strictly strengthens the divisibility sentence in THM-2741: not only
 the pole order, but the entire target response and normalization map are
@@ -195,6 +228,12 @@ that a reducible or nonreduced degree-22 member has a component containing
 one of the forced THM-2741 branches.  THM-2745 supplies that separate global
 `h=0` divisor analysis and closes the physical boundary.  A component
 containing more than one pole is excluded here, not classified by `(5)`.
+
+For a nonreduced response member, the theorem is applied to the normalization
+of the reduced generic-image component: nilpotent and embedded structure is
+killed by the reduced source and cannot change `R_source`.  What remains
+unproved is that this component contains one of the forced formal branches;
+it may instead meet the `h=0` divisor elsewhere.
 
 The coordinate changes are also load-bearing.  Before placing the unique
 source and target poles at infinity, the two maps need not look like literal
@@ -217,10 +256,11 @@ python -O 04-computation/jc2_one_pole_response_composition_thm2748.py
 
 Both executions byte-match the stored transcript
 `05-knowledge/results/jc2_one_pole_response_composition_thm2748.out`.  The
-companion verifies every pole order in `(13)`, all first five ramification
+companion verifies every pole order in `(16)`, all first five ramification
 degrees, the exact rational-primitive derivative identity, and the pure-power
 composition.  It also checks the constant-`U` degree-one boundary and the
-necessity of the source/target translations.  The proof for arbitrary
-degrees is Section 2, not a finite computation.
+positive control with nonzero target shift `z_0=7` in the inverted source
+coordinate `X`.  The proof for arbitrary degrees is Section 2, not a finite
+computation.
 
 QED.
