@@ -2,19 +2,21 @@
 id: THM-2814
 title: "Projective allocation-square holonomy and idempotent provenance no-go"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Independent atom-preserving occupancy idempotents have zero mixed
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Independent
+  atom-preserving occupancy idempotents over a field have zero mixed
   face on every fourfold-co-supported raw atom, and arbitrary linear
   coarse-graining keeps their face in the joint-absent sector.  There are two
   distinct non-idempotent escapes.  On one physically normalized common line,
   a Segre square w(1,alpha,beta,alpha beta) has nonzero face exactly when both
   contrasts are nontrivial; its cross-ratio remains one.  With only four
   vertex lines modulo row/column rephasing, the complete invariant is instead
-  kappa=v00v11/(v10v01), and kappa!=1 is the first intrinsic square holonomy.
+  kappa=v00v11/(v10v01), and kappa!=1 is the first intrinsic square holonomy
+  on the nonzero field locus (equivalently, the all-units locus over a ring).
   THM-2593 supplies abundant coefficient contrasts but a vertex-coboundary
   gauge; THM-2779 supplies nontrivial holonomy abstractly; THM-2806/2807 and
-  the THM-2771 local copy germ supply neither physical invoice.  No proved
-  result may depend on this candidate until independent promotion.
+  the THM-2771 local copy germ supply neither physical invoice.  Thus the
+  remaining LRC gate is a typed physical realization, not another formal
+  square statistic.
 source: root/projective-allocation-holonomy-2026-07-28
 depends_on:
   - THM-2593-charged-target-section-atlas-and-minimal-c91-holonomy-trivialization
@@ -30,13 +32,16 @@ script: 04-computation/lrc14_projective_allocation_holonomy_thm2814.py
 output: 05-knowledge/results/lrc14_projective_allocation_holonomy_thm2814.out
 script_sha256: f5198812da7be1051037b2318e63d5ff5cc5d5173fba0e61c32fac49abf5ce7d
 output_sha256: 8390fcea84c7df3247efd366b754ad27423988613a2253a806da93fbbfbae56a
+secondary_script: 04-computation/lrc14_projective_allocation_holonomy_independent_audit_thm2814.py
+secondary_output: 05-knowledge/results/lrc14_projective_allocation_holonomy_independent_audit_thm2814.out
+secondary_script_sha256: 86585db9e7bc56ed221167e8414b7e626737c8a5652c28af0494195feec5fcad
+secondary_output_sha256: 5abebb920af9c0a5b3ea97de4a5850d68baec825c8ce6501f9fffe67f6324921
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2814 -- allocation contrast and projective square holonomy
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2806 proves why the most literal fixed-sheet allocation misses
 THM-2772's gate: the only raw atom supporting all four states is flat, while
@@ -264,7 +269,8 @@ nonseparable sidecar rather than merely reduce `(18)` modulo thirteen.
 
 ## 5. Branch B: four vertex lines and projective holonomy
 
-Now suppose the four nonzero coefficients live in vertex lines whose
+Let `K` be a field, and suppose the four nonzero coefficients live in vertex
+lines whose
 trivializations may be changed independently by a source-row and target-column
 gauge:
 
@@ -296,19 +302,31 @@ redundancy.  Over `F_13`, the `12^4=20,736` nonzero squares split into twelve
 cross-ratio fibres of size `12^3=1,728`; the companion also checks `248,832`
 row/column rephasings.
 
-The additive Mobius value is not invariant under `(20)`.  The sharp warning
-is
+The additive Mobius value, including its vanishing, is not invariant under
+`(20)`.  Two sharp warnings over `F_5` are
 
 ```text
-(1,2,3,6):                  kappa=1, mu=2,
-row/column normal form:     (1,1,1,1), mu=0.             (24)
+(1,2,2,4):                  kappa=1, mu=1,
+row/column normal form:     (1,1,1,1), mu=0;
+
+(1,2,2,3):                  kappa=2, mu=0,
+row/column normal form:     (1,1,1,2), mu=1.             (24)
 ```
 
 Equation `(24)` does not invalidate Branch A: there the common-line edge
 normalization is physical and `(20)` is not a gauge freedom.  But when only
-the four lines are supplied, `kappa!=1` is the first intrinsic joint
-interaction.  In the normalized chart its face is `(kappa-1)w`.  This branch
-departs from the rank-one Segre square rather than improving it.
+the four lines and the row/column-factorized gauge are supplied, `kappa!=1`
+is the first intrinsic joint interaction.  The normalized chart `(23)` has
+additive defect `kappa-1`; with an externally retained common scale `w`, this
+is `(kappa-1)w`.  That defect is normalized/covariant, not a gauge-invariant
+scalar: only `kappa` is intrinsic.  This branch departs from the rank-one
+Segre square rather than improving it.
+
+The scope is sharp.  Four unrelated vertex rephasings can change `kappa`.
+Over a general ring, four merely nonzero entries need not be invertible, and
+equal formal cross-products need not imply gauge equivalence.  The same proof
+does extend verbatim from a field to the locus on which all four entries are
+units.
 
 Reversing the square orientation sends `kappa` to `kappa^(-1)`.  Hence any
 tournament orientation extracted from the twelve nontrivial `C_13`
@@ -324,13 +342,18 @@ T e_r=e_(r+1),                  M e_r=zeta^(-r)e_r,
 T M=zeta M T.                                             (25)
 ```
 
-After three edge trivializations, the commutator square is
+For the two chosen linear lifts, the oriented path multiplier `TM/MT` is
+`zeta`.  After three lift trivializations its normalized scalar-holonomy
+chart is
 
 ```text
 (1,1,1,zeta),                    kappa=zeta!=1.           (26)
 ```
 
-No one-dimensional scalar pair realizes `(25)`, since scalars commute.  In
+This is not a literal one-dimensional four-toggle square.  On the thirteen
+basis lines, and after passage to `PGL`, the two shadows commute; the phase is
+remembered only by the oriented comparison of the chosen linear lifts.  No
+one-dimensional scalar pair realizes `(25)`, since scalars commute.  In
 the endpoint plane, the phase of directions `s,t` is
 
 ```text
@@ -357,9 +380,13 @@ THM-2807's address edges are
 ```
 
 They form an honest commuting translation triangle, so every character has
-holonomy one.  The residue `4079=10 mod13` is a retained vertical edge, not
-curvature.  The thirteen affine lifts do not change this: they are address
-conjugacies, not proved allocation-edge actions.
+holonomy one.  For example, over `F_53` the character completion
+`(1,10,15,44)` has `kappa=1` although its chart-dependent additive face is
+`20`.  The residue `4079=10 mod13` is a retained full-address vertical edge,
+not curvature.  Modulo `169`, the vertical endpoints coincide, and every one
+of the thirteen `F_53`-valued quotient characters kills that edge.  The
+thirteen affine lifts do not change this: they are address conjugacies, not
+proved allocation-edge actions.
 
 The two equal THM-2771 cofiber copies have full-address shifts
 
@@ -393,13 +420,17 @@ Both modes byte-match the stored output.  The dependency-free companion has
 no Python `assert` nodes and independently reconstructs the THM-2593
 `R_7/Phi_7` arithmetic, all row/column square classes, every symplectic frame,
 the Heisenberg phase, the fixed-sheet Rees profile, the commuting address
-triangle, and the local cofiber germ.
+triangle, and the local cofiber germ.  A second dependency-free implementation
+also byte-matches its stored output under normal and optimized Python.  It
+reconstructs the orbit theorem over `F_3,F_5,F_7,F_13`, tests `248,832`
+linear provenance cases, and supplies the unrelated-vertex, nonunit-ring,
+product-ring-idempotent, projective-shadow, and quotient-character hostiles.
 
-Exactly proved by this candidate are the idempotent common-atom and linear
+Exactly proved are the field-idempotent common-atom and linear
 provenance no-gos, Branch-A contrast classification, Branch-B cross-ratio
 classification, and the stated exact applications.  Not proved are a
 physically normalized non-idempotent toggle on one LRC atom, a same-ancestry
 Heisenberg fibre, allocation-to-endpoint transport, root/Cech correction,
 row exclusion, or LRC(14).
 
-**Awaiting independent hostile audit; not QED.**
+**QED.**
