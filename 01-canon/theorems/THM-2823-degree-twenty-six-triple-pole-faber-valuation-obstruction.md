@@ -2,9 +2,9 @@
 id: THM-2823
 title: "Degree-twenty-six triple-pole Faber valuation obstruction"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  In a nonsplit polynomial exact-square-prefix degree-twenty-six
-  chart, any response point with one finite local pair
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In a nonsplit
+  polynomial exact-square-prefix degree-twenty-six chart, any response
+  point with one finite local pair
   (ord V,ord M)=(3,1) is impossible.  The exact top-row identity
   K=-(d/2)(Phi/q)+T H_26 reduces the first-flux locus to K=T H_26.
   A complete valuation split gives regular valuation mismatches, two
@@ -13,6 +13,13 @@ status: >
   this first open degree.  Other degrees/charts, JC(2), and DC(2) remain
   open.
 source: root/sextic-degree26-triple-pole-obstruction-2026-07-28
+audit: >
+  thm2823-hostile-audit-2026-07-28 independently derived the Faber
+  recurrence and translation normalization, checked the K decomposition,
+  audited every valuation lane for cancellation and exhaustiveness,
+  reproduced both resultants and the exceptional unit ideal, verified both
+  carrier multiplicities, and replayed normal, optimized, and stored
+  transcripts with matching LF hashes: ACCEPT.
 depends_on:
   - THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient
   - THM-2411-degree-twenty-two-first-flux-pole-divisor-square-class-reduction
@@ -31,8 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2823 -- one triple pole excludes degree twenty six
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2822 excludes the canonical centered lifts of THM-2817's two sextic
 response carriers in every Faber degree.  The first open degree admits a
@@ -134,9 +140,10 @@ Put
 a=v(A_src),                     b=v(B_src),            (11)
 ```
 
-where `b=infinity` is allowed when `B_src=0`.  Since all four source
-coefficients in `(1)` are polynomials, `a,b` are nonnegative and `C_0,E_0`
-are regular at `beta`.  Equations `(2)` and `(5)` give
+where `b=infinity` is allowed when `B_src=0`.  The response identity in
+`(5)` with `M!=0` makes `A_src` nonzero, so `a` is finite.  Since all four
+source coefficients in `(1)` are polynomials, `a,b` are nonnegative and
+`C_0,E_0` are regular at `beta`.  Equations `(2)` and `(5)` give
 
 ```text
 v(T)=2a-3,                      v(K)=1-a,
