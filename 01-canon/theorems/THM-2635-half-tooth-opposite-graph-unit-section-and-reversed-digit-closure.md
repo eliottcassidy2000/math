@@ -2,7 +2,7 @@
 id: THM-2635
 title: "Half-tooth opposite-graph unit section and reversed-digit closure"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Split every translated deep-probe tooth in THM-2616's complete common-x
   carrier into its two literal incident halves before normalization.  The
   full refined carrier still has global content 26.  On THM-2629's imposed
@@ -38,7 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2635 -- one literal later edge retains the opposite-graph unit
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2629 finds that the coefficient graph
 
@@ -439,4 +439,15 @@ either-rail fixed-half unit, recombines the halves, checks the complete bank
 digest, and exhausts the adjacent-digit closure equations.  Every logical
 decision is an exact integer or finite-field optimized-mode guard.
 
-QED (candidate; independent hostile audit pending).
+An independent hostile audit rederived the full-carrier universe
+`162*13*7*12*13`, checked that the gcd is taken before every graph, rail, and
+half restriction, and verified that fixed-half unitness is tested only after
+integer division by the single global content `26`.  It separately checked
+the pointed-sector gauge dependence of `lambda`, the predecessor-carry law,
+the `h=6` two-`kappa` seam, and the two solutions of `3j=-(kappa+epsilon)`.
+Fresh normal and optimized runs both byte-matched the stored transcript and
+its declared hash.  The audit confirms that (31) is an imposed, reversed
+coefficient section and does not promote it to a decoded successor or a
+semantic two-root transition.
+
+QED.

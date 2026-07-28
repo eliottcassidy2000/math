@@ -13,8 +13,10 @@ status: >
   normally generates G and surjects onto G^ab; restriction
   Hom(G,C_l)->Hom(H,C_l) is injective for every prime l.  Also every Jelonek
   component has 1<=k_D<=d-1 finite branches.  Consequently G cannot admit any
-  nontrivial quotient killed by all sheet-fixing elements, in particular a
-  nonzero character supported on derangements.  In D4 the
+  nontrivial quotient killed by all sheet-fixing elements; in particular no
+  nontrivial regular transitive group can occur, the source function-field
+  extension contains no nontrivial Galois subextension of the target field,
+  and no nonzero character can be supported on derangements.  In D4 the
   normal closure of the sheet-fixing elements is the proper source-deck
   kernel J, whose nonzero quotient coset consists of the two edge reflections
   and two four-cycles.  Hence D4 is impossible as the
@@ -99,6 +101,37 @@ when it lies in a conjugate of `H`.  Hence `N_fix` is the normal closure of
 ```text
 normal closure_G(H)=G.                                  (5a)
 ```
+
+There is an equivalent permutation-theoretic formulation which exposes the
+lost quotient.  Identify `Omega=G/H` and put `N=normal closure_G(H)`.  The
+`N`-orbits are indexed by `G/N`, and the induced action of `G/N` on those
+orbits is regular.  Moreover every quotient of `G` which kills `H` factors
+through `G/N`.  Thus `G/N` is the maximal regular block quotient of the
+sheet action, and (5a) says precisely
+
+```text
+a Keller monodromy action has no nontrivial regular block quotient.       (5aa)
+```
+
+In particular, if the generic source extension is already Galois, then its
+sheet action is regular and (5aa) forces degree one.  This consequence uses
+the full normal-generation theorem; it need not be visible in abelianization.
+
+Equivalently, write the target, source, and Galois-closure function fields as
+
+```text
+K=C(F_1,...,F_n) subset L=C(x_1,...,x_n) subset M,
+
+G=Gal(M/K),                    H=Gal(M/L).                (5ab)
+```
+
+There is no intermediate field `K subsetneq E subseteq L` for
+which `E/K` is Galois.  Indeed such an `E` would correspond to a proper
+normal subgroup `Gal(M/E)` containing `H`, hence containing its normal
+closure `G`, a contradiction.  Thus a Keller source extension has no
+nontrivial Galois subextension.  The familiar exclusion of a nontrivial
+Galois source extension is only the endpoint `E=L` of this stronger field
+statement.
 
 This gives the derangement-character obstruction as an immediate abelian
 corollary.  Suppose that for some prime `ell` there is a nonzero character
@@ -375,7 +408,9 @@ N_fix=<s,zs>=J,                 |J|=4<8=|D4|.           (17a)
 ```
 
 This already contradicts the primary normal-generation law (5).  The
-source-deck character is the exact abelian witness to the proper quotient.
+two `J`-orbits are the two opposite vertex pairs, and `G/J=C2` swaps them
+regularly.  Thus the obstruction is exactly the nontrivial regular block
+quotient in (5aa).  The source-deck character is its abelian witness.
 
 The quadratic source-deck intermediate has character
 
@@ -456,9 +491,13 @@ S4 support component:       transposition inertia, k_D=1 or 2. (21b)
 These are necessary component types, not exclusions.  They are the precise
 residual boundary objects on which the degree-four search should now focus.
 
-More generally, any nontrivial regular transitive group with a nonzero
-prime-cyclic quotient is excluded: every nonidentity element of a regular
-action is a derangement.
+More generally, **every** nontrivial regular transitive group is excluded,
+without any abelian-quotient hypothesis.  In a regular action the point
+stabilizer is trivial, so its normal closure is trivial rather than `G`.
+Equivalently, every nonidentity element is a derangement and `N_fix=1`.
+The character obstruction alone sees only regular groups with a nonzero
+prime-cyclic quotient; the primary normal-generation theorem also sees
+perfect regular groups.
 
 ## 6. Why the earlier two-component atlas was a near miss
 

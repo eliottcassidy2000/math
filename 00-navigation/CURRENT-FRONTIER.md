@@ -111,9 +111,12 @@ holonomy.  Audited THM-2624 proves exact two-clock signed tomography and
 the private-row criterion: every current row is dense, so no positive decoder
 exists.  Audited THM-2629 finds the sharp coefficient graph `r=-q-1`
 (minimum ten sections, nine common), but every full affine graph hits the
-missing deep-zero sheet.  Audited THM-2630 shows that the old wall does not
-determine the later successor; predecessor carry is load-bearing.
-Candidate THM-2635 refines the full later-probe carrier by a literal half-edge:
+missing deep-zero sheet.  Audited THM-2623 fills the two missing future
+digits by the guard-safe/danger cospan, but a literal half-tooth repair leaves
+four unit holes and every refined row still supports eleven or twelve roots.
+Audited THM-2630 shows that the old wall does not determine the later
+successor; predecessor carry is load-bearing.
+Audited THM-2635 refines the full later-probe carrier by a literal half-edge:
 the global content remains `26`, and the canonical left half has uniform units
 at `h=3,8,10`.  Only `h=3` also closes to the adjacent predecessor digit, in
 the reverse orientation.  The affine graph is still imposed rather than
@@ -364,7 +367,10 @@ Classify profiles under support operations; study analytic continuation and auto
   `1<=k_D<=d-1` and an inertia-fixed sheet over every Jelonek divisor; purity
   then forces the actual affine Jelonek inertia subgroups to normally
   generate monodromy.  Hence every point stabilizer normally generates `G`,
-  surjects onto `G^ab`, and detects every prime-cyclic character.  In `D4`
+  excluding every nontrivial regular monodromy group; it also surjects onto
+  `G^ab` and detects every prime-cyclic character.  Field-theoretically, the
+  source extension contains no nontrivial Galois subextension of the target
+  field.  In `D4`
   the fixed-point normal closure is only the order-four source-deck kernel,
   equivalently the nonzero deck character is supported on derangements.
   Thus `C4,V4,D4` fail and only `A4,S4` remain at degree four.  `A4` character
