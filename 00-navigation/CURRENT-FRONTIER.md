@@ -383,6 +383,12 @@ Classify profiles under support operations; study analytic continuation and auto
   the `d`-point.  Hence `q/h^3` is globally regular and zero; the remaining
   vertical branch contradicts the full response bank in every coefficient
   stratum, including reducible/nonreduced ambient schemes.
+  THM-2760 proves the all-degree nonzero-root exact-prefix
+  gcd: for `m=4k-2`, `gcd(Phi_m/q,Psi_m)=r^(k-1)` after localizing the square-
+  root residue.  The omitted projective root-zero chart (`omega=0,q!=0`)
+  survives both fluxes exactly at `m=6 mod12`, with nonzero third response;
+  the affine all-zero corner is outside that chart and no other degree is
+  closed by this.
 
   This is not `JC(2)`: arbitrary Keller pairs need not enter this quartic,
   split exact-prefix chart.  Split degrees `10,14,18,>=26`,

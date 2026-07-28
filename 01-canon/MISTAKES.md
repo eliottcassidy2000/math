@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-314 (2026-07-28, concurrent THM-2759 reservation) -- a clean local scan was not replayed after the reservation rebase
+
+- **What happened:** the exact-prefix even Faber flux-gcd theorem was first
+  reserved as `THM-2759`.  Concurrent mainline work had already claimed that
+  identifier for the split degree-six componentwise monicization closure.
+  Replaying the reservation above the incoming commit temporarily left two
+  distinct files with the same YAML theorem ID.
+- **First failed implication:** a namespace check made before a concurrent
+  reservation does not remain valid after rebase, even when the textual rebase
+  is conflict-free.  Git detects path conflicts, not duplicated identifiers in
+  different paths.
+- **Repair / survivor:** the first-pushed split degree-six theorem keeps
+  `THM-2759`; the exact-prefix gcd theorem and all its citations moved
+  coherently to the freshly checked `THM-2760` namespace.  No mathematical
+  statement changed.  After every reservation rebase, search both filenames
+  and YAML IDs on the rebased tree before pushing; a clean merge is not a clean
+  namespace audit.
+
 ## MISTAKE-313 (2026-07-28, THM-2749 Section 5 / provisional THM-2751) -- a clock-blind natural-sheet carrier was subtracted from a fully marked common section
 
 - **What was assumed:** the legacy helper

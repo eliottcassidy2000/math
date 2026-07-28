@@ -26,6 +26,7 @@ related:
   - THM-2745-highest-odd-faber-componentwise-exact-prefix-closure
   - THM-2747-highest-odd-reduced-boundary-divisor-and-one-ended-factorization-atlas
   - THM-2755-all-even-zero-flux-componentwise-global-regularity-closure
+  - THM-2760-exact-prefix-even-faber-flux-gcd-and-smooth-boundary-exclusion
 script: 04-computation/jc2_degree22_all_even_zero_flux_response_regularization_20260728.py
 output: 05-knowledge/results/jc2_degree22_all_even_zero_flux_response_regularization_20260728.out
 script_sha256: 7e92b7f241965f9f8cdc4619488237101fc0b5b897c4493897d2ba9ad20a07af
@@ -402,7 +403,10 @@ whole formal all-even family: its numerator has order at least `M+6`, versus
 denominator order `M+3`.  This is only a local regularization theorem.  It
 does not classify the other `h=0` points, provide their exact-prefix
 resultants, derive the response chart, or close any degree other than the
-audited degree `22` application above.
+audited degree `22` application above.  THM-2760 separately proves the
+all-degree exact-prefix gcd on the nonzero square-root chart and isolates the
+projective root-zero `M=6 mod12` boundary (`omega=0,q!=0`); it still does not
+supply that missing global top-boundary classification.
 
 ## 5. A smooth response pole cannot lift
 
