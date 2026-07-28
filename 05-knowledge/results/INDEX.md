@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `gmc_arbitrary_three_slot_atomic_orientation_thm2824.py` -> matching `.out`
+  [THM-2824 RESERVED PROOF-COMPLETE UNIVERSAL CANDIDATE + VERIFIED-EXACT;
+  AWAITING INDEPENDENT HOSTILE AUDIT].  A positive hockey-stick expansion
+  makes the atomic square increment a three-step measure.  Its tilted mean
+  stays strictly above `c-1`, while the linear increment is supported at or
+  below `c-1`; likelihood-ratio tilting makes the quotient strictly
+  increasing.  Hence every atomic determinant is nonnegative, with equality
+  only at `(i,b,c)=(j,j+1,j+2)`, proving arbitrary three-slot factorial
+  detection by moments `1,2,3` and, when the lowest slot is at least one,
+  the corresponding two-charge Gaussian moment-six bound, conditional only
+  on independent audit.  Exact controls cover all `20,825` triples through
+  exponent `50`.
 - `lrc14_tau12_simplex_allocation_support_no_go_addendum_thm2806.py` and
   `lrc14_tau12_simplex_allocation_support_no_go_independent_audit_thm2806.py`
   -> matching `.out` files [THM-2806 FINITE-EXACT + INDEPENDENTLY

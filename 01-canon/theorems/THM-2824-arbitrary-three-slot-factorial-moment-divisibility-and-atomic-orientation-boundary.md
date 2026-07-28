@@ -1,19 +1,20 @@
 ---
 id: THM-2824
-title: "Arbitrary three-slot factorial divisibility and atomic orientation boundary"
+title: "Arbitrary three-slot factorial moment-three detection by tilted atomic orientation"
 status: >
-  RESERVED / PROOF-COMPLETE REDUCTION CANDIDATE + VERIFIED-EXACT /
+  RESERVED / PROOF-COMPLETE UNIVERSAL THEOREM CANDIDATE + VERIFIED-EXACT /
   AWAITING INDEPENDENT HOSTILE AUDIT.  For any three factorial slots,
   mean-zero polynomials form a binary plane.  Their second and third
   moments have a common complex projective zero exactly when two explicit
   real divisibility invariants vanish.  One invariant factors through a
   strictly positive cubic orientation and a telescoping sum of atomic
-  determinants.  Universal nonnegativity of those atoms would prove
-  arbitrary three-slot Strong Factorial detection and the associated
-  two-charge Gaussian moment-six bound.  The atomic inequality is OPEN.
-  Exact exhaustive arithmetic proves it for every 0<=i<b<c<=50, with
-  equality only on consecutive atoms, and therefore closes every
-  three-slot support whose top exponent is at most 50.
+  determinants.  A positive hockey-stick expansion and a strict
+  likelihood-ratio tilt prove every atom nonnegative, with equality
+  exactly for one consecutive atom.  Consequently the first three
+  factorial moments detect every arbitrary three-slot polynomial, and the
+  associated two-charge Gaussian envelope with lowest slot a>=1 is
+  detected by moment at most six.  Exact arithmetic through top exponent
+  50 audits every formula, sign, and equality boundary.
 source: root/audit-2809-2026-07-28
 depends_on: []
 related:
@@ -25,14 +26,14 @@ related:
   - HYP-8765-gmc2-radial-channel-return-tower
 script: 04-computation/gmc_arbitrary_three_slot_atomic_orientation_thm2824.py
 output: 05-knowledge/results/gmc_arbitrary_three_slot_atomic_orientation_thm2824.out
-script_sha256: ebc659e273db7b956cdd536001ab91b3f02445cf7fea050186df76b2c9c762ef
-output_sha256: ba0be7465d0842d398bedf06217d47404154ac1454e9bc440b6657f3948c8c16
+script_sha256: ee30ff28881556cb00da6d80a085d5e104a02eaae55c14258a7f9ad47df2750d
+output_sha256: 5046f21acf1030c725a10b53db4044107969645bf51e86262f290d64dfe35fb3
 hash_basis: LF-normalized bytes
 ---
 
-# THM-2824 -- arbitrary three-slot nullity reaches one atomic inequality
+# THM-2824 -- arbitrary three-slot factorial moment-three detection
 
-**RESERVED / PROOF-COMPLETE REDUCTION CANDIDATE + VERIFIED-EXACT /
+**RESERVED / PROOF-COMPLETE UNIVERSAL THEOREM CANDIDATE + VERIFIED-EXACT /
 AWAITING INDEPENDENT HOSTILE AUDIT.**
 
 THM-2812 proves moment-three detection for three consecutive factorial
@@ -44,12 +45,17 @@ The invariant replacement is cleaner.  The second moment is a positive
 definite real binary quadratic.  A real binary cubic meets it over
 `C P^1` exactly when the quadratic divides the cubic.  The two
 division-free divisibility invariants expose a strictly oriented factor,
-and one of them telescopes to a single atomic inequality.
+and one of them telescopes to atomic determinants.
 
-The reduction and all orientation statements below are proved.  The
-universal atomic inequality `(24)` is explicitly **OPEN**.  Its exact
-verification through top exponent `50` is a finite theorem, not evidence
-silently promoted to the universal claim.
+The missing atomic inequality has a positive discrete model.  After a
+hockey-stick expansion, its numerator and denominator are transforms of
+two positive finite measures under the kernel
+`H_n(j)=binom(n+j,j)`.  The numerator measure has weighted mean strictly
+above `c-1`; the denominator is supported at or below `c-1`.  Successive
+rows of `H` are increasing likelihood-ratio tilts, so the relevant
+increment ratio is strictly increasing.  This proves the universal atomic
+inequality and its exact equality case.  The proof is complete here but
+the theorem remains a candidate until an independent hostile audit.
 
 ## 1. Normalize the three slots
 
@@ -223,7 +229,7 @@ t111=L((f_b-f_a)^3)>0.                                (23)
 
 This strict sign is independent of the third slot `c`.
 
-## 4. The remaining obstruction telescopes atomically
+## 4. The atomic orientation is universally nonnegative
 
 Define
 
@@ -274,33 +280,200 @@ D_i(b,c)
        [3L(V^2),    2L(V^3)]].                        (31)
 ```
 
-The sharp remaining universal question is:
+We now prove the sharp sign of `(31)`.
 
-> **OPEN atomic orientation inequality.**  Is
->
-> ```text
-> D_i(b,c)>=0                         for every 0<=i<b<c? (32)
-> ```
+### 4.1. Turn the global moments into one long secant
 
-If `(32)` holds, then `(29)` gives `D(a,b,c)>=0` for every three-slot
-support.  Equations `(25)--(26)` then give `I2<0`, and `(17)` proves
+For `n>=0`, put
 
 ```text
-L(H)=L(H^2)=L(H^3)=0                 implies H=0       (33)
+h1(n)=L(f_n V),                 h2(n)=L(f_n V^2),
+
+A_n=h1(n+1)-h1(n)=L(d_n V),
+B_n=h2(n+1)-h2(n)=L(d_n V^2),
+R_n=B_n/A_n.                                             (32)
 ```
 
-for arbitrary three-slot factorial support.
-
-The implication is one-way: `(32)` is a sufficient atomic
-total-positivity statement, not claimed necessary for `(33)`.  Direct
-factorial substitution gives the exact equality family
+Since `b>=1`, one has `V(0)=0`.  Also
 
 ```text
-D_(b-1)(b,b+1)=0.                                      (34)
+V'=f_(c-1)-f_(b-1).                                     (33)
 ```
 
-The open issue is proving nonnegativity, and classifying equality, beyond
-the finite range in Section 6.
+Integration by parts against `e^(-s) ds` gives
+
+```text
+L(V^2)=2L(VV')
+      =2 sum_(n=b-1)^(c-2) A_n,
+
+L(V^3)=3L(V^2 V')
+      =3 sum_(n=b-1)^(c-2) B_n.                         (34)
+```
+
+Thus the global ratio in `(31)` is a positive weighted average of the
+increment ratios `R_n`.  It remains to prove that `R_n` is strictly
+increasing.
+
+### 4.2. A positive hockey-stick model
+
+Set
+
+```text
+K_n(m)=L(d_n f_m)=binom(n+m,m-1),
+H_n(j)=binom(n+j,j).                                    (35)
+```
+
+The hockey-stick identity says
+
+```text
+K_n(m)=sum_(j=0)^(m-1) H_n(j).                          (36)
+```
+
+Consequently
+
+```text
+A_n=K_n(c)-K_n(b)
+   =sum_(j=b)^(c-1) H_n(j)>0.                           (37)
+```
+
+Write
+
+```text
+alpha=binom(2b,b),       beta=binom(b+c,b),
+gamma=binom(2c,c),       r=c-b.                         (38)
+```
+
+The divided-power product law gives
+
+```text
+B_n=alpha K_n(2b)-2beta K_n(b+c)+gamma K_n(2c)
+   =sum_(j=0)^(2c-1) q_j H_n(j),                        (39)
+```
+
+where
+
+```text
+q_j=
+ alpha-2beta+gamma,                 0<=j<2b,
+ gamma-2beta,                      2b<=j<b+c,
+ gamma,                           b+c<=j<2c.             (40)
+```
+
+These are nonnegative weights.  Indeed,
+
+```text
+gamma/beta
+ =product_(k=1)^r (2b+r+k)/(b+k)
+ >=2^r>=2.                                               (41)
+```
+
+The middle weight in `(40)` is therefore nonnegative, and the first is
+strictly positive because it is the middle weight plus `alpha`.  In
+particular `B_n>0` and `R_n` is well-defined.
+
+### 4.3. Strict separation of the tilted means
+
+Let `mu_q(n)` be the `j`-mean of the positive weights
+`q_j H_n(j)`, and let `mu_A(n)` be the `j`-mean of
+`H_n(j)` on `b<=j<c`.  The latter support immediately gives
+
+```text
+mu_A(n)<=c-1.                                            (42)
+```
+
+At `n=0`, `H_0(j)=1`.  Summing each constant block in `(40)` gives the
+exact centered first moment
+
+```text
+sum_(j=0)^(2c-1) (j-(c-1))q_j
+ =c gamma+(r-1)(b+c)beta-(2r-1)b alpha.                 (43)
+```
+
+This is strictly positive.  Successive central-binomial ratios give
+
+```text
+gamma/alpha
+ =product_(t=1)^r [4-2/(b+t)]
+ >=3^r>2r-1,                                             (44)
+```
+
+because `b+t>=2`; the middle term in `(43)` is nonnegative and `c>b`.
+Therefore
+
+```text
+mu_q(0)>c-1.                                             (45)
+```
+
+The kernel rows satisfy the exact likelihood-ratio tilt
+
+```text
+H_(n+1)(j)/H_n(j)=(n+j+1)/(n+1).                        (46)
+```
+
+If `Var_q(n)` is the variance under the normalized weights
+`q_jH_n(j)`, then
+
+```text
+mu_q(n+1)-mu_q(n)
+ =Var_q(n)/(n+1+mu_q(n))>0.                             (47)
+```
+
+Strictness follows already from the positive weights at `j=0,1`.
+Combining `(42)`, `(45)`, and `(47)` yields
+
+```text
+mu_q(n)>c-1>=mu_A(n)                  for every n>=0.    (48)
+```
+
+Applying `(46)` once to the total masses in `(37)` and `(39)` now gives
+
+```text
+R_(n+1)/R_n
+ =(n+1+mu_q(n))/(n+1+mu_A(n))>1.                        (49)
+```
+
+Thus `R_n` is strictly increasing for every `n>=0`, a statement stronger
+than the range `n<b` needed here.
+
+### 4.4. Atomic sign and equality
+
+Let
+
+```text
+Rbar=
+ [sum_(n=b-1)^(c-2) A_n R_n]/
+ [sum_(n=b-1)^(c-2) A_n].                               (50)
+```
+
+Equations `(30)`, `(32)`, and `(34)` give the exact factorization
+
+```text
+D_i(b,c)
+ =6 A_i [sum_(n=b-1)^(c-2) A_n] [Rbar-R_i].             (51)
+```
+
+For `i<b-1`, strict monotonicity gives
+`R_i<R_(b-1)<=Rbar`.  For `i=b-1`, the average is equal to
+`R_(b-1)` exactly when it has a single term, namely when `c=b+1`.
+Therefore
+
+```text
+D_i(b,c)>=0                         for every 0<=i<b<c,
+
+D_i(b,c)=0
+ iff
+(i,b,c)=(j,j+1,j+2)                for some j>=0.        (52)
+```
+
+Now `(29)` gives `D(a,b,c)>=0`.  Equations `(25)--(26)` give `I2<0`,
+and `(17)` proves the universal three-slot theorem
+
+```text
+L(H)=L(H^2)=L(H^3)=0                 implies H=0         (53)
+```
+
+for every arbitrary three-slot factorial support.  The atomic statement
+is a sufficient certificate for `(53)`; no converse is asserted.
 
 ## 5. A continuous Chebyshev-orientation sidecar
 
@@ -311,7 +484,7 @@ Put
 p=b-a,       r=c-b,
 A=b!/a!,     B=c!/b!,
 
-X=s^p/A,     Y=s^r/B.                                  (35)
+X=s^p/A,     Y=s^r/B.                                  (54)
 ```
 
 Then
@@ -324,13 +497,13 @@ and direct differentiation gives
 
 ```text
 U V'-U' V
- =f_a^2 X/s [p+rXY-(p+r)Y].                            (36)
+ =f_a^2 X/s [p+rXY-(p+r)Y].                            (55)
 ```
 
 Every factor in `B` is strictly larger than every factor in `A`, so
 
 ```text
-B^(1/r)>A^(1/p),                    X^r>Y^p.            (37)
+B^(1/r)>A^(1/p),                    X^r>Y^p.            (56)
 ```
 
 Weighted AM--GM now gives
@@ -338,27 +511,28 @@ Weighted AM--GM now gives
 ```text
 p+rXY
  >=(p+r)(XY)^(r/(p+r))
- >(p+r)Y.                                             (38)
+ >(p+r)Y.                                             (57)
 ```
 
 Thus
 
 ```text
-U(s)V'(s)-U'(s)V(s)>0                  for every s>0.   (39)
+U(s)V'(s)-U'(s)V(s)>0                  for every s>0.   (58)
 ```
 
-This is a genuine extended-Chebyshev orientation and a plausible source for
-`(32)`.  It does **not** by itself prove `(32)`: the atomic determinant
-mixes the signed functions `d_i V` and `d_i V^2` against different global
-moments.  The missing lemma must transfer the pointwise orientation through
-that signed factorial integral.
+This is a genuine extended-Chebyshev orientation, but it is logically
+independent of the discrete proof above.  Pointwise orientation alone does
+not transparently control `(31)`, because the atomic determinant mixes the
+signed functions `d_i V` and `d_i V^2` against different global moments.
+The hockey-stick likelihood-ratio coordinate is the sidecar that performs
+that transfer.
 
-## 6. Finite exact theorem through exponent 50
+## 6. Finite exact audit through exponent 50
 
 The exact companion exhausts all
 
 ```text
-0<=i<b<c<=50.                                          (40)
+0<=i<b<c<=50.                                          (59)
 ```
 
 There are
@@ -370,51 +544,54 @@ binom(51,3)=20,825
 such atomic triples.  It finds
 
 ```text
-D_i(b,c)>=0                         in all 20,825 cases, (41)
+D_i(b,c)>=0                         in all 20,825 cases, (60)
 ```
 
 with exactly `49` zeros:
 
 ```text
-(i,b,c)=(j,j+1,j+2),                  0<=j<=48.         (42)
+(i,b,c)=(j,j+1,j+2),                  0<=j<=48.         (61)
 ```
 
 The smallest positive value in the normalized factorial basis is
 
 ```text
-D_0(2,3)=288.                                           (43)
+D_0(2,3)=288.                                           (62)
 ```
 
 For every `0<=a<b<c<=50`, the companion separately verifies the Gram
 determinant, `(19)--(25)`, the telescoping identity `(29)`, and
 
 ```text
-I1<0,                 I2<0.                            (44)
+I1<0,                 I2<0.                            (63)
 ```
 
-Therefore `(33)` is **FINITE-EXACT** for every three-slot support with
-top exponent at most `50`.  This conclusion uses integer multinomial
-moments only; there is no floating-point sign decision.
+The companion additionally checks `(35)--(51)` in exact arithmetic:
+the hockey-stick decomposition, positivity of all three `q` blocks,
+the centered-mean identity, strict mean separation, the row-tilt
+recursion, the ratio increment, and the final atomic factorization.
+This is a bounded audit of the universal proof, not the source of its
+quantifiers.  It uses integer multinomial moments only; there is no
+floating-point sign decision.
 
-## 7. Conditional two-charge Gaussian consequence
+## 7. Two-charge Gaussian consequence
 
 Assume `a>=1` and write
 
 ```text
 h=H/s,
-P=W+Z h(ZW),                         W=conj(Z),         (45)
+P=W+Z h(ZW),                         W=conj(Z),         (64)
 ```
 
 for a standard complex Gaussian `Z`.  Charge balance gives, for
 `j=1,2,3`,
 
 ```text
-E[P^(2j)]=binom(2j,j)L(H^j),          E[P^(2j-1)]=0.    (46)
+E[P^(2j)]=binom(2j,j)L(H^j),          E[P^(2j-1)]=0.    (65)
 ```
 
-Hence the universal atomic inequality `(32)` would imply Gaussian detection
-by moment six for every arbitrary three-slot two-charge envelope `(45)`.
-The exact finite theorem proves this whenever `c<=50`.
+Hence `(53)` proves Gaussian detection by moment at most six for every
+arbitrary three-slot two-charge envelope `(64)`.
 
 For exact three-slot `H`, the polynomial `P` has four monomials and primitive
 return `R=2`, so six is the HYP-8765 cutoff `(k-1)R`.  This statement does
@@ -429,15 +606,17 @@ not separate unrelated Wick channels in a more general polynomial.
 | exact obstruction | simultaneous vanishing of `I1,I2` |
 | strict invariant | `t111>0` for every `a<b` |
 | atomic map | `D=sum D_i`, with `I2=-g11D-t111g22^2` |
-| continuous sidecar | strict Wronskian `(39)` |
-| finite theorem | all `c<=50`; `20,825` exact atomic checks |
-| sharp observed equality | consecutive atom `(j,j+1,j+2)` |
-| first missing datum | universal proof of `(32)` |
+| positive coordinate | hockey-stick weights `q_j>=0` |
+| strict mechanism | numerator mean `>c-1`, denominator support `<=c-1` |
+| equality | only `D_j(j+1,j+2)=0` |
+| universal conclusion | arbitrary three-slot detection by moments `1,2,3` |
+| continuous sidecar | strict Wronskian `(58)` |
+| finite audit | all `c<=50`; `20,825` exact atomic checks |
+| first missing datum | independent hostile audit before promotion |
 
-This theorem does not prove the arbitrary three-slot Strong Factorial
-Conjecture, general HYP-8765, or a new proof of all GMC2.  It replaces that
-three-slot problem by the explicit signed total-positivity inequality `(32)`
-and proves the entire bounded exponent-`50` bank.
+This theorem proves the arbitrary three-slot Strong Factorial statement and
+the corresponding two-charge moment-six bound.  It does not prove general
+HYP-8765, separate unrelated Wick channels, or give a new proof of all GMC2.
 
 ## 9. Exact companion
 
@@ -455,10 +634,10 @@ Both executions byte-match
 ```
 
 The dependency-free companion uses exact integers and fractions.  It checks
-the Gram, divisibility, strict-ratio, Wronskian, telescoping, and atomic
+the Gram, divisibility, strict-cubic, Wronskian, hockey-stick, positive-weight,
+tilted-mean, ratio-monotonicity, telescoping, and atomic-factorization
 identities on all `20,825` triples through `c=50`.  It has explicit
 exception gates, no truth-bearing Python assertions, no floating point, and
 no scratch dependency.
 
-**Awaiting independent hostile audit; not QED for the universal atomic
-inequality.**
+**Proof complete; awaiting independent hostile audit before promotion.**
