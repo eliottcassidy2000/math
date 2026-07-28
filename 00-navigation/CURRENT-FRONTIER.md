@@ -156,8 +156,8 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 - THM-2810/2815 give the finite-state boundary: no bounded factorial carrier;
   at height `2D-1` the unique optimum is the `D`-dimensional Laguerre quotient,
   but selectors need MISTAKE-211's missing multiplier observations.
-- THM-2812 closes consecutive three-slot envelopes in three powers and their
-  two-charge lifts sharply by moment six; arbitrary supports/channels remain open.
+- THM-2812/2824 close three-slot envelopes; THM-2828 extends moment-six
+  detection to many-slot lower-prefix cones.  Arbitrary radial channels remain open.
 ### Live work
 
 Publish THM-2022; sharpen THM-2111's binomial degree toward `M+N`; formalize
