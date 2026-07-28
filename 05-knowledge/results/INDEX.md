@@ -29,8 +29,11 @@
   left wing is coefficient-null and the folded ratio is `11`.  Independently,
   treating the outer sheets as full unclocked unions requires
   `M=disjoint-union_e M_e`; its target profile `(9,2,2)` augments to zero.
-  Thus neither repair supplies wing gain `2`, a cross-wing map, or an endpoint
-  current.  Hashes: `aae8759f` / `6ae353d3`.
+  Its two physical wing rows are nevertheless `Phi_7` units, related by an
+  exact determinant-`11` coefficient ratio `g`; augmentation kills the target
+  scalar.  Thus neither repair supplies a physical or augmented-scalar gain
+  `2`, a cross-wing map, or an endpoint current.  Hashes: `aae8759f` /
+  `6ae353d3`.
 - `jc2_degree22_all_even_zero_flux_componentwise_closure_thm2755.py` ->
   matching `.out` [THM-2755 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  Every even first and third Faber response is globally

@@ -85,7 +85,7 @@
     `12/13` cap for the full slope-seven family.  Carry-forgetting still turns
     thirteen disjoint `Delta^11`s into a false `boundary Delta^12`; do not infer
     pointwise endpoint emptiness or export the cap to another carrier.
-27g. **Projection labels are not physical emptiness.** THM-2744/2749 give a marked overlap, not an endpoint current; MISTAKE-313 separates two repairs, neither with gain `2`. Collapsed harmonics retain only `pi(r mod 13)`; exact address lives on `(r,k,l)`, `r.W=l-k`, so retain harmonic origins or a Bezout section.
+27g. **Projection labels are not physical emptiness.** THM-2744/2749 give a marked overlap, not an endpoint current. MISTAKE-313 separates fixed-clock (null left wing) from forgotten-clock (physical `Phi_7`-unit ratio of determinant `11`, but zero target augmentation and no carrier map). Collapsed harmonics retain only `pi(r mod 13)`; exact address lives on `(r,k,l)`, `r.W=l-k`, so retain harmonic origins or a Bezout section.
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211 and

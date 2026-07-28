@@ -62,11 +62,17 @@ Format per entry:
   `M=disjoint-union_e M_e`, not `M_1`; the same-clock `e=2,3` pieces are
   nonzero and all cross-clock pieces are empty.  The resulting wings have
   `v_13(L)=1`, `v_13(R)=2`, with source profile `(0,0,0,12,0,0,0)` and target
-  profile `(0,9,2,2,0,0,0)`.  The target augments to zero, so this second
-  repair also has no target wing unit or gain `2`.  Its full-sheet ratio `7`
-  is a property of the unclocked union, not of the fully marked fixed-clock
-  carrier.  Thus the two valid repairs are distinct and neither supplies a
-  physical `L -> R` map, relative phase, endpoint current, or LRC exclusion.
+  profile `(0,9,2,2,0,0,0)`.  Both physical-present profiles are `Phi_7`
+  units: their determinants are `1` and `11`, and the exact coefficient-ring
+  ratio is
+  `g=2z+2z^2+2z^3+2z^4+6z^5`, with `det(g)=11` and `g s=p`.
+  The target nevertheless augments to zero, so folding to the repeated
+  delayed-clock scalar gives the zero profile and no augmented scalar gain.
+  The ratio `g` is not a physical carrier map.  The clock-blind whole-sheet
+  scalar ratio `7` belongs to the unclocked union, not to the fully marked
+  fixed-clock carrier.  Thus the two valid repairs are distinct and neither
+  supplies a physical `L -> R` map, relative phase, endpoint current, or LRC
+  exclusion.
 - **Endpoint/address hostile:** on the fixed THM-2334 triangle, exhaustive
   search finds no scalar-times-character-times-quotient-shift covariance for
   either endpoint wing or even the two common carriers.  Transporting every
