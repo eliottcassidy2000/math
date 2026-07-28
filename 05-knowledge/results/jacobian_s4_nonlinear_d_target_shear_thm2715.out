@@ -1,0 +1,15 @@
+THM-2715 NONLINEAR d-TARGET SHEAR GRAPH CLASSIFICATION
+target=(A,B+H(d)); A=x^2-2y; B=y^2-2xd; d=f(x,y)
+fixed_t_coordinate=t=y-x^2/2
+integrated_equation=x*f-H(f)/2=x^2*t/2+x^4/8+c*x+K(t)
+kappa=-4c_nonzero
+deg_H_le_1=unique_shifted_cubic_triangular
+deg_H_2=possible_iff_beta+2*alpha*c=0
+quadratic_sections=exactly_two:p^2=-1/(4alpha)
+quadratic_f_p=p*x^2-4p^2*x+2p*t+8p^3+c
+quadratic_target_V=-2c*x-8p^2*t+gamma+c^2/(4p^2)-16p^4
+quadratic_target_inverse=polynomial
+deg_H_ge_3=no_polynomial_graph_solution
+all_surviving_maps=triangular_polynomial_automorphisms
+scope=THIS_GRAPH_AND_TARGET_FAMILY_NOT_ARBITRARY_NONLINEAR_TARGET_NOT_JC2
+PASS
