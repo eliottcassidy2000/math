@@ -2,8 +2,8 @@
 id: THM-2793
 title: "Oriented ramp reference and rooted graceful gap reconstruction"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  One oriented ramp reference upgrades interval Gram tomography
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  One oriented
+  ramp reference upgrades interval Gram tomography
   from an unordered column multiset to the complete ordered
   consecutive-ones matrix: row length and first moment recover both
   endpoints.  For a tree graceful-gap matrix, a vertex fixed at label zero
@@ -28,8 +28,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2793 -- oriented ramp reference and rooted graceful gap reconstruction
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2789 proves that the Gram matrix of intervals reconstructs their entire
 column multiset but not its order.  The missing coordinate is only
@@ -280,7 +279,7 @@ graceful labelings of every nonisomorphic tree through seven vertices:
 decisions.  It also verifies both sharp hostiles.
 
 ```text
-PROVED HERE (candidate):
+PROVED HERE:
   one-ramp endpoint and ordered-row reconstruction;
   graceful ramp/edge-sum identity;
   root-zero mod-two cut inversion;
@@ -298,5 +297,11 @@ NOT PROVED:
   consequence.                                                         (25)
 ```
 
-QED, conditional only on candidate status promotion after independent
-hostile audit.
+The independent hostile audit rederived the interval decoder, edge-sum
+identity, mod-two rooted cut lift, flag sufficiency, and both sharp
+boundaries.  Its separate converse engine checked `527,342` synthetic
+instances through six vertices, accepting `466` genuine certificates with
+zero false positives.  Normal, optimized, and stored outputs, both
+LF-normalized hashes, and the documentation gate also agree.
+
+QED.
