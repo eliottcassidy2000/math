@@ -1,0 +1,15 @@
+THM-2700 DANIELEWSKI S3 RESOLVENT AUDIT
+group_order=6 invariant_ring=C[x,r^3+s^3]
+cubic_discriminant=27*(4*G**3 - Q**2)
+pulled_discriminant=-27*(r - s)**2*(r**2 + r*s + s**2)**2
+relative_different_generator=-3*(r - s)*(r**2 + r*s + s**2)
+symmetric_power_sum_recurrence_checked=0..8
+bounded_invariant_orbits_checked=35
+class_group_multiplicity_packets=9330
+packets_with_one_trivial_two_torsion_line=363
+packets_with_nonliftable_mu4_line=358
+d4_det=4 d4_smith=(1, 1, 2, 2)
+d4_triality_group_order=6 nonzero_orbit=[(0, 1), (1, 0), (1, 1)]
+linear_g_boundary=rank_two_S3_reflection_quotient
+constant_g_boundary=one_trivial_unit_squareclass
+PASS

@@ -1,5 +1,13 @@
 # Script Results Index
 
+- `jacobian_danielewski_s3_resolvent_thm2700.py` -> matching `.out`
+  [THM-2700 PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
+  HOSTILE AUDIT].  For `R_g=C[x,r,s]/(rs-g)`, the exact `S3` quotient is
+  `C[x,r^3+s^3]`, the relative different is `(r^3-s^3)`, and
+  `Cl(R_g)=Z^d/<(m_i)>`.  Its Kummer two-torsion is zero or one trivial
+  line, never the standard plane forced by THM-2655.  The `D4` Smith
+  diagonal `(1,1,2,2)` with triality is the sharp hostile.  Hashes:
+  `9b772fcb` / `c3ce859e`.
 - `jc2_degree22_split_lambda_prime23_scout.py` -> matching `.out`
   [VERIFIED-EXACT STRUCTURAL SCOUT; SPLIT EVEN-FABER SUBCHART ONLY].  On the
   chosen split sheet the retained first-flux constant gives
