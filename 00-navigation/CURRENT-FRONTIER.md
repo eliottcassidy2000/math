@@ -366,6 +366,13 @@ Classify profiles under support operations; study analytic continuation and auto
   quotient `S4/V4=S3` restores sign.  Full subgroup orbitals, labelled edges,
   and mixed words still separate them; a six-vertex tournament therefore
   needs an opposition/address sidecar, and no Keller exclusion follows.
+  THM-2756 splits the six-edge lattice into matching and standard blocks with
+  an index-eight binary clutch.  THM-2758 identifies the pair-sum sextic as a
+  quadratic pullback of the cubic resolvent.  THM-2762 then closes its extra
+  `T=0` wall for degree-four Keller maps: central symmetry would force the
+  already-excluded `C4/V4/D4` monodromy.  The surviving presentation-relative
+  sextic is irreducible, alternating, and field-level; affine boundary
+  realization and the `A4/S4` Kummer gate remain open.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.

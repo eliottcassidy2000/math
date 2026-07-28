@@ -2,8 +2,8 @@
 id: THM-2762
 title: "Quartic opposite-sum wall, imprimitive D4 descent, and the alternating Keller sextic"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For a separable quartic in characteristic different from two,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a separable
+  quartic in characteristic different from two,
   T=e1^3-4e1e2+8e3 vanishes iff its root set is centrally symmetric about
   e1/4.  The resulting antipodal pairing is Galois-invariant, so an
   irreducible T=0 quartic has transitive monodromy C4, V4, or D4.  THM-2633
@@ -14,6 +14,11 @@ status: >
   discriminant.  This is a field-level auxiliary resolvent, not an affine
   cover, inverse, JC(2), or DC(2) proof.
 source: root/quartic-opposite-sum-wall-2026-07-28
+audit: >
+  thm2762-opposite-wall-audit/2026-07-28 (independent coefficient shift,
+  characteristic/separability boundary, block system, complete subgroup
+  census, primitive-element Keller application, pair-sum irreducibility,
+  scope, and normal/-O/LF-hash replay: ACCEPT)
 depends_on:
   - THM-2633-derangement-character-obstruction-and-d4-keller-exclusion
   - THM-2758-quartic-pair-sum-sextic-resolvent-pullback-and-discriminant-square
@@ -30,8 +35,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2762 -- the opposite-sum wall is the imprimitive quartic wall
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2758 identifies one additional factor in the discriminant of the six
 pair sums of a quartic.  That factor is not another mysterious resolvent
@@ -167,8 +171,9 @@ is therefore irreducible and separable of degree six.  Moreover
 disc(G_theta)=disc(f_theta)^2 T_theta^2                   (16)
 ```
 
-is a square in `K*`.  Thus every degree-four Keller survivor has a canonical
-primitive alternating degree-six **field-level pair-sum sidecar**.
+is a square in `K*`.  Thus every degree-four Keller survivor has, relative to
+each fixed primitive element, an associated primitive alternating degree-six
+**field-level pair-sum sidecar**.
 
 This conclusion does not construct a finite polynomial cover of affine
 space: the pair sums are elements of the Galois closure, and their integral
@@ -193,7 +198,7 @@ checks that `A4` and `S4` are transitive on the six edges and that their edge
 actions are even.
 
 ```text
-PROVED HERE (candidate):  T=0 iff centered quartic is even/centrally symmetric;
+PROVED HERE:              T=0 iff centered quartic is even/centrally symmetric;
                           invariant antipodal block system;
                           transitive wall groups C4,V4,D4;
                           exclusion of T=0 for every primitive quartic
@@ -207,4 +212,4 @@ NOT PROVED:               an affine realization of the pair-sum sextic;
                           JC(2), general JC, or DC(2).                    (17)
 ```
 
-QED (candidate).
+QED.
