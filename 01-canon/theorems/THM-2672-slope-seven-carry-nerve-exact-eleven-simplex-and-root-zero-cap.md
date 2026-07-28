@@ -299,7 +299,8 @@ of one carry-retained physical simplex.
 The typing difference is visible before topology.  For fixed `c0`, every set
 `U^(c0)_delta` in `(6)` lies in predecessor-carry stratum `c0`.  Different
 source carries are disjoint away from the null half-open boundaries.  Hence
-the **carry-refined positive-overlap label nerve** furnished by `(17)` is
+the **selected fixed-configuration rebase-bank carry-refined subnerve**
+furnished by `(17)` is
 
 ```text
 disjoint_union_(c0 in F_13) Delta^11.                                 (19)
@@ -440,5 +441,7 @@ pairs byte-match the stored transcripts; all six LF-normalized hashes agree.
 The audit explicitly rejected both the invalid global root-zero cap and the
 invalid promotion of one nonextendable component to an unrestricted
 label-nerve maximal face.
+The selected-bank qualifier in `(19)` is load-bearing: that subnerve is not the
+full all-configuration carry-refined nerve.
 
 QED.

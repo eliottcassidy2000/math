@@ -98,9 +98,10 @@ but a heterogeneous same-/inter-cell thirteen-fold intersection remains open.
 THM-2680's exact `D(x)={13x}` cospan has positive leg counts
 `17,160,4,488,3,696,0` (total `25,344`), but its Fibonacci sector quotient is
 not path-lifting.  THM-2682/2684 kill every third event on the full inherited
-three-tooth bank.  Change parent carrier, handoff, configuration, boundary, or
-edge grammar rather than decorating empty support; AP/phase/rank routes remain
-live. Ledger `165`.
+three-tooth bank.  Its reflected `rho o D` variant only swaps endpoint teeth
+and returns to the same raw cylinders and correctly reflected clock diagonal.
+Change parent carrier, handoff, configuration, boundary, or edge grammar rather
+than decorating empty support; AP/phase/rank routes remain live. Ledger `165`.
 
 ### Independent routes that remain live
 

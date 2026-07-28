@@ -255,7 +255,11 @@ and their positive-length raw cylinders are exactly the three cylinders from
 (14) with `delta` replaced by `delta/p^2`.  The current event's intrinsic
 shallow and owner clocks are still `c_q({px})` and `c_q({p^2x})`.  The same
 endpoint/central calculation following (15) makes them equal throughout each
-cylinder.  Every raw signed-dilation triple is therefore clock-illegal.
+cylinder.  More explicitly, if `y_1=D_-x`, then the next event's shallow label
+is `c_q(Dy_1)=c_q(rho D_p^2x)`: reflection sends `h` to `p-1-h`, so
+THM-2682's reflected covariance matches the current owner to this reflected
+following shallow, not to the naive unsigned label.  Every raw signed-dilation
+triple is therefore clock-illegal.
 
 For `q=7`, (19) reads `0,12,0`, `6,6,6`, and `12,0,12`, with the same three
 intervals in (9) and clock-pair supports
@@ -309,6 +313,8 @@ refinements and covariance indexing, and verified the `7` clock-covariance,
 and `8,976` reflected-object controls.
 The secondary exact companion checks the symbolic signed-dilation formulas for
 both signs and every `q=2,...,64`; the all-`q` quantifier follows from
-(14)--(20), not from that finite hostile sweep.
+(14)--(20), not from that finite hostile sweep.  An independent referee also
+checked `q=65,66,97,128,257,509` and audited the reflected shallow-label
+covariance just described.
 
 QED.

@@ -46,7 +46,13 @@ hostile:        THM-2684's full-bank three-event D nilpotence
 The next useful endpoint experiment must change one of the inputs to that
 hostile: the parent carrier, the handoff, the boundary correspondence, or the
 edge grammar.  Another selector on the same inherited `D` chain cannot help.
-The cheapest first test is the reflected handoff `x -> {-13x}`: it swaps the
-endpoint teeth and reverses the central side, but it is relevant only if its
-clock and base-thirteen state covariance realizes a lawful event map rather
-than a cosmetic circle symmetry.
+
+The cheapest first test has now been completed.  THM-2684's signed addendum
+shows that the reflected handoff `x -> {-13x}` swaps the endpoint teeth and
+fixes the central tooth, but its square is still `x -> {13^2x}`.  Its three
+raw cylinders are therefore the same cylinders as for `D`, with reflected
+arrival words, and the correctly reflected following shallow label again
+equals the current owner.  The signed candidate is a genuine typed covariance,
+not merely a cosmetic circle symmetry, but it still dies on the same clock
+diagonal.  A next transporter must leave the unshifted signed-dilation family,
+not merely reverse its orientation.

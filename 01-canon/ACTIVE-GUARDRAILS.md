@@ -76,14 +76,17 @@
     THM-2684 closes the apparent endpoint bypass: all `324` rails have the
     three-tooth envelope `[0,1/28)`, `[13/28,15/28)`, `[27/28,1)`; `D` has
     identity arrival adjacency and its raw three-returns are clock-diagonal.
+    The reflected `rho o D` swaps endpoint teeth but has the same raw return
+    cylinders and the correctly reflected clock diagonal.
     No downstream restriction can revive that support; change parent carrier,
     handoff, boundary semantics, or edge grammar.
-27f. **A disconnected label nerve is not physical Cech topology.** THM-2672's
-    fixed configuration has at most twelve carries, but edge switching defeats
-    that as a global cap.  Forgetting predecessor carry turns thirteen disjoint
-    filled `Delta^11`s into a coarse `boundary Delta^12`; retain connected
-    components and full integer gains before reading homology.  One
-    nonextendable component is not a maximal face of the union-labelled nerve.
+27f. **A disconnected label nerve is not physical Cech topology.** THM-2672
+    finds honest twelve-fold components in all `534` maximal fixed
+    configurations, but edge switching defeats the fixed root-zero argument as
+    a global cap.  Forgetting predecessor carry turns thirteen disjoint filled
+    `Delta^11`s into a coarse `boundary Delta^12`; retain connected components
+    and full integer gains before reading homology.  One nonextendable
+    component is not a maximal face of the unrestricted union-labelled nerve.
 
 ## NC2 / GMC
 
