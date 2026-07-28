@@ -19,7 +19,10 @@ status: >
   six-state word empty, and B_1^k=B^k at the prescribed clocks k=2,4,6.
   Moreover the current guard/source debt operator span is target-null under
   the proved endpoint covectors; a lawful escape must add a paired
-  blocker-graft dipole on common ancestry.
+  blocker-graft dipole on common ancestry.  On the THM-2698 half-cycle
+  cylinders every provisional paired pivot has all twelve moving
+  `C_13` characters nonzero, but the atomic left relation residue is absent,
+  so no full endpoint character is yet defined.
 source: lrc-semantic-target-bridge-2026-07-28
 depends_on:
   - THM-2305-canonical-blocker-word-handoff-hypergraph
@@ -614,6 +617,72 @@ operations and endpoint covectors.  It does not forbid a new paired dipole,
 an actual common-ancestry chain map, or re-rooting at a different source.
 Together with Section 8 it does forbid another literal-endpoint search on the
 same `B` or `B_1` categories.
+
+## 10. Paired-cylinder addendum: the moving characters survive
+
+The paired-dipole test in Section 9 has a positive partial answer on each
+THM-2698 event cylinder.  Use
+
+```text
+a=13^3,              c=2*13^5,
+(x0,r0)=(55232507/(24*13^6),7),
+(x1,r1)=(58313459/(24*13^6),3),
+epsilon=1/301082946198216.                              (46)
+```
+
+For every unresolved pivot `k in {27,40,53,66}`, define
+
+```text
+K_(i,k)(s)=integral_(|x-x_i|<epsilon)
+ d_1(cx-r_i/13) u_1(ax-s/13) u_1(kx+s/13) dx.           (47)
+```
+
+All three factors are constant on the interval.  Exact wall arithmetic gives
+
+```text
+K_(i,k)(s)=2 epsilon * 1_(s in S_(i,k)),                 (48)
+```
+
+where every one of the eight support sets `S_(i,k)` is a nonempty proper
+subset of `F_13`.  For every `h!=0`, its Fourier character is nonzero:
+
+```text
+sum_(s in S_(i,k)) zeta_13^(h s) !=0.                   (49)
+```
+
+Indeed a vanishing sum would make the zero--one polynomial
+`sum_(s in S)z^s` divisible by `Phi_13=1+z+...+z^12`; since its degree is at
+most twelve, all thirteen coefficients would have to be equal, contrary to
+`S` being nonempty and proper.  The exact companion also checks all `96`
+cyclotomic remainders directly.
+
+Thus numerical moving-endpoint cancellation is not the next obstruction.
+For `eta=e_a-e_(k_a)`, `(49)` supplies the moving term `-eta.v`.  A THM-2334
+endpoint character requires `eta.(u-v)`, but the half-cycle packet retains no
+atomic left-present relation index `u`.  Its rail/root source labels are not
+relation indices.  Hence `eta.u` is undefined, not zero.  The pivot identity
+among four candidates is also unresolved, and the old-head `k_a`-danger zero
+plane used by THM-2563 is absent.
+
+The exact companion is
+
+```text
+04-computation/lrc14_half_cycle_paired_debt_cylinder_probe_20260728.py
+05-knowledge/results/lrc14_half_cycle_paired_debt_cylinder_probe_20260728.out
+```
+
+with SHA-256 values
+
+```text
+87f6fa3b229a888ce05518b498802a6774bd0070835eba97b6ecbd560d4d596f
+24c3dc756e1521e47244f0cdc0827b22fdaaab9125afbd9257a7d094c7c93ef1
+```
+
+Normal and optimized executions byte-match.  The theorem does not identify
+the `B_0` BABA debt SCC with the `B_1` half-cycle ancestry; it proves only the
+paired moving-character statement on the latter.  The next object must retain
+both atomic relation indices `(u,v)` on one ancestry, then test
+`eta.(u-v)` and full-`X` aggregation.
 
 The theorem is confined to the canonical typed row.  No one of the `165`
 scalar obligations is removed, and LRC(14) remains open.

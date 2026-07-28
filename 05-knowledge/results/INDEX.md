@@ -63,6 +63,12 @@
   the common-ancestry pullback also has rank zero.  A lawful escape needs a
   paired blocker--graft dipole and the left residue.  Hashes: `172981c6` /
   `bcecc1c1`.
+- `lrc14_half_cycle_paired_debt_cylinder_probe_20260728.py` -> matching `.out`
+  [THM-2701 FINITE-EXACT PAIRED-CYLINDER ADDENDUM].  Every provisional graft
+  pivot on both half-cycle cylinders has all twelve nonzero moving
+  `C_13` characters.  The first obstruction is instead the missing atomic
+  left relation index needed to define `eta.(u-v)`.  Hashes: `87f6fa3b` /
+  `24c3dc75`.
 - `lrc14_mod17_transverse_phase_typed_cycle_probe_20260728.py` and
   `lrc14_mod17_typed_handoff_semigroup_scout_20260728.py` -> matching `.out`
   [FINITE-EXACT TRANSVERSE `C_221` DESIGN TARGET].  The unique quarter/slope-
