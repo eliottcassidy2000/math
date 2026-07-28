@@ -1,5 +1,5 @@
 ---
-id: THM-2805
+id: THM-2807
 title: "Positive graded-address two-simplex and allocation-lift boundary"
 status: RESERVED / UNPROVED EMPTY STUB
 source: root/positive-graded-address-simplex-2026-07-28
@@ -13,7 +13,7 @@ related:
   - THM-2792-cyclic-unit-intertwiner-and-positive-naturality-boundary
 ---
 
-# THM-2805 -- positive graded-address two-simplex
+# THM-2807 -- positive graded-address two-simplex
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
