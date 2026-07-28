@@ -62,6 +62,20 @@ source, delayed word, target sheet, and partial physical rechart coexist with
 private units at both nonzero roots.  However `a!=b`; the full mask is not
 translation invariant and destroys the uncut coefficient intertwiner.
 
+There is one exact extra identity.  In `F_13`,
+
+```text
+9/5 = 7 = 6/12,                                       (5)
+```
+
+so the target/source normalized-profile gain equals the target/source
+predecessor-carry ratio.  This is a scalar coordinate-slope identity.  It is
+**not** a representation of THM-2657's additive odometer class `7`: every
+homomorphism `C_13 -> F_13^*` is trivial because the group orders are coprime.
+The minimal type-correct carrier for an additive class is instead a two-line
+unipotent extension `U(a)=I+aN`, `N^2=0`.  Constructing the required reference
+line and proving that the physical clutch acts by `U(7)` remain open.
+
 This is a useful positive/hostile pair.  The clutch no longer lacks a lawful
 coefficient on either side.  What it lacks is a canonical map identifying or
 phase-pairing the two unequal coefficients while retaining the endpoint
@@ -80,7 +94,7 @@ labels, retaining the two amplitudes separately.  The relevant object is not
 another support intersection but the cross coefficient
 
 ```text
-sum_(s,t) chi(s,t) A_12(s,t) conjugate(B_1(s,t)),        (5)
+sum_(s,t) chi(s,t) A_12(s,t) conjugate(B_1(s,t)),        (6)
 ```
 
 with the inherited delayed carry and endpoint typing kept fixed.  A nonzero
@@ -104,6 +118,6 @@ exceptions, with no truth-bearing Python `assert`.
 LF-normalized SHA-256:
 
 ```text
-script  cf8f0757f5097405c2ec86688624366fb4aea9ae010cd37fe8f80bb358070056
-output  ff76e371820d3b7721804f4abcfaf9d16114a5d3c404d8b2ab02a1f407e776e4
+script  b3b623a4c016b1303ac3a74c72f9ae0bbd69cdb97a553f613143f0005a3dd286
+output  6b74686168665aab8c79375cf771eac7297ab477f09779b5a05e3a8e003418ff
 ```

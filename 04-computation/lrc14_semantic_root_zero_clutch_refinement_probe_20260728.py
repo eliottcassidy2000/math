@@ -178,6 +178,12 @@ def main():
         and target_profile == (9, 0, 0, 0, 0, 0),
         "semantic-sheet private-unit profiles changed",
     )
+    profile_gain = target_profile[0] * pow(source_profile[0], -1, P) % P
+    carry_gain = clutch.TARGET_STATE[2] * pow(
+        clutch.SOURCE_STATE[2], -1, P
+    ) % P
+    require(profile_gain == carry_gain == 7,
+            "profile/carry scalar-gain identity changed")
 
     print("LRC14 SEMANTIC ROOT-ZERO CLUTCH REFINEMENT PROBE")
     print("status=EXPLORATORY EXACT recomputation")
@@ -190,6 +196,7 @@ def main():
     print(f"content26=(source:{all(v % clutch.CONTENT == 0 for v in source_vector)},target:{all(v % clutch.CONTENT == 0 for v in target_vector)})")
     print(f"private_units=(source_root12:{source_unit},target_root1:{target_unit})")
     print(f"normalized_profiles=(source:{source_profile},target:{target_profile})")
+    print(f"scalar_gain=target/source:{profile_gain} carry6/carry12:{carry_gain}")
     print("SCOPE: full E3, delayed Q_(3,{1,2}), and U_(0,3) inside the partial chart overlap; no endpoint current or LRC14 conclusion")
 
 

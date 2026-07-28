@@ -9,4 +9,5 @@ vectors_equal=False
 content26=(source:True,target:True)
 private_units=(source_root12:True,target_root1:True)
 normalized_profiles=(source:(5, 0, 0, 0, 0, 0),target:(9, 0, 0, 0, 0, 0))
+scalar_gain=target/source:7 carry6/carry12:7
 SCOPE: full E3, delayed Q_(3,{1,2}), and U_(0,3) inside the partial chart overlap; no endpoint current or LRC14 conclusion
