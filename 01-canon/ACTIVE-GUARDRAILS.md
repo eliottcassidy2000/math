@@ -1,6 +1,6 @@
 # Active Guardrails
 
-**Short hazard sheet — refreshed 2026-07-24.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
+**Short hazard sheet — refreshed 2026-07-28.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
 
 ## Universal
 
@@ -85,7 +85,7 @@
     `12/13` cap for the full slope-seven family.  Carry-forgetting still turns
     thirteen disjoint `Delta^11`s into a false `boundary Delta^12`; do not infer
     pointwise endpoint emptiness or export the cap to another carrier.
-27g. **Projection labels are not physical emptiness.** THM-2744/2749 give a marked overlap, not an endpoint current. MISTAKE-313 separates fixed-clock (null left wing) from forgotten-clock (physical `Phi_7`-unit ratio of determinant `11`, but zero target augmentation and no carrier map). Collapsed harmonics retain only `pi(r mod 13)`; exact address lives on `(r,k,l)`, `r.W=l-k`, so retain harmonic origins or a Bezout section.
+27g. **Projection labels are not physical emptiness.** THM-2744/2749 give a marked overlap, not an endpoint current; MISTAKE-313 separates fixed-clock from forgotten-clock wings. THM-2763 proves the fixed carrier fails the old `169` gauge: exact address is `(r,k,l)`, `r.W=l-k`, of size `13^4` two-sided or `13^3` after common-harmonic loss. Neither is THM-2625's endpoint plane or a factor allocation; retain the labelled atomic sidecar.
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211 and

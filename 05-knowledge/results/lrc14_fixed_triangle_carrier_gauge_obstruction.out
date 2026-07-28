@@ -1,0 +1,10 @@
+THM-2763 fixed-triangle quotient-gauge audit
+helper_sha256=4b3f9f195b1634e1e84a1bc8bccb878a1c8c44aec13f24d197f92547c9e36c57
+gauge=ell->ell+W; support_shift=-22910530602960/T=-1/13
+bare_Q_descent_controls=(((0, 0), 272457584061297438), ((1, 0), 12491018700458795), ((0, 1), 244255279417483343), ((3, 7), 146843097480870949))
+fixed_carrier_rows=(((0, 0), 'source', 287659712270709994, 0, False), ((0, 0), 'target', 248235870634784933, 0, False), ((1, 0), 'source', 287659712270709994, 0, False), ((1, 0), 'target', 248235870634784933, 0, False), ((0, 1), 'source', 69469253769051213, 69469253769051213, True), ((0, 1), 'target', 248235870634784933, 248235870634784933, True), ((3, 7), 'source', 153998791602873972, 153998791602873972, True), ((3, 7), 'target', 289285119589719712, 289285119589719712, True))
+fixed_carrier_descent_failures=4/8
+full_PQH_mass_hostile_at_(0,0)=(('source', (189041250036777056, 287659712270709994, 65280867241115379, 6320326320), (0, 0, 0, 0)), ('target', (218344733173586894, 248235870634784933, 209108233808250489, 6320326320), (0, 0, 0, 0)))
+transported_carrier_descent=PASS
+CONCLUSION: the fixed collapsed common carrier breaks the <W> representative descent. Its 169 canonical-representative values are not yet a lawful THM-2334 quotient bank. Transporting the carrier with the gauge repairs descent, but exact-address use still requires the carrier harmonic/factor sidecar.
+ALL EXACT CHECKS PASSED

@@ -96,11 +96,13 @@ rank one and their diagonals equal `a` because `a_0=0`.  In the separate full
 forgotten-`e` union the literal intersection is `C+D+E`; both physical wing
 rows are `Phi_7` units with exact determinant-`11` ratio `g`, but the target
 augmentation is zero, so there is no scalar augmented gain or physical map.
-THM-2750 blocks arm-blind charging, while THM-2757 gives the abstract marked
-`K4` opposite-edge transgression but no physical LRC carrier.  A fixed-triangle
-endpoint probe also shows exact address needs `(r,k,l)` with `r.W=l-k`; collapse
-retains only `pi(r mod 13)`.  Next: attach a literal marked four-state/reference
-carrier while retaining harmonic origins and one THM-2625 determinant sector.
+THM-2750 blocks arm-blind charging; THM-2757's marked `K4` transgression has no
+physical carrier.  THM-2763 proves the exact gauge repair: address `(r,k,l)`,
+`r.W=l-k`, gives a two-sided quotient of size `13^4`; forgetting the common
+harmonic gives the one-sided/imbalance quotient of size `13^3`.  One diagonal
+fibre has raw dual support `{0,2,10}` but all thirteen primal residues.  The
+`13^4` object is not THM-2625's endpoint plane and still loses factor labels.
+Next: attach that sidecar to a marked carrier and one determinant sector.
 THM-2727 is **PROVED** as a fixed-rail realization no-go, but supplies no
 rail/owner/support/address map.  Ledger `165`; no row is excluded.
 
