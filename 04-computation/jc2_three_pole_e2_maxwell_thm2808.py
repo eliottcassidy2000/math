@@ -7,6 +7,7 @@ the explicitly declared finite universe below.
 """
 
 import ast
+from itertools import combinations
 from pathlib import Path
 
 import sympy as sp
@@ -261,6 +262,39 @@ def chord_trace(parts, composite_index):
     return traces
 
 
+def canonical_chord_pair(chords, degree):
+    rotated = []
+    for shift in range(degree):
+        edges = tuple(
+            sorted(
+                tuple(sorted(((first + shift) % degree, (second + shift) % degree)))
+                for first, second in chords
+            )
+        )
+        rotated.append(edges)
+    return min(rotated)
+
+
+def unmarked_chord_orbits(degree):
+    full_cycle = tuple((index + 1) % degree for index in range(degree))
+    orbits = set()
+    for first, second, third, fourth in combinations(range(degree), 4):
+        for chords in (
+            ((first, second), (third, fourth)),
+            ((first, fourth), (second, third)),
+        ):
+            involution = list(range(degree))
+            for left, right in chords:
+                involution[left] = right
+                involution[right] = left
+            require(
+                len(cycle_lengths(compose(tuple(involution), full_cycle))) == 3,
+                "noncrossing pair must give three cycles",
+            )
+            orbits.add(canonical_chord_pair(chords, degree))
+    return len(orbits)
+
+
 def main():
     require(not has_asserts(Path(__file__)), "truth-bearing Python assert found")
     x, parameter = sp.symbols("x lambda")
@@ -300,8 +334,19 @@ def main():
 
     print(f"exact ordered-partition representatives checked: {cases}")
     print(f"simple Maxwell roots represented: {roots}")
+    unmarked_counts = []
+    for degree in range(4, 21):
+        expected_numerator = (degree - 1) * (degree - 2) * (degree - 3)
+        if degree % 2 == 0:
+            expected_numerator += 3 * (degree - 2)
+        require(expected_numerator % 12 == 0, "unmarked formula integrality")
+        expected = expected_numerator // 12
+        observed = unmarked_chord_orbits(degree)
+        require(observed == expected, "unmarked Burnside count")
+        unmarked_counts.append(observed)
+    print("unmarked h=3 counts N=4..20:", ",".join(map(str, unmarked_counts)))
     print("raw eliminant = collision discriminant * Maxwell polynomial")
-    print("all bounded converse gates and marked chord counts: PASS")
+    print("all converse gates, marked traces, and unmarked Burnside counts: PASS")
     print("assert_nodes=0")
 
 

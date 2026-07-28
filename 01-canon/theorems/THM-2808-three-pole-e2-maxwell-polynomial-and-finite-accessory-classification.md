@@ -19,8 +19,8 @@ related:
   - THM-2805-general-two-pole-e2-maxwell-eliminant-and-nielsen-classification
 script: 04-computation/jc2_three_pole_e2_maxwell_thm2808.py
 output: 05-knowledge/results/jc2_three_pole_e2_maxwell_thm2808.out
-script_sha256: 5fa77277cec460e8809cce4fa0e43f153f411fc5a20645d99c0e900ce12edded
-output_sha256: b3b0a1f043b3616a46c1fb0ea65e901805b9a5748b951434273f468bf8f4d1f8
+script_sha256: 053958bfbc85baf06e40eb6d88d56ad23a2a03a8fbb04d9f8cf39cf9b5574f99
+output_sha256: f8bb83a8acef3e3d541a94219506bc7dd6534e65672607715faa851a5967522d
 hash_basis: LF-normalized bytes
 ---
 
@@ -309,6 +309,38 @@ example, exchanging the poles at `0` and `1` sends
 The theorem counts ordered normalized charts; it does not silently identify
 the roots in `(24)`.
 
+### 4.1 Total unmarked three-pole count
+
+There is nevertheless a closed count after all unordered three-part pole
+partitions are combined.  Choose the four endpoints of the two zero chords.
+There are two noncrossing pairings of four cyclically ordered points, hence
+
+```text
+2 binom(N,4)
+```
+
+marked-by-origin chord pairs.  Burnside's lemma for rotation by the full
+cycle has only one possible nonidentity contribution.  When `N` is even,
+the half-turn fixes the pair consisting of a chord and its opposite; there
+are `N(N-2)/4` such pairs.  Two diameters cross and are not in this set.
+No other rotation can preserve a two-element noncrossing chord set.
+Therefore the total number of unmarked `h=3` Nielsen classes is
+
+```text
+H_3(N)
+ =(N-1)(N-2)(N-3)/12
+  +1_(2|N)(N-2)/4.                                    (25)
+```
+
+The first values for `N=4,5,...` are
+
+```text
+1, 2, 6, 10, 19, 28, 44, 60, 85, 110, ...
+```
+
+This total quotient does not replace the ordered polynomial
+`Q_(a,b,c)`: repeated pole parts can have smaller anharmonic orbits.
+
 ## 5. Consequence for the response frontier
 
 The inequality `h<=e+1` from THM-2796 leaves only `h=1,2,3` when `e=2`.
@@ -340,7 +372,8 @@ unordered positive pole partition through `N=10`:
 2. `deg Q=N-3`, squarefreeness, and separation from `0,1,Delta`;
 3. the `E^2` division and every squarefree/disjoint converse gate;
 4. the cleared response derivative;
-5. the marked noncrossing-chord trace and count; and
-6. covariance under swapping the poles at `0` and `1`.
+5. the marked noncrossing-chord trace and count;
+6. the unmarked Burnside formula `(25)` through `N=20`; and
+7. covariance under swapping the poles at `0` and `1`.
 
 The finite controls support but do not replace the all-degree proof.

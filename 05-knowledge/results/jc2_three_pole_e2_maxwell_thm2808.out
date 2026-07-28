@@ -33,6 +33,7 @@ N | partition | deg raw | deg Q | marked charts
 10 | (3,3,4) |       9 |     7 |             7
 exact ordered-partition representatives checked: 30
 simple Maxwell roots represented: 153
+unmarked h=3 counts N=4..20: 1,2,6,10,19,28,44,60,85,110,146,182,231,280,344,408,489
 raw eliminant = collision discriminant * Maxwell polynomial
-all bounded converse gates and marked chord counts: PASS
+all converse gates, marked traces, and unmarked Burnside counts: PASS
 assert_nodes=0
