@@ -26,7 +26,7 @@ depends_on:
 related:
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
   - THM-2627-d4-jelonek-quadratic-character-rank-and-component-gate
-  - THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion
+  - THM-2633-derangement-character-obstruction-and-d4-keller-exclusion
 script: 04-computation/jacobian_d4_opposite_pair_escape_thm2628.py
 output: 05-knowledge/results/jacobian_d4_opposite_pair_escape_thm2628.out
 script_sha256: 43bdd6faeeebf52d7298cfe18f5891c348a124ab2f2a4825ad6e71a6312e9ce9

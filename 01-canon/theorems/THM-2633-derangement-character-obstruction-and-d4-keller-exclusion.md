@@ -1,16 +1,19 @@
 ---
 id: THM-2633
-title: "Derangement-character obstruction and D4 Keller exclusion"
+title: "Derangement-character / point-stabilizer obstruction and D4 Keller exclusion"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let a complex
+  PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.  Let a complex
   polynomial Keller map of affine n-space have finite generic degree and
   geometric monodromy G on its generic
   sheets.  Every irreducible target divisor meets the open image in a dense
   open set, so every Jelonek component has at least one finite affine inverse
   branch and its local inertia fixes a sheet.  On the other hand, every
   nonzero prime-cyclic character of G has nonzero Kummer inertia on some
-  Jelonek component.  Consequently G cannot admit a nonzero character whose
-  nonzero elements are all derangements in the sheet action.  The source-deck
+  Jelonek component.  Equivalently, if H is a point stabilizer, restriction
+  Hom(G,C_l) -> Hom(H,C_l) is injective for every prime l, or H surjects onto
+  G^ab.  Also every Jelonek component has 1<=k_D<=d-1 finite branches.
+  Consequently G cannot admit a nonzero character whose nonzero elements are
+  all derangements in the sheet action.  The source-deck
   character of D4 has exactly this property: its nonzero elements are the two
   edge reflections and two four-cycles.  Hence D4 is impossible as the
   geometric monodromy of a polynomial Keller map in every dimension.  Among
@@ -37,7 +40,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2633 -- a Keller boundary character must see a fixed sheet
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.**
 
 The missing coordinate in the `D_4` boundary picture is not another quartic
 coefficient or residue.  It is the image of the original affine morphism.
@@ -90,6 +93,24 @@ to occur as Keller monodromy is:
 
 > every nonzero prime-cyclic character is nonzero on at least one element
 > that fixes a generic sheet.
+
+If `H` is the stabilizer of one sheet, an element fixes some sheet exactly
+when it lies in a conjugate of `H`.  Since a character is conjugacy invariant,
+(5) is equivalent to `chi|_H=0`.  The obstruction can therefore be stated in
+either of the following equivalent forms:
+
+```text
+res_H^G:Hom(G,C_ell) -> Hom(H,C_ell) is injective
+for every prime ell;
+
+H -> G^ab is surjective.                                 (5a)
+```
+
+For the second equivalence, if the image of `H` in the finite abelian group
+`G^ab` were proper, the nonzero quotient would have a `C_ell` quotient for
+some prime `ell`; conversely such a character witnesses failure of
+surjectivity.  Thus the derangement theorem and the point-stabilizer
+abelianization gate are the same theorem, not two independent restrictions.
 
 The proof has two independent halves: an open-image branch lemma and a
 Kummer localization lemma.
@@ -161,6 +182,18 @@ Jelonek component,
 
 ```text
 k_D>=1.                                                   (9)
+```
+
+There is also a strict upper bound on a Jelonek component.  Factor `F` by
+Zariski main as the open immersion `A^n -> Xbar` into the finite
+normalization of the target in the source function field.  If all `d`
+geometric points over the generic point of `D` belonged to the affine open,
+the finite image of the closed complement would miss that generic point.
+After shrinking around it, `F` would equal the finite normalization and
+would be proper, contradicting that `D` is a nonproperness component.  Hence
+
+```text
+1<=k_D<=d-1             for every Jelonek component D.   (9a)
 ```
 
 Let `I_D<=G` be geometric local inertia.  A finite branch passes through a
@@ -467,6 +500,9 @@ consist entirely of derangements, and exhibits the fixed-point obstruction in
 the exact local and non-etale hostiles (23)--(25).
 
 The theorem excludes one full geometric-monodromy lane in every dimension.
+The point-stabilizer formulation (5a) and strict branch bound (9a) are formal
+consequences of the same proof; the exact companion checks their quartic
+character incarnation.
 It does not exclude `A_4` or `S_4`, prove that a Keller map has degree one, or
 settle `JC(2)`, the general Jacobian conjecture, or `DC(2)`.  The highest-
 leverage remaining degree-four question is now to find an invariant of the

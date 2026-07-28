@@ -23,7 +23,7 @@ depends_on:
   - THM-2465-g1-exclusion-package-for-degree-four-twojet-keller
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
 related:
-  - THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion
+  - THM-2633-derangement-character-obstruction-and-d4-keller-exclusion
   - MISTAKE-297
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
 script: 04-computation/jacobian_d4_deck_pole_tax_thm2612.py

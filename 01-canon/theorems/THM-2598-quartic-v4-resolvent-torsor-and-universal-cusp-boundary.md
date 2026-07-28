@@ -40,7 +40,7 @@ related:
   - THM-2596-modular-free-factor-farey-gram-owner-cocycle
   - THM-2597-six-vertex-bicycle-modular-abelianization-cycle
   - THM-2606-affine-v4-parity-channels-partial-cubes-and-feuerbach-origin
-  - THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion
+  - THM-2633-derangement-character-obstruction-and-d4-keller-exclusion
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
   - MISTAKE-297
 script: 04-computation/jacobian_quartic_v4_resolvent_thm2598.py

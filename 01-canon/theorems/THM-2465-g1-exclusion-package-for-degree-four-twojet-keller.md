@@ -51,7 +51,7 @@ related:
   - THM-1310-conic-pair-fibers-and-design-equations
   - THM-1340-engine-trichotomy-zaffine-keller
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
-  - THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion
+  - THM-2633-derangement-character-obstruction-and-d4-keller-exclusion
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
   - MISTAKE-297
 script: 04-computation/jacobian_g1_stratum_exclusions_kps_S134.py

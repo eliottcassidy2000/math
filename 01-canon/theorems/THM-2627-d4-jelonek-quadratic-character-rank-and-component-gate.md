@@ -21,7 +21,7 @@ depends_on:
   - THM-2612-d4-deck-pole-tax-and-depressed-resolvent-gcd-gate
 related:
   - THM-2241-monic-transverse-response-depth-and-resultant-nonproper-quotient
-  - THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion
+  - THM-2633-derangement-character-obstruction-and-d4-keller-exclusion
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
 script: 04-computation/jacobian_d4_jelonek_parity_rank_thm2627.py
 output: 05-knowledge/results/jacobian_d4_jelonek_parity_rank_thm2627.out

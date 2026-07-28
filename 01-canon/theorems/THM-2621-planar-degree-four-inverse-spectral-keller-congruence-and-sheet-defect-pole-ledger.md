@@ -40,7 +40,7 @@ related:
   - THM-2612-d4-deck-pole-tax-and-depressed-resolvent-gcd-gate
   - THM-2627-d4-jelonek-quadratic-character-rank-and-component-gate
   - THM-2628-d4-opposite-pair-escape-and-deck-pole-census
-  - THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion
+  - THM-2633-derangement-character-obstruction-and-d4-keller-exclusion
   - MISTAKE-301
 script: 04-computation/jacobian_planar_degree4_inverse_spectral_thm2621.py
 output: 05-knowledge/results/jacobian_planar_degree4_inverse_spectral_thm2621.out

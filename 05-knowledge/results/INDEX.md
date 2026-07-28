@@ -1,16 +1,15 @@
 # Script Results Index
 
-- `jacobian_keller_point_stabilizer_abelianization_thm2633.py` -> matching
-  `.out` [THM-2633 PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE
-  AUDITS].  For every dominant complex affine-space Keller map, a point
-  stabilizer `H` surjects onto the geometric monodromy abelianization; every
-  Jelonek divisor has `1<=k_D<=d-1` generic affine sheets.  Thus degree-four
-  monodromy can only be `A4` or `S4`: `C4,V4,D4` fail the stabilizer gate.
-  The exact companion checks all transitive degree-four groups, the `C3/S3`
-  controls, and the `D4` deck-odd derangement class.  The proof is geometric,
-  using affine units, etale openness, fixed-sheet inertia, and Kummer support;
-  it does not extend a deck map across the Jelonek boundary.  Hashes are
-  `53acfb36...05b` / `57efaa6a...9d0e3`.
+- `jacobian_derangement_character_d4_exclusion_thm2633.py` -> matching `.out`
+  [THM-2633 PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS].  For
+  every complex affine-space Keller map, a point stabilizer `H` surjects onto
+  geometric monodromy abelianization and every Jelonek divisor has
+  `1<=k_D<=d-1` affine sheets.  Equivalently, no nonzero character can be
+  supported only on derangements.  Thus `C4,V4,D4` fail at degree four and
+  only `A4,S4` remain; their necessary support types are respectively a
+  three-cycle with `k=1` and a transposition with `k=1` or `2`.  The proof
+  uses affine units, etale openness, fixed-sheet inertia, and Kummer support,
+  never a deck extension.  Hashes are `69060647...4344` / `62a53652...3643`.
 - `jacobian_quartic_v4_resolvent_thm2598.py` -> matching `.out`
   [THM-2598 PROVED + VERIFIED-EXACT + CORRECTION].  The three `K4`
   perfect-matching roots give the quotient `S4/V4=S3` and have discriminant

@@ -22,7 +22,7 @@ source: kind-pasteur-2026-07-20-S128c113 (owner: is the no-loss-of-sheets statem
 depends_on:
   - THM-1375    # corrected proper/nodal/Galois chain
   - THM-1315    # the 3 -> 2 drop this partially disagrees with
-related: [THM-1330, THM-1430, THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion, MISTAKE-297]
+related: [THM-1330, THM-1430, THM-2633-derangement-character-obstruction-and-d4-keller-exclusion, MISTAKE-297]
 script: 04-computation/sheet_defect_sharpness_kps_S128c113.py (+ .out)
 ---
 

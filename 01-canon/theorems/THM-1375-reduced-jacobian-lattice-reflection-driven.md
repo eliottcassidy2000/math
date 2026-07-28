@@ -28,7 +28,7 @@ depends_on:
   - THM-1310    # fibre geometry: S_3 resolvent, cyclic 3-tournament, Jelonek quartic
   - THM-1330    # Keller monoid; the cusp selection rule
   - THM-127     # Paley D_2p: rotations are automorphisms, reflections anti-automorphisms
-related: [THM-1305, THM-1345, THM-2598, THM-2633-keller-point-stabilizer-abelianization-gate-and-d4-exclusion, MISTAKE-196, MISTAKE-197, MISTAKE-297]
+related: [THM-1305, THM-1345, THM-2598, THM-2633-derangement-character-obstruction-and-d4-keller-exclusion, MISTAKE-196, MISTAKE-197, MISTAKE-297]
 script: 04-computation/reflection_driven_keller_kps_S128c105.py (+ .out), equivariant_reduced_jc_kps_S128c105.py
 ---
 
