@@ -93,7 +93,7 @@ Format per entry:
   concurrent rebase or any hardening edit, recompute digests from `HEAD` and
   replay both interpreter modes; never carry pre-edit hashes across the
   checkpoint merely because the visible theorem statement is unchanged.
-## MISTAKE-308 (2026-07-28, THM-2683 evidence portability) -- checkout bytes and Python's integer-print cap leaked into exact replay
+## MISTAKE-309 (2026-07-28, THM-2683 evidence portability) -- checkout bytes and Python's integer-print cap leaked into exact replay
 
 - **What failed:** THM-2683 declared LF-normalized hashes for its THM-2636
   and THM-2671 executable dependencies but called `sha256(read_bytes())`.

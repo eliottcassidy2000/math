@@ -353,41 +353,18 @@ Classify profiles under support operations; study analytic continuation and auto
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
-- **Planar source fibers:** THM-2063/2071 close affine/quadratic pencils;
-  THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
-  THM-2127--2136 reduce arbitrary tails to coarsened-power/short Newton edges.
-  THM-2158/2180 reduce the twice-odd nonmonic branch to
-  `V|(4gamma-(beta/V)^2)`; THM-2189 forces this pole congruence, THM-2194
-  closes degree six, and THM-2202 closes every twice-odd degree `4r-2` by
-  flux-order separation below the cusp and its unique boundary tooth above.
-  THM-2181 closes monic depressed quartics; THM-2214 closes nonsplit terminal
-  degrees through ten; THM-2217 forces odd-leading survivors to degree `>=14`;
-  THM-2245/2247 put degree fourteen on a singular quartic and close it.
-  THM-2262 gives the degree-eighteen genus-four trigonal reduction. THM-2297
-  removes translation and closes every one-sparse stratum plus `B=D=0`.
-  THM-2311 reduces two-sparse support to `31` ratios; THM-2314/2316/2320/2324/2328
-  close them. THM-2332/2335 leave only Mordell degrees `2,4`; THM-2345/2347
-  and audited THM-2359 close the three named coefficient walls.
-  THM-2357/2360 and hostile-audited THM-2371 plus THM-2376 close `H_2S_5^2`.
-  THM-2373/2386/2389 give the root-free `H_4` pole system; independently
-  audited THM-2406 closes its reduced wall. THM-2411 empties `A=0`.
-  THM-2423/2425/2428 empty the axes; THM-2429/2437/2463/2468,
-  THM-2469/2470/2472, THM-2475/2476, and THM-2480 empty all ten planes.
-  Audited THM-2671 combines THM-2617/2636 with eight new root/pair Hensel
-  rank obstructions and two uniform boundary quintics: all ten support-three
-  strata are empty.  Audited THM-2683 then closes all five support-four charts:
-  two by terminal rank, BCDW by a one-kernel-line toric defect, BCEW by two
-  toric quadrics with nonzero Sylvester resultant, and BCDE by a full-rank
-  degree-four Macaulay map.  THM-2692 closes the last full-support BCDEW chart:
-  order eleven cuts the faithful simultaneous-sign quotient to a finite
-  degree-seven toric carrier, and order twelve makes its root-field and
-  unordered-pair-field terminal schemes empty (the latter by a finite-free
-  `p=103` reduction and Nakayama).  Thus every coefficient-support stratum in
-  the inherited polynomial exact-square-prefix, genuine nonsplit
-  degree-twenty-two branch is empty.  Split/even edges and integral `2`-adic
-  raising remain; THM-2206 blocks
-  field-valued `C_2` Hasse repair. THM-2446 opens six-brackets; THM-2451 and
-  extensions refute its cone shortcut. `JC(2)` and `DC(2)` remain open.
+- **Planar source fibers:** THM-2063 and THM-2084--2247 close the affine-through-quartic,
+  power-free, twice-odd, and terminal-degree-through-fourteen branches.
+  THM-2262 starts the degree-eighteen trigonal reduction; THM-2297--2480
+  (including THM-2376) close
+  its sparse supports, `H_2`, reduced `H_4`, axes, and ten coefficient planes.
+  THM-2671 closes every support-three degree-twenty-two chart, THM-2683 every
+  support-four chart, and THM-2692 the full-support BCDEW chart by order-twelve
+  root/pair-field emptiness.  Hence the inherited polynomial exact-square-prefix
+  genuine nonsplit degree-twenty-two branch is empty.  Split/even edges and
+  integral `2`-adic raising remain; THM-2206 blocks field-valued `C_2` Hasse
+  repair.  THM-2446's six-bracket cone shortcut is refuted.  `JC(2)` and
+  `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

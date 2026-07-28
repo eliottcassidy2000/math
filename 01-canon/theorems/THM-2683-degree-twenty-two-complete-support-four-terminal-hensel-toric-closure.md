@@ -317,7 +317,7 @@ python3 -O 04-computation/jc2_degree22_support_four_toric_hensel_thm2683.py
 Both executions LF-normalized-byte-match the stored output and declared
 hashes.  The dependency locks are likewise LF-normalized, so they are stable
 under Windows checkout policy, and the trusted exact-certificate serializer
-explicitly lifts Python's interactive integer-display cap (MISTAKE-308).  An
+explicitly lifts Python's interactive integer-display cap (MISTAKE-309).  An
 independent hostile audit reconstructed the five terminal supports and both
 factor fields, verified the native three-parameter ring and Hensel recursion,
 checked the BCDW cofactor ordering and toric defect, and independently derived

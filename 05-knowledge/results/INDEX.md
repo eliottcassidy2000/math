@@ -212,7 +212,7 @@
   `6f463672` / `3efbadaf`.
   Macaulay map.  Both factor fields are uniform.  Only full support remains
   in the inherited genuine nonsplit degree-twenty-two branch.  Hashes begin
-  The MISTAKE-308 dependency-lock/integer-serializer portability repair changes no
+  The MISTAKE-309 dependency-lock/integer-serializer portability repair changes no
   mathematical output.  Hashes begin `110afb19` / `3efbadaf`.
 - `jacobian_thm1310_a4_resolvent_field_type_referee.py` -> matching `.out`
   [THM-2681 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
