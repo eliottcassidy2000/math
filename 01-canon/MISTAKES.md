@@ -93,7 +93,7 @@ Format per entry:
   concurrent rebase or any hardening edit, recompute digests from `HEAD` and
   replay both interpreter modes; never carry pre-edit hashes across the
   checkpoint merely because the visible theorem statement is unchanged.
-## MISTAKE-305 (2026-07-28, THM-2683 dependency lock) -- LF hashes were compared to raw CRLF checkout bytes
+## MISTAKE-308 (2026-07-28, THM-2683 evidence portability) -- checkout bytes and Python's integer-print cap leaked into exact replay
 
 - **What failed:** THM-2683 declared LF-normalized hashes for its THM-2636
   and THM-2671 executable dependencies but called `sha256(read_bytes())`.
@@ -102,10 +102,16 @@ Format per entry:
   exactly the declared values.
 - **Repair:** dependency text is normalized from CRLF to LF before hashing;
   the theorem now describes LF-normalized transcript/dependency equality.
-  This is an evidence-portability defect only: no algebraic certificate,
-  stored output, or theorem conclusion changed.
+  A retained optimized replay then exposed a second platform boundary: Python
+  3.11+ refused to stringify the already-computed BCDE certificate because
+  one exact integer exceeded its default 4,300-digit display cap.  The trusted
+  companion now explicitly disables that display cap before forming its
+  declared digest.  These are evidence-portability defects only: no algebraic
+  certificate, stored output, or theorem conclusion changed.
 - **Rule:** a declared normalized hash basis must also be implemented at every
-  dependency lock, not merely when frontmatter hashes are computed.
+  dependency lock, not merely when frontmatter hashes are computed; a digest
+  serializer must also declare any runtime size limit that its exact objects
+  exceed.
 ## MISTAKE-303 (2026-07-28, THM-2648 edge-thinning sharpness) -- a minimum relative to the affine chart was promoted as the unrestricted minimum
 
 - **What was claimed:** the first repaired THM-2648 proved that no

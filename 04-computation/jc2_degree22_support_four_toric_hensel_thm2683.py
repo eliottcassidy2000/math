@@ -23,10 +23,18 @@ import contextlib
 import hashlib
 import importlib.util
 import io
+import sys
 from itertools import combinations
 from pathlib import Path
 
 import sympy as s
+
+
+# The audited BCDE digest deliberately serializes exact integers far larger
+# than Python 3.11+'s interactive-decimal safety cap.  This is trusted local
+# certificate data, not untrusted input.
+if hasattr(sys, "set_int_max_str_digits"):
+    sys.set_int_max_str_digits(0)
 
 
 def require(condition: bool, message: str) -> None:
