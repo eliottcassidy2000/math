@@ -1,0 +1,18 @@
+THM-2835 Q11 SEMANTIC WORD HORN AND ACTION NO-GO
+status=VERIFIED-EXACT COMPANION; coefficient/support theorem only; no current, row decrement, or LRC14
+L=(count=449,first=59306,last=311961,residue_mod169=156,whole_cylinder=1)
+word_bits_(slot7,slot8)=QB=(out,in),QA=(in,out),QAB=(in,in)
+neighbor_q0_delta_-2_to_2=((0, 446, 0), (0, 446, 0), (0, 449, 0), (0, 0, 449), (0, 0, 449)); tuple_order=(QA,QB,QAB)
+neighbor_q7_delta_-2_to_2=((0, 446, 0), (0, 447, 0), (0, 0, 449), (0, 0, 449), (0, 0, 449)); tuple_order=(QA,QB,QAB)
+neighbor_q11_delta_-2_to_2=((0, 0, 0), (0, 0, 0), (449, 0, 0), (449, 0, 0), (449, 0, 0)); tuple_order=(QA,QB,QAB)
+natural_beta_lift=(a,11)->(a+1,7); word_state=QAB_on_449/449; QA=QB=0; reverse_a-1_at_q7=(QA0,QB447,QAB0); reverse_exceptions=(107978, 154622); exception_low_factors={107978: (1, 14), 154622: (4, 53)}
+q7_B_delta_QAB_counts=(0, 0, 449, 449, 449); q7_A_delta_QB_counts=(446, 447, 0, 0, 0); B0=Bplus1=Bplus2=449 (carry-blind support fillers)
+distinct_446_censuses=(global_sourceQB_QAB_q7:C0=449,Cplus1=895,new=446,new_intersects_horn=0; restricted_horn_reverse_minus2_QB=446)
+semantic_relations=((0, (('QAB', 'QAB'), ('QB', 'QB'))), (1, (('QAB', 'QA'),)), (2, (('QAB', 'QA'),)), (3, (('QAB', 'QA'),)), (4, (('QAB', 'QA'),)), (5, (('QAB', 'QA'),)), (6, (('QAB', 'QA'), ('QB', 'QA'))), (7, (('QAB', 'QAB'), ('QB', 'QAB'), ('QB', 'QB'))), (8, (('QAB', 'QA'), ('QB', 'QA'))), (9, (('QAB', 'QA'), ('QB', 'QA'))), (10, (('QAB', 'QA'), ('QB', 'QA'))), (11, (('QAB', 'QA'), ('QB', 'QA'))), (12, (('QAB', 'QA'), ('QB', 'QA'))))
+relation_laws=R11=R4_o_R7; inverse_failure=R2_o_R11=empty!=R0; rank=(QB2,QAB1,QA0)_nonincreasing
+binary_relation_sum=[[0, 0, 0], [6, 2, 1], [11, 0, 2]]; weighted_relation_sum_rank=2; response_ranks=(QB_binary=13,QB_weighted=13,full_binary=26,full_weighted=26); lower_certificate_mod_prime=1000003; matching_upper_certificate=regular_response_realization; decomposition=QB:(1+12),full:(2+2*12)
+linearization_boundary=C13_on_3_words_is_trivial; QB_response_is_cyclic_regular_module_with_nonnegative_forward_map; full_bank_minimal_rational_state_dimension=26; missing_sidecar=typed_address_carry_to_QB_response_basepoint
+typed_alias_hostile=word_slot_speeds_2197_742586_versus_address_8_to_7; q0_QB_to_QB=66099
+literal_translation=J11_plus9U_equals_J7=(4542240904740, 4542267349620); J7_six_factor_signature_census=(((False, True, False, False, True, True), 4), ((False, True, False, True, True, True), 10), ((False, True, True, False, True, True), 14), ((False, True, True, True, True, True), 35)); complete_cells=0/63; all_567_I_J0_J7_complete=0; joint_I_J0_J11_J7_clock_carriers=(1,); factor_order=(E3,clock,q1,q2,c2,c3)
+CONCLUSION: the 449-sheet QB(source)->QA(q11) cospan has an exact coefficient-nerve completion at the beta-selected natural lift: every (a,11) moves with its +1 ancestry borrow to a unique QAB(q7,a+1) word.  The two-bit transition QA=(in,out) to QAB=(in,in) flips only slot8.  The full relation support even factors nonwrapping q11 as q7 then q4.  But the relation is triangular and noninvertible, while the address/future source is a groupoid; its q11 inverse composite is empty.  Moreover literal physical +9U translation sends J11 to J7 and loses E3 on all 63 repairing cells (sometimes q1/q2 as well).  Hence this is a positive coefficient/word 2-simplex and a sharp semantic Bockstein candidate, not yet a lawful whole-packet action or canonical current.  The canonical QB response does carry one exact regular C13 module, and the full relation bank carries two; this settles abstract rational capacity but does not supply the typed basepoint identifying the address carry column with the physical QB response.
+ALL EXACT CHECKS PASSED
