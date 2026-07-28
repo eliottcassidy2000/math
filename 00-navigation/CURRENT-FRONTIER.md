@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — refreshed 2026-07-27.** This supersedes dated snapshots; linked theorems are proof sources, while this file records composition and residuals.
+**Rolling state — refreshed 2026-07-28.** This supersedes dated snapshots; linked theorems are proof sources, while this file records composition and residuals.
 Status: **PROVED** in-repo proof; **CITED** scoped import; **FINITE-EXACT** exhaustive stated universe; **VERIFIED** reproducible evidence; **CONDITIONAL**, **OPEN**, **REFUTED**, and **SUPERSEDED** are literal.
 
 ## LRC(14)
@@ -363,8 +363,14 @@ Classify profiles under support operations; study analytic continuation and auto
   strata are empty.  Audited THM-2683 then closes all five support-four charts:
   two by terminal rank, BCDW by a one-kernel-line toric defect, BCEW by two
   toric quadrics with nonzero Sylvester resultant, and BCDE by a full-rank
-  degree-four Macaulay map.  Thus any survivor has full support BCDEW.
-  Split/even edges and integral `2`-adic raising remain; THM-2206 blocks
+  degree-four Macaulay map.  THM-2692 closes the last full-support BCDEW chart:
+  order eleven cuts the faithful simultaneous-sign quotient to a finite
+  degree-seven toric carrier, and order twelve makes its root-field and
+  unordered-pair-field terminal schemes empty (the latter by a finite-free
+  `p=103` reduction and Nakayama).  Thus every coefficient-support stratum in
+  the inherited polynomial exact-square-prefix, genuine nonsplit
+  degree-twenty-two branch is empty.  Split/even edges and integral `2`-adic
+  raising remain; THM-2206 blocks
   field-valued `C_2` Hasse repair. THM-2446 opens six-brackets; THM-2451 and
   extensions refute its cone shortcut. `JC(2)` and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

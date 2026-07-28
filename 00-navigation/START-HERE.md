@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-07-25; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — refreshed 2026-07-28; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
@@ -65,7 +65,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     THM-2314/2316/2320/2324/2328 close all `31` exactly two-sparse ratios.
     THM-2332 leaves squarefree branch degree `0`, `2`, or `4`; THM-2335 eliminates `0`; THM-2345/2347 close two divisors.
     THM-2359 closes the perfect-quartic divisor. THM-2371 and THM-2376 close the full degree-eighteen `H_2S_5^2` stratum; hostile-audited THM-2406 closes the remaining `H_4` locus and hence the inherited reduced degree-eighteen branch.
-    At degree `22`, hostile-audited THM-2411 closes `mathcal A=0`; hostile-audited THM-2423/2425/2428 close all five one-sparse axes in `mathcal A!=0`. THM-2429/2437/2463/2468/2469/2470/2472/2475/2476/2480 close all ten support-two planes; only higher mixed strata, split/even descent, integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
+    At degree `22`, THM-2411/2423/2425/2428 close `mathcal A=0` and all axes; THM-2429/2437/2463/2468/2469/2470/2472/2475/2476/2480 close all planes; THM-2671/2683/2692 close supports three/four/five. Thus the inherited polynomial exact-square-prefix, genuine nonsplit branch is empty; split/even descent, integral raising, outside branches, `JC(2)`, and `DC(2)` remain open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed

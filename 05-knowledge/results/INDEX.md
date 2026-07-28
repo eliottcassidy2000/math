@@ -1,5 +1,16 @@
 # Script Results Index
 
+- `jc2_degree22_full_support_order12_toric_hensel.py` -> matching `.out`
+  [THM-2692 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
+  order-eleven terminal equations descend through the lossless simultaneous-
+  sign quotient to one reduced degree-seven toric carrier.  Exact order twelve
+  kills its degree-five root-field fibre; a monic finite-free carrier,
+  reconstruction-unit audit, and `p=103` Nakayama certificate kill the
+  irreducible degree-ten unordered-pair fibre.  The full-support quintic is
+  uniformly absolutely irreducible, so the fixed-place Kummer and `y=0`
+  arguments empty the final coefficient stratum in the inherited genuine
+  nonsplit degree-twenty-two branch.  This is not `JC(2)`.  Hashes begin
+  `1ef693fc` / `0bbb9cad`.
 - `lrc14_lawful_odometer_alternating_rail_horizon_probe.py` and
   `lrc14_lawful_odometer_alternating_unit_line_boundary.py` -> matching
   `.out` files [THM-2691 PROVED + VERIFIED-EXACT + INDEPENDENTLY
@@ -20,7 +31,7 @@
   `L^11(13;1,2,3,4,5,6)`; the independent section-defect replay has `78`
   wraps equal to the nonzero odometer Bockstein `7`.  This is an abstract
   obstruction, not physical facet gluing.  Hashes begin
-  `32286298`/`2388dd0f` and `63ed1445`/`4add8f23`.
+  `16685599`/`fecc6762` and `63ed1445`/`4add8f23`.
 - `lrc14_mixed_d_slope7_two_simplex_scout.py` and
   `lrc14_mixed_d_slope7_two_simplex_independent_referee.py` -> matching
   `.out` [FINITE-EXACT].  One rational point in THM-2680's `3->1->0` D-edge
@@ -175,8 +186,8 @@
   BCDW because its unique kernel line violates `X0*X2=X1^2`, BCEW because
   two toric quadrics have nonzero Sylvester resultant, and BCDE because three
   kernel-plane quadrics generate every quartic by a full-rank `15x18`
-  Macaulay map.  Both factor fields are uniform.  Only full support remains
-  in the inherited genuine nonsplit degree-twenty-two branch.  Hashes begin
+  Macaulay map.  Both factor fields are uniform.  At that stage only full
+  support remained; THM-2692 subsequently closes it.  Hashes begin
   `6f463672` / `3efbadaf`.
 - `jacobian_thm1310_a4_resolvent_field_type_referee.py` -> matching `.out`
   [THM-2681 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
