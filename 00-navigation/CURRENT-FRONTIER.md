@@ -410,9 +410,11 @@ Classify profiles under support operations; study analytic continuation and auto
   law, and the all-degree `e<=1` classification; passport data first collide
   at `N=5,e=2`.  Its carrier is `A(R_Q/q)=VG=lambda SET`.  THM-2823 closes
   the degree-26 local pair `(3,1)`; THM-2826 makes this uniform for
-  `4R-2`, `R>=7`, excluding simple parts and `h>N/2`.  All-parts-at-least-two
-  passports, other flux intersections, nonpolynomial prefixes, and chart
-  entry remain open.
+  `4R-2`, `R>=7`.  THM-2827 gives the full pole-order nonresonance atlas:
+  balanced passports are empty for `R=0,1 mod3`; for `R=3k+2`, every
+  surviving part must be divisible by `4k+3`.  The first sharp local
+  resonance is `(R,ord V,ord A)=(8,13,6)`; its global Faber/chart entry,
+  nonpolynomial prefixes, and other flux intersections remain open.
 
   This is not `JC(2)`: arbitrary Keller pairs need not enter this quartic,
   split polynomial exact-prefix chart.  Nonsplit and nonpolynomial-prefix
