@@ -9,6 +9,13 @@
   the global content.  This fills an endpoint coefficient/unit hole but is not
   consecutive `D`-gluing; THM-2684 still kills every three-event chain in the
   inherited rail bank.  Hashes begin `61c250c2` / `a27ec9aa`.
+- `lrc_three_tooth_signed_dilation_no_go.py` -> matching `.out`
+  [THM-2684 PROVED SYMBOLIC EXTENSION + VERIFIED-EXACT].  For every `q>=2`,
+  `p=2q-1`, positive dilation has identity adjacency on the canonical three
+  teeth, while `rho o D` swaps the endpoints and fixes the centre.  Both signs
+  have the same raw two-return cylinders, on which `c_q(px)=c_q(p^2x)`; hence
+  neither supports a clock-legal three-event rail product.  Hashes begin
+  `879a6f88` / `706e0745`.
 - `lrc14_alternate_arrival_physical_rail_handoff.py` -> matching `.out`
   [THM-2684 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   The full `324`-profile THM-2584 bank has exact envelope

@@ -10,9 +10,11 @@ status: >
   return cylinders are positive, but on each of them the consecutive shallow
   clocks c_7(Dx),c_7(D^2x) agree.  Hence a legal two-event rail-clock product
   exists but every clock-legal three-event rail product on the full inherited
-  bank is empty.  This closes the endpoint-carrier escape left by THM-2682,
-  not other parent carriers, handoffs, boundary semantics, edge grammars, or
-  LRC(14).
+  bank is empty.  The reflected signed transporter rho o D merely swaps the
+  two endpoint teeth; it has the same raw return cylinders and the same
+  clock-diagonal obstruction.  This closes the endpoint-carrier and signed-
+  dilation escapes left by THM-2682, not other parent carriers, handoffs,
+  boundary semantics, edge grammars, or LRC(14).
 source: root-2026-07-28-three-tooth-rail-envelope
 depends_on:
   - THM-2584-b-word-depth-five-absolute-deep-root-tensor
@@ -26,6 +28,10 @@ script: 04-computation/lrc14_alternate_arrival_physical_rail_handoff.py
 output: 05-knowledge/results/lrc14_alternate_arrival_physical_rail_handoff.out
 script_sha256: ac4d7f0a9ff67205505306c19c9792d4af89c1a797339f323ed282376cc3b39d
 output_sha256: de5e5dd90c9bf59c901aeed289bc55e2a3c5eb2daa288230f960057bf15eb67f
+secondary_script: 04-computation/lrc_three_tooth_signed_dilation_no_go.py
+secondary_output: 05-knowledge/results/lrc_three_tooth_signed_dilation_no_go.out
+secondary_script_sha256: 879a6f885052700f5b1689951cf5be238a4246a9caf63de11f130792451b907c
+secondary_output_sha256: 706e0745d7d952e8a5fd982bccf95214294dcc4c86fd7be4d75b4fdea849c76b
 hash_basis: LF-normalized bytes
 ---
 
@@ -214,7 +220,56 @@ This abstract lemma explains the numbers in (3)--(11).  What is special to
 the LRC calculation is the exact fact that its full positive rail envelope
 is precisely the `q=7` instance of (14).
 
-## 5. Scope and reproduction
+## 5. Reflection does not provide a signed-dilation escape
+
+There is one already-typed orientation variant that (15) does not yet show:
+
+```text
+D_-(x)={-px}=rho(D_p(x)),              rho(x)={-x}.       (16)
+```
+
+At positive-length support level, reflection reverses the intervals in (15).
+Consequently `D_-` fixes the central tooth and swaps the two endpoint teeth:
+
+```text
+B_- -> B_+,              B_0 -> B_0,              B_+ -> B_-. (17)
+```
+
+As before, these arrows mean positive envelope intersection, not containment
+of an entire image in one tooth.  Half-open endpoint assignments under `rho`
+may differ at finitely many null points.
+
+Since `rho` commutes with multiplication by `p`,
+
+```text
+D_-^2=D_p^2.                                               (18)
+```
+
+Thus the only possible three-tooth words are
+
+```text
+- + -,                    0 0 0,                    + - +, (19)
+```
+
+and their positive-length raw cylinders are exactly the three cylinders from
+(14) with `delta` replaced by `delta/p^2`.  The current event's intrinsic
+shallow and owner clocks are still `c_q({px})` and `c_q({p^2x})`.  The same
+endpoint/central calculation following (15) makes them equal throughout each
+cylinder.  Every raw signed-dilation triple is therefore clock-illegal.
+
+For `q=7`, (19) reads `0,12,0`, `6,6,6`, and `12,0,12`, with the same three
+intervals in (9) and clock-pair supports
+
+```text
+{(0,0)},                {(3,3),(4,4)},              {(0,0)}. (20)
+```
+
+This closes the explicitly typed `rho o D` candidate on the inherited
+envelope.  It does not declare every signed circle map to be a lawful LRC
+handoff.  Reversing either signed handoff relation also cannot create a
+three-event chain: any such chain would reverse to one already excluded.
+
+## 6. Scope and reproduction
 
 The conclusion occurs at the nonnegative route-two rail layer after imposing
 the inherited nonconstant clock-edge grammar.  Any later restriction by
@@ -231,12 +286,15 @@ Run
 ```bash
 python3 04-computation/lrc14_alternate_arrival_physical_rail_handoff.py
 python3 -O 04-computation/lrc14_alternate_arrival_physical_rail_handoff.py
+python3 04-computation/lrc_three_tooth_signed_dilation_no_go.py
+python3 -O 04-computation/lrc_three_tooth_signed_dilation_no_go.py
 ```
 
 Both modes must byte-match
 
 ```text
-05-knowledge/results/lrc14_alternate_arrival_physical_rail_handoff.out.
+05-knowledge/results/lrc14_alternate_arrival_physical_rail_handoff.out,
+05-knowledge/results/lrc_three_tooth_signed_dilation_no_go.out.
 ```
 
 The exact companion reconstructs all `324` weighted rail profiles from the THM-2584
@@ -249,5 +307,8 @@ independent hostile audit rederived (3)--(11), checked the two grid
 refinements and covariance indexing, and verified the `7` clock-covariance,
 `324` direct/sequential `D^2`-pullback, `1,200` sparse/ordinary-intersection,
 and `8,976` reflected-object controls.
+The secondary exact companion checks the symbolic signed-dilation formulas for
+both signs and every `q=2,...,64`; the all-`q` quantifier follows from
+(14)--(20), not from that finite hostile sweep.
 
 QED.
