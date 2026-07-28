@@ -1,0 +1,10 @@
+THM-2801 INDEPENDENT SPARSE AND FINITE-DIFFERENCE AUDIT
+two-pair sparse support: 16
+two-pair literal powers checked: 5
+two-pair fifth marked value: 12975477376942080000
+alternating Beta identities checked: 80
+alternating observer-ladder identities checked: 630
+general three-pair literal pairs checked: 16
+three-pair supports r=1..4: (4, 6, 8, 10)
+bilinear boundary controls checked: 17
+exceptional z/y channels and coordinate-only observer: PASS

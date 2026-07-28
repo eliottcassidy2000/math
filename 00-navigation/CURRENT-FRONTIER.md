@@ -104,7 +104,9 @@ fixed-rail no-go.  Ledger `165`; no row is excluded.
   proves NC2 and hence unrestricted GMC(2).
 - **REFUTED for higher dimensions:** explicit GMC(3) counterexamples now exist;
   GMC is false for every dimension at least 3. See the current external preprint
-  entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
+  entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md);
+  [THM-2801](../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md)
+  sharply gives `SIC(1)` true / `SIC(n>=2)` false, not `JC(2)`.
 - **FORMALIZATION COMPLETE:** `GMC2Main` exposes unconditional `dvdK1`, `nc2`,
   and `gmc2`, kernel-pure up to `propext`, choice, and quotient soundness;
   `singlePolyCrux_holds` discharges the legacy `DvdK1` premise.  THM-2101's
@@ -151,7 +153,6 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   has `k+1` channels at level `k*ell`, yet its first two return polynomials
   generate a nonzero torus monomial by an explicit negative-determinant Bezout
   identity.  This is nonlinear ideal elimination, not a raw-moment decoder.
-
 ### Live work
 
 Publish THM-2022; sharpen THM-2111's binomial degree toward `M+N`; formalize

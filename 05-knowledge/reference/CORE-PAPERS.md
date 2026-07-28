@@ -13,7 +13,7 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
 ## Fast frontier snapshot
 
 - **LRC:** fourteen runners (thirteen nonzero speeds) remains open; the April 2026 computation reaches twelve nonzero speeds.
-- **Gaussian moments:** [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md) proves the two-real-Gaussian case; Long's July 2026 preprint gives three-dimensional counterexamples, so the checked boundary is `true through 2 / false from 3`.
+- **Gaussian/Image moments:** [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md) gives GMC `true through 2 / false from 3`; [THM-2801](../../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md) gives SIC `true at 1 / false from 2`, without settling its JC-bearing restrictions.
 - **Tournament attribution:** arXiv:2412.10572 is Irving--Omar, arXiv:2307.05569 Grinberg--Stanley, and arXiv:2406.09697 Klanderman--Montee--Piotrowski--Rice--Shader.
 - **Unsplittable flows:** [THM-2177](../../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture; the cost-free `d_max` and planar cost-preserving `2d_max` theorems remain intact.
 - **Reciprocal sequences:** separate support from indexed multiplicity; external figurate formulas do not supply the repo's Abel--Dini/support-Dirichlet extensions.
@@ -209,20 +209,9 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
 
 ### Lee — *Lonely runners in real life: Sharp bounds for time-dependent velocities*
 
-- **Primary / freshness:** [arXiv:2607.16082v1](https://arxiv.org/abs/2607.16082),
-  submitted 2026-07-17. **RADAR / PREPRINT v1.**
-- **Imported role:** for locally integrable, almost-everywhere strictly ordered
-  time-dependent velocities with divergent pairwise relative displacement,
-  proves the sharp `2^(-n+1)` guarantee for each extreme runner and constructs
-  examples showing intermediate runners may remain arbitrarily close to
-  someone forever.  This is a useful stress test for which LRC arguments use
-  linear flow rather than order alone.
-- **Repo landing point:** no theorem currently depends on it; compare the
-  constant-speed assumptions in the
-  [LRC14 frontier](../../00-navigation/LRC14-FRONTIER-2026-07-15.md) before
-  importing any mechanism.
-- **Does not prove:** anything about the standard constant-velocity LRC(14),
-  its `1/14` threshold, integer spectra, or finite checking.
+- **Primary / freshness:** [arXiv:2607.16082v1](https://arxiv.org/abs/2607.16082), submitted 2026-07-17. **RADAR / PREPRINT v1.**
+- **Imported role:** proves the sharp `2^(-n+1)` extreme-runner guarantee for ordered time-dependent velocities with divergent relative displacement, while intermediate runners can stay close forever.
+- **Boundary:** no theorem depends on it; it stress-tests linear-flow assumptions but proves nothing about constant-velocity LRC(14), `1/14`, integer spectra, or finite checking.
 
 ## Jacobian, Dixmier, and Poisson
 
@@ -300,8 +289,7 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   eventual vanishing of `Delta^m(P^(m+1))`; `Delta^m(P^m)=0` encodes Hessian
   nilpotence in the cited setting.
 - **Repo consumers:** [HYP-8905](../hypotheses/HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md),
-  [THM-2063](../../01-canon/theorems/THM-2063-one-fiber-linear-planar-keller-pairs.md),
-  and MISTAKE-237.
+  [THM-2063](../../01-canon/theorems/THM-2063-one-fiber-linear-planar-keller-pairs.md), [THM-2801](../../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md), and MISTAKE-237.
 - **Does not prove:** equality with complex Gaussian moment functionals, an
   `NC2 -> GMC(2) -> JC(2)` chain, or full JC(2) from the binary homogeneous
   calculation. VC(4), planar Jelonek/leading-form descent, and Newton/Lame
@@ -345,16 +333,17 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
 
 - **Primary / freshness:** [arXiv:1506.05192](https://arxiv.org/abs/1506.05192),
   *Israel Journal of Mathematics* **219** (2017), 917--928.
-- **Imported role:** defines GMC in its standard Mathieu-subspace form and
-  proves that the Jacobian Conjecture would follow from GMC; it also records a
-  counterexample to a broader Moments Vanishing statement.
+- **Imported role:** distinguishes operator `E_n` from scalar `F_n` and proves
+  `GMC(2n) => ker(F_n) MZ => SIC(n)`, plus the global GMC-to-JC implication.
 - **Repo consumers:**
   [THM-2022, GMC(2)](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md),
   [THM-1490, earlier explicit GMC counterexample](../../01-canon/theorems/THM-1490-the-gaussian-moment-counterexample-verified-proved-shortened-and-obstructed.md),
+  [THM-2801, sharp SIC boundary](../../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md),
   [GMC2 finish map](../../00-navigation/GMC2-FINISH-MAP-2026-07-21.md).
-- **Does not prove:** GMC in any open dimension.  The conjecture is now false
-  from three real Gaussian variables onward; the implication to the Jacobian
-  Conjecture is not a converse and supplies no Gaussian witness by itself.
+- **Does not prove:** any converse: THM-2022 proves `GMC(2)` while THM-2801
+  refutes `SIC(2)`.  For the true endpoint, van den Essen--Wright--Zhao
+  [arXiv:1008.3962v2](https://arxiv.org/abs/1008.3962), Theorem 2.8, gives
+  `SIC(1)` directly from the prime ideal `(xi)`; neither route proves `JC(2)`.
 
 ### Duistermaat--van der Kallen — *Constant terms in powers of a Laurent polynomial*
 

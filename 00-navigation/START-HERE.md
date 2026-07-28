@@ -6,7 +6,7 @@
 
 1. **Main prize:** LRC(14), with 13 nonzero relative speeds, is **OPEN**; LRC is known through 13 total runners.
 2. **Do not chase old shortcuts:** uniform good period `q <= 25` is false; uniform emptiness of the twelve-speed sporadic branch remains open.
-3. **Major closure:** THM-2022 proves NC2 and GMC(2); `GMC2Main.gmc2` now gives an unconditional, root-imported, kernel-pure Lean theorem. THM-2111 is effective, while THM-2101's three additive proofs remain optional alternate formalization routes rather than a blocker.
+3. **Major closures:** THM-2022 proves NC2/GMC(2), and THM-2801 makes the Special Image boundary true at one pair and false from two; neither settles the restricted planar-JC sectors.
 4. **Truth discipline:** corrected canon outranks canon, exact computation, hypothesis, synthesis, and historical prose.
 5. **Research posture:** use Anchor / Niche / Wildcard; demand mechanisms, hostile controls, and preserved/lost coordinates.
 
@@ -42,7 +42,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    The root-imported `GMC2Main.gmc2` is unconditional and kernel-pure through
    `GMC2DvdKOmegaWiring.singlePolyCrux_holds`; its axiom audit is standard.
    THM-2101's three additive proofs, including the purely t-adic packet route,
-   retain partial alternate wrappers but are no longer a formal proof leaf.
+   retain partial wrappers; THM-2801 gives `SIC(1)` true / `SIC(n>=2)` false, not `JC(2)`.
 8. **Support return is not coefficient noncancellation.** THM-2070 gives a
    cofinite aperiodic return set with infinitely many zero odd constant terms.
    HYP-8930's fixed-support unique-channel lemma survives. HYP-8931 is vacuous:
