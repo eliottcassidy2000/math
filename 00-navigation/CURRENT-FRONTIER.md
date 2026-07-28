@@ -338,7 +338,12 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2695 refines a surviving plane by the exact secondary quotient
   `Pic[2]/2Pic[4]`; all three residue/lift levels occur.  Its invariant `Q8`
   class needs an independent spin/binary-lift sidecar, so no general
-  `A4/S4`, `G1`, `JC(2)`, or `DC(2)` closure follows.
+  `A4/S4`, `G1`, `JC(2)`, or `DC(2)` closure follows.  THM-2696 proves that
+  every proper finite complex reflection-group quotient has a nonconstant
+  relative different, hence is not Keller in any polynomial basic invariants.
+  For the reflection-completed `S3<S4` carrier the constant-different planar
+  slice has source `A2` but singular nonnormal coefficient image.  This closes
+  that quotient family and slice, not arbitrary `S4` resolvents or `JC(2)`.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.

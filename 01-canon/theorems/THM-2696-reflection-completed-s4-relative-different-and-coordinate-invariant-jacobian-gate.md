@@ -2,8 +2,8 @@
 id: THM-2696
 title: "Reflection-completed S4 relative different and coordinate-invariant Jacobian gate"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For any proper inclusion H<G of finite complex reflection groups,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For any proper
+  inclusion H<G of finite complex reflection groups,
   the quotient between their polynomial invariant spaces has relative
   Jacobian J_G/J_H, the product of the new reflection-hyperplane factors;
   hence it is never Keller, in any polynomial basic invariants.  For the
@@ -19,7 +19,7 @@ status: >
   normalization is that A2.  This excludes only the fixed
   reflection-completed quotient family and its polynomial coordinate
   variants; no general S4, JC(2), or DC(2) conclusion follows.
-source: a4-resolvent-next-gate-scout-2026-07-28
+source: a4-resolvent-next-gate-scout/root-independent-audit-2026-07-28
 depends_on:
   - THM-2655-quartic-keller-resolvent-v4-quasietale-torsor-and-kummer-class-group-gate
 related:
@@ -36,8 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2696 -- the reflection-completed quotient has an intrinsic different
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2655 exhibits the sharp abstract `S4` carrier
 
@@ -115,7 +114,7 @@ Let `V` be a complex vector space and let
 H subset G subset GL(V)                                  (4a)
 ```
 
-be finite complex reflection groups.  Choose polynomial basic invariants
+be finite complex reflection groups.  Choose homogeneous polynomial basic invariants
 `h_1,...,h_n` for `H` and `g_1,...,g_n` for `G`.  The inclusion
 `C[V]^G subset C[V]^H` gives a finite polynomial map `Phi` satisfying
 
@@ -466,3 +465,10 @@ normalizations, the relative Jacobian, one nontrivial generator change, one
 dominant sandwich, the planar lexicographic elimination kernel, resultant and
 linear subresultant, the singular gradient, and the two normalization
 preimages.
+
+An independent hostile audit separately checked the general reflection-ratio
+argument, the implication from constant ratio to `H=G`, invariance under all
+polynomial basic-generator changes, the finite-flat Fitting-ideal
+interpretation, the planar contraction kernel and birational recovery, and
+the nonnormal double fibre.  It also replayed normal and optimized modes
+against the frozen transcript and audited the stated non-`JC(2)` boundary.

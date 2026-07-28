@@ -13,9 +13,11 @@
   nonsplit degree-twenty-two branch.  This is not `JC(2)`.  Hashes begin
   `1ef693fc` / `0bbb9cad`.
 - `jacobian_s4_reflection_relative_different_thm2696.py` -> matching `.out`
-  [THM-2696 PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT].  For the reflection-completed `V4 semidirect S3=S4`
-  quotient, the intrinsic relative different is `s_1s_2-s_3`, the graph
+  [THM-2696 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Every
+  proper inclusion of finite complex reflection groups induces a non-Keller
+  quotient: its relative Jacobian is the ratio of reflection arrangements.
+  For the reflection-completed `V4 semidirect S3=S4` quotient, this different
+  is `s_1s_2-s_3`, the graph
   quartic and squared-pair resolvent discriminants agree exactly, and every
   polynomial generator change retains the nonconstant factor.  The sharp
   level `s_1s_2-s_3=c!=0` has source `A2`, but its coefficient image is an
