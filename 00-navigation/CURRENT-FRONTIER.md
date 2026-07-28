@@ -54,23 +54,19 @@ THM-2545/2549 give the Hall gate and positive same-base
 chronology, still old-target neutral; THM-2547 is only a **FINITE-EXACT
 EXTERNAL CONTROL** after MISTAKE-281.
 
-THM-2551--2635 expose the descent failure: projector kernels, coboundary gains,
-and dense tomography reach carry/later-root/unit data but lose a wall,
-transition, deep root, or target graph.  Radon/free-orbit recovery is refuted
-(MISTAKE-300); THM-2620/2625 restore the determinant, THM-2634 two carries,
-and THM-2640 private roots, still without a transverse section.
+THM-2551--2635 expose descent loss: tomography reaches carry/later-root/unit
+data but drops a wall, transition, deep root, or target graph.  Radon/free-orbit
+recovery is refuted (MISTAKE-300); THM-2620/2625 restore the determinant,
+THM-2634 two carries, and THM-2640 private roots, not a transverse section.
 
-THM-2657 identifies the nonsplit `C_(13^6)` odometer/class `7`; THM-2658 makes
-overlap a balanced gain section.  THM-2672/2687 leave an 11-dimensional
-slope-seven family, while THM-2688 separates its simplex, diagonal, lens, and
-Bockstein quotients.  These are sidecars, not physical gluing.
+THM-2657/2658 give the nonsplit `C_(13^6)` class `7` and balanced overlap.
+THM-2672/2687 leave an 11-dimensional slope-seven family; THM-2688 separates
+its simplex/diagonal/lens/Bockstein quotients.  None is physical gluing.
 
-THM-2680--2710 separate formal clocks from physical chronology: the inherited
-word dies, its macro cycle has only a ghost midpoint, and both literal
-languages are nilpotent by six.  THM-2707/2712 refine `3346` packets and `304`
-residue-zero successors to multipartite SCCs with cocycle `7`.  THM-2721's
-equal positive `C3` corolla has vanishing charged currents; its sole formal
-successor misses all `1134` rail/future placements.
+THM-2680--2712 make the inherited word/chronology languages nilpotent by six;
+their `3346` packets and `304` residue-zero successors form multipartite SCCs
+with cocycle `7`.  THM-2721's positive `C3` corolla has zero charged current,
+and its lone formal successor misses all `1134` rail/future placements.
 
 THM-2720 identifies the old wall as `t=0`; THM-2742 restores the second target:
 `936/1183` sections and every primitive `t`-character survive.  Edge transport
@@ -88,19 +84,14 @@ one-sided sheet shears and no common selector reaches the endpoint current or
 semantic arm.  THM-2750 proves every external-`C3`-equivariant clutch has zero
 invariant-to-charged block; the unbuilt escapes are a marked-arm gain or fixed
 fourth reference.  MISTAKE-313 retracts THM-2751's proposed wing gain `2` at
-the first typing comparison: its legacy natural-sheet helper omitted the
-source-one clock factor used by THM-2749.  The actual fixed-clock source equals
-the common coefficient, so its left wing is coefficient-null and the folded
-target/source ratio is `11`, not `7`.  A second, full-unclocked retyping also
-fails: the literal intersection is `disjoint-union_e M_e`, its `e=2,3` pieces
-are nonzero, and its target wing profile `(9,2,2)` augments to zero.  Thus no
-  wing unit, cross-wing map, or phase survives.  On a fixed THM-2334 triangle,
-  an exhaustive endpoint-address probe likewise finds no carrier-only affine
-  covariance; exact address instead lies on the extended harmonic lattice
-  `(r,k,l)` with `r.W=l-k`, while the collapsed bank retains only
-  `pi(r mod 13)`.  Transporting every endpoint factor gives reciprocal
-  nontrivial phases.  Next: retain factor-level harmonic origins (or a declared
-  Bezout section) and one THM-2625 determinant sector in that fixed triangle.
+the typing comparison: its helper omitted THM-2749's source-one clock, so the
+fixed-clock source equals the common coefficient, the left wing is null, and
+the folded ratio is `11`, not `7`.  Full-unclocked retyping also fails:
+`disjoint-union_e M_e` has nonzero `e=2,3`, while profile `(9,2,2)` augments to
+zero; no wing unit/map/phase survives.  A fixed-triangle endpoint probe finds
+no carrier-only affine covariance: exact addresses need `(r,k,l)` with
+`r.W=l-k`, but collapse retains only `pi(r mod 13)` and reciprocal phases.
+Next: retain harmonic origins (or a Bezout section) plus one THM-2625 sector.
 THM-2727 is **PROVED** as a fixed-rail realization no-go, but supplies no
 rail/owner/support/address map.  Ledger `165`; no row is excluded.
 
