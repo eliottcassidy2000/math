@@ -2,8 +2,7 @@
 id: THM-2824
 title: "Arbitrary three-slot factorial moment-three detection by tilted atomic orientation"
 status: >
-  RESERVED / PROOF-COMPLETE UNIVERSAL THEOREM CANDIDATE + VERIFIED-EXACT /
-  AWAITING INDEPENDENT HOSTILE AUDIT.  For any three factorial slots,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For any three factorial slots,
   mean-zero polynomials form a binary plane.  Their second and third
   moments have a common complex projective zero exactly when two explicit
   real divisibility invariants vanish.  One invariant factors through a
@@ -33,8 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2824 -- arbitrary three-slot factorial moment-three detection
 
-**RESERVED / PROOF-COMPLETE UNIVERSAL THEOREM CANDIDATE + VERIFIED-EXACT /
-AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2812 proves moment-three detection for three consecutive factorial
 slots.  The first apparent extension fails if one chases signs in a
@@ -54,8 +52,8 @@ two positive finite measures under the kernel
 above `c-1`; the denominator is supported at or below `c-1`.  Successive
 rows of `H` are increasing likelihood-ratio tilts, so the relevant
 increment ratio is strictly increasing.  This proves the universal atomic
-inequality and its exact equality case.  The proof is complete here but
-the theorem remains a candidate until an independent hostile audit.
+inequality and its exact equality case.  The proof and its independent
+hostile audit are complete here.
 
 ## 1. Normalize the three slots
 
@@ -612,7 +610,7 @@ not separate unrelated Wick channels in a more general polynomial.
 | universal conclusion | arbitrary three-slot detection by moments `1,2,3` |
 | continuous sidecar | strict Wronskian `(58)` |
 | finite audit | all `c<=50`; `20,825` exact atomic checks |
-| first missing datum | independent hostile audit before promotion |
+| independent audit | every symbolic step rederived; random atomic scan through `c=500` |
 
 This theorem proves the arbitrary three-slot Strong Factorial statement and
 the corresponding two-charge moment-six bound.  It does not prove general
@@ -640,4 +638,15 @@ identities on all `20,825` triples through `c=50`.  It has explicit
 exception gates, no truth-bearing Python assertions, no floating point, and
 no scratch dependency.
 
-**Proof complete; awaiting independent hostile audit before promotion.**
+## 10. Independent hostile audit
+
+An independent audit rederived the integration-by-parts identities, the
+three hockey-stick weight blocks, the centered first-moment formula, the
+strict likelihood-ratio tilt, the long-secant factorization, and the unique
+equality case.  It separately checked the quadratic-divisibility reduction,
+the sign of `t111`, the Wronskian sidecar, and the `a>=1` Gaussian charge
+typing.  Normal, optimized, and stored transcripts agree; both declared
+LF-normalized hashes match; there are no truth-bearing Python assertions.
+An independent random exact scan through `c=500` found no hostile atom.
+
+**QED.**
