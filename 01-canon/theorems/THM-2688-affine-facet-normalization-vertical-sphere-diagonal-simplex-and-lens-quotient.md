@@ -20,8 +20,8 @@ related:
   - THM-2687-slope-seven-global-configuration-switching-positive-thirteenfold-no-go
 script: 04-computation/affine_facet_normalization_quotient_holotopy_thm2688.py
 output: 05-knowledge/results/affine_facet_normalization_quotient_holotopy_thm2688.out
-script_sha256: 322862987fe482c06df5771fcd000ec7aac05fc583ae15d5de1f86d6854be3f2
-output_sha256: 2388dd0fdcde844e7cb4cbc6bf06179edba9d36b9bd833588dded895fab32a18
+script_sha256: 4013f471ac351409577470eb9d87c271d3bb1052b6784b4324b9d5dab0f836c4
+output_sha256: 3f1c7ad9ca95f9e405a176ad990c5ac40ab175d83854304be7c7e8bcd9eccd35
 hash_basis: LF-normalized bytes
 ---
 
@@ -97,7 +97,8 @@ Then:
    equivariant.  Because `p` is prime and `r!=0`, `rho` acts freely on the
    geometric boundary.  After radial projection from the barycenter, this is
    the unit sphere in the reduced real regular representation of `C_p`.
-   Hence, for `p=13`, choosing the inverse generator if necessary,
+   Hence, for `p=13`, keep the physical generator fixed and orient each real
+   Fourier two-plane by its preferred complex coordinate to obtain
 
    ```text
    boundary Delta^12 / <rho> = L^11(13;1,2,3,4,5,6).
@@ -176,10 +177,11 @@ equivariantly with the sphere in
 ```
 
 Complex Fourier coordinates split that representation into the six conjugate
-pairs of nontrivial characters.  For `p=13` their weights are
-`1,2,3,4,5,6` after replacing the generator by its inverse; replacing all
-weights by their negatives generates the same cyclic action.  This is the
-stated lens space.  Its standard one-cell-in-each-degree cellular complex has
+pairs of nontrivial characters.  Keep the physical generator fixed; within
+each real two-plane choose whichever conjugate character has exponent in
+`{1,2,3,4,5,6}`, then order the planes by that exponent.  The displayed
+weights are therefore `1,2,3,4,5,6` without changing the generator.  This is
+the stated lens space.  Its standard one-cell-in-each-degree cellular complex has
 boundary multiplication by `13` in positive even degrees and zero in odd
 degrees, giving the displayed homology.
 
@@ -240,8 +242,8 @@ trivial, the kernel embedding is `i(a)=13a`, the quotient is
 g:(c,delta)->(c+7,delta-1)
 ```
 
-is identified with `1 in C_13`.  Use the positive cellular boundary
-convention for the connecting map.
+is identified with `1 in C_13`.  Use the cellular orientation
+`boundary(e^2)=+13e^1` for the connecting map.
 
 The connecting homomorphism sends `alpha` to
 

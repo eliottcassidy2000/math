@@ -10,6 +10,11 @@ from itertools import combinations
 from math import comb, gcd
 
 
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
+
+
 def rank_mod(matrix, prime):
     """Rank of an integer matrix over F_prime."""
     if not matrix:
@@ -134,11 +139,12 @@ def vertical_image_faces(n, missing):
 
 
 def audit_prime(n):
-    assert n in (3, 5, 7, 13)
+    require(n in (3, 5, 7, 13), "unexpected prime control")
     # The n=13 theorem has m(c)=12-2c.  The uniform affine model below is
     # m(c)=-1-2c mod n, which specializes to it.
     missing = lambda c: (-1 - 2 * c) % n
-    assert sorted(missing(c) for c in range(n)) == list(range(n))
+    require(sorted(missing(c) for c in range(n)) == list(range(n)),
+            "affine missing map lost bijectivity")
 
     K = carry_faces(n, missing)
     B = boundary_faces(n)
@@ -149,7 +155,8 @@ def audit_prime(n):
         for size in range(n)
         for face in combinations(range(n), size)
     }
-    assert image == expected_boundary
+    require(image == expected_boundary,
+            "vertical simplicial image is not the full boundary")
 
     # Diagonal generator: for n=13, s=7 and r=-1.  For the other prime
     # controls choose s=1 and its compatible r=-2.
@@ -159,40 +166,49 @@ def audit_prime(n):
         (c, d) for c in range(n) for d in range(n) if d != missing(c)
     )
     g = lambda v: ((v[0] + s) % n, (v[1] + r) % n)
-    assert all(g(v)[1] != missing(g(v)[0]) for v in vertices)
-    assert all((g(v)[1] - missing(g(v)[0])) % n ==
-               (v[1] - missing(v[0])) % n for v in vertices)
+    require(all(g(v)[1] != missing(g(v)[0]) for v in vertices),
+            "diagonal generator left the refined complex")
+    require(all((g(v)[1] - missing(g(v)[0])) % n ==
+                (v[1] - missing(v[0])) % n for v in vertices),
+            "diagonal invariant changed")
     for v in vertices:
         orbit = []
         w = v
         for _ in range(n):
             orbit.append(w)
             w = g(w)
-        assert w == v and len(set(orbit)) == n
+        require(w == v and len(set(orbit)) == n,
+                "diagonal action is not free of order n")
     vertex_orbits = {
         (d - missing(c)) % n for c, d in vertices
     }
-    assert vertex_orbits == set(range(1, n))
+    require(vertex_orbits == set(range(1, n)),
+            "diagonal quotient lost a nonzero offset")
 
     # The compatible label rotation is free on the geometric boundary when n
     # is prime: every nonidentity power is one n-cycle, whose only fixed point
     # in the full simplex is the (interior) barycenter.
     for power in range(1, n):
         step = (power * r) % n
-        assert gcd(step, n) == 1
+        require(gcd(step, n) == 1,
+                "nonidentity label rotation is not transitive")
         orbit = []
         d = 0
         for _ in range(n):
             orbit.append(d)
             d = (d + step) % n
-        assert d == 0 and len(set(orbit)) == n
+        require(d == 0 and len(set(orbit)) == n,
+                "label rotation gained a boundary fixed orbit")
 
     fK = tuple(len(K[k]) for k in range(n - 1))
     fB = tuple(len(B[k]) for k in range(n - 1))
     fQ = tuple(len(Q[k]) for k in range(n - 1))
-    assert fK == tuple(n * comb(n - 1, k + 1) for k in range(n - 1))
-    assert fB == tuple(comb(n, k + 1) for k in range(n - 1))
-    assert fQ == tuple(comb(n - 1, k + 1) for k in range(n - 1))
+    require(fK == tuple(n * comb(n - 1, k + 1) for k in range(n - 1)),
+            "refined f-vector changed")
+    require(fB == tuple(comb(n, k + 1) for k in range(n - 1)),
+            "boundary f-vector changed")
+    require(fQ == tuple(comb(n - 1, k + 1) for k in range(n - 1)),
+            "diagonal quotient f-vector changed")
 
     if n <= 7:
         # Chain-level positive controls for both maps.  Several characteristics
@@ -215,13 +231,15 @@ def audit_prime(n):
             expected_pi[0] = 1
             expected_pi[1] += n - 1
             expected_pi[n - 2] += 1
-            assert beta_pi == tuple(expected_pi), (n, prime, beta_pi)
+            require(beta_pi == tuple(expected_pi),
+                    f"vertical mapping-cone Betti mismatch {(n, prime, beta_pi)}")
 
             beta_q = mapping_cone_betti(n, Q, Kt, image_q, prime)
             expected_q = [0] * n
             expected_q[0] = 1
             expected_q[1] = n - 1
-            assert beta_q == tuple(expected_q), (n, prime, beta_q)
+            require(beta_q == tuple(expected_q),
+                    f"orbit mapping-cone Betti mismatch {(n, prime, beta_q)}")
 
     return fK, fB, fQ
 
@@ -232,16 +250,17 @@ def hostile_controls():
     n = 5
     constant = lambda _c: 0
     image = vertical_image_faces(n, constant)
-    assert (1, 2, 3, 4) in image
-    assert (0,) not in image
-    assert (0, 1) not in image
-    assert len(image) == 2 ** (n - 1)
+    require((1, 2, 3, 4) in image, "constant-map hostile lost its top face")
+    require((0,) not in image and (0, 1) not in image,
+            "constant-map hostile unexpectedly gained label zero")
+    require(len(image) == 2 ** (n - 1),
+            "constant-map hostile is not one filled simplex")
 
     # A non-generator component step on Z/6 has two component orbits, so its
     # quotient is two disjoint Delta^4 rather than one Delta^4.
     n = 6
     s = 2
-    assert gcd(s, n) == 2
+    require(gcd(s, n) == 2, "nongenerator hostile changed")
     component_orbits = []
     unseen = set(range(n))
     while unseen:
@@ -253,10 +272,61 @@ def hostile_controls():
             x = (x + s) % n
         unseen -= orbit
         component_orbits.append(orbit)
-    assert len(component_orbits) == 2
+    require(len(component_orbits) == 2,
+            "nongenerator hostile did not split the quotient")
+
+
+def lens_and_bockstein_controls():
+    """Exact p=13 character, cellular-homology, and extension checks."""
+    p = 13
+    weights = tuple(range(1, (p - 1) // 2 + 1))
+    paired_characters = {
+        residue
+        for weight in weights
+        for residue in (weight, (-weight) % p)
+    }
+    require(weights == (1, 2, 3, 4, 5, 6)
+            and paired_characters == set(range(1, p)),
+            "reduced regular representation lost a Fourier weight")
+
+    # One cellular generator in each degree 0,...,11, with differential p in
+    # positive even degrees and zero in odd degrees, gives the standard lens
+    # homology pattern.
+    homology = []
+    for degree in range(12):
+        incoming = p if degree + 1 < 12 and (degree + 1) % 2 == 0 else 0
+        outgoing = p if degree > 0 and degree % 2 == 0 else 0
+        if outgoing:
+            homology.append("0")
+        elif incoming:
+            homology.append("Z/13")
+        else:
+            homology.append("Z")
+    require(tuple(homology) == (
+        "Z", "Z/13", "0", "Z/13", "0", "Z/13",
+        "0", "Z/13", "0", "Z/13", "0", "Z",
+    ), "lens cellular homology changed")
+
+    # THM-2657 gauges: i(a)=13a, pi(k)=2k mod13, alpha(g)=1, s(1)=7.
+    total_modulus = p**6
+    kernel_modulus = p**5
+    lift = 7
+    require((2 * lift) % p == 1, "physical lift no longer covers alpha(g)=1")
+    defect = p * lift
+    require(defect == 91 and defect % p == 0,
+            "thirteen-turn extension defect changed")
+    kernel_coordinate = (defect // p) % kernel_modulus
+    require(kernel_coordinate == 7 and kernel_coordinate % p != 0,
+            "coefficient Bockstein is no longer the unit class 7")
+    require(((-kernel_coordinate) % p) == 6,
+            "inverse-generator gauge hostile changed")
+    require(total_modulus == p * kernel_modulus,
+            "cyclic extension sizes changed")
+    return weights, tuple(homology), kernel_coordinate
 
 
 def main():
+    weights, lens_homology, bockstein = lens_and_bockstein_controls()
     for n in (3, 5, 7, 13):
         fK, fB, fQ = audit_prime(n)
         if n == 13:
@@ -274,6 +344,10 @@ def main():
             print("label_action_on_boundary=free_C13")
             print("boundary_label_quotient=L11(13;1,2,3,4,5,6)")
             print("lens_reduced_homology=H1,H3,H5,H7,H9:Z/13 H11:Z")
+            print(
+                f"lens_exact_controls=weights={weights}:"
+                f"homology={lens_homology}:bockstein={bockstein}"
+            )
     hostile_controls()
     print("positive_controls=n3,n5,n7 chain complexes over F2,F3,F5,F7,F11")
     print("hostiles=constant_missing_map; non-generator_component_step")
