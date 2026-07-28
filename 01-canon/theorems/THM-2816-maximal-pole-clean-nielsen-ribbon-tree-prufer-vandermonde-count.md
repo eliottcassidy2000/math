@@ -1,5 +1,5 @@
 ---
-id: THM-2815
+id: THM-2816
 title: "Maximal-pole clean Nielsen atlas via ribbon trees and Prüfer--Vandermonde counting"
 status: RESERVED / UNPROVED EMPTY STUB
 source: root/maximal-pole-clean-nielsen-2026-07-28
@@ -9,7 +9,7 @@ related:
   - THM-2808-three-pole-e2-maxwell-polynomial-and-finite-accessory-classification
 ---
 
-# THM-2815 -- maximal-pole clean Nielsen atlas via ribbon trees and Prüfer--Vandermonde counting
+# THM-2816 -- maximal-pole clean Nielsen atlas via ribbon trees and Prüfer--Vandermonde counting
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
