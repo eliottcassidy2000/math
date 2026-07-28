@@ -366,6 +366,25 @@ The information still missing is equally exact:
   resolvent root on the physical source;
 - a contradiction with Keller geometry.
 
+For the G1 interface, THM-2465 first supplies a primitive
+`beta in {x,y}`.  After localizing to a monic integral minimal polynomial
+`T^4+a_3T^3+a_2T^2+a_1T+a_0`, put `alpha=beta+a_3/4`; then `alpha`
+generates the same field and is depressed.  Target coefficients are fixed by
+`tau`, so `tau(beta)=tau(alpha)-a_3/4`.  Every localization denominator used
+to reach this chart remains part of the boundary invoice.
+
+The relevant free-product grammar is doubled binary, not modular:
+
+```text
+D4=<s,t | s^2=t^2=(st)^4=1> is a quotient of C2*C2.        (32)
+```
+
+Only the normalizer-quotient involution acts on the selected quartic source
+field.  The second reflection lives on the Galois closure.  THM-2627 turns
+the two resulting abelian characters into an independent Jelonek-component
+parity gate, but it does not turn the second reflection into another source
+map or identify this theorem's pole component.
+
 The tame proof deliberately excludes residue characteristic two.  It does
 not address integral `2`-adic order raising.  It also does not address the
 split/even short-edge descent or any degree-twenty-two mixed-support

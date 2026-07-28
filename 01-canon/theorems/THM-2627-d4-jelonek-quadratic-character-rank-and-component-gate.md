@@ -2,7 +2,7 @@
 id: THM-2627
 title: "D4 Jelonek quadratic-character rank and component gate"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.
+  PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.
   A complex polynomial Keller map of generic degree four and geometric
   monodromy D4 has at least two irreducible components in its reduced
   Jelonek hypersurface.  The source-deck and resolvent/discriminant
@@ -17,7 +17,7 @@ depends_on:
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
   - THM-2612-d4-deck-pole-tax-and-depressed-resolvent-gcd-gate
 related:
-  - THM-2241-planar-keller-resultant-leading-coefficient-atlas
+  - THM-2241-monic-transverse-response-depth-and-resultant-nonproper-quotient
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
 script: 04-computation/jacobian_d4_jelonek_parity_rank_thm2627.py
 output: 05-knowledge/results/jacobian_d4_jelonek_parity_rank_thm2627.out
@@ -28,7 +28,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2627 -- two quadratic characters force two Jelonek components
 
-**PROVED CANDIDATE + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.**
+**PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.**
 
 The key reframe is to count boundary components by the rank of the monodromy
 character group, not by trying to assign one visible pole to each sheet move.
@@ -183,8 +183,11 @@ characters.  The genuinely `D4` local family over `K=C(a,b,c)`
 f_c(T)=T^4-2acT^2+c^2(a^2-b)                                 (17)
 ```
 
-has squared roots `c(a+sqrt(b))` and `c(a-sqrt(b))`.  The independent generic
-squareclasses give the degree-eight tower, hence geometric group `D4`.
+has squared roots `c(a+sqrt(b))` and `c(a-sqrt(b))`.  First adjoining
+`sqrt(b)` and `sqrt(a^2-b)` gives the maximal biquadratic layer.  Over that
+field, `c(a+sqrt(b))` has odd `c`-valuation and is therefore nonsquare;
+adjoining its square root is the third degree-two step.  Thus the generic
+splitting field has degree eight and geometric group `D4`.
 Around `c=0`, both root pairs change sign, giving the central `r^2` action.
 Yet the two abelian quadratic classes are `b` and `a^2-b`, both `c`-units,
 while
@@ -204,7 +207,7 @@ two characters, nor does it identify the pole component of THM-2612.
 In THM-2241's planar monic-resultant chart, the reduced leading Jelonek
 polynomial `rad(c(U,V))` must have at least two irreducible factors whenever
 the quartic monodromy is `D4`.  Hence an irreducible nonzero `c` excludes the
-`D4` lane.  The same theorem applies unchanged to a three-variable G1
+`D4` lane.  The component-rank theorem applies unchanged to a three-variable G1
 candidate, because the proof used only the factorial target, its reduced
 Jelonek divisor, and the finite-etale monodromy cover.
 
@@ -223,8 +226,11 @@ The dominant planar map
 has generic quartic `uT^4+T^2-v`, `D4` Galois closure, and irreducible
 nonproper set `u=0`.  Indeed, when `u != 0` the monic quartic root bound is
 locally uniform, while `y=R`, `x=(v_0-R^2)/R^4` escapes to infinity over
-`(0,v_0)`.  The squareclasses `1+4uv` and `-v/u` give the generic degree-eight
-splitting tower.  Nevertheless
+`(0,v_0)`.  Put `D=1+4uv`, and let `t` solve `ut^2+t-v=0`.
+The class `D` is nonsquare, `Norm(t)=-v/u` is nonsquare, and after adjoining
+`sqrt(D)` and `sqrt(t)` the conjugate root remains nonsquare; equivalently
+the independent classes `D` and `-v/u` yield a third quadratic step.  Thus
+the generic splitting degree is eight.  Nevertheless
 
 ```text
 M_deck=K(sqrt(1+4uv)),
