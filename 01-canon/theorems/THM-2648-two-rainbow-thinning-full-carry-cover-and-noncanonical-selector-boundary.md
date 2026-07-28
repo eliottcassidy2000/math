@@ -2,7 +2,7 @@
 id: THM-2648
 title: "Two-rainbow thinning full-carry cover and noncanonical selector boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT.  For every
+  PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.  For every
   pair S=F_13\A, T=F_13\B with |A|=|B|=2, the complete two-edge relation
   S x T contains two eleven-edge rainbow matchings whose carry-colour sets
   have disjoint two-point holes and hence cover all thirteen carries.  If the
@@ -34,7 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2648 -- two rainbow charts thin every eleven-sheet pair
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.**
 
 THM-2642 shows that an eleven-by-eleven relation pair is maximally thick at
 the level of carry support.  THM-2645 shows that its exact multiplicity still
@@ -321,4 +321,18 @@ The dependency-free referee uses explicit optimization-safe guards.  It
 The script and stored output have the LF-normalized SHA-256 hashes declared
 in the frontmatter.
 
-QED (candidate; independent audit pending).
+One independent immutable audit rederived both affine charts, the two
+matched-wall nonlinear templates, their transported hole formulas, the
+`11,154+1,014` chart census, the one/three-edge overlap split, the `21/19`
+retained-edge counts, and the abstract-selector versus physical-packet
+boundary.  It also replayed the exact companion in normal and optimized
+modes against the stored transcript.
+
+A second independent immutable audit rederived the strengthened incidence
+claim from `w=1^4 2^9`: rational cyclotomic irreducibility forces every one
+of the twelve charged modes to survive, while normalized Parseval gives
+exactly `36/169` centered energy and hence a mode of square at least `3/169`.
+Both audits independently reproduced the `73,008` character guards and the
+declared LF-normalized hashes.
+
+QED.
