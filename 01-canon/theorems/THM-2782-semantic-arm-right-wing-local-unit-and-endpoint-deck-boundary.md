@@ -2,8 +2,8 @@
 id: THM-2782
 title: "Semantic-arm right-wing local unit and endpoint-deck boundary"
 status: >
-  RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-  INDEPENDENT AUDIT.  Three explicit rail-eight right-wing packets retain
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Three explicit
+  rail-eight right-wing packets retain
   the physical E3 -> Q_(3,{1,2}) target word, both relative-present cuts,
   root one, carry six, and exact positive weighted mass.  At clock one the
   three-arm
@@ -13,9 +13,15 @@ status: >
   coefficient fails to descend around that quotient and the adjacent
   low-digit cospan alternates zero/nonzero endpoint coefficients.  No full
   physical H13 action, allocated THM-2625 endpoint, chart/root transition,
-  row exclusion, or LRC(14) conclusion is proved.  Until independent
-  promotion, no proved result may depend on this candidate.
+  row exclusion, or LRC(14) conclusion is proved.
 source: root/semantic-arm-right-wing-attachment-2026-07-28
+audit: >
+  audit-2782-2026-07-28 independently replayed normal, optimized, and stored
+  output; verified both LF hashes; rederived the valuation-one contents,
+  source-weighted masses, augmentation inverse and decoded vector, all 169
+  digit-action identities, central-lift spectrum, quotient-descent hostile,
+  and adjacent-base cospan; and audited root-one/carry-six, inherited
+  root-zero-gauge, and nonallocated-endpoint scope: ACCEPT.
 depends_on:
   - THM-2712-semantic-following-congruence-lock-and-address-coboundary-descent
   - THM-2749-fully-marked-root-zero-clutch-and-target-character-profile
@@ -34,8 +40,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2782 -- the right wing has a physical semantic central segment, but it does not descend
 
-**RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2771 proves a complete coefficient Bockstein for the physical
 `C_7 x C_13` right wing, but leaves its target convolution unattached to a
@@ -444,4 +449,13 @@ No full physical Heisenberg action, quotient-descended current,
 carrier-allocation square, THM-2542 root transition, common source-owner
 endpoint, scalar-row exclusion, or LRC(14) conclusion is proved.
 
-**Awaiting independent audit; not QED.**
+The independent hostile audit replayed normal and optimized execution against
+the stored output and exact LF hashes, and independently rederived the
+valuation-one contents, weighted-mass law, Bockstein inverse and decoded
+vector, all digit actions, the central-lift spectrum, the descent hostile, and
+the two cospan mismatches.  It also verified that the selected target is
+literally root one/carry six, while root zero is only the inherited clutch
+gauge, and that the central segment is not an allocated endpoint-origin orbit.
+No defect remained.
+
+QED.
