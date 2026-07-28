@@ -161,6 +161,45 @@ def frobenius_squared(a):
     return sum((entry * entry for row in a for entry in row), Fraction(0))
 
 
+def reduce_mod_two(a):
+    answer = []
+    for row in a:
+        reduced = []
+        for entry in row:
+            require(entry.denominator % 2 == 1, "odd projector denominator")
+            reduced.append(entry.numerator % 2)
+        answer.append(tuple(reduced))
+    return tuple(answer)
+
+
+def matrix_rank_mod_two(a):
+    rows = [list(row) for row in a]
+    rank = 0
+    for col in range(len(rows[0])):
+        pivot = next(
+            (i for i in range(rank, len(rows)) if rows[i][col]), None
+        )
+        if pivot is None:
+            continue
+        rows[rank], rows[pivot] = rows[pivot], rows[rank]
+        for i in range(len(rows)):
+            if i != rank and rows[i][col]:
+                rows[i] = [x ^ y for x, y in zip(rows[i], rows[rank])]
+        rank += 1
+    return rank
+
+
+def matrix_vector_mod_two(a, v):
+    return tuple(
+        sum((a[i][j] * v[j] for j in range(len(v))), 0) % 2
+        for i in range(len(a))
+    )
+
+
+def xor_vectors(*vectors):
+    return tuple(sum(entries) % 2 for entries in zip(*vectors))
+
+
 def cyclic_orbits(p):
     group = generated_group((p,))
     unseen = set(range(4))
@@ -209,6 +248,9 @@ def main() -> None:
     zero_binary_types = []
     nonzero_binary_types = []
     nonzero_contingencies = []
+    nonzero_mod_two_ranks = []
+    nonzero_mod_two_orbit_spans = []
+    canonical_mod_two_lines = []
 
     for a, b in cocycles:
         sigma_perm = affine_perm(I2, a)
@@ -252,6 +294,31 @@ def main() -> None:
             nonzero_binary_types.append(cycle_type(sigma_perm))
             nonzero_contingencies.append(contingency(sigma_perm, tau_perm))
 
+            off_two = reduce_mod_two(off)
+            tau_two = reduce_mod_two(tau)
+            rank_two = matrix_rank_mod_two(off_two)
+            nonzero_mod_two_ranks.append(rank_two)
+            require(rank_two == 1, "mod-two projector image line")
+            columns = tuple(
+                tuple(off_two[i][j] for i in range(4)) for j in range(4)
+            )
+            image_vector = next(v for v in columns if any(v))
+            image_orbit = (
+                image_vector,
+                matrix_vector_mod_two(tau_two, image_vector),
+                matrix_vector_mod_two(
+                    tau_two, matrix_vector_mod_two(tau_two, image_vector)
+                ),
+            )
+            require(len(set(image_orbit)) == 3, "three charged image lines")
+            require(xor_vectors(*image_orbit) == (0, 0, 0, 0),
+                    "standard-plane orbit relation")
+            orbit_span = matrix_rank_mod_two(tuple(zip(*image_orbit)))
+            nonzero_mod_two_orbit_spans.append(orbit_span)
+            require(orbit_span == 2, "standard-plane orbit span")
+            if b == ZERO:
+                canonical_mod_two_lines.append(image_vector)
+
     require(zero_orders == [3] * 4, "zero-class C3 images")
     require(nonzero_orders == [12] * 12, "nonzero-class A4 images")
     require(zero_orbits == [(1, 3)] * 4, "zero-class orbit type")
@@ -268,6 +335,13 @@ def main() -> None:
             "A4 Hilbert--Schmidt defect")
     require(nonzero_contingencies == [((0, 1), (1, 2))] * 12,
             "A4 C3-orbit contingency")
+    require(nonzero_mod_two_ranks == [1] * 12,
+            "all A4 mod-two image ranks")
+    require(nonzero_mod_two_orbit_spans == [2] * 12,
+            "all A4 standard-plane orbit spans")
+    require(canonical_mod_two_lines
+            == [(0, 0, 1, 1), (0, 1, 0, 1), (0, 1, 1, 0)],
+            "canonical three standard-plane lines")
 
     print("THM-2746 C3-QUOTIENT A4 PROJECTOR AUDIT")
     print("affine_lifts=16 coboundaries=4 H1_classes=4")
@@ -282,6 +356,9 @@ def main() -> None:
     print(f"nonzero_class_commutator_ranks={nonzero_comm}")
     print("nonzero_class_offdiag_frobenius_squared=[8/9]*12")
     print("nonzero_class_contingency=[[0,1],[1,2]]")
+    print("nonzero_class_mod2_offdiag_ranks=[1]*12")
+    print("nonzero_class_mod2_standard_orbit_spans=[2]*12")
+    print("canonical_mod2_image_lines=[0011,0101,0110]")
     print("binary_cycle_types=zero:1^4 nonzero:2^2")
     print("triangle_relation=(sigma*tau)^3=1 for all 16 lifts")
     print("quartic_scope=marked_A4_detector_not_Keller_exclusion")

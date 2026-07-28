@@ -9,9 +9,11 @@ status: >
   every nonzero class has image A4, is transitive, and changes the binary
   generator into a fixed-point-free double translation.  On Q[V4], the
   equal-arm-to-charged block has rank one and squared Hilbert--Schmidt norm
-  8/9 exactly in the A4 classes.  Unlike the S4 class of THM-2743, this
-  class is already detected on the binary factor.  This is a marked finite
-  monodromy detector, not an A4 Keller exclusion or an LRC current.
+  8/9 exactly in the A4 classes.  Modulo two, the three nonzero class images
+  are the three lines of the standard F2[C3] plane.  Unlike the S4 class of
+  THM-2743, this class is already detected on the binary factor.  This is a
+  marked finite monodromy detector and a precise Kummer realization target,
+  not an A4 Keller exclusion or an LRC current.
 source: a4-resolvent-next-gate-scout-2026-07-28
 depends_on:
   - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
@@ -21,8 +23,8 @@ related:
   - THM-2743-c2-c3-off-diagonal-projector-rank-and-s3-s4-compatibility-defect
 script: 04-computation/c3_quotient_a4_projector_defect_thm2746.py
 output: 05-knowledge/results/c3_quotient_a4_projector_defect_thm2746.out
-script_sha256: 50e8bb8ec298e53f4dbd3b179f81e28134da69f3f26cf95b2a76c494112a2997
-output_sha256: 53434fdde687b6d725b8ad71cff928fb49aa257eeec8c2d652186d3f0f4050b5
+script_sha256: 0d3b1c4ef8a44714691a16a3b7da7105a40abb082a9eba9ab14d7f4dc7476f1f
+output_sha256: ffedcfdf40d0a4e5deed61e072a980de67e38e171043420b1cce75645ec53742
 hash_basis: LF-normalized bytes
 ---
 
@@ -201,6 +203,43 @@ rank M=1,                    rank[sigma_a,Pi]=2.              (17)
 Equations `(15)--(17)` hold on all `12` raw lifts representing the three
 nonzero cohomology classes.
 
+### 4.1 The three mod-two image lines are the standard plane
+
+The Reynolds denominators are powers of three, so reduction modulo two is
+well defined.  Equivalently, over `F2` the same projector is
+
+```text
+Pi_2=I+tau+tau^2.                                           (18)
+```
+
+Gauge `b=0` and order the delta basis by
+`V=((0,0),(1,0),(0,1),(1,1))`.  The three nonzero translation classes have
+
+```text
+im((I-Pi_2)sigma_(1,0)Pi_2) = <(0,0,1,1)>,
+im((I-Pi_2)sigma_(0,1)Pi_2) = <(0,1,0,1)>,
+im((I-Pi_2)sigma_(1,1)Pi_2) = <(0,1,1,0)>.                 (19)
+```
+
+These are exactly the three nonzero lines in
+
+```text
+W_perm={x in F2^4 : x_0=0, x_1+x_2+x_3=0}.                (20)
+```
+
+The order-three generator cycles them, and the orbit of any one line spans
+the two-dimensional standard `F2[C3]` module.  The exact companion verifies
+rank one and orbit-span two on all twelve raw nonzero lifts, not only the
+displayed gauge.
+
+This is the representation type required by THM-2655/2685 on the geometric
+Kummer side.  It is not yet that geometric carrier.  The permutation module
+of a marked root fibre and `H^1_et(R_reg,mu_2)` of the full resolvent
+normalization are different objects.  A Keller application still needs an
+equivariant realization map from `(20)` into that cohomology, together with
+the boundary-unit/class-group conditions of THM-2685.  Equations
+`(18)--(20)` identify the missing map; they do not manufacture it.
+
 ## 5. The two live quartic branches need two coordinates
 
 After THM-2633, the live transitive degree-four monodromy types are `A4` and
@@ -221,7 +260,7 @@ coordinate.
 For a marked quartic root fibre, the pair
 
 ```text
-(binary linear shadow, rank((I-Pi_3)sPi_3))                  (18)
+(binary linear shadow, rank((I-Pi_3)sPi_3))                  (21)
 ```
 
 therefore distinguishes the two live affine lift mechanisms from their
@@ -255,14 +294,16 @@ python 04-computation/c3_quotient_a4_projector_defect_thm2746.py
 python -O 04-computation/c3_quotient_a4_projector_defect_thm2746.py
 ```
 
-Both executions byte-match the stored `18`-line transcript
+Both executions byte-match the stored `21`-line transcript
 `05-knowledge/results/c3_quotient_a4_projector_defect_thm2746.out`.  The
 companion uses exact rational arithmetic and explicit exceptions, with no
 optimized-away assertions.  It enumerates all `16` cocycles and four
 coboundaries, checks the isolated `C3` and triangle relations, closes every
 generated group, computes every orbit and binary cycle type, and verifies
 all `16` projector ranks plus the twelve contingency matrices and exact
-norms.
+norms.  It also reduces every off-diagonal block modulo two and checks the
+twelve rank-one image lines, their two-dimensional `C3` orbit spans, and the
+three canonical vectors in `(19)`.
 
 ## 8. Boundary ledger
 
@@ -271,13 +312,14 @@ PROVED HERE (candidate):  H1(C2*C3,V)=V for the cyclic quotient;
                           C3 versus transitive A4 image dichotomy;
                           general orbit-contingency norm formula;
                           exact A4 rank-one / 8/9 leakage;
+                          mod-two standard-plane image orbit;
                           two-coordinate A4/S4 marked detector.
 
 NOT PROVED:               polynomial/Keller realization of the marked lift;
                           exclusion of A4 or S4 monodromy;
                           common physical LRC binary/ternary torsor;
                           endpoint-current or owner-phase transport;
-                          JC(2), DC(2), or LRC(14).                         (19)
+                          JC(2), DC(2), or LRC(14).                         (22)
 ```
 
 QED (candidate).

@@ -11,6 +11,9 @@ zero_class_commutator_ranks=[0, 0, 0, 0]
 nonzero_class_commutator_ranks=[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 nonzero_class_offdiag_frobenius_squared=[8/9]*12
 nonzero_class_contingency=[[0,1],[1,2]]
+nonzero_class_mod2_offdiag_ranks=[1]*12
+nonzero_class_mod2_standard_orbit_spans=[2]*12
+canonical_mod2_image_lines=[0011,0101,0110]
 binary_cycle_types=zero:1^4 nonzero:2^2
 triangle_relation=(sigma*tau)^3=1 for all 16 lifts
 quartic_scope=marked_A4_detector_not_Keller_exclusion
