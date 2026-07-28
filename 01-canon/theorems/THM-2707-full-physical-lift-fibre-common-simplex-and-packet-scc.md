@@ -1,5 +1,5 @@
 ---
-id: THM-2706
+id: THM-2707
 title: "Full physical lift fibre, common simplex, and fixed-packet SCC"
 status: "RESERVED / UNPROVED EMPTY STUB"
 source: codex/thm2694-full-lift-fibre-scout-2026-07-28
@@ -7,7 +7,7 @@ depends_on: []
 related: []
 ---
 
-# THM-2706 -- full physical lift fibre, common simplex, and fixed-packet SCC
+# THM-2707 -- full physical lift fibre, common simplex, and fixed-packet SCC
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
