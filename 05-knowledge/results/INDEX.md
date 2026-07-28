@@ -42,6 +42,13 @@
   is a complete directed eleven-partite SCC with `10,177,910` edges.  Two
   exact loops have trivial pure translation holonomy but no semantic current.
   Hashes: `f05a07b2` / `614085b0`.
+- `lrc14_following_atom_based_macro_probe_20260728.py` -> matching `.out`
+  [FINITE-EXACT THM-2707 BASED-MACRO REFINEMENT].  The full frozen THM-2680
+  following atom holds on the whole common interval at exactly the `304`
+  residue-zero packets.  Every ordered atom-endpoint pair has all `3042`
+  other-residue packets as physical two-step midpoints, giving `281,129,472`
+  based macro paths but no target action or relation-index identification.
+  Hashes: `db2aef5f` / `de0988d6`.
 - `jacobian_s4_polynomial_graph_all_linear_planes_thm2709.py` -> matching
   `.out` [THM-2709 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   Pluecker coordinates classify

@@ -2,7 +2,7 @@
 id: THM-2701
 title: "Literal singleton-word one-step dilation nilpotence and the guard-debt exit"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  On the canonical
+  PROVED + VERIFIED-EXACT; BASE THEOREM INDEPENDENTLY AUDITED.  On the canonical
   typed row, let Q_a and Q_b be the literal THM-2305 pure terminal words,
   including guard safety and the unshifted source-c1 safety factor.  Under
   B(y)={13y}, every mixed six-state word in {Q_a,Q_b} is empty, while the
@@ -15,11 +15,10 @@ status: >
   guard-danger and its a vertices are unshifted-c1-danger.  This enriched
   edge-debt grammar has an intrinsic period-four base SCC, but no chain map
   to THM-2305 endpoints, target current, scalar row, or LRC(14) conclusion is
-  proved.  The central-half base B_1(y)={13y+1/2} also has every literal
-  six-state word empty, and B_1^k=B^k at the prescribed clocks k=2,4,6.
-  Moreover the current guard/source debt operator span is target-null under
-  the proved endpoint covectors; a lawful escape must add a paired
-  blocker-graft dipole on common ancestry.  On the THM-2698 half-cycle
+  proved.  THM-2710 separately owns the central-half literal-word theorem.
+  The exact addenda here show that the current guard/source debt operator span
+  is target-null under the proved endpoint covectors; a lawful escape must add
+  a paired blocker-graft dipole on common ancestry.  On the THM-2698 half-cycle
   cylinders every provisional paired pivot has all twelve moving
   `C_13` characters nonzero, but the atomic left relation residue is absent,
   so no full endpoint character is yet defined.
@@ -36,6 +35,7 @@ related:
   - THM-2640-predecessor-carry-private-root-atlas-and-target-action-clutching-no-go
   - THM-2693-odometer-skew-product-three-event-escape-and-uniform-delayed-depth-four-nilpotence
   - THM-2698-central-half-odometer-full-local-cycle-and-semantic-sidecar-boundary
+  - THM-2710-central-half-phase-literal-word-nilpotence-and-prescribed-clock-invisibility
 script: 04-computation/lrc14_literal_singleton_word_nilpotence_thm2701.py
 output: 05-knowledge/results/lrc14_literal_singleton_word_nilpotence_thm2701.out
 script_sha256: 523618278df6d5762c06598c56bf5c54a0f441dc61a2a0ccc6dc4a316529175b
@@ -45,7 +45,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2701 -- literal semantic words die at six; the survivor is an edge debt
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+**PROVED + VERIFIED-EXACT; BASE THEOREM INDEPENDENTLY AUDITED.**
 
 The phase-scheduled BABA carrier found after THM-2693 has positive rail,
 present, private-root, and primitive-unit data.  Its remaining target label
@@ -485,74 +485,16 @@ The theorem is confined to the canonical typed row and the one-step base map
 category, or a different row.  The row is a typed non-cover control; no one
 of the `165` scalar obligations is removed, and LRC(14) remains open.
 
-## 8. Central-half addendum: the prescribed semantic clocks do not change
+## 8. Central-half route: canonical ownership
 
-Put
-
-```text
-B_1(y)={13y+1/2}.
-```
-
-Then
-
-```text
-B_1^k(y)={13^k y+(13^k-1)/24}.                           (39)
-```
-
-Because `13^2=1 mod24`, the affine constant in `(39)` is integral for each
-prescribed THM-2305 clock:
-
-```text
-k=2,4,6:       (13^k-1)/24=7,1190,201117.                (40)
-```
-
-Hence `B_1^k=B^k` on every actual atom-to-word span in this row.  The half
-phase repairs odd intermediate packet states but cannot create a new
-prescribed-clock semantic endpoint.
-
-The one-step literal `B_1` language is also nilpotent by six states.  Since
-`B_1^2=B^2`, a literal `Q_a` at state `j` makes the unshifted source `c1`
-dangerous at state `j+2`:
-
-```text
-c1 B_1^2(y)=13^3y=c2y mod1.                              (41)
-```
-
-If the first four letters are instead `b`, the first two `b` teeth give, at
-`z=B_1^5y`, the same pair `D_2(z),D_26(z)` as in Section 3; they force speed
-`14` danger at state five.  The `64` words split into exact certificate
-counts
-
-```text
-32+16+8+4              by the first a at states 0,1,2,3;
-4                      by b at states 0,1 and speed 14 at state 5. (42)
-```
-
-No sharp index below six is asserted: the strict point
-`12894291/80000000` realizes `bbba` for four states.
-
-At the THM-2698 fixed phases `11/24,13/24` and the transverse phases
-`4/17,13/17`, the guard, five ordinary safeties, target-`a` danger, and
-target-`b` safety all hold.  Literal `Q_a` fails exactly at the unshifted
-`c1` complement, with distances `1/24` and `1/17`.  None of the corresponding
-physical event centres lies in an exclusive source `E_j`.  Thus these local
-cycles are source-clock-debt carriers, not missing terminal words.
-
-The exact secondary companion is
-
-```text
-04-computation/lrc14_phase_cycle_semantic_gate_probe_20260728.py
-05-knowledge/results/lrc14_phase_cycle_semantic_gate_probe_20260728.out
-```
-
-with SHA-256 values
-
-```text
-a34618cf8d2d7266db44c750bb56ef4c40922888f92ec0f31a4619049b09872a
-e6e5c6db41aad1e20c977eda3499875b34ede56c56a35b281eb79e2c068714d6
-```
-
-Normal and optimized executions byte-match.
+THM-2710 proves and audits the central-half facts previously recorded here:
+`B_1^k=B^k` at the prescribed clocks `k=2,4,6`, every six-state literal
+`B_1` word is empty, and the half and transverse packet cycles fail the
+unshifted-`c1`-safe and exclusive-source endpoint predicates.  It also records
+the genuine odd-delay predicate repair and the doubled reflection-sheet debt.
+Those proofs and their exact companion are not duplicated here.  Sections
+9--10 use only the resulting location of the open problem: an enriched debt
+carrier, not another literal endpoint word.
 
 ## 9. Target-null debt-cone addendum
 
@@ -570,13 +512,13 @@ Lambda = [0 0 -1  0 1 0],      rho = [-1  1]
                                        [ 0  0]
                                        [ 0  0]
                                        [ 0  0]
-                                       [ 0  0].          (43)
+                                       [ 0  0].          (39)
 ```
 
 Although `rank(Lambda)=2`, exact multiplication gives
 
 ```text
-Lambda rho=0.                                             (44)
+Lambda rho=0.                                             (40)
 ```
 
 Thus every signed combination generated by guard complementation and
@@ -590,10 +532,10 @@ The smallest formal nonzero columns are `k_a` or `k_b`; the smallest lawful
 directions are the paired dipoles
 
 ```text
-D_a=e_a-e_(k_a),              D_c=e_c-e_(k_b),            (45)
+D_a=e_a-e_(k_a),              D_c=e_c-e_(k_b),            (41)
 ```
 
-which map to `2I_2`.  A graft complement alone does not realize `(45)` on
+which map to `2I_2`.  A graft complement alone does not realize `(41)` on
 the debt ancestry.  The next decisive test must insert the paired
 blocker-graft table on one exact debt cylinder and retain the left endpoint
 residue, not only the moving residue.
@@ -615,8 +557,8 @@ bcecc1c193a99dba2ba5ac24713bd4cde2fe298563c1d08998c7d2ac8fd63de5
 This no-go is confined to the operator span generated by the proved debt
 operations and endpoint covectors.  It does not forbid a new paired dipole,
 an actual common-ancestry chain map, or re-rooting at a different source.
-Together with Section 8 it does forbid another literal-endpoint search on the
-same `B` or `B_1` categories.
+Together with THM-2710 it forbids another literal-endpoint search on the same
+`B` or `B_1` categories.
 
 ## 10. Paired-cylinder addendum: the moving characters survive
 
@@ -627,27 +569,27 @@ THM-2698 event cylinder.  Use
 a=13^3,              c=2*13^5,
 (x0,r0)=(55232507/(24*13^6),7),
 (x1,r1)=(58313459/(24*13^6),3),
-epsilon=1/301082946198216.                              (46)
+epsilon=1/301082946198216.                              (42)
 ```
 
 For every unresolved pivot `k in {27,40,53,66}`, define
 
 ```text
 K_(i,k)(s)=integral_(|x-x_i|<epsilon)
- d_1(cx-r_i/13) u_1(ax-s/13) u_1(kx+s/13) dx.           (47)
+ d_1(cx-r_i/13) u_1(ax-s/13) u_1(kx+s/13) dx.           (43)
 ```
 
 All three factors are constant on the interval.  Exact wall arithmetic gives
 
 ```text
-K_(i,k)(s)=2 epsilon * 1_(s in S_(i,k)),                 (48)
+K_(i,k)(s)=2 epsilon * 1_(s in S_(i,k)),                 (44)
 ```
 
 where every one of the eight support sets `S_(i,k)` is a nonempty proper
 subset of `F_13`.  For every `h!=0`, its Fourier character is nonzero:
 
 ```text
-sum_(s in S_(i,k)) zeta_13^(h s) !=0.                   (49)
+sum_(s in S_(i,k)) zeta_13^(h s) !=0.                   (45)
 ```
 
 Indeed a vanishing sum would make the zero--one polynomial
@@ -657,7 +599,7 @@ most twelve, all thirteen coefficients would have to be equal, contrary to
 cyclotomic remainders directly.
 
 Thus numerical moving-endpoint cancellation is not the next obstruction.
-For `eta=e_a-e_(k_a)`, `(49)` supplies the moving term `-eta.v`.  A THM-2334
+For `eta=e_a-e_(k_a)`, `(45)` supplies the moving term `-eta.v`.  A THM-2334
 endpoint character requires `eta.(u-v)`, but the half-cycle packet retains no
 atomic left-present relation index `u`.  Its rail/root source labels are not
 relation indices.  Hence `eta.u` is undefined, not zero.  The pivot identity
