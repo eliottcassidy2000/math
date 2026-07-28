@@ -12,4 +12,8 @@ later_signature_hist=[((0, 1), 158), ((0, 10), 484), ((0, 11), 1254), ((1, 1), 1
 later_ambiguous_hist=[((0, 10), 484), ((0, 11), 1254), ((1, 10), 286), ((1, 11), 1452)]
 later_signatures=3792 ambiguous=3476 functional=316
 later_ambiguous_base_cells=84/84
+clock_retained_hist=[(1, 712), (7, 1452), (8, 484), (9, 2904), (10, 2948), (11, 1980)]
+clock_retained_signatures=10480 ambiguous=9768 base_cells=84/84
+affine_bijections=156 visible_signatures=888 support_floor=5 max_support_hist=[(9, 74), (10, 74), (11, 8)]
+opposite_graph_physical_spectrum=((7, 132), (8, 143), (9, 266), (10, 257), (11, 90))
 verdict=PASS: old wall clutches affinely; later probe needs successor-sector/carry data

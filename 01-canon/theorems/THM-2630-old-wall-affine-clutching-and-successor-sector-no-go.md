@@ -16,10 +16,16 @@ status: >
   left/right edge on THM-2616's raw q=h diagonal gives 3,792 signatures,
   of which 3,476 are nonfunctional; 158 of 162 rails and every one of the
   84 base cells retain multiple h values at fixed (theta,r,epsilon).
-  Even the later half-bit and middle-wall state leave seven successor
-  sectors.  The missing datum is a physical successor-sector/carry sidecar,
-  not another binary wall choice.  No row exclusion or LRC(14) conclusion
-  follows.
+  Retaining the complete future-owner clock leaves 9,768 of 10,480 fully
+  labelled signatures nonfunctional.  Exhausting all 156 affine bijections
+  r=alpha*h+beta on the 888 visible clock/edge signatures leaves at least
+  five h values everywhere.  In particular THM-2629's coefficient-optimal
+  r=-h-1 graph has physical support histogram
+  7^132,8^143,9^266,10^257,11^90 and is not a successor checksum.  Even the
+  later half-bit and middle-wall state leave seven successor sectors.  The
+  missing datum is a physical successor-sector/carry sidecar, not another
+  binary wall, owner-clock label, or affine coefficient graph.  No row
+  exclusion or LRC(14) conclusion follows.
 source: deep-energy-audit-2026-07-28-wall-successor-square
 depends_on:
   - THM-2586-depth-five-arrival-to-future-root-diagonal
@@ -33,8 +39,8 @@ related:
   - THM-2629-fixed-deep-affine-graph-spectrum-and-puncture-cancellation-boundary
 script: 04-computation/lrc14_old_wall_successor_sector_thm2630.py
 output: 05-knowledge/results/lrc14_old_wall_successor_sector_thm2630.out
-script_sha256: 32b4f7b27cdd1c247c1eb6327ea663d498391e1930dfd20a899b88277b54df6f
-output_sha256: f43862fb7273423cc9f7a860564feaead9532cd1a9f6d63f1c3104bdd55c1753
+script_sha256: 06f4eeddb498e03b1cfcd94af3d9ffc57a62144e79ec4649329b888d8810f701
+output_sha256: cafeefc7d993cc12da0158464110e9b72d3201259e6d437803a1cbaff8a455b0
 hash_basis: LF-normalized bytes
 ---
 
@@ -343,6 +349,60 @@ contains a nonfunctional signature.  Equations (28)--(29) are support of the
 lawful raw diagonal carrier.  They do not assign an aggregate unit
 Bockstein to one half-tooth sheet.
 
+Retaining the future-owner clock `ell_5` rather than taking the union in
+(27) gives the strictly finer signatures
+
+```text
+(s,ell_4,theta,ell_5,r,epsilon) -> {positive h values}.   (29a)
+```
+
+Their exact census is
+
+```text
+support size          1     7    8     9     10    11
+signatures          712  1452  484  2904   2948  1980,
+
+total=10,480,       nonfunctional=9,768,       ambiguous base cells=84/84.
+                                                               (29b)
+```
+
+Thus the already present seven-valued owner clock is not the missing
+seven-sector coordinate.  Some fully labelled signatures still carry all
+eleven allowed future digits.
+
+There is also a direct comparison with THM-2629's affine optimum.  For each
+of the `888` visible tuples `(s,ell_4,theta,ell_5,epsilon)` and every affine
+bijection
+
+```text
+r=alpha h+beta,                    alpha !=0,             (29c)
+```
+
+retain the `h` for which the corresponding half-tooth coefficient is
+positive, deleting the unique `h` at which `r=0`.  Exhausting all `156`
+choices in (29c) gives at least five surviving `h` values in **every**
+visible tuple.  If each affine map is scored by its largest fibre, the exact
+histogram is
+
+```text
+largest fibre          9    10    11
+affine bijections     74    74     8.                    (29d)
+```
+
+For the unique coefficient-level unit optimum from THM-2629,
+`r=-h-1`, the complete physical fibre histogram is
+
+```text
+size                   7    8    9    10   11
+visible tuples        132  143  266   257   90.           (29e)
+```
+
+Consequently the opposite graph is not a hidden chronological checksum on
+this carrier.  It belongs to the worst `11`-fibre class in (29d), even
+though it is uniquely best for THM-2629's nonlinear seven-clock unit score.
+This cleanly separates spectral cancellation from physical successor
+selection.
+
 ## 6. Holotopy square and exact stopping boundary
 
 The completed and broken squares are
@@ -376,6 +436,7 @@ The exact connection ledger is:
 | sharp old ambiguity | one edge bit on the open middle wall |
 | first failed implication | old `tau` and later `r` have the same residue alphabet, but different speeds/times |
 | later hostile | fixed `(theta,r,epsilon)` supports up to eleven `h` values on the canonical diagonal |
+| failed refinements | later edge bit, future-owner clock, and every affine bijection `r=alpha h+beta` |
 | minimal local repair | fresh `kappa` plus the seven-sector position of `z`, equivalently `h` |
 | still missing after repair | one principal adjacent-clock action and semantic endpoint/current transport |
 
@@ -402,8 +463,9 @@ The companion rebuilds the old wall independently from the exact packet,
 checks the strict seams, all affine gauges, both frozen-carrier censuses, and
 the full common-`x` middle restriction.  Four deterministic shards then
 split every nonempty later probe tooth on the raw `q=h` carrier, check all
-`61,248` additive partitions, and reproduce (28)--(29).  A separate rational
-construction verifies (22)--(26).  Every logical decision is an explicit
-optimized-mode guard.
+`61,248` additive partitions, and reproduce (28)--(29b).  It retains the
+future clock, exhausts all `156` affine bijections, and checks (29c)--(29e).
+A separate rational construction verifies (22)--(26).  Every logical
+decision is an explicit optimized-mode guard.
 
 QED (candidate; independent hostile audit pending).

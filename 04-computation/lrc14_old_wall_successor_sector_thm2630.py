@@ -184,12 +184,14 @@ def later_probe_shard(bounds):
     require(0 <= start < stop <= len(rails), "invalid later-probe shard")
 
     records = []
+    clock_records = []
     ambiguous_rails = 0
     partition_checks = 0
     for s, ell4, root, pieces in rails[start:stop]:
         theta = (root - 12) % P
         require(theta in (0, 1), "middle rail left its theta chart")
         support = defaultdict(int)
+        clock_support = defaultdict(int)
         for h in range(P):
             shift = (-h) % P
             for ell5 in range(Q7):
@@ -222,6 +224,7 @@ def later_probe_shard(bounds):
                         split_values.append(value)
                         if value:
                             support[probe, epsilon] |= 1 << h
+                            clock_support[ell5, probe, epsilon] |= 1 << h
                     require(sum(split_values) == whole_value,
                             "left/right later tooth did not partition")
                     partition_checks += 1
@@ -232,7 +235,13 @@ def later_probe_shard(bounds):
         ambiguous_rails += int(any(bit_count(mask) > 1
                                    for _, mask in rail_records))
         records.extend(rail_records)
-    return bounds, tuple(records), ambiguous_rails, partition_checks
+        clock_records.extend(
+            ((s, ell4, theta, ell5, probe, epsilon), mask)
+            for (ell5, probe, epsilon), mask
+            in sorted(clock_support.items())
+        )
+    return (bounds, tuple(records), tuple(clock_records), ambiguous_rails,
+            partition_checks)
 
 
 def strict_local_hostiles():
@@ -314,14 +323,19 @@ def main():
             "later-probe shards returned out of order")
 
     signatures = {}
+    clock_signatures = {}
     ambiguous_rails = 0
     partition_checks = 0
-    for _, records, ambiguous, checks in shard_results:
+    for _, records, clock_records, ambiguous, checks in shard_results:
         ambiguous_rails += ambiguous
         partition_checks += checks
         for key, mask in records:
             require(key not in signatures, "duplicate later-probe signature")
             signatures[key] = mask
+        for key, mask in clock_records:
+            require(key not in clock_signatures,
+                    "duplicate clock-retained later-probe signature")
+            clock_signatures[key] = mask
 
     signature_hist = Counter(
         (key[2], bit_count(mask)) for key, mask in signatures.items()
@@ -338,6 +352,50 @@ def main():
         in signatures.items() if bit_count(mask) > 1
     }
     future_mask = sum(1 << h for h in range(1, 12))
+
+    # Retaining the complete future-owner clock still leaves almost every
+    # later tooth signature nonfunctional.  This is a strictly finer test
+    # than the clock-united census above.
+    clock_hist = Counter(bit_count(mask)
+                         for mask in clock_signatures.values())
+    clock_ambiguous = sum(bit_count(mask) > 1
+                          for mask in clock_signatures.values())
+    clock_ambiguous_cells = {
+        (s, ell4) for (s, ell4, theta, ell5, probe, epsilon), mask
+        in clock_signatures.items() if bit_count(mask) > 1
+    }
+
+    # Test every affine coefficient graph r=alpha*h+beta against this fully
+    # clock-labelled physical support.  The identically-zero graph is the
+    # forbidden absent probe and is excluded.  More importantly, no affine
+    # bijection (alpha nonzero) is functional at even one visible signature.
+    visible = sorted({
+        (s, ell4, theta, ell5, epsilon)
+        for s, ell4, theta, ell5, probe, epsilon in clock_signatures
+    })
+    graph_rows = []
+    for alpha in range(P):
+        for beta in range(P):
+            if (alpha, beta) == (0, 0):
+                continue
+            sizes = []
+            for s, ell4, theta, ell5, epsilon in visible:
+                mask = 0
+                for h in range(P):
+                    probe = (alpha * h + beta) % P
+                    if probe and clock_signatures.get(
+                        (s, ell4, theta, ell5, probe, epsilon), 0
+                    ) >> h & 1:
+                        mask |= 1 << h
+                sizes.append(bit_count(mask))
+            graph_rows.append((
+                alpha, beta, max(sizes), min(sizes),
+                tuple(sorted(Counter(sizes).items())),
+            ))
+    bijective_graph_rows = [row for row in graph_rows if row[0] != 0]
+    graph_max_hist = Counter(row[2] for row in bijective_graph_rows)
+    opposite_graph = next(row for row in graph_rows
+                          if row[:2] == (P - 1, P - 1))
 
     require(partition_checks == 61_248,
             "later-tooth partition-check universe changed")
@@ -358,6 +416,28 @@ def main():
                     (0, 10): 484, (1, 10): 286}),
         "later-probe ambiguous support histogram changed",
     )
+    require(
+        len(clock_signatures) == 10_480
+        and clock_hist
+        == Counter({10: 2948, 9: 2904, 11: 1980,
+                    7: 1452, 1: 712, 8: 484}),
+        "clock-retained signature census changed",
+    )
+    require(clock_ambiguous == 9_768
+            and len(clock_ambiguous_cells) == 84,
+            "future clock unexpectedly repaired the successor map")
+    require(len(visible) == 888 and len(graph_rows) == 168
+            and len(bijective_graph_rows) == 156,
+            "affine graph universe changed")
+    require(all(row[3] >= 5 for row in bijective_graph_rows)
+            and graph_max_hist == Counter({9: 74, 10: 74, 11: 8}),
+            "an affine bijection became locally functional")
+    require(
+        opposite_graph
+        == (12, 12, 11, 7,
+            ((7, 132), (8, 143), (9, 266), (10, 257), (11, 90))),
+        "opposite affine graph spectrum changed",
+    )
 
     print("THM-2630 exact old-wall/successor-sector controls")
     print(f"priority_wall_patterns={sorted(priority_patterns.items())}")
@@ -373,6 +453,10 @@ def main():
     print(f"later_ambiguous_hist={sorted(ambiguous_hist.items())}")
     print(f"later_signatures={len(signatures)} ambiguous={ambiguous_signatures} functional={functional_signatures}")
     print(f"later_ambiguous_base_cells={len(ambiguous_cells)}/84")
+    print(f"clock_retained_hist={sorted(clock_hist.items())}")
+    print(f"clock_retained_signatures={len(clock_signatures)} ambiguous={clock_ambiguous} base_cells={len(clock_ambiguous_cells)}/84")
+    print(f"affine_bijections={len(bijective_graph_rows)} visible_signatures={len(visible)} support_floor={min(row[3] for row in bijective_graph_rows)} max_support_hist={sorted(graph_max_hist.items())}")
+    print(f"opposite_graph_physical_spectrum={opposite_graph[4]}")
     print("verdict=PASS: old wall clutches affinely; later probe needs successor-sector/carry data")
 
 
