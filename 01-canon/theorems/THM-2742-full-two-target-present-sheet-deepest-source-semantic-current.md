@@ -1,5 +1,5 @@
 ---
-id: THM-2741
+id: THM-2742
 title: "Full two-target present sheet and deepest-source semantic current"
 status: "RESERVED / UNPROVED EMPTY STUB"
 source: root/full-two-target-present-sheet-2026-07-28
@@ -11,7 +11,7 @@ related:
   - THM-2720-unshifted-deepest-source-present-packet-global-disjointness
 ---
 
-# THM-2741 -- full two-target present sheet and deepest-source semantic current
+# THM-2742 -- full two-target present sheet and deepest-source semantic current
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
