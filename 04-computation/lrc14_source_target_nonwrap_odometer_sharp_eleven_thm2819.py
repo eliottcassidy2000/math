@@ -295,7 +295,17 @@ def main():
 
     # The only canonical wrap is target epsilon=12.  Pulling it back through
     # the endpoint translation gives integer source lift 13, not lift 0.
-    # Its residual displacement 13*tau=91/R is nontrivial physically.
+    # Modulo the deep-root coordinate this is source label zero at carry 12,
+    # so THM-2809's full 104-row unit/half scan forces the unique h=6 row
+    # before the nonzero physical displacement is applied.
+    for rail_index in range(RAIL_COUNT):
+        require(
+            source_face.compatible_rows(flags, rail_index, 0)
+            == ((0, 1, 1, 6, 12, 12, 12, (168, 181)),),
+            f"wrapped label-12 forced row changed on rail {rail_index}",
+        )
+
+    # The residual displacement 13*tau=91/R is nontrivial physically.
     for clock in range(7):
         target_twelve = preimage(present[clock, 7], 12)
         source_pullback = translate(target_twelve, -SHIFT)

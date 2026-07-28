@@ -27,7 +27,7 @@ related:
   - THM-2687-slope-seven-global-configuration-switching-positive-thirteenfold-no-go
 script: 04-computation/lrc14_source_target_nonwrap_odometer_sharp_eleven_thm2819.py
 output: 05-knowledge/results/lrc14_source_target_nonwrap_odometer_sharp_eleven_thm2819.out
-script_sha256: 06cc68b2b962302513dc55f1612267459ba9a8a95b41ca30be4c1d7ff7592553
+script_sha256: 58ca287ce8394f8008730781e5a2d851b466730ff08ffdaafc31fbbfb48d8a8c
 output_sha256: dfa30a53cfc17d00a5d6edc056952638d284614525e2c8fb1d983ba0ca528f7a
 hash_basis: LF-normalized bytes
 ---
@@ -230,16 +230,29 @@ removed by reducing the label modulo `13`.
 
 ## 6. The odometer is killed by its C3 stabilizer
 
+At lift `13`, the carry is again `12` and the pulled private-root shift is
+zero modulo `13`.  Therefore THM-2809's complete `104`-configuration
+unit/half scan applies exactly as it did to source label zero: any wrapped
+packet that meets `H_mark` is forced to
+
+```text
+(sector,edge,kappa,h)=(0,1,1,6).                               (18)
+```
+
+In particular its present factor is `F_(ell,7)`.  This step is what makes
+the following obstruction valid for arbitrary labelwise configuration
+choices, rather than only for the displayed positive eleven-face.
+
 The wrapped chart does not survive.  The relevant deep speed is
 
 ```text
-C3=742586=2*13^5.                                               (18)
+C3=742586=2*13^5.                                               (19)
 ```
 
 Therefore
 
 ```text
-C3*(91/R)=14                         in Z.                       (19)
+C3*(91/R)=14                         in Z.                       (20)
 ```
 
 The residual translation `(17)` fixes the `C3` phase exactly.  Every
@@ -247,21 +260,21 @@ The residual translation `(17)` fixes the `C3` phase exactly.  Every
 source deep overlap is the strict danger band
 
 ```text
-H_mark=(169,181)/182.                                           (20)
+H_mark=(169,181)/182.                                           (21)
 ```
 
 Consequently
 
 ```text
 T_(-91/R) F_(ell,7) intersect H_mark=empty,
-ell=0,...,6.                                                    (21)
+ell=0,...,6.                                                    (22)
 ```
 
-The sign in `(21)` follows the preimage convention in `(3)`; invariance in
-`(19)` makes the conclusion sign-independent.
+The sign in `(22)` follows the preimage convention in `(3)`; invariance in
+`(20)` makes the conclusion sign-independent.
 
 This is the first universal failed factor, not an inference from the final
-zero.  Before applying `(20)`, the wrapped present packet still meets both
+zero.  Before applying `(21)`, the wrapped present packet still meets both
 present-complement factors with exact positive masses
 
 ```text
@@ -272,7 +285,7 @@ ell : after source-safe, after translated-target-safe
  3  : 625685860800, 581278296060
  4  : 620815595400, 578179396872
  5  : 438008061491, 407334158691
- 6  : 394663389120, 366653853720.                              (22)
+ 6  : 394663389120, 366653853720.                              (23)
 ```
 
 Intersecting the next `C3` factor gives zero in all seven rows.  No rail,
@@ -295,14 +308,14 @@ fourteen fully marked THM-2749 target rails,
 
 ```text
 maximum target-label cardinality=11,
-maximum target simplex dimension=10.                            (23)
+maximum target simplex dimension=10.                            (24)
 ```
 
 The exact failure census is
 
 ```text
 12 faces: translated label-zero future digit;
- 1 face:  odometer-wrapped label-twelve C3 gate.                 (24)
+ 1 face:  odometer-wrapped label-twelve C3 gate.                 (25)
 ```
 
 ## 8. Information ledger and stopping boundary
@@ -346,7 +359,7 @@ THM-2672, THM-2749, and THM-2809 scripts; checks every nonwrapping rail and
 present chart identity; verifies all marked source/target carrier and carry
 translations; reconstructs the target-label-zero delayed-prefix death;
 tests the integer-lift-13 wrap and the exact `C3` stabilizer; records the
-positive pre-deep masses `(22)` and zero deep masses; and directly rebuilds
+positive pre-deep masses `(23)` and zero deep masses; and directly rebuilds
 both the positive target eleven-face and the empty target twelve-face
 omitting zero.  It uses exact integer arithmetic, explicit exception gates,
 and no truth-bearing Python assertions or floating point.
