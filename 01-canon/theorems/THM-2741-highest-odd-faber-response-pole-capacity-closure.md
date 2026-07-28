@@ -13,7 +13,7 @@ status: >
   response members, the all-even zero-flux boundary, JC(2), and DC(2) remain
   open.
 source: root/highest-odd-faber-response-pole-capacity-2026-07-28
-audit: thm2705-2709-audit-2026-07-28 (independent coefficient, weight, branch, descent, and pole-pullback reconstruction)
+audit: thm2705-2709-audit-2026-07-28 and thm2694-full-lift-fibre-scout-2026-07-28 (independent recurrence/multinomial, weighted-branch, quotient-parity, response-pole, pullback, replay, and docs audits)
 depends_on:
   - THM-2719-full-split-odd-faber-generic-normalization-genus-four-hundred-nineteen
   - THM-2723-split-exact-square-prefix-rational-primitive-pole-capacity
@@ -255,6 +255,22 @@ arbitrary Keller pair, or prove `JC(2)` or `DC(2)`.  The sharp next target is
 therefore componentwise: prove that any component carrying the third-flux
 trajectory inherits at least two response branches, or classify the
 factorization locus on which the `3g` branches split into one-pole pieces.
+
+There is already a sharp arithmetic constraint on the latter escape.  If a
+physical component contains exactly one response pole of order
+`P=(150-6r)/g`, then the constant-`U` case is impossible: an affine-linear
+source response has pole order one, whereas `P>=8`.  Hence `(21)` holds, the
+unique target pole has one totally ramified source preimage, and
+
+```text
+degree(P1_source -> normalization(component))=e,
+m-1=eP.                                                (22)
+```
+
+In particular `P` divides `m-1`.  This divisibility law does not prove that
+the physical component contains one of the forced branches; it records the
+strongest surviving one-branch boundary rather than hiding it inside the
+reducible caveat.
 
 ## 7. Exact companion
 
