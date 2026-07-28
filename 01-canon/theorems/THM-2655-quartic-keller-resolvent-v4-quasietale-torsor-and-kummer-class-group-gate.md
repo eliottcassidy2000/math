@@ -13,9 +13,11 @@ status: >
   N=V4 and Q=G/V4 is C3/S3.  The irreducible character plane
   W=Hom(V4,C2) injects Q-equivariantly into H1_et(R_reg,mu2).  Kummer theory
   forces its canonical image either wholly into unit squareclasses or
-  injectively into Cl(R)[2].  Therefore a quartic survivor requires a
-  Q-standard rank-two Kummer carrier on its full Galois resolvent
-  normalization.  The even-sign-change S4 quotient realizes the class-group
+  injectively into Cl(R)[2].  Conversely the standard plane is projective as
+  an F_2[Q]-module, so either ambient occurrence lifts to a Q-equivariant
+  connected V4 Kummer torsor; this is an exact abstract-carrier criterion.
+  Therefore a quartic survivor requires a Q-standard rank-two Kummer carrier
+  on its full Galois resolvent normalization.  The even-sign-change S4 quotient realizes the class-group
   alternative sharply but has nonconstant Jacobian.  No A4/S4 exclusion,
   degree bound, JC(2), general JC, or DC(2) follows.
 source: root-long-frontiers-2026-07-28-quartic-v4-kummer-gate
@@ -199,6 +201,46 @@ Thus a factorial resolvent normalization with fewer than two independent
 unit squareclasses is impossible.  More generally one must compute the
 `Q`-module, not merely the dimensions: the three nonzero classes have to be
 cycled by `C3` or carry the full `S3` action.
+
+### 3.1 The converse: an exact abstract-carrier criterion
+
+The necessary gate above is also sufficient for existence of an abstract
+`Q`-equivariant Kummer carrier.  Let `W` denote the standard two-dimensional
+`F_2[Q]`-module.  Then
+
+```text
+W embeds in H^1_et(U,mu_2)
+ iff
+W embeds in A^*/A^(*)2 or W embeds in Cl(A)[2].           (14a)
+```
+
+Only the reverse implication needs proof.  For `Q=C3`, Maschke's theorem in
+characteristic two makes every `F_2[Q]`-module projective.  For `Q=S3`, the
+restriction of `W` to a Sylow `C2` is the regular `F_2[C2]`-module.  It is
+therefore projective on that subgroup; since the subgroup index is three,
+which is invertible in `F_2`, relative induction/restriction makes `W` a
+direct summand of an induced projective module.  Hence `W` is projective over
+`F_2[S3]` as well.
+
+If a copy of `W` embeds in `Cl(A)[2]`, pull (12) back along that copy.  The
+resulting extension of `W` by the unit squareclasses splits
+`Q`-equivariantly by projectivity, producing an embedding into
+`H^1_et(U,mu_2)`.  The unit branch is immediate.  Two independent Kummer
+characters give a connected `V4` torsor.  Finally
+
+```text
+H^2(Q,W)=0                                                (14b)
+```
+
+for `C3` by semisimplicity, and for `S3` by the normal `C3` subgroup and
+`W^C3=0`.  Thus the `Q`-action linearizes and the corresponding abstract
+extension splits as `V4 semidirect C3=A4` or
+`V4 semidirect S3=S4`.
+
+Equation (14a) is deliberately an **abstract-carrier** equivalence.  It does
+not identify the resulting cover with the graph quartic of a polynomial map,
+extend it across the Jelonek boundary, or impose the Keller equation.  Those
+are the remaining realization sidecars.
 
 ## 4. A sharp non-Keller `S4` hostile
 

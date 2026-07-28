@@ -3,7 +3,8 @@ relation_pairs=6084 matching_charts=12168 matching_edges=133848
 pair_classes={step_distinct:5070,step_matched:1014}
 atlas_chart_types={affine_all:11154,nonlinear_chosen:1014} degenerate_affine_controls=1014
 normal_form_holes={parallel_nonlinear:(3,12),antiparallel_nonlinear:(2,11)}
-minimal_repair={distance2:0,distance3:2_each_normal_form} matched_union_edges=14
+affine_anchored_repair={distance2:0,distance3:2_each_normal_form,union:14}
+unrestricted_optimum={overlap:9,union:13,parallel:(0,2)|(6,9),antiparallel:(1,12)|(5,8)}
 same_hole_nonlinear_collision=parallel_holes_(6,9)
 every_pair_holes=disjoint every_pair_colour_union=13
 cover_multiplicity_census={one:24336,two:54756}

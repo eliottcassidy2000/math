@@ -130,12 +130,14 @@ physical transverse section.  THM-2640 makes each predecessor-carry root
 private, while audited THM-2657 proves every physical slope-seven translation
 lift lives in a nonsplit `C_(13^6)` odometer extension with cocycle class `7`;
 neither supplies the target action.  THM-2642 saturates every eleven-sheet
-equivariant hull and THM-2645
-retains every charged colour.  Audited THM-2647 gives unique two-set endpoint
-deconvolution with signed norm `13/2`; repaired THM-2648 gives two minimal
-rainbow charts covering all carries.  THM-2656 shows their overlap is selector
-moduli: an equivariant atlas has the forced midpoint, while an edge-disjoint
-template bank exists after dropping that global compatibility.
+equivariant hull and THM-2645 retains every charged colour.  Audited THM-2647
+gives unique two-set endpoint deconvolution with signed norm `13/2`; repaired
+THM-2648 gives two minimal rainbow charts covering all carries.  Its matched
+wall has an affine-anchored ternary six-cycle with fourteen union edges and a
+local `C3 semidirect C2=S3` frame; unrestricted nonlinear charts attain the
+sharp thirteen-edge union by a binary four-cycle (MISTAKE-302/303).  THM-2656
+separates selector moduli: an equivariant atlas pays a forced midpoint, while
+an edge-disjoint bank exists after dropping individual reflection symmetry.
 
 Audited THM-2670 retains the predecessor state before integration.  Its
 exact seven-clock graph has 92 generic Hamilton cycles, but constant-step
@@ -384,12 +386,15 @@ Classify profiles under support operations; study analytic continuation and auto
   as a quasi-etale torsor over its quotient normalization.  Thus each live
   quartic `A4/S4` branch forces the standard rank-two `V4` character module
   into either unit squareclasses or `Cl(R)[2]` on the full degree-three/six
-  Galois resolvent normalization.  The exact even-sign-change hostile
+  Galois resolvent normalization.  The standard plane is projective over
+  `F2[C3]` and `F2[S3]`, so the converse also holds: either ambient copy is
+  exactly sufficient for an abstract equivariant connected `V4` Kummer
+  carrier, with `H^2(Q,W)=0`.  The exact even-sign-change hostile
   realizes the class-group alternative on `d^2=abc`, whose trace-zero slice
   is the `D4` surface singularity with triality, but its Jacobian is
-  nonconstant.  The next decisive test is the equivariant unit/class-group
-  computation on each actual candidate normalization, not another raw
-  discriminant comparison.  No degree bound, `A4/S4`, `G1`, `JC(2)`, or
+  nonconstant.  The remaining decisive test is therefore affine/Jelonek
+  realization of that carrier as the graph quartic of an actual Keller map,
+  not another module-extension or raw-discriminant computation.  No degree bound, `A4/S4`, `G1`, `JC(2)`, or
   `DC(2)` closure follows.  At degree eighteen, THM-2314/2316 close sparse
   supports,
   THM-2371/2376 close `H_2`, and audited THM-2406 sends `H_4` to the closed

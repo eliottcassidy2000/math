@@ -142,6 +142,13 @@ current fills every cell and every admissible parabolic sector.
 (carry/termination); THM-2411/2419 (fixed origin); and corrected
 THM-2621/MISTAKE-301 (trace loses branch residues and the `D_4` action potential); and THM-2646/HYP-2033 (the ordinary braid centre changes knot closure, while the annular LRC centre is target-invisible only after a literal descent check).
 
+## The same representation is not the same carrier
+
+**Trigger / action:** when two frontiers contain the same group module, identify the module exactly, then separately type the realization functor and test whether the module lifts through it.
+**Mechanism:** character tables preserve symmetry but forget positivity, occurrences, affine source geometry, and endpoint phase. An abstract submodule can be necessary and sufficient for a cover while still being unrealizable by the target object.
+**Counterindication:** transfer a conclusion only when an explicit functor intertwines the module action and the target predicate.
+**Evidence:** THM-2648's three `K_(3,3)` matchings and THM-2655's quartic `V4` Kummer characters are the same standard `F2[S3]` plane; LRC still needs an occurrence-labelled positive kernel, while JC still needs graph-quartic/Jelonek realization.
+
 ## After a scalar quotient, choose between a coherent lift and orbit incidence
 
 **Trigger:** a scalar average or subset statistic is exact, but the target asks whether its local pieces coexist.

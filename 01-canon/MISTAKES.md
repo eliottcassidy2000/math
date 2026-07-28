@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-303 (2026-07-28, THM-2648 edge-thinning sharpness) -- a minimum relative to the affine chart was promoted as the unrestricted minimum
+
+- **What was claimed:** the first repaired THM-2648 proved that no
+  two-edge change of the matched-wall affine rainbow remains rainbow, found a
+  three-edge repair, and called its fourteen-edge union globally sharp.
+- **First failed implication:** the hostile fixed the affine chart before
+  minimizing.  Two nonlinear rainbow charts can differ in two positions even
+  though a transposition of the affine chart cannot.  In the parallel normal
+  form the target vectors
+  `(2,3,4,6,8,5,10,7,12,9,11)` and
+  `(2,12,4,6,8,5,10,7,3,9,11)` have disjoint holes `{0,2}` and `{6,9}`, share
+  nine edges, and have union thirteen.  Subtracting one from every target
+  gives the antiparallel witness, and affine transport covers every matched
+  endpoint pair.
+- **Strongest survivor / repair:** fourteen is sharp **conditional on
+  retaining the affine chart**; its three-edge alternating six-cycle is the
+  local `K_(3,3)`/`C3 semidirect C2` mechanism.  Thirteen is the unrestricted
+  sharp value, since distinct bijections cannot differ at exactly one source;
+  it is attained by the displayed nonlinear pair through an alternating
+  four-cycle.  The resulting binary/ternary fork is structural: the binary
+  switch is globally thinner but loses the affine reference, while the
+  ternary switch pays one edge to retain it.  Always state which baseline or
+  symmetry stratum is fixed before calling a local repair minimal.
+
 ## MISTAKE-302 (2026-07-28, THM-2648 rainbow atlas census) -- a selected nonlinear atlas was reported as the universe of nonlinear charts
 
 - **What was claimed:** promoted THM-2648 said that there are exhaustively
@@ -26,8 +50,8 @@ Format per entry:
   of a two-chart cover for every pair, two-chart minimality, `1^4 2^9`
   incidence, and charged energy all survive.  THM-2648 now calls `1,014` the
   chosen nonlinear-atlas size.  Its selected matched-wall chart was sharpened
-  to a minimal alternating six-cycle: three moved edges give a sharp
-  fourteen-edge union, and the affine chart plus the two inverse repairs are
+  to an affine-anchored alternating six-cycle: three moved edges give a sharp
+  fourteen-edge union relative to that anchor, and the affine chart plus the two inverse repairs are
   the three one-factors of `K_(3,3)` with local `C_3 semidirect C_2=S_3`
   symmetry.  The occurrence-level chart bit, not carry support or residual
   reflection, is the missing physical selector.  Never label a constructed

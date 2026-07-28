@@ -148,6 +148,35 @@ def main():
     require(collision_1 != collision_2 and collision_h1 == collision_h2 == frozenset((6, 9)),
             "same-hole nonlinear occurrence collision")
 
+    unrestricted_1 = tuple(zip(range(2, 13), (2, 3, 4, 6, 8, 5, 10, 7, 12, 9, 11)))
+    unrestricted_2 = tuple(zip(range(2, 13), (2, 12, 4, 6, 8, 5, 10, 7, 3, 9, 11)))
+    _, unrestricted_h1 = verify_matching((0, 1), (0, 1), unrestricted_1, p)
+    _, unrestricted_h2 = verify_matching((0, 1), (0, 1), unrestricted_2, p)
+    require(unrestricted_h1 == frozenset((0, 2)), "unrestricted first holes")
+    require(unrestricted_h2 == frozenset((6, 9)), "unrestricted second holes")
+    require(unrestricted_h1.isdisjoint(unrestricted_h2), "unrestricted holes disjoint")
+    require(not is_affine(unrestricted_1, p) and not is_affine(unrestricted_2, p),
+            "unrestricted optimum must be nonlinear")
+    require(len(set(unrestricted_1) & set(unrestricted_2)) == 9,
+            "unrestricted optimum overlap")
+    require(len(set(unrestricted_1) | set(unrestricted_2)) == 13,
+            "unrestricted optimum union")
+    unrestricted_anti_1 = tuple((x, y - 1) for x, y in unrestricted_1)
+    unrestricted_anti_2 = tuple((x, y - 1) for x, y in unrestricted_2)
+    _, unrestricted_anti_h1 = verify_matching((0, 1), (0, 12), unrestricted_anti_1, p)
+    _, unrestricted_anti_h2 = verify_matching((0, 1), (0, 12), unrestricted_anti_2, p)
+    require(unrestricted_anti_h1 == frozenset((1, 12)),
+            "unrestricted antiparallel first holes")
+    require(unrestricted_anti_h2 == frozenset((5, 8)),
+            "unrestricted antiparallel second holes")
+    require(unrestricted_anti_h1.isdisjoint(unrestricted_anti_h2),
+            "unrestricted antiparallel holes disjoint")
+    require(len(set(unrestricted_anti_1) & set(unrestricted_anti_2)) == 9,
+            "unrestricted antiparallel optimum overlap")
+    # Distinct permutations cannot differ at exactly one source, so overlap
+    # ten (and hence union twelve) is impossible.  The displayed overlap-nine
+    # pair attains the unrestricted lower bound thirteen.
+
     class_census = Counter()
     chart_census = Counter()
     cover_multiplicity = Counter()
@@ -308,7 +337,8 @@ def main():
     print("pair_classes={step_distinct:5070,step_matched:1014}")
     print("atlas_chart_types={affine_all:11154,nonlinear_chosen:1014} degenerate_affine_controls=1014")
     print("normal_form_holes={parallel_nonlinear:(3,12),antiparallel_nonlinear:(2,11)}")
-    print("minimal_repair={distance2:0,distance3:2_each_normal_form} matched_union_edges=14")
+    print("affine_anchored_repair={distance2:0,distance3:2_each_normal_form,union:14}")
+    print("unrestricted_optimum={overlap:9,union:13,parallel:(0,2)|(6,9),antiparallel:(1,12)|(5,8)}")
     print("same_hole_nonlinear_collision=parallel_holes_(6,9)")
     print("every_pair_holes=disjoint every_pair_colour_union=13")
     print("cover_multiplicity_census={one:24336,two:54756}")

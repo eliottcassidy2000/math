@@ -14,8 +14,10 @@ status: >
   1,014 nonlinear charts, one for each matched-step pair.  Every two-chart
   cover has colour multiplicities 1 on four carries and 2 on nine.  Both its
   even and chart-swap sectors retain all twelve charged carry characters,
-  with energies 9/169 and 1/13 on C_2 x C_13.  Two charts are minimal, and
-  the matched-wall union is sharply only fourteen edges.  This is an abstract
+  with energies 9/169 and 1/13 on C_2 x C_13.  Two charts are minimal.  On
+  the matched wall fourteen union edges are sharp while retaining the affine
+  chart; unrestricted nonlinear pairs attain the global sharp value thirteen.
+  This is an abstract
   rainbow thinning, not a physical LRC
   selector: current eleven-sheet rows do not provide a same-base positive
   product relation or a lawful measurable restriction to the selected
@@ -30,8 +32,8 @@ related:
   - HYP-2233-missed-problem-frontier-carrier-atlas
 script: 04-computation/lrc14_two_rainbow_full_carry_cover_thm2648.py
 output: 05-knowledge/results/lrc14_two_rainbow_full_carry_cover_thm2648.out
-script_sha256: 3a81c3ee39738ac695dd505f15752c4bd8bf561185af57881cc93330aaf2b4f5
-output_sha256: e9ee94f42936a9f3d5a2075d97f1f361998bfdba464b1b5c185cc65705e36756
+script_sha256: 2222bd9ef183ca13a9142f434913672d082489d5468180edb17422341b1ab0a7
+output_sha256: ccad942411b02bdf52f537f731e1e30dabc2942ac958ee708ddb911b71050c98
 hash_basis: LF-normalized bytes
 ---
 
@@ -208,15 +210,16 @@ an affine bijection of `G`.  Therefore it preserves rainbow injectivity and
 disjointness of hole sets.  Transporting (12) or (15) supplies the required
 second chart for every matched pair.
 
-### 3.4 Sharpness and the local `C_2*C_3` frame
+### 3.4 Affine-anchored sharpness and the local `C_2*C_3` frame
 
 No second rainbow chart can differ from the matched-wall affine chart in only
 two edges.  A two-edge change in a bijection is a transposition.  In the
 parallel form, transposing the targets at sources `x,y` makes both new carry
 colours equal `x+y`; in the antiparallel form both equal `x+y-1`.  Either way
 the result is not rainbow.  One moved edge is impossible for a permutation.
-The charts (12) and (15) move exactly three edges, so they are sharp.  They
-share eight of eleven edges with the affine chart and their union has
+The charts (12) and (15) move exactly three edges, so they are sharp among
+covers retaining the affine chart.  They share eight of eleven edges with
+the affine chart and their union has
 
 ```text
 11+11-8=14 edges.                                         (18a)
@@ -232,7 +235,7 @@ C_3 semidirect C_2 = S_3.                                 (18b)
 ```
 
 Keeping one nonlinear repair gives the sharp two-chart/fourteen-edge cover
-but chooses an orientation.  Keeping both gives a reflection-stable
+**with the affine chart fixed**, but chooses an orientation.  Keeping both gives a reflection-stable
 three-chart atlas: the eight outside edges are common and the active block is
 all nine edges of `K_(3,3)`, for seventeen union edges.  Its carry
 multiplicity is `1^2 2^2 3^9`, with centered `C_13` energy `94/169`; each
@@ -240,6 +243,32 @@ nontrivial `C_3` chart character retains every nonzero carry mode and has
 energy `4/117`.  This is an exact co-occurrence of the binary reflection and
 ternary matching grammars, but it still requires an occurrence-level chart
 label.
+
+Without the affine anchor, a binary switch is thinner.  In the parallel
+normal form the two nonlinear target vectors
+
+```text
+p=(2,3,4,6,8,5,10,7,12,9,11),       H_p={0,2},
+q=(2,12,4,6,8,5,10,7,3,9,11),       H_q={6,9}            (18c)
+```
+
+are rainbow, have disjoint holes, and differ only at sources `3,10`.  They
+therefore share nine edges and their union has thirteen.  Two distinct
+bijections cannot differ at only one source, so no two eleven-edge matchings
+can have union smaller than thirteen.  On the antiparallel normal form,
+subtracting one from every target in `p,q` gives hole pairs `{1,12}` and
+`{5,8}` and the same nine-edge overlap.  Affine transport therefore proves
+thirteen is the unrestricted sharp value on every matched pair.  The two
+optimal mechanisms are genuinely different:
+
+```text
+binary alternating four-cycle:  global minimum, no affine reference;
+ternary alternating six-cycle:  affine-anchored minimum, local S3 frame. (18d)
+```
+
+This is the exact `2/3` fork.  The cheaper binary chart pair is not a repair
+of the distinguished affine section; the ternary pair pays one extra edge to
+retain that reference.
 
 ## 4. A complete two-chart atlas and its chart-type census
 
@@ -338,7 +367,8 @@ matched pairs.  Their union therefore retains respectively
 
 Two charts are minimal: one eleven-edge rainbow matching has only eleven
 colours and cannot cover thirteen.  Thus (21) is a sharp two-chart thinning
-of the full `121`-edge relation, while (18a) is sharp on the matched wall.
+of the full `121`-edge relation.  Equation (18c) is globally edge-sharp on the
+matched wall, while (18a) is sharp under the affine-anchor constraint.
 
 ## 5. Holotopy meaning and noncanonical boundary
 
@@ -402,8 +432,10 @@ The dependency-free referee uses explicit optimization-safe guards.  It
 5. proves disjoint holes, full thirteen-colour union, and (21) on every pair,
    recovering the global census (22), verifies both `w` and `d` in every
    charged sector and the energies (24)/(24b), proves the distance-two
-   hostile and distance-three repair census in both normal forms, and checks
-   the exact one/eight-edge chart overlaps and retained-edge counts (25).
+   hostile relative to the affine chart and distance-three repair census in
+   both normal forms, verifies the unrestricted thirteen-edge nonlinear
+   optimum (18c), and checks the exact one/eight-edge selected-atlas overlaps
+   and retained-edge counts (25).
 
 The script and stored output have the LF-normalized SHA-256 hashes declared
 in the frontmatter.
@@ -423,7 +455,9 @@ exactly `36/169` centered energy.  It retained the occurrence bit and proved
 the chart-swap profile has every charged mode and energy `1/13` in the
 normalized `C_2 x C_13` transform.  The same audit caught and repaired the
 false reading of `1,014` as the total nonlinear census: it is only the chosen
-atlas size, as witnessed by (20a).  Both audits independently reproduced the
-character guards and the declared LF-normalized hashes.
+atlas size, as witnessed by (20a).  A further hostile found (18c) and repaired
+the initially overbroad fourteen-edge sharpness claim: fourteen is
+affine-anchored, while thirteen is unrestricted.  Both audits independently
+reproduced the character guards and the declared LF-normalized hashes.
 
 QED.

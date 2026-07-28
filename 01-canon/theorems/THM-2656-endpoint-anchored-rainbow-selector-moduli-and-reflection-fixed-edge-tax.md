@@ -34,8 +34,10 @@ hash_basis: LF-normalized bytes
 **PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT.**
 
 THM-2648 produced two rainbow charts from a saturated eleven-by-eleven
-relation, but its one/three-edge overlap census belonged to the displayed
-selector atlas.  It was not intrinsic to the relation.  THM-2647 now exposes
+relation, but its repaired one/eight-edge overlap census belongs to the
+displayed sharp three-cycle atlas.  It is not intrinsic to the relation.
+MISTAKE-302 also separates the chosen nonlinear-atlas count from the universe
+of nonlinear matchings.  THM-2647 now exposes
 the correct organizing coordinate: after one absolute endpoint two-set is
 supplied, the other endpoint is reconstructed, and selector space separates
 into a reflection-fixed lane and a symmetry-breaking lane.
@@ -142,10 +144,10 @@ Transporting (8), (10), and (11) through (6) proves:
 > holes and exactly the midpoint edge in common.
 
 The atlas retains exactly `21` of the `121` relation edges on every one of
-the `6,084` endpoint pairs.  Its chart census is the familiar
+the `6,084` endpoint pairs.  Its constructed-atlas chart-type census is
 
 ```text
-11,154 affine,              1,014 nonlinear.             (13)
+11,154 affine (all),        1,014 nonlinear (chosen).    (13)
 ```
 
 ## 3. A maximal edge-disjoint atlas
@@ -207,8 +209,9 @@ The symmetry-fixed atlas and the edge-disjoint atlas are indistinguishable
 by (16)--(17), even though their physical edge unions have sizes `21` and
 `22`.  Edge overlap is therefore selector data, not an invariant of the
 underlying relation or its carry spectrum.  In particular, THM-2648's
-one/three-edge census remains correct for its displayed atlas but is not an
-optimal or intrinsic overlap law.
+current one/eight-edge census is correct for its displayed sharp atlas but is
+not an intrinsic overlap law; this theorem exhibits symmetry-fixed and
+edge-disjoint alternatives.
 
 ## 5. Holotopy interpretation and physical boundary
 
