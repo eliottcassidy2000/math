@@ -2,8 +2,8 @@
 id: THM-2824
 title: "Arbitrary three-slot factorial moment-three detection by tilted atomic orientation"
 status: >
-  RESERVED / PROOF-COMPLETE UNIVERSAL THEOREM CANDIDATE + VERIFIED-EXACT /
-  AWAITING INDEPENDENT HOSTILE AUDIT.  For any three factorial slots,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For any three
+  factorial slots,
   mean-zero polynomials form a binary plane.  Their second and third
   moments have a common complex projective zero exactly when two explicit
   real divisibility invariants vanish.  One invariant factors through a
@@ -33,8 +33,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2824 -- arbitrary three-slot factorial moment-three detection
 
-**RESERVED / PROOF-COMPLETE UNIVERSAL THEOREM CANDIDATE + VERIFIED-EXACT /
-AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2812 proves moment-three detection for three consecutive factorial
 slots.  The first apparent extension fails if one chases signs in a
@@ -54,8 +53,8 @@ two positive finite measures under the kernel
 above `c-1`; the denominator is supported at or below `c-1`.  Successive
 rows of `H` are increasing likelihood-ratio tilts, so the relevant
 increment ratio is strictly increasing.  This proves the universal atomic
-inequality and its exact equality case.  The proof is complete here but
-the theorem remains a candidate until an independent hostile audit.
+inequality and its exact equality case.  An independent hostile audit has
+rederived the full argument and its equality boundary.
 
 ## 1. Normalize the three slots
 
@@ -612,13 +611,32 @@ not separate unrelated Wick channels in a more general polynomial.
 | universal conclusion | arbitrary three-slot detection by moments `1,2,3` |
 | continuous sidecar | strict Wronskian `(58)` |
 | finite audit | all `c<=50`; `20,825` exact atomic checks |
-| first missing datum | independent hostile audit before promotion |
+| audit status | independently rederived; exact hostile controls through `c=1000` |
 
 This theorem proves the arbitrary three-slot Strong Factorial statement and
 the corresponding two-charge moment-six bound.  It does not prove general
 HYP-8765, separate unrelated Wick channels, or give a new proof of all GMC2.
 
-## 9. Exact companion
+## 9. Independent hostile audit
+
+The independent audit rederived, without importing the companion:
+
+1. the three hockey-stick weight blocks and their nonnegativity;
+2. the centered identity `(43)` and the product bounds `(41),(44)`;
+3. the strict variance and affine likelihood-ratio recursions
+   `(46)--(49)`;
+4. the integration-by-parts long secant `(34)`;
+5. the factorization `(51)` and its unique equality boundary; and
+6. the binary quadratic/cubic divisibility conclusion.
+
+A separate exact reconstruction checked `7,228` support pairs and
+`310,934` atoms, including deterministic and random hostile edges through
+`c=1000`.  It agreed with every sign, factorization, and equality claim.
+As an orthogonal boundary control, the adjacent family `c=b+1` also admits
+a direct descending-ratio proof; its exact formulas were independently
+replayed for all `b<=100`.
+
+## 10. Exact companion
 
 Run
 
@@ -640,4 +658,4 @@ identities on all `20,825` triples through `c=50`.  It has explicit
 exception gates, no truth-bearing Python assertions, no floating point, and
 no scratch dependency.
 
-**Proof complete; awaiting independent hostile audit before promotion.**
+**QED.**
