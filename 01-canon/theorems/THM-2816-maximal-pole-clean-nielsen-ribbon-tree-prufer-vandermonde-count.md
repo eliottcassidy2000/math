@@ -2,8 +2,8 @@
 id: THM-2816
 title: "Maximal-pole clean Nielsen atlas via ribbon trees and Prüfer--Vandermonde counting"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For every e>=1, N>=2e, and ordered positive (e+1)-part pole
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  e>=1, N>=2e, and ordered positive (e+1)-part pole
   partition p, the clean genus-zero Nielsen class with zero inertia
   2^e 1^(N-2e) and totally ramified third inertia has exactly
   (e-1)! binom(N-e-1,e-1) ordered classes, independently of p.  A
@@ -26,8 +26,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2816 -- maximal-pole clean Nielsen atlas via ribbon trees and Prüfer--Vandermonde counting
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2808's four-gap count is the first nontrivial member of an all-degree
 tree law.  The pole lengths affect the local corner compositions, but
@@ -80,6 +79,14 @@ oriented `N`-gon.  The associated oriented chord diagram has one vertex,
 
 f=e+1-2g.                                             (4)
 ```
+
+Equivalently, in fixed-point-safe permutation form,
+
+```text
+c(tau)+c(rho)+c(tau rho)-N=2-2g,
+```
+
+because `c(tau)=N-e` and `c(rho)=1`.
 
 Thus `tau rho` has the required `e+1` pole cycles exactly when `g=0`,
 equivalently when the chord matching is noncrossing.  This also shows why
@@ -160,8 +167,8 @@ h=e+1.                                                (10)
 
 Then the third partition is `(N)`.  Every Nielsen class above is realized
 by a genus-zero rational cover with branch values normalized to
-`0,infinity,1`.  Order the pole points, put the full-cycle preimage at
-infinity, and normalize
+`0,infinity,1`.  After ordering the poles, put the full-cycle preimage at
+infinity, send `beta_1,beta_2` to `0,1`, and normalize
 
 ```text
 F=B/D,             F(infinity)=1,             B-D=A, (11)
@@ -197,6 +204,9 @@ one has
 F'=2G,                    F=VG^2,
 2VG'+V'G=2.                                         (15)
 ```
+
+Formulas `(14)--(15)` use `kappa=1`.  For a prescribed `kappa!=0`,
+replace `G` by `G/kappa` and `V` by `kappa^2 V`.
 
 Conversely, every maximal-pole balanced response has precisely this
 three-value passport by THM-2796 and hence appears in the Nielsen atlas.
