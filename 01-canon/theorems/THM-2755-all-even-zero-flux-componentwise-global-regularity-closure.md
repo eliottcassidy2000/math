@@ -430,7 +430,10 @@ Hence `R_ex` vanishes identically on the residual leading equation
 pole of `R_25/h^25`, is not a uniform response-pole certificate.  Degenerate
 parameters can also produce the literal vertical locus `q=s=0`, where every
 even response vanishes.  Section 5 uses `q_aff`, not this cancelled response
-face.
+face.  Independently, THM-2752 starts from this same cancellation, proves the
+next exact Faber order, and shows that `R_25/h^25` is regular at `P_infty`;
+thus the false shortcut is the claimed leading simple pole, not the
+response-regularization mechanism.
 
 ### 7.2 A simple finite response pole does not force constant `U`
 
