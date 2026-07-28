@@ -13,13 +13,15 @@ status: >
   of thirteen disjoint filled 11-simplices and H_11=0.  Full connected-arc
   gain refinement remains uncomputed.  Their cyclic rebase accumulates the
   nonzero THM-2657 odometer
-  kernel translation 7/13^5.  Configuration switching can evade the fixed-edge
-  root-zero cap in general.  The displayed component lies in a one-edge strip
+  kernel translation 7/13^5.  Configuration switching invalidates the
+  fixed-edge root-zero argument, but THM-2687 independently bounds the full
+  enlarged switching envelope by twelve.  The displayed component lies in a one-edge strip
   and cannot itself be extended by the missing label, so it is a maximal local
   simplex after the THM-2658 component refinement.  This does not make its
   twelve labels a maximal simplex in the unrestricted union nerve: another
   common component of those labels could still meet the thirteenth union
-  label.  The existence of a thirteen-fold component elsewhere remains open.
+  label.  No positive thirteen-fold component exists anywhere in the full
+  THM-2640 slope-seven family, though other carriers remain open.
   No row exclusion or LRC(14) conclusion follows.
 source: root/physical-cech-higher-overlap-2026-07-28
 depends_on:
@@ -31,6 +33,7 @@ related:
   - THM-2642-cyclic-difference-relation-saturation-and-thick-holotopy-no-go
   - THM-2680-dilation-reversed-two-edge-clock-fibre-products-and-source-drift-boundary
   - THM-2682-central-arrival-clock-trap-and-three-event-dilation-nilpotence
+  - THM-2687-slope-seven-global-configuration-switching-positive-thirteenfold-no-go
 script: 04-computation/lrc14_slope7_fixed_configuration_carry_nerve_thm2672.py
 output: 05-knowledge/results/lrc14_slope7_fixed_configuration_carry_nerve_thm2672.out
 script_sha256: 83ccf3a38660a92cc990bdf304fd4ea4475339731c3e7e92ad35383ef097f361

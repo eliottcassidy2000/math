@@ -92,8 +92,12 @@ then finds `534` fixed configurations with honest positive `Delta^11` faces.
 Rebasing one configuration supplies every missing-label facet: forgetting
 carry creates a coarse `boundary Delta^12`, whereas retaining carry gives
 thirteen disjoint filled `Delta^11`s and cocycle `7`.  The displayed component
-is nonextendable, and `0/534` fixed facets admit a same-cell opposite-edge unit,
-but a heterogeneous same-/inter-cell thirteen-fold intersection remains open.
+is nonextendable, and `0/534` fixed facets admit a same-cell opposite-edge unit.
+THM-2687 closes the remaining switching loophole: even after independently
+forgetting/unioning rail, base, present, clock, sector, edge, and component
+compatibility for each label, every open future-coordinate cell sees at most
+`12/13` carries.  Thus the full THM-2640 slope-seven family has no positive
+thirteen-label component; other carriers remain open.
 
 THM-2680's exact `D(x)={13x}` cospan has positive leg counts
 `17,160,4,488,3,696,0` (total `25,344`), but its Fibonacci sector quotient is

@@ -82,11 +82,11 @@
     handoff, boundary semantics, or edge grammar.
 27f. **A disconnected label nerve is not physical Cech topology.** THM-2672
     finds honest twelve-fold components in all `534` maximal fixed
-    configurations, but edge switching defeats the fixed root-zero argument as
-    a global cap.  Forgetting predecessor carry turns thirteen disjoint filled
-    `Delta^11`s into a coarse `boundary Delta^12`; retain connected components
-    and full integer gains before reading homology.  One nonextendable
-    component is not a maximal face of the unrestricted union-labelled nerve.
+    configurations.  Edge switching defeats its fixed root-zero proof, but
+    THM-2687's enlarged-envelope scan independently restores a global positive
+    `12/13` cap for the full slope-seven family.  Carry-forgetting still turns
+    thirteen disjoint `Delta^11`s into a false `boundary Delta^12`; do not infer
+    pointwise endpoint emptiness or export the cap to another carrier.
 
 ## NC2 / GMC
 

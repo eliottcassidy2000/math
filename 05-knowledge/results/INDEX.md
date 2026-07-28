@@ -38,6 +38,16 @@
   nonzero class `7/13^5`.  This does not exclude configuration switching.
   Hashes begin `83ccf3a3`/`c2fee76c`, `f69d9838`/`d01a8195`, and
   `722c86b1`/`6b7e3687`.
+- `lrc14_slope7_global_configuration_switching_probe.py` -> matching `.out`
+  [THM-2687 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  A
+  necessary envelope lets every target label independently vary rail, base,
+  present, delayed clock/sector, and private edge, forgetting their
+  compatibility and thereby enlarging support.  Nevertheless each open
+  future-coordinate cell covers at most `12/13` carry values; the exact
+  coverage census is `0:47,512`, `11:39,948`, `12:7,536`, `13:0`.  Since
+  `delta -> c0+7delta` permutes `F_13`, no positive thirteen-label component
+  exists in the full THM-2640 slope-seven family.  Isolated boundary contacts
+  are not classified.  Hashes begin `851a5d0a` / `b5778f7e`.
 - `lrc14_alternate_arrival_physical_rail_handoff.py` -> matching `.out`
   [THM-2684 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   The full `324`-profile THM-2584 bank has exact envelope
