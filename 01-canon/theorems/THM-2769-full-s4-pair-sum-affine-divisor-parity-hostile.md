@@ -2,8 +2,7 @@
 id: THM-2769
 title: "Full-S4 pair-sum affine divisor-parity hostile"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  The one-parameter quartic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The one-parameter quartic
   F_t(Y)=Y^4-2Y^2-8tY+1-4t has irreducible S3 squared-pair-sum cubic
   R_t(U)=U^3-4U^2+16tU-64t^2, square root product (8t)^2, Kummer rank two,
   and generic full S4 splitting group.  Its six-root pair-sum discriminant is
@@ -29,8 +28,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2769 -- a full-`S4` field packet can still ramify in the `V4` layer
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The square product in THM-2766 removes odd sign flips.  It does not remove a
 double sign flip at a divisor.  The following one-parameter quartic already
@@ -352,4 +350,4 @@ subspaces of `(20)`, the full 24-element even-sign action on four states, the
 boundary code, the even-base-change control, and `(31)`.  Normal and optimized
 runs LF-normalized-byte-match the stored 21-line transcript.
 
-QED, conditional only on independent hostile audit for promotion.
+QED.
