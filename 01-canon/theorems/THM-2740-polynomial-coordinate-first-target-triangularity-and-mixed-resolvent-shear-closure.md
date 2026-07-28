@@ -2,8 +2,8 @@
 id: THM-2740
 title: "Polynomial-coordinate first-target triangularity and mixed resolvent shear closure"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Over a characteristic-zero field, if U is a polynomial coordinate
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over a
+  characteristic-zero field, if U is a polynomial coordinate
   of k[x,y] and Jac(U,V) is a nonzero constant, then relative to a conjugate
   coordinate S one has V=(kappa/Jac(U,S))S+G(U); hence (U,V) is a polynomial
   automorphism.  On every polynomial graph in the THM-2696 quotient,
@@ -13,6 +13,7 @@ status: >
   explicit inverse are exact.  Neither the noncoordinate-first-target lane,
   nongraph resolvent surfaces, JC(2), nor DC(2) is closed.
 source: a4-resolvent-next-gate-scout-2026-07-28
+audit: thm2705-2709-audit-2026-07-28-coordinate-first (independent all-degree, mixed-shear, characteristic-boundary, and exact replay audit)
 depends_on:
   - THM-2696-reflection-completed-s4-relative-different-and-coordinate-invariant-jacobian-gate
 related:
@@ -30,8 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2740 -- polynomial-coordinate first-target triangularity and mixed resolvent shear closure
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The coordinate-pair calculations in THM-2702 and the nonlinear shear
 classification in THM-2715 share a simpler invariant.  On their graph
@@ -358,4 +358,9 @@ The theorem proves no statement about a Weyl-algebra endomorphism or the
 unsettled `JC(2)`/`DC(2)` provenance.  It closes exactly the coordinate-first
 graph lane.
 
-QED (candidate; independent hostile audit pending).
+An independent hostile audit rederived the all-degree coordinate-ring proof,
+the graph-coordinate chain rule, and the mixed-shear primitive and inverse.
+It checked the zero-response and positive-characteristic boundaries, matched
+both declared hashes, and replayed normal, optimized, and stored transcripts.
+
+QED.

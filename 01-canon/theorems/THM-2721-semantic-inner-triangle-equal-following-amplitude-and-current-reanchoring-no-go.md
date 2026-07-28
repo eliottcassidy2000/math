@@ -2,8 +2,8 @@
 id: THM-2721
 title: "Semantic inner triangle equal following amplitude and current reanchoring no-go"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  On THM-2712's triangle 0->13->26->0, the three frozen following
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On THM-2712's
+  triangle 0->13->26->0, the three frozen following
   pieces are exact translates with one common positive integer weight, so
   their raw current/following arm integrals are equal and positive.  Their
   two nontrivial abstract C3 transforms vanish, and every pure endpoint
@@ -14,6 +14,7 @@ status: >
   and a chronological-current no-go, not an endpoint current, row exclusion,
   or LRC(14) conclusion.
 source: lrc-semantic-inner-cycle-scout-2026-07-28
+audit: thm2704-hostile-audit-2026-07-28-semantic-inner-corolla (independent amplitude, gain-typing, reanchoring, private-root, and replay audit)
 depends_on:
   - THM-2680-dilation-reversed-two-edge-clock-fibre-products-and-source-drift-boundary
   - THM-2712-semantic-following-congruence-lock-and-address-coboundary-descent
@@ -30,8 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2721 -- semantic inner triangle amplitude and reanchoring boundary
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2712 exposes a root-neutral physical support SCC one odometer level below
 the nonsplit THM-2657 quotient.  Its smallest displayed triangle has genuine
@@ -107,10 +107,10 @@ literal translates by
 ```
 
 The delayed Boolean factors of both atoms equal one on the appropriate
-pullbacks of all of `I`; the exact whole-cylinder slacks are independently
-rechecked by the companion.  Thus, if `rho_C,rho_F` denote the unintegrated
-integer weighted densities of the two frozen atoms, each of the three
-parallel arms has the same exact raw overlap
+pullbacks of all of `I`.  This whole-cylinder containment is inherited from
+proved THM-2712 and replayed here through the same exact carrier.  Thus, if
+`rho_C,rho_F` denote the unintegrated integer weighted densities of the two
+frozen atoms, each of the three parallel arms has the same exact raw overlap
 
 ```text
 A_n = integral_I rho_C(u) rho_F(M_n(u)) du
@@ -265,4 +265,9 @@ the global support disjointness `(13)--(14)` and private-root obstruction
 `(15a)`; tests both reanchoring counts in `(15)`; and exhausts the
 changed-source controls `(16)--(17)`.
 
-Awaiting independent hostile audit before promotion.
+An independent hostile audit rederived the three literal translated weighted
+pieces and their common positive integral, checked that the abstract `C_3`
+transform is not a physical order-three action, and replayed all `304`
+midpoint and whole-current failures.  It independently verified the private-
+root disjointness, the four changed-source controls, both file hashes, and
+normal/optimized transcript equality.
