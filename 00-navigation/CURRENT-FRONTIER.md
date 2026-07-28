@@ -392,9 +392,11 @@ Classify profiles under support operations; study analytic continuation and auto
   points violate the exact-prefix resultant, and the uniform slope-four DVR
   bound makes `q/h^3` a global regular function vanishing at infinity.  Thus
   the entire chosen-sheet split polynomial exact-prefix reduced-degree-22
-  family is empty.  THM-2752's proposed response-regularization route is
-  retired; the exceptional leading response actually cancels on its residual
-  face.
+  family is empty.  Independently, THM-2752 proves that the exceptional
+  response cancellation is a regularization mechanism: `R_25+(d/2)F_23`
+  gains one local Faber order, and its all-`M=4L+2` addendum identifies the
+  leading faces as the coprime even/odd parts of `(-s+iq)^k`.  THM-2755 uses
+  the simpler global function `q/h^3`; THM-2752 uses the third response.
 
   This is not `JC(2)`: no theorem forces an arbitrary Keller pair into a
   quartic source-fibre chart, derives splitness, or forces reduced degree `22`.

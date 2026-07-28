@@ -174,7 +174,7 @@
     reduced complement fiber-linear; THM-2084's cubic floor is also a source-
     fiber statement, not generic degree, Jelonek geometry, VC(4), or JC(2).
 61. **Closing reduced degree 22 is not JC(2).** THM-2671/2683/2692 close the genuine-nonsplit branch; on a chosen split sheet THM-2725/2745/2755 close nonzero even flux, every odd member, and the last all-even zero-flux edge, including vertical/reducible/nonreduced cases.
-    This exhausts only the given quartic/split/degree-22 exact-prefix chart. Split degrees `6,10,14,18,>=26`, nonsplit degrees `>=26`, upstream source-fibre/Newton/Jelonek branches, degree raising/descent, `JC(2)`, and `DC(2)` remain open.
+    THM-2752 independently closes the final edge by third-response regularization and proves an all-`M=4L+2` local lemma. This exhausts only the given quartic/split/degree-22 exact-prefix chart. Split degrees `6,10,14,18,>=26`, nonsplit degrees `>=26`, upstream source-fibre/Newton/Jelonek branches, degree raising/descent, `JC(2)`, and `DC(2)` remain open.
 62. **Safe-torus mass is not primitive-line recurrence.** THM-2188/2193
     preserve Haar mass across opposite slopes, not a primitive recurrence.
 63. **Degree-four `D4` is excluded, but not by Smith.** THM-2633 gives `normal_closure_G(H)=G` and `1<=k_D<=d-1`, leaving only `A4,S4`; retain old `D4` ledgers as hostiles and never reuse MISTAKE-297's deck extension.
