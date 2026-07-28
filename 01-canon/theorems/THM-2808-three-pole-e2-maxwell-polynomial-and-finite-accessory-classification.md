@@ -2,8 +2,8 @@
 id: THM-2808
 title: "Three-pole e=2 Maxwell polynomial, complete Nielsen atlas, and closure of the two-critical-point response layer"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For every ordered positive three-pole partition (a,b,c), the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  ordered positive three-pole partition (a,b,c), the
   balanced e=2 response chamber is cut out by an explicit degree-(N-3)
   Maxwell polynomial.  Its two false confluent critical points form an
   exact quadratic factor; every remaining root is simple and admissible.
@@ -31,8 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2808 -- three-pole e=2 Maxwell polynomial, complete Nielsen atlas, and closure of the two-critical-point response layer
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The last possible pole count in the balanced two-double-zero response layer
 has one apparent accessory parameter.  It is not a positive-dimensional
@@ -188,19 +187,22 @@ root merges with a pole, while the other has nonzero value; `(6)` and
 Continue the two simple critical points locally and set
 
 ```text
-J(lambda)=D_lambda(gamma(lambda))-D_lambda(delta(lambda)).
+Phi(lambda)
+ =D(gamma(lambda),lambda)-D(delta(lambda),lambda).
 ```
 
-At `J=0`, the critical-point derivative terms vanish, and
+At a Maxwell root, `Phi=0`, and criticality kills the chain-rule terms, so
 
 ```text
-J'
+Phi'
+ =D_lambda(gamma)-D_lambda(delta)
  =cv(gamma-delta)/
    [(gamma-lambda)(delta-lambda)] !=0.                (16)
 ```
 
 Here `c,v`, the critical-point difference, and both denominators are
-nonzero.  Therefore every zero of `Q` is simple.
+nonzero.  Since `Phi=(gamma-delta)R` and `Delta!=0`, both `R'` and `Q'`
+are nonzero.  Therefore every zero of `Q` is simple.
 
 For such a root, `(5)` has `R=0` and `v_0=v`.  Put
 

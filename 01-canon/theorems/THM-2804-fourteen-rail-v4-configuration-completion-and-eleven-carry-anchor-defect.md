@@ -2,7 +2,7 @@
 id: THM-2804
 title: "Fourteen-rail V4 configuration completion and eleven-carry anchor defect"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; UNDER INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On each of the first fourteen THM-2749 rails, the three maximal
   source-twelve configurations of THM-2797 and one canonical adjacent
   configuration form the even-parity V4 in (sector,edge,kappa), with
@@ -32,8 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2804 -- the V4 completion restores root 12 but loses a carry
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; UNDER INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2797 finds the same three maximal source-twelve configurations on every
 one of the first fourteen semantic rails.  Their bit pattern is not
@@ -289,8 +288,7 @@ the carry diamond, root and missing-label laws; reconstructs every `D`
 facet and marked rail; and checks the first failed layer, exact mass, zero
 open overlap, and zero seams.
 
-The theorem remains a candidate until an immutable independent hostile audit
-rebuilds the `V4/S3` typing, carry and root laws, `D` positivity, anchor
-failure, replay, and LF hashes.
+An immutable independent hostile audit rebuilt the `V4/S3` typing, carry
+and root laws, `D` positivity, anchor failure, replay, and LF hashes.
 
-QED, conditional only on candidate status promotion after independent audit.
+QED.
