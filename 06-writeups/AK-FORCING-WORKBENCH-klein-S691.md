@@ -134,6 +134,34 @@ vertices and lowers n without touching m, r — exactly the 9→7 move of the
 μ₃ fragment. **This is the leading hypothesis for where 1.75 and 1.675
 certificates actually live.**
 
+## 4b. The format hierarchy (corrected reading, late-session)
+
+Close re-reading of the intuitive definition shows the two benchmark
+formats disagree in BOTH directions, and the session's games sit as:
+
+    strict (= verifiable minus the loose bug)  ⊆  mode3-v2  ⊇  intuitive
+
+- The INTUITIVE recursion takes k+1 copies of ONE H per step: per-(step,
+  suffix) gluing choices INCLUDING identifications and per-suffix labels —
+  but identical inner structure across copies (same H).
+- The VERIFIABLE format allows f_i to depend on the whole prefix (inner
+  labels varying per outer position — not directly intuitive-legal;
+  plausibly emulable via deeper same-H recursion) but has NO merge device
+  and suffix-uniform step labels ((0,0) ∈ X exists only so seed functions
+  are total — not an identification marker).
+- MODE3-V2 (this session's explorer) = verifiable + per-suffix labels +
+  legal-slot merges: a common superset. Its records are upper bounds for
+  the intuitive game modulo a same-H legality pass.
+
+Current records: **13/7 strict** ([2,2,2], robust attractor, two
+independent witnesses); **9/5 mode3-v2** ([3,3] with a 5-fold merged hub;
+m=5, r=4, n=5, t=0 — merges manufacture free species-rich junctions,
+collective bootstrap from single seeds, no wildcards). The 9/5 witness's
+rows differ internally, so intuitive legality is OPEN; the compilation
+questions (merges → verifiable; prefix-varying labels → same-H depth) are
+the benchmark's unstated equivalence lemmas and the workbench's top
+theory targets.
+
 ## 5. Session artifacts
 
 - Engine + verifier (both rule-1 readings), exact rational closure, 6-line
