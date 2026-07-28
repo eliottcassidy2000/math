@@ -1,0 +1,14 @@
+THM2789 INTERVAL GRAM / GAP-TAIL EXACT REFEREE
+m=1: families=1 gram_classes=1 tail_present=1
+m=2: families=2 gram_classes=1 tail_present=2
+m=3: families=6 gram_classes=2 tail_present=6
+m=4: families=24 gram_classes=6 tail_present=24
+m=5: families=120 gram_classes=30 tail_present=120
+m=6: families=720 gram_classes=191 tail_present=718
+m=7: families=5040 gram_classes=1416 tail_present=4990
+m=8: families=40320 gram_classes=11988 tail_present=39744
+totals: 46233 families; 10971169 nonempty subset intersections
+arbitrary-set common Gram: ((2, 1, 1), (1, 2, 1), (1, 1, 2)) triple=0/1
+ordered interval columns: (7, 6, 4) (6, 7, 4)
+circular C6 Gram: ((3, 1, 1), (1, 3, 1), (1, 1, 3)) triple=0 pair_min=1
+ALL EXACT CHECKS PASSED
