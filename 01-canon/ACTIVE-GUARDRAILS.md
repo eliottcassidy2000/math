@@ -173,8 +173,8 @@
 60. **THM-2071 closes the quadratic-fiber locus, not JC(2).** It makes the
     reduced complement fiber-linear; THM-2084's cubic floor is also a source-
     fiber statement, not generic degree, Jelonek geometry, VC(4), or JC(2).
-61. **Closing reduced degrees 6 and 22 is not JC(2).** THM-2759 closes the chosen-sheet split degree-six family by boundary monicization; THM-2671/2683/2692 and THM-2725/2745/2752/2755 close the inherited nonsplit and chosen-sheet split degree-22 families.
-    These exhaust only their given quartic exact-prefix charts. Split degrees `10,14,18,>=26`, nonsplit degrees `>=26`, upstream source-fibre/Newton/Jelonek branches, degree raising/descent, `JC(2)`, and `DC(2)` remain open.
+61. **Closing reduced degrees 6, 10, 14, 18, and 22 is not JC(2).** THM-2759/2767 close the complete chosen-sheet split banks through degree 18; THM-2671/2683/2692 and THM-2725/2745/2752/2755 close the inherited nonsplit and chosen-sheet split degree-22 families.
+    These exhaust only their given quartic exact-prefix charts. Degrees `>=26`, upstream source-fibre/Newton/Jelonek branches, raising/descent, `JC(2)`, and `DC(2)` remain open.
 62. **Safe-torus mass is not primitive-line recurrence.** THM-2188/2193
     preserve Haar mass across opposite slopes, not a primitive recurrence.
 63. **Degree-four `D4` is excluded, but not by Smith.** THM-2633 gives `normal_closure_G(H)=G` and `1<=k_D<=d-1`, leaving only `A4,S4`; retain old `D4` ledgers as hostiles and never reuse MISTAKE-297's deck extension.

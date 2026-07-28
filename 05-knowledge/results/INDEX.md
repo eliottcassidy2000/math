@@ -11,6 +11,14 @@
   automorphy; the proof is componentwise and covers reducible/nonreduced
   ambient schemes.  This closes only the chosen-sheet split exact-prefix
   reduced-degree-six family.  Hashes: `7580c022` / `66d91a44`.
+- `jc2_split_degrees10_14_18_componentwise_monicization_thm2767.py` ->
+  matching `.out` [THM-2767 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  The exact boundary atlas excludes every nonzero-root
+  end; the unique degree-18 `-21q_aff^6/1024` section pole excludes its
+  root-zero survivor.  A full-bank slope-four response lemma makes `q/h^3`
+  globally zero, and the vertical bank is triangularly impossible.  This
+  closes only the chosen-sheet split exact-prefix degrees `10,14,18`;
+  degrees `>=26` and chart entry remain open.  Hashes: `a44dbf13` / `46e99141`.
 - `jc2_exact_prefix_even_faber_flux_gcd_thm2760.py` -> matching `.out`
   [THM-2760 PROVED + CITED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
   PENDING].  For every `m=4k-2`, exact-prefix specialization with

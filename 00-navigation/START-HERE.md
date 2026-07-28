@@ -65,7 +65,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     THM-2314/2316/2320/2324/2328 close all `31` exactly two-sparse ratios.
     THM-2332 leaves squarefree branch degree `0`, `2`, or `4`; THM-2335 eliminates `0`; THM-2345/2347 close two divisors.
     THM-2359 closes the perfect-quartic divisor. THM-2371 and THM-2376 close the full degree-eighteen `H_2S_5^2` stratum; hostile-audited THM-2406 closes the remaining `H_4` locus and hence the inherited reduced degree-eighteen branch.
-    At degree `22`, THM-2411--2480 close axes and planes, and THM-2671/2683/2692 close supports three/four/five, emptying the inherited exact-square-prefix genuine-nonsplit branch. THM-2725/2745 and the independent THM-2752/2755 closures empty its chosen-sheet split response family. THM-2759 closes the complete chosen-sheet split degree-`6` family by componentwise slope-four monicization. Split degrees `10,14,18,>=26`, raising, outside branches, `JC(2)`, and `DC(2)` remain open.
+    At degree `22`, THM-2411--2480 and THM-2671/2683/2692 empty the inherited genuine-nonsplit branch; THM-2725/2745/2752/2755 empty its chosen-sheet split family. THM-2759 closes split degree `6`, and THM-2767 closes the complete split banks in degrees `10,14,18`. Degrees `>=26`, raising, outside branches, `JC(2)`, and `DC(2)` remain open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
