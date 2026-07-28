@@ -81,17 +81,27 @@ rails, gain `-1`, and raw support `t=2..11`, reduced to `3..11` by the
 transported cylinder, with all twelve primitive characters in linear and
 bilinear profiles.  Frozen and coindexed sections must not be conflated: the
 one-sided sheet shears and no common selector reaches the endpoint current or
-semantic arm.  THM-2750 proves every external-`C3`-equivariant clutch has zero
+semantic arm.  MISTAKE-313's first typed repair freezes `e=1` consistently:
+the left wing is coefficient-null and the right wing carries the defect.
+THM-2754 keeps the physical-present clock `e` and delayed
+coefficient clock `j` independent on rail `8` and all `81` labels common to
+both strict cylinders.  Its `3969`-cell response separates as
+`B_(e,j)(s,t)=a_e(s,t)1_(j!=0)`; every label has rank one and the diagonal
+equals `a` because `a_0=0`.  Separately, in the legacy forgotten-`e` universe,
+the same audit rejects the provisional THM-2751 gain: the literal intersection
+is `C+D+E`, not frozen slice `C`, and the true target wing residues
+`(0,9,2,2,0,0,0)` augment to zero.  Before augmentation, both physical wing
+rows are `Phi_7` units related by an exact multiplier of determinant `11`; this
+supplies a coefficient ratio but no physical wing map or scalar augmented gain.
+THM-2750 proves every external-`C3`-equivariant clutch has zero
 invariant-to-charged block; the unbuilt escapes are a marked-arm gain or fixed
-fourth reference.  MISTAKE-313 retracts THM-2751's proposed wing gain `2` at
-the typing comparison: its helper omitted THM-2749's source-one clock, so the
-fixed-clock source equals the common coefficient, the left wing is null, and
-the folded ratio is `11`, not `7`.  Full-unclocked retyping also fails:
-`disjoint-union_e M_e` has nonzero `e=2,3`, while profile `(9,2,2)` augments to
-zero; no wing unit/map/phase survives.  A fixed-triangle endpoint probe finds
-no carrier-only affine covariance: exact addresses need `(r,k,l)` with
-`r.W=l-k`, but collapse retains only `pi(r mod 13)` and reciprocal phases.
-Next: retain harmonic origins (or a Bezout section) plus one THM-2625 sector.
+fourth reference.  On a fixed THM-2334 triangle, an exhaustive endpoint-address
+probe likewise finds no carrier-only affine covariance: exact address lies on
+the extended harmonic lattice `(r,k,l)` with `r.W=l-k`, while the collapsed
+bank retains only `pi(r mod 13)`.  Transporting every endpoint factor gives
+reciprocal nontrivial phases.  Next: retain factor-level harmonic origins (or
+a declared Bezout section) and one THM-2625 determinant sector in that fixed
+triangle.
 THM-2727 is **PROVED** as a fixed-rail realization no-go, but supplies no
 rail/owner/support/address map.  Ledger `165`; no row is excluded.
 

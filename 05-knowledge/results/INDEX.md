@@ -81,6 +81,22 @@
   profiles have support `t=3,...,11` and all twelve primitive `C13`
   characters.  The seven clock entries are counterfactual fibres, not an
   endpoint current.  Hashes: `93b46b27` / `04ae7769`.
+- `lrc14_root_zero_full_target_semantic_clutch_20260728.py` -> matching `.out`
+  [THM-2754 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  On
+  rail `8`, keeping physical-present clock `e` and delayed coefficient clock
+  `j` independent over all `81` labels common to both strict cylinders gives
+  `3969/3969` exact carrier and coefficient identities
+  `B_(e,j)(s,t)=a_e(s,t)1_(j!=0)`.  Every matrix has rank one, and its
+  diagonal is exactly the physical amplitude vector.  The full-clock object
+  audit also types both repairs of THM-2751's provisional gain-`2` frame.
+  At fixed `e=1` the left wing is coefficient-null.  In the legacy
+  forgotten-`e` universe the literal intersection is `C+D+E`; the resolved
+  physical wing rows are both units and their exact `Phi_7` ratio has
+  determinant `11`.  But the target row
+  `(0,9,2,2,0,0,0)` augments to zero, so its folded delayed profile has
+  determinant zero and no scalar wing gain.  This is a common-section
+  coefficient theorem, not an endpoint current.  Hashes: `208f7102` /
+  `4f795d05`.
 - `jc2_one_pole_response_composition_thm2748.py` -> matching `.out`
   [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2748].  A
   one-pole response component dominated by the source
