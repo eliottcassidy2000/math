@@ -5,9 +5,10 @@ status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the inherited
   polynomial exact-square-prefix, genuine nonsplit degree-twenty-two branch,
   the remaining full-support BCDEW chart is empty.  The order-eleven Hensel
-  equations cut the faithful sign-quotient torus in one reduced degree-seven
-  carrier.  Exact order twelve kills that carrier over the degree-five root
-  field; a finite-free good-reduction/Nakayama certificate at p=103 kills it
+  equations cut the faithful sign-quotient torus to a reduced degree-seven
+  carrier over each factor field.  Exact order twelve kills the carrier over
+  the degree-five root field; a finite-free good-reduction/Nakayama
+  certificate at p=103 kills it
   over the irreducible degree-ten unordered-pair field.  Hence the universal
   full-support quintic eliminant is absolutely irreducible, and the inherited
   fixed-place Kummer and y=0 arguments close the chart.  Together with the
@@ -21,6 +22,8 @@ depends_on:
   - THM-2636-degree-twenty-two-BCD-triple-spectral-square-Kummer-closure
   - THM-2671-degree-twenty-two-complete-support-three-weighted-hensel-closure
   - THM-2683-degree-twenty-two-complete-support-four-terminal-hensel-toric-closure
+related:
+  - MISTAKE-308
 script: 04-computation/jc2_degree22_full_support_order12_toric_hensel.py
 output: 05-knowledge/results/jc2_degree22_full_support_order12_toric_hensel.out
 script_sha256: 1ef693fc76b162a8607904c9ca9b5d431fe7b61ccc556081784e9590f80c36bb
@@ -32,18 +35,19 @@ hash_basis: LF-normalized bytes
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-THM-2683 leaves only the coefficient torus
+THM-2683 leaves only the coefficient torus (subscripts distinguish the fixed
+coefficients from normalized scale variables below)
 
 ```text
-B C D E W != 0                                                   (1)
+B_0 C_0 D_0 E_0 W_0 != 0.                                      (1)
 ```
 
 inside THM-2411's inherited genuine nonsplit degree-twenty-two branch.  The
 linear terminal-rank method cannot close this last chart: its order-eleven
 matrix has rank four on a four-dimensional toric image, so the expected
-intersection is finite rather than empty.  The decisive object is that finite
-scheme.  Its intrinsic degree is seven, and the next Hensel order removes all
-seven points.
+intersection is finite rather than empty.  The decisive object is a finite
+degree-seven carrier containing that scheme over each factor field.  The next
+Hensel order removes every point of both carriers.
 
 The pair-field calculation is performed by good reduction, but not by the
 invalid inference that an arbitrary empty special fibre has empty generic
@@ -53,13 +57,19 @@ special fibre to characteristic zero.
 
 ## 1. Fixed section and exhaustive factor types
 
-Use the normalized variables of THM-2636/2671.  On the full-support chart
-choose `rho^2=B` and put `t=rho/y`.  After absorbing nonzero constants, the
-weighted specialization has the form
+Use the normalized variables of THM-2636/2671.  Choose the constant
+`rho in C^*` with `rho^2=B_0` and put
 
 ```text
-B=t^2,       C=c t^3,       D=d t^4,
-E=e t^5,     W=w t^6,             c d e w != 0.             (2)
+c=C_0/rho^3, d=D_0/rho^4, e=E_0/rho^5, w=W_0/rho^6,
+t=rho/y.                                                      (2)
+```
+
+Thus the normalized weighted coefficients `b_j` are
+
+```text
+(b_2,b_3,b_4,b_5,b_6)=(t^2,c t^3,d t^4,e t^5,w t^6),
+c d e w != 0.                                                (2a)
 ```
 
 The pinned sixty-term universal eliminant, divided by its constant leading
@@ -73,7 +83,8 @@ is a polynomial
 
 ```text
 P(t,v) in Q[c,d,e,w,t,v],
-deg_v P=5,                 deg_t P=10,                       (3)
+deg_v P=5,       universal deg_t P=10,
+                  specialized deg_t P<=10.                  (3)
 ```
 
 monic in `v`.  Its fixed section is the same irreducible squarefree quintic
@@ -180,8 +191,8 @@ configuration has maximal simplices
 ```
 
 Every determinant in `(12)` is one.  Hence the projective toric image has
-degree seven.  In the original `(C,D,E,W)` coordinates the same determinants
-are two, and the affine exponent-difference lattice has index two.  Those
+degree seven.  In the pre-quotient scale coordinates `(C,D,E,W)`, the same
+determinants are two and the affine exponent-difference lattice has index two.  Those
 ambient determinants must be divided by the lattice index; reporting degree
 fourteen would count the discarded sign twice.
 
@@ -215,27 +226,36 @@ Equivalently, `(15)` is a literal equality after monic normalization of the
 resultant, squared pivot, and `H_7`.
 
 The removed degree-four factor is exactly the squared pivot-collapse
-artifact.  The monic saturated carrier `H_7` is identical in all six charts,
-is squarefree, and is coprime to every corresponding pivot.  Its degree agrees
-with the intrinsic toric degree in Section 3.
+artifact.  Within each factor field, the monic saturated carrier `H_7` is
+identical in all six charts, is squarefree, and is coprime to every
+corresponding pivot.  The root-field and pair-field polynomials need not be
+the same.  Their common degree agrees with the intrinsic toric degree in
+Section 3.
 
-Cancelling the `D^2` terms in `(14)` gives a linear subresultant
+Over `K_1`, cancelling the `D^2` terms in `(14)` in every chart gives a
+linear subresultant
 
 ```text
 U(a)D+V(a).                                                  (16)
 ```
 
 Here `U` is a unit modulo `H_7`, so `(16)` reconstructs `D`; the pivot then
-reconstructs `W,h`.  Substitution satisfies all four selected terminal rows.
-The elements
+reconstructs `W,h`.  Substitution satisfies all four selected terminal rows,
+and the elements
 
 ```text
 a, D, W, h                                                   (17)
 ```
 
-are units in the carrier algebra.  Consequently every possible
-order-eleven full-support factor trajectory, including every pivot boundary,
-has been reduced to this finite degree-seven torus scheme.
+are units in the root-field carrier algebra.
+
+For `K_2`, the exact pre-reduction bridge uses less.  A terminal point lies
+in some pivot chart by `(13)`; `(15)` then forces `H_7(a)=0`.  Since
+`gcd(H_7,Delta_01)=1`, that point lies in pivot chart `01`.  Section 6
+certifies the chart-`01` subresultant, reconstruction, and torus units by
+finite-free good reduction.  Thus every possible order-eleven trajectory,
+including every pivot boundary, is contained in one of the two finite
+degree-seven torus carriers.
 
 ## 5. Exact root-field closure at order twelve
 
@@ -259,9 +279,10 @@ In fact the first order-twelve row already generates the unit ideal with
 ## 6. Pair-field closure by finite-free good reduction
 
 The order-eleven carrier over `K_2` is first constructed exactly in
-characteristic zero.  All six monic saturated carriers agree, `(13)` holds,
-and the reconstruction data are exact.  Only the final quotient-algebra
-unit decision is delegated to good reduction.
+characteristic zero.  All six pivot-dependent saturated carriers agree; all
+pivots and compatibility polynomials are constructed exactly, and `(13)`
+holds.  The chart-`01` reconstruction-unit and final quotient-algebra decisions
+are delegated to good reduction.
 
 Write `K_2=Q(alpha)`.  At the prime `p=103`, the irreducible degree-ten
 modulus has the simple residue root
@@ -270,8 +291,9 @@ modulus has the simple residue root
 alpha -> 61 in F_103.                                       (20)
 ```
 
-Every coefficient denominator occurring in `H_7,F,G,Delta,U`, the terminal
-rows, and the reconstruction is a `103`-unit.  Let
+Every coefficient denominator occurring in the exact carrier, the chart-`01`
+data `F,G,Delta_01,U_01`, the terminal rows, and the reconstruction is a
+`103`-unit.  Let
 
 ```text
 O=(Z_(103)[alpha]/(P_10))_(103,alpha-61),
@@ -307,11 +329,10 @@ I+103A=A,
 (A/I)/103(A/I)=0.                                           (24)
 ```
 
-The `O`-module `A/I` is finite, so Nakayama's lemma gives `A/I=0`.  Tensoring
-with `K_2` proves that the characteristic-zero pair-field terminal scheme is
-empty.  One degree-one prime suffices because `(24)` proves a unit-ideal
-identity in the abstract field `K_2`, and therefore under every complex
-embedding.
+The `O`-module `A/I` is finite, so `(24)` and Nakayama's lemma give `A/I=0`.
+Tensoring with `K_2` proves the unit-ideal identity in the abstract pair field
+and hence that the characteristic-zero terminal scheme is empty under every
+complex embedding.  This is why one degree-one prime suffices.
 
 Monicity and the unit gates in `(21)--(22)` are load-bearing.  Without them,
 an empty special fibre need not imply an empty generic fibre; `103x-1=0` is
@@ -328,24 +349,36 @@ P_(c,d,e,w)(t,v) is absolutely irreducible
 for every c d e w != 0.                                    (25)
 ```
 
-Now apply THM-2671's fixed-place mechanism.  At the five points `t=0`
-corresponding to the roots of `(4)`, squarefreeness makes `t` a uniformizer
-and the first flux makes `zeta` a unit.  The retained Kummer function is
+Now apply THM-2671's fixed-place mechanism.  Let `C_(c,d,e,w)` be the smooth
+projective normalization of `P_(c,d,e,w)(t,v)=0`, proved irreducible in
+`(25)`.  At its five points above
+`t=0`, squarefreeness of `(4)` makes `t` a uniformizer and the first flux
+makes `zeta` a unit.  The retained Kummer function is the element
 
 ```text
-mathscr H=rho^3 zeta/t^3=Z=T^2.                             (26)
+mathscr H=rho^3 zeta/t^3 in C(C_(c,d,e,w))^*.               (26)
 ```
 
 It has valuation `-3` at all five points.  Thus it is nonsquare, its
 connected quadratic cover ramifies at those five places and, by parity, at
 least six places in total.  Riemann--Hurwitz gives genus at least two.
 
-If `t` were nonconstant along a Keller trajectory, the physical square root
-`T` would embed this connected cover into `C(x)`, which is impossible.  If
-`t` were constant, then successively `y,v,zeta,Z,T,q` would be constant,
-contradicting the genuine nonsplit deck.
+If `t` were nonconstant along a Keller trajectory, absolute irreducibility
+would give an embedding
 
-The boundary `y=0` is handled before choosing `t`.  Full support has `B!=0`,
+```text
+phi:C(C_(c,d,e,w)) -> C(x).
+```
+
+Only after this pullback do the physical equations say
+`phi(mathscr H)=Z=T^2`.  The physical element `T` therefore lifts `phi` to the
+connected cover `X^2=mathscr H`, producing a nonconstant map from `P^1` to a
+curve of genus at least two, which is impossible.  If `t` were constant,
+then constant nonzero `rho` makes `y` constant; `v`, hence `u=v y^2`, then
+`zeta,Z,T,q` are successively constant, contradicting the genuine nonsplit
+deck.
+
+The boundary `y=0` is handled before choosing `t`.  Full support has `B_0!=0`,
 so THM-2671's uniform `B!=0` boundary quintic applies; its `u^5` coefficient
 is the nonzero constant `-2264031`.  It makes `u`, then `Z,T,q`, constant and
 again contradicts the deck.  Therefore the full-support chart `(1)` is empty.

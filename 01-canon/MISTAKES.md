@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-308 (2026-07-28, THM-2636/2692 Kummer field typing) -- a spectral nonsquare was identified with its physical square before pullback
+
+- **What was recorded:** the first promoted THM-2692 text wrote
+  `mathscr H=rho^3*zeta/t^3=Z=T^2` inside the spectral-curve discussion and
+  immediately called `mathscr H` nonsquare.  THM-2636 used the same compressed
+  equality while separately describing the intended function-field embedding.
+- **Why it was wrong:** `mathscr H` lives first in the abstract spectral
+  function field, whereas `Z,T` live in the physical rational function field.
+  A literal equality in one field would make `mathscr H` a square and
+  contradict the odd-valuation argument.  The missing symbol was the
+  hypothetical trajectory embedding, not a missing mathematical hypothesis.
+- **Repair / survivor:** define `mathscr H=rho^3*zeta/t^3` on the spectral
+  curve.  Its five valuations `-3` make it nonsquare and its connected double
+  cover has genus at least two.  Only after a nonconstant physical trajectory
+  gives `phi:K(C)->C(x)` do the equations assert
+  `phi(mathscr H)=Z=T^2`; the physical `T` then lifts `phi` to that cover, giving
+  the contradiction.  THM-2636 and THM-2692 now state this typed pullback
+  explicitly.  Their exact computations and closure conclusions are unchanged.
+
 ## MISTAKE-306 (2026-07-28, concurrent THM-2693 reservation) -- a later stub duplicated a live theorem namespace
 
 - **What was recorded:** commit `2e3a42992` first reserved THM-2693 for the

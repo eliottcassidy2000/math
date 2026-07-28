@@ -11,9 +11,10 @@ status: >
   unique Hensel lifts have five order-eleven equations supported on
   c^3,c*d^2,c*d,c; in both fields the resulting 5-by-4 coefficient matrix
   has rank four uniformly, excluding every line and quadratic factor.  The
-  retained base-field square T^2=Z=rho^3*zeta/t^3 is odd at all five smooth
-  fixed points, so its connected double cover has at least six branch places
-  and genus at least two.  The y=0 boundary reduces to a nonzero quartic.
+  spectral function H=rho^3*zeta/t^3 is odd at all five smooth fixed points,
+  while its physical pullback is T^2=Z, so its connected double cover has at
+  least six branch places and genus at least two.  The y=0 boundary reduces
+  to a nonzero quartic.
   Hence the entire B-C-D stratum is empty.  No other support-three stratum,
   JC(2), or DC(2) follows.
 source: jc-degree22-2026-07-28-bcd-hensel-kummer
@@ -22,6 +23,7 @@ depends_on:
 related:
   - THM-2480-degree-twenty-two-BC-plane-hensel-ramification-closure
   - THM-2617-degree-twenty-two-BDW-triple-fixed-section-and-last-quadratic-type
+  - MISTAKE-308
 script: 04-computation/jc2_degree22_bcd_weighted_hensel_kummer_thm2636.py
 output: 05-knowledge/results/jc2_degree22_bcd_weighted_hensel_kummer_thm2636.out
 script_sha256: 0866a29f665aedc6d2c226f35943852e56907ff821e705a0dbca2651e71fa15c
@@ -44,8 +46,9 @@ The odd weight of `C` destroys THM-2617's coordinate `p=B/y^2`: the
 eliminant sees a genuine signed scale `t`, not only `t^2`.  Nevertheless the
 spectral coordinate retains a different square class.  Once the signed-scale
 eliminant is proved irreducible, its five fixed-section points are all odd
-places of `Z=T^2`.  This supplies the positive-genus lift without any
-two-parameter discriminant classification.
+places of a spectral function whose physical pullback is `Z=T^2`.  This
+supplies the positive-genus lift without any two-parameter discriminant
+classification.
 
 ## 1. Inherited coordinates and weighted scale
 
@@ -259,16 +262,17 @@ Both displayed coefficient polynomials have degree below five and are
 coprime to the irreducible `L_5`.  Therefore `zeta` is a unit at every one
 of the five points.
 
-Now use the correctly typed retained square.  From (4),
-
-```text
-rho^3 zeta/t^3=Z=T^2,                                (24)
-```
-
-where `T` is in the base rational function field.  Put
+Put
 
 ```text
 H=rho^3 zeta/t^3 in C(C_(c,d)).                       (25)
+```
+
+For any physical trajectory embedding
+`phi:C(C_(c,d))->C(x)`, the inherited equations give the pullback identity
+
+```text
+phi(H)=Z=T^2.                                         (24)
 ```
 
 At each fixed point, `ord(H)=-3`.  Hence `H` is not a square, the quadratic
@@ -293,17 +297,17 @@ This is the missing uniform genus gate.  It uses the spectral square
 
 ## 6. The nonzero-y trajectory is impossible
 
-A rational Keller trajectory satisfies (5)--(7), (22), and (24).  If `t`
-is nonconstant, absolute irreducibility embeds the function field of
-`C_(c,d)` in `C(x)`, and the physical element `T` realizes the connected
-cover (26) inside `C(x)`.  This gives a nonconstant rational map from
+A rational Keller trajectory satisfies (5)--(7), (22), and the pullback
+identity (24).  If `t` is nonconstant, absolute irreducibility gives the
+embedding `phi` above, and the physical element `T` lifts it to the connected
+cover (26).  This gives a nonconstant rational map from
 `P^1` to the genus-at-least-two normalization `D_(c,d)`, impossible.
 
 If `t` is constant, then `y` is constant.  Equation (22) makes `v`, hence
 `u`, algebraic over the algebraically closed constant field and therefore
-constant.  The open first flux reconstructs constant `zeta`; then (24)
-makes `Z,T,q` constant, contradicting the genuine nonsplit deck.  Thus the
-branch `y != 0` is empty.
+constant.  The open first flux reconstructs constant `zeta`; then the
+physical pullback identity (24) makes `Z,T,q` constant, contradicting the
+genuine nonsplit deck.  Thus the branch `y != 0` is empty.
 
 ## 7. The identically-zero boundary
 

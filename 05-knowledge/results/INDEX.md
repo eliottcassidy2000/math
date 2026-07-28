@@ -3,7 +3,8 @@
 - `jc2_degree22_full_support_order12_toric_hensel.py` -> matching `.out`
   [THM-2692 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
   order-eleven terminal equations descend through the lossless simultaneous-
-  sign quotient to one reduced degree-seven toric carrier.  Exact order twelve
+  sign quotient to a reduced degree-seven carrier over each factor field.
+  Exact order twelve
   kills its degree-five root-field fibre; a monic finite-free carrier,
   reconstruction-unit audit, and `p=103` Nakayama certificate kill the
   irreducible degree-ten unordered-pair fibre.  The full-support quintic is
