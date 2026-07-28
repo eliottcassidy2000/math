@@ -407,8 +407,25 @@ with all source pairs `(s0,s1)` retained.  Equation `(32)` supplies exactly
 the formal intermediate equality `h_current=j_next`; it does not prove that
 the other carrier factors, source shift, or component labels survive `D`.
 Reversing the scalar graph preserves its cycle counts, but the matrix labels
-are noncommutative, so the reversed products and the physical sets in `(35)`
-require a fresh exact audit.
+are noncommutative.  The exact fixed-source reversed audit gives
+
+```text
+                         positive cycles  support range  all differences
+safe                           92             45..100          92
+danger                          0               --              0
+free                            92             82..144          92,
+
+positive Hamilton paths:       safe 876 (30..106),
+                                free 876 (65..154),
+                                danger 0.                     (36)
+```
+
+None of the `184` positive reversed products is the full `169`-pair relation,
+and all `72` reversed constant-step candidates still vanish in every sector.
+The changed ranges relative to `(20)` prove that orientation is not cosmetic,
+even though the qualitative hostile survives.  This exhausts the formal
+fixed-source reversal only; the physical `D`-pullback sets and source
+transport in `(35)` remain the next exact audit.
 
 No common-witness gluing, adjacent-clock chronology, unit row, endpoint
 owner, positive transition, holonomy trivialization, scalar row exclusion,
@@ -438,16 +455,19 @@ guard cospan:
   aa279eba2512513e3b1d004bbaea739db080b1d3320f3f0ac2f83b2e4b74e29a
   9884d64dc337b948009c4b438d23851ce7f56994addcd456f09d5cb262cee94b
 clock/Hamilton audit:
-  04887ace5b7f0543072b8331af29f226be2210fbe6330dfd5d83ba4612d6ceaf
-  b30ee7910b20fac67d70a3bd399c288eb20775ccaa0f7fa0a0270aa14f2ff665
+  bd8ceec21ff77623852a58de865cf152ab66730c9358a79ee69d76ef7777cb0b
+  53a438917a2ab141358531b2418ac1c892b6874aa82327543a64ca0d83af4191
 ```
 
-An independent hostile audit replayed all three normal executions against the
-stored outputs, independently checked all six hashes, audited the rail and
-sector types, and caught the disjoint-chart and half-compatibility boundaries
-now explicit in Sections 3 and 7.  The computations exhaust their stated
-finite carrier and include positive and hostile controls.  They do not
-construct the handoff required after `(29)`; that is deliberately left as the
-next mathematical obligation.
+An independent hostile audit replayed all three original normal executions,
+checked their hashes, audited the rail and sector types, and caught the
+disjoint-chart and half-compatibility boundaries now explicit in Sections 3
+and 7.  It then independently derived the reversed counts in `(36)` before
+they were added to the clock companion.  Normal and optimized executions of
+that augmented companion byte-match its updated stored output and current
+hashes above.  The computations exhaust their stated finite carrier and
+include positive and hostile controls.  They do not construct the handoff
+required after `(29)`; that is deliberately left as the next mathematical
+obligation.
 
 QED.

@@ -43,32 +43,18 @@ Its indispensable coordinates are primitive parameter, integral columns, transve
   Every hypothetical counterexample has eleven independent support-at-most-three
   relations of height `91^6`, hence is rank-twelve finite-box or lies in one of
   finitely many two-anchor stars `a_i v_p+b_i v_q+c_i v_i=0`, `c_i!=0`.
-  Modulo dilation each star has one projective parameter; pair clusters and
-  cross-cluster triples give the same split. THM-2053 proves
-  `max_i|a z_i-b u_i|<=(a^2+b^2)/91`, removing `||(a,b)||>=91L`, while adjacent
-  normalized columns raise the parameter torus elementarily to margin `1/13`.
-  Every row obeys `M(v)>=1/13-R/(2N)`, `N|(v_i+v_j)`; the exact deck `D_N(m)`
-  removes longitudinal fibers, with a divisibility down-set and AP cutoff `156`.
-  THM-2055 restricts failure to hull-owner sectors while non-hull deck sidecars
-  remain essential. THM-2056 Kelvin-inverts them to `(1/91)R^{-1}K^o` and proves
-  `2u.v>=A_p(u)+A_p(v)` on acute unimodular cones. THM-2057 closes two
-  one-tail planes; THM-2059 gives the exact arbitrary-`N` CRT histogram product
-  and isolates its disjoint-support zero. THM-2060--2080 reduce the dyadic
-  tower to depth four, with MISTAKE-238 forbidding empty-row descent.
-  THM-2081 gives the relative Hunter inequality and closes `4,120` small
-  rank-seven pairs; THM-2082 retains residue incidence. THM-2083 and
-  THM-2085/2087 force the height-57 cut, THM-2086 closes the modular/lacunary
-  lanes, and THM-2088 and THM-2089 make the persistent cut finite or flat.
-  THM-2090/THM-2092/THM-2093 close the apparent unbounded splice and global star;
-  THM-2091/2094 remove the four-`7|q` profile, while THM-2095/2097/2112 make
-  every remaining rank-seven template explicitly finite (not enumerated).
-  For guarded sizes `8..10`, THM-2098--2119 separate transverse, mixed, and
-  vertical lanes, force affine clocks and `11`/`13` content, and add the
-  Toeplitz sidecar. THM-2116--2138 reduce and empty the no-terminal and
-  simultaneous-blocker pencils. THM-2139/2141 leave profiles `(1,6,1)`,
-  `(1,7,0)`, `(2,6,0)`, `(3,5,0)`; THM-2148/2168 reduce the last to the
-  rank-one scalar `5+3` tail. THM-2121's joint gate still needs its
-  Toeplitz/Fejer and phase sidecars.
+  Modulo dilation each star has one projective parameter. THM-2053--2059 add
+  the sharp deck/Farey/CRT sidecars; a failed sufficient gate is not unsafe.
+  THM-2060--2080 reduce the lossless dyadic tower to depth four (MISTAKE-238).
+  THM-2081 closes `4,120` small rank-seven pairs; THM-2082 retains residue
+  incidence. THM-2083 and THM-2085/2087 force the height-57 cut; THM-2086
+  closes modular/lacunary lanes; THM-2088 and THM-2089 make persistence finite
+  or flat. THM-2090/THM-2092/THM-2093 close the unbounded splice/global star;
+  THM-2091/2094 remove the four-`7|q` profile; THM-2095/2097/2112 make the
+  residual templates finite but do not enumerate them. THM-2098--2138 split
+  and close the no-terminal/simultaneous-blocker pencils. THM-2139/2141 leave
+  four fivefold profiles; THM-2148/2168 reduce the last to scalar `5+3`.
+  THM-2121's joint gate still needs Toeplitz/Fejer and phase sidecars.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
   MISTAKE-080/082 still require shape-specific torus models.
@@ -123,34 +109,29 @@ the reverse orientation.  The affine graph is still imposed rather than
 decoded, and neither the THM-2625 allocation/current nor a second semantic
 root has been transported to this clock.
 
-THM-2615/2618 show that Radon restriction and a free Möbius orbit do not
-identify the whole head (MISTAKE-300).  THM-2620/2625 restore the endpoint
-determinant; THM-2634 keeps `(c_L,c_R)` but still needs a pair twist and a
-physical transverse section.  THM-2640 makes each predecessor-carry root
-private, while audited THM-2657 proves every physical slope-seven translation
-lift lives in a nonsplit `C_(13^6)` odometer extension with cocycle class `7`;
-neither supplies the target action.  THM-2642 saturates every eleven-sheet
-equivariant hull and THM-2645 retains every charged colour.  Audited THM-2647
-gives unique two-set endpoint deconvolution with signed norm `13/2`; repaired
-THM-2648 gives two minimal rainbow charts covering all carries.  Its matched
-wall has an affine-anchored ternary six-cycle with fourteen union edges and a
-local `C3 semidirect C2=S3` frame; unrestricted nonlinear charts attain the
-sharp thirteen-edge union by a binary four-cycle (MISTAKE-302/303).  THM-2656
-separates selector moduli: an audited equivariant atlas pays a forced midpoint, while
-an edge-disjoint bank exists after dropping individual reflection symmetry.
-
-Audited THM-2670 retains the predecessor state before integration.  Its
-exact seven-clock graph has 92 generic Hamilton cycles, but constant-step
-products vanish only through an individually zero clock, no positive edge is
-translation-equivariant, and formal safe/free cycles service all 13
-displacements without gluing their physical witnesses.  Distinct owner-clock
-strata are physically disjoint, so the live target is a typed chart handoff
-or fibre product over a shared boundary object—not a literal same-`x`
-intersection.  The canonical candidate is `D(x)={13x}`: it gives
-`j(Dx)=h(x)` and reverses the artifact's clock-arrow convention.  Audit the
-reversed labelled products and all source-pair fibre products before invoking
-THM-2644, THM-2637, or rainbow restriction.  Marginals, support, and signed
-inversion do not supply that transition.  Ledger `165`.
+THM-2615/2618 show Radon restriction and a free Möbius orbit do not identify
+the whole head (MISTAKE-300).  THM-2620/2625 restore the endpoint determinant;
+THM-2634 keeps `(c_L,c_R)` but still needs a physical transverse section.
+THM-2640 makes each predecessor-carry root private; audited THM-2657 puts every
+slope-seven lift in a nonsplit `C_(13^6)` odometer with cocycle class `7`.
+Neither supplies the target action.  THM-2642 saturates eleven-sheet hulls;
+THM-2645 retains every charged colour.  Audited THM-2647 gives two-set endpoint
+deconvolution with signed norm `13/2`; repaired THM-2648 gives two rainbow
+charts.  Its matched wall has a fourteen-edge ternary `S3` frame, while
+unrestricted nonlinear charts attain thirteen edges via a binary four-cycle
+(MISTAKE-302/303).  Audited THM-2656 proves selector moduli: equivariance pays
+a forced midpoint; dropping individual reflection permits edge-disjointness.
+Audited THM-2670 retains the predecessor state before integration.  Its exact
+clock graph has 92 generic Hamilton cycles, but constant-step products hit a
+zero clock, no positive edge is equivariant, and formal cycles service all 13
+displacements without gluing physical witnesses.  Distinct owner-clock
+strata are disjoint: the live target is a typed handoff or shared-boundary
+fibre product, not literal same-`x` intersection.  Candidate `D(x)={13x}` gives
+`j(Dx)=h(x)` and reverses the artifact's clock-arrow convention.  The reversed
+formal audit keeps all 92 generic cycles but changes safe/free support ranges
+to `45..100`/`82..144`, so orientation is substantive.  Audit all source-pair
+`D`-pullback fibre products before THM-2644, THM-2637, or rainbow restriction;
+marginals, support, and signed inversion do not supply that transition. Ledger `165`.
 
 ### Independent routes that remain live
 

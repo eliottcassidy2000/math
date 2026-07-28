@@ -10,9 +10,10 @@
   safe/free cycle services all 13 state displacements, while all three-edge
   danger products vanish by the five-arrow law `U^3=0`.  No positive edge is
   translation-equivariant, and THM-2624 makes literal cross-clock intersection
-  empty: the missing datum is a typed chart handoff or shared-boundary fibre
-  product.  Script/output hash pairs begin `f49eb399/b43715e7`,
-  `aa279eba/9884d64d`, and `04887ace/b30ee791`.
+  empty.  The `D(x)={13x}`-reversed audit retains all 92 cycles but changes
+  safe/free support ranges to `45..100`/`82..144`; the missing datum is its
+  physical source-pair pullback fibre product.  Script/output hash pairs begin `f49eb399/b43715e7`,
+  `aa279eba/9884d64d`, and `bd8ceec2/53a43891`.
 - `jacobian_s4_resolvent_quasietale_hostile.py` -> matching `.out`
   [THM-2655 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   THM-2633 makes every semiregular normal Keller monodromy kernel return as

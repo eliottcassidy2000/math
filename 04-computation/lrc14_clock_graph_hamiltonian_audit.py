@@ -162,6 +162,16 @@ EXPECTED_ORDINARY_STATE_PATH_SUMMARIES = {
         "72c9d2a57cb0147bdadeb1393abe117f446dcbebc6f692efa4e52e7ae60b68b8",
     ),
 }
+EXPECTED_DILATION_CYCLE_SUMMARIES = {
+    "safe": (92, 45, 100, 92, 0),
+    "danger": (0, 0, 0, 0, 0),
+    "guard_free": (92, 82, 144, 92, 0),
+}
+EXPECTED_DILATION_PATH_SUMMARIES = {
+    "safe": (876, 30, 106),
+    "danger": (0, 0, 0),
+    "guard_free": (876, 65, 154),
+}
 
 
 def require(condition, message):
@@ -295,6 +305,37 @@ def formal_integer_itinerary_product(bank, source, itinerary, close):
             bank, source, left, right
         ))
     return result
+
+
+def dilation_edge_matrix(bank, source, shallow, rail):
+    """Edge label in the D(x)={13x}-compatible clock orientation.
+
+    The stored bookkeeping edge points from the rail clock to the shallow
+    clock.  Dilation sends that rail clock to the next shallow clock, so the
+    chronological candidate reverses the stored arrow.
+    """
+    return edge_matrix(bank, source, rail, shallow)
+
+
+def dilation_itinerary_product(bank, source, itinerary, close):
+    """Formal Boolean product in the dilation-compatible orientation."""
+    result = BIT_IDENTITY
+    pairs = list(zip(itinerary, itinerary[1:]))
+    if close:
+        pairs.append((itinerary[-1], itinerary[0]))
+    for shallow, rail in pairs:
+        result = bit_product(
+            result, dilation_edge_matrix(bank, source, shallow, rail)
+        )
+    return result
+
+
+def dilation_scalar_itinerary_present(bank, source, itinerary, close):
+    pairs = list(zip(itinerary, itinerary[1:]))
+    if close:
+        pairs.append((itinerary[-1], itinerary[0]))
+    return all(edge_present(bank, source, rail, shallow)
+               for shallow, rail in pairs)
 
 
 def scalar_itinerary_present(bank, source, itinerary, close):
@@ -778,6 +819,77 @@ def main():
         )
         danger_union_powers[source] = tuple(supports)
 
+    # The canonical base-13 dilation D(x)={13x} satisfies j(Dx)=h(x) and
+    # sends the present rail-clock phase to the next shallow-clock phase.
+    # Therefore its candidate chronology reverses the stored clock arrows.
+    # This remains a formal fixed-source matrix test: the code does not assert
+    # that D transports the other carrier factors or the source shift.
+    dilation_scalar_cycles = tuple(
+        itinerary for itinerary in normalized_cycles
+        if dilation_scalar_itinerary_present(base, 1, itinerary, True)
+    )
+    require(len(dilation_scalar_cycles) == 92,
+            "dilation-reversed scalar Hamiltonian census changed")
+    dilation_constant_step_zeros = {}
+    dilation_cycle_summaries = {}
+    dilation_path_summaries = {}
+    for sector in guard.SECTORS:
+        bank = banks[sector]
+        zero_count = 0
+        for source in SOURCES:
+            for step in sharp.CLOCK_STEPS:
+                itinerary = tuple((index * step) % Q7 for index in range(Q7))
+                zero_count += int(not bit_support(
+                    dilation_itinerary_product(
+                        bank, source, itinerary, True
+                    )
+                ))
+        require(zero_count == 72,
+                f"{sector} dilation constant-step zero census changed")
+        dilation_constant_step_zeros[sector] = zero_count
+
+        cycle_products = tuple(
+            dilation_itinerary_product(bank, 1, itinerary, True)
+            for itinerary in normalized_cycles
+        )
+        positive_cycles = tuple(
+            product for product in cycle_products if bit_support(product)
+        )
+        cycle_summary = (
+            len(positive_cycles),
+            min((bit_support(product) for product in positive_cycles),
+                default=0),
+            max((bit_support(product) for product in positive_cycles),
+                default=0),
+            sum(all(value > 0 for value in cyclic_diagonal_counts(product))
+                for product in positive_cycles),
+            sum(bit_support(product) == P * P
+                for product in positive_cycles),
+        )
+        require(
+            cycle_summary == EXPECTED_DILATION_CYCLE_SUMMARIES[sector],
+            f"{sector} dilation-reversed cycle summary changed",
+        )
+        dilation_cycle_summaries[sector] = cycle_summary
+
+        path_supports = tuple(
+            bit_support(dilation_itinerary_product(
+                bank, 1, itinerary, False
+            ))
+            for itinerary in hamiltonian_paths
+        )
+        positive_paths = tuple(value for value in path_supports if value)
+        path_summary = (
+            len(positive_paths),
+            min(positive_paths, default=0),
+            max(positive_paths, default=0),
+        )
+        require(
+            path_summary == EXPECTED_DILATION_PATH_SUMMARIES[sector],
+            f"{sector} dilation-reversed path summary changed",
+        )
+        dilation_path_summaries[sector] = path_summary
+
     print("LRC14 seven-clock matrix-labelled Hamiltonian audit")
     print("scope=full exact guard cospan; fixed-source common-x incidence bank")
     print("typing=clock graph and formal Boolean label products; not chronology")
@@ -916,6 +1028,26 @@ def main():
         "danger_clock_step_union_power_supports="
         + str(tuple((source, danger_union_powers[source])
                     for source in REPRESENTATIVES))
+    )
+    print(
+        "dilation_reversed_constant_step_zero_candidates_by_sector="
+        + str(tuple((sector, dilation_constant_step_zeros[sector])
+                    for sector in guard.SECTORS))
+    )
+    print(
+        "dilation_reversed_generic_cycle_"
+        "(positive,min,max,all13displacements,fullpair)="
+        + str(tuple((sector, dilation_cycle_summaries[sector])
+                    for sector in guard.SECTORS))
+    )
+    print(
+        "dilation_reversed_generic_path_(positive,min,max)="
+        + str(tuple((sector, dilation_path_summaries[sector])
+                    for sector in guard.SECTORS))
+    )
+    print(
+        "dilation_boundary=fixed-source reversed matrix audit only; "
+        "no D-pullback interval intersection or source transport is asserted"
     )
     print(
         "verdict=PASS: generic varying-clock skeletons are richly Hamiltonian; "
