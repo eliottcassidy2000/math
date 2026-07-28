@@ -78,13 +78,16 @@ reaches a root-zero label, but MISTAKE-310 retracts physical emptiness: the
 half-tooth charts overlap.  THM-2744 proves the resulting partial physical
 clutch: translation by `7/13^6` gives equal recomputed raw private-unit
 vectors on ten whole rail overlaps and all fourteen equal-weight loci; the
-root-normalized endpoint classes differ by `-1`.  Its
-rail-8 witness has the literal `E3 -> D^6 -> Q_(3,{1,2})` record and common
-lawful `(s,t)`, but the semantic fork and target factors have not yet been
-inserted inside the coefficient integral.  The live debt is exactly that
-refinement, followed by an endpoint-current attachment; nonzero marginals do
-not decide it.  THM-2727 is **PROVED** as a fixed-rail realization no-go,
-but supplies no rail/owner/support/address map.  Ledger `165`; no row is
+root-normalized endpoint classes differ by `-1`.  THM-2749 inserts the literal
+`E3 -> D^6 -> Q_(3,{1,2})` fork, both lawful target pairs, both relative-present
+factors, rail, and seam inside a two-sided common-section integral.  Precisely
+`t=3,...,11` survive with equal raw source/target vectors and private-root gain
+`-1`; their target window is a norm-one cyclotomic unit with positive inverse
+`u^2+u^6+u^10`, so all twelve primitive target characters survive.  The sharp
+boundary is categorical: the natural single sheet shears (gain `7`) and no
+common-selector map into the canonical endpoint current or external semantic
+arm carrier is known.  THM-2727 is **PROVED** as a fixed-rail realization
+no-go, but supplies no rail/owner/support/address map.  Ledger `165`; no row is
 excluded.
 
 ### Independent routes that remain live

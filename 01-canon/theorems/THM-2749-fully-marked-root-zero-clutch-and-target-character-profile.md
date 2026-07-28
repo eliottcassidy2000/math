@@ -2,7 +2,7 @@
 id: THM-2749
 title: "Two-sided fully marked root-zero clutch and cyclotomic-unit target window"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT.  On the canonical
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the canonical
   rail-8 root-zero overlap, intersect the full E3/lawful-target mask with its
   translated-target pullback and insert the actual D^6 Q_(3,{1,2}) terminal
   fork plus both relative-present factors before delayed integration.  The
@@ -12,9 +12,9 @@ status: >
   inverse z^2+z^6+z^10 modulo Phi_13, so all twelve primitive target
   characters survive.  This is a two-sided common-section coefficient
   theorem, not naturality of the single target sheet, a global transporter,
-  endpoint current, row exclusion, or LRC(14).  Independent promotion audit
-  is pending; no proved result may depend on this candidate.
+  endpoint current, row exclusion, or LRC(14).
 source: root/fully-marked-root-zero-target-profile-2026-07-28
+audit: root-zero-two-sided-clutch-hostile-audit-2026-07-28 (independent interval/witness, direct 239-piece forward-coordinate coefficient reconstruction, single-sheet shear boundary, unit/gain/window/Bezout/rail-hostile audit, and normal/-O/hash replay: ACCEPT)
 depends_on:
   - THM-2640-predecessor-carry-private-root-atlas-and-target-action-clutching-no-go
   - THM-2742-full-two-target-present-sheet-deepest-source-semantic-current
@@ -32,7 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2749 -- the fully marked clutch exists on a two-sided common section
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2744 proves an open physical rechart through the root-zero landing, but
 its last section leaves one decisive test: put the semantic source, lawful
@@ -308,8 +308,12 @@ verifies `(17)`--`(20)` by exact integer arithmetic.  The factored target-
 label scan is independently compared with the slower full Boolean
 construction at `t=3`.  No truth-bearing Python `assert` is used.
 
-An independent promotion audit is still required.  Until that audit and an
-explicit status promotion, this file remains a reserved provisional proof
-candidate and no proved theorem may depend on it.
+An independent hostile audit separately reconstructed the target coefficient
+from `239` exact forward-coordinate pieces, checked the strict overlap witness,
+all marked factors, content and valuation, both private-root determinants,
+the nine-label support, all primitive target characters, the Bezout decoder,
+the unrestricted-rail hostile, and the distinction from the natural
+single-sheet shear.  Its normal and optimized runs byte-match the stored
+`22`-line transcript and the declared LF hashes.
 
-QED (provisional).
+QED.

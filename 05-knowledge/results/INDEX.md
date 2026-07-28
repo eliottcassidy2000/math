@@ -1,5 +1,15 @@
 # Script Results Index
 
+- `lrc14_fully_marked_root_zero_target_profile_thm2749.py` -> matching `.out`
+  [THM-2749 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  On the
+  rail-8 two-sided common section, the full semantic fork, lawful target
+  sheet, terminal word, relative-present factors, rail, and root-zero seam
+  give equal raw source/target vectors precisely for `t=3,...,11`, with
+  private-root gain `-1`.  The target window `u^3+...+u^11` has norm one and
+  positive inverse `u^2+u^6+u^10` modulo `Phi_13`; all twelve primitive target
+  characters survive.  The natural one-sided sheet instead shears, so no
+  global transporter or endpoint current follows.  Hashes: `12f150dc` /
+  `72fed42b`.
 - `jc2_one_pole_response_composition_thm2748.py` -> matching `.out`
   [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2748].  A
   one-pole response component dominated by the source
@@ -38,9 +48,9 @@
   classes differ by `-1`.  Rail `8` contains a strict semantic
   `E3 -> D^6 -> Q_(3,{1,2})` pair with common lawful `(s,t)` and identical
   vector `(0,a,...,a)`, a private unit at both roots with all six nontrivial
-  clock characters.  The fork/target factors are not yet inside the integral;
-  no endpoint current or row exclusion follows.  Hashes: `e2798147` /
-  `ba9d0a67`.
+  clock characters.  THM-2749 now inserts the fork and target factors on one
+  two-sided common section; single-sheet naturality and endpoint-current
+  attachment remain open.  Hashes: `e2798147` / `ba9d0a67`.
 - `lrc14_relative_present_semantic_lift_probe_20260728.py` -> matching `.out`
   [FINITE-EXACT PRECURSOR INCORPORATED IN THM-2744].  Fourteen source-one rails
   contain `12848` genuine deepest semantic forks.  The relative-present
