@@ -324,7 +324,9 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2703 makes that gate exact for `C3`-invariant boundary trees: the
   standard-plane multiplicity is the sum of moving-arm mod-two nullities, so
   one even continuant is necessary.  Full-rank boundary independence kills
-  units and makes all-odd arms an exclusion; non-full-rank/non-tree cases stay open.
+  units and makes all-odd arms an exclusion.  THM-2708 removes the tree
+  restriction via an exact Hermitian `F4` gain-holonomy block; boundary
+  relations and geometric realization remain open.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.

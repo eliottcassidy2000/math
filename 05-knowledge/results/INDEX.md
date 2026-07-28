@@ -32,8 +32,8 @@
   `D4` and determinant-`27` stars are the sharp controls.  Hashes begin
   `1db2ae94` / `8e6207f3`.
 - `c3_hermitian_gain_holonomy_discriminant_thm2708.py` -> matching `.out`
-  [THM-2708 PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT].  Evaluating the free-orbit circulant blocks of any
+  [THM-2708 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Evaluating the free-orbit circulant blocks of any
   `C3`-invariant symmetric lattice at `omega in F4` gives a Hermitian matrix
   whose `F4` nullity is exactly the standard-plane multiplicity in
   discriminant two-torsion.  Forest gains recover THM-2703.  The sharp

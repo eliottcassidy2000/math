@@ -2,8 +2,8 @@
 id: THM-2708
 title: "C3 Hermitian gain-holonomy discriminant gate"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For every nonsingular integral symmetric matrix with a permutation
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  nonsingular integral symmetric matrix with a permutation
   C3 action, evaluate its free-orbit circulant blocks at omega in F4.  The
   resulting matrix B is Hermitian, independent of orbit representatives up
   to diagonal unitary gauge, and the standard-plane multiplicity in
@@ -37,8 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2708 -- C3 Hermitian gain-holonomy discriminant gate
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2703 finds the quartic standard plane arm by arm when the boundary graph
 is a tree.  A cycle prevents that direct sum, but it does not destroy the
@@ -389,3 +388,12 @@ cheapest decisive next test:
 
 The determinant `det B in F2` is therefore the exact non-tree boundary gate,
 not another scalar discriminant coincidence.
+
+An independent hostile audit rederived the Hermitian symmetry and switching
+law, the `F4` standard-block identification, the Tor/discriminant step, the
+forest specialization, the triangle trace formula and both integral voltage
+lifts, and the Picard/unit localization corollary.  It separately replayed
+normal and optimized modes against the stored fourteen-line output, found no
+Python `assert` nodes, and recomputed both LF hashes exactly.
+
+QED.
