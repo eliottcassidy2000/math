@@ -1,11 +1,11 @@
 # The source-clocked natural root-zero sheet has a uniform endpoint gain but is not the common clutch
 
-> **STATUS: FINITE-EXACT + VERIFIED; AWAITING INDEPENDENT HOSTILE AUDIT.**
+> **STATUS: FINITE-EXACT + VERIFIED + INDEPENDENTLY HOSTILE-AUDITED.**
 > After the MISTAKE-313 repair, the natural sheet is built with the literal
 > `source_present_section(E3, source_clock=1, s, t, ...)` constructor in each
 > physical chart.  On all 81 labels lawful at the fixed THM-2744 endpoint, the
-> source and target remain private units, every primitive and mixed target
-> character survives, and the normalized target/source gain is uniformly
+> source and target remain private units, every rowwise primitive-`t` and
+> mixed `f,g!=0` target character survives, and the normalized target/source gain is uniformly
 > `11`, not the retracted clock-blind value `7`.  The proved two-sided
 > THM-2749 common section has equal raw vectors and mirror gain `-1`; the
 > difference is a genuine one-sided right wing.  This is a coefficient-side
@@ -124,17 +124,17 @@ the nonzero right wing.  Root-normalized target profiles split as
 natural target 8 = common target 4 + right wing 4.      (11)
 ```
 
-This gives the exact carrier anatomy:
+This gives the exact coefficient-vector anatomy:
 
 ```text
-natural source = common source,
+natural source coefficient vector = common source coefficient vector,
 natural target = common target + right wing.            (12)
 ```
 
 It explains why the natural sheet is physical and nonzero without being an
 intertwiner: the one-sided target has an additional chart-supported wing.
 
-## 4. Every target character survives
+## 4. Every rowwise primitive-`t` and mixed character survives
 
 For each fixed active `s`, extend the source amplitude `a_(s,t)`, target
 amplitude `b_(s,t)`, and cross amplitude
