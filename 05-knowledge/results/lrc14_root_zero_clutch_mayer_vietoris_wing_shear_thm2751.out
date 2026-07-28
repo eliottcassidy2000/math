@@ -1,0 +1,25 @@
+LRC14 ROOT-ZERO CLUTCH MAYER-VIETORIS WING SHEAR
+status=PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT
+dependency_pins=LF-normalized count=3
+prefix_identity=natural_Q_(3,{1,2}) equals THM2749_marked_prefix for all_7_clocks
+piece_counts=(A,M,L;B,M,R)=(1275, 239, 1036, 1275, 239, 1036)
+weighted_masses=(A,M,L)=(929934280541992017600, 174321777293450297280, 755612503248541720320)
+weighted_masses=(B,M,R)=(929934304688494607040, 174321777293450297280, 755612527395044309760)
+weighted_piece_identities=A=M_disjoint_union_L; B=M_disjoint_union_R for all_7_clocks
+natural_vectors=source:(0, 1812281403506324508838080, 1812281403506324508838080, 1812281403506324508838080, 1812281403506324508838080, 1812281403506324508838080, 1812281403506324508838080) target:(0, 1826551436254490256030720, 1826551436254490256030720, 1826551436254490256030720, 1826551436254490256030720, 1826551436254490256030720, 1826551436254490256030720)
+common_vectors=source:(0, 339633525654239542165440, 339633525654239542165440, 339633525654239542165440, 339633525654239542165440, 339633525654239542165440, 339633525654239542165440) target:(0, 339633525654239542165440, 339633525654239542165440, 339633525654239542165440, 339633525654239542165440, 339633525654239542165440, 339633525654239542165440)
+wing_vectors=left:(0, 1472647877852084966672640, 1472647877852084966672640, 1472647877852084966672640, 1472647877852084966672640, 1472647877852084966672640, 1472647877852084966672640) right:(0, 1486917910600250713865280, 1486917910600250713865280, 1486917910600250713865280, 1486917910600250713865280, 1486917910600250713865280, 1486917910600250713865280)
+functional_identities=S(A)=S(M)+S(L); T(B)=T(M)+T(R)
+root_profiles=common_source12:9/det1 common_target1:4/det1
+root_profiles=left12:9/det1 right1:5/det12 natural_source12:5/det12 natural_target1:9/det1
+normalized_ratios=common_clutch_gain:12 formal_wing_ratio:2 folded_natural_ratio:7
+internal_grading=source(M,L):(9,9) target(M,R):(4,5) formal_diagonal_comparison:(12,2); ratio7_after_fold_only
+wing_shear=14270032748165747192640 v13=1 (shear/26)_mod13=12
+shear_identity=T(B)-S(A)=T(R)-S(L)
+hypothetical_external_arm_gains=(12, 2, 2) mean=1 Qg=(11, 1, 1) normalized_C3=(1, 12, 12)
+actual_external_arm_typing=I_arm_tensor_internal_T; Q(I_tensor_T)Pi=0
+conditional_external_formula=if_Q3(S_i)=0_on_one_common_carrier_then_Q3(T_i)=10*Q3(M_i); carrier_not_constructed
+conditional_ANOVA_exhaustive=28561_2x3_tables rectangles_zero_iff_Q3T_zero
+FIRST_FAILURE: no canonical physical identification or relative phase pairs the one-sided wings L and R
+SCOPE: exact additive internal-chart decomposition and signed wing current; no external C3 selector, endpoint current, row exclusion, or LRC14
+ALL CHECKS PASSED
