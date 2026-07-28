@@ -1,5 +1,5 @@
 ---
-id: THM-2773
+id: THM-2774
 title: "Tree-path Smith-index ladder and binary/ternary lattice defects"
 status: "RESERVED / UNPROVED EMPTY STUB"
 source: a4-resolvent-next-gate/tree-path-smith-index-2026-07-28
@@ -10,7 +10,7 @@ related:
   - THM-2770-tree-incidence-a-d-weyl-clutch-and-four-vertex-fan-dichotomy
 ---
 
-# THM-2773 -- Tree-path Smith-index ladder
+# THM-2774 -- Tree-path Smith-index ladder
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
