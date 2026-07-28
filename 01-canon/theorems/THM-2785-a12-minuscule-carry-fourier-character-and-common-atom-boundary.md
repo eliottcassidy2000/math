@@ -22,6 +22,14 @@ status: >
   semantic atom, THM-2334 endpoint current, allocation K4, row exclusion,
   or LRC(14) conclusion follows.
 source: lrc-a12-carry-bridge/minuscule-fourier-2026-07-28
+audit: >
+  lrc-a12-carry-bridge/thm2785-hostile-audit independently rebuilt the
+  lattice signs, regular-simplex DFT, interval-character iff, all twelve
+  physical modes, odometer phases, rail-eight intervals and semantic zero
+  intersections; replayed normal, optimized, and stored output; verified
+  dependency and LF hashes; and ran check_docs: ACCEPT.  A second independent
+  Fourier/lattice audit rederived the P/Q collapse, Hermitian norm, character
+  signs, nonvanishing range, and physical-versus-endpoint scope: ACCEPT.
 depends_on:
   - THM-2657-odometer-carry-root-lift-nonsplit-extension-and-cech-cocycle
   - THM-2672-slope-seven-carry-nerve-exact-eleven-simplex-and-root-zero-cap
@@ -169,7 +177,8 @@ Therefore, for every `k!=0`,
 ||W_k||^2=sum_d zeta^(kd) A_d=12-sum_(d!=0)zeta^(kd)=13.             (14)
 ```
 
-All twelve coefficient-space colours survive.  Relabelling the orbit by
+Here the norm is the Hermitian norm on the complexified standard plane
+`V_C`.  All twelve coefficient-space colours survive.  Relabelling the orbit by
 `c -> c+7` multiplies `W_k` by `zeta^(7k)`.  This is an exact geometric
 property of the regular simplex; it does not yet assert any physical
 endpoint coefficient.
@@ -245,8 +254,15 @@ bank realizes every nontrivial dual character:
 N=a*13^5             corresponds to the character class -a gamma.     (22)
 ```
 
-Here `(22)` uses the standard dual pairing fixed by the displayed carry
-origin and `zeta`.  Changing the spatial origin multiplies all thirteen
+Here `(22)` uses the explicit convention
+
+```text
+iota:P/Q -> dual(F_13),           iota(j gamma)(c)=zeta^(jc).         (22a)
+```
+
+Thus `zeta^(-ac)=iota(-a gamma)(c)`.  This is a named convention, not the
+Euclidean discriminant pairing on `P/Q`, whose sign convention is opposite.
+Changing the spatial origin multiplies all thirteen
 coefficients by one common phase; it does not change their character ratios.
 
 At the actual deep frequency `N=c3=2S`,
@@ -416,8 +432,9 @@ strict half-open boundaries.  Thus the rail, clock, source root, target root,
 equal rail weight, carry character, and odometer phase can all match while
 the physical semantic support does not.
 
-This is the decisive hostile for reserved THM-2782's proposed rail-eight
-common-ancestry attachment.  The cheapest transplant test is not another
+This is the decisive hostile for the stronger rail-eight common-ancestry
+attachment that proved THM-2782 explicitly does not claim.  The cheapest
+transplant test is not another
 Fourier or quotient calculation.  It is the literal intersection
 
 ```text
