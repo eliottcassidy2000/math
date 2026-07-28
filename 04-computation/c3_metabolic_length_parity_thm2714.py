@@ -140,6 +140,9 @@ def main() -> None:
         modulus = 1 << exponent
         ambient = elements(modulus)
         metabolizer = subgroup_multiples(modulus, 1 << r)
+        omega = (0, 1)
+        relation = add(add(multiply(omega, omega, modulus), omega, modulus), (1, 0), modulus)
+        require(relation == (0, 0), "omega satisfies its cyclotomic equation")
         require(len(ambient) == 4**exponent, "cyclic O-module order")
         require(len(metabolizer) ** 2 == len(ambient), "metabolizer square order")
         require(
@@ -150,6 +153,13 @@ def main() -> None:
             orthogonal(ambient, metabolizer, modulus) == metabolizer,
             "cyclic metabolizer self-orthogonal",
         )
+        radical = frozenset(
+            value
+            for value in ambient
+            if pairing_numerator(value, (1, 0), modulus) == 0
+            and pairing_numerator(value, (0, 1), modulus) == 0
+        )
+        require(radical == {(0, 0)}, "cyclic trace pairing is perfect")
         visible_plane = two_torsion(modulus)
         require(len(visible_plane) == 4, "unique visible standard plane")
         require(visible_plane <= metabolizer, "visible plane lies in metabolizer")
