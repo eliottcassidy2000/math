@@ -2,8 +2,8 @@
 id: THM-2798
 title: "Star graceful-defect minimax barrier for bounded-window moves"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For a labelled m-edge star whose centre occupies position c, the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a labelled
+  m-edge star whose centre occupies position c, the
   missing-difference defect is exactly min(c,m-c).  Between the two graceful
   extreme orders, moves supported on at most r+1 consecutive positions have
   exact minimax barrier max(0,ceil((m-r)/2)).  Thus adjacent C2 swaps cost
@@ -25,8 +25,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2798 -- star graceful-defect minimax barrier for bounded-window moves
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2795 proves that the binary swap and ternary rotation grammar is locally
 an affine `V4`/`S3` geometry but does not connect the graceful locus even on

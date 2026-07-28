@@ -2,8 +2,8 @@
 id: THM-2799
 title: "One-pole two-double-zero Chebyshev response classification"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  The balanced-response chamber e=2,h=1 is classified in every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The
+  balanced-response chamber e=2,h=1 is classified in every
   degree N>=4.  After affine normalization its maps are indexed by the
   simple unit-circle roots of an explicit reciprocal polynomial R_N, modulo
   inversion, giving exactly floor((N-2)/2) affine/target classes.  R_N is
@@ -26,8 +26,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2799 -- one-pole two-double-zero Chebyshev response classification
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2796 classifies every balanced square-potential response with at most
 one extra double zero.  The first open chamber is `e=2`.  When there is one
@@ -56,7 +55,7 @@ t!=0,1.                                               (2)
 Define
 
 ```text
-U_N(t)=sum_(j=0)^(N-2) t^j,
+J_N(t)=sum_(j=0)^(N-2) t^j,
 
 R_N(t)=sum_(j=0)^(N-3) (j+1)(N-2-j)t^j.              (3)
 ```
@@ -66,14 +65,14 @@ Then every response in `(1)` has
 ```text
 R_N(t)=0,                                             (4)
 
-a=-(N/2)U_N(t),
-b=N(U_N(t)-1),
-c=N-1-(N/2)U_N(t),
+a=-(N/2)J_N(t),
+b=N(J_N(t)-1),
+c=N-1-(N/2)J_N(t),
 
 B_t(x)=x^N+a x^2+b x+c,                              (5)
 E_t(x)=(x-1)(x-t),
 S_t(x)=B_t(x)/E_t(x)^2,
-q_t=N(N-2)U_N(t)/2,                                  (6)
+q_t=N(N-2)J_N(t)/2,                                  (6)
 
 F_t(x)=B_t(x)/x^N,
 G_t(x)=q_t E_t(x)/(2x^(N+1)),
@@ -119,7 +118,7 @@ first give the coefficients in `(5)`.  After the derivative equations and
 
 Since `t!=1`, the last root equation is exactly `(4)`.
 
-For a root of `R_N`, `U_N(t)` cannot vanish: otherwise
+For a root of `R_N`, `J_N(t)` cannot vanish: otherwise
 `t^(N-1)=1` and the left side of `(11)` before factorization is
 `2-2N!=0`.  Hence `q_t!=0`.  Equation `(8)` becomes
 
