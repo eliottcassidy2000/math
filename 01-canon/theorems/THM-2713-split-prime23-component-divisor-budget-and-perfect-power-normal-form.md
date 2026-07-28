@@ -2,18 +2,412 @@
 id: THM-2713
 title: "Split prime-23 component divisor budget and perfect-power normal form"
 status: >
-  RESERVED / UNPROVED EMPTY STUB.  Namespace reserved for an independently
-  auditable candidate concerning the nonzero-eta split even-Faber prime-23
-  curve.  This stub is not a theorem and has no proved dependencies.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every eta!=0
+  and every c,d,e,w, the split even-Faber prime-23 weighted complete
+  intersection is geometrically integral, not only generically integral.
+  Its five old and three new branches exhaust the zero divisors of F1 and
+  zeta: div_0(F1)=23O, div_0(zeta)=23N, and the rational chosen-sheet
+  coordinate has div(q)=5N-3O.  A rational normalization would have a
+  necessary perfect-power parametrization with binary-form degrees
+  3,5,23,46.  Rationality is not excluded; the residual is exactly 89 extra
+  delta units plus the displayed polynomial identities.  This is only the
+  nonzero-lambda split even-Faber subchart, not the odd-seed bank, the full
+  split branch, or JC(2).
 source: thm2704-hostile-audit-2026-07-28-component-budget
-depends_on: []
+audit: lrc-narrow-debt-queue-2026-07-28
+depends_on:
+  - THM-2704-split-even-prime23-generic-genus-eighty-nine
+related:
+  - THM-2636-degree-twenty-two-BCD-triple-spectral-square-Kummer-closure
+  - THM-2692-degree-twenty-two-full-support-terminal-toric-order-twelve-closure
+script: 04-computation/jc2_split_prime23_component_divisor_budget_20260728.py
+output: 05-knowledge/results/jc2_split_prime23_component_divisor_budget_20260728.out
+script_sha256: 81cb01e4dff454fc18417b3cfa2136fcab97901317d2b8d2df805a5a0c677350
+output_sha256: 483754f20a492b3a77892cfea2f6c06612459d4366dc52647ce3d07cd4b9468b
+hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2713 -- reserved split prime-23 component divisor budget
+# THM-2713 -- the split prime-23 curve cannot break its `3:5` divisor balance
 
-**RESERVED / UNPROVED EMPTY STUB.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The theorem
+concerns the exact nonzero-`eta` curve of THM-2704 and does not exclude its
+rational specializations.
 
-No mathematical assertion is made here.  The intended candidate must pass a
-full audit of the weighted pencil, vertical-component exclusion, local branch
-domains, component multiplicities, divisor degrees, and the precise boundary
-between uniform geometric integrality and the still-open rationality problem.
+## 1. Statement
+
+Give `(h,t,v,zeta)` weights `(1,1,2,3)`, and let
+
+```text
+C=C_(c,d,e,w,eta):
+F2=0,
+zeta F1^4=eta t^23,                       eta!=0,      (1)
+```
+
+be the split even-Faber complete intersection of degrees `(6,23)` in
+`P(1,1,2,3)`.  The parameters `c,d,e,w` are arbitrary complex numbers.
+Then:
+
+1. `C` is a reduced, geometrically integral projective curve for every such
+   parameter value.
+2. Let `nu:X->C` be its normalization.  Write `O` for the reduced sum of the
+   five old `L5` points over `t=0`, `N` for the reduced sum of the three new
+   `G3` points, and `L=nu^*O_C(1)`.  Then
+
+   ```text
+   deg L=23,
+   div_0(t)=4O+N,
+   div_0(F1)=23O,
+   div_0(zeta)=23N.                                  (2)
+   ```
+
+   After harmless nonzero normalization of the chosen split sheet,
+
+   ```text
+   q=-t^5/F1,                 div(q)=5N-3O.            (3)
+   ```
+
+3. Every member is an lci/Gorenstein curve of arithmetic genus `254`.  The
+   five fixed `(4,23)` cusps contribute delta `165`, so, if `Delta_extra`
+   denotes the total delta away from them,
+
+   ```text
+   g(X)=89-Delta_extra.                               (4)
+   ```
+
+   In particular a rational specialization must have
+   `Delta_extra=89` exactly.
+4. If `X=P1`, there are squarefree coprime binary forms `alpha,beta` of
+   degrees `3,5`, a binary form `H` of degree `23` coprime to `alpha*beta`,
+   a binary form `V` of degree `46` (possibly the zero section), and nonzero
+   constants such that
+   the normalized map has the necessary form
+
+   ```text
+   (h,t,v,zeta)=(H, tau*alpha*beta^4, V, sigma*alpha^23),
+   F1=phi*beta^23,             sigma*phi^4=eta*tau^23. (5)
+   ```
+
+   On the affine chart this becomes, up to nonzero constants,
+
+   ```text
+   q=alpha^5/beta^3,
+   t=alpha*beta^4/H,
+   zeta=alpha^23/H^3,
+   f1=beta^23/H^5.                                   (6)
+   ```
+
+The forms in (5) must still satisfy the exact identities `F2=0` and the
+displayed `F1` equation.  No assertion here says that those identities have
+no solution.  In this rational case, `t` and `q` have degrees `23` and `15`;
+after the visible fibres, Riemann--Hurwitz leaves exactly `29` and `6`
+additional ramification units, respectively.
+
+## 2. The curve is a pure complete intersection on the smooth ambient locus
+
+The only singular points of `P(1,1,2,3)` are the `v`- and `zeta`-coordinate
+points.  Uniformly in the parameters, `F2` takes the nonzero values
+
+```text
+-1190488992,                     15944049             (7)
+```
+
+there.  Hence `C` lies in the smooth ambient locus and `O_C(1)` is a line
+bundle.
+
+The exact corner calculation inherited from THM-2704 gives
+
+```text
+{F2=zeta F1^4=h=t=0}=empty.                           (8)
+```
+
+Thus the two weight-one sections `h,t` have no common zero on `C`.
+
+The equations in (1) have no common hypersurface component.  Indeed, a
+projective hypersurface component common to them would meet the positive
+weight hyperplane `t=0` in a curve.  But the full intersection with `t=0`
+is the finite affine `G3+L5` support below, and (8) excludes a component at
+the corner.  Therefore `(F2,zeta F1^4-eta t^23)` is a regular sequence.
+The curve is lci, Cohen--Macaulay, pure one-dimensional, and has no embedded
+associated point.
+
+The basepoint-free pencil defines
+
+```text
+pi:C -> P1,                         p |-> [h(p):t(p)], (9)
+```
+
+with `O_C(1)=pi^*O_P1(1)`.  Its restriction to every geometric irreducible
+component is nonconstant: otherwise the pullback in (9) would be trivial on
+that component, contradicting ampleness and positive degree of `O_C(1)`.
+This excludes both affine vertical components and components contained in
+`h=0` without a parameter-generic infinity assumption.
+
+## 3. The eight fixed local domains
+
+Every parameter-bearing term of `F1,F2` contains `t`.  Consequently the
+fibre `t=0` and all its unit checks are parameter-independent.  Its reduced
+support is
+
+```text
+new:  zeta=0, G3(v)=0,                 three points,
+old:  F1=0,    L5(v)=0,                five points,   (10)
+```
+
+where `G3,L5` are squarefree and coprime.
+
+At a new point, `F1` and the relevant `v`-derivative of `F2` are units.  The
+local curve is
+
+```text
+zeta=unit*t^23.                                      (11)
+```
+
+It is regular, with one branch and
+
+```text
+ord(t)=1,                  ord(zeta)=23, ord(F1)=0.   (12)
+```
+
+At an old point, `zeta` and
+`det partial(F1,F2)/partial(v,zeta)` are units.  On the smooth local surface,
+`t,F1` are coordinates and the curve is
+
+```text
+F1^4=unit*t^23.                                     (13)
+```
+
+Because `gcd(4,23)=1`, (13) is an analytically irreducible reduced plane
+branch.  On its normalization,
+
+```text
+ord(t)=4,                  ord(F1)=23, ord(zeta)=0.   (14)
+```
+
+Thus every point in (10) belongs to exactly one geometric global component;
+two components cannot share one of these local domains.
+
+## 4. Opposing section degrees force every component to contain everything
+
+Let `Y` be the normalization of one geometric irreducible component.  Since
+`pi|Y` is nonconstant and projective, it is surjective.  Hence `Y` contains
+some points from (10).  Let
+
+```text
+r=# old points on Y,              s=# new points on Y.       (15)
+```
+
+No other point lies over `t=0`, so (12)--(14) give
+
+```text
+d=deg(pi|Y)=deg(L|Y)=4r+s.                            (16)
+```
+
+Neither `F1` nor `zeta` vanishes identically on `Y`: by (1), either would
+force the nonzero generic section `eta*t^23` to vanish.  They are sections
+of `L^5` and `L^3`, respectively.  Their visible zeros in (12)--(14) imply
+
+```text
+23r <= deg div_0(F1|Y)=5d,
+23s <= deg div_0(zeta|Y)=3d.                         (17)
+```
+
+Substituting (16) gives the opposing inequalities
+
+```text
+3r <= 5s,                         5s <= 3r.           (18)
+```
+
+Therefore `3r=5s`.  Since `0<=r<=5`, `0<=s<=3`, and `(r,s)!=(0,0)`, the
+only possibility is
+
+```text
+(r,s,d)=(5,3,23).                                    (19)
+```
+
+Every geometric component would have to contain all eight fixed branches.
+The local-domain uniqueness after (14) therefore permits only one component.
+
+That component is generically reduced because it passes through the regular
+new points (11).  The lci curve is Cohen--Macaulay, hence satisfies `S1` and
+has no embedded associated points.  A generically reduced `S1` curve is
+reduced.  This proves uniform geometric integrality.
+
+This is the central mechanism: the naive branch grammar allows every degree
+`1,...,23`, but the degree-three `zeta` section and degree-five `F1` section
+push in opposite directions and leave only the full `3:5` packet.
+
+## 5. Exact divisors and arithmetic genus
+
+At (19), both inequalities in (17) are equalities:
+
+```text
+deg_visible div_0(F1)=23*5=5*23=deg div_0(F1),
+deg_visible div_0(zeta)=23*3=3*23=deg div_0(zeta).    (20)
+```
+
+Thus the visible zeros exhaust the two sections, proving (2).  The rational
+chosen-sheet reconstruction from the split first flux is, after rescaling by
+a nonzero constant,
+
+```text
+q=-t^5/F1.                                           (21)
+```
+
+Equations (2) and (21) give
+
+```text
+div(q)=5(4O+N)-23O=5N-3O,                            (22)
+```
+
+so `q` has exactly three zeros of order five and five poles of order three,
+with no additional zero or pole.
+
+Because the equations are a regular sequence of degrees `(6,23)` wholly in
+the smooth ambient locus, weighted adjunction applies for every parameter:
+
+```text
+omega_C=O_C(22),
+deg O_C(1)=6*23/(1*1*2*3)=23,
+p_a(C)=1+22*23/2=254.                                (23)
+```
+
+The five local branches (13) have
+
+```text
+delta=(4-1)(23-1)/2=33                               (24)
+```
+
+each.  Since `C` is integral, normalization gives (4).  In particular the
+exceptional rational locus is no longer allowed to escape through
+reducibility or nonflatness: it is exactly the locus carrying `89` additional
+delta units.
+
+## 6. The rational residual is a `3,5,23` perfect-power map
+
+Assume only for this section that `X=P1`.  Pulling back `O_C(1)` gives a
+degree-`23` line bundle, hence `L=O_P1(23)`.  Choose squarefree homogeneous
+binary forms
+
+```text
+alpha, beta,                     deg(alpha,beta)=(3,5), (25)
+```
+
+whose zero divisors are `N,O`.  They are coprime because (10) is disjoint.
+The zero-divisor identities (2) force, up to nonzero scalars,
+
+```text
+t=alpha*beta^4,
+F1=beta^23,
+zeta=alpha^23.                                      (26)
+```
+
+The remaining weight-one section is a degree-`23` binary form `H`.  The
+basepoint-free statement (8) gives `gcd(H,alpha*beta)=1`.  The weight-two
+coordinate pulls back to a binary form `V` of degree `46` (with the zero form
+allowed).  Restoring
+the scalars in (26) gives (5), and (1) gives their single displayed scalar
+relation.  Dividing by the appropriate powers of `H` and using (21) yields
+(6).
+
+This form is necessary, not asserted sufficient.  The exact residual is the
+simultaneous binary-form system
+
+```text
+F2(H,tau*alpha*beta^4,V,sigma*alpha^23)=0,
+F1(H,tau*alpha*beta^4,V,sigma*alpha^23)=phi*beta^23. (27)
+```
+
+It retains the degrees `(3,5,23,46)`, all scalar units, and the omitted third
+flux as a future sidecar.  It is a much smaller target than an arbitrary
+genus-drop discriminant, but this theorem does not solve it.
+
+There are also two sharp ramification invoices.  The degree-`23` map `t` has
+visible contribution `5*(4-1)=15`; genus zero would leave `44-15=29` units.
+By (22), `q` has degree `15`, and its zero and pole fibres contribute
+
+```text
+3*(5-1)+5*(3-1)=22.                                  (28)
+```
+
+Riemann--Hurwitz gives total ramification `28`, leaving exactly `6` other
+units.  Thus the rational residual is simultaneously a `t`-cover with a
+`29`-unit residual and a `q`-cover with only a `6`-unit residual.
+
+## 7. Exact norm/trace sidecar and the first coupling order
+
+Write the affine fluxes as
+
+```text
+f1=a*zeta+b,
+f2=A*zeta^2+B*zeta+C0,                  A=15944049.   (29)
+```
+
+Set
+
+```text
+D=A*b^2-B*a*b+C0*a^2=Res_zeta(f2,f1).                (30)
+```
+
+The universal quadratic norm identity is
+
+```text
+Res_zeta(f2,zeta*f1^4-X)
+ =C0*D^4-X*T+A^5*X^2,                                (31)
+```
+
+where `T=A^5 Tr(zeta*f1^4)` in the quadratic algebra of `f2`.  Substituting
+`X=eta*t^23` gives
+
+```text
+R(t,v)=C0*D^4-eta*t^23*T+A^5*eta^2*t^46.             (32)
+```
+
+The companion verifies exactly
+
+```text
+deg_(t,v) D=(10,5),          terms(D)=60,
+deg_(t,v) T=(23,11),         terms(T)=1220,
+C0(0,v)=-672 G3(v),
+D(0,v)=-16071601392 L5(v),
+gcd(T(0,v),G3 L5)=1.                                 (33)
+```
+
+Thus order `23` is literally the first coupling between the three new and
+five old norm packets, and it is a unit on every fixed branch.  Formulas
+(31)--(32) are the correct Hensel/subresultant instrument for (27); they are
+not needed for the divisor-budget proof and are not themselves a rationality
+obstruction.
+
+## 8. Reproduction and exact boundary
+
+Run
+
+```bash
+python3 04-computation/jc2_split_prime23_component_divisor_budget_20260728.py
+python3 -O 04-computation/jc2_split_prime23_component_divisor_budget_20260728.py
+```
+
+Both modes byte-match the declared output.  The script proves the universal
+norm identity over a polynomial ring, specializes every exact flux
+coefficient, verifies (31)--(33), exhausts all `23` nonzero naive component degrees
+to the sole budget survivor (19), and checks the exponent arithmetic in (6).
+An independent hostile audit separately reconstructed the weighted corner,
+all fixed local units and completed branches, the nonvertical component
+argument, the opposing divisor budgets, geometric reducedness, perfect-power
+normal form, and both ramification invoices.  Normal and optimized replay
+both emit the declared `19`-line transcript, and the companion contains no
+Python `assert` nodes.
+
+The theorem does **not**:
+
+1. exclude solutions of the perfect-power system (27);
+2. exclude `89` extra delta units on a special integral member;
+3. restore or kill the eleven odd Faber seeds;
+4. spend the third flux, the split `y=0` boundary, or every `A=0` physical
+   trajectory consequence; or
+5. prove the full split branch, `JC(2)`, or `DC(2)`.
+
+The exact next target is (27), preferably through (32) at order `23`, with
+the third flux retained before any coefficient quotient.
+
+QED.
