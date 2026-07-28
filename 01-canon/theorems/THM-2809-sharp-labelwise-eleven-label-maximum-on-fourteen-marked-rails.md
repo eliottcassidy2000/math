@@ -1,6 +1,6 @@
 ---
 id: THM-2809
-title: "Universal labelwise twelve-face anchor and delayed-digit closure"
+title: "Sharp labelwise eleven-label maximum on fourteen marked rails"
 status: >
   PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
   HOSTILE AUDIT.  On each of the first fourteen THM-2749 rails, scan the
@@ -14,10 +14,13 @@ status: >
   configuration has future digit 12, while the complete marked source has
   future digit 6; slope-seven pullback fixes that coordinate, so the two
   delayed prefixes are disjoint.  Consequently all thirteen arbitrary-
-  configuration twelve-faces are empty against the full marked source.  An
-  eleven-face omitting labels zero and one remains open.  No target-endpoint,
+  configuration twelve-faces are empty against the full marked source.
+  This bound is sharp: labels 2,...,12 form a positive full delayed
+  eleven-face on every rail, and each of their 2^11 adjacent-edge assignments
+  gives the same atom.  Thus maximum label cardinality is exactly 11
+  (simplex dimension 10) in this marked-source model.  No target-endpoint,
   outside-rail, row, or LRC(14) claim is made.
-source: lrc-a12-carry-bridge/universal-labelwise-twelve-face-closure-2026-07-28
+source: lrc-a12-carry-bridge/sharp-labelwise-eleven-face-2026-07-28
 depends_on:
   - THM-2672-slope-seven-carry-nerve-exact-eleven-simplex-and-root-zero-cap
   - THM-2749-fully-marked-root-zero-clutch-and-target-character-profile
@@ -25,14 +28,14 @@ related:
   - THM-2687-slope-seven-global-configuration-switching-positive-thirteenfold-no-go
   - THM-2797-fourteen-rail-source-twelve-configuration-switch-semantic-base-no-go
   - THM-2804-fourteen-rail-v4-configuration-completion-and-eleven-carry-anchor-defect
-script: 04-computation/lrc14_universal_labelwise_twelve_face_closure_thm2809.py
-output: 05-knowledge/results/lrc14_universal_labelwise_twelve_face_closure_thm2809.out
-script_sha256: f6dd8ba6e1909cd24f0532b1822b5ac6697a18e9871703820ccce4bd43eccfa3
-output_sha256: 3b2dda93c766c2186cd8b90871b70e7270dac528f8895c6a047232c6f9982408
+script: 04-computation/lrc14_sharp_labelwise_eleven_label_maximum_thm2809.py
+output: 05-knowledge/results/lrc14_sharp_labelwise_eleven_label_maximum_thm2809.out
+script_sha256: d74ea1db38238dcd95a32598d1f728d2e37a08be7cc8c951c87bc3de15af6551
+output_sha256: 0f4f9bc3747131f37c57534049c09543b5412fab2f95c654251d8debf8c9d844
 hash_basis: LF-normalized bytes
 ---
 
-# THM-2809 -- every twelve-face meets either the wrong anchor or the wrong digit
+# THM-2809 -- eleven labels survive exactly; twelve never do
 
 **PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
 HOSTILE AUDIT.**
@@ -53,7 +56,9 @@ band-compatible configuration occupies a future half-digit disjoint from
 the complete marked source.
 
 The result is stronger than the four-vertex `V4` corollary suggested by
-THM-2804: no information about the other labels is needed.
+THM-2804: no information about the other labels is needed for the upper
+bound.  Better, the only residual label set is an honestly positive
+eleven-face, so the upper bound is exact.
 
 ## 1. Source-labelled attachment model
 
@@ -284,9 +289,90 @@ The exact failure census is
 ```
 
 An eleven-face omitting both labels zero and one avoids both arguments.
-It is the sharp residual; no positivity is asserted.
+The next section proves that this residual is positive.
 
-## 7. Information ledger and modular reframe
+## 7. The residual eleven-face is positive on every rail
+
+Set
+
+```text
+L_*={2,3,...,12}.                                                 (24)
+```
+
+For every `delta in L_*` and every one of the fourteen rails, the exact unit
+bank contains precisely the following two marked-band-compatible rows with
+the common data `sector=0,kappa=1,h=6`:
+
+```text
+edge 0: target root delta,   pulled root 0,  half (169,182)/182;
+edge 1: target root delta-1, pulled root 12, half (168,181)/182.   (25)
+```
+
+Both target roots are nonzero because `2<=delta<=12`, so both rows are
+honest THM-2640 units.  Both pulled halves contain all of `H_mark`.
+Therefore the edge choice imposes no further cut once the marked source is
+retained.
+
+The remaining factors are common across all choices:
+
+```text
+sector=0,                  h=6,                  kappa=1.          (26)
+```
+
+In particular, THM-2749's semantic delayed prefix is its terminal-fork
+refinement and hence a subset of every label's ordinary `(26)` prefix.
+Also `R tau_delta=7delta` is integral, so each pullback uses the same
+future coordinate and predecessor carry `12`.
+
+For each rail and clock, form the exact physical intersection:
+
+1. start with the full THM-2749 marked source base;
+2. for every `delta=2,...,12`, intersect the rail pullback by
+   `7delta/R`;
+3. intersect the corresponding pullback of `F_(ell,7)`;
+4. retain the common marked deep band and semantic section already present;
+5. apply the common sector-zero, `h=6,kappa=1`, carry-`12` marked prefix.
+
+The positive-clock supports and total exact delayed numerators are
+
+```text
+rail  0: (1)       399580256360672050023360
+rail  1: (6)        74205644260590152069760
+rail  2: (2,3)     724908063903933297548160
+rail  3: (5)       565104521676801927300480
+rail  4: (2,3)    1130171627188809393027840
+rail  5: (4,6)     682117240653421081629120
+rail  6: (2,3)    1267162127454119622485760
+rail  7: (5,6)     941819893732588135224960
+rail  8: (1,2,3)  1449825103908006680574720
+rail  9: (5)       596479469905204957431360
+rail 10: (1,3)     676409208657101856256320
+rail 11: (5)       562231844838877400066880
+rail 12: (2)       582228901121553500855040
+rail 13: (5)       399555625773821502585600.                       (27)
+```
+
+All fourteen rows are strictly positive.  Since the edge affects only the
+private half in `(25)`, every one of the
+
+```text
+2^11=2048                                                          (28)
+```
+
+labelled edge assignments realizes the same common atom on each rail.
+
+Sections 4--6 exclude every label set of cardinality twelve, while `(24)`--
+`(28)` exhibit cardinality eleven.  Hence the sharp result is
+
+```text
+maximum label cardinality=11,
+maximum simplex dimension=10                                      (29)
+```
+
+for arbitrary labelwise THM-2640 configurations against the full marked
+THM-2749 source on each of the first fourteen rails.
+
+## 8. Information ledger and modular reframe
 
 The connection from the configuration bank to the marked source is:
 
@@ -300,7 +386,8 @@ The connection from the configuration bank to the marked source is:
 | second reduction | unit gate leaves the unique row `B` |
 | first failure | `F_(ell,7)` versus `F_(ell,7)^c` |
 | repair after omitting label zero | label-one future digit remains |
-| residual after both gates | an at-most-eleven face omitting labels zero and one |
+| residual after both gates | the positive eleven-face `L_*` |
+| edge freedom on `L_*` | all `2^11` assignments give the same atom |
 
 THM-2804's abstract `V4` and quotient `S3` organize four notable
 configurations, but the physical marked-band observable collapses the entire
@@ -308,27 +395,27 @@ configurations, but the physical marked-band observable collapses the entire
 abstract permutation: it is the distinguished source label together with
 its strict half and anchor polarity.
 
-## 8. Scope
+## 9. Scope
 
 The theorem does **not** prove:
 
 - a no-go for the target marked endpoint;
 - a no-go outside the first fourteen THM-2749 rails;
 - a no-go for a different source carry or marked band;
-- a no-go for an eleven-face omitting labels zero and one;
+- the full component/gain nerve or homology beyond the displayed atom;
 - a row exclusion or LRC(14).
 
-It proves a complete arbitrary-configuration no-go for every twelve-label
-THM-2640 family on the first fourteen rails against the corresponding full
-THM-2749 marked source.
+It proves the exact maximum label cardinality in the first-fourteen-rail,
+full-marked-source attachment model: all twelve-label families fail and one
+eleven-label family is positive.
 
-## 9. Exact companion
+## 10. Exact companion
 
 Run
 
 ```bash
-python 04-computation/lrc14_universal_labelwise_twelve_face_closure_thm2809.py
-python -O 04-computation/lrc14_universal_labelwise_twelve_face_closure_thm2809.py
+python 04-computation/lrc14_sharp_labelwise_eleven_label_maximum_thm2809.py
+python -O 04-computation/lrc14_sharp_labelwise_eleven_label_maximum_thm2809.py
 ```
 
 Both modes must byte-match the stored transcript.  The companion pins the
@@ -337,13 +424,18 @@ flags, verifies the pulled-root law for all `52*13` edge/kappa/height/label
 tuples, classifies all `26` strict half types, scans every one of the
 `14*104` source configurations, independently records the wrapped label-one
 row, reconstructs both delayed prefix banks, and proves their disjointness
-on all seven clocks.  It uses exact integer arithmetic, explicit exception
-gates, and no truth-bearing Python assertions or floating point.
+on all seven clocks.  It then verifies both edge rows for all `14*11`
+rail/label pairs, reconstructs the complete eleven-label physical
+intersection, checks all fourteen support/mass rows in `(27)`, and proves
+that the edge choices impose no extra cut.  It uses exact integer arithmetic,
+explicit exception gates, and no truth-bearing Python assertions or floating
+point.
 
 Promotion requires an immutable independent hostile audit of the
 label typing, strict circular half endpoints, full unit-bank classification,
 anchor polarity, pulled-back future-coordinate identity, delayed-prefix
 disjointness, twelve-face census, normal/optimized replay, dependency hashes,
-and documentation gates.
+the positive eleven-face construction, all `2^11` edge choices, sharp
+cardinality/dimension wording, and documentation gates.
 
 QED, pending independent hostile audit.
