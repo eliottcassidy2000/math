@@ -15,10 +15,13 @@ status: >
   gain refinement remains uncomputed.  Their cyclic rebase accumulates the
   nonzero THM-2657 odometer
   kernel translation 7/13^5.  Configuration switching can evade the fixed-edge
-  root-zero cap in general, although the displayed component lies in a
-  one-edge strip and is maximal even in the full union.  The existence of a
-  thirteen-fold component elsewhere remains open.  No row exclusion or
-  LRC(14) conclusion follows.
+  root-zero cap in general.  The displayed component lies in a one-edge strip
+  and cannot itself be extended by the missing label, so it is a maximal local
+  simplex after the THM-2658 component refinement.  This does not make its
+  twelve labels a maximal simplex in the unrestricted union nerve: another
+  common component of those labels could still meet the thirteenth union
+  label.  The existence of a thirteen-fold component elsewhere remains open.
+  No row exclusion or LRC(14) conclusion follows.
 source: root/physical-cech-higher-overlap-2026-07-28
 depends_on:
   - THM-2640-predecessor-carry-private-root-atlas-and-target-action-clutching-no-go
@@ -221,7 +224,8 @@ for every label.  Labels `0,...,11` survive with roots `1,...,12`; label
 `12` has carry `6` and root zero and fails.  Thus `(14)` is an actual open
 common component, not only a positive integral.
 
-This component is also maximal in the **full** union of configurations.  In
+This component is nonextendable inside the **full** union of configurations.
+In
 the pulled-back base deep coordinate
 
 ```text
@@ -245,9 +249,15 @@ only alternative edge is the right half of root `12`, whose half-open support
 ends at `181`; it is absent throughout the open strip.  Carry, `h`, and
 `kappa` are pointwise fixed, while the root law is independent of rail and
 sector.  Therefore no rail, sector, edge, delayed clock, or other
-configuration choice can extend `(14)` by the thirteenth label.  This proves
-one maximal eleven-face in the unrestricted union nerve, not a global
-dimension bound.
+configuration choice can extend `(14)` by the thirteenth label.  Thus `(14)`
+is a maximal local eleven-simplex after splitting charts into the connected
+physical components required by THM-2658.
+
+This is deliberately not called a maximal face of the unrestricted
+union-labelled nerve.  The same twelve labels may possess another disconnected
+common component which does meet the thirteenth union label.  The present
+strip calculation excludes extension of `(14)`, not extension of every common
+component carrying that label set.
 
 By THM-2658, each connected component in `(14)` determines a complete
 triangle-balanced integer-gain section, and its mass is the least selected
@@ -390,7 +400,8 @@ full union-labelled THM-2640 chart family may still have a positive same-cell
 or inter-cell thirteen-fold component assembled from unrelated configurations;
 the present theorem neither proves nor excludes it.  Equations
 `(15a)`--`(15b)` prove that one explicit twelve-fold component cannot be so
-extended even by changing the base cell.
+extended even by changing the base cell.  They do not prove maximality of its
+label set in the ordinary disconnected-union nerve.
 
 This boundary is logically independent of THM-2680/2682.  Those theorems
 show that the correctly oriented dilation handoff `D(x)={13x}` has positive
@@ -420,8 +431,8 @@ Each normal/optimized pair must byte-match its stored transcript in
 and proves the `534/534` census.  The second isolates `(13)`--`(15)` and
 replays every physical factor at the rational midpoint.  The third proves
 all thirteen rebased facets, `(17)`--`(26)`, and the exact coarse and
-carry-refined label-nerve `f`-vectors, together with the one-edge maximality
-strip `(15a)`--`(15b)`.
+carry-refined label-nerve `f`-vectors, together with the one-edge local
+nonextension strip `(15a)`--`(15b)`.
 
 An independent hostile audit has accepted `(4)`--`(15)` with the mandatory
 fixed-configuration scope and explicitly rejected the invalid full-union
