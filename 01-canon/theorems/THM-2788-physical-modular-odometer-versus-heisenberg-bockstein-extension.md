@@ -2,8 +2,8 @@
 id: THM-2788
 title: "Physical modular odometer tower, Heisenberg shadow, and carry-wall Bockstein"
 status: >
-  RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-  INDEPENDENT AUDIT.  On Z/p^2 the actual odometer and dilation generate the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On Z/p^2 the
+  actual odometer and dilation generate the
   modular group C_(p^2) semidirect C_p, whereas the carry-suppressed digit
   shift and the same dilation generate H_p.  For odd p the two groups have
   the same center, quotient, alternating commutator, and minimal faithful
@@ -14,9 +14,16 @@ status: >
   [X,O^(p^r)]=O^(p^(r+1)).  Thus THM-2782's +13 arm is central only after
   reduction mod169, while its j=13 descent hostile is exactly the next
   commutator +169.  No factor/current covariance, endpoint-origin
-  allocation, row exclusion, or LRC(14) conclusion is proved.  Until
-  independent promotion, no proved result may depend on this candidate.
+  allocation, row exclusion, or LRC(14) conclusion is proved.
 source: root/modular-odometer-heisenberg-boundary-2026-07-28
+audit: >
+  root/audit-2788-2026-07-28 independently rederived the two permutation
+  actions and cocycles, centers/derived groups/power maps, minimal faithful
+  actions, universal odd-prime intersection and p=2 boundary, carry-wall
+  wreath join, full lower-central tower, and the THM-2782 Z1/Z2 typing.
+  It replayed normal, optimized, and stored outputs, verified both hashes,
+  and checked the repaired reduction-versus-shadow information invoice:
+  ACCEPT.
 depends_on:
   - THM-2657-odometer-carry-root-lift-nonsplit-extension-and-cech-cocycle
   - THM-2779-bockstein-symplectic-decoder-frame-torsor-and-heisenberg-root-degree-gate
@@ -33,8 +40,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2788 -- the physical odometer is the other central extension
 
-**RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2779 constructs the carry-suppressed Heisenberg action on the
 `169`-point digit carrier.  THM-2782 then finds a physical `+13` semantic arm
@@ -493,4 +499,4 @@ output_sha256 = 99ad33904617d45d76a285de5467b96408dc164839cb4168905c7fe678db8f66
 hash_basis    = LF-normalized bytes
 ```
 
-**Awaiting independent audit; not QED.**
+QED.
