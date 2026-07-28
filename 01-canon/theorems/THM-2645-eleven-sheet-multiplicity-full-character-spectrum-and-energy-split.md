@@ -2,7 +2,7 @@
 id: THM-2645
 title: "Eleven-sheet multiplicity full-character spectrum and energy split"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT.  Let p be
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let p be
   odd, let S=F_p\A and T=F_p\B with A,B two-point sets, and let
   r=1_S*1_T be the two-edge representation multiplicity.  Every nonzero
   normalized Fourier coefficient satisfies
@@ -32,7 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2645 -- multiplicity restores every charged carry colour
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2642 proves that two eleven-sheet relations on `C_13` have positive
 sections for every affine clutch.  Support has therefore become useless for
@@ -279,4 +279,13 @@ pairs and checks:
 Every logical guard survives optimized Python.  The LF-normalized SHA-256
 hashes are declared in the frontmatter.
 
-QED (candidate; independent audit pending).
+An independent immutable audit rederived the complement factorization, the
+normalized convolution sign and factor `p` in (8), all-mode nonvanishing and
+the sharp odd-root amplitude floor, both Parseval energy classes and their
+`5,070+1,014` census, the maximum-mode deduction, and the freeness and example
+for the common-origin gauge.  It also confirmed that the same-base positive
+transition-count table is genuinely absent from current LRC canon.  Normal
+and optimized executions byte-match the stored transcript, and the declared
+LF-normalized hashes were independently reproduced.
+
+QED.
