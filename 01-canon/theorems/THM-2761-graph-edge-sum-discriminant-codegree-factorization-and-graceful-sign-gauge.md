@@ -2,8 +2,8 @@
 id: THM-2761
 title: "Graph edge-sum discriminant codegree factorization and graceful sign gauge"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For any finite simple graph H, the discriminant of the polynomial
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For any finite
+  simple graph H, the discriminant of the polynomial
   whose roots are edge sums x_u+x_v factors exactly into vertex-difference
   powers 2*codeg_H(u,v) and squared additive-energy differences over disjoint
   edge pairs.  For a bipartite graph, the vertex sign gauge x_A=ell and
@@ -16,6 +16,10 @@ status: >
   This is a universal graph identity/criterion, not a proof of the Graceful
   Tree Conjecture or a Keller/LRC result.
 source: a4-resolvent-next-gate-scout-2026-07-28
+audit: >
+  root/2026-07-28 (independent edge-pair partition, codegree exponents,
+  K4/tree specializations, bipartite gauge, mirror-factor necessity,
+  graceful iff scope, and normal/-O/LF-hash replay: ACCEPT)
 depends_on: []
 related:
   - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
@@ -32,8 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2761 -- edge-sum discriminants split into codegree and matching factors
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2758 factors the discriminant of the six pair sums of four quantities.
 The complete graph is not essential.  For every simple graph, two edges are
@@ -257,7 +260,7 @@ the two path controls above.
 ## 7. Boundary ledger
 
 ```text
-PROVED HERE (candidate):  universal graph edge-sum discriminant factorization;
+PROVED HERE:              universal graph edge-sum discriminant factorization;
                           codegree multiplicities for adjacent edge pairs;
                           disjoint-edge additive-energy residual;
                           K_n, K4, and tree specializations;
@@ -274,4 +277,4 @@ NOT PROVED:               existence of a graceful injection for any new graph;
                           JC(2), DC(2), or LRC(14).                       (17)
 ```
 
-QED (candidate).
+QED.
