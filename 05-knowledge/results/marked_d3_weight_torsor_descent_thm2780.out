@@ -1,0 +1,15 @@
+MARKED D3 WEIGHT-TORSOR DESCENT AUDIT
+marked_colourings=4 each_spectrum=1^9,2^3,3^3
+weight3_triangle_reconstructs_mark=YES
+S4_stabilizer=S3_order6 A4_stabilizer=C3_order3
+V4_action_on_colourings=simply_transitive
+generic_marked_colouring_fields=S4:S3_index4,A4:C3_index4
+inertia_000=marks_fixed4
+inertia_110=mark_cycles=(h1 h4)(h2 h3),fixed_lines=a12,b12
+inertia_101=fixed_lines=a13,b13
+inertia_011=fixed_lines=a23,b23
+nonzero_inertia_mark_fixed_points=0
+orbit_symmetrized_opposite_profile=2,2,2,2 count=3
+orbit_symmetrized_adjacent_profile=1,1,1,3 count=12
+SCOPE=local_inertia_avatar_not_global_section_or_JC2
+FAILED CHECKS: NONE
