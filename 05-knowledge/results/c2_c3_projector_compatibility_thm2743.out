@@ -1,0 +1,15 @@
+THM-2743 C2-C3 OFF-DIAGONAL PROJECTOR AUDIT
+affine_lifts=8 coboundaries=4 nonzero_H1=4
+zero_class_offdiag_ranks=[0, 0, 0, 0]
+nonzero_class_offdiag_ranks=[1, 1, 1, 1]
+zero_class_commutator_ranks=[0, 0, 0, 0]
+nonzero_class_commutator_ranks=[2, 2, 2, 2]
+zero_class_S3_relation_defect_ranks=[0, 0, 0, 0]
+nonzero_class_S3_relation_defect_ranks=[2, 2, 2, 2]
+nonzero_class_offdiag_frobenius_squared=[8/9, 8/9, 8/9, 8/9]
+image_orders=zero:[6, 6, 6, 6] nonzero:[24, 24, 24, 24]
+equal_arm_charged_component=(I-Pi3)*S*Pi3
+S3_normalizer_boundary=offdiag_zero
+LRC_scope=no_common_physical_C2_action_supplied
+JC_scope=finite_marked_resolvent_detector_not_Keller_exclusion
+PASS
