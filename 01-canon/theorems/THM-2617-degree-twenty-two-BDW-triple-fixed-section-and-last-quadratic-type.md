@@ -10,12 +10,16 @@ status: >
   is the same squarefree quintic L_5 as on the closed B-D and B-W planes.
   Every line factor and two of the three possible quadratic top types are
   excluded by exact coefficient ideals. Reducibility is reduced to one
-  explicit quadratic top type: the product of two moving-cubic roots. If
-  this last type is absent, the physical square lift is connected with at
-  least six branch places and genus at least two, closing the entire B-D-W
-  stratum. A 324-parameter rational hostile sweep finds no reducible fibre,
-  but uniform irreducibility and the stratum closure remain OPEN. No other
-  mixed stratum, split/even descent, 2-adic raising, JC(2), or DC(2) follows.
+  explicit quadratic top type: the product of two moving-cubic roots. Both
+  exceptional walls of its first solving determinant are empty. On the
+  generic determinant chart every surviving factor is forced onto one
+  explicit 69-term compatibility divisor K(lambda,h)=0 of bidegree (7,15).
+  If this last type is absent, the physical square lift is connected with
+  at least six branch places and genus at least two, closing the entire
+  B-D-W stratum. A 324-parameter rational hostile sweep finds no reducible
+  fibre, but the residual K-chart, uniform irreducibility, and the stratum
+  closure remain OPEN. No other mixed stratum, split/even descent, 2-adic
+  raising, JC(2), or DC(2) follows.
 source: klein-2026-07-28-degree22-bdw-triple
 depends_on:
   - THM-2411-degree-twenty-two-first-flux-pole-divisor-square-class-reduction
@@ -25,8 +29,8 @@ related:
   - THM-2480-degree-twenty-two-BC-plane-hensel-ramification-closure
 script: 04-computation/jc2_degree22_bdw_triple_last_quadratic_thm2617.py
 output: 05-knowledge/results/jc2_degree22_bdw_triple_last_quadratic_thm2617.out
-script_sha256: 9bb6239e12e443aea02ac7e04ffe08dca612ad35e9f6078d61c4f39fcf7ade27
-output_sha256: 1434b9726b8c9a5fb33397ed22ce5ec28278bf938d87943f2f2696a5caea5468
+script_sha256: bcfc8cdfccaf254036b0e9c97408f9f729843ca7c884010f734b9385edc8ca91
+output_sha256: 38252d3aa812a4e234fc677fefddad71e75fb7d20befff54f6a440428f0d3154
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -47,8 +51,10 @@ and retain the physical square lift used on the `B,D` and `B,W` planes.
 
 The calculation gives a sharp reduction, not a closure.  Four of the five
 possible small top-factor types are impossible.  The remaining type has an
-explicit two-root formula and coefficient ideal; that ideal is now the exact
-highest-leverage algebraic target on this stratum.
+explicit two-root formula and coefficient ideal.  Its two exceptional
+determinant walls are also impossible, and its generic chart is confined to
+one explicit compatibility divisor.  The residual system over that divisor
+is now the exact highest-leverage algebraic target on this stratum.
 
 ## 1. Inherited coordinates and the two moduli
 
@@ -232,7 +238,7 @@ together with (17).  The exact remainder ideal in
 `Q[b,d,e,lambda,h]` contains `h^3`, again impossible.  Thus `L1,L2,Q1,Q2`
 are absent for every `lambda,mu in C*`.
 
-## 5. The sole remaining quadratic type
+## 5. The sole remaining quadratic type and its determinant walls
 
 Choose one root `h` of the moving cubic and put
 
@@ -267,16 +273,80 @@ exactly as
  (114048lambda h^2-25088h^2-44352h+68607)^2.             (25)
 ```
 
-The first and third displayed factors are already nonzero by (22).  Away
-from the other two factors, (25) solves `b,d` uniquely and leaves a smaller
-ideal in `e,lambda,h`; on either exceptional factor it gives two separate
-boundary ideals.  None of those three ideals is declared empty here.
+The first and third displayed factors are already nonzero by (22).  Name the
+other two factors
+
+```text
+A=384lambda h^2-560h+693,
+C=114048lambda h^2-25088h^2-44352h+68607.              (26)
+```
+
+Both exceptional walls are empty.
+
+On `A=0`, substitute
+
+```text
+lambda=(560h-693)/(384h^2).                             (27)
+```
+
+The Groebner basis of all nine specialized remainder equations contains
+`h^2`.  This contradicts `h!=0`.
+
+On `C=0`, substitute
+
+```text
+lambda=(25088h^2+44352h-68607)/(114048h^2).             (28)
+```
+
+The two top-next equations become parallel.  Up to a nonzero rational unit,
+the gcd of their two augmented consistency minors is
+
+```text
+h^6(8h-99)^3(32h-99)(56h-99)^2(64h-99)^4.              (29)
+```
+
+Since `h!=0`, a solution can occur only at
+
+```text
+h in {99/8,99/32,99/56,99/64}.                         (30)
+```
+
+At each of these four exact rational values, the complete specialized ideal
+in `Q[b,d,e]` is the unit ideal.  Hence `C=0` is empty too.
+
+It remains to work on `AC!=0`, where (25) solves `b,d` uniquely.  The next
+two equations are linear in `e`.  Their exact resultant factors as
+
+```text
+h^3 A^2(384lambda h^2-280h+231)^3 C^3 K(lambda,h),      (31)
+```
+
+where the residual primitive polynomial `K` has bidegree
+
+```text
+(deg_lambda K,deg_h K)=(7,15)
+```
+
+and exactly 69 terms.  All displayed factors except `K` are inverted on
+this chart.  Therefore every surviving `Q3` factor must lie over `K=0`.
+This is a necessary reduction, not a claim that every point of `K=0` lifts
+to a factor.
+
+For continuing the residual calculation, the localized root-scaled chart
+
+```text
+Lambda=lambda h^2,       beta=b/h,
+delta=d/h^2,             epsilon=e/h^2                 (32)
+```
+
+puts all nine saturated coefficient equations in total degree at most eight.
 
 This is the exact stopping boundary:
 
 ```text
 R_(lambda,mu) reducible
-  iff a Q3 factor satisfying the nine equations exists.               (26)
+  iff a Q3 factor satisfying the nine equations exists;
+every such factor satisfies A!=0, C!=0, K(lambda,h)=0.  (33)
 ```
 
 ## 6. Why the last factor would close the stratum
@@ -288,7 +358,7 @@ smooth projective normalization.
 Restore the physical square class
 
 ```text
-Y=y/sqrt(B),                    Y^2=1/p.                (27)
+Y=y/sqrt(B),                    Y^2=1/p.                (34)
 ```
 
 At the five points (11), `p` has valuation one.  Hence `1/p` is not a
@@ -297,7 +367,7 @@ The branch divisor of a quadratic extension has even degree, so it has at
 least six places.  Riemann--Hurwitz gives
 
 ```text
-g(double cover)>=-1+6/2=2.                              (28)
+g(double cover)>=-1+6/2=2.                              (35)
 ```
 
 A rational Keller trajectory would give a map from `P^1` to this positive-
@@ -312,18 +382,19 @@ As a hostile control only, the companion takes the 18 distinct nonzero
 rationals
 
 ```text
-{n/d : d in {1,2,3}, -4<=n<=4, n!=0}                  (29)
+{n/d : d in {1,2,3}, -4<=n<=4, n!=0}                  (36)
 ```
 
 for each of `lambda,mu`, factors all `324` specialized bivariate
 eliminants exactly over `Q`, and finds
 
 ```text
-reducible fibres: 0.                                    (30)
+reducible fibres: 0.                                    (37)
 ```
 
-This is **FINITE-EXACT** evidence.  It is not used in (26), does not exclude
-algebraic parameter values, and is not a proof of uniform irreducibility.
+This is **FINITE-EXACT** evidence.  It is not used in the exact exclusions
+or in (33), does not exclude algebraic parameter values, and is not a proof
+of uniform irreducibility.
 
 ## 8. Reproduction and scope
 
@@ -335,14 +406,16 @@ python3 -O 04-computation/jc2_degree22_bdw_triple_last_quadratic_thm2617.py
 ```
 
 The companion reconstructs (7)--(14), the exhaustive top inventory, all
-four exact exclusions, the last quadratic chart and determinant, the square-
-lift genus invoice, the `y=0` boundary, and the frozen hostile universe.
-All truth-bearing checks use `require` and remain active under optimized
-Python.
+four top-type exclusions, the last quadratic chart and determinant, both
+exceptional-wall eliminations, the generic compatibility divisor, the
+localized degree-eight chart, the square-lift genus invoice, the `y=0`
+boundary, and the frozen hostile universe.  All truth-bearing checks use
+`require` and remain active under optimized Python.
 
-The exact next target is the `Q3` remainder ideal in (24), split into the
-generic determinant chart and the two genuine exceptional factors of (25).
-Uniform irreducibility and the `B,D,W` closure remain **OPEN**.
+The exact next target is the residual `Q3` system over `K(lambda,h)=0` in
+the generic determinant chart.  The two genuine exceptional factors of
+(25) are closed.  Uniform irreducibility and the `B,D,W` closure remain
+**OPEN**.
 
 Nothing here closes another support-three stratum, a branch outside the
 inherited nonsplit exact-square-prefix reduction, split/even short edges, or

@@ -2,7 +2,8 @@
 id: THM-2621
 title: "Planar degree-four inverse-spectral Keller congruence and sheet-defect pole ledger"
 status: >
-  PROVED + VERIFIED-SYMBOLIC + CORRECTED AFTER INDEPENDENT HOSTILE AUDIT.  A hypothetical
+  PROVED + VERIFIED-SYMBOLIC + INDEPENDENTLY HOSTILE-AUDITED AFTER
+  MISTAKE-301 SCOPE REPAIR.  A hypothetical
   planar Keller map of generic field degree four admits generic determinant-one
   source coordinates in which P is monic in y and x is primitive over
   K=C(P,Q).  If f is the monic inverse minimal quartic of x and y=b(x), then
@@ -16,7 +17,8 @@ status: >
   exact: it is d Tr(H), where x dy-kappa^(-1)P dQ=dH on the affine source.
   Its poles are second-kind poles supported on the Jelonek boundary and every
   divisor residue is zero; the branchwise Laurent residue before trace is the
-  surviving necessary condition.  An exact punctured C4 hostile satisfies the entire
+  surviving necessary condition; its power-sum form is an explicit
+  coefficient gate absent from the PDE alone.  An exact punctured C4 hostile satisfies the entire
   PDE with c=1 but has primitive-coordinate discriminant and b-denominator
   divisors, proving that the PDE alone does not encode affine polynomial
   realization.  This reduces but does not solve the D4/A4/S4 planar degree-four
@@ -39,7 +41,8 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2621 -- a degree-four Keller map is a marked inverse quartic with boundary poles
 
-**PROVED + VERIFIED-SYMBOLIC + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-SYMBOLIC + INDEPENDENTLY HOSTILE-AUDITED AFTER
+MISTAKE-301 SCOPE REPAIR.**
 
 The planar field-degree-four branch is open.  THM-2465 reduces every affine
 point-cap instance to it, while THM-2598 leaves geometric monodromy
@@ -350,7 +353,7 @@ source omits `Y=0`, and the base is not simply connected.  It is not a Keller
 counterexample on `A^2` and does not contradict Campbell's exclusion of
 polynomial `C_4` monodromy.
 
-## 6. The trace--Liouville boundary class
+## 6. The trace--Liouville class vanishes for polynomial realizations
 
 Let the trace run over the four inverse sheets and define the rational
 one-form
@@ -647,6 +650,7 @@ failed implication and repair.
 No polynomial degree-four Keller map, monodromy lane exclusion, JC(2), DC(2),
 or GMC-to-JC interface follows.  In particular, a nonzero divisor residue of
 `omega_F` is impossible rather than merely unproved; useful residue data must
-be retained branchwise before trace as in (31e)--(31f).
+be retained branchwise before trace as in (31e)--(31f).  No local mechanism
+forcing the coefficient cancellations in (31j) is proved here.
 
 QED.
