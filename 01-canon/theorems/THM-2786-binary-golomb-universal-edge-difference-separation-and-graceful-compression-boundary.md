@@ -2,8 +2,8 @@
 id: THM-2786
 title: "Binary Golomb universal edge-difference separation and graceful compression boundary"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  The labels 2^i-1 give every finite graph pairwise distinct
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The labels
+  2^i-1 give every finite simple graph pairwise distinct
   absolute edge differences, with an exact 2-adic decoder for both
   endpoints.  More generally every radix q works.  A self-contained
   quadratic prime construction compresses universal all-pair separation
@@ -19,7 +19,8 @@ status: >
 source: root/binary-golomb-graceful-boundary-2026-07-28
 external_input: >
   Bertrand's postulate, used only for the corollary that an odd prime
-  n<=p<2n exists and hence the displayed prime ruler has span <8n^2.
+  n<=p<2n exists for n>=2 and hence the displayed prime ruler has span
+  <8n^2.  The n=1 case is the trivial one-point ruler of span zero.
 depends_on:
   - THM-2761-graph-edge-sum-discriminant-codegree-factorization-and-graceful-sign-gauge
   - THM-2765-rooted-nullstellensatz-linear-range-distinct-edge-labeling
@@ -34,10 +35,9 @@ hash_basis: LF-normalized bytes
 
 # THM-2786 -- a universal ruler solves the wrong graceful problem
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-There is an elementary collision-free labeling for every graph:
+There is an elementary collision-free labeling for every finite simple graph:
 
 ```text
 vertex i |-> 2^i-1.                                      (1)
@@ -49,7 +49,7 @@ exactly why it cannot reach the graceful range.  The theorem below turns
 this familiar powers-of-two observation into a source/target map, compresses
 it to quadratic range, and proves that any linear compression must use the
 tree's missing edges.  THM-2765 already does so and reaches `3n-5`; the
-candidate here explains why that change of category is load-bearing.
+theorem here explains why that change of category is load-bearing.
 
 ## 1. Exact binary endpoint decoder
 
@@ -151,16 +151,17 @@ Its span satisfies
 b_(n-1)<2p^2.                                            (13)
 ```
 
-Bertrand's postulate permits an odd prime `n<=p<2n`, with the trivial choice
-`p=3` at `n=2`.  Hence every `n`-vertex graph has one explicit integral
-all-pair-separating labeling of span
+For `n>=2`, Bertrand's postulate permits an odd prime `n<=p<2n`, with the
+trivial choice `p=3` at `n=2`.  Hence every `n`-vertex finite simple graph
+has one explicit integral all-pair-separating labeling of span
 
 ```text
 <8n^2.                                                   (14)
 ```
 
 The formula and proof `(7)--(13)` are self-contained; Bertrand is used only
-for the displayed uniform constant in `(14)`.
+for the displayed uniform constant in `(14)`.  For `n=1`, the one-point
+ruler has span zero.
 
 ## 3. The exact graceful compression obstruction
 
@@ -299,8 +300,9 @@ the optimal values `(19)` by testing every smaller normalized ruler.  Normal
 and optimized runs byte-match the stored transcript.
 
 ```text
-PROVED HERE (candidate):  binary and general-radix endpoint decoder;
-                          universal all-graph edge-difference separation;
+PROVED HERE:              binary and general-radix endpoint decoder;
+                          universal finite-simple-graph edge-difference
+                          separation;
                           explicit prime-quadratic Sidon/Golomb ruler;
                           span <2p^2 and, by Bertrand, <8n^2;
                           edge-count and all-pair span lower bounds;
@@ -318,4 +320,4 @@ NOT PROVED:               an improvement to THM-2765's 3n-5 tree range;
                           JC(2), DC(2), or LRC(14).                       (22)
 ```
 
-QED (candidate).
+QED.
