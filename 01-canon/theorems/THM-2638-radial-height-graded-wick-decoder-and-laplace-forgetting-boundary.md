@@ -30,7 +30,7 @@ related:
   - THM-2623-guard-safe-danger-cospan-and-residual-unit-wall
 script: 04-computation/gmc2_radial_height_graded_decoder_thm2638.py
 output: 05-knowledge/results/gmc2_radial_height_graded_decoder_thm2638.out
-script_sha256: b63782f6130a4a8b19232a43a38f7e2e7e461b503b09f1a4f07cbfc4266e4d19
+script_sha256: 1bdf82cf3eab621781591b061f73610c7d3466ad19b47de7fc8d839714821521
 output_sha256: f2e2890b9b3e927c263038dcfc094f49d2926580b68a1b274176364ed0ce5606
 hash_basis: LF-normalized bytes
 ---
@@ -290,11 +290,12 @@ python -O 04-computation/gmc2_radial_height_graded_decoder_thm2638.py
 
 The dependency-free companion enumerates the channels of (10) through
 `j=12`, checks (11)--(15), verifies private radial rows at every enumerated
-level, reconstructs the equal-height hostile (19)--(21), exhausts a bank of
-source-torus characters against (18), and verifies mixed-radix injectivity
-and exact root-orthogonality selectors.  All computations are integer or
-rational; no floating point is used.  Normal and optimized runs LF-normalize
-to the stored transcript.
+level, reconstructs the equal-height hostile (19)--(21), tests `49`
+source-torus one-parameter gradings as finite controls for the universally
+proved identity (18), and verifies mixed-radix injectivity and exact
+root-orthogonality selectors.  All checks use explicit optimization-stable
+guards, and all computations are integer or rational; no floating point is
+used.  Normal and optimized runs LF-normalize to the stored transcript.
 
 The theorem proves a statement about the shell polynomial before radial
 integration.  It does not infer shellwise vanishing from scalar moment

@@ -10,6 +10,11 @@ from itertools import product
 from math import factorial
 
 
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
+
+
 def weak_compositions(total, slots):
     if slots == 1:
         yield (total,)
@@ -27,7 +32,7 @@ def channel_rows(support, moment):
             continue
         hol = sum(a * r for (a, _), r in zip(support, occ))
         anti = sum(b * r for (_, b), r in zip(support, occ))
-        assert hol == anti
+        require(hol == anti, f"unbalanced retained row: {occ}")
         multinomial = factorial(moment)
         for r in occ:
             multinomial //= factorial(r)
@@ -58,22 +63,24 @@ for j in range(1, 13):
     expected_heights = tuple(6 * j + 12 * t for t in range(j + 1))
     got_occ = tuple(row[0] for row in rows)
     got_heights = tuple(row[1] for row in rows)
-    assert got_occ == expected_occ
-    assert got_heights == expected_heights
+    require(got_occ == expected_occ, f"occupation parametrization failed at j={j}")
+    require(got_heights == expected_heights, f"height parametrization failed at j={j}")
     fibres = grade_fibres(rows)
-    assert all(len(fibre) == 1 for fibre in fibres.values())
-    assert all(wick == multinomial * factorial(height)
-               for _, height, multinomial, wick in rows)
+    require(all(len(fibre) == 1 for fibre in fibres.values()),
+            f"radial height is not private at j={j}")
+    require(all(wick == multinomial * factorial(height)
+                for _, height, multinomial, wick in rows),
+            f"Wick/Laplace factorization failed at j={j}")
     private_levels += 1
     channel_counts.append(len(rows))
     height_ranges.append((got_heights[0], got_heights[-1]))
 
 
 rows4 = channel_rows(hostile, 4)
-assert rows4 == (
+require(rows4 == (
     ((1, 3, 0), 6, 4, 4 * factorial(6)),
     ((3, 0, 1), 18, 4, 4 * factorial(18)),
-)
+), "fourth-moment row mismatch")
 
 a = Fraction(1)
 b = Fraction(1)
@@ -82,20 +89,24 @@ shell4 = {
     height: multinomial * (a ** occ[0]) * (b ** occ[1]) * (c ** occ[2])
     for occ, height, multinomial, _ in rows4
 }
-assert shell4[6] != 0 and shell4[18] != 0
-assert sum(factorial(height) * coefficient
-           for height, coefficient in shell4.items()) == 0
+require(shell4[6] != 0 and shell4[18] != 0,
+        "fourth shell unexpectedly vanished")
+require(sum(factorial(height) * coefficient
+            for height, coefficient in shell4.items()) == 0,
+        "fourth scalar cancellation failed")
 
 
 equal_height = ((2, 0), (1, 1), (0, 2))
 equal_rows = channel_rows(equal_height, 2)
-assert equal_rows == (
+require(equal_rows == (
     ((0, 2, 0), 2, 1, 2),
     ((1, 0, 1), 2, 2, 4),
-)
-assert grade_fibres(equal_rows) == {2: ((0, 2, 0), (1, 0, 1))}
+), "equal-height hostile rows mismatch")
+require(grade_fibres(equal_rows) == {2: ((0, 2, 0), (1, 0, 1))},
+        "equal-height hostile did not collide")
 
-# Every character of the source exponent torus restricts to (alpha+beta)A.
+# Finite controls for the universal identity that every source-torus
+# one-parameter grading restricts to (alpha+beta)A.
 source_character_checks = 0
 for alpha, beta in product(range(-3, 4), repeat=2):
     monomial_grades = tuple(alpha * aa + beta * bb for aa, bb in equal_height)
@@ -103,9 +114,11 @@ for alpha, beta in product(range(-3, 4), repeat=2):
                            for occ, _, _, _ in equal_rows)
     expected = tuple((alpha + beta) * height
                      for _, height, _, _ in equal_rows)
-    assert channel_grades == expected
+    require(channel_grades == expected,
+            f"source-torus grade formula failed at {(alpha, beta)}")
     if alpha + beta == 0:
-        assert channel_grades == (0, 0)
+        require(channel_grades == (0, 0),
+                f"angular grade failed at {(alpha, beta)}")
     source_character_checks += 1
 
 # Mixed-radix coefficient weights separate every bounded occupation vector.
@@ -115,7 +128,7 @@ weights = tuple(base ** i for i in range(len(equal_height)))
 modulus = base ** len(equal_height)
 all_occ = tuple(weak_compositions(moment, len(equal_height)))
 codes = tuple(dot(weights, occ) % modulus for occ in all_occ)
-assert len(set(codes)) == len(all_occ)
+require(len(set(codes)) == len(all_occ), "mixed-radix code collision")
 
 # Exact cyclic root orthogonality is an exponent-count statement.
 selector_checks = 0
@@ -127,13 +140,16 @@ for target in all_occ:
         for u in range(modulus):
             exponent_histogram[(u * (code - target_code)) % modulus] += 1
         if occ == target:
-            assert exponent_histogram[0] == modulus
-            assert sum(exponent_histogram[1:]) == 0
+            require(exponent_histogram[0] == modulus,
+                    f"target selector lost its trivial phase: {target}")
+            require(sum(exponent_histogram[1:]) == 0,
+                    f"target selector gained a nontrivial phase: {target}")
         else:
             # Sum_u xi^(u d)=0 because d is nonzero modulo N.  For this
             # fixture the histogram is uniform on a nontrivial subgroup;
             # the geometric-series criterion N does not divide d is exact.
-            assert (code - target_code) % modulus != 0
+            require((code - target_code) % modulus != 0,
+                    f"off-target mixed-radix collision: {target}, {occ}")
         selector_checks += 1
 
 
