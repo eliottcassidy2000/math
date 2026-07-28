@@ -2,18 +2,18 @@
 id: THM-2802
 title: "Normalized unit bispectrum and projective cyclic-orbit reconstruction"
 status: >
-  RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-  INDEPENDENT AUDIT.  Over any splitting field for a finite cyclic group,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over any
+  splitting field for a finite cyclic group,
   the normalized Fourier bispectrum of a group-algebra unit is a complete
   invariant modulo nonzero scalar and cyclic translation.  Equality makes
   the Fourier ratio a character.  Every THM-2790 endpoint cycle therefore
   has a canonical projective-origin signature, and none equals the
   THM-2791 semantic two-point signature.  This reconstructs a coefficient
   orbit, not a positive carrier, physical frame map, semantic attachment,
-  row exclusion, or LRC(14).  Until independent promotion, no proved result
-  may depend on this candidate.
+  row exclusion, or LRC(14).
 source: root/unit-bispectrum-holotopy-2026-07-28
 depends_on:
+  - THM-2625-canonical-endpoint-current-full-transvection-sector-survival
   - THM-2790-universal-depth-two-central-response-and-carry-wall-spectrum
   - THM-2791-full-arm-orbit-transfer-and-lower-central-chord
 related:
@@ -30,8 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2802 -- a unit cycle is reconstructed projectively by its bispectrum
 
-**RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2790 proves that every central endpoint cycle has complete Fourier
 support.  THM-2791 produces a very different full-spectrum object: one
@@ -229,7 +228,8 @@ THM-2790 gives
 J_(s,Delta)(z)=sum_(j=0)^12 P_(R_j+s)Q_(R_j)z^j
 ```
 
-with all thirteen Fourier coordinates nonzero.  Hence each of the
+whose zero Fourier coordinate is nonzero by THM-2625 and whose twelve
+nontrivial Fourier coordinates are nonzero by THM-2790.  Hence each of the
 
 ```text
 168*13=2,184                                             (19)
@@ -356,4 +356,12 @@ exception gates and no truth-bearing Python assertions.
 No same-ancestry physical allocation, positive intertwiner, global frame
 map, endpoint chronology, row exclusion, or LRC(14) conclusion is proved.
 
-**Awaiting independent audit; not QED.**
+An immutable independent hostile audit rederived the split group-algebra
+criterion, scalar/translation invariance, completeness through the character
+ratio, reversal law, and exact coboundary fibre.  It separately checked the
+zero-mode attribution to THM-2625 and the twelve nontrivial modes from
+THM-2790, the support-size obstruction against THM-2791, and the THM-2439
+homometric control.  Normal and optimized runs byte-match the stored output;
+the declared LF hashes, compilation, and full documentation checks pass.
+
+QED.
