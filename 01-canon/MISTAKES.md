@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-305 (2026-07-28, THM-2588 fold-cascade boundary) -- a thirteenth fold was assigned to a 13-speed family
+
+- **What was recorded:** THM-2588 and its referee printed a constants table
+  for `k=1,...,13` and claimed the uniform separated-tower conclusion over
+  that range.  The final row used the formal expression
+  `1/(14-13)=1` as an empty-body floor.
+- **Why it was wrong:** a 13-speed family has only twelve consecutive ratios
+  and only twelve legal snap-fold removals, ending at a singleton.  There is
+  no thirteenth partner, no thirteenth fold modulus, and no empty-family
+  lonely-runner floor.  The script's `k=13` row was not used by any
+  certificate and was internally inconsistent with its own special-case
+  comment.
+- **Strongest survivor / repair:** the fold identity, snap lemma, all
+  certificates, T-A/T-B, and every constants row `k=1,...,12` are unchanged.
+  THM-2588, its companion, and the stored transcript now quantify only over
+  this legal range.  When iterating a peel/fold recurrence, count actual
+  edges of the ordered speed list, not vertices or the stationary runner.
+
 ## MISTAKE-304 (2026-07-28, THM-2688 hardening) -- a concurrent script/output hardening left stale declared hashes
 
 - **What was recorded:** the hardened THM-2688 frontmatter declared primary

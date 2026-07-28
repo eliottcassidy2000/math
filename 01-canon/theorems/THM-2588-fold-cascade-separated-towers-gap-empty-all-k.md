@@ -1,7 +1,7 @@
 ---
 id: THM-2588
 title: THE FOLD CASCADE — snap-folding at pair-sum moduli closes every SEPARATED multi-scale family at every far-count k (the apex-7 wall broken in the separated regime); T-B (v_max < 134·v₍₂₎ for gap families) is its k = 1 instance, now independently proved; T-A (the classical cores gap-empty at all heights) carries two independent routes
-status: PROVED (three-line lemmas + settled LRC(≤13) floors; referee exact — fold identity 600/600, snap inequality vs exact M, certificates at heights to 10^25, per-k constants table, T-A corners 5/5). Scope: the SEPARATED regime (every descent ratio ≥ R_k); the clustered residual stands and is precisely the S147 adversarial pointer.
+status: PROVED + BOUNDARY-CORRECTED (three-line lemmas + settled body floors; referee exact — fold identity 600/600, snap inequality vs exact M, certificates at heights to 10^25, legal k=1..12 constants table, T-A corners 5/5). Scope: the SEPARATED regime (every descent ratio ≥ R_k); the clustered residual stands and is precisely the S147 adversarial pointer. MISTAKE-305 removes the former fictitious k=13 empty-body row; all proved k=1..12 conclusions are unchanged.
 source: mac-mini-2026-07-27-S148 (owner: work the T-A/T-B promotions and the plateau-past-7 extension); T-B/T-A first derived by the S147 adversarial agent (ledger secured at 07-reflections/adversarial-lane-verdict-...-agent-S147.md); this file supplies the independent proofs and the cascade generalization
 depends_on: [LRC(≤13) settled (owner policy), THM-1290 (h ≤ 64 exhaustion, for T-A), HYP-8005 (one-far closure, T-A route 1)]
 related: [THM-2052 (the box), HYP-9065 (the six-brief map), THM-735 (the level-0 multi-peel), HYP-8115(d) (the clustered-tower pointer)]
@@ -30,9 +30,9 @@ body S (settled floor M(S) ≥ 1/(14−k)):
 
 whenever every descent ratio hᵢ/max(Vᵢ₊₁) ≥ R. Sharp per-k thresholds (referee table):
 
-    R_k = 134, 99, 85, 75, 66, 58, 51, 43, 36, 29, 22, 15, 8   (k = 1..13).
+    R_k = 134, 99, 85, 75, 66, 58, 51, 43, 36, 29, 22, 15   (k = 1..12).
 
-**Uniform R = 134 gives M(V) ≥ 3/41 for every k = 1..13.** The k = 1 case is T-B:
+**Uniform R = 134 gives M(V) ≥ 3/41 for every legal k = 1..12.** The k = 1 case is T-B:
 any 13-speed family with v_max ≥ (533/4)·v₍₂₎ has M ≥ 3/41; contrapositive — **every gap
 family has v_max < 134·v₍₂₎** (no lonely top scale). The binding constant 533/4 = 13·41/4
 comes from 1/13 − 3/41 = 2/533.
@@ -51,6 +51,9 @@ pigeonhole beyond (safe-run < fold span; agent ledger). The two routes double-co
 this slice, discharging the plateau lemma's independent-read request on it.
 
 ## Honest residual
+There are twelve legal folds because a nonempty 13-speed family can be
+reduced only to its final singleton.  There is no `k=13` empty-body floor.
+
 The cascade says nothing about CLUSTERED steps (ratio < R_k at some level). Combined with
 T-B, every hypothetical gap family is a multi-scale tower all of whose descent ratios are
 below the per-position constants — exactly the S147 adversarial pointer, whose first three

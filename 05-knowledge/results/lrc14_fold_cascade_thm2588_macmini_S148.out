@@ -28,7 +28,6 @@
   k=10: body floor 1/4, R_k = 29 (ratio >= 29 suffices)
   k=11: body floor 1/3, R_k = 22 (ratio >= 22 suffices)
   k=12: body floor 1/2, R_k = 15 (ratio >= 15 suffices)
-  k=13: body floor 1, R_k = 8 (ratio >= 8 suffices)
 
 == (5) T-A corner values, re-verified exact ==
    65 corner: M = 5/66 (agent claimed 5/66) OK
