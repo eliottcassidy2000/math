@@ -122,6 +122,12 @@ require(
     sp.factor(constant_equation.as_expr().subs(u0, -1 / a) + c) == 0,
     "terminal nonzero-constant obstruction",
 )
+vzero = sp.symbols("vzero")
+f_zero = -(y - x**2 / 2) / a + vzero
+require(
+    sp.factor(normalized.subs({f: f_zero, c: 0}).doit()) == 0,
+    "sharp zero-Jacobian boundary family",
+)
 
 print("THM-2709 complete linear target-plane classification on polynomial graphs")
 print("Pluecker=(P,Q,R):J=P*J_AB+Q*J_Bd+R*J_dA")
@@ -130,5 +136,6 @@ print("P!=0:normalized PDE=(x+a*y+b)f_x+(x^2+a*f+b*x)f_y+f-x*y=c")
 print("Q=0:unique f=(x-b)t/2+(x-b)(x^2+b^2)/8+c;t=y-x^2/2")
 print("Q=0:target=(P*A,B-2*b*d);triangular V=(t+b^2/2)^2-2*c*(x+b)")
 print("P*Q!=0:EMPTY;deg_y>=2 Riccati collapse;linear branch forces c=0")
+print("zero_constant_boundary=f=-(y-x^2/2)/a+v0")
 print("shifted_cubic_inverse=PASS;row_wedge_expansion=PASS")
 print("ALL CHECKS PASSED")

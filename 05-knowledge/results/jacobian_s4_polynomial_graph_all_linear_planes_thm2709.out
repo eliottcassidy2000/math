@@ -5,5 +5,6 @@ P!=0:normalized PDE=(x+a*y+b)f_x+(x^2+a*f+b*x)f_y+f-x*y=c
 Q=0:unique f=(x-b)t/2+(x-b)(x^2+b^2)/8+c;t=y-x^2/2
 Q=0:target=(P*A,B-2*b*d);triangular V=(t+b^2/2)^2-2*c*(x+b)
 P*Q!=0:EMPTY;deg_y>=2 Riccati collapse;linear branch forces c=0
+zero_constant_boundary=f=-(y-x^2/2)/a+v0
 shifted_cubic_inverse=PASS;row_wedge_expansion=PASS
 ALL CHECKS PASSED

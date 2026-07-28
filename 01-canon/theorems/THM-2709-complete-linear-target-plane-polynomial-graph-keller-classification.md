@@ -21,8 +21,8 @@ related:
   - THM-2655-quartic-keller-resolvent-v4-quasietale-torsor-and-kummer-class-group-gate
 script: 04-computation/jacobian_s4_polynomial_graph_all_linear_planes_thm2709.py
 output: 05-knowledge/results/jacobian_s4_polynomial_graph_all_linear_planes_thm2709.out
-script_sha256: c5e17d29014d02310e7a1dd0590979b9f4a9d8471aced7ac2046392b1f9fd2f4
-output_sha256: 6863b4256c30be1cf797c28dc956389924afeedc215b5ce63ce1adb738cd3281
+script_sha256: d851c6671576baac86e44eeae57d61e1aaec28eb02a77409931bba50b6718cb0
+output_sha256: 961fab46f659be3db5467257a149b3bbdff8fc1c9d30c2d8d829a060ba65ad53
 hash_basis: LF-normalized bytes
 ---
 
@@ -218,6 +218,16 @@ so `u=-1/a`.  After this substitution the entire remaining constant term is
 exactly `-c`.  It cannot vanish because `c!=0`.  This contradiction proves
 that the `P Q!=0` branch is empty.
 
+The boundary is sharp at zero Jacobian.  If `c=0`, then for arbitrary
+`v_0 in C`
+
+```text
+f=-(y-x^2/2)/a+v_0                                    (22)
+```
+
+solves `(8)`.  Thus it is the nonzero Keller constant, not mere polynomial
+invariance of the graph, that empties this Pluecker cell.
+
 ## 5. Complete classification
 
 Combining the target flags `(5)` with THM-2705 and Sections 3--4 gives:
@@ -268,8 +278,8 @@ Both modes must byte-match
 The companion uses explicit `require` checks.  It verifies the general row
 wedge `(4)`, normalized PDE `(8)`, the shifted cubic and polynomial inverse,
 the all-degree top-degree/Riccati inequalities, every coefficient in `(19)`,
-and the final `-c` obstruction.  The finite identities support but do not
-replace the all-degree proof.
+the final `-c` obstruction, and the sharp zero-Jacobian family `(22)`.  The
+finite identities support but do not replace the all-degree proof.
 
 Promotion requires promotion of THM-2705 and an independent hostile audit of
 the Pluecker flags, signs and scalings, polynomial divisibility, degree gates,
