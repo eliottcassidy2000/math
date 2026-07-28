@@ -2,8 +2,8 @@
 id: THM-2756
 title: "Opposite-edge projectors, parity cancellation, and the integral clutch"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Edge complementation is a central involution on the six-edge
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Edge
+  complementation is a central involution on the six-edge
   permutation module of K4.  Over Q its positive block is the three-matching
   module 1+[22], with kernel V4 and image S3, while its negative block is the
   faithful standard module [31].  Both block determinants equal the quartic
@@ -14,6 +14,10 @@ status: >
   is an exact finite representation/lattice theorem, not a Keller or LRC
   exclusion.
 source: a4-resolvent-next-gate-scout-2026-07-28
+audit: >
+  root/2026-07-28 (independent centrality, rational block, character,
+  determinant/trace, integral index/Smith, mod-two gluing, scope, and
+  normal/-O/hash replay: ACCEPT)
 depends_on: []
 related:
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
@@ -31,8 +35,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2756 -- opposite-edge projectors and the integral clutch
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2753 proves that the faithful action of `S4` on the six edges of `K4`
 has trivial ambient sign, while the quotient action on the three perfect
@@ -283,7 +286,7 @@ for the parity-kernel criterion.
 ## 7. Boundary ledger
 
 ```text
-PROVED HERE (candidate):  central opposite-edge involution;
+PROVED HERE:              central opposite-edge involution;
                           exact rational 3+3 block diagonalization;
                           E_+=1+[22] matching quotient with kernel V4;
                           E_-=[31] faithful standard module;
@@ -302,4 +305,12 @@ NOT PROVED:               graph-quartic or Keller realization;
                           JC(2), DC(2), or LRC(14).                       (22)
 ```
 
-QED (candidate).
+An independent hostile audit reconstructed the two three-dimensional
+characters, determinant cancellation and transposition/double-transposition
+trace split; checked the integral pair bases, index `8`, Smith form and
+equivariant parity kernel directly; and confirmed that the claimed gluing is
+the graph of the matching-wise identification only modulo two.  Normal,
+optimized and stored outputs byte-match after LF normalization, and both
+declared hashes are exact.  No physical LRC carrier was inferred.
+
+QED.
