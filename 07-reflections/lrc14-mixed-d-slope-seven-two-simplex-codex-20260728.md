@@ -139,11 +139,19 @@ needed sidecar:
 
 The incoming affine-cocycle scout
 `lrc14-the-odometer-digit-is-a-handoff-coordinate-20260728.md` gives the
-sharp next test.  Its phase-level maps with lifts `k=-14,+14` alternate the
-central clock forever at a distinguished two-cycle.  The next decisive
-physical computation is the corresponding labelled rail product with every
-source, carry, half-edge, unit, and endpoint factor retained.  Our witness
-shows that the first mixed physical face exists; it does not prove that the
+sharp next test and a necessary correction.  The minimal lifts `k=-14,+14`
+form only a cosmetic two-cycle: their intrinsic stored edges are diagonal
+`4->4` and `3->3`, so they do not glue owner to next shallow clock.  The
+lawful intrinsic-clock cycle instead uses
+
+```text
+k=-(13^5+1), +(13^5+1),
+```
+
+with stored edges `4->3` and `3->4`.  The next decisive physical computation
+is that alternating labelled rail product with every source, carry,
+half-edge, unit, and endpoint factor retained.  Our witness shows that the
+first mixed physical face exists; it does not prove that these corrected
 affine faces concatenate.
 
 ## 5. Reproduction
