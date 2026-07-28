@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for THM-2745's one-pole composition boundary."""
+"""Exact companion for THM-2748's one-pole composition boundary."""
 
 from fractions import Fraction
 from math import gcd
@@ -72,7 +72,7 @@ def main() -> None:
             "translated pure-power control changed")
     require(z0 != 0, "translation hostile collapsed to literal monomial")
 
-    print("THM-2745 ONE-POLE RESPONSE COMPOSITION AUDIT")
+    print("THM-2748 ONE-POLE RESPONSE COMPOSITION AUDIT")
     print(f"highest_odd_rows={len(pole_rows)}")
     print(f"pole_orders={tuple(row[-1] for row in pole_rows)}")
     print("constant_U_positive_degree_solutions=((1, 1),)")

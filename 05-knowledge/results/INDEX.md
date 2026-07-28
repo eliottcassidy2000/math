@@ -1,17 +1,15 @@
 # Script Results Index
 
-- `jc2_one_pole_response_composition_thm2745.py` -> matching `.out`
-  [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2745].  A
+- `jc2_one_pole_response_composition_thm2748.py` -> matching `.out`
+  [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2748].  A
   one-pole response component dominated by the source
-  [PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; THM-2748; INDEPENDENT HOSTILE
-  AUDIT PENDING].  A one-pole response component dominated by the source
   rational primitive has rational normalization; after moving its source and
   target poles to infinity, both the response and normalization map are pure
   powers.  Thus constant `U` forces pole order and cover degree one, while
   monomial `U=u0(x-a)^m` forces the exact law `m-1=eP`.  This classifies the
   equality boundary of the THM-2741 one-branch escape.  THM-2745 independently
   closes the degree-22 physical component boundary using the full exact-prefix
-  lift equations; THM-2748 remains an abstract sharp classification candidate.
+  lift equations; THM-2748 remains the abstract sharp classification.
 - `lrc14_two_target_present_semantic_attachment_probe_20260728.py` ->
   matching `.out` [THM-2742 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  Restoring the second lawful target coordinate turns the

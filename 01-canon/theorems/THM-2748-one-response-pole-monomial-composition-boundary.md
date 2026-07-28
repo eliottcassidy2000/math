@@ -20,10 +20,10 @@ related:
   - THM-2214-nonsplit-terminal-quartic-spectral-curve-closure-through-degree-ten
   - THM-2726-a21-transverse-integral-split-response-three-pole-closure
   - THM-2745-highest-odd-faber-componentwise-exact-prefix-closure
-script: 04-computation/jc2_one_pole_response_composition_thm2745.py
-output: 05-knowledge/results/jc2_one_pole_response_composition_thm2745.out
-script_sha256: 7abb11dfed2ee12e4367489ebff8acc305c1812aca37daba548ab493bf36d0cb
-output_sha256: e891aadabbe9af77f69062470ffe9e3626bca6fa661d60bac91b1ce7e8671ad6
+script: 04-computation/jc2_one_pole_response_composition_thm2748.py
+output: 05-knowledge/results/jc2_one_pole_response_composition_thm2748.out
+script_sha256: 0043fbbdd8101d14f9df7943b392606a045edcba6eb7562de34501343bf79a2a
+output_sha256: b7220369b72b8b4ddeca97cedcb0e6699e5175fd98e123a64f1e0f95f465ba02
 hash_basis: LF-normalized bytes
 ---
 
@@ -185,7 +185,7 @@ pure powers after affine/Mobius gauge.
 THM-2745 subsequently closed the complete degree-22 highest-odd physical
 boundary by retaining the polynomial exact-prefix identities on every
 component.  Thus the application above is no longer needed to close that
-family.  The present candidate survives as a sharp abstract classification
+family.  The present theorem survives as a sharp abstract classification
 after those lift equations are forgotten.
 
 ## 4. Boundaries
@@ -211,12 +211,12 @@ proved.
 Run
 
 ```bash
-python 04-computation/jc2_one_pole_response_composition_thm2745.py
-python -O 04-computation/jc2_one_pole_response_composition_thm2745.py
+python 04-computation/jc2_one_pole_response_composition_thm2748.py
+python -O 04-computation/jc2_one_pole_response_composition_thm2748.py
 ```
 
 Both executions byte-match the stored transcript
-`05-knowledge/results/jc2_one_pole_response_composition_thm2745.out`.  The
+`05-knowledge/results/jc2_one_pole_response_composition_thm2748.out`.  The
 companion verifies every pole order in `(13)`, all first five ramification
 degrees, the exact rational-primitive derivative identity, and the pure-power
 composition.  It also checks the constant-`U` degree-one boundary and the
