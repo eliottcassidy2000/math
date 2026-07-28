@@ -45,6 +45,10 @@ secondary_script: 04-computation/lrc14_residue8_common_allocation_covariance_thm
 secondary_output: 05-knowledge/results/lrc14_residue8_common_allocation_covariance_thm2820.out
 secondary_script_sha256: 779e2fab9b6aa80097b4d3756c32cdb040d4c2a2e9dd31ec9c7effcf11b780ae
 secondary_output_sha256: e4809c77178a3b66901e4b68eca517cfcb74e2516e16ece719cfca1efe4cbe7e
+core_audit_script: 04-computation/lrc14_boolean_norm_cotangent_no_go_independent_audit_thm2820.py
+core_audit_output: 05-knowledge/results/lrc14_boolean_norm_cotangent_no_go_independent_audit_thm2820.out
+core_audit_script_sha256: e99269507b9465ba1ecaef90ea1f0c8dbf5c03fe56229a8b649f66541a5cabbf
+core_audit_output_sha256: f540f72495e0a29ef10a809e0e4afd700a129bc95fad76bac1868a03ab8e90a0
 hash_basis: LF-normalized bytes
 ---
 
@@ -62,7 +66,8 @@ D3/v11=144=1 mod13.                                      (1)
 ```
 
 THM-2813 independently produces the unit normal displacement of one affine
-lift.  Equality of the two scalars does not construct a map.
+lift.  Equality of the two scalars does not construct a map, and no proved
+identification makes `D3` itself a group norm or top augmentation class.
 
 This theorem locates the exact algebra between them.  The full modular orbit
 norm survives as the **top** augmentation power, not a first jet.  But the
@@ -787,5 +792,13 @@ fixed-cell endpoint atlas.  It independently replayed both companions in
 normal and optimized modes against their stored transcripts, verified all
 four LF-normalized hashes, checked the selected-cell versus bank-global
 scope, and found no load-bearing defect.
+
+The additional core audit listed in the header is methodologically
+orthogonal to the Hasse-coordinate implementation: it works in the cyclic
+group-element basis, checks the arbitrary-characteristic Boolean gate over
+hostile finite rings, tests the sharp `p=2` exception, and exhausts all
+`144` independent multiplier pairs at `p=13`.  It does not serve as the
+audit of the later physical and gauge claims; it separately confirms the
+norm/cotangent boundary on which those claims rest.
 
 **QED.**
