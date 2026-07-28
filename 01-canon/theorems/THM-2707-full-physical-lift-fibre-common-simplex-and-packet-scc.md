@@ -238,6 +238,20 @@ Every vertex of `(20)` and `(21)` carries the same open cylinder `I`, and
 the cumulative numerator returns exactly to zero.  Thus either word can be
 repeated indefinitely as a fixed-skeleton **support** word.
 
+There is a useful phase-level consequence, narrower than a current.  For
+either displayed loop and every integer physical frequency `N`, the product
+of its pure endpoint translation phases is
+
+```text
+prod_j exp(2 pi i N dK_j/R)
+ =exp(2 pi i N sum_j dK_j/R)=1,                           (22)
+```
+
+because the signed numerator sum is zero in `Z`, not merely modulo `R`.
+Using positive representatives changes the sum by a multiple of `R` and
+gives the same answer.  Thus bare endpoint-character holonomy does not kill
+these two loops.
+
 ## 5. Proof mechanism
 
 Multiplying `(2)` by `R` kills the `7n/R` displacement modulo one, so the
@@ -282,9 +296,10 @@ seven retained factors listed in Section 1, not the old whole following atom.
 
 No configuration-switch theorem, canonical target action, semantic source
 or endpoint current, all-row statement, row exclusion, or proof of LRC(14)
-follows.  The next sharp problem is to decide whether one closed support word
-admits a common endpoint/current phase sidecar, or whether the nonsplit
-odometer class forces cancellation around every such word.
+follows.  The next sharp problem is common-gauge semantic-factor and amplitude
+restoration on one closed support word.  Equation `(22)` shows that the bare
+endpoint multiplier is already coherent on the two displayed loops, but it
+does not transport allocation, word, component, or current coefficients.
 
 ## 7. Exact reproduction
 
