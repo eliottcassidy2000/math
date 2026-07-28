@@ -2,8 +2,7 @@
 id: THM-2717
 title: "Minimal c2-safe ghost-transit rebuild and deletion-cancellation boundary"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT + INDEPENDENTLY
-  HOSTILE-AUDITED; AWAITING FINAL IMMUTABLE REPLAY/PROMOTION.  Deleting the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Deleting the
   failed c2 target gate and reinserting its safe complement rebuilds all 162
   private-root rails with global content 26.  The two forced THM-2706 ghost
   rows are global primitive units.  On the two forced slices, the exact c2
@@ -12,6 +11,9 @@ status: >
   twenty reverse anti-diagonal cancellations; the forced-row quotient has an
   exact central-C4 shadow but supplies no physical or semantic arm selector.
 source: root/minimal-c2-safe-ghost-transit-2026-07-28
+audit: macro-segal-truth-sheet-referee-2026-07-28 (independent algebra,
+  finite-etale scope, global-content, cancellation, symmetry, and immutable
+  normal/optimized/stored replay audit)
 depends_on:
   - THM-2640-predecessor-carry-private-root-atlas-and-target-action-clutching-no-go
   - THM-2698-central-half-odometer-full-local-cycle-and-semantic-sidecar-boundary
@@ -21,6 +23,7 @@ related:
   - THM-2370-deletion-martingale-drift-conservation-and-sharp-clone-hostile
   - THM-2716-c4-arm-transporter-groupoid-and-relative-degree-holotopy-boundary
   - THM-2720-unshifted-deepest-source-present-packet-global-disjointness
+  - THM-2742-full-two-target-present-sheet-deepest-source-semantic-current
 script: 04-computation/lrc14_minimal_c2_safe_ghost_transit_rebuild_thm2717.py
 output: 05-knowledge/results/lrc14_minimal_c2_safe_ghost_transit_rebuild_thm2717.out
 script_sha256: 81de8ea40fc00b05892c1430937d43dfb57112ed5b8a767282a37177ac4f94f2
@@ -32,8 +35,7 @@ hash_basis: LF-normalized bytes
 
 ## Status and scope
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT + INDEPENDENTLY
-HOSTILE-AUDITED; AWAITING FINAL IMMUTABLE REPLAY/PROMOTION.**  This statement changes the
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This statement changes the
 delayed middle-object grammar.  It rebuilds all 162 canonical source-one
 private-root rails after deleting exactly the failed present `c2` gate and
 then inserting its safe complement.  The resulting integer lattice has global
@@ -415,9 +417,9 @@ existence is not canonical current transport.  Absolute Frobenius preserves
 each already formed forced safe unit, but preservation creates no physical
 safe-arm cospan.
 
-The nonoverlapping audited-request candidate
-`THM-2720-unshifted-deepest-source-present-packet-global-disjointness.md`
-verifies in its current proof-complete-candidate scope that every unchanged present packet is
+Promoted THM-2720
+(`THM-2720-unshifted-deepest-source-present-packet-global-disjointness.md`)
+proves that every unchanged present packet is
 disjoint from `E3`; deleting only its final unshifted `c3`-safe factor makes
 exactly `78/91` label pairs positive.  The complementary finite-exact `c221`
 reflection also has strict scalar `E3 -> Q_(3,{1,2})` cospans at the same
@@ -463,3 +465,12 @@ rebuilds both the deleted-gate and safe-repair banks on every rail, checks the
 global contents and primitive determinant census, verifies `(7)` on the four
 rails containing the two forced slices, checks all local cancellation data in
 `(16)`, and replays the exact point and affine-split geometry in `(17)--(20)`.
+
+An independent hostile audit rederived the Boolean truth partition, the
+global-content-`26` lattice, all five cells of the paired unit cross-tab, the
+twenty reverse anti-diagonal cancellations, and the finite-etale/norm and
+central-`C4` calculations.  A final immutable audit replayed both normal and
+optimized executions against the stored transcript after rebasing over the
+promoted THM-2720/2742 truth surface; the LF hashes above remain exact.
+
+QED.
