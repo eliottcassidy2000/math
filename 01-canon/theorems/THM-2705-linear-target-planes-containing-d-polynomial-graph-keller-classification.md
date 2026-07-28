@@ -332,3 +332,7 @@ optimized execution byte-matched the recorded output SHA-256
 `2a7ae1bc65af8303e4bcc661f7aebeb0c4cbb94ec86e846fcaaafeebc5966ebc`;
 the script SHA-256 is
 `cfaf4135a52d96fecb7644e5ffcbdb6c7f60e446289e2a8c4a8ca281d5f19fe2`.
+The stored transcript has nine lines; the script has zero Python `assert`
+nodes and eighteen explicit `require` calls.
+
+QED.

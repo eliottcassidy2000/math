@@ -1,14 +1,14 @@
 # Script Results Index
 
 - `jacobian_s4_polynomial_graph_all_linear_planes_thm2709.py` -> matching
-  `.out` [THM-2709 PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; THM-2705
-  PROMOTION AND INDEPENDENT AUDIT REQUIRED].  Pluecker coordinates classify
+  `.out` [THM-2709 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Pluecker coordinates classify
   every linear target plane on every polynomial graph: planes containing `d`
   route to THM-2705; planes containing `A` have one shifted cubic triangular
   map; planes containing neither are empty.  Hashes: `d851c667` / `961fab46`.
 - `jacobian_s4_polynomial_graph_mixed_d_planes_thm2705.py` -> matching `.out`
-  [THM-2705 PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT].  Every linear target plane containing `d` is classified on
+  [THM-2705 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Every
+  linear target plane containing `d` is classified on
   arbitrary polynomial graphs: the scaled pure-`A` triangular family, the
   empty pure-`B` direction, and exactly two affine mixed solutions.  Hashes:
   `cfaf4135` / `2a7ae1bc`.

@@ -290,3 +290,7 @@ SHA-256
 `961fab46f659be3db5467257a149b3bbdff8fc1c9d30c2d8d829a060ba65ad53`;
 the script SHA-256 is
 `d851c6671576baac86e44eeae57d61e1aaec28eb02a77409931bba50b6718cb0`.
+The stored transcript has ten lines; the script has zero Python `assert` nodes
+and twelve explicit `require` calls.
+
+QED.

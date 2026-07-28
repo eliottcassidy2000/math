@@ -307,9 +307,10 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2699 further classifies every affine source-plane/affine-linear target
   slice with constant planar Jacobian into three explicit triangular
   automorphism families.  THM-2702 closes the three literal coordinate-pair
-  projections on arbitrary polynomial graphs: two explicit triangular
-  families and one locally-nilpotent-derivation impossibility.  Arbitrary
-  target projections and polynomial surfaces remain open.
+  projections on arbitrary polynomial graphs.  THM-2705/2709 then classify
+  the full linear target Grassmannian: planes containing `d` give the scaled
+  triangular/affine families; the remaining planes give one shifted cubic or
+  are empty.  Nonlinear targets and nongraph polynomial surfaces remain open.
   THM-2690 separately excludes the
   reduced normal-crossing cyclic-cubic toric normalizations
   `z^3=product x_i^(alpha_i)`, `alpha_i in {1,2}`: their class groups are
