@@ -1,0 +1,14 @@
+THM-2711 C3 DISCRIMINANT-METABOLIZER MOD-FOUR AUDIT
+two_orbit_mod4_matrices_checked=16384
+nonsingular_matrices=15058
+matrices_with_standard_plane=5048
+matrices_with_isotropic_standard_plane=2560
+standard_planes_total=7992
+isotropic_standard_planes_total=3840
+mod2_identical_pair_dets=8,32 standard_isotropy=NO,YES
+d4_det=4 smith=(1,1,2,2) lambda_W=((0,1),(1,0)) stable_metabolizer=NO
+positive_L_det=64 H_order=8 H_equals_Hperp=YES contains_W=YES
+positive_overlattice_gram=diag(1,-1^6) index=8
+order_two_pairing=lambda(x,y)=x^T*M*y/2_mod2
+boundary_realization_and_reflection_not_tested
+PASS
