@@ -53,8 +53,8 @@ two positive finite measures under the kernel
 above `c-1`; the denominator is supported at or below `c-1`.  Successive
 rows of `H` are increasing likelihood-ratio tilts, so the relevant
 increment ratio is strictly increasing.  This proves the universal atomic
-inequality and its exact equality case.  An independent hostile audit has
-rederived the full argument and its equality boundary.
+inequality and its exact equality case.  The proof and its independent
+hostile audit are complete here.
 
 ## 1. Normalize the three slots
 
