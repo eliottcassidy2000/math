@@ -142,6 +142,26 @@ current fills every cell and every admissible parabolic sector.
 (carry/termination); THM-2411/2419 (fixed origin); and corrected
 THM-2621/MISTAKE-301 (trace loses branch residues and the `D_4` action potential); and THM-2646/HYP-2033 (the ordinary braid centre changes knot closure, while the annular LRC centre is target-invisible only after a literal descent check).
 
+## Test whether a central extension changes the base signature
+
+**Trigger / action:** when an odd-primary quotient is nilpotent or a Kummer
+cover appears decisive, restore the smallest missing central or
+anti-invariant coordinate and recompute the induced base map before treating
+it as fibre decoration.
+**Mechanism:** an order-two sidecar can change the cocycle itself.  It may
+replace one autonomous base dynamics by another, or rationally split the
+cover whose ramification supplied the old obstruction.
+**Counterindication:** a changed base or split cover is a new typed object,
+not a proof about the inherited one.  Require the semantic action,
+intertwiner, or trajectory map before transferring a recurrence or
+contradiction.
+**Evidence:** THM-2698 changes the LRC delayed signature from
+`y -> {13y}` to `y -> {13y+1/2}` and opens a full local cycle while leaving
+the semantic `C_2` bibundle open.  The verified split-lambda prime-23 scout
+restores the anti-invariant sheet coordinate `q` and finds it rational in the
+curve field, so the nonsplit fourth-root Kummer gate becomes trivial rather
+than stronger.
+
 ## The same representation is not the same carrier
 
 **Trigger / action:** when two frontiers contain the same group module, identify the module exactly, then separately type the realization functor and test whether the module lifts through it.
