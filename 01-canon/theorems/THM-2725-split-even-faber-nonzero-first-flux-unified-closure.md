@@ -8,8 +8,10 @@ status: >
   arbitrary-b prime-23 geometry has five q-pole points while THM-2723 permits
   at most two on the source.  If y is identically zero, THM-2724's degree-23
   resultant forces the response into the constant field and contradicts the
-  third flux.  This includes every B_0, including zero, but not lambda=0,
-  odd Faber seeds, the broader split branch, or JC(2).
+  third flux.  This includes every B_0, including zero.  The theorem itself
+  does not treat lambda=0 or odd Faber seeds; THM-2755 and THM-2745
+  subsequently close those complementary degree-22 strata.  Other split
+  degrees, the upstream reduction, and JC(2) remain open.
 source: root/split-even-nonzero-flux-unified-closure-2026-07-28
 audit: thm2704-hostile-audit-2026-07-28-unified-even-closure (independent two-chart proof and pole-pullback audit)
 depends_on:
@@ -20,6 +22,8 @@ related:
   - THM-2411-degree-twenty-two-first-flux-pole-divisor-square-class-reduction
   - THM-2718-split-prime23-five-pole-rational-primitive-closure
   - THM-2726-a21-transverse-integral-split-response-three-pole-closure
+  - THM-2745-highest-odd-faber-componentwise-exact-prefix-closure
+  - THM-2755-all-even-zero-flux-componentwise-global-regularity-closure
 ---
 
 # THM-2725 -- the nonzero-flux split even-Faber chart is empty

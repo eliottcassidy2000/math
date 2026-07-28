@@ -3,21 +3,26 @@ id: THM-2753
 title: "Six-edge parity erasure and three-matching resolvent restoration"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The faithful S4
-  action on the six two-subsets of four sheets lands
-  in A6, so ambient six-object permutation parity is identically even.  More
-  sharply, a transposition and a nontrivial V4 double transposition have the
-  same six-edge cycle type 1^2 2^2, although their actions on the three
-  perfect matchings are respectively a reflection and the identity.  The
-  matching action has kernel exactly V4, image S3, and its sign is the
-  original quartic sign.  With a marked three-cycle the two binary choices
-  generate A4 -> C3 and S4 -> S3.  The full labelled edge action is faithful,
-  and one labelled edge or one mixed binary--ternary word separates the two;
-  only unlabeled single-generator cycle/sign data are erased.  This is a
-  finite resolvent-information theorem, not a Keller or LRC exclusion.
+  action on the six two-subsets of four sheets lands in A6, so ambient
+  six-object permutation parity is identically even.  More sharply, a
+  transposition and a nontrivial V4 double transposition have the same
+  six-edge cycle type 1^2 2^2, although their actions on the three perfect
+  matchings are respectively a reflection and the identity.  The matching
+  action has kernel exactly V4, image S3, and its sign is the original
+  quartic sign.  With a marked three-cycle the two binary choices generate
+  A4 -> C3 and S4 -> S3.  The full labelled edge action is faithful, and one
+  labelled edge or one mixed binary--ternary word separates the two; only
+  unlabeled single-generator cycle/sign data are erased.  This is a finite
+  resolvent-information theorem, not a Keller or LRC exclusion.
 source: a4-resolvent-next-gate-scout-2026-07-28
-audit: root-jc-boundary-promotion-2026-07-28 (independent subset-sign,
+audit: >
+  root-jc-boundary-promotion-2026-07-28 (independent subset-sign,
   faithfulness, conjugacy-table, V4-kernel, sign-pullback, marked-group,
-  sharp-hostile, scope, and normal/optimized replay audit)
+  sharp-hostile, scope, and normal/optimized replay audit: ACCEPT);
+  six-edge-matching-parity-hostile-audit-2026-07-28 (independent subset-sign,
+  subgroup-orbital, class-table, matching-kernel/sign, marked-generator,
+  characteristic-two boundary, sharp-hostile, and normal/-O/stored/hash
+  audit: ACCEPT)
 depends_on: []
 related:
   - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
@@ -85,9 +90,11 @@ ker(mu)=V4={1,(12)(34),(13)(24),(14)(23)},
 im(mu)=S3.                                                 (5)
 ```
 
-Thus `(4)` contains two different forgetful operations.  Passing from the
-labelled edge action to its `S6` conjugacy class forgets how opposite edges
-are paired.  Passing to `M` deliberately retains exactly that opposition
+Thus `(4)` contains two different forgetful operations.  Passing one labelled
+edge permutation `epsilon(g)` to its `S6` conjugacy class forgets how opposite
+edges are paired relative to that generator.  The full subgroup action does
+not: its two orbitals on unordered pairs of edges recover intersecting versus
+opposite pairs.  Passing to `M` deliberately retains exactly that opposition
 partition and forgets the `V4` translation.
 
 ## 2. Ambient six-edge parity is identically even
@@ -189,10 +196,11 @@ finite representation behind the `A4/C3` row of THM-2746 and the `S4/S3`
 row of THM-2743.
 
 It also explains the discriminant character without overclaiming a transfer.
-For a separable quartic, the discriminant square class is the sign character
-of its sheet monodromy.  For the cubic resolvent, it is the sign character of
-the matching action.  Equation `(11)` makes those characters equal.  The
-stronger exact polynomial identity
+Over a field of characteristic different from `2`, for a separable quartic
+the discriminant square class is the sign character of its sheet monodromy.
+For the cubic resolvent, it is the sign character of the matching action.
+Equation `(11)` makes those characters equal.  The stronger exact polynomial
+identity
 
 ```text
 disc(quartic)=disc(integral resolvent cubic)             (15)

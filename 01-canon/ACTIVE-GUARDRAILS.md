@@ -136,8 +136,8 @@
     convention-safe `beta_1/beta_2` results as canon pending the court case.
 44. **Equal ranks do not identify lattices.** MISTAKE-227: the AP chain has
     saturation index `11!` and is not THM-2052's signed code.
-45. **Small-prime Paley spectra assign no LRC roles.** MISTAKE-228. Fibonacci,
-    apex, rank, and tight/slack labels remain heuristics without a map.
+45. **Small-prime Paley spectra assign no LRC roles.** MISTAKE-228. Fibonacci, apex, rank, and tight/slack labels remain heuristics without a map.
+45a. **Six-edge ambient parity is not quartic parity.** THM-2753: the faithful `S4` action on `E(K4)` lies in `A6`, and transposition/double-transposition one-generator cycle types collide; the three matchings restore sign through `S4/V4=S3`. Retain the opposition/address sidecar, but the full subgroup orbitals do recover it.
 
 ## Sequences and cross-domain transfers
 
@@ -173,7 +173,8 @@
 60. **THM-2071 closes the quadratic-fiber locus, not JC(2).** It makes the
     reduced complement fiber-linear; THM-2084's cubic floor is also a source-
     fiber statement, not generic degree, Jelonek geometry, VC(4), or JC(2).
-61. **Closing every coefficient support is not JC(2).** THM-2671/2683/2692 empty the inherited genuine-nonsplit degree-22 branch; THM-2725/2745 close, respectively, the chosen-sheet split all-even nonzero-flux and every highest-odd member (including reducible/nonreduced).  The all-even zero-flux edge, broader split/outside branches, integral raising, `JC(2)`, and `DC(2)` remain open.
+61. **Closing reduced degree 22 is not JC(2).** THM-2671/2683/2692 close the genuine-nonsplit branch; on a chosen split sheet THM-2725/2745/2755 close nonzero even flux, every odd member, and the last all-even zero-flux edge, including vertical/reducible/nonreduced cases.
+    This exhausts only the given quartic/split/degree-22 exact-prefix chart. Split degrees `6,10,14,18,>=26`, nonsplit degrees `>=26`, upstream source-fibre/Newton/Jelonek branches, degree raising/descent, `JC(2)`, and `DC(2)` remain open.
 62. **Safe-torus mass is not primitive-line recurrence.** THM-2188/2193
     preserve Haar mass across opposite slopes, not a primitive recurrence.
 63. **Degree-four `D4` is excluded, but not by Smith.** THM-2633 gives `normal_closure_G(H)=G` and `1<=k_D<=d-1`, leaving only `A4,S4`; retain old `D4` ledgers as hostiles and never reuse MISTAKE-297's deck extension.

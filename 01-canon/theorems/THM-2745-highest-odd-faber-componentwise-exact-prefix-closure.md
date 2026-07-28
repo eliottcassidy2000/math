@@ -11,9 +11,11 @@ status: >
   greater than one forces the unique source pole to a finite zero of U, where
   polynomial regularity of the exact prefix supplies two local lift equations.
   Their smooth-point resultant is nonzero and their G2 leading remainder is
-  32q_*^6, excluding every component.  Combined with THM-2725, only the
-  all-even zero-first-flux boundary remains in this degree-22 family.  The
-  broader split branch, JC(2), and DC(2) remain open.
+  32q_*^6, excluding every component.  Combined with THM-2725, this left the
+  all-even zero-first-flux boundary; THM-2755 subsequently closes that last
+  edge and hence the whole chosen-sheet split reduced-degree-22 family.  The
+  other split degrees, upstream quartic reduction, JC(2), and DC(2) remain
+  open.
 source: root/highest-odd-componentwise-exact-prefix-closure-2026-07-28
 audit: componentwise-hostile-2026-07-28 (independent multinomial Faber reconstruction, infinity/component/DVR audit, corrected tangent-leading proof, and immutable replay)
 depends_on:
@@ -24,6 +26,7 @@ related:
   - THM-2725-split-even-faber-nonzero-first-flux-unified-closure
   - THM-2726-a21-transverse-integral-split-response-three-pole-closure
   - THM-2747-highest-odd-reduced-boundary-divisor-and-one-ended-factorization-atlas
+  - THM-2755-all-even-zero-flux-componentwise-global-regularity-closure
 script: 04-computation/jc2_degree22_highest_odd_componentwise_closure_20260728.py
 output: 05-knowledge/results/jc2_degree22_highest_odd_componentwise_closure_20260728.out
 script_sha256: 863923b4886f6ec7dee44e28e152109acc51fcfd778d550d391ee02fc577b48a

@@ -9,8 +9,10 @@ status: >
   third response has a pole at every one.  Any hypothetical physical image
   component is rational, one-ended, and of weighted degree 1, 2, or 6; its
   response composition is pure-power, and the two lowest odd rows cannot use
-  a G2 end.  THM-2745 separately closes all such physical components.  The
-  all-even zero-first-flux edge, JC(2), and DC(2) remain open.
+  a G2 end.  THM-2745 separately closes all such physical components;
+  THM-2755 subsequently closes the complementary all-even zero-flux edge.
+  Other reduced degrees, the upstream reduction, JC(2), and DC(2) remain
+  open.
 source: odd-faber-component-boundary-scout-2026-07-28
 audit: thm2694-full-lift-fibre-scout-2026-07-28 (independent scheme/divisor/one-ended audit, exact normal/-O replay, and hash verification: ACCEPT)
 depends_on:
@@ -20,6 +22,7 @@ depends_on:
 related:
   - THM-2745-highest-odd-faber-componentwise-exact-prefix-closure
   - THM-2748-one-response-pole-monomial-composition-boundary
+  - THM-2755-all-even-zero-flux-componentwise-global-regularity-closure
 script: 04-computation/jc2_degree22_highest_odd_boundary_divisor_thm2747.py
 output: 05-knowledge/results/jc2_degree22_highest_odd_boundary_divisor_thm2747.out
 script_sha256: 482d14f3bac9ac46586c2b950fc777f458d0a2ea7d5e9b386a26217b4af21aa3
@@ -308,8 +311,10 @@ and excludes every such physical component.  Thus this theorem is a reusable
 scheme/divisor atlas, not a competing physical closure route.
 
 It does not justify the split degree-22 gauge for an arbitrary Keller pair.
-The all-even zero-first-flux edge of the chosen-sheet normal form remains, and
-neither `JC(2)` nor `DC(2)` follows.
+THM-2755 subsequently closes the all-even zero-first-flux edge and therefore
+finishes this chosen-sheet reduced-degree-22 family, but neither the upstream
+quartic/split/degree reduction, other reduced degrees, `JC(2)`, nor `DC(2)`
+follows.
 
 ## 8. Exact companion
 

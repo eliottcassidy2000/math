@@ -8,9 +8,10 @@ status: >
   a nonempty Zariski-open locus with a21 nonzero, its affine part is smooth,
   it is geometrically integral, and its sole infinity singularity has three
   smooth coarse branches of total delta six.  Its normalization therefore
-  has genus 419.  The all-even THM-2704 point has genus 89 and delta 336, so
-  exceptional genus-drop strata, the third flux, JC(2), and DC(2) remain
-  open.
+  has genus 419.  The all-even THM-2704 point has genus 89 and delta 336.
+  THM-2725/2745/2755 subsequently close every physical chosen-sheet split
+  reduced-degree-22 stratum; this generic geometry alone does not address
+  other degrees, the upstream reduction, JC(2), or DC(2).
 source: odd-faber-deformation-scout/root-2026-07-28
 audit: thm2694-full-lift-fibre-scout-2026-07-28
 depends_on:
@@ -19,6 +20,9 @@ depends_on:
   - THM-2704-split-even-prime23-generic-genus-eighty-nine
 related:
   - THM-2713-split-prime23-component-divisor-budget-and-perfect-power-normal-form
+  - THM-2725-split-even-faber-nonzero-first-flux-unified-closure
+  - THM-2745-highest-odd-faber-componentwise-exact-prefix-closure
+  - THM-2755-all-even-zero-flux-componentwise-global-regularity-closure
 script: 04-computation/jc2_degree22_full_split_odd_generic_genus419_scout.py
 output: 05-knowledge/results/jc2_degree22_full_split_odd_generic_genus419_scout.out
 script_sha256: 59852a54589b4b3f8b68e6aba9a4f3d7d022032244ccabbe0875791a99b5bea9
@@ -72,8 +76,9 @@ P_infty=[h:d:q:s]=[0:1:0:0],                            (4)
 and the three branches there are smooth.  Consequently no nonconstant
 rational Keller trajectory lies in this generic coefficient locus.
 
-This is a generic statement.  It neither excludes the exceptional
-genus-drop locus nor closes the split degree-twenty-two branch.
+This is a generic statement.  By itself it neither excludes the exceptional
+genus-drop locus nor closes the split degree-twenty-two branch.  The later
+componentwise chain THM-2725/2745/2755 supplies that physical closure.
 
 ## 2. The full weighted family
 

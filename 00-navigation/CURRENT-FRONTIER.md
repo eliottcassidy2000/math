@@ -364,6 +364,14 @@ Classify profiles under support operations; study analytic continuation and auto
   rank `0/1`.  THM-2746 identifies the `A4` leakage plane with the `V4` Kummer
   character plane and proves every compatible reflection completes it to
   `S4`; neither supplies the completion or `delta`'s unit/saturation coordinate.
+  THM-2753 locates the exact six-edge information loss: the faithful `S4`
+  action on `E(K4)` lies in `A6`, and a transposition and double transposition
+  have the same one-generator cycle type, while the three-perfect-matching
+  quotient restores the quartic sign through `S4/V4=S3`.  The full six-edge
+  subgroup orbitals still recover opposite edges, and labelled or mixed-word
+  data separate the two generators.  Thus a six-vertex tournament needs an
+  explicit opposition/matching or address sidecar; ambient parity alone is
+  not a resolvent invariant and no Keller exclusion follows.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
@@ -375,16 +383,26 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2671 closes every support-three degree-twenty-two chart, THM-2683 every
   support-four chart, and THM-2692 the full-support BCDEW chart by order-twelve
   root/pair-field emptiness.  Hence the inherited polynomial exact-square-prefix
-  genuine nonsplit degree-twenty-two branch is empty.  Split/even edges and
-  integral `2`-adic raising remain.  Split genera are generically `89/419`
-  (THM-2704/2719); THM-2713 gives the `3,5,23,46` power gate.  THM-2723's
-  one-pole response bound lets THM-2725 close even nonzero flux and
-  THM-2726/2741 close integral odd members.  THM-2747 proves the whole odd
-  complete intersection reduced and gives its exact `18+5` divisor and sharp
-  degree-`1/2/6` one-ended atlas; THM-2745 uses the exact prefix to exclude
-  every such component.  Only the all-even zero-flux edge remains.
-  THM-2206 blocks field-valued `C_2` Hasse repair; THM-2446's six-bracket
-  shortcut is refuted.  `JC(2)` and `DC(2)` are open.
+  genuine nonsplit degree-twenty-two branch is empty.  On the chosen split
+  sheet, THM-2719 identifies the exact reduced degree-22 coefficient bank;
+  THM-2725 closes every all-even nonzero-first-flux member and THM-2745 closes
+  every member with an odd Faber coefficient, including reducible and
+  nonreduced intersections.  THM-2755 closes the last all-even zero-flux edge:
+  vertical components have zero third response, the five smooth infinity
+  points violate the exact-prefix resultant, and the uniform slope-four DVR
+  bound makes `q/h^3` a global regular function vanishing at infinity.  Thus
+  the entire chosen-sheet split polynomial exact-prefix reduced-degree-22
+  family is empty.  THM-2752's proposed response-regularization route is
+  retired; the exceptional leading response actually cancels on its residual
+  face.
+
+  This is not `JC(2)`: no theorem forces an arbitrary Keller pair into a
+  quartic source-fibre chart, derives splitness, or forces reduced degree `22`.
+  Split exact-prefix degrees `6,10,14,18` and all degrees at least `26` remain,
+  as do genuine-nonsplit degrees at least `26` and other Newton/Jelonek/source-
+  fibre branches.  There is no degree-raising or descent theorem; THM-2206's
+  canonical `2`-adic first-grade route is refuted.  THM-2446's six-bracket
+  shortcut is also refuted.  `JC(2)` and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
