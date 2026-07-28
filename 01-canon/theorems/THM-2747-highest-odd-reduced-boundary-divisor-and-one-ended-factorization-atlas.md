@@ -93,8 +93,8 @@ residual-boundary component.
 ## 2. The five residual infinity points
 
 At `h=0`, the two equations are the fixed top forms `Phi_22=Psi_22=0` in
-`P(2,3,4)_[d,q,s]`.  If `q=0`, the first equation forces no point except
-the common point `P_infty`; with `s!=0`, the second top form is nonzero.
+`P(2,3,4)_[d,q,s]`.  If `q=0`, the second equation is `224s^6=0`, so
+`s=0` and the only weighted-projective point is the common point `P_infty`.
 Thus every other point lies in `q!=0`.
 
 On that chart use the weight-zero invariants
