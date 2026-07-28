@@ -2,7 +2,7 @@
 id: THM-2631
 title: "Homogeneous Wick-channel linear decoder and private-row no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   A Gaussian moment polynomial is one homogeneous scalar row across all
   balanced Wick channels of its degree.  A universal scalar linear
   combination of raw moment polynomials recovers a prescribed level-tagged
@@ -12,7 +12,8 @@ status: >
   coefficients do not improve this: degree grading prevents other moment
   levels from cancelling channels in the selected degree.  For
   P=a Z^6+b W^2+c W^18, channels occur exactly at m=4j and are
-  (j+2t,3(j-t),t), 0<=t<=j, so every nonempty level has j+1>=2 channels.
+  (j+2t,3(j-t),t), 0<=t<=j, so every nonempty positive level has
+  j+1>=2 channels.
   This strengthens MISTAKE-211 to an all-level linear-decoder obstruction but
   leaves nonlinear moment-ideal, resultant, cumulant, confluent-Hankel, and
   whole-face Frobenius mechanisms untouched.  NC2 and GMC(2) were already
@@ -35,7 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2631 -- raw moments linearly decode a channel exactly at singleton levels
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 MISTAKE-211 showed that distinct first-return channels are not separate
 equations inside one scalar Gaussian moment.  The obstruction is not confined
@@ -109,11 +110,11 @@ channel `r0`.  Conversely a singleton row is decoded by division by its Wick
 weight.  Every other nonempty homogeneous component on the left of (3) must
 vanish separately.
 
-The same proof allows an infinite formally proposed bank of raw moments:
-because the target is a polynomial of one degree, only finitely many
-nonzero coefficients may participate, and its degree-`m` component is still
-(4).  Hence no later or earlier raw moment can repair a collision at level
-`m`.
+The same proof allows a formal degreewise sum of arbitrarily many raw
+moments: its degree-`m` component is still (4), and every other nonempty
+homogeneous component separately forces its scalar coefficient to vanish.
+Coefficients on identically zero moment rows are irrelevant.  Hence no later
+or earlier raw moment can repair a collision at level `m`.
 
 ## 3. Positive matrices, private rows, and signed cancellation
 
@@ -182,7 +183,7 @@ Thus
 |B_(4j)|=j+1 >=2                                           (11)
 ```
 
-at every nonempty moment level.  Explicitly,
+at every nonempty positive moment level.  Explicitly,
 
 ```text
 M_(4j)=sum_(t=0)^j
@@ -250,6 +251,15 @@ the private-row criterion on every binary matrix of sizes
 ```
 
 where each pair is `(all matrices, matrices with a nonnegative left inverse)`.
+
+An independent hostile audit rederived the Wick weights, the graded decoder
+equivalence, both directions of the private-row criterion, the complete
+all-positive-level parametrization (10), the exact fourth-moment
+cancellation, and every binary census in (15).  It also replayed normal and
+optimized execution against the stored transcript and confirmed both
+LF-normalized hashes.  The audit's two scope repairs -- excluding the
+singleton degree-zero row and treating an infinite bank degreewise -- are
+incorporated above.
 
 This theorem proves no new NC2 or GMC(2) conclusion.  Those statements are
 already PROVED by THM-2022.  It strengthens the corrected interpretation of
