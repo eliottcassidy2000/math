@@ -1,0 +1,19 @@
+THM2672 SLOPE-SEVEN REBASE FACET TORSOR EXACT REFEREE
+config=(0, 0, 0, 0, 6) metadata=(1, 0, 12)
+unit_carries=(0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12) missing_carry=6
+source_to_missing=((0, 12), (1, 10), (2, 8), (3, 6), (4, 4), (5, 2), (6, 0), (7, 11), (8, 9), (9, 7), (10, 5), (11, 3), (12, 1))
+positive_facets=13 distinct_totals=(5008764602526739694439800, 5018707614055955700881000, 5076995646475910878841120)
+first_component_length=3/12545122758259
+missing0_component=(6, 1, Fraction(63119965, 135150652), Fraction(23436001164757, 50180491033036))
+missing12_component=(0, 1, Fraction(4855397, 10396204), Fraction(23436073938185, 50180491033036))
+missing12_pulled_deep_strip=(13,4826821/371293) edge0:root0 edge1:absent
+missing12_translated_deep_strip=(181,67204045/371293)
+coarse_union_nerve_fvector=(13, 78, 286, 715, 1287, 1716, 1716, 1287, 715, 286, 78, 13)
+coarse_union_nerve=reduced_H11:1 reduced_H0:0 codimension_one_ridges:78_each_twice
+selected_refined_subcomplex_fvector=(156, 858, 2860, 6435, 10296, 12012, 10296, 6435, 2860, 858, 156, 13)
+selected_refined_subcomplex=components:13 reduced_H0:12 H11:0 codimension_one_ridges:156_each_once
+facet_projection=(carry,delta)->delta creates a virtual S11; it is not a carry-refined nerve equivalence
+thirteen_step_lift=91/4826809=7/371293 cocycle_class=7
+cocycle_role=obstructs equivariant cyclic gluing; not used to derive either f-vector
+scope=one full-union maximal face and failure of this canonical top-cycle lift; no connected-arc gain refinement, global all13 exclusion, endpoint current, or LRC decrement
+ALL EXACT CHECKS PASSED
