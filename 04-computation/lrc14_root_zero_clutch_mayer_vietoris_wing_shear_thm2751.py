@@ -22,6 +22,7 @@ COMP = ROOT / "04-computation"
 sys.path.insert(0, str(COMP))
 
 import lrc14_fully_marked_root_zero_target_profile_thm2749 as marked
+import lrc14_semantic_root_zero_clutch_refinement_probe_20260728 as legacy
 
 
 P = marked.P
@@ -67,6 +68,23 @@ def constructor_audit():
             and {"clock_comb", "source_clock"} <= canonical_names,
             "source-one constructor distinction changed")
     return legacy_hash
+
+
+def prefix_audit(module, delayed):
+    """Compare the fourteen actual marked prefixes with the pinned legacy bank."""
+    historical = legacy.build_q3_pair_prefixes(module)
+    masses = []
+    for ell in range(7):
+        for kappa in range(2):
+            old_prefix = historical[ell][6][kappa]
+            new_prefix = delayed[ell][kappa]
+            require(new_prefix == old_prefix,
+                    f"legacy/marked prefix mismatch at {(ell, kappa)}")
+            masses.append(new_prefix[2][-1])
+    require(tuple(masses[:2]) == (0, 0)
+            and tuple(masses[2:]) == (206986279500,) * 12,
+            "legacy/marked prefix masses changed")
+    return tuple(masses)
 
 
 def difference(first, second):
@@ -292,6 +310,7 @@ def main():
         private.build_pair_prefixes(module),
         two.deepest_fork(module),
     )
+    prefix_masses = prefix_audit(module, delayed)
     source = two.exclusive_source(module, 3)
     clock_comb = tuple(
         module.make_comb(module.C1, 182, 26 * ell - 13, 26 * ell + 13)
@@ -352,6 +371,25 @@ def main():
                                for i in range(7))
         require(vectors["Ms"] == vectors["Mt"],
                 f"common raw source/target vector sheared at t={t}")
+
+        # Representatives for the nonzero common window and the exceptional
+        # terminal label are also recomputed after an actual coordinate push.
+        # This locally enforces the physical pulled-target typing instead of
+        # relying only on the inherited common-carrier equality of THM-2749.
+        if t in (3, 12):
+            direct_B = direct_target_vector(
+                module, delayed, present, source_weight, B,
+                tuple({} for _ in range(7)),
+            )
+            require(vectors["B"] == direct_B,
+                    f"pulled/direct target B vector differs at t={t}")
+        if t == 3:
+            direct_M = direct_target_vector(
+                module, delayed, present, source_weight, M,
+                tuple({} for _ in range(7)),
+            )
+            require(vectors["Mt"] == direct_M,
+                    "pulled/direct target M vector differs at t=3")
 
         require(all(vectors["A"][i] == vectors["Ms"][i] + vectors["L"][i]
                     for i in range(7)),
@@ -462,6 +500,16 @@ def main():
             "positive Q decoder changed")
     require((decoded_Q[0] - decoded_Q[1]) % 91 == 81,
             "right-wing primitive decoder class changed")
+    delta_Q = decoded_Q[0] - decoded_Q[1]
+    require(norm_Q == 9 * delta_Q and gcd(delta_Q, 91) == 1
+            and pow(delta_Q, -1, 91) == 9,
+            "right-wing localized/mod-91 decoder typing changed")
+    decoder_Q_mod91 = tuple(9 * value % 91 for value in decoder_Q)
+    decoded_Q_mod91 = tuple(value % 91 for value in circular_convolution(
+        tuple(value % 91 for value in Q), decoder_Q_mod91
+    ))
+    require(decoded_Q_mod91 == (11,) + (10,) * 12,
+            "Q*(9K_Q) stopped being delta_0 modulo (91,N)")
 
     expected_reductions = {
         "A": ((9, 0, 0, 0, 0, 0), 1),
@@ -491,7 +539,8 @@ def main():
     print("THM-2751 FIXED-CLOCK ROOT-ZERO MAYER-VIETORIS WING TARGET SPECTRUM")
     print("status=RESERVED PROOF-COMPLETE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT")
     print(f"constructor_audit=legacy_sha256:{legacy_hash} missing:(clock_comb,source_clock) canonical_present=True")
-    print("prefix_audit=historical_and_actual_Q3_prefixes_equal_14/14; first_failure_is_source-one_factor_not_terminal_prefix")
+    print(f"prefix_audit=historical_and_actual_Q3_prefixes_equal_14/14 masses={prefix_masses}; first_failure_is_source-one_factor_not_terminal_prefix")
+    print("direct_target_audit=B:t3,t12 and M:t3 pulled_coefficients_equal_forward_coordinate_recomputation")
     for line in row_lines:
         print(line)
     print(f"supports={supports}")
@@ -507,8 +556,9 @@ def main():
     print(f"fixed_profile_positive_decoder_K=U*W^-1={natural_decoder}; W*K=U+20N")
     print("fixed_profile_decoder_identity=121[A*K]=119[B] modulo the uniform target-null line; coefficient-derived only, not a physical packet action")
     print(f"Q_positive_decoder={decoder_Q}")
-    print(f"Q_decoder_convolution={decoded_Q} primitive_delta={decoded_Q[0]-decoded_Q[1]} delta_mod91={(decoded_Q[0]-decoded_Q[1]) % 91}")
-    print("conditional_holotopy=right cofiber generates the C13 augmentation quotient coefficientwise and can synthesize any nonzero correction after scaling; physical attachment to one common-ancestry semantic vertical edge remains absent")
+    print(f"Q_decoder_convolution={decoded_Q} primitive_delta={delta_Q} integral_index={norm_Q} delta_mod91={delta_Q % 91}")
+    print(f"Q_mod91_decoder=9*K_Q convolution={decoded_Q_mod91}=delta_0+10N; Q is a unit only after rational/localized or mod91 scalar extension")
+    print("conditional_holotopy=right cofiber generates the rational/localized and mod91 C13 augmentation quotients coefficientwise; integrally it contains delta_Q times the quotient but is not surjective; physical attachment to one common-ancestry semantic vertical edge remains absent")
     print("wing_decoder=IMPOSSIBLE: L functional is identically zero while R is nonzero; no scalar, dihedral, linear convolution, or positive decoder sends L to R")
     print("full_unclocked_boundary=bd53dc4c5 has M=disjoint_union_e M_e and a target augmentation rank drop; this theorem is only the fixed e=1 fibre")
     print("SCOPE: fixed-e=1 rail8 marked source sheet and pulled target sheet; coefficient transport only, no whole-packet action or endpoint current")

@@ -1,7 +1,8 @@
 THM-2751 FIXED-CLOCK ROOT-ZERO MAYER-VIETORIS WING TARGET SPECTRUM
 status=RESERVED PROOF-COMPLETE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT
 constructor_audit=legacy_sha256:b3b623a4c016b1303ac3a74c72f9ae0bbd69cdb97a553f613143f0005a3dd286 missing:(clock_comb,source_clock) canonical_present=True
-prefix_audit=historical_and_actual_Q3_prefixes_equal_14/14; first_failure_is_source-one_factor_not_terminal_prefix
+prefix_audit=historical_and_actual_Q3_prefixes_equal_14/14 masses=(0, 0, 206986279500, 206986279500, 206986279500, 206986279500, 206986279500, 206986279500, 206986279500, 206986279500, 206986279500, 206986279500, 206986279500, 206986279500); first_failure_is_source-one_factor_not_terminal_prefix
+direct_target_audit=B:t3,t12 and M:t3 pulled_coefficients_equal_forward_coordinate_recomputation
 t=0 pre_relative_interval_mass=(A:0,B:0,M:0,L:0,R:0) amp=(A:0,B:0,Ms:0,Mt:0,L:0,R:0)
 t=1 pre_relative_interval_mass=(A:0,B:0,M:0,L:0,R:0) amp=(A:0,B:0,Ms:0,Mt:0,L:0,R:0)
 t=2 pre_relative_interval_mass=(A:0,B:0,M:0,L:0,R:0) amp=(A:0,B:0,Ms:0,Mt:0,L:0,R:0)
@@ -28,8 +29,9 @@ positive_decoders=W^-1=(z2+z6+z10), U^-1=(z+z4+z7+z10) modulo uniform
 fixed_profile_positive_decoder_K=U*W^-1=(3, 3, 2, 2, 2, 3, 2, 2, 2, 3, 2, 2, 2); W*K=U+20N
 fixed_profile_decoder_identity=121[A*K]=119[B] modulo the uniform target-null line; coefficient-derived only, not a physical packet action
 Q_positive_decoder=(0, 7929439954473079186265, 133267004550058088654, 135506751609875725618, 137784176006680359662, 6831978049261891988, 4707019620677081960, 2508704797329205596, 235167466079606368, 124296699975702408, 47276146686603592, 5907597936307760, 2054490908689296)
-Q_decoder_convolution=(960304259241135830069757, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038) primitive_delta=943603449134589796372719 delta_mod91=81
-conditional_holotopy=right cofiber generates the C13 augmentation quotient coefficientwise and can synthesize any nonzero correction after scaling; physical attachment to one common-ancestry semantic vertical edge remains absent
+Q_decoder_convolution=(960304259241135830069757, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038) primitive_delta=943603449134589796372719 integral_index=8492431042211308167354471 delta_mod91=81
+Q_mod91_decoder=9*K_Q convolution=(11, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10)=delta_0+10N; Q is a unit only after rational/localized or mod91 scalar extension
+conditional_holotopy=right cofiber generates the rational/localized and mod91 C13 augmentation quotients coefficientwise; integrally it contains delta_Q times the quotient but is not surjective; physical attachment to one common-ancestry semantic vertical edge remains absent
 wing_decoder=IMPOSSIBLE: L functional is identically zero while R is nonzero; no scalar, dihedral, linear convolution, or positive decoder sends L to R
 full_unclocked_boundary=bd53dc4c5 has M=disjoint_union_e M_e and a target augmentation rank drop; this theorem is only the fixed e=1 fibre
 SCOPE: fixed-e=1 rail8 marked source sheet and pulled target sheet; coefficient transport only, no whole-packet action or endpoint current

@@ -21,8 +21,8 @@ related:
   - THM-2750-arm-blind-clutch-no-go-and-minimal-marked-leakage
 script: 04-computation/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.py
 output: 05-knowledge/results/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.out
-script_sha256: dbc0a3098fb16c15f6508fcd4fa27a93666edd7150664221a158a4ac6d28883f
-output_sha256: 43cb4e96393b49dbdf00b416a0194533bcb002ea971bf6820737c7e3fa70eb9f
+script_sha256: 701ced99eb410dfbfa1f0a01b22469900ea019c20f42b3fee037cd5621c40dc5
+output_sha256: 4dc72c168fdee3927328124e04e2d149bdc9c0e17ff74f19100944ca6220ea81
 hash_basis: LF-normalized bytes
 ---
 
@@ -58,10 +58,11 @@ whose body contains only the `E3` and four `U_(s,t)` cuts.  It never intersects
 `clock_comb[1]`.
 
 This is the entire constructor mismatch.  It is **not** a delayed-word
-mismatch: direct exact comparison of the historical `build_q3_pair_prefixes`
-with THM-2749's `marked_prefixes(..., deepest_fork)` gives equality on all
-fourteen `(ell,kappa)` cells.  Their masses are zero for `ell=0` and
-`206986279500` for both half-digits at every `ell=1,...,6`.
+mismatch: the companion imports the hash-pinned historical comparator and
+requires the historical `build_q3_pair_prefixes[ell][6][kappa]` to equal
+THM-2749's `marked_prefixes(..., deepest_fork)[ell][kappa]` on all fourteen
+`(ell,kappa)` cells before printing the audit line.  Their masses are zero for
+`ell=0` and `206986279500` for both half-digits at every `ell=1,...,6`.
 
 Consequently the historical amplitudes
 
@@ -90,7 +91,10 @@ R_t = B_t minus A_t.
 
 The script constructs these five interval unions first, checks
 `A_t=M_t disjoint-union L_t` and `B_t=M_t disjoint-union R_t` exactly, and
-only then applies the common terminal/relative/seam functional.  The interval
+only then applies the common terminal/relative/seam functional.  At the
+nonzero-window representative `t=3` it also pushes `B_t` and `M_t` to the
+forward target coordinate and recomputes their target coefficients directly;
+the exceptional `B_12` is checked the same way.  The interval
 lengths below are exact numerator lengths on the canonical `T`-grid before
 the clock-dependent relative cut; divide by `T=297836897838480` for Haar
 measure.
@@ -230,15 +234,31 @@ Q*K_Q = delta_Q delta_0 + cN,
 delta_Q=943603449134589796372719=81 mod91.               (7)
 ```
 
-Both `Norm(Q)` and `delta_Q` are units modulo `91`.  Thus the **right
-cofiber**, by itself, generates the `C_13` augmentation quotient
-coefficientwise: after scalar multiplication it can synthesize any prescribed
-nonzero correction, including a correction of the form `-7a`.  This is the
-strongest holotopy survivor.  Its connection to the common-ancestry vertical
-edge debts of THM-2542 and THM-2591 is conditional on a new physical
-attachment theorem selecting one common-ancestry semantic vertical edge.
-Nothing here realizes `K_Q` as a whole-packet action, retains an external arm
-or endpoint phase, or supplies that attachment.
+The coefficient ring matters here.  In the integral augmentation quotient
+
+```text
+A_Z = Z[C_13]/<N>,
+```
+
+multiplication by `Q` has determinant and cokernel order `Norm(Q)>1`; hence
+`Q` does **not** generate all of `A_Z`.  Identity `(7)` proves only
+`delta_Q A_Z subset (Q)`.  After rationalization (or localization at
+`delta_Q`) `Q` is invertible.  Modulo `91`, `delta_Q=81` and `81^(-1)=9`, and
+the companion checks the stronger typed identity
+
+```text
+Q*(9 K_Q) = delta_0 + 10N  modulo 91.                  (8)
+```
+
+Thus the **right cofiber**, by itself, generates the rational/localized and
+mod-`91` `C_13` augmentation quotients coefficientwise.  In the mod-`91`
+quotient it can synthesize any prescribed correction, including one of the
+form `-7a`; this statement is not integral surjectivity.  This is the strongest
+holotopy survivor.  Its connection to the common-ancestry vertical edge debts
+of THM-2542 and THM-2591 is conditional on a new physical attachment theorem
+selecting one common-ancestry semantic vertical edge.  Nothing here realizes
+`K_Q` as a whole-packet action, retains an external arm or endpoint phase, or
+supplies that attachment.
 
 ## 5. Fixed fibre versus the full unclocked cover
 
@@ -270,7 +290,8 @@ The result is theorem-grade as a **repair/no-go**:
 - it proves that the fixed-`e=1` defect is a coefficient-null physical left
   wing paired with a charged right wing;
 - it supplies a positive coefficient-derived transporter on the target
-  augmentation quotient, and a `91`-unit right-cofiber correction generator;
+  augmentation quotient, and a right-cofiber correction generator after
+  rational/localized or mod-`91` scalar extension, but not integrally;
 - it supplies no endpoint current, physical target action, owner/root
   provenance, row exclusion, or LRC(14) decrement.
 
@@ -281,9 +302,10 @@ python 04-computation/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.p
 python -O 04-computation/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.py
 ```
 
-The companion imports only the promoted THM-2749 companion and its pinned
-proved dependencies.  The historical script is a comparator named in this
-report, not an imported dependency or truth source.
+The companion imports the promoted THM-2749 companion and its pinned proved
+dependencies.  It also imports the hash-pinned historical script solely to
+compare the fourteen terminal prefixes.  That comparator is evidence for the
+constructor diagnosis, not a proved mathematical dependency or truth source.
 
 Both modes must byte-match
 `05-knowledge/results/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.out`.
