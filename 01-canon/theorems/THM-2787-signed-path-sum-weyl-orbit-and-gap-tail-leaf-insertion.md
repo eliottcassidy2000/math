@@ -2,8 +2,8 @@
 id: THM-2787
 title: "Signed path-sum Weyl orbit and gap-tail leaf insertion"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  A tree with m edges is graceful exactly when a signed permutation
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A tree with m
+  edges is graceful exactly when a signed permutation
   of 1,...,m integrates to root-path potentials for which every nonempty
   simple path has signed sum of absolute value between 1 and m.  Equivalently,
   reduced tree incidence carries the A_m vertex-permutation orbit of
@@ -16,6 +16,10 @@ status: >
   statement remains a conjecture; it would imply, but does not prove, the
   Graceful Tree Conjecture.
 source: graceful-signed-path-audit/gap-tail-2026-07-28
+audit: >
+  root/2026-07-28 independently rederived the translation-quotient
+  A_m/B_m orbit typing, suffix-column iff, marked-vertex quantifier, and
+  conjecture/QED boundary, and replayed normal/-O/stored exactly: ACCEPT.
 depends_on:
   - THM-2770-tree-incidence-a-d-weyl-clutch-and-four-vertex-fan-dichotomy
 related:
@@ -32,8 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2787 -- graceful labeling is bounded signed path integration
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2770 proves that reduced tree incidence is a unimodular map from vertex
 potentials to edge gradients.  The inverse is a root-path sum.  Applying that
@@ -394,7 +397,7 @@ checks every hostile in Sections 2 and 5.  Normal and optimized runs
 byte-match the stored transcript.
 
 ```text
-PROVED HERE (candidate):  signed path-sum characterization of gracefulness;
+PROVED HERE:              signed path-sum characterization of gracefulness;
                           exact A_m/B_m lattice-orbit intersection;
                           separate nonzero and upper-cap hostiles;
                           consecutive-ones gap matrix and threshold cut;
@@ -413,4 +416,4 @@ NOT PROVED:               the marked gap-tail conjecture for all trees;
                           or DC(2) consequence.                            (32)
 ```
 
-QED (candidate).
+QED.
