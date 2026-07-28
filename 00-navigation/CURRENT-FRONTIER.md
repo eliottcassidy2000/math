@@ -376,10 +376,16 @@ Classify profiles under support operations; study analytic continuation and auto
   family is empty.  Independently THM-2752 regularizes the cancelled response:
   `R_25+(d/2)F_23` gains one Faber order, with all-`M=4L+2` leading faces the
   coprime even/odd parts of `(-s+iq)^k`.  THM-2755 uses `q/h^3`; THM-2752 uses
-  the third response.
+  the third response.  THM-2759 independently closes the complete chosen-sheet
+  split reduced-degree-six family.  Its two-point boundary is stronger than
+  pole capacity alone: polynomiality of `Q(x,0)` excludes the `q`-point, while
+  exact-prefix localization at the unique response pole forces slope four at
+  the `d`-point.  Hence `q/h^3` is globally regular and zero; the remaining
+  vertical branch contradicts the full response bank in every coefficient
+  stratum, including reducible/nonreduced ambient schemes.
 
   This is not `JC(2)`: arbitrary Keller pairs need not enter this quartic,
-  split, degree-22 chart.  Split exact-prefix degrees `6,10,14,18,>=26`,
+  split exact-prefix chart.  Split degrees `10,14,18,>=26`,
   nonsplit degrees `>=26`, and other Newton/Jelonek/source-fibre branches stay
   open; no degree descent/raising exists.  THM-2206's `2`-adic first-grade and
   THM-2446's six-bracket shortcuts are refuted.  `JC(2)`/`DC(2)` remain open.

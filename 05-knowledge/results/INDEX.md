@@ -1,5 +1,16 @@
 # Script Results Index
 
+- `jc2_split_degree6_componentwise_monicization_thm2759.py` -> matching
+  `.out` [THM-2759 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  The complete degree-six bank has only boundary points `P_d,P_q`.
+  Polynomiality of `Q(x,0)` excludes `P_q` through its unique `3q^2/8`
+  pole.  At `P_d`, the exhaustive valuation/cancellation split and exact
+  prefix force `min(v(q),v(s))>=4v(h)`, so `q/h^3` is globally regular and
+  zero.  Every vertical coefficient stratum then contradicts the nonzero
+  rational primitive.  Constant `U` gives a polynomial coordinate and
+  automorphy; the proof is componentwise and covers reducible/nonreduced
+  ambient schemes.  This closes only the chosen-sheet split exact-prefix
+  reduced-degree-six family.  Hashes: `7580c022` / `66d91a44`.
 - `lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.py` -> matching
   `.out` [THM-2751 RESERVED / REFUTED PROVISIONAL; VERIFIED-EXACT
   CLOCK-BLIND CALCULATION; MISTAKE-313].  The legacy outer-sheet helper omits
