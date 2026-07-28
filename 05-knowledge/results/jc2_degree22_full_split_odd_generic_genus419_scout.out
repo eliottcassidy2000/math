@@ -1,0 +1,18 @@
+degree-22 full split odd-Faber weighted deformation scout
+columns=E22+15_lower:E18_target_translated_out
+raw_weights=d:2,q:3,s:4;Phi_j:j+1;Psi_j:j+2
+deck_parity=Phi_j:(-1)^(j+1),Psi_j:(-1)^j
+coefficient_weights=a_j:22-j,lambda:23,W:24
+weighted_closure=P(1,2,3,4),degrees=(23,24)
+hilbert_series=(1-t^23)(1-t^24)/((1-t)(1-t^2)(1-t^3)(1-t^4))
+arithmetic_genus=425
+top_singular_support=[h:d:q:s]=[0:1:0:0]
+E21_transverse=88179/131072
+index_cover_tangent=6_distinct_lines
+coarse_mu2_quotient=3_smooth_branches_Q=c*s^2
+forced_generic_delta=6
+generic_normalization_genus=419:THEORETICAL_OPEN_FAMILY_CONSEQUENCE
+THM2704_special_normalization_genus=89:special_delta=336
+affine_flux_rank_minor=9801/524288
+scope=GENERIC_FULL_SPLIT_FABER_FAMILY_NOT_EXCEPTIONAL_STRATA_NOT_JC2
+ALL CHECKS PASSED

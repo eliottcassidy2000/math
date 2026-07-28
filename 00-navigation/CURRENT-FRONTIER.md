@@ -351,14 +351,13 @@ Classify profiles under support operations; study analytic continuation and auto
   support-four chart, and THM-2692 the full-support BCDEW chart by order-twelve
   root/pair-field emptiness.  Hence the inherited polynomial exact-square-prefix
   genuine nonsplit degree-twenty-two branch is empty.  Split/even edges and
-  integral `2`-adic raising remain.  In the split **even-Faber subchart** with
-  first flux `lambda != 0`, THM-2704 gives arithmetic genus `254`, five
-  `(4,23)` cusps (total delta `165`), and generic normalization genus `89`; the
-  all-one member instead has `69` additional projection nodes.  A rational
-  special integral member must gain at least `89` delta, become
-  reducible/nonflat, or leave the chart.  The physical fourth root neutralizes
-  THM-2636, and eleven odd seeds remain, so the frontier is the exceptional
-  genus-drop locus plus `lambda + odd bank`, not the generic prime-23 curve.
+  integral `2`-adic raising remain.  In the split even-Faber chart,
+  THM-2704 gives generic genus `89`; THM-2713 makes every `lambda!=0` member
+  integral and reduces a rational survivor to a `3,5,23,46` perfect-power
+  system.  THM-2719 retains all eleven odd seeds: the full weighted family
+  has arithmetic genus `425` and generic normalization genus `419`, with only
+  a three-branch quotient singularity of delta `6`.  The exceptional
+  genus-drop locus plus third flux remains open.
   THM-2206 blocks field-valued `C_2` Hasse repair; THM-2446's six-bracket
   shortcut is refuted.  `JC(2)` and `DC(2)` are open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
