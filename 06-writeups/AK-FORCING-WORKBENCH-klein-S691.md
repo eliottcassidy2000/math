@@ -68,14 +68,25 @@ deposits a nonzero (a,−a) at v.
   adds ≤ 1 to Φ (the (1,−1)-direction at v was already present mod T);
   Φ(T₀) ≤ (m+r) + 2t; counting fired vertices gives **m + r ≥ n − t, i.e.
   score ≥ 1** — the format cannot certify below AK(1), reassuringly.
-- **The 2-plateau (EMPIRICAL + exhaustive small):** every natural design —
-  paths, cycles, ladders, rook-rail grids, wildcard skeletons, both-end
-  pincers — lands on score EXACTLY 2, and exhaustive k=1 search (n ≤ 5,
+- **The 2-plateau (REFUTED for k ≥ 2 — session headline):** every natural
+  HAND design (paths, cycles, ladders, rook-rail grids, wildcard skeletons,
+  both-end pincers) lands on exactly 2, and exhaustive k=1 search (n ≤ 5,
   pool {(1,0),(0,1),(1,1)}, all ≤2-wildcard placements, greedy-pruned seeds)
-  finds nothing below 2. Everything sits on the line m + r = 2(n − t).
-  **CONJECTURE (paths):** strict k=1 admits no score < 2. The mechanism is a
-  frontier law: a straight frontier hands each new vertex one backward
-  direction; all cancellation routes for a second direction exit forward.
+  finds nothing below 2 — the path conjecture stands. But randomized search
+  over deeper products BROKE the plateau (all FINITE-EXACT, re-verified from
+  scratch):
+    * **score 13/7 ≈ 1.857**, dims [2,2,2], m=10 r=3 n=8 t=1, X ⊆
+      {(1,0),(0,1),(1,1),(1,2),(2,1)}: fs = [{(1,)→(1,2)},
+      {(1,1)→(1,0),(2,1)→(1,0)}, {(2,1,1)→(2,1),(2,2,1)→(0,1)}],
+      T₀={(1,1,2)}, R={(1,2,2)→(0,1),(2,2,1)→(1,1),(1,1,1)→(1,0)}.
+      Fires in 2 rounds; round 2 fires five vertices at once — genuinely
+      collective lattice forcing, not sequential percolation.
+    * score 15/8, dims [2,2,2], t=0; score 19/10, dims [4,3] junction strip;
+      score 31/16, dims [2,2,2,2].
+  So the strict game's floor is < 2 and label-shared deep products are where
+  the descent lives; the proved floor remains 1 (rank bound). Next rungs:
+  11/6, 9/5, 7/4 (the KT99 exponent — reaching it would validate the game's
+  faithfulness to the human proof ladder), then 5/3 < 1.675.
 
 ## 4. Where < 2 must live, if anywhere
 

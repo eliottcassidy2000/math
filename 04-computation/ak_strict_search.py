@@ -146,7 +146,7 @@ def class_A_paths(nmax=6, pool=POOL3):
 
 
 # ---------------------------------------------------------------- class B
-def class_B_ladders(Lmax=6, iters=400, rng=None):
+def class_B_ladders(Lmax=5, iters=150, rng=None):
     """[L,2] ladders: axis-1 labels free per column-step (SHARED top+bottom),
     axis-2 rung labels free per column.  Random patterns + greedy seeds."""
     rng = rng or random.Random(20260728)
@@ -170,7 +170,7 @@ def class_B_ladders(Lmax=6, iters=400, rng=None):
 
 
 # ---------------------------------------------------------------- class C
-def class_C_strips(iters=300, rng=None):
+def class_C_strips(iters=120, rng=None):
     """[L,3] strips: 4-direction middle-column junction fabrics."""
     rng = rng or random.Random(1675)
     print("== class C: strips [L,3] junction fabrics")
@@ -193,7 +193,7 @@ def class_C_strips(iters=300, rng=None):
 
 
 # ---------------------------------------------------------------- class D
-def class_D_cubes(iters=250, rng=None):
+def class_D_cubes(iters=100, rng=None):
     """Hypercubes [2]*k and [3,3,3]: axis-shared labels, sparse entries.
     This is the constructible 'iterated doubling' shape of the KT proofs."""
     rng = rng or random.Random(423)
@@ -260,7 +260,7 @@ if __name__ == "__main__":
     t0 = time.time()
     which = sys.argv[1] if len(sys.argv) > 1 else "all"
     if which in ("all", "A"):
-        class_A_paths(nmax=6)
+        class_A_paths(nmax=5)
     if which in ("all", "B"):
         class_B_ladders()
     if which in ("all", "C"):
