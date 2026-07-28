@@ -4,26 +4,15 @@
 
 ## Inventory retained power classes before classifying base-curve genus
 
-**Trigger / action:** after an eliminant is proved irreducible but its uniform
-genus looks parameter-heavy, return to the pre-elimination coordinates and
-list every correctly typed square or higher-power class in the base function
-field.  At one smooth fixed fibre, compute the valuations of each class and
-lift the normalization by the cheapest connected Kummer cover.
-**Mechanism:** an odd valuation proves a square class nontrivial; several
-fixed odd places plus branch-divisor parity can force positive genus without
-factoring the full moving discriminant.  The lift preserves information that
-elimination deliberately forgot.
-**Counterindication:** field typing is load-bearing.  A deck-character root
-may live only in a quadratic extension even when its square lies in the base;
-use the base-field square, not a cosmetic fourth power.  Also verify that the
-fixed points are smooth, the reconstructed function is a unit there, the
-eliminant is irreducible, and the physical trajectory actually realizes the
-cover.
-**Evidence:** audited THM-2617 uses `y^2=B/p` at five fixed places; audited
-THM-2636 uses the distinct retained spectral square
-`T^2=Z=rho^3 zeta/t^3` after the signed `C`-scale destroys the first square
-coordinate.  The `q` versus `T` correction in THM-2636 is the sharp typing
-hostile.
+**Trigger / action:** after an irreducible eliminant has unwieldy genus, return
+to pre-elimination coordinates, list correctly typed base-field power classes,
+and compute their valuations on one smooth fibre before taking the cheapest
+connected Kummer lift. **Mechanism:** fixed odd valuations and branch parity can
+force genus without the moving discriminant. **Counterindication:** verify base
+field, smoothness, units, irreducibility, and physical realization; a root in a
+quadratic extension is not its base-field square. **Evidence:** THM-2617 uses
+`y^2=B/p`; THM-2636 uses `T^2=Z=rho^3 zeta/t^3`, with its `q`/`T` correction the
+typing hostile.
 
 ## Globalize a moving-factor orbit before localizing positivity
 
@@ -50,17 +39,25 @@ hostile.
 ## Localize a metric by common contexts before hunting catalysts
 
 **Trigger / action:** when common nonexpansive factors can contract distance, form `d_ctx(x,y)=inf_z d(x+z,y+z)`; in noncommutative settings retain left, right, and two-sided contexts separately.
-**Mechanism:** in a commutative metric monoid this is the greatest translation-invariant pseudometric below `d` and the greatest group length below `d` on the Grothendieck completion; its root defect is exact catalytic capacity, fixed savings amplify to homogenized savings, and localization commutes with homogenization. On a torsion-free completion the stable seminorm has pairwise abstract additive calibrators by rational Hahn--Banach. Operation-specific uncrossing can instead prove `d_ctx=d`.
-**Counterindication:** cancellation without properness/integrality can still permit total collapse; integrality without cancellation need not give a metric; a homogenization gap need not imply a catalyst.
-**Evidence:** THM-2191 (Gordian localization and hostile collapses), THM-2183 (exact common-factor isometries), and THM-840/853 (continuation contexts).
+**Mechanism:** in a commutative metric monoid this is the greatest
+translation-invariant pseudometric below `d` (and group length on the
+Grothendieck completion); its defect measures catalytic capacity, fixed savings
+homogenize, and uncrossing may prove `d_ctx=d`. **Counterindication:** without
+properness, integrality, or cancellation it may collapse; a homogenization gap
+alone does not exhibit a catalyst. **Evidence:** THM-2191, THM-2183, and
+THM-840/853.
 
 ## Expose the obstruction first, choose the scale second
 
-**Trigger:** a proof needs a prime, bandwidth, radix, exponent, or cutoff, but every fixed choice loses cancellation or creates an uncontrolled tail.
-**Action:** retain the whole colliding face, relation packet, or current; prove it nonzero or quantify its defect. At exact bulk cancellation, write the deficit identity and disintegrate the missing facet before bounding. Only then choose a scale outside the finite bad set or below the error budget.
-**Mechanism:** the exposed obstruction has fewer degrees of freedom, so its valuation, spectral quantum, Fourier height, carry size, or positive boundary defect dictates a compatible scale; Pascal/Lucas bulk cancellation can leave precisely the virtual boundary bits needed for completion.
-**Counterindication:** not when scale is fixed, aggregation destroys the target, or the gain is only ambient. Require a proved seed and retain a slope/current sidecar when the target is a distinguished primitive line.
-**Evidence:** THM-2022 (face then finite place), THM-2159/2165 (spectral quantum then exponent), THM-2162/2163/2166 (current/packet then scale), THM-2193/2298 (missing-facet floors and hostile placement audits), and THM-2160 (Pascal completion).
+**Trigger / action:** if every fixed prime, bandwidth, radix, exponent, or
+cutoff loses cancellation, first retain and prove nonzero the whole colliding
+face, packet, current, or missing-facet deficit; only then choose scale outside
+its finite bad set/error budget. **Mechanism:** the smaller obstruction exposes
+the controlling valuation, spectral quantum, Fourier height, carry, or boundary
+defect; Pascal/Lucas cancellation can preserve exactly the virtual boundary.
+**Counterindication:** scale may be fixed or aggregation target-destroying;
+require a seed and, for primitive targets, a slope/current sidecar. **Evidence:**
+THM-2022, THM-2159/2165, THM-2162/2163/2166, THM-2193/2298, and THM-2160.
 
 ## Discretize phase on boundary atlas
 
@@ -134,33 +131,30 @@ current fills every cell and every admissible parabolic sector.
 
 ## Controlled forgetting requires a sidecar
 
-**Trigger:** quotienting, projecting, folding, taking moments, excluding one atlas label, or replacing an object by an invariant.
-**Action:** name the next consumer, preserved predicate, lost coordinate, and legal sidecar; test that consumer on the quotient kernel.  Before reading an excluded label as empty support, unfold adjacent physical charts and recompute on their overlap.
-**Mechanism:** a kernel is gauge only when every consumer kills it. Otherwise retain a separating response or a termination, height, depth, constant-field, affine-origin, or central-height coordinate. THM-840 gives linear repair rank `dim N(ker R)`; THM-2355 gives the quadratic phase repair.
-**Counterindication:** no sidecar is needed when every consumer factors through the quotient; autocorrelation alone can still miss a full-support array.
-**Evidence:** THM-840/2355; THM-2237/2240 (defect rank); THM-2163/2174/2228
-(carry/termination); THM-2411/2419 (fixed origin); MISTAKE-310/THM-2744 (a forbidden root label with an open adjacent-chart clutch); and corrected
-THM-2621/MISTAKE-301 (trace loses branch residues and the `D_4` action potential); and THM-2646/HYP-2033 (the ordinary braid centre changes knot closure, while the annular LRC centre is target-invisible only after a literal descent check).
+**Trigger / action:** when quotienting, projecting, folding, taking moments,
+excluding an atlas label, or replacing an object by an invariant, name the
+consumer, preserved predicate, lost coordinate, and legal sidecar, then test the
+kernel. Before reading an excluded label as empty support, unfold adjacent
+physical charts and recompute their overlap. **Mechanism:** a kernel is gauge
+only if every consumer kills it; otherwise retain a separating response or
+termination, depth, origin, or central-height coordinate. THM-840 gives repair
+rank `dim N(ker R)`; THM-2355 gives quadratic phase repair.
+**Counterindication:** omit the sidecar only after factorization through the
+quotient; autocorrelation can miss full support. **Evidence:** THM-840/2355,
+THM-2237/2240, THM-2163/2174/2228, THM-2411/2419,
+MISTAKE-310/THM-2744, corrected THM-2621/MISTAKE-301, and THM-2646/HYP-2033.
 
 ## Test whether a central extension changes the base signature
 
-**Trigger / action:** when an odd-primary quotient is nilpotent or a Kummer
-cover appears decisive, restore the smallest missing central or
-anti-invariant coordinate and recompute the induced base map before treating
-it as fibre decoration.
-**Mechanism:** an order-two sidecar can change the cocycle itself.  It may
-replace one autonomous base dynamics by another, or rationally split the
-cover whose ramification supplied the old obstruction.
-**Counterindication:** a changed base or split cover is a new typed object,
-not a proof about the inherited one.  Require the semantic action,
-intertwiner, or trajectory map before transferring a recurrence or
-contradiction.
-**Evidence:** THM-2698 changes the LRC delayed signature from
-`y -> {13y}` to `y -> {13y+1/2}` and opens a full local cycle while leaving
-the semantic `C_2` bibundle open.  The verified split-lambda prime-23 scout
-restores the anti-invariant sheet coordinate `q` and finds it rational in the
-curve field, so the nonsplit fourth-root Kummer gate becomes trivial rather
-than stronger.
+**Trigger / action:** before treating a missing central/anti-invariant
+coordinate as fibre decoration, restore it and recompute the base map.
+**Mechanism:** an order-two sidecar can change the cocycle or rationally split
+the ramified cover. **Counterindication:** that creates a newly typed object;
+transfer only through a semantic action, intertwiner, or trajectory map.
+**Evidence:** THM-2698 changes `y -> {13y}` to `y -> {13y+1/2}` but leaves the
+semantic `C_2` bibundle open; the split-lambda prime-23 scout makes its restored
+anti-invariant coordinate rational, trivializing rather than strengthening the
+Kummer gate.
 
 ## The same representation is not the same carrier
 
@@ -179,23 +173,15 @@ than stronger.
 
 ## Compose witness fibres before taking their scalar shadow
 
-**Trigger:** different finite-to-one maps make different masks constant, but
-one orbit misses the target phase or transitivity hides its middle witness.
-**Action:** retain base/root labels and form the actual cospan; disintegrate one
-fibre, keep its set-valued section, cross the transverse fibre, then scalarize.
-Record operation order, units, strict endpoints, and the target-landing map.
-**Mechanism:** successive constancy turns correlation into finite incidence;
-the transverse section can repair a hostile confined to one fibre.
-**Counterindication:** shared divisors, missing high factors, nonunit labels,
-untransported targets, and endpoint atoms can invalidate the count. A cospan
-is not automatically a tournament equivalence.
-**Evidence:** THM-2426 repairs THM-2415's one-orbit boundary and THM-2427
-collapses the guard-top types; THM-2413 makes addition/multiplication
-transitivity into composition through an explicit intermediate witness.
-
-After a positive cospan, compute its next Čech nerve before iterating the
-adjacency grammar.  THM-2680 has a Fibonacci one-skeleton but THM-2682 kills
-its two-simplex; THM-2658 says a true simplex needs a common gain section.
+**Trigger / action:** when distinct finite-to-one maps freeze different masks,
+retain base/root labels, form their cospan, disintegrate one set-valued fibre,
+cross the transverse fibre, and only then scalarize; record order, units,
+endpoints, and landing map. **Mechanism:** successive constancy converts
+correlation to incidence. **Counterindication:** shared divisors, missing high
+factors, nonunits, untransported targets, or endpoint atoms can break the count;
+a cospan is not a tournament equivalence. **Evidence:** THM-2426/2427 and
+THM-2413. Then compute the Čech nerve: THM-2680's Fibonacci one-skeleton has no
+THM-2682 two-simplex; THM-2658 requires a common gain section.
 
 ## Existence is a maximum or tail question, not automatically a mean question
 
@@ -327,22 +313,13 @@ in §1 of
 
 ## Recover niches by more than citation counts
 
-**Trigger:** choosing an underexplored thread or auditing supposedly abandoned
-work.
-**Action:** distinguish identifier dormancy, frame dormancy, under-titled work,
-orphan computations, refuted-but-close claims, and repeatedly cited but stalled
-problems. Rank candidates by orthogonality, artifact readiness, transfer value,
-and cost of a decisive probe.
-**Mechanism:** citation counts can label live code “abandoned” and heavily cited
-but stagnant problems “healthy.”
-**Counterindication:** citation graphs remain excellent discovery tools when
-paired with semantic inspection.
-**Evidence:** the blind-spot discussion in
-[`ATLAS-OF-ATLASES-2026-07-20-macmini-S124.md`](ATLAS-OF-ATLASES-2026-07-20-macmini-S124.md),
-the frame census in
-[`the-recovery-ledger-forgotten-frames-revivable-hypotheses-and-the-gaps-deathstar-S79.md`](../07-reflections/the-recovery-ledger-forgotten-frames-revivable-hypotheses-and-the-gaps-deathstar-S79.md),
-and the citation-graph method in
-[`the-corpus-atlas-forgotten-threads-the-zoo-and-the-gaps-kps-S128c136.md`](../07-reflections/the-corpus-atlas-forgotten-threads-the-zoo-and-the-gaps-kps-S128c136.md).
+**Trigger / action:** when mining neglected work, distinguish identifier/frame
+dormancy, under-titled results, orphan computations, near-refutations, and
+heavily cited stalls; rank by orthogonality, artifact readiness, transfer value,
+and decisive-probe cost. **Mechanism:** citation counts confuse live code with
+abandonment and stagnation with health. **Counterindication:** citation graphs
+remain useful with semantic inspection. **Evidence:** the S124 blind-spot atlas,
+S79 recovery ledger, and S128c136 corpus atlas.
 
 ## Fill operation columns, not only invariant columns
 
