@@ -1,6 +1,6 @@
 ---
 id: THM-2808
-title: "Three-pole e=2 Maxwell polynomial and finite accessory classification"
+title: "Three-pole e=2 Maxwell polynomial, complete Nielsen atlas, and closure of the two-critical-point response layer"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The remaining
   balanced-response chamber e=2,h=3 is finite in every degree.  For each
@@ -19,18 +19,23 @@ related:
   - THM-2799-one-pole-two-double-zero-chebyshev-response-classification
   - THM-2800-two-pole-two-double-zero-stieltjes-recurrence-and-first-nielsen-pair
   - THM-2805-general-two-pole-e2-maxwell-eliminant-and-nielsen-classification
+  - THM-2768-modular-c2-c3-a4-s4-bass-serre-quotient
 script: 04-computation/jc2_three_pole_e2_maxwell_thm2808.py
 output: 05-knowledge/results/jc2_three_pole_e2_maxwell_thm2808.out
 independent_script: 04-computation/jc2_three_pole_e2_maxwell_independent_audit_thm2808.py
 independent_output: 05-knowledge/results/jc2_three_pole_e2_maxwell_independent_audit_thm2808.out
+nielsen_script: 04-computation/jc2_three_pole_e2_maxwell_nielsen_thm2808.py
+nielsen_output: 05-knowledge/results/jc2_three_pole_e2_maxwell_nielsen_thm2808.out
 script_sha256: 053958bfbc85baf06e40eb6d88d56ad23a2a03a8fbb04d9f8cf39cf9b5574f99
 output_sha256: f8bb83a8acef3e3d541a94219506bc7dd6534e65672607715faa851a5967522d
 independent_script_sha256: b0518f875330d04460decb5a149c575b804ff2ec4da95e5280e53658faaed499
 independent_output_sha256: 6a657d27347d4bd72947d26e246cfb3109923eb79a3486bd55ce2d19450f2b2c
+nielsen_script_sha256: 0634fece763f1bb4a3e5c908c8f4a9d69e7fefbedc35f009fe20320bdb605c41
+nielsen_output_sha256: aea811ce152ef9c9bc70df56e27239686c17e2ff348008c6628be414257e638f
 hash_basis: LF-normalized bytes
 ---
 
-# THM-2808 -- three-pole e=2 Maxwell polynomial and finite accessory classification
+# THM-2808 -- three-pole e=2 Maxwell polynomial, complete Nielsen atlas, and closure of the two-critical-point response layer
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
@@ -368,7 +373,8 @@ is
 ```text
 H_3(N)
  =(N-1)(N-2)(N-3)/12
-  +1_(2|N)(N-2)/4.                                    (25)
+  +1_(2|N)(N-2)/4
+ =sum_(m=4)^N floor((m-2)/2)^2.                       (25)
 ```
 
 The first values for `N=4,5,...` are
@@ -379,6 +385,15 @@ The first values for `N=4,5,...` are
 
 This total quotient does not replace the ordered polynomial
 `Q_(a,b,c)`: repeated pole parts can have smaller anharmonic orbits.
+For example, when `(a,b,c)=(2,2,2)`,
+
+```text
+Q_(2,2,2) is proportional to
+  (lambda-2)(lambda+1)(2lambda-1),
+```
+
+and the full anharmonic `S_3` is transitive on the three ordered roots.
+Thus stabilizer order cannot simply be divided into the ordered count.
 
 ## 5. Consequence for the response frontier
 
@@ -387,6 +402,17 @@ THM-2799 handles one pole, THM-2800 and THM-2805 handle the two-pole
 corridors, and the present result removes the final three-pole accessory
 parameter.  All four results are proved and independently audited, so the
 entire abstract `e=2` response layer is now a finite explicit atlas.
+Its orientation-preserving unmarked count by pole number is
+
+```text
+H_1(N)=floor((N-2)/2),
+H_2(N)=binom(N-2,2),
+H_3(N)=sum_(m=4)^N floor((m-2)/2)^2.                  (26)
+```
+
+Every present three-pole map is nonsplit.  If `N>=5`, then
+`deg S=N-4>0`; for `N=4`, the only pole multiset is `(2,1,1)`, which has
+odd parts.  THM-2796's squareclass criterion handles these two cases.
 
 This is not yet a planar Jacobian theorem.  The response construction is
 downstream of a particular nonsplit source-fibre chart; it neither proves
@@ -394,7 +420,39 @@ that an arbitrary Keller pair enters that chart nor supplies the missing
 Faber-flux compatibility.  In particular, finiteness of the Maxwell atlas
 is not degree descent.
 
-## 6. Exact controls
+## 6. The quartic `C_2` and `C_3` factors do not yet glue
+
+The smallest three-pole chart has `(a,b,c)=(1,1,2)` and
+
+```text
+lambda=1/2,
+E=x^2-x+1/8,                    v=-1/64,
+F=E^2/[x(x-1)(x-1/2)^2].                              (27)
+```
+
+A four-cycle together with `(0 1)(2 3)` generates its order-eight square
+monodromy group `D_4`, and
+
+```text
+D_4/V_4 isomorphic to C_2.                             (28)
+```
+
+The adjacent two-pole quartic chart of THM-2800 instead has monodromy
+`A_4`, with
+
+```text
+A_4/V_4 isomorphic to C_3.                             (29)
+```
+
+This sharpens the modular-group heuristic: the visible `C_2` and `C_3`
+quotients live on different accessory strata.  They do not by themselves
+form one `S_3=S_4/V_4` action.  The complete quartic `e=2` layer consists
+of the one-pole function of `x^2`, the two-pole `A_4` map, and the
+three-pole `D_4` map; none has `S_4` monodromy.  Any quartic
+Keller-resolvent construction therefore needs a genuine cross-stratum
+gluing operation, or a different response layer.
+
+## 7. Exact controls
 
 Run
 
@@ -403,6 +461,8 @@ python 04-computation/jc2_three_pole_e2_maxwell_thm2808.py
 python -O 04-computation/jc2_three_pole_e2_maxwell_thm2808.py
 python 04-computation/jc2_three_pole_e2_maxwell_independent_audit_thm2808.py
 python -O 04-computation/jc2_three_pole_e2_maxwell_independent_audit_thm2808.py
+python 04-computation/jc2_three_pole_e2_maxwell_nielsen_thm2808.py
+python -O 04-computation/jc2_three_pole_e2_maxwell_nielsen_thm2808.py
 ```
 
 The companion uses exact rational polynomial arithmetic and checks every
@@ -425,5 +485,24 @@ separately enumerates all products of two disjoint transpositions modulo the
 full-cycle centralizer, labels the three pole cycles explicitly, and proves
 set equality with the positive-gap atlas.  Its independent Burnside audit
 finds only the identity and, in even degree, the half-turn fixed locus.
-Normal, optimized, and stored outputs agree.  The finite controls support
-but do not replace the all-degree proof.
+The second independently written companion checks all `55` ordered
+passports through `N=8`, directly enumerates every labelled Nielsen
+passport through `N=12`, and verifies the quartic `D_4/V_4` quotient.
+All three normal, optimized, and stored outputs agree.  The finite controls
+support but do not replace the all-degree proof.
+
+## 8. Scope and failure boundaries
+
+This theorem closes an **abstract balanced response layer**.  It does not
+show that any response enters a polynomial Keller chart, satisfies the
+inherited Faber-flux equations, or comes from a Weyl-algebra endomorphism.
+It proves neither `JC(2)` nor `DC(2)`.
+
+Three boundaries are load-bearing:
+
+1. using `R` before dividing by `Delta` includes two false confluent
+   critical-point solutions;
+2. allowing one of `a,b,c` to vanish degenerates the recurrence and returns
+   to the two-pole chamber; and
+3. quotienting repeated pole parts by stabilizer size rather than its actual
+   action miscounts symmetric maps such as `(2,2,2)`.
