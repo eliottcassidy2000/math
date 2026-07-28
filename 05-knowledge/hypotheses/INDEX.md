@@ -10,12 +10,8 @@ A hypothesis is unresolved unless a proved leaf is named explicitly. Search its 
 
 ## Optional alternate formalization routes
 - **HYP-8946:** `X^M-tR` irreducibility over `F(t)` is kernel-checked and used by THM-2101; degree-dropping Hensel factorization is now optional.
-- **HYP-8960:** reciprocal monicization now constructs each root of
-  `Z^M-R(sZ)` from a simple nonzero residue root. Simultaneous branch/product
-  control and the Wiener--Hopf identity remain open.
-- **THM-2101:** strict two-sided DvdK has three product-free paper proofs:
-  monodromy, one transcendental specialization, and a t-adic packet proof.
-  Their wrappers remain Lean assembly; `GMC2Main.gmc2` is already unconditional through the independently completed small-root route.
+- **HYP-8960:** reciprocal monicization constructs the simple-root lifts; simultaneous branch products and the Wiener--Hopf identity remain open.
+- **THM-2101:** strict DvdK has three product-free paper proofs; wrappers remain Lean assembly, while `GMC2Main.gmc2` is unconditional.
 
 ## Results that change the live graph
 - **THM-2081--2087 (PROVED):** relative Hunter, residue blindness, the
