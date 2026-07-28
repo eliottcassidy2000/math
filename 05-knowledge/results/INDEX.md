@@ -1,5 +1,41 @@
 # Script Results Index
 
+- `lrc14_two_target_present_semantic_attachment_probe_20260728.py` ->
+  matching `.out` [THM-2742 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  Restoring the second lawful target coordinate turns the
+  canonical deepest-source present wall into exactly `936/1183` positive
+  `E3 -> D^6 -> Q_(3,{1,2})` semantic sections.  All `936` marked primitive
+  `t`-character coefficients and all `12` aggregated moving `t`-characters
+  are nonzero; the aggregate is target-coordinate inversion-even.  Here
+  `tau=(e_c3-e_q2).(u-v)` is an endpoint-dipole character, not yet the full
+  target residue or a physical deck/left relation index.  Hashes:
+  `062b352f` / `d7159343`.
+- `lrc14_atom_atlas_root_six_spectral_cospan_probe_20260728.py` -> matching
+  `.out` [FINITE-EXACT TENSOR-COSPAN REFINEMENT].  The `304`-address atlas has
+  trivial translation stabilizer and full `13`-power spectrum; its first
+  inner histogram has unique maximal-energy pair `h=+/-6`, and the chosen
+  oriented `X=12*13^4` realizes `+6`.  The fixed-`X` THM-2625 current retains
+  all `169/169` marginals with a nonzero `3042`-midpoint multiplier.  Physical
+  `h` and endpoint-dipole `tau` remain distinct dual groups; semantic root
+  `6` is a non-dual packet label, and their joint coefficient is open.  Hashes:
+  `fdbd62c3` / `07b5ba7c`.
+- `lrc14_relative_present_semantic_lift_probe_20260728.py` -> matching `.out`
+  [FINITE-EXACT RELATIVE-PRESENT BOUNDARY].  Fourteen source-one rails contain
+  `12848` genuine deepest semantic forks.  The relative-present coefficient
+  retains `12582` unit endpoints and `2,166,112` directed reverse-clock scalar
+  pairs, but every lift crosses the zero-root half-tooth clutch while the lawful
+  endpoint lies on the opposite edge.  This is not THM-2716's endpoint/ghost
+  arm and supplies no private-root edge.  Hashes: `f16754bd` / `861e920b`.
+- `jc_boundary_relation_presentation_f4_scout_20260728.py` -> matching `.out`
+  [PROOF-QUALITY CANDIDATE + VERIFIED-EXACT, NOT CANON].  For a
+  `C3`-equivariant rational SNC completion,
+  `H^1(U,mu_2)=ker(delta mod 2)` and fits between boundary
+  relations `K/2K` and the saturation defect `(L_sat/L)[2]`.  If `A` is the
+  standard-part presentation over `F4` and `B=A^dagger G A` for nonsingular
+  Hermitian `G`, then `null(B)=null(A)+dim_F4 rad(im A)`: an invertible Gram
+  block excludes, while a singular one can be a false positive.  The actual
+  quartic-resolvent boundary map `delta` and any missing reflection extension
+  are still open.  Hashes: `b220a3ac` / `92e2fcdf`.
 - `jacobian_fixed_d_nonlinear_target_boundary_thm2722.py` -> matching `.out`
   [THM-2722 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  On
   polynomial graphs, every fixed-`d` nonlinear target
@@ -51,9 +87,6 @@
   five-tooth atlas and every macro descends midpoint-independently to a
   depth-five address.  No target action or relation-index identification is
   inferred.  Hashes: `bc81895a` / `a636763b`.
-- `jacobian_s4_polynomial_graph_all_linear_planes_thm2709.py` -> matching
-  `.out` [THM-2709 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
-  Pluecker coordinates classify
 - `lrc14_relative_segal_macro_ghost_completion_probe_20260728.py` -> matching
   `.out` [THM-2706 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   The transverse packet endpoints form an ordinary `D^2` two-cycle, but all

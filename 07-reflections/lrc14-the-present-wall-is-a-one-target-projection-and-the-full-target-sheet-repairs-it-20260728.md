@@ -163,7 +163,7 @@ so all twelve primitive deepest-target characters also survive after that
 aggregation.  This is exactly the character direction erased by the
 one-target `t=0` projector.
 
-The printed aggregate profile also obeys the exact reflection law
+The aggregate profile also obeys the exact target-coordinate inversion law
 
 ```text
 A_t=A_(-t).                                               (15)
@@ -171,9 +171,12 @@ A_t=A_(-t).                                               (15)
 
 Consequently its primitive coefficients are real and occur in equal
 `tau,-tau` pairs.  The current is target-active but does not orient the two
-conjugate target directions.  A separately oriented physical deck character
-cannot simply be identified with `tau`: the all-depth physical/target
-transversality obstruction still applies.
+conjugate target directions or construct a geometric reflection.  A
+separately oriented physical deck character cannot simply be identified with
+`tau`: the VERIFIED noncanonical all-depth physical/target transversality
+calculation in
+`lrc14-two-index-carrier-is-spectral-not-a-packet-label-20260728.md` still
+applies.
 
 The resulting object is a nonnegative semantic mass table before Fourier
 transform and a nonzero complex deepest-target current after transform.  It
@@ -225,7 +228,7 @@ Both modes byte-match the stored output
 The LF-normalized SHA-256 values are
 
 ```text
-script  d64a9e52db49c4ce4e391119d45e593453cbb3081c36ca2ae24d81bd7ab56b8f
+script  062b352f4db12a5f01822b293cdbb10629632dacc5fa27b406d8dd321e550709
 output  d7159343e91b593d4be670cd7a53b89b5423ea077f78fc038eb7766c43939c03
 ```
 

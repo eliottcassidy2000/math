@@ -311,6 +311,14 @@ def main():
         and all(value > 0 for value in aggregate_target_profile[1:]),
         "aggregated deepest-target profile lost its sharp zero",
     )
+    require(
+        all(
+            aggregate_target_profile[t]
+            == aggregate_target_profile[(-t) % P]
+            for t in range(P)
+        ),
+        "aggregated deepest-target profile lost inversion symmetry",
+    )
     aggregate_moving_count = sum(
         any(primitive_fourier_coordinates(
             aggregate_target_profile, frequency

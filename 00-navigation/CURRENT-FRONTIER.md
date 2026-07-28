@@ -74,11 +74,45 @@ integral debt `E -> 2G`, yet its old word is empty.  THM-2701/2710 make the
 ordinary and half-shifted literal languages nilpotent by six (the half phase
 is invisible at clocks `2,4,6`).  The analogous `BABA` quotient has
 `A -> 2B`; Boolean/mod-two support loses its multiplicity.  THM-2707 finds
-  `3346` lift packets in a complete eleven-partite SCC.  THM-2712 finds exactly
+`3346` lift packets in a complete eleven-partite SCC.  THM-2712 finds exactly
 `304` following packets at `n=0 mod13`: their outer graph is edgeless, while
-division by 13 yields a 13-partite SCC and cocycle `7`.  Live debt: amplitude
-on that inner cycle or a branch outside the fixed box.  Ledger `165`; no row
-is excluded.
+division by 13 yields a 13-partite SCC and cocycle `7`; the address numerator
+descends one odometer level into seven five-tooth packets.  THM-2721 proves
+the three arms of its smallest inner triangle have equal positive amplitude,
+but both nontrivial abstract `C3` currents vanish; its unique formal successor
+has a private half disjoint in all `1134` rail/future placements.
+
+THM-2720 proves the old deepest-source wall is the slice `t=0`.  THM-2742
+restores lawful `e_c3-e_q2`: `936/1183` sections meet the
+`E3 -> D^6 -> Q_(3,{1,2})` handoff, and every primitive `t`-character
+survives; its aggregate is target-coordinate inversion-even.  The 304-address
+first-inner spectrum peaks uniquely at `h_phys=+/-6`; chosen
+`X=12*13^4=342732` realizes `+6`.  At this `X`, THM-2625 retains all `169`
+target marginals and the `3042`-midpoint multiplier is nonzero.  Physical
+`h_phys` and endpoint-dipole `tau=(e_c3-e_q2).(u-v)` are different duals;
+semantic root `r=6` is a non-dual packet label, and `q_b=1+tau` at
+`m_deep=1`.
+
+The relative-present bank retains `12848` deepest
+semantic forks, `12582` unit endpoints, and `2,166,112` directed reverse-clock
+scalar pairs.  Every lift nevertheless reaches root zero on the same
+half-tooth edge while its lawful endpoint lies on the opposite edge; the
+private-root relation is empty.  The live choices are a root-zero clutch
+retaining `(ell,s,t)` and delayed carry, or the following partial `t`-Fourier
+coefficient at fixed `(ell_7,s)`, where `m_L,m_R in A_red={n/13}`, `tau!=0`,
+`q_b=1+tau`, and `Y=38*13^4=1085318`:
+
+```text
+3042 sum_(m_L,m_R in A_red) chi_6(m_R-m_L)
+  sum_t zeta_13^(tau*t)
+    P_(m_L,ell_7,s,t)(342732,1)
+    conjugate(Q_(m_R,ell_7,s,t)(1085318)).
+```
+
+Nonzero marginals do not decide it.  **RESERVED / PROVISIONAL:** THM-2727
+leaves fixed-rail Frobenius banks disjoint except fourteen constant units; no
+rail/owner map is supplied.  THM-2744 is an **UNPROVED EMPTY STUB** for the clutch.
+Ledger `165`; no row is excluded.
 
 ### Independent routes that remain live
 
@@ -334,13 +368,32 @@ Classify profiles under support operations; study analytic continuation and auto
   standard-plane multiplicity is the sum of moving-arm mod-two nullities, so
   one even continuant is necessary.  Full-rank boundary independence kills
   units and makes all-odd arms an exclusion.  THM-2708 removes the tree
-  restriction via an exact Hermitian `F4` gain-holonomy block.  THM-2711
-  adds the mod-four gate: the standard plane must be isotropic inside a
-  `C3`-stable discriminant metabolizer; `D4` triality fails, while a doubled
-  `-2` triple is sharp.  THM-2714 proves that the standard `Z_2[omega]`
-  sector has even length: exponent two needs two planes, while nullity one
-  requires `O/2^(2r)`.  An `S3`-stable `r=1` lattice makes this escape sharp;
-  effective realization remains open.
+  restriction via an exact Hermitian `F4` gain-holonomy block.  The current
+  proof-quality presentation refinement gives the exact object for a
+  `C3`-equivariant rational SNC completion.  For
+  `delta:C=Z^{components}->P=Pic(Xbar)`, with `K=ker(delta)`, `L=im(delta)`,
+  and `L_sat` its saturation,
+
+  ```text
+  H^1(U,mu_2)=ker(delta mod2),
+  0 -> K/2K -> ker(delta mod2) -> (L_sat/L)[2] -> 0.
+  ```
+
+  On the standard part, if `A` presents `delta` and `B=A^dagger G A` is the
+  Hermitian Gram shadow, then
+  `null(B)=null(A)+dim rad(im A)`.  Hence an invertible Gram block remains a
+  valid exclusion, but singularity can be Gram-radical excess.  An
+  `S3`-equivariant rational SNC blow-up realizes this: three disjoint `-2`
+  curves are primitive mod two although their standard Gram block is
+  singular.  In their full-rank,
+  independent, nondegenerate/metabolic lattice scopes, THM-2711 then adds
+  the mod-four metabolizer gate and THM-2714 the even-length
+  `Z_2[omega]` gate (including its nullity-one escape) downstream of the exact
+  presentation.  It remains to extract saturated `delta` from a
+  quartic-resolvent completion and any missing `C2` reflection.
+  **PROOF-COMPLETE CANDIDATE:** THM-2743 detects split `S3`/transitive `S4`
+  marked fibres via projector rank `0/1`, but supplies no completion or common
+  LRC carrier.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
