@@ -2,8 +2,8 @@
 id: THM-2791
 title: "Full arm-orbit transfer and lower-central chord"
 status: >
-  RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-  INDEPENDENT AUDIT.  The complete clock-one THM-2782 address orbit has,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The complete
+  clock-one THM-2782 address orbit has,
   in each raw target column 3 through 11, exactly two positive marked
   cylinders.  Their gap is the graded chord
   Z1 Z2^10 Z3 Z4^11 Z5, with first lower-central transgression 10 in
@@ -13,8 +13,6 @@ status: >
   Bockstein normalization is a central group-algebra unit.  This is
   transfer along a genuine partial graded-chord germ, not pointwise
   descent, pure-Z1 packet covariance, or an endpoint-origin allocation.
-  Until independent promotion, no proved result may depend on this
-  candidate.
 source: root/graded-semantic-arm-transfer-2026-07-28
 depends_on:
   - THM-2782-semantic-arm-right-wing-local-unit-and-endpoint-deck-boundary
@@ -33,8 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2791 -- full arm-orbit transfer and lower-central chord
 
-**RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2782 finds a three-point physical central-direction segment and one
 same-`Omega` descent failure.  The complete orbit is substantially more
@@ -433,4 +430,13 @@ No full physical Heisenberg action, pure central packet covariance,
 endpoint-origin allocation, THM-2542 root transition, row exclusion, or
 LRC(14) conclusion is proved.
 
-**Awaiting independent audit; not QED.**
+An independent hostile audit rederived the two-address full support and all
+semantic/root/carry/open-radius data, the base-thirteen chord and first
+transgression, the local translation germ and its `R`/`N`/`C_3`
+invariances, the full conductor spectrum, the raw pushforward and normalized
+unit identity, the exceptional `121`-cell target, and every normalized
+decoder pair.  It also replayed normal and optimized executions byte-for-byte
+against the stored transcript, checked both LF-normalized hashes, and
+confirmed every transfer-versus-descent boundary above.
+
+QED.
