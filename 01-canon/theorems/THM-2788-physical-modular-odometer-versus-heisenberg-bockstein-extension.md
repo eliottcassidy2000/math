@@ -210,7 +210,8 @@ H_p:       p+1 minimal transitive action classes;
 M_(p^3):  one minimal transitive action class.                (18)
 ```
 
-For `M_(p^3)`, the `p^2-1` elements of order dividing `p` form `p+1`
+For `M_(p^3)`, the `p^2-1` nonidentity elements of order dividing `p`
+form `p+1`
 order-`p` subgroups: the center and `p` noncentral complements over the
 `X`-line.  Those `p` complements are conjugate and core-free.  The natural
 action `(2)` is their coset action.  At `p=2`, `D_8` has the two reflection
@@ -221,6 +222,27 @@ Inside `Sym(Omega_p)`, the exact overlap for odd `p` is
 ```text
 H_p intersect M_(p^3)=<X,Z>,                order p^2.        (19)
 ```
+
+Indeed, write a common permutation in the two normal forms
+
+```text
+h=Y^s X^a Z^c,             m=O^(s+p q) X^(a'),
+0<=s<p.
+```
+
+Equality of their low digits forces the displayed common `s`.  Equality
+of their high digits at every `v in F_p` then says
+
+```text
+(a-a')v+(c-q)=1_(v+s>=p).                                  (19a)
+```
+
+If `1<=s<p`, the right side is a nonconstant two-valued step function.
+For odd `p` it cannot be affine: a nonconstant affine function on `F_p`
+takes all `p` values.  Hence `s=0`, where `(19a)` forces
+`a=a'` and `c=q`, so the common element lies in `<X,Z>`.  The reverse
+inclusion is immediate.  At `p=2` the two-valued step is affine, exactly
+explaining why the two whole groups coincide there.
 
 Thus the two actions agree on the shear and central direction while
 disagreeing on the physical low successor.
@@ -395,17 +417,34 @@ target:
   the modular depth-two extension, its Heisenberg shadow, the carry-wall
   augmentation module, and the lower-central tower Z_1,...,Z_5;
 
-map:
-  reduce the address action modulo169, or retain its full lower-central
-  filtration;
+first map:
+  reduce the physical address action modulo169,
+  G_(13,6) -> M_2197;
 
-preserved by reduction:
-  the 169-point carrier, center Z_1, and determinant commutator omega;
+preserved by the first map:
+  the 169-point carrier, O, X, center Z_1, the modular power map q_M,
+  and the carry/Bockstein extension class;
 
-destroyed by reduction:
-  the power/Bockstein coordinate as a choice of low successor, the
-  one-column carry wall, and the commutator digits Z_2,...,Z_5.            (35)
+destroyed by the first map:
+  the higher commutator digits Z_2,...,Z_5 and exact high-sheet ancestry;
+
+second passage:
+  forget the low-successor section/power coordinate and retain only the
+  common Heisenberg--modular commutator shadow, or replace O by the
+  carry-suppressed Y;
+
+preserved by the second passage:
+  the quotient plane, X, Z_1, and alternating commutator omega;
+
+destroyed by the second passage:
+  q_M, the distinction O versus Y, and hence the one-column discrepancy
+  C=O Y^(-1).                                                        (35)
 ```
+
+The carry wall is therefore **not** killed by reduction modulo `169`.
+It is visible there as soon as the actual and suppressed successors are
+compared.  It disappears only in the second, coarser passage that retains
+the alternating commutator while discarding which low successor lifted it.
 
 Thus THM-2779 and THM-2782 do not merely lack an unspecified carrier map.
 They use two different lifts of the same depth-two commutator shadow.
