@@ -1,5 +1,5 @@
 ---
-id: THM-2715
+id: THM-2716
 title: "C4 arm-transporter groupoid and relative-degree holotopy boundary"
 status: "RESERVED / UNPROVED EMPTY STUB"
 source: root/c4-arm-transporter-holotopy-2026-07-28
@@ -7,7 +7,7 @@ depends_on: []
 related: []
 ---
 
-# THM-2715 -- C4 arm-transporter groupoid and relative-degree holotopy boundary
+# THM-2716 -- C4 arm-transporter groupoid and relative-degree holotopy boundary
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
