@@ -30,6 +30,7 @@ related:
   - THM-2635-half-tooth-opposite-graph-unit-section-and-reversed-digit-closure
   - THM-2716-c4-arm-transporter-groupoid-and-relative-degree-holotopy-boundary
   - THM-2727-fixed-rail-target-deck-frobenius-realization-no-go
+  - THM-2749-fully-marked-root-zero-clutch-and-target-character-profile
 script: 04-computation/lrc14_root_zero_overlap_clutch_20260728.py
 output: 05-knowledge/results/lrc14_root_zero_overlap_clutch_20260728.out
 script_sha256: e10fa7c9a5a238461ef422ea314dc334f7e65ec1787cf65d4e4bea12b96aefb8
@@ -306,9 +307,11 @@ semantic scalar lift + relative-present unit endpoint
 
 It does not give a global `C_13` action, endpoint transition amplitude,
 target/physical diagonal, row exclusion, or LRC(14).  The residual ledger is
-still `165`.  The next decisive refinement is to impose one common `(s,t)`
-and the full semantic factor in `(1)` **inside** `(15)` before integration,
-then retest equality and both units.
+still `165`.  THM-2749 now supplies the formerly next decisive refinement:
+it places a common `(s,t)` and the full semantic factor in `(1)` **inside**
+`(15)`, proves a uniform all-fourteen unit bank, and computes a target-label
+character window.  The next debt is the fixed-triangle THM-2334 transplant
+that retains an exact relation address and endpoint allocation.
 
 ## 7. Exact reproduction and audit
 
@@ -360,8 +363,11 @@ DESTROYED:         edge label and root label under rechart;
                    equality of unrestricted half-tooth rows;
                    normalized-row equality without a typed -1 gauge.
 
+SUPPLIED LATER:    THM-2749 places semantic/full-target factors inside the
+                   integrated vector on a two-sided common section.
+
 NOT CONSTRUCTED:   a global clutch functor or C13 action;
-                   semantic/full-target factors inside the integrated vector;
+                   a fixed THM-2334 triangle/address transplant;
                    pointwise endpoint amplitude or spectral endpoint pair;
                    endpoint current, row exclusion, or LRC(14).           (22)
 ```

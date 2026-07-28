@@ -80,20 +80,25 @@ clutch: translation by `7/13^6` gives equal recomputed raw private-unit
 vectors on ten whole rail overlaps and all fourteen equal-weight loci; the
 root-normalized endpoint classes differ by `-1`.  THM-2749 inserts the literal
 `E3 -> D^6 -> Q_(3,{1,2})` fork, both lawful target pairs, both relative-present
-factors, rail, and seam inside a two-sided common-section integral.  Precisely
-`t=3,...,11` survive with equal raw source/target vectors and private-root gain
-`-1`; their target window is a norm-one cyclotomic unit with positive inverse
-`u^2+u^6+u^10`, so all twelve primitive target characters survive.  The sharp
-boundary is categorical: the natural single sheet shears (gain `7`) and no
-common-selector map into the canonical endpoint current or external semantic
-arm carrier is known.  THM-2750 proves that this last qualifier is
-load-bearing: every clutch commuting with the external `C3` arm rotation,
-including the scalar `-1` and any target/clock operator confined to the
-auxiliary factor, has zero invariant-to-charged block.  The minimal escapes
-are an unequal marked-arm gain or a fourth fixed reference with a lawful swap;
-neither is yet physically typed.  THM-2727 is **PROVED** as a fixed-rail
-realization no-go, but supplies no rail/owner/support/address map.  Ledger
-`165`; no row is excluded.
+factors, rail, and seam inside a two-sided common-section integral.  Its frozen
+rail-8 source section has exact target window `t=3,...,11`, a norm-one
+cyclotomic unit with positive inverse `u^2+u^6+u^10`.  Separately, the
+clock-coindexed label `(0,4)` gives equal primitive vectors on all fourteen
+equal-weight rails with private-root gain `-1`.  That coindexed raw target
+support is `t=2,...,11`; attaching the explicit transported cylinder removes
+`t=2`, and both its linear and bilinear profiles retain all twelve primitive
+`C13` characters.  The distinction between frozen and coindexed sections is
+load-bearing.  The natural one-sided sheet shears, and no common-selector map
+into the canonical endpoint current or external semantic arm carrier is known.
+THM-2750 proves that this last qualifier is load-bearing: every clutch
+commuting with the external `C3` arm rotation, including the scalar `-1` and
+any target/clock operator confined to the auxiliary factor, has zero
+invariant-to-charged block.  The minimal escapes are an unequal marked-arm
+gain or a fourth fixed reference with a lawful swap; neither is yet physically
+typed.  The next debt is a fixed `R=13^6` THM-2334 triangle transplant
+retaining exact relation address and one THM-2625 endpoint determinant sector.
+THM-2727 is **PROVED** as a fixed-rail realization no-go, but supplies no
+rail/owner/support/address map.  Ledger `165`; no row is excluded.
 
 ### Independent routes that remain live
 

@@ -19,6 +19,16 @@
   characters survive.  The natural one-sided sheet instead shears, so no
   global transporter or endpoint current follows.  Hashes: `12f150dc` /
   `72fed42b`.
+- `lrc14_fully_marked_root_zero_clutch_thm2749.py` -> matching `.out`
+  [THM-2749 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED,
+  ALL-RAIL/CLOCK-COINDEXED FACE].  The uniform two-sided section `(s,t)=(0,4)`
+  gives equal fully marked raw vectors and primitive units on all fourteen
+  equal-weight rails; the selected-bank gcd is `413915261760`, and root
+  normalization changes every row by `-1`.  Its raw rail-8 target support is
+  `t=2,...,11`, while the explicit transported-cylinder linear and bilinear
+  profiles have support `t=3,...,11` and all twelve primitive `C13`
+  characters.  The seven clock entries are counterfactual fibres, not an
+  endpoint current.  Hashes: `93b46b27` / `04ae7769`.
 - `jc2_one_pole_response_composition_thm2748.py` -> matching `.out`
   [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2748].  A
   one-pole response component dominated by the source
@@ -59,7 +69,7 @@
   vector `(0,a,...,a)`, a private unit at both roots with all six nontrivial
   clock characters.  THM-2749 now inserts the fork and target factors on one
   two-sided common section; single-sheet naturality and endpoint-current
-  attachment remain open.  Hashes: `e2798147` / `ba9d0a67`.
+  attachment remain open.  Hashes: `e10fa7c9` / `ba9d0a67`.
 - `lrc14_relative_present_semantic_lift_probe_20260728.py` -> matching `.out`
   [FINITE-EXACT PRECURSOR INCORPORATED IN THM-2744].  Fourteen source-one rails
   contain `12848` genuine deepest semantic forks.  The relative-present
