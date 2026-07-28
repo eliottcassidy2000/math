@@ -1,6 +1,7 @@
 FULL S4 AFFINE DIVISOR-PARITY HOSTILE AUDIT
 F_t=Y^4-2Y^2-8tY+1-4t
 R_t=U^3-4U^2+16tU-64t^2
+inverse_quartic_branches=q=+/-8t
 pair_sum_product=(8t)^2
 rational_root_cases=j0,j1,j2 all_blocked
 disc_R=disc_F=-2^12*t^2*(27t^2-14t+3)

@@ -200,6 +200,15 @@ def main():
     require(resolvent_b == (0, 16), "pair-sum U coefficient changed")
     require(resolvent_c == (0, 0, -64),
             "pair-sum constant coefficient changed")
+    inverse_p = scale(resolvent_a, Fraction(1, 2))
+    inverse_r = scale(
+        add(power(inverse_p, 2), scale(resolvent_b, -1)),
+        Fraction(1, 4),
+    )
+    require(inverse_p == p_value and inverse_r == r_value,
+            "cubic-to-quartic inverse changed")
+    require(scale(resolvent_c, -1) == power(q_value, 2),
+            "two-branch q square reconstruction changed")
 
     expected_discriminant = (0, 0, -12288, 57344, -110592)
     disc_r = cubic_discriminant(
@@ -300,6 +309,7 @@ def main():
     print("FULL S4 AFFINE DIVISOR-PARITY HOSTILE AUDIT")
     print("F_t=Y^4-2Y^2-8tY+1-4t")
     print("R_t=U^3-4U^2+16tU-64t^2")
+    print("inverse_quartic_branches=q=+/-8t")
     print("pair_sum_product=(8t)^2")
     print("rational_root_cases=j0,j1,j2 all_blocked")
     print("disc_R=disc_F=-2^12*t^2*(27t^2-14t+3)")

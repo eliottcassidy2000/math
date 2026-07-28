@@ -22,8 +22,8 @@ related:
   - THM-2762-quartic-opposite-sum-wall-imprimitive-d4-and-keller-exclusion
 script: 04-computation/jacobian_full_s4_affine_divisor_parity_hostile_thm2769.py
 output: 05-knowledge/results/jacobian_full_s4_affine_divisor_parity_hostile_thm2769.out
-script_sha256: 28fc2703eeb7f2d4fc47ff3ca5921631ddea1291f199724dd93ba4d4167ba423
-output_sha256: d91d336a7d562bf008decd0f0fd1037078bb6028bf9d7cfad4ff74daf0932d53
+script_sha256: 01d6b992cf58e1900eec0f88a22bff0ef32682954a45a00314459029c02c0fe2
+output_sha256: 1f2a73699c26ea65386b81a18890a8e9fdc8a7e16bf20e1f5ca0c2e4280f922b
 hash_basis: LF-normalized bytes
 ---
 
@@ -64,11 +64,29 @@ product_i(U-tau_i)
  =U^3+2pU^2+(p^2-4r)U-q^2.                             (3)
 ```
 
+Conversely, a monic cubic
+
+```text
+U^3+AU^2+BU+C,
+```
+
+with `-C=q^2` reconstructs exactly the two depressed quartics obtained from
+
+```text
+p=A/2,                 r=(p^2-B)/4,             q=+/-sqrt(-C). (3a)
+```
+
+Thus this is an exact two-branch inverse in the displayed pair-sum
+coordinate, not only a field-level group construction.
+
 For `(1)`, `p=-2`, `q=-8t`, and `r=1-4t`, so `(3)` is
 
 ```text
 R_t(U)=U^3-4U^2+16tU-64t^2.                            (4)
 ```
+
+Indeed `(3a)` applied to `(4)` gives `p=-2`, `r=1-4t`, and
+`q=+/-8t`; the negative branch is `(1)`.
 
 Consequently the six pair sums have polynomial
 
@@ -326,11 +344,12 @@ python 04-computation/jacobian_full_s4_affine_divisor_parity_hostile_thm2769.py
 python -O 04-computation/jacobian_full_s4_affine_divisor_parity_hostile_thm2769.py
 ```
 
-The no-`assert`, no-floating-point companion verifies `(3)`--`(7)`, the
+The no-`assert`, no-floating-point companion verifies `(3)`--`(7)`, including
+the two inverse branches `(3a)`, the
 three rational-root cases `(9)`, both discriminants, the exact square in
 `(26)`, the Newton hull and local controls `(13)`--`(16)`, all `S3`-invariant
 subspaces of `(20)`, the full 24-element even-sign action on four states, the
 boundary code, the even-base-change control, and `(31)`.  Normal and optimized
-runs LF-normalized-byte-match the stored 20-line transcript.
+runs LF-normalized-byte-match the stored 21-line transcript.
 
 QED, conditional only on independent hostile audit for promotion.
