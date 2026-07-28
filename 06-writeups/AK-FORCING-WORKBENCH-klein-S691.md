@@ -88,6 +88,22 @@ deposits a nonzero (a,−a) at v.
   11/6, 9/5, 7/4 (the KT99 exponent — reaching it would validate the game's
   faithfulness to the human proof ladder), then 5/3 < 1.675.
 
+- **Mechanism of 13/7 (extracted, exact):** the round-1 firing of (2,1,1) —
+  no neighbor in T — is the flow (×2, depositing 2·(1,−1)):
+  `−6·y@(1,2,2)seed + 6·w@(2,2,1)seed + 1·u[(1,1,2)−(2,1,2)] +
+  3·u[(1,2,2)−(2,2,2)] + 3·x[(1,1,2)−(1,2,2)] + 6·x[(2,1,1)−(2,2,1)] −
+  3·x[(2,1,2)−(2,2,2)] − 2·p[(2,1,1)−(2,1,2)] − 6·y[(2,2,1)−(2,2,2)]`.
+  Reading: the fired vertex's own two species combine (6·(1,0) − 2·(2,1) =
+  2·(1,−1)); everything else is a circulation through five non-T vertices
+  with exact cancellation, enabled by FOREIGN seeds acting as junction fuel
+  (a seed is a lattice generator — infinitely reusable at any coefficient)
+  and closed through the wildcard. Design principles extracted:
+  (i) seeds ≠ local slots only — each seed is a permanent junction-enabler
+  for ALL later firings; (ii) pass-through requires ≥3 species or a
+  T-vertex, so hub vertices (degree ≥ 3, mixed species) are the scarce
+  resource; (iii) axis-shared rails serve simultaneously as slots and as
+  return-circulation, which is why deep products beat every k ≤ 2 design.
+
 ## 4. Where < 2 must live, if anywhere
 
 The three structural loopholes the plateau argument does not close:
