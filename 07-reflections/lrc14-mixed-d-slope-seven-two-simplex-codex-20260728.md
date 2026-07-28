@@ -110,6 +110,17 @@ thirteen selected *first-component midpoints* of THM-2672's canonical
 twelve-chart facet bank refined the displayed D edge.  This is only a
 midpoint spot-check, not an exclusion of all components or configurations.
 
+The later proved
+`THM-2687-slope-seven-global-configuration-switching-positive-thirteenfold-no-go.md`
+is complementary rather than contradictory.  Its enlarged necessary
+envelope shows that even arbitrary labelwise configuration switching cannot
+support all thirteen slope labels on a positive open component.  The present
+witness uses only two carry labels and adds a heterogeneous D edge.  Together
+the results locate a genuine intermediate boundary: a mixed low-dimensional
+face exists, while the full thirteen-label slope simplex does not.  Neither
+statement supplies physical homology after the carry or configuration label
+is forgotten.
+
 ## 4. Connection contract
 
 ```text
