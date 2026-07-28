@@ -2,7 +2,7 @@
 id: THM-2629
 title: "Fixed-deep affine graph spectrum and puncture-cancellation boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Retaining one nonzero translated deep-probe label before THM-2616's
   seven-clock unit test gives 4,156 nonzero labelled rows, each supported on
   all twelve nonzero deep labels.  Across the 84 base cells the fixed-deep
@@ -33,7 +33,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2629 -- the best deep/future graph hides one puncture in the other
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2616 first keeps the present target section `q`, translated deep probe
 `r`, and delayed physical digit `h` in one nonnegative common-`x` tensor,
@@ -210,7 +210,7 @@ h=12 -> r=0,                         h=0 -> r=12.          (13)
 
 Thus one absent future sheet, `h=12`, hides the absent deep sheet `r=0`,
 while the other absent future sheet leaves `r=12` unused.  This is the exact
-puncture-cancellation mechanism behind the affine optimum.
+puncture-cancellation alignment exhibited by the affine optimum.
 
 It also proves a sharp completion no-go independent of any particular guard
 construction.  Every affine bijection `h -> alpha h+beta`, `alpha!=0`, maps
@@ -250,9 +250,17 @@ Every branch is exact integer or finite-field arithmetic; no floating point
 or random fixture is used.  Normal and optimized runs are required to
 byte-match the stored transcript.
 
+An independent hostile audit rebuilt the fixed-`r` classes on the same
+global `/26` primitive lattice, replayed normal and optimized modes against
+the stored output, re-exhausted all `169` affine maps, and checked the six
+exceptional cells and both puncture identities.  It also verified the
+load-bearing scope: `r` is a translated-probe coefficient label and the
+realizing rail may vary with the base cell, so the opposite affine action is
+not being asserted as physical chronology.
+
 The result selects a labelled deep-probe index inside a coefficient tensor.
 The realizing rail may vary from cell to cell, and the seven-clock unit is an
 aggregate over `ell`.  No common chronological stalk, outgoing-root equals
 incoming-root identity, positive ordered seven-edge path, semantic owner,
 relation residue, or endpoint current follows.  It removes no scalar row and
-does not prove LRC(14).  QED (candidate; independent hostile audit pending).
+does not prove LRC(14).  QED.
