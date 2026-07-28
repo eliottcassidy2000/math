@@ -1,0 +1,12 @@
+THM-2722 FIXED-d NONLINEAR TARGET CLASSIFICATION
+graph_coordinates=A:-2t,d:F(x,t)
+chain_rule=Jac(P(A,d),Q(A,d))=2*D_(P,Q)(-2t,F)*F_x
+nonzero_constant_forces=F:a*x+R(t),D_(P,Q):delta_constant
+base_map=(-2t,a*x+R(t)):polynomial_automorphism
+fixed_d_iff=P:alpha*A+K(d),a*alpha_nonzero
+fixed_d_inverse=t:(K(V)-U)/(2alpha),x:(V-R(t))/a
+full_C[A,d]^2=ordinary_planar_Keller_pair_after_base_change
+counterexample_in_full_subalgebra_iff=JC2_false
+zero_response_boundaries=F_x_zero_or_target_determinant_zero
+scope=FIXED_d_FACE_CLOSED_FULL_SUBALGEBRA_IS_JC2_NOT_A_JC2_PROOF
+PASS
