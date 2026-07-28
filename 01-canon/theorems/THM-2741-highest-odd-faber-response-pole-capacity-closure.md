@@ -189,6 +189,18 @@ j       11       9       7          5        3       1
 c_j   429/256 847/512 2079/1280 1617/1024 385/256 693/512. (17)
 ```
 
+The transversality is an exact quadrature identity, not an accidental gcd.
+For `z=q+i s`, the two faces are proportional to
+
+```text
+Psi_(22,6)=-(231/256) Re(z^6),
+q s(q^2-3s^2)(3q^2-s^2)=(1/2) Im(z^6).               (17a)
+```
+
+Thus the response zeros interlace the six `G2` tangent lines.  The central
+`C2` quotient pairs each six-line family into three directions; it does not
+erase their transverse phase.
+
 The polynomial in `(16)` is coprime to `Psi_(22,6)`.  Hence it is nonzero
 on every line in `(9)`, and on every normalization branch
 
