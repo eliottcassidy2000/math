@@ -20,8 +20,8 @@ related:
   - THM-2716-c4-arm-transporter-groupoid-and-relative-degree-holotopy-boundary
 script: 04-computation/lrc14_unshifted_deepest_source_present_wall_thm2720.py
 output: 05-knowledge/results/lrc14_unshifted_deepest_source_present_wall_thm2720.out
-script_sha256: b8e7619f2ca56759794b90794e936935c0f41012206cfeacf3f869e25ed3c0db
-output_sha256: fd3b7f8d47efbe0faa43cb8db168eccb2d4ed7671b667593faee5a3020123456
+script_sha256: 08850fc486e32a389d827332a4a106933880e92c0e8e8cd728ce2e5a333d76d8
+output_sha256: a33e54ac59debf1389f852ff0fa49737a406f1d26ab8ca1ea3553368b21a1338
 hash_basis: working-tree bytes (LF)
 audit: thm2705-2709-audit-2026-07-28 (independent proof audit; endpoint hostile check; independent 91-cell reconstruction; normal/-O/hash/docs replay)
 ---
@@ -170,5 +170,13 @@ An independent hostile audit rederived the pointwise inclusion
 `F_(ell,s) subset G_c3(0)`, checked that both half-open and strict-open
 endpoint conventions leave the disjointness unchanged, and independently
 rebuilt all `91` labelled cells.  It reproduced the exact `78/91` deletion
-control and its mass range, matched all declared hashes, and replayed the
-normal, optimized, stored-output, and documentation checks.
+control, its mass range, and both extrema in `(9)`.  A second immutable audit
+then found that the promoted file's pinned carrier hash and its two declared
+artifact hashes were stale despite the first audit's hash claim.  The carrier
+pin was repaired to the current dependency hash before replay; normal and
+optimized executions now byte-match the stored transcript, the LF-normalized
+artifact hashes are those declared in the frontmatter, and the documentation
+check passes.  This was an evidence repair, not a change to the set-theoretic
+theorem.
+
+QED.
