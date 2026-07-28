@@ -2,8 +2,8 @@
 id: THM-2647
 title: "Endpoint-anchored two-point deconvolution and the thirteen-halves signed tax"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT.  On an odd
-  cycle, the two-point kernel I+T_d has the explicit inverse
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On an odd cycle,
+  the two-point kernel I+T_d has the explicit inverse
   (1/2)sum_j(-1)^j T_(jd).  For C_13 this is (I-H_d)/2, the inverse already
   latent in THM-2368 and THM-2526; it is unique, necessarily signed, and has
   l1 norm 13/2.  Hence the full THM-2645 multiplicity profile together with
@@ -30,7 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2647 -- one endpoint deconvolves the saturated relation pair
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2645 proves that exact multiplicity retains every carry character but
 forgets how the two endpoint relations share a common origin.  An old local
@@ -263,4 +263,4 @@ both orientations of `A`, proves uniqueness against all `78` candidate
 two-sets, and checks the `13 -> 2 -> 1` gauge ladder.  Normal and optimized
 executions must byte-match the stored transcript and end in `PASS`.
 
-QED (candidate; independent audit pending).
+QED.
