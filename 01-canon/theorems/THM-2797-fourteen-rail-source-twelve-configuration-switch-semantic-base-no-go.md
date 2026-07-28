@@ -2,7 +2,7 @@
 id: THM-2797
 title: "Fourteen-rail source-twelve configuration-switch semantic-base no-go"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; UNDER INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the first fourteen THM-2749 semantic rails there are exactly 55 maximal
   THM-2672 configurations, of which exactly 42 admit source carry 12.  Every
   one of those 42 source-twelve facets is positive and has at least one
@@ -31,8 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2797 -- all fourteen fixed semantic-rail switches miss at the anchor
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; UNDER INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2794 shows that all `879,237` delayed components in one rail-eight
 configuration miss THM-2749's marked semantic source.  Its independent audit
@@ -292,9 +291,11 @@ all 55 maximal and 42 source-admissible configurations; independently
 recomputes every facet and marked vector; records the first failed layer;
 and verifies every open intersection and oriented closure seam.
 
-The theorem remains a candidate until an immutable independent hostile audit
-rebuilds the source-carry rebase, all three signatures, positivity, the
-anchor-first failure law, seam orientation, normal/optimized/stored replay,
-and LF hashes.
+An immutable independent hostile audit rebuilt the source-carry rebase and
+all three signatures.  It reproduced all `42` positive facets, their common
+positive clocks, the `69/225` first-failure census, zero strict overlap,
+all `7018` one-sided seams, normal/optimized/stored replay, dependency and
+artifact hashes, and the documentation/uniqueness gates.  No repair was
+required.
 
-QED, conditional only on candidate status promotion after independent audit.
+QED.
