@@ -26,7 +26,7 @@ related:
   - THM-2788-physical-modular-odometer-versus-heisenberg-bockstein-extension
 script: 04-computation/lrc14_full_arm_orbit_lower_central_chord_thm2791.py
 output: 05-knowledge/results/lrc14_full_arm_orbit_lower_central_chord_thm2791.out
-script_sha256: fc557d31a82ea52adf0abc7b26bfdacf1961facc99050061132d72dda231a9db
+script_sha256: 2824d62c237fd9ac831d23236e6987ecabe96bebd68ba37a9abd0bb685ad0716
 output_sha256: 9f2b8e69b9de430f201adb7758f98fff7bf505c5bd792b03f40b3ee7c9f46edd
 hash_basis: LF-normalized bytes
 ---
@@ -107,9 +107,10 @@ actual predecessor carry six.                            (4)
 ```
 
 The semantic stability radius equals the chosen open-cylinder radius at
-both endpoints, so the record is constant on the open cylinder; the omitted
-boundary points are load-bearing.  Each positive cell has exact weighted
-mass
+both selected centers, so the record is constant on each open cylinder.
+At each cylinder the right boundary point changes the semantic record and
+is load-bearing; both endpoints remain omitted under the strict-open
+convention.  Each positive cell has exact weighted mass
 
 ```text
 c/R=60,781,651,775,958,960/371,293.                      (5)
@@ -199,8 +200,10 @@ Moreover
 13^6 delta=4,825,548,        13^5 delta=371,196          (16)
 ```
 
-are integers.  Hence the delayed base, predecessor carry, and root half are
-pointwise invariant on the restricted translation.  Both delayed
+are integers.  Here the delayed phase uses `R=13^6`, the predecessor carry
+uses `N=13^5`, and the selected deep/root speed is
+`C_3=742586=2N`.  Hence the delayed base, predecessor carry, and root half
+are pointwise invariant on the restricted translation.  Both delayed
 carry-six pairs are exactly
 
 ```text

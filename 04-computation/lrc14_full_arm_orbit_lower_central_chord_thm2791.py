@@ -354,7 +354,10 @@ def main():
         half = thm.relative.Q_RADIUS * thm.T
         cylinder = ((center * thm.T - half, center * thm.T + half),)
         pieces = thm.marked.restrict_weighted(weighted3, cylinder)
-        require(len(pieces) == 1, "selected chord cylinder stopped being whole")
+        require(
+            len(pieces) == 1 and pieces[0][:2] == cylinder[0],
+            "selected chord cylinder stopped being a whole weighted piece",
+        )
         return pieces[0]
 
     piece0 = restricted_piece(0)
