@@ -128,7 +128,10 @@ identify the distinct whole head `A_h(x)A_h(T^N x)` (MISTAKE-300).
 
 On the endpoint side, THM-2620 restores the determinant discarded by target
 difference, and THM-2625 proves one canonical current fills all `28,561`
-endpoint cells and all `2,016` nondegenerate parabolic sectors.  The target is
+endpoint cells and all `2,016` nondegenerate parabolic sectors.  Audited
+THM-2634 proves that its two factors carry separate digits `(c_L,c_R)`: the
+neutral character recovers the old current, but the matched diagonal requires
+a pair twist and a physical transverse section.  The target is
 a positive chronological lift putting the natural-extension carry and one
 surviving endpoint sector on the same whole-head carrier, then gluing it
 through adjacent clocks to a semantic root.  Signed tomography, marginals,

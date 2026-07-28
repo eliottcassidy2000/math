@@ -180,7 +180,7 @@
 62. **Safe-torus mass is not primitive-line recurrence.** THM-2188/2193
     preserve Haar mass across opposite slopes, not a primitive recurrence.
 63. **Degree-four `D4` is excluded, but not by Smith.** THM-2633 gives
-    `H -> G^ab` surjective and `1<=k_D<=d-1`, leaving only `A4,S4`; retain old
+    `normal_closure_G(H)=G` and `1<=k_D<=d-1`, leaving only `A4,S4`; retain old
     `D4` ledgers as hostiles and never reuse MISTAKE-297's deck extension.
 
 ## Promotion checklist

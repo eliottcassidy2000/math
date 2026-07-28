@@ -152,8 +152,10 @@ Format per entry:
   THM-2633 excludes `D4` by a different mechanism: etale openness and the
   absence of nonconstant units on affine space give a fixed affine sheet for
   every boundary inertia group, while Kummer support forbids a nonzero
-  monodromy character that is trivial on the point stabilizer.  Equivalently,
-  a Keller point stabilizer surjects onto `G^ab`; `C2 -> D4^ab=C2^2` cannot.
+  monodromy quotient that kills every point stabilizer.  Equivalently, a
+  Keller point stabilizer normally generates `G` (hence surjects onto
+  `G^ab`); the point stabilizer of `D4` normally generates only its proper
+  source-deck kernel.
   No deck transformation is extended across the Jelonek divisor, so this does
   not revive the failed implication recorded here.  The current degree-four
   list is `A4,S4`; the `D4` ledgers remain conditional hostile controls.

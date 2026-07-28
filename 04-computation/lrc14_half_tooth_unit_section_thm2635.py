@@ -12,7 +12,6 @@ from hashlib import sha256
 from math import gcd
 
 import lrc14_cross_time_target_future_diagonal_thm2616 as cross
-import lrc14_fixed_deep_affine_graph_spectrum_thm2629 as fixed
 import lrc14_old_wall_successor_sector_thm2630 as wall
 
 

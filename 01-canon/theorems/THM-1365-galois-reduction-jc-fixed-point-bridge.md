@@ -15,8 +15,9 @@
 > affine source; the then-live `D4` branch therefore needed an unramified
 > missing divisor exchanged with an included divisor over the same target
 > component.  THM-2633 later excludes `D4` independently: affine openness and
-> Kummer support force every Keller point stabilizer to surject onto `G^ab`.
-> Thus the current degree-four list is `A4,S4`, without any deck extension.
+> purity force every Keller point stabilizer to normally generate `G` (and
+> therefore surject onto `G^ab`).  Thus the current degree-four list is
+> `A4,S4`, without any deck extension.
 
 **Status:** VERIFIED (modulo three classical citations, named below)
 **Author:** boxeph-2026-07-20-S150 (HYP-8210)

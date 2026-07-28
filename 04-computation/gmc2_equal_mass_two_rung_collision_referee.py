@@ -7,7 +7,7 @@ same mass.  This is stronger than merely asking the two extreme rays to have
 equal mass: the charge triple (1, 6, -4) is the smallest hostile below and
 has a third channel on the first equal-mass slice.
 
-No theorem ID is assigned here.  This is a standalone exact referee artifact.
+This is the exact referee artifact for THM-2639.
 """
 
 from fractions import Fraction

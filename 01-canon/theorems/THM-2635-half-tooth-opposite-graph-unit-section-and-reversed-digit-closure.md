@@ -31,7 +31,7 @@ related:
   - THM-2634-endpoint-pair-two-carry-cospan-and-single-carry-no-go
 script: 04-computation/lrc14_half_tooth_unit_section_thm2635.py
 output: 05-knowledge/results/lrc14_half_tooth_unit_section_thm2635.out
-script_sha256: 9835f86aae0ce4401cc05d0e7a7ea8a90a0d00a7497be34bde0ef29ab1160f6b
+script_sha256: 2ca00a0924bf7fae4c267b9516d5200475b2f257f74a0e39ead199064927f227
 output_sha256: 5f7bea76659c6462c2def139027bfa28e8ed6a79f6718803fd90f2e2f6a73ca4
 hash_basis: LF-normalized bytes
 ---
@@ -336,11 +336,13 @@ The three possible sums `kappa+epsilon=0,1,2` give respectively
 j=0,4,8.                                                  (30b)
 ```
 
-The first is the punctured `r=0`, `h=12` edge.  The middle value has two
-formal bit decompositions, but `j=4` forces `h=j-1=3`, whose physical half
-has `kappa=0`; therefore only `(epsilon,kappa)=(1,0)` is consistent.  The
-last value gives the second solution `(epsilon,kappa,h)=(1,1,7)`.  This
-explains both closures and why only the left half occurs.
+The first formal root would be the punctured `r=0`, `h=12` edge, but it also
+fails the physical carry constraint: `h=12` forces `kappa=1`, whereas
+`j=0` in (30a) requires `kappa=epsilon=0`.  The middle value has two formal
+bit decompositions, but `j=4` forces `h=j-1=3`, whose physical half has
+`kappa=0`; therefore only `(epsilon,kappa)=(1,0)` is consistent.  The last
+value gives the second solution `(epsilon,kappa,h)=(1,1,7)`.  This explains
+both actual closures and why only the left half occurs.
 
 Only the first lies in the canonical uniform fixed-half unit set (14):
 
@@ -411,8 +413,12 @@ The first missing map is therefore a common-ancestry cospan which
 4. keeps both endpoint carries rather than attaching one carry only after
    Fourier aggregation.
 
-The last item is the unproved target reserved by THM-2634; that stub is not a
-dependency.  No scalar row is excluded and no LRC(14) conclusion follows.
+THM-2634 now lawfully retains the separate endpoint carries `(c_L,c_R)` and
+proves that the collapsed determinant supplies neither a canonical
+single-carry contraction nor a matched endpoint diagonal.  It still does not
+transport that cospan onto the THM-2616 half-tooth atom above.  It remains a
+related theorem rather than a dependency.  No scalar row is excluded and no
+LRC(14) conclusion follows.
 
 ## 7. Exact companion
 
@@ -432,7 +438,8 @@ Both executions must byte-match
 05-knowledge/results/lrc14_half_tooth_unit_section_thm2635.out.
 ```
 
-The companion independently rebuilds the full THM-2616 interval carrier,
+The companion recomputes the full THM-2616 interval carrier through its
+audited exact constructors,
 splits every translated tooth, recomputes the global content over all labels,
 checks every digitwise additive partition, tests every canonical and
 either-rail fixed-half unit, recombines the halves, checks the complete bank
@@ -449,5 +456,4 @@ Fresh normal and optimized runs both byte-matched the stored transcript and
 its declared hash.  The audit confirms that (31) is an imposed, reversed
 coefficient section and does not promote it to a decoded successor or a
 semantic two-root transition.
-
 QED.

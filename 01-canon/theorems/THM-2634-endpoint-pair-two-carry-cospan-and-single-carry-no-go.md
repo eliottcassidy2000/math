@@ -213,9 +213,11 @@ E_(q,Delta,d)(t)
 
 Here THM-2625's `R_c` is already the conjugated endpoint factor, so the
 physical second amplitude in (17) is `conj(R_c)`.  After subtracting the
-singleton norms, the `t=-1` Fourier mode recovers `C_d(q,Delta)`.  One nontrivial
-quadrature plus the norms suffices.  Separate
-intensities do not.  THM-2420 gives the parallel same-shell statement: a
+singleton norms, the full thirteen-phase Fourier bank recovers
+`C_d(q,Delta)`.  Equivalently, once the singleton norms and ordinary `t=0`
+union intensity are known, one additional nontrivial phase such as `t=1`
+determines the second real coordinate.  One nontrivial phase plus the norms
+alone does not.  Separate intensities do not.  THM-2420 gives the parallel same-shell statement: a
 residue-zero reference can preserve the correlation, but such a reference
 is not free and must share the endpoint gauge.
 
@@ -324,7 +326,7 @@ for this LRC packet.
 ## 5. Exact canonical control
 
 The companion works over the exact field `F_53`, where `16` has order
-thirteen.  It performs `6,591` exhaustive endpoint-digit/gauge checks.  On a
+thirteen.  It performs `6,591` boundary-focused endpoint-digit/gauge checks.  On a
 dense deterministic two-carry endpoint plane it computes (13) directly,
 computes (15) independently, and checks exact DFT and inverse DFT equality.
 It also checks that the neutral character is exactly the old determinant
@@ -379,7 +381,9 @@ sharp nonnegative support threshold, and the transverse determinant law.  It
 also replayed normal and optimized modes against the stored transcript,
 verified the repaired `6,591` distinct endpoint-grid gauge checks and the
 declared LF-normalized hashes, and independently checked the conjugation,
-allocation-gauge, and conditional derangement scope.
+allocation-gauge, and conditional derangement scope.  The first audit also
+caught and repaired the one-phase shortcut above; the companion already
+checks the stronger full thirteen-phase bank.
 
 ## 6. Exact boundary
 
