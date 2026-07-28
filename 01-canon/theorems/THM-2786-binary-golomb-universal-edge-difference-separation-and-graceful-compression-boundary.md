@@ -1,22 +1,289 @@
 ---
 id: THM-2786
 title: "Binary Golomb universal edge-difference separation and graceful compression boundary"
-status: RESERVED / UNPROVED EMPTY STUB
+status: >
+  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
+  AUDIT.  The labels 2^i-1 give every finite graph pairwise distinct
+  absolute edge differences, with an exact 2-adic decoder for both
+  endpoints.  More generally every radix q works.  A self-contained
+  quadratic prime construction compresses universal all-pair separation
+  below 8n^2.  Conversely any m-edge distinct-difference labeling has span
+  at least m, and any labeling separating all vertex pairs has span at least
+  binom(n,2).  Therefore a graceful n-vertex tree must deliberately allow
+  nonedge difference collisions: universal Golomb separation over-solves
+  the problem and cannot be compressed to the graceful span n-1.  This
+  isolates the tree-specific compression debt but does not prove Graceful
+  Tree.
 source: root/binary-golomb-graceful-boundary-2026-07-28
-depends_on: []
-related:
+external_input: >
+  Bertrand's postulate, used only for the corollary that an odd prime
+  n<=p<2n exists and hence the displayed prime ruler has span <8n^2.
+depends_on:
   - THM-2761-graph-edge-sum-discriminant-codegree-factorization-and-graceful-sign-gauge
+related:
   - THM-2783-weighted-long-wall-binary-null-avoidance-and-ternary-state-reconstruction
+script: 04-computation/binary_golomb_graceful_boundary_thm2786.py
+output: 05-knowledge/results/binary_golomb_graceful_boundary_thm2786.out
+script_sha256: 61ca79bae3dc9317833f2310745a7270d017a4880ffbba1d5ce64960628b0f9a
+output_sha256: 3210f27f8a9d4083e295d212cfcedeebd64fe6e48b9d344959a9d4b9b9bc9f1e
+hash_basis: LF-normalized bytes
 ---
 
-# THM-2786 -- binary Golomb separation and the graceful compression debt
+# THM-2786 -- a universal ruler solves the wrong graceful problem
 
-**RESERVED / UNPROVED EMPTY STUB.**
+**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
+AUDIT.**
 
-No mathematical claim is established by this reservation.  The intended
-target is the universal powers-of-two vertex labeling with pairwise distinct
-absolute differences, its exact `2`-adic decoder, optimal complete-graph
-range boundary, and the precise distinction between unconstrained Golomb
-separation and graceful compression to `{0,...,|E|}`.  Promotion must not
-claim Graceful Tree, a polynomial-time compression, or an LRC/Keller
-consequence.
+There is an elementary collision-free labeling for every graph:
+
+```text
+vertex i |-> 2^i-1.                                      (1)
+```
+
+It is far stronger than graceful labeling, because it separates the
+differences of every pair of vertices, not only the edges.  That strength is
+exactly why it cannot reach the graceful range.  The theorem below turns
+this familiar powers-of-two observation into a source/target map, compresses
+it to quadratic range, and proves that the final linear compression must use
+the tree's missing edges.
+
+## 1. Exact binary endpoint decoder
+
+Label ordered vertices `0,...,n-1` by
+
+```text
+a_i=2^i-1.                                                (2)
+```
+
+For `i<j`,
+
+```text
+a_j-a_i=2^i(2^(j-i)-1).                                  (3)
+```
+
+The second factor is odd.  Therefore
+
+```text
+i=v_2(a_j-a_i),
+j=i+log_2((a_j-a_i)/2^i+1).                              (4)
+```
+
+Thus the positive difference determines the ordered endpoint pair exactly.
+In particular, every simple graph on these vertices has pairwise distinct
+absolute edge differences.
+
+The same proof works for every integer radix `q>=2`:
+
+```text
+a_i=q^i-1,
+a_j-a_i=q^i(q^(j-i)-1),                                 (5)
+```
+
+where the second factor is not divisible by `q`.  The largest power of `q`
+dividing the difference recovers `i`, and the quotient recovers `j-i`.
+Among these positional rulers, binary has the smallest span
+
+```text
+2^(n-1)-1.                                               (6)
+```
+
+This is the pair-difference counterpart of THM-2783's binary radix wall.
+It is not yet a bounded graceful labeling.
+
+## 2. Quadratic universal compression by a prime ruler
+
+The exponential span in `(6)` is not intrinsic to all-pair separation.  Let
+`p` be any odd prime with `p>=n`, and for `0<=i<n` let
+
+```text
+r_i = the least residue of i^2 modulo p,
+b_i = 2pi+r_i.                                           (7)
+```
+
+The `b_i` are strictly increasing, because a consecutive linear increment
+`2p` dominates any residue drop.  They form a Sidon set.  Suppose
+
+```text
+b_i+b_j=b_k+b_l,             i<=j, k<=l.                 (8)
+```
+
+Then
+
+```text
+2p(i+j-k-l)=r_k+r_l-r_i-r_j.                             (9)
+```
+
+The right side has absolute value below `2p`, so both sides vanish:
+
+```text
+i+j=k+l,                  r_i+r_j=r_k+r_l.              (10)
+```
+
+Modulo `p`, `(10)` and equality of square sums give
+
+```text
+ij=kl mod p.                                             (11)
+```
+
+Since `p` is odd, the two pairs are the roots of the same quadratic over
+`F_p`.  All indices lie in `{0,...,p-1}`, hence
+
+```text
+{i,j}={k,l}.                                             (12)
+```
+
+This proves Sidon sum uniqueness.  If two positive differences were equal,
+
+```text
+b_j-b_i=b_l-b_k,
+```
+
+then `b_j+b_k=b_l+b_i`; applying `(12)` gives the same endpoint pair.
+Therefore `(7)` is a universal Golomb ruler as well.
+
+Its span satisfies
+
+```text
+b_(n-1)<2p^2.                                            (13)
+```
+
+Bertrand's postulate permits an odd prime `n<=p<2n`, with the trivial choice
+`p=3` at `n=2`.  Hence every `n`-vertex graph has one explicit integral
+all-pair-separating labeling of span
+
+```text
+<8n^2.                                                   (14)
+```
+
+The formula and proof `(7)--(13)` are self-contained; Bertrand is used only
+for the displayed uniform constant in `(14)`.
+
+## 3. The exact graceful compression obstruction
+
+Let a graph have `m` edges, translate any integral labeling so its minimum is
+zero, and let its span be `L`.  If its `m` positive edge differences are
+distinct, then they lie in `{1,...,L}`, so
+
+```text
+L>=m.                                                     (15)
+```
+
+Equality in `(15)` is exactly the bounded-difference part of gracefulness:
+the differences must be `{1,...,m}`.  For an injective labeling into
+`{0,...,m}`, THM-2761 proves that this is equivalent to nonvanishing of the
+squared-difference discriminant.
+
+Now impose the stronger, graph-independent requirement that **all**
+`binom(n,2)` vertex-pair differences be distinct.  The same count gives
+
+```text
+L>=binom(n,2).                                            (16)
+```
+
+For a tree, `m=n-1`.  When `n>=3`,
+
+```text
+binom(n,2)>n-1.                                          (17)
+```
+
+Therefore no universal all-pair Golomb ruler—binary, prime-quadratic, or
+otherwise—can be compressed to the graceful tree span while retaining
+all-pair separation.  A graceful-tree argument must use the tree incidence
+and permit collisions between differences belonging to nonedges.
+
+This is the sharp conceptual boundary:
+
+```text
+universal ruler:   separates K_n, needs at least binom(n,2) span;
+graceful tree:     separates only E(T), seeks exactly n-1 span.          (18)
+```
+
+The missing operation is not generic collision avoidance.  It is
+tree-specific selective collision: preserve the `n-1` edge differences
+while folding the much larger nonedge difference family.
+
+## 4. Small complete-graph controls
+
+For a complete graph, `(16)` is the elementary counting floor for a Golomb
+ruler.  Exact exhaustive search gives the first optimal spans
+
+```text
+n=2,3,4,5,6:          1,3,6,11,17.                      (19)
+```
+
+The counting floor `binom(n,2)` is attained through `n=4` and already fails
+at `n=5,6`.  First witnesses are
+
+```text
+(0,1),
+(0,1,3),
+(0,1,4,6),
+(0,1,4,9,11),
+(0,1,4,10,12,17).                                      (20)
+```
+
+Only the finite cases in `(19)--(20)` are asserted here.  They are controls
+showing that even complete-graph compression has structure beyond counting;
+they are not used in the all-`n` theorem.
+
+## 5. Consequences and stopping boundary
+
+For every tree, `(1)` and `(7)` make THM-2761's absolute-difference
+discriminant nonzero.  This supplies a universal rational/integral point
+away from the graceful collision hypersurfaces, first at exponential and
+then at quadratic height.  It proves that the discriminant polynomial is
+not identically zero without constructing a point in the small graceful
+box.
+
+The transfer ledger is:
+
+```text
+source:       a radix or prime-quadratic Sidon ruler;
+target:       a nonzero tree edge-difference discriminant;
+preserved:    every edge difference, indeed every vertex-pair difference;
+destroyed
+ by desired
+ compression: nonedge difference identities may and must collide;
+needed
+ sidecar:      a tree-incidence-aware folding staying off edge collisions;
+cheapest test: perform that folding on a nonpath tree without exceeding n-1.
+                                                                    (21)
+```
+
+No tournament orientation, modular action, LRC owner/current, Keller map, or
+Jacobian information is present.
+
+## 6. Exact verification
+
+Run
+
+```bash
+python 04-computation/binary_golomb_graceful_boundary_thm2786.py
+python -O 04-computation/binary_golomb_graceful_boundary_thm2786.py
+```
+
+The exact companion uses explicit exceptions, integer arithmetic, and no
+truth-bearing Python assertions.  It checks all binary endpoint decoders
+through `n=13`; all `20,825` prime-ruler pairs through `n=50`; the sum-Sidon,
+difference, ordering, prime-window, and span claims; and exhaustively proves
+the optimal values `(19)` by testing every smaller normalized ruler.  Normal
+and optimized runs byte-match the stored transcript.
+
+```text
+PROVED HERE (candidate):  binary and general-radix endpoint decoder;
+                          universal all-graph edge-difference separation;
+                          explicit prime-quadratic Sidon/Golomb ruler;
+                          span <2p^2 and, by Bertrand, <8n^2;
+                          edge-count and all-pair span lower bounds;
+                          necessity of nonedge collisions for graceful span;
+                          complete-graph optima through six vertices.
+
+NOT PROVED:               a tree-specific collision-preserving compression;
+                          a graceful labeling for any previously open tree;
+                          the Graceful Tree Conjecture;
+                          an optimal general Golomb-ruler bound;
+                          a tournament, modular-group, Keller, or LRC result;
+                          JC(2), DC(2), or LRC(14).                       (22)
+```
+
+QED (candidate).

@@ -2,8 +2,8 @@
 id: THM-2783
 title: "Weighted long-wall binary null avoidance and ternary state reconstruction"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For an arbitrary integral wall h and every independent
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For an arbitrary
+  integral wall h and every independent
   (k-1)-row B_k root frame, the determinant is
   +/-2^c<epsilon,h>, where c counts unbalanced signed-cycle components and
   epsilon is the unique deficient-tree sign vector.  Hence h is transverse
@@ -17,6 +17,13 @@ status: >
   (1,q,...,q^(k-1)).  These are coding theorems, not a PSL2(Z),
   graceful-tree, Keller, or LRC action.
 source: root/weighted-long-wall-coding-2026-07-28
+audit: >
+  thm2783-hostile-audit/2026-07-28 independently rederived the signed-
+  multigraph determinant formula, every signed-state witness frame,
+  Boolean-dissociation equivalence, and binary/ternary/general-q sharp radix
+  inductions; replayed normal/-O/stored output and LF hashes; checked the
+  scope ledger; and sampled 13,328 additional signed/zero wall-frame cases
+  through rank six with no mismatch: ACCEPT.
 depends_on: []
 related:
   - THM-2774-tree-path-smith-index-ladder-and-binary-ternary-lattice-defects
@@ -30,8 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2783 -- binary avoids the wall; ternary remembers the state
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 There are two different reasons that the primes two and three appear in the
 signed-tree arrangement.  They should not be conflated:
@@ -326,7 +332,7 @@ coordinates, and sharp hostiles.  Normal and optimized runs byte-match the
 stored transcript.
 
 ```text
-PROVED HERE (candidate):  arbitrary-wall determinant formula (5);
+PROVED HERE:              arbitrary-wall determinant formula (5);
                           universal regularity iff Boolean dissociation;
                           an explicit frame for every signed-sum zero;
                           sharp binary minimum and unique equality wall;
@@ -343,4 +349,4 @@ NOT PROVED:               a canonical radix deformation of the graceful wall;
                           LRC(14).                                      (23)
 ```
 
-QED (candidate).
+QED.

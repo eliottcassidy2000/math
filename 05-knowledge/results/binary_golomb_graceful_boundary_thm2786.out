@@ -1,0 +1,11 @@
+THM-2786 BINARY GOLOMB / GRACEFUL COMPRESSION AUDIT
+binary_pair_decoder_checks_n2_to_n13=364
+binary_spans_n2_to_n13={2: 1, 3: 3, 4: 7, 5: 15, 6: 31, 7: 63, 8: 127, 9: 255, 10: 511, 11: 1023, 12: 2047, 13: 4095}
+erdos_turan_pair_checks_n2_to_n50=20825
+erdos_turan_prime_span_rows_n2_to_n12={2: (3, 7), 3: (3, 13), 4: (5, 34), 5: (5, 41), 6: (7, 74), 7: (7, 85), 8: (11, 159), 9: (11, 185), 10: (11, 202), 11: (11, 221), 12: (13, 290)}
+exact_optimal_golomb_lengths_n2_to_n6={2: 1, 3: 3, 4: 6, 5: 11, 6: 17}
+first_optimal_witnesses_n2_to_n6={2: (0, 1), 3: (0, 1, 3), 4: (0, 1, 4, 6), 5: (0, 1, 4, 9, 11), 6: (0, 1, 4, 10, 12, 17)}
+tree_compression_debt_graceful_binary_ET_n2_to_n13={2: (1, 1, 7), 3: (2, 3, 13), 4: (3, 7, 34), 5: (4, 15, 41), 6: (5, 31, 74), 7: (6, 63, 85), 8: (7, 127, 159), 9: (8, 255, 185), 10: (9, 511, 202), 11: (10, 1023, 221), 12: (11, 2047, 290), 13: (12, 4095, 313)}
+K_n_lower_bound=binom(n,2); equality_holds_n<=4_and_fails_n=5,6
+scope=global_pair_separation_not_tree_graceful_compression
+PASS
