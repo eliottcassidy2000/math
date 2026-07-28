@@ -17,8 +17,9 @@ status: >
   not construct one common current over those four varying target sectors or
   identify carrier allocation with the endpoint translations.  On
   one genuinely common endpoint atom the third Segre-Hadamard coordinate is
-  the required mixed face.  No such physical common atom, root-deck map,
-  physical Cech correction, row exclusion, or LRC(14) conclusion is proved.
+  the required mixed face.  No physical common atom with a nonzero mixed
+  face, root-deck map, physical Cech correction, row exclusion, or LRC(14)
+  conclusion is proved.
 source: root/carrier-allocation-holotopy-pullback-2026-07-28
 audit: >
   arm-wing-contingency-2026-07-28 (independent pullback/type audit, complete
@@ -41,6 +42,7 @@ related:
   - THM-2769-full-s4-pair-sum-affine-divisor-parity-hostile
   - THM-2770-tree-incidence-a-d-weyl-clutch-and-four-vertex-fan-dichotomy
   - THM-2771-joint-c7-c13-right-wing-mixed-spectrum-and-commuting-square-no-go
+  - THM-2806-literal-fixed-sheet-central-allocation-scalar-law-and-endpoint-translation-no-go
 script: 04-computation/lrc14_carrier_allocation_pullback_k4_segre_thm2772.py
 output: 05-knowledge/results/lrc14_carrier_allocation_pullback_k4_segre_thm2772.out
 script_sha256: 10b681f575fb51eb4b1af4bc909fba89846b85bd5da36fc069dac97ae2ebe409
@@ -573,12 +575,20 @@ at zero, but does not track the corresponding no-source-carrier `p_bare` for
 this four-state packet.  Therefore this theorem does not assert that the
 neutral corner is physically occupied by all four states.
 
+THM-2806 later supplies the most literal marked fixed-sheet test of this
+distinction.  Its raw support counts are `(169,13,13,1)`, and its only point
+supporting all four allocation states has vector `(w,w,w,w)` and mixed face
+zero.  The nonzero central value `144w` is the sum over a `12 x 12` region
+where only the bare state survives.  It is therefore a positive transformed
+marginal but an exact hostile for the pre-Fourier co-support requirement.
+
 Equation `(22d)` is the sharp THM-2771-to-THM-2772 stopping mechanism:
 mixed Fourier support is a lawful virtual Mobius face, while a literal marked
 carrier requires common vertex co-support before Fourier projection.  The
-current THM-2771 file is only a reserved candidate and is not a dependency;
-the elementary transform identities `(22a)--(22d)` and THM-2763's proved
-one-dimensional support are sufficient here.
+now-proved THM-2771 remains related rather than a dependency; its exact mixed
+support does not change this typing boundary.  The elementary transform
+identities `(22a)--(22d)` and THM-2763's proved one-dimensional support are
+sufficient here.
 
 ## 5. The exact source/target/map invoice
 

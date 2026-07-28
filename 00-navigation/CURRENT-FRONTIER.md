@@ -72,11 +72,11 @@ THM-2788 separates the physical modular odometer by its carry Bockstein;
 mode nonzero, but only on the coefficient quotient.  THM-2792/2802 close
 abstract coefficient transport/origin.  THM-2803 makes thirteen profiles
 projective `13`-arcs; each pair is `[13,2,12]` MDS, excluding
-scalar-translation transport.  THM-2791/2807 give a same-ancestry chord and
-address simplex, still without endpoint allocation.  THM-2797 exhausts fixed
-source-twelve switches.  Next is **RESERVED / UNPROVED
-THM-2806** fixed-sheet allocation plus filtered root/Cech correction.
-Ledger `165`; no row is excluded.
+scalar-translation transport.  THM-2791/2807 give ancestry homotopy.
+THM-2806's literal raw support `(169,13,13,1)` has a flat common point;
+central `D3=144w` is bare-only.  Toggles are scalar/zero-step, the moving
+sheet is separate; common clocks: `1,2,3`.  Next: non-idempotent
+amplitude or filtered root/Cech lift.  Ledger `165`; no row is excluded.
 
 ### Independent routes that remain live
 

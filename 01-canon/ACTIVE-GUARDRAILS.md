@@ -85,7 +85,7 @@
     `12/13` cap for the full slope-seven family.  Carry-forgetting still turns
     thirteen disjoint `Delta^11`s into a false `boundary Delta^12`; do not infer
     pointwise endpoint emptiness or export the cap to another carrier.
-27g. **Coefficient units are not physical allocation.** THM-2791/2807 give address homotopy, not an endpoint origin. THM-2803's biunit/MDS geometry stays coefficient-side: its transport is not scalar/physical, and its pointwise-power separator is not THM-2801's Weyl/SIC mechanism.
+27g. **Fourier co-support is not a raw common atom.** THM-2791/2807 lack allocation. THM-2806's `D3=144w` sums bare-only points; its common point is flat and toggles zero-step. THM-2803 remains coefficient-side. None pays THM-2772's gate.
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211 and
