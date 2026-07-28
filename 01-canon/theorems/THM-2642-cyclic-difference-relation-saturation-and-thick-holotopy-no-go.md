@@ -2,7 +2,7 @@
 id: THM-2642
 title: "Cyclic difference-relation saturation and thick-holotopy no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT.  For a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a
   prime cyclic torsor V=F_p and a directed n-cycle whose ith
   translation-equivariant edge allows the nonempty increment set S_i, the
   number of c-clutched sections is exactly
@@ -33,7 +33,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2642 -- thick relations saturate cyclic clutch classes
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2637 treats a thin local system: every edge is one permutation, so a
 cycle has one holonomy element and a fixed branch constrains its character.
@@ -275,4 +275,14 @@ The dependency-free referee uses explicit optimization-safe guards.  It
 
 The LF-normalized SHA-256 hashes are declared in the frontmatter.
 
-QED (candidate; independent audit pending).
+An independent hostile audit rederived the exact base-sheet factor in (5),
+the iterated Cauchy--Davenport threshold and its one-below hostile, the sharp
+intersection construction in (14), and the complete same/different
+undirected-difference census (17)--(20).  It separately checked the
+thin-versus-thick holotopy interpretation and the load-bearing LRC typing
+boundary: the current eleven-sheet coefficient rows are not common-base
+positive equivariant transitions.  Normal and optimized executions both
+byte-match the stored transcript, and the declared LF-normalized hashes were
+independently reproduced.
+
+QED.
