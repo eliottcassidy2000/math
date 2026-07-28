@@ -124,27 +124,42 @@ def rebuild_matrices():
             "THM-2614 carrier changed")
     matrices = {}
     qlabels = {}
+    raw_content = 0
     for cell, edges in sorted(by_cell.items()):
         qs = tuple(q for q in range(P)
                    if any(unit[j][q] for j, _ in edges))
-        matrix = tuple(
-            tuple(
-                sum(joint[j][q][ell5][r]
-                    for j, _ in edges if unit[j][q]
-                    for ell5 in range(Q7)) // old.GLOBAL_CONTENT
-                for r in ROOTS
-            )
-            for q in qs
-        )
+        rows = []
+        for q in qs:
+            row = []
+            for r in ROOTS:
+                raw = sum(joint[j][q][ell5][r]
+                          for j, _ in edges if unit[j][q]
+                          for ell5 in range(Q7))
+                raw_content = gcd(raw_content, raw)
+                require(raw % old.GLOBAL_CONTENT == 0,
+                        "matrix entry is not divisible by the inherited content")
+                row.append(raw // old.GLOBAL_CONTENT)
+            rows.append(tuple(row))
+        matrix = tuple(rows)
         require(all(all(value > 0 for value in row) for row in matrix),
                 "an active q row lost full nonzero-root support")
         matrices[cell] = matrix
         qlabels[cell] = qs
+    normalized_content = 0
+    for matrix in matrices.values():
+        for row in matrix:
+            for value in row:
+                normalized_content = gcd(normalized_content, value)
+    require(raw_content == old.GLOBAL_CONTENT == 4_244_240,
+            "aggregate raw content changed")
+    require(normalized_content == 1, "normalized matrix atlas is not primitive")
     return matrices, qlabels
 
 
 def main():
     matrices, qlabels = rebuild_matrices()
+
+    print("primitive_content=4244240 normalized_atlas_gcd=1 PASS")
 
     ranks = {}
     nullspaces = {}

@@ -127,7 +127,7 @@ Audited THM-2615 proves physical-diagonal restriction kills the relation lattice
 
 Audited THM-2614 gives dense same-event cosupport but no deck; audited THM-2616's positive cross-time diagonal structurally loses digits `0,12` to its guard.
 Audited THM-2619 cycles seven decks.  Audited THM-2620 restores the endpoint pair and determinant erased by target difference.
-Audited THM-2625 proves the canonical current fills all `28,561` endpoint cells and all `2,016` nondegenerate parabolic sectors.
+Audited THM-2624 gives rank-12 two-clock tomography, but its signed inverse and positive rows forbid descent. THM-2629's unique best graph `r=-q-1` cancels -- rather than repairs -- the missing future/deep sheets. THM-2625's canonical current fills all `28,561` endpoint cells and all `2,016` nondegenerate parabolic sectors.
 
 The target remains a positive chronological whole-head lift preserving one THM-2625 sector through adjacent clocks to a semantic root.
 Marginals and numerical diagonals do not suffice.  No row is removed; `165`.

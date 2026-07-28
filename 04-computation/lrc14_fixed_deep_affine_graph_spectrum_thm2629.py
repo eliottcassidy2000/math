@@ -8,6 +8,7 @@ affine graphs r=alpha*q+beta, and checks the puncture boundary.
 
 from collections import Counter
 from concurrent.futures import ProcessPoolExecutor
+from math import gcd
 
 import lrc14_cross_time_target_future_diagonal_thm2616 as thm
 
@@ -23,6 +24,8 @@ def require(condition, message):
 
 def fixed_r_unit(values, r):
     """Test one fixed-r seven-clock class in F13[z]/(Phi_7)."""
+    require(all(values[ell][r] % thm.GLOBAL_CONTENT == 0 for ell in range(Q7)),
+            "fixed-r slice is not divisible by the inherited global content")
     scalar = pow(r, -1, P)
     y = tuple(
         ((values[ell][r] // thm.GLOBAL_CONTENT) * scalar) % P
@@ -44,6 +47,17 @@ def main():
         metadata.extend(result[4])
         diagonal.extend(result[5])
     require(len(metadata) == len(diagonal) == 162, "rail bank changed")
+
+    diagonal_content = 0
+    for raw in diagonal:
+        for q in range(P):
+            for ell in range(Q7):
+                for r in range(1, P):
+                    value = raw[q][ell][r]
+                    if value:
+                        diagonal_content = gcd(diagonal_content, value)
+    require(diagonal_content == thm.GLOBAL_CONTENT == 26,
+            "fixed-deep bank did not inherit the one global primitive content")
 
     units = [[[False] * P for _ in range(P)] for _ in diagonal]
     rail_hist = Counter()
@@ -214,6 +228,7 @@ def main():
             "an affine bijection avoided the deep zero sheet")
 
     print("THM-2629 exact fixed-deep affine-graph controls")
+    print(f"inherited_diagonal_global_content={diagonal_content} divisibility=PASS")
     print(f"nonzero_labelled_row_deep_support_hist={tuple(sorted(row_support_hist.items()))}")
     print(f"rail_fixed_r_unit_count_hist={tuple(sorted(rail_hist.items()))}")
     print(f"cell_qr_unit_count_hist={tuple(sorted(pair_count_hist.items()))}")

@@ -2,7 +2,7 @@
 id: THM-2624
 title: "Two-clock root tomography and disjoint-carrier holotopy boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For each of THM-2614's 84 base cells, form the globally primitive integer
   matrix whose active target-section rows q record the twelve nonzero
   deep-probe-root weights.  Every one of the 144 mixed C13 characters is
@@ -28,14 +28,14 @@ related:
   - THM-2622-affine-torsor-holonomy-fixed-section-spectrum-and-v4-c13-dictionary
 script: 04-computation/lrc14_two_clock_root_tomography_thm2624.py
 output: 05-knowledge/results/lrc14_two_clock_root_tomography_thm2624.out
-script_sha256: dca5618da2bb7165e9cb84cd8af0583b4ba4c27272c7e6e1035c7c10d0d85a0b
-output_sha256: 64dc998822421647d7d53762eb3568a314a97fc9de869d480ebb390fff07cc76
+script_sha256: 332ab33e78448590003d7ebf6ad5609b3d1d8790ec5880fc9c008b83465d1ac4
+output_sha256: 592672cae123679c36f1b16159d03029030038381d8d07739afca5b29024fbbc
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2624 -- two clocks see every root direction, but do not glue a root
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2614 finds maximal support: in each retained base cell the same-event
 target/deep-probe relation is `Q_(s,ell) x F_13^*`.  Support, however, forgets
@@ -67,7 +67,8 @@ W_c(q,r)
 q in Q_c,                    r in F_13^*={1,...,12}.         (2)
 ```
 
-Here `A` is the exact nonnegative common-`x` numerator rebuilt in THM-2614.
+Here `A_(e,q;ell_5,r):=num(J_(e,q;ell_5,r))` is the exact nonnegative
+common-`x` numerator in THM-2614's pre-route integer normalization.
 Division by `G` is entrywise integral.  The aggregate unit predicate still
 belongs to the whole `(ell_5,r)` slice; equation (2) does not assign it to a
 hidden Perron sheet.
@@ -130,7 +131,7 @@ has primitive height one and the large class height `15,630,671,068`.
 Fix `s` and stack two clock matrices vertically:
 
 ```text
-W_(s;ell,ell') = W_(s,ell) direct-sum W_(s,ell').          (8)
+W_(s;ell,ell') = [ W_(s,ell) ; W_(s,ell') ].               (8)
 ```
 
 For every `s in F_13^*`, at least one pair `{ell,ell'}` has exact rational
@@ -240,7 +241,7 @@ positive root transition on the present carrier.
 ## 5. Why disjoint clock charts do not form descent data
 
 The clock label `ell_4` in THM-2614 selects disjoint owner-clock strata of the
-physical base.  The direct sum in (8) therefore has no common physical overlap
+physical base.  The vertical stack in (8) therefore has no common physical overlap
 on which to compare two root origins.  It proves injectivity of the formal map
 
 ```text
@@ -287,9 +288,9 @@ Such a split is a genuine cospan *inside that fixed clock chart*.  It does not
 create an overlap between distinct `ell` strata in (8), so (21) alone cannot
 turn the signed two-clock inverse into affine descent data.
 
-The positive-inverse criterion (17) gives the exact second gate.  If the
-refined sector rows still have support on at least two root columns, then they
-are not private and no nonnegative left inverse follows.  If a refinement
+The positive-inverse criterion (17) gives the exact second gate.  If **every
+nonzero** refined sector row still has support on at least two root columns,
+then no row is private and no nonnegative left inverse follows.  If a refinement
 does create one private physical row for every root column, it repairs the
 positive-tomography obstruction, but a chronological overlap/cocycle is still
 needed to identify the root origins of two disjoint clocks.
@@ -323,7 +324,7 @@ python -O 04-computation/lrc14_two_clock_root_tomography_thm2624.py
 The companion rebuilds THM-2614's complete exact bank, divides only by its one
 global primitive content, checks all `12,096` mixed characters by exact
 cyclotomic reduction, and uses `Fraction` row reduction for every rank,
-kernel, two-clock edge, and consecutive window.  It checks every logical
+kernel, two-clock edge, and consecutive window.  It checks every numerical
 claim with explicit optimized-mode guards.  Normal and optimized executions
 must byte-match the stored transcript after LF normalization.
 
@@ -333,4 +334,9 @@ root across clocks, build a principal `C_13` action, identify THM-2613's local
 root with THM-2585's next target, preserve semantic owner/repair provenance,
 exclude a scalar profile, or prove LRC(14).
 
-QED (candidate; independent hostile audit pending).
+THM-2625 is transverse rather than a repair: its target difference and right
+endpoint are vectors in `F_13^2`, whereas this theorem's `q,r` are scalar
+target-section and deep-root labels.  Signed cyclotomic sector support does
+not provide a common clock root vector or a nonnegative left inverse.
+
+QED.

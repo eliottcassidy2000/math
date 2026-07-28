@@ -14,7 +14,7 @@ status: >
   the structurally missing deep sheet r=0.  It therefore exposes the exact
   completion boundary: filling the future C13 carrier without also filling
   deep r=0 cannot yield any full affine bijection.  This is a coefficient-
-  level fixed-label atlas; rail choices vary by cell and no chronological,
+  level fixed-label atlas; rail choices may vary with `(cell,q,r)` and no chronological,
   semantic, or ordered transition gluing is proved.
 source: kind-pasteur-2026-07-28-fixed-deep-affine-graph
 depends_on:
@@ -26,8 +26,8 @@ related:
   - THM-2624-two-clock-root-tomography-and-disjoint-carrier-holotopy-boundary
 script: 04-computation/lrc14_fixed_deep_affine_graph_spectrum_thm2629.py
 output: 05-knowledge/results/lrc14_fixed_deep_affine_graph_spectrum_thm2629.out
-script_sha256: 6dd02116b5847ee9c8c8a76bdff6f4231bde9f5c19e60f34952faed783c8c28e
-output_sha256: 1366cbfe04c4e2a88bb68eb4ff100c08868bdb14144a93d5e4fb4c66487a34c2
+script_sha256: cf12349110dd5b274bd1fa28bcc192d5d7da580632a6e14de69f0ed58e279fa9
+output_sha256: cbef9332c6af8be70a75b4773a4ff3ec991b0955b88c2dde3c910e7ca4f7dcf5
 hash_basis: LF-normalized bytes
 ---
 
@@ -250,17 +250,19 @@ Every branch is exact integer or finite-field arithmetic; no floating point
 or random fixture is used.  Normal and optimized runs are required to
 byte-match the stored transcript.
 
-An independent hostile audit rebuilt the fixed-`r` classes on the same
-global `/26` primitive lattice, replayed normal and optimized modes against
-the stored output, re-exhausted all `169` affine maps, and checked the six
-exceptional cells and both puncture identities.  It also verified the
-load-bearing scope: `r` is a translated-probe coefficient label and the
-realizing rail may vary with the base cell, so the opposite affine action is
-not being asserted as physical chronology.
+Independent hostile audits rebuilt the fixed-`r` classes on the same global
+`/26` primitive lattice, replayed normal and optimized modes against the
+stored output, re-exhausted all `169` affine maps, and checked the six
+exceptional cells and both puncture identities.  They also enforced two
+load-bearing repairs: every fixed-`r` division is guarded by entrywise
+divisibility by the inherited global content `26`, and the realizing rail may
+vary separately with `(cell,q,r)`, not merely with the base cell.  Thus `r`
+remains a translated-probe coefficient label and the opposite affine action
+is not asserted as physical chronology.
 
 The result selects a labelled deep-probe index inside a coefficient tensor.
-The realizing rail may vary from cell to cell, and the seven-clock unit is an
-aggregate over `ell`.  No common chronological stalk, outgoing-root equals
+The realizing rail may vary separately with `(cell,q,r)`, and the seven-clock
+unit is an aggregate over `ell`.  No common chronological stalk, outgoing-root equals
 incoming-root identity, positive ordered seven-edge path, semantic owner,
 relation residue, or endpoint current follows.  It removes no scalar row and
 does not prove LRC(14).  QED.
