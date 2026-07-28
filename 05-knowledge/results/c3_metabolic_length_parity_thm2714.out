@@ -1,0 +1,13 @@
+THM-2714 C3 METABOLIC-LENGTH PARITY AUDIT
+coefficient_ring=Z_2[omega] residue_field=F4
+invariant_factor_profiles_checked=3002
+even_length_profiles=1518 odd_length_profiles=1484
+two_elementary_metabolic_nullity=EVEN minimum_carrier_nullity=2
+unique_plane_allowed_exponents=2,4,6,8_in_bounded_box
+cyclic_r1_exponent2_Horder4_secondary=NONLIFTABLE
+cyclic_r2_exponent4_Horder16_secondary=LIFTABLE
+cyclic_r3_exponent6_Horder64_secondary=LIFTABLE
+elementary_W2_diagonal_metabolizer=YES
+d4_single_W_length1_metabolizer=NO
+boundary_realization_and_reflection_not_tested
+PASS
