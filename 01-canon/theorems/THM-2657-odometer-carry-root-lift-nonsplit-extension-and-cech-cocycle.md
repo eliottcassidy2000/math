@@ -2,7 +2,7 @@
 id: THM-2657
 title: "Odometer carry/root lift, nonsplit extension, and Cech cocycle"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Every circle translation which globally lifts a nonzero THM-2640
   predecessor-carry/root increment delta has the form tau=k/13^6 with
   k=7 delta mod 13.  Every such k is a thirteenth-unit, so tau has order
@@ -28,7 +28,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2657 -- the physical slope-seven clutch is a nonsplit odometer
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2640 finds the unique formal clutch slope `c->c+7 delta` compatible with
 `r->r+delta`, and exhibits the smallest physical translation realizing it
@@ -236,4 +236,12 @@ The companion exhausts all `13^6` grid translations, checks every carry/root
 congruence and lift fibre, verifies the `p`-torsion nonsplitting boundary,
 enumerates all `169` cocycle pairs, and rechecks `(17)` on `(18)`.
 
-QED (candidate; independent hostile audit pending).
+An independent hostile audit rederived the lift classification, the order
+calculation, the location of the `13`-torsion subgroup, and the cocycle class
+without using the companion.  Normal and optimized executions then
+byte-matched the declared output, and both declared SHA-256 hashes matched
+the LF-normalized artifacts.  The audit also checked the scope boundary:
+this excludes a physical translation action only, not a positive overlap
+relation or an adjacent-clock signed determinant.
+
+QED.

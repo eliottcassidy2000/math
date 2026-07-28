@@ -128,7 +128,8 @@ identify the whole head (MISTAKE-300).  THM-2620/2625 restore the endpoint
 determinant and fill all endpoint/parabolic cells; THM-2634 keeps separate
 digits `(c_L,c_R)` but still needs a pair twist and physical transverse
 section.  THM-2640 makes every predecessor-carry root private but its target
-clutch is unsupported.  THM-2642 then saturates every eleven-sheet support, while THM-2645
+clutch is unsupported; audited THM-2657 proves its physical translation
+extension nonsplit, with odometer cocycle class `7`.  THM-2642 then saturates every eleven-sheet support, while THM-2645
 retains all charged colours in exact multiplicity.  Audited THM-2647 proves
 one absolute endpoint two-set uniquely deconvolves the other with unavoidable
 signed norm `13/2`; repaired THM-2648 supplies two minimal rainbow charts
