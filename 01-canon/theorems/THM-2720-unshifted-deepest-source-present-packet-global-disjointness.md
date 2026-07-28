@@ -2,8 +2,8 @@
 id: THM-2720
 title: "Unshifted deepest-source and canonical present-packet global disjointness"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-  REQUESTED.  On the canonical typed row, every source-one present packet
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the canonical
+  typed row, every source-one present packet
   F_(ell,s) contains the unshifted c3-safe factor, while the exclusive
   deepest source E3 contains the complementary unshifted c3-danger factor.
   Hence E3 intersect F_(ell,s) is empty for every one of the 7*13 labels,
@@ -23,12 +23,12 @@ output: 05-knowledge/results/lrc14_unshifted_deepest_source_present_wall_thm2720
 script_sha256: b8e7619f2ca56759794b90794e936935c0f41012206cfeacf3f869e25ed3c0db
 output_sha256: fd3b7f8d47efbe0faa43cb8db168eccb2d4ed7671b667593faee5a3020123456
 hash_basis: working-tree bytes (LF)
+audit: thm2705-2709-audit-2026-07-28 (independent proof audit; endpoint hostile check; independent 91-cell reconstruction; normal/-O/hash/docs replay)
 ---
 
 # THM-2720 -- the canonical present grammar cannot host a deepest-owner source
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The full half/`C_221` census found positive scalar `E_3` cospans but no
 attachment to a canonical present packet.  The reason is not a rare phase or
@@ -159,10 +159,16 @@ Both executions byte-match
 05-knowledge/results/lrc14_unshifted_deepest_source_present_wall_thm2720.out
 ```
 
-The dependency-free interval logic uses no truth-bearing Python `assert`.
-It pins the audited canonical present-packet implementation by SHA-256,
+The exact interval logic uses no truth-bearing Python `assert`.  It pins the
+audited canonical present-packet implementation by SHA-256,
 reconstructs `E3`, checks the exact danger/safe partition, factors all
 packets before and after the final `c3`-safe cut, and supplies the deletion
 controls `(8)--(9)`.
 
-Promotion awaits an independent hostile audit.
+An independent hostile audit rederived the pointwise inclusion
+`E3 subset D_c3(0)` and the literal carrier factor
+`F_(ell,s) subset G_c3(0)`, checked that both half-open and strict-open
+endpoint conventions leave the disjointness unchanged, and independently
+rebuilt all `91` labelled cells.  It reproduced the exact `78/91` deletion
+control and its mass range, matched all declared hashes, and replayed the
+normal, optimized, stored-output, and documentation checks.
