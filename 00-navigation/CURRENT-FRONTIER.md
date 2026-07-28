@@ -46,12 +46,10 @@ THM-2744 `7/13^6` clutch preserves raw private units, and THM-2749 inserts the
 full `E3 -> D^6 -> Q_(3,{1,2})` fork with both endpoint masks.  Its frozen,
 coindexed, one-sided and clock-blind sections are distinct.
 
-MISTAKE-313 restores physical clock `e=1`.  **PROVED THM-2751** now shows a
-terminally empty left coefficient and right coefficient `GQ`: the shape `Q`
-is rational/localized and mod-`91` invertible, but raw `GQ` is zero mod `91`
-and `G/26` is only an `F_13` unit.  Its all-label direct-target and terminal
-checks give no physical wing map.  The lawful one-sided endpoint bank has
-gain `11`; the older rank-three table is clock-blind.
+MISTAKE-313 restores clock `e=1`.  THM-2751 has empty left coefficient and
+right `GQ`, with `Q` mod-`91` invertible but raw `GQ=0 mod91` and `G/26` only
+an `F_13` unit.  No physical wing map follows; the one-sided bank has gain
+`11`, while the older rank-three table is clock-blind.
 
 THM-2754's two-clock carrier has `B_(e,j)=a_e 1_(j!=0)` on all `3969` cells.
 Its `7 x 7` unit-pair chamber has four multipliers, gains
@@ -72,8 +70,10 @@ projective `13`-arcs; each pair is `[13,2,12]` MDS, excluding
 scalar-translation transport.  THM-2791/2807 give ancestry homotopy.
 THM-2806's literal raw support `(169,13,13,1)` has a flat common point;
 central `D3=144w` is bare-only.  Toggles are scalar/zero-step, the moving
-sheet is separate; common clocks: `1,2,3`.  Next: non-idempotent
-amplitude or filtered root/Cech lift.  Ledger `165`; no row is excluded.
+sheet is separate; common clocks: `1,2,3`.  THM-2813 makes the thirteen
+address lifts one normal transvection and conditionally decodes `169` flags,
+but Rees `D3` is not its jet.  Next: an off-sheet common atom and boundary
+map.  Ledger `165`; no row is excluded.
 
 ### Independent routes that remain live
 
