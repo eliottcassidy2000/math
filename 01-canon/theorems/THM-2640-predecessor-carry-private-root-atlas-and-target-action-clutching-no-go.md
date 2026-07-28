@@ -2,7 +2,7 @@
 id: THM-2640
 title: "Predecessor-carry private-root atlas and target-action clutching no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Refine THM-2623 before delayed integration by the physical predecessor
   carry c=floor(13^6 x) mod 13 and retain the future half-digit
   kappa.  If d=2h+kappa, b=floor(d/13), and epsilon is one on the left
@@ -37,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2640 -- the missing carry creates private roots, not their transition
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2623 closes the delayed guard support puncture and repairs four nonlinear
 unit holes, but every row refined only by the future half-digit still carries
@@ -466,4 +466,21 @@ and both executions must byte-match
 05-knowledge/results/lrc14_predecessor_carry_private_root_atlas_thm2640.out.
 ```
 
-QED (candidate; independent hostile audit pending).
+An independent hostile audit replayed both normal and optimized executions,
+reproducing all `1,415,232` carry partitions, all `18,398,016` off-graph
+singleton checks, the complete root/digit-edge censuses, and the stored
+transcript byte for byte.  It independently rederived `(3)`, `(9)`, `(13)`,
+the consecutive-digit identity `(24)`, the `Phi_13` argument in `(20c)`, and
+the slope-seven physical near miss `(23a)`--`(23c)`.  In particular, it
+checked on the canonical speed tuple
+
+```text
+(1,14,27,40,53,66,13,13^3,2*13^5)
+```
+
+that `v(7 delta/R)` lies on the `1/13` phase grid exactly when `13^5|v`,
+so only `c3` survives.  The LF-normalized script/output hashes were reproduced
+as `a28b03a5...e71abf` and `b3c1f510...9a940`.  No theorem or scope defect was
+found.
+
+QED.
