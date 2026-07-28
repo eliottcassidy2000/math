@@ -32,7 +32,7 @@ related:
   - THM-2727-fixed-rail-target-deck-frobenius-realization-no-go
 script: 04-computation/lrc14_root_zero_overlap_clutch_20260728.py
 output: 05-knowledge/results/lrc14_root_zero_overlap_clutch_20260728.out
-script_sha256: e27981478cd30c8e3cceada128049b145b254410c8d0b6d525a8a1830545d55f
+script_sha256: e10fa7c9a5a238461ef422ea314dc334f7e65ec1787cf65d4e4bea12b96aefb8
 output_sha256: ba9d0a67dfede0b64cf97ff55af7e86c9bb46c962c669d33015df7e574e8e91e
 secondary_script: 04-computation/lrc14_relative_present_semantic_lift_probe_20260728.py
 secondary_output: 05-knowledge/results/lrc14_relative_present_semantic_lift_probe_20260728.out
@@ -327,6 +327,11 @@ contains truth-bearing `assert` nodes.  The overlap companion pins all six
 direct dependencies before reconstructing the thirteen chart overlaps,
 fourteen rail vectors, strict witness, target labels, cylinder margins,
 determinants, and hostile controls.
+
+MISTAKE-312 records the cross-platform evidence repair: those six dependency
+pins declare LF images and are now checked after CRLF-to-LF normalization.
+The repair changes no transcript value or mathematical conclusion; normal and
+optimized Windows replays again match the stored output byte-for-byte.
 
 The independent audit began by trying to prove the former zero-root no-go and
 found the open overlap `(8)` instead.  It independently reconstructed the
