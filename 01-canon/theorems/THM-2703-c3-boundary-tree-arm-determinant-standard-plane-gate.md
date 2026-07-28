@@ -2,8 +2,8 @@
 id: THM-2703
 title: "C3 boundary-tree arm determinant and standard-plane gate"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Let a finite weighted tree carry an order-three automorphism and
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let a finite
+  weighted tree carry an order-three automorphism and
   let M be its nonsingular invariant symmetric integral tree matrix.  The
   fixed vertices form a subtree and every complementary component occurs in
   a free triple.  If C runs through representatives of those triples, then
@@ -36,8 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2703 -- C3 boundary-tree arm determinant and standard-plane gate
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The quartic gate in THM-2655 is a two-dimensional `F2` representation on
 which `C3` cycles the three nonzero vectors.  This theorem locates that plane
@@ -413,3 +412,11 @@ cheapest decisive next test:
 
 That test is strictly sharper than comparing discriminant polynomials: it
 asks whether the boundary can physically carry the `V4` character plane.
+
+An independent hostile audit rederived the fixed-subtree/free-triple
+decomposition, the exact standard-block identity, the discriminant-group and
+Picard-lattice steps, continuant parity, both sharp controls, and every scope
+boundary.  Normal and optimized runs byte-match the stored transcript, the LF
+hashes match, and the companion contains no optimized-away assertions.
+
+QED.

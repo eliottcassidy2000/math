@@ -15,8 +15,8 @@
   diagonal `(1,1,2,2)` with triality is the sharp hostile.  Hashes:
   `9b772fcb` / `c3ce859e`.
 - `c3_boundary_tree_arm_determinant_thm2703.py` -> matching `.out`
-  [THM-2703 PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT].  For a nonsingular integral `C3`-invariant weighted tree,
+  [THM-2703 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  For a
+  nonsingular integral `C3`-invariant weighted tree,
   the standard-plane multiplicity in its two-torsion discriminant module is
   exactly the sum of the mod-two nullities of one representative from every
   moving-arm triple.  A plumbing chain passes precisely when its continuant

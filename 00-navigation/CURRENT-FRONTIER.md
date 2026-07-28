@@ -320,6 +320,9 @@ Classify profiles under support operations; study analytic continuation and auto
   `rs=g(x)`: its full Kummer module is zero or one trivial line, never the
   required standard plane.  `D4` triality is the sharp hostile, so the live
   general gate is the action on boundary classes, not their scalar count.
+  THM-2703 makes that gate exact for `C3`-invariant boundary trees: the
+  standard-plane multiplicity is the sum of moving-arm mod-two nullities, so
+  one even continuant is necessary; units and non-tree gluing remain open.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
