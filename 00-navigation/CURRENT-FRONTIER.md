@@ -7,9 +7,10 @@ Status: **PROVED** in-repo proof; **CITED** scoped import; **FINITE-EXACT** exha
 
 ### Headline
 
-**OPEN.** The standard reduction has 13 distinct nonzero relative speeds (14 total runners); external work settles at most 13 total runners. The residual is neither a routine finite run nor a uniform small-period lemma.
+**OPEN.** The standard reduction has 13 nonzero relative speeds; known work
+settles at most 13 total runners.  The residue is not a routine finite scan.
 
-The current proof graph is:
+Proof graph:
 
 ```text
 counterexample
@@ -24,8 +25,9 @@ counterexample
             -> clock, pair-sum, Fejer, Euler, or rank discharge [OPEN]
 ```
 
-The rank-eleven residual is a finite but enormous labelled intersection, not merely a plane or quadratic form; rank twelve is a separate undecided finite box.
-Its indispensable coordinates are primitive parameter, integral columns, transverse deck/bad modulus, signed-hull owner cone, pair-sum clock, and phase/endpoint sidecar. Gate failure means **uncertified**, not unsafe. The reusable architecture is `seed + selector + preserver + pointwise exit`.
+Rank eleven is a huge labelled intersection and rank twelve a separate box;
+both retain deck, owner, clock, phase, and endpoint.  Gate failure means
+**uncertified**, not unsafe.
 
 ### Proved reductions and terminals
 
@@ -36,23 +38,18 @@ Its indispensable coordinates are primitive parameter, integral columns, transve
   gives a support-3..5 relation of height `2^20` or positive safe measure;
   THM-965 supplies the sharp pair floor and THM-2074 the density-one finite
   ledger.  Its descent/AP boundary remains open.
-- **PROVED rank descent and explicit residual atlas:** THM-2052 forces eleven
-  sparse relations, hence a rank-twelve box or finite two-anchor
-  star. THM-2053--2059 retain deck/Farey/CRT sidecars; THM-2060--2080 reduce the
-  dyadic tower to depth four (MISTAKE-238). THM-2081 closes the small pairs;
-  THM-2082 and THM-2083, then THM-2085/2087 (including THM-2085), retain/cut
-  the next ledger; THM-2086, THM-2088,
-  THM-2089, THM-2090, THM-2092, and later results close the named modular,
-  persistence, splice, terminal, and blocker lanes.
-  THM-2139/2141 leave four fivefold profiles; THM-2148/2168 reduce the last to
-  scalar `5+3`.  THM-2121 still needs Toeplitz/Fejer and phase sidecars.
+- **PROVED rank descent and residual atlas:** THM-2052 forces a rank-twelve
+  box or rank-eleven two-anchor star; THM-2053--2059 retain deck/Farey/CRT
+  sidecars.  Later route nodes are THM-2081, THM-2082, THM-2083,
+  THM-2085/2087 (including THM-2085), THM-2086, THM-2088, THM-2089,
+  THM-2090, and THM-2092.  THM-2148/2168 reduce the last profile to scalar
+  `5+3`; THM-2121 still needs Toeplitz/Fejer and phase.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
-  lifts bounded scalar relations; `H=2^19` clears recorded margins.
-  MISTAKE-080/082 still require shape-specific torus models.
-- **Scope separation:** THM-1149 separates tight deletion from all-loose crown.
-- **Local-comb ceiling:** THM-1252 through THM-1274 close or sharply saturate
-  local six-comb arguments. The live residue is global endpoint/child transport
-  or a phase-located turn tax, not another unlocated local charge.
+  lifts bounded scalar relations; `H=2^19` clears recorded margins, but
+  MISTAKE-080/082 still require shape-specific tori.
+- **Local-comb ceiling:** THM-1252--1274 saturate six-comb arguments; pursue
+  endpoint/child transport or a phase-located turn tax.  THM-1149 separates
+  tight deletion from the all-loose crown.
 ### Exact live obligation
 
 Rank-twelve boxes/rank-eleven stars remain open (HYP-8871).  Exactly `165` rows
@@ -78,51 +75,29 @@ load-bearing.  THM-2635's half-edge has global content `26` and units at
 `h=3,8,10`; its clock-two addendum kills `h=3` but retains an `h=10` endpoint.
 The graph and second semantic root remain untransported.
 
-THM-2615/2618 refute Radon/free-orbit head recovery (MISTAKE-300), while
-THM-2620/2625 restore the endpoint determinant and THM-2634 retains two carries
-without a transverse section.  THM-2640 makes predecessor-carry roots private;
-THM-2657 identifies their nonsplit `C_(13^6)` odometer and cocycle `7`.
-THM-2642/2645 give thick hulls and all colours; THM-2647/2648 give signed
-two-set deconvolution and two rainbows.  THM-2656 isolates the forced midpoint
-cost, and THM-2670 shows formal Hamilton cycles do not glue physical clocks.
+THM-2615/2618 refute Radon/free-orbit recovery (MISTAKE-300); THM-2620/2625
+restore the determinant and THM-2634 retains two carries without a transverse
+section.  THM-2640 makes carry roots private and THM-2657 their nonsplit
+`C_(13^6)` odometer/class `7`.  THM-2642--2656 give hull, colour,
+deconvolution, rainbow, and midpoint sidecars; THM-2670 says formal Hamilton
+cycles do not glue physical clocks.
 
-THM-2658 equates positive component overlap with a triangle-balanced
-integer-gain section.  THM-2672 finds `534` positive fixed `Delta^11` faces;
-carry-forgetting makes a coarse `boundary Delta^12`, while carry retention
-gives thirteen disjoint `Delta^11`s and cocycle `7`.  THM-2687 closes arbitrary
-labelwise switching even after unioning all rail/base/present/clock/sector/edge
-choices: each open future cell sees at most `12/13` carries.  Hence the full
-THM-2640 slope-seven family has dimension `11`; other carriers remain open.
-THM-2688 identifies the associated quotient loss exactly: the carry
-normalization is thirteen disjoint `Delta^11`s, its vertical image is
-`boundary Delta^12`, its diagonal quotient is one `Delta^11`, and the free
-label quotient is `L^11(13;1,...,6)`.  Its coefficient Bockstein is the same
-nonzero odometer class `7`, so none of these coarse spaces supplies physical
-cyclic gluing.
+THM-2658 makes overlap a balanced integer-gain section.  THM-2672 finds `534`
+positive fixed `Delta^11` faces; THM-2687 caps their full configuration union
+at `12/13`, so the slope-seven family has dimension `11`.  THM-2688 separates
+the thirteen-simplex normalization, `boundary Delta^12` vertical image,
+`Delta^11` diagonal quotient, and lens quotient `L^11(13;1,...,6)`.  Its
+Bockstein is the same nonzero odometer class `7`, not physical gluing.
 
-THM-2680's `D(x)={13x}` cospan has `25,344` positive legs but no path-lifting
-sector quotient.  THM-2682/2684 kill every third event on the full three-tooth
-bank; reflected `rho o D` only swaps endpoint teeth.  Change carrier, handoff,
-boundary, or edge grammar rather than decorating empty support.  THM-2689
-classifies the affine escape exactly: for either sign, every shift except
-`beta=0,1/2` restores positive intrinsic three-event support.  In particular
-all `4,455,516` nontrivial THM-2657 odometer lifts escape the support zero, but
-none globally permutes the seven clock labels; global covariance selects only
-the root-trivial order-thirteen kernel `beta=j/13`.  Thus the next object is a
-phase-local present/word/unit fibre, not another unshifted support selector.
-THM-2691 follows the canonical `+/-(13^5+1)` central cycle: its selected
-rail/clock cylinders are positive for every finite horizon, but the fully
-dynamically typed current-present product is positive only through `H=5` and
-empty at `H=6`.  This closes that cycle, not other lifts/components or the
-positive mixed `D`/slope face.  THM-2693 then separates the odometer base from
-its fibre.  The nearby `+/-(13^5+2)` lift has a strict fully labelled
-three-event packet, but every integer lift induces the same delayed map
-`y->{13y}`.  The union of both inherited guard sectors is positive through
-three states and empty at four, uniformly over all lift sequences and clock
-words.  Analytically, three `D_(13^3)` target teeth contract the phase by
-`13^2`, so the fourth-state speed-14 safety is impossible.  Hence another
-integer lift cannot repair this delayed grammar; change the delayed word,
-base dynamics, or heterogeneous edge carrier.  Ledger `165`.
+THM-2680 has `25,344` positive `D(x)={13x}` legs but no path-lifting quotient;
+THM-2682/2684 kill every third event, including reflection.  THM-2689 proves
+every affine shift except `0,1/2` restores intrinsic support, yet no nontrivial
+odometer lift globally moves the seven clocks.  THM-2691's canonical central
+cycle keeps rail/clock support forever but its dynamic present product dies at
+`H=6`.  THM-2693's nearby lift has a fully labelled three-event packet, while
+the common delayed base map `y->{13y}` makes every lift/clock word empty at
+four events.  Change delayed grammar, base dynamics, or heterogeneous edge;
+the mixed `D`/slope face remains positive.  Ledger `165`.
 
 ### Independent routes that remain live
 
