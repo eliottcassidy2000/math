@@ -2,8 +2,8 @@
 id: THM-2711
 title: "C3-stable discriminant metabolizer and mod-four isotropy gate"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  A full-rank integral lattice L inside a unimodular lattice P
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A full-rank
+  integral lattice L inside a unimodular lattice P
   determines the stable metabolizer H=P/L in the discriminant group
   A_L=L*/L, and every stable metabolizer arises from a stable unimodular
   overlattice.  For Gram matrix M, A_L[2] is ker(M mod 2), but its
@@ -12,11 +12,13 @@ status: >
   on a full-rank independent rational-surface boundary must be a totally
   isotropic standard plane contained in a C3-stable metabolizer.  D4
   triality has the required standard plane but its pairing is symplectic,
-  so it cannot occur in such a completion.  A doubled pair of -2 triples
+  so D4 cannot be the entire full-rank boundary lattice in this completion
+  scope.  A doubled pair of -2 triples
   gives a sharp stable-metabolizer control and the unimodular overlattice
   I_(1,6).  Geometric realization, reflection completion, non-full-rank
   boundaries, and general A4/S4/JC2/DC2 conclusions remain open.
 source: a4-resolvent-next-gate-scout-2026-07-28
+audit: root-2026-07-28 (independent proof audit; normal/-O/stored/hash/docs replay)
 depends_on:
   - THM-2655-quartic-keller-resolvent-v4-quasietale-torsor-and-kummer-class-group-gate
 related:
@@ -34,8 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2711 -- C3-stable discriminant metabolizer and mod-four isotropy gate
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2708 detects the quartic standard plane in the two-torsion of a
 boundary discriminant group.  That is necessary, but it is not yet the
@@ -467,4 +468,4 @@ The key lesson is therefore not merely that two and three coexist.  The
 `C3` action finds the `F2^2` standard packet, while the next two-adic digit
 decides whether that packet can inhabit a unimodular surface boundary.
 
-QED (candidate; independent hostile audit pending).
+QED.
