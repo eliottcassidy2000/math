@@ -2,7 +2,7 @@
 id: THM-2656
 title: "Endpoint-anchored rainbow selector moduli and reflection fixed-edge tax"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT.  Once one
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Once one
   absolute endpoint two-set is supplied, THM-2647 reconstructs the other and
   the THM-2648 rainbow selectors split into genuinely different moduli.  An
   orientation-independent atlas of two individually reflection-equivariant
@@ -31,7 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2656 -- the midpoint is a symmetry tax, not an overlap invariant
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2648 produced two rainbow charts from a saturated eleven-by-eleven
 relation, but its repaired one/eight-edge overlap census belongs to the
@@ -250,4 +250,15 @@ bank, both edge-union counts, all `146,016` charged-character guards, and both
 copies of (16)--(17).  Normal and optimized runs must byte-match the stored
 transcript and end in `PASS`.
 
-QED (candidate; independent audit pending).
+An independent hostile audit rederived the midpoint fixed-edge tax, checked
+the descent through all four temporary endpoint orientations, verified the
+matched-wall identities and unique midpoint overlap, and replayed all twelve
+edge-disjoint template rows.  It reproduced the `21/22` edge unions, all
+charged modes, energy `36/169`, normal/optimized transcript, and declared LF
+hashes.  The audit required two truth-surface repairs before promotion:
+THM-2648's current selected-atlas overlap is one/eight rather than the old
+one/three display, and the `1,014` nonlinear count in (13) is the number
+selected by this symmetric atlas rather than the ambient nonlinear universe.
+Both are repaired above.
+
+QED.

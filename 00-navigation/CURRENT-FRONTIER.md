@@ -136,7 +136,7 @@ THM-2648 gives two minimal rainbow charts covering all carries.  Its matched
 wall has an affine-anchored ternary six-cycle with fourteen union edges and a
 local `C3 semidirect C2=S3` frame; unrestricted nonlinear charts attain the
 sharp thirteen-edge union by a binary four-cycle (MISTAKE-302/303).  THM-2656
-separates selector moduli: an equivariant atlas pays a forced midpoint, while
+separates selector moduli: an audited equivariant atlas pays a forced midpoint, while
 an edge-disjoint bank exists after dropping individual reflection symmetry.
 
 Audited THM-2670 retains the predecessor state before integration.  Its
