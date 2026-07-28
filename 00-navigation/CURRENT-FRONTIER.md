@@ -366,9 +366,15 @@ Classify profiles under support operations; study analytic continuation and auto
   support-four chart, and THM-2692 the full-support BCDEW chart by order-twelve
   root/pair-field emptiness.  Hence the inherited polynomial exact-square-prefix
   genuine nonsplit degree-twenty-two branch is empty.  Split/even edges and
-  integral `2`-adic raising remain; THM-2206 blocks field-valued `C_2` Hasse
-  repair.  THM-2446's six-bracket cone shortcut is refuted.  `JC(2)` and
-  `DC(2)` remain open.
+  integral `2`-adic raising remain.  An exact split **even-Faber subchart**
+  scout with nonzero
+  first-flux constant `lambda` gives a degree-23 curve whose `t=0`
+  normalization word is `4^5,1^3`; however its physical fourth root is
+  already rational, so THM-2636's Kummer genus gate is neutralized.  This
+  scout omits the eleven a priori split odd seeds `E1,E3,...,E21`; the full
+  frontier is `lambda + odd bank`, not the prime-23 curve alone.  THM-2206
+  blocks field-valued `C_2` Hasse repair.  THM-2446's six-bracket cone shortcut
+  is refuted.  `JC(2)` and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

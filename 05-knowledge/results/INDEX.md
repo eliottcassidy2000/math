@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `jc2_degree22_split_lambda_prime23_scout.py` -> matching `.out`
+  [VERIFIED-EXACT STRUCTURAL SCOUT; SPLIT EVEN-FABER SUBCHART ONLY].  On the
+  chosen split sheet the retained first-flux constant gives
+  `q*N1=-7496192*lambda`, `N2=0`; after the two sign quotients and weighted
+  scaling this is the prime-23 curve
+  `f2=0`, `zeta*f1^4=eta*t^23`.  Its exact `t=0` normalization word is
+  `4^5,1^3`, from the coprime squarefree factors `L5` and
+  `(121v-1)(14641v^2-1694v+1)`.  The physical fourth root is globally
+  rational, `q=-7496192*lambda*t^5/(rho^5*f1)`, so the old Kummer genus gate
+  is neutralized.  All eleven odd Faber seeds `E1,E3,...,E21` were set to
+  zero; the scout is neither the full split branch nor `JC(2)`.  Hashes begin
+  `1bbadb90` / `2c22072a`.
 - `jc2_degree22_full_support_order12_toric_hensel.py` -> matching `.out`
   [THM-2692 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
   order-eleven terminal equations descend through the lossless simultaneous-

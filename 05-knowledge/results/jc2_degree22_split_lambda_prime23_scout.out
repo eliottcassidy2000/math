@@ -1,0 +1,33 @@
+degree-22 split even-Faber first-flux lambda / prime-23 scout
+base_thm2411_sha256=7d14a16aab791db2da9dc2749117db6bdfe539096fe8d7670a9c852d44d956e3
+faber_degrees=2,6,10,14,18,22
+first_flux_exact=Phi_Q=q*(-N1/7496192)
+second_flux_exact=Psi_Q-Psi0=N2/1319329792
+chosen_split_sheet=q*N1=-7496192*lambda
+q_sign_quotient=T*N1^2=7496192^2*lambda^2
+T_sign_quotient=Z*N1^4=7496192^4*lambda^4
+lambda_zero_with_q_unit=N1=0:recovers_THM2692_flux_fibre
+scaled_split_system=f2=0;zeta*f1^4=eta*t^23
+eta=7496192^4*lambda^4/rho^23:nonzero_on_split_lambda_branch
+chosen_sheet_q=-7496192*lambda*t^5/(rho^5*f1):rational_on_curve
+global_fourth_root=q^4=rho^3*zeta/t^3:Kummer_extension_trivial
+scaled_f1_digest=54017f31462ad7f31a9d57df87ee64a40e6f6d9b70f5daf755faf327f19a5e94
+scaled_f2_digest=9aecbd917adeb542cc145e9e14c96446f89eb223874e4afbb561ec086cdff127
+fixed_new_G3=(121v-1)(14641v^2-1694v+1)
+fixed_new_roots=1/121,(7+4sqrt(3))/121,(7-4sqrt(3))/121
+fixed_old_L5_degree=5:squarefree=True
+fixed_G3_degree=3:squarefree=True:coprime_to_L5=True
+fixed_split_eliminant=G3*L5^4:degree=23
+old_local_controls=zeta_unit=True:intersection_transverse=True
+new_local_controls=f1_unit=True:v_transverse=True
+normalization_t_orders=4,4,4,4,4,1,1,1
+t_zero_divisor_degree=5*4+3*1=23
+physical_Z_orders_at_t0=old:-12,new:20:both_divisible_by_4
+q_orders_at_t0=old:-3,new:5
+augmentation_law=Delta^j=(-2)^(j-1)Delta:j=1..8_checked
+cheapest_order_raising_test=degree6_odd_seed_boundary_Phi_Psi_on_I^j/I^(j+1)
+loss_q_to_T=forgets_split_sheet_sign
+loss_T_to_Z=forgets_square_root_T_and_enlarges_to_fourth-power_shadow
+loss_even_bank=forgets_full_split_odd_Faber_seed_coefficients
+scope=VERIFIED_EXACT_EVEN_FABER_SUBCHART_NOT_FULL_SPLIT_NOT_JC2
+ALL CHECKS PASSED
