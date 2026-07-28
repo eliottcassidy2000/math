@@ -9,6 +9,37 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-313 (2026-07-28, THM-2749 Section 5 / provisional THM-2751) -- a clock-blind natural-sheet carrier was subtracted from a fully marked common section
+
+- **What was assumed:** the legacy helper
+  `lrc14_semantic_root_zero_clutch_refinement_probe_20260728.py::restrict_e3_and_sheet`
+  was treated as the fully marked natural `U_(0,3)` source/target sheet.  Its
+  coefficients were compared with THM-2749's two-sided common section, leading
+  to provisional THM-2751's symmetric weighted wings and normalized gains
+  `12` (common), `2` (formal wing), and `7` (folded natural sheet).
+- **Why it was wrong:** the helper inserts `E3` and the four shifted
+  `q1/c2/q2/c3` gates but never intersects the source with the source-one clock
+  comb `d_(1,ell)`.  THM-2749 constructs its common section through
+  `source_present_section(...,source_clock=1,...)`.  The delayed prefix banks
+  are identical, so the omitted clock factor is the first and only typing
+  mismatch; exact replay of the legacy script merely certified the wrong
+  carrier.  A hostile audit that checked the candidate only against its pinned
+  legacy constructor reproduced the same error until the factor lists were
+  compared directly.
+- **Repair / survivor:** THM-2751 is retracted before promotion.  With the
+  actual clocked constructor, the natural source coefficient equals the common
+  coefficient `C=339633525654239542165440`, so its physically nonempty left
+  wing is coefficient-null.  At `t=3` the target coefficient is
+  `345341652135823400016960`; the right-wing coefficient is
+  `5708126481583857851520`.  After content/root normalization the source,
+  target, and right-wing profiles are `9,8,4`, respectively, and the actual
+  folded target/source ratio is `11`, not `7`.  THM-2749's two-sided common
+  clutch, all-rail raw equality, normalized sign `-1`, target window/unit,
+  open cylinder, and primitive target-character profiles are unaffected.
+  General rule: before subtracting two exact interval tables, compare the
+  complete factor constructors, not merely their prefix banks and output
+  hashes.
+
 ## MISTAKE-312 (2026-07-28, root-zero clutch dependency pins) -- LF evidence hashes were checked against raw platform bytes
 
 - **What was recorded:** the finite-exact root-zero overlap companion pinned

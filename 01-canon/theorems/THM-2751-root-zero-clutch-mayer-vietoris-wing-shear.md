@@ -2,24 +2,16 @@
 id: THM-2751
 title: "Root-zero clutch Mayer--Vietoris wing shear"
 status: >
-  RESERVED / PROOF-COMPLETE PROVISIONAL CANDIDATE + VERIFIED-EXACT;
-  AWAITING INDEPENDENT AUDIT.  On the canonical rail-8 fully marked
-  root-zero sheet, the natural source and target carriers decompose as
-  actual weighted interval profiles A=M disjoint-union L and
-  B=M disjoint-union R, where M is THM-2749's two-sided common section.
-  The delayed functionals are additive on these pieces.  Their exact
-  root-normalized ratios are the proved clutch gain 12=-1 on M, the formal
-  wing endpoint ratio 2, and the folded natural-sheet ratio 7; the complete
-  natural shear is exactly the signed
-  wing boundary T(R)-S(L).  The theorem constructs no canonical L-to-R
-  identification or relative phase.  These are internal chart strata, not
-  three external C3 arms: the actual operator is arm-blind and has zero
-  invariant-to-charged block.  No result may depend on this candidate before
-  independent promotion.
+  RESERVED / REFUTED PROVISIONAL CANDIDATE.  The legacy natural-sheet
+  constructor used below inserted E3 and the four target-sheet gates but
+  omitted the source-one clock factor d_(1,ell).  It therefore cannot be
+  compared with THM-2749's fully marked common section.  The internally exact
+  12/2/7 calculation belongs to that clock-blind hostile carrier, not to the
+  claimed physical Mayer--Vietoris decomposition.  No result may depend on
+  this file.  The corrected clocked computation has coefficient-null left
+  wing and a one-sided charged right wing; see MISTAKE-313.
 source: root/root-zero-clutch-mayer-vietoris-2026-07-28
-depends_on:
-  - THM-2744-relative-present-unit-repair-and-root-zero-overlap-clutch
-  - THM-2749-fully-marked-root-zero-clutch-and-target-character-profile
+depends_on: []
 related:
   - THM-830-b3-deletion-deck-mirror-current-calculus
   - THM-2657-odometer-carry-root-lift-nonsplit-extension-and-cech-cocycle
@@ -35,8 +27,23 @@ hash_basis: LF-normalized bytes
 
 # THM-2751 -- the natural root-zero shear is a one-sided wing boundary
 
-**RESERVED / PROOF-COMPLETE PROVISIONAL CANDIDATE + VERIFIED-EXACT;
-AWAITING INDEPENDENT AUDIT.**
+**RESERVED / REFUTED PROVISIONAL CANDIDATE.**
+
+## Retraction boundary
+
+The construction called `A` below is not the fully marked natural source
+sheet.  Its helper `restrict_e3_and_sheet` never intersects the carrier with
+the source-one clock comb `d_(1,ell)`, whereas THM-2749's common section uses
+`source_present_section(...,source_clock=1,...)`.  The two delayed prefix banks
+are identical; this missing factor is the first failed implication.
+
+Consequently the weighted decompositions and `12/2/7` ratios below are exact
+only for a clock-blind hostile carrier and cannot be combined with THM-2749.
+They are retained as correction history.  The correctly clocked calculation
+has source coefficient equal to the common coefficient, hence a physically
+nonempty but coefficient-null left wing; the right wing carries the entire
+one-sided shear.  See MISTAKE-313.  Nothing below this banner is a proved
+dependency.
 
 THM-2749 identifies an exact signed clutch after the natural root-zero sheet
 is intersected with its translated pullback.  The same theorem records that
@@ -246,8 +253,8 @@ Q_3 g=(11,1,1).                                       (17)
 
 Such a selector would charge both nontrivial `C3` modes.  Nothing in this
 candidate constructs it.  The pieces `M,L,R` are internal source/target
-chart strata carried in the same way on every external arm.  Their actual
-typing is therefore
+chart strata.  If they are formally replicated in the same way on every
+external arm, the only tautological external typing is
 
 ```text
                          I_arm tensor C_internal.       (18)
@@ -259,14 +266,16 @@ It commutes with external arm rotation, so directly
 Q_3 (I_arm tensor C_internal) Pi_3=0.                  (19)
 ```
 
-This is the arm-blind boundary proved abstractly by THM-2750, but `(19)` is
-proved here independently by `Q_3 Pi_3=0`; THM-2750 remains a related result,
+This is an algebraic arm-blind boundary, not an existing physical operator:
+neither the external carrier nor the internal `L -> R` wing map has been
+constructed.  Formula `(19)` is proved independently by `Q_3 Pi_3=0` and is
+the boundary proved abstractly by THM-2750; THM-2750 remains a related result,
 not a dependency.  In particular, the natural ratio `7` is an
 aggregate sheet scalar, not the external Fourier mean `1` in `(17)`.
 
 There is one useful **conditional diagnostic**, not an LRC construction.  If
-future work supplied one common external three-arm carrier on which the
-source totals
+future work supplied one common external three-arm carrier, a lawful armwise
+realization/pairing of the formal common/wing diagonal rule, and source totals
 
 ```text
 S_i=M_i+L_i

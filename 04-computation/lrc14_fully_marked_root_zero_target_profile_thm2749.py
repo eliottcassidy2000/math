@@ -469,7 +469,7 @@ def main():
             "formal 72-dimensional tensor unit changed")
 
     print("LRC14 FULLY MARKED ROOT-ZERO CLUTCH AND TARGET PROFILE")
-    print("status=PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT")
+    print("status=PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED")
     print(f"dependency_pins=LF-normalized count={len(DEPENDENCIES)}")
     print(f"R={R} T={T} tau=7/{R} shift_grid={SHIFT} deep_shift=14")
     print("source_seam=H^R_12_intersect_H^L_0=(169,181)/182")
@@ -487,7 +487,7 @@ def main():
     print("char13_target_unit=W(1)=9 det=1 inverse_V(1)=3 det=1")
     print(f"formal_root_times_target_72d_determinants={bigraded_determinants}")
     print("inherited_unmarked_boundary=THM2744 target nonunits rails1,3; eleven gain-1 rails; rail13 gain8")
-    print("single_sheet_boundary=the natural U_(0,3) coefficients are unequal (profiles 5 versus 9); no single-sheet naturality")
+    print("legacy_single_sheet_boundary=RETRACTED_BY_MISTAKE_313_missing_source_one_clock_factor")
     print("SCOPE: one two-sided fully marked partial Cech clutch and coefficient target decoder; no global transporter, endpoint current, row exclusion, or LRC14")
     print("ALL CHECKS PASSED")
 

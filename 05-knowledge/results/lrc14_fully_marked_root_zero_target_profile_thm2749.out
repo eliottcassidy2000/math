@@ -1,5 +1,5 @@
 LRC14 FULLY MARKED ROOT-ZERO CLUTCH AND TARGET PROFILE
-status=PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT
+status=PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
 dependency_pins=LF-normalized count=7
 R=4826809 T=297836897838480 tau=7/4826809 shift_grid=431933040 deep_shift=14
 source_seam=H^R_12_intersect_H^L_0=(169,181)/182
@@ -17,6 +17,6 @@ recombination_scope=coefficient-derived lawful t-tables; not three physical tran
 char13_target_unit=W(1)=9 det=1 inverse_V(1)=3 det=1
 formal_root_times_target_72d_determinants=(1, 1)
 inherited_unmarked_boundary=THM2744 target nonunits rails1,3; eleven gain-1 rails; rail13 gain8
-single_sheet_boundary=the natural U_(0,3) coefficients are unequal (profiles 5 versus 9); no single-sheet naturality
+legacy_single_sheet_boundary=RETRACTED_BY_MISTAKE_313_missing_source_one_clock_factor
 SCOPE: one two-sided fully marked partial Cech clutch and coefficient target decoder; no global transporter, endpoint current, row exclusion, or LRC14
 ALL CHECKS PASSED

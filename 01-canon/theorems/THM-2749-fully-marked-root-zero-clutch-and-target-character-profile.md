@@ -16,6 +16,8 @@ status: >
   transported-cylinder-attached linear and bilinear profiles have support
   t=3,...,11 and all twelve primitive C13 characters.  This is a partial
   semantic clutch, not a THM-2334 endpoint current, row exclusion, or LRC(14).
+  MISTAKE-313 retracts only the former Section 5 comparison with a legacy
+  clock-blind natural-sheet routine; the two-sided theorem is unchanged.
 source: root/fully-marked-root-zero-target-profile-2026-07-28 + coordinate-first-audit/fully-marked-root-zero-clutch-2026-07-28
 audit: >
   root-zero-two-sided-clutch-hostile-audit-2026-07-28 (independent fixed-window
@@ -37,8 +39,8 @@ related:
   - THM-2750-arm-blind-clutch-no-go-and-minimal-marked-leakage
 script: 04-computation/lrc14_fully_marked_root_zero_target_profile_thm2749.py
 output: 05-knowledge/results/lrc14_fully_marked_root_zero_target_profile_thm2749.out
-script_sha256: 12f150dc8e0fc543cc36fafaa2b84dd57a2dde6e40ce3cbadd8d057817bce3dc
-output_sha256: 72fed42be733aca63fc0ccd0a907eadcb02d224c8832d2cd5c42208b34a18048
+script_sha256: d67c852c52f88feaadb2fcaa0a9a07a212f2e47018040b455855df886200595e
+output_sha256: c886864ae7d97512eae614b62f76bdd00108d706242b1d8d48c2452c3465a2ac
 secondary_script: 04-computation/lrc14_fully_marked_root_zero_clutch_thm2749.py
 secondary_output: 05-knowledge/results/lrc14_fully_marked_root_zero_clutch_thm2749.out
 secondary_script_sha256: 93b46b2701db8f72d00fa2ae131f9d9afd3200f32998959af3bb2e1fa2f56841
@@ -379,14 +381,14 @@ Three controls separate support from covariance.
             724908063903933297548160,0,0,0).            (22)
    ```
 
-   They are unequal.  The earlier exact
-   `lrc14_semantic_root_zero_clutch_refinement_probe_20260728.py` found the
-   same mechanism for its one-sided `U_(0,3)` mask: both endpoint vectors
-   remained units but their coefficients sheared.  Its normalized constants
-   are `5` and `9`, so the target/source gain is `9/5=7=6/12 mod13`, the carry
-   ratio rather than the mirror sign.  That scalar cannot encode the additive
-   odometer class: `Hom(C_13,F_13^*)=0`.  Equation `(22)` is the self-contained
-   hostile in the present companion.
+   They are unequal.  The earlier
+   `lrc14_semantic_root_zero_clutch_refinement_probe_20260728.py` comparison
+   is retracted by MISTAKE-313: its helper omitted the source-one clock factor,
+   so its normalized constants `5,9` and gain `7` are not a fully marked
+   natural-sheet comparison.  Equation `(22)`, which is constructed directly
+   in the present companion with the clock fixed, remains the self-contained
+   one-sided hostile.  The corrected wing refinement is recorded separately
+   in THM-2751's repair lineage.
 
 Therefore the common pulled-back section is load-bearing.  The audit does
 not claim every individual present/chart cut remains separately essential
