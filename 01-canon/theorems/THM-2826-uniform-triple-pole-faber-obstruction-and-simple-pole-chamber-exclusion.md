@@ -2,8 +2,8 @@
 id: THM-2826
 title: "Uniform triple-pole Faber obstruction and simple-pole chamber exclusion"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For every normalized reduced Faber degree m=4R-2 with R>=7,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  normalized reduced Faber degree m=4R-2 with R>=7,
   a nonsplit polynomial exact-square-prefix chart cannot contain a finite
   response point with (ord V,ord M)=(3,1).  The all-degree proof replaces
   THM-2823's finite resultants by the exact carrier
@@ -14,6 +14,12 @@ status: >
   from every such normalized degree.  All-parts-at-least-two passports,
   other charts, JC(2), and DC(2) remain open.
 source: root/sextic-uniform-triple-pole-faber-obstruction-2026-07-28
+audit: >
+  uniform-all-pole-audit-2026-07-28 independently rederived the legal
+  triangular translation, the K/H identity and explicit H_j formula,
+  exhaustively checked the nu=3 valuation split and THM-2760 prefix use,
+  caught and repaired an overbroad e=2 corollary, and replayed normal,
+  optimized, and stored transcripts with matching LF hashes: ACCEPT.
 depends_on:
   - THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient
   - THM-2411-degree-twenty-two-first-flux-pole-divisor-square-class-reduction
@@ -32,8 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2826 -- the triple-pole obstruction is uniform in Faber degree
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2823 proved the first case `m=26` by a complete Newton split, two
 cubic resultants, and one exceptional two-scale unit ideal.  Those finite
@@ -375,8 +380,9 @@ h=e+1                                             (38)
 
 lies in `(37)` and is empty in every such degree without any accessory
 classification.  The power/Chebyshev sextic examples of THM-2817 and the
-two- and three-pole `e=2` charts are special cases of this general
-simple-pole statement, not separate inputs.
+two- and three-pole `e=2` charts **whose pole partition contains a simple
+part** are special cases of this general simple-pole statement, not
+separate inputs.  The all-parts-at-least-two `e=2` chambers are not covered.
 
 ## 8. Scope and sharp residual
 

@@ -408,8 +408,11 @@ Classify profiles under support operations; study analytic continuation and auto
   `V` is linear, and every mixed survivor has a clean three-value passport
   with `h<=e+1`.  THM-2796 proves `F'/F=C/(SET)`, the moment/square-defect
   law, and the all-degree `e<=1` classification; passport data first collide
-  at `N=5,e=2`.  Its carrier is `A(R_Q/q)=VG=lambda SET`.  Degree 26,
-  `e>=2`, flux intersection, nonpolynomial prefixes, and chart entry are open.
+  at `N=5,e=2`.  Its carrier is `A(R_Q/q)=VG=lambda SET`.  THM-2823 closes
+  the degree-26 local pair `(3,1)`; THM-2826 makes this uniform for
+  `4R-2`, `R>=7`, excluding simple parts and `h>N/2`.  All-parts-at-least-two
+  passports, other flux intersections, nonpolynomial prefixes, and chart
+  entry remain open.
 
   This is not `JC(2)`: arbitrary Keller pairs need not enter this quartic,
   split polynomial exact-prefix chart.  Nonsplit and nonpolynomial-prefix
