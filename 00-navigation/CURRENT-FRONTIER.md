@@ -341,6 +341,10 @@ Classify profiles under support operations; study analytic continuation and auto
   `(Z/3)^(m-1)` and their units are constant.  The sharp `d^2=abc` hostile
   instead has a standard `Cl[2]` plane; its missing `C2` reflection completes
   polynomial `S3` invariants.  Other cyclic models may still carry planes.
+  THM-2700 excludes every `S3`-equivariant Danielewski normalization
+  `rs=g(x)`: its full Kummer module is zero or one trivial line, never the
+  required standard plane.  `D4` triality is the sharp hostile, so the live
+  general gate is the action on boundary classes, not their scalar count.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.

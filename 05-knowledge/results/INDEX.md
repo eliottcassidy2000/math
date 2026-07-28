@@ -1,8 +1,8 @@
 # Script Results Index
 
 - `jacobian_danielewski_s3_resolvent_thm2700.py` -> matching `.out`
-  [THM-2700 PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT].  For `R_g=C[x,r,s]/(rs-g)`, the exact `S3` quotient is
+  [THM-2700 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  For
+  `R_g=C[x,r,s]/(rs-g)`, the exact `S3` quotient is
   `C[x,r^3+s^3]`, the relative different is `(r^3-s^3)`, and
   `Cl(R_g)=Z^d/<(m_i)>`.  Its Kummer two-torsion is zero or one trivial
   line, never the standard plane forced by THM-2655.  The `D4` Smith

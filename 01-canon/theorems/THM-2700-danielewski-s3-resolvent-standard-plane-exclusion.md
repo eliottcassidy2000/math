@@ -2,8 +2,8 @@
 id: THM-2700
 title: "Danielewski S3 resolvent and standard-plane exclusion"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For every nonzero g in C[x], the normal Danielewski surface
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  nonzero g in C[x], the normal Danielewski surface
   R_g=C[x,r,s]/(rs-g) carries a canonical S3 action with polynomial
   invariants C[x,r^3+s^3].  Its fraction field is the full splitting field
   of T^3-3gT-(r^3+s^3); the cubic discriminant pulls back to
@@ -36,8 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2700 -- Danielewski S3 resolvent and standard-plane exclusion
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2655 turns a hypothetical quartic `S4` Keller map into a precise demand:
 the regular locus of its full cubic-resolvent normalization must carry a
@@ -412,3 +411,10 @@ orbits, `9,330` multiplicity/Smith packets and their secondary divisibility,
 the `D4` determinant and Smith diagonal, and the full six-element triality
 action on its three nonzero classes.  All truth-bearing checks use explicit
 exceptions and remain active under optimized Python.
+
+An independent hostile audit separately checked repeated-root normality,
+the full splitting-field identification, the global Fitting ideal, every
+Nagata valuation and unit claim, the `S3` action on divisor classes, the
+regular-locus Kummer passage, the constant and `mu_4` boundaries, and the
+`D4` hostile.  It also reproduced normal and optimized execution against
+the stored transcript and verified both LF hashes.
