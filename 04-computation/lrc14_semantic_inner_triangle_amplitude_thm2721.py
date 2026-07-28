@@ -245,6 +245,42 @@ def main():
         "a semantic endpoint unexpectedly reanchored into the fixed current",
     )
 
+    # If the frozen following atom is promoted to the next current, then a
+    # chronological successor in the same sharp-graph grammar must have
+    # predecessor j equal to its h=6.  The graph equation has one solution,
+    # whose private root-one half is disjoint from every semantic endpoint.
+    second_generation_labels = []
+    for h in range(1, 12):
+        for epsilon in (0, 1):
+            for kappa in (0, 1):
+                root = (-h - 1) % p
+                j = old.d.INV2 * (root - epsilon - kappa) % p
+                if j == following["h"]:
+                    second_generation_labels.append(
+                        (h, epsilon, kappa, root)
+                    )
+    require(
+        tuple(second_generation_labels) == ((11, 1, 1, 1),),
+        "second-generation label solution changed",
+    )
+    successor_half = (1, 14)
+    semantic_deep_phases = tuple(
+        semantic.frac(
+            module.C3 * semantic.frac(z + Fraction(7 * n, R))
+        ) * 182
+        for n in semantic_nodes
+    )
+    require(
+        all(Fraction(71) < phase < Fraction(84)
+            and not Fraction(successor_half[0]) < phase
+            < Fraction(successor_half[1])
+            for phase in semantic_deep_phases),
+        "a semantic endpoint entered the unique second-generation root half",
+    )
+    second_generation_placements = len(rails) * 7
+    require(second_generation_placements == 1134,
+            "rail/future placement count changed")
+
     # Sharp changed-source control.  For n=13j,
     # q_n(x)=D(x+7j/R).  Rebuilding the source on that translated cylinder
     # retains the fixed current for exactly four of the 304 semantic arms.
@@ -289,6 +325,12 @@ def main():
         "endpoint_current_reanchor="
         f"midpoint_hits={len(endpoint_current_midpoint_hits)} "
         f"whole_I_hits={len(endpoint_current_whole_hits)}"
+    )
+    print(
+        "second_generation="
+        f"labels={tuple(second_generation_labels)} "
+        f"successor_half={successor_half} "
+        f"rail_future_placements={second_generation_placements} hits=0"
     )
     print(f"changed_source_whole_I_hits={tuple(shifted_source_hits)}")
     print("scope=equal_raw_parallel_arms_not_chronological_endpoint_current")

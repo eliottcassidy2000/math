@@ -24,8 +24,8 @@ related:
   - THM-2716-c4-arm-transporter-groupoid-and-relative-degree-holotopy-boundary
 script: 04-computation/lrc14_semantic_inner_triangle_amplitude_thm2721.py
 output: 05-knowledge/results/lrc14_semantic_inner_triangle_amplitude_thm2721.out
-script_sha256: b88a4aa81f8dfcec91bbd2378ea6d7058ab6636177d30db45cf27ff210b89651
-output_sha256: bcd0e99abe21e8ac14c533be89db64d4f54b33c967d7ef2245e277aaa890bc3e
+script_sha256: cc46456e00be3fb1356065c417ca4761d8810bff4dbd5b5abe694bb667366d44
+output_sha256: 02ec600947c91c10149ff009876790c86b912d4b11d0d84e1e3e3313c5a83f6b
 hash_basis: LF-normalized bytes
 ---
 
@@ -199,6 +199,34 @@ They are pairwise disjoint.  Thus changing only the rail, future clock,
 `epsilon`, or `kappa` while retaining `h=2` cannot repair the target.  A
 lawful continuation must change the private-depth/root branch as well.
 
+There is a second, stronger failure if one promotes the following atom `(3)`
+to the next current.  A chronological successor `G` in the same sharp-graph
+grammar must satisfy
+
+```text
+j_G=h_F=6.                                                (15b)
+```
+
+Among all `1<=h<=11` and `epsilon,kappa in {0,1}`, the graph equation has
+exactly one formal solution:
+
+```text
+(h_G,epsilon_G,kappa_G,r_G)=(11,1,1,1).                  (15c)
+```
+
+Its private half is `(1,14)/182`, while every one of the `304` semantic
+endpoints lies strictly in `(71,84)/182`.  Hence all
+
+```text
+162 rails * 7 future clocks = 1134                         (15d)
+```
+
+rail/future placements of the unique formal second-generation label have
+zero endpoint hits.  The inner comparison SCC therefore has no edge in the
+inherited current/following chronological nerve even after the first
+following atom is relabelled as current.  A continuation must change the
+sharp semantic grammar, not just select another rail or clock.
+
 Categorically, `(9)` is therefore a positive three-arm **corolla**: the maps
 `M_0,M_13,M_26` share the source cylinder `I`.  The address graph compares
 their targets, but its comparison edges are not composable chronological
@@ -240,6 +268,7 @@ positive equal raw three-arm amplitude;
 flat nontrivial abstract-C3 scalar spectrum;
 trivial pure endpoint-character holonomy;
 zero fixed-current reanchoring on all 304 semantic endpoints;
+zero inherited second-generation semantic successors;
 four sharp changed-source factorizations.                (18)
 ```
 
@@ -256,14 +285,15 @@ python 04-computation/lrc14_semantic_inner_triangle_amplitude_thm2721.py
 python -O 04-computation/lrc14_semantic_inner_triangle_amplitude_thm2721.py
 ```
 
-Both executions byte-match the stored `16`-line transcript
+Both executions byte-match the stored `17`-line transcript
 `05-knowledge/results/lrc14_semantic_inner_triangle_amplitude_thm2721.out`.
 The companion contains no optimized-away assertions.  It reconstructs the
 `304` semantic addresses without reading THM-2712's stored output; checks
 every exact interval, weight, translate, overlap, and `C_3` identity; proves
-the global support disjointness `(13)--(14)` and private-root obstruction
-`(15a)`; tests both reanchoring counts in `(15)`; and exhausts the
-changed-source controls `(16)--(17)`.
+the global support disjointness `(13)--(14)`, private-root obstruction
+`(15a)`, and unique empty second-generation branch `(15b)--(15d)`; tests
+both reanchoring counts in `(15)`; and exhausts the changed-source controls
+`(16)--(17)`.
 
 An independent hostile audit rederived the three literal translated weighted
 pieces and their common positive integral, checked that the abstract `C_3`

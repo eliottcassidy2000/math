@@ -11,6 +11,7 @@ following_support_intersect_current_rail2=empty
 following_support_intersect_current_atom=empty
 private_half_no_go=following=(71, 84) h2_halves=((127, 140), (140, 153))
 endpoint_current_reanchor=midpoint_hits=0 whole_I_hits=0
+second_generation=labels=((11, 1, 1, 1),) successor_half=(1, 14) rail_future_placements=1134 hits=0
 changed_source_whole_I_hits=(0, 169, 338, 507)
 scope=equal_raw_parallel_arms_not_chronological_endpoint_current
 ALL CHECKS PASSED
