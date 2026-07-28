@@ -1,5 +1,31 @@
 # Script Results Index
 
+- `lrc14_tau12_simplex_allocation_support_no_go_addendum_thm2806.py` and
+  `lrc14_tau12_simplex_allocation_support_no_go_independent_audit_thm2806.py`
+  -> matching `.out` files [THM-2806 FINITE-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED ADDENDUM].  On the fixed rail-eight
+  `(clock,sigma,tau)=(1,0,12)` sheet, the common carrier `M=A intersect B`
+  is empty before any of THM-2807's addresses is selected.  Each of
+  `n_0,n_+,n_a` is instead one whole positive target-only right-cofiber
+  cylinder, with exact mass `60781651775958960/371293`, coefficient
+  `790161473087466480`, and weight `27581135604`.  The distinct 81-label
+  common bank and right cofiber have identical cellwise nonemptiness
+  (`193/567`) but disjoint supports in all `567/567` cells.  This closes only
+  item 1 of THM-2807's proposed allocation test on this specified simplex;
+  the endpoint-current decoder cannot start.  Primary source/output hashes:
+  `7fea1816...76480` / `cba545e7...afc6`; independent hashes:
+  `fd45e095...57fe` / `e18b6101...7bfe`.
+- `lrc14_literal_fixed_sheet_allocation_thm2806.py` and
+  `lrc14_literal_fixed_sheet_allocation_independent_audit_thm2806.py` ->
+  matching `.out` files [THM-2806 PROVED + VERIFIED-EXACT + TWO
+  INDEPENDENT HOSTILE AUDITS].  A marked wandering rail-eight sheet has raw
+  allocation arrays `w(1,delta_0,delta_0,delta_(0,0))`: its sole fourfold
+  primal point is flat, while the central marginal has
+  `v=w(169,13,13,1)`, `D3=144w`, and valuation profile `(2,1,1,0)`.
+  Literal presence is only a zero-step scalar endpoint law; the separately
+  nondegenerate moving-sheet parallelogram is not affine-covariant with it.
+  Source/output hashes: `311d0d85...f71e` / `a970776e...13f`;
+  independent hashes: `90386206...0b4` / `36e4d0f2...1569`.
 - `jc2_split_degree6_componentwise_monicization_thm2759.py` -> matching
   `.out` [THM-2759 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   The complete degree-six bank has only boundary points `P_d,P_q`.

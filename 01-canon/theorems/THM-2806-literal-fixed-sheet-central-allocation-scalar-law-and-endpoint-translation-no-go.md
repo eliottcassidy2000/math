@@ -11,7 +11,12 @@ status: >
   face.  Literal allocation is projectively scalar with zero endpoint step;
   the separately nondegenerate moving-sheet parallelogram has no affine
   covariance with it.  The marked representative gauge is exact, but the
-  fixed rail-eight bank has common support on only clocks 1,2,3.
+  fixed rail-eight bank has common support on only clocks 1,2,3.  A
+  separately scoped FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED addendum
+  proves that THM-2807's specified tau-twelve address simplex is
+  target-only: its common allocation carrier is empty before address
+  restriction.  This addendum closes only item 1 of THM-2807's proposed
+  test on that fixed simplex.
 source: root/lrc-fixed-sheet-allocation-2026-07-28
 audit: >
   d3-torsor-descent and jc-chart-entry-2026-07-28 (independent type/scope
@@ -39,6 +44,21 @@ secondary_script: 04-computation/lrc14_literal_fixed_sheet_allocation_independen
 secondary_output: 05-knowledge/results/lrc14_literal_fixed_sheet_allocation_independent_audit_thm2806.out
 secondary_script_sha256: 90386206fa441edaa121b54b501347f14005e997b4c0e8f95947f2fac14050b4
 secondary_output_sha256: 36e4d0f2e48bb8bf3aa2673f71e82e5d30e6c84830dc8ea7ff35c6d2b8e61569
+addendum_status: >
+  FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the fixed
+  (clock,sigma,tau)=(1,0,12) rail-eight sheet, the common carrier is empty
+  before selecting any of THM-2807's three addresses, while the right
+  cofiber contains one whole positive cylinder at each address.  The
+  addendum has its own primary and independent implementations and does not
+  inherit the theorem's earlier audit badge.
+addendum_script: 04-computation/lrc14_tau12_simplex_allocation_support_no_go_addendum_thm2806.py
+addendum_output: 05-knowledge/results/lrc14_tau12_simplex_allocation_support_no_go_addendum_thm2806.out
+addendum_script_sha256: 7fea18161046f8de35b2e6ef04c88a13485de61045bc363f89c5ebfec8f76480
+addendum_output_sha256: cba545e7beff4fe889c76ae681c47c806969ccd33aa79def54527709a6ffafc6
+addendum_audit_script: 04-computation/lrc14_tau12_simplex_allocation_support_no_go_independent_audit_thm2806.py
+addendum_audit_output: 05-knowledge/results/lrc14_tau12_simplex_allocation_support_no_go_independent_audit_thm2806.out
+addendum_audit_script_sha256: fd45e0959f27021dcf67a6f22a1be426db3849d4c0a806ba5135e17e5a0d57fe
+addendum_audit_output_sha256: e18b61016df622283b8bfccb4a565d43d6a6a13eecaa21f893c89de46e1b7bfe
 hash_basis: LF-normalized bytes
 ---
 
@@ -498,6 +518,194 @@ proof must either build the filtered boundary/clock transport in `(38)` or
 use a non-idempotent same-atom carrier whose raw fourfold face is already
 nonzero.  Another pass through the moving-sheet shortcut is excluded by
 `(35)`.
+
+## 8.1 Finite-exact addendum: the tau-twelve simplex is target-only
+
+**FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED ADDENDUM.  This badge applies
+only to this subsection and its separately pinned companions; it does not
+inherit the theorem's earlier audit badge.**
+
+THM-2807 ended with an ordered six-step allocation test.  Its first item
+asked for a nonempty common allocation atom over the explicit base vertex
+`n_0`.  On the specified simplex the answer is exactly negative, and the
+failure occurs before endpoint origin, Fourier allocation, or the choice of
+address.
+
+Keep precisely the rail-eight sheet
+
+```text
+(physical clock,sigma,tau)=(1,0,12)                    (38a)
+```
+
+with both relative-present safeties, target root one, delayed carry six,
+and the three THM-2807 addresses
+
+```text
+n_0=3454614,       n_+=3454627,       n_a=4143978.     (38b)
+```
+
+As in THM-2782, before integration write
+
+```text
+A=source one-sided carrier,
+B=pullback(target one-sided carrier),
+M=A intersect B,       L=A\B,       R=B\A.             (38c)
+```
+
+The primary constructor first forms the fixed-label carrier face, before
+the narrow address restriction.  Its interval-piece census is
+
+```text
+             A    B    M    L    R
+pieces      240  241   0   240  241.                  (38d)
+```
+
+In particular
+
+```text
+M=empty,                 L=A,                 R=B.      (38e)
+```
+
+The definition of these five objects depends on `(38a)` but not on an
+address.  Therefore `(38e)` holds uniformly over every later address
+cylinder on this fixed sheet, not merely at a sampled centre.
+
+After the two relative safeties, target push, root-one cut, and each narrow
+cylinder in `(38b)`, the source-side faces disappear and the target-side
+face is one whole weighted interval:
+
+```text
+at each n in {n_0,n_+,n_a}:
+
+A=M=L=empty,
+B=R=one piece,
+mass(R)=60781651775958960/371293,
+coefficient(R)=790161473087466480,
+weight(R)=27581135604.                                  (38f)
+```
+
+The three pieces translate exactly as whole weighted cylinders.  The
+independent implementation begins instead with the full one-sided source
+and target carriers and inserts the complete semantic section before taking
+differences.  In that factor order it obtains
+
+```text
+             A    B    M    L    R
+pieces        0  241   0     0  241,                  (38g)
+```
+
+and independently reproduces every value in `(38f)`.  Equations `(38d)` and
+`(38g)` are not competing raw universes: the latter has already imposed the
+full semantic section that kills the `240` source pieces in the former.
+Their common conclusion is the load-bearing one:
+
+```text
+the fully typed tau-twelve simplex is target-only.       (38h)
+```
+
+As a positive/hostile control, the two selected right-cofiber tables are
+
+```text
+                 n_0       n_+       n_a
+tau=3              c         0         c
+tau=12             c         c         c,               (38i)
+
+c=(60781651775958960/371293, 790161473087466480).
+```
+
+Thus both implementations reproduce THM-2807's positive triangle and its
+deleted diagonal vertex while locating the failure strictly in allocation
+support, not in the address or coefficient computation.
+
+### The separate common bank is not the simplex
+
+The common-cell clock census `(16)` belongs to the distinct label bank
+
+```text
+sigma in {0,1,2,3,8,9,10,11,12},
+tau   in {3,4,5,6,7,8,9,10,11}.                         (38j)
+```
+
+In particular `tau=12` is outside `(38j)`.  Direct reconstruction of all
+`9*9*7=567` cells gives, for both common-carrier and right-cofiber
+nonemptiness,
+
+```text
+clock 0,1,2,3,4,5,6:       (0,81,56,56,0,0,0).         (38k)
+```
+
+More sharply, their nonemptiness indicators agree cell by cell:
+
+```text
+(M nonempty,R nonempty)=(false,false) in 374 cells,
+                         (true,true)  in 193 cells.      (38l)
+```
+
+Nevertheless
+
+```text
+M intersect R=empty                         in 567/567 cells. (38m)
+```
+
+This is the exact support lesson.  Identical clock support, even
+cell-by-cell, does not produce a common atom.  The common carrier and the
+right cofiber are two disjoint physical pieces with the same nonemptiness
+shadow.
+
+### Consequence for the THM-2803 decoder
+
+The address digits remain
+
+```text
+n_0:(7,6),       n_+:(7,7),       n_a:(7,7),
+(n_0,n_+,n_a)=(85,98,98) mod169.                        (38n)
+```
+
+THM-2803 therefore still proves the conditional statement that a
+common-scalar allocation of the first two values would decode the
+determinant fibre, and equality of the last two would test high-digit
+descent.  But `(38e)--(38h)` show that its hypotheses are not instantiated:
+there is no shared physical allocation current or scalar on this simplex.
+The coefficient ratio cannot be taken across a missing common atom.
+
+Consequently this addendum closes **only item 1** of THM-2807's proposed
+test, negatively, on the fixed simplex `(38a)--(38b)`.  Items `2--6` are not
+performed.  The exact next alternatives are:
+
+1. find a positive address simplex inside the genuine common bank `(38j)`;
+2. construct a typed boundary map from that common bank to the tau-twelve
+   right cofiber, preserving ancestry, clock, endpoint origin, allocation
+   flags, and the Abel boundary.
+
+The Rees profile `(36)` and THM-2771 Bockstein remain candidates for the
+second route, not supplied maps.
+
+The addendum replays by
+
+```text
+python 04-computation/lrc14_tau12_simplex_allocation_support_no_go_addendum_thm2806.py
+python -O 04-computation/lrc14_tau12_simplex_allocation_support_no_go_addendum_thm2806.py
+
+python 04-computation/lrc14_tau12_simplex_allocation_support_no_go_independent_audit_thm2806.py
+python -O 04-computation/lrc14_tau12_simplex_allocation_support_no_go_independent_audit_thm2806.py
+```
+
+Each normal/optimized pair byte-matches its stored output.  The primary
+source/output LF hashes are
+
+```text
+7fea18161046f8de35b2e6ef04c88a13485de61045bc363f89c5ebfec8f76480
+cba545e7beff4fe889c76ae681c47c806969ccd33aa79def54527709a6ffafc6,
+```
+
+and the independent source/output hashes are
+
+```text
+fd45e0959f27021dcf67a6f22a1be426db3849d4c0a806ba5135e17e5a0d57fe
+e18b61016df622283b8bfccb4a565d43d6a6a13eecaa21f893c89de46e1b7bfe.
+```
+
+Both scripts have zero Python `assert` nodes.
 
 ## 9. Exact evidence and boundary
 

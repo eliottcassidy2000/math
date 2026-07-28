@@ -68,12 +68,12 @@ mode nonzero, but only on the coefficient quotient.  THM-2792/2802 close
 abstract coefficient transport/origin.  THM-2803 makes thirteen profiles
 projective `13`-arcs; each pair is `[13,2,12]` MDS, excluding
 scalar-translation transport.  THM-2791/2807 give ancestry homotopy.
-THM-2806's literal raw support `(169,13,13,1)` has a flat common point;
-central `D3=144w` is bare-only.  Toggles are scalar/zero-step, the moving
-sheet is separate; common clocks: `1,2,3`.  THM-2813 makes the thirteen
-address lifts one normal transvection and conditionally decodes `169` flags,
-but Rees `D3` is not its jet.  Next: an off-sheet common atom and boundary
-map.  Ledger `165`; no row is excluded.
+THM-2806's raw point is flat and `D3=144w` bare-only.  Its audited tau-twelve
+addendum has `M=empty`; the separate common/right bank agrees on
+nonemptiness `567/567` but overlaps `0/567`.  THM-2813 conditionally decodes
+the address flags, but Rees `D3` is not its jet.  THM-2814 is a holonomy
+candidate; THM-2818 reserves the copy atlas.  Next: an off-sheet common atom
+and typed boundary.  Ledger `165`; no row is excluded.
 
 ### Independent routes that remain live
 
