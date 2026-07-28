@@ -105,8 +105,12 @@ for relative, budget in PREFIX_LINE_BUDGETS.items():
 startup_bytes = 0
 for relative in STARTUP_DOCS:
     raw = (ROOT / relative).read_bytes() if (ROOT / relative).is_file() else b""
-    startup_bytes += len(raw)
-    for number, line in enumerate(raw.splitlines(), 1):
+    # The repository's evidence convention is LF-normalized bytes.  Count the
+    # same canonical surface on LF and CRLF checkouts instead of charging one
+    # extra byte per line on Windows.
+    normalized = raw.replace(b"\r\n", b"\n")
+    startup_bytes += len(normalized)
+    for number, line in enumerate(normalized.splitlines(), 1):
         if len(line) > MAX_STARTUP_LINE_BYTES:
             fail(f"{relative}:{number}: {len(line)} bytes exceeds line budget")
 if startup_bytes > STARTUP_BYTE_BUDGET:

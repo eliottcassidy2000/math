@@ -81,26 +81,20 @@ rails, gain `-1`, and raw support `t=2..11`, reduced to `3..11` by the
 transported cylinder, with all twelve primitive characters in linear and
 bilinear profiles.  Frozen, coindexed, one-sided, and clock-blind sections must
 not be conflated.  MISTAKE-313 restores fixed physical clock `e=1`: the left
-wing is physically nonempty but coefficient-null, while the right wing carries
-the defect.  The rebuilt THM-2751 is `RESERVED PROOF-COMPLETE`, audit pending;
-its right cofiber has a ten-label `91`-unit spectrum and a positive quotient
-decoder, but no linear or physical wing decoder.  The source-clocked one-sided
-scout finds uniform gain `11` on all `81` endpoint labels (also audit pending).
-The older variable-gain/rank-three `81`-sheet table omitted the physical `c1`
-comb entirely and is only a clock-blind quotient hostile.
+wing is nonempty but coefficient-null and the right carries the defect.
+Rebuilt THM-2751 remains a repaired proof-complete candidate: its right
+cofiber has ten-label `91`-unit spectrum and a positive rational/localized or
+mod-`91` quotient decoder, but no integral, linear, or physical decoder.  The
+independently audited source-clock-one bank has gain `11` on all `81` labels,
+but only equality of coefficient vectors, not carriers.  The older table
+omitted physical `c1` and is only a clock-blind quotient hostile.
 
-THM-2754 instead keeps physical-present clock `e` and delayed coefficient clock
-`j` independent on the two-sided rail-8 carrier.  Its `3969` cells satisfy
-`B_(e,j)(s,t)=a_e(s,t)1_(j!=0)` on every common label; all `81` matrices have
-rank one and their diagonals equal `a` because `a_0=0`.  In the separate full
-forgotten-`e` union the literal intersection is `C+D+E`; both physical wing
-rows are `Phi_7` units with exact determinant-`11` ratio `g`, but the target
-augmentation is zero, so there is no scalar augmented gain or physical map.
-The all-`81` audit gives a `7 x 7` source-unit rectangle and `32`-cell null
-cross feeding an everywhere-unit target chamber.  Its `49` unit pairs have
-four multipliers and augmented gains `0:10,2:19,11:20`; all `168` nontrivial
-normalized label modes survive.  No multiplier is a carrier operation or
-exact-address current.
+THM-2754 keeps physical-present clock `e` and delayed coefficient clock `j`
+independent: its `3969` cells have `B_(e,j)=a_e 1_(j!=0)`, all `81` matrices
+rank one, and no scalar augmented gain.  The full all-`81` audit has a `7 x 7`
+source-unit rectangle and `32`-cell null cross feeding a unit target chamber;
+the `49` unit pairs have four multipliers, gains `0:10,2:19,11:20`, and all
+`168` normalized modes survive.  No multiplier is a carrier or address current.
 THM-2750 blocks arm-blind charging; THM-2757's marked `K4` transgression has no
 physical carrier.  THM-2763 proves the exact gauge repair: address `(r,k,l)`,
 `r.W=l-k`, gives a two-sided quotient of size `13^4` and a `13^3` quotient
@@ -364,22 +358,19 @@ Classify profiles under support operations; study analytic continuation and auto
   SNC blow-up realizes this).  THM-2711/2714 apply only under their stated
   independence, nondegeneracy, and metabolic gates.  The live geometric debt
   is the saturated divisor map and missing `C2` reflection.
-  THM-2743 detects split `S3` versus transitive `S4` marked fibres by projector
-  rank `0/1`.  THM-2746 identifies the `A4` leakage plane with the `V4` Kummer
-  character plane and proves every compatible reflection completes it to
-  `S4`; neither supplies the completion or `delta`'s unit/saturation coordinate.
-  THM-2753 isolates the six-edge loss: faithful `S4 -> A6` gives a
-  transposition/double-transposition cycle collision, while the matching
-  quotient `S4/V4=S3` restores sign.  Full subgroup orbitals, labelled edges,
-  and mixed words still separate them; a six-vertex tournament therefore
-  needs an opposition/address sidecar, and no Keller exclusion follows.
-  THM-2756 splits the six-edge lattice into matching and standard blocks with
-  an index-eight binary clutch.  THM-2758 identifies the pair-sum sextic as a
-  quadratic pullback of the cubic resolvent.  THM-2762 then closes its extra
-  `T=0` wall for degree-four Keller maps: central symmetry would force the
-  already-excluded `C4/V4/D4` monodromy.  The surviving presentation-relative
-  sextic is irreducible, alternating, and field-level; affine boundary
-  realization and the `A4/S4` Kummer gate remain open.
+  THM-2743/2746 distinguish split `S3` from transitive `S4` and identify the
+  `A4` leakage plane with the `V4` Kummer plane, but do not supply its reflection
+  or saturation coordinate.  THM-2753's faithful six-edge action loses the
+  transposition/double-transposition distinction; `S4/V4=S3` restores it, so
+  any six-vertex tournament needs an opposition/address sidecar.  THM-2756/2758
+  split the edge lattice and identify the pair-sum sextic as a quadratic cubic
+  pullback.  THM-2762 excludes its centrally symmetric `T=0` Keller wall.
+  THM-2766 identifies the surviving square-product pullback group as
+  `W(D3)=V4 semidirect S3 ~= S4` (`A4` over a cyclic cubic).  Independently,
+  THM-2768 realizes `A4/S4` as the `(2,3,3)/(2,3,4)` finite quotients of
+  `PSL2(Z)=C2*C3`, with free kernels `F3/F5`; these quotient frames do not
+  identify Keller monodromy or supply an affine cover.  The affine Kummer and
+  boundary-realization gates remain open.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.

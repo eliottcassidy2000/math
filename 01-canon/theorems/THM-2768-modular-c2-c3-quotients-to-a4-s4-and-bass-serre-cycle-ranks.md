@@ -2,8 +2,8 @@
 id: THM-2768
 title: "Modular C2-C3 quotients to A4/S4 and Bass-Serre cycle ranks"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  PSL2(Z)=C2*C3 has explicit tetrahedral and octahedral quotients
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  PSL2(Z)=C2*C3
+  has explicit tetrahedral and octahedral quotients
   A4/S4 obtained by adding the (2,3,3)/(2,3,4) face relation.  Their kernels
   are torsion-free free groups F3/F5.  The finite (2,3)-biregular Bass--Serre
   quotients have cycle ranks 3/5 and suppress to K4/the cube.  Under the
@@ -26,8 +26,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2768 -- modular binary/ternary quotients and their lost relations
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The dyadic and ternary grammars do coexist on one exact object, but the
 object is the modular free product and the live finite monodromy groups are
@@ -212,7 +211,7 @@ relabellings to identify the suppressed graphs with `K4` and the cube.  Both
 modes byte-match the stored transcript.
 
 ```text
-PROVED HERE (candidate):  explicit modular quotients to A4 and S4;
+PROVED HERE:              explicit modular quotients to A4 and S4;
                           triangle relations (2,3,3) and (2,3,4);
                           torsion-free kernels F3 and F5;
                           finite Bass--Serre censuses and cycle ranks;
@@ -228,4 +227,4 @@ NOT PROVED:               A4 or S4 equals PSL2(Z);
                           consequence.                                  (14)
 ```
 
-QED (candidate).
+QED.
