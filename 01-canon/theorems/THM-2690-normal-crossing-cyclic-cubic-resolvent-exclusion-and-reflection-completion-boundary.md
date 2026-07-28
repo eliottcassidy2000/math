@@ -1,5 +1,5 @@
 ---
-id: THM-2689
+id: THM-2690
 title: "Normal-crossing cyclic-cubic resolvent exclusion and the C2 reflection-completion boundary"
 status: >
   RESERVED / UNPROVED EMPTY STUB.  Namespace reservation only for an exact
@@ -11,7 +11,7 @@ source: root-2026-07-28-normal-crossing-cyclic-cubic
 depends_on: []
 ---
 
-# THM-2689 -- reserved normal-crossing cyclic-cubic gate
+# THM-2690 -- reserved normal-crossing cyclic-cubic gate
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
