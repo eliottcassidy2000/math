@@ -25,6 +25,23 @@ Format per entry:
   unchanged.  Re-fetch immediately before reserving, and yield to the first
   pushed claimant after a race.
 
+## MISTAKE-307 (2026-07-28, THM-2588 separation constants) -- the threshold for rho+1 was reported as the threshold for rho
+
+- **What was recorded:** with descent ratio `rho=h/w`, THM-2588 called
+  `134,99,...,15` the sharp integer ratio thresholds and called `533/4`
+  the binding real threshold in the one-fold case.
+- **Why it was wrong:** the snap loss is `1/[2(rho+1)]`.  Solving
+  `1/[2(rho+1)] <= 1/13-3/41=2/533` gives
+  `rho+1>=533/4`, hence `rho>=529/4`.  The script correctly subtracted one
+  internally and then added it back when printing.  The same display error
+  shifted every row of the table by one.
+- **Strongest survivor / repair:** the proof strengthens.  The exact real
+  one-fold threshold is `529/4`; the legal integer thresholds for
+  `k=1,...,12` are `133,98,84,74,65,57,50,42,35,28,21,14`.  Uniform
+  separation `rho>=133` closes every legal depth, and every gap family obeys
+  `v_max/v_(2)<529/4`.  The fold identity, snap inequality, and all existing
+  certificates remain valid.
+
 ## MISTAKE-305 (2026-07-28, THM-2588 fold-cascade boundary) -- a thirteenth fold was assigned to a 13-speed family
 
 - **What was recorded:** THM-2588 and its referee printed a constants table
