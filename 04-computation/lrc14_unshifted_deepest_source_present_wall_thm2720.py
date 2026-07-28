@@ -24,7 +24,7 @@ CARRIER_PATH = (
     / "lrc14_replica_dichotomy_typed_row_opus_20260727.py"
 )
 CARRIER_SHA256 = (
-    "31bfd27298e8c28ccf9532dea6f9a90cbf529e7722ba7e2777a84c1c1f3d0994"
+    "6ba64a68a9fd008d2e06949b1f1cf75012f1f4e734f75f55ce0af58ae20ad7b9"
 )
 if hashlib.sha256(CARRIER_PATH.read_bytes()).hexdigest() != CARRIER_SHA256:
     raise RuntimeError("audited canonical present-packet dependency changed")
