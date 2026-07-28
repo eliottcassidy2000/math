@@ -1,6 +1,6 @@
 ---
 id: THM-2820
-title: "Boolean rigidity, norm-top cotangent no-go, and rooted Hasse translation coordinate"
+title: "Boolean rigidity, graded translation ranks, and carrier-gauge Hasse boundary"
 status: >
   RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
   INDEPENDENT HOSTILE AUDIT.  Finite pointwise Boolean carrier algebras
@@ -9,24 +9,36 @@ status: >
   cotangent line scales, so norm/Rees data alone select no nonzero first
   jet.  Positively, any rooted group-ring vector of nonzero augmentation
   has normalized Hasse coordinate b=J1/J0 with b(g^aF)=b(F)+a.
-  THM-2806's normalized raw mixed face has base b=(0,0) and all 169
-  translates recover their labels.  A lawful common off-sheet translation
-  and allocation-to-address identification remain missing.
+  The first normal orbit of a two-axis vector F is the quotient of the
+  linear augmentation space by the degree-one annihilator of its leading
+  graded piece; the THM-2806 B/P/Q/H/raw-face ranks are 0/1/1/2/2.
+  The raw mixed face has base b=(0,0) and all 169 translates recover their
+  labels, and its positive integral inverse/push profile is
+  2171N+delta_(q1+q2), but it is supported on the 144 joint-absent cells.
+  After the THM-2763 carrier gauge, the first-Hasse endpoint sees only a
+  nonzero effective transverse vector.  A lawful physical transverse
+  translation and common
+  non-idempotent raw face or broader two-object sidecar remain missing.
 source: root/boolean-norm-cotangent-boundary-2026-07-28
 depends_on:
   - THM-2201-cyclic-root-fibre-hasse-jet-transition-carrier
+  - THM-2763-carrier-equivariant-endpoint-address-extension-and-gauge-obstruction
   - THM-2806-literal-fixed-sheet-central-allocation-scalar-law-and-endpoint-translation-no-go
   - THM-2813-affine-lift-transvection-and-projective-horn-decoder
 related:
   - THM-2771-joint-c7-c13-right-wing-mixed-spectrum-and-commuting-square-no-go
   - THM-2779-bockstein-symplectic-decoder-frame-torsor-and-heisenberg-root-degree-gate
+  - THM-2580-hasse-bockstein-carry-tower-and-salem-local-unit-boundary
+  - THM-2611-principal-c13-bibundle-lift-torsor-and-holonomy-section-obstruction
+  - THM-2658-balanced-lift-helly-circular-arc-gain-nerve-and-wrap-boundary
   - THM-2806-literal-fixed-sheet-central-allocation-scalar-law-and-endpoint-translation-no-go
   - THM-2813-affine-lift-transvection-and-projective-horn-decoder
   - THM-2814-projective-allocation-square-holonomy-and-idempotent-provenance-no-go
+  - THM-2792-cyclic-unit-intertwiner-and-positive-naturality-boundary
 script: 04-computation/lrc14_boolean_norm_cotangent_boundary_thm2820.py
 output: 05-knowledge/results/lrc14_boolean_norm_cotangent_boundary_thm2820.out
-script_sha256: e38ada505f0ad729b6027aab1282779f3d9ee2e10e00785c292ee3735971783c
-output_sha256: 77d05c9c77dd7fd696137b76f6f3a022ebf790f01ce63fc1e4fd9699acbd86f2
+script_sha256: e6adbc28ff27712891e48c6a40dd4123c17c0d515d311b69f91ab005f432314c
+output_sha256: 2b8886817b1464e44be036dcec067a4df58fffb3dc9487c39ad33d43c7eb55ec
 hash_basis: LF-normalized bytes
 ---
 
@@ -51,8 +63,11 @@ This theorem locates the exact algebra between them.  The full modular orbit
 norm survives as the **top** augmentation power, not a first jet.  But the
 rooted raw mixed face has nonzero augmentation, so THM-2201's first Hasse
 coordinate turns any externally supplied lawful translation into an exact
-affine label.  The remaining problem is physical co-support and
-equivariance, not another scalar decoder.
+affine label.  That face is the 144-cell **joint-absent aggregate**, not the
+fourfold common atom.  Moreover, THM-2763's address/carrier gauge can absorb
+an apparent translation.  The remaining problem is therefore a physical
+co-supported, gauge-transverse equivariant family, not another scalar
+decoder.
 
 ## 1. Pointwise Boolean carriers are formally rigid
 
@@ -250,6 +265,14 @@ with no intrinsic `(1,0)` or `(0,1)` component.  Retaining the full modular
 group ring repairs the central-scalar collapse, but it retains top norm
 classes, not a first jet.
 
+The pointwise support must be kept separate from the group-ring coordinates.
+Equation `(21)` equals one precisely when both rooted coordinates are
+nonzero, hence on `12^2=144` joint-absent cells, and it vanishes at the sole
+fourfold common atom `(0,0)`.  The common vertex `H=delta_(0,0)` also has a
+faithful normalized Hasse coordinate after translation, but it is not the
+mixed face.  Thus neither faithful coordinate is yet a nonzero
+common-atom mixed contrast.
+
 This is distinct from the integral central filtration
 
 ```text
@@ -299,6 +322,49 @@ b(g^aF)-b(F)=a                                         (29)
 
 are origin-gauge invariant.
 
+There is a useful general form.  Put
+
+```text
+A_2=F_p[eta,theta]/(eta^p,theta^p)
+```
+
+with its total augmentation filtration.  Let `F!=0`, let `f_d` be its first
+nonzero total graded piece, and let
+
+```text
+T_(a,b)F=(1+eta)^a(1+theta)^b F.
+```
+
+Then direct expansion in degree `d+1` gives
+
+```text
+gr_(d+1)(T_(a,b)F-F)=(a eta+b theta)f_d.              (29a)
+```
+
+Consequently the kernel of the first-normal action is
+`Ann_1(f_d)`, its image is `(A_2)_1 f_d`, and its first-normal parameter
+space is
+
+```text
+(A_2)_1/Ann_1(f_d),                                   (29b)
+```
+
+where `(A_2)_1=span(eta,theta)`.  For the five allocation vectors in
+`(18),(21)` this gives
+
+```text
+             B     P     Q     H     Omega
+normal rank  0     1     1     2       2.             (29c)
+```
+
+Indeed `B` is killed by both linear directions, `P` and `Q` each retain
+only the transverse axis, while `H` and `Omega` have leading piece `1`.
+This translation differential is not an internal Boolean tangent:
+Section 1 proves that the latter vanishes.  For a general `F`, a direction
+killed in `(29a)` may reappear at higher degree.  For these five displayed
+vectors, however, the ranks in `(29c)` also give their exact translation
+stabilizers.
+
 For two axes use `b=(b_1,b_2)`.  Equation `(22)` has
 
 ```text
@@ -313,15 +379,88 @@ b(Phi(Omega))=(0,0),
 b(g^a h^b Phi(Omega))=(a,b).                           (31)
 ```
 
-All `169` translations are distinguished exactly.  Under THM-2806's marked
-gauge
+All `169` translations are distinguished exactly as rooted coefficient
+vectors.  In fact this is a full-orbit fact, not merely a first-order one.
+Writing `N_eta=eta^12` and `N_theta=theta^12`, one has
 
 ```text
-(a,b)->(a+1,b-1),                                      (32)
+Phi(Omega)=(N_eta-1)(N_theta-1),
+Phi(Omega)^(-1)=(N_eta+1)(N_theta+1),                  (31a)
 ```
 
-every absolute coordinate shifts by the same `(1,-1)`, so the relative
-differences `(29)` survive.
+because `N_eta^2=N_theta^2=0`.  Hence `Phi(Omega)` is a unit.  A stabilizer
+equation may be multiplied by its inverse, proving that its `C_13^2`
+translation orbit is regular.  Every nonzero one-dimensional translation
+line is therefore a principal `C_13` torsor.  In the sense of
+THM-2611/2792, a physical basepoint and generator intertwiner would determine
+the map to THM-2813's off-sheet normal torsor uniquely; without a basepoint
+there are thirteen origin choices.
+
+There is also an exact integral shadow of this inverse.  In
+`Z[C_p^2]`, let
+
+```text
+Theta=(N_eta+1)(N_theta+1)
+```
+
+and let `pi_lambda` push coefficients along
+`lambda(a,b)=a+b`.  The coefficients of `Theta` are positive weights
+`1,2,4`.  Since `N^2=pN` over `Z`, direct convolution gives, for every
+`q=(q_1,q_2)`,
+
+```text
+pi_lambda(Theta*T_q Omega)
+ =p(p^2-2)N+delta_(q_1+q_2).                           (31b)
+```
+
+At `p=13` the baseline is `2171N`.  Thus the one exceptional coordinate
+recovers `q_1+q_2` exactly over the integers, not merely modulo thirteen.
+It is the canonical `ell`-forgotten quotient decoder and kills the marked
+gauge direction `(1,-1)` sharply.  By the linear pushforward boundary of
+THM-2814, however, `(31b)` remains sourced in the joint-absent aggregate;
+positive inverse weights do not turn it into common-atom/root-Cech
+physicality.
+
+The normalized coordinate `(27)` requires `J_(0,0)` to be a unit.  Here it
+is literally one.  A physically scaled face `w Omega` may be normalized only
+after retaining a coefficient line whose reduction `w mod13` is nonzero;
+an arbitrary physical scalar must not silently be inverted.
+
+The lawful carrier-address gauge is sharper than merely
+forgetting a common origin.  THM-2763 gives
+
+```text
+(ell,b_1,b_2)~(ell+sW,b_1+s,b_2-s).                   (32)
+```
+
+Choose `z` with `z.W=1`.  The exact gauge-invariant coordinate is
+
+```text
+kappa_z=(b_1-z.ell,b_2+z.ell).                        (32a)
+```
+
+For a one-parameter family
+
+```text
+ell_t=ell_0+tL,        F_t=T_(tq_1,tq_2)F_0,
+```
+
+its observable first-normal increment is
+
+```text
+kappa_z(t)-kappa_z(0)
+ =t(q_1-z.L,q_2+z.L)=t q_eff.                         (32b)
+```
+
+Thus the marked motion `(L,q)=(W,(1,-1))` is **pure gauge**:
+`q_eff=(0,0)`.  If `ell` is forgotten, only `b_1+b_2` descends, and the
+sharp visibility test is `q_1+q_2!=0`.  A faithful rooted Hasse chart does
+not by itself prove that a proposed physical motion is transverse to the
+carrier gauge.  The vector `z` is a chosen section (canonically `e_0` only
+on THM-2763's typed row), so `kappa_z` is not itself section-free.  Also,
+`q_eff=0` only says that this first-Hasse endpoint component is flat; unless
+`(L,q)` is actually a multiple of `(W,(1,-1))`, the full `(ell,b)` quotient
+may still move.
 
 Equations `(30)--(31)` explain the role of `(25)`: `D3/v11=1` is the
 nonzero denominator `J_(0,0)` which permits normalization.  It is not the
@@ -345,38 +484,49 @@ r=y-7 mod13 !=0,                                       (33)
 its normal displacement is `tr`.  Suppose a future physical construction
 provides:
 
-1. one nonzero common raw allocation atom at that same `y`;
+1. a rooted coefficient aggregate `F_0` with nonzero augmentation;
 2. the same endpoint origin, selector, allocation flags, clock, and word;
-3. a lawful equivariant identification of the relevant allocation
-   translation line with an injective line
+3. a lawful address path `ell_t=ell_0+trL` and carrier translation
+   `F_t=T_(trq_1,trq_2)F_0`; and
+4. a nonzero effective transverse vector
 
    ```text
-   iota:F_13 -> F_13^2;
+   q_eff=(q_1-z.L,q_2+z.L)!=0.                         (34)
    ```
 
-4. the covariance
-
-   ```text
-   Phi(Omega_t)=g^(iota_1(tr))h^(iota_2(tr))Phi(Omega_0). (34)
-   ```
-
-Then `(31)` gives the exact decoder
+Choose any linear functional `lambda` on `F_13^2` with
+`lambda(q_eff)=1`.  Then `(32b)` gives the exact decoder
 
 ```text
-beta_normal(Omega_t)
- =r^(-1)iota^(-1)(b(Omega_t)-b(Omega_0))
+beta_normal(F_t)
+ =r^(-1)lambda(kappa_z(F_t,ell_t)-kappa_z(F_0,ell_0))
  =t.                                                    (35)
 ```
 
-At the residue-eight sheet `r=1`, a single atom suffices.
+At the residue-eight sheet `r=1`, one such rooted aggregate suffices.  If
+the address is discarded, `(34)` must be replaced by the stronger visible
+test `q_1+q_2!=0`.
+
+This coefficient-side decoder is not yet a common-atom beta source.
+`Omega` is supported on the 144 joint-absent cells, while the common
+`H`-vertex is not the mixed face.  A physical allocation consequence
+therefore needs either a future non-idempotent common raw face of the kind
+isolated in THM-2814 Branch A, or an explicitly broader two-object sidecar
+which lawfully couples a rooted aggregate to the common component.
+THM-2658 certifies common-component structure, not a nonzero contrast.
+
+Finally, the total-degree augmentation filtration used in `(29a)` is the
+modular convolution filtration.  It is not THM-2806's central `13`-adic
+Rees valuation filtration `(24)`.  A physical bridge must intertwine those
+objects; equality of their displayed scalar residues does not do so.
 
 This is a genuine conditional exit, not a closure.  THM-2806 proves that
 literal allocation has zero endpoint translation, so its currently typed
-family remains at `b=(0,0)`.  THM-2813 supplies an oriented address
-generator, and THM-2806 separately supplies a marked carrier-twist
-generator, but canon contains no physical map identifying them on a common
-off-sheet atom.  The generator is external sidecar data; it is not recovered
-from the norm by `(12)`.
+family remains at `b=(0,0)`.  The known marked direction `(W,(1,-1))` is
+also killed exactly by `(32b)`.  THM-2813 supplies an oriented normal
+generator, but canon contains neither a physical nonzero `q_eff` nor the
+required common raw face/two-object coupling.  The generator is external
+sidecar data; it is not recovered from the norm by `(12)`.
 
 ## 6. Information and failure ledger
 
@@ -385,17 +535,19 @@ from the norm by `(12)`.
 | pointwise Boolean algebra | exact atoms and idempotent masks | every internal tangent vanishes |
 | modular orbit norm `N` | top augmentation class `eta^12` | nonzero vector in `I/I^2` |
 | central Rees profile | valuations `(2,1,1,0)` and scalar unit `(25)` | rooted first-Hasse numerator |
-| rooted raw face `Omega` | denominator and all top provenance classes | a lawful translated physical family |
-| normalized Hasse `b` | every supplied translation `(a,b)` | allocation-to-address line `iota` |
-| THM-2813 normal jet | affine-lift label `t` off the fixed sheet | common physical allocation atom |
+| rooted raw face `Omega` | regular `C_13^2` translation torsor on 144 joint-absent cells | non-idempotent common raw face or broader coupling |
+| normalized Hasse `b` | every supplied rooted translation `(a,b)` | carrier-gauge-effective vector `q_eff` |
+| gauge invariant `kappa_z` | every transverse translation modulo `(W,1,-1)` | lawful physical family with `q_eff!=0` |
+| THM-2813 normal jet | affine-lift label `t` off the fixed sheet | common physical coefficient/coupling and transverse map |
 
 THM-2814 studies projective four-corner holonomy and provenance.  The
 present theorem is nonduplicate: it classifies formal Boolean tangents, the
 norm-to-cotangent obstruction, and the positive rooted Hasse translation
 coordinate.
 
-It does not identify the two cyclic generators, construct `(34)`, produce a
-root/Cech map, exclude a relation row, or prove LRC(14).
+It does not identify the two cyclic generators, construct the family in
+`(34)`, produce a non-idempotent common raw face, give a root/Cech map,
+exclude a relation row, or prove LRC(14).
 
 ## 7. Exact companion
 
@@ -420,8 +572,14 @@ The dependency-free companion:
    cotangent vector at those primes;
 3. reconstructs `(20)--(25)` at `p=13`;
 4. checks the non-idempotent interpolation defect on all thirteen atoms;
-5. computes all `169` translated raw-face Hasse coordinates in `(31)`; and
-6. verifies all `169` relative marked-gauge identities.
+5. computes all `169` translated raw-face Hasse coordinates in `(31)`;
+6. verifies `(29a)` on all `845` allocation-state/translation pairs, the
+   rank list `(29c)`;
+7. checks the unit inverse `(31a)`, regular `169`-element orbit, and all
+   `2,197` entries of the integral push profiles `(31b)`;
+8. exhausts the `28,561` THM-2763 gauge-invariant triples and `28,561`
+   effective-family instances; and
+9. verifies the pure-gauge and forgotten-address visibility boundaries.
 
 It uses explicit exception gates, no Python `assert`, no floating point, and
 no scratch dependency.

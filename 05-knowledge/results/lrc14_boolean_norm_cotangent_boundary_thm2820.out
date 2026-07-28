@@ -8,5 +8,10 @@ allocation_augmentation_degrees=(24, 12, 12, 0); mobius_degrees=((12,12),(0,12),
 central=(169, 13, 13, 1); p13_valuations=(2, 1, 1, 0); hadamard=(196, 168, 168, 144); D3_over_H_mod13=1
 nonidempotent_interpolation_defect_atoms=12/13
 normalized_raw_face_barycenters=169/169; marked_gauge_relative_checks=169; b(g^a h^b Omega)=(a,b)
-scope=norm/Rees data alone retain no nonzero jet; a rooted translated raw face has an exact affine Hasse coordinate, but a lawful common off-sheet physical translation remains required
+first_normal_ranks=(('B', 0), ('P', 1), ('Q', 1), ('H', 2), ('Omega', 2)); first_normal_translation_checks=845
+omega_unit_inverse_checks=1; omega_translation_orbit=regular_169
+carrier_gauge_invariant_checks=28561; effective_family_checks=28561; effective_transverse_nonzero=2184/2197
+marked_(L,q)=(W,(1,-1))_is_pure_gauge=yes; forgotten_address_visible=156/169; test=q1+q2
+integral_inverse_push_checks=2197; pushed_profile=2171*N+delta_(q1+q2); theta_weights=(1, 2, 4)
+scope=norm/Rees data alone retain no nonzero jet; a rooted translated aggregate has an exact affine Hasse coordinate, but the raw mixed face is joint-absent and a lawful transverse physical translation remains required
 ALL EXACT CHECKS PASSED

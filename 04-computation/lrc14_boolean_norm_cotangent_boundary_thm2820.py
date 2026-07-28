@@ -136,6 +136,214 @@ def mul_bivariate(left, right, p):
     return {key: value for key, value in out.items() if value}
 
 
+def add_bivariate(left, right, p):
+    out = dict(left)
+    for key, value in right.items():
+        out[key] = (out.get(key, 0) + value) % p
+        if out[key] == 0:
+            del out[key]
+    return out
+
+
+def scale_bivariate(poly, scalar, p):
+    return {
+        key: scalar * value % p
+        for key, value in poly.items()
+        if scalar * value % p
+    }
+
+
+def translate_bivariate(poly, a, b, p):
+    translate = {
+        (i, j): comb(a, i) * comb(b, j) % p
+        for i in range(a + 1)
+        for j in range(b + 1)
+    }
+    return mul_bivariate(poly, translate, p)
+
+
+def homogeneous_piece(poly, degree):
+    return {
+        key: value
+        for key, value in poly.items()
+        if sum(key) == degree and value
+    }
+
+
+def linear_times_piece(piece, a, b, p):
+    linear = {}
+    if a:
+        linear[(1, 0)] = a
+    if b:
+        linear[(0, 1)] = b
+    return mul_bivariate(linear, piece, p)
+
+
+def vector_rank_mod_p(vectors, keys, p):
+    matrix = [[vector.get(key, 0) % p for key in keys] for vector in vectors]
+    rank = 0
+    column = 0
+    while rank < len(matrix) and column < len(keys):
+        pivot = next(
+            (row for row in range(rank, len(matrix)) if matrix[row][column]),
+            None,
+        )
+        if pivot is None:
+            column += 1
+            continue
+        matrix[rank], matrix[pivot] = matrix[pivot], matrix[rank]
+        inverse = pow(matrix[rank][column], -1, p)
+        matrix[rank] = [inverse * value % p for value in matrix[rank]]
+        for row in range(len(matrix)):
+            if row == rank or matrix[row][column] == 0:
+                continue
+            factor = matrix[row][column]
+            matrix[row] = [
+                (left - factor * right) % p
+                for left, right in zip(matrix[row], matrix[rank])
+            ]
+        rank += 1
+        column += 1
+    return rank
+
+
+def first_normal_translation_checks(polynomials, p):
+    ranks = {}
+    identity_checks = 0
+    for name, poly in polynomials.items():
+        degree = min(sum(key) for key in poly)
+        leading = homogeneous_piece(poly, degree)
+        basis_images = []
+        for a, b in ((1, 0), (0, 1)):
+            difference = add_bivariate(
+                translate_bivariate(poly, a, b, p),
+                scale_bivariate(poly, -1, p),
+                p,
+            )
+            basis_images.append(homogeneous_piece(difference, degree + 1))
+        keys = tuple(
+            (i, degree + 1 - i)
+            for i in range(p)
+            if 0 <= degree + 1 - i < p
+        )
+        ranks[name] = vector_rank_mod_p(basis_images, keys, p)
+
+        for a in range(p):
+            for b in range(p):
+                difference = add_bivariate(
+                    translate_bivariate(poly, a, b, p),
+                    scale_bivariate(poly, -1, p),
+                    p,
+                )
+                actual = homogeneous_piece(difference, degree + 1)
+                expected = linear_times_piece(leading, a, b, p)
+                require(
+                    actual == expected,
+                    f"first-normal translation identity drift for {name}, {(a, b)}",
+                )
+                identity_checks += 1
+    require(
+        ranks == {"B": 0, "P": 1, "Q": 1, "H": 2, "Omega": 2},
+        f"first-normal rank classification drift: {ranks}",
+    )
+    return tuple(ranks.items()), identity_checks
+
+
+def carrier_gauge_checks(p):
+    # THM-2763 has (ell,a,b)~(ell+sW,a+s,b-s).  After choosing
+    # z.W=1, only z.ell is needed to verify the invariant
+    # kappa_z=(a-z.ell,b+z.ell).
+    invariant_checks = 0
+    for ell_dot in range(p):
+        for a in range(p):
+            for b in range(p):
+                kappa = ((a - ell_dot) % p, (b + ell_dot) % p)
+                for s in range(p):
+                    gauged = (
+                        (a + s - (ell_dot + s)) % p,
+                        (b - s + ell_dot + s) % p,
+                    )
+                    require(gauged == kappa, "carrier gauge invariant drift")
+                    invariant_checks += 1
+
+    effective_nonzero = 0
+    family_checks = 0
+    for l_dot in range(p):
+        for q1 in range(p):
+            for q2 in range(p):
+                effective = ((q1 - l_dot) % p, (q2 + l_dot) % p)
+                if effective != (0, 0):
+                    effective_nonzero += 1
+                for t in range(p):
+                    observed = (
+                        (t * q1 - t * l_dot) % p,
+                        (t * q2 + t * l_dot) % p,
+                    )
+                    expected = (
+                        t * effective[0] % p,
+                        t * effective[1] % p,
+                    )
+                    require(observed == expected, "effective transverse vector drift")
+                    family_checks += 1
+
+    pure_gauge = ((1 - 1) % p, ((-1) + 1) % p)
+    require(pure_gauge == (0, 0), "marked pure gauge unexpectedly visible")
+    forgotten_visible = sum(
+        (q1 + q2) % p != 0
+        for q1 in range(p)
+        for q2 in range(p)
+    )
+    require(forgotten_visible == p * (p - 1), "forgotten-address test drift")
+    return (
+        invariant_checks,
+        family_checks,
+        effective_nonzero,
+        p**3,
+        forgotten_visible,
+        p**2,
+    )
+
+
+def integral_inverse_push_checks(p):
+    # In Z[C_p^2], Omega=(N-1)x(N-1) and the positive lift of its
+    # characteristic-p inverse is Theta=(N+1)x(N+1).  Convolve after a
+    # translate, then push along lambda(i,j)=i+j.
+    omega = {
+        (i, j): int(i != 0 and j != 0)
+        for i in range(p)
+        for j in range(p)
+    }
+    theta = {
+        (i, j): (1 + int(i == 0)) * (1 + int(j == 0))
+        for i in range(p)
+        for j in range(p)
+    }
+    baseline = p * (p * p - 2)
+    checks = 0
+    for a in range(p):
+        for b in range(p):
+            translated = {
+                ((i + a) % p, (j + b) % p): value
+                for (i, j), value in omega.items()
+            }
+            convolution = {(i, j): 0 for i in range(p) for j in range(p)}
+            for (i, j), left in theta.items():
+                for (k, ell), right in translated.items():
+                    convolution[((i + k) % p, (j + ell) % p)] += left * right
+            pushed = [0] * p
+            for (i, j), value in convolution.items():
+                pushed[(i + j) % p] += value
+            expected = [baseline] * p
+            expected[(a + b) % p] += 1
+            require(
+                pushed == expected,
+                f"integral inverse/push profile drift at {(a, b)}",
+            )
+            checks += p
+    require(set(theta.values()) == {1, 2, 4}, "positive inverse weights drift")
+    return checks, baseline, tuple(sorted(set(theta.values())))
+
+
 def allocation_square_p13():
     p = 13
     # Under the coefficient-vector identification with F_p[C_p x C_p],
@@ -168,6 +376,26 @@ def allocation_square_p13():
         not any(i + j == 1 for i, j in omega),
         "top-norm allocation unexpectedly acquired a first jet",
     )
+    omega_inverse = {
+        (0, 0): 1,
+        (p - 1, 0): 1,
+        (0, p - 1): 1,
+        (p - 1, p - 1): 1,
+    }
+    require(
+        mul_bivariate(omega, omega_inverse, p) == {(0, 0): 1},
+        "raw face unit inverse drift",
+    )
+    first_normal_ranks, first_normal_checks = first_normal_translation_checks(
+        {
+            "B": {(p - 1, p - 1): 1},
+            "P": {(0, p - 1): 1},
+            "Q": {(p - 1, 0): 1},
+            "H": {(0, 0): 1},
+            "Omega": omega,
+        },
+        p,
+    )
 
     # Although N alone has zero augmentation and no normalized first
     # coordinate, the rooted Mobius face has J_00=1.  THM-2201's triangular
@@ -176,12 +404,7 @@ def allocation_square_p13():
     barycenters = {}
     for a in range(p):
         for b in range(p):
-            translate = {
-                (i, j): comb(a, i) * comb(b, j) % p
-                for i in range(a + 1)
-                for j in range(b + 1)
-            }
-            shifted = mul_bivariate(omega, translate, p)
+            shifted = translate_bivariate(omega, a, b, p)
             j00 = shifted.get((0, 0), 0)
             j10 = shifted.get((1, 0), 0)
             j01 = shifted.get((0, 1), 0)
@@ -250,6 +473,9 @@ def allocation_square_p13():
         sum(value != 0 for value in first_order_defect),
         len(barycenters),
         gauge_difference_checks,
+        first_normal_ranks,
+        first_normal_checks,
+        1,
     )
 
 
@@ -270,7 +496,21 @@ def main():
         interpolation_defect,
         barycenter_count,
         gauge_difference_checks,
+        first_normal_ranks,
+        first_normal_checks,
+        omega_unit_checks,
     ) = allocation_square_p13()
+    (
+        carrier_invariant_checks,
+        carrier_family_checks,
+        effective_nonzero,
+        effective_total,
+        forgotten_visible,
+        forgotten_total,
+    ) = carrier_gauge_checks(13)
+    inverse_push_checks, inverse_push_baseline, theta_weights = (
+        integral_inverse_push_checks(13)
+    )
 
     p13_norm = next(row for row in norm_rows if row[0] == 13)
     require(p13_norm[1] == 12, "p13 automorphism count drift")
@@ -303,9 +543,33 @@ def main():
         "b(g^a h^b Omega)=(a,b)"
     )
     print(
+        f"first_normal_ranks={first_normal_ranks}; "
+        f"first_normal_translation_checks={first_normal_checks}"
+    )
+    print(
+        f"omega_unit_inverse_checks={omega_unit_checks}; "
+        "omega_translation_orbit=regular_169"
+    )
+    print(
+        f"carrier_gauge_invariant_checks={carrier_invariant_checks}; "
+        f"effective_family_checks={carrier_family_checks}; "
+        f"effective_transverse_nonzero={effective_nonzero}/{effective_total}"
+    )
+    print(
+        "marked_(L,q)=(W,(1,-1))_is_pure_gauge=yes; "
+        f"forgotten_address_visible={forgotten_visible}/{forgotten_total}; "
+        "test=q1+q2"
+    )
+    print(
+        f"integral_inverse_push_checks={inverse_push_checks}; "
+        f"pushed_profile={inverse_push_baseline}*N+delta_(q1+q2); "
+        f"theta_weights={theta_weights}"
+    )
+    print(
         "scope=norm/Rees data alone retain no nonzero jet; a rooted translated "
-        "raw face has an exact affine Hasse coordinate, but a lawful common "
-        "off-sheet physical translation remains required"
+        "aggregate has an exact affine Hasse coordinate, but the raw mixed "
+        "face is joint-absent and a lawful transverse physical translation "
+        "remains required"
     )
     print("ALL EXACT CHECKS PASSED")
 
