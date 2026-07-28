@@ -166,6 +166,11 @@ The affine response is the involution-invariant rational function
 R_aff=R_25/h^25.                                      (15)
 ```
 
+Indeed THM-2129's exact parity is
+`R_k(d,-q,s)=(-1)^(k+1)R_k(d,q,s)`.  Multiplication by
+`h^(22-k)` makes every summand of `R_25` anti-invariant under `(11)`, as is
+`h^25`; their quotient therefore descends to the coarse curve.
+
 Restricting the weight-`6r/g` face of `(14)` by the first equation of `(8)`
 gives
 
