@@ -29,7 +29,7 @@ def require(condition, message):
 DEPENDENCY = COMP / "lrc14_root_zero_overlap_clutch_20260728.py"
 require(
     hashlib.sha256(DEPENDENCY.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
-    == "9f9f4b24193d96125d7d00add743b53601f1b711366a8ea55d48bae5df4db17a",
+    == "e10fa7c9a5a238461ef422ea314dc334f7e65ec1787cf65d4e4bea12b96aefb8",
     "root-zero clutch dependency changed",
 )
 

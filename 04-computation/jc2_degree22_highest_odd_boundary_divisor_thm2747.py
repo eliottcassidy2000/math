@@ -185,7 +185,7 @@ def main() -> None:
     print("physical_escape=rational_one_ended_component_of_weighted_degree_1_2_or_6")
     print("r19_r21=P_infty_one_end_excluded_by_global_regular_q_aff")
     print("ramification_boundary=m-1=e*pole_order;pure_power_composition")
-    print("scope=REDUCIBLE_LOW_DEGREE_FACTORIZATION_REMAINS_NOT_JC2")
+    print("scope=ABSTRACT_ATLAS;PHYSICAL_COMPONENTS_CLOSED_BY_THM2745;NOT_JC2")
     print("PASS")
 
 

@@ -2,39 +2,42 @@
 id: THM-2747
 title: "Highest-odd reduced boundary divisor and one-ended factorization atlas"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
-  Every member of the full split degree-22 Faber family with a nonzero odd
-  seed is reduced.  Its normalized infinity divisor consists of five fixed
-  transverse residual points plus 3*gcd(22-j,6) G2 points.  The third
-  response has a pole at every one.  Therefore a physical image component
-  must be rational, have exactly one infinity place, and have weighted degree
-  1, 2, or 6.  Its response composition is forced to be monomial; in the two
-  lowest odd rows the G2 one-ended option is impossible.  The remaining
-  low-degree reducible factorization locus, JC(2), and DC(2) remain open.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every complete-
+  intersection scheme in the full split degree-22 Faber family with a
+  nonzero odd seed is reduced.  Its normalized infinity divisor consists of
+  five fixed transverse residual points plus 3*gcd(22-j,6) G2 points, and the
+  third response has a pole at every one.  Any hypothetical physical image
+  component is rational, one-ended, and of weighted degree 1, 2, or 6; its
+  response composition is pure-power, and the two lowest odd rows cannot use
+  a G2 end.  THM-2745 separately closes all such physical components.  The
+  all-even zero-first-flux edge, JC(2), and DC(2) remain open.
 source: odd-faber-component-boundary-scout-2026-07-28
+audit: thm2694-full-lift-fibre-scout-2026-07-28 (independent scheme/divisor/one-ended audit, exact normal/-O replay, and hash verification: ACCEPT)
 depends_on:
   - THM-2719-full-split-odd-faber-generic-normalization-genus-four-hundred-nineteen
   - THM-2723-split-exact-square-prefix-rational-primitive-pole-capacity
   - THM-2741-highest-odd-faber-response-pole-capacity-closure
 related:
-  - THM-2745-single-response-branch-ramification-divisibility-boundary
+  - THM-2745-highest-odd-faber-componentwise-exact-prefix-closure
+  - THM-2748-one-response-pole-monomial-composition-boundary
 script: 04-computation/jc2_degree22_highest_odd_boundary_divisor_thm2747.py
 output: 05-knowledge/results/jc2_degree22_highest_odd_boundary_divisor_thm2747.out
-script_sha256: f7fb13463f2dd23a54ff22127c935d7c724a88ec3b1deace7c9ba72381e2a88e
-output_sha256: 1b60bcce6a2e8cc8b448b3ec446aad20d4d8b3997d1fe9c4bc72723aed13825b
+script_sha256: 482d14f3bac9ac46586c2b950fc777f458d0a2ea7d5e9b386a26217b4af21aa3
+output_sha256: 0bb604be2f6b9c57756ee0b58171f000fbfc5911d1a73951dec23964278d3411
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2747 -- highest-odd reduced boundary divisor and one-ended factorization atlas
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-THM-2741 excludes every geometrically integral highest-odd response member.
-The apparent nonreduced escape is not real: the fixed top intersection and
-the odd Newton germs make every component generically reduced.  The genuine
-remaining boundary is much smaller.  A physical trajectory can land only on
-a rational component with one response pole, hence on one weighted component
-of degree `1`, `2`, or `6`.
+THM-2745 excludes every physical highest-odd response component.  The present
+theorem records the stronger scheme-theoretic atlas behind that closure.  The
+apparent nonreduced escape is not real: the fixed top intersection and the
+odd Newton germs make every component generically reduced.  Even before the
+exact-prefix contradiction is used, a hypothetical physical trajectory can
+land only on a rational component with one response pole, hence on one
+weighted component of degree `1`, `2`, or `6`.
 
 ## 1. Statement
 
@@ -295,23 +298,18 @@ and vanish at that point, hence would be identically zero.  But its local
 tangent law is `q=alpha s+...` with `alpha!=0`, a contradiction.  This
 proves the final assertion of Section 1.
 
-## 7. Scope and next finite target
+## 7. Scope and relation to the physical closure
 
-This theorem removes nonreduced highest-odd members and converts every
-reducible escape into a finite low-degree factorization problem.  It does
-not prove that the degree-`1`, degree-`2`, or degree-`6` loci are empty.  In
-particular, the divisor partition `(17)` and the abstract pure-power
-composition `(21)` show exactly why another global genus or pole count cannot
-finish the job.
+The divisor partition `(17)` and pure-power composition `(21)` are a sharp
+abstract stopping boundary after the polynomial exact-prefix lift equations
+are forgotten: divisor and pole counting alone permit degree-`1`, degree-`2`,
+and degree-`6` singleton components.  THM-2745 retains those lift equations
+and excludes every such physical component.  Thus this theorem is a reusable
+scheme/divisor atlas, not a competing physical closure route.
 
-The next decisive computation is coefficient-first: insert a general
-weighted rational parametrization of degree `1`, `2`, or `6` into `(1)`,
-retain the prescribed residual or G2 leading germ, and eliminate its
-coefficients together with `(21)`.  This uses the restricted Faber columns,
-not merely the ambient complete-intersection type.
-
-The theorem does not justify the split degree-22 gauge for an arbitrary
-Keller pair and does not prove `JC(2)` or `DC(2)`.
+It does not justify the split degree-22 gauge for an arbitrary Keller pair.
+The all-even zero-first-flux edge of the chosen-sheet normal form remains, and
+neither `JC(2)` nor `DC(2)` follows.
 
 ## 8. Exact companion
 

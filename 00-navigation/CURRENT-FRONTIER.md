@@ -366,11 +366,10 @@ Classify profiles under support operations; study analytic continuation and auto
   integral `2`-adic raising remain.  Split genera are generically `89/419`
   (THM-2704/2719); THM-2713 gives the `3,5,23,46` power gate.  THM-2723's
   one-pole response bound lets THM-2725 close even nonzero flux and
-  THM-2726/2741 close integral odd members.  THM-2745 computes the complete
-  infinity divisor and uses the finite-source-pole exact-prefix equations to
-  close every odd member componentwise, including reducible and nonreduced
-  members.  Only the all-even zero-flux edge remains in this chosen-sheet
-  degree-22 family.
+  THM-2726/2741 close integral odd members.  THM-2747 proves the whole odd
+  complete intersection reduced and gives its exact `18+5` divisor and sharp
+  degree-`1/2/6` one-ended atlas; THM-2745 uses the exact prefix to exclude
+  every such component.  Only the all-even zero-flux edge remains.
   THM-2206 blocks field-valued `C_2` Hasse repair; THM-2446's six-bracket
   shortcut is refuted.  `JC(2)` and `DC(2)` are open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
