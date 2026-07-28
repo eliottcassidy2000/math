@@ -1,5 +1,5 @@
 ---
-id: THM-2640
+id: THM-2643
 title: "Degree-five/six Keller stabilizer gate and regular block-quotient census"
 status: RESERVED / UNPROVED EMPTY STUB
 source: root-2026-07-28-keller-stabilizer-census
@@ -8,7 +8,7 @@ related:
   - THM-2633-derangement-character-obstruction-and-d4-keller-exclusion
 ---
 
-# THM-2640 -- reserved namespace
+# THM-2643 -- reserved namespace
 
 **RESERVED / UNPROVED EMPTY STUB.**  No mathematical claim is made here.
 The intended target is the exact degree-five and degree-six transitive-group
