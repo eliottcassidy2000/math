@@ -20,39 +20,19 @@
    later multiple can supply a missing residue before pruning it.
 10. **Local six-comb returns are saturated.** A charge without phase,
     location, endpoint, or child data repeats THM-1252--1274 extremals.
-11. **HYP-8815 is not a disproof characterization.** Primitive Cover14,
-    `M<1/14`, and non-AP deletion are necessary; near-AP, anti-golden, CF, and
-    autocorrelation claims remain heuristic. THM-731/2048 only prune.
-12. **Complete local coordinates need not be global carriers.** THM-2043/2050
-    require owner height and a global first-exit/magnitude/gluing sidecar.
-13. **The BONF5 middle is closed; relation branches are not.** THM-2051 forces
-    a support-`3..5`, height-`2^20` relation. It does not classify its
-    hyperplanes or the AP boundary.
-14. **A bad deck, disk, or Farey ray means uncertified—not unsafe.** THM-2053/
-    2055/2056 are sufficient gates. Keep basis, non-hull runners, tie owners,
-    clocks, pair sums, and endpoints. No Heegner form (MISTAKE-229).
-15. **THM-2057 closes two planes; THM-2059 joins packets.** CRT zero rejects
-    one clock grid, not the row; no uniform selector follows.
-16. **THM-2058 is a carrier, not LRC(14).** It gives reduced-order packets,
-    labelled transport, trichotomy, and one coprime interval per fixed cell;
-    it does not discharge that interval.
-17. **THM-2060/2064 give capacity, not signed ownership.** The sheet order is
-    `a/gcd(a,w)` and the strict union bound is sufficient. Equality `(2,2)` is
-    the dyadic residual, not evidence of failure.
-18. **THM-2061 is a reduction, not an empty-seam theorem.** Closed core safety
-    and open tail teeth are load-bearing; `max(C)<=19` leaves the signed seam.
-19. **THM-2062 filters heredity, not phase height.** A fixed `N` wheel may die
-    at `p=2`, while global primitive-direction density stays positive.
-20. **THM-2065 is PROVED only as a reduction.** Circuit-free strict residuals
-    become finitely many rays; persistent height-`2^20` marked circuits remain.
-21. **THM-2066 is a bounded closure.** Its owner-word atlas closes primitive
-    divisor-complete eleven-cores through maximum `24`, not unbounded cores or
-    every lower-cardinality terminal.
-22. **THM-2068 is menu-relative.** Seven clocks are minimum inside `15..34`;
-    this is not a universal owner-clock bank.
-23. **No fixed finite bank is uniform.** THM-2072's common-multiple core proves
-    sensor blindness, not mathematical hardness. Its antipodal/quarter-fan
-    certificates close only their stated subclasses.
+11. **HYP-8815 is not a disproof characterization.** Primitive Cover14, `M<1/14`, and non-AP deletion are necessary; near-AP, anti-golden, CF, and autocorrelation claims remain heuristic. THM-731/2048 only prune.
+12. **Complete local coordinates need not be global carriers.** THM-2043/2050 require owner height and a global first-exit/magnitude/gluing sidecar.
+13. **The BONF5 middle is closed; relation branches are not.** THM-2051 forces a support-`3..5`, height-`2^20` relation; it does not classify its hyperplanes or the AP boundary.
+14. **A bad deck, disk, or Farey ray means uncertified—not unsafe.** THM-2053/2055/2056 are sufficient gates. Keep basis, non-hull runners, tie owners, clocks, pair sums, and endpoints. No Heegner form (MISTAKE-229).
+15. **THM-2057 closes two planes; THM-2059 joins packets.** CRT zero rejects one clock grid, not the row; no uniform selector follows.
+16. **THM-2058 is a carrier, not LRC(14).** It gives reduced-order packets, labelled transport, trichotomy, and one coprime interval per fixed cell; it does not discharge that interval.
+17. **THM-2060/2064 give capacity, not signed ownership.** The sheet order is `a/gcd(a,w)` and the strict union bound is sufficient. Equality `(2,2)` is the dyadic residual, not evidence of failure.
+18. **THM-2061 is a reduction, not an empty-seam theorem.** Closed core safety and open tail teeth are load-bearing; `max(C)<=19` leaves the signed seam.
+19. **THM-2062 filters heredity, not phase height.** A fixed `N` wheel may die at `p=2`, while global primitive-direction density stays positive.
+20. **THM-2065 is PROVED only as a reduction.** Circuit-free strict residuals become finitely many rays; persistent height-`2^20` marked circuits remain.
+21. **THM-2066 is a bounded closure.** Its owner-word atlas closes primitive divisor-complete eleven-cores through maximum `24`, not unbounded cores or every lower-cardinality terminal.
+22. **THM-2068 is menu-relative.** Seven clocks are minimum inside `15..34`; this is not a universal owner-clock bank.
+23. **No fixed finite bank is uniform.** THM-2072's common-multiple core proves sensor blindness, not mathematical hardness; its antipodal/quarter-fan certificates close only their stated subclasses.
 24. **The dyadic tower is lossless but still open.** THM-2073's internal
     depth-eight bound is superseded: THM-2075/2077 retain terminal components,
     addresses, endpoint owners, and outer tails; THM-2078 forces maximum
@@ -87,6 +67,7 @@
     THM-2187/2193 force rank seven; THM-2196/2199 force rank twelve but do not enumerate its finite box. THM-2203 closes scalar transport only in dyadic rank eight. THM-2250/2257 empty final depth-three `(3,4,5)`, leaving exactly `165` first-depth-one rows. THM-2349 now puts all `165` on one delayed marked-current/inverse-correlation frontier, but excludes no row; cross-axis noncancellation, all-unit visibility, and phase transport remain. None proves LRC(14).
 27d. **Refined graph activity is not coarse target landing.** MISTAKE-261: THM-2356 reconstructs each planar graph only up to its own phase, while the THM-2334 target is the cross-graph row sum. Its zero-only kernel has dimension `28,393`; vertical tensors form only the `169`-dimensional refined-zero subspace.
     THM-2363 is a derived coefficient detector with `D_graph >= E_coarse/169`, not a converse or a lawful physical probe. MISTAKE-260 separately forbids recovering an anchored nonzero-mode sum from an unordered inverse-root count.
+27e. **A matrix-labelled clock path is not chronology.** THM-2670's edge means one common-`x` event exists; Boolean products use unrelated witnesses in physically disjoint owner-clock strata. Constant-step zeros come from a zero factor, while varying Hamilton cycles survive. Construct a typed chart handoff or boundary fibre product before holonomy; direct intersection is empty and equivariant closure destroys the obstruction.
 
 ## NC2 / GMC
 

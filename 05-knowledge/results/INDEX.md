@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `lrc14_successor_private_sharp_graph_clock_collapse.py`,
+  `lrc14_guard_cospan_successor_private_clock_collapse.py`, and
+  `lrc14_clock_graph_hamiltonian_audit.py` -> matching `.out` files
+  [THM-2670 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  The exact common-`x` predecessor/delayed-digit bank has 72/72 zero
+  constant-step products only because each cycle hits a zero clock matrix.
+  Its generic clock graph instead has 92 Hamilton cycles; every formal
+  safe/free cycle services all 13 state displacements, while all three-edge
+  danger products vanish by the five-arrow law `U^3=0`.  No positive edge is
+  translation-equivariant, and THM-2624 makes literal cross-clock intersection
+  empty: the missing datum is a typed chart handoff or shared-boundary fibre
+  product.  Script/output hash pairs begin `f49eb399/b43715e7`,
+  `aa279eba/9884d64d`, and `04887ace/b30ee791`.
 - `jacobian_s4_resolvent_quasietale_hostile.py` -> matching `.out`
   [THM-2655 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   THM-2633 makes every semiregular normal Keller monodromy kernel return as
@@ -3047,6 +3060,7 @@ optimized runs byte-match the stored transcript.
 | `lrc14_endpoint_anchored_rainbow_selector_moduli_thm2656.out` | [VERIFIED-EXACT; THM-2656 CANDIDATE] | Endpoint reconstruction yields an orientation-independent individually reflection-equivariant rainbow atlas with the forced midpoint as its unique common edge and 21 retained edges; a separate 12-template bank gives edge-disjoint charts with 22 retained edges. Both have `1^4 2^9`, all 12 charged modes, and energy `36/169`, proving overlap is selector data rather than a relation invariant. | deep-energy-audit-2026-07-28 |
 | `lrc14_half_tooth_unit_section_thm2635.out` | [VERIFIED-EXACT; THM-2635 AUDITED] | Full globally primitive split of every later probe tooth: content remains 26, all 2,299,752 digitwise half-partitions hold, and the canonical left half of `r=-h-1` has uniform units at `h=3,8,10`; only `h=3` also gives the reversed adjacent-digit closure `(j,h)=(4,3)`. The affine graph remains imposed and the endpoint current/semantic-root cospan remains open. | endpoint-pair-audit/root-long-frontiers-2026-07-28 |
 | `lrc14_predecessor_carry_private_root_atlas_thm2640.out` | [VERIFIED-EXACT; THM-2640 AUDITED] | Exact predecessor-carry descent, all 1,415,232 partition identities and 18,398,016 singleton-law tests (1,415,232 possible on-graph slots plus 16,982,784 off-graph zeros), complete private-unit atlas on all 84 cells, fixed digit-edge graph census, uniformly charged carry sum, and the physical near-lift/formal slope-seven clutch whose canonical small representative has speed-one guard defect `14/4826809`. | carry-transition-cell-2026-07-28 |
+| `lrc14_successor_private_sharp_graph_clock_collapse.out` + `lrc14_guard_cospan_successor_private_clock_collapse.out` + `lrc14_clock_graph_hamiltonian_audit.out` | [VERIFIED-EXACT; THM-2670 AUDITED] | Exact predecessor/delayed-digit common-`x` incidence atlas; all 72 constant-step products hit a zero matrix, the generic 32-arrow clock graph has 92 Hamilton cycles, safe/free formal cycles service all 13 displacements, danger satisfies `U^3=0`, and physical composition still requires a typed handoff between disjoint clock strata. | root-2026-07-28 |
 | `lrc14_odometer_carry_root_lift_cech_thm2657.out` | [VERIFIED-EXACT; THM-2657 CANDIDATE] | Exhaustive classification of all `13^6` physical carry/root lifts, the nonsplit `C_(13^5) -> C_(13^6) -> C_13` extension, the `78/91` wrap-cocycle census and nonzero class `7`, and the unique lawful-phase canonical speed. | carry-transition-cell-2026-07-28 |
 | `lrc14_predecessor_carry_private_root_atlas_thm2640.out` | [VERIFIED-EXACT; THM-2640 AUDITED] | Exact predecessor-carry descent, all 1,415,232 partition identities and 18,398,016 singleton exclusions, complete private-unit atlas on all 84 cells, fixed digit-edge graph census, uniformly charged carry sum, and the physical slope-seven clutch whose speed-one guard defect has measure `14/4826809`. | carry-transition-cell-2026-07-28 |
 | `lrc14_odometer_carry_root_lift_cech_thm2657.out` | [AUDITED; VERIFIED-EXACT; THM-2657] | Exhaustive classification of all `13^6` physical carry/root lifts, the nonsplit `C_(13^5) -> C_(13^6) -> C_13` extension, the `78/91` wrap-cocycle census and nonzero class `7`, and the unique lawful-phase canonical speed. Independently rederived and byte-checked under normal and optimized Python. | carry-transition-cell-2026-07-28; root-long-frontiers-2026-07-28 |
