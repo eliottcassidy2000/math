@@ -1,0 +1,85 @@
+LRC14 PAIRED-PIVOT / FULL-PACKET AGGREGATION EXACT AUDIT
+status=FINITE-EXACT moving-character and pivot-covariance result; endpoint current remains open
+half_cycle_universe=2 THM2698 event cylinders x 4 pivots x 13 shifts
+packet_universe=all n in Z/(13^6), filtered by THM2707 private-unit residues plus literal rail and present support; paired factors then inserted on the whole inherited open I
+HALF_CYCLE
+event=0 supports={27: (0, 3, 4, 5, 8, 9, 10, 11, 12), 40: (0, 1, 2, 3, 4, 5, 8, 9, 10, 11), 53: (0, 1, 2, 3, 4, 5, 8, 11, 12), 66: (0, 1, 2, 3, 4, 5, 8, 9, 10, 11, 12)}
+event=0 support_rank=4 moving_fourier_rank=4 pivot_constant_kernel=(4, 0)
+event=0 equal_pivot_profile=(4, 3, 3, 4, 4, 4, 0, 0, 4, 3, 3, 4, 3) constant=False
+event=1 supports={27: (1, 2, 3, 4, 7, 8, 9, 10, 11), 40: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 53: (1, 2, 3, 6, 7, 8, 9, 10, 11), 66: (1, 2, 3, 4, 5, 6, 7, 8, 9)}
+event=1 support_rank=4 moving_fourier_rank=4 pivot_constant_kernel=(4, 0)
+event=1 equal_pivot_profile=(0, 4, 4, 4, 3, 2, 3, 4, 4, 4, 3, 2, 0) constant=False
+eight_row_support_rank=8 eight_row_moving_rank=8
+fixed_pivot_two_event_concat_rank=4
+joint_pivot_constant_rank=4 kernel_dimension=0
+capacity=(min,sum,product)={27: (9, 18, 81), 40: (10, 20, 100), 53: (9, 18, 81), 66: (9, 20, 99)}
+unique_lexicographic_maximin_pivot=40
+event_swap_AGL_symmetries=()
+paired_object_fixed_AGL_automorphisms=((1, 0, (27, 40, 53, 66)),)
+paired_object_swap_AGL_automorphisms=()
+D13_support_orbit_count=7 orbit_size_multiset=(1, 1, 1, 1, 1, 1, 2)
+AGL1_support_orbit_count=6 orbit_size_multiset=(1, 1, 1, 1, 2, 2)
+THM2707_FULL_PACKET_ORBIT
+residue_counts=((0, 304), (1, 305), (2, 304), (3, 305), (4, 304), (5, 305), (6, 304), (9, 301), (10, 304), (11, 305), (12, 305)) atom_endpoints=304 transit_packets=3042 atom_to_transit_edges=924768
+addresses=3346 inserted_factors_constant_on_I=True minimum_wall_radius_ratio=56447
+all_pivot_supports_nonempty_proper=True
+support_size_census={27: Counter({10: 1641, 9: 965, 11: 719, 12: 21}), 40: Counter({10: 1677, 9: 1131, 11: 538}), 53: Counter({10: 1708, 9: 1121, 11: 517}), 66: Counter({10: 1555, 9: 1335, 11: 456})}
+per_address_equal_pivot_constant_profiles=0
+argmax_pivot_census=Counter({(27, 40, 53, 66): 1375, (27,): 467, (66,): 394, (27, 40, 53): 265, (53,): 244, (27, 40): 164, (27, 66): 143, (40,): 122, (40, 53, 66): 99, (53, 66): 31, (27, 53, 66): 21, (40, 53): 21})
+size_signature_census=Counter({(10, 10, 10, 10): 764, (9, 9, 9, 9): 504, (11, 10, 9, 9): 244, (10, 10, 10, 9): 183, (9, 9, 9, 10): 129, (10, 9, 9, 10): 122, (10, 9, 10, 11): 122, (10, 10, 11, 10): 122, (11, 11, 10, 9): 122, (9, 9, 10, 11): 122, (9, 10, 11, 10): 122, (10, 11, 10, 9): 122, (10, 9, 9, 9): 122, (11, 11, 11, 11): 107, (11, 11, 11, 10): 82, (9, 10, 10, 10): 78, (11, 11, 10, 10): 42, (11, 10, 10, 10): 42, (11, 10, 10, 9): 38, (11, 10, 10, 11): 21, (11, 10, 11, 11): 21, (12, 11, 10, 10): 21, (10, 10, 10, 11): 21, (10, 10, 11, 11): 21, (10, 11, 11, 10): 21, (10, 11, 11, 11): 21, (9, 9, 10, 10): 10})
+pivot=27 address_aggregate_profile=(3081, 2938, 2738, 2393, 1374, 158, 2917, 3346, 2982, 2759, 2816, 2816, 2938) constant=False
+pivot=40 address_aggregate_profile=(3081, 2515, 2816, 1538, 242, 2101, 2917, 3346, 2982, 2759, 2816, 2816, 2938) constant=False
+pivot=53 address_aggregate_profile=(3081, 2938, 1586, 385, 2164, 2551, 2917, 3346, 2982, 2759, 2816, 2816, 2515) constant=False
+pivot=66 address_aggregate_profile=(3081, 1715, 423, 2288, 2635, 2551, 2917, 3346, 2982, 2759, 2393, 2553, 2938) constant=False
+all_address_all_pivot_profile=(12324, 10106, 7563, 6604, 6415, 7361, 11668, 13384, 11928, 11036, 10841, 11001, 11329) constant=False
+full_packet_support_masses={27: 33256, 40: 32867, 53: 32856, 66: 32581} unique_total_mass_selector=27
+atom_pivot=27_aggregate_profile=(280, 267, 249, 218, 125, 14, 265, 304, 271, 251, 256, 256, 267) constant=False
+atom_pivot=40_aggregate_profile=(280, 229, 256, 140, 22, 191, 265, 304, 271, 251, 256, 256, 267) constant=False
+atom_pivot=53_aggregate_profile=(280, 267, 144, 35, 197, 232, 265, 304, 271, 251, 256, 256, 229) constant=False
+atom_pivot=66_aggregate_profile=(280, 156, 38, 208, 240, 232, 265, 304, 271, 251, 218, 232, 267) constant=False
+atom_support_masses={27: 3023, 40: 2988, 53: 2987, 66: 2962} size_census={27: Counter({10: 149, 9: 87, 11: 66, 12: 2}), 40: Counter({10: 152, 9: 102, 11: 50}), 53: Counter({10: 155, 9: 101, 11: 48}), 66: Counter({10: 142, 9: 120, 11: 42})}
+atom_argmax_pivot_census=Counter({(27, 40, 53, 66): 124, (27,): 42, (66,): 36, (27, 40, 53): 25, (53,): 22, (27, 40): 15, (27, 66): 13, (40,): 11, (40, 53, 66): 9, (53, 66): 3, (27, 53, 66): 2, (40, 53): 2})
+transit_pivot=27_aggregate_profile=(2801, 2671, 2489, 2175, 1249, 144, 2652, 3042, 2711, 2508, 2560, 2560, 2671) constant=False
+transit_pivot=40_aggregate_profile=(2801, 2286, 2560, 1398, 220, 1910, 2652, 3042, 2711, 2508, 2560, 2560, 2671) constant=False
+transit_pivot=53_aggregate_profile=(2801, 2671, 1442, 350, 1967, 2319, 2652, 3042, 2711, 2508, 2560, 2560, 2286) constant=False
+transit_pivot=66_aggregate_profile=(2801, 1559, 385, 2080, 2395, 2319, 2652, 3042, 2711, 2508, 2175, 2321, 2671) constant=False
+transit_support_masses={27: 30233, 40: 29879, 53: 29869, 66: 29619} size_census={27: Counter({10: 1492, 9: 878, 11: 653, 12: 19}), 40: Counter({10: 1525, 9: 1029, 11: 488}), 53: Counter({10: 1553, 9: 1020, 11: 469}), 66: Counter({10: 1413, 9: 1215, 11: 414})}
+transit_argmax_pivot_census=Counter({(27, 40, 53, 66): 1251, (27,): 425, (66,): 358, (27, 40, 53): 240, (53,): 222, (27, 40): 149, (27, 66): 130, (40,): 111, (40, 53, 66): 90, (53, 66): 28, (27, 53, 66): 19, (40, 53): 19})
+atom_to_transit_exact_profile_matching_edges_pivot_27=42589/924768
+atom_to_transit_exact_profile_matching_edges_pivot_40=34877/924768
+atom_to_transit_exact_profile_matching_edges_pivot_53=34864/924768
+atom_to_transit_exact_profile_matching_edges_pivot_66=34372/924768
+atom_to_transit_exact_joint_profile_matching_edges=26857/924768
+atom_to_transit_translation_profile_matching_edges_pivot_27=74991/924768
+atom_to_transit_translation_profile_matching_edges_pivot_40=76857/924768
+atom_to_transit_translation_profile_matching_edges_pivot_53=83327/924768
+atom_to_transit_translation_profile_matching_edges_pivot_66=84047/924768
+atom_to_transit_translation_joint_profile_matching_edges=29299/924768
+atom_to_transit_dihedral_profile_matching_edges_pivot_27=84351/924768
+atom_to_transit_dihedral_profile_matching_edges_pivot_40=86652/924768
+atom_to_transit_dihedral_profile_matching_edges_pivot_53=91659/924768
+atom_to_transit_dihedral_profile_matching_edges_pivot_66=86884/924768
+atom_to_transit_dihedral_joint_profile_matching_edges=29299/924768
+atom_to_transit_AGL_profile_matching_edges_pivot_27=153847/924768
+atom_to_transit_AGL_profile_matching_edges_pivot_40=163227/924768
+atom_to_transit_AGL_profile_matching_edges_pivot_53=171929/924768
+atom_to_transit_AGL_profile_matching_edges_pivot_66=156987/924768
+atom_to_transit_AGL_joint_profile_matching_edges=29299/924768
+macro_profile_positive_control=0->1->0 numerator=(7,-7) preserves the exact four-pivot profile
+macro_profile_hostile_control=0->106->0 numerator=(742,-742) does not preserve the joint profile even up to one common AGL(1,13) shift reindexing
+all_support_row_rank=13 all_moving_profile_rank=12
+global_pivot_constant_constraint_rank=4 kernel_dimension=0
+triangle_min_support_by_pivot={27: 11, 40: 11, 53: 10, 66: 10}
+triangle_pivot=27_aggregate=(3, 3, 3, 3, 3, 0, 0, 3, 3, 3, 3, 3, 3) constant=False
+triangle_pivot=40_aggregate=(3, 3, 3, 3, 0, 3, 0, 3, 3, 3, 3, 3, 3) constant=False
+triangle_pivot=53_aggregate=(3, 3, 3, 0, 0, 3, 0, 3, 3, 3, 3, 3, 3) constant=False
+triangle_pivot=66_aggregate=(3, 3, 0, 0, 3, 3, 0, 3, 3, 3, 3, 3, 3) constant=False
+triangle_all_pivot_aggregate=(12, 12, 9, 6, 6, 9, 0, 12, 12, 12, 12, 12, 12) constant=False
+cycle11_min_support_by_pivot={27: 11, 40: 11, 53: 10, 66: 10}
+cycle11_pivot=27_aggregate=(11, 11, 11, 11, 11, 0, 0, 11, 11, 11, 11, 11, 11) constant=False
+cycle11_pivot=40_aggregate=(11, 11, 11, 11, 0, 11, 0, 11, 11, 11, 11, 11, 11) constant=False
+cycle11_pivot=53_aggregate=(11, 11, 11, 0, 0, 11, 0, 11, 11, 11, 11, 11, 11) constant=False
+cycle11_pivot=66_aggregate=(11, 11, 0, 0, 11, 11, 0, 11, 11, 11, 11, 11, 11) constant=False
+cycle11_all_pivot_aggregate=(44, 44, 33, 22, 22, 33, 0, 44, 44, 44, 44, 44, 44) constant=False
+missing_left_hostile=same fixed-left row A(0,t)=K(t) admits A_frozen(s,t)=K(t), with nonconstant common diagonal K(s), and A_covariant(s,t)=K(t-s), with constant common diagonal K(0)
+SCOPE=all Fourier claims above concern moving-shift profiles; by THM2568 a lawful danger-to-safe full-X endpoint completion is zero in every coarse target character
