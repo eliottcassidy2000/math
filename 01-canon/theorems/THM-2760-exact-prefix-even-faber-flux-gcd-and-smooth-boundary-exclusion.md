@@ -1,12 +1,12 @@
 ---
-id: THM-2759
+id: THM-2760
 title: "Exact-prefix even Faber flux gcd and smooth-boundary exclusion"
 status: RESERVED / UNPROVED EMPTY STUB
 source: jc-even-zero-flux-next-2026-07-28
 depends_on: []
 ---
 
-# THM-2759 -- exact-prefix even Faber flux gcd
+# THM-2760 -- exact-prefix even Faber flux gcd
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
