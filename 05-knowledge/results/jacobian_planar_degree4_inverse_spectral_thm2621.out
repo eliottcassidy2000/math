@@ -5,5 +5,7 @@ projection_discriminant=-256*u**3*(16*u*v**2 - 1)**2*(16*u*v**2 + 1)**4
 companion_denominator=-(16*u*v**2 - 1)*(16*u*v**2 + 1) Jelonek_lead=1
 sheet_defect_valuation_controls=12
 trace_form=4*v*du curvature=-4*du^dv for kappa=-1
+polynomial_Keller_source_defect=closed_exact; hostile_primitive=u*v+Y^2/2
+punctured_residue_hostiles=arbitrary_traced_residue+norm_one_branch_cancellation
 trace_Liouville_SL2_change=exact_quadratic
-exact assertions passed: 42
+exact assertions passed: 49

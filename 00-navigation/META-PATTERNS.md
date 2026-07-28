@@ -113,7 +113,9 @@
 **Action:** name the next consumer, preserved predicate, lost coordinate, and legal sidecar; test that consumer on the quotient kernel.
 **Mechanism:** a kernel is gauge only when every consumer kills it. Otherwise retain a separating response or a termination, height, depth, constant-field, or affine-origin coordinate. THM-840 gives linear repair rank `dim N(ker R)`; THM-2355 gives the quadratic phase repair.
 **Counterindication:** no sidecar is needed when every consumer factors through the quotient; autocorrelation alone can still miss a full-support array.
-**Evidence:** THM-840/2355; THM-2237/2240 (defect rank); THM-2163/2174/2228 (carry/termination); THM-2411 (fixed `E`); THM-2419 (affine origin/reference).
+**Evidence:** THM-840/2355; THM-2237/2240 (defect rank); THM-2163/2174/2228
+(carry/termination); THM-2411/2419 (fixed origin); and corrected
+THM-2621/MISTAKE-301 (trace loses branch residues and the `D_4` action potential).
 
 ## After a scalar quotient, choose between a coherent lift and orbit incidence
 

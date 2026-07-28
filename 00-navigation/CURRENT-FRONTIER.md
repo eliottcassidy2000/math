@@ -367,7 +367,14 @@ Classify profiles under support operations; study analytic continuation and auto
   `S_(F o F)=V(LH)` with `L,H` distinct irreducibles.  Composite
   discriminant parity is exact on three slices (`H` odd, `L` even) but remains
   outside global canon; all higher component counts remain open.
-  For G1, THM-2598/MISTAKE-297 leave `D4,A4,S4`. Audited THM-2612 proves the unique `D4` root-field involution is free on the finite-etale open and must have a pole over the Jelonek boundary; in depressed form `Norm(2w^2+p+z)=S'(z)^2`, while tame positive index tax lies in `V(gcd(q,p^2-4r))`, a necessary but not sufficient gate. Pole component/order remain open, so `D4` survives. THM-2465 makes the affine point-cap face exactly planar degree four; other strata and G1 remain open.
+  For G1, THM-2598/MISTAKE-297 leave `D4,A4,S4`; THM-2612
+  forces the `D4` deck involution to pay a Jelonek pole but does not exclude it.
+  Corrected THM-2621 encodes degree four by a marked inverse quartic `(f,b)`,
+  four symplectic PDEs, and exact sheet-defect poles.  MISTAKE-301 repairs its
+  trace lane: `x dy-kappa^(-1)P dQ=dH`, so `omega=d Tr(H)` and every traced
+  residue vanishes.  Retain branchwise `Res(x dy)=0` and the anti-invariant
+  `H-tau(H)`; their compatibility with the resolvent boundary is open.
+  THM-2465 makes the affine point-cap face planar degree four; G1 remains open.
   At degree eighteen, THM-2314/2316 close sparse supports,
   THM-2371/2376 close `H_2`, and audited THM-2406 forces THM-2389's `H_4`
   pole system onto the closed common-root wall. The inherited nonsplit

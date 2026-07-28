@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-301 (2026-07-28, THM-2621 trace--Liouville sidecar) -- closed was mistaken for possibly nonexact after forgetting the polynomial source primitive
+
+- **What was assumed:** the first promoted form of THM-2621 correctly proved
+  that `omega_F=Tr(x dy)-4 kappa^(-1)u dv` is a closed rational one-form, then
+  proposed that a polynomial degree-four Keller map could have a nonzero
+  trace--Liouville class or divisor residue along the Jelonek boundary.
+- **First failed implication:** the trace was taken before using the stronger
+  source fact.  On `A^2`, the polynomial form
+  `theta_F=x dy-kappa^(-1)P dQ` is closed by the Keller equation and hence has
+  a polynomial primitive `H_F`.  Trace commutes with differentiation, so
+  `omega_F=d Tr(H_F)` is exact.  Every divisor residue is therefore zero for
+  every actual polynomial Keller realization, regardless of monodromy.
+- **Strongest survivor / repair:** the inverse-quartic congruence, resultant
+  pole ledger, depression warning, affine exact-change formula, and curvature
+  calculation all survive.  The corrected THM-2621 proves that the trace
+  primitive is regular off the Jelonek set and has only second-kind derivative
+  poles there.  The missing coordinate is branchwise: every normalization
+  branch obeys `Res(x dy)=sum_j j x_(-j)y_j=0`, while in the `D_4` lane the
+  anti-invariant potential `H_F-tau(H_F)` survives the trace.  For an abstract
+  rational inverse-spectral pair, a nonzero traced residue is an obstruction
+  to polynomial realization, never a feature of a polynomial Keller map.
+
 ## MISTAKE-300 (2026-07-28, THM-2618 candidate scope) -- the canonical selected source was conflated with a distinct target-informed head
 
 - **What was assumed:** the first candidate form of THM-2618 proved a lawful
