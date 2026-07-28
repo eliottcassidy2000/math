@@ -35,7 +35,7 @@ related:
 script: 04-computation/lrc14_slope7_fixed_configuration_carry_nerve_thm2672.py
 output: 05-knowledge/results/lrc14_slope7_fixed_configuration_carry_nerve_thm2672.out
 script_sha256: 83ccf3a38660a92cc990bdf304fd4ea4475339731c3e7e92ad35383ef097f361
-output_sha256: 9284fce04569db57090ef0f1a9e70e6030684a94339fe0d781e1c9e16ae2d264
+output_sha256: c2fee76c461263df43a7f12e972e6d12e8a6b15bc753694e2f04882a99247f26
 secondary_scripts:
   - 04-computation/lrc14_slope7_twelve_chart_component_witness_thm2672.py
   - 04-computation/lrc14_slope7_rebase_facet_torsor_thm2672.py
