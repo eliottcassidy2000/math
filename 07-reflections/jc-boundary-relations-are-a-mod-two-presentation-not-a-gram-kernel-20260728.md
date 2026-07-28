@@ -303,9 +303,56 @@ nullity(A)=0                       = no quartic Kummer carrier.       (28)
 ```
 
 The splitting of `(6)` as a `C3` module is noncanonical, but the two
-multiplicities and their sum are canonical.  For a full `S3` conclusion one
-must additionally retain the reflection action; a `C3` standard summand may
-be exchanged with another summand by the reflection.
+multiplicities and their sum are canonical.
+
+### 4.1 Once a geometric reflection exists, it cannot erase the kernel
+
+Suppose now that the completion, boundary, and class map are genuinely
+`S3`-equivariant.  Write
+
+```text
+S3=<sigma,tau : sigma^3=tau^2=1, tau sigma tau=sigma^-1>. (28a)
+```
+
+Let `E=ker(A)`.  In the `F4` coordinate where `sigma` is multiplication by
+`omega`, the reflection satisfies
+
+```text
+tau(alpha v)=bar(alpha) tau(v),
+bar(omega)=omega^2.                                      (28b)
+```
+
+Thus `tau` is an `F4/F2`-semilinear involution on `E`.  Galois descent is
+elementary here.  Choose `eta in F4` with `eta+bar(eta)=1`.  For every
+`v in E`, both
+
+```text
+u=v+tau(v),
+w=bar(eta)v+eta tau(v)                                   (28c)
+```
+
+are fixed by `tau`, and `v=eta u+w`.  If `a+eta b=0` with `a,b` fixed,
+applying `tau` and subtracting gives `b=0`, hence `a=0`.  Therefore
+
+```text
+E isomorphic_to F4 tensor_F2 E^tau,
+dim_F2(E^tau)=dim_F4(E).                                 (28d)
+```
+
+An `F2` basis of `E^tau` splits `E` into `F4` lines stable under both
+`sigma` and `tau`.  Each line is the standard two-dimensional
+`F2[S3]`-module `W`.  Consequently
+
+```text
+E isomorphic_to W^(direct_sum nullity_F4(A))
+as an F2[S3]-module.                                     (28e)
+```
+
+So an actual `S3` reflection cannot exchange away a nonzero exact kernel:
+`nullity(A)>0` already supplies the required standard `S3` plane.  What
+remains open is geometric existence or extension of `tau` on a completion
+which was computed only `C3`-equivariantly.  Without such a supplied `tau`,
+equations `(28a)`--`(28e)` do not manufacture one.
 
 ## 5. Why the Hermitian Gram block can overcount
 
@@ -749,7 +796,9 @@ destroyed by the Hermitian Gram quotient:
 
 needed sidecars:
   the integral relation lattice K, the saturation quotient L_sat/L, and the
-  C2 reflection action for a full S3 conclusion;
+  geometric existence of the C2 reflection for a full S3 conclusion; once
+  that reflection acts on the presentation, no further module-selection
+  sidecar is needed;
 
 cheapest decisive test:
   compute the Smith form and C3 action of the actual boundary-class map,
