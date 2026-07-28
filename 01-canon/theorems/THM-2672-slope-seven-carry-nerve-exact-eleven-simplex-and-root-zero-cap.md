@@ -2,8 +2,7 @@
 id: THM-2672
 title: "Fixed-configuration slope-seven carry facets, false coarse S11, and odometer twist"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; final promotion awaits the independent
-  audit of the carry-rebase referee.  In every fixed THM-2640
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In every fixed THM-2640
   (rail,sector,edge,kappa,h) configuration, the slope-seven private-root law
   permits at most twelve unit carry charts.  Exactly 534 configurations attain
   twelve, and every one has a positive honest twelve-fold physical overlap.
@@ -53,7 +52,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2672 -- twelve charts glue, while their coarse sphere does not
 
-**PROVED CANDIDATE + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2640 makes every nonzero predecessor-carry root private, but its
 slope-seven physical lift is not a group action.  The first genuine
@@ -434,9 +433,12 @@ all thirteen rebased facets, `(17)`--`(26)`, and the exact coarse and
 carry-refined label-nerve `f`-vectors, together with the one-edge local
 nonextension strip `(15a)`--`(15b)`.
 
-An independent hostile audit has accepted `(4)`--`(15)` with the mandatory
-fixed-configuration scope and explicitly rejected the invalid full-union
-root-zero inference.  Final promotion awaits the independent immutable audit
-of the rebase/topology companion and all declared hashes.
+Independent hostile audits rederived the `534/534` census, the `0/534`
+same-cell prefilter, the displayed-component strip, all thirteen rebase facets,
+both nerve homologies, and the odometer arithmetic.  All three normal/optimized
+pairs byte-match the stored transcripts; all six LF-normalized hashes agree.
+The audit explicitly rejected both the invalid global root-zero cap and the
+invalid promotion of one nonextendable component to an unrestricted
+label-nerve maximal face.
 
-QED (candidate pending final audit).
+QED.

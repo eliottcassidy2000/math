@@ -364,3 +364,16 @@ competitors; a mechanism removes them. First detrend availability (THM-2447),
 and distinguish threshold laws from closed forms.
 **Evidence:** S135 tabulates 24 breaks and 6 survivors; see MISTAKE-055,
 THM-2444/2453/2454, THM-2467, THM-1286, and THM-790.
+
+## Refine nerve vertices before reading homology
+
+**Trigger:** a label is a disconnected union, or different faces may use
+different lifts, carries, owners, or components.
+**Action:** split vertices by connected physical component and retain the full
+integer gain/transition datum; compare the refined nerve with every quotient.
+**Mechanism:** existential witnesses may vary by face.  Identifying their
+labels can manufacture cycles that no compatible physical section realizes.
+**Counterindication:** the coarse nerve is safe after a proved good-cover or
+compatible-section theorem.
+**Evidence:** THM-2658's exact gain-Helly criterion and THM-2672's coarse
+`boundary Delta^12` versus carry-refined thirteen filled `Delta^11`s.

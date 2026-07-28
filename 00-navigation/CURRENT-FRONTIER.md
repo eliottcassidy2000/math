@@ -29,107 +29,78 @@ Its indispensable coordinates are primitive parameter, integral columns, transve
 
 ### Proved reductions and terminals
 
-- **CITED:** LRC through 13 total runners. The newest step is
-  [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture), a computer-assisted proof for 10–12 nonzero speeds.
+- **CITED:** LRC through 13 total runners; see
+  [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
 - **PROVED finite-circuit alternative:**
   [THM-2051](../01-canon/theorems/THM-2051-fejer-bv-small-relation-alternative-for-lrc14.md)
-  closes the coarse analytic “middle” sought by THM-935/946. THM-965 gives the
-  sharp pair-covariance floor `delta_(a,b)>=-6/637`. Without a support-three-
-  through-five relation of height `2^20`, Fejer--BV gives positive strict-safe
-  measure. THM-2074 counts the finite hyperplane ledger and proves density one;
-  descent/classification within it, including the AP boundary, remains open.
-- **PROVED rank descent and explicit residual atlas:** THM-2052 combines
-  THM-763's finite primitive-height bound with a pigeonhole/code argument.
-  Every hypothetical counterexample has eleven independent support-at-most-three
-  relations of height `91^6`, hence is rank-twelve finite-box or lies in one of
-  finitely many two-anchor stars `a_i v_p+b_i v_q+c_i v_i=0`, `c_i!=0`.
-  Modulo dilation each star has one projective parameter. THM-2053--2059 add
-  the sharp deck/Farey/CRT sidecars; a failed sufficient gate is not unsafe.
-  THM-2060--2080 reduce the lossless dyadic tower to depth four (MISTAKE-238).
-  THM-2081 closes `4,120` small rank-seven pairs; THM-2082 retains residue
-  incidence. THM-2083 and THM-2085/2087 force the height-57 cut; THM-2086
-  closes modular/lacunary lanes; THM-2088 and THM-2089 make persistence finite
-  or flat. THM-2090/THM-2092/THM-2093 close the unbounded splice/global star;
-  THM-2091/2094 remove the four-`7|q` profile; THM-2095/2097/2112 make the
-  residual templates finite but do not enumerate them. THM-2098--2138 split
-  and close the no-terminal/simultaneous-blocker pencils. THM-2139/2141 leave
-  four fivefold profiles; THM-2148/2168 reduce the last to scalar `5+3`.
-  THM-2121's joint gate still needs Toeplitz/Fejer and phase sidecars.
+  gives a support-3..5 relation of height `2^20` or positive safe measure;
+  THM-965 supplies the sharp pair floor and THM-2074 the density-one finite
+  ledger.  Its descent/AP boundary remains open.
+- **PROVED rank descent and explicit residual atlas:** THM-2052 forces eleven
+  sparse relations, hence a rank-twelve box or finite two-anchor
+  star. THM-2053--2059 retain deck/Farey/CRT sidecars; THM-2060--2080 reduce the
+  dyadic tower to depth four (MISTAKE-238). THM-2081 closes the small pairs;
+  THM-2082 and THM-2083, then THM-2085/2087 (including THM-2085), retain/cut
+  the next ledger; THM-2086, THM-2088,
+  THM-2089, THM-2090, THM-2092, and later results close the named modular,
+  persistence, splice, terminal, and blocker lanes.
+  THM-2139/2141 leave four fivefold profiles; THM-2148/2168 reduce the last to
+  scalar `5+3`.  THM-2121 still needs Toeplitz/Fejer and phase sidecars.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
   MISTAKE-080/082 still require shape-specific torus models.
-- **Scope separation:** [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
-  separates tight deletion from an all-loose crown; extract the deletion before applying its equality classification.
+- **Scope separation:** THM-1149 separates tight deletion from all-loose crown.
 - **Local-comb ceiling:** THM-1252 through THM-1274 close or sharply saturate
   local six-comb arguments. The live residue is global endpoint/child transport
   or a phase-located turn tax, not another unlocated local charge.
 ### Exact live obligation
 
-Finite rank-twelve boxes and rank-eleven stars remain undecided (HYP-8871).
-Exactly `165` rows survive in `nu_7(c_3)<=M`; THM-2417/2426/2436 empty its
-complement. THM-2440--2539 close local comb/endpoint/clock seams on supplied
-root bases and retain collision colours, scalar walls, and `216` boundary
-incidences, but do not identify the later semantic root (THM-2356 kernel
-`28,393`; THM-2363/THM-2368 remain typed sidecars).
+Rank-twelve boxes/rank-eleven stars remain open (HYP-8871).  Exactly `165` rows
+survive in `nu_7(c_3)<=M`; THM-2417/2426/2436 empty its complement.  THM-2440--2539
+close supplied-root local seams but do not identify the later semantic root
+(THM-2356 kernel `28,393`; THM-2363/THM-2368 are sidecars).  THM-2545/2549 give the
+Hall gate and positive same-base chronology on all rows, still old-target
+neutral.  THM-2555 separates old root from immediate-future root; THM-2547 is
+only a **FINITE-EXACT EXTERNAL CONTROL** after MISTAKE-281.
 
-The stopping complex is now concentrated in one descent problem.  THM-2545
-gives the word-stratified Hall criterion and THM-2549 gives positive same-base
-chronology on all `165` rows, but its future algebra is old-target neutral.
-THM-2555 identifies the missing natural-extension datum exactly: top sheet
-digit plus physical carry recovers the old root, while the immediate future
-digit and its new carry define a different root.  THM-2547 remains only a
-**FINITE-EXACT EXTERNAL CONTROL** after MISTAKE-281.
+The audited THM-2551--2602 chain says why refinements do not descend: transfer
+preserves the projector kernel, gains are coboundaries, duty curvature is the
+first non-product square, and an ordered positive edge kernel is still needed.
+THM-2571/2579 retain the carry torsor; THM-2586 reaches a later root;
+THM-2587/2591 lose its wall; THM-2600 supplies unit vertices, not transitions.
 
-The audited holotopy chain THM-2551--2602 shows why local refinements have not
-descended.  Transfer preserves the unit-projector kernel; gains are
-coboundaries; the first non-product square is duty curvature plus fibre
-covariance; and commutative vertex insertions cannot replace an ordered
-positive seven-edge kernel.  THM-2571/2579 retain a primitive 13-primary carry
-torsor, while THM-2586 reaches a later physical root.  THM-2587/2591 prove
-that root/danger projections and chartwise selectors still omit the wall or
-represent only Cech coboundaries.  THM-2600 supplies unit vertices on all `84`
-cells, not transition edges.
+THM-2614/2616 supply dense same-event cosupport and a positive cross-time
+diagonal, but omit future digits `0,12` and deep root `0`.  THM-2624 proves
+two-clock signed tomography yet every row is dense, so no positive decoder
+exists.  THM-2629's optimum graph `r=-q-1` still hits deep zero; THM-2623 fills
+the future digits but leaves four unit holes.  THM-2630 makes predecessor carry
+load-bearing.  THM-2635's half-edge has global content `26` and units at
+`h=3,8,10`; its clock-two addendum kills `h=3` but retains an `h=10` endpoint.
+The graph and second semantic root remain untransported.
 
-Post-THM-2602, THM-2614 gives dense punctured same-event cosupport and
-THM-2616 gives a positive framed cross-time diagonal, but future digits
-`0,12` and deep root `0` are absent.  THM-2622 classifies the affine torsor
-holonomy.  Audited THM-2624 proves exact two-clock signed tomography and
-the private-row criterion: every current row is dense, so no positive decoder
-exists.  Audited THM-2629 finds the sharp coefficient graph `r=-q-1`
-(minimum ten sections, nine common), but every full affine graph hits the
-missing deep-zero sheet.  Audited THM-2623 fills the two missing future
-digits by the guard-safe/danger cospan, but a literal half-tooth repair leaves
-four unit holes and every refined row still supports eleven or twelve roots.
-Audited THM-2630 shows that the old wall does not determine the later
-successor; predecessor carry is load-bearing.
-Audited THM-2635 refines the full later-probe carrier by a literal half-edge:
-the global content remains `26`, and the canonical left half has uniform units
-at `h=3,8,10`.  Only `h=3` also closes to the adjacent predecessor digit, in
-the reverse orientation.  The affine graph is still imposed rather than
-decoded, and neither the THM-2625 allocation/current nor a second semantic
-root has been transported to this clock.
+THM-2615/2618 refute Radon/free-orbit head recovery (MISTAKE-300), while
+THM-2620/2625 restore the endpoint determinant and THM-2634 retains two carries
+without a transverse section.  THM-2640 makes predecessor-carry roots private;
+THM-2657 identifies their nonsplit `C_(13^6)` odometer and cocycle `7`.
+THM-2642/2645 give thick hulls and all colours; THM-2647/2648 give signed
+two-set deconvolution and two rainbows.  THM-2656 isolates the forced midpoint
+cost, and THM-2670 shows formal Hamilton cycles do not glue physical clocks.
 
-THM-2615/2618 show Radon restriction and a free Möbius orbit do not identify
-the whole head (MISTAKE-300).  THM-2620/2625 restore the endpoint determinant;
-THM-2634 keeps `(c_L,c_R)` but still needs a physical transverse section.
-THM-2640 makes each predecessor-carry root private.  Its audited clock-two
-addendum kills the old `h=3` unit but finds a positive endpoint atom at
-`h=10,c=0,r=2`; equivariant/orbit-labelled gauges repair coefficient descent,
-not the missing target transition.  THM-2657 puts every slope-seven lift in a
-nonsplit `C_(13^6)` odometer with cocycle class `7`.  THM-2642 saturates eleven-sheet hulls;
-THM-2645 retains every charged colour.  Audited THM-2647 gives two-set endpoint
-deconvolution with signed norm `13/2`; repaired THM-2648 gives two rainbow
-charts.  Its matched wall has a fourteen-edge ternary `S3` frame, while
-unrestricted nonlinear charts attain thirteen edges via a binary four-cycle
-(MISTAKE-302/303).  Audited THM-2656 proves selector moduli: equivariance pays
-a forced midpoint; dropping individual reflection permits edge-disjointness.
-THM-2670's 92 generic cycles do not glue.  THM-2680's exact `D(x)={13x}`
-cospan has positive legs `17,160,4,488,3,696,0` (total `25,344`), but its
-Fibonacci sector quotient is not path-lifting.  THM-2682/2684 kill every
-third event, first centrally and then on the full three-tooth rail bank.
-THM-2658 requires a complete balanced gain section for a true simplex.
-Therefore change the parent carrier, handoff, configuration, boundary, or
-edge grammar rather than decorating empty support. Ledger `165`.
+THM-2658 is the exact component-level holotopy test: positive common overlap
+is equivalent to a complete triangle-balanced integer-gain section.  THM-2672
+then finds `534` fixed configurations with honest positive `Delta^11` faces.
+Rebasing one configuration supplies every missing-label facet: forgetting
+carry creates a coarse `boundary Delta^12`, whereas retaining carry gives
+thirteen disjoint filled `Delta^11`s and cocycle `7`.  The displayed component
+is nonextendable, and `0/534` fixed facets admit a same-cell opposite-edge unit,
+but a heterogeneous same-/inter-cell thirteen-fold intersection remains open.
+
+THM-2680's exact `D(x)={13x}` cospan has positive leg counts
+`17,160,4,488,3,696,0` (total `25,344`), but its Fibonacci sector quotient is
+not path-lifting.  THM-2682/2684 kill every third event on the full inherited
+three-tooth bank.  Change parent carrier, handoff, configuration, boundary, or
+edge grammar rather than decorating empty support; AP/phase/rank routes remain
+live. Ledger `165`.
 
 ### Independent routes that remain live
 

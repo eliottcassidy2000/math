@@ -78,6 +78,12 @@
     identity arrival adjacency and its raw three-returns are clock-diagonal.
     No downstream restriction can revive that support; change parent carrier,
     handoff, boundary semantics, or edge grammar.
+27f. **A disconnected label nerve is not physical Cech topology.** THM-2672's
+    fixed configuration has at most twelve carries, but edge switching defeats
+    that as a global cap.  Forgetting predecessor carry turns thirteen disjoint
+    filled `Delta^11`s into a coarse `boundary Delta^12`; retain connected
+    components and full integer gains before reading homology.  One
+    nonextendable component is not a maximal face of the union-labelled nerve.
 
 ## NC2 / GMC
 
