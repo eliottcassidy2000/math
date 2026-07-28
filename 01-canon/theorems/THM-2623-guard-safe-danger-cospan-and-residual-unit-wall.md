@@ -2,7 +2,7 @@
 id: THM-2623
 title: "Guard-safe/danger cospan, half-tooth repair, and carry-loss wall"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Complementing only the delayed guard factor gives two disjoint Boolean
   endpoint sectors whose physical future-digit supports are respectively
   {1,...,11} and {0,1,11,12}; their labelled union is all F13 and retains
@@ -41,7 +41,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2623 -- the guard complement fills the digit puncture, not the carry torsor
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2616 found a positive cross-time diagonal `q=h`, but its delayed word
 has no physical digits `0,12`.  The cheapest lawful completion is not an
@@ -315,4 +315,15 @@ lane spectra, exhibits direct failures of the false singleton formula, and
 proves the all-`84` no-private census.  Every logical check is an explicit
 optimized-mode guard.
 
-QED (candidate; independent hostile audit pending).
+An independent hostile audit replayed both exact transcripts, reconstructed
+the guard-danger word from the same endpoint factors, and checked that the
+safe/danger labels remain disjoint rather than being summed before the
+nonlinear unit test.  It separately verified the global `/26` primitive
+normalization, the left/right additive partitions, all fixed-clock and
+seven-clock support guards, and the algebraic carry identity (18).  In
+particular, the audit checked both possible false shortcuts: future
+half-digit `kappa` does not determine the absolute deep digit without
+`floor(Rx) mod 13`, and the imposed graph (15) is a conditioned subcarrier,
+not a decoder inferred from a dense row.
+
+QED.
