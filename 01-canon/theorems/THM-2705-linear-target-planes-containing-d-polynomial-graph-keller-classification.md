@@ -2,8 +2,8 @@
 id: THM-2705
 title: "Linear target planes containing d on polynomial graph Keller slices"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For every linear target plane containing d in the THM-2696 S3<S4
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every linear
+  target plane containing d in the THM-2696 S3<S4
   quotient, all constant-nonzero-Jacobian polynomial graph slices are
   classified.  The pure A direction is the scaled THM-2702 triangular family;
   the pure B direction is empty; every genuinely mixed direction has exactly
@@ -27,8 +27,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2705 -- every linear target plane containing `d` is classified on polynomial graphs
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2699 classifies affine source planes for arbitrary affine-linear target
 projections.  THM-2702 permits arbitrary polynomial graphs but treats only the
@@ -324,6 +323,12 @@ Riccati gates, both mixed Jacobians and inverses, and the square-root gauge
 swap.  These exact controls support but do not replace the all-degree proof in
 Sections 2--4.
 
-Promotion awaits an independent hostile audit of the target row reduction,
-the mixed degree argument, the scaled LND step, signs, inverses, scope, and
-normal/optimized replay.
+An independent hostile audit rederived the target-plane row reduction, the
+scaled pure-`A` characteristic calculation, and the pure-`B` locally
+nilpotent derivation/divergence contradiction.  It separately checked the
+mixed PDE, including the `r=2` polynomial Riccati boundary, every equation in
+`(19)`, the square-root gauge, both inverses, and the stated scope.  Normal and
+optimized execution byte-matched the recorded output SHA-256
+`2a7ae1bc65af8303e4bcc661f7aebeb0c4cbb94ec86e846fcaaafeebc5966ebc`;
+the script SHA-256 is
+`cfaf4135a52d96fecb7644e5ffcbdb6c7f60e446289e2a8c4a8ca281d5f19fe2`.

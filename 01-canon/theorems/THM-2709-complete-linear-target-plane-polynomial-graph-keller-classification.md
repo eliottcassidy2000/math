@@ -2,8 +2,8 @@
 id: THM-2709
 title: "Complete linear target-plane classification on polynomial graph Keller slices"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; THM-2705 PROMOTION AND INDEPENDENT
-  HOSTILE AUDIT REQUIRED.  Every affine-linear target two-plane in the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every affine-linear
+  target two-plane in the
   THM-2696 quotient is classified on every polynomial graph.  Planes
   containing d are exactly THM-2705.  Of the remaining planes, those
   containing A have one explicit shifted-cubic triangular graph, while a
@@ -28,8 +28,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2709 -- every linear target plane is classified on every polynomial graph
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; THM-2705 PROMOTION AND INDEPENDENT
-HOSTILE AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2702 classifies the three coordinate target pairs, and THM-2705 classifies
 every target plane containing `d`.  There is a short Pluecker completion: the
@@ -281,6 +280,13 @@ the all-degree top-degree/Riccati inequalities, every coefficient in `(19)`,
 the final `-c` obstruction, and the sharp zero-Jacobian family `(22)`.  The
 finite identities support but do not replace the all-degree proof.
 
-Promotion requires promotion of THM-2705 and an independent hostile audit of
-the Pluecker flags, signs and scalings, polynomial divisibility, degree gates,
-inverse, scope, normal/optimized replay, and hashes.
+An independent hostile audit first verified promoted THM-2705, then rederived
+the Pluecker expansion and both intrinsic target flags.  It separately checked
+the signs and scalings in `(8)`, polynomial divisibility and the inverse in the
+shifted-cubic branch, the all-degree and Riccati gates, every coefficient in
+`(19)`, the terminal `-c` obstruction, the sharp `c=0` family, exhaustiveness,
+and scope.  Normal and optimized execution byte-matched the recorded output
+SHA-256
+`961fab46f659be3db5467257a149b3bbdff8fc1c9d30c2d8d829a060ba65ad53`;
+the script SHA-256 is
+`d851c6671576baac86e44eeae57d61e1aaec28eb02a77409931bba50b6718cb0`.
