@@ -30,6 +30,15 @@
   class-group gate for THM-2655; units and reflection completion remain open.
   `D4` and determinant-`27` stars are the sharp controls.  Hashes begin
   `1db2ae94` / `8e6207f3`.
+- `c3_hermitian_gain_holonomy_discriminant_thm2708.py` -> matching `.out`
+  [THM-2708 PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
+  HOSTILE AUDIT].  Evaluating the free-orbit circulant blocks of any
+  `C3`-invariant symmetric lattice at `omega in F4` gives a Hermitian matrix
+  whose `F4` nullity is exactly the standard-plane multiplicity in
+  discriminant two-torsion.  Forest gains recover THM-2703.  The sharp
+  balanced/unbalanced quotient-triangle pair lifts to `3K3/C9`, with Smith
+  forms `(1^6,2^3)/(1^8,2)`.  The full-rank surface gate is algebraic, not
+  physical LRC homology.  Hashes begin `f46c10dc` / `3df42b1e`.
 - `jacobian_s4_polynomial_graph_coordinate_pairs_thm2702.py` -> matching
   `.out` [THM-2702 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  On `z=f(x,y)`, the `(A,d)` projection has
