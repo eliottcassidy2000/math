@@ -9,6 +9,20 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-312 (2026-07-28, root-zero clutch dependency pins) -- LF evidence hashes were checked against raw platform bytes
+
+- **What was recorded:** the finite-exact root-zero overlap companion pinned
+  six audited dependencies by their LF SHA256 values but hashed each dependency's
+  raw worktree bytes at runtime.  It passed on an LF checkout and failed before
+  mathematics on a Windows CRLF checkout.
+- **Why it was wrong:** a declared LF evidence address is portable only if the
+  verifier applies the same normalization.  Replaying the main script alone
+  had not exercised this cross-platform branch.
+- **Repair / survivor:** dependency bytes are now normalized from CRLF to LF
+  before hashing.  Normal and optimized Windows runs again byte-match the
+  stored transcript; all six dependency pins and every finite-exact overlap
+  count survive.  The script digest was refreshed after the repair.
+
 ## MISTAKE-310 (2026-07-28, relative-present root-zero clutch) -- a forbidden root label was mistaken for empty physical support
 
 - **What was assumed:** the relative-present scout correctly found that every

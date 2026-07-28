@@ -304,7 +304,7 @@ Both modes must byte-match
 SHA-256:
 
 ```text
-script  e27981478cd30c8e3cceada128049b145b254410c8d0b6d525a8a1830545d55f
+script  e10fa7c9a5a238461ef422ea314dc334f7e65ec1787cf65d4e4bea12b96aefb8
 output  ba9d0a67dfede0b64cf97ff55af7e86c9bb46c962c669d33015df7e574e8e91e
 ```
 

@@ -47,8 +47,13 @@ def require(condition, message):
         raise RuntimeError(message)
 
 
+def lf_bytes(path):
+    """Return the repository's declared LF-normalized evidence image."""
+    return path.read_bytes().replace(bytes((13, 10)), bytes((10,)))
+
+
 for dependency, expected_hash in DEPENDENCIES.items():
-    actual_hash = hashlib.sha256((COMP / dependency).read_bytes()).hexdigest()
+    actual_hash = hashlib.sha256(lf_bytes(COMP / dependency)).hexdigest()
     require(actual_hash == expected_hash,
             f"audited dependency changed: {dependency}")
 
