@@ -24,8 +24,8 @@ related:
   - THM-2753-six-edge-parity-erasure-and-three-matching-resolvent-restoration
 script: 04-computation/s4_opposite_edge_projector_clutch_thm2756.py
 output: 05-knowledge/results/s4_opposite_edge_projector_clutch_thm2756.out
-script_sha256: 728cc67a83f00ea47e19176e8f87f57a11ce1a51d4e16e8e09dcac6a3410fd99
-output_sha256: ecb97d57576212a7eab0ef55f19f3226dc14a50a71dda858623932ffcd665213
+script_sha256: 8fc8342b722bf8a0f97d4a113f71d11b7ed9919ff46de0d76d7359ea6b92d132
+output_sha256: 3e201f594f3ec658804b9140971872d0761bdc4aebfd562475ef04a343b6a066
 hash_basis: LF-normalized bytes
 ---
 
@@ -206,10 +206,31 @@ L/(L_+ direct_sum L_-) isomorphic to F2[M] isomorphic to F2^3. (18)
 
 Equation `(4)` makes `(16)` `S4`-equivariant, so the quotient action is the
 matching-permutation action, again with kernel `V4` and image `S3`.  The same
-criterion can be stated directly in terms of the rational projectors:
+clutch is literal at the level of the two blocks.  In
 
 ```text
-kappa(x)=0  iff  P_+x and P_-x are both integral.          (19)
+((1/2)L_+)/L_+ direct_sum ((1/2)L_-)/L_-,                  (19)
+```
+
+the overlattice `L` is obtained by adjoining
+
+```text
+e=(p_m+n_m)/2,                         e'=(p_m-n_m)/2.
+```
+
+Its gluing subgroup is therefore the graph of
+
+```text
+p_m/2 mod L_+  <->  n_m/2 mod L_-.                       (20)
+```
+
+This identification is `S4`-equivariant: the positive block permutes the
+three basis classes, the negative block signed-permutes them, and the signs
+disappear modulo two.  Finally, `(16)` can be stated directly in terms of the
+rational projectors:
+
+```text
+kappa(x)=0  iff  P_+x and P_-x are both integral.          (21)
 ```
 
 This is the integral clutch hidden by the rational direct sum.  Modulo two,
@@ -249,7 +270,7 @@ python 04-computation/s4_opposite_edge_projector_clutch_thm2756.py
 python -O 04-computation/s4_opposite_edge_projector_clutch_thm2756.py
 ```
 
-Both executions byte-match the stored `16`-line transcript
+Both executions byte-match the stored `17`-line transcript
 `05-knowledge/results/s4_opposite_edge_projector_clutch_thm2756.out`.  The
 companion uses explicit exceptions and no truth-bearing Python assertions.  It
 enumerates all `24` sheet permutations, checks centrality of opposition and
@@ -269,6 +290,7 @@ PROVED HERE (candidate):  central opposite-edge involution;
                           duplicate sign determinants and their cancellation;
                           exact blockwise trace anatomy of the class collision;
                           integral index 8 / Smith 1^3,2^3 clutch;
+                          equivariant mod-two gluing graph of the two blocks;
                           equivariant quotient F2[M].
 
 NOT PROVED:               graph-quartic or Keller realization;
@@ -277,7 +299,7 @@ NOT PROVED:               graph-quartic or Keller realization;
                           equivalence with a six-vertex tournament;
                           physical LRC octahedral module/current;
                           endpoint, owner, or relation-address transport;
-                          JC(2), DC(2), or LRC(14).                       (20)
+                          JC(2), DC(2), or LRC(14).                       (22)
 ```
 
 QED (candidate).

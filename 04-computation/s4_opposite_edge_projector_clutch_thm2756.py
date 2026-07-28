@@ -266,6 +266,9 @@ def main():
         require(determinant(plus) == permutation_sign(g)
                 and determinant(minus) == permutation_sign(g),
                 "one block stopped carrying the quartic sign")
+        require(tuple(tuple(entry % 2 for entry in row) for row in plus)
+                == tuple(tuple(entry % 2 for entry in row) for row in minus),
+                "the two blocks stopped agreeing after reduction modulo two")
         require(determinant(edge_matrix)
                 == determinant(plus) * determinant(minus) == 1,
                 "the two determinant characters stopped cancelling")
@@ -359,6 +362,7 @@ def main():
     print("determinants=det_plus=det_minus=quartic_sign product=+1")
     print("trace_collision=transposition:(1+1) double:(3-1) total=2")
     print("integral_basis_index=8 mod2_rank=3 smith=1^3,2^3")
+    print("gluing_graph=(L_plus/2L_plus)=(L_minus/2L_minus) equivariantly")
     print("integral_clutch=L/(L_plus+L_minus)=F2^3 matching_permutation_module")
     print("SCOPE: exact finite representation/lattice theorem; no Keller or LRC exclusion")
     print("FAILED CHECKS: NONE")
