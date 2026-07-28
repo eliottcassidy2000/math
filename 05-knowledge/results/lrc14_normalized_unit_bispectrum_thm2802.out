@@ -1,0 +1,9 @@
+THM-2802 NORMALIZED UNIT BISPECTRUM
+status=VERIFIED-EXACT abstract splitting-field companion
+identity=B_f(k,l)=fhat(k)fhat(l)/(fhat(k+l)fhat(0)); equality iff scalar-translation orbit
+exhaustive_C3_F7_classes=12 orbit_size=18 units=216
+exhaustive_C5_F11_classes=2000 orbit_size=50 units=100000
+C13_F53_scalar_origin_invariance=676/676
+homometric_C13_pair=0139_vs_1257 power_zero=16 power_nonzero=3 normalized_bispectrum=distinct
+scope=projective coefficient/origin reconstruction for units; no positive carrier, frame naturality, semantic attachment, or LRC14
+ALL EXACT CHECKS PASSED
