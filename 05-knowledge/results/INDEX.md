@@ -61,8 +61,8 @@
   checks the squared-pair-sum resolvent and the literal cubic prefilter
   `AB-C=square`.  Hashes begin `e68ab8fa` / `1c8d9d23`.
 - `jacobian_secondary_kummer_bockstein_thm2695.py` -> matching `.out`
-  [THM-2695 PROVED CANDIDATE + VERIFIED-EXACT; immutable promotion review
-  pending].  The secondary coefficient-lift obstruction is exactly
+  [THM-2695 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
+  secondary coefficient-lift obstruction is exactly
   `Pic(U)[ell]/ell Pic(U)[ell^2]`; the ordered-root, toric `d^2=abc`, and
   `G_m^2` controls realize all three parity/Bockstein levels.  The exact
   companion also identifies the `Q8` class `x^2+xy+y^2`, pushes the odometer

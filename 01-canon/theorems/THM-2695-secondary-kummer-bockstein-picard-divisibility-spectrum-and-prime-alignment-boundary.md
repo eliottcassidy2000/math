@@ -2,8 +2,8 @@
 id: THM-2695
 title: "Secondary Kummer Bockstein, Picard divisibility spectrum, and prime-alignment boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; independent immutable promotion review
-  pending.  For an irreducible equivariant squareclass plane on a normal
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For an
+  irreducible equivariant squareclass plane on a normal
   complex variety, divisor parity and the mu4-to-mu2 coefficient Bockstein
   give an exact three-level all-or-nothing spectrum: ramified, quasi-etale
   but mu4-nonliftable, or mu4-liftable.  More generally the secondary
@@ -31,8 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2695 -- the secondary Kummer obstruction is Picard divisibility
 
-**PROVED CANDIDATE + VERIFIED-EXACT; independent immutable promotion review
-pending.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2685 gives the codimension-one parity test for extending a generic
 Kummer packet quasi-etale.  A surviving packet has a second, different
@@ -305,7 +304,7 @@ Without such a sidecar, step 3 classifies a lift failure but excludes no new
 `A4` or `S4` candidate.  No quartic Keller exclusion, degree bound, `JC(2)`,
 general Jacobian, Dixmier, or LRC conclusion follows.
 
-## 6. Exact companion and review status
+## 6. Exact companion and independent audit
 
 Run
 
@@ -327,11 +326,13 @@ pushouts, cross-prime Hom boundary, the `C3`-fixed part of
 the exponent-two and four-divisible Picard controls, and the standard-plane
 orbit.
 
-The abstract proof, three controls, and Q8/no-transfer boundaries have passed
-an independent hostile audit.  That audit also required replacing a
-tautological cyclic check by the present kernel/image and complete wrap-class
-checks.  The canonical optimization-stable artifact and frontmatter remain a
-**PROVED CANDIDATE** until the main-agent immutable review and status
-promotion.  The declared hashes use LF-normalized bytes.
+Two independent hostile passes checked the Kummer diagram, purity and
+`Pic(U)=Cl(X)`, the three geometric levels, the `C169` pushout, the `Q8`
+classification, and every no-transfer/scope boundary.  The first pass required
+replacing a tautological cyclic check by the present kernel/image and complete
+wrap-class controls.  The immutable promotion pass rederived the proof,
+confirmed that the toric hostile carries both nonzero secondary and
+quaternionic obstructions without excluding `A4`, and byte-matched normal,
+optimized, and stored outputs with the declared LF hashes.
 
-QED (candidate).
+QED.
