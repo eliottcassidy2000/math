@@ -396,7 +396,10 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2469/2470/2472, THM-2475/2476, and THM-2480 empty all ten planes.
   Audited THM-2671 combines THM-2617/2636 with eight new root/pair Hensel
   rank obstructions and two uniform boundary quintics: all ten support-three
-  strata are empty, so any survivor has support four or five.
+  strata are empty.  Audited THM-2683 then closes all five support-four charts:
+  two by terminal rank, BCDW by a one-kernel-line toric defect, BCEW by two
+  toric quadrics with nonzero Sylvester resultant, and BCDE by a full-rank
+  degree-four Macaulay map.  Thus any survivor has full support BCDEW.
   Split/even edges and integral `2`-adic raising remain; THM-2206 blocks
   field-valued `C_2` Hasse repair. THM-2446 opens six-brackets; THM-2451 and
   extensions refute its cone shortcut. `JC(2)` and `DC(2)` remain open.

@@ -48,6 +48,15 @@
   one and no connected etale `V4` torsor, excluding it as an exact
   dimension-three quartic `S4` Keller resolvent.  Hashes begin `b1a4ad05` /
   `d16de1da`.
+- `jc2_degree22_support_four_toric_hensel_thm2683.py` -> matching `.out`
+  [THM-2683 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Native three-parameter Hensel systems close BDEW/CDEW by terminal rank,
+  BCDW because its unique kernel line violates `X0*X2=X1^2`, BCEW because
+  two toric quadrics have nonzero Sylvester resultant, and BCDE because three
+  kernel-plane quadrics generate every quartic by a full-rank `15x18`
+  Macaulay map.  Both factor fields are uniform.  Only full support remains
+  in the inherited genuine nonsplit degree-twenty-two branch.  Hashes begin
+  `6f463672` / `3efbadaf`.
 - `lrc14_dilation_canonical_unit_atlas_no_go_20260728.py` -> matching `.out`
   [VERIFIED-EXACT SCOUT; THM-2680 INPUT; NOT A PHYSICAL FIBRE PRODUCT].
   Under only the numerical dilation handoff `j'=h`, the state-independent
