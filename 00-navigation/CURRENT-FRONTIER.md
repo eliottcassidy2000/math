@@ -62,17 +62,17 @@ pairs have four multipliers and gains `0:10,2:19,11:20`, with all `168` label
 modes alive, but no carrier action.  THM-2750 blocks arm-blind charging and
 THM-2757's marked `K4` transgression still lacks a physical carrier.
 
-THM-2763 repairs the endpoint gauge with `(r,k,l)`, `r.W=l-k`: the faithful
-two-sided quotient has size `13^4`, and common-harmonic loss gives `13^3`.
-One diagonal fibre has dual support `{0,2,10}` but all thirteen primal
-residues; it is not THM-2625's endpoint plane and loses factor allocation.
-THM-2771/2772's torsors share THM-2779's abstract Heisenberg center and sharp
-faithful degree `169`; every `13`-root action kills that center.  THM-2782 has
-three positive physical arms, but all `567` cells keep opposite cofibres
-disjoint; its surviving two-field determinant sector is virtual.  THM-2788
-separates the physical modular odometer from the carry-suppressed model by the
-Bockstein; its `+169` failure is `Z2`.  Next: keep one ancestry atom across all
-four allocation corners and build the root/Cech map.  THM-2727 is the
+THM-2763's `(r,k,l)` address has size `13^4` (`13^3` after loss), not
+THM-2625's endpoint plane or factor allocation.  THM-2779's abstract
+Heisenberg center has sharp faithful degree `169`; a literal `13`-root action
+kills it.  THM-2782 has three positive physical arms, but all `567` opposite
+cofibres are disjoint and its surviving determinant sector is virtual.
+THM-2788 separates the physical modular odometer by its carry Bockstein;
+`+169` is `Z2`.  THM-2790 makes every canonical endpoint central response and
+mode nonzero, but only on the coefficient quotient.  THM-2791 now transports
+every literal rail-sheet ancestry copy along one physical graded chord, but
+constructs no endpoint origin.  Next: map that fixed rail sheet to one
+allocated endpoint atom and the root/Cech correction.  THM-2727 is the
 fixed-rail no-go.  Ledger `165`; no row is excluded.
 
 ### Independent routes that remain live

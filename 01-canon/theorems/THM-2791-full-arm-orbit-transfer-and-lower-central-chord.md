@@ -11,8 +11,9 @@ status: >
   its canonical pushforward to the 169-address quotient is the positive
   two-point chain c z^6(1+z), whose permitted scalar or coefficient-
   Bockstein normalization is a central group-algebra unit.  This is
-  transfer along a genuine partial graded-chord germ, not pointwise
-  descent, pure-Z1 packet covariance, or an endpoint-origin allocation.
+  transfer along a genuine same-ancestry partial graded-chord germ on the
+  inherited rail sheet, not pointwise descent, pure-Z1 packet covariance,
+  or an endpoint-origin allocation.
 source: root/graded-semantic-arm-transfer-2026-07-28
 depends_on:
   - THM-2782-semantic-arm-right-wing-local-unit-and-endpoint-deck-boundary
@@ -22,10 +23,15 @@ related:
   - THM-2697-filtered-affine-handoff-germ-category-and-base-signature-holotopy-boundary
   - THM-2712-semantic-following-congruence-lock-and-address-coboundary-descent
   - THM-2788-physical-modular-odometer-versus-heisenberg-bockstein-extension
+  - THM-2471-owner-first-collision-weighted-root-service-and-temporal-atom-boundary
 script: 04-computation/lrc14_full_arm_orbit_lower_central_chord_thm2791.py
 output: 05-knowledge/results/lrc14_full_arm_orbit_lower_central_chord_thm2791.out
 script_sha256: 2824d62c237fd9ac831d23236e6987ecabe96bebd68ba37a9abd0bb685ad0716
 output_sha256: 9f2b8e69b9de430f201adb7758f98fff7bf505c5bd792b03f40b3ee7c9f46edd
+path_sheet_audit: 04-computation/lrc14_full_arm_orbit_path_sheet_audit_thm2791.py
+path_sheet_output: 05-knowledge/results/lrc14_full_arm_orbit_path_sheet_audit_thm2791.out
+path_sheet_script_sha256: 1e00b6711db0d878fca70047f5f1532518084dbf6928551cd28fe51283fde543
+path_sheet_output_sha256: 2325aa126dc4a97af4ba4bde0348389bfdfe5720dec6f88792b9a06baa40afd3
 hash_basis: LF-normalized bytes
 ---
 
@@ -213,6 +219,57 @@ or the full circle is covariant under `delta`; both restricted carrier
 products happen to equal one on their respective cylinders.  In particular,
 it proves no pure-`Z_1` action.
 
+### 3.1 The partial germ preserves the literal rail ancestry sheet
+
+The common weight in `(15)` is not only numerically equal at the two
+cylinders.  Before Perron marginalization, the route-two rail numerator is
+the Boolean Cartesian sheet
+
+```text
+A_x x B_x,
+
+A_x={(a,b) in Z/(13^5) x Z/169:
+     (x+a)/13^5 lies in Q and
+     (((x+a)/13^5)+b)/169 lies in E},
+
+B_x={e' in Z/(13^5):
+     (((x-1/13) mod1)+e')/13^5 lies in E}.             (17a)
+```
+
+Every raw `Q`, `E`, and rotated-`E` contributor label is constant on the
+single exact chamber
+
+```text
+[140890500190440,144190879112280)                      (17b)
+```
+
+in base-grid coordinates.  Both selected cylinders and their translation
+by `delta` lie strictly inside `(17b)`.  Thus translation acts by the
+identity on the literal label sets, not merely by an equinumerous
+correspondence:
+
+```text
+|A_x|=966606,                 |B_x|=28534,
+|A_x x B_x|=27581135604.                              (17c)
+```
+
+The collision labels remain `(u,v,s,t)=(5,6,1,12)`.  In particular, the
+same Boolean copy
+
+```text
+(a,b,e')=(59162,26,56658)                              (17d)
+```
+
+is present on both cylinders.  Hence `(14)--(17)` form a
+**same-ancestry partial translation germ on the THM-2471 rail sheet**.
+No label is lost through `(u,v,a,b,e')`.
+
+This refinement stops before endpoint allocation.  It constructs neither
+a THM-2779 endpoint origin nor an allocated THM-2625 endpoint atom, and it
+does not identify either one with the preserved rail sheet.  The missing
+map is now from a fixed literal rail sheet to the endpoint-origin current,
+not recovery of the rail ancestry itself.
+
 ## 4. Exact period and every address conductor
 
 On the central coset write `k=13j`.  Equation `(2)` becomes
@@ -386,7 +443,7 @@ lost:
   covariance, and endpoint-origin allocation;
 
 positive sidecar:
-  one exact same-integrand partial germ with the full graded chord (10);
+  one exact same-ancestry rail-sheet germ with the full graded chord (10);
 
 needed sidecar:
   a natural map from that graded physical germ to the THM-2779
@@ -418,6 +475,19 @@ Both modes byte-match
 05-knowledge/results/lrc14_full_arm_orbit_lower_central_chord_thm2791.out.
 ```
 
+The literal path-sheet refinement replays independently via
+
+```bash
+python 04-computation/lrc14_full_arm_orbit_path_sheet_audit_thm2791.py
+python -O 04-computation/lrc14_full_arm_orbit_path_sheet_audit_thm2791.py
+```
+
+and both modes byte-match
+
+```text
+05-knowledge/results/lrc14_full_arm_orbit_path_sheet_audit_thm2791.out.
+```
+
 The companion uses exact integers and `Fraction`s and contains no Python
 `assert`.  It reconstructs the physical carriers, scans all `13^6`
 addresses and the full `13^5` central coset, verifies both positive
@@ -438,5 +508,12 @@ unit identity, the exceptional `121`-cell target, and every normalized
 decoder pair.  It also replayed normal and optimized executions byte-for-byte
 against the stored transcript, checked both LF-normalized hashes, and
 confirmed every transfer-versus-descent boundary above.
+
+The independent path-sheet audit additionally enumerated the literal
+`(a,b,e')` fibres without importing the THM-2791 profile implementation,
+proved identity of their ordered source/target label sets on the complete
+contributor chamber, pinned all ancestry dependencies, and replayed normal,
+optimized, and stored transcripts exactly.  It found no lost label before
+the still-unconstructed endpoint origin.
 
 QED.
