@@ -2,7 +2,7 @@
 id: THM-2637
 title: "Derangement-character fixed-branch holotopy principle"
 status: >
-  PROVED CANDIDATE; INDEPENDENT HOSTILE AUDIT PENDING.  Let a finite
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED.  Let a finite
   group G act on a finite sheet set Omega and let chi:G->C_l be a
   prime-cyclic character whose nonzero support consists of derangements.
   Every holonomy element with a fixed sheet then lies in ker chi.  Hence a
@@ -34,7 +34,7 @@ related:
 
 # THM-2637 -- a charged derangement cannot carry a fixed branch
 
-**PROVED CANDIDATE; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The same elementary group-theoretic hinge appears in two apparently remote
 frontiers.  In the Jacobian problem, a boundary character must occur on an
@@ -229,11 +229,11 @@ of THM-2633's geometric work.
 
 For LRC, THM-2622 classifies the consequence once a carry holonomy is
 supplied, but current results do not provide the analogue of both lines in
-(13).  The current THM-2623 and THM-2635 proof candidates record,
-respectively, carry-forgetting rows and an imposed half-tooth section; neither
-is used as a proved dependency here, and both remain one-endpoint data.
-THM-2625 fills allocated endpoint sectors after separate endpoint
-aggregation.  A theorem applying Section 3 must
+(13).  Proved THM-2623 records carry-forgetting rows, while the current
+THM-2635 proof candidate records an imposed half-tooth section.  Neither is
+used as a dependency here, and both remain one-endpoint data.  THM-2625
+fills allocated endpoint sectors after separate endpoint aggregation.  A
+theorem applying Section 3 must
 instead retain
 
 ```text
@@ -251,4 +251,16 @@ exclusion.  It changes the residual from the vague request for “more root
 support” to the typed fixed-branch service (14).  The scalar ledger remains
 `165`.
 
-QED (candidate; independent hostile audit pending).
+## 6. Independent audit
+
+An independent hostile audit rederived the fixed-branch contrapositive and
+its conjugacy invariance, the free fundamental-cycle/cycle-basis argument,
+the injective-holonomy conclusion, and the count of global sections.  It
+also checked the regular-`C_13` specialization, all four gauge/mixture/private
+row hostiles, the complete endpoint-plane models (15)--(17), and the
+`S_4` sign-character boundary.  In particular, the audit checked the
+load-bearing quantifier that different fundamental loops may fix different
+sheets: this proves only character-triviality until injectivity on the whole
+holonomy image is invoked.
+
+QED.
