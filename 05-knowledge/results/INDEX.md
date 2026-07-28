@@ -47,8 +47,10 @@
   following atom holds on the whole common interval at exactly the `304`
   residue-zero packets.  Every ordered atom-endpoint pair has all `3042`
   other-residue packets as physical two-step midpoints, giving `281,129,472`
-  based macro paths but no target action or relation-index identification.
-  Hashes: `db2aef5f` / `de0988d6`.
+  based macro paths.  Dividing the congruence lock by `13` gives a seven-clock,
+  five-tooth atlas and every macro descends midpoint-independently to a
+  depth-five address.  No target action or relation-index identification is
+  inferred.  Hashes: `bc81895a` / `a636763b`.
 - `jacobian_s4_polynomial_graph_all_linear_planes_thm2709.py` -> matching
   `.out` [THM-2709 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   Pluecker coordinates classify

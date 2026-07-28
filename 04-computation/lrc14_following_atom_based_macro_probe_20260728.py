@@ -39,6 +39,29 @@ def strict_interval_index(value, starts, intervals):
     return index >= 0 and intervals[index][0] < value < intervals[index][1]
 
 
+def consecutive_runs(values):
+    require(values, "empty run universe")
+    runs = []
+    left = right = values[0]
+    for value in values[1:]:
+        if value == right + 1:
+            right = value
+        else:
+            runs.append((left, right))
+            left = right = value
+    runs.append((left, right))
+    return tuple(runs)
+
+
+def base_digits(value, base, length):
+    digits = []
+    for _ in range(length):
+        digits.append(value % base)
+        value //= base
+    require(value == 0, "digit word exceeded its declared length")
+    return tuple(reversed(digits))
+
+
 def main():
     p = 13
     R = p**6
@@ -188,6 +211,53 @@ def main():
         "an atom endpoint lost the whole open cylinder",
     )
 
+    # The congruence lock has an exact one-level renormalization.  Divide the
+    # atom addresses by thirteen and classify their consecutive toothpicks in
+    # Z/(13^5).  There are five teeth at each of the seven C7 clock centres.
+    reduced_modulus = R // p
+    reduced_atom = tuple(n // p for n in whole_atom)
+    reduced_runs = consecutive_runs(reduced_atom)
+    clock_centres = tuple((j * reduced_modulus) // 7 for j in range(7))
+    expected_offsets = (
+        ((0, 8), (13, 32), (37, 43), (319, 322), (326, 326)),
+        ((0, 9), (13, 33), (38, 44), (319, 323), (327, 327)),
+        ((0, 9), (13, 33), (37, 44), (319, 323), (327, 327)),
+        ((0, 9), (13, 33), (37, 44), (319, 323), (327, 327)),
+        ((0, 9), (13, 33), (37, 44), (319, 322), (327, 327)),
+        ((0, 8), (13, 33), (37, 44), (319, 322), (327, 327)),
+        ((0, 8), (13, 32), (37, 44), (319, 322), (327, 327)),
+    )
+    require(len(reduced_runs) == 35, "five-by-seven tooth count changed")
+    observed_offsets = tuple(
+        tuple(
+            (left - clock_centres[j], right - clock_centres[j])
+            for left, right in reduced_runs[5 * j : 5 * j + 5]
+        )
+        for j in range(7)
+    )
+    require(observed_offsets == expected_offsets, "clock-tooth atlas changed")
+    clock_cluster_sizes = tuple(
+        sum(right - left + 1 for left, right in row)
+        for row in expected_offsets
+    )
+    require(
+        clock_cluster_sizes == (41, 44, 45, 45, 44, 43, 42)
+        and sum(clock_cluster_sizes) == len(whole_atom),
+        "clock-cluster size profile changed",
+    )
+    centre_words = tuple(
+        base_digits(centre, p, 5) for centre in clock_centres
+    )
+    expected_words = ((0, 0, 0, 0, 0),) + tuple(
+        (2 * j - 1, p - 2 * j, 2 * j - 1, p - 2 * j, 2 * j - 1)
+        for j in range(1, 7)
+    )
+    require(centre_words == expected_words, "alternating clock words changed")
+    require(
+        all((13 * j) % 7 == (-j) % 7 for j in range(7)),
+        "base-thirteen clock reflection changed",
+    )
+
     atom_set = set(whole_atom)
     transit = tuple(n for n in good if n not in atom_set)
     require(len(transit) == 3042, "transit packet bank changed")
@@ -213,6 +283,29 @@ def main():
         "canonical physical two-step loop changed",
     )
 
+    # For endpoints 13m and 13m', every signed two-edge composite has total
+    # numerator 7*13*(m'-m), independent of its transit midpoint.  Dividing
+    # by thirteen gives the exact depth-five address coboundary.
+    require(
+        all(
+            (7 * (right - left)) % p == 0
+            and 7 * (right - left) // p
+            == 7 * (right // p - left // p)
+            for left in whole_atom
+            for right in whole_atom
+        ),
+        "two-step address descent changed",
+    )
+    descent_end = 13
+    require(descent_end in atom_set, "canonical descent endpoint disappeared")
+    descent_steps = (7 * (b - a), 7 * (descent_end - b))
+    require(
+        descent_steps == (7, 84)
+        and sum(descent_steps) == 91
+        and sum(descent_steps) // p == 7,
+        "canonical depth-five macro changed",
+    )
+
     print("LRC14 FOLLOWING-ATOM-BASED PHYSICAL MACRO AUDIT")
     print(f"p={p} R={R} I=({interval[0]},{interval[1]}) length={2*radius}")
     print(
@@ -234,6 +327,12 @@ def main():
         "midpoint_atom=whole_open_I_atom=packet_residue_0"
     )
     print(
+        f"reduced_atom_modulus={reduced_modulus} runs={len(reduced_runs)} "
+        f"clock_centres={clock_centres} cluster_sizes={clock_cluster_sizes}"
+    )
+    print(f"clock_centre_base13_words={centre_words}")
+    print(f"clock_tooth_offsets={observed_offsets}")
+    print(
         f"atom_to_transit_edges={one_way_edges} "
         f"transit_to_atom_edges={one_way_edges} "
         f"two_step_atom_macros={based_macro_paths}"
@@ -241,6 +340,11 @@ def main():
     print(
         f"canonical_loop={a}->{b}->{a} signed_lift_numerators={signed_steps} "
         f"positive_representatives={positive_steps} phase_sum=0"
+    )
+    print(
+        f"canonical_descent={a}->{b}->{descent_end} "
+        f"signed_lift_numerators={descent_steps} total={sum(descent_steps)} "
+        f"depth5_numerator={sum(descent_steps)//p} midpoint_independent=True"
     )
     print(
         "scope=whole-I fixed-atom support macro;"

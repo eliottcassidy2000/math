@@ -99,6 +99,67 @@ pure translation phase therefore has trivial holonomy at every integral
 frequency.  The whole interval `I` carries the fixed packet at the midpoint
 and the full following atom at both endpoints.
 
+### 2.1 The congruence lock descends one scale
+
+Write every atom address as `n=13m`.  The `304` reduced addresses in
+`Z/(13^5)` are not an unstructured residue cloud.  They form exactly `35`
+consecutive toothpicks: five near each of the seven clock centres
+
+```text
+c_j=floor(j*13^5/7),              j=0,...,6.              (8)
+```
+
+Here is the complete compressed atlas; each interval is an offset from
+`c_j`.
+
+| `j` | `c_j` | five-digit base-13 word | tooth offsets | size |
+|---:|---:|:---:|:---|---:|
+| 0 | 0 | `00000` | `0..8, 13..32, 37..43, 319..322, 326` | 41 |
+| 1 | 53041 | `1B1B1` | `0..9, 13..33, 38..44, 319..323, 327` | 44 |
+| 2 | 106083 | `39393` | `0..9, 13..33, 37..44, 319..323, 327` | 45 |
+| 3 | 159125 | `57575` | `0..9, 13..33, 37..44, 319..323, 327` | 45 |
+| 4 | 212167 | `75757` | `0..9, 13..33, 37..44, 319..322, 327` | 44 |
+| 5 | 265209 | `93939` | `0..8, 13..33, 37..44, 319..322, 327` | 43 |
+| 6 | 318251 | `B1B1B` | `0..8, 13..32, 37..44, 319..322, 327` | 42 |
+
+The alternating palindromes are forced, not numerology.  Since
+`13=-1 mod7`, multiplication by `13` reflects the clock `j/7` to
+`(7-j)/7`, while multiplication by `13^2` fixes it.  More explicitly, for
+`j=1,...,6`,
+
+```text
+j/7=0.overline((2j-1),(13-2j)) in base 13,               (9)
+```
+
+and `c_j` is its five-digit truncation.  The odd truncation is therefore a
+palindrome.  This is the exact toothpick self-similarity behind the earlier
+`35`-component census: seven reflected clocks, each resolved into five fine
+teeth.  The small size bias `41,44,45,45,44,43,42` records the oriented
+half-open boundary and should not be symmetrized away.
+
+There is also an operation-level descent.  For atom endpoints
+`a=13m`, `c=13m'` and any transit midpoint `b`, the signed physical lift
+numerators telescope:
+
+```text
+7(b-a)+7(c-b)=7(c-a)=13*7(m'-m).                         (10)
+```
+
+Thus the two-step macro has a canonical depth-five numerator
+`7(m'-m)`, independent of which of the `3042` midpoints realizes it.  The
+smallest nonconstant control is
+
+```text
+0 -> 1 -> 13:       (7,84) -> total 91 -> descended 7.   (11)
+```
+
+One-step physical lifts cannot stay in the atom congruence class; their
+two-step composites do, and uniformly admit division by thirteen.  The
+valuation is exactly one only when `m'-m` is nonzero modulo `13`, as in
+(11); deeper endpoint coincidences can contribute further factors, and a
+loop contributes zero.  This is an address coboundary/renormalization law,
+not a delayed chronological map.
+
 This is a useful relational version of transitivity.  A one-step observable
 cannot move inside the atom part, but its square is the universal relation on
 that part.  The irregularity is concentrated in the first quotient digit:
@@ -133,7 +194,7 @@ The next object should be a fibre product, not an identification:
 ```text
 (physical two-step atom macro)
           x_(fixed endpoint expansion)
-(paired blocker--graft Fourier current).                 (8)
+(paired blocker--graft Fourier current).                 (12)
 ```
 
 It must retain the left and right Fourier multiindices `(u,v)`, test the true
@@ -162,8 +223,8 @@ Both executions byte-match
 with LF-normalized SHA-256 values
 
 ```text
-script  db2aef5fa48611c61939494630e22298e57fe20c7eeb81f08a47ab27869d61dd
-output  de0988d683aa1b237a56e5ef73dbef27c136ebf169ddc934f5d040725ca62db6
+script  bc81895a029d070d3856a9a9cfeb622a39878947d98aad0768b5c405fdbf6818
+output  a636763b55b5471a9a4aa1d6512f3a15d693d6daa1918851d1a62c22dfbcc8f6
 ```
 
 The universe is all `13^6` lift addresses with the full inherited packet
