@@ -5,6 +5,7 @@ chart_types={affine:11154,nonlinear:1014} degenerate_affine_controls=1014
 normal_form_holes={parallel_nonlinear:(4,11),antiparallel_nonlinear:(3,10)}
 every_pair_holes=disjoint every_pair_colour_union=13
 cover_multiplicity_census={one:24336,two:54756}
+cover_character_checks=73008_all_nonzero centered_energy=36/169 max_square_floor=3/169
 edge_overlap_census={one:5070,three:1014} retained_edges={21:5070,19:1014}
 matched_class=one_affine_plus_one_nonlinear
 PASS

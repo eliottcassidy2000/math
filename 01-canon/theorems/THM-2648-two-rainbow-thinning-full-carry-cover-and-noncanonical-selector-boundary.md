@@ -11,8 +11,9 @@ status: >
   one affine orientation is rainbow; an explicit nonlinear normal-form
   matching supplies the second disjoint-hole chart.  Exhaustively there are
   11,154 affine and 1,014 nonlinear charts, and every two-chart cover has
-  colour multiplicities 1 on four carries and 2 on nine.  Two charts are
-  minimal.  This is an abstract rainbow thinning, not a physical LRC
+  colour multiplicities 1 on four carries and 2 on nine.  Its chart-incidence
+  profile retains all twelve charged characters with centered energy 36/169.
+  Two charts are minimal.  This is an abstract rainbow thinning, not a physical LRC
   selector: current eleven-sheet rows do not provide a same-base positive
   product relation or a lawful measurable restriction to the selected
   edges.
@@ -26,8 +27,8 @@ related:
   - HYP-2233-missed-problem-frontier-carrier-atlas
 script: 04-computation/lrc14_two_rainbow_full_carry_cover_thm2648.py
 output: 05-knowledge/results/lrc14_two_rainbow_full_carry_cover_thm2648.out
-script_sha256: 963bc4996deaf3eeec5b78268cfbf592736b35f1d8d7b05dd8410df70282bd1c
-output_sha256: 3438805ecf31bc835f9f7bfcd487450f14f748e030011c13d6426e732069c499
+script_sha256: e71ae4c654c6efb512718a839f3f72d38d987f6e814123ddd5519dac14e79fcc
+output_sha256: 1e576ffa5c56f024c266159d9bb91f4e37564c63c75a368775a626f73ffd8504
 hash_basis: LF-normalized bytes
 ---
 
@@ -229,12 +230,33 @@ multiplicity one:     6,084*4=24,336,
 multiplicity two:     6,084*9=54,756.                    (22)
 ```
 
+Let `w(c)` count the number of the two charts carrying colour `c`.  Then
+`w` has the universal rational shape `1^4 2^9`.  A rational vector on
+`C_13` with one vanishing nonzero Fourier mode is constant, by irreducibility
+of `Phi_13`; hence this nonconstant profile has
+
+```text
+what(k)!=0                         for every k!=0.         (23)
+```
+
+With the normalized DFT, its exact charged energy is
+
+```text
+sum_(k!=0)|what(k)|^2
+ =13^(-1)sum_c|w(c)-22/13|^2
+ =36/169,                                                 (24)
+```
+
+so some chart-incidence mode has square at least `3/169`.  Thus the rainbow
+thinning preserves THM-2645's full charged spectrum and regularizes both
+dense energy classes to the lower value.
+
 The two charts need not be edge-disjoint.  They share exactly one selected
 edge in the `5,070` step-distinct pairs and exactly three in the `1,014`
 matched pairs.  Their union therefore retains respectively
 
 ```text
-21 of 121 edges       or       19 of 121 edges.           (23)
+21 of 121 edges       or       19 of 121 edges.           (25)
 ```
 
 Two charts are minimal: one eleven-edge rainbow matching has only eleven
@@ -250,11 +272,12 @@ explains exactly how a maximally saturated relation can contain private local
 branches without having one global holonomy permutation.
 
 The construction does not contradict THM-2644's purity/return no-go for the
-full multiplicity.  By (23) it first discards `100` or `102` of the `121`
-increment pairs.  Nor is the selector canonical.  The affine charts require the labelled missing
-pairs; on the matched wall the nonlinear templates additionally choose a
-normalization and break the residual affine symmetry.  Different choices can
-give different thin branches with the same original relation.
+full multiplicity.  By (25) it first discards `100` or `102` of the `121`
+increment pairs.  Nor is the selector canonical.  The affine charts require
+the labelled missing pairs; on the matched wall the nonlinear templates
+additionally choose a normalization and break the residual affine symmetry.
+Different choices can give different thin branches with the same original
+relation.
 
 Most importantly, current LRC rows do not instantiate the product `S x T` as
 a same-base positive physical transition table.  A static coefficient row or
@@ -291,8 +314,9 @@ The dependency-free referee uses explicit optimization-safe guards.  It
 4. verifies every affine and transported nonlinear hole formula, all
    `1,014` degenerate affine controls, and the chart census (20); and
 5. proves disjoint holes, full thirteen-colour union, and (21) on every pair,
-   recovering the global census (22), and checks the exact one/three-edge
-   chart overlaps and retained-edge counts (23).
+   recovering the global census (22), verifies all `73,008` charged chart
+   characters and the energy (24), and checks the exact one/three-edge chart
+   overlaps and retained-edge counts (25).
 
 The script and stored output have the LF-normalized SHA-256 hashes declared
 in the frontmatter.

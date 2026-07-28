@@ -7,6 +7,7 @@ All guards survive optimized Python.
 """
 
 from collections import Counter
+from fractions import Fraction
 from itertools import combinations
 
 
@@ -98,6 +99,7 @@ def main():
     cover_multiplicity = Counter()
     edge_overlap_census = Counter()
     retained_edge_census = Counter()
+    cover_character_checks = 0
     degenerate_affine_controls = 0
     matching_edges = 0
 
@@ -170,6 +172,19 @@ def main():
                 cover_multiplicity[multiplicity] += 1
             require(multiplicities == Counter({2: 9, 1: 4}),
                     "per-pair cover multiplicity profile")
+            cover_vector = tuple(int(colour in c1) + int(colour in c2)
+                                 for colour in range(p))
+            mean = Fraction(22, 13)
+            energy = sum((Fraction(value) - mean) ** 2 for value in cover_vector) / p
+            require(energy == Fraction(36, 169), "cover charged energy")
+            for k in range(1, p):
+                # Multiplication by nonzero k permutes the coefficient vector.
+                # In Q(zeta_13), a degree-<13 rational vector vanishes only
+                # when all thirteen coefficients are equal.
+                transformed = tuple(cover_vector[(-k * exponent) % p]
+                                    for exponent in range(p))
+                require(len(set(transformed)) > 1, "cover character vanished")
+                cover_character_checks += 1
             matching_edges += 2 * (p - 2)
 
     require(class_census == Counter({"step_distinct": 5070, "step_matched": 1014}),
@@ -184,6 +199,7 @@ def main():
     require(retained_edge_census == Counter({21: 5070, 19: 1014}),
             "retained edge census")
     require(matching_edges == 133848, "matching edge census")
+    require(cover_character_checks == 73008, "cover character census")
 
     print("THM2648 TWO-RAINBOW FULL-CARRY COVER EXACT REFEREE")
     print(f"relation_pairs={len(pairs) ** 2} matching_charts={2 * len(pairs) ** 2} matching_edges={matching_edges}")
@@ -192,6 +208,7 @@ def main():
     print("normal_form_holes={parallel_nonlinear:(4,11),antiparallel_nonlinear:(3,10)}")
     print("every_pair_holes=disjoint every_pair_colour_union=13")
     print("cover_multiplicity_census={one:24336,two:54756}")
+    print("cover_character_checks=73008_all_nonzero centered_energy=36/169 max_square_floor=3/169")
     print("edge_overlap_census={one:5070,three:1014} retained_edges={21:5070,19:1014}")
     print("matched_class=one_affine_plus_one_nonlinear")
     print("PASS")
