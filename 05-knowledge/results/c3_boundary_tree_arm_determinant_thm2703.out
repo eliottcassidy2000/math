@@ -1,0 +1,12 @@
+THM-2703 C3 BOUNDARY-TREE ARM AUDIT
+weighted_tree_templates_checked=6752
+templates_with_standard_kernel=2703
+continuant_chains_checked=19530
+even_continuant_chains=6027
+standard_multiplicity=sum_arm_nullities
+d4_det=4 d4_smith=(1, 1, 2, 2) standard_dim=2
+odd_arm_det=27 standard_dim=0
+all_minus_two_chain_det=length+1 parity_even_iff_length_odd
+surface_corollary_requires_full_rank_boundary_lattice
+unit_squareclass_branch_not_tested
+PASS
