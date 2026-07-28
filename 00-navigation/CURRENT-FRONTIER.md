@@ -350,46 +350,22 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2351 proves the canonical self-target ANOVA is exactly an affine reparameterization of the directional catalysis--bypass ledger; its optimum and skew pair sector add no information. Positive catalysis and the stable diagonal remain open.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
 - **Jacobian/Dixmier:** THM-1300/1315's three-dimensional collision has
-  unsettled provenance (MISTAKE-205); `DC(2)` remains open.  For that fixed
-  sporadic map, THM-2473/2546 prove the exact Jelonek and omitted-fibre laws,
-  while THM-2566/MISTAKE-287 show that its cusp and Weierstrass descriptions
-  are **saturated** pullbacks: the raw discriminant loci also contain
-  coefficient-zero planes, and the `3/1/0`--Kodaira dictionary is exact only
-  on `a!=0`.  THM-2570 then normalizes the whole Jelonek surface by an affine
-  plane: on `c!=0` it is literally a cusp cylinder, and its exact conductor,
-  reduced singular locus, and omitted-fibre support are the same curve `E`;
-  the `c=0` boundary is smooth.  THM-2576 proves the general set-level
-  nonproperness composition law and computes the square's second component:
-  `S_(F o F)=V(LH)` with `L,H` distinct irreducibles.  Composite
-  discriminant parity is exact on three slices (`H` odd, `L` even) but remains
-  outside global canon; all higher component counts remain open.
-  For G1, THM-2598/MISTAKE-297 originally left `D4,A4,S4`.
+  unsettled provenance (MISTAKE-205); `DC(2)` remains open.  On that fixed
+  sporadic map, THM-2473/2546/2566/2570 give the saturated Jelonek, cusp,
+  conductor, and omitted-fibre laws, while THM-2576 gives the set-level
+  composition law `S_(F o F)=V(LH)`; higher component counts remain open.
   [THM-2633](../01-canon/theorems/THM-2633-derangement-character-obstruction-and-d4-keller-exclusion.md)
-  now excludes `D4` geometric monodromy for polynomial Keller maps in every
-  dimension.  Openness and constant source units force
-  `1<=k_D<=d-1` and an inertia-fixed sheet over every Jelonek divisor; purity
-  then forces the actual affine Jelonek inertia subgroups to normally
-  generate monodromy.  Hence every point stabilizer normally generates `G`,
-  excluding every nontrivial regular monodromy group; it also surjects onto
-  `G^ab` and detects every prime-cyclic character.  Field-theoretically, the
-  source extension contains no nontrivial Galois subextension of the target
-  field.  In `D4`
-  the fixed-point normal closure is only the order-four source-deck kernel,
-  equivalently the nonzero deck character is supported on derangements.
-  Thus `C4,V4,D4` fail and only `A4,S4` remain at degree four.  `A4` character
-  support has three-cycle inertia and `k=1`; `S4` sign support has
-  transposition inertia and `k=1` or `2`.  THM-2612/2627/2628's `D4` pole,
-  character, and opposite-pair ledgers remain exact near-miss controls but
-  are no longer a live lane.  Corrected THM-2621's exact trace and zero
-  residues explain why residue refinement was downstream of this simpler
-  image-incidence contradiction.  No `A4/S4`, `JC(2)`, or `DC(2)` closure
-  follows.
-  THM-2465 makes the affine point-cap face planar degree four; G1 remains open.
-  At degree eighteen, THM-2314/2316 close sparse supports,
-  THM-2371/2376 close `H_2`, and audited THM-2406 forces THM-2389's `H_4`
-  pole system onto the closed common-root wall. The inherited nonsplit
-  exact-square-prefix reduced degree-eighteen branch is closed; `JC(2)`,
-  `DC(2)`, and branches outside THM-2262 remain open.
+  proves that every Keller sheet stabilizer normally generates monodromy:
+  Jelonek inertia fixes a sheet and normally generates by purity.  Thus
+  `C4,V4,D4` fail and only `A4,S4` remain at degree four; the source field has
+  no nontrivial Galois subextension of the target.  [THM-2643](../01-canon/theorems/THM-2643-degree-five-six-keller-stabilizer-and-regular-block-quotient-census.md)
+  identifies failure exactly with a regular sheet quotient.  It excludes
+  regular `C5` and nine of sixteen sextic actions; an induced `S3` block
+  action is not fatal by itself, and quartic/resolvent actions must not be
+  conflated.  No degree bound, `A4/S4`, `G1`, `JC(2)`, or `DC(2)` closure
+  follows.  At degree eighteen, THM-2314/2316 close sparse supports,
+  THM-2371/2376 close `H_2`, and audited THM-2406 sends `H_4` to the closed
+  common-root wall; branches outside THM-2262 remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencils;
   THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
