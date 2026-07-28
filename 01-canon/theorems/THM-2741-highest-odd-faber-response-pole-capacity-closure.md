@@ -2,8 +2,8 @@
 id: THM-2741
 title: "Highest odd-Faber response pole-capacity closure"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-  REQUESTED.  In the full chosen-sheet split degree-22 Faber response
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the full
+  chosen-sheet split degree-22 Faber response
   family, every geometrically integral member with at least one nonzero odd
   Faber coefficient is physically empty.  If a_j is the highest odd seed and
   r=22-j, the G2 infinity face has 3*gcd(r,6) coarse normalization branches.
@@ -13,6 +13,7 @@ status: >
   response members, the all-even zero-flux boundary, JC(2), and DC(2) remain
   open.
 source: root/highest-odd-faber-response-pole-capacity-2026-07-28
+audit: thm2705-2709-audit-2026-07-28 (independent coefficient, weight, branch, descent, and pole-pullback reconstruction)
 depends_on:
   - THM-2719-full-split-odd-faber-generic-normalization-genus-four-hundred-nineteen
   - THM-2723-split-exact-square-prefix-rational-primitive-pole-capacity
@@ -28,8 +29,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2741 -- every highest odd seed creates forbidden response poles
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2726 uses the physical coefficient `q` to remove the `a_21!=0`
 geometrically integral locus.  The same infinity germ contains a stronger
@@ -276,3 +276,30 @@ weighted inequality rather than assuming the table, proves each response
 coefficient in `(17)` nonzero, verifies every bivariate gcd, and records the
 branch and pole invoices for all eleven odd seeds.  It uses explicit
 exceptions rather than optimization-sensitive `assert` statements.
+
+## 8. Independent hostile audit
+
+The audit independently reconstructed the load-bearing local data rather
+than replaying the companion.  At the square point `P=(w^2+1)^2` it obtained,
+for every odd `j`,
+
+```text
+c_1=binom(j/2,(j+1)/2)!=0,       c_3/c_1=-1/(j+3),
+R_j/Phi_j=(j+1)/(2(j+3))!=0,
+```
+
+while `Psi_j` has no constant term by parity.  This gives
+`c_j=231(j+2)/(128(j+3))` and reproduces all eleven constants in `(17)`.
+For the four even columns it reduced every strict face inequality to
+`r<24`, so no omitted even seed or flux term reaches the initial system.
+
+After eliminating the simple transverse coordinate in `Psi_(22,6)`, each
+of its six lines has equation `h^r=c s^6+higher`.  The audit therefore
+recovered exactly `gcd(r,6)` branches per line, checked that the central
+involution freely pairs opposite lines, and verified that `R_25/h^25`
+descends.  Its pole calculation gives `(150-6r)/g` on every coarse branch,
+including the minimum order eight.  Finally it separately checked that the
+source classification has exactly one pole in either case of `(21)` and
+that a finite surjective normalization map pulls back distinct pole fibres.
+Normal, optimized, and stored transcripts agree byte for byte and both
+declared hashes match.  No additional hypothesis was found.
