@@ -2,7 +2,7 @@
 id: THM-2634
 title: "Endpoint-pair two-carry cospan and single-carry chronology no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   THM-2625's allocated endpoint determinant is a tensor product of two
   separately integrated signed endpoint sums.  Splitting each sum before
   its endpoint DFT by c=floor(169{x}) mod 13 therefore gives a lawful
@@ -35,7 +35,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2634 -- the endpoint determinant has two carries, not one
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2630 isolates the missing predecessor/successor digit on a physical
 root ancestry.  THM-2625 supplies a rich coefficient-side determinant
@@ -351,6 +351,13 @@ Both executions byte-match
 05-knowledge/results/lrc14_endpoint_pair_two_carry_cospan_thm2634.out.
 ```
 
+An independent hostile audit rederived every normalization and sign in
+(13)--(17), the `k=0` recovery, the full-support shifted-carry hostile, the
+sharp nonnegative support threshold, and the transverse determinant law.  It
+also replayed normal and optimized modes against the stored transcript and
+verified the repaired `6,591` distinct endpoint-grid gauge checks and the
+declared LF-normalized hashes.
+
 ## 6. Exact boundary
 
 This theorem proves a typed information-loss boundary and the minimal lawful
@@ -370,4 +377,4 @@ The next decisive test is no longer another determinant census.  It is to
 construct or obstruct one endpoint-matched phase ratio together with a
 transverse section on the same physical packet.
 
-QED (candidate; independent hostile audit pending).
+QED.
