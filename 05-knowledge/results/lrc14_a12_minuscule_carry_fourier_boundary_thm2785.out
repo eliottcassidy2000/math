@@ -1,0 +1,29 @@
+THM2785 A12 MINUSCULE CARRY FOURIER BOUNDARY EXACT REFEREE
+scales=(P=13,R=4826809,S=371293,C3=742586)
+canonical_config=(rail0,sector0,edge0,kappa0,h6) metadata=(1,0,12)
+canonical_missing_labels=(12, 10, 8, 6, 4, 2, 0, 11, 9, 7, 5, 3, 1)
+canonical_component_length=3/12545122758259
+a12_weight_orbit_size=13 pair_differences=A12_roots
+a12_regular_simplex_cyclic_gram=(12, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1)
+a12_nontrivial_vector_DFT_norm_squared=13 for_each_of_12_characters
+a12_P_over_Q_classes=(12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12) meaning=all_minus_gamma
+direct_carry_to_P_over_Q=constant; no facet-induced quotient identification
+fourier_descent_criterion=integer_N descends_to_C13_character iff 13^5 divides N
+physical_component_spectrum=N=a*13^5 realizes character -a*gamma for every a=1,...,12
+canonical_C3_character_exponents=(0, 11, 9, 7, 5, 3, 1, 12, 10, 8, 6, 4, 2)
+canonical_C3_character_class=-2gamma magnitude=sin(6*pi/(7*13^6))/(2*pi*13^5)
+slope_step=c_to_c_plus_7 character_multiplier=zeta^-1
+canonical_odometer_kernel_steps=('1/371293', '0', '0', '0', '0', '0', '0', '1/371293', '1/371293', '1/371293', '1/371293', '1/371293', '1/371293')
+canonical_thirteen_step_kernel_sum=7/13^5 annihilated_by_C3
+rail8_config=(rail8,sector0,edge1,kappa1,h6) metadata=(1,4,12)
+rail8_component_length=1/50180491033036
+rail8_C3_character_class=-2gamma magnitude=sin(pi/(14*13^6))/(2*pi*13^5)
+rail8_source_I12=(Fraction(70792935919, 148462991222), Fraction(23928012340623, 50180491033036)) root=12 positive_total=8028307708883516100046000
+rail8_target_I6=(Fraction(70792751371, 148462991222), Fraction(23927949963399, 50180491033036)) root=0 positive_total=8066356743663093598282560
+rail8_equal_weight=27581135604
+rail8_I12_intersection_E3=0 intersection_S_(1,0,4)=0 intersection_full_marked_source=0
+rail8_I6_and_translated_I12_intersection_full_marked_target=0
+rail8_selected_transport=I12+7/R=I6+1/S; Fourier_C3_forgets_1/S but semantic_carrier_does_not
+comparison=THM2771 target/Bockstein coordinates and THM2772 allocation K4 are not supplied
+scope=physical component-indicator Fourier current only; no virtual homology, THM2334 endpoint current, common atom, row decrement, or LRC14
+ALL EXACT CHECKS PASSED
