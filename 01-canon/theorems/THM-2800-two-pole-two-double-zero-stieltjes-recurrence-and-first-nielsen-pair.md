@@ -2,8 +2,8 @@
 id: THM-2800
 title: "Two-pole two-double-zero bitangent eliminant and complete Nielsen corridor"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  The complete balanced-response corridor e=2,h=2,p=(N-1,1) has
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The complete
+  balanced-response corridor e=2,h=2,p=(N-1,1) has
   exactly N-3 normalized maps in every degree N>=4.  Their two double zeros
   are the common-tangency points of a line to x^(N-1)(x-1), and an explicit
   degree-(N-3) recurrence polynomial Q_N is their exact Maxwell/bitangent
@@ -27,8 +27,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2800 -- two-pole two-double-zero bitangent eliminant and complete Nielsen corridor
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2799 classifies the one-pole part of the first open `e=2` response
 layer.  The present theorem classifies the adjacent two-pole corridor.  Its
@@ -224,10 +223,12 @@ and their exact number is
 N-3.                                                 (22)
 ```
 
-The genus-zero permutation triples give normalized rational maps by the
-Riemann existence correspondence.  The pole multiplicities and the high
-third-fibre point make the source normalization unique.  A normalized map
-determines `s`; conversely `(13)` makes the map unique once `s` is fixed.
+Their ramification defects sum to `2N-2`, so the triples have genus zero.
+The Riemann existence correspondence gives normalized rational maps over
+`C`, and characteristic-zero base change gives the algebraic statement.
+The pole multiplicities and the high third-fibre point make the source
+normalization unique.  A normalized map determines `s`; conversely `(13)`
+makes the map unique once `s` is fixed.
 Thus the `N-3` Nielsen classes inject into the roots of the degree-`N-3`
 polynomial `Q_N`.  It follows that:
 

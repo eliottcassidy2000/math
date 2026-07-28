@@ -1,0 +1,20 @@
+THM-2805 GENERAL TWO-POLE E=2 MAXWELL AUDIT
+N,d | degree Q | unmarked classes | ordered charts
+ 4,2 |        0 |                0 |              0
+ 5,2 |        1 |                1 |              1
+ 6,2 |        2 |                2 |              2
+ 6,3 |        2 |                1 |              2
+ 7,2 |        3 |                3 |              3
+ 7,3 |        3 |                3 |              3
+ 8,2 |        4 |                4 |              4
+ 8,3 |        4 |                4 |              4
+ 8,4 |        4 |                2 |              4
+ 9,2 |        5 |                5 |              5
+ 9,3 |        5 |                5 |              5
+ 9,4 |        5 |                5 |              5
+exact algebra/pole cases checked: 12
+ordered Maxwell charts in checked middle corridors: 38
+all h=2 classes including d=1: binomial(N-2,2)
+equal-pole charts pair under s -> 2-s with no fixed root
+bitangent quotient and converse gates: PASS
+assert_nodes=0
