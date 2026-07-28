@@ -11,15 +11,17 @@ status: >
   at least m, and any labeling separating all vertex pairs has span at least
   binom(n,2).  Therefore a graceful n-vertex tree must deliberately allow
   nonedge difference collisions: universal Golomb separation over-solves
-  the problem and cannot be compressed to the graceful span n-1.  This
-  isolates the tree-specific compression debt but does not prove Graceful
-  Tree.
+  the problem and cannot be compressed to the graceful span n-1.  The
+  already-proved rooted Nullstellensatz theorem THM-2765 does exploit this
+  distinction to reach span 3n-5; the remaining debt is the exact
+  factor-three-to-one compression.  This does not prove Graceful Tree.
 source: root/binary-golomb-graceful-boundary-2026-07-28
 external_input: >
   Bertrand's postulate, used only for the corollary that an odd prime
   n<=p<2n exists and hence the displayed prime ruler has span <8n^2.
 depends_on:
   - THM-2761-graph-edge-sum-discriminant-codegree-factorization-and-graceful-sign-gauge
+  - THM-2765-rooted-nullstellensatz-linear-range-distinct-edge-labeling
 related:
   - THM-2783-weighted-long-wall-binary-null-avoidance-and-ternary-state-reconstruction
 script: 04-computation/binary_golomb_graceful_boundary_thm2786.py
@@ -44,8 +46,9 @@ It is far stronger than graceful labeling, because it separates the
 differences of every pair of vertices, not only the edges.  That strength is
 exactly why it cannot reach the graceful range.  The theorem below turns
 this familiar powers-of-two observation into a source/target map, compresses
-it to quadratic range, and proves that the final linear compression must use
-the tree's missing edges.
+it to quadratic range, and proves that any linear compression must use the
+tree's missing edges.  THM-2765 already does so and reaches `3n-5`; the
+candidate here explains why that change of category is load-bearing.
 
 ## 1. Exact binary endpoint decoder
 
@@ -202,6 +205,25 @@ The missing operation is not generic collision avoidance.  It is
 tree-specific selective collision: preserve the `n-1` edge differences
 while folding the much larger nonedge difference family.
 
+THM-2765 proves that this distinction already has force.  Its rooted
+coefficient-one construction labels every tree in `{0,...,3n-5}` while
+keeping only the tree-edge absolute differences distinct.  For `n>=6`,
+
+```text
+binom(n,2)>3n-5,                                           (18a)
+```
+
+so the counting bound `(16)` proves that every such linear-range route must
+allow some nonedge differences to collide.  The remaining graceful problem
+is therefore not the quadratic-to-linear transition supplied by `(7)`.
+It is the sharper compression
+
+```text
+rooted 1+2 channel range 3n-5  ->  graceful range n-1,    (18b)
+```
+
+while retaining vertex injection and the two mirror signs of THM-2765.
+
 ## 4. Small complete-graph controls
 
 For a complete graph, `(16)` is the elementary counting floor for a Golomb
@@ -233,7 +255,8 @@ discriminant nonzero.  This supplies a universal rational/integral point
 away from the graceful collision hypersurfaces, first at exponential and
 then at quadratic height.  It proves that the discriminant polynomial is
 not identically zero without constructing a point in the small graceful
-box.
+box.  It is not a better range theorem than THM-2765; its value is the
+all-pairs decoder and the impossibility boundary `(16)--(18b)`.
 
 The transfer ledger is:
 
@@ -245,8 +268,10 @@ destroyed
  by desired
  compression: nonedge difference identities may and must collide;
 needed
- sidecar:      a tree-incidence-aware folding staying off edge collisions;
-cheapest test: perform that folding on a nonpath tree without exceeding n-1.
+ sidecar:      improve THM-2765's rooted 1+2 channel load without losing
+               vertex injection or either mirror sign;
+ cheapest test: lower one rooted exponent layer while preserving the
+                coefficient-one monomial and the range bound.
                                                                     (21)
 ```
 
@@ -276,9 +301,11 @@ PROVED HERE (candidate):  binary and general-radix endpoint decoder;
                           span <2p^2 and, by Bertrand, <8n^2;
                           edge-count and all-pair span lower bounds;
                           necessity of nonedge collisions for graceful span;
+                          THM-2765 linear-range comparison and remaining
+                          factor-three compression boundary;
                           complete-graph optima through six vertices.
 
-NOT PROVED:               a tree-specific collision-preserving compression;
+NOT PROVED:               an improvement to THM-2765's 3n-5 tree range;
                           a graceful labeling for any previously open tree;
                           the Graceful Tree Conjecture;
                           an optimal general Golomb-ruler bound;
