@@ -11,6 +11,8 @@ status: >
   Kummer extension rather than an auxiliary invariant.  At a prime divisor,
   a colouring is inertia-fixed iff the even Kummer row is 000; a nonzero row
   pairs the four colourings and fixes one weight-two opposite root-line pair.
+  The determinant-two frame has that row as its unique mod-two null vector,
+  whereas every determinant-three A2 frame is invertible mod two.
   Orbit symmetrization retains only opposition and loses this placement.
   This repackages, but does not strengthen, the THM-2685 parity gate; no
   A4/S4, JC(2), or DC(2) exclusion follows.
@@ -26,8 +28,8 @@ related:
   - THM-2775-modular-s4-to-weyl-d3-generator-frame-and-affine-parity-blindness
 script: 04-computation/marked_d3_weight_torsor_descent_thm2780.py
 output: 05-knowledge/results/marked_d3_weight_torsor_descent_thm2780.out
-script_sha256: 67e66b66f03cce09dc5af6e9a9eef50998b749c7d60b2e696c49dc66aac10bb6
-output_sha256: 49c45b1fb16677c16ae5ba89a0a3d56c8a928852e023fcf38f57c622c09083e8
+script_sha256: 22cbd2e0097e9a48f5695deae2bbd881142cedafcd5048d8001d11bb1be599f1
+output_sha256: 2ab9c0ceca0993263f62c3637b58d13f0101af7c1c3d810b3ff8a1565642fe76
 hash_basis: LF-normalized bytes
 ---
 
@@ -235,11 +237,38 @@ nonzero Kummer inertia
  -> unique pointwise-fixed weight-two root-line pair.    (20)
 ```
 
+There is an equally exact Smith/parity formulation.  For the marked frame
+
+```text
+M_ij=[a_ij; b_ij; h],                                   (20a)
+```
+
+all four half-Hadamard states satisfy `h=111 mod 2`, while
+
+```text
+a_ij=b_ij=e_i+e_j mod 2.
+```
+
+Therefore
+
+```text
+ker(M_ij mod 2)=<e_i+e_j>.                              (20b)
+```
+
+This is exactly the parity word which flips coordinates `i,j`.  It is the
+unique mod-two null direction of THM-2777's determinant-two frame.  By
+contrast, every determinant-one frame and every determinant-three `A2`
+frame has odd determinant and is invertible over `F_2`.  Thus the ternary
+`P(A2)/Q(A2)=Z/3` defect supplies no binary null line and no independent
+mod-two vanishing gate.  The only Smith rank drop aligned with Kummer inertia
+is the already-known weight-two pair.
+
 But `(20)` uses the **action** of inertia on labelled root lines.  The static
 set of three weight-two pairs is present for every mark and every divisor,
 so it does not select which row occurs.  The ternary `A2` index-three pairs
-do not constrain this two-primary translation: their weight-three triangle
-moves with `h`.
+do not constrain this two-primary translation through their Smith defect:
+their weight-three triangle moves with `h`, and their frames are mod-two
+units.
 
 ## 5. Orbit symmetrization is exactly the stopping boundary
 
@@ -298,14 +327,17 @@ The integer/set-only companion uses explicit exceptions and no truth-bearing
 assertions.  It checks all `24` sheet permutations, all four marks, all
 fifteen root-line pairs, both `S4/A4` stabilizers, simple transitivity of
 `V4`, every even sign word on the half-Hadamard states and six root lines,
-and the complete symmetrized profile `(21)`.  Normal and optimized runs
-byte-match the stored transcript.
+all sixty marked determinant frames and their complete mod-two kernels, and
+the symmetrized profile `(21)`.  Normal and optimized runs byte-match the
+stored transcript.
 
 ```text
 PROVED HERE (candidate):  the four marked weightings are the V4 torsor;
                           exact S3/C3 stabilizers and field degrees;
                           local fixed-colouring iff zero parity row;
                           fixed binary root-line pair for each nonzero row;
+                          determinant-two null-word alignment;
+                          determinant-three mod-two-unit stopping rule;
                           complete orbit-symmetrized no-go;
                           THM-2769 sharp affine hostile.
 

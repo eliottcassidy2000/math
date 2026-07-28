@@ -9,6 +9,8 @@ inertia_110=mark_cycles=(h1 h4)(h2 h3),fixed_lines=a12,b12
 inertia_101=fixed_lines=a13,b13
 inertia_011=fixed_lines=a23,b23
 nonzero_inertia_mark_fixed_points=0
+mod2_frame_nulls=weight1:0,weight2:110/101/011,weight3:0
+A2_index3_frames=mod2_unimodular
 orbit_symmetrized_opposite_profile=2,2,2,2 count=3
 orbit_symmetrized_adjacent_profile=1,1,1,3 count=12
 SCOPE=local_inertia_avatar_not_global_section_or_JC2

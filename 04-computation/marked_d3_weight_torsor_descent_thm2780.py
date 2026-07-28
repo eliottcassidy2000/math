@@ -198,6 +198,70 @@ def canonical_line(vector):
 LINE_TO_NAME = {canonical_line(vector): name for name, vector in ROOT_LINES.items()}
 
 
+def determinant3(row_a, row_b, row_c):
+    return (
+        row_a[0] * (row_b[1] * row_c[2] - row_b[2] * row_c[1])
+        - row_a[1] * (row_b[0] * row_c[2] - row_b[2] * row_c[0])
+        + row_a[2] * (row_b[0] * row_c[1] - row_b[1] * row_c[0])
+    )
+
+
+def mod_two_right_kernel(rows):
+    kernel = []
+    for vector in (
+        (x_0, x_1, x_2)
+        for x_0 in (0, 1)
+        for x_1 in (0, 1)
+        for x_2 in (0, 1)
+    ):
+        if all(sum(row[i] * vector[i] for i in range(3)) % 2 == 0 for row in rows):
+            kernel.append(vector)
+    return tuple(kernel)
+
+
+WORD_VECTOR = {
+    word: tuple(0 if sign == 1 else 1 for sign in signs)
+    for word, signs in SIGN_WORDS.items()
+}
+PAIR_TO_WORD = {
+    frozenset(names): word
+    for word, names in EXPECTED_FIXED.items()
+}
+
+root_names = tuple(ROOT_LINES)
+frame_kernel_histogram = {1: 0, 2: 0, 3: 0}
+for mark, h_state in enumerate(H_STATES):
+    for name_a, name_b in combinations(root_names, 2):
+        edge_a = ROOT_EDGE[name_a]
+        edge_b = ROOT_EDGE[name_b]
+        expected_weight = marked_weight(mark, edge_a, edge_b)
+        determinant_weight = abs(
+            determinant3(ROOT_LINES[name_a], ROOT_LINES[name_b], h_state)
+        )
+        require(
+            determinant_weight == expected_weight,
+            "root determinant and K4 marked weight disagree",
+        )
+        kernel = mod_two_right_kernel(
+            (ROOT_LINES[name_a], ROOT_LINES[name_b], h_state)
+        )
+        if expected_weight == 2:
+            word = PAIR_TO_WORD.get(frozenset((name_a, name_b)))
+            require(word is not None, "weight-two frame is not an inertia pair")
+            require(
+                set(kernel) == {(0, 0, 0), WORD_VECTOR[word]},
+                "weight-two mod-two kernel is not its inertia word",
+            )
+        else:
+            require(kernel == ((0, 0, 0),), "odd frame must be invertible mod two")
+        frame_kernel_histogram[expected_weight] += 1
+
+require(
+    frame_kernel_histogram == {1: 36, 2: 12, 3: 12},
+    "wrong four-mark frame census",
+)
+
+
 def sign_action_on_states(signs):
     action = []
     for state in H_STATES:
@@ -284,6 +348,8 @@ print("inertia_110=mark_cycles=(h1 h4)(h2 h3),fixed_lines=a12,b12")
 print("inertia_101=fixed_lines=a13,b13")
 print("inertia_011=fixed_lines=a23,b23")
 print("nonzero_inertia_mark_fixed_points=0")
+print("mod2_frame_nulls=weight1:0,weight2:110/101/011,weight3:0")
+print("A2_index3_frames=mod2_unimodular")
 print("orbit_symmetrized_opposite_profile=2,2,2,2 count=3")
 print("orbit_symmetrized_adjacent_profile=1,1,1,3 count=12")
 print("SCOPE=local_inertia_avatar_not_global_section_or_JC2")
