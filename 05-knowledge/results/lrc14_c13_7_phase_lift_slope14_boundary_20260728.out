@@ -1,0 +1,31 @@
+LRC14 C13^7 phase lift and slope-14 boundary
+status=VERIFIED-EXACT SIDECAR; not row exclusion or LRC14
+parameters=(p=13,R=4826809,c2=2197,c3=742586,c3/c2=338)
+physical_lift=T_s^(7)(x)={13x+s/13^7}; tail F_s(y)={13y+s/13}
+minimal_fixed_points=12/12; min_speed14_safe_margin=1/182
+s=1_fixed_lift=(x=5229043/62748517,y=1/13)
+minimal_carrier=12 recurrent interior fixed points for s=1,...,12
+full_W_uniform_stop=four target teeth force z in I/13^3; c3-safety fails because c3*y=338z and 338<13^3
+phase_language=(depth1 1/1, depth2 13/13, depth3 169/169, depth4 0/2197 by uniform proof)
+depth3_min=((3, 0), 6732, Fraction(18513, 439239619))
+depth3_max=((1, 8), 8294, Fraction(3509, 67575326))
+depth4_exact_controls={(0, 0, 0): (0, Fraction(0, 1)), (1, 2, 3): (0, Fraction(0, 1)), (12, 7, 4): (0, Fraction(0, 1))}
+slope14_full_W_rows=
+(1, 47484, Fraction(604725613249, 11455265301480))
+(2, 35220, Fraction(7074988411, 2545614511440))
+(3, 21206, Fraction(1419717323, 11879534386720))
+(4, 13148, Fraction(1006391, 188992592516))
+(5, 8400, Fraction(2567587, 10583585180896))
+(6, 5552, Fraction(32003, 2795664010048))
+(7, 3596, Fraction(10337, 19569648070336))
+(8, 2602, Fraction(15007, 547950145969408))
+(9, 1794, Fraction(81, 59932047215404))
+(10, 1080, Fraction(3119, 53699114305001984))
+(11, 696, Fraction(4033, 1503575200540055552))
+(12, 324, Fraction(1867, 21050052807560777728))
+(13, 106, Fraction(603, 294700739305850888192))
+(14, 20, Fraction(109, 4125810350281912434688))
+(15, 0, Fraction(0, 1))
+slope14_target_control=(1/15,-1/15) is a target-danger 2-cycle with 338/15 high-speed-safe, but full W dies at state15
+scope=the C13^7 lift is a genuine circle map but lacks inherited THM-2657 carry/root and present/clock typing
+ALL CHECKS PASSED

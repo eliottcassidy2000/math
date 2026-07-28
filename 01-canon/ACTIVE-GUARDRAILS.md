@@ -79,7 +79,7 @@
     The reflected `rho o D` swaps endpoint teeth but has the same raw return
     cylinders and the correctly reflected clock diagonal.
     No downstream restriction revives that unshifted support. THM-2689 restores intrinsic support but not global clock labels; THM-2691 closes the central lift at present depth six.
-    THM-2693 has a labelled positive three-event lift but proves the inherited delayed word empty at four for every lift/clock word; change the word, base dynamics, or edge, not the carry alphabet.
+    THM-2693 has a labelled positive three-event lift but proves the inherited delayed word empty at four for every integer lift/clock word.  One finer phase digit gives twelve recurrent nodes to the minimal target/speed-14 carrier, yet the full word is still uniformly empty at four because the unchanged high guard is `338` times the target; common translation only swaps the killer.  Change the relative factor phase, high guard, base slope, word, or edge, not merely the carry/phase alphabet.
 27f. **A disconnected label nerve is not physical Cech topology.** THM-2672
     finds honest twelve-fold components in all `534` maximal fixed
     configurations.  Edge switching defeats its fixed root-zero proof, but

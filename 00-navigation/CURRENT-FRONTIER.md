@@ -96,8 +96,12 @@ odometer lift globally moves the seven clocks.  THM-2691's canonical central
 cycle keeps rail/clock support forever but its dynamic present product dies at
 `H=6`.  THM-2693's nearby lift has a fully labelled three-event packet, while
 the common delayed base map `y->{13y}` makes every lift/clock word empty at
-four events.  Change delayed grammar, base dynamics, or heterogeneous edge;
-the mixed `D`/slope face remains positive.  Ledger `165`.
+four events.  One finer phase digit makes the minimal target/speed-14 carrier
+recurrent, but all `13^3` phase policies for the full word still die at four:
+the unchanged high guard is `338` times the target.  Unshifted slope `14`
+survives through fourteen states and dies at fifteen.  Change relative-factor
+phase, the high guard, delayed grammar, or heterogeneous edge; the mixed
+`D`/slope face remains positive.  Ledger `165`.
 
 ### Independent routes that remain live
 
