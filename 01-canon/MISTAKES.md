@@ -9,6 +9,22 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-306 (2026-07-28, concurrent THM-2693 reservation) -- a later stub duplicated a live theorem namespace
+
+- **What was recorded:** commit `2e3a42992` first reserved THM-2693 for the
+  odometer delayed-tail theorem.  Commit `1fee894c1` later added a distinct
+  mixed-dilation/slope-seven empty stub with the same YAML ID and theorem
+  number before observing the first push.
+- **Why it was wrong:** a filename reservation is shared only after its push;
+  concurrent local scans do not serialize namespace allocation.  Two current
+  files declaring the same theorem ID make every bare citation ambiguous even
+  when both are honest empty stubs.
+- **Repair / survivor:** the first claimant remains THM-2693 and has since
+  been proved.  The later mixed-word stub is coherently moved to the freshly
+  checked THM-2694 namespace; its mathematical intent and unproved status are
+  unchanged.  Re-fetch immediately before reserving, and yield to the first
+  pushed claimant after a race.
+
 ## MISTAKE-305 (2026-07-28, THM-2588 fold-cascade boundary) -- a thirteenth fold was assigned to a 13-speed family
 
 - **What was recorded:** THM-2588 and its referee printed a constants table
