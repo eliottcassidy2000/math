@@ -1,0 +1,19 @@
+THM-1310 FULL GALOIS RESOLVENT: c!=0 CHART
+notation: c is the target coordinate g of THM-1310
+target chart: C[a,b,c,c^-1] = C[c,c^-1,p,Q]
+p=4-3bc; Q=27ac^2-9bc+8; Q^2-p^3=27c^2L
+discriminant cover: w^2=-L
+Cardano factors: U=Q+3*sqrt(-3)*c*w, V=Q-3*sqrt(-3)*c*w, UV=p^3
+cyclic normalization: U=r^3, V=s^3, p=rs
+full S3 normalization on c!=0: C[c,c^-1,r,s] = G_m x A^2
+quotient coordinates: p=rs, Q=(r^3+s^3)/2, w=(r^3-s^3)/(6*sqrt(-3)*c)
+actual cubic root: x=(r-s)/(sqrt(-3)*w)=6c/(r^2+rs+s^2)
+S3 action: rho(r,s)=(zeta*r,zeta^-1*s), tau(r,s)=(s,r)
+stabilizer: tau fixes x; rho does not, so [K(x):K]=3
+topology: pi1_et is procyclic; no connected V4 quotient
+Kummer ledger: units/C* squares rank=1, Cl[2] rank=0, required V4 character rank=2
+VERDICT: THM-1310's actual cubic field cannot be a dimension-3 quartic Keller S4 resolvent root field
+SCOPE: polynomial/affine target automorphism or explicit base-ring isomorphism is allowed
+NOT COVERED: arbitrary birational transport; shared -L, cusp identity, or N1-N5 shadows alone
+CHECKS PASSED: 38
+FAILED CHECKS: NONE
