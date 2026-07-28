@@ -71,9 +71,11 @@ word dies.  THM-2697 formalizes the affine germ/root filtration and this
 kernel no-go.  THM-2698 changes the base signature by a central half-turn and
 gets a strict full two-cycle, but its parity-forgotten `D^2` endpoint loop has
 no allowed `D` midpoint.  THM-2701 independently proves the literal semantic
-word sharply nilpotent at six; only an enlarged edge-debt grammar recurs.
-The residual is a semantic `C_2` path lift or lawful primitive macro cospan,
-not more endpoint recurrence.  Ledger `165`.
+word sharply nilpotent at six.  THM-2707 exhausts the physical lift fibre:
+`3346` packets share one interval and form a complete eleven-partite SCC with
+closed words and trivial bare translation holonomy, but the following atom
+fails.  The residual is semantic filter/amplitude restoration, not more
+endpoint recurrence.  Ledger `165`.
 
 ### Independent routes that remain live
 

@@ -2,8 +2,8 @@
 id: THM-2707
 title: "Full physical lift fibre, common simplex, and fixed-packet SCC"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Above the THM-2694 terminal private vertex, all 12*13^5 nonzero
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Above the THM-2694
+  terminal private vertex, all 12*13^5 nonzero
   THM-2657 physical lifts have been scanned.  Exactly 3,042 retain the full
   fixed six-label packet skeleton on the entire inherited open cylinder.
   The complete orbit has 3,346 such packet addresses in eleven residue
@@ -30,8 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2707 -- full physical lift fibre, common simplex, and fixed-packet SCC
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2694 proved that the twelve least positive representatives of the next
 slope step all leave its present factor.  It explicitly left open the other
@@ -317,3 +316,12 @@ addresses, thereby enumerating all `12*13^5` nonzero quotient lifts; verifies
 whole-open-cylinder containment at all `3346` packet addresses; checks the
 complete multipartite edge invoice, the canonical-section hostile, and both
 closed cycles; and prints all `3042` survivor rows.
+
+Two independent hostile audits checked the fixed-skeleton versus frozen-atom
+typing, root increment, all lift and residue counts, common-interval proof,
+multipartite edge formula, SCC and both cycles, the integer-zero phase
+corollary, and every non-implication.  Normal and optimized exhaustive runs
+byte-match the stored `3062`-line transcript, the script contains no Python
+`assert` nodes, and both repaired LF hashes match exactly.
+
+QED.

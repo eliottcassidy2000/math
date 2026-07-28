@@ -1,5 +1,12 @@
 # Script Results Index
 
+- `lrc14_full_physical_lift_fibre_thm2707.py` -> matching `.out` [THM-2707
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  All `12*13^5`
+  nonzero lifts are scanned: `3042` survive from the terminal vertex, all
+  `3346` packet addresses share the full inherited interval, and their graph
+  is a complete directed eleven-partite SCC with `10,177,910` edges.  Two
+  exact loops have trivial pure translation holonomy but no semantic current.
+  Hashes: `f05a07b2` / `614085b0`.
 - `jacobian_s4_polynomial_graph_all_linear_planes_thm2709.py` -> matching
   `.out` [THM-2709 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   Pluecker coordinates classify
