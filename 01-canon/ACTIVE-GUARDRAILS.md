@@ -182,6 +182,11 @@
 63. **Degree-four `D4` is excluded, but not by Smith.** THM-2633 gives
     `normal_closure_G(H)=G` and `1<=k_D<=d-1`, leaving only `A4,S4`; retain old
     `D4` ledgers as hostiles and never reuse MISTAKE-297's deck extension.
+64. **A resolvent discriminant is not its Kummer carrier.** THM-2655 forces
+    the live quartic `V4` kernel into a quasi-etale torsor on the full Galois
+    resolvent normalization.  Test the `C3/S3`-equivariant unit squareclasses
+    and `Cl(R)[2]`; do not transfer grade-three Keller anatomy from a shared
+    discriminant or from one non-Galois cubic root field.
 
 ## Promotion checklist
 Audit types, quantifiers, dimensions, symmetries, logical direction, quotient

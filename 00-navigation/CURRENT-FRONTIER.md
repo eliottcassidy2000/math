@@ -366,8 +366,19 @@ Classify profiles under support operations; study analytic continuation and auto
   conflated.  THM-2646 identifies monic cubic discriminant order as the
   integer central height of the local resolvent root braid, but only after
   its full modular braid class is retained; finite `S3` inertia plus height
-  is insufficient.  No degree bound, `A4/S4`, `G1`, `JC(2)`, or `DC(2)`
-  closure follows.  At degree eighteen, THM-2314/2316 close sparse supports,
+  is insufficient.  [THM-2655](../01-canon/theorems/THM-2655-quartic-keller-resolvent-v4-quasietale-torsor-and-kummer-class-group-gate.md)
+  gives the dual kernel gate: a semiregular normal monodromy kernel returns
+  as a quasi-etale torsor over its quotient normalization.  Thus each live
+  quartic `A4/S4` branch forces the standard rank-two `V4` character module
+  into either unit squareclasses or `Cl(R)[2]` on the full degree-three/six
+  Galois resolvent normalization.  The exact even-sign-change hostile
+  realizes the class-group alternative on `d^2=abc`, whose trace-zero slice
+  is the `D4` surface singularity with triality, but its Jacobian is
+  nonconstant.  The next decisive test is the equivariant unit/class-group
+  computation on each actual candidate normalization, not another raw
+  discriminant comparison.  No degree bound, `A4/S4`, `G1`, `JC(2)`, or
+  `DC(2)` closure follows.  At degree eighteen, THM-2314/2316 close sparse
+  supports,
   THM-2371/2376 close `H_2`, and audited THM-2406 sends `H_4` to the closed
   common-root wall; branches outside THM-2262 remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
