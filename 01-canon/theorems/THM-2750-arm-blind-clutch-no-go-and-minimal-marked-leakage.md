@@ -176,6 +176,13 @@ both the common lattice/carrier and an arm-dependent map.
 
 ## 4. Minimal signed escape: unequal arm gains
 
+Equations `(12)--(14)` remain valid over any field in which `3` is
+invertible.  The sign, positivity, Euclidean Hilbert--Schmidt, and finite
+permutation censuses from this point through Section 6 are over `Q`; the
+displayed charged Fourier calculation is separately over `F_13`.  This scope
+is necessary: in characteristic two, `-1=1` and every sign pattern below
+collapses to the constant pattern.
+
 Let
 
 ```text
@@ -316,10 +323,10 @@ The nearest proved sidecars do not supply `(15)` or `(21)`.
 | THM-2657 | nonsplit odometer kernel and scalar Cech cocycle | central character values are arm-blind; pairwise overlap is not a common three-arm simplex |
 | THM-2567 | exact coloured-face/augmentation-cancellation warning | its deep `C13` colour and quotient-duty carrier are not the corolla/root carrier |
 | THM-2746 | exact positive four-state `A4` leakage model | no common physical LRC binary/ternary torsor or endpoint current |
-| THM-2749 | unpromoted two-sided semantic and primitive-target refinement of the root overlap | its `C13` target colour is not an external `C3` arm selector; no proved result may yet depend on the candidate |
+| THM-2749 | proved two-sided semantic and primitive-target refinement of the root overlap | its `C13` target colour is not an external `C3` arm selector |
 
-Even a future promotion of THM-2749 with equal source/target scalar sign and
-all primitive `C13` target characters would not by itself defeat `(4)`.
+Even the promoted THM-2749, with equal source/target raw vectors, scalar sign,
+and all primitive `C13` target characters, does not by itself defeat `(4)`.
 Those target characters live in `W`; the missing map is the off-diagonal
 operator in the external three-arm factor.
 
