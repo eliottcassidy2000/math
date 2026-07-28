@@ -10,11 +10,14 @@ status: >
   character telescopes because the address gain is a coboundary.  More
   decisively, the entire following base support is disjoint from current
   rail 2: all 304 semantic endpoints have zero fixed-current midpoint and
-  whole-cylinder reanchoring.  This is a positive parallel-corolla theorem
-  and a chronological-current no-go, not an endpoint current, row exclusion,
-  or LRC(14) conclusion.
+  whole-cylinder reanchoring.  Promoting the following atom to a current
+  leaves one formal second-generation label, whose private half misses all
+  endpoints in all 1134 rail/future placements.  This is a positive
+  parallel-corolla theorem and a chronological-current no-go, not an endpoint
+  current, row exclusion, or LRC(14) conclusion.
 source: lrc-semantic-inner-cycle-scout-2026-07-28
 audit: thm2704-hostile-audit-2026-07-28-semantic-inner-corolla (independent amplitude, gain-typing, reanchoring, private-root, and replay audit)
+addendum_audit: root-2026-07-28 (unique successor-label derivation, private-half disjointness, placement count, and exact replay)
 depends_on:
   - THM-2680-dilation-reversed-two-edge-clock-fibre-products-and-source-drift-boundary
   - THM-2712-semantic-following-congruence-lock-and-address-coboundary-descent
@@ -301,3 +304,10 @@ transform is not a physical order-three action, and replayed all `304`
 midpoint and whole-current failures.  It independently verified the private-
 root disjointness, the four changed-source controls, both file hashes, and
 normal/optimized transcript equality.
+
+A separate addendum audit solved the successor graph equation over all
+`11*2*2` labels, recovered only `(11,1,1,1)`, and checked its `(1,14)/182`
+private half against all `304` endpoint phases in `(71,84)/182`.  Since this
+failure precedes rail and future selection, multiplying by `162*7` gives all
+`1134` empty inherited placements.  Normal, optimized, and stored transcripts
+with the addendum byte-match the updated declared hashes.
