@@ -2,8 +2,8 @@
 id: THM-2817
 title: "Sextic e=3 maximal-pole accessory atlas: cubic power and Chebyshev carriers"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  The minimal N=6,e=3,h=4 maximal-pole response chamber has ten
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The minimal
+  N=6,e=3,h=4 maximal-pole response chamber has ten
   ordered pole passports and exactly two simple accessory points for each.
   Saturating the two equal-critical-value remainder equations gives an
   explicit linear-plus-quadratic ideal in every passport.  Up to unmarked
@@ -25,13 +25,13 @@ hash_basis: LF-normalized bytes
 
 # THM-2817 -- sextic e=3 maximal-pole accessory atlas: cubic power and Chebyshev carriers
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The first genuinely ternary maximal-pole layer is already rigid enough to
 solve completely.  Its two unordered answers are not accidental isolated
-maps: they are the two classical cubic one-critical-value geometries,
-power and Chebyshev, composed with the same degree-two outer response.
+maps: they are the two classical cubic geometries, power and Chebyshev,
+whose critical values are identified by the same even degree-two outer
+response.
 
 ## 1. The two-variable equal-critical-value ideal
 
