@@ -1,0 +1,11 @@
+Polynomial graphs: completion of all linear target planes
+projective_normal:nu=0 -> THM-2705; nu!=0 -> normalize (a,b,1)
+canonical_non-d_pair=(A-a*d,B-b*d)
+Jac=-2*((a*y+b+2*x)f_x+(a*f+b*x+2*x^2)f_y+2*f-2*x*y)
+a!=0:y-degree r>=3 unique top; r=2 Riccati; r<=1 forces p=-2/a
+a!=0:equation collapses to c=0; therefore kappa=-2c!=0 is EMPTY
+a!=0,c=0:f=-2*(y-x^2/2)/a+q0 and U=-a*q0 (rank drop)
+a=0:unique f=(x-b/2)t/2+(x-b/2)(x^2+b^2/4)/8+c/2
+a=0:U=-2t;V=-c*x+(t+b^2/8)^2-b*c/2; explicit inverse PASS
+controls=THM2702_b0:PASS;shifted_b3_c5:PASS;zero_boundary:PASS
+ALL CHECKS PASSED
