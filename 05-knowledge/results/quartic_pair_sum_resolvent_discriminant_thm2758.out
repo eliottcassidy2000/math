@@ -1,0 +1,16 @@
+QUARTIC PAIR-SUM SEXTIC / RESOLVENT PULLBACK AUDIT
+edge_pair_partition=12_adjacent+3_opposite
+adjacent_factor_counts=each_of_6_root_differences_twice
+T=product_opposite_differences=e1^3-4*e1*e2+8*e3
+centered_roots=+-d_m/2 t_m=d_m^2/4
+t_m=z_m+e1^2/4-e2 standard_resolvent_translate=exact
+disc(resolvent)=disc(quartic)
+lex_edge_vandermonde=+disc(quartic)*T
+disc(pair_sum_sextic)=disc(quartic)^2*T^2
+distinct_census=210 opposite_sum_walls=50 repeated_controls=65
+generic_roots=0,1,3,7 disc4=1016064 T=135 disc6=18815235799449600
+hostile_roots=-3,-1,1,3 quartic=x^4-10x^2+0x+9 disc4=589824 T=0
+hostile_pair_sums=-4,-2,0,0,2,4 disc6=0
+coefficient_wall_for_x4+a*x3+b*x2+c*x+d=a^3-4*a*b+8*c=0
+SCOPE: exact quartic/resolvent polynomial identity; no Keller exclusion
+FAILED CHECKS: NONE
