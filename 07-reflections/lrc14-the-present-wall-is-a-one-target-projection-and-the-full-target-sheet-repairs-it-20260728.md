@@ -1,6 +1,7 @@
 # The deepest-source present wall is a one-target projection artifact
 
-> **STATUS: PROVED-ELEMENTARY + VERIFIED-EXACT; independent audit pending.**
+> **STATUS: PROVED-ELEMENTARY + VERIFIED-EXACT + INDEPENDENTLY
+> HOSTILE-AUDITED.**
 > On the canonical typed row, restoring the second lawful target coordinate
 > turns the global `E3`/present disjointness into `936` positive semantic
 > sections, and their rational target profile has every nonzero deepest-target
@@ -233,6 +234,14 @@ all three sources and the terminal fork, scans the complete `1183`-section
 target sheet, applies the exact `D^6` prefix identity, constructs a strict
 rational witness, and reduces every primitive target coefficient in the
 power basis of `Q(zeta_13)`.  It uses no truth-bearing Python `assert`.
+
+An independent audit rederived the two target-shift signs from THM-2365,
+rebuilt every cell using a separate periodic-antiderivative path, reproduced
+the `936/1183` source and semantic laws and both exact extrema, and checked
+the witness factor by factor with positive margins.  Normal, optimized, and
+stored transcripts byte-match; the carrier and artifact hashes match; and
+the cyclotomic reduction reproduces all `936/936` marked and `12/12`
+aggregated moving-character certificates.
 
 No affine-cycle attachment, private-unit current, all-row statement, row
 exclusion, or LRC(14) conclusion is proved.
