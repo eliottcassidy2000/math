@@ -1,5 +1,15 @@
 # Script Results Index
 
+- `affine_facet_normalization_quotient_holotopy_thm2688.py` and
+  `affine_facet_normalization_quotient_holotopy_thm2688_referee.py` ->
+  matching `.out` files [THM-2688 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  The carry normalization is thirteen disjoint
+  `Delta^11`s, its vertical image is `boundary Delta^12`, and its diagonal
+  orbit quotient is one `Delta^11`.  The free label quotient is
+  `L^11(13;1,2,3,4,5,6)`; the independent section-defect replay has `78`
+  wraps equal to the nonzero odometer Bockstein `7`.  This is an abstract
+  obstruction, not physical facet gluing.  Hashes begin
+  `32286298`/`2388dd0f` and `63ed1445`/`4add8f23`.
 - `lrc14_mixed_d_slope7_two_simplex_scout.py` and
   `lrc14_mixed_d_slope7_two_simplex_independent_referee.py` -> matching
   `.out` [FINITE-EXACT].  One rational point in THM-2680's `3->1->0` D-edge

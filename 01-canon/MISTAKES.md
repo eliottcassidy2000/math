@@ -9,6 +9,21 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-304 (2026-07-28, THM-2688 hardening) -- a concurrent script/output hardening left stale declared hashes
+
+- **What was recorded:** the hardened THM-2688 frontmatter declared primary
+  script/output SHA-256 values beginning `4013f471` / `3f1c7ad9`.
+- **Why it was wrong:** the same incoming commit changed the primary companion
+  and transcript after those digest values had been calculated.  The committed
+  LF-normalized bytes instead hash to `16685599...` / `fecc6762...`.  This was
+  a reproducibility-metadata race, not a mathematical or transcript mismatch:
+  normal and optimized runs both reproduce the committed output byte for byte.
+- **Repair / rule:** THM-2688 now records the hashes of the actual hardened
+  files, and its independent referee has separate frozen hashes.  After a
+  concurrent rebase or any hardening edit, recompute digests from `HEAD` and
+  replay both interpreter modes; never carry pre-edit hashes across the
+  checkpoint merely because the visible theorem statement is unchanged.
+
 ## MISTAKE-303 (2026-07-28, THM-2648 edge-thinning sharpness) -- a minimum relative to the affine chart was promoted as the unrestricted minimum
 
 - **What was claimed:** the first repaired THM-2648 proved that no

@@ -2,7 +2,7 @@
 id: THM-2688
 title: "Affine facet normalization, vertical sphere, diagonal simplex, and lens quotient"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; independent hostile audit pending.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For every prime affine missing-label graph, the disconnected facet
   normalization has boundary-sphere vertical image but filled-simplex
   diagonal quotient.  Its mapping cones and mapping torus are explicit.
@@ -10,7 +10,7 @@ status: >
   THM-2657 physical lift is its nonzero coefficient Bockstein class 7.
   These are abstract/coarse invariants only: no physical cyclic gluing,
   endpoint transition, thirteenfold overlap, row exclusion, or LRC(14)
-  conclusion follows until independent promotion.
+  conclusion follows.
 source: root-2026-07-28-affine-facet-holotopy
 depends_on:
   - THM-2657-odometer-carry-root-lift-nonsplit-extension-and-cech-cocycle
@@ -20,14 +20,18 @@ related:
   - THM-2687-slope-seven-global-configuration-switching-positive-thirteenfold-no-go
 script: 04-computation/affine_facet_normalization_quotient_holotopy_thm2688.py
 output: 05-knowledge/results/affine_facet_normalization_quotient_holotopy_thm2688.out
-script_sha256: 4013f471ac351409577470eb9d87c271d3bb1052b6784b4324b9d5dab0f836c4
-output_sha256: 3f1c7ad9ca95f9e405a176ad990c5ac40ab175d83854304be7c7e8bcd9eccd35
+script_sha256: 16685599b678e1e77e0a9a4c984cad70281e7edec02cb83ce9a715de7874aa7b
+output_sha256: fecc676276c90dc21111cb2ef1524f64d5830ddd03a90dadb2f034f913f55fab
+independent_script: 04-computation/affine_facet_normalization_quotient_holotopy_thm2688_referee.py
+independent_output: 05-knowledge/results/affine_facet_normalization_quotient_holotopy_thm2688_referee.out
+independent_script_sha256: 63ed1445d06abed8b736cfe1a9291310e248945f9de40691c19f89a0f2a7e3ba
+independent_output_sha256: 4add8f23084dd238b4fbbe99c87176892e978fd54a9b7657459d25920457f76a
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2688 -- affine facet normalization and quotient holotopy
 
-**PROVED CANDIDATE + VERIFIED-EXACT; independent hostile audit pending.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The theorem separates four objects that were previously easy to conflate:
 the disconnected carry normalization, its vertical label image, its diagonal
@@ -344,5 +348,21 @@ checks:
 
 These hostiles show that bijectivity of `m`, compatibility of the two shifts,
 and transitivity of the component step are all load-bearing.
+
+An independent direct referee reconstructs the relation and diagonal orbits
+without importing the primary mapping-cone code.  It verifies the prime
+cases `3,5,7,13`, the reduced-regular character split
+`{+/-1,...,+/-6}=F_13^*`, the lens cellular homology, and all `169` values of
+the section defect for `s(a)=7a`.  The latter has `91` zero entries and `78`
+wrap entries equal to `7`, so the coefficient Bockstein is nonzero.  Its
+additional incompatible-label-shift and split-extension hostiles show,
+respectively, that `r=bs` and nonsplitting are essential.  Normal and
+optimized executions byte-match
+
+```text
+05-knowledge/results/affine_facet_normalization_quotient_holotopy_thm2688_referee.out
+```
+
+with the frontmatter hashes above.
 
 QED.

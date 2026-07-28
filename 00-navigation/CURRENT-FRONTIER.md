@@ -93,6 +93,12 @@ gives thirteen disjoint `Delta^11`s and cocycle `7`.  THM-2687 closes arbitrary
 labelwise switching even after unioning all rail/base/present/clock/sector/edge
 choices: each open future cell sees at most `12/13` carries.  Hence the full
 THM-2640 slope-seven family has dimension `11`; other carriers remain open.
+THM-2688 identifies the associated quotient loss exactly: the carry
+normalization is thirteen disjoint `Delta^11`s, its vertical image is
+`boundary Delta^12`, its diagonal quotient is one `Delta^11`, and the free
+label quotient is `L^11(13;1,...,6)`.  Its coefficient Bockstein is the same
+nonzero odometer class `7`, so none of these coarse spaces supplies physical
+cyclic gluing.
 
 THM-2680's `D(x)={13x}` cospan has `25,344` positive legs but no path-lifting
 sector quotient.  THM-2682/2684 kill every third event on the full three-tooth
