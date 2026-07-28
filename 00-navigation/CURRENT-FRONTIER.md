@@ -344,6 +344,12 @@ Classify profiles under support operations; study analytic continuation and auto
   For the reflection-completed `S3<S4` carrier the constant-different planar
   slice has source `A2` but singular nonnormal coefficient image.  This closes
   that quotient family and slice, not arbitrary `S4` resolvents or `JC(2)`.
+  THM-2690 separately excludes the
+  reduced normal-crossing cyclic-cubic toric normalizations
+  `z^3=product x_i^(alpha_i)`, `alpha_i in {1,2}`: their class groups are
+  `(Z/3)^(m-1)` and their units are constant.  The sharp `d^2=abc` hostile
+  instead has a standard `Cl[2]` plane; its missing `C2` reflection completes
+  polynomial `S3` invariants.  Other cyclic models may still carry planes.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
