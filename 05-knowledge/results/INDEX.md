@@ -1,5 +1,14 @@
 # Script Results Index
 
+- `lrc14_endpoint_arrival_guard_danger_bypass_20260728.py` -> matching `.out`
+  [VERIFIED-EXACT SCOUT; ONE-EVENT COEFFICIENT/COMMON-`x` SCOPE].  The full
+  `162x13` endpoint guard-danger bank has global content `86814`, exactly
+  `1770/2106` primitive unit slices, and seven fixed target sections that are
+  unit on all `84` cells.  At `q=0`, selecting arrival `12` exactly for
+  sources `5,7` and arrival `0` otherwise gives `84/84` units without changing
+  the global content.  This fills an endpoint coefficient/unit hole but is not
+  consecutive `D`-gluing; THM-2684 still kills every three-event chain in the
+  inherited rail bank.  Hashes begin `61c250c2` / `a27ec9aa`.
 - `lrc14_alternate_arrival_physical_rail_handoff.py` -> matching `.out`
   [THM-2684 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   The full `324`-profile THM-2584 bank has exact envelope
