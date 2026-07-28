@@ -20,6 +20,14 @@ script: 04-computation/jc_sextic_e3_power_chebyshev_accessory_thm2817.py
 output: 05-knowledge/results/jc_sextic_e3_power_chebyshev_accessory_thm2817.out
 script_sha256: 3745f150524fdd2bd068c486de57e9b66469eb3fd5eda4ffba0ed582097d414d
 output_sha256: bca8f6825e92bb98913e6f330dd462a15850e0fb24b0fbfffbe08a9cd8c82343
+secondary_script: 04-computation/jc_sextic_e3_maximal_pole_accessory_thm2817.py
+secondary_output: 05-knowledge/results/jc_sextic_e3_maximal_pole_accessory_thm2817.out
+secondary_script_sha256: 4d2c26143ef720013e183453dc8ae4234af5c2604bb899bc1f2276bba8ed8d6b
+secondary_output_sha256: 52037f5fdd25ec270f678d73edbe180e4509245955e095f49ba8f18828ea137a
+independent_script: 04-computation/jc_sextic_e3_maximal_pole_accessory_independent_audit_thm2817.py
+independent_output: 05-knowledge/results/jc_sextic_e3_maximal_pole_accessory_independent_audit_thm2817.out
+independent_script_sha256: 8462778c730d03513506d106b54966cdfb186522a1d90546061fa57d1c014f42
+independent_output_sha256: c3e9ce10c7ea93af1ed1f6201d12bc378e719aaf8712625fe3d4177706f480db
 hash_basis: LF-normalized bytes
 ---
 
@@ -251,8 +259,8 @@ different predicates.
 
 ## 6. Exact controls
 
-The companion uses exact rational Groebner, polynomial, and permutation
-arithmetic to:
+The primary and secondary companions use exact rational Groebner,
+polynomial, and permutation arithmetic to:
 
 1. build `(3)--(7)` for all ten ordered passports;
 2. verify the complete saturated bases `(8)`, radicality, and every gate;
@@ -261,11 +269,24 @@ arithmetic to:
 5. prove the power and Chebyshev identities `(14)--(18)`; and
 6. verify normal, optimized, and stored transcript identity.
 
-It has no Python `assert` node.  Run
+The hostile audit is methodologically separate: it factors the Sylvester
+projection resultant, inspects every irreducible branch in its exact
+quotient field, proves that every branch outside `(8)` is killed by
+`Gamma`, and proves that `Gamma` and the Jacobian are units on the surviving
+branches.  It then reconstructs the response coefficientwise, normalizes
+every one of the ten rows directly to the power or Chebyshev carrier, and
+independently enumerates the fifteen perfect matchings and twenty marked
+Nielsen charts.  It imports neither other companion.
+
+The companions have no Python `assert` node.  Run
 
 ```text
 python 04-computation/jc_sextic_e3_power_chebyshev_accessory_thm2817.py
 python -O 04-computation/jc_sextic_e3_power_chebyshev_accessory_thm2817.py
+python 04-computation/jc_sextic_e3_maximal_pole_accessory_thm2817.py
+python -O 04-computation/jc_sextic_e3_maximal_pole_accessory_thm2817.py
+python 04-computation/jc_sextic_e3_maximal_pole_accessory_independent_audit_thm2817.py
+python -O 04-computation/jc_sextic_e3_maximal_pole_accessory_independent_audit_thm2817.py
 ```
 
 The finite computation is exhaustive in the stated sextic universe.
