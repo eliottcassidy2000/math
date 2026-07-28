@@ -1,12 +1,12 @@
 ---
-id: THM-2764
+id: THM-2765
 title: "Rooted Nullstellensatz linear-range distinct-edge labeling"
 status: RESERVED / UNPROVED EMPTY STUB
 source: a4-resolvent-next-gate-scout-2026-07-28
 depends_on: []
 ---
 
-# THM-2764 -- rooted leading monomials and linear-range tree labels
+# THM-2765 -- rooted leading monomials and linear-range tree labels
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
