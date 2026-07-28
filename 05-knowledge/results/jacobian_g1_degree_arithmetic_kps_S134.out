@@ -8,7 +8,7 @@ T2 = (xz^2+yz+xy-x^3+x, z^2+3x^2-2y, x+z): NEW EXPLICIT POLYNOMIAL INVERSE
     verified both compositions = identity. det J = -2, D5..D1 = 0, D0 = -2.
     box (dA,dB,dC) = (1,1,3). FIELD DEGREE = 1.
 W = THM-1310 map: det J = -2, D-system (0,0,0,0,0,-2), B on cusp cone 27B1^2B3+B2^3=0.
-    fiber count mod 10007: 3 (0.1s), mod 31013: 3 (0.1s)  -- expected 3
+    fiber count mod 10007: 3, mod 31013: 3  -- expected 3
     D0(T2) = D0(W) = -2 with field degrees 1 vs 3: D0 carries NO field-degree info.
 D0-consequences verified: ideal(B_W) = (1) [B nowhere 0]; ideal(C2_x x C2_y) = (1)
     [C is an everywhere-immersion for T2]. Both are forced by D0 = const != 0.
@@ -24,10 +24,10 @@ fiber matrix on {g1=0}; u_k != 0 makes E_k redundant, so the fiber bijects with
 ==============================================================================
 LEG 3: engine cross-validation (space vs projected-plane counting, mod p)
 ==============================================================================
-box (0, 1, 2) inst 0: space=8 (0.1s)  plane raw=12 sat=8 (chart k=2, 0.2s)
-box (0, 1, 2) inst 1: space=8 (0.1s)  plane raw=12 sat=8 (chart k=2, 0.2s)
-box (1, 2, 3) inst 0: space=26 (0.9s)  plane raw=48 sat=26 (chart k=2, 14.6s)
-box (1, 2, 3) inst 1: space=26 (0.3s)  plane raw=48 sat=26 (chart k=2, 13.9s)
+box (0, 1, 2) inst 0: space=8  plane raw=12 sat=8 (chart k=2)
+box (0, 1, 2) inst 1: space=8  plane raw=12 sat=8 (chart k=2)
+box (1, 2, 3) inst 0: space=26  plane raw=48 sat=26 (chart k=2)
+box (1, 2, 3) inst 1: space=26  plane raw=48 sat=26 (chart k=2)
 T2 control through engine: fiber count = 1 OK
 
 ==============================================================================
@@ -38,8 +38,8 @@ b = max(dB,(dA+dC)/2); staircase (d,d+1,d+2): N_max = (d+2)^3 - d^3 = 6d^2+12d+8
 box (0, 1, 2): measured [8, 8, 8] (+ mod 31013: 8), predicted N_max = 8
 box (1, 2, 3): measured [26, 26, 26] (+ mod 31013: 26), predicted N_max = 26
 box (1, 1, 3): measured [26, 26, 26] (+ mod 31013: 26), predicted N_max = 26
-box (2,3,4) inst 0: plane raw=108 sat=56 (chart k=2, 480.6s), predicted 56
-box (2,3,4) inst 1: plane raw=108 sat=56 (chart k=2, 598.0s), predicted 56
+box (2,3,4) inst 0: plane raw=108 sat=56 (chart k=2), predicted 56
+box (2,3,4) inst 1: plane raw=108 sat=56 (chart k=2), predicted 56
 box (2,3,4): measured [56, 56], predicted N_max = 56
 Projected-system Bezout bookkeeping per staircase box: deg g1 = 3d+3, deg g2 = 4d+4,
 product 12(d+1)^2 = 12/48/108 vs true 8/26/56: excess 6d^2+12d+4 sits entirely at
@@ -53,16 +53,62 @@ LEG 6: reachability in the MINIMAL box (0,1,2) (all total-degree-2 maps)
   N = 3 witness (x, z^2+y, yz)         measured 3,3
   N = 4 witness (x^2, y, z^2)          measured 4,4
   N = 8: generic (Table A).  Searching coefficient range {-1,0,1} for 5,6,7 ...
-  observed degree spectrum in 220 small-coefficient samples: [4, 5, 6, 7, 8]
-    N=5 witness: A=[0, 0, 0] B=[x + y, x + y - 1, x + 1] C=[-x**2 + x + y**2 + y - 1, -x**2 - x*y - x + 1, x**2 - x*y - y**2]
-    N=6 witness: A=[1, 0, -1] B=[-x + y + 1, -x - y + 1, 1 - y] C=[-x**2 - x*y + y**2 + y - 1, -x*y - x - y**2 - 1, x*y + y**2 + y]
-    N=7 witness: A=[-1, 0, -1] B=[-x - y - 1, 0, 0] C=[-x*y - y + 1, -x**2 - x - y + 1, x**2 - x*y - x + y**2 + y]
+  observed degree spectrum in 220 small-coefficient samples: [3, 4, 5, 6, 7, 8]
+    N=5 witness: A=[-1, -1, 1] B=[y + 1, y, y] C=[x*y - y**2 - y - 1, 1, x*y + x - y**2 + 1]
+    N=6 witness: A=[-1, 0, 0] B=[1 - x, -y, -x - y + 1] C=[y**2, -x*y - x - y + 1, x*y + x - y**2 - y - 1]
+    N=7 witness: A=[1, 1, 0] B=[-1, -x + y + 1, -x + y + 1] C=[x - y**2, x**2 + x*y - x - y + 1, -x**2 - x + y**2 + y + 1]
 
 --- the quartic S4 witness Q4 = (x, z^2+y^2+y, yz+x), box (0,1,2), NON-Keller ---
   fiber count = 4 (expected 4)
-  z-eliminant (x=P1, s=P3-P1): -q_*z**2 + s_**2 - s_*z + z**4
-Traceback (most recent call last):
-  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_twojet_degree_arithmetic_kps.py", line 417, in <module>
-    assert expand(elim - (z**4 - q_*z**2 + s_*z + s_**2)) == 0
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError
+  z-eliminant (x=P1, s=P1-P3): -q_*z**2 + s_**2 - s_*z + z**4
+  = z^4 - q z^2 - s z + s^2 : DEPRESSED quartic (no z^3 -- structural for 2-jet route).
+  I = q_**2 + 12*s_**2,  J = -2*q_**3 + 72*q_*s_**2 + 27*s_**2
+  Delta4 = s_**2*(16*q_**4 + 4*q_**3 - 128*q_**2*s_**2 - 144*q_*s_**2 + 256*s_**4 - 27*s_**2)
+  exact S4 certificate: q=-10,s=1, Delta=144869; good-prime patterns mod 2=(4), mod 5=(1,3).
+  Irreducible + a 4-cycle + a 3-cycle force the transitive Galois group S4.
+  cycle statistics over 2500 unramified specializations mod 10007:
+    (4,)         observed 0.2500   S4-Chebotarev 0.2500
+    (1, 3)       observed 0.3320   S4-Chebotarev 0.3333
+    (2, 2)       observed 0.1256   S4-Chebotarev 0.1250
+    (1, 1, 2)    observed 0.2504   S4-Chebotarev 0.2500
+    (1, 1, 1, 1) observed 0.0420   S4-Chebotarev 0.0417
+  A4 predicts no (1,1,2)/(4,); V4 predicts only (1,1,1,1)/(2,2); D4/C4 have no (1,3)
+  at rate 1/3.  Statistics agree with the exact S4 certificate.  ==> degree 4 with FULL S4 is reachable by
+  the 2-jet SHAPE already in the minimal box; only KELLER kills it there (Wang).
+
+==============================================================================
+LEG 5: TABLE C/E -- Keller-shape strata of box (1,2,3) and the D-staircase
+==============================================================================
+Classification (proved in report): D5=0 in box (1,2,3) <=> rank{A0,A1,A2} <= 2.
+r=2 (unique lam, lam.A=0): T (lam.B=const!=0, KELLER=>N=1 via Moh), H1 (lam.B nonconst),
+H0 (lam.B=0); r=1: A=ell*v; r=0: z-affine (B<=2, C<=3) with plane- or conic-valued B.
+  T  (A3=0, B3 = const)              N = [25, 25]     deg D1 = 5    deg D0 = 6
+H1 (A3=0 affine A; B3 nonconstant):
+  H1 stage D5=0 (inst 0)             N = [25, 25]     deg D1 = 5    deg D0 = 6
+  H1 stage D5=0 (inst 1)             N = [25, 25]     deg D1 = 5    deg D0 = 6
+  [D4 linear system on 18 B-coeffs: rank 6]
+  H1 + D4=0                          N = [24, 24]     deg D1 = 5    deg D0 = 6
+  [D3,D2 affine-linear system on 30 C-coeffs: rank 9]
+  H1 + D4=D3=D2=0                    N = [0, 0]       deg D1 = None deg D0 = None
+H0 (A3=0, B3=0: third row z-free):
+  H0 stage D5=0 (inst 0)             N = [24, 24]     deg D1 = 5    deg D0 = 6
+  H0 stage D5=0 (inst 1)             N = [24, 24]     deg D1 = 5    deg D0 = 6
+r=1 (A = ell*v, ell affine):
+  r1 stage D5=0                      N = [23, 23]     deg D1 = 5    deg D0 = 6
+r=0 (A=0, z-affine, dB<=2, dC<=3):
+  r0 generic (no conditions)         N = [19, 19]     deg D1 = 5    deg D0 = 6
+  r0 + plane-valued B (D2=0)         N = [15, 15]     deg D1 = 5    deg D0 = 6
+  [z-affine D1 linear system on 30 C-coeffs: rank 9]
+  r0 plane-B + D1=0                  N = [0, 0]       deg D1 = None deg D0 = None
+  r0 + conic-valued B (D2=0)         N = [15, 15]     deg D1 = 5    deg D0 = 6
+  [z-affine D1 linear system on 30 C-coeffs: rank 15]
+  r0 conic-B + D1=0                  N = [6, 6]       deg D1 = None deg D0 = 6
+
+--- box (2,3,4): the conic-cap door (THM-2446 S3) ---
+  conic-cap A, free B,C: plane raw=108 sat=52
+  [D4 linear system on 30 B-coeffs: rank 14]
+  conic-cap A + D4=0 B: plane raw=108 sat=48
+  [D3,D2 affine-linear system on 45 C-coeffs: rank 42]
+  conic-cap A + D4=D3=D2=0: plane raw=36 sat=0
+
+ALL CHECKS PASSED
