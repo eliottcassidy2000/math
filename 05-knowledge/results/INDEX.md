@@ -9,6 +9,14 @@
   `11,2`, and positive neighbourhoods at every finite horizon.  Actual
   labelled rail fibres, present factors, units, and semantic endpoints remain
   untested.  Hashes begin `05a439d4` / `9f3bbfd7`.
+- `jacobian_equivariant_kummer_boundary_parity_thm2685.py` -> matching `.out`
+  [THM-2685 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
+  quartic `V4` boundary words are exactly the even-weight
+  `[3,2,2]` code.  The THM-2681 ordered-root residue matrix has rows
+  `(1,0),(0,1),(1,1)`, rank two, and zero unramified character kernel; an even
+  ramified base change kills the sharp `110` hostile.  The companion also
+  checks the squared-pair-sum resolvent and the literal cubic prefilter
+  `AB-C=square`.  Hashes begin `e68ab8fa` / `1c8d9d23`.
 - `lrc14_endpoint_arrival_guard_danger_bypass_20260728.py` -> matching `.out`
   [VERIFIED-EXACT SCOUT; ONE-EVENT COEFFICIENT/COMMON-`x` SCOPE].  The full
   `162x13` endpoint guard-danger bank has global content `86814`, exactly

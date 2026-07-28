@@ -1,0 +1,11 @@
+THM-2685 EQUIVARIANT KUMMER BOUNDARY PARITY AUDIT
+even_weight_code=((0, 0, 0), (0, 1, 1), (1, 0, 1), (1, 1, 0)); weights=(0, 2, 2, 2)
+C3_invariant_lines=(); GL2F2_permutations=6
+thm2681_boundary_rows=((1, 0), (0, 1), (1, 1)); rank=2; kernel=((0, 0),)
+quartic_squared_pair_resolvent=(1,2p,p^2-4r,-q^2): PASS
+translated_gate=Ah*Bh-Ch=-R(-A-2h): 2*A**2*h + A*B + 8*A*h**2 + 2*B*h - C + 8*h**3
+thm2681_literal_gate=c*(a*c - b)/4; nonsquare_odd_factors=(c,ac-b)
+ramified_word=(1, 1, 0); even_base_change=(0, 0, 0)
+curve_genus_controls=((0, 2, 0), (0, 4, 1), (0, 6, 2), (1, 0, 1), (1, 2, 2), (1, 4, 3), (1, 6, 4), (2, 0, 3), (2, 2, 4), (2, 4, 5), (2, 6, 6))
+scope=finite code and polynomial identities only; DVR quasi-etale and class-group exactness are proved in text
+ALL EXACT CHECKS PASSED
