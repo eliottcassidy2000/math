@@ -2,13 +2,14 @@
 id: THM-2781
 title: "Terminal-tail perfect-power rigidity and response count"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Over a characteristic-zero field, let f(0)=1, deg(f)<=d, write
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over a
+  characteristic-zero field, let f(0)=1, deg(f)<=d, write
   alpha=a/b in lowest positive terms, and suppose N=d alpha is integral.
   Then the d-1 coefficients of f^alpha in degrees N+1,...,N+d-1 vanish if
   and only if f is a b-th power; equivalently every coefficient above N
-  vanishes.  Cubic and quartic hostiles show that d-2 zeros do not suffice
-  uniformly, while an unreduced exponent shows lowest terms are essential.
+  vanishes.  The family ((1+z)^d-z^d)^(1/d) shows uniformly that d-2 zeros
+  do not suffice, while unreduced-exponent and characteristic-two hostiles
+  show that lowest terms and characteristic zero are essential.
   The theorem unifies the THM-2110 cubic two-response and THM-2778 quartic
   three-response mechanisms but does not construct a response bank, derive a
   Keller chart, or prove JC(2)/DC(2).
@@ -20,15 +21,18 @@ related:
   - THM-2778-all-degree-complete-chosen-sheet-split-exact-prefix-closure
 script: 04-computation/terminal_tail_perfect_power_rigidity_thm2781.py
 output: 05-knowledge/results/terminal_tail_perfect_power_rigidity_thm2781.out
-script_sha256: f911eabd8ac9b235180cb413bfbfe43b6b38de60d0d2740a1467733e8f2340c9
+script_sha256: d63c55ede3c2127c994b0d169050374925b0c340271a13411823bf80b6711e10
 output_sha256: 325d695e53f860f239479d0ee6f9fbd46efd2dd068e06fe7d50c4bd822e3ddc7
+independent_script: 04-computation/terminal_tail_perfect_power_rigidity_hostile_audit_thm2781.py
+independent_output: 05-knowledge/results/terminal_tail_perfect_power_rigidity_hostile_audit_thm2781.out
+independent_script_sha256: 45714c5cc7144ca140afa3d8d38dc6443296d07a7b3d2ca5614c45cc8eaa20f3
+independent_output_sha256: c2375d91c1f3a542fc651b48bb683d8b1653afe1dd0f1e6cdbba6fd961973a60
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2781 -- terminal-tail perfect-power rigidity
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The two missing coefficients in the depressed-cubic Faber gate and the three
 missing coefficients in the depressed-quartic gate are instances of one
@@ -65,6 +69,9 @@ Then the following are equivalent:
 
 Thus `d-1` consecutive terminal zeros are a complete universal certificate
 for the denominator-`b` perfect-power locus, even when `p_d=0`.
+When `d=1`, the displayed response block is empty; integrality and lowest
+terms force `b=1`, so the equivalence is correctly vacuous rather than an
+exception.
 
 ## 2. The recurrence closes the entire tail
 
@@ -133,11 +140,27 @@ The theorem does not claim that every specialized family needs all `d-1`
 zeros.  It says that no smaller count works uniformly over the admissible
 degree/exponent data.
 
-For `d=3`, `a/b=1/3`, and `N=1`, take
+In fact sharpness holds in every declared degree `d>=2`.  Put
+
+```text
+f_d=(1+z)^d-z^d,             alpha=1/d,        N=1.   (10)
+```
+
+Modulo `z^d`, the constant-one `d`th root agrees with `1+z`, whereas its
+first discrepancy is
+
+```text
+[z^2]f_d^(1/d)=...=[z^(d-1)]f_d^(1/d)=0,
+[z^d]f_d^(1/d)=-1/d.                                (11)
+```
+
+Since `f_d` has degree `d-1`, it is not a `d`th power.  Thus `d-2`
+terminal zeros never suffice uniformly, including the empty block at `d=2`.
+For `d=3`, this gives the concrete specialization
 
 ```text
 f=1+3z+3z^2,
-f^(1/3)=1+z+0z^2-(1/3)z^3+... .                     (10)
+f^(1/3)=1+z+0z^2-(1/3)z^3+... .                     (12)
 ```
 
 The first of the required two tail coefficients vanishes, but `f` is not a
@@ -146,7 +169,7 @@ cube.  For `d=4`, `a/b=3/2`, and `N=6`, take
 ```text
 f=1+z^3,
 [z^7]f^(3/2)=[z^8]f^(3/2)=0,
-[z^9]f^(3/2)=-1/16.                                  (11)
+[z^9]f^(3/2)=-1/16.                                  (13)
 ```
 
 Here two of the required three coefficients vanish, but `f` is not a
@@ -156,12 +179,22 @@ quartic degree six.
 Lowest terms in `(1)` are also load-bearing.  Display `alpha=2/4` and take
 
 ```text
-f=(1+z^2)^2.                                          (12)
+f=(1+z^2)^2.                                          (14)
 ```
 
 Its formal `alpha` power is `1+z^2`, so the entire displayed terminal tail
 vanishes, but `f` is not a fourth power.  The correct conclusion uses the
-reduced denominator two.
+reduced denominator two.  The independent audit also shows that
+characteristic zero cannot be weakened merely to `char(K)` not dividing
+`b`: over `F_2`, the data
+
+```text
+d=3, a=2, b=3, N=2,             f=1+z^3             (15)
+```
+
+have `f^(2/3)=1+z^6+O(z^7)`.  Hence `c_3=c_4=0` but `c_6=1`, while `f` is
+not a cube.  The recurrence loses control exactly when its integer
+multiplier vanishes in the field.
 
 ## 5. Cubic and quartic response dictionaries
 
@@ -180,7 +213,7 @@ For the depressed quartic used in THM-2778, let
 
 ```text
 f=1+2dz^2+qz^3+(d^2-s)z^4,
-alpha=M/4,             M=4k-2.                       (13)
+alpha=M/4,             M=4k-2.                       (16)
 ```
 
 Now `(d_degree,b,N)=(4,2,M)`.  Vanishing in degrees `M+1,M+2,M+3` makes
@@ -188,7 +221,7 @@ Now `(d_degree,b,N)=(4,2,M)`.  Vanishing in degrees `M+1,M+2,M+3` makes
 linear coefficient gives `u=0`; comparison in `(13)` gives
 
 ```text
-v=d,                 q=0,                 s=0.        (14)
+v=d,                 q=0,                 s=0.        (17)
 ```
 
 Thus the common triple-response support is the single weighted-projective
@@ -204,7 +237,7 @@ For a prospective degree-`d` source-fibre chart, the reusable design is:
 d-1 consecutive Faber/Gauss--Manin observables
         -> terminal recurrence
         -> reduced-denominator perfect-power locus
-        -> use missing low coefficients to classify that locus.         (15)
+        -> use missing low coefficients to classify that locus.         (18)
 ```
 
 This is a response-count rule, not a promise that the required observables
@@ -219,17 +252,32 @@ Run
 ```bash
 python3 04-computation/terminal_tail_perfect_power_rigidity_thm2781.py
 python3 -O 04-computation/terminal_tail_perfect_power_rigidity_thm2781.py
+python3 04-computation/terminal_tail_perfect_power_rigidity_hostile_audit_thm2781.py
+python3 -O 04-computation/terminal_tail_perfect_power_rigidity_hostile_audit_thm2781.py
 ```
 
 The assertion-free rational companion checks `163` admissible parameter
 rows with `1<=d<=10`, `326` constructed perfect powers, `83` nonpowers,
 the terminal multiplier and complete predecessor window, integral-exponent
-and vanishing-top-coefficient boundaries, and hostiles `(10)--(12)`.  Its
+and vanishing-top-coefficient boundaries, and hostiles `(12)--(14)`.  Its
 `2103` finite gates verify the algebraic interfaces; the all-degree
 quantifier comes from Sections 2--3.
 
+The independent engine does not use recurrence `(4)` to construct rational
+powers: it forms `f^a`, solves `g^b=f^a` coefficient-by-coefficient, and only
+then cross-checks `(4)`.  It exhausts `3408` coefficient vectors in
+`{-1,0,1}` across `42` admissible rows through declared degree five, checks
+`1832` window-zero implications, the uniform family `(10)--(11)` through
+`d=12`, `d=1`, `b=1`, top-zero, constant-term, unreduced-denominator, and
+characteristic-two boundaries, for `5888` exact gates.  It also caught and
+forced repair of the original primary companion's degree-only
+non-fourth-power proxy (MISTAKE-315).  Both paths have zero `assert` nodes and
+normal/optimized/stored outputs agree byte-for-byte.
+
 ```text
-script_sha256 = f911eabd8ac9b235180cb413bfbfe43b6b38de60d0d2740a1467733e8f2340c9
+script_sha256 = d63c55ede3c2127c994b0d169050374925b0c340271a13411823bf80b6711e10
 output_sha256 = 325d695e53f860f239479d0ee6f9fbd46efd2dd068e06fe7d50c4bd822e3ddc7
+independent_script_sha256 = 45714c5cc7144ca140afa3d8d38dc6443296d07a7b3d2ca5614c45cc8eaa20f3
+independent_output_sha256 = c2375d91c1f3a542fc651b48bb683d8b1653afe1dd0f1e6cdbba6fd961973a60
 hash_basis    = LF-normalized bytes
 ```

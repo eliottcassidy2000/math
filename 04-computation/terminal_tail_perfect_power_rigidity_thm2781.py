@@ -209,7 +209,7 @@ def main() -> None:
         "unreduced exponent has full displayed tail",
     )
     gate(
-        len(trim(unreduced)) - 1 == 4,
+        power([Fraction(1), unreduced[1] / 4], 4) != trim(unreduced),
         "unreduced hostile is square but not fourth power",
     )
 

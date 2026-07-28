@@ -384,6 +384,12 @@ Classify profiles under support operations; study analytic continuation and auto
   triangularly impossible.  Thus the complete chosen-sheet split polynomial
   exact-square-prefix terminal family is closed in every reduced degree
   `M=4k-2`; THM-2759/2767 remain finite independent instances.
+  THM-2781 isolates the formal engine: for any declared degree `d`, exactly
+  `d-1` consecutive terminal coefficients of a reduced rational power are a
+  universal perfect-power certificate.  The count is sharp in every `d>=2`
+  via `(1+z)^d-z^d`.  This theorem predicts the needed response count but
+  does not produce those responses or enter an arbitrary Keller pair into a
+  Faber chart.
 
   This is not `JC(2)`: arbitrary Keller pairs need not enter this quartic,
   split polynomial exact-prefix chart.  Nonsplit and nonpolynomial-prefix

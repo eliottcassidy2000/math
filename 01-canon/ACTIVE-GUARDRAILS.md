@@ -173,7 +173,7 @@
 60. **THM-2071 closes the quadratic-fiber locus, not JC(2).** It makes the
     reduced complement fiber-linear; THM-2084's cubic floor is also a source-
     fiber statement, not generic degree, Jelonek geometry, VC(4), or JC(2).
-61. **Closing every complete chosen-sheet split exact-prefix degree is not JC(2).** THM-2778 closes the complete chosen-sheet split polynomial exact-square-prefix terminal family for all `M=4k-2`; THM-2671/2683/2692 separately close the inherited nonsplit degree-22 branch.
+61. **Closing every complete chosen-sheet split exact-prefix degree is not JC(2), and a response count is not response existence.** THM-2778 closes the complete chosen-sheet split polynomial exact-square-prefix terminal family for all `M=4k-2`; THM-2671/2683/2692 separately close the inherited nonsplit degree-22 branch. THM-2781 proves the sharp universal `d-1` terminal-coefficient perfect-power certificate, but does not construct or prove constancy of the needed observables.
     These exhaust only their stated quartic charts. Nonsplit and nonpolynomial-prefix degrees `>=26`, chart entry for arbitrary Keller pairs, upstream source-fibre/Newton/Jelonek branches, raising/descent, `JC(2)`, and `DC(2)` remain open.
 62. **Safe-torus mass is not primitive-line recurrence.** THM-2188/2193
     preserve Haar mass across opposite slopes, not a primitive recurrence.

@@ -1,0 +1,18 @@
+THM-2781 INDEPENDENT TERMINAL-TAIL HOSTILE AUDIT
+parameter_rows=42
+exhaustive_polynomials=3408
+window_zero_implications=1832
+uniform_dminus2_hostiles=11
+exact_gates=5888
+independent_bth_root_engine=PASS
+d1_boundary=PASS
+b1_boundary=PASS
+degree_below_declared_bound=PASS
+uniform_insufficient_tail=PASS
+unreduced_denominator_repair=PASS
+constant_term_scope=PASS
+char0_scope_hostile=PASS
+cubic_quartic_specializations=PASS
+THEOREM_VERDICT=PASS
+CANONICAL_SCRIPT_VERDICT=PASS_AFTER_EXPLICIT_NONFOURTH_REPAIR
+FAILED CHECKS: NONE

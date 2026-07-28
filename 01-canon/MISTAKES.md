@@ -9,6 +9,22 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-315 (2026-07-28, THM-2781 exact companion) -- degree four does not certify non-fourth-power status
+
+- **What was done:** the unreduced-exponent hostile `f=(1+z^2)^2`, displayed
+  with exponent `2/4`, was correctly described as a square that is not a
+  fourth power, but its original exact gate checked only `deg(f)=4`.
+- **First failed implication:** a polynomial of degree four can be a fourth
+  power of a linear polynomial.  The gate verified a compatible intermediate
+  statistic, not the advertised consequence.
+- **Repair / strongest survivor:** a constant-one fourth root would have to
+  be `1+uz`; its linear coefficient forces `u=0`, while `f` has quadratic
+  coefficient `2`.  The primary companion now tests the unique linear
+  candidate explicitly.  An independent coefficient-root engine exhausts
+  `3408` small polynomials and verifies the theorem, the repaired hostile,
+  the all-degree sharp family, and a characteristic-two failure.  The theorem
+  statement and example were correct; only the truth-bearing gate was weak.
+
 ## MISTAKE-314 (2026-07-28, concurrent THM-2759 reservation) -- a clean local scan was not replayed after the reservation rebase
 
 - **What happened:** the exact-prefix even Faber flux-gcd theorem was first
