@@ -2,7 +2,7 @@
 id: THM-2634
 title: "Endpoint-pair two-carry cospan and single-carry chronology no-go"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.
   THM-2625's allocated endpoint determinant is a tensor product of two
   separately integrated signed endpoint sums.  Splitting each sum before
   its endpoint DFT by c=floor(169{x}) mod 13 therefore gives a lawful
@@ -20,6 +20,7 @@ source: deep-energy-audit-2026-07-28-endpoint-two-carry
 depends_on:
   - THM-2620-endpoint-pair-parabolic-transvection-and-translation-gauge-boundary
   - THM-2625-canonical-endpoint-current-full-transvection-sector-survival
+  - THM-2635-half-tooth-opposite-graph-unit-section-and-reversed-digit-closure
 related:
   - THM-2380-cross-word-charged-target-correlation-and-pair-twist-gate
   - THM-2420-affine-shell-cross-reference-composition-and-complete-zero-reference-hostile
@@ -35,7 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2634 -- the endpoint determinant has two carries, not one
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.**
 
 THM-2630 isolates the missing predecessor/successor digit on a physical
 root ancestry.  THM-2625 supplies a rich coefficient-side determinant
@@ -288,6 +289,27 @@ Only the bottom and left maps are presently canonical.  A pair twist supplies
 the top matching test; a transverse physical section supplies the right-hand
 clutching.  Neither follows from determinant support.
 
+THM-2635 now supplies a sharp proved positive control: on one literal
+half-tooth it retains a uniform seven-clock unit and an abstract endpoint
+path
+
+```text
+r_h=r_0+hq.                                               (22a)
+```
+
+But (22a) has section direction `v=q`, so the transverse coefficient in
+(19) is
+
+```text
+alpha=det(q,q)=0.                                         (22b)
+```
+
+The determinant is constant along all thirteen parabolic edges.  Thus the
+new physical half/unit/reversed-digit closure realizes exactly the sharp
+**longitudinal** boundary of this theorem; it cannot recover the carry from
+`Delta`.  A second transverse endpoint direction or the matched pair twist
+is still required.
+
 There is a useful but strictly conditional derangement analogy.  Every
 nonzero translation of a `C_13` torsor is fixed-point-free.  If each charged
 carry component were already known to carry one positive common-root branch
@@ -351,12 +373,13 @@ Both executions byte-match
 05-knowledge/results/lrc14_endpoint_pair_two_carry_cospan_thm2634.out.
 ```
 
-An independent hostile audit rederived every normalization and sign in
+Two independent hostile audits rederived every normalization and sign in
 (13)--(17), the `k=0` recovery, the full-support shifted-carry hostile, the
 sharp nonnegative support threshold, and the transverse determinant law.  It
-also replayed normal and optimized modes against the stored transcript and
+also replayed normal and optimized modes against the stored transcript,
 verified the repaired `6,591` distinct endpoint-grid gauge checks and the
-declared LF-normalized hashes.
+declared LF-normalized hashes, and independently checked the conjugation,
+allocation-gauge, and conditional derangement scope.
 
 ## 6. Exact boundary
 
