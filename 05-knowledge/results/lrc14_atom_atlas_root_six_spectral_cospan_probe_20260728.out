@@ -1,0 +1,12 @@
+LRC14 root-six atom-atlas / fixed-X spectral-cospan probe
+atlas: |A|=304=5 mod13; translation stabilizer=(0,)
+inner residue counts=(23, 27, 22, 27, 22, 23, 22, 23, 23, 23, 23, 23, 23); AGL(1,13) stabilizer=((1, 0),)
+all 13-power address characters survive: Phi_(13^r)(1)=13 does not divide 304
+inner Fourier energy: unique maximal pair {+/-6}; E_6>16511942539/156250000, every competitor <31577/800
+selector triangle: (X,m,Y)=(342732,1,1085318); address phase h=6 on both legs
+exact field: p=352341050142921841; support(P,Q,L*,R*,A)=(169, 169, 169, 169, 169)
+root-six atlas images: S_6=305773570255157360; S_-6=177741545403661698
+3042-path coherent multiplier=152256481181880920 != 0
+sha256(P,Q,L,R,A)=('6242def39eb7c33fb93520448792c695bade375e421c48cb5a647fca4ea547f0', '8cbcffdd371b4dbe559babf9a873e6b0be704dbe9e49975140810f3579f3bc53', '26d4666490a9eb078ecad81a1fbdcbd89b7641eeb09429dae9a1d981ab3b1d8b', '829afc83f04df7f1597d785790e56d504c6ddfc90ffbb090c1a26ff49602bb87', 'ff2bbf7c4dc4a89ae7019aa82632b00f253bbfbbc334ce1b8da39c928a299c45')
+scope: nonzero tensor cospan; no semantic-current intertwiner, target/address identification, chronology, row exclusion, or LRC(14)
+all exact checks passed
