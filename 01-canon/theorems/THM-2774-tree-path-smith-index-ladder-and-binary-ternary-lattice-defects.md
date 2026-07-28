@@ -2,8 +2,8 @@
 id: THM-2774
 title: "Tree-path Smith-index ladder and binary/ternary lattice defects"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Every nonsingular full B_m-root frame has elementary two-primary
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every
+  nonsingular full B_m-root frame has elementary two-primary
   Smith form.  A k-edge tree geodesic, however, canonically combines k-1
   D-root differences with its endpoint A-root to give Smith form
   diag(1^(k-1),k), with explicit quotient the signed coordinate sum mod k.
@@ -15,6 +15,12 @@ status: >
   partial-cube lattice cokernels, not PSL2(Z), graceful existence, Keller,
   or LRC(14).
 source: a4-resolvent-next-gate/tree-path-smith-index-2026-07-28
+audit: >
+  root/2026-07-28 independently checked the signed-multigraph block proof,
+  Smith quotient and dual torus kernel, ambient extension, P4 census,
+  diameter ladder, normal/-O/stored replay, and LF hashes: ACCEPT.
+  a4-resolvent-next-gate/thm2770-hostile-audit independently reached the
+  same verdict.
 depends_on:
   - THM-2766-quadratic-cubic-pullback-even-sign-kummer-plane-and-weyl-d3-s4
   - THM-2770-tree-incidence-a-d-weyl-clutch-and-four-vertex-fan-dichotomy
@@ -31,8 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2774 -- tree geodesics carry an exact Smith-index ladder
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2770 identifies the graceful-tree arrangement with a type-`B` signed
 frame plus one new wall for each long tree geodesic.  The distinction is
@@ -331,7 +336,7 @@ orbit/stabilizer, and the full `P4` minor histogram `(16a)`.  Normal and
 optimized runs byte-match the stored transcript.
 
 ```text
-PROVED HERE (candidate):  elementary two-Smith form for every pure-B frame;
+PROVED HERE:              elementary two-Smith form for every pure-B frame;
                           partial-cube endpoint-root map;
                           path frame determinant and Smith form;
                           explicit quotient sum mod k;
@@ -349,4 +354,4 @@ NOT PROVED:               a global arrangement cokernel;
                           an LRC(14) relation/current realization.       (18)
 ```
 
-QED (candidate).
+QED.

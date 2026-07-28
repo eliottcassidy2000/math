@@ -2,8 +2,8 @@
 id: THM-2775
 title: "Modular S4 to Weyl-D3 generator frame and affine-parity blindness"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  The modular (2,3,4) quotient generators act on the three quartic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The modular
+  (2,3,4) quotient generators act on the three quartic
   opposite-edge coordinates by explicit signed-permutation matrices
   generating W(D3)=S4.  The half-Hadamard root states recover (12),(234),
   while the (2,3,3) binary generator is the diagonal V4 element (12)(34).
@@ -12,6 +12,11 @@ status: >
   binary-ternary frame but cannot force affine quasi-etaleness.  No Keller
   monodromy identification, JC(2), DC(2), graceful, or LRC result follows.
 source: root/modular-weyl-d3-generator-frame-2026-07-28
+audit: >
+  a4-resolvent-next-gate/thm2770-hostile-audit-2026-07-28 independently
+  checked the four root substitutions, both triangle markings, W(D3)/A4
+  images, half-Hadamard actions, face-square inertia, even boundary code,
+  scope, normal/-O/stored replay, and LF hashes: ACCEPT.
 depends_on:
   - THM-2758-quartic-pair-sum-sextic-resolvent-pullback-and-discriminant-square
   - THM-2766-quadratic-cubic-pullback-even-sign-kummer-plane-and-weyl-d3-s4
@@ -29,8 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2775 -- the modular `S4` quotient in opposite-edge coordinates
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The two recurring binary/ternary constructions now meet on one explicit
 representation.  The meeting is exact, but it also displays the missing
@@ -155,37 +159,43 @@ collapses; its preimage is the `C2*C2*C2` carrier recorded in THM-2768.
 
 ## 4. The same frame exposes the affine blindness
 
-Put `tau_i=d_i^2/4`.  At a prime divisor `D` of the cubic matching
-normalization, the Kummer boundary row is
+Put `tau_i=d_i^2/4`.  Equation `(4)` gives the exact square-product identity
 
 ```text
-nu_D=(v_D(tau_1),v_D(tau_2),v_D(tau_3)) mod 2.          (13)
+tau_1 tau_2 tau_3=(T/8)^2.                              (13)
 ```
 
-The square-product condition `(4)` forces only
+At a prime divisor `D` of the cubic matching normalization, the Kummer
+boundary row is
 
 ```text
-nu_D in C_even={000,110,101,011}.                        (14)
+nu_D=(v_D(tau_1),v_D(tau_2),v_D(tau_3)) mod 2.          (14)
+```
+
+The square-product condition `(13)` forces only
+
+```text
+nu_D in C_even={000,110,101,011}.                        (15)
 ```
 
 Signed flips do not alter valuations, while the coordinate `S3` permutes the
 three entries.  Consequently `000` is fixed and the three nonzero even words
 form one allowed orbit.  Neither the triangle relations nor the invariant
-product upgrades membership in `(14)` to the quasi-etale condition
+product upgrades membership in `(15)` to the quasi-etale condition
 `nu_D=000`.
 
 This boundary is sharp.  THM-2769 gives a one-parameter quartic with generic
 full `S4` group and, after relabelling, the divisor row
 
 ```text
-nu_D=110.                                                (15)
+nu_D=110.                                                (16)
 ```
 
 Local Kummer inertia then flips the first two square roots and fixes the
 third, so its signed matrix is
 
 ```text
-diag(-1,-1,1)=(X_S Y_S)^2.                              (16)
+diag(-1,-1,1)=(X_S Y_S)^2.                              (17)
 ```
 
 Thus the obstructing inertia is not outside the modular/Weyl frame; it is
@@ -211,19 +221,19 @@ the kernel-rank ledger, and the complete even-code orbit.  Normal and
 optimized runs byte-match the stored transcript.
 
 ```text
-PROVED HERE (candidate):  explicit modular generators in D3 coordinates;
+PROVED HERE:              explicit modular generators in D3 coordinates;
                           (2,3,4) and (2,3,3) relations;
                           W(D3)=S4 and orientation A4 images;
                           literal four-root Hadamard action;
                           V4 matching-quotient distinction;
-                          face-square/boundary-word identity (16);
+                          face-square/boundary-word identity (17);
                           exact affine-parity stopping mechanism.
 
 NOT PROVED:               a modular marking on every quartic extension;
                           a Keller/Jelonek geometric realization;
                           vanishing of affine boundary inertia;
                           exclusion of A4 or S4 Keller monodromy;
-                          JC(2), DC(2), Graceful Tree, or LRC(14).          (17)
+                          JC(2), DC(2), Graceful Tree, or LRC(14).          (18)
 ```
 
-QED (candidate).
+QED.
