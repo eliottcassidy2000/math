@@ -2,16 +2,14 @@
 id: THM-2718
 title: "Split prime-23 five-pole rational-primitive closure"
 status: >
-  RESERVED / PROOF-COMPLETE + INDEPENDENTLY HOSTILE-AUDITED CANDIDATE,
-  AWAITING NAMESPACE REPAIR AND INTEGRATION.  On the B_0!=0, y not
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED.  On the B_0!=0, y not
   identically zero, lambda!=0 prime-23 scale chart of the split polynomial
   exact-square-prefix degree-twenty-two even-Faber bank, no physical Keller
   trajectory exists.  THM-2713 gives five distinct poles of the chosen-sheet
   q-function, while the third Faber flux and THM-2214's rational-primitive
   lemma allow q=A_src/U to have at most two pole points on the source P1.
   The eleven odd Faber seeds, B_0=0, y=0, lambda=0, the broader split branch,
-  and JC(2) remain open.  Bare THM-2718 is temporarily quarantined because a
-  later coordinate-first reservation duplicated the ID; cite this slug.
+  and JC(2) remain open.
 source: thm2704-hostile-audit-2026-07-28-five-pole-primitive
 audit: lrc-narrow-debt-queue-2026-07-28-five-pole-primitive
 depends_on:
@@ -25,11 +23,8 @@ related:
 
 # THM-2718 -- five old poles do not fit through one rational primitive
 
-**RESERVED / PROOF-COMPLETE + INDEPENDENTLY HOSTILE-AUDITED CANDIDATE,
-AWAITING NAMESPACE REPAIR AND INTEGRATION.**  Nothing may depend on this
-candidate until its status is promoted.  A later theorem reservation currently
-duplicates the bare ID `THM-2718`; cite this full slug until that namespace
-collision is repaired.
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.**  The former namespace collision
+was repaired by moving the later coordinate-first claimant to THM-2740.
 
 ## 1. Exact statement
 

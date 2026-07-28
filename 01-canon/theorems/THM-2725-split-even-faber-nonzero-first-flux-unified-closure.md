@@ -2,7 +2,7 @@
 id: THM-2725
 title: "Split even-Faber nonzero-first-flux unified closure"
 status: >
-  PROOF-COMPLETE CANDIDATE; INDEPENDENT HOSTILE AUDIT REQUESTED.  The entire
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED.  The entire
   chosen-sheet split polynomial exact-square-prefix degree-22 even-Faber
   chart with nonzero first flux is physically empty.  If y is nonzero, the
   arbitrary-b prime-23 geometry has five q-pole points while THM-2723 permits
@@ -11,6 +11,7 @@ status: >
   third flux.  This includes every B_0, including zero, but not lambda=0,
   odd Faber seeds, the broader split branch, or JC(2).
 source: root/split-even-nonzero-flux-unified-closure-2026-07-28
+audit: thm2704-hostile-audit-2026-07-28-unified-even-closure (independent two-chart proof and pole-pullback audit)
 depends_on:
   - THM-2713-split-prime23-component-divisor-budget-and-perfect-power-normal-form
   - THM-2723-split-exact-square-prefix-rational-primitive-pole-capacity
@@ -23,7 +24,7 @@ related:
 
 # THM-2725 -- the nonzero-flux split even-Faber chart is empty
 
-**PROOF-COMPLETE CANDIDATE; INDEPENDENT HOSTILE AUDIT REQUESTED.**
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The two apparent holes in the prime-23 chart were artifacts of one scale
 choice.  Keeping the scale independent of `B_0` covers `B_0=0` whenever
@@ -173,3 +174,9 @@ No new finite computation is used in this synthesis.  THM-2713 supplies the
 uniform arbitrary-`b` divisor geometry, THM-2723 supplies the all-degree
 source capacity, and THM-2724 supplies the complementary constant-field
 boundary.
+
+An independent hostile audit rechecked the exhaustive `y=0`/`y!=0` field
+dichotomy, the arbitrary nonzero scale and `B_0=0` specialization, the exact
+chosen-sheet `q` identification, the constant-map contradiction, and the
+normalization/surjectivity pullback of all five pole fibres.  It found no
+additional hypothesis and certified the residual in Section 4.
