@@ -32,11 +32,13 @@ hash_basis: LF-normalized bytes
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-THM-2694 proved that the twelve least positive representatives of the next
-slope step all leave its present factor.  It explicitly left open the other
-`13^5-1` representatives in each THM-2657 lift fibre.  They behave in the
-opposite way: thousands return to the same positive packet cylinder, and
-some compose into literal closed support cycles.
+THM-2694 proved that the twelve representatives in its generator-linear
+section `s(delta)=7delta` all leave the present factor.  It explicitly left
+open the other `13^5-1` representatives in each THM-2657 lift fibre.  They
+behave in the opposite way: thousands return to the same positive packet
+cylinder, and some compose into literal closed support cycles.  The displayed
+section values are canonical relative to `s(1)=7`; they are not, in general,
+the least positive integers in their congruence classes.
 
 ## 1. Inherited cylinder and packet skeleton
 
@@ -108,9 +110,11 @@ present right  9961158781035/371293.                    (7)
 The delayed coordinate is independent of `n`, the carry fractional part
 does not cross an integer wall on `I`, and the private tooth translates with
 `root(n)`.  The companion separately checks the future digit `h=6` and
-half-digit `kappa=1` at both endpoints.  Thus, after restriction to the
-inherited D component, all `3346` packet supports equal `I`.  Their common-
-base support nerve is the full simplex
+half-digit `kappa=1` at both endpoints.  The delayed-prefix inequalities bind
+with equality at both endpoints of `I`; because `I` is open, exact
+containment follows, and the boundary points themselves are not included.
+Thus, after restriction to the inherited D component, all `3346` packet
+supports equal `I`.  Their common-base support nerve is the full simplex
 
 ```text
 Delta^3345.                                               (8)
@@ -174,7 +178,7 @@ records, for every one of the `3042` survivors, its `k`, `delta`, target
 address, residue, carry, root, common interval, and exact number of surviving
 next lifts.
 
-The old boundary remains sharp: the twelve least positive section values
+The old boundary remains sharp: the twelve generator-linear section values
 `k=7delta`, `1<=delta<=12`, land at `n=111,...,122`, and every one is still
 present-free on all of `I`.  They were a section of the lift torsor, not an
 exhaustion of it.
