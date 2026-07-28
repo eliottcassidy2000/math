@@ -423,6 +423,28 @@ Classify profiles under support operations; study analytic continuation and auto
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
+### Arithmetic-Kakeya forcing certificates (opened 2026-07-28, klein-S691)
+
+**OPEN external benchmark; in-repo workbench live.** Certificate score s
+claims AK(s) (benchmark's theorem, CITED); human record 1.67513 (Katz–Tao
+2002); target ≤ 1.675. Session facts (FINITE-EXACT): literal spec rule-(1)
+UNSOUND (score→1 family; 14/9 at n=9 — report upstream); proved floor
+score ≥ 1; k=1 paths floor 2 (exhaustive small, greedy-seed caveat);
+strict record **13/7** on [2,2,2]; per-suffix merge-free record **7/4 =
+the KT99 exponent** (3 independent witnesses — a plateau exactly at the
+human rung); with identifications **12/7**. Label algebras: verifiable =
+(prefix+step), intuitive same-H = (step+suffix) — complementary; the
+compilation lemmas between them are the benchmark's unstated equivalence
+claims and the workbench's top theory target. Mechanism: species-flow
+with junction algebra; firing = illegal (1,−1)-junction; foreign seeds =
+reusable junction fuel; merges = free hubs (NOT denominator savings).
+Files: `04-computation/ak_forcing_engine.py` (+exploit, +search, +anneal,
++mode3), `06-writeups/AK-FORCING-WORKBENCH-klein-S691.md`,
+`05-knowledge/results/AK-RUNG-LADDER-WITNESSES-klein-S691.md`. Next: 5/3
+hunt (< 1.675 modulo soundness+format), same-H legal 7/4, compilation
+lemmas, k=1 floor proof. Related external raid: mac-mini-S171 owns other
+Epoch lanes (sensitivity, Legendre, del Pezzo, SFC(3), Grechuk).
+
 ## Cross-domain connection discipline
 
 The most reusable current bridges are not literal object identifications:
