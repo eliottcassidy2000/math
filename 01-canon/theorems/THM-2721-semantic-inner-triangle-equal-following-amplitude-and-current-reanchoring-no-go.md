@@ -23,8 +23,8 @@ related:
   - THM-2716-c4-arm-transporter-groupoid-and-relative-degree-holotopy-boundary
 script: 04-computation/lrc14_semantic_inner_triangle_amplitude_thm2721.py
 output: 05-knowledge/results/lrc14_semantic_inner_triangle_amplitude_thm2721.out
-script_sha256: 83ba5a846805d8bd67eea5c9ed8db43236042a018ac2079ad0dd4efe20111801
-output_sha256: b4fdc6ff0f34e9eaa6a500dd80b67cad9c53a354f4713f3ecba31ed95e3e54bb
+script_sha256: b88a4aa81f8dfcec91bbd2378ea6d7058ab6636177d30db45cf27ff210b89651
+output_sha256: bcd0e99abe21e8ac14c533be89db64d4f54b33c967d7ef2245e277aaa890bc3e
 hash_basis: LF-normalized bytes
 ---
 
@@ -185,6 +185,20 @@ inside `Supp_base(F)`, so `(13)` implies
 over all `304` addresses.  In particular none of the three targets in `(5)`
 can be the source of another copy of the fixed current `(2)`.
 
+The obstruction is deeper than the named rail.  The following atom lies in
+the `epsilon=1` half of private root six, while depth `h=2` has private root
+ten.  In the exact `182`-grid their half intervals are
+
+```text
+following:       (71,84),
+h=2, epsilon=1: (127,140),
+h=2, epsilon=0: (140,153).                              (15a)
+```
+
+They are pairwise disjoint.  Thus changing only the rail, future clock,
+`epsilon`, or `kappa` while retaining `h=2` cannot repair the target.  A
+lawful continuation must change the private-depth/root branch as well.
+
 Categorically, `(9)` is therefore a positive three-arm **corolla**: the maps
 `M_0,M_13,M_26` share the source cylinder `I`.  The address graph compares
 their targets, but its comparison edges are not composable chronological
@@ -242,12 +256,13 @@ python 04-computation/lrc14_semantic_inner_triangle_amplitude_thm2721.py
 python -O 04-computation/lrc14_semantic_inner_triangle_amplitude_thm2721.py
 ```
 
-Both executions byte-match the stored `15`-line transcript
+Both executions byte-match the stored `16`-line transcript
 `05-knowledge/results/lrc14_semantic_inner_triangle_amplitude_thm2721.out`.
 The companion contains no optimized-away assertions.  It reconstructs the
 `304` semantic addresses without reading THM-2712's stored output; checks
 every exact interval, weight, translate, overlap, and `C_3` identity; proves
-the global support disjointness `(13)--(14)`; tests both reanchoring counts in
-`(15)`; and exhausts the changed-source controls `(16)--(17)`.
+the global support disjointness `(13)--(14)` and private-root obstruction
+`(15a)`; tests both reanchoring counts in `(15)`; and exhausts the
+changed-source controls `(16)--(17)`.
 
 Awaiting independent hostile audit before promotion.

@@ -207,6 +207,21 @@ def main():
         "following support met the fixed current base support",
     )
 
+    # The failure is not repairable by merely changing rail or future clock
+    # while retaining current depth h=2.  The following atom occupies the
+    # epsilon=1 half of root 6, whereas the two possible h=2 halves belong to
+    # root 10; their exact 182-grid intervals are disjoint.
+    following_half = (14 * 6 - 13, 14 * 6)
+    h2_halves = ((14 * 10 - 13, 14 * 10), (14 * 10, 14 * 10 + 13))
+    require(
+        following_half == (71, 84)
+        and h2_halves == ((127, 140), (140, 153))
+        and all(max(following_half[0], left)
+                >= min(following_half[1], right)
+                for left, right in h2_halves),
+        "private half/root disjointness changed",
+    )
+
     endpoint_current_midpoint_hits = []
     endpoint_current_whole_hits = []
     for n in semantic_nodes:
@@ -266,6 +281,10 @@ def main():
     print(f"abstract_C3_nontrivial_DFT={dft1},{dft2}")
     print("following_support_intersect_current_rail2=empty")
     print("following_support_intersect_current_atom=empty")
+    print(
+        "private_half_no_go="
+        f"following={following_half} h2_halves={h2_halves}"
+    )
     print(
         "endpoint_current_reanchor="
         f"midpoint_hits={len(endpoint_current_midpoint_hits)} "
