@@ -2,8 +2,8 @@
 id: THM-2820
 title: "Boolean rigidity, graded translation ranks, and carrier-gauge Hasse boundary"
 status: >
-  RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-  INDEPENDENT HOSTILE AUDIT.  Finite pointwise Boolean carrier algebras
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Finite
+  pointwise Boolean carrier algebras
   have zero relative derivations and rigid idempotents.  In F_p[C_p] the
   orbit norm is (g-1)^(p-1), fixed by every generator change although the
   cotangent line scales, so norm/Rees data alone select no nonzero first
@@ -13,8 +13,8 @@ status: >
   linear augmentation space by the degree-one annihilator of its leading
   graded piece; the THM-2806 B/P/Q/H/raw-face ranks are 0/1/1/2/2.
   The raw mixed face has base b=(0,0) and all 169 translates recover their
-  labels, and its positive integral inverse/push profile is
-  2171N+delta_(q1+q2), but it is supported on the 144 joint-absent cells.
+  labels.  Its raw positive sum-push is
+  11N+delta_(q1+q2), but it is supported on the 144 joint-absent cells.
   After the THM-2763 carrier gauge, the first-Hasse endpoint sees only a
   nonzero effective transverse vector.  A lawful physical transverse
   translation and common
@@ -22,7 +22,9 @@ status: >
 source: root/boolean-norm-cotangent-boundary-2026-07-28
 depends_on:
   - THM-2201-cyclic-root-fibre-hasse-jet-transition-carrier
+  - THM-2744-relative-present-unit-repair-and-root-zero-overlap-clutch
   - THM-2763-carrier-equivariant-endpoint-address-extension-and-gauge-obstruction
+  - THM-2782-semantic-arm-right-wing-local-unit-and-endpoint-deck-boundary
   - THM-2806-literal-fixed-sheet-central-allocation-scalar-law-and-endpoint-translation-no-go
   - THM-2813-affine-lift-transvection-and-projective-horn-decoder
 related:
@@ -37,15 +39,18 @@ related:
   - THM-2792-cyclic-unit-intertwiner-and-positive-naturality-boundary
 script: 04-computation/lrc14_boolean_norm_cotangent_boundary_thm2820.py
 output: 05-knowledge/results/lrc14_boolean_norm_cotangent_boundary_thm2820.out
-script_sha256: e6adbc28ff27712891e48c6a40dd4123c17c0d515d311b69f91ab005f432314c
-output_sha256: 2b8886817b1464e44be036dcec067a4df58fffb3dc9487c39ad33d43c7eb55ec
+script_sha256: 8f9a51e0fd616cd616eef0080bcd054b2a0c191704e1f289e78ea28364476376
+output_sha256: d9f5cf1e0999f414e0c9af838070441def6baf1c65df266fbdb44b9f578cce58
+secondary_script: 04-computation/lrc14_residue8_common_allocation_covariance_thm2820.py
+secondary_output: 05-knowledge/results/lrc14_residue8_common_allocation_covariance_thm2820.out
+secondary_script_sha256: 779e2fab9b6aa80097b4d3756c32cdb040d4c2a2e9dd31ec9c7effcf11b780ae
+secondary_output_sha256: e4809c77178a3b66901e4b68eca517cfcb74e2516e16ece719cfca1efe4cbe7e
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2820 -- the Boolean norm is top-degree, while a rooted face has an affine jet
 
-**RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2806 leaves two tempting but incompatible pictures.  Pointwise, its
 carrier masks are rigid Boolean idempotents and its sole fourfold atom is
@@ -396,28 +401,48 @@ THM-2611/2792, a physical basepoint and generator intertwiner would determine
 the map to THM-2813's off-sheet normal torsor uniquely; without a basepoint
 there are thirteen origin choices.
 
-There is also an exact integral shadow of this inverse.  In
-`Z[C_p^2]`, let
+There is an even simpler integral quotient decoder.  Let `pi_lambda` push
+coefficients along `lambda(a,b)=a+b`.  Counting the pairs of nonzero
+residues with a fixed sum gives
 
 ```text
-Theta=(N_eta+1)(N_theta+1)
+pi_lambda(T_q Omega)
+ =(p-2)N+delta_(q_1+q_2).                              (31b)
 ```
 
-and let `pi_lambda` push coefficients along
-`lambda(a,b)=a+b`.  The coefficients of `Theta` are positive weights
-`1,2,4`.  Since `N^2=pN` over `Z`, direct convolution gives, for every
-`q=(q_1,q_2)`,
+At `p=13`, one bin has value `12` and the other twelve have value `11`.
+Thus the positive raw count profile already recovers `q_1+q_2`, with no
+division, modular reduction, or inverse.
+
+For a weighted integral shadow of the modular inverse, work in
+`Z[C_p^2]`.  Here one must use the positive **orbit-norm lifts**
+
+```text
+N_tilde_eta=sum_(a in C_p) g^a,
+N_tilde_theta=sum_(b in C_p) h^b,
+```
+
+whose reductions modulo `p` are `eta^(p-1),theta^(p-1)`, respectively.
+They are not the literal integral powers `(g-1)^(p-1),(h-1)^(p-1)`.
+Set
+
+```text
+Theta=(N_tilde_eta+1)(N_tilde_theta+1)
+```
+
+whose coefficients are positive weights `1,2,4`.  Since `N^2=pN` over
+`Z`, direct convolution gives, for every `q=(q_1,q_2)`,
 
 ```text
 pi_lambda(Theta*T_q Omega)
- =p(p^2-2)N+delta_(q_1+q_2).                           (31b)
+ =p(p^2-2)N+delta_(q_1+q_2).                           (31c)
 ```
 
 At `p=13` the baseline is `2171N`.  Thus the one exceptional coordinate
-recovers `q_1+q_2` exactly over the integers, not merely modulo thirteen.
-It is the canonical `ell`-forgotten quotient decoder and kills the marked
-gauge direction `(1,-1)` sharply.  By the linear pushforward boundary of
-THM-2814, however, `(31b)` remains sourced in the joint-absent aggregate;
+again recovers `q_1+q_2` exactly over the integers.  Equations
+`(31b)--(31c)` are canonical `ell`-forgotten quotient decoders and kill the
+marked gauge direction `(1,-1)` sharply.  By the linear pushforward
+boundary of THM-2814, however, both remain sourced in the joint-absent aggregate;
 positive inverse weights do not turn it into common-atom/root-Cech
 physicality.
 
@@ -467,7 +492,16 @@ nonzero denominator `J_(0,0)` which permits normalization.  It is not the
 numerator jet.  The jet appears only after a rooted **translation of the
 whole raw face**.
 
-## 5. Conditional bridge to THM-2813
+## 5. Successor-square holotopy and the conditional bridge
+
+### 5.1 The affine lift has a constant successor commutator
+
+On the THM-2744/2782 address circle `Z/13^6`, let the literal source-to-target
+edge be
+
+```text
+d(n)=n+1.
+```
 
 THM-2813's relative affine lifts obey
 
@@ -475,10 +509,159 @@ THM-2813's relative affine lifts obey
 A_t(y)=y+t13^5(y-7 mod13).
 ```
 
+For every `n`, including the low-digit wrap from `12` to `0`,
+
+```text
+A_t d(n)-d A_t(n)=t13^5             mod13^6.          (33)
+```
+
+Away from the wrap this is immediate.  At the wrap the residue difference
+is `-12`, which is still one modulo thirteen after multiplication by
+`13^5`; hence `(33)` is global.
+
+One address step in this typed row is the physical translation
+`7T/13^6`.  Therefore the commutator is
+
+```text
+7tT/13 = 7t allocation units.                         (33a)
+```
+
+If the source is frozen, the target-only carrier displacement is
+`q=(0,7t)`.  Equations `(31b),(32b)` detect
+
+```text
+s=q_1+q_2=7t,
+beta_normal=7^(-1)s=2s=t.                             (33b)
+```
+
+By contrast, the only lawful simultaneous THM-2763 rechart uses the shared
+representative:
+
+```text
+L=-7tW,             q=(-7t,7t).                       (33c)
+```
+
+It is a multiple of the exact gauge generator, so `q_eff=(0,0)` and
+`q_1+q_2=0`.  Thus `(33)` is precisely the unfilled two-cell defect of the
+square `(A_t,d)`: the target-relative transverse class exists, while the
+lawful common rechart is pure gauge.  Filling the square requires a
+target-relative connection (for example separate `ell_L,ell_R`, or a
+cospan morphism).  Another shared carrier harmonic cannot fill it.
+
+### 5.2 Exact boundary in the literal THM-2806 constructor
+
+The secondary exact companion tests the square on the retained cell
+`(s,t,clock)=(0,4,1)`.  Its source atom and target translate are
+
+```text
+I=[142004992589460,142005019034340),
+J=I+431933040,
+T=297836897838480,          T/13=22910530602960.       (33d)
+```
+
+The source cylinder `6715` has residue seven; `J` also contains the
+adjacent source cylinder `6716` of residue eight.  One affine lift sends
+
+```text
+A_1(6716)=378009=6716+13^5,
+```
+
+and translates its physical cylinder by exactly `7T/13`.  With the source
+chart applied to that adjacent label and the target carrier held fixed, the
+allocation masks move
+
+```text
+(source,target): (0,delta_0) -> (0,delta_7),
+```
+
+so this is the nonzero transverse class `(0,7)`.  But the fixed six-factor
+signature simultaneously changes from
+
+```text
+(1,1,1,1,1,1) to (0,1,1,1,1,1);
+```
+
+`E3` is the first failure and the translated atom is not common.
+Inside that macro factor, `C3`-danger, both blockers, and unit safeties
+`W14,W27,W40,W53` remain true; exactly `guard_safe` and
+`unit5_safe_W66` fail.  Thus this is a low-role-safety failure, distinct
+from the deepest-wrap mechanism in the current THM-2819 candidate.
+
+The full source-chart orbit is stronger than this `t=1` hostile.  For every
+`t`, the source carrier mask is empty and the target mask is
+`delta_(7t)`.  Among `t!=0`, there is a unique complete fixed-section
+landing:
+
+```text
+t=6,          q=7t=3,          q_eff=(0,3),
+beta_normal=2*3=6.                                      (33d')
+```
+
+It retains all six macro factors and every atomic `E3` factor.  This is an
+honest positive physical normal decoder on the **target-only
+successor--transvection boundary**.  It is not `A_6(H)`, and its destroyed
+predicate is exactly source/common allocation support.
+
+The endpoint scalar itself does not repair that loss.  Keeping the exact
+right-endpoint origin `(0,0)` and its translated companion `(12,0)`, the
+secondary companion finds
+
+```text
+support at (0,0)  ={0,3,11},
+support at (12,0) ={0,11}.                               (33d'')
+```
+
+Every surviving entry is one interval of mass `26444880`, with the same
+two exact field values
+
+```text
+(231164267889491750,630230755085920022).
+```
+
+For this fixed `(s,t,clock)=(0,4,1)` cell, the complete six-factor orbit is
+supported precisely at `q in {0,3}`.  Therefore its nonzero complete-section
+support `{3}` and nonzero two-endpoint-edge support `{11}` are disjoint.  The
+`q=3` class retains every fixed and atomic factor and the base endpoint
+scalar, but loses the translated endpoint companion.  The `q=11` class
+retains that two-point endpoint edge, but loses fixed factor `q2`.
+
+This is a fixed-cell boundary, not a bank-global obstruction.  An auxiliary
+scan finds neighboring semantic cells in which `q=11` retains both right
+endpoint origins and all six native factors; their carrier weights,
+ancestry, address cylinders, and lawful semantic retyping are not asserted
+here.  Thus no nonzero orbit point of the selected cell retains both a
+complete section and the target endpoint edge, while semantic-cell
+reselection is a genuine positive next route.
+
+The full seven-clock raw-carrier scan finds `3,756` aligned pieces per
+clock.  Exactly `1,878` per clock contain an address cylinder, and every
+one of those cylinders has residue seven.  No neighboring off-sheet
+cylinder meets the common raw carrier.  On the other branch, the full
+`+7`-unit simultaneous rechart is `(33c)` and hence pure gauge.
+
+This proves the sharp literal dichotomy:
+
+```text
+cross-role target-only defect -> nonzero q_eff, no common support;
+lawful common rechart         -> common transport, q_eff=0.          (33e)
+```
+
+There is a rooted common-support vertex `H=delta_0 tensor delta_0` with
+nonzero augmentation, but it is not the mixed face.  Its common endpoint
+pair uses residue-seven labels and is fixed by `A_1`.  The same physical
+interval `J` also carries the adjacent **source** address `6716`; `A_1J`
+uses that different role chart and then reads the displaced interval
+against the target carrier.  It is a valid cross-role hostile, not
+`A_1(H)`.  The pointwise mixed contrast at the sole fourfold common atom is
+zero.  The separate `Omega` aggregate has augmentation `144=1 mod13`, but
+only on joint-absent support.
+
+### 5.3 General conditional decoder
+
 At an off-sheet atom with
 
 ```text
-r=y-7 mod13 !=0,                                       (33)
+r=y-7 mod13 !=0,                                       (34)
 ```
 
 its normal displacement is `tr`.  Suppose a future physical construction
@@ -491,7 +674,7 @@ provides:
 4. a nonzero effective transverse vector
 
    ```text
-   q_eff=(q_1-z.L,q_2+z.L)!=0.                         (34)
+   q_eff=(q_1-z.L,q_2+z.L)!=0.                         (35)
    ```
 
 Choose any linear functional `lambda` on `F_13^2` with
@@ -500,11 +683,11 @@ Choose any linear functional `lambda` on `F_13^2` with
 ```text
 beta_normal(F_t)
  =r^(-1)lambda(kappa_z(F_t,ell_t)-kappa_z(F_0,ell_0))
- =t.                                                    (35)
+ =t.                                                    (36)
 ```
 
 At the residue-eight sheet `r=1`, one such rooted aggregate suffices.  If
-the address is discarded, `(34)` must be replaced by the stronger visible
+the address is discarded, `(35)` must be replaced by the stronger visible
 test `q_1+q_2!=0`.
 
 This coefficient-side decoder is not yet a common-atom beta source.
@@ -520,13 +703,12 @@ modular convolution filtration.  It is not THM-2806's central `13`-adic
 Rees valuation filtration `(24)`.  A physical bridge must intertwine those
 objects; equality of their displayed scalar residues does not do so.
 
-This is a genuine conditional exit, not a closure.  THM-2806 proves that
-literal allocation has zero endpoint translation, so its currently typed
-family remains at `b=(0,0)`.  The known marked direction `(W,(1,-1))` is
-also killed exactly by `(32b)`.  THM-2813 supplies an oriented normal
-generator, but canon contains neither a physical nonzero `q_eff` nor the
-required common raw face/two-object coupling.  The generator is external
-sidecar data; it is not recovered from the norm by `(12)`.
+This is a genuine conditional exit, not a closure.  The literal constructor
+now exhibits both sides of the obstruction in `(33e)`; it does not supply
+their filler.  THM-2813 supplies an oriented normal generator, but canon
+contains neither a target-relative connection extending the common cospan
+nor the required nonzero mixed raw face/two-object coupling.  The generator
+is external sidecar data; it is not recovered from the norm by `(12)`.
 
 ## 6. Information and failure ledger
 
@@ -538,6 +720,8 @@ sidecar data; it is not recovered from the norm by `(12)`.
 | rooted raw face `Omega` | regular `C_13^2` translation torsor on 144 joint-absent cells | non-idempotent common raw face or broader coupling |
 | normalized Hasse `b` | every supplied rooted translation `(a,b)` | carrier-gauge-effective vector `q_eff` |
 | gauge invariant `kappa_z` | every transverse translation modulo `(W,1,-1)` | lawful physical family with `q_eff!=0` |
+| successor commutator `(33)` | exact target-relative class `7t` | a physical two-cell extending the common cospan |
+| fixed-cell endpoint atlas `(33d'')` | either the complete section at `q=3` or the two-endpoint edge at `q=11` | a reselected cell retaining carrier, ancestry, address, and both endpoint origins |
 | THM-2813 normal jet | affine-lift label `t` off the fixed sheet | common physical coefficient/coupling and transverse map |
 
 THM-2814 studies projective four-corner holonomy and provenance.  The
@@ -546,7 +730,8 @@ norm-to-cotangent obstruction, and the positive rooted Hasse translation
 coordinate.
 
 It does not identify the two cyclic generators, construct the family in
-`(34)`, produce a non-idempotent common raw face, give a root/Cech map,
+`(35)`, produce a target-relative connection or non-idempotent common raw
+face, give a root/Cech map,
 exclude a relation row, or prove LRC(14).
 
 ## 7. Exact companion
@@ -556,12 +741,16 @@ Run
 ```text
 python 04-computation/lrc14_boolean_norm_cotangent_boundary_thm2820.py
 python -O 04-computation/lrc14_boolean_norm_cotangent_boundary_thm2820.py
+
+python 04-computation/lrc14_residue8_common_allocation_covariance_thm2820.py
+python -O 04-computation/lrc14_residue8_common_allocation_covariance_thm2820.py
 ```
 
-Both executions byte-match
+Each normal/optimized pair byte-matches its corresponding stored transcript:
 
 ```text
-05-knowledge/results/lrc14_boolean_norm_cotangent_boundary_thm2820.out.
+05-knowledge/results/lrc14_boolean_norm_cotangent_boundary_thm2820.out
+05-knowledge/results/lrc14_residue8_common_allocation_covariance_thm2820.out
 ```
 
 The dependency-free companion:
@@ -576,12 +765,27 @@ The dependency-free companion:
 6. verifies `(29a)` on all `845` allocation-state/translation pairs, the
    rank list `(29c)`;
 7. checks the unit inverse `(31a)`, regular `169`-element orbit, and all
-   `2,197` entries of the integral push profiles `(31b)`;
-8. exhausts the `28,561` THM-2763 gauge-invariant triples and `28,561`
-   effective-family instances; and
+   `2,197` entries of each integral push profile `(31b)--(31c)`;
+8. exhausts `2,197` THM-2763 base triples through `28,561` gauge shifts,
+   and `2,197` effective-family bases through `28,561` parameter values;
+   and
 9. verifies the pure-gauge and forgotten-address visibility boundaries.
 
 It uses explicit exception gates, no Python `assert`, no floating point, and
 no scratch dependency.
 
-**Awaiting independent hostile audit; not QED.**
+The hash-pinned secondary companion reconstructs the selected physical atom,
+all thirteen source-chart translates, the seven-clock raw common carrier, the
+address-cylinder residues, gauge-effective displacements, and the two-right-
+origin endpoint atlas.  Its endpoint claims are exact for the inherited
+half-open/a.e. convention; it makes no bank-global claim.
+
+An immutable independent hostile audit rederived the Boolean and modular
+algebra, the two integral push decoders, the THM-2763 gauge quotient, the
+successor commutator, the role distinction, the seven-clock census, and the
+fixed-cell endpoint atlas.  It independently replayed both companions in
+normal and optimized modes against their stored transcripts, verified all
+four LF-normalized hashes, checked the selected-cell versus bank-global
+scope, and found no load-bearing defect.
+
+**QED.**

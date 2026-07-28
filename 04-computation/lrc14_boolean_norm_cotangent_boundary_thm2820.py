@@ -320,12 +320,24 @@ def integral_inverse_push_checks(p):
     }
     baseline = p * (p * p - 2)
     checks = 0
+    raw_checks = 0
     for a in range(p):
         for b in range(p):
             translated = {
                 ((i + a) % p, (j + b) % p): value
                 for (i, j), value in omega.items()
             }
+            raw_pushed = [0] * p
+            for (i, j), value in translated.items():
+                raw_pushed[(i + j) % p] += value
+            raw_expected = [p - 2] * p
+            raw_expected[(a + b) % p] += 1
+            require(
+                raw_pushed == raw_expected,
+                f"raw sum-push profile drift at {(a, b)}",
+            )
+            raw_checks += p
+
             convolution = {(i, j): 0 for i in range(p) for j in range(p)}
             for (i, j), left in theta.items():
                 for (k, ell), right in translated.items():
@@ -341,7 +353,34 @@ def integral_inverse_push_checks(p):
             )
             checks += p
     require(set(theta.values()) == {1, 2, 4}, "positive inverse weights drift")
-    return checks, baseline, tuple(sorted(set(theta.values())))
+    return (
+        raw_checks,
+        p - 2,
+        checks,
+        baseline,
+        tuple(sorted(set(theta.values()))),
+    )
+
+
+def successor_transvection_commutator_checks(p):
+    modulus = p**6
+    top = p**5
+
+    def affine_lift(t, address):
+        return (address + t * top * ((address - 7) % p)) % modulus
+
+    checks = 0
+    for t in range(p):
+        for residue in range(p):
+            left = affine_lift(t, (residue + 1) % modulus)
+            right = (affine_lift(t, residue) + 1) % modulus
+            require(
+                (left - right) % modulus == t * top % modulus,
+                f"successor/transvection commutator drift at {(t, residue)}",
+            )
+            checks += 1
+    require(pow(7, -1, p) == 2, "physical seven-unit decoder drift")
+    return checks, top
 
 
 def allocation_square_p13():
@@ -508,8 +547,15 @@ def main():
         forgotten_visible,
         forgotten_total,
     ) = carrier_gauge_checks(13)
-    inverse_push_checks, inverse_push_baseline, theta_weights = (
-        integral_inverse_push_checks(13)
+    (
+        raw_push_checks,
+        raw_push_baseline,
+        inverse_push_checks,
+        inverse_push_baseline,
+        theta_weights,
+    ) = integral_inverse_push_checks(13)
+    commutator_checks, commutator_top = (
+        successor_transvection_commutator_checks(13)
     )
 
     p13_norm = next(row for row in norm_rows if row[0] == 13)
@@ -561,9 +607,18 @@ def main():
         "test=q1+q2"
     )
     print(
+        f"raw_sum_push_checks={raw_push_checks}; "
+        f"raw_pushed_profile={raw_push_baseline}*N+delta_(q1+q2)"
+    )
+    print(
         f"integral_inverse_push_checks={inverse_push_checks}; "
         f"pushed_profile={inverse_push_baseline}*N+delta_(q1+q2); "
         f"theta_weights={theta_weights}"
+    )
+    print(
+        "successor_transvection_commutator="
+        f"t*{commutator_top}; checks={commutator_checks}; "
+        "physical_allocation_defect=7t; beta_normal=2*(q1+q2)"
     )
     print(
         "scope=norm/Rees data alone retain no nonzero jet; a rooted translated "

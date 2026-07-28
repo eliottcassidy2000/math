@@ -12,6 +12,8 @@ first_normal_ranks=(('B', 0), ('P', 1), ('Q', 1), ('H', 2), ('Omega', 2)); first
 omega_unit_inverse_checks=1; omega_translation_orbit=regular_169
 carrier_gauge_invariant_checks=28561; effective_family_checks=28561; effective_transverse_nonzero=2184/2197
 marked_(L,q)=(W,(1,-1))_is_pure_gauge=yes; forgotten_address_visible=156/169; test=q1+q2
+raw_sum_push_checks=2197; raw_pushed_profile=11*N+delta_(q1+q2)
 integral_inverse_push_checks=2197; pushed_profile=2171*N+delta_(q1+q2); theta_weights=(1, 2, 4)
+successor_transvection_commutator=t*371293; checks=169; physical_allocation_defect=7t; beta_normal=2*(q1+q2)
 scope=norm/Rees data alone retain no nonzero jet; a rooted translated aggregate has an exact affine Hasse coordinate, but the raw mixed face is joint-absent and a lawful transverse physical translation remains required
 ALL EXACT CHECKS PASSED
