@@ -2,8 +2,8 @@
 id: THM-2819
 title: "Nonwrapping endpoint conjugacy, odometer wrap death, and sharp target eleven-face"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  Translation by tau=7/13^6
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Translation
+  by tau=7/13^6
   conjugates source labels 1,...,12 at carry 12 to target labels
   0,...,11 at carry 6, including the rail, present, private-root,
   delayed-prefix, marked carrier, and carry-cell data.  It transfers the
@@ -34,8 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2819 -- endpoint translation is exact until the odometer wraps
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2809 proves that the full marked **source** endpoint on each of the first
 fourteen THM-2749 rails has sharp label maximum eleven.  It deliberately
@@ -364,10 +363,12 @@ both the positive target eleven-face and the empty target twelve-face
 omitting zero.  It uses exact integer arithmetic, explicit exception gates,
 and no truth-bearing Python assertions or floating point.
 
-Promotion requires an immutable independent hostile audit of the
-source/target coordinate convention, shift signs, canonical
-integer lifts, carry relabelling, target-zero prefix gate, `C3` factor order,
-strict endpoints, all fourteen direct target rows, all `2^11` edge choices,
-normal/optimized replay, hashes, and documentation gates.
+An immutable independent hostile audit checked the source/target coordinate
+convention, shift signs, canonical integer lifts, carry relabelling,
+target-zero prefix gate, the forced wrapped row, `C3` factor order, strict
+endpoints, all fourteen direct target rows, and the dependency-backed
+`2^11` edge choices.  It independently replayed normal, optimized, and
+stored evidence, verified both LF hashes, found no assertions or floating
+point, and passed the documentation and diff gates.
 
-QED, pending independent hostile audit.
+QED.
