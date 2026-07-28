@@ -2,15 +2,10 @@
 
 - `lrc14_mixed_d_slope7_two_simplex_scout.py` and
   `lrc14_mixed_d_slope7_two_simplex_independent_referee.py` -> matching
-  `.out` files [FINITE-EXACT POSITIVE SCOUT + DIRECT EXACT REPLAY].  Inside
-  THM-2680's first positive `3->1->0` D-edge component, one rational point
-  also supports the THM-2640 private packet `(carry,root)=(2,6)` and ten
-  nonzero slope-seven switches.  In particular `delta=1` sends `(2,6)` to
-  `(9,7)`, proving a positive mixed D/configuration-switch two-simplex.
-  `delta=7` is root-zero and `delta=8` fails the unit gate.  This changes edge
-  grammar and supplies neither a second D-like chronology edge nor canonical
-  owner/endpoint transport.  Hash pairs begin `48113885` / `939e6e4f` and
-  `1215b285` / `e87a211d`.
+  `.out` [FINITE-EXACT].  One rational point in THM-2680's `3->1->0` D-edge
+  supports ten THM-2640 slope switches, including `(2,6)->(9,7)`.  This is a
+  positive heterogeneous face, not a second D edge or endpoint transport.
+  Hashes: `48113885`/`939e6e4f`, `1215b285`/`e87a211d`.
 - `lrc14_odometer_twisted_central_clock_escape_20260728.py` -> matching `.out`
   [VERIFIED-EXACT SCOUT; ENVELOPE/INTRINSIC-CLOCK/STATE SCOPE].  The minimal
   alternating lifts `-14,+14` give only a cosmetic orbit-clock cycle: their
