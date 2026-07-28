@@ -78,6 +78,22 @@ def subgroup(generators):
     return generated_group(generators)
 
 
+def commutator(left, right):
+    return compose(
+        left,
+        compose(right, compose(inverse(left), inverse(right))),
+    )
+
+
+def derived_subgroup(group):
+    generators = tuple(
+        commutator(left, right)
+        for left in group
+        for right in group
+    )
+    return subgroup(generators)
+
+
 def blocks_containing_zero(group):
     """All nontrivial blocks containing the distinguished sheet zero."""
     degree = len(next(iter(group)))
@@ -170,6 +186,8 @@ def main():
     require(group_power == frozenset(
         set(base) | {compose(element, tau_power) for element in base}
     ), "power semidirect-product decomposition changed")
+    require(generated_group((tau_power, even_cycle)) == group_power,
+            "power C2*C3 quotient generators changed")
 
     require(compose(tau_chebyshev, compose(rho, tau_chebyshev)) == inverse(rho),
             "Chebyshev dihedral relation changed")
@@ -182,6 +200,15 @@ def main():
     }
     require(group_chebyshev == frozenset(dihedral_normal_form),
             "Chebyshev dihedral normal form changed")
+    power_derived = derived_subgroup(group_power)
+    chebyshev_derived = derived_subgroup(group_chebyshev)
+    require(len(power_derived) == 3 and len(chebyshev_derived) == 3,
+            "derived subgroup order changed")
+    require(all(compose(element, element) in chebyshev_derived
+                for element in group_chebyshev),
+            "Chebyshev abelianization stopped having exponent two")
+    require(len(group_chebyshev) // len(chebyshev_derived) == 4,
+            "Chebyshev abelianization order changed")
 
     power_blocks = blocks_containing_zero(group_power)
     chebyshev_blocks = blocks_containing_zero(group_chebyshev)
@@ -239,10 +266,13 @@ def main():
           "group=(C3xC3)semidirectC2")
     print(f"power_blocks_containing_0={power_blocks}")
     print("power_decomposition=degree3_then_degree2; no_degree2_inner_block")
+    print("power_modular_boundary=C2*C3_surjects_via_tauP_and_(0,2,4)")
     print("chebyshev_passport=(2,2,1,1); group_order=12; "
           "group=C6_semidirect_C2_dihedral")
     print(f"chebyshev_blocks_containing_0={chebyshev_blocks}")
     print("chebyshev_decompositions=degree3_then2_and_degree2_then3")
+    print("chebyshev_modular_boundary=no_C2*C3_surjection; "
+          "abelianization=C2xC2")
     print("noncrossing_matchings=5; unmarked_rotation_orbits=2")
     print("scope=response block lattice only; no Keller-map decomposition, "
           "JC2, or DC2")

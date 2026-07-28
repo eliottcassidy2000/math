@@ -2,8 +2,8 @@
 id: THM-2821
 title: "Sextic e=3 power-wreath and Chebyshev-dihedral block lattice"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  THM-2817's power carrier has monodromy
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  THM-2817's
+  power carrier has monodromy
   (C3 x C3) semidirect C2 of order 18 and a unique nontrivial block
   system, of block size three.  Its only nontrivial rational
   decomposition type is therefore degree three followed by degree two.
@@ -21,15 +21,14 @@ related:
   - THM-2816-maximal-pole-clean-nielsen-ribbon-tree-prufer-vandermonde-count
 script: 04-computation/jc_sextic_e3_monodromy_block_lattice_thm2821.py
 output: 05-knowledge/results/jc_sextic_e3_monodromy_block_lattice_thm2821.out
-script_sha256: 4e5cfd3c4286e2a5c409184ee4e977a04c85e2ea22aa7933d708efae82554f46
-output_sha256: f3bc6b1384c528d8de8bad8c0eb7f11ae7c5b52cff38d02bdf38cb72551f6318
+script_sha256: ac4d98eef79c0fd3ca89178994f620a2236ef58a447c30240423ea5ce1b5bb31
+output_sha256: db6996a0ad74487e9f4f0c2317dde28f8cf1a2dd1aad6ba827fe9b5ae09ccf9b
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2821 -- the two sextic carriers have different 2/3 block lattices
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2817 proves that the minimal `e=3` maximal-pole response layer has only
 two unmarked rational maps.  Both visibly have degree three followed by
@@ -206,14 +205,33 @@ This is a literal binary/ternary statement on one rational map:
 - the difference is detected by the complete monodromy block lattice, not
   by a slogan about degrees.
 
-It is not an action of
+The modular free-factor relation is asymmetric and exact.  For the power
+carrier, `tau_P` has order two and `a=(0 2 4)` in `(5)` has order three;
+equation `(7)` gives `rho=a tau_P`.  Hence
 
 ```text
-C2*C3=PSL2(Z).
+C2*C3=PSL2(Z) ->> G_P                                  (17)
 ```
 
-The actual monodromy groups are the finite groups `(8)` and `(11)`, and the
-intermediate coordinate is a load-bearing sidecar.
+is a transitive quotient action.  This is a rigorous finite realization of
+the two free factors on the same six sheets, not a faithful modular action.
+
+The Chebyshev carrier has the opposite boundary.  Its derived subgroup is
+`<rho^2>` of order three, so
+
+```text
+G_C^ab isomorphic to C2 x C2.                          (18)
+```
+
+But `(C2*C3)^ab=C6`, and the abelianization of any quotient is a cyclic
+quotient of `C6`.  Therefore no surjection `C2*C3 ->> G_C` exists.  Directly,
+an order-three rotation and any reflection generate only an order-six
+dihedral subgroup.  The inner cubic Chebyshev map still has its familiar
+`S3` quotient; the full sextic response acquires one additional parity
+coordinate.
+
+Thus the actual monodromy groups are the finite groups `(8)` and `(11)`,
+and the intermediate coordinate remains a load-bearing sidecar.
 
 More importantly, a block system of the one-variable rational response does
 not furnish a decomposition of a two-variable polynomial Keller map.  Such
@@ -233,8 +251,9 @@ The companion uses exact permutation and symbolic rational arithmetic to:
    blocks `(9)` and `(12)`;
 5. enumerate all five noncrossing matchings and their two rotation orbits;
 6. verify both factorizations `(14)` and the reverse factorization `(15)`;
-   and
-7. verify normal, optimized, and stored transcript identity.
+7. verify the power free-factor quotient and the Chebyshev abelianization
+   obstruction `(17)--(18)`; and
+8. verify normal, optimized, and stored transcript identity.
 
 It contains no Python `assert` node.  Run
 
@@ -247,3 +266,11 @@ The finite computation is exhaustive in the declared degree-six
 permutation universe.  Higher degree, other `e=3` passports, positive
 characteristic, polynomial Keller-map decomposition, `JC(2)`, and `DC(2)`
 remain outside the theorem.
+
+An immutable independent hostile audit rebuilt both groups and complete
+block lattices, checked the Lüroth/decomposition directions and all five
+matchings, caught and repaired the original blanket modular-group sentence,
+and replayed the strengthened modular boundary, normal/optimized/stored
+evidence, hashes, and documentation gates.
+
+QED.
