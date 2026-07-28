@@ -25,9 +25,9 @@ related:
   - THM-2587-deep-root-coshift-incidence-wall-and-theta-selector-no-go
   - THM-2611-principal-c13-bibundle-lift-torsor-and-holonomy-section-obstruction
   - THM-2614-punctured-target-root-cosupport-and-principal-deck-no-go
-  - THM-2624-two-clock-signed-target-root-tomography-and-carrier-holotopy-boundary
+  - THM-2624-two-clock-root-tomography-and-disjoint-carrier-holotopy-boundary
   - THM-2629-fixed-deep-affine-graph-spectrum-and-puncture-cancellation-boundary
-  - THM-2630-high-speed-half-tooth-ambiguity-and-carry-coordinate-no-go
+  - THM-2630-old-wall-affine-clutching-and-successor-sector-no-go
 script: 04-computation/lrc14_guard_cospan_half_tooth_thm2623.py
 output: 05-knowledge/results/lrc14_guard_cospan_half_tooth_thm2623.out
 script_sha256: edac7583aae8f20d9de105ab50bd497b74437a01fafdfc4ce78b1f6ad38405b6
