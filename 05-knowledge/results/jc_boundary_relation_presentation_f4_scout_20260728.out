@@ -1,0 +1,15 @@
+JC BOUNDARY-RELATION PRESENTATION/F4 SCOUT
+nonsingular_hermitian_counts={1: 1, 2: 10}
+exhaustive_A_G_cases=2740
+f4_relation_nullA_nullB_rad=(1, 1, 0)
+f4_saturation_nullA_nullB_rad=(1, 1, 0)
+f4_isotropic_radical_hostile_nullA_nullB_rad=(0, 1, 1)
+f4_nonsingular_nullA_nullB_rad=(0, 0, 0)
+Z_relation_Krank_Tor2rank_mod2kernel=(3, 0, 3)
+Z_saturation_Krank_Tor2rank_mod2kernel=(0, 3, 3)
+Z_isotropic_radical_hostile_Krank_Tor2rank_mod2kernel=(0, 0, 0)
+Z_nonsingular_Krank_Tor2rank_mod2kernel=(0, 0, 0)
+hostile_integral_gram=diag(-2,-2,-2)
+hostile_standard_mod4_pairing=((0,1),(1,0))
+geometric_boundary_realization_and_S3_reflection_not_tested
+PASS
