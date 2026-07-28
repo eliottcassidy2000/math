@@ -2,8 +2,8 @@
 id: THM-2753
 title: "Six-edge parity erasure and three-matching resolvent restoration"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  The faithful S4 action on the six two-subsets of four sheets lands
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The faithful S4
+  action on the six two-subsets of four sheets lands
   in A6, so ambient six-object permutation parity is identically even.  More
   sharply, a transposition and a nontrivial V4 double transposition have the
   same six-edge cycle type 1^2 2^2, although their actions on the three
@@ -15,6 +15,9 @@ status: >
   only unlabeled single-generator cycle/sign data are erased.  This is a
   finite resolvent-information theorem, not a Keller or LRC exclusion.
 source: a4-resolvent-next-gate-scout-2026-07-28
+audit: root-jc-boundary-promotion-2026-07-28 (independent subset-sign,
+  faithfulness, conjugacy-table, V4-kernel, sign-pullback, marked-group,
+  sharp-hostile, scope, and normal/optimized replay audit)
 depends_on: []
 related:
   - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
@@ -33,8 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2753 -- six edges forget the parity that three matchings restore
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The quartic `V4` torsor has two natural finite shadows.  Its six unordered
 pairs are the edges of `K4`; its three nonzero translation directions are the
@@ -250,7 +252,7 @@ and verifies the labelled and mixed-word hostiles `(16)--(17)`.
 ## 7. Boundary ledger
 
 ```text
-PROVED HERE (candidate):  complete S4 edge/matching action table;
+PROVED HERE:              complete S4 edge/matching action table;
                           faithful six-edge action with trivial ambient sign;
                           transposition/double-transposition cycle collision;
                           matching kernel V4 and exact sign restoration;
@@ -265,4 +267,4 @@ NOT PROVED:               a graph-quartic polynomial realization;
                           JC(2), DC(2), or LRC(14).                      (18)
 ```
 
-QED (candidate).
+QED.
