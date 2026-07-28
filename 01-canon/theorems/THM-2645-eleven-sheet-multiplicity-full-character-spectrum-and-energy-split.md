@@ -2,7 +2,9 @@
 id: THM-2645
 title: "Eleven-sheet multiplicity full-character spectrum and energy split"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let p be
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  POST-PROMOTION PURITY/RETURN TRANSVERSALITY COROLLARY VERIFIED-EXACT,
+  AWAITING INDEPENDENT RE-AUDIT.  Let p be
   odd, let S=F_p\A and T=F_p\B with A,B two-point sets, and let
   r=1_S*1_T be the two-edge representation multiplicity.  Every nonzero
   normalized Fourier coefficient satisfies
@@ -25,14 +27,16 @@ related:
   - THM-2637-derangement-character-fixed-branch-holotopy-principle
 script: 04-computation/lrc14_eleven_sheet_multiplicity_spectrum_thm2645.py
 output: 05-knowledge/results/lrc14_eleven_sheet_multiplicity_spectrum_thm2645.out
-script_sha256: 5ca5c7488860455bcfc7aead33d983269f6f39694efda9c1d9f8030bc46e08ac
-output_sha256: f7d1c3999ed7805e698801b2f2c1e439aec279f91c6a49cccbcf0a78fa259057
+script_sha256: c3cd514ab3a6ce392d07bf33ce802709e038ea182e5cb34e0e6828bc2f092772
+output_sha256: 569a140ab0b731e526cdff3148577d79278cae5e9bea7e83c84c16e25b2a2554
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2645 -- multiplicity restores every charged carry colour
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+POST-PROMOTION PURITY/RETURN TRANSVERSALITY COROLLARY VERIFIED-EXACT,
+AWAITING INDEPENDENT RE-AUDIT.**
 
 THM-2642 proves that two eleven-sheet relations on `C_13` have positive
 sections for every affine clutch.  Support has therefore become useless for
@@ -225,7 +229,45 @@ have identical multiplicity profiles.  Thus (10) recovers charged carry
 one private increment decomposition.  This is the multiplicity analogue of
 the allocation-gauge boundary in THM-2634.
 
-## 5. LRC interface and stopping boundary
+## 5. Full charged spectrum is quantitatively not purity
+
+THM-2644 supplies a nonlinear fixed-branch gate for a nonnegative torsor
+weight `mu`: with
+
+```text
+M=sum_c mu(c),        E_raw=sum_c mu(c)^2,
+delta=M^2-E_raw,      R=(mu*mu)(0),                       (25)
+```
+
+the strict inequality `R>delta` forces identity mass on an odd torsor.  The
+fully charged profile `mu=r` lies decisively on the opposite side.
+
+From the two multiplicity shapes in Section 3,
+
+```text
+M=121,
+E_raw=1129           on the 5,070 step-distinct pairs,
+E_raw=1131           on the 1,014 step-matched pairs,     (26)
+```
+
+so `delta` is respectively `13,512` or `13,510`.  Reflection preserves the
+`l^2` norm, hence Cauchy--Schwarz gives
+
+```text
+R=sum_c r(c)r(-c)<=E_raw<=1131<13510<=delta.             (27)
+```
+
+The complete finite bank sharpens the separation: `max R=1131`, and the
+smallest deficit `delta-R` is `12,379`.  Therefore THM-2644's robust gate
+cannot fire on any THM-2645 multiplicity profile, despite all twelve charged
+characters surviving with the floors (12), (21), and (22).
+
+This proves that full character spectrum and fixed-branch purity are
+transverse invariants.  Another Fourier measurement cannot by itself turn
+this same dense profile into a branch.  Conditioning or thinning the physical
+transition is necessary.
+
+## 6. LRC interface and stopping boundary
 
 The theorem identifies a precise conditional consumer.  If a physical LRC
 construction supplies a same-base positive two-edge transition table whose
@@ -246,7 +288,7 @@ THM-2634 endpoint pair, or THM-2637 local system.
 
 No row is excluded and the scalar ledger remains `165`.
 
-## 6. Exact companion
+## 7. Exact companion
 
 Run
 
@@ -264,7 +306,7 @@ Both executions byte-match
 The dependency-free exact referee uses the integral group-ring criterion
 
 ```text
-sum_(j=0)^12 n_j zeta^j=0  iff  n_0=...=n_12            (25)
+sum_(j=0)^12 n_j zeta^j=0  iff  n_0=...=n_12            (28)
 ```
 
 for integer coefficient vectors.  It exhausts all `6,084` ordered complement
@@ -272,20 +314,26 @@ pairs and checks:
 
 1. all `73,008=6,084*12` charged character numerators are nonzero;
 2. the exact step-class and energy censuses (20)--(21);
-3. normalized physical-space and group-ring Parseval energies agree; and
+3. normalized physical-space and group-ring Parseval energies agree;
 4. all `79,092=6,084*13` common-origin gauge transforms preserve the profile
-   and form free thirteen-element orbits.
+   and form free thirteen-element orbits; and
+5. all `6,084` dense multiplicity profiles obey (26)--(27), with exact
+   `max R=1,131` and minimum return-gate deficit `12,379`.
 
 Every logical guard survives optimized Python.  The LF-normalized SHA-256
 hashes are declared in the frontmatter.
 
-An independent immutable audit rederived the complement factorization, the
-normalized convolution sign and factor `p` in (8), all-mode nonvanishing and
+An independent immutable audit of the original theorem rederived the
+complement factorization, the normalized convolution sign and factor `p` in
+(8), all-mode nonvanishing and
 the sharp odd-root amplitude floor, both Parseval energy classes and their
 `5,070+1,014` census, the maximum-mode deduction, and the freeness and example
 for the common-origin gauge.  It also confirmed that the same-base positive
 transition-count table is genuinely absent from current LRC canon.  Normal
 and optimized executions byte-match the stored transcript, and the declared
 LF-normalized hashes were independently reproduced.
+
+The post-promotion transversality corollary in Section 5 and its new exact
+guards await independent re-audit.
 
 QED.

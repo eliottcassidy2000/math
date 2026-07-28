@@ -4,6 +4,7 @@ charged_character_checks=73008 all_nonzero=PASS
 difference_class_census={step_distinct:5070,step_matched:1014}
 centered_energy_census={36/169:5070,62/169:1014}
 max_mode_square_floor=3/169
+purity_return_no_go=M121_Eraw1129or1131_Rmax1131_delta_min13510_min_deficit12379
 common_origin_gauge_checks=79092 orbit_size=13
 normalization=hat_r(k)=P_k/13_for_k_nonzero
 PASS

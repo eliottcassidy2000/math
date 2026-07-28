@@ -62,8 +62,12 @@ def main():
 
     class_census = Counter()
     energy_census = Counter()
+    raw_energy_census = Counter()
     character_checks = 0
     gauge_checks = 0
+    return_gate_checks = 0
+    max_oriented_return = 0
+    min_return_deficit = None
 
     for a_pair in pairs:
         a_set = set(a_pair)
@@ -95,6 +99,21 @@ def main():
             centered_energy = sum((Fraction(v) - mean) ** 2 for v in r_profile) / p
             require(centered_energy == expected_energy, "centered energy")
 
+            # THM-2644 cannot fire on this dense multiplicity profile.
+            mass = sum(r_profile)
+            raw_energy = sum(v * v for v in r_profile)
+            defect = mass * mass - raw_energy
+            oriented_return = sum(r_profile[c] * r_profile[(-c) % p] for c in range(p))
+            require(mass == 121, "multiplicity mass")
+            require(raw_energy == (1131 if matched else 1129), "raw energy class")
+            require(oriented_return <= raw_energy < defect,
+                    "purity/return gate unexpectedly fired")
+            raw_energy_census[raw_energy] += 1
+            return_gate_checks += 1
+            max_oriented_return = max(max_oriented_return, oriented_return)
+            gap = defect - oriented_return
+            min_return_deficit = gap if min_return_deficit is None else min(min_return_deficit, gap)
+
             # Exact unnormalized Parseval for m; for k != 0,
             # rhat(k)=P_k/13 where P_k is this two-by-two root sum.
             numerator_energy = p * sum(v * v for v in m_profile) - 16
@@ -124,6 +143,11 @@ def main():
             "difference-class census")
     require(energy_census == Counter({"36/169": 5070, "62/169": 1014}),
             "energy census")
+    require(raw_energy_census == Counter({1129: 5070, 1131: 1014}),
+            "raw energy census")
+    require(return_gate_checks == 6084 and max_oriented_return == 1131,
+            "purity/return no-go census")
+    require(min_return_deficit == 12379, "purity/return minimum deficit")
     require(Fraction(36, 169) / 12 == Fraction(3, 169),
             "max-mode Cauchy floor")
     require(character_checks == 6084 * 12, "character check count")
@@ -135,6 +159,7 @@ def main():
     print("difference_class_census={step_distinct:5070,step_matched:1014}")
     print("centered_energy_census={36/169:5070,62/169:1014}")
     print("max_mode_square_floor=3/169")
+    print("purity_return_no_go=M121_Eraw1129or1131_Rmax1131_delta_min13510_min_deficit12379")
     print(f"common_origin_gauge_checks={gauge_checks} orbit_size=13")
     print("normalization=hat_r(k)=P_k/13_for_k_nonzero")
     print("PASS")
