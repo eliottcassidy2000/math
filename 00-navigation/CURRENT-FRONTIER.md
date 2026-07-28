@@ -54,52 +54,32 @@ THM-2545/2549 give the Hall gate and positive same-base
 chronology, still old-target neutral; THM-2547 is only a **FINITE-EXACT
 EXTERNAL CONTROL** after MISTAKE-281.
 
-THM-2551--2602 explain the descent failure: transfer preserves the projector
-kernel, gains are coboundaries, and an ordered positive edge kernel is still
-needed.  The chain reaches carry, later-root, and unit-vertex data but loses
-the wall or transition.
+THM-2551--2635 expose the descent failure: projector kernels, coboundary gains,
+and dense tomography reach carry/later-root/unit data but lose a wall,
+transition, deep root, or target graph.  Radon/free-orbit recovery is refuted
+(MISTAKE-300); THM-2620/2625 restore the determinant, THM-2634 two carries,
+and THM-2640 private roots, still without a transverse section.
 
-THM-2614--2635 reach dense cosupport, positive cross-time diagonals, two-clock
-tomography, future digits, predecessor carry, and a half-edge, but each loses
-a deep root, a unit, or the target graph.  The second semantic root remains
-untransported.
+THM-2657 identifies the nonsplit `C_(13^6)` odometer/class `7`; THM-2658 makes
+overlap a balanced gain section.  THM-2672/2687 leave an 11-dimensional
+slope-seven family, while THM-2688 separates its simplex, diagonal, lens, and
+Bockstein quotients.  These are sidecars, not physical gluing.
 
-THM-2615/2618 refute Radon/free-orbit recovery (MISTAKE-300); THM-2620/2625
-restore the determinant and THM-2634 retains two carries without a transverse
-section.  THM-2640 makes carry roots private and THM-2657 their nonsplit
-`C_(13^6)` odometer/class `7`.  THM-2642--2656 give hull, colour,
-deconvolution, rainbow, and midpoint sidecars; THM-2670 says formal Hamilton
-cycles do not glue physical clocks.
-
-THM-2658 makes overlap a balanced integer-gain section.  THM-2672 finds `534`
-positive fixed `Delta^11` faces; THM-2687 caps their full configuration union
-at `12/13`, so the slope-seven family has dimension `11`.  THM-2688 separates
-the thirteen-simplex normalization, `boundary Delta^12` vertical image,
-`Delta^11` diagonal quotient, and lens quotient `L^11(13;1,...,6)`.  Its
-Bockstein is the same nonzero odometer class `7`, not physical gluing.
-
-THM-2680's positive D legs have no path lift; THM-2682/2684 kill every third
-event.  THM-2689 restores support off `0,1/2`, but not a global clock lift.
-THM-2691 keeps rail/clocks and loses the present product; THM-2693 reaches
-three labelled events before the delayed word dies.  THM-2694 instead gives
-one D edge plus 94 vertical slope edges over one base state.  THM-2698 adds a
-central half-turn and proves a strict full two-cycle; forgetting parity gives
-a positive `D^2` endpoint loop whose forced `D` midpoint is outside the word.
-The residual is semantic path subdivision or a lawful direct endpoint-current
-cospan, not more endpoint recurrence.  Ledger `165`.
+THM-2680--2694 separate positive local legs, vertical slope length, and genuine
+chronology: every integral decoration induces the same delayed map, whose old
+word dies.  THM-2697 formalizes the affine germ/root filtration and this
+kernel no-go.  THM-2698 changes the base signature by a central half-turn and
+gets a strict full two-cycle, but its parity-forgotten `D^2` endpoint loop has
+no allowed `D` midpoint.  THM-2701 independently proves the literal semantic
+word sharply nilpotent at six; only an enlarged edge-debt grammar recurs.
+The residual is a semantic `C_2` path lift or lawful primitive macro cospan,
+not more endpoint recurrence.  Ledger `165`.
 
 ### Independent routes that remain live
 
-- **AP-core supplier.** THM-1017 proves `AP core -> far element -> LRC(14)`;
-  extraction from the compact residual remains HYP-6820.
-- **Euler/phase.** THM-2047 retains labelled phase height and detects isolated
-  tight components; THM-2050 makes first-exit magnitude or gluing mandatory.
-- **Peel/comb.** THM-731 and THM-2048 give necessary pruning taxes, not a
-  classifier.  Six-comb returns are saturated; pursue endpoint transport.
-- **Effective spectrum.** THM-1289 is ineffective; THM-1290 is exact through
-  speed `55` (gap through `64`).  Extend only with a structural filter.
-- **Exact rows.** THM-1002/2047 reduce fixed rows to rational vertices;
-  HYP-8900 is exact on examples, not uniform.
+- **Orthogonal routes.** THM-1017's AP-core extraction remains HYP-6820;
+  THM-2047/2050 retain phase/first exit; THM-731/2048 saturate six-comb
+  pruning; THM-1290 is exact only through speed `55`; HYP-8900 is not uniform.
 - **Foreign-base phase.** THM-2693's raw word first recurs at multiplier `18`,
   at `4/17,13/17` (the first is THM-789's hostile); no admissible handoff is
   known to realize that multiplier or its mod-17 class.
