@@ -71,6 +71,7 @@ def typed_metadata(base, central_index):
         arm.predecessor_carry(center),
         sigma_labels,
         tau_labels,
+        arm.relative.semantic_stability_radius(center),
     )
 
 
@@ -137,7 +138,14 @@ def main():
             and carry == 6
             and 0 in sigma_labels
             and 12 in tau_labels
-            for semantic, carry, sigma_labels, tau_labels in metadata
+            and stability_radius == arm.relative.Q_RADIUS
+            for (
+                semantic,
+                carry,
+                sigma_labels,
+                tau_labels,
+                stability_radius,
+            ) in metadata
         )
         and 3 in metadata[0][3]
         and 3 in metadata[2][3],
@@ -182,16 +190,16 @@ def main():
     )
 
     depth5 = P**5
-    logarithms = tuple(
+    logarithm_classes = tuple(
         exponent
         for exponent in range(P**4)
         if pow(14, exponent, depth5) == 53_028
     )
     require(
-        logarithms == (23_098,),
+        logarithm_classes == (23_098,),
         "14-adic logarithm stopped being unique modulo 13^4",
     )
-    exponent = logarithms[0]
+    exponent = logarithm_classes[0]
     multiplier = pow(14, exponent, ADDRESS_MODULUS)
     translation = (N0 - multiplier * N0) % ADDRESS_MODULUS
     require(
@@ -201,6 +209,76 @@ def main():
         and (multiplier * N_PLUS + translation) % ADDRESS_MODULUS == N_A
         and multiplier * pure_gap % ADDRESS_MODULUS == diagonal_gap,
         "bare affine address conjugacy changed",
+    )
+    lift_rows = tuple(
+        (
+            lift,
+            exponent + lift * P**4,
+            pow(14, exponent + lift * P**4, ADDRESS_MODULUS),
+        )
+        for lift in range(P)
+    )
+    lift_rows = tuple(
+        (
+            lift,
+            lifted_exponent,
+            lifted_multiplier,
+            (N0 - lifted_multiplier * N0) % ADDRESS_MODULUS,
+        )
+        for lift, lifted_exponent, lifted_multiplier in lift_rows
+    )
+    require(
+        len({
+            (lifted_multiplier, lifted_translation)
+            for (
+                _lift,
+                _lifted_exponent,
+                lifted_multiplier,
+                lifted_translation,
+            ) in lift_rows
+        }) == P
+        and all(
+            lifted_multiplier
+            == (multiplier + lift * P**5) % ADDRESS_MODULUS
+            and lifted_translation
+            == (translation + 6 * lift * P**5) % ADDRESS_MODULUS
+            and (
+                lifted_multiplier * N0 + lifted_translation
+            ) % ADDRESS_MODULUS == N0
+            and (
+                lifted_multiplier * N_PLUS + lifted_translation
+            ) % ADDRESS_MODULUS == N_A
+            for (
+                lift,
+                _lifted_exponent,
+                lifted_multiplier,
+                lifted_translation,
+            ) in lift_rows
+        ),
+        "thirteen full-depth affine lifts changed",
+    )
+    require(
+        all(
+            (
+                lifted_multiplier * residue_seven
+                + lifted_translation
+            ) % ADDRESS_MODULUS
+            == (
+                multiplier * residue_seven + translation
+            ) % ADDRESS_MODULUS
+            for residue_seven in (7, 20, 33, N0, N_PLUS, N_A)
+            for (
+                _lift,
+                _lifted_exponent,
+                lifted_multiplier,
+                lifted_translation,
+            ) in lift_rows
+        )
+        and (
+            lift_rows[1][2] * 0 + lift_rows[1][3]
+        ) % ADDRESS_MODULUS
+        != translation,
+        "affine lifts lost their common residue-seven sheet or hostile",
     )
 
     print(
@@ -226,9 +304,11 @@ def main():
         "triangle_commutes=yes"
     )
     print(
-        "affine_address_conjugacy="
-        f"k={exponent}; 14^k_mod13^6={multiplier}; "
-        f"g(n)=14^k*n+{translation}; g(n0)=n0; g(nplus)=na"
+        "affine_address_lifts="
+        f"{len(lift_rows)}; exponent_class={exponent}_mod_{P**4}; "
+        f"least_lift=(m,v)=({multiplier},{translation}); "
+        "all_fix_n0_and_send_nplus_to_na=yes; "
+        "common_on_residue7_sheet=yes; distinct_off_sheet=yes"
     )
     print(
         "scope=positive collapsed-carrier/address nerve simplex only; "
