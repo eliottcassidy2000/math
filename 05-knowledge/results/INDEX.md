@@ -45,9 +45,53 @@
 - `jacobian_s4_polynomial_graph_all_linear_planes_thm2709.py` -> matching
   `.out` [THM-2709 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   Pluecker coordinates classify
+- `lrc14_relative_segal_macro_ghost_completion_probe_20260728.py` -> matching
+  `.out` [THM-2706 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  The transverse packet endpoints form an ordinary `D^2` two-cycle, but all
+  `9,653,618` two-arrow factorizations pass through the forced ghost phases
+  `1/17,16/17`; clock gluing inserts `(4,4),(1,1)`.  Partial ghost lifts are
+  abundant, yet every ghost lacks the delayed sector and every endpoint lacks
+  an exclusive semantic source.  Hashes: `9c175815` / `4c94b7af`.
+- `lrc14_phase_cycle_semantic_gate_probe_20260728.py` -> matching `.out`
+  [THM-2701 EXACT CENTRAL-HALF ADDENDUM].  The half phase vanishes at all
+  prescribed clocks `2,4,6`; every six-state literal word under `B_1` is
+  empty, and the half/`C_221` cycle points fail the endpoint gate at the
+  unshifted source factor.  Hashes: `a34618cf` / `e6e5c6db`.
+- `lrc14_guard_source_debt_cone_target_span_probe_20260728.py` -> matching
+  `.out` [THM-2701 PROVED-ELEMENTARY OPERATOR-SPAN ADDENDUM].  The endpoint
+  covectors have rank two but annihilate the whole guard/source debt span;
+  the common-ancestry pullback also has rank zero.  A lawful escape needs a
+  paired blocker--graft dipole and the left residue.  Hashes: `172981c6` /
+  `bcecc1c1`.
+- `lrc14_mod17_transverse_phase_typed_cycle_probe_20260728.py` and
+  `lrc14_mod17_typed_handoff_semigroup_scout_20260728.py` -> matching `.out`
+  [FINITE-EXACT TRANSVERSE `C_221` DESIGN TARGET].  The unique quarter/slope-
+  seven reflection equations select `55<->166 mod221` and packet-typed lifts
+  over `4/17,13/17`; no semantic endpoint action is inferred.  Hashes begin
+  `33530aa5` / `3a507ef2` and `5b43e301` / `6e84dc49`.
+- `jc2_degree6_c2_primitive_order_raising_referee_20260728.py` and
+  `jc2_degree6_c2_keller_differential_rees_referee_20260728.py` -> matching
+  `.out` [THM-2206 EXACT NEGATIVE ADDENDUM].  The named primitive degree-six
+  test and its immediate `R_Q`/differential repair both have first-grade odd
+  rank one; the exact square kernel is `(128,32,1)` and delayed Rees depths
+  `(0,3,7)` are extra structure.  Hashes begin `37c3b489` / `e2c1c766` and
+  `8d864aef` / `f2b9f5bc`.
+- `jc2_degree22_full_support_terminal_toric_order12_thm2692.py` -> matching
+  `.out` [INDEPENDENT CHARACTERISTIC-ZERO REFEREE FOR THM-2692].  Six Cramer
+  charts, exact saturation, and the next-order projections give the unit
+  ideal over both factor fields, independently proving full-support terminal
+  emptiness in the inherited scope.  Hashes: `c97da93c` / `cc2f6fb2`.
+- `jacobian_s4_polynomial_graph_all_linear_planes_thm2709.py` -> matching
+  `.out` [THM-2709 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  Pluecker coordinates classify
   every linear target plane on every polynomial graph: planes containing `d`
   route to THM-2705; planes containing `A` have one shifted cubic triangular
   map; planes containing neither are empty.  Hashes: `d851c667` / `961fab46`.
+- `jacobian_s4_polynomial_graph_all_linear_target_planes_referee_20260728.py`
+  -> matching `.out` [INDEPENDENT EXACT REFEREE FOR THM-2709].  A projective
+  normal derivation independently recovers all three target-plane cells and
+  shows that the zero-Jacobian equality family makes one target coordinate
+  constant.  Hashes: `840fb2b3` / `76b06fb9`.
 - `jacobian_s4_polynomial_graph_mixed_d_planes_thm2705.py` -> matching `.out`
   [THM-2705 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Every
   linear target plane containing `d` is classified on

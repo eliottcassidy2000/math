@@ -11,7 +11,7 @@ status: >
   graph.  Hence every surviving map is a polynomial automorphism.  Nonlinear
   target projections, arbitrary polynomial source surfaces, JC(2), and DC(2)
   remain open.
-source: root/reflection-quotient-pluecker-graph-2026-07-28
+source: root/reflection-quotient-pluecker-graph-2026-07-28; root-long-frontiers independent referee 2026-07-28
 depends_on:
   - THM-2696-reflection-completed-s4-relative-different-and-coordinate-invariant-jacobian-gate
   - THM-2702-polynomial-graph-coordinate-projection-keller-classification
@@ -226,6 +226,14 @@ f=-(y-x^2/2)/a+v_0                                    (22)
 
 solves `(8)`.  Thus it is the nonzero Keller constant, not mere polynomial
 invariance of the graph, that empties this Pluecker cell.
+In the corresponding normalized row basis the first target coordinate is
+
+```text
+U=A-2a d=-2a v_0,
+```
+
+so the equality family has literal target-rank collapse; it is not a hidden
+zero-Jacobian analogue of the surviving automorphism family.
 
 ## 5. Complete classification
 
@@ -285,12 +293,35 @@ the Pluecker expansion and both intrinsic target flags.  It separately checked
 the signs and scalings in `(8)`, polynomial divisibility and the inverse in the
 shifted-cubic branch, the all-degree and Riccati gates, every coefficient in
 `(19)`, the terminal `-c` obstruction, the sharp `c=0` family, exhaustiveness,
-and scope.  Normal and optimized execution byte-matched the recorded output
+and scope.  Normal and optimized execution byte-matched the canonical recorded output
 SHA-256
 `961fab46f659be3db5467257a149b3bbdff8fc1c9d30c2d8d829a060ba65ad53`;
 the script SHA-256 is
 `d851c6671576baac86e44eeae57d61e1aaec28eb02a77409931bba50b6718cb0`.
 The stored transcript has ten lines; the script has zero Python `assert` nodes
 and twelve explicit `require` calls.
+
+A second independent referee used the projective normal `(a,b,1)` and row basis
+`(A-a d,B-b d)`, providing a separately normalized derivation of the same
+three Pluecker cells.  It checked the wedge signs and scalings, the `r>=3`
+top-degree gate, the quadratic Riccati boundary, all `r<=1` coefficients, the
+zero-Jacobian rank collapse, the Euler inverse, the shifted hostile
+specialization, and the theorem's scope.  Its exact companions are
+
+```text
+04-computation/jacobian_s4_polynomial_graph_all_linear_target_planes_referee_20260728.py
+05-knowledge/results/jacobian_s4_polynomial_graph_all_linear_target_planes_referee_20260728.out
+```
+
+with SHA-256 values
+
+```text
+840fb2b3ba5f48d897d0867db484cd565d04154edaf8507a03850e51923f692a
+76b06fb9357268255969794010da74785822a6182f6ac64661006ba60f224faf
+```
+
+Normal and optimized executions of both the canonical companion and the
+independent referee byte-match their frozen transcripts.  THM-2705 is now a
+proved dependency.
 
 QED.

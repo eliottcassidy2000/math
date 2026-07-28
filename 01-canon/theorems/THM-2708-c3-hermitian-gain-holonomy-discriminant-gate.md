@@ -117,7 +117,7 @@ W=the nontrivial irreducible two-dimensional F2[C3]-module. (8)
 Then
 
 ```text
-(A_M[2])_std = underlying_F2 ker(B:F4^s -> F4^s),           (9)
+(A_M[2])_std isomorphic_to underlying_F2 ker(B:F4^s -> F4^s), (9)
 
 multiplicity_W A_M[2]=nullity_F4(B).                       (10)
 ```
