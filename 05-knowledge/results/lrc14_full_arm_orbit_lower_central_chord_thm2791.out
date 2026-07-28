@@ -1,0 +1,95 @@
+THM-2791 FULL ARM ORBIT / LOWER-CENTRAL CHORD
+status=FINITE-EXACT proof-complete candidate; no LRC conclusion
+tau=0 weighted_pieces=0 candidates=0 nonzero=0
+support=()
+values=()
+tau=1 weighted_pieces=0 candidates=0 nonzero=0
+support=()
+values=()
+tau=2 weighted_pieces=0 candidates=0 nonzero=0
+support=()
+values=()
+tau=3 weighted_pieces=2 candidates=2 nonzero=2
+support=(0, 53028)
+values=(790161473087466480,)
+tau=4 weighted_pieces=2 candidates=2 nonzero=2
+support=(0, 53028)
+values=(790161473087466480,)
+tau=5 weighted_pieces=2 candidates=2 nonzero=2
+support=(0, 53028)
+values=(790161473087466480,)
+tau=6 weighted_pieces=2 candidates=2 nonzero=2
+support=(0, 53028)
+values=(790161473087466480,)
+tau=7 weighted_pieces=2 candidates=2 nonzero=2
+support=(0, 53028)
+values=(790161473087466480,)
+tau=8 weighted_pieces=2 candidates=2 nonzero=2
+support=(0, 53028)
+values=(790161473087466480,)
+tau=9 weighted_pieces=2 candidates=2 nonzero=2
+support=(0, 53028)
+values=(790161473087466480,)
+tau=10 weighted_pieces=2 candidates=2 nonzero=2
+support=(0, 53028)
+values=(790161473087466480,)
+tau=11 weighted_pieces=2 candidates=2 nonzero=2
+support=(0, 53028)
+values=(790161473087466480,)
+tau=12 weighted_pieces=241 candidates=121 nonzero=121
+support=(0, 1, 2, 3, 4, 5, 6, 53028, 53029, 53030, 53031, 53032, 53033, 53034, 53035, 53036, 53037, 53038, 53042, 53043, 53044, 53045, 53046, 53047, 53048, 106070, 106071, 106072, 106073, 106074, 106075, 106076, 106077, 106078, 106079, 106080, 106084, 106085, 106086, 106087, 106088, 106089, 106090, 159112, 159113, 159114, 159115, 159116, 159117, 159118, 159119, 159120, 159121, 159122, 159126, 159127, 159128, 159129, 159130, 159131, 159132, 212154, 212155, 212156, 212157, 212158, 212159, 212160, 212161, 212162, 212163, 212168, 212169, 212170, 212171, 212172, 212173, 212174, 265196, 265197, 265198, 265199, 265200, 265201, 265202, 265203, 265204, 265205, 265210, 265211, 265212, 265213, 265214, 265215, 265216, 318238, 318239, 318240, 318241, 318242, 318243, 318244, 318245, 318246, 318247, 318252, 318253, 318254, 318255, 318256, 318257, 371280, 371281, 371282, 371283, 371284, 371285, 371286, 371287, 371288, 371289)
+values=(790161473087466480,)
+tau=3 proper_support_periods=()
+tau=4 proper_support_periods=()
+tau=5 proper_support_periods=()
+tau=6 proper_support_periods=()
+tau=7 proper_support_periods=()
+tau=8 proper_support_periods=()
+tau=9 proper_support_periods=()
+tau=10 proper_support_periods=()
+tau=11 proper_support_periods=()
+tau=12 proper_support_periods=()
+N=371293 union_support_size=121
+union_support=(0, 1, 2, 3, 4, 5, 6, 53028, 53029, 53030, 53031, 53032, 53033, 53034, 53035, 53036, 53037, 53038, 53042, 53043, 53044, 53045, 53046, 53047, 53048, 106070, 106071, 106072, 106073, 106074, 106075, 106076, 106077, 106078, 106079, 106080, 106084, 106085, 106086, 106087, 106088, 106089, 106090, 159112, 159113, 159114, 159115, 159116, 159117, 159118, 159119, 159120, 159121, 159122, 159126, 159127, 159128, 159129, 159130, 159131, 159132, 212154, 212155, 212156, 212157, 212158, 212159, 212160, 212161, 212162, 212163, 212168, 212169, 212170, 212171, 212172, 212173, 212174, 265196, 265197, 265198, 265199, 265200, 265201, 265202, 265203, 265204, 265205, 265210, 265211, 265212, 265213, 265214, 265215, 265216, 318238, 318239, 318240, 318241, 318242, 318243, 318244, 318245, 318246, 318247, 318252, 318253, 318254, 318255, 318256, 318257, 371280, 371281, 371282, 371283, 371284, 371285, 371286, 371287, 371288, 371289)
+quotient_pushforward_by_(tau,w)=((0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (10, 10, 10, 10, 9, 9, 9, 9, 9, 9, 9, 9, 9))
+decoded_quotient_by_(target,w)=((108, 108, 50, 50, 45, 45, 45, 45, 45, 45, 45, 45, 45), (114, 114, 50, 50, 45, 45, 45, 45, 45, 45, 45, 45, 45), (109, 109, 50, 50, 45, 45, 45, 45, 45, 45, 45, 45, 45), (125, 125, 70, 70, 63, 63, 63, 63, 63, 63, 63, 63, 63), (168, 168, 120, 120, 108, 108, 108, 108, 108, 108, 108, 108, 108), (71, 71, 20, 20, 18, 18, 18, 18, 18, 18, 18, 18, 18), (128, 128, 80, 80, 72, 72, 72, 72, 72, 72, 72, 72, 72), (73, 73, 20, 20, 18, 18, 18, 18, 18, 18, 18, 18, 18), (146, 146, 90, 90, 81, 81, 81, 81, 81, 81, 81, 81, 81), (130, 130, 80, 80, 72, 72, 72, 72, 72, 72, 72, 72, 72), (157, 157, 110, 110, 99, 99, 99, 99, 99, 99, 99, 99, 99), (49, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (85, 85, 30, 30, 27, 27, 27, 27, 27, 27, 27, 27, 27))
+decoded_quotient_nonconstant=(True, True, True, True, True, True, True, True, True, True, True, True, True)
+decoded_target=0 support=121 value_set=(5, 63) primitive_conductors=(True, True, True, True, True)
+decoded_target=1 support=121 value_set=(5, 69) primitive_conductors=(True, True, True, True, True)
+decoded_target=2 support=121 value_set=(5, 64) primitive_conductors=(True, True, True, True, True)
+decoded_target=3 support=121 value_set=(7, 62) primitive_conductors=(True, True, True, True, True)
+decoded_target=4 support=121 value_set=(12, 60) primitive_conductors=(True, True, True, True, True)
+decoded_target=5 support=121 value_set=(2, 53) primitive_conductors=(True, True, True, True, True)
+decoded_target=6 support=121 value_set=(8, 56) primitive_conductors=(True, True, True, True, True)
+decoded_target=7 support=121 value_set=(2, 55) primitive_conductors=(True, True, True, True, True)
+decoded_target=8 support=121 value_set=(9, 65) primitive_conductors=(True, True, True, True, True)
+decoded_target=9 support=121 value_set=(8, 58) primitive_conductors=(True, True, True, True, True)
+decoded_target=10 support=121 value_set=(11, 58) primitive_conductors=(True, True, True, True, True)
+decoded_target=11 support=2 value_set=(49,) primitive_conductors=(True, True, True, True, True)
+decoded_target=12 support=121 value_set=(3, 58) primitive_conductors=(True, True, True, True, True)
+tau=3 primitive_conductors_13_to_13^5=(True, True, True, True, True)
+tau=4 primitive_conductors_13_to_13^5=(True, True, True, True, True)
+tau=5 primitive_conductors_13_to_13^5=(True, True, True, True, True)
+tau=6 primitive_conductors_13_to_13^5=(True, True, True, True, True)
+tau=7 primitive_conductors_13_to_13^5=(True, True, True, True, True)
+tau=8 primitive_conductors_13_to_13^5=(True, True, True, True, True)
+tau=9 primitive_conductors_13_to_13^5=(True, True, True, True, True)
+tau=10 primitive_conductors_13_to_13^5=(True, True, True, True, True)
+tau=11 primitive_conductors_13_to_13^5=(True, True, True, True, True)
+tau=12 primitive_conductors_13_to_13^5=(True, True, True, True, True)
+full_address_tau3_candidates=(0, 689364)
+full_address_tau3_exact=((0, Fraction(60781651775958960, 371293), 790161473087466480), (689364, Fraction(60781651775958960, 371293), 790161473087466480))
+full_address_tau3_metadata=((3454614, (7, 6), (3, (1, 2)), 6), (4143978, (7, 7), (3, (1, 2)), 6))
+graded_chord=address_gap=689364=13*53028; central_exponent_digits=(1, 10, 1, 11, 1); Z1^53028=Z1*Z2^10*Z3*Z4^11*Z5; first_transgression=(central_gap-1)/13 mod13=10
+group_ring_kernel_factor=u^53028-u=u*(u^13-1)*(1+u^13+...+u^(13*4078)); divisible_by_u^13-1=yes; divisible_by_u^169-1=no
+partial_physical_germ=shift=371196/371293; R*shift=4825548; 13^5*shift=371196; whole cylinders translate exactly with common weight=27581135604 and carry-six pair=(0, 790161473087466480); gain is graded Z1^53028, not pure Z1
+Omega_transfer_tau3=raw support residues=(85,98)=((v,w)=(7,6),(7,7)); normalized central chain=1+z
+Omega_transfer_unit=(1+z)*(1-z+z^2-...+z^12)=2; inverse=(1/2)*(1-z+...+z^12) in every field of char!=2
+K_beta_full_orbit_pairs_(A_for_chord,B_for_tau12)=((58, 5), (64, 5), (59, 5), (55, 7), (48, 12), (51, 2), (48, 8), (53, 2), (56, 9), (50, 8), (47, 11), (49, 0), (55, 3)); every decoded target retains primitive conductors 13,13^2,...,13^5
+lower_central_difference_Z1: support_terms=4 l1=4 l2sq=4
+lower_central_difference_Z2: support_terms=4 l1=4 l2sq=4
+lower_central_difference_Z3: support_terms=4 l1=4 l2sq=4
+lower_central_difference_Z4: support_terms=4 l1=4 l2sq=4
+lower_central_difference_Z5: support_terms=4 l1=4 l2sq=4
+lower_central_difference_Z6: support_terms=0 l1=0 l2sq=0
+ALL CHECKS PASSED
