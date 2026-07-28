@@ -1,5 +1,5 @@
 ---
-id: THM-2693
+id: THM-2694
 title: "Mixed dilation/slope-seven present-unit long word and first gap"
 status: >
   RESERVED / UNPROVED EMPTY STUB.  Namespace reservation only for an exact
@@ -10,7 +10,7 @@ source: root/mixed-grammar-long-word-scout-2026-07-28
 depends_on: []
 ---
 
-# THM-2693 -- reserved mixed dilation/slope-seven long word
+# THM-2694 -- reserved mixed dilation/slope-seven long word
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
