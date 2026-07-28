@@ -2,16 +2,15 @@
 id: THM-2828
 title: "Lower-prefix cone factorial moment-three detection"
 status: >
-  RESERVED / PROOF-COMPLETE THEOREM CANDIDATE + VERIFIED-EXACT /
-  AWAITING INDEPENDENT HOSTILE AUDIT.  THM-2824 extends from a single lower
-  interval to every nonzero nonnegative combination of lower adjacent
-  factorial differences.  Equivalently, the lower coefficient vector may
-  have arbitrarily many occupied slots provided all proper prefix sums are
-  nonpositive.  An exact strictly positive cubic tensor formula supplies
-  the missing orientation.  Every resulting binary plane is detected by
-  factorial moments one through three.  When the constant slot is absent,
-  the associated many-slot two-charge Gaussian envelope is detected by
-  moment at most six.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  THM-2824
+  extends from a single lower interval to every nonzero nonnegative
+  combination of lower adjacent factorial differences.  Equivalently, the
+  lower coefficient vector may have arbitrarily many occupied slots
+  provided all proper prefix sums are nonpositive.  An exact strictly
+  positive cubic tensor formula supplies the missing orientation.  Every
+  resulting binary plane is detected by factorial moments one through
+  three.  When the constant slot is absent, the associated many-slot
+  two-charge Gaussian envelope is detected by moment at most six.
 source: root/audit-2809-2026-07-28
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
@@ -28,8 +27,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2828 -- lower-prefix cone factorial moment-three detection
 
-**RESERVED / PROOF-COMPLETE THEOREM CANDIDATE + VERIFIED-EXACT /
-AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2824 proves an atomic mixed orientation for one lower interval and one
 upper interval.  Its lower occurrence is linear.  The only apparent
@@ -257,4 +255,13 @@ answer to the arbitrary-radial-coefficient problem.  It does not prove
 entrywise positivity of the quartic polarization when both directions
 vary, general Strong Factorial, general HYP-8765, or GMC2.
 
-**Proof complete; awaiting independent hostile audit before promotion.**
+## 7. Independent hostile audit
+
+The independent audit rederived the eight-term cubic tensor cancellation,
+including zero indices and strict positivity; proved both directions of
+the prefix-sum parametrization; checked linearity of `D` in `U`; and
+replayed the binary quadratic-divisibility and `lambda_0=0` Gaussian
+typing.  Normal, optimized, and stored transcripts agree, and both
+LF-normalized hashes match.
+
+**QED.**
