@@ -1,0 +1,14 @@
+THM2809 UNIVERSAL SOURCE-LABEL PRIVATE-HALF CLOSURE EXACT REFEREE
+first14_rail_metadata=((1, 0, 12), (1, 0, 0), (1, 1, 12), (1, 1, 0), (1, 2, 12), (1, 2, 0), (1, 3, 12), (1, 3, 0), (1, 4, 12), (1, 4, 0), (1, 5, 12), (1, 5, 0), (1, 6, 12), (1, 6, 0))
+configuration_universe_per_rail=2*2*2*13=104
+source_unit_config_counts=(28, 22, 28, 28, 28, 28, 28, 28, 28, 26, 28, 24, 28, 28)
+marked_deep_band=(169, 181)/182
+geometric_half_types=((0, 0, (169, 182)), (1, 12, (168, 181)))
+unique_source_label0_row=(0, 1, 1, 6, 12, 12, 12, (168, 181))
+unique_wrapped_label1_row=(1, 0, 1, 12, 6, 1, 0, (169, 182))
+source_label0_anchor=F_(ell,7)
+marked_source_anchor=F_(ell,7)^c
+consequence=every labelwise configuration mixture containing source label0 has empty marked-source intersection
+boundary=faces omitting label0 are not source attachments; label1 wrapped row is not asserted positive after all factors
+scope=first14 THM2749 source rails/carry12; no target endpoint, outside-rail, row, or LRC14 exclusion
+ALL EXACT CHECKS PASSED
