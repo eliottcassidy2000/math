@@ -2,7 +2,7 @@
 id: THM-2785
 title: "A12 minuscule carry Fourier character and common-atom boundary"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; UNDER INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The thirteen THM-2672 missing-facet incidence vectors project to the
   regular minuscule omega_12 orbit in the A12 standard plane, but every one
   has the same class -gamma in P(A12)/Q(A12).  Thus the physical carry is
@@ -42,8 +42,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2785 -- the carry orbit is minuscule, while its physical character is dual
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; UNDER INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2774 makes `P(A12)/Q(A12)=Z/13` available as an exact lattice
 coordinate.  THM-2672 independently has thirteen predecessor-carry strata.
@@ -513,14 +512,13 @@ assertions.  It:
    weight, source/target interval transport, and all five zero intersections
    in `(40)--(41)`.
 
-The status remains candidate until the new exact companion and the final
-scope wording receive an immutable independent hostile audit.  The
-underlying lattice signs, Fourier phases, component translation law, rail
-typing, and selected common-atom failure were independently rederived before
-this packaging.
+An immutable independent hostile audit rederived the lattice signs, Fourier
+phases, component translation law, rail typing, and selected common-atom
+failure.  It also replayed normal and optimized modes against the stored
+transcript and reproduced both LF-normalized hashes.
 
 ```text
-PROVED IN THE CANDIDATE:
+PROVED HERE:
   minuscule A12 orbit and regular-simplex DFT;
   constant direct P/Q class;
   all twelve physical component-indicator carry characters;
@@ -540,4 +538,4 @@ NOT PROVED:
   row exclusion or LRC(14).                                           (43)
 ```
 
-QED, conditional only on candidate status promotion after independent audit.
+QED.
