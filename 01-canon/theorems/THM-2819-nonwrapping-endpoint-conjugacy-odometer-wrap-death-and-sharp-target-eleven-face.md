@@ -3,7 +3,7 @@ id: THM-2819
 title: "Nonwrapping endpoint conjugacy, odometer wrap death, and sharp target eleven-face"
 status: >
   PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT AND THM-2809 PROMOTION.  Translation by tau=7/13^6
+  HOSTILE AUDIT.  Translation by tau=7/13^6
   conjugates source labels 1,...,12 at carry 12 to target labels
   0,...,11 at carry 6, including the rail, present, private-root,
   delayed-prefix, marked carrier, and carry-cell data.  It transfers the
@@ -35,7 +35,7 @@ hash_basis: LF-normalized bytes
 # THM-2819 -- endpoint translation is exact until the odometer wraps
 
 **PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT AND THM-2809 PROMOTION.**
+HOSTILE AUDIT.**
 
 THM-2809 proves that the full marked **source** endpoint on each of the first
 fourteen THM-2749 rails has sharp label maximum eleven.  It deliberately
@@ -351,10 +351,10 @@ both the positive target eleven-face and the empty target twelve-face
 omitting zero.  It uses exact integer arithmetic, explicit exception gates,
 and no truth-bearing Python assertions or floating point.
 
-Promotion requires THM-2809's promotion and an immutable independent hostile
-audit of the source/target coordinate convention, shift signs, canonical
+Promotion requires an immutable independent hostile audit of the
+source/target coordinate convention, shift signs, canonical
 integer lifts, carry relabelling, target-zero prefix gate, `C3` factor order,
 strict endpoints, all fourteen direct target rows, all `2^11` edge choices,
 normal/optimized replay, hashes, and documentation gates.
 
-QED, pending THM-2809 promotion and independent hostile audit.
+QED, pending independent hostile audit.
