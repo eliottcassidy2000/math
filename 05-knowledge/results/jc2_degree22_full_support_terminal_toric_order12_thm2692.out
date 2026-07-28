@@ -1,0 +1,71 @@
+CHART BCDEW: terms=60 D=10 N=11 params=(c, d, e, w)
+ root order=11 support_count=9 rank=4 pivots=[0, 1, 2, 3] support=[(0, 0, 1, 0), (0, 0, 1, 1), (0, 1, 1, 0), (1, 0, 0, 0), (1, 0, 0, 1), (1, 1, 0, 0), (1, 2, 0, 0), (2, 0, 1, 0), (3, 0, 0, 0)]
+ root order=12 support_count=14 rank=4 pivots=[0, 1, 2, 3] support=[(0, 0, 0, 0), (0, 0, 0, 1), (0, 0, 0, 2), (0, 0, 2, 0), (0, 1, 0, 0), (0, 1, 0, 1), (0, 2, 0, 0), (0, 3, 0, 0), (1, 0, 1, 0), (1, 1, 1, 0), (2, 0, 0, 0), (2, 0, 0, 1), (2, 1, 0, 0), (4, 0, 0, 0)]
+  terminal_selected_rows=(0, 1, 2, 3) delta_support=[(0, 0), (1, 0), (2, 0)] compat_supports=[[(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2), (3, 0), (3, 1)], [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2), (3, 0), (3, 1)]]
+  terminal_resultant_A_degree=11 terminal_resultant_terms=12 terminal_resultant_support=[(0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0), (8, 0), (9, 0), (10, 0), (11, 0)]
+  bad_gcd_degrees=infinity:0,D0:0,delta:2,repeated:2 H_constant_nonzero=True
+  W0_resultant_gcd_degree=4 left_degree=9 right_degree=9
+  S0_resultant_gcd_degree=4 left_degree=9 right_degree=9
+  EXACT pivot_pair=(0, 1) H_degree=11 saturated_H_degree=7 N12_projection_degree_pairs=[(21, 21), (21, 21), (21, 21), (21, 21), (21, 21)] all_projection_gcd_degree=0
+  EXACT pivot_pair=(0, 2) H_degree=11 saturated_H_degree=7 N12_projection_degree_pairs=[(21, 21), (21, 21), (21, 21), (21, 21), (21, 21)] all_projection_gcd_degree=0
+  EXACT pivot_pair=(0, 3) H_degree=11 saturated_H_degree=7 N12_projection_degree_pairs=[(21, 21), (21, 21), (21, 21), (21, 21), (21, 21)] all_projection_gcd_degree=0
+  EXACT pivot_pair=(1, 2) H_degree=11 saturated_H_degree=7 N12_projection_degree_pairs=[(21, 21), (21, 21), (21, 21), (21, 21), (21, 21)] all_projection_gcd_degree=0
+  EXACT pivot_pair=(1, 3) H_degree=11 saturated_H_degree=7 N12_projection_degree_pairs=[(21, 21), (21, 21), (21, 21), (21, 21), (21, 21)] all_projection_gcd_degree=0
+  EXACT pivot_pair=(2, 3) H_degree=11 saturated_H_degree=7 N12_projection_degree_pairs=[(21, 21), (21, 21), (21, 21), (21, 21), (21, 21)] all_projection_gcd_degree=0
+  EXACT all_pivot_deltas_gcd_degree=0 exact_resultants_constructed=True
+  residue_certificate=F_113:generator=24:simple=True
+  mod_terminal_degree=11 mod_delta_saturated_degree=7 mod_W_or_S_bad_cover_degree=0
+  N12_row=0 numerator_support=28 D_degree=4 mod_common_gcd_degree=8 mod_left_A_degree=21 mod_right_A_degree=21
+  N12_row=1 numerator_support=28 D_degree=4 mod_common_gcd_degree=8 mod_left_A_degree=21 mod_right_A_degree=21
+  N12_row=2 numerator_support=28 D_degree=4 mod_common_gcd_degree=8 mod_left_A_degree=21 mod_right_A_degree=21
+  N12_row=3 numerator_support=28 D_degree=4 mod_common_gcd_degree=8 mod_left_A_degree=21 mod_right_A_degree=21
+  N12_row=4 numerator_support=28 D_degree=4 mod_common_gcd_degree=8 mod_left_A_degree=21 mod_right_A_degree=21
+  all_N12_rows_terminal_projection_gcd_degree=0
+  pivot_pair=(0, 1) delta_degree=2 H_degree=11 saturated_H_degree=7 N12_row_gcd_degrees=[8, 8, 8, 8, 8] full_aggregate_degree=4 saturated_aggregate_degree=0
+  EXACT_BEZOUT pivot_pair=(0, 1) bound=21 selected_rows=[('Hsat', 0), ('Hsat', 1), ('Hsat', 2), ('Hsat', 3), ('Hsat', 4), ('Hsat', 5), ('Hsat', 6), ('Hsat', 7), ('Hsat', 8), ('Hsat', 9), ('Hsat', 10), ('Hsat', 11), ('Hsat', 12), ('Hsat', 13), ('Hsat', 14), ('N12_0_L', 0), ('N12_0_R', 0), ('N12_1_L', 0), ('N12_1_R', 0), ('N12_2_L', 0), ('N12_2_R', 0), ('N12_3_L', 0)] det_mod_113=77
+  pivot_pair=(0, 2) delta_degree=2 H_degree=11 saturated_H_degree=7 N12_row_gcd_degrees=[8, 8, 8, 8, 8] full_aggregate_degree=4 saturated_aggregate_degree=0
+  EXACT_BEZOUT pivot_pair=(0, 2) bound=21 selected_rows=[('Hsat', 0), ('Hsat', 1), ('Hsat', 2), ('Hsat', 3), ('Hsat', 4), ('Hsat', 5), ('Hsat', 6), ('Hsat', 7), ('Hsat', 8), ('Hsat', 9), ('Hsat', 10), ('Hsat', 11), ('Hsat', 12), ('Hsat', 13), ('Hsat', 14), ('N12_0_L', 0), ('N12_0_R', 0), ('N12_1_L', 0), ('N12_1_R', 0), ('N12_2_L', 0), ('N12_2_R', 0), ('N12_3_L', 0)] det_mod_113=92
+  pivot_pair=(0, 3) delta_degree=2 H_degree=11 saturated_H_degree=7 N12_row_gcd_degrees=[8, 8, 8, 8, 8] full_aggregate_degree=4 saturated_aggregate_degree=0
+  EXACT_BEZOUT pivot_pair=(0, 3) bound=21 selected_rows=[('Hsat', 0), ('Hsat', 1), ('Hsat', 2), ('Hsat', 3), ('Hsat', 4), ('Hsat', 5), ('Hsat', 6), ('Hsat', 7), ('Hsat', 8), ('Hsat', 9), ('Hsat', 10), ('Hsat', 11), ('Hsat', 12), ('Hsat', 13), ('Hsat', 14), ('N12_0_L', 0), ('N12_0_R', 0), ('N12_1_L', 0), ('N12_1_R', 0), ('N12_2_L', 0), ('N12_2_R', 0), ('N12_3_L', 0)] det_mod_113=112
+  pivot_pair=(1, 2) delta_degree=2 H_degree=11 saturated_H_degree=7 N12_row_gcd_degrees=[8, 8, 8, 8, 8] full_aggregate_degree=4 saturated_aggregate_degree=0
+  EXACT_BEZOUT pivot_pair=(1, 2) bound=21 selected_rows=[('Hsat', 0), ('Hsat', 1), ('Hsat', 2), ('Hsat', 3), ('Hsat', 4), ('Hsat', 5), ('Hsat', 6), ('Hsat', 7), ('Hsat', 8), ('Hsat', 9), ('Hsat', 10), ('Hsat', 11), ('Hsat', 12), ('Hsat', 13), ('Hsat', 14), ('N12_0_L', 0), ('N12_0_R', 0), ('N12_1_L', 0), ('N12_1_R', 0), ('N12_2_L', 0), ('N12_2_R', 0), ('N12_3_L', 0)] det_mod_113=101
+  pivot_pair=(1, 3) delta_degree=2 H_degree=11 saturated_H_degree=7 N12_row_gcd_degrees=[8, 8, 8, 8, 8] full_aggregate_degree=4 saturated_aggregate_degree=0
+  EXACT_BEZOUT pivot_pair=(1, 3) bound=21 selected_rows=[('Hsat', 0), ('Hsat', 1), ('Hsat', 2), ('Hsat', 3), ('Hsat', 4), ('Hsat', 5), ('Hsat', 6), ('Hsat', 7), ('Hsat', 8), ('Hsat', 9), ('Hsat', 10), ('Hsat', 11), ('Hsat', 12), ('Hsat', 13), ('Hsat', 14), ('N12_0_L', 0), ('N12_0_R', 0), ('N12_1_L', 0), ('N12_1_R', 0), ('N12_2_L', 0), ('N12_2_R', 0), ('N12_3_L', 0)] det_mod_113=28
+  pivot_pair=(2, 3) delta_degree=2 H_degree=11 saturated_H_degree=7 N12_row_gcd_degrees=[8, 8, 8, 8, 8] full_aggregate_degree=4 saturated_aggregate_degree=0
+  EXACT_BEZOUT pivot_pair=(2, 3) bound=21 selected_rows=[('Hsat', 0), ('Hsat', 1), ('Hsat', 2), ('Hsat', 3), ('Hsat', 4), ('Hsat', 5), ('Hsat', 6), ('Hsat', 7), ('Hsat', 8), ('Hsat', 9), ('Hsat', 10), ('Hsat', 11), ('Hsat', 12), ('Hsat', 13), ('Hsat', 14), ('N12_0_L', 0), ('N12_0_R', 0), ('N12_1_L', 0), ('N12_1_R', 0), ('N12_2_L', 0), ('N12_2_R', 0), ('N12_3_L', 0)] det_mod_113=97
+  all_pivot_deltas_gcd_degree=0
+  EXACT_BEZOUT all_pivot_deltas bound=2 selected_rows=[('Delta_(0, 1)', 0), ('Delta_(0, 2)', 0), ('Delta_(0, 3)', 0)] det_mod_113=23
+ pair order=11 support_count=9 rank=4 pivots=[0, 1, 2, 3] support=[(0, 0, 1, 0), (0, 0, 1, 1), (0, 1, 1, 0), (1, 0, 0, 0), (1, 0, 0, 1), (1, 1, 0, 0), (1, 2, 0, 0), (2, 0, 1, 0), (3, 0, 0, 0)]
+ pair order=12 support_count=14 rank=4 pivots=[0, 1, 2, 3] support=[(0, 0, 0, 0), (0, 0, 0, 1), (0, 0, 0, 2), (0, 0, 2, 0), (0, 1, 0, 0), (0, 1, 0, 1), (0, 2, 0, 0), (0, 3, 0, 0), (1, 0, 1, 0), (1, 1, 1, 0), (2, 0, 0, 0), (2, 0, 0, 1), (2, 1, 0, 0), (4, 0, 0, 0)]
+  terminal_selected_rows=(0, 1, 2, 3) delta_support=[(0, 0), (1, 0), (2, 0)] compat_supports=[[(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2), (3, 0), (3, 1)], [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2), (3, 0), (3, 1)]]
+  terminal_resultant_A_degree=11 terminal_resultant_terms=12 terminal_resultant_support=[(0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0), (8, 0), (9, 0), (10, 0), (11, 0)]
+  EXACT pivot_pair=(0, 1) H_degree=11 saturated_H_degree=7 N12_projection_degree_pairs=[(21, 21), (21, 21), (21, 21), (21, 21), (21, 21)] all_projection_gcd_degree=0
+  EXACT pivot_pair=(0, 2) H_degree=11 saturated_H_degree=7 N12_projection_degree_pairs=[(21, 21), (21, 21), (21, 21), (21, 21), (21, 21)] all_projection_gcd_degree=0
+  EXACT pivot_pair=(0, 3) H_degree=11 saturated_H_degree=7 N12_projection_degree_pairs=[(21, 21), (21, 21), (21, 21), (21, 21), (21, 21)] all_projection_gcd_degree=0
+  EXACT pivot_pair=(1, 2) H_degree=11 saturated_H_degree=7 N12_projection_degree_pairs=[(21, 21), (21, 21), (21, 21), (21, 21), (21, 21)] all_projection_gcd_degree=0
+  EXACT pivot_pair=(1, 3) H_degree=11 saturated_H_degree=7 N12_projection_degree_pairs=[(21, 21), (21, 21), (21, 21), (21, 21), (21, 21)] all_projection_gcd_degree=0
+  EXACT pivot_pair=(2, 3) H_degree=11 saturated_H_degree=7 N12_projection_degree_pairs=[(21, 21), (21, 21), (21, 21), (21, 21), (21, 21)] all_projection_gcd_degree=0
+  EXACT all_pivot_deltas_gcd_degree=0 exact_resultants_constructed=True
+  residue_certificate=F_103:generator=61:simple=True
+  mod_terminal_degree=11 mod_delta_saturated_degree=7 mod_W_or_S_bad_cover_degree=not_computed
+  N12_row=0 numerator_support=28 D_degree=4 mod_common_gcd_degree=8 mod_left_A_degree=20 mod_right_A_degree=20
+  N12_row=1 numerator_support=28 D_degree=4 mod_common_gcd_degree=8 mod_left_A_degree=21 mod_right_A_degree=21
+  N12_row=2 numerator_support=28 D_degree=4 mod_common_gcd_degree=8 mod_left_A_degree=21 mod_right_A_degree=20
+  N12_row=3 numerator_support=28 D_degree=4 mod_common_gcd_degree=8 mod_left_A_degree=21 mod_right_A_degree=21
+  N12_row=4 numerator_support=28 D_degree=4 mod_common_gcd_degree=8 mod_left_A_degree=21 mod_right_A_degree=21
+  all_N12_rows_terminal_projection_gcd_degree=0
+  pivot_pair=(0, 1) delta_degree=2 H_degree=11 saturated_H_degree=7 N12_row_gcd_degrees=[8, 8, 8, 8, 8] full_aggregate_degree=4 saturated_aggregate_degree=0
+  EXACT_BEZOUT pivot_pair=(0, 1) bound=21 selected_rows=[('Hsat', 0), ('Hsat', 1), ('Hsat', 2), ('Hsat', 3), ('Hsat', 4), ('Hsat', 5), ('Hsat', 6), ('Hsat', 7), ('Hsat', 8), ('Hsat', 9), ('Hsat', 10), ('Hsat', 11), ('Hsat', 12), ('Hsat', 13), ('Hsat', 14), ('N12_0_L', 0), ('N12_0_L', 1), ('N12_0_R', 0), ('N12_0_R', 1), ('N12_1_L', 0), ('N12_1_R', 0), ('N12_2_L', 0)] det_mod_103=65
+  pivot_pair=(0, 2) delta_degree=2 H_degree=11 saturated_H_degree=7 N12_row_gcd_degrees=[8, 8, 8, 8, 8] full_aggregate_degree=4 saturated_aggregate_degree=0
+  EXACT_BEZOUT pivot_pair=(0, 2) bound=21 selected_rows=[('Hsat', 0), ('Hsat', 1), ('Hsat', 2), ('Hsat', 3), ('Hsat', 4), ('Hsat', 5), ('Hsat', 6), ('Hsat', 7), ('Hsat', 8), ('Hsat', 9), ('Hsat', 10), ('Hsat', 11), ('Hsat', 12), ('Hsat', 13), ('Hsat', 14), ('N12_0_L', 0), ('N12_0_L', 1), ('N12_0_R', 0), ('N12_0_R', 1), ('N12_1_L', 0), ('N12_1_R', 0), ('N12_2_L', 0)] det_mod_103=55
+  pivot_pair=(0, 3) delta_degree=2 H_degree=11 saturated_H_degree=7 N12_row_gcd_degrees=[8, 8, 8, 8, 8] full_aggregate_degree=4 saturated_aggregate_degree=0
+  EXACT_BEZOUT pivot_pair=(0, 3) bound=21 selected_rows=[('Hsat', 0), ('Hsat', 1), ('Hsat', 2), ('Hsat', 3), ('Hsat', 4), ('Hsat', 5), ('Hsat', 6), ('Hsat', 7), ('Hsat', 8), ('Hsat', 9), ('Hsat', 10), ('Hsat', 11), ('Hsat', 12), ('Hsat', 13), ('Hsat', 14), ('N12_0_L', 0), ('N12_0_L', 1), ('N12_0_R', 0), ('N12_0_R', 1), ('N12_1_L', 0), ('N12_1_R', 0), ('N12_2_L', 0)] det_mod_103=84
+  pivot_pair=(1, 2) delta_degree=2 H_degree=11 saturated_H_degree=7 N12_row_gcd_degrees=[8, 8, 8, 8, 8] full_aggregate_degree=4 saturated_aggregate_degree=0
+  EXACT_BEZOUT pivot_pair=(1, 2) bound=21 selected_rows=[('Hsat', 0), ('Hsat', 1), ('Hsat', 2), ('Hsat', 3), ('Hsat', 4), ('Hsat', 5), ('Hsat', 6), ('Hsat', 7), ('Hsat', 8), ('Hsat', 9), ('Hsat', 10), ('Hsat', 11), ('Hsat', 12), ('Hsat', 13), ('Hsat', 14), ('N12_0_L', 0), ('N12_0_L', 1), ('N12_0_R', 0), ('N12_0_R', 1), ('N12_1_L', 0), ('N12_1_R', 0), ('N12_2_L', 0)] det_mod_103=3
+  pivot_pair=(1, 3) delta_degree=2 H_degree=11 saturated_H_degree=7 N12_row_gcd_degrees=[8, 8, 8, 8, 8] full_aggregate_degree=4 saturated_aggregate_degree=0
+  EXACT_BEZOUT pivot_pair=(1, 3) bound=21 selected_rows=[('Hsat', 0), ('Hsat', 1), ('Hsat', 2), ('Hsat', 3), ('Hsat', 4), ('Hsat', 5), ('Hsat', 6), ('Hsat', 7), ('Hsat', 8), ('Hsat', 9), ('Hsat', 10), ('Hsat', 11), ('Hsat', 12), ('Hsat', 13), ('Hsat', 14), ('N12_0_L', 0), ('N12_0_L', 1), ('N12_0_R', 0), ('N12_0_R', 1), ('N12_1_L', 0), ('N12_1_R', 0), ('N12_2_L', 0)] det_mod_103=38
+  pivot_pair=(2, 3) delta_degree=2 H_degree=11 saturated_H_degree=7 N12_row_gcd_degrees=[8, 8, 8, 8, 8] full_aggregate_degree=4 saturated_aggregate_degree=0
+  EXACT_BEZOUT pivot_pair=(2, 3) bound=21 selected_rows=[('Hsat', 0), ('Hsat', 1), ('Hsat', 2), ('Hsat', 3), ('Hsat', 4), ('Hsat', 5), ('Hsat', 6), ('Hsat', 7), ('Hsat', 8), ('Hsat', 9), ('Hsat', 10), ('Hsat', 11), ('Hsat', 12), ('Hsat', 13), ('Hsat', 14), ('N12_0_L', 0), ('N12_0_L', 1), ('N12_0_R', 0), ('N12_0_R', 1), ('N12_1_L', 0), ('N12_1_R', 0), ('N12_2_L', 0)] det_mod_103=85
+  all_pivot_deltas_gcd_degree=0
+  EXACT_BEZOUT all_pivot_deltas bound=2 selected_rows=[('Delta_(0, 1)', 0), ('Delta_(0, 2)', 0), ('Delta_(0, 3)', 0)] det_mod_103=51
+DONE
