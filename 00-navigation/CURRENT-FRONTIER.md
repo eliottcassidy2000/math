@@ -209,7 +209,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   moment-one/ two/three line, producing a degree-seven two-charge Gaussian
   polynomial with moments one through six zero.  The fourth factorial and
   eighth Gaussian moments are nonzero, while one external radial-variance
-  jet detects every binary positive-cone plane.
+  jet detects every binary positive-cone plane. THM-2848 whitens the
+  remaining four-slot moving-plane problem: its exact bad locus is a
+  vanishing quartic harmonic or a shared cubic--quartic real multipole line.
+  Pearson/Hankel positivity cannot exclude either branch; the missing
+  factorial input is multiplier/lowering access, not another Gram bound.
   THM-2849 closes SFC(4)'s first window for all 1,820 four-slot supports with
   top exponent at most 15 by exact degree-seven Macaulay rank; arbitrary
   supports, shifted windows, general four-slot norm nonvanishing,

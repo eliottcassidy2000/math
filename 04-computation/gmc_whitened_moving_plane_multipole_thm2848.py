@@ -456,7 +456,7 @@ def main() -> None:
             require(sp.expand(left - right) == 0, "factorial lowering identity failed")
 
     print("THM-2848 WHITENED MOVING-PLANE BOUNDARY -- exact companion")
-    print("status=PROOF-COMPLETE-CANDIDATE+VERIFIED-EXACT;AUDIT-PENDING")
+    print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
     print("whitening=q-divides-p_m iff pure complex moment m vanishes")
     print("quotients=cubic+quartic+Pearson-conic exact")
     print("subsidiary_Bessel_inequalities=2")

@@ -2,7 +2,7 @@
 id: THM-2848
 title: "Whitened moving-plane multipoles and the strict Pearson boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Whitening turns binary quadratic divisibility into vanishing of one
   pure complex moment.  When the cubic and quartic pure moments vanish,
   the Pearson residual is an explicit nonnegative real conic, strictly
@@ -25,15 +25,14 @@ related:
   - THM-2655-quartic-keller-resolvent-v4-quasietale-torsor-and-kummer-class-group-gate
 script: 04-computation/gmc_whitened_moving_plane_multipole_thm2848.py
 output: 05-knowledge/results/gmc_whitened_moving_plane_multipole_thm2848.out
-script_sha256: 64e53eaa8117c5d25437d7e0b51579a5c6f2884a5909bb0a36fdc24289d1b00e
-output_sha256: c1847955224aafd5867730a6321c011f562447c7f738df1450f89ba92e4032fe
+script_sha256: 08416715a0bfd66d66ad7e650c1aec0573fab457c4d70d29b1b17c3d13cd6bc4
+output_sha256: 3855c15afe796a40997a135681a7ec56a03b4a9d9f658a476514b1e7ed5c1e35
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2848 -- whitened moving-plane multipoles and the Pearson boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This theorem has two deliberately separate layers.
 
@@ -566,6 +565,12 @@ python -O 04-computation/gmc_whitened_moving_plane_multipole_thm2848.py
 
 Both modes byte-match the stored transcript.
 
-This theorem is a proof-complete candidate under independent hostile
-audit.  It proves neither four-slot SFC nor a new GMC case, and it does
-not turn the derivative witness into a scalar-moment observable.
+An independent hostile audit rederived every whitening, quotient, Pearson,
+Bessel, harmonic-projection, resultant, spherical-tensor, and
+integration-by-parts constant; checked all zero-harmonic and strictness
+branches; and independently replayed normal, optimized, and stored
+evidence with the declared hashes.  It found no remaining defect.
+
+This theorem proves neither unbounded four-slot SFC nor a new GMC case,
+and it does not turn the derivative witness into a scalar-moment
+observable.

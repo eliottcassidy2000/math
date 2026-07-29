@@ -1,5 +1,5 @@
 THM-2848 WHITENED MOVING-PLANE BOUNDARY -- exact companion
-status=PROOF-COMPLETE-CANDIDATE+VERIFIED-EXACT;AUDIT-PENDING
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
 whitening=q-divides-p_m iff pure complex moment m vanishes
 quotients=cubic+quartic+Pearson-conic exact
 subsidiary_Bessel_inequalities=2
