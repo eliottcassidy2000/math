@@ -90,14 +90,232 @@ FIRST_EXTERNAL = 15
 S2 = F(99, 70)
 
 # Filled after discovery and then locked for ordinary/optimized replay.
-EXPECTED_COUNTS: tuple[int, ...] | None = None
-EXPECTED_GROUPS: tuple[tuple[object, ...], ...] | None = None
-EXPECTED_ROOT_COUNTS: tuple[object, ...] | None = None
-EXPECTED_EXTREMA: tuple[tuple[object, ...], ...] | None = None
+EXPECTED_COUNTS: tuple[int, ...] | None = (
+    14_806,
+    14_754,
+    52,
+    251,
+    199,
+    52,
+    1_835,
+    13_274,
+    6_953,
+    13_274,
+    13_274,
+    14_754,
+    52,
+    14_806,
+    212_869,
+    1_967_632_698,
+    1_835,
+    0,
+    0,
+    12_919,
+)
+EXPECTED_GROUPS: tuple[tuple[object, ...], ...] | None = (
+    ("S:low", 3053, 3047, 3034, 13, 380, 2800, 1422, 3047, 380, 0, 0, 2667),
+    ("S:one", 7853, 7821, 7711, 110, 963, 7011, 3684, 7821, 963, 0, 0, 6858),
+    ("S:both", 3900, 3886, 3810, 76, 492, 3463, 1847, 3886, 492, 0, 0, 3394),
+    ("R:1", 3417, 3366, 3175, 191, 8, 2261, 272, 3366, 8, 0, 0, 3358),
+    ("R:2", 3308, 3307, 3299, 8, 113, 2996, 910, 3307, 113, 0, 0, 3194),
+    ("R:3", 2853, 2853, 2853, 0, 263, 2799, 1498, 2853, 263, 0, 0, 2590),
+    ("R:4", 2194, 2194, 2194, 0, 396, 2185, 1578, 2194, 396, 0, 0, 1798),
+    ("R:5", 1446, 1446, 1446, 0, 416, 1445, 1226, 1446, 416, 0, 0, 1030),
+    ("R:6", 844, 844, 844, 0, 291, 844, 758, 844, 291, 0, 0, 553),
+    ("R:7", 444, 444, 444, 0, 201, 444, 417, 444, 201, 0, 0, 243),
+    ("R:8", 180, 180, 180, 0, 84, 180, 175, 180, 84, 0, 0, 96),
+    ("R:9", 78, 78, 78, 0, 41, 78, 77, 78, 41, 0, 0, 37),
+    ("R:10", 24, 24, 24, 0, 11, 24, 24, 24, 11, 0, 0, 13),
+    ("R:11", 14, 14, 14, 0, 9, 14, 14, 14, 9, 0, 0, 5),
+    ("R:12", 3, 3, 3, 0, 1, 3, 3, 3, 1, 0, 0, 2),
+    ("R:13", 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0),
+)
+EXPECTED_ROOT_COUNTS: tuple[object, ...] | None = (
+    3427,
+    (
+        (1, 65),
+        (2, 354),
+        (3, 710),
+        (4, 827),
+        (5, 702),
+        (6, 450),
+        (7, 204),
+        (8, 87),
+        (9, 21),
+        (10, 5),
+        (11, 2),
+    ),
+    65,
+    4,
+    5,
+    10,
+    3422,
+    (("low", 792, 1), ("one", 1844, 3), ("both", 791, 1)),
+)
+EXPECTED_EXTREMA: tuple[tuple[object, ...], ...] | None = (
+    (
+        "minimum_pair_margin",
+        "-114553/5885880",
+        (2, 4, 6, 10, 12, 13, 14),
+        1,
+        22,
+        (22,),
+    ),
+    (
+        "minimum_scalar_pair_margin",
+        "-226687/8828820",
+        (2, 4, 6, 8, 10, 12, 14),
+        1,
+        22,
+        (22,),
+    ),
+    (
+        "minimum_direct_margin",
+        "-36083/291060",
+        (2, 4, 6, 10, 12, 13, 14),
+        1,
+        22,
+        (22,),
+    ),
+    (
+        "minimum_triple_margin",
+        "-390359/8828820",
+        (2, 4, 6, 8, 10, 12, 14),
+        1,
+        22,
+        (22,),
+    ),
+    (
+        "minimum_quadruple_margin",
+        "-308401/2942940",
+        (2, 4, 6, 10, 12, 13, 14),
+        1,
+        22,
+        (22,),
+    ),
+    ("maximum_W2", 696, (2, 4, 9, 10, 12, 13, 14), 1, 22, (22,)),
+    (
+        "maximum_initial_head_n",
+        680,
+        (2, 4, 9, 10, 12, 13, 14),
+        1,
+        22,
+        (22,),
+    ),
+    (
+        "maximum_exact_cutoff",
+        3182,
+        (2, 3, 4, 8, 9, 10, 12),
+        4,
+        28,
+        (22, 44, 33, 28),
+    ),
+    (
+        "maximum_exact_head_n",
+        3163,
+        (2, 3, 4, 8, 9, 10, 12),
+        4,
+        28,
+        (22, 44, 33, 28),
+    ),
+    (
+        "maximum_exact_raw_pairs",
+        5_000_703,
+        (2, 3, 4, 8, 9, 10, 12),
+        4,
+        28,
+        (22, 44, 33, 28),
+    ),
+    (
+        "maximum_paid_pairs",
+        155,
+        (2, 3, 4, 8, 9, 10, 12),
+        4,
+        28,
+        (22, 44, 33, 28),
+    ),
+    (
+        "maximum_H3_cutoff",
+        458385,
+        (2, 3, 9, 10, 12, 13, 14),
+        1,
+        22,
+        (22,),
+    ),
+    (
+        "maximum_H3_raw",
+        16_050_717_980_499_840,
+        (2, 3, 9, 10, 12, 13, 14),
+        1,
+        22,
+        (22,),
+    ),
+    (
+        "maximum_H2_cutoff",
+        253362,
+        (2, 3, 8, 10, 12, 13, 14),
+        2,
+        18,
+        (22, 18),
+    ),
+    (
+        "maximum_H2_raw",
+        171_646_392_315_013_757_960,
+        (2, 3, 8, 10, 12, 13, 14),
+        2,
+        18,
+        (22, 18),
+    ),
+    (
+        "maximum_H1_cutoff",
+        3771925,
+        (1, 2, 8, 9, 10, 12, 14),
+        4,
+        33,
+        (22, 26, 44, 33),
+    ),
+    (
+        "maximum_H1_raw",
+        6_362_422_185_328_848_354_053_813_621_376,
+        (1, 2, 8, 9, 10, 12, 14),
+        4,
+        33,
+        (22, 26, 44, 33),
+    ),
+)
 EXPECTED_QUANTILES: tuple[tuple[str, tuple[tuple[int, int], ...]], ...] | None = None
-EXPECTED_FAILURE_DIGESTS: tuple[tuple[str, str], ...] | None = None
-EXPECTED_LEDGER_DIGEST: str | None = None
-EXPECTED_ROW_OUTPUT_SHA256: str | None = None
+EXPECTED_FAILURE_DIGESTS: tuple[tuple[str, str], ...] | None = (
+    (
+        "pair_failures",
+        "a7c69e8b3382ce935b8b35740fcd73009278ca6cbaa6dbf19b61d9d26f4c52a2",
+    ),
+    (
+        "scalar_pair_failures",
+        "6e28f6329b2c3534a0df4af543f6720b8cd0d41e20fd2cafd1d20e43958654af",
+    ),
+    (
+        "direct_failures",
+        "5fad12efd201488294e808350f4d880bd38b0299ddc86a23c3f26da661b22f87",
+    ),
+    (
+        "triple_failures",
+        "d8738bdd68945e73eb0e1b7e711367351f19b06b1ee54a8450151f67f9c95961",
+    ),
+    (
+        "quadruple_failures",
+        "c4b12d86693f4717e19d71f5829e04a329d5d56e28de3cb130dfaa4970256e18",
+    ),
+    (
+        "adaptive_open",
+        "e54c9776aa858aa2997c967f3670cd77287999743575ea3c972f4a14e95492a8",
+    ),
+)
+EXPECTED_LEDGER_DIGEST: str | None = (
+    "f3f63ac1953c0e2292488d91f59f831e0f7273b9c1eaeda32f74932d974e4ee4"
+)
+EXPECTED_ROW_OUTPUT_SHA256: str | None = (
+    "5dea0eaa45dd52fbf1bef7cfcc328899a4789bc277b6e1e8ac2f4bdf192b85e4"
+)
 
 
 def require(condition: bool, message: str) -> None:
