@@ -2,8 +2,8 @@
 id: THM-2954
 title: "Opposite endpoint-link blocks and transitive-cycle obstruction"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  The opposite strict-danger endpoint relation
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The opposite
+  strict-danger endpoint relation
   14*gcd(u,v)|(u+v) is exactly equality of the 2- and 7-adic
   valuations together with opposition of the residual units modulo
   14.  Its graph is therefore a disjoint union of complete bipartite
@@ -15,7 +15,11 @@ status: >
   multiplicity one a.e. has no switches and is component-monochromatic.
   No LRC(14) exclusion is claimed.
 source: root-lrc-endpoint-link-bipartite-2026-07-29
-audit: Pending independent hostile audit.
+audit: >
+  Independent hostile audit accepted both divisibility directions, the
+  zero-diagonal entire-link-support C7 quantifier, the seam hostile,
+  pointwise-cover topology, normal/-O/stored replay, and LF hashes after
+  repairing two overbroad premises.
 depends_on: []
 related:
   - THM-767-deck-kirchhoff-rigidity
@@ -30,8 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2954 -- opposite endpoint-link blocks and transitive-cycle obstruction
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Exact opposite-endpoint relation
 
@@ -104,7 +107,8 @@ There are no self-links and no odd cycles.
 
 Let seven labeled speeds be indexed by `F_7`.  A support relation is
 transitively `C_7`-equivariant if membership of `(i,j)` depends only on
-`j-i`.  Let `B` be a matrix with zero diagonal whose entire support is
+`j-i`.  Let `B` be a matrix whose support is transitively
+`C_7`-equivariant, whose diagonal is zero, and whose entire support is
 contained in the arithmetic link relation `(1)`.
 
 If displacement `d!=0` occurs, equivariance supplies

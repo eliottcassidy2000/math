@@ -2,8 +2,8 @@
 id: THM-2949
 title: "Fixed rank-thirty-five cofactor Newton atlas"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  For every translated four-slot support
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  translated four-slot support
   {n,n+a,n+b,n+M} with 0<a<b<M<=12, one fixed 35-by-35
   degree-seven Macaulay cofactor is nonzero at every integer n>=0.
   THM-2947's conjugate-pair corank gap therefore proves first-window
@@ -16,7 +16,10 @@ status: >
   selected-chart seam divisor; this is not a canonical cofactor or an
   arbitrary-width theorem.
 source: codex-gmc-uniform-width-extension-2026-07-29
-audit: Pending independent hostile audit.
+audit: >
+  Independent hostile audit accepted the cofactor typing, parity gate,
+  all 220 families and 660 outside-grid controls, the complete width-three
+  216-cofactor sidecar, and normal/-O/stored replay.
 depends_on:
   - THM-2947-conjugate-pair-corank-parity-and-one-minor-resultant-gate
   - THM-2943-width-seven-eight-two-chart-macaulay-resultant-closure
@@ -36,8 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2949 -- fixed rank-thirty-five cofactor Newton atlas
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Finite-width statement
 
