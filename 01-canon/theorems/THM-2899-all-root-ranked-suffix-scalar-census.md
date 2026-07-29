@@ -2,11 +2,10 @@
 id: THM-2899
 title: "All-root ranked-suffix scalar census and uniform five-slot parity entry"
 status: >
-  RESERVED / UNPROVED PROOF CANDIDATE UNDER LOCKED-ARTIFACT AUDIT.  Exact
-  discovery closes 26,609 of 41,415 marked suffix branches and five whole
-  roots, and every one of the 14,806 scalar-hard branches satisfies the
-  THM-2895 five-slot parity-entry inequality.  Promotion awaits final
-  ordinary/optimized replay, artifact hashes, and scope audit.
+  PROVED + FINITE-EXACT + VERIFIED.  The globally sealed scalar test closes
+  26,609 of 41,415 marked suffix branches and five whole roots.  Every one
+  of the 14,806 scalar-hard branches satisfies the THM-2895 five-slot
+  parity-entry inequality, with an exact finite-core cutoff at most 2,782.
 source: codex-lrc-rank-impossible-overlap-2026-07-29
 depends_on:
   - THM-735-bonferroni-simultaneous-multi-peel-defeats-the-clustered-non-isolated-wall
@@ -26,7 +25,7 @@ verification:
 
 # THM-2899 -- all-root ranked-suffix scalar census and uniform five-slot parity entry
 
-**RESERVED / UNPROVED PROOF CANDIDATE UNDER LOCKED-ARTIFACT AUDIT.**
+**PROVED + FINITE-EXACT + VERIFIED.**
 
 ## 1. Marked suffix universe
 
@@ -175,6 +174,13 @@ external sector.
 The five bodies in `(9)` are disjoint from the four THM-2895 bodies and
 from THM-2898's unique max-gate body
 `(1,8,10,11,12,13,14)`.  Thus these are five genuinely new root closures.
+The three proved theorems close ten pairwise distinct roots and leave
+
+```text
+3432-4-1-5=3422                                           (10a)
+```
+
+seven-body roots in the official residual.
 
 ## 5. Uniform five-slot parity entry
 
@@ -376,6 +382,39 @@ counterexamples.
 
 The scalar computation proves the five root closures in `(9)` and the
 uniform parity-entry statement `(11)`--`(14)`.  It does not close the other
-`3427` roots under its own scalar test, enumerate their H4 pair complexes,
-prove the all-root THM-2900 child cap, close the seven-body rung, or prove
-LRC(14).
+`3427` roots under its own scalar test.  After composing with THM-2895 and
+THM-2898, `3422` roots remain.  The theorem does not enumerate their H4
+pair complexes, prove the all-root THM-2900 child cap, close the seven-body
+rung, or prove LRC(14).
+
+## 10. Verification
+
+The verifier contains no Python `assert`; all theorem-bearing guards use
+explicit exceptions and therefore remain active under optimization.  It
+hash-pins the THM-2896 gate engine, its transcript, and the literal-residual
+engine; reconstructs all `3432` roots and all `41415` apex carriers; checks
+`165660` scalar/vector controls and `41415` independent literal/direct
+carrier controls; and locks the full root-and-branch digest
+
+```text
+9770a2ef0e7ae063a482e475f47047de08344cd1fc24880f742651d4c71d167d.
+```
+
+Ordinary and optimized full replays are byte-identical, with SHA-256
+
+```text
+e6261bb6c4dd13624ddccba32cac7a90f7973929c1c0dc4881743f4aec5d4206.
+```
+
+The canonical artifacts are
+
+```text
+04-computation/lrc14_j6_all_root_ranked_suffix_scalar_census_codex_20260729.py
+SHA-256 e0ff69252870f194549bba61289c1c5b15bef451e37a72836d71f9e71b1016e9
+
+05-knowledge/results/lrc14_j6_all_root_ranked_suffix_scalar_census_codex_20260729.out
+SHA-256 dbd3dc5a8c44a55957a6e1ce660ca0e89fcd70e6c0d06d5ba47dc3a22f40c680
+
+05-knowledge/results/lrc14_j6_all_root_ranked_suffix_scalar_hard_ledger_codex_20260729.out
+SHA-256 6be9a6c9218f3b42b2eea733c9050f5d35160664af0f19390337b3c5be57cb37
+```
