@@ -11,7 +11,7 @@ theorem is the external benchmark's.
 
 | game | record | witness size | status |
 |---|---|---|---|
-| any game, k=1 paths | **2 exactly** | exhaustive n≤5, full POOL5 | floor conjectured; depth essential |
+| any game, k=1 paths | **2 exactly** | n≤4 EXHAUSTIVE-EXACT (labels × T₀ ≤ 2 × exact seed B&B); n=5 greedy-supported | floor conjectured all n; depth essential |
 | loose (literal spec text) | → 1 (unsound) | 14/9 at n=9 | spec bug, report upstream |
 | strict (= verifiable, fixed) | **13/7 ≈ 1.857** | n=8, two witnesses | robust attractor |
 | per-suffix labels, merge-free | **7/4 = 1.750 (= KT99 exponent)** | n=8 (×2) and n=9 (t=1) | 3 independent witnesses — a plateau AT the human rung |
