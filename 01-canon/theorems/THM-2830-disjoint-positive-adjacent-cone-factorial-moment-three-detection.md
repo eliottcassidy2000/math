@@ -1,35 +1,35 @@
 ---
 id: THM-2830
-title: "Disjoint positive adjacent-cone factorial moment-three detection"
+title: "Disjoint and transport-ordered positive-cone factorial moment-three detection"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Two nonzero
-  nonnegative combinations of adjacent factorial differences, separated
-  by one support cut, have the required mixed cubic orientation.  Equality
-  is exactly the two adjacent singleton rays at the cut.  The proof turns
-  the quartic expression into strict monotonicity of a Pascal-kernel
-  quotient.  Its adjacent-row determinant has positive cyclic cubic
-  coefficients by a global beta/Abel prefix certificate.  Consequently
-  factorial moments one through three detect every complex plane spanned
-  by the two disjoint cones; when the constant slot is absent, the
-  associated two-charge Gaussian envelope is detected by moment at most
-  six.  A stronger individual four-label matching inequality remains open
-  and is explicitly not used.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  nonzero positive adjacent-difference cone V, the quotient
+  R_n=L(d_n V^2)/L(d_n V) is strictly increasing, with a sharp universal
+  one-step floor.  Integration by parts proves the mixed cubic orientation
+  for two cones separated by a support cut, with only the adjacent
+  singleton equality.  More generally, weighted stochastic dominance,
+  and in particular a shifted coefficient monotone-likelihood-ratio
+  order, proves the orientation for interlaced positive cones.  Factorial
+  moments one through three detect every independent plane in these
+  classes; the constant-free two-charge Gaussian lift is detected by
+  moment at most six.
 source: root/disjoint-adjacent-cone-factorial-orientation-2026-07-28
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
   - THM-2828-lower-prefix-cone-factorial-moment-three-detection
 related:
+  - THM-2810-factorial-hankel-faithfulness-and-bounded-radial-carrier-no-go
   - THM-2815-optimal-finite-laguerre-carrier-and-radial-selector-access-boundary
   - THM-2841-all-order-adjacent-difference-factorial-tensor-positivity
   - HYP-8765-gmc2-radial-channel-return-tower
-script: 04-computation/gmc_disjoint_cone_matching_reduction_thm2830.py
-output: 05-knowledge/results/gmc_disjoint_cone_matching_reduction_thm2830.out
-script_sha256: ce490561fbc888a94e58ba987912983280c286eba13b2638b5bd8c7a432560d4
-output_sha256: 5c54b52f8e04fbc363a0ce6f6026f03460bd9bf2053a5358ea116e767a5fc99c
+script: 04-computation/gmc_disjoint_positive_cones_pascal_ratio_thm2830.py
+output: 05-knowledge/results/gmc_disjoint_positive_cones_pascal_ratio_thm2830.out
+script_sha256: f061612d06c8698f6913d5ad4624b8fe0ad38e40263146ee7e1abe3876c03b0e
+output_sha256: 63d5ac47b58fa6892211261a0ed79bde7dae0d5d52dd59ca6eb81ad4cef6b738
 hash_basis: LF-normalized bytes
 ---
 
-# THM-2830 -- two disjoint factorial prefix cones
+# THM-2830 -- Pascal transport for positive factorial cones
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
@@ -37,502 +37,480 @@ Let
 
 ```text
 L(s^n)=n!,                         f_n=s^n/n!,
-d_i=f_(i+1)-f_i.                                          (1)
+d_i=f_(i+1)-f_i.                                      (1)
 ```
 
-Fix `b>=1` and two finite nonzero coefficient families
+Fix `b>=1` and finite nonzero coefficient families
 
 ```text
-lambda_i>=0  (0<=i<b),             mu_j>=0  (j>=b),
-
-U=sum_(i<b)lambda_i d_i,            V=sum_(j>=b)mu_j d_j. (2)
+U=sum_(i<b)lambda_i d_i,            lambda_i>=0,
+V=sum_(j>=b)mu_j d_j,               mu_j>=0.           (2)
 ```
 
 Then
 
 ```text
-D(U,V):=
- 2L(V^3)L(UV)-3L(UV^2)L(V^2) >=0.                       (3)
+D(U,V):=2L(V^3)L(UV)-3L(UV^2)L(V^2)>=0,               (3)
 ```
 
-Equality holds exactly when, for positive constants `lambda,mu`,
+with equality exactly when
 
 ```text
-U=lambda d_(b-1),                   V=mu d_b.             (4)
+U is proportional to d_(b-1),
+V is proportional to d_b.                             (4)
 ```
 
-This proves factorial-moment-three detection on every complex plane
-spanned by the two disjoint cones.  If `lambda_0=0`, it also gives
-two-charge Gaussian detection by moment at most six.
+There is a broader transport theorem.  For arbitrary finite nonzero
 
-## 1. Positive tensors and the shifted derivative identity
+```text
+U=sum_(i>=0)lambda_i d_i,            lambda_i>=0,
+V=sum_(j>=1)mu_j d_j,                mu_j>=0,           (5)
+```
+
+put `nu_i=mu_(i+1)`.  If
+
+```text
+nu_jlambda_i>=nu_ilambda_j                 for i<j,    (6)
+```
+
+then `(3)` holds even when the supports overlap or interlace.  Equality
+under `(6)` occurs exactly when `lambda=c nu`, equivalently `U=cV'`.
+
+## 1. Positive tensors and the Pascal quotient
 
 Put
 
 ```text
-H_n(k)=L(d_n d_k)=binom(n+k,n),
-T_n(p,q)=L(d_n d_p d_q).                                (5)
+H_n(j)=L(d_nd_j)=binom(n+j,n),
+T_n(p,q)=L(d_nd_pd_q).                                 (7)
 ```
 
-Both tensors are strictly positive.  For the cubic tensor this is the
-explicit THM-2828 identity
+THM-2828 gives `T_n(p,q)>0`.  For any nonzero positive cone
+`V=sum_jmu_jd_j`, define
 
 ```text
-T_n(p,q)
- =[(n+p+q)!/(n!p!q!)]
-   [2(S+1)^2+S(np+nq+pq)-npq]/
-   [(n+1)(p+1)(q+1)],            S=n+p+q.               (6)
+A_n=L(d_nV)=sum_jmu_jH_n(j)>0,
+B_n=L(d_nV^2)=sum_(p,q)mu_pmu_qT_n(p,q)>0,
+R_n=B_n/A_n.                                           (8)
 ```
 
-For the fixed upper direction `V`, define
+The load-bearing theorem is
 
 ```text
-A_n=L(d_nV)>0,                 B_n=L(d_nV^2)>0,
-R_n=B_n/A_n.                                             (7)
+R_(n+1)>R_n                         for every n>=0.     (9)
 ```
 
-The normalized differences satisfy
+It follows from a strict symmetric three-index kernel.
+
+## 2. A universal cyclic-kernel floor
+
+Since
 
 ```text
-d_j'=d_(j-1)                         (j>=1).              (8)
+H_(n+1)(r)/H_n(r)=1+r/(n+1),
 ```
 
-Also `V(0)=0`, and integration by parts against `e^(-s)` gives
+define
 
 ```text
-L(P)=L(P')                            when P(0)=0.         (9)
+C_n(p,q)=T_n(p,q)/(H_n(p)H_n(q)),
+m_n(p,q)=(n+1)[T_(n+1)(p,q)/T_n(p,q)-1],              (10)
+
+J_n(p,q,r)=sum_cyc C_n(p,q)[m_n(p,q)-r].              (11)
 ```
 
-Therefore
+Then
 
 ```text
-L(V^2)=2sum_j mu_j A_(j-1),
-L(V^3)=3sum_j mu_j B_(j-1).                              (10)
+K_n(p,q,r)
+ :=sum_cyc[
+    T_(n+1)(p,q)H_n(r)-T_n(p,q)H_(n+1)(r)
+  ]
+ =H_n(p)H_n(q)H_n(r)J_n(p,q,r)/(n+1).                 (12)
 ```
 
-For one lower atom write
+We prove
 
 ```text
-D_i(V)=2L(V^3)A_i-3B_iL(V^2).                            (11)
+J_n(p,q,r)>=6(n+1),
+K_n(p,q,r)>=6H_n(p)H_n(q)H_n(r)>0,                    (13)
 ```
 
-Substitution of `(10)` gives the load-bearing factorization
+with equality exactly at `p=q=r=0`.
+
+### 2.1. Separable base plus monotone interaction
+
+Let
+
+```text
+Beta=n!(n+p+q)!/[(n+p)!(n+q)!]
+    =product_(k=1)^q (n+p+k)/(n+k)
+    =sum_(k=0)^min(p,q)
+       binom(p,k)binom(q,k)/binom(n+k,k)>=1,           (14)
+
+tau=(n+p+q+1)
+       [1/(n+1)+1/(p+1)+1/(q+1)]-1.
+```
+
+Direct normalization gives `C_n=Beta tau`.  Split
+
+```text
+c_n(p,q)=(n+1)[1/(p+1)+1/(q+1)],
+E_n(p,q)=C_n(p,q)-c_n(p,q).                           (15)
+```
+
+The boundary and boundary increment are
+
+```text
+E_n(0,q)
+ =q(nq+2n+2q+3)/[(n+1)(q+1)]>=0,                     (16)
+
+Delta_qE_n(0,q)
+ =[nq^2+3nq+3n+2q^2+6q+5]/
+   [(n+1)(q+1)(q+2)]>0.                               (17)
+```
+
+The mixed first difference is
+
+```text
+Delta_pDelta_qE_n(p,q)
+ =Beta U_n(p,q)/[(n+1)(n+p+1)(n+q+1)]>0,             (18)
+
+U_n(p,q)=
+ n^2p+n^2q+2n^2
+ +np^2+2npq+6np+nq^2+6nq+6n
+ +p^2q+3p^2+pq^2+6pq+7p+3q^2+7q+4.
+```
+
+Symmetry and telescoping `(17)--(18)` show that `E_n` is nonnegative and
+coordinatewise nondecreasing.
+
+### 2.2. Effective-mean compensation
+
+Define `F_n` by
+
+```text
+C_n(p,q)m_n(p,q)
+ =c_n(p,q)(p+q+1)+F_n(p,q).                           (19)
+```
+
+For `s=p+q`, set
+
+```text
+Q=(n+1)^2(n+2)(s+2)^2,
+
+S_n(p,q)=
+ n^2p^2+2n^2pq+4n^2p+n^2q^2+4n^2q+4n^2
+ +np^2q+4np^2+npq^2+6npq+11np+4nq^2+11nq+10n
+ +2p^2+2pq+6p+2q^2+6q+6.
+```
+
+Every coefficient of `S_n` is positive, and exact simplification gives
+
+```text
+F_n-(s/2)E_n
+ =[(Beta-1)Q+Beta sS_n]/
+   [2(n+1)(n+2)(p+1)(q+1)]>=0.                        (20)
+```
+
+Assume `p<=q<=r`, write `x=q-p,y=r-q`, and abbreviate
+`E_pq=E_n(p,q)`.  Monotonicity gives
+
+```text
+sum_cyc E_pq[(p+q)/2-r]
+ =1/2{
+   x[(E_qr-E_pq)+(E_qr-E_pr)]
+  +y[(E_pr-E_pq)+(E_qr-E_pq)]
+ }>=0.                                                (21)
+```
+
+The separable part cancels exactly:
+
+```text
+sum_cyc c_n(p,q)(p+q+1-r)=6(n+1).                     (22)
+```
+
+Equations `(19)--(22)` prove `(13)`.  The certificate gap `(20)` can
+vanish on all three pairs only when `p=q=r=0`, proving the equality claim.
+
+## 3. Strictness and a coercive margin
+
+Dummy-index symmetrization gives
+
+```text
+B_(n+1)A_n-B_nA_(n+1)
+ =1/3sum_(p,q,r)mu_pmu_qmu_rK_n(p,q,r)
+ >=2A_n^3.                                             (23)
+```
+
+Hence
+
+```text
+R_(n+1)-R_n>=2A_n^2/A_(n+1)>0,                        (24)
+
+R_m-R_i>=2sum_(t=i)^(m-1)A_t^2/A_(t+1),       m>i.   (25)
+```
+
+Equality in `(23)--(24)` occurs exactly for `V` proportional to `d_0`.
+The increasing quotient is not generally convex:
+
+```text
+V=2d_0+d_10,
+R_2-2R_1+R_0=-53721500/663<0.                         (26)
+```
+
+Thus `(24)`, not a hidden higher-order total-positivity assertion, is the
+sharp structural output used below.
+
+## 4. The separated-cone theorem
+
+Return to `(2)`.  Since `d_j'=d_(j-1)` for `j>=1`, `V(0)=0`, and
+
+```text
+L(P)=integral_0^infinity P(s)e^(-s)ds,
+```
+
+integration by parts yields
+
+```text
+L(V^2)=2sum_jmu_jA_(j-1),
+L(V^3)=3sum_jmu_jB_(j-1).                             (27)
+```
+
+For one lower atom `i<b`,
 
 ```text
 D_i(V)
- =6A_i sum_j mu_j A_(j-1)[R_(j-1)-R_i].                 (12)
+ :=2L(V^3)L(d_iV)-3L(d_iV^2)L(V^2)
+
+ =6A_i sum_jmu_jA_(j-1)[R_(j-1)-R_i]>=0.              (28)
 ```
 
-Thus the theorem follows once the quotient sequence is proved strictly
-increasing:
+The quantitative version is
 
 ```text
-R_(n+1)>R_n                         for every n>=0.       (13)
+D_i(V)>=12A_i sum_jmu_jA_(j-1)
+                 sum_(n=i)^(j-2)A_n^2/A_(n+1),        (29)
 ```
 
-Notice that `(13)` is global.  No assumption that the support of `V` lies
-above the current row `n` will be used.
-
-## 2. The adjacent-row cyclic determinant
-
-The product identity
+with an empty inner sum at `j=i+1`.  Strictness shows that `D_i=0`
+exactly when every occupied upper index is `j=i+1`.  Since `j>=b>i`,
+this forces `i=b-1` and `V` proportional to `d_b`.  Finally,
 
 ```text
-d_p d_q
- =binom(p+q,p) f_(p+q)
-  +binom(p+q+2,p+1)d_(p+q+1)                            (14)
+D(U,V)=sum_(i<b)lambda_iD_i(V),                        (30)
 ```
 
-and the hockey-stick sum
+which proves `(3)--(4)`.
+
+## 5. Stochastic transport and coefficient minors
+
+For the general pair `(5)`, define probability laws
 
 ```text
-S_n(N):=sum_(a<N)H_n(a)=binom(n+N,n+1)                  (15)
+alpha_i=lambda_iA_i/L(UV),
+beta_i=mu_(i+1)A_i/[L(V^2)/2].                         (31)
 ```
 
-give, for `N=p+q`,
+Equations `(8),(27)` give
 
 ```text
-T_n(p,q)
- =binom(N+2,p+1)H_n(N+1)+binom(N,p)S_n(N).              (16)
+D(U,V)
+ =3L(UV)L(V^2)[E_betaR-E_alphaR].                     (32)
 ```
 
-Define the labelled adjacent-row contribution
+If `beta` first-order stochastically dominates `alpha`, then
 
 ```text
-Delta_n(p,q;r)
- =T_(n+1)(p,q)H_n(r)-T_n(p,q)H_(n+1)(r).               (17)
+E_betaR-E_alphaR
+ =sum_(t>=0)[R_(t+1)-R_t]
+   [sum_(k>=t+1)beta_k-sum_(i>=t+1)alpha_i]>=0.        (33)
 ```
 
-Its two terms from `(16)` are
+Every ratio increment is strict, so equality holds exactly when
+`alpha=beta`.
+
+There is also an exact coefficient-level Cauchy--Binet formula:
 
 ```text
-Delta_high
- =binom(N+2,p+1)H_n(N+1)H_n(r)(N+1-r)/(n+1),           (18)
-
-Delta_low
- =binom(N,p)H_n(r)S_n(N)
-   ( (n+1)(N-1)/(n+2)-r )/(n+1).                       (19)
+D(U,V)
+ =6sum_(i<j)A_iA_j(R_j-R_i)
+   [mu_(j+1)lambda_i-mu_(i+1)lambda_j].               (34)
 ```
 
-For a labelled triple `(p,q,r)`, cyclically sum the three choices
+Condition `(6)` makes every summand nonnegative.  It also implies the
+tail order directly, because
 
 ```text
-(p,q;r),                    (q,r;p),                    (r,p;q)
+sum_(j>=t)beta_j-sum_(j>=t)alpha_j
+ =sum_(i<t<=j)(beta_jalpha_i-beta_ialpha_j)>=0.        (35)
 ```
 
-and call the results `E_high,E_low`.  Expanding `(7)` shows
+Equality under `(6)` forces every occupied coefficient minor in `(34)` to
+vanish, so `lambda=c nu`, equivalently `U=cV'`.
+
+This extension is genuinely interlaced:
 
 ```text
-A_nB_(n+1)-A_(n+1)B_n
- =sum_(p,q,r)mu_pmu_qmu_r Delta_n(p,q;r).               (20)
+U=2d_0+d_1,          V=d_1+2d_2,          D=17460>0,  (36)
+
+U=d_0+d_2=V',        V=d_1+d_3,           D=0.        (37)
 ```
 
-For three distinct labels the corresponding monomial coefficient is
-`2(E_high+E_low)`; for a multiset `(p,p,r)` it is the same cyclic sum
-with its natural multiplicities; and for `(p,p,p)` it is one third of
-the three equal cyclic terms.  It is consequently enough to prove
+The order is load-bearing:
 
 ```text
-E_high+E_low>0                                             (21)
+U=d_2,                V=d_1+d_3,           D=-33540.  (38)
 ```
 
-for every positive integer triple `(p,q,r)`.
+Formula `(34)` identifies the remaining arbitrary-positive-cone problem
+precisely: shifted coefficient-ratio reversals contribute with opposing
+signs and may cancel.
 
-## 3. Exact beta/Abel normalization
+## 6. Derivative-flag holotopy
 
-Put
+Suppose
 
 ```text
-x=p+1,              y=q+1,              z=r+1,
-t=x+y+z,                                              (22)
-
-C_0=1/[n!^2 x!y!z!(n+1)]>0.
+V=sum_(j>=r)mu_jd_j,                 U=V^(r)
+  =sum_i mu_(i+r)d_i,                r>=1,             (39)
 ```
 
-Direct factorial cancellation in `(18)--(19)` gives
+where `mu_j>=0` is a nonzero log-concave sequence with interval positive
+support.  Its adjacent ratios are nonincreasing, hence
 
 ```text
-E_high=C_0 H_*,
-E_low =C_0 L_*,                                        (23)
+mu_(j+1)mu_(i+r)>=mu_(i+1)mu_(j+r),       i<j.        (40)
 ```
 
-where all sums over `{x,y,z}` count the labelled multiset, and
+This is `(6)`, so every independent derivative-flag plane
+`span{V^(r),V}` satisfies `(3)`.  For `r=1`, `U=V'` is exactly the
+equality family.  For every `r>1`, the finite supports of `V^(r)` and
+`V'` have different extrema, so the orientation is strict.
+
+The Gaussian corollary below additionally requires
+`min supp(mu)>=r+1`, so that `V^(r)` has no `d_0` term.  Without this
+extra leading zero, the factorial theorem still applies.
+
+## 7. Moment-three and Gaussian consequences
+
+For `H=alpha U+beta V`, let
 
 ```text
-H_*
- =sum_(u in {x,y,z})
-    u(t-u)(t-2u)(n+u-1)!(n+t-u-1)!,                    (24)
-
-L_*
- =xyz/[(n+1)(n+2)]
-   sum_u (t-u-2)(n+u-1)!(n+t-u-2)!
-    [(n+1)t-(2n+3)u-2n-1].                             (25)
+Q(alpha,beta)=L(H^2),               C(alpha,beta)=L(H^3).
 ```
 
-We prove the stronger pair
-
-```text
-H_*>0,                         H_*+4L_*>0.              (26)
-```
-
-It then follows that
-
-```text
-H_*+L_*=[(H_*+4L_*)+3H_*]/4>0,                         (27)
-```
-
-which is `(21)`.
-
-Sort `x<=y<=z` and write
-
-```text
-x=m+2,                y=x+a,                z=y+c,
-m,a,c>=0.                                               (28)
-```
-
-For `u` among the three labels set
-
-```text
-W_u=(n+u-1)!(n+t-u-2)!,
-phi_u(r)=r^(u-1)+r^(t-u-2).                            (29)
-```
-
-The beta integral, paired under `s<->1-s` and then changed by
-`r=s/(1-s)`, gives the exact identity
-
-```text
-sum_u W_u Q(u)
- =(2n+t-2)! integral_0^1
-   [r^n sum_u Q(u)phi_u(r)]/(1+r)^(2n+t-1) dr.          (30)
-```
-
-For `0<r<=1`,
-
-```text
-phi_u(r)
- =2r^((t-3)/2)
-   cosh((u-(t-1)/2)log r).                             (31)
-```
-
-Since `x<=y<=z` and `x+y+z=t`,
-
-```text
-phi_x>=phi_y>=phi_z>0.                                 (32)
-```
-
-Indeed the successive squared-distance differences from `(t-1)/2` are
-`(y-x)(z-1)` and `(z-y)(x-1)`.
-
-For any three coefficients, Abel summation reads
-
-```text
-sum_u Q(u)phi_u
- =Q(x)(phi_x-phi_y)
-  +[Q(x)+Q(y)](phi_y-phi_z)
-  +[Q(x)+Q(y)+Q(z)]phi_z.                              (33)
-```
-
-It remains only to exhibit positive prefix polynomials.
-
-### 3.1. The high part
-
-Equation `(24)` is `(30)` with
-
-```text
-Q_n(u)=u(t-u)(t-2u)(n+t-u-1).                          (34)
-```
-
-After `(28)`, the three prefixes in `(33)` are polynomials in
-`n,m,a,c` whose complete coefficient statistics are
-
-| prefix | nonzero monomials | smallest coefficient | constant |
-|---|---:|---:|---:|
-| `Q_n(x)` | 46 | 1 | 48 |
-| `Q_n(x)+Q_n(y)` | 51 | 1 | 96 |
-| `Q_n(x)+Q_n(y)+Q_n(z)` | 46 | 1 | 144 |
-
-Every coefficient is nonnegative.  Hence `(30)--(33)` prove `H_*>0`.
-
-### 3.2. The quarter combination
-
-Multiplying the second inequality in `(26)` by `(n+1)(n+2)` gives
-`(30)` with
-
-```text
-P_n(u)
- =(n+1)(n+2)u(t-u)(t-2u)(n+t-u-1)
-  +4xyz(t-u-2)
-    [(n+1)t-(2n+3)u-2n-1].                            (35)
-```
-
-The three prefixes now have
-
-| prefix | nonzero monomials | smallest coefficient | constant |
-|---|---:|---:|---:|
-| `P_n(x)` | 140 | 1 | 32 |
-| `P_n(x)+P_n(y)` | 145 | 1 | 64 |
-| `P_n(x)+P_n(y)+P_n(z)` | 136 | 1 | 96 |
-
-Again every coefficient is nonnegative.  Equations `(30)--(33)` prove
-`H_*+4L_*>0`.  The exact companion expands all six prefix polynomials
-over `Z[n,m,a,c]`; this is a finite symbolic identity, not a bounded
-sampling argument.
-
-Combining `(20)--(27)` proves
-
-```text
-A_nB_(n+1)-A_(n+1)B_n>0.                              (36)
-```
-
-Since `A_n,A_(n+1)>0`, this is exactly `(13)`.
-
-## 4. Equality and the cone theorem
-
-Strict monotonicity in `(13)` turns `(12)` into a sum of nonnegative
-terms.  Its `j=i+1` term is zero, and every `j>i+1` term is strict.
-Therefore
-
-```text
-D_i(V)=0
- iff
- V is a positive multiple of d_(i+1).                 (37)
-```
-
-For `i<=b-2`, every occupied upper label satisfies `j>i+1`, so
-`D_i(V)>0`.  For `i=b-1`, equality is possible exactly when
-`V=mu d_b`.  Finally,
-
-```text
-D(U,V)=sum_(i<b)lambda_i D_i(V).                       (38)
-```
-
-Thus equality in `(3)` forces all occupied lower indices to equal
-`b-1`, and `(4)` follows.  Conversely the adjacent pair in `(4)` gives
-equality directly.
-
-## 5. Factorial and Gaussian moment detection
-
-For
-
-```text
-H=alpha U+beta V,                      alpha,beta in C, (39)
-```
-
-the real quadratic
-
-```text
-Q(alpha,beta)=L(H^2)                                   (40)
-```
-
-is positive definite: `U,V` are linearly independent real polynomials
-and `L(F^2)=integral_0^infinity F(s)^2e^(-s)ds`.
-
-Let `C(alpha,beta)=L(H^3)` and use the Gram/cubic notation
-
-```text
-g11=L(U^2),       g12=L(UV),       g22=L(V^2),
-t111=L(U^3),      t122=L(UV^2),    t222=L(V^3).        (41)
-```
-
-THM-2824 proves that a common projective zero of `Q,C` exists exactly
-when the real quadratic divides the real cubic.  One division-free
-remainder invariant is
+If `U,V` are independent, `Q` is positive definite.  THM-2828 gives
+`t111=L(U^3)>0`.  The THM-2824 division-free cubic remainder is
 
 ```text
 I2
- =3t122 g11g22-2t222 g12g11-t111 g22^2
- =-g11 D(U,V)-t111 g22^2.                              (42)
+ =3t122g11g22-2t222g12g11-t111g22^2
+ =-g11D(U,V)-t111g22^2<0.                             (41)
 ```
 
-The strictly positive cubic tensor `(6)` gives `t111=L(U^3)>0`.
-Equations `(3)` and `(42)` therefore imply
+Thus `Q,C` have no common complex projective zero:
 
 ```text
-I2<0.                                                   (43)
+L(H)=L(H^2)=L(H^3)=0                  implies H=0.     (42)
 ```
 
-Here `L(H)=0` identically by `(1)--(2)`.  Hence `Q,C` have no common
-nonzero projective zero, and
+If `lambda_0=0`, both directions are divisible by `s`.  Put
 
 ```text
-L(H)=L(H^2)=L(H^3)=0                  implies H=0.      (44)
+h=H/s,                 P=W+Zh(ZW),          W=conj(Z).
 ```
 
-If `lambda_0=0`, both `U,V` are divisible by `s`.  Put
+Charge balance gives
 
 ```text
-h=H/s,
-P=W+Z h(ZW),                         W=conj(Z),         (45)
+E[P^(2k)]=binom(2k,k)L(H^k),          k=1,2,3,
+E[P^(2k-1)]=0.                                        (43)
 ```
 
-for a standard complex Gaussian `Z`.  Charge balance gives
+Hence every constant-free plane above gives a many-versus-many two-charge
+Gaussian envelope detected by moment at most six.
+
+## 8. Independent beta/Abel proof sidecar
+
+The incoming concurrent proof of `(9)` is mathematically independent and
+is preserved, rather than overwritten, in
 
 ```text
-E[P^(2j)]=binom(2j,j)L(H^j),          E[P^(2j-1)]=0,
-                                                       j=1,2,3. (46)
+04-computation/gmc_disjoint_cone_matching_reduction_thm2830.py
+05-knowledge/results/gmc_disjoint_cone_matching_reduction_thm2830.out
 ```
 
-Thus every nonzero envelope `(45)` is detected by a Gaussian moment of
-order at most six.
-
-## 6. The stronger matching sidecar remains open
-
-The earlier reduction polarized `(3)` into four upper labels.  For
-`a,b,c,d>i`, put
+with LF hashes
 
 ```text
-P_i(a,b,c,d)
- =H_i(a)T(b,c,d)+H_i(b)T(a,c,d)
-  +H_i(c)T(a,b,d)+H_i(d)T(a,b,c),                     (47)
-
-N_i(a,b;c,d)
- =T(i,a,b)H(c,d)+T(i,c,d)H(a,b).                      (48)
+ce490561fbc888a94e58ba987912983280c286eba13b2638b5bd8c7a432560d4
+5c54b52f8e04fbc363a0ce6f6026f03460bd9bf2053a5358ea116e767a5fc99c.
 ```
 
-The individual matching conjecture
+It starts from
 
 ```text
-P_i(a,b,c,d)>=3N_i(a,b;c,d)                            (49)
+d_pd_q
+ =binom(p+q,p)f_(p+q)
+  +binom(p+q+2,p+1)d_(p+q+1),                         (44)
 ```
 
-for each of the three complementary matchings would imply coefficientwise
-positivity before the cyclic averaging used above.  After multiplying by
-`i!a!b!c!d!`, `(49)` becomes
+splits the adjacent-row cyclic determinant into high and low pieces
+`H_*` and `L_*`, and proves the stronger pair
 
 ```text
-sum_(x in {a,b,c,d})
- (i+x)!(a+b+c+d-x)! tau({a,b,c,d}\{x})
-
- >=3[
-  (i+a+b)!(c+d)!tau(i,a,b)
- +(i+c+d)!(a+b)!tau(i,c,d)
- ],                                                     (50)
-
-tau(a,b,c)
- =(a+b+c+1)
-   [1/(a+1)+1/(b+1)+1/(c+1)]-1.
+H_*>0,                         H_*+4L_*>0.             (45)
 ```
 
-The companion verifies `(49)--(50)` and all coordinate forward
-differences in the stated finite universe, but there is no universal
-proof.  The theorem above does not require `(49)`: the beta/Abel proof
-retains only a three-label cyclic coefficient and deliberately forgets
-the individual matching.
-
-Two still-tempting stronger shortcuts are false.  In the exact pair block
+After sorting `x<=y<=z`, a beta integral produces decreasing kernels
+`phi_x>=phi_y>=phi_z`.  Abel summation reduces `(45)` to six prefix
+polynomials in nonnegative gap variables.  Their exact nonzero-term counts
+are
 
 ```text
-i=0,                 (y,z)=(3,44),                 a=4,
+high:       46, 51, 46,
+quarter:   140,145,136,
 ```
 
-the tilted fourth falling-factorial mean obeys
+and every coefficient is nonnegative with a positive constant.  The same
+companion contains a second general-jump Newton certificate and the older
+`19,800` matching-forward checks.  This independent proof gives strong
+audit redundancy; the simpler floor `(13)` is the primary proof used by
+the transport extension.
 
-```text
-Phi-[(y)_4+(z)_4]/2=-217452/901<0.                     (51)
-```
+## 9. Stronger sidecars and exact scope
 
-And in the sign-Laguerre basis, for `V=d_1+t d_3`, the `k=3`
-coefficientwise adjacent determinant is
+The individual four-upper-label matching inequality from the earlier
+candidate remains open.  It would prove a stronger coefficientwise
+statement before cyclic symmetrization, but neither proof of `(9)` needs
+it.  Two other stronger shortcuts remain false: pairwise fourth
+falling-factorial dominance fails by `-217452/901`, and raw
+coefficientwise Laguerre quotient monotonicity fails for
+`V=d_1+td_3` when `t>0` is small.
 
-```text
-2t(5640t^2+371t-3),                                   (52)
-```
+The primary exact companion verifies the normalized kernel identities,
+`2,197` algebra cells, `6,591` residual monotonicity cells, `6,160` cyclic
+cells, `60,000` random ratio cells, `1,452` separated orientation cells,
+and `2,000` interlaced MLR cells.  It checks the sharp kernel equality,
+coercive determinant, convexity hostile, Cauchy--Binet transport, and all
+three interlaced controls.  Normal, optimized, and stored transcripts
+agree exactly.
 
-which is negative for small positive `t`.  Pairwise convex dominance and
-raw coefficientwise Laguerre monotonicity therefore remain invalid proof
-routes.
+This theorem covers separated, stochastically ordered, and
+MLR/derivative-ordered positive cones.  It does not cover arbitrary
+incomparable positive cones, signed radial coefficients, all of HYP-8765,
+SFC(3), NC2, or GMC2.
 
-## 7. Exact evidence and independent audits
+## 10. Independent hostile audits
 
-The companion uses integers, rational numbers, and exact SymPy
-polynomials with explicit exception gates; it has no truth-bearing Python
-assertions.  It verifies:
-
-1. the factorial tensors, pair product, polarization, and Pascal
-   identities;
-2. `1,080` exact high/low cyclic normalizations and quarter signs;
-3. all six global beta/Abel prefix polynomials, including the complete
-   `46/51/46` and `140/145/136` coefficient certificates;
-4. `1,375` strict quotient comparisons and `3,016` cone orientations;
-5. an independent direct general-jump Newton expansion in `2,000` source
-   cells and `1,400` repeated-multiset aggregations;
-6. the direct general-jump proof's exact `27`, `424`, `164`, and `474`
-   term nonnegative-coefficient certificates;
-7. all `19,800` forward matching checks, retained only as evidence for
-   the stronger open sidecar; and
-8. both false-route hostiles `(51)--(52)`.
-
-One independent audit derived the global beta/Abel proof and equality
-classification.  A second independently derived the general-jump
-Newton/cyclic proof, including the repeated-label multiplicities and the
-fact that only the first Newton order is needed for strictness.  Normal,
-optimized, and stored transcripts agree, and the LF-normalized hashes
-match.
-
-This theorem enlarges THM-2828 from one arbitrary lower cone direction
-against one interval to arbitrary nonzero positive directions on both
-sides of a support cut.  It does not prove arbitrary signed radial
-coefficients, the stronger matching sidecar, general HYP-8765, or any
-new form of unrestricted GMC2 beyond the already closed THM-2022.
+Independent audits rederived the beta normalization, boundary and mixed
+differences, effective-mean certificate, cyclic rearrangement, exact
+`6(n+1)` cancellation, determinant symmetrization, integration by parts,
+and equality classification.  Two further independent derivations checked
+the stochastic-order and coefficient-minor extensions, derivative-flag
+scope, negative unordered hostile, Gram/cubic-divisibility step, and
+Gaussian `lambda_0=0` condition.  Both exact companions replay normally
+and under `-O`; their LF-normalized hashes match.
 
 **QED.**

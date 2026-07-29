@@ -164,13 +164,17 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   which splits uniquely into `D` positive Gauss--Laguerre atoms.  The `D=2`
   polynomial `x-1` has zero scalar readout but no zero node value, so positive
   splitting still does not supply MISTAKE-211's multiplier observations.
-- THM-2812/2824 close three-slot envelopes; THM-2828 reaches one prefix cone.
-  THM-2830 proves moment-six detection for two positive cones separated by a
-  support cut. THM-2841 then proves every tensor of two or more nonnegative
-  adjacent-difference cone elements has positive factorial readout, by an
-  exact forbidden-board rook count and sharp derangement lower bound. Signed
-  coefficients, multiplier access, and THM-2830's stronger four-label matching
-  sidecar remain open.
+- THM-2812/2824 close three-slot envelopes; THM-2828 reaches lower-prefix
+  cones.  THM-2830 now proves the two-disjoint-positive-cone orientation:
+  `R_n=L(d_nV^2)/L(d_nV)` is strictly increasing because its cyclic Pascal
+  kernel is at least `6H_n(p)H_n(q)H_n(r)`.  The same ratio ladder proves
+  interlaced positive cones whenever shifted upper coefficients
+  monotone-likelihood-ratio dominate the lower coefficients.  This bypasses
+  the stronger four-index matching inequality.  THM-2841 then proves that
+  every tensor of two or more nonnegative adjacent-difference cone elements
+  has positive factorial readout, via an exact forbidden-board rook count and
+  sharp derangement floor.  Arbitrary incomparable cubic orientations, signed
+  radial channels, and multiplier access remain open.
 ### Live work
 
 Publish THM-2022; sharpen THM-2111's binomial degree toward `M+N`; formalize

@@ -1,0 +1,18 @@
+THM-2830 UNIVERSAL PASCAL-RATIO EXACT REFEREE
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
+algebra_cells=2197
+residual_monotonicity_cells=6591
+cyclic_kernel_cells=6160
+minimum_J_minus_6nplus1=0
+floor_equalities=11; unique_triple=(0,0,0)
+random_ratio_cells=60000
+minimum_determinant_minus_2A3=0
+ratio_convexity_hostile=-53721500/663
+orientation_cells=1452
+orientation_equalities=12
+interlaced_MLR_cells=2000
+interlaced_equalities=71
+interlaced_controls=strict:17460; equality:0; unordered:-33540
+universal_floor=K_n>=6*H_np*H_nq*H_nr
+mechanism=SEPARABLE_BASE_PLUS_MONOTONE_INTERACTION
+all_exact_controls=PASS
