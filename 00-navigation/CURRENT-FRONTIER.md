@@ -18,10 +18,10 @@ uncertified relation gates are not unsafe.  Separately, THM-741/2883 prove all
 
 - **CITED:** LRC through 13 total runners; see
   [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
-- **PROVED + FINITE-EXACT:** THM-741/2883 close `584+816+602=2002`; THM-738
-  handles small speeds.  Thus a bad anchored primitive row has 13 distinct
-  absolute speeds with `v_9>=15` (not all anchors).  THM-2885 gives all `3003`
-  next-rung bodies a top-ten gate; apex closure is open.
+- **PROVED + FINITE-EXACT:** THM-741/2883 close `2002` roots; THM-738 handles
+  small speeds, forcing `v_9>=15`.  THM-2885 gates all `3003` bodies;
+  THM-2888 closes `1559`, leaving `10,202` triangles on `1444`.
+  Only the eight-body/five-slot rung.
 - **PROVED:** THM-965/2051--2092/2074 give the relation, pair floor, rank atlas
   and ledger; THM-2148/2168 reach scalar `5+3`.  THM-2054 decorrelates
   recorded margins at `H=2^19`, subject to MISTAKE-080/082's shape-specific
@@ -212,7 +212,8 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   detects every binary positive-cone plane. THM-2848 reduces the four-slot
   bad locus to `F^o=0` or a shared cubic--quartic multipole line.  THM-2866's
   cubic Pascal ratio excludes `F^o=0`
-  uniformly.  THM-2879 closes high/middle strict wedges; the low/negative-`Y` sector stays open.
+  uniformly.  THM-2879/2890 close all three strict consecutive wedge charts;
+  boundaries and the general mixed line remain open.
   THM-2849 closes the first window on 1,820 supports through exponent `15`;
   THM-2854 closes `k=1,2` on 252 supports in `{0,...,8}`, all by exact sharp
   Macaulay rank.  THM-2860 identifies Euler-tangent cubic lines with Möbius
