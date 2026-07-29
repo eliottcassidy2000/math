@@ -1,7 +1,7 @@
 ---
 id: THM-741
 title: NEAR-AP FOUR-SLOT CLOSURE — every 13-speed family with AT LEAST 9 speeds in {1,…,14} satisfies LRC(14). Equivalently, for EVERY 9-element body E ⊆ {1,…,14} (all C(14,9)=2002) and all v₁<v₂<v₃<v₄ not in E, {E,v₁..v₄} is lonely. Proof = the THM-735 Bonferroni tree at j=4: legs J4 (one inequality, all four ≥ V₁(E)) / J3 (per-v₁ exact bodies) / J2 (per-(v₁,v₂)) / J1 (per-(v₁,v₂,v₃) tail) / bottom (exact-ℚ sweeps of covering quadruples via lcm-multiples) — with PROVED P1/P2 LEMMA-SKIPS at every level (subtrees where the next Bonferroni threshold already fires from the parent's exact data close without computing the child body; sound because P1/P2 are one-level bounds off exact data)
-status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 11/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; the other 10 bodies retain only their pure four-added-speeds-above-14 tails.  Exact top-four root-coverage envelopes close `(2,4),(3,4),(3,5),(3,6),(4,5),(4,6),(4,7)`.  For the near-miss `(3,7)`, an exact top-five envelope leaves only `{17,19,21,23}`, whose direct four-comb survivor is positive.  These envelopes use a finite exact coverage bank plus the THM-735(ii) covariance tail cap and subsume the earlier `(3,4)` first-speed branches.  Upgrades globally to PROVED only when all 2002 bodies close clean.
+status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 15/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; only the six pure tails with root edges `(1,2),(1,3),(1,4),(1,5),(1,6),(1,7)` remain.  Exact top-four root-coverage envelopes close `(2,4),(3,4),(3,5),(3,6),(4,5),(4,6),(4,7)`; a top-five isolated exception closes `(3,7)`; and finite ranked-exception heads close `(2,3),(2,5),(2,6),(2,7)`.  All use literal root carriers plus the THM-735(ii) covariance cap, not Fano transport.  Upgrades globally to PROVED only when all 2002 bodies close clean.
 source: kind-pasteur-2026-07-13-S128 (cont.5); exact flood and completed-family addenda codex-2026-07-15-S14/S15/S16 and codex-2026-07-17/18
 depends_on:
   - THM-735   # the simultaneous multi-peel lemma (j=4,3,2,1 legs) + P1/P2 peel lemmas (THM-733)
@@ -45,6 +45,8 @@ verification:
   - 05-knowledge/results/lrc14_j4_37_top_five_exception_codex_20260728.out
   - 04-computation/lrc14_j4_six_more_top_four_coverage_codex_20260728.py
   - 05-knowledge/results/lrc14_j4_six_more_top_four_coverage_codex_20260728.out
+  - 04-computation/lrc14_j4_four_ranked_exception_coverage_codex_20260728.py
+  - 05-knowledge/results/lrc14_j4_four_ranked_exception_coverage_codex_20260728.out
   - 04-computation/lrc14_thm741_sharded_resume_runner_codex_20260717.py
   - 05-knowledge/results/lrc14_thm741_sharded_resume_runner_codex_20260717.out
 ---
@@ -1078,7 +1080,7 @@ Therefore six additional whole flood bodies are proved:
 > `15<=a<b<c<d`, the family `H union e union {a,b,c,d}` is
 > strictly lonely.
 
-Together with `34,56,57,67`, the exact whole-body census is now
+Together with `34,56,57,67`, the exact whole-body census at that checkpoint was
 
 ```text
 {24,34,35,36,45,46,47,56,57,67}: 10/21.
@@ -1162,6 +1164,103 @@ the failed plain-envelope control (B19).  Combined with the preceding
 six-root theorem, this raises the exact flood count from `10/21` to `11/21`.
 The ten root edges `12,13,14,15,16,17,23,25,26,27` remain.  This proves no
 Fano/`chi_7` transport and not global THM-741 or LRC(14). ∎
+
+## Ranked finite heads close `(2,3),(2,5),(2,6),(2,7)` (codex-2026-07-28)
+
+The isolated top-five repair extends to a finite ranked-exception lemma.  Let
+the globally ranked individual root coverages be
+
+```text
+q1>=q2>=... .
+```
+
+If, for some `K`,
+
+```text
+m-q1-q2-q3-q_(K+1)>0,                                  (B22)
+```
+
+then every four-speed set not wholly contained in the first `K` ranks is
+positive by the union bound: at most three of its speeds can occupy the first
+three ranks, and its fourth coverage is at most `q_(K+1)`.  Only the finite
+head of `C(K,4)` literal quadruples remains.  This is a recursive sharpening
+of the top-four profile: preserve progressively more ranked atoms only until
+the tail becomes uniformly harmless, then restore full interval geometry on
+that finite head.
+
+For the four remaining non-`1` root edges, exact coverage banks give:
+
+| root | `r,m` | `K` | finite `W` | `q_(K+1)` | exact cap crossing `T` | gate (B22) | preceding gate | `C(K,4)` |
+|---|---|---:|---:|---|---|---:|---:|---:|
+| `23` | `30,358427/2522520` | 36 | 1796 | `c(350)=29/1225` | `535134600/297953` | `30353/410960550` | `-667243/3328780455` | 58,905 |
+| `25` | `26,409261/2522520` | 22 | 1175 | `c(117)=317/11466` | `92756664/78919` | `37841/551170620` | `-2069/91861770` | 7,315 |
+| `26` | `30,413747/2522520` | 10 | 840 | `c(25)=3303/107800` | `267567300/318211` | `69547/612411800` | `-81687/306205900` | 210 |
+| `27` | `22,52147/315315` | 23 | 924 | `c(92)=206/7245` | `225648423/244061` | `15721/367447080` | `-1269581/58424085720` | 8,855 |
+
+Here
+
+```text
+T=(99/70)r/(7(q_(K+1)-m/7)),
+floor(T)=W,
+u(W)>q_(K+1)>u(W+1).                                   (B23)
+```
+
+Thus the listed head and outside rank are global over every integer `w>=15`,
+not artifacts of a truncated sort.  The negative preceding gates prove that
+each `K` is the first possible rank for this particular three-largest-plus-
+outside certificate.  The plain top-four margins are also all negative:
+
+```text
+root 23: -2106724/156165009,     root 25: -5458325/468495027,
+root 26: -1226821/122482360,     root 27: -1002853/76488984.
+```
+
+So none of these four bodies was already closed by the preceding top-four
+lemma.
+
+The verifier evaluates every one of the `75,285` head quadruples.  It caches
+full exact carriers through the first three speeds, subtracts the fourth
+sparsely, replays five deterministic terminal quantiles per root by full
+subtraction, and rebuilds each global minimum both as a direct thirteen-comb
+union and as four full nested subtractions.  Exactly `79,31,21,36` head
+quadruples, respectively, have nonpositive individual-coverage union margins;
+all of those and all remaining head quadruples are strictly positive.  The
+global head minima are
+
+| root | minimum lonely measure | four speeds | components |
+|---|---:|---|---:|
+| `23` | `1068173/39939900` | `16,19,22,25` | 20 |
+| `25` | `11739671/340723656` | `17,19,23,25` | 14 |
+| `26` | `287374099/9369900540` | `17,19,22,46` | 20 |
+| `27` | `39526373/1338557220` | `17,19,26,46` | 18 |
+
+For roots `23` and `27` the actual head minimum even lies outside the
+nonpositive-union-margin subbank.  This is a useful guardrail: the ranking
+selects the finite proof universe, but it does not predict the metric minimum
+after comb overlaps are restored.
+
+Consequently
+
+> for each `e` in `{23,25,26,27}` and every
+> `15<=a<b<c<d`, the family `H union e union {a,b,c,d}` is
+> strictly lonely.
+
+The ten earlier bodies, the independent root-`37` top-five certificate, and
+these four ranked-head bodies give
+
+```text
+{23,24,25,26,27,34,35,36,37,45,46,47,56,57,67}: 15/21.
+```
+
+The exact residual is the six-edge star at label `1`:
+
+```text
+12,13,14,15,16,17.
+```
+
+This is a structural change in the frontier, not an asserted symmetry:
+literal root carriers were computed throughout, and no Fano/`chi_7`
+transport was used.  Global THM-741 and LRC(14) remain open. ∎
 
 ## Sharded-runner integrity repair (codex-2026-07-17)
 
