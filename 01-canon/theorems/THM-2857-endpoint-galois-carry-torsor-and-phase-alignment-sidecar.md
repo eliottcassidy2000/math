@@ -6,9 +6,10 @@ status: >
   exact free C13 Galois orbit over Q(zeta_91); its centered orbit is the
   faithful character 3, and its tenth powers remain point-separating with
   Fourier support F13 minus {7,10}.  External tensoring turns any first
-  factorial exit m<13 into exactly m+1 carry channels.  This is a
-  coefficient-field carrier, not a physical ancestry action.  Final
-  immutable audit is pending.
+  factorial exit m<13 into exactly m+1 carry channels.  The existing
+  proved coefficient-support ancestry action is K0-linear and fixes the
+  endpoint scalar, so a new semilinear clutch is necessary.  Final immutable
+  audit is pending.
 source: root/lrc-endpoint-galois-carry-torsor-2026-07-28
 depends_on:
   - THM-2380-cross-word-charged-target-correlation-and-pair-twist-gate
@@ -24,8 +25,8 @@ related:
   - THM-2858-six-ray-open-half-plane-moment-eight-gaussian-hostile
 script: 04-computation/lrc14_endpoint_galois_carry_torsor_thm2857.py
 output: 05-knowledge/results/lrc14_endpoint_galois_carry_torsor_thm2857.out
-script_sha256: cb9ebc9f1c1b392e83b79f6e00938ed293a22eada6f29aba8a08ad9bbfcb5b9a
-output_sha256: 02bb13817319570870925cd23b5df9f48c3a617f65d521345343472f2dc4a34b
+script_sha256: 0bae59c9b1460f37e1879a81746154593cb0699ee13b3e5e800ba0af95ea5e4c
+output_sha256: ac1194c46db2cdf43c807ece781b63971c081cc5f9070964007fdecdc20f1583
 hash_basis: LF-normalized bytes
 ---
 
@@ -41,9 +42,10 @@ thirteen tenth powers are still distinct.  Thus phase separation needs a
 point-separating orbit, not all twelve nontrivial Fourier characters.
 
 This is not an LRC(14) closure.  The theorem constructs a coefficient-field
-torsor.  It does not identify physical ancestry translation with Galois
-motion, realize the tenth power by a lawful packet operation, or supply the
-endpoint-matched reference required for a physical pair twist.
+torsor and proves that the current canonical carry action does not realize
+it: that action is linear over the endpoint field and leaves `c` fixed.
+It does not realize the tenth power by a lawful packet operation or supply
+the endpoint-matched reference required for a physical pair twist.
 
 ## 1. The relative cyclotomic torsor
 
@@ -221,7 +223,7 @@ not preserve a real positive-cone presentation and is not a physical LRC
 packet product.  The result is an exact bridge between detection order and
 carry bandwidth, not an identification of the two problems.
 
-## 4. Conditional relation to the Bockstein loop
+## 4. The current carry is scalar-trivial
 
 THM-2851 proves on the comparison nerve
 
@@ -236,17 +238,45 @@ construction provides a fully typed endpoint packet and an equivariance
 coefficient(T^r packet)=sigma_r(c),                      (15)
 ```
 
-while preserving the target, semantic word, right-endpoint gauge, and the
-reference used for phase comparison.  Then `(4)` detects the Bockstein loop
-by the nontrivial multiplier `omega^3`.  If the same construction lawfully
-realizes the tenth-power coefficient in `(5)`, its distinct values select a
-unique carry section.  Under the separate endpoint-matched hypotheses of
-THM-2380, one fixed nonzero QA reference then recovers that complex scalar.
+This equivariance is absent from the existing carrier.  THM-2851's proved
+oriented object is the group-algebra mask
 
-None of the hypotheses in the preceding paragraph follows from the Galois
-calculation.  In particular, a physical carry acts on interval/root
-coordinates, whereas `sigma_1` multiplies cyclotomic exponents.  Treating
-them as identical without `(15)` would manufacture the desired basepoint.
+```text
+h_L in Z[C_(13^5)],            partial_T h_L=(Z-1)h_L.
+```
+
+After extension to `K_0=Q(zeta_1183)`, `T` is multiplication by `Z` and is
+`K_0`-linear.  Tensoring with the THM-2847 endpoint scalar therefore gives
+
+```text
+T(c h_L)=c Z h_L,              partial_T(c h_L)=c(Z-1)h_L. (16)
+```
+
+But
+
+```text
+sigma_1(c)=zeta^624-zeta^783 != zeta^624-zeta^510=c.      (17)
+```
+
+Thus the current canonical action is not `(15)`.  The first failed
+implication is now exact: a free Galois orbit in the coefficient field does
+not twist a coefficient-linear ancestry module.  In local-system language,
+canon has the constant `K_0` local system on the ancestry circle, whereas
+the endpoint torsor would require monodromy `sigma_1`.  The missing datum is
+a semilinear clutch, not another scalar normalization.
+
+Conditionally, if a future physical construction supplies that clutch while
+preserving the target, semantic word, right-endpoint gauge, and phase
+reference, then `(4)` detects the Bockstein loop by `omega^3`.  If it also
+lawfully realizes the tenth-power coefficient in `(5)`, the distinct values
+select a unique carry section.  Under the separate endpoint-matched
+hypotheses of THM-2380, one fixed nonzero QA reference then recovers that
+complex scalar.
+
+None of those conditional hypotheses follows from the Galois calculation.
+A physical carry acts on interval/root coordinates, whereas `sigma_1`
+multiplies cyclotomic exponents.  Treating them as identical despite
+`(16)--(17)` would manufacture the desired basepoint.
 
 ## 5. Exact verification
 
@@ -255,7 +285,8 @@ It verifies:
 
 1. all thirteen relative Galois automorphisms and the orbit formula `(3)`;
 2. freeness, the symbolic supports in `(4)`, `(8)`, and `(11)`, and `(5)`;
-3. the relative norm identity and Gaussian coefficients `70/252`;
+3. the relative norm identity, Gaussian coefficients `70/252`, and the
+   exact scalar-linear/Galois mismatch `(16)--(17)`;
 4. an independent specialization in `F_4733` with an exact primitive
    `1183`rd root, separating all thirteen `c_r` and all thirteen `c_r^10`;
 5. the fourth-, fifth-, and tenth-power supports and point-separation
@@ -265,8 +296,8 @@ Normal, optimized, and stored-output replay are byte-identical after LF
 normalization.  LF-normalized SHA-256:
 
 ```text
-script  cb9ebc9f1c1b392e83b79f6e00938ed293a22eada6f29aba8a08ad9bbfcb5b9a
-output  02bb13817319570870925cd23b5df9f48c3a617f65d521345343472f2dc4a34b
+script  0bae59c9b1460f37e1879a81746154593cb0699ee13b3e5e800ba0af95ea5e4c
+output  ac1194c46db2cdf43c807ece781b63971c081cc5f9070964007fdecdc20f1583
 ```
 
 An independent hostile audit rederived the relative field, orbit,
@@ -294,13 +325,15 @@ preserved algebraically:
   target-label alignment, faithful centered character, and relative norm;
 
 not supplied physically:
-  T=sigma_1, a lawful tenfold endpoint product, common endpoint gauge,
+  a semilinear T=sigma_1 clutch, a lawful tenfold endpoint product,
+  common endpoint gauge,
   fixed source, positive/current realization, response basepoint,
   E3/complement truth, owner phase, or preservation of a positive cone;
 
 cheapest decisive test:
-  compare one actually carried endpoint coefficient with sigma_1(c);
-  if equal, test a lawful aligned power/reference pair by THM-2380.
+  the current K0-linear action already fails;
+  construct one genuinely semilinear carried endpoint coefficient,
+  then test a lawful aligned power/reference pair by THM-2380.
 ```
 
 No row is excluded and the LRC(14) ledger remains `165`.

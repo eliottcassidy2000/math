@@ -6,6 +6,7 @@ tenth_power_Fourier_support=(0, 1, 2, 3, 4, 5, 6, 8, 9, 11, 12); missing=(7,10);
 factorial_exit_tensor=first_exit_m<13_gives_m+1_carry_channels; m4_support=(0, 3, 6, 9, 12); m4_point_separating=1
 m5_support=(0, 2, 3, 6, 9, 12); Gaussian_exit4=70*c_r^4*L(H^4); Gaussian_exit5=252*c_r^5*L(H^5)
 exact_specialization=(prime=4733,zeta1183=625); relative_norm=A^13-B^13_nonzero
-conditional_bridge=physical_T_equals_sigma1_on_same_typed_endpoint; cheapest_test=one_carried_endpoint_coefficient_then_T2380_pair_twist
+canonical_current_T=K0_linear; scalar_exponents_stay=(624,510); sigma1_exponents=(624,783); mismatch=1
+missing_bridge=semilinear_clutch_T_on_scalar_equals_sigma1; future_test=one_new_carried_endpoint_coefficient_then_T2380_pair_twist
 scope=coefficient_Galois_torsor_only; no_physical_ancestry_action=1; no_response_section=1; no_positivity_or_LRC14_conclusion=1
 ALL EXACT CHECKS PASSED

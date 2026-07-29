@@ -86,6 +86,14 @@ def main():
         len({right for _, right in orbit_exponents}) == P,
         "endpoint orbit is not free",
     )
+    canonical_scalar_exponents = orbit_exponents[0]
+    sigma_one_exponents = orbit_exponents[1]
+    require(
+        canonical_scalar_exponents == (624, 510)
+        and sigma_one_exponents == (624, 783)
+        and canonical_scalar_exponents != sigma_one_exponents,
+        "canonical-linear versus semilinear exponent boundary failed",
+    )
 
     # The centered orbit is exactly the faithful character 3.  Its forward
     # difference is the same character multiplied by omega^3-1.
@@ -245,8 +253,12 @@ def main():
         "relative_norm=A^13-B^13_nonzero"
     )
     print(
-        "conditional_bridge=physical_T_equals_sigma1_on_same_typed_endpoint; "
-        "cheapest_test=one_carried_endpoint_coefficient_then_T2380_pair_twist"
+        "canonical_current_T=K0_linear; scalar_exponents_stay=(624,510); "
+        "sigma1_exponents=(624,783); mismatch=1"
+    )
+    print(
+        "missing_bridge=semilinear_clutch_T_on_scalar_equals_sigma1; "
+        "future_test=one_new_carried_endpoint_coefficient_then_T2380_pair_twist"
     )
     print(
         "scope=coefficient_Galois_torsor_only; "
