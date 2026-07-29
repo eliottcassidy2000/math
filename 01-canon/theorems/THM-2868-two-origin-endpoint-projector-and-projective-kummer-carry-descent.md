@@ -2,7 +2,7 @@
 id: THM-2868
 title: "Two-origin endpoint projector and projective Kummer carry descent"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On the THM-2847 common 42-cell horn, a two-origin endpoint difference
   and a variable-offset two-sample Prony projector give a physical
   frequency-dual C13 atlas from 26 actual 91-unit multiplier samples.
@@ -30,7 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2868 -- Two-origin endpoint projector and projective Kummer carry descent
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
@@ -313,6 +313,14 @@ LF-normalized SHA-256:
 script 3282526029d27210a5cadaa10f702a974f926e217e6838913d11d9dbc888d9b5
 output ce4b8961b3dfa468d51b884b91002872440b05bf70d7e5eecfc3318d4100e2f9
 ```
+
+The independent immutable audit read the full theorem and companion,
+replayed normal and optimized modes against the stored 16-line transcript,
+and matched both declared LF-normalized hashes.  It independently rederived
+the 26 raw unit conditions, the Prony split and variable-offset transport,
+the cyclic 42-step wrap, the exact Fourier support and unique `(3,10)`
+channel, the degree-thirteen Kummer conclusion, and the `u=547`
+non-`F` witness.  No mathematical, typing, or evidence defect was found.
 
 ## 6. Exact boundary and connection contract
 
