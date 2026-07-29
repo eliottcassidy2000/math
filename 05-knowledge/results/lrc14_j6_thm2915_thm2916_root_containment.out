@@ -1,0 +1,7 @@
+LRC14 THM2915/THM2916 exact root containment
+counts=(thm2915_union=1315,thm2916_closed=394,overlap=394,new_from_thm2916=0,joint_union=1315,residual=2117)
+thm2916_overlap_digest=c68d09676683f6204df3b04353a3b3107ebbb4285d13a3b6001446372e351e1b
+joint_union_digest=d6702800de9451cce73801cb0cb9d8566f9e42ad4e63c6b0e77c9668b37cdce9
+mode=LOCKED
+scope=exact root-set composition only;THM2915 remains independent of THM2916;not LRC14
+all_exact_controls=PASS

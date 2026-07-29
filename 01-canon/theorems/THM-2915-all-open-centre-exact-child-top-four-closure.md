@@ -18,10 +18,13 @@ depends_on:
 related:
   - THM-2893-complement-cap-finite-core-flag-lemma
   - THM-2897-partition-cap-tropical-convolution-and-alternating-pair-ladder
+  - THM-2916-two-h3-row-dynamic-tail-child-top-four-closure
 verification:
   - 04-computation/lrc14_j6_all_open_centre_child_top4_closure_thm2915.py
   - 05-knowledge/results/lrc14_j6_all_open_centre_child_top4_closure_thm2915.out
   - 05-knowledge/results/lrc14_j6_all_open_centre_child_top4_closure_thm2915.ledger.out
+  - 04-computation/lrc14_j6_thm2915_thm2916_root_containment.py
+  - 05-knowledge/results/lrc14_j6_thm2915_thm2916_root_containment.out
 ---
 
 # THM-2915 -- all-open-centre exact child top-four closure
@@ -97,6 +100,17 @@ R = C minus D_x
 
 where `E` is the seven-body root and `a` is the marked apex.  The ordered
 interval lists, component counts, and exact masses agree in every case.
+
+The verifier separately constructs the expected six-field child-key set
+
+```text
+(E, rank, a, P, x, earlier hostile centres)
+```
+
+directly from the parent pivots.  It checks equality with the profiled
+child-key set, cardinality `51,222`, absence of full-key collisions, and
+absence even of collisions after shortening to `(E,rank,a,x)`.  Thus the
+ledger has neither a duplicated child nor a missing ordered pivot.
 
 ## 3. Dynamic finite tail with no arbitrary cap
 
@@ -301,6 +315,21 @@ Finally, adjoining `Q` gives `1,285` branch-composed route roots.  Their
 intersection with the live `351`-root union is `321`, and their additive
 part is the `964` roots in `(2)`.
 
+THM-2916 was promoted while this broader computation was in final replay.
+The separate locked containment sidecar compares its explicit `394`-root
+list with the explicit `1,315`-root union here and proves
+
+```text
+THM-2916 roots intersect THM-2915 union                394
+THM-2916 roots outside THM-2915 union                    0
+joint union                                           1,315.         (21)
+```
+
+The overlap tuple has SHA-256
+`c68d09676683f6204df3b04353a3b3107ebbb4285d13a3b6001446372e351e1b`,
+exactly THM-2916's locked closed-root digest.  This is a later composition
+control, not a dependency of the all-open-centre child theorem.
+
 ## 7. Inherited-slice and hostile controls
 
 On the pair-exception slice the exact census is
@@ -309,13 +338,13 @@ On the pair-exception slice the exact census is
 exception rows                                           52
 children                                                400
 top-four closed / failed                            272 / 128
-fully T-completed exception rows                           0.          (21)
+fully T-completed exception rows                           0.          (22)
 ```
 
 The histogram of failed children per exception row is
 
 ```text
-1:5, 2:26, 3:14, 4:6, 5:1.                             (22)
+1:5, 2:26, 3:14, 4:6, 5:1.                             (23)
 ```
 
 Thus the six root gains in `(19)` really use THM-2907; they are not
@@ -327,14 +356,14 @@ On the one-H3 slice, the general verifier reproduces THM-2912 exactly:
 ordinary parent rows                                    210
 ordered children                                        807
 closed / failed children                           765 / 42
-slice-closed roots                                       172.         (23)
+slice-closed roots                                       172.         (24)
 ```
 
 Only `170` of those `172` are pure whole-route closures.  The two
 difference bodies
 
 ```text
-(2,3,6,10,12,13,14),       (2,6,7,8,9,10,11)            (24)
+(2,3,6,10,12,13,14),       (2,6,7,8,9,10,11)            (25)
 ```
 
 have an additional pair-exception row with failed top-four children.
