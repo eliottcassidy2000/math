@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `lrc14_endpoint_kummer_galois_bockstein_thm2874.py` and
+  `lrc14_endpoint_kummer_hermitian_complement_addendum_thm2874.py`
+  -> matching `.out` files [THM-2874 PROVED + VERIFIED-EXACT; PRIMARY
+  INDEPENDENTLY HOSTILE-AUDITED].  The projective frequency orbit and
+  centered endpoint Galois orbit differ by an explicit
+  `Q(zeta_91)`-rational scalar; the frequency atlas is the external
+  character-three coordinate on the sharp `C169` carry fibre.  Recombining
+  its Prony branches gives exactly THM-2861's Hermitian edge with support
+  `{0,3,10}`.  The zero-chart nine-factor endpoint complement supplies
+  the q7 coefficient at common Prony nodes, but the frequency triangle has
+  holonomy `1` rather than the ancestry Bockstein `omega^3`.  Its guard/q5
+  projection is uniformly the three-corner horn
+  `{(S,S),(D,S),(D,D)}`, missing `(S,D)` over all 169 addresses.  No typed
+  macro/ancestry contraction, positive current, row exclusion, or LRC(14)
+  proof follows.  LF-normalized `(script,output)` hashes are
+  `primary=(3f15c44dc5f66c660ac3605cc25814adc39594bf193aa130a0f5353d6a6178b0,90b993b56508ef3603f94104596b899ed9ec7084a2b58ead1604882873ef5455)`;
+  `addendum=(44dfdefbf5392e7840f74e63d190a96a484af71ba9bd31df3ce62a22b827d67e,f914d934c40ef58ea5df0f0df0c61c357c9ab9073db3ba7cbb044d8564886cab)`.
 - `lrc14_horn_collar_{hinge,endpoint_carry,endpoint_orbit_action,rootless_endpoint_boundary,prony_typed_descent_gate,v4_globalization,witt_hinge,endpoint_coboundary}_thm2859.py`
   -> matching `.out` files [THM-2859 PROVED + VERIFIED-EXACT +
   INDEPENDENTLY HOSTILE-AUDITED].  The twenty-cell horn meets the collar in

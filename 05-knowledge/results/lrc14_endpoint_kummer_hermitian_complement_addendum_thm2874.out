@@ -1,0 +1,13 @@
+THM-2874 HERMITIAN / FULL-PATTERN-COMPLEMENT ADDENDUM
+horn20=20; first=(0, 5, 1); last=(12, 10, 1); q7_signature=(0,1,1,1,1,1)
+truth_locus=endpoint_PAT_E3_equals_macro_E3_at_zero_chart; full_pattern_complement_is_disjoint_and_exhaustive
+literal_q_patterns=((0, 'SSSSSSSSD'), (1, 'SSDSSSSSD'), (2, 'SSDSSSSSD'), (3, 'SSSSSSSSD'), (4, 'SDSSSSSSD'), (5, 'DDSSSSSSD'), (6, 'DSSSSDSSD'), (7, 'DSSSSDSSD'), (8, 'DSSSSSSSD'), (9, 'SSSSDSSSD'), (10, 'SSSSDSSSD'), (11, 'SSSSSSSSD'), (12, 'SSSDSSSSD')); guard_q5_corners={(S,S),(D,S),(D,D)}; missing_corner=(S,D); guard_q5_projection_uniform_over_169_addresses=1
+seam=((0, 3, 'E3', 0), (4, 7, 'not-E3', 1), (8, 11, 'E3', 2)); raw_m=(1, 2, 170, 171, 339, 340); raw_Y=(38, 64, 4432, 4458, 8826, 8852); all_are_91_units=1
+field=352341050142921841; U0=305272472600558724; V0=26104004983225775; Hermitian_support=(0, 3, 10); trace_recovery=256589003186658459; seam_invariant=47204448390698408; q11_to_q7_ratio=266762412650247847; frequency_holonomy=1; chi3_T=39714007455759520; raw_pairs=((331376477583784499, 140617567341148909), (131941050890012053, 338705060148809183), (46511408837072605, 267570973868452353))
+field=956354278959359281; U0=869313819406323966; V0=482074204885093064; Hermitian_support=(0, 3, 10); trace_recovery=882402187336454864; seam_invariant=506809691169037423; q11_to_q7_ratio=60270986858140389; frequency_holonomy=1; chi3_T=257673921998609436; raw_pairs=((395033745332057749, 212598632462533647), (720093480575714035, 751654797635872143), (533001117649729453, 334853958447651225))
+recombination=S_r=P*c_r and V0=P*A; S_(r+1)bar(S_r)=P*bar(P)*c_(r+1)bar(c_r)
+Hermitian=edge_is_exact_THM2861; support={0,3,10}; 13_distinct=1; symmetric_trace_recovers_only_with_forward_frequency_orientation=1
+complement_test=q3/E3,q7/not-E3,q11/E3 are full translated atoms; U_r*omega^(10q) is constant and b=10 is unique
+Bockstein_verdict=q11_to_q7_projective_ratio_is_omega, but formal_coefficient_frequency_triangle_holonomy=1 while aligned_chi3(T)=omega^3
+scope=exact graded coefficient charts and decisive flat hostile; no typed E3/complement contraction, QA/QAB alignment, positive current, ancestry action, row exclusion, or LRC14 proof
+ALL EXACT CHECKS PASSED

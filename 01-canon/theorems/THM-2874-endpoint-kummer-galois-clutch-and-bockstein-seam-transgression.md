@@ -5,25 +5,34 @@ status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The THM-2868 projective frequency orbit is carried to the THM-2857
   centered endpoint Galois orbit by an explicit Q(zeta_91)-rational
-  scalar.  Independently, the thirteen frequency sections realize the
+  scalar, and recombination recovers exactly the THM-2861 Hermitian
+  edge.  Independently, the thirteen frequency sections realize the
   character-three coordinate on the sharp C169 carry fibre over q3.
   Collapsing that fibre along the tempting q3/q11/q7 seam has exact
-  Cech defect omega^3-1, the THM-2851 Bockstein generator.  The q11
-  signed row still cancels, q7 remains E3-zero, and no physical
+  Cech defect omega^3-1, the THM-2851 Bockstein generator.  The full
+  endpoint-pattern complement supplies the coefficient-support half of
+  a q7 chart at the zero address, but its formal frequency triangle is
+  flat and its literal factor projection is a three-corner horn.  The
+  q11 signed row still cancels, q7 remains E3-zero, and no physical
   common-support extension or LRC decrement is proved.
 source: root/lrc-holotopy-allocation-2026-07-28
 depends_on:
+  - THM-2847-q3-q11-transverse-endpoint-edge-and-e3-realization-horn
   - THM-2851-q3-q11-q7-bockstein-holonomy-and-realization-sidecar
   - THM-2857-endpoint-galois-carry-torsor-and-phase-alignment-sidecar
+  - THM-2861-endpoint-hermitian-edge-holonomy-and-semilinear-clutch-test
   - THM-2868-two-origin-endpoint-projector-and-projective-kummer-carry-descent
   - THM-2870-prime-power-convolution-versus-physical-diagonal-intertwiner-obstruction
 related:
-  - THM-2847-q3-q11-transverse-endpoint-edge-and-e3-realization-horn
   - THM-2863-endpoint-prony-splitter-and-carry-character-three-intertwiner
 script: 04-computation/lrc14_endpoint_kummer_galois_bockstein_thm2874.py
 output: 05-knowledge/results/lrc14_endpoint_kummer_galois_bockstein_thm2874.out
 script_sha256: 3f15c44dc5f66c660ac3605cc25814adc39594bf193aa130a0f5353d6a6178b0
 output_sha256: 90b993b56508ef3603f94104596b899ed9ec7084a2b58ead1604882873ef5455
+addendum_script: 04-computation/lrc14_endpoint_kummer_hermitian_complement_addendum_thm2874.py
+addendum_output: 05-knowledge/results/lrc14_endpoint_kummer_hermitian_complement_addendum_thm2874.out
+addendum_script_sha256: 44dfdefbf5392e7840f74e63d190a96a484af71ba9bd31df3ce62a22b827d67e
+addendum_output_sha256: f914d934c40ef58ea5df0f0df0c61c357c9ab9073db3ba7cbb044d8564886cab
 hash_basis: LF-normalized bytes
 ---
 
@@ -72,6 +81,43 @@ This remains an algebraic coefficient reference.  The coordinate `t_r`
 comes from nonlinear projectivization of two signed split branches, and
 THM-2857 proves that the canonical physical ancestry action is
 coefficient-linear rather than the required Galois-semilinear action.
+
+### 1a. Recombination is exactly the Hermitian edge
+
+The two THM-2868 Prony branches retain more than the projective ratio.
+Writing their common nonzero source scalar as `P_src`, their exact
+normalization is
+
+```text
+V_0=P_src A,                U_r=-P_src B omega^(3r),
+S_r=U_r+V_r=P_src c_r,      1+t_r=c_r/A.               (H1)
+```
+
+Moreover `1+t_r^(-1)=A bar(c_r)`.  Therefore the normalized adjacent
+projective product is not just of the same character type as THM-2861:
+
+```text
+(1+t_(r+1))(1+t_r^(-1))=c_(r+1) bar(c_r),              (H2)
+
+S_(r+1) bar(S_r)
+ =P_src bar(P_src)c_(r+1)bar(c_r).                     (H3)
+```
+
+Thus the signed frequency-charted coefficient edge differs from the
+canonical Hermitian edge only by the fixed nonzero norm scalar in (H3).
+The edge has Fourier support exactly `{0,3,10}` and thirteen distinct
+nonzero values.  It is not a physical full current.
+
+The symmetric trace does not create a new unoriented measurement.  Once
+the forward frequency orientation is independently retained, the law
+`E_r=omega^3 bar(E_r)` recovers
+
+```text
+E_r=omega^3 (1+omega^3)^(-1)(E_r+bar(E_r)).             (H4)
+```
+
+Reversing the edge has the same trace, however.  No physical polarization
+measurement or adjacent common support has been constructed.
 
 ## 2. The frequency atlas realizes one sharp carry fibre
 
@@ -241,6 +287,71 @@ both origins for each of `q3,q7,q11` is empty.  The 20-cell **macro**
 `E3` complement of THM-2847 is therefore not the same object as an
 endpoint deep-bit complement.
 
+### 4a. The full-pattern complement closes the cheapest test negatively
+
+At the zero endpoint chart, the underlying half-open interval locus of
+the entire nine-factor `PAT_E3` pattern—not a single-bit
+approximation—is exactly the underlying THM-2847 macro `E3` locus.  This
+is an extensional equality, not a typed endpoint-to-macro functor.
+Consequently its full set-theoretic complement gives a Boolean
+coefficient-support chart.  The three choices
+
+```text
+(r,q,truth,offset)
+ =(0,3,E3,0), (4,7,not-E3,1), (8,11,E3,2)              (21)
+```
+
+are full translated weight-one atoms on the exact 20-cell horn.  Their six
+Prony multipliers
+
+```text
+1, 2, 170, 171, 339, 340
+```
+
+and frequencies
+
+```text
+38, 64, 4432, 4458, 8826, 8852
+```
+
+are all `91`-units.  The translated charts have the same two endpoint
+nodes, and their transported split coefficients agree with the full
+THM-2868 atlas.  Character `b=10` is the unique target character for which
+`3r+bq` is constant on (21), so `U_r omega^(10q)` is constant.
+
+This executes the coefficient-support half of the proposed cheap
+complement test at the same zero address, and its formal coefficient seam
+is still flat.  No typed transition or Cech morphism has been built.  The
+`q11 -> q7` projective ratio is `omega`, but
+
+```text
+rho(9)rho(8)rho(4)^(-1)=1,       rho(h)=omega^(3h),     (22)
+```
+
+whereas the aligned ancestry carry has holonomy `omega^3`.  Thus the
+complement supplies the q7 coefficient vertex but not the Bockstein
+attachment.
+
+There is also a parallel literal Boolean boundary explaining what the
+binary truth projection forgets.  The q7 pattern is `DSSSSDSSD`:
+complement occupancy is paid for by losing both guard and q5 safety while
+retaining the `C3` danger.  Along the complete target-residue orbit, the
+guard/q5 factor projection assumes exactly
+
+```text
+(safe,safe), (dangerous,safe), (dangerous,dangerous),  (23)
+```
+
+and never `(safe,dangerous)`.  This two-factor projection—not the entire
+nine-bit word—is uniform over all `169` endpoint addresses because every
+canonical representative fixes both corresponding endpoint coordinates to
+zero.  The q7 chart is the
+`(dangerous,dangerous)` corner of this punctured square.  Passing only to
+the extensional `E3/not-E3` truth value forgets the two atomic safeties and
+cannot manufacture the missing fourth corner.  A typed macro
+`E3/complement` contraction compatible with `QA/QAB` ancestry is still
+absent.
+
 THM-2870 makes the same boundary linear and sharp.  On `C13`,
 convolution by `delta_3` is an invertible cyclic permutation, while
 physical multiplication by the same mask has rank one.  Its convolution
@@ -251,7 +362,7 @@ physical coefficient/character reference.
 
 ## 5. Exact evidence
 
-The companion pins the promoted THM-2851, THM-2857, THM-2868, and
+The primary companion pins the promoted THM-2851, THM-2857, THM-2868, and
 THM-2870 exact scripts.  In both certified endpoint fields it verifies:
 
 1. all thirteen instances of the `F`-rational clutch (3);
@@ -278,6 +389,21 @@ script 3f15c44dc5f66c660ac3605cc25814adc39594bf193aa130a0f5353d6a6178b0
 output 90b993b56508ef3603f94104596b899ed9ec7084a2b58ead1604882873ef5455
 ```
 
+The addendum independently pins the primary companion and THM-2847,
+THM-2851, THM-2861, and THM-2868.  It verifies (H1)--(H4), the complete
+thirteen-residue literal factor orbit, the uniform three-corner projection
+(23), the exact Boolean partition, all six `91`-unit probes, common Prony
+nodes, the unique `(3,10)` compensated character, and the hostile equality
+(22).  Normal and optimized modes byte-match its stored transcript:
+
+```text
+python 04-computation/lrc14_endpoint_kummer_hermitian_complement_addendum_thm2874.py
+python -O 04-computation/lrc14_endpoint_kummer_hermitian_complement_addendum_thm2874.py
+
+script 44dfdefbf5392e7840f74e63d190a96a484af71ba9bd31df3ce62a22b827d67e
+output f914d934c40ef58ea5df0f0df0c61c357c9ab9073db3ba7cbb044d8564886cab
+```
+
 The independent immutable audit rederived the base-field clutch, the
 transported `C169` group law and carry cocycle, the signed-table population
 boundary, the flat-versus-Bockstein seam holonomy, the absence of a global
@@ -287,6 +413,13 @@ stored output agree exactly, and both declared LF-normalized hashes match.
 The audit also confirmed that the origin-resolved `q11` values are nonzero
 and equal; only their signed origin difference vanishes.  No remaining
 mathematical, typing, or evidence defect was found.
+
+The addendum was separately replayed in normal and optimized modes and
+independently rederived at the interval, factor, Prony, Hermitian, character,
+and carry levels.  The audit confirmed that only the guard/q5 projection
+is uniform over the `169` addresses, that the endpoint/macro equality is
+only an underlying zero-chart locus equality, and that (22) is a formal
+coefficient seam rather than a physical Cech transporter.
 
 ## 6. Connection contract
 
@@ -312,20 +445,24 @@ preserved:
 
 destroyed / missing:
   a single positive packet, internal rather than external-measurement
-  states, q11 signed mass, q7 E3 support, a common endpoint chart over
-  all target fibres, and a linear physical coefficient/character map;
+  states, q11 signed mass, q7 E3 support, the guard/q5 (safe,dangerous)
+  corner, a typed macro-to-ancestry contraction, and a linear physical
+  coefficient/character map;
 
 needed sidecar:
-  a lawful common-support extension of the populated q3 frequency fibre
-  over q11 and q7, with the Bockstein edge phase and a genuine macro-E3
-  complement transporter;
+  within the canonical address-orbit/full-pattern route, a lawful
+  guard/q5 fourth corner or equally faithful sidecar, followed by a typed
+  macro-E3/complement contraction aligned with QA/QAB ancestry and
+  carrying the Bockstein edge phase; a different transporter may bypass
+  this literal chamber;
 
 cheapest decisive test:
-  construct one nonzero q7 complement coefficient at the same source,
-  target, and endpoint chart as the q3 split, retain one uncancelled q11
-  origin coefficient, and compare the q11-via-q7 phase with the direct
-  q3-to-q7 phase.  Holonomy omega^3 realizes the ancestry attachment;
-  holonomy one reproduces the flat hostile.
+  CLOSED NEGATIVELY by (21)--(23): the full-pattern complement gives a
+  nonzero q7 coefficient at the common chart but has holonomy one.
+  Within this route, the next test must retain the guard and q5 truth
+  coordinates separately, realize the missing (safe,dangerous) corner or
+  an equally faithful sidecar, and only then compare its QA/QAB-typed
+  q11-via-q7 phase with the direct phase.
 ```
 
 No row is excluded and the LRC(14) ledger remains `165`.
