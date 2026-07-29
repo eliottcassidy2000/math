@@ -11,9 +11,10 @@ domain with g(a)>=h.  Every possible maximum singleton then belongs to
 
     H_1^star={w allowed:c_C(w)>=lambda}.
 
-On every row surviving G_5<h, this script proves lambda>h/7, seals H_1^star
-by discrepancy, and computes the actual core exactly.  The result is an
-ordered-pivot workload and proof sidecar, not a closure and not LRC(14).
+On every row not closed by G_5<h, this script proves lambda>h/7, seals
+H_1^star by discrepancy, and computes the actual core exactly.  Ordering
+the possible maxima then gives a pivot certificate on 4,071 centre
+flags and six new whole roots.  This is not a proof of LRC(14).
 """
 
 from __future__ import annotations
@@ -61,7 +62,41 @@ VECTOR_SHA256 = (
 FIRST_EXTERNAL = 15
 S2 = F(99, 70)
 
-# Locked after discovery; replay under ordinary and optimized Python.
+THM2895_ROOTS = {
+    (2, 8, 9, 10, 11, 13, 14),
+    (1, 3, 9, 10, 11, 12, 14),
+    (2, 5, 9, 11, 12, 13, 14),
+    (2, 3, 4, 5, 6, 7, 8),
+}
+THM2898_ROOTS = {(1, 8, 10, 11, 12, 13, 14)}
+THM2899_ROOTS = {
+    (1, 2, 3, 4, 5, 6, 13),
+    (1, 2, 3, 4, 6, 7, 14),
+    (1, 2, 3, 4, 6, 11, 13),
+    (1, 2, 3, 4, 6, 12, 13),
+    (7, 8, 9, 11, 12, 13, 14),
+}
+THM2901_ROOTS = {
+    (1, 2, 3, 4, 6, 11, 12),
+    (1, 2, 3, 5, 6, 10, 13),
+    (1, 2, 4, 5, 6, 12, 13),
+    (1, 3, 4, 5, 6, 7, 14),
+    (5, 7, 8, 10, 11, 13, 14),
+}
+THM2902_ROOTS = {
+    (1, 2, 3, 4, 5, 10, 12),
+    (1, 2, 3, 4, 5, 12, 13),
+}
+THM2905_ADDITIVE_ROOTS = {
+    (1, 2, 3, 4, 8, 9, 11),
+    (1, 2, 4, 5, 6, 10, 13),
+    (5, 6, 7, 9, 10, 11, 14),
+    (5, 6, 8, 9, 10, 12, 13),
+    (5, 6, 8, 10, 11, 12, 13),
+    (6, 7, 9, 11, 12, 13, 14),
+}
+
+# Locked after ordered-pivot discovery; replay under ordinary/optimized Python.
 EXPECTED_COUNTS: tuple[object, ...] | None = (
     11_842,
     52,
@@ -97,9 +132,67 @@ EXPECTED_COUNTS: tuple[object, ...] | None = (
         (12, 7),
         (13, 1),
     ),
+    55_293,
+    4_071,
+    51_222,
+    4,
+    4,
+    0,
+    279,
+    0,
+    11_563,
+    3_411,
+    10,
+    4,
+    6,
+    88,
+    3_344,
+    (
+        (0, 279),
+        (1, 737),
+        (2, 1_428),
+        (3, 1_822),
+        (4, 2_033),
+        (5, 2_183),
+        (6, 1_629),
+        (7, 969),
+        (8, 446),
+        (9, 206),
+        (10, 82),
+        (11, 20),
+        (12, 7),
+        (13, 1),
+    ),
 )
+EXPECTED_ROOTS: tuple[tuple[int, ...], ...] | None = (
+    (1, 2, 3, 4, 5, 6, 11),
+    (1, 2, 3, 4, 5, 8, 9),
+    (1, 2, 3, 5, 7, 10, 14),
+    (1, 2, 4, 8, 11, 12, 13),
+    (1, 2, 5, 6, 10, 12, 13),
+    (2, 4, 6, 8, 11, 12, 13),
+    (3, 4, 6, 7, 9, 11, 12),
+    (5, 6, 7, 8, 10, 11, 12),
+    (5, 7, 9, 10, 11, 12, 14),
+    (6, 7, 8, 9, 11, 12, 13),
+)
+EXPECTED_ADDITIVE_ROOTS: tuple[tuple[int, ...], ...] | None = (
+    (1, 2, 3, 4, 5, 6, 11),
+    (1, 2, 3, 4, 5, 8, 9),
+    (3, 4, 6, 7, 9, 11, 12),
+    (5, 6, 7, 8, 10, 11, 12),
+    (5, 7, 9, 10, 11, 12, 14),
+    (6, 7, 8, 9, 11, 12, 13),
+)
+EXPECTED_EQUALITY_PIVOTS: tuple[tuple[object, ...], ...] | None = (
+    ((1, 2, 3, 4, 7, 9, 14), 1, 24, 20),
+    ((1, 2, 3, 4, 9, 12, 14), 4, 44, 15),
+    ((1, 2, 6, 8, 9, 11, 12), 1, 20, 52),
+    ((1, 3, 4, 6, 8, 9, 13), 2, 21, 20),
+)
+EXPECTED_OPEN_EQUALITY_PIVOTS: tuple[tuple[object, ...], ...] | None = ()
 EXPECTED_LEDGER_SHA256: str | None = (
-    "05b2ce123e995b13f4ef93c948e5dff2ff190ef50dd0be4e893ffe452d25a791"
+    "ec878244b922ba5f48633614a86a1f9706c1fbdd0ebd6c61f020291cfd737bab"
 )
 
 
@@ -330,10 +423,42 @@ def actual_core(row: dict[str, object]) -> dict[str, object]:
         all(label not in forbidden for _, label in core_rows),
         "forbidden label entered hostile centre core",
     )
+    pivot_rows: list[tuple[int, F, F, bool, bool]] = []
+    for index, (coverage, label) in enumerate(core_rows):
+        leaf_cap = row["pair_cap"] - coverage
+        require(leaf_cap >= 0, "pair cap fell below pivot singleton")
+        later_bounds = [
+            min(later_coverage, leaf_cap)
+            for later_coverage, _ in core_rows[index + 1 :]
+        ]
+        # Four formal noncore leaves suffice because a child has four slots.
+        noncore_bound = min(row["threshold"], leaf_cap)
+        leaf_bounds = later_bounds + [noncore_bound] * 4
+        top_four_bound = sum(sorted(leaf_bounds, reverse=True)[:4], F(0))
+        pivot_margin = mass - coverage - top_four_bound
+        # When rho>=lambda, a noncore leaf has strict coverage <lambda.
+        # At zero margin this closes exactly when no four later-core bounds
+        # can attain the same top-four sum without a noncore contribution.
+        later_top_four = (
+            sum(sorted(later_bounds, reverse=True)[:4], F(0))
+            if len(later_bounds) >= 4
+            else None
+        )
+        equality_strict = (
+            pivot_margin == 0
+            and noncore_bound == row["threshold"]
+            and (later_top_four is None or later_top_four < top_four_bound)
+        )
+        pivot_closed = pivot_margin > 0 or equality_strict
+        pivot_rows.append(
+            (label, top_four_bound, pivot_margin, pivot_closed, equality_strict)
+        )
     return {
         **row,
         "actual_size": len(core_rows),
         "core_rows": core_rows,
+        "pivot_rows": tuple(pivot_rows),
+        "branch_closed": all(closed for _, _, _, closed, _ in pivot_rows),
         "scanned": len(labels),
     }
 
@@ -349,8 +474,39 @@ def ledger_line(row: dict[str, object]) -> str:
         f"exception={int(row['pair_exception'])};"
         + "H1="
         + ",".join(f"{label}:{ftext(value)}" for value, label in row["core_rows"])
+        + ";pivot="
+        + ",".join(
+            f"{label}:{ftext(bound)}:{ftext(margin)}:{int(closed)}:{int(repaired)}"
+            for label, bound, margin, closed, repaired in row["pivot_rows"]
+        )
         + "\n"
     )
+
+
+def current_proved_union() -> set[tuple[int, ...]]:
+    by_body: dict[tuple[int, ...], list[F]] = {}
+    for line in PAIR_LEDGER.read_text().splitlines():
+        if not line.startswith("PAIR;"):
+            continue
+        row = fields(line)
+        body = tuple(map(int, row["E"].split(",")))
+        by_body.setdefault(body, []).append(parse_fraction(row["mdirect"]))
+    one_hard = {
+        body
+        for body, margins in by_body.items()
+        if len(margins) == 1 and margins[0] <= 0
+    }
+    prior_fifteen = (
+        THM2895_ROOTS | THM2898_ROOTS | THM2899_ROOTS | THM2901_ROOTS
+    )
+    require(len(prior_fifteen) == 15, "prior fifteen-root union changed")
+    require(len(one_hard) == 61, "THM2903 one-hard bank changed")
+    require(one_hard & THM2902_ROOTS == THM2902_ROOTS, "one-hard overlap changed")
+    through_2903 = prior_fifteen | THM2902_ROOTS | one_hard
+    require(len(through_2903) == 76, "proved union through THM2903 changed")
+    through_2905 = through_2903 | THM2905_ADDITIVE_ROOTS
+    require(len(through_2905) == 82, "proved union through THM2905 changed")
+    return through_2905
 
 
 def nearest_rank(values: list[int]) -> tuple[tuple[int, int], ...]:
@@ -381,6 +537,24 @@ def main() -> None:
     rows.sort(key=lambda row: (row["body"], row["rank"], row["apex"]))
 
     sizes = [row["actual_size"] for row in rows]
+    pivots = [
+        (row, label, bound, margin, closed, repaired)
+        for row in rows
+        for label, bound, margin, closed, repaired in row["pivot_rows"]
+    ]
+    by_body: dict[tuple[int, ...], list[dict[str, object]]] = {}
+    for row in rows:
+        by_body.setdefault(row["body"], []).append(row)
+    closed_roots = tuple(
+        sorted(
+            body
+            for body, body_rows in by_body.items()
+            if all(row["branch_closed"] for row in body_rows)
+        )
+    )
+    proved_union = current_proved_union()
+    additive_roots = tuple(sorted(set(closed_roots) - proved_union))
+    new_union = proved_union | set(closed_roots)
     counts = (
         len(rows),
         sum(row["pair_exception"] for row in rows),
@@ -393,12 +567,75 @@ def main() -> None:
         sum(size == 0 for size in sizes),
         nearest_rank(sizes),
         tuple(Counter(size for size in sizes).most_common(20)),
+        len(pivots),
+        sum(closed for _, _, _, _, closed, _ in pivots),
+        sum(not closed for _, _, _, _, closed, _ in pivots),
+        sum(margin == 0 for _, _, _, margin, _, _ in pivots),
+        sum(repaired for _, _, _, _, _, repaired in pivots),
+        sum(
+            margin == 0 and not closed
+            for _, _, _, margin, closed, _ in pivots
+        ),
+        sum(row["branch_closed"] for row in rows),
+        sum(row["pair_exception"] and row["branch_closed"] for row in rows),
+        sum(not row["branch_closed"] for row in rows),
+        len(by_body),
+        len(closed_roots),
+        len(set(closed_roots) & proved_union),
+        len(additive_roots),
+        len(new_union),
+        3_432 - len(new_union),
+        tuple(
+            sorted(
+                Counter(
+                    sum(not closed for _, _, _, closed, _ in row["pivot_rows"])
+                    for row in rows
+                ).items()
+            )
+        ),
     )
     if EXPECTED_COUNTS is not None:
         require(counts == EXPECTED_COUNTS, "ranked-H1 counts changed")
+    if EXPECTED_ROOTS is not None:
+        require(closed_roots == EXPECTED_ROOTS, "ordered-H1 root list changed")
+    if EXPECTED_ADDITIVE_ROOTS is not None:
+        require(
+            additive_roots == EXPECTED_ADDITIVE_ROOTS,
+            "additive ordered-H1 roots changed",
+        )
+    equality_pivots = tuple(
+        (
+            row["body"],
+            row["rank"],
+            row["apex"],
+            label,
+        )
+        for row, label, _, margin, _, _ in pivots
+        if margin == 0
+    )
+    if EXPECTED_EQUALITY_PIVOTS is not None:
+        require(
+            equality_pivots == EXPECTED_EQUALITY_PIVOTS,
+            "ordered-H1 equality boundary changed",
+        )
+    open_equality_pivots = tuple(
+        (
+            row["body"],
+            row["rank"],
+            row["apex"],
+            label,
+        )
+        for row, label, _, margin, closed, _ in pivots
+        if margin == 0 and not closed
+    )
+    if EXPECTED_OPEN_EQUALITY_PIVOTS is not None:
+        require(
+            open_equality_pivots == EXPECTED_OPEN_EQUALITY_PIVOTS,
+            "ordered-H1 open equality boundary changed",
+        )
 
     digest = hashlib.sha256()
-    digest.update(b"LRC14/j6/all-hard/ranked-H1-Hunter-pivots/v1\n")
+    digest.update(b"LRC14/j6/all-hard/ranked-H1-Hunter-pivots/v2\n")
     for row in rows:
         digest.update(ledger_line(row).encode())
     ledger_sha256 = digest.hexdigest()
@@ -416,15 +653,61 @@ def main() -> None:
     print(f"counts={counts}")
     print(f"cutoff_quantiles={nearest_rank([row['cutoff'] for row in rows])}")
     print(f"size_quantiles={nearest_rank(sizes)}")
+    print(f"closed_roots={closed_roots}")
+    print(f"additive_roots={additive_roots}")
+    print(f"strict_equality_pivots={equality_pivots}")
+    print(f"open_equality_pivots={open_equality_pivots}")
+    positive_pivots = [pivot for pivot in pivots if pivot[3] > 0]
+    failed_pivots = [pivot for pivot in pivots if not pivot[4]]
+    closest_positive = min(
+        positive_pivots,
+        key=lambda pivot: (
+            pivot[3],
+            pivot[0]["body"],
+            pivot[0]["rank"],
+            pivot[1],
+        ),
+    )
+    closest_failure = max(
+        failed_pivots,
+        key=lambda pivot: (
+            pivot[3],
+            tuple(-value for value in pivot[0]["body"]),
+            -pivot[0]["rank"],
+            -pivot[1],
+        ),
+    )
+    print(
+        "closest_positive_pivot="
+        f"{closest_positive[0]['body']};rank={closest_positive[0]['rank']};"
+        f"a={closest_positive[0]['apex']};x={closest_positive[1]};"
+        f"margin={ftext(closest_positive[3])}"
+    )
+    print(
+        "closest_failed_pivot="
+        f"{closest_failure[0]['body']};rank={closest_failure[0]['rank']};"
+        f"a={closest_failure[0]['apex']};x={closest_failure[1]};"
+        f"margin={ftext(closest_failure[3])}"
+    )
     print(f"ledger_sha256={ledger_sha256}")
     print(
         "mode=DISCOVERY"
-        if EXPECTED_COUNTS is None or EXPECTED_LEDGER_SHA256 is None
+        if any(
+            value is None
+            for value in (
+                EXPECTED_COUNTS,
+                EXPECTED_ROOTS,
+                EXPECTED_ADDITIVE_ROOTS,
+                EXPECTED_EQUALITY_PIVOTS,
+                EXPECTED_OPEN_EQUALITY_PIVOTS,
+                EXPECTED_LEDGER_SHA256,
+            )
+        )
         else "mode=LOCKED"
     )
     print(
         "scope=11842 G5-surviving scalar-hard rows;actual hostile-centre "
-        "cores;ordered-pivot workload only;not LRC14"
+        "cores and ordered-pivot upper bounds;not LRC14"
     )
     print("all_exact_controls=PASS")
 

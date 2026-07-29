@@ -10,16 +10,18 @@
   finite evidence only.  Script/output LF SHA-256:
   `(70ae887f60cc9e1428d158e668e89342a409671190bb2e6cb77f7b5f88387a14,3b086ca71d33f96b71c00da3c57cd708293e791814c84a134bdcee979eaee50d)`.
 - `lrc14_j6_all_hard_ranked_h1_hunter_pivot_census_codex_20260729.py` ->
-  matching `.out` [FINITE-EXACT SCOUT / NO CLOSURE; THM-2904 remains
-  RESERVED].  On all `11,842` hard rows surviving `G_5`, the least hostile
-  star-centre coverage is strictly above `h/7`; discrepancy cutoffs are
-  `149..1013`.  Exact scanning of `4,797,677` allowed labels leaves only
-  `55,293` actual possible maximum singletons, with core sizes `1..13`
-  (median `5`).  This is the ordered-pivot workload, not a no-cover result.
-  Ordinary/optimized outputs are byte-identical; semantic digest
-  `05b2ce123e995b13f4ef93c948e5dff2ff190ef50dd0be4e893ffe452d25a791`.
+  matching `.out` [THM-2904 PROVED + FINITE-EXACT + VERIFIED].  On all
+  `11,842` hard rows not closed by `G_5<h`, the least hostile star-centre
+  coverage is strictly above `h/7`; exact cores have sizes `1..13`.
+  Ordering their `55,293` possible maxima and retaining the pair cap closes
+  `4,071` pivots and all pivots on `279` branches.  All four raw equality
+  pivots close by strict noncore bounds.  Six new whole roots take
+  the proved union to `88` and residual to `3344`; none of the `52`
+  pair-cap exceptions closes.  Ordinary/optimized outputs are
+  byte-identical; semantic digest
+  `ec878244b922ba5f48633614a86a1f9706c1fbdd0ebd6c61f020291cfd737bab`.
   Script/output SHA-256:
-  `(c062c6b94b600c8271d6599606e5f7cfa5a69cfd245f6a08ed5e8e89b565ecd7,d7d4bc1ad11050cdadd5e88df58d3689a13311e43eeb9bb949a745ca105a6cf1)`.
+  `(6e3e079b0c4ad67beec22c8f02c848cb25354a20de446ab634f2c5a116264f96,0933c67a108b6d588e36737fb2b17b325ca36146976cfb035bebe036a6234036)`.
 - `lrc14_j6_all_hard_hunter_star_envelope_census_codex_20260729.py` ->
   matching `.out` [THM-2905 PROVED + FINITE-EXACT + VERIFIED].  Exact
   breakpoint evaluation of the Hunter-star envelope `G_5` closes `2,964`
