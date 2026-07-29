@@ -1,0 +1,13 @@
+THM-2914 EVENTUAL HIGH-GAP CUBIC-NULL BRANCH
+status=PROOF-COMPLETE CANDIDATE+VERIFIED-EXACT
+low_quadratic=(1,1,2);low_cubic=(2,4,10,30)
+limit_I1=-eta^3+6eta*xi^2-4xi^3-14;limit_I2=-2(eta^3-3eta^2*xi+2xi^3+4)
+eliminant=-256*(2u^3+18u^2-729u+54)
+root_boxes=(-25,-24),(0,1),(15,16);positive_quadrant=last_only
+positive_ratio=6/7<xi/eta<35/27
+jacobian=18*(eta^2-2eta*xi+2xi^2)^2>0
+endpoint=(eta^2-2xi^2)*(eta^2-4eta*xi+2xi^2);normalized_floor>13823/35721*eta^4
+rates=T2/T3^(2/3)->0;T4/T3^(4/3)->infinity;quartic_error_bases=81/256,27/256,36/256,81/256
+digests=I1:6b59fdb1978397e9efefcad497c99ca2edd23deac95bb5a3af04c02a0c9f61ff;I2:212141a0f5a563f56c41f05225e5e9b9b93d8ee6eceb8aa77cda77093f9f6e1b;p:b1472981a28032a2251c051e59765d5ede2df5a9e230deadb0f658048ace44bb;J:3c9a5a3648ea58e89486db7a753fe38d4bea4f4e5387634f09f32b95a3f9b864
+scope=eventual local positive branch only; no finite cutoff, global uniqueness, arbitrary-support, SFC(4), or GMC closure
+all_exact_checks=PASS
