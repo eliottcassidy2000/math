@@ -4,11 +4,11 @@
 > first. The control panel is current; dated sections preserve searchable proof
 > history and may contain obligation labels superseded by later corrections.
 
-## 2026-07-27 current control panel
+## 2026-07-29 current control panel
 
-**Status: OPEN.** LRC(14) means thirteen distinct nonzero relative speeds. The
-old uniform `q<=25` shortcut is false; uniform twelve-speed sporadic emptiness
-is unproved. Begin with the structured kernel, not a larger blind census.
+**Status: OPEN.** THM-2923 closes `3,432` seven-in-window roots; direct frontier: at most six.
+Uniform `q<=25` is false.  Under `q_7>=h/7, B>=2h/7`, Hunter crosses at `h/7`.
+Not unrestricted; needs a new sidecar.
 
 ### The present reduction graph
 

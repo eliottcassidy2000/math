@@ -7,18 +7,17 @@ Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDI
 
 ### Headline
 
-**OPEN.** The standard reduction has 13 nonzero relative speeds; known work
-settles at most 13 total runners.  The residue is not a routine finite scan.
+**OPEN.** THM-2923 closes all `3,432` roots with exactly seven speeds in `{1,...,14}`;
+the open direct sector has at most six in-window speeds and at least seven external slots.
 
-THM-2051/2052 leave a bounded rank-`>=11` sparse code with required sidecars;
-uncertified relation gates are not unsafe.  Separately, THM-741/2883 prove all
-`2002` near-AP four-slot roots, not unrestricted LRC(14).
+THM-2051/2052 leave a rank-`>=11` sparse code; THM-741/2883 close `2002`
+near-AP roots.  A failed gate is not danger.
 
 ### Proved reductions and terminals
 
 - **CITED:** LRC through 13 total runners; see
   [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
-- **PROVED + FINITE-EXACT:** THM-741/2883 and THM-2888/2892/2893/885 close `2002` nine-body and `3003` eight-body roots (`v_8<=14`); THM-2915/2919/2920 give union `1,610`, residual `1,822`, closing all `690` two-H3 roots.
+- **PROVED + FINITE-EXACT:** THM-741/2883/2888/2892/2893/885 close `2002` nine- and `3003` eight-body roots; audited THM-2923 closes `3432` seven-body roots.  Prior splits are intermediate.
 - **PROVED:** THM-965/2051--2092/2074 give the relation, pair floor, rank atlas
   and ledger; THM-2148/2168 reach scalar `5+3`.  THM-2054 decorrelates
   recorded margins at `H=2^19`, subject to MISTAKE-080/082's shape-specific
@@ -29,7 +28,9 @@ uncertified relation gates are not unsafe.  Separately, THM-741/2883 prove all
 
 ### Exact live obligation
 
-HYP-8871 leaves exactly `165` rows.  THM-2363 and THM-2368 are sidecars;
+The direct frontier has at most six in-window speeds; conditionally `q_7>=h/7,
+B>=2h/7` makes the Hunter crossing `h/7`, so THM-735 gives no finite core.
+Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other
 valuation lane; THM-2440--2539 close supplied-root seams but not semantic-root
 identification (kernel `28,393`).  THM-2545/2549 give Hall and chronology gates,
