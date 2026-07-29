@@ -156,18 +156,19 @@ both                          3,900             784.       (10)
 ```
 
 None of THM-2901's `52` pair-cap exceptions satisfies `(5)`.  Therefore
-the sharpened exact branch partition is
+the sharpened exact partition by this test is
 
 ```text
 Hunter-star closure                                   2,964
-remaining finite H3-link obligations                 11,790
+H3-routed rows surviving G_5                         11,790
 pair-cap exceptions                                      52
                                                      ------
                                                      14,806. (11)
 ```
 
 Failure of `(5)` is only failure of a sufficient upper bound; it is not a
-cover witness.
+cover witness.  In particular, `(11)` is not a global open-branch ledger:
+THM-2903 already closes one-hard rows inside the second line.
 
 ## 4. Whole-root recomposition
 
@@ -266,7 +267,7 @@ Canonical artifacts:
 
 ```text
 04-computation/lrc14_j6_all_hard_hunter_star_envelope_census_codex_20260729.py
-SHA-256 402498daeec59db0a9051c235ddcf0bdb4ee08250b0570e442bec6cf62782405
+SHA-256 5c6b26ce1a10823adf735b0d5629e2e6ed0817ce523f9462be02b9bf607e863f
 
 05-knowledge/results/lrc14_j6_all_hard_hunter_star_envelope_census_codex_20260729.out
 SHA-256 c346cbce451b4d0104707b071c9874798e2cadc853102038b229be9ad8a6afe4
@@ -279,6 +280,6 @@ python3 04-computation/lrc14_j6_all_hard_hunter_star_envelope_census_codex_20260
 python3 -O 04-computation/lrc14_j6_all_hard_hunter_star_envelope_census_codex_20260729.py
 ```
 
-This theorem closes the six roots in `(12)`.  It does not close the
-remaining `11,790` H3-link obligations, the `52` pair-cap exceptions, the
-remaining `3,350` roots, or LRC(14). ∎
+This theorem closes the six roots in `(12)`.  It does not by itself close
+the `11,790` H3-routed rows that fail `(5)`, any of the `52` pair-cap
+exceptions, the remaining `3,350` roots, or LRC(14). ∎

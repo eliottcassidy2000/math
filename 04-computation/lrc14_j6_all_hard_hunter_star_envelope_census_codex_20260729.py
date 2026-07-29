@@ -146,22 +146,26 @@ def fields(line: str) -> dict[str, str]:
 
 
 def row_key(
-    row: dict[str, str], apex_name: str
-) -> tuple[tuple[int, ...], int, int]:
+    row: dict[str, str], apex_name: str, prefix_name: str
+) -> tuple[tuple[int, ...], int, int, tuple[int, ...]]:
     return (
         tuple(map(int, row["E"].split(","))),
         int(row["rank"]),
         int(row[apex_name]),
+        tuple(map(int, row[prefix_name].split(","))),
     )
 
 
-def parse_hard_rows() -> dict[tuple[tuple[int, ...], int, int], dict[str, object]]:
-    rows: dict[tuple[tuple[int, ...], int, int], dict[str, object]] = {}
+def parse_hard_rows(
+) -> dict[tuple[tuple[int, ...], int, int, tuple[int, ...]], dict[str, object]]:
+    rows: dict[
+        tuple[tuple[int, ...], int, int, tuple[int, ...]], dict[str, object]
+    ] = {}
     for line in HARD_LEDGER.read_text().splitlines():
         if not line.startswith("HARD;"):
             continue
         row = fields(line)
-        key = row_key(row, "apex")
+        key = row_key(row, "apex", "prefix")
         top5 = tuple(
             (int(item.split(":", 1)[0]), parse_fraction(item.split(":", 1)[1]))
             for item in row["top5"].split(",")
@@ -178,7 +182,8 @@ def parse_hard_rows() -> dict[tuple[tuple[int, ...], int, int], dict[str, object
             "body": key[0],
             "rank": key[1],
             "apex": key[2],
-            "prefix": tuple(map(int, row["prefix"].split(","))),
+            "prefix": key[3],
+            "gate_size": int(row["K"]),
             "mass": parse_fraction(row["m"]),
             "components": int(row["r"]),
             "top5": top5,
@@ -222,15 +227,17 @@ def hunter_star(qs: tuple[F, ...], pair_cap: F) -> tuple[F, F]:
 
 
 def parse_pair_rows(
-    hard_rows: dict[tuple[tuple[int, ...], int, int], dict[str, object]]
+    hard_rows: dict[
+        tuple[tuple[int, ...], int, int, tuple[int, ...]], dict[str, object]
+    ]
 ) -> list[dict[str, object]]:
     rows: list[dict[str, object]] = []
-    seen: set[tuple[tuple[int, ...], int, int]] = set()
+    seen: set[tuple[tuple[int, ...], int, int, tuple[int, ...]]] = set()
     for line in PAIR_LEDGER.read_text().splitlines():
         if not line.startswith("PAIR;"):
             continue
         row = fields(line)
-        key = row_key(row, "a")
+        key = row_key(row, "a", "P")
         require(key in hard_rows, "pair row has no hard-row mate")
         require(key not in seen, "duplicate pair row")
         seen.add(key)
@@ -242,11 +249,8 @@ def parse_pair_rows(
         pair_margin = parse_fraction(row["mB2"])
         direct_margin = parse_fraction(row["mdirect"])
         require(mass == hard["mass"], "joined carrier mass changed")
-        require(
-            tuple(map(int, row["P"].split(","))) == hard["prefix"],
-            "joined excluded prefix changed",
-        )
         require(row["S"] == hard["stratum"], "joined stratum changed")
+        require(int(row["K"]) == hard["gate_size"], "joined gate size changed")
         require(int(row["r"]) == hard["components"], "joined component count changed")
         require(
             (
@@ -321,6 +325,7 @@ def main() -> None:
             if all(row["direct_margin"] > 0 for row in body_rows)
         )
     )
+    require(set(old_roots) == THM2901_ROOTS, "old direct-terminal roots changed")
     one_hard = {
         body
         for body, body_rows in by_body.items()
