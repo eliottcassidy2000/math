@@ -2,8 +2,8 @@
 id: THM-2951
 title: "Fifth-compound reconstruction and V-four phase scalarization boundary"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  On a reduced real length-six algebra with three
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On a
+  reduced real length-six algebra with three
   conjugate pairs, the sixth, fifth, and balanced third compounds of
   multiplication carry respectively the nonnegative norm, the
   norm-scaled inverse operator, and the eight half-system weights
@@ -19,7 +19,14 @@ status: >
   traces change.  No SFC(4), LRC, knot, modular-group, Jacobian, or
   Dixmier consequence is claimed.
 source: root-gmc-compound-torsor-ladder-2026-07-29
-audit: Pending independent hostile audit.
+audit: >
+  An independent hostile audit rederived the exterior-power
+  reconstruction, solved the full signed-pair intertwiner system with
+  nullity zero, independently rebuilt both contraction rank
+  calculations and their kernels, and checked generic nonnormal and
+  singular controls.  Normal, optimized, and stored output matched
+  after LF normalization; both hashes were exact and no optimized-away
+  or floating truth gate was present.
 depends_on:
   - THM-2947-conjugate-pair-corank-parity-and-one-minor-resultant-gate
   - THM-2950-three-conjugate-pair-v-four-torsor-and-quartic-resolvent-frame
@@ -34,8 +41,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2951 -- fifth-compound reconstruction and V-four phase scalarization boundary
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. The three compound levels
 
@@ -144,8 +150,9 @@ h_epsilon
 ```
 
 Thus the obstruction below is not information-theoretic loss from the
-full fifth compound.  THM-2947 and THM-2949 use a positivity readout or
-one matrix coefficient of it, not the entire invertible operator.
+full fifth compound.  THM-2947 uses a positivity readout, while
+THM-2949's fixed-cofactor program proposes one matrix coefficient;
+neither retains the entire invertible operator.
 
 ## 3. No signed-pair-equivariant linear descent
 
