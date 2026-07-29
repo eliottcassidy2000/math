@@ -2,8 +2,8 @@
 id: THM-2950
 title: "Three-conjugate-pair V-four torsor and quartic resolvent frame"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  Three unordered conjugate pairs have eight oriented
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Three
+  unordered conjugate pairs have eight oriented
   half-systems and four classes modulo global conjugation.  The latter
   form a V_4 torsor; pair permutations act as GL(2,2)=S_3, and the
   resulting affine action is AGL(2,2)=V_4 semidirect S_3=S_4.  The
@@ -15,7 +15,15 @@ status: >
   ordering, modular-group action, SFC(4) closure, or Jacobian
   conclusion is claimed.
 source: codex-gmc-modular-two-three-synthesis-2026-07-29
-audit: Pending independent hostile audit.
+audit: >
+  An independent hostile audit rederived the intrinsic torsor rather
+  than based-vector-space typing, the signed-pair permutation quotient,
+  AGL(2,2)=S4 action, trace invariance, V4 kernel and S3 image on
+  labeled pairings, all three resolvent-difference signs, and the
+  discriminant identity.  It verified the norm/phase hostiles,
+  recomputed both LF hashes, and replayed normal, optimized, and stored
+  output byte-for-byte.  The final wording explicitly allows extra
+  information loss when numerical resolvent roots collide.
 depends_on:
   - THM-2843-four-slot-projective-divisibility-and-resolvent-reduction
 related:
@@ -29,8 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2950 -- three-conjugate-pair V-four torsor and quartic resolvent frame
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Three pairs produce a four-point affine plane
 
@@ -176,8 +183,10 @@ The action of `S_4` on these three pairings has
 kernel V_4,                         image S_3.         (17)
 ```
 
-Thus the cubic with roots `(16)` remembers exactly the `S_3` quotient
-of `(6)` and forgets the affine `V_4` position.
+Thus the action on the three **labeled** resolvent roots factors
+exactly through the `S_3` quotient of `(6)` and forgets the affine
+`V_4` position.  If two numerical roots in `(16)` collide, the
+specialized cubic can of course forget additional information.
 
 The discriminant identity is immediate from
 
