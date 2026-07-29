@@ -1,5 +1,16 @@
 # Script Results Index
 
+- `lrc14_j6_one_hard_h3_link_core_census_codex_20260729.py` ->
+  summary and full link-ledger `.out` files [THM-2903 PROVED +
+  FINITE-EXACT + VERIFIED].  The true `H_3` cores on the `61` non-direct
+  one-hard roots have only `461` vertices and `1,961` pairs.  Literal links
+  resolve `1,907` pairs; the `54` unresolved edges have only two triangles,
+  and exact two-cover caps close both triangle children.  All `61` roots
+  close; after the exact two-root overlap with THM-2902, the proved union
+  is `76` and the official residual is `3356`.  Source/full-ledger hashes:
+  `(d62ff934f445b247a478d6b58f83f43f331003960291bce11f4ee313e6312707,56236d7f8e51f12f80126c359415844762ff1b855b5d3b98d9b215781334754d)`;
+  summary-output hash
+  `5719083a83b275206907f47141fee8da2ba489194e31ba7c119f5313e3dfe73d`.
 - `lrc14_j6_all_hard_global_pair_cap_census_codex_20260729.py` ->
   summary and full branch-ledger `.out` files [THM-2901 PROVED +
   FINITE-EXACT + VERIFIED].  Every one of the `14,806` scalar-hard marked
