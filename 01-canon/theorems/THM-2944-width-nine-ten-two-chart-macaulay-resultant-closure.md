@@ -2,8 +2,8 @@
 id: THM-2944
 title: "Width-nine/ten two-chart Macaulay resultant closure"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  For every n>=0, first-window SFC(4) holds on all 64
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  n>=0, first-window SFC(4) holds on all 64
   translated four-slot supports of exact width nine or ten.  The
   original and stable-mutated Macaulay charts have a common factor
   associated to q200^5*c300*g*Res, where g=gcd(K,P_alt); it has
@@ -16,6 +16,14 @@ status: >
   identity is a negative-root sidecar, not a bare-resultant formula.
   No width-eleven or arbitrary-width claim is made.
 source: codex-gmc-uniform-width-extension-2026-07-29
+audit: >
+  An independent hostile audit rederived the two separate common-factor
+  gates, checked that only positivity of the full
+  q200^5*c300*g*Res content excludes the genuine resultant wall,
+  verified the g*Res rather than bare-Res typing of the repeated-divisor
+  sidecar, recomputed the source and output hashes, and replayed normal,
+  optimized, and stored output byte-for-byte with empty stderr.  It
+  found no remaining defect.
 depends_on:
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
   - THM-2942-macaulay-extraneous-flag-factor-and-pluecker-mutation
@@ -35,8 +43,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2944 -- width-nine/ten two-chart Macaulay resultant closure
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
@@ -299,4 +306,4 @@ python -O 04-computation/gmc_width_nine_ten_two_chart_resultant_closure_thm2944.
 Both modes must byte-match the stored transcript and the declared
 LF-normalized hashes.
 
-**Proof-complete candidate.**
+**QED.**
