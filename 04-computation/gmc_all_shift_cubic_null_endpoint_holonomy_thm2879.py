@@ -72,7 +72,7 @@ def direct_adjacent_tensor(indices: tuple[int, ...]) -> sp.Integer:
 
 
 def normalized_adjacent_tensor(offsets: tuple[int, ...]) -> sp.Expr:
-    """Adjacent tensor divided by L(d_(n+2)^k), for offsets in {0,1,2}."""
+    """Adjacent tensor divided by M_k=L(f_(n+2)^k), for offsets in {0,1,2}."""
 
     order = len(offsets)
     value = sp.Integer(0)

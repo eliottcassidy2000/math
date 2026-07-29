@@ -2,7 +2,8 @@
 id: THM-2879
 title: "All-shift cubic-null endpoint-holonomy exit"
 status: >
-  PROVED + VERIFIED-EXACT.  On the unique positive cubic-null plane
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the unique
+  positive cubic-null plane
   U_n=d_n+x_n d_(n+2), V_n=d_(n+1)+y_n d_(n+2) of THM-2855, the quartic
   endpoint-holonomy determinant is strictly negative for every integer
   n>=1.  Exact substitution through the positive linear subresultant and
@@ -24,14 +25,14 @@ related:
   - THM-2875-all-order-initial-pascal-ladder-and-support-square-range
 script: 04-computation/gmc_all_shift_cubic_null_endpoint_holonomy_thm2879.py
 output: 05-knowledge/results/gmc_all_shift_cubic_null_endpoint_holonomy_thm2879.out
-script_sha256: 7aae88a219689a910229e69fd03cc7a28ae53ef671d8297a274f237ee8a7476e
+script_sha256: 44012d84c88a22f246ef350f7f9a364116ac1fc839347361dee64c0a9c4a6e27
 output_sha256: b0cba47d600dcbb290fd960ca2967a9ca592f3e51703ad1df3aea75fce39619e
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2879 -- all-shift cubic-null endpoint-holonomy exit
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Put
 
@@ -443,5 +444,16 @@ The companion verifies:
 4. the positive linear selector and all clearing denominators;
 5. the pseudo-division exponent and every coefficient of `(26)`; and
 6. three independent literal-depth endpoint controls.
+
+## 8. Independent hostile audit
+
+An independent audit by
+`root/lrc-rank-impossible-overlap-2026-07-29` checked the common tensor
+normalization and its positive scale, the selector substitution, the
+pseudo-division exponent and coefficient sign, and the inference from
+endpoint mismatch to shared-line exclusion.  It found no mathematical or
+scope defect.  Its sole documentation correction was to identify the
+normalizing tensor in the companion docstring as
+`M_k=L(f_(n+2)^k)`, consistently with `(10)--(12)`.
 
 **QED.**
