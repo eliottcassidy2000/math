@@ -313,3 +313,79 @@ def anneal_sameh(dims, steps, seed, log=print):
                     log(f"   groups={[(groups[gi][0], groups[gi][1][:2]) for gi in ng]}")
                     log(f"   T0={nT0} Rbase={cand.Rbase}")
     return best, best_s
+
+
+def anneal_steponly(dims, steps, seed, log=print):
+    """INTERSECTION game: labels depend on (axis, step e_i) ONLY (no prefix,
+    no suffix dependence), no merges — expressible in BOTH benchmark formats
+    simultaneously (verifiable: f_i constant on prefixes; intuitive: same
+    label for every glued vertex). Strongest-claim certificates."""
+    import os, math, random
+    rng = random.Random(seed)
+    k = len(dims)
+    from itertools import product as _pr
+    groups = []  # (i0, e_i) -> all concrete slot keys
+    for i0 in range(k):
+        sufs = list(_pr(*[range(1, d + 1) for d in dims[i0 + 1:]]))
+        pres = list(_pr(*[range(1, d + 1) for d in dims[:i0]]))
+        for ei in range(1, dims[i0]):
+            keys = [(p + (ei,), s) for p in pres for s in sufs]
+            groups.append((i0, keys))
+    verts = list(_pr(*[range(1, d + 1) for d in dims]))
+
+    def expand(gvals):
+        slots = [dict() for _ in range(k)]
+        for gi, val in gvals.items():
+            if val is None:
+                continue
+            i0, keys = groups[gi]
+            for key in keys:
+                slots[i0][key] = val
+        return slots
+
+    gvals = {gi: rng.choice(POOL5) for gi in range(len(groups))
+             if rng.random() < 0.8}
+    T0 = []
+    cur = greedy(dims, expand(gvals), T0, rng)
+    cur_s = cur.score() if cur else Fraction(10)
+    best, best_s = cur, cur_s
+    for step in range(steps):
+        temp = 0.3 * (1 - step / steps) + 0.02
+        ng = dict(gvals)
+        nT0 = list(T0)
+        mv = rng.random()
+        if mv < 0.75:
+            gi = rng.randrange(len(groups))
+            cval = ng.get(gi)
+            opts = [None] + POOL5
+            nv = rng.choice([o for o in opts if o != cval])
+            if nv is None:
+                ng.pop(gi, None)
+            else:
+                ng[gi] = nv
+        elif mv < 0.88 and len(nT0) < 2:
+            v = rng.choice(verts)
+            if v not in nT0:
+                nT0.append(v)
+        elif nT0:
+            nT0.pop(rng.randrange(len(nT0)))
+        cand = greedy(dims, expand(ng), nT0, rng)
+        if cand is None:
+            continue
+        s = cand.score()
+        if s is None:
+            continue
+        if s <= cur_s or rng.random() < math.exp(float(cur_s - s) / temp):
+            gvals, T0, cur, cur_s = ng, nT0, cand, s
+            if s < best_s:
+                chk = Mode3Instance(dims, expand(ng), nT0, cand.Rbase)
+                ok, _ = try_force(chk)
+                assert ok
+                best, best_s = cand, s
+                log(f"  [STEPONLY {dims} seed{seed} step{step}] NEW BEST {s} "
+                    f"= {float(s):.4f} m={cand.m()} r={cand.r()} "
+                    f"n={cand.n} t={cand.t()}")
+                if s < Fraction(2):
+                    log(f"   gvals={ {gi: v for gi, v in ng.items()} }")
+                    log(f"   T0={nT0} Rbase={cand.Rbase}")
+    return best, best_s
