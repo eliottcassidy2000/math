@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-327 (2026-07-29, THM-594 pair overlap) -- a one-wrap Fourier branch was used as an all-pair formula
+
+- **What was claimed:** THM-594(B) asserted that for every coprime
+  `p<q` with `(p+q)/14>1`,
+  `mu(D_p intersect D_q)=(q+2p-14)/(7pq)` at danger radius `1/14`.
+- **Minimal witness / first failed implication:** for `(p,q)=(50,51)`, that
+  expression is `137/17850`, while the exact finite trapezoid sum of the
+  later LEM-042 is `73/3570`; their difference is `38/2975`.  The
+  product-to-sum quadratic was continued after the first wrap without
+  retaining subsequent periodic wraps, so the purported second branch was
+  not global.
+- **Strongest survivor:** THM-594(A)'s Fourier support, THM-594(C)'s
+  divisor-minimal no-exact-tiling argument, and the Parseval floor in
+  THM-594(D)--(E) do not use the false branch and survive.  LEM-042
+  supersedes all pair-mass calculations with
+  `g sum_j min((W-|j| delta)_+,w_min)` and records both below- and
+  above-`1/49` families.
+- **Rule:** pair overlap past the first Farey cell is a periodic trapezoid
+  sum, not a two-cell formula.  Preserve gcd, reduced residues, and all
+  wraps; for inherited carriers also retain the positioned-window
+  discrepancy, since full-circle mass does not localize.
+
 ## MISTAKE-326 (2026-07-29, concurrent THM-2926 reservations) -- a successful push does not prevent a later session from reserving the same namespace
 
 - **What happened:** the seven-wall session reserved `THM-2926` at

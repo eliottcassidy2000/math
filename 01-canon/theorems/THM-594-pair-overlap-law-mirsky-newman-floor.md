@@ -1,6 +1,16 @@
 # THM-594: The exact two-branch pair-overlap law, the continuous Mirsky–Newman rigidity (no finite exact tiling), and the critical-mass floor
 
-**Status:** PROVED (Parts A–E; elementary Fourier analysis + exact-rational verification)
+> **CORRECTION / PRECEDENCE WARNING (MISTAKE-327).**  Part B's claimed
+> two-branch formula is false after multiple geometric wraps and is
+> **SUPERSEDED** by the exact finite trapezoid sum in
+> [LEM-042](LEM-042-pair-overlap-law.md).  For example, at radius `1/14`
+> the pair `(50,51)` has exact overlap `73/3570`, whereas Part B's displayed
+> branch gives `137/17850`.  Do not use Part B or any result that depends on
+> its large-pair formula without replaying it through LEM-042.  Parts A and
+> C--E use the Fourier support/Parseval argument and survive independently.
+
+**Status:** PART B REFUTED / SUPERSEDED BY LEM-042; Parts A and C--E PROVED
+(elementary Fourier analysis)
 **Author:** mac-mini-2026-07-01-S94 (HYP-3850)
 **Verification:** `04-computation/lrc_mirsky_newman_floor_curvature_macmini_S94.py` and `04-computation/lrc_pairlaw_defect_arcradius_macmini_S94.py` (+ `.out` in `05-knowledge/results/`).
 **Context:** proves and sharpens kind-pasteur-S28's empirical pair-overlap Farey law (HYP-3950); supplies the unconditional floor at the union-bound death j = 1/(2r) (opus-S32 HYP-3834/3835 tower); grounds the "D₇(k/7)=0 = continuous-Fraenkel tiling" observation.
@@ -18,6 +28,10 @@ Speeds `v ∈ Z_{>0}`, radius `r ∈ (0, 1/2)`, danger sets `D_v(r) = {t ∈ R/Z
 Hence `Ĉ(m) = Σ_{v ∈ F, v | m} sin(2π(m/v)r)/(π(m/v))` — the coverage spectrum is a divisor sum.
 
 ## Part B — the exact two-branch pair-overlap law
+
+**REFUTED / HISTORICAL TEXT BELOW.**  The cosine-series calculation was
+continued across only one wrap.  The correct all-pair law is LEM-042's
+finite trapezoid sum; its value can lie on either side of `1/49`.
 
 For coprime `p < q` (general pairs reduce by `|D_{gp'} ∩ D_{gq'}| = |D_{p'} ∩ D_{q'}|`, since `D_{gv}(r)` is the `1/g`-tiled copy of `D_v(r)` — the ratio-only dependence of HYP-3950, proved):
 
