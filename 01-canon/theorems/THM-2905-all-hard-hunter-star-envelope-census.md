@@ -250,8 +250,11 @@ losses explain why `(5)` is sufficient rather than necessary.
 
 ## 6. Verification
 
-The verifier uses exact rational arithmetic, hash-pins both inherited
-ledgers, checks every join and identity in `(8)`--`(9)`, evaluates every
+The verifier uses exact rational arithmetic and hash-pins both inherited
+ledgers plus the six canonical theorem outputs that compose the previous
+root union.  In particular it checks THM-2903's proof digest, replay
+sentinel, exact THM-2902 overlap, and `76/3356` union/residual identities.
+It checks every join and identity in `(8)`--`(9)`, evaluates every
 breakpoint in `(6)`, tests exact affine behavior between consecutive
 breakpoints, and prints the branch and root consequence objects.  It uses
 explicit guards rather than Python `assert`.  Ordinary and optimized
@@ -267,7 +270,7 @@ Canonical artifacts:
 
 ```text
 04-computation/lrc14_j6_all_hard_hunter_star_envelope_census_codex_20260729.py
-SHA-256 5c6b26ce1a10823adf735b0d5629e2e6ed0817ce523f9462be02b9bf607e863f
+SHA-256 794111b992e912ec8471c8334a867d7b2db1d248f4b08f744f52faf7f50b86c3
 
 05-knowledge/results/lrc14_j6_all_hard_hunter_star_envelope_census_codex_20260729.out
 SHA-256 c346cbce451b4d0104707b071c9874798e2cadc853102038b229be9ad8a6afe4

@@ -18,9 +18,11 @@
   direct pair-partition closures and `1,129` more.  Exact root set
   difference adds six multi-hard bodies to the proved union, now `82`, so
   the official residual is `3350`; `11,790` H3-routed rows and all `52`
-  pair-cap exceptions survive `G_5`.  Ordinary/optimized outputs are byte-identical.
+  pair-cap exceptions survive `G_5`.  The verifier artifact-derives the
+  prior union from six hash-pinned theorem outputs. Ordinary/optimized
+  outputs are byte-identical.
   Script/output SHA-256:
-  `(5c6b26ce1a10823adf735b0d5629e2e6ed0817ce523f9462be02b9bf607e863f,c346cbce451b4d0104707b071c9874798e2cadc853102038b229be9ad8a6afe4)`.
+  `(794111b992e912ec8471c8334a867d7b2db1d248f4b08f744f52faf7f50b86c3,c346cbce451b4d0104707b071c9874798e2cadc853102038b229be9ad8a6afe4)`.
 - `lrc14_j6_one_hard_h3_link_core_census_codex_20260729.py` ->
   summary and full link-ledger `.out` files [THM-2903 PROVED +
   FINITE-EXACT + VERIFIED].  The true `H_3` cores on the `61` non-direct

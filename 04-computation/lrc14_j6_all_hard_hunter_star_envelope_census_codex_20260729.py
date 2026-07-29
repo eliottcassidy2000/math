@@ -19,6 +19,7 @@ the proved 76-root union through THM-2903. This is a scoped census, not LRC(14).
 
 from __future__ import annotations
 
+import ast
 import hashlib
 from collections import Counter, defaultdict
 from fractions import Fraction as F
@@ -40,31 +41,36 @@ HARD_LEDGER_SHA256 = (
 PAIR_LEDGER_SHA256 = (
     "5dea0eaa45dd52fbf1bef7cfcc328899a4789bc277b6e1e8ac2f4bdf192b85e4"
 )
-
-THM2895_ROOTS = {
-    (2, 8, 9, 10, 11, 13, 14),
-    (1, 3, 9, 10, 11, 12, 14),
-    (2, 5, 9, 11, 12, 13, 14),
-    (2, 3, 4, 5, 6, 7, 8),
-}
-THM2898_ROOTS = {(1, 8, 10, 11, 12, 13, 14)}
-THM2899_ROOTS = {
-    (1, 2, 3, 4, 5, 6, 13),
-    (1, 2, 3, 4, 6, 7, 14),
-    (1, 2, 3, 4, 6, 11, 13),
-    (1, 2, 3, 4, 6, 12, 13),
-    (7, 8, 9, 11, 12, 13, 14),
-}
-THM2901_ROOTS = {
-    (1, 2, 3, 4, 6, 11, 12),
-    (1, 2, 3, 5, 6, 10, 13),
-    (1, 2, 4, 5, 6, 12, 13),
-    (1, 3, 4, 5, 6, 7, 14),
-    (5, 7, 8, 10, 11, 13, 14),
-}
-THM2902_ROOTS = {
-    (1, 2, 3, 4, 5, 10, 12),
-    (1, 2, 3, 4, 5, 12, 13),
+THM2895_OUT = (
+    ROOT / "05-knowledge/results/lrc14_j6_suffix_parity_flag_closure_thm2895.out"
+)
+THM2898_OUT = (
+    ROOT
+    / "05-knowledge/results/lrc14_j6_k25_five_parity_matching_closure_thm2898.out"
+)
+THM2899_OUT = (
+    ROOT
+    / "05-knowledge/results/lrc14_j6_all_root_ranked_suffix_scalar_census_codex_20260729.out"
+)
+THM2901_OUT = (
+    ROOT
+    / "05-knowledge/results/lrc14_j6_all_hard_global_pair_cap_census_codex_20260729.out"
+)
+THM2902_OUT = (
+    ROOT
+    / "05-knowledge/results/lrc14_j6_omission6_ranked_h1_depth1_closure_thm2902.out"
+)
+THM2903_OUT = (
+    ROOT
+    / "05-knowledge/results/lrc14_j6_one_hard_h3_link_core_census_codex_20260729.out"
+)
+THEOREM_OUTPUT_SHA256 = {
+    THM2895_OUT: "c11260f6544a319e1cc1862c9221b188a4314860422470e465b82e7ce492b1b4",
+    THM2898_OUT: "41f5e443f6d1ee2553c332da7709bd0c89f400b9ca154ddb6047f8ca724c6a40",
+    THM2899_OUT: "dbd3dc5a8c44a55957a6e1ce660ca0e89fcd70e6c0d06d5ba47dc3a22f40c680",
+    THM2901_OUT: "98b8ba171be1d38980e7271ef82e2bc1bde536afcf9864fa39138dbfbc93a3eb",
+    THM2902_OUT: "cff46490d4a904947ec0fbe0cedfa59484c6b7974923656ba2459a55781192d7",
+    THM2903_OUT: "5719083a83b275206907f47141fee8da2ba489194e31ba7c119f5313e3dfe73d",
 }
 
 EXPECTED_COUNTS: tuple[object, ...] = (
@@ -128,6 +134,92 @@ def file_sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def unique_output_text(path: Path, prefix: str) -> str:
+    matches = [
+        line.removeprefix(prefix)
+        for line in path.read_text().splitlines()
+        if line.startswith(prefix)
+    ]
+    require(len(matches) == 1, f"{path.name}: expected one {prefix!r} line")
+    return matches[0]
+
+
+def literal_output_value(path: Path, prefix: str) -> object:
+    return ast.literal_eval(unique_output_text(path, prefix))
+
+
+def canonical_root_sets() -> tuple[
+    set[tuple[int, ...]],
+    set[tuple[int, ...]],
+    set[tuple[int, ...]],
+    set[tuple[int, ...]],
+    set[tuple[int, ...]],
+]:
+    for path, expected_hash in THEOREM_OUTPUT_SHA256.items():
+        require(file_sha256(path) == expected_hash, f"{path.name} changed")
+
+    thm2895 = {
+        ast.literal_eval(
+            line.removeprefix("BRANCH E=").split(";", 1)[0]
+        )
+        for line in THM2895_OUT.read_text().splitlines()
+        if line.startswith("BRANCH E=")
+    }
+    thm2898 = {
+        ast.literal_eval(unique_output_text(THM2898_OUT, "root=").split(";", 1)[0])
+    }
+    thm2899 = set(literal_output_value(THM2899_OUT, "terminal_bodies="))
+    thm2901 = set(literal_output_value(THM2901_OUT, "direct_terminal_bodies="))
+    thm2902 = set(literal_output_value(THM2902_OUT, "closed_roots="))
+    groups = (thm2895, thm2898, thm2899, thm2901, thm2902)
+    require(
+        tuple(map(len, groups)) == (4, 1, 5, 5, 2),
+        "prior theorem root counts changed",
+    )
+    require(
+        len(set().union(*groups)) == sum(map(len, groups)) == 17,
+        "prior theorem root groups are no longer disjoint",
+    )
+    return groups
+
+
+def thm2903_controls() -> dict[str, object]:
+    controls = {
+        "closed_roots": literal_output_value(THM2903_OUT, "closed_roots="),
+        "overlap": literal_output_value(THM2903_OUT, "overlap_THM2902="),
+        "proved_union": literal_output_value(THM2903_OUT, "proved_union="),
+        "official_residual": literal_output_value(
+            THM2903_OUT, "official_residual="
+        ),
+        "root_digest": unique_output_text(THM2903_OUT, "root61_digest="),
+        "proof_digest": unique_output_text(THM2903_OUT, "proof_digest="),
+        "mode": unique_output_text(THM2903_OUT, "mode="),
+        "sentinel": unique_output_text(THM2903_OUT, "all_exact_controls="),
+    }
+    require(
+        controls
+        == {
+            "closed_roots": 61,
+            "overlap": (
+                (1, 2, 3, 4, 5, 10, 12),
+                (1, 2, 3, 4, 5, 12, 13),
+            ),
+            "proved_union": 76,
+            "official_residual": 3356,
+            "root_digest": (
+                "f58c4143f329d215ff9bb7ec594d172e831fbccbab713a2398dc6cb53c60b8b7"
+            ),
+            "proof_digest": (
+                "08dc4a539544a417ff884ef4631b10d6eb14fd63d7b62b06e76d92e3d4d9b162"
+            ),
+            "mode": "LOCKED ordinary_and_optimized_replays_agree",
+            "sentinel": "PASS",
+        },
+        "THM2903 proof controls changed",
+    )
+    return controls
+
+
 def parse_fraction(text: str) -> F:
     numerator, denominator = text.split("/")
     return F(int(numerator), int(denominator))
@@ -176,6 +268,7 @@ def parse_hard_rows(
             "hard singleton ranks are not nonincreasing",
         )
         require(len({label for label, _ in top5}) == 5, "hard top five repeat a label")
+        require(row["closed"] == "0", "hard ledger contains a closed row")
         require(key not in rows, "duplicate hard row")
         rows[key] = {
             "stratum": row["S"],
@@ -252,6 +345,7 @@ def parse_pair_rows(
         require(row["S"] == hard["stratum"], "joined stratum changed")
         require(int(row["K"]) == hard["gate_size"], "joined gate size changed")
         require(int(row["r"]) == hard["components"], "joined component count changed")
+        require(row["global_exact"] == "1", "pair cap is not globally exact")
         require(
             (
                 parse_fraction(row["q1"]),
@@ -306,6 +400,8 @@ def digest_line(row: dict[str, object]) -> str:
 def main() -> None:
     require(file_sha256(HARD_LEDGER) == HARD_LEDGER_SHA256, "hard ledger changed")
     require(file_sha256(PAIR_LEDGER) == PAIR_LEDGER_SHA256, "pair ledger changed")
+    thm2895, thm2898, thm2899, thm2901, thm2902 = canonical_root_sets()
+    one_hard_controls = thm2903_controls()
     rows = parse_pair_rows(parse_hard_rows())
     by_body: dict[tuple[int, ...], list[dict[str, object]]] = defaultdict(list)
     for row in rows:
@@ -325,20 +421,31 @@ def main() -> None:
             if all(row["direct_margin"] > 0 for row in body_rows)
         )
     )
-    require(set(old_roots) == THM2901_ROOTS, "old direct-terminal roots changed")
+    require(set(old_roots) == thm2901, "old direct-terminal roots changed")
     one_hard = {
         body
         for body, body_rows in by_body.items()
         if len(body_rows) == 1 and body_rows[0]["direct_margin"] <= 0
     }
-    prior_fifteen = (
-        THM2895_ROOTS | THM2898_ROOTS | THM2899_ROOTS | THM2901_ROOTS
-    )
+    prior_fifteen = thm2895 | thm2898 | thm2899 | thm2901
     require(len(prior_fifteen) == 15, "prior fifteen-root union changed")
-    require(len(one_hard) == 61, "THM2903 one-hard bank changed")
-    require(one_hard & THM2902_ROOTS == THM2902_ROOTS, "one-hard overlap changed")
-    current_union = prior_fifteen | THM2902_ROOTS | one_hard
-    require(len(current_union) == 76, "proved union through THM2903 changed")
+    require(
+        len(one_hard) == one_hard_controls["closed_roots"],
+        "THM2903 one-hard bank changed",
+    )
+    require(
+        one_hard & thm2902 == set(one_hard_controls["overlap"]),
+        "THM2903/THM2902 overlap changed",
+    )
+    current_union = prior_fifteen | thm2902 | one_hard
+    require(
+        len(current_union) == one_hard_controls["proved_union"],
+        "proved union through THM2903 changed",
+    )
+    require(
+        3432 - len(current_union) == one_hard_controls["official_residual"],
+        "THM2903 residual identity changed",
+    )
     additive_roots = tuple(sorted(set(star_roots) - current_union))
     new_union = current_union | set(star_roots)
 
