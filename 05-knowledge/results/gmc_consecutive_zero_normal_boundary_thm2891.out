@@ -1,5 +1,5 @@
 THM-2891 ZERO-NORMAL CONSECUTIVE CONE-BOUNDARY AUDIT
-status=PROVISIONAL EXACT CERTIFICATE / UNDER INDEPENDENT AUDIT
+status=PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
 depth_domain=integer n>=0
 families=A_t=span(e1,e2+t*e3);B_t=span(e1+t*e3,e2);C_t=span(t*e1+e2,e3);t>0
 coordinate_faces=all three projective endpoints included

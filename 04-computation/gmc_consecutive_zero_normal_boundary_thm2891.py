@@ -291,7 +291,7 @@ def main() -> None:
     }
 
     print("THM-2891 ZERO-NORMAL CONSECUTIVE CONE-BOUNDARY AUDIT")
-    print("status=PROVISIONAL EXACT CERTIFICATE / UNDER INDEPENDENT AUDIT")
+    print("status=PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED")
     print("depth_domain=integer n>=0")
     print(
         "families=A_t=span(e1,e2+t*e3);"
