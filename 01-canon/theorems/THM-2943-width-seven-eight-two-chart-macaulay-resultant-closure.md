@@ -2,8 +2,8 @@
 id: THM-2943
 title: "Width-seven/eight two-chart Macaulay resultant closure"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  For every n>=0, first-window SFC(4) holds on every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  n>=0, first-window SFC(4) holds on every
   translated four-slot support of exact width seven or eight.  The
   original and stable-mutated 20Q+10C+6F Macaulay determinants have a
   raw polynomial gcd which is the genuine resultant times the common
@@ -13,6 +13,14 @@ status: >
   coprime.  Width six is replayed only as an inherited control.  No
   width-nine, arbitrary-width, shifted-window, or SFC(5) claim is made.
 source: codex-gmc-uniform-width-extension-2026-07-29
+audit: >
+  An independent hostile audit rederived both universal chart factors,
+  checked that cofactor coprimality and common-resultant-content
+  positivity are logically separate gates, verified the extra q200
+  factor, recomputed both LF hashes, and replayed all 46 families in
+  normal and optimized modes against the stored transcript.  The 138
+  paired off-grid determinants and 46 Pluecker exchanges all passed;
+  no defect remained.
 depends_on:
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
   - THM-2942-macaulay-extraneous-flag-factor-and-pluecker-mutation
@@ -31,8 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2943 -- width-seven/eight two-chart Macaulay resultant closure
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
@@ -348,4 +355,4 @@ python -O 04-computation/gmc_width_seven_eight_two_chart_resultant_closure_thm29
 Normal and optimized executions must byte-match the stored output and
 the declared LF-normalized hashes.
 
-**Proof-complete candidate.**
+**QED.**
