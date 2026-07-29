@@ -60,9 +60,9 @@ t_r=kappa [c_r-mean(c)],
 kappa=-xi^(-65)=xi^1118=(xi^13)^86 in F.               (3)
 ```
 
-Indeed, substituting (1) into the right side of (3) gives
-`xi^(1118+1020) omega^(3r)=xi^(955+546r)`, because the
-exponents differ by `2366`.  Thus (3) is not merely an equality of
+Indeed, retaining both displayed signs gives
+`(-xi^(-65))(-xi^1020)=xi^955`; equivalently the exponent calculation is
+`1118+1020+1183=955 mod2366`.  Thus (3) is not merely an equality of
 character labels: relative to the pinned normalizations, it is an explicit
 `F`-linear clutch between the projective multiplier-frequency coordinate
 and the centered coefficient-field Galois coordinate.  It cancels the
