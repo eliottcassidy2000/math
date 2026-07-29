@@ -18,6 +18,7 @@ related:
   - THM-2810-factorial-hankel-faithfulness-and-bounded-radial-carrier-no-go
   - THM-2815-optimal-finite-laguerre-carrier-and-radial-selector-access-boundary
   - THM-2830-disjoint-positive-adjacent-cone-factorial-moment-three-detection
+  - THM-2841-all-order-adjacent-difference-factorial-tensor-positivity
   - HYP-8765-gmc2-radial-channel-return-tower
 script: 04-computation/gmc_lower_prefix_cone_thm2828.py
 output: 05-knowledge/results/gmc_lower_prefix_cone_thm2828.out

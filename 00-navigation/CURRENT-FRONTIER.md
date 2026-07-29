@@ -166,7 +166,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   splitting still does not supply MISTAKE-211's multiplier observations.
 - THM-2812/2824 close three-slot envelopes; THM-2828 reaches one prefix cone.
   THM-2830 proves moment-six detection for two positive cones separated by a
-  support cut; its stronger four-label matching sidecar remains open.
+  support cut. THM-2841 then proves every tensor of two or more nonnegative
+  adjacent-difference cone elements has positive factorial readout, by an
+  exact forbidden-board rook count and sharp derangement lower bound. Signed
+  coefficients, multiplier access, and THM-2830's stronger four-label matching
+  sidecar remain open.
 ### Live work
 
 Publish THM-2022; sharpen THM-2111's binomial degree toward `M+N`; formalize

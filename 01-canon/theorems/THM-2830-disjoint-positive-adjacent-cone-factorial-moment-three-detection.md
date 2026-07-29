@@ -20,6 +20,7 @@ depends_on:
   - THM-2828-lower-prefix-cone-factorial-moment-three-detection
 related:
   - THM-2815-optimal-finite-laguerre-carrier-and-radial-selector-access-boundary
+  - THM-2841-all-order-adjacent-difference-factorial-tensor-positivity
   - HYP-8765-gmc2-radial-channel-return-tower
 script: 04-computation/gmc_disjoint_cone_matching_reduction_thm2830.py
 output: 05-knowledge/results/gmc_disjoint_cone_matching_reduction_thm2830.out
