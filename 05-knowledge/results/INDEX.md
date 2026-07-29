@@ -1,5 +1,16 @@
 # Script Results Index
 
+- `lrc14_j6_all_hard_global_pair_cap_census_codex_20260729.py` ->
+  summary and full branch-ledger `.out` files [THM-2901 PROVED +
+  FINITE-EXACT + VERIFIED].  Every one of the `14,806` scalar-hard marked
+  suffixes has an attained, discrepancy-sealed global pair cap.  The
+  direct `q_5+2beta_2<h` certificate closes `1,835` branches and five
+  whole roots; the remaining route partition is `12,919` actual-H3
+  pair-child obligations plus `52` pair-cap exceptions.  The current
+  proved root union is `15`, leaving `3417`.  Source/full-ledger hashes:
+  `(7ba8244d8fc78ebc0d9381e05d69ca53c849d6008ff9cfb43f0efcbb4b394f81,5dea0eaa45dd52fbf1bef7cfcc328899a4789bc277b6e1e8ac2f4bdf192b85e4)`;
+  summary-output hash
+  `98b8ba171be1d38980e7271ef82e2bc1bde536afcf9864fa39138dbfbc93a3eb`.
 - `lrc14_event_twisted_all_q_coefficient_carry_lift_thm2882.py` ->
   matching `.out` [THM-2882 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  At the zero endpoint character, E3/complement truth
