@@ -2,8 +2,8 @@
 id: THM-2921
 title: "Diameter-four nonconsecutive Macaulay--Newton closure"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  For every n>=0, first-window SFC(4) holds on each of
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  n>=0, first-window SFC(4) holds on each of
   the three nonconsecutive four-slot supports in
   {n,n+1,n+2,n+3,n+4}.  Correct ordinary-monomial multinomial forms,
   exact common denominator clearing, and a fixed degree-seven Macaulay
@@ -31,8 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2921 -- diameter-four nonconsecutive Macaulay--Newton closure
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
@@ -337,4 +336,12 @@ python -O 04-computation/gmc_diameter_four_nonconsecutive_macaulay_newton_thm292
 Normal and optimized executions byte-match the stored output with the
 declared LF-normalized hashes.
 
-**QED (candidate pending independent hostile audit).**
+An independent hostile audit reconstructed the ordinary coefficient forms
+and the selected minor by a separate exact four-variable route at `12`
+additional controls.  It rederived the denominator degrees, row allocation,
+degree bound, all three Gregory--Newton base/sign arguments, Macaulay
+surjectivity, projective emptiness, full-support sharpness, and the Gaussian
+lift.  It also replayed normal, optimized, and stored output and reproduced
+the declared LF-normalized hashes.  No defect remained.
+
+**QED.**
