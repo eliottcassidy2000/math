@@ -336,6 +336,50 @@ EXPECTED_PARITY_EXTREMUM: tuple[object, ...] | None = (
     "62558/315315",
     (16, "75245/1009008"),
 )
+EXPECTED_PARITY_CUTOFF_QUANTILES: tuple[
+    tuple[int, int], ...
+] | None = (
+    (0, 215),
+    (25, 427),
+    (50, 508),
+    (75, 612),
+    (90, 729),
+    (95, 816),
+    (99, 1071),
+    (100, 2782),
+)
+EXPECTED_PARITY_CUTOFF_STRATUM: tuple[
+    tuple[object, ...], ...
+] | None = (
+    ("low", 1125, (2, 7, 8, 9, 10, 11, 12), 1, 19),
+    ("one", 1939, (2, 4, 6, 9, 10, 12, 14), 1, 22),
+    ("both", 2782, (2, 4, 9, 10, 12, 13, 14), 1, 22),
+)
+EXPECTED_PARITY_CUTOFF_RANK: tuple[
+    tuple[object, ...], ...
+] | None = (
+    (1, 2782, (2, 4, 9, 10, 12, 13, 14), 22),
+    (2, 1425, (1, 4, 8, 9, 10, 12, 14), 44),
+    (3, 1103, (1, 3, 8, 10, 11, 13, 14), 27),
+    (4, 1399, (1, 6, 9, 10, 12, 13, 14), 66),
+    (5, 1061, (1, 3, 9, 10, 12, 13, 14), 66),
+    (6, 1113, (1, 2, 9, 10, 12, 13, 14), 66),
+    (7, 1319, (1, 6, 8, 10, 11, 13, 14), 72),
+    (8, 1168, (2, 6, 8, 10, 11, 13, 14), 72),
+    (9, 961, (1, 3, 8, 10, 11, 13, 14), 72),
+    (10, 772, (2, 8, 10, 11, 12, 13, 14), 34),
+    (11, 1025, (1, 8, 10, 11, 12, 13, 14), 63),
+    (12, 624, (1, 2, 7, 10, 11, 12, 13), 32),
+    (13, 619, (1, 5, 8, 9, 11, 12, 13), 42),
+)
+EXPECTED_PARITY_CUTOFF_EXTREMUM: tuple[object, ...] | None = (
+    2782,
+    (2, 4, 9, 10, 12, 13, 14),
+    1,
+    22,
+    "369209/35315280",
+    36,
+)
 EXPECTED_ROOT_PARITY_COUNTS: tuple[int, ...] | None = (3432, 3200, 232)
 EXPECTED_ROOT_PARITY_STRATUM: tuple[tuple[object, ...], ...] | None = (
     (
@@ -406,23 +450,134 @@ EXPECTED_ROOT_PARITY_CUTOFF_QUANTILES: tuple[
 )
 EXPECTED_CORE_ELIGIBILITY_COUNTS: tuple[
     tuple[int, int, int, int], ...
-] | None = None
-EXPECTED_STRONGEST_CORE_HISTOGRAM: tuple[tuple[int, int], ...] | None = None
+] | None = (
+    (1, 14_806, 14_806, 0),
+    (2, 14_806, 14_555, 251),
+    (3, 14_806, 11_699, 3107),
+    (4, 14_806, 6180, 8626),
+)
+EXPECTED_STRONGEST_CORE_HISTOGRAM: tuple[
+    tuple[int, int], ...
+] | None = (
+    (1, 251),
+    (2, 2856),
+    (3, 5519),
+    (4, 6180),
+)
 EXPECTED_CORE_ELIGIBILITY_STRATUM: tuple[
     tuple[object, ...], ...
-] | None = None
+] | None = (
+    ("low", 3053, 0, 19, 550, 1161, 1323),
+    ("one", 7853, 0, 142, 1494, 2935, 3282),
+    ("both", 3900, 0, 90, 812, 1423, 1575),
+)
 EXPECTED_CORE_ELIGIBILITY_RANK: tuple[
     tuple[object, ...], ...
-] | None = None
+] | None = (
+    (1, 3417, 0, 242, 1749, 1247, 179),
+    (2, 3308, 0, 9, 826, 1763, 710),
+    (3, 2853, 0, 0, 219, 1357, 1277),
+    (4, 2194, 0, 0, 55, 718, 1421),
+    (5, 1446, 0, 0, 5, 300, 1141),
+    (6, 844, 0, 0, 2, 93, 749),
+    (7, 444, 0, 0, 0, 31, 413),
+    (8, 180, 0, 0, 0, 8, 172),
+    (9, 78, 0, 0, 0, 1, 77),
+    (10, 24, 0, 0, 0, 1, 23),
+    (11, 14, 0, 0, 0, 0, 14),
+    (12, 3, 0, 0, 0, 0, 3),
+    (13, 1, 0, 0, 0, 0, 1),
+)
 EXPECTED_CORE_ELIGIBILITY_EXTREMA: tuple[
     tuple[object, ...], ...
-] | None = None
+] | None = (
+    (
+        1,
+        (
+            "369209/35315280",
+            (2, 4, 9, 10, 12, 13, 14),
+            1,
+            22,
+        ),
+        None,
+        (
+            "369209/35315280",
+            (2, 4, 9, 10, 12, 13, 14),
+            1,
+            22,
+        ),
+    ),
+    (
+        2,
+        (
+            "10354/863017155",
+            (1, 4, 7, 8, 9, 10, 13),
+            1,
+            22,
+        ),
+        (
+            "-919/8828820",
+            (2, 3, 5, 8, 10, 12, 14),
+            1,
+            22,
+        ),
+        (
+            "-226687/8828820",
+            (2, 4, 6, 8, 10, 12, 14),
+            1,
+            22,
+        ),
+    ),
+    (
+        3,
+        (
+            "1/490490",
+            (2, 3, 6, 7, 8, 10, 12),
+            2,
+            18,
+        ),
+        (
+            "-1/974610",
+            (1, 3, 8, 9, 10, 12, 14),
+            2,
+            44,
+        ),
+        (
+            "-476599/8828820",
+            (2, 4, 6, 8, 10, 12, 14),
+            1,
+            22,
+        ),
+    ),
+    (
+        4,
+        (
+            "23/7567560",
+            (1, 2, 3, 6, 10, 11, 13),
+            1,
+            16,
+        ),
+        (
+            "-1/1358280",
+            (1, 2, 3, 6, 8, 12, 14),
+            6,
+            18,
+        ),
+        (
+            "-138599/1765764",
+            (2, 4, 6, 8, 10, 12, 14),
+            1,
+            22,
+        ),
+    ),
+)
 THM2895_ROOTS = (
     (2, 8, 9, 10, 11, 13, 14),
     (1, 3, 9, 10, 11, 12, 14),
     (2, 5, 9, 11, 12, 13, 14),
     (2, 3, 4, 5, 6, 7, 8),
 )
+THM2898_ROOT = (1, 8, 10, 11, 12, 13, 14)
 
 
 def require(condition: bool, message: str) -> None:
@@ -888,6 +1043,92 @@ def main() -> None:
             ftext(parity_minimum_row["top5"][0][0]),
         ),
     )
+    require(
+        all(margin > 0 for margin, _ in parity_rows),
+        "a scalar-hard suffix misses the p=5 parity entry condition",
+    )
+    parity_cutoff_rows = [
+        (
+            ceiling(4 * S2 * row["r"] / (7 * margin)) - 1,
+            row,
+        )
+        for margin, row in parity_rows
+    ]
+    parity_cutoff_quantiles = nearest_rank_quantiles(
+        [cutoff for cutoff, _ in parity_cutoff_rows],
+        (0, 25, 50, 75, 90, 95, 99, 100),
+    )
+    parity_cutoff_maximum, parity_cutoff_maximum_row = max(
+        parity_cutoff_rows,
+        key=lambda item: (
+            item[0],
+            tuple(-x for x in item[1]["body"]),
+            -item[1]["rank"],
+        ),
+    )
+    parity_cutoff_extremum = (
+        parity_cutoff_maximum,
+        parity_cutoff_maximum_row["body"],
+        parity_cutoff_maximum_row["rank"],
+        parity_cutoff_maximum_row["apex"],
+        ftext(
+            F(3, 7) * parity_cutoff_maximum_row["m"]
+            - parity_cutoff_maximum_row["top5"][0][0]
+        ),
+        parity_cutoff_maximum_row["r"],
+    )
+    parity_cutoff_stratum = tuple(
+        (
+            name,
+            *(
+                lambda record: (
+                    record[0],
+                    record[1]["body"],
+                    record[1]["rank"],
+                    record[1]["apex"],
+                )
+            )(
+                max(
+                    (
+                        record
+                        for record in parity_cutoff_rows
+                        if record[1]["stratum"] == name
+                    ),
+                    key=lambda item: (
+                        item[0],
+                        tuple(-x for x in item[1]["body"]),
+                        -item[1]["rank"],
+                    ),
+                )
+            ),
+        )
+        for name in ("low", "one", "both")
+    )
+    parity_cutoff_rank = tuple(
+        (
+            rank,
+            *(
+                lambda record: (
+                    record[0],
+                    record[1]["body"],
+                    record[1]["apex"],
+                )
+            )(
+                max(
+                    (
+                        record
+                        for record in parity_cutoff_rows
+                        if record[1]["rank"] == rank
+                    ),
+                    key=lambda item: (
+                        item[0],
+                        tuple(-x for x in item[1]["body"]),
+                    ),
+                )
+            ),
+        )
+        for rank in sorted({row["rank"] for row in open_rows})
+    )
     root_parity_counts = (
         len(roots),
         sum(root["root_parity_margin"] > 0 for root in roots),
@@ -1244,6 +1485,26 @@ def main() -> None:
             parity_extremum == EXPECTED_PARITY_EXTREMUM,
             "parity-eligibility extremum changed",
         )
+    if EXPECTED_PARITY_CUTOFF_QUANTILES is not None:
+        require(
+            parity_cutoff_quantiles == EXPECTED_PARITY_CUTOFF_QUANTILES,
+            "parity-cutoff quantiles changed",
+        )
+    if EXPECTED_PARITY_CUTOFF_STRATUM is not None:
+        require(
+            parity_cutoff_stratum == EXPECTED_PARITY_CUTOFF_STRATUM,
+            "parity-cutoff stratum extrema changed",
+        )
+    if EXPECTED_PARITY_CUTOFF_RANK is not None:
+        require(
+            parity_cutoff_rank == EXPECTED_PARITY_CUTOFF_RANK,
+            "parity-cutoff rank extrema changed",
+        )
+    if EXPECTED_PARITY_CUTOFF_EXTREMUM is not None:
+        require(
+            parity_cutoff_extremum == EXPECTED_PARITY_CUTOFF_EXTREMUM,
+            "parity-cutoff global extremum changed",
+        )
     if EXPECTED_ROOT_PARITY_COUNTS is not None:
         require(
             root_parity_counts == EXPECTED_ROOT_PARITY_COUNTS,
@@ -1291,8 +1552,10 @@ def main() -> None:
             "ranked-core extrema changed",
         )
     require(
-        set(terminal_bodies).isdisjoint(THM2895_ROOTS),
-        "scalar terminal roots overlap the four THM-2895 roots",
+        set(terminal_bodies).isdisjoint(
+            (*THM2895_ROOTS, THM2898_ROOT)
+        ),
+        "scalar terminal roots overlap a THM-2895/2898 root",
     )
 
     print("LRC14 j6 all-root ranked-suffix scalar census")
@@ -1305,11 +1568,18 @@ def main() -> None:
     print(f"open_rank_distribution={open_rank_distribution}")
     print(f"terminal_bodies={terminal_bodies}")
     print(f"rank13_open={rank13_open}")
-    print("terminal_bodies_disjoint_from_THM2895=PASS")
+    print("terminal_bodies_disjoint_from_THM2895_and_THM2898=PASS")
     print(f"parity_eligibility_counts={parity_counts}")
     print(f"parity_eligibility_stratum={parity_stratum}")
     print(f"parity_eligibility_rank={parity_rank}")
     print(f"parity_eligibility_extremum={parity_extremum}")
+    print(
+        "parity_cutoff_quantiles_nearest_rank="
+        f"{parity_cutoff_quantiles}"
+    )
+    print(f"parity_cutoff_stratum_maxima={parity_cutoff_stratum}")
+    print(f"parity_cutoff_rank_maxima={parity_cutoff_rank}")
+    print(f"parity_cutoff_extremum={parity_cutoff_extremum}")
     print(f"root_parity_eligibility_counts={root_parity_counts}")
     print(f"root_parity_eligibility_stratum={root_parity_stratum}")
     print(f"root_parity_eligibility_extrema={root_parity_extrema}")
