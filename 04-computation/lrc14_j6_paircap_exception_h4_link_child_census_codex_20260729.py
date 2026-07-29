@@ -22,9 +22,9 @@ enumerates those core pairs, retains only actual heavy edges, and uses exact
 literal singleton completion (with the longest-component cutoff) for the last
 vertex, while checking all three link edges.
 
-If theta_L/2<=|R|/7, or if the analytic H2 cutoff is deliberately routed away
-from an impractically large finite head, the script uses a generic but exact
-cover recursion.  Every three-cover of R has a vertex in
+If theta_L/2<=|R|/7, or if the analytic H2 head/core is deliberately routed
+away from an impractically large finite search, the script uses a generic but
+exact cover recursion.  Every three-cover of R has a vertex in
 
     G3(R)={w:c_R(w)>=|R|/3};
 
@@ -107,10 +107,11 @@ def interval_mass(carrier: list[tuple[F, F]]) -> F:
 def exact_coverages(
     carrier: list[tuple[F, F]],
     labels: list[int],
+    controls: bool = True,
 ) -> list[tuple[F, int]]:
     rows = V.coverages_many(carrier, labels)
     require(len(rows) == len(labels), "vector coverage length changed")
-    if rows:
+    if rows and controls:
         controls = tuple(
             dict.fromkeys((labels[0], labels[-1], labels[len(labels) // 2]))
         )
@@ -173,7 +174,10 @@ def singleton_cover_candidates(
         for label in range(FIRST_EXTERNAL, cutoff + 1)
         if label not in excluded
     ]
-    rows = exact_coverages(carrier, labels)
+    # The pinned vector primitive is exact.  Candidate equalities receive the
+    # stronger independent literal-residual check below; repeating three slow
+    # scalar controls at every terminal leaf would dominate this census.
+    rows = exact_coverages(carrier, labels, controls=False)
     candidates = [label for value, label in rows if value == mass]
     for label in candidates:
         require(
@@ -380,9 +384,9 @@ def branch_rows() -> list[dict[str, object]]:
 
 
 def child_task(
-    task: tuple[dict[str, object], tuple[int, int], int],
+    task: tuple[dict[str, object], tuple[int, int], int, int],
 ) -> dict[str, object]:
-    branch, pair, h2_head_limit = task
+    branch, pair, h2_head_limit, h2_core_limit = task
     carrier = branch["carrier"]
     parent_mass = branch["mass"]
     q1 = branch["q1"]
@@ -419,15 +423,24 @@ def child_task(
             excluded,
         )
         require(h2_cutoff == analytic_h2_cutoff, "H2 cutoff changed")
-        result = finite_h2_route(
-            residual,
-            link_threshold,
-            excluded,
-            h2_rows,
-        )
-        route = "finite-H2"
-        generic_reason = None
         h2_size = len(h2_rows)
+        if h2_size <= h2_core_limit:
+            result = finite_h2_route(
+                residual,
+                link_threshold,
+                excluded,
+                h2_rows,
+            )
+            route = "finite-H2"
+            generic_reason = None
+        else:
+            result = generic_three_route(
+                residual,
+                link_threshold,
+                excluded,
+            )
+            route = "generic-three"
+            generic_reason = "large-H2-core"
     else:
         result = generic_three_route(
             residual,
@@ -504,15 +517,17 @@ def nearest_rank(values: list[int]) -> tuple[tuple[int, int], ...]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--workers", type=int, default=min(os.cpu_count() or 1, 8))
-    parser.add_argument("--h2-head-limit", type=int, default=5000)
+    parser.add_argument("--h2-head-limit", type=int, default=2000)
+    parser.add_argument("--h2-core-limit", type=int, default=12)
     parser.add_argument("--ledger", type=Path)
     args = parser.parse_args()
     require(args.workers >= 1, "worker count must be positive")
     require(args.h2_head_limit >= FIRST_EXTERNAL, "H2 head limit too small")
+    require(args.h2_core_limit >= 2, "H2 core limit too small")
 
     branches = branch_rows()
     tasks = [
-        (branch, pair, args.h2_head_limit)
+        (branch, pair, args.h2_head_limit, args.h2_core_limit)
         for branch in branches
         for pair in combinations(branch["core"], 2)
     ]
@@ -547,12 +562,24 @@ def main() -> None:
         routes["generic-three"],
         reasons["delta-nonpositive"],
         reasons["large-H2-head"],
+        reasons["large-H2-core"],
         sum(row["closed"] for row in rows),
         len(open_rows),
         len(closed_bodies),
         len(open_bodies),
-        sum(row["h2_size"] for row in finite_rows),
-        max((row["h2_size"] for row in finite_rows), default=None),
+        sum(
+            row["h2_size"]
+            for row in rows
+            if row["h2_size"] is not None
+        ),
+        max(
+            (
+                row["h2_size"]
+                for row in rows
+                if row["h2_size"] is not None
+            ),
+            default=None,
+        ),
         sum(row["pair_unions"] for row in rows),
         sum(row["singleton_heads"] for row in rows),
         max(row["max_singleton_cutoff"] for row in rows),
@@ -585,6 +612,7 @@ def main() -> None:
 
     print("LRC14 j6 pair-cap-exception H4 link-child census")
     print(f"h2_head_limit={args.h2_head_limit}")
+    print(f"h2_core_limit={args.h2_core_limit}")
     print(f"counts={counts}")
     print(f"routes={tuple(sorted(routes.items()))}")
     print(f"generic_reasons={tuple(sorted(reasons.items()))}")
@@ -596,7 +624,7 @@ def main() -> None:
     )
     print(
         "h2_size_quantiles="
-        f"{nearest_rank([row['h2_size'] for row in finite_rows])}"
+        f"{nearest_rank([row['h2_size'] for row in rows if row['h2_size'] is not None])}"
     )
     print(
         "generic_g3_size_quantiles="
