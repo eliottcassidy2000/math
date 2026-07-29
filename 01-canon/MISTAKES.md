@@ -9,6 +9,35 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-323 (2026-07-29, first THM-2918 scratch certificate) -- a divided-power coefficient table was convolved as an ordinary polynomial
+
+- **What was done:** the first diameter-four Macaulay probe stored one
+  symmetric order-`m` tensor entry for each exponent triple and inserted
+  those values directly as coefficients of ordinary monomials.  The
+  resulting fixed determinant had an attractive degree-`196`
+  Gregory--Newton certificate.
+- **First failed implication / minimal witness:** a symmetric tensor table
+  is a divided-power coefficient table.  Ordinary multiplication requires
+  the multinomial multiplicity `m!/(alpha_0!alpha_1!alpha_2!)`; equivalently,
+  divided powers multiply with binomial structure constants.  Already at
+  depth zero on offsets `(0,1,2,4)`, the correct mixed quadratic coefficient
+  is twice the stored tensor entry.  A direct original-form determinant
+  therefore failed the claimed scaling identity.  The entire first minor
+  and its apparent factorization were invalid and were retracted before any
+  theorem reservation or promotion.
+- **Exact repair / strongest survivor:** THM-2918 multiplies every tensor
+  entry by its multinomial count, proves the common denominators by exact
+  division in `Z[n]`, and recomputes the minor.  A genuinely separate direct
+  four-variable multinomial expansion reproduces the repaired forms and
+  selected minors modulo `1000003` at `21` family/depth controls.  The
+  fixed-chart plus Gregory--Newton strategy survives and closes all three
+  nonconsecutive diameter-four families, but none of the false determinant's
+  coefficients or factors is retained.
+- **Rule:** declare the polynomial basis before turning a symmetric tensor
+  into a coefficient dictionary.  For an ordinary monomial basis, audit one
+  mixed coefficient against an ordered-word or direct multinomial expansion
+  before computing any resultant, determinant, or positivity certificate.
+
 ## MISTAKE-322 (2026-07-29, first THM-2901 promotion) -- the full-arity same-cap deadlock was applied to a lower-arity pair flag
 
 - **What was written:** the first promotion of THM-2901 said that reusing a
