@@ -11,6 +11,19 @@
   Global THM-741 and LRC(14) remain open.  LF-normalized `(script,output)`
   hashes:
   `(05aab2283513ded0747c5708a0bfd9d9ba8d163e4622b5e3638bddd6a162a6d1,4ee45dbe8e087f5c1bef9f00fca9916fa709d5a857aaf79ca85d1a0538db2923)`.
+- `lrc14_q0_q3_one_fibre_selector_provenance_obstruction_thm2880.py` ->
+  matching `.out` [THM-2880 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  The THM-2877 injection completes q0 to q3 by the fibre
+  `F={9}xB3`.  Pulling the q3 right-endpoint selector back preserves the
+  same physical source atom/P and the complete nonzero 26-sample
+  Prony/Kummer/Hermitian atlas, but changes the marked right-origin
+  selector.  Pushing the q0 selector forward cancels identically, while all
+  `468` source-induced point terms on `F` vanish because
+  `g^-1(F)={8}xB0` is q0-absent.  The q3 literal `U` ancestry and both
+  q0/q3 `QA/QAB` columns are empty.  Thus this exact g-plus-fibre route has
+  no named-right-origin-preserving physically typed completion.  No row
+  exclusion follows.  LF-normalized `(script,output)` hashes:
+  `(7d379279f08f4df8f16d1fc699f4c6f7a9b657fa151e54d2794ca883b2ceee24,7c7a74d38eac97155b55178d08b317b4658f52cff9651e93113f6b556d19f2e1)`.
 - `lrc14_endpoint_factor_exit_carry_transducer_thm2878.py` -> matching
   `.out` [THM-2878 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  Literal guard/q5 truth is the chain

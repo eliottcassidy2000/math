@@ -85,14 +85,15 @@ columns have rank four but E3 rank three.  THM-2851 exposes
 THM-2852 adds full signed convolution rank and six borrow-aware arrows.
 THM-2857 gives a free Galois `C13` endpoint torsor but only `K0`-linear
 carry.
-THM-2859 gives one q0 `Z^8` germ, not an action: its forest realizes only
-`{0,4,8,9}`, with no rootless hit, square, or literal q3/q11 attachment.
+THM-2859's q0 `Z^8` germ hits only `{0,4,8,9}`: no rootless hit, square,
+or literal q3/q11 attachment.
 THM-2861/2863 give Hermitian/Prony; THM-2868 its atlas. THM-2874
 `F`-clutches Galois/`C169`, but q7 stays flat. THM-2876 source phase kills
-the q3 affine edge; THM-2877 leaves one q0->q3 9-point fibre. THM-2878
-replaces the fourth-corner hunt: directed u3 exit at q12->q0 computes carry
-and `omega^3`, but lacks ancestry/physical QA->QAB attachment. q11 cancels,
-q7 E3-zero; ledger `165`.
+the q3 affine edge; THM-2877 leaves one q0->q3 fibre. THM-2880 closes it:
+pullback keeps atlas/P but moves the right selector; pushforward cancels;
+fibre preimage and q3 ancestry are empty. THM-2878's u3 exit computes carry
+and `omega^3` but lacks physical QA->QAB. q11 cancels, q7 E3-zero; ledger
+`165`.
 
 ### Independent routes that remain live
 
