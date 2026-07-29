@@ -176,6 +176,66 @@ The last entry is the original five-cover problem and is useful only when
 obtained independently; inserting it as an assumption would be circular.
 The lower-order entries are the noncircular computational routes.
 
+### Ranked-complement flag ladder
+
+Rank selection also strengthens the finite-core recursion itself.  Fix an
+LRC target `2<=k<=min(p,6)` and, for `1<=r<=k-1`, put
+
+```text
+R_r(P)=q_1(P)+...+q_r(P),             s=k-r.              (12a)
+```
+
+Every allowed `r`-set has union coverage at most `R_r(P)`: order its
+singleton coverages decreasingly, observe that its `i`-th entry is at most
+`q_i(P)`, and use subadditivity.  Thus `R_r(P)` is a valid `r`-set
+complement cap in THM-2893.  If
+
+```text
+R_r(P)<(7-k+r)h/7,                                        (12b)
+```
+
+the ranked high core
+
+```text
+H_(k,r)(P)={
+  v in V minus P : c(v)>=(h-R_r(P))/(k-r)
+}                                                         (12c)
+```
+
+is finite under the strict LRC discrepancy bound, and every hypothetical
+`k`-cover contains at least `r+1` of its labels.  More precisely, with
+
+```text
+epsilon_(k,r)=(h-R_r(P))/(k-r)-h/7>0,
+```
+
+every high-core label in the discrepancy range satisfies
+
+```text
+v<=ceil(gamma/epsilon_(k,r))-1.                            (12d)
+```
+
+The full THM-2893 sidecar is retained: every `(k-r)`-subset of the cover is
+heavy at union threshold `h-R_r(P)`.  Hence an enumerated flag of at most
+`r+1` high labels may also be filtered by those heavy-subset conditions
+whenever they are nonvacuous.
+
+For the live `k=5` problem, the adaptive ladder is
+
+```text
+r=1: q_1                 <3h/7  forces 2 high labels;
+r=2: q_1+q_2             <4h/7  forces 3 high labels;
+r=3: q_1+q_2+q_3         <5h/7  forces 4 high labels;
+r=4: q_1+q_2+q_3+q_4     <6h/7  forces 5 high labels.      (12e)
+```
+
+The first row is THM-2895's `5->3` step.  The later rows trade a stronger
+ranked scalar hypothesis for more forced core labels and fewer residual
+slots.  No row uniformly dominates another computationally: the relevant
+cost is the size of its finite core, the number of heavy flags, and the
+cost of the literal child certificate.  Thus `(12e)` is an adaptive flag
+portfolio, not a prescription to choose the largest eligible `r`.
+
 ## 4. Disjoint-block and factor-critical matching repair
 
 The raw term `mB_2` forgets that its `m` maximizing pairs must be
