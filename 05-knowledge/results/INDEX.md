@@ -14,6 +14,21 @@
   the hash-pinned THM-2904 ledger.  Ordinary/optimized outputs are
   byte-identical.  Verifier/locked-output SHA-256:
   `(48f279b90955592f34656eb45e6d6dfaf4f88618a157032e58fcbd7beb104aee,e5c58cc2eb325928c00839c2593450ea7cce8945b3835898ec83c6c5f42fac9b)`.
+- `lrc14_j6_one_h3_row_child_top4_census_codex_20260729.py` -> matching
+  `.out` [THM-2912 PROVED + FINITE-EXACT + VERIFIED].  After reconstructing
+  THM-2904/2907's full branch partition, exactly `210` of the `3,344`
+  checkpoint residual bodies have one ordinary H3 row.  Their `807` open
+  ordered-centre children all have globally sealed child top-four ranks:
+  exact scanning through `2,000` leaves a minimum fourth-rank tail gap
+  `12590819/2860285428`.  Strict top-four deficit closes `765` children
+  and all pivots on `172` roots, with zero equality margins.  Exact set
+  difference against THM-2911 finds overlap `39` and additive `133`, so
+  the proved union is `314` and residual `3,118`.  Single-worker,
+  eight-worker, and optimized eight-worker outputs are byte-identical;
+  child-ledger digest
+  `39f3a9fb8ec6447baf96512bee3ee174e2390639ab3bbf0a6a36dcb5cdf0274e`.
+  Script/output SHA-256:
+  `(12ff6b52949198d935762bdd3f278b8798fccc259bf8e663fdb53d4e3ddf36a6,454d87c8beeb81405b031cce4b40bdda0d385cfcd9c48e6fcf4eb810cfc00c5a)`.
 - `lrc14_j6_paircap_exception_h4_link_child_census_codex_20260729.py`
   -> summary and full child-ledger `.out` files [THM-2907 PROVED +
   FINITE-EXACT + VERIFIED].  On all `18,290` actual H4 pair flags of

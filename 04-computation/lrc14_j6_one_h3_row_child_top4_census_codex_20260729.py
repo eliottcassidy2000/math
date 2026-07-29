@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-r"""Exact child top-four census on the current one-H3-row LRC14 roots.
+r"""Exact child top-four census on the post-THM2904/2907 one-H3-row roots.
 
 THM-2904 allocates every hypothetical five-cover to the earliest
 maximum-coverage centre in its finite hostile H1 core.  Once a centre is
@@ -8,11 +8,12 @@ labels, excluding the marked prefix, the centre, and every earlier core
 label.
 
 This verifier reconstructs the full THM-2904 parent universe, selects the
-210 current residual bodies having exactly one ordinary H3 row after
-THM-2907, and computes the exact four largest singleton coverages on every
-open centre child.  Labels through 2,000 are evaluated literally.  The
-THM-735 discrepancy bound seals every omitted label below the retained
-fourth rank, so a strict top-four sum deficit excludes that centre.
+210 post-THM-2904/2907 residual bodies having exactly one ordinary H3 row,
+and computes the exact four largest singleton coverages on every open
+centre child.  Labels through 2,000 are evaluated literally.  The THM-735
+discrepancy bound seals every omitted label below the retained fourth rank,
+so a strict top-four sum deficit excludes that centre.  Exact set
+difference is then taken against the later THM-2911 proved union.
 """
 
 from __future__ import annotations
@@ -45,6 +46,10 @@ H4_ENDPOINT_OUT = (
     ROOT
     / "05-knowledge/results/lrc14_j6_paircap_exception_endpoint_convention_audit_codex_20260729.out"
 )
+THM2911_OUT = (
+    ROOT
+    / "05-knowledge/results/lrc14_j6_ranked_h1_thm2911/locked.out"
+)
 PARENT_SHA256 = (
     "99f1938f264d90c2b34ec3c64566605cc8fd12520424ad2f5cd0957342202ba0"
 )
@@ -56,6 +61,9 @@ H4_OUT_SHA256 = (
 )
 H4_ENDPOINT_OUT_SHA256 = (
     "a93a4a724dac6c55806f3358c2f5ab25de8f0261c92906a0161414781a717d20"
+)
+THM2911_OUT_SHA256 = (
+    "e5c58cc2eb325928c00839c2593450ea7cce8945b3835898ec83c6c5f42fac9b"
 )
 
 FIRST_EXTERNAL = 15
@@ -87,14 +95,21 @@ EXPECTED_COUNTS: tuple[object, ...] | None = (
     56,
     807,
     765,
+    0,
     42,
     172,
     38,
-    260,
-    3_172,
+    181,
+    39,
+    133,
+    314,
+    3_118,
 )
 EXPECTED_CLOSED_ROOT_DIGEST: str | None = (
     "fcb9e88dd0b5e8aa855e0164636a17f42b4f1620407b9a0a780e50fd48336217"
+)
+EXPECTED_ADDITIVE_ROOT_DIGEST: str | None = (
+    "753f775d219768da41f875aed6a334fab67d6af6786bcb198159d843b1d97137"
 )
 EXPECTED_LEDGER_SHA256: str | None = (
     "39f3a9fb8ec6447baf96512bee3ee174e2390639ab3bbf0a6a36dcb5cdf0274e"
@@ -142,6 +157,10 @@ H = load_parent()
 
 def check_dependency_outputs() -> None:
     require(
+        H.S2 == F(99, 70) and H.S2 * H.S2 > 2,
+        "THM735 rational discrepancy majorant changed",
+    )
+    require(
         file_sha256(PARENT_OUT) == PARENT_OUT_SHA256,
         "THM2904 output changed",
     )
@@ -149,6 +168,10 @@ def check_dependency_outputs() -> None:
     require(
         file_sha256(H4_ENDPOINT_OUT) == H4_ENDPOINT_OUT_SHA256,
         "THM2907 endpoint output changed",
+    )
+    require(
+        file_sha256(THM2911_OUT) == THM2911_OUT_SHA256,
+        "THM2911 output changed",
     )
     parent_counts = literal_output_value(PARENT_OUT, "counts=")
     require(
@@ -198,13 +221,20 @@ def check_dependency_outputs() -> None:
         and unique_output_text(H4_ENDPOINT_OUT, "all_exact_controls=") == "PASS",
         "THM2907 endpoint controls changed",
     )
+    require(
+        unique_output_text(THM2911_OUT, "mode=") == "LOCKED_FINITE_EXACT"
+        and unique_output_text(THM2911_OUT, "all_exact_controls=") == "PASS"
+        and "proved_union=181,residual=3251"
+        in unique_output_text(THM2911_OUT, "current_composition="),
+        "THM2911 composition controls changed",
+    )
 
 
 def compute_parent(row: dict[str, object]) -> dict[str, object]:
     return H.actual_core(row)
 
 
-def current_proved_union() -> set[tuple[int, ...]]:
+def proved_union_through_2904() -> set[tuple[int, ...]]:
     through_2905 = H.current_proved_union()
     require(len(through_2905) == 82, "THM2905 union changed")
     additive_2904 = set(H.EXPECTED_ADDITIVE_ROOTS)
@@ -214,10 +244,26 @@ def current_proved_union() -> set[tuple[int, ...]]:
     return current
 
 
+def proved_union_through_2911() -> set[tuple[int, ...]]:
+    baseline = proved_union_through_2904()
+    additive = {
+        tuple(map(int, line.removeprefix("ADDITIVE_ROOT=").split(",")))
+        for line in THM2911_OUT.read_text().splitlines()
+        if line.startswith("ADDITIVE_ROOT=")
+    }
+    require(
+        len(additive) == 93
+        and not (baseline & additive)
+        and len(baseline | additive) == 181,
+        "THM2911 explicit additive-root composition changed",
+    )
+    return baseline | additive
+
+
 def residual_one_rows(
     rows: list[dict[str, object]],
 ) -> tuple[list[dict[str, object]], tuple[tuple[int, int], ...]]:
-    proved = current_proved_union()
+    proved = proved_union_through_2904()
     ordinary_all = [
         row
         for row in rows
@@ -370,9 +416,10 @@ def main() -> None:
         )
     )
     failed_roots = tuple(sorted(set(by_body) - set(closed_roots)))
-    prior = current_proved_union()
-    require(not (set(closed_roots) & prior), "new child roots overlap prior union")
-    new_union = prior | set(closed_roots)
+    baseline = proved_union_through_2911()
+    overlap = tuple(sorted(set(closed_roots) & baseline))
+    additive_roots = tuple(sorted(set(closed_roots) - baseline))
+    new_union = baseline | set(closed_roots)
 
     counts = (
         len(parent_rows),
@@ -388,10 +435,14 @@ def main() -> None:
         min(row["child_components"] for row in children),
         max(row["child_components"] for row in children),
         sum(row["tail_gap"] >= 0 for row in children),
-        sum(row["closed"] for row in children),
-        sum(not row["closed"] for row in children),
+        sum(row["margin"] > 0 for row in children),
+        sum(row["margin"] == 0 for row in children),
+        sum(row["margin"] < 0 for row in children),
         len(closed_roots),
         len(failed_roots),
+        len(baseline),
+        len(overlap),
+        len(additive_roots),
         len(new_union),
         3_432 - len(new_union),
     )
@@ -403,6 +454,14 @@ def main() -> None:
         require(
             root_digest == EXPECTED_CLOSED_ROOT_DIGEST,
             "one-row closed-root list changed",
+        )
+    additive_root_digest = hashlib.sha256(
+        repr(additive_roots).encode()
+    ).hexdigest()
+    if EXPECTED_ADDITIVE_ROOT_DIGEST is not None:
+        require(
+            additive_root_digest == EXPECTED_ADDITIVE_ROOT_DIGEST,
+            "one-row additive-root list changed",
         )
     ledger = hashlib.sha256()
     ledger.update(b"LRC14/j6/one-H3-row/child-top4/v1\n")
@@ -438,7 +497,9 @@ def main() -> None:
     print(f"counts={counts}")
     print(f"closed_roots={closed_roots}")
     print(f"failed_roots={failed_roots}")
+    print(f"thm2911_overlap_roots={overlap}")
     print(f"closed_root_digest={root_digest}")
+    print(f"additive_root_digest={additive_root_digest}")
     print(
         "closest_positive="
         f"{closest_positive['body']};rank={closest_positive['rank']};"
@@ -462,13 +523,14 @@ def main() -> None:
             for value in (
                 EXPECTED_COUNTS,
                 EXPECTED_CLOSED_ROOT_DIGEST,
+                EXPECTED_ADDITIVE_ROOT_DIGEST,
                 EXPECTED_LEDGER_SHA256,
             )
         )
         else "mode=LOCKED"
     )
     print(
-        "scope=210 current residual bodies with one ordinary H3 row;"
+        "scope=210 post-THM2904/2907 residual bodies with one ordinary H3 row;"
         "807 ordered centre children;not LRC14"
     )
     print("all_exact_controls=PASS")
