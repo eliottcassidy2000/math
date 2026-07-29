@@ -1,6 +1,7 @@
 # Ranked-suffix bootstrap minimum-seed battery
 
-**Status: FINITE-EXACT SCOPED RESEARCH NOTE.  No uniform theorem.**
+**Status: FINITE-EXACT SCOPED RESEARCH NOTE WITH A LOCKED THM-2895
+COMPLETION.  No uniform theorem.**
 
 This companion sharpens the four-root ranked-suffix scalar battery from a
 fixed ordering into an exact target-set-selection problem.  Its closest
@@ -56,6 +57,10 @@ excluding only the earlier seeds.  It may not assume later seeds are absent.
 
 Thus minimum seed size optimizes how many branches require deeper work; it
 does not close those branches or the root.
+
+The supplemental verifier in Section 6 now supplies those deeper proofs for
+one deterministic minimum seed on each of the four scoped roots.  The
+warning remains load-bearing for every other seed atlas.
 
 ## 3. Exact minimum seeds
 
@@ -121,8 +126,10 @@ A hostile control is decisive: using only the already certified rank-one
 apex as seed activates **zero** further apices on every root.  The closures
 remain `1/19`, `1/20`, and `1/21`, leaving `18`, `19`, and `20` hard
 branches.  Therefore the prior rank-one certificates do not yet recompose
-any whole root.  Future optimization must jointly consider seed size,
-seed order, and cap/flag margins.
+any whole root by themselves.  The THM-2895 completion below recomposes the
+roots only after all remaining seed branches are certified on their actual
+ordered prefixes.  Future optimization must jointly consider seed size,
+seed order, cap/flag margins, and residual enumeration cost.
 
 ## 5. Exact controls and reproduction
 
@@ -152,5 +159,52 @@ SHA-256 a7a77dc433b21d94a54524064ccd62e553ed67ae8a3d3364bf79c41c36849d04
 SHA-256 bdcf896d152d206b3ae77a3568609887190e1ba991909481769d7ad560a68835
 ```
 
-The universe is only four of the `3432` seven-body roots.  This result does
-not prove any seed branch, the seven-body/six-slot rung, or LRC(14).
+The universe is only four of the `3432` seven-body roots.  The scalar
+minimum-seed computation alone proves no seed branch, the seven-body/six-slot
+rung, or LRC(14).
+
+## 6. Parity completion and proof-cost inversion
+
+Apply THM-2895's `5->3->1` parity descent to the deterministic minimum seeds
+in their displayed order, excluding only earlier proved labels.  All `15`
+seed branches satisfy `B_1<3h/7`.  Their H4 sizes are
+
+```text
+(30,17,24,15 | 12,7,7 | 16,12,12,10,7 | 11,5,7),
+```
+
+so they generate `1464` pair residuals.  Fresh top-three sums close `1461`;
+the adaptive union with `B_2+B_1` closes `1462`.  The two survivors are
+exactly the third hostile root's rank-one pairs `(23,25)` and `(25,34)`.
+Their H2 edges `(20,37)` and `(20,23)` leave singleton horizons `31` and
+`33`; `13+15=28` exact noncontainment checks find no cover.  The scalar
+cascades then activate all `58` nonseed branches, proving all four scoped
+roots again.
+
+This exposes a proof-cost inversion:
+
+```text
+route                         branches    H4 pairs    pair evaluations
+fixed coverage order              25          784                 7551
+minimum scalar seed order          15         1464                17971
+```
+
+Minimum seed cardinality is therefore not minimum proof cost.  Early
+minimum-seed carriers have much larger high cores; a production search
+should weight edges by predicted H4/residual cost, not only by the number
+of paid branches.
+
+```text
+04-computation/lrc14_j6_minseed_parity_closure_thm2895_addendum.py
+SHA-256 ed5e73b0f15fa6050ecd2f095300bc3d20262c8b7f4c6b7f2d136b57f3b5afc6
+
+05-knowledge/results/lrc14_j6_minseed_parity_closure_thm2895_addendum.out
+SHA-256 c96abee6560dbd3d3421dbc46c7901c62333fcccd47fa40f50c6f3a1463a64cb
+```
+
+Ordinary and optimized replays are byte-identical, the script contains no
+Python `assert`, and the canonical ledger digest is
+
+```text
+08712e5aff4875c8fd2ba336f21b29d4ac2694ddf69b1aaa258f6df74073a05c.
+```
