@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `lrc14_j6_two_h3_row_child_top4_census_codex_20260729.py` -> matching
+  summary and full-ledger `.out` files [THM-2916 PROVED + FINITE-EXACT +
+  VERIFIED].  Exact recomposition after THM-2913 leaves no one-H3 root;
+  the next stratum has `690` roots, `1,380` ordinary H3 rows, and `5,618`
+  open ordered-centre children.  A per-child doubled horizon seals all
+  global top-four ranks after `4,060,613` exact label evaluations:
+  horizons `255/511/1023/2047` occur `19/3086/2501/12` times.  The strict
+  top-four deficit closes `5,251` children and every child on `394`
+  roots, with no equality cases.  All `394` roots are additive, taking
+  the proved union from `351` to `745` and the residual from `3,081` to
+  `2,687`; `367` failed children on `296` roots remain for the separate
+  pair/Hunter/toothpick lane.  Ordinary and optimized eight-worker
+  summary and ledger outputs are byte-identical.  LF-normalized
+  script/output/ledger SHA-256:
+  `(7d3c4e82abb0ce3af13c43c1e03f09d4be1ee3dbfd496ca05273672cd2a462a6,6b31abaadd4f089a9f98a9eea49845c0ed0123a810bb4bf4f3c0309c519e7df9,a202807a1da472ed6c19109425478922b2218c48f2afdb39c67a0b9f2f5fb7c4)`.
 - `lrc14_j6_one_h3_row_pair_hunter_toothpick_closure_codex_20260729.py`
   -> matching summary, full-ledger, and replay `.out` files [THM-2913
   PROVED + FINITE-EXACT + VERIFIED].  The `42` ordered children on `38`

@@ -40,17 +40,79 @@ THM2913_OUT = (
     ROOT
     / "05-knowledge/results/lrc14_j6_one_h3_row_pair_hunter_toothpick_closure_codex_20260729.out"
 )
+THM2913_PATH = (
+    ROOT
+    / "04-computation/lrc14_j6_one_h3_row_pair_hunter_toothpick_closure_codex_20260729.py"
+)
+
+BASE_SHA256 = "d2810560a7d002d7eeadecc6a50a7733c90585527295aa5e85e72775739b839b"
+BASE_OUT_SHA256 = (
+    "454d87c8beeb81405b031cce4b40bdda0d385cfcd9c48e6fcf4eb810cfc00c5a"
+)
+THM2913_SHA256 = (
+    "14e56e124197cd1bdae841efa195a1e7c282e7ea368a610e5f4d56509431858b"
+)
+THM2913_OUT_SHA256 = (
+    "3604644a9691b13e7fa245249b68c9586ec2775996834f7761f32eb0b89f3e64"
+)
 
 FIRST_EXTERNAL = 15
 INITIAL_HORIZON = 127
 MAX_HORIZON = 4_095
 
-# Discovery locks.  Fill these only after an independent ordinary/optimized
-# replay and exact root recomposition audit.
-EXPECTED_COUNTS: tuple[object, ...] | None = None
-EXPECTED_CLOSED_ROOT_DIGEST: str | None = None
-EXPECTED_ADDITIVE_ROOT_DIGEST: str | None = None
-EXPECTED_LEDGER_SHA256: str | None = None
+EXPECTED_COUNTS: tuple[object, ...] | None = (
+    11_842,
+    11_511,
+    3_401,
+    351,
+    3_081,
+    (
+        (1, 262),
+        (2, 726),
+        (3, 944),
+        (4, 756),
+        (5, 450),
+        (6, 181),
+        (7, 60),
+        (8, 14),
+        (9, 7),
+        (10, 1),
+    ),
+    (
+        (2, 690),
+        (3, 929),
+        (4, 751),
+        (5, 449),
+        (6, 181),
+        (7, 60),
+        (8, 13),
+        (9, 7),
+        (10, 1),
+    ),
+    1_380,
+    690,
+    5_618,
+    4_060_613,
+    ((255, 19), (511, 3_086), (1_023, 2_501), (2_047, 12)),
+    18,
+    62,
+    5_618,
+    5_251,
+    0,
+    367,
+    394,
+    296,
+    394,
+    745,
+    2_687,
+)
+EXPECTED_CLOSED_ROOT_DIGEST: str | None = (
+    "c68d09676683f6204df3b04353a3b3107ebbb4285d13a3b6001446372e351e1b"
+)
+EXPECTED_ADDITIVE_ROOT_DIGEST: str | None = EXPECTED_CLOSED_ROOT_DIGEST
+EXPECTED_LEDGER_SHA256: str | None = (
+    "5ae96776a6ffe025c3246dbb3e5381c040d7ad2f4f99315115651b70622252c6"
+)
 
 
 def require(condition: bool, message: str) -> None:
@@ -101,6 +163,20 @@ def compute_parent(row: dict[str, object]) -> dict[str, object]:
 
 
 def current_union_351() -> set[tuple[int, ...]]:
+    require(file_sha256(BASE_PATH) == BASE_SHA256, "THM2912 source changed")
+    require(file_sha256(BASE_OUT) == BASE_OUT_SHA256, "THM2912 output changed")
+    require(file_sha256(THM2913_PATH) == THM2913_SHA256, "THM2913 source changed")
+    require(
+        file_sha256(THM2913_OUT) == THM2913_OUT_SHA256,
+        "THM2913 output changed",
+    )
+    require(
+        "mode=LOCKED" in BASE_OUT.read_text()
+        and "all_exact_controls=PASS" in BASE_OUT.read_text()
+        and "mode=LOCKED" in THM2913_OUT.read_text()
+        and "all_exact_controls=PASS" in THM2913_OUT.read_text(),
+        "THM2912/2913 replay controls changed",
+    )
     baseline = C.proved_union_through_2911()
     top4 = set(literal_output_value(BASE_OUT, "closed_roots="))
     repaired = set(literal_output_value(THM2913_OUT, "closed_roots="))
