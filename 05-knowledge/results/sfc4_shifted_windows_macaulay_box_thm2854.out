@@ -1,0 +1,17 @@
+SFC4 SHIFTED-WINDOW MACAULAY BOX -- exact finite-field referee
+status=FINITE-EXACT; ALL SHIFTED CELLS CERTIFIED EMPTY
+prime=1000003 primality=PASS denominator_gate=PASS top_exponent=8
+universe=C(9,4)*2=252 cells; windows k=(1,2)
+constructors=count-multinomial+ordered-tensor exact agreement
+exact_Q_direct_controls=30
+macaulay_shapes_D_rows_columns={0: (7, 195, 120), 1: (11, 589, 364), 2: (15, 1325, 816)}
+synthetic_positive_ranks={0: 120, 1: 364, 2: 816}
+synthetic_common_point_ranks={0: 114, 1: 340, 2: 756}
+full_rank_cells_by_window={1: 126, 2: 126}
+rank_ranges_by_window={1: [364, 364], 2: [816, 816]}
+sample_opposite_pivot_ranks={((0, 1, 2, 3), 1): 364, ((0, 1, 2, 3), 2): 816, ((0, 2, 5, 8), 1): 364, ((0, 2, 5, 8), 2): 816, ((5, 6, 7, 8), 1): 364, ((5, 6, 7, 8), 2): 816}
+highest_moment_deletion_ranks={0: (114, 120), 1: (340, 364), 2: (756, 816)}
+certificate_digest_sha256=21c3c85cf89184651e302965bafef49274e22f94545414c463087baddea0d2a9
+implication=nonzero mod-p minor => full rank over Q => empty projective variety
+normal_optimized_stored=BYTE-MATCH
+scope=SFC(4), supports<=8, shifted windows k=1,2 only
