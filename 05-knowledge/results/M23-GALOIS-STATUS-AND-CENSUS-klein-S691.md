@@ -18,6 +18,23 @@ blur that line.
 - **Over number fields: PARTIAL.** M23 is realized over every number field
   K in which −1 is a sum of two squares (e.g. Q(i)); so the obstruction is
   genuinely arithmetic, not group-theoretic.
+- **Explicit characteristic-zero realization over a quartic field
+  (CITED + PASSPORT VERIFIED-EXACT).**  Elkies constructs `P(x)-t` with
+  Galois group `M23` over `F(t)`, where
+
+  ```text
+  F=Q(g),  g^4+g^3+9g^2-10g+8=0.
+  ```
+
+  [Elkies's construction](https://doi.org/10.2140/obs.2013.1.359) has
+  Galois group `M23`.  The exact in-repo audit reconstructs his identity
+  `P=P2^2 P3 P4^4=P7 P8^2+tau`, checks the branch types
+  `1^3 2^2 4^4`, `1^7 2^8`, and `23`, the Riemann--Hurwitz defect
+  `14+8+22=44`, and that `F` contains `sqrt(-23)`, making the
+  discriminant square.  These algebraic checks put the group inside
+  `A23` with the stated passport; by themselves they leave the exact
+  `M23`-versus-`A23` boundary.  Elkies closes that boundary with a
+  5-subset resolvent and an effective Chebotarev/Weil-bound argument.
 - **Over F₂(t): PROVED (Abhyankar, BAMS 27 (1992) / Israel J. Math 88
   (1994)).** The trinomial **f_t(x) = x²³ + t·x³ + 1** has
   Gal(f_t / F₂(t)) = M23; writing t = (x²³+1)/x³ gives dt/dx = x⁻⁴ ≠ 0, so
@@ -46,6 +63,18 @@ Chebotarev forces convergence to the class-fraction table. M23 (order
 Decisive negative control: A23-only types (1²⁰3, 1¹⁹2², 2·8·13, …) must
 never occur. Note the 23-cycle frequency 2/23 does NOT separate M23 from
 A23; separation is carried by the absent types.
+
+`04-computation/m23_elkies_quartic_passport_audit.py` (SymPy) independently
+checks the exact quartic-field factorization and passport just described.
+Its matching stored output is
+`05-knowledge/results/m23_elkies_quartic_passport_audit.out`.  Ordinary and
+optimized executions are required to byte-match.  The script deliberately
+reports, rather than hides, the final group-separation step that belongs to
+Elkies's cited proof.  LF-normalized SHA-256 hashes are
+`35b8586ca4101208e0bdf5360efb1a5afef585ec6f40ab9ec520a3886e328c8f`
+for the script and
+`4717fe540eed4ba3194c020585872d2844c9e8919997306a1229d723e4a9d91b`
+for the output.
 
 **Results (frozen in the script's context block + session scratch):**
 - x²³ + t·x³ + 1: **exactly the 12 M23 types, zero aliens, all 12 observed**
