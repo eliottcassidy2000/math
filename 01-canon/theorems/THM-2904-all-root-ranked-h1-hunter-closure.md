@@ -311,11 +311,14 @@ is not evidence for a cover.
 
 ## 7. Verification and scope
 
-The verifier hash-pins the THM-2899 and THM-2901 ledgers and both exact
-interval engines.  It joins rows by body, rank, apex, and excluded prefix;
+The verifier hash-pins the THM-2899 and THM-2901 ledgers, both exact
+interval engines, and the seven canonical theorem outputs composing the
+proved `82`-root union through THM-2905.  It artifact-derives every prior
+root group, THM-2903's overlap and proof digest, and THM-2905's additive
+set difference.  It joins rows by body, rank, apex, and excluded prefix;
 reconstructs every literal carrier; checks scalar/vector agreement; solves
 every threshold in `(3)`; proves every cutoff in `(9)`; retains every exact
-core coverage; and locks every pivot bound in `(13)`--`(14)`.  All guards
+core coverage; and locks every pivot bound in `(13)`--`(14')`.  All guards
 are explicit and survive optimized Python.
 
 The complete core-and-pivot semantic digest is
@@ -328,7 +331,7 @@ Canonical artifacts:
 
 ```text
 04-computation/lrc14_j6_all_hard_ranked_h1_hunter_pivot_census_codex_20260729.py
-SHA-256 6e3e079b0c4ad67beec22c8f02c848cb25354a20de446ab634f2c5a116264f96
+SHA-256 99f1938f264d90c2b34ec3c64566605cc8fd12520424ad2f5cd0957342202ba0
 
 05-knowledge/results/lrc14_j6_all_hard_ranked_h1_hunter_pivot_census_codex_20260729.out
 SHA-256 0933c67a108b6d588e36737fb2b17b325ca36146976cfb035bebe036a6234036

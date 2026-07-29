@@ -17,11 +17,12 @@
   `4,071` pivots and all pivots on `279` branches.  All four raw equality
   pivots close by strict noncore bounds.  Six new whole roots take
   the proved union to `88` and residual to `3344`; none of the `52`
-  pair-cap exceptions closes.  Ordinary/optimized outputs are
+  pair-cap exceptions closes.  The prior `82`-root union is artifact-derived
+  from seven hash-pinned theorem outputs.  Ordinary/optimized outputs are
   byte-identical; semantic digest
   `ec878244b922ba5f48633614a86a1f9706c1fbdd0ebd6c61f020291cfd737bab`.
   Script/output SHA-256:
-  `(6e3e079b0c4ad67beec22c8f02c848cb25354a20de446ab634f2c5a116264f96,0933c67a108b6d588e36737fb2b17b325ca36146976cfb035bebe036a6234036)`.
+  `(99f1938f264d90c2b34ec3c64566605cc8fd12520424ad2f5cd0957342202ba0,0933c67a108b6d588e36737fb2b17b325ca36146976cfb035bebe036a6234036)`.
 - `lrc14_j6_all_hard_hunter_star_envelope_census_codex_20260729.py` ->
   matching `.out` [THM-2905 PROVED + FINITE-EXACT + VERIFIED].  Exact
   breakpoint evaluation of the Hunter-star envelope `G_5` closes `2,964`
