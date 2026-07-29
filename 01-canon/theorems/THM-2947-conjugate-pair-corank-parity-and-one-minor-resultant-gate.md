@@ -2,8 +2,8 @@
 id: THM-2947
 title: "Conjugate-pair corank parity and one-minor resultant gate"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  For a real ternary (2,3) complete intersection with
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a real
+  ternary (2,3) complete intersection with
   no real geometric support, the kernel of quartic multiplication on
   its length-six Artin algebra has even real dimension, including in
   the nonreduced case.  Hence the full degree-seven Macaulay map has
@@ -15,7 +15,14 @@ status: >
   degree-at-most 55M-35 certificate.  No fixed cofactor is proved
   uniformly nonzero and no new support width is closed.
 source: codex-gmc-uniform-width-extension-2026-07-29
-audit: Pending independent hostile audit.
+audit: >
+  An independent hostile audit rederived the nonreduced conjugate-local
+  parity, the degree-three/degree-seven dehomogenization, the exact
+  rank formula, the resultant/unit equivalence, the full and quotient
+  fifth-compound gates, the 216-cofactor degree invoice, and the sharp
+  real-summand hostile.  It also checked the stronger direct Veronese
+  proof of the one-minor implication, recomputed both LF hashes, and
+  replayed normal, optimized, and stored output byte-for-byte.
 depends_on:
   - THM-2843-four-slot-projective-divisibility-and-resolvent-reduction
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
@@ -32,8 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2947 -- conjugate-pair corank parity and one-minor resultant gate
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. The length-six algebra and its real parity
 
@@ -147,6 +153,23 @@ one nonzero 35-by-35 minor of Phi_7
 
 Conversely, if the resultant vanishes, `(4)` forces corank at least
 two, so every `35`-minor vanishes.
+
+There is also a direct proof of implication `(14)` which does not need
+regularity of `Q,C`.  If the three real forms have a common projective
+point `P` and there is no real common point, then `Pbar!=P` is a second
+common point.  Every element in the image of `Phi_7` vanishes at both.
+The degree-seven Veronese embedding separates the two projective
+points, so evaluation at `P` and `Pbar` gives two independent
+annihilating covectors after complexification.  Hence
+
+```text
+Res(Q,C,F)=0 and no real common point
+       ==> rank(Phi_7)<=34.                          (14a)
+```
+
+The Artin argument remains stronger: it gives the complete rank ladder
+`(12)` and the six-dimensional carrier `(18)`, not merely the gap at
+rank `35`.
 
 ## 3. A canonical positive fifth-compound certificate
 
