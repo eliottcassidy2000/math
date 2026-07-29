@@ -1,0 +1,16 @@
+THM-2868 COMMON SIGNED FULL-CURRENT PRONY PROBE
+horn=q3/q11 common 42 cells; first=(0, 5, 1); last=(12, 10, 1)
+Prony_window=(1,2,3,4); right_frequencies=(38,64,90,116)
+frequency_sections=(1, 43, 85, 127, 169, 211, 253, 295, 337, 379, 421, 463, 505); unit_offsets=(0, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0, 0); unit_pairs=((1, 2), (43, 44), (85, 86), (127, 128), (170, 171), (211, 212), (253, 254), (295, 296), (339, 340), (379, 380), (421, 422), (463, 464), (505, 506))
+unit_right_frequency_pairs=((38, 64), (1130, 1156), (2222, 2248), (3314, 3340), (4432, 4458), (5498, 5524), (6590, 6616), (7682, 7708), (8826, 8852), (9866, 9892), (10958, 10984), (12050, 12076), (13142, 13168))
+field=352341050142921841; common_source=254455016269350867; signed_full=(331376477583784499, 140617567341148909, 139221330033162642, 136508150682873724); split_left=305272472600558724; split_minus_right=26104004983225775; physical_U0=305272472600558724; physical_V0=26104004983225775; physical_t0=304174682735739267; diagonal_clutch_3_10=108310876657261497; sigma547_common_source=248769464494275593
+field=956354278959359281; common_source=318932490657369324; signed_full=(395033745332057749, 212598632462533647, 485502354828047980, 110568788368642969); split_left=869313819406323966; split_minus_right=482074204885093064; physical_U0=869313819406323966; physical_V0=482074204885093064; physical_t0=223267090638481188; diagonal_clutch_3_10=1924946182130949; sigma547_common_source=646245011020437966
+support=q3 signed selector nonzero; q11 cancels; q7 zero at both origins
+gauge=marked-sheet representative transport exact for the full 28-sample replay bank in both fields
+physical_multiplier_target_DFT_support={3}xF13; U_(r+1)=omega^3*U_r; V_(r+1)=V_r; unique_diagonal_invariant_channel=(3,10); normalized_value=U0/13*omega^9
+projective_split_exponents=(955, 799, 643, 487); 13th_power_exponents=(585, 923, 1261, 1599); each_primitive2366=1; sigma_ratio=omega^3; minimal_polynomial=X^13-t^13_over_Q(zeta91)
+physical_projective_exponents=(955, 1501, 2047, 227, 773, 1319, 1865, 45, 591, 1137, 1683, 2229, 409); 13_distinct_primitive2366=1; physical_ratio_rotation=omega^3
+index_zero_repairs=r4:+1,r8:+2; all_26_raw_multipliers_and_right_frequencies_are_91_units=1; seam_triangle_sections=(0,4,8)<->(q3,q7,q11)
+common_source_not_Q(zeta91)=1; witness automorphism u=547 fixes zeta91 and moves P in both certified fields
+scope=frequency-cleared signed coefficient measurements with variable local Prony offsets, not one raw affine pair or a positive packet; common E3 ancestry, same marked triangle, and q11-to-q7 support transport remain absent
+ALL EXACT CHECKS PASSED
