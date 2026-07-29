@@ -1,5 +1,5 @@
 sens_degree_fullsens_cpsat_macmini_S171.py — CP-SAT evidence for m(4) = 9
-(THM-2835).  Encoder: Boolean var per point of {0,1}^n; one integer equality
+(THM-2838; originally pushed as THM-2835, renumbered in the root-lrc collision repair).  Encoder: Boolean var per point of {0,1}^n; one integer equality
 per subset with |S| > d (vanishing Moebius coefficient); degree-sequence
 symmetry breaking on pair values.  OR-Tools CP-SAT 9.15.6755, 8 workers.
 
@@ -20,8 +20,9 @@ feasibility model, identical constraint mathematics, no symmetry breaking):
   integral (no one-shot Farkas certificate; branching required).
 Two independent engines with bidirectional controls; external hostile audit
 still welcome per repo custom.  (5,14) attempt on this host OOMs at 8 GB with 8
-workers; a memory-capped 2-worker run was launched at S171 close — see
-sens_cpsat_5_14_capped.log in the session scratch if completed.
+workers; both a memory-capped CP-SAT run and a HiGHS attempt made no search progress
+within the session on this 8 GB host — (5,14) is explicitly COMPUTE-WANTED
+on a larger machine (model: 16384 binaries, 12911 equality rows, ~4.7M nnz).
 
 Consequence chain recorded in THM-2835: any Epoch-valid construction
 (s0 = deg^a, a > log6/log3) needs degree >= 5 and s0 >= 14.
