@@ -8,9 +8,12 @@ status: >
   (7-k)-comb drift cover pays a strict reciprocal tariff controlled by the
   normalized safe mass and tooth-component count.  For six aligned combs,
   the remaining speed obeys the 39/61 cone and an exact finite
-  phase-address intersection.  This closes the fully aligned branch and
-  gives necessary tests for the one-drift branch, not LRC(14).
-source: root-2026-07-29 with independent hostile audit by seven-wall-tensor-audit
+  phase-address intersection.  On a literal six-body carrier, the two
+  six-comb safe floors collapse that intersection to finitely many clocks,
+  all of which fail; hence the fully aligned and one-drift branches are
+  empty.  This does not close the branches with at least two drifts or
+  prove LRC(14).
+source: root-2026-07-29 with independent hostile audits by seven-wall-tensor-audit and critical-residue-tree
 depends_on:
   - THM-594-pair-overlap-law-mirsky-newman-floor
   - THM-1094-exact-two-comb-component-theorem
@@ -25,6 +28,8 @@ related:
   - THM-2893-complement-cap-finite-core-flag-lemma
   - HYP-7678
   - HYP-7870
+script: 04-computation/lrc14_critical_one_drift_clock_thm2928.py
+output: 05-knowledge/results/lrc14_critical_one_drift_clock_thm2928.out
 ---
 
 # THM-2928 -- critical seven-comb grid tensorization and drift tariff
@@ -444,7 +449,51 @@ Thus the metric cone `(27)` does not leave an unstructured finite box.  It
 leaves a simultaneous rational tooth-address intersection with an explicit
 gcd compression.
 
-## 8. Literal LRC carrier corollary
+There is a useful density form of this compression.  Put
+
+```text
+g=gcd(z,L),       d=L/g,       c=z/g,       P=J mod d. (35a)
+```
+
+Then `gcd(c,d)=1`, every residue modulo `d` has exactly `g` lifts modulo
+`L`, and `(30)` is equivalent to
+
+```text
+P subset B_(c,d)(A)
+ ={r in Z/dZ:
+   ||c(r+m_s)/d||+c rho_s/d<1/14 for every s}.         (35b)
+```
+
+The largest-component argument proving `(35)` now gives
+
+```text
+h<=|P|/d
+ <=ceil(d/7-c u_A/nu_A)/d.                            (35c)
+```
+
+In particular, since `ceil(x)<x+1`,
+
+```text
+g>L(h-1/7).                                            (35d)
+```
+
+Thus every carrier with `h>1/7` forces a bounded quotient clock.  If
+`h>=61/273`, then
+
+```text
+g>22L/273,                 d=L/g<273/22,              (35e)
+d<=12.
+```
+
+For fixed `A`, positivity in `(35c)` also gives
+
+```text
+c/d=z/L<nu_A/(7u_A),                                  (35f)
+```
+
+so only finitely many coprime phase clocks `(c,d)` remain.
+
+## 8. Literal six-body one-drift closure
 
 For a fixed finite speed set `F`, put
 
@@ -463,28 +512,112 @@ so, modulo its finitely many endpoints, `G_F` is a union of `1/L_F` cells.
 Whenever `mu(G_F)>0`, the preceding theorem applies with `L=L_F` (or with
 any smaller denominator that exactly resolves the same carrier).
 
-Consequently:
+Now suppose `F` consists of six distinct body speeds, six of the seven tail
+speeds are the distinct aligned speeds `La_i`, and the last tail speed is
+`z`.  Take `J` to be the exact set of open `1/L`-cells contained in `G_F`.
+The finitely many grid endpoints are all in every aligned danger comb and
+therefore do not occur in the residual cover problem.
 
-1. seven remaining speeds all divisible by `L` leave safe mass at least
-   `15mu(G_F)/154` and cannot cover the carrier;
-2. if six remaining speeds are divisible by `L`, the seventh must obey the
-   exact tariff `(27)` and the address test `(30)`--`(34)`.
-
-In the literal six-body/seven-tail split, `|F|=6` gives
-
-```text
-mu(G_F)>=1/7
-```
-
-by the union bound.  Hence a fully aligned seven-tail leaves total safe mass
-at least
+Apply the six-comb quadratic consequence of THM-1234 twice, first to `F`
+and then to `A`.  It gives
 
 ```text
-15/1078.                                                (36a)
+h=mu(G_F)>=61/273,             u_A>=61/273.            (36a)
 ```
 
-These are unconditional closures of the fully aligned branch and of every
-one-drift row that violates the cone or address intersection.
+Assume for contradiction that `D_z` covers the aligned residual.  Equations
+`(35c)` and `(35e)` give `d<=12`, while
+
+```text
+h<=ceil(d/7-c u_A/nu_A)/d
+  <=ceil(d/7)/d.                                      (36b)
+```
+
+Among `1<=d<=12`, comparison with `61/273` leaves only
+
+```text
+d in {1,2,3,4,8}.                                     (36c)
+```
+
+The carrier address set is invariant under circle reflection:
+
+```text
+j in J  iff  L-1-j in J.                              (36d)
+```
+
+For `d=2,4`, equation `(36b)` permits only one occupied residue, but
+reflection sends it to `-1-r mod d` and has no fixed residue.  Hence these
+two clocks are impossible.  For `d=1,3`, the unique occupied residue is,
+respectively, `0,1`.  For `d=8`, density forces exactly two occupied
+residues, necessarily one of the reflected pairs
+
+```text
+{r,7-r},                  0<=r<=3.                    (36e)
+```
+
+It remains to test the phase windows, not the original speed box.  For an
+occupied residue `r`, `(30)` says
+
+```text
+R_A subset E_(c,d,r)
+ ={u in [0,1]: ||c(u+r)/d||<1/14}.                    (36f)
+```
+
+After the change of variable `y=(u+r)/d`, THM-1094's exact interval
+discrepancy gives
+
+```text
+u_A<=mu(E_(c,d,r))<=1/7+6d/(49c).                     (36g)
+```
+
+Together with `(36a)`, this forces
+
+```text
+c<=819d/539.                                           (36h)
+```
+
+Since `gcd(c,d)=1`, only the following exact endpoint table remains.  The
+displayed `d=8` masses are the maxima over the four reflected pairs in
+`(36e)`.
+
+```text
+d  occupied phase(s)  possible c          simultaneous window masses
+1       {0}               1               1/7
+3       {1}             1,2,4             0, 3/14, 3/28
+8     {r,7-r}       1,3,5,7,9,11          1/7,1/21,1/35,1/49,2/63,2/77.
+                                                               (36i)
+```
+
+The table follows by subdividing `[0,1]` at the rational endpoints
+
+```text
+u=(d/c)(q+/-1/14)-r.
+```
+
+Its largest entry is `3/14<61/273`, contradicting `(36a)` and `(36f)`.
+Therefore:
+
+> **Literal one-drift closure.**  Six aligned tail combs and one arbitrary
+> tail comb cannot cover the safe carrier of six distinct body combs.
+
+The fully aligned case has the stronger quantitative conclusion
+
+```text
+mu(G_F minus union_(i=1)^7 D_(La_i))
+ >=(61/273)(15/154)=305/14014.                         (36j)
+```
+
+The exact rational table `(36i)` is reproduced by two independent interval
+integrations in
+`04-computation/lrc14_critical_one_drift_clock_thm2928.py`.  Ordinary and
+`python3 -O` output must agree byte for byte with
+`05-knowledge/results/lrc14_critical_one_drift_clock_thm2928.out`.
+Their frozen SHA-256 hashes are
+
+```text
+script  0d0d4acd71b5987995c41b8a19b3c0de7ee1fde6a01d1b6c9d0e0cb4a32ddd6a
+output  f46211d9f441f72753059c01a22cc6a5765d200b61bcd4541ccfbe9578708a3b.
+```
 
 ## 9. Scope and information audit
 
@@ -500,10 +633,12 @@ necessary mixed-residue sidecar:
               J, bJ mod L, component centres/radii, and gcd fibers. (37)
 ```
 
-The theorem does **not** prove that every one-drift row satisfying
-`(27)`--`(35)` is impossible, does not close the arbitrary mixed-residue
-seven-wall, and does not prove LRC(14).  Its next exact target is the finite
-simultaneous arc intersection `(31)`, especially on literal six-body
-carriers.  A tournament on the seven labels forgets the metric widths,
-cell phases, and gcd fibers in `(31)` and is therefore not an equivalent
-quotient.
+For an arbitrary grid carrier, equations `(27)`--`(35)` remain necessary
+rather than sufficient and need not eliminate every one-drift row.  The
+double use of the six-comb floor and reflection is what closes the literal
+six-body one-drift branch.  The theorem does **not** close an arbitrary
+mixed-residue seven-wall, the branches with two or more drift speeds, or
+LRC(14).  Their next exact object is a multi-slope version of the finite
+address clock `(35b)`.  A tournament on the seven labels forgets the metric
+widths, cell phases, and gcd fibers in that clock and is therefore not an
+equivalent quotient.
