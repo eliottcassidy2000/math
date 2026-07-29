@@ -8,9 +8,14 @@ status: >
   {n,n+1,n+2,n+3}.  A sign-blind degree-2804 direct resultant closes the
   entire finite moving-plane chart, including selector-zero fibres, and a
   separate degree-49 resultant closes the projective line at infinity.
-  Thus consecutive first-window SFC(4) holds at every depth.
+  Thus consecutive first-window SFC(4) holds at every depth.  Exact
+  coordinate-face resultants and the projective moment-floor theorem make
+  the bound sharp with full support; for n>=1 its genuinely two-charge
+  Gaussian lift has exact uniform detection depth eight.
 source: root/consecutive-projective-resultant-closure-2026-07-29
 depends_on:
+  - THM-2173-sparse-projective-factorial-moment-floor
+  - THM-2812-consecutive-three-slot-factorial-moment-six-detection
   - THM-2843-four-slot-projective-divisibility-and-resolvent-reduction
   - THM-2872-four-slot-shared-multipole-quartic-norm-and-response-secant-reduction
   - THM-2879-all-shift-cubic-null-endpoint-holonomy-exit
@@ -23,6 +28,11 @@ related:
   - THM-2906-atomic-tp3-does-not-orient-mixed-endpoint-holonomy
 script: 04-computation/gmc_consecutive_four_slot_projective_closure_thm2908.py
 output: 05-knowledge/results/gmc_consecutive_four_slot_projective_closure_thm2908.out
+sharpness_script: 04-computation/gmc_consecutive_four_slot_sharpness_faces_thm2908.py
+sharpness_output: 05-knowledge/results/gmc_consecutive_four_slot_sharpness_faces_thm2908.out
+sharpness_script_sha256: 1e08b2e29de1dc6e3239412ac182927b4d9024df1dceff016cd03ba5d33abee1
+sharpness_output_sha256: de2526f9c3d0fd422370b90a2759223d0bd5031d99311d1b5b6b62472bd9ff2c
+hash_basis: LF-normalized bytes
 ---
 
 # THM-2908 -- consecutive four-slot projective resultant closure
@@ -57,7 +67,9 @@ Conjecture holds on every consecutive four-slot support
 {n,n+1,n+2,n+3}
 ```
 
-in its first window.
+in its first window.  The four-moment bound is exact: every such support
+contains a polynomial with all four coefficients nonzero whose first
+three power moments vanish and whose fourth does not.
 
 The proof is projective and sign-blind.  It excludes every real
 moving plane in the mean-zero three-space, not only a positive,
@@ -367,7 +379,127 @@ At the missing point `(9)`, the two cleared cubic invariants are
 Both are nonzero for `n>=0`.  This closes `t=infinity` and therefore
 the entire projective boundary.
 
-## 7. Consequence and scope
+## 7. Full-support sharpness
+
+We first record the general projective mechanism used here.
+
+> **Hereditary sharpness lemma.**  Let `V` have dimension `t`, fix a
+> coordinate basis, and let `F_j` be homogeneous of positive degree for
+> `1<=j<=t`.  Suppose the first `t` forms have no common projective zero
+> on `P(V)`, while the first `t-1` forms have no common projective zero
+> on any coordinate hyperplane.  Then the first `t-1` forms have a common
+> zero in the coefficient torus, and `F_t` is nonzero at every such zero.
+
+Indeed, Krull height gives a nonzero common zero of `F_1,...,F_(t-1)`;
+the coordinate-face hypotheses put it in the torus, and the full
+emptiness hypothesis makes `F_t` nonzero there.  This is a boundary-to-
+interior argument: closing every projective face turns the unavoidable
+dimension-theoretic zero into a full-support sharp witness.
+
+THM-2173 applies the Krull part of this lemma to the four-dimensional envelope
+
+```text
+V_n=span_C{s^n,s^(n+1),s^(n+2),s^(n+3)}.             (35)
+```
+
+It supplies a nonzero `H in V_n` satisfying
+
+```text
+L(H)=L(H^2)=L(H^3)=0.                                (36)
+```
+
+To see that every such witness has all four coefficients nonzero, it is
+enough to empty the four coordinate faces.  The two consecutive faces
+
+```text
+{n,n+1,n+2},                 {n+1,n+2,n+3}            (37)
+```
+
+are empty by THM-2812.  The remaining supports are
+
+```text
+{n,n+1,n+3},                 {n,n+2,n+3}.             (38)
+```
+
+On either support, eliminate the coefficient of `s^n` using `L(H)=0`,
+set the last coefficient to one, and call the remaining projective
+coordinate `t`.  The normalized second and third moments have exact
+profiles
+
+```text
+offsets (0,1,3):       (deg_t,deg_n,terms)=(2,6,15),(3,9,28);
+offsets (0,2,3):       (deg_t,deg_n,terms)=(2,6,18),(3,9,34). (39)
+```
+
+Their resultants are
+
+```text
+16(n+1)^7(n+2)(n+3)^6 P_10(n),
+ 4(n+1)^5(n+2)^7(n+3)^6 P_12(n),                     (40)
+```
+
+where
+
+```text
+P_10
+ =186624n^10+5443200n^9+42920064n^8+165194816n^7
+  +370368960n^6+519725672n^5+467821669n^4
+  +268012211n^3+93650626n^2+18023940n+1453192,
+
+P_12
+ =28344976n^12+855385784n^11+7207831697n^10
+  +30256509235n^9+76068084600n^8+124601091222n^7
+  +138707331317n^6+106863625003n^5+56960915338n^4
+  +20591978516n^3+4810575912n^2+653870592n+39189888. (41)
+```
+
+Every displayed coefficient is positive.  Thus `(40)` is nonzero for
+`n>=0`, so the two nonconsecutive faces are empty as well.  Consequently
+the Krull witness `(36)` has full support.  The main theorem forces
+
+```text
+L(H^4)!=0.                                             (42)
+```
+
+Hence four is both the sufficient and the necessary uniform factorial
+detection depth on the consecutive four-slot family.
+
+## 8. Sharp two-charge Gaussian lift
+
+Assume `n>=1`, write `H=s h(s)`, let `Z` be a standard complex Gaussian,
+put `W=conj(Z)` and `s=ZW`, and fix `alpha!=0`.  Then
+
+```text
+P=alpha W+Z h(s)                                      (43)
+```
+
+is a genuinely two-charge polynomial.  Charge balance gives
+
+```text
+E[P^(2j+1)]=0,
+E[P^(2j)]=binom(2j,j) alpha^j L(H^j).                 (44)
+```
+
+The main theorem therefore detects every nonzero lift `(43)` by one of
+the Gaussian moments of orders `2,4,6,8`.  Applying `(44)` to the
+full-support witness `(36),(42)` gives
+
+```text
+E[P^m]=0                    for 1<=m<=7,
+E[P^8]=70 alpha^4 L(H^4)!=0.                          (45)
+```
+
+The lift has exactly five monomials: one of charge `-1` and four of
+charge `+1`.  Thus its exact uniform detection depth is
+
+```text
+8=(5-1)*2,                                             (46)
+```
+
+the predicted `(k-1)R` value for support size `k=5` and primitive return
+`R=2`.
+
+## 9. Consequence and scope
 
 Sections 5--6 exclude `(5)` on every real plane in `(3)`.  The
 THM-2843 moving-plane equivalence now proves the claim following `(2)`.
@@ -381,16 +513,17 @@ This is an infinite exact SFC(4) family, but its scope is sharp:
 ```text
 support:  four consecutive normalized factorial monomials;
 window:   the first four moments only;
-depth:    every integer n>=0.                          (35)
+depth:    every integer n>=0;
+lift:     two charges and five monomials, with n>=1.   (47)
 ```
 
 No arbitrary four-slot support, shifted moment window, general SFC(4),
-full Strong Factorial Conjecture, GMC(2), Gaussian nullcone, or planar
-Jacobian-conjecture conclusion is asserted.  THM-2906 remains the sharp
-warning that ambient tensor positivity or separate TP3 cannot replace
-the cubic selector used here.
+full Strong Factorial Conjecture, arbitrary-charge effective GMC(2),
+Gaussian nullcone classification, or planar Jacobian-conjecture conclusion
+is asserted.  THM-2906 remains the sharp warning that ambient tensor
+positivity or separate TP3 cannot replace the cubic selector used here.
 
-## 8. Exact verification
+## 10. Exact verification
 
 The exact companion hash-pins THM-2879, reconstructs `(12)--(22)`,
 computes and refactors `(26)` over `Z[n]`, verifies every
@@ -408,9 +541,14 @@ Then run
 ```text
 python 04-computation/gmc_consecutive_four_slot_projective_closure_thm2908.py
 python -O 04-computation/gmc_consecutive_four_slot_projective_closure_thm2908.py
+python 04-computation/gmc_consecutive_four_slot_sharpness_faces_thm2908.py
+python -O 04-computation/gmc_consecutive_four_slot_sharpness_faces_thm2908.py
 ```
 
-Immutable hashes will be inserted after normal, optimized and stored
-replay.
+The small sharpness companion independently reconstructs `(39)--(41)`;
+its normal and optimized executions byte-match the stored output with the
+declared LF-normalized hashes.  Immutable hashes for the main
+degree-`2804` replay will be inserted after its normal, optimized and stored
+executions finish.
 
 **QED (candidate pending exact replay and final independent audit).**
