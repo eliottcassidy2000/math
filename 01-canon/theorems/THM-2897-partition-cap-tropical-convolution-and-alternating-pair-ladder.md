@@ -236,6 +236,23 @@ cost is the size of its finite core, the number of heavy flags, and the
 cost of the literal child certificate.  Thus `(12e)` is an adaptive flag
 portfolio, not a prescription to choose the largest eligible `r`.
 
+The same ladder should use a sharper block cap whenever one is available,
+not insist on the singleton-sum relaxation `R_r`.  In particular, one
+globally sealed pair cap `B_2` supplies the following three five-slot gates:
+
+```text
+B_2       <4h/7  forces 3 labels in a finite H_3 core;
+q_3+B_2   <5h/7  forces 4 labels in a finite H_2 core;
+2B_2      <6h/7  forces 5 labels in a finite H_1 core.     (12f)
+```
+
+Here the second line uses the rank-selective triple cap
+`beta_3<=q_3+B_2`, and the third uses `beta_4<=2B_2`.  Each conclusion is
+THM-2893 with the displayed quantity as the complementary block cap.  The
+three tests are computationally almost free after `B_2` is known, but their
+finite cores and legal heavy-flag sidecars differ.  This makes a global
+pair-cap census the natural fork point for the five-slot frontier.
+
 ## 4. Disjoint-block and factor-critical matching repair
 
 The raw term `mB_2` forgets that its `m` maximizing pairs must be
