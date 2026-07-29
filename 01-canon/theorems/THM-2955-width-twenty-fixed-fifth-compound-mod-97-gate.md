@@ -2,8 +2,8 @@
 id: THM-2955
 title: "Width-twenty fixed fifth-compound mod-97 gate"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  For support (0,1,2,20), THM-2949's fixed rank-35
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For
+  support (0,1,2,20), THM-2949's fixed rank-35
   Macaulay cofactor is nonzero at every integer depth n>=0.  After
   exact division by c300*q200^5 and an explicit degree-425
   negative-root factor, the primitive degree-506 quotient has no root
@@ -11,7 +11,11 @@ status: >
   bounded Gregory--Newton atlas; no irreducibility or positive-real-ray
   claim is made.
 source: codex-gmc-width-twenty-modular-depth-2026-07-29
-audit: Pending independent hostile audit.
+audit: >
+  Independent hostile audit accepted the cofactor typing, exact
+  quotient and integral primitive normalization, coefficient order,
+  complete mod-97 gate, outside-grid controls, rank-gap implication,
+  replay hashes, and discrete-only scope.
 depends_on:
   - THM-2949-fixed-rank-thirty-five-cofactor-newton-atlas
   - THM-2947-conjugate-pair-corank-parity-and-one-minor-resultant-gate
@@ -27,8 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2955 -- width-twenty fixed fifth-compound mod-97 gate
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Let `P_20(n)` be the fixed `20Q+10C+5F` rank-`35` cofactor of
 THM-2949 for normalized support
@@ -166,3 +169,22 @@ The theorem closes one width-twenty support.  It proves neither a
 complete width-twenty atlas nor an arbitrary-width theorem.  The
 positive-real seams show why the conclusion must remain a discrete
 integer-depth statement.
+
+## 4. Independent hostile audit
+
+An independent reconstruction replayed both interpreter modes against
+the stored transcript and obtained the declared LF hashes.  It also
+rebuilt `P_20` and the quotient in `(9)` without using the frozen
+residue table, checked that every coefficient of `R_506` has
+denominator one, verified the ascending FLINT coefficient order used
+by Horner evaluation, and compared direct primitive-quotient
+evaluations with representative entries on both sides of the sign
+seams.  The audit rechecked all `97` nonzero residues, all three
+outside-grid determinants, and the precise THM-2947 rank-gap handoff.
+
+The audit specifically rejects stronger interpretations: the
+certificate neither proves irreducibility of `R_506` nor removes its
+positive-real roots.  It only excludes integral roots, exactly as
+required by physical factorial depth.
+
+**QED.**
