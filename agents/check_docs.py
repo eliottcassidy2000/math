@@ -247,14 +247,38 @@ for theorem_id, status in status_by_id.items():
         if status_by_id.get(dependency) in UNPROVED_CANDIDATE_STATUSES:
             fail(f"{theorem_id}: proved dependency graph imports {dependency}")
 
-# Router smoke tests: exact claimed IDs must be visibly quarantined.
-smoke = run(sys.executable, "agents/start_session.py", "--topic", "THM-741", "--max-matches", "8")
-if smoke.returncode != 0:
-    fail(f"start_session.py smoke failed: {smoke.stderr.strip()}")
+# Router smoke test: an actual current unproved theorem must be visibly
+# quarantined.  Select from frontmatter instead of pinning a theorem that can
+# later be promoted (THM-741 was the original fixture and is now proved).
+smoke_candidates = sorted(
+    (
+        (status != "CLAIMED", theorem_id, status)
+        for theorem_id, status in status_by_id.items()
+        if status in UNPROVED_CANDIDATE_STATUSES
+    )
+)
+if not smoke_candidates:
+    fail("start_session.py: no RESERVED/CLAIMED theorem available for router smoke")
 else:
-    for token in ("Unproved candidates (not results)", "[CLAIMED]", "THM-741"):
-        if token not in smoke.stdout:
-            fail(f"start_session.py: claimed-route smoke lacks {token!r}")
+    _, smoke_id, smoke_status = smoke_candidates[0]
+    smoke = run(
+        sys.executable,
+        "agents/start_session.py",
+        "--topic",
+        smoke_id,
+        "--max-matches",
+        "8",
+    )
+    if smoke.returncode != 0:
+        fail(f"start_session.py smoke failed: {smoke.stderr.strip()}")
+    else:
+        for token in (
+            "Unproved candidates (not results)",
+            f"[{smoke_status}]",
+            smoke_id,
+        ):
+            if token not in smoke.stdout:
+                fail(f"start_session.py: unproved-route smoke lacks {token!r}")
 
 posture = run(sys.executable, "agents/start_session.py", "--topic", "LRC(14)", "--max-matches", "4")
 if posture.returncode != 0:
