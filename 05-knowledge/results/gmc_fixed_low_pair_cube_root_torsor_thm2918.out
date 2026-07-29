@@ -1,0 +1,14 @@
+THM-2918 FIXED-LOW-PAIR CUBE-ROOT TORSOR
+status=PROOF-COMPLETE CANDIDATE+VERIFIED-EXACT
+quadratic_quotient=A=R[z]/(q)~=C;Delta=g0*g2-g1^2>0
+cube_roots=ell0,omega*ell0,omega^2*ell0;derivative_det=9*(Nq(ell)/g2)^2>0
+quartic_orbit_sum=0;full_remainder_norm=positive
+linear_endpoint_sum=0;single_scalar_orientation=impossible
+consecutive_q=1+2z+2z^2;consecutive_c_remainder=2-3z
+cube_eliminant=-(2eta^9+18eta^6-729eta^3+54)/2
+rate_maxima=order3:4/9;normalized_order4:81/256
+triple_census=84;positive_tensors=84;nonzero_remainders=84
+positive_sheet_endpoint_signs=(0,1,2):positive;(0,8,10):negative;hostile_T=(341/1000,683/2000)
+digests=low_q:d8e8b3f7e416a1b63d551fcb602b233d0fd087aa05efa3309d4fcfdd5650d9a3;low_c:f4723b7cc4bf18aee4d3d38059649c4c2a66557d261ccd072d52e6b3d9a5facf;cube_pair:5b45ea9a8762aaeff39bea8a93afc0943d5f114d1a096b7b65233418fc257f29;triple_bank:d9e7676b7f3ccd25f25b3ff2879c744ad16ca4c1aec093e03c8212fb6001021e
+scope=three local natural-scale real branches; no global exhaustion, explicit cutoff, arbitrary-support GMC, or canonical fixed-fibre C2 action
+all_exact_checks=PASS
