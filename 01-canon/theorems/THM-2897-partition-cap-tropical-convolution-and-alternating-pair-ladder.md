@@ -253,6 +253,22 @@ three tests are computationally almost free after `B_2` is known, but their
 finite cores and legal heavy-flag sidecars differ.  This makes a global
 pair-cap census the natural fork point for the five-slot frontier.
 
+For the first line of `(12f)`, THM-2893 permits two distinct child arities.
+Since a putative cover has at least three labels in `H_3`, one may take
+
+```text
+ell=2<s=3: enumerate H_3 pairs, with no heavy condition,
+           and exclude a literal three-cover child;
+
+ell=3=s:   enumerate only heavy H_3 triples,
+           and exclude a literal two-cover child.         (12g)
+```
+
+The pair-flag universe is usually smaller, while its child problem has one
+extra slot.  Neither choice dominates without measuring both the flag count
+and the child-cap cost.  In particular, “three forced high labels” does not
+oblige the proof to enumerate triples.
+
 ## 4. Disjoint-block and factor-critical matching repair
 
 The raw term `mB_2` forgets that its `m` maximizing pairs must be
