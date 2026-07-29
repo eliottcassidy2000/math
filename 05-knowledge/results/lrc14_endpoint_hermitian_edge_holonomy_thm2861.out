@@ -1,0 +1,11 @@
+ENDPOINT HERMITIAN EDGE HOLONOMY
+physical_horn=(common=42,q7_E3_only=20,q7_extra=22)
+endpoint_rows=(origin00:q3=c,q11=c,q7=0;origin12:q3=0,q11=c,q7=0)
+endpoint_reduction=(conductor=2366,exponents=(2203,65),zeta1183=(624,510)); physical_phase_increments=(0,0)
+canonical_carry=K0_linear_and_scalar_trivial; physical_q7_endpoint=zero_after_old_block_projection
+Hermitian_law=c_(r+1)*bar(c_r)=omega^3*bar(c_(r+1))*c_r; antisymmetric_nonzero=13/13
+Hermitian_edge_orbit_size=13; Fourier_support=(0, 3, 10); antisymmetric_support=(0, 3, 10); bidegree=(1,1)
+common_phase_gauge_invariant=1; orientation_reversal=conjugation; constant_scalar_T_hostile=(antisymmetric=0,support=(0,))
+exact_specialization=(prime=4733,zeta1183=625); missing=lawful_adjacent_section_cosupport_plus_E3_transport
+scope=coefficient_Hermitian_detector_and_physical_no-go; no_pair_twist_service_or_LRC14_conclusion=1
+ALL EXACT CHECKS PASSED
