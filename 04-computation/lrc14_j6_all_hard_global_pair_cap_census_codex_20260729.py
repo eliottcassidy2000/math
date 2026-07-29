@@ -78,6 +78,13 @@ RESIDUAL_PATH = (
 RESIDUAL_SHA256 = (
     "a5f3dcc1a23defea4b3dc067675d83141f1866022d6d01946617a97de69e5b0e"
 )
+THM2885_PATH = (
+    ROOT
+    / "04-computation/lrc14_thm2885_eight_body_top15_hitting_gate_codex_20260729.py"
+)
+THM2885_SHA256 = (
+    "dff97f67b1104c25589802a6a2f216b6e7bfedd58eebfa1bcce615d59c1e872f"
+)
 
 FIRST_EXTERNAL = 15
 S2 = F(99, 70)
@@ -110,6 +117,18 @@ def load_residual():
 
 
 R = load_residual()
+
+
+def load_thm2885():
+    require(file_sha256(THM2885_PATH) == THM2885_SHA256, "THM-2885 source changed")
+    spec = importlib.util.spec_from_file_location("j6_global_pair_thm2885", THM2885_PATH)
+    require(spec is not None and spec.loader is not None, "cannot load THM-2885")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+T = load_thm2885()
 
 
 def ftext(value: F) -> str:
@@ -287,7 +306,11 @@ def exact_pair_head(
     carrier: list[tuple[F, F]],
     labels: tuple[int, ...],
 ) -> dict[str, object]:
-    rows = R.coverages_many(carrier, list(labels))
+    # THM-2885's audited vector primitive has the general carrier-mass and
+    # int64 guards.  The residual companion's specialized variant is
+    # intentionally restricted to mass <2/7 and is therefore too narrow for
+    # 1,262 of the present all-root apex carriers.
+    rows = T.coverages_many(carrier, list(labels))
     require(len(rows) == len(labels), "pair-head singleton vector changed")
     singleton = {label: value for value, label in rows}
     require(len(singleton) == len(labels), "duplicate pair-head label")
