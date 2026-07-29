@@ -2,8 +2,8 @@
 id: THM-2867
 title: "Homogeneous quartic orientation sextic and cubic leading residual"
 status: >
-  PROOF-COMPLETE CANDIDATE; AWAITING EXACT COMPANION AND INDEPENDENT HOSTILE
-  AUDIT.  A general quartic has integral edge and oriented-cycle sextics.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A general
+  quartic has integral edge and oriented-cycle sextics.
   The edge discriminant is
   2^30 A^12 Q^2 Disc(f)^2, while the correctly blown-up orientation
   discriminant is 2^6 Q^12 Jcal^4 Disc(f)^3.  On A=0 the edge primitive
@@ -14,6 +14,11 @@ status: >
   transverse DVR charts, but are not proved Keller ramification or globally
   maximal outside those charts.
 source: root/homogeneous-quartic-orientation-boundary-2026-07-28
+audit: >
+  thm2867-homogeneous-boundary-index-audit-2026-07-28 (independent
+  derivation of the matching and orientation blow-ups, leading-cubic
+  conjugacy, regular S3 ordered-pair action, tame branch exponents,
+  transverse Q/Jcal/A index lengths, and all global-scope repairs: ACCEPT)
 depends_on:
   - THM-2864-quartic-edge-orientation-sextic-resolvents-and-d8-radicand-product
 related:
@@ -23,12 +28,14 @@ related:
   - THM-2864-quartic-edge-orientation-sextic-resolvents-and-d8-radicand-product
 script: 04-computation/quartic_homogeneous_orientation_boundary_thm2867.py
 output: 05-knowledge/results/quartic_homogeneous_orientation_boundary_thm2867.out
+script_sha256: 96399eb151f540b35dffc0a2f4a7cf451c44485271a124c2aea787da867277c0
+output_sha256: d7a630a3e41e60b4ca85be65c924bd07a53238ca96be4d30c4e085c94a24fc0b
+hash_basis: LF-normalized bytes
 ---
 
 # THM-2867 -- the nonmonic orientation boundary remembers the leading cubic
 
-**PROOF-COMPLETE CANDIDATE; AWAITING EXACT COMPANION AND INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2598 shows that the usual cubic resolvent of a nonmonic quartic has a
 universal `1+2` leading shadow.  THM-2758 constructs the six pair-sum/edge
@@ -591,32 +598,57 @@ branch/order belongs to the graph chart with the required source ownership,
 different, and Jelonek data.  Without that sidecar, the theorem closes no
 `A4/S4` branch.
 
-## 9. Exact-companion and status ledger
+## 9. Exact evidence, independent audit, and status ledger
 
-The exact companion must verify every divisibility in `(15)`, both sextic
+The exact companion verifies every divisibility in `(15)`, both sextic
 formulas, the discriminants `(10)--(11)` and `(22)`, the `D8` product,
 the edge blow-up `(30)--(32)`, the cubic factorization `(38)--(39)`, and
-both hostiles.  It must use exact arithmetic and explicit exceptions in
-normal and optimized mode.
+both hostiles.  It also checks the affine leading-cubic identity `(32a)`,
+the regular `S3` action on ordered pairs, the corrected raw scale
+`Omega_Y=256AW`, and the generic valuation exponents.  It uses exact
+integer arithmetic and explicit exceptions in normal and optimized mode:
 
 ```text
-PROVED IN THE CANDIDATE: integral depression and edge sextic;
-                         integral orientation blow-up and sextic;
-                         exact homogeneous discriminants;
-                         homogeneous D8 radicand product;
-                         edge matching blow-up at A=0;
-                         cubic pair-difference orientation residual;
-                         exact A-adic and collision boundaries;
-                         transverse maximal-order/index ledger.
-
-NOT PROVED:              global maximal-order generation outside the
-                         transverse charts (47a)--(47g);
-                         interpretation of square cofactors as ramification;
-                         graph-chart or Jelonek owner compatibility;
-                         exclusion of A4/S4 Keller monodromy;
-                         JC(2), DC(2), G1, or LRC(14).             (49)
+python 04-computation/quartic_homogeneous_orientation_boundary_thm2867.py
+python -O 04-computation/quartic_homogeneous_orientation_boundary_thm2867.py
 ```
 
-Promotion requires exact normal/optimized replay with fixed hashes and an
-independent audit of every scaling, divisibility, valuation, and boundary
-scope.
+Both modes LF-normalized byte-match
+
+```text
+05-knowledge/results/quartic_homogeneous_orientation_boundary_thm2867.out.
+```
+
+```text
+PROVED: integral depression and edge sextic;
+        integral orientation blow-up and sextic;
+        exact homogeneous discriminants;
+        homogeneous D8 radicand product;
+        edge matching blow-up at A=0;
+        affine identification with the leading cubic;
+        cubic pair-difference regular-S3 orientation residual;
+        exact A-adic and collision boundaries;
+        transverse maximal-order/index ledger.
+
+NOT PROVED: global maximal-order generation outside the
+            transverse charts (47a)--(47g);
+            interpretation of square cofactors as ramification;
+            graph-chart or Jelonek owner compatibility;
+            exclusion of A4/S4 Keller monodromy;
+            JC(2), DC(2), G1, or LRC(14).                         (49)
+```
+
+The independent hostile audit separately derived the edge and orientation
+normalizations, checked the affine leading-cubic conjugacy and the regular
+ordered-pair `S3` action, and reconstructed every entry of the transverse
+index ledger.  It required the excellent henselian DVR hypothesis, the
+rank-six algebra/order wording, transposition inertia on the tame `D4`
+branch, and the explicit global-maximality boundary now present in
+Sections 7--8.  No constant or index length changed.
+
+Normal, optimized, and stored transcripts agree exactly; both declared
+LF-normalized hashes match; the companion compiles without optional CAS,
+truth-bearing `assert`, or floating-point decisions; and the documentation
+gate passes.
+
+**QED.**

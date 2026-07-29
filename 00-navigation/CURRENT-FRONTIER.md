@@ -344,11 +344,12 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2703/2708 identify the general boundary object as the saturated
   `H^1(U,mu_2)` gain-holonomy kernel, not a scalar Gram rank.  THM-2743--2780
   refine the `V4`, opposition, and inertia typing but still supply no
-  equivariant Kummer realization.  THM-2862/2864 now realize the two
-  inequivalent sextic lifts explicitly: the edge discriminant is a square,
-  while the oriented-cycle discriminant has quartic square class and a
-  separate primitive-generator wall; homogeneous graph-chart transfer is
-  open.  On planar slices THM-2699--2722 classify
+  equivariant Kummer realization.  THM-2862/2864 give inequivalent sextic
+  lifts.  THM-2867 homogenizes them: at `A=0` the matching blow-up is
+  affinely the leading cubic and the orientation blow-up its regular `S3`
+  ordered-pair carrier.  Its index ledger separates branch, bad primitive,
+  and coordinate cost; graph/Jelonek owner
+  transfer remains open.  On planar slices THM-2699--2722 classify
   affine-linear targets and fixed-`d` pairs; unrestricted `C[A,d]^2` is
   equivalent to `JC(2)` after a coordinate change, while `B`-targets and
   nongraph surfaces stay open.  The degree-eighteen lane closes sparse and
