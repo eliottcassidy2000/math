@@ -2,14 +2,20 @@
 id: THM-2914
 title: "Eventual high-gap cubic-null positive-holonomy branch"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING FINAL INDEPENDENT
-  HOSTILE AUDIT.  For every sufficiently large integer r, the ordered
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  sufficiently large integer r, the ordered
   support (0,1,2,r) has a locally unique positive high-shared cubic-null
   branch at scale ((3r)!/(r!)^3)^(-1/3).  Its normalized quartic endpoint
   determinant converges to an explicit positive factored limit, so the
   branch is not quartic-null.  The threshold is existential and no global
   branch uniqueness or arbitrary-support closure is claimed.
 source: root/eventual-high-gap-cubic-null-branch-2026-07-29
+audit: >
+  Two independent hostile audits reconstructed the exact factorial expansion,
+  corrected and checked the exhaustive finite error family, verified all
+  ratio limits, limiting eliminants, root selectors, Jacobian and endpoint
+  factor, and checked the quantitative contraction argument and local-only
+  scope.  Normal, optimized and stored exact transcripts agree byte-for-byte.
 depends_on:
   - THM-2872-four-slot-shared-multipole-quartic-norm-and-response-secant-reduction
 related:
@@ -18,15 +24,14 @@ related:
   - THM-2910-nonconsecutive-cubic-null-endpoint-holonomy-sign-reversal
 script: 04-computation/gmc_eventual_high_gap_cubic_null_branch_thm2914.py
 output: 05-knowledge/results/gmc_eventual_high_gap_cubic_null_branch_thm2914.out
-script_sha256: c43a4f77b5afe3c29e6c49bfa63386453ecbb1f519c410df2ccd90c45f53ab72
-output_sha256: 80d44c8930b325b02b22620b5f239af18c40a0560786bf2d25724eacada9e253
+script_sha256: 57e796b1d5115080939b9d19f35d95e1b5de584d632335fbcfd6105267270c8c
+output_sha256: 07ae0b8e005632044f9627116cf441b0c00ce0d7b08d93247771a558e25e6eb6
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2914 -- eventual high-gap positive cubic-null branch
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING FINAL INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Put
 
@@ -122,16 +127,18 @@ For
 M_(j,a)(r)=(jr+a)!/(r!)^j,                            (10)
 ```
 
-the quadratic and cubic errors are finite sums of sequences of the
-forms
+the quadratic and cubic errors are finite sums of the exact indexed
+family
 
 ```text
-T_3^(-1/3) M_(1,a),
-T_3^(-2/3) M_(2,a),
-M_(j,a)/T_3,                     j<3.                 (11)
+T_3^(-k/3) M_(j,a),
+
+1<=k<=3,             0<=j<=k,                        (11)
 ```
 
-Their successive-term ratios tend to at most
+with the sole leading term `(k,j,a)=(3,3,0)` omitted.  With base `1`
+for `j=0,1`, the successive-term ratio limit in `(11)` is
+`j^j/3^k`.  Its maxima for `k=1,2,3` are
 
 ```text
 1/3,             4/9,             4/27,              (12)
@@ -222,7 +229,13 @@ It has exactly one real root in each of
 ```
 
 The two positive roots are the only possibilities with `eta>0`.
-On `p(u)=0`, the other coordinate satisfies either exact form
+At every common zero with `eta!=0`, the degree-one subresultant is
+
+```text
+eta(u+9)-(2u-3)xi=0.
+```
+
+Thus, on `p(u)=0`, the other coordinate satisfies either exact form
 
 ```text
 xi/eta=(2u^2+21u-603)/189

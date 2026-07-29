@@ -235,7 +235,7 @@ require(
 
 def main() -> None:
     print("THM-2914 EVENTUAL HIGH-GAP CUBIC-NULL BRANCH")
-    print("status=PROOF-COMPLETE CANDIDATE+VERIFIED-EXACT")
+    print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
     print("low_quadratic=(1,1,2);low_cubic=(2,4,10,30)")
     print(
         "limit_I1=-eta^3+6eta*xi^2-4xi^3-14;"
