@@ -136,6 +136,42 @@ def main() -> None:
     require(Q(91, 7) == 13, "second-clock BV coefficient")
     require(14 * lcm(*range(1, 15)) == 5_045_040, "universal six-body ruler")
 
+    # At the 2/25 deletion threshold, a stable twelve-speed partial family
+    # improves the second slope.  A family inside the open stability gap
+    # instead pays the five-step reciprocal staircase below.
+    delta_gap = Q(2, 25)
+    danger_mass = 2 * delta_gap
+    discrepancy = danger_mass * (1 - danger_mass)
+    require(discrepancy == Q(84, 625), "2/25 discrepancy constant")
+    require(
+        1 / (14 * (delta_gap - Q(1, 14))) == Q(25, 3),
+        "stable-deletion second slope",
+    )
+    reciprocal_tariffs = tuple(
+        2
+        * (Q(1, 8 + s) - delta_gap)
+        * (1 - (5 - s) * danger_mass)
+        / discrepancy
+        for s in range(5)
+    )
+    require(
+        reciprocal_tariffs
+        == (Q(15, 112), Q(1, 6), Q(13, 84), Q(17, 154), Q(1, 24)),
+        "2/25 reciprocal staircase tariffs",
+    )
+    staircase_caps: list[int] = []
+    current_scale = Q(585, 154)
+    for s, tariff in enumerate(reciprocal_tariffs):
+        remaining = 5 - s
+        bound = remaining * current_scale / tariff
+        cap = bound.numerator // bound.denominator
+        staircase_caps.append(cap)
+        current_scale = max(Q(585, 154), Q(cap))
+    require(
+        tuple(staircase_caps) == (141, 3_384, 65_597, 1_188_463, 28_523_112),
+        "2/25 reciprocal staircase caps",
+    )
+
     # From g>L(h-1/7), h>=61/273, and d=L/g.
     require(TARGET - Q(1, 7) == Q(22, 273), "safe-density difference")
     require(Q(273, 22) < 13, "coindex cutoff")
@@ -232,6 +268,9 @@ def main() -> None:
     print(f"phase-load tariffs k=1..6: {phase_tariffs}")
     print("two-drift finite box: c1/d1<585/154, c2/d2<13(max A)")
     print("direct six-body universal ruler: L divides 5,045,040")
+    print("stable 2/25 deletion cone: c2/d2<(25/3)(max A)")
+    print(f"2/25 reciprocal tariffs: {reciprocal_tariffs}")
+    print(f"2/25 gap-branch multiplier caps: {tuple(staircase_caps)}")
     print("coindex cutoff: d<=12")
     print(f"density candidates: {density_candidates}")
     print("reflection survivors: (1, 3, 8)")

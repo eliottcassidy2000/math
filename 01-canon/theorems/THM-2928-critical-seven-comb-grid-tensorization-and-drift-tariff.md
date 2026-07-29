@@ -14,8 +14,11 @@ status: >
   empty.  A component-free phase-load tariff bounds one slope in every
   k>=2 mixed branch, and every fixed five-aligned/two-drift chart reduces
   to an exact finite pair-clock quotient with the sharper second-slope
-  bound c_2/d_2<13 max A.  Uniform two-drift emptiness and the branches
-  with more drifts remain open; this does not prove LRC(14).
+  bound c_2/d_2<13 max A.  At the 2/25 deletion threshold, either that
+  bound improves to c_2/d_2<(25/3) max A or all five aligned multipliers
+  lie in an explicit body-uniform finite staircase.  Uniform two-drift
+  emptiness and the branches with more drifts remain open; this does not
+  prove LRC(14).
 source: root-2026-07-29 with independent hostile audits by seven-wall-tensor-audit and critical-residue-tree
 depends_on:
   - THM-594-pair-overlap-law-mirsky-newman-floor
@@ -673,8 +676,8 @@ integrations in
 Their frozen SHA-256 hashes are
 
 ```text
-script  23ee3fcd1b81e936ccaac62f6ef10ffcd11ee08d6dc3bb68b02a417cdae4651c
-output  0f2c9e209cfe621d2d48dacc0904ce5ca4c2b5c5834815364bd4d0c39ddea301.
+script  16e7a630eb4f721836dfc95c0adf97bf9a1a252518b119450b16c71e08305dcd
+output  6eb2ad0d031a94d7e85db37a30cb48a2e0abb03e4caa080f05f870a23d449746.
 ```
 
 ## 9. Five aligned combs and two drifts: a finite exact chart
@@ -816,6 +819,110 @@ coupled to the five-multiplier shape.  After the fully aligned and
 one-drift branches have been discharged, a genuinely two-drift row also
 has `d_1,d_2>1`; a clock with `d_q=1` is aligned and belongs to an earlier
 branch.
+
+### The `2/25` deletion dichotomy and reciprocal staircase
+
+Let
+
+```text
+P=F union LA union {z_1}
+```
+
+be the twelve-speed family obtained by deleting `z_2`, and write
+
+```text
+M(P)=max_t min_(v in P)||vt||.
+```
+
+There are two branches.
+
+If `M(P)>=2/25`, the same Lipschitz argument as `(37f)` gives a closed arc
+safe for `P` at level `1/14` of length at least
+
+```text
+2(2/25-1/14)/(La_*)=3/(175La_*).
+```
+
+It must lie strictly inside one open `z_2`-tooth.  Therefore
+
+```text
+z_2/L=c_2/d_2<(25/3)a_*.                              (37ib)
+```
+
+Suppose instead that `M(P)<2/25`.  Order
+
+```text
+a_1<a_2<a_3<a_4<a_5
+```
+
+and put
+
+```text
+p=4/25,          eta=p(1-p)=84/625,
+C_0=585/154,
+C_s=max(C_0,a_s)                 (1<=s<=4).            (37ic)
+```
+
+For `0<=s<=4`, let
+
+```text
+P_s=F union {z_1} union {La_1,...,La_s}.
+```
+
+This has `7+s` speeds and maximum at most `LC_s`.  Cited LRC through
+thirteen supplies a point with clearance at least `1/(8+s)`, and
+Lipschitz fattening supplies a closed `2/25`-safe arc of length at least
+
+```text
+ell_s=
+ 2(1/(8+s)-2/25)/(LC_s).                              (37id)
+```
+
+The remaining `r=5-s` aligned combs must cover that arc.  The exact
+interval discrepancy at radius `2/25` is
+
+```text
+mu(I intersect D_w^(2/25))
+ <=p|I|+eta/w.                                        (37ie)
+```
+
+Indeed, the centered period-one indicator of an interval of length `p`
+has a primitive of range exactly `p(1-p)=eta`; scaling by `w` proves
+`(37ie)`.  Summing it over the remaining aligned speeds and using
+`(37id)` gives the reciprocal invoice
+
+```text
+sum_(i=s+1)^5 1/a_i >= k_s/C_s,
+
+k_s=
+ 2(1/(8+s)-2/25)(1-(5-s)p)/eta.                       (37if)
+```
+
+The five exact tariffs are
+
+```text
+s             0        1        2        3        4
+k_s         15/112    1/6     13/84    17/154    1/24
+(5-s)/k_s  112/3      24      252/13   308/17     24. (37ig)
+```
+
+Since the remaining reciprocals are each at most `1/a_(s+1)`,
+`(37if)` recursively yields
+
+```text
+a_1 <=       141,
+a_2 <=     3,384,
+a_3 <=    65,597,
+a_4 <= 1,188,463,
+a_5 <=28,523,112.                                     (37ih)
+```
+
+The harmonic inequalities `(37if)`, rather than only their rectangular
+consequence `(37ih)`, are the sharper finite search object.  Together with
+`L|5,045,040`, `(37a)`, and `(37g)`, they make the entire
+`M(P)<2/25` subbranch body-uniformly finite.  No emptiness census of that
+large box is claimed.  The unbounded branch is confined instead by the
+strict projective cone `(37ib)`.
 
 The final decision is not a relaxation.  Put
 
