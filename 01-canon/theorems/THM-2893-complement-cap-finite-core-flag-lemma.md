@@ -301,6 +301,26 @@ The word *literal* is essential: the cap and the flag remember only union
 sizes.  They do not preserve the pointwise overlap pattern needed to decide
 whether the remaining labels cover `C_L`.
 
+There is a sharp same-cap deadlock when `ell=s`.  Every legal selected flag
+is then heavy, so
+
+```text
+U_C(L)>=h-B.
+```
+
+Consequently the inherited parent-carrier test
+
+```text
+U_C(L)+B<h
+```
+
+is impossible, as is the same test with any weaker upper cap `B'>=B`.
+Closing a heavy flag therefore requires a genuinely smaller
+suffix-conditioned cap, a literal child cap on `C_L`, or a different
+decomposition that recovers overlap information.  This is an algebraic
+reason—not merely a computational preference—for retaining the literal
+residual in `(9)`.
+
 ## 5. The two LRC rungs
 
 For the lonely-runner danger combs, `(5)` is the standard strict
