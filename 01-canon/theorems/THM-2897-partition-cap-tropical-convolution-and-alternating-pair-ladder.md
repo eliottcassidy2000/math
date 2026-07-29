@@ -1,6 +1,6 @@
 ---
 id: THM-2897
-title: "Partition-cap tropical convolution and rank-selective alternating pair ladder"
+title: "Partition-cap tropical convolution, rank selection, and matching repair"
 status: PROVED
 source: root-2026-07-29
 depends_on:
@@ -13,7 +13,7 @@ related:
   - THM-2896-seven-body-adaptive-six-cover-hitting-gate-atlas
 ---
 
-# THM-2897 -- partition-cap tropical convolution and rank-selective alternating pair ladder
+# THM-2897 -- partition-cap tropical convolution, rank selection, and matching repair
 
 ## 1. The cap sequence
 
@@ -175,12 +175,116 @@ The last entry is the original five-cover problem and is useful only when
 obtained independently; inserting it as an assumption would be circular.
 The lower-order entries are the noncircular computational routes.
 
-## 4. Monotone ordered-apex bootstrap
+## 4. Disjoint-block and factor-critical matching repair
+
+The raw term `mB_2` forgets that its `m` maximizing pairs must be
+vertex-disjoint.  That information has an exact intermediate carrier.  For
+positive `r,s`, define
+
+```text
+M_(r,s)(P)=sup {
+  sum_(i=1)^r U_C(S_i) :
+  S_i subset V minus P, |S_i|=s,
+  S_i intersect S_j=empty for i!=j
+}.                                                         (13)
+```
+
+Partitioning a set into disjoint blocks gives
+
+```text
+beta_(rs)(P)<=M_(r,s)(P)<=rB_s(P),                         (14)
+beta_(rs+1)(P)<=q_(rs+1)(P)+M_(r,s)(P).                    (15)
+```
+
+For `(r,s)=(2,2)`, this sharpens the five-slot line of `(11)` to
+
+```text
+beta_4(P)<=M_(2,2)(P)<=2B_2(P),
+beta_5(P)<=q_5(P)+M_(2,2)(P)<=q_5(P)+2B_2(P).              (16)
+```
+
+Here the allowed labels are vertices of an undirected weighted graph and
+
+```text
+weight({x,y})=U_C({x,y}).
+```
+
+Then `M_(r,2)` is the maximum weight of an `r`-edge matching.  This is an
+intrinsic binary relation with ties; orienting it as a tournament would add
+irrelevant data and would not encode vertex-disjointness.
+
+There is a sharper max--min version.  Let `PM(Q)` be the perfect matchings
+of an even set `Q`.  Every set in the following suprema is a subset of
+`V minus P`; define
+
+```text
+Phi_(2m)(P)=sup_(|Q|=2m) min_(M in PM(Q))
+              sum_({x,y} in M) U_C({x,y}),                   (17)
+
+Phi_(2m+1)(P)=sup_(|Q|=2m+1)
+  min_(u in Q, M in PM(Q minus {u}))
+    [c(u)+sum_({x,y} in M) U_C({x,y})].                     (18)
+```
+
+Every displayed matching is a partition of `Q`, so subadditivity bounds
+`U_C(Q)` by every matching cost and hence by their minimum.  Choosing a
+minimum-coverage unmatched vertex in the odd case gives
+
+```text
+beta_(2m)(P)   <=Phi_(2m)(P)   <=M_(m,2)(P)<=mB_2(P),
+beta_(2m+1)(P) <=Phi_(2m+1)(P)
+                 <=q_(2m+1)(P)+M_(m,2)(P)
+                 <=q_(2m+1)(P)+mB_2(P).                    (19)
+```
+
+Thus `Phi_5` is the factor-critical matching cap: on each five-set it may
+choose both the unmatched vertex and the pairing that give the smallest
+subadditive invoice, before the adversary chooses the five-set.  It restores
+more compatibility than the global maximum-matching cap in `(16)`.  All
+`Phi_k(P)` are nonincreasing under deletion because the outer supremum then
+ranges over fewer sets.
+
+There is a cheap finite-tail gate for `M_(2,2)` on an LRC carrier.  Suppose
+
+```text
+c(w)<h/7+gamma/w,                 q_1=sup_w c(w),           (20)
+T=h-q_5,                          L=T-B_2.
+```
+
+Any two disjoint edges whose weights sum to at least `T` must each have
+weight at least `L`.  Indeed, the other edge has weight at most `B_2`.
+If
+
+```text
+delta=L-q_1-h/7>0,                                        (21)
+```
+
+then every endpoint of an `L`-heavy edge satisfies
+
+```text
+w<=ceil(gamma/delta)-1.                                   (22)
+```
+
+For if `w>=ceil(gamma/delta)`, the other endpoint has singleton coverage
+at most `q_1`, so strict discrepancy and subadditivity give
+
+```text
+U_C({w,x})<=c(w)+c(x)
+  <h/7+gamma/w+q_1
+  <=L.                                                     (23)
+```
+
+Thus `(22)` reduces the matching maximum to a finite exact weighted graph.
+Equality in the last majorant is safe only because the discrepancy
+inequality is strict.  When `(21)` fails, this cutoff makes no assertion;
+the finite high-core/parity recursion of THM-2895 remains available.
+
+## 5. Monotone ordered-apex bootstrap
 
 Now use the marked ordered-apex state of THM-2893.  For an apex `a`, let
 
 ```text
-C_a=C minus D_a,       h_a=mu(C_a),                          (13)
+C_a=C minus D_a,       h_a=mu(C_a),                          (24)
 ```
 
 and let `P` record the already forbidden gate labels.  Compute cap banks on
@@ -188,60 +292,69 @@ the literal carrier `C_a` using only labels outside `P union {a}`.  Exact
 caps, now written `beta^a_j(P)`, satisfy
 
 ```text
-P subset P'  implies  beta^a_j(P')<=beta^a_j(P).             (14)
+P subset P'  implies  beta^a_j(P')<=beta^a_j(P).             (25)
 ```
 
 The same conclusion holds for any chosen upper-cap bank that is explicitly
 monotone under deletion.  Its tropical closure is then monotone:
 
 ```text
-(F^a)_k(P')<=(F^a)_k(P).                                    (15)
+(F^a)_k(P')<=(F^a)_k(P).                                    (26)
 ```
 
 Therefore
 
 ```text
-Gamma_a(P) : (F^a)_(p-1)(P)<h_a                            (16)
+Gamma_a(P) : (F^a)_(p-1)(P)<h_a                            (27)
 ```
 
 is an inflationary activation predicate of exactly the kind used in
 THM-2893's scalar bootstrap.  Starting from any ordered seed whose own
 branches are certified on their actual suffixes, repeatedly activate every
-remaining apex satisfying `(16)`.  If all gate apices activate, the root is
+remaining apex satisfying `(27)`.  If all gate apices activate, the root is
 closed.
 
-The carrier-specific order statistics `q^a_j(P)` from `(10a)` are also
-nonincreasing as `P` grows.  Hence the rank-selective pair predicate is
-monotone as well.  This permits scalar, pair, and triple caps to coexist in
-one target-set selection problem.  At the present `j=6` frontier, the
-cheapest new predicate is
+The carrier-specific order statistics `q^a_j(P)`, matching caps
+`M^a_(r,s)(P)`, and factor-critical caps `Phi^a_j(P)` are also nonincreasing
+as `P` grows.  Hence all rank-selective matching predicates are monotone.
+This permits scalar, pair, matching, and triple caps to coexist in one
+target-set selection problem.  At the present `j=6` frontier, the nested
+new predicates are
 
 ```text
-q^a_5(P)+2B^a_2(P)<h_a.                                    (17)
+Phi^a_5(P)<h_a,                                            (28)
+q^a_5(P)+M^a_(2,2)(P)<h_a,                                 (29)
+q^a_5(P)+2B^a_2(P)<h_a.                                    (30)
 ```
+
+They are ordered from strongest to cheapest.  The last is available when
+only a global pair cap has been computed.
 
 Both the literal residual and the excluded-prefix sidecar are essential.
 Dropping the sidecar replaces suffix caps by larger global caps; trying to
 recover it from the unmarked residual conflicts with THM-2894.
 
-## 5. Boundary, lost information, and scope
+## 6. Boundary, lost information, and scope
 
-The strict inequality in `(5)`, `(11)`, or `(16)` is load-bearing.  Equality
-does not exclude a cover.  Partition caps also forget cross-block overlap
-and compatibility of separate maximizers.  Hence they are sufficient
-certificates, not equivalences; a failed cap inequality is not evidence for
-a cover.
+The strict inequality in `(5)`, `(11)`, or `(27)`--`(30)` is load-bearing.
+Equality does not exclude a cover.  Raw partition caps forget cross-block
+overlap and compatibility of separate maximizers.  The matching caps
+restore disjointness, and `Phi` also chooses the cheapest decomposition
+inside each hostile set, but both still forget cross-edge overlap.  Hence
+all these are sufficient certificates, not equivalences; a failed cap
+inequality is not evidence for a cover.
 
 The connection data are:
 
 ```text
 source:       lower-order exact union caps on a literal carrier;
 target:       a no-cover certificate for a larger slot count;
-map:          integer-partition / min-plus convolution;
+map:          integer-partition / min-plus convolution, then matching repair;
 preserved:    subadditive upper control and forbidden-label monotonicity;
-destroyed:    cross-block overlap and common-maximizer compatibility;
-sidecar:      literal carrier, excluded labels, and ordered apex state;
-cheapest tested-form target at five slots: q_5+2B_2<h.
+restored:     distinctness across lower-order maximizing blocks;
+destroyed:    cross-block overlap even after matching;
+sidecar:      literal carrier, excluded labels, ordered apex, weighted graph;
+five-slot targets: Phi_5<h, then q_5+M_(2,2)<h, then q_5+2B_2<h.
 ```
 
 No finite LRC atlas is asserted here.  In particular, the theorem does not
