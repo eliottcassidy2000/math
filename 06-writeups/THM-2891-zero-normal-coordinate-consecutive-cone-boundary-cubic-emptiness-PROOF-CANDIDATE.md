@@ -26,8 +26,8 @@ related:
   - THM-2869-gamma-positive-cone-y-zero-exit-portal
 script: 04-computation/gmc_consecutive_zero_normal_boundary_thm2891.py
 output: 05-knowledge/results/gmc_consecutive_zero_normal_boundary_thm2891.out
-script_sha256: 23019412f807960f413c3d13cd07290f9aec1c7269629ab7c6e8e527cab1e185
-output_sha256: 2e5be24ad914916328fbdf3f4006447d5fe144b4cc31174453a71867b535aae3
+script_sha256: aeb6fc1e0443e18a0d2a4a71094f38ffac1c5e16a178c08dfaddbaa02240b317
+output_sha256: b23f0d0c6eef2040d4a0f936d9b608ddc7e33d45cad0bd3fec4db6a1128c8875
 hash_basis: LF-normalized bytes
 ---
 
@@ -309,8 +309,7 @@ I_1(B_t),I_2(B_t) are not both zero
 ```
 
 This is stronger than positivity-domain emptiness: at each integer depth,
-the interlaced boundary has no common point for any complex parameter
-`t`.
+the two specialized division invariants have no common complex `t` root.
 
 ## 5. Completion of the closed consecutive cone atlas
 

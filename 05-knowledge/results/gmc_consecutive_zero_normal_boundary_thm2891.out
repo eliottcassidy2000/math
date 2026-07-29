@@ -9,6 +9,7 @@ signed_invariant_digests=A:b9970dcd1a701e3341c1b3d27cca39324909b1642290ccd6b0e3d
 interlaced_degrees=4,3
 interlaced_terms=45,32
 interlaced_resultant_profile=[(1, 2, 2), (1, 2, 2), (1, 3, 2), (1, 4, 2), (1, 17, 2), (10, 1, 11), (11, 1, 12)]
+interlaced_linear_factors=(n+1)^2,(n+2)^17,(2n+1)^4,(3n+1)^3,(3n+2)^2
 degree10_digest=cd924e68200c7b69719b57aee6a712e6f74eba50fa1e2f30d858b687ed693da8
 degree11_digest=2512e3537c72f9faa8628669cd2e06c4c41cfe63cb3ea1c153a68e03b9cefc4f
 degree11_at_n0=-159876

@@ -208,6 +208,38 @@ def main() -> None:
         ],
         "interlaced boundary resultant factor profile changed",
     )
+    expected_linear_factors = (
+        (n + 1, 2),
+        (n + 2, 17),
+        (2 * n + 1, 4),
+        (3 * n + 1, 3),
+        (3 * n + 2, 2),
+    )
+    actual_linear_factors = tuple(
+        (factor, exponent)
+        for factor, exponent in factors
+        if sp.degree(factor, n) == 1
+    )
+    require(
+        len(actual_linear_factors) == len(expected_linear_factors)
+        and all(
+            any(
+                sp.expand(actual - expected) == 0
+                and actual_exponent == expected_exponent
+                for actual, actual_exponent in actual_linear_factors
+            )
+            for expected, expected_exponent in expected_linear_factors
+        )
+        and all(
+            factor.subs(n, 0) > 0
+            and all(
+                coefficient > 0
+                for coefficient in sp.Poly(factor, n).all_coeffs()
+            )
+            for factor, _ in actual_linear_factors
+        ),
+        "exact positive linear resultant factors changed",
+    )
     degree_ten = next(factor for factor, _ in factors if sp.degree(factor, n) == 10)
     degree_eleven = next(
         factor for factor, _ in factors if sp.degree(factor, n) == 11
@@ -284,6 +316,10 @@ def main() -> None:
     print("interlaced_degrees=4,3")
     print("interlaced_terms=45,32")
     print(f"interlaced_resultant_profile={factor_profile}")
+    print(
+        "interlaced_linear_factors="
+        "(n+1)^2,(n+2)^17,(2n+1)^4,(3n+1)^3,(3n+2)^2"
+    )
     print(f"degree10_digest={canonical_digest(sp.Poly(degree_ten, n))}")
     print(f"degree11_digest={canonical_digest(sp.Poly(degree_eleven, n))}")
     print(f"degree11_at_n0={p_at_zero}")
