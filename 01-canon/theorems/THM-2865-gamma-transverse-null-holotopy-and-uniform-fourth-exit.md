@@ -2,13 +2,12 @@
 id: THM-2865
 title: "Gamma transverse null holotopy and uniform fourth exit"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT.  The THM-2846 positive-cone
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The THM-2846 positive-cone
   factorial moment-three hostile extends through every Gamma functional
   L_alpha(s^m)=(alpha)_m with 9/10<=alpha<=11/10.  An explicit rational
   moving tube contains exactly one transverse null pair at every
   parameter, and its fourth moment has a uniform nonzero imaginary exit.
   Only alpha=1 is the one-complex-dimensional Gaussian radial law.
-  Independent hostile audit is pending.
 source: root/audit-2809-gamma-transverse-holotopy-2026-07-28
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
@@ -26,7 +25,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2865 -- Gamma transverse null holotopy and uniform fourth exit
 
-**PROVED CANDIDATE + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The isolated factorial hostile of THM-2846 is not an accident of the
 single radial law `L(s^m)=m!`.  It is one fibre of an exact one-parameter
@@ -279,6 +278,13 @@ LF normalization.  LF-normalized SHA-256:
 script  ff32c787fb4fef58b77d06d84f3b032197744515ec03d6dcff8c1be6e70afc52
 output  6b943778460db66d48b50fe6d62f94feb6df62bbe08006df287ffcd4ca9ec0ec
 ```
+
+An independent hostile audit rederived the Gamma normalization, the two
+division-free invariants, the affine pullback and separable
+power-to-Bernstein formula, all face and cell counts, the Jacobian
+orientation, analytic gluing, and the quartic-remainder identity.  It also
+replayed normal and optimized execution against the stored transcript and
+recovered the displayed LF hashes.  No owner-file edit was needed.
 
 ## 6. Connection contract
 
