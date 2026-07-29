@@ -1,6 +1,6 @@
 ---
 id: THM-2897
-title: "Partition-cap tropical convolution and alternating pair ladder"
+title: "Partition-cap tropical convolution and rank-selective alternating pair ladder"
 status: PROVED
 source: root-2026-07-29
 depends_on:
@@ -13,7 +13,7 @@ related:
   - THM-2896-seven-body-adaptive-six-cover-hitting-gate-atlas
 ---
 
-# THM-2897 -- partition-cap tropical convolution and alternating pair ladder
+# THM-2897 -- partition-cap tropical convolution and rank-selective alternating pair ladder
 
 ## 1. The cap sequence
 
@@ -110,8 +110,8 @@ Take `J={1,2}`.  Write
 q=B_1(P),       B=B_2(P).                                   (9)
 ```
 
-Replacing `B` by `min(B,2q)` preserves `(3)`, so assume `B<=2q`.  Formula
-`(7)` then becomes
+Subadditivity gives `beta_2(P)<=2 beta_1(P)<=2q`.  Thus replacing `B` by
+`min(B,2q)` preserves `(3)`, so assume `B<=2q`.  Formula `(7)` then becomes
 
 ```text
 F_(2m)(P)=mB,
@@ -119,24 +119,52 @@ F_(2m+1)(P)=q+mB.                                          (10)
 ```
 
 This follows immediately by induction: an even slot count is tiled by
-pairs, while an odd slot count has one singleton left over.  In particular,
+pairs, while an odd slot count has one singleton left over.
+
+The odd bound has a strict rank-selective refinement.  Put
+
+```text
+c(v)=U_C({v}),
+q_j(P)=sup {
+  min_(v in S)c(v) : S subset V minus P, |S|=j
+}.                                                         (10a)
+```
+
+For a discrete family ranked by decreasing singleton coverage, `q_j(P)` is
+the `j`-th order statistic.  Given any `(2m+1)`-set `Q`, choose a member
+`v` of minimum singleton coverage.  Definition `(10a)` gives
+
+```text
+c(v)<=q_(2m+1)(P).
+```
+
+Partition the other `2m` labels into `m` pairs.  The same proof as `(6)`
+now gives the sharper certificate
+
+```text
+U_C(Q)<=q_(2m+1)(P)+mB.                                   (10b)
+```
+
+Thus the alternating pair ladder reads
 
 ```text
 four remaining labels:       2B<h  implies no cover,
-five remaining labels:     q+2B<h  implies no cover.        (11)
+five remaining labels:   q_5+2B<h  implies no cover.         (11)
 ```
 
 The first line is exactly the pair-partition terminal used in THM-2888.
 The second is its correct one-step successor for the seven-body/six-slot
-rung after a first apex.  The alternation is parity of the **number of
-remaining proof obligations**, not parity of the speed labels; it supplies
-no two-adic descent by itself.
+rung after a first apex.  The weaker `q+2B<h` follows from `(10)`, but
+discarding distinctness by using the largest singleton is unnecessary.
+The alternation is parity of the **number of remaining proof obligations**,
+not parity of the speed labels; it supplies no two-adic descent by itself.
 
-One may also use several primitive sizes.  For example, at five slots,
+One may also use several primitive sizes.  Combining the rank-selective
+bound with ordinary block partitions gives, at five slots,
 
 ```text
-F_5(P)<=min(
-  B_1+2B_2,
+beta_5(P)<=min(
+  q_5+2B_2,
   B_2+B_3,
   B_1+B_4,
   B_5
@@ -157,23 +185,23 @@ C_a=C minus D_a,       h_a=mu(C_a),                          (13)
 
 and let `P` record the already forbidden gate labels.  Compute cap banks on
 the literal carrier `C_a` using only labels outside `P union {a}`.  Exact
-caps `(2)` satisfy
+caps, now written `beta^a_j(P)`, satisfy
 
 ```text
-P subset P'  implies  beta_j(P')<=beta_j(P).                 (14)
+P subset P'  implies  beta^a_j(P')<=beta^a_j(P).             (14)
 ```
 
 The same conclusion holds for any chosen upper-cap bank that is explicitly
 monotone under deletion.  Its tropical closure is then monotone:
 
 ```text
-F_k(P')<=F_k(P).                                            (15)
+(F^a)_k(P')<=(F^a)_k(P).                                    (15)
 ```
 
 Therefore
 
 ```text
-Gamma_a(P) : F_(p-1)(P)<h_a                                (16)
+Gamma_a(P) : (F^a)_(p-1)(P)<h_a                            (16)
 ```
 
 is an inflationary activation predicate of exactly the kind used in
@@ -182,13 +210,14 @@ branches are certified on their actual suffixes, repeatedly activate every
 remaining apex satisfying `(16)`.  If all gate apices activate, the root is
 closed.
 
-This permits scalar, pair, and triple caps to coexist in one target-set
-selection problem.  At the present `j=6` frontier, the cheapest new
-predicate is
+The carrier-specific order statistics `q^a_j(P)` from `(10a)` are also
+nonincreasing as `P` grows.  Hence the rank-selective pair predicate is
+monotone as well.  This permits scalar, pair, and triple caps to coexist in
+one target-set selection problem.  At the present `j=6` frontier, the
+cheapest new predicate is
 
 ```text
-largest allowed singleton coverage
-  + 2*(allowed global pair-union cap) < h_a.                (17)
+q^a_5(P)+2B^a_2(P)<h_a.                                    (17)
 ```
 
 Both the literal residual and the excluded-prefix sidecar are essential.
@@ -212,7 +241,7 @@ map:          integer-partition / min-plus convolution;
 preserved:    subadditive upper control and forbidden-label monotonicity;
 destroyed:    cross-block overlap and common-maximizer compatibility;
 sidecar:      literal carrier, excluded labels, and ordered apex state;
-cheapest test at five slots: q+2B_2<h.
+cheapest tested-form target at five slots: q_5+2B_2<h.
 ```
 
 No finite LRC atlas is asserted here.  In particular, the theorem does not
