@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `lrc14_j6_two_h3_row_pair_hunter_recursive_toothpick_closure_codex_20260729.py`
+  -> matching summary and full-ledger `.out` files [THM-2920 PROVED +
+  FINITE-EXACT + VERIFIED].  All `367` THM-2916-open children close:
+  `149` by exact pair partition, `111` more by the four-slot Hunter
+  envelope, `102` by finite second-centre top-three recursion, and the
+  last five by the lawful three-slot Hunter endpoint.  The last step
+  explicitly rejects the arity-invalid top-two shortcut.  All `296`
+  surviving roots are additive, completing the `690`-root two-H3
+  stratum and taking the proved union from `745` to `1,041`, residual
+  `2,391`.  Ordinary and optimized eight-worker outputs are byte-identical.
+  LF-normalized script/output/ledger SHA-256:
+  `(049be1e331fb0c4fc46e703ffb37d61be2b3ec3b781835f480e55ba89bdf894e,1a38fd441dfd77a4f5d30d45d3160febc33d2d4eeb6247b223f10a1e31a8aefb,9c96a24c90c07c69d96b86f29355f9a86599c9d9174e0260dd952aa357f7d7f1)`.
 - `lrc14_j6_two_h3_row_child_top4_census_codex_20260729.py` -> matching
   summary and full-ledger `.out` files [THM-2916 PROVED + FINITE-EXACT +
   VERIFIED].  Exact recomposition after THM-2913 leaves no one-H3 root;
