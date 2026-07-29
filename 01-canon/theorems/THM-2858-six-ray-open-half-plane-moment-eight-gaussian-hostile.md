@@ -2,8 +2,8 @@
 id: THM-2858
 title: "Six-ray open-half-plane moment-eight Gaussian hostile"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT ACCEPTED,
-  FINAL IMMUTABLE REPLAY PENDING.  Six adjacent-difference coefficients
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Six
+  adjacent-difference coefficients
   lying strictly in one open half-plane annihilate factorial moments one
   through four.  Equivalently the witness lies in the complex span of two
   independent strictly positive adjacent cones.  Its degree-thirteen
@@ -18,15 +18,14 @@ related:
   - THM-2848-whitened-moving-plane-multipole-and-pearson-boundary
 script: 04-computation/gmc_six_ray_half_plane_moment8_hostile_thm2858.py
 output: 05-knowledge/results/gmc_six_ray_half_plane_moment8_hostile_thm2858.out
-script_sha256: 47b2b08362c835f97e4af24b3df16e957819515d6522c4ed46f843971cbc5e97
-output_sha256: e739c7316721c14672b9122bb5593ffce2bb20208cbda7eed0fa60c3c71f7e58
+script_sha256: 903014b13e4b7b8bb99b17a35ddac44d145eb6f625eba8906ffe6da57eaa35c8
+output_sha256: 17dbce82ae160143f9294823d70fbc56de3d961516f368b4b61003ac79a47244
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2858 -- six-ray open-half-plane moment-eight Gaussian hostile
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT ACCEPTED,
-FINAL IMMUTABLE REPLAY PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This is the next finite-moment obstruction beyond THM-2846.  It also
 refutes the tempting strengthening suggested by the four-slot searches:
@@ -270,7 +269,8 @@ An independent hostile audit rebuilt `H` directly as a polynomial,
 computed `L(H^k)` from its factorial coefficients rather than importing
 the companion's adjacent-tensor engine, reran the rational enclosure, and
 checked the contraction inference, the two-cone decomposition, the
-degree-thirteen lift, and every Gaussian charge factor.  It accepted the
-mathematics.  Final immutable replay of the packaged paths and hashes is
-still pending, so this file remains a proved candidate rather than a
-proved dependency.
+degree-thirteen lift, and every Gaussian charge factor.  The immutable
+packaged script passed normal and optimized replay against the stored
+transcript, and the LF-normalized hashes were independently reproduced.
+
+**QED.**

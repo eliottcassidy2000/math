@@ -247,7 +247,7 @@ def main() -> None:
     )
 
     print("SIX-RAY OPEN-HALF-PLANE FACTORIAL HOSTILE -- exact Krawczyk referee")
-    print("status=PROVED-CANDIDATE+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
+    print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
     print("support=(d1,d2,d3,d4,d5,d6); c1=1; c2,c4=fixed rational")
     print("equations=Re/Im L(H^k), k=2,3,4; variables=c3,c5,c6")
     print("center_jacobian_nonzero=1")
