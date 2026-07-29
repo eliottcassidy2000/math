@@ -124,9 +124,11 @@ target row `q=3`.  It realizes the correct thirteen-state carrier
 externally.
 
 This does not put thirteen internal states into one positive packet.
-Only the `q3` fibre is populated: THM-2868's signed `q11` row cancels and
-its `q7` row is zero by `E3`.  Extending (8)--(9) over those target fibres
-with common physical support is still open.
+Only the `q3` fibre is populated in the signed table used here:
+THM-2868's origin-resolved `q11` rows are nonzero but cancel under that
+selector, while its `q7` row is zero by `E3`.  Installing an
+origin-resolved `q11` fibre and then extending (8)--(9) to `q7` with one
+common physical support remains a separate problem.
 
 ## 3. The tempting seam is the forbidden section
 
