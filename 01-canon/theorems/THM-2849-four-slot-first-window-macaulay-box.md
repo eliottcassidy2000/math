@@ -22,6 +22,10 @@ script: 04-computation/sfc4_first_window_macaulay_box_thm2849.py
 output: 05-knowledge/results/sfc4_first_window_macaulay_box_thm2849.out
 script_sha256: d32bd79201bbb0ae3db9904b27869f7e112084777d1cc7d33b28a37d46734a61
 output_sha256: 98afca5d00f25ff2fda409a58df96973e04e8f30e27d90764525a28470a1d528
+independent_script: 04-computation/sfc4_first_window_macaulay_independent_audit_thm2849.py
+independent_output: 05-knowledge/results/sfc4_first_window_macaulay_independent_audit_thm2849.out
+independent_script_sha256: c321bc578ea4fec0d75923e37fa64eca2d598cc7c5fcdbdb746af9d61d1eaa4c
+independent_output_sha256: cf0a26f5c8f739ceae118a9431f891c18d0c5401d5d7e381e3c51e64681ea417
 hash_basis: LF-normalized bytes
 ---
 
@@ -165,10 +169,20 @@ The companion checks more than the headline ranks.
   vectors, and its rank to the stored transcript.
 
 Normal, optimized, and stored runs agree byte for byte; all truth-bearing
-gates use explicit exceptions rather than Python `assert`.  An independent
-hostile audit replayed both modes and the stored transcript, rederived the
-modular-minor lift, and checked that full degree-seven span implies
-projective emptiness.  It found no mathematical defect.
+gates use explicit exceptions rather than Python `assert`.
+
+The independent companion imports neither the primary constructor nor its
+rank engine.  It rebuilds the forms over `Q` from signed difference tensors,
+uses the opposite sparse pivot order on all 1,820 supports, and reproduces
+the primary full coefficient/rank digest
+
+```text
+becbc51a7eeeb1ded8cea45d11a497a07427e38b789ee9767f9f17f963e4c10f.
+```
+
+It also reproduces deletion rank `30`, keeps a planted common-line system
+at rank `21`, and checks the modular-minor lift and projective implication.
+Normal, optimized, and stored independent runs agree byte for byte.
 
 ## 5. Boundary
 
