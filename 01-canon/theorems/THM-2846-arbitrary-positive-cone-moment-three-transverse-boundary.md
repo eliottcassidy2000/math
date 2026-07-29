@@ -13,14 +13,15 @@ status: >
 source: root/audit-2809-2026-07-28
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
+  - THM-2842-ordered-positive-cone-vandermonde-multiplier-observability
 related:
   - THM-2830-disjoint-positive-adjacent-cone-factorial-moment-three-detection
   - THM-2841-all-order-adjacent-difference-factorial-tensor-positivity
   - THM-2843-four-slot-projective-divisibility-and-resolvent-reduction
 script: 04-computation/gmc_positive_cone_moment3_transverse_boundary_thm2846.py
 output: 05-knowledge/results/gmc_positive_cone_moment3_transverse_boundary_thm2846.out
-script_sha256: c1e4d4432c8fe2e988bb0c877ca0d451ff1426d3e8c0ba0f103820dc21eb7526
-output_sha256: b1193b34c28e1f49682c6de2e4b68c1b56ea14226df731afa37bcdb7f287b2ea
+script_sha256: d795ff627dc8e65b0a890e38750ae993ca1bba73c483099a2afdd98160323d76
+output_sha256: 0a7d110257085bee7678ea1b44bb36bd045cca11ad8a704ee9540026b0f9f62e
 hash_basis: LF-normalized bytes
 ---
 
@@ -326,6 +327,66 @@ is an actual four-slot factorial plane in the sense of THM-2843.  Equations
 factorial realization of THM-2843's moving-plane geometry, not merely the
 abstract non-factorial facewise hostile in that theorem.  The quartic
 transverse sign is precisely the next complete-intersection exit.
+
+### 5.2. The missing variance jet sees the hostile immediately
+
+THM-2842 identifies `L(ell_r H)` with radial-variance derivatives.  In
+fact its first jet repairs **every** binary positive-cone plane, without
+an order hypothesis.  Let
+
+```text
+U=sum_i lambda_i d_i,          V=sum_i mu_i d_i,
+Lambda=sum_i lambda_i>0,       M=sum_i mu_i>0,
+```
+
+be independent positive cone elements.  If
+
+```text
+H=alpha U+beta V!=0,                 L(H^2)=0,
+```
+
+then `alpha,beta` are nonzero and `beta/alpha` is nonreal: it is a
+projective root of the real positive-definite Gram quadratic.  But
+THM-2842's `r=1` identity gives
+
+```text
+L(ell_1 H)=Lambda alpha+M beta.                       (11a)
+```
+
+Its vanishing would force `beta/alpha=-Lambda/M` to be real, a
+contradiction.  Therefore, on every binary positive adjacent cone,
+
+```text
+L(H^2)=L(ell_1 H)=0                 implies H=0.       (11b)
+```
+
+This is an external-observation theorem, not an ordinary Gaussian-moment
+consequence.
+
+For the displayed interlaced plane, the first two jet columns additionally
+give the explicit decoder
+
+```text
+J=
+ [ 1+x              1+y            ]
+ [ 2(1+3x)          2(2+3y)        ],
+
+det J=2(1-x+2y)>0.                                  (11c)
+```
+
+The last sign holds throughout `(R)`.  Thus the variance-jet bank decodes
+the two directions even though THM-2842's ordered-support hypothesis is
+unavailable.  More sharply, for the chosen nonreal `zeta`,
+
+```text
+L(ell_1 H)=1+x+zeta(1+y)!=0.                         (11d)
+```
+
+because its vanishing would force `zeta=-(1+x)/(1+y)` to be real.  The
+hostile therefore isolates the access boundary exactly: ordinary scalar
+moments through three cancel, while the first infinitesimal radial-variance
+observation already survives.  Gaussian nullity does not automatically
+supply that observation.
 
 ## 6. Exact evidence and audit boundary
 

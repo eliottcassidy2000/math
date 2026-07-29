@@ -336,6 +336,10 @@ def main() -> None:
         ),
         "rectangle transversality changed",
     )
+    require(
+        1 - x_right + 2 * y_bottom > 0,
+        "variance-jet determinant lost positivity",
+    )
 
     # The two exact remainder equations force cubic divisibility.
     z = sp.symbols("z")
@@ -432,7 +436,7 @@ def main() -> None:
     x_value = sp.N((N / A).subs(Y, positive_root), 30)
 
     print("ARBITRARY POSITIVE PASCAL CONE MOMENT-THREE BOUNDARY -- exact referee")
-    print("status=SCRATCH THEOREM; NO CANON OR ID RESERVATION")
+    print("status=RESERVED PROVISIONAL PROOF CANDIDATE; INDEPENDENT AUDIT REQUESTED")
     print("supports=U:d1+d3; V:d2+d3; both divisible by s")
     print("positive_root_count=1")
     print(f"y_bracket=({left},{right})")
