@@ -2,14 +2,14 @@
 id: THM-2869
 title: "Gamma positive-cone y-zero exit portal"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT.  On the boundary
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the boundary
   U=d_1+x d_3, V=d_2, the Gamma quadratic/cubic divisibility equations
   have exactly one solution with alpha>0 and x>0.  Its Gamma shape is the
   unique positive root of an explicit degree-23 polynomial, isolated in
   (23.2446,23.2447), and its x-coordinate is the unique positive linear
   subresultant root, isolated in (0.71257,0.71259).  This classifies a
   boundary portal; it does not prove that the THM-2865 local branch
-  reaches it.  Independent hostile audit is pending.
+  reaches it.
 source: root/audit-2809-gamma-y-zero-exit-2026-07-28
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
@@ -27,7 +27,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2869 -- Gamma positive-cone y-zero exit portal
 
-**PROVED CANDIDATE + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2865 gives a local positive branch
 
@@ -265,7 +265,13 @@ script  044cb2bd0821fba508d46381786b52de714e12b845dc5bdae9fa64cac9fe8d4c
 output  f09c39a908ba64b2cf14ea5dfd875ee3347b0d50401ab7bffd384401c0f71dc6
 ```
 
-Independent hostile audit is pending.
+An independent hostile audit rederived the coefficient-comparison
+divisibility invariants, the positive-Gram hypotheses, the complete
+resultant exclusion, and the Descartes--Sturm isolation of the simple
+positive `P23` root.  It separately checked specialization safety of the
+linear subresultant, the direct quotient-ring converse, positivity and
+isolation of `x_*`, and the exact normal/optimized/stored replay and
+LF-normalized hashes.  No owner-file repair was needed.
 
 ## 6. Connection contract
 
