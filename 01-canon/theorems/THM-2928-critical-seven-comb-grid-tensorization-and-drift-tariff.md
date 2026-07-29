@@ -13,8 +13,9 @@ status: >
   all of which fail; hence the fully aligned and one-drift branches are
   empty.  A component-free phase-load tariff bounds one slope in every
   k>=2 mixed branch, and every fixed five-aligned/two-drift chart reduces
-  to an exact finite pair-clock quotient.  Uniform two-drift emptiness and
-  the branches with more drifts remain open; this does not prove LRC(14).
+  to an exact finite pair-clock quotient with the sharper second-slope
+  bound c_2/d_2<13 max A.  Uniform two-drift emptiness and the branches
+  with more drifts remain open; this does not prove LRC(14).
 source: root-2026-07-29 with independent hostile audits by seven-wall-tensor-audit and critical-residue-tree
 depends_on:
   - THM-594-pair-overlap-law-mirsky-newman-floor
@@ -672,14 +673,15 @@ integrations in
 Their frozen SHA-256 hashes are
 
 ```text
-script  4ceb6c62a4e8f8379ce117d814bb081e9601294995c6827d8cb829a821ee6725
-output  67933062e9b26359aba1a3c3bca46c7e9ac77ea1fb05e6d9b9109a4945ed4be7.
+script  23ee3fcd1b81e936ccaac62f6ef10ffcd11ee08d6dc3bb68b02a417cdae4651c
+output  0f2c9e209cfe621d2d48dacc0904ce5ca4c2b5c5834815364bd4d0c39ddea301.
 ```
 
 ## 9. Five aligned combs and two drifts: a finite exact chart
 
-Keep the literal six-body carrier `G_F`, its resolving denominator `L`, and
-its full selected-cell set `J`.  Now let `A` contain five distinct aligned
+Keep the literal six-body carrier `G_F`, take its canonical resolving
+denominator `L=L_F` from `(36)`, and let `J` be its full selected-cell set.
+Now let `A` contain five distinct aligned
 multipliers and suppose two drift combs cover the residual.  Relabel them so
 that `z_1<=z_2`.  Equation `(25i)` gives
 
@@ -733,60 +735,87 @@ a_*=max A,                 N_A=sum_(a in A)a.          (37e)
 ```
 
 Because five distinct positive multipliers have `a_*>=5`, equation `(37a)`
-and `v<=L/14` for every `v in F` show that `La_*` is the largest speed in
-the partial family.  The `1/13` witness is therefore safe at level `1/14`
-on an interval of physical length `1/(91La_*)`, hence on a normalized
-subinterval of `B_r` of length
+gives `z_1<5L<=La_*`.  Also `v<=L/14` for every `v in F`.  Thus `La_*` is
+the largest speed in the twelve-speed partial family.  The `1/13` witness
+is therefore safe at level `1/14` on a closed physical circle arc `I` of
+length
 
 ```text
-1/(91a_*).                                            (37f)
+|I|=1/(91La_*).                                       (37f)
 ```
 
-On one normalized cell, the first drift is the integer `c_1` comb on an
-interval of length `1/d_1`.  THM-1094's tooth count gives
+Indeed, the distance-to-integer function for a speed `v` is
+`v`-Lipschitz, so the closed radius-`1/(182La_*)` arc around the witness
+stays safe at level `1/14` for every member of the partial family.  Under a
+pointwise countercover, every point of `I`, including both endpoints, must
+therefore lie in `D_(z_2)`.  The connected arc `I` lies in one component of
+that open set, whose teeth have length `1/(7z_2)`.  Closed containment in an
+open tooth is strict, and hence
+
+```text
+1/(91La_*)<1/(7z_2),
+
+c_2/d_2=z_2/L<13a_*.                                  (37g)
+```
+
+There is also a useful, but weaker, BV sidecar.  On one normalized cell,
+the first drift is the integer `c_1` comb on an interval of length `1/d_1`.
+THM-1094's tooth count gives
 
 ```text
 number of meeting teeth
  <=c_1/d_1+8/7
  <585/154+8/7
- =5327/1078<5.                                        (37g)
+ =5327/1078<5.                                        (37h)
 ```
 
 Thus at most four first-drift teeth cut `R_A`.  Since `(8)` gives
 `nu_A<=N_A-4`, every positive `B_r` has at most `N_A` positive-length BV
-components.
-
-Choose the positive `B_r` supplied by `(37f)`, with mass `mu_r` and `K_r`
-positive-length components.  For any selected cell with this residue, put
-`r_2=j mod d_2` and
-
-```text
-X=(r_2+B_r)/d_2.
-```
-
-The second drift covering `B_r` is exactly the integer comb `D_(c_2)`
-covering `X`.  This set has mass `mu_r/d_2` and `K_r` BV components.
-Summing the THM-2162 endpoint discrepancy, equivalently THM-1094 `(10)`,
-over those components yields
+components.  The arc `I` cannot meet a body-grid endpoint, because every
+aligned comb is dangerous there.  It therefore lies in one selected cell
+and normalizes to a subinterval of some `B_r` of length `1/(91a_*)`.
+Writing the mass and positive-length BV component count of that `B_r` as
+`mu_r` and `K_r`, we have `mu_r>=1/(91a_*)` and `K_r<=N_A`.  Applying
+THM-2162 to `(r_2+B_r)/d_2` gives
 
 ```text
-mu_r/d_2
- <=mu_r/(7d_2)+6K_r/(49c_2),
-
-c_2/d_2<=K_r/(7mu_r)<=13N_Aa_*.                      (37h)
+mu_r/d_2<=mu_r/(7d_2)+6K_r/(49c_2),
 ```
 
-The last inequality uses `(37f)` and `K_r<=N_A`.  Hence both clocks lie in
-the explicit finite box
+and recovers the older almost-everywhere estimate
+
+```text
+c_2/d_2<=13N_Aa_*,
+```
+
+but the connected closed-arc argument `(37f)`--`(37g)` is stronger for the
+pointwise problem.  Hence both clocks lie in the explicit finite box
 
 ```text
 d_1,d_2 divide L,
 gcd(c_q,d_q)=1,
 c_1/d_1<585/154,
-c_2/d_2<=13(max A)(sum A).                            (37i)
+c_2/d_2<13 max A.                                     (37i)
 ```
 
-Row-specific exact values of `K_r/mu_r` sharpen the last face.
+Row-specific exact values of `K_r/mu_r` retain additional BV information,
+although the universal pointwise face `(37g)` is usually stronger.
+
+On the direct exactly-six-in-window LRC(14) boundary,
+`F subset {1,...,14}`.  In that case
+
+```text
+L_F divides L_14:=14 lcm(1,...,14)=5,045,040.          (37ia)
+```
+
+Thus all possible clock denominators, and the first numerator through
+`(37c)`, already lie in one body-uniform finite set.  The remaining
+unbounded scale is `max A`; its projective high slope
+`c_2/(d_2 max A)` lies in the bounded interval `(0,13)` and remains
+coupled to the five-multiplier shape.  After the fully aligned and
+one-drift branches have been discharged, a genuinely two-drift row also
+has `d_1,d_2>1`; a clock with `d_q=1` is aligned and belongs to an earlier
+branch.
 
 The final decision is not a relaxation.  Put
 

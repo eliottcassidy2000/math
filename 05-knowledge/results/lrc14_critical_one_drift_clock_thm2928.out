@@ -1,7 +1,8 @@
 THM-2928 literal one-drift clock audit
 safe target: 61/273
 phase-load tariffs k=1..6: (Fraction(0, 1), Fraction(7, 78), Fraction(7, 26), Fraction(119, 338), Fraction(308, 585), Fraction(77, 117))
-two-drift finite box: c1/d1<585/154, c2/d2<=13(max A)(sum A)
+two-drift finite box: c1/d1<585/154, c2/d2<13(max A)
+direct six-body universal ruler: L divides 5,045,040
 coindex cutoff: d<=12
 density candidates: (1, 2, 3, 4, 8)
 reflection survivors: (1, 3, 8)

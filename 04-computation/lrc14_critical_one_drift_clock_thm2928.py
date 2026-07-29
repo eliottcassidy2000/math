@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""Exact audit for THM-2928's literal six-body one-drift closure.
+"""Exact audit for THM-2928's literal six-body drift reductions.
 
 All arithmetic is rational.  The phase-window masses are computed twice:
 first by explicit interval construction and then by an independent
-breakpoint/midpoint integration.
+breakpoint/midpoint integration.  The fixed two-drift constants and the
+body-uniform endpoint ruler are also checked exactly.
 """
 
 from fractions import Fraction
-from math import gcd
+from math import gcd, lcm
 
 
 Q = Fraction
@@ -130,8 +131,10 @@ def main() -> None:
         "phase-load tariff table",
     )
     require(Q(2, 1) / phase_tariffs[4] == Q(585, 154), "two-drift first slope")
+    require(Q(585, 154) < 5, "first drift lies below the largest aligned speed")
     require(Q(585, 154) + Q(8, 7) == Q(5327, 1078) < 5, "four-tooth cutoff")
     require(Q(91, 7) == 13, "second-clock BV coefficient")
+    require(14 * lcm(*range(1, 15)) == 5_045_040, "universal six-body ruler")
 
     # From g>L(h-1/7), h>=61/273, and d=L/g.
     require(TARGET - Q(1, 7) == Q(22, 273), "safe-density difference")
@@ -227,7 +230,8 @@ def main() -> None:
     print("THM-2928 literal one-drift clock audit")
     print(f"safe target: {TARGET}")
     print(f"phase-load tariffs k=1..6: {phase_tariffs}")
-    print("two-drift finite box: c1/d1<585/154, c2/d2<=13(max A)(sum A)")
+    print("two-drift finite box: c1/d1<585/154, c2/d2<13(max A)")
+    print("direct six-body universal ruler: L divides 5,045,040")
     print("coindex cutoff: d<=12")
     print(f"density candidates: {density_candidates}")
     print("reflection survivors: (1, 3, 8)")
