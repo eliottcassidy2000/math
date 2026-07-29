@@ -1,0 +1,11 @@
+GAMMA POSITIVE-CONE Y-ZERO EXIT PORTAL -- exact referee
+boundary=U=d1+x*d3; V=d2
+resultant_factors=negative_constant*(alpha+2)^6*(alpha+3)^22*(alpha+4)^4*(alpha+5)^2*(alpha+8)^2*P9*P23
+P9_coefficients_positive=10/10; P23_sign_variations=1
+alpha_unique_positive_bracket=(116223/5000,232447/10000)
+subresultant_degrees=(4,3,2,1,0); linear_gcd=PASS
+x_formula_degrees=(26,26); positive_coefficients=(27,27)
+x_positive_bracket=(71257/100000,71259/100000)
+common_root_remainders_mod_P23=(0,0)
+consequence=exact unique positive Gamma shape and x-coordinate on the y=0 quadratic/cubic-null face
+scope=boundary portal only; connection to the THM-2865 local branch not proved
