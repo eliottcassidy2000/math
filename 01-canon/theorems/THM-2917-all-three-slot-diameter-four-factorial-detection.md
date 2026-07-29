@@ -1,16 +1,18 @@
 ---
 id: THM-2917
-title: "All three-slot diameter-four factorial detection"
+title: "Diameter-four three-slot resultant atlas and sharpness corollary"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  Every translated three-subset of five consecutive
-  factorial exponents is detected by one of its first three power
-  moments.  Exact one-variable resultants have only coefficient-positive
-  factors.  The bound is sharp with full support, and every positive-depth
+  PROOF-COMPLETE COROLLARY CANDIDATE + VERIFIED-EXACT; AWAITING
+  INDEPENDENT HOSTILE AUDIT.  This is an explicit finite-pattern
+  resultant atlas inside the stronger arbitrary-support THM-2824, not a
+  new SFC(3) range.  The six translated diameter-at-most-four patterns
+  have coefficient-positive one-variable resultants.  Combined with
+  THM-2173, the bound is sharp with full support and every positive-depth
   two-charge lift has exact uniform Gaussian detection depth six.
 source: root/three-slot-diameter-four-boundary-2026-07-29
 depends_on:
   - THM-2173-sparse-projective-factorial-moment-floor
+  - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
 related:
   - THM-2812-consecutive-three-slot-factorial-moment-six-detection
   - THM-2908-consecutive-four-slot-projective-resultant-closure
@@ -21,10 +23,18 @@ output_sha256: a414aa9760b4e56766510900bf0238a4efa41b08e2d23c254174a63e04e82497
 hash_basis: LF-normalized bytes
 ---
 
-# THM-2917 -- all three-slot diameter-four factorial detection
+# THM-2917 -- diameter-four three-slot resultant atlas
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROOF-COMPLETE COROLLARY CANDIDATE + VERIFIED-EXACT; AWAITING
+INDEPENDENT HOSTILE AUDIT.**
+
+THM-2824 already proves first-window SFC(3) on **every** arbitrary
+three-slot support.  The purpose of this corollary is narrower and
+computationally different: it gives a compact, explicit elimination atlas
+for all coordinate faces of a five-consecutive-slot window.  Those
+resultants are useful as independently replayable boundary certificates
+for four-slot Macaulay proofs.  No enlargement of THM-2824's support range
+is claimed.
 
 Put
 
@@ -230,10 +240,12 @@ is nonzero.  Its exact uniform Gaussian detection depth is therefore
 
 ## 4. Scope and exact verification
 
-This is an infinite translated support theorem, but only for three slots,
-diameter at most four, and the first moment window.  It does not prove
-arbitrary SFC(3), shifted windows, SFC(4), an arbitrary-charge effective
-Gaussian bound, or a new nullcone classification.
+This explicit atlas is confined to three slots, diameter at most four, and
+the first moment window.  Its detection statement is subsumed by
+THM-2824; its new payload is the six-cell coefficient-positive resultant
+table and the corresponding explicit sharpness certificate.  It does not
+prove a shifted window, SFC(4), an arbitrary-charge effective Gaussian
+bound, or a new nullcone classification.
 
 The exact companion reconstructs `(10)` independently for all six
 supports, performs every resultant and factorization over `Z[n]`, checks
