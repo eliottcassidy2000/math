@@ -1,0 +1,21 @@
+THM-2942 MACAULAY EXTRANEOUS FLAG FACTOR AND PLUECKER MUTATION
+constructor_dependency_sha256=42e9b5ceddd677d1f2601a9d5d668c9437281596b65999ddcb8549d4e0b9bf64
+denominator_dependency_sha256=83d70a95f0943992d0e4b7027eede431d4dc968b66655e37b43fd0acfc692e47
+chart_multidegree=(20,10,6);resultant_multidegree=(12,8,6)
+factor=Delta=q20^6*c30*K*Res(Q,C,F);K=c12*q20^2-c21*q11*q20-c30*q02*q20+c30*q11^2
+F=x2^4_block_sizes=8,7,6,5,3,1;symbolic_blocks=PASS
+symbolic_block_digest_sha256=1358b449b11d78602d7b383ad66782ba2402aca2a8a205d748e4288e1be88012
+binary_resultant_digest_sha256=fd94ae3d18fb86457cc9b58a376d6b6145acaa1930f74a17e8b829c2d84b85dd
+mutation=J0:0,1,2,3,4,5->J1:0,3,4,5,6,7;Delta_J1=q200^5*c300*P_alt*Res
+symbolic_mutation_digest_sha256=6882534220ac2b9556320947026e52742f733280d8ad3e26a60deada66727a3d
+pure_power_K=3*v0*u0^2*(u0*v1-u1*v0)^2;THM2927_factor_recovered
+quartic_row_mutations=210;nonzero_sample_coordinates=207;common_scale_mod_1000003=517319
+pluecker_census_digest_sha256=9f2943e6fd9b1fb500b597f9fa6e9330691c34dc2afe6c2f4a2581b6a84c2be2
+three_term_pluecker_exchange=quotient:PASS,Macaulay:PASS
+one_cut_controls=positive:649,root:78;Taylor_and_Gregory_Newton=PASS
+factorial_first_gap_independence_checks=480;second_interior_slot_absent
+factorial_cofactor_separation_supports=1140;widths=3..20;gcd_one_sign=YES;reduced_coprime=YES
+naive_gcd_degree_law_hostile=(M,a,b)=(11,7,8):actual2_vs_predicted1
+factorial_cofactor_digest_sha256=1fcdd1ed5752a1f70d0c30ae5625360e051ce4776ac4e51f236e1ad4971ba119
+scope=universal chart factorization and mutation law;finite cofactor separation is not resultant nonvanishing;no new arbitrary-width SFC4 closure
+all_exact_checks=PASS
