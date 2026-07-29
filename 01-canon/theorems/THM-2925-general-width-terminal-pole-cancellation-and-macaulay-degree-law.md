@@ -2,8 +2,8 @@
 id: THM-2925
 title: "General-width terminal-pole cancellation and Macaulay degree law"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  For every width M>=1 and tensor order m>=2, each
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  width M>=1 and tensor order m>=2, each
   mean-difference normalized factorial coefficient is cleared by
   prod_(r=1)^(M-1)(n+r)^(m-1)*(n+M)^(m-2), and the scaled polynomial
   has degree at most (m-1)M-1.  Interior pole control is termwise; at
@@ -30,8 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2925 -- general-width terminal-pole cancellation and Macaulay degree law
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
@@ -92,6 +91,10 @@ determinant degree at most
 ```text
 20(M-1)+10(2M-1)+6(3M-1)=58M-36.                     (9)
 ```
+
+The four-distinct-slot Macaulay application is substantive for `M>=3`;
+the tensor denominator and degree statements themselves include the
+boundary widths `M=1,2`.
 
 ## 2. The normalized tensor terms
 
@@ -305,4 +308,14 @@ python -O 04-computation/gmc_general_width_terminal_pole_cancellation_thm2925.py
 Normal and optimized executions byte-match the stored output with the
 declared LF-normalized hashes.
 
-**QED (candidate pending independent hostile audit).**
+An independent hostile audit rederived the normalized tensor formula,
+every interior and terminal Laurent valuation (including repeated lower
+offsets), and the monic-division/Gauss-lemma passage from rational pole
+bounds to divisibility in `Z[n]`.  A separate SymPy route checked `49`
+integer-polynomial controls, `789` interior valuations, `54` terminal
+position controls, and `180` multinomial controls, including the boundary
+cases `M=1,m=2`, `M=1,m=3`, and `M=2,m=2`.  It also reproduced every
+declared count, digest, LF-normalized hash, and the normal/optimized/stored
+output equality.  No load-bearing defect remained.
+
+**QED.**
