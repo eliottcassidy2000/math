@@ -1,0 +1,36 @@
+|H|= 18 orbits=25 rowsum-ok=1201200 PSD-admissible=  3768 min-maxPSD=512.8242700401667
+|H|= 18 orbits=23 rowsum-ok= 583440 PSD-admissible=  3600 min-maxPSD=519.5852653281208
+|H|= 18 orbits=21 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 18 orbits=21 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 18 orbits=23 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 18 orbits=23 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 18 orbits=23 rowsum-ok= 583440 PSD-admissible=     0 min-maxPSD=693.3242004847716
+|H|= 18 orbits=23 rowsum-ok= 583440 PSD-admissible=  4680 min-maxPSD=544.9931503635787
+|H|= 24 orbits=18 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 24 orbits=18 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 24 orbits=20 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 27 orbits=25 rowsum-ok=1072512 PSD-admissible=     0 min-maxPSD=896.1590155150378
+|H|= 36 orbits=13 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 36 orbits=21 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 36 orbits=12 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 36 orbits=14 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 36 orbits=13 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 36 orbits=18 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 36 orbits=12 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 36 orbits=14 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 36 orbits=20 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 36 orbits=15 rowsum-ok=   1680 PSD-admissible=     0 min-maxPSD=693.3242004847716
+|H|= 36 orbits=14 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 36 orbits=18 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 54 orbits=13 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 54 orbits=15 rowsum-ok=   1536 PSD-admissible=     0 min-maxPSD=986.8276253029823
+|H|= 54 orbits=15 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 72 orbits=10 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 72 orbits=12 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 72 orbits= 8 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|= 72 orbits= 8 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|=108 orbits= 8 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|=108 orbits= 9 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|=108 orbits=10 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+|H|=216 orbits= 6 rowsum-ok=      0 PSD-admissible=     0 min-maxPSD=—
+TOTAL one-sided PSD-admissible invariant candidates: 12048

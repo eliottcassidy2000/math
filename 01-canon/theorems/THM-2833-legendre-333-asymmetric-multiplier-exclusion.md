@@ -61,3 +61,24 @@ invariant under the order-15 QR subgroup.
   "different subgroup for each sequence" attack that the 2607.20765 authors
   left open, redirecting effort to genuinely unstructured or
   differently-structured searches.
+
+## One-sided boundary (same session)
+
+For A invariant and B fully UNSTRUCTURED, the necessary condition is
+`PSD_A(k) <= 2L+2 = 668` for all `k != 0` (since `PSD_B = 668 - PSD_A >= 0`).
+A vectorized scan over every enumerable invariant side
+(`04-computation/legendre333_onesided_psd_scan_macmini_S171.py`, output
+`05-knowledge/results/legendre333_onesided_psd_scan_macmini_S171.out`,
+sha256 6385e0a888b3574c0f95ed816504c5d596e6624332afaac54549c4a55f7f1956) gives:
+
+* every side of order >= 24 with any row-sum-valid classes is FULLY
+  PSD-excluded (e.g. |H| = 54: min max-PSD 986.8 > 668);
+* several order-18 sides are also fully excluded (min max-PSD 693.3);
+* exactly **12,048** invariant candidates remain PSD-admissible (order-18
+  and order-27 sides; best max-PSD 512.8).
+
+So the one-sided route is NOT closed; it is reduced to 12,048 explicit
+candidates, each posing a prescribed-PAF problem for the partner sequence
+(`PAF_B = -2 - PAF_A`), best attacked per-candidate by SAT/pseudo-Boolean
+with XOR-cardinality encodings, flattest PSD first.  This is the sharpest
+remaining structured route to Hadamard order 668 identified this session.
