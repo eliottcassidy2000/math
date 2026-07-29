@@ -32,6 +32,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_critical_scalar_wall_independent_thm2941.out
   - 04-computation/lrc14_j7_top7_overlap_graph_scout_thm2941.py
   - 05-knowledge/results/lrc14_j7_top7_overlap_graph_scout_thm2941.out
+  - 04-computation/lrc14_j7_aligned_projected_arc_suffix_thm2941.py
+  - 05-knowledge/results/lrc14_j7_aligned_projected_arc_suffix_thm2941.out
 ---
 
 # THM-2941 -- critical seven-slot scalar wall and empty balanced boundary
@@ -433,7 +435,8 @@ carrier and aligned multiplier set reduces to a finite exact pair-clock
 quotient.  Its pointwise argument bounds the smaller slope by `585/154` and
 the larger by `13 max A`; its load-bearing extra coordinate is the
 carrier-local pair endpoint current, not the global full-circle overlap.
-This does not prove those charts empty.
+By itself this does not prove those charts empty; the lossless projected
+residual below supplies the missing terminal.
 
 The multiplicity deformation in fact gives an **absolute** first apex
 throughout the `k>=2` aligned sector.  Suppose there are `k` aligned tails,
@@ -459,14 +462,14 @@ The safe floors in THM-2928 therefore give
 ```text
 k                 2       3         4          5          6
 d                 5       4         3          2          1
-u_A >=          66/91   55/91    558/1183   478/1365   61/273
-eta_k=u_A-d/7    1/91    3/91     51/1183    88/1365   22/273. (25c)
+u_k             66/91   55/91    558/1183   478/1365   61/273
+eta_k:=u_k-d/7   1/91    3/91     51/1183    88/1365   22/273. (25c)
 ```
 
-The positivity begins exactly at `k=2`: for `k=1`,
-`u_A=6/7=d/7`, so this excess mechanism vanishes.  This explains, rather
-than merely observes, why the zero/one-aligned sector is the remaining
-infinite frontier.
+Here `u_A>=u_k`, so `(25b)` gives `Delta>=h eta_k`.  The positivity begins
+exactly at `k=2`: for `k=1`, `u_A=6/7=d/7`, so this excess mechanism
+vanishes.  This explains, rather than merely observes, why the zero/one-
+aligned sector is the remaining infinite frontier.
 
 Each aligned singleton has restricted mass `h/7`.  Ordering the drifts
 `z_1<...<z_d` and writing `delta(z)=c(z)-h/7`,
@@ -543,6 +546,93 @@ The earlier whole-cell test is the weaker consequence
 first drift and a quantitatively forced second scale; it is not merely
 placed in an undifferentiated finite box.
 
+The arc is only a lower bound for a more faithful quotient.  For any fixed
+drift packet `Z`, put
+
+```text
+S_(E,Z)=C_E minus union_(z in Z)D_z,
+P_(E,Z)=phi_L(S_(E,Z)).
+```
+
+For a fixed aligned multiplier set `A`, the original tail-cover predicate is
+equivalent to
+
+```text
+{D_z:z in Z} union {D_(La):a in A} covers C_E
+ iff P_(E,Z) subset U_A.                                      (25g)
+```
+
+Indeed `D_(La)=phi_L^(-1)(D_a)`, and the points outside `S_(E,Z)` are
+already covered by a drift.  Since `S_(E,Z)` and its image are compact while
+`U_A` is open and proper, a completion in particular forces
+
+```text
+mu(P_(E,Z))<1-u_A<=1-u_k.                                 (25h)
+```
+
+Thus `P_(E,Z)` is a multiplier-free, lossless reduction of the aligned
+completion problem, not merely a necessary statistic.  Equation `(25f)`
+uses only one guaranteed arc inside `S_(E,Z)`, whereas a finite drift census
+can retain the whole projected set, its components, and its endpoint
+address.
+
+There is also a finite clause representation.  Let `J_E` be the body-safe
+`1/L` cells and, in the normalized coordinate `u` on cell `j`, put
+
+```text
+E_z(j)={u in [0,1]: ||z(j+u)/L||<1/14}.
+```
+
+De Morgan's law gives the exact interval-mass identity
+
+```text
+T minus P_(E,Z)
+ = intersection_(j in J_E) union_(z in Z) E_z(j).        (25i)
+```
+
+Endpoint conventions are immaterial here.  Any isolated body-safe grid
+point omitted by the positive-cell ledger projects to zero, which belongs
+to every aligned `D_a`; hence the pointwise equivalence `(25g)` is
+unchanged.
+
+Thus projection changes the drift problem into a finite
+cell-by-drift intersection-of-unions with rational interval literals.  The
+choice of a drift owner in each cell is precisely the address sidecar that
+singleton excess and the Gram forget.
+
+Unlike the safe-surplus bound, the projected statement still has content at
+`k=1`.  Here `u_1=6/7`, so the same proof gives
+
+```text
+max(E union Z)>L/13,
+P_(E,Z) subset D_a
+```
+
+for the one aligned multiplier `a`.  This locates the scale and forces a
+single-comb shape on the projected residual, but it does not bound the first
+of the six drifts.  It is therefore a genuine constraint on the remaining
+infinite sector, not a finite reduction of it.
+
+The exact suffix verifier composes `(25c)`--`(25f)` without treating a
+search horizon as exhaustive.  For every root and proposed `z_1`, it
+integrates all allowed suffix labels through `H=7,000`, retains the largest
+`d-1` distinct exact excesses, and pads omitted labels by
+`6r_E/[49(H+1)]`.  When `(25f)` forces a later high label, the corresponding
+tail starts at the larger of `H+1` and the strict projected-wall floor.  The
+result is the necessary-filter census
+
+```text
+k                              2          3        4      5     6
+suffix-only max z_1         2,340        432      260    130    44
+projected-wall max z_1      2,142        380      182     66  EMPTY
+projected surviving rows 2,239,853    376,020   87,975  4,702     0. (25j)
+```
+
+A row here is a pair `(E,z_1)` surviving rigorous upper envelopes, not a
+realized cover.  The empty `k=6` column independently reproduces the known
+one-drift closure; the other columns are finite banks, not emptiness
+censuses.
+
 For `k=5`, there is a second, Gram-facing derivation.  Pointwise
 
 ```text
@@ -559,6 +649,71 @@ integral_(C_E)binom(m_A,2)
 This reproduces `eta_5=88/1365`; the safe-surplus and pair-Gram views are
 the same pressure in two coordinate systems.
 
+The `k=5` finite bank is in fact empty.  Its `4,702` rows split exactly
+according to the first-drift excess.
+
+In the `4,084` high-excess rows
+
+```text
+delta(z_1)>=88h/1365,
+```
+
+apply THM-2893's six-tail first-apex gate to
+`R=C_E minus D_(z_1)`.  If `h_R` and `r_R` are its mass and component
+count, one of the five aligned labels or `z_2` is at most
+
+```text
+floor(36r_R/(7h_R)).
+```
+
+The aligned labels are at least `L`, while `(25f)` forces
+`z_2>2275L/18627`.  These typed lower bounds immediately close `3,827`
+rows.  The other `257` rows leave exactly `42,912` integral `z_2`
+candidates.  On every candidate, the cell formula `(25i)` gives an exact
+rational prefix lower bound
+
+```text
+mu(P_(E,{z_1,z_2}))>=887/1365=1-u_5,                    (25k)
+```
+
+contradicting the strict containment inequality `(25h)`.
+
+For each of the other `618` suffix rows, put
+
+```text
+g=88h/1365-delta(z_1)>0.
+```
+
+The component discrepancy bound forces
+
+```text
+z_2<=floor((6r_E/49)/g).
+```
+
+There are `7,218,110` row-labelled `z_2` candidates across these finite
+intervals; exact singleton integration leaves `194,073` admissible drift
+pairs that pay the gap `g`.  Every one again satisfies `(25k)`.  The
+smallest certified prefix margin over both banks is `1/378105`; equality at
+the five-comb union cap would already be impossible because `P` is compact
+and the aligned union is open.
+
+A separate typed recursion independently checks the high-excess bank:
+`39,913` of its `42,912` second-drift rows close at the first aligned gate;
+the remaining `2,999` close before a one-label terminal, with no multiplier
+above four.  Therefore
+
+> No literal six-body/seven-tail cover has five aligned tails and two
+> drifts.
+
+THM-2928 now supplies a genuinely independent closure of the same face by
+body/divisor projection and relaxed arithmetic-progression address masks.
+The two proofs reverse the quantifier order.  THM-2928 retains the aligned
+safe set and asks whether two drift masks cover every selected body address;
+`(25g)` first removes the drifts and asks whether the aligned union covers
+their existential projected residual.  They are dual cell-address
+projections, and both succeed precisely because they retain the address
+coordinate erased by singleton and Gram statistics.
+
 The caps in `(25e)` give a uniform **finite reduction** without bounding
 the aligned multiplier set.  Delete the bounded `D_(z_1)`.  Six tail labels
 remain, with no alignment assumption needed.  At every proper node of their
@@ -568,12 +723,17 @@ most twelve speeds.  Settled `LRC(<=13)` gives a point at clearance at least
 residual.  It therefore satisfies the positive-mass interval hypothesis of
 the cap-free `p<=6` first-apex recursion THM-2893(7a)--(7b).  Recursing to
 depth at most six produces a finite exact decision tree.  This is a
-finiteness theorem, not an emptiness census.
+finiteness theorem, not an emptiness census.  At each node the component
+estimate inherited from THM-1094 is non-strict with coefficient `6r/49`;
+replacing that coefficient by the explicit larger rational `6r/49+1`
+supplies the strict form required by THM-2893 without changing finiteness.
+The `1/13-1/14` margin is what keeps every proper-node residual positive.
 
-Together with THM-2928's empty `k=7` branch, this proves:
+Together with THM-2928's empty `k=6,7` branches, this proves:
 
-> Every six-body/seven-tail branch with at least two aligned tails is either
-> already empty or uniformly reducible to a finite exact decision tree.
+> Every six-body/seven-tail branch with at least five aligned tails is empty.
+> Each branch with `k=2,3,4` aligned tails is uniformly reducible to a finite
+> exact decision tree.
 > Consequently any sector not yet known to admit such a finite reduction
 > has at most one aligned tail, hence at least six drifts.
 
@@ -586,6 +746,8 @@ edge data:
   restricted overlap p_ij, gcd/reduced ratio, tooth indices;
 component data:
   ordered owner word, transition positions and widths;
+quotient data:
+  projected residual P_(E,Z), its component word and measure;
 hyperedge data:
   the endpoint relation producing the width kappa in (22b).              (26)
 ```
@@ -622,12 +784,12 @@ LRC realizability.
 ## 9. Scope and audit state
 
 The exact scalar census and component bound have two independent
-implementations.  The top-seven overlap graph is a scoped structural scout.
-Promotion still requires frozen-source ordinary/optimized replay and final
-canon audit.
+implementations.  The aligned suffix census and five-aligned closure have
+independent exact reconstructions and hostile proof audits.  The top-seven
+overlap graph is a scoped structural scout.
 
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,
-handle arbitrary packets, run the new finite decision trees, classify the
-zero/one-aligned multi-drift address hypergraph, close the
+handle arbitrary packets, run the `k=2,3,4` finite decision trees, classify
+the zero/one-aligned multi-drift address hypergraph, close the
 six-body/seven-tail rung, or prove LRC(14).
