@@ -2,7 +2,8 @@
 id: THM-2884
 title: "Macro-semantic diagonal horn carrier and origin-even boundary"
 status: >
-  PROVED + VERIFIED-EXACT.  On every one of the 449 THM-2835 horn
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On every one
+  of the 449 THM-2835 horn
   cylinders, adjoining the fully bare semantic word Q0 and imposing the
   honest Boolean relation E3_bit XOR outer_slot7 XOR outer_slot8 = 0
   produces a four-state V4-shaped carrier.  At the stepped endpoint
@@ -16,6 +17,14 @@ status: >
   but does not extend to a nontrivial C13 action and is blind to the
   ancestry carry.  This is a physical carrier theorem, not a row
   exclusion or an LRC(14) proof.
+audit: >
+  The independent referee reconstructed Q0 and its 66104-member q3 bank,
+  all 449 horn incidences, the H/coset states, and the exact 20-cell set;
+  it replayed normal and optimized modes against the stored output and
+  accepted the 8980 Cartesian product after checking that native-cell
+  predicates are ancestry-independent and word flags are cell-independent.
+  It also checked the +1 q7 filler and accepted the stated action, carry,
+  signed-current, row-exclusion, and LRC boundaries.  Verdict: ACCEPT.
 source: root/lrc-macro-semantic-diagonal-2026-07-29
 depends_on:
   - THM-2835-q11-semantic-word-horn-and-bockstein-blind-support-no-go
@@ -36,7 +45,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2884 -- macro-semantic diagonal horn carrier and origin-even boundary
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2835 found a `449`-sheet semantic horn
 
@@ -238,6 +247,11 @@ Therefore `(17)` and the `449` ancestry labels give
 complete stepped-origin packets.  Since both `q7` ancestry fillers lie
 in `QAB`, there are `17960` labelled filler occurrences if the two carry
 choices are counted separately.
+
+The multiplication in `(21)` is a genuine Cartesian product: the native
+cell predicates depend on `(s,t,clock)` and the physical intervals but
+not on ancestry, while the four-word flags depend on ancestry and the
+physical interval but not on `(s,t,clock)`.
 
 This repairs the `0/567` common-cell failure in THM-2835 only after
 replacing the product demand “`E3` and word” by the correlated diagonal
