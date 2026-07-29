@@ -114,11 +114,12 @@ so `beta<gamma/w` and therefore `w<gamma/beta`.  For integral `w`, this is
 exactly `w<=ceil(gamma/beta)-1`.  Condition `(6)` is equivalent to
 `beta>0`.
 
-The strictness in `(6)` is structural, not cosmetic.  At equality the core
-threshold is only `h/7`; estimate `(5)` permits infinitely many labels with
-coverage exactly `h/7`, so it supplies no finite core.  For example, repeat
-one set of measure `h/7` at infinitely many labels and retain the
-non-sharp cap `B=(7-s)h/7`.
+Since a genuine cap has `B>=0`, `(6)` can hold only for `s<=6`.  Its
+strictness is structural, not cosmetic.  At the feasible equality boundary
+the core threshold is only `h/7`; estimate `(5)` permits infinitely many
+labels with coverage exactly `h/7`, so it supplies no finite core.  For
+example, repeat one set of measure `h/7` at infinitely many labels and
+retain the non-sharp cap `B=(7-s)h/7`.
 
 ## 4. Literal residual recursion
 
