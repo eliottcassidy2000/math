@@ -2,8 +2,8 @@
 id: THM-2940
 title: "Consecutive four-slot Macaulay--Newton short closure"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  For every n>=0, first-window SFC(4) holds on the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  n>=0, first-window SFC(4) holds on the
   translated consecutive support {n,n+1,n+2,n+3}.  Exact width-three
   denominator clearing and one fixed degree-seven Macaulay minor reduce
   the depth ray to 139 strictly positive Gregory--Newton coefficients.
@@ -29,8 +29,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2940 -- consecutive four-slot Macaulay--Newton short closure
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
@@ -254,12 +253,12 @@ envelope is therefore eight.
 
 ## 8. Relation to THM-2908 and scope
 
-THM-2908 independently proves the same consecutive SFC(4) headline by
-a much larger moving-plane/projective resultant atlas, retaining
+Candidate THM-2908 develops a much larger moving-plane/projective
+resultant atlas for the same consecutive SFC(4) headline, retaining
 geometric information about its exceptional charts.  It is not used
-here.  This theorem is the smaller fixed-chart replacement dependency:
+here.  This theorem is the proved fixed-chart replacement dependency:
 degree `138` and `139` Newton coefficients rather than the degree-`2804`
-projective eliminant.
+candidate projective eliminant.
 
 The invariant is surjectivity of `(11)`, not the selected row address.
 Here one chart remains nonzero on the whole depth ray.  At larger widths
@@ -308,4 +307,13 @@ python -O 04-computation/gmc_consecutive_four_slot_macaulay_newton_thm2940.py
 Normal and optimized executions byte-match the stored output with the
 declared LF-normalized hashes.
 
-**QED (candidate pending independent hostile audit).**
+An independent hostile audit rederived the width-three denominators and
+row degrees, the degree-`138` invoice, the base-zero
+Gregory--Newton argument, Macaulay surjectivity and projective emptiness,
+the THM-2173/2824 full-support step, and the Gaussian charge formula.  It
+also replayed normal, optimized, and stored output and reproduced the
+declared LF-normalized hashes.  Its only requested repair was the
+truth-surface qualification of still-candidate THM-2908 above; no
+mathematical or exact-evidence defect remained.
+
+**QED.**
