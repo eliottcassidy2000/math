@@ -1,7 +1,7 @@
 ---
 id: THM-741
 title: NEAR-AP FOUR-SLOT CLOSURE — every 13-speed family with AT LEAST 9 speeds in {1,…,14} satisfies LRC(14). Equivalently, for EVERY 9-element body E ⊆ {1,…,14} (all C(14,9)=2002) and all v₁<v₂<v₃<v₄ not in E, {E,v₁..v₄} is lonely. Proof = the THM-735 Bonferroni tree at j=4: legs J4 (one inequality, all four ≥ V₁(E)) / J3 (per-v₁ exact bodies) / J2 (per-(v₁,v₂)) / J1 (per-(v₁,v₂,v₃) tail) / bottom (exact-ℚ sweeps of covering quadruples via lcm-multiples) — with PROVED P1/P2 LEMMA-SKIPS at every level (subtrees where the next Bonferroni threshold already fires from the parent's exact data close without computing the child body; sound because P1/P2 are one-level bounds off exact data)
-status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 5/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; the other 16 bodies retain only their pure four-added-speeds-above-14 tails.  The `(3,4)` pure tail is closed uniformly by an exact top-four root-coverage envelope.  For the unique near-miss `(3,7)`, an exact top-five envelope leaves only the literal set `{17,19,21,23}`, whose direct four-comb survivor is positive.  Upgrades globally to PROVED only when all 2002 bodies close clean.
+status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 11/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; the other 10 bodies retain only their pure four-added-speeds-above-14 tails.  Exact top-four root-coverage envelopes close `(2,4),(3,4),(3,5),(3,6),(4,5),(4,6),(4,7)`.  For the near-miss `(3,7)`, an exact top-five envelope leaves only `{17,19,21,23}`, whose direct four-comb survivor is positive.  These envelopes use a finite exact coverage bank plus the THM-735(ii) covariance tail cap and subsume the earlier `(3,4)` first-speed branches.  Upgrades globally to PROVED only when all 2002 bodies close clean.
 source: kind-pasteur-2026-07-13-S128 (cont.5); exact flood and completed-family addenda codex-2026-07-15-S14/S15/S16 and codex-2026-07-17/18
 depends_on:
   - THM-735   # the simultaneous multi-peel lemma (j=4,3,2,1 legs) + P1/P2 peel lemmas (THM-733)
@@ -43,6 +43,8 @@ verification:
   - 05-knowledge/results/lrc14_j4_34_exact_top_four_coverage_codex_20260728.out
   - 04-computation/lrc14_j4_37_top_five_exception_codex_20260728.py
   - 05-knowledge/results/lrc14_j4_37_top_five_exception_codex_20260728.out
+  - 04-computation/lrc14_j4_six_more_top_four_coverage_codex_20260728.py
+  - 05-knowledge/results/lrc14_j4_six_more_top_four_coverage_codex_20260728.out
   - 04-computation/lrc14_thm741_sharded_resume_runner_codex_20260717.py
   - 05-knowledge/results/lrc14_thm741_sharded_resume_runner_codex_20260717.out
 ---
@@ -986,11 +988,106 @@ not the reason (B16) is uniform.  Conversely, the older ancestral root bound
 `-81555377/62537475<0`; the new gain comes from ranking exact individual comb
 coverages rather than charging all combs by the same worst-case discrepancy.
 
-This closes one literal root edge, raising the exact flood count from `3/21`
-to `4/21`.  It uses no Fano/`chi_7` transport.  The earlier five full
-first-speed computations remain independent nested-carrier controls but are
-strictly subsumed for this body.  The other seventeen pure tails, global
-THM-741, and LRC(14) remain open. ∎
+At that checkpoint this closed one literal root edge, raising the exact flood
+count from `3/21` to `4/21`.  It uses no Fano/`chi_7` transport.  The earlier
+five full first-speed computations remain independent nested-carrier controls
+but are strictly subsumed for this body.  The other seventeen pure tails
+remained; the next section applies the same envelope across six more roots.
+Global THM-741 and LRC(14) remain open. ∎
+
+## The top-four envelope closes six more literal roots (codex-2026-07-28)
+
+The preceding proof is an instance of a reusable finite-envelope lemma.  For
+any fixed root good set `G` with measure `m` and `r` components, put
+`c(w)=|G intersect D_w|` and
+
+```text
+u(w)=m/7+(99/70)r/(7w).
+```
+
+Suppose an exact scan of `15<=w<=W` has four largest values
+`q1>=q2>=q3>=q4`, and `u(W+1)<q4`.  By THM-735(ii),
+`c(w)<u(w)<=u(W+1)<q4` for every `w>W`.  Thus `q1,...,q4` are the global top
+four coverages over every future integer speed.  Consequently
+
+```text
+m-(q1+q2+q3+q4)>0                                      (B17)
+```
+
+is a uniform proof for all four distinct future speeds.  This lemma retains
+the complete one-comb coverage profile against the root but discards all
+later nested-carrier geometry.  It is therefore a sufficient envelope, not
+an equivalence.
+
+The generic verifier uses the common exact bank `15<=w<=482` for six further
+literal roots.  On every one of the `6*468` root/speed pairs, sparse
+subtraction, full subtraction, direct ten-comb union, and an independent
+two-pointer tooth-incidence sum agree exactly.  Write
+
+```text
+T=(99/70)r/(7(q4-m/7));
+```
+
+then `u(floor(T))>q4>u(floor(T)+1)` is checked in exact rational arithmetic.
+The complete certificates are:
+
+| root edge | `r` | `m` | top-four speeds | top-four sum | margin in (B17) | exact `T` |
+|---|---:|---:|---|---:|---:|---:|
+| `24` | 30 | `31789/194040` | `23,22,17,16` | `312668333/1972610640` | `3499547/657536880` | `214053840/484061` |
+| `35` | 24 | `652/3465` | `17,19,23,46` | `3436749929/18739801080` | `1988211/416440024` | `10820304/31291` |
+| `36` | 28 | `504167/2522520` | `19,17,23,21` | `1786984753/9369900540` | `57162379/6246600360` | `49945896/153311` |
+| `45` | 24 | `514471/2522520` | `17,23,19,32` | `1274636801/6814473120` | `6497515/384406176` | `342486144/981901` |
+| `46` | 28 | `518957/2522520` | `17,19,23,32` | `349312099/1873980108` | `2532941/131047560` | `33297264/69023` |
+| `47` | 20 | `261193/1261260` | `17,19,23,32` | `2395349819/12493200720` | `575561731/37479602160` | `28540512/96835` |
+
+The largest crossing is the `46` row:
+
+```text
+482 < 33297264/69023 < 483,
+u(482)-q4 = 14089/1418497080 > 0,
+q4-u(483) = 389/27075048 > 0.
+```
+
+Hence the common endpoint `482` is not a rounded numerical convenience; it
+is the exact minimal suite-wide finite cutoff.  Direct thirteen-comb union
+and nested subtraction also agree on the family formed from each row's four
+maximal individual coverages.  Their exact lonely measures are respectively
+
+```text
+98391511/1972610640, 87938369/1249320072,
+7150467/109589480,   2647649/40085136,
+177789/2783690,      1969187/30834720.
+```
+
+Roots `13` and `16` are complete negative controls through the same
+four-path bank and exact tail crossing.  Their global top-four margins are
+
+```text
+-25012943/1249320072,       -6867281/312330018,
+```
+
+while their literal top-four families still have positive exact lonely
+measure `906053/21917896` and `12226321/312330018`.  Thus the verifier does
+not confuse positivity of one extremal family with positivity of the
+root-coverage union envelope.  Root `37`, the closer exceptional profile, is
+reserved for a separate higher-rank audit and is not claimed here.
+
+Therefore six additional whole flood bodies are proved:
+
+> for each `e` in `{24,35,36,45,46,47}` and every
+> `15<=a<b<c<d`, the family `H union e union {a,b,c,d}` is
+> strictly lonely.
+
+Together with `34,56,57,67`, the exact whole-body census is now
+
+```text
+{24,34,35,36,45,46,47,56,57,67}: 10/21.
+```
+
+At this checkpoint the eleven root edges
+`12,13,14,15,16,17,23,25,26,27,37` remain outside this certificate; the
+next section closes `37` by retaining one more coverage rank.  No
+Fano/`chi_7` transport is used.  Global THM-741 and LRC(14) remain open. ∎
 
 ## Top-five envelope plus one exact exception closes `(3,7)` (codex-2026-07-28)
 
@@ -1018,7 +1115,7 @@ The THM-735(ii) cap from (B14) crosses the fifth value at
 (99/70)r / (7(c(46)-m/7)) = 547026480/1860739,
 293 < 547026480/1860739 < 294,
 u(293)-c(46) = 1829953/39664945320 > 0,
-c(46)-u(294) = 733/947626680 > 0.                        (B17)
+c(46)-u(294) = 733/947626680 > 0.                        (B18)
 ```
 
 Thus these are the global first five ranks for all integer `w>=15`.  The
@@ -1026,7 +1123,7 @@ plain top-four margin is genuinely negative:
 
 ```text
 m-c(19)-c(17)-c(21)-c(23)
- = -3183347/2082200120 < 0.                              (B18)
+ = -3183347/2082200120 < 0.                              (B19)
 ```
 
 But distinctness now makes the residual obligation a singleton.  Any
@@ -1036,7 +1133,7 @@ those four ranks, so its individual-coverage sum is at most
 
 ```text
 m-c_1-c_2-c_3-c_5
- = 843411/260275015 > 0.                                 (B19)
+ = 843411/260275015 > 0.                                 (B20)
 ```
 
 The union bound therefore closes every nonexceptional quadruple.  For the
@@ -1044,26 +1141,27 @@ sole exception, nested subtraction and a direct thirteen-comb union agree:
 
 ```text
 E union {17,19,21,23}
-has 8 good components and measure 137897/2299080 > 0.    (B20)
+has 8 good components and measure 137897/2299080 > 0.    (B21)
 ```
 
-The large value in (B20) exhibits the missing coordinate in the failed
+The large value in (B21) exhibits the missing coordinate in the failed
 top-four envelope: its four high individual coverages overlap heavily.
 There is no need to bound those overlaps uniformly because the fifth-rank
 gap isolates exactly one quadruple.
 
 Consequently
 
-> **Fifth whole flood body.** For every four integers
+> **Eleventh whole flood body.** For every four integers
 > `15<=a<b<c<d`, the family
 > `{3,7,8,9,10,11,12,13,14,a,b,c,d}` is strictly lonely.
 
 The companion verifies all `279` finite coverages by sparse subtraction,
 full subtraction, direct ten-comb union, and independent tooth incidence;
-it also verifies both constructions of (B20), the exact tail crossing, and
-the failed plain-envelope control (B18).  This raises the exact flood count
-from `4/21` to `5/21`.  It proves no Fano/`chi_7` transport, no other root
-edge, and not global THM-741 or LRC(14). ∎
+it also verifies both constructions of (B21), the exact tail crossing, and
+the failed plain-envelope control (B19).  Combined with the preceding
+six-root theorem, this raises the exact flood count from `10/21` to `11/21`.
+The ten root edges `12,13,14,15,16,17,23,25,26,27` remain.  This proves no
+Fano/`chi_7` transport and not global THM-741 or LRC(14). ∎
 
 ## Sharded-runner integrity repair (codex-2026-07-17)
 

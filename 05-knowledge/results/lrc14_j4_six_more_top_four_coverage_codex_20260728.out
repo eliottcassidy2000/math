@@ -1,0 +1,47 @@
+THM-741 FLOOD TAIL: SIX MORE EXACT TOP-FOUR COVERAGE ENVELOPES
+========================================================================================
+dependency_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
+finite universe per audited root: all w=15..482 (468 speeds); sparse/full/direct-union/direct-tooth paths agree
+POSITIVE ROOTS
+edge=24 root_r=30 root_m=31789/194040
+  top4=23:240307/5801796,22:879/21560,17:10777/274890,16:37445/1009008; sum=312668333/1972610640; margin=3499547/657536880
+  threshold=214053840/484061 floor=442; u(floor)-q4=3803/600359760; q4-u(floor+1)=385183/15644669040
+  extremal=(2, 4, 8, 9, 10, 11, 12, 13, 14, 16, 17, 22, 23) exact_r=20 exact_m=98391511/1972610640; manifest=979dfcf103553f73ae3fb07f9c8c01be010a1330036909fa5a1a0216c2883a02; verdict=CLOSED UNIFORMLY
+edge=35 root_r=24 root_m=652/3465
+  top4=17:345047/7147140,19:38497/798798,23:41075/892584,46:6085/148764; sum=3436749929/18739801080; margin=1988211/416440024
+  threshold=10820304/31291 floor=345; u(floor)-q4=361/11157300; q4-u(floor+1)=3191/386042580
+  extremal=(3, 5, 8, 9, 10, 11, 12, 13, 14, 17, 19, 23, 46) exact_r=16 exact_m=87938369/1249320072; manifest=ed8fa779e2eb6bd0ea26dbe7e94659318b69633519bcd3042e17ff3ac2c70f84; verdict=CLOSED UNIFORMLY
+edge=36 root_r=28 root_m=504167/2522520
+  top4=19:30433/614460,17:10649/216580,23:48631/1054872,21:38609/840840; sum=1786984753/9369900540; margin=57162379/6246600360
+  threshold=49945896/153311 floor=325; u(floor)-q4=709/16978500; q4-u(floor+1)=3349/287819532
+  extremal=(3, 6, 8, 9, 10, 11, 12, 13, 14, 17, 19, 21, 23) exact_r=14 exact_m=7150467/109589480; manifest=3f64935f3e7d98808e508075c7e13746a94a080541e16ac222070d33ecb845ce; verdict=CLOSED UNIFORMLY
+edge=45 root_r=24 root_m=514471/2522520
+  top4=17:346037/7147140,23:21577/446292,19:3431/72618,32:86851/2018016; sum=1274636801/6814473120; margin=6497515/384406176
+  threshold=342486144/981901 floor=348; u(floor)-q4=65383/2048286240; q4-u(floor+1)=39461/4930013088
+  extremal=(4, 5, 8, 9, 10, 11, 12, 13, 14, 17, 19, 23, 32) exact_r=18 exact_m=2647649/40085136; manifest=c28de51a4849412431130f5f3abfcc6a09c5185677bb54c35984d45a54a2046c; verdict=CLOSED UNIFORMLY
+edge=46 root_r=28 root_m=518957/2522520
+  top4=17:10679/216580,19:35279/726180,23:12499/263718,32:51859/1261260; sum=349312099/1873980108; margin=2532941/131047560
+  threshold=33297264/69023 floor=482; u(floor)-q4=14089/1418497080; q4-u(floor+1)=389/27075048
+  extremal=(4, 6, 8, 9, 10, 11, 12, 13, 14, 17, 19, 23, 32) exact_r=18 exact_m=177789/2783690; manifest=ac8f886a9bf3c491ef71f7124bbe8f30da474856c1bb661249615378ff4242ea; verdict=CLOSED UNIFORMLY
+edge=47 root_r=20 root_m=261193/1261260
+  top4=17:36191/714714,19:12013/242060,23:13309/276276,32:3467/80080; sum=2395349819/12493200720; margin=575561731/37479602160
+  threshold=28540512/96835 floor=294; u(floor)-q4=1691/49441392; q4-u(floor+1)=25813/2083601520
+  extremal=(4, 7, 8, 9, 10, 11, 12, 13, 14, 17, 19, 23, 32) exact_r=16 exact_m=1969187/30834720; manifest=759a8495d0696ce667468c1de1fb89e72afe0af6eccc343c8990ba5812d50416; verdict=CLOSED UNIFORMLY
+NEGATIVE CONTROLS
+edge=13 root_r=30 root_m=3319/25740
+  top4=23:453587/11603592,17:67493/1786785,19:148727/3993990,46:67423/1933932; sum=214735811/1441523160; margin=-25012943/1249320072
+  threshold=87914970/238493 floor=368; u(floor)-q4=3251/116035920; q4-u(floor+1)=9883/594684090
+  extremal=(1, 3, 8, 9, 10, 11, 12, 13, 14, 17, 19, 23, 46) exact_r=14 exact_m=906053/21917896; manifest=6ce1775402d6fe4a1a18cd5dee99bda7609ad6ecd363a348de809fd074795b79; verdict=INCONCLUSIVE BY TOP-FOUR ENVELOPE
+edge=16 root_r=30 root_m=365567/2522520
+  top4=19:377149/7987980,23:47539/1054872,17:8439/216580,46:1045/29302; sum=3127834103/18739801080; margin=-6867281/312330018
+  threshold=2461619160/6075659 floor=405; u(floor)-q4=2413/406125720; q4-u(floor+1)=364171/11777645880
+  extremal=(1, 6, 8, 9, 10, 11, 12, 13, 14, 17, 19, 23, 46) exact_r=16 exact_m=12226321/312330018; manifest=38847bc1511a7e9377ce5c9b411366e95ef3765aa20cecd4cba8ad58c4c96f13; verdict=INCONCLUSIVE BY TOP-FOUR ENVELOPE
+suite-manifest SHA256=f06006e2c8fda38a9164a2ec91846328f645abe7886012cec6b746f907a4aaf7
+hash-pinned prior whole roots=((3, 4), (5, 6), (5, 7), (6, 7))
+new whole roots=((2, 4), (3, 5), (3, 6), (4, 5), (4, 6), (4, 7))
+combined exact whole roots=((2, 4), (3, 4), (3, 5), (3, 6), (4, 5), (4, 6), (4, 7), (5, 6), (5, 7), (6, 7)); count=10/21
+proof partition: exact c_e(w) for 15<=w<=482; THM-735(ii) (via THM-731/732) cap for every w>=483; four-speed union bound
+scope: six new literal root edges, no Fano/chi_7 transport; all eleven still-unclosed roots (including the two controls and root 37, which is reserved for a separate fifth-rank audit), global THM-741, and LRC(14) are not closed by this certificate
+VERDICT: roots 24,35,36,45,46,47 are uniformly lonely over all 15<=a<b<c<d; together with 34,56,57,67 this proves 10/21 flood bodies
+source_sha256=9f35ff30f7be867e8159311f8d771125400e32efb21e39d44aa87cd98050b0dd
+ALL SIX-ROOT TOP-FOUR COVERAGE CHECKS PASSED
