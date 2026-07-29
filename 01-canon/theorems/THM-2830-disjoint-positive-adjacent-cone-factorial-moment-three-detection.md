@@ -22,6 +22,7 @@ related:
   - THM-2815-optimal-finite-laguerre-carrier-and-radial-selector-access-boundary
   - THM-2841-all-order-adjacent-difference-factorial-tensor-positivity
   - THM-2842-ordered-positive-cone-vandermonde-multiplier-observability
+  - THM-2844-sharp-signed-adjacent-ray-orientation-boundary
   - HYP-8765-gmc2-radial-channel-return-tower
 script: 04-computation/gmc_disjoint_positive_cones_pascal_ratio_thm2830.py
 output: 05-knowledge/results/gmc_disjoint_positive_cones_pascal_ratio_thm2830.out

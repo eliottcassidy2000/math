@@ -27,6 +27,7 @@ related:
   - THM-2779-bockstein-symplectic-decoder-frame-torsor-and-heisenberg-root-degree-gate
   - THM-2788-physical-modular-odometer-versus-heisenberg-bockstein-extension
   - THM-2815-optimal-finite-laguerre-carrier-and-radial-selector-access-boundary
+  - THM-2845-local-residue-versus-split-trace-unit-observability
 script: 04-computation/lrc14_prime_power_unit_mass_q11_response_thm2839.py
 output: 05-knowledge/results/lrc14_prime_power_unit_mass_q11_response_thm2839.out
 script_sha256: 68ae72b62b7974e4f2c2bf7d570615c8c524746978c57cf120f6372a7250ece4

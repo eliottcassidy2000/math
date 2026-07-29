@@ -22,6 +22,7 @@ related:
   - THM-2173-sparse-projective-factorial-moment-floor
   - THM-2810-factorial-hankel-faithfulness-and-bounded-radial-carrier-no-go
   - THM-2812-consecutive-three-slot-factorial-moment-six-detection
+  - THM-2843-four-slot-projective-divisibility-and-resolvent-reduction
   - THM-2815-optimal-finite-laguerre-carrier-and-radial-selector-access-boundary
   - HYP-8765-gmc2-radial-channel-return-tower
 script: 04-computation/gmc_arbitrary_three_slot_atomic_orientation_thm2824.py

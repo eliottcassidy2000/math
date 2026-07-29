@@ -23,6 +23,7 @@ related:
   - THM-2810-factorial-hankel-faithfulness-and-bounded-radial-carrier-no-go
   - THM-2812-consecutive-three-slot-factorial-moment-six-detection
   - THM-2842-ordered-positive-cone-vandermonde-multiplier-observability
+  - THM-2845-local-residue-versus-split-trace-unit-observability
 script: 04-computation/gmc_optimal_finite_laguerre_carrier_thm2815.py
 output: 05-knowledge/results/gmc_optimal_finite_laguerre_carrier_thm2815.out
 script_sha256: 7a6d9670b16cfd6db651f978438fdc0606d368adcce6c5a794b541fee6f0c262

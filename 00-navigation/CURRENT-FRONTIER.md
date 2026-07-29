@@ -174,11 +174,20 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   every tensor of two or more nonnegative adjacent-difference cone elements
   has positive factorial readout, via an exact forbidden-board rook count and
   sharp derangement floor. THM-2842 identifies the missing multipliers as
-  radial-variance jets: the first `k` jets invert every ordered `k`-cone span,
-  while `ell_(D-1)` is a trace-zero unit hiding for the sharp `D-1` quotient
-  readouts. Thus external multiplier access is exact, but ordinary Gaussian
-  nullity still does not supply it. Arbitrary incomparable cubic orientations
-  and signed radial channels remain open.
+  radial-variance jets: `k` jets invert an ordered `k`-cone span, but ordinary
+  Gaussian nullity does not supply them. THM-2844 proves a support cut is
+  exactly necessary for every pair in two full positive coordinate orthants
+  and gives the sharp first signed-ray threshold; failure below it is only a
+  certificate failure, not a moment counterexample.
+- THM-2843 reduces every four-slot window either to an immediate
+  positive-dimensional common zero or to a nonnegative complete-intersection
+  norm of length `d(d+1)(d+2)`, and closes the `{0,1,2,3}` first cell. Its
+  conjugate-pair/three-plane count does not carry the standard holomorphic
+  `C_2*C_3` action. THM-2845 proves a scalar detects units exactly iff the
+  algebra is local with residue field equal to the base field, explaining why
+  modular p-group augmentation works while split Laguerre traces cancel.
+  General four-slot norm nonvanishing, incomparable cubic orientations, and
+  arbitrary signed radial channels remain open.
 ### Live work
 
 Publish THM-2022; sharpen THM-2111's binomial degree toward `M+N`; formalize
