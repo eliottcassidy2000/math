@@ -7,6 +7,7 @@ depends_on: []
 related:
   - THM-735-bonferroni-simultaneous-multi-peel-defeats-the-clustered-non-isolated-wall
   - THM-2888-eight-body-first-apex-global-pair-cap-atlas
+  - THM-2894-unmarked-residual-semilattice-order-and-group-clutch-no-go
 ---
 
 # THM-2893 -- complement-cap finite-core flag lemma
@@ -144,6 +145,33 @@ possible first apex.  Since the depth is at most six, this yields a finite
 rooted decision tree for every fixed initial carrier.  It is only a
 finiteness theorem: successive cutoffs may be enormous.  Complement caps
 and heavy flags compress that tree into the much smaller objects used below.
+
+### Ranked first-apex suffix refinement
+
+There is a lossless refinement whenever the finite hitting set is a ranked
+prefix.  Fix a total order on the allowed labels, let
+
+```text
+A={a_1,...,a_K}
+```
+
+be its first `K` labels, and suppose every `p`-cover meets `A`.  A putative
+cover has a unique least-indexed member `a_r` of `A`.  After subtracting
+`D_(a_r)`, its other `p-1` labels all lie in the strict suffix
+
+```text
+V minus {a_1,...,a_r}.                                      (7c)
+```
+
+Consequently it is enough, for each `r<=K`, to exclude `(p-1)`-covers of
+the literal residual by that suffix; allowing the earlier prefix labels
+again is unnecessary.  In the LRC application the order is decreasing
+single-comb coverage, with speed as a deterministic tie-breaker.
+
+The index `r` and suffix in `(7c)` are retained branch data.  They are not
+reconstructed from the unmarked residual, which by THM-2894 has forgotten
+the order of deletions.  Thus this refinement uses precisely the marked
+sidecar that the residual semilattice itself lacks.
 
 ## 4. Literal residual recursion
 
