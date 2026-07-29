@@ -1,0 +1,13 @@
+THM-2875 exact companion
+semiring_profiles=205
+literal_rook_profiles=43
+insertion_profiles=1506
+initial_kernel_cells=17569
+support_boundary_cells=771
+equal_ray_cells=168
+all_zero_residues=6,48,420,3840,38010,407904
+finite_all_zero_minima=PASS(universe:m=2..7,n=0,labels=0..5)
+outside_gate_weight_reversal=a4,b=(1,1,2),w=(8928,8928,9216),K=30
+signed_hostile=W=d0-(14/29)d1,m=3,n=0,cross=-5422944/707281
+high_row_multi_ray_regime=OPEN_NOT_TESTED_AS_THEOREM
+status=PASS
