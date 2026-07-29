@@ -65,3 +65,12 @@ SFC(3) counterexample; emptiness therefore decides the cell completely.
   would need exact elimination (never triggered in this box).
 * No claim about SFC(n >= 4), the multivariate factorial conjecture, or the
   Furter rigidity transfer — those remain exactly as before.
+
+## Extension (same session)
+
+The identical certified pipeline was rerun on the larger box
+`0 <= p < q < r <= 12`, `k <= 8`: **2574/2574 cells certified empty**
+(no flags), recorded in
+`05-knowledge/results/sfc3_moment_window_census_ext_macmini_S171.out`
+(sha256 c048322f9900ff6fbbe467c1b1ef990966ce2fddb6d374d38729e0031c8046ae).  The theorem statement therefore holds with `9 -> 12` and
+`6 -> 8`.

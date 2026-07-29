@@ -1,0 +1,14 @@
+sfc3_moment_window_census_macmini_S171.py 12 8 — extended box, same
+certified method as THM-2836 (Macaulay full-graded-rank mod three 30-bit
+primes, one-way emptiness certificates, escalation never needed):
+
+  supports 0 <= p < q < r <= 12  (286 triples), windows k in {0..8}:
+
+  census done: 2574 cells, certified-empty 2574, flagged 0: []
+
+Combined with the primary run (r <= 9, k <= 6): SFC(3) — a three-term
+univariate f with three consecutive vanishing factorial moments is zero —
+now holds on the full box  r <= 12, k <= 8.  Largest matrices: D = 3k+4 = 28,
+graded dimension C(30,2) = 435; numpy vectorized elimination mod p.
+
+Reproduce: python3 04-computation/sfc3_moment_window_census_macmini_S171.py 12 8
