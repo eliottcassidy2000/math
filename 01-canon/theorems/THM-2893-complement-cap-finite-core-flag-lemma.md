@@ -508,6 +508,14 @@ three `H_3` vertices, and all three of their pair children would have to
 survive.  This is an intrinsic undirected obstruction graph: its edges are
 unresolved proof obligations, not arbitrary orientations.
 
+If unresolved triangles remain, only those triangles need advance to the
+`ell=3` rung.  A nonheavy triangle is not a legal subset of a cover at all;
+for each heavy unresolved triangle, exclude its literal two-label child.
+Then every possible triangle in `K intersect H_3` is either missing an
+unresolved edge, nonheavy, or resolved at full arity, and no cover exists.
+Thus the pair-to-triangle escalation enumerates the clique complex of
+**failed certificates**, not all triples of the original core.
+
 This is a recursive self-similarity law, not merely a workload heuristic:
 an `s`-ary heavy flag descends behind an `ell`-flag to its exact
 `(s-ell)`-ary link.  For `ell=s` the link has arity zero and carries no
