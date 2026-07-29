@@ -2,14 +2,21 @@
 id: THM-2929
 title: "Effective high-gap cubic-null holonomy cutoff"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  For every integer R>=13, the fixed rational box
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  integer R>=13, the fixed rational box
   [217/100,221/100] x [245/100,249/100] contains exactly one positive
   cubic-null point for the support (0,1,2,R), and its normalized
   quartic endpoint is positive.  The certificate is finite-exact for
   13<=R<=19 and uniform by factorial-ratio contraction for R>=20.
   At R=12 one Bernstein coefficient in this particular certificate is
   negative; this is not a nonexistence or optimal-cutoff assertion.
+audit: >
+  An independent hostile audit rederived the divisibility invariants,
+  Poincare--Miranda orientations, contraction uniqueness, every finite
+  Bernstein box, all 76 primitive tail ratios, derivative inheritance,
+  the R=20 error envelopes, and the R=12 failure boundary.  It replayed
+  normal, optimized, and stored output byte-for-byte and reproduced both
+  LF-normalized hashes.  No mathematical or evidentiary repair was needed.
 source: codex-gmc-uniform-width-extension-2026-07-29
 depends_on:
   - THM-2914-eventual-high-gap-cubic-null-positive-holonomy-branch
@@ -27,8 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2929 -- effective high-gap cubic-null holonomy cutoff
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This is the effective fixed-box continuation promised, but not quantified,
 by THM-2914.
