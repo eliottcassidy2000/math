@@ -1,5 +1,14 @@
 # Script Results Index
 
+- `gmc_nonconsecutive_response_row_tp3_thm2909.py` -> matching `.out`
+  [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2909].
+  The weighted-chord identity upgrades THM-2873 from consecutive rows to
+  every `1<=r_0<r_1<r_2` for two-ray gaps one and two.  Exact hostiles give
+  `det(d_4;0,1,2)=-339570000` and
+  `det(d_0-(1/5)d_1;1,2,3)=-1728/15625`; the latter has positive first
+  column `(3/5,2/5,1/5)`.  A separate `52,920`-cell gap-`3..8` scan is
+  finite evidence only.  Script/output LF SHA-256:
+  `(70ae887f60cc9e1428d158e668e89342a409671190bb2e6cb77f7b5f88387a14,3b086ca71d33f96b71c00da3c57cd708293e791814c84a134bdcee979eaee50d)`.
 - `lrc14_j6_all_hard_ranked_h1_hunter_pivot_census_codex_20260729.py` ->
   matching `.out` [FINITE-EXACT SCOUT / NO CLOSURE; THM-2904 remains
   RESERVED].  On all `11,842` hard rows surviving `G_5`, the least hostile
