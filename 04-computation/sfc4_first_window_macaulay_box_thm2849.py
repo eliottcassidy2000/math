@@ -252,7 +252,7 @@ def main() -> None:
     )
 
     print("SFC4 FIRST-WINDOW MACAULAY BOX -- exact finite-field referee")
-    print("status=PROVISIONAL-PROOF-CANDIDATE+VERIFIED-EXACT; AUDIT-REQUESTED")
+    print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
     print(f"prime={PRIME} top_exponent={TOP_EXPONENT} target_degree={TARGET_DEGREE}")
     print("universe=C(16,4)=1820 supports; moments=(1,2,3,4)")
     print("mean_elimination=H=sum_(i<3)x_i(f_ai-f_a3)")

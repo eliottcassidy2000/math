@@ -1,5 +1,5 @@
 SFC4 FIRST-WINDOW MACAULAY BOX -- exact finite-field referee
-status=PROVISIONAL-PROOF-CANDIDATE+VERIFIED-EXACT; AUDIT-REQUESTED
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
 prime=1000003 top_exponent=15 target_degree=7
 universe=C(16,4)=1820 supports; moments=(1,2,3,4)
 mean_elimination=H=sum_(i<3)x_i(f_ai-f_a3)

@@ -2,8 +2,8 @@
 id: THM-2849
 title: "Four-slot first-window Macaulay closure through exponent fifteen"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-  REQUESTED.  For every four-slot support with top exponent at most fifteen,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  four-slot support with top exponent at most fifteen,
   the first four factorial moments have no common nonzero coefficient
   vector.  After eliminating the mean, two independent exact constructors
   produce the quadratic, cubic, and quartic forms; a degree-seven Macaulay
@@ -20,15 +20,14 @@ related:
   - THM-2848-whitened-moving-plane-multipole-and-pearson-boundary
 script: 04-computation/sfc4_first_window_macaulay_box_thm2849.py
 output: 05-knowledge/results/sfc4_first_window_macaulay_box_thm2849.out
-script_sha256: b677d0c76ead48b4ddacc4b4720155e75f40f2c7eb59ad7f05f5b78210f7cbaa
-output_sha256: 13dfe1dac6fb0379cd74bc341b9332ba9bd786dfe89bdf56da42b855d4fc7c76
+script_sha256: d32bd79201bbb0ae3db9904b27869f7e112084777d1cc7d33b28a37d46734a61
+output_sha256: 98afca5d00f25ff2fda409a58df96973e04e8f30e27d90764525a28470a1d528
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2849 -- four-slot first-window Macaulay closure through exponent fifteen
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
@@ -116,7 +115,8 @@ Phi:R_5 direct_sum R_4 direct_sum R_3 -> R_7,
 Phi(A,B,D)=AQ+BC+DF.                                    (7)
 ```
 
-In monomial bases its matrix has
+In monomial bases the script stores the transpose of the conventional
+matrix for `Phi`, with
 
 ```text
 dim R_5+dim R_4+dim R_3=21+15+10=46 rows,
@@ -164,9 +164,11 @@ The companion checks more than the headline ranks.
 - A SHA-256 digest binds every support, all three exact coefficient
   vectors, and its rank to the stored transcript.
 
-Normal, optimized, and stored runs are intended to agree byte for byte;
-all truth-bearing gates use explicit exceptions rather than Python
-`assert`.
+Normal, optimized, and stored runs agree byte for byte; all truth-bearing
+gates use explicit exceptions rather than Python `assert`.  An independent
+hostile audit replayed both modes and the stored transcript, rederived the
+modular-minor lift, and checked that full degree-seven span implies
+projective emptiness.  It found no mathematical defect.
 
 ## 5. Boundary
 
@@ -185,5 +187,4 @@ THM-2848 isolates the unbounded geometric target as factorial
 cubic--quartic multipole separation.  The finite Macaulay box is rigorous
 evidence for that target, not a replacement for it.
 
-Promotion awaits an independent hostile audit of the modular lifting,
-mean-elimination typing, complete support universe, and exact companion.
+The bounded conclusion is therefore proved with the scope in `(12)`.

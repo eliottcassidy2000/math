@@ -209,9 +209,12 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   moment-one/ two/three line, producing a degree-seven two-charge Gaussian
   polynomial with moments one through six zero.  The fourth factorial and
   eighth Gaussian moments are nonzero, while one external radial-variance
-  jet detects every binary positive-cone plane.  General four-slot norm
-  nonvanishing, classification of the transverse cubic-null locus, and
-  arbitrary signed radial channels remain open.
+  jet detects every binary positive-cone plane.
+  THM-2849 closes SFC(4)'s first window for all 1,820 four-slot supports with
+  top exponent at most 15 by exact degree-seven Macaulay rank; arbitrary
+  supports, shifted windows, general four-slot norm nonvanishing,
+  classification of the transverse cubic-null locus, and arbitrary signed
+  radial channels remain open.
 ### Live work
 
 Publish THM-2022; sharpen THM-2111's binomial degree toward `M+N`; formalize
