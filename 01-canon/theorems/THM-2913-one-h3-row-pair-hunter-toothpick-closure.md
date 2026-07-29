@@ -2,13 +2,13 @@
 id: THM-2913
 title: "One-H3-row pair-Hunter toothpick closure"
 status: >
-  PROOF CANDIDATE / AUDIT PENDING.  Exact closure candidate for the 38
-  roots and 42 ordered children left open by the THM-2912 child top-four
-  census: 22 pair-partition closures, 10 further four-slot Hunter
-  closures, and 29/29 strict terminal pivots on 10 finite hostile
-  second-centre cores.  Promotion and the 37-root additive claim await
-  the repaired clean-checkout THM-2912 dependency and a fresh locked
-  ordinary/optimized replay.
+  PROVED + FINITE-EXACT + VERIFIED.  The 38 roots and 42 ordered children
+  left open by the THM-2912 child top-four census all close: 22 by exact
+  pair partition, 10 more by the four-slot Hunter envelope, and the final
+  10 through 29/29 strict terminal pivots on finite hostile
+  second-centre cores.  Exact recomposition adds 37 roots over the live
+  THM-2911/2912 union, taking the proved union to 351 and the residual to
+  3,081.
 source: h4-exception-children-2026-07-29
 depends_on:
   - THM-735-bonferroni-simultaneous-multi-peel-defeats-the-clustered-non-isolated-wall
@@ -24,18 +24,14 @@ verification:
   - 04-computation/lrc14_j6_one_h3_row_pair_hunter_toothpick_closure_codex_20260729.py
   - 05-knowledge/results/lrc14_j6_one_h3_row_pair_hunter_toothpick_closure_codex_20260729.out
   - 05-knowledge/results/lrc14_j6_one_h3_row_pair_hunter_toothpick_closure_codex_20260729.ledger.out
+  - 05-knowledge/results/lrc14_j6_one_h3_row_pair_hunter_toothpick_closure_codex_20260729.replay.out
 ---
 
 # THM-2913 -- one-H3-row pair-Hunter toothpick closure
 
-**PROOF CANDIDATE / AUDIT PENDING.**
+**PROVED + FINITE-EXACT + VERIFIED.**
 
-The mathematics and exact artifact described below have passed a local
-ordinary/optimized replay.  This file remains a candidate until the
-clean-checkout line-ending repair of THM-2912 is canonical, the dependency
-hashes are refreshed, and the complete replay is repeated on that commit.
-
-## 1. Candidate statement
+## 1. Statement
 
 THM-2912 leaves exactly `42` ordered four-cover children, lying on `38`
 of its `210` one-H3-row bodies.  Every one of those `42` children closes:
@@ -57,7 +53,7 @@ the final `10`.  Thus all `38` THM-2912-open bodies close.  Exactly one,
 
 already belongs to the THM-2911 proved union.  The other `37` are
 additive over the live THM-2911 plus THM-2912 union.  Consequently the
-candidate recomposition is
+exact recomposition is
 
 ```text
 proved union through THM-2911                             181
@@ -365,15 +361,29 @@ operation
 
 not a new combinatorial object or an unproved all-depth principle.
 
-This theorem candidate concerns only the `42` children and `38` roots in
+This theorem concerns only the `42` children and `38` roots in
 `(25)`.  Even after `(3)`, `3,081` seven-body roots remain outside the
 proved union.  It does not prove LRC(14).
 
 ## 9. Verification
 
 The verifier hash-pins the THM-2912 child source/output and the THM-2911
-verifier/output, using universal-newline normalization so LF/CRLF checkout
-policy cannot alter a text dependency.  It reconstructs the full
+verifier/output, explicitly normalizing CRLF to LF and rejecting lone
+carriage returns so checkout policy cannot alter a text dependency.  The
+final dependency pins are
+
+```text
+THM-2912 source
+  d2810560a7d002d7eeadecc6a50a7733c90585527295aa5e85e72775739b839b
+THM-2912 output
+  454d87c8beeb81405b031cce4b40bdda0d385cfcd9c48e6fcf4eb810cfc00c5a
+THM-2911 verifier
+  e0ac67539f7ff09376645a62beef0a9ac7d0766a2e749666f94d1fd4d6487b15
+THM-2911 output
+  e5c58cc2eb325928c00839c2593450ea7cce8945b3835898ec83c6c5f42fac9b.
+```
+
+It reconstructs the full
 `11,842`-row THM-2904 universe, the `210` one-H3-row bodies, all `807`
 ordered children, and then the exact `42`-child residual.  The semantic
 ledger digest is
@@ -382,7 +392,16 @@ ledger digest is
 236df90a5497eb85b6536b9cbfebc1e8a7b30990fe9bd24d3a890d748c3bc428.
 ```
 
-A local ordinary and optimized replay produced byte-identical main and
-ledger outputs.  Promotion requires repeating that replay after the
-repaired THM-2912 dependency lands; final source and file hashes will be
-recorded here at that point.
+The final run was performed in a forced-CRLF worktree.  Ordinary
+eight-worker, optimized eight-worker, and ordinary serial executions
+produced byte-identical main and ledger outputs.  LF-normalized SHA-256
+hashes are
+
+```text
+source
+  14e56e124197cd1bdae841efa195a1e7c282e7ea368a610e5f4d56509431858b
+main output
+  3604644a9691b13e7fa245249b68c9586ec2775996834f7761f32eb0b89f3e64
+full ledger
+  5419b87511bbf51c43a2bed9647e82cb5178ad99ac8f667d0e66318caa049632.
+```

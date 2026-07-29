@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `lrc14_j6_one_h3_row_pair_hunter_toothpick_closure_codex_20260729.py`
+  -> matching summary, full-ledger, and replay `.out` files [THM-2913
+  PROVED + FINITE-EXACT + VERIFIED].  The `42` ordered children on `38`
+  roots left open by THM-2912 all close: `22` by the exact global child
+  pair partition, `10` more by the four-slot Hunter envelope, and the
+  final `10` through finite hostile second-centre cores whose `29/29`
+  exact top-three terminals are strict.  Whole-root closure levels are
+  `19`, `28`, and `38`; there are no equality cases.  One root overlaps
+  THM-2911, so the additive count is `37`, the proved union is `351`, and
+  the residual is `3,081`.  Forced-CRLF ordinary eight-worker, optimized
+  eight-worker, and serial outputs are byte-identical.  LF-normalized
+  script/output/ledger SHA-256:
+  `(14e56e124197cd1bdae841efa195a1e7c282e7ea368a610e5f4d56509431858b,3604644a9691b13e7fa245249b68c9586ec2775996834f7761f32eb0b89f3e64,5419b87511bbf51c43a2bed9647e82cb5178ad99ac8f667d0e66318caa049632)`.
 - `lrc14_j6_ranked_h1_thm2911/` [THM-2911 PROVED + FINITE-EXACT +
   VERIFIED].  Of `6,180` scalar-hard rows satisfying
   `q_1+q_2+q_3+q_4<6h/7`, the exact discrepancy cutoff is at most `15,000`

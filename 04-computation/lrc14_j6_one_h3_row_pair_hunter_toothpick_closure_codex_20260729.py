@@ -48,10 +48,10 @@ BASE_OUT = (
 THM2911_VERIFY = ROOT / "04-computation/lrc14_j6_ranked_h1_thm2911/verify.py"
 THM2911_OUT = ROOT / "05-knowledge/results/lrc14_j6_ranked_h1_thm2911/locked.out"
 
-BASE_SHA256 = "641ed154aabe7eaa156c0ea27c3be5a5af21a56c5818ec18024f5ab069deb9d5"
-BASE_OUT_SHA256 = "ba6bbf7d0c778fd398830663ed543ca18ea1f11369fa3a450a1bb61b15886578"
+BASE_SHA256 = "d2810560a7d002d7eeadecc6a50a7733c90585527295aa5e85e72775739b839b"
+BASE_OUT_SHA256 = "454d87c8beeb81405b031cce4b40bdda0d385cfcd9c48e6fcf4eb810cfc00c5a"
 THM2911_VERIFY_SHA256 = (
-    "48f279b90955592f34656eb45e6d6dfaf4f88618a157032e58fcbd7beb104aee"
+    "e0ac67539f7ff09376645a62beef0a9ac7d0766a2e749666f94d1fd4d6487b15"
 )
 THM2911_OUT_SHA256 = (
     "e5c58cc2eb325928c00839c2593450ea7cce8945b3835898ec83c6c5f42fac9b"
@@ -629,7 +629,7 @@ def main() -> None:
         "closed-root list changed",
     )
 
-    prior88 = C.current_proved_union()
+    prior88 = C.proved_union_through_2904()
     route2911 = thm2911_route_roots()
     baseline181 = prior88 | route2911
     top4_union = baseline181 | top4_closed_artifact
