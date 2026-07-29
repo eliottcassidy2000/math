@@ -22,8 +22,8 @@ related:
   - THM-2861-endpoint-hermitian-edge-holonomy-and-semilinear-clutch-test
 script: 04-computation/lrc14_endpoint_prony_carry_character3_thm2863.py
 output: 05-knowledge/results/lrc14_endpoint_prony_carry_character3_thm2863.out
-script_sha256: 83a16994f3a0cfa7d5a49f970c5efbb348daa3da8ef3d01706a55c06531483bf
-output_sha256: bbe5974aa70515cd6ce1dee2a09a537c8c7620110656262d41cc32999fb2b689
+script_sha256: 3d09e2f06cd17c38a34b00fa133f67963287173e5a69092e4e2d2b190f4459b9
+output_sha256: 2cf1902b19fd6ae9c6780521da0e431c8c7e1887235ea94ef4a8a5ca7cf9c7e4
 hash_basis: LF-normalized bytes
 ---
 
@@ -101,7 +101,14 @@ at all four values of `Y(m)`.
 ## 2. Exact two-node Prony splitting
 
 Both nodes lie in `F`, are distinct, and have respective orders `182` and
-`14`.  Hence
+`14`.  No integer-index numerator vanishes: `C_m=0` would force
+
+```text
+72+156m=0 mod2366,
+```
+
+which is impossible because `gcd(156,2366)=26` does not divide `72`.
+Hence
 
 ```text
 C_(m+2)
@@ -109,8 +116,16 @@ C_(m+2)
  -lambda_L lambda_R C_m.                                (5)
 ```
 
-The determinant for recovering the two recurrence coefficients from
-`C_1,C_2,C_3,C_4` is
+More generally every consecutive Prony window is nonsingular:
+
+```text
+Delta_j=C_j C_(j+2)-C_(j+1)^2
+ =-alpha_L alpha_R (lambda_L lambda_R)^j
+   (lambda_L-lambda_R)^2 !=0.                           (6a)
+```
+
+In particular, the determinant for recovering the two recurrence
+coefficients from `C_1,C_2,C_3,C_4` is
 
 ```text
 Delta=C_1 C_3-C_2^2
@@ -208,7 +223,7 @@ iota_m=
   13L_m/[449(omega^(-3)-1)].                            (15)
 ```
 
-Both spaces in `(15)` are one-dimensional; the word “unique” refers to
+Both spaces in `(15)` are one-dimensional; the word `unique` refers to
 this normalization, not to an unbased isomorphism between character
 lines.  This is the smallest possible nonzero linear repair: the reduced
 representation has dimension one.  It is categorically different from a
@@ -221,8 +236,9 @@ The companion pins THM-2847, THM-2851, and THM-2857.  It:
 
 1. rebuilds the literal endpoint interval and all four multiplier samples
    on the four q/origin rows;
-2. verifies `(2)--(7)`, including the nonzero Prony determinant and
-   node orders, in exact integer and finite-field arithmetic;
+2. verifies `(2)--(7)`, including all-index numerator nonvanishing,
+   every-window nonsingularity, and the two node orders, in exact integer
+   and finite-field arithmetic;
 3. checks the relative Galois action, Fourier support `{0,3}`, and both
    coefficients in `(11)`;
 4. constructs `(15)` on the actual projected carry generator; and
@@ -232,8 +248,8 @@ Normal, optimized, and stored-output replay must be byte-identical after
 LF normalization.  LF-normalized SHA-256:
 
 ```text
-script  83a16994f3a0cfa7d5a49f970c5efbb348daa3da8ef3d01706a55c06531483bf
-output  bbe5974aa70515cd6ce1dee2a09a537c8c7620110656262d41cc32999fb2b689
+script  3d09e2f06cd17c38a34b00fa133f67963287173e5a69092e4e2d2b190f4459b9
+output  2cf1902b19fd6ae9c6780521da0e431c8c7e1887235ea94ef4a8a5ca7cf9c7e4
 ```
 
 Independent hostile audit is pending.

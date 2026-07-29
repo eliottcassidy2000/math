@@ -205,6 +205,10 @@ def main():
         ) % PRIME
 
     coefficients = tuple(coefficient(m) for m in range(6))
+    require(
+        gcd(156, N) == 26 and 72 % 26 != 0,
+        "all-index endpoint nonvanishing certificate failed",
+    )
     node_sum = (lambda_l + lambda_r) % PRIME
     node_product = lambda_l * lambda_r % PRIME
     require(
@@ -232,6 +236,21 @@ def main():
         determinant == expected_determinant != 0,
         "Prony determinant identity failed",
     )
+    for j in range(4):
+        local_determinant = (
+            coefficients[j] * coefficients[j + 2]
+            - coefficients[j + 1] * coefficients[j + 1]
+        ) % PRIME
+        local_expected = (
+            -alpha_l
+            * alpha_r
+            * pow(lambda_l * lambda_r % PRIME, j, PRIME)
+            * pow((lambda_l - lambda_r) % PRIME, 2, PRIME)
+        ) % PRIME
+        require(
+            local_determinant == local_expected != 0,
+            "shifted Prony determinant identity failed",
+        )
     determinant_inverse = pow(determinant, -1, PRIME)
     recovered_sum = (c1 * c4 - c2 * c3) * determinant_inverse % PRIME
     recovered_product = (c2 * c4 - c3 * c3) * determinant_inverse % PRIME
@@ -353,6 +372,10 @@ def main():
         "q3_origin12=empty"
     )
     print(f"reduced_exponents={expected_exponents}; dual_field_nonzero=8/8")
+    print(
+        "all_integer_endpoint_numerators_nonzero=1;"
+        " every_Prony_window_nonsingular=1"
+    )
     print(
         "two_nodes=(orders=182,14); recurrence_order=2;"
         f" Prony_determinant={determinant}"
