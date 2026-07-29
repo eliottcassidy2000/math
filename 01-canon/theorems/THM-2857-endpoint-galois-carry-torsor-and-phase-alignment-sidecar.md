@@ -1,5 +1,5 @@
 ---
-id: THM-2856
+id: THM-2857
 title: "Endpoint Galois carry torsor and phase-alignment sidecar"
 status: RESERVED / UNPROVED EMPTY STUB
 source: root/lrc-endpoint-galois-carry-torsor-2026-07-28
@@ -9,7 +9,7 @@ related:
   - THM-2851-q3-q11-q7-bockstein-holonomy-and-realization-sidecar
 ---
 
-# THM-2856 -- endpoint Galois carry torsor and phase-alignment sidecar
+# THM-2857 -- endpoint Galois carry torsor and phase-alignment sidecar
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
