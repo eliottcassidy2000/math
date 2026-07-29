@@ -28,8 +28,8 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 ### Exact live obligation
 
 Direct frontier: `<=6`.  On `3,003` six-body roots THM-2941 gives wall `h/7`
-and no zero-excess cover.  THM-2928/2941 empty aligned `k>=5`; caps
-`2142/380/182` make `k=2..4` finite.  The censuses, `k<=1`, rung, and LRC are open.
+and no zero-excess cover.  THM-2928/2941 empty aligned `k>=4`; caps
+`2142/379` make `k=2,3` finite.  Those censuses, `k<=1`, the rung, and LRC are open.
 Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams but not semantic-root identification (kernel `28,393`); THM-2545/2549 give Hall and chronology gates,
 still old-target neutral; THM-2547 is only an external control after
@@ -94,7 +94,7 @@ Next: `e9=(-9,+9,QB)`, clutch `(13,13,-1)`. Ledger `165`.
 
 ### Independent routes that remain live
 
-- **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: aligned seven safe; one/two-drift and diagonal-denominator three-drift sectors empty; `k=2..4` is finite but its mixed sectors are uncensused.
+- **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: aligned seven safe; one/two/three-drift sectors empty; finite `k=2,3` four/five-drift sectors uncensused.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **Foreign-base phase.** The FINITE-EXACT `C_221` stalk has a typed
   `4/17 <-> 13/17` two-cycle, but no exclusive source, lawful return, or

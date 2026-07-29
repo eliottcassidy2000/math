@@ -8,7 +8,8 @@ status: >
   hypothetical Gram is (h/49)(7I-J).  Aligned safe surplus bounds the first
   drift absolutely for k>=2.  The lossless projected residual closes the
   five-aligned/two-drift face independently of THM-2928, and exact suffix
-  filters make k=2,3,4 uniformly finite-reducible; k=6,7 are already empty.
+  filters make k=2,3,4 uniformly finite-reducible; a frontier-row addendum
+  improves the k=3 first-drift cap from 380 to 379; k=6,7 are already empty.
   The zero/one-aligned sector, the remaining finite censuses, the full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is
   internal exact computation and proof audit; there is no Lean or external
@@ -38,6 +39,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_aligned_projected_arc_suffix_thm2941.out
   - 04-computation/lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_frontier_fibre_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_frontier_fibre_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -649,6 +652,34 @@ realized cover.  The empty `k=6` column independently reproduces the known
 one-drift closure; the other columns are finite banks, not emptiness
 censuses.
 
+The unique projected `k=3` row at the maximum `z_1=380` can now be removed
+exactly.  It has body
+
+```text
+E=(1,4,8,10,12,14)
+```
+
+and exact suffix dynamic programming through `H=7,000`, with the inherited
+omitted-label tail, leaves only
+
+```text
+(z_1,z_2,z_3)=(380,410,492),
+z_4 in {1164,1220,1358,1500,1836}.
+```
+
+All five packets pass scalar capacity, but each has a body-support fibre
+larger than the sum of the four sharp divisor-fibre caps: four have margin
+`3` at `q=420`, and the `z_4=1358` packet has margin `1` at `q=140`.
+Thus the current projected `k=3` first-drift cap is `379`.  This is one
+closed frontier row, not a census of the remaining `376,019` necessary
+rows.  Ordinary and optimized replays are byte-identical; script/output
+SHA-256 are
+
+```text
+64f98439f677668c82045e7f9107cbfdff467afd8f16975c7e37d8ae5c5c9f26
+a1c77b24488240f1ee0295e427ee4583b7d8215caf6615f424bf325350fb56b6.
+```
+
 For `k=5`, there is a second, Gram-facing derivation.  Pointwise
 
 ```text
@@ -760,13 +791,19 @@ replacing that coefficient by the explicit larger rational `6r/49+1`
 supplies the strict form required by THM-2893 without changing finiteness.
 The `1/13-1/14` margin is what keeps every proper-node residual positive.
 
-Together with THM-2928's empty `k=6,7` branches, this proves:
+Together with THM-2928's fully aligned and one/two-drift closures, this
+proves:
 
 > Every six-body/seven-tail branch with at least five aligned tails is empty.
 > Each branch with `k=2,3,4` aligned tails is uniformly reducible to a finite
 > exact decision tree.
 > Consequently any sector not yet known to admit such a finite reduction
 > has at most one aligned tail, hence at least six drifts.
+
+THM-2928's later divisor-status transport and local `98/99` needle terminal
+run the `k=4` census and prove it empty.  Thus the current composition
+strengthens the first two conclusions to: every `k>=4` branch is empty, and
+only `k=2,3` remain finite-but-uncensused.
 
 The next faithful object must therefore join
 
@@ -832,6 +869,7 @@ ordinary and optimized replays are byte-identical.
 
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,
-handle arbitrary packets, run the `k=2,3,4` finite decision trees, classify
+handle arbitrary packets, run its `k=2,3,4` finite decision trees, classify
 the zero/one-aligned multi-drift address hypergraph, close the
-six-body/seven-tail rung, or prove LRC(14).
+six-body/seven-tail rung, or prove LRC(14).  The independent THM-2928
+divisor-status route now closes `k=4`; `k=2,3` remain open.

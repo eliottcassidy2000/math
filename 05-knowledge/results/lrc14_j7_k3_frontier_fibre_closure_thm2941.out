@@ -1,0 +1,19 @@
+LRC14 projected k=3 frontier-row fibre closure
+suffix_source_sha256=a003d287f618eb301edf6974d0b67dc128c4f380a169e7809ed5b5754e8b8303
+suffix_output_sha256=61e16aab8a368881c574047e576645e6b41837dc9f804f7a78d37230d843612b
+fibre_source_sha256=42dc165781148c702dfcd3c6535f4d02aee516af60b5ddf602a19cb1d87695e4
+scope=unique THM-2941 projected k=3 max-first row only;no claim for z1<=379 and no wider census
+body=1,4,8,10,12,14;h=1049/2940;components=34;L=11760
+k=3;z1=380;lower=1049/89180;projected_high_floor=1159;exact_horizon=7000
+suffix_labels=6620;stream_nodes_by_depth=(1, 1, 1, 5);candidate_tests_by_depth=(6618, 6589, 6508);bound_rejections_by_depth=(6617, 6588, 6503)
+omitted_tail=204/343049;omitted_upper=420052061/37412923940;omitted_gap=18595527/34740572230
+finite_packets=5
+  packet=380,410,492,1164;denominators=588,1176,980,980;D=5880;target=2668;ambient_capacity=3360;q_witness=420;M=14;max_fibre_load=11;fibre_capacity=8;margin=3;all_divisor_screen=KILL
+  packet=380,410,492,1220;denominators=588,1176,980,588;D=5880;target=2668;ambient_capacity=3360;q_witness=420;M=14;max_fibre_load=11;fibre_capacity=8;margin=3;all_divisor_screen=KILL
+  packet=380,410,492,1358;denominators=588,1176,980,840;D=5880;target=2668;ambient_capacity=3360;q_witness=140;M=42;max_fibre_load=26;fibre_capacity=25;margin=1;all_divisor_screen=KILL
+  packet=380,410,492,1500;denominators=588,1176,980,196;D=5880;target=2668;ambient_capacity=3360;q_witness=420;M=14;max_fibre_load=11;fibre_capacity=8;margin=3;all_divisor_screen=KILL
+  packet=380,410,492,1836;denominators=588,1176,980,980;D=5880;target=2668;ambient_capacity=3360;q_witness=420;M=14;max_fibre_load=11;fibre_capacity=8;margin=3;all_divisor_screen=KILL
+closed_packets=5/5
+conclusion=projected k=3 first-drift cap improves 380->379
+semantic_sha256=e9a42f99a855db99c4af95c383ac942683d57834a165f2f56733bebb6e0d9a26
+all_exact_controls=PASS

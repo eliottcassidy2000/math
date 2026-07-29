@@ -25,15 +25,18 @@ status: >
   transversal obstruction kills the last two diagonal pairs.  Hence the
   literal five-aligned/two-drift branch is empty uniformly.  At four
   aligned combs and three drifts, support and arbitrary-class loads reduce
-  298,255,882 denominator-triple occurrences to 544,571, while an exact
-  septimal fibre and Z/49Z local-needle sieve empties the entire diagonal
-  denominator sector.  The critical two-torus carrier integral is positive
+  298,255,882 denominator-triple occurrences to 544,571.  All-divisor
+  fibre overload and common-phase activity reduce this to 29,364; an exact
+  eight-state threshold transport over the divisor tree leaves 19
+  occurrences; and local unit-needle set cover on Z/99Z and Z/98Z kills
+  all 19.  Hence the literal four-aligned/three-drift branch is empty
+  uniformly; the earlier septimal Z/49Z diagonal proof remains an
+  independent structural witness.  The critical two-torus carrier integral is positive
   on every fixed seven-tail affine ray;
   uniformly, seven tails in one common canonical-ruler quotient block are
-  safe once the quotient is at least 315,586.  Mixed-denominator
-  three-drift and branches with four or more drifts remain open; this does
-  not prove LRC(14).
-source: root-2026-07-29 with independent hostile audits by seven-wall-tensor-audit and critical-residue-tree
+  safe once the quotient is at least 315,586.  Branches with four or more
+  drifts remain open; this does not prove LRC(14).
+source: root-2026-07-29 with independent hostile audits by seven-wall-tensor-audit, critical-residue-tree, mixed-residual-atlas, mixed-overlap-bound, and mixed-lorenz-sieve
 depends_on:
   - THM-594-pair-overlap-law-mirsky-newman-floor
   - THM-1094-exact-two-comb-component-theorem
@@ -65,6 +68,14 @@ three_drift_script: 04-computation/lrc14_three_drift_body_projection_fiber_thm29
 three_drift_output: 05-knowledge/results/lrc14_three_drift_body_projection_fiber_thm2928.out
 three_drift_diagonal_script: 04-computation/lrc14_three_drift_diagonal_crt_thm2928.py
 three_drift_diagonal_output: 05-knowledge/results/lrc14_three_drift_diagonal_crt_thm2928.out
+three_drift_activity_script: 04-computation/lrc14_three_drift_mixed_activity_fiber_thm2928.py
+three_drift_activity_output: 05-knowledge/results/lrc14_three_drift_mixed_activity_fiber_thm2928.out
+three_drift_lorenz_script: 04-computation/lrc14_three_drift_mixed_lorenz_activity_thm2928.py
+three_drift_lorenz_output: 05-knowledge/results/lrc14_three_drift_mixed_lorenz_activity_thm2928.out
+three_drift_terminal_script: 04-computation/lrc14_three_drift_threshold_transport_terminal_thm2928.py
+three_drift_terminal_output: 05-knowledge/results/lrc14_three_drift_threshold_transport_terminal_thm2928.out
+three_drift_terminal_audit_script: 04-computation/lrc14_three_drift_terminal_local_incidence_audit_thm2928.py
+three_drift_terminal_audit_output: 05-knowledge/results/lrc14_three_drift_terminal_local_incidence_audit_thm2928.out
 affine_profile_script: 04-computation/lrc14_j7_affine_profile_min_frequency_thm2928.py
 affine_profile_output: 05-knowledge/results/lrc14_j7_affine_profile_min_frequency_thm2928.out
 ---
@@ -1424,9 +1435,11 @@ capacity `21`.  Therefore:
 The same proof gives a genuine septimal ladder: if `7^s|D`, a full diagonal
 `D/7`-needle restricts over `Z/(D/7^s)Z` to a
 `7^(s-1)`-term unit needle in `Z/7^s Z`.  At the literal LRC(14) body scale,
-the `Z/49Z` test is the terminal available septimal digit.  Mixed denominator
-triples remain open and must retain the full divisor-fibre tree from
-`(37o)`, rather than only the scalar loads in `(37s)`.
+the `Z/49Z` test is the terminal available septimal digit.  This was the
+discovery proof of the diagonal sector.  The all-divisor argument below
+subsumes its emptiness conclusion, but the `Z/49Z` proof remains an
+independent exact check and records the septimal toothpick self-similarity
+that the coarser transport relaxation forgets.
 
 The combined referee and an independent diagonal-only implementation both
 retain all checks under optimized Python; in each case ordinary and optimized
@@ -1437,6 +1450,289 @@ combined script   42dc165781148c702dfcd3c6535f4d02aee516af60b5ddf602a19cb1d87695
 combined output   2e211620ad7064ea06f7544b5fbac709d6d52d9a0e261b464ae26b595f09b669
 diagonal script   d887b0c0b202b6311e9b040693af1e96152f1a2eabeada245d6c02a75d80700c
 diagonal output   478e3f2640a0484e9c21f1ca2ace8ca1adf6d3066e09c937ee9196bdfd8ccfa4.
+```
+
+### All-divisor overload and common-phase activity
+
+The phase-free fibre cap `(37p)` is useful at every divisor, not only on
+the septimal diagonal.  For `q|D` put
+
+```text
+g_i=gcd(d_i,q),       H_i=D/lcm(d_i,q),       ell_i=ceil(d_i/7).
+```
+
+Every cover necessarily satisfies
+
+```text
+max_(b mod q) #{x in S_D:x=b mod q}
+ <=sum_(i=1)^3 H_i ceil(ell_i/g_i).                  (37ta)
+```
+
+Testing `(37ta)` for every divisor `q` kills `125,060` of the `544,571`
+all-top occurrences and leaves `419,511`.  It kills all `2,636` diagonal
+occurrences, so the earlier `Z/49Z` terminal is structurally informative
+but no longer logically needed for diagonal emptiness.  The full
+phase-free Lorenz profile strengthens `(37ta)` by comparing the sums of
+the `s` largest fibres for every breakpoint `s`; it gives `147` additional
+kills.  This independent strengthening is not needed by the terminal
+chain below.
+
+The decisive next coordinate is the common aligned phase.  For `d<7`,
+`gcd(c,d)=1`, and `u in R_A`, the literal mask
+
+```text
+M_(c,d)(u)={r mod D: ||c(r+u)/d||<1/14}
+```
+
+meets at most one residue class modulo `d`, and
+
+```text
+M_(c,d)(u) is nonempty
+ iff ||cu||<d/14.                                    (37tb)
+```
+
+The activity set on the right has Haar measure `d/7`.  If the other two
+enlarged masks have total ambient capacity smaller than `|S_D|`, a cover
+would force `(37tb)` for every `u in R_A`.  This is impossible for
+`d=2,3`, because
+
+```text
+mu(R_A)=u_A>=558/1183>3/7.                           (37tc)
+```
+
+This common-phase activity test kills `383,391` of the `419,511`
+single-fibre survivors.  There are `6,756` further survivors with
+`d_1=d_2=2`.  Reflection `r -> D-1-r` preserves `S_D` and swaps parity,
+so its two parity loads are equal.  In every one of these rows each parity
+load exceeds the exact `q=2` fibre cap of the third mask.  Hence the two
+denominator-two masks would have to be active, on opposite parities, for
+every `u in R_A`.  Their individual activity sets have mass `2/7`, again
+contradicting `(37tc)`.  The exact residual is therefore
+
+```text
+544,571 -> 419,511 -> 29,364.                        (37td)
+```
+
+The activity referee explicitly reconstructs the `q=2` histogram on every
+even row; even total cardinality is not used as a substitute for reflection
+balance.
+
+### Eight-state threshold transport
+
+The scalar and Lorenz bounds allow each needle to place its exceptional
+fibres independently at every rank.  The next quotient retains the joint
+status word.  Fix an outer divisor `t|D`, and write
+
+```text
+M=D/t,       g_i=gcd(d_i,t),       ell_i=A_i g_i+r_i,
+0<=r_i<g_i,       R_i=(t/g_i)r_i.                    (37te)
+```
+
+By the exact trace law `(37o)`, needle `i` has load `H_i A_i` in every
+outer fibre and one extra layer of height
+
+```text
+H_i=D/lcm(d_i,t)
+```
+
+on exactly `R_i` of the `t` fibres.  For a status word
+`E subset {1,2,3}`, let `n_E` count outer fibres on which precisely the
+needles in `E` receive their extra layer.  Every literal configuration
+satisfies
+
+```text
+sum_E n_E=t,        sum_(E contains i)n_E=R_i,        n_E>=0.  (37tf)
+```
+
+We relax the integral, arithmetically located counts to real counts obeying
+only `(37tf)`.  If
+
+```text
+c_E=min(M,sum_i H_i(A_i+1_(i in E)))
+```
+
+is the raw union capacity of status `E`, and
+
+```text
+sigma_b=#{x in S_D:x=b mod t},
+```
+
+then every cover must satisfy, for every positive target load `y`,
+
+```text
+#{b:sigma_b>=y}
+ <=max {sum_(E:c_E>=y)n_E : (37tf)}.                 (37tg)
+```
+
+This is the missing distributional statement: a needle may have enough
+total mass while possessing too few exceptional fibres to serve all heavy
+body fibres.  The polytope has eight variables and four equality
+constraints.  The exact referee enumerates its `58` nonsingular four-column
+bases out of `binom(8,4)=70`, using rational arithmetic, and independently
+matches each decisive primal value with a dual value.
+
+Applying `(37tg)` at every nontrivial divisor `t|D` (the case `t=1` is
+vacuous) kills `29,345` of the `29,364`
+activity survivors.  The `19` survivors lie on only five body words:
+
+```text
+F                              D          occurrences
+(1,4,7,9,11,12)               38,808          2
+(1,6,7,8,9,11)                77,616          4
+(1,4,7,8,9,11)                77,616          2
+(1,3,7,8,10,11)              129,360          1
+(1,5,7,8,9,11)               388,080         10.     (37th)
+```
+
+There is a strictly stronger all-arity form which will be useful beyond
+this closure.  For target-load multiplicities
+
+```text
+h_y=#{b:sigma_b=y},       H_y=sum_(z>=y)h_z,
+```
+
+a literal cover by any number of needles induces **one** status table
+`n_E`, independent of `y`, such that
+
+```text
+sum_E n_E=t,       sum_(E contains i)n_E=R_i,
+sum_(E:c_E>=y)n_E>=H_y for every y>0.                (37tg+)
+```
+
+Conversely, `(37tg+)` is exactly the fractional feasibility condition.
+Indeed, one may introduce
+`x_(y,E)=#{b:sigma_b=y and status(b)=E}`; its row sums are `h_y`, its bit
+marginals are `R_i`, and `x_(y,E)=0` when `c_E<y`.  The nested-neighbourhood
+Hall criterion, or greedy matching after sorting loads and capacities,
+eliminates `x` and gives `(37tg+)`.  Thus the separate maxima in `(37tg)`
+are valid but may choose incompatible status tables at different
+thresholds.
+
+This distinction is already strict in the four-needle scale relevant to
+the next sector.  Take `D=28`, `t=2`, denominators `(4,4,28,28)`, and
+widths `(1,1,4,4)`.  The only variable status bits have marginals `(1,1)`,
+and their capacities are
+
+```text
+c_00=4,       c_10=c_01=11,       c_11=14.
+```
+
+A target with two fibre loads `(14,8)` passes every separately optimized
+tail inequality and the maximum total-capacity test: disjoint high bits
+give capacities `(11,11)` and coincident high bits give `(14,4)`.
+No single table works, since the load-`8` tail forces the disjoint table
+while the load-`14` tail forces the coincident one.  For four drifts the
+joint relaxation has only `16` variables, five marginal equalities, and
+at most fifteen consolidated tail inequalities; it should therefore be
+tested before any local depth-four needle recursion.
+
+### The `98/99` terminal local needles
+
+The quotient trace retains one more self-similar coordinate.  In a fibre
+of `x=b mod q`, of height `m=D/q`, put
+
+```text
+g_i=gcd(d_i,q),       n_i=d_i/g_i,
+w_i=ceil(ell_i/g_i)=ceil(n_i/7).                   (37ti)
+```
+
+The trace of the `i`th enlarged mask is contained in the lift to
+`Z/mZ` of a `w_i`-term unit arithmetic progression in `Z/n_iZ`.
+The second equality in `(37ti)` is the elementary identity
+`ceil(ceil(d/7)/g)=ceil((d/g)/7)` for `g|d`: quotienting a tooth does not
+merely bound its width, but returns the same canonical width rule at the
+reduced denominator.  This is the precise all-scale toothpick
+self-similarity.
+We grant the three masks independent phases and unit directions inside
+the chosen fibre.  This is an upper relaxation: the actual global clocks
+couple those choices rather than enlarging them.
+
+For `18` rows in `(37th)`, take `m=99`, `q=D/99`, and `b=0`.  The only
+trace-family types that occur are
+
+```text
+(m,n,w)       number of distinct lifted needles
+(99,11,2)                     55
+(99,33,5)                    330
+(99,99,15)                 2,970.
+```
+
+For the remaining row take `m=98`, `q=1,320`, and `b=0`; its types are
+
+```text
+(98,49,7)                  1,029
+(98,98,14)                 2,058.                    (37tj)
+```
+
+These family sizes are analytic, not unexplained census constants.  For
+`2<=w<n-1`, a cyclic `w`-term unit progression in `Z/nZ` has exactly
+`n phi(n)/2` distinct translates and directions: among the `n phi(n)`
+pairs `(a,h)`, only reversal
+
+```text
+(a,h) -> (a+(w-1)h,-h)
+```
+
+identifies two descriptions.  Thus the five entries are respectively
+`11*10/2`, `33*20/2`, `99*60/2`, `49*42/2`, and `98*42/2`.
+
+The five distinct body slices have sizes `28,30,32,34,34`, and their
+body/family data collapse to nine terminal profiles.  The four `m=99`
+slices are invariant under `x -> -x`; only the `m=98` endpoint slice
+breaks that exact reflection.  An exact
+grouped set-cover recursion chooses the first uncovered target point and
+tries every unused-family needle through it.  None of the `19` slices is
+coverable by one needle from each of its three families.  A separate
+literal-residue construction and incidence-bitset pair solver reproduces
+all `19` failures; it does not use the bit-replication implementation of
+the primary referee.
+
+The audit also separates mechanism from search cost.  Five rows already
+fail the sum of the three exact single-family target-intersection maxima;
+ten more fail the exact union maximum of their repeated full-period pair
+plus the third-family maximum.  Only four all-`(99,99,15)` rows remain.
+Their exact three-needle target-coverage maxima are `27<32` on the
+`(1,6,7,8,9,11)` slice and `24<28` on the
+`(1,5,7,8,9,11)` slice.  Moreover, all `18` modulus-`99` targets omit
+row zero modulo `9` and column zero modulo `11`, reflecting the common
+body speeds `9` and `11`.  More generally, if `M=ab`, `gcd(a,b)=1`, and
+a target avoids one row modulo `a` and one column modulo `b`, then a
+`w<M` unit progression meets it in at most
+
+```text
+w-floor(w/a)-floor(w/b)+1:
+```
+
+the forced row and column hits can overlap only at their one CRT
+intersection.  The terminal is therefore a finite-ring Kakeya orbit-cover
+gap on a CRT grid, not a knife-edge phase search.
+
+Therefore:
+
+> **Uniform three-drift closure.**  Four aligned tail combs and three
+> arbitrary drift combs cannot cover the safe carrier of six distinct
+> literal body combs.
+
+The proof is numerator-free because all unit directions and phases were
+granted at the terminal fibre.  Its preserved coordinate is not merely
+fibre mass but the finite unit-needle shape.  The two terminal moduli show
+that the septimal `Z/49Z` stalk is one branch of a broader composite
+toothpick recursion: the final obstruction may live on `2*7^2` or on
+`3^2*11`, as selected by the body support.
+
+The primary activity and terminal referees retain all guards under
+optimized Python, and their ordinary and optimized outputs are
+byte-identical.  The frozen hashes are
+
+```text
+activity script   067424a0edb126ad8e15f9f56ad77489bfdbb9a5fd2dd42e8a3eb4599438dfd9
+activity output   cab8e7b4a63177e89f19979c3c8129360dc486786b5a594bc871b25c4bf5c723
+Lorenz script     8d9ef3a750b7d09eb247090c04d3825b48be355c5fc653e57935fea7d98f49a5
+Lorenz output     b1b5801c53411e3adf661e52765e040db29769076ab02b67168b5e9b087239c1
+terminal script   13e524e728736480798d52acc736afe0cbd7b651a487aeef5d771d2b5dfa1338
+terminal output   435c34b249255c8659e62e89e3a22e42b2fa8dd67c4cbd4b188d5e9806206f52
+audit script      4b2f85d59f018bda6d75f52cc399ec6e3282b3015d8dba748eac8f41208c2019
+audit output      0cd0ebb33a9cba143abf64ba9f5f18aa5da5dc63a5f74435ffb69698cf863af7.
 ```
 
 ## 10. The critical affine-profile residual is empty
@@ -1665,12 +1961,16 @@ six-body one-drift branch.  Section 9 now closes the literal six-body,
 five-aligned/two-drift branch uniformly: its decisive quotient retains the
 body address multiplicities but deliberately forgets the aligned shape,
 clock phases, and numerator sizes.  Its finite-ring pushforward also closes
-the diagonal-denominator part of the four-aligned/three-drift branch, but
-not its `544,571` mixed-denominator relaxed occurrences.  The theorem does
-**not** close an arbitrary mixed-residue seven-wall, a general three-drift
-row, branches with four or more drift speeds, or LRC(14).  The next exact
-object is the divisor-fibre tree `(37o)`, possibly combined with a
-carrier-local multi-endpoint current, not a global overlap scalar.  A
-tournament on the seven labels forgets the metric widths, cell phases, gcd
-fibres, quotient remainders, and located endpoint current, and is therefore
-not an equivalent quotient.
+the entire four-aligned/three-drift branch: the threshold transport retains
+the joint exceptional-fibre word, and the terminal `98/99` quotient retains
+the local unit-needle shape.  The theorem does **not** close an arbitrary
+mixed-residue seven-wall, branches with four or more drift speeds, or
+LRC(14).  The next aligned sectors have two or three aligned combs and are
+finite by THM-2941, but their four/five-drift censuses have not been run;
+the zero/one-aligned sectors remain the infinite address frontier.  Their
+next exact object is the corresponding higher-arity divisor-fibre status
+polytope combined with local unit-needle cover, possibly supplemented by a
+carrier-local multi-endpoint current.  A tournament on the seven labels
+forgets the metric widths, cell phases, gcd fibres, quotient remainders,
+status multiplicities, and located endpoint current, and is therefore not
+an equivalent quotient.

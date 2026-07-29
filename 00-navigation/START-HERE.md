@@ -20,7 +20,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) is first open.** THM-2923 gives frontier `<=6`; THM-2928/2941 empty `k>=5`, make `k=2..4` finite, leave `k<=1` and rung open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
+1. **LRC(14) is first open.** THM-2923 gives frontier `<=6`; THM-2928/2941 empty aligned `k>=4`, make `k=2,3` finite, and leave `k<=1` and the six-body rung open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see

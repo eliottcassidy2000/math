@@ -1,5 +1,28 @@
 # Script Results Index
 
+- `lrc14_three_drift_threshold_transport_terminal_thm2928.py`, together
+  with the activity referee, -> matching `.out` files
+  [THM-2928 PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY AUDITED].
+  On the `544,571` four-aligned/three-drift all-top occurrences, all-divisor
+  fibre overload leaves `419,511`; common-phase activity and the repeated
+  denominator-two parity obstruction leave `29,364`; the exact eight-state
+  threshold transport leaves `19`; and grouped local unit-needle cover on
+  `Z/99Z` and `Z/98Z` leaves zero.  An independent full Lorenz sieve gives
+  `544,571 -> 419,364 -> 29,219`, and independent literal-residue/pair-cover
+  reconstruction confirms all `19` terminal failures.  Thus aligned
+  `k>=4` is empty; `k=2,3`, the zero/one-aligned sector, the six-body rung,
+  and LRC(14) remain open.  Activity, Lorenz, and terminal script/output
+  SHA-256 pairs begin `067424a0/cab8e7b4`, `8d9ef3a7/b1b5801c`, and
+  `13e524e7/435c34b2`; the independent audit pair begins
+  `4b2f85d5/0cd0ebb3` and splits the terminal mechanisms `5/10/4`.
+- `lrc14_j7_k3_frontier_fibre_closure_thm2941.py` -> matching `.out`
+  [THM-2941 SCOPED PROVED + FINITE-EXACT + VERIFIED].  The unique projected
+  `k=3` row at maximal first drift `z_1=380` has exactly five finite suffix
+  packets after a rigorous omitted-label tail; all five fail an all-divisor
+  fibre cap.  Hence the current `k=3` first-drift cap is `379`, with no
+  claim on the remaining `376,019` necessary rows.  Script/output SHA-256:
+  `64f98439f677668c82045e7f9107cbfdff467afd8f16975c7e37d8ae5c5c9f26` /
+  `a1c77b24488240f1ee0295e427ee4583b7d8215caf6615f424bf325350fb56b6`.
 - `lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.py`, together
   with the scalar-wall and projected-suffix verifiers, -> matching `.out`
   files [THM-2941 PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY
@@ -7,11 +30,12 @@
   Hunter crossing is exactly `h/7`; a pointwise zero-excess cover is
   impossible and its hypothetical Gram is `(h/49)(7I-J)`.  Aligned
   safe-surplus plus the lossless projected residual gives rigorous first-drift
-  caps `2,142/380/182/66` for `k=2/3/4/5` alignments and empties `k=6`.
+  caps `2,142/380/182/66` for `k=2/3/4/5` alignments and empties `k=6`; the
+  scoped frontier addendum improves the current `k=3` cap to `379`.
   For `k=5`, exact prefix incidence kills all `42,912` high-excess and
   `194,073` subcritical drift pairs, minimum margin `1/378105`; THM-2928
-  independently closes the same face by divisor/address masks.  Thus
-  `k>=5` is empty, `k=2,3,4` is finite but not yet censused, and the
+  independently closes the same face by divisor/address masks.  With
+  THM-2928, `k>=4` is empty and `k=2,3` is finite but not yet censused; the
   zero/one-aligned sector, six-body rung, and LRC(14) remain open.
   Consolidated source/output SHA-256:
   `(76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662,`
