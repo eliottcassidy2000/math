@@ -138,7 +138,7 @@ U_C(K)<=sum_(w in K)c_C(w)
 ```
 
 Thus every `p`-cover meets the finite set of allowed labels below `W_p`.
-If every literal residual again obeys an estimate of the form `(5)`—as
+If every nonempty literal residual again obeys an estimate of the form `(5)`—as
 the LRC interval carriers do—then the same argument applies after each
 possible first apex.  Since the depth is at most six, this yields a finite
 rooted decision tree for every fixed initial carrier.  It is only a
