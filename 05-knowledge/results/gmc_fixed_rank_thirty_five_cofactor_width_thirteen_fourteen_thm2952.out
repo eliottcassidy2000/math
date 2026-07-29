@@ -1,0 +1,12 @@
+THM-2952 FIXED RANK-35 COFACTOR WIDTH-13/14 CONTINUATION
+thm2949_dependency_sha256=9a1c7068e079e232dc97fd6eb925621aa74b3d636380a85995f8e0db8b30aa54
+fixed_delete=rowpos30/global36/column0/target(0,0,7);outside_grid=degree+1,degree+2,2*degree+3
+width=13;families=66;degree=680;max_GN_base=35;base0=22;mixed_low_prefixes=12;max_base_supports=((1, 12),);family_digest=c1e7eaf3a794773573a664f9e83c439817efa6795f4c690b2849b79b7acad923
+width=14;families=78;degree=735;max_GN_base=43;base0=23;mixed_low_prefixes=17;max_base_supports=((1, 2), (1, 13));family_digest=2158531e878df93c158a85d83de9b4f7b10a6d25b3c1143a71d9b2ff3721c3d8
+total_families=144;outside_grid_determinant_controls=432
+global_record_digest=02566dbe576277c3c1582ca778505353496c81d5d5530f9c430f43cc51d0f515
+width14_real_ray_hostile=support:(0,1,2,14);integer_sign_word:+24,-19,+tail_from_43;two_positive_nonintegral_crossings
+all_fixed_cofactors_nonzero_at_every_integer_depth=PASS
+consequence=first-window_SFC4_widths_13_14
+scope=four distinct slots;integer depths;no width15,real-ray positivity,arbitrary-width SFC4,NC2,or GMC2
+all_exact_checks=PASS
