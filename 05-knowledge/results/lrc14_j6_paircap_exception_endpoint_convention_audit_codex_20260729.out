@@ -1,0 +1,10 @@
+LRC14 j6 pair-cap-exception endpoint-convention hostile audit
+time=1/28
+target=1/14
+epsilon=1/1000000000
+family=(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26);strict=();boundary=(2, 26);closed=(2, 26);left=249999993/3500000000;right=249999909/3500000000
+family=(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 26, 48);strict=();boundary=(2, 26);closed=(2, 26);left=249999993/3500000000;right=249999909/3500000000
+semantic_digest=b521e84294bc8b7ac9f431ec7cc6841bbc326bddf26ce60fcd546c55c9479c05
+mode=LOCKED
+scope=two THM2907 survivor families;strict danger versus closed-comb endpoint convention;not LRC14
+all_exact_controls=PASS

@@ -34,7 +34,10 @@ singleton completion.  Heavy-link sidecars are checked throughout, so this
 fallback loses efficiency, not correctness.
 
 All labels respect the inherited forbidden prefix and every selected flag.
-This is a scoped exact child computation, not LRC(14).
+Every surviving five-label completion is reconstructed and checked literally
+against the parent carrier.  The only survivors are then checked directly at
+an exact endpoint time.  This is a scoped discharge of the 52 H4 exception
+branches, not a proof of LRC(14).
 """
 
 from __future__ import annotations
@@ -61,10 +64,43 @@ MEMBERSHIP_SHA256 = (
 
 FIRST_EXTERNAL = 15
 S2 = F(99, 70)
+ENDPOINT_TIME = F(1, 28)
+EXPECTED_ENDPOINT_FAMILIES = (
+    tuple(2 * value for value in range(1, 14)),
+    tuple(2 * value for value in (*range(1, 12), 13, 24)),
+)
 
-# Discovery values are locked only after ordinary and optimized replay.
-EXPECTED_COUNTS: tuple[object, ...] | None = None
-EXPECTED_DIGEST: str | None = None
+EXPECTED_COUNTS: tuple[object, ...] | None = (
+    18_290,
+    16_357,
+    1_933,
+    179,
+    529,
+    1_225,
+    18_280,
+    10,
+    51,
+    1,
+    99_241,
+    49,
+    184_429,
+    1_441_996,
+    120,
+    109_386,
+    2_443,
+    628,
+    1_241,
+    746,
+    16,
+    16,
+    2,
+    2,
+    52,
+    52,
+)
+EXPECTED_DIGEST: str | None = (
+    "e8d4119f101ae3ac310fe5ca8a056607390ff4d7aa166cb90168983ea7069356"
+)
 
 
 def require(condition: bool, message: str) -> None:
@@ -207,6 +243,23 @@ def link_triangle_ok(
     )
 
 
+def route_result(
+    witnesses: set[tuple[int, int, int]],
+    partial_witnesses: set[tuple[int, ...]],
+    metrics: dict[str, object],
+) -> dict[str, object]:
+    """Normalize an exhaustive child-search result."""
+
+    ordered_witnesses = tuple(sorted(witnesses))
+    ordered_partials = tuple(sorted(partial_witnesses))
+    return {
+        "closed": not ordered_witnesses and not ordered_partials,
+        "witnesses": ordered_witnesses,
+        "partial_witnesses": ordered_partials,
+        **metrics,
+    }
+
+
 def finite_h2_route(
     residual: list[tuple[F, F]],
     threshold: F,
@@ -220,6 +273,8 @@ def finite_h2_route(
     singleton_heads = 0
     max_singleton_cutoff = 0
     attempted_core_pairs = 0
+    witnesses: set[tuple[int, int, int]] = set()
+    partial_witnesses: set[tuple[int, ...]] = set()
     coverage_by_label = {label: value for value, label in h2_rows}
     for first, second in combinations(sorted(coverage_by_label), 2):
         attempted_core_pairs += 1
@@ -232,16 +287,8 @@ def finite_h2_route(
         heavy_edges += 1
         leaf = R.subtract_local_multi(residual, (first, second))
         if not leaf:
-            return {
-                "closed": False,
-                "witness": (first, second, None),
-                "partial_witness": True,
-                "core_pairs": attempted_core_pairs,
-                "pair_unions": pair_unions,
-                "heavy_edges": heavy_edges,
-                "singleton_heads": singleton_heads,
-                "max_singleton_cutoff": max_singleton_cutoff,
-            }
+            partial_witnesses.add(tuple(sorted((first, second))))
+            continue
         leaf_excluded = excluded | frozenset((first, second))
         candidates, cutoff, paid = singleton_cover_candidates(
             leaf,
@@ -252,26 +299,18 @@ def finite_h2_route(
         for third in candidates:
             triangle = tuple(sorted((first, second, third)))
             if link_triangle_ok(residual, triangle, threshold):
-                return {
-                    "closed": False,
-                    "witness": triangle,
-                    "partial_witness": False,
-                    "core_pairs": attempted_core_pairs,
-                    "pair_unions": pair_unions,
-                    "heavy_edges": heavy_edges,
-                    "singleton_heads": singleton_heads,
-                    "max_singleton_cutoff": max_singleton_cutoff,
-                }
-    return {
-        "closed": True,
-        "witness": None,
-        "partial_witness": False,
-        "core_pairs": attempted_core_pairs,
-        "pair_unions": pair_unions,
-        "heavy_edges": heavy_edges,
-        "singleton_heads": singleton_heads,
-        "max_singleton_cutoff": max_singleton_cutoff,
-    }
+                witnesses.add(triangle)
+    return route_result(
+        witnesses,
+        partial_witnesses,
+        {
+            "core_pairs": attempted_core_pairs,
+            "pair_unions": pair_unions,
+            "heavy_edges": heavy_edges,
+            "singleton_heads": singleton_heads,
+            "max_singleton_cutoff": max_singleton_cutoff,
+        },
+    )
 
 
 def generic_three_route(
@@ -288,21 +327,13 @@ def generic_three_route(
     max_g2_cutoff = 0
     max_singleton_cutoff = 0
     g2_vertices = 0
+    witnesses: set[tuple[int, int, int]] = set()
+    partial_witnesses: set[tuple[int, ...]] = set()
     for _, first in g3_rows:
         first_residual = R.subtract_local(residual, first)
         if not first_residual:
-            return {
-                "closed": False,
-                "witness": (first, None, None),
-                "partial_witness": True,
-                "g3_size": len(g3_rows),
-                "g3_cutoff": g3_cutoff,
-                "g2_vertices": g2_vertices,
-                "max_g2_cutoff": max_g2_cutoff,
-                "pair_unions": pair_unions,
-                "singleton_heads": singleton_heads,
-                "max_singleton_cutoff": max_singleton_cutoff,
-            }
+            partial_witnesses.add((first,))
+            continue
         first_excluded = excluded | frozenset((first,))
         first_mass = interval_mass(first_residual)
         g2_rows, g2_cutoff = finite_core(
@@ -319,18 +350,8 @@ def generic_three_route(
             pair_unions += 1
             leaf = R.subtract_local(first_residual, second)
             if not leaf:
-                return {
-                    "closed": False,
-                    "witness": (first, second, None),
-                    "partial_witness": True,
-                    "g3_size": len(g3_rows),
-                    "g3_cutoff": g3_cutoff,
-                    "g2_vertices": g2_vertices,
-                    "max_g2_cutoff": max_g2_cutoff,
-                    "pair_unions": pair_unions,
-                    "singleton_heads": singleton_heads,
-                    "max_singleton_cutoff": max_singleton_cutoff,
-                }
+                partial_witnesses.add(tuple(sorted((first, second))))
+                continue
             second_excluded = first_excluded | frozenset((second,))
             candidates, cutoff, paid = singleton_cover_candidates(
                 leaf,
@@ -341,30 +362,20 @@ def generic_three_route(
             for third in candidates:
                 triangle = tuple(sorted((first, second, third)))
                 if link_triangle_ok(residual, triangle, link_threshold):
-                    return {
-                        "closed": False,
-                        "witness": triangle,
-                        "partial_witness": False,
-                        "g3_size": len(g3_rows),
-                        "g3_cutoff": g3_cutoff,
-                        "g2_vertices": g2_vertices,
-                        "max_g2_cutoff": max_g2_cutoff,
-                        "pair_unions": pair_unions,
-                        "singleton_heads": singleton_heads,
-                        "max_singleton_cutoff": max_singleton_cutoff,
-                    }
-    return {
-        "closed": True,
-        "witness": None,
-        "partial_witness": False,
-        "g3_size": len(g3_rows),
-        "g3_cutoff": g3_cutoff,
-        "g2_vertices": g2_vertices,
-        "max_g2_cutoff": max_g2_cutoff,
-        "pair_unions": pair_unions,
-        "singleton_heads": singleton_heads,
-        "max_singleton_cutoff": max_singleton_cutoff,
-    }
+                    witnesses.add(triangle)
+    return route_result(
+        witnesses,
+        partial_witnesses,
+        {
+            "g3_size": len(g3_rows),
+            "g3_cutoff": g3_cutoff,
+            "g2_vertices": g2_vertices,
+            "max_g2_cutoff": max_g2_cutoff,
+            "pair_unions": pair_unions,
+            "singleton_heads": singleton_heads,
+            "max_singleton_cutoff": max_singleton_cutoff,
+        },
+    )
 
 
 def branch_rows() -> list[dict[str, object]]:
@@ -387,6 +398,7 @@ def child_task(
     task: tuple[dict[str, object], tuple[int, int], int, int],
 ) -> dict[str, object]:
     branch, pair, h2_head_limit, h2_core_limit = task
+    pair = tuple(sorted(pair))
     carrier = branch["carrier"]
     parent_mass = branch["mass"]
     q1 = branch["q1"]
@@ -451,6 +463,28 @@ def child_task(
         generic_reason = "delta-nonpositive" if delta <= 0 else "large-H2-head"
         h2_size = None
 
+    cover_witnesses = []
+    for triangle in result["witnesses"]:
+        require(len(triangle) == 3, "full child witness changed arity")
+        require(
+            len(set((*pair, *triangle))) == 5,
+            "child witness reused an H4-pair label",
+        )
+        require(
+            not R.subtract_local_multi(residual, triangle),
+            "child witness did not cover literal pair residual",
+        )
+        cover = tuple(sorted((*pair, *triangle)))
+        require(
+            not R.subtract_local_multi(carrier, cover),
+            "five-label witness did not cover literal parent carrier",
+        )
+        require(
+            not (set(cover) & branch["forbidden"]),
+            "five-label witness violated inherited prefix",
+        )
+        cover_witnesses.append(cover)
+
     return {
         "body": branch["body"],
         "stratum": branch["stratum"],
@@ -469,8 +503,42 @@ def child_task(
         "h2_size": h2_size,
         "route": route,
         "generic_reason": generic_reason,
+        "cover_witnesses": tuple(sorted(set(cover_witnesses))),
         **result,
     }
+
+
+def circle_distance_at(speed: int, time: F) -> F:
+    residue = (speed * time) % 1
+    return min(residue, 1 - residue)
+
+
+def endpoint_clearance(speeds: tuple[int, ...], time: F) -> F:
+    require(speeds, "empty endpoint family")
+    return min(circle_distance_at(speed, time) for speed in speeds)
+
+
+def exception_body_h3_survivors(
+    exception_bodies: frozenset[tuple[int, ...]],
+) -> tuple[tuple[int, ...], ...]:
+    """Recompose only against THM-2901's pinned route ledger."""
+
+    routes: dict[tuple[int, ...], set[str]] = defaultdict(set)
+    for line in M.LEDGER.read_text().splitlines():
+        if not line.startswith("PAIR;"):
+            continue
+        fields = dict(
+            field.split("=", 1)
+            for field in line.removeprefix("PAIR;").split(";")
+        )
+        body = M.parse_ints(fields["E"])
+        if body in exception_bodies:
+            routes[body].add(fields["adaptive"].split(":", 1)[0])
+    require(
+        set(routes) == set(exception_bodies),
+        "THM-2901 root recomposition lost an exception body",
+    )
+    return tuple(sorted(body for body, names in routes.items() if "H3" in names))
 
 
 def row_key(row: dict[str, object]) -> tuple[object, ...]:
@@ -489,8 +557,9 @@ def row_line(row: dict[str, object]) -> str:
         f"delta2={ftext(row['h2_delta'])};"
         f"N2={row['analytic_h2_cutoff']};H2={row['h2_size']};"
         f"route={row['route']};reason={row['generic_reason']};"
-        f"closed={int(row['closed'])};witness={row['witness']};"
-        f"partial={int(row['partial_witness'])};"
+        f"closed={int(row['closed'])};witnesses={row['witnesses']};"
+        f"partials={row['partial_witnesses']};"
+        f"covers={row['cover_witnesses']};"
         f"corepairs={row.get('core_pairs')};"
         f"heavyedges={row.get('heavy_edges')};"
         f"G3={row.get('g3_size')};N3={row.get('g3_cutoff')};"
@@ -527,11 +596,31 @@ def main() -> None:
 
     branches = branch_rows()
     tasks = [
-        (branch, pair, args.h2_head_limit, args.h2_core_limit)
+        (
+            branch,
+            tuple(sorted(pair)),
+            args.h2_head_limit,
+            args.h2_core_limit,
+        )
         for branch in branches
         for pair in combinations(branch["core"], 2)
     ]
     require(len(tasks) == 18_290, "H4 pair-flag count changed")
+    require(
+        len(
+            {
+                (
+                    task[0]["body"],
+                    task[0]["rank"],
+                    task[0]["apex"],
+                    task[1],
+                )
+                for task in tasks
+            }
+        )
+        == len(tasks),
+        "duplicate H4 pair flag",
+    )
     context = mp.get_context("spawn")
     if args.workers == 1:
         rows = list(map(child_task, tasks))
@@ -543,6 +632,17 @@ def main() -> None:
     routes = Counter(row["route"] for row in rows)
     reasons = Counter(row["generic_reason"] for row in rows if row["generic_reason"])
     open_rows = [row for row in rows if not row["closed"]]
+    partial_witnesses = tuple(
+        sorted(
+            (
+                row_key(row),
+                row["partial_witnesses"],
+            )
+            for row in rows
+            if row["partial_witnesses"]
+        )
+    )
+    require(not partial_witnesses, "a partial child cover survived")
     by_body: dict[tuple[int, ...], list[dict[str, object]]] = defaultdict(list)
     for row in rows:
         by_body[row["body"]].append(row)
@@ -554,6 +654,66 @@ def main() -> None:
         )
     )
     open_bodies = tuple(sorted(set(by_body) - set(closed_bodies)))
+    h3_survivor_bodies = exception_body_h3_survivors(
+        frozenset(by_body),
+    )
+    require(
+        len(h3_survivor_bodies) == 52,
+        "exception discharge unexpectedly closed a whole root",
+    )
+
+    completion_families = tuple(
+        sorted(
+            {
+                tuple(
+                    sorted(
+                        (
+                            *row["body"],
+                            row["apex"],
+                            *cover,
+                        )
+                    )
+                )
+                for row in open_rows
+                for cover in row["cover_witnesses"]
+            }
+        )
+    )
+    require(
+        completion_families == EXPECTED_ENDPOINT_FAMILIES,
+        "surviving completion family changed",
+    )
+    endpoint_rows = tuple(
+        (
+            family,
+            endpoint_clearance(family, ENDPOINT_TIME),
+        )
+        for family in completion_families
+    )
+    require(
+        all(clearance >= F(1, 14) for _, clearance in endpoint_rows),
+        "surviving family lost its direct endpoint witness",
+    )
+    safe_families = frozenset(family for family, _ in endpoint_rows)
+    lrc_closed_bodies = []
+    for body, body_rows_ in by_body.items():
+        if all(row["closed"] for row in body_rows_):
+            lrc_closed_bodies.append(body)
+            continue
+        survivors = {
+            tuple(sorted((*row["body"], row["apex"], *cover)))
+            for row in body_rows_
+            for cover in row["cover_witnesses"]
+        }
+        require(survivors, "literal-open body has no full completion")
+        if survivors <= safe_families:
+            lrc_closed_bodies.append(body)
+    lrc_closed_bodies = tuple(sorted(lrc_closed_bodies))
+    require(
+        len(lrc_closed_bodies) == len(by_body) == 52,
+        "not every H4 exception body was discharged",
+    )
+
     finite_rows = [row for row in rows if row["route"] == "finite-H2"]
     generic_rows = [row for row in rows if row["route"] == "generic-three"]
     counts = (
@@ -588,14 +748,28 @@ def main() -> None:
         sum(row.get("g2_vertices", 0) for row in generic_rows),
         max((row.get("g3_cutoff", 0) for row in generic_rows), default=None),
         max((row.get("max_g2_cutoff", 0) for row in generic_rows), default=None),
+        sum(len(row["witnesses"]) for row in rows),
+        sum(len(row["cover_witnesses"]) for row in rows),
+        len(completion_families),
+        len(endpoint_rows),
+        len(lrc_closed_bodies),
+        len(h3_survivor_bodies),
     )
     if EXPECTED_COUNTS is not None:
         require(counts == EXPECTED_COUNTS, "aggregate counts changed")
 
     digest = hashlib.sha256()
-    digest.update(b"LRC14/j6/paircap-exception/H4-link-child/v1\n")
+    digest.update(b"LRC14/j6/paircap-exception/H4-link-child/v2\n")
     for row in rows:
         digest.update(row_line(row).encode())
+    digest.update(
+        (
+            f"endpoint_time={ftext(ENDPOINT_TIME)};"
+            f"endpoint_rows={endpoint_rows};"
+            f"lrc_closed_bodies={lrc_closed_bodies};"
+            f"h3_survivor_bodies={h3_survivor_bodies}\n"
+        ).encode()
+    )
     semantic_digest = digest.hexdigest()
     if EXPECTED_DIGEST is not None:
         require(semantic_digest == EXPECTED_DIGEST, "semantic digest changed")
@@ -605,9 +779,14 @@ def main() -> None:
             "LRC14 j6 pair-cap-exception H4 link-child ledger\n"
             + "".join("CHILD;" + row_line(row) for row in rows)
             + f"counts={counts}\n"
+            + f"endpoint_time={ftext(ENDPOINT_TIME)}\n"
+            + f"endpoint_rows={endpoint_rows}\n"
+            + f"lrc_closed_bodies={lrc_closed_bodies}\n"
+            + f"h3_survivor_bodies={h3_survivor_bodies}\n"
             + f"semantic_digest={semantic_digest}\n"
             + "scope=52 exact-B2 exceptions;18,290 actual H4 pair flags;"
-            "exact heavy-link child recursion;not LRC14\n"
+            "exact heavy-link child recursion;endpoint repair;"
+            "all 52 H4 exception branches discharged;not LRC14\n"
         )
 
     print("LRC14 j6 pair-cap-exception H4 link-child census")
@@ -618,6 +797,10 @@ def main() -> None:
     print(f"generic_reasons={tuple(sorted(reasons.items()))}")
     print(f"closed_bodies={closed_bodies}")
     print(f"open_bodies={open_bodies}")
+    print(f"endpoint_time={ftext(ENDPOINT_TIME)}")
+    print(f"endpoint_rows={endpoint_rows}")
+    print(f"lrc_closed_bodies={lrc_closed_bodies}")
+    print(f"h3_survivor_bodies={h3_survivor_bodies}")
     print(
         "h2_cutoff_quantiles="
         f"{nearest_rank([row['analytic_h2_cutoff'] for row in finite_rows])}"
@@ -632,7 +815,7 @@ def main() -> None:
     )
     print(
         "open_rows="
-        f"{tuple((row['body'], row['rank'], row['apex'], row['pair'], row['route'], row['witness'], row['partial_witness']) for row in open_rows)}"
+        f"{tuple((row['body'], row['rank'], row['apex'], row['pair'], row['route'], row['witnesses'], row['cover_witnesses']) for row in open_rows)}"
     )
     print(f"semantic_digest={semantic_digest}")
     print(
@@ -642,7 +825,8 @@ def main() -> None:
     )
     print(
         "scope=52 exact-B2 exceptions;18,290 actual H4 pair flags;"
-        "finite-H2 and generic exact heavy-link recursion;not LRC14"
+        "finite-H2 and generic exact heavy-link recursion;endpoint repair;"
+        "all 52 H4 exception branches discharged;not LRC14"
     )
     print("all_exact_controls=PASS")
 
