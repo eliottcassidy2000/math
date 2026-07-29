@@ -1,0 +1,12 @@
+THM-2947 CONJUGATE-PAIR CORANK PARITY AUDIT
+CI23_H3=6;CI23_H7=6;QC7_rank=30
+kernel_ladder=(0, 2, 4, 6)
+muF_rank_ladder=(6, 4, 2, 0)
+Phi7_rank_ladder=(36, 34, 32, 30)
+full_conjugate_fifth_compound_energy=62500
+one_dead_pair_fifth_compound_energy=0
+real_summand_hostile=det0_rank5_energy1
+full_35_minor_bank_size=480268195056
+consequence=one_nonzero_35_minor_forces_rank36_and_resultant_nonzero
+scope=no_uniform_fixed_minor_or_new_SFC4_width_closure
+all_exact_checks=PASS
