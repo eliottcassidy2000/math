@@ -1,5 +1,5 @@
 ---
-id: THM-2899
+id: THM-2900
 title: "Flag-conditioned rank-selective partition closure"
 status: >
   RESERVED / UNPROVED PROOF CANDIDATE UNDER LOCKED-ARTIFACT AUDIT.  Combining
@@ -13,11 +13,11 @@ related:
   - THM-2897-partition-cap-tropical-convolution-and-alternating-pair-ladder
   - THM-2898-unique-max-gate-six-seed-parity-closure
 verification:
-  - 04-computation/lrc14_j6_child_rank3_pair_partition_closure_thm2899.py
-  - 05-knowledge/results/lrc14_j6_child_rank3_pair_partition_closure_thm2899.out
+  - 04-computation/lrc14_j6_child_rank3_pair_partition_closure_thm2900.py
+  - 05-knowledge/results/lrc14_j6_child_rank3_pair_partition_closure_thm2900.out
 ---
 
-# THM-2899 -- flag-conditioned rank-selective partition closure
+# THM-2900 -- flag-conditioned rank-selective partition closure
 
 **RESERVED / UNPROVED PROOF CANDIDATE UNDER LOCKED-ARTIFACT AUDIT.**
 
