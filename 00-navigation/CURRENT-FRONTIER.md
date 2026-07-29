@@ -87,12 +87,13 @@ THM-2852 adds full signed convolution rank and six borrow-aware arrows.
 THM-2857 makes the endpoint scalar a free Galois `C13` torsor and turns a
 first factorial exit `m<13` into `m+1` carry channels (THM-2858 gives six),
 but the proved carry is `K0`-linear, not the required semilinear clutch.
-THM-2861 gives a common-phase-free Hermitian edge with support `{0,3,10}`
-and thirteen distinct carry labels, conditionally on an adjacent-section
-co-support pair.  THM-2863 proves every cleared endpoint-multiplier
-numerator is nonzero and every Prony window splits its fixed/character-3
-lines, with a normalized match to the carry derivative.  The full current,
-signed projector, and E3 transport remain; ledger `165`.
+THM-2861's Hermitian edge needs adjacent co-support; THM-2863 gives endpoint
+Prony splitting.  THM-2868 turns this into
+a 26-sample frequency-`chi_3` atlas and Kummer coordinate.  THM-2874
+`F`-identifies it with the Galois orbit and realizes a `C169` fibre over
+`q3`; its collapsed seam is flat versus
+Bockstein holonomy `omega^3`.  Origin-resolved `q11` survives but cancels
+signed, while `q7` is `E3`-zero.  Common-support extension remains; ledger `165`.
 
 ### Independent routes that remain live
 

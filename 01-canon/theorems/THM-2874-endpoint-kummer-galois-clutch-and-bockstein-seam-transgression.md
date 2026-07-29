@@ -2,7 +2,7 @@
 id: THM-2874
 title: "Endpoint Kummer--Galois clutch and Bockstein seam transgression"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The THM-2868 projective frequency orbit is carried to the THM-2857
   centered endpoint Galois orbit by an explicit Q(zeta_91)-rational
   scalar.  Independently, the thirteen frequency sections realize the
@@ -29,7 +29,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2874 -- Endpoint Kummer--Galois clutch and Bockstein seam transgression
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Exact base-field clutch
 
@@ -277,6 +277,16 @@ Both modes LF-normalized byte-match the stored 13-line transcript.
 script 3f15c44dc5f66c660ac3605cc25814adc39594bf193aa130a0f5353d6a6178b0
 output 90b993b56508ef3603f94104596b899ed9ec7084a2b58ead1604882873ef5455
 ```
+
+The independent immutable audit rederived the base-field clutch, the
+transported `C169` group law and carry cocycle, the signed-table population
+boundary, the flat-versus-Bockstein seam holonomy, the absence of a global
+vertex gauge, the cotangent-shadow typing, the literal all-nine-safe
+hostile, and the THM-2870 rank-one obstruction.  Normal, optimized, and
+stored output agree exactly, and both declared LF-normalized hashes match.
+The audit also confirmed that the origin-resolved `q11` values are nonzero
+and equal; only their signed origin difference vanishes.  No remaining
+mathematical, typing, or evidence defect was found.
 
 ## 6. Connection contract
 
