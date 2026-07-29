@@ -25,6 +25,23 @@ script: 04-computation/gmc_optimal_finite_laguerre_carrier_thm2815.py
 output: 05-knowledge/results/gmc_optimal_finite_laguerre_carrier_thm2815.out
 script_sha256: 7a6d9670b16cfd6db651f978438fdc0606d368adcce6c5a794b541fee6f0c262
 output_sha256: 903c60e7abaa7108b0729577ba65071350697f547988a2949397b67cec82514d
+addendum_status: >
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over R the
+  optimal Laguerre quotient splits into D simple positive nodes with the
+  strictly positive Gauss--Laguerre weights
+  1/(x_i L_D'(x_i)^2).  This is the unique D-node atomic carrier through
+  degree 2D-1, already needs D nodes through degree 2D-2, and first misses
+  degree 2D by (D!)^2.  The positive splitting is cutoff-dependent and
+  does not turn scalar factorial nullity into nodewise nullity or supply
+  the missing multiplier observations.
+addendum_audit: >
+  root/audit-2809-2026-07-28 (independent positive-root, sign-change,
+  Christoffel--Darboux normalization, complex-node uniqueness, cutoff,
+  exact quotient-trace, normal/-O/stored/hash, and scope audit: ACCEPT)
+addendum_script: 04-computation/gmc_positive_gauss_laguerre_splitting_addendum_thm2815.py
+addendum_output: 05-knowledge/results/gmc_positive_gauss_laguerre_splitting_addendum_thm2815.out
+addendum_script_sha256: b770897ec5836aa37076bc0753e0e7980bb9b1408b3f7c19d356b722bc4c3fd2
+addendum_output_sha256: 5a41f6cfef9bcf39a5117d50c746e68a3378b44402b9e521ea5100e54ab614d9
 hash_basis: LF-normalized bytes
 ---
 
@@ -278,3 +295,185 @@ dependency.  The universal statements are proved above rather than inferred
 from these finite controls.
 
 **QED.**
+
+## Independently audited addendum: the optimal quotient splits positively
+
+The rational quotient in `(9)` has a sharper real form.  Write
+
+```text
+ell_D(x)=(-1)^D D! L_D(x),                              (26)
+```
+
+with `L_D=L_D^(0)` in the standard normalization.
+
+> **Positive-splitting theorem.**  The polynomial `ell_D` has `D` simple
+> roots
+>
+> ```text
+> 0<x_1<...<x_D.
+> ```
+>
+> The evaluation map splits the optimal carrier as
+>
+> ```text
+> A_D tensor_Q R  ->  product_(i=1)^D R,
+> f                |-> (f(x_1),...,f(x_D)).             (27)
+> ```
+>
+> Its readout through degree `2D-1` is the strictly positive atomic
+> functional
+>
+> ```text
+> L(f)=sum_(i=1)^D w_i f(x_i),
+> w_i=1/[x_i L_D'(x_i)^2]
+>    =x_i/[(D+1)^2 L_(D+1)(x_i)^2]>0.                  (28)
+> ```
+>
+> This is the unique `D`-node real or complex atomic carrier through
+> degree `2D-1`, up to ordering.  Fewer than `D` nodes are impossible
+> already through degree `2D-2`.  At degree `2D` its moment is
+>
+> ```text
+> sum_i w_i x_i^(2D)=(2D)!-(D!)^2,                     (29)
+> ```
+>
+> so the first missing factorial moment is exactly `(D!)^2`.
+
+### Positive roots
+
+Equation `(5)` says that `ell_D` is orthogonal to every polynomial of
+degree below `D` for
+
+```text
+<f,g>=integral_0^infinity f(x)g(x)e^(-x) dx=L(fg).     (30)
+```
+
+Suppose `ell_D` had fewer than `D` distinct positive odd-multiplicity
+roots, and let `q` be their product.  Then `deg q<D`, while
+
+```text
+ell_D q=q^2(ell_D/q)
+```
+
+has one fixed sign on `(0,infinity)` and is not zero.  Its integral in
+`(30)` cannot vanish, contradicting `L(q ell_D)=0`.  Thus all `D` roots
+are distinct and positive.
+
+### Christoffel--Darboux weights
+
+The standard polynomials `L_0,...,L_(D-1)` are orthonormal for `(30)`.
+Put
+
+```text
+K_(D-1)(x,y)=sum_(k=0)^(D-1) L_k(x)L_k(y).             (31)
+```
+
+Christoffel--Darboux at a root `x_i` gives
+
+```text
+K_(D-1)(x_i,x_i)=x_i L_D'(x_i)^2.                     (32)
+```
+
+The cardinal polynomial
+
+```text
+lambda_i(x)=K_(D-1)(x,x_i)/K_(D-1)(x_i,x_i)
+```
+
+has degree below `D` and values `lambda_i(x_j)=delta_(ij)`.  Only its
+`L_0=1` component survives integration, so
+
+```text
+L(lambda_i)=1/K_(D-1)(x_i,x_i)=w_i>0.                 (33)
+```
+
+For `deg f<=2D-1`, divide `f=q ell_D+r` with `deg q,deg r<D`.
+Orthogonality kills the first term and cardinal interpolation integrates
+the second, proving `(28)`.  The root identity
+
+```text
+(D+1)L_(D+1)(x_i)=x_i L_D'(x_i)
+```
+
+gives the second weight formula.
+
+### Minimality, uniqueness, and first failure
+
+The Hankel-rank argument in Section 4 already proves the `D`-node lower
+bound through degree `2D-2`.  For uniqueness, delete zero weights and
+combine coincident nodes in a putative `D`-node carrier.  Minimality leaves
+exactly `D` distinct effective nodes.  Their monic node polynomial `q`
+satisfies
+
+```text
+L(x^r q)=0,                         0<=r<D.             (34)
+```
+
+The coefficient vector of `q-ell_D` lies in the kernel of the invertible
+factorial Hankel block `H_(D-1)`, even over `C`; hence `q=ell_D`.
+Vandermonde inversion then makes the weights unique.  Finally,
+`ell_D(x_i)=0` and `(10)` give
+
+```text
+sum_i w_i ell_D(x_i)^2=0,
+L(ell_D^2)=(D!)^2,                                      (35)
+```
+
+which is equivalent to `(29)`.
+
+### Exact quotient-trace certificate
+
+No algebraic root approximation is needed.  In
+
+```text
+A_D=Q[x]/(ell_D)
+```
+
+define
+
+```text
+omega_D=(D!)^2 [x ell_D'(x)^2]^(-1) mod ell_D.          (36)
+```
+
+The inverse exists because the roots are nonzero and simple, and
+
+```text
+Tr_(A_D/Q)(omega_D f)=sum_i w_i f(x_i).                 (37)
+```
+
+The addendum companion verifies `(26)--(37)` exactly for `1<=D<=12`:
+Sturm positive-root counts; squarefreeness; orthogonality and norm;
+Christoffel--Darboux and both weight normalizations modulo `ell_D`;
+all quotient-trace moments through `2D-1`; the first miss at `2D`;
+Hankel determinants; recurrence; and coprimality of successive `ell_D`.
+
+### Sharp scalar-nullity and tower boundary
+
+For `D=2`,
+
+```text
+ell_2=x^2-4x+2,                 omega_2=1-x/4.           (38)
+```
+
+The polynomial `f=x-1` has `L(f)=0` but is nonzero at both roots
+`2-sqrt(2)` and `2+sqrt(2)`.  Thus positivity of the atomic weights does
+not turn one scalar observation into nodewise zero, and it does not supply
+the multipliers in `(21)`.  The algebraic nodes depend on the cutoff and
+successive `ell_D` are coprime, so these splittings do not form a bounded
+compatible tower.  This addendum sharpens the finite carrier boundary; it
+does not prove a new NC2 or GMC statement.
+
+Reproduce the addendum by
+
+```text
+python 04-computation/gmc_positive_gauss_laguerre_splitting_addendum_thm2815.py
+python -O 04-computation/gmc_positive_gauss_laguerre_splitting_addendum_thm2815.py
+```
+
+Both modes byte-match
+
+```text
+05-knowledge/results/gmc_positive_gauss_laguerre_splitting_addendum_thm2815.out.
+```
+
+**QED (positive-splitting addendum).**

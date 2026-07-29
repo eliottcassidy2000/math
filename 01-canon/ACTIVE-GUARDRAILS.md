@@ -88,8 +88,8 @@
 27g. **Copies are not common atoms.** THM-2806 has bare-only `D3`/empty `M`; THM-2818's positive copies fail native/source/endpoint sidecars. Neither pays THM-2772.
 ## NC2 / GMC
 
-28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211 and
-    THM-2631; THM-2639 shows nonlinear two-rung ideal elimination can survive.
+28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211/THM-2631;
+    THM-2639 survives nonlinearly, but THM-2815's positive splitting still does not make a zero scalar sum nodewise or termwise.
 29. **Tournament dominance is sufficient, not iff.** MISTAKE-212.
 30. **Vandermonde nodes are not tournament scores.** MISTAKE-214; repeated
     nodes do not imply a Paley/regular wall.
