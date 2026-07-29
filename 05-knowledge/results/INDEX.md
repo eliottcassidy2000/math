@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `lrc14_semilinear_endpoint_rectangle_classification_thm2877.py` ->
+  matching `.out` [THM-2877 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  Exhaustion of all `4,429,152` affine maps, plus the
+  monomial/Cauchy--Davenport reduction and coordinatewise projective
+  census, excludes full q0/q3/q11 endpoint-rectangle bridges.  The exact
+  nearest defects are rank-one factor fibres: q0 injects into q3 with one
+  extra nine-point horizontal fibre; q3 loses/gains one ten-point vertical
+  fibre; q11 loses/gains one nine-point vertical fibre.  The q0 injection
+  preserves the character-three line but moves both named origins and
+  supplies no physical interval or ancestry action.  LF-normalized
+  `(script,output)` hashes:
+  `(10a4c965d02f9fab60f135d0bf10184096eeb70d30d0d9ef7ad4fcf5fc1aa447,9ab7526b1e268176a98f0cf21238bc4cbabad0ce30c28b6565d0ca7b9d9a751e)`.
 - `lrc14_q3_affine_defect_source_phase_annihilation_thm2876.py` ->
   matching `.out` [THM-2876 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  The nearest q3 endpoint-rectangle defect is the
