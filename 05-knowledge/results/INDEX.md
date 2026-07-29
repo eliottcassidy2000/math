@@ -14,7 +14,7 @@
   carry cocycle and seam phase `omega^3`, while an initial `C13` ancestry
   state and physical `QA->QAB` attachment remain absent.  LF-normalized
   `(script,output)` hashes:
-  `(8e75f9c9caa9482db17b40d220f5e8ef68d00d54d4ed481869f9b31ec146f1ca,fadccf2c9afa8cb386066b400ea51a0b90210ec26c0cd70d77b8354e279c0c38)`.
+  `(b379b9278f6c0d0864908bbc2da2123f4d208eb83c35738d12f651119e7a3366,35bdec6bc5b2bb3c0287bd5aee26c66e8485876e066bf423e2fadb3a94727224)`.
 - `lrc14_semilinear_endpoint_rectangle_classification_thm2877.py` ->
   matching `.out` [THM-2877 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  Exhaustion of all `4,429,152` affine maps, plus the

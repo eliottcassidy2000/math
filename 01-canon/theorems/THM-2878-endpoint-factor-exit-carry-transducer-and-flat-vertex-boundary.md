@@ -24,8 +24,8 @@ related:
   - THM-2874-endpoint-kummer-galois-clutch-and-bockstein-seam-transgression
 script: 04-computation/lrc14_endpoint_factor_exit_carry_transducer_thm2878.py
 output: 05-knowledge/results/lrc14_endpoint_factor_exit_carry_transducer_thm2878.out
-script_sha256: 8e75f9c9caa9482db17b40d220f5e8ef68d00d54d4ed481869f9b31ec146f1ca
-output_sha256: fadccf2c9afa8cb386066b400ea51a0b90210ec26c0cd70d77b8354e279c0c38
+script_sha256: b379b9278f6c0d0864908bbc2da2123f4d208eb83c35738d12f651119e7a3366
+output_sha256: 35bdec6bc5b2bb3c0287bd5aee26c66e8485876e066bf423e2fadb3a94727224
 hash_basis: LF-normalized bytes
 ---
 
@@ -183,6 +183,22 @@ with `38` distinct full-pair sets.  Each of
 occurs at exactly `26` addresses.  The minimal hostile witness is address
 `(1,0)`, whose unique full pair is `(u1,u5)`, not `(guard,u1)`.
 
+The census has a direct arc mechanism.  At address `(alpha,beta)`, with
+residues read modulo `13`, the only moving nonconstant arcs are
+
+```text
+u1={4+alpha,5+alpha},       u2={1+beta,2+beta}
+```
+
+while the guard, `u3`, `u4`, and `u5` arcs remain respectively
+`{5,6,7,8}`, `{12}`, `{9,10}`, and `{6,7}`.  A pair sees all four truth
+values exactly when its two nonconstant cyclic arcs cross.  The two target
+bits are constant in residue at each address and the deep bit is always
+dangerous, so none can enter a full pair.  For each of the seven pair types
+above there are two boundary placements and `13` choices of the unused
+address coordinate, explaining the uniform count `2*13=26` rather than
+merely recording it.
+
 At zero address, clean guard/u1 squares with the other seven bits fixed are
 
 ```text
@@ -272,17 +288,18 @@ Both have net threshold rise `2`.  The via route has extra cancelling
 down/up crossings, so every vertex filtration or signed coboundary is
 blind to the carry.
 
-The full word is finer.  Its address-uniform positive basepoint transition
-is
+At zero address, the full word has the positive basepoint transition
 
 ```text
 q12 -> q0:
 SSSDSSSSD -> SSSSSSSSD,
 ```
 
-the `u3` one-bit `D->S` event.  At zero address, exhausting all nine bits
-and both state orientations shows that `(u3,D->S)` is the unique one of
-`18` candidates whose positive-path count equals `(1)` on all `169`
+which is the one-bit `u3` event `D->S`.  The `u3` component of this
+transition is address-uniform, although the complete word transition need
+not remain one-bit away from zero address.  At zero address, exhausting all
+nine bits and both state orientations shows that `(u3,D->S)` is the unique
+one of `18` candidates whose positive-path count equals `(1)` on all `169`
 `(q,h)` edges.
 
 The all-address quantifier is subtler and sharper.  The same `u3:D->S`
@@ -293,6 +310,25 @@ Thus `48` addresses have extras.  For example, address `(7,0)` admits both
 `u1:D->S` and `u3:D->S`.  Each orientation of `u1` and `u2` occurs at only
 `13` addresses, while `u3:D->S` occurs at all `169`; hence `u3:D->S` is
 the unique **address-uniform** carry marker.
+
+Here too the counts have a transparent boundary mechanism.  An oriented
+arc event computes `kappa` exactly when its chosen boundary is the wrap
+edge `q12->q0`.  For `u1` this occurs at
+
+```text
+alpha=7  for D->S,       alpha=9  for S->D;
+```
+
+for `u2` it occurs at
+
+```text
+beta=10  for D->S,       beta=12 for S->D.
+```
+
+Each condition gives `13` addresses; their four pairwise intersections
+give the four three-candidate addresses, and inclusion--exclusion gives
+`26+26-4=48` addresses with extras.  By contrast `ell3=0` at every
+canonical address, so the `u3` boundary is fixed at the wrap edge.
 
 The event count is additive under concatenation.  All `2197` triples
 `(q,h,k)` satisfy
@@ -389,8 +425,8 @@ Normal and optimized modes byte-match the stored output.  The script has no
 executable Python `assert`.
 
 ```text
-script 8e75f9c9caa9482db17b40d220f5e8ef68d00d54d4ed481869f9b31ec146f1ca
-output fadccf2c9afa8cb386066b400ea51a0b90210ec26c0cd70d77b8354e279c0c38
+script b379b9278f6c0d0864908bbc2da2123f4d208eb83c35738d12f651119e7a3366
+output 35bdec6bc5b2bb3c0287bd5aee26c66e8485876e066bf423e2fadb3a94727224
 ```
 
 The independent audit rederived the singleton danger support, all `169`

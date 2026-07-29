@@ -440,6 +440,7 @@ def main() -> None:
     # q-labelled word orbit at every address.
     address_full_pairs = {}
     for address, canonical in endpoint_base.REPS.items():
+        alpha, beta = address
         source_orbit = tuple(
             literal_pattern(SOURCE_ATOM, residue, canonical)
             for residue in range(P)
@@ -451,6 +452,31 @@ def main() -> None:
         require(
             source_orbit == target_orbit,
             "source/target all-address word orbits differ",
+        )
+        address_danger_sets = tuple(
+            frozenset(
+                residue
+                for residue, pattern in enumerate(source_orbit)
+                if pattern[index] == "D"
+            )
+            for index in range(len(W))
+        )
+        require(
+            address_danger_sets[:6]
+            == (
+                frozenset((5, 6, 7, 8)),
+                frozenset(((4 + alpha) % P, (5 + alpha) % P)),
+                frozenset(((1 + beta) % P, (2 + beta) % P)),
+                frozenset((12,)),
+                frozenset((9, 10)),
+                frozenset((6, 7)),
+            )
+            and all(
+                danger in (frozenset(), frozenset(range(P)))
+                for danger in address_danger_sets[6:8]
+            )
+            and address_danger_sets[8] == frozenset(range(P)),
+            "all-address moving-arc formula changed",
         )
         source_pair_images = {
             (left, right): {
@@ -827,6 +853,21 @@ def main() -> None:
         },
         "all-address oriented-factor carry census changed",
     )
+    for (alpha, beta), candidates in address_marker_candidates.items():
+        expected_candidates = []
+        if alpha == 9:
+            expected_candidates.append((1, "S_to_D"))
+        if alpha == 7:
+            expected_candidates.append((1, "D_to_S"))
+        if beta == 12:
+            expected_candidates.append((2, "S_to_D"))
+        if beta == 10:
+            expected_candidates.append((2, "D_to_S"))
+        expected_candidates.append((3, "D_to_S"))
+        require(
+            candidates == tuple(expected_candidates),
+            "wrap-boundary formula stopped explaining marker candidates",
+        )
 
     def reversed_marker_exits(start, length):
         total = 0
@@ -1105,6 +1146,13 @@ def main() -> None:
         f"pair_occurrences={address_full_pair_occurrences}"
     )
     print(
+        "all_address_arc_law=u1={4+alpha,5+alpha};"
+        "u2={1+beta,2+beta};other_nonconstant_arcs_fixed;"
+        "target_bits_constant_per_address;"
+        "full_pairs_are_crossing_arcs;"
+        "each_of_7_pair_types_has_2_boundary_placements*13=26"
+    )
+    print(
         f"factor_order={FACTOR_NAMES}; danger_arcs={danger_arcs}; "
         "unique_crossing_zero_address=guard{5,6,7,8}_with_u1{4,5}"
     )
@@ -1172,6 +1220,11 @@ def main() -> None:
         f"extra_candidate_addresses={extra_marker_addresses}; "
         f"candidate_occurrences={address_marker_occurrences}; "
         "minimal_extra_witness_address_(7,0)=((1,D_to_S),(3,D_to_S))"
+    )
+    print(
+        "extra_marker_boundary_law=u1_D_to_S@alpha7,"
+        "u1_S_to_D@alpha9,u2_D_to_S@beta10,u2_S_to_D@beta12;"
+        "extra_addresses=26+26-4=48;u3_fixed_by_ell3=0"
     )
     print(
         f"positive_path_semigroup_additivity={semigroup_checks}; "
