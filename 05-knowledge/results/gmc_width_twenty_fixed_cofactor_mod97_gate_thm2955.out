@@ -1,0 +1,13 @@
+WIDTH-20 FIXED RANK-35 MOD-97 INTEGER-ROOT GATE
+support=(0, 1, 2, 20);cofactor_degree=1065
+q200_degree=19;q200_coefficients_positive=YES;minus_c300_degree=39;minus_c300_coefficients_positive=YES
+quotient_degree=931;crossing_degree=506;crossing_defined_by_exact_B425_division=YES;negative_linear_degree=425
+negative_linear_profile=-1/2^5,-1^6,-2^21,-3..-6^26,-7..-10^24,-11..-13^20,-14..-20^19
+crossing_primitive_sha256=a0176d5c76c67c931de4217da581d1599e29d573514917f416638c1d2497355a
+modulus=97;residue_nonzeros=97/97
+mod97_values=33,54,20,7,5,1,12,70,84,38,83,13,71,22,6,42,65,48,62,92,62,23,1,26,95,9,79,25,1,88,7,11,22,58,31,92,54,76,53,2,27,40,40,40,36,30,19,61,6,19,49,92,52,82,88,70,14,26,25,79,13,52,12,12,95,48,44,43,32,75,29,29,26,68,2,73,63,19,24,39,57,40,38,69,85,66,40,47,87,57,10,10,22,37,94,2,35
+mod97_values_sha256=81743f0f0a65a8c3d3b92e313b8ee73b3376cd656b9c9943d93be34f07181978
+outside_grid_direct_determinants=3
+integer_sign_runs_0_to_200=0..61:+,62..116:-,117..200:+
+all_nonnegative_integer_depths_nonzero=YES
+all_exact_checks=PASS
