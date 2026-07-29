@@ -84,18 +84,16 @@ columns have rank four but E3 rank three.  THM-2851 exposes
 `L_9L_8=T L_4` versus flat `A_5A_3=A_8`; carry fidelity costs `13` states
 (`169` jointly), and its derivative has norm `898`, ranks `12/371292`.
 THM-2852 adds full signed convolution rank and six borrow-aware arrows.
-THM-2857 makes the endpoint scalar a free Galois `C13` torsor and turns a
-first factorial exit `m<13` into `m+1` carry channels (THM-2858 gives six),
-but the proved carry is `K0`-linear, not the required semilinear clutch.
+THM-2857 gives a free Galois `C13` endpoint torsor but only `K0`-linear
+carry.
 THM-2859 gives one q0 `Z^8` germ, not an action: its forest realizes only
 `{0,4,8,9}`, with no rootless hit, square, or literal q3/q11 attachment.
 THM-2861's Hermitian edge needs adjacent co-support; THM-2863 gives Prony
-splitting.  THM-2868 builds a 26-sample frequency-`chi_3`/Kummer atlas;
+splitting.  THM-2868 builds a 26-sample frequency-`chi_3`/Kummer atlas.
 THM-2874 `F`-identifies it with the Galois orbit and realizes a `C169`
-fibre over q3.  Its collapsed seam is flat versus Bockstein holonomy
-`omega^3`: origin-resolved q11 survives but cancels signed, while q7 is
-`E3`-zero.  Common-support extension, a basepoint, and the rank-587 `V4`
-object remain; ledger `165`.
+q3 fibre; its collapsed seam is flat versus Bockstein holonomy `omega^3`.
+q11 cancels signed; q7 is `E3`-zero.  Common support, a
+basepoint, and the rank-587 `V4` object remain; ledger `165`.
 
 ### Independent routes that remain live
 
