@@ -2,8 +2,8 @@
 id: THM-2961
 title: "Ordered continuation poset and finite-group context tax"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT. For a poset-valued observable on any right monoid, pointwise
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For a
+  poset-valued observable on any right monoid, pointwise
   comparison under every continuation is the largest right-compatible
   preorder inside the original scalar order. Its symmetric kernel is the
   continuation equivalence, and for a totally ordered observable its
@@ -35,8 +35,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2961 -- ordered continuation is a poset, not a tournament
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2176 proves that equality of complete continuation profiles is the
 largest operation congruence inside equality of an observable. This theorem
@@ -472,3 +471,10 @@ Both transcripts must match
 ```
 
 byte-for-byte after LF normalization.
+
+An independent hostile audit rederived the noncommutative right-action
+typing, including an exhaustive `S_3` control, the quotient-order and finite
+perfectness arguments, the knot inequalities without assuming an exact
+off-diagonal value, every finite-group context tax, and both sharp hostiles.
+It independently reproduced the normal, optimized, and stored transcripts
+and the declared LF hashes.
