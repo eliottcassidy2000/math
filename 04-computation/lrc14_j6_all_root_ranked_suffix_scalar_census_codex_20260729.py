@@ -137,6 +137,42 @@ EXPECTED_STRATUM_DIGESTS: tuple[tuple[str, str], ...] | None = (
         "15a0440ec04159adac967812a424f8a6a4be6da26d06ed04a7eac666b60c7894",
     ),
 )
+EXPECTED_TERMINAL_BODIES: tuple[tuple[int, ...], ...] | None = (
+    (1, 2, 3, 4, 5, 6, 13),
+    (1, 2, 3, 4, 6, 7, 14),
+    (1, 2, 3, 4, 6, 11, 13),
+    (1, 2, 3, 4, 6, 12, 13),
+    (7, 8, 9, 11, 12, 13, 14),
+)
+EXPECTED_RANK13_OPEN: tuple[object, ...] | None = (
+    (
+        (1, 5, 8, 9, 11, 12, 13),
+        17,
+        13,
+        42,
+        (21, 17, 23, 19, 34, 35, 50, 28, 31, 49, 40, 46, 42),
+        "8683/42042",
+        34,
+        (
+            (37, "823/18648"),
+            (20, "3713/90090"),
+            (29, "4195/102312"),
+            (51, "116317/2858856"),
+            (30, "4769/120120"),
+        ),
+        "-2378297/11503321830",
+    ),
+)
+EXPECTED_PARITY_COUNTS: tuple[int, ...] | None = None
+EXPECTED_PARITY_STRATUM: tuple[tuple[object, ...], ...] | None = None
+EXPECTED_PARITY_RANK: tuple[tuple[object, ...], ...] | None = None
+EXPECTED_PARITY_EXTREMUM: tuple[object, ...] | None = None
+THM2895_ROOTS = (
+    (2, 8, 9, 10, 11, 13, 14),
+    (1, 3, 9, 10, 11, 12, 14),
+    (2, 5, 9, 11, 12, 13, 14),
+    (2, 3, 4, 5, 6, 7, 8),
+)
 
 
 def require(condition: bool, message: str) -> None:
@@ -339,12 +375,48 @@ def branch_line(row: dict[str, object]) -> str:
     )
 
 
+def parity_group_summary(
+    rows: list[dict[str, object]],
+    key: object,
+) -> tuple[object, ...]:
+    """Summarize the THM-2895 p=5 singleton-gate margin on a row group."""
+
+    require(rows, f"empty parity group: {key}")
+    decorated = [
+        (F(3, 7) * row["m"] - row["top5"][0][0], row)
+        for row in rows
+    ]
+    minimum_margin, minimum_row = min(
+        decorated,
+        key=lambda item: (
+            item[0],
+            item[1]["body"],
+            item[1]["rank"],
+        ),
+    )
+    return (
+        key,
+        len(rows),
+        sum(margin > 0 for margin, _ in decorated),
+        sum(margin <= 0 for margin, _ in decorated),
+        ftext(minimum_margin),
+        minimum_row["body"],
+        minimum_row["rank"],
+        minimum_row["apex"],
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--workers",
         type=int,
         default=min(os.cpu_count() or 1, 8),
+    )
+    parser.add_argument(
+        "--emit-hard-ledger",
+        action="store_true",
+        help="emit every scalar-open row with its exact top-five order data",
     )
     args = parser.parse_args()
     require(args.workers >= 1, "workers must be positive")
@@ -409,6 +481,71 @@ def main() -> None:
     )
     open_rank_distribution = tuple(
         sorted(Counter(row["rank"] for row in open_rows).items())
+    )
+    terminal_bodies = tuple(
+        root["body"] for root in roots if root["terminal"]
+    )
+    rank13_open = tuple(
+        (
+            row["body"],
+            row["K"],
+            row["rank"],
+            row["apex"],
+            row["prefix"],
+            ftext(row["m"]),
+            row["r"],
+            tuple(
+                (speed, ftext(value)) for value, speed in row["top5"]
+            ),
+            ftext(row["margin"]),
+        )
+        for row in open_rows
+        if row["rank"] == 13
+    )
+    parity_rows = [
+        (
+            F(3, 7) * row["m"] - row["top5"][0][0],
+            row,
+        )
+        for row in open_rows
+    ]
+    parity_counts = (
+        len(parity_rows),
+        sum(margin > 0 for margin, _ in parity_rows),
+        sum(margin <= 0 for margin, _ in parity_rows),
+    )
+    parity_stratum = tuple(
+        parity_group_summary(
+            [row for row in open_rows if row["stratum"] == name],
+            name,
+        )
+        for name in ("low", "one", "both")
+    )
+    parity_rank = tuple(
+        parity_group_summary(
+            [row for row in open_rows if row["rank"] == rank],
+            rank,
+        )
+        for rank in sorted({row["rank"] for row in open_rows})
+    )
+    parity_minimum_margin, parity_minimum_row = min(
+        parity_rows,
+        key=lambda item: (
+            item[0],
+            item[1]["body"],
+            item[1]["rank"],
+        ),
+    )
+    parity_extremum = (
+        ftext(parity_minimum_margin),
+        parity_minimum_row["body"],
+        parity_minimum_row["rank"],
+        parity_minimum_row["apex"],
+        ftext(parity_minimum_row["m"]),
+        (
+            parity_minimum_row["top5"][0][1],
+            ftext(parity_minimum_row["top5"][0][0]),
+        ),
     )
     nonmonotone_roots = sum(
         bool(root["closed_ranks"])
@@ -557,12 +694,56 @@ def main() -> None:
             stratum_digests == EXPECTED_STRATUM_DIGESTS,
             "stratum digests changed",
         )
+    if EXPECTED_TERMINAL_BODIES is not None:
+        require(
+            terminal_bodies == EXPECTED_TERMINAL_BODIES,
+            "terminal root bodies changed",
+        )
+    if EXPECTED_RANK13_OPEN is not None:
+        require(
+            rank13_open == EXPECTED_RANK13_OPEN,
+            "rank-thirteen survivor changed",
+        )
+    if EXPECTED_PARITY_COUNTS is not None:
+        require(
+            parity_counts == EXPECTED_PARITY_COUNTS,
+            "parity-eligibility counts changed",
+        )
+    if EXPECTED_PARITY_STRATUM is not None:
+        require(
+            parity_stratum == EXPECTED_PARITY_STRATUM,
+            "parity-eligibility stratum census changed",
+        )
+    if EXPECTED_PARITY_RANK is not None:
+        require(
+            parity_rank == EXPECTED_PARITY_RANK,
+            "parity-eligibility rank census changed",
+        )
+    if EXPECTED_PARITY_EXTREMUM is not None:
+        require(
+            parity_extremum == EXPECTED_PARITY_EXTREMUM,
+            "parity-eligibility extremum changed",
+        )
+    require(
+        set(terminal_bodies).isdisjoint(THM2895_ROOTS),
+        "scalar terminal roots overlap the four THM-2895 roots",
+    )
 
     print("LRC14 j6 all-root ranked-suffix scalar census")
+    if args.emit_hard_ledger:
+        for row in open_rows:
+            print("HARD;" + branch_line(row).rstrip())
     print(f"counts={counts}")
     print(f"stratum_counts={stratum_counts}")
     print(f"open_branches_per_root={open_distribution}")
     print(f"open_rank_distribution={open_rank_distribution}")
+    print(f"terminal_bodies={terminal_bodies}")
+    print(f"rank13_open={rank13_open}")
+    print("terminal_bodies_disjoint_from_THM2895=PASS")
+    print(f"parity_eligibility_counts={parity_counts}")
+    print(f"parity_eligibility_stratum={parity_stratum}")
+    print(f"parity_eligibility_rank={parity_rank}")
+    print(f"parity_eligibility_extremum={parity_extremum}")
     print(f"extrema={extrema}")
     print(f"complete_ledger_sha256={ledger_digest}")
     print(f"stratum_ledger_sha256={stratum_digests}")
