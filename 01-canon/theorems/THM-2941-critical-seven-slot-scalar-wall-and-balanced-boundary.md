@@ -8,8 +8,8 @@ status: >
   hypothetical Gram is (h/49)(7I-J).  Aligned safe surplus bounds the first
   drift absolutely for k>=2.  The lossless projected residual closes the
   five-aligned/two-drift face independently of THM-2928, and exact suffix
-  filters make k=2,3,4 uniformly finite-reducible; a frontier-row addendum
-  improves the k=3 first-drift cap from 380 to 379; k=6,7 are already empty.
+  filters make k=2,3,4 uniformly finite-reducible; two frontier addenda
+  improve the k=3 first-drift cap from 380 to 378; k=6,7 are already empty.
   The zero/one-aligned sector, the remaining finite censuses, the full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is
   internal exact computation and proof audit; there is no Lean or external
@@ -41,6 +41,10 @@ verification:
   - 05-knowledge/results/lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.out
   - 04-computation/lrc14_j7_k3_frontier_fibre_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_frontier_fibre_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_next_frontier_scalar_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_next_frontier_scalar_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_next_frontier_scalar_independent_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_next_frontier_scalar_independent_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -670,15 +674,50 @@ z_4 in {1164,1220,1358,1500,1836}.
 All five packets pass scalar capacity, but each has a body-support fibre
 larger than the sum of the four sharp divisor-fibre caps: four have margin
 `3` at `q=420`, and the `z_4=1358` packet has margin `1` at `q=140`.
-Thus the current projected `k=3` first-drift cap is `379`.  This is one
-closed frontier row, not a census of the remaining `376,019` necessary
-rows.  Ordinary and optimized replays are byte-identical; script/output
+Thus, before testing the next integer, the projected `k=3` first-drift cap
+was `379`.  This is one closed frontier row, not a census of the remaining
+`376,019` necessary rows.  Ordinary and optimized replays are byte-identical; script/output
 SHA-256 are
 
 ```text
 64f98439f677668c82045e7f9107cbfdff467afd8f16975c7e37d8ae5c5c9f26
 a1c77b24488240f1ee0295e427ee4583b7d8215caf6615f424bf325350fb56b6.
 ```
+
+The next integer row is empty already at the scalar suffix level.  At
+`z_1=379`, the rigorous all-tail bound leaves `2,579` of the `3,003` body
+rows for exact evaluation.  Exact singleton integration through `H=7,000`,
+with three distinct later drifts, the projected high-label slot, and
+THM-1094 padding for every omitted label, leaves zero rows.  The closest
+strict rejection is again
+
+```text
+E=(1,4,8,10,12,14),
+upper-lower=-4741191283/1316479619000.
+```
+
+The live positive control reconstructs the preceding `z_1=380` body and its
+positive scalar margin `437649/1736780500`.  An independent rational-interval
+carrier and guarded vector primitive reproduce the complete `2,579`-row
+semantic digest
+
+```text
+48ab29334a93fd0087d9645513be14f884a30bd014c2f05329c1f7d0c295d4ee.
+```
+
+Therefore the current projected `k=3` first-drift cap is `378`.  The source
+and output hashes for the integer-ruler referee and independent audit are
+
+```text
+88c563a247d59b2d9feb552935d91a2bbc5018beeed56df74c84a37a1174894b
+12c1d60a6f1caf7f3a36a9bc890c388b4e44833a474e233038b5f79599715ae3
+bd22ce0f86d9f5e359c2a940e0f8133849616e9aa9fc67eb823632ec9371f16d
+ea7f6f2c9b189ffa4940fc25c58c74b13af905aed0fc7a6dc02266869775de77.
+```
+
+This removes no additional member of the old `376,020` necessary-row ledger:
+there was no `z_1=379` row in it.  After the separate `z_1=380` packet
+closure, `376,019` necessary rows remain.
 
 For `k=5`, there is a second, Gram-facing derivation.  Pointwise
 

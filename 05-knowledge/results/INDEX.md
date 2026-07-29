@@ -19,10 +19,21 @@
   [THM-2941 SCOPED PROVED + FINITE-EXACT + VERIFIED].  The unique projected
   `k=3` row at maximal first drift `z_1=380` has exactly five finite suffix
   packets after a rigorous omitted-label tail; all five fail an all-divisor
-  fibre cap.  Hence the current `k=3` first-drift cap is `379`, with no
-  claim on the remaining `376,019` necessary rows.  Script/output SHA-256:
+  fibre cap.  The primary and independent
+  `lrc14_j7_k3_next_frontier_scalar_*_thm2941.py` referees then show that
+  `z_1=379` has no projected scalar row on any of the `3,003` bodies:
+  `2,579` crude all-tail survivors reduce to zero exact rows, with closest
+  strict gap `-4741191283/1316479619000` and a live positive `z_1=380`
+  control.  Hence the current `k=3` first-drift cap is `378`, with no
+  claim on the remaining `376,019` necessary rows.  Frontier script/output:
   `64f98439f677668c82045e7f9107cbfdff467afd8f16975c7e37d8ae5c5c9f26` /
-  `a1c77b24488240f1ee0295e427ee4583b7d8215caf6615f424bf325350fb56b6`.
+  `a1c77b24488240f1ee0295e427ee4583b7d8215caf6615f424bf325350fb56b6`;
+  next-row primary and independent source/output pairs:
+  `(88c563a247d59b2d9feb552935d91a2bbc5018beeed56df74c84a37a1174894b,`
+  `12c1d60a6f1caf7f3a36a9bc890c388b4e44833a474e233038b5f79599715ae3)`
+  and
+  `(bd22ce0f86d9f5e359c2a940e0f8133849616e9aa9fc67eb823632ec9371f16d,`
+  `ea7f6f2c9b189ffa4940fc25c58c74b13af905aed0fc7a6dc02266869775de77)`.
 - `lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.py`, together
   with the scalar-wall and projected-suffix verifiers, -> matching `.out`
   files [THM-2941 PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY
@@ -31,7 +42,7 @@
   impossible and its hypothetical Gram is `(h/49)(7I-J)`.  Aligned
   safe-surplus plus the lossless projected residual gives rigorous first-drift
   caps `2,142/380/182/66` for `k=2/3/4/5` alignments and empties `k=6`; the
-  scoped frontier addendum improves the current `k=3` cap to `379`.
+  scoped frontier addenda improve the current `k=3` cap to `378`.
   For `k=5`, exact prefix incidence kills all `42,912` high-excess and
   `194,073` subcritical drift pairs, minimum margin `1/378105`; THM-2928
   independently closes the same face by divisor/address masks.  With

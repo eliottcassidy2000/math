@@ -29,7 +29,7 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 Direct frontier: `<=6`.  On `3,003` six-body roots THM-2941 gives wall `h/7`
 and no zero-excess cover.  THM-2928/2941 empty aligned `k>=4`; caps
-`2142/379` make `k=2,3` finite.  Those censuses, `k<=1`, the rung, and LRC are open.
+`2142/378` make `k=2,3` finite.  Those censuses, `k<=1`, the rung, and LRC are open.
 Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams but not semantic-root identification (kernel `28,393`); THM-2545/2549 give Hall and chronology gates,
 still old-target neutral; THM-2547 is only an external control after

@@ -1,0 +1,12 @@
+LRC14 projected k=3 next-frontier scalar closure
+suffix_source_sha256=a003d287f618eb301edf6974d0b67dc128c4f380a169e7809ed5b5754e8b8303
+suffix_output_sha256=61e16aab8a368881c574047e576645e6b41837dc9f804f7a78d37230d843612b
+universe=six_body_roots=3003;first_drift=379;three_distinct_later_drifts;nonzero_mod_L;exact_horizon=7000
+omitted_tail=delta(z)<=6r/(49z);projected_high_wall=max(15,floor(13L/132)+1)
+crude_all_tail_rows=2579
+exact_projected_scalar_rows=0
+closest_rejection=E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;high=1159;z1=379;delta1=-2087/3119928;suffix=1500:237/171500,380:1531/391020,492:2981/843780;lower=1049/89180;upper=826476859/101267663000;gap=-4741191283/1316479619000
+positive_control=E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;high=1159;z1=380;delta1=1531/391020;suffix=1500:237/171500,492:2981/843780,410:2687/843780;lower=1049/89180;upper=401287/33399625;gap=437649/1736780500
+conclusion=projected k=3 first-drift cap improves 379->378
+semantic_sha256=48ab29334a93fd0087d9645513be14f884a30bd014c2f05329c1f7d0c295d4ee
+all_exact_controls=PASS
