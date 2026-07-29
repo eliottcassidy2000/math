@@ -22,7 +22,9 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 1. **LRC(14) is the first unresolved runner count in the present literature.**
    The cited lower cases are scoped in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md);
-   THM-741/2883/2888/2892 close normalized `v_8<=14`; next: `3432` roots. THM-2436 closes deep-`c_3`; `165` rows remain.
+   THM-741/2883/2888/2892 close normalized `v_8<=14`; THM-2896 gates the
+   `3432` next roots and THM-2895 closes four of them.  THM-2436 closes
+   deep-`c_3`; `165` rows remain.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see

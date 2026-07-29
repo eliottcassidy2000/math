@@ -14,6 +14,7 @@ depends_on:
 related:
   - THM-2894-unmarked-residual-semilattice-order-and-group-clutch-no-go
   - THM-2896-seven-body-adaptive-six-cover-hitting-gate-atlas
+  - THM-2897-partition-cap-tropical-convolution-and-alternating-pair-ladder
 verification:
   - 04-computation/lrc14_j6_h4_pair_residual_exact_kernel_codex_20260729.py
   - 04-computation/lrc14_j6_suffix_parity_flag_closure_thm2895.py
