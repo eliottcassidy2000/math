@@ -1,5 +1,5 @@
 ---
-id: THM-2889
+id: THM-2890
 title: "Discrete-Newton closure of the strict consecutive GMC wedges"
 status: RESERVED / UNPROVED EMPTY STUB
 source: codex/gmc-low-sector-newton-2026-07-29
@@ -8,7 +8,7 @@ related:
   - THM-2879-all-shift-cubic-null-endpoint-holonomy-exit
 ---
 
-# THM-2889 -- discrete-Newton closure of the strict consecutive GMC wedges
+# THM-2890 -- discrete-Newton closure of the strict consecutive GMC wedges
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
