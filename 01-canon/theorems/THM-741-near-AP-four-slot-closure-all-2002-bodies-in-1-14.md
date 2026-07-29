@@ -1,10 +1,12 @@
 ---
 id: THM-741
 title: NEAR-AP FOUR-SLOT CLOSURE — every 13-speed family with AT LEAST 9 speeds in {1,…,14} satisfies LRC(14). Equivalently, for EVERY 9-element body E ⊆ {1,…,14} (all C(14,9)=2002) and all v₁<v₂<v₃<v₄ not in E, {E,v₁..v₄} is lonely. Proof = the THM-735 Bonferroni tree at j=4: legs J4 (one inequality, all four ≥ V₁(E)) / J3 (per-v₁ exact bodies) / J2 (per-(v₁,v₂)) / J1 (per-(v₁,v₂,v₃) tail) / bottom (exact-ℚ sweeps of covering quadruples via lcm-multiples) — with PROVED P1/P2 LEMMA-SKIPS at every level (subtrees where the next Bonferroni threshold already fires from the parent's exact data close without computing the child body; sound because P1/P2 are one-level bounds off exact data)
-status: CLAIMED globally; 595/2002 root bodies now proved uniformly.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not harvested.  Exact addenda prove all 21/21 whole flood bodies.  An all-root coverage atlas proves every pure-tail extension 15<=a<b<c<d for exactly 584/2002 roots; THM-738 closes their complementary small-speed extensions, making 584 whole-root closures.  Exactly ten flood roots lie in that atlas set, so the eleven separately repaired flood exceptions raise the proved union to 595 roots.  These proofs use literal root carriers plus the THM-735(ii) covariance cap, not Fano transport.  The remaining 1407-root discharge and global LRC(14) stay open.
-source: kind-pasteur-2026-07-13-S128 (cont.5); exact flood/completed-family addenda codex-2026-07-15/18; all-root atlas codex-2026-07-28
+status: PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY PROOF-AUDITED.  Every one of the 2002 nine-element bodies in {1,...,14} closes uniformly for four further distinct speeds.  The exact partition is 584 top-four-positive roots, 816 finite rank-feasible heads, and 602 rank-impossible roots closed by ranked-apex carrier recursion plus a weighted hitting gate.  THM-738 supplies the complementary branch whenever a further speed is at most 14.  This proves the full near-AP theorem stated here, not unrestricted LRC(14), which remains open.
+source: kind-pasteur-2026-07-13-S128 (cont.5); exact flood/completed-family addenda codex-2026-07-15/18; all-root atlas codex-2026-07-28; ranked-head/apex closure root-2026-07-29
 depends_on:
   - THM-735   # the simultaneous multi-peel lemma (j=4,3,2,1 legs) + P1/P2 peel lemmas (THM-733)
+  - THM-738   # every extension acquiring a tenth in-window speed
+  - THM-2883  # ranked-apex hitting closure of the 602 rank-impossible roots
   - THM-731 / THM-732 / THM-366
 related:
   - THM-734 (j=2, 364 bodies), THM-738 (j=3, 1001 bodies) — this is rung j=4 of the same ladder
@@ -51,6 +53,10 @@ verification:
   - 05-knowledge/results/lrc14_j4_label1_head_tail_partition_codex_20260728.out
   - 04-computation/lrc14_thm741_all_root_pure_tail_top_four_atlas_codex_20260728.py
   - 05-knowledge/results/lrc14_thm741_all_root_pure_tail_top_four_atlas_codex_20260728.out
+  - 04-computation/lrc14_thm741_all_rank_feasible_head_atlas_codex_20260728.py
+  - 05-knowledge/results/lrc14_thm741_all_rank_feasible_head_atlas_codex_20260728.out
+  - 04-computation/lrc14_thm741_residual_apex_hitting_closure_codex_20260729.py
+  - 05-knowledge/results/lrc14_thm741_residual_apex_hitting_closure_codex_20260729.out
   - 04-computation/lrc14_thm741_sharded_resume_runner_codex_20260717.py
   - 05-knowledge/results/lrc14_thm741_sharded_resume_runner_codex_20260717.out
 ---
@@ -1607,3 +1613,330 @@ bodies are present.  Its self-test proves the partitions for `1<=s<=16` are
 disjoint, exhaustive, and balanced; six shards have sizes
 `334,334,334,334,333,333`.  This repairs the computation path but does not
 promote the unharvested `290/2002` ledger or add any unrun body claim.
+
+## All rank-feasible heads: 816 further roots (codex-2026-07-29)
+
+Retain the notation `(B31)`--`(B34)`.  For a root with nonpositive
+top-four margin, let
+
+```text
+R_E=m_E-q_1(E)-q_2(E)-q_3(E).                         (B35)
+```
+
+The all-root census splits the `1418` nonpositive rows exactly as
+
+```text
+R_E>m_E/7: 816,                 R_E<=m_E/7: 602.       (B36)
+```
+
+Call the first condition rank-feasible; this is a name for the present
+certificate, not a claim that the other rows are mathematically impossible.
+For a rank-feasible root define
+
+```text
+H_E={w>=15:c_E(w)>=R_E}.                              (B37)
+```
+
+By the strict THM-735(ii) bound `(B32)`, every member of `H_E` lies below
+
+```text
+T_E=(99/70)r_E/[7(R_E-m_E/7)].                        (B38)
+```
+
+Thus `H_E` is finite and is reconstructed exactly by scanning through
+`ceil(T_E)-1`.  If a quadruple `Q` is not contained in `H_E`, choose
+`w in Q\H_E`.  The other three individual coverages are bounded by the
+global top three, so
+
+```text
+sum_(v in Q)c_E(v)
+ <=q_1+q_2+q_3+c_E(w)
+ <q_1+q_2+q_3+R_E=m_E.                               (B39)
+```
+
+The union bound therefore closes it.  A head quadruple whose coverage sum
+is below `m_E` closes for the same reason.  Only the finite head tuples with
+sum at least `m_E` require literal carriers.
+
+The exact head-size distribution has `K=|H_E|` between `4` and `10519`.
+The largest analytic threshold and the largest actual head speed occur at
+
+```text
+E={2,3,4,6,7,8,9,10,14},
+T_E=42810768/145,       ceil(T_E)=295247,
+max(H_E)=90850,         |H_E|=10519.                  (B40)
+```
+
+Across the `816` roots there are exactly `63,265` head quadruples satisfying
+the dangerous sum condition.  The companion checks all of them.  It also
+retains the older exhaustive positive control for every `K<=10` head:
+
+```text
+sum_(K=4)^10 #{E:|H_E|=K} binom(K,4)=18,964,
+```
+
+of which `2,299` are dangerous and `16,665` are union-safe.  Consequently
+the literal endpoint ledger has `79,930` rows.  Its historical `KLE10`
+candidate-header uses the word `dangerous` for all `18,964` exhaustive
+small-head controls; the separate exact count above is the authoritative
+predicate.  Every one of the `79,930` literal survivors is positive and
+none is tight.
+
+The minimum over the full literal ledger is
+
+```text
+362/30107
+```
+
+at the thirteen-speed family
+
+```text
+{1,4,5,6,7,10,11,12,13,16,17,18,23};
+```
+
+this attainer is itself dangerous.  The minimum component count is six,
+with least measure among those rows
+
+```text
+577/22610
+```
+
+at
+
+```text
+{2,3,5,7,8,9,11,12,13,15,17,19,20},
+```
+
+again a genuinely dangerous row.
+
+Exactly five rank-feasible roots were already among the eleven flood
+repairs outside the top-four-positive atlas:
+
+```text
+(2,3),(2,5),(2,6),(2,7),(3,7).
+```
+
+Thus this layer adds `816-5=811` roots beyond the previous proved union.
+The exact partition at this stage is
+
+```text
+584 top-four-positive
++816 rank-feasible
++  6 rank-impossible flood
+=1406 proved roots, leaving 596 non-flood rank-impossible roots. (B41)
+```
+
+As before, these are whole-root closures: a pure-tail extension is proved
+above, while any extension with an added speed at most `14` has at least ten
+in-window speeds and is covered by THM-738.
+
+The canonical body digests are
+
+```text
+rank-feasible 4db4ae0257114fc91e1a4cd5ad05bdd563f576a7d5dacb15f2d3ba98c9abd47e
+rank-impossible a4ad9f9b5a8ce16103450ac05684cd13ec33637e8e3737218a9186086cd639d4
+proved union e79dc2d7e2a77adfe0901c9fdcc198c6d3f2338bda9d36ba0d5f02e2b8c46133
+residual cd7d255516269e2ccc57a43dfc4d3e5eed2f7d364e9fce82d09cd7d651b7a0b9.
+```
+
+The full classification-ledger digest is
+
+```text
+d89f6ec420e8b2418b97658a3b4499fa4eb0c489be674c8dd6744061805aad71.
+```
+
+The script and output hashes are
+
+```text
+script ee1424972d5f35f6f1e8c6dba6a878fb172c36580936fbc35355531c68c8903e
+output b6c031ca3ea75756fbb28e42370d9da7c59ba4b7bca92a769b0640adc51f928a.
+```
+
+Normal and optimized runs reproduce the stored output byte for byte.
+The exact batched periodic primitive is checked against a scalar Fraction
+primitive and the core sparse subtraction; cached triple subtraction is
+checked against simultaneous subtraction.  An independent proof audit
+verified the global-head seal, strict/equality directions, all monotone
+prunes, the legacy `KLE10` distinction, both reported extremizers, the
+integer overflow guard, and the complete root partition.  This addendum
+proves the stated `816` roots.  The next addendum treats the residual
+`596`; unrestricted LRC(14) is a separate, broader problem. ∎
+
+## Ranked-apex transversal: the remaining 602 roots (codex-2026-07-29)
+
+The preceding section's `596` was the residual after using a separate flood
+repair.  The final verifier instead applies one mechanism to all `602`
+rank-impossible roots in `(B36)`, including those six flood roots.  This
+supersedes that intermediate bookkeeping without invalidating it.
+
+For such a root, rank all individual tail coverages
+
+```text
+q_1(E)>=q_2(E)>=...,
+```
+
+breaking ties by the smaller speed.  The strict THM-735(ii) cap seals these
+ranks globally after a finite scan.  In every one of the `602` roots,
+
+```text
+q_11(E)+q_12(E)+q_13(E)+q_14(E)<m_E.                 (B42)
+```
+
+The least margin in `(B42)` is
+
+```text
+67759/5045040
+```
+
+at
+
+```text
+E={1,2,3,5,7,8,9,11,13}.
+```
+
+The largest rank-fourteen scan endpoint is `989`, at
+
+```text
+E={1,2,8,9,10,11,12,13,14}.                          (B43)
+```
+
+Consequently any quadruple whose individual coverage sum is at least `m_E`
+contains one of the ten globally highest-coverage speeds.  Call those speeds
+the root's apices.
+
+For every root-apex pair `(E,a)`, remove the apex comb and put
+
+```text
+G_(E,a)=G_E\D_a,                  m_(E,a)=|G_(E,a)|.
+```
+
+There are `6020` such carriers.  Exact global ranking of their remaining
+individual coverages gives
+
+```text
+4272 direct carriers:
+     p_1+p_2+p_3<m_(E,a);
+
+1657 rank-two carriers:
+     p_1+p_2+p_3>=m_(E,a),
+     R_(E,a)=m_(E,a)-p_1-p_2>m_(E,a)/7;
+
+91 nominal failures, on 64 distinct roots.              (B44)
+```
+
+The direct inequality closes every residual triple by the union bound.  In
+the rank-two case the strict excess above `m_(E,a)/7`, together with the same
+THM-735(ii) cap, makes
+
+```text
+H_(E,a)={w>=15, w!=a : c_(E,a)(w)>=R_(E,a)}
+```
+
+finite.  Every triple not contained in this head is union-safe.  Among the
+head triples, exactly `29,622` have individual coverage sum at least the
+carrier mass; literal exact subtraction leaves positive measure in every
+case, with no tight row.  The global minimum survivor is
+
+```text
+183/43792
+```
+
+at
+
+```text
+E={1,3,4,7,9,10,11,12,13},   a=16,
+triple={17,19,23},             components=6.          (B45)
+```
+
+It remains to explain why the `91` nominal carrier failures do not leave a
+root failure.  This is the reusable combinatorial core.  For a fixed root let
+`C_E` be the apices whose carriers are direct or rank-two closed, and let
+`F_E` be the failed apices.  Any dangerous quadruple that meets `C_E` is
+closed recursively on the corresponding carrier.  A dangerous quadruple
+avoiding `C_E` must lie in
+
+```text
+F_E union {global coverage ranks 11,12,...}.
+```
+
+The four largest coverages in this complement are read exactly from the failed
+top-ten apices together with ranks `11,...,14`: the latter already supply four
+entries, so no rank `15` or worse can enter its top four.  On every root their
+sum is strictly below `m_E`.  The least hitting margin is
+
+```text
+57684167/7467740280
+```
+
+at
+
+```text
+E={1,3,4,5,7,9,10,11,13},
+complement top four={23,17,53,72}.                    (B46)
+```
+
+Thus every dangerous quadruple hits a closed apex, while every quadruple that
+avoids the closed apices is union-safe.  This weighted apex-transversal
+argument closes all `602` rank-impossible pure-tail roots.
+
+Combining the disjoint root classes gives
+
+```text
+584 top-four-positive
++816 finite rank-feasible heads
++602 ranked-apex transversal roots
+=2002/2002 pure-tail roots.                           (B47)
+```
+
+If one of the four added speeds is at most `14`, then the family has ten
+in-window speeds and THM-738 closes the other three slots.  Hence `(B47)`
+proves the whole-root statement of THM-741.
+
+The frozen 602-root ledgers have digests
+
+```text
+rank-impossible roots
+a4ad9f9b5a8ce16103450ac05684cd13ec33637e8e3737218a9186086cd639d4
+
+rank-fourteen/apex seal
+af026722b290a2e578ded6f105722a104836a2cab31dee2272d836a7a7c14ecf
+
+carrier classification
+24a4b9b07424b23f6fe334f84c45ef45efa0e2c5ea695d402d1be88687bd87e0
+
+closed-apex hitting gate
+f6c5f21c5a16651b69a681d2709a498b83cabf6bc845cce27dfd37ff0b8cc000
+
+rank-two candidates
+9df78b9841ba5fbac29b49965dd45498656d5093d377d16c8929699bcb308243
+
+literal endpoints
+dbef39aa9b7d681706321835dfd34143c1303392c58ea5788a41c24aa05780a4.
+```
+
+The script and stored-output hashes are
+
+```text
+script a5f3dcc1a23defea4b3dc067675d83141f1866022d6d01946617a97de69e5b0e
+output 3d15be210ca1637a5a63942248758af48b90d2f469c7a4244320d8bcaec5b24c.
+```
+
+Normal and optimized executions byte-match the stored transcript.  The
+companion independently reconstructs the `584+816+602` partition, checks all
+`6020` local apex subtractions against the original core, makes two
+vector/scalar coverage comparisons per carrier, and checks one
+cached/sequential/simultaneous literal subtraction on every rank-two carrier.
+An independent audit verified the strict tail seals, equality retention,
+carrier quantifiers, integer-overflow bound, four-sentinel complement, and
+weighted-transversal implication.
+
+There is also a useful anchored normal form.  Fix a runner whose loneliness is
+being tested, take the absolute relative integer speeds, and divide by their
+common gcd.  A repeated absolute speed leaves at most twelve distinct danger
+combs, so settled LRC through thirteen total runners (as used in THM-2058,
+Section 4) gives the stronger distance `1/13`.  If the thirteen absolute
+speeds are distinct but at least nine lie in `{1,...,14}`, THM-741 applies.
+Therefore any bad anchored LRC(14) instance must have thirteen distinct
+primitive absolute speeds and ninth order statistic at least `15`.  This
+statement concerns the bad observer; it does not assert simultaneous sparsity
+after recentering at every runner.  Unrestricted LRC(14) remains open. ∎
