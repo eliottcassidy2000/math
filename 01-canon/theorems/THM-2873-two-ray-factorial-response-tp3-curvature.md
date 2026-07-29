@@ -370,6 +370,13 @@ when `a=1` one transport endpoint also touches the sharp row `n=0`
 boundary `(29)`.  No closure of the shared cubic--quartic multipole line is
 claimed.
 
+**Subsequent completion on this family.**  THM-2879 retains THM-2855's
+exact linear subresultant along the whole positive cubic-null branch and
+proves the mixed sign `(32)` for every integer `a>=1`.  Separate TP3
+curvature still does not imply that comparison; the new input is the
+coefficientwise-negative endpoint pseudo-remainder.  The general mixed
+four-slot line remains open.
+
 ### 5.1 The canonical THM-2846 cell exits at the endpoint
 
 The specific cubic-null cell of THM-2846 is
@@ -451,8 +458,8 @@ Therefore the canonical THM-2846 cubic line is not a shared quartic line;
 the midpoint defect never needs to be tested.  This strengthens the
 mechanism attached to that one hostile from “fourth moment nonzero” to a
 strict, rectangle-stable endpoint-holonomy mismatch.  It does not extend
-`(40)` to every shifted cell in `(31)` or to an arbitrary four-slot
-cone-cutting plane.
+`(40)` by itself.  THM-2879 subsequently extends `(40)` to every shifted
+cell in `(31)`, but not to an arbitrary four-slot cone-cutting plane.
 
 ## 6. Universal TP3 lead: finite-exact only
 

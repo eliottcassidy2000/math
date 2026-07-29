@@ -491,7 +491,8 @@ Both modes byte-match the stored transcript.  The companion verifies:
 The theorem leaves open:
 
 ```text
-the TP3/secant inequality;
+the general TP3/mixed-secant inequality
+  (THM-2879 closes only the THM-2855 shifted high-tooth family);
 the sign of the midpoint defect if endpoint holonomy vanishes;
 the cone-avoiding and cone-boundary chambers;
 the a_0=0 integration-by-parts correction;

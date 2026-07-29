@@ -7,8 +7,9 @@ status: >
   pair (x_n,y_n) for which the quadratic factorial moment on
   span{d_n+x_n d_(n+2), d_(n+1)+y_n d_(n+2)} divides the cubic.
   The intersection is transverse.  The branch has an exact real-analytic
-  expansion at infinity, and its fourth factorial moment escapes for all
-  sufficiently large n.  All-depth fourth-moment escape is not claimed.
+  expansion at infinity, and this theorem proves eventual fourth factorial
+  escape.  THM-2879 subsequently proves strict endpoint exit, hence
+  fourth-moment escape, at every integer depth n>=1.
 source: root/gmc-shifted-transverse-family-2026-07-28
 depends_on: []
 related:
@@ -295,6 +296,11 @@ This is the load-bearing blow-up.  Applying the implicit-function theorem
 directly to `(20)` would be invalid because of the squared limiting line.
 
 ## 4. Eventual fourth-moment exit
+
+**Current completion.**  This section proves the eventual statement by
+asymptotics.  THM-2879 now fills the finite bridge exactly: its universal
+negative endpoint-holonomy pseudo-remainder proves fourth-moment escape for
+every integer `n>=1`.
 
 Let
 

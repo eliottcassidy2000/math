@@ -211,7 +211,7 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   detects every binary positive-cone plane. THM-2848 reduces the four-slot
   bad locus to `F^o=0` or a shared cubic--quartic multipole line.  THM-2866's
   cubic Pascal ratio excludes `F^o=0`
-  uniformly.  THM-2873 exits THM-2846's cell; THM-2872's general mixed sign is open.
+  uniformly.  THM-2879 excludes all THM-2855 shifted cells; the general mixed sign is open.
   THM-2849 closes the first window on 1,820 supports through exponent `15`;
   THM-2854 closes `k=1,2` on 252 supports in `{0,...,8}`, all by exact sharp
   Macaulay rank.  THM-2860 identifies Euler-tangent cubic lines with Möbius
