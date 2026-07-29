@@ -24,6 +24,24 @@ the annealer's horizon is short (likely at some level), or the game
 genuinely prices the same difficulty the human ladder priced — both
 readings make the workbench a faithful instrument.
 
+## The freedom dichotomy (end-of-session synthesis)
+
+Label-position freedom vs best found score (all on tiny shapes, exact):
+
+| label dependence allowed | valid under | record |
+|---|---|---|
+| step only (e_i) | BOTH formats | **2 exactly** ([2,2,2], 1200-step anneal never beat it — the same shape richer games crack in <200 steps) |
+| prefix + step | verifiable | 13/7 |
+| step + suffix (+merges) | intuitive (same-H) | 9/5 |
+| both (+merges) | superset only | 7/4 (merge-free) / 12/7 |
+
+Reading: the sub-2 difficulty lives EXACTLY in position-dependent labels —
+the freedom the two benchmark formats distribute to opposite sides
+(prefix vs suffix). Any compilation lemma between the formats must
+transport position-dependence across the prefix/suffix divide; the
+intersection game appearing floored at 2 says there is no neutral ground.
+(Empirical; annealing-horizon caveat applies everywhere.)
+
 ## The 7/4 witness (per-suffix game, [2,2,2], m=10, r=4, n=8, t=0)
 
 Coordinates (a,b,c) ∈ {1,2}³; slot ((prefix),(suffix)) → label; a-axis =
