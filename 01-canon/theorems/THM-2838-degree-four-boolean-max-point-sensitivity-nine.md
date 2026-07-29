@@ -2,8 +2,8 @@
 id: THM-2838
 title: "Degree-four Boolean functions have maximal point sensitivity nine; record exponent needs degree >= 5"
 status: >
-  FINITE-EXACT, SINGLE ENGINE WITH BIDIRECTIONAL CONTROLS — AWAITING
-  INDEPENDENT ENGINE AUDIT.  CP-SAT decides (d,s)=(4,10) INFEASIBLE
+  FINITE-EXACT, TWO INDEPENDENT ENGINES (OR-Tools CP-SAT + HiGHS MIP),
+  both with bidirectional controls.  CP-SAT decides (d,s)=(4,10) INFEASIBLE
   (n=10, 375 free bits, 97 s wall), so no Boolean function of real degree
   <= 4 has 10 sensitive coordinates at any input; NAE∘NAE attains 9, so
   m(4) = 9 sharp.  The same encoder returns SAT on (4,9) (control) and its
@@ -22,7 +22,7 @@ related: []
 script: 04-computation/sens_degree_fullsens_cpsat_macmini_S171.py
 output: 05-knowledge/results/sens_degree_fullsens_m4_macmini_S171.out
 script_sha256: 87b02cd493e5daa957093bad84c13c8f9bfed978299142227db3a63d7913a61e
-output_sha256: 402aed3ff07dac3cddd1b7b525f09f8c2c15c2b42f898c98fe0344a5cc1b0eb8
+output_sha256: 95854b68f416c2137bca96fe32ba1f26ce2de18d693919e3f53be1cb587df41e
 hash_basis: LF-normalized bytes
 ---
 
@@ -50,9 +50,10 @@ Controls through the *same code path*:
     (UNSAT direction validated against a second engine).
 Raw exhaustive C DFS on (4,10) was abandoned at 4.3e9 nodes (~1% of tree);
 (4,7)/(4,8) solution libraries are too large for a layered second engine.
-An independent engine (e.g. PB-SAT with DRAT proof, or orbit-canonical DFS)
-is REQUESTED before promotion past audit; until then treat m(4)=9 as
-verified-single-engine.
+SECOND ENGINE: HiGHS MIP (independent codebase) returns kInfeasible on
+(4,10), feasible on (4,9), kInfeasible on (3,7); the LP relaxation of (4,10)
+is feasible, so the obstruction is genuinely integral.  Two-engine standard
+met; external hostile audit welcome as usual.
 
 ## Superadditivity lemma (PROVED, elementary)
 
