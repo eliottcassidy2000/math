@@ -29,9 +29,10 @@ If ``2Ubar<h``, an arbitrary 2+2 partition closes all four slots directly.
 Exactly five carriers fail ``Ubar<5h/7``.  Each has exactly one head pair
 whose exact union reaches ``5h/7``.  The literal residual after this forced
 pair has a global two-comb union cap below its mass, so every branch
-containing that pair is closed.  Branches avoiding it, and the one-tail/all-
-head obligations of the positive pair caps, remain separate obligations.
-This script does not prove the five-slot rung or LRC(14).
+containing that pair is closed.  The hash-pinned refined-hostile verifier
+closes every branch avoiding that pair, so all five carriers are terminal.
+The triangle/literal obligations of the other non-direct pair-cap carriers
+remain separate.  This script does not prove the five-slot rung or LRC(14).
 """
 
 from __future__ import annotations
@@ -59,6 +60,20 @@ THM2883_PATH = (
 )
 THM2883_SHA256 = (
     "a5f3dcc1a23defea4b3dc067675d83141f1866022d6d01946617a97de69e5b0e"
+)
+REFINED_HOSTILE_PATH = (
+    ROOT
+    / "04-computation/lrc14_j5_five_hostile_refined_k4_scout_codex_20260729.py"
+)
+REFINED_HOSTILE_SHA256 = (
+    "1901f101ca8c072c850ad1e036446eea113cdc99cda08e57a6904c5305d478b1"
+)
+REFINED_HOSTILE_OUTPUT = (
+    ROOT
+    / "05-knowledge/results/lrc14_j5_five_hostile_refined_k4_scout_codex_20260729.out"
+)
+REFINED_HOSTILE_OUTPUT_SHA256 = (
+    "676736cd2b0e9ec3a33534be3d97e5c9415e8c44b24a98de236cbbaf2af83720"
 )
 
 FIRST_EXTERNAL = 15
@@ -171,13 +186,24 @@ EXPECTED_FORCED_RESIDUALS = (
     ),
 )
 
-# Filled and made mandatory after the first exact discovery replay.
-EXPECTED_PROFILE_DIGEST: str | None = None
-EXPECTED_PAID_PAIR_DIGEST: str | None = None
-EXPECTED_THRESHOLD_DIGEST: str | None = None
-EXPECTED_FORCED_DIGEST: str | None = None
-EXPECTED_NORMALIZATION_DIGEST: str | None = None
-EXPECTED_ROOT_GATE_DIGEST: str | None = None
+EXPECTED_PROFILE_DIGEST = (
+    "bd99500652a1ac5aff95932cc748e395799b8d11e2db71bef58b37e924959f35"
+)
+EXPECTED_PAID_PAIR_DIGEST = (
+    "ef3113e4aac5f352f9acdb7f9dde2d01890a1e6edbc11e2b0be6620c1e451f23"
+)
+EXPECTED_THRESHOLD_DIGEST = (
+    "8c674340ca4be92e8baa34cd436956ef911d9fc3c1f8dc337fc4f4fdee6e589b"
+)
+EXPECTED_FORCED_DIGEST = (
+    "4eeee139c7b0d9ba2d36957bfb1808997d623b526f682c96439cfd5b853a7cf9"
+)
+EXPECTED_NORMALIZATION_DIGEST = (
+    "4615fd5b30d83006cdb10c8f1f2d64ce8a6a38d1e9c540358a4ba89c7c02c3b9"
+)
+EXPECTED_ROOT_GATE_DIGEST = (
+    "9177cd9bcc34e301ae0297b011e533ba8bddd6a172be599e46efe8437580b180"
+)
 
 
 def require(condition: bool, message: str) -> None:
@@ -636,6 +662,21 @@ def main() -> None:
         and S2**2 > 2,
         "pair atlas universe or sqrt(2) majorant changed",
     )
+    require(
+        file_sha256(REFINED_HOSTILE_PATH) == REFINED_HOSTILE_SHA256
+        and file_sha256(REFINED_HOSTILE_OUTPUT)
+        == REFINED_HOSTILE_OUTPUT_SHA256,
+        "five-hostile refined closure artifact changed",
+    )
+    refined_hostile_text = REFINED_HOSTILE_OUTPUT.read_text()
+    require(
+        "coarse_edges=1089;refined_edges=0;triangles=0;head_K4=0;"
+        "refined_digest="
+        "1d682c78bb1b2b9a9b907b3d25d62b15f86f85044334d0a19ea3b7839b6426f5"
+        in refined_hostile_text
+        and refined_hostile_text.endswith("all_exact_controls=PASS\n"),
+        "five-hostile refined closure verdict changed",
+    )
 
     if args.workers == 1:
         nested = list(map(profile_body, BODIES))
@@ -668,6 +709,10 @@ def main() -> None:
         scalar_counts == EXPECTED_SCALAR_COUNTS,
         "scalar first-apex census changed",
     )
+    r3_equalities = [
+        row for row in rows if row["residual3"] == row["m"] / 7
+    ]
+    require(len(r3_equalities) == 1, "R3 equality census changed")
     require(pair_counts == EXPECTED_PAIR_COUNTS, "pair-cap census changed")
     require(
         (
@@ -843,22 +888,17 @@ def main() -> None:
         "THM2888/heavy-edge-normalization/v1\n",
         normalization_lines,
     )
-    if EXPECTED_PROFILE_DIGEST is not None:
-        require(profile_digest == EXPECTED_PROFILE_DIGEST, "profile digest changed")
-    if EXPECTED_PAID_PAIR_DIGEST is not None:
-        require(paid_digest == EXPECTED_PAID_PAIR_DIGEST, "paid-pair digest changed")
-    if EXPECTED_THRESHOLD_DIGEST is not None:
-        require(
-            threshold_digest == EXPECTED_THRESHOLD_DIGEST,
-            "threshold-pair digest changed",
-        )
-    if EXPECTED_FORCED_DIGEST is not None:
-        require(forced_digest == EXPECTED_FORCED_DIGEST, "forced digest changed")
-    if EXPECTED_NORMALIZATION_DIGEST is not None:
-        require(
-            normalization_digest == EXPECTED_NORMALIZATION_DIGEST,
-            "normalization digest changed",
-        )
+    require(profile_digest == EXPECTED_PROFILE_DIGEST, "profile digest changed")
+    require(paid_digest == EXPECTED_PAID_PAIR_DIGEST, "paid-pair digest changed")
+    require(
+        threshold_digest == EXPECTED_THRESHOLD_DIGEST,
+        "threshold-pair digest changed",
+    )
+    require(forced_digest == EXPECTED_FORCED_DIGEST, "forced digest changed")
+    require(
+        normalization_digest == EXPECTED_NORMALIZATION_DIGEST,
+        "normalization digest changed",
+    )
 
     scalar_failures = [
         row for row in rows if row["scalar_class"] == "failure"
@@ -909,12 +949,23 @@ def main() -> None:
         (body, apex)
         for body, _, apex, _, _, _ in EXPECTED_HOSTILES
     }
+    genuine_terminal_apices = sum(
+        row["scalar_class"] == "direct"
+        or row["pairpair_direct"]
+        or (row["body"], row["apex"]) in hostile_keys
+        for row in rows
+    )
+    require(
+        genuine_terminal_apices == 16_122,
+        "genuine terminal apex census changed",
+    )
     root_gate_lines: list[str] = []
     root_gate_base_closed = 0
     root_gate_refined_closed = 0
     active_base_closed = 0
     active_refined_closed = 0
     residual_refined: list[tuple[int, ...]] = []
+    residual_refined_apices = 0
     for body_index, body in enumerate(BODIES):
         body_rows = rows[10 * body_index : 10 * body_index + 10]
         require(
@@ -967,6 +1018,10 @@ def main() -> None:
             active_refined_closed += refined_ok
             if not refined_ok:
                 residual_refined.append(body)
+                residual_refined_apices += sum(
+                    row["apex"] not in terminal_refined
+                    for row in body_rows
+                )
         root_gate_lines.append(
             "E="
             + ",".join(map(str, body))
@@ -992,11 +1047,15 @@ def main() -> None:
         "THM2888/genuine-terminal-root-weighted-gate/v1\n",
         root_gate_lines,
     )
-    if EXPECTED_ROOT_GATE_DIGEST is not None:
-        require(
-            root_gate_digest == EXPECTED_ROOT_GATE_DIGEST,
-            "genuine-terminal root gate digest changed",
-        )
+    require(
+        active_refined_closed + 495 == 1559
+        and len(residual_refined) == 1444,
+        "whole-root composition changed",
+    )
+    require(
+        root_gate_digest == EXPECTED_ROOT_GATE_DIGEST,
+        "genuine-terminal root gate digest changed",
+    )
 
     print("THM-2888 EIGHT-BODY FIRST-APEX GLOBAL PAIR-CAP ATLAS")
     print("status=FINITE-EXACT+GLOBAL-PAIR-TAIL-SEALED")
@@ -1006,6 +1065,15 @@ def main() -> None:
     print(
         f"scalar_classes=direct:{scalar_counts[0]},"
         f"rank3_finite:{scalar_counts[1]},failure:{scalar_counts[2]}"
+    )
+    print(
+        "R3_equality="
+        f"body={r3_equalities[0]['body']};"
+        f"rank={r3_equalities[0]['apex_rank']};"
+        f"apex={r3_equalities[0]['apex']};"
+        f"R3={ftext(r3_equalities[0]['residual3'])};"
+        f"h7={ftext(r3_equalities[0]['m']/7)};"
+        "classified=failure"
     )
     print(
         f"pair_cap_below_5h7={pair_counts[0]};"
@@ -1055,6 +1123,12 @@ def main() -> None:
         f"minimum_margin={ftext(min(row['margin'] for row in forced))};"
         f"exact_pair_checks={sum(row['paid'] for row in forced)}"
     )
+    print(
+        "five_hostile_full_closure=5/5;"
+        "nonexception_coarse_edges=1089;refined_edges=0;"
+        "refined_digest="
+        "1d682c78bb1b2b9a9b907b3d25d62b15f86f85044334d0a19ea3b7839b6426f5"
+    )
     maximum_deleted_cutoff = max(
         (
             row["deleted_cutoff"],
@@ -1091,7 +1165,17 @@ def main() -> None:
         f"plus_five_refined:{root_gate_refined_closed}/3003;"
         f"active_base:{active_base_closed}/2508;"
         f"active_plus_five_refined:{active_refined_closed}/2508;"
-        f"active_residual={len(residual_refined)}"
+        f"active_residual={len(residual_refined)};"
+        f"active_residual_apex_branches={residual_refined_apices}"
+    )
+    print(
+        f"genuine_terminal_apices={genuine_terminal_apices};"
+        f"raw_nonterminal_apex_branches={len(rows)-genuine_terminal_apices}"
+    )
+    print(
+        f"whole_root_closure=THM885_low_bodies:495+"
+        f"weighted_active:{active_refined_closed}=1559/3003;"
+        f"remaining_roots={len(residual_refined)}"
     )
     print(f"profile_digest_sha256={profile_digest}")
     print(f"paid_pair_digest_sha256={paid_digest}")

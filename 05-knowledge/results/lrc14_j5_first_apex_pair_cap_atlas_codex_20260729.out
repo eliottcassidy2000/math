@@ -1,0 +1,27 @@
+THM-2888 EIGHT-BODY FIRST-APEX GLOBAL PAIR-CAP ATLAS
+status=FINITE-EXACT+GLOBAL-PAIR-TAIL-SEALED
+universe=3003 bodies x 10 THM-2885 apices=30030 literal carriers
+scalar_classes=direct:13969,rank3_finite:10939,failure:5122
+R3_equality=body=(1, 2, 4, 7, 8, 10, 12, 14);rank=9;apex=77;R3=211/6468;h7=211/6468;classified=failure
+pair_cap_below_5h7=30025;nonpositive=5;pairpair_direct_all=13802;pairpair_direct_scalar_failures=53
+exact_pair_max_checks=191306;maximum_per_carrier=2037;maximum_body=(2, 4, 7, 8, 10, 11, 13, 14);maximum_rank=6;maximum_apex=63;threshold_pair_checks=353
+maximum_rank1_threshold=263999736/239719;body=(4, 6, 8, 9, 10, 11, 12, 14);rank=9;apex=182;horizon=2500
+maximum_pair_entry_threshold=1559025468/3415457;body=(1, 2, 6, 8, 9, 10, 13, 14);rank=6;apex=46;horizon=2500
+minimum_positive_pair_margin=709/8828820;body=(2, 4, 6, 7, 8, 10, 12, 14);rank=3;apex=26;W=130827;maxpair=18,22
+scalar_failure_W_distribution=le500:3209,le1000:4889,le2500:5088,le5000:5111,le10000:5114,le25000:5115,le50000:5116,le100000:5116
+five_hostiles=1,2,3,7,8,10,11,13;rank=5;a=19;P=17,18;delta=-50887/285170886|1,2,3,7,8,10,11,13;rank=7;a=17;P=18,19;delta=-3650923/2851708860|1,4,6,7,9,10,11,13;rank=6;a=23;P=16,17;delta=-480313/920551632|2,3,4,8,10,12,13,14;rank=6;a=16;P=18,22;delta=-23/1070160|2,4,6,8,10,12,13,14;rank=4;a=16;P=18,22;delta=-3553/1070160
+forced_pair_residuals=5/5 globally pair-closed;minimum_margin=389293/63488880;exact_pair_checks=122
+five_hostile_full_closure=5/5;nonexception_coarse_edges=1089;refined_edges=0;refined_digest=1d682c78bb1b2b9a9b907b3d25d62b15f86f85044334d0a19ea3b7839b6426f5
+heavy_edge_normalizations=34;positive_high_W=29;hostile=5;max_deleted_W=2044;max_deleted_body=(1, 4, 6, 7, 9, 10, 11, 13);max_deleted_rank=6;max_deleted_apex=23;minimum_forced_margin=389293/63488880;minimum_forced_body=(1, 4, 6, 7, 9, 10, 11, 13);minimum_forced_apex=17
+genuine_terminal_root_gate_all=base:1297/3003,plus_five_refined:1297/3003;active_base:1064/2508;active_plus_five_refined:1064/2508;active_residual=1444;active_residual_apex_branches=10202
+genuine_terminal_apices=16122;raw_nonterminal_apex_branches=13908
+whole_root_closure=THM885_low_bodies:495+weighted_active:1064=1559/3003;remaining_roots=1444
+profile_digest_sha256=bd99500652a1ac5aff95932cc748e395799b8d11e2db71bef58b37e924959f35
+paid_pair_digest_sha256=ef3113e4aac5f352f9acdb7f9dde2d01890a1e6edbc11e2b0be6620c1e451f23
+threshold_pair_digest_sha256=8c674340ca4be92e8baa34cd436956ef911d9fc3c1f8dc337fc4f4fdee6e589b
+forced_residual_digest_sha256=4eeee139c7b0d9ba2d36957bfb1808997d623b526f682c96439cfd5b853a7cf9
+normalization_digest_sha256=4615fd5b30d83006cdb10c8f1f2d64ce8a6a38d1e9c540358a4ba89c7c02c3b9
+root_gate_digest_sha256=9177cd9bcc34e301ae0297b011e533ba8bddd6a172be599e46efe8437580b180
+vector_scalar_controls=60060;pair_path_controls=30030
+scope=pair atlas and forced-heavy-edge subbranches only;5069 non-pair-direct scalar failures retain triangle/literal obligations
+all_exact_controls=PASS
