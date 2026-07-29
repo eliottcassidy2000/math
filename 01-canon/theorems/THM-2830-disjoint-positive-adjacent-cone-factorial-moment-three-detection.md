@@ -116,13 +116,14 @@ multinomial multiplicity, is
 C_i(a,b,c,d)
  =1/2 [
     P_i(a,b,c,d)
-   -sum_(A subset {a,b,c,d}, |A|=2)
+   -sum_(A a labelled 2-subset of the four positions a,b,c,d)
       T(i,A)H(A^c)
  ].                                                     (9)
 ```
 
-Every unordered pair occurs once among the two sides of the three
-matchings.  Therefore the single matching inequality
+Every labelled pair of positions occurs once among the two sides of the
+three matchings, even when some displayed indices coincide.  Therefore the
+single matching inequality
 
 ```text
 P_i(a,b,c,d) >= 3 N_i(a,b;c,d)                         (10)
@@ -255,8 +256,8 @@ The older scout found `9,488` exhaustive cone pairs, `50,000` random
 integer cone pairs, and `4,116` symmetrized quartic cells nonnegative.  The
 new matching audit is stronger structurally, but remains finite evidence.
 
-What is **proved in this file** is the algebraic reduction
-`(1)--(14)` and the two stopping boundaries.  What is **open** is the
-universal sign in `(10)` or `(14)`.  Therefore arbitrary disjoint positive
-cones, the corresponding many-versus-many moment-six statement, general
-HYP-8765, and SFC(3) remain open here.
+What is **proved in this file** is every identity through `(14)`, the
+conditional implication from `(10)`/`(14)`, and the two stopping boundaries.
+The inequalities `(10)`/`(14)` themselves remain open.  Therefore arbitrary
+disjoint positive cones, the corresponding many-versus-many moment-six
+statement, general HYP-8765, and SFC(3) remain open here.
