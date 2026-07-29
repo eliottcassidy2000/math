@@ -2,19 +2,25 @@
 id: THM-2871
 title: "Quartic leading-face survivor and integral-depression flag dichotomy"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  At a simple quartic leading face with B*delta3 a unit, one chosen
-  coordinate root has valuation -1 and the other three form the separable
-  leading cubic.  THM-2867's matching blow-up is exactly an affine copy of
-  that x-finite cubic, but only in the associated graded.  At the next
-  leading-cubic face, a unit quadratic coefficient gives one escaping sheet
-  and no integral depression, whereas C=B*c gives an integral trace-zero
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  At a simple
+  quartic leading face with B*delta3 a unit, one chosen coordinate root
+  has valuation -1 and the other three form the separable leading cubic.
+  THM-2867's matching blow-up is exactly an affine copy of that x-finite
+  cubic, but only in the associated graded.  At the next leading-cubic
+  face, a unit quadratic coefficient gives one escaping sheet and no
+  integral depression, whereas C=B*c gives an integral trace-zero
   coordinate and a paired slope-1/2 escape with
-  delta3=-B(4*P3^3+27*B*Q3^2).  The sporadic Keller square law is one further
-  non-universal sidecar.  A connected etale quasi-finite generic-S4 family
-  realizes an arbitrary depressed cubic on its nonproper leading face, so
-  none of the Keller/Jelonek ownership follows from the local graph data.
+  delta3=-B(4*P3^3+27*B*Q3^2).  The sporadic Keller square law is one
+  further non-universal sidecar.  A connected etale quasi-finite
+  generic-S4 family realizes an arbitrary depressed cubic on its
+  nonproper leading face, so none of the Keller/Jelonek ownership follows
+  from the local graph data.
 source: root/quartic-leading-face-flag-2026-07-28
+audit: >
+  thm2871-leading-face-flag-audit-2026-07-28 (independent Newton/root
+  normalization, projective-versus-affine finiteness, cubic/orientation
+  special-fibre, integral-depression, square-law, generic-S4,
+  exact-nonproper-locus, graph-owner, and exact-evidence audit: ACCEPT)
 depends_on:
   - THM-2867-homogeneous-quartic-orientation-sextic-and-cubic-leading-residual
 related:
@@ -34,8 +40,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2871 -- the cubic survivor still needs an integral depression flag
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2867 proves the striking identity
 
@@ -487,6 +492,11 @@ whereas the generic degree is four.  A proper quasi-finite morphism would be
 finite and an etale finite rank could not drop from four to three.  Hence
 the entire divisor `(52)` is nonproper.
 
+Equivalently, at every point of `(52)` the reciprocal coordinate has the
+simple omitted pole branch from Section 1; `Delta^(-1)` keeps the remaining
+cubic separable.  This gives the same failure of the valuative criterion
+pointwise along the divisor.
+
 On that divisor, the survivor is the arbitrary separable depressed cubic
 `(53)`.  The two blow-ups are
 
@@ -623,7 +633,7 @@ Normal and optimized runs byte-match the stored transcript.
 ## 9. Scope ledger
 
 ```text
-PROVED IN THE CANDIDATE:
+PROVED:
   exact two-stage henselian Newton polygons;
   one quartic x-pole and the rank-three finite survivor;
   unramified nature of the simple A-leading face;
@@ -646,5 +656,13 @@ NOT PROVED:
   JC(2), DC(2), general JC, or any LRC statement.           (64)
 ```
 
-QED in the candidate, subject to independent hostile audit and evidence
-promotion.
+The independent hostile audit rederived all three Newton polygons, the
+projective/affine normalization split, both special-fibre identities, and
+the square-law boundary.  It separately checked connectedness, etaleness,
+the exact nonproper locus, and the specialization-to-generic `S4`
+argument, as well as every Keller-owner caveat.  Normal, optimized, and
+stored transcripts agree exactly; both declared LF-normalized hashes
+match; the companion compiles without optional CAS, truth-bearing
+`assert`, or floating-point decisions; and the documentation gate passes.
+
+**QED.**
