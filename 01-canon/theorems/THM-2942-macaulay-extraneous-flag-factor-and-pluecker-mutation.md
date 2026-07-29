@@ -2,8 +2,8 @@
 id: THM-2942
 title: "Macaulay extraneous flag factor and Pluecker mutation"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  Every six-quartic-row mutation of the fixed
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every
+  six-quartic-row mutation of the fixed
   degree-seven 20Q+10C+6F Macaulay chart is the genuine ternary
   resultant times a Pluecker flag coordinate.  For the original chart
   the exact factor is q200^6*c300*K, and the two-row mutation has factor
@@ -16,6 +16,14 @@ status: >
   basis scale and the resultant wall remain.  No resultant
   nonvanishing or arbitrary-width SFC(4) is proved.
 source: codex-gmc-uniform-width-extension-2026-07-29
+audit: >
+  An independent hostile audit rederived the universal resultant
+  divisibility and multidegrees, checked the dense selected-flag
+  quotient argument and its global polynomial extension, verified the
+  J0/J1 signs and the q200 positivity needed by the finite cofactor
+  conclusion, recomputed both LF hashes, and replayed normal,
+  optimized, and stored output byte-for-byte.  It found no remaining
+  defect.
 depends_on:
   - THM-2921-diameter-four-nonconsecutive-macaulay-newton-closure
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
@@ -33,8 +41,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2942 -- Macaulay extraneous flag factor and Pluecker mutation
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Universal factorization
 
@@ -462,4 +469,4 @@ python -O 04-computation/gmc_macaulay_extraneous_flag_pluecker_thm2942.py
 Normal and optimized output must byte-match the stored transcript and
 the LF-normalized hashes above.
 
-**QED, pending independent hostile audit.**
+**QED.**
