@@ -95,7 +95,7 @@ Next: `e9=(-9,+9,QB)`, clutch `(13,13,-1)`. Ledger `165`.
 
 ### Independent routes that remain live
 
-- **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md): aligned seven safe; literal one-drift empty; fixed two-drift charts finite; uniform mixed branches open.
+- **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md): aligned seven safe; literal one- and two-drift branches empty; every fixed seven-tail affine ray eventually safe; branches with at least three drifts remain open.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **Foreign-base phase.** The FINITE-EXACT `C_221` stalk has a typed
   `4/17 <-> 13/17` two-cycle, but no exclusive source, lawful return, or

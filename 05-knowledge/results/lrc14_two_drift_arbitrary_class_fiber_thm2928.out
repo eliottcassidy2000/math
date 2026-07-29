@@ -1,0 +1,24 @@
+LRC14 two-drift arbitrary-class and seventh-fiber exact referee
+support_script_sha256=778842c0e8e7172835ca6ae673fb6156f212d4296e672bce4e7cc2815195bf1a
+support_output_sha256=648327d3b9b5b9a50c7760f0afd89a7a33161f57fa98c1b9e181d6b5b791a25f
+address_script_sha256=870498c4f0a2d97a2d42bce593c44283c77a141fb08669b4a91133e39db5c276
+address_output_sha256=74f7c270034dc40b4de3d33b9abf67481435d1e97eb6e52f2448d0a152cb68d7
+body_count=3003
+divisor_rows=251536
+support_hard_rows=10976
+raw_denominator_pairs=3066274
+cardinality_survivors=23755
+cardinality_survivor_rows=6292
+large_denominator_limit=1000
+large_denominator_pairs=942
+large_denominator_rows=[((1, 4, 5, 7, 9, 11), 194040, 194040, 55392, Fraction(2308, 8085)), ((1, 5, 7, 8, 9, 11), 388080, 388080, 109044, Fraction(3029, 10780))]
+top_class_formula=max_load_d<=sum_(j=1)^ceil(d/7) lambda_d^[j]
+arbitrary_class_kills=940
+arbitrary_class_survivors=[((1, 4, 5, 7, 9, 11), 194040, 194040, 55392, Fraction(2308, 8085), 194040, 194040, 27720, 27720, 27720, 48), ((1, 5, 7, 8, 9, 11), 388080, 388080, 109044, Fraction(3029, 10780), 388080, 388080, 55440, 55440, 55440, 1836)]
+closest_top_class_kills=[((1, 4, 5, 7, 9, 11), 194040, 194040, 55392, Fraction(2308, 8085), 97020, 194040, 13860, 21620, 27720, -6052), ((1, 5, 7, 8, 9, 11), 388080, 388080, 109044, Fraction(3029, 10780), 194040, 388080, 27720, 40510, 55440, -13094)]
+seventh_fiber_lemma=D=7k and gcd(u,D)=1 imply {a+uj:0<=j<k} is a transversal modulo k
+fiber_records=[((1, 4, 5, 7, 9, 11), 194040, 27720, ((0, 3960), (1, 0), (2, 17472), (3, 4704), (4, 1584)), 1981, (29701, 57421, 112861, 168301), ((29700, 34020), (57420, 63140), (112860, 113652), (168300, 170940))), ((1, 5, 7, 8, 9, 11), 388080, 55440, ((0, 7920), (1, 0), (2, 33516), (3, 14004)), 3961, (59401, 114841, 225721), ((59400, 68040), (114840, 126280), (225720, 227304)))]
+fiber_kills=2
+final_large_denominator_survivors=0
+semantic_sha256=eea51e491a52776bf56fb0747cf507c94f8e34fd86c15c326815de72f35a7d91
+all_exact_controls=PASS

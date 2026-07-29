@@ -1,0 +1,14 @@
+support_script_sha256=778842c0e8e7172835ca6ae673fb6156f212d4296e672bce4e7cc2815195bf1a
+support_output_sha256=648327d3b9b5b9a50c7760f0afd89a7a33161f57fa98c1b9e181d6b5b791a25f
+small_denominator_limit=1000
+raw_denominator_pairs=3066274
+cardinality_survivors=23755
+small_denominator_pairs=22813
+load_killed=22811
+load_survivors=[((1, 4, 5, 7, 9, 11), 194040, 194040, 55392, Fraction(2308, 8085), 2, 194040, 27696, 27720), ((1, 5, 7, 8, 9, 11), 388080, 388080, 109044, Fraction(3029, 10780), 2, 388080, 54522, 55440)]
+difference_killed=2
+difference_witnesses=[((1, 4, 5, 7, 9, 11), 194040, 2, 194040, 1, 27696, 63905, 55439, 1261), ((1, 4, 5, 7, 9, 11), 194040, 2, 194040, 2, 27696, 63905, 55439, 1261), ((1, 5, 7, 8, 9, 11), 388080, 2, 388080, 1, 54522, 129569, 110879, 2521), ((1, 5, 7, 8, 9, 11), 388080, 2, 388080, 2, 54522, 129570, 110879, 2521)]
+small_denominator_survivors=0
+large_denominator_remainder=942
+remaining_rows=[((1, 4, 5, 7, 9, 11), 194040, 194040, 55392, Fraction(2308, 8085), 371), ((1, 5, 7, 8, 9, 11), 388080, 388080, 109044, Fraction(3029, 10780), 571)]
+semantic_sha256=a8a35cc965d61418b301fc1c8075066162f26ca2acfff88ca97cb17cb2459fe2

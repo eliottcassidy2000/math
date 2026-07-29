@@ -1,0 +1,21 @@
+LRC14 j7 affine-profile minimum-frequency exact referee
+packets=5
+point_checks=2715
+zero_profile_checks=18
+pair_distance_checks=57015
+general_affine_checks=2715
+general_affine_zero_checks=6
+unique_minimum_positive_checks=1086
+interval_formula_checks=12480
+interval_equality_checks=546
+profile_integral_checks=20
+zero_law=Phi_b(t)=0 iff centers form a coset of (1/7)Z/Z
+pointwise_floor=Phi_b(t)>=dist((b_i-b_j)t,(1/7)Z/Z)/2
+general_affine_zero_obstruction=at x-frequency min(c), hat_d(1)*sum_(c_i=min(c)) exp(2*pi*i*r_i*t)=0
+general_affine_consequence=no fixed seven-tail affine profile vanishes on a positive interval
+interval_formula=inf_I integral_I ||n*t|| dt=(floor(n*ell)+frac(n*ell)^2)/(4*n)
+longest_component=23/1092
+longest_component_body=(1, 6, 7, 8, 10, 13)
+uniform_profile_floor=529/9539712
+uniform_common_block_k_min=315586
+all_exact_controls=PASS

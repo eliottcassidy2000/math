@@ -16,9 +16,19 @@ status: >
   to an exact finite pair-clock quotient with the sharper second-slope
   bound c_2/d_2<13 max A.  At the 2/25 deletion threshold, either that
   bound improves to c_2/d_2<(25/3) max A or all five aligned multipliers
-  lie in an explicit body-uniform finite staircase.  Uniform two-drift
-  emptiness and the branches with more drifts remain open; this does not
-  prove LRC(14).
+  lie in an explicit body-uniform finite staircase.  An independent body-
+  projection sieve kills 240,560 of 251,536 body/divisor rows.  Its fixed-
+  phase address capacity reduces 3,066,274 denominator-pair occurrences to
+  23,755.  An exact relaxed arithmetic-progression mask kills all 22,813
+  survivors having a denominator at most 1,000; an arbitrary-class load
+  relaxation kills 940 of the remaining 942; and a quotient-fiber
+  transversal obstruction kills the last two diagonal pairs.  Hence the
+  literal five-aligned/two-drift branch is empty uniformly.  The critical
+  two-torus carrier integral is positive on every fixed seven-tail affine
+  ray;
+  uniformly, seven tails in one common canonical-ruler quotient block are
+  safe once the quotient is at least 315,586.  Branches with three or more
+  drifts remain open; this does not prove LRC(14).
 source: root-2026-07-29 with independent hostile audits by seven-wall-tensor-audit and critical-residue-tree
 depends_on:
   - THM-594-pair-overlap-law-mirsky-newman-floor
@@ -28,6 +38,7 @@ depends_on:
   - THM-1234-sharp-five-comb-compatibility-floor
   - THM-2162-signed-endpoint-cocycle-and-bv-component-split
   - THM-2182-endpoint-grid-product-and-tail-overlap-sidecar
+  - THM-2184-two-scale-tail-continuation-profile
   - LRC(<=13)
 related:
   - THM-1135-r6-harmonic-tail-finite-box
@@ -39,6 +50,14 @@ related:
   - HYP-7870
 script: 04-computation/lrc14_critical_one_drift_clock_thm2928.py
 output: 05-knowledge/results/lrc14_critical_one_drift_clock_thm2928.out
+support_script: 04-computation/lrc14_two_drift_body_projection_support_thm2928.py
+support_output: 05-knowledge/results/lrc14_two_drift_body_projection_support_thm2928.out
+address_script: 04-computation/lrc14_two_drift_relaxed_address_mask_thm2928.py
+address_output: 05-knowledge/results/lrc14_two_drift_relaxed_address_mask_thm2928.out
+address_completion_script: 04-computation/lrc14_two_drift_arbitrary_class_fiber_thm2928.py
+address_completion_output: 05-knowledge/results/lrc14_two_drift_arbitrary_class_fiber_thm2928.out
+affine_profile_script: 04-computation/lrc14_j7_affine_profile_min_frequency_thm2928.py
+affine_profile_output: 05-knowledge/results/lrc14_j7_affine_profile_min_frequency_thm2928.out
 ---
 
 # THM-2928 -- critical seven-comb grid tensorization and drift tariff
@@ -680,7 +699,7 @@ script  16e7a630eb4f721836dfc95c0adf97bf9a1a252518b119450b16c71e08305dcd
 output  6eb2ad0d031a94d7e85db37a30cb48a2e0abb03e4caa080f05f870a23d449746.
 ```
 
-## 9. Five aligned combs and two drifts: a finite exact chart
+## 9. Five aligned combs and two drifts are empty
 
 Keep the literal six-body carrier `G_F`, take its canonical resolving
 denominator `L=L_F` from `(36)`, and let `J` be its full selected-cell set.
@@ -924,7 +943,254 @@ consequence `(37ih)`, are the sharper finite search object.  Together with
 large box is claimed.  The unbounded branch is confined instead by the
 strict projective cone `(37ib)`.
 
-The final decision is not a relaxation.  Put
+### The body projection and relaxed address-mask sieve
+
+The quotient has a second exact projection that forgets the aligned shape
+but retains the complete body address support.  Put
+
+```text
+Y_D(A)=union_(r in S_D)(r+R_A)/D.                    (37ii)
+```
+
+The copies in `(37ii)` lie in distinct `1/D` cells.  Consequently
+
+```text
+mu(Y_D(A))=(|S_D|/D)u_A.                             (37iii)
+```
+
+If `(37k)` holds, then
+
+```text
+Y_D(A) subset D_(a_1) union D_(a_2).
+```
+
+The two quotient speeds are distinct.  The sharp global pair floor from
+THM-594/THM-1166 therefore gives
+
+```text
+mu(D_(a_1) union D_(a_2))
+ =2/7-rho(a_1,a_2)
+ <=2/7-1/91
+ =25/91.
+```
+
+Together with `u_A>=478/1365`, this proves the support obstruction
+
+```text
+|S_D|/D<=375/478.                                    (37iv)
+```
+
+The exact all-body census ranges over
+
+```text
+F in C({1,...,14},6),             D divides L_F.
+```
+
+There are `251,536` such body/divisor rows.  Condition `(37iv)` eliminates
+`240,560`, leaving `10,976`.  Every surviving divisor satisfies `D>=42`,
+and each body has at most six surviving divisors.  The unique row at the
+minimum divisor is
+
+```text
+F=(1,2,3,4,6,12),       L_F=168,       D=42,
+|S_D|/D=32/42=16/21.                                 (37v)
+```
+
+There is a numerator-free denominator screen on every remaining row.  Fix
+one `u in R_A` and define
+
+```text
+M_i(u)={r in Z/DZ: ||c_i(r+u)/d_i||<1/14}.
+```
+
+Multiplication by `c_i` permutes `Z/d_i Z`.  An open arc of length `1/7`
+contains at most `ceil(d_i/7)` points of that equally spaced grid, and each
+such residue has `D/d_i` lifts.  Hence
+
+```text
+|M_i(u)|<=(D/d_i)ceil(d_i/7),
+
+|S_D|/D
+ <=ceil(d_1/7)/d_1+ceil(d_2/7)/d_2.                 (37vi)
+```
+
+Among the `3,066,274` divisor pairs with
+
+```text
+d_1,d_2>1,                  lcm(d_1,d_2)=D,
+```
+
+on the support-hard rows, `(37vi)` leaves exactly `23,755` pair
+occurrences on `6,292` rows.
+
+Reflection supplies a useful visible subcase.  The involution
+
+```text
+sigma(r)=D-1-r
+```
+
+preserves `S_D`.  When `d_1=2`, it swaps the two parity classes, so each
+contains exactly half of `S_D`; the first clock can meet at most one class.
+The other denominator `d_2` must therefore satisfy
+
+```text
+|S_D|<=2(D/d_2)ceil(d_2/7).                          (37vii)
+```
+
+This kills `6,754` of the `6,756` cardinality survivors with denominator
+two.  The two remaining parity rows also fail the stronger address test
+below.
+
+For a general denominator `d`, the actual fixed-`u` mask is the lift of at
+most `ceil(d/7)` consecutive residues after multiplication by a unit modulo
+`d`.  Enlarge it to exactly that many residues and allow the two clocks to
+choose their phases independently.  This is an upper relaxation of the
+literal mask problem.  For every pair with
+
+```text
+min(d_1,d_2)<=1000,
+```
+
+the exact verifier maximizes the first enlarged arithmetic-progression load
+on `S_D` and grants the second its full cardinality capacity.  That already
+kills `22,811` of the `22,813` pairs.  On each of the two survivors, for
+both possible first parity masks, project the residual to
+`P subset Z/d_2 Z`.  Containment in a `k_2=ceil(d_2/7)` term cyclic
+arithmetic progression would necessarily imply
+
+```text
+|P|<=k_2,                    |P-P|<=2k_2-1.           (37viii)
+```
+
+Both rows violate the difference-set inequality.  Thus no denominator pair
+with a denominator at most `1,000` survives even this relaxed necessary
+test.  The entire remaining denominator ledger consists of `942`
+occurrences, both denominators greater than `1,000`, on exactly two rows:
+
+```text
+F                         D=L_F     |S_D|/D       pairs
+(1,4,5,7,9,11)           194040     2308/8085      371
+(1,5,7,8,9,11)           388080     3029/10780     571. (37ix)
+```
+
+There is also an actual-slope consequence near the top of the support
+window.  If
+
+```text
+x=|S_D|/D>2535/3346,
+delta=x(478/1365)-13/49>0,
+```
+
+then a cover would force
+
+```text
+rho(a_1,a_2)<=1/49-delta.
+```
+
+Write `a_i=g alpha_i` with coprime `alpha_1<alpha_2`.  LEM-043 gives
+
+```text
+rho(a_1,a_2)>=1/49-1/(7alpha_2),
+alpha_2<=1/(7delta).                                 (37ixa)
+```
+
+Moreover `g<=a_1<(585/154)D`, so `(37ixa)` bounds the actual second slope
+`a_2=g alpha_2`, not only its projective ratio.  The exact census places
+`1,150` quotient rows in this body-uniform finite-slope sector; its largest
+displayed integer cap is
+
+```text
+a_2<=26,927,449,547.
+```
+
+The separate identity
+
+```text
+gcd(g,D)
+ =gcd(D/d_1,D/d_2)
+ =D/lcm(d_1,d_2)
+ =1
+```
+
+is a useful clock sidecar but is not itself the size bound.
+
+For this symmetric denominator ledger, reorder the two clocks so that
+`d_1<=d_2`; this relabelling is independent of the earlier ordering by
+speed.  The remaining `942` pairs admit a still coarser, and therefore
+cheaper, completion.  Put
+
+```text
+k_d=ceil(d/7),
+lambda_d(s)=#{r in S_D:r=s mod d},
+Lambda_d=sum of the k_d largest values of lambda_d.  (37ixb)
+```
+
+The first actual mask is contained in the lift of some `k_(d_1)` residue
+classes, even if all arithmetic-progression structure is forgotten.
+Therefore it meets at most `Lambda_(d_1)` points of `S_D`.  Granting the
+second mask its full ambient capacity gives the necessary inequality
+
+```text
+|S_D|<=Lambda_(d_1)+(D/d_2)k_(d_2).                  (37ixc)
+```
+
+The exact load ledger violates `(37ixc)` for `940` of the `942` pairs.  Its
+only survivors are the two diagonal pairs
+
+```text
+F                         D          (d_1,d_2)       two capacities
+(1,4,5,7,9,11)           194040     (D,D)           27720+27720
+(1,5,7,8,9,11)           388080     (D,D)           55440+55440. (37ixd)
+```
+
+They fail for a structural reason hidden by cardinality.  Write `D=7k`.
+Every enlarged diagonal mask has the form
+
+```text
+B(s,h)={s+jh mod D:0<=j<k},             gcd(h,D)=1.  (37ixe)
+```
+
+Because `h` is also a unit modulo `k`, projection of `(37ixe)` to
+`Z/kZ` is a bijection.  Thus one mask contains exactly one point in each
+modulo-`k` fibre, and two masks contain at most two.  The first row in
+`(37ixd)` has four support points
+
+```text
+29701, 57421, 112861, 168301 = 1981 mod 27720,
+```
+
+while the second has three
+
+```text
+59401, 114841, 225721 = 3961 mod 55440.
+```
+
+So neither support word can be covered by two diagonal masks.  As a hostile
+control, the complete fibre-multiplicity histograms are
+
+```text
+row 1: N_0=3960, N_1=0, N_2=17472, N_3=4704, N_4=1584;
+row 2: N_0=7920, N_1=0, N_2=33516, N_3=14004.       (37ixf)
+```
+
+This finishes the necessary-mask ledger: all `23,755` denominator-capacity
+survivors are impossible.
+
+The two support implementations (cyclic bitsets and merged integer arcs),
+the denominator and parity ledgers, and every mask relaxation are replayed
+with checks active under optimized Python.  Ordinary and optimized outputs
+are byte-identical.  The frozen hashes are
+
+```text
+support script  778842c0e8e7172835ca6ae673fb6156f212d4296e672bce4e7cc2815195bf1a
+support output  648327d3b9b5b9a50c7760f0afd89a7a33161f57fa98c1b9e181d6b5b791a25f
+address script  870498c4f0a2d97a2d42bce593c44283c77a141fb08669b4a91133e39db5c276
+address output  74f7c270034dc40b4de3d33b9abf67481435d1e97eb6e52f2448d0a152cb68d7
+completion script c0a07747c300c7e82d3da27b4f498425ffb72dc950f797381d1f0d7e9096655c
+completion output 3ff1c54a2818b9a0f061912758584200ffa4dd5b549ea91ba2c6c7e6a92f3638.
+```
+
+To reconnect the relaxed ledger to the exact pointwise cover, put
 
 ```text
 D=lcm(d_1,d_2),          S_D=J mod D,
@@ -939,9 +1205,24 @@ X_r subset D_(a_1) union D_(a_2)       for every r in S_D. (37k)
 ```
 
 This is a finite rational interval-arrangement test.  Isolated points pay
-zero in `(37h)` but must remain in the final pointwise check `(37k)`.
+zero in `(37h)` but must remain in the final pointwise check `(37k)`.  If
+`(37k)` held, then for any fixed `u in R_A` its values at
+`(r+u)/D`, `r in S_D`, would give
 
-The pair sidecar in that test is carrier-local.  If
+```text
+S_D subset M_1(u) union M_2(u).
+```
+
+The carrier `R_A` has positive mass, while the completed necessary-mask
+ledger proves that no such inclusion exists for any admissible denominator
+pair.  This contradiction proves:
+
+> **Literal two-drift closure.**  Five aligned tail combs and two arbitrary
+> tail combs cannot cover the safe carrier of six distinct literal body
+> combs.
+
+For reuse in higher-drift branches, the exact pair sidecar is
+carrier-local.  If
 `a_1=g alpha`, `a_2=g beta`, with `gcd(alpha,beta)=1`, and `P_(alpha,beta)`
 is a periodic primitive of
 
@@ -962,11 +1243,216 @@ It cannot be replaced by the global overlap `rho(a_1,a_2)`: THM-1166's
 hostile interval `[1/7,6/7]` has zero local overlap for every consecutive
 pair `(N,N+1)`, although its global overlap is positive.
 
-This proves finite exactness only after `F`, `A`, and `L` are fixed.  The
-bound grows with `L`, `max A`, and `sum A`; equation `(37k)` is not proved
-empty uniformly.
+The local-current identity remains valid, but the two-drift branch no longer
+needs its growing numerator box: the coarser address quotient is already
+empty uniformly over all literal bodies and aligned shapes.
 
-## 10. Scope and information audit
+## 10. The critical affine-profile residual is empty
+
+THM-2184 leaves one honest critical possibility: a fixed seven-tail
+two-torus profile could in principle have zero safe mass.  The
+divisor-minimal Fourier coordinate rules it out on every positive grid
+carrier.
+
+Let `C` be a nonempty union of `1/L` cells and fix
+
+```text
+c_i in Z_(>0),             r_i in Z,                 1<=i<=7,
+W_i(N)=NLc_i+r_i.                                      (39)
+```
+
+For all sufficiently large `N`, the displayed speeds are positive; an LRC
+packet also requires them to be distinct.  Put
+
+```text
+d(y)=1_(||y||<1/14),
+
+Phi_(c,r)(t)
+ =integral_T product_(i=1)^7(1-d(c_i x+r_i t)) dx,
+
+P_(C;c,r)=integral_C Phi_(c,r)(t)dt.                  (40)
+```
+
+THM-2184's grid transfer gives
+
+```text
+|mu(C intersection intersection_i D_(W_i(N))^c)
+       -P_(C;c,r)|
+ <=5||r||_1/(2NL).                                    (41)
+```
+
+The key point is that its integral on every positive carrier is always
+positive, even though the pointwise profile can vanish at isolated slow
+phases.  Fix `t` and let
+
+```text
+m_t(x)=sum_(i=1)^7 d(c_i x+r_i t).
+```
+
+Every summand has mass `1/7`, so `integral m_t=1`.  The negative part of
+`m_t-1` is precisely the uncovered set and has integral `Phi_(c,r)(t)`;
+the mean-zero identity makes the positive part have the same integral.
+Therefore
+
+```text
+||m_t-1||_(L1)=2Phi_(c,r)(t).                         (42)
+```
+
+Let
+
+```text
+c_0=min_i c_i,              I_0={i:c_i=c_0}.
+```
+
+At `x`-Fourier frequency `c_0`, no comb with larger slope contributes.
+Since
+
+```text
+hat d(1)=sin(pi/7)/pi>0,
+```
+
+equation `(42)` gives the quantitative divisor-minimal obstruction
+
+```text
+Phi_(c,r)(t)
+ >=sin(pi/7)/(2pi)
+   |sum_(i in I_0) exp(2pi i r_i t)|.                 (43)
+```
+
+If `P_(C;c,r)=0`, then `(43)` makes the exponential polynomial on the
+right vanish almost everywhere on one open carrier cell.  It must therefore
+vanish identically.  After equal exponents `r_i` are grouped, however, all
+its coefficients are positive integers.  It is not the zero polynomial.
+This contradiction proves
+
+```text
+P_(C;c,r)>0                                           (44)
+```
+
+for every fixed positive slope vector and integer residue vector.  Equations
+`(41)` and `(44)` give the effective terminal
+
+```text
+N>5||r||_1/(2L P_(C;c,r)).                            (45)
+```
+
+In particular, if the minimum slope `c_0` is unique, `(43)` has the
+pointwise floor
+
+```text
+Phi_(c,r)(t)>=sin(pi/7)/(2pi).                        (46)
+```
+
+Thus a profile approaching zero must first repeat its divisor-minimal
+frequency.  This is the shifted two-scale analogue of the
+Mirsky--Newman divisor-minimal obstruction, now with the slow phase retained.
+
+There is a rational quantitative form when all seven leading slopes agree.
+Absorb their common value into `N`, and suppose the fixed residues
+`r_1,...,r_7` are distinct.  If
+
+```text
+g_1(t),...,g_7(t)
+```
+
+are the cyclic gaps between the seven centers `-r_i t`, then
+
+```text
+Phi_(1,r)(t)
+ =sum_j max(g_j(t)-1/7,0)
+ =(1/2)sum_j |g_j(t)-1/7|.                            (47)
+```
+
+Consequently the profile vanishes exactly when the centers are a coset of
+`(1/7)Z/Z`.  For any nonzero residue difference `d=r_i-r_j`, summing the
+gap errors along the arc between those two centers gives
+
+```text
+Phi_(1,r)(t)
+ >=(1/2)dist(dt,(1/7)Z/Z)
+ =||7dt||/14.                                         (48)
+```
+
+On an interval of length `ell`, put
+
+```text
+n=7|d|,       n ell=q+s,       q=floor(n ell),       0<=s<1.
+```
+
+The exact translated-interval minimum is
+
+```text
+inf_(|I|=ell) integral_I ||nt||dt
+ =(q+s^2)/(4n).                                       (49)
+```
+
+When `ell<=1/7`, the facts `n=7|d|` and `n ell<=|d|`
+give from `(49)`
+
+```text
+integral_I Phi_(1,r)(t)dt>=ell^2/8.                  (50)
+```
+
+An independent exact census of all `3,003` literal six-body carriers finds
+
+```text
+min_F longest_component(G_F)=23/1092
+```
+
+at `F=(1,6,7,8,10,13)`.  Taking an interval of that length in `(50)` gives
+the body-uniform profile floor
+
+```text
+P_(G_F;1,r)>=529/9539712.                             (51)
+```
+
+This yields a concrete uniform finite sector.  Let
+
+```text
+R_14=14 lcm(1,...,14)=5,045,040
+```
+
+and suppose seven distinct tails lie in one common quotient block,
+
+```text
+w_i=kR_14+b_i,             0<=b_i<R_14.
+```
+
+Here `sum_i b_i<7R_14`, so `(41)` and `(51)` give
+
+```text
+safe mass
+ >529/9539712-35/(2k)>0
+```
+
+for every
+
+```text
+k>=315,586.                                            (52)
+```
+
+Thus the common-ruler block index is uniformly finite.  More generally,
+`(44)` closes every fixed seven-tail affine ray, with its exact rational
+profile providing the ray-specific terminal.
+
+The dependency-free referee checks the equal-slope gap and coset laws,
+`57,015` pair-distance inequalities, `12,480` exact interval formulas,
+the all-body component minimum, the arithmetic in `(51)`--`(52)`, and
+general minimum-frequency hostile controls.  Its checks remain active under
+optimized Python; ordinary and optimized outputs are byte-identical.  The
+frozen hashes are
+
+```text
+script  b12f0927312c1ea56b2e7fce1937b82cd49e7978c0d820c9c7621a9be838f13a
+output  418e871e5a26b805ce3e161d85c5b500753e3a43090ae111a494caa4a9e93ddc.
+```
+
+This section empties the fixed affine-ray zero-profile residual, not the
+union over changing slopes and residues.  A genuinely escaping packet must
+therefore change its normalized affine data, or move between scale charts,
+rather than travel along one fixed two-torus ray.
+
+## 11. Scope and information audit
 
 The proved transport is
 
@@ -983,11 +1469,13 @@ necessary mixed-residue sidecar:
 For an arbitrary grid carrier, equations `(27)`--`(35)` remain necessary
 rather than sufficient and need not eliminate every one-drift row.  The
 double use of the six-comb floor and reflection is what closes the literal
-six-body one-drift branch.  The theorem does **not** close an arbitrary
-mixed-residue seven-wall, the branches with two or more drift speeds, or
-LRC(14).  Section 9 makes each fixed two-drift chart finite but does not
-bound those charts uniformly or prove their finite quotients empty.  The
-next exact object is the carrier-local pair endpoint current `(37l)`, not a
-global pair overlap.  A tournament on the seven labels forgets the metric
-widths, cell phases, gcd fibers, and located endpoint current, and is
-therefore not an equivalent quotient.
+six-body one-drift branch.  Section 9 now closes the literal six-body,
+five-aligned/two-drift branch uniformly: its decisive quotient retains the
+body address multiplicities but deliberately forgets the aligned shape,
+clock phases, and numerator sizes.  The theorem does **not** close an
+arbitrary mixed-residue seven-wall, the branches with three or more drift
+speeds, or LRC(14).  The next exact object is a higher-mask address-balance
+or carrier-local multi-endpoint current, not a global pair overlap.  A
+tournament on the seven labels forgets the metric widths, cell phases, gcd
+fibres, and located endpoint current, and is therefore not an equivalent
+quotient.
