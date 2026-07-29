@@ -90,6 +90,12 @@ QAB column as kernel.  The sequence splits algebraically over
 macro-truth/semantic-word realization intertwiner, not another rank or
 Fourier-support calculation.  Ledger `165`.
 
+THM-2852 pays spectral rank across the normalized THM-2807 three-address
+mask (all `13^6` characters), all six THM-2829 borrow-aware arrows (all
+`13^5` characters), and every Cayley tournament on an odd finite `p`-group.
+These are convolutional units with signed inverses, not physical actions;
+the live obstruction is still the target-active semantic/carry intertwiner.
+
 ### Independent routes that remain live
 
 - **Orthogonal routes.** THM-1017's AP-core extraction remains HYP-6820;
