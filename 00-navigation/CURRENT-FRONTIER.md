@@ -222,10 +222,10 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   vanishing quartic harmonic or a shared cubic--quartic real multipole line.
   Pearson/Hankel positivity cannot exclude either branch; the missing
   factorial input is multiplier/lowering access, not another Gram bound.
-  THM-2849 closes SFC(4)'s first window for all 1,820 four-slot supports with
-  top exponent at most 15 by exact degree-seven Macaulay rank; arbitrary
-  supports, shifted windows, general four-slot norm nonvanishing,
-  classification of the transverse cubic-null locus, and arbitrary signed
+  THM-2849 closes the first window on 1,820 supports through exponent `15`;
+  THM-2854 closes `k=1,2` on 252 supports in `{0,...,8}`, all by exact sharp
+  Macaulay rank.  Unbounded supports/windows, general four-slot norm
+  nonvanishing, transverse cubic-null classification, and arbitrary signed
   radial channels remain open.
 ### Live work
 
