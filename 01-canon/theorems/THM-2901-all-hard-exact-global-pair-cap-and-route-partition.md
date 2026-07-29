@@ -120,19 +120,35 @@ H_3={w:c(w)>=(h-beta_2)/3}.                               (8)
 After taking the direct closures first, the exact route partition is
 
 ```text
-direct certificate (6)                         1,835
-finite H3 pair-flag / literal three-cover      12,919
-pair-cap exception                                 52
-                                                ------
-                                                14,806.  (9)
+direct certificate (6)                                  1,835
+finite H3 pair-flag / link-constrained three-cover      12,919
+pair-cap exception                                          52
+                                                         ------
+                                                         14,806.  (9)
 ```
 
 For the middle line one may enumerate pairs `L subset H_3`, since
-`2<3`; no heaviness condition is imposed on `L`.  The child is the
-literal residual `C minus D_L`, with `P union L` excluded.  The `12,919`
-rows are finite child obligations, not closures: reusing the parent cap
-without recomputing on the child is precisely the same-cap deadlock of
-THM-2893.
+`2<3`; no heaviness condition is imposed on `L`.  Put
+
+```text
+C_L=C minus D_L,       h_L=|C_L|,
+J_L={w:c_(C_L)(w)>=h_L-beta_2}.                           (9a)
+```
+
+The heavy-link recursion in THM-2893 shows that all three labels of a
+possible child cover lie in `J_L`: for each such label `w`, the parent
+triple `L union {w}` is heavy and hence
+
+```text
+c_(C_L)(w)=U_C(L union {w})-U_C(L)>=h_L-beta_2.           (9b)
+```
+
+The child also retains `P union L` as forbidden labels.  Thus the `12,919`
+rows are finite link-constrained child obligations, not closures.
+An inherited parent-carrier cap may close some flags, but this is not
+automatic; the same-cap deadlock applies to selected flags of full arity
+`ell=s`, not to these `ell=2<s=3` pairs.  Exact child or inherited-cap
+work must preserve the link and forbidden-prefix sidecars.
 
 The `52` failures of `(7)` occur on `51` rank-one branches and one
 rank-two branch, split by THM-2896 stratum as

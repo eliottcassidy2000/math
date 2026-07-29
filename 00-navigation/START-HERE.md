@@ -20,9 +20,9 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) is the first unresolved runner count in the present literature.**
-   See [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md); THM-741/2883/2888/2892 close `v_8<=14`; THM-2896 gates `3432`;
-   THM-2895/2898/2899 leave `3422`. HYP-8871 leaves `165` rows.
+1. **LRC(14) is the first unresolved runner count.**
+   See [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md). THM-741/2883/2888/2892 close `v_8<=14`;
+   THM-2896 gates `3432`, and THM-2895/2898/2899/2901 leave `3417`.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see

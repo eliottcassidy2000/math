@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-322 (2026-07-29, first THM-2901 promotion) -- the full-arity same-cap deadlock was applied to a lower-arity pair flag
+
+- **What was written:** the first promotion of THM-2901 said that reusing a
+  parent cap after selecting an `H_3` pair `L` was “precisely the same-cap
+  deadlock” of THM-2893.
+- **First failed implication:** THM-2893's algebraic deadlock assumes
+  `ell=s`, so the selected flag itself is heavy and
+  `U_C(L)+B>=h`.  Here `(s,ell)=(3,2)`: the pair need not be heavy, and an
+  inherited parent-carrier certificate can succeed.  On THM-2900's exact
+  control it succeeds on `204/784` pair flags, which directly refutes the
+  claimed impossibility.
+- **Exact repair / stronger survivor:** every extension
+  `L union {w}` inside a hypothetical cover is a heavy triple.  On the
+  literal residual `C_L`, this gives the exact link condition
+  `c_(C_L)(w)>=h_L-B_2` for **each** of the three remaining labels.
+  THM-2893 now records the general heavy-link recursion, and THM-2901 routes
+  its `12,919` pair branches as link-constrained children.  Parent caps are
+  optional sufficient tests; literal child caps retain the link and
+  forbidden-prefix sidecars.
+- **Rule:** before invoking a no-go theorem, audit its arity equality.  A
+  lower-arity selected flag retains nontrivial links into the child; it is
+  not a full-arity heavy flag and need not inherit the same obstruction.
+
 ## MISTAKE-321 (2026-07-29, concurrent THM-2889 reservation) -- a local filename scan was not replayed after the reservation fetch
 
 - **What happened:** the GMC low-sector session found no `THM-2889` in its
