@@ -1,0 +1,13 @@
+THM-2943 WIDTH-SEVEN/EIGHT TWO-CHART RESULTANT CLOSURE
+factorization_dependency_sha256=85ce40de2aa777b8af091dfec934de68beeb42676bea3b48dbf815990a51e0e9
+normalized_supports=(0,a,b,M);widths=6:10,7:15,8:21;total=46
+original_rows=Q:0..19,C:21..29+35,F:36..41;mutated_local_F=0,3,4,5,6,7;mutated_global_F=36,39,40,41,42,43
+factorization=Delta0=q200^6*c300*K*Res;Delta1=q200^5*c300*P_alt*Res
+raw_gcd~q200^5*c300*Res*gcd(K,P_alt)_over_Q[n];raw_gcd_coefficients=NONNEGATIVE;raw_gcd_constant=POSITIVE
+primitive_flag_cofactors=COPRIME;raw_reduced_chart_cofactors=COPRIME
+original_mixed_pivots=width6:7,width7:12,width8:18,total:37;two_chart_exchange_removes_all_common_walls
+outside_interpolation_direct_controls=138;three_term_Pluecker_checks=46
+family_census_digest_sha256=0449a7d9f1799da7af7be9e8a41e84d6d79c1aa3b68aa4c13bfd5eb09a342fa4
+consequence=first_window_SFC4_exact_widths_7_and_8;width6=independent_inherited_control
+scope=integer_depth_n>=0;four_slot_first_window_only;no width>=9 or arbitrary_width claim
+all_exact_checks=PASS
