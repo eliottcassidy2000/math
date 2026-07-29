@@ -40,6 +40,8 @@ Three consequences are tallied:
 * q_5+2B_2<h directly closes the five-slot parent;
 * B_2+q_3<5h/7 is a rank-selective global triple cap and gives a finite
   heavy H_2 core containing at least four vertices of a hypothetical cover.
+* 2B_2<6h/7 is a global four-set cap and gives a finite heavy H_1 core
+  containing all five vertices of a hypothetical cover.
 
 This is a finite exact/scoped census of THM-2896 suffixes, not LRC(14).
 """
@@ -396,9 +398,12 @@ def exact_branch(row: dict[str, object]) -> dict[str, object]:
     direct_margin = mass - data["q5"] - 2 * pair_cap
     triple_cap = pair_cap + data["q3"]
     triple_margin = 5 * mass / 7 - triple_cap
+    quadruple_cap = 2 * pair_cap
+    quadruple_margin = 6 * mass / 7 - quadruple_cap
     pair_eligible = pair_margin > 0
     direct_closed = direct_margin > 0
     triple_eligible = triple_margin > 0
+    quadruple_eligible = quadruple_margin > 0
 
     h3_cutoff = None
     h3_count = None
@@ -418,6 +423,15 @@ def exact_branch(row: dict[str, object]) -> dict[str, object]:
         h2_count = allowed_count(h2_cutoff, data["forbidden"])
         h2_raw = comb(h2_count, 4) if h2_count >= 4 else 0
 
+    h1_cutoff = None
+    h1_count = None
+    h1_raw = None
+    if quadruple_eligible:
+        beta1 = quadruple_margin
+        h1_cutoff = ceiling(data["gamma"] / beta1) - 1
+        h1_count = allowed_count(h1_cutoff, data["forbidden"])
+        h1_raw = comb(h1_count, 5) if h1_count >= 5 else 0
+
     if direct_closed:
         adaptive = "direct"
         adaptive_raw = 0
@@ -427,6 +441,8 @@ def exact_branch(row: dict[str, object]) -> dict[str, object]:
             routes.append((h3_raw, "H3"))
         if triple_eligible:
             routes.append((h2_raw, "H2"))
+        if quadruple_eligible:
+            routes.append((h1_raw, "H1"))
         if routes:
             adaptive_raw, adaptive = min(routes)
         else:
@@ -454,15 +470,21 @@ def exact_branch(row: dict[str, object]) -> dict[str, object]:
         "direct_margin": direct_margin,
         "triple_cap": triple_cap,
         "triple_margin": triple_margin,
+        "quadruple_cap": quadruple_cap,
+        "quadruple_margin": quadruple_margin,
         "pair_eligible": pair_eligible,
         "direct_closed": direct_closed,
         "triple_eligible": triple_eligible,
+        "quadruple_eligible": quadruple_eligible,
         "h3_cutoff": h3_cutoff,
         "h3_count": h3_count,
         "h3_raw": h3_raw,
         "h2_cutoff": h2_cutoff,
         "h2_count": h2_count,
         "h2_raw": h2_raw,
+        "h1_cutoff": h1_cutoff,
+        "h1_count": h1_count,
+        "h1_raw": h1_raw,
         "adaptive": adaptive,
         "adaptive_raw": adaptive_raw,
     }
@@ -488,8 +510,10 @@ def result_line(row: dict[str, object]) -> str:
         f"mB2={ftext(row['pair_margin'])};"
         f"mdirect={ftext(row['direct_margin'])};"
         f"mB3={ftext(row['triple_margin'])};"
+        f"mB4={ftext(row['quadruple_margin'])};"
         f"H3={row['h3_cutoff']}:{row['h3_count']}:{row['h3_raw']};"
         f"H2core={row['h2_cutoff']}:{row['h2_count']}:{row['h2_raw']};"
+        f"H1={row['h1_cutoff']}:{row['h1_count']}:{row['h1_raw']};"
         f"adaptive={row['adaptive']}:{row['adaptive_raw']}\n"
     )
 
@@ -562,8 +586,10 @@ def group_summary(
         sum(row["pair_eligible"] for row in rows),
         sum(row["direct_closed"] for row in rows),
         sum(row["triple_eligible"] for row in rows),
+        sum(row["quadruple_eligible"] for row in rows),
         sum(row["adaptive"] != "open" for row in rows),
         sum(row["adaptive"] == "direct" for row in rows),
+        sum(row["adaptive"] == "H1" for row in rows),
         sum(row["adaptive"] == "H2" for row in rows),
         sum(row["adaptive"] == "H3" for row in rows),
     )
@@ -642,6 +668,7 @@ def main() -> None:
     pair_rows = [row for row in rows if row["pair_eligible"]]
     direct_rows = [row for row in rows if row["direct_closed"]]
     triple_rows = [row for row in rows if row["triple_eligible"]]
+    quadruple_rows = [row for row in rows if row["quadruple_eligible"]]
     open_rows = [row for row in rows if row["adaptive"] == "open"]
     counts = (
         len(rows),
@@ -649,13 +676,21 @@ def main() -> None:
         len(rows) - len(pair_rows),
         len(direct_rows),
         len(triple_rows),
+        len(quadruple_rows),
         sum(row["direct_closed"] or row["triple_eligible"] for row in rows),
+        sum(
+            row["direct_closed"]
+            or row["triple_eligible"]
+            or row["quadruple_eligible"]
+            for row in rows
+        ),
         len(rows) - len(open_rows),
         len(open_rows),
         sum(row["global_exact"] for row in rows),
         sum(row["paid_total"] for row in rows),
         sum(row["exact_raw_pairs"] for row in rows),
         sum(row["adaptive"] == "direct" for row in rows),
+        sum(row["adaptive"] == "H1" for row in rows),
         sum(row["adaptive"] == "H2" for row in rows),
         sum(row["adaptive"] == "H3" for row in rows),
     )
@@ -664,6 +699,7 @@ def main() -> None:
         extremum("minimum_pair_margin", rows, "pair_margin"),
         extremum("minimum_direct_margin", rows, "direct_margin"),
         extremum("minimum_triple_margin", rows, "triple_margin"),
+        extremum("minimum_quadruple_margin", rows, "quadruple_margin"),
         extremum("maximum_W2", rows, "cutoff", minimum=False),
         extremum("maximum_initial_head_n", rows, "head_count", minimum=False),
         extremum("maximum_exact_cutoff", rows, "exact_cutoff", minimum=False),
@@ -674,6 +710,18 @@ def main() -> None:
         extremum("maximum_H3_raw", pair_rows, "h3_raw", minimum=False),
         extremum("maximum_H2_cutoff", triple_rows, "h2_cutoff", minimum=False),
         extremum("maximum_H2_raw", triple_rows, "h2_raw", minimum=False),
+        extremum(
+            "maximum_H1_cutoff",
+            quadruple_rows,
+            "h1_cutoff",
+            minimum=False,
+        ),
+        extremum(
+            "maximum_H1_raw",
+            quadruple_rows,
+            "h1_raw",
+            minimum=False,
+        ),
     )
     quantiles = (
         ("W2", nearest_rank_quantiles([row["cutoff"] for row in rows])),
@@ -686,6 +734,15 @@ def main() -> None:
         ("paid_pairs", nearest_rank_quantiles([row["paid_total"] for row in rows])),
         ("H3_cutoff", nearest_rank_quantiles([row["h3_cutoff"] for row in pair_rows])),
         ("H2_cutoff", nearest_rank_quantiles([row["h2_cutoff"] for row in triple_rows])),
+        (
+            "H1_cutoff",
+            nearest_rank_quantiles(
+                [
+                    row["h1_cutoff"]
+                    for row in quadruple_rows
+                ]
+            ),
+        ),
     )
     failure_digests = (
         failure_digest(
@@ -699,6 +756,10 @@ def main() -> None:
         failure_digest(
             "triple_failures",
             [row for row in rows if not row["triple_eligible"]],
+        ),
+        failure_digest(
+            "quadruple_failures",
+            [row for row in rows if not row["quadruple_eligible"]],
         ),
         failure_digest("adaptive_open", open_rows),
     )
