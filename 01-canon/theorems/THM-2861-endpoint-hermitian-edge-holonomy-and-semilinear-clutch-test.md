@@ -2,13 +2,13 @@
 id: THM-2861
 title: "Endpoint Hermitian edge holonomy and semilinear-clutch test"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT.  The actual THM-2847/2851 carry is
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The actual
+  THM-2847/2851 carry is
   scalar-trivial on the endpoint field and has no nonzero q7 endpoint in
   the old E3 block.  On the THM-2857 Galois torsor, however, adjacent
   sections have a gauge-invariant bidegree-(1,1) Hermitian edge with fixed
   phase omega^3, thirteen distinct values, and Fourier support {0,3,10}.
-  A lawful adjacent-section co-support pair is not supplied.  Independent
-  hostile audit is pending.
+  A lawful adjacent-section co-support pair is not supplied.
 source: root/lrc-endpoint-hermitian-edge-holonomy-2026-07-28
 depends_on:
   - THM-2380-cross-word-charged-target-correlation-and-pair-twist-gate
@@ -29,7 +29,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2861 -- endpoint Hermitian edge holonomy and semilinear-clutch test
 
-**PROVED CANDIDATE + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The endpoint carry can be detected at bidegree `(1,1)`, rather than by the
 tenth power used for q7-to-q11 label alignment.  The detector is invariant
@@ -234,6 +234,13 @@ normalization.  LF-normalized SHA-256:
 script  57bad76968ec9c61d2202331e007860f2817d15c606d8ba558ab8b8d3c41f20c
 output  9bc846b6269b6ca967d32b5b4091ec506b3ede632c58a249c78211e1ecc8b43d
 ```
+
+An independent immutable hostile audit replayed those blobs and separately
+rederived the `42=20+22` horn split, the reduced endpoint exponents, both
+zero physical phase increments, the exact Hermitian law, support
+`{0,3,10}`, thirteen-value separation, common-phase invariance, the
+constant-scalar hostile, and raw-section disjointness.  No load-bearing
+defect was found.
 
 ## 6. Connection contract
 

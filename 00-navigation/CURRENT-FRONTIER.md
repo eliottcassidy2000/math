@@ -86,8 +86,10 @@ THM-2852 adds full signed convolution rank and six borrow-aware arrows.
 THM-2857 makes the endpoint scalar a free Galois `C13` torsor and turns a
 first factorial exit `m<13` into `m+1` carry channels (THM-2858 gives six),
 but the proved carry is `K0`-linear, not the required semilinear clutch.
-Lawful positive action, response basepoint, and E3 transport remain; ledger
-`165`.
+THM-2861 gives a common-phase-free Hermitian edge with support `{0,3,10}`
+and thirteen distinct carry labels, conditionally on an adjacent-section
+co-support pair.  Lawful positive action, response basepoint, and E3
+transport remain; ledger `165`.
 
 ### Independent routes that remain live
 
