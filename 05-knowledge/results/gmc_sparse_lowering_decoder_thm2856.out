@@ -1,0 +1,14 @@
+THM-2856 SPARSE LOWERING / LAGUERRE DEFECT AUDIT
+rising_vandermonde_cells=4095
+rising_vandermonde_digest=94f711070b1737a6183d8553dca9f70085db21fca913326c56d825680447256d
+four_slot_mean_zero_rank3_cells=1820
+sample_support=(0, 3, 8, 15)
+sample_observations=(Fraction(-1516, 50141), Fraction(-52126, 7163), Fraction(-974724, 7163), Fraction(-18927660, 7163))
+sample_decoded=(Fraction(5, 7), Fraction(-11, 13), Fraction(17, 19), Fraction(-23, 29))
+chain_identity_cases=18
+bare_chain_hostile=6s-s^3:mean0_boundary0_lowering0_nonzero
+laguerre_commutator_basis_cases=105
+laguerre_top_selector_cases=105
+laguerre_quotient_digest=9c4ba0d105b6eca1513217deda33dcf08ce59906cbbcefa639a4a849af5ec0c7
+representative_hostile=0~ell_D_but_0_prime!=ell_D_prime_mod_ell_D
+all_checks=PASS
