@@ -208,9 +208,10 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   factorial input is multiplier/lowering access, not another Gram bound.
   THM-2849 closes the first window on 1,820 supports through exponent `15`;
   THM-2854 closes `k=1,2` on 252 supports in `{0,...,8}`, all by exact sharp
-  Macaulay rank.  Unbounded supports/windows, general four-slot norm
-  nonvanishing, transverse cubic-null classification, and arbitrary signed
-  radial channels remain open.
+  Macaulay rank.  THM-2860 identifies Euler-tangent cubic lines with Möbius
+  support chords and excludes them on all 31,465 supports through exponent
+  `30`.  The unbounded chord, quartic-harmonic, general norm, and scalar
+  multiplier-access problems remain open.
 ### Live work
 
 Publish THM-2022; sharpen THM-2111's binomial degree toward `M+N`; formalize

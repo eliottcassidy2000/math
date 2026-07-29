@@ -2,8 +2,8 @@
 id: THM-2860
 title: "Euler-tangent Möbius chord and factorial cubic-avoidance box"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-  REQUESTED.  For a real two-plane in the mean-zero hyperplane of a
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED.  For a real two-plane in the mean-zero hyperplane of a
   four-slot space, failure of Euler transversality is exactly a Segre
   coplanarity determinant.  Its generic normal is a fractional-linear
   function of the four Euler eigenvalues; the sole denominator-degenerate
@@ -30,8 +30,8 @@ hash_basis: LF-normalized bytes
 
 # THM-2860 -- Euler-tangent Möbius chord and factorial cubic avoidance
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-REQUESTED.**
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**
 
 THM-2848 reduces a factorial four-slot common point to a real chord line
 of the quadratic null conic.  This theorem measures whether that chord is
@@ -303,6 +303,13 @@ I1(r,t)=I2(r,t)=0 has no point in P^1_C                (27)
 
 in any of the `31,465` cells.
 
+The full stream consisting of each support, both septic coefficient
+vectors, and the gcd degree has SHA-256
+
+```text
+341b01f418f373633762c2289da11ad02c0678ef39cb18097ffcb73dec2104d7.
+```
+
 Combining `(17)`, `(21)`, and `(27)` proves the finite exact conclusion:
 
 ```text
@@ -409,4 +416,15 @@ cubic--quartic line: it only proves that every such cubic line would be
 Euler-transverse.  It proves neither four-slot SFC/GMC nor access to the
 multiplier in `(33)`.
 
-**QED, pending independent hostile audit.**
+The independent hostile audit rederived the exterior-determinant iff,
+the Segre/Möbius dichotomy including the denominator-degenerate face, the
+binary quadratic--cubic coefficient elimination in `(21)--(22)`, and the
+modular-resultant lift including the point at infinity.  It caught two
+provisional evidence weaknesses: a hardcoded degree-drop check and the
+absence of an all-cell transcript binding.  The final companion routes the
+planted degree-six hostile through the production septic predicate and
+binds every cell by the digest above.  The repaired normal, optimized, and
+stored transcripts and both declared LF hashes were then replayed
+independently.  No remaining mathematical or evidence defect was found.
+
+**QED.**
