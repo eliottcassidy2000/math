@@ -1,5 +1,15 @@
 # Script Results Index
 
+- `lrc14_j6_all_hard_hunter_star_envelope_census_codex_20260729.py` ->
+  matching `.out` [THM-2905 PROVED + FINITE-EXACT + VERIFIED].  Exact
+  breakpoint evaluation of the Hunter-star envelope `G_5` closes `2,964`
+  of all `14,806` scalar-hard marked suffixes, including the old `1,835`
+  direct pair-partition closures and `1,129` more.  Exact root set
+  difference adds six multi-hard bodies to the proved union, now `82`, so
+  the official residual is `3350`; `11,790` H3-link rows and `52` pair-cap
+  exceptions remain.  Ordinary/optimized outputs are byte-identical.
+  Script/output SHA-256:
+  `(402498daeec59db0a9051c235ddcf0bdb4ee08250b0570e442bec6cf62782405,c346cbce451b4d0104707b071c9874798e2cadc853102038b229be9ad8a6afe4)`.
 - `lrc14_j6_one_hard_h3_link_core_census_codex_20260729.py` ->
   summary and full link-ledger `.out` files [THM-2903 PROVED +
   FINITE-EXACT + VERIFIED].  The true `H_3` cores on the `61` non-direct

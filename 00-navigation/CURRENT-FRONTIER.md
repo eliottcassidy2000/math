@@ -20,8 +20,8 @@ uncertified relation gates are not unsafe.  Separately, THM-741/2883 prove all
   [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
 - **PROVED + FINITE-EXACT:** THM-741/2883 close `2002` nine-body roots;
   THM-2888/2892/2893/885 close `3003` eight-body roots (`v_8<=14`).
-  THM-2896 gates `3432`; THM-2895/98/99/2901/02 close `17`.  THM-2901 splits
-  all hard branches into direct/H3-link/exception; `3415` roots remain.
+  THM-2896 gates `3432`; THM-2895/98/99/2901/02/03/05 close an exact union of
+  `82`; THM-2905 leaves `11,790` H3-link branches, `52` exceptions, `3350` roots.
 - **PROVED:** THM-965/2051--2092/2074 give the relation, pair floor, rank atlas
   and ledger; THM-2148/2168 reach scalar `5+3`.  THM-2054 decorrelates
   recorded margins at `H=2^19`, subject to MISTAKE-080/082's shape-specific

@@ -22,7 +22,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 1. **LRC(14) is the first unresolved runner count.**
    See [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md). THM-741/2883/2888/2892 close `v_8<=14`;
-   THM-2895/98/99/2901/02 leave `3415`. HYP-8871: `165` rows.
+   THM-2895/98/99/2901/02/03/05 leave `3350`. HYP-8871: `165` rows.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
