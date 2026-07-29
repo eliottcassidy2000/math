@@ -2,8 +2,8 @@
 id: THM-2924
 title: "Diameter-six Macaulay--Newton atlas"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  For every n>=0, first-window SFC(4) holds on all ten
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  n>=0, first-window SFC(4) holds on all ten
   translated four-slot supports of diameter exactly six.  The fixed
   degree-seven Macaulay chart from THM-2921/2922 has determinant degree
   at most 312 after exact width-six denominator clearing.  All 3,130
@@ -13,6 +13,13 @@ status: >
   sharpness and the positive-depth Gaussian detection bound eight are
   exact.
 source: codex-gmc-uniform-width-extension-2026-07-29
+audit: >
+  An independent implementation rebuilt all ten families without
+  importing this companion, rechecked the exact divisions and degrees,
+  all 3,130 Newton coefficients, exceptional signs and 70 modular
+  controls, and accepted the Macaulay, full-support and Gaussian
+  consequences.  Normal, optimized and stored output and every
+  LF-normalized hash were reproduced exactly.
 depends_on:
   - THM-2173-sparse-projective-factorial-moment-floor
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
@@ -21,6 +28,7 @@ related:
   - THM-2908-consecutive-four-slot-projective-resultant-closure
   - THM-2921-diameter-four-nonconsecutive-macaulay-newton-closure
   - THM-2922-diameter-five-macaulay-newton-atlas
+  - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
 script: 04-computation/gmc_diameter_six_macaulay_newton_atlas_thm2924.py
 output: 05-knowledge/results/gmc_diameter_six_macaulay_newton_atlas_thm2924.out
 script_sha256: b448ba5980ab8f0e538d27bef4581d66891d4bc7b31efe5c29c65d6367396b43
@@ -31,8 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2924 -- diameter-six Macaulay--Newton atlas
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
@@ -233,31 +240,30 @@ E[P^8]=70 alpha^4 L(H^4)!=0.                           (20)
 
 ## 6. Structural continuation and boundary
 
-Widths four through six support the general denominator candidate
+PROVED THM-2925 now establishes at every width the denominator
 
 ```text
 D_(m,M)
  =[prod_(j=1)^(M-1)(n+j)^(m-1)](n+M)^(m-2),          (21)
 ```
 
-the row-degree candidate
+and the row-degree bound
 
 ```text
 deg(D_(m,M)L(H^m)) <=(m-1)M-1,                        (22)
 ```
 
-and hence the fixed-chart bound
+and hence the fixed-chart degree bound
 
 ```text
 deg P_B <=58M-36.                                      (23)
 ```
 
-None of `(21)--(23)` is asserted here for arbitrary `M`.  In particular,
-finite continuation at larger widths cannot by itself explain why one
-Pluecker coordinate should remain nonzero.  The new structural target
-is a valuation proof of `(21)` plus a planar-network, flagged-Schur, or
-equivalent total-positivity realization of the shifted determinant.
-Alternate maximal minors must be retained if this chart crosses a wall.
+The new structural target is therefore no longer pole cancellation but
+uniform nonvanishing of one Pluecker coordinate: a planar-network,
+flagged-Schur, or equivalent total-positivity realization of the shifted
+determinant.  Alternate maximal minors must still be retained if this
+chart crosses a finite-depth wall.
 
 This theorem concerns only four slots of diameter exactly six and the
 first four factorial moments.  It does not prove arbitrary SFC(4),
@@ -280,4 +286,4 @@ python -O 04-computation/gmc_diameter_six_macaulay_newton_atlas_thm2924.py
 Normal and optimized executions byte-match the stored output with the
 declared hashes.
 
-**QED (candidate pending independent hostile audit).**
+**QED.**
