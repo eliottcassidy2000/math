@@ -236,6 +236,21 @@ def main() -> None:
         sp.cancel(alpha * kappa_V - sp.Rational(3, 2) * right_r1) == 0,
         "right endpoint secant changed",
     )
+    endpoint_holonomy = (
+        (2 * A1 * g0 - A0 * g1) * g2**2
+        - (2 * A3 * g2 - A4 * g1) * g0**2
+    )
+    require(
+        sp.cancel(
+            endpoint_holonomy
+            - sp.Rational(2, 3)
+            * g0**2
+            * g2**2
+            * (beta * kappa_U - alpha * kappa_V)
+        )
+        == 0,
+        "endpoint holonomy lost the THM-2866 determinant",
+    )
 
     r0_symbol, r1_symbol, r2_symbol = sp.symbols("r0_symbol r1_symbol r2_symbol")
     endpoint_substitution = {
@@ -292,8 +307,17 @@ def main() -> None:
     )
     valid_chart_U = blocks[1] - blocks[0]
     valid_chart_V = blocks[2]
+    valid_chart_coefficient_matrix = sp.Matrix(
+        [
+            [
+                sp.Poly(poly, variable).coeff_monomial(variable**degree)
+                for degree in range(4)
+            ]
+            for poly in (valid_chart_U, valid_chart_V)
+        ]
+    )
     require(
-        sp.Poly(valid_chart_U, variable) != sp.Poly(valid_chart_V, variable),
+        valid_chart_coefficient_matrix.rank() == 2,
         "cyclic repair chart became dependent",
     )
     degenerate_R0, degenerate_R1 = sp.symbols(
@@ -314,6 +338,12 @@ def main() -> None:
     require(
         sp.rem(1 + z, (1 + z) ** 2, domain=sp.QQ) != 0,
         "degenerate Gram hostile lost its nonzero remainder",
+    )
+    zero_cross_q = sp.expand(q_binary.subs({g0: 1, g1: 0, g2: 1}))
+    require(
+        zero_cross_q == 1 + z**2
+        and sp.Poly(zero_cross_q, z).coeff_monomial(z) == 0,
+        "zero-cross response hostile changed",
     )
     require(
         factorial_readout(blocks[0] * sp.diff(blocks[0], variable), variable)

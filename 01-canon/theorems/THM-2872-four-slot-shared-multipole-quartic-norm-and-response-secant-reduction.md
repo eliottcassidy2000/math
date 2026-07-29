@@ -28,7 +28,7 @@ related:
   - THM-2843-four-slot-projective-divisibility-and-resolvent-reduction
 script: 04-computation/gmc_shared_multipole_quartic_norm_secant_thm2872.py
 output: 05-knowledge/results/gmc_shared_multipole_quartic_norm_secant_thm2872.out
-script_sha256: c290c14310a729bd0b8dc285e933b473d3212a028106e23314c150de86dcd4c7
+script_sha256: 3c4cf51eaa4c820a1d271e71c2f1c5db080d9b6c080209338fc700c5faecea89
 output_sha256: 3fc436c21f5f62ef2626086594247de4b79dc1a7a4129d76dd41ab192fe4da13
 hash_basis: LF-normalized bytes
 ---
@@ -294,6 +294,11 @@ Condition `(26)` holds uniformly when `a_0>=1`.  The `a_0=0` boundary
 requires the correction terms already exposed in THM-2866 and is not
 included below.
 
+Here and below `U'=dU/ds` and `V'=dV/ds` are ordinary polynomial
+derivatives.  Because `a_0>=1`, differentiation lowers every occupied
+adjacent ray `d_j` to `d_(j-1)`.  Thus `U'` and `V'` remain nonzero
+positive adjacent cones.
+
 For a nonzero positive cone `W` and another positive cone `Y`, define
 
 ```text
@@ -355,6 +360,15 @@ Hence the two endpoint determinations agree exactly when
 
 ```text
 beta kappa_U=alpha kappa_V.                           (34)
+```
+
+This is not a new invariant parallel to THM-2866's top-face
+determinant.  It is exactly that determinant in response coordinates:
+
+```text
+J:=(2A_1g_0-A_0g_1)g_2^2-(2A_3g_2-A_4g_1)g_0^2
+  =g_0^2g_2^2(r_1^(L)-r_1^(R))
+  =(2/3)g_0^2g_2^2(beta kappa_U-alpha kappa_V).       (34a)
 ```
 
 When `(34)` holds,
@@ -493,7 +507,9 @@ The independent audit rederived both Euclidean remainders and the exact
 resultant factor, completed the square in `(13)`, and recomputed the
 Hermitian root norm and `Omega`.  It independently expanded the Euler
 determinant in all three pivot charts and checked the factors in
-`(23)--(25)`.
+`(23)--(25)`.  The companion additionally checks exact coefficient-matrix
+rank in the repaired cyclic chart, rather than merely comparing its two
+basis polynomials.
 
 For the positive chamber it rederived every integration-by-parts response,
 the two strict reversals, both endpoint determinations, and the midpoint
