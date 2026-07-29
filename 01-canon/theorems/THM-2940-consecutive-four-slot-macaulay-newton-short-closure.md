@@ -1,5 +1,5 @@
 ---
-id: THM-2926
+id: THM-2940
 title: "Consecutive four-slot Macaulay--Newton short closure"
 status: "RESERVED / UNPROVED EMPTY STUB."
 source: codex-gmc-holotopy-extension-2026-07-29
@@ -10,7 +10,7 @@ related:
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
 ---
 
-# THM-2926 -- consecutive four-slot Macaulay--Newton short closure
+# THM-2940 -- consecutive four-slot Macaulay--Newton short closure
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
