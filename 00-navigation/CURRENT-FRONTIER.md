@@ -207,10 +207,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   detects every binary cone plane. THM-2848 reduces four slots to
   `F^o=0` or a shared cubic--quartic line; THM-2866 excludes the first.
   THM-2879/2890/2891 close consecutive cone-cutting planes.
-  THM-2906/10/14/18: scalar holonomy reverses; high gaps have a local `C3`
-  torsor with quartic exit; THM-2929 makes `(0,1,2,R)`, `R>=13`, effective.
-  Pluecker atlases remain open.  THM-2849/2854: finite Macaulay boxes;
-  THM-2908/2921: width-four closure.  THM-2860 identifies
+  THM-2906/10/14/18 give holonomy/`C3` exits; THM-2929 makes high first gaps
+  effective.  THM-2949/2952 close all `364` four-slot supports through width
+  `14`; THM-2955/2957 close only first-gap `15<=M<=20` by modular gates.
+  Larger widths/atlas stay open; THM-2956 lowers degree.
+  THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent
   `30`.  The unbounded shared-line, general norm, and scalar multiplier-access
