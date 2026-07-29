@@ -450,6 +450,19 @@ This cutoff follows by comparing the defining threshold
 `h_L-B_2` with `h_L/7`; it must be recomputed on the literal child because
 both `h_L` and its component count have changed.
 
+The alternative `(k,s,ell)=(5,3,1)` produces a binary link.  After choosing
+the first ordered member `x` of `H_3`, the four remaining cover labels must
+span a `K_4` in the undirected graph
+
+```text
+{y,z} is an edge  iff  U_(C_x)({y,z})>=h_x-B_2,           (10f)
+```
+
+and at least two vertices lie in the later `H_3` suffix.  Thus a
+singleton-apex clique census is a lawful sibling of the pair-link-core
+census.  The relation in `(10f)` is symmetric and has ties; orienting it as
+a tournament would add no information.
+
 This is a recursive self-similarity law, not merely a workload heuristic:
 an `s`-ary heavy flag descends behind an `ell`-flag to its exact
 `(s-ell)`-ary link.  For `ell=s` the link has arity zero and carries no

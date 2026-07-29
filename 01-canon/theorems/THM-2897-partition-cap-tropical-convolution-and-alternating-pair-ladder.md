@@ -253,10 +253,14 @@ three tests are computationally almost free after `B_2` is known, but their
 finite cores and legal heavy-flag sidecars differ.  This makes a global
 pair-cap census the natural fork point for the five-slot frontier.
 
-For the first line of `(12f)`, THM-2893 permits two distinct child arities.
-Since a putative cover has at least three labels in `H_3`, one may take
+For the first line of `(12f)`, THM-2893 permits three child arities.  Since
+a putative cover has at least three labels in `H_3`, one may take
 
 ```text
+ell=1<s=3: enumerate an ordered first H_3 label; the literal four-cover
+           child contains at least two later H_3 labels and spans a K_4
+           in the residual heavy-link graph;
+
 ell=2<s=3: enumerate H_3 pairs, with no heavy condition,
            and exclude a literal three-cover child whose every label lies
            in the residual singleton link core J_L of THM-2893;
@@ -265,12 +269,12 @@ ell=3=s:   enumerate only heavy H_3 triples,
            and exclude a literal two-cover child.         (12g)
 ```
 
-The pair-flag universe is usually smaller, while its child problem has one
-extra slot but also retains three forced singleton-link memberships.  Neither
-choice dominates without measuring both the flag count and the child-cap
-cost.  In particular, “three forced high labels” does not oblige the proof
-to enumerate triples, and the pair child must not be treated as an
-unconditioned three-cover.
+The singleton-flag universe is smallest but leaves a constrained graph-clique
+problem; the pair route leaves three forced singleton-link memberships; the
+triple route has only two unconstrained slots.  No route dominates without
+measuring flag, link, and child-cap costs.  In particular, “three forced high
+labels” does not oblige the proof to enumerate triples, and no lower-arity
+child should be treated as unconditioned.
 
 ## 4. Disjoint-block and factor-critical matching repair
 
