@@ -7,9 +7,11 @@ status: >
   direct affine suspension preserves the Galois group and turns the full
   V4-resolvent normalization and its V4-cover into literal A1-products.
   On the regular locus, A1-invariance identifies H1_et(-,mu2)
-  Q-equivariantly, so the canonical V4 character plane, its unit/Cl[2]
-  alternative, and its complete divisor-parity code are pulled back
-  unchanged.  THM-2465 therefore reduces the nonautomorphic affine
+  Q-equivariantly. Whenever the V4-cover is finite etale there—in
+  particular in the Keller branch supplied by THM-2655—the canonical
+  character plane, its unit/Cl[2] alternative, and its complete
+  divisor-parity code are pulled back unchanged. THM-2465 therefore reduces
+  the nonautomorphic affine
   point-cap degree-four Kummer gate exactly to the planar normal resolvent
   surface.  In the S4 branch W=Hom(V4,C2)=F2^2 has automorphism group S3;
   PSL2(Z)=C2*C3 reaches it only after the extra reflection relation, so a
@@ -96,10 +98,12 @@ If `U=R_reg`, pullback is a natural `Q`-equivariant isomorphism
 H^1_et(U,mu_2)  ~=  H^1_et(U x A^1,mu_2).                     (7)
 ```
 
-Under (7), the connected `V`-torsor `Z_U -> U` and all three of its
-nonzero characters pull back to the corresponding torsor and characters
-for the suspension.  In particular, when `g` is Keller and THM-2655
-applies, its canonical standard plane
+For an arbitrary `g`, `Z_U -> U` is a connected finite `V`-Galois cover.
+If it is finite etale—in particular, when `g` is Keller and THM-2655
+applies—then it is a connected `V`-torsor. Under (7), that torsor and all
+three of its nonzero characters pull back to the corresponding torsor and
+characters for the suspension. In the Keller case its canonical standard
+plane
 
 ```text
 W=Hom(V,C2) -> H^1_et(U,mu_2)                                 (8)
@@ -142,9 +146,30 @@ Gamma(U x A^1,O)^* = Gamma(U,O)^*,
 Pic(U x A^1)       = Pic(U).                                (10)
 ```
 
-All maps are natural under `Q`, so (7) is `Q`-equivariant.  Equation (5)
-makes `Z~ -> R~` the literal base change of `Z -> R`; consequently its
-character classes are precisely the pullbacks of (8).
+All maps are natural under `Q`, so (7) is `Q`-equivariant. Equation (5)
+makes `Z~ -> R~` the literal base change of `Z -> R`. Consequently,
+whenever the restriction is etale, its character classes are precisely the
+pullbacks of (8).
+
+The etale hypothesis cannot be omitted from this character-plane sentence.
+There are rational degree-four `P^1` covers with branch cycles
+
+```text
+(12)(34), (12), (34), (23), (23)
+```
+
+whose product is one and whose monodromy is `S4`. Writing such a rational
+function as `P/Q`, the polynomial map
+
+```text
+(x,y) -> (yQ(x),yP(x))
+```
+
+is dominant and generically degree four, but the double-transposition branch
+divisor has nontrivial inertia inside `V4`. Thus the induced `V4` cover
+ramifies at a codimension-one regular point of the resolvent normalization.
+Suspension still preserves this finite Galois cover and equations (4)--(7);
+it does not turn the ramified cover into a torsor.
 
 Since `R` is normal,
 
@@ -325,7 +350,8 @@ ansatz is:
 3. only if all rows vanish, compute the `Q`-module structures of
    `O(R)^*/O(R)^{*2}` and `Cl(R)[2]`, rejecting the ansatz if neither
    contains the standard plane;
-4. only for survivors, test THM-2871's integral depression, square law,
+4. only for survivors that enter THM-2871's simple `A`-leading /
+   `A=B=0` flag chart, test that theorem's integral depression, square law,
    Jelonek ownership, and source-coordinate unit reconstruction.
 
 The test is planar by Sections 1--3.  It neither constructs nor excludes a
