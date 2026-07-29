@@ -366,7 +366,7 @@ P_5(n)
 ```
 
 and every coefficient of the degree-`19` factor `P_19` is strictly
-positive.  Hence `(29)` is nonzero for every `n>=0`, and no finite `t`
+positive.  Hence `(32)` is nonzero for every `n>=0`, and no finite `t`
 plane is even cubic-divisible.
 
 At the missing point `(9)`, the two cleared cubic invariants are

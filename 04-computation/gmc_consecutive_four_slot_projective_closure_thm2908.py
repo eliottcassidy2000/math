@@ -537,22 +537,27 @@ t_infinity_i2 = sp.factor(
     ).as_numer_denom()[0]
 )
 require(
-    sp.cancel(t_infinity_i1_raw[0] / t_infinity_i1) == n + 3
+    sp.cancel(t_infinity_i1_raw[0] / t_infinity_i1 - (n + 3)) == 0
     and sp.cancel(
         t_infinity_i1_raw[1]
         / sp.together(
             sp.cancel(t_infinity_expression_i1)
         ).as_numer_denom()[1]
+        - (n + 3)
     )
-    == n + 3,
+    == 0,
     "t=infinity removable-content hostile changed",
 )
 require(
-    t_infinity_i1 == -(n + 2) ** 2 * (28 * n**2 + 87 * n + 66),
+    sp.cancel(
+        t_infinity_i1
+        + (n + 2) ** 2 * (28 * n**2 + 87 * n + 66)
+    )
+    == 0,
     "t=infinity first cubic invariant changed",
 )
 require(
-    t_infinity_i2 == -2 * (n + 2) * (4 * n + 5),
+    sp.cancel(t_infinity_i2 + 2 * (n + 2) * (4 * n + 5)) == 0,
     "t=infinity second cubic invariant changed",
 )
 

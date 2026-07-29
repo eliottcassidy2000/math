@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-328 (2026-07-29, THM-2908 infinity replay) -- a SymPy structural comparison was used as a polynomial identity gate
+
+- **What was done:** after repairing the removable `n+3` content in the first
+  projective-infinity invariant, the THM-2908 companion compared the reduced
+  second numerator to its displayed factorization with Python/SymPy `==`.
+- **First failed implication / minimal witness:** the exact reconstruction
+  reduces the second invariant to
+  `-2(n+2)(4n+5)/(3(3n+4)(3n+5))`, so its numerator differs from the stated
+  `-2(n+2)(4n+5)` by the zero polynomial.  Nevertheless the long ordinary and
+  optimized replays both stopped at that structural comparison.  SymPy `==`
+  is not a general algebraic-identity decision procedure across differently
+  normalized expression trees.
+- **Exact repair / strongest survivor:** every infinity comparison is now
+  made after cancelling the difference and testing it against zero.  A
+  separate direct reconstruction confirms both displayed reduced invariants;
+  the degree-`2804` finite factorization and all preceding certificates were
+  unchanged.
+- **Rule:** truth-bearing symbolic gates compare a normalized difference with
+  zero (or use an explicit polynomial identity), never raw expression-tree
+  equality after a long exact computation.
+
 ## MISTAKE-327 (2026-07-29, THM-594 pair overlap) -- a one-wrap Fourier branch was used as an all-pair formula
 
 - **What was claimed:** THM-594(B) asserted that for every coprime
