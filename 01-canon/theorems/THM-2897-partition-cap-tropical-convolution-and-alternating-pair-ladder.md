@@ -10,6 +10,7 @@ related:
   - THM-2892-eight-body-five-slot-heavy-triangle-closure
   - THM-2893-complement-cap-finite-core-flag-lemma
   - THM-2894-unmarked-residual-semilattice-order-and-group-clutch-no-go
+  - THM-2895-singleton-complement-parity-descent-and-four-root-j6-closure
   - THM-2896-seven-body-adaptive-six-cover-hitting-gate-atlas
 ---
 
@@ -243,6 +244,85 @@ subadditive invoice, before the adversary chooses the five-set.  It restores
 more compatibility than the global maximum-matching cap in `(16)`.  All
 `Phi_k(P)` are nonincreasing under deletion because the outer supremum then
 ranges over fewer sets.
+
+### One-slot factor-critical tail ladder
+
+Write `phi_j(Q)` for the inner minimum defining `Phi_j`.  For every
+`j>=2` and `w in Q`,
+
+```text
+phi_j(Q)<=c(w)+phi_(j-1)(Q minus {w}).                     (19a)
+```
+
+If `j` is odd, leave `w` unmatched and use an optimal perfect matching of
+`Q minus {w}`.  If `j` is even, an optimal near-perfect matching of
+`Q minus {w}` leaves some `u` unmatched; add the edge `{w,u}` and use
+
+```text
+U_C({w,u})<=c(w)+c(u).
+```
+
+This proves `(19a)` in both parities.
+
+The recurrence has its own global discrepancy seal.  Fix a target slot
+count `3<=p<=6`, suppose `gamma>=0` and
+
+```text
+c(w)<h/7+gamma/w,
+```
+
+and define the threshold ladder
+
+```text
+tau_j=(j+7-p)h/7,                   1<=j<=p.               (19b)
+```
+
+Thus `tau_1=(8-p)h/7` is exactly the THM-2895 singleton threshold and
+`tau_p=h`.  Start with any global cap
+
+```text
+Phi_1<=A_1<tau_1.
+```
+
+Inductively, for `j=2,...,p`, if
+`Phi_(j-1)<=A_(j-1)<tau_(j-1)`, put
+
+```text
+delta_j=tau_(j-1)-A_(j-1)>0,
+W_j=floor(gamma/delta_j)+1.                                (19c)
+```
+
+Every `j`-set containing a label `w>=W_j` then satisfies, by `(19a)`,
+
+```text
+phi_j(Q)
+ <h/7+gamma/W_j+A_(j-1)
+ <h/7+delta_j+A_(j-1)
+ =tau_j.                                                   (19d)
+```
+
+Let `H_j` be the exact maximum of `phi_j(Q)` over allowed `j`-sets whose
+labels are all below `W_j`, taking `H_j=0` if there is no such set, and set
+
+```text
+A_j=max(H_j, h/7+gamma/W_j+A_(j-1)).                       (19e)
+```
+
+Then `Phi_j<=A_j`.  In particular, if the finite head also has
+`H_j<tau_j`, then `A_j<tau_j` and the induction continues.  Success through
+`j=p` gives
+
+```text
+Phi_p<=A_p<tau_p=h,
+```
+
+so no `p`-cover exists.
+
+The floor-plus-one in `(19c)` is load-bearing: it makes
+`gamma/W_j<delta_j`, rather than merely `<=`.  This ladder removes one slot
+per stage, while THM-2895 packages two stages at a time as `5->3->1` or
+`6->4->2`.  Both stop at `p=7`, where their common initial demand is the
+impossible strict cap `A_1<h/7` on a rational LRC carrier.
 
 There is a cheap finite-tail gate for `M_(2,2)` on an LRC carrier.  Suppose
 
