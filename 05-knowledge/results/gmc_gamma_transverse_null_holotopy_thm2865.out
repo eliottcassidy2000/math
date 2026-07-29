@@ -1,0 +1,12 @@
+GAMMA TRANSVERSE HOSTILE HOLOTOPY -- exact Bernstein referee
+alpha_interval=[9/10,11/10]
+moving_x_center=26362/100000+(73/1000)(alpha-1); halfwidth=1/10000
+moving_y_center=23420/1000000+(7/500)(alpha-1); halfwidth=1/20000
+row_operation=G=30*I2-(41-6*alpha)*I1; determinant=30
+F_degrees=(15, 4, 3) G_degrees=(16, 4, 4)
+minus_Fx_degrees=(14, 3, 3) Jacobian_degrees=(28, 6, 6)
+quartic_exit_degrees=(22, 3, 7)
+face_orientation=PASS unique_transverse_zero_for_every_alpha=PASS
+positive_cones=PASS quartic_imaginary_exit=PASS
+consequence=Gamma moments 1..3 vanish along a unique real-analytic positive branch
+scope=uniform deformation hostile; only alpha=1 is the complex-Gaussian radial law
