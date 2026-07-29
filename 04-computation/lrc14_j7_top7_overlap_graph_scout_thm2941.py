@@ -2,9 +2,10 @@
 """Restricted-overlap graph scout for the critical j=7 seam.
 
 This is a sidecar experiment, not a closure theorem.  It imports only the
-independent reconstruction in ``lrc_j7_independent_audit_20260729.py`` and
-retains the actual restricted pair intersections among each carrier's seven
-largest singleton coverages.  It compares three compatible pair objects:
+independent reconstruction in
+``lrc14_j7_critical_scalar_wall_independent_thm2941.py`` and retains the
+actual restricted pair intersections among each carrier's seven largest
+singleton coverages.  It compares three compatible pair objects:
 
 * a three-edge matching forest;
 * the best six-edge star;
@@ -30,7 +31,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 AUDIT_PATH = HERE / "lrc14_j7_critical_scalar_wall_independent_thm2941.py"
 EXPECTED_AUDIT_SHA256 = (
-    "0fde0cd17e93a0cbc16de69e42f6dde25e79eaab1c256372825553087b098b92"
+    "5d25a955fe184d6c1a3d8b632b4bbf901dc996ee46ad67c5748836fcc7134404"
 )
 if (
     hashlib.sha256(AUDIT_PATH.read_bytes().replace(b"\r\n", b"\n")).hexdigest()

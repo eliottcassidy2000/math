@@ -14,14 +14,17 @@ status: >
 source: root-lrc14-j7-critical-wall-2026-07-29
 depends_on:
   - THM-735-bonferroni-simultaneous-multi-peel-defeats-the-clustered-non-isolated-wall
+  - THM-1094-exact-two-comb-component-theorem
+  - THM-1234-sharp-five-comb-compatibility-floor
+  - THM-2893-complement-cap-finite-core-flag-lemma
   - THM-2923-complete-seven-body-six-slot-recursive-pair-hunter-closure
   - THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff
+  - LRC(<=13)
 related:
   - THM-856-hunter-tree-seven-comb-crossing
   - THM-1176-seven-wall-slow-gap-harmonic-crowding
   - THM-1221-seven-wall-strict-spectrum-hunter-floor
   - THM-2184-two-scale-tail-continuation-profile
-  - THM-2893-complement-cap-finite-core-flag-lemma
 verification:
   - 04-computation/lrc14_j7_critical_scalar_wall_balanced_boundary_thm2941.py
   - 05-knowledge/results/lrc14_j7_critical_scalar_wall_balanced_boundary_thm2941.out
@@ -432,42 +435,141 @@ the larger by `13 max A`; its load-bearing extra coordinate is the
 carrier-local pair endpoint current, not the global full-circle overlap.
 This does not prove those charts empty.
 
-There is, however, a uniform **finite reduction** that does not require
-bounding the aligned multiplier set.  Suppose there are `k` aligned tails
-and `r=7-k` drifts, with `2<=k<=6`.  The component-free tariff
-THM-2928(25h) supplies a drift
+The multiplicity deformation in fact gives an **absolute** first apex
+throughout the `k>=2` aligned sector.  Suppose there are `k` aligned tails,
+`d=7-k` drifts, and let `m_A` and `m` count the active aligned and total tail
+combs.  Pointwise on a cover,
 
 ```text
-z<C_k L,                    C_k=(7-k)/b_k,              (25a)
+m-1 >= (m_A-1)_+.                                      (25a)
 ```
 
-where `L` is the fixed canonical denominator of the body carrier and `b_k`
-depends only on `k`.  Hence only finitely many integral `z` occur for each
-of the `3,003` body roots.  Delete such a `D_z`.  Six tail labels remain,
-with no alignment assumption needed.  At every proper node of their literal
-residual tree, the body speeds and already chosen tails total at most twelve
-speeds.  Settled `LRC(<=13)` gives a point at clearance at least `1/13`;
-the strict margin `1/13-1/14` gives a positive interval in that residual.
-It therefore satisfies the positive-mass interval hypothesis of the
-cap-free `p<=6` first-apex recursion THM-2893(7a)--(7b).  Recursing to depth
-at most six produces a finite exact decision tree.
-
-With
+If `u_A` is the normalized safe mass of the `k` aligned multipliers, Boolean
+grid tensorization gives
 
 ```text
-L_E=lcm(14e:e in E)=14 lcm(E),
-max_E L_E=5,045,040,
+Delta=integral_(C_E)(m-1)
+ >=h integral_T(m_A-1)_+
+ =h[k/7-mu(union_(a in A)D_a)]
+ =h[u_A-d/7].                                          (25b)
 ```
 
-the strict integral first-drift caps can even be chosen globally as
+The safe floors in THM-2928 therefore give
 
 ```text
-k                         2           3          4          5         6
-z <=              281,080,799  74,954,879 42,988,828 19,164,599 7,665,839.
-                                                               (25b)
+k                 2       3         4          5          6
+d                 5       4         3          2          1
+u_A >=          66/91   55/91    558/1183   478/1365   61/273
+eta_k=u_A-d/7    1/91    3/91     51/1183    88/1365   22/273. (25c)
 ```
 
-These large numbers are reduction bounds, not a completed finite census.
+The positivity begins exactly at `k=2`: for `k=1`,
+`u_A=6/7=d/7`, so this excess mechanism vanishes.  This explains, rather
+than merely observes, why the zero/one-aligned sector is the remaining
+infinite frontier.
+
+Each aligned singleton has restricted mass `h/7`.  Ordering the drifts
+`z_1<...<z_d` and writing `delta(z)=c(z)-h/7`,
+
+```text
+Delta=sum_(q=1)^d delta(z_q)
+ <=(6r_E/49)sum_(q=1)^d 1/z_q
+ <=6d r_E/(49z_1).                                    (25d)
+```
+
+Here `r_E` counts positive-length carrier components, and THM-1094 supplies
+the componentwise discrepancy inequality.  The two independent carrier
+reconstructions give
+
+```text
+max_E r_E/h_E=3993990/32029
+```
+
+at `E=(1,10,11,12,13,14)`, where
+`h_E=32029/105105` and `r_E=38`.  Combining `(25c)`--`(25d)` gives the
+body-uniform integral caps
+
+```text
+k                         2      3      4      5     6
+smallest drift z_1 <=   6,947  1,852  1,062    473   189.       (25e)
+```
+
+There is a complementary lower bound on the largest drift scale.  Put
+
+```text
+M=max(E union {z_1,...,z_d}).
+```
+
+The `6+d=13-k` nonaligned/body speeds have, by settled `LRC(<=13)`, a point
+with clearance at least `1/(14-k)`.  Their distance functions are
+`M`-Lipschitz, so the closed arc `I` of radius
+
+```text
+R=k/[14(14-k)M]
+```
+
+around that point is safe at level `1/14`.  Let
+
+```text
+phi_L(t)=Lt mod 1,                 P=phi_L(I).
+```
+
+The body and drift teeth miss `I`, while each aligned tooth pulls back from
+its normalized danger set.  A cover therefore forces
+
+```text
+P subset U_A=union_(a in A)D_a.
+```
+
+The interval-image formula gives `mu(P)=min(1,2LR)`.  Moreover `P` is
+compact and `U_A` is open and proper, so the inclusion has strict measure:
+
+```text
+min(1,2LR)<mu(U_A)=1-u_A<=1-u_k.
+```
+
+Consequently every such cover must satisfy the **projected-safe-arc wall**
+
+```text
+M > alpha_k L,              alpha_k=k/[7(14-k)(1-u_k)],
+
+k                         2        3          4           5          6
+alpha_k               13/150   13/132   2366/21875   2275/18627   819/5936.
+                                                               (25f)
+```
+
+The earlier whole-cell test is the weaker consequence
+`M>kL/[14(14-k)]`.  Thus the aligned sector is squeezed between a bounded
+first drift and a quantitatively forced second scale; it is not merely
+placed in an undifferentiated finite box.
+
+For `k=5`, there is a second, Gram-facing derivation.  Pointwise
+
+```text
+(m_A-1)_+ >=(2/5)binom(m_A,2),
+```
+
+while tensorization and THM-1234 give
+
+```text
+integral_(C_E)binom(m_A,2)
+ =h sum_(i<j)rho(a_i,a_j)>=44h/273.
+```
+
+This reproduces `eta_5=88/1365`; the safe-surplus and pair-Gram views are
+the same pressure in two coordinate systems.
+
+The caps in `(25e)` give a uniform **finite reduction** without bounding
+the aligned multiplier set.  Delete the bounded `D_(z_1)`.  Six tail labels
+remain, with no alignment assumption needed.  At every proper node of their
+literal residual tree, the body speeds and already chosen tails total at
+most twelve speeds.  Settled `LRC(<=13)` gives a point at clearance at least
+`1/13`; the strict margin `1/13-1/14` gives a positive interval in that
+residual.  It therefore satisfies the positive-mass interval hypothesis of
+the cap-free `p<=6` first-apex recursion THM-2893(7a)--(7b).  Recursing to
+depth at most six produces a finite exact decision tree.  This is a
+finiteness theorem, not an emptiness census.
+
 Together with THM-2928's empty `k=7` branch, this proves:
 
 > Every six-body/seven-tail branch with at least two aligned tails is either

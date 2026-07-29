@@ -12,11 +12,12 @@ maximum_pair_horizon=6635
 maximum_top7_scan_horizon=2000
 minimum_longest_component=23/1092;body=(1, 6, 7, 8, 10, 13)
 critical_owner_bound_histogram=((1, 39), (2, 1601), (3, 1049), (4, 283), (5, 28), (6, 3))
+aligned_safe_surplus_first_drift_bounds=((2, '222522300/32029'), (3, '59339280/32029'), (4, '578557980/544493'), (5, '15171975/32029'), (6, '6068790/32029'));integral_caps=(6947,1852,1062,473,189);max_root=(1, 10, 11, 12, 13, 14)
 balanced_pointwise_cover_boundary=EMPTY;zero excess assigns each closed positive carrier component to one open tooth, forcing an owner<=6<15
 hypothetical_balanced_partition_gram=(h/49)(7I-J);rank=6;kernel=span(all_ones)
 next_object=multi-slope restricted Gram plus component owner/address-transition ledger; scalar pair cap is insufficient
-row_semantic_sha256=04d4bbbac0d606678aa6b4f3d34b2463c3a023a2169be8f9bbe0cfcb97aeaf39
+row_semantic_sha256=e754a50ce088b647581d293928be09343bd4e25a1640e3d0097fc7671591eee1
 scope=complete scalar-wall and balanced-boundary audit on the six-body/seven-tail rung; arbitrary positive-excess covers OPEN
 not_unrestricted_LRC14=TRUE
-semantic_sha256=d559fa14e23e40db1de9428822b22ab409379f215ba20722cebc515e1bde5c58
+semantic_sha256=a1c857a75356401a6e268ef79055b4806ccc7559620f28a592803e31273f5528
 all_exact_controls=PASS

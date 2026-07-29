@@ -31,13 +31,20 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+ALIGNED_SAFE_SURPLUS = (
+    (2, F(1, 91)),
+    (3, F(3, 91)),
+    (4, F(51, 1183)),
+    (5, F(88, 1365)),
+    (6, F(22, 273)),
+)
 STAGE1 = (
     ROOT
     / "04-computation"
     / "lrc14_j6_seven_body_six_slot_recursive_pair_hunter_thm2923_stage1.py"
 )
 EXPECTED_STAGE1_SHA256 = (
-    "74e5eb2d0b23dda6366d115376890726ac32dc834a09a71479ea875f05e7615e"
+    "32751b2a5beb789b1657f06d3964cbf24e634251e57f57f299b8f50c647f2103"
 )
 DEFAULT_OUTPUT = (
     ROOT
@@ -45,7 +52,7 @@ DEFAULT_OUTPUT = (
     / "lrc14_j7_critical_scalar_wall_balanced_boundary_thm2941.out"
 )
 EXPECTED_SEMANTIC_SHA256: str | None = (
-    "d559fa14e23e40db1de9428822b22ab409379f215ba20722cebc515e1bde5c58"
+    "a1c857a75356401a6e268ef79055b4806ccc7559620f28a592803e31273f5528"
 )
 
 
@@ -192,11 +199,19 @@ def profile(body: tuple[int, ...]) -> dict[str, object]:
     longest = max(right - left for left, right in carrier)
     owner_bound = ceiling(F(1, 1) / (7 * longest)) - 1
     require(owner_bound >= 0, f"{body}: negative component-owner bound")
+    aligned_first_drift_bounds = tuple(
+        (
+            k,
+            F(6 * (7 - k) * components, 49) / (surplus * mass),
+        )
+        for k, surplus in ALIGNED_SAFE_SURPLUS
+    )
 
     return {
         "body": body,
         "mass": mass,
         "components": components,
+        "components_per_mass": F(components, 1) / mass,
         "top7": top7["top"],
         "top7_horizon": top7["horizon"],
         "top7_tail_gap": top7["tail_gap"],
@@ -211,6 +226,7 @@ def profile(body: tuple[int, ...]) -> dict[str, object]:
         "threshold": threshold,
         "longest": longest,
         "owner_bound": owner_bound,
+        "aligned_first_drift_bounds": aligned_first_drift_bounds,
     }
 
 
@@ -236,6 +252,7 @@ def row_digest(rows: list[dict[str, object]]) -> str:
             row["body"],
             row["mass"],
             row["components"],
+            row["components_per_mass"],
             row["top7"],
             row["top7_horizon"],
             row["pair_cap"],
@@ -245,6 +262,7 @@ def row_digest(rows: list[dict[str, object]]) -> str:
             row["threshold"],
             row["longest"],
             row["owner_bound"],
+            row["aligned_first_drift_bounds"],
         )
         for row in rows
     )
@@ -267,11 +285,36 @@ def render(rows: list[dict[str, object]]) -> str:
         "balanced-boundary owner histogram changed",
     )
     minimum_longest = extreme(rows, "longest")
+    aligned_apex = extreme(
+        rows,
+        "components_per_mass",
+        largest=True,
+    )
     require(
         minimum_longest["longest"] == F(23, 1092)
         and minimum_longest["body"] == (1, 6, 7, 8, 10, 13)
         and max(row["owner_bound"] for row in rows) == 6,
         "uniform balanced-boundary obstruction changed",
+    )
+    require(
+        aligned_apex["components_per_mass"] == F(3_993_990, 32_029)
+        and aligned_apex["body"] == (1, 10, 11, 12, 13, 14)
+        and aligned_apex["mass"] == F(32_029, 105_105)
+        and aligned_apex["components"] == 38
+        and aligned_apex["aligned_first_drift_bounds"]
+        == (
+            (2, F(222_522_300, 32_029)),
+            (3, F(59_339_280, 32_029)),
+            (4, F(578_557_980, 544_493)),
+            (5, F(15_171_975, 32_029)),
+            (6, F(6_068_790, 32_029)),
+        )
+        and tuple(
+            bound.numerator // bound.denominator
+            for _, bound in aligned_apex["aligned_first_drift_bounds"]
+        )
+        == (6_947, 1_852, 1_062, 473, 189),
+        "aligned-sector first-drift caps changed",
     )
 
     lines = [
@@ -296,6 +339,15 @@ def render(rows: list[dict[str, object]]) -> str:
             "minimum_longest_component="
             + extremum_text(minimum_longest, "longest"),
             f"critical_owner_bound_histogram={owner_histogram}",
+            "aligned_safe_surplus_first_drift_bounds="
+            + repr(
+                tuple(
+                    (k, ftext(bound))
+                    for k, bound in aligned_apex["aligned_first_drift_bounds"]
+                )
+            )
+            + ";integral_caps=(6947,1852,1062,473,189);"
+            + f"max_root={aligned_apex['body']}",
             "balanced_pointwise_cover_boundary=EMPTY;zero excess assigns each "
             "closed positive carrier component to one open tooth, forcing "
             "an owner<=6<15",

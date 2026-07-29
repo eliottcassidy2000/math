@@ -19,7 +19,10 @@ minimum_pair_head=(value=256,body=(1, 2, 3, 4, 6, 8),h=1/2,q7=3/35,top7=(22, 26,
 maximum_pair_head=(value=6635,body=(1, 2, 4, 5, 6, 13),h=2209/5460,q7=38/585,top7=(22, 28, 60, 16, 55, 27, 54),B2=20018/135135,pair=(22, 27),q_head=395,pair_head=6635,paid_pairs=220)
 minimum_paid_pairs=(value=1,body=(1, 2, 3, 4, 5, 13),h=733/1820,q7=9/140,top7=(18, 22, 36, 55, 24, 27, 41),B2=190/1287,pair=(18, 22),q_head=359,pair_head=359,paid_pairs=1)
 maximum_paid_pairs=(value=220,body=(1, 2, 4, 5, 6, 13),h=2209/5460,q7=38/585,top7=(22, 28, 60, 16, 55, 27, 54),B2=20018/135135,pair=(22, 27),q_head=395,pair_head=6635,paid_pairs=220)
-row_digest=b2b37b7190ef863c9e41dd89cc4822515e40217a47b391233192ad5d6ef604e7
+minimum_components_per_mass=(value=3640/171,body=(1, 2, 3, 4, 6, 13),h=171/364,q7=1/14,top7=(22, 27, 33, 156, 55, 20, 28),B2=3161/20020,pair=(20, 22),q_head=467,pair_head=2320,paid_pairs=101)
+maximum_components_per_mass=(value=3993990/32029,body=(1, 10, 11, 12, 13, 14),h=32029/105105,q7=65243/1121120,top7=(23, 16, 27, 25, 17, 46, 32),B2=36809/291060,pair=(16, 27),q_head=523,pair_head=656,paid_pairs=13)
+aligned_safe_surplus_first_drift_bounds=((2, '222522300/32029'), (3, '59339280/32029'), (4, '578557980/544493'), (5, '15171975/32029'), (6, '6068790/32029'));integral_caps=(6947,1852,1062,473,189);max_root=(1, 10, 11, 12, 13, 14)
+row_digest=ce141f5ebb7359e3c6ed0f7763ddf1379e1e3aef5205b1af40f1362eabf6e8db
 mechanism=if q7>=h/7 and B2>=2h/7 then G7(h/7)=h; for a<h/7, G7(a)<=7a<h
 tail=THM735 strict singleton discrepancy dynamically seals top seven and pair cap; no arbitrary label ceiling
 two_tail_seal=H2<=2q1 and H2>=q1+tau imply tau<=q1; therefore two omitted labels have union <=2tau<=q1+tau<=H2

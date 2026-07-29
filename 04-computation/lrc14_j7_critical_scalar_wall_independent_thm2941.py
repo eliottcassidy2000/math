@@ -42,6 +42,13 @@ from itertools import combinations
 BASE_LABEL = 15
 INITIAL_HEAD = 256
 RULER = 14 * math.lcm(*range(1, 15))
+ALIGNED_SAFE_SURPLUS = (
+    (2, F(1, 91)),
+    (3, F(3, 91)),
+    (4, F(51, 1183)),
+    (5, F(88, 1365)),
+    (6, F(22, 273)),
+)
 ONE_FOURTEENTH = RULER // 14
 THIRTEEN_FOURTEENTHS = 13 * ONE_FOURTEENTH
 ONE_SEVENTH = RULER // 7
@@ -454,6 +461,14 @@ def profile_root(body: tuple[int, ...]) -> dict[str, object]:
         "mass": mass,
         "components": components,
         "gamma": gamma,
+        "components_per_mass": F(components, 1) / mass,
+        "aligned_first_drift_bounds": tuple(
+            (
+                k,
+                F(6 * (7 - k) * components, 49) / (surplus * mass),
+            )
+            for k, surplus in ALIGNED_SAFE_SURPLUS
+        ),
         "top7": top7,
         "q7": q7,
         "q7_gap": q7_gap,
@@ -486,6 +501,8 @@ def row_digest(rows: list[dict[str, object]]) -> str:
             row["threshold"],
             row["star_center"],
             row["star_envelope"],
+            row["components_per_mass"],
+            row["aligned_first_drift_bounds"],
         )
         for row in rows
     )
@@ -561,6 +578,31 @@ def main() -> None:
         and all(row["hunter_at_threshold"] == row["mass"] for row in rows),
         "all-root critical audit failed",
     )
+    aligned_apex = extremum(
+        rows,
+        "components_per_mass",
+        largest=True,
+    )
+    require(
+        aligned_apex["components_per_mass"] == F(3_993_990, 32_029)
+        and aligned_apex["body"] == (1, 10, 11, 12, 13, 14)
+        and aligned_apex["mass"] == F(32_029, 105_105)
+        and aligned_apex["components"] == 38
+        and aligned_apex["aligned_first_drift_bounds"]
+        == (
+            (2, F(222_522_300, 32_029)),
+            (3, F(59_339_280, 32_029)),
+            (4, F(578_557_980, 544_493)),
+            (5, F(15_171_975, 32_029)),
+            (6, F(6_068_790, 32_029)),
+        )
+        and tuple(
+            bound.numerator // bound.denominator
+            for _, bound in aligned_apex["aligned_first_drift_bounds"]
+        )
+        == (6_947, 1_852, 1_062, 473, 189),
+        "aligned-sector first-drift caps changed",
+    )
 
     print("LRC14 independent critical seven-slot Hunter audit")
     print(
@@ -581,6 +623,7 @@ def main() -> None:
         "q_head",
         "pair_head",
         "paid_pairs",
+        "components_per_mass",
     ):
         print_extremum(f"minimum_{field}", extremum(rows, field), field)
         print_extremum(
@@ -588,6 +631,17 @@ def main() -> None:
             extremum(rows, field, largest=True),
             field,
         )
+    print(
+        "aligned_safe_surplus_first_drift_bounds="
+        + repr(
+            tuple(
+                (k, ftext(bound))
+                for k, bound in aligned_apex["aligned_first_drift_bounds"]
+            )
+        )
+        + ";integral_caps=(6947,1852,1062,473,189);"
+        + f"max_root={aligned_apex['body']}"
+    )
     print(f"row_digest={row_digest(rows)}")
     print(
         "mechanism=if q7>=h/7 and B2>=2h/7 then "
