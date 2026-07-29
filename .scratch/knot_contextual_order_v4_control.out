@@ -1,0 +1,13 @@
+V4_profiles {(0, 0): (0, 1, 1, 2), (0, 1): (1, 0, 2, 1), (1, 0): (1, 2, 0, 1), (1, 1): (2, 1, 1, 0)}
+V4_crossing_edges 6
+AGL22_size 24
+translation_V4_size 4
+quotient_size 6
+S4_invariant_tournament_orientations 0
+N_metric_triangle_checks 9261
+N_translation_checks 1728
+N_joint_nonexpansivity_checks 20736
+crossing_signs_before_translation [-1, 0, 1]
+translated_differences_prefix [-1, 0, 0, 0, 0]
+knot_mirror_upper_certificate ((6, 5), (5, 6))
+PASS
