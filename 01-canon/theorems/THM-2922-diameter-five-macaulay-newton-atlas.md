@@ -2,8 +2,8 @@
 id: THM-2922
 title: "Diameter-five Macaulay--Newton atlas"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  For every n>=0, first-window SFC(4) holds on all six
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  n>=0, first-window SFC(4) holds on all six
   translated four-slot supports of diameter exactly five.  The same
   fixed degree-seven Macaulay row chart used at diameter four has
   determinant degree at most 254 after exact width-five denominator
@@ -30,8 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2922 -- diameter-five Macaulay--Newton atlas
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
@@ -312,4 +311,15 @@ python -O 04-computation/gmc_diameter_five_macaulay_newton_atlas_thm2922.py
 Normal and optimized executions byte-match the stored output with the
 declared LF-normalized hashes.
 
-**QED (candidate pending independent hostile audit).**
+An independent hostile audit rebuilt all six width-five form families
+over exact rational arithmetic, rechecked the denominator divisibility
+and exact degrees `(4,9,14)`, and rederived the fixed-row degree invoice,
+all base/exceptional-sign cases, Macaulay surjectivity, full-support
+sharpness, and the Gaussian lift.  It replayed all `1530` positive
+Gregory--Newton coefficients, the canonical `42` modular controls, and
+`12` additional exact four-variable/minor controls.  Normal, optimized,
+and stored output and the declared LF-normalized hashes all matched.  The
+auditor also accepted the repaired provisional typing of the width-six
+scout in Section 6.  No defect remained.
+
+**QED.**
