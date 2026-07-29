@@ -12,28 +12,56 @@ def sign(value):
 
 # V4/F_2^2 exact control.
 V4 = tuple(product(range(2), repeat=2))
+v4_index = {x: index for index, x in enumerate(V4)}
 
 
 def add_v4(x, y):
     return (x[0] ^ y[0], x[1] ^ y[1])
 
 
-def weight(x):
-    return x[0] + x[1]
+def discrete_length(x):
+    return 0 if x == (0, 0) else 1
 
 
 profiles = {
-    x: tuple(weight(add_v4(x, z)) for z in V4)
+    x: tuple(discrete_length(add_v4(x, z)) for z in V4)
     for x in V4
 }
 require(len(set(profiles.values())) == 4, "V4 continuation profiles collided")
 
 crossing_edges = []
 for x, y in combinations(V4, 2):
-    signs = {sign(weight(add_v4(x, z)) - weight(add_v4(y, z))) for z in V4}
+    signs = {
+        sign(discrete_length(add_v4(x, z)) - discrete_length(add_v4(y, z)))
+        for z in V4
+    }
     require(-1 in signs and 1 in signs, f"missing V4 crossing for {x},{y}")
     crossing_edges.append((x, y))
 require(len(crossing_edges) == 6, "V4 crossing graph is not K4")
+
+
+def order_complete(dictionary):
+    indices = tuple(v4_index[z] for z in dictionary)
+    for x in V4:
+        for y in V4:
+            full = all(a <= b for a, b in zip(profiles[x], profiles[y]))
+            restricted = all(profiles[x][index] <= profiles[y][index] for index in indices)
+            if full != restricted:
+                return False
+    return True
+
+
+minimum_context_size = None
+complete_dictionaries = []
+for size in range(5):
+    for dictionary in combinations(V4, size):
+        if order_complete(dictionary):
+            minimum_context_size = size
+            complete_dictionaries.append(dictionary)
+    if minimum_context_size is not None:
+        break
+require(minimum_context_size == 4, "V4 physical context tax is not four")
+require(complete_dictionaries == [V4], "unexpected minimal V4 dictionary")
 
 # Every permutation of the four affine points is affine over F_2.
 def invertible_matrix(a, b, c, d):
@@ -62,9 +90,6 @@ translations = {
 }
 require(len(translations) == 4, "translation subgroup is not V4")
 require(len(affine_permutations) // len(translations) == 6, "S4/V4 is not size 6")
-
-v4_index = {x: index for index, x in enumerate(V4)}
-
 
 def compose(left, right):
     return tuple(left[v4_index[right[index]]] for index in range(4))
@@ -145,6 +170,7 @@ require(knot_upper_table[0][1] < knot_upper_table[1][1], "second knot witness")
 
 print("V4_profiles", profiles)
 print("V4_crossing_edges", len(crossing_edges))
+print("V4_minimum_order_complete_contexts", minimum_context_size)
 print("AGL22_size", len(affine_permutations))
 print("translation_V4_size", len(translations))
 print("quotient_size", len(affine_permutations) // len(translations))

@@ -1,5 +1,6 @@
-V4_profiles {(0, 0): (0, 1, 1, 2), (0, 1): (1, 0, 2, 1), (1, 0): (1, 2, 0, 1), (1, 1): (2, 1, 1, 0)}
+V4_profiles {(0, 0): (0, 1, 1, 1), (0, 1): (1, 0, 1, 1), (1, 0): (1, 1, 0, 1), (1, 1): (1, 1, 1, 0)}
 V4_crossing_edges 6
+V4_minimum_order_complete_contexts 4
 AGL22_size 24
 translation_V4_size 4
 quotient_size 6

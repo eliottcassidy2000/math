@@ -172,17 +172,17 @@ but dominance itself is not supplied by a finite common-context theorem.
 Likewise, in the language of THM-2348, one favorable context is analogous to
 one Cartesian optimum: it does not imply the robust all-context condition.
 
-## 5. Exact `V4` control and the `S4/V4` quotient
+## 5. Exact `V4` control, four-context tax, and the `S4/V4` quotient
 
 Take
 
 ```text
 M=F_2^2=V4,
-f(x)=Hamming weight of x.
+f(0)=0,             f(x)=1 for x!=0.
 ```
 
-Addition is XOR and the Hamming metric is translation invariant.  For
-distinct `x,y`, context `z=x` makes
+This is the root length of the discrete translation-invariant metric.
+For distinct `x,y`, context `z=x` makes
 
 ```text
 f(x+z)=0<f(y+z),
@@ -205,6 +205,26 @@ This gives three exact boundaries at once.
 3. Since every transposition reverses one edge, no tournament orientation of
    `K4` is invariant under the full affine gauge.
 
+There is also an exact finite-query tax.  For a finite packet `A`, call a
+context dictionary `D` **order-complete** when
+
+```text
+x<=_f^ctx y
+ iff f(x+z)<=f(y+z) for every z in D,               x,y in A.  (14)
+```
+
+In this `V4` model, the minimum order-complete dictionary for `A=V4` has
+size exactly four.  To refute the ordered comparison `x<=y`, the only
+possible context is `z=y`: there the right response is zero and the left is
+one, whereas at every `z!=y` the right response is one.  Hence every
+`y in V4` must belong to `D`, and `D=V4` works.
+
+The abstract order dimension of a four-element antichain is only two.
+Thus abstract linear extensions or the three `S3` direction channels do not
+realize the physical context coordinates.  The missing fourth datum is the
+affine origin.  This is an exact form of the user's “forbidden degree
+`|V4|=4`” observation.
+
 This is the rigorous place where the user's `V4`/`S4`/`S3` frame occurs.
 Composing `PSL_2(Z)=C2*C3` with its finite `S3` quotient only acts on the
 three nonzero affine directions.  It does not recover free-word order, braid
@@ -218,26 +238,26 @@ translation-invariant integer metric
 ```text
 d(m,n)=0                 if m=n,
        =1                 if |m-n|=2,
-       =2                 otherwise.                (14)
+       =2                 otherwise.                (15)
 ```
 
 Every nontrivial distance is `1` or `2`, so the triangle inequality is
 immediate.  Its root length is
 
 ```text
-f(0)=0, f(2)=1, and f(n)=2 for n>0, n!=2.           (15)
+f(0)=0, f(2)=1, and f(n)=2 for n>0, n!=2.           (16)
 ```
 
 The classes `1,2` cross:
 
 ```text
-f(1)>f(2),               f(2)<f(3).                 (16)
+f(1)>f(2),               f(2)<f(3).                 (17)
 ```
 
 After translating both by `1`, however,
 
 ```text
-2 <_f^ctx 3,                                            (17)
+2 <_f^ctx 3,                                            (18)
 ```
 
 because `f(2)<f(3)` at the zero context and
@@ -273,5 +293,5 @@ cheapest decisive tests:
 stopping boundary:
   crossing can disappear under a noninvertible translation, and neither a
   finite common-context slice nor an S3 tournament shadow recovers the full
-  continuation order.                                          (18)
+  continuation order.                                          (19)
 ```
