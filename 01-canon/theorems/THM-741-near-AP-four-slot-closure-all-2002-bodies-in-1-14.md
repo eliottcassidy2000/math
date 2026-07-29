@@ -1,7 +1,7 @@
 ---
 id: THM-741
 title: NEAR-AP FOUR-SLOT CLOSURE — every 13-speed family with AT LEAST 9 speeds in {1,…,14} satisfies LRC(14). Equivalently, for EVERY 9-element body E ⊆ {1,…,14} (all C(14,9)=2002) and all v₁<v₂<v₃<v₄ not in E, {E,v₁..v₄} is lonely. Proof = the THM-735 Bonferroni tree at j=4: legs J4 (one inequality, all four ≥ V₁(E)) / J3 (per-v₁ exact bodies) / J2 (per-(v₁,v₂)) / J1 (per-(v₁,v₂,v₃) tail) / bottom (exact-ℚ sweeps of covering quadruples via lcm-multiples) — with PROVED P1/P2 LEMMA-SKIPS at every level (subtrees where the next Bonferroni threshold already fires from the parent's exact data close without computing the child body; sound because P1/P2 are one-level bounds off exact data)
-status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 15/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; only the six pure tails with root edges `(1,2),(1,3),(1,4),(1,5),(1,6),(1,7)` remain.  Exact top-four root-coverage envelopes close `(2,4),(3,4),(3,5),(3,6),(4,5),(4,6),(4,7)`; a top-five isolated exception closes `(3,7)`; and finite ranked-exception heads close `(2,3),(2,5),(2,6),(2,7)`.  All use literal root carriers plus the THM-735(ii) covariance cap, not Fano transport.  Upgrades globally to PROVED only when all 2002 bodies close clean.
+status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda now prove all 21/21 whole flood bodies and therefore every thirteen-speed family containing H={8,...,14} and at least two labels from {1,...,7}.  Top-four root-coverage envelopes close `(2,4),(3,4),(3,5),(3,6),(4,5),(4,6),(4,7)`; a top-five isolated exception closes `(3,7)`; ranked finite heads close `(2,3),(2,5),(2,6),(2,7)`; and a finite-head/tail residual-carrier partition closes the final label-1 star `(1,2),...,(1,7)`.  All use literal root carriers plus the THM-735(ii) covariance cap, not Fano transport.  This is one 21-body sub-stratum of the 2002-body theorem, not global THM-741; global status upgrades only when all 2002 bodies close clean.
 source: kind-pasteur-2026-07-13-S128 (cont.5); exact flood and completed-family addenda codex-2026-07-15-S14/S15/S16 and codex-2026-07-17/18
 depends_on:
   - THM-735   # the simultaneous multi-peel lemma (j=4,3,2,1 legs) + P1/P2 peel lemmas (THM-733)
@@ -47,6 +47,8 @@ verification:
   - 05-knowledge/results/lrc14_j4_six_more_top_four_coverage_codex_20260728.out
   - 04-computation/lrc14_j4_four_ranked_exception_coverage_codex_20260728.py
   - 05-knowledge/results/lrc14_j4_four_ranked_exception_coverage_codex_20260728.out
+  - 04-computation/lrc14_j4_label1_head_tail_partition_codex_20260728.py
+  - 05-knowledge/results/lrc14_j4_label1_head_tail_partition_codex_20260728.out
   - 04-computation/lrc14_thm741_sharded_resume_runner_codex_20260717.py
   - 05-knowledge/results/lrc14_thm741_sharded_resume_runner_codex_20260717.out
 ---
@@ -1261,6 +1263,172 @@ The exact residual is the six-edge star at label `1`:
 This is a structural change in the frontier, not an asserted symmetry:
 literal root carriers were computed throughout, and no Fano/`chi_7`
 transport was used.  Global THM-741 and LRC(14) remain open. ∎
+
+## A finite-head/tail partition closes the label-1 star (codex-2026-07-28)
+
+It remains to close the pure tails of the six roots
+
+```text
+E_b={1,b,8,9,10,11,12,13,14},       2<=b<=7.
+```
+
+Write `G_b=G(E_b)`, let `m_b=|G_b|` and `r_b` be its number of interval
+components, and put
+
+```text
+c_b(w)=|G_b intersect D_w|,
+u_b(w)=m_b/7+(99/70)r_b/(7w).                           (B24)
+```
+
+THM-735(ii), through the THM-731/732 covariance-discrepancy chain, gives
+`c_b(w)<u_b(w)`.  Fix the exact horizon
+
+```text
+W=2500,                    u_*=u_b(2501).
+```
+
+For every `15<=w<=2500`, the companion computes `c_b(w)` in four exact ways:
+sparse subtraction from `G_b`, full subtraction, direct ten-comb union, and
+an independent two-pointer sum over the teeth of `D_w`.  All `6*2486`
+comparisons agree.  If `q_1>=q_2` are the top two values in this finite bank,
+the exact data are:
+
+| root | `r_b,m_b` | `q_1,q_2` (speed:value) | `u_*` | `m_b-q_1-q_2-2u_*` |
+|---|---|---|---:|---:|
+| `12` | `32,319927/2522520` | `23:453587/11603592`, `46:212279/5801796` | `182859895/8832351528` | `4947963661/507860212860` |
+| `13` | `30,3319/25740` | `23:453587/11603592`, `17:67493/1786785` | `65750513/3154411260` | `25633591579/2466749605320` |
+| `14` | `30,335047/2522520` | `23:240307/5801796`, `17:135481/3573570` | `944979467/44161757640` | `61555969441/5755749079080` |
+| `15` | `26,6716/45045` | `23:41075/892584`, `19:36649/798798` | `527231/22531509` | `9555282629/918985147080` |
+| `16` | `30,365567/2522520` | `19:377149/7987980`, `23:47539/1054872` | `1021309987/44161757640` | `15408825262/2412336011085` |
+| `17` | `22,384011/2522520` | `19:128503/2662660`, `23:25331/552552` | `1038897919/44161757640` | `106901554667/9649344044340` |
+
+Every displayed margin is positive and every row also has `q_2>u_*`.
+Consequently, if at least two of the four added speeds exceed `W`, their
+total root coverage is at most `q_1+q_2+2u_*`.  For three tails this follows
+from `q_1+3u_*<q_1+q_2+2u_*`; for four tails it follows from
+`4u_*<q_1+q_2+2u_*`.  Thus every branch with at least two tail speeds is
+closed.
+
+Suppose exactly one speed `t` exceeds `W`, and let `S` be the other three.
+The root union bound closes the branch unless
+
+```text
+sum_{w in S} c_b(w)+u_* >= m_b.                          (B25)
+```
+
+Equality is deliberately included in the dangerous bank.  There are only
+`1,6,1,4,6,3` such triples for roots `12,...,17`.  For each one, construct
+the literal residual carrier
+
+```text
+G_{b,S}=G_b minus union_{w in S}D_w
+```
+
+with measure `m_{b,S}` and `r_{b,S}` components.  Applying (B24) to this
+residual carrier gives, for every `t>W`,
+
+```text
+|G_{b,S} minus D_t|
+ > 6m_{b,S}/7-(99/70)r_{b,S}/(7*2501).                  (B26)
+```
+
+The minimum of the right side over each complete dangerous bank is:
+
+| root | dangerous triples | minimum in (B26) | attaining `S` | `m_{b,S},r_{b,S}` |
+|---|---:|---:|---|---|
+| `12` | 1 | `71621894273/1608224007390` | `19,23,46` | `29780131/551170620,22` |
+| `13` | 6 | `34858373223/959291513180` | `17,19,23` | `958105/21917896,14` |
+| `14` | 1 | `1865084760919/54679616251260` | `17,19,23` | `154798927/3747960216,16` |
+| `15` | 4 | `15348916166/365505456225` | `19,23,25` | `6349621/125266050,18` |
+| `16` | 6 | `156275963542/4556634687605` | `17,19,23` | `6484031/156165009,16` |
+| `17` | 3 | `12865251479/300437451930` | `17,19,23` | `1052099/20593188,12` |
+
+All are strictly positive, so every exactly-one-tail branch closes.
+
+It remains only to take all four speeds in the finite head.  The root union
+bound closes every quadruple except those satisfying
+
+```text
+sum_{w in S}c_b(w) >= m_b.                               (B27)
+```
+
+Again equality is included.  The complete candidate counts and exact minimum
+survivors are:
+
+| root | candidates in (B27) | minimum survivor | attaining speeds | components |
+|---|---:|---:|---|---:|
+| `12` | 2,589 | `17069726431/693372639960` | `17,19,23,37` | 16 |
+| `13` | 7,609 | `48080163/2027405380` | `17,19,23,37` | 16 |
+| `14` | 2,581 | `162578519/7415750160` | `19,23,32,37` | 16 |
+| `15` | 7,290 | `544970477/18539375400` | `19,23,25,37` | 16 |
+| `16` | 7,522 | `1707671939/77041404440` | `17,19,23,37` | 16 |
+| `17` | 5,087 | `13420153/455992020` | `17,19,23,31` | 16 |
+
+Every candidate is rebuilt both by nested exact subtraction and by direct
+thirteen-comb union; the full carriers, component counts, and measures agree.
+The candidate banks themselves are independently generated by specialized
+descending-rank loops and by an arity-generic recursion whose exact suffix
+sum is an upper envelope for every pruned branch.  Both enumerators return
+the same labelled tuples.  The respective dangerous/head recursion-node
+counts are
+
+```text
+12: 4/2614,  13: 12/7642, 14: 4/2604,
+15: 7/7320,  16: 10/7556, 17: 6/5112.                   (B28)
+```
+
+As hostile controls, the ordinary top-four margins for all six roots are
+negative:
+
+```text
+-3653017/275585310, -25012943/1249320072,
+-50908597/3747960216, -68144053/3747960216,
+-6867281/312330018,  -228625/11639628.                  (B29)
+```
+
+Thus this is a genuine residual-carrier repair, not a rediscovery of the
+earlier top-four envelope.
+
+The script hash is
+
+```text
+40c09ae5383d5243e22595dbba1304a5209e00a613730f55f7382cd6e25f8811.
+```
+
+Normal and optimized full replays produce the same stored report, whose hash
+is
+
+```text
+1aff874ff7cfbe23c7fed5394f13d407d4143f94a2292b366ed7d0c8267432bc.
+```
+
+The combined coverage/triple/quadruple manifest is
+
+```text
+556e997f0fb7b270943611ab560ce72a32f077c97ed3e6354da8d6176d2c76e4. (B30)
+```
+
+An independent from-scratch endpoint/bisect audit reproduced all six
+candidate counts and all twelve minima; its canonical consequence-ledger
+digest is
+
+```text
+967ccc76a736256f074c7435046ff0a9d1812da9d369e19a108d9e7e82529901.
+```
+
+Therefore every pure tail of roots `12,13,14,15,16,17` is strictly lonely.
+The earlier **Three-small exact closure** handles every non-pure completion:
+if an added speed is at most `14`, the final family has at least three labels
+from `{1,...,7}`.  Combining the six rows here with the preceding fifteen
+whole-root certificates gives:
+
+> **Complete flood/H-core stratum.** Every thirteen-speed family containing
+> `H={8,...,14}` and at least two labels from `{1,...,7}` is strictly lonely.
+> Equivalently, all `21/21` literal flood roots are closed.
+
+Families containing `H` with only zero or one such label lie outside
+THM-741's nine-in-window hypothesis.  This addendum closes one 21-body
+sub-stratum, not all `2002` bodies.  Global THM-741 and LRC(14) remain open. ∎
 
 ## Sharded-runner integrity repair (codex-2026-07-17)
 
