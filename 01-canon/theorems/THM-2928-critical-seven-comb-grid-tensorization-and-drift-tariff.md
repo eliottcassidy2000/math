@@ -11,8 +11,10 @@ status: >
   phase-address intersection.  On a literal six-body carrier, the two
   six-comb safe floors collapse that intersection to finitely many clocks,
   all of which fail; hence the fully aligned and one-drift branches are
-  empty.  This does not close the branches with at least two drifts or
-  prove LRC(14).
+  empty.  A component-free phase-load tariff bounds one slope in every
+  k>=2 mixed branch, and every fixed five-aligned/two-drift chart reduces
+  to an exact finite pair-clock quotient.  Uniform two-drift emptiness and
+  the branches with more drifts remain open; this does not prove LRC(14).
 source: root-2026-07-29 with independent hostile audits by seven-wall-tensor-audit and critical-residue-tree
 depends_on:
   - THM-594-pair-overlap-law-mirsky-newman-floor
@@ -20,8 +22,11 @@ depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
   - THM-1221-seven-wall-strict-spectrum-hunter-floor
   - THM-1234-sharp-five-comb-compatibility-floor
+  - THM-2162-signed-endpoint-cocycle-and-bv-component-split
   - THM-2182-endpoint-grid-product-and-tail-overlap-sidecar
+  - LRC(<=13)
 related:
+  - THM-1135-r6-harmonic-tail-finite-box
   - THM-2184-two-scale-tail-continuation-profile
   - THM-1132-sharp-measure-horn-constant-dissolves-r6-wall
   - THM-1176-seven-wall-slow-gap-harmonic-crowding
@@ -345,6 +350,58 @@ sum 1/z_q > c_k/(Lnu_A)
 
 [thm1166]: THM-1166-seven-wall-fano-gcd-discrepancy.md
 
+### The component-free phase-load tariff
+
+The largest-tooth tariff `(19)` is strongest when `nu_A` is controlled.
+There is a complementary estimate that forgets components but retains the
+complete load on one grid cell.  For `j in J`, put
+
+```text
+E_q(j)={u in [0,1]: ||z_q(j+u)/L||<1/14}.             (25d)
+```
+
+Apply THM-1094's interval discrepancy to the physical cell
+`[j/L,(j+1)/L]` and rescale by `L`.  It gives
+
+```text
+mu(E_q(j))<=1/7+6L/(49z_q).                           (25e)
+```
+
+The proper compact set `R_A` lies in the open union of the `E_q(j)`.
+Consequently that union has measure strictly larger than `u_A`, and
+
+```text
+L sum_(q=1)^r 1/z_q
+ >(49/6)(u_A-r/7).                                   (25f)
+```
+
+For an almost-everywhere cover the same inequality is non-strict.  At the
+critical cardinality `r=7-k`, the safe floors `(25a)` give
+
+```text
+k                 1      2      3        4         5        6
+b_k              0     7/78   7/26    119/338   308/585   77/117
+
+L sum 1/z_q > b_k.                                    (25g)
+```
+
+For `k>=2`, some drift therefore satisfies
+
+```text
+min_q z_q/L < (7-k)/b_k.                              (25h)
+```
+
+In particular, five aligned combs and two drifts force
+
+```text
+min(z_1,z_2)/L<585/154.                               (25i)
+```
+
+This is a slope bound independent of `nu_A`; it does not control the
+denominator of that rational slope uniformly as `L` varies.  For `k=1`,
+the coefficient vanishes and the component-sensitive tariff `(19)` remains
+the live estimate.
+
 ## 6. Six aligned combs and one drift: the `39/61` cone
 
 Now take `k=6`, `r=1`, and write the aligned speeds as
@@ -615,11 +672,165 @@ integrations in
 Their frozen SHA-256 hashes are
 
 ```text
-script  0d0d4acd71b5987995c41b8a19b3c0de7ee1fde6a01d1b6c9d0e0cb4a32ddd6a
-output  f46211d9f441f72753059c01a22cc6a5765d200b61bcd4541ccfbe9578708a3b.
+script  4ceb6c62a4e8f8379ce117d814bb081e9601294995c6827d8cb829a821ee6725
+output  67933062e9b26359aba1a3c3bca46c7e9ac77ea1fb05e6d9b9109a4945ed4be7.
 ```
 
-## 9. Scope and information audit
+## 9. Five aligned combs and two drifts: a finite exact chart
+
+Keep the literal six-body carrier `G_F`, its resolving denominator `L`, and
+its full selected-cell set `J`.  Now let `A` contain five distinct aligned
+multipliers and suppose two drift combs cover the residual.  Relabel them so
+that `z_1<=z_2`.  Equation `(25i)` gives
+
+```text
+z_1/L<585/154.                                        (37a)
+```
+
+Write each drift uniquely as
+
+```text
+z_q=(L/d_q)c_q,       d_q=L/gcd(z_q,L),       gcd(c_q,d_q)=1. (37b)
+```
+
+Thus `d_q` divides `L`, and `(37a)` already leaves finitely many first
+clocks:
+
+```text
+d_1 divides L,             c_1/d_1<585/154.           (37c)
+```
+
+For a residue `r in S_(d_1):=J mod d_1`, define
+
+```text
+E_(c_1,d_1,r)
+ ={u in [0,1]: ||c_1(u+r)/d_1||<1/14},
+
+B_r=R_A minus E_(c_1,d_1,r).                          (37d)
+```
+
+At least one `B_r` has positive measure.  One proof uses the cited LRC
+through thirteen: the partial family
+
+```text
+F union LA union {z_1}
+```
+
+has twelve nonzero speeds, so it has a time at which all distances are at
+least `1/13`.  The strict `1/13-1/14` margin supplies a positive safe
+interval.  That interval cannot meet a grid endpoint, where every aligned
+speed vanishes, and therefore normalizes into one positive part of some
+`B_r`.  Independently, the exact address/reflection audit in the companion
+script proves that one drift cannot cover `R_A` even almost everywhere:
+the only surviving five-aligned clocks are `(d,c)=(3,1),(8,1),(8,3)`,
+whose simultaneous phase masses are respectively `0`, at most `1/7`, and
+at most `1/21`, all below `478/1365`.
+
+There is a uniform second-clock bound.  Put
+
+```text
+a_*=max A,                 N_A=sum_(a in A)a.          (37e)
+```
+
+Because five distinct positive multipliers have `a_*>=5`, equation `(37a)`
+and `v<=L/14` for every `v in F` show that `La_*` is the largest speed in
+the partial family.  The `1/13` witness is therefore safe at level `1/14`
+on an interval of physical length `1/(91La_*)`, hence on a normalized
+subinterval of `B_r` of length
+
+```text
+1/(91a_*).                                            (37f)
+```
+
+On one normalized cell, the first drift is the integer `c_1` comb on an
+interval of length `1/d_1`.  THM-1094's tooth count gives
+
+```text
+number of meeting teeth
+ <=c_1/d_1+8/7
+ <585/154+8/7
+ =5327/1078<5.                                        (37g)
+```
+
+Thus at most four first-drift teeth cut `R_A`.  Since `(8)` gives
+`nu_A<=N_A-4`, every positive `B_r` has at most `N_A` positive-length BV
+components.
+
+Choose the positive `B_r` supplied by `(37f)`, with mass `mu_r` and `K_r`
+positive-length components.  For any selected cell with this residue, put
+`r_2=j mod d_2` and
+
+```text
+X=(r_2+B_r)/d_2.
+```
+
+The second drift covering `B_r` is exactly the integer comb `D_(c_2)`
+covering `X`.  This set has mass `mu_r/d_2` and `K_r` BV components.
+Summing the THM-2162 endpoint discrepancy, equivalently THM-1094 `(10)`,
+over those components yields
+
+```text
+mu_r/d_2
+ <=mu_r/(7d_2)+6K_r/(49c_2),
+
+c_2/d_2<=K_r/(7mu_r)<=13N_Aa_*.                      (37h)
+```
+
+The last inequality uses `(37f)` and `K_r<=N_A`.  Hence both clocks lie in
+the explicit finite box
+
+```text
+d_1,d_2 divide L,
+gcd(c_q,d_q)=1,
+c_1/d_1<585/154,
+c_2/d_2<=13(max A)(sum A).                            (37i)
+```
+
+Row-specific exact values of `K_r/mu_r` sharpen the last face.
+
+The final decision is not a relaxation.  Put
+
+```text
+D=lcm(d_1,d_2),          S_D=J mod D,
+a_q=c_qD/d_q,            X_r=(r+R_A)/D.               (37j)
+```
+
+Then `D` divides `L`, the `a_q` are integers, and the original residual is
+covered pointwise if and only if
+
+```text
+X_r subset D_(a_1) union D_(a_2)       for every r in S_D. (37k)
+```
+
+This is a finite rational interval-arrangement test.  Isolated points pay
+zero in `(37h)` but must remain in the final pointwise check `(37k)`.
+
+The pair sidecar in that test is carrier-local.  If
+`a_1=g alpha`, `a_2=g beta`, with `gcd(alpha,beta)=1`, and `P_(alpha,beta)`
+is a periodic primitive of
+
+```text
+1_(D_alpha)1_(D_beta)-rho(alpha,beta),
+```
+
+then for interval components `[L_s,R_s]` of `X_r`,
+
+```text
+mu(X_r intersect D_(a_1) intersect D_(a_2))
+ =mu(X_r)rho(alpha,beta)
+  +(1/g)sum_s[P_(alpha,beta)(gR_s)-P_(alpha,beta)(gL_s)]. (37l)
+```
+
+The endpoint term depends on the primitive pair and the located carrier.
+It cannot be replaced by the global overlap `rho(a_1,a_2)`: THM-1166's
+hostile interval `[1/7,6/7]` has zero local overlap for every consecutive
+pair `(N,N+1)`, although its global overlap is positive.
+
+This proves finite exactness only after `F`, `A`, and `L` are fixed.  The
+bound grows with `L`, `max A`, and `sum A`; equation `(37k)` is not proved
+empty uniformly.
+
+## 10. Scope and information audit
 
 The proved transport is
 
@@ -630,7 +841,7 @@ preserved:    the complete Boolean word when every residue b is zero;
 destroyed off the fixed locus:
               slope detuning b/L and cell phase bj/L;
 necessary mixed-residue sidecar:
-              J, bJ mod L, component centres/radii, and gcd fibers. (37)
+              J, bJ mod L, component centres/radii, and gcd fibers. (38)
 ```
 
 For an arbitrary grid carrier, equations `(27)`--`(35)` remain necessary
@@ -638,7 +849,9 @@ rather than sufficient and need not eliminate every one-drift row.  The
 double use of the six-comb floor and reflection is what closes the literal
 six-body one-drift branch.  The theorem does **not** close an arbitrary
 mixed-residue seven-wall, the branches with two or more drift speeds, or
-LRC(14).  Their next exact object is a multi-slope version of the finite
-address clock `(35b)`.  A tournament on the seven labels forgets the metric
-widths, cell phases, and gcd fibers in that clock and is therefore not an
-equivalent quotient.
+LRC(14).  Section 9 makes each fixed two-drift chart finite but does not
+bound those charts uniformly or prove their finite quotients empty.  The
+next exact object is the carrier-local pair endpoint current `(37l)`, not a
+global pair overlap.  A tournament on the seven labels forgets the metric
+widths, cell phases, gcd fibers, and located endpoint current, and is
+therefore not an equivalent quotient.

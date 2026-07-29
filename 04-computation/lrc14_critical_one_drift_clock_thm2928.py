@@ -12,6 +12,7 @@ from math import gcd
 
 Q = Fraction
 TARGET = Q(61, 273)
+FIVE_SAFE = Q(478, 1365)
 
 
 def require(condition: bool, message: str) -> None:
@@ -113,6 +114,25 @@ def simultaneous_mass(c: int, d: int, residues: tuple[int, ...]) -> Fraction:
 
 
 def main() -> None:
+    safe_floors = {
+        1: Q(6, 7),
+        2: Q(66, 91),
+        3: Q(55, 91),
+        4: Q(558, 1183),
+        5: FIVE_SAFE,
+        6: TARGET,
+    }
+    phase_tariffs = tuple(
+        Q(49, 6) * (safe_floors[k] - Q(7 - k, 7)) for k in range(1, 7)
+    )
+    require(
+        phase_tariffs == (Q(0), Q(7, 78), Q(7, 26), Q(119, 338), Q(308, 585), Q(77, 117)),
+        "phase-load tariff table",
+    )
+    require(Q(2, 1) / phase_tariffs[4] == Q(585, 154), "two-drift first slope")
+    require(Q(585, 154) + Q(8, 7) == Q(5327, 1078) < 5, "four-tooth cutoff")
+    require(Q(91, 7) == 13, "second-clock BV coefficient")
+
     # From g>L(h-1/7), h>=61/273, and d=L/g.
     require(TARGET - Q(1, 7) == Q(22, 273), "safe-density difference")
     require(Q(273, 22) < 13, "coindex cutoff")
@@ -172,8 +192,42 @@ def main() -> None:
     require(max(every_mass) == Q(3, 14), "global phase maximum")
     require(max(every_mass) < TARGET, "strict phase contradiction")
 
+    # With only five aligned combs, the inner survivor has the stronger mass
+    # 478/1365.  If one of two drifts covered that survivor by itself on
+    # every selected body cell, the same outer density/reflection reduction
+    # would leave only the following clocks.
+    require(FIVE_SAFE - Q(1, 7) == Q(283, 1365), "five-safe excess")
+    require(Q(6 * 1365, 49 * 283) == Q(8190, 13867), "five-safe phase cutoff")
+    five_c_candidates = {
+        d: tuple(c for c in range(1, (8190 * d) // 13867 + 1) if gcd(c, d) == 1)
+        for d in (1, 3, 8)
+    }
+    require(
+        five_c_candidates == {1: (), 3: (1,), 8: (1, 3)},
+        "five-aligned numerator candidates",
+    )
+    five_d3 = {1: simultaneous_mass(1, 3, (1,))}
+    five_d8 = {
+        c: tuple(simultaneous_mass(c, 8, (r, 7 - r)) for r in range(4))
+        for c in five_c_candidates[8]
+    }
+    require(five_d3 == {1: Q(0)}, "five-aligned d=3 table")
+    require(
+        five_d8
+        == {
+            1: (Q(1, 7), Q(0), Q(0), Q(0)),
+            3: (Q(0), Q(0), Q(1, 21), Q(0)),
+        },
+        "five-aligned d=8 table",
+    )
+    five_phase_max = max([*five_d3.values(), *(x for row in five_d8.values() for x in row)])
+    require(five_phase_max == Q(1, 7), "five-aligned maximum")
+    require(five_phase_max < FIVE_SAFE, "five-aligned strict phase contradiction")
+
     print("THM-2928 literal one-drift clock audit")
     print(f"safe target: {TARGET}")
+    print(f"phase-load tariffs k=1..6: {phase_tariffs}")
+    print("two-drift finite box: c1/d1<585/154, c2/d2<=13(max A)(sum A)")
     print("coindex cutoff: d<=12")
     print(f"density candidates: {density_candidates}")
     print("reflection survivors: (1, 3, 8)")
@@ -182,6 +236,12 @@ def main() -> None:
     print(f"d=3 masses: {actual_d3}")
     print(f"d=8 reflected-pair masses: {actual_d8}")
     print(f"largest candidate phase mass: {max(every_mass)} < {TARGET}")
+    print(f"five-aligned safe target: {FIVE_SAFE}")
+    print(f"five-aligned one-drift numerators: {five_c_candidates}")
+    print(f"five-aligned d=3 masses: {five_d3}")
+    print(f"five-aligned d=8 reflected-pair masses: {five_d8}")
+    print(f"largest five-aligned phase mass: {five_phase_max} < {FIVE_SAFE}")
+    print("PASS: no one drift covers the five-aligned residual on the full body carrier")
     print("PASS: the literal six-body/six-aligned-plus-one-drift branch is empty")
 
 
