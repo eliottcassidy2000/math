@@ -2,8 +2,8 @@
 id: THM-2873
 title: "Two-ray factorial-response TP3 curvature"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For every nonzero nonnegative two-ray cone
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  nonzero nonnegative two-ray cone
   W=x d_p+y d_(p+h), with h=1 or h=2, the consecutive three-column
   factorial-response determinant is strictly positive at every row n>=1.
   Each of its seven polarized coefficients has a common positive factorial
@@ -32,8 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2873 -- two-ray factorial-response TP3 curvature
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Put
 
@@ -510,7 +509,27 @@ Both modes must byte-match
 05-knowledge/results/gmc_two_ray_response_tp3_thm2873.out.
 ```
 
-The proof and exact companion are complete.  Promotion to proved canon
-still requires an independent audit of the factorial normalization, all
-determinant multiplicities, the positivity certificates, the interval
-orientation in `(38)`, and the scope boundary in Section 5.
+## 8. Independent hostile audit
+
+The independent audit rederived `(10)--(18)` from the polynomial
+`s^T product_i(s-b_i)`, including the coefficient-common factorial factor
+through every determinant permutation.  A separate block-polynomial plus
+matrix-determinant implementation reproduced all fourteen residual
+polynomials, their term counts, coefficient minima, and both hashes in
+`(23)`.  It also established symbolically
+
+```text
+C_(h,0)(n,p)=12(p+1)^6P(p,n)
+```
+
+for both gaps, verified the shifted singleton positivity and the exact
+`n=0` hostile, and replayed the normal and optimized companions
+byte-identically.
+
+For the canonical endpoint exit, the audit expanded `U,V` directly as
+polynomials in `s`, independently recovered all `30` terms of `J`, checked
+the orientation of both rational bounds in `(38)`, and rederived the
+endpoint-response identities `(39)`.  It found no factor, sign, scope, or
+implementation defect.  The proof remains restricted to gap-one/gap-two
+cones and, for the endpoint exit, the single THM-2846 rectangle; universal
+TP3 and the general mixed secant sign remain open.
