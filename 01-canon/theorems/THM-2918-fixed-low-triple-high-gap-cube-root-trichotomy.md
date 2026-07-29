@@ -395,6 +395,18 @@ THM-2824 proves that its second divisibility invariant satisfies
 I_2(c_0)<0.                                             (37)
 ```
 
+For a binary cubic
+
+```text
+c=t_0+3t_1z+3t_2z^2+t_3z^3,
+```
+
+the convention used here is
+
+```text
+I_2(c)=3t_2g_0g_2-2t_3g_1g_0-t_0g_2^2.
+```
+
 For a pure cube `ell^3`, with `xi,eta>0`, put
 
 ```text
