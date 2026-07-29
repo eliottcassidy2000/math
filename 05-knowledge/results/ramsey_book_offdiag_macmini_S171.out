@@ -1,0 +1,41 @@
+ramsey_book_offdiag_anneal_macmini_S171.c + ramsey_book_offdiag_verify_macmini_S171.py
+— two-level annealing infrastructure for off-diagonal book Ramsey witnesses
+R(B_{n-1}, B_n) >= 4n-1 on N = 4n-2 vertices (Epoch FrontierMath
+"Ramsey Numbers for Book Graphs"; single challenge n = 100, N = 398,
+399 = 3·7·19 not a prime power, 199 ≡ 3 mod 4 — outside all known families).
+
+Model: vertices Z_m x {0,1}, m = 2n-1; within-level symmetric sets U0, U1;
+cross set D free.  Exact class-level codegree conditions via cyclic
+correlations; O(m) incremental updates; simulated annealing with 40M-move
+reheat cycles; sizes initialized from a budget-slack scan.
+
+VERIFIED CONTROL (n = 12, N = 46): zero-energy configuration found and
+independently brute-verified (worst edge codegree 10 = n-2, worst non-edge
+common-non-neighbours 11 = n-1): witness stored at
+05-knowledge/results/ramsey_book_n12_witness_macmini_S171.sets.
+
+KEY STRUCTURAL FACTS (proved by budget accounting, reusable):
+  * At sizes |U0| = |U1| = u, |D| = dd, all limits are lim_on = n-2 and
+    lim_off = 2(u+dd) - (2N - 2 - 2n - 2)/... = n+1+2k-N; the total-budget
+    slack at the naive u = dd = (m-1)/2 is ZERO on the cross classes at
+    n = 100 — the naive size is infeasible-tight and anneals to a glass
+    plateau (~500 class-level).
+  * The slack-optimal sizes at n = 100 are (u, dd) = (94, 104): min-slack 45
+    (within 54, cross 45).  Size-targeted init + size-preserving swap moves
+    dropped the plateau to ~182 class-level units (from 6107 random /
+    1215 targeted-init).
+  * D = QR (Paley difference set) is provably WRONG here: its perfectly flat
+    autocorrelation forces the cross-correlation X(t) to average 2u·|D|/m ≈
+    98.5 with Jacobi-sum fluctuations ±sqrt(m), incompatible with the sharp
+    98/99 caps.  Algebraic seeding does not beat free annealing.
+  * Guided worst-class always-accept moves HARM the search (tested at n=12:
+    stall at energy 4 vs unguided zero).  Size-preserving swaps are the
+    decisive move class.
+
+STATUS at S171 close: three-annealer fleet at class-energy best ~182-184
+after ~1.4e8 moves each (n = 100).  A witness requires 0.  The search
+continues beyond the session; the infrastructure, controls, and structural
+facts above are the durable artifacts.
+
+Reproduce (control): gcc -O3 -o ra 04-computation/ramsey_book_offdiag_anneal_macmini_S171.c -lm
+  RB_U=10 RB_D=12 ./ra 12 6000000 5 3 t && python3 04-computation/ramsey_book_offdiag_verify_macmini_S171.py t_n12_seed5_r*.sets
