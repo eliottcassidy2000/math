@@ -233,7 +233,7 @@ Python `assert`.  SHA-256:
 
 ```text
 primary source
-858f1ad99e98ed13ecf95f64570616ebf6462b14c54c09ed52427fb2a507bc68
+fe32d65b685cedba969b5b7219e1a9c68d7f21a94fa6f055ab0f20c399e4ea83
 
 primary output
 41f5e443f6d1ee2553c332da7709bd0c89f400b9ca154ddb6047f8ca724c6a40

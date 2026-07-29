@@ -564,10 +564,37 @@ a=q_r(P),       a=B_2(P)-q_r(P),       a=B_2(P)/2.
 ```
 
 Thus `G_5(P)<h` is essentially free after an exact pair cap and the top
-five singleton ranks have been computed.  It is a Hunter-star relaxation,
-not uniformly comparable a priori with every partition invoice; both
-should be tested before finite flag enumeration.  If the input caps are
-monotone under prefix deletion, `(19f6)` is monotone as well.
+five singleton ranks have been computed.  In fact it dominates both cheap
+certificates that precede the pair computation.  For `t=min(a,B_2(P)-a)`,
+
+```text
+G_(2m)(P)   <=mB_2(P),
+G_(2m+1)(P) <=q_(2m+1)(P)+mB_2(P),                         (19f8)
+G_j(P)      <=q_1(P)+...+q_j(P).                           (19f9)
+```
+
+For the even line, the expression in `(19f6)` is at most
+
+```text
+a+(2m-1)t<=mB_2(P).
+```
+
+If `a<=B_2(P)/2`, the left side is at most `2ma<=mB_2(P)`;
+if `a>=B_2(P)/2`, it is at most
+`(2m-1)B_2(P)-(2m-2)a<=mB_2(P)`.  For the odd line, bound
+the final summand by `q_(2m+1)(P)` and apply the same calculation to
+the centre and the other `2m-1` summands.  Inequality `(19f9)` is immediate
+term by term from `a<=q_1(P)` and each minimum being at most `q_r(P)`.
+
+Hence, at five slots,
+
+```text
+G_5(P)<=min(q_1+...+q_5, q_5+2B_2(P)).                    (19f10)
+```
+
+The inequalities can be strict, so `G_5` replaces the adaptive union of
+those two tests once `B_2` is known.  If the input caps are monotone under
+prefix deletion, `(19f6)` is monotone as well.
 
 Uniformly averaging the legal matchings gives a useful closed relaxation.
 Every edge belongs to a proportion `1/(j-1)` of the perfect matchings of an
@@ -824,10 +851,16 @@ q^a_5(P)+M^a_(2,2)(P)<h_a,                                 (31)
 q^a_5(P)+2B^a_2(P)<h_a.                                    (32)
 ```
 
-The first dominates the second, and `(31)` dominates `(32)`.  The star
-envelope `(30)` is a cheap complementary relaxation rather than another
-link in that total order.  Both `(30)` and `(32)` are available once a
-global pair cap and singleton ranks have been computed.
+The pointwise chain is
+
+```text
+Psi_5<=Phi_5<=q_5+M_(2,2)<=q_5+2B_2.
+```
+
+The star envelope `(30)` dominates both the scalar top-five test and
+`(32)`, but can be incomparable with the two intermediate matching caps.
+It is available essentially for free once a global pair cap and singleton
+ranks have been computed.
 
 Both the literal residual and the excluded-prefix sidecar are essential.
 Dropping the sidecar replaces suffix caps by larger global caps; trying to
@@ -854,8 +887,8 @@ preserved:    subadditive upper control and forbidden-label monotonicity;
 restored:     distinctness, then one connected pairwise-overlap skeleton;
 destroyed:    non-tree overlap and every higher intersection;
 sidecar:      literal carrier, excluded labels, ordered apex, weighted graph;
-five-slot targets: Psi_5<h, then Phi_5<h; cheaply test G_5<h and
-                   q_5+M_(2,2)<h before q_5+2B_2<h.
+five-slot targets: Psi_5<h, then Phi_5<h and q_5+M_(2,2)<h;
+                   after B_2 exists, G_5 subsumes scalar and q_5+2B_2.
 ```
 
 No finite LRC atlas is asserted here.  In particular, the theorem does not
