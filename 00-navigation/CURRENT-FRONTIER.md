@@ -173,8 +173,12 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   the stronger four-index matching inequality.  THM-2841 then proves that
   every tensor of two or more nonnegative adjacent-difference cone elements
   has positive factorial readout, via an exact forbidden-board rook count and
-  sharp derangement floor.  Arbitrary incomparable cubic orientations, signed
-  radial channels, and multiplier access remain open.
+  sharp derangement floor. THM-2842 identifies the missing multipliers as
+  radial-variance jets: the first `k` jets invert every ordered `k`-cone span,
+  while `ell_(D-1)` is a trace-zero unit hiding for the sharp `D-1` quotient
+  readouts. Thus external multiplier access is exact, but ordinary Gaussian
+  nullity still does not supply it. Arbitrary incomparable cubic orientations
+  and signed radial channels remain open.
 ### Live work
 
 Publish THM-2022; sharpen THM-2111's binomial degree toward `M+N`; formalize

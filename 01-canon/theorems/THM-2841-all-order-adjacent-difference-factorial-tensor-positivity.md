@@ -17,6 +17,7 @@ depends_on: []
 related:
   - THM-2828-lower-prefix-cone-factorial-moment-three-detection
   - THM-2830-disjoint-positive-adjacent-cone-factorial-moment-three-detection
+  - THM-2842-ordered-positive-cone-vandermonde-multiplier-observability
 script: 04-computation/gmc_all_order_adjacent_tensor_rook_thm2841.py
 output: 05-knowledge/results/gmc_all_order_adjacent_tensor_rook_thm2841.out
 script_sha256: da14676eb5a806ab9c8fa7e5a4ba1c893f3650f8df27a6506af49c4a91e5c258
