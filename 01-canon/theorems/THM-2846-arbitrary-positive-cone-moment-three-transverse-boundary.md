@@ -2,13 +2,13 @@
 id: THM-2846
 title: "Arbitrary positive-cone moment-three transverse boundary"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; INDEPENDENT
-  HOSTILE AUDIT REQUESTED.  Two positive adjacent-difference cones, both
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Two positive
+  adjacent-difference cones, both
   divisible by s, span an exact nonzero factorial moment-three null line.
   The common zero is unique and transverse in an explicit rational
   rectangle, while the fourth factorial moment has a fixed nonzero
-  imaginary sign.  If promoted, this proves that Gaussian moments through
-  six do not detect arbitrary positive cones, although moment eight detects
+  imaginary sign.  This proves that Gaussian moments through six do not
+  detect arbitrary positive cones, although moment eight detects
   the displayed witness.
 source: root/audit-2809-2026-07-28
 depends_on:
@@ -20,15 +20,14 @@ related:
   - THM-2843-four-slot-projective-divisibility-and-resolvent-reduction
 script: 04-computation/gmc_positive_cone_moment3_transverse_boundary_thm2846.py
 output: 05-knowledge/results/gmc_positive_cone_moment3_transverse_boundary_thm2846.out
-script_sha256: d795ff627dc8e65b0a890e38750ae993ca1bba73c483099a2afdd98160323d76
-output_sha256: 0a7d110257085bee7678ea1b44bb36bd045cca11ad8a704ee9540026b0f9f62e
+script_sha256: 5214c18afe72cb63a51d58fd2d41643d654edc92ba7cb30a114d66ec4582149e
+output_sha256: a3c4862bf7ae254643148a3d78010a38a06e2aff48589e518bcd194bb72331ed
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2846 -- arbitrary positive-cone moment-three transverse boundary
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; INDEPENDENT
-HOSTILE AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This is the sharp failure boundary for extending THM-2830 from its
 separated/transport-ordered positive cones to two arbitrary positive
@@ -402,7 +401,9 @@ The exact companion independently:
    on the same rectangle.
 
 All truth-bearing gates are explicit and survive optimized execution.
-Normal, optimized, and stored transcripts agree.  The theorem remains a
-reserved provisional candidate until an independent hostile audit checks
-the factorial/Gaussian typing, the Bernstein conversion, and the
-fourth-remainder normalization.
+Normal, optimized, and stored transcripts agree.  An independent hostile
+audit reconstructed the adjacent-difference tensors directly from
+`L(s^n)=n!`, checked the quadratic-divides-cubic criterion and Gaussian
+charge normalization, replayed the exact elimination and Bernstein gates,
+and independently reduced the fourth moment modulo the quadratic.  It
+found no remaining defect.

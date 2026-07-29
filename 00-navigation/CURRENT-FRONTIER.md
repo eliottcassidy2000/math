@@ -178,7 +178,10 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   Gaussian nullity does not supply them. THM-2844 proves a support cut is
   exactly necessary for every pair in two full positive coordinate orthants
   and gives the sharp first signed-ray threshold; failure below it is only a
-  certificate failure, not a moment counterexample.
+  certificate failure, not a moment counterexample. THM-2846 gives the sharp
+  contrary boundary for arbitrary positive cones: a transverse algebraic
+  two-cone line kills factorial moments through three (Gaussian moments through
+  six), while its fourth factorial/eighth Gaussian moment is nonzero.
 - THM-2843 reduces every four-slot window either to an immediate
   positive-dimensional common zero or to a nonnegative complete-intersection
   norm of length `d(d+1)(d+2)`, and closes the `{0,1,2,3}` first cell. Its
