@@ -210,9 +210,9 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   THM-2906/10/14/18 give holonomy/`C3` exits; THM-2929 makes high first gaps
   effective.  THM-2949/2952 close all `364` four-slot supports through width
   `14`; THM-2955/2957/2959 close first-gap `15<=M<=24` by modular gates.
-  THM-2960 gives the fixed Smith wall atlas through `24` (two-chart seam
-  through `20`); THM-2963 refutes a uniform next-prime gate.  Larger
-  widths/core stay open; THM-2956 lowers degree.
+  THM-2960 gives Smith walls through `24` (two charts through `20`);
+  THM-2964 makes the pure ladder universal; THM-2963 kills next-prime
+  gates. Wider cores stay open.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent

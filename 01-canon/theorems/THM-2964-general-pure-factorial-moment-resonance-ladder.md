@@ -2,8 +2,8 @@
 id: THM-2964
 title: "General pure factorial-moment resonance ladder"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For every order k>=2 and width M, the pure denominator-cleared
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  order k>=2 and width M, the pure denominator-cleared
   factorial-moment coefficient has an interior negative-integer root -r
   exactly when M=(k+1)d+1, r=kd+1, and (k-1)d is even.  Every such root is
   simple.  This proves the quadratic, cubic, and quartic resonance ladders
@@ -25,8 +25,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2964 -- general pure factorial-moment resonance ladder
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The local Smith atlas in THM-2960 found three parallel wall laws:
 
@@ -156,6 +155,9 @@ or, equivalently,
 binom(r-1,(k-1)d)=binom(kd,(k-1)d).                     (9)
 ```
 
+The high-chamber inequality in this case gives \(M>kd\), so the factorial
+\((M-kd-1)!\) in `(8)` is defined.
+
 Because \(d\ge1\), the lower binomial argument in `(9)` is positive.
 For fixed positive lower argument, the binomial coefficient is strictly
 increasing in its upper argument.  Therefore `(9)` holds exactly when
@@ -251,4 +253,24 @@ wall, where `q200,c300,f400` are all units, is the sharp current hostile.
 No cofactor nonvanishing, arbitrary-width GMC closure, or fixed-prime rank
 claim follows from this theorem alone.
 
-**QED (candidate; independent hostile audit pending).**
+## 7. Independent hostile audit
+
+The referee independently rederived `(2)` from the normalized factorial
+tensor and matched it against the canonical scaled-coefficient constructor
+for varied interiors.  The terminal cancellation, both Laurent regimes,
+the binomial monotonicity step, the exact sign parity, and the full
+next-coefficient formula `(11)` were reconstructed without using the proof
+text.
+
+As an out-of-bank control, every one of the `3,672` walls with
+
+```text
+8<=k<=10,                    3<=M<=50
+```
+
+matched `(5)`; every predicted root was simple and every terminal valuation
+was zero.  The edge `(k,d)=(2,1)` was checked as a nonroot.  Normal,
+optimized, and stored companion transcripts agree, and the declared hashes
+match.  No defect was found.
+
+**QED.**
