@@ -57,8 +57,9 @@
   `z_1=379` has no projected scalar row on any of the `3,003` bodies:
   `2,579` crude all-tail survivors reduce to zero exact rows, with closest
   strict gap `-4741191283/1316479619000` and a live positive `z_1=380`
-  control.  Hence the current `k=3` first-drift cap is `378`, with no
-  claim on the remaining `376,019` necessary rows.  Frontier script/output:
+  control.  At that intermediate checkpoint the `k=3` first-drift cap was
+  `378`, with no claim on the remaining `376,019` necessary rows; the ray
+  closures below supersede both figures.  Frontier script/output:
   `64f98439f677668c82045e7f9107cbfdff467afd8f16975c7e37d8ae5c5c9f26` /
   `a1c77b24488240f1ee0295e427ee4583b7d8215caf6615f424bf325350fb56b6`;
   next-row primary and independent source/output pairs:
@@ -80,6 +81,28 @@
   `dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36` /
   `5abccb7ef700cec83b9989e8abcd83bc24f51c0a35f7f9054522da0dd62109fe` /
   `bcfa48e8b59080ced069a794d02cc04f62db8137f94b163b2fe4c98c3b3f77fa`.
+- `lrc14_j7_k3_z378_ray_status_closure_thm2941.py` -> matching `.out`
+  [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].
+  The exact ray quotient removes four of the nine inherited `z1=378`
+  bodies and leaves only `38` attained denominator states on the other
+  five; crude all-divisor capacity kills `18`, and the common four-needle
+  Hunter-status table kills `20`, leaving zero.  This lowers the projected
+  `k=3` first-drift cap to `377`.  Source/output/semantic SHA-256:
+  `813d93ffe67cf3bdab06aa27f04680f49b057e387eabc8e713ba9cba35439353` /
+  `ba8e1c3dab6be12724598ebb84ae9a34de784913426d8335ec8fc6c34da4256c` /
+  `4cc1d3528844818857a3ed4c1c08ca03405cb3857e102c95acae5a95462c4669`.
+- `lrc14_j7_k2_frontier_ray_status_closure_thm2941.py` -> matching `.out`
+  [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].
+  At the unique old `k=2` frontier row `z1=2142`, the exact all-label ray
+  quotient reduces `557,845` denominator multisets to the single attained
+  state `(196,280,840,980,2940)`.  Its K5 common-status quotient at
+  `(D,q,M)=(5880,840,7)` has only `240` total exceptional-bit incidences
+  but must serve `300` fibres of load at least four; the full simultaneous
+  32-cell LP gives the matching exact Farkas certificate.  Thus the cap is
+  `2141`.  Source/output/semantic SHA-256:
+  `b9b1cbd3e38a285572f8b35e7220149f6372d3ce4941923aa586101461bee7e4` /
+  `97f242c4b5b774c830a8111df6c2e24a725fa1a77771d4937aaa62f96d4400a0` /
+  `fddb52f665e6c974e3e74839bd377907e21936bdae083a7f79ad9cf1905a63b7`.
 - `lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.py`, together
   with the scalar-wall and projected-suffix verifiers, -> matching `.out`
   files [THM-2941 PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY
@@ -88,7 +111,8 @@
   impossible and its hypothetical Gram is `(h/49)(7I-J)`.  Aligned
   safe-surplus plus the lossless projected residual gives rigorous first-drift
   caps `2,142/380/182/66` for `k=2/3/4/5` alignments and empties `k=6`; the
-  scoped frontier addenda improve the current `k=3` cap to `378`.
+  scoped frontier/ray addenda improve the current `k=2/3` caps to
+  `2,141/377`.
   For `k=5`, exact prefix incidence kills all `42,912` high-excess and
   `194,073` subcritical drift pairs, minimum margin `1/378105`; THM-2928
   independently closes the same face by divisor/address masks.  With

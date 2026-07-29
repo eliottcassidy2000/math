@@ -8,8 +8,9 @@ status: >
   hypothetical Gram is (h/49)(7I-J).  Aligned safe surplus bounds the first
   drift absolutely for k>=2.  The lossless projected residual closes the
   five-aligned/two-drift face independently of THM-2928, and exact suffix
-  filters make k=2,3,4 uniformly finite-reducible; two frontier addenda
-  improve the k=3 first-drift cap from 380 to 378.  THM-2928's later
+  filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
+  common-status addenda improve the k=2/k=3 first-drift caps from
+  2142/380 to 2141/377.  THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  The zero/one-aligned
   sector, the remaining finite censuses, the full
@@ -49,6 +50,10 @@ verification:
   - 05-knowledge/results/lrc14_j7_k3_next_frontier_scalar_independent_thm2941.out
   - 04-computation/lrc14_j7_k3_uniform_ray_status_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_uniform_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_z378_ray_status_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z378_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_frontier_ray_status_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_frontier_ray_status_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -790,7 +795,8 @@ semantic digest
 48ab29334a93fd0087d9645513be14f884a30bd014c2f05329c1f7d0c295d4ee.
 ```
 
-Therefore the current projected `k=3` first-drift cap is `378`.  The source
+Therefore, at this intermediate checkpoint, the projected `k=3` first-drift
+cap is `378`.  The source
 and output hashes for the integer-ruler referee and independent audit are
 
 ```text
@@ -861,6 +867,75 @@ bcfa48e8b59080ced069a794d02cc04f62db8137f94b163b2fe4c98c3b3f77fa.
 Ordinary and optimized transcripts are byte-identical.  Consequently this
 separate uniform closure leaves `376,018` rows in the old necessary ledger;
 it does not by itself change the current first-drift cap.
+
+At the old `k=3` cap, the finite-envelope census has exactly nine body rows
+with `z_1=378`.  Replacing its generic remote tail by the exact ray merge
+eliminates four of them.  Across the other five bodies, the exact all-label
+denominator quotient has only `38` states.  The crude all-divisor screen
+removes `18`, and the common four-needle Hunter-status table removes the
+other `20`, again with exact Farkas certificates.  Hence all nine rows are
+empty and
+
+```text
+projected k=3 first-drift cap <=377.
+```
+
+The ray recurrence was checked at all `199,915` nonzero residues across
+the five active bodies; all scalar maxima are attained rather than remote
+suprema.  Ordinary and optimized transcripts are byte-identical.  The
+source/output and semantic hashes are
+
+```text
+813d93ffe67cf3bdab06aa27f04680f49b057e387eabc8e713ba9cba35439353
+ba8e1c3dab6be12724598ebb84ae9a34de784913426d8335ec8fc6c34da4256c
+4cc1d3528844818857a3ed4c1c08ca03405cb3857e102c95acae5a95462c4669.
+```
+
+Together with the distinct `z_1=250` closure, this leaves `376,009` rows
+from the old `376,020` necessary ledger.
+
+The same quotient also closes the unique row at the much larger `k=2`
+frontier.  For
+
+```text
+E=(1,4,8,10,12,14),       z_1=2142,       d_1=280,
+```
+
+all `557,845` four-suffix denominator multisets have exact attained
+all-label maxima.  Exactly one survives:
+
+```text
+denominators=(196,280,840,980,2940),
+labels=(2142,2172,2396,2534,3180).
+```
+
+At `D=5880`, outer modulus `q=840`, and inner modulus `M=7`, its five
+status marginals are
+
+```text
+(0,120,120,0,0).
+```
+
+The K5 Hunter cap is at most `3` on the zero status.  Consequently every
+one of the `300` target fibres of load at least four must activate one of
+the only two nonconstant status bits, but their total incidence is only
+`120+120=240`.  This is already a transparent one-threshold contradiction;
+the full 32-cell simultaneous-threshold LP at loads `4,5,6` independently
+returns the exact Farkas certificate.  No monotonicity of the Hunter cap
+and no integer-realization claim is used.  Therefore
+
+```text
+projected k=2 first-drift cap <=2141.
+```
+
+Independent ray, carrier, K5-tree, status, and Farkas reconstructions agree.
+The source/output and semantic hashes are
+
+```text
+b9b1cbd3e38a285572f8b35e7220149f6372d3ce4941923aa586101461bee7e4
+97f242c4b5b774c830a8111df6c2e24a725fa1a77771d4937aaa62f96d4400a0
+fddb52f665e6c974e3e74839bd377907e21936bdae083a7f79ad9cf1905a63b7.
+```
 
 For `k=5`, there is a second, Gram-facing derivation.  Pointwise
 
@@ -1051,7 +1126,7 @@ ordinary and optimized replays are byte-identical.
 
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,
-handle arbitrary packets, run its `k=2,3,4` finite decision trees, classify
+handle arbitrary packets, finish its `k=2,3` finite decision trees, classify
 the zero/one-aligned multi-drift address hypergraph, close the
 six-body/seven-tail rung, or prove LRC(14).  The independent THM-2928
 divisor-status route now closes `k=4`; `k=2,3` remain open.
