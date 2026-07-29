@@ -83,8 +83,11 @@ columns have rank four but E3 rank three.  THM-2851 exposes
 `L_9L_8=T L_4` versus flat `A_5A_3=A_8`; carry fidelity costs `13` states
 (`169` jointly), and its derivative has norm `898`, ranks `12/371292`.
 THM-2852 adds full signed convolution rank and six borrow-aware arrows.
-Lawful positive action, carry/response basepoint, and E3 transport remain;
-ledger `165`.
+THM-2857 makes the endpoint scalar a free Galois `C13` torsor and turns a
+first factorial exit `m<13` into `m+1` carry channels (THM-2858 gives six),
+but the proved carry is `K0`-linear, not the required semilinear clutch.
+Lawful positive action, response basepoint, and E3 transport remain; ledger
+`165`.
 
 ### Independent routes that remain live
 

@@ -2,14 +2,13 @@
 id: THM-2857
 title: "Endpoint Galois carry torsor and phase-alignment sidecar"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT.  The THM-2847 endpoint scalar has an
-  exact free C13 Galois orbit over Q(zeta_91); its centered orbit is the
-  faithful character 3, and its tenth powers remain point-separating with
-  Fourier support F13 minus {7,10}.  External tensoring turns any first
-  factorial exit m<13 into exactly m+1 carry channels.  The existing
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The THM-2847
+  endpoint scalar has an exact free C13 Galois orbit over Q(zeta_91); its
+  centered orbit is the faithful character 3, and its tenth powers remain
+  point-separating with Fourier support F13 minus {7,10}.  External tensoring
+  turns any first factorial exit m<13 into exactly m+1 carry channels.  The
   proved coefficient-support ancestry action is K0-linear and fixes the
-  endpoint scalar, so a new semilinear clutch is necessary.  Final immutable
-  audit is pending.
+  endpoint scalar, so a new semilinear clutch is necessary.
 source: root/lrc-endpoint-galois-carry-torsor-2026-07-28
 depends_on:
   - THM-2380-cross-word-charged-target-correlation-and-pair-twist-gate
@@ -32,7 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2857 -- endpoint Galois carry torsor and phase-alignment sidecar
 
-**PROVED CANDIDATE + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2847's apparently inconvenient coefficient field already contains a
 sharp algebraic model of the missing first-carry fibre.  The endpoint scalar
@@ -300,9 +299,10 @@ script  0bae59c9b1460f37e1879a81746154593cb0699ee13b3e5e800ba0af95ea5e4c
 output  ac1194c46db2cdf43c807ece781b63971c081cc5f9070964007fdecdc20f1583
 ```
 
-An independent hostile audit rederived the relative field, orbit,
-tenth-power distinctness, exact support, alignment, and finite-field
-certificate.  Final immutable-path replay remains pending before promotion.
+An independent hostile audit rederived the relative field, free orbit, norm,
+fourth- and tenth-power distinctness, every exact support, alignment,
+Gaussian factors, and the scalar-linear/semilinear mismatch.  Immutable
+normal, optimized, and stored replay agrees exactly with the declared hashes.
 
 ## 6. Connection contract and stopping boundary
 
