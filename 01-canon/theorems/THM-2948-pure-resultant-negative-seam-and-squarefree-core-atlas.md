@@ -2,8 +2,8 @@
 id: THM-2948
 title: "Pure resultant negative seam and squarefree core atlas"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  After dividing the original degree-seven Macaulay
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  After
+  dividing the original degree-seven Macaulay
   determinant by the full selected-chart factor
   q200^6*c300*K, the calibrated bare resultant on every normalized
   four-slot support of widths six through ten has repeated-root
@@ -17,6 +17,14 @@ status: >
   through width ten.  No all-width transversality or seam formula is
   claimed.
 source: codex-gmc-uniform-width-extension-2026-07-29
+audit: >
+  An independent proof audit checked the bare-resultant calibration
+  against THM-2942, the 110-family universe, both gcd directions,
+  the positive-ray consequence, and the precise all-width stopping
+  boundary.  A fresh root replay ran the full exact atlas in normal
+  and optimized modes; both LF-normalized transcripts matched the
+  stored 18-line output, both stderr streams were empty, and the
+  declared script and output hashes matched.
 depends_on:
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
   - THM-2942-macaulay-extraneous-flag-factor-and-pluecker-mutation
@@ -36,8 +44,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2948 -- pure resultant negative seam and squarefree core atlas
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
@@ -341,6 +348,6 @@ python -O 04-computation/gmc_pure_resultant_negative_seam_atlas_thm2948.py
 Both modes must byte-match the stored transcript and the LF-normalized
 hashes in the front matter.
 
-No promotion is requested before an independent hostile audit checks
-the calibration `(14)`, the finite universe, every gcd direction, the
-positive-ray consequence and the all-width stopping boundary.
+An independent hostile audit checked the calibration `(14)`, the finite
+universe, every gcd direction, the positive-ray consequence, and the
+all-width stopping boundary.
