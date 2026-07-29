@@ -1,0 +1,20 @@
+THM-2843 FOUR-SLOT PROJECTIVE RESOLVENT EXACT COMPANION
+status=STRUCTURAL-REDUCTION CONTROLS; NOT FULL SFC4 ATLAS
+moment_formula_cells=24
+positive_gram_cells=4
+explicit_support=0,1,2,3
+quadratic_gram_determinant=1
+quotient_dimension=6
+quotient_norm=9070189700378194715889733632/707281
+binary_resultant=208741470184115575361509867388928
+binary_resultant_factorization=2^36*3^7*67*11702701*1771410437
+sextic_discriminant=6291863054003994624
+moving_plane_divisibility=PASS
+abstract_hidden_plane_hostile=PASS
+conjugate_pair_norm_controls=PASS
+sigma_u5v_defect=648/29 + 1620*I/29
+tau_u5v_defect=1518/29 + 1272*I/29
+pgl2_f17_order=4896
+pgl2_f17_sextic_stabilizer=1
+full_378_cell_atlas_claimed=NO
+all_exact_controls=PASS
