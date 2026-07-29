@@ -41,8 +41,9 @@ At `t=1/28`, both have minimum circle distance exactly `1/14`.  This is
 the endpoint information erased by the interval-measure carrier.  The
 hostile topology audit finds no strict-danger owner, equality owners
 `2,26`, and an empty mass-zero good carrier under the engine's closed-comb
-convention; both `plus or minus 10^(-9)` perturbations fall strictly below
-`1/14`.  Hence
+convention.  Thus the closed combs cover the endpoint, but the strict open
+danger combs do not cover it pointwise.  Both `plus or minus 10^(-9)`
+perturbations fall strictly below `1/14`.  Hence
 all `52` H4 exception branches are discharged for the non-strict lonely
 runner target.  Every one of their bodies still has a distinct H3 branch
 in the pinned THM-2901 ledger, so no whole root closes and LRC(14) remains

@@ -15,7 +15,11 @@ depends_on:
   - THM-2899-all-root-ranked-suffix-scalar-census
   - THM-2901-all-hard-exact-global-pair-cap-and-route-partition
 related:
-  - THM-592-radius-derivative-structure
+  - THM-601-cap-universe-nest-lemma
+  - THM-2047-phase-height-toric-arrangement-for-lrc
+  - THM-2440-sharp-two-comb-centred-window-radius
+  - THM-560-lrc-structured-tiler-characterization
+  - THM-1158-invcov-refuted-by-doubled-ap
   - THM-1115-no-blocking-tradeoff-no-gap
 verification:
   - 04-computation/lrc14_j6_paircap_exception_h4_link_child_census_codex_20260729.py
@@ -199,7 +203,7 @@ V_B=(2,4,6,8,10,12,14,16,18,20,22,26,48)
 The empty-residual engine works on interval carriers and therefore forgets
 measure-zero equality endpoints.  That quotient loss is decisive in
 `(11)`.  The original danger predicate is the strict open condition
-`||vt||<1/14` (THM-592), whereas the pinned interval engine deliberately
+`||vt||<1/14` (THM-601), whereas the pinned interval engine deliberately
 subtracts closed radius-`1/(14v)` comb pieces.  An independent exact
 hostile audit finds, for each family in `(11)`,
 
@@ -209,8 +213,11 @@ equality-boundary owners              2,26
 closed-comb good carrier              empty, mass 0.
 ```
 
-Thus the closed-comb engine really does erase the candidate point, while
-the original non-strict target retains it.  At
+Thus the closed-comb union covers and erases the candidate point, but this
+is not a literal pointwise cover by the open danger combs.  The original
+non-strict target retains the point.  This is exactly the endpoint
+distinction isolated in MISTAKE-274/THM-2440 and the closed-safe-set
+formulation of THM-2047.  At
 
 ```text
 t=1/28
@@ -229,7 +236,10 @@ The hostile perturbations `t=1/28 plus or minus 10^(-9)` both have
 clearance strictly below `1/14`, so this is genuinely an isolated equality
 repair, not an unrecorded positive-measure interval.
 
-Thus both literal survivors satisfy the non-strict lonely-runner target.
+Thus neither family is a pointwise cover by the open danger combs, and both
+satisfy the non-strict lonely-runner target.
+The first family and its dilation mechanism are the tight AP control of
+THM-560/1158.
 The second primitive family is the tight non-AP family already recorded
 in THM-1115, but `(12)` is a direct modular proof and does not depend on
 its exact tightness classification.

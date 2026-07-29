@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `lrc14_j6_paircap_exception_h4_link_child_census_codex_20260729.py`
+  -> summary and full child-ledger `.out` files [THM-2907 PROVED +
+  FINITE-EXACT + VERIFIED].  On all `18,290` actual H4 pair flags of
+  THM-2901's `52` exceptions, exact binary-link recursion leaves `18,280`
+  literal-empty flags and ten closed-comb survivors.  Their `16` triangle
+  occurrences reconstruct exactly the two families `2*{1,...,13}` and
+  `2*({1,...,11} union {13,24})`; both have clearance exactly `1/14` at
+  `t=1/28`.  The independent endpoint audit verifies that the strict open
+  danger combs miss the equality point even though the closed-comb carrier
+  is empty.  Thus all `52` exception branches discharge, while the root
+  union stays `88`: every exception body retains an H3 branch.  Combined
+  with THM-2904 this leaves `11,511` H3-routed hard branches and `3,344`
+  roots.  Normal/optimized outputs are byte-identical.  Primary
+  script/output/ledger SHA-256:
+  `(88d523ea97235471ecce03c06de5cd1e1ba434ccd41fe0633beadf1017aa8fa3,1df929e106cd16c094886d59f3702ba9bafa395ee906527fe4592a1552e9b458,2aad1013bd739d82b407d5632e2cd2e9763c1f9edb2bfa127500420bda6fdc9d)`;
+  endpoint-audit script/output:
+  `(0c332f6522d0ad77185ba7bcbe25ec27cd68b755f652cefa717f3bc91fb74db2,a93a4a724dac6c55806f3358c2f5ab25de8f0261c92906a0161414781a717d20)`.
 - `gmc_nonconsecutive_response_row_tp3_thm2909.py` -> matching `.out`
   [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2909].
   The weighted-chord identity upgrades THM-2873 from consecutive rows to
