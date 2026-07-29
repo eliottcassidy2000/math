@@ -224,16 +224,15 @@ for i in range(5):
                 strict_cells += 1
                 if minimum_positive is None or gap < minimum_positive:
                     minimum_positive = gap
+            before = normalized_matching_gap(i, *matching)
+            for slot in range(4):
+                raised = list(matching)
+                raised[slot] += 1
+                after = normalized_matching_gap(i, *raised)
+                forward_cells += 1
+                require(after >= before, "normalized forward difference")
         require(polarized(i, values) >= 0, "polarized coefficient")
         require(sum(gaps) == 3 * (2 * polarized(i, values)), "matching average")
-
-        for slot in range(4):
-            raised = list(values)
-            raised[slot] += 1
-            before = normalized_matching_gap(i, a, b, c, d)
-            after = normalized_matching_gap(i, *raised)
-            forward_cells += 1
-            require(after >= before, "normalized forward difference")
 
 phi, endpoint, hostile_gap = pair_factorial_hostile()
 require(phi == Fraction(1467522360, 901), "pair hostile phi")
