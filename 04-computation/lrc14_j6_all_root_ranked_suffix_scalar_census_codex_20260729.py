@@ -120,8 +120,23 @@ EXPECTED_EXTREMA: tuple[object, ...] | None = (
     ),
     (378, (4, 8, 10, 11, 12, 13, 14), 16, 2, "55/1323"),
 )
-EXPECTED_LEDGER_DIGEST: str | None = None
-EXPECTED_STRATUM_DIGESTS: tuple[tuple[str, str], ...] | None = None
+EXPECTED_LEDGER_DIGEST: str | None = (
+    "9770a2ef0e7ae063a482e475f47047de08344cd1fc24880f742651d4c71d167d"
+)
+EXPECTED_STRATUM_DIGESTS: tuple[tuple[str, str], ...] | None = (
+    (
+        "low",
+        "f126b67d0c6e396e8ae62cf0ff97b501bcf403a195f2685b2cd84f6cb67eea96",
+    ),
+    (
+        "one",
+        "f9c7081b66a3563485c76d93e3380339bfeb1a4c4f027e66fd7dd5ebbb208789",
+    ),
+    (
+        "both",
+        "5897b209ec1f38cd1d34d093b4a9708b07e9f1778d2712567087b26eafb22900",
+    ),
+)
 EXPECTED_TERMINAL_BODIES: tuple[tuple[int, ...], ...] | None = (
     (1, 2, 3, 4, 5, 6, 13),
     (1, 2, 3, 4, 6, 7, 14),
@@ -148,15 +163,259 @@ EXPECTED_RANK13_OPEN: tuple[object, ...] | None = (
         "-2378297/11503321830",
     ),
 )
-EXPECTED_PARITY_COUNTS: tuple[int, ...] | None = None
-EXPECTED_PARITY_STRATUM: tuple[tuple[object, ...], ...] | None = None
-EXPECTED_PARITY_RANK: tuple[tuple[object, ...], ...] | None = None
-EXPECTED_PARITY_EXTREMUM: tuple[object, ...] | None = None
-EXPECTED_ROOT_PARITY_COUNTS: tuple[int, ...] | None = None
-EXPECTED_ROOT_PARITY_STRATUM: tuple[tuple[object, ...], ...] | None = None
-EXPECTED_ROOT_PARITY_EXTREMA: tuple[tuple[object, ...], ...] | None = None
+EXPECTED_PARITY_COUNTS: tuple[int, ...] | None = (14_806, 14_806, 0)
+EXPECTED_PARITY_STRATUM: tuple[tuple[object, ...], ...] | None = (
+    (
+        "low",
+        3053,
+        3053,
+        0,
+        "240857/12903660",
+        (2, 7, 8, 9, 10, 11, 12),
+        1,
+        19,
+    ),
+    (
+        "one",
+        7853,
+        7853,
+        0,
+        "744701/54318264",
+        (1, 7, 8, 9, 10, 11, 13),
+        1,
+        19,
+    ),
+    (
+        "both",
+        3900,
+        3900,
+        0,
+        "369209/35315280",
+        (2, 4, 9, 10, 12, 13, 14),
+        1,
+        22,
+    ),
+)
+EXPECTED_PARITY_RANK: tuple[tuple[object, ...], ...] | None = (
+    (
+        1,
+        3417,
+        3417,
+        0,
+        "369209/35315280",
+        (2, 4, 9, 10, 12, 13, 14),
+        1,
+        22,
+    ),
+    (
+        2,
+        3308,
+        3308,
+        0,
+        "13282/735735",
+        (1, 2, 3, 7, 10, 11, 13),
+        2,
+        16,
+    ),
+    (
+        3,
+        2853,
+        2853,
+        0,
+        "540719/27075048",
+        (1, 4, 5, 7, 9, 11, 13),
+        3,
+        24,
+    ),
+    (
+        4,
+        2194,
+        2194,
+        0,
+        "115967/5045040",
+        (1, 3, 4, 10, 11, 13, 14),
+        4,
+        16,
+    ),
+    (
+        5,
+        1446,
+        1446,
+        0,
+        "10623511/383563180",
+        (1, 3, 7, 8, 10, 11, 13),
+        5,
+        23,
+    ),
+    (
+        6,
+        844,
+        844,
+        0,
+        "1312019/45125080",
+        (1, 5, 6, 7, 9, 11, 13),
+        6,
+        23,
+    ),
+    (
+        7,
+        444,
+        444,
+        0,
+        "58437/1961960",
+        (1, 5, 6, 7, 8, 11, 13),
+        7,
+        36,
+    ),
+    (
+        8,
+        180,
+        180,
+        0,
+        "469897/13978965",
+        (1, 4, 5, 7, 9, 11, 13),
+        8,
+        19,
+    ),
+    (
+        9,
+        78,
+        78,
+        0,
+        "47306849/1500899400",
+        (1, 5, 7, 8, 9, 11, 13),
+        9,
+        50,
+    ),
+    (
+        10,
+        24,
+        24,
+        0,
+        "295583/8828820",
+        (1, 5, 7, 8, 9, 11, 13),
+        10,
+        40,
+    ),
+    (
+        11,
+        14,
+        14,
+        0,
+        "121609/3678675",
+        (1, 4, 5, 7, 9, 11, 13),
+        11,
+        25,
+    ),
+    (
+        12,
+        3,
+        3,
+        0,
+        "580781/13582800",
+        (1, 2, 5, 7, 9, 11, 12),
+        12,
+        32,
+    ),
+    (
+        13,
+        1,
+        1,
+        0,
+        "5798995/130666536",
+        (1, 5, 8, 9, 11, 12, 13),
+        13,
+        42,
+    ),
+)
+EXPECTED_PARITY_EXTREMUM: tuple[object, ...] | None = (
+    "369209/35315280",
+    (2, 4, 9, 10, 12, 13, 14),
+    1,
+    22,
+    "62558/315315",
+    (16, "75245/1009008"),
+)
+EXPECTED_ROOT_PARITY_COUNTS: tuple[int, ...] | None = (3432, 3200, 232)
+EXPECTED_ROOT_PARITY_STRATUM: tuple[tuple[object, ...], ...] | None = (
+    (
+        "low",
+        792,
+        772,
+        20,
+        "-4057/339570",
+        (2, 3, 4, 7, 8, 10, 11),
+        18,
+    ),
+    (
+        "one",
+        1848,
+        1728,
+        120,
+        "-117919/8828820",
+        (2, 3, 7, 8, 10, 11, 13),
+        18,
+    ),
+    (
+        "both",
+        792,
+        700,
+        92,
+        "-162991/8828820",
+        (2, 6, 8, 9, 10, 13, 14),
+        22,
+    ),
+)
+EXPECTED_ROOT_PARITY_EXTREMA: tuple[tuple[object, ...], ...] | None = (
+    (
+        "1/226380",
+        (2, 6, 9, 10, 11, 12, 14),
+        16,
+        "28229/97020",
+        34,
+        7_775_459,
+    ),
+    (
+        "-1/169785",
+        (2, 6, 8, 9, 11, 12, 14),
+        20,
+        "2063/6468",
+        30,
+        None,
+    ),
+    (
+        "-162991/8828820",
+        (2, 6, 8, 9, 10, 13, 14),
+        22,
+        "1543/5733",
+        32,
+        None,
+    ),
+)
 EXPECTED_ROOT_PARITY_CUTOFF_QUANTILES: tuple[
     tuple[int, int], ...
+] | None = (
+    (0, 302),
+    (25, 1042),
+    (50, 1531),
+    (75, 2507),
+    (90, 4890),
+    (95, 9371),
+    (99, 38_437),
+    (100, 7_775_459),
+)
+EXPECTED_CORE_ELIGIBILITY_COUNTS: tuple[
+    tuple[int, int, int, int], ...
+] | None = None
+EXPECTED_STRONGEST_CORE_HISTOGRAM: tuple[tuple[int, int], ...] | None = None
+EXPECTED_CORE_ELIGIBILITY_STRATUM: tuple[
+    tuple[object, ...], ...
+] | None = None
+EXPECTED_CORE_ELIGIBILITY_RANK: tuple[
+    tuple[object, ...], ...
+] | None = None
+EXPECTED_CORE_ELIGIBILITY_EXTREMA: tuple[
+    tuple[object, ...], ...
 ] | None = None
 THM2895_ROOTS = (
     (2, 8, 9, 10, 11, 13, 14),
@@ -457,6 +716,37 @@ def nearest_rank_quantiles(
     )
 
 
+def ranked_core_margins(row: dict[str, object]) -> tuple[F, ...]:
+    """Return the r=1..4 complement-cap margins on one hard branch."""
+
+    prefix = F(0)
+    margins = []
+    for rank in range(1, 5):
+        prefix += row["top5"][rank - 1][0]
+        margins.append(F(rank + 2, 7) * row["m"] - prefix)
+    require(
+        all(margins[index + 1] < margins[index] for index in range(3)),
+        f"ranked-core margins lost strict nesting: {row['body']}, "
+        f"rank {row['rank']}",
+    )
+    return tuple(margins)
+
+
+def strongest_core_summary(
+    profiles: list[tuple[dict[str, object], tuple[F, ...], int]],
+    key: object,
+) -> tuple[object, ...]:
+    """Count strongest eligible complement-cap ranks in a row group."""
+
+    require(profiles, f"empty strongest-core group: {key}")
+    histogram = Counter(strongest for _, _, strongest in profiles)
+    return (
+        key,
+        len(profiles),
+        *(histogram.get(rank, 0) for rank in range(5)),
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -659,6 +949,120 @@ def main() -> None:
         ],
         (0, 25, 50, 75, 90, 95, 99, 100),
     )
+    core_profiles = []
+    for row in open_rows:
+        margins = ranked_core_margins(row)
+        strongest = max(
+            (rank for rank, margin in enumerate(margins, start=1) if margin > 0),
+            default=0,
+        )
+        core_profiles.append((row, margins, strongest))
+    core_eligibility_counts = tuple(
+        (
+            rank,
+            len(core_profiles),
+            sum(margins[rank - 1] > 0 for _, margins, _ in core_profiles),
+            sum(margins[rank - 1] <= 0 for _, margins, _ in core_profiles),
+        )
+        for rank in range(1, 5)
+    )
+    strongest_core_histogram = tuple(
+        sorted(Counter(profile[2] for profile in core_profiles).items())
+    )
+    core_eligibility_stratum = tuple(
+        strongest_core_summary(
+            [
+                profile
+                for profile in core_profiles
+                if profile[0]["stratum"] == name
+            ],
+            name,
+        )
+        for name in ("low", "one", "both")
+    )
+    core_eligibility_rank = tuple(
+        strongest_core_summary(
+            [
+                profile
+                for profile in core_profiles
+                if profile[0]["rank"] == rank
+            ],
+            rank,
+        )
+        for rank in sorted({row["rank"] for row in open_rows})
+    )
+    core_extrema_rows = []
+    for rank in range(1, 5):
+        positive = [
+            profile
+            for profile in core_profiles
+            if profile[1][rank - 1] > 0
+        ]
+        failures = [
+            profile
+            for profile in core_profiles
+            if profile[1][rank - 1] <= 0
+        ]
+        minimum_positive = (
+            min(
+                positive,
+                key=lambda profile: (
+                    profile[1][rank - 1],
+                    profile[0]["body"],
+                    profile[0]["rank"],
+                ),
+            )
+            if positive
+            else None
+        )
+        closest_failure = (
+            max(
+                failures,
+                key=lambda profile: (
+                    profile[1][rank - 1],
+                    tuple(-x for x in profile[0]["body"]),
+                    -profile[0]["rank"],
+                ),
+            )
+            if failures
+            else None
+        )
+        worst = min(
+            core_profiles,
+            key=lambda profile: (
+                profile[1][rank - 1],
+                profile[0]["body"],
+                profile[0]["rank"],
+            ),
+        )
+        core_extrema_rows.append(
+            (
+                rank,
+                None
+                if minimum_positive is None
+                else (
+                    ftext(minimum_positive[1][rank - 1]),
+                    minimum_positive[0]["body"],
+                    minimum_positive[0]["rank"],
+                    minimum_positive[0]["apex"],
+                ),
+                None
+                if closest_failure is None
+                else (
+                    ftext(closest_failure[1][rank - 1]),
+                    closest_failure[0]["body"],
+                    closest_failure[0]["rank"],
+                    closest_failure[0]["apex"],
+                ),
+                (
+                    ftext(worst[1][rank - 1]),
+                    worst[0]["body"],
+                    worst[0]["rank"],
+                    worst[0]["apex"],
+                ),
+            )
+        )
+    core_eligibility_extrema = tuple(core_extrema_rows)
     nonmonotone_roots = sum(
         bool(root["closed_ranks"])
         and bool(root["open_ranks"])
@@ -861,6 +1265,31 @@ def main() -> None:
             == EXPECTED_ROOT_PARITY_CUTOFF_QUANTILES,
             "root parity-cutoff quantiles changed",
         )
+    if EXPECTED_CORE_ELIGIBILITY_COUNTS is not None:
+        require(
+            core_eligibility_counts == EXPECTED_CORE_ELIGIBILITY_COUNTS,
+            "ranked-core eligibility counts changed",
+        )
+    if EXPECTED_STRONGEST_CORE_HISTOGRAM is not None:
+        require(
+            strongest_core_histogram == EXPECTED_STRONGEST_CORE_HISTOGRAM,
+            "strongest ranked-core histogram changed",
+        )
+    if EXPECTED_CORE_ELIGIBILITY_STRATUM is not None:
+        require(
+            core_eligibility_stratum == EXPECTED_CORE_ELIGIBILITY_STRATUM,
+            "ranked-core stratum census changed",
+        )
+    if EXPECTED_CORE_ELIGIBILITY_RANK is not None:
+        require(
+            core_eligibility_rank == EXPECTED_CORE_ELIGIBILITY_RANK,
+            "ranked-core rank census changed",
+        )
+    if EXPECTED_CORE_ELIGIBILITY_EXTREMA is not None:
+        require(
+            core_eligibility_extrema == EXPECTED_CORE_ELIGIBILITY_EXTREMA,
+            "ranked-core extrema changed",
+        )
     require(
         set(terminal_bodies).isdisjoint(THM2895_ROOTS),
         "scalar terminal roots overlap the four THM-2895 roots",
@@ -888,6 +1317,11 @@ def main() -> None:
         "root_parity_cutoff_quantiles_nearest_rank="
         f"{root_parity_cutoff_quantiles}"
     )
+    print(f"ranked_core_eligibility_counts={core_eligibility_counts}")
+    print(f"strongest_ranked_core_histogram={strongest_core_histogram}")
+    print(f"ranked_core_eligibility_stratum={core_eligibility_stratum}")
+    print(f"ranked_core_eligibility_rank={core_eligibility_rank}")
+    print(f"ranked_core_eligibility_extrema={core_eligibility_extrema}")
     print(f"extrema={extrema}")
     print(f"complete_ledger_sha256={ledger_digest}")
     print(f"stratum_ledger_sha256={stratum_digests}")
