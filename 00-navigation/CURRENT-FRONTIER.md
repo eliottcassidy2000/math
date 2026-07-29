@@ -185,7 +185,8 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   the stronger four-index matching inequality.  THM-2841 then proves that
   every tensor of two or more nonnegative adjacent-difference cone elements
   has positive factorial readout, via an exact forbidden-board rook count and
-  sharp derangement floor. THM-2842 identifies the missing multipliers as
+  derangement floor; THM-2853 extends to Gamma shapes.
+  THM-2842 identifies the missing multipliers as
   radial-variance jets: `k` jets invert an ordered `k`-cone span, but ordinary
   Gaussian nullity does not supply them. THM-2844 proves a support cut is
   exactly necessary for every pair in two full positive coordinate orthants
