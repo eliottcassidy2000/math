@@ -1,0 +1,11 @@
+THM-2883 RANKED-APEX HITTING CLOSURE
+status=FINITE-EXACT+GLOBAL-TAIL-SEALED
+universe=all 602 rank-impossible roots after the disjoint 584+816+602 THM-741 root partition
+rank_impossible_roots=602;min_apex_margin=67759/5045040;min_body=(1, 2, 3, 5, 7, 8, 9, 11, 13);max_rank14_tail=989;max_tail_body=(1, 2, 8, 9, 10, 11, 12, 13, 14);apex_digest=af026722b290a2e578ded6f105722a104836a2cab31dee2272d836a7a7c14ecf
+carrier_tasks=6020;direct=4272;rank2=1657;failure=91;max_rank3_tail=1166;max_rank3_body=(2, 3, 4, 8, 9, 10, 11, 12, 14);max_rank3_apex_rank=7;max_rank3_apex=156;full_carrier_controls=6020;vector_scalar_controls=12040;classification_digest=24a4b9b07424b23f6fe334f84c45ef45efa0e2c5ea695d402d1be88687bd87e0
+failure_distinct_roots=64;potential_whole_roots_after_rank2=538;failure_rank_histogram={1: 0, 2: 9, 3: 14, 4: 20, 5: 14, 6: 6, 7: 10, 8: 7, 9: 7, 10: 4};failure_digest=2f97c76ccbf5ae6f53c9c32b7a8366a3bd62a4b83957c63fb96283c9cbec3743;failure_root_digest=43ac76ed0be64801affe402fdd3f6b0374896eb0f35e9b18671b52701edf2230
+closed_apex_hitting_roots=602;hitting_residual=0;minimum_hitting_margin=57684167/7467740280;minimum_hitting_body=(1, 3, 4, 5, 7, 9, 10, 11, 13);minimum_hitting_allowed=23,17,53,72;hitting_digest=f6c5f21c5a16651b69a681d2709a498b83cabf6bc845cce27dfd37ff0b8cc000
+rank2_tasks=1657;max_K2=5711;max_K2_body=(1, 4, 5, 6, 7, 8, 9, 10, 13);max_K2_apex_rank=6;max_K2_apex=23;max_rank2_tail=168888;max_tail_body=(1, 4, 5, 6, 7, 8, 9, 10, 13);max_tail_apex_rank=6;max_tail_apex=23;dangerous_triples=29622;max_dangerous_per_carrier=5807;max_dangerous_body=(1, 4, 5, 6, 7, 8, 9, 10, 13);max_dangerous_apex_rank=6;max_dangerous_apex=23
+literal_rank2_triples=29622;positive=all;tight=0;minimum_survivor=183/43792;minimum_body=(1, 3, 4, 7, 9, 10, 11, 12, 13);minimum_apex=16;minimum_triple=(17, 19, 23);minimum_r=6;minimum_components=4;simultaneous_controls=1657;direct_controls=1657;candidate_digest=9df78b9841ba5fbac29b49965dd45498656d5093d377d16c8929699bcb308243;literal_digest=dbef39aa9b7d681706321835dfd34143c1303392c58ea5788a41c24aa05780a4
+pure_tail_root_consequence=2002/2002;whole_root_composition=THM-738 small-speed chamber;THM-741=PROVED;general_LRC14=OPEN
+all_exact_controls=PASS
