@@ -2,8 +2,8 @@
 id: THM-2962
 title: "Planar suspension resolvent and V4 Kummer descent"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For a planar generically finite map with A4/S4 Galois closure,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For a planar
+  generically finite map with A4/S4 Galois closure,
   direct affine suspension preserves the Galois group and turns the full
   V4-resolvent normalization and its V4-cover into literal A1-products.
   On the regular locus, A1-invariance identifies H1_et(-,mu2)
@@ -44,8 +44,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2962 -- planar suspension resolvent and `V4` Kummer descent
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2465 proves that the nonautomorphic affine point-cap degree-four lane is
 exactly a suspension of the planar degree-four problem.  THM-2655 and
@@ -374,3 +373,11 @@ parity word, `|GL_2(F_2)|=6`, and the exact order-`2`, order-`3`,
 order-`2` quotient relations in (16)--(17).  It uses explicit runtime
 requirements rather than Python `assert`, so optimized execution retains
 every truth-bearing check.
+
+An independent hostile audit caught and repaired the distinction between a
+finite `V4`-Galois cover and an etale `V4`-torsor, verified the inserted
+ramified `S4` boundary by branch cycles and Riemann--Hurwitz, and restricted
+the THM-2871 follow-up to its actual flag chart. It then rederived the
+remaining base-change, Kummer, divisor-parity, and quotient claims and
+independently reproduced the normal, optimized, and stored transcripts and
+declared hashes.
