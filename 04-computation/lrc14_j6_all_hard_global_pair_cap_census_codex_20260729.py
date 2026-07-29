@@ -92,10 +92,12 @@ S2 = F(99, 70)
 # Filled after discovery and then locked for ordinary/optimized replay.
 EXPECTED_COUNTS: tuple[int, ...] | None = None
 EXPECTED_GROUPS: tuple[tuple[object, ...], ...] | None = None
+EXPECTED_ROOT_COUNTS: tuple[object, ...] | None = None
 EXPECTED_EXTREMA: tuple[tuple[object, ...], ...] | None = None
 EXPECTED_QUANTILES: tuple[tuple[str, tuple[tuple[int, int], ...]], ...] | None = None
 EXPECTED_FAILURE_DIGESTS: tuple[tuple[str, str], ...] | None = None
 EXPECTED_LEDGER_DIGEST: str | None = None
+EXPECTED_ROW_OUTPUT_SHA256: str | None = None
 
 
 def require(condition: bool, message: str) -> None:
@@ -227,6 +229,7 @@ def cutoff_data(row: dict[str, object]) -> dict[str, object]:
     return {
         **row,
         "q1": q1,
+        "q2": row["top5"][1][1],
         "q3": row["top5"][2][1],
         "q5": row["top5"][4][1],
         "gamma": gamma,
@@ -418,6 +421,7 @@ def exact_branch(row: dict[str, object]) -> dict[str, object]:
         paid_total += exact["paid"]
         piece_labels_total += exact["piece_labels"]
     pair_margin = 4 * mass / 7 - pair_cap
+    scalar_pair_margin = 4 * mass / 7 - data["q1"] - data["q2"]
     direct_margin = mass - data["q5"] - 2 * pair_cap
     triple_cap = pair_cap + data["q3"]
     triple_margin = 5 * mass / 7 - triple_cap
@@ -490,6 +494,7 @@ def exact_branch(row: dict[str, object]) -> dict[str, object]:
         "piece_labels_total": piece_labels_total,
         "pair_cap": pair_cap,
         "pair_margin": pair_margin,
+        "scalar_pair_margin": scalar_pair_margin,
         "direct_margin": direct_margin,
         "triple_cap": triple_cap,
         "triple_margin": triple_margin,
@@ -519,7 +524,8 @@ def result_line(row: dict[str, object]) -> str:
         f"K={row['K']};rank={row['rank']};a={row['apex']};"
         f"P={','.join(map(str, row['prefix']))};"
         f"h={ftext(row['mass'])};r={row['components']};"
-        f"q1={ftext(row['q1'])};q3={ftext(row['q3'])};q5={ftext(row['q5'])};"
+        f"q1={ftext(row['q1'])};q2={ftext(row['q2'])};"
+        f"q3={ftext(row['q3'])};q5={ftext(row['q5'])};"
         f"W2={row['cutoff']};n2={row['head_count']};raw2={row['raw_pairs']};"
         f"H2initial={ftext(row['initial_head'])};"
         f"pair_initial={row['initial_witness']};paid_initial={row['initial_paid']};"
@@ -530,6 +536,7 @@ def result_line(row: dict[str, object]) -> str:
         f"H2={ftext(row['head'])};pair={row['witness']};"
         f"paid={row['paid_total']};tail_exact={ftext(row['exact_tail'])};"
         f"B2={ftext(row['pair_cap'])};global_exact={int(row['global_exact'])};"
+        f"mscalar2={ftext(row['scalar_pair_margin'])};"
         f"mB2={ftext(row['pair_margin'])};"
         f"mdirect={ftext(row['direct_margin'])};"
         f"mB3={ftext(row['triple_margin'])};"
@@ -607,6 +614,11 @@ def group_summary(
         key,
         len(rows),
         sum(row["pair_eligible"] for row in rows),
+        sum(row["scalar_pair_margin"] > 0 for row in rows),
+        sum(
+            row["scalar_pair_margin"] <= 0 and row["pair_eligible"]
+            for row in rows
+        ),
         sum(row["direct_closed"] for row in rows),
         sum(row["triple_eligible"] for row in rows),
         sum(row["quadruple_eligible"] for row in rows),
@@ -634,6 +646,11 @@ def main() -> None:
         "--emit-rows",
         action="store_true",
         help="emit the complete exact branch ledger",
+    )
+    parser.add_argument(
+        "--row-ledger",
+        type=Path,
+        help="write the complete exact branch ledger to this generated file",
     )
     args = parser.parse_args()
     require(args.workers >= 1, "workers must be positive")
@@ -688,6 +705,67 @@ def main() -> None:
         )
     groups_tuple = tuple(groups)
 
+    by_body: dict[tuple[int, ...], list[dict[str, object]]] = defaultdict(list)
+    for row in rows:
+        by_body[row["body"]].append(row)
+    require(
+        len(by_body) == 3427,
+        "scalar-nonterminal root count changed",
+    )
+    hard_distribution = tuple(
+        sorted(Counter(map(len, by_body.values())).items())
+    )
+    require(
+        hard_distribution
+        == (
+            (1, 65),
+            (2, 354),
+            (3, 710),
+            (4, 827),
+            (5, 702),
+            (6, 450),
+            (7, 204),
+            (8, 87),
+            (9, 21),
+            (10, 5),
+            (11, 2),
+        ),
+        "hard branches per root changed",
+    )
+    direct_terminal_bodies = tuple(
+        body
+        for body, body_rows in sorted(by_body.items())
+        if all(row["direct_closed"] for row in body_rows)
+    )
+    single_hard_direct = sum(
+        len(body_rows) == 1 and body_rows[0]["direct_closed"]
+        for body_rows in by_body.values()
+    )
+    root_counts = (
+        len(by_body),
+        hard_distribution,
+        65,
+        single_hard_direct,
+        len(direct_terminal_bodies),
+        5 + len(direct_terminal_bodies),
+        3432 - 5 - len(direct_terminal_bodies),
+        tuple(
+            (
+                stratum,
+                sum(
+                    rows_for_body[0]["stratum"] == stratum
+                    for rows_for_body in by_body.values()
+                ),
+                sum(
+                    rows_for_body[0]["stratum"] == stratum
+                    and all(row["direct_closed"] for row in rows_for_body)
+                    for rows_for_body in by_body.values()
+                ),
+            )
+            for stratum in ("low", "one", "both")
+        ),
+    )
+
     pair_rows = [row for row in rows if row["pair_eligible"]]
     direct_rows = [row for row in rows if row["direct_closed"]]
     triple_rows = [row for row in rows if row["triple_eligible"]]
@@ -697,6 +775,15 @@ def main() -> None:
         len(rows),
         len(pair_rows),
         len(rows) - len(pair_rows),
+        sum(row["scalar_pair_margin"] <= 0 for row in rows),
+        sum(
+            row["scalar_pair_margin"] <= 0 and row["pair_eligible"]
+            for row in rows
+        ),
+        sum(
+            row["scalar_pair_margin"] <= 0 and not row["pair_eligible"]
+            for row in rows
+        ),
         len(direct_rows),
         len(triple_rows),
         len(quadruple_rows),
@@ -720,6 +807,7 @@ def main() -> None:
 
     extrema = (
         extremum("minimum_pair_margin", rows, "pair_margin"),
+        extremum("minimum_scalar_pair_margin", rows, "scalar_pair_margin"),
         extremum("minimum_direct_margin", rows, "direct_margin"),
         extremum("minimum_triple_margin", rows, "triple_margin"),
         extremum("minimum_quadruple_margin", rows, "quadruple_margin"),
@@ -773,6 +861,10 @@ def main() -> None:
             [row for row in rows if not row["pair_eligible"]],
         ),
         failure_digest(
+            "scalar_pair_failures",
+            [row for row in rows if row["scalar_pair_margin"] <= 0],
+        ),
+        failure_digest(
             "direct_failures",
             [row for row in rows if not row["direct_closed"]],
         ),
@@ -791,11 +883,23 @@ def main() -> None:
     for row in rows:
         digest.update(result_line(row).encode())
     ledger_digest = digest.hexdigest()
+    row_output = (
+        "LRC14 j6 all-hard exact global pair-cap branch ledger\n"
+        + "".join("PAIR;" + result_line(row) for row in rows)
+        + f"ledger_sha256={ledger_digest}\n"
+        + (
+            "scope=all 14806 scalar-hard marked THM2896 suffixes;"
+            "exact global pair caps and flag-gate workloads;not LRC14\n"
+        )
+    )
+    row_output_sha256 = hashlib.sha256(row_output.encode()).hexdigest()
 
     if EXPECTED_COUNTS is not None:
         require(counts == EXPECTED_COUNTS, "aggregate counts changed")
     if EXPECTED_GROUPS is not None:
         require(groups_tuple == EXPECTED_GROUPS, "group census changed")
+    if EXPECTED_ROOT_COUNTS is not None:
+        require(root_counts == EXPECTED_ROOT_COUNTS, "root recomposition changed")
     if EXPECTED_EXTREMA is not None:
         require(extrema == EXPECTED_EXTREMA, "extrema changed")
     if EXPECTED_QUANTILES is not None:
@@ -807,14 +911,23 @@ def main() -> None:
         )
     if EXPECTED_LEDGER_DIGEST is not None:
         require(ledger_digest == EXPECTED_LEDGER_DIGEST, "result ledger changed")
+    if EXPECTED_ROW_OUTPUT_SHA256 is not None:
+        require(
+            row_output_sha256 == EXPECTED_ROW_OUTPUT_SHA256,
+            "row-output transcript changed",
+        )
+    if args.row_ledger is not None:
+        args.row_ledger.write_text(row_output)
 
     print("LRC14 j6 all-hard globally sealed pair-cap census")
     print(f"counts={counts}")
     print(f"groups={groups_tuple}")
+    print(f"root_counts={root_counts}")
     print(f"extrema={extrema}")
     print(f"quantiles_nearest_rank={quantiles}")
     print(f"failure_digests={failure_digests}")
     print(f"ledger_sha256={ledger_digest}")
+    print(f"row_output_sha256={row_output_sha256}")
     print("mode=DISCOVERY" if EXPECTED_COUNTS is None else "mode=LOCKED")
     print(
         "scope=all 14806 scalar-hard marked THM2896 suffixes;"
