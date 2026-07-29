@@ -1,0 +1,8 @@
+LRC14 j6 inherited-parent q3+B2 scout
+branches=25;pairs=784;parent_closed=204;parent_open=580;child_closed=784;paid_parent_pairs=7310
+root_counts=(((2, 8, 9, 10, 11, 13, 14), 225, 48), ((1, 3, 9, 10, 11, 12, 14), 118, 46), ((2, 5, 9, 11, 12, 13, 14), 351, 83), ((2, 3, 4, 5, 6, 7, 8), 90, 27))
+minimum_parent_margin=-135564641/3577774200;E=(2, 5, 9, 11, 12, 13, 14);rank=1;apex=16;H4pair=(20, 25)
+closest_parent_failure=-17489/1873980108;E=(2, 5, 9, 11, 12, 13, 14);rank=3;apex=17;H4pair=(20, 38)
+canonical_ledger_sha256=952b436fe47f9227de7791c7ee788bbb2b9e00b6214f8170c7d449178c51c298
+mode=LOCKED
+scope=784 THM-2900 control rows;not all-root;not LRC14
