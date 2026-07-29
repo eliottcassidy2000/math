@@ -2,8 +2,8 @@
 id: THM-2945
 title: "Nonnegative complete-intersection norm and repeated-divisor gate"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  A nonzero real polynomial H which is nonnegative on
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A nonzero
+  real polynomial H which is nonnegative on
   [0,infinity) has interior zero set exactly the positive-real root set
   of gcd(H,H').  Strict positivity on the closed ray additionally
   requires H(0)>0.  For a real ternary (2,3,4) complete intersection
@@ -15,6 +15,14 @@ status: >
   conditionally to a repeated-divisor root test.  No universal
   terminal-pole divisor formula or new width closure is claimed here.
 source: codex-gmc-uniform-width-extension-2026-07-29
+audit: >
+  An independent hostile audit rederived the positive-ray
+  multiplicity lemma, checked the local Poisson/resultant sign argument
+  without assuming one global dehomogenization, verified the strict
+  clearing and positive extraneous-factor typing, recomputed both LF
+  hashes, and replayed normal, optimized, and stored output exactly.
+  The endpoint, sign-indefinite, and non-strict-clearing hostiles all
+  remained sharp.
 depends_on:
   - THM-2843-four-slot-projective-divisibility-and-resolvent-reduction
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
@@ -34,8 +42,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2945 -- nonnegative complete-intersection norm and repeated-divisor gate
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. The positive-ray lemma
 
@@ -415,4 +422,4 @@ python -O 04-computation/gmc_nonnegative_norm_repeated_divisor_gate_thm2945.py
 Both modes must byte-match the stored transcript and the LF-normalized
 hashes above.
 
-**QED, pending independent hostile audit.**
+**QED.**
