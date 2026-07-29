@@ -1,4 +1,6 @@
 V4_profiles {(0, 0): (0, 1, 1, 1), (0, 1): (1, 0, 1, 1), (1, 0): (1, 1, 0, 1), (1, 1): (1, 1, 1, 0)}
+C2_crossing_edges_context_tax 1 2
+C3_crossing_edges_context_tax 3 3
 V4_crossing_edges 6
 V4_minimum_order_complete_contexts 4
 AGL22_size 24

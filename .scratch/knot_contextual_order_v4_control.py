@@ -10,6 +10,53 @@ def sign(value):
     return (value > 0) - (value < 0)
 
 
+def cyclic_discrete_control(order):
+    elements = tuple(range(order))
+    cyclic_profiles = {
+        x: tuple(0 if (x + z) % order == 0 else 1 for z in elements)
+        for x in elements
+    }
+    cyclic_edges = 0
+    for x, y in combinations(elements, 2):
+        signs = {
+            sign(cyclic_profiles[x][z] - cyclic_profiles[y][z])
+            for z in elements
+        }
+        require(-1 in signs and 1 in signs, f"C{order} crossing failure")
+        cyclic_edges += 1
+    minimum = None
+    for size in range(order + 1):
+        for dictionary in combinations(elements, size):
+            good = True
+            for x in elements:
+                for y in elements:
+                    full = all(
+                        cyclic_profiles[x][z] <= cyclic_profiles[y][z]
+                        for z in elements
+                    )
+                    restricted = all(
+                        cyclic_profiles[x][z] <= cyclic_profiles[y][z]
+                        for z in dictionary
+                    )
+                    if full != restricted:
+                        good = False
+                        break
+                if not good:
+                    break
+            if good:
+                minimum = size
+                break
+        if minimum is not None:
+            break
+    require(cyclic_edges == order * (order - 1) // 2, f"C{order} not complete")
+    require(minimum == order, f"C{order} context tax is not its order")
+    return cyclic_edges, minimum
+
+
+c2_edges, c2_contexts = cyclic_discrete_control(2)
+c3_edges, c3_contexts = cyclic_discrete_control(3)
+
+
 # V4/F_2^2 exact control.
 V4 = tuple(product(range(2), repeat=2))
 v4_index = {x: index for index, x in enumerate(V4)}
@@ -169,6 +216,8 @@ require(knot_upper_table[0][0] > knot_upper_table[1][0], "first knot witness")
 require(knot_upper_table[0][1] < knot_upper_table[1][1], "second knot witness")
 
 print("V4_profiles", profiles)
+print("C2_crossing_edges_context_tax", c2_edges, c2_contexts)
+print("C3_crossing_edges_context_tax", c3_edges, c3_contexts)
 print("V4_crossing_edges", len(crossing_edges))
 print("V4_minimum_order_complete_contexts", minimum_context_size)
 print("AGL22_size", len(affine_permutations))

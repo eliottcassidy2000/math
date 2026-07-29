@@ -172,9 +172,43 @@ but dominance itself is not supplied by a finite common-context theorem.
 Likewise, in the language of THM-2348, one favorable context is analogous to
 one Cartesian optimum: it does not imply the robust all-context condition.
 
-## 5. Exact `V4` control, four-context tax, and the `S4/V4` quotient
+## 5. Finite-group context tax: `C2`, `C3`, and `V4`
 
-Take
+There is a uniform exact control behind the small groups in the user's
+prompt.  Let `G` be a finite abelian group with its discrete metric and
+
+```text
+f(e)=0,             f(x)=1 for x!=e.
+```
+
+For distinct `x,y`, the unique context at which
+
+```text
+f(x+z)>f(y+z)
+```
+
+is `z=-y`.  Therefore:
+
+```text
+the continuation quotient is an |G|-element antichain;
+the crossing graph is K_|G|;
+the minimum order-complete context dictionary has size |G|.  (13)
+```
+
+The last assertion follows because order-completeness must refute
+`x<=y` for every ordered pair `x!=y`, forcing `-y` into the dictionary;
+the full group works.
+
+Thus `C2` gives the last cubical complete graph `K2`, while `C3` gives the
+first non-bipartite complete graph `K3`.  The binary and ternary taxes really
+are two and three, but they are taxes for two different finite carriers.
+The free product `C2*C3` does not identify them on one finite object: with
+the same discrete response its context tax is infinite, and any finite
+quotient necessarily forgets words.
+
+### The affine `V4` control
+
+Specialize (13) by taking
 
 ```text
 M=F_2^2=V4,
@@ -192,7 +226,7 @@ while `z=y` reverses the inequality.  Thus every two distinct continuation
 classes cross and the crossing graph is
 
 ```text
-K4.                                                     (13)
+K4.                                                     (14)
 ```
 
 This gives three exact boundaries at once.
@@ -205,16 +239,16 @@ This gives three exact boundaries at once.
 3. Since every transposition reverses one edge, no tournament orientation of
    `K4` is invariant under the full affine gauge.
 
-There is also an exact finite-query tax.  For a finite packet `A`, call a
+For completeness, for a finite packet `A`, call a
 context dictionary `D` **order-complete** when
 
 ```text
 x<=_f^ctx y
- iff f(x+z)<=f(y+z) for every z in D,               x,y in A.  (14)
+ iff f(x+z)<=f(y+z) for every z in D,               x,y in A.  (15)
 ```
 
 In this `V4` model, the minimum order-complete dictionary for `A=V4` has
-size exactly four.  To refute the ordered comparison `x<=y`, the only
+size exactly four by (13).  To refute the ordered comparison `x<=y`, the only
 possible context is `z=y`: there the right response is zero and the left is
 one, whereas at every `z!=y` the right response is one.  Hence every
 `y in V4` must belong to `D`, and `D=V4` works.
@@ -238,26 +272,26 @@ translation-invariant integer metric
 ```text
 d(m,n)=0                 if m=n,
        =1                 if |m-n|=2,
-       =2                 otherwise.                (15)
+       =2                 otherwise.                (16)
 ```
 
 Every nontrivial distance is `1` or `2`, so the triangle inequality is
 immediate.  Its root length is
 
 ```text
-f(0)=0, f(2)=1, and f(n)=2 for n>0, n!=2.           (16)
+f(0)=0, f(2)=1, and f(n)=2 for n>0, n!=2.           (17)
 ```
 
 The classes `1,2` cross:
 
 ```text
-f(1)>f(2),               f(2)<f(3).                 (17)
+f(1)>f(2),               f(2)<f(3).                 (18)
 ```
 
 After translating both by `1`, however,
 
 ```text
-2 <_f^ctx 3,                                            (18)
+2 <_f^ctx 3,                                            (19)
 ```
 
 because `f(2)<f(3)` at the zero context and
@@ -293,5 +327,5 @@ cheapest decisive tests:
 stopping boundary:
   crossing can disappear under a noninvertible translation, and neither a
   finite common-context slice nor an S3 tournament shadow recovers the full
-  continuation order.                                          (19)
+  continuation order.                                          (20)
 ```
