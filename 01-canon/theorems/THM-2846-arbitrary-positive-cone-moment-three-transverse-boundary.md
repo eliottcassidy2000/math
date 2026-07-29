@@ -19,7 +19,7 @@ related:
   - THM-2843-four-slot-projective-divisibility-and-resolvent-reduction
 script: 04-computation/gmc_positive_cone_moment3_transverse_boundary_thm2846.py
 output: 05-knowledge/results/gmc_positive_cone_moment3_transverse_boundary_thm2846.out
-script_sha256: 3f2ad4e18518e9688df05596e749407a16e029456a7e40aa42a646f4da044ae2
+script_sha256: c1e4d4432c8fe2e988bb0c877ca0d451ff1426d3e8c0ba0f103820dc21eb7526
 output_sha256: b1193b34c28e1f49682c6de2e4b68c1b56ea14226df731afa37bcdb7f287b2ea
 hash_basis: LF-normalized bytes
 ---
@@ -290,6 +290,22 @@ ratio order applies.  The two opposed transport contributions cancel
 exactly on the algebraic hypersurface `(4)`.  This identifies the proper
 next object: not a stronger one-sided sign estimate, but the higher-moment
 transversality of this cancellation locus.
+
+### 5.1. Concrete THM-2843 moving plane
+
+Because `d_1,d_2,d_3` span the four normalized monomial slots
+`f_1,f_2,f_3,f_4`, the plane
+
+```text
+E=span_R{U,V}
+```
+
+is an actual four-slot factorial plane in the sense of THM-2843.  Equations
+`(4),(6)` say that `Q|_E` divides `C|_E`, while `(11)` says that
+`Q|_E` does not divide the quartic restriction.  Thus this is a concrete
+factorial realization of THM-2843's moving-plane geometry, not merely the
+abstract non-factorial facewise hostile in that theorem.  The quartic
+transverse sign is precisely the next complete-intersection exit.
 
 ## 6. Exact evidence and audit boundary
 

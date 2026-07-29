@@ -81,6 +81,27 @@ def cubic(left: int, middle: int, right: int) -> int:
     return int(value)
 
 
+def adjacent_tensor(indices: tuple[int, ...]) -> int:
+    """Direct 2^k expansion of L(prod d_i), independent of closed formulas."""
+    order = len(indices)
+    value = sp.Integer(0)
+    for mask in range(1 << order):
+        degrees = []
+        sign = 1
+        for position, index in enumerate(indices):
+            if mask & (1 << position):
+                degrees.append(index + 1)
+            else:
+                degrees.append(index)
+                sign = -sign
+        term = sp.factorial(sum(degrees))
+        for degree in degrees:
+            term /= sp.factorial(degree)
+        value += sign * term
+    require(value.q == 1, "adjacent tensor lost integrality")
+    return int(value)
+
+
 def bilinear(first: dict[int, sp.Expr], second: dict[int, sp.Expr]) -> sp.Expr:
     return sp.expand(
         sum(
@@ -109,9 +130,45 @@ def trilinear(
     )
 
 
+def four_linear(
+    first: dict[int, sp.Expr],
+    second: dict[int, sp.Expr],
+    third: dict[int, sp.Expr],
+    fourth: dict[int, sp.Expr],
+) -> sp.Expr:
+    return sp.expand(
+        sum(
+            first_value
+            * second_value
+            * third_value
+            * fourth_value
+            * adjacent_tensor(
+                (first_index, second_index, third_index, fourth_index)
+            )
+            for first_index, first_value in first.items()
+            for second_index, second_value in second.items()
+            for third_index, third_value in third.items()
+            for fourth_index, fourth_value in fourth.items()
+        )
+    )
+
+
 def main() -> None:
     lower = {1: sp.Integer(1), 3: X}
     upper = {2: sp.Integer(1), 3: Y}
+
+    for left in range(5):
+        for middle in range(5):
+            require(
+                quadratic(left, middle) == adjacent_tensor((left, middle)),
+                "quadratic/direct tensor mismatch",
+            )
+            for right in range(5):
+                require(
+                    cubic(left, middle, right)
+                    == adjacent_tensor((left, middle, right)),
+                    "cubic/direct tensor mismatch",
+                )
 
     g11 = bilinear(lower, lower)
     g12 = bilinear(lower, upper)
@@ -292,7 +349,7 @@ def main() -> None:
 
     # Exact positive control: neither quadratic root also kills moment four.
     # Here q4[j]=L(U^(4-j)V^j).
-    q4 = (
+    displayed_q4 = (
         20790000 * X**4 + 4132800 * X**3 + 407400 * X**2 + 24840 * X + 864,
         20790000 * X**3 * Y
         + 5197500 * X**3
@@ -325,9 +382,22 @@ def main() -> None:
         + 1592640 * Y
         + 123480,
     )
+    derived_q4 = tuple(
+        four_linear(
+            *([lower] * (4 - upper_count) + [upper] * upper_count)
+        )
+        for upper_count in range(5)
+    )
+    require(
+        all(
+            sp.expand(derived - displayed) == 0
+            for derived, displayed in zip(derived_q4, displayed_q4)
+        ),
+        "quartic tensor reconstruction changed",
+    )
     quartic_coefficients = [
         comb(4, upper_count) * expression
-        for upper_count, expression in enumerate(q4)
+        for upper_count, expression in enumerate(derived_q4)
     ]
     q0 = g11
     q1 = 2 * g12
