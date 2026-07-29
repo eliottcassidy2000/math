@@ -29,8 +29,8 @@ related:
   - THM-2753-six-edge-parity-erasure-and-three-matching-resolvent-restoration
 script: 04-computation/modular_level_three_four_six_lifts_thm2862.py
 output: 05-knowledge/results/modular_level_three_four_six_lifts_thm2862.out
-script_sha256: ccd087583cdeaa230e1e0bf3ab36ee3e5de140e04834cda3952dbe9cb56fd0c0
-output_sha256: 0a3a6bcd739a3c743aa15e1505fea00f1f5e273153dbeae9f7e879428da3a083
+script_sha256: 2d81fb1b36c849c4194576c720f6341dbd6deac5d21cf7b7dd64417ba1869168
+output_sha256: aac5cfe4a9117e9cc43787c2c1ea578804259e7b8c9825641ac42a11c224a87d
 hash_basis: LF-normalized bytes
 ---
 
@@ -270,10 +270,11 @@ Their square is one of the three nonidentity elements of the normal
 four-cycle gamma |-> gamma^2 in K4\{1}.                   (24)
 ```
 
-The corresponding quotient of `E` sends an edge to the nonzero `K4`
-translation which exchanges it with its opposite edge.  Thus the two
-six-sets are two different double covers of the same ternary matching
-set:
+The corresponding quotient of `E` sends an edge to the unique nonzero
+element of `K4` whose two transposition orbits are that edge and its
+opposite.  It fixes both constituent edges setwise; the other two nonzero
+translations exchange them.  Thus the two six-sets are two different
+double covers of the same ternary matching set:
 
 ```text
 P: inverse orientations over a matching,
@@ -343,6 +344,16 @@ chi_disc=chi_or chi_edge.                                  (30)
 Thus the missing bit in `(22)` is not decorative.  The orientation and
 edge double covers are the two independent binary faces over the ternary
 matching base; their product is the discriminant face.
+
+More precisely,
+
+```text
+Z(D)=[D,D]=K4 intersect C4 intersect V4_edge=<T^2>,        (30a)
+```
+
+every pair of the three index-two subgroups intersects in this order-two
+core, and every pair generates `D`.  This is the exact local
+Klein-four character geometry behind `(30)`.
 
 There is an exact field-theoretic form.  Let `L/F` be an `S4`-Galois
 closure and use the subgroup marking `(28)`.  Then `L^D/F` is the degree-

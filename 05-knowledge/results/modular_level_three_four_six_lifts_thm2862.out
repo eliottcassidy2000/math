@@ -14,5 +14,7 @@ six stabilizers: projective_orders=[1, 2, 4, 4] edge_orders=[1, 2, 2, 2]
 common block stabilizer: size=8 orders=[1, 2, 2, 2, 2, 2, 4, 4]
 D8 index-two bank: count=3 kernels=normal_V4,C4,edge_V4
 D8 characters: chi_K*chi_P=chi_E chi_P*chi_E=chi_K chi_E*chi_K=chi_P
+D8 fixed-field core: center=commutator=triple_kernel=<T^2> size=2; pair_intersections=2,2,2 pair_joins=8,8,8
+D8 character triples: (+++):2 (+--):2 (-+-):2 (--+):2
 six actions: equivariant=0; three-block quotients equivariant=1; block_kernel=V4
 PASS
