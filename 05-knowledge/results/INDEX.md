@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `lrc14_j6_ranked_h1_thm2911/` [THM-2911 PROVED + FINITE-EXACT +
+  VERIFIED].  Of `6,180` scalar-hard rows satisfying
+  `q_1+q_2+q_3+q_4<6h/7`, the exact discrepancy cutoff is at most `15,000`
+  on `5,999`; ordered literal-child pivots close `5,975`, and
+  maximum-spanning-tree Hunter repair closes all `54` hostile five-sets on
+  the remaining `24`.  Full-prefix composition with THM-2905 and THM-2904
+  covers `6,118` hard branch keys and yields `138` route roots.  Exact set
+  difference against the proved `88`-root baseline adds `93`, for a proved
+  union of `181` and residual `3,251`.  The pivot supplies one genuinely new
+  mixed root, `(1,2,3,5,6,8,13)`.  The verifier requires the exact `24/24`
+  shard/source/output Hunter-target identity join and independently reparses
+  the hash-pinned THM-2904 ledger.  Ordinary/optimized outputs are
+  byte-identical.  Verifier/locked-output SHA-256:
+  `(48f279b90955592f34656eb45e6d6dfaf4f88618a157032e58fcbd7beb104aee,e5c58cc2eb325928c00839c2593450ea7cce8945b3835898ec83c6c5f42fac9b)`.
 - `lrc14_j6_paircap_exception_h4_link_child_census_codex_20260729.py`
   -> summary and full child-ledger `.out` files [THM-2907 PROVED +
   FINITE-EXACT + VERIFIED].  On all `18,290` actual H4 pair flags of

@@ -21,7 +21,7 @@ uncertified relation gates are not unsafe.  Separately, THM-741/2883 prove all
 - **PROVED + FINITE-EXACT:** THM-741/2883 close `2002` nine-body roots;
   THM-2888/2892/2893/885 close `3003` eight-body roots (`v_8<=14`).
   THM-2896 gates `3432`; THM-2895/98/99/2901--05 prove union `88`.
-  THM-2907 removes all `52` H4 branches, leaving `11,511` H3 rows and `3344` roots.
+  THM-2907/2911 give union `181`, residual `3,251`; `8,636/14,806` hard keys remain H3-routed.
 - **PROVED:** THM-965/2051--2092/2074 give the relation, pair floor, rank atlas
   and ledger; THM-2148/2168 reach scalar `5+3`.  THM-2054 decorrelates
   recorded margins at `H=2^19`, subject to MISTAKE-080/082's shape-specific
