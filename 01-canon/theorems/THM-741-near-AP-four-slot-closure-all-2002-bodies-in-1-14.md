@@ -1,8 +1,8 @@
 ---
 id: THM-741
 title: NEAR-AP FOUR-SLOT CLOSURE — every 13-speed family with AT LEAST 9 speeds in {1,…,14} satisfies LRC(14). Equivalently, for EVERY 9-element body E ⊆ {1,…,14} (all C(14,9)=2002) and all v₁<v₂<v₃<v₄ not in E, {E,v₁..v₄} is lonely. Proof = the THM-735 Bonferroni tree at j=4: legs J4 (one inequality, all four ≥ V₁(E)) / J3 (per-v₁ exact bodies) / J2 (per-(v₁,v₂)) / J1 (per-(v₁,v₂,v₃) tail) / bottom (exact-ℚ sweeps of covering quadruples via lcm-multiples) — with PROVED P1/P2 LEMMA-SKIPS at every level (subtrees where the next Bonferroni threshold already fires from the parent's exact data close without computing the child body; sound because P1/P2 are one-level bounds off exact data)
-status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda now prove all 21/21 whole flood bodies and therefore every thirteen-speed family containing H={8,...,14} and at least two labels from {1,...,7}.  Top-four root-coverage envelopes close `(2,4),(3,4),(3,5),(3,6),(4,5),(4,6),(4,7)`; a top-five isolated exception closes `(3,7)`; ranked finite heads close `(2,3),(2,5),(2,6),(2,7)`; and a finite-head/tail residual-carrier partition closes the final label-1 star `(1,2),...,(1,7)`.  All use literal root carriers plus the THM-735(ii) covariance cap, not Fano transport.  This is one 21-body sub-stratum of the 2002-body theorem, not global THM-741; global status upgrades only when all 2002 bodies close clean.
-source: kind-pasteur-2026-07-13-S128 (cont.5); exact flood and completed-family addenda codex-2026-07-15-S14/S15/S16 and codex-2026-07-17/18
+status: CLAIMED globally; 595/2002 root bodies now proved uniformly.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not harvested.  Exact addenda prove all 21/21 whole flood bodies.  An all-root coverage atlas proves every pure-tail extension 15<=a<b<c<d for exactly 584/2002 roots; THM-738 closes their complementary small-speed extensions, making 584 whole-root closures.  Exactly ten flood roots lie in that atlas set, so the eleven separately repaired flood exceptions raise the proved union to 595 roots.  These proofs use literal root carriers plus the THM-735(ii) covariance cap, not Fano transport.  The remaining 1407-root discharge and global LRC(14) stay open.
+source: kind-pasteur-2026-07-13-S128 (cont.5); exact flood/completed-family addenda codex-2026-07-15/18; all-root atlas codex-2026-07-28
 depends_on:
   - THM-735   # the simultaneous multi-peel lemma (j=4,3,2,1 legs) + P1/P2 peel lemmas (THM-733)
   - THM-731 / THM-732 / THM-366
@@ -49,6 +49,8 @@ verification:
   - 05-knowledge/results/lrc14_j4_four_ranked_exception_coverage_codex_20260728.out
   - 04-computation/lrc14_j4_label1_head_tail_partition_codex_20260728.py
   - 05-knowledge/results/lrc14_j4_label1_head_tail_partition_codex_20260728.out
+  - 04-computation/lrc14_thm741_all_root_pure_tail_top_four_atlas_codex_20260728.py
+  - 05-knowledge/results/lrc14_thm741_all_root_pure_tail_top_four_atlas_codex_20260728.out
   - 04-computation/lrc14_thm741_sharded_resume_runner_codex_20260717.py
   - 05-knowledge/results/lrc14_thm741_sharded_resume_runner_codex_20260717.out
 ---
@@ -1429,6 +1431,165 @@ whole-root certificates gives:
 Families containing `H` with only zero or one such label lie outside
 THM-741's nine-in-window hypothesis.  This addendum closes one 21-body
 sub-stratum, not all `2002` bodies.  Global THM-741 and LRC(14) remain open. ∎
+
+## All-root pure-tail top-four atlas: 584 exact strata (codex-2026-07-28)
+
+Let
+
+```text
+E range over all C(14,9)=2002 nine-subsets of {1,...,14},
+G_E be its good set, m_E=|G_E|, r_E=#components(G_E),
+c_E(w)=|G_E intersect D_w|,                    w>=15. (B31)
+```
+
+THM-735(ii), via the proved THM-731/732 discrepancy bound and the rational
+majorant `sqrt(2)<99/70`, gives the strict all-speed estimate
+
+```text
+c_E(w)<u_E(w):=m_E/7+(99/70)r_E/(7w).                (B32)
+```
+
+This gives a general **finite-rank compactness lemma** for the arithmetic
+tooth combs.  If `q_k(N)` is the `k`th largest value among
+`c_E(15),...,c_E(N)`, and
+
+```text
+q_k(N)>m_E/7+(99/70)r_E/[7(N+1)],
+```
+
+then every global top-`k` coverage occurs at a speed at most `N`.  Indeed,
+every unscanned tooth comb has strictly smaller coverage by `(B32)`.  The
+infinite pure-tail obstruction is therefore a finite ranked head whenever
+the chosen rank stays above the limiting density `m_E/7`.
+
+For every root `E`, the companion evaluates all `586` exact coverages
+`c_E(w)`, `15<=w<=600`, and sorts them as
+`q_1(E)>=...>=q_586(E)`.  It then checks
+
+```text
+q_4(E)>m_E/7,
+T_E:=(99/70)r_E/[7(q_4(E)-m_E/7)]<601.               (B33)
+```
+
+Thus `u_E(w)<q_4(E)` for every unscanned `w>=601`: the four highest values
+in the finite bank are the four highest coverages over every integer
+`w>=15`.  The largest crossing threshold over all `2002` roots is
+
+```text
+max_E T_E
+ =39783744/67829
+```
+
+and is attained at
+`E={1,2,4,8,10,11,12,13,14}`.
+
+Define the exact top-four margin
+
+```text
+M_E=m_E-q_1(E)-q_2(E)-q_3(E)-q_4(E).                 (B34)
+```
+
+The exhaustive sign census is
+
+```text
+M_E>0: 584,             M_E=0: 0,             M_E<0: 1418.
+```
+
+For any one of the `584` positive roots and any four distinct added speeds
+`15<=a<b<c<d`, the union bound and the global ranking give
+
+```text
+|G_E minus (D_a union D_b union D_c union D_d)|
+ >=m_E-c_E(a)-c_E(b)-c_E(c)-c_E(d)
+ >=M_E>0.
+```
+
+Hence every pure-tail extension of each of these `584` roots is lonely.
+This already closes each root uniformly: if an arbitrary four-speed
+extension contains a speed at most `14`, then its final thirteen-speed
+family has at least ten speeds in `{1,...,14}` and is lonely by the proved
+THM-738 three-slot theorem.  Therefore
+
+> **The atlas plus THM-738 close 584/2002 whole THM-741 root bodies.**
+
+Exactly ten of the `21` flood roots belong to this atlas set:
+
+```text
+(2,4),(3,4),(3,5),(3,6),(4,5),(4,6),(4,7),(5,6),(5,7),(6,7).
+```
+
+The other eleven flood roots are precisely
+
+```text
+(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),
+(2,3),(2,5),(2,6),(2,7),(3,7),
+```
+
+and were closed by the top-five, ranked-head, and residual-carrier addenda
+above.  Consequently the current proved union contains exactly
+
+```text
+584+(21-10)=595
+```
+
+distinct whole THM-741 roots, leaving `1407` roots outside these
+certificates.
+
+The least positive pure-tail margin is
+
+```text
+47/1513512
+```
+
+at `E={1,2,4,5,6,8,11,12,14}`.  As a hostile boundary, the most negative
+top-four margin is
+
+```text
+-9158777/174053880
+```
+
+at `E={1,3,4,5,7,8,10,11,13}`.  No conclusion is drawn for any of the
+`1418` nonpositive rows.
+
+The computation covers exactly `2002*586=1,173,172` rational entries.  Its
+canonical coverage-manifest hash is
+
+```text
+63fd4a08965c9e5f2665dde27ae8db792cd446bc4578290ab4aa14b01fc469f7,
+```
+
+and the lexicographically ordered positive-body digest is
+
+```text
+93ed30b15748a90ea78aa1f392e2335cb284fa683f98e8d068b8a4f0f6af7a54.
+```
+
+The script and stored-output hashes are
+
+```text
+script 52448dce08d8e71149d2b19e4c9dd933c6c6b487ce5ec4e00d668c538ac3b7ce
+output 6b28577862808f13782c18206cf0124783fbad7cf328a7e386ea514ce1e5e02e.
+```
+
+For all `8008` decisive root/speed pairs, sparse subtraction, full
+subtraction, direct ten-comb union, and independent tooth-incidence summation
+agree.  Each of the `584` extremal thirteen-speed families is additionally
+rebuilt by both direct union and full nested subtraction.
+
+An independent implementation classified endpoint breakpoints by midpoint
+cells and used a closed periodic tooth primitive rather than the companion's
+interval subtraction.  It reproduced the entire sign census, both digests,
+all three extremal rows, and the strict global minimum
+
+```text
+min_E(q_4(E)-u_E(601))=196297/739641084>0.
+```
+
+The exact atlas itself proves only the stated pure-tail strata; the small-speed
+chamber in the whole-root conclusion is imported from THM-738.  No conclusion
+is drawn from the top-four test for the `1418` nonpositive roots, although
+separate addenda close the entire flood sub-stratum.  This does not promote
+the stale direct-run ledger or prove global THM-741 or LRC(14). ∎
 
 ## Sharded-runner integrity repair (codex-2026-07-17)
 

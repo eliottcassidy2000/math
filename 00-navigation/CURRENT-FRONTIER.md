@@ -13,9 +13,8 @@ settles at most 13 total runners.  The residue is not a routine finite scan.
 THM-2051/2052 reduce a counterexample to a support-`3..5`, height-`2^20`
 relation and a bounded sparse code of rank at least eleven.  Rank twelve is
 a finite maximal-minor box; rank eleven is a two-anchor star retaining the
-deck/owner/clock/phase/endpoint sidecars.  THM-741 flood: `21/21`;
-the final discharge is open;
-failed sufficient gates are **uncertified**, not unsafe.
+deck/owner/clock/phase/endpoint sidecars.  THM-741: `595/2002` roots proved;
+global open.  Failed gates are **uncertified**, not unsafe.
 
 ### Proved reductions and terminals
 

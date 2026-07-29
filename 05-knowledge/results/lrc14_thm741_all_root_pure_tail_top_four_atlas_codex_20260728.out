@@ -1,0 +1,15 @@
+THM-741 ALL-ROOT PURE-TAIL TOP-FOUR ATLAS
+status=FINITE-EXACT+GLOBAL-TAIL-SEALED
+root_universe=C(14,9)=2002; added_speeds=15<=a<b<c<d
+finite_horizon=15..600; tail_first=601; all_2002_tail_caps_below_q4
+coverage_entries=1173172
+top4_signs=positive:584,zero:0,nonpositive:1418
+minimum_positive=1,2,4,5,6,8,11,12,14:47/1513512
+worst_negative_control=1,3,4,5,7,8,10,11,13:-9158777/174053880
+maximum_tail_threshold=1,2,4,8,10,11,12,13,14:39783744/67829<601
+decisive_four_path_atom_checks=8008
+positive_extremal_family_crosschecks=584
+coverage_manifest_sha256=63fd4a08965c9e5f2665dde27ae8db792cd446bc4578290ab4aa14b01fc469f7
+closed_body_digest_sha256=93ed30b15748a90ea78aa1f392e2335cb284fa683f98e8d068b8a4f0f6af7a54
+scope=584 pure-tail roots only; global THM-741 and LRC14 remain open
+all_exact_controls=PASS
