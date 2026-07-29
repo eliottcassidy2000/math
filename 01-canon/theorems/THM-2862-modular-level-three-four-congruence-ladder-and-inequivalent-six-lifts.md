@@ -2,8 +2,8 @@
 id: THM-2862
 title: "Modular level-three/four congruence ladder and inequivalent six-point lifts"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  The level-three quotient
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The
+  level-three quotient
   SL2(F3)/{+-I} is A4 on four projective points, and those points are
   exactly its four C3 complements to the normal V4.  The first 2-adic
   thickening SL2(Z/4)/{+-I} is S4 on its four S3 complements, with
@@ -36,8 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2862 -- levels three and four give two different six-point lifts
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2596 separates the actual Bass--Serre/Farey grammar from the slogan
 that binary and ternary trees are literally the two finite factors of
@@ -411,7 +410,7 @@ python 04-computation/modular_level_three_four_six_lifts_thm2862.py
 python -O 04-computation/modular_level_three_four_six_lifts_thm2862.py
 ```
 
-Both executions byte-match
+Both executions LF-normalized byte-match
 
 ```text
 05-knowledge/results/modular_level_three_four_six_lifts_thm2862.out.
@@ -443,4 +442,13 @@ NOT PROVED:              a graph-quartic or Keller realization;
                          JC(2), DC(2), G1, or LRC(14).                  (33)
 ```
 
-**Candidate proof complete; independent hostile audit pending.**
+An independent hostile audit reconstructed both special linear groups and
+their quotient actions directly in `S4`, rechecked the two six-point cycle
+tables and stabilizers, and rederived the four-cycle, sign, `D8`, character,
+and fixed-field claims.  It also caught and repaired the distinction between
+the normal translation whose orbits are the opposite edges and the other
+translations which exchange them.  Independent normal and optimized runs
+LF-normalized byte-match the stored transcript, and both declared hashes
+match.
+
+**QED.**
