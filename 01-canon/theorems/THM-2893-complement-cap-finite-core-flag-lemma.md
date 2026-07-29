@@ -9,6 +9,7 @@ related:
   - THM-753-safe-peel-reduction-to-irreducible-cores
   - THM-2888-eight-body-first-apex-global-pair-cap-atlas
   - THM-2894-unmarked-residual-semilattice-order-and-group-clutch-no-go
+  - THM-2897-partition-cap-tropical-convolution-and-alternating-pair-ladder
 ---
 
 # THM-2893 -- complement-cap finite-core flag lemma

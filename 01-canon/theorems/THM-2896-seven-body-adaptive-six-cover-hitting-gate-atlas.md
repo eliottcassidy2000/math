@@ -13,6 +13,7 @@ depends_on:
 related:
   - THM-2893-complement-cap-finite-core-flag-lemma
   - THM-2892-eight-body-five-slot-heavy-triangle-closure
+  - THM-2897-partition-cap-tropical-convolution-and-alternating-pair-ladder
 ---
 
 # THM-2896 -- seven-body adaptive six-cover hitting-gate atlas
@@ -189,6 +190,8 @@ audited.
 This theorem gives a finite first-apex gate for every root in the exact
 seven-body/six-slot rung left by THM-2892.  It does not prove that any
 selected apex carrier is terminal.  THM-2893's ranked suffix refinement and
-the scalar-bootstrap battery reduce that downstream workload, but their
-seed branches still require nonscalar cap/flag proofs.  Thus this theorem
-does not prove the seven-body rung or LRC(14).
+the scalar-bootstrap battery reduce that downstream workload.  THM-2897
+identifies the next cheap terminal test as the suffix singleton cap plus
+twice the suffix pair-union cap, but does not assert that it passes.  Seed
+branches still require nonscalar cap/flag proofs.  Thus this theorem does
+not prove the seven-body rung or LRC(14).
