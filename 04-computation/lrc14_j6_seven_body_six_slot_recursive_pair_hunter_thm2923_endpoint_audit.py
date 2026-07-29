@@ -22,7 +22,7 @@ BASE_PATH = Path(__file__).with_name(
     "lrc14_j6_seven_body_six_slot_recursive_pair_hunter_thm2923_stage1.py"
 )
 EXPECTED_BASE_SHA256 = (
-    "74e5eb2d0b23dda6366d115376890726ac32dc834a09a71479ea875f05e7615e"
+    "32751b2a5beb789b1657f06d3964cbf24e634251e57f57f299b8f50c647f2103"
 )
 DEFAULT_THM2907_ENDPOINT_OUTPUT = (
     ROOT

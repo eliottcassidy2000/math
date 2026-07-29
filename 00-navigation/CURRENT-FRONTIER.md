@@ -7,11 +7,10 @@ Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDI
 
 ### Headline
 
-**OPEN.** THM-2923 closes all `3,432` roots with exactly seven speeds in `{1,...,14}`;
-the open direct sector has at most six in-window speeds and at least seven external slots.
+**OPEN.** THM-2923 closes all `3,432` seven-in-window roots; the direct
+remainder has at most six in-window speeds.
 
-THM-2051/2052 leave a rank-`>=11` sparse code; THM-741/2883 close `2002`
-near-AP roots.  A failed gate is not danger.
+THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Proved reductions and terminals
 

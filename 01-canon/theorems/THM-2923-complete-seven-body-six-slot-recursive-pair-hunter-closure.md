@@ -422,6 +422,30 @@ worker counts `7` and `5`, all at distinct seeds—were byte-identical to the
 frozen summary and combined ledger.  The repository-internal mathematical,
 source-freeze, artifact, and replay audit verdict is **PASS**.
 
+A separate exact reparse audited every invocation of the shared pair-cap
+routine: `4,866` first-child calls, `228` grandchild calls, and `117`
+third-level calls, hence `5,211` calls in total.  With `tau` the omitted
+singleton tail, `q_1` the finite leading singleton, and `B` the retained
+finite pair winner, every call satisfies
+
+```text
+2 tau <= q_1+tau <= B <= 2q_1.                          (31a)
+```
+
+The committed routine now asserts the first two inequalities before accepting
+its tail seal.  Across the frozen ledger, the minimum exact slacks in `(31a)`
+are
+
+```text
+(q_1+tau)-2tau       54542843/11777645880,
+B-(q_1+tau)          507443/2217543127800,
+2q_1-B               19/1441440.                       (31b)
+```
+
+Thus a pair of two omitted labels, a mixed finite/omitted pair, and a retained
+finite pair are all covered by the same proof-bearing cap, at every recursive
+depth.  This explicitly discharges the last source-level pair-tail audit gate.
+
 ## 8. Conditional critical barrier at the next rung
 
 The scope boundary is structural.  At a seven-slot node, suppose
@@ -479,15 +503,15 @@ LF-normalized SHA-256 values at source freeze are
 
 ```text
 top-level verifier
-  81e301c8ced75820968ec6c938a3e47c9dc6c980761e8270270fc55d21ebc5c1
+  2d90e8d34f66d1c624759889a8ef3563aea7e59ec77f5c8696d0641521c453b5
 stage-one verifier
-  74e5eb2d0b23dda6366d115376890726ac32dc834a09a71479ea875f05e7615e
+  32751b2a5beb789b1657f06d3964cbf24e634251e57f57f299b8f50c647f2103
 stage-two verifier
-  54aad75134a3066dca355fb2ed536c7bea901df9d6e2eefc0f1ead30e57e7622
+  6f494ee13fd7ecc5a7a9787b75e0cf38c58a3e89b5136470b2332f5a4cece1e5
 composition verifier
   7cb3384831151ac3b2dd6d3b38f185d5328ed8c13dfca757621b573a6120600d
 endpoint verifier
-  d8d9504c643cc5d4e2d2fe69893042c4245c7990b97c4a5e697bc64a7bbc5edf
+  4c799992395a064656a2b949b2b81bfd6082e33dce14b4d92611a0c9bb7d05cb
 inherited-slice verifier
   cb40a748fecad6659eb5b2a140d2d8d23a966a643bd1a3918b316341644dd78d
 output

@@ -278,6 +278,10 @@ def exact_pair_cap(
         singleton_tail = mass / 7 + gamma / (horizon + 1)
         pair_tail = ranked[0][0] + singleton_tail
         if best >= pair_tail:
+            require(
+                2 * singleton_tail <= pair_tail <= best,
+                "pair tail failed the two-omitted-endpoint seal",
+            )
             break
         delta = best - ranked[0][0] - mass / 7
         require(

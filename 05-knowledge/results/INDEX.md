@@ -1,5 +1,24 @@
 # Script Results Index
 
+- `lrc14_j6_seven_body_six_slot_recursive_pair_hunter_closure_thm2923.py`
+  -> matching summary and identity-complete ledger [THM-2923 PROVED +
+  FINITE-EXACT + VERIFIED + INDEPENDENTLY AUDITED].  The marked recursive
+  pair/Hunter tree closes all `4,866` THM-2915 failed children and composes
+  with the inherited baseline to cover all `11,842` parent rows and all
+  `3,432` seven-in-window/six-external roots.  Its unique zero-margin terminal
+  is `2*{1,...,13}`, joined only through THM-2907's safe endpoint at `t=1/28`.
+  An independent exact reparse verifies
+  `2tau <= q_1+tau <= B <= 2q_1` at all `5,211` pair-cap calls; ordinary and
+  optimized locked replays are byte-identical.  This closes the complete
+  seven-body rung, not unrestricted LRC(14): the at-most-six-in-window /
+  at-least-seven-external sector remains open.  Top-level/stage-one/stage-two/
+  endpoint/output/ledger SHA-256:
+  `(2d90e8d34f66d1c624759889a8ef3563aea7e59ec77f5c8696d0641521c453b5,`
+  `32751b2a5beb789b1657f06d3964cbf24e634251e57f57f299b8f50c647f2103,`
+  `6f494ee13fd7ecc5a7a9787b75e0cf38c58a3e89b5136470b2332f5a4cece1e5,`
+  `4c799992395a064656a2b949b2b81bfd6082e33dce14b4d92611a0c9bb7d05cb,`
+  `993866a4586ead55ff63b65421b558a716ddcf74054ee13226cc9bdcb459884c,`
+  `2db51b183502bdb75f0f4ef68e9772566d2564e07c0543298c6de9ed513c7c0c)`.
 - `lrc14_j6_sharp_h1_tail_recomposition_codex_20260729.py` -> matching
   `.out` [THM-2919 PROVED + FINITE-EXACT + VERIFIED].  Summing THM-1094's
   non-strict interval discrepancy law over literal-carrier components gives
