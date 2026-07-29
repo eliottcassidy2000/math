@@ -74,11 +74,17 @@ sha256 6385e0a888b3574c0f95ed816504c5d596e6624332afaac54549c4a55f7f1956) gives:
 * every side of order >= 24 with any row-sum-valid classes is FULLY
   PSD-excluded (e.g. |H| = 54: min max-PSD 986.8 > 668);
 * several order-18 sides are also fully excluded (min max-PSD 693.3);
-* exactly **12,048** invariant candidates remain PSD-admissible (order-18
-  and order-27 sides; best max-PSD 512.8).
+* **12,048** invariant sequences remain PSD-admissible, forming **1,536
+  distinct PAF classes** (a second, slower per-class scan deduplicating by
+  PAF vector gives the class count; the two scans agree on every min
+  max-PSD, e.g. 512.8 on the 25-orbit order-18 side — class table in
+  `05-knowledge/results/legendre333_onesided_psd_classes_macmini_S171.out`).
+  Each PAF class poses ONE prescribed-PAF problem for the partner sequence,
+  so 1,536 is the count of genuinely distinct remaining attack targets
+  (best class: max-PSD 512.8, order-18, 25 orbits).
 
 So the one-sided route is NOT closed; it is reduced to 12,048 explicit
-candidates, each posing a prescribed-PAF problem for the partner sequence
+candidate classes, each posing a prescribed-PAF problem for the partner sequence
 (`PAF_B = -2 - PAF_A`), best attacked per-candidate by SAT/pseudo-Boolean
 with XOR-cardinality encodings, flattest PSD first.  This is the sharpest
 remaining structured route to Hadamard order 668 identified this session.
