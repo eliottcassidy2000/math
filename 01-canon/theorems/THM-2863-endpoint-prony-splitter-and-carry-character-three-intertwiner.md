@@ -2,13 +2,13 @@
 id: THM-2863
 title: "Endpoint Prony splitter and carry character-three intertwiner"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT.  The frequency-cleared numerators of
-  four consecutive 91-unit endpoint multiplier probes form a nonsingular
-  two-node Prony system.  Its fixed and relative-character-three summands
-  split exactly, and the latter has a canonical normalized equivariant
-  match with the character-three projection of the THM-2851 carry
-  derivative.  Simultaneous full-current survival, signed physical
-  projection, and E3 transport remain open.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The
+  frequency-cleared numerators of four consecutive 91-unit endpoint
+  multiplier probes form a nonsingular two-node Prony system.  Its fixed
+  and relative-character-three summands split exactly, and the latter has
+  a canonical normalized equivariant match with the character-three
+  projection of the THM-2851 carry derivative.  Simultaneous full-current
+  survival, signed physical projection, and E3 transport remain open.
 source: root/lrc-endpoint-prony-character-three-2026-07-28
 depends_on:
   - THM-2847-q3-q11-transverse-endpoint-edge-and-e3-realization-horn
@@ -29,7 +29,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2863 -- endpoint Prony splitter and carry character-three intertwiner
 
-**PROVED CANDIDATE + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The apparent two-endpoint scalar in THM-2847 can be split without choosing
 one of the thirteen carry sections.  Four consecutive nonzero
@@ -252,7 +252,12 @@ script  3d09e2f06cd17c38a34b00fa133f67963287173e5a69092e4e2d2b190f4459b9
 output  2cf1902b19fd6ae9c6780521da0e431c8c7e1887235ea94ef4a8a5ca7cf9c7e4
 ```
 
-Independent hostile audit is pending.
+An independent immutable hostile audit replayed the final blobs and
+separately rederived the cleared exponent progression, all-index
+nonvanishing, every shifted Hankel minor, both node orders and split signs,
+the relative Galois decomposition, Fourier normalization, and the
+normalized intertwiner `(15)`.  It accepted the endpoint-numerator-only
+scope and found no defect.
 
 ## 6. Connection contract
 

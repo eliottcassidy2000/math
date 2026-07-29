@@ -88,8 +88,10 @@ first factorial exit `m<13` into `m+1` carry channels (THM-2858 gives six),
 but the proved carry is `K0`-linear, not the required semilinear clutch.
 THM-2861 gives a common-phase-free Hermitian edge with support `{0,3,10}`
 and thirteen distinct carry labels, conditionally on an adjacent-section
-co-support pair.  Lawful positive action, response basepoint, and E3
-transport remain; ledger `165`.
+co-support pair.  THM-2863 proves every cleared endpoint-multiplier
+numerator is nonzero and every Prony window splits its fixed/character-3
+lines, with a normalized match to the carry derivative.  The full current,
+signed projector, and E3 transport remain; ledger `165`.
 
 ### Independent routes that remain live
 
