@@ -1,5 +1,24 @@
 # Script Results Index
 
+- `lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.py`, together
+  with the scalar-wall and projected-suffix verifiers, -> matching `.out`
+  files [THM-2941 PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY
+  AUDITED].  On all `3,003` literal six-body carriers the seven-slot scalar
+  Hunter crossing is exactly `h/7`; a pointwise zero-excess cover is
+  impossible and its hypothetical Gram is `(h/49)(7I-J)`.  Aligned
+  safe-surplus plus the lossless projected residual gives rigorous first-drift
+  caps `2,142/380/182/66` for `k=2/3/4/5` alignments and empties `k=6`.
+  For `k=5`, exact prefix incidence kills all `42,912` high-excess and
+  `194,073` subcritical drift pairs, minimum margin `1/378105`; THM-2928
+  independently closes the same face by divisor/address masks.  Thus
+  `k>=5` is empty, `k=2,3,4` is finite but not yet censused, and the
+  zero/one-aligned sector, six-body rung, and LRC(14) remain open.
+  Consolidated source/output SHA-256:
+  `(76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662,`
+  `9aecfd75893a537278dcc4e50af7bd45fa2b7925d017748781a18c7163bb716d)`;
+  projected-suffix source/output:
+  `(a003d287f618eb301edf6974d0b67dc128c4f380a169e7809ed5b5754e8b8303,`
+  `61e16aab8a368881c574047e576645e6b41837dc9f804f7a78d37230d843612b)`.
 - `lrc14_j6_seven_body_six_slot_recursive_pair_hunter_closure_thm2923.py`
   -> matching summary and identity-complete ledger [THM-2923 PROVED +
   FINITE-EXACT + VERIFIED + INDEPENDENTLY AUDITED].  The marked recursive

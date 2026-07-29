@@ -50,6 +50,7 @@ related:
   - THM-1132-sharp-measure-horn-constant-dissolves-r6-wall
   - THM-1176-seven-wall-slow-gap-harmonic-crowding
   - THM-2893-complement-cap-finite-core-flag-lemma
+  - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
   - HYP-7678
   - HYP-7870
 script: 04-computation/lrc14_critical_one_drift_clock_thm2928.py
@@ -69,6 +70,12 @@ affine_profile_output: 05-knowledge/results/lrc14_j7_affine_profile_min_frequenc
 ---
 
 # THM-2928 -- critical seven-comb grid tensorization and drift tariff
+
+> **INDEPENDENT SECOND PROOF.**  THM-2941 closes the same literal
+> five-aligned/two-drift face by the lossless projected residual
+> `P_(E,Z)=phi_L(C_E minus union_(z in Z)D_z)`.  That drift-first projection
+> is dual to the aligned-safe/body-address projection below and gives a
+> separate exact reconstruction.
 
 ## 1. Grid carrier and the inherited drift chart
 

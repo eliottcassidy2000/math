@@ -1,0 +1,21 @@
+LRC14 THM-2941 five-aligned/two-drift projected closure
+source_sha256=5d25a955fe184d6c1a3d8b632b4bbf901dc996ee46ad67c5748836fcc7134404
+support_sha256=5482e10635ecf72840bc0c083360fd7ddad65c2885d743820061bcba58cd5609
+universe=(six_body_roots=3003,body_labels=1..14,z1,z2>=15,strictly_increasing,nonmultiples_of_L)
+eta5=88/1365;u5=478/1365;aligned_union_cap=887/1365;projected_wall_ratio=2275/18627(=325/2661)
+inclusive_first_rows=626787;inclusive_boundary_rows=5;projected_suffix_rows=4702
+inclusive_boundary_bank=(((1, 2, 4, 6, 12, 14), 182), ((1, 3, 4, 9, 11, 12), 200), ((1, 4, 5, 6, 12, 14), 210), ((2, 3, 4, 6, 8, 14), 182), ((4, 5, 6, 7, 12, 14), 189))
+branch=high_excess;first_rows=4084;first_apex_closed=3827;first_apex_rows=257;first_apex_roots=183;typed_counts={(False, False): 0, (False, True): 0, (True, False): 257, (True, True): 0}
+branch=high_excess;candidate_pairs=42912;pair_roots=183;pair_(E,z1)_rows=257;killed=42912;survivors=0;maximum_cell_prefix=22
+branch=high_excess;minimum_certificate=(Fraction(1, 378105), ((1, 2, 3, 5, 9, 10), 24, 277, 1260, Fraction(136, 315), 14, Fraction(43, 126), 26, 391, 154, Fraction(180, 277), 1))
+branch=high_excess;first_apex_digest=ac39be269cbd8695fb1cdefdd5d2bb8ce5512f636fd93626795c1aba949c3362
+branch=high_excess;pair_bank_digest=b488499d27625ccab7bf32d9fedfb50b091bf08db6dfdfc4b92ec98d66bef7ae
+branch=high_excess;survivor_digest=3f001616fc494fca31891589993823d9aab957b9a5b73b96159cc899361d27bd
+branch=subcritical;analytic_first_rows=2290;projected_suffix_rows=618;suffix_roots=435;suffix_mode_counts={(False, False): 0, (False, True): 56, (True, False): 452, (True, True): 110}
+branch=subcritical;finite_z2_candidates=7218110;exact_admissible_pairs=194073;pair_roots=407;pair_(E,z1)_rows=590;killed=194073;survivors=0;maximum_cell_prefix=871
+branch=subcritical;minimum_certificate=(Fraction(1, 378105), ((2, 3, 4, 5, 6, 9), 22, 554, 2520, Fraction(13, 30), 16, Fraction(191, 6930), Fraction(13, 34650), 308, 5221, Fraction(4, 9695), Fraction(180, 277), 1))
+branch=subcritical;pair_bank_digest=4827dabbc24f07bdf9e628e6b706fe66e7ed451c893cece993499a4cf13394c0
+branch=subcritical;survivor_digest=340938a1ca495881500b8a704aeb88c2e4fa5b976eb031fb675f23c3b028c33a
+combined_candidate_pairs=236985;combined_killed=236985;combined_survivors=0
+combined_survivor_digest=e728c27d7cec406eb3c61923d47e74d11232e2e3f4b88a268ec20d512f9a53ae
+all_exact_controls=PASS

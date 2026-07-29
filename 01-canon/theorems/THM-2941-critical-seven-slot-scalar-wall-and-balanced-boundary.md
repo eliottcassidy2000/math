@@ -1,16 +1,18 @@
 ---
 id: THM-2941
-title: "Critical seven-slot scalar wall, empty balanced boundary, and the A6 Gram/address state"
+title: "Critical seven-slot scalar wall, projected aligned-sector closure, and the A6 boundary"
 status: >
-  PROOF CANDIDATE / SOURCE AND CANON AUDIT PENDING.  On every one of the
-  3,003 literal six-body carriers, the seven-slot pair-Hunter scalar has
-  first crossing exactly h/7: q7>h/7 and B2>2h/7 uniformly, so it supplies
-  no discrepancy-finite first-centre core.  Nevertheless a literal
-  pointwise seven-tail cover cannot have zero multiplicity excess.  The
-  longest carrier component would have to belong to one open tooth, forcing
-  an external owner w<=6 although w>=15.  The hypothetical balanced boundary
-  is the rank-six regular-simplex Gram (h/49)(7I-J).  Arbitrary
-  positive-excess covers and LRC(14) remain open.
+  PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY AUDITED.  On all 3,003
+  literal six-body carriers the seven-slot pair-Hunter scalar first crosses
+  exactly at h/7, while a literal zero-excess cover is impossible and its
+  hypothetical Gram is (h/49)(7I-J).  Aligned safe surplus bounds the first
+  drift absolutely for k>=2.  The lossless projected residual closes the
+  five-aligned/two-drift face independently of THM-2928, and exact suffix
+  filters make k=2,3,4 uniformly finite-reducible; k=6,7 are already empty.
+  The zero/one-aligned sector, the remaining finite censuses, the full
+  six-body/seven-tail rung, and LRC(14) remain open.  Verification is
+  internal exact computation and proof audit; there is no Lean or external
+  peer-review claim.
 source: root-lrc14-j7-critical-wall-2026-07-29
 depends_on:
   - THM-735-bonferroni-simultaneous-multi-peel-defeats-the-clustered-non-isolated-wall
@@ -34,11 +36,13 @@ verification:
   - 05-knowledge/results/lrc14_j7_top7_overlap_graph_scout_thm2941.out
   - 04-computation/lrc14_j7_aligned_projected_arc_suffix_thm2941.py
   - 05-knowledge/results/lrc14_j7_aligned_projected_arc_suffix_thm2941.out
+  - 04-computation/lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.out
 ---
 
-# THM-2941 -- critical seven-slot scalar wall and empty balanced boundary
+# THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
 
-**PROOF CANDIDATE / SOURCE AND CANON AUDIT PENDING.**
+**PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY AUDITED.**
 
 This theorem identifies what the successful THM-2923 recursion loses one rung
 earlier.  The complete scalar state `(q_1,...,q_7,B_2)` stops at its exact
@@ -310,6 +314,13 @@ is relatively open.  By `(18)` it has measure zero, so it is empty.  The
 seven relatively open owner sets are therefore a disjoint pointwise cover of
 the connected set `I`.  One owner must contain all of `I`.
 
+The word **pointwise** is essential.  An almost-everywhere partition of
+strict-open teeth may have an uncovered exit/entry seam, but an LRC
+counterexample may not: such a seam belongs to neither open tooth and is a
+literal safe point unless a further tooth covers it.  Thus the zero-excess
+case has no endpoint handoff or gcd-capacity switching graph.  Its connected
+carrier components are chamber-locked to single owners.
+
 If `I` has length `ell` and lies in `D_w`, connectedness puts it inside one
 open tooth of length `1/(7w)`.  Since `I` is closed,
 
@@ -368,11 +379,13 @@ Delta>=kappa,             max_i delta_i>=kappa/7,
 w_*<7gamma/kappa.                                      (22b)
 ```
 
-Thus every counterexample packet carries a positive owner-transition width
-and a correspondingly bounded excess owner.  This is still not a uniform
-bound: `kappa` depends on the packet and may tend to zero along an escaping
-sequence.  The only possible escape is therefore an endpoint-transition
-collapse, rather than an exact disjoint partition.
+Thus every counterexample packet carries a positive owner-overlap width and a
+correspondingly bounded excess owner.  This is still not a uniform bound:
+`kappa` depends on the packet and may tend to zero along an escaping sequence.
+That limiting degeneration is an overlap-width collapse, not a lawful
+strict-open handoff.  At every actual packet an endpoint seam must remain
+protected by another open tooth; an unprotected limiting seam is itself a
+safe point.
 
 The strictness in `(22)` is packetwise, not yet uniform.  A sequence of
 putative covers could still have `Delta` tend to zero while its labels
@@ -583,17 +596,20 @@ There is also a finite clause representation.  Let `J_E` be the body-safe
 E_z(j)={u in [0,1]: ||z(j+u)/L||<1/14}.
 ```
 
-De Morgan's law gives the exact interval-mass identity
+De Morgan's law gives, modulo finitely many endpoints and therefore exactly
+in Lebesgue mass, the interval identity
 
 ```text
 T minus P_(E,Z)
  = intersection_(j in J_E) union_(z in Z) E_z(j).        (25i)
 ```
 
-Endpoint conventions are immaterial here.  Any isolated body-safe grid
-point omitted by the positive-cell ledger projects to zero, which belongs
-to every aligned `D_a`; hence the pointwise equivalence `(25g)` is
-unchanged.
+Closures may be used when evaluating this displayed Lebesgue mass, but the
+pointwise predicate always retains the open `D_z`: every drift-tooth seam is
+uncovered by that drift and therefore remains in `S_(E,Z)` and in its
+projection.  Any isolated body-safe grid point omitted by the positive-cell
+ledger projects to zero, which belongs to every aligned `D_a`; hence the
+pointwise equivalence `(25g)` is unchanged.
 
 Thus projection changes the drift problem into a finite
 cell-by-drift intersection-of-unions with rational interval literals.  The
@@ -678,7 +694,9 @@ mu(P_(E,{z_1,z_2}))>=887/1365=1-u_5,                    (25k)
 
 contradicting the strict containment inequality `(25h)`.
 
-For each of the other `618` suffix rows, put
+On the subcritical side, `2,290` first rows have a nonempty finite analytic
+interval for `z_2`; exactly `618` also survive the projected-suffix predicate.
+For such a row put
 
 ```text
 g=88h/1365-delta(z_1)>0.
@@ -690,9 +708,10 @@ The component discrepancy bound forces
 z_2<=floor((6r_E/49)/g).
 ```
 
-There are `7,218,110` row-labelled `z_2` candidates across these finite
-intervals; exact singleton integration leaves `194,073` admissible drift
-pairs that pay the gap `g`.  Every one again satisfies `(25k)`.  The
+Across the `2,290` analytic rows there are `7,218,110` row-labelled `z_2`
+candidates.  Exact singleton integration together with the suffix predicate
+leaves `194,073` admissible drift pairs, supported on `590` `(E,z_1)` rows
+inside the `618`-row suffix bank.  Every one again satisfies `(25k)`.  The
 smallest certified prefix margin over both banks is `1/378105`; equality at
 the five-comb union cap would already be impossible because `P` is compact
 and the aligned union is open.
@@ -713,6 +732,18 @@ safe set and asks whether two drift masks cover every selected body address;
 their existential projected residual.  They are dual cell-address
 projections, and both succeed precisely because they retain the address
 coordinate erased by singleton and Gram statistics.
+
+More explicitly, let `I(j,u)=1` when the two drifts cover phase `u` in body
+cell `j`.  THM-2928 fixes `u` in the aligned safe set and obstructs a full
+column `I(j,u)=1` for every `j`.  Here
+
+```text
+P={u:there exists j with I(j,u)=0}
+```
+
+is the set of non-full columns, and its measure is too large for the aligned
+union.  The two proofs are arithmetic column obstruction versus measure of
+the De Morgan-dual column set on the same body-by-phase incidence object.
 
 The caps in `(25e)` give a uniform **finite reduction** without bounding
 the aligned multiplier set.  Delete the bounded `D_(z_1)`.  Six tail labels
@@ -765,9 +796,13 @@ their signed separation is exactly
 ((14k+sigma)v-(14l+tau)u)/(14uv).                        (27)
 ```
 
-Thus vanishing transition widths are not anonymous analytic errors: they
-carry an integer endpoint relation.  Equations `(16)`, `(25)`, and `(27)`
-define the multi-slope Gram/address transition ledger to be classified.
+Thus vanishing overlap widths are not anonymous analytic errors: they carry
+an integer endpoint relation.  Because every `D_w` is open, an exit/entry
+coincidence is an uncovered seam, not a two-owner handoff.  Equation `(27)`
+records collision address only; it is not a persistence or capacity law.
+Any event mesh must use the reduced winding `w/gcd(w,L)`, not raw `w`.
+Equations `(16)`, `(25)`, and `(27)` define the multi-slope Gram/address
+transition ledger to be classified.
 
 A tournament on the seven labels is not an equivalent quotient.  It can
 orient a chosen owner precedence, but it loses symmetric overlap magnitudes,
@@ -787,6 +822,13 @@ The exact scalar census and component bound have two independent
 implementations.  The aligned suffix census and five-aligned closure have
 independent exact reconstructions and hostile proof audits.  The top-seven
 overlap graph is a scoped structural scout.
+
+The consolidated five-aligned closure verifier has LF-normalized
+source/output SHA-256
+`76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662`
+and
+`9aecfd75893a537278dcc4e50af7bd45fa2b7925d017748781a18c7163bb716d`;
+ordinary and optimized replays are byte-identical.
 
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,

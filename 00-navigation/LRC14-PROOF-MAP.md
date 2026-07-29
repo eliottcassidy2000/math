@@ -6,9 +6,9 @@
 
 ## 2026-07-29 current control panel
 
-**Status: OPEN.** THM-2923 closes `3,432` seven-in-window roots; direct frontier: at most six.
-Uniform `q<=25` is false.  Under `q_7>=h/7, B>=2h/7`, Hunter crosses at `h/7`.
-Not unrestricted; needs a new sidecar.
+**Status: OPEN.** THM-2923 makes the direct frontier at most six.  On all `3,003` six-body carriers THM-2941 gives the exact scalar wall `h/7` and empty zero-excess boundary; THM-2928/2941 empty `k>=5` aligned tails, caps `2,142/380/182` make `k=2,3,4` finite, and `k<=1` stays non-finite.  Those banks, the rung, and LRC(14) remain open; uniform `q<=25` is false.
+**Missing coordinate:** for drifts `Z`, `P=phi_L(C_E minus union_z D_z)`; completion by aligned `A` is exactly `P subset union_(a in A)D_a`.
+Strict-open seams remain in compact `P`; never replace this pointwise fact by an a.e. handoff.
 
 ### The present reduction graph
 
