@@ -7,8 +7,9 @@ status: >
   14*gcd(u,v)|(u+v) is exactly equality of the 2- and 7-adic
   valuations together with opposition of the residual units modulo
   14.  Its graph is therefore a disjoint union of complete bipartite
-  blocks.  A nonzero transitively C_7-equivariant supported matrix
-  would contain an odd 7-cycle and is impossible.  This arithmetic
+  blocks.  A nonzero transitively C_7-equivariant matrix whose entire
+  support lies in that irreflexive link relation would contain an odd
+  7-cycle and is impossible.  This arithmetic
   support theorem does not govern a strict-open cover: an a.e.
   endpoint switch leaves a safe seam, while a pointwise cover of
   multiplicity one a.e. has no switches and is component-monochromatic.
@@ -17,7 +18,7 @@ source: root-lrc-endpoint-link-bipartite-2026-07-29
 audit: Pending independent hostile audit.
 depends_on: []
 related:
-  - THM-767-r7-collision-network-kcl-and-scale-free-witness
+  - THM-767-deck-kirchhoff-rigidity
   - THM-2953-cyclic-charged-corank-parity-and-reynolds-averaging-boundary
   - MISTAKE-146
 script: 04-computation/lrc14_opposite_endpoint_link_blocks_thm2954.py
@@ -42,8 +43,21 @@ when
 14 gcd(u,v) divides u+v.                               (1)
 ```
 
-This is the arithmetic coincidence law retained by THM-767 after the
-open-seam correction.  Write
+Indeed, equality of the endpoints
+
+```text
+(14k+1)/(14u)=(14l-1)/(14v)
+```
+
+is equivalent to
+
+```text
+u+v=14(ul-vk).
+```
+
+The linear Diophantine equation in `k,l` is soluble exactly when `(1)`
+holds.  This is the arithmetic coincidence law retained by THM-767 after
+the open-seam correction.  Write
 
 ```text
 u=2^alpha 7^beta U,       v=2^gamma 7^delta V,         (2)
@@ -90,8 +104,8 @@ There are no self-links and no odd cycles.
 
 Let seven labeled speeds be indexed by `F_7`.  A support relation is
 transitively `C_7`-equivariant if membership of `(i,j)` depends only on
-`j-i`.  Suppose every supported off-diagonal pair is an arithmetic
-link from `(1)`.
+`j-i`.  Let `B` be a matrix with zero diagonal whose entire support is
+contained in the arithmetic link relation `(1)`.
 
 If displacement `d!=0` occurs, equivariance supplies
 
@@ -159,9 +173,10 @@ pointwise strict-open cover + multiplicity one a.e.
 ```
 
 There are no internal endpoint switches at all.  If seven labels also
-have equal mass `mu(R)/7`, the remaining condition is exactly a finite
-assignment of whole component lengths into seven equal bins.  Link
-blocks neither strengthen nor weaken that allocation.
+have equal mass `mu(R)/7`, the remaining condition is exactly a possibly
+countable assignment of whole component lengths into seven equal bins.
+In the intended finite-comb carrier it is finite.  Link blocks neither
+strengthen nor weaken that allocation.
 
 This is the repaired critical-wall split:
 
