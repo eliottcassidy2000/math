@@ -114,6 +114,7 @@ EXPECTED_ADDITIVE_ROOT_DIGEST: str | None = (
 EXPECTED_LEDGER_SHA256: str | None = (
     "39f3a9fb8ec6447baf96512bee3ee174e2390639ab3bbf0a6a36dcb5cdf0274e"
 )
+RAW_PATH_READ_BYTES = Path.read_bytes
 
 
 def require(condition: bool, message: str) -> None:
@@ -124,12 +125,23 @@ def require(condition: bool, message: str) -> None:
 def file_sha256(path: Path) -> str:
     """Hash repository text independently of LF/CRLF checkout policy."""
 
-    payload = path.read_bytes()
+    payload = RAW_PATH_READ_BYTES(path)
     require(
         b"\r" not in payload.replace(b"\r\n", b""),
         f"{path.name}: unexpected lone carriage return",
     )
     return hashlib.sha256(payload.replace(b"\r\n", b"\n")).hexdigest()
+
+
+def lf_read_bytes(path: Path) -> bytes:
+    """Read repository text on the canonical LF byte basis."""
+
+    payload = RAW_PATH_READ_BYTES(path)
+    require(
+        b"\r" not in payload.replace(b"\r\n", b""),
+        f"{path.name}: unexpected lone carriage return",
+    )
+    return payload.replace(b"\r\n", b"\n")
 
 
 def unique_output_text(path: Path, prefix: str) -> str:
@@ -155,7 +167,17 @@ def load_parent():
     spec = importlib.util.spec_from_file_location("thm2904_child_top4", PARENT_PATH)
     require(spec is not None and spec.loader is not None, "cannot load THM2904")
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
+    # THM-2904 and its imported engines predate checkout-independent text
+    # hashes.  Scope canonical-LF reads to their single-threaded import
+    # phase, then replace THM-2904's runtime hash helper with the same
+    # explicit normalized function used here.
+    original_read_bytes = Path.read_bytes
+    Path.read_bytes = lf_read_bytes
+    try:
+        spec.loader.exec_module(module)
+    finally:
+        Path.read_bytes = original_read_bytes
+    module.file_sha256 = file_sha256
     return module
 
 

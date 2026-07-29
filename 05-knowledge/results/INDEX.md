@@ -28,7 +28,7 @@
   child-ledger digest
   `39f3a9fb8ec6447baf96512bee3ee174e2390639ab3bbf0a6a36dcb5cdf0274e`.
   Script/output SHA-256:
-  `(4859162ec9d03f7f711de99e97122c916e708adfdb8b86581e9e9534c735fa9f,454d87c8beeb81405b031cce4b40bdda0d385cfcd9c48e6fcf4eb810cfc00c5a)`.
+  `(214d28b92f10eb66fb096a7d93ecd9b405599ccd0391fbd2b4864c48a86e4905,454d87c8beeb81405b031cce4b40bdda0d385cfcd9c48e6fcf4eb810cfc00c5a)`.
 - `lrc14_j6_paircap_exception_h4_link_child_census_codex_20260729.py`
   -> summary and full child-ledger `.out` files [THM-2907 PROVED +
   FINITE-EXACT + VERIFIED].  On all `18,290` actual H4 pair flags of
