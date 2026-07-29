@@ -1,0 +1,15 @@
+THM-2957 FIRST-GAP WIDTH 15-20 MODULAR DEPTH LADDER
+thm2949_dependency_sha256=9a1c7068e079e232dc97fd6eb925621aa74b3d636380a85995f8e0db8b30aa54
+supports=(0,1,2,M),15<=M<=20;fixed_rank35_cofactor=YES
+M=15;degree=790;B_degree=313;core_degree=378;root_free_prime=83;core_digest=b6fea710768bfa6be0c7c4c529c1698f1a0ddff0dbf2e95e568272a020823423;gate_digest=5c3f2d2af0bf23808b9a7b0fc023a38eb3d18d57c49e86e58f6c5bdd074dc26e;sign_runs=0..28:+,29..51:-,52..225:+;GN_tail_base=52;GN_tail_digest=34572adda2c8d2e3b7c5bce8382f342420e9aeeff36ec86716a2b5d216d20077;fourM_status=PASS;outside_determinants=3;integer_nonzero=YES
+M=16;degree=845;B_degree=336;core_degree=403;root_free_prime=71;core_digest=505e5c935a11ec2beff10d22d16768a0bfe1878b37c50ac19f8ada852b32950b;gate_digest=a1f03010ddecd4296d9ef80ccc6cb9503c3d4a7dfc33fb153dc23cd5ce9a5208;sign_runs=0..33:+,34..62:-,63..256:+;GN_tail_base=63;GN_tail_digest=7ef43c0fa600d884593901ac657da288dd56024cb7be44ae495f6caa64cdc66f;fourM_status=PASS;outside_determinants=3;integer_nonzero=YES
+M=17;degree=900;B_degree=356;core_degree=431;root_free_prime=107;core_digest=447b5b527c3b230aebb088a9733ff0480e1c8822f3ffe32deecbcaec463669bc;gate_digest=bce5b1c385b75d3dc865c89672f64a120ca926d3a5bb4885f2f49d37b3f75242;sign_runs=0..39:+,40..74:-,75..289:+;GN_tail_base=75;GN_tail_digest=d9d800cf1be35985e0b78512bf3692ccfeba9acc917a2e9132675f113b8fcebd;fourM_status=FAIL;outside_determinants=3;integer_nonzero=YES
+M=18;degree=955;B_degree=382;core_degree=453;root_free_prime=73;core_digest=75a1081c87b3322fa3f81cd6bd35520cf963223e141a1dc84ca020395f801148;gate_digest=7ed43f14e61981c1c0cec8fd100ffe811639fc09c6e2247d65840d61429007b2;sign_runs=0..46:+,47..87:-,88..324:+;GN_tail_base=88;GN_tail_digest=fbfdf38e45aa4a48783fbd65f6d91eb45d657ed4d38679ef9d7145906f373957;fourM_status=FAIL;outside_determinants=3;integer_nonzero=YES
+M=19;degree=1010;B_degree=401;core_degree=482;root_free_prime=79;core_digest=86c1a256e878afa7b9890818430b77d87134bcdb68654699cb0bb385fc5a6acf;gate_digest=0738bb31e61f4d2b2d77bc91a2c14599beb3f64ecfc1dfdb28cdc03bf515f59c;sign_runs=0..53:+,54..101:-,102..361:+;GN_tail_base=102;GN_tail_digest=7400e0a41e69c1151bd02e2c22068bb55e73ca885f07cad612ac137cbd98f8a4;fourM_status=FAIL;outside_determinants=3;integer_nonzero=YES
+M=20;degree=1065;B_degree=425;core_degree=506;root_free_prime=97;core_digest=a0176d5c76c67c931de4217da581d1599e29d573514917f416638c1d2497355a;gate_digest=81743f0f0a65a8c3d3b92e313b8ee73b3376cd656b9c9943d93be34f07181978;sign_runs=0..61:+,62..116:-,117..400:+;GN_tail_base=117;GN_tail_digest=894fb2fd76ecc2053f6eb6cebc8742379dcd15348b80af2488c1062bf7ec784c;fourM_status=FAIL;outside_determinants=3;integer_nonzero=YES
+record_digest=cc826193b445e6ff27ee990d06287df417d6fe8242fd7116d86f8e478d842017
+first_4M_failure=M17;sharp_hostile=M20
+no_monotone_prime_law_claimed=YES
+consequence=first-window_SFC4_on_six_first-gap_supports
+scope=integer_depths;not_complete_width15-20;not_arbitrary_width;not_real-ray positivity;not NC2 or GMC2
+all_exact_checks=PASS
