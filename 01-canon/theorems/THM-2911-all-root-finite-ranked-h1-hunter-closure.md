@@ -335,7 +335,9 @@ All 32 shards were freshly replayed under ordinary Python with their
 recorded worker schedule and were byte-identical to the locked optimized
 artifacts.  The final verifier was run under both ordinary and optimized
 Python with byte-identical output.  All guards are explicit; no
-theorem-bearing check disappears under `python3 -O`.
+theorem-bearing check disappears under `python3 -O`.  Repository-text
+hashes normalize CRLF to LF and reject lone carriage returns, including
+the transitive Hunter/G5 audit imports.
 
 Canonical directory layout:
 

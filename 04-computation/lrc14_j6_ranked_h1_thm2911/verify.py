@@ -80,7 +80,7 @@ G5_SOURCE_SHA256 = (
     "794111b992e912ec8471c8334a867d7b2db1d248f4b08f744f52faf7f50b86c3"
 )
 PIVOT_SOURCE_SHA256 = (
-    "99f1938f264d90c2b34ec3c64566605cc8fd12520424ad2f5cd0957342202ba0"
+    "644104b0de90654466e75c6531109736b0445aadb357eee2413e8787ac3a53fa"
 )
 PIVOT_OUTPUT_SHA256 = (
     "0933c67a108b6d588e36737fb2b17b325ca36146976cfb035bebe036a6234036"
@@ -181,6 +181,7 @@ EXPECTED_HGP_BRANCH_UNION_DIGEST = (
 
 S2 = F(99, 70)
 MAX_CUTOFF = 15_000
+RAW_PATH_READ_BYTES = Path.read_bytes
 
 
 def require(condition: bool, message: str) -> None:
@@ -189,7 +190,25 @@ def require(condition: bool, message: str) -> None:
 
 
 def file_sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    """Hash repository text independently of LF/CRLF checkout policy."""
+
+    payload = RAW_PATH_READ_BYTES(path)
+    require(
+        b"\r" not in payload.replace(b"\r\n", b""),
+        f"{path.name}: unexpected lone carriage return",
+    )
+    return hashlib.sha256(payload.replace(b"\r\n", b"\n")).hexdigest()
+
+
+def lf_read_bytes(path: Path) -> bytes:
+    """Read repository text on the canonical LF byte basis."""
+
+    payload = RAW_PATH_READ_BYTES(path)
+    require(
+        b"\r" not in payload.replace(b"\r\n", b""),
+        f"{path.name}: unexpected lone carriage return",
+    )
+    return payload.replace(b"\r\n", b"\n")
 
 
 def line_after(text: str, prefix: str) -> str:
@@ -248,7 +267,16 @@ def load_module(name: str, path: Path):
     spec = importlib.util.spec_from_file_location(name, path)
     require(spec is not None and spec.loader is not None, f"cannot load {path}")
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
+    # Nested Hunter/G5 audit modules predate checkout-independent hashes.
+    # Canonicalize their import-time reads, including transitive imports.
+    original_read_bytes = Path.read_bytes
+    Path.read_bytes = lf_read_bytes
+    try:
+        spec.loader.exec_module(module)
+    finally:
+        Path.read_bytes = original_read_bytes
+    if hasattr(module, "file_sha256"):
+        module.file_sha256 = file_sha256
     return module
 
 
@@ -378,7 +406,7 @@ def verify_shards() -> tuple[
 
     for index, expected_hash in enumerate(SHARD_HASHES):
         path = RESULTS / f"all_s{index:02d}_of32.out"
-        data = path.read_bytes()
+        data = lf_read_bytes(path)
         actual_hash = hashlib.sha256(data).hexdigest()
         require(actual_hash == expected_hash, f"shard {index} hash changed")
         text = data.decode()

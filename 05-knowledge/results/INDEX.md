@@ -13,7 +13,7 @@
   shard/source/output Hunter-target identity join and independently reparses
   the hash-pinned THM-2904 ledger.  Ordinary/optimized outputs are
   byte-identical.  Verifier/locked-output SHA-256:
-  `(48f279b90955592f34656eb45e6d6dfaf4f88618a157032e58fcbd7beb104aee,e5c58cc2eb325928c00839c2593450ea7cce8945b3835898ec83c6c5f42fac9b)`.
+  `(e0ac67539f7ff09376645a62beef0a9ac7d0766a2e749666f94d1fd4d6487b15,e5c58cc2eb325928c00839c2593450ea7cce8945b3835898ec83c6c5f42fac9b)`.
 - `lrc14_j6_one_h3_row_child_top4_census_codex_20260729.py` -> matching
   `.out` [THM-2912 PROVED + FINITE-EXACT + VERIFIED].  After reconstructing
   THM-2904/2907's full branch partition, exactly `210` of the `3,344`
@@ -28,7 +28,7 @@
   child-ledger digest
   `39f3a9fb8ec6447baf96512bee3ee174e2390639ab3bbf0a6a36dcb5cdf0274e`.
   Script/output SHA-256:
-  `(214d28b92f10eb66fb096a7d93ecd9b405599ccd0391fbd2b4864c48a86e4905,454d87c8beeb81405b031cce4b40bdda0d385cfcd9c48e6fcf4eb810cfc00c5a)`.
+  `(d2810560a7d002d7eeadecc6a50a7733c90585527295aa5e85e72775739b839b,454d87c8beeb81405b031cce4b40bdda0d385cfcd9c48e6fcf4eb810cfc00c5a)`.
 - `lrc14_j6_paircap_exception_h4_link_child_census_codex_20260729.py`
   -> summary and full child-ledger `.out` files [THM-2907 PROVED +
   FINITE-EXACT + VERIFIED].  On all `18,290` actual H4 pair flags of
@@ -68,7 +68,7 @@
   byte-identical; semantic digest
   `ec878244b922ba5f48633614a86a1f9706c1fbdd0ebd6c61f020291cfd737bab`.
   Script/output SHA-256:
-  `(99f1938f264d90c2b34ec3c64566605cc8fd12520424ad2f5cd0957342202ba0,0933c67a108b6d588e36737fb2b17b325ca36146976cfb035bebe036a6234036)`.
+  `(644104b0de90654466e75c6531109736b0445aadb357eee2413e8787ac3a53fa,0933c67a108b6d588e36737fb2b17b325ca36146976cfb035bebe036a6234036)`.
 - `lrc14_j6_all_hard_hunter_star_envelope_census_codex_20260729.py` ->
   matching `.out` [THM-2905 PROVED + FINITE-EXACT + VERIFIED].  Exact
   breakpoint evaluation of the Hunter-star envelope `G_5` closes `2,964`

@@ -197,6 +197,7 @@ EXPECTED_OPEN_EQUALITY_PIVOTS: tuple[tuple[object, ...], ...] | None = ()
 EXPECTED_LEDGER_SHA256: str | None = (
     "ec878244b922ba5f48633614a86a1f9706c1fbdd0ebd6c61f020291cfd737bab"
 )
+RAW_PATH_READ_BYTES = Path.read_bytes
 
 
 def require(condition: bool, message: str) -> None:
@@ -205,7 +206,25 @@ def require(condition: bool, message: str) -> None:
 
 
 def file_sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    """Hash repository text independently of LF/CRLF checkout policy."""
+
+    payload = RAW_PATH_READ_BYTES(path)
+    require(
+        b"\r" not in payload.replace(b"\r\n", b""),
+        f"{path.name}: unexpected lone carriage return",
+    )
+    return hashlib.sha256(payload.replace(b"\r\n", b"\n")).hexdigest()
+
+
+def lf_read_bytes(path: Path) -> bytes:
+    """Read repository text on the canonical LF byte basis."""
+
+    payload = RAW_PATH_READ_BYTES(path)
+    require(
+        b"\r" not in payload.replace(b"\r\n", b""),
+        f"{path.name}: unexpected lone carriage return",
+    )
+    return payload.replace(b"\r\n", b"\n")
 
 
 def unique_output_text(path: Path, prefix: str) -> str:
@@ -247,7 +266,17 @@ def load_module(name: str, path: Path):
     spec = importlib.util.spec_from_file_location(name, path)
     require(spec is not None and spec.loader is not None, f"cannot import {path}")
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
+    # The imported residual/vector engines predate checkout-independent
+    # text hashes.  Canonicalize their single-threaded import-time reads,
+    # then retain the same normalized helper for any runtime hash checks.
+    original_read_bytes = Path.read_bytes
+    Path.read_bytes = lf_read_bytes
+    try:
+        spec.loader.exec_module(module)
+    finally:
+        Path.read_bytes = original_read_bytes
+    if hasattr(module, "file_sha256"):
+        module.file_sha256 = file_sha256
     return module
 
 

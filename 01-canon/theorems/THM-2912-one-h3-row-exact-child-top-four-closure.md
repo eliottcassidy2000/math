@@ -228,9 +228,9 @@ census and endpoint output artifacts, and THM-2911's locked composition
 output.  It reconstructs all `11,842` parent rows, checks the complete
 filter/histogram controls `(2)`--`(3)`, and uses exact rational interval
 arithmetic throughout.  Repository-text dependency hashes explicitly
-normalize CRLF to LF and reject lone carriage returns; THM-2904's legacy
-import-time guards are scoped to the same canonical reader.  The child
-ledger semantic digest is
+normalize CRLF to LF and reject lone carriage returns; THM-2904 and its
+imported engines use the same canonical reader.  The child ledger semantic
+digest is
 
 ```text
 39f3a9fb8ec6447baf96512bee3ee174e2390639ab3bbf0a6a36dcb5cdf0274e.
@@ -240,7 +240,7 @@ Single-worker, eight-worker, and optimized eight-worker replays are
 byte-identical.  Final SHA-256 values are
 
 ```text
-source  214d28b92f10eb66fb096a7d93ecd9b405599ccd0391fbd2b4864c48a86e4905
+source  d2810560a7d002d7eeadecc6a50a7733c90585527295aa5e85e72775739b839b
 output  454d87c8beeb81405b031cce4b40bdda0d385cfcd9c48e6fcf4eb810cfc00c5a.
 ```
 
