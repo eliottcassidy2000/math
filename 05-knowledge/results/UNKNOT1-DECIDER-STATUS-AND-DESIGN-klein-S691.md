@@ -45,6 +45,33 @@ machine. (https://epoch.ai/frontiermath/open-problems/unknotting-number)
    in the input diagram — the classic completeness gap); d-invariant
    obstructions; SnapPy/Regina outsourcing where available.
 
+## Results (core landed, klein-S691 close-out)
+
+`04-computation/unknot1_decider.py` (899 lines, stdlib-only, ~0.12 s for
+suite + example):
+- Sanity 13/13: trefoil det 3, σ = −2 (Knot Atlas convention; mirror +2),
+  TRUE_CERTIFIED with explicit certificate (flip crossing 1, R2, R1 → 0
+  crossings); figure-8 det 5, σ = 0, TRUE_CERTIFIED; 7₄ det 15, |σ| = 2,
+  linking form misses ±2/15 ⟹ **Lickorish fires decisively:
+  FALSE_CERTIFIED** (the calibration suite passed, so the linking-form
+  test earns decision rights, not report-only).
+- The owner's 11-crossing example: **det 43, σ = −2, verdict UNKNOWN** —
+  all 11 in-diagram crossing changes screen out (flipped dets 3..59,
+  none 1), no obstruction fires (H₁ cyclic, form contains ±2, |σ| < 4).
+  det 43 ≠ 1 ⟹ NOT the Conway/Kinoshita–Terasaka knot (a first-recall
+  guess corrected by computation).
+- Brief-data corrections found by the build (hostile-control culture
+  working): the fig-8 PD in the brief was invalid (an arc thrice) —
+  rebuilt from the braid closure (σ₁σ₂⁻¹)²; the 7₄ PD was non-planar —
+  rebuilt as pretzel P(3,1,3), pinned by det 15.
+- Conventions: Goeritz + Gordon–Litherland, exact Fraction congruence
+  diagonalization, both checkerboard colorings cross-checked;
+  ETA_SIGN/TYPE_T0 calibrated on the trefoil.
+- Limitations (unchanged from the design): no Alexander route yet; TRUE
+  needs the unknotting crossing visible in the given diagram with
+  monotone R1/R2 finishing; no d-invariants; UNKNOWN is an honest
+  possible outcome — as it must be while u=1 decidability is open.
+
 ## Repo-native remark
 
 THM-2176/2191 (Gordian continuation cocycle, catalytic group length,
