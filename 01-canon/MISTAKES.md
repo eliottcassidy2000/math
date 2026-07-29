@@ -9,6 +9,23 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-321 (2026-07-29, concurrent THM-2889 reservation) -- a local filename scan was not replayed after the reservation fetch
+
+- **What happened:** the GMC low-sector session found no `THM-2889` in its
+  freshly fetched tree and reserved that identifier.  The immediately
+  preceding remote commit had already reserved `THM-2889` for the dicyclic
+  reverse-action carrier, but the filename check was run before that fetched
+  commit was made visible in the worktree.
+- **First failed implication:** “absent from the checked tree and prior
+  history” was treated as “still absent after the concurrent fetch/rebase.”
+  The dicyclic reservation at `b01066a1c736` precedes the GMC reservation at
+  `0a614c4e623c`, so chronology gives `THM-2889` to the dicyclic theorem.
+- **Exact repair:** the GMC stub is moved to the independently rechecked free
+  namespace `THM-2890`; no proved dependency ever used either empty stub.
+- **Rule:** after the fetch that immediately precedes a reservation commit,
+  rerun the filename, YAML-ID, index, and remote-history checks against the
+  fetched remote tip—not only against the pre-fetch worktree.
+
 ## MISTAKE-320 (2026-07-29, first THM-2878 promotion) -- a zero-address census is not global uniqueness
 
 - **What was claimed:** the first promoted wording described `(guard,u1)` as
