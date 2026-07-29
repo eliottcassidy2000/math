@@ -177,18 +177,27 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   radial-variance jets: `k` jets invert an ordered `k`-cone span, but ordinary
   Gaussian nullity does not supply them. THM-2844 proves a support cut is
   exactly necessary for every pair in two full positive coordinate orthants
-  and gives the sharp first signed-ray threshold; failure below it is only a
-  certificate failure, not a moment counterexample. THM-2846 gives the sharp
-  contrary boundary for arbitrary positive cones: a transverse algebraic
-  two-cone line kills factorial moments through three (Gaussian moments through
-  six), while its fourth factorial/eighth Gaussian moment is nonzero.
+  and gives the sharp first signed-ray threshold.  Its two divisibility
+  invariants are coprime for every real ray parameter, so failure below the
+  orientation threshold is only a certificate failure, not a moment
+  counterexample. THM-2846 gives the sharp contrary boundary for arbitrary
+  positive cones: a transverse algebraic two-cone line kills factorial
+  moments through three (Gaussian moments through six), while its fourth
+  factorial/eighth Gaussian moment is nonzero.
 - THM-2843 reduces every four-slot window either to an immediate
   positive-dimensional common zero or to a nonnegative complete-intersection
-  norm of length `d(d+1)(d+2)`, and closes the `{0,1,2,3}` first cell. Its
+  norm of length `d(d+1)(d+2)`.  In the first window, common nullity is a
+  moving-real-plane divisibility problem, equivalently a binary
+  sextic--octic resultant; two exact certificates close `{0,1,2,3}`, while an
+  abstract hidden plane proves coordinate faces insufficient.  Its
   conjugate-pair/three-plane count does not carry the standard holomorphic
-  `C_2*C_3` action. THM-2845 proves a scalar detects units exactly iff the
-  algebra is local with residue field equal to the base field, explaining why
-  modular p-group augmentation works while split Laguerre traces cancel.
+  `C_2*C_3` action. THM-2845 classifies the complementary scalar question on
+  every finite-dimensional associative algebra: away from `F_2`, a
+  functional is nonzero on every unit exactly when it is a scalar character;
+  over `F_2`, odd sums of characters are the only extras.  The stronger
+  two-way test `a` unit iff the scalar is nonzero is exactly the local
+  residue-`K` case.  Thus modular p-group augmentation and split Laguerre
+  cancellation are the two poles of one radical-versus-product boundary.
   General four-slot norm nonvanishing, incomparable cubic orientations, and
   arbitrary signed radial channels remain open.
 ### Live work

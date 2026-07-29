@@ -264,7 +264,26 @@ Their resultant is
  !=0.                                                  (24)
 ```
 
-Thus the first-window cell on `{0,1,2,3}` is closed exactly.
+The leading coefficient of `c_6` is nonzero, so this affine resultant
+does not lose the point `[1:0]`.  The sextic is squarefree, with
+
+```text
+Disc(c_6)
+ =6291863054003994624
+ =2^20 3^12 31^3 379.                                 (24a)
+```
+
+There is also an independent quotient certificate.  The face `z=0` has
+resultant `116y^6`, so the complete intersection lies in the chart
+`z=1`.  Direct multiplication by `F` in its six-dimensional real
+quotient has determinant
+
+```text
+9070189700378194715889733632/707281>0.                 (24b)
+```
+
+Thus the first-window cell on `{0,1,2,3}` is closed exactly, by both the
+binary resultant and the Artin-algebra norm.
 
 ## 5. The `C_2*C_3` modular action is not intrinsic
 
@@ -306,6 +325,13 @@ which is fixed-point-free and anti-holomorphic.  The honest `2 x 3`
 structure is therefore conjugation within each of three unordered pairs.
 It is not a canonical holomorphic `C_2*C_3` action.  Producing a cyclic
 `C_3` would require an extra orientation or discriminant-square sidecar.
+
+As a finite hostile control, reduction with `i=4` in `F_17` gives a
+trivial stabilizer of `c_6` inside all `4896` elements of
+`PGL_2(F_17)`.  This is not promoted to a characteristic-zero
+automorphism theorem.  It only reinforces the typed conclusion: the
+pairing involution is intrinsic, while an order-three action needs an
+additional sidecar.
 
 ## 6. Facewise three-slot control is insufficient
 

@@ -10,8 +10,9 @@ status: >
   t>=alpha, where alpha is the unique root in (-2/3,-1/2) of
   5t^3+30t^2+57t+24.  Primitive integer and Pascal-positive hostiles show
   both boundaries are sharp.  Below alpha the orientation certificate
-  fails, but the first three factorial moments still detect the plane;
-  this is not an SFC or GMC counterexample.
+  fails, but the first three factorial moments still detect the plane,
+  in fact for every real t: the two divisibility invariants are coprime.
+  This is not an SFC or GMC counterexample.
 source: root/signed-adjacent-ray-orientation-boundary-2026-07-28
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
@@ -23,6 +24,10 @@ script: 04-computation/gmc_signed_adjacent_pascal_boundary_thm2844.py
 output: 05-knowledge/results/gmc_signed_adjacent_pascal_boundary_thm2844.out
 script_sha256: be181a810745af5cd93abfa74c698010328fac94b772a075e0a27bc799ec9029
 output_sha256: 2eb5e5455f9ad8ee51c2f2a00da48da02e3445551e0d214d17dcbc8b3fbae2c3
+independent_script: 04-computation/gmc_signed_adjacent_ray_orientation_boundary_thm2844.py
+independent_output: 05-knowledge/results/gmc_signed_adjacent_ray_orientation_boundary_thm2844.out
+independent_script_sha256: 5d70d08e70089f6c6f417376b3dc862f8c0eb053b6d78cc48974ee045e9e4ddf
+independent_output_sha256: 87efdfe3c17c0d8a8392a6ce8d81cc38ce91a8cceec9835b8aa5ef8c6dc980b2
 hash_basis: LF-normalized bytes
 ---
 
@@ -267,7 +272,65 @@ orientation/quotient certificate.  It is not a factorial-moment
 counterexample, an SFC counterexample, or a failure of Gaussian
 moment-six detection.
 
-## 5. Exact companion
+## 5. All-real detection and an infinite signed hostile family
+
+The preceding sign proof used `t>-1` to retain the Pascal-positive
+channel.  Moment detection itself holds on the entire real line.  Direct
+factorial expansion gives
+
+```text
+det Gram(d_0,V_t)=t^2+4t+5=(t+2)^2+1>0.               (30)
+```
+
+The two binary quadratic-divisibility invariants are
+
+```text
+I_1=-2(7t^3+64t^2+204t+228),
+
+I_2=-4(2t^4+27t^3+120t^2+207t+90).                   (31)
+```
+
+The parenthesized polynomials have exact resultant
+
+```text
+-4409316=-2^2 3^4 31 439!=0.                          (32)
+```
+
+They therefore never vanish simultaneously, even over `C`.  Hence for
+every real `t`,
+
+```text
+L(H)=L(H^2)=L(H^3)=0,
+H in span_C{d_0,V_t}
+
+implies H=0.                                          (33)
+```
+
+The distinction is visible already at `t=-1`:
+
+```text
+D(d_0,V_t)=-96,             I_1=-162,             I_2=88.
+```
+
+There are also infinitely many primitive signed directions beyond the
+orientation chamber.  For
+
+```text
+V_n=-(n+1)d_1+n d_2,                    n>=1,
+```
+
+the coefficients are coprime and
+
+```text
+D(d_0,V_n)=-12n(8n^3+12n^2-15n+5)<0.                 (34)
+```
+
+The bracket is ten at `n=1` and has positive forward difference
+`24n^2+48n+5`.  Thus orientation failure is abundant, while the
+all-real coprimality certificate `(32)` keeps this whole projective
+family out of the moment-null locus.
+
+## 6. Exact companions
 
 The exact companion:
 
@@ -293,7 +356,11 @@ python -O 04-computation/gmc_signed_adjacent_pascal_boundary_thm2844.py
 
 Both modes byte-match the stored transcript.
 
-## 6. Independent hostile audit
+The independent companion listed in the frontmatter reconstructs
+`(30)--(34)`, checks the singleton sign law on both sides of the cut,
+and byte-matches its own normal and optimized transcript.
+
+## 7. Independent hostile audit
 
 An independent audit rederived the support-cut iff against THM-2830's
 proper transport-ordered interlaced subcone, every symbolic response and

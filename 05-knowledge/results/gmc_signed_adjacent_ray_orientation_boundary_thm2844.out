@@ -1,0 +1,15 @@
+THM-2844 SIGNED ADJACENT-RAY ORIENTATION BOUNDARY
+status=PROVED+VERIFIED-EXACT
+singleton_sign_cells=90
+singleton_law=sign(D_i(d_j))=sign(j-1-i)
+V_t=t*d_1+d_2; U=d_0
+D_0(V_t)=12*(5*t^3+30*t^2+57*t+24)
+orientation_cubic_discriminant=-66960; unique_real_root=theta
+theta_bracket=(-583/1000,-291/500)
+orientation_nonnegative_iff=t>=theta
+primitive_hostiles=V_n=-(n+1)*d_1+n*d_2; n>=1
+D_0(V_n)=-12*n*(8*n^3+12*n^2-15*n+5)<0
+Gram=t^2+4*t+5=(t+2)^2+1>0 on R
+divisibility_resultant=-4409316
+moment_detection=all_real_t; orientation_failure_is_not_detection_failure
+all_exact_controls=PASS
