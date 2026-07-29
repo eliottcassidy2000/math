@@ -1,5 +1,5 @@
 ---
-id: THM-2926
+id: THM-2927
 title: "General-width flagged Macaulay leading coefficient"
 status: "RESERVED / UNPROVED EMPTY STUB."
 source: codex-gmc-uniform-width-extension-2026-07-29
@@ -8,7 +8,7 @@ related:
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
 ---
 
-# THM-2926 -- general-width flagged Macaulay leading coefficient
+# THM-2927 -- general-width flagged Macaulay leading coefficient
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
