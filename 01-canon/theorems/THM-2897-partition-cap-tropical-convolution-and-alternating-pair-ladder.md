@@ -1,11 +1,12 @@
 ---
 id: THM-2897
-title: "Partition-cap tropical convolution, rank selection, and matching repair"
+title: "Partition-cap tropical convolution, rank selection, and matching/tree repair"
 status: PROVED
 source: root-2026-07-29
 depends_on:
   - THM-2893-complement-cap-finite-core-flag-lemma
 related:
+  - THM-856-hunter-tree-seven-comb-crossing
   - THM-2888-eight-body-first-apex-global-pair-cap-atlas
   - THM-2892-eight-body-five-slot-heavy-triangle-closure
   - THM-2893-complement-cap-finite-core-flag-lemma
@@ -14,7 +15,7 @@ related:
   - THM-2896-seven-body-adaptive-six-cover-hitting-gate-atlas
 ---
 
-# THM-2897 -- partition-cap tropical convolution, rank selection, and matching repair
+# THM-2897 -- partition-cap tropical convolution, rank selection, and matching/tree repair
 
 ## 1. The cap sequence
 
@@ -366,8 +367,10 @@ U_C({w,u})<=c(w)+c(u).
 
 This proves `(19a)` in both parities.
 
-The recurrence has its own global discrepancy seal.  Fix a target slot
-count `3<=p<=6`, suppose `gamma>=0` and
+The recurrence has its own global discrepancy seal in the ordered-integer
+LRC specialization.  Fix `V subset Z_(>0)`, a forbidden set `P`, a target
+slot count `3<=p<=6`, and `gamma>=0`, and suppose every allowed integer in
+the discrepancy range obeys
 
 ```text
 c(w)<h/7+gamma/w,
@@ -383,18 +386,19 @@ Thus `tau_1=(8-p)h/7` is exactly the THM-2895 singleton threshold and
 `tau_p=h`.  Start with any global cap
 
 ```text
-Phi_1<=A_1<tau_1.
+Phi_1(P)<=A_1<tau_1.
 ```
 
 Inductively, for `j=2,...,p`, if
-`Phi_(j-1)<=A_(j-1)<tau_(j-1)`, put
+`Phi_(j-1)(P)<=A_(j-1)<tau_(j-1)`, put
 
 ```text
 delta_j=tau_(j-1)-A_(j-1)>0,
 W_j=floor(gamma/delta_j)+1.                                (19c)
 ```
 
-Every `j`-set containing a label `w>=W_j` then satisfies, by `(19a)`,
+Every `j`-set `Q subset V minus P` containing a label `w>=W_j` then
+satisfies, by `(19a)`,
 
 ```text
 phi_j(Q)
@@ -403,19 +407,20 @@ phi_j(Q)
  =tau_j.                                                   (19d)
 ```
 
-Let `H_j` be the exact maximum of `phi_j(Q)` over allowed `j`-sets whose
-labels are all below `W_j`, taking `H_j=0` if there is no such set, and set
+Let `H_j` be the exact maximum of `phi_j(Q)` over
+`Q subset V minus P`, `|Q|=j`, whose labels are all below `W_j`, taking
+`H_j=0` if there is no such set, and set
 
 ```text
 A_j=max(H_j, h/7+gamma/W_j+A_(j-1)).                       (19e)
 ```
 
-Then `Phi_j<=A_j`.  In particular, if the finite head also has
+Then `Phi_j(P)<=A_j`.  In particular, if the finite head also has
 `H_j<tau_j`, then `A_j<tau_j` and the induction continues.  Success through
 `j=p` gives
 
 ```text
-Phi_p<=A_p<tau_p=h,
+Phi_p(P)<=A_p<tau_p=h,
 ```
 
 so no `p`-cover exists.
@@ -426,7 +431,7 @@ per stage, while THM-2895 packages two stages at a time as `5->3->1` or
 `6->4->2`.  Both stop at `p=7`, where their common initial demand is the
 impossible strict cap `A_1<h/7` on a rational LRC carrier.
 
-### Overlap-credit dual and the hostile star/triangle shadow
+### Overlap-credit dual and the hostile star/triangle and cut shadows
 
 The matching invoice has an exact dual description.  Put
 
@@ -447,6 +452,122 @@ Thus the factor-critical cap is not fundamentally a minimum-union problem.
 It is a maximum **overlap-credit** matching problem: singleton invoices are
 charged first, and disjoint intersections are the credits that can be
 deducted without double-using a label.
+
+### Relative Hunter tree cap
+
+The matching credit is itself dominated by an older repo object that is
+especially natural on a literal residual.  For `|Q|=j`, let
+
+```text
+kappa_j(Q)=max_(T a spanning tree on Q)
+           sum_({x,y} in T)i(x,y),
+psi_j(Q)=S(Q)-kappa_j(Q),
+Psi_j(P)=sup_(Q subset V minus P, |Q|=j) psi_j(Q),          (19f1)
+```
+
+with empty tree weight zero when `j=1`.  Then
+
+```text
+U_C(Q)<=psi_j(Q)<=phi_j(Q),
+beta_j(P)<=Psi_j(P)<=Phi_j(P).                             (19f2)
+```
+
+For the first inequality, root any spanning tree and insert each vertex
+after its parent.  The new contribution of a child `y` is at most
+
+```text
+c(y)-i(x,y)
+```
+
+where `x` is its parent.  Summing gives the tree invoice, and maximizing
+the deducted tree weight gives `psi_j`.  For the second inequality, extend
+a maximum perfect or near-perfect matching to a spanning tree.  All
+intersection weights are nonnegative, so `kappa_j(Q)>=nu_j(Q)`, and `(19f)`
+gives the result.
+
+The tree cap obeys the same one-slot recurrence as the factor-critical cap:
+for every `w in Q`,
+
+```text
+psi_j(Q)<=c(w)+psi_(j-1)(Q minus {w}).                     (19f3)
+```
+
+Indeed, extend a maximum spanning tree on `Q minus {w}` by any edge incident
+to `w`.  Consequently the finite discrepancy ladder `(19b)`--`(19e)` may
+be run with `psi/Psi` in place of `phi/Phi`.  The resulting cap is never
+weaker and can be strictly stronger.
+
+There is an exact bridge to THM-2893's ordered high-core pivot.  For a
+chosen pivot `x in Q`, let
+
+```text
+sigma_x(Q)=sum_(y in Q minus {x})i(x,y).
+```
+
+The star at `x` is a spanning tree and
+
+```text
+c(x)+sum_(y in Q minus {x})c_(C minus D_x)(y)
+ =S(Q)-sigma_x(Q).                                        (19f4)
+```
+
+Thus a literal-child singleton-sum test after the pivot is precisely a
+relative Hunter **star** invoice.  A maximum spanning tree permits all
+tree shapes and improves every fixed star.  The intrinsic object remains
+the symmetric overlap-weighted graph; rooting or orienting a maximizing
+tree records a sequential proof order, not a tournament gauge on its
+edges.  THM-856 develops the same Hunter--Kounias functional on the
+unconditioned seven-comb wall; `(19f1)` is its marked-suffix, literal-carrier
+form at the five-slot frontier.
+
+The star identity has a cheap relaxation requiring only singleton ranks and
+one pair-union cap.  Suppose `B_2(P)` is a uniform cap, and let a
+`j`-set `Q` have singleton coverages
+
+```text
+a_1>=a_2>=...>=a_j.
+```
+
+Choose the vertex of coverage `a_1` as the star centre.  Since
+
+```text
+i(x,y)>=max(0,a_1+a_r-B_2(P)),
+```
+
+the Hunter star and `a_r<=min(a_1,q_r(P))` give
+
+```text
+U_C(Q)
+ <=a_1+sum_(r=2)^j min(a_r,B_2(P)-a_1)
+ <=a_1+sum_(r=2)^j min(a_1,q_r(P),B_2(P)-a_1).             (19f5)
+```
+
+Here `a_1<=B_2(P)` because `j>=2` and the union of the centre with any
+other member contains the centre.  Therefore the exact scalar expression
+
+```text
+G_j(P)=max_(0<=a<=min(q_1(P),B_2(P)))
+ [a+sum_(r=2)^j min(a,q_r(P),B_2(P)-a)]                   (19f6)
+```
+
+is a valid global cap:
+
+```text
+beta_j(P)<=G_j(P).                                         (19f7)
+```
+
+It is piecewise linear, so its exact maximum occurs among the interval
+endpoints and the clipped breakpoints
+
+```text
+a=q_r(P),       a=B_2(P)-q_r(P),       a=B_2(P)/2.
+```
+
+Thus `G_5(P)<h` is essentially free after an exact pair cap and the top
+five singleton ranks have been computed.  It is a Hunter-star relaxation,
+not uniformly comparable a priori with every partition invoice; both
+should be tested before finite flag enumeration.  If the input caps are
+monotone under prefix deletion, `(19f6)` is monotone as well.
 
 Uniformly averaging the legal matchings gives a useful closed relaxation.
 Every edge belongs to a proportion `1/(j-1)` of the perfect matchings of an
@@ -499,6 +620,26 @@ speed obligations, its symmetric edge weight is literal overlap credit,
 and its theorem-bearing invariant is matching deficiency together with the
 star/triangle sidecar.  Orienting the edges as a tournament would destroy
 ties and add a gauge while forgetting the disjointness obstruction.
+
+The Hunter cap gives a complementary cut shadow.  If
+
+```text
+psi_j(Q)>=h,                  d(Q)=S(Q)-h,
+```
+
+then `kappa_j(Q)<=d(Q)`.  Hence the graph on `Q` with edges
+
+```text
+i(x,y)>d(Q)/(j-1)                                      (19i1)
+```
+
+is disconnected.  Otherwise any spanning tree of that graph would have
+total overlap credit greater than `d(Q)`.  For five slots, every
+Hunter-hostile set therefore has a disconnected `d(Q)/4`-heavy overlap
+graph, in addition to the factor-critical star-or-triangle shadow at the
+coarser threshold `d(Q)/2`.  Neither condition is sufficient for covering;
+they are cheap necessary obstruction signatures for routing an exact
+search.
 
 ### Self-sealing exact pair cap
 
@@ -668,20 +809,25 @@ remaining apex satisfying `(27)`.  If all gate apices activate, the root is
 closed.
 
 The carrier-specific order statistics `q^a_j(P)`, matching caps
-`M^a_(r,s)(P)`, and factor-critical caps `Phi^a_j(P)` are also nonincreasing
-as `P` grows.  Hence all rank-selective matching predicates are monotone.
-This permits scalar, pair, matching, and triple caps to coexist in one
-target-set selection problem.  At the present `j=6` frontier, the nested
-new predicates are
+`M^a_(r,s)(P)`, factor-critical caps `Phi^a_j(P)`, and relative Hunter caps
+`Psi^a_j(P)` are also nonincreasing as `P` grows.  Hence all rank-selective
+matching and tree predicates are monotone.
+This permits scalar, pair, matching, tree, and triple caps to coexist in one
+target-set selection problem.  At the present `j=6` frontier, the new
+predicates include
 
 ```text
-Phi^a_5(P)<h_a,                                            (28)
-q^a_5(P)+M^a_(2,2)(P)<h_a,                                 (29)
-q^a_5(P)+2B^a_2(P)<h_a.                                    (30)
+Psi^a_5(P)<h_a,                                            (28)
+Phi^a_5(P)<h_a,                                            (29)
+G^a_5(P)<h_a,                                              (30)
+q^a_5(P)+M^a_(2,2)(P)<h_a,                                 (31)
+q^a_5(P)+2B^a_2(P)<h_a.                                    (32)
 ```
 
-They are ordered from strongest to cheapest.  The last is available when
-only a global pair cap has been computed.
+The first dominates the second, and `(31)` dominates `(32)`.  The star
+envelope `(30)` is a cheap complementary relaxation rather than another
+link in that total order.  Both `(30)` and `(32)` are available once a
+global pair cap and singleton ranks have been computed.
 
 Both the literal residual and the excluded-prefix sidecar are essential.
 Dropping the sidecar replaces suffix caps by larger global caps; trying to
@@ -689,38 +835,40 @@ recover it from the unmarked residual conflicts with THM-2894.
 
 ## 6. Boundary, lost information, and scope
 
-The strict inequality in `(5)`, `(11)`, or `(27)`--`(30)` is load-bearing.
+The strict inequality in `(5)`, `(11)`, or `(27)`--`(32)` is load-bearing.
 Equality does not exclude a cover.  Raw partition caps forget cross-block
-overlap and compatibility of separate maximizers.  The matching caps
-restore disjointness, and `Phi` also chooses the cheapest decomposition
-inside each hostile set, but both still forget cross-edge overlap.  Hence
-all these are sufficient certificates, not equivalences; a failed cap
-inequality is not evidence for a cover.
+overlap and compatibility of separate maximizers.  The matching caps restore
+disjointness, `Phi` also chooses the cheapest matching decomposition inside
+each hostile set, and `Psi` restores a connected tree of pairwise overlap.
+Even `Psi` forgets higher intersections beyond its selected tree.  Hence all
+these are sufficient certificates, not equivalences; a failed cap inequality
+is not evidence for a cover.
 
 The connection data are:
 
 ```text
 source:       lower-order exact union caps on a literal carrier;
 target:       a no-cover certificate for a larger slot count;
-map:          integer-partition / min-plus convolution, then matching repair;
+map:          integer-partition / min-plus convolution, matching, then tree;
 preserved:    subadditive upper control and forbidden-label monotonicity;
-restored:     distinctness across lower-order maximizing blocks;
-destroyed:    cross-block overlap even after matching;
+restored:     distinctness, then one connected pairwise-overlap skeleton;
+destroyed:    non-tree overlap and every higher intersection;
 sidecar:      literal carrier, excluded labels, ordered apex, weighted graph;
-five-slot targets: Phi_5<h, then q_5+M_(2,2)<h, then q_5+2B_2<h.
+five-slot targets: Psi_5<h, then Phi_5<h; cheaply test G_5<h and
+                   q_5+M_(2,2)<h before q_5+2B_2<h.
 ```
 
 No finite LRC atlas is asserted here.  In particular, the theorem does not
-prove `(28)`--`(30)` on all THM-2896 branches, close the seven-body rung, or
+prove `(28)`--`(32)` on all THM-2896 branches, close the seven-body rung, or
 prove LRC(14).  Its consequence is architectural: the next exact census
-should test the matching certificates before paying for triple caps or
-heavy-flag residual enumeration. ∎
+should test the tree and matching certificates before paying for triple
+caps or heavy-flag residual enumeration. ∎
 
 ## 7. Scoped exact control
 
 The locked four-root census
 `05-knowledge/results/lrc14_j6_rank_selective_alternating_pair_73_thm2897.md`
-tests `(30)` on all `73` actual marked suffixes used by THM-2895.  It closes
+tests `(32)` on all `73` actual marked suffixes used by THM-2895.  It closes
 `50` branches, versus `48` for the scalar top-five test; their union closes
 `51`, leaving `22` for parity work.  This is a scoped workload reduction,
 not the uniform census excluded by the preceding paragraph.

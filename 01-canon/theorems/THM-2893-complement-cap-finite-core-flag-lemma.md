@@ -521,6 +521,82 @@ an `s`-ary heavy flag descends behind an `ell`-flag to its exact
 `(s-ell)`-ary link.  For `ell=s` the link has arity zero and carries no
 useful child information, agreeing with the same-cap deadlock below.
 
+### Ordered high-core pivot refinement
+
+The finite flags have a lossless ordered form that can be much cheaper than
+enumerating them all before inspecting a child residual.  Assume `H_s` is
+finite and fix any total order `prec` on it.  For `x in H_s`, put
+
+```text
+V_x=(V minus H_s) union {y in H_s:x prec y},
+C_x=C minus D_x.                                             (11)
+```
+
+Let `A_x` be the family of all `(k-1)`-sets `Q subset V_x` such that
+
+```text
+|Q intersect H_s|>=k-s
+```
+
+and every `s`-subset of `Q union {x}` is heavy.  If, for every `x in H_s`,
+no member of `A_x` covers `C_x`, then `C` has no `k`-cover.
+
+Indeed, if `K` were a cover, Section 2 would give
+`|K intersect H_s|>=k-s+1`.  Let `x` be the least member of this
+intersection and put `Q=K minus {x}`.  Minimality gives `Q subset V_x`,
+the high-core count gives `|Q intersect H_s|>=k-s`, and every
+`s`-subset of `Q union {x}=K` is heavy.  Finally `Q` covers the literal
+residual `C_x`, contradicting the hypothesis.
+
+Equivalently, form the simplicial complex
+
+```text
+X_s={F subset V: every s-subset of F lies in E_s},          (12)
+```
+
+with the condition vacuous for `|F|<s`.  A putative cover is a
+`k`-element face of `X_s` with at least `k-s+1` high-core vertices.  The order
+assigns that face to its unique least high-core vertex, and the child
+obligation lives in the corresponding later link.  This is an acyclic
+orientation of the **proof branches** only.  The heavy hypergraph remains
+symmetric; no edge is turned into a tournament comparison.
+
+The case `s=1` is especially strong.  Then `E_1=H_1`, every label of a
+putative cover lies in `H_1`, and the child universe at pivot `x` is just
+
+```text
+H_1^(>x)={y in H_1:x prec y}.                               (13)
+```
+
+Thus the branch at `x` closes whenever the sum of the `k-1` largest
+literal child coverages
+
+```text
+mu(C_x intersect D_y),       y in H_1^(>x),                 (14)
+```
+
+is strictly below `mu(C_x)`.  If this scalar test fails, the unresolved
+search is still a finite exact problem inside the later core suffix; no new
+discrepancy tail is needed.  The order may therefore be chosen as an
+elimination order that minimizes later-link workload.
+
+For the live five-slot problem, the ranked-complement rows of THM-2897
+become one diagonal flag ladder:
+
+```text
+cap size   s   forced high flag                    literal remainder
+    1      4   two H4 vertices (condition vacuous)          3
+    2      3   one heavy H3 triple                          2
+    3      2   one heavy-graph K4                           1
+    4      1   five H1 vertices / ordered H1 pivot    0 after full flag
+                                                   / 4 after pivot. (15)
+```
+
+In the last row, `(13)`--`(14)` can replace raw five-subset enumeration.
+In the preceding rows, ordering assigns each pair, heavy triple, or
+heavy-graph clique to its least vertex exactly once and permits a child
+certificate to stop the whole pivot branch before all flag completions are
+materialized.
 There is a sharp same-cap deadlock when `ell=s`.  Every legal selected flag
 is then heavy, so
 
