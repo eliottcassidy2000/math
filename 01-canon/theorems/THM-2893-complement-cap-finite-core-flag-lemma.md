@@ -121,6 +121,30 @@ labels with coverage exactly `h/7`, so it supplies no finite core.  For
 example, repeat one set of measure `h/7` at infinitely many labels and
 retain the non-sharp cap `B=(7-s)h/7`.
 
+### Finite first-apex gate before any complement cap
+
+Estimate `(5)` also gives a finite hitting statement without `(2)`.  For
+any number of remaining labels `1<=p<=6`, put
+
+```text
+W_p=floor(7p gamma/((7-p)h))+1.                               (7a)
+```
+
+If all `p` labels satisfy `w>=W_p`, then
+
+```text
+U_C(K)<=sum_(w in K)c_C(w)
+       <p(h/7+gamma/W_p)<h.                                  (7b)
+```
+
+Thus every `p`-cover meets the finite set of allowed labels below `W_p`.
+If every literal residual again obeys an estimate of the form `(5)`—as
+the LRC interval carriers do—then the same argument applies after each
+possible first apex.  Since the depth is at most six, this yields a finite
+rooted decision tree for every fixed initial carrier.  It is only a
+finiteness theorem: successive cutoffs may be enormous.  Complement caps
+and heavy flags compress that tree into the much smaller objects used below.
+
 ## 4. Literal residual recursion
 
 Assume `(6)`, and choose an integer
@@ -182,8 +206,9 @@ add non-mathematical data.
 
 ## 6. Scope
 
-This theorem is analytic and all-`k` under its stated cap and discrepancy
-hypotheses.  It proves neither those caps nor any residual inequality.
+The cover-to-flag theorem is all-`k` under its stated cap; the cap-free
+first-apex corollary uses the LRC denominator seven and `p<=6`.  The
+theorem proves neither the required complement caps nor any residual inequality.
 THM-2888 supplies the pair cap on its stated eight-body carriers; a
 separate exact census is required to close their heavy-triangle residuals.
 For the seven-body `j=6` rung, the global triple cap and subsequent residual
