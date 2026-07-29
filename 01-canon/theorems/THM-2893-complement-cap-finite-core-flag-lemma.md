@@ -463,6 +463,51 @@ singleton-apex clique census is a lawful sibling of the pair-link-core
 census.  The relation in `(10f)` is symmetric and has ties; orienting it as
 a tournament would add no information.
 
+### Unresolved-flag clique obstruction
+
+The recursion need not close every legal flag separately.  Put
+
+```text
+m=k-s+1
+```
+
+and fix `1<=ell<=m`.  Call a legal `ell`-flag **resolved** if its literal
+child obligation, including the link condition and every parent sidecar
+forced independently of an ordering choice, has been excluded.  Equivalently,
+no parent cover can contain that flag.  An order-specific certificate resolves
+only its stated ordered context and cannot delete the underlying unordered
+edge globally.  Let `B_ell` be the `ell`-uniform hypergraph of legal flags
+that remain unresolved in this universal sense.
+
+If a `k`-cover exists, then `B_ell` contains a complete `ell`-graph on `m`
+vertices.  Indeed, the cover-to-flag theorem supplies a set
+
+```text
+M subset K intersect H_s,       |M|=m.
+```
+
+Every `ell`-subset `L` of `M` is legal: when `ell<s` the heavy condition is
+vacuous, and when `ell>=s` all its `s`-subsets lie in the parent cover and
+are heavy.  Moreover `K minus L` is an actual child cover of `C_L` with all
+required sidecars.  Hence no such `L` can be resolved, and all
+`ell`-subsets of `M` lie in `B_ell`.
+
+Consequently
+
+```text
+omega_ell(B_ell)<m                                      (10g)
+```
+
+is itself a global no-cover certificate, where `omega_ell` is the largest
+vertex set spanning a complete `ell`-graph.  Exhaustively closing every flag
+is only the special case `B_ell` empty.
+
+For `(k,s,ell)=(5,3,2)`, condition `(10g)` says exactly that the unresolved
+pair graph is triangle-free.  A hypothetical cover contributes at least
+three `H_3` vertices, and all three of their pair children would have to
+survive.  This is an intrinsic undirected obstruction graph: its edges are
+unresolved proof obligations, not arbitrary orientations.
+
 This is a recursive self-similarity law, not merely a workload heuristic:
 an `s`-ary heavy flag descends behind an `ell`-flag to its exact
 `(s-ell)`-ary link.  For `ell=s` the link has arity zero and carries no

@@ -274,7 +274,9 @@ problem; the pair route leaves three forced singleton-link memberships; the
 triple route has only two unconstrained slots.  No route dominates without
 measuring flag, link, and child-cap costs.  In particular, “three forced high
 labels” does not oblige the proof to enumerate triples, and no lower-arity
-child should be treated as unconditioned.
+child should be treated as unconditioned.  Nor must every pair child close:
+by THM-2893's unresolved-flag clique obstruction, it is enough that the graph
+of surviving `H_3` pair obligations be triangle-free.
 
 ## 4. Disjoint-block and factor-critical matching repair
 
