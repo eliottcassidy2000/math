@@ -1,0 +1,8 @@
+THM-2956 KOSZUL-GALE FIXED FIFTH-COMPOUND EXCHANGE
+gale_complements=new:q200^6,old:c300*q200^5
+selected_index_sums=old:450,new:435;pluecker_sign=opposite
+universal_identity=q200*P_fixed+c300*P_opt=0
+factorial_identity_controls=12
+optimal_chart_no_new_zero_controls=12
+degree_invoices=fixed:55M-35,optimal:54M-35
+all_exact_checks=PASS
