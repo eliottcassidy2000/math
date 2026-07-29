@@ -16,8 +16,10 @@ the first ``K`` globally ranked speeds, then necessarily
     m_E <= q_{K+1}(E)+...+q_{K+6}(E).
 
 Consequently any strict reverse inequality is a valid hitting gate: every
-putative six-cover meets the first ``K`` speeds.  This verifier finds the
-least such ``K`` in ``{0,...,24}`` from an exact global top-thirty ledger.
+putative six-cover meets the first ``K`` speeds.  A top-thirty discovery run
+failed honestly at `E=(1,8,10,11,12,13,14)`, whose least gate is `K=25`.
+This verifier therefore finds the least ``K`` in ``{0,...,34}`` from an
+exact global top-forty ledger.
 
 The ledger is global, not merely a finite-head guess.  It scans through
 ``BASE_HORIZON`` and uses the strict THM-735(ii) discrepancy estimate
@@ -68,7 +70,7 @@ THM2885_OUTPUT_SHA256 = (
 
 FIRST_EXTERNAL = 15
 BASE_HORIZON = 1600
-TOP_COUNT = 30
+TOP_COUNT = 40
 COVER_SIZE = 6
 MAX_GATE_SIZE = TOP_COUNT - COVER_SIZE
 S2 = F(99, 70)
@@ -127,7 +129,7 @@ def stratum(body: tuple[int, ...]) -> str:
 
 
 def profile_body(body: tuple[int, ...]) -> dict[str, object]:
-    """Return one exact globally sealed top-thirty gate profile."""
+    """Return one exact globally sealed top-forty gate profile."""
 
     good, components, mass = T.CORE.good_norm(body)
     require(
@@ -140,13 +142,13 @@ def profile_body(body: tuple[int, ...]) -> dict[str, object]:
         range(FIRST_EXTERNAL, BASE_HORIZON + 1),
     )
     base_ranked = sorted(rows, key=lambda item: (-item[0], item[1]))
-    q30_base = base_ranked[TOP_COUNT - 1][0]
+    q_cutoff_base = base_ranked[TOP_COUNT - 1][0]
     require(
-        q30_base > mass / 7,
+        q_cutoff_base > mass / 7,
         f"base rank {TOP_COUNT} misses the discrepancy limit: {body}",
     )
 
-    threshold = S2 * components / (7 * (q30_base - mass / 7))
+    threshold = S2 * components / (7 * (q_cutoff_base - mass / 7))
     threshold_first = ceiling(threshold)
     tail_first = max(BASE_HORIZON + 1, threshold_first)
     if tail_first > BASE_HORIZON + 1:
@@ -158,7 +160,7 @@ def profile_body(body: tuple[int, ...]) -> dict[str, object]:
         )
 
     require(
-        mass / 7 + S2 * components / (7 * tail_first) <= q30_base,
+        mass / 7 + S2 * components / (7 * tail_first) <= q_cutoff_base,
         f"rank-{TOP_COUNT} tail did not seal: {body}",
     )
     ranked = sorted(rows, key=lambda item: (-item[0], item[1]))
@@ -383,10 +385,10 @@ def summarize(profiles: list[dict[str, object]]) -> dict[str, object]:
     total_controls = sum(row["controls"] for row in profiles)
 
     digest = hashlib.sha256()
-    digest.update(b"LRC14/j6/all-root-adaptive-top30-gate/v1\n")
+    digest.update(b"LRC14/j6/all-root-adaptive-top40-gate/v1\n")
     stratum_hashes = {
         name: hashlib.sha256(
-            f"LRC14/j6/all-root-adaptive-top30-gate/{name}/v1\n".encode()
+            f"LRC14/j6/all-root-adaptive-top40-gate/{name}/v1\n".encode()
         )
         for name in strata
     }
@@ -471,7 +473,7 @@ def main() -> None:
             "stratified ledger digests changed",
         )
 
-    print("LRC14 j6 all-root adaptive top30 gate atlas")
+    print("LRC14 j6 all-root adaptive top40 gate atlas")
     print(f"universe={len(profiles)}")
     print(f"stratum_counts={summary['stratum_counts']}")
     print(f"global_K_distribution={summary['global_distribution']}")
