@@ -2,8 +2,8 @@
 id: THM-2927
 title: "General-width flagged Macaulay leading coefficient"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  For every width M>=3 and every 0<a<b<M, the fixed
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  width M>=3 and every 0<a<b<M, the fixed
   20Q+10C+6F Macaulay determinant from THM-2921 has exact degree
   58M-36 and strictly positive leading coefficient.  Its pure-power
   chart factors as
@@ -14,6 +14,13 @@ status: >
   and support.  Finite-depth nonvanishing and arbitrary-width SFC(4)
   remain open.
 source: codex-gmc-uniform-width-extension-2026-07-29
+audit: >
+  An independent hostile audit rejected the first rank-only multiplicity
+  argument, then accepted the repaired universal six-block flag
+  elimination.  It rederived resultant divisibility and the pure-power
+  exponent, checked every symbolic block and Cauchy--Binet sign, replayed
+  normal, optimized and stored output byte-for-byte, and reproduced all
+  declared LF hashes.
 depends_on:
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
 related:
@@ -32,8 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2927 -- general-width flagged Macaulay leading coefficient
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
@@ -226,14 +232,14 @@ flag semi-invariant, not an arbitrary numerical chart.
 Rewrite `(5)` as
 
 ```text
-R_j(d)=(j-1) sum_(k=d)^(M-1) j^k.                     (18)
+R_j(d)=(j-1) sum_(k=d)^(M-1) j^k.                     (20)
 ```
 
 Let
 
 ```text
 A_(j,k)=(j-1)j^k,                  j in {2,3,4},
-H_(k,d)=1_(k>=d).                                      (19)
+H_(k,d)=1_(k>=d).                                      (21)
 ```
 
 Then the response matrix is the product `AH`.  Cauchy--Binet gives
@@ -241,7 +247,7 @@ Then the response matrix is the product `AH`.  Cauchy--Binet gives
 ```text
 det[r_2|_(0,a);r_3|_(0,a)]
  =sum_(k_1<a<=k_2)
-   det[A_(2,3),(k_1,k_2)],                             (20)
+   det[A_(2,3),(k_1,k_2)],                             (22)
 ```
 
 and
@@ -249,7 +255,7 @@ and
 ```text
 det[r_2;r_3;r_4]
  =sum_(k_1<a<=k_2<b<=k_3)
-   det[A_(2,3,4),(k_1,k_2,k_3)].                      (21)
+   det[A_(2,3,4),(k_1,k_2,k_3)].                      (23)
 ```
 
 Every summation range is nonempty by `(1)`.  Each determinant on the
@@ -257,7 +263,7 @@ right is strictly positive: after removing the positive row factors
 `j-1`, it is a generalized Vandermonde determinant at
 
 ```text
-2<3<4,                       k_1<k_2<k_3,              (22)
+2<3<4,                       k_1<k_2<k_3,              (24)
 ```
 
 equivalently an ordinary Vandermonde times a positive Schur polynomial.
@@ -307,4 +313,4 @@ python -O 04-computation/gmc_general_width_flagged_macaulay_leading_thm2927.py
 Normal and optimized executions byte-match the stored output with the
 declared LF-normalized hashes.
 
-**QED (candidate pending independent hostile audit).**
+**QED.**
