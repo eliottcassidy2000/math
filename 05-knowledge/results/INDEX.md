@@ -1,5 +1,16 @@
 # Script Results Index
 
+- `lrc14_thm741_rank_impossible_pair_residual_closure_codex_20260729.py`
+  -> matching `.out` [THM-2881 PROVED + FINITE-EXACT + VERIFIED +
+  INDEPENDENTLY PROOF-AUDITED].  The exact global two-comb union is the
+  missing coordinate on 38 scalar-A2-failing THM-741 roots.  Its strict
+  `5m/7` cap leaves at most one speed above `W<=4628`; pair-aware recursion
+  reduces the remaining chambers to `686` exact one-tail triple carriers
+  and `343` literal all-head quadruple obligations, all strictly positive.
+  THM-738 supplies the small-speed chamber, so all 38 whole roots close.
+  Global THM-741 and LRC(14) remain open.  LF-normalized `(script,output)`
+  hashes:
+  `(05aab2283513ded0747c5708a0bfd9d9ba8d163e4622b5e3638bddd6a162a6d1,4ee45dbe8e087f5c1bef9f00fca9916fa709d5a857aaf79ca85d1a0538db2923)`.
 - `lrc14_endpoint_factor_exit_carry_transducer_thm2878.py` -> matching
   `.out` [THM-2878 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  Literal guard/q5 truth is the chain

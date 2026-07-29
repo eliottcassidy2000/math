@@ -484,7 +484,7 @@ def main() -> None:
     print(
         f"all_head_pair_carriers={sum(row['all_head_pairs'] for row in rows)};"
         f"triple_carriers={sum(row['all_head_triples'] for row in rows)};"
-        f"dangerous_quadruples={sum(row['dangerous_quadruples'] for row in rows)};"
+        f"literal_quadruple_obligations={sum(row['dangerous_quadruples'] for row in rows)};"
         "positive=all;tight=0"
     )
     print(
