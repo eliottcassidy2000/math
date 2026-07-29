@@ -1,0 +1,16 @@
+THM-2848 WHITENED MOVING-PLANE BOUNDARY -- exact companion
+status=PROOF-COMPLETE-CANDIDATE+VERIFIED-EXACT;AUDIT-PENDING
+whitening=q-divides-p_m iff pure complex moment m vanishes
+quotients=cubic+quartic+Pearson-conic exact
+subsidiary_Bessel_inequalities=2
+fifth_root=first4zero;Toeplitz_rank=5;support_minimal=5
+two_radius=first4zero;rho=5/2;s=17/2;a=b=-3epsilon/4
+six_atom=first4zero;rho=2;s=8;a=0;b=-4;Pearson=equality
+exponential_circle=first8_nonzero_pure_moments_zero
+harmonic_projection=degrees3,4 exact
+pair_resultant=-4*cross_norm_squared
+multipole_resultant_constant=2^24;transverse_control=nonzero
+quartic_harmonic_zero_branch=separate+common_point
+positive_sphere_hostiles=Fharmonic_zero+shared_xy_lines
+factorial_lowering=L(Z^(r+1))-Z(0)^(r+1) over r+1
+scope=abstract positivity boundary; factorial multiplier access still missing
