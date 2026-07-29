@@ -1,0 +1,12 @@
+Q3/Q11/Q7 BOCKSTEIN HOLONOMY AND CARRY DERIVATIVE
+natural_lift_composition_checks=6591; cocycle_checks=2197; law=L_k*L_h=T^floor((h+k)/13)*L_(h+k_mod13)
+generator_winding=L_1^13=T; C169_section_candidates=13; homomorphic_sections=0; candidate_orders=169
+semantic_triangle=(q3=(0, 3),L8=(0, 11),L9L8=(1, 7),L4=(0, 7)); identity=L9L8=T*L4; carry=1
+address_semiconjugacy_checks=169; addresses=(q3=2234474,q11=3348353,q7=378009); identity=A5*A3=A8; holonomy=0
+carry_Fourier_holonomy_exponents=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12); all_12_nontrivial_characters_detect=1
+semantic_leg=THM2835_PINNED:449_QA(q11,a)_to_QAB(q7,a+1); macro_leg=THM2847_PINNED:20_cell_E3_only_horn
+oriented_carry_derivative=449*(delta1-delta0); first_carry_rank=12; all_12_charged_characters_nonzero=1; full_ancestry_derivative_rank=371292; augmentation_adic_order=1; signed_l1=898
+frame=(det=-201601,rank=4); E3_rank=3; kernel=(0, 0, 0, 1); complement_on_kernel=449
+flat_intertwiner_consequence=F*T=F; sharp_hostile=F0(a,q)=q; faithful_first_carry_sidecar_min_states=13; faithful_q_and_carry_joint_min_states=169; equality=fibrewise_C13_torsor; full_ancestry_fidelity_cost_per_q=13^5
+scope=coefficient_nerve_and_realization_obstruction_only; no_physical_E3_contraction=1; no_row_or_LRC14_conclusion=1
+ALL EXACT CHECKS PASSED

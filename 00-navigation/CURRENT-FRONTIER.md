@@ -87,20 +87,16 @@ lemma.  Its inverse is signed and only the unrotated horn response is
 physical, so the basepoint/`E3` clutch remains.  Ledger `165`; no row is
 excluded.
 
-THM-2847 puts an exact transverse edge on that debt.  The common q3/q11
-endpoint bank has `42` cells, with a `20`-cell E3-only horn; its fine
-addresses differ by the affine lift `A_3`.  The imported `449` columns give a
-rank-four E3/complement frame, while the E3 macro gate has rank three with the
-QAB column as kernel.  The sequence splits algebraically over
-`Q(zeta_1183)`, so the remaining obstruction is specifically a lawful
-macro-truth/semantic-word realization intertwiner, not another rank or
-Fourier-support calculation.  Ledger `165`.
-
-THM-2852 pays spectral rank across the normalized THM-2807 three-address
-mask (all `13^6` characters), all six THM-2829 borrow-aware arrows (all
-`13^5` characters), and every Cayley tournament on an odd finite `p`-group.
-These are convolutional units with signed inverses, not physical actions;
-the live obstruction is still the target-active semantic/carry intertwiner.
+THM-2847 finds a `42`-cell q3/q11 bank and `20`-cell E3-only horn: its
+addresses differ by `A_3`, while the imported `449` columns have rank four
+but the E3 gate has rank three with QAB kernel.  THM-2851 identifies the
+higher defect: `L_9L_8=T L_4` has one ancestry carry but `A_5A_3=A_8` is
+flat, so flat equivariance kills `T`; fidelity costs a sharp 13-state fibre
+(`169` jointly), while `(Z-1)h_L` has norm `898` and ranks `12/371292`.
+THM-2852 gives full signed convolution rank for the three-address mask, six
+borrow-aware arrows, and odd-`p` Cayley tournaments.  These algebraic
+splittings/units are not physical actions: lawful oriented-current access,
+a carry/response basepoint, and macro transport remain.  Ledger `165`.
 
 ### Independent routes that remain live
 
