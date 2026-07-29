@@ -33,6 +33,11 @@ from ak_strict_search import XFULL, POOL3, POOL5, X0
 MERGE = "M"
 
 
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
+
+
 class Mode3Instance:
     """dims + slots: slots[i0][(prefix, suffix)] ∈ {label, MERGE}; absent = none."""
 
@@ -198,7 +203,7 @@ def anneal(dims, steps, seed, log=print):
             if s < best_s:
                 chk = Mode3Instance(dims, ns, nT0, cand.Rbase)
                 ok, _ = try_force(chk)
-                assert ok
+                require(ok, "annealing record failed exact forcing replay")
                 best, best_s = cand, s
                 log(f"  [{dims} seed{seed} step{step}] NEW BEST {s} "
                     f"= {float(s):.4f} m={cand.m()} r={cand.r()} "
@@ -303,7 +308,7 @@ def anneal_sameh(dims, steps, seed, log=print):
             if s < best_s:
                 chk = Mode3Instance(dims, expand(ng), nT0, cand.Rbase)
                 ok, _ = try_force(chk)
-                assert ok
+                require(ok, "same-H record failed exact forcing replay")
                 best, best_s = cand, s
                 log(f"  [SAMEH {dims} seed{seed} step{step}] NEW BEST {s} "
                     f"= {float(s):.4f} m={cand.m()} r={cand.r()} "
@@ -380,7 +385,7 @@ def anneal_steponly(dims, steps, seed, log=print):
             if s < best_s:
                 chk = Mode3Instance(dims, expand(ng), nT0, cand.Rbase)
                 ok, _ = try_force(chk)
-                assert ok
+                require(ok, "step-only record failed exact forcing replay")
                 best, best_s = cand, s
                 log(f"  [STEPONLY {dims} seed{seed} step{step}] NEW BEST {s} "
                     f"= {float(s):.4f} m={cand.m()} r={cand.r()} "
