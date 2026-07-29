@@ -226,6 +226,46 @@ branches still needing nonscalar certificates; its membership alone proves
 nothing.  This is the proof-obligation analogue of THM-753's safe-peel core,
 not a tournament obtained by forcing pairwise orientations.
 
+### Longest-component singleton seal
+
+For the LRC danger comb
+
+```text
+D_w={t in R/Z : ||wt||<=1/14},
+```
+
+each tooth is a closed interval of length `1/(7w)`.  Let `R` be a nonempty
+finite union of intervals and let `lambda` be the length of its longest
+connected component.  If one comb covers `R`, then it covers that entire
+component.  A connected interval contained in the disjoint union `D_w`
+lies in one tooth, so necessarily
+
+```text
+lambda<=1/(7w),       w<=floor(1/(7 lambda)).             (7f)
+```
+
+Thus the one-label leaves of the residual ladder have an exact geometric
+cutoff independent of discrepancy.  It is the literal toothpick scale:
+a tooth cannot cover a longer residual needle.
+
+For an interval component `(a,b)` in a fixed lift of the circle, containment
+in `D_w` is equivalent to the existence of an integer `q` with
+
+```text
+wb-1/14<=q<=wa+1/14.
+```
+
+Consequently the exact noncontainment test is
+
+```text
+ceil(wb-1/14)>floor(wa+1/14).                            (7g)
+```
+
+Equations `(7f)` and `(7g)` turn a singleton residual obligation into a
+finite integer ledger.  They supplement rather than replace the
+discrepancy cutoff: discrepancy controls high cores and multi-label tails,
+while the longest-component law is sharper at the final one-label leaf.
+
 ## 4. Literal residual recursion
 
 Assume `(6)`, and choose an integer
