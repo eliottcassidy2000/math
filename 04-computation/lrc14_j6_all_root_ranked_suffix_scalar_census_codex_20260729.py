@@ -120,23 +120,8 @@ EXPECTED_EXTREMA: tuple[object, ...] | None = (
     ),
     (378, (4, 8, 10, 11, 12, 13, 14), 16, 2, "55/1323"),
 )
-EXPECTED_LEDGER_DIGEST: str | None = (
-    "6579713e351ab89ea26c8a9e0178c6aacbd0011107d984813cb621e39b7d8ff0"
-)
-EXPECTED_STRATUM_DIGESTS: tuple[tuple[str, str], ...] | None = (
-    (
-        "low",
-        "f80b53fefc96bbffba5ee6772c443474a74abb52fa8b7c13b138e2d27d9364c7",
-    ),
-    (
-        "one",
-        "616cc320e02a96e94b79f14d86efd55593eb06bca4f5237d7aa1dad8c83c3a84",
-    ),
-    (
-        "both",
-        "15a0440ec04159adac967812a424f8a6a4be6da26d06ed04a7eac666b60c7894",
-    ),
-)
+EXPECTED_LEDGER_DIGEST: str | None = None
+EXPECTED_STRATUM_DIGESTS: tuple[tuple[str, str], ...] | None = None
 EXPECTED_TERMINAL_BODIES: tuple[tuple[int, ...], ...] | None = (
     (1, 2, 3, 4, 5, 6, 13),
     (1, 2, 3, 4, 6, 7, 14),
@@ -167,6 +152,12 @@ EXPECTED_PARITY_COUNTS: tuple[int, ...] | None = None
 EXPECTED_PARITY_STRATUM: tuple[tuple[object, ...], ...] | None = None
 EXPECTED_PARITY_RANK: tuple[tuple[object, ...], ...] | None = None
 EXPECTED_PARITY_EXTREMUM: tuple[object, ...] | None = None
+EXPECTED_ROOT_PARITY_COUNTS: tuple[int, ...] | None = None
+EXPECTED_ROOT_PARITY_STRATUM: tuple[tuple[object, ...], ...] | None = None
+EXPECTED_ROOT_PARITY_EXTREMA: tuple[tuple[object, ...], ...] | None = None
+EXPECTED_ROOT_PARITY_CUTOFF_QUANTILES: tuple[
+    tuple[int, int], ...
+] | None = None
 THM2895_ROOTS = (
     (2, 8, 9, 10, 11, 13, 14),
     (1, 3, 9, 10, 11, 12, 14),
@@ -341,6 +332,13 @@ def profile_root(body: tuple[int, ...]) -> dict[str, object]:
         f"root reconstruction changed: {body}",
     )
     root["good"] = good
+    root_q1, root_q1_speed = root["top"][0]
+    root_parity_margin = F(2, 7) * mass - root_q1
+    root_parity_cutoff = (
+        ceiling(5 * S2 * components / (7 * root_parity_margin)) - 1
+        if root_parity_margin > 0
+        else None
+    )
     branches = tuple(
         profile_branch(root, rank)
         for rank in range(1, root["adaptive_k"] + 1)
@@ -352,6 +350,12 @@ def profile_root(body: tuple[int, ...]) -> dict[str, object]:
         "stratum": root["stratum"],
         "K": root["adaptive_k"],
         "gate_margin": root["adaptive_margin"],
+        "m": mass,
+        "r": components,
+        "q1": root_q1,
+        "q1_speed": root_q1_speed,
+        "root_parity_margin": root_parity_margin,
+        "root_parity_cutoff": root_parity_cutoff,
         "branches": branches,
         "open_ranks": open_ranks,
         "closed_ranks": closed_ranks,
@@ -403,6 +407,53 @@ def parity_group_summary(
         minimum_row["body"],
         minimum_row["rank"],
         minimum_row["apex"],
+    )
+
+
+def root_parity_group_summary(
+    roots: list[dict[str, object]],
+    key: object,
+) -> tuple[object, ...]:
+    """Summarize the THM-2895 p=6 singleton gate on a root group."""
+
+    require(roots, f"empty root parity group: {key}")
+    minimum = min(
+        roots,
+        key=lambda row: (
+            row["root_parity_margin"],
+            row["body"],
+        ),
+    )
+    return (
+        key,
+        len(roots),
+        sum(row["root_parity_margin"] > 0 for row in roots),
+        sum(row["root_parity_margin"] <= 0 for row in roots),
+        ftext(minimum["root_parity_margin"]),
+        minimum["body"],
+        minimum["q1_speed"],
+    )
+
+
+def nearest_rank_quantiles(
+    values: list[int],
+    percentages: tuple[int, ...],
+) -> tuple[tuple[int, int], ...]:
+    """Return deterministic nearest-rank order statistics."""
+
+    require(values, "empty quantile list")
+    ordered = sorted(values)
+    size = len(ordered)
+    return tuple(
+        (
+            percentage,
+            ordered[
+                0
+                if percentage == 0
+                else ceiling(F(percentage * size, 100)) - 1
+            ],
+        )
+        for percentage in percentages
     )
 
 
@@ -547,6 +598,67 @@ def main() -> None:
             ftext(parity_minimum_row["top5"][0][0]),
         ),
     )
+    root_parity_counts = (
+        len(roots),
+        sum(root["root_parity_margin"] > 0 for root in roots),
+        sum(root["root_parity_margin"] <= 0 for root in roots),
+    )
+    root_parity_stratum = tuple(
+        root_parity_group_summary(
+            [root for root in roots if root["stratum"] == name],
+            name,
+        )
+        for name in ("low", "one", "both")
+    )
+    root_parity_positive = [
+        root for root in roots if root["root_parity_margin"] > 0
+    ]
+    root_parity_failures = [
+        root for root in roots if root["root_parity_margin"] <= 0
+    ]
+    minimum_root_parity_positive = min(
+        root_parity_positive,
+        key=lambda row: (
+            row["root_parity_margin"],
+            row["body"],
+        ),
+    )
+    closest_root_parity_failure = max(
+        root_parity_failures,
+        key=lambda row: (
+            row["root_parity_margin"],
+            tuple(-x for x in row["body"]),
+        ),
+    )
+    worst_root_parity_failure = min(
+        root_parity_failures,
+        key=lambda row: (
+            row["root_parity_margin"],
+            row["body"],
+        ),
+    )
+    root_parity_extrema = tuple(
+        (
+            ftext(root["root_parity_margin"]),
+            root["body"],
+            root["q1_speed"],
+            ftext(root["m"]),
+            root["r"],
+            root["root_parity_cutoff"],
+        )
+        for root in (
+            minimum_root_parity_positive,
+            closest_root_parity_failure,
+            worst_root_parity_failure,
+        )
+    )
+    root_parity_cutoff_quantiles = nearest_rank_quantiles(
+        [
+            root["root_parity_cutoff"]
+            for root in root_parity_positive
+        ],
+        (0, 25, 50, 75, 90, 95, 99, 100),
+    )
     nonmonotone_roots = sum(
         bool(root["closed_ranks"])
         and bool(root["open_ranks"])
@@ -639,10 +751,10 @@ def main() -> None:
     )
 
     digest = hashlib.sha256()
-    digest.update(b"LRC14/j6/all-root-ranked-suffix-scalar/v1\n")
+    digest.update(b"LRC14/j6/all-root-ranked-suffix-scalar/v2\n")
     stratum_hashes = {
         name: hashlib.sha256(
-            f"LRC14/j6/all-root-ranked-suffix-scalar/{name}/v1\n".encode()
+            f"LRC14/j6/all-root-ranked-suffix-scalar/{name}/v2\n".encode()
         )
         for name in strata
     }
@@ -651,6 +763,10 @@ def main() -> None:
             f"ROOT={','.join(map(str, root['body']))};"
             f"S={root['stratum']};K={root['K']};"
             f"gate_margin={ftext(root['gate_margin'])};"
+            f"m={ftext(root['m'])};r={root['r']};"
+            f"q1={root['q1_speed']}:{ftext(root['q1'])};"
+            f"p6_margin={ftext(root['root_parity_margin'])};"
+            f"p6_cutoff={root['root_parity_cutoff']};"
             f"closed_ranks={root['closed_ranks']};"
             f"open_ranks={root['open_ranks']}\n"
         ).encode()
@@ -724,6 +840,27 @@ def main() -> None:
             parity_extremum == EXPECTED_PARITY_EXTREMUM,
             "parity-eligibility extremum changed",
         )
+    if EXPECTED_ROOT_PARITY_COUNTS is not None:
+        require(
+            root_parity_counts == EXPECTED_ROOT_PARITY_COUNTS,
+            "root parity-eligibility counts changed",
+        )
+    if EXPECTED_ROOT_PARITY_STRATUM is not None:
+        require(
+            root_parity_stratum == EXPECTED_ROOT_PARITY_STRATUM,
+            "root parity-eligibility stratum census changed",
+        )
+    if EXPECTED_ROOT_PARITY_EXTREMA is not None:
+        require(
+            root_parity_extrema == EXPECTED_ROOT_PARITY_EXTREMA,
+            "root parity-eligibility extrema changed",
+        )
+    if EXPECTED_ROOT_PARITY_CUTOFF_QUANTILES is not None:
+        require(
+            root_parity_cutoff_quantiles
+            == EXPECTED_ROOT_PARITY_CUTOFF_QUANTILES,
+            "root parity-cutoff quantiles changed",
+        )
     require(
         set(terminal_bodies).isdisjoint(THM2895_ROOTS),
         "scalar terminal roots overlap the four THM-2895 roots",
@@ -744,6 +881,13 @@ def main() -> None:
     print(f"parity_eligibility_stratum={parity_stratum}")
     print(f"parity_eligibility_rank={parity_rank}")
     print(f"parity_eligibility_extremum={parity_extremum}")
+    print(f"root_parity_eligibility_counts={root_parity_counts}")
+    print(f"root_parity_eligibility_stratum={root_parity_stratum}")
+    print(f"root_parity_eligibility_extrema={root_parity_extrema}")
+    print(
+        "root_parity_cutoff_quantiles_nearest_rank="
+        f"{root_parity_cutoff_quantiles}"
+    )
     print(f"extrema={extrema}")
     print(f"complete_ledger_sha256={ledger_digest}")
     print(f"stratum_ledger_sha256={stratum_digests}")
