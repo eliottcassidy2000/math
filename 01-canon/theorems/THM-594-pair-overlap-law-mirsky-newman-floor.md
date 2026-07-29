@@ -63,7 +63,7 @@ This is the continuous twin of the Davenport–Mirsky–Newman–Rado theorem (n
 
 ## Part D — the Parseval defect identity
 
-`∫(C − A)² = ∫C² − A² = A + 2Φ − A²` (since `∫C² = ∫C + 2·Σ_{v<w}|D_v ∩ D_w|` for the integer-valued `C`; `Φ` exact by Part B). Moreover, isolating the divisor-minimal frequency `±w`:
+`∫(C − A)² = ∫C² − A² = A + 2Φ − A²` (since `∫C² = ∫C + 2·Σ_{v<w}|D_v ∩ D_w|` for the integer-valued `C`; compute `Φ` by the corrected exact law LEM-042(A), not the refuted Part B). Moreover, isolating the divisor-minimal frequency `±w`:
 ```
 ∫(C − A)² ≥ 2 sin²(2πr)/π².
 ```
@@ -83,7 +83,7 @@ Verified: ten structured 7-clusters (consecutive, shifted, odds, divisor chains/
 
 ## Honest scope
 
-- Parts A–D are identities/classical summation — complete proofs, exact verification.
+- Parts A and C–E survive as identities/classical summation; Part B is historical and refuted by MISTAKE-327.
 - Part C is a full proof of impossibility of finite exact tiling; it does NOT bound how *close* a finite system can come to tiling on a sub-region (the quantitative local version — how fast `∫_{L_low} D_F` can approach 0 along divisor chains — is the remaining open leg of the tower floor, HYP-3835 residual (2)).
 - Part E's constant is weak; its role is to certify positivity at the critical mass where all mass-only methods return 0.
 
