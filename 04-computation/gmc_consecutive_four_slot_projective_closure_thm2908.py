@@ -69,17 +69,6 @@ def has_no_residue_root(polynomial: sp.Poly, prime: int) -> bool:
     return True
 
 
-def first_root_free_prime(polynomial: sp.Poly) -> int | None:
-    return next(
-        (
-            prime
-            for prime in sp.primerange(5, 5000)
-            if has_no_residue_root(polynomial, prime)
-        ),
-        None,
-    )
-
-
 dependency = Path(__file__).with_name(
     "gmc_all_shift_cubic_null_endpoint_holonomy_thm2879.py"
 )
@@ -370,10 +359,11 @@ for factor, exponent in resultant_factors:
             root_free_prime = None
         else:
             certificate = "root-free-mod-p"
-            root_free_prime = first_root_free_prime(factor_poly)
+            root_free_prime = {65: 43, 203: 83}.get(degree)
             require(
-                root_free_prime is not None,
-                f"no root-free prime found for degree {degree}",
+                root_free_prime is not None
+                and has_no_residue_root(factor_poly, root_free_prime),
+                f"fixed root-free-prime certificate failed for degree {degree}",
             )
     factor_records.append(
         (
