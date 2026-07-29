@@ -6,16 +6,16 @@ THM-2176.  This note is intended for audit and possible later routing.
 
 ## 1. Universal ordered continuation
 
-Let `(M,+,0)` be a commutative monoid, let `(Y,<=)` be a poset, and let
-`f:M->Y`.  Define
+Let `(M,+,0)` be a monoid (not necessarily commutative), let `(Y,<=)` be a
+poset, and let `f:M->Y`.  We use right continuations and define
 
 ```text
 x <=_f^ctx y
     iff f(x+z)<=f(y+z) for every z in M.                 (1)
 ```
 
-Then `<=_f^ctx` is the largest translation-compatible preorder contained in
-the pullback of `<=` along `f`.
+Then `<=_f^ctx` is the largest right-translation-compatible preorder
+contained in the pullback of `<=` along `f`.
 
 Indeed, reflexivity and transitivity hold pointwise.  If (1) holds, then for
 every `a,z`,
@@ -175,19 +175,20 @@ one Cartesian optimum: it does not imply the robust all-context condition.
 ## 5. Finite-group context tax: `C2`, `C3`, and `V4`
 
 There is a uniform exact control behind the small groups in the user's
-prompt.  Let `G` be a finite abelian group with its discrete metric and
+prompt.  Let `G` be a finite group with its discrete metric and
 
 ```text
 f(e)=0,             f(x)=1 for x!=e.
 ```
 
-For distinct `x,y`, the unique context at which
+Writing the operation multiplicatively for this paragraph, for distinct
+`x,y` the unique right context at which
 
 ```text
-f(x+z)>f(y+z)
+f(xz)>f(yz)
 ```
 
-is `z=-y`.  Therefore:
+is `z=y^(-1)`.  Therefore:
 
 ```text
 the continuation quotient is an |G|-element antichain;
@@ -196,15 +197,15 @@ the minimum order-complete context dictionary has size |G|.  (13)
 ```
 
 The last assertion follows because order-completeness must refute
-`x<=y` for every ordered pair `x!=y`, forcing `-y` into the dictionary;
+`x<=y` for every ordered pair `x!=y`, forcing `y^(-1)` into the dictionary;
 the full group works.
 
 Thus `C2` gives the last cubical complete graph `K2`, while `C3` gives the
 first non-bipartite complete graph `K3`.  The binary and ternary taxes really
 are two and three, but they are taxes for two different finite carriers.
-The free product `C2*C3` does not identify them on one finite object: with
-the same discrete response its context tax is infinite, and any finite
-quotient necessarily forgets words.
+The same proof applies directly to the infinite group `C2*C3`: with the
+discrete response its context tax is infinite, and any finite quotient
+necessarily forgets words.
 
 ### The affine `V4` control
 
