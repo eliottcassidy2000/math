@@ -324,6 +324,80 @@ per stage, while THM-2895 packages two stages at a time as `5->3->1` or
 `6->4->2`.  Both stop at `p=7`, where their common initial demand is the
 impossible strict cap `A_1<h/7` on a rational LRC carrier.
 
+### Overlap-credit dual and the hostile star/triangle shadow
+
+The matching invoice has an exact dual description.  Put
+
+```text
+i(x,y)=mu(C intersect D_x intersect D_y),
+S(Q)=sum_(v in Q)c(v),
+```
+
+and let `nu_j(Q)` be the maximum total `i`-weight of a perfect matching
+when `j` is even and of a near-perfect matching when `j` is odd.  Pairwise
+inclusion--exclusion, summed over the disjoint matching blocks, gives
+
+```text
+phi_j(Q)=S(Q)-nu_j(Q).                                    (19f)
+```
+
+Thus the factor-critical cap is not fundamentally a minimum-union problem.
+It is a maximum **overlap-credit** matching problem: singleton invoices are
+charged first, and disjoint intersections are the credits that can be
+deducted without double-using a label.
+
+Uniformly averaging the legal matchings gives a useful closed relaxation.
+Every edge belongs to a proportion `1/(j-1)` of the perfect matchings of an
+even `j`-set, and to a proportion `1/j` of the near-perfect matchings of an
+odd `j`-set.  Hence, for `j>=2`,
+
+```text
+nu_j(Q)>=
+  (1/(j-1)) sum_({x,y} subset Q)i(x,y),       j even,
+  (1/j)     sum_({x,y} subset Q)i(x,y),       j odd.       (19g)
+```
+
+This is weaker than solving the weighted matching but can be evaluated
+from aggregate pairwise overlap.
+
+There is also an exact structural shadow of every hostile set.  Write
+`j=2m` or `j=2m+1`, suppose
+
+```text
+phi_j(Q)>=h,                 d(Q)=S(Q)-h,
+```
+
+and form the graph on `Q` whose edges satisfy
+
+```text
+i(x,y)>d(Q)/m.                                           (19h)
+```
+
+Then this graph has matching number at most `m-1`.  Indeed, `m` disjoint
+edges satisfying `(19h)` would be a legal perfect or near-perfect matching
+of overlap weight greater than `d(Q)`, while `(19f)` and hostility give
+`nu_j(Q)<=d(Q)`.
+
+For the live five-slot case `j=5`, the graph of edges with
+
+```text
+i(x,y)>(S(Q)-h)/2                                      (19i)
+```
+
+therefore has matching number at most one.  Every simple graph with
+matching number at most one is contained either in a star or in a triangle:
+two incident edges fix a possible center; any edge avoiding that center
+must join their other endpoints, after which no edge using an outside
+vertex is possible.  Consequently every hostile five-set has a
+star-or-triangle heavy-overlap shadow.  This is a necessary obstruction,
+not a sufficient certificate of covering.
+
+The shadow explains the right binary-relation object.  Its vertices are
+speed obligations, its symmetric edge weight is literal overlap credit,
+and its theorem-bearing invariant is matching deficiency together with the
+star/triangle sidecar.  Orienting the edges as a tournament would destroy
+ties and add a gauge while forgetting the disjointness obstruction.
+
 There is a cheap finite-tail gate for `M_(2,2)` on an LRC carrier.  Suppose
 
 ```text
