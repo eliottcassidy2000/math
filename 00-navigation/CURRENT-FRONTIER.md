@@ -1,7 +1,7 @@
 # Current Mathematical Frontier
 
-**Rolling state — refreshed 2026-07-29.** This supersedes dated snapshots; linked theorems are proof sources, while this file records composition and residuals.
-Status: **PROVED** in-repo proof; **CITED** scoped import; **FINITE-EXACT** exhaustive stated universe; **VERIFIED** reproducible evidence; **CONDITIONAL**, **OPEN**, **REFUTED**, and **SUPERSEDED** are literal.
+**Rolling state — 2026-07-29.** Linked theorems are proof sources; this file records composition and residuals.
+Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -10,26 +10,18 @@ Status: **PROVED** in-repo proof; **CITED** scoped import; **FINITE-EXACT** exha
 **OPEN.** The standard reduction has 13 nonzero relative speeds; known work
 settles at most 13 total runners.  The residue is not a routine finite scan.
 
-THM-2051/2052 reduce a counterexample to a support-`3..5`, height-`2^20`
-relation and a bounded sparse code of rank at least eleven.  Rank twelve is
-a finite maximal-minor box; rank eleven is a two-anchor star retaining the
-deck/owner/clock/phase/endpoint sidecars.  THM-741/2883 now prove the complete
-near-AP four-slot rung: all `2002/2002` nine-speed bodies in `{1,...,14}`.
-This does not prove unrestricted LRC(14).  Failed gates in the separate
-relation route are **uncertified**, not unsafe.
+THM-2051/2052 leave a bounded rank-`>=11` sparse code with required sidecars;
+uncertified relation gates are not unsafe.  Separately, THM-741/2883 prove all
+`2002` near-AP four-slot roots, not unrestricted LRC(14).
 
 ### Proved reductions and terminals
 
 - **CITED:** LRC through 13 total runners; see
   [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
-- **PROVED + FINITE-EXACT:** THM-741/2883 split the near-AP roots as
-  `584` top-four-positive, `816` finite ranked heads, and `602` ranked-apex
-  transversal closures.  THM-738 supplies any branch acquiring a tenth
-  in-window speed.  Consequently a bad anchored integer instance, after
-  taking absolute relative speeds and primitive gcd normalization, must have
-  thirteen distinct speeds and ninth order statistic at least `15`.  The
-  statement is anchored at the runner being tested, not simultaneous over
-  every recentering.
+- **PROVED + FINITE-EXACT:** THM-741/2883 close `584+816+602=2002`; THM-738
+  handles small speeds.  Thus a bad anchored primitive row has 13 distinct
+  absolute speeds with `v_9>=15` (not all anchors).  THM-2885 gives all `3003`
+  next-rung bodies a top-ten gate; apex closure is open.
 - **PROVED:** THM-965/2051--2092/2074 give the relation, pair floor, rank atlas
   and ledger; THM-2148/2168 reach scalar `5+3`.  THM-2054 decorrelates
   recorded margins at `H=2^19`, subject to MISTAKE-080/082's shape-specific
