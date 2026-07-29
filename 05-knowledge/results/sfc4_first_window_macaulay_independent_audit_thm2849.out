@@ -1,0 +1,9 @@
+THM-2849 INDEPENDENT MACAULAY AUDIT -- exact referee
+status=INDEPENDENTLY-VERIFIED-EXACT
+engine=standard-library sparse F_p elimination; opposite pivot order
+prime=1000003 primality=PASS denominator_gate=PASS
+exact_Q_direct_controls=18 mean_controls=6
+full_census_cells=1820 rank_range=(36,36)
+independent_digest_sha256=becbc51a7eeeb1ded8cea45d11a497a07427e38b789ee9767f9f17f963e4c10f
+primary_digest_match=PASS deletion_rank=30 common_line_rank=21
+mod_p_lifting_and_projective_emptiness_audit=PASS
