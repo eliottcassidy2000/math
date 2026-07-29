@@ -1,0 +1,10 @@
+THM-2946 full Macaulay maximal-minor gcd controls
+macaulay_shape=36x46;domain=21+15+10
+hilbert_series=1,3,5,6,5,3,1,0,0,0
+socle_degree=6;degree7_kernel=10;degree7_rank=36
+specialization_ranks=t0:35;t1:36
+six_point_norm=t*(t^2-6*t+12)*(t^3-12*t^2+48*t-56)
+simple_root=t0;derivative=-672
+specialization_can_gain_gcd=true
+control_digest=8d6f32a2050f18fc74be2a3835da1520592643db82d4cc6c719a5141d9013f10
+all_exact_checks=PASS
