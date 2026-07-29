@@ -2,8 +2,8 @@
 id: THM-2908
 title: "Consecutive four-slot projective resultant closure"
 status: >
-  PROVED CANDIDATE; EXACT FACTOR REPLAY AND FINAL INDEPENDENT AUDIT
-  PENDING.  For every n>=0, the first four factorial moments have no
+  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING FINAL INDEPENDENT
+  HOSTILE AUDIT.  For every n>=0, the first four factorial moments have no
   common nonzero projective zero on the consecutive support
   {n,n+1,n+2,n+3}.  A sign-blind degree-2804 direct resultant closes the
   entire finite moving-plane chart, including selector-zero fibres, and a
@@ -28,6 +28,8 @@ related:
   - THM-2906-atomic-tp3-does-not-orient-mixed-endpoint-holonomy
 script: 04-computation/gmc_consecutive_four_slot_projective_closure_thm2908.py
 output: 05-knowledge/results/gmc_consecutive_four_slot_projective_closure_thm2908.out
+script_sha256: 05d28bd0732d98bffaea93a59b9f8a268da7886c154db07ec2bd5ae4b4575674
+output_sha256: 074631d8ee8cda736c1eff0f70819b39ece4cf0d4601b17f3522a14664a4b842
 sharpness_script: 04-computation/gmc_consecutive_four_slot_sharpness_faces_thm2908.py
 sharpness_output: 05-knowledge/results/gmc_consecutive_four_slot_sharpness_faces_thm2908.out
 sharpness_script_sha256: 1e08b2e29de1dc6e3239412ac182927b4d9024df1dceff016cd03ba5d33abee1
@@ -37,8 +39,8 @@ hash_basis: LF-normalized bytes
 
 # THM-2908 -- consecutive four-slot projective resultant closure
 
-**PROVED CANDIDATE; EXACT FACTOR REPLAY AND FINAL INDEPENDENT AUDIT
-PENDING.**
+**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING FINAL INDEPENDENT
+HOSTILE AUDIT.**
 
 Put
 
@@ -547,8 +549,10 @@ python -O 04-computation/gmc_consecutive_four_slot_sharpness_faces_thm2908.py
 
 The small sharpness companion independently reconstructs `(39)--(41)`;
 its normal and optimized executions byte-match the stored output with the
-declared LF-normalized hashes.  Immutable hashes for the main
-degree-`2804` replay will be inserted after its normal, optimized and stored
-executions finish.
+declared LF-normalized hashes.  After the MISTAKE-328 repair normalized
+SymPy polynomial differences replaced structural expression comparisons in
+the infinity-chart gates.  The final main-companion normal and optimized
+executions now byte-match the stored output; their LF-normalized hashes are
+the values declared in frontmatter.
 
-**QED (candidate pending exact replay and final independent audit).**
+**QED (candidate pending final independent hostile audit).**
