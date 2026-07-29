@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `lrc14_q3_affine_defect_source_phase_annihilation_thm2876.py` ->
+  matching `.out` [THM-2876 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  The nearest q3 endpoint-rectangle defect is the
+  rank-one boundary
+  `1_A3 tensor (delta_12-delta_3)`.  Its endpoint numerators scale by
+  `K=10(omega^6-1)` on all 26 lawful probes, preserving the projective
+  ratio and normalized THM-2861 Hermitian edge.  The actual source scales
+  by the inverse phase `omega^7`, so the physical two-ended boundary
+  cancels termwise on every `10 x 26` address/sample pair.  `K` meets the
+  Bockstein generator only on the 13-localized cotangent augmentation
+  line and leaves the formal seam flat.  No physical current, row
+  exclusion, or LRC(14) proof follows.  LF-normalized `(script,output)`
+  hashes:
+  `(5124b82985b44dcfe52b6d484661f83494a60cbd6c3b3f53120c9a8ef12d0071,50bc1589bb1b1d8f452dc39a6d8af79f048df10f26113b9496041b9fe292fdfc)`.
 - `lrc14_endpoint_kummer_galois_bockstein_thm2874.py` and
   `lrc14_endpoint_kummer_hermitian_complement_addendum_thm2874.py`
   -> matching `.out` files [THM-2874 PROVED + VERIFIED-EXACT; PRIMARY

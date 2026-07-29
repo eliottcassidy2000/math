@@ -87,13 +87,12 @@ THM-2857 gives a free Galois `C13` endpoint torsor but only `K0`-linear
 carry.
 THM-2859 gives one q0 `Z^8` germ, not an action: its forest realizes only
 `{0,4,8,9}`, with no rootless hit, square, or literal q3/q11 attachment.
-THM-2861's Hermitian edge needs adjacent co-support; THM-2863 gives Prony
-splitting.  THM-2868 builds a 26-sample frequency-`chi_3`/Kummer atlas.
-THM-2874 clutches atlas/Galois over `F`, giving `C169` q3 and THM-2861's
-edge.  Common-node q7 complement is flat vs Bockstein
-`omega^3`; guard/q5 misses `(S,D)`.  q11 cancels and q7 is
-`E3`-zero.  Typed contraction, basepoint and rank-587 `V4` remain; ledger
-`165`.
+THM-2861/2863 give Hermitian/Prony; THM-2868 the 26-sample
+`chi_3`/Kummer atlas. THM-2874 `F`-clutches it to Galois/`C169`; its
+common-node q7 complement is flat vs Bockstein `omega^3`. THM-2876's q3
+affine defect keeps the edge endpoint-only; inverse source phase kills 260
+terms. Guard/q5 misses `(S,D)`; q11 cancels, q7 is E3-zero. Typed
+contraction/basepoint and rank-587 `V4` remain; ledger `165`.
 
 ### Independent routes that remain live
 
