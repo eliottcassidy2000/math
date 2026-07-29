@@ -964,8 +964,8 @@ If `(37k)` holds, then
 Y_D(A) subset D_(a_1) union D_(a_2).
 ```
 
-The two quotient speeds are distinct.  The sharp global pair floor from
-THM-594/THM-1166 therefore gives
+The two quotient speeds are distinct.  The repaired universal pair floor
+from THM-1166 (via LEM-042) therefore gives
 
 ```text
 mu(D_(a_1) union D_(a_2))
