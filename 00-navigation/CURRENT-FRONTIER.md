@@ -88,12 +88,11 @@ carry.
 THM-2859's q0 `Z^8` germ hits only `{0,4,8,9}`: no rootless hit, square,
 or literal q3/q11 attachment.
 THM-2861/2863 give Hermitian/Prony; THM-2868 its atlas. THM-2874
-`F`-clutches Galois/`C169`, but q7 stays flat. THM-2876 source phase kills
-the q3 affine edge; THM-2877 leaves one q0->q3 fibre. THM-2880 closes it:
-pullback keeps atlas/P but moves the right selector; pushforward cancels;
-fibre preimage and q3 ancestry are empty. THM-2878's u3 exit computes carry
-and `omega^3` but lacks physical QA->QAB. q11 cancels, q7 E3-zero; ledger
-`165`.
+`F`-clutches Galois/`C169`, but q7 stays flat. THM-2876 kills the q3 edge.
+THM-2880 closes THM-2877's q0->q3 fibre: pullback keeps atlas/P but moves
+the selector; pushforward/fibre/ancestry vanish. THM-2878's u3 computes
+carry; THM-2882's charged lift has vertical `omega^3` but is closed-flat.
+q7/q11 need independent origin parity; QA->QAB stays open. Ledger `165`.
 
 ### Independent routes that remain live
 

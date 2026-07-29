@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `lrc14_event_twisted_all_q_coefficient_carry_lift_thm2882.py` ->
+  matching `.out` [THM-2882 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  At the zero endpoint character, E3/complement truth
+  gives 13 full target atoms; the address-uniform u3 exit twists their
+  charged Prony line into an exact 169-state lift.  Its reduced q3/q11/q7 curvature is the vertical
+  `omega^3` clutch, while the honest closed lifted loop is flat.  The
+  construction externally reindexes frequency and acts by `diag(E,1)`;
+  recombined scalar transport fails on `144/169` edges.  Exact selector
+  XOR calculus shows q7/q11 require an origin-odd selector independent of
+  carry.  No constructed source-preserving `QA/QAB` operation currently
+  types it, so no row exclusion follows.  LF-normalized `(script,output)`
+  hashes:
+  `(3ed346e0c631b34bd61f0c4d27d7f161e8d35b70decfb95f5207c5f57893d005,0faa0a24f6ba8b6c88b6bbfc4f225e38667097b1a937d977741453499884901c)`.
 - `lrc14_thm741_rank_impossible_pair_residual_closure_codex_20260729.py`
   -> matching `.out` [THM-2881 PROVED + FINITE-EXACT + VERIFIED +
   INDEPENDENTLY PROOF-AUDITED].  The exact global two-comb union is the
