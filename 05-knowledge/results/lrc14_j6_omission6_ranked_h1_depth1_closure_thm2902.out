@@ -1,0 +1,9 @@
+LRC14 j6 omission-six ranked H1 depth-one closure
+E=(1, 2, 3, 4, 5, 10, 12);K=10;hard_ranks=(1,);rank=1;apex=22;prefix=(22,);h=689/2310;r=28;R4=18371/72765;margin=232/72765;level=1333/29106;cutoff=1774;scanned=1759;H1=49;parent=43;local=2;short=4;local_evals=95;local_certificates=((26, '1957/116424', ((28, '11/196'), (27, '7538/135135'), (16, '169/3080'), (18, '50/1001'))), (39, '64553/2522520', ((27, '2696/45045'), (18, '311/6006'), (28, '379/7644'), (40, '5773/120120'))));min_depth_margin=7949/3027024;core_digest=8e7695f12bd6fcf47a585a4fac96ddabc2ba4b61b4b9e5d616180be8e2337109;depth_digest=e1b338a95d3e2a2344db0ec542d22441bd764835ba5398d7e0ac85229e16bc6b;H1_labels=26,39,27,28,16,78,18,65,32,54,21,52,56,40,69,63,130,91,46,120,108,42,45,41,68,25,286,220,81,92,156,97,107,82,125,182,264,275,121,260,250,195,104,242,162,175,50,23,237
+E=(1, 2, 3, 4, 5, 12, 13);K=6;hard_ranks=(1,);rank=1;apex=22;prefix=(22,);h=4127/15015;r=22;R4=3380627/15135120;margin=26443/2162160;level=59953/1164240;cutoff=363;scanned=348;H1=6;parent=1;local=1;short=4;local_evals=5;local_certificates=((27, '228223/15135120', ((28, '71/1323'), (21, '9668/189189'), (40, '4091/83160'), (16, '1871/39312'))),);min_depth_margin=22991/5045040;core_digest=cd0bd27d3259507850aac604d7752c1804be6e7db09271b92c301f5018861d82;depth_digest=db3e2c332b80cbdeff5dc1716ae35ec2d0103a1e903136a71ba34c737deb3eb2;H1_labels=27,28,18,16,21,40
+closed_roots=((1, 2, 3, 4, 5, 10, 12), (1, 2, 3, 4, 5, 12, 13))
+disjoint_from_THM2895_THM2898_THM2899_THM2901=PASS
+complete_digest=7b173f9c5817ab6e73ddabba48bddf0f7d4714f7384ce034b23911e2056b5e96
+mode=LOCKED
+scope=two named seven-body roots;not the rung;not LRC14
+all_exact_controls=PASS
