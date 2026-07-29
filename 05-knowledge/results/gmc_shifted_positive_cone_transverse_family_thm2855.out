@@ -1,0 +1,15 @@
+SHIFTED POSITIVE-CONE TRANSVERSE FAMILY -- exact referee
+status=PROOF-COMPLETE-CANDIDATE+VERIFIED-EXACT
+tensor_controls=bilinear+cubic direct expansion depths1..3
+normalized_limit_line=6x-5y-1
+x_limit=1+5sqrt2/6 y_limit=1+sqrt2
+blowup_jacobian=1/4860
+x_first_correction=-(74184+52463sqrt2)/1296
+y_first_correction=-(14808+10495sqrt2)/216
+resultant_profile=positive_factors*Gram(y)^2*P15(y)
+P15_positive_root_count=1 for every integer n>=1
+linear_subresultant=A*x+C with A>0 C<0
+positive_transverse_solution_count=1 for every integer n>=1
+quartic_remainder_limit=3(208885+147704sqrt2)/262144>0
+moment4_escape=proved for all sufficiently large n only
+scope=moment-three hostile family; not a GMC2 counterexample
