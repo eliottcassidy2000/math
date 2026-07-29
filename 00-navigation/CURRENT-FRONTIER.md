@@ -214,9 +214,9 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   THM-2879/2890/2891 close consecutive cone-cutting planes.
   THM-2906/10/14/18: scalar holonomy reverses; high gaps have a local `C3`
   torsor with quartic-norm exit. Target Pluecker atlases.
-  THM-2849 closes 1,820 first-window supports through exponent `15`;
-  THM-2854 closes `k=1,2` on 252 supports in `{0,...,8}`, all by exact sharp
-  Macaulay rank.  THM-2860 identifies Euler-tangent cubic lines with Möbius
+  THM-2849/2854 give finite Macaulay boxes; THM-2908/2921 close every
+  translated four-subset of five consecutive exponents.  THM-2860 identifies
+  Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent
   `30`.  The unbounded shared-line, general norm, and scalar multiplier-access
   problems remain open.
