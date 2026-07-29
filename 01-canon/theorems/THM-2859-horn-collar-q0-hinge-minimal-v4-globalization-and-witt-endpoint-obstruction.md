@@ -33,6 +33,7 @@ related:
   - THM-2852-prime-power-orbit-spectrum-harvest-and-cayley-tournament-nonsingularity
   - THM-2861-endpoint-hermitian-edge-holonomy-and-semilinear-clutch-test
   - THM-2863-endpoint-prony-splitter-and-carry-character-three-intertwiner
+  - THM-2870-prime-power-convolution-versus-physical-diagonal-intertwiner-obstruction
 scripts:
   - 04-computation/lrc14_horn_collar_hinge_thm2859.py
   - 04-computation/lrc14_horn_collar_endpoint_carry_thm2859.py
@@ -234,6 +235,9 @@ local group-algebra statement, not a semisimple character decomposition.
 Independently, exact row reduction over `F_1000003` gives ranks
 `169,156,156,12` for `H`, the `Z` and `Z^8` currents, and the vertical
 projection, respectively.
+THM-2870 moreover proves that no invertible same-mask intertwiner can
+identify this unit convolution with the proper Boolean physical diagonal.
+Thus the rank statement is not an endpoint action.
 
 Because `gcd(8,13)=1`, `Z^8` is a generator of the abstract vertical
 endpoint `C_13`.  Thus a demand for the literally normalized label `Z`
