@@ -227,7 +227,9 @@ The verifier hash-pins the final THM-2904 source/output, the THM-2907
 census and endpoint output artifacts, and THM-2911's locked composition
 output.  It reconstructs all `11,842` parent rows, checks the complete
 filter/histogram controls `(2)`--`(3)`, and uses exact rational interval
-arithmetic throughout.  The child ledger semantic digest is
+arithmetic throughout.  Repository-text dependency hashes explicitly
+normalize CRLF to LF and reject lone carriage returns.  The child ledger
+semantic digest is
 
 ```text
 39f3a9fb8ec6447baf96512bee3ee174e2390639ab3bbf0a6a36dcb5cdf0274e.
@@ -237,7 +239,7 @@ Single-worker, eight-worker, and optimized eight-worker replays are
 byte-identical.  Final SHA-256 values are
 
 ```text
-source  12ff6b52949198d935762bdd3f278b8798fccc259bf8e663fdb53d4e3ddf36a6
+source  4859162ec9d03f7f711de99e97122c916e708adfdb8b86581e9e9534c735fa9f
 output  454d87c8beeb81405b031cce4b40bdda0d385cfcd9c48e6fcf4eb810cfc00c5a.
 ```
 

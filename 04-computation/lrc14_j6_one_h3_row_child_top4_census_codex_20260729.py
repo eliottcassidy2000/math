@@ -122,7 +122,14 @@ def require(condition: bool, message: str) -> None:
 
 
 def file_sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    """Hash repository text independently of LF/CRLF checkout policy."""
+
+    payload = path.read_bytes()
+    require(
+        b"\r" not in payload.replace(b"\r\n", b""),
+        f"{path.name}: unexpected lone carriage return",
+    )
+    return hashlib.sha256(payload.replace(b"\r\n", b"\n")).hexdigest()
 
 
 def unique_output_text(path: Path, prefix: str) -> str:
