@@ -2,8 +2,8 @@
 id: THM-2963
 title: "Next-prime Macaulay rank hostile and Kummer blindness"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT. The proposed all-width next-prime rank-at-least-35 criterion is
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. The proposed
+  all-width next-prime rank-at-least-35 criterion is
   false: at depth zero, support (0,5,6,10), and p=41, the full degree-seven
   Macaulay map has rank exactly 34, with two explicit projective common roots
   and a nonzero 34-minor. Two further rank-34 cells occur in the frozen
@@ -15,6 +15,12 @@ status: >
   nonvanishing on the physical no-real-support locus. No uniform one-prime,
   two-prime, or rank-at-least-34 theorem is claimed.
 source: codex-gmc-next-prime-rank-hostile-2026-07-29
+audit: >
+  Independent reconstruction, without importing the companion, reproduces
+  the three rank-34 cells, the explicit p=41 roots and determinant-12
+  minor, the 8,879-case census and histogram, and the repaired one-way
+  THM-2947 implication. Normal, optimized, and stored transcripts, declared
+  LF hashes, stderr, and documentation checks all pass.
 depends_on:
   - THM-2947-conjugate-pair-corank-parity-and-one-minor-resultant-gate
 related:
@@ -30,8 +36,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2963 -- next-prime Macaulay rank hostile and Kummer blindness
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This note audits the proposed all-width statement
 
@@ -295,3 +300,10 @@ LF-normalized SHA-256:
 script  e31072e4c2f60e0f74abf7f2db9f1e00d541c9e771dde158d3df2afc82e1e74c
 output  81318604fafcf2482ae59ba475f3f3adbdeb5e0eb6e1e37447ecb8f0f4eaa5ac
 ```
+
+The independent audit reconstructed the three hostile cells directly from
+the factorial moment forms, including the degree-two closed point over
+`F_61`, and independently recovered the complete rank histogram.  It also
+checked that denominator clearing, rather than a characteristic-zero
+conjugation argument modulo `p`, is exactly what makes the rank-`>=35`
+criterion one-way.
