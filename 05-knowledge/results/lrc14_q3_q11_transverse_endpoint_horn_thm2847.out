@@ -1,0 +1,16 @@
+Q3/Q11 TRANSVERSE NORMAL ENDPOINT EDGE
+status=VERIFIED-EXACT; target-relative only; no LRC14
+q3_full_cells=56; q11_full_cells=63; common_cells=42; first=(0, 5, 1); last=(12, 10, 1)
+q7_E3_only_horn_cells=20; horn_first=(0, 5, 1); horn_last=(12, 10, 1); q7_additional_q1_q2_loss_cells=22
+weighted_carrier=(source=((142004992589460, 142005019034340, 27581135604),),q3=((210737016331380, 210737042776260, 27581135604),),q11=((96184363316580, 96184389761460, 27581135604),))
+endpoint_supports=(origin00=(0, 3, 11),origin12=(0, 11)); endpoint_value=(231164267889491750, 630230755085920022); q3_q11_occupancy=((1, 0), (1, 1)); normalized_det=1
+q0_q3_q11_endpoint_QBQA_clutch=((1, 1, 0), (1, 0, 0), (1, 1, 449)); normalized_det=-449; word_column_status=imported_PROVED_T2835_whole-cylinder_count
+coefficient_horn_four_frame=((1, 1, 0, 0), (1, 0, 0, 0), (1, 1, 449, 0), (0, 0, 0, 449)); det=-201601; E3_support=(0, 3, 11); q7_E3_overlap=(); physical_macro_gated_frame=((1, 1, 0, 0), (1, 0, 0, 0), (1, 1, 449, 0), (0, 0, 0, 0)); scope=20_cell_E3_only_horn; first_rank_loss=q7_E3; complementary_E3_bit_is_whole_on_q7=1
+E3_mapping_cone=(image_rank=3,kernel_generator=(0, 0, 0, 1),complement_on_kernel=449); graded_E3_plus_complement_frame_rank=4; remaining_debt=lawful_macro_truth_block_contraction_or_intertwiner
+fine_addresses=(q3=2234474,q11=3348353); residue=(8,8); difference=1113879=3*13^5; A3(q3_address)=3348353
+label_edge=(delta_q=8,delta_beta=3); delta_q=7*delta_beta; beta(q)=2q is inverse to q=7t
+absolute_q_beta_address_torsor=((0, 0, 6716), (1, 2, 749302), (2, 4, 1491888), (3, 6, 2234474), (4, 8, 2977060), (5, 10, 3719646), (6, 12, 4462232), (7, 1, 378009), (8, 3, 1120595), (9, 5, 1863181), (10, 7, 2605767), (11, 9, 3348353), (12, 11, 4090939))
+unweighted_joint_q_t_graph_DFT_support=((0, 0), (1, 6), (2, 12), (3, 5), (4, 11), (5, 4), (6, 10), (7, 3), (8, 9), (9, 2), (10, 8), (11, 1), (12, 7)); weighted_character_class_counts=((0, 13), (1, 13), (2, 13), (3, 13), (4, 13), (5, 13), (6, 13), (7, 13), (8, 13), (9, 13), (10, 13), (11, 13), (12, 13)); unweighted_support_size=13; arbitrary_weight_has_13_restricted_character_values_repeated_on_13_cosets; point_mass_hostile_has_all_169_coefficients_nonzero=1
+signed_endpoint_edge_support=(3,); endpoint_scalar_reduction=(conductor=2366,exponents=(2203, 65)); fix_zeta13_Galois_hostile=(u=27,zeta1183_exponents=(624, 510),moved=(286, 757),difference_degree=757<phi1183=936); group_ring_over_inherited_K=c*z^3; normalized_Q_group_ring=z^3; inverse_monomial_exponent=10; all_13_DFT_characters_nonzero=1
+physical_target_intervals_disjoint=1; raw_weighted_source_nonempty=1; endpoint_source_allocation_and_common_H_face_not_supplied=1
+ALL EXACT CHECKS PASSED

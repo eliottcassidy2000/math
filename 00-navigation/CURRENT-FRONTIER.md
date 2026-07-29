@@ -81,6 +81,15 @@ lemma.  Its inverse is signed and only the unrotated horn response is
 physical, so the basepoint/`E3` clutch remains.  Ledger `165`; no row is
 excluded.
 
+THM-2847 puts an exact transverse edge on that debt.  The common q3/q11
+endpoint bank has `42` cells, with a `20`-cell E3-only horn; its fine
+addresses differ by the affine lift `A_3`.  The imported `449` columns give a
+rank-four E3/complement frame, while the E3 macro gate has rank three with the
+QAB column as kernel.  The sequence splits algebraically over
+`Q(zeta_1183)`, so the remaining obstruction is specifically a lawful
+macro-truth/semantic-word realization intertwiner, not another rank or
+Fourier-support calculation.  Ledger `165`.
+
 ### Independent routes that remain live
 
 - **Orthogonal routes.** THM-1017's AP-core extraction remains HYP-6820;
