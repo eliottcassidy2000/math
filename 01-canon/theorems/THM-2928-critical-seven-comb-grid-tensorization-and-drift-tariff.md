@@ -31,8 +31,14 @@ status: >
   occurrences; and local unit-needle set cover on Z/99Z and Z/98Z kills
   all 19.  Hence the literal four-aligned/three-drift branch is empty
   uniformly; the earlier septimal Z/49Z diagonal proof remains an
-  independent structural witness.  The critical two-torus carrier integral is positive
-  on every fixed seven-tail affine ray;
+  independent structural witness.  Uniformly in k aligned and p=7-k drift
+  tails, support transfer gives |S_D|/D <=(1-u_p)/u_k; an independently
+  audited exact census records the surviving body/divisor rows and a
+  divisor-Mobius formula counts their unordered denominator multisets.
+  For every upward status event, the exact real one-marginal transport
+  optimum is min(1,tau), where tau is the weighted fractional-cover value
+  of its minimal true clutter.  The critical two-torus carrier integral is
+  positive on every fixed seven-tail affine ray;
   uniformly, seven tails in one common canonical-ruler quotient block are
   safe once the quotient is at least 315,586.  Branches with four or more
   drifts remain open; this does not prove LRC(14).
@@ -76,6 +82,12 @@ three_drift_terminal_script: 04-computation/lrc14_three_drift_threshold_transpor
 three_drift_terminal_output: 05-knowledge/results/lrc14_three_drift_threshold_transport_terminal_thm2928.out
 three_drift_terminal_audit_script: 04-computation/lrc14_three_drift_terminal_local_incidence_audit_thm2928.py
 three_drift_terminal_audit_output: 05-knowledge/results/lrc14_three_drift_terminal_local_incidence_audit_thm2928.out
+support_transfer_ladder_script: 04-computation/lrc14_aligned_drift_support_transfer_ladder_thm2928.py
+support_transfer_ladder_output: 05-knowledge/results/lrc14_aligned_drift_support_transfer_ladder_thm2928.out
+support_transfer_ladder_audit_script: 04-computation/lrc14_aligned_drift_support_transfer_ladder_independent_audit_thm2928.py
+support_transfer_ladder_audit_output: 05-knowledge/results/lrc14_aligned_drift_support_transfer_ladder_independent_audit_thm2928.out
+upward_status_cover_script: 04-computation/lrc14_upward_status_fractional_cover_audit_thm2928.py
+upward_status_cover_output: 05-knowledge/results/lrc14_upward_status_fractional_cover_audit_thm2928.out
 affine_profile_script: 04-computation/lrc14_j7_affine_profile_min_frequency_thm2928.py
 affine_profile_output: 05-knowledge/results/lrc14_j7_affine_profile_min_frequency_thm2928.out
 ---
@@ -1273,6 +1285,93 @@ The local-current identity remains valid, but the two-drift branch no longer
 needs its growing numerator box: the coarser address quotient is already
 empty uniformly over all literal bodies and aligned shapes.
 
+### The all-`k` support-transfer ladder
+
+The support projection used above does not belong only to the two- and
+three-drift sectors.  Let `k` tails be aligned, let `p=7-k` be genuine
+drifts, and write their reduced clocks as
+
+```text
+z_i/L=c_i/d_i,       gcd(c_i,d_i)=1,       d_i>1,
+D=lcm(d_1,...,d_p),       a_i=c_iD/d_i.
+```
+
+Then `D|L`, and the quotient speeds `a_i=Dz_i/L` are distinct.  If `R_A`
+is the common safe set of the `k` aligned multipliers, the body-address
+projection is
+
+```text
+Y_D(A)=union_(r in S_D)(r+R_A)/D,
+mu(Y_D(A))=(|S_D|/D)mu(R_A).                         (37l+)
+```
+
+The pieces in `(37l+)` occupy distinct `1/D`-cells up to null endpoints.
+A cover forces `Y_D(A)` into the union of the `p` quotient danger combs.
+Writing `u_j` for the proved uniform safe-mass floor for `j` distinct
+combs gives
+
+```text
+mu(R_A)>=u_k,       mu(union_i D_(a_i))<=1-u_p,
+|S_D|/D <=(1-u_p)/u_k.                               (37l++)
+```
+
+The inequality is non-strict.  For `k=0`, take `R_empty=T` and `u_0=1`;
+the `p=0` all-aligned branch is separate.  With
+
+```text
+(u_0,...,u_7)
+=(1,6/7,66/91,55/91,558/1183,478/1365,61/273,15/154),
+```
+
+the exact necessary cutoffs and literal body/divisor census are
+
+```text
+k                0        1        2        3       4       5      6   7
+p                7        6        5        4       3       2      1   0
+cutoff       139/154  106/117  887/990  125/143   26/31  375/478 39/61 0
+rows          27,210   27,240   27,163   26,970  13,778   10,976  6,237 0.
+                                                               (37l+++)
+```
+
+These filters are not nested: for example `106/117>139/154`.  They are
+necessary quotient-address rows, not realized covers.
+
+There is also an exact count without enumerating denominator tuples.  For
+`p>=1`, let `a_p(D)` count nondecreasing `p`-tuples of divisors `d_i>1`
+with lcm exactly `D`.  The number of such multisets whose entries merely
+divide `e` is
+
+```text
+B_p(e)=binom(tau(e)+p-2,p)=sum_(f|e)a_p(f).
+```
+
+Divisor-poset Möbius inversion gives
+
+```text
+a_p(D)=sum_(e|D) mu(D/e) binom(tau(e)+p-2,p).        (37lM)
+```
+
+The resulting denominator-shape and body/divisor occurrence counts are
+
+```text
+k       denominator shapes               raw occurrences
+0       161,535,777,082,757               1,504,842,061,942,849
+1         3,095,010,121,875                  38,954,725,590,760
+2            50,874,159,718                     951,545,890,235
+3               694,921,995                      21,357,714,101
+4                 7,483,350                         298,255,882
+5                    56,419                           3,066,274
+6                       171                               6,237
+7                         0                                   0.
+```
+
+Here a shape is an unordered denominator multiset, and a raw occurrence is
+a `(body,D,multiset)` triple.  Numerators, directions, phases, physical
+speed packets, and cover realizability are not counted.  An independent
+referee reconstructs all `3,003` bodies and `251,536` body/divisor rows by
+an endpoint sweep and merged cyclic arcs, and recomputes `(37lM)` by
+downward divisor recurrence.
+
 ### Finite-ring Kakeya needles and the first three-drift sector
 
 The preceding transversal is one face of a general exact pushforward law.
@@ -1551,7 +1650,7 @@ only `(37tf)`.  If
 c_E=min(M,sum_i H_i(A_i+1_(i in E)))
 ```
 
-is the raw union capacity of status `E`, and
+is the raw union-capacity upper bound of status `E`, and
 
 ```text
 sigma_b=#{x in S_D:x=b mod t},
@@ -1599,14 +1698,178 @@ sum_E n_E=t,       sum_(E contains i)n_E=R_i,
 sum_(E:c_E>=y)n_E>=H_y for every y>0.                (37tg+)
 ```
 
-Conversely, `(37tg+)` is exactly the fractional feasibility condition.
-Indeed, one may introduce
-`x_(y,E)=#{b:sigma_b=y and status(b)=E}`; its row sums are `h_y`, its bit
-marginals are `R_i`, and `x_(y,E)=0` when `c_E<y`.  The nested-neighbourhood
-Hall criterion, or greedy matching after sorting loads and capacities,
-eliminates `x` and gives `(37tg+)`.  Thus the separate maxima in `(37tg)`
-are valid but may choose incompatible status tables at different
-thresholds.
+Conversely, `(37tg+)` is exactly the feasibility condition for this
+fractional capacity relaxation.  Introduce real variables `x_(y,E)>=0`;
+their row sums are `h_y`, their bit marginals are `R_i`,
+
+```text
+sum_y x_(y,E)=n_E,
+```
+
+and `x_(y,E)=0` when `c_E<y`.  The nested-neighbourhood Hall criterion,
+or greedy matching after sorting loads and capacities, eliminates `x` and
+gives `(37tg+)`.  Thus the separate maxima in `(37tg)` are valid but may
+choose incompatible status tables at different thresholds.
+
+### Upward status transport is exactly fractional cover
+
+The one-threshold optimization in `(37tg)` has a closed form for arbitrary
+drift arity.  Let `A` be an upward-closed family of subsets of `[p]`, let
+`r=(r_1,...,r_p) in [0,1]^p`, and define
+
+```text
+F_A(r)=max_mu mu(A),
+```
+
+where `mu` ranges over all laws on `2^[p]` with one-marginals `r_i`.  Let
+`H=min(A)` be the clutter of inclusion-minimal true sets and put
+
+```text
+C(H)={w>=0:sum_(i in H)w_i>=1 for every H in H},
+tau_H(r)=min_(w in C(H)) sum_i r_i w_i.
+```
+
+Then
+
+```text
+F_A(r)=min(1,tau_H(r)).                               (37tgC)
+```
+
+For the empty event take `tau=0`; for the full event, whose minimal clutter
+contains the empty set, the cover polyhedron is infeasible and
+`tau=+infinity`.
+
+The upper bound is immediate: for every `w in C(H)` and every state `E`,
+
+```text
+1_A(E)<=sum_(i in E)w_i,
+```
+
+because a true state contains a minimal true set.  Taking expectations and
+also using `mu(A)<=1` proves
+`F_A(r)<=min(1,tau_H(r))`.
+
+For attainment, first suppose `q=tau_H(r)<1`.  The dual fractional-packing
+problem is
+
+```text
+max sum_(H in H)lambda_H
+subject to sum_(H contains i)lambda_H<=r_i,       lambda_H>=0.
+```
+
+Choose optimal `w,lambda`, put mass `lambda_H` on each minimal true state
+`H`, and write
+
+```text
+q=sum_H lambda_H,       a_i=sum_(H contains i)lambda_H,
+s_i=r_i-a_i,            b=1-q,       Z={i:w_i=0}.
+```
+
+Complementary slackness gives `w_i s_i=0`, so all residual demand lies on
+`Z`.  No true state is contained in `Z`, since such a state would contain a
+minimal `H` of cover weight zero.
+
+If `s_i>b`, move
+
+```text
+theta_i=s_i-b
+```
+
+of the current true-event mass from states lacking `i` to the corresponding
+states with `i` added.  At the moment coordinate `i` is processed, the
+available mass is `q-a_i`, and
+
+```text
+theta_i=r_i-a_i-1+q<=q-a_i
+```
+
+is exactly `r_i<=1`.  Splitting atoms if necessary, these moves preserve
+the event by upward closure and leave residual marginals
+`s'_i=min(s_i,b)`, still supported on `Z`.  Realize the remaining mass `b`
+on `2^Z` by independent inclusions with probabilities `s'_i/b`.  Every
+such state is outside `A`, so the resulting law has the prescribed
+marginals and event mass `q`.
+
+Now suppose `tau_H(r)>=1`.  Consider the upward blocking polyhedron
+
+```text
+Q=conv{1_H:H in H}+R_+^p.
+```
+
+If `r` were outside `Q`, strong separation would give `u` with
+
+```text
+u.r<inf_(x in Q)u.x=min_(H in H)u(H).
+```
+
+The recession cone forces `u>=0`; the strict inequality and `r>=0` force
+the right side to be positive.  Normalizing `u` by that minimum would give
+a fractional cover of cost below one, a contradiction.  Hence
+`r>=sum_H alpha_H 1_H` coordinatewise for a probability vector `alpha`.
+Start with mass `alpha_H` on the true states `H` and add each coordinate
+`i` to mass `r_i-sum_(H contains i)alpha_H` of states currently lacking it.
+There is enough such mass because `r_i<=1`, and upward closure again
+preserves the event.  This constructs an all-true law with marginals `r`
+and proves `(37tgC)`.
+
+In the unnormalized `t`-fibre problem, with exact activity counts `R_i`,
+`(37tgC)` becomes
+
+```text
+max_(real status tables) sum_(E in A)n_E
+ =min(t,min_(w>=0, w(H)>=1)sum_i R_iw_i).             (37tgU)
+```
+
+Thus the `2^p`-cell real transport LP is exactly a fractional cover with
+`p` variables and one constraint per minimal heavy status.  Integer status
+tables are bounded above by the floor of `(37tgU)`; equality is not claimed
+without an integrality argument.
+
+This caveat is sharp.  Let `p=7`, let `H` be the seven lines of the Fano
+plane, take the upward event of containing a line, and set `t=3`, `R_i=1`
+for every point.  Summing the seven cover constraints, each point occurring
+on three lines, gives `3 sum_i w_i>=7`; the uniform cover `w_i=1/3`
+attains equality.  Hence `(37tgU)` has value `7/3`.  But an integer status
+table assigns each point to exactly one of three states.  Two true states
+would contain disjoint Fano lines, impossible because every two lines
+meet.  One true state is attainable, so the integer optimum is `1`, not
+even `floor(7/3)=2`.
+
+In the LRC application
+`A_y={E:c_E>=y}` is upward because the raw capacity upper bound `c_E` is
+monotone under adding active needles.  The formula is exact for each fixed
+threshold of the **real marginal relaxation**; it does not assert that the
+raw capacities, integer tables, arithmetic locations, or literal needle
+covers are realized.  The single-table, all-threshold condition `(37tg+)`
+remains strictly stronger.
+
+There is a useful equality upgrade in the common aligned phase.  Suppose the
+status bits are open activity conditions on `u`, with the stated
+one-marginals, and a cover would force the compact aligned-safe set `R_A`
+inside a **proper open** upward event `V`.  The fractional-cover theorem is
+an upper relaxation of the actual joint status law, while compactness and
+proper openness make containment strict in measure.  Hence
+
+```text
+u_k<=mu(R_A)<mu(V)<=min(1,tau_H(r)).                  (37tgO)
+```
+
+Thus `tau_H(r)<=u_k` already kills the branch; equality does not survive.
+For a single denominator `2<=d<7`, `(37tb)` gives activity marginal `d/7`.
+The denominators ruled out from being forced active throughout `R_A` by
+this one-marginal test are exactly
+
+```text
+k=1: {2,3,4,5,6},   k=2: {2,3,4,5},   k=3: {2,3,4},
+k=4: {2,3},         k=5: {2},          k=6: empty.   (37tgA)
+```
+
+Larger denominators are merely not excluded by this test; no containing
+phase is asserted to exist.
+This alphabet explains the recursive migration seen in the exact sectors:
+as `k` decreases, one new small denominator becomes activity-sensitive,
+while survivors with none of these denominators must be attacked in
+divisor fibres or by located arithmetic-progression shape.
 
 This distinction is already strict in the four-needle scale relevant to
 the next sector.  Take `D=28`, `t=2`, denominators `(4,4,28,28)`, and
@@ -1732,7 +1995,13 @@ Lorenz output     b1b5801c53411e3adf661e52765e040db29769076ab02b67168b5e9b087239
 terminal script   13e524e728736480798d52acc736afe0cbd7b651a487aeef5d771d2b5dfa1338
 terminal output   435c34b249255c8659e62e89e3a22e42b2fa8dd67c4cbd4b188d5e9806206f52
 audit script      4b2f85d59f018bda6d75f52cc399ec6e3282b3015d8dba748eac8f41208c2019
-audit output      0cd0ebb33a9cba143abf64ba9f5f18aa5da5dc63a5f74435ffb69698cf863af7.
+audit output      0cd0ebb33a9cba143abf64ba9f5f18aa5da5dc63a5f74435ffb69698cf863af7
+support script    8db781fb3e7dc8fdc4df2bf3c6d83869a9ffe52f41c7d70c25bbd0a9b0122bea
+support output    808ec922a881e1d6d9541539ee51ff520e44c4fa7c98208b315c82f91df59e81
+support audit     417830cff7a767227d93bbcee42ad57b75adf2b335dc5fa8fe50e85a972bb792
+audit output      43a73d9daa2beafb69541db6dc9bf205d9f4d9e4ac0ebf83a268c868551923f4
+cover audit       708465d1f6b154a4fb8d477bd793a2dcd7f8f652716fc1f9d8baf86d4d0ed9db
+cover output      0eb35e2f990ecca043a18c08987bab92fed42968265bbb8ca6f7144f3787115c.
 ```
 
 ## 10. The critical affine-profile residual is empty
@@ -1967,10 +2236,15 @@ the local unit-needle shape.  The theorem does **not** close an arbitrary
 mixed-residue seven-wall, branches with four or more drift speeds, or
 LRC(14).  The next aligned sectors have two or three aligned combs and are
 finite by THM-2941, but their four/five-drift censuses have not been run;
-the zero/one-aligned sectors remain the infinite address frontier.  Their
-next exact object is the corresponding higher-arity divisor-fibre status
-polytope combined with local unit-needle cover, possibly supplemented by a
-carrier-local multi-endpoint current.  A tournament on the seven labels
-forgets the metric widths, cell phases, gcd fibres, quotient remainders,
-status multiplicities, and located endpoint current, and is therefore not
-an equivalent quotient.
+the zero/one-aligned sectors remain the not-yet-finitized address frontier.
+The support-transfer census shows why direct denominator enumeration is the
+wrong next object: it leaves `21,357,714,101` four-drift and
+`951,545,890,235` five-drift body/denominator-multiset occurrences before
+numerators or phases.  Their next exact object is instead the
+fractional-blocker compression of the higher-arity divisor-fibre status
+profile, joined to the single-table all-threshold constraint and local
+unit-needle cover, possibly with a carrier-local multi-endpoint current.
+A tournament on the seven labels forgets the metric widths, cell phases,
+gcd fibres, quotient remainders, status multiplicities, minimal-heavy
+clutter, and located endpoint current, and is therefore not an equivalent
+quotient.

@@ -9,6 +9,39 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-329 (2026-07-29, first mixed Lorenz/activity sidecar) -- an ambient half-cap was substituted for the exact reflected parity fibre
+
+- **What was done:** the first four-aligned/three-drift Lorenz/activity
+  sidecar handled repeated denominators `(2,2,d_3)` with the coarse test
+  `|S_D|>2C_3`, where `C_3` is the third needle's ambient capacity.  It
+  reported a residual of `29,221`.
+- **Minimal witnesses / first failed implication:** reflection
+  `r -> D-1-r` makes the two parity loads of `S_D` exactly equal, but the
+  third needle's capacity inside one parity is the sharp `q=2` fibre value,
+  not half of its full ambient capacity.  The correct kill is
+  `|S_D|/2>fibre_cap(D,d_3,2)`.  The coarse replacement misses exactly
+  two rows:
+
+  ```text
+  F=(1,4,5,7,9,11),  D=194040, S=55392,
+  (d_1,d_2,d_3)=(2,2,194040),  27696>13860;
+
+  F=(1,5,7,8,9,11),  D=388080, S=109044,
+  (d_1,d_2,d_3)=(2,2,388080),  54522>27720.
+  ```
+
+- **Exact repair / strongest survivor:** the sidecar now reconstructs the
+  reflected parity histogram and applies the exact `q=2` fibre cap.  Its
+  corrected chain is `544,571 -> 419,364 -> 29,219`; ordinary and optimized
+  replays agree.  The former scratch `29,221` TSV/digest is superseded.
+  The load-bearing closure
+  `544,571 -> 419,511 -> 29,364 -> 19 -> 0` never depended on that TSV and
+  is unchanged.
+- **Rule:** a symmetry-balanced target load must be compared with the exact
+  capacity in the corresponding symmetry fibre.  A full ambient capacity,
+  even when divided by the orbit size, can lose gcd/remainder information
+  and is only a relaxation.
+
 ## MISTAKE-328 (2026-07-29, THM-2908 infinity replay) -- a SymPy structural comparison was used as a polynomial identity gate
 
 - **What was done:** after repairing the removable `n+3` content in the first

@@ -1,14 +1,13 @@
 # LRC(14) proof map — current reductions, obligations, and historical routes
 
-> **DETAILED MACHINERY MAP:** read [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14)
-> first. The control panel is current; dated sections preserve searchable proof
-> history and may contain obligation labels superseded by later corrections.
+> **DETAILED MACHINERY MAP:** read [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) first. This panel is current; dated sections preserve searchable history and may be superseded.
 
 ## 2026-07-29 current control panel
 
-**Status: OPEN.** THM-2923 makes the direct frontier at most six.  On all `3,003` six-body carriers THM-2941 gives the exact scalar wall `h/7` and empty zero-excess boundary; THM-2928/2941 empty `k>=5` aligned tails, caps `2,142/380/182` make `k=2,3,4` finite, and `k<=1` stays non-finite.  Those banks, the rung, and LRC(14) remain open; uniform `q<=25` is false.
-**Missing coordinate:** for drifts `Z`, `P=phi_L(C_E minus union_z D_z)`; completion by aligned `A` is exactly `P subset union_(a in A)D_a`.
-Strict-open seams remain in compact `P`; never replace this pointwise fact by an a.e. handoff.
+**Status: OPEN.** THM-2923 leaves at most six body speeds.  THM-2941 gives wall `h/7` with empty zero excess; THM-2928/2941 empty aligned `k>=4` and cap `k=2,3` at `2,142/378`.  The censuses, `k<=1`, rung, and LRC(14) are open; `q<=25` is false.
+**Scalable quotient.**  Support transfer/Möbius counting reduce `k=3/2` to `26,970/27,163` rows; do not enumerate `21.4b/951.5b` raw tuples.
+**Status theorem.**  For upward `A`, real maximum is `min(1,tau_H)`, `H=min(A)`: `p` cover variables replace `2^p` cells, losing integer location, threshold coupling, and needle shape.
+**Missing coordinate.**  For drifts `Z`, `P=phi_L(C_E minus union_z D_z)`; aligned completion is `P subset union_(a in A)D_a`.  Compact strict-open seams are pointwise, not a.e.
 
 ### The present reduction graph
 

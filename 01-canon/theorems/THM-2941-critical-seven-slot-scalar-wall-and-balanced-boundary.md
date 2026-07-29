@@ -9,8 +9,10 @@ status: >
   drift absolutely for k>=2.  The lossless projected residual closes the
   five-aligned/two-drift face independently of THM-2928, and exact suffix
   filters make k=2,3,4 uniformly finite-reducible; two frontier addenda
-  improve the k=3 first-drift cap from 380 to 378; k=6,7 are already empty.
-  The zero/one-aligned sector, the remaining finite censuses, the full
+  improve the k=3 first-drift cap from 380 to 378.  THM-2928's later
+  divisor-status/local-needle chain empties k=4, so only k=2,3 remain
+  finite-but-uncensused; k=5,6,7 are also empty.  The zero/one-aligned
+  sector, the remaining finite censuses, the full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is
   internal exact computation and proof audit; there is no Lean or external
   peer-review claim.

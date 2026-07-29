@@ -1,5 +1,38 @@
 # Script Results Index
 
+- `lrc14_upward_status_fractional_cover_audit_thm2928.py` -> matching `.out`
+  [THM-2928 PROVED GENERAL LP THEOREM + FINITE-EXACT HOSTILE AUDIT].  For
+  every upward event `A` on `p` status bits with fixed one-marginals `r`,
+  the maximum real event mass is `min(1,tau_H(r))`, where `H=min(A)` and
+  `tau_H` is its weighted fractional-cover value.  Hence a `2^p` status LP
+  reduces exactly to `p` cover variables and one inequality per minimal
+  heavy status.  The proof is packing plus residual completion for
+  `tau<1` and blocking-polyhedron separation for `tau>=1`; integer
+  realization and a common status table across thresholds remain separate.
+  A Fano status hostile has real optimum `7/3`, floor `2`, and integer
+  optimum `1`, proving that the integrality caveat is essential.
+  The exact audit checks all `197` monotone events for `p<=4` against every
+  marginal in `{0,1/2,1}^p`, `14,211` pairs total, under ordinary and
+  optimized Python.  Source/output SHA-256:
+  `708465d1f6b154a4fb8d477bd793a2dcd7f8f652716fc1f9d8baf86d4d0ed9db` /
+  `0eb35e2f990ecca043a18c08987bab92fed42968265bbb8ca6f7144f3787115c`.
+- `lrc14_aligned_drift_support_transfer_ladder_thm2928.py` and independent
+  audit -> matching `.out` files [THM-2928 PROVED NECESSARY REDUCTION +
+  FINITE-EXACT + INDEPENDENTLY AUDITED].  With `k` aligned and `p=7-k`
+  drift tails, every literal six-body cover satisfies
+  `|S_D|/D <=(1-u_p)/u_k`.  The exact necessary row counts for `k=0..7`
+  are `27,210/27,240/27,163/26,970/13,778/10,976/6,237/0`.
+  Divisor-Möbius inversion counts exact-lcm denominator multisets; raw
+  `(body,D,multiset)` occurrences at `k=3/2` are
+  `21,357,714,101/951,545,890,235`.  These do not count numerators, phases,
+  physical packets, or covers.  The independent endpoint-sweep/cyclic-arc
+  audit checks all `251,536` rows, `2,520` recurrence/Möbius cases, and `420`
+  brute controls.  Referee source/output SHA-256:
+  `8db781fb3e7dc8fdc4df2bf3c6d83869a9ffe52f41c7d70c25bbd0a9b0122bea` /
+  `808ec922a881e1d6d9541539ee51ff520e44c4fa7c98208b315c82f91df59e81`;
+  audit source/output:
+  `417830cff7a767227d93bbcee42ad57b75adf2b335dc5fa8fe50e85a972bb792` /
+  `43a73d9daa2beafb69541db6dc9bf205d9f4d9e4ac0ebf83a268c868551923f4`.
 - `lrc14_three_drift_threshold_transport_terminal_thm2928.py`, together
   with the activity referee, -> matching `.out` files
   [THM-2928 PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY AUDITED].
