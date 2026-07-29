@@ -255,22 +255,23 @@ and the fixed `20Q+10C+6F` minor has degree at most
 20(M-1)+10(2M-1)+6(3M-1)=58M-36.                     (23)
 ```
 
-An independent exact continuation scout has now tested the complete
-diameter-six atlas.  It finds
+A current unpromoted continuation scout reports the complete
+diameter-six atlas with
 
 ```text
 D_(m,6)=[prod_(j=1)^5(n+j)^(m-1)](n+6)^(m-2),
 row degrees=(5,11,17),                 minor degree<=312,
 ```
 
-and the same row chart is nonzero on all ten diameter-six types.  The
-four families `(0,1,b,6)` have positive `313`-term Newton vectors from
-base `5` and five negative exceptional depths; the three families
+and reports the same row chart nonzero on all ten diameter-six types.
+Its four families `(0,1,b,6)` have positive `313`-term Newton vectors
+from base `5` and five negative exceptional depths; the three families
 `(0,2,b,6)` have them from base `2` and two negative exceptional depths;
 the three families whose first positive offset is at least `3` are
-Newton-positive from base zero.  Seventy direct four-variable modular
-minor checks also pass.  This is **FINITE-EXACT continuation evidence,
-not a theorem dependency or a diameter-six claim of THM-2922**.
+Newton-positive from base zero.  It also reports seventy direct
+four-variable modular minor checks.  This is **provisional continuation
+evidence with no canonical reproducer yet**, not a theorem dependency,
+verified artifact, or diameter-six claim of THM-2922.
 
 Equations `(21)--(23)` remain **conjectural for general `M` (now first
 untested at `M=7`)**.  Even a proof of denominator clearing would not
