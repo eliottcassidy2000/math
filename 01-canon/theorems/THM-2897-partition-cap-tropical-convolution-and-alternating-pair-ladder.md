@@ -511,6 +511,67 @@ finite head gives the actual supremum, not merely an analytic upper cap.
 If `(19j)` fails, the statement makes no claim; `q_1` plus a sealed
 singleton tail remains a valid but potentially much weaker fallback.
 
+There is a sharper two-stage repair that retains one endpoint as a sidecar.
+Assume the two-sided discrepancy bounds
+
+```text
+|c(w)-h/7|<gamma_C/w
+```
+
+and, for every fixed `x`, on the child carrier `C intersect D_x`,
+
+```text
+|i(x,w)-c(x)/7|<gamma_x/w,                               (19l)
+```
+
+through their stated discrepancy ranges.  Let an evaluated pair have
+coverage `H_0>2h/7`, put
+
+```text
+delta=H_0/2-h/7>0,
+W=max(w_0,ceil(gamma_C/delta)),
+X={x:c(x)>H_0/2}.                                        (19m)
+```
+
+The set `X` is finite.  Moreover, if a pair `{x,w}` has `w>=W` and union
+coverage at least `H_0`, then its other endpoint belongs to `X`: otherwise
+subadditivity and the first bound give
+
+```text
+U_C({x,w})<=c(x)+c(w)<H_0/2+h/7+delta=H_0.
+```
+
+For each of the finitely many `x in X`, inclusion--exclusion and `(19l)`
+give
+
+```text
+U_C({x,w})
+ <h/7+6c(x)/7+(gamma_C+gamma_x)/w.                       (19n)
+```
+
+If
+
+```text
+H_0>h/7+6c(x)/7                  for every x in X,
+```
+
+then `(19n)` supplies a finite cutoff
+
+```text
+R_x=max(
+  W,
+  w_0,
+  w_0(x),
+  ceil((gamma_C+gamma_x)/(H_0-h/7-6c(x)/7))
+).
+```
+
+It is enough to scan pairs with both endpoints below `W`, together with
+`{x,w}` for `x in X` and `w<R_x`; every omitted pair is strictly below
+`H_0`.  This fixed-endpoint seal replaces the crude asymptote
+`q_1+h/7` in `(19j)` by `h/7+6c(x)/7`, at the cost of retaining the
+high-singleton endpoint and the component count of `C intersect D_x`.
+
 There is a cheap finite-tail gate for `M_(2,2)` on an LRC carrier.  Suppose
 
 ```text
