@@ -1,0 +1,22 @@
+THM-741 PURE (3,7) FLOOD TAIL: TOP FIVE PLUS ONE EXACT EXCEPTION
+========================================================================================
+dependency_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
+body E=(3, 7, 8, 9, 10, 11, 12, 13, 14); external universe: all integers 15<=a<b<c<d
+root r=20 m=53619/280280
+finite exact bank: w=15..293 (279 speeds); sparse/full/direct-union/direct-tooth paths agree
+coverage rank 1: w=19 c(w)=134663/2662660
+coverage rank 2: w=17 c(w)=2578/51051
+coverage rank 3: w=21 c(w)=38609/840840
+coverage rank 4: w=23 c(w)=25331/552552
+coverage rank 5: w=46 c(w)=79435/1933932
+finite-coverage manifest SHA256=22ddfaf7e038c5158399ced7ed19feeeda63db07c192a1f57e79f7ee7973c924
+tail law: c(w)<u(w)=m/7+(99/70)r/(7w) for w>=294; threshold=547026480/1860739
+cutoff hostility: u(293)-c(46)=1829953/39664945320; c(46)-u(294)=733/947626680
+plain top-four union-bound margin=-3183347/2082200120<0
+every non-top-four speed set has individual-cover sum at most c1+c2+c3+c5; survivor>=843411/260275015>0
+sole exceptional speed set=(17, 19, 21, 23); exact survivor r=8 m=137897/2299080
+proof partition: exact c(w) for 15<=w<=293; THM-735(ii) monotone cap for every w>=294; top-five ranking; one exact exception
+scope: one literal root edge (3,7), no Fano/chi_7 transport; global THM-741 and LRC(14) remain open
+VERDICT: E_(3,7) union {a,b,c,d} is lonely for every 15<=a<b<c<d; this closes a fifth whole flood body
+source_sha256=b6ae9cba4dc39b61c3d9436f0ace77595279f5783943d0bfb8bd268e724fd473
+ALL EXACT TOP-FIVE/EXCEPTION CHECKS PASSED

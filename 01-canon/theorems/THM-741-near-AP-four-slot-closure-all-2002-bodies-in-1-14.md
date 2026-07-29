@@ -1,7 +1,7 @@
 ---
 id: THM-741
 title: NEAR-AP FOUR-SLOT CLOSURE — every 13-speed family with AT LEAST 9 speeds in {1,…,14} satisfies LRC(14). Equivalently, for EVERY 9-element body E ⊆ {1,…,14} (all C(14,9)=2002) and all v₁<v₂<v₃<v₄ not in E, {E,v₁..v₄} is lonely. Proof = the THM-735 Bonferroni tree at j=4: legs J4 (one inequality, all four ≥ V₁(E)) / J3 (per-v₁ exact bodies) / J2 (per-(v₁,v₂)) / J1 (per-(v₁,v₂,v₃) tail) / bottom (exact-ℚ sweeps of covering quadruples via lcm-multiples) — with PROVED P1/P2 LEMMA-SKIPS at every level (subtrees where the next Bonferroni threshold already fires from the parent's exact data close without computing the child body; sound because P1/P2 are one-level bounds off exact data)
-status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 4/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; the other 17 bodies retain only their pure four-added-speeds-above-14 tails.  The `(3,4)` pure tail is now closed uniformly by an exact top-four root-coverage envelope: 458 exact one-comb coverages plus the THM-735(ii) covariance cap prove a positive uniform four-comb union-bound margin.  This subsumes its earlier exact first-speed branches `a=15,16,17,18,19`.  Upgrades globally to PROVED only when all 2002 bodies close clean.
+status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 5/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; the other 16 bodies retain only their pure four-added-speeds-above-14 tails.  The `(3,4)` pure tail is closed uniformly by an exact top-four root-coverage envelope.  For the unique near-miss `(3,7)`, an exact top-five envelope leaves only the literal set `{17,19,21,23}`, whose direct four-comb survivor is positive.  Upgrades globally to PROVED only when all 2002 bodies close clean.
 source: kind-pasteur-2026-07-13-S128 (cont.5); exact flood and completed-family addenda codex-2026-07-15-S14/S15/S16 and codex-2026-07-17/18
 depends_on:
   - THM-735   # the simultaneous multi-peel lemma (j=4,3,2,1 legs) + P1/P2 peel lemmas (THM-733)
@@ -41,6 +41,8 @@ verification:
   - 05-knowledge/results/lrc14_j4_34_a19_pure_tail_exact_codex_20260718.out
   - 04-computation/lrc14_j4_34_exact_top_four_coverage_codex_20260728.py
   - 05-knowledge/results/lrc14_j4_34_exact_top_four_coverage_codex_20260728.out
+  - 04-computation/lrc14_j4_37_top_five_exception_codex_20260728.py
+  - 05-knowledge/results/lrc14_j4_37_top_five_exception_codex_20260728.out
   - 04-computation/lrc14_thm741_sharded_resume_runner_codex_20260717.py
   - 05-knowledge/results/lrc14_thm741_sharded_resume_runner_codex_20260717.out
 ---
@@ -989,6 +991,79 @@ to `4/21`.  It uses no Fano/`chi_7` transport.  The earlier five full
 first-speed computations remain independent nested-carrier controls but are
 strictly subsumed for this body.  The other seventeen pure tails, global
 THM-741, and LRC(14) remain open. ∎
+
+## Top-five envelope plus one exact exception closes `(3,7)` (codex-2026-07-28)
+
+The top-four method has a sharp repair when its margin fails but the fifth
+coverage is separated.  Put
+
+```text
+E={3,7,8,9,10,11,12,13,14},       G=G(E),
+r=20,                              m=53619/280280,
+c(w)=|G intersect D_w|.
+```
+
+Four independent exact paths compute `c(w)` for `15<=w<=293`.  The first
+five ranks are
+
+```text
+rank:       1                    2                  3                  4                  5
+w:         19                   17                 21                 23                 46
+c(w):      134663/2662660       2578/51051         38609/840840       25331/552552       79435/1933932.
+```
+
+The THM-735(ii) cap from (B14) crosses the fifth value at
+
+```text
+(99/70)r / (7(c(46)-m/7)) = 547026480/1860739,
+293 < 547026480/1860739 < 294,
+u(293)-c(46) = 1829953/39664945320 > 0,
+c(46)-u(294) = 733/947626680 > 0.                        (B17)
+```
+
+Thus these are the global first five ranks for all integer `w>=15`.  The
+plain top-four margin is genuinely negative:
+
+```text
+m-c(19)-c(17)-c(21)-c(23)
+ = -3183347/2082200120 < 0.                              (B18)
+```
+
+But distinctness now makes the residual obligation a singleton.  Any
+four-speed set other than the literal top-four set omits at least one of
+those four ranks, so its individual-coverage sum is at most
+`c_1+c_2+c_3+c_5`.  Exact simplification gives
+
+```text
+m-c_1-c_2-c_3-c_5
+ = 843411/260275015 > 0.                                 (B19)
+```
+
+The union bound therefore closes every nonexceptional quadruple.  For the
+sole exception, nested subtraction and a direct thirteen-comb union agree:
+
+```text
+E union {17,19,21,23}
+has 8 good components and measure 137897/2299080 > 0.    (B20)
+```
+
+The large value in (B20) exhibits the missing coordinate in the failed
+top-four envelope: its four high individual coverages overlap heavily.
+There is no need to bound those overlaps uniformly because the fifth-rank
+gap isolates exactly one quadruple.
+
+Consequently
+
+> **Fifth whole flood body.** For every four integers
+> `15<=a<b<c<d`, the family
+> `{3,7,8,9,10,11,12,13,14,a,b,c,d}` is strictly lonely.
+
+The companion verifies all `279` finite coverages by sparse subtraction,
+full subtraction, direct ten-comb union, and independent tooth incidence;
+it also verifies both constructions of (B20), the exact tail crossing, and
+the failed plain-envelope control (B18).  This raises the exact flood count
+from `4/21` to `5/21`.  It proves no Fano/`chi_7` transport, no other root
+edge, and not global THM-741 or LRC(14). ∎
 
 ## Sharded-runner integrity repair (codex-2026-07-17)
 
