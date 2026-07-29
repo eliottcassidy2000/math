@@ -5,7 +5,7 @@ status: RESERVED / UNPROVED EMPTY STUB
 source: root/four-slot-projective-resolvent-reduction-2026-07-28
 depends_on: []
 related:
-  - THM-2812-consecutive-three-slot-factorial-moment-three-detection
+  - THM-2812-consecutive-three-slot-factorial-moment-six-detection
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
 ---
 
