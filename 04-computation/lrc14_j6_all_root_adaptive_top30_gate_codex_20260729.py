@@ -58,6 +58,13 @@ THM2885_PATH = (
 THM2885_SHA256 = (
     "dff97f67b1104c25589802a6a2f216b6e7bfedd58eebfa1bcce615d59c1e872f"
 )
+THM2885_OUTPUT_PATH = (
+    ROOT
+    / "05-knowledge/results/lrc14_thm2885_eight_body_top15_hitting_gate_codex_20260729.out"
+)
+THM2885_OUTPUT_SHA256 = (
+    "21a89f15fb144c406936ff62eaf039c0643e36d82ed99a9d28495181fa13e402"
+)
 
 FIRST_EXTERNAL = 15
 BASE_HORIZON = 1600
@@ -92,6 +99,10 @@ def file_sha256(path: Path) -> str:
 
 def load_thm2885():
     require(file_sha256(THM2885_PATH) == THM2885_SHA256, "THM-2885 changed")
+    require(
+        file_sha256(THM2885_OUTPUT_PATH) == THM2885_OUTPUT_SHA256,
+        "THM-2885 transcript changed",
+    )
     spec = importlib.util.spec_from_file_location("j6_all_root_thm2885", THM2885_PATH)
     require(spec is not None and spec.loader is not None, "cannot load THM-2885")
     module = importlib.util.module_from_spec(spec)
@@ -184,8 +195,15 @@ def profile_body(body: tuple[int, ...]) -> dict[str, object]:
                 top[0][1],
                 top[-1][1],
                 tail_first - 1,
+                BASE_HORIZON,
+                top[TOP_COUNT // 2][1],
+                FIRST_EXTERNAL + 1,
             )
         )
+    )[:4]
+    require(
+        len(control_speeds) == 4,
+        f"could not select four distinct scalar controls: {body}",
     )
     for speed in control_speeds:
         require(
