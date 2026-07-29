@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-324 (2026-07-29, THM-2920 depth-two working audit) -- a pair statistic was mistaken for a two-slot residual
+
+- **What was inferred:** after an ordered five-cover branch fixed centres
+  `x` and `y`, a preliminary audit compared the twice-subtracted carrier
+  with its global top two singleton coverages and reported the branch
+  closed.
+- **First failed implication / minimal witness:** fixing `x` leaves four
+  labels and fixing `y` leaves **three**, not two.  The fact that the next
+  certificate computes a pair cap does not consume a second label.  On the
+  five live THM-2920 tips, the top-two inequalities are true but insufficient:
+  a third allowed danger comb is still available.
+- **Exact repair / strongest survivor:** retain the correct three-slot type.
+  The exact global pair cap combined with the leading singleton closes three
+  of the five tips.  The lawful three-slot Hunter envelope closes all five,
+  with strict margins
+  `4211/280280`, `2459243/348107760`, `52873/2802800`,
+  `143831/12892880`, and `7009/420420`.  Thus the intended two-H3-row
+  closure survives, but not by the discarded top-two argument.
+- **Rule:** every recursive toothpick node carries an explicit remaining-slot
+  counter.  Subtracting one chosen centre decrements it by exactly one;
+  computing a pair cap, matching bound, or tree credit changes the bound,
+  not the arity.  Before promoting a terminal inequality, reconstruct the
+  family size `fixed labels + remaining slots` directly.
+
 ## MISTAKE-323 (2026-07-29, first THM-2921 scratch certificate) -- a divided-power coefficient table was convolved as an ordinary polynomial
 
 - **What was done:** the first diameter-four Macaulay probe stored one
