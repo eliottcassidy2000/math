@@ -9,6 +9,23 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-326 (2026-07-29, concurrent THM-2926 reservations) -- a successful push does not prevent a later session from reserving the same namespace
+
+- **What happened:** the seven-wall session reserved `THM-2926` at
+  `9578144779f6`.  Two concurrently based GMC sessions then used the same
+  identifier; one was repaired to `THM-2927`, while the consecutive
+  four-slot stub remained `THM-2926`.
+- **First failed implication:** a pushed reservation was treated as globally
+  exclusive without every later session rechecking the fetched remote tip.
+  The result was two filenames and two YAML records with `id: THM-2926`.
+- **Exact repair:** before either stub became a proved dependency, the
+  seven-wall namespace was moved to the freshly fetched and independently
+  checked `THM-2928`.  The mathematical statement and provenance are
+  unchanged; no theorem ever depended on the ambiguous ID.
+- **Rule:** immediately before *each* reservation commit, fetch and check the
+  remote filenames, YAML IDs, and recent history.  After the next pull, scan
+  the claimed ID again: reservation is a protocol, not a lock.
+
 ## MISTAKE-325 (2026-07-29, THM-2908 projective-infinity replay) -- `together` was mistaken for reduced rational form
 
 - **What was done:** the candidate THM-2908 companion compared the numerator
