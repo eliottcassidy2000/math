@@ -232,6 +232,26 @@ Since both directions in `(1)` are divisible by `s`, write `H=sh` and set
 P(Z,W)=W+Z h(ZW),                  W=conj(Z).            (8)
 ```
 
+More explicitly, choose the upper-half-plane quadratic root
+
+```text
+zeta=(-g12+i sqrt(g11 g22-g12^2))/g22
+    =-0.9033865066991233...+0.1804736111316870... i.
+```
+
+Then the finite hostile is the degree-seven polynomial
+
+```text
+P(Z,W)
+ =W-Z
+  +(1-zeta) Z^2 W/2
+  +(-x+zeta(1-y)) Z^3 W^2/6
+  +(x+zeta y) Z^4 W^3/24.                            (8a)
+```
+
+All parameters in `(8a)` are algebraic by the exact construction in
+Section 1; the decimals only identify the chosen branches.
+
 Charge balance gives
 
 ```text
