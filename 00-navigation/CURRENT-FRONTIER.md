@@ -74,7 +74,11 @@ but its outer word changes `QB -> QA`.  THM-2835 isolates the resulting
 449-sheet semantic horn: word support is carry-blind, the exact abstract
 response ranks are `13/26`, and positive regular realizations exist, yet no
 physical carry-to-response basepoint or `E3` transport does.  The outer-word
-and endpoint-gauge copies have empty fibre product.  Ledger `165`; no row is
+and endpoint-gauge copies have empty fibre product.  THM-2839 proves the
+449-sheet horn mask has every one of its `13^5` ancestry characters nonzero
+and full regular rank `371293`, by the finite-`p`-group augmentation-unit
+lemma.  Its inverse is signed and only the unrotated horn response is
+physical, so the basepoint/`E3` clutch remains.  Ledger `165`; no row is
 excluded.
 
 ### Independent routes that remain live

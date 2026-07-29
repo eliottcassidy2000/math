@@ -388,3 +388,13 @@ labels can manufacture cycles that no compatible physical section realizes.
 compatible-section theorem.
 **Evidence:** THM-2658's exact gain-Helly criterion and THM-2672's coarse
 `boundary Delta^12` versus carry-refined thirteen filled `Delta^11`s.
+
+## Pay algebraic rank, then audit the physical action
+
+**Trigger / action:** when a finite response, moment, or orbit looks compressible,
+compute its Hankel/circulant rank and minimal carrier, then
+separately type the physical observable, action, positivity, and basepoint.
+**Mechanism / counterindication:** full rank blocks false state compression, but
+a signed inverse or quotient closes the lane only with a supplied physical action and observation map.
+**Evidence:** THM-2810/2815 pay the factorial horizon without nullity selectors;
+THM-2835/2839 separate ranks `13/26` from ancestry rank `13^5` while leaving the positive/basepoint clutch open.
