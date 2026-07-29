@@ -39,6 +39,9 @@ TournamentH7/
     ├── LRCObserverGluingLedger.lean
     │                          S259 observer-chart gluing ledger for the
     │                          direct-arc / pair-scissors / terminal interface
+    ├── LRCC169CarrySelector.lean
+    │                          exact C13 carry cocycle, nonsplit C169 lift,
+    │                          seam clutch, and independent origin-selector XOR
     └── Verify.lean           #print axioms audit
 ```
 
@@ -173,6 +176,23 @@ for the 17 wallpaper groups, 230 three-dimensional space groups, 14 Bravais
 lattice types, and four Jacobi theta channels; proves the De Moivre quintic
 fold over `Rat`; and keeps theta/crystallographic residual production
 conditional on observer-gluing or finite-address packet output.
+
+`LRCC169CarrySelector.lean` is the current sorry-free formal interface for the
+THM-2878/2882 carry and THM-2886 selector coordinates.  It proves the
+base-thirteen carry cocycle, the nonsplit `Fin 169` lift, the exponent-three
+seam clutch, and the selector XOR law while keeping carry and selector parity
+as independent coordinates.  The module is root-imported; both
+
+```bash
+lake env lean TournamentH7/LRCC169CarrySelector.lean
+lake build TournamentH7.LRCC169CarrySelector
+```
+
+pass, and its twelve `#print axioms` checks report no `sorryAx`.  The aggregate
+`lake build TournamentH7` currently reaches this module and then fails in the
+older `LRCCoherentBlockerChronology.lean` at its rationally typed inference
+from `0 <= k < c` to `0 <= c-k-1`; that pre-existing integral-address typing
+debt is unrelated to `LRCC169CarrySelector`.
 
 ## Proof sketch
 
