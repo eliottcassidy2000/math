@@ -18,6 +18,7 @@ labelled graph.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import importlib.util
 import math
 import multiprocessing as mp
@@ -28,6 +29,14 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 AUDIT_PATH = HERE / "lrc14_j7_critical_scalar_wall_independent_thm2941.py"
+EXPECTED_AUDIT_SHA256 = (
+    "0fde0cd17e93a0cbc16de69e42f6dde25e79eaab1c256372825553087b098b92"
+)
+if (
+    hashlib.sha256(AUDIT_PATH.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+    != EXPECTED_AUDIT_SHA256
+):
+    raise RuntimeError("independent THM2941 verifier changed")
 SPEC = importlib.util.spec_from_file_location("lrc_j7_independent", AUDIT_PATH)
 if SPEC is None or SPEC.loader is None:
     raise RuntimeError("cannot load independent j7 audit")

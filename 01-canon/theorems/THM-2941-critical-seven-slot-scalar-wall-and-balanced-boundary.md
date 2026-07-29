@@ -40,8 +40,8 @@ earlier.  The complete scalar state `(q_1,...,q_7,B_2)` stops at its exact
 critical density on every six-body root.  The critical boundary is not a
 counterexample: pointwise topology makes it empty.  What can still escape is a
 sequence of positive-excess covers approaching that empty boundary.  Its
-natural state is a restricted rank-six Gram matrix joined to the endpoint-grid
-owner/transition word.
+natural state is a `7 x 7` restricted-overlap Gram deformation of the
+rank-six boundary, joined to the endpoint-grid owner/transition word.
 
 Nothing here proves the six-body/seven-tail rung, the sector with fewer body
 speeds, or unrestricted LRC(14).
@@ -264,6 +264,11 @@ Direct expansion gives
 <f_i,f_j> =-h/49+p_ij-(delta_i+delta_j)/7,     i!=j.     (16)
 ```
 
+For positive excess this `7 x 7` Gram matrix may have rank seven:
+`sum_i f_i=m-1` need not vanish.  Rank six belongs to the balanced partition
+boundary below, or to an explicitly projected `1^perp` quotient; it is not a
+property of every near state.
+
 If a hypothetical cover were both exact and balanced, then
 
 ```text
@@ -346,6 +351,24 @@ Combining this with the strict tail `(8)` gives the packetwise bound
 w_*<7gamma/Delta.                                        (22a)
 ```
 
+There is a complementary transition-width form of the same obstruction.
+On a longest component `I`, no one allowed owner contains all of `I`, by
+`(19)`--`(20)`.  The relatively open owner sets cover the connected interval
+`I`; if all pair intersections were empty, they would disconnect it.
+Therefore some pair intersection contains a nonempty relatively open
+subinterval `J`.  Put `kappa=mu(J)>0`.  Since `m>=2` on `J`,
+
+```text
+Delta>=kappa,             max_i delta_i>=kappa/7,
+w_*<7gamma/kappa.                                      (22b)
+```
+
+Thus every counterexample packet carries a positive owner-transition width
+and a correspondingly bounded excess owner.  This is still not a uniform
+bound: `kappa` depends on the packet and may tend to zero along an escaping
+sequence.  The only possible escape is therefore an endpoint-transition
+collapse, rather than an exact disjoint partition.
+
 The strictness in `(22)` is packetwise, not yet uniform.  A sequence of
 putative covers could still have `Delta` tend to zero while its labels
 escape.  Quantifying or classifying that escape is the open problem.
@@ -371,9 +394,11 @@ nonpositive maximum-tree controls            803.        (24)
 
 Every one of the `3,003` literal top-seven unions nevertheless has positive
 complement.  Hence compatible pair incidence is real information—the tree
-recovers `1,944` controls missed by every star—but the weighted pair graph is
-not complete.  This is only a test on the actual top-seven labels; it is not
-a reduction of arbitrary seven-label packets to those labels.
+recovers `1,944` controls missed by every star—but maximum-tree Hunter remains
+incomplete on `803` of these actual-top-seven controls.  This is only a test
+on the actual top-seven labels; it is not a reduction of arbitrary
+seven-label packets to those labels, nor a proof that every possible
+pair-graph functional fails on literal LRC packets.
 
 There is also an abstract hostile control for any attempt to make first and
 second moments equivalent to coverage.  On the even- and odd-parity laws on
@@ -383,7 +408,7 @@ Padding by four empty labelled events gives the same seven-event Gram data
 with different union predicates.  This is an information-loss example, not
 a claim that either law is realized by an LRC carrier.
 
-## 8. The multi-slope Gram/address frontier
+## 8. The multi-slope Gram/address frontier and a uniform finite sector
 
 Let `L` be the endpoint-grid denominator of the body carrier and write a tail
 speed as
@@ -400,6 +425,56 @@ seven residues `b` vanish, or when exactly one is nonzero.  Combining it with
 > positive multiplicity excess and at least two nonzero endpoint-grid drift
 > residues.
 
+For exactly two drifts, THM-2928 proves that every chart with fixed body
+carrier and aligned multiplier set reduces to a finite exact pair-clock
+quotient.  Its pointwise argument bounds the smaller slope by `585/154` and
+the larger by `13 max A`; its load-bearing extra coordinate is the
+carrier-local pair endpoint current, not the global full-circle overlap.
+This does not prove those charts empty.
+
+There is, however, a uniform **finite reduction** that does not require
+bounding the aligned multiplier set.  Suppose there are `k` aligned tails
+and `r=7-k` drifts, with `2<=k<=6`.  The component-free tariff
+THM-2928(25h) supplies a drift
+
+```text
+z<C_k L,                    C_k=(7-k)/b_k,              (25a)
+```
+
+where `L` is the fixed canonical denominator of the body carrier and `b_k`
+depends only on `k`.  Hence only finitely many integral `z` occur for each
+of the `3,003` body roots.  Delete such a `D_z`.  Six tail labels remain,
+with no alignment assumption needed.  At every proper node of their literal
+residual tree, the body speeds and already chosen tails total at most twelve
+speeds.  Settled `LRC(<=13)` gives a point at clearance at least `1/13`;
+the strict margin `1/13-1/14` gives a positive interval in that residual.
+It therefore satisfies the positive-mass interval hypothesis of the
+cap-free `p<=6` first-apex recursion THM-2893(7a)--(7b).  Recursing to depth
+at most six produces a finite exact decision tree.
+
+With
+
+```text
+L_E=lcm(14e:e in E)=14 lcm(E),
+max_E L_E=5,045,040,
+```
+
+the strict integral first-drift caps can even be chosen globally as
+
+```text
+k                         2           3          4          5         6
+z <=              281,080,799  74,954,879 42,988,828 19,164,599 7,665,839.
+                                                               (25b)
+```
+
+These large numbers are reduction bounds, not a completed finite census.
+Together with THM-2928's empty `k=7` branch, this proves:
+
+> Every six-body/seven-tail branch with at least two aligned tails is either
+> already empty or uniformly reducible to a finite exact decision tree.
+> Consequently any sector not yet known to admit such a finite reduction
+> has at most one aligned tail, hence at least six drifts.
+
 The next faithful object must therefore join
 
 ```text
@@ -410,7 +485,7 @@ edge data:
 component data:
   ordered owner word, transition positions and widths;
 hyperedge data:
-  the endpoint relation producing a small transition width.              (26)
+  the endpoint relation producing the width kappa in (22b).              (26)
 ```
 
 If tooth endpoints are
@@ -449,7 +524,8 @@ implementations.  The top-seven overlap graph is a scoped structural scout.
 Promotion still requires frozen-source ordinary/optimized replay and final
 canon audit.
 
-This theorem does not give a uniform lower bound for `Delta`, exclude the
-`803` scoped tree controls for arbitrary packets, classify the at-least-two
-drift address hypergraph, close the six-body/seven-tail rung, or prove
-LRC(14).
+This theorem does not give a uniform lower bound for `Delta` or `kappa`,
+turn the `803` nonpositive actual-top-seven tree margins into certificates,
+handle arbitrary packets, run the new finite decision trees, classify the
+zero/one-aligned multi-drift address hypergraph, close the
+six-body/seven-tail rung, or prove LRC(14).
