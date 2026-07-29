@@ -1,7 +1,7 @@
 ---
 id: THM-741
 title: NEAR-AP FOUR-SLOT CLOSURE — every 13-speed family with AT LEAST 9 speeds in {1,…,14} satisfies LRC(14). Equivalently, for EVERY 9-element body E ⊆ {1,…,14} (all C(14,9)=2002) and all v₁<v₂<v₃<v₄ not in E, {E,v₁..v₄} is lonely. Proof = the THM-735 Bonferroni tree at j=4: legs J4 (one inequality, all four ≥ V₁(E)) / J3 (per-v₁ exact bodies) / J2 (per-(v₁,v₂)) / J1 (per-(v₁,v₂,v₃) tail) / bottom (exact-ℚ sweeps of covering quadruples via lcm-multiples) — with PROVED P1/P2 LEMMA-SKIPS at every level (subtrees where the next Bonferroni threshold already fires from the parent's exact data close without computing the child body; sound because P1/P2 are one-level bounds off exact data)
-status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 3/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; the other 18 bodies retain only their pure four-added-speeds-above-14 tails.  In the recommended `(3,4)` pure tail, the complete first-speed branches `a=15,16,17,18,19` are now exact, leaving 208 branches that still need literal `G1` carriers after the previously proved root/measure screens.  Upgrades globally to PROVED only when all 2002 bodies close clean.
+status: CLAIMED globally.  The live direct resume ledger reached 290/2002 clean bodies at the last pull but is not yet harvested.  Exact addenda prove 4/21 whole flood bodies and, across completed families containing H={8,...,14}, every tail with at least three small labels; the other 17 bodies retain only their pure four-added-speeds-above-14 tails.  The `(3,4)` pure tail is now closed uniformly by an exact top-four root-coverage envelope: 458 exact one-comb coverages plus the THM-735(ii) covariance cap prove a positive uniform four-comb union-bound margin.  This subsumes its earlier exact first-speed branches `a=15,16,17,18,19`.  Upgrades globally to PROVED only when all 2002 bodies close clean.
 source: kind-pasteur-2026-07-13-S128 (cont.5); exact flood and completed-family addenda codex-2026-07-15-S14/S15/S16 and codex-2026-07-17/18
 depends_on:
   - THM-735   # the simultaneous multi-peel lemma (j=4,3,2,1 legs) + P1/P2 peel lemmas (THM-733)
@@ -39,6 +39,8 @@ verification:
   - 05-knowledge/results/lrc14_j4_34_a18_pure_tail_exact_codex_20260717.out
   - 04-computation/lrc14_j4_34_a19_pure_tail_exact_codex_20260718.py
   - 05-knowledge/results/lrc14_j4_34_a19_pure_tail_exact_codex_20260718.out
+  - 04-computation/lrc14_j4_34_exact_top_four_coverage_codex_20260728.py
+  - 05-knowledge/results/lrc14_j4_34_exact_top_four_coverage_codex_20260728.out
   - 04-computation/lrc14_thm741_sharded_resume_runner_codex_20260717.py
   - 05-knowledge/results/lrc14_thm741_sharded_resume_runner_codex_20260717.out
 ---
@@ -898,8 +900,95 @@ stalk with phase, certificate type, cap, and exact margin.  Runners, residues,
 isolated Kakeya needles, wall events, and Fano flags erase necessary data;
 `chi_7` supplies only the common root-edge address `(3,4)`.
 
-Five literal-carrier branches are now complete and `208` remain.  This does not
-close a fourth whole flood body or global THM-741.
+At that branch-by-branch checkpoint, five literal-carrier branches were
+complete and `208` remained.  That certificate by itself did not close a
+fourth whole flood body or global THM-741.
+
+## Exact top-four root-coverage envelope closes the whole `(3,4)` tail (codex-2026-07-28)
+
+The branch tree above retains the full nested component stalk, which is needed
+when one estimates each later comb against the carrier left by the earlier
+ones.  For this root, however, a coarser object is unexpectedly decisive:
+the **individual coverage profile of every future comb against the unchanged
+root carrier**.
+
+Let
+
+```text
+E={3,4,8,9,10,11,12,13,14},       G=G(E),
+r=28,                              m=433607/2522520,
+c(w)=|G intersect D_w|.
+```
+
+For four distinct future speeds `15<=a<b<c<d`, the ordinary union bound gives
+
+```text
+|G minus (D_a union D_b union D_c union D_d)|
+ >= m-c(a)-c(b)-c(c)-c(d).                              (B13)
+```
+
+The exact verifier computes `c(w)` for every integer `15<=w<=472`.  Sparse
+subtraction, full subtraction, a direct ten-comb union, and an independent
+endpoint-incidence sum over the disjoint teeth of `D_w` agree on all `458`
+values.  The four largest are
+
+```text
+rank:       1                    2                     3                4
+w:         17                   23                    19               32
+c(w):      85973/1786785        240307/5801796        14017/363090     11521/315315.
+```
+
+No uncomputed speed can enter this list.  Indeed THM-735(ii), through the
+THM-731/732 covariance-discrepancy chain, gives
+
+```text
+c(w) <= m/7+sqrt(2)r/(7w)
+     <  m/7+(99/70)r/(7w) =: u(w).                       (B14)
+```
+
+The rational crossing against the fourth value is exact:
+
+```text
+(99/70)r / (7(c(32)-m/7)) = 33297264/70523,
+472 < 33297264/70523 < 473,
+u(472)-c(32) = 1301/347266920 > 0,
+c(32)-u(473) = 1093/50618568 > 0.                        (B15)
+```
+
+Since `u(w)` decreases, every `w>=473` has `c(w)<c(32)`.  The displayed four
+values are therefore the global top four over every integer `w>=15`.  The
+distinctness of the four added speeds is the only ordering information used.
+Their total possible root coverage and the residual in (B13) are
+
+```text
+c(17)+c(23)+c(19)+c(32) = 308603791/1873980108,
+m-that sum                  = 135228493/18739801080 > 0. (B16)
+```
+
+Consequently
+
+> **Fourth whole flood body.** For every four integers
+> `15<=a<b<c<d`, the family
+> `E union {a,b,c,d}` is strictly lonely.
+
+The literal family formed from the four maximal individual coverages,
+
+```text
+{3,4,8,9,10,11,12,13,14,17,19,23,32},
+```
+
+has exact lonely measure `805109/16702140` and `16` components by both direct
+thirteen-comb union and nested subtraction.  This is a hostile cross-check,
+not the reason (B16) is uniform.  Conversely, the older ancestral root bound
+(B11) at the four first possible speeds `15,16,17,18` is
+`-81555377/62537475<0`; the new gain comes from ranking exact individual comb
+coverages rather than charging all combs by the same worst-case discrepancy.
+
+This closes one literal root edge, raising the exact flood count from `3/21`
+to `4/21`.  It uses no Fano/`chi_7` transport.  The earlier five full
+first-speed computations remain independent nested-carrier controls but are
+strictly subsumed for this body.  The other seventeen pure tails, global
+THM-741, and LRC(14) remain open. ∎
 
 ## Sharded-runner integrity repair (codex-2026-07-17)
 
