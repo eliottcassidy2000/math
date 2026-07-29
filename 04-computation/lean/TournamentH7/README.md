@@ -181,7 +181,11 @@ conditional on observer-gluing or finite-address packet output.
 THM-2878/2882 carry and THM-2886 selector coordinates.  It proves the
 base-thirteen carry cocycle, the nonsplit `Fin 169` lift, the exponent-three
 seam clutch, and the selector XOR law while keeping carry and selector parity
-as independent coordinates.  The module is root-imported; both
+as independent coordinates.  Its semantic-`V4` addendum formalizes the two
+distinct characters `det(QB,-)` and `det(QA,-)`, proves that no single
+character types both the selector seam and `QB` carry-edge reversal, proves
+that the reduced event pattern is not a vertex character, and shows that the
+joint two-character map is injective.  The module is root-imported; both
 
 ```bash
 lake env lean TournamentH7/LRCC169CarrySelector.lean

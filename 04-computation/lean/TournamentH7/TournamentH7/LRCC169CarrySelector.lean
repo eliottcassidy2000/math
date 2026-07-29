@@ -359,6 +359,83 @@ theorem same_carry_different_selector_toggle :
       selectorToggle 0 3 ≠ selectorToggle 0 1 := by
   decide
 
+/-! ## Semantic V4 character obstruction
+
+The selector and carry-edge reversal coordinates are the two independent
+linear characters of the labelled semantic plane.  This is the finite core of
+the post-THM-2887 dicyclic audit: one `C169 ⋊ Q8` shadow can realize either
+coordinate, but no single character realizes both. -/
+
+/-- A labelled element of the semantic plane, with
+`QA=(true,false)` and `QB=(false,true)`. -/
+abbrev SemanticDirection := Bool × Bool
+
+/-- Every `F2`-valued linear character of the semantic plane. -/
+def semanticCharacter
+    (coefficient direction : SemanticDirection) : Bool :=
+  Bool.xor
+    (coefficient.1 && direction.1)
+    (coefficient.2 && direction.2)
+
+def semanticQ0 : SemanticDirection := (false, false)
+def semanticQA : SemanticDirection := (true, false)
+def semanticQB : SemanticDirection := (false, true)
+def semanticQAB : SemanticDirection := (true, true)
+
+/-- The source-marked selector character `det(QB,-)`. -/
+def selectorCharacter (direction : SemanticDirection) : Bool :=
+  semanticCharacter (true, false) direction
+
+/-- The character `det(QA,-)` that makes the successive `QB` edge reverse a
+cyclic address coordinate. -/
+def carryEdgeCharacter (direction : SemanticDirection) : Bool :=
+  semanticCharacter (false, true) direction
+
+/-- The selector character has the proved seam values `(0,1,1)` on
+`(Q0,QA,QAB)`. -/
+theorem selectorCharacter_horn :
+    selectorCharacter semanticQ0 = false ∧
+      selectorCharacter semanticQA = true ∧
+      selectorCharacter semanticQAB = true := by
+  decide
+
+/-- The carry-edge character has seam values `(0,0,1)` and reverses the
+successive `QB` direction. -/
+theorem carryEdgeCharacter_horn :
+    carryEdgeCharacter semanticQ0 = false ∧
+      carryEdgeCharacter semanticQA = false ∧
+      carryEdgeCharacter semanticQB = true ∧
+      carryEdgeCharacter semanticQAB = true := by
+  decide
+
+/-- No single semantic character both recovers the selector seam parity and
+makes the successive `QB` direction reverse the cyclic address. -/
+theorem no_single_character_types_selector_and_carry :
+    ¬ ∃ coefficient : SemanticDirection,
+      semanticCharacter coefficient semanticQ0 = false ∧
+      semanticCharacter coefficient semanticQA = true ∧
+      semanticCharacter coefficient semanticQAB = true ∧
+      semanticCharacter coefficient semanticQB = true := by
+  decide
+
+/-- The literal seam carry-event pattern `(QA,QB,QAB)=(0,1,0)` is not a
+vertex character.  Its failure of additivity is the reduced Bockstein
+curvature rather than a group action on semantic vertices. -/
+theorem carry_event_pattern_not_character :
+    ¬ ∃ coefficient : SemanticDirection,
+      semanticCharacter coefficient semanticQA = false ∧
+      semanticCharacter coefficient semanticQB = true ∧
+      semanticCharacter coefficient semanticQAB = false := by
+  decide
+
+/-- Retaining both independent characters loses no semantic direction. -/
+theorem joint_character_map_injective :
+    ∀ left right : SemanticDirection,
+      (selectorCharacter left, carryEdgeCharacter left) =
+          (selectorCharacter right, carryEdgeCharacter right) →
+        left = right := by
+  decide
+
 end C169Carry
 end LonelyRunner
 
@@ -374,3 +451,6 @@ end LonelyRunner
 #print axioms LonelyRunner.C169Carry.positiveSelector_unique
 #print axioms LonelyRunner.C169Carry.same_selector_signature_different_carry
 #print axioms LonelyRunner.C169Carry.same_carry_different_selector_toggle
+#print axioms LonelyRunner.C169Carry.no_single_character_types_selector_and_carry
+#print axioms LonelyRunner.C169Carry.carry_event_pattern_not_character
+#print axioms LonelyRunner.C169Carry.joint_character_map_injective
