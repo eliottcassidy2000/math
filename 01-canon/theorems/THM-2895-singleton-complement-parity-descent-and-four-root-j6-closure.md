@@ -77,6 +77,13 @@ claim that one cap propagates automatically.
 
 ### Proof
 
+If `C` has `r` interval components, THM-735(ii) supplies the strict
+discrepancy estimate
+
+```text
+c(w)<h/7+(99/70)r/(7w).
+```
+
 Apply THM-2893 with
 
 ```text
