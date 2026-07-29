@@ -5,12 +5,15 @@ status: >
   PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
   HOSTILE AUDIT.  A general DVR lemma identifies truncated block-Toeplitz
   nullity growth with local Smith bars and maximal-minor Fitting
-  valuation.  On the finite first-gap bank (0,1,2,M), 6<=M<=20, the
+  valuation.  On the finite first-gap bank (0,1,2,M), 6<=M<=24, the
   first five jets give the complete fixed rank-35 negative-depth
-  chamber atlas, separate q200^5*c300 exactly, and prove divisibility
-  by a corrected B^Smith_M.  Only (11,9) and (12,5) are matrix-level
-  sporadics.  A separate two-full-chart sidecar verifies the extra
-  common seam E_M on the same finite bank.  No arbitrary-width,
+  chamber atlas, separate the local wall valuations contributed by
+  q200, c300, and f400, and prove divisibility by a corrected
+  B^Smith_M.  The global inherited factor remains q200^5*c300; no
+  global f400 divisibility is asserted.  Only (12,5)
+  remains a matrix-level sporadic after this separation.  A separate
+  two-full-chart sidecar verifies the extra common seam E_M only for
+  6<=M<=20.  No arbitrary-width,
   positive-core, or fixed-prime rank conclusion is claimed.
 source: codex-gmc-local-smith-jet-barcode-2026-07-29
 audit: >
@@ -25,10 +28,11 @@ related:
   - THM-2944-width-nine-ten-two-chart-macaulay-resultant-closure
   - THM-2946-full-macaulay-maximal-minor-gcd-and-chart-free-resultant
   - THM-2957-first-gap-width-fifteen-twenty-modular-depth-ladder
+  - THM-2959-first-gap-width-twenty-one-twenty-four-modular-depth-continuation
 script: 04-computation/gmc_local_smith_jet_fitting_barcode_thm2960.py
 output: 05-knowledge/results/gmc_local_smith_jet_fitting_barcode_thm2960.out
-script_sha256: b9621ae653ecc2acaff067830c878e60fc4a94cbdc849155766208368c5a50e7
-output_sha256: 87f75a2fbd504affc8659b190e3c6d9698f38accef09559bfe6a3d225ea6846b
+script_sha256: 6ff7360458a406994a4fefa787c2f9b231f1d577be3b9ca5fd48da90ed26d365
+output_sha256: 89a6cb15fb0e24b696bb0fe4fb52453c40455b9a395fc62fe19a32ac99addbe1
 thm2949_dependency_sha256: 9a1c7068e079e232dc97fd6eb925621aa74b3d636380a85995f8e0db8b30aa54
 hash_basis: LF-normalized bytes
 ---
@@ -38,7 +42,7 @@ hash_basis: LF-normalized bytes
 **PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
 HOSTILE AUDIT.**
 
-For \(6\leq M\leq20\), let \(A_M(n)\) be the fixed
+For \(6\leq M\leq24\), let \(A_M(n)\) be the fixed
 \(35\)-by-\(35\) polynomial matrix whose determinant \(P_M(n)\) is
 THM-2949's fixed rank-thirty-five cofactor for the first-gap support
 
@@ -54,8 +58,10 @@ n=-1/2,-1,-2,...,-M                                     (2)
 
 are not accidental factors and are not determined by ordinary rank.
 They are lengths of local Smith bars.  The first five matrix jets
-recover every bar for the fixed cofactor and expose exactly two
-matrix-level exceptions to the four ratio chambers.
+recover every bar for the fixed cofactor.  Pure coefficient
+resonances form a degree-two/three/four ladder; after separating that
+ladder, exactly one matrix-level exception to the four ratio chambers
+remains.
 
 ## 1. The Smith-jet/Fitting barcode lemma
 
@@ -165,24 +171,42 @@ module structure which the jets retain.
 Use the THM-2943/2949 coefficient notation
 
 ```text
-q200=[x0^2]Q,                    c300=[x0^3]C.          (10)
+q200=[x0^2]Q,  c300=[x0^3]C,  f400=[x0^4]F.           (10)
 ```
 
-On the complete finite bank,
+On the complete finite bank \(6\le M\le24\),
 
 ```text
 ord_(-r) q200 = 1  iff  M=1 mod 6 and 3r=2M+1,
-ord_(-r) c300 = 1  iff  M=1 mod 4 and 4r=3M+1,         (11)
+ord_(-r) c300 = 1  iff  M=1 mod 4 and 4r=3M+1,
+ord_(-r) f400 = 1  iff  M=1 mod 10 and 5r=4M+1.        (11)
 ```
 
-and the orders are zero otherwise.  Neither coefficient vanishes at
-\(-1/2\).
+The orders are zero otherwise, and none of the three coefficients
+vanishes at \(-1/2\).  For the quartic line, putting \(d=M-r\)
+rewrites the condition as
+
+```text
+M=5d+1,                    r=4d+1,                    d even.  (11a)
+```
+
+In the same \(d=M-r\) notation the full ladder is
+
+```text
+q: M=3d+1, r=2d+1, d even;
+c: M=4d+1, r=3d+1;
+f: M=5d+1, r=4d+1, d even.                            (11b)
+```
+
+The parity conditions are respectively equivalent to
+\(M\equiv1\pmod6\) and \(M\equiv1\pmod {10}\).  These are exact laws
+on the declared finite bank; no all-width extrapolation is made.
 
 The smallest hostile to a bare four-chamber floor law is
 
 ```text
 (M,r)=(7,5):
-ord q200=1, ord c300=0,
+ord q200=1, ord c300=ord f400=0,
 Smith multiset 1^2,2^4,3^2,4^2,
 d=(10,18,22,24,24), order=24.                         (12)
 ```
@@ -192,26 +216,38 @@ missing units.  The smallest cubic hostile is
 
 ```text
 (M,r)=(9,7):
-ord q200=0, ord c300=1,
+ord q200=ord f400=0, ord c300=1,
 Smith multiset 1^2,2^3,3^4,
 d=(9,16,20,20,20), order=20.                          (13)
 ```
 
-Here `c300` supplies the one missing unit.  These examples show why a
-formula which does not first separate the pure coefficients is false.
-
-After that separation, exactly two further exceptions remain:
+Here `c300` supplies the one missing unit.  The quartic controls are
 
 ```text
 (M,r)=(11,9):
-  q200,c300 units; 1^2,2^3,3^4; order=20;
+  q200,c300 units; ord f400=1;
+  1^2,2^3,3^4; order=20;
 
-(M,r)=(12,5):
-  q200,c300 units; 1^5,2^7,3^2; order=25.             (14)
+(M,r)=(21,17):
+  q200,c300 units; ord f400=1;
+  1^2,2^3,3^4; order=20.                              (14)
 ```
 
-They are genuine matrix-jet resonances.  They are not hidden roots of
-`q200` or `c300`.
+At \(M=21\), the new length-one bar is exactly THM-2959's surplus
+factor \(n+17\).  These examples show why separating only `q200` and
+`c300` falsely makes the quartic rung look matrix-sporadic.
+
+After all three pure coefficients are separated, the unique remaining
+exception is
+
+```text
+(M,r)=(12,5):
+  q200,c300,f400 units;
+  1^5,2^7,3^2; order=25.                              (14a)
+```
+
+Here one length-two bar becomes length three, so this is a genuine
+matrix-jet resonance rather than a pure-coefficient root.
 
 ## 4. Corrected Smith factor and exact separation
 
@@ -226,16 +262,22 @@ beta_M(r)=
   20,  2r>M and 3r<=2M;
   19,  3r>2M,                                          (15)
 
-beta*_M(r)=beta_M(r)+1_{(M,r)=(11,9) or (12,5)}.       (16)
+beta^mat_M(r)=beta_M(r)+1_{(M,r)=(12,5)},
+
+epsilon^F_M(r)=ord_(-r) f400
+ =1_{M=1 mod 10 and 5r=4M+1},
+
+beta^Smith_M(r)=beta^mat_M(r)+epsilon^F_M(r).          (16)
 ```
 
 The complete exact order decomposition is
 
 ```text
 ord_(-r) P_M
- = beta*_M(r)
+ = beta^mat_M(r)
    +5 ord_(-r) q200
-   +  ord_(-r) c300,                                  (17)
+   +  ord_(-r) c300
+   +  ord_(-r) f400,                                  (17)
 
 ord_(-1/2) P_M=5.                                     (18)
 ```
@@ -245,22 +287,27 @@ or factoring \(P_M\), that
 
 ```text
 B^Smith_M(n)
- =(2n+1)^5 prod_(r=1)^M (n+r)^beta*_M(r)              (19)
+ =(2n+1)^5 prod_(r=1)^M (n+r)^beta^Smith_M(r)         (19)
 ```
 
 divides \(P_M\) in \(\mathbb Q[n]\).  Its degree is
 
 ```text
 19M+2 floor(M/3)+4 floor(M/2)+floor(2M/3)-20
-  +1_{M=11 or M=12}.                                  (20)
+  +1_{M in {11,12,21}}.                               (20)
 ```
 
-For \(15\le M\le20\), the correction vanishes and `(19)` is exactly
+The quartic-root units remain part of the actual Smith divisor `(19)`;
+the local separation in `(17)` explains their source without asserting
+that the full polynomial `f400` divides \(P_M\).  The global inherited
+pure factor is still `q200^5*c300`.  For \(15\le M\le20\), the
+correction vanishes and `(19)` is exactly
 the factor \(B_M\) used in THM-2957.  Thus THM-2957's negative-root
 division has a local-module proof: its `26/24/20/19` staircase is a
 Smith-length spectrum.  THM-2957's modular core gates remain logically
 separate and are still needed for nonnegative integral-depth
-nonvanishing.
+nonvanishing.  At \(M=21\), `(19)` has degree \(448\): THM-2959's
+floor-law degree \(447\), plus the quartic bar \(n+17\).
 
 ## 5. The two-full-determinant common-content sidecar
 
@@ -302,7 +349,7 @@ ord_(-1/2) G_M=6=5+1,
 
 ord_(-r) G_M
  =5 ord_(-r)q200 + ord_(-r)c300
-  +beta*_M(r)+ord_(-r)E_M.                             (24)
+  +beta^Smith_M(r)+ord_(-r)E_M.                        (24)
 ```
 
 Equivalently, THM-2943's universal `q200^5*c300` factor and `(24)`
@@ -364,29 +411,31 @@ the canonical factorial forms.  It checks:
 
 1. the barcode recovery control;
 2. all
-   \(\sum_{M=6}^{20}(M+1)=210\) fixed-cofactor centres, using
-   \(1{,}050\) exact block-Toeplitz ranks;
-3. every chamber profile, equality boundary, pure resonance, and
-   matrix sporadic;
+   \(\sum_{M=6}^{24}(M+1)=304\) fixed-cofactor centres, using
+   \(1{,}520\) exact block-Toeplitz ranks;
+3. every chamber profile, equality boundary, pure \(q/c/f\) resonance,
+   and the sole matrix sporadic;
 4. the exact degree law `(20)` and order decomposition `(17)`;
-5. both full charts at the same \(210\) centres, with adaptive
-   fifth-to-seventh jet stabilization;
+5. both full charts at the separate \(210\)-centre bank
+   \(6\le M\le20\), with adaptive fifth-to-seventh jet stabilization;
 6. the common-content identity `(24)` and the row-rank hostile `(27)`.
 
 The frozen record digests are
 
 ```text
 fixed:
-8be6356fe0ad6683de9433ff9d4bdce7c813534aaed6becabf70e9b0da0283ea
+c969fe43bd92e1a3e545341d89e09ad0a721ea312182e70c4e5786b9e75c3396
 
 two-chart bridge:
 035a164a768deb837d2f483c707eb124519709ae45d5fdef0ec08e3547e41f2a
 ```
 
-This is a finite characteristic-zero local theorem.  It proves no
-all-width chamber law, no nonvanishing of the remaining cofactor core,
-no coefficientwise positivity of a renormalized resultant, and no
-full-matrix rank claim modulo a fixed or selected prime.  In
+This is a finite characteristic-zero local theorem: the fixed atlas
+ends at width \(24\), while the two-chart bridge ends at width \(20\).
+It proves no all-width chamber or resonance law, no nonvanishing of
+the remaining cofactor core, no coefficientwise positivity of a
+renormalized resultant, and no full-matrix rank claim modulo a fixed
+or selected prime.  In
 particular, the retracted all-width next-prime shortcut is unrelated
 to and cannot be inferred from this atlas.
 

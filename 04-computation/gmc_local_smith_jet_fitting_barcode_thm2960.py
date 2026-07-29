@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """Exact companion for THM-2960.
 
-For the first-gap support (0,1,2,M), 6 <= M <= 20, this script:
+For the first-gap support (0,1,2,M), this script:
 
 * recovers the local Smith bars of THM-2949's fixed 35-by-35 cofactor
-  from lower block-Toeplitz jet nullities;
-* separates the exact q200^5*c300 pure-coefficient contribution;
+  from lower block-Toeplitz jet nullities for 6 <= M <= 24;
+* separates the exact local wall valuations contributed by q200,
+  c300, and f400 (without asserting that f400 divides the cofactor
+  globally);
 * proves divisibility by the corrected negative-depth factor B^Smith_M;
-* verifies the two genuine matrix-level sporadic corrections; and
+* verifies the sole remaining matrix-level correction at (12,5); and
 * compares both full 36-by-36 charts locally, proving on this finite bank
-  that their common negative-depth content after q200^5*c300 is
-  B^Smith_M*E_M.
+  6 <= M <= 20 that their common negative-depth content after
+  q200^5*c300 is B^Smith_M*E_M.
 
 No determinant is interpolated, expanded, or reduced modulo a prime.
 """
@@ -50,7 +52,8 @@ SPEC.loader.exec_module(thm2949)
 
 t = thm2949.t
 x = t.POLY_X
-WIDTHS = tuple(range(6, 21))
+FIXED_WIDTHS = tuple(range(6, 25))
+BRIDGE_WIDTHS = tuple(range(6, 21))
 FIXED_TRUNCATIONS = 5
 FULL_TRUNCATIONS = 7
 
@@ -76,12 +79,12 @@ EXPECTED_PROFILES = {
     "terminal": (14, 19, 19, 19, 19),
     "q_resonance": (10, 18, 22, 24, 24),
     "c_resonance": (9, 16, 20, 20, 20),
-    "sporadic_11_9": (9, 16, 20, 20, 20),
+    "f_resonance": (9, 16, 20, 20, 20),
     "sporadic_12_5": (14, 23, 25, 25, 25),
 }
 
 EXPECTED_FIXED_GLOBAL_DIGEST = (
-    "8be6356fe0ad6683de9433ff9d4bdce7c813534aaed6becabf70e9b0da0283ea"
+    "c969fe43bd92e1a3e545341d89e09ad0a721ea312182e70c4e5786b9e75c3396"
 )
 EXPECTED_BRIDGE_GLOBAL_DIGEST = (
     "035a164a768deb837d2f483c707eb124519709ae45d5fdef0ec08e3547e41f2a"
@@ -173,6 +176,10 @@ def c_resonance(width: int, root: int) -> bool:
     return width % 4 == 1 and 4 * root == 3 * width + 1
 
 
+def f_resonance(width: int, root: int) -> bool:
+    return width % 10 == 1 and 5 * root == 4 * width + 1
+
+
 def chamber(width: int, root: int) -> str:
     if root == 1:
         return "one"
@@ -180,14 +187,14 @@ def chamber(width: int, root: int) -> str:
         return "two"
     if root == width:
         return "terminal"
-    if (width, root) == (11, 9):
-        return "sporadic_11_9"
     if (width, root) == (12, 5):
         return "sporadic_12_5"
     if q_resonance(width, root):
         return "q_resonance"
     if c_resonance(width, root):
         return "c_resonance"
+    if f_resonance(width, root):
+        return "f_resonance"
     if 3 * root <= width:
         return "early"
     if 2 * root <= width:
@@ -211,10 +218,12 @@ def floor_b_multiplicity(width: int, root: int) -> int:
     return 19
 
 
+def matrix_multiplicity(width: int, root: int) -> int:
+    return floor_b_multiplicity(width, root) + int((width, root) == (12, 5))
+
+
 def b_multiplicity(width: int, root: int) -> int:
-    return floor_b_multiplicity(width, root) + int(
-        (width, root) in ((11, 9), (12, 5))
-    )
+    return matrix_multiplicity(width, root) + int(f_resonance(width, root))
 
 
 def e_multiplicity(width: int, root: int) -> int:
@@ -233,6 +242,10 @@ def expected_c_valuation(width: int, root: int) -> int:
     return int(c_resonance(width, root))
 
 
+def expected_f_valuation(width: int, root: int) -> int:
+    return int(f_resonance(width, root))
+
+
 def polynomial_data(width: int):
     source_rows = thm2949.forms_and_rows(width, 1, 2)
     cofactor = tuple(
@@ -247,20 +260,23 @@ def polynomial_data(width: int):
     forms = thm2949.thm2943.polynomial_forms(width, (0, 1, 2))
     q200 = forms[0][(2, 0, 0)]
     c300 = forms[1][(3, 0, 0)]
-    return cofactor, original, alternate, q200, c300
+    f400 = forms[2][(4, 0, 0)]
+    return cofactor, original, alternate, q200, c300, f400
 
 
 def audit_fixed_width(width: int, data) -> str:
-    cofactor, _original, _alternate, q200, c300 = data
+    cofactor, _original, _alternate, q200, c300, f400 = data
     half_profile = jet_nullities(cofactor, Fraction(-1, 2), FIXED_TRUNCATIONS)
     require(half_profile == EXPECTED_PROFILES["half"], "half profile changed")
     require(
         valuation(q200, 2 * x + 1) == 0
-        and valuation(c300, 2 * x + 1) == 0,
+        and valuation(c300, 2 * x + 1) == 0
+        and valuation(f400, 2 * x + 1) == 0,
         "pure coefficient acquired a half-root",
     )
     records = [
-        f"half:{half_profile}:{smith_multiset(half_profile)}:B=5:q=0:c=0"
+        f"half:{half_profile}:{smith_multiset(half_profile)}:"
+        "B=5:Bmat=5:q=0:c=0:f=0"
     ]
     chamber_counts = {name: 0 for name in EXPECTED_PROFILES}
     chamber_counts["half"] = 1
@@ -276,22 +292,27 @@ def audit_fixed_width(width: int, data) -> str:
         factor = x + root
         q_order = valuation(q200, factor)
         c_order = valuation(c300, factor)
+        f_order = valuation(f400, factor)
         require(
             q_order == expected_q_valuation(width, root)
-            and c_order == expected_c_valuation(width, root),
+            and c_order == expected_c_valuation(width, root)
+            and f_order == expected_f_valuation(width, root),
             f"pure root law changed: M={width},r={root}",
         )
         beta_floor = floor_b_multiplicity(width, root)
-        beta = b_multiplicity(width, root)
+        beta_matrix = matrix_multiplicity(width, root)
+        beta_smith = b_multiplicity(width, root)
         require(
-            profile[-1] == beta + 5 * q_order + c_order,
+            profile[-1]
+            == beta_matrix + 5 * q_order + c_order + f_order,
             f"local order decomposition failed: M={width},r={root}",
         )
-        b_degree += beta
+        b_degree += beta_smith
         chamber_counts[name] += 1
         records.append(
             f"{root}:{name}:{profile}:{smith_multiset(profile)}:"
-            f"B={beta}:Bfloor={beta_floor}:q={q_order}:c={c_order}"
+            f"B={beta_smith}:Bmat={beta_matrix}:Bfloor={beta_floor}:"
+            f"q={q_order}:c={c_order}:f={f_order}"
         )
 
     floor_degree = (
@@ -302,7 +323,7 @@ def audit_fixed_width(width: int, data) -> str:
         - 20
     )
     require(
-        b_degree == floor_degree + int(width in (11, 12)),
+        b_degree == floor_degree + int(width in (11, 12, 21)),
         f"corrected B degree law changed: M={width}",
     )
     digest = sha256("\n".join(records).encode()).hexdigest()
@@ -319,12 +340,16 @@ def audit_fixed_width(width: int, data) -> str:
         (root for root in range(1, width + 1) if c_resonance(width, root)),
         0,
     )
+    f_root = next(
+        (root for root in range(1, width + 1) if f_resonance(width, root)),
+        0,
+    )
     return (
         f"M={width};centres={width + 1};B_degree={b_degree};"
         f"B_floor_degree={floor_degree};"
-        f"q_resonance={q_root};c_resonance={c_root};"
+        f"q_resonance={q_root};c_resonance={c_root};f_resonance={f_root};"
         f"chambers={nonzero_counts};record_digest={digest};"
-        f"sporadic_correction={int(width in (11, 12))};"
+        f"matrix_correction={int(width == 12)};"
         "local_order_decomposition=PASS"
     )
 
@@ -343,7 +368,7 @@ def profile_to_target(rows, center, target: int) -> tuple[int, ...]:
 
 
 def audit_bridge_width(width: int, data) -> str:
-    _cofactor, original, alternate, q200, c300 = data
+    _cofactor, original, alternate, q200, c300, _f400 = data
     records = []
 
     original_half = profile_to_target(original, Fraction(-1, 2), 6)
@@ -408,7 +433,7 @@ def barcode_control() -> str:
 
 
 def row_rank_hostile(data_by_width) -> str:
-    cofactor, _original, _alternate, _q200, _c300 = data_by_width[20]
+    cofactor, _original, _alternate, _q200, _c300, _f400 = data_by_width[20]
     forms = thm2949.thm2943.polynomial_forms(20, (0, 1, 2))
     factor = x + 3
     form_minima = tuple(
@@ -428,14 +453,15 @@ def main() -> None:
     print("THM-2960 LOCAL SMITH-JET FITTING BARCODE")
     print(f"thm2949_dependency_sha256={SOURCE_SHA256}")
     print(
-        "widths=6..20;fixed_matrix_size=35;full_chart_size=36;"
+        "fixed_widths=6..24;bridge_widths=6..20;"
+        "fixed_matrix_size=35;full_chart_size=36;"
         "characteristic=0"
     )
     print(barcode_control())
 
-    data_by_width = {width: polynomial_data(width) for width in WIDTHS}
+    data_by_width = {width: polynomial_data(width) for width in FIXED_WIDTHS}
     fixed_records = []
-    for width in WIDTHS:
+    for width in FIXED_WIDTHS:
         record = audit_fixed_width(width, data_by_width[width])
         fixed_records.append(record)
         print("fixed;" + record, flush=True)
@@ -447,7 +473,7 @@ def main() -> None:
     print("fixed_global_record_digest=" + fixed_digest)
 
     bridge_records = []
-    for width in WIDTHS:
+    for width in BRIDGE_WIDTHS:
         record = audit_bridge_width(width, data_by_width[width])
         bridge_records.append(record)
         print("bridge;" + record, flush=True)
@@ -466,7 +492,12 @@ def main() -> None:
         "c_hostile=M9,r7;q_order=0;c_order=1;"
         "floor_B=19;smith_order=20"
     )
-    print("matrix_sporadics=(11,9):+1,(12,5):+1")
+    print(
+        "f_hostiles=M11,r9_and_M21,r17;f_order=1;"
+        "q_order=0;c_order=0;floor_B=19;smith_order=20"
+    )
+    print("matrix_sporadics=(12,5):+1")
+    print("M21_n_plus_17=one_length_1_f400_Smith_bar")
     print(row_rank_hostile(data_by_width))
     print(
         "E_M=(2n+1)*prod(r=2..floor(M/2),(n+r)^3)*"
@@ -474,7 +505,7 @@ def main() -> None:
     )
     print("determinant_interpolation_used=NO;finite_field_inference_used=NO")
     print(
-        "scope=first-gap M6..20 local factors only;"
+        "scope=fixed first-gap M6..24 and bridge M6..20 local factors only;"
         "no arbitrary-width core nonvanishing"
     )
     print("all_exact_checks=PASS")
