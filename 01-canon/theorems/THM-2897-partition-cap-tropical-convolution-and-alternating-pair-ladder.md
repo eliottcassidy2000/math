@@ -475,6 +475,42 @@ and its theorem-bearing invariant is matching deficiency together with the
 star/triangle sidecar.  Orienting the edges as a tournament would destroy
 ties and add a gauge while forgetting the disjointness obstruction.
 
+### Self-sealing exact pair cap
+
+The discrepancy tail can sometimes promote a finite pair lower bound to
+the exact global pair cap.  Suppose
+
+```text
+q_1=sup_w c(w),
+c(w)<h/7+gamma/w                         for w>=w_0,
+```
+
+and an explicitly evaluated allowed pair has union coverage `H_0` with
+
+```text
+eta=H_0-q_1-h/7>0.                                      (19j)
+```
+
+Put
+
+```text
+R=max(w_0,ceil(gamma/eta)).
+```
+
+Every pair containing a label `w>=R` has
+
+```text
+U_C({w,x})<=c(w)+c(x)
+  <h/7+gamma/w+q_1
+  <=H_0.                                                 (19k)
+```
+
+Consequently the exact global value of `beta_2` is attained among the
+finitely many allowed pairs whose two labels are below `R`.  Scanning that
+finite head gives the actual supremum, not merely an analytic upper cap.
+If `(19j)` fails, the statement makes no claim; `q_1` plus a sealed
+singleton tail remains a valid but potentially much weaker fallback.
+
 There is a cheap finite-tail gate for `M_(2,2)` on an LRC carrier.  Suppose
 
 ```text
