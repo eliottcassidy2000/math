@@ -62,7 +62,7 @@ THM2897_PATH = (
     "THM-2897-partition-cap-tropical-convolution-and-alternating-pair-ladder.md"
 )
 THM2897_SHA256 = (
-    "424f7621292b41b4929201c57fbe215bb9d293925ca9d5b5ef80163a1e33747a"
+    "bf183f80460c157f22ad55e13ae15a182252cd25a8e522c8917ed1c318f013a4"
 )
 ATLAS_PATH = (
     ROOT
