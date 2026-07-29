@@ -18,10 +18,9 @@ uncertified relation gates are not unsafe.  Separately, THM-741/2883 prove all
 
 - **CITED:** LRC through 13 total runners; see
   [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
-- **PROVED + FINITE-EXACT:** THM-741/2883 close `2002` roots; THM-738 handles
-  small speeds, forcing `v_9>=15`.  THM-2885 gates all `3003` bodies;
-  THM-2888 closes `1559`, leaving `10,202` triangles on `1444`.
-  Only the eight-body/five-slot rung.
+- **PROVED + FINITE-EXACT:** THM-741/2883 close `2002`; THM-738 forces
+  `v_9>=15`. THM-2888 closes `1559/3003` eight-body roots; `1444`
+  roots/`10202` nonterminal apex branches remain as heavy-triangle residuals.
 - **PROVED:** THM-965/2051--2092/2074 give the relation, pair floor, rank atlas
   and ledger; THM-2148/2168 reach scalar `5+3`.  THM-2054 decorrelates
   recorded margins at `H=2^19`, subject to MISTAKE-080/082's shape-specific
@@ -91,10 +90,10 @@ THM-2859's q0 `Z^8` germ hits only `{0,4,8,9}`: no rootless hit, square,
 or literal q3/q11 attachment.
 THM-2861/2863 give Hermitian/Prony; THM-2868 its atlas. THM-2874
 `F`-clutches Galois/`C169`, but q7 stays flat. THM-2876 kills the q3 edge.
-THM-2880 closes THM-2877's q0->q3 fibre: pullback keeps atlas/P but moves
-the selector; pushforward/fibre/ancestry vanish. THM-2878's u3 computes
-carry; THM-2882's charged lift has vertical `omega^3` but is closed-flat.
-q7/q11 need independent origin parity; QA->QAB stays open. Ledger `165`.
+THM-2880/2878/2882 reach q3 but flat carry.
+THM-2884/2886 find `V4` and transport q3/q11/q7 parity/current; scalar Prony fails.
+THM-2887/2889 give Arf-one `Q8`, dicyclic chars and four channels, without physical/unmarked descent.
+Next: `e9=(-9,+9,QB)`, clutch `(13,13,-1)`. Ledger `165`.
 
 ### Independent routes that remain live
 
