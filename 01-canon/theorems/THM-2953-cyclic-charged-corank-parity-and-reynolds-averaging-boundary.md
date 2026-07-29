@@ -2,8 +2,8 @@
 id: THM-2953
 title: "Cyclic charged corank parity and Reynolds-averaging boundary"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  On the real augmentation representation of an odd
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the
+  real augmentation representation of an odd
   prime cycle, every invariant kernel has even dimension.  Therefore a
   nonzero codimension-one minor forces injectivity; at p=7 one nonzero
   charged 5-by-5 minor suffices.  Reynolds averaging of T^*T has kernel
@@ -14,7 +14,13 @@ status: >
   sharp owner/carrier-loss hostile.  No THM-2941 or LRC(14) closure is
   claimed.
 source: root-lrc-compound-transfer-2026-07-29
-audit: Pending independent hostile audit.
+audit: >
+  An independent hostile audit rederived the stable-kernel parity,
+  codimension-one minor gate, Reynolds kernel intersection, and every
+  rank-one hostile constant.  It replayed normal, optimized, and
+  stored output byte-for-byte and matched both LF hashes.  The final
+  wording repairs the distinction between THM-2608's equivariant
+  matching rule and a genuinely equivariant physical response.
 depends_on: []
 related:
   - THM-2947-conjugate-pair-corank-parity-and-one-minor-resultant-gate
@@ -29,8 +35,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2953 -- cyclic charged corank parity and Reynolds-averaging boundary
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Prime-cyclic charged parity
 
@@ -200,10 +205,12 @@ that property merely by averaging.  Applying `(7)` would prove only
 joint injectivity of rotated observations and would erase the
 owner/carrier distinction exposed by `(11)--(15)`.
 
-This is also compatible with THM-2608: an equivariant linear response
-can have excellent charged rank while the sevenfold Boolean carrier
-product is zero.  Linear invertibility is not pointwise carrier
-survival.
+This is also compatible with THM-2608, but the typing is important:
+that theorem supplies an equivariant **matching rule**, while its
+physical clock-block weights vary.  It does not supply a high-rank
+equivariant physical response.  Its zero sevenfold Boolean product
+still shows why equivariance of the indexing rule is not pointwise
+carrier survival.
 
 Accordingly this theorem supplies a cheaper exact rank test **when**
 equivariance or stable kernel is independently present.  It proves no
@@ -230,6 +237,6 @@ gates.  It verifies:
 6. rank one and nonstable kernel for `(11)`; and
 7. the general determinant formula `(16)` for `p=3,5,7,11`.
 
-Promotion requires an independent audit of the stable-kernel
-quantifier, the intersection identity `(9)`, the augmentation-basis
-normalization, and the owner/carrier scope.
+The stable-kernel quantifier, the intersection identity `(9)`, the
+augmentation-basis normalization, and the owner/carrier scope were
+independently hostile-audited.
