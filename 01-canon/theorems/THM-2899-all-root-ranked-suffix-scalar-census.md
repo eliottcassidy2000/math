@@ -9,7 +9,7 @@ related:
   - THM-2895-singleton-complement-parity-descent-and-four-root-j6-closure
   - THM-2896-seven-body-adaptive-six-cover-hitting-gate-atlas
   - THM-2897-partition-cap-tropical-convolution-and-alternating-pair-ladder
-  - THM-2898-unique-max-gate-six-seed-parity-closure
+  - THM-2898-unique-max-gate-five-parity-matching-closure
 ---
 
 # THM-2899 -- all-root ranked-suffix scalar census

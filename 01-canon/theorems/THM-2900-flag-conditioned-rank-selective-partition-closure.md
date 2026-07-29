@@ -12,7 +12,7 @@ depends_on:
   - THM-2897-partition-cap-tropical-convolution-and-alternating-pair-ladder
 related:
   - THM-2893-complement-cap-finite-core-flag-lemma
-  - THM-2898-unique-max-gate-six-seed-parity-closure
+  - THM-2898-unique-max-gate-five-parity-matching-closure
 verification:
   - 04-computation/lrc14_j6_child_rank3_pair_partition_closure_thm2900.py
   - 05-knowledge/results/lrc14_j6_child_rank3_pair_partition_closure_thm2900.out
