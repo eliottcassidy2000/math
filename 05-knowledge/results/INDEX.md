@@ -13,6 +13,25 @@
   eight-worker outputs are byte-identical.  LF-normalized
   script/output/ledger SHA-256:
   `(a628808c6a7a22f94c0b387d45c6e8066858f0cfdd77392cecb6db40744f59df,8eb5b8af65466539f070418b1d405b6b8b7c8d7f9595c2a7fa069196f80c0d38,6de74387474e14bbfd622c5371d2d246588532e29764938f6210277478950831)`.
+- `lrc14_j6_all_open_centre_child_top4_closure_thm2915.py` -> locked
+  summary and `51,222`-child full ledger, plus
+  `lrc14_j6_thm2915_postcomposition.py` -> locked root-set sidecar
+  [THM-2915 PROVED + FINITE-EXACT + VERIFIED].  Every open THM-2904
+  centre child is reconstructed sequentially and directly, with exact
+  six-field key identity.  A no-cap dynamic THM-735 horizon seals all
+  global top-four ranks; the strict deficit closes `46,356` children and
+  all open pivots on `8,112` rows, with `4,866` honest failures and no
+  equality.  Exact E/H/P/Q/T branch composition adds `964` roots over the
+  `351`-root baseline, giving theorem-local union `1,315`.  All `394`
+  THM-2916 roots lie inside it.  THM-2920 contributes `295` further roots;
+  its sole overlap `(1,2,3,6,9,11,12)` is exactly a finite-H1 synergy
+  root.  Both THM-2919 sharp-H1 route roots are already direct live-route
+  roots here, so the current union is `1,610` and residual `1,822`.  Fresh
+  `core.autocrlf=true` ordinary/optimized eight-worker runs are
+  byte-identical.  Main source/output/ledger SHA-256:
+  `(9d2e6227a8cbda763fbd73f21dc4d162949e5d5fcd147abd6e8ea37513775215,26d1b492af588dda57f0531b9bb1acd5faca32b12d7cbac195fea31b3d4dd30e,798cd660ab60e2021b28074a1390af3f6b1367c99f2d0ab63a581513f7871071)`;
+  sidecar source/output:
+  `(cfcc22451b1663ae26b3193da49acb71f787f06e0e03aeb5c1600f27ceb4ef21,1c16c80d7722c51d09dfb89bde4c014119411762fa2cff5a4d80012d2f258e71)`.
 - `lrc14_j6_two_h3_row_pair_hunter_recursive_toothpick_closure_codex_20260729.py`
   -> matching summary and full-ledger `.out` files [THM-2920 PROVED +
   FINITE-EXACT + VERIFIED].  All `367` THM-2916-open children close:

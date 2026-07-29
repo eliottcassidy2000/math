@@ -2,11 +2,12 @@
 id: THM-2915
 title: "All-open-centre exact child top-four closure"
 status: >
-  PROOF CANDIDATE / CLEAN REPLAY PENDING.  Exact dynamic-tail top-four
+  PROVED + FINITE-EXACT + VERIFIED.  Exact dynamic-tail top-four
   closure on all 51,222 open THM-2904 centre children closes 46,356
   children and 8,112 parent rows.  Branchwise composition with the proved
-  E/H/P/Q routes gives 964 roots additive over the current 351-root
-  baseline, for candidate union 1,315 and residual 2,117.
+  E/H/P/Q/T routes gives 964 roots additive over the 351-root baseline,
+  for a theorem-local union of 1,315.  Exact postcomposition through
+  THM-2919/2920 gives the current proved union 1,610 and residual 1,822.
 source: codex-thm2915-all-open-centre-child-top4-2026-07-29
 depends_on:
   - THM-735-bonferroni-simultaneous-multi-peel-defeats-the-clustered-non-isolated-wall
@@ -19,23 +20,25 @@ related:
   - THM-2893-complement-cap-finite-core-flag-lemma
   - THM-2897-partition-cap-tropical-convolution-and-alternating-pair-ladder
   - THM-2916-two-h3-row-dynamic-tail-child-top-four-closure
+  - THM-2919-sharp-component-discrepancy-ranked-h1-closure
+  - THM-2920-two-h3-row-pair-hunter-recursive-toothpick-closure
 verification:
   - 04-computation/lrc14_j6_all_open_centre_child_top4_closure_thm2915.py
   - 05-knowledge/results/lrc14_j6_all_open_centre_child_top4_closure_thm2915.out
   - 05-knowledge/results/lrc14_j6_all_open_centre_child_top4_closure_thm2915.ledger.out
-  - 04-computation/lrc14_j6_thm2915_thm2916_root_containment.py
-  - 05-knowledge/results/lrc14_j6_thm2915_thm2916_root_containment.out
+  - 04-computation/lrc14_j6_thm2915_postcomposition.py
+  - 05-knowledge/results/lrc14_j6_thm2915_postcomposition.out
 ---
 
 # THM-2915 -- all-open-centre exact child top-four closure
 
-**PROOF CANDIDATE / CLEAN REPLAY PENDING.**
+**PROVED + FINITE-EXACT + VERIFIED.**
 
-Ordinary and optimized theorem-grade computations have completed with
-every exact guard passing and byte-identical artifacts.  Promotion awaits
-the final fresh-checkout replay and final artifact hashes.
+Ordinary and optimized theorem-grade computations in a fresh
+`core.autocrlf=true` checkout completed with every exact guard passing and
+byte-identical summary and ledger artifacts.
 
-## 1. Candidate statement
+## 1. Statement
 
 For every one of the `51,222` ordered hostile-centre pivots left open by
 THM-2904, retain its literal marked child and compute the exact global four
@@ -53,16 +56,18 @@ At parent-row level this closes `8,112` of the `11,563` rows having at
 least one open THM-2904 centre.  Composing these rows with the previously
 proved pair-exception, finite-H1, fully pivot-closed, and one-H3 toothpick
 routes closes `1,285` route roots.  Exact set difference against the
-current `351`-root union through THM-2913 gives
+then-current `351`-root union through THM-2913 gives
 
 ```text
-route roots intersecting the current union              321
+route roots intersecting the baseline                   321
 new roots                                                964
-proved union candidate                                 1,315
-official residual candidate                3,432-1,315=2,117.        (2)
+proved union through THM-2915                         1,315
+theorem-local residual                    3,432-1,315=2,117.        (2)
 ```
 
-This is a finite exact closure candidate, not a proof of LRC(14).
+This is a finite exact closure theorem, not a proof of LRC(14).  Later
+theorems compose with `(2)` below; they are not dependencies of its child
+calculation.
 
 ## 2. The inherited marked child
 
@@ -312,7 +317,7 @@ shards, not a relabeling of the top-four test.  No root needs a mixed
 `E`-and-`H` synergy.
 
 Finally, adjoining `Q` gives `1,285` branch-composed route roots.  Their
-intersection with the live `351`-root union is `321`, and their additive
+intersection with the `351`-root baseline is `321`, and their additive
 part is the `964` roots in `(2)`.
 
 THM-2916 was promoted while this broader computation was in final replay.
@@ -330,6 +335,42 @@ The overlap tuple has SHA-256
 exactly THM-2916's locked closed-root digest.  This is a later composition
 control, not a dependency of the all-open-centre child theorem.
 
+THM-2920 then closed the complementary `296` two-H3 repair roots.  The
+same sidecar checks the explicit lists and obtains
+
+```text
+THM-2920 repairs intersecting THM-2915 union              1
+THM-2920 repairs new over THM-2915                       295
+current proved union                                  1,610
+current residual                         3,432-1,610=1,822.          (22)
+```
+
+The sole overlap is
+
+```text
+(1,2,3,6,9,11,12),
+```
+
+exactly one of the six finite-H1 synergy roots in `(20)`.  Thus the
+intersection is structurally explained: THM-2920 repairs its two-H3 rows,
+whereas THM-2915 had already closed the whole root only by composing `T`
+with a distinct `H`-row discharge.  The other `295` repair roots are
+genuinely additive.  Their digest is
+`6c4556f9fd07fafa1fe7f62a4088b7842bd08de32b188eab231313f748f77703`;
+the `1,610`-root union digest is
+`675631dfe7a4bf5924b7f16a100e7eebe60901d25190e493fa4a640325475a50`.
+
+THM-2919's two sharp-H1 route roots,
+
+```text
+(1,3,5,7,10,11,14),       (2,4,8,10,11,13,14),
+```
+
+are already direct `T` live-route roots in the THM-2915 list, rather than
+`E`/`H` synergy roots.  Thus the one root that THM-2919 adds over its
+then-current `1,041`-root union adds nothing over `(22)`; the current
+union and residual stay `1,610` and `1,822`.
+
 ## 7. Inherited-slice and hostile controls
 
 On the pair-exception slice the exact census is
@@ -338,13 +379,13 @@ On the pair-exception slice the exact census is
 exception rows                                           52
 children                                                400
 top-four closed / failed                            272 / 128
-fully T-completed exception rows                           0.          (22)
+fully T-completed exception rows                           0.          (23)
 ```
 
 The histogram of failed children per exception row is
 
 ```text
-1:5, 2:26, 3:14, 4:6, 5:1.                             (23)
+1:5, 2:26, 3:14, 4:6, 5:1.                             (24)
 ```
 
 Thus the six root gains in `(19)` really use THM-2907; they are not
@@ -356,14 +397,14 @@ On the one-H3 slice, the general verifier reproduces THM-2912 exactly:
 ordinary parent rows                                    210
 ordered children                                        807
 closed / failed children                           765 / 42
-slice-closed roots                                       172.         (24)
+slice-closed roots                                       172.         (25)
 ```
 
 Only `170` of those `172` are pure whole-route closures.  The two
 difference bodies
 
 ```text
-(2,3,6,10,12,13,14),       (2,6,7,8,9,10,11)            (25)
+(2,3,6,10,12,13,14),       (2,6,7,8,9,10,11)            (26)
 ```
 
 have an additional pair-exception row with failed top-four children.
@@ -374,7 +415,8 @@ the `Q` slice subsequently closed by THM-2913.
 ## 8. Exact lists, digests, and verification
 
 The complete `1,219` live-route root list, `964` additive list, and
-`1,315` current union are printed explicitly in the locked main output.
+`1,315` theorem-local union are printed explicitly in the locked main
+output.
 Selected body-list SHA-256 digests are
 
 ```text
@@ -382,7 +424,7 @@ live route 1,219
   b25f51db595f01bd6c24db6f6d25ed9a230f6c7abf10841a1ef4aacdb793f371
 additive 964
   4b2dcf6945aa80e8896f22115df5096f028dce5d9936b3148b0083c259657254
-current union 1,315
+theorem-local union 1,315
   47c0b23646ae5744f5354d6475aa23283c275341e6665ba5532640cddea0c41f.
 ```
 
@@ -402,19 +444,34 @@ closure bit for every child.  Its semantic digest is
 274114167a4e173d242fd0d62b980593df5fffb6adfc9cf116ec171fe628b1ff.
 ```
 
-The first full replay produced ledger file SHA-256
+The frozen ledger file SHA-256 is
 
 ```text
 798cd660ab60e2021b28074a1390af3f6b1367c99f2d0ab63a581513f7871071.
 ```
 
-Final source/main hashes and the ordinary/optimized replay attestation
-will be inserted after the locked clean replay.  All guards are explicit
-and remain active under optimized Python.  The row order is deterministic
-and independent of worker scheduling.
+LF SHA-256 values are
+
+```text
+source       9d2e6227a8cbda763fbd73f21dc4d162949e5d5fcd147abd6e8ea37513775215
+main output  26d1b492af588dda57f0531b9bb1acd5faca32b12d7cbac195fea31b3d4dd30e
+ledger       798cd660ab60e2021b28074a1390af3f6b1367c99f2d0ab63a581513f7871071
+sidecar      cfcc22451b1663ae26b3193da49acb71f787f06e0e03aeb5c1600f27ceb4ef21
+side output  1c16c80d7722c51d09dfb89bde4c014119411762fa2cff5a4d80012d2f258e71.
+```
+
+The final replay used a new detached checkout with
+`core.autocrlf=true`; repository attributes nevertheless checked out the
+source, main output, and ledger as LF.  Ordinary and optimized
+eight-worker runs were byte-identical to one another and to the frozen
+main output and full ledger.  All guards are explicit and remain active
+under optimized Python.  The row order is deterministic and independent
+of worker scheduling.  The postcomposition sidecar likewise has
+byte-identical ordinary and optimized output.
 
 The proof object is a ranked allocation tree with symmetric coverage
 sidecars.  Its tie-break is a gauge, not an intrinsic tournament on
-runners.  The theorem claims only the `964` additive roots in `(2)`; it
-does not close any of the `4,866` failed children, the remaining `2,117`
-roots, or LRC(14). ∎
+runners.  The theorem itself claims the `964` additive roots in `(2)` and
+does not close any of its `4,866` failed children.  The separate
+postcomposition in `(22)` updates the shared frontier to residual `1,822`;
+neither result proves LRC(14). ∎
