@@ -18,10 +18,7 @@ uncertified relation gates are not unsafe.  Separately, THM-741/2883 prove all
 
 - **CITED:** LRC through 13 total runners; see
   [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
-- **PROVED + FINITE-EXACT:** THM-741/2883 and THM-2888/2892/2893/885 close
-  `2002` nine-body and `3003` eight-body roots (`v_8<=14`).  THM-2915
-  composed with THM-2919/2920 gives union `1,610`, residual `1,822`, and
-  closes the `690` two-H3 roots; both THM-2919 route roots are absorbed.
+- **PROVED + FINITE-EXACT:** THM-741/2883 and THM-2888/2892/2893/885 close `2002` nine-body and `3003` eight-body roots (`v_8<=14`); THM-2915/2919/2920 give union `1,610`, residual `1,822`, closing all `690` two-H3 roots.
 - **PROVED:** THM-965/2051--2092/2074 give the relation, pair floor, rank atlas
   and ledger; THM-2148/2168 reach scalar `5+3`.  THM-2054 decorrelates
   recorded margins at `H=2^19`, subject to MISTAKE-080/082's shape-specific
@@ -98,9 +95,8 @@ Next: `e9=(-9,+9,QB)`, clutch `(13,13,-1)`. Ledger `165`.
 
 ### Independent routes that remain live
 
-- **Orthogonal routes.** THM-1017's AP-core extraction remains HYP-6820;
-  THM-2047/2050 retain phase/first exit; THM-731/2048 saturate six-comb
-  pruning; THM-1290 is exact only through speed `55`; HYP-8900 is not uniform.
+- **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md): aligned seven leaves `15/154`; six-plus-one has a strict `39/61` cone and phase/gcd test; mixed residues stay open.
+- **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
 - **Foreign-base phase.** The FINITE-EXACT `C_221` stalk has a typed
   `4/17 <-> 13/17` two-cycle, but no exclusive source, lawful return, or
   semantic endpoint current.
@@ -109,10 +105,10 @@ Next: `e9=(-9,+9,QB)`, clutch `(13,13,-1)`. Ledger `165`.
 
 ### Mandatory controls and perspective prompts
 
-- `26*{1,...,12} union {339}` and `{1,...,12,5460}` refute the old bounded-`q`
-  scans; AP13 and its `12->26` lift share local germs but not maxima.
-- THM-2058 preserves every prescribed finite lift depth while escaping at
-  `47/113`; raw jets, bad Farey rays, and fixed lift depth are not certificates.
+- `26*{1,...,12} union {339}` and `{1,...,12,5460}` refute bounded-`q`
+  scans; AP13 and its lift share germs but not maxima.
+- THM-2058 preserves every fixed lift depth but escapes at `47/113`;
+  finite jets/Farey rays fail.
 - Determinant polygons are basis-dependent; analogy does not prove LRC.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
