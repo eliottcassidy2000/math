@@ -6,6 +6,7 @@ source: root-2026-07-29
 depends_on: []
 related:
   - THM-735-bonferroni-simultaneous-multi-peel-defeats-the-clustered-non-isolated-wall
+  - THM-753-safe-peel-reduction-to-irreducible-cores
   - THM-2888-eight-body-first-apex-global-pair-cap-atlas
   - THM-2894-unmarked-residual-semilattice-order-and-group-clutch-no-go
 ---
@@ -146,18 +147,19 @@ rooted decision tree for every fixed initial carrier.  It is only a
 finiteness theorem: successive cutoffs may be enormous.  Complement caps
 and heavy flags compress that tree into the much smaller objects used below.
 
-### Ranked first-apex suffix refinement
+### Ordered first-apex suffix refinement
 
-There is a lossless refinement whenever the finite hitting set is a ranked
-prefix.  Fix a total order on the allowed labels, let
+There is a lossless refinement whenever a finite hitting set is retained as
+an ordered sidecar.  Choose any ordering
 
 ```text
-A={a_1,...,a_K}
+A=(a_1,...,a_K)
 ```
 
-be its first `K` labels, and suppose every `p`-cover meets `A`.  A putative
-cover has a unique least-indexed member `a_r` of `A`.  After subtracting
-`D_(a_r)`, its other `p-1` labels all lie in the strict suffix
+of a set that meets every `p`-cover, and place the labels outside `A` after
+this ordered prefix.  A putative cover has a unique least-indexed member
+`a_r` of `A`.  After subtracting `D_(a_r)`, its other `p-1` labels all lie
+in the strict suffix
 
 ```text
 V minus {a_1,...,a_r}.                                      (7c)
@@ -165,13 +167,64 @@ V minus {a_1,...,a_r}.                                      (7c)
 
 Consequently it is enough, for each `r<=K`, to exclude `(p-1)`-covers of
 the literal residual by that suffix; allowing the earlier prefix labels
-again is unnecessary.  In the LRC application the order is decreasing
-single-comb coverage, with speed as a deterministic tie-breaker.
+again is unnecessary.  The order need not be decreasing coverage.  That is
+one canonical choice in the LRC application, but an elimination order may
+instead be chosen to reduce the later residual workload.
 
 The index `r` and suffix in `(7c)` are retained branch data.  They are not
 reconstructed from the unmarked residual, which by THM-2894 has forgotten
 the order of deletions.  Thus this refinement uses precisely the marked
 sidecar that the residual semilattice itself lacks.
+
+### Monotone scalar bootstrap on the apex gate
+
+The order search has a finite monotone formulation.  For `a in A`, put
+
+```text
+C_a=C minus D_a,       h_a=mu(C_a),
+c_a(v)=mu(C_a intersect D_v).
+```
+
+For `P subset A minus {a}`, define
+
+```text
+S_a(P)=sup {
+  sum_(v in Q)c_a(v) :
+  Q subset V minus (P union {a}), |Q|=p-1
+}.                                                          (7d)
+```
+
+Take the supremum to be zero if there are fewer than `p-1` allowed labels.
+If
+
+```text
+S_a(P)<h_a,                                                 (7e)
+```
+
+then subadditivity excludes every `(p-1)`-cover of `C_a` from that suffix.
+Moreover `S_a(P)` is nonincreasing as `P` grows, so this scalar certificate
+is monotone under further prefix deletion.
+
+Now reserve an ordered seed `H=(b_1,...,b_m)` whose branches are
+independently certified on their actual suffixes
+`V minus {b_1,...,b_i}`.  Starting with `P={b_1,...,b_m}`, repeatedly append
+any `a in A minus P` satisfying `(7e)` and add it to `P`.  If this process
+reaches `P=A`, the seed order followed by any activation order satisfies
+the ordered suffix refinement and excludes every `p`-cover.
+
+Equivalently, the inflationary map
+
+```text
+Phi(P)=P union {a in A minus P : S_a(P)<h_a}
+```
+
+has a least fixed point above the seed.  Finiteness and monotonicity show
+that fair sequential activation and simultaneous rounds reach the same
+fixed point.  Finding a smallest seed is therefore a target-set-selection
+problem on a directed threshold hypergraph.  A seed is only a list of
+branches still needing nonscalar certificates; its membership alone proves
+nothing.  This is the proof-obligation analogue of THM-753's safe-peel core,
+not a tournament obtained by forcing pairwise orientations.
 
 ## 4. Literal residual recursion
 
