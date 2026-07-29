@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-325 (2026-07-29, THM-2908 projective-infinity replay) -- `together` was mistaken for reduced rational form
+
+- **What was done:** the candidate THM-2908 companion compared the numerator
+  returned by `together(I_1).as_numer_denom()` at the missing infinity point
+  with the reduced cubic invariant stated in the theorem.
+- **First failed implication / minimal witness:** `together` combines a rational
+  expression over one denominator but need not cancel its polynomial gcd.  In
+  this cell its raw first numerator is
+  `-(n+2)^2(n+3)(28n^2+87n+66)` and the raw denominator also contains
+  `n+3`.  The candidate therefore aborted after its long resultant replay even
+  though the reduced invariant is exactly the theorem's
+  `-(n+2)^2(28n^2+87n+66)`.  The second invariant has no such removable
+  content.
+- **Exact repair / strongest survivor:** apply `cancel` before extracting the
+  numerator, and retain an explicit hostile gate proving that the raw
+  numerator and denominator each differ from the reduced pair by exactly
+  `n+3`.  The projective-infinity nonvanishing statement and every finite-chart
+  certificate are unchanged.
+- **Rule:** when a proof identifies a rational invariant rather than a chosen
+  clearing, normalize by gcd before comparing numerators.  If removable
+  content is mathematically relevant to replay portability, freeze both the
+  raw and reduced pairs explicitly.
+
 ## MISTAKE-324 (2026-07-29, THM-2920 depth-two working audit) -- a pair statistic was mistaken for a two-slot residual
 
 - **What was inferred:** after an ordered five-cover branch fixed centres

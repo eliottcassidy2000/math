@@ -517,15 +517,35 @@ it0 = source.multilinear((infinity_u, infinity_u, infinity_u))
 it1 = source.multilinear((infinity_u, infinity_u, infinity_v))
 it2 = source.multilinear((infinity_u, infinity_v, infinity_v))
 it3 = source.multilinear((infinity_v, infinity_v, infinity_v))
+t_infinity_expression_i1 = (
+    3 * it1 * ig0 * ig2 - it3 * ig0**2 - 2 * it0 * ig1 * ig2
+)
+t_infinity_expression_i2 = (
+    3 * it2 * ig0 * ig2 - 2 * it3 * ig1 * ig0 - it0 * ig2**2
+)
+t_infinity_i1_raw = sp.together(
+    t_infinity_expression_i1
+).as_numer_denom()
 t_infinity_i1 = sp.factor(
     sp.together(
-        3 * it1 * ig0 * ig2 - it3 * ig0**2 - 2 * it0 * ig1 * ig2
+        sp.cancel(t_infinity_expression_i1)
     ).as_numer_denom()[0]
 )
 t_infinity_i2 = sp.factor(
     sp.together(
-        3 * it2 * ig0 * ig2 - 2 * it3 * ig1 * ig0 - it0 * ig2**2
+        sp.cancel(t_infinity_expression_i2)
     ).as_numer_denom()[0]
+)
+require(
+    sp.cancel(t_infinity_i1_raw[0] / t_infinity_i1) == n + 3
+    and sp.cancel(
+        t_infinity_i1_raw[1]
+        / sp.together(
+            sp.cancel(t_infinity_expression_i1)
+        ).as_numer_denom()[1]
+    )
+    == n + 3,
+    "t=infinity removable-content hostile changed",
 )
 require(
     t_infinity_i1 == -(n + 2) ** 2 * (28 * n**2 + 87 * n + 66),
