@@ -127,7 +127,7 @@ Estimate `(5)` also gives a finite hitting statement without `(2)`.  For
 any number of remaining labels `1<=p<=6`, put
 
 ```text
-W_p=floor(7p gamma/((7-p)h))+1.                               (7a)
+W_p=max(w_0, floor(7p gamma/((7-p)h))+1).                     (7a)
 ```
 
 If all `p` labels satisfy `w>=W_p`, then
