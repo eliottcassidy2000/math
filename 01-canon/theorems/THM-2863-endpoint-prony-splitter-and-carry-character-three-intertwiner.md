@@ -2,12 +2,13 @@
 id: THM-2863
 title: "Endpoint Prony splitter and carry character-three intertwiner"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT.  Four consecutive 91-unit endpoint
-  multiplier probes form a nonsingular two-node Prony system.  Its fixed
-  and relative-character-three summands split exactly, and the latter has
-  a canonical normalized equivariant match with the character-three
-  projection of the THM-2851 carry derivative.  Simultaneous full-current
-  survival, signed physical projection, and E3 transport remain open.
+  PROVED CANDIDATE + VERIFIED-EXACT.  The frequency-cleared numerators of
+  four consecutive 91-unit endpoint multiplier probes form a nonsingular
+  two-node Prony system.  Its fixed and relative-character-three summands
+  split exactly, and the latter has a canonical normalized equivariant
+  match with the character-three projection of the THM-2851 carry
+  derivative.  Simultaneous full-current survival, signed physical
+  projection, and E3 transport remain open.
 source: root/lrc-endpoint-prony-character-three-2026-07-28
 depends_on:
   - THM-2847-q3-q11-transverse-endpoint-edge-and-e3-realization-horn
@@ -56,8 +57,14 @@ On the literal q3 interval of THM-2847, probe the right endpoint at
 Y(m)=12+26m,              m=1,2,3,4.                     (1)
 ```
 
-Thus `Y=(38,64,90,116)`, and every entry is a unit modulo `91`.  Exact
-replay of the endpoint builder at the three live rows
+Thus `Y=(38,64,90,116)`, and every entry is a unit modulo `91`.  Let
+`C_m` be the builder's frequency-cleared endpoint numerator.  The actual
+interval Fourier coefficient differs from `C_m` by an explicit known
+nonzero scalar proportional to `Y(m)^(-1)` (with the fixed Fourier-sign
+normalization).  Clearing this scalar preserves vanishing and is necessary
+before applying the constant-coefficient recurrence below.
+
+Exact replay of the endpoint builder at the three live rows
 
 ```text
 (q,origin)=(3,00),(11,00),(11,12)
@@ -87,9 +94,9 @@ C_1=xi^2203-xi^65
 ```
 
 the canonical THM-2847/2857 endpoint scalar.  The replay in this section
-certifies the endpoint numerators only.  It does not assert that the other
-factors of one marked current survive simultaneously at all four values
-of `Y(m)`.
+certifies these frequency-cleared endpoint numerators only.  It does not
+assert that the other factors of one marked current survive simultaneously
+at all four values of `Y(m)`.
 
 ## 2. Exact two-node Prony splitting
 
@@ -260,8 +267,9 @@ needed sidecar:
 
 cheapest decisive test:
   exhibit two (nodes known) or four (nodes unknown) consecutive 91-unit
-  multiplier coefficients of one fully typed q3/q11 current and verify
-  that (7) survives every retained factor.
+  multiplier coefficients of one fully typed q3/q11 current, apply the
+  known frequency clearing, and verify that (7) survives every retained
+  factor.
 ```
 
 No row is excluded and the LRC(14) ledger remains `165`.
