@@ -1,5 +1,5 @@
 ---
-id: THM-2835
+id: THM-2838
 title: "Degree-four Boolean functions have maximal point sensitivity nine; record exponent needs degree >= 5"
 status: >
   FINITE-EXACT, SINGLE ENGINE WITH BIDIRECTIONAL CONTROLS — AWAITING
@@ -26,7 +26,7 @@ output_sha256: 402aed3ff07dac3cddd1b7b525f09f8c2c15c2b42f898c98fe0344a5cc1b0eb8
 hash_basis: LF-normalized bytes
 ---
 
-# THM-2835 — m(4) = 9; beating exponent log_3 6 requires degree >= 5
+# THM-2838 — m(4) = 9; beating exponent log_3 6 requires degree >= 5
 
 ## Statement
 
