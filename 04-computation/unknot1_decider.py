@@ -10,7 +10,10 @@ arc-successor structure, with the label-successor mod-2n rule as fallback).
 Verdicts
   TRUE_CERTIFIED  -- an explicit crossing change is exhibited whose changed
                      diagram is reduced to the 0-crossing diagram by
-                     face-local Reidemeister R1/R2 moves (a certificate).
+                     face-local Reidemeister R1/R2 moves, AND the input is
+                     independently certified nontrivial.  Both halves are
+                     required: otherwise the input could itself be an
+                     unreduced diagram of the unknot, with u=0 rather than 1.
   FALSE_CERTIFIED -- a named obstruction proves u(K) >= 2:
                      (i)  Murasugi: |sigma(K)| <= 2 u(K), so |sigma| >= 4;
                      (ii) H1(Sigma(K)) must be cyclic if u = 1 (Montesinos);
@@ -60,14 +63,20 @@ VERDICT_UNKNOWN = "UNKNOWN"
 
 SCOPE_NOTES = (
     "Scope: UNKNOWN is possible; deciding u(K)=1 in general is "
-    "research-level. TRUE needs the unknotting change to be visible in THIS "
-    "diagram and the changed diagram to simplify monotonically under "
+    "research-level. TRUE needs an independent nontriviality certificate for "
+    "the input, the unknotting change to be visible in THIS diagram, and the "
+    "changed diagram to simplify monotonically under "
     "face-local R1/R2 (no R3 / no crossing-increasing exploration). FALSE "
     "uses Murasugi |sigma|<=2u, cyclicity of H1 of the double branched "
     "cover, and the Lickorish linking-form test (gated by a 7_4 self-test). "
     "Deeper tools (Ozsvath-Szabo d-invariants, Alexander/Seifert route) are "
     "not implemented."
 )
+
+
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
 
 TREFOIL = [[1, 4, 2, 5], [3, 6, 4, 1], [5, 2, 6, 3]]
 # figure-8 PD derived from the braid closure of (s1 s2^-1)^2 (the PD
@@ -83,6 +92,15 @@ EXAMPLE11 = [[4, 2, 5, 1], [10, 6, 11, 5], [8, 3, 9, 4], [2, 9, 3, 10],
              [11, 16, 12, 17], [7, 15, 8, 14], [15, 7, 16, 6],
              [13, 20, 14, 21], [17, 22, 18, 1], [21, 18, 22, 19],
              [19, 12, 20, 13]]
+# This is an unknot obtained from the one-crossing unknot by certified reverse
+# Reidemeister moves R1,R2,R2,R3,R3.  Greedy R1/R2 stalls on the input, while
+# changing crossing four makes it greedily reducible.  It is the regression
+# witness for MISTAKE-unknot1-nontriviality: a changed-diagram unknot
+# certificate alone proves u<=1, not u=1.
+UNREDUCED_UNKNOT_HOSTILE = [
+    [1, 11, 2, 10], [6, 10, 7, 9], [3, 8, 4, 9],
+    [11, 5, 12, 4], [7, 2, 8, 3], [5, 1, 6, 12],
+]
 
 # SECTION: linalg
 # Exact linear algebra over Z / Q (Fractions only; no floats anywhere).
@@ -111,7 +129,7 @@ def det_exact(M):
             f = A[i][k] / A[k][k]
             if f:
                 A[i] = [A[i][j] - f * A[k][j] for j in range(m)]
-    assert det.denominator == 1
+    require(det.denominator == 1, "integer determinant acquired denominator")
     return int(det)
 
 
@@ -152,7 +170,7 @@ def adjugate_int(M):
         row = []
         for j in range(m):
             v = inv[i][j] * d
-            assert v.denominator == 1, "adjugate not integral -- bug"
+            require(v.denominator == 1, "adjugate not integral -- bug")
             row.append(int(v))
         adj.append(row)
     return adj, d
@@ -327,7 +345,7 @@ def _other_end(dg, eid, here):
         return b
     if b == here:
         return a
-    raise AssertionError("edge/end inconsistency")
+    raise RuntimeError("edge/end inconsistency")
 
 
 def build_faces(dg, strict=True):
@@ -574,7 +592,7 @@ def dissolve(dg, removed):
             cur_far = _other_end(dg, nxt, nxt_port)
             if nxt == chain[0] and len(chain) > 1:
                 return chain[:-1], None  # closed loop
-        raise AssertionError("dissolve walk did not terminate")
+        raise RuntimeError("dissolve walk did not terminate")
 
     # 1) chains anchored at surviving crossings
     for eid in list(dg.edges):
@@ -587,7 +605,10 @@ def dissolve(dg, removed):
         if len(surv) == 1:
             start = surv[0]
             chain, final = walk(eid, start)
-            assert final is not None and final[0] not in removed
+            require(
+                final is not None and final[0] not in removed,
+                "dissolve chain did not reach a surviving crossing",
+            )
             visited.update(chain)
             keep = chain[0]
             for e in chain[1:]:
@@ -671,7 +692,10 @@ def flip_crossing(dg, c):
     for eid in set(old):
         d.edges[eid] = [(cc, (ss - k) % 4) if cc == c else (cc, ss)
                         for (cc, ss) in d.edges[eid]]
-    assert d.heads[(c, 0)] and not d.heads[(c, 2)]
+    require(
+        d.heads[(c, 0)] and not d.heads[(c, 2)],
+        "crossing flip did not normalize the over-in slot",
+    )
     return d
 
 
@@ -725,11 +749,21 @@ def decide(pd):
     """Full pipeline.  Returns a result dict (see report())."""
     res = {"pd": pd, "verdict": VERDICT_UNKNOWN, "certificate": None,
            "obstructions": [], "notes": [], "invariants": {},
-           "search": None}
+           "nontriviality": [], "search": None}
     dg = parse_pd(pd)
     inv = goeritz_invariants(dg)
     res["invariants"] = {"n": dg.n, "det": inv["det"],
                          "sigma": inv["sigma"], "writhe": writhe(dg)}
+    if inv["det"] != 1:
+        res["nontriviality"].append(
+            "det(K)=%d != 1, whereas the unknot has determinant 1"
+            % inv["det"]
+        )
+    if inv["sigma"] != 0:
+        res["nontriviality"].append(
+            "sigma(K)=%+d != 0, whereas the unknot has signature 0"
+            % inv["sigma"]
+        )
     # Is the input itself already the unknot?  (then u=0, so u != 1)
     red, log, is_unknot = try_reduce(dg)
     if is_unknot:
@@ -765,10 +799,24 @@ def decide(pd):
     if res["obstructions"]:
         res["verdict"] = VERDICT_FALSE
     elif certified is not None:
-        res["verdict"] = VERDICT_TRUE
-        res["certificate"] = (
+        changed_certificate = (
             "change crossing #%d (1-indexed), then reduce: %s"
-            % (certified["crossing"] + 1, ",".join(certified["log"])))
+            % (certified["crossing"] + 1, ",".join(certified["log"]))
+        )
+        if res["nontriviality"]:
+            res["verdict"] = VERDICT_TRUE
+            res["certificate"] = (
+                "%s; input nontrivial because %s"
+                % (changed_certificate, "; ".join(res["nontriviality"]))
+            )
+        else:
+            res["verdict"] = VERDICT_UNKNOWN
+            res["notes"].append(
+                "the changed diagram is CERTIFIED UNKNOTTED by %s, proving "
+                "u(K)<=1; however the input has no nontriviality certificate, "
+                "so this engine cannot distinguish u(K)=0 from u(K)=1"
+                % changed_certificate
+            )
     else:
         res["verdict"] = VERDICT_UNKNOWN
         if any("probably-unknot" in e["status"] for e in sresults):
@@ -788,6 +836,12 @@ def report(res, out=sys.stdout):
       "cross-checked)\n" % inv["sigma"])
     w("Alexander polynomial: NOT COMPUTED (Seifert-matrix route descoped "
       "this pass)\n")
+    w("input nontriviality certificates:\n")
+    if res["nontriviality"]:
+        for cert in res["nontriviality"]:
+            w("  * %s\n" % cert)
+    else:
+        w("  (none; u=0 versus u=1 may remain unresolved)\n")
     w("obstructions (u >= 2):\n")
     if res["obstructions"]:
         for ob in res["obstructions"]:
@@ -842,6 +896,22 @@ def selftest(verbose=True):
           "(%s)" % s74["lickorish"]["detail"])
     check("7_4 verdict FALSE_CERTIFIED", s74["verdict"] == VERDICT_FALSE,
           "(got %s)" % s74["verdict"])
+    hostile_dg = parse_pd(UNREDUCED_UNKNOT_HOSTILE)
+    _hostile_red, _hostile_log, hostile_greedy = try_reduce(hostile_dg)
+    hostile = decide(UNREDUCED_UNKNOT_HOSTILE)
+    check("hostile unknot defeats greedy input reduction", not hostile_greedy)
+    check(
+        "hostile unknot has changed-diagram certificate",
+        any(
+            "UNKNOT CERTIFIED" in entry["status"]
+            for entry in hostile["search"]
+        ),
+    )
+    check(
+        "hostile unknot is not falsely TRUE_CERTIFIED",
+        hostile["verdict"] == VERDICT_UNKNOWN,
+        "(got %s)" % hostile["verdict"],
+    )
     return fails
 
 

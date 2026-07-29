@@ -115,13 +115,14 @@ The three structural loopholes the plateau argument does not close:
 2. **Junction fabrics:** middle rows with two shared rung species make
    4-direction junctions; staircase cancellations could route second
    directions backward. Search class C.
-3. **Symmetric-branch degeneration (the owner's μ₃ fragment):** a depth-2
-   3-branch recursion whose μ₃-fixed branch carries a coincidence counts
-   3+3+1 = 7 not 9. SIGN NOTE: the identification's value is NOT the
-   smaller denominator (shrinking n − t alone raises the score); it is hub
-   manufacture — the merged class inherits every member's incident species
-   and becomes a free junction. Measured: merge = 12/7 vs edge+seed = 7/4
-   on twin [2,2,2] witnesses. See
+3. **Identification-gluing, independently motivated:** a merged class
+   inherits its members' incident species and can manufacture a cheap
+   junction.  The smaller denominator alone is harmful; the possible gain
+   is the larger numerator saving.  Measured on twin `[2,2,2]` witnesses,
+   merge gives `12/7` versus `7/4` for an edge-plus-seed substitute.  This
+   mechanism must stand on its own: the owner's `3+3+1=7` fragment has now
+   been decoded as THM-2473's Keller fibre, where two sheets escape to
+   infinity rather than two finite vertices being identified.  See
    `05-knowledge/results/FRAGMENT-DECODE-mu3-depth2-tree-klein-S691.md`.
 
 If the plateau is a theorem for ALL constructible graphs, then the strict
@@ -129,12 +130,11 @@ reading is unwinnable below 2 and the benchmark's own soundness/encoding
 claim (KT proofs ⟹ certificates at 1.75, 1.675…) fails for a THIRD reading
 we have not reconstructed — most likely the intended semantics includes the
 intuitive version's IDENTIFICATIONS (gluing copies along vertex sets), which
-strictly enriches the game beyond both implemented modes. Next session
-should implement identification-gluing as mode three: the intuitive
-definition allows "identify x's copies in H_{i−1} and H_i", which merges
-vertices and lowers n without touching m, r — exactly the 9→7 move of the
-μ₃ fragment. **This is the leading hypothesis for where 1.75 and 1.675
-certificates actually live.**
+strictly enriches the strict game.  Mode3-v2 now implements a permissive
+version of that operation and reaches `9/5`; its witness still needs the
+same-H legality/compilation theorem described below.  Identification remains
+the leading structural hypothesis for where `1.75` and `1.675` certificates
+could live, but THM-2473's `9 -> 7` escape is no evidence for it.
 
 ## 4b. The format hierarchy (corrected reading, late-session)
 
@@ -181,5 +181,7 @@ theory targets.
   arithmetic, and the certificate⟹AK theorem is the benchmark's, unaudited.
 - The 2-plateau conjecture is open even for paths (exhaustive only to n=5,
   greedy seeds only).
-- The identification-gluing mode is unimplemented; until it exists, "strict
-  min = 2?" remains a question about OUR two modes, not the benchmark.
+- Mode3-v2 implements permissive legal-slot merging, but its `9/5` record is
+  not yet compiled into the intuitive same-H recursion.  The strict and
+  intuitive formats remain incomparable until the missing compilation
+  lemmas are proved.

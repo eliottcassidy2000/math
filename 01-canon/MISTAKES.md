@@ -8641,3 +8641,74 @@ number of algebra generators separate.
 - **The compounding process error:** klein-S324's master-quartic note ("fiber spectrum {3,1} never 2") was ALREADY ON DISK when I wrote §4 — a grep for the statement would have caught the clash before canonization. This is the MISTAKE-183 pattern (derive-instead-of-grep) recurring on my own output; and the mechanical lesson is new: **count fiber drops in root MULTIPLICITY, not in shared root values** — a shared value at a double root costs two.
 - **What survives:** THM-1315 §1 (syzygies, fiber cubic), §2 (S₃ pin — generic targets), §3's caustic identity and ramification-at-infinity; the corrected Euler ledger now balances (1 = 3·0 + 1·(1−0) + 0 with χ(K) = 1, χ(E) = 0). Banner added to THM-1315; the S142 reflection updated.
 - **Source:** opus-2026-07-27 repair letter (MSG-1605) + THM-2473; verified independently in-session.
+
+## MISTAKE-318 (2026-07-28, root audit of klein-S691) — a changed-diagram unknot certificate proves `u<=1`, not `u=1`
+
+**What was claimed.**  The first version of
+`04-computation/unknot1_decider.py` returned `TRUE_CERTIFIED` whenever one
+crossing change produced a diagram which greedily reduced to the empty
+diagram by Reidemeister R1/R2 moves.  The implementation attempted to reject
+the input unknot first, but used the same incomplete greedy R1/R2 reducer.
+
+**Why it is wrong.**  The crossing-change certificate proves only
+
+```text
+u(K)<=1.
+```
+
+To conclude `u(K)=1`, one must separately prove `K` is nontrivial.  Failure of
+one simplification heuristic is not such a proof.  The exact hostile PD
+
+```text
+[[1,11,2,10],[6,10,7,9],[3,8,4,9],
+ [11,5,12,4],[7,2,8,3],[5,1,6,12]]
+```
+
+is an unknot obtained from the one-crossing unknot by legal reverse moves
+`R1,R2,R2,R3,R3`.  Greedy R1/R2 stalls on this six-crossing input.  Changing
+crossing four then reduces by `R2,R1,R2,R1`, so the old engine returned
+`TRUE_CERTIFIED` although the represented knot has `u=0`.
+
+**Repair.**  A true certificate now has two independent halves:
+
+1. an input-nontriviality certificate (currently `det(K)!=1` or
+   `sigma(K)!=0`); and
+2. a one-crossing change followed by an explicit R1/R2 unknot certificate.
+
+If (2) holds without (1), the engine returns `UNKNOWN` and reports only the
+proved upper bound `u<=1`.  The hostile PD is frozen in the 16-check
+ordinary/optimized regression suite.  The Murasugi and gated Lickorish
+`u>=2` false-certificates are unaffected.
+
+**Reusable rule.**  An exact witness for the result of a move does not certify
+the starting object's distance is exactly one.  Every exact-distance
+certificate needs both an upper-bound path and an independent lower-bound
+obstruction; a failed search is never the latter.
+
+## MISTAKE-319 (2026-07-28, root audit of klein-S691) — the `3+3+1=7` fragment is Keller escape, not an Arithmetic-Kakeya `mu_3` identification
+
+**What was claimed.**  A truncated owner fragment about a depth-two tree with
+seven rather than nine points was provisionally decoded as a `mu_3`-fixed
+branch on which two points coincide.  The AK workbench then treated that
+putative collision as evidence for identification-gluing.
+
+**Exact resolution.**  The fragment is THM-2473's inverse tree for the
+sporadic Keller map.  Its three level-one points have `3,1,3` finite
+preimages.  On the middle branch the cubic eliminant loses its leading
+coefficient and becomes linear; two sheets escape on the Jelonek
+nonproperness surface.  Because the Jacobian determinant is the nonzero
+constant `-2`, no finite collision or ramification occurs.  The symmetry
+fixing the middle point is the order-two involution
+`diag(-1,-1,1)` and the generic monodromy is `S3`, not `mu_3`.
+
+**Repair and survivor.**  The fragment note and AK workbench now withdraw the
+transfer.  Identification-gluing remains a legitimate independently
+testable AK mechanism: a merged vertex may inherit several incident species.
+It receives no support from this Keller fibre.  A transfer based only on the
+shared count `9 -> 7` loses the decisive coordinate—finite vertex
+identification versus loss of properness at infinity.
+
+**Reusable rule.**  Reconstruct a fragment's generating object before using
+its numerical pattern elsewhere.  Equal cardinality defects do not identify
+mechanisms; record whether mass collides, cancels, is quotiented, or escapes
+the ambient space.
