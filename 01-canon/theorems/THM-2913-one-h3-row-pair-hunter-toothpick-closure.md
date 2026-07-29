@@ -47,7 +47,9 @@ finite hostile second-centre children                      10
 second-centre pivots, all top-three closed               29/29.       (1)
 ```
 
-Thus all `38` THM-2912-open bodies close.  Exactly one,
+At whole-root level the first route closes `19` of the `38` bodies, its
+union with the Hunter route closes `28`, and the recursive route closes
+the final `10`.  Thus all `38` THM-2912-open bodies close.  Exactly one,
 
 ```text
 (1,2,3,5,6,8,13),                                         (2)
@@ -343,12 +345,13 @@ G_4=h                      0
 p_1+p_2+p_3=mu(S)          0.                             (26)
 ```
 
-Every residual is reconstructed both by literal subtraction and directly
-from its full family.  Every forbidden prefix is carried forward.  Pair
-endpoints and cover labels are distinct.  The global pair cap and both
-singleton rank banks include equality at their finite heads and use the
-strict discrepancy estimate only to seal omitted labels.  Strict
-inequalities, rather than decimal comparisons, certify `(1)`.
+Every child and grandchild is reconstructed both by literal subtraction
+and directly from its full family; pair winners receive a repeated literal
+residual check.  Every forbidden prefix is carried forward.  Pair endpoints
+and cover labels are distinct.  The global pair cap and both singleton rank
+banks include equality at their finite heads and use the strict discrepancy
+estimate only to seal omitted labels.  Strict inequalities, rather than
+decimal comparisons, certify `(1)`.
 
 The relation in `(12)` is an undirected pair-overlap sidecar.  The order
 used in `(17)` is a branch-allocation gauge and does not define a

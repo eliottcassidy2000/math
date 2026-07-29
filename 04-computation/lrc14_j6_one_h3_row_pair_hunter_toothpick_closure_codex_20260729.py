@@ -31,7 +31,7 @@ import hashlib
 import importlib.util
 import multiprocessing as mp
 import os
-from collections import defaultdict
+from collections import Counter, defaultdict
 from fractions import Fraction as F
 from pathlib import Path
 
@@ -91,6 +91,8 @@ EXPECTED_COUNTS: tuple[object, ...] | None = (
     0,
     0,
     0,
+    19,
+    28,
 )
 EXPECTED_FAILED_ROOT_DIGEST: str | None = (
     "62f177cca38cfa9dc8a1aa33c9842efa61ab7c9a4270cc024f248cb3ee5fd37b"
@@ -109,10 +111,14 @@ def require(condition: bool, message: str) -> None:
 
 
 def file_sha256(path: Path) -> str:
-    # Git may materialize the same text blob with LF or CRLF line endings.
-    # Path.read_text() applies universal-newline normalization, so dependency
-    # pins describe mathematical text rather than checkout policy.
-    return hashlib.sha256(path.read_text().encode()).hexdigest()
+    """Hash repository text independently of LF/CRLF checkout policy."""
+
+    payload = path.read_bytes()
+    require(
+        b"\r" not in payload.replace(b"\r\n", b""),
+        f"{path.name}: unexpected lone carriage return",
+    )
+    return hashlib.sha256(payload.replace(b"\r\n", b"\n")).hexdigest()
 
 
 def load_base():
@@ -287,7 +293,7 @@ def exact_pair_cap(
         "finite pair head did not strictly beat the infinite-tail cap",
     )
     direct = mass - interval_mass(subtract_multi(carrier, witness))
-    require(direct == best, "pair winner failed independent residual check")
+    require(direct == best, "pair winner failed repeated literal residual check")
     return {
         "ranked": ranked,
         "top4": tuple(ranked[:4]),
@@ -651,6 +657,30 @@ def main() -> None:
         for parent in repaired
         for row in parent["second_rows"]
     ]
+    repaired_by_body: dict[
+        tuple[int, ...],
+        list[dict[str, object]],
+    ] = defaultdict(list)
+    for row in repaired:
+        repaired_by_body[row["body"]].append(row)
+    pair_closed_roots = {
+        body
+        for body, body_rows in repaired_by_body.items()
+        if all(row["route"] == "pair" for row in body_rows)
+    }
+    hunter_closed_roots = {
+        body
+        for body, body_rows in repaired_by_body.items()
+        if all(row["route"] in {"pair", "hunter"} for row in body_rows)
+    }
+    root_route_profiles = tuple(
+        sorted(
+            Counter(
+                tuple(row["route"] for row in body_rows)
+                for _, body_rows in sorted(repaired_by_body.items())
+            ).items()
+        )
+    )
     counts = (
         len(parent_rows),
         11_511,
@@ -681,6 +711,8 @@ def main() -> None:
         sum(row["pair_margin"] == 0 for row in repaired),
         sum(row["hunter_margin"] == 0 for row in repaired),
         sum(row["margin"] == 0 for _, row in second_rows),
+        len(pair_closed_roots),
+        len(hunter_closed_roots),
     )
     if EXPECTED_COUNTS is not None:
         require(counts == EXPECTED_COUNTS, "THM2913 counts changed")
@@ -803,6 +835,7 @@ def main() -> None:
             f"{ftext(min(row['delta'] for row in hunter_failed))}"
         ),
         f"second_core_sizes={tuple(len(row['second_core']) for row in hunter_failed)}",
+        f"root_route_profiles={root_route_profiles}",
         f"ledger_sha256={ledger_sha256}",
         (
             "mode=DISCOVERY"
