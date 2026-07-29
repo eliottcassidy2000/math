@@ -72,29 +72,19 @@ THM-2825's half-step scale uniquely picks `+h/+2h` on all 587 rights; the
 norm-one Schur collars are absent from the coarse algebra.  Its labelled path
 forest has a transverse/tangent `M_3 tensor I_587`, but source data change and
 endpoint matches are only `74/587` versus `587/587`.
-THM-2820 proves Boolean tangent rigidity and the successor commutator.
-THM-2829 finds a full `q=11` packet and the unique 91-unit carry response,
-but its outer word changes `QB -> QA`.  THM-2835 isolates the resulting
-449-sheet semantic horn: word support is carry-blind, the exact abstract
-response ranks are `13/26`, and positive regular realizations exist, yet no
-physical carry-to-response basepoint or `E3` transport does.  The outer-word
-and endpoint-gauge copies have empty fibre product.  THM-2839 proves the
-449-sheet horn mask has every one of its `13^5` ancestry characters nonzero
-and full regular rank `371293`, by the finite-`p`-group augmentation-unit
-lemma.  Its inverse is signed and only the unrotated horn response is
-physical, so the basepoint/`E3` clutch remains.  Ledger `165`; no row is
-excluded.
+THM-2820 proves Boolean tangent rigidity.  THM-2829/2835 give the unique
+91-unit response and `449`-sheet carry-blind semantic horn (ranks `13/26`),
+but change `QB -> QA`; endpoint/word copies have empty fibre product.
+THM-2839 gives its full `13^5`-character rank `371293`, yet its inverse is
+signed and only the unrotated response is physical.
 
-THM-2847 finds a `42`-cell q3/q11 bank and `20`-cell E3-only horn: its
-addresses differ by `A_3`, while the imported `449` columns have rank four
-but the E3 gate has rank three with QAB kernel.  THM-2851 identifies the
-higher defect: `L_9L_8=T L_4` has one ancestry carry but `A_5A_3=A_8` is
-flat, so flat equivariance kills `T`; fidelity costs a sharp 13-state fibre
-(`169` jointly), while `(Z-1)h_L` has norm `898` and ranks `12/371292`.
-THM-2852 gives full signed convolution rank for the three-address mask, six
-borrow-aware arrows, and odd-`p` Cayley tournaments.  These algebraic
-splittings/units are not physical actions: lawful oriented-current access,
-a carry/response basepoint, and macro transport remain.  Ledger `165`.
+THM-2847 gives a `42`-cell q3/q11 bank and `20`-cell E3 horn: the `449`
+columns have rank four but E3 rank three.  THM-2851 exposes
+`L_9L_8=T L_4` versus flat `A_5A_3=A_8`; carry fidelity costs `13` states
+(`169` jointly), and its derivative has norm `898`, ranks `12/371292`.
+THM-2852 adds full signed convolution rank and six borrow-aware arrows.
+Lawful positive action, carry/response basepoint, and E3 transport remain;
+ledger `165`.
 
 ### Independent routes that remain live
 
