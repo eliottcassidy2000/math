@@ -597,6 +597,7 @@ In the preceding rows, ordering assigns each pair, heavy triple, or
 heavy-graph clique to its least vertex exactly once and permits a child
 certificate to stop the whole pivot branch before all flag completions are
 materialized.
+
 There is a sharp same-cap deadlock when `ell=s`.  Every legal selected flag
 is then heavy, so
 
