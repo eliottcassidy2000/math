@@ -92,7 +92,7 @@ THM-2861/2863 give Hermitian/Prony; THM-2868 its atlas. THM-2874
 `F`-clutches Galois/`C169`, but q7 stays flat. THM-2876 kills the q3 edge.
 THM-2880/2878/2882 reach q3 but flat carry.
 THM-2884/2886 find `V4` and transport q3/q11/q7 parity/current; scalar Prony fails.
-THM-2887/2889 give Arf-one `Q8`, dicyclic chars and four channels, without physical/unmarked descent.
+THM-2887/2889 give Arf-one `Q8`/dicyclic channels; THM-2894 blocks central-sign descent through unmarked residuals.
 Next: `e9=(-9,+9,QB)`, clutch `(13,13,-1)`. Ledger `165`.
 
 ### Independent routes that remain live

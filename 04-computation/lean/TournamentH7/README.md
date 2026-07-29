@@ -198,6 +198,23 @@ older `LRCCoherentBlockerChronology.lean` at its rationally typed inference
 from `0 <= k < c` to `0 <= c-k-1`; that pre-existing integral-address typing
 debt is unrelated to `LRCC169CarrySelector`.
 
+`LRCResidualSemilatticeNoGo.lean` is the sorry-free bridge guardrail between
+THM-2888/2893's unmarked literal-residual algebra and THM-2889's ordered
+quaternionic clutch.  It proves that finite-support deletion is order-blind,
+idempotent, and remains order-blind after every later unmarked continuation;
+no function on that carrier can assign distinct values to the two insertion
+orders; and every union-multiplicative invariant from it to a group is
+trivial.  Thus the heavy-flag carrier cannot retain the central sign without a
+new marked/oriented sidecar.  Both
+
+```bash
+lake env lean TournamentH7/LRCResidualSemilatticeNoGo.lean
+lake build TournamentH7.LRCResidualSemilatticeNoGo
+```
+
+pass; the five `#print axioms` reports contain only standard Mathlib
+foundational axioms and no `sorryAx`.
+
 ## Proof sketch
 
 By `ocf`: H(T) = 1 + 2α₁ + 4α₂ + 8α₃ + 16α₄. Setting H = 7 gives
