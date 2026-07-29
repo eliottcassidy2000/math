@@ -2,7 +2,8 @@
 id: THM-2887
 title: "Quaternionic Arf lift of the semantic V4 and global carry no-go"
 status: >
-  PROVED + VERIFIED-EXACT.  The THM-2884 semantic V4 carries the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The THM-2884
+  semantic V4 carries the
   anisotropic Arf-one quadratic form q(h)=1_(h nonzero), with determinant
   polarization.  Its unique central-extension class having determinant
   commutator and nontrivial square on all three nonzero directions is
@@ -22,6 +23,17 @@ status: >
   arbitrary extensions or groups of order 1352.  No physical Q8 sheet
   lift, canonical Q8-valued current, row exclusion, or LRC(14) proof
   follows.
+audit: >
+  The independent referee replayed normal and optimized execution against
+  the stored output and reimplemented the D8/Q8 order censuses, all 16
+  normalized cocycles, the determinant-commutator and quadratic-refinement
+  classification, the two coboundary tables, Aut/Inn/Out(Q8), the minimum
+  faithful permutation degree, the pointed conjugation character, both
+  S3-equivariance tests, the unique base-thirteen carry primitive, and the
+  C13/C169 action no-go.  It confirmed that Ad_QB recovers only the
+  selector-pair XOR parity, and accepted the normalized-ell,
+  semidirect-direction, physical-lift, current, row-exclusion, and LRC
+  boundaries.  Verdict: ACCEPT.
 source: root/lrc-quaternionic-arf-lift-2026-07-29
 depends_on:
   - THM-2779-bockstein-symplectic-decoder-frame-torsor-and-heisenberg-root-degree-gate
@@ -43,7 +55,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2887 -- quaternionic Arf lift of the semantic V4 and global carry no-go
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The diagonal carrier of THM-2884 is not merely a four-element support
 set.  Its nonzero-support parity is the anisotropic quadratic form on a
