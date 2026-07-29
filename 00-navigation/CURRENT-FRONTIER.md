@@ -209,7 +209,7 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   THM-2879/2890/2891 close consecutive cone-cutting planes.
   THM-2906/10/14/18 give holonomy/`C3` exits; THM-2929 makes high first gaps
   effective.  THM-2949/2952 close all `364` four-slot supports through width
-  `14`; THM-2955/2957 close only first-gap `15<=M<=20` by modular gates.
+  `14`; THM-2955/2957/2959 close first-gap `15<=M<=24` by modular gates.
   Larger widths/atlas stay open; THM-2956 lowers degree.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius

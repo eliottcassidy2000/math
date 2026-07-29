@@ -2,8 +2,8 @@
 id: THM-2959
 title: "First-gap width twenty-one through twenty-four modular depth continuation"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  For each first-gap support (0,1,2,M),
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For each
+  first-gap support (0,1,2,M),
   21<=M<=24, THM-2949's fixed rank-35 cofactor is nonzero at
   every nonnegative integer depth.  Width 21 has one explicit
   surplus negative-root factor n+17 beyond THM-2957's floor-law
@@ -11,7 +11,14 @@ status: >
   finite-field root-free gates.  This is not a complete-width,
   arbitrary-width, or positive-real-ray theorem.
 source: codex-gmc-first-gap-modular-continuation-2026-07-29
-audit: Pending independent hostile audit.
+audit: >
+  An independent hostile audit checked FLINT coefficient order,
+  integral primitive normalization, all four degree invoices, the
+  width-21 surplus, primality and every residue in the four modular
+  gates, all twelve outside-grid determinants, the THM-2947 rank-gap
+  handoff, and the integer-only scope.  Fresh normal and optimized
+  replays reproduced the stored transcript, hashes, and record digest
+  exactly.
 depends_on:
   - THM-2957-first-gap-width-fifteen-twenty-modular-depth-ladder
   - THM-2949-fixed-rank-thirty-five-cofactor-newton-atlas
@@ -29,8 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2959 -- first-gap widths twenty-one through twenty-four modular continuation
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 For \(21\leq M\leq24\), let \(P_M(n)\) be the fixed
 \(20Q+10C+5F\), rank-thirty-five cofactor constructed in THM-2949 for
@@ -227,4 +233,4 @@ stronger characteristic-zero signal: its full determinant gcd has
 nonnegative coefficients and positive constant term.  It is not used
 here and remains outside this theorem pending its own audit.
 
-**QED (candidate; independent promotion audit pending).**
+**QED.**
