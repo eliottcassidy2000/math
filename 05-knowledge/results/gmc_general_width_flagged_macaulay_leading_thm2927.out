@@ -1,0 +1,11 @@
+THM-2927 GENERAL-WIDTH FLAGGED MACAULAY LEADING COEFFICIENT
+selected_rows=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,35,36,37,38,39,40,41;allocation=(20Q,10C,6F)
+identity=3*u0^14*v0^4*det2(u,v)^2*det3(u,v,w)^24
+symbolic_flag_slice=3*d^4*(b*d-1)^26;PASS
+generic_integer_identity_controls=40;digest=c1fdeab568f6cc95f68139418d0247f977322dbc6f1327fa2cdb30c40fa35b62
+flag_boundary_ranks=u0:29,v0:34,det2:35,generic:36
+widths=3..12;supports=220;positive_CB2_terms=4004;positive_CB3_terms=5005
+leading_value_digest=7370a838ba89f9530e7082efdde6d8dc394769b90ccc2c8e73acbc85fb01125c
+consequence=degree 58M-36 is exact and the fixed chart is eventually positive for every 0<a<b<M
+scope=leading coefficient only;finite-depth nonvanishing and all-width SFC(4) remain open
+all_exact_checks=PASS
