@@ -2,8 +2,8 @@
 id: THM-2908
 title: "Consecutive four-slot projective resultant closure"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING FINAL INDEPENDENT
-  HOSTILE AUDIT.  For every n>=0, the first four factorial moments have no
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  n>=0, the first four factorial moments have no
   common nonzero projective zero on the consecutive support
   {n,n+1,n+2,n+3}.  A sign-blind degree-2804 direct resultant closes the
   entire finite moving-plane chart, including selector-zero fibres, and a
@@ -13,6 +13,16 @@ status: >
   the bound sharp with full support; for n>=1 its genuinely two-charge
   Gaussian lift has exact uniform detection depth eight.
 source: root/consecutive-projective-resultant-closure-2026-07-29
+audit: >
+  An independent hostile audit rederived the complete RP2 moving-plane
+  atlas, checked that homogeneous selector clearing retains the A=N=0
+  fibres, verified the degree-2804 finite resultant and its degree-65
+  mod-43 and degree-203 mod-83 no-root gates, reconstructed the
+  cancel-first infinity invariants and degree-49/P5/P19 closure, and
+  accepted the full-support sharpness and n>=1 two-charge depth-eight
+  lift.  Main and sharpness companions replayed in ordinary and
+  optimized modes byte-for-byte against stored output with empty
+  stderr and the declared LF hashes.
 depends_on:
   - THM-2173-sparse-projective-factorial-moment-floor
   - THM-2812-consecutive-three-slot-factorial-moment-six-detection
@@ -26,6 +36,7 @@ related:
   - THM-2890-discrete-newton-closure-of-strict-consecutive-gmc-wedges
   - THM-2891-zero-normal-coordinate-consecutive-cone-boundary-cubic-emptiness
   - THM-2906-atomic-tp3-does-not-orient-mixed-endpoint-holonomy
+  - THM-2940-consecutive-four-slot-macaulay-newton-short-closure
 script: 04-computation/gmc_consecutive_four_slot_projective_closure_thm2908.py
 output: 05-knowledge/results/gmc_consecutive_four_slot_projective_closure_thm2908.out
 script_sha256: 05d28bd0732d98bffaea93a59b9f8a268da7886c154db07ec2bd5ae4b4575674
@@ -39,8 +50,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2908 -- consecutive four-slot projective resultant closure
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING FINAL INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Put
 
@@ -555,4 +565,4 @@ the infinity-chart gates.  The final main-companion normal and optimized
 executions now byte-match the stored output; their LF-normalized hashes are
 the values declared in frontmatter.
 
-**QED (candidate pending final independent hostile audit).**
+**QED.**
