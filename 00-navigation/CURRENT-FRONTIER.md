@@ -200,18 +200,18 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   sextic--octic resultant; two exact certificates close `{0,1,2,3}`, while an
   abstract hidden plane proves coordinate faces insufficient.  Its
   conjugate-pair/three-plane count does not carry the standard holomorphic
-  `C_2*C_3` action. THM-2845 classifies scalar unit detectors on every finite
-  algebra as characters (odd character sums over `F_2`); a two-way detector
-  exists exactly in the local residue-`K` case.  THM-2846 finds a positive
-  interlaced-cone line with factorial moments one--three, hence Gaussian
-  moments one--six, zero; moment four/eight exits, and one variance jet
-  detects every binary cone plane. THM-2848 reduces four slots to
+  `C_2*C_3` action. THM-2845 classifies finite-algebra scalar detectors
+  (two-way iff local residue-`K`); THM-2846 gives a positive cone line
+  vanishing through Gaussian moment six but exiting at eight, with a
+  variance-jet plane detector. THM-2848 reduces four slots to
   `F^o=0` or a shared cubic--quartic line; THM-2866 excludes the first.
   THM-2879/2890/2891 close consecutive cone-cutting planes.
   THM-2906/10/14/18 give holonomy/`C3` exits; THM-2929 makes high first gaps
   effective.  THM-2949/2952 close all `364` four-slot supports through width
   `14`; THM-2955/2957/2959 close first-gap `15<=M<=24` by modular gates.
-  Larger widths/atlas stay open; THM-2956 lowers degree.
+  THM-2960 gives the fixed Smith wall atlas through `24` (two-chart seam
+  through `20`); THM-2963 refutes a uniform next-prime gate.  Larger
+  widths/core stay open; THM-2956 lowers degree.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent

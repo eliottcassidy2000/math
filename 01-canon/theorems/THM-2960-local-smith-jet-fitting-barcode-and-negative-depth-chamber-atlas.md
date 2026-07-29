@@ -2,8 +2,8 @@
 id: THM-2960
 title: "Local Smith-jet Fitting barcode and negative-depth chamber atlas"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  A general DVR lemma identifies truncated block-Toeplitz
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A general
+  DVR lemma identifies truncated block-Toeplitz
   nullity growth with local Smith bars and maximal-minor Fitting
   valuation.  On the finite first-gap bank (0,1,2,M), 6<=M<=24, the
   first five jets give the complete fixed rank-35 negative-depth
@@ -17,10 +17,13 @@ status: >
   positive-core, or fixed-prime rank conclusion is claimed.
 source: codex-gmc-local-smith-jet-barcode-2026-07-29
 audit: >
-  Author exact replay completed in normal and optimized modes; both
-  LF-normalized transcripts byte-match the stored output.  The proof
-  and characteristic-zero companion still require independent hostile
-  audit before status promotion.
+  Author and independent exact replays completed in normal and optimized
+  modes; all LF-normalized transcripts byte-match the stored output.
+  The independent audit rederived the DVR lemma and degree/count laws,
+  checked the local-versus-global factor scope, and independently
+  eliminated determinant series modulo three primes at (M,r)=(21,17)
+  and (12,5), obtaining the claimed orders 20 and 25 with nonzero
+  leading coefficients.
 depends_on:
   - THM-2949-fixed-rank-thirty-five-cofactor-newton-atlas
 related:
@@ -39,8 +42,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2960 -- local Smith jets and the negative-depth chamber atlas
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 For \(6\leq M\leq24\), let \(A_M(n)\) be the fixed
 \(35\)-by-\(35\) polynomial matrix whose determinant \(P_M(n)\) is
@@ -439,4 +441,26 @@ or selected prime.  In
 particular, the retracted all-width next-prime shortcut is unrelated
 to and cannot be inferred from this atlas.
 
-**QED (candidate; independent hostile audit pending).**
+## 8. Independent hostile audit
+
+The immutable candidate at commit `1320b187b` was independently replayed in
+normal and optimized modes; both outputs LF-byte-match the stored transcript,
+and the script, output, and THM-2949 dependency hashes agree with frontmatter.
+The referee separately rederived the DVR/Toeplitz lemma, the degree formula,
+and the `304`/`1,520`/`210` count invoices.
+
+As an independent path through the two exceptional walls, truncated
+determinant-series elimination modulo
+
+```text
+1000003, 1000033, 1000037
+```
+
+gave order `20` at `(M,r)=(21,17)` and order `25` at `(12,5)`, with nonzero
+leading coefficients for every prime.  Direct pure-coefficient factorization
+found `f400=(n+17)*unit` at the first wall while `q200,c300` are units, and
+found all three pure coefficients to be units at the second.  This confirms
+both the quartic-bar classification and the genuinely matrix-level boundary.
+The audit found no defect.
+
+**QED.**
