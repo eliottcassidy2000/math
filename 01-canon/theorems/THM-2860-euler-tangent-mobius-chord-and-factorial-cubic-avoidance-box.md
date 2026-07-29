@@ -21,6 +21,7 @@ related:
   - THM-2842-ordered-positive-cone-vandermonde-multiplier-observability
   - THM-2843-four-slot-projective-divisibility-and-resolvent-reduction
   - THM-2849-four-slot-first-window-macaulay-box
+  - THM-2866-positive-factorial-difference-semiring-and-cubic-pascal-response-ladder
 script: 04-computation/gmc_euler_tangent_mobius_chord_thm2860.py
 output: 05-knowledge/results/gmc_euler_tangent_mobius_chord_thm2860.out
 script_sha256: 379a441ff3e2d64b4047f22112cb28e14a577f0bc65bbbad7d12af8bda0c72db
@@ -413,8 +414,10 @@ The theorem is finite in `a_3`.  A separate random modular probe above
 this box is not part of the theorem or its evidence.  Even inside the
 box, `(28)` does **not** exclude THM-2848's branch `F^o=0` or a shared
 cubic--quartic line: it only proves that every such cubic line would be
-Euler-transverse.  It proves neither four-slot SFC/GMC nor access to the
-multiplier in `(33)`.
+Euler-transverse.  THM-2866 later excludes `F^o=0` by a different
+top-face Pascal-ratio argument; the shared Euler-transverse line remains.
+This theorem proves neither four-slot SFC/GMC nor access to the multiplier
+in `(33)`.
 
 The independent hostile audit rederived the exterior-determinant iff,
 the Segre/Möbius dichotomy including the denominator-degenerate face, the

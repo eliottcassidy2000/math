@@ -207,17 +207,16 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   exists exactly in the local residue-`K` case.  THM-2846 finds a positive
   interlaced-cone line with factorial moments one--three, hence Gaussian
   moments one--six, zero; moment four/eight exits, and one variance jet
-  detects every binary positive-cone plane. THM-2848 whitens the
-  remaining four-slot moving-plane problem: its exact bad locus is a
-  vanishing quartic harmonic or a shared cubic--quartic real multipole line.
-  Pearson/Hankel positivity cannot exclude either branch; the missing
-  factorial input is multiplier/lowering access, not another Gram bound.
+  detects every binary positive-cone plane. THM-2848 reduces the four-slot
+  bad locus to `F^o=0` or a shared cubic--quartic multipole line.  THM-2866's
+  positive `f/d` semiring and strict cubic Pascal ratio exclude `F^o=0`
+  uniformly; only the shared-line branch remains.
   THM-2849 closes the first window on 1,820 supports through exponent `15`;
   THM-2854 closes `k=1,2` on 252 supports in `{0,...,8}`, all by exact sharp
   Macaulay rank.  THM-2860 identifies Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent
-  `30`.  The unbounded chord, quartic-harmonic, general norm, and scalar
-  multiplier-access problems remain open.
+  `30`.  The unbounded shared-line, general norm, and scalar multiplier-access
+  problems remain open.
 ### Live work
 
 Publish THM-2022; sharpen THM-2111's binomial degree toward `M+N`; formalize
