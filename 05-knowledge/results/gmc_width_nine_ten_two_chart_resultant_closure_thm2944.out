@@ -1,0 +1,15 @@
+THM-2944 WIDTH-NINE/TEN TWO-CHART RESULTANT CLOSURE
+two_chart_dependency_sha256=d2f8afeba7dd6c7950405a4845d7bf112b6c9872dd8161146446be8bbdaae0ba
+normalized_supports=(0,a,b,M);widths=9:28,10:36;total=64
+original_local_F=0,1,2,3,4,5;mutated_local_F=0,3,4,5,6,7
+common_factor~q200^5*c300*Res*gcd(K,P_alt);coefficients=NONNEGATIVE;constant=POSITIVE
+gcd(q200*K0,P0)=1;reconstructed_raw_reduced_cofactors=COPRIME
+rad_gcd(g*Res,(g*Res)')=prod_j=1..a(2n+2j-1)*prod_r=a..M(n+r);independent_of_b;roots=NEGATIVE
+original_mixed_pivots=width9:22,width10:30,total:52
+outside_interpolation_direct_controls=192;three_term_Pluecker_checks=64
+width9_digest_sha256=a75989df9b63e477239d912caf5acdfe643ef4424d9bd8a327a23fe3b7d20ca4
+width10_digest_sha256=598ce2948dae63a93f70ab42f8a57913f8c48fc732ee1e95cd94b92dd702c8d2
+combined_digest_sha256=af2950ea595583411a602b7bf0258e97cc20687de52d852007ade88322b3744a
+consequence=first_window_SFC4_exact_widths_9_and_10
+scope=integer_depth_n>=0;four_slot_first_window_only;no width>=11 or arbitrary_width claim
+all_exact_checks=PASS
