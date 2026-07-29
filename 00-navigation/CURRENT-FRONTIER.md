@@ -18,9 +18,10 @@ uncertified relation gates are not unsafe.  Separately, THM-741/2883 prove all
 
 - **CITED:** LRC through 13 total runners; see
   [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
-- **PROVED + FINITE-EXACT:** THM-741/2883 close all `2002` nine-body roots.
-  THM-2888/2892 with THM-2893/885 close all `3003` eight-body roots, hence
-  `v_8<=14`; the exact residual is the `3432`-root `v_8>=15` six-slot rung.
+- **PROVED + FINITE-EXACT:** THM-741/2883 close `2002` nine-body roots;
+  THM-2888/2892/2893/885 close `3003` eight-body roots (`v_8<=14`).
+  THM-2896 gates all `3432` residual roots: one has `K=25`, others
+  `K<=23`; apex carriers open.
 - **PROVED:** THM-965/2051--2092/2074 give the relation, pair floor, rank atlas
   and ledger; THM-2148/2168 reach scalar `5+3`.  THM-2054 decorrelates
   recorded margins at `H=2^19`, subject to MISTAKE-080/082's shape-specific

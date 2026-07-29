@@ -26,7 +26,7 @@ The ledger is global, not merely a finite-head guess.  It scans through
 
     c_E(w) < m_E/7 + (99/70) r_E/(7w)
 
-to seal every omitted tail speed below the provisional thirtieth value.
+to seal every omitted tail speed below the provisional fortieth value.
 When the resulting threshold exceeds the base horizon, the missing finite
 head is scanned exactly before ranking.  Scalar evaluations independently
 check four boundary/rank entries per root.
@@ -78,16 +78,250 @@ S2 = F(99, 70)
 BODIES = tuple(combinations(range(1, 15), 7))
 
 # Filled after discovery, then locked for ordinary and optimized replay.
-EXPECTED_GATE_COUNTS: tuple[int, ...] | None = None
+EXPECTED_GATE_COUNTS: tuple[int, ...] | None = (
+    3432,
+    1976,
+    1456,
+    25,
+    2201,
+    574,
+    13728,
+)
 EXPECTED_K_DISTRIBUTION: tuple[tuple[str, tuple[tuple[int, int], ...]], ...] | None = (
-    None
+    (
+        (
+            "low",
+            (
+                (5, 3),
+                (6, 3),
+                (7, 29),
+                (8, 47),
+                (9, 74),
+                (10, 115),
+                (11, 110),
+                (12, 104),
+                (13, 99),
+                (14, 59),
+                (15, 52),
+                (16, 35),
+                (17, 31),
+                (18, 18),
+                (19, 4),
+                (20, 8),
+                (21, 1),
+            ),
+        ),
+        (
+            "one",
+            (
+                (2, 1),
+                (3, 3),
+                (4, 7),
+                (5, 27),
+                (6, 47),
+                (7, 88),
+                (8, 128),
+                (9, 166),
+                (10, 174),
+                (11, 225),
+                (12, 217),
+                (13, 192),
+                (14, 175),
+                (15, 131),
+                (16, 104),
+                (17, 54),
+                (18, 44),
+                (19, 34),
+                (20, 14),
+                (21, 10),
+                (22, 5),
+                (23, 2),
+            ),
+        ),
+        (
+            "both",
+            (
+                (5, 3),
+                (6, 10),
+                (7, 23),
+                (8, 32),
+                (9, 45),
+                (10, 86),
+                (11, 101),
+                (12, 108),
+                (13, 94),
+                (14, 99),
+                (15, 62),
+                (16, 49),
+                (17, 27),
+                (18, 14),
+                (19, 17),
+                (20, 8),
+                (21, 9),
+                (22, 4),
+                (25, 1),
+            ),
+        ),
+    )
 )
-EXPECTED_EXTREMA: tuple[object, ...] | None = None
+EXPECTED_EXTREMA: tuple[object, ...] | None = (
+    (
+        "1669/6524317800",
+        (2, 3, 8, 9, 11, 12, 13),
+        10,
+    ),
+    (
+        "-286177/14504490",
+        (2, 6, 8, 9, 10, 12, 14),
+    ),
+    (
+        25,
+        (1, 8, 10, 11, 12, 13, 14),
+        "5703505/4933292364",
+    ),
+    (
+        "327134808/148661",
+        (1, 3, 8, 10, 12, 13, 14),
+        2201,
+    ),
+    (
+        2201,
+        (1, 3, 8, 10, 12, 13, 14),
+        "327134808/148661",
+    ),
+    (
+        574,
+        (3, 6, 8, 9, 10, 13, 14),
+        39,
+        "94/2009",
+    ),
+)
 EXPECTED_STRATIFIED_EXTREMA: tuple[tuple[str, tuple[object, ...]], ...] | None = (
-    None
+    (
+        (
+            "low",
+            (
+                (
+                    "1/1261260",
+                    (3, 6, 7, 8, 9, 10, 11),
+                    15,
+                ),
+                (
+                    "-1461679/98273175",
+                    (1, 2, 5, 7, 9, 11, 12),
+                ),
+                (
+                    21,
+                    (1, 2, 5, 7, 9, 11, 12),
+                    "6913/6446440",
+                ),
+                (
+                    "79492644/47801",
+                    (1, 4, 6, 7, 8, 10, 11),
+                    1663,
+                ),
+                (
+                    1663,
+                    (1, 2, 8, 9, 10, 11, 12),
+                    "88088/53",
+                ),
+                (
+                    440,
+                    (2, 4, 6, 8, 9, 11, 12),
+                    35,
+                    "233/3960",
+                ),
+            ),
+        ),
+        (
+            "one",
+            (
+                (
+                    "1669/6524317800",
+                    (2, 3, 8, 9, 11, 12, 13),
+                    10,
+                ),
+                (
+                    "-286177/14504490",
+                    (2, 6, 8, 9, 10, 12, 14),
+                ),
+                (
+                    23,
+                    (1, 5, 6, 7, 8, 11, 13),
+                    "8596171/9596506920",
+                ),
+                (
+                    "204204/103",
+                    (1, 2, 9, 10, 11, 12, 14),
+                    1983,
+                ),
+                (
+                    1983,
+                    (1, 2, 9, 10, 11, 12, 14),
+                    "204204/103",
+                ),
+                (
+                    492,
+                    (3, 4, 7, 8, 10, 12, 13),
+                    39,
+                    "2105/44772",
+                ),
+            ),
+        ),
+        (
+            "both",
+            (
+                (
+                    "12659/30214171260",
+                    (3, 4, 5, 7, 8, 13, 14),
+                    10,
+                ),
+                (
+                    "-2907/175175",
+                    (2, 6, 8, 10, 11, 13, 14),
+                ),
+                (
+                    25,
+                    (1, 8, 10, 11, 12, 13, 14),
+                    "5703505/4933292364",
+                ),
+                (
+                    "327134808/148661",
+                    (1, 3, 8, 10, 12, 13, 14),
+                    2201,
+                ),
+                (
+                    2201,
+                    (1, 3, 8, 10, 12, 13, 14),
+                    "327134808/148661",
+                ),
+                (
+                    574,
+                    (3, 6, 8, 9, 10, 13, 14),
+                    39,
+                    "94/2009",
+                ),
+            ),
+        ),
+    )
 )
-EXPECTED_LEDGER_DIGEST: str | None = None
-EXPECTED_STRATIFIED_DIGESTS: tuple[tuple[str, str], ...] | None = None
+EXPECTED_LEDGER_DIGEST: str | None = (
+    "a76639c23fc613e664c2f4f35a492c2658b611ec8ec31388728d2883d11e4517"
+)
+EXPECTED_STRATIFIED_DIGESTS: tuple[tuple[str, str], ...] | None = (
+    (
+        "low",
+        "f1d5c0fc1bc90ffd541b35992ac80d7b752e0bf7aef2cddefa6bb4121f7ccf3c",
+    ),
+    (
+        "one",
+        "f1f29108f0bec1a346cc42418f1540d89bd48563a788a2446c6de109310be54c",
+    ),
+    (
+        "both",
+        "77603764fcb3b190904719bb3e922c52b80c05c246968800b49aa490d0b614ab",
+    ),
+)
 
 
 def require(condition: bool, message: str) -> None:
