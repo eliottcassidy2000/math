@@ -79,13 +79,12 @@
     is support, not semantic current.  The `BABA` debt `A->2B` is erased by
     Boolean/mod-two views.  Change phase, guard, slope, word, or edge—not only
     the carry alphabet.  No row is excluded.
-27f. **A disconnected label nerve is not physical Cech topology.** THM-2672 finds honest twelve-fold components in all `534` maximal fixed
-    configurations.  Edge switching defeats its fixed root-zero proof, but
-    THM-2687's enlarged-envelope scan independently restores a global positive
-    `12/13` cap for the full slope-seven family.  Carry-forgetting still turns
-    thirteen disjoint `Delta^11`s into a false `boundary Delta^12`; do not infer
-    pointwise endpoint emptiness or export the cap to another carrier.
+27f. **A disconnected label nerve is not physical Cech topology.** THM-2672 has twelve-fold components on all `534` maximal fixed configurations; THM-2687 restores a `12/13` cap after edge switching.
+    Carry-forgetting still turns thirteen disjoint `Delta^11`s into a false
+    `boundary Delta^12`; do not infer endpoint emptiness or export the cap.
 27g. **Copies are not common atoms.** THM-2806 has bare-only `D3`/empty `M`; THM-2818's positive copies fail native/source/endpoint sidecars. Neither pays THM-2772.
+27h. **A labelled collar is not a physical allocation action.** THM-2825's `+h/+2h`, norm-one Schur symbol, `M_3 tensor I_587`, and punctured `V_4` are exact only on the free labelled coefficient module.
+    They cross absent/present source carrier; factors change, source endpoints match `74/587`, and the missing `V_4` corner cannot permute a `573/14` bank. Target endpoint/ancestry agreement gives no atom, bibundle, row exclusion, or LRC(14).
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211/THM-2631;

@@ -68,6 +68,12 @@ THM-2806's flat raw point has bare-only `D3=144w`; its tau-twelve common
 carrier is empty.  THM-2813's conditional address jet is not Rees `D3`;
 THM-2814 separates contrast from holonomy, THM-2818 proves positive-copy
 multipliers, and THM-2819 proves the sharp marked target eleven-face.
+THM-2825's 567-cell bank has 193 unscaled tie blocks; half-step scale uniquely
+picks `+h/+2h` on all 587 rights.  Equality is offset parity with a norm-one
+Schur sign, but the collars are absent from the coarse algebra.  Its path
+forest gives a transverse/tangent `M_3 tensor I_587` and punctured `V_4` only
+on the labelled module: source carrier/factors change and endpoints match
+`74/587` at source versus `587/587` at target/ancestry.
 THM-2820 proves Boolean tangent rigidity and the successor commutator.
 THM-2829 finds a full `q=11` packet and the unique 91-unit carry response,
 but its outer word changes `QB -> QA`.  THM-2835 isolates the resulting

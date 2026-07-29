@@ -1,5 +1,36 @@
 # Script Results Index
 
+- `lrc14_nearest_half_step_common_right_collar_thm2825.py` plus physical,
+  independent, Schur, and path-operator companions -> matching `.out` files
+  [THM-2825 PROVED + VERIFIED-EXACT; CORE COLLAR INDEPENDENTLY
+  HOSTILE-AUDITED].
+  The 567-cell full-semantic bank has 193 nonempty complete-bipartite
+  common/right tie blocks (`63,308` common, `587` right, `195,517` edges).
+  Half-step scale uniquely selects the `+h` semantic-reversing and `+2h`
+  semantic-preserving collars.  The parity symbol has Schur norm one, yet
+  neither metric collar lies in the 414-atom coarse cell/colour algebra.
+  The 685-path forest factors `+2h` as a transverse/tangent nilpotent
+  operator, yielding `M_3 tensor I_587`, a punctured `V_4`, and exact
+  rootless `C_13` units.  This is a labelled coefficient construction:
+  source carrier/native factors change and source endpoints match only
+  `74/587`; it is not a physical allocation action or LRC(14) proof.
+- `ak_distinguished_coloop_round_rank_audit.py`,
+  `ak_projective_matroid_audit.py`, and the independent SymPy audit ->
+  matching `.out` files [THM-2850 PROVED + FINITE-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  Paid labelled forcing is distinguished-coloop peeling
+  in `A=[B|D_rho B]`.  A `q`-round success costs at least `1+1/q`, two
+  rounds cost at least `3/2`, unrestricted generic row rank is the union of
+  two graphic matroids, and the residual defect splits exactly into
+  topology, label-sharing grammar, and special-coefficient parts.  The
+  theorem covers the paid graph semantics, not the loose literal rule,
+  private verifier, or same-`H` compilation of mode-three witnesses.
+- `m23_elkies_quartic_passport_audit.py` -> matching `.out`
+  [CITED + VERIFIED-EXACT PASSPORT].  Over the quartic field
+  `Q(g)/(g^4+g^3+9g^2-10g+8)`, Elkies's degree-23 cover has the exact
+  branch passport `1^3 2^2 4^4`, `1^7 2^8`, `23`, defect sum 44, and square
+  discriminant.  These checks retain the `M23`-versus-`A23` boundary; the
+  cited 5-subset resolvent/Weil argument supplies the final separator.
+  Over `Q` itself the inverse-Galois problem remains open.
 - `gmc_arbitrary_three_slot_atomic_orientation_thm2824.py` -> matching `.out`
   [THM-2824 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   A positive hockey-stick expansion
