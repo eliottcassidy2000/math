@@ -207,7 +207,7 @@ The exact companion:
 1. compares `(3)--(4)` with direct polynomial multiplication through a
    deterministic multi-index bank;
 2. independently enumerates the forbidden-board permutations whenever
-   `A<=9`;
+   `A<=8`;
 3. checks the derangement lower bound and its equality classification;
 4. records the first tensor values, including the subfactorials
    `L(d_0^k)=!k`; and
