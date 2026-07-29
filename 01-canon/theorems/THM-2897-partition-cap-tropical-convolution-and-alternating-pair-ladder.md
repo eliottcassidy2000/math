@@ -258,16 +258,19 @@ Since a putative cover has at least three labels in `H_3`, one may take
 
 ```text
 ell=2<s=3: enumerate H_3 pairs, with no heavy condition,
-           and exclude a literal three-cover child;
+           and exclude a literal three-cover child whose every label lies
+           in the residual singleton link core J_L of THM-2893;
 
 ell=3=s:   enumerate only heavy H_3 triples,
            and exclude a literal two-cover child.         (12g)
 ```
 
 The pair-flag universe is usually smaller, while its child problem has one
-extra slot.  Neither choice dominates without measuring both the flag count
-and the child-cap cost.  In particular, “three forced high labels” does not
-oblige the proof to enumerate triples.
+extra slot but also retains three forced singleton-link memberships.  Neither
+choice dominates without measuring both the flag count and the child-cap
+cost.  In particular, “three forced high labels” does not oblige the proof
+to enumerate triples, and the pair child must not be treated as an
+unconditioned three-cover.
 
 ## 4. Disjoint-block and factor-critical matching repair
 

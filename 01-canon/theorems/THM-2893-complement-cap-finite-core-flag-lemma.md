@@ -177,6 +177,77 @@ reconstructed from the unmarked residual, which by THM-2894 has forgotten
 the order of deletions.  Thus this refinement uses precisely the marked
 sidecar that the residual semilattice itself lacks.
 
+### Ordered retained-hit refinement
+
+The same sidecar has a stronger form when the parent theorem forces several
+members of one finite core.  Let
+
+```text
+A=(a_1,...,a_K)
+```
+
+be an ordered finite set, and suppose every hypothetical `k`-cover contains
+at least `m` members of `A`.  Fix `1<=ell<=m`.  For indices
+
+```text
+i_1<...<i_ell
+```
+
+put
+
+```text
+L_I={a_(i_1),...,a_(i_ell)},     A_<=i={a_1,...,a_i},
+C_I=C minus union_(a in L_I)D_a.
+```
+
+It is enough, for every such index tuple, to exclude a `(k-ell)`-cover `Q`
+of `C_I` satisfying both
+
+```text
+Q subset V minus A_<=i_ell,
+|Q intersect {a_j:j>i_ell}|>=m-ell.                       (7c1)
+```
+
+Indeed, in a putative parent cover choose its first `ell` members of `A`.
+They form one `L_I`; every remaining label avoids the entire prefix
+`A_<=i_ell`, and at least `m-ell` later core labels remain.  Those labels
+cover the literal residual `C_I`, contradicting the stated child
+obligation.
+
+This is strictly more informative than merely enumerating an unordered
+`ell`-flag: the child retains both a forbidden prefix and a quota of later
+core hits.  Neither datum can be recovered from the unmarked residual.
+
+For the live five-slot `H_3` route, take `(k,m,ell)=(5,3,2)`.  If
+`I=(i,j)`, write `R=C_I`, `h_I=mu(R)`, and let
+
+```text
+beta^R_2(P)=sup {
+  U_R(S): S subset V minus P, |S|=2
+}.
+```
+
+Every relevant three-label child contains some `z in {a_r:r>j}`.
+Consequently the retained-hit partition cap
+
+```text
+G_I=sup_(z in {a_r:r>j})
+       [c_R(z)+beta^R_2(A_<=j union {z})]                  (7c2)
+```
+
+satisfies `U_R(Q)<=G_I` for every child allowed by `(7c1)`.  Thus
+`G_I<h_I` closes that ordered pair branch.  If the displayed suffix is
+empty, the branch is impossible before evaluating a cap.  Formula `(7c2)`
+is a sufficient cap, not an equality.  The displayed supremum safely permits
+the most expensive distinguished `z`; a sharper max--min cap may exploit
+the choice of the cheapest `z` when a child has several later core labels.
+
+Compared with the unconditioned test `q_3(R)+B_2(R)<h_I`, `(7c2)` preserves
+information that the rank statistic discards: the singled-out label must
+come from the later core, and its companion pair must avoid the whole
+ordered prefix.  The two tests need not dominate one another, so a finite
+pipeline should retain both.
+
 ### Monotone scalar bootstrap on the apex gate
 
 The order search has a finite monotone formulation.  For `a in A`, put
@@ -300,6 +371,89 @@ problems indexed by heavy flags in `H_s`.
 The word *literal* is essential: the cap and the flag remember only union
 sizes.  They do not preserve the pointwise overlap pattern needed to decide
 whether the remaining labels cover `C_L`.
+
+### Heavy-link recursion
+
+When `ell<s`, the child in `(10)` is much more constrained than an
+arbitrary `(k-ell)`-cover.  Put
+
+```text
+d=s-ell,       h_L=mu(C_L)=h-U_C(L),
+Link_L={
+  T subset V minus L : |T|=d and U_(C_L)(T)>=h_L-B
+}.                                                               (10a)
+```
+
+If `L` is selected from a hypothetical cover `K`, then **every** `d`-subset
+of `K minus L` belongs to `Link_L`.  Indeed, for such a set `T`, the
+`s`-set `L union T` is a subset of `K` and is therefore heavy.  Literal
+subtraction gives the exact identity
+
+```text
+U_C(L union T)=U_C(L)+U_(C_L)(T),
+```
+
+so
+
+```text
+U_(C_L)(T)>=h-B-U_C(L)=h_L-B.                              (10b)
+```
+
+Consequently `(10)` may be weakened: it is enough to exclude
+`(k-ell)`-covers of `C_L` whose complete `d`-uniform hypergraph lies in
+`Link_L`.  This is the link of the parent heavy hypergraph, transported
+exactly to the literal residual.  Discarding it and testing every child
+cover is safe but loses genuine parent compatibility.
+
+The live pair-cap route has `(k,s,ell)=(5,3,2)`, hence `d=1`.  For each
+selected core pair `L`, define the literal singleton link core
+
+```text
+J_L={
+  w in V minus L : c_(C_L)(w)>=h_L-B_2
+}.                                                         (10c)
+```
+
+All three labels in a possible residual cover lie in `J_L`.  Thus any of
+
+```text
+sum of the three largest c_(C_L)(w) on J_L < h_L,
+q_3(C_L;J_L)+B_2(C_L;J_L) < h_L,
+beta_3(C_L;J_L) < h_L                                     (10d)
+```
+
+closes the pair branch.  Here the last two caps range only over distinct
+labels in `J_L`; the middle line is the rank-selective partition bound of
+THM-2897.  If `J_L` has fewer than three allowed labels, the branch closes
+immediately.
+
+On an LRC literal residual, suppose
+
+```text
+c_(C_L)(w)<h_L/7+gamma_L/w
+```
+
+through the discrepancy range.  If
+
+```text
+delta_L=6h_L/7-B_2>0,
+```
+
+then the link core itself is finite, with every discrepancy-range member
+satisfying
+
+```text
+w<=ceil(gamma_L/delta_L)-1.                                 (10e)
+```
+
+This cutoff follows by comparing the defining threshold
+`h_L-B_2` with `h_L/7`; it must be recomputed on the literal child because
+both `h_L` and its component count have changed.
+
+This is a recursive self-similarity law, not merely a workload heuristic:
+an `s`-ary heavy flag descends behind an `ell`-flag to its exact
+`(s-ell)`-ary link.  For `ell=s` the link has arity zero and carries no
+useful child information, agreeing with the same-cap deadlock below.
 
 There is a sharp same-cap deadlock when `ell=s`.  Every legal selected flag
 is then heavy, so
