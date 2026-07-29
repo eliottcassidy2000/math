@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `lrc14_j6_sharp_h1_tail_recomposition_codex_20260729.py` -> matching
+  `.out` [THM-2919 PROVED + FINITE-EXACT + VERIFIED].  Summing THM-1094's
+  non-strict interval discrepancy law over literal-carrier components gives
+  the sharp ranked-H1 cutoff `floor((6/7)r/(7 epsilon))`.  It brings `80`
+  new rows under the fixed `15,000` window: `79` close by the ordered
+  literal-child test and the last by one exact maximum-tree Hunter repair.
+  The resulting fixed-window root already lies in THM-2916.  Exact route
+  saturation isolates one still-additive cutoff-`18,869` branch, which
+  closes directly and adds `(1,3,5,7,10,11,14)` to the proved union through
+  THM-2920: union `1,042`, residual `2,390`.  Ordinary and optimized
+  eight-worker outputs are byte-identical.  LF-normalized
+  script/output/ledger SHA-256:
+  `(a628808c6a7a22f94c0b387d45c6e8066858f0cfdd77392cecb6db40744f59df,8eb5b8af65466539f070418b1d405b6b8b7c8d7f9595c2a7fa069196f80c0d38,6de74387474e14bbfd622c5371d2d246588532e29764938f6210277478950831)`.
 - `lrc14_j6_two_h3_row_pair_hunter_recursive_toothpick_closure_codex_20260729.py`
   -> matching summary and full-ledger `.out` files [THM-2920 PROVED +
   FINITE-EXACT + VERIFIED].  All `367` THM-2916-open children close:
