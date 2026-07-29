@@ -127,6 +127,7 @@ definite over `R`.  The real binary quadratic `Q` is therefore
 irreducible.  As in THM-2824, if `Q` and the real binary cubic `C` share
 one complex projective root, conjugation supplies the other root of `Q`,
 so `Q` divides `C`.  The converse is immediate.  Thus
+the common-root condition is equivalent to
 
 ```text
 Q divides C.                                           (9)
