@@ -1,0 +1,12 @@
+SIX-RAY OPEN-HALF-PLANE FACTORIAL HOSTILE -- exact Krawczyk referee
+status=PROVED-CANDIDATE+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
+support=(d1,d2,d3,d4,d5,d6); c1=1; c2,c4=fixed rational
+equations=Re/Im L(H^k), k=2,3,4; variables=c3,c5,c6
+center_jacobian_nonzero=1
+krawczyk_strict_inclusion=1
+preconditioned_newton_contraction_norm_lt=1
+minimum_inclusion_margin_gt=(99999/100000)*10^-45
+all_six_real_parts_positive=1 explicit_sector_K=2000
+moment5_real_gt=647000000000 moment5_imag_lt=-3290000000000
+consequence=factorial moments 1..4 and Gaussian moments 1..8 vanish
+scope=finite-moment hostile; not a GMC2 counterexample
