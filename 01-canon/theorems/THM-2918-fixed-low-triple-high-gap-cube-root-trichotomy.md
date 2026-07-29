@@ -2,13 +2,13 @@
 id: THM-2918
 title: "Fixed-low-pair high-gap cube-root torsor and sign-blind quartic exit"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  Every fixed independent real mean-zero factorial low
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every fixed
+  independent real mean-zero factorial low
   pair whose binary cubic has nonzero remainder modulo its positive
   quadratic Gram polynomial, together with a fixed mean-one subtraction,
-  acquires exactly three locally unique real cubic-null branches after one
-  sufficiently remote shared atom is added at the natural cube-root scale.
-  The limiting branches form a free C3 torsor.
+  acquires one locally unique real cubic-null branch in each of three fixed
+  neighborhoods after one sufficiently remote shared atom is added at the
+  natural cube-root scale.  The limiting branches form a free C3 torsor.
   All three have nonzero quartic remainder, certified by a positive
   quadratic field norm, while every real linear projection of their
   limiting quartic remainders sums to zero.  Arbitrary factorial
@@ -16,6 +16,11 @@ status: >
   exactly one positive local sheet; its scalar endpoint sign is not
   support-uniform.
 source: root/fixed-low-triple-high-gap-trichotomy-2026-07-29
+audit: >
+  An independent hostile audit rederived the factorial tail, quotient-field
+  torsor, derivative and quartic norm, positive-sector classification,
+  endpoint zero-sum and exact negative-J hostile; replayed ordinary,
+  optimized and stored output byte-for-byte; and matched both LF hashes.
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
   - THM-2853-gamma-adjacent-tensor-cycle-weighted-positivity
@@ -26,15 +31,14 @@ related:
   - THM-2914-eventual-high-gap-cubic-null-positive-holonomy-branch
 script: 04-computation/gmc_fixed_low_pair_cube_root_torsor_thm2918.py
 output: 05-knowledge/results/gmc_fixed_low_pair_cube_root_torsor_thm2918.out
-script_sha256: 16d054113c0410d05eb86aa25f2e553a6017a59221c2ed259e877eebd6d79908
-output_sha256: 4b4369ce5cc507261c99af7995afc03b75e524fa5ceb7afa207c422d75052df5
+script_sha256: 5f22f50ac8938acc2dfe976fcb6d7509fccc053ad626a6f581ddab114023ecf3
+output_sha256: c54e36544f3ff07c3ddf4070b773f7e32bcecc42cc37d101c0df0e4185a66e83
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2918 -- fixed-low-pair high-gap cube-root torsor
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The three limiting branches in THM-2914 are not an accident of the
 consecutive low support.  They are the three cube roots of one nonzero

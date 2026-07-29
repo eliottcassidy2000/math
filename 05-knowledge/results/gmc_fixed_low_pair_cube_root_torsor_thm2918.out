@@ -1,5 +1,5 @@
 THM-2918 FIXED-LOW-PAIR CUBE-ROOT TORSOR
-status=PROOF-COMPLETE CANDIDATE+VERIFIED-EXACT
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
 quadratic_quotient=A=R[z]/(q)~=C;Delta=g0*g2-g1^2>0
 cube_roots=ell0,omega*ell0,omega^2*ell0;derivative_det=9*(Nq(ell)/g2)^2>0
 quartic_orbit_sum=0;full_remainder_norm=positive
