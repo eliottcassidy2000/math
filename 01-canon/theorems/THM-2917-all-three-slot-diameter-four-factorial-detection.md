@@ -2,13 +2,13 @@
 id: THM-2917
 title: "Diameter-four three-slot resultant atlas and sharpness corollary"
 status: >
-  PROOF-COMPLETE COROLLARY CANDIDATE + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  This is an explicit finite-pattern
-  resultant atlas inside the stronger arbitrary-support THM-2824, not a
-  new SFC(3) range.  The six translated diameter-at-most-four patterns
-  have coefficient-positive one-variable resultants.  Combined with
-  THM-2173, the bound is sharp with full support and every positive-depth
-  two-charge lift has exact uniform Gaussian detection depth six.
+  PROVED COROLLARY + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  This is an explicit finite-pattern resultant atlas inside the stronger
+  arbitrary-support THM-2824, not a new SFC(3) range.  The six translated
+  diameter-at-most-four patterns have coefficient-positive one-variable
+  resultants.  Combined with THM-2173, the bound is sharp with full
+  support and every positive-depth two-charge lift has exact uniform
+  Gaussian detection depth six.
 source: root/three-slot-diameter-four-boundary-2026-07-29
 depends_on:
   - THM-2173-sparse-projective-factorial-moment-floor
@@ -25,8 +25,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2917 -- diameter-four three-slot resultant atlas
 
-**PROOF-COMPLETE COROLLARY CANDIDATE + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**
+**PROVED COROLLARY + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2824 already proves first-window SFC(3) on **every** arbitrary
 three-slot support.  The purpose of this corollary is narrower and
@@ -259,6 +258,16 @@ python -O 04-computation/gmc_all_three_slot_diameter_four_detection_thm2917.py
 ```
 
 Both executions byte-match the stored output.  Immutable artifact hashes
-and the final status promotion await an independent hostile audit.
+are recorded in the frontmatter.
 
-**QED (candidate pending independent audit).**
+An independent audit rebuilt the three new diameter-four resultants from
+direct integer factorial evaluations, a hand Bareiss Sylvester
+determinant, and interpolation, without calling the companion's resultant
+engine.  It recovered their degrees, nonlinear-factor degrees, constant
+terms, and coefficient digests exactly, checked the three inherited
+smaller patterns, and confirmed that the sharpness claim uses the
+strictly stronger THM-2824 rather than presenting this atlas as a new
+support range.  Ordinary, optimized, and stored executions agree after
+the declared LF normalization.
+
+**QED.**
