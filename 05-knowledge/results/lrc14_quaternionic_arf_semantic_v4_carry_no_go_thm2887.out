@@ -1,0 +1,13 @@
+THM-2887 QUATERNIONIC SELECTOR-LIFT AUDIT
+quadratic_values=(THM2779_D8_Arf0:(0, 0, 0, 1),THM2884_Q8_Arf1:(0, 1, 1, 1)); common_polarization=determinant
+group_order_census=(D8:((1, 1), (2, 5), (4, 2)),Q8:((1, 1), (2, 1), (4, 6))); associativity_checks={'D8': 512, 'Q8': 512}; Q8_gauge_checks=16
+normalized_V4_cocycles=(all=16,determinant_commutator=8,quadratic_census=(((0, 0, 0, 1), 2), ((0, 0, 1, 0), 2), ((0, 1, 0, 0), 2), ((0, 1, 1, 1), 2)),coboundaries=2); all_three_nonzero_squares_select_unique_Arf1_Q8_class
+semantic_Q8=QA*i_then_QB*j_equals_minus_QAB*k_in_forward_gauge; reverse_order_has_plus_k; gauges_differ_by_delta(q_Arf1)
+local_triangle=polar(QA,QB)=1=carry_epsilon(8,9)=1; local_Arf/carry_match_is_gauge-invariant
+source_marked_character=det(QB,h); seam_(Q0,QA,QAB)=(0, 1, 1); Ad_QB=(Q0->+Q0,QB->+QB,QA->-QA,QAB->-QAB); fixed_source_breaks_S3_and_recovers_THM2886_selector_pair_XOR_parity
+global_no_go=carry_mod2_has_unique_normalized_primitive_(0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0); even_h_forces_zero_semantic_direction; conflicts_with_ell8=QA_and_ell4=QAB
+AutQ8=(size=24,order_census=((1, 1), (2, 9), (3, 8), (4, 6))); InnQ8=4=V4; quotient_actions=6=S3; hence_AutQ8_is_S4; mu_perm(Q8)=8
+S3_orientation_maps=(sign_action:[],trivial_action:[(0, 0, 0), (1, 1, 1)]); semantic_P1(F2)_does_not_canonically_choose_endpoint_sign; pointed_det_character_covariance_checks=96; Stab(QB)_size=2
+typed_semidirect_candidate=C169xQ8_direct_product_size=1352; the_C169_to_AutQ8_action_is_trivial; this_does_not_classify_all_order1352_extensions; Q8_is_the_unique_Arf1_central-sign_extension_of_the_semantic_V4
+VERDICT=Q8_is_the_natural_structured_central-sign_extension_of_THM2884_support_parity_and_a_candidate_origin-sign_lift; the_Arf_polarization_detects_the_distinguished_carry_triangle; the_marked_QB_source_recovers_exactly_THM2886s_selector-pair_XOR_parity_by_inner_conjugation_but_not_its_origin_occupancy_or_signed_orientation; the_match_cannot_globalize_to_C13_via_such_a_base-independent_ell_and_no_physical_Q8_lift_or_canonical_Q8-valued_current_is_constructed
+ALL EXACT CHECKS PASSED

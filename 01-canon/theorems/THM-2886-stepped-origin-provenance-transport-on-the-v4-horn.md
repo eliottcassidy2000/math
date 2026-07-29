@@ -2,7 +2,8 @@
 id: THM-2886
 title: "Stepped-origin provenance transport on the V4 horn"
 status: >
-  PROVED + VERIFIED-EXACT.  The THM-2884 diagonal H canonically selects
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The THM-2884
+  diagonal H canonically selects
   the stepped-origin q3 Q0 subcopy and the empty zero-origin component on
   every one of the 449 horn sheets.  Transporting those two marked
   pieces, rather than reapplying H locally, gives the unique selector
@@ -16,6 +17,16 @@ status: >
   wrapped edge the Prony pair transforms by diag(omega^4,1), so U+V has
   a nonzero scalar-descent defect on all 26 field/section states.  No row
   exclusion or LRC(14) proof follows.
+audit: >
+  The independent referee replayed normal and optimized execution against
+  the stored output, then reconstructed without importing the companion
+  the three transported selector pairs, both empty/full endpoint pieces,
+  all 898 originwise cylinder equalities, all 52 fixed-source raw-current
+  rows, the 449-fold multiples, and the 20-cell Cartesian-product scope.
+  It confirmed that uniqueness is relative to the proved q3 H seed,
+  marked origins, and empty/full-preserving translations, and accepted
+  the marked-subcopy, unmarked-current, scalar-descent, row-exclusion,
+  and LRC boundaries.  Verdict: ACCEPT.
 source: root/lrc-stepped-origin-provenance-2026-07-29
 depends_on:
   - THM-2835-q11-semantic-word-horn-and-bockstein-blind-support-no-go
@@ -35,7 +46,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2886 -- stepped-origin provenance transport on the V4 horn
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2884 found the physical diagonal
 
