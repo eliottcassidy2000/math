@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-319 (2026-07-28, provisional THM-2846 geometry) -- cubic divisibility cancellation is not orientation cancellation
+
+- **What was claimed:** the provisional positive-cone hostile said that two
+  opposed transport contributions “cancel exactly” on the locus
+  `I1=I2=0`, suggesting that the THM-2830 orientation `D(U,V)` vanished
+  there.
+- **First failed implication:** THM-2824's exact factorization is
+  `I2=-g11 D-t111 g22^2`.  Hence `I2=0` forces
+  `D=-t111 g22^2/g11<0`, because the Gram entries are positive and
+  THM-2841 gives `t111=L(U^3)>0`.  For the displayed witness the numerical
+  value is about `-4101.29`, emphatically not zero.
+- **Strongest survivor / repair:** the construction itself survives.  The
+  two **quadratic-division remainders** vanish, so the positive plane really
+  contains a nonzero factorial moment-one/two/three null line.  Its
+  orientation is strictly negative, its fourth moment is nonzero, and its
+  first variance jet survives.  THM-2846 now states this corrected
+  transverse geometry and the exact companion certifies the complete
+  resultant factor and the algebraic point's rational rectangle.
+- **Rule:** when several derived quantities encode the same cubic tensor,
+  name the exact vanishing object.  Cancellation of Euclidean-division
+  remainders does not imply cancellation of an oriented determinant;
+  substitute the defining relation before giving geometric prose.
+
 ## MISTAKE-318 (2026-07-28, THM-2834 first Picard-lattice proof) -- conjugate split curves are complementary, not numerically equal
 
 - **What was claimed:** for the fourteen curves on

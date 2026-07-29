@@ -19,6 +19,7 @@ depends_on:
 related:
   - THM-2812-consecutive-three-slot-factorial-moment-six-detection
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
+  - THM-2846-arbitrary-positive-cone-moment-three-transverse-boundary
 script: 04-computation/gmc_four_slot_projective_resolvent_thm2843.py
 output: 05-knowledge/results/gmc_four_slot_projective_resolvent_thm2843.out
 script_sha256: 4832a9e4cda1608473e3a4bcfcb880a7fa3f1c6db47b7e939b4b5183cb9549aa

@@ -195,10 +195,21 @@ def main() -> None:
     require(sp.rem(numerator_one, P, domain=sp.QQ) == 0, "I1 remainder nonzero")
     require(sp.rem(numerator_two, P, domain=sp.QQ) == 0, "I2 remainder nonzero")
 
-    # Recover the displayed positive-root factor from exact elimination.
+    # Recover the complete exact elimination factorization.  The quadratic
+    # factor has no real root, so P is the only real-root carrier.
     resultant = sp.resultant(invariant_one, invariant_two, X)
-    quotient, remainder = sp.div(resultant, P, domain=sp.QQ)
-    require(remainder == 0 and quotient != 0, "resultant factor mismatch")
+    quadratic_factor = 10 * Y**2 + 10 * Y + 3
+    expected_resultant = (
+        -sp.Integer(1034799682682880000) * quadratic_factor**2 * P
+    )
+    require(
+        sp.expand(resultant - expected_resultant) == 0,
+        "complete resultant factorization mismatch",
+    )
+    require(
+        sp.discriminant(quadratic_factor, Y) == -20,
+        "nonreal quadratic factor changed",
+    )
 
     polynomial = sp.Poly(P, Y)
     coefficients = polynomial.all_coeffs()
@@ -255,6 +266,35 @@ def main() -> None:
             )
             for bernstein_index in range(degree + 1)
         )
+
+    # Tie the explicit algebraic branch x=N(y)/A(y) to the same narrow
+    # rectangle used by the independent degree argument.
+    require(
+        P.subs(Y, y_bottom) < 0 < P.subs(Y, y_top),
+        "algebraic y root left the transverse rectangle",
+    )
+    algebraic_x_coefficients = (
+        univariate_bernstein_coefficients(
+            N - x_left * A,
+            Y,
+            y_bottom,
+            y_top,
+        ),
+        univariate_bernstein_coefficients(
+            x_right * A - N,
+            Y,
+            y_bottom,
+            y_top,
+        ),
+    )
+    require(
+        all(
+            coefficient > 0
+            for side in algebraic_x_coefficients
+            for coefficient in side
+        ),
+        "algebraic x root left the transverse rectangle",
+    )
 
     face_coefficients = (
         univariate_bernstein_coefficients(
@@ -436,14 +476,18 @@ def main() -> None:
     x_value = sp.N((N / A).subs(Y, positive_root), 30)
 
     print("ARBITRARY POSITIVE PASCAL CONE MOMENT-THREE BOUNDARY -- exact referee")
-    print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
+    print("status=PROVED VERIFIED-EXACT INDEPENDENTLY HOSTILE-AUDITED")
     print("supports=U:d1+d3; V:d2+d3; both divisible by s")
     print("positive_root_count=1")
+    print(
+        "resultant=-1034799682682880000"
+        "*(10Y^2+10Y+3)^2*P(Y); quadratic_discriminant=-20"
+    )
     print(f"y_bracket=({left},{right})")
     print(f"y_decimal={sp.N(positive_root, 24)}")
     print(f"x_decimal={x_value}")
     print("I1_mod_p=0 I2_mod_p=0 cubic_remainder_mod_p=0")
-    print("rational_box_unique_transverse_zero=1")
+    print("algebraic_point_in_rational_box=1 unique_transverse_zero=1")
     print("quartic_remainder_imaginary_positive=1 Gaussian_moment8_nonzero=1")
     print("consequence=factorial moments 1..3 and Gaussian moments 1..6 can vanish")
     print("scope=finite-moment hostile only; not a GMC2 counterexample")

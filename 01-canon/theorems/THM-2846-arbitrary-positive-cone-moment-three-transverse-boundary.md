@@ -3,13 +3,15 @@ id: THM-2846
 title: "Arbitrary positive-cone moment-three transverse boundary"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Two positive
-  adjacent-difference cones, both
-  divisible by s, span an exact nonzero factorial moment-three null line.
-  The common zero is unique and transverse in an explicit rational
-  rectangle, while the fourth factorial moment has a fixed nonzero
-  imaginary sign.  This proves that Gaussian moments through six do not
-  detect arbitrary positive cones, although moment eight detects
-  the displayed witness.
+  adjacent-difference cones, both divisible by s, span an exact nonzero
+  factorial moment-three null line.  The common zero is unique and
+  transverse in an explicit rational rectangle, while the fourth
+  factorial moment has a fixed nonzero imaginary sign.  Consequently a
+  degree-seven two-charge polynomial has Gaussian moments one through six
+  zero, although moment eight detects it.  The first radial-variance jet
+  detects every binary positive-cone plane, so this is exactly an
+  endogenous-scalar versus external-observation boundary, not a GMC2
+  counterexample.
 source: root/audit-2809-2026-07-28
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
@@ -20,8 +22,8 @@ related:
   - THM-2843-four-slot-projective-divisibility-and-resolvent-reduction
 script: 04-computation/gmc_positive_cone_moment3_transverse_boundary_thm2846.py
 output: 05-knowledge/results/gmc_positive_cone_moment3_transverse_boundary_thm2846.out
-script_sha256: 5214c18afe72cb63a51d58fd2d41643d654edc92ba7cb30a114d66ec4582149e
-output_sha256: a3c4862bf7ae254643148a3d78010a38a06e2aff48589e518bcd194bb72331ed
+script_sha256: fa513756895d944de2200ea3440db8a1a6430d5ece7d3425b00162a20cf50a0c
+output_sha256: 816321b97c3bac18f13dd0ff7c4f274b7c932e0de2e40016e70a29706ace664a
 hash_basis: LF-normalized bytes
 ---
 
@@ -108,6 +110,9 @@ x=N(y)/A(y)
 ```
 
 Both `A` and `N` have positive coefficients, so `x>0`.
+The exact Bernstein certificate below proves more sharply that this same
+algebraic point lies in `(R)`, not merely that `(R)` contains some
+topological zero.
 
 ### A second, topological-degree proof
 
@@ -188,8 +193,25 @@ I1(x,y)=I2(x,y)=0.                                     (4)
 
 This assertion is not based on decimal approximation.  The exact companion
 substitutes `x=N(y)/A(y)`, clears denominators, and obtains zero remainders
-modulo `p(y)` for both polynomials.  It also reconstructs `p` as the unique
-positive-root factor of the exact resultant.
+modulo `p(y)` for both polynomials.  The complete resultant factorization is
+
+```text
+Res_X(I1,I2)
+ =-1034799682682880000
+   (10Y^2+10Y+3)^2 p(Y).                              (4a)
+```
+
+The quadratic factor has discriminant `-20`; hence `p` is the only
+real-root factor.  Exact signs put its positive root between the two
+horizontal faces of `(R)`, and positive Bernstein coefficients for
+
+```text
+N(Y)-(2636/10000)A(Y),
+(2637/10000)A(Y)-N(Y)
+```
+
+put `x=N(y)/A(y)` between the vertical faces.  Thus the algebraic and
+topological constructions identify the same unique transverse point.
 
 ## 3. Exact moment-three failure
 
@@ -226,7 +248,9 @@ detected by factorial moments one through three.
 
 ## 4. Gaussian consequence and exact scope
 
-Since both directions in `(1)` are divisible by `s`, write `H=sh` and set
+Let `Z` be a standard centered complex Gaussian, put `W=conj(Z)`, and
+normalize `E[Z^aW^b]=delta_(a,b)a!`.  Since both directions in `(1)` are
+divisible by `s`, write `H=sh` and set
 
 ```text
 P(Z,W)=W+Z h(ZW),                  W=conj(Z).            (8)
@@ -295,7 +319,7 @@ Thus the corresponding Gaussian eighth moment is nonzero.  The witness
 separates the exact thresholds six and eight; it does not evade all
 moments.
 
-## 5. Equality geometry
+## 5. Transverse geometry
 
 The witness lies outside THM-2830's hypotheses.  Its coefficient profiles
 are
@@ -306,10 +330,25 @@ nu_i=mu_(i+1)=(0,1,y,...).
 ```
 
 Their shifted `2 by 2` minors change sign, so neither monotone-likelihood
-ratio order applies.  The two opposed transport contributions cancel
-exactly on the algebraic hypersurface `(4)`.  This identifies the proper
-next object: not a stronger one-sided sign estimate, but the higher-moment
-transversality of this cancellation locus.
+ratio order applies.  They do **not** cancel the THM-2830 orientation.
+Using its exact factorization
+
+```text
+I2=-g11 D(U,V)-t111 g22^2
+```
+
+and `(4)` gives
+
+```text
+D(U,V)=-t111 g22^2/g11<0,                             (11a)
+```
+
+because `g11,g22>0` and THM-2841 gives `t111=L(U^3)>0`.
+The exact cancellation occurs in the two cubic divisibility remainders,
+not in `D`.  Thus mixed-sign transport defeats the one-sided order and
+lands transversely on the moment-three null locus.  The proper next
+object is the fourth-moment exit from that locus, not a stronger
+one-sided orientation estimate.
 
 ### 5.1. Concrete THM-2843 moving plane
 
@@ -349,14 +388,14 @@ projective root of the real positive-definite Gram quadratic.  But
 THM-2842's `r=1` identity gives
 
 ```text
-L(ell_1 H)=Lambda alpha+M beta.                       (11a)
+L(ell_1 H)=Lambda alpha+M beta.                       (12)
 ```
 
 Its vanishing would force `beta/alpha=-Lambda/M` to be real, a
 contradiction.  Therefore, on every binary positive adjacent cone,
 
 ```text
-L(H^2)=L(ell_1 H)=0                 implies H=0.       (11b)
+L(H^2)=L(ell_1 H)=0                 implies H=0.       (13)
 ```
 
 This is an external-observation theorem, not an ordinary Gaussian-moment
@@ -370,7 +409,7 @@ J=
  [ 1+x              1+y            ]
  [ 2(1+3x)          2(2+3y)        ],
 
-det J=2(1-x+2y)>0.                                  (11c)
+det J=2(1-x+2y)>0.                                     (14)
 ```
 
 The last sign holds throughout `(R)`.  Thus the variance-jet bank decodes
@@ -378,7 +417,7 @@ the two directions even though THM-2842's ordered-support hypothesis is
 unavailable.  More sharply, for the chosen nonreal `zeta`,
 
 ```text
-L(ell_1 H)=1+x+zeta(1+y)!=0.                         (11d)
+L(ell_1 H)=1+x+zeta(1+y)!=0.                          (15)
 ```
 
 because its vanishing would force `zeta=-(1+x)/(1+y)` to be real.  The
@@ -392,18 +431,30 @@ supply that observation.
 The exact companion independently:
 
 1. reconstructs the quadratic and cubic adjacent-difference tensors;
-2. verifies the resultant factor and the unique positive algebraic root;
-3. substitutes `x=N(y)/A(y)` and checks both invariants and the cubic
-   remainder modulo `p`;
+2. verifies the full factorization `(4a)`, its nonreal quadratic factor,
+   and the unique positive algebraic root;
+3. substitutes `x=N(y)/A(y)`, checks both invariants and the cubic
+   remainder modulo `p`, and certifies that this point lies in `(R)`;
 4. certifies every face, derivative, and Jacobian sign in `(R1)--(R2)` by
    exact Bernstein coefficients; and
 5. certifies positivity of the fourth-moment remainder coefficient `r1`
    on the same rectangle.
 
 All truth-bearing gates are explicit and survive optimized execution.
-Normal, optimized, and stored transcripts agree.  An independent hostile
-audit reconstructed the adjacent-difference tensors directly from
-`L(s^n)=n!`, checked the quadratic-divides-cubic criterion and Gaussian
-charge normalization, replayed the exact elimination and Bernstein gates,
-and independently reduced the fourth moment modulo the quadratic.  It
-found no remaining defect.
+Normal, optimized, and stored transcripts agree.
+
+The independent hostile audit reconstructed the adjacent tensors from the
+normalized factorial polynomial rather than importing the displayed
+formulas.  It recovered `(4a)`, inverted every Bernstein conversion back
+to the pulled-back polynomial, checked the Gaussian charge factors and
+degree seven, and obtained the numerical hostile controls
+
+```text
+zeta=-0.9033865...+0.1804736...i,
+L(H^4)=-79.0558...+1082.8108...i.
+```
+
+It caught and repaired the false wording that had described `D` itself
+as cancelling; equation `(11a)` is the corrected orientation law.
+
+**QED.**

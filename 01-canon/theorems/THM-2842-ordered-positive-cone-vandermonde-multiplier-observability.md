@@ -21,6 +21,7 @@ related:
   - THM-2830-disjoint-positive-adjacent-cone-factorial-moment-three-detection
   - THM-2841-all-order-adjacent-difference-factorial-tensor-positivity
   - THM-2845-local-residue-versus-split-trace-unit-observability
+  - THM-2846-arbitrary-positive-cone-moment-three-transverse-boundary
 script: 04-computation/gmc_laguerre_variance_jet_observability_thm2842.py
 output: 05-knowledge/results/gmc_laguerre_variance_jet_observability_thm2842.out
 script_sha256: a3e63877c3ad1162eeab5a30617d71022b2ff6ba497118fccd8bf40b730d610c

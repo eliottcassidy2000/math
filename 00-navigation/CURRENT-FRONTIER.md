@@ -180,10 +180,7 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   and gives the sharp first signed-ray threshold.  Its two divisibility
   invariants are coprime for every real ray parameter, so failure below the
   orientation threshold is only a certificate failure, not a moment
-  counterexample. THM-2846 gives the sharp contrary boundary for arbitrary
-  positive cones: a transverse algebraic two-cone line kills factorial
-  moments through three (Gaussian moments through six), while its fourth
-  factorial/eighth Gaussian moment is nonzero.
+  counterexample.
 - THM-2843 reduces every four-slot window either to an immediate
   positive-dimensional common zero or to a nonnegative complete-intersection
   norm of length `d(d+1)(d+2)`.  In the first window, common nullity is a
@@ -198,7 +195,13 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   two-way test `a` unit iff the scalar is nonzero is exactly the local
   residue-`K` case.  Thus modular p-group augmentation and split Laguerre
   cancellation are the two poles of one radical-versus-product boundary.
-  General four-slot norm nonvanishing, incomparable cubic orientations, and
+  THM-2846 then proves the sharp transverse hostile: the positive interlaced
+  cones `U=d_1+x d_3`, `V=d_2+y d_3` contain a nonzero common factorial
+  moment-one/ two/three line, producing a degree-seven two-charge Gaussian
+  polynomial with moments one through six zero.  The fourth factorial and
+  eighth Gaussian moments are nonzero, while one external radial-variance
+  jet detects every binary positive-cone plane.  General four-slot norm
+  nonvanishing, classification of the transverse cubic-null locus, and
   arbitrary signed radial channels remain open.
 ### Live work
 
