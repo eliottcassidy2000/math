@@ -1,5 +1,16 @@
 # Script Results Index
 
+- `lrc14_j6_all_hard_ranked_h1_hunter_pivot_census_codex_20260729.py` ->
+  matching `.out` [FINITE-EXACT SCOUT / NO CLOSURE; THM-2904 remains
+  RESERVED].  On all `11,842` hard rows surviving `G_5`, the least hostile
+  star-centre coverage is strictly above `h/7`; discrepancy cutoffs are
+  `149..1013`.  Exact scanning of `4,797,677` allowed labels leaves only
+  `55,293` actual possible maximum singletons, with core sizes `1..13`
+  (median `5`).  This is the ordered-pivot workload, not a no-cover result.
+  Ordinary/optimized outputs are byte-identical; semantic digest
+  `05b2ce123e995b13f4ef93c948e5dff2ff190ef50dd0be4e893ffe452d25a791`.
+  Script/output SHA-256:
+  `(c062c6b94b600c8271d6599606e5f7cfa5a69cfd245f6a08ed5e8e89b565ecd7,d7d4bc1ad11050cdadd5e88df58d3689a13311e43eeb9bb949a745ca105a6cf1)`.
 - `lrc14_j6_all_hard_hunter_star_envelope_census_codex_20260729.py` ->
   matching `.out` [THM-2905 PROVED + FINITE-EXACT + VERIFIED].  Exact
   breakpoint evaluation of the Hunter-star envelope `G_5` closes `2,964`

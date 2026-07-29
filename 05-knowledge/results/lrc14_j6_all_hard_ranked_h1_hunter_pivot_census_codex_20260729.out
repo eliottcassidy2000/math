@@ -1,0 +1,8 @@
+LRC14 all-hard ranked H1 Hunter-pivot census
+counts=(11842, 52, 4797677, 149, 1013, 55293, 1, 13, 0, ((0, 1), (25, 3), (50, 5), (75, 6), (90, 7), (95, 8), (99, 9), (100, 13)), ((5, 2566), (4, 2488), (3, 1906), (6, 1782), (2, 1028), (7, 1016), (8, 454), (1, 283), (9, 209), (10, 82), (11, 20), (12, 7), (13, 1)))
+cutoff_quantiles=((0, 149), (25, 352), (50, 409), (75, 480), (90, 557), (95, 605), (99, 715), (100, 1013))
+size_quantiles=((0, 1), (25, 3), (50, 5), (75, 6), (90, 7), (95, 8), (99, 9), (100, 13))
+ledger_sha256=05b2ce123e995b13f4ef93c948e5dff2ff190ef50dd0be4e893ffe452d25a791
+mode=LOCKED
+scope=11842 G5-surviving scalar-hard rows;actual hostile-centre cores;ordered-pivot workload only;not LRC14
+all_exact_controls=PASS
