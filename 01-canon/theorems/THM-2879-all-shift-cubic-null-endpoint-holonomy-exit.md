@@ -9,8 +9,11 @@ status: >
   pseudo-division by the degree-fifteen branch eliminant leaves a
   degree-fourteen polynomial whose 14,745 coefficients are all negative.
   Hence beta*kappa_U<alpha*kappa_V, so no member of this infinite shifted
-  family is a shared cubic--quartic multipole line.  The general mixed
-  four-slot branch remains open.
+  family is a shared cubic--quartic multipole line.  A projective rechart
+  also makes the shared-middle positive wedge cubic-empty; among strict
+  cone-cutting consecutive wedges only the shared-low, equivalently
+  high-chart X>0,Y<0, sector remains.  Cone boundaries and the general
+  mixed four-slot branch remain open.
 source: codex/mixed-secant-2026-07-29
 depends_on:
   - THM-2855-shifted-positive-cone-transverse-asymptotic-family
@@ -312,13 +315,83 @@ At `n=1`, this recovers the canonical THM-2846/2873 endpoint exit without
 an interval enclosure.  More importantly, it fills THM-2855's finite-depth
 gap between the depth-one control and its eventual asymptotic exit.
 
-## 5. Sharp boundary and hostile controls
+## 5. Three strict wedge charts
+
+There is a useful projective consequence beyond the family `(3)`.  Put
+
+```text
+e_1=d_n,             e_2=d_(n+1),          e_3=d_(n+2).
+```
+
+A two-plane whose normal has strict mixed signs cuts the positive
+`(e_1,e_2,e_3)` cone in a two-ray wedge.  After scaling the rays, exactly
+one of the three coordinates is shared.  The three charts are
+
+```text
+high:    c_3=x c_1+y c_2,
+middle:  c_2=x c_1+y c_3,
+low:     c_1=x c_2+y c_3,                 x,y>0.      (32)
+```
+
+The high chart is exactly `(3)` and is excluded from the shared quartic
+line by `(7)`.
+
+Suppose a middle-chart plane were cubic-divisible.  Since `y>0`, its
+equation can be solved as
+
+```text
+c_3=(-x/y)c_1+(1/y)c_2.                               (33)
+```
+
+This is the high chart with
+
+```text
+X=-x/y<0,                    Y=1/y>0.                 (34)
+```
+
+This is an invertible reparametrization of the same binary plane, so it
+preserves divisibility of its quadratic moment into its cubic moment.
+Section 2 classifies every cubic-divisible high-chart plane with `Y>0`:
+the resultant has no positive-`Y` root outside `P_n`, and the linear
+subresultant forces the exact selector
+
+```text
+X=mathcal N(n,Y)/mathcal A(n,Y)>0.                    (35)
+```
+
+Equations `(34)--(35)` contradict one another.  Thus the strict
+shared-middle wedge is cubic-empty, before the quartic is tested.
+
+Finally, the low chart becomes
+
+```text
+c_3=(1/y)c_1-(x/y)c_2,                                (36)
+```
+
+so in high coordinates it is exactly
+
+```text
+X=1/y>0,                     Y=-x/y<0.                (37)
+```
+
+Therefore the sole strict cone-cutting orientation not discharged by the
+high exit or the middle rechart is the high-chart sector
+
+```text
+X>0,                         Y<0.                     (38)
+```
+
+This is a reduction, not an emptiness theorem for `(38)`.  The assumptions
+`x,y>0` are load-bearing: zero coefficients are cone-boundary charts and
+are not covered.  Cone-avoiding planes are also outside `(32)`.
+
+## 6. Sharp boundary and hostile controls
 
 The integer lower bound is exact for the branch statement.  At `n=0`, all
 sixteen coefficients of `P_0(y)` are positive, so
 
 ```text
-#{y>0:P_0(y)=0}=0.                                    (32)
+#{y>0:P_0(y)=0}=0.                                    (39)
 ```
 
 There is no bottom positive cubic-null branch to which `(7)` could be
@@ -327,7 +400,7 @@ extended.
 Independent fixed-depth calculations at
 
 ```text
-n=1,2,8                                               (33)
+n=1,2,8                                               (40)
 ```
 
 start from the literal factorial tensors rather than `(11)`.  In all
@@ -338,14 +411,15 @@ These controls detect normalization, selector-sign, and pseudo-division
 orientation errors.
 
 The theorem does **not** prove that every cone-cutting four-slot cubic line
-has negative endpoint holonomy.  It closes precisely the infinite
-shared-high-tooth family `(3)`.  Cone-avoiding planes, other positive
-wedges, the `a_0=0` derivative boundary, the midpoint wall after a possible
-endpoint equality, and the general mixed shared line remain open.  No
-claim about SFC(4), the full Gaussian Moment Conjecture, or the planar
-Jacobian conjecture follows.
+has negative endpoint holonomy.  It closes the infinite shared-high-tooth
+family `(3)`, eliminates the strict middle wedge by recharting, and leaves
+the low sector `(38)`.  Cone-avoiding planes, zero-coordinate boundaries,
+the `a_0=0` derivative boundary, the midpoint wall after a possible endpoint
+equality, and the general mixed shared line remain open.  No claim about
+SFC(4), the full Gaussian Moment Conjecture, or the planar Jacobian
+conjecture follows.
 
-## 6. Exact verification
+## 7. Exact verification
 
 Run
 
