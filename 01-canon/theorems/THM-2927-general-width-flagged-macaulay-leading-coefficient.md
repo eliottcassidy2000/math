@@ -24,8 +24,8 @@ related:
   - THM-2924-diameter-six-macaulay-newton-atlas
 script: 04-computation/gmc_general_width_flagged_macaulay_leading_thm2927.py
 output: 05-knowledge/results/gmc_general_width_flagged_macaulay_leading_thm2927.out
-script_sha256: a473ffeb2725d333226f80274034f1ddc0cdd6e408a87067545b8972ff98a5ca
-output_sha256: d701ed613a95761c66ad92ff6f6a39dc2a0d4382f846304f665af56c3d067d59
+script_sha256: da00fefb9c78c65466bcefc2e0dbc60c8ff89cc15a9c8a888502d90fa658ce29
+output_sha256: 215ff9c6adf20f86d7497edd86a2df661ed32be5a0eaff836651dfcc365fbe7d
 constructor_dependency_sha256: 42e9b5ceddd677d1f2601a9d5d668c9437281596b65999ddcb8549d4e0b9bf64
 hash_basis: LF-normalized bytes
 ---
@@ -165,41 +165,58 @@ Res((u dot x)^2,(v dot x)^3,(w dot x)^4)
 After removing `(14)`, the residual chart factor is independent of
 `w` and has bidegree `(16,6)` in `(u,v)`.
 
-Order the monomials first by `x_0` degree and then by `x_1` degree, as
-in the constructor.  Block elimination of the residual flag map gives
-
-| flag boundary | residual multiplicity |
-|---|---:|
-| `u_0=0` | `14` |
-| `v_0=0` | `4` |
-| `u_0v_1-u_1v_0=0` | `2` |
-
-The three factors already exhaust bidegree `(16,6)`.  On the dense flag
-chart the residual determinant is therefore
+It remains to compute the residual factor without inferring
+multiplicity from rank.  Set
 
 ```text
-c u_0^14 v_0^4(u_0v_1-u_1v_0)^2.                     (15)
+w=(0,0,1).                                             (15)
 ```
 
-For completeness, the block multiplicities can also be read from the
-associated graded chart: at generic points of the three flag divisors,
-the selected matrix ranks are respectively `29`, `34`, and `35`; the
-missing pure-power pivots enter quadratically.  At
+The six selected quartic rows are literal unit pivots at the target
+monomials
 
 ```text
-u=(1,b,0),                    v=(d,1,0),
-w=(0,0,1),                                             (16)
+(0,0,7),(0,1,6),(0,2,5),(0,3,4),(1,0,6),(1,1,5).     (16)
 ```
 
-the remaining triangular block has determinant
+Delete those rows and columns.  In the remaining `30`-by-`30` matrix,
+order rows and columns by `x_2` degree.  A term involving `u_2` or
+`v_2` strictly raises that degree, so the matrix is block triangular;
+its diagonal blocks are obtained by putting
 
 ```text
-3d^4(bd-1)^26.                                        (17)
+u=(A,B,0),                         v=(C,D,0).           (17)
 ```
 
-Taking `b=0,d=1` gives `c=3`.  Because both sides are polynomial,
-the identity extends from the dense flag chart to all `u,v,w`, proving
-`(12)`.
+Writing `delta=AD-BC`, direct triangular elimination in the six
+`x_2`-degree blocks gives
+
+| `x_2` degree | diagonal-block determinant |
+|---:|---|
+| `0` | `A^4 C^3 delta^6` |
+| `1` | `A^4 delta^6` |
+| `2` | `A^2 delta^6` |
+| `3` | `delta^6` |
+| `4` | `3A^2 C delta^2` |
+| `5` | `A^2` |
+
+Their product is
+
+```text
+3 A^14 C^4 delta^26.                                  (18)
+```
+
+But under `(15)`, `det[u;v;w]=delta`; dividing `(18)` by the resultant
+factor `delta^24` proves that the residual chart factor is exactly
+
+```text
+3u_0^14v_0^4(u_0v_1-u_1v_0)^2.                       (19)
+```
+
+It is already independent of `w` by the multidegree argument, while
+the block-triangular calculation shows that the specialization
+`w=e_2` loses no `u_2,v_2` terms.  Hence `(19)` holds on a dense open
+chart and therefore polynomially everywhere, proving `(12)`.
 
 This explains why the stored 36-by-36 minor is stable: it is a Borel
 flag semi-invariant, not an arbitrary numerical chart.
@@ -271,7 +288,8 @@ vanishes, exactly matching support collapse.
 
 The companion:
 
-- symbolically evaluates the two-parameter flag slice `(16)`;
+- symbolically evaluates all six universal flag blocks `(16)--(18)`
+  and the two-parameter normal slice;
 - checks `(12)` at `40` deterministic generic integer triples;
 - reproduces the three boundary ranks and one full-rank control;
 - verifies the Cauchy--Binet identities, positivity, and `(12)` on all

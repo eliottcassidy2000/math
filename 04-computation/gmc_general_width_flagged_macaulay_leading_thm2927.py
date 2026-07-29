@@ -81,6 +81,14 @@ def selected_matrix(
     return [rows[index] for index in t.SELECTED_ROWS]
 
 
+def selected_row_metadata() -> list[tuple[int, tuple[int, int, int]]]:
+    metadata = []
+    for degree in t.ORDERS:
+        for multiplier in t.MONOMIALS[t.TARGET_DEGREE - degree]:
+            metadata.append((degree, multiplier))
+    return [metadata[index] for index in t.SELECTED_ROWS]
+
+
 def det2(u: tuple[int, int, int], v: tuple[int, int, int]) -> int:
     return u[0] * v[1] - u[1] * v[0]
 
@@ -203,6 +211,84 @@ def main() -> None:
         "two-parameter flag slice changed",
     )
     print("symbolic_flag_slice=3*d^4*(b*d-1)^26;PASS")
+
+    aa, bb, cc, dd = sp.symbols("a b c d")
+    flag_matrix = sp.Matrix(
+        selected_matrix((aa, bb, 0), (cc, dd, 0), (0, 0, 1))
+    )
+    metadata = selected_row_metadata()
+    quartic_rows = [
+        index for index, (degree, _) in enumerate(metadata) if degree == 4
+    ]
+    require(quartic_rows == list(range(30, 36)), "quartic row block changed")
+    pivot_columns = []
+    for row_index in quartic_rows:
+        nonzero = [
+            column
+            for column in range(flag_matrix.cols)
+            if flag_matrix[row_index, column] != 0
+        ]
+        require(
+            len(nonzero) == 1
+            and flag_matrix[row_index, nonzero[0]] == 1,
+            "quartic unit pivot changed",
+        )
+        pivot_columns.append(nonzero[0])
+    require(len(set(pivot_columns)) == 6, "quartic pivot collision")
+
+    residual_rows = list(range(30))
+    residual_columns = [
+        column
+        for column in range(flag_matrix.cols)
+        if column not in pivot_columns
+    ]
+    block_expectations = {
+        0: aa**4 * cc**3 * (aa * dd - bb * cc) ** 6,
+        1: aa**4 * (aa * dd - bb * cc) ** 6,
+        2: aa**2 * (aa * dd - bb * cc) ** 6,
+        3: (aa * dd - bb * cc) ** 6,
+        4: 3 * aa**2 * cc * (aa * dd - bb * cc) ** 2,
+        5: aa**2,
+    }
+    block_summaries = []
+    block_product = sp.Integer(1)
+    for z_degree in range(6):
+        block_rows = [
+            row
+            for row in residual_rows
+            if metadata[row][1][2] == z_degree
+        ]
+        block_columns = [
+            column
+            for column in residual_columns
+            if t.TARGET_MONOMIALS[column][2] == z_degree
+        ]
+        require(
+            len(block_rows) == len(block_columns),
+            f"flag block not square at z={z_degree}",
+        )
+        block = flag_matrix.extract(block_rows, block_columns)
+        block_determinant = sp.factor(block.det(method="domain-ge"))
+        require(
+            sp.expand(block_determinant - block_expectations[z_degree]) == 0,
+            f"flag block determinant changed at z={z_degree}",
+        )
+        block_product *= block_determinant
+        block_summaries.append(
+            f"z{z_degree}:{sp.sstr(block_determinant)}"
+        )
+    require(
+        sp.expand(
+            block_product
+            - 3
+            * aa**14
+            * cc**4
+            * (aa * dd - bb * cc) ** 26
+        )
+        == 0,
+        "flag block product changed",
+    )
+    print("universal_flag_blocks=" + "|".join(block_summaries))
 
     generic_controls = 0
     generic_values = []
