@@ -1,0 +1,15 @@
+THM-2940 CONSECUTIVE FOUR-SLOT MACAULAY--NEWTON SHORT CLOSURE
+constructor_dependency_sha256=42e9b5ceddd677d1f2601a9d5d668c9437281596b65999ddcb8549d4e0b9bf64
+offsets=(0,1,2,3);ordinary_multinomial_constructor=YES
+selected_rows=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,35,36,37,38,39,40,41;allocation=(20Q,10C,6F)
+denominators=D2:(1,1,0);D3:(2,2,1);D4:(3,3,2)
+scaled_row_degrees=(2,5,8);determinant_degree_bound=138
+multinomial_hostile=mixed_quadratic_ratio_2:PASS
+form_digest=14aea831013f311678fc738ad2d95aeab8bf1f2fcccad93c0f8981a6c71caef7;specialization_checks=279
+newton_base=0;newton_count=139;newton_digest=72ba0779c61d5a0c7147e0a2cc01a092eb456dc9a7d128779aa9776c5b2468e3
+n0_sign=+;n0_raw_digits=45;first_digits=73;last_digits=283;all_positive=YES
+independent_direct_constructor_mod_p=1000003;minor_checks=7;PASS
+symbolic_denominator_division=PASS
+consequence=fixed maximal minor nonzero for every integer n>=0
+scope=translated consecutive four-slot first-window SFC(4)
+all_exact_checks=PASS
