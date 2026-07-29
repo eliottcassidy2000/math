@@ -2,8 +2,8 @@
 id: THM-2946
 title: "Full Macaulay maximal-minor gcd and chart-free resultant"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  Over the universal coefficient ring, the primitive
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over the
+  universal coefficient ring, the primitive
   polynomial gcd of all 36-by-36 maximal minors of the full degree-seven
   Macaulay map for ternary forms of degrees (2,3,4) is exactly the
   irreducible resultant, with exponent one.  The radical statement follows
@@ -13,6 +13,13 @@ status: >
   specialization to a one-parameter factorial family, new common factors
   may appear and must still be audited.
 source: codex-gmc-uniform-width-extension-2026-07-29
+audit: >
+  Two independent audits rederived the complete-intersection Hilbert
+  function, the Fitting-support direction, the exponent-one use of the
+  explicit THM-2942 minor, and the universal-versus-specialized scope.
+  A fresh root replay matched normal, optimized, and stored output
+  byte-for-byte after LF normalization, with empty stderr and both
+  declared hashes exact.
 depends_on:
   - THM-2942-macaulay-extraneous-flag-factor-and-pluecker-mutation
 related:
@@ -27,8 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2946 -- full Macaulay maximal-minor gcd
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Let
 
@@ -282,6 +288,5 @@ python -O 04-computation/gmc_full_macaulay_maximal_minor_gcd_thm2946.py
 Both modes must LF-normalize to the stored transcript and the hashes in
 the frontmatter.
 
-Promotion requires an independent audit of the Fitting-support direction,
-the exponent-one use of `(15)`, and the universal-versus-specialized
-scope.
+The Fitting-support direction, the exponent-one use of `(15)`, and the
+universal-versus-specialized scope were independently hostile-audited.
