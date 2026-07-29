@@ -249,3 +249,12 @@ prove `(17)` on the THM-2896 branches, close the seven-body rung, or prove
 LRC(14).  Its consequence is architectural: the next exact census should
 test the alternating pair certificate before paying for triple caps or
 heavy-flag residual enumeration. ∎
+
+## 6. Scoped exact control
+
+The locked four-root census
+`05-knowledge/results/lrc14_j6_rank_selective_alternating_pair_73_thm2897.md`
+tests `(17)` on all `73` actual marked suffixes used by THM-2895.  It closes
+`50` branches, versus `48` for the scalar top-five test; their union closes
+`51`, leaving `22` for parity work.  This is a scoped workload reduction,
+not the uniform census excluded by the preceding paragraph.
