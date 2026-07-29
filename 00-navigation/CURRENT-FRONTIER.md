@@ -68,12 +68,10 @@ THM-2806's flat raw point has bare-only `D3=144w`; its tau-twelve common
 carrier is empty.  THM-2813's conditional address jet is not Rees `D3`;
 THM-2814 separates contrast from holonomy, THM-2818 proves positive-copy
 multipliers, and THM-2819 proves the sharp marked target eleven-face.
-THM-2825's 567-cell bank has 193 unscaled tie blocks; half-step scale uniquely
-picks `+h/+2h` on all 587 rights.  Equality is offset parity with a norm-one
-Schur sign, but the collars are absent from the coarse algebra.  Its path
-forest gives a transverse/tangent `M_3 tensor I_587` and punctured `V_4` only
-on the labelled module: source carrier/factors change and endpoints match
-`74/587` at source versus `587/587` at target/ancestry.
+THM-2825's half-step scale uniquely picks `+h/+2h` on all 587 rights; the
+norm-one Schur collars are absent from the coarse algebra.  Its labelled path
+forest has a transverse/tangent `M_3 tensor I_587`, but source data change and
+endpoint matches are only `74/587` versus `587/587`.
 THM-2820 proves Boolean tangent rigidity and the successor commutator.
 THM-2829 finds a full `q=11` packet and the unique 91-unit carry response,
 but its outer word changes `QB -> QA`.  THM-2835 isolates the resulting
@@ -205,19 +203,12 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   sextic--octic resultant; two exact certificates close `{0,1,2,3}`, while an
   abstract hidden plane proves coordinate faces insufficient.  Its
   conjugate-pair/three-plane count does not carry the standard holomorphic
-  `C_2*C_3` action. THM-2845 classifies the complementary scalar question on
-  every finite-dimensional associative algebra: away from `F_2`, a
-  functional is nonzero on every unit exactly when it is a scalar character;
-  over `F_2`, odd sums of characters are the only extras.  The stronger
-  two-way test `a` unit iff the scalar is nonzero is exactly the local
-  residue-`K` case.  Thus modular p-group augmentation and split Laguerre
-  cancellation are the two poles of one radical-versus-product boundary.
-  THM-2846 then proves the sharp transverse hostile: the positive interlaced
-  cones `U=d_1+x d_3`, `V=d_2+y d_3` contain a nonzero common factorial
-  moment-one/ two/three line, producing a degree-seven two-charge Gaussian
-  polynomial with moments one through six zero.  The fourth factorial and
-  eighth Gaussian moments are nonzero, while one external radial-variance
-  jet detects every binary positive-cone plane. THM-2848 whitens the
+  `C_2*C_3` action. THM-2845 classifies scalar unit detectors on every finite
+  algebra as characters (odd character sums over `F_2`); a two-way detector
+  exists exactly in the local residue-`K` case.  THM-2846 finds a positive
+  interlaced-cone line with factorial moments one--three, hence Gaussian
+  moments one--six, zero; moment four/eight exits, and one variance jet
+  detects every binary positive-cone plane. THM-2848 whitens the
   remaining four-slot moving-plane problem: its exact bad locus is a
   vanishing quartic harmonic or a shared cubic--quartic real multipole line.
   Pearson/Hankel positivity cannot exclude either branch; the missing
