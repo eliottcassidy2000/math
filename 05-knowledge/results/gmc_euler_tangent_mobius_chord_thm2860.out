@@ -1,0 +1,26 @@
+THM-2860 FOUR-SLOT EULER-TANGENT CUBIC CENSUS
+status=FINITE-EXACT+SYMBOLIC-GEOMETRY
+symbolic_geometry_controls=7
+delta=det(c,cbar,A*c,A*cbar)=-4*det(u,v,A*u,A*v)
+gauge=delta(lambda*c)=abs(lambda)^4*delta(c)
+delta_zero=plane_contains_nonzero_T_with_A*T_in_plane
+dual_zero_locus=det(rows(1,a,b,a*b))=0
+generic_zero_locus=b_j=-(alpha+beta*a_j)/(gamma+delta*a_j)
+degenerate_zero_locus=three_equal_b_j=coordinate_three-slot_face
+tangent_pencil=(a2-a1+(a3-a1)z,-(a2-a0)-(a3-a0)z,a1-a0,(a1-a0)z)
+remainders=I1,I2 are homogeneous degree7 in tangent coordinates
+leading_terms=I1(T_infinity),I2(T_infinity);both nonzero in census
+prime=1000033 good_above_max_tensor_degree=90
+independent_constructor_controls=3
+planted_common_factor_degree=2
+planted_degree_drop_rejected=PASS
+supports=31465 expected=31465
+degree_minima=(7,7) maximum_gcd_degree=0
+first_cell_leading_pair=(86447, 407085)
+last_cell_leading_pair=(689784, 851419)
+census_sha256=341b01f418f373633762c2289da11ad02c0678ef39cb18097ffcb73dec2104d7
+cubic_euler_tangent_cells=0
+quartic_harmonic_zero_excluded=NO
+shared_euler_transverse_line_excluded=NO
+scalar_multiplier_access_obtained=NO
+all_exact_controls=PASS
