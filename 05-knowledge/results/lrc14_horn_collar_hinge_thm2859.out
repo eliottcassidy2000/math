@@ -1,0 +1,16 @@
+THM-2859 Q3/Q11/Q7 HORN -- HALF-STEP COLLAR -- WITT HINGE
+status=PROVED + FINITE-EXACT; no row or LRC14 conclusion
+horn_cells=20; collar_roots=52; collar_common=4076; distinguished_hinges=20
+distinguished_profiles=(((0, 239, 2, 144), 4), ((3, 189, 3, 144), 4), ((8, 189, 3, 14), 4), ((9, 189, 3, 40), 4), ((12, 213, 2, 118), 4));target_labels=(5,6,9,10)
+physical_hinge=R=(142004190428100, 142004216872980);M1=(142004591508780, 142004617953660);M2=(142004992589460, 142005019034340);labels_per_physical_hinge=20
+distinguished_path_lengths=((14, 4), (40, 4), (118, 4), (144, 8));semantic=(((True, False, True), 20),)
+factor_hinge=R:011111/111111/111111/011111;M1:111111^4;M2:111111^4;uniform_labels=20
+carrier_hinge=R:zero/delta0;M1:delta0/delta0;M2:delta0/delta0;uniform_labels=20
+allocation_interval_membership=(((0, 'M2'), 20), ((1, 'outside'), 20), ((2, 'outside'), 20), ((3, 'outside'), 20), ((4, 'outside'), 20), ((5, 'outside'), 20), ((6, 'outside'), 20), ((7, 'outside'), 20), ((8, 'outside'), 20), ((9, 'outside'), 20), ((10, 'outside'), 20), ((11, 'outside'), 20), ((12, 'outside'), 20));q3_q7_q11_physical_fibre_product=empty
+endpoint_boundary=(R_source=0,M2_source=81,R_target=81,M2_target=81);source_cardinality_obstruction=81;target_identity_match=1
+formal_grades=horn(1, 1)+collar(0, 1)=(1, 0);status=grade_quotient_only_not_physical_composition
+AGL2_F13_p_primary=(linear_candidates=169,affine_candidates=28561,order_histogram=((1, 1), (13, 28560)));no_order169=1
+p2_boundary_order4_witness_count=6;first=(((0, 1), (1, 0)), (0, 1))
+state_invoice=endpoint_F13^2_has_169_states_but_split_exponent13;THM2851_requires_nonsplit_C169=W2(F13)_additive;cardinality_is_paid_but_extension_class_is_not
+next_test=replace_split_endpoint_translation_by_a_physically_typed_Witt_carry_law_or_prove_every_lawful_endpoint_rechart_is_affine
+ALL EXACT CHECKS PASSED

@@ -1,5 +1,34 @@
 # Script Results Index
 
+- `lrc14_horn_collar_{hinge,endpoint_carry,endpoint_orbit_action,rootless_endpoint_boundary,prony_typed_descent_gate,v4_globalization,witt_hinge,endpoint_coboundary}_thm2859.py`
+  -> matching `.out` files [THM-2859 PROVED + VERIFIED-EXACT +
+  INDEPENDENTLY HOSTILE-AUDITED].  The twenty-cell horn meets the collar in
+  one physical q0 live/dead/live hinge.  Twelve long labels realize one
+  fully decorated ancestry-preserving endpoint `Z^8` arrow whose value generates the
+  vertical endpoint `C13`; no physical action or endpoint/ancestry carry
+  intertwiner is proved.  In the complete 685-path forest the vertical orbit
+  of its q0 mask has only labels `{0,4,8,9}`; the 98 rootless paths add no
+  hit, and the relation has neither a forward directed `Z^5` inverse nor a
+  composable `Z^8` square there.  Mass/horizontal/vertical-factor gates
+  explain the rootless zero.  Full q0/q3/q7/q11 endpoint masses are
+  `81/90/0/81`, and q0/q11 are not translates.  The literal 24-labelled-edge
+  q3/q11 attachment of THM-2863's four probes is empty before Prony; the
+  relaxed bank passes factors/carriers but fails full endpoint translation.
+  The formal/rootwise collar algebra is the punctured-`V4`
+  corner `pM4p=M3`; its specified minimal enveloping `V4`-set completion
+  adds one rank-587 object.  The joint
+  residue/first-carry quotient is nonsplit `C169`, not
+  the inherited split affine endpoint plane.  This endpoint germ has not
+  descended through q/E3, excludes no row, and does not prove LRC(14).
+  LF-normalized `(script,output)` SHA-256 pairs are:
+  `hinge=(6152b47cb4bb936f63bd289616db5f72e710c1626e65e8b1c8b266765d0398a2,b254b3bf0cf6cf397e15ae7f9a656a9ef78cae8c6c9d0a41cef9bb8f9fb97016)`;
+  `endpoint_carry=(6e062f3cc57c80fcff372c272bc138e280205bb953e484f1cc267340774260f0,b33065698ee0ef4d3513ab51562244b331b01c1843c42c37949fb7406dbf239b)`;
+  `endpoint_orbit_action=(a4c145892ec3caf1f199a13bac07472e726f5dada0b523e86274ad8c14ce2846,55a2d0759d479511cfba62bfc851766535de79121f1b080492100fe54712f6c8)`;
+  `rootless_endpoint_boundary=(887a762392e3ce0af8525db8643de6199e0f207e5a9b5d099d3118825f2edd8d,05f52ba31933cd3a083015208c8199c49ca39e00c52b59161f24be43bb076ab9)`;
+  `prony_typed_descent_gate=(ff9a954e65209d0b96de7d9215ccc6a38dfdbb16245414564a63237924efad28,487363c8d8d34cf703dd83fa6d3867b5932796454792a6394da44354bd59278b)`;
+  `v4_globalization=(f7b7ee404f7a55eac10af0f2da19069197cad67c5a943326c070175233d289c6,1719513ea3e009c5ae22c4bba618cd7c16285bd41f881233d8a5f68ca58e3bdc)`;
+  `witt_hinge=(b83c58c308c6686f7ddeac8635dc7bebf717ca8c2632cc1523434c8204e9dfd0,3c98fc223e7b3378c0a0efad5fd49fd44561c7b124a35907edc16f12746cc469)`;
+  `endpoint_coboundary=(3d7702641a2df258b829538d8fcf1d066cdf5f426cceef5781bbcfb37747bc15,ea6bda595f193adf6bb074e5a351f858f59d8a14f41ea6faea806131da29394b)`.
 - `lrc14_nearest_half_step_common_right_collar_thm2825.py` plus physical,
   independent, Schur, and path-operator companions -> matching `.out` files
   [THM-2825 PROVED + VERIFIED-EXACT; CORE COLLAR INDEPENDENTLY
