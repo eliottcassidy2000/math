@@ -107,6 +107,9 @@ def direct_two_ray_coefficients(row, pivot, gap):
 n_symbol, p_symbol, z_symbol = sp.symbols(
     "n p z", integer=True, nonnegative=True
 )
+x_symbol, y_symbol = sp.symbols(
+    "x y", real=True
+)
 
 
 def rising(base, length):
@@ -271,6 +274,87 @@ def direct_singleton_curvature(index, row):
     response_determinant = determinant(matrix)
     denominator = matrix[0][0] * matrix[1][0] * matrix[2][0]
     return response_determinant / denominator
+
+
+def canonical_mixed_moment(u_power, v_power):
+    """Moment on U=d_1+x*d_3, V=d_2+y*d_3."""
+
+    out = sp.Integer(0)
+    for u_high in range(u_power + 1):
+        for v_high in range(v_power + 1):
+            labels = (
+                (1,) * (u_power - u_high)
+                + (3,) * u_high
+                + (2,) * (v_power - v_high)
+                + (3,) * v_high
+            )
+            out += (
+                comb(u_power, u_high)
+                * comb(v_power, v_high)
+                * x_symbol**u_high
+                * y_symbol**v_high
+                * tensor(tuple(sorted(labels)))
+            )
+    return sp.expand(out)
+
+
+def canonical_holonomy_interval():
+    """Exact monomial interval bound on the THM-2846 root rectangle."""
+
+    g0 = canonical_mixed_moment(2, 0)
+    g1 = canonical_mixed_moment(1, 1)
+    g2 = canonical_mixed_moment(0, 2)
+    a0 = canonical_mixed_moment(4, 0)
+    a1 = canonical_mixed_moment(3, 1)
+    a3 = canonical_mixed_moment(1, 3)
+    a4 = canonical_mixed_moment(0, 4)
+    holonomy = sp.Poly(
+        sp.expand(
+            (2 * a1 * g0 - a0 * g1) * g2**2
+            - (2 * a3 * g2 - a4 * g1) * g0**2
+        ),
+        x_symbol,
+        y_symbol,
+    )
+
+    x_lower = sp.Rational(2636, 10000)
+    x_upper = sp.Rational(2637, 10000)
+    y_lower = sp.Rational(23418, 1000000)
+    y_upper = sp.Rational(23421, 1000000)
+    lower = sp.Rational(0)
+    upper = sp.Rational(0)
+    for (x_degree, y_degree), coefficient in holonomy.terms():
+        monomial_lower = x_lower**x_degree * y_lower**y_degree
+        monomial_upper = x_upper**x_degree * y_upper**y_degree
+        require(
+            monomial_lower <= monomial_upper,
+            "positive-rectangle monomial order",
+        )
+        if coefficient > 0:
+            lower += coefficient * monomial_lower
+            upper += coefficient * monomial_upper
+        else:
+            lower += coefficient * monomial_upper
+            upper += coefficient * monomial_lower
+
+    require(lower < upper < 0, "canonical holonomy interval sign")
+    require(
+        lower
+        == sp.Rational(
+            -1965120367409971587404977893331001634459,
+            3125000000000000000000000000000000,
+        ),
+        "canonical holonomy lower endpoint",
+    )
+    require(
+        upper
+        == sp.Rational(
+            -239202401274182466677656578205832473701,
+            390625000000000000000000000000000,
+        ),
+        "canonical holonomy upper endpoint",
+    )
+    return len(holonomy.terms()), lower, upper
 
 
 def polarized_kernel(rows, labels):
@@ -452,6 +536,10 @@ def main():
     raw_output_minor = 0 * 2 - 1 * 2
     require(raw_output_minor == -2, "raw output-measure hostile")
 
+    holonomy_terms, holonomy_lower, holonomy_upper = (
+        canonical_holonomy_interval()
+    )
+
     scout_multisets, scout_coefficients, scout_minimum = (
         universal_newton_scout()
     )
@@ -466,6 +554,10 @@ def main():
     print("singleton_n0_negative_for_j_ge_4=true")
     print(f"hostile_d4_n0_curvature={hostile_curvature}")
     print(f"raw_output_measure_minor={raw_output_minor}")
+    print(f"canonical_holonomy_terms={holonomy_terms}")
+    print(f"canonical_holonomy_lower={holonomy_lower}")
+    print(f"canonical_holonomy_upper={holonomy_upper}")
+    print("canonical_cubic_null_rectangle_endpoint_exit=true")
     print(
         "universal_newton_scout="
         f"{scout_multisets}_label_multisets;"

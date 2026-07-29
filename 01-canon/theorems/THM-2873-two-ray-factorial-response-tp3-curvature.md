@@ -10,16 +10,24 @@ status: >
   factor and a residual polynomial whose n=z+1 expansion has strictly
   positive coefficients.  The cutoff is sharp: at n=0 the singleton d_4
   has negative curvature.  This gives local TP3 curvature for both sparse
-  cones in the shared-high-tooth cubic-null family, but does not prove the
-  mixed secant comparison or close the shared multipole-line branch.
+  cones in the shared-high-tooth cubic-null family.  On the canonical
+  THM-2846 cubic-null rectangle, a separate exact interval certificate makes
+  the endpoint holonomy strictly negative throughout and excludes that one
+  cell from the shared quartic line.  The general mixed secant comparison
+  and shared multipole-line branch remain open.
 source: codex/two-ray-factorial-response-tp3-2026-07-28
 depends_on:
   - THM-2830-disjoint-positive-adjacent-cone-factorial-moment-three-detection
+  - THM-2846-arbitrary-positive-cone-moment-three-transverse-boundary
   - THM-2866-positive-factorial-difference-semiring-and-cubic-pascal-response-ladder
-related:
   - THM-2872-four-slot-shared-multipole-quartic-norm-and-response-secant-reduction
+related:
+  - THM-2841-all-order-adjacent-difference-factorial-tensor-positivity
 script: 04-computation/gmc_two_ray_response_tp3_thm2873.py
 output: 05-knowledge/results/gmc_two_ray_response_tp3_thm2873.out
+script_sha256: 03e613db2c0bf51f90c1fd09370aa96f691f4ecbb61492eaaa3f23b84a15ff31
+output_sha256: 521c47f95d3c6b4e4aece53e0027ab842fe33f792017b40adc868b461a49813a
+hash_basis: LF-normalized bytes
 ---
 
 # THM-2873 -- two-ray factorial-response TP3 curvature
@@ -336,7 +344,7 @@ In the marked-cycle model, these survivors are the iterated
 predecessor-shielding residues; a uniform injection for all six labels is
 still open.
 
-## 5. Shared-high-tooth consequence and exact limit
+## 5. Shared-high-tooth consequence and canonical endpoint exit
 
 The sparse cubic-null family used in the shared-multipole investigation is
 
@@ -363,6 +371,90 @@ when `a=1` one transport endpoint also touches the sharp row `n=0`
 boundary `(29)`.  No closure of the shared cubic--quartic multipole line is
 claimed.
 
+### 5.1 The canonical THM-2846 cell exits at the endpoint
+
+The specific cubic-null cell of THM-2846 is
+
+```text
+U=d_1+x d_3,                    V=d_2+y d_3.           (33)
+```
+
+That theorem proves a unique common zero of the two cubic remainders in
+the rational rectangle
+
+```text
+2636/10000 <= x <= 2637/10000,
+23418/1000000 <= y <= 23421/1000000.                 (34)
+```
+
+Define, with no suppressed normalization,
+
+```text
+g_0=L(U^2),          g_1=L(UV),          g_2=L(V^2),
+
+A_i=L(U^(4-i)V^i),                       0<=i<=4,      (35)
+```
+
+and the endpoint-holonomy determinant
+
+```text
+J=
+ (2A_1g_0-A_0g_1)g_2^2
+ -(2A_3g_2-A_4g_1)g_0^2.                              (36)
+```
+
+Thus
+
+```text
+J=g_0^2g_2^2(r_1^(L)-r_1^(R))                         (37)
+```
+
+for the two endpoint quotient determinations in THM-2872.
+
+Exact expansion makes `J` a `30`-term polynomial in `x,y`.  Because both
+coordinates in `(34)` are positive, each monomial is coordinatewise
+increasing.  Bounding a positive coefficient at the lower/lower and
+upper/upper corners, and reversing those choices for a negative
+coefficient, gives the rigorous rational enclosure
+
+```text
+-1965120367409971587404977893331001634459
+ ---------------------------------------------------
+ 3125000000000000000000000000000000
+
+ <= J <=
+
+-239202401274182466677656578205832473701
+ --------------------------------------------------
+ 390625000000000000000000000000000
+
+ <0.                                                   (38)
+```
+
+This is deliberately a crude separable monomial interval, not a decimal
+root evaluation.  It holds uniformly throughout the whole rectangle
+`(34)`, hence at THM-2846's exact algebraic cubic-null point.
+
+At that point THM-2872 identifies
+
+```text
+beta kappa_U=(3/2)r_1^(L),
+alpha kappa_V=(3/2)r_1^(R).                            (39)
+```
+
+Equations `(37)--(39)` prove the strict endpoint exit
+
+```text
+beta kappa_U < alpha kappa_V.                          (40)
+```
+
+Therefore the canonical THM-2846 cubic line is not a shared quartic line;
+the midpoint defect never needs to be tested.  This strengthens the
+mechanism attached to that one hostile from “fourth moment nonzero” to a
+strict, rectangle-stable endpoint-holonomy mismatch.  It does not extend
+`(40)` to every shifted cell in `(31)` or to an arbitrary four-slot
+cone-cutting plane.
+
 ## 6. Universal TP3 lead: finite-exact only
 
 For a general positive cone `W=sum mu_jd_j`, full polarization of `(3)`
@@ -375,7 +467,7 @@ The exact companion nevertheless records a stronger finite signal.  For
 all
 
 ```text
-0<=a_1<=...<=a_6<=6                                  (33)
+0<=a_1<=...<=a_6<=6                                  (41)
 ```
 
 there are `924` multisets.  The polarized kernel has degree at most
@@ -384,7 +476,7 @@ there are `924` multisets.  The polarized kernel has degree at most
 tested kernel has a strictly positive expansion in
 
 ```text
-binom(n-1,r).                                         (34)
+binom(n-1,r).                                         (42)
 ```
 
 This is `FINITE-EXACT` evidence for the all-cone TP3 conjecture, not its
@@ -400,8 +492,10 @@ The exact companion:
 4. checks `(18)` against direct factorial tensors in `168` exact cells;
 5. derives and checks the singleton formula `(25)` in `54` exact cells;
 6. certifies the complete `n=0` sign boundary `(27)--(29)`;
-7. checks the raw-output hostile `(30)`; and
-8. performs the separately scoped `924`-multiset Newton scout.
+7. checks the raw-output hostile `(30)`;
+8. constructs `(35)--(36)` directly from exact tensors and certifies the
+   rational interval `(38)` term by term; and
+9. performs the separately scoped `924`-multiset Newton scout.
 
 Reproduce with
 
@@ -418,19 +512,5 @@ Both modes must byte-match
 
 The proof and exact companion are complete.  Promotion to proved canon
 still requires an independent audit of the factorial normalization, all
-determinant multiplicities, the positivity certificates, and the scope
-boundary in Section 5.
-
-```text
-L(d_n W),                 L(d_n W^2),                 L(d_n W^3)
-```
-
-has positive consecutive `3 x 3` minors for `n>=1` when
-`W=x d_p+y d_(p+h)`, `x,y>=0`, and `h=1` or `h=2`, together with the sharp
-singleton failure at `n=0`.
-
-Promotion requires a fully derived common-factorial normalization, positive
-residual-polynomial certificates for all seven polarized coefficients, exact
-normal/optimized replay with hostile controls, and an explicit scope boundary:
-local response curvature alone does not prove the mixed secant comparison or
-close the shared cubic--quartic multipole-line branch.
+determinant multiplicities, the positivity certificates, the interval
+orientation in `(38)`, and the scope boundary in Section 5.
