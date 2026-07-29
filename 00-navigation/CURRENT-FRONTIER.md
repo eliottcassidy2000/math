@@ -209,7 +209,7 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   exists exactly in the local residue-`K` case.  THM-2846 finds a positive
   interlaced-cone line with factorial moments one--three, hence Gaussian
   moments one--six, zero; moment four/eight exits, and one variance jet
-  detects every binary positive-cone plane. THM-2848 reduces four slots to
+  detects every binary cone plane. THM-2848 reduces four slots to
   `F^o=0` or a shared cubic--quartic line; THM-2866 excludes the first.
   THM-2879/2890/2891 close consecutive cone-cutting planes.
   THM-2906 shows tensor positivity plus local TP3 cannot orient mixed

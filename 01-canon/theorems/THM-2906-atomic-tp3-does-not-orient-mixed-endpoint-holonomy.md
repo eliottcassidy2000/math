@@ -2,8 +2,7 @@
 id: THM-2906
 title: "Atomic tensor positivity and local TP3 do not orient mixed endpoint holonomy"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  In the positive family
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the positive family
   U=d_1+x d_3, V=d_2+y d_3, all adjacent tensors are positive and both
   local response curves have strict TP3, but the mixed endpoint-holonomy
   determinant is positive at (x,y)=(1,1) and negative at (1,2).
@@ -12,6 +11,11 @@ status: >
   neither atomic positivity nor separate response curvature determines
   the endpoint sign.
 source: root/mixed-endpoint-holonomy-no-go-2026-07-29
+audit: >
+  Two independent hostile audits reconstructed the tensors directly from
+  the polynomials d_j, verified both quotient-chart derivatives, witness
+  cells, cubic invariants, TP3 values, polynomial census and hashes, and
+  accepted the cubic-ideal scope without qualification.
 depends_on:
   - THM-2853-gamma-adjacent-tensor-cycle-weighted-positivity
   - THM-2873-two-ray-factorial-response-tp3-curvature
@@ -27,8 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2906 -- atomic TP3 does not orient mixed endpoint holonomy
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Put
 
@@ -248,5 +251,10 @@ Both modes byte-match
 05-knowledge/results/gmc_atomic_tp3_mixed_holonomy_no_go_thm2906.out.
 ```
 
-Promotion requires an independent reconstruction of both hostile cells,
-the quotient-chart typing, and the cubic-ideal scope.
+Two independent hostile audits reconstructed the moments directly from the
+polynomials `d_j`, rather than the companion's tensor routine.  They matched
+both witness cells, derivative identities, cubic invariants, TP3 values,
+the full endpoint-polynomial census and digest, and the declared LF hashes.
+Both accepted the logical scope exactly as stated.
+
+**QED.**
