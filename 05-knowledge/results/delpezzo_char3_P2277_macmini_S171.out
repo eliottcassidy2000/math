@@ -1,57 +1,19 @@
-delpezzo_char3_P2277_ninesing_verify_macmini_S171.py — verification record for
-
-  X = X_14 = { x0^7 + x0^2 x1^5 + 2 x1^7 + x2^2 + x3^2 = 0 }  in  P(2,2,7,7)
-  over F_3   (a(t) = t^7 + t^2 + 2 irreducible over F_3).
-
-Checks (all PASS):
-[1] P(2,2,7,7) well-formed (every weight triple coprime); weights prime to 3
-    (tame; no wild quotient behavior in char 3).
-[2] degree 14, Fano index sum(w) - d = 18 - 14 = 4 > 0; -K_X = O_X(4) ample.
-[3] Structural decoupling: the 11 degree-14 monomials in these weights have NO
-    mixed monomial (both blocks); F = A(x0,x1) + C(x2,x3) is forced.
-[4] a(t) = t^7+t^2+2 irreducible/F_3 (trial division deg <= 3); gcd(a,a')=1
-    (separable).  Quasi-smoothness: grad F = (A_0, A_1, 2x2, 2x3) = 0 forces
-    x2=x3=0 and (Euler, 7=1 != 0 mod 3) A = A_0 = A_1 = 0, impossible for a
-    separable form except at the irrelevant point; at (1:0), A_0 = 7 x0^6 != 0.
-[5] Singular locus of X = exactly the ambient-strata points:
-      * 7 geometric points {A=0} on the (2,2)-line, each 1/2(1,1) = A_1 (tame);
-      * 2 geometric points {x2^2+x3^2=0} on the (7,7)-line (rational over F_9),
-        each a 1/7(2,2) ~ 1/7(1,1) cyclic quotient point (tame, klt).
-    TOTAL: 9 >= 8 singular geometric points; X is a klt del Pezzo surface.
-[6] Exact point counts (value-distribution convolution over GF(3^k), k=1..4):
-      q=3:  #X = 16   = q^2 + 2q + 1
-      q=9:  #X = 82   = q^2 + 0q + 1
-      q=27: #X = 784  = q^2 + 2q + 1
-      q=81: #X = 6562 = q^2 + 0q + 1
-    i.e. Tr(Frob^k | H^2(1)) = 2,0,2,0 — the exact signature of eigenvalues
-    {1} ∪ {-zeta_7^j : j=1..6}:  1 + (-1)^(k+1) for 7 ∤ k.  Matches the lattice
-    prediction below.
-
-Picard rank (proof recorded in THM-2834):
-  Geometrically, X contains 14 lines C_i = {A-root i, x2 = i*x3-type factor}
-  over F_3bar: writing C = x2^2+x3^2 = (x2+ix3)(x2-ix3) = s·t, the divisors
-  {s=0} and {t=0} split into 7 components each over the 7 roots of a.
-  Intersection theory (H'^2 = 1/14, H'C_i = 1/14, C_i C_j = δ/2, C_i ≡ D_i
-  numerically) gives NS(X_F3bar) ⊗ Q of rank 7 = b_2 (Noether: K_Xtilde^2 = -6,
-  b2(Xtilde) = 16, minus 9 exceptional classes), spanned by H', C_1..C_7 with
-  the single relation ΣC_i = 7H'.  Frobenius acts through the 7-cycle on the
-  roots of the irreducible a composed with s <-> t (i in F_9 \ F_3):
-  a single 14-orbit on {C_i, D_i}.  Invariants: Q·H' only.  Hence
-      rho(X / F_3) = 1   (arithmetic Picard rank; Tate holds for geometrically
-                          rational surfaces, and the point counts confirm),
-      rho(X_F3bar) = 7   (geometric).
-  Structural obstruction recorded: ANY quasismooth hypersurface in 4 weights
-  whose >= 8 strata singularities include a (p,p)-line with >= d/2 points is
-  forced decoupled (parity), hence contains the split lines and has geometric
-  rho >= 2; and Method-A quotients of a SMOOTH CI(2,2) by a diagonal ±1
-  involution have at most 4 singular points (signature (3,2) is forced;
-  the P^1_- part of the fixed locus meets a smooth Y in 0 points because a
-  common root of the two binary quadratics makes gradients parallel).  So 9
-  points with arithmetic rank one is the honest optimum of this method family.
-
-Epoch FrontierMath "Surface with a High Number of Singularities" (Method B)
-submission data:
-  Weights: [2, 2, 7, 7]
-  F = x0^7 + x0^2*x1^5 + 2*x1^7 + x2^2 + x3^2   (over ZZ/3)
-
-Reproduce: python3 04-computation/delpezzo_char3_P2277_ninesing_verify_macmini_S171.py
+[1] well-formed (all triples coprime): True
+[1] weights prime to char 3 (tame): True
+[2] Fano index sum(w)-d = 4 > 0: True
+[3] degree-14 monomials: 11, mixed (both blocks): 0 (structurally decoupled: True)
+[4] a(t) = t^7 + t^2 + 2 over F_3 irreducible: True
+[4] gcd(a,a') = [1] (separable: True)
+[4] quasi-smoothness: grad F = (A_0, A_1, 2x2, 2x3); x2=x3=0 & Euler(7=1!=0 mod 3) => A=A_0=A_1=0 => common root of (a,a') => none (separable). At (1:0): A_0=7x0^6!=0. QED
+[5] singular pts: 7 distinct geometric roots of A on P(2,2)-line, each 1/2(1,1)=A_1 (tame); 2 roots of x2^2+x3^2 on P(7,7)-line (over F_9, i=sqrt(-1)), each 1/7-cyclic (tame). Total 9.
+[6] divisor laws: div(l_i)=C_i+D_i=2H; div(s)=sum_i C_i=7H; D_i=2H-C_i (so C_i is NOT numerically D_i)
+[6] intersections: H^2=H.C_i=1/14; C_i^2=-5/14; C_i.C_j=1/7 (i!=j); C_i.D_i=1/2; C_i.D_j=0 (i!=j)
+[6] Gram(C_1,...,C_7): determinant=1/128, rank=7
+[7] Frobenius: C_i -> D_(i+1)=2H-C_(i+1); on v_i=C_i-H it is v_i -> -v_(i+1)
+[7] Frobenius fixed dimension=1; order=14; traces k=1..4: [Fraction(2, 1), Fraction(0, 1), Fraction(2, 1), Fraction(0, 1)]
+[8] q=3: #X(F_q) = 16 = q^2 + (2)*q + 1   [sing pts rational here: A1s:0, 1/7s:0]
+[8] q=3: independent affine-cone/G_m orbit count = 16 (PASS)
+[8] q=9: #X(F_q) = 82 = q^2 + (0)*q + 1   [sing pts rational here: A1s:0, 1/7s:2]
+[8] q=9: independent affine-cone/G_m orbit count = 82 (PASS)
+[8] q=27: #X(F_q) = 784 = q^2 + (2)*q + 1   [sing pts rational here: A1s:0, 1/7s:0]
+[8] q=81: #X(F_q) = 6562 = q^2 + (0)*q + 1   [sing pts rational here: A1s:0, 1/7s:2]

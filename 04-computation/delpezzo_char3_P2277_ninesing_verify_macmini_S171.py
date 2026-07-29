@@ -3,8 +3,8 @@
 delpezzo_verify.py — verification of the char-3 klt del Pezzo example
 
   X = X_14 = { F = 0 } in P(2,2,7,7) over F_3,
-  F = A(x0,x1) + x2^2 + x3^2,   A = x0^7 - x0*x1^6 - x1^7   (to be checked
-      separable + irreducible; adjust constant if needed).
+  F = A(x0,x1) + x2^2 + x3^2,
+  A = x0^7 + x0^2*x1^5 + 2*x1^7.
 
 Checks:
  1. weights (2,2,7,7): well-formed (every 3-subset coprime), all prime to 3 (tame).
@@ -16,13 +16,82 @@ Checks:
  5. singular locus of X = 7 points {A=0} on the (2,2)-line  (1/2(1,1) A_1 each,
     tame since 2 != 3)  +  2 points {x2^2+x3^2=0} on the (7,7)-line
     (1/7(1,1)-type, tame).  Total 9 >= 8 geometric singular points.
- 6. exact point counts #X(F_q) for q = 3, 9, 27, 81 by value-distribution
+ 6. corrected exact intersection lattice and Frobenius action:
+       div(l_i)=C_i+D_i=2H, div(s)=sum C_i=7H,
+       C_i^2=-5/14, C_i*C_j=1/7 (i != j),
+       Frob(C_i)=D_{i+1}=2H-C_{i+1}.
+ 7. exact point counts #X(F_q) for q = 3, 9, 27, 81 by value-distribution
     convolution; compare against  q^2 + c*q + 1  to read off Frobenius traces
-    on H^2 -> arithmetic Picard rank evidence (Tate holds for rational surfaces).
+    on H^2.  For q=3,9 an independent affine-cone/G_m orbit census agrees.
+    These counts independently match the corrected lattice action.
 
 Pure Python, no dependencies.  GF(3^k) implemented via Zech-free table arithmetic.
 """
 import itertools, sys
+from fractions import Fraction
+
+
+def matrix_rank(a):
+    """Exact row rank over Q."""
+    a = [[Fraction(x) for x in row] for row in a]
+    rows, cols = len(a), len(a[0])
+    r = 0
+    for c in range(cols):
+        pivot = next((i for i in range(r, rows) if a[i][c]), None)
+        if pivot is None:
+            continue
+        a[r], a[pivot] = a[pivot], a[r]
+        z = a[r][c]
+        a[r] = [x / z for x in a[r]]
+        for i in range(rows):
+            if i != r and a[i][c]:
+                z = a[i][c]
+                a[i] = [a[i][j] - z * a[r][j] for j in range(cols)]
+        r += 1
+    return r
+
+
+def matrix_det(a):
+    """Exact determinant over Q."""
+    a = [[Fraction(x) for x in row] for row in a]
+    n = len(a)
+    ans = Fraction(1)
+    for c in range(n):
+        pivot = next((i for i in range(c, n) if a[i][c]), None)
+        if pivot is None:
+            return Fraction(0)
+        if pivot != c:
+            a[c], a[pivot] = a[pivot], a[c]
+            ans = -ans
+        z = a[c][c]
+        ans *= z
+        for j in range(c, n):
+            a[c][j] /= z
+        for i in range(c + 1, n):
+            z = a[i][c]
+            for j in range(c, n):
+                a[i][j] -= z * a[c][j]
+    return ans
+
+
+def matrix_mul(a, b):
+    return [[sum((a[i][k] * b[k][j] for k in range(len(b))), Fraction(0))
+             for j in range(len(b[0]))] for i in range(len(a))]
+
+
+def matrix_pow(a, n):
+    size = len(a)
+    ans = [[Fraction(i == j) for j in range(size)] for i in range(size)]
+    while n:
+        if n & 1:
+            ans = matrix_mul(ans, a)
+        a = matrix_mul(a, a)
+        n //= 2
+    return ans
+
+
+def matrix_transpose(a):
+    return [list(row) for row in zip(*a)]
 
 # ---------- GF(3^k) ----------
 class GF:
@@ -163,6 +232,45 @@ def main():
     print(f"[5] singular pts: 7 distinct geometric roots of A on P(2,2)-line, each 1/2(1,1)=A_1 (tame);"
           f" 2 roots of x2^2+x3^2 on P(7,7)-line (over F_9, i=sqrt(-1)), each 1/7-cyclic (tame). Total 9.")
 
+    # ---------- corrected geometric intersection lattice ----------
+    # Over Fbar_3 write A=prod_i l_i and x2^2+x3^2=s*t.  On X:
+    #   div(l_i)=C_i+D_i=2H, div(s)=sum_i C_i=7H.
+    # At the 1/7 point all distinct C_i meet with local intersection 1/7;
+    # at the i-th A_1 point C_i meets D_i with local intersection 1/2.
+    # Hence C_i^2=2H.C_i-C_i.D_i=1/7-1/2=-5/14.
+    G = [[Fraction(-5, 14) if i == j else Fraction(1, 7)
+          for j in range(7)] for i in range(7)]
+    assert all(sum(row) == Fraction(1, 2) for row in G)
+    assert matrix_det(G) == Fraction(1, 128)
+    print("[6] divisor laws: div(l_i)=C_i+D_i=2H; div(s)=sum_i C_i=7H; "
+          "D_i=2H-C_i (so C_i is NOT numerically D_i)")
+    print("[6] intersections: H^2=H.C_i=1/14; C_i^2=-5/14; "
+          "C_i.C_j=1/7 (i!=j); C_i.D_i=1/2; C_i.D_j=0 (i!=j)")
+    print(f"[6] Gram(C_1,...,C_7): determinant={matrix_det(G)}, "
+          f"rank={matrix_rank(G)}")
+
+    # Arithmetic Frobenius cycles the seven roots and interchanges s,t:
+    # C_i -> D_{i+1}=2H-C_{i+1}, where H=(sum C_i)/7.
+    frob = [[Fraction(2, 7) - Fraction(r == ((c + 1) % 7))
+             for c in range(7)] for r in range(7)]
+    identity = [[Fraction(r == c) for c in range(7)] for r in range(7)]
+    assert matrix_mul(matrix_mul(matrix_transpose(frob), G), frob) == G
+    assert matrix_pow(frob, 14) == identity
+    assert matrix_pow(frob, 7) != identity
+    fixed_dim = 7 - matrix_rank(
+        [[frob[r][c] - identity[r][c] for c in range(7)] for r in range(7)]
+    )
+    assert fixed_dim == 1
+    lattice_traces = [
+        sum(matrix_pow(frob, k)[i][i] for i in range(7))
+        for k in range(1, 5)
+    ]
+    assert lattice_traces == [2, 0, 2, 0]
+    print("[7] Frobenius: C_i -> D_(i+1)=2H-C_(i+1); on v_i=C_i-H it is "
+          "v_i -> -v_(i+1)")
+    print(f"[7] Frobenius fixed dimension={fixed_dim}; order=14; "
+          f"traces k=1..4: {lattice_traces}")
+
     # ---------- point counts ----------
     # X: A(x0,x1) + x2^2 + x3^2 = 0 in P(2,2,7,7).
     # Count N_q = #X(F_q).  Decompose by (x0,x1) = 0 or not, (x2,x3) = 0 or not.
@@ -223,9 +331,38 @@ def main():
         assert nC0 % (q - 1) == 0
         n_lineC = nC0 // (q - 1)
         N = n_both + n_lineA + n_lineC
-        c = (N - q * q - 1) / q
-        print(f"[6] q={q}: #X(F_q) = {N} = q^2 + ({c})*q + 1   "
+        trace_num = N - q * q - 1
+        assert trace_num % q == 0
+        c = trace_num // q
+        print(f"[8] q={q}: #X(F_q) = {N} = q^2 + ({c})*q + 1   "
               f"[sing pts rational here: A1s:{n_lineA}, 1/7s:{n_lineC}]")
+        if k <= 2:
+            # Independent small-field path: enumerate every nonzero affine-cone
+            # solution and its weighted G_m orbit, without using the block
+            # value-distribution convolution above.
+            solutions = set()
+            for x0, x1, x2, x3 in itertools.product(range(q), repeat=4):
+                if x0 == x1 == x2 == x3 == F.zero:
+                    continue
+                av = F.addt[F.pow(x0, 7)][F.mult[F.pow(x0, 2)][F.pow(x1, 5)]]
+                av = F.addt[av][F.mult[two][F.pow(x1, 7)]]
+                cv = F.addt[F.pow(x2, 2)][F.pow(x3, 2)]
+                if F.addt[av][cv] == F.zero:
+                    solutions.add((x0, x1, x2, x3))
+            remaining = set(solutions)
+            direct_orbits = 0
+            while remaining:
+                z = next(iter(remaining))
+                orbit = {
+                    tuple(F.mult[F.pow(lam, weight)][coord]
+                          for weight, coord in zip(W, z))
+                    for lam in range(q) if lam != F.zero
+                }
+                remaining.difference_update(orbit)
+                direct_orbits += 1
+            assert direct_orbits == N
+            print(f"[8] q={q}: independent affine-cone/G_m orbit count = "
+                  f"{direct_orbits} (PASS)")
 
 if __name__ == "__main__":
     main()

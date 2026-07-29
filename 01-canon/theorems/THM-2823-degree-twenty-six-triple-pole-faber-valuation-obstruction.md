@@ -33,6 +33,10 @@ script: 04-computation/jc_degree26_triple_pole_faber_valuation_obstruction_thm28
 output: 05-knowledge/results/jc_degree26_triple_pole_faber_valuation_obstruction_thm2823.out
 script_sha256: 338e106b2326be8ab59e784aca197c85c05f89df88c62db20eb106070b51fbcc
 output_sha256: 9fdd094358adae1c61808d78d3d26ef6f6c554e33377425aef745df34aeaa812
+independent_script: 04-computation/jc_degree26_triple_pole_faber_valuation_independent_audit_thm2823.py
+independent_output: 05-knowledge/results/jc_degree26_triple_pole_faber_valuation_independent_audit_thm2823.out
+independent_script_sha256: bde1e5d90db29c8e19b12832400fc9f8dde43b742ab21e76385d0a2e31b212c3
+independent_output_sha256: 60b92d4ee89b4663b55b4315bb398f6ec056c30935312856251c0cb175faad84
 hash_basis: LF-normalized bytes
 ---
 
@@ -237,6 +241,20 @@ Res_r(f,g)=-2^21.                                    (20)
 
 Hence no lane in `(16)` survives.
 
+There is also a sharper source-typed shortcut.  In every lane in `(16)`,
+the polar summands in `(2)` dominate, so if `A_src`, `B_src`, and `V`
+have leading coefficients `a_0`, `b_0`, and `v_0`, then
+
+```text
+lc(T)=a_0^2/v_0,
+lc(d)=-b_0^2/(4v_0),
+lc(s)=a_0b_0/(2v_0).
+```
+
+Consequently `r=-1` identically, and already `f(-1)=-64`.  The resultant
+`(20)` is retained as an independent certificate that remains valid even
+after forgetting this leading-coefficient sidecar.
+
 ## 6. The sole two-scale boundary `(a,b)=(0,1)`
 
 Here
@@ -246,7 +264,7 @@ v(T)=-3,                         v(d)=-1,
 v(s)=-2.                                               (21)
 ```
 
-Two leading ratios remain:
+For the eliminant calculation introduce two leading ratios:
 
 ```text
 r=lc(Td)/lc(s^2),                zeta=lc(T^2)/lc(s^3). (22)
@@ -270,7 +288,23 @@ J =
 
 The first two vanish by the same flux argument as above.  Moreover
 `v(K)=1` and `v(T)=-3`, so `(9)` requires `v(H_26)=4`; in particular its
-least coefficient `J` must vanish.  Exact elimination gives
+least coefficient `J` must vanish.
+
+The same source calculation as above actually forces `r=-1`.  Then
+
+```text
+J(-1,zeta)=286(5zeta+144).
+```
+
+Thus `J=0` forces `zeta=-144/5`, at which
+
+```text
+P=-24490752/25,                  G=-50189568/25.
+```
+
+This already empties the boundary.  The following two-variable
+elimination is a stronger independent check which deliberately forgets
+the forced ratio.  Exact elimination gives
 
 ```text
 <P,G,J>=<1> in Q[r,zeta].                             (24)
@@ -338,7 +372,7 @@ Other multiplicity pairs require a new Newton polygon.
 
 ## 9. Exact companion
 
-The companion:
+The primary companion:
 
 1. reconstructs all six rows in `(4)` by recurrence and independent
    generalized multinomial expansion;
@@ -355,4 +389,15 @@ python 04-computation/jc_degree26_triple_pole_faber_valuation_obstruction_thm282
 python -O 04-computation/jc_degree26_triple_pole_faber_valuation_obstruction_thm2823.py
 ```
 
-Normal, optimized, and stored transcripts agree exactly.
+The hostile audit uses the logarithmic-derivative Faber recurrence rather
+than either primary extraction path, reconstructs every weighted initial
+form, verifies the exhaustive valuation partition and both resultants,
+checks `<P,G,J>=<1>`, and proves the forced `r=-1` shortcut directly.  Run
+
+```text
+python 04-computation/jc_degree26_triple_pole_faber_valuation_independent_audit_thm2823.py
+python -O 04-computation/jc_degree26_triple_pole_faber_valuation_independent_audit_thm2823.py
+```
+
+Normal, optimized, and stored transcripts agree exactly for both
+companions.

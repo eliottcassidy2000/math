@@ -9,6 +9,36 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-318 (2026-07-28, THM-2834 first Picard-lattice proof) -- conjugate split curves are complementary, not numerically equal
+
+- **What was claimed:** for the fourteen curves on
+  `X_14 subset P(2,2,7,7)`, the first proof wrote `C_i ≡ D_i` and
+  `C_i.C_j=delta_ij/2`, then treated Frobenius as the ordinary seven-cycle
+  on the `C_i`.
+- **First failed implication:** the weight-two form `ell_i` cuts
+  `C_i union D_i`, so its divisor gives the unavoidable identity
+  `C_i+D_i=2H`.  Thus `D_i=2H-C_i`, not `C_i`.  The old positive-definite
+  matrix also violated the Hodge-index signature.  On the tame local covers,
+  distinct `C_i,C_j` meet at the common `1/7(1,1)` point with intersection
+  `1/7`, while `C_i,D_i` meet at an `A_1` point with intersection `1/2`.
+  Therefore
+  `C_i^2=-5/14`, `C_i.C_j=1/7` for `i!=j`, and `C_i.D_j=0` for `i!=j`.
+- **Strongest survivor / repair:** the theorem's ranks and point counts
+  survive.  The corrected `C_1,...,C_7` Gram determinant is `1/128`, so the
+  seven classes are independent.  Since Frobenius interchanges the two
+  factors, it acts by
+  `C_i -> D_(i+1)=2H-C_(i+1)`, or by the **negative** seven-cycle
+  `v_i=C_i-H -> -v_(i+1)` on `sum v_i=0`.  Its fixed space is exactly `Q.H`,
+  proving `rho(X/F_3)=1`; its eigenvalues
+  `{1} union {-zeta_7^j:1<=j<=6}` still give traces `2,0,2,0`, matching the
+  direct counts.
+- **Rule:** whenever a reducible coordinate divisor produces two conjugate
+  curve families, write every principal-divisor relation before identifying
+  numerical classes, and test the proposed Gram matrix against the
+  Hodge-index signature.  A transitive orbit on geometric curves does not
+  mean Frobenius acts by the corresponding permutation after quotienting by
+  divisor relations.
+
 ## MISTAKE-317 (2026-07-28, provisional THM-2827 all-pole extrapolation) -- a unique Newton face need not miss the prescribed response valuation
 
 - **What was assumed:** after the `nu=3` and `nu=4` local Faber obstructions,

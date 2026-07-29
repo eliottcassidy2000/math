@@ -327,7 +327,12 @@ Classify profiles under support operations; study analytic continuation and auto
   the local simple-pole pair; THM-2827 restricts balanced passports and
   THM-2831 excludes the cyclic `d=s=0` residual.  Nonzero `d` or `s`, other
   carriers/fluxes, global chart entry, and nonpolynomial-prefix degrees stay
-  open.  None of these scoped charts proves `JC(2)` or `DC(2)`.
+  open.  At the abstract accessory layer, THM-2799/2800/2805/2808 complete
+  `e=2`, THM-2817 completes the sextic `N=6,e=3` layer, and THM-2840 closes
+  the highest-symmetry heptic `(2,2,2,1)` multiset as the single unmarked
+  `T_7` carrier with six marked charts.  The heptic `(4,1,1,1)` and
+  `(3,2,1,1)` multisets remain open.  None of these scoped charts proves
+  `JC(2)` or `DC(2)`.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
