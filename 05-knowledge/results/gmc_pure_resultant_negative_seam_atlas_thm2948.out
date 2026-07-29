@@ -1,0 +1,18 @@
+THM-2948 PURE RESULTANT NEGATIVE SEAM ATLAS
+calibrated_constructor_sha256=d2f8afeba7dd6c7950405a4845d7bf112b6c9872dd8161146446be8bbdaae0ba
+universe=(0,a,b,M),1<=a<b<M,6<=M<=10;counts=10,15,21,28,36;total=110
+load_bearing_calibration=R=Delta0/(q200^6*c300*K);no_gcd(K,P_alt)_factor_retained
+bare_resultant_degree=46*M-26
+rad_gcd(R,Rprime)=prod_j=1..a(2n+2j-1)*prod_r=a..M(n+r);independent_of_b
+all_seam_multiplicities>=2;wall_removed_core=SQUAREFREE;core_coprime_to_seam=YES
+finite_atlas_core_coefficients=ONE_SIGN_POSITIVE;R(0)=POSITIVE
+width6_families=10;repeated_degree_range=60..122;core_degree_range=121..183;digest_sha256=216d5b78bd53207590ec094f11bc7540473e9c4d29c47a3b423dc1d88e3b8d7b
+width7_families=15;repeated_degree_range=65..144;core_degree_range=144..223;digest_sha256=bcade34303f56b84f1fdb5358cb9c598e98a2e1ec03a60d2db710c85ab25b309
+width8_families=21;repeated_degree_range=67..169;core_degree_range=164..266;digest_sha256=dd08a5e2462d1a2dad1adb51e939f84ea81a086e6677d621ef690578ea5992bb
+width9_families=28;repeated_degree_range=72..194;core_degree_range=184..306;digest_sha256=32acd2f5acd99c1fdff9fa605c859668b7d259519912d770945fa01713ab9a84
+width10_families=36;repeated_degree_range=74..218;core_degree_range=205..349;digest_sha256=e9bbc9e10ec838e12b3944570062114144bf637e732cc912db55b1211e98ccf9
+combined_digest_sha256=a740d5786e61eec3bfa5ef5e8baf415cf4157dae69c23ad9ba3de62b8b880206
+outside_interpolation_direct_controls=110;PASS
+consequence=with_THM2945_no_nonnegative_depth_resultant_zero_for_widths6_to10
+scope=finite_exact_first_window_atlas;all_width_seam_formula_and_transversality_OPEN
+all_exact_checks=PASS
