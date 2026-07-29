@@ -47,6 +47,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_k3_next_frontier_scalar_closure_thm2941.out
   - 04-computation/lrc14_j7_k3_next_frontier_scalar_independent_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_next_frontier_scalar_independent_thm2941.out
+  - 04-computation/lrc14_j7_k3_uniform_ray_status_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_uniform_ray_status_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -638,6 +640,87 @@ single-comb shape on the projected residual, but it does not bound the first
 of the six drifts.  It is therefore a genuine constraint on the remaining
 infinite sector, not a finite reduction of it.
 
+There is an exact all-scale functional form behind the discrepancy tail.
+Write the carrier components as
+
+```text
+C_E=union_s [a_s/L,b_s/L]
+```
+
+with integral endpoints, and put
+
+```text
+P(x)=integral_0^x 1_(D_1)(u)du,       delta_E(z)=c(z)-h/7.
+```
+
+The integrand in `P` is one-periodic with mean `1/7`, so
+`P(x+m)=P(x)+m/7` for every integer `m`.  Direct substitution into
+
+```text
+z c(z)=sum_s[P(zb_s/L)-P(za_s/L)]
+```
+
+therefore gives the exact recurrence
+
+```text
+(z+L)delta_E(z+L)=z delta_E(z).                         (25l)
+```
+
+Equivalently, there is a residue amplitude
+
+```text
+A_E(b)=z delta_E(z),              z=b mod L,
+delta_E(La+b)=A_E(b)/(La+b).                            (25m)
+```
+
+Here `A_E(0)=0`.  Extending the even coverage function `c(z)=c(-z)` to
+negative labels also gives
+
+```text
+A_E(-b)=-A_E(b).                                        (25n)
+```
+
+The amplitude itself is a boundary object.  Center the primitive by
+
+```text
+g(x)=P(x)-x/7.
+```
+
+Then `g` is one-periodic, odd, and piecewise linear, and cancellation of
+the linear part gives the finite endpoint formula
+
+```text
+A_E(b)=sum_s[g(b*b_s/L)-g(b*a_s/L)].                     (25o)
+```
+
+Thus the apparently analytic drift tail is the pairing of a fixed
+toothpick wave with the signed endpoint boundary of `C_E` on `Z/LZ`.
+Passing from `b` to its denominator remembers the cyclic quotient on which
+this pairing lives but forgets the unit direction that evaluates it.  On
+one period `g` ranges exactly from `-3/49` to `3/49`; hence each carrier
+component contributes at most `6/49` to `A_E(b)`.  This recovers the
+component constant in `(25d)` directly from the toothpick amplitude and
+identifies the sharp oscillation scale behind that bound.
+
+Thus every drift residue is an exact hyperbolic ray, not merely an
+asymptotic `O(1/z)` tail.  Opposite residue directions have opposite excess;
+the self-opposite denominator-two direction has zero excess.  If
+
+```text
+d=L/gcd(L,b),             b=(L/d)u,
+```
+
+then `u` is a unit modulo `d`, and moving along the ray preserves both `d`
+and `u`.  For any fixed denominator multiplicity, its all-label excess
+maximum is consequently obtained by merging finitely many decreasing
+nonnegative rays.  In fact this maximum is attained: every negative unit
+direction has a positive opposite, every zero opposite is already an
+attained zero ray, and the denominator-two ray is identically zero.  The
+reversal-paired unit directions form the oriented sidecar that a bare
+denominator multiset forgets.  This exact ray law will replace finite-horizon
+padding in the quotient-first addenda below; it also explains the equal
+positive/negative ray counts in their audits.
+
 The exact suffix verifier composes `(25c)`--`(25f)` without treating a
 search horizon as exhaustive.  For every root and proposed `z_1`, it
 integrates all allowed suffix labels through `H=7,000`, retains the largest
@@ -720,6 +803,64 @@ ea7f6f2c9b189ffa4940fc25c58c74b13af905aed0fc7a6dc02266869775de77.
 This removes no additional member of the old `376,020` necessary-row ledger:
 there was no `z_1=379` row in it.  After the separate `z_1=380` packet
 closure, `376,019` necessary rows remain.
+
+The ray law also makes an all-label quotient-first closure possible far
+inside that bank.  Fix
+
+```text
+E=(1,4,8,10,12,14),        z_1=250,        L=11760.
+```
+
+The first denominator is `L/gcd(L,250)=1176`.  For each multiset containing
+this denominator and three arbitrary nontrivial divisors of `L`, merge the
+first three eligible points on every nonnegative unit ray.  This gives the
+exact attained scalar maximum over all later labels, while relaxing their
+order and the projected high wall.  Of the `35,990` denominator multisets,
+`1,965` survive this exact ray maximum.
+
+The remaining quotient test strengthens THM-2928's common status table
+`(37tg+)` by retaining forced pair overlap inside each status.  At an outer
+divisor `q`, put `M=D/q`.  If two inner needles have denominators `d,f` and
+lengths `e,z`, write
+
+```text
+g=gcd(d,f),       e=Ag+r,       z=Bg+s,       0<=r,s<g.
+```
+
+Distribution among the `g` common CRT classes and the Fréchet intersection
+floor give
+
+```text
+I_(d,e;f,z)>=M/lcm(d,f) *
+ (gAB+As+Br+max(0,r+s-g)).                              (25p)
+```
+
+For any number of needles, Hunter's tree inequality therefore gives the
+status-wise union upper bound
+
+```text
+|union_i N_i|
+ <=sum_i |N_i|-max_(spanning trees T)sum_(ij in T) I_ij.  (25q)
+```
+
+One nonnegative `2^p`-cell status table must have the exact activity
+marginals and must dominate every tail of the target-load histogram.
+Allowing a different table at each load would be unsound; infeasibility of
+the common table is instead certified by an exact rational Farkas vector.
+The crude all-divisor capacities remove `699` of the `1,965` scalar states,
+and the common four-needle Hunter-status test removes all remaining
+`1,266`.  Thus this entire `(E,z_1=250)` row is empty uniformly, with no
+finite label horizon.  The source/output and semantic SHA-256 values are
+
+```text
+dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36
+5abccb7ef700cec83b9989e8abcd83bc24f51c0a35f7f9054522da0dd62109fe
+bcfa48e8b59080ced069a794d02cc04f62db8137f94b163b2fe4c98c3b3f77fa.
+```
+
+Ordinary and optimized transcripts are byte-identical.  Consequently this
+separate uniform closure leaves `376,018` rows in the old necessary ledger;
+it does not by itself change the current first-drift cap.
 
 For `k=5`, there is a second, Gram-facing derivation.  Pointwise
 

@@ -67,6 +67,19 @@
   and
   `(bd22ce0f86d9f5e359c2a940e0f8133849616e9aa9fc67eb823632ec9371f16d,`
   `ea7f6f2c9b189ffa4940fc25c58c74b13af905aed0fc7a6dc02266869775de77)`.
+- `lrc14_j7_k3_uniform_ray_status_closure_thm2941.py` -> matching `.out`
+  [THM-2941 SCOPED PROVED + FINITE-EXACT + VERIFIED].  The exact residue
+  law `(z+L)delta(z+L)=zdelta(z)` turns every denominator/unit direction
+  into an attained hyperbolic ray and removes any label horizon.  For
+  `E=(1,4,8,10,12,14), z1=250`, all `35,990` denominator multisets reduce
+  to `1,965` ray-scalar states; crude all-divisor capacity kills `699`, and
+  a single common 16-status table with CRT pair floors and Hunter's maximum
+  spanning-tree invoice kills the remaining `1,266` by exact rational
+  Farkas certificates.  Ordinary and optimized transcripts byte-match.
+  Source/output/semantic SHA-256:
+  `dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36` /
+  `5abccb7ef700cec83b9989e8abcd83bc24f51c0a35f7f9054522da0dd62109fe` /
+  `bcfa48e8b59080ced069a794d02cc04f62db8137f94b163b2fe4c98c3b3f77fa`.
 - `lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.py`, together
   with the scalar-wall and projected-suffix verifiers, -> matching `.out`
   files [THM-2941 PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY
