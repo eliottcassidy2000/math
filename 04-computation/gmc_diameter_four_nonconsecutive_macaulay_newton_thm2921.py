@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for THM-2918.
+"""Exact companion for THM-2921.
 
 The script proves first-window SFC(4) for the three nonconsecutive
 four-subsets of a translated five-point exponent window.  It constructs the
@@ -23,7 +23,7 @@ try:
     from flint import fmpz_mat, fmpz_poly
 except ModuleNotFoundError as error:
     raise RuntimeError(
-        "THM-2918 exact replay requires python-flint"
+        "THM-2921 exact replay requires python-flint"
     ) from error
 
 
@@ -494,7 +494,7 @@ def main() -> None:
         "multinomial hostile no longer distinguishes the constructors",
     )
 
-    print("THM-2918 DIAMETER-FOUR NONCONSECUTIVE MACAULAY--NEWTON CLOSURE")
+    print("THM-2921 DIAMETER-FOUR NONCONSECUTIVE MACAULAY--NEWTON CLOSURE")
     print("constructor=ordinary monomials with explicit multinomial copies")
     print(
         "selected_rows="

@@ -1,4 +1,4 @@
-THM-2918 DIAMETER-FOUR NONCONSECUTIVE MACAULAY--NEWTON CLOSURE
+THM-2921 DIAMETER-FOUR NONCONSECUTIVE MACAULAY--NEWTON CLOSURE
 constructor=ordinary monomials with explicit multinomial copies
 selected_rows=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,35,36,37,38,39,40,41;allocation=(20Q,10C,6F)
 scaled_row_degrees=(3,7,11);determinant_degree_bound=196

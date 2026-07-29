@@ -1,5 +1,5 @@
 ---
-id: THM-2918
+id: THM-2921
 title: "Diameter-four nonconsecutive Macaulay--Newton closure"
 status: >
   PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
@@ -22,14 +22,14 @@ related:
   - THM-2849-four-slot-first-window-macaulay-box
   - THM-2908-consecutive-four-slot-projective-resultant-closure
   - THM-2917-all-three-slot-diameter-four-factorial-detection
-script: 04-computation/gmc_diameter_four_nonconsecutive_macaulay_newton_thm2918.py
-output: 05-knowledge/results/gmc_diameter_four_nonconsecutive_macaulay_newton_thm2918.out
-script_sha256: ed658a09406fdc22ce18e6e1d8ae8eb9039866470a25efef5b0d69316b2b46f4
-output_sha256: fa4a4c38e4ea785bfeddcfe5bb99c28f6ca44e81e871d39e54459ccf58c0a789
+script: 04-computation/gmc_diameter_four_nonconsecutive_macaulay_newton_thm2921.py
+output: 05-knowledge/results/gmc_diameter_four_nonconsecutive_macaulay_newton_thm2921.out
+script_sha256: 42e9b5ceddd677d1f2601a9d5d668c9437281596b65999ddcb8549d4e0b9bf64
+output_sha256: dadf97380759e55be9ac84d431806494b972d3b6d0fa3a12fc2fcb319d21fbba
 hash_basis: LF-normalized bytes
 ---
 
-# THM-2918 -- diameter-four nonconsecutive Macaulay--Newton closure
+# THM-2921 -- diameter-four nonconsecutive Macaulay--Newton closure
 
 **PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
 HOSTILE AUDIT.**
@@ -330,8 +330,8 @@ python -m pip install -r 04-computation/requirements-gmc-projective-resultant.tx
 and run
 
 ```text
-python 04-computation/gmc_diameter_four_nonconsecutive_macaulay_newton_thm2918.py
-python -O 04-computation/gmc_diameter_four_nonconsecutive_macaulay_newton_thm2918.py
+python 04-computation/gmc_diameter_four_nonconsecutive_macaulay_newton_thm2921.py
+python -O 04-computation/gmc_diameter_four_nonconsecutive_macaulay_newton_thm2921.py
 ```
 
 Normal and optimized executions byte-match the stored output with the

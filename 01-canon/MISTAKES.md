@@ -9,7 +9,7 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-323 (2026-07-29, first THM-2918 scratch certificate) -- a divided-power coefficient table was convolved as an ordinary polynomial
+## MISTAKE-323 (2026-07-29, first THM-2921 scratch certificate) -- a divided-power coefficient table was convolved as an ordinary polynomial
 
 - **What was done:** the first diameter-four Macaulay probe stored one
   symmetric order-`m` tensor entry for each exponent triple and inserted
@@ -25,7 +25,7 @@ Format per entry:
   therefore failed the claimed scaling identity.  The entire first minor
   and its apparent factorization were invalid and were retracted before any
   theorem reservation or promotion.
-- **Exact repair / strongest survivor:** THM-2918 multiplies every tensor
+- **Exact repair / strongest survivor:** THM-2921 multiplies every tensor
   entry by its multinomial count, proves the common denominators by exact
   division in `Z[n]`, and recomputes the minor.  A genuinely separate direct
   four-variable multinomial expansion reproduces the repaired forms and
