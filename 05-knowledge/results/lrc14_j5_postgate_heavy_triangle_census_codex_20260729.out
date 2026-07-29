@@ -1,0 +1,20 @@
+LRC14 J=5 POST-GATE HEAVY-TRIANGLE CENSUS
+status=FINITE-EXACT+GLOBAL-SCALAR-TAIL-SEALED
+universe=active_roots:2508;honest_initial_closed:1064;residual_roots:1444;residual_nonterminal_apex_branches:10202
+target_digest_sha256=4040369ff36500cc804c6c2ffa54fdb1f3072e2aa775c9db162b459209d10316
+heavy_edge_normalizations=26;maximum_old_cutoff=130827;maximum_deleted_cutoff=1497;forced_pair_checks=282;deleted_pair_checks=321;maximum_unnormalized_cutoff=2409;normalization_digest_sha256=adb9881d84a7d209ec333ef5ff7ac4548d15f11fd6d715b7f4651ba3aacf8c54
+finite_H_vertices_total=55159;max_per_carrier=65;heavy_edges_total=140846;max_per_carrier=1021;heavy_triangles_total=372209;max_per_carrier=7814;triangle_carriers=4578;H_only_K4_total=1007764;max_per_carrier=36265
+maximum_H=(65, (1, 3, 4, 7, 8, 10, 11, 13), 6, 19);maximum_edges=(1021, (1, 3, 4, 7, 8, 10, 11, 13), 6, 19);maximum_triangles=(7814, (1, 3, 4, 7, 8, 10, 11, 13), 6, 19);maximum_H_only_K4=(36265, (1, 3, 4, 7, 8, 10, 11, 13), 6, 19);maximum_H_tail=(2410, (1, 6, 7, 8, 9, 10, 11, 13), 4, 46)
+H_vector_scalar_controls=20404;maximum_H_tail_first=2410;triple_order_controls=4578;normalized_carriers=26;normalized_pair_direct=0;coarse_digest_sha256=2b00dd59fd7320c95a2e29226e540df5eb890fe1fff58e7b6fbb708bd1cffd92
+literal_triangle_residuals=372209;one_comb_closed=372209;extendible=0;empty_triples=0;triangle_vector_scalar_controls=744418;maximum_scalar_horizon=(476, (1, 5, 6, 7, 8, 9, 11, 13), 5, 60, (17, 156, 660))
+minimum_triangle_margin=1/285184900;body=(1, 5, 6, 7, 8, 9, 11, 13);rank=2;apex=19;triangle=(37, 121, 130);finite_head_maximizer=25;residual_mass=1099999/24444420;finite_max=7111/459800;tail_cap=19249981/427777350;cap_source=tail
+triangle_digest_sha256=a49a961b66ce2e5fee114313ef58eb2c2808f5c73b70b2e61839b9a2eb3c96bf
+exact_cover_hypergraph_raw=0;unique=0;maximum_multiplicity=0;j6=0;j7=0;hyperedge_digest_sha256=07de7784ad51a6d10d450dc9bb99edf738c2f6bcdcf9d78b2fd59803dedf8508
+carrier_tier0_triangle_free=5624;tier1_literal_scalar=4578;closed=10202/10202;unresolved=0;first_unresolved=None
+carrier_digest_sha256=1f028c236253428f3459c34b9efe9428410fd4a3858343ef2383f9679f1f764d
+final_active_weighted_gate=2508/2508;residual=0;minimum_positive_margin=3973/89664120;body=(2, 5, 7, 8, 10, 12, 13, 14)
+root_digest_sha256=143f995d7aaf4afedba4208b9e09d7611bd6ae8b86a3e6df465a57c97837005f
+j6_one_high=roots:1584,initial_closed:718,initial_residual:866,target_apices:6032,H_vertices:32715,heavy_edges:86017,heavy_triangles:237601,triangle_residuals_closed:237601,extendible:0,carriers_closed:6032,carriers_unresolved:0,final_closed:1584,final_residual:0,exact_hyperedges:0
+j7_both_high=roots:924,initial_closed:346,initial_residual:578,target_apices:4170,H_vertices:22444,heavy_edges:54829,heavy_triangles:134608,triangle_residuals_closed:134608,extendible:0,carriers_closed:4170,carriers_unresolved:0,final_closed:924,final_residual:0,exact_hyperedges:0
+scope=complete_THM2885/2888_eight_body_five_slot_rung;495_THM885_low_bodies_separate;v8_ge_15_at_most_seven_in_window_unresolved;not_unrestricted_LRC14
+all_exact_controls=PASS
