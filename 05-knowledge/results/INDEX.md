@@ -4,15 +4,17 @@
   `.out` [THM-2878 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  Literal guard/q5 truth is the chain
   `SS<DS<DD`, never the fourth `(S,D)` corner, over all `57,122` lawful
-  rows.  Guard/u1 is the unique full factor square, but every vertex
-  encoding stays flat.  The unique directed `u3: D->S` event occurs at
-  `q12->q0`; its positive-path count is exactly
+  rows.  Guard/u1 is the unique full factor square at the distinguished
+  zero address, but the all-address census has 38 full-pair sets and every
+  vertex encoding stays flat.  The directed `u3: D->S` event occurs at
+  `q12->q0`; it is unique at zero address and the unique carry marker
+  present uniformly at all 169 addresses.  Its positive-path count is exactly
   `floor((q+h)/13)` on all 169 edges and derives the natural-lift law on
   all 2,197 compositions.  It therefore supplies the intrinsic endpoint
   carry cocycle and seam phase `omega^3`, while an initial `C13` ancestry
   state and physical `QA->QAB` attachment remain absent.  LF-normalized
   `(script,output)` hashes:
-  `(06683b3b9f30115c9b8abd33be9d961450d7a962d65861e308ce56f91b98d373,9b18fcccd939eb6772419d9691cc800513979f0b29dfc3364b091d55432d0efa)`.
+  `(8e75f9c9caa9482db17b40d220f5e8ef68d00d54d4ed481869f9b31ec146f1ca,fadccf2c9afa8cb386066b400ea51a0b90210ec26c0cd70d77b8354e279c0c38)`.
 - `lrc14_semilinear_endpoint_rectangle_classification_thm2877.py` ->
   matching `.out` [THM-2877 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  Exhaustion of all `4,429,152` affine maps, plus the

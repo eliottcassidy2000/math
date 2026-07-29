@@ -19,6 +19,7 @@ It proves no row exclusion and no LRC(14) conclusion.
 
 from __future__ import annotations
 
+from collections import Counter
 from hashlib import sha256
 from pathlib import Path
 import sys
@@ -433,9 +434,80 @@ def main() -> None:
         "factor danger arcs changed",
     )
 
-    # The unique honest two-bit square is guard versus u1.  There are three
-    # clean copies in the q-orbit, according to which all-safe/deep-danger
-    # representative is chosen for the SS corner.
+    # The guard/u1 full square is unique at the distinguished zero address,
+    # not globally over all 169 canonical addresses.  Audit every address
+    # before stating the sharp scope.  Source and target give the same
+    # q-labelled word orbit at every address.
+    address_full_pairs = {}
+    for address, canonical in endpoint_base.REPS.items():
+        source_orbit = tuple(
+            literal_pattern(SOURCE_ATOM, residue, canonical)
+            for residue in range(P)
+        )
+        target_orbit = tuple(
+            literal_pattern(TARGET_ATOM, residue, canonical)
+            for residue in range(P)
+        )
+        require(
+            source_orbit == target_orbit,
+            "source/target all-address word orbits differ",
+        )
+        source_pair_images = {
+            (left, right): {
+                (pattern[left], pattern[right])
+                for pattern in source_orbit
+            }
+            for left in range(len(W))
+            for right in range(left + 1, len(W))
+        }
+        target_pair_images = {
+            (left, right): {
+                (pattern[left], pattern[right])
+                for pattern in target_orbit
+            }
+            for left in range(len(W))
+            for right in range(left + 1, len(W))
+        }
+        require(
+            source_pair_images == target_pair_images,
+            "source/target all-address pair atlases differ",
+        )
+        address_full_pairs[address] = tuple(
+            pair
+            for pair, image in source_pair_images.items()
+            if len(image) == 4
+        )
+    address_full_set_histogram = Counter(address_full_pairs.values())
+    address_full_count_histogram = dict(sorted(Counter(
+        len(pairs) for pairs in address_full_pairs.values()
+    ).items()))
+    address_full_pair_occurrences = dict(sorted(Counter(
+        pair
+        for pairs in address_full_pairs.values()
+        for pair in pairs
+    ).items()))
+    require(
+        len(address_full_set_histogram) == 38
+        and address_full_count_histogram
+        == {0: 54, 1: 64, 2: 38, 3: 10, 4: 3}
+        and address_full_pairs[(0, 0)] == ((0, 1),)
+        and address_full_pairs[(1, 0)] == ((1, 5),)
+        and address_full_pair_occurrences
+        == {
+            (0, 1): 26,
+            (0, 2): 26,
+            (1, 2): 26,
+            (1, 4): 26,
+            (1, 5): 26,
+            (2, 4): 26,
+            (2, 5): 26,
+        },
+        "all-address full-pair census changed",
+    )
+
+    # At the zero address the unique honest two-bit square is guard versus
+    # u1.  There are three clean copies in that q-orbit, according to which
+    # all-safe/deep-danger representative is chosen for the SS corner.
     square_corner_order = (
         ("S", "S"), ("S", "D"), ("D", "D"), ("D", "S")
     )
@@ -651,10 +723,33 @@ def main() -> None:
                 )
                 reduced_composition_checks += 1
 
-    # Exhaust all nine bits and both oriented toggle events.  Only the
-    # u3 D->S exit agrees with the canonical positive carry on all 169
-    # (q,h) edges.
-    oriented_event_candidates = []
+    # Exhaust all nine bits and both oriented toggle events at the zero
+    # address.  Then repeat at every canonical address.  Shifted u1/u2
+    # events can coincide with carry at some addresses, but u3 D->S is the
+    # unique candidate present uniformly at all 169 addresses.
+    def carry_event_candidates(orbit):
+        candidates = []
+        for index in range(len(W)):
+            for orientation in ("S_to_D", "D_to_S"):
+                matches = True
+                for residue in range(P):
+                    for step in range(P):
+                        count = 0
+                        for offset in range(step):
+                            source = orbit[(residue + offset) % P][index]
+                            target = orbit[
+                                (residue + offset + 1) % P
+                            ][index]
+                            count += (
+                                source == orientation[0]
+                                and target == orientation[5]
+                            )
+                        if count != (residue + step) // P:
+                            matches = False
+                if matches:
+                    candidates.append((index, orientation))
+        return tuple(candidates)
+
     full_cycle_toggle_counts = []
     for index in range(len(W)):
         enter = exit_count = 0
@@ -664,32 +759,73 @@ def main() -> None:
             enter += source == "S" and target == "D"
             exit_count += source == "D" and target == "S"
         full_cycle_toggle_counts.append((enter, exit_count))
-        for orientation in ("S_to_D", "D_to_S"):
-            matches = True
-            for residue in range(P):
-                for step in range(P):
-                    count = 0
-                    for offset in range(step):
-                        source = expected_zero_orbit[
-                            (residue + offset) % P
-                        ][index]
-                        target = expected_zero_orbit[
-                            (residue + offset + 1) % P
-                        ][index]
-                        count += (
-                            source == orientation[0]
-                            and target == orientation[5]
-                        )
-                    if count != (residue + step) // P:
-                        matches = False
-            if matches:
-                oriented_event_candidates.append((index, orientation))
+    oriented_event_candidates = carry_event_candidates(expected_zero_orbit)
     require(
         tuple(full_cycle_toggle_counts)
         == ((1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1),
             (0, 0), (0, 0), (0, 0))
-        and oriented_event_candidates == [(3, "D_to_S")],
-        "oriented-factor carry detector uniqueness changed",
+        and oriented_event_candidates == ((3, "D_to_S"),),
+        "zero-address oriented-factor carry detector uniqueness changed",
+    )
+
+    address_marker_candidates = {
+        address: carry_event_candidates(tuple(
+            literal_pattern(SOURCE_ATOM, residue, canonical)
+            for residue in range(P)
+        ))
+        for address, canonical in endpoint_base.REPS.items()
+    }
+    address_marker_candidate_histogram = Counter(
+        address_marker_candidates.values()
+    )
+    expected_marker_candidate_histogram = Counter({
+        ((3, "D_to_S"),): 121,
+        ((1, "D_to_S"), (3, "D_to_S")): 11,
+        ((1, "S_to_D"), (3, "D_to_S")): 11,
+        ((2, "D_to_S"), (3, "D_to_S")): 11,
+        ((2, "S_to_D"), (3, "D_to_S")): 11,
+        (
+            (1, "D_to_S"), (2, "D_to_S"), (3, "D_to_S")
+        ): 1,
+        (
+            (1, "D_to_S"), (2, "S_to_D"), (3, "D_to_S")
+        ): 1,
+        (
+            (1, "S_to_D"), (2, "D_to_S"), (3, "D_to_S")
+        ): 1,
+        (
+            (1, "S_to_D"), (2, "S_to_D"), (3, "D_to_S")
+        ): 1,
+    })
+    address_marker_occurrences = dict(sorted(Counter(
+        candidate
+        for candidates in address_marker_candidates.values()
+        for candidate in candidates
+    ).items()))
+    extra_marker_addresses = sum(
+        candidates != ((3, "D_to_S"),)
+        for candidates in address_marker_candidates.values()
+    )
+    require(
+        address_marker_candidate_histogram
+        == expected_marker_candidate_histogram
+        and address_marker_candidates[(0, 0)] == ((3, "D_to_S"),)
+        and address_marker_candidates[(7, 0)]
+        == ((1, "D_to_S"), (3, "D_to_S"))
+        and all(
+            (3, "D_to_S") in candidates
+            for candidates in address_marker_candidates.values()
+        )
+        and extra_marker_addresses == 48
+        and address_marker_occurrences
+        == {
+            (1, "D_to_S"): 13,
+            (1, "S_to_D"): 13,
+            (2, "D_to_S"): 13,
+            (2, "S_to_D"): 13,
+            (3, "D_to_S"): 169,
+        },
+        "all-address oriented-factor carry census changed",
     )
 
     def reversed_marker_exits(start, length):
@@ -954,15 +1090,23 @@ def main() -> None:
         f"target_zero_orbit={zero_orbits[1]}"
     )
     print(
-        f"all_36_pair_sizes={pair_size_histogram}; "
-        f"unique_full_pair={full_pairs}; "
+        f"all_36_pair_sizes_zero_address={pair_size_histogram}; "
+        f"unique_full_pair_zero_address={full_pairs}; "
         f"three_corner_missing_SD={three_missing_sd}; "
         f"three_corner_missing_DD={three_missing_dd}; "
         f"axis_pairs={axis_pairs}; constant_pairs={constant_pairs}"
     )
     print(
+        f"all_address_full_pair_count_histogram="
+        f"{address_full_count_histogram}; "
+        f"distinct_full_pair_sets={len(address_full_set_histogram)}; "
+        f"full_pairs_at_(0,0)={address_full_pairs[(0, 0)]}; "
+        f"full_pairs_at_(1,0)={address_full_pairs[(1, 0)]}; "
+        f"pair_occurrences={address_full_pair_occurrences}"
+    )
+    print(
         f"factor_order={FACTOR_NAMES}; danger_arcs={danger_arcs}; "
-        "unique_crossing=guard{5,6,7,8}_with_u1{4,5}"
+        "unique_crossing_zero_address=guard{5,6,7,8}_with_u1{4,5}"
     )
     print(
         f"clean_guard_u1_residue_squares={clean_residue_squares}; "
@@ -1019,7 +1163,15 @@ def main() -> None:
         "_D_to_S; danger_arc={12}; edge=q12_to_q0; "
         f"canonical_checks={canonical_marker_checks}; "
         f"marked_gauge_checks={marked_marker_checks}; "
-        f"unique_among_18_oriented_toggles={oriented_event_candidates}"
+        "unique_among_18_oriented_toggles_zero_address="
+        f"{oriented_event_candidates}"
+    )
+    print(
+        "address_uniform_marker=(3,D_to_S); "
+        f"candidate_set_histogram={dict(address_marker_candidate_histogram)}; "
+        f"extra_candidate_addresses={extra_marker_addresses}; "
+        f"candidate_occurrences={address_marker_occurrences}; "
+        "minimal_extra_witness_address_(7,0)=((1,D_to_S),(3,D_to_S))"
     )
     print(
         f"positive_path_semigroup_additivity={semigroup_checks}; "
@@ -1049,13 +1201,16 @@ def main() -> None:
     print(
         f"smallest_phase_fibre_with_order13={smallest_phase_fibre}; "
         "minimal_faithful_extra_state=initial_C13_ancestry_coordinate; "
-        "the_full_word_supplies_its_carry_cocycle_but_not_its_basepoint"
+        "the_full_word_supplies_its_carry_cocycle_but_not_its_initial_"
+        "ancestry_state"
     )
     print(
         "verdict=literal_guard_q5_SD_is_globally_absent, but guard_u1_is_the_"
-        "unique_honest_square and (guard,j=q5_XOR_u1,u1) is a faithful "
-        "q7-retaining rechart; its vertex coefficient is flat, while the "
-        "directed u3 exit reconstructs exactly the nonsplit carry cocycle"
+        "unique_honest_square_at_the_zero_address and "
+        "(guard,j=q5_XOR_u1,u1) is a faithful q7-retaining zero-address "
+        "rechart; its vertex coefficient is flat, while the directed u3 "
+        "exit is the unique address-uniform marker and reconstructs exactly "
+        "the nonsplit carry cocycle"
     )
     print(
         "scope=exact selected source/target atom orbit and endpoint-character "

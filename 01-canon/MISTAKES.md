@@ -9,6 +9,36 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-320 (2026-07-29, first THM-2878 promotion) -- a zero-address census is not global uniqueness
+
+- **What was claimed:** the first promoted wording described `(guard,u1)` as
+  the unique full factor square and `(u3,D->S)` as the unique one of the
+  eighteen oriented factor toggles without retaining the zero-address
+  qualifier.  The companion had exhausted only the distinguished
+  `ell=0` word orbit for those two uniqueness claims.
+- **Minimal witnesses / first failed implication:** at canonical address
+  `(1,0)`, the unique full pair is `(u1,u5)`, not `(guard,u1)`.  At address
+  `(7,0)`, both `(u1,D->S)` and `(u3,D->S)` count
+  `floor((q+h)/13)` on every one of the `169` positive edges.  Therefore a
+  section-level exhaustive census cannot be promoted by silently
+  quantifying over the quotient address.
+- **Exact repair:** THM-2878 now audits all `169` canonical addresses on both
+  source and target word orbits.  Full-pair counts have histogram
+  `{0:54,1:64,2:38,3:10,4:3}`, with `38` distinct full-pair sets.  The
+  marker census has `121` addresses with only `u3`, `44` with `u3` plus
+  one shifted `u1/u2` event, and `4` with `u3` plus two.  Thus `(guard,u1)`
+  is uniquely full at zero address, while `(u3,D->S)` is the unique
+  **address-uniform** carry marker: it works at all `169` addresses, whereas
+  each extra orientation works at only `13`.
+- **Strongest survivor:** the carry theorem, all `169` edge identities, all
+  `2,197` composition identities, and the `omega^3` seam survive unchanged.
+  The full word supplies the carry transition but still not its initial
+  ancestry state or a physical `QA->QAB` current.
+- **Rule:** whenever a computation selects a distinguished section, audit
+  the claimed property on every quotient fibre/address before asserting
+  global uniqueness.  Record separately “unique in this chart,” “pointwise
+  unique,” and “unique object present uniformly across charts.”
+
 ## MISTAKE-319 (2026-07-28, provisional THM-2846 geometry) -- cubic divisibility cancellation is not orientation cancellation
 
 - **What was claimed:** the provisional positive-cone hostile said that two

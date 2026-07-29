@@ -5,14 +5,15 @@ status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Literal guard/q5 truth is the chain SS<DS<DD over every lawful endpoint
   representative, so the proposed fourth corner does not exist.  A
-  faithful guard/u1/q5 rechart gives a marked square, but every vertex
-  encoding remains flat.  The directed u3 D-to-S exit at q12-to-q0 is
-  unique among the eighteen oriented factor toggles and its positive-path
-  count equals floor((q+h)/13) on all 169 edges.  It derives the nonsplit
-  carry law on all 2,197 compositions and the seam phase omega^3.  The
-  event supplies the carry transition, not an initial ancestry state or
-  common physical QA-to-QAB current; no row exclusion or LRC(14) proof
-  follows.
+  faithful guard/u1/q5 rechart gives a marked square at the distinguished
+  zero address, but every vertex encoding remains flat.  The directed u3
+  D-to-S exit at q12-to-q0 is unique among the eighteen oriented factor
+  toggles at zero address and, more sharply, is the unique carry marker
+  present uniformly at all 169 addresses.  Its positive-path count equals
+  floor((q+h)/13) on all 169 edges.  It derives the nonsplit carry law on
+  all 2,197 compositions and the seam phase omega^3.  The event supplies
+  the carry transition, not an initial ancestry state or common physical
+  QA-to-QAB current; no row exclusion or LRC(14) proof follows.
 source: root/lrc-missing-corner-constructor-2026-07-28
 depends_on:
   - THM-2763-carrier-equivariant-endpoint-address-extension-and-gauge-obstruction
@@ -23,8 +24,8 @@ related:
   - THM-2874-endpoint-kummer-galois-clutch-and-bockstein-seam-transgression
 script: 04-computation/lrc14_endpoint_factor_exit_carry_transducer_thm2878.py
 output: 05-knowledge/results/lrc14_endpoint_factor_exit_carry_transducer_thm2878.out
-script_sha256: 06683b3b9f30115c9b8abd33be9d961450d7a962d65861e308ce56f91b98d373
-output_sha256: 9b18fcccd939eb6772419d9691cc800513979f0b29dfc3364b091d55432d0efa
+script_sha256: 8e75f9c9caa9482db17b40d220f5e8ef68d00d54d4ed481869f9b31ec146f1ca
+output_sha256: fadccf2c9afa8cb386066b400ea51a0b90210ec26c0cd70d77b8354e279c0c38
 hash_basis: LF-normalized bytes
 ---
 
@@ -33,6 +34,12 @@ hash_basis: LF-normalized bytes
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This theorem proves no row exclusion and no LRC(14) conclusion.
+
+**Correction lineage.**  The first promoted wording confused a
+distinguished zero-address census with a global uniqueness statement.
+MISTAKE-320 records the repair.  The global survivor is stronger in the
+coordinate that matters: `u3:D->S` is not pointwise unique at every address,
+but it is the unique marker that works at **every** address.
 
 ## Verdict
 
@@ -134,9 +141,9 @@ All nine factor bits, not only guard/q5, are preserved.  Source/target
 swap, address change, residue reversal, or affine residue offset only
 permutes this already exhausted universe.
 
-## 2. All 36 factor-pair perspectives
+## 2. Zero-address 36-pair perspectives and the all-address audit
 
-For factor order
+At the distinguished zero address, for factor order
 
 ```text
 (guard,u1,u2,u3,u4,u5,target_a,target_b,deep_C3),
@@ -154,13 +161,29 @@ Among all `36` unordered pairs, the image-size histogram is
 one state: 3;  two states: 18;  three states: 14;  four states: 1.
 ```
 
-The unique honest full square is `(guard,u1)`.  Its two danger arcs cross
-at `q5`; neither contains the other.  The only three-state pair missing
-`SD` is `(guard,u5)`, the original guard/q5 horn.  Thirteen pairs have
-disjoint danger arcs and miss `DD`; the remaining pairs have a constant
-coordinate.
+the unique honest full square is `(guard,u1)`.  Its two danger arcs cross at
+`q5`; neither contains the other.  The only three-state pair missing `SD`
+is `(guard,u5)`, the original guard/q5 horn.  Thirteen pairs have disjoint
+danger arcs and miss `DD`; the remaining pairs have a constant coordinate.
 
-Clean guard/u1 squares, with the other seven bits fixed, are
+This uniqueness is deliberately local to that section.  Across all `169`
+canonical addresses, the number of full pairs per address has histogram
+
+```text
+0:54, 1:64, 2:38, 3:10, 4:3,
+```
+
+with `38` distinct full-pair sets.  Each of
+
+```text
+(guard,u1), (guard,u2), (u1,u2), (u1,u4),
+(u1,u5), (u2,u4), (u2,u5)
+```
+
+occurs at exactly `26` addresses.  The minimal hostile witness is address
+`(1,0)`, whose unique full pair is `(u1,u5)`, not `(guard,u1)`.
+
+At zero address, clean guard/u1 squares with the other seven bits fixed are
 
 ```text
 (qSS,qSD,qDD,qDS)=(0,4,5,8),(3,4,5,8),(11,4,5,8).
@@ -169,7 +192,7 @@ Clean guard/u1 squares, with the other seven bits fixed, are
 Each directed boundary winds once around `C13`.  These are endpoint-factor
 squares, not physical macro-current squares.
 
-## 3. Faithful q7 parity rechart
+## 3. Faithful zero-address q7 parity rechart
 
 Let
 
@@ -249,16 +272,27 @@ Both have net threshold rise `2`.  The via route has extra cancelling
 down/up crossings, so every vertex filtration or signed coboundary is
 blind to the carry.
 
-The full word is finer.  Its unique positive basepoint transition is
+The full word is finer.  Its address-uniform positive basepoint transition
+is
 
 ```text
 q12 -> q0:
 SSSDSSSSD -> SSSSSSSSD,
 ```
 
-the `u3` one-bit `D->S` event.  Exhausting all nine bits and both state
-orientations shows that `(u3,D->S)` is the unique one of `18` candidates
-whose positive-path count equals `(1)` on all `169` `(q,h)` edges.
+the `u3` one-bit `D->S` event.  At zero address, exhausting all nine bits
+and both state orientations shows that `(u3,D->S)` is the unique one of
+`18` candidates whose positive-path count equals `(1)` on all `169`
+`(q,h)` edges.
+
+The all-address quantifier is subtler and sharper.  The same `u3:D->S`
+marker works at every one of the `169` canonical addresses.  At `121`
+addresses it is the only candidate; at `44` addresses one shifted `u1` or
+`u2` event also works; and at `4` addresses two shifted events also work.
+Thus `48` addresses have extras.  For example, address `(7,0)` admits both
+`u1:D->S` and `u3:D->S`.  Each orientation of `u1` and `u2` occurs at only
+`13` addresses, while `u3:D->S` occurs at all `169`; hence `u3:D->S` is
+the unique **address-uniform** carry marker.
 
 The event count is additive under concatenation.  All `2197` triples
 `(q,h,k)` satisfy
@@ -355,8 +389,8 @@ Normal and optimized modes byte-match the stored output.  The script has no
 executable Python `assert`.
 
 ```text
-script 06683b3b9f30115c9b8abd33be9d961450d7a962d65861e308ce56f91b98d373
-output 9b18fcccd939eb6772419d9691cc800513979f0b29dfc3364b091d55432d0efa
+script 8e75f9c9caa9482db17b40d220f5e8ef68d00d54d4ed481869f9b31ec146f1ca
+output fadccf2c9afa8cb386066b400ea51a0b90210ec26c0cd70d77b8354e279c0c38
 ```
 
 The independent audit rederived the singleton danger support, all `169`
