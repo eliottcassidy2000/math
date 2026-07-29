@@ -59,6 +59,28 @@ q_(2m+1)(R)+m B_2(R)<|R|.                                 (2)
 It is a sufficient certificate, not an equivalence.  The literal residual
 and excluded labels remain essential.
 
+There is also a parent-carrier form.  Suppose a `k`-cover of `C` is forced
+to contain a flag `L`, let `P` be the prior excluded set, and let
+`F^C_j(P union L)` be any THM-2897 partition cap computed on `C` after
+forbidding the flag labels.  Then
+
+```text
+U_C(L)+F^C_(k-|L|)(P union L)<|C|                          (3)
+```
+
+also excludes the cover.  Indeed, write the hypothetical cover as the
+disjoint union of `L` and its remaining labels, use subadditivity once, and
+apply the partition cap to the remainder.  At the three-slot leaf, `(3)`
+becomes
+
+```text
+U_C(L)+q^C_3(P union L)+B^C_2(P union L)<|C|.              (4)
+```
+
+This inherited form can reuse a parent cap bank and avoids reconstructing
+the child interval set.  It may be weaker or stronger than a fresh child
+calculation; neither direction is automatic.
+
 The child certificate `(1)` and the parent five-slot certificate
 `q_5(C)+2B_2(C)<|C|` are incomparable.  Subtraction shrinks pair caps but
 can remove two low-ranked labels and make the child's third remaining
