@@ -164,6 +164,49 @@ questions (merges → verifiable; prefix-varying labels → same-H depth) are
 the benchmark's unstated equivalence lemmas and the workbench's top
 theory targets.
 
+## 4c. Exact round-rank theorem
+
+THM-2850 replaces the earlier rank-potential heuristic by a complete
+matroidal statement for paid labelled seed/edge rows.  After the rational
+coordinate change
+
+```text
+(a,b) -> (s,d)=(a+b,a-b),
+```
+
+the generator matrix is `A=[B|D_rho B]`, and a vertex fires exactly when
+its distinguished `d_v` column is a coloop.  If a successful certificate
+uses `q` nonempty simultaneous rounds, then
+
+```text
+score >= 1+1/q.
+```
+
+Exactly two rounds force score at least `3/2`.  At score at most `5/3`, both
+rounds lie in the sharp balance window recorded in THM-2850.
+
+The useful headroom has three independent losses:
+
+```text
+ordinary cycle surplus
+ - topology/two-arboricity defect
+ - label-sharing grammar defect
+ - special-coefficient cancellation.
+```
+
+With independently variable row slopes, generic row rank is governed by the
+union of two copies of the graphic row matroid; full row rank is equivalent
+to a two-forest partition.  Under the actual grammar, slope ties define a
+parameter subspace and can make every full minor vanish even when the
+topology passes, so a restricted-minor nonvanishing check remains mandatory.
+
+Exact ordinary/optimized companions and an independent SymPy reconstruction
+verify all rounds of the `13/7`, `7/4`, `12/7`, and `9/5` profiles.  In
+those four controls every observed defect is topology-forced; neither grammar
+ties nor accidental coefficients cause extra loss.  The theorem does not
+compile the mode3-v2 records into the intuitive same-`H` recursion and does
+not validate the private verifier.
+
 ## 5. Session artifacts
 
 - Engine + verifier (both rule-1 readings), exact rational closure, 6-line
