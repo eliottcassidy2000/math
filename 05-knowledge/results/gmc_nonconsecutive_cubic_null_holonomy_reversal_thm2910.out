@@ -1,0 +1,11 @@
+THM-2910 NONCONSECUTIVE CUBIC-NULL HOLONOMY SIGN REVERSAL
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
+support_0125=literal_controls:12;resultant:G2^2*P15;y_box:(1/84, 1/83);x_box:(1/37, 1/35);positive_cubic_null_points:1;holonomy_sign:-1
+support_0125_profiles=P,A,N,K:15,10,10,14;res_P_K_mod11:5
+support_0125_digests=P:a592136c75d3c826701f6394a0f5ad60ffe94e57435c4c261d33d1182f5bd484;A:57dad96e4d8b4d3df563e6ec1293bed18f4166dcffcdb7006c814a3920388c0b;N:c4716625b18cf3b3860382bd05d71b6d1a123777813ac51a7e8ade76bb6dab68;K:fb2579bbc170978cf97e8fddf7cc3ff0dd1fda27d9f40e536063c4f48cd24100;TP3U:98e2f11dec167ff03c1b25778096aaebc3318f9911dff8d4c5ee8eefb04b75f1;TP3V:fd4e9448f8b4fa57146aefff0f826020eb3b1a568a078f1af22a3f5e58cd6de0
+support_0126=literal_controls:12;resultant:G2^2*P15;y_box:(1/161, 1/159);x_box:(1/105, 1/104);positive_cubic_null_points:1;holonomy_sign:1
+support_0126_profiles=P,A,N,K:15,10,10,14;res_P_K_mod11:4
+support_0126_digests=P:eecb2d7a03b035ea0d3e4774dc7ae2685baab7eda6ba48c8d2369059e93e8677;A:9d79c56a56085a62ac0bab771db06a6a4e0a644e3291dbfdd5e5995fa284e240;N:8a9b8d6587944501940b7f88d84f68f16bb00330ec6ff6d781f2952134534c32;K:e4d29b23f4c214dac8742ea311f7a5d854636306c8beec71a2fd0f694ea454d4;TP3U:49a8a7803db1dd48c95c962e15f6a757066c69a19335dc8b8c675a50d594f5de;TP3V:356bb00e79f264ae7744b9e9b923f8b74a1ddb610c48b1b6fa53c7e75eb36d20
+consequence=no support-uniform endpoint orientation on the cubic-null ideal
+scope=two ordered nonconsecutive block charts; no arbitrary-support shared-line, SFC(4), or GMC closure claimed
+all_exact_checks=PASS
