@@ -1,0 +1,18 @@
+THM-2872 SHARED MULTIPOLE QUARTIC NORM AND SECANT REDUCTION
+status=PROVED-ALGEBRAIC-REDUCTION+VERIFIED-EXACT
+binary_cubic_remainder=(C0+C1*z)/g2^2
+binary_quartic_remainder=(R0+R1*z)/g2^3
+N4=g2*R0^2-2*g1*R0*R1+g0*R1^2;positive_Gram_norm=True
+Omega=N4/(16*g2^3*Dg^4);normal_degree=22/22
+Euler_conic=p*r*n2*(n1+n2+n3)-q*(p+q+r)*n1*n3
+real_Euler_determinant=-n3^2*Euler_conic
+cubic_transport_reversals=2;strict_on_positive_boundary_free_cones
+quartic_endpoint_holonomy=beta*kappa_U-alpha*kappa_V
+remaining_quartic_condition=one_midpoint_Jensen_defect
+cyclic_charts=3;chart_boundary+complex_isotropy+Euler_hostiles=PASS
+degenerate_Gram+zero_cross+bottom_d0_hostiles=PASS
+moment_Jacobian_terms=28;all_positive=True;stable=False;Lorentzian=False
+stability_hostile_discriminant=-12529850164849471426560000000000
+Lorentzian_hostile_Hessian_det=-43366523385600000
+scope=exact reduction only; shared-line branch and TP3/secant sign remain open
+all_exact_controls=PASS

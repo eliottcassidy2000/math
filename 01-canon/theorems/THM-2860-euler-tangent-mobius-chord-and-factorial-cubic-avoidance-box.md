@@ -22,6 +22,7 @@ related:
   - THM-2843-four-slot-projective-divisibility-and-resolvent-reduction
   - THM-2849-four-slot-first-window-macaulay-box
   - THM-2866-positive-factorial-difference-semiring-and-cubic-pascal-response-ladder
+  - THM-2872-four-slot-shared-multipole-quartic-norm-and-response-secant-reduction
 script: 04-computation/gmc_euler_tangent_mobius_chord_thm2860.py
 output: 05-knowledge/results/gmc_euler_tangent_mobius_chord_thm2860.out
 script_sha256: 379a441ff3e2d64b4047f22112cb28e14a577f0bc65bbbad7d12af8bda0c72db

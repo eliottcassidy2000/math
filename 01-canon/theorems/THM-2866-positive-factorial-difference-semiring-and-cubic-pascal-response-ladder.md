@@ -23,6 +23,7 @@ related:
   - THM-2830-disjoint-positive-adjacent-cone-factorial-moment-three-detection
   - THM-2841-all-order-adjacent-difference-factorial-tensor-positivity
   - THM-2860-euler-tangent-mobius-chord-and-factorial-cubic-avoidance-box
+  - THM-2872-four-slot-shared-multipole-quartic-norm-and-response-secant-reduction
 script: 04-computation/gmc_cubic_response_ratio_quartic_harmonic_exit_thm2866.py
 output: 05-knowledge/results/gmc_cubic_response_ratio_quartic_harmonic_exit_thm2866.out
 script_sha256: 95d2de4220cc99ccad81034e9baa593cf5faeb213407cec5b997cec387cd4684
@@ -606,6 +607,9 @@ equals some quartic Maxwell multipole line.            (61)
 The finite exponent scans for `F^o!=0` are superseded by `(60)`.  This
 theorem does not exclude `(61)`, prove arbitrary four-slot SFC, supply a
 new DvdK-free proof of GMC(2), or close the planar Jacobian conjecture.
+THM-2872 later expresses `(61)` as two cubic remainder equations and one
+positive quartic norm, and reduces its cone-cutting chamber to an endpoint
+response-secant holonomy plus one midpoint defect; those signs remain open.
 
 ## 8. Exact companion and scope
 
