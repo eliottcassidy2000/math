@@ -33,6 +33,7 @@ related:
   - THM-2852-prime-power-orbit-spectrum-harvest-and-cayley-tournament-nonsingularity
   - THM-2861-endpoint-hermitian-edge-holonomy-and-semilinear-clutch-test
   - THM-2863-endpoint-prony-splitter-and-carry-character-three-intertwiner
+  - THM-2868-two-origin-endpoint-projector-and-projective-kummer-carry-descent
   - THM-2870-prime-power-convolution-versus-physical-diagonal-intertwiner-obstruction
 scripts:
   - 04-computation/lrc14_horn_collar_hinge_thm2859.py
@@ -547,6 +548,14 @@ coefficient-line interface, not the physical endpoint/ancestry action,
 simultaneous full current, signed projection, or `E3` transport required
 here.
 
+THM-2868 subsequently bypasses the literal positive-mask attachment below
+with a signed two-origin Prony atlas built from 26 actual multiplier
+samples.  Its split branches are character 3 and trivial, its unique
+diagonal-invariant frequency channel is `(3,10)`, and their projective
+ratio is a primitive degree-thirteen Kummer coordinate.  This is a
+frequency-dual coefficient atlas, not common-support ancestry or `E3`
+transport.
+
 ### 5a. The literal `Z^8`-to-Prony attachment fails before Prony
 
 The cheapest proposed composition has now been tested on the same twelve
@@ -596,8 +605,8 @@ Consequently each of the four multiplier rows
 declared zero, and the Prony split and character-three comparison are
 skipped.  This excludes only the literal same-labelled-cell or relaxed
 base-root/full-positive-mask attachment.  It does not obstruct THM-2863's
-proved coefficient-line interface, THM-2868's reserved signed/projective
-route, or a new external correspondence.
+proved coefficient-line interface, THM-2868's proved signed/projective
+frequency atlas, or a new external correspondence.
 
 ## 6. Why the two invoices do not cancel
 
@@ -641,10 +650,10 @@ The result changes the live task to a typed descent problem:
    q0/common-`E3` block;
 2. construct physical identity, inverse, composition, and all endpoint
    powers, or otherwise prove an endpoint-to-ancestry carry intertwiner;
-3. replace the failed literal attachments in Section 5a by a genuinely new
-   common-gauge full-current correspondence, then combine THM-2863's
-   normalized character-three interface and THM-2861's Hermitian edge with
-   a lawful signed projection and semilinear lift of `(28)--(29)`;
+3. promote THM-2868's signed character-three frequency atlas to a lawful
+   common-support `E3` mapping cone or physical current, then align its
+   variable local charts with THM-2863's normalized interface,
+   THM-2861's Hermitian edge, and a semilinear lift of `(28)--(29)`;
 4. extend to the nonsplit joint residue/first-carry quotient `(24)--(27)`;
 5. transport the resulting object through q3 and q11 to q7 while preserving
    the rectangle factors in `(18)` and the `E3`/complement semantic word;
