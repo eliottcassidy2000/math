@@ -1,7 +1,7 @@
 LRC14 projected k=3 z1=364 all-label ray/status closure
 atlas_source_sha256=ddb2d19c02c4d70cfa74141265ceac585685932e85768baf4cb98aeb3e37935b
 atlas_output_sha256=ce6807de6d6b7022c97839d0bf9fc8ba3b90e7b97bc5b0d4069e88563e232be6
-ray_engine_source_sha256=813d93ffe67cf3bdab06aa27f04680f49b057e387eabc8e713ba9cba35439353
+ray_engine_source_sha256=6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e
 scope=25 canonical projected scalar body rows at z1=364;three distinct later nonaligned labels;no finite horizon
 ray_law=(z+L)delta(z+L)=zdelta(z);A(L-b)=-A(b);all denominator maxima attained
 pair_overlap_exhaustive_controls=946
