@@ -36,7 +36,7 @@ EXPECTED_RAY_ENGINE_SHA256 = (
     "6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e"
 )
 EXPECTED_SCALAR_SHA256 = (
-    "6d2a1a48a9b3f48e11f067431c9afb5da2a18ad9da2b69dc4e8580d6378d5082"
+    "5eb30248f2beac09b29ebccc0dc8b203361f97c4b8552021130290566f8de0d1"
 )
 EXPECTED_SCALAR_OUTPUT_SHA256 = (
     "c2bf51b8b661d98d1ce2a8114c6187a6eefb17856e9684a46704a62ccecc81ed"
@@ -226,7 +226,7 @@ def main():
     ]
     payload = "\n".join(lines) + "\n"
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(payload)
+    args.output.write_text(payload, encoding="utf-8", newline="\n")
     print(payload, end="")
 
 

@@ -112,13 +112,16 @@
   global `200..378` atlas has `6,060` rows and isolated upper spikes
   `378:9, 364:25, 350:53, 336:8, 330:1`.  Exact all-label quotients close
   `z1=364` by `1,109=242+867`, `z1=350` by
-  `3,200=1,295+1,905`, and `z1=336` by `109=71+38` crude/status kills.
-  There are no survivors, so the current projected `k=3` cap is `330`.
+  `3,200=1,295+1,905`, `z1=336` by `109=71+38`, and `z1=330` by one
+  transparent status kill.  There are no survivors, so the current proved
+  projected `k=3` cap is `328` and the old necessary ledger is `375,922`.
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;
   the `z336` source/output/semantic hashes are
   `6e991432a1ce5ec9c1cbe97199cb5fd647c5edc89bdcc60ce560382a70835fcf` /
   `e257da724128208a9c80fc5f3e8f0cd4151b2073d3a8afa4814ca1e274f168ac` /
-  `6ec3a326ec7fa66053150954b1f2a9d3910fbe044032de10c6ca57ff0e53d228`.
+  `6ec3a326ec7fa66053150954b1f2a9d3910fbe044032de10c6ca57ff0e53d228`;
+  repaired `z330` scalar/ray source-output pairs begin
+  `5eb30248/c2bf51b8` and `255aa252/3c62328f`.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py` and the corresponding
   `z2060/z2004/z1992/z1940/z1932` ray-status closures and independent
   referees -> matching `.out` files [THM-2941 SCOPED PROVED + FINITE-EXACT

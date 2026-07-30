@@ -10,7 +10,7 @@ status: >
   five-aligned/two-drift face independently of THM-2928, and exact suffix
   filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
   common-status addenda improve the k=2/k=3 first-drift caps from
-  2142/380 to 1836/330.  THM-2928's later
+  2142/380 to 1836/328.  THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
   addendum closes the canonical reflected-stalk k=1 family
@@ -72,6 +72,10 @@ verification:
   - 05-knowledge/results/lrc14_j7_k3_z336_scalar_slice_thm2941.out
   - 04-computation/lrc14_j7_k3_z336_ray_status_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z336_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_z330_scalar_slice_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z330_scalar_slice_thm2941.out
+  - 04-computation/lrc14_j7_k3_z330_ray_status_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z330_ray_status_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_2004_2142_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_2004_2142_thm2941.out
   - 04-computation/lrc14_j7_k2_z2060_ray_status_closure_thm2941.py
@@ -1062,17 +1066,22 @@ common-status/Farkas certificates.  At `z_1=350`, an independent global
 scalar slice first pins exactly `53` bodies, and their quotient has
 `3,200=1,295+1,905` corresponding kills and no survivor.  At `z_1=336`,
 the global slice pins eight bodies and the quotient closes all
-`109=71+38` states.  Ordinary/optimized replays and independent exact
-Farkas audits agree.  Consequently the current proved projected `k=3` cap
-is
+`109=71+38` states.  The next isolated row, at `z_1=330` and
+`E=(1,2,6,8,12,14)`, has one attained state
+`(56,84,168,392)`.  At `(D,q,M)=(1176,168,7)`, its load histogram requires
+`144` fibres of capacity at least three, while the exact status marginals
+supply at most `24+24+24=72`; the independently rebuilt Farkas certificate
+has normalized contradiction `-1`.  Ordinary/optimized replays and exact
+audits agree.  The old necessary ledger is therefore `375,922`, and the
+current proved projected `k=3` cap is
 
 ```text
-z_1<=330.                                               (25q1)
+z_1<=328.                                               (25q1)
 ```
 
-The atlas shows that the next occupied height is exactly `330`; closing a
-displayed spike therefore certifies every skipped integer above the
-following spike, rather than extrapolating from a sparse search.
+The atlas shows that the next occupied height below `330` is exactly `328`;
+closing a displayed spike therefore certifies every skipped integer above
+the following spike, rather than extrapolating from a sparse search.
 
 The same quotient also closes the unique row at the much larger `k=2`
 frontier.  For
