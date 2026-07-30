@@ -75,6 +75,36 @@ shape matches the carry-chain balance of section 1; whether it certifies
 an upper construction (`C = 1 + 2457/6592 = 9049/6592 ~ 1.3727`?) or a
 dual step in a `C >= c_0` lower bound is exactly what (Q) must settle.
 
+## 2b. The corner-deficit carry mechanism (death-star, same session)
+
+Sharper structure, elementary to check:
+
+1. **Corner reduction.** A shell `[n_j, n_j + l_j)` (0-side, all words decided
+   at the shell end) with dyadic tail `l_j = 2^(a_j)` has every interior tail
+   Hamming class of even size (Lucas); the only forced parity failure is the
+   corner word `0^(n_j) 1^(l_j)`, which exports one deficit `+-(1/2)
+   p^(n_j) q^(l_j)`. Mirror for 1-side shells.
+2. **Why dyadic ratio 2 is magic.** With `l_j = n_j` (ratio 2) the 0-corner
+   and 1-corner land on the same monomial `(h,h)` and annihilate directly:
+   this is exactly THM-2160's middle-pair `0^h 1^h / 1^h 0^h` trick. For any
+   ratio `rho < 2` the two corners are distinct monomials and can never meet
+   at their birth cells.
+3. **Carry dynamics.** Since `(1+u)^N = (1+u)^(N-Delta) (1+u^Delta)` over
+   `F_2` for dyadic `Delta = 2^a`, pushing a half-deficit at `(z,o)` down by
+   `Delta` (multiplying by `(p+q)^Delta = 1`) splits it into half-deficits at
+   `(z+Delta, o)` and `(z, o+Delta)` only, with all interior binomial pieces
+   `binom(Delta,i)/2` absorbed integrally -- provided the interior pieces fit
+   in the integer budgets `binom(d_m, k)` of the receiving spine cells, which
+   all live in the cone `o <= gamma z + O(D)`. Coordinates only increase.
+4. **Reduction of (Q).** A `C = 1+gamma` scheme exists iff the countable set
+   of forced corner deficits admits a pairwise annihilation routing by dyadic
+   split-jumps whose interior absorption respects the cone budgets. The
+   binding constraint is an exponential-rate comparison (entropy of the jump
+   binomial vs budget entropy along the two critical lattice rays), i.e.
+   precisely a two-bias log-likelihood gate of the shape (27). Whether the
+   gate opens (construction, `C* = 9049/6592`-ish) or closes (lower bound)
+   at `gamma = 2457/6592` is the live question.
+
 ## 3. Cheapest decisive tests
 
 1. Bounded depth (`gamma = 0`, i.e. `T(n) <= n + D`): (S) forces
