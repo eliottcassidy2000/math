@@ -48,9 +48,9 @@ THREE_ALIGNED_CAP = Q(36, 91)
 EXPECTED_RAY_SHA256 = "2ef5e0639354c38b13e17e41f91acb4143c7f60973295b0e2dd0f57eb8f38db2"
 EXPECTED_ATLAS_SOURCE_SHA256 = "2af6d96882f336a409a8657070ed76a75c09a53b3789101b83103b051e864ded"
 EXPECTED_ATLAS_SHA256 = "cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda"
-EXPECTED_UPSTREAM_SHA256 = "97fbefb8ffb17bf6742948027ec2d18dd9212bf76d35f5511e0b1c8dff64b4fc"
-EXPECTED_UPSTREAM_OUTPUT_SHA256 = "316d069c3f560ebc504283ea9f9ab19ce0987f73d8763bb8a27eeda48fcac24a"
-EXPECTED_SEMANTIC_SHA256 = "1a4d141dc2dfc49fc0b15b1ec7ba7f4f637827985b3b946f5f367960aa0cbee6"
+EXPECTED_UPSTREAM_SHA256 = "3290aa012f0569eaebce599b06a36854a23929b9f50d281c4504b89e5dd2be54"
+EXPECTED_UPSTREAM_OUTPUT_SHA256 = "f6119ba5af9c76e6c8884ed5eeb01e7d06b9a1b9039d9563ed00f2fc509effaf"
+EXPECTED_SEMANTIC_SHA256 = "21df96426867c5a09a6a56d6de536b3fe5d2b9b57d2167fed40166c546557a9c"
 INHERITED_LEDGER = 375_765
 FINAL_LEDGER = 375_758
 EXPECTED_BODIES = (
@@ -284,8 +284,8 @@ def evaluate(body):
             (body, ds, "capacity"),
         )
         require(gap == target - capacity and gap > 0, (body, ds, witness))
-    contradictions = []
-    certificate_digest = hashlib.sha256()
+    verified_instances = []
+    verified_instance_digest = hashlib.sha256()
     arcs_cache = {}
     histogram_cache = {}
     for ds, witness in sorted(status.items()):
@@ -305,10 +305,10 @@ def evaluate(body):
             histogram_cache[key] == histogram,
             (body, ds, "histogram"),
         )
-        contradictions.append(
-            independent_farkas_check(q, marginals, capacities, histogram, certificate)
-        )
-        certificate_digest.update(f"{body}|{ds}|{witness}\n".encode())
+        independent_farkas_check(q, marginals, capacities, histogram, certificate)
+        instance = (ds, witness[:-1])
+        verified_instances.append(instance)
+        verified_instance_digest.update(f"{body}|{instance}\n".encode())
     packets = []
     for ds in survivors:
         state = states[ds]
@@ -335,11 +335,11 @@ def evaluate(body):
         tuple(sorted(sign_totals.items())),
         tuple(sorted(states)),
         tuple(sorted(crude)),
-        tuple(sorted(status)),
+        tuple(verified_instances),
         tuple(packets),
         tuple(sorted(Counter(witness[1] for witness in status.values()).items())),
-        certificate_digest.hexdigest(),
-        min(contradictions, default=None),
+        verified_instance_digest.hexdigest(),
+        len(verified_instances),
     )
 
 
@@ -719,13 +719,15 @@ def render(records, terminal_records, frontier_rows, atlas_counts, next_height, 
     for row in records:
         (
             body, L, high, first_d, trials, checks, signs, states, crude,
-            status, packets, mhist, certificate_digest, minimum_contradiction,
+            status, packets, mhist, verified_instance_digest,
+            verified_instance_count,
         ) = row
         lines.append(
             f"BODY;E={body};L={L};high={high};d1={first_d};trials={trials};checks={checks};"
             f"signs={dict(signs)};states={len(states)};crude={len(crude)};status={len(status)};"
-            f"residual={len(packets)};M={dict(mhist)};certificate_sha256={certificate_digest};"
-            f"min_exact_farkas_contradiction={minimum_contradiction}"
+            f"residual={len(packets)};M={dict(mhist)};"
+            f"verified_farkas_instance_sha256={verified_instance_digest};"
+            f"verified_exact_farkas_instances={verified_instance_count}"
         )
         for packet in packets:
             lines.append(f"RESIDUAL;E={body};row={packet}")
