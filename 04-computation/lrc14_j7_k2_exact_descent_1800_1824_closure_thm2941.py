@@ -66,22 +66,22 @@ OUTPUT_PATH = (
     / "lrc14_j7_k2_exact_descent_1800_1824_closure_thm2941.out"
 )
 EXPECTED_UNIFORM_SHA256 = (
-    "dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36"
+    "34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46"
 )
 EXPECTED_PROJECTED_SHA256 = (
     "76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662"
 )
 EXPECTED_BAND_1810_SHA256 = (
-    "d197eb6179a3f7c7da08d4389fde988c0bd1fbc5db8cfaf8e30435ace3c7d87f"
+    "b29e1ccd9c3406c14bcfe2a53d5b6cee990c3d7a5e876bd5badcb27e2b506f0e"
 )
 EXPECTED_BAND_1800_SHA256 = (
     "a652db146760a151572ca2ff8f093cf297cf3a6322df441e530d9da3fb24ba0a"
 )
 EXPECTED_PROFILE_SHA256 = (
-    "17c26ab5bb9d2c4bf76ea2b82c29a6387c7ab78add6839100a9b68da337ca542"
+    "3e8de57769b8eca57652705eff8c9d653decd80fffb50b29767a82ab77256f4c"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "fb22f354d62253bfe8d46ac50bb7d8541bcf50ae9277bd9bba542b8d911dcbc9"
+    "4dae590242eceb56243059a0e8d844c7a38d20e860e9aac7a3bb636a3f901b03"
 )
 
 QUANTIFIER = "distinct later nonaligned labels"
@@ -503,7 +503,14 @@ def ray_and_status(first, body, carrier, h, lower, L):
         row = (ds, upper, labels, witness)
         (status_survivors if witness is None else status_kills).append(row)
 
-    stages = (scalar, crude_kills, status_kills, status_survivors)
+    # Every infeasibility verdict above is still certified exactly over Q.
+    # The final alpha/z dual basis is not canonical, however, so replay binds
+    # the deterministic infeasible instance and active threshold set only.
+    canonical_status_kills = tuple(
+        (ds, upper, labels, witness[:-1])
+        for ds, upper, labels, witness in status_kills
+    )
+    stages = (scalar, crude_kills, canonical_status_kills, status_survivors)
     stage_digests = tuple(sha256(repr(tuple(rows)).encode()).hexdigest() for rows in stages)
     return (
         tuple(amplitudes),
