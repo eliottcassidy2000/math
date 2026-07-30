@@ -9,8 +9,8 @@ status: >
   drift absolutely for k>=2.  The lossless projected residual closes the
   five-aligned/two-drift face independently of THM-2928, and exact suffix
   filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
-  common-status and antipodal-phase addenda improve the k=2/k=3 first-drift
-  caps from 2142/380 to 1799/312.  THM-2928's later
+  common-status, exact-descent, and antipodal-phase addenda improve the
+  k=2/k=3 first-drift caps from 2142/380 to 1799/312.  THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
   addendum closes the common-level reflected-stalk k=1 diagonal
@@ -116,16 +116,16 @@ verification:
   - 05-knowledge/results/lrc14_j7_k2_z1836_high_wall_exact_ray_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_1810_1835_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_1810_1835_thm2941.out
-  - 04-computation/lrc14_j7_k2_scalar_band_1800_1809_thm2941.py
-  - 05-knowledge/results/lrc14_j7_k2_scalar_band_1800_1809_thm2941.out
   - 04-computation/lrc14_j7_k2_z1824_ray_status_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_z1824_ray_status_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_z1812_ray_status_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_z1812_ray_status_closure_thm2941.out
-  - 04-computation/lrc14_j7_k2_exact_descent_1800_1824_closure_thm2941.py
-  - 05-knowledge/results/lrc14_j7_k2_exact_descent_1800_1824_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_scalar_band_1800_1809_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_scalar_band_1800_1809_thm2941.out
   - 04-computation/lrc14_j7_k2_high_wall_descent_1800_1810_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_high_wall_descent_1800_1810_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_exact_descent_1800_1824_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_exact_descent_1800_1824_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -1270,51 +1270,82 @@ complete only when `mu(P_(E,Z))<25/91`, all `84` packets are impossible.
 Ordinary and optimized replays match stored bytes, and an independent audit
 checks the ray dominance, finite-slack exhaustiveness, projection direction,
 and exact arithmetic.  These five rows lower the old necessary ledger to
-`2,239,842` and first move the cap to `1835`.
-
-Two exact scalar bands then classify every row from `1800` through `1835`.
-They leave exactly sixteen rows, partitioned into ten ordinary exact-suffix
-rows and six forced-high-wall rows.  The ten ordinary rows occur as follows:
+`2,239,842`.  At this intermediate checkpoint the proved projected `k=2`
+cap was
 
 ```text
-z_1=1824,1812: one common-status row each;
-z_1=1810:      six projected rows;
-z_1=1805:      one projected row;
-z_1=1800:      one common-status row.
+z_1<=1835.                                              (25q2)
 ```
 
-Across their complete all-label denominator-ray atlas there are `558` scalar
-states.  Crude capacity removes `137`, common `K5` status removes `328`, and
-the remaining `93` states expand to exactly `147` finite-slack literal
-packets.  Every packet has lossless projected residual strictly greater than
-the two-aligned completion cap `25/91`; direct full-cell subtraction agrees.
-The packet list is exhaustive because every omitted point on a positive
-residue ray lies below its recorded head by more than the total remaining
-scalar slack.  No finite global label horizon is assumed.
-
-The other six rows occur at heights `1810` (two), `1807` (three), and `1800`
-(one).  For each positive residue ray,
+Two further all-body bands complete the next descent without interpolating
+between sampled heights.  Over all `3,003` bodies and every first label in
+`1810..1835` and `1800..1809`, the guarded scalar atlas leaves exactly
+sixteen rows, with occupied-height multiplicities
 
 ```text
-delta(r+mL)=A(r)/(r+mL),
+1824:1, 1812:1, 1810:8, 1807:3, 1805:1, 1800:2.
 ```
 
-so its values decrease exactly.  The first four unrestricted positive points
-dominate every fifth-or-later point; after imposing the inherited high-label
-wall, the only possible optimum is the unrestricted top four or the top three
-plus the best wall-eligible point.  All six exact gaps are strictly negative,
-so these rows are scalar-empty.
+Every other height in those bands is scalar-empty.  The atlas rows partition
+exactly into ten exact-suffix rows and six forced-high rows; an explicit union
+gate verifies that no row is omitted or counted in both branches.
 
-The two scalar-band outputs certify that the ten ordinary and six high-wall
-rows are the complete survivor atlas on the whole integer interval.  Hence
-all sixteen rows are empty, the necessary ledger is `2,239,826`, and the
-current proved projected `k=2` cap is
+On the ten exact-suffix rows, the all-label residue-ray denominator quotient
+has
 
 ```text
-z_1<=1799.                                              (25q2)
+558 = 137 crude-capacity kills + 328 common-K5-status kills
+      + 93 scalar survivors.
 ```
 
-The scalar bank becomes denser below this interval; no lower cap is claimed.
+Exact scalar slack expands the last `93` quotient states into `147` literal
+packets.  Direct carrier subtraction and the lossless projected-cell engine
+agree on every packet, use prefixes of at most two body cells, and give
+
+```text
+mu(P_(E,Z)) >= 25/91
+```
+
+with strict minimum margin `1026/16471`.  Thus all `147` packets fail the
+necessary two-aligned completion inequality.  As redundant intermediate
+checks, the unique `z_1=1824` and `z_1=1812` rows independently close by
+`38=15+23` and `11=4+7` crude/status kills, respectively.  Those checks do
+not replace or weaken the combined all-row descent.
+
+For each of the six forced-high rows, the exact ray law
+`delta(r+mL)=A(r)/(r+mL)` reduces the constrained suffix maximum to the three
+largest unrestricted ray values together with the best value above
+`floor(13L/150)+1`.  In every case that exact maximum is strictly below
+`h/91`, so the high branch is scalar-empty.  Hence all sixteen atlas rows are
+empty, the old necessary ledger falls to `2,239,826`, and the current proved
+projected `k=2` cap is
+
+```text
+z_1<=1799.                                              (25q3)
+```
+
+The repaired/replayed source-output SHA-256 evidence pins for the two scalar
+bands, the two redundant single-row checks, the high-wall closure, and the
+combined exact descent are, respectively,
+
+```text
+60a916b6d4cfafc995b9ebc791057dd9afef1a33f312c32ef4da7fdc0151cec4 /
+d197eb6179a3f7c7da08d4389fde988c0bd1fbc5db8cfaf8e30435ace3c7d87f
+108c55c274c90fbea26131c29110d30d29f29c8133db14869e546ed2c13810b8 /
+a652db146760a151572ca2ff8f093cf297cf3a6322df441e530d9da3fb24ba0a
+d18157c7e4d074b7d2d2d6081641d801441bb8cd64f38fbc4f8224c597d12e60 /
+6f3d7bb75d9b475ba28a005fd796d71f2f910511346c257975df1d1b604107ad
+a4120f84a0bab99ccb55596f4a559383b4e5af82b9cf5dcd9d190ed67df0dc21 /
+7dcb6602efb3b266f669a3acc0b4c458c6db8f31e8fac66511fbb4cf53184566
+853941bc3621ef44e053a2f3382621799c30d89cc1d7ef30c63bf114554270ed /
+cf051d65e11743c9357ae361328cebfa6d738a21cec7161d87ad25d4446c393a
+e83dfeba64f14c53abcf2a2c67ff000dc4f9e79ac786ba4fe20ab9ad4a76d744 /
+c2536ac8100d3dce937c4ca51ca50c0b8a8ef72ce456e339064ae2869ddaab8c.
+```
+
+These repeated certificates reveal a quotient family, but do not yet prove
+that it closes every lower scalar state: below the isolated upper spikes the
+scalar bank becomes rapidly denser.
 
 For `k=5`, there is a second, Gram-facing derivation.  Pointwise
 

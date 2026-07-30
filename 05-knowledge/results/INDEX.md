@@ -123,23 +123,59 @@
   repaired `z330` scalar/ray source-output pairs begin
   `5eb30248/c2bf51b8` and `255aa252/3c62328f`.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py` and the corresponding
-  `z2060/z2004/z1992/z1940/z1932` ray-status closures and independent
-  referees -> matching `.out` files [THM-2941 SCOPED PROVED + FINITE-EXACT
-  + INDEPENDENTLY AUDITED].  Global all-body bands isolate only the hostile
-  body `(1,4,8,10,12,14)` at the displayed upper spikes.  The all-label
-  quotients close respectively `16,20,10,1,1` scalar states and leave zero.
+  `z2060/z2004/z1992/z1940/z1932/z1824/z1812` ray-status closures,
+  high-wall descent, combined exact descent, and independent referees ->
+  matching `.out` files [THM-2941 SCOPED PROVED + FINITE-EXACT +
+  INDEPENDENTLY AUDITED].  Global all-body bands isolate only the hostile
+  body `(1,4,8,10,12,14)` at the displayed upper spikes through `z1=1932`.
+  The all-label quotients close respectively `16,20,10,1,1` scalar states
+  and leave zero.
   Four spikes use the transparent `(D,q,M)=(5880,840,7)` obstruction
   `300` load-at-least-four fibres versus `240` exceptional events; `z1=1932`
   strengthens this to `720>360` at threshold three.  The interval
   `1837..1931` is scalar-empty.  At `z1=1836`, a global slice leaves five
   rows: exact residue-ray high-wall envelopes kill two, while the remaining
   three reduce from `887` scalar states to `84` literal projected packets,
-  all with `mu(P)>=25/91`.  Hence the proved cap is `1835` and the old
-  necessary ledger is `2,239,842`.  The `z1932` primary source/output hashes
-  begin `77c848a2/251d60b3`; its independent pair begins
+  all with `mu(P)>=25/91`.  This gives the intermediate cap `1835` and old
+  necessary ledger `2,239,842`.
+
+  The complete next atlas over `1800..1835` leaves exactly sixteen rows,
+  partitioned by height as
+  `1824:1,1812:1,1810:8,1807:3,1805:1,1800:2` and by branch as ten
+  exact-suffix plus six forced-high rows.  On the ten ordinary rows the
+  all-label pipeline is
+  `558=137` crude kills `+328` common-status kills `+93` scalar survivors;
+  exact slack gives `147` literal packets, all projected-killed with strict
+  minimum margin `1026/16471` and prefixes of at most two body cells.  Exact
+  constrained ray maxima put all six high rows below `h/91`.  The atlas and
+  branch keys agree exactly, so the current proved cap is `1799` and the old
+  necessary ledger is `2,239,826`.  Redundant single-row replays close
+  `z1=1824` by `38=15+23` and `z1=1812` by `11=4+7` crude/status kills.
+
+  The `z1932` primary source/output hashes begin `77c848a2/251d60b3`; its
+  independent pair begins
   `80f113c3/ccf6efe6`.  The `z1836` scalar/projected/high-wall source-output
   pairs begin `99a81704/986a5353`, `54ab8787/f159324c`, and
-  `4b633061/115286b4`; all three normal and optimized transcripts match.
+  `4b633061/115286b4`.  New full source-output pins are
+  `60a916b6d4cfafc995b9ebc791057dd9afef1a33f312c32ef4da7fdc0151cec4` /
+  `d197eb6179a3f7c7da08d4389fde988c0bd1fbc5db8cfaf8e30435ace3c7d87f`
+  for the `1810..1835` band,
+  `108c55c274c90fbea26131c29110d30d29f29c8133db14869e546ed2c13810b8` /
+  `a652db146760a151572ca2ff8f093cf297cf3a6322df441e530d9da3fb24ba0a`
+  for `1800..1809`,
+  `d18157c7e4d074b7d2d2d6081641d801441bb8cd64f38fbc4f8224c597d12e60` /
+  `6f3d7bb75d9b475ba28a005fd796d71f2f910511346c257975df1d1b604107ad`
+  for repaired `z1824`,
+  `a4120f84a0bab99ccb55596f4a559383b4e5af82b9cf5dcd9d190ed67df0dc21` /
+  `7dcb6602efb3b266f669a3acc0b4c458c6db8f31e8fac66511fbb4cf53184566`
+  for repaired `z1812`,
+  `853941bc3621ef44e053a2f3382621799c30d89cc1d7ef30c63bf114554270ed` /
+  `cf051d65e11743c9357ae361328cebfa6d738a21cec7161d87ad25d4446c393a`
+  for the high wall, and
+  `e83dfeba64f14c53abcf2a2c67ff000dc4f9e79ac786ba4fe20ab9ad4a76d744` /
+  `c2536ac8100d3dce937c4ca51ca50c0b8a8ef72ce456e339064ae2869ddaab8c`
+  for the combined exact descent.  All named normal and optimized
+  transcripts match stored bytes.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` and
   `lrc14_j7_reflected_stalk_k1_mass_closure_thm2941.py` -> matching `.out`
   files [THM-2941 PROVED STRUCTURAL LAW + SCOPED FINITE-EXACT CLOSURE].
@@ -168,7 +204,7 @@
   safe-surplus plus the lossless projected residual gives rigorous first-drift
   caps `2,142/380/182/66` for `k=2/3/4/5` alignments and empties `k=6`; the
   scoped frontier/ray addenda improve the current `k=2/3` caps to
-  `1,835/328`.
+  `1,799/328`.
   For `k=5`, exact prefix incidence kills all `42,912` high-excess and
   `194,073` subcritical drift pairs, minimum margin `1/378105`; THM-2928
   independently closes the same face by divisor/address masks.  With

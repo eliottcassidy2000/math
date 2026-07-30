@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-330 (2026-07-30, chained k=2 frontier verifiers) -- descendant evidence pinned superseded atlas bytes
+
+- **What was done:** the standalone `z_1=1824` verifier was produced against
+  the first `1810..1835` scalar-atlas transcript.  The atlas was then repaired
+  to state the scalar-empty `z_1=1811` slice explicitly, but the verifier kept
+  the old source/output hashes and old exact-line sentinel.  The later
+  `z_1=1812` verifier inherited those stale atlas pins and also pinned the
+  pre-repair `z_1=1824` source/output pair.
+- **First failed implication:** mathematical equality of the surviving
+  `z_1=1824` and `z_1=1812` rows was treated as sufficient dependency
+  stability.  Replaying either descendant at the current canonical tip
+  stopped at its hash gate before reaching the unchanged exact quotient.
+  Thus these were reproducibility failures, not counterexamples to either
+  row closure.
+- **Exact repair / strongest survivor:** the `z_1=1824` verifier now pins the
+  repaired atlas pair and full empty-slice sentinel, with regenerated profile
+  and semantic digests; the `z_1=1812` verifier then pins that repaired parent
+  and the current atlas pair.  Ordinary and optimized replays are
+  byte-identical.  Their `38=15+23` and `11=4+7` crude/status closures survive,
+  and the independent combined ten-row descent already proves the stronger
+  current cap `z_1<=1799` from current atlas bytes.
+- **Rule:** after repairing a truth-bearing artifact, traverse its descendant
+  hash graph in topological order and replay every pinned verifier at the
+  fetched tip.  An unchanged mathematical row does not make obsolete evidence
+  pins current.
+
 ## MISTAKE-329 (2026-07-29, first mixed Lorenz/activity sidecar) -- an ambient half-cap was substituted for the exact reflected parity fibre
 
 - **What was done:** the first four-aligned/three-drift Lorenz/activity
