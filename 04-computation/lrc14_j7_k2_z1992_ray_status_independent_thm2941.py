@@ -29,7 +29,7 @@ OUTPUT_PATH = (
     / "lrc14_j7_k2_z1992_ray_status_independent_thm2941.out"
 )
 EXPECTED_UNIFORM_SHA256 = (
-    "dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36"
+    "34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46"
 )
 EXPECTED_SEMANTIC_SHA256 = (
     "3317880b065260b855a0acbcbaa0a28f23fb9d3f8733ea13effc3ed598d7e3f4"

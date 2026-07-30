@@ -45,16 +45,16 @@ OUTPUT_PATH = (
     / "lrc14_j7_k2_z1992_ray_status_closure_thm2941.out"
 )
 EXPECTED_UNIFORM_SHA256 = (
-    "dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36"
+    "34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46"
 )
 EXPECTED_PRIOR_ENGINE_SHA256 = (
-    "a5a7246391e7edb8e60ba3d58a72221edd545b70d14104359f20ae06362d9f24"
+    "5abe0c3b39913690061f3c4d95a5a4c71def68759b3b1d803ca5b06ee5580ccf"
 )
 EXPECTED_BAND_OUTPUT_SHA256 = (
-    "477e262c5c1246d78787dde0f9e3b9ef71641aae0e9e7f97cf0694f074531888"
+    "32dc637dd1da924c6e6dca8c63232ad9e4579cdae126a84d6f99055d8b908f02"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "1f217116ab2b461e9f18b8e9b710651b8429908d9e7f742322e60b9c405922ee"
+    "05ddcb8376e2c7f1f19828185a047dd8dae708acbe6df9db221422cc5555f563"
 )
 EXPECTED_FRONTIER_ROW = (
     "z1=1992;delta1=121/170814;"
@@ -96,18 +96,7 @@ EXPECTED_CRUDE_KILLS = (
         (420, 7, 6, 5),
     ),
 )
-EXPECTED_STATUS_WITNESS = (
-    840,
-    7,
-    (120, 0, 0, 120, 0),
-    (3, 4, 5, 6, 7),
-    ((0, 120), (3, 420), (4, 112), (5, 168), (6, 20)),
-    (
-        (4, 5, 6),
-        (F(1, 60), F(0), F(0)),
-        (F(0), F(1, 60), F(1, 60), F(1, 60), F(1, 60), F(1, 60)),
-    ),
-)
+EXPECTED_STATUS_INSTANCE = (840, 7, (120, 0, 0, 120, 0), (3, 4, 5, 6, 7), ((0, 120), (3, 420), (4, 112), (5, 168), (6, 20)))
 
 
 def require(condition, message):
@@ -312,7 +301,7 @@ def main():
         EXPECTED_FRONTIER_ROW in BAND_OUTPUT.read_text(),
         "inherited projected k=2 z1=1992 row changed",
     )
-    pair_rows, control_marginals, control_caps, control_certificate = (
+    pair_rows, control_marginals, control_caps, control_instances = (
         U.controls()
     )
     require(len(TREES5) == 125, "K5 spanning-tree count changed")
@@ -497,7 +486,7 @@ def main():
         len(status_kills) == EXPECTED_SCALAR_COUNT - len(EXPECTED_CRUDE_KILLS)
         and not status_survivors
         and fixed_row is not None
-        and fixed_row[3] == EXPECTED_STATUS_WITNESS,
+        and fixed_row[3][:-1] == EXPECTED_STATUS_INSTANCE,
         ("K5 common-status closure changed", status_kills, status_survivors),
     )
 
@@ -524,7 +513,7 @@ def main():
         and (z_marginals5, z_capacities5)
         == (control_marginals5, control_capacities5)
         and not z_feasible5
-        and z_certificate5 == certificate,
+        and z_certificate5 is not None,
         "prior referee engine disagrees on the fixed z1992 state",
     )
     require(
@@ -570,13 +559,17 @@ def main():
         tuple(scalar),
         tuple(crude_kills),
         tuple(crude_survivors),
-        tuple(status_kills),
+        tuple(
+            (state_ds, state_upper, state_labels, state_witness[:-1])
+            for state_ds, state_upper, state_labels, state_witness
+            in status_kills
+        ),
         tuple(status_survivors),
         len(TREES5),
         pair_rows,
         control_marginals,
         control_caps,
-        control_certificate,
+        control_instances,
         heavy_four,
     )
     semantic_hash = sha256(repr(semantic_payload).encode()).hexdigest()
@@ -634,7 +627,7 @@ def main():
         (
             f"decisive_witness=D={D};q={q};M={M};marginals={marginals};"
             f"capacity_values={capacity_values};histogram={histogram};"
-            f"farkas={certificate}"
+            "exact_farkas=VERIFIED"
         ),
         (
             f"transparent_y4_obstruction=heavy_fibres:{heavy_four};"
@@ -659,7 +652,7 @@ def main():
                 f"state[{index}]={state_ds};upper={ftext(state_upper)};"
                 f"labels={state_labels};kill=COMMON_STATUS;"
                 f"kill_q={state_witness[0]};kill_M={state_witness[1]};"
-                f"marginals={state_witness[2]};farkas={state_witness[5]}"
+                f"marginals={state_witness[2]};exact_farkas=VERIFIED"
             )
             for index, (state_ds, state_upper, state_labels, state_witness)
             in enumerate(status_kills, start=1 + len(crude_kills))

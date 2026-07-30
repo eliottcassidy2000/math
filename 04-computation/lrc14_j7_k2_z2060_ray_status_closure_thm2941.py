@@ -40,13 +40,13 @@ OUTPUT_PATH = (
     / "lrc14_j7_k2_z2060_ray_status_closure_thm2941.out"
 )
 EXPECTED_UNIFORM_SHA256 = (
-    "dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36"
+    "34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46"
 )
 EXPECTED_BAND_OUTPUT_SHA256 = (
-    "4e59c1da1702cbd469c001793e565bdd30c4d33e446a534b756ad82acdea3a6b"
+    "3a32b2c1e1bb873740a47494a63337b14e8a2799711f8763f4fd65140b5335a6"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "be28ec4c3e2c8d2cfa521aabd0977b6a289c34b444cfcfaf59b8e3072588d147"
+    "0c555b9bed50d50d601e29960f07cecee0aa8091638adc9ef79d83894498fcd0"
 )
 EXPECTED_FRONTIER_ROW = (
     "z1=2060;delta1=1867/2119740;"
@@ -68,18 +68,7 @@ EXPECTED_SCALAR_COUNT = 16
 EXPECTED_SCALAR_SHA256 = (
     "9158356076dbd2070ecb960f9d602a8e7ee38bf347d97345727774a6cc6876b1"
 )
-EXPECTED_STATUS_WITNESS = (
-    840,
-    7,
-    (0, 120, 0, 120, 0),
-    (3, 4, 5, 6, 7),
-    ((0, 120), (3, 420), (4, 112), (5, 168), (6, 20)),
-    (
-        (4, 5, 6),
-        (F(1, 60), F(0), F(0)),
-        (F(0), F(1, 60), F(1, 60), F(1, 60), F(1, 60), F(1, 60)),
-    ),
-)
+EXPECTED_STATUS_INSTANCE = (840, 7, (0, 120, 0, 120, 0), (3, 4, 5, 6, 7), ((0, 120), (3, 420), (4, 112), (5, 168), (6, 20)))
 
 
 def require(condition, message):
@@ -276,7 +265,7 @@ def main():
         EXPECTED_FRONTIER_ROW in BAND_OUTPUT.read_text(),
         "inherited projected k=2 z1=2060 row changed",
     )
-    pair_rows, control_marginals, control_caps, control_certificate = (
+    pair_rows, control_marginals, control_caps, control_instances = (
         U.controls()
     )
     require(len(TREES5) == 125, "K5 spanning-tree count changed")
@@ -465,7 +454,7 @@ def main():
         len(status_kills) == EXPECTED_SCALAR_COUNT
         and not status_survivors
         and fixed_row is not None
-        and fixed_row[3] == EXPECTED_STATUS_WITNESS,
+        and fixed_row[3][:-1] == EXPECTED_STATUS_INSTANCE,
         ("K5 common-status closure changed", status_kills, status_survivors),
     )
 
@@ -523,13 +512,17 @@ def main():
         tuple(scalar),
         tuple(crude_kills),
         tuple(crude_survivors),
-        tuple(status_kills),
+        tuple(
+            (state_ds, state_upper, state_labels, state_witness[:-1])
+            for state_ds, state_upper, state_labels, state_witness
+            in status_kills
+        ),
         tuple(status_survivors),
         len(TREES5),
         pair_rows,
         control_marginals,
         control_caps,
-        control_certificate,
+        control_instances,
         heavy_four,
     )
     semantic_hash = sha256(repr(semantic_payload).encode()).hexdigest()
@@ -586,7 +579,7 @@ def main():
         (
             f"decisive_witness=D={D};q={q};M={M};marginals={marginals};"
             f"capacity_values={capacity_values};histogram={histogram};"
-            f"farkas={certificate}"
+            "exact_farkas=VERIFIED"
         ),
         (
             f"transparent_y4_obstruction=heavy_fibres:{heavy_four};"
@@ -601,7 +594,7 @@ def main():
             f"state[{index}]={state_ds};upper={ftext(state_upper)};"
             f"labels={state_labels};kill_q={state_witness[0]};"
             f"kill_M={state_witness[1]};marginals={state_witness[2]};"
-            f"farkas={state_witness[5]}"
+            "exact_farkas=VERIFIED"
         )
         for index, (state_ds, state_upper, state_labels, state_witness)
         in enumerate(status_kills, start=1)

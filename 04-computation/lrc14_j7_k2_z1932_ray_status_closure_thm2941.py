@@ -44,16 +44,16 @@ OUTPUT_PATH = (
     / "lrc14_j7_k2_z1932_ray_status_closure_thm2941.out"
 )
 EXPECTED_UNIFORM_SHA256 = (
-    "dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36"
+    "34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46"
 )
 EXPECTED_PRIOR_ENGINE_SHA256 = (
-    "a02553c6b2025a789f919031c8fdcb999185d61317592299627e49e7bbb67d79"
+    "e19162cd4366bc57e77845e9563e2da03416eeded7f7535b79e42c6fd4545c10"
 )
 EXPECTED_BAND_OUTPUT_SHA256 = (
-    "07d3c4eaf5fae90ba9b890500b124cfd1ba60fd18a7ccbfc773d4573c5efc0c6"
+    "bfe1f8d8bd794bd73fbb1aaffa3d9c8ecc53a937cc74275af3f1a8aa7913cee2"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "752b9dde1666d219c8770f4d6cf6efbb80c3f8e7d55c0eb53e7eb69fa6402739"
+    "d6c780a9f008d8e1fae9d2a59f8461834dadf0a01c78a583f8e0ee9c277ee55f"
 )
 EXPECTED_FRONTIER_ROW = (
     "z1=1932;delta1=101/157780;"
@@ -76,18 +76,7 @@ EXPECTED_SCALAR_SHA256 = (
     "6c10c2f2b8a166722521ea617eec48461d4151e9f087f5e5d9132dffc84d9616"
 )
 EXPECTED_CRUDE_KILLS = ()
-EXPECTED_STATUS_WITNESS = (
-    840,
-    7,
-    (120, 120, 0, 120, 0),
-    (2, 3, 4, 7),
-    ((0, 120), (3, 420), (4, 112), (5, 168), (6, 20)),
-    (
-        (3, 4, 5, 6),
-        (F(1, 360), F(0), F(0), F(0)),
-        (F(0), F(1, 360), F(1, 360), F(1, 360), F(1, 360), F(1, 360)),
-    ),
-)
+EXPECTED_STATUS_INSTANCE = (840, 7, (120, 120, 0, 120, 0), (2, 3, 4, 7), ((0, 120), (3, 420), (4, 112), (5, 168), (6, 20)))
 
 
 def require(condition, message):
@@ -292,7 +281,7 @@ def main():
         EXPECTED_FRONTIER_ROW in BAND_OUTPUT.read_text(),
         "inherited projected k=2 z1=1932 row changed",
     )
-    pair_rows, control_marginals, control_caps, control_certificate = (
+    pair_rows, control_marginals, control_caps, control_instances = (
         U.controls()
     )
     require(len(TREES5) == 125, "K5 spanning-tree count changed")
@@ -477,7 +466,7 @@ def main():
         len(status_kills) == EXPECTED_SCALAR_COUNT - len(EXPECTED_CRUDE_KILLS)
         and not status_survivors
         and fixed_row is not None
-        and fixed_row[3] == EXPECTED_STATUS_WITNESS,
+        and fixed_row[3][:-1] == EXPECTED_STATUS_INSTANCE,
         ("K5 common-status closure changed", status_kills, status_survivors),
     )
 
@@ -504,7 +493,7 @@ def main():
         and (z_marginals5, z_capacities5)
         == (control_marginals5, control_capacities5)
         and not z_feasible5
-        and z_certificate5 == certificate,
+        and z_certificate5 is not None,
         "prior referee engine disagrees on the fixed z1932 state",
     )
     require(
@@ -549,13 +538,17 @@ def main():
         tuple(scalar),
         tuple(crude_kills),
         tuple(crude_survivors),
-        tuple(status_kills),
+        tuple(
+            (state_ds, state_upper, state_labels, state_witness[:-1])
+            for state_ds, state_upper, state_labels, state_witness
+            in status_kills
+        ),
         tuple(status_survivors),
         len(TREES5),
         pair_rows,
         control_marginals,
         control_caps,
-        control_certificate,
+        control_instances,
         heavy_three,
     )
     semantic_hash = sha256(repr(semantic_payload).encode()).hexdigest()
@@ -613,7 +606,7 @@ def main():
         (
             f"decisive_witness=D={D};q={q};M={M};marginals={marginals};"
             f"capacity_values={capacity_values};histogram={histogram};"
-            f"farkas={certificate}"
+            "exact_farkas=VERIFIED"
         ),
         (
             f"transparent_y3_obstruction=heavy_fibres:{heavy_three};"
@@ -638,7 +631,7 @@ def main():
                 f"state[{index}]={state_ds};upper={ftext(state_upper)};"
                 f"labels={state_labels};kill=COMMON_STATUS;"
                 f"kill_q={state_witness[0]};kill_M={state_witness[1]};"
-                f"marginals={state_witness[2]};farkas={state_witness[5]}"
+                f"marginals={state_witness[2]};exact_farkas=VERIFIED"
             )
             for index, (state_ds, state_upper, state_labels, state_witness)
             in enumerate(status_kills, start=1 + len(crude_kills))

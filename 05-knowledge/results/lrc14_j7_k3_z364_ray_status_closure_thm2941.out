@@ -1,7 +1,7 @@
 LRC14 projected k=3 z1=364 all-label ray/status closure
 atlas_source_sha256=ddb2d19c02c4d70cfa74141265ceac585685932e85768baf4cb98aeb3e37935b
 atlas_output_sha256=ce6807de6d6b7022c97839d0bf9fc8ba3b90e7b97bc5b0d4069e88563e232be6
-ray_engine_source_sha256=6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e
+ray_engine_source_sha256=2ef5e0639354c38b13e17e41f91acb4143c7f60973295b0e2dd0f57eb8f38db2
 scope=25 canonical projected scalar body rows at z1=364;three distinct later nonaligned labels;no finite horizon
 ray_law=(z+L)delta(z+L)=zdelta(z);A(L-b)=-A(b);all denominator maxima attained
 pair_overlap_exhaustive_controls=946
@@ -132,7 +132,7 @@ E=(4, 8, 10, 11, 12, 14);h=23561/64680;r=36;L=129360;high=12741;d1=4620;ray_chec
   status_kill_denominators=()
   max_state=None
 totals=states:1109;crude_kills:242;status_kills:867;survivors:0
-farkas_certificate_sha256=d1f842349c9b71bbeee1ffd4d60278b9e37b6f0a4f8d16e79d5d5753c43d78b4
+verified_farkas_instance_sha256=6b8460dc12ebb3b5c17873b1fdd9c4794ae635ea98011dd253c14ce73cbd8302
 conclusion=all 25 z1=364 candidate body rows are empty
-semantic_sha256=008294c359301867a83262ebad5696d9ea8887db4161dc4829289c50e9f710da
+semantic_sha256=c23ea7b830655b1bb3d8442aa4dbaa73eb44cd32c5e8554fc569b41bc75b1313
 all_exact_controls=PASS

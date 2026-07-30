@@ -1,6 +1,6 @@
 LRC14 projected k=2 z1=2060 all-label ray/status closure
-uniform_ray_status_source_sha256=dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36
-scalar_band_output_sha256=4e59c1da1702cbd469c001793e565bdd30c4d33e446a534b756ad82acdea3a6b
+uniform_ray_status_source_sha256=34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
+scalar_band_output_sha256=3a32b2c1e1bb873740a47494a63337b14e8a2799711f8763f4fd65140b5335a6
 scope=inherited projected k=2 z1=2060 body row;four distinct later nonaligned labels;no finite horizon
 body=(1, 4, 8, 10, 12, 14);h=1049/2940;r=34;L=11760;first=2060;first_d=588;high_floor=1020;lower=1049/267540;first_delta=1867/2119740
 ray_law=(z+L)delta(z+L)=zdelta(z);A(L-b)=-A(b);all denominator maxima attained
@@ -8,27 +8,27 @@ ray_checks=11759;ray_signs={-1: 5879, 0: 1, 1: 5879};ray_amplitude_sha256=276909
 nontrivial_denominators=59;denominator_trials=557845;all_n_scalar_states=16;scalar_state_sha256=9158356076dbd2070ecb960f9d602a8e7ee38bf347d97345727774a6cc6876b1
 fixed_projected_scalar_state=((196, 280, 588, 840, 980), Fraction(1052387671, 259266989205), (2060, 2142, 2172, 2534, 3180))
 crude_all_q_kills=0;crude_all_q_survivors=16
-state[1]=(196, 280, 420, 588, 980);upper=199047442799/50297795905770;labels=(2060, 2142, 2172, 2716, 3180);kill_q=840;kill_M=7;marginals=(0, 120, 120, 0, 0);farkas=((4, 5, 6), (Fraction(1, 60), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60)))
-state[2]=(196, 280, 588, 840, 980);upper=1052387671/259266989205;labels=(2060, 2142, 2172, 2534, 3180);kill_q=840;kill_M=7;marginals=(0, 120, 0, 120, 0);farkas=((4, 5, 6), (Fraction(1, 60), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60)))
-state[3]=(196, 280, 588, 840, 2940);upper=2469846757271/621203706135180;labels=(2060, 2142, 2396, 2534, 3180);kill_q=840;kill_M=7;marginals=(0, 120, 0, 120, 0);farkas=((4, 5, 6), (Fraction(1, 60), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60)))
-state[4]=(196, 280, 588, 980, 980);upper=160947111713/40964184294390;labels=(2060, 2142, 2172, 2844, 3180);kill_q=840;kill_M=7;marginals=(0, 120, 0, 0, 0);farkas=((5, 6), (Fraction(1, 68), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68)))
-state[5]=(196, 280, 588, 980, 2940);upper=1255352335033/310601853067590;labels=(2060, 2142, 2172, 2396, 3180);kill_q=840;kill_M=7;marginals=(0, 120, 0, 0, 0);farkas=((5, 6), (Fraction(1, 68), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68)))
-state[6]=(196, 420, 588, 840, 980);upper=1300721413/328743764090;labels=(2060, 2172, 2534, 2716, 3180);kill_q=840;kill_M=7;marginals=(0, 120, 0, 120, 0);farkas=((4, 5, 6), (Fraction(1, 60), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60)))
-state[7]=(196, 420, 588, 980, 2940);upper=387851732481/98458757344955;labels=(2060, 2172, 2396, 2716, 3180);kill_q=588;kill_M=5;marginals=(84, 420, 84, 420, 420);farkas=((2, 3, 4), (Fraction(0, 1), Fraction(0, 1), Fraction(1, 20)), (Fraction(0, 1), Fraction(1, 20), Fraction(0, 1), Fraction(1, 20), Fraction(0, 1), Fraction(0, 1)))
-state[8]=(196, 588, 840, 980, 980);upper=3155233793/803219299890;labels=(2060, 2172, 2534, 2844, 3180);kill_q=840;kill_M=7;marginals=(0, 0, 120, 0, 0);farkas=((5, 6), (Fraction(1, 68), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68)))
-state[9]=(196, 588, 840, 980, 2940);upper=8203421171/2030077471030;labels=(2060, 2172, 2396, 2534, 3180);kill_q=840;kill_M=7;marginals=(0, 0, 120, 0, 0);farkas=((5, 6), (Fraction(1, 68), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68)))
-state[10]=(280, 420, 588, 840, 980);upper=1884502202/474507508545;labels=(2060, 2142, 2172, 2534, 2716);kill_q=840;kill_M=7;marginals=(120, 120, 0, 120, 0);farkas=((3, 4, 5, 6), (Fraction(1, 360), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 360), Fraction(1, 360), Fraction(1, 360), Fraction(1, 360), Fraction(1, 360)))
-state[11]=(280, 420, 588, 980, 2940);upper=2247735804071/568459995236910;labels=(2060, 2142, 2172, 2396, 2716);kill_q=840;kill_M=7;marginals=(120, 120, 0, 0, 0);farkas=((4, 5, 6), (Fraction(1, 60), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60)))
-state[12]=(280, 588, 840, 980, 980);upper=1523822534/386454568815;labels=(2060, 2142, 2172, 2534, 2844);kill_q=840;kill_M=7;marginals=(120, 0, 120, 0, 0);farkas=((4, 5, 6), (Fraction(1, 60), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60)))
-state[13]=(280, 588, 840, 980, 2940);upper=11884296934/2930206161015;labels=(2060, 2142, 2172, 2396, 2534);kill_q=840;kill_M=7;marginals=(120, 0, 120, 0, 0);farkas=((4, 5, 6), (Fraction(1, 60), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60)))
-state[14]=(280, 588, 980, 980, 2940);upper=1817478273257/462972573440370;labels=(2060, 2142, 2172, 2396, 2844);kill_q=840;kill_M=7;marginals=(120, 0, 0, 0, 0);farkas=((5, 6), (Fraction(1, 68), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68)))
-state[15]=(420, 588, 840, 980, 2940);upper=44065036891/11146274416410;labels=(2060, 2172, 2396, 2534, 2716);kill_q=840;kill_M=7;marginals=(120, 0, 120, 0, 0);farkas=((4, 5, 6), (Fraction(1, 60), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60)))
-state[16]=(588, 840, 980, 980, 2940);upper=11876712999/3025964532290;labels=(2060, 2172, 2396, 2534, 2844);kill_q=840;kill_M=7;marginals=(0, 120, 0, 0, 0);farkas=((5, 6), (Fraction(1, 68), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68), Fraction(1, 68)))
+state[1]=(196, 280, 420, 588, 980);upper=199047442799/50297795905770;labels=(2060, 2142, 2172, 2716, 3180);kill_q=840;kill_M=7;marginals=(0, 120, 120, 0, 0);exact_farkas=VERIFIED
+state[2]=(196, 280, 588, 840, 980);upper=1052387671/259266989205;labels=(2060, 2142, 2172, 2534, 3180);kill_q=840;kill_M=7;marginals=(0, 120, 0, 120, 0);exact_farkas=VERIFIED
+state[3]=(196, 280, 588, 840, 2940);upper=2469846757271/621203706135180;labels=(2060, 2142, 2396, 2534, 3180);kill_q=840;kill_M=7;marginals=(0, 120, 0, 120, 0);exact_farkas=VERIFIED
+state[4]=(196, 280, 588, 980, 980);upper=160947111713/40964184294390;labels=(2060, 2142, 2172, 2844, 3180);kill_q=840;kill_M=7;marginals=(0, 120, 0, 0, 0);exact_farkas=VERIFIED
+state[5]=(196, 280, 588, 980, 2940);upper=1255352335033/310601853067590;labels=(2060, 2142, 2172, 2396, 3180);kill_q=840;kill_M=7;marginals=(0, 120, 0, 0, 0);exact_farkas=VERIFIED
+state[6]=(196, 420, 588, 840, 980);upper=1300721413/328743764090;labels=(2060, 2172, 2534, 2716, 3180);kill_q=840;kill_M=7;marginals=(0, 120, 0, 120, 0);exact_farkas=VERIFIED
+state[7]=(196, 420, 588, 980, 2940);upper=387851732481/98458757344955;labels=(2060, 2172, 2396, 2716, 3180);kill_q=588;kill_M=5;marginals=(84, 420, 84, 420, 420);exact_farkas=VERIFIED
+state[8]=(196, 588, 840, 980, 980);upper=3155233793/803219299890;labels=(2060, 2172, 2534, 2844, 3180);kill_q=840;kill_M=7;marginals=(0, 0, 120, 0, 0);exact_farkas=VERIFIED
+state[9]=(196, 588, 840, 980, 2940);upper=8203421171/2030077471030;labels=(2060, 2172, 2396, 2534, 3180);kill_q=840;kill_M=7;marginals=(0, 0, 120, 0, 0);exact_farkas=VERIFIED
+state[10]=(280, 420, 588, 840, 980);upper=1884502202/474507508545;labels=(2060, 2142, 2172, 2534, 2716);kill_q=840;kill_M=7;marginals=(120, 120, 0, 120, 0);exact_farkas=VERIFIED
+state[11]=(280, 420, 588, 980, 2940);upper=2247735804071/568459995236910;labels=(2060, 2142, 2172, 2396, 2716);kill_q=840;kill_M=7;marginals=(120, 120, 0, 0, 0);exact_farkas=VERIFIED
+state[12]=(280, 588, 840, 980, 980);upper=1523822534/386454568815;labels=(2060, 2142, 2172, 2534, 2844);kill_q=840;kill_M=7;marginals=(120, 0, 120, 0, 0);exact_farkas=VERIFIED
+state[13]=(280, 588, 840, 980, 2940);upper=11884296934/2930206161015;labels=(2060, 2142, 2172, 2396, 2534);kill_q=840;kill_M=7;marginals=(120, 0, 120, 0, 0);exact_farkas=VERIFIED
+state[14]=(280, 588, 980, 980, 2940);upper=1817478273257/462972573440370;labels=(2060, 2142, 2172, 2396, 2844);kill_q=840;kill_M=7;marginals=(120, 0, 0, 0, 0);exact_farkas=VERIFIED
+state[15]=(420, 588, 840, 980, 2940);upper=44065036891/11146274416410;labels=(2060, 2172, 2396, 2534, 2716);kill_q=840;kill_M=7;marginals=(120, 0, 120, 0, 0);exact_farkas=VERIFIED
+state[16]=(588, 840, 980, 980, 2940);upper=11876712999/3025964532290;labels=(2060, 2172, 2396, 2534, 2844);kill_q=840;kill_M=7;marginals=(0, 120, 0, 0, 0);exact_farkas=VERIFIED
 K5_spanning_trees=125;pair_overlap_exhaustive_controls=946;status_cells=32;equality_rows=6
 fixed_state_transparent_obstruction=300 load>=4 fibres;only 240 exceptional-status events;EXACT_FARKAS_INFEASIBLE
 common_K5_status_kills=16;common_K5_status_survivors=0
-decisive_witness=D=5880;q=840;M=7;marginals=(0, 120, 0, 120, 0);capacity_values=(3, 4, 5, 6, 7);histogram=((0, 120), (3, 420), (4, 112), (5, 168), (6, 20));farkas=((4, 5, 6), (Fraction(1, 60), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60)))
+decisive_witness=D=5880;q=840;M=7;marginals=(0, 120, 0, 120, 0);capacity_values=(3, 4, 5, 6, 7);histogram=((0, 120), (3, 420), (4, 112), (5, 168), (6, 20));exact_farkas=VERIFIED
 transparent_y4_obstruction=heavy_fibres:300;available_exception_events:240
 conclusion=projected k=2 z1=2060 row is empty uniformly
-semantic_sha256=be28ec4c3e2c8d2cfa521aabd0977b6a289c34b444cfcfaf59b8e3072588d147
+semantic_sha256=0c555b9bed50d50d601e29960f07cecee0aa8091638adc9ef79d83894498fcd0
 all_exact_controls=PASS

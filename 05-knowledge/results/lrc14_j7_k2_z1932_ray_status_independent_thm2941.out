@@ -1,5 +1,5 @@
 LRC14 projected k=2 z1=1932 independent fixed-state referee
-uniform_ray_status_source_sha256=dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36
+uniform_ray_status_source_sha256=34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
 primary_z1932_source_imported=False;tree_engine=Pruefer;LP_used=False
 body=(1, 4, 8, 10, 12, 14);first=1932;labels=(1932, 2060, 2142, 2172, 2534);ds=(140, 280, 588, 840, 980);lower=1049/267540;upper=442380823/112512089655;gap=12804017/1170125732412
 all_label_ray_maxima=((280, Fraction(821, 1049580), 2142, 2142), (588, Fraction(1867, 2119740), 2060, 2060), (840, Fraction(2911, 3724980), 2534, 2534), (980, Fraction(263, 310415), 2172, 2172))

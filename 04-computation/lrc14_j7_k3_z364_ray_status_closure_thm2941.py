@@ -48,10 +48,10 @@ EXPECTED_ATLAS_OUTPUT_SHA256 = (
     "ce6807de6d6b7022c97839d0bf9fc8ba3b90e7b97bc5b0d4069e88563e232be6"
 )
 EXPECTED_RAY_ENGINE_SHA256 = (
-    "6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e"
+    "2ef5e0639354c38b13e17e41f91acb4143c7f60973295b0e2dd0f57eb8f38db2"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "008294c359301867a83262ebad5696d9ea8887db4161dc4829289c50e9f710da"
+    "c23ea7b830655b1bb3d8442aa4dbaa73eb44cd32c5e8554fc569b41bc75b1313"
 )
 
 FIRST = 364
@@ -160,12 +160,12 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH)
     args = parser.parse_args()
 
-    pair_rows, control_marginals, control_caps, control_certificate = (
+    pair_rows, control_marginals, control_caps, control_instances = (
         ray.local.controls()
     )
     records = []
     total_states = total_crude = total_status = total_survivors = 0
-    certificate_digest = hashlib.sha256()
+    verified_instance_digest = hashlib.sha256()
     for body in ORIGINAL_BODIES:
         stream = ray.Stream(body)
         trials, states, checks, signs = ray.ray_quotient_states(stream)
@@ -199,7 +199,9 @@ def main() -> None:
         )
         status_histogram = Counter(witness[1] for witness in status.values())
         for ds, witness in sorted(status.items()):
-            certificate_digest.update(f"{body}|{ds}|{witness}\n".encode())
+            verified_instance_digest.update(
+                f"{body}|{ds}|{witness[:-1]}\n".encode()
+            )
         records.append(
             (
                 body,
@@ -214,7 +216,10 @@ def main() -> None:
                 trials,
                 tuple(sorted(states.items())),
                 tuple(sorted(crude.items())),
-                tuple(sorted(status.items())),
+                tuple(
+                    (ds, witness[:-1])
+                    for ds, witness in sorted(status.items())
+                ),
                 tuple(survivors),
                 tuple(sorted(status_histogram.items())),
                 maximum,
@@ -243,8 +248,8 @@ def main() -> None:
         pair_rows,
         control_marginals,
         control_caps,
-        control_certificate,
-        certificate_digest.hexdigest(),
+        control_instances,
+        verified_instance_digest.hexdigest(),
     )
     semantic_sha256 = hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
     if EXPECTED_SEMANTIC_SHA256 is not None:
@@ -315,7 +320,8 @@ def main() -> None:
                 f"totals=states:{total_states};crude_kills:{total_crude};"
                 f"status_kills:{total_status};survivors:{total_survivors}"
             ),
-            f"farkas_certificate_sha256={certificate_digest.hexdigest()}",
+            "verified_farkas_instance_sha256="
+            f"{verified_instance_digest.hexdigest()}",
             "conclusion=all 25 z1=364 candidate body rows are empty",
             f"semantic_sha256={semantic_sha256}",
             "all_exact_controls=PASS",

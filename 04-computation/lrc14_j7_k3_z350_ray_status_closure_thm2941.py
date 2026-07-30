@@ -38,7 +38,7 @@ DEFAULT_OUTPUT = (
     ROOT / "05-knowledge" / "results" / "lrc14_j7_k3_z350_ray_status_closure_thm2941.out"
 )
 EXPECTED_RAY_ENGINE_SHA256 = (
-    "6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e"
+    "2ef5e0639354c38b13e17e41f91acb4143c7f60973295b0e2dd0f57eb8f38db2"
 )
 EXPECTED_SCALAR_SHA256 = (
     "5aaa5a70e71c4408bae13e2bd3fc1dffb7f6b271fd59cc8feb2ef4aea37205cf"
@@ -47,7 +47,7 @@ EXPECTED_SCALAR_OUTPUT_SHA256 = (
     "ad00a09b68620d495b991cd0662863407808d794cfcf4ed22917bcb1b790affa"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "5a47df48d852157d55cb7d7aa11d69d9ebd04493f0d905020f8bd0a335c1c3d8"
+    "c576450201f4a986afd9067029dbac2888a9ea27b1086b147b59c0f0912c3a89"
 )
 FIRST = 350
 EXPECTED_COUNTS = {
@@ -205,8 +205,8 @@ def evaluate_body(body):
         )
         require(gap == target - capacity and gap > 0, "invalid crude witness")
 
-    certificate_digest = hashlib.sha256()
-    contradictions = []
+    verified_instance_digest = hashlib.sha256()
+    exact_check_count = 0
     representative = None
     for ds, witness in sorted(status.items()):
         q, M, marginals, cap_set, histogram, certificate = witness
@@ -221,10 +221,13 @@ def evaluate_body(body):
         slacks, contradiction = independent_farkas_check(
             q, marginals, capacities, histogram, certificate
         )
-        contradictions.append(contradiction)
+        require(contradiction < 0, "exact Farkas contradiction vanished")
+        exact_check_count += 1
         if representative is None:
-            representative = (body, ds, witness, slacks, contradiction)
-        certificate_digest.update(f"{body}|{ds}|{witness}\n".encode())
+            representative = (body, ds, witness[:-1], "EXACT_FARKAS_VERIFIED")
+        verified_instance_digest.update(
+            f"{body}|{ds}|{witness[:-1]}\n".encode()
+        )
 
     sign_totals = {
         sign: sum(
@@ -244,7 +247,7 @@ def evaluate_body(body):
     partition = (
         tuple(sorted(states.items())),
         tuple(sorted(crude.items())),
-        tuple(sorted(status.items())),
+        tuple((ds, witness[:-1]) for ds, witness in sorted(status.items())),
         tuple(survivors),
     )
     partition_digest = hashlib.sha256(repr(partition).encode()).hexdigest()
@@ -263,8 +266,8 @@ def evaluate_body(body):
         status_histogram,
         maximum,
         partition_digest,
-        certificate_digest.hexdigest(),
-        min(contradictions, default=None),
+        verified_instance_digest.hexdigest(),
+        exact_check_count,
         representative,
     )
 
@@ -274,7 +277,7 @@ def main():
     parser.add_argument("--processes", type=int, default=max(1, mp.cpu_count() // 2))
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     args = parser.parse_args()
-    pair_rows, control_marginals, control_caps, control_certificate = ray.local.controls()
+    pair_rows, control_marginals, control_caps, control_instances = ray.local.controls()
     with mp.Pool(args.processes) as pool:
         records = tuple(sorted(pool.imap_unordered(evaluate_body, BODIES, chunksize=1)))
 
@@ -297,7 +300,7 @@ def main():
         pair_rows,
         control_marginals,
         control_caps,
-        control_certificate,
+        control_instances,
         representative,
     )
     semantic_hash = hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
@@ -344,8 +347,8 @@ def main():
             status_histogram,
             maximum,
             partition_digest,
-            certificate_digest,
-            min_contradiction,
+            verified_instance_digest,
+            exact_check_count,
             _representative,
         ) = record
         states, crude, status, survivors = partition
@@ -357,8 +360,8 @@ def main():
             f"status_kills={len(status)};survivors={len(survivors)};"
             f"status_M={dict(status_histogram)};max_state={maximum};"
             f"partition_sha256={partition_digest};"
-            f"certificate_sha256={certificate_digest};"
-            f"min_exact_farkas_contradiction={min_contradiction}"
+            f"verified_farkas_instance_sha256={verified_instance_digest};"
+            f"exact_farkas_checks={exact_check_count}"
         )
     lines.extend(
         (

@@ -1,5 +1,5 @@
 LRC14 global projected k=2 scalar band 2004..2142
-uniform_ray_status_source_sha256=dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36
+uniform_ray_status_source_sha256=34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
 universe=six_body_roots:3003;body_labels:1..14;ordered distinct later nonaligned labels;scalar necessary condition
 first_band=2004..2142;first_candidate_rows=417388;exact_horizon=7000;omitted_slot_bound=6r/[49(H+1)]
 projected_wall=max(15,floor(13L/150)+1);forced-high omitted slot starts max(H+1,projected_wall)
