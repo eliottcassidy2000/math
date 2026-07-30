@@ -50,16 +50,16 @@ DEFAULT_OUTPUT = (
 )
 
 EXPECTED_Z297_SHA256 = (
-    "f4464e01f0ada1515510a7d59b00582db3d677dd2a91b25407d25702d204e4e5"
+    "6147066a29e20145bec47d87f2eb1bb054fa5e6ffeaa78e977affe2796e1a0a0"
 )
 EXPECTED_Z297_OUTPUT_SHA256 = (
-    "a0de530aefe273ff74a5494867ca31d29d00d66811173cbfbeaadbfcab99e421"
+    "7b7da4228c105847d482f22b54d27beeea237a61758c3295f71cb5584aedfa25"
 )
 EXPECTED_ATLAS_SHA256 = (
     "cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "cb202da83bb1b9b419576c1fb1ed7589d2a25d802f55f1845e0c2023f4f5e644"
+    "a553a7e6717d3d41a8bdc3b8e799e5378a17bac27c2e6c40c24265f2a28ab8e8"
 )
 EXPECTED_M_HISTOGRAM = (
     (2, 24),
@@ -243,7 +243,7 @@ def main():
         "upstream z297 conclusion changed",
     )
     tasks, atlas_counts = atlas_data()
-    pair_rows, control_marginals, control_caps, control_certificate = (
+    pair_rows, control_marginals, control_caps, control_instances = (
         z297.ray.local.controls()
     )
     if args.processes == 1:
@@ -282,7 +282,7 @@ def main():
         pair_rows,
         control_marginals,
         control_caps,
-        control_certificate,
+        control_instances,
         INHERITED_LEDGER,
         FINAL_LEDGER,
         EXPECTED_Z297_OUTPUT_SHA256,
@@ -307,13 +307,15 @@ def main():
     for first, row in records:
         (
             body, L, high, first_d, trials, checks, signs, states, crude,
-            status, packets, mhist, certificate_digest, minimum_contradiction,
+            status, packets, mhist, verified_instance_digest,
+            verified_instance_count,
         ) = row
         lines.append(
             f"BODY;z1={first};E={body};L={L};high={high};d1={first_d};trials={trials};"
             f"checks={checks};signs={dict(signs)};states={len(states)};crude={len(crude)};"
             f"status={len(status)};residual={len(packets)};M={dict(mhist)};"
-            f"certificate_sha256={certificate_digest};min_exact_farkas_contradiction={minimum_contradiction}"
+            f"verified_farkas_instance_sha256={verified_instance_digest};"
+            f"verified_exact_farkas_instances={verified_instance_count}"
         )
         for packet in packets:
             lines.append(f"RESIDUAL;z1={first};E={body};row={packet}")

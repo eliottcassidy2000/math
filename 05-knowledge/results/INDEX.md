@@ -104,11 +104,11 @@
   exact-Farkas screens remove the first `1541`, while a one-high reduction
   and order-two/four density collisions close all eight `z286` terminals.
   The projected `k=3` cap is `275`, and the necessary-row ledger is `375,713`.
-  Torsion source/output/semantic hashes begin `6b644fbb/c94568f5/95f9da4c`;
-  the independent hashes begin `80e731d1/c0daca33/4667f8f0`; descent hashes
-  begin `97fbefb8/316d069c/b589ac0d`; `z297` hashes begin
-  `f4464e01/a0de530a/1a4d141d`; the lower descent hashes begin
-  `f4d7292d/f709b859/cb202da8`.
+  Torsion source/output/semantic hashes begin `6b7d70ae/922d33a8/95f9da4c`;
+  the independent hashes begin `24006ebe/33b8a9ab/4667f8f0`; descent hashes
+  begin `3290aa01/f6119ba5/cbfa2716`; `z297` hashes begin
+  `6147066a/7b7da422/21df9642`; the lower descent hashes begin
+  `794f925c/af77697e/a553a7e6`.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py`, the isolated terminal referees,
   and the exact/projected plus forced-high descent packages -> matching
   `.out` files [THM-2941 PROVED NECESSARY BANDS + FINITE-EXACT CLOSURES +
@@ -322,11 +322,11 @@
   capacity/status screens close `1541`, and order-two/four located torsion
   closes the eight `z286` terminals.  Thus the current cap is `275` and the
   necessary ledger is `375,713`.  Torsion source/output/semantic hashes begin
-  `6b644fbb/c94568f5/95f9da4c`; independent hashes begin
-  `80e731d1/c0daca33/4667f8f0`; descent hashes begin
-  `97fbefb8/316d069c/b589ac0d`; `z297` hashes begin
-  `f4464e01/a0de530a/1a4d141d`; lower-descent hashes begin
-  `f4d7292d/f709b859/cb202da8`.
+  `6b7d70ae/922d33a8/95f9da4c`; independent hashes begin
+  `24006ebe/33b8a9ab/4667f8f0`; descent hashes begin
+  `3290aa01/f6119ba5/cbfa2716`; `z297` hashes begin
+  `6147066a/7b7da422/21df9642`; lower-descent hashes begin
+  `794f925c/af77697e/a553a7e6`.
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;
   the `z336` source/output/semantic hashes are
   `6e991432a1ce5ec9c1cbe97199cb5fd647c5edc89bdcc60ce560382a70835fcf` /

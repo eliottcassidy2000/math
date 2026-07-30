@@ -46,6 +46,14 @@ Z312_TERMINAL_OUTPUT_PATH = (
     ROOT / "05-knowledge/results/"
     "lrc14_j7_k3_z312_finite_low_pair_torsion_closure_thm2941.out"
 )
+Z312_REFEREE_PATH = (
+    ROOT / "04-computation/"
+    "lrc14_j7_k3_z312_finite_low_pair_torsion_independent_thm2941.py"
+)
+Z312_REFEREE_OUTPUT_PATH = (
+    ROOT / "05-knowledge/results/"
+    "lrc14_j7_k3_z312_finite_low_pair_torsion_independent_thm2941.out"
+)
 DEFAULT_OUTPUT = (
     ROOT / "05-knowledge/results/"
     "lrc14_j7_k3_z306_z302_z298_ray_status_descent_closure_thm2941.out"
@@ -61,13 +69,19 @@ EXPECTED_BODY_ATLAS_OUTPUT_SHA256 = (
     "cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda"
 )
 EXPECTED_Z312_TERMINAL_SHA256 = (
-    "6b644fbb4abdbcb9b929b1789a7e73177bcce3116ad1bdc3b4ee4216adb7042c"
+    "6b7d70ae105530ce01ffc8bd0d7770f4fe6a25c4cb76665c8095e2567f5ddfc0"
 )
 EXPECTED_Z312_TERMINAL_OUTPUT_SHA256 = (
-    "c94568f5970948e985f920da6bc9873173e85c79e0712b1c84000a939f4612a0"
+    "922d33a8a5bee98c61c5eba5388dc90b51a73317000934f06e15b9c65a81a085"
+)
+EXPECTED_Z312_REFEREE_SHA256 = (
+    "24006ebec0fc278be3571a349e2ad6f86aba28d22d6ee6159bcc1d3f15449d2f"
+)
+EXPECTED_Z312_REFEREE_OUTPUT_SHA256 = (
+    "33b8a9abc28abb3958addb3413ce5882c64a8e603f6f23280bed9c3ba021e193"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "b589ac0d64fd94468e0971de3b81a3bcffb8e446e506aa210ff85b4aa29dce5b"
+    "cbfa2716210e0e5c09afd354ebafed4001e950fd6af87bb1dcf3f41a11a3e492"
 )
 
 EXPECTED_COUNTS = {
@@ -127,6 +141,8 @@ for path, expected in (
     (BODY_ATLAS_OUTPUT_PATH, EXPECTED_BODY_ATLAS_OUTPUT_SHA256),
     (Z312_TERMINAL_PATH, EXPECTED_Z312_TERMINAL_SHA256),
     (Z312_TERMINAL_OUTPUT_PATH, EXPECTED_Z312_TERMINAL_OUTPUT_SHA256),
+    (Z312_REFEREE_PATH, EXPECTED_Z312_REFEREE_SHA256),
+    (Z312_REFEREE_OUTPUT_PATH, EXPECTED_Z312_REFEREE_OUTPUT_SHA256),
 ):
     require(file_sha256(path) == expected, ("dependency changed", path))
 
@@ -239,8 +255,8 @@ def evaluate_body(task):
         )
         require(gap == target - capacity and gap > 0, "invalid crude witness")
 
-    contradictions = []
-    certificate_digest = hashlib.sha256()
+    verified_instances = []
+    verified_instance_digest = hashlib.sha256()
     representative = None
     for ds, witness in sorted(status.items()):
         q, M, marginals, cap_set, histogram, certificate = witness
@@ -254,13 +270,14 @@ def evaluate_body(task):
             ray.fibre.residue_load_histogram(arcs, q) == histogram,
             "status load histogram changed",
         )
-        slacks, contradiction = independent_farkas_check(
+        _slacks, _contradiction = independent_farkas_check(
             q, marginals, capacities, histogram, certificate
         )
-        contradictions.append(contradiction)
+        instance = (ds, witness[:-1])
+        verified_instances.append(instance)
         if representative is None:
-            representative = (task, ds, witness, slacks, contradiction)
-        certificate_digest.update(f"{task}|{ds}|{witness}\n".encode())
+            representative = (task, instance)
+        verified_instance_digest.update(f"{task}|{instance}\n".encode())
 
     sign_totals = {
         sign: sum(
@@ -274,7 +291,7 @@ def evaluate_body(task):
     partition = (
         tuple(sorted(states.items())),
         tuple(sorted(crude.items())),
-        tuple(sorted(status.items())),
+        tuple(verified_instances),
         tuple(survivors),
     )
     return (
@@ -293,8 +310,8 @@ def evaluate_body(task):
         tuple(sorted(Counter(witness[1] for witness in status.values()).items())),
         max(states.items(), key=lambda item: (item[1]["excess"], item[0]), default=None),
         hashlib.sha256(repr(partition).encode()).hexdigest(),
-        certificate_digest.hexdigest(),
-        min(contradictions, default=None),
+        verified_instance_digest.hexdigest(),
+        len(verified_instances),
         representative,
     )
 
@@ -308,7 +325,7 @@ def main():
     tasks, atlas_counts = atlas_rows()
     require(tasks == tuple(EXPECTED_COUNTS), "global task order changed")
 
-    pair_rows, control_marginals, control_caps, control_certificate = ray.local.controls()
+    pair_rows, control_marginals, control_caps, control_instances = ray.local.controls()
     if args.processes == 1:
         records = tuple(evaluate_body(task) for task in tasks)
     else:
@@ -342,7 +359,7 @@ def main():
         pair_rows,
         control_marginals,
         control_caps,
-        control_certificate,
+        control_instances,
         representative,
     )
     semantic_hash = hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
@@ -356,6 +373,8 @@ def main():
         f"body_atlas_output_sha256={file_sha256(BODY_ATLAS_OUTPUT_PATH)}",
         f"z312_terminal_source_sha256={file_sha256(Z312_TERMINAL_PATH)}",
         f"z312_terminal_output_sha256={file_sha256(Z312_TERMINAL_OUTPUT_PATH)}",
+        f"z312_referee_source_sha256={file_sha256(Z312_REFEREE_PATH)}",
+        f"z312_referee_output_sha256={file_sha256(Z312_REFEREE_OUTPUT_PATH)}",
         "scope=2 exact z306 bodies plus 9 exact z302 bodies plus 12 exact z298 bodies;inherited projected high-label obligation (first itself may clear the wall);no finite label horizon",
         "ray_law=(z+L)delta(z+L)=zdelta(z);A(L-b)=-A(b);all denominator maxima attained",
         f"pair_overlap_exhaustive_controls={pair_rows}",
@@ -368,7 +387,7 @@ def main():
         (
             first, body, h, components, L, high_floor, first_d, checks, signs,
             denominator_classes, trials, partition, status_histogram, maximum,
-            partition_digest, certificate_digest, min_contradiction, _representative,
+            partition_digest, verified_instance_digest, verified_instance_count, _representative,
         ) = record
         states, crude, status, survivors = partition
         lines.append(
@@ -377,11 +396,12 @@ def main():
             f"denominator_trials={trials};states={len(states)};crude_kills={len(crude)};"
             f"status_kills={len(status)};survivors={len(survivors)};status_M={dict(status_histogram)};"
             f"max_state={maximum};partition_sha256={partition_digest};"
-            f"certificate_sha256={certificate_digest};min_exact_farkas_contradiction={min_contradiction}"
+            f"verified_farkas_instance_sha256={verified_instance_digest};"
+            f"verified_exact_farkas_instances={verified_instance_count}"
         )
     lines.extend(
         (
-            f"representative_exact_farkas={representative}",
+            f"representative_verified_farkas_instance={representative}",
             "independent_exact_farkas_checks=120/120:PASS",
             "atlas_gaps=303..305 empty;299..301 empty;next occupied height297 with7 bodies",
             "conclusion=all projected k3 rows at z1=306, z1=302, and z1=298 are empty;projected k3 cap<=297;next exact frontier=297",

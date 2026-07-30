@@ -16,6 +16,7 @@ order-three torsion pairs pointwise.
 from __future__ import annotations
 
 import argparse
+import ast
 import hashlib
 import importlib.util
 from collections import Counter
@@ -28,8 +29,8 @@ ROOT = Path(__file__).resolve().parents[1]
 FRONTIER = ROOT / "04-computation/lrc14_j7_k3_z312_ray_status_frontier_thm2941.py"
 FRONTIER_OUTPUT = ROOT / "05-knowledge/results/lrc14_j7_k3_z312_ray_status_frontier_thm2941.out"
 DEFAULT_OUTPUT = ROOT / "05-knowledge/results/lrc14_j7_k3_z312_finite_low_pair_torsion_independent_thm2941.out"
-EXPECTED_FRONTIER_SHA256 = "24bfd9702d00454782ced222e35d3a003eaea0219c58b34dd9bffacd5e264bd4"
-EXPECTED_FRONTIER_OUTPUT_SHA256 = "e8fa74d4757d4a1947ce93fdc29cf8de00b75d468af0bc9ed33a8d798cfcac85"
+EXPECTED_FRONTIER_SHA256 = "441d56e875f7e38698909ea2420356f6ea8221fecbbbee6f50c52511251a4e91"
+EXPECTED_FRONTIER_OUTPUT_SHA256 = "3ede528d37f0160df92646108c00e7069e991506a3a8089841d0e81e921433c7"
 EXPECTED_SEMANTIC_SHA256 = "4667f8f0ef18add7466f849c6f902048d436692aa04c1f9037c2a3623709c91e"
 EXPECTED_GAPS = {
     (1, 8, 10, 11, 12, 14): F(271403663, 168333225060),
@@ -83,6 +84,24 @@ frontier = load("z312_independent_frontier", FRONTIER)
 ray = frontier.ray
 ray.FIRST = frontier.FIRST
 A = ray.suffix.A
+
+
+def residuals_from_frontier():
+    current = None
+    residuals = {}
+    for line in FRONTIER_OUTPUT.read_text().splitlines():
+        if line.startswith("E="):
+            current = tuple(ast.literal_eval(line.split(";", 1)[0][2:]))
+        elif line.startswith("  residual_denominators="):
+            rows = tuple(ast.literal_eval(line.split("=", 1)[1]))
+            require(current is not None and rows, "orphan residual ledger")
+            residuals[current] = rows
+    require(
+        {body: len(rows) for body, rows in residuals.items()}
+        == frontier.EXPECTED_RESIDUAL_COUNTS,
+        ("frontier residual ledger changed", residuals),
+    )
+    return residuals
 
 
 def first_on_ray(residue, modulus, threshold):
@@ -275,7 +294,7 @@ def main():
         "inherited_gate=first label 312 lies below every body high floor;projected high-wall theorem requires at least one later high label",
         "hostile_control=zero-high scalar arithmetic is tested separately and is not used as a proof step",
     ]
-    for body, residuals in frontier.EXPECTED_RESIDUALS.items():
+    for body, residuals in residuals_from_frontier().items():
         stream = ray.Stream(body)
         require(
             stream.first == frontier.FIRST and stream.first < stream.high_floor,

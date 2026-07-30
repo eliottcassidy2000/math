@@ -26,6 +26,7 @@ strictly above the three-aligned completion cap 36/91.
 from __future__ import annotations
 
 import argparse
+import ast
 import hashlib
 import importlib.util
 import math
@@ -58,10 +59,10 @@ DEFAULT_OUTPUT = (
 )
 
 EXPECTED_FRONTIER_SOURCE_SHA256 = (
-    "24bfd9702d00454782ced222e35d3a003eaea0219c58b34dd9bffacd5e264bd4"
+    "441d56e875f7e38698909ea2420356f6ea8221fecbbbee6f50c52511251a4e91"
 )
 EXPECTED_FRONTIER_OUTPUT_SHA256 = (
-    "e8fa74d4757d4a1947ce93fdc29cf8de00b75d468af0bc9ed33a8d798cfcac85"
+    "3ede528d37f0160df92646108c00e7069e991506a3a8089841d0e81e921433c7"
 )
 EXPECTED_PROJECTION_SHA256 = (
     "76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662"
@@ -123,6 +124,24 @@ for path, expected in (
 frontier = load_module("z312_torsion_frontier", FRONTIER_PATH)
 projection = load_module("z312_torsion_projection", PROJECTION_PATH)
 ray = frontier.ray
+
+
+def residuals_from_frontier():
+    current = None
+    residuals = {}
+    for line in FRONTIER_OUTPUT_PATH.read_text().splitlines():
+        if line.startswith("E="):
+            current = tuple(ast.literal_eval(line.split(";", 1)[0][2:]))
+        elif line.startswith("  residual_denominators="):
+            rows = tuple(ast.literal_eval(line.split("=", 1)[1]))
+            require(current is not None and rows, "orphan residual ledger")
+            residuals[current] = rows
+    require(
+        {body: len(rows) for body, rows in residuals.items()}
+        == frontier.EXPECTED_RESIDUAL_COUNTS,
+        ("frontier residual ledger changed", residuals),
+    )
+    return residuals
 
 
 def first_on_ray(residue, modulus, threshold):
@@ -403,11 +422,12 @@ def main():
     args = parser.parse_args()
     require(args.processes >= 1, "process count must be positive")
 
+    residuals = residuals_from_frontier()
     require(
-        set(frontier.EXPECTED_RESIDUALS) == set(EXPECTED_BODY_CASES),
+        set(residuals) == set(EXPECTED_BODY_CASES),
         "frontier residual bodies changed",
     )
-    tasks = tuple(frontier.EXPECTED_RESIDUALS.items())
+    tasks = tuple(residuals.items())
     if args.processes == 1:
         records = tuple(analyze_body(body, residuals) for body, residuals in tasks)
     else:
