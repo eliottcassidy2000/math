@@ -8,8 +8,8 @@ each later slot beyond that horizon is bounded by 6r/(49z), so the scan is
 uniform over all later labels rather than a finite-label experiment.
 
 Exactly ten rows survive the scalar necessary condition: eight at z1=1810,
-one at z1=1812, and one at z1=1824.  In particular the open bands
-1813..1823 and 1825..1835 are empty.  Eight surviving rows have exact
+one at z1=1812, and one at z1=1824.  In particular z1=1811 and the open
+bands 1813..1823 and 1825..1835 are empty.  Eight surviving rows have exact
 suffix maximizers; the two remaining z1=1810 rows retain an explicit
 HIGH-TAIL upper-bound placeholder and are routed to exact rays separately.
 """
@@ -177,7 +177,7 @@ def render(profiles):
             f"global_survivors={len(survivors)};surviving_firsts="
             f"{tuple(row[1] for row in survivors)};high_tail_rows={high_tail_keys}"
         ),
-        "empty_first_bands=1813..1823,1825..1835",
+        "empty_firsts=1811;empty_first_bands=1813..1823,1825..1835",
     ]
     for row in survivors:
         (
