@@ -10,8 +10,9 @@ status: >
   five-aligned/two-drift face independently of THM-2928, and exact suffix
   filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
   common-status, exact-packet, forced-high-ray, antipodal-phase,
-  finite-low-pair torsion, scalar-splice, and status-descent addenda improve
-  the k=2/k=3 first-drift caps from 2142/380 to 1732/297.
+  finite-low-pair torsion, torsion-density pigeonhole, scalar-splice, and
+  status-descent addenda improve the k=2/k=3 first-drift caps from 2142/380
+  to 1732/294.
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -105,6 +106,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_k3_z312_finite_low_pair_torsion_independent_thm2941.out
   - 04-computation/lrc14_j7_k3_z306_z302_z298_ray_status_descent_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z306_z302_z298_ray_status_descent_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_z297_ray_status_torsion_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z297_ray_status_torsion_closure_thm2941.out
   - 04-computation/lrc14_j7_k3_z324_located_two_cell_direct_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z324_located_two_cell_direct_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_2004_2142_thm2941.py
@@ -1357,13 +1360,69 @@ states, split into crude fibre-capacity and common-status kills.  The latter
 against the common 16-cell table; positive feasible and incompatible hostile
 controls are both retained.  There are no survivors.  Closing these `23`
 further atlas rows leaves `375,765` necessary rows.  The next occupied height
-is `297`, with seven bodies, so the current proved projected cap is
+is `297`, with seven bodies.
+
+At that endpoint the exact all-label ray quotient has `1,172` denominator
+states.  Crude all-divisor capacity removes `271`; a locally replayed common
+16-status screen removes `830`, with all `830` rational Farkas witnesses
+independently reconstructed.  Exactly `71` states remain on three bodies.
+The inherited `HIGH-TAIL` coordinate is again indispensable: a hostile
+zero-high relaxation passes `70/71` states.  Conversely, a
+duplicate-permitting two-or-more-high upper lies strictly below the scalar
+wall on all three bodies.  Every possible packet therefore has exactly one
+high label.  Keeping every finite low label, including negative-amplitude
+ones, reduces the residual universe to `73` `(state,high denominator,low
+pair)` cases and only seven body-distinct low pairs.
+
+The terminal step uses the following reusable **torsion-density pigeonhole
+lemma**.  Let `S` be a set of distinct classes in `Z/dZ`, let `r|d`, and
+suppose
 
 ```text
-z_1<=297.                                               (25q2)
+2<=r<=7,                 |S|>d/r.
 ```
 
-No closure at height `297` is claimed here.  The `z_1=312` frontier
+The subgroup `(d/r)Z/dZ` has order `r` and only `d/r` cosets, so two distinct
+`c,c' in S` lie in one coset.  Their nonzero difference has effective order
+
+```text
+s=r/gcd(k,r)<=r,       c'-c=k(d/r) mod d,       0<k<r.
+```
+
+For a primitive high ray
+
+```text
+z=(L/d)u+mL,             gcd(u,d)=1,
+```
+
+the height `m` cancels and the two phases differ by `uk/r`, a nonzero
+`s`-torsion fraction.  Multiplication by `u` preserves effective order, so
+its circular norm is at least `1/s>=1/r>=1/7`.  Two strict-open danger arcs
+of radius `1/14` cannot both contain these phases.  Equality at `s=7` is
+allowed: only their excluded endpoints meet.  The lemma requires a set of
+distinct residues; counting safe cells with multiplicity would not suffice.
+
+For each of the `73` endpoint cases, `S` is precisely the distinct residue
+classes modulo the high denominator represented by complete body cells
+missed by `297` and both fixed low labels.  The least qualifying `r`
+histogram is
+
+```text
+{2:49, 3:14, 4:6, 6:4},
+```
+
+and the resulting effective-order histogram is `{2:52, 3:17, 4:4}`.  Thus
+every primitive high direction leaves one of the located complete cells
+safe; the projected drift-safe mass is `1>36/91`.  All seven atlas rows at
+`297` are empty.  Since `295,296` are empty and the next occupied height is
+`294` with one body, the necessary ledger falls to `375,758` and the proved
+checkpoint cap is
+
+```text
+z_1<=294.                                               (25q2)
+```
+
+The `z_1=312` frontier
 source/output/semantic hashes are
 
 ```text
@@ -1394,6 +1453,14 @@ The `306/302/298` descent source/output/semantic hashes are
 97fbefb8ffb17bf6742948027ec2d18dd9212bf76d35f5511e0b1c8dff64b4fc
 316d069c3f560ebc504283ea9f9ab19ce0987f73d8763bb8a27eeda48fcac24a
 b589ac0d64fd94468e0971de3b81a3bcffb8e446e506aa210ff85b4aa29dce5b.
+```
+
+The `z_1=297` torsion-density source/output/semantic hashes are
+
+```text
+f4464e01f0ada1515510a7d59b00582db3d677dd2a91b25407d25702d204e4e5
+a0de530aefe273ff74a5494867ca31d29d00d66811173cbfbeaadbfcab99e421
+1a4d141dc2dfc49fc0b15b1ec7ba7f4f637827985b3b946f5f367960aa0cbee6.
 ```
 
 The physical reconciliation source/output pairs are

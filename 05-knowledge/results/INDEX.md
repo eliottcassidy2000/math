@@ -95,11 +95,16 @@
   `d/3` in two make every high ray's strict radius-`1/14` arcs disjoint.
   Primary and independently reconstructed implementations agree.  Exact
   common-status/Farkas replay then closes occupied heights `306,302,298` by
-  `137=17+120`, leaving no survivors.  The projected `k=3` cap is `297` and
-  the necessary-row ledger is `375,765`; height `297` is not closed.
+  `137=17+120`, leaving no survivors.  At `z297`, `1172=271+830+71`; the
+  inherited high gate and an exact two-high upper reduce the `71` residuals
+  to `73` one-high cases.  In every case a density pigeonhole on distinct
+  fixed-safe residues finds effective torsion order at most `7`, uniformly
+  separating the strict high-danger arcs.  All seven rows close, the
+  projected `k=3` cap is `294`, and the necessary-row ledger is `375,758`.
   Torsion source/output/semantic hashes begin `6b644fbb/c94568f5/95f9da4c`;
   the independent hashes begin `80e731d1/c0daca33/4667f8f0`; descent hashes
-  begin `97fbefb8/316d069c/b589ac0d`.
+  begin `97fbefb8/316d069c/b589ac0d`; `z297` hashes begin
+  `f4464e01/a0de530a/1a4d141d`.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py`, the isolated terminal referees,
   and the exact/projected plus forced-high descent packages -> matching
   `.out` files [THM-2941 PROVED NECESSARY BANDS + FINITE-EXACT CLOSURES +
@@ -276,7 +281,7 @@
 - `lrc14_j7_k3_projected_scalar_atlas_thm2941.py`, the descending scalar
   slices, ray/status closures, `z324` antipodal sidecar, `z312` finite-low-pair
   torsion closure plus independent referee, and the combined `z306/z302/z298`
-  descent -> matching `.out` files
+  descent, and the `z297` torsion-density closure -> matching `.out` files
   [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].  The
   global `200..378` atlas has `6,060` rows.  Exact quotients close its upper
   banks through `324`; the sole `z324` survivor is an unbounded
@@ -288,12 +293,15 @@
   separation close all `80` resulting cases uniformly in primitive direction
   and height.  The next three occupied banks close by `9=0+9`, `32=2+30`,
   and `96=15+81` crude/status kills; all `120` status certificates are
-  independently rebuilt as exact rational Farkas contradictions.  Thus the
-  current cap is `297`, the old necessary ledger is `375,765`, and height
-  `297` remains open.  Torsion source/output/semantic hashes begin
+  independently rebuilt as exact rational Farkas contradictions.  The
+  `z297` quotient then has `1172=271+830+71`; exact one-high reduction and
+  the order-at-most-seven torsion-density lemma close all `73` terminal
+  cases.  Thus the current cap is `294` and the necessary ledger is
+  `375,758`.  Torsion source/output/semantic hashes begin
   `6b644fbb/c94568f5/95f9da4c`; independent hashes begin
   `80e731d1/c0daca33/4667f8f0`; descent hashes begin
-  `97fbefb8/316d069c/b589ac0d`.
+  `97fbefb8/316d069c/b589ac0d`; `z297` hashes begin
+  `f4464e01/a0de530a/1a4d141d`.
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;
   the `z336` source/output/semantic hashes are
   `6e991432a1ce5ec9c1cbe97199cb5fd647c5edc89bdcc60ce560382a70835fcf` /
