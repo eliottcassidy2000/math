@@ -10,8 +10,8 @@ status: >
   five-aligned/two-drift face independently of THM-2928, and exact suffix
   filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
   common-status, exact-packet, forced-high-ray, antipodal-phase,
-  finite-low-pair torsion, and status-descent addenda improve the k=2/k=3
-  first-drift caps from 2142/380 to 1742/297.
+  finite-low-pair torsion, scalar-splice, and status-descent addenda improve
+  the k=2/k=3 first-drift caps from 2142/380 to 1736/297.
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -179,6 +179,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_k2_z1758_ray_status_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_cap1742_splice_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_cap1742_splice_thm2941.out
+  - 04-computation/lrc14_j7_k2_cap1736_scalar_splice_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_cap1736_scalar_splice_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -1676,13 +1678,30 @@ height is supplied by interpolation.  The ledger update is
 2,239,804 - 1 - 12 - 2 = 2,239,789,
 ```
 
-and the current proved projected `k=2` cap is
+and this first splice gives
 
 ```text
 z_1<=1742.                                              (25q4)
 ```
 
-The next exact obligation is an all-body atlas at and below `1742`.
+The hash-pinned all-body scalar atlas then exhausts every first label in
+`1680..1742`.  Its only `58` eligible rows occur at
+
+```text
+1683:1, 1694:10, 1702:3, 1708:14,
+1722:11, 1724:2, 1732:2, 1736:15.
+```
+
+Thus every integer height `1737..1742` is empty without interpolation.  The
+fifteen rows at `1736` remain live in this package.  The proved projected
+`k=2` cap is therefore
+
+```text
+z_1<=1736,                 ledger=2,239,789.              (25q5)
+```
+
+The cap-`1736` splice pins the complete cap-`1742` verifier and scalar atlas;
+normal and optimized replays match its stored transcript.
 
 For `k=5`, there is a second, Gram-facing derivation.  Pointwise
 
