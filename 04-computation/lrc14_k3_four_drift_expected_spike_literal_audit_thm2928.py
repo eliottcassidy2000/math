@@ -11,8 +11,9 @@ exact rational phase boundary.  The controls verify:
 * d/gcd(d,q) is 1 or 7;
 * if d|q, every selected residue fills a whole q-fibre and
   integral |Y_d(u)| du = q/7, independently of sampled unit numerator a;
-* for d=7a+r|q the filled-fibre count is exactly
-  a(q/d)+(q/d)X with Haar(X=1)=r/7;
+* for d=7a+r|q the filled-fibre count is
+  a(q/d)+(q/d)X with Haar(X=1)=r/7 almost everywhere, and that expression
+  remains a pointwise upper envelope at strict-mask seams;
 * if d does not divide q, the actual mask hits each q-fibre at most once;
 * strict-boundary spike counts are lower semicontinuous, hence all positive
   integer superlevel events are open;

@@ -18,8 +18,9 @@ For a projected-safe target let
 
 A cover forces the total spike support ``T`` to satisfy ``T>=N_c`` on the
 compact aligned-safe carrier, whose measure is at least 55/91.  The event
-``T>=N_c`` is proper open when ``N_c>0``.  Markov plus compact/open strict
-separation therefore gives the necessary condition
+``T>=N_c`` is open.  If it is the whole circle its mass is 1>55/91;
+otherwise compact/open separation makes its mass strictly larger than the
+safe mass.  Markov therefore gives the necessary condition
 
     N_c=0  or  55*N_c < 13*(4-c)*q.                 (mean screen)
 
@@ -29,10 +30,14 @@ screen with the independently established row-specific support-status
 screen.  No denominator four-tuple is materialized.
 
 The next stage sharpens exactly the ``c=3`` slice.  There is then one spike
-denominator ``d|q``.  Write ``d=7*a+r`` and ``w=q/d``.  Its number of filled
-q-fibres is
+denominator ``d|q``.  Write ``d=7*a+r`` and ``w=q/d``.  On open phase
+cells, and hence almost everywhere, its number of filled q-fibres is
 
     a*w + w*X_d(u),       Haar(X_d=1)=r/7.
+
+At a strict-mask equality phase the actual count can be smaller.  The
+displayed two-level law is therefore also a valid pointwise upper envelope,
+which is the direction used by every necessary screen below.
 
 Thus a threshold event can have mass strictly above 55/91 exactly through
 
@@ -62,6 +67,11 @@ from pathlib import Path
 Q7_PATH = Path(__file__).with_name(
     "lrc14_k3_four_drift_q7_all_D_gf_thm2928.py"
 )
+EXPECTED_Q7_SHA256 = (
+    "3cc07195d580c5c5c01457ea95b58837a25c2176d326d12feaccc8e0bfa28dcc"
+)
+if sha256(Q7_PATH.read_bytes()).hexdigest() != EXPECTED_Q7_SHA256:
+    raise RuntimeError("frozen q7 four-drift dependency changed")
 spec = spec_from_file_location("lrc14_k3_q7", Q7_PATH)
 q7 = module_from_spec(spec)
 spec.loader.exec_module(q7)

@@ -42,7 +42,12 @@ status: >
   transverse one-per-fibre sections and vertical two-level spikes; retaining
   every deterministic floor and optional spike bit reduces the exact
   denominator ledger from 951,545,890,235 to 200,389,247,292 occurrences.
-  This is a necessary relaxation, not a sector closure.  The critical
+  Restoring located phase closes the sole-denominator-six c=4 family and
+  leaves 200,141,092,521 occurrences.
+  In the four-drift quotient, the same septimal split plus an exact
+  one-spike superlevel law reduces 21,357,714,101 raw occurrences to
+  2,548,901,482 necessary occurrences.  These are necessary relaxations,
+  not sector closures.  The critical
   two-torus carrier integral is positive on every fixed seven-tail affine ray;
   uniformly, seven tails in one common canonical-ruler quotient block are
   safe once the quotient is at least 315,586.  Branches with four or more
@@ -96,6 +101,14 @@ upward_status_cover_output: 05-knowledge/results/lrc14_upward_status_fractional_
 k2_septimal_script: 04-computation/lrc14_k2_septimal_floor_exception_gf_thm2928.py
 k2_septimal_engine: 04-computation/lrc14_k2_septimal_floor_exception_engine_thm2928.cpp
 k2_septimal_output: 05-knowledge/results/lrc14_k2_septimal_floor_exception_gf_thm2928.out
+k2_d6_located_script: 04-computation/lrc14_k2_d6_located_phase_closure_thm2928.py
+k2_d6_located_output: 05-knowledge/results/lrc14_k2_d6_located_phase_closure_thm2928.out
+k3_septimal_base_script: 04-computation/lrc14_k3_four_drift_divisor_status_gf_thm2928.py
+k3_septimal_q7_script: 04-computation/lrc14_k3_four_drift_q7_all_D_gf_thm2928.py
+k3_septimal_script: 04-computation/lrc14_k3_four_drift_expected_spike_gf_thm2928.py
+k3_septimal_output: 05-knowledge/results/lrc14_k3_four_drift_expected_spike_gf_thm2928.out
+k3_septimal_audit_script: 04-computation/lrc14_k3_four_drift_expected_spike_literal_audit_thm2928.py
+k3_septimal_audit_output: 05-knowledge/results/lrc14_k3_four_drift_expected_spike_literal_audit_thm2928.out
 affine_profile_script: 04-computation/lrc14_j7_affine_profile_min_frequency_thm2928.py
 affine_profile_output: 05-knowledge/results/lrc14_j7_affine_profile_min_frequency_thm2928.out
 ---
@@ -1424,15 +1437,21 @@ Writing
 d=7a+r,       w=q/d,       0<=r<7,
 ```
 
-the exact number of hit fibres at common phase `u` is
+the number of hit fibres at common phase `u` has the pointwise upper
+envelope
 
 ```text
-Y_d(u)=w(a+X_d(u)),             Pr(X_d=1)=r/7.       (37lS3)
+Y_d(u)<=Ybar_d(u)=w(a+X_d(u)),    X_d in {0,1},
+integral X_d=r/7.                                      (37lS3)
 ```
 
-In particular `integral Y_d=q/7`, independently of `d` and of the reduced
-numerator.  This is an exact seven-sheeted Fubini law, not a probabilistic
-independence assumption.
+Equality `Y_d=Ybar_d` holds almost everywhere; when `r>0`, `X_d` can be
+chosen for pointwise equality as well.  When `r=0`, a strict-mask equality
+phase can lower `Y_d` from `wa` to `w(a-1)`, but never raises it above the
+granted floor `wa`.  In particular `integral Y_d=q/7`, independently of
+`d` and of the reduced numerator.  This is an exact seven-sheeted Fubini
+law, not a probabilistic independence assumption.  Every sieve below uses
+`Ybar_d`, so the seam defect only enlarges the necessary relaxation.
 
 Suppose `c` of the five denominators are transverse and let
 
@@ -1442,11 +1461,12 @@ N_c=#{b mod q: lambda_q(S_D,b)>c}.
 
 For the remaining vertical denominators, sum their deterministic floors
 `wa` and retain every nonconstant bit `X_d` with its weight `w` and marginal
-`r/7`.  Coverage forces the corresponding upward weighted event throughout
-the compact aligned-safe carrier.  The fractional-cover theorem above gives
-its exact maximum over all joint laws with these marginals.  Compact
-containment in a proper open event makes the necessary comparison with
-`u_2=66/91` strict.  The coarser expectation consequence is
+`r/7`.  Coverage forces the corresponding open upward weighted event
+throughout the compact aligned-safe carrier.  If the event is the whole
+circle, its mass is already strictly above `u_2=66/91`; otherwise compact
+containment in an open proper subset makes the comparison strict.  The
+fractional-cover theorem above gives its exact maximum over all joint laws
+with these marginals.  Its coarser expectation consequence is
 
 ```text
 66 N_c < 13(5-c)q,                                 (37lS4)
@@ -1486,8 +1506,8 @@ c=5:  1,490,308,157.                                (37lS7)
 ```
 
 Thus the exact screen removes `78.94%` of the raw occurrence ledger, but it
-does not close `k=2`.  The minimum survivor remains
-`D=168`, `F=(1,2,3,4,6,12)`, with four transverse sections and one
+does not close `k=2`.  Before located-phase refinement its minimum survivor
+is `D=168`, `F=(1,2,3,4,6,12)`, with four transverse sections and one
 denominator-six vertical mask.  The relaxation still forgets the actual
 common-phase locations of the optional bits, their positions inside the
 seven-sheeted fibres, compatibility between quotient scales, and the
@@ -1507,6 +1527,182 @@ f711376bdfa0064f70d76e42505cf1eb89dadc4c66bcacd90d985b6641c2cd75,
 
 and the survivor semantic digest is
 `2eec9a97f02a7b8f8e36e50f747d53186ff5b84234a14fc3ac64818b54033675`.
+
+### Located phase closes the sole-denominator-six family
+
+The first survivor exposes exactly which coordinate the aggregate optional
+bit erased.  In the `c=4` slice, suppose the sole vertical denominator is
+`d=6` and `N_4>0`.  Its reduced numerator is `s in {1,5}`.  The spike-high
+event and its closed low set are
+
+```text
+V_s={u:||su||<3/7},
+C_s={u:||su-1/2||<=1/14},       mu(C_s)=1/7.          (37lS11)
+```
+
+Coverage would force the two-aligned safe set `R_(a,b)` into `V_s`.  This
+is impossible uniformly in the distinct aligned multipliers `a,b`.  Put
+`g=gcd(a,s)`, `A=a/g`, `S=s/g`, and
+`B_2(x)=x^2-x+1/6` periodically.  Exact Fourier overlap, with null
+endpoints immaterial, gives
+
+```text
+mu(C_s intersect D_a)
+ =1/49+
+  [B_2({(S+6A)/14})-B_2({(S+8A)/14})]/(AS)
+ =1/49+h/(49AS).                                     (37lS12)
+```
+
+For `S=1`, the numerator `h` by `A mod 14` is
+
+```text
+(0,-1,5,-3,3,-5,1,0,-1,5,-3,3,-5,1),
+```
+
+and for `S=5` it is
+
+```text
+(0,-5,4,-8,8,-4,5,0,-5,4,-8,8,-4,5).
+```
+
+These finite residue tables prove
+
+```text
+mu(C_s intersect D_a)<=1/14,  equality only when a=2s;
+mu(C_s intersect D_a)<=1/28,  otherwise.              (37lS13)
+```
+
+Since `a` and `b` are distinct,
+
+```text
+mu(C_s intersect (D_a union D_b))<=3/28<1/7=mu(C_s).
+```
+
+Hence `C_s` contains a point of `R_(a,b)`, contradicting
+`R_(a,b) subset V_s`.  The entire sole-`d=6`, `c=4`, `N_4>0` subfamily is
+therefore empty without a multiplier horizon.
+
+Divisor-Möbius completion and a residual-union pass remove exactly
+`248,154,771` occurrences and `8,998,004` globally surviving shapes.
+The exact floor/exception ledger becomes
+
+```text
+shapes             26,899,164,786
+occurrences       200,141,092,521
+rows                        4,354
+bodies                      2,966
+resolving moduli              147.                    (37lS14)
+```
+
+Sixty rows, eleven bodies, and two resolving moduli disappear after union
+over all `c` and shapes; the minimum survivor moves to `D=336`,
+`F=(1,2,3,4,8,12)`.  The referee checks `1,000` literal overlaps, `18`
+small exact-lcm moduli containing `1,029` fixed-`d=6` shapes, the full
+residual union, and ordinary/optimized byte identity.  Canonical
+source/output hashes are
+
+```text
+9f300459b273ad1825d3fe3e9274c6afe609f2d581e9df3d2be1780d347e541b
+187e4f0e48eb2c93bdeac083f09707739b86656f5e88f9e4cbdb6d5019fbd0f7.
+```
+
+This located lemma closes one exact family only.  It does not license
+subtracting all `18,064,772` fixed-`d=6` shapes before the residual-union
+pass, and it does not close the remaining `k=2` quotient.
+
+### Four-drift septimal mean and exact one-spike quotient
+
+The same seven-sheeted object gives a much smaller first exact quotient for
+`k=3,p=4`.  Every one of its `26,970` support-transfer rows is septimal, so
+write `D=7q`.  Grant each of `c` transverse denominators one point in every
+`q`-fibre.  For the target support define
+
+```text
+N_c=#{b mod q:lambda_q(S_D,b)>c}.
+```
+
+The remaining `m=4-c` vertical masks fill whole fibres.  If `T(u)` is their
+total number of filled fibres, seven-sheeted Fubini gives
+
+```text
+integral_T T(u)du=mq/7.
+```
+
+A cover would force the open event `{T>=N_c}` to contain the compact
+three-aligned safe set, whose mass is at least `u_3=55/91`.  If this event
+is the whole circle, then `N_c<=integral T=mq/7`, so
+`55N_c<=55mq/7<13mq`.  Otherwise
+
+```text
+55/91<=mu(R)<mu({T>=N_c})<=mq/(7N_c).
+```
+
+Thus Markov gives, for `N_c>0`, the strict necessary condition
+
+```text
+55N_c<13(4-c)q,                                      (37lS8)
+```
+
+while `N_c=0` is retained separately.  No independence among the vertical
+bits is assumed.
+
+When `c=3`, there is only one vertical denominator.  Write
+
+```text
+d=7a+r,       w=q/d,       0<=r<7.
+```
+
+Its a.e. fibre count is `aw+wX`, with `integral X=r/7`, and this is a
+pointwise upper envelope at strict seams.  The superlevel event can have
+mass strictly larger than `55/91` exactly only when
+
+```text
+N_3<=floor(d/7)(q/d)+1_(r>=5)(q/d).                  (37lS9)
+```
+
+Divisor-Möbius inversion is performed in grouped feature space, retaining
+the unique `c=3` spike denominator rather than enumerating four-tuples.
+Intersecting these screens with the separately necessary support/status
+screen gives
+
+```text
+stage                                      shapes       occurrences       rows
+raw support transfer                 694,921,995    21,357,714,101     26,970
+support/status                       694,254,050    13,280,722,299     18,599
+mean screen AND support/status       400,005,870     2,934,202,044      2,120
+hybrid: exact c=3, mean c!=3          398,241,574     2,548,901,482      1,904.
+                                                                  (37lS10)
+```
+
+The last row occupies `1,823` bodies and `107` resolving moduli.  Its
+`c=1,2,3,4` occurrence counts are respectively
+`71,619,386`, `1,351,841,956`, `1,065,317,472`, and `60,122,668`: only
+the `c=3` slice is replaced by `(37lS9)`, while the other slices retain the
+mean screen `(37lS8)`.  Its
+minimum survivor is `D=840`, `F=(1,3,4,5,6,10)`; for the unique-spike
+slice the first survivor has `d=5`, remainder `5`, and allowance `24`.
+The mean equality locus is empty, and the literal phase audit checks `485`
+individual masks, `7,904` strict boundary cells, `441` one-spike
+thresholds, and `626` four-mask Markov thresholds.
+
+This is a necessary-state compression, not a closure of `k=3`.  The
+support/status and spike predicates are intersected only as separate
+necessary conditions: their shared phase bits, actual transverse-section
+locations, unit directions, and cross-scale compatibility are not yet
+optimized jointly.  The abandoned general all-`c` feature expansion is not
+a dependency.  Canonical base/q7/primary/audit source hashes are
+
+```text
+2fcd1fa7f122517feff3d3e0b3a21a6664fefaa12588e4db008572078989d6eb
+3cc07195d580c5c5c01457ea95b58837a25c2176d326d12feaccc8e0bfa28dcc
+05e365a654b32e66b814dcbce9385a2d13c22a2c84a5474e0855dcab6262b055
+a3a65ae7d2fd05c7efc2b9ad5338eeda65fd5ddce6a5812af378e205aeae1065,
+```
+
+and primary/audit output hashes are respectively
+`aa14b0894fb368df1723351d1c8fc92a5ba0e2c2cc3808b6285cade79ab468d1`
+and
+`eff21ad878828f002a38d4cc258cdb02a060c80ba943335bf0f397b6de773fff`.
 
 ### Finite-ring Kakeya needles and the first three-drift sector
 
@@ -2377,8 +2573,11 @@ LRC(14).  The next aligned sectors have two or three aligned combs and are
   wrong object: before numerators or phases it has `21,357,714,101`
   four-drift and `951,545,890,235` five-drift occurrences.  The septimal
   peel and fractional-blocker compression now reduce the latter to
-  `200,389,247,292`, but still deliberately forget actual optional-bit
-  locations.  The next exact object is the common seven-sheeted support
+  `200,389,247,292`; the sole-`d=6` located lemma reduces it further to
+  `200,141,092,521`.  Mean and one-spike screens reduce the four-drift
+  ledger to `2,548,901,482`.  Both residuals still deliberately forget
+  most optional-bit locations.  The next exact object is the common
+  seven-sheeted support
   pattern—base load together with located transverse sections and vertical
   exceptional fibres—joined to the THM-2941 unit-ray/common-status sidecar
   and, where necessary, a carrier-local multi-endpoint current.

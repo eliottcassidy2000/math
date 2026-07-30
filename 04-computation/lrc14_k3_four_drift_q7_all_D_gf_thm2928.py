@@ -53,6 +53,11 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE_PATH = Path(__file__).with_name(
     "lrc14_k3_four_drift_divisor_status_gf_thm2928.py"
 )
+EXPECTED_BASE_SHA256 = (
+    "2fcd1fa7f122517feff3d3e0b3a21a6664fefaa12588e4db008572078989d6eb"
+)
+if sha256(BASE_PATH.read_bytes()).hexdigest() != EXPECTED_BASE_SHA256:
+    raise RuntimeError("frozen four-drift base dependency changed")
 spec = spec_from_file_location("lrc14_k3_status_gf", BASE_PATH)
 base = module_from_spec(spec)
 spec.loader.exec_module(base)

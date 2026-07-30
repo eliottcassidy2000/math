@@ -97,20 +97,30 @@ verification:
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_2004_2142_thm2941.out
   - 04-computation/lrc14_j7_k2_z2060_ray_status_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_z2060_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z2060_ray_status_independent_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z2060_ray_status_independent_thm2941.out
   - 04-computation/lrc14_j7_k2_z2004_ray_status_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_z2004_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z2004_ray_status_independent_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z2004_ray_status_independent_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_1992_2003_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_1992_2003_thm2941.out
   - 04-computation/lrc14_j7_k2_z1992_ray_status_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_z1992_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1992_ray_status_independent_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1992_ray_status_independent_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_1940_1991_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_1940_1991_thm2941.out
   - 04-computation/lrc14_j7_k2_z1940_ray_status_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_z1940_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1940_ray_status_independent_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1940_ray_status_independent_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_1932_1939_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_1932_1939_thm2941.out
   - 04-computation/lrc14_j7_k2_z1932_ray_status_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_z1932_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1932_ray_status_independent_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1932_ray_status_independent_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_1837_1931_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_1837_1931_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_1836_1836_thm2941.py
@@ -1303,7 +1313,8 @@ only `240` exceptional events.  At `z_1=1932` the stronger threshold-three
 form has `720` heavy fibres but only `360` events.  Exact 32-cell Farkas
 certificates and independent no-LP Pruefer-tree audits agree.
 
-The next global slice, at `z_1=1836`, leaves exactly five rows.  For the two
+The exact all-body band `1837<=z_1<=1931` is scalar-empty.  The next global
+slice, at `z_1=1836`, leaves exactly five rows.  For the two
 large-period rows, the residue-ray identity
 `delta(r+mL)=A(r)/(r+mL)` makes the all-label top-four envelope exact: the
 first four positive points on each ray dominate every later point.  Replacing

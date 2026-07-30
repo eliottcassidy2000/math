@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Exact aggregate scout for three aligned combs and four drifts.
+"""Exact aggregate referee for three aligned combs and four drifts.
 
-This is a scratch research instrument, not a canonical theorem referee.
-It never enumerates the 694,921,995 denominator four-multisets row by row.
+This is the canonical grouped-feature base of THM-2928's four-drift
+septimal quotient.  It never enumerates the 694,921,995 denominator
+four-multisets row by row.
 
 Let ``D`` be the common resolving denominator and, for ``d|D``,
 
@@ -43,9 +44,9 @@ theorem gives
 
 where w is a fractional cover of the inclusion-minimal true status sets.
 The cover LP has at most four variables here and is solved exactly over
-Fractions.  Equality is also impossible here: the aligned safe carrier is
-compact, the heavy-status event is open, and a compact subset of a proper
-open subset of the circle has strictly smaller measure.  Thus a status
+Fractions.  The heavy-status event is open.  If it is the whole circle its
+mass is 1>55/91; otherwise the aligned safe carrier is a compact subset of
+a proper open subset and strict measure separation applies.  Thus a status
 survives this relaxation only when its maximum mass is *strictly greater*
 than 55/91.
 
