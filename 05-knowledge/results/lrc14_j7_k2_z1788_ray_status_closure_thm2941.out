@@ -1,0 +1,12 @@
+LRC14 projected k=2 exact ray/status closure at z1=1788
+parent_source_sha256=c80c152300e60a2830d7cff4af1ac104d0f7ca1dfea978033dbaf03a11809d5b
+parent_output_sha256=b03b46a6c438773ef1c433c435828a5426e18c998999cbee543541904b85f20b
+scope=unique z1788 atlas row;all distinct later nonaligned labels;no finite label horizon
+pipeline=residue rays;denominator multisets;all-divisor crude;exact common-K5 Hunter status
+CASE;z1=1788;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=265/613284;first_d=980;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;denominators=59;trials=557845;counts=(39, 19, 20, 0);stage_sha256=('2715b8e5c1d0c60676548d5890bfed0cf9e74585b4595cfe8c523ab5af6c470f', 'b7f971d2ccafdb7329e6d2941025c7edc80a480ce588a5cb31aed4ca133a2013', '400c7e0575eda1edc440d6c8e64f396a026ac3806ee5e7c8d536d98d76ca0ccb', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d');conclusion=STATUS-EMPTY
+global_z1788_rows=1;empty=1;survivors=0
+atlas=empty:1789..1790 after parent closure;next occupied height:1784
+consequence=projected k=2 first drift label z1<=1784
+profile_sha256=faf85ab98de47cf4a32c9fc019356739b81c95d2712ef10ddd30aab63f40dbe0
+semantic_sha256=16bef50e606fab62abb7e3d9737be4ebc93f466ae5847c570dd0e975631556a1
+all_exact_controls=PASS
