@@ -289,7 +289,7 @@ def main():
     )
     payload = "\n".join(lines) + "\n"
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(payload)
+    args.output.write_text(payload, encoding="utf-8", newline="\n")
     print(payload, end="")
 
 

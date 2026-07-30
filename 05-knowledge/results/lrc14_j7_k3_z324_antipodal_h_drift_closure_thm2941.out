@@ -1,5 +1,5 @@
 LRC14 projected k=3 z1=324 antipodal H-drift closure
-frontier_source_sha256=7eaaf551d2bd4ae386e2db4452edac7d30c25f7fc67b71967e48454d688bf78e
+frontier_source_sha256=f934aba3b305aa928cdf1099e23ae0a982c8cf6e3003ce923b66b40365d8cb11
 frontier_output_sha256=db3c5c68c4aa2f61584ef91dd2171901888270edbf17e860d40f16a64d3a9242
 projection_source_sha256=76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662
 body=(2, 8, 10, 11, 12, 14);L=129360;h=21041/64680;lower=21041/1961960;first_delta=38443/12224520;high_floor=12741

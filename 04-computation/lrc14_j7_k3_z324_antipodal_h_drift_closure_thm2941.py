@@ -52,7 +52,7 @@ DEFAULT_OUTPUT = (
     "lrc14_j7_k3_z324_antipodal_h_drift_closure_thm2941.out"
 )
 EXPECTED_FRONTIER_SHA256 = (
-    "7eaaf551d2bd4ae386e2db4452edac7d30c25f7fc67b71967e48454d688bf78e"
+    "f934aba3b305aa928cdf1099e23ae0a982c8cf6e3003ce923b66b40365d8cb11"
 )
 EXPECTED_FRONTIER_OUTPUT_SHA256 = (
     "db3c5c68c4aa2f61584ef91dd2171901888270edbf17e860d40f16a64d3a9242"
@@ -404,7 +404,7 @@ def main():
     ]
     payload = "\n".join(lines) + "\n"
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(payload)
+    args.output.write_text(payload, encoding="utf-8", newline="\n")
     print(payload, end="")
 
 
