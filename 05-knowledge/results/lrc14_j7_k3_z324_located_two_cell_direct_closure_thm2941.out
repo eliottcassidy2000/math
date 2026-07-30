@@ -1,0 +1,23 @@
+LRC14 projected k=3 z1=324 independent located two-cell closure
+frontier_source_sha256=7eaaf551d2bd4ae386e2db4452edac7d30c25f7fc67b71967e48454d688bf78e
+frontier_output_sha256=db3c5c68c4aa2f61584ef91dd2171901888270edbf17e860d40f16a64d3a9242
+carrier_source_sha256=5d25a955fe184d6c1a3d8b632b4bbf901dc996ee46ad67c5748836fcc7134404
+body_atlas_source_sha256=2af6d96882f336a409a8657070ed76a75c09a53b3789101b83103b051e864ded
+body_atlas_output_sha256=cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda
+inherited_frontier=45 bodies;2346 states;702 crude;1643 status;1 residual
+sole_state=E:(2, 8, 10, 11, 12, 14);denominators:(3920, 4620, 10780, 10780)
+scalar_constants=L:129360;h:21041/64680;lower:21041/1961960;first_delta:38443/12224520;high_floor:12741
+best_any={3920: (Fraction(8147, 5885880), 429, 13, 429), 4620: (Fraction(2059, 452760), 364, 13, 364), 10780: (Fraction(56489, 18563160), 492, 41, 492)}
+best_high={3920: (Fraction(2449, 35043624), 12771, 387, 12771), 4620: (Fraction(31639, 272108760), 16828, 601, 16828), 10780: (Fraction(58687, 481283880), 12756, 1063, 12756)}
+positive_scalar_thresholds=(Fraction(35115043, 12066474420), Fraction(89391041, 20012412420), Fraction(722933, 244053810))
+literal_forcing=low_d3920:();d4620:(364,);d10780:(492,);remaining_H:any_high_exact_d3920
+fixed_base_surplus=5119/465404940
+located_cells=j:5880;k:19600;difference:13720;intervals:((Fraction(1, 22), Fraction(5881, 129360)), (Fraction(5, 33), Fraction(19601, 129360)));fixed_intersection_masses:((5880, 324, Fraction(0, 1)), (5880, 364, Fraction(0, 1)), (5880, 492, Fraction(0, 1)), (19600, 324, Fraction(0, 1)), (19600, 364, Fraction(0, 1)), (19600, 492, Fraction(0, 1)))
+pointwise_phase_law=z=33v and gcd(v,3920)=1 => v odd;phase_k-phase_j=v/2=1/2 mod 1
+topology=strict radius-1/14 danger arcs at half-turn are disjoint;every phase has a drift-safe located lift
+aligned_completion=three aligned danger sets have union mass<=3/7<1
+direct_rational_control=packet:(324, 364, 492, 12771);physical_residual_mass:6750416129/40024824840;projected_residual:((Fraction(0, 1), Fraction(1, 1)),);projected_mass:1
+atlas_gap=313..323 empty;next_occupied_height:312;bodies:80
+conclusion=the sole z1=324 residual is empty uniformly;all 45 z1=324 rows close
+semantic_sha256=3afa63cf8a0ed8084cced064fda19848eea5cec2f3ebd0938e8b91257e6e886e
+all_exact_controls=PASS
