@@ -42,13 +42,18 @@ def configure_utf8_output() -> None:
 
 
 def run(*args: str) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(
-        args,
-        cwd=REPO,
-        text=True,
-        capture_output=True,
-        check=False,
-    )
+    try:
+        return subprocess.run(
+            args,
+            cwd=REPO,
+            text=True,
+            capture_output=True,
+            check=False,
+        )
+    except FileNotFoundError:
+        # Missing binary (e.g. ripgrep not installed on this machine): degrade
+        # to "no output" so bounded startup still prints the rest of the packet.
+        return subprocess.CompletedProcess(args, returncode=127, stdout="", stderr="")
 
 
 def one_line(*args: str) -> str:

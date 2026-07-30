@@ -1,0 +1,6 @@
+t_A = 389/2181  p_A = 1285/2181  p_A/q_A = 1285/896
+t_B = 5872957/11821757  p_B = 8847357/11821757  p_B/q_B = 8847357/2974400
+identity: (2457/6592)*L(t_B) - U(t_A) - 1/25 == F  [exact]
+hence (27): (2457/6592)*log(8847357/2974400) - log(1285/896) > 1/25
+margin F = 0.0047369153018920395 (exact fraction preserved in source)
+status=CERTIFICATE_DECODED_VERIFIED_EXACT
