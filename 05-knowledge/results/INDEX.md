@@ -110,18 +110,30 @@
   scalar slices, and their ray-status closures -> matching `.out` files
   [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].  The
   global `200..378` atlas has `6,060` rows and isolated upper spikes
-  `378:9, 364:25, 350:53, 336:8, 330:1`.  Exact all-label quotients close
+  `378:9, 364:25, 350:53, 336:8, 330:1, 328:9, 324:45, 312:80`.  Exact
+  all-label quotients close
   `z1=364` by `1,109=242+867`, `z1=350` by
   `3,200=1,295+1,905`, `z1=336` by `109=71+38`, and `z1=330` by one
-  transparent status kill.  There are no survivors, so the current proved
-  projected `k=3` cap is `328` and the old necessary ledger is `375,922`.
+  transparent status kill.  At `328`, all `85=36+49` states fail crude or
+  common-status gates.  At `324`, those gates remove `2,345` of `2,346`
+  states and a uniform antipodal cell pair closes the last high ray.
+  At `312`, exact ray/status removes `18,179` of `18,249` states.  Restoring
+  the four residual bodies gives `27,491` finite packets, all strictly above
+  projected mass `36/91`, and `73` unbounded bases: `71` close by a
+  half-turn and the denominator-`1911` and `9555` tails by a third-turn.  The
+  all-sign audit visits `15,528` negative low rays and admits none.  Thus the
+  proved projected `k=3` cap is `306` and the old necessary ledger is
+  `375,788`.
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;
   the `z336` source/output/semantic hashes are
   `6e991432a1ce5ec9c1cbe97199cb5fd647c5edc89bdcc60ce560382a70835fcf` /
   `e257da724128208a9c80fc5f3e8f0cd4151b2073d3a8afa4814ca1e274f168ac` /
   `6ec3a326ec7fa66053150954b1f2a9d3910fbe044032de10c6ca57ff0e53d228`;
   repaired `z330` scalar/ray source-output pairs begin
-  `5eb30248/c2bf51b8` and `255aa252/3c62328f`.
+  `5eb30248/c2bf51b8` and `255aa252/3c62328f`.  The `z312` frontier
+  source/output/semantic hashes begin `202588c1/75c1f42d/3679bab5`; the
+  literal-closure hashes begin `253becac/e94dd7ad/29b61bc2`.  All named
+  normal and optimized transcripts match stored bytes.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py` and the corresponding
   `z2060/z2004/z1992/z1940/z1932/z1824/z1812` ray-status closures,
   high-wall descent, combined exact descent, and independent referees ->

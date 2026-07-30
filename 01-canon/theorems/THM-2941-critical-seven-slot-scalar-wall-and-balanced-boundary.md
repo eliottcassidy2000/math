@@ -10,7 +10,7 @@ status: >
   five-aligned/two-drift face independently of THM-2928, and exact suffix
   filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
   common-status, exact-descent, and antipodal-phase addenda improve the
-  k=2/k=3 first-drift caps from 2142/380 to 1799/312.  THM-2928's later
+  k=2/k=3 first-drift caps from 2142/380 to 1799/306.  THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
   addendum closes the common-level reflected-stalk k=1 diagonal
@@ -91,6 +91,10 @@ verification:
   - 05-knowledge/results/lrc14_j7_k3_z324_ray_status_frontier_thm2941.out
   - 04-computation/lrc14_j7_k3_z324_antipodal_h_drift_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z324_antipodal_h_drift_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_z312_ray_status_frontier_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z312_ray_status_frontier_thm2941.out
+  - 04-computation/lrc14_j7_k3_z312_torsion_h_drift_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z312_torsion_h_drift_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_2004_2142_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_2004_2142_thm2941.out
   - 04-computation/lrc14_j7_k2_z2060_ray_status_closure_thm2941.py
@@ -1201,13 +1205,69 @@ independent direct carrier subtraction/projection agree exactly, including
 on the representative packet `(324,364,492,12771)`.
 
 Thus all `45` rows at `324` are empty.  These two slices remove `54` further
-rows from the old necessary ledger, leaving `375,868`.  Since the atlas's
-next occupied height is exactly `312`, the current proved projected `k=3`
-cap is
+rows from the old necessary ledger, leaving `375,868`.  The atlas's next
+occupied height is `312`, where it has exactly `80` bodies.  Their attained
+all-label quotient contains `18,249` denominator states: crude all-divisor
+capacity removes `7,481`, independently rebuilt common-status/Farkas
+certificates remove `10,698`, and `70` states remain on four bodies, with
+counts `25+41+2+2`.
+
+Restoring literal labels gives a complete low/high partition.  The projected
+wall forces at least one of the three later labels high, so the `70` states
+have `490` nonempty masks.  Only `76` masks are scalar-viable, and every one
+has exactly one high label.  All signs of every finite low ray are retained:
+`15,528` negative-amplitude low candidates are tested and none is admissible.
+The bounded branch consists of exactly `27,491` literal packets.  Every one
+has projected residual mass strictly above `36/91`; the least certified
+prefix is
 
 ```text
-z_1<=312.                                               (25q1)
+(312,350,400,30617):
+mu(P)>=12137/30617=36/91+2255/2786147.                 (25q1a)
 ```
+
+The remaining `73` low bases already clear the scalar wall, so their unique
+high label is a genuine unbounded `H` ray.  For exact denominator `d`, write
+
+```text
+z=(L/d)u+mL,                 gcd(u,d)=1.
+```
+
+On two body-safe cells whose difference is `s` modulo `d`, the phase change
+is `us/d` modulo one, independent of `m`.  For `71` bases, `d` is even and
+`s=d/2`, giving a half-turn for every unit.  The two odd cases use
+
+```text
+d=1911,  s=637=d/3,       cells 17199,14014;
+d=9555,  s=3185=d/3,      cells 66885,41405.
+```
+
+Every unit is `+/-1 mod 3`, so the phase separation is `1/3` or `2/3`.
+This is strictly larger than the danger diameter `1/7`; the fixed labels
+miss both cells, hence their two local high-label dangers are disjoint for
+every height and both amplitude signs.  The common danger is empty and the
+projected residual has mass one.  Full-cell De Morgan reconstruction agrees
+exactly with independent direct carrier subtraction/projection for the
+least finite packet and representative order-two and order-three tails.
+
+Consequently the `z_1=312` slice is empty.  These `80` rows leave `375,788`
+old necessary rows.  The pinned lossless atlas has no occupied height from
+`307` through `311` and its next occupied height is exactly `306`, so the
+current proved projected `k=3` cap is
+
+```text
+z_1<=306.                                               (25q1)
+```
+
+Normal and optimized transcripts are byte-identical.  Frontier
+source/output/semantic hashes are
+`202588c1232fc507fa376ae57dbf630d340c54e5b6be727e6e5be5b83cdaa20d`,
+`75c1f42d86654efbb719c96d882e934ecf64b486c3325ad885e989767745223f`,
+and `3679bab5f4c5a9ea21a38c8a12c58b7e1733f02468e6541ff822265f8bb66382`.
+Literal-closure source/output/semantic hashes are
+`253becac3d48d73bf8adea7f1986dfa8cb0ab94d6df1e06a383a5769756a588e`,
+`e94dd7adcbd4c5c6c79c6c6f17ea03b5b9e37b0f6bf078fc59a789acca4e9fa1`,
+and `29b61bc296b7dfd63ef7db685cb446b684a54ae9af10ab873b55b7539395f211`.
 
 Closing each displayed spike certifies every skipped integer above the next
 spike; the descent does not extrapolate from a sparse search.
