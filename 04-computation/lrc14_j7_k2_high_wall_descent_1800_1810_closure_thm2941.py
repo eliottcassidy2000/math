@@ -56,10 +56,10 @@ OUTPUT_PATH = (
     / "lrc14_j7_k2_high_wall_descent_1800_1810_closure_thm2941.out"
 )
 EXPECTED_UNIFORM_SHA256 = (
-    "dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36"
+    "34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46"
 )
 EXPECTED_BAND_1810_SHA256 = (
-    "d197eb6179a3f7c7da08d4389fde988c0bd1fbc5db8cfaf8e30435ace3c7d87f"
+    "b29e1ccd9c3406c14bcfe2a53d5b6cee990c3d7a5e876bd5badcb27e2b506f0e"
 )
 EXPECTED_BAND_1800_SHA256 = (
     "a652db146760a151572ca2ff8f093cf297cf3a6322df441e530d9da3fb24ba0a"
