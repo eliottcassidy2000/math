@@ -1,0 +1,16 @@
+LRC14 projected k=3 fixed-first scalar slice
+global_scanner_sha256=8ca30b3f6e8336e87b558c5e24007153aa0f0331e3b00dfe66c93cd4c93dd789
+global_scanner_output_sha256=e3de2a3d6c65c0e8eb62d400ff47deafe48c8aa6a2db45788eab45e8f50892b9
+scalar_engine_sha256=88c563a247d59b2d9feb552935d91a2bbc5018beeed56df74c84a37a1174894b
+scalar_atlas_sha256=ddb2d19c02c4d70cfa74141265ceac585685932e85768baf4cb98aeb3e37935b
+scalar_atlas_output_sha256=ce6807de6d6b7022c97839d0bf9fc8ba3b90e7b97bc5b0d4069e88563e232be6
+universe=six_body_roots=3003;first_drift=330;three_distinct_later_drifts;nonzero_mod_L;exact_horizon=7000
+omitted_tail=delta(z)<=6r/(49z);projected_high_wall=max(15,floor(13L/132)+1)
+crude_all_tail_rows=2891
+scalar_surviving_bodies=1
+complete_record_sha256=605ef66742a97dc334fad29de6d057e56242a75d4f48fc4f08557d82d0250e86
+survivor_rows_begin
+E=1,2,6,8,12,14;h=83/196;r=26;L=2352;high=232;z1=330;delta1=61/45276;suffix=378:167/37044,364:19/4459,350:137/34300;lower=249/17836;upper=1868707/132432300;gap=9941/66216150
+survivor_rows_end
+positive_control=z1=380:PASS;negative_control=z1=379:PASS
+all_exact_controls=PASS
