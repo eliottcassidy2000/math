@@ -9,8 +9,8 @@ status: >
   drift absolutely for k>=2.  The lossless projected residual closes the
   five-aligned/two-drift face independently of THM-2928, and exact suffix
   filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
-  common-status addenda improve the k=2/k=3 first-drift caps from
-  2142/380 to 1835/328.  THM-2928's later
+  common-status and antipodal-phase addenda improve the k=2/k=3 first-drift
+  caps from 2142/380 to 1835/312.  THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
   addendum closes the common-level reflected-stalk k=1 diagonal
@@ -78,6 +78,16 @@ verification:
   - 05-knowledge/results/lrc14_j7_k3_z330_scalar_slice_thm2941.out
   - 04-computation/lrc14_j7_k3_z330_ray_status_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z330_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_projected_scalar_body_atlas_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_projected_scalar_body_atlas_thm2941.out
+  - 04-computation/lrc14_j7_k3_z328_scalar_slice_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z328_scalar_slice_thm2941.out
+  - 04-computation/lrc14_j7_k3_z328_ray_status_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z328_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_z324_ray_status_frontier_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z324_ray_status_frontier_thm2941.out
+  - 04-computation/lrc14_j7_k3_z324_antipodal_h_drift_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z324_antipodal_h_drift_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_2004_2142_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_2004_2142_thm2941.out
   - 04-computation/lrc14_j7_k2_z2060_ray_status_closure_thm2941.py
@@ -1097,7 +1107,8 @@ the descending upper bank exactly.  It contains `6,060` scalar rows, with
 upper spikes
 
 ```text
-z_1=378,364,350,336,330 with body counts 9,25,53,8,1,
+z_1=378,364,350,336,330,328,324,312
+with body counts 9,25,53,8,1,9,45,80,
 ```
 
 and no other row between these displayed heights.  The all-label ray
@@ -1113,16 +1124,58 @@ the global slice pins eight bodies and the quotient closes all
 `144` fibres of capacity at least three, while the exact status marginals
 supply at most `24+24+24=72`; the independently rebuilt Farkas certificate
 has normalized contradiction `-1`.  Ordinary/optimized replays and exact
-audits agree.  The old necessary ledger is therefore `375,922`, and the
-current proved projected `k=3` cap is
+audits agree.  This first moves the cap to `328`.
+
+The lossless global slice at `z_1=328` has exactly nine bodies.  Their
+all-label quotients have `85` states: crude fibre capacity removes `36`, and
+independently rebuilt common-status/Farkas certificates remove the remaining
+`49`.  Thus every `z_1=328` row is empty.  The next occupied atlas height is
+`324`.
+
+At `z_1=324`, the lossless atlas has `45` bodies.  Exact all-label ray
+quotients produce `2,346` states: crude capacity removes `702`, exact
+common-status/Farkas certificates remove `1,643`, and precisely one state
+survives.  It is
 
 ```text
-z_1<=328.                                               (25q1)
+E=(2,8,10,11,12,14),  L=129360,
+(d_1,d_2,d_3,d_4)=(3920,4620,10780,10780).
 ```
 
-The atlas shows that the next occupied height below `330` is exactly `328`;
-closing a displayed spike therefore certifies every skipped integer above
-the following spike, rather than extrapolating from a sparse search.
+Exact scalar thresholding forces the later denominator-`4620` and
+denominator-`10780` labels to be `364` and `492`, rules out every low
+denominator-`3920` label, and leaves an arbitrary high exact-denominator-
+`3920` label `z`.  This tail cannot be cut off by a larger scalar horizon:
+the fixed packet already exceeds the scalar lower wall by
+`5119/465404940`.
+
+The two cells `j=5880` and `k=19600` are body-safe, and the fixed labels
+`324,364,492` miss both cells.  Write every remaining high label as
+
+```text
+z=33u+mL,  gcd(u,3920)=1.
+```
+
+Then `u` is odd, while `k-j=13720` is congruent to `3920/2` modulo `3920`.
+The two `z`-phases therefore differ by `u/2=1/2` modulo one, independently
+of the unbounded ray parameter `m`.  Their open danger arcs, each of radius
+`1/14`, are disjoint.  Hence the common danger after the two cells is empty,
+the lossless projected residual has mass `1`, and it exceeds the three-
+aligned open-union cap `36/91`.  Full-cell De Morgan reconstruction and an
+independent direct carrier subtraction/projection agree exactly, including
+on the representative packet `(324,364,492,12771)`.
+
+Thus all `45` rows at `324` are empty.  These two slices remove `54` further
+rows from the old necessary ledger, leaving `375,868`.  Since the atlas's
+next occupied height is exactly `312`, the current proved projected `k=3`
+cap is
+
+```text
+z_1<=312.                                               (25q1)
+```
+
+Closing each displayed spike certifies every skipped integer above the next
+spike; the descent does not extrapolate from a sparse search.
 
 The same quotient also closes the unique row at the much larger `k=2`
 frontier.  For
