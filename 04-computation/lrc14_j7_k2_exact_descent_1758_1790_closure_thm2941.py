@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Exact projected k=2 closure of the two ordinary rows below 1780.
 
-The global 1750..1799 scalar band and the independent z1=1790 and z1=1788
+The global 1750..1799 scalar band and the independent z1=1790, z1=1788,
 z1=1784, and z1=1780 verifiers leave two ordinary exact-suffix rows in this
 range.  The remaining HIGH-TAIL row is closed by the companion exact-ray
 scalar verifier.  This file closes exactly those two ordinary rows.

@@ -5,8 +5,7 @@ The global 1750..1799 scalar band leaves ten HIGH-TAIL rows.  The independent
 z1=1790 verifier closes its three rows, the z1=1784 verifier closes its one
 HIGH-TAIL row, the z1=1780 verifier closes its one, and the independent
 z1=1750 verifier closes its four.  This file closes the only remaining row,
-at 1768, by replacing the
-analytic placeholder with the attained ray
+at 1768, by replacing the analytic placeholder with the attained ray
 maximum.  It asserts that disjoint partition against the all-body band output.
 """
 
