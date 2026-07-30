@@ -1,0 +1,20 @@
+LRC14 projected k=2 z1=1940 all-label ray/status closure
+uniform_ray_status_source_sha256=dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36
+prior_referee_source_sha256=63089f56187856cf3f316b9817c7eacfd871981ddc594d3563d678f4b66ebfb7
+scalar_band_output_sha256=12ff972fe14d2b6476c4a011849abbfa215016e9ece10d02b9d45f814efe9c91
+scope=inherited projected k=2 z1=1940 body row;four distinct later nonaligned labels;no finite horizon
+body=(1, 4, 8, 10, 12, 14);h=1049/2940;r=34;L=11760;first=1940;first_d=588;high_floor=1020;lower=1049/267540;first_delta=1273/1996260
+ray_law=(z+L)delta(z+L)=zdelta(z);A(L-b)=-A(b);all denominator maxima attained
+ray_checks=11759;ray_signs={-1: 5879, 0: 1, 1: 5879};ray_amplitude_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674
+nontrivial_denominators=59;denominator_trials=557845;all_n_scalar_states=1;scalar_state_sha256=4d7cb8424b56bd95aebed8c21bef54a825c60f2f48001c3dd42049d176956615
+fixed_projected_scalar_state=((280, 588, 588, 840, 980), Fraction(1864535549, 474507508545), (1940, 2060, 2142, 2172, 2534))
+state[1]=(280, 588, 588, 840, 980);upper=1864535549/474507508545;labels=(1940, 2060, 2142, 2172, 2534);kill=COMMON_STATUS;kill_q=840;kill_M=7;marginals=(120, 0, 0, 120, 0);farkas=((4, 5, 6), (Fraction(1, 60), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60)))
+crude_all_q_kills=0;crude_all_q_survivors=1
+K5_spanning_trees=125;pair_overlap_exhaustive_controls=946;status_cells=32;equality_rows=6
+fixed_state_transparent_obstruction=300 load>=4 fibres;only 240 exceptional-status events;EXACT_FARKAS_INFEASIBLE
+common_K5_status_kills=1;common_K5_status_survivors=0
+decisive_witness=D=5880;q=840;M=7;marginals=(120, 0, 0, 120, 0);capacity_values=(3, 4, 5, 6, 7);histogram=((0, 120), (3, 420), (4, 112), (5, 168), (6, 20));farkas=((4, 5, 6), (Fraction(1, 60), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60)))
+transparent_y4_obstruction=heavy_fibres:300;available_exception_events:240
+conclusion=projected k=2 z1=1940 row is empty uniformly
+semantic_sha256=1742d145ecdf2b20f055228a228ffd44fdb11efd281a37128354cfc8f1404140
+all_exact_controls=PASS
