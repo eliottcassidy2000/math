@@ -12,9 +12,10 @@ pipeline to all ten rows:
 
 The first, second, and last rows die already in the quotient/status stages.
 The remaining status states have a positive scalar cutoff on every residue
-ray, so their literal label universe is finite without imposing a horizon.
-Every scalar-eligible literal packet has projected residual at least 25/91,
-contradicting containment in the union of the two aligned danger combs.
+ray, so their literal universe of later distinct nonaligned labels is finite
+without imposing a horizon.  Every scalar-eligible literal packet has
+projected residual at least 25/91, contradicting containment in the union of
+the two aligned danger combs.
 """
 
 from __future__ import annotations
@@ -80,8 +81,10 @@ EXPECTED_PROFILE_SHA256 = (
     "17c26ab5bb9d2c4bf76ea2b82c29a6387c7ab78add6839100a9b68da337ca542"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "c2cc6ebb4d3f9e848d67cf0bf93a588977df16d24c8fcd460bd0fc9694510936"
+    "fb22f354d62253bfe8d46ac50bb7d8541bcf50ae9277bd9bba542b8d911dcbc9"
 )
+
+QUANTIFIER = "distinct later nonaligned labels"
 
 HOSTILE = (1, 4, 8, 10, 12, 14)
 SLICES = (
@@ -769,6 +772,7 @@ def render(profiles):
     semantic_payload = (
         SLICES,
         HIGH_CASE_KEYS,
+        QUANTIFIER,
         ALIGNED_TWO_UNION_CAP,
         total_scalar,
         total_crude,
@@ -788,7 +792,7 @@ def render(profiles):
         f"projected_engine_sha256={file_sha256(PROJECTED)}",
         f"scalar_band_1810_sha256={file_sha256(BAND_1810)}",
         f"scalar_band_1800_sha256={file_sha256(BAND_1800)}",
-        "scope=ten exact-suffix rows;all later labels;no finite label horizon",
+        f"scope=ten exact-suffix rows;all {QUANTIFIER};no finite label horizon",
         (
             "pipeline=residue rays;denominator multisets;all-divisor crude;"
             "common-K5 status;scalar-slack literal packets;projected residual"

@@ -6,11 +6,11 @@ For a fixed six-body carrier with ruler L, periodicity gives
     delta(r+mL) = A(r)/(r+mL),  1 <= r < L.
 
 Thus every positive residue ray is strictly decreasing.  With four later
-drift slots, only the first four labels of each positive ray can enter the
-unrestricted top four; the best label meeting the forced projected wall is
-the first wall-eligible label on some positive ray.  If the unrestricted
-top four miss the wall, the exact constrained optimum is therefore the
-unrestricted top three plus the best wall-eligible point.
+distinct nonaligned drift slots, only the first four labels of each positive
+ray can enter the unrestricted top four; the best label meeting the forced
+projected wall is the first wall-eligible label on some positive ray.  If the
+unrestricted top four miss the wall, the exact constrained optimum is
+therefore the unrestricted top three plus the best wall-eligible point.
 
 The two scalar atlases leave exactly six such rows.  This verifier checks
 the ray law and antipodes at every residue and proves the exact constrained
@@ -68,8 +68,10 @@ EXPECTED_PROFILE_SHA256 = (
     "56f1cccd78211b8e1fa3640bb40c8f41ebefcc73ad21ce3b561bbee595921114"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "3b7ee6deb7034684bdfd02781648446cafced5472ef670e48a2b1df4fc06f610"
+    "f456f0956986e6797d648fd3ba18579268a5102e121346650a4a08f7635d57e4"
 )
+
+QUANTIFIER = "distinct later nonaligned labels"
 
 CASES = (
     (1810, (2, 6, 8, 9, 10, 14)),
@@ -229,6 +231,7 @@ def render(profiles):
         require(profile_hash == EXPECTED_PROFILE_SHA256, "profile digest changed")
     semantic_payload = (
         CASES,
+        QUANTIFIER,
         SUFFIX_SLOTS,
         HIGH_WALL_RATIO,
         SCALAR_ETA,
@@ -243,7 +246,7 @@ def render(profiles):
         f"uniform_engine_sha256={file_sha256(UNIFORM)}",
         f"scalar_band_1810_sha256={file_sha256(BAND_1810)}",
         f"scalar_band_1800_sha256={file_sha256(BAND_1800)}",
-        "scope=six inherited HIGH-TAIL rows;all distinct later labels;no label horizon",
+        f"scope=six inherited HIGH-TAIL rows;all {QUANTIFIER};no label horizon",
         (
             "ray_law=delta(r+mL)=A(r)/(r+mL);search=first four points of every positive "
             "ray plus the first wall-eligible point"

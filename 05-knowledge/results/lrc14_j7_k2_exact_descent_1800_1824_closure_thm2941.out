@@ -3,7 +3,7 @@ uniform_engine_sha256=dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1
 projected_engine_sha256=76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662
 scalar_band_1810_sha256=d197eb6179a3f7c7da08d4389fde988c0bd1fbc5db8cfaf8e30435ace3c7d87f
 scalar_band_1800_sha256=a652db146760a151572ca2ff8f093cf297cf3a6322df441e530d9da3fb24ba0a
-scope=ten exact-suffix rows;all later labels;no finite label horizon
+scope=ten exact-suffix rows;all distinct later nonaligned labels;no finite label horizon
 pipeline=residue rays;denominator multisets;all-divisor crude;common-K5 status;scalar-slack literal packets;projected residual
 projected_identity=P_(E,Z)=phi_L(C_E minus union_z D_z);two-aligned cap=25/91
 global_counts=scalar:558;crude:137;status:328;status_survivors:93;literal_packets:147;projected_kills:147;survivors:0
@@ -19,5 +19,5 @@ SLICE;z1=1805;E=1,4,8,10,12,14;mode=PROJECT;h=1049/2940;r=34;L=11760;lower=1049/
 SLICE;z1=1800;E=1,4,8,10,12,14;mode=STATUS;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=113/308700;first_d=98;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;denominators=59;trials=557845;counts=(14, 5, 9, 0, 0);stage_sha256=('520ed1426f2579fbb68a325223d48d52aa5b11796d66cdba977baa3014eab11d', '21c7d72aa4cc3b7dc90baf4642d6031269e80358aeb53b3a731eee5e0351dbbc', '9cdcce9b265fc4b1a7fb8307736c86d69eb6470ca2880b65d538bfb9558eeb9a', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d');body_cells=0;packets=0;kills=0;min_margin=NONE;max_prefix_cells=0;direct_control_mass=NONE;state_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;minimum_row=None
 conclusion=all ten exact-suffix scalar exceptions on 1800..1835 are empty uniformly
 profile_sha256=17c26ab5bb9d2c4bf76ea2b82c29a6387c7ab78add6839100a9b68da337ca542
-semantic_sha256=c2cc6ebb4d3f9e848d67cf0bf93a588977df16d24c8fcd460bd0fc9694510936
+semantic_sha256=fb22f354d62253bfe8d46ac50bb7d8541bcf50ae9277bd9bba542b8d911dcbc9
 all_exact_controls=PASS

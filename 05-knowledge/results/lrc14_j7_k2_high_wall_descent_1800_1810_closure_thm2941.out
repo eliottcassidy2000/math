@@ -2,7 +2,7 @@ LRC14 projected k=2 forced-high exact-ray descent closure 1800..1810
 uniform_engine_sha256=dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36
 scalar_band_1810_sha256=d197eb6179a3f7c7da08d4389fde988c0bd1fbc5db8cfaf8e30435ace3c7d87f
 scalar_band_1800_sha256=a652db146760a151572ca2ff8f093cf297cf3a6322df441e530d9da3fb24ba0a
-scope=six inherited HIGH-TAIL rows;all distinct later labels;no label horizon
+scope=six inherited HIGH-TAIL rows;all distinct later nonaligned labels;no label horizon
 ray_law=delta(r+mL)=A(r)/(r+mL);search=first four points of every positive ray plus the first wall-eligible point
 forced_high_wall=floor(13L/150)+1;scalar_necessary=sum(delta)>=h/91
 CASE;z1=1810;E=2,6,8,9,10,14;h=6119/17640;r=32;L=35280;high_floor=3058;delta1=20413/22349880;lower=6119/1605240;ray_signs=+17639/-17639/0:1;ray_sha256=281eeb177b085483ddb7655bb5e3de61faa2f43df8f6b40802fd0bfce54b4794;unrestricted_top4=((Fraction(13819, 17163720), 1946, 1946, 0), (Fraction(559, 699720), 2142, 2142, 0), (Fraction(649, 842408), 1842, 1842, 0), (Fraction(1549, 2346120), 2128, 2128, 0));first_omitted=(Fraction(3293, 255480120), 144830, 3710);best_high=(Fraction(3293, 6544440), 3710, 3710);branch=GLOBAL_TOP3_PLUS_BEST_HIGH;constrained=((Fraction(13819, 17163720), 1946, 1946, 0), (Fraction(559, 699720), 2142, 2142, 0), (Fraction(649, 842408), 1842, 1842, 0), (Fraction(3293, 6544440), 3710, 3710, 0));upper=361957817447/95479613638360;gap=-58501985687/2792778698922030;conclusion=SCALAR-EMPTY
@@ -13,5 +13,5 @@ CASE;z1=1807;E=1,8,10,12,13,14;h=811/2548;r=38;L=152880;high_floor=13250;delta1=
 CASE;z1=1800;E=1,2,10,12,13,14;h=2629/7644;r=34;L=76440;high_floor=6625;delta1=151/205800;lower=2629/695604;ray_signs=+38219/-38219/0:1;ray_sha256=71c8f5cd93aaf462708de88542f9eb2366234faba77d06c8d7553cdbc206c697;unrestricted_top4=((Fraction(149, 160524), 2340, 2340, 0), (Fraction(7025, 8186724), 1836, 1836, 0), (Fraction(2225, 2978612), 2004, 2004, 0), (Fraction(1219, 1859403), 1807, 1807, 0));first_omitted=(Fraction(857, 113169420), 329940, 24180);best_high=(Fraction(239, 766948), 6708, 6708);branch=GLOBAL_TOP3_PLUS_BEST_HIGH;constrained=((Fraction(149, 160524), 2340, 2340, 0), (Fraction(7025, 8186724), 1836, 1836, 0), (Fraction(2225, 2978612), 2004, 2004, 0), (Fraction(239, 766948), 6708, 6708, 0));upper=809171243/226111019400;gap=-7673254783/38212762278600;conclusion=SCALAR-EMPTY
 global_high_wall_rows=6;scalar_empty=6;survivors=0
 profile_sha256=56f1cccd78211b8e1fa3640bb40c8f41ebefcc73ad21ce3b561bbee595921114
-semantic_sha256=3b7ee6deb7034684bdfd02781648446cafced5472ef670e48a2b1df4fc06f610
+semantic_sha256=f456f0956986e6797d648fd3ba18579268a5102e121346650a4a08f7635d57e4
 all_exact_controls=PASS
