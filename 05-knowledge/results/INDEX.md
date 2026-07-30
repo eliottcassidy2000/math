@@ -106,6 +106,44 @@
   `b9b1cbd3e38a285572f8b35e7220149f6372d3ce4941923aa586101461bee7e4` /
   `97f242c4b5b774c830a8111df6c2e24a725fa1a77771d4937aaa62f96d4400a0` /
   `fddb52f665e6c974e3e74839bd377907e21936bdae083a7f79ad9cf1905a63b7`.
+- `lrc14_j7_k3_projected_scalar_atlas_thm2941.py`, the `z364/z350/z336`
+  scalar slices, and their ray-status closures -> matching `.out` files
+  [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].  The
+  global `200..378` atlas has `6,060` rows and isolated upper spikes
+  `378:9, 364:25, 350:53, 336:8, 330:1`.  Exact all-label quotients close
+  `z1=364` by `1,109=242+867`, `z1=350` by
+  `3,200=1,295+1,905`, and `z1=336` by `109=71+38` crude/status kills.
+  There are no survivors, so the current projected `k=3` cap is `330`.
+  The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;
+  the `z336` source/output/semantic hashes are
+  `2c7eb840659e1215ff3b779f31f6ab604e07a088d14a2a68b714dd73d5c9a59b` /
+  `28b6e7435bf3efdbe55d3c21fe67b869f18f4c0fcedc49a786a972aee8120733` /
+  `6ec3a326ec7fa66053150954b1f2a9d3910fbe044032de10c6ca57ff0e53d228`.
+- `lrc14_j7_k2_scalar_band_*_thm2941.py` and the corresponding
+  `z2060/z2004/z1992/z1940/z1932` ray-status closures and independent
+  referees -> matching `.out` files [THM-2941 SCOPED PROVED + FINITE-EXACT
+  + INDEPENDENTLY AUDITED].  Global all-body bands isolate only the hostile
+  body `(1,4,8,10,12,14)` at the displayed upper spikes.  The all-label
+  quotients close respectively `16,20,10,1,1` scalar states and leave zero.
+  Four spikes use the transparent `(D,q,M)=(5880,840,7)` obstruction
+  `300` load-at-least-four fibres versus `240` exceptional events; `z1=1932`
+  strengthens this to `720>360` at threshold three.  The interval
+  `1837..1931` is scalar-empty, so the current projected `k=2` cap is
+  `1836`.  The `z1932` primary source/output hashes begin
+  `20568d19/251d60b3`; its independent pair begins `80f113c3/ccf6efe6`.
+- `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` and
+  `lrc14_j7_reflected_stalk_k1_mass_closure_thm2941.py` -> matching `.out`
+  files [THM-2941 PROVED STRUCTURAL LAW + SCOPED FINITE-EXACT CLOSURE].
+  Every carrier component has the exact ray recurrence and antipodal
+  amplitudes, but the reflected residue `L-e` is strictly positive on every
+  component, proving that pure component cones prune no sector.  Retaining
+  cell location instead closes the canonical `k=1` family
+  `Z_E={L-e:e in E}` on all `3,003` bodies: a first/second-component
+  selector always has local six-drift union mass below `6/7`, with uniform
+  gap `4964583434/87692604615`.  The reflected source/output/semantic hashes
+  are `4f7ffa4ac85ad88f1b5d3b7cf6affadbf841fac13affa7bfc7e5a4f1892ee404` /
+  `fa2890c1fad207000b779263d71dc4aaa9077dced05a5eea46fee65d7d304f88` /
+  `8fc2b276e8899622d54964325adfa4c5f23259d0d34367f812b12dc4d72c2d6c`.
 - `lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.py`, together
   with the scalar-wall and projected-suffix verifiers, -> matching `.out`
   files [THM-2941 PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY
@@ -115,7 +153,7 @@
   safe-surplus plus the lossless projected residual gives rigorous first-drift
   caps `2,142/380/182/66` for `k=2/3/4/5` alignments and empties `k=6`; the
   scoped frontier/ray addenda improve the current `k=2/3` caps to
-  `2,141/377`.
+  `1,836/330`.
   For `k=5`, exact prefix incidence kills all `42,912` high-excess and
   `194,073` subcritical drift pairs, minimum margin `1/378105`; THM-2928
   independently closes the same face by divisor/address masks.  With

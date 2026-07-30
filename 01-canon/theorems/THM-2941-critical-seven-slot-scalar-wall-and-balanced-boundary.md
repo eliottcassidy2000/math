@@ -10,7 +10,7 @@ status: >
   five-aligned/two-drift face independently of THM-2928, and exact suffix
   filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
   common-status addenda improve the k=2/k=3 first-drift caps from
-  2142/380 to 2141/377.  THM-2928's later
+  2142/380 to 1836/330.  THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  The zero/one-aligned
   sector, the remaining finite censuses, the full
@@ -54,6 +54,40 @@ verification:
   - 05-knowledge/results/lrc14_j7_k3_z378_ray_status_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_frontier_ray_status_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_frontier_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_component_residue_ray_cone_no_go_thm2941.py
+  - 05-knowledge/results/lrc14_j7_component_residue_ray_cone_no_go_thm2941.out
+  - 04-computation/lrc14_j7_reflected_stalk_k1_mass_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_stalk_k1_mass_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_projected_scalar_atlas_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_projected_scalar_atlas_thm2941.out
+  - 04-computation/lrc14_j7_k3_z364_ray_status_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z364_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_z350_scalar_slice_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z350_scalar_slice_thm2941.out
+  - 04-computation/lrc14_j7_k3_z350_ray_status_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z350_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_z336_scalar_slice_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z336_scalar_slice_thm2941.out
+  - 04-computation/lrc14_j7_k3_z336_ray_status_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z336_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_scalar_band_2004_2142_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_scalar_band_2004_2142_thm2941.out
+  - 04-computation/lrc14_j7_k2_z2060_ray_status_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z2060_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z2004_ray_status_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z2004_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_scalar_band_1992_2003_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_scalar_band_1992_2003_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1992_ray_status_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1992_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_scalar_band_1940_1991_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_scalar_band_1940_1991_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1940_ray_status_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1940_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_scalar_band_1932_1939_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_scalar_band_1932_1939_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1932_ray_status_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1932_ray_status_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -645,6 +679,38 @@ single-comb shape on the projected residual, but it does not bound the first
 of the six drifts.  It is therefore a genuine constraint on the remaining
 infinite sector, not a finite reduction of it.
 
+There is nevertheless one canonical six-drift family on which this
+constraint is decisive at every body.  Put
+
+```text
+Z_E={L-e:e in E}.
+```
+
+On the body-safe cell `t=(j+u)/L`, let
+
+```text
+U_j=union_(e in E){u:||((L-e)u-ej)/L||<1/14}.
+```
+
+Equation `(25i)` gives `T minus P_(E,Z_E)=intersection_j U_j` in mass, so
+one cell with `mu(U_j)<6/7` forces `mu(P_(E,Z_E))>1/7`.  This contradicts
+`P_(E,Z_E) subset D_a` for every possible final aligned multiplier `a`.
+An exact all-`3,003`-body census finds such a cell by a deterministic
+two-step selector: the leftmost cell of the first positive carrier
+component works for `2,997` bodies, and the corresponding cell of the
+second component works for the remaining six.  The worst selected union is
+
+```text
+10028643748/12527514945 < 6/7,
+```
+
+leaving the uniform residual margin
+`4964583434/87692604615`.  Direct multiplier pullback, the reflected
+identity, and an independent endpoint-slab union sweep agree on all
+`18,054` clauses.  Hence the canonical reflected-stalk `k=1` family is
+empty.  This is a scoped family theorem, not a finite reduction or closure
+of the arbitrary six-drift `k=1` sector.
+
 There is an exact all-scale functional form behind the discrepancy tail.
 Write the carrier components as
 
@@ -977,6 +1043,33 @@ a48a7ca3c3142476deac9b81a48c7f6937bc3312220579520d2440f5c76133a9
 Together with the distinct `z_1=250` closure, this leaves `376,009` rows
 from the old `376,020` necessary ledger.
 
+A one-pass scalar atlas over every body and every `200<=z_1<=378` exposes
+the descending upper bank exactly.  It contains `6,060` scalar rows, with
+upper spikes
+
+```text
+z_1=378,364,350,336,330 with body counts 9,25,53,8,1,
+```
+
+and no other row between these displayed heights.  The all-label ray
+quotient closes all `25` `z_1=364` bodies:
+`1,109=242+867` quotient states fail by crude fibre capacity and
+common-status/Farkas certificates.  At `z_1=350`, an independent global
+scalar slice first pins exactly `53` bodies, and their quotient has
+`3,200=1,295+1,905` corresponding kills and no survivor.  At `z_1=336`,
+the global slice pins eight bodies and the quotient closes all
+`109=71+38` states.  Ordinary/optimized replays and independent exact
+Farkas audits agree.  Consequently the current proved projected `k=3` cap
+is
+
+```text
+z_1<=330.                                               (25q1)
+```
+
+The atlas shows that the next occupied height is exactly `330`; closing a
+displayed spike therefore certifies every skipped integer above the
+following spike, rather than extrapolating from a sparse search.
+
 The same quotient also closes the unique row at the much larger `k=2`
 frontier.  For
 
@@ -1019,6 +1112,32 @@ b9b1cbd3e38a285572f8b35e7220149f6372d3ce4941923aa586101461bee7e4
 97f242c4b5b774c830a8111df6c2e24a725fa1a77771d4937aaa62f96d4400a0
 fddb52f665e6c974e3e74839bd377907e21936bdae083a7f79ad9cf1905a63b7.
 ```
+
+Global scalar bands then make the `k=2` descent exact rather than
+row-by-row.  On all `3,003` bodies, `2004<=z_1<=2142` leaves only
+`z_1=2142,2060,2004`, all on `E=(1,4,8,10,12,14)`; the latter two
+all-label quotients have respectively `16` and `20` states and leave none.
+The next bands have unique scalar survivors at `z_1=1992`, `1940`, and
+`1932` on the same body.  Their quotients contain `10=3+7`, `1=0+1`, and
+`1=0+1` crude/status kills, again with no survivor.
+
+The first four fixed states repeatedly expose the same transparent
+quotient: at `(D,q,M)=(5880,840,7)`, `300` target fibres of load at least
+four would require an exceptional status, but the status marginals supply
+only `240` exceptional events.  At `z_1=1932` the stronger threshold-three
+form has `720` heavy fibres but only `360` events.  Exact 32-cell Farkas
+certificates and independent no-LP Pruefer-tree audits agree.
+
+The global bands contain no other row above the next atlas height `1836`.
+Thus the current proved projected `k=2` cap is
+
+```text
+z_1<=1836.                                              (25q2)
+```
+
+These repeated certificates reveal a quotient family, but do not yet prove
+that it closes every lower scalar state: below the isolated upper spikes the
+scalar bank becomes rapidly denser.
 
 For `k=5`, there is a second, Gram-facing derivation.  Pointwise
 
