@@ -121,7 +121,26 @@ corner routing at `gamma in {1/2, 0.6, 0.75, 0.9}`).
   biases with integrality — precisely certificate (27)'s form; and
   `p_B` sits within 2.7% of the band edge `6592/9049`.
   Artifacts: `04-computation/amm12592_carry_ledger_band_freeze_laneD_deathstar.py`.
-- **Lane E (pending):** LRC(14) mixed-sector audit (anchor duty).
+- **Lane E (DONE, anchor duty):** independent audit of the LRC(14) mixed
+  double-2 sector: both MSG-2937 witnesses digit-exact; coarse vs exact
+  tests disagree on exactly 2 occurrences; repair already landed
+  (650533ec3); the 544,571 -> 419,511 -> 29,364 -> 19 -> 0 chain has an
+  intact SHA DAG with the 29,364 residual replayed byte-identically.
+  Forwarded to opus (THM-2958 package) and mac-mini.
+
+## 5b. The 2-adic engineering of the certificate (decode, this session)
+
+Both certificate biases have odd denominators, odd `p`-numerators, and
+`q`-numerators `896 = 2^7*7`, `2974400 = 2^6*5^2*11*13^2`: at bias `a/b`
+the integer `N_M = 2 D_M(p) b^{A_M}` has per-term 2-adic valuation
+`v_2(2c_o) + s o` (`s = 7` resp. `6`), making the minimal forced-odd band
+position a non-archimedean leading term. Single-bias closure fails on
+rates (`gamma log b + log a > 0`), so the dual must couple the two biases
+— cancelling archimedean mass while keeping the `s_A = 7` vs `s_B = 6`
+valuation scales misaligned. Wave-2 lane G attempts the full
+reconstruction; wave-2 lane F runs the anticipatory-policy hostile control
+(exhaustive finite search with envelope pruning, wave-launching policies)
+to decide whether lane D's freeze is policy-independent.
 
 ## 6. Classical context
 
