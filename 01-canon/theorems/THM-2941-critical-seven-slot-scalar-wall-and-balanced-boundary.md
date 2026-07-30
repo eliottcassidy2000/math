@@ -10,7 +10,7 @@ status: >
   five-aligned/two-drift face independently of THM-2928, and exact suffix
   filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
   common-status, exact-packet, forced-high-ray, and antipodal-phase addenda
-  improve the k=2/k=3 first-drift caps from 2142/380 to 1784/312.
+  improve the k=2/k=3 first-drift caps from 2142/380 to 1759/312.
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -152,6 +152,22 @@ verification:
   - 05-knowledge/results/lrc14_j7_k2_z1750_literal_packet_projected_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_band_1743_1749_literal_packet_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_band_1743_1749_literal_packet_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_scalar_band_1790_1799_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_scalar_band_1790_1799_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1790_exact_descent_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1790_exact_descent_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_scalar_band_1780_1789_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_scalar_band_1780_1789_thm2941.out
+  - 04-computation/lrc14_j7_k2_1780_1789_exact_descent_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_1780_1789_exact_descent_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_scalar_band_1770_1779_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_scalar_band_1770_1779_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1776_exact_descent_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1776_exact_descent_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_scalar_band_1760_1769_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_scalar_band_1760_1769_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1768_high_wall_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1768_high_wall_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -1512,6 +1528,43 @@ These repeated certificates reveal a quotient family, but do not yet prove
 that it closes every lower scalar state: below the isolated upper spikes the
 scalar bank becomes rapidly denser.
 
+Four further exact all-body bands descend through `1760`.  On `1790..1799`
+the scalar atlas leaves eight rows, all at `1790`.  The canonical combined
+engine closes six by the all-label status/projected route and two by strictly
+negative forced-high ray maxima.  In particular, the one positive scalar-gap
+high row is checked in the larger unrestricted all-label universe: its
+`64=1+16+47` states generate `68` packets, all `68` fail the two-aligned cap,
+and the minimum margin is `891/5369`.  Dropping the high constraint enlarges
+the universe, so this implication has the safe direction.
+
+On `1780..1789` the scalar atlas leaves twelve rows: five at `1780`, six at
+`1784`, and one at `1788`.  Ten close by the all-label status/projected engine;
+the two forced-high rows have strict gaps
+
+```text
+-36718081/292931597140,
+-285200240183/3560048135813715.
+```
+
+The band `1770..1779` leaves only
+`(z_1,E)=(1776,(1,4,8,10,12,14))`; its `77` scalar states split as `29`
+crude-capacity and `48` exact common-status/Farkas failures.  The band
+`1760..1769` likewise leaves only `(1768,(1,8,10,12,13,14))`, and its
+forced-high decreasing-ray invoice has exact gap
+`-906233/6582732520`.
+
+Thus all twenty-two newly exposed rows are empty.  Ordinary and optimized
+runs match stored bytes, each new script pins its complete profile and census
+and fails closed, and an independent replay reconstructed the four bands.
+The necessary ledger is now `2,239,804`, and the current proved projected
+`k=2` cap is
+
+```text
+z_1<=1759.                                              (25q4)
+```
+
+No lower cap is claimed; the first unscouted level is `1759`.
+
 Two disjoint lower packages nevertheless close the contiguous integer block
 `1743<=z_1<=1750`.  The all-body slice at `1750` has exactly twelve scalar
 rows.  Exact residue-ray high-wall envelopes make four rows scalar-empty.  On
@@ -1539,18 +1592,8 @@ optimized transcripts agree byte for byte, and direct subtraction again
 checks the minimum projected packet.
 
 This closes only `1743..1750` and does not by itself improve the current cap.
-The dependency chain for a later upgrade is explicit:
-
-```text
-proved closure of every height 1751..1784
- + exact z_1=1750 closure
- + exact all-body band 1743..1749
- => projected k=2 cap z_1<=1742.
-```
-
-The first premise is not supplied by these two packages, so the displayed cap
-upgrade remains conditional until a contiguous `1751..1784` closure is in the
-proved graph.
+Together with the four-band descent above, the sole missing splice for the
+stronger conclusion `z_1<=1742` is the contiguous interval `1751..1759`.
 
 For `k=5`, there is a second, Gram-facing derivation.  Pointwise
 

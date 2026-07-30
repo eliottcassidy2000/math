@@ -1,0 +1,6 @@
+LRC14 projected k=2 z1776 exact descent closure
+source_sha256=b57c68539a5da6fbe456e29f07bc7ff55778702e70990bcfa54e7409ad56485b
+z1=1776;E=1,4,8,10,12,14;counts=(77, 29, 48, 0, 0);cells=4196;packets=0;kills=0;min_margin=None;max_prefix=0;minimum=None;direct=None;state_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
+closure=1/1
+profile_sha256=1644442c7a407e64c45631718442e487c8272b5aab75f9ef8e18a42b06cbec9d
+all_exact_controls=PASS
