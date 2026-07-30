@@ -24,7 +24,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 BRIDGE_PATH = HERE / "lrc14_j7_k3_physical_denominator_reconciliation_thm2941.py"
 EXPECTED_BRIDGE_SHA256 = (
-    "d209433bae4411e1a9597cb60d792b0c18897dffc333e60baaad5abcdaf6cf29"
+    "4b972500c6772a11e9ebf905e28e9324a736323ea9a4be6e66714b24affd6dc6"
 )
 
 

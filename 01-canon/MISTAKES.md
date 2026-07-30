@@ -9,6 +9,34 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-333 (2026-07-30, THM-2941 `z_1=297` torsion descent) -- the repaired LP-dual digest bug recurred in a new descendant
+
+- **What was done:** the first `z_1=297` located-torsion verifier exactly
+  checked all `830` Farkas certificates, but hashed each complete status
+  witness, including the arbitrary solver-selected dual basis.  It also put
+  those complete witnesses and the basis-dependent minimum contradiction in
+  its semantic payload.  The first `z_1=294..276` descendant imported that
+  payload wholesale.
+- **First failed implication:** exact validity of a returned Farkas
+  certificate was again treated as uniqueness of its representation.  The
+  closure counts `1172=271+830+71`, the `73` located torsion cases, and the
+  later `1549=659+882+8` descent are canonical; the chosen HiGHS dual vectors
+  are not.  Thus the advertised byte/semantic replay could change under an
+  equally valid optimizer basis without changing any infeasible instance or
+  proof conclusion.  This is the precise mechanism already recorded in
+  MISTAKE-331.
+- **Exact repair / strongest survivor:** every solver certificate is still
+  rebuilt and verified over exact rationals.  Reproducibility records now bind
+  only `(denominators,q,M,marginals,capacity-set,load-histogram)` and the number
+  of verified instances; the certificate itself and its basis-dependent
+  contradiction value are excluded.  The repaired `z_1=297` artifact is then
+  repinned through the lower descent.  All ray, high-wall, finite-low-pair,
+  torsion-density, cap, and ledger conclusions survive unchanged.
+- **Rule:** a correction to a proof-search digest is a dependency-graph
+  invariant, not a one-file patch.  New descendants of a nondeterministic
+  solver must reuse the canonical instance ledger explicitly; never copy the
+  old witness tuple merely because its exact checker passes.
+
 ## MISTAKE-331 (2026-07-30, THM-2941 ray/status replay) -- a semantic digest bound a noncanonical LP dual basis
 
 - **What was done:** the three THM-2941 residue-ray/status companions verified
