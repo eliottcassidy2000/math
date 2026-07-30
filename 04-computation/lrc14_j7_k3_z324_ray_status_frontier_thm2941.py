@@ -6,7 +6,9 @@ For each body, the periodic residue-ray law computes the attained all-label
 maximum in every denominator multiset.  Crude all-divisor fibre overload and
 the common 16-cell Hunter table reject all but one of the resulting 2,346
 states.  Every Hunter rejection is independently replayed below with exact
-rational matrix arithmetic.
+rational matrix arithmetic.  Solver-selected Farkas bases remain internal
+checks: the frozen partition and semantic digest retain only the deterministic
+infeasible status instances.
 
 The sole residual is
 
@@ -44,7 +46,7 @@ DEFAULT_OUTPUT = (
     "lrc14_j7_k3_z324_ray_status_frontier_thm2941.out"
 )
 EXPECTED_RAY_ENGINE_SHA256 = (
-    "6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e"
+    "2ef5e0639354c38b13e17e41f91acb4143c7f60973295b0e2dd0f57eb8f38db2"
 )
 EXPECTED_BODY_ATLAS_SHA256 = (
     "2af6d96882f336a409a8657070ed76a75c09a53b3789101b83103b051e864ded"
@@ -53,7 +55,7 @@ EXPECTED_BODY_ATLAS_OUTPUT_SHA256 = (
     "cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "10e91b0cb91f4c9f8e36cac8d46b6bed7bd62619e4b703d13f6cfeeb6f52c09f"
+    "7b8735af10d90c3f22b939993fb3ff3c9786b4c23ea3f17af7c9ed4783653f17"
 )
 
 FIRST = 324
@@ -176,7 +178,7 @@ def evaluate_body(body):
         )
         require(gap == target - capacity and gap > 0, "invalid crude witness")
 
-    certificate_digest = hashlib.sha256()
+    instance_digest = hashlib.sha256()
     contradictions = []
     for ds, witness in sorted(status.items()):
         q, M, marginals, cap_set, histogram, certificate = witness
@@ -193,7 +195,9 @@ def evaluate_body(body):
         contradictions.append(
             independent_farkas_check(q, marginals, capacities, histogram, certificate)
         )
-        certificate_digest.update(f"{body}|{ds}|{witness}\n".encode())
+        # The infeasible instance is canonical; the solver's Farkas basis is
+        # not.  Keep the latter only in the exact replay above.
+        instance_digest.update(f"{body}|{ds}|{witness[:-1]}\n".encode())
 
     sign_totals = {
         sign: sum(
@@ -212,10 +216,10 @@ def evaluate_body(body):
         trials,
         tuple(sorted(states)),
         tuple(sorted(crude)),
-        tuple(sorted(status)),
+        tuple(sorted((ds, witness[:-1]) for ds, witness in status.items())),
         tuple(survivors),
         tuple(sorted(Counter(witness[1] for witness in status.values()).items())),
-        certificate_digest.hexdigest(),
+        instance_digest.hexdigest(),
         min(contradictions, default=None),
     )
 
@@ -247,7 +251,10 @@ def main():
     )
     require(residuals == ((RESIDUAL_BODY, RESIDUAL_DS),), ("residual changed", residuals))
     semantic_hash = hashlib.sha256(repr(records).encode()).hexdigest()
-    require(semantic_hash == EXPECTED_SEMANTIC_SHA256, "semantic digest changed")
+    require(
+        semantic_hash == EXPECTED_SEMANTIC_SHA256,
+        ("semantic digest changed", semantic_hash),
+    )
 
     lines = [
         "LRC14 projected k=3 z1=324 exact all-label ray/status frontier",
@@ -267,7 +274,7 @@ def main():
         f"status_M_histogram={dict(EXPECTED_M_HISTOGRAM)}",
     ]
     for record in records:
-        body, L, checks, signs, trials, states, crude, status, survivors, mhist, cdigest, minimum = record
+        body, L, checks, signs, trials, states, crude, status, survivors, mhist, idigest, minimum = record
         partition_digest = hashlib.sha256(
             repr((states, crude, status, survivors)).encode()
         ).hexdigest()
@@ -276,13 +283,14 @@ def main():
             f"denominator_trials={trials};states={len(states)};"
             f"crude_kills={len(crude)};status_kills={len(status)};"
             f"survivors={survivors};status_M={dict(mhist)};"
-            f"partition_sha256={partition_digest};certificate_sha256={cdigest};"
+            f"partition_sha256={partition_digest};"
+            f"deterministic_instance_sha256={idigest};"
             f"min_exact_farkas_contradiction={minimum}"
         )
     lines.extend(
         (
             f"sole_residual=E:{RESIDUAL_BODY};denominators:{RESIDUAL_DS}",
-            "independent_exact_farkas_checks=1643/1643:PASS",
+            "internal_solver_farkas_replay=1643/1643:PASS;solver_bases_not_frozen",
             f"semantic_sha256={semantic_hash}",
             "all_exact_controls=PASS",
         )
