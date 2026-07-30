@@ -83,38 +83,45 @@
   base/q7/primary/audit source hashes begin
   `2fcd1fa7/3cc07195/05e365a6/a3a65ae7`; output hashes begin
   `aa14b089/eff21ad8`.
-- `lrc14_j7_k3_projected_scalar_atlas_thm2941.py` and the exact
-  ray/status closures through `z1=328` -> matching `.out` files
-  [THM-2941 PROVED NECESSARY ATLAS + FINITE-EXACT CLOSURES].  One exact
-  suffix pass for every `200<=z1<=378` has successive occupied heights
-  `378:9,364:25,350:53,336:8,330:1,328:9,324:45`.  Exact attained-ray
-  quotients close the first six heights through `328`; the last two closure
-  state splits are `z330:1=0+1` and `z328:85=36+49`.  THM-2928's general
-  expected-spike proof also closes `z330`.  The current projected `k=3` cap is
-  `324`, with `375,913` rows left from the old `376,020` ledger.  Atlas
-  source/output/semantic:
-  `ddb2d19c02c4d70cfa74141265ceac585685932e85768baf4cb98aeb3e37935b` /
-  `ce6807de6d6b7022c97839d0bf9fc8ba3b90e7b97bc5b0d4069e88563e232be6` /
-  `46535b2b075e15244ec87101f44d74a8034b093244fd8559fe11b5b70425fda8`;
-  closure semantics at `z330/z328` are `2e2fbfa8...e927` and
-  `3b2ecca5...daea`.
-- `lrc14_j7_k2_scalar_band_*_thm2941.py`, with the isolated primary and
-  independent ray-status terminal referees ->
-  matching `.out` files [THM-2941 PROVED NECESSARY BANDS + FINITE-EXACT +
-  TERMINAL STATES INDEPENDENTLY AUDITED].  Complete bands isolate only
-  `2142,2060,2004,1992,1940,1932` above `1836`, all on
-  `E=(1,4,8,10,12,14)`, with state counts `1/16/20/10/1/1`; all close by
-  crude overload or common K5 status.  Independent fixed-state referees
-  expose the recurring transparent obstruction: `300` load-at-least-four
-  fibres but only `240` exceptional incidences at `(D,q,M)=(5880,840,7)`.
-  The complete band `1837..1931` is scalar-empty.  At `z1=1836`, an exact
-  slice finds five bodies: projected exact-suffix/status/residual tests
-  close three, and exact residue-ray maxima make the other two scalar-empty.
-  The next band `1810..1835` has exactly ten scalar rows, at
-  `1810:8,1812:1,1824:1`, and no row at `1825..1835`.  Thus the current
-  projected `k=2` cap is `1824`, with `2,239,842` rows left.  The global
-  bands are primary exact censuses; the separate
-  independent audits cover isolated terminal states, not every band.
+- `lrc14_j7_k3_projected_scalar_body_atlas_thm2941.py`, physical-denominator
+  reconciliation and independent audit, and exact closures through `z1=324`
+  -> matching `.out` files [THM-2941 PROVED NECESSARY ATLAS + FINITE-EXACT
+  CLOSURES + INDEPENDENT AUDIT].  The successive occupied heights are
+  `378:9,364:25,350:53,336:8,330:1,328:9,324:45,312:80`; exact attained-ray
+  quotients close every height through `328`.  At `324`,
+  `2,346=702+1,643+1`: exactly one denominator state survives, on
+  `E=(2,8,10,11,12,14)` with `(3920,4620,10780,10780)`.
+  Scalar thresholding fixes labels `364,492` and leaves an unbounded
+  exact-`3920` tail.  The clean cells `5880,19600` differ by `3920/2`;
+  every primitive unit is odd, so the tail phases are antipodal and their
+  strict radius-`1/14` danger arcs are disjoint.  Primary and independent
+  direct carrier implementations close the state uniformly.  The physical
+  bridge reconciles `375,913` raw/support rows with `247,566` expected-spike
+  and `247,565` joint-screen rows; these are necessary denominator states,
+  not covers or numerator assignments.  Closing `324` leaves `375,868`
+  necessary rows and proves the projected `k=3` cap `312`.
+  Bridge source/output pairs begin `d209433b/6f248298` and
+  `ac7d5e5d/554f7303`; the `z324` frontier, antipodal, and direct
+  source/output pairs begin `7eaaf551/db3c5c68`, `e5fbb516/170523d6`, and
+  `edd44a31/9f19d0b5`.
+- `lrc14_j7_k2_scalar_band_*_thm2941.py`, the isolated terminal referees,
+  and the exact/projected plus forced-high descent packages -> matching
+  `.out` files [THM-2941 PROVED NECESSARY BANDS + FINITE-EXACT CLOSURES +
+  TERMINAL STATES INDEPENDENTLY AUDITED].  Above `1836`, the exact bands
+  isolate only `2142,2060,2004,1992,1940,1932`, all on
+  `E=(1,4,8,10,12,14)`; the complete band `1837..1931` is scalar-empty.
+  At `1836`, three exact-suffix rows close by status/projected residual and
+  two forced-high rows are scalar-empty.  The bands `1800..1835` contain
+  exactly sixteen further rows: ten exact-suffix rows at
+  `1824:1,1812:1,1810:6,1805:1,1800:1`, and six `HIGH-TAIL` rows at
+  `1810:2,1807:3,1800:1`.  The exact-suffix pipeline is
+  `558 -> 137 crude -> 328 status -> 93 states -> 147 literal packets ->
+  147 projected kills -> 0`; exact ray maxima close all six forced-high
+  rows.  Both mechanisms are uniform over distinct later nonaligned labels
+  and have no label horizon.  Closing these sixteen rows leaves `2,239,826`
+  necessary rows and proves the current projected `k=2` cap `1799`.
+  The global bands are primary exact censuses; separate fixed-state audits
+  cover the isolated terminal states rather than every band row.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:
@@ -199,7 +206,8 @@
   `(D,q,M)=(5880,840,7)` has only `240` total exceptional-bit incidences
   but must serve `300` fibres of load at least four; the full simultaneous
   32-cell LP gives the matching exact Farkas certificate.  At that checkpoint
-  the cap was `2141`; the later exact bands supersede it with `1824`.
+  the cap was `2141`; the later exact bands and closures supersede it with
+  `1799`.
   Source/output/semantic SHA-256:
   `b9b1cbd3e38a285572f8b35e7220149f6372d3ce4941923aa586101461bee7e4` /
   `97f242c4b5b774c830a8111df6c2e24a725fa1a77771d4937aaa62f96d4400a0` /
@@ -233,10 +241,11 @@
   transparent status kill.  There are no survivors, so the current proved
   projected `k=3` cap is `328` and the old necessary ledger is `375,922`.
   global `200..378` body atlas has `6,060` rows and upper spikes
-  `378:9,364:25,350:53,336:8,330:1,328:9,324:45`.  Exact all-label
+  `378:9,364:25,350:53,336:8,330:1,328:9,324:45,312:80`.  Exact all-label
   quotients close every displayed height through `328`; `z330` has one
-  status kill, while `z328` has `85=36+49` crude/status kills.  The current
-  projected `k=3` cap is `324`.
+  status kill, while `z328` has `85=36+49` crude/status kills.  At `z324`,
+  `2,346=702+1,643+1`, and the sole state closes by a denominator-`3920`
+  antipodal clean-cell pair.  The current projected `k=3` cap is `312`.
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;
   the `z336` source/output/semantic hashes are
   `6e991432a1ce5ec9c1cbe97199cb5fd647c5edc89bdcc60ce560382a70835fcf` /
@@ -285,6 +294,11 @@
   all with `mu(P)>=25/91`.  The next exact band has ten rows
   `1810:8,1812:1,1824:1`, hence the proved cap is `1824` and the old
   necessary ledger is `2,239,842`.  The `z1932` primary source/output hashes
+  all with `mu(P)>=25/91`.  The bands `1800..1835` have sixteen rows:
+  ten exact-suffix rows close by the common status/literal-packet/projected
+  pipeline, and six forced-high rows close by exact ray maxima.  Hence the
+  proved cap is `1799` and the necessary ledger is `2,239,826`.  The
+  `z1932` primary source/output hashes
   begin `77c848a2/251d60b3`; its independent pair begins
   `80f113c3/ccf6efe6`.  The `z1836` scalar/projected/high-wall source-output
   pairs begin `99a81704/986a5353`, `54ab8787/f159324c`, and
@@ -309,9 +323,9 @@
   for the combined exact descent.  All named normal and optimized
   transcripts match stored bytes.
   `4b633061/115286b4`; all three normal and optimized transcripts match.
-  Their semantic hashes begin `5afe9b0c/77e6ebf9/18122f5e`; the
+  Their semantic hashes begin `5afe9b0c/77e6ebf9/18122f5e`; the hardened
   `1810..1835` band source/output/semantic triple begins
-  `058c43d6/76f08dc5/68105c55`.
+  `60a916b6/d197eb61/68105c55`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` and
   the reflected-stalk/all-level mass closures -> matching `.out`
   files [THM-2941 PROVED STRUCTURAL LAW + SCOPED FINITE-EXACT CLOSURE].

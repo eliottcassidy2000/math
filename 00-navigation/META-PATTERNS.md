@@ -5,12 +5,13 @@
 ## Peel the distinguished prime before enumerating lcm shapes
 
 **Trigger/action:** for density-`1/p` combs on `D`, prove the quotient-index
-dichotomy after `D=pq`, then split transverse sections from vertical spikes
-and Möbius-count only base loads/status bits. **Mechanism:** Fubini fixes spike
-means; compact/open makes the carrier inequality strict. **Caution:** handle
-zero thresholds and restore lost unit, location, and scale data by rays or
-needles. **Evidence:** THM-2928's septimal compression and THM-2941's `M=7`
-ray/status closures.
+dichotomy after `D=pq`, split transverse sections from vertical spikes, and
+Möbius-count only base loads/status bits.  If one even denominator `d` leaves
+one unbounded primitive-unit label, seek two fixed-clean cells separated by
+`d/2`: odd units make its phases antipodal at every ray height. **Caution:**
+restore lost unit/location/scale; odd `d`, several moving labels, or no common
+clean cells defeat the torsion finish. **Evidence:** THM-2928, THM-2941
+(`M=7` and denominator `3920`), and THM-2072's antipodal dyadic seam.
 
 ## Inventory retained power classes before classifying base-curve genus
 

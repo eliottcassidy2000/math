@@ -9,7 +9,6 @@ Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDI
 
 **OPEN.** THM-2923 closes all `3,432` seven-in-window roots; the direct
 remainder has at most six in-window speeds.
-
 THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Proved reductions and terminals

@@ -9,8 +9,9 @@ status: >
   drift absolutely for k>=2.  The lossless projected residual closes the
   five-aligned/two-drift face independently of THM-2928, and exact suffix
   filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
-  common-status, exact-descent, and antipodal-phase addenda improve the
-  k=2/k=3 first-drift caps from 2142/380 to 1799/312.  THM-2928's later
+  common-status, exact-packet, forced-high-ray, and antipodal-phase addenda
+  improve the k=2/k=3 first-drift caps from 2142/380 to 1784/312.
+  THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
   addendum closes the common-level reflected-stalk k=1 diagonal
@@ -83,18 +84,22 @@ verification:
   - 05-knowledge/results/lrc14_j7_k3_z330_scalar_slice_thm2941.out
   - 04-computation/lrc14_j7_k3_z330_ray_status_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z330_ray_status_closure_thm2941.out
-  - 04-computation/lrc14_j7_k3_projected_scalar_body_atlas_thm2941.py
-  - 05-knowledge/results/lrc14_j7_k3_projected_scalar_body_atlas_thm2941.out
   - 04-computation/lrc14_j7_k3_z328_scalar_slice_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z328_scalar_slice_thm2941.out
   - 04-computation/lrc14_j7_k3_z328_ray_status_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z328_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_physical_denominator_reconciliation_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_physical_denominator_reconciliation_thm2941.out
+  - 04-computation/lrc14_j7_k3_physical_denominator_reconciliation_audit_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_physical_denominator_reconciliation_audit_thm2941.out
   - 04-computation/lrc14_j7_k3_z324_ray_status_frontier_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z324_ray_status_frontier_thm2941.out
   - 04-computation/lrc14_j7_k3_z324_antipodal_h_drift_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z324_antipodal_h_drift_closure_thm2941.out
   - 04-computation/lrc14_j7_k3_z312_ray_status_frontier_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z312_ray_status_frontier_thm2941.out
+  - 04-computation/lrc14_j7_k3_z324_located_two_cell_direct_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z324_located_two_cell_direct_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_2004_2142_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_2004_2142_thm2941.out
   - 04-computation/lrc14_j7_k2_z2060_ray_status_closure_thm2941.py
@@ -1183,6 +1188,30 @@ independently rebuilt common-status/Farkas certificates remove the remaining
 `49`.  Thus every `z_1=328` row is empty.  The next occupied atlas height is
 `324`.
 
+The denominator bridge was then rebuilt at the physical-row level before
+using the four-drift screens.  It reconciles exactly
+
+```text
+raw/support rows       375,913
+expected-spike rows    247,566
+joint-screen rows      247,565
+```
+
+and, with multiplicity,
+
+```text
+raw              75,422,968,365
+support          62,057,017,675
+expected         18,783,903,428
+joint            18,778,410,440.
+```
+
+This is a reconciliation of necessary denominator states, not a count of
+physical covers or numerator assignments.  An independent parser and
+arithmetic reconstruction gives the same tables.  At `z_1=324`, the
+expected/joint screen leaves `22` of the `45` scalar bodies; the exact
+all-label quotient below is therefore still required.
+
 At `z_1=324`, the lossless atlas has `45` bodies.  Exact all-label ray
 quotients produce `2,346` states: crude capacity removes `702`, exact
 common-status/Farkas certificates remove `1,643`, and precisely one state
@@ -1258,6 +1287,24 @@ d6a80c15c5c4d8ef2ea8be9fc886c40e70e3189123b5d0b3fce48765fa301977
 d03fc39ed1f5f64cd2be4e7e28f5cf23e8d7adc0c6a737abc6944bdb7672515f
 b6152f5a9f10115eb5d39ac402da0b960aad96d127d0d5fb5a640af35c81dd07.
 ```
+
+The primary and independent two-cell implementations agree on the sole state,
+the fixed-clean cells, the half-turn phase law, and the next occupied height.
+The physical reconciliation source/output pairs are
+`d209433bae4411e1a9597cb60d792b0c18897dffc333e60baaad5abcdaf6cf29 /
+6f24829835f1a9eb2f3afcc668ccfa13d21320bb53b27fb89e30911bd20569ab`
+and
+`ac7d5e5dfda7451f903c1f79bff1422964225b8a2f1400b2f3e53b41b476b776 /
+554f73032b2e72f324ee83c2ff751b28d58ccb2a3d367b96ee42166dd2086005`.
+The `z_1=324` frontier source/output pair is
+`7eaaf551d2bd4ae386e2db4452edac7d30c25f7fc67b71967e48454d688bf78e /
+db3c5c68c4aa2f61584ef91dd2171901888270edbf17e860d40f16a64d3a9242`;
+the antipodal and independent direct closure pairs are
+`e5fbb5166975ddfaf42b30802269c0f76da605df8165f7f2bb05f881d99c5237 /
+170523d62180e4779c6eb88b297df75f952b8efa28a58289c5e07dd8d2947d61`
+and
+`edd44a31aec80daaefb82180e7e26c388d351da914804bcaac73b06387a56d5c /
+9f19d0b528606bfd4278b772f6f155eda44ae2c0fa304f5f1718bf356bba944a`.
 
 The same quotient also closes the unique row at the much larger `k=2`
 frontier.  For
@@ -1414,25 +1461,47 @@ e83dfeba64f14c53abcf2a2c67ff000dc4f9e79ac786ba4fe20ab9ad4a76d744 /
 c2536ac8100d3dce937c4ca51ca50c0b8a8ef72ce456e339064ae2869ddaab8c.
 ```
 
-The next all-body band is also exact.  Among the `78,078` pairs
-`(E,z_1)` with `1810<=z_1<=1835`, its scalar envelope leaves ten rows:
-eight at `1810`, one at `1812`, and one at `1824`.  In particular
-`1813..1823` and `1825..1835` are empty, so
+The next two all-body bands are exact.  On `1810<=z_1<=1835`, the scalar
+envelope leaves ten rows: eight at `1810`, one at `1812`, and one at `1824`;
+the interstitial heights `1811`, `1813..1823`, and `1825..1835` are empty.
+On `1800<=z_1<=1809`, it leaves six rows: three at `1807`, one at `1805`,
+and two at `1800`; the other six heights are empty.  The sixteen rows split
+without overlap into ten exact-suffix rows and six `HIGH-TAIL` rows.
+
+For the exact-suffix class, attained residue-ray maxima, all-divisor crude
+capacity, common-`K5` status, scalar-slack literal packets, and the lossless
+projected residual give the global pipeline
 
 ```text
-z_1<=1824.                                              (25q3)
+scalar states          558
+crude kills            137
+status kills           328
+status survivors        93
+literal packets        147
+projected kills        147
+survivors                0.
 ```
 
-Eight rows have attained exact-suffix maximizers; the two remaining
-`z_1=1810` rows retain an explicit high-tail placeholder and require a
-separate ray closure.  This is a cap improvement and a ten-row frontier,
-not a closure of those rows; the necessary ledger remains `2,239,842`.
-The source/output/semantic hashes are
+The projected step uses
+`P_(E,Z)=phi_L(C_E minus union_z D_z)` and the sharp two-aligned cap
+`25/91`.  It is uniform over all distinct later nonaligned labels and has no
+finite label horizon.  The separate `z_1=1824` and `1812` packages reproduce
+their `38=15+23` and `11=4+7` state closures independently.
+
+For the six `HIGH-TAIL` rows, a later label is forced above
+`floor(13L/150)+1`.  On each positive residue ray,
+`delta(r+mL)=A(r)/(r+mL)`; hence the first four points dominate the omitted
+tail.  Replacing the fourth unrestricted maximum by the best wall-eligible
+point puts every constrained top-four sum strictly below `h/91`.  This
+closes two rows at `1810`, three at `1807`, and one at `1800` by exact scalar
+inequalities, again uniformly over distinct later nonaligned labels.
+
+Thus all sixteen scalar exceptions on `1800..1835` are empty.  They lower
+the necessary ledger from `2,239,842` to `2,239,826`, and the current proved
+projected `k=2` cap is
 
 ```text
-058c43d67d0bb110993ec687877edba4f5a7ad472a81455b0a5276b20db7680d /
-76f08dc5b70c98dd7c8fa958f5598f5c50e7cb1df26d0be10531ba8185796952 /
-68105c556b47cfd1d226d659b2e47115bc071f01c07f6e1f65818f58d68cc37e.
+z_1<=1799.                                              (25q3)
 ```
 
 These repeated certificates reveal a quotient family, but do not yet prove
