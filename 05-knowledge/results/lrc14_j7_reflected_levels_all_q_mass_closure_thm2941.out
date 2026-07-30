@@ -1,0 +1,52 @@
+LRC14 THM-2941 canonical reflected-stalk all-level k=1 mass closure
+scope=all six-body roots E subset {1,...,14};Z_(E,q)={qL-e:e in E} for every integer q>=1;one final aligned comb;not the whole j=7 sector
+exact_cell_law=(qL-e)(j+u)/L=q*u-e(j+u)/L mod1;U_j^q=union_e {u:||q*u-e(j+u)/L||<1/14}
+toothpick_subdivision=u=(r+x)/q,J=qj+r,L'=qL;mu(U_j^q)=(1/q)sum_(r=0..q-1)mu(U_J^1 at ruler L')
+selector=first safe-component left cell for 2997 roots;second safe-component left cell for 6 frozen exceptions
+selector_exceptions=((1, 3, 5, 7, 9, 11), (1, 3, 5, 7, 9, 12), (1, 3, 5, 7, 10, 12), (1, 3, 5, 8, 10, 12), (1, 3, 6, 8, 10, 12), (1, 4, 6, 8, 10, 12))
+body_roots=3003;direct_body_safe_checks=18018
+base_envelope_max=265/336;u=1;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+base_event_rows=6051;base_union_routes=equal_interval_gap_formula+exact_interval_merge;all_equal
+max_sumE_over_L=1/6;body=(1, 2, 3, 4, 6, 12);L=168
+diagonal_dilation_law={x:x in (a,b)+(e/(qL))*x}=(a/(1-e/(qL)),b/(1-e/(qL))) intersect [0,1]
+all_q_bound=mu(U_j^q)<=265/336+sum_e 2e/(qL-e)<=265/336+14/[3(14q-1)]
+q_ge_5_uniform_gap_6/7_minus_bound=19/23184;exact_q5_correction_max=4408424336396/65534367081447;correction_max_body=(1, 2, 3, 4, 6, 12)
+finite_head_uniform_gap=4964583434/87692604615;head_route_comparisons=72072;toothpick_fine_cell_checks=30030
+redundant_exact_scout=q=1..30;body_level_rows=90090;individual_clause_mass_checks=540540;survivors=0
+q=1;maximum_selected_union=10028643748/12527514945;gap=4964583434/87692604615;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=2;maximum_selected_union=83066098364/104645906565;gap=46412750842/732521345955;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=3;maximum_selected_union=23225895503112/29341517507375;gap=13467836522466/205390622551625;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=4;maximum_selected_union=219047327076728/277109491304595;gap=129325658290474/1939766439132165;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=5;maximum_selected_union=2517486571365380/3187438519061511;gap=1502225114811406/22312069633430577;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=6;maximum_selected_union=301540335952260/381997522899421;gap=181202785730706/2673982660295947;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=7;maximum_selected_union=6349265457111248/8046559496603745;gap=3834498779843734/56325916476226215;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=8;maximum_selected_union=8501294270260048/10777062730958205;gap=5153316493928894/75439439116707435;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=9;maximum_selected_union=86274465882659244/109395038661467455;gap=52448970790190022/765765270630272185;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=10;maximum_selected_union=54164598482446820/68692738552164207;gap=33004241935857502/480849169865149449;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=11;maximum_selected_union=57617964250195096/73083377368320735;gap=35174514458558738/511583641578245145;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=12;maximum_selected_union=6150512715670536/7802369299193095;gap=3760626785464818/54616585094351665;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=13;maximum_selected_union=4762810014763268/6042609509093355;gap=2915986951217254/42298266563653485;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=14;maximum_selected_union=1226472155329457204/1556175101917457925;gap=751745524198547122/10893225713422205475;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=15;maximum_selected_union=1856147215763202240/2355306409037373331;gap=1138807943881824306/16487144863261613317;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=16;maximum_selected_union=182325304591627744/231372578565327375;gap=111958339250570042/1619608049957291625;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=17;maximum_selected_union=3935928694354726844/4995035486798048175;gap=2418712060305201142/34965248407586337225;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=18;maximum_selected_union=221906000797652700/281633220884062021;gap=136457319720803226/1971432546188434147;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=19;maximum_selected_union=2558480038812481688/3247266064780231065;gap=1574236116994014574/22730862453461617455;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=20;maximum_selected_union=454078255837491640/576348875336962767;gap=279545461159335122/4034442127358739369;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=21;maximum_selected_union=2799703146306052308/3553725114090599675;gap=1724428660401231894/24876075798634197725;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=22;maximum_selected_union=6169652914553128748/7831557205408325415;gap=3801772830578051254/54820900437858277905;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=23;maximum_selected_union=4834100368901880016/6136450682683753575;gap=2980001513789361338/42955154778786275025;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=24;maximum_selected_union=2837004995368083984/3601427653277140115;gap=1749530952086252802/25209993572939980805;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=25;maximum_selected_union=13291239369184031300/16872989724011534517;gap=8199262759780988002/118110928068080741619;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=26;maximum_selected_union=10091910528264904924/12811825088721643785;gap=6227576834475528242/89682775621051506495;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=27;maximum_selected_union=63290470269958619544/80350051614876582715;gap=39067017799549159482/562450361304136079005;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=28;maximum_selected_union=5248816015341215464/6663749829103196775;gap=3240786867230672402/46646248803722377425;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=29;maximum_selected_union=97193614385852674484/123396803277816930135;gap=60025518965932859422/863777622944718510945;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+q=30;maximum_selected_union=119129570330440077780/151249519495409913061;gap=73590124659378933906/1058746636467869391427;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+projection_consequence=mu(P_(E,Z_(E,q)))>1/7 for every q>=1;therefore P cannot lie in one normalized danger comb
+endpoint_status=open danger intervals retained;strict positive finite-head and analytic-tail gaps make seams irrelevant
+base_digest_sha256=3dd7bdf26fea756bb4a58461462d26cae52c336ae41f040f98c3f132e4e093a0
+scout_digest_sha256=d243ce5478b17b6aec12065a5de4639fcce612aed5e8639b029355d50deb0f93
+semantic_sha256=c5898923940813859f7ce7401e227cdfb5c1d223b322974ceee76142b10f25fd
+conclusion=canonical reflected-level k=1 family is empty for all 3003 body roots and every integer level q>=1
+all_exact_controls=PASS
