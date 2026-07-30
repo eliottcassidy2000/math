@@ -1,0 +1,19 @@
+LRC14 projected k=3 z1=324 antipodal H-drift closure
+frontier_source_sha256=7eaaf551d2bd4ae386e2db4452edac7d30c25f7fc67b71967e48454d688bf78e
+frontier_output_sha256=db3c5c68c4aa2f61584ef91dd2171901888270edbf17e860d40f16a64d3a9242
+projection_source_sha256=76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662
+body=(2, 8, 10, 11, 12, 14);L=129360;h=21041/64680;lower=21041/1961960;first_delta=38443/12224520;high_floor=12741
+sole_state=(3920, 4620, 10780, 10780);maximizing_packet=(324, 12771, 364, 492);state_excess=22661393/280173773880
+best_any={3920: (Fraction(8147, 5885880), 429, 13, 429), 4620: (Fraction(2059, 452760), 364, 13, 364), 10780: (Fraction(56489, 18563160), 492, 41, 492)}
+best_high={3920: (Fraction(2449, 35043624), 12771, 387, 12771), 4620: (Fraction(31639, 272108760), 16828, 601, 16828), 10780: (Fraction(58687, 481283880), 12756, 1063, 12756)}
+positive_scalar_thresholds=(Fraction(35115043, 12066474420), Fraction(89391041, 20012412420), Fraction(722933, 244053810))
+literal_classification=low_d3920:();d4620:(364,);d10780:(492,);remaining_H=every high exact-denominator-3920 label
+fixed_base_surplus=5119/465404940
+two_cell_certificate=j:5880;k:19600;difference:13720;fixed_phase_dangers:empty;unit_count:1344;H_phase_shift:1/2
+symbolic_identity=z=33u+mL => phase_k-phase_j=u(k-j)/3920=1/2 mod 1
+projected_residual_mass=1;three_aligned_open_union_cap=36/91;margin=55/91
+representative_packet=(324, 364, 492, 12771);full_cell_mass=1;direct_subtraction_mass=1
+independent_control=full-cell De Morgan agrees with direct carrier subtraction/projection
+conclusion=the sole z1=324 status residual is empty uniformly over all H heights
+semantic_sha256=613d6daf11b6cd5b4292d43820badbb40a0951bf9e58a38108ceb68cf8e360f9
+all_exact_controls=PASS
