@@ -106,15 +106,30 @@
   `b9b1cbd3e38a285572f8b35e7220149f6372d3ce4941923aa586101461bee7e4` /
   `97f242c4b5b774c830a8111df6c2e24a725fa1a77771d4937aaa62f96d4400a0` /
   `fddb52f665e6c974e3e74839bd377907e21936bdae083a7f79ad9cf1905a63b7`.
-- `lrc14_j7_k3_projected_scalar_atlas_thm2941.py`, the `z364/z350/z336`
-  scalar slices, and their ray-status closures -> matching `.out` files
+- `lrc14_j7_k3_projected_scalar_atlas_thm2941.py`, the descending scalar
+  slices, their ray-status closures, and the `z324` antipodal sidecar ->
+  matching `.out` files
   [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].  The
   global `200..378` atlas has `6,060` rows and isolated upper spikes
-  `378:9, 364:25, 350:53, 336:8, 330:1`.  Exact all-label quotients close
+  `378:9, 364:25, 350:53, 336:8, 330:1, 328:9, 324:45, 312:80`.
+  Exact all-label quotients close
   `z1=364` by `1,109=242+867`, `z1=350` by
   `3,200=1,295+1,905`, `z1=336` by `109=71+38`, and `z1=330` by one
-  transparent status kill.  There are no survivors, so the current proved
-  projected `k=3` cap is `328` and the old necessary ledger is `375,922`.
+  transparent status kill.  They close `z1=328` by `85=36+49`; at `z1=324`,
+  they reduce `2,346=702+1,643+1` to one H-drift tail, closed uniformly by a
+  two-cell antipodal phase certificate.  Hence the current proved projected
+  `k=3` cap is `312` and the old necessary ledger is `375,868`.
+
+  The guarded `z1=312` endpoint package is **FINITE-EXACT but OPEN**: its 80
+  bodies give `18,249=7,481+10,698+70`, leaving 70 denominator states on four
+  bodies (`25+41+2+2`).  Every attained maximizing packet has exactly one
+  high-wall label.  The expected-spike and support-status bridge predicates
+  retain all `70/70`, so this package gives no further cap improvement.
+  Source/output/semantic SHA-256:
+  `d6a80c15c5c4d8ef2ea8be9fc886c40e70e3189123b5d0b3fce48765fa301977` /
+  `d03fc39ed1f5f64cd2be4e7e28f5cf23e8d7adc0c6a737abc6944bdb7672515f` /
+  `b6152f5a9f10115eb5d39ac402da0b960aad96d127d0d5fb5a640af35c81dd07`.
+
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;
   the `z336` source/output/semantic hashes are
   `6e991432a1ce5ec9c1cbe97199cb5fd647c5edc89bdcc60ce560382a70835fcf` /

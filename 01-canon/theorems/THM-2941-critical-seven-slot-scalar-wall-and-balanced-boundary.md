@@ -91,6 +91,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_k3_z324_ray_status_frontier_thm2941.out
   - 04-computation/lrc14_j7_k3_z324_antipodal_h_drift_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z324_antipodal_h_drift_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_z312_ray_status_frontier_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z312_ray_status_frontier_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_2004_2142_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_2004_2142_thm2941.out
   - 04-computation/lrc14_j7_k2_z2060_ray_status_closure_thm2941.py
@@ -1211,6 +1213,37 @@ z_1<=312.                                               (25q1)
 
 Closing each displayed spike certifies every skipped integer above the next
 spike; the descent does not extrapolate from a sparse search.
+
+At the still-occupied endpoint `z_1=312`, the lossless atlas has exactly `80`
+bodies.  The exact all-label ray quotient produces `18,249` attained
+denominator states.  Crude all-divisor capacity removes `7,481`, and
+independently rebuilt common-status/Farkas certificates remove `10,698`.
+Exactly `70` states remain, distributed over four bodies as `25+41+2+2`.
+Every attained maximizing packet has four distinct labels, begins with `312`,
+and has exactly one label at or above its body's projected high wall.  This is
+a useful one-moving/three-located geometry, but it is not yet a literal-packet
+classification.
+
+The physical-denominator bridge does not shrink this endpoint.  All `70`
+states pass its expected-spike predicate, and all `70` pass its one-threshold
+support-status predicate.  Among them denominator `3` and denominator `4`
+never occur; denominator `2` occurs once.  Thus every small-status allowance
+is exactly zero, while the minimum large-capacity support slack is `14,348`.
+This bridge is only necessary and forgets unit directions and literal phases.
+Accordingly the exact endpoint status is
+
+```text
+z_1=312: 70 denominator states on four bodies, OPEN.       (25q2)
+```
+
+No cap improvement follows from this endpoint package.  Its source/output
+and semantic hashes are
+
+```text
+d6a80c15c5c4d8ef2ea8be9fc886c40e70e3189123b5d0b3fce48765fa301977
+d03fc39ed1f5f64cd2be4e7e28f5cf23e8d7adc0c6a737abc6944bdb7672515f
+b6152f5a9f10115eb5d39ac402da0b960aad96d127d0d5fb5a640af35c81dd07.
+```
 
 The same quotient also closes the unique row at the much larger `k=2`
 frontier.  For
