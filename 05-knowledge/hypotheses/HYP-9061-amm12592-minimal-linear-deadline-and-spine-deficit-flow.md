@@ -123,6 +123,31 @@ consequence; the matching upper construction is then the open half.
 This direction assignment is a working hypothesis, not verified: the
 opposite (construction-gate) reading is not yet excluded.
 
+## 2d. The capacity desert and the Legendre reading of the two biases
+
+At depth rate `gamma < 1`, integer absorption capacity exists only in the
+two cones `o <= gamma z + O(D)` (0-side cells `(m + e - k, 1 + k)`) and
+its mirror `o >= z/gamma - O(D)`. The band between them is a **desert**:
+no W/V cell lives there, so deficit mass crossing it can only split
+(Pascal), never settle. Pushing a deficit from level `z+o` to level `L`
+spreads it binomially with bulk slope tending to the diagonal `o = z` --
+inside the desert -- so only exponentially small tails reach the cones,
+and the per-cell requirement `binom(Delta, j)/2 <= binom(d_m, k)` becomes
+an entropy race `Delta H(j/Delta)` vs `gamma m H(k/(gamma m))`, tightest
+along one or two critical rays. Legendre duality identifies the decoded
+certificate's biases with those rays: a binding ray with ones-fraction
+`x` has dual bias `q = x` via `H'(x) = log((1-x)/x)`, and indeed
+`q_A/p_A = 896/1285 ~ 0.697`, `q_B/p_B = 2974400/8847357 ~ 0.336` --
+one ray inside the 0-cone edge (`0.336` vs edge `2457/6592 ~ 0.3727`),
+one in the desert. Under this reading (27) certifies the entropy race at
+`gamma = 2457/6592` with margin `1/25`, i.e. plausibly the lower bound
+`C* >= 9049/6592`, en route to the transcendental threshold where the
+desert max-flow balances. The single-jump lemma
+(`amm12592_single_jump_routing_slack_deathstar.py`: slack exactly
+`D = l`, envelope degrades to `2n`) is the finite shadow of the desert:
+naive routing pays back the whole shell gain, and `C = 2` is its fixed
+point.
+
 ## 3. Cheapest decisive tests
 
 1. Bounded depth (`gamma = 0`, i.e. `T(n) <= n + D`): (S) forces
