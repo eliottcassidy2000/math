@@ -10,7 +10,7 @@ status: >
   five-aligned/two-drift face independently of THM-2928, and exact suffix
   filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
   common-status, exact-packet, forced-high-ray, and antipodal-phase addenda
-  improve the k=2/k=3 first-drift caps from 2142/380 to 1759/312.
+  improve the k=2/k=3 first-drift caps from 2142/380 to 1742/312.
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -168,6 +168,10 @@ verification:
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_1760_1769_thm2941.out
   - 04-computation/lrc14_j7_k2_z1768_high_wall_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_z1768_high_wall_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1758_ray_status_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1758_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_cap1742_splice_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_cap1742_splice_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -1556,16 +1560,11 @@ forced-high decreasing-ray invoice has exact gap
 Thus all twenty-two newly exposed rows are empty.  Ordinary and optimized
 runs match stored bytes, each new script pins its complete profile and census
 and fails closed, and an independent replay reconstructed the four bands.
-The necessary ledger is now `2,239,804`, and the current proved projected
-`k=2` cap is
+The all-body `1750..1799` atlas certifies every height `1751..1759`
+scalar-empty except `1758`; that row has two scalar states and both fail exact
+common-`K5` status.  Hence the upper descent reaches `z_1<=1750`.
 
-```text
-z_1<=1759.                                              (25q4)
-```
-
-No lower cap is claimed; the first unscouted level is `1759`.
-
-Two disjoint lower packages nevertheless close the contiguous integer block
+Two independent lower packages close the contiguous integer block
 `1743<=z_1<=1750`.  The all-body slice at `1750` has exactly twelve scalar
 rows.  Exact residue-ray high-wall envelopes make four rows scalar-empty.  On
 the other eight rows the all-label denominator quotient has `682` scalar
@@ -1591,9 +1590,21 @@ projected-empty with minimum margin `1026/16471`.  Normal, serial, and
 optimized transcripts agree byte for byte, and direct subtraction again
 checks the minimum projected packet.
 
-This closes only `1743..1750` and does not by itself improve the current cap.
-Together with the four-band descent above, the sole missing splice for the
-stronger conclusion `z_1<=1742` is the contiguous interval `1751..1759`.
+The hash-pinned splice verifier checks the upper cap, the complete `1750`
+slice, the complete `1743..1749` band, and every integer in their union; no
+height is supplied by interpolation.  The ledger update is
+
+```text
+2,239,804 - 1 - 12 - 2 = 2,239,789,
+```
+
+and the current proved projected `k=2` cap is
+
+```text
+z_1<=1742.                                              (25q4)
+```
+
+The next exact obligation is an all-body atlas at and below `1742`.
 
 For `k=5`, there is a second, Gram-facing derivation.  Pointwise
 

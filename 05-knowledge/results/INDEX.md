@@ -135,10 +135,12 @@
   by `1` crude-capacity kill and by `11 -> 4` status kills `-> 7` packets
   `-> 0`, respectively, with minimum projected margin `1026/16471`.
   Direct carrier subtraction agrees with the lossless projected-cell engine;
-  normal, serial, and optimized transcripts match stored bytes.  Together
-  these packages close exactly `1743..1750`, but make no present cap claim.
-  Once a proved contiguous `1751..1784` closure is integrated, their explicit
-  dependency chain gives the conditional upgrade `z1<=1742`.  The `1750`
+  normal, serial, and optimized transcripts match stored bytes.  The proved
+  upper descent now reaches `z1<=1750`: its final `z1=1758` row is
+  `2 -> 2` exact common-status kills, while the intervening atlas heights are
+  scalar-empty.  `lrc14_j7_k2_cap1742_splice_thm2941.py` pins that chain and
+  both lower packages, verifies the complete integer cover `1743..1750`, and
+  proves `z1<=1742` with ledger `2,239,789`; no interpolation is used.  The `1750`
   source/output/semantic hashes are
   `70c9faa37a0524673e8178ed82cc6abc040438fff043b944a7ee0227d48c8997` /
   `5288ace3fa398125045eeaea8c983c74d0019faa77d426784a612b7d2b4ae700` /
@@ -146,7 +148,11 @@
   the `1743..1749` hashes are
   `635c7c0bf79cb524f42ac2b1002ab8b4e10fb67d417443bd21756ed907145865` /
   `d046fe640140556b3964d876336ac26c233cc8dbc15a0e10bc5dc721b01f4666` /
-  `e07845eaf675a561995164f61e75d9234abbb45ab53cf0ce54b5fb64679ba174`.
+  `e07845eaf675a561995164f61e75d9234abbb45ab53cf0ce54b5fb64679ba174`;
+  the splice source/output/semantic hashes are
+  `16bf56ef209f4c8b715f608db048d6e7166fd97756128c32c2b150746749ff92` /
+  `5e2e6bd8586c78dca1104cd78d8c1d698a2b0c6cbb2e1e087c6563b7488cfc67` /
+  `acc67c59ce2cbf9d84ad4f97942a35dd79db4fc2e93b34614bfe2ba1549fae70`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:
