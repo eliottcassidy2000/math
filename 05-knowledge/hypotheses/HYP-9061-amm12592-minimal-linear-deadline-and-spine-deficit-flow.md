@@ -148,6 +148,29 @@ desert max-flow balances. The single-jump lemma
 naive routing pays back the whole shell gain, and `C = 2` is its fixed
 point.
 
+## 2e. The 2-adic engineering of the certificate biases (decode advance)
+
+Both certificate biases have odd denominator, odd `p`-numerator, and
+`q`-numerator divisible by a high power of two:
+
+```text
+q_A = 896/2181,      896 = 2^7 * 7          (s_A = 7),
+q_B = 2974400/11821757,  2974400 = 2^6*5^2*11*13^2   (s_B = 6).
+```
+
+At such a bias `p = a/b`, `N_M := 2 D_M(p) b^{A_M} = sum 2delta a^z
+(b-a)^o` is an integer with per-term 2-adic valuation `v_2(2delta) + s o`:
+the minimal forced-odd band position is a non-archimedean leading term, so
+a single evaluation can extract one forced half-odd band coefficient,
+bypassing the archimedean sign-cancellation that defeats parity-free
+tests. The envelope bounds `|N_M| <= (p^{M+1}+q^{M+1}) b^{A_M}`; the
+nonzero-integer-below-one contradiction fails at any single bias (rate
+check: `gamma log b + log a > 0` always), so the genuine dual must couple
+the two biases -- cancel the dominant archimedean mass between
+`N^{(A)}, N^{(B)}` while keeping the 2-adic leading terms misaligned
+(`s_A = 7` vs `s_B = 6`). The resulting rate inequality has exactly the
+shape of (27); reconstruction assigned to wave-2 lane G.
+
 ## 3. Cheapest decisive tests
 
 1. Bounded depth (`gamma = 0`, i.e. `T(n) <= n + D`): (S) forces
