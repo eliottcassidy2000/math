@@ -928,27 +928,50 @@ Ordinary and optimized transcripts are byte-identical.  Consequently this
 separate uniform closure leaves `376,018` rows in the old necessary ledger;
 it does not by itself change the current first-drift cap.
 
-At the old `k=3` cap, the finite-envelope census has exactly nine body rows
-with `z_1=378`.  Replacing its generic remote tail by the exact ray merge
-eliminates four of them.  Across the other five bodies, the exact all-label
+At the old `k=3` cap, the frontier extraction supplied nine bodies whose
+recorded maximal surviving first drift was `z_1=378`.  This was not yet a
+complete retest of every earlier frontier body at the lower slice.  A global
+cap argument must also retest
+
+```text
+E=(1,4,8,10,12,14),
+```
+
+because this was the body at the preceding `z_1=380` frontier: closing its
+`380` row and proving `379` empty does not logically decide a distinct `378`
+row.  The repaired ten-body referee includes it explicitly.  Its exact
+all-label ray quotient has zero scalar denominator states at `z_1=378`, so it
+dies before any fibre or status transport.  Its sharp suffix maximum uses
+denominators `(196,280,588,980)` and label set `{378,380,492,1500}` and misses
+the required scalar floor by exactly
+
+```text
+11179177/46893073500.
+```
+
+This body was not one of the nine rows in the old necessary-row ledger.
+
+On the nine extracted rows, replacing the generic remote tail by the exact
+ray merge eliminates four.  Across the other five bodies, the exact all-label
 denominator quotient has only `38` states.  The crude all-divisor screen
-removes `18`, and the common four-needle Hunter-status table removes the
-other `20`, again with exact Farkas certificates.  Hence all nine rows are
-empty and
+removes `18`, and the common four-needle Hunter-status table removes the other
+`20`, again with exact Farkas certificates.  Hence all nine ledger rows are
+empty, the carried-forward body is independently scalar-empty, and
 
 ```text
 projected k=3 first-drift cap <=377.
 ```
 
-The ray recurrence was checked at all `199,915` nonzero residues across
-the five active bodies; all scalar maxima are attained rather than remote
-suprema.  Ordinary and optimized transcripts are byte-identical.  The
+The ray recurrence was checked at all `670,310` nonzero residues across all
+ten candidate bodies (`199,915` across the five bodies with nonempty scalar
+state sets); all scalar maxima are attained rather than remote suprema.
+Ordinary and optimized transcripts are byte-identical.  The
 source/output and semantic hashes are
 
 ```text
-813d93ffe67cf3bdab06aa27f04680f49b057e387eabc8e713ba9cba35439353
-ba8e1c3dab6be12724598ebb84ae9a34de784913426d8335ec8fc6c34da4256c
-4cc1d3528844818857a3ed4c1c08ca03405cb3857e102c95acae5a95462c4669.
+6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e
+a48a7ca3c3142476deac9b81a48c7f6937bc3312220579520d2440f5c76133a9
+1cbf6c8312428a6fdef27b2f388fd3ad028707586b2097fb4ccc06ab020da726.
 ```
 
 Together with the distinct `z_1=250` closure, this leaves `376,009` rows

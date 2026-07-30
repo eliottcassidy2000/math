@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""All-label closure of the nine projected k=3 scalar rows at z1=378.
+"""All-label closure of every k=3 body candidate at z1=378.
 
-The inherited finite-envelope audit leaves nine possible six-body rows at
-first drift 378.  For a body ruler L and singleton excess delta, the exact
+The prior frontier extraction records nine six-body rows whose maximal first
+drift is 378.  A tenth body was previously visible at the old z1=380 frontier
+and must be retested rather than silently omitted from the lower slice; its
+z1=378 continuation turns out to be scalar-empty.  For a body ruler L and
+singleton excess delta, the exact
 periodic primitive identity gives
 
     (z+L) delta(z+L) = z delta(z).
@@ -14,7 +17,7 @@ multiset is therefore a finite merge of the first three admissible points
 on its nonnegative rays.  A two-state max-plus DP retains the projected
 high-label obligation.
 
-The exact ray quotient eliminates four of the nine bodies.  On every
+The exact ray quotient eliminates five of the ten bodies.  On every
 denominator state of the other five, this referee applies the crude all-q
 fibre bound and then the common 16-status Hunter transport imported from
 the independently controlled z1=250 referee.  Every status rejection has
@@ -50,11 +53,12 @@ EXPECTED_RAY_STATUS_SHA256 = (
     "dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "4cc1d3528844818857a3ed4c1c08ca03405cb3857e102c95acae5a95462c4669"
+    "1cbf6c8312428a6fdef27b2f388fd3ad028707586b2097fb4ccc06ab020da726"
 )
 
 FIRST = 378
 ORIGINAL_BODIES = (
+    (1, 4, 8, 10, 12, 14),
     (1, 2, 6, 10, 12, 14),
     (1, 6, 8, 10, 12, 14),
     (1, 6, 8, 10, 13, 14),
@@ -73,6 +77,7 @@ EXPECTED_SURVIVING_BODIES = (
     (2, 8, 10, 12, 13, 14),
 )
 EXPECTED_COUNTS = {
+    (1, 4, 8, 10, 12, 14): (0, 0, 0),
     (1, 2, 6, 10, 12, 14): (11, 3, 8),
     (1, 6, 8, 10, 12, 14): (2, 1, 1),
     (1, 6, 8, 10, 13, 14): (0, 0, 0),
@@ -483,7 +488,7 @@ def main():
         )
     require(
         tuple(surviving_bodies) == EXPECTED_SURVIVING_BODIES,
-        ("nine-to-five scalar reduction changed", surviving_bodies),
+        ("ten-to-five scalar reduction changed", surviving_bodies),
     )
     require(
         (total_states, total_crude, total_status, total_survivors)
@@ -522,7 +527,8 @@ def main():
         "LRC14 projected k=3 z1=378 all-label ray/status closure",
         f"ray_status_source_sha256={file_sha256(RAY_STATUS_PATH)}",
         (
-            "scope=nine inherited projected scalar body rows at z1=378;"
+            "scope=nine extracted z1=378 rows plus the carried-forward "
+            "old-frontier body;"
             "three distinct later nonaligned labels;no finite horizon"
         ),
         (
@@ -587,7 +593,8 @@ def main():
                 f"status_kills:{total_status};survivors:{total_survivors}"
             ),
             f"farkas_certificate_sha256={certificate_digest.hexdigest()}",
-            "conclusion=all nine z1=378 candidate body rows are empty",
+            "conclusion=all ten body candidates checked;"
+            "all nine extracted z1=378 rows are empty",
             f"semantic_sha256={semantic_hash}",
             "all_exact_controls=PASS",
         )

@@ -83,14 +83,17 @@
   `bcfa48e8b59080ced069a794d02cc04f62db8137f94b163b2fe4c98c3b3f77fa`.
 - `lrc14_j7_k3_z378_ray_status_closure_thm2941.py` -> matching `.out`
   [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].
-  The exact ray quotient removes four of the nine inherited `z1=378`
-  bodies and leaves only `38` attained denominator states on the other
-  five; crude all-divisor capacity kills `18`, and the common four-needle
-  Hunter-status table kills `20`, leaving zero.  This lowers the projected
-  `k=3` first-drift cap to `377`.  Source/output/semantic SHA-256:
-  `813d93ffe67cf3bdab06aa27f04680f49b057e387eabc8e713ba9cba35439353` /
-  `ba8e1c3dab6be12724598ebb84ae9a34de784913426d8335ec8fc6c34da4256c` /
-  `4cc1d3528844818857a3ed4c1c08ca03405cb3857e102c95acae5a95462c4669`.
+  The repaired referee checks the nine extracted `z1=378` rows and also
+  carries forward the old `z1=380` body, whose distinct `z1=378` slice had
+  not previously been tested.  That tenth candidate is scalar-empty.  The
+  exact ray quotient removes four of those nine rows and leaves only
+  `38` attained denominator states on the other five; crude all-divisor
+  capacity kills `18`, and the common four-needle Hunter-status table kills
+  `20`, leaving zero.  This lowers the projected `k=3` first-drift cap to
+  `377`.  Source/output/semantic SHA-256:
+  `6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e` /
+  `a48a7ca3c3142476deac9b81a48c7f6937bc3312220579520d2440f5c76133a9` /
+  `1cbf6c8312428a6fdef27b2f388fd3ad028707586b2097fb4ccc06ab020da726`.
 - `lrc14_j7_k2_frontier_ray_status_closure_thm2941.py` -> matching `.out`
   [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].
   At the unique old `k=2` frontier row `z1=2142`, the exact all-label ray
