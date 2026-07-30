@@ -39,11 +39,11 @@ BODY_ATLAS_OUTPUT_PATH = (
 )
 Z312_TERMINAL_PATH = (
     ROOT / "04-computation/"
-    "lrc14_j7_k3_z312_finite_low_pair_torsion_closure_thm2941.py"
+    "lrc14_j7_k3_z312_finite_low_pair_torsion_independent_thm2941.py"
 )
 Z312_TERMINAL_OUTPUT_PATH = (
     ROOT / "05-knowledge/results/"
-    "lrc14_j7_k3_z312_finite_low_pair_torsion_closure_thm2941.out"
+    "lrc14_j7_k3_z312_finite_low_pair_torsion_independent_thm2941.out"
 )
 DEFAULT_OUTPUT = (
     ROOT / "05-knowledge/results/"
@@ -60,10 +60,10 @@ EXPECTED_BODY_ATLAS_OUTPUT_SHA256 = (
     "cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda"
 )
 EXPECTED_Z312_TERMINAL_SHA256 = (
-    "a46bd16bf5d8933c639d27b48424aa78b139b26aa1a1cafa9b39f9b98ed1fe3f"
+    "a5bec8e5c0ca8a2ca7650f0b577e085c00e90d5b52ba94a6b0555fa164d34a75"
 )
 EXPECTED_Z312_TERMINAL_OUTPUT_SHA256 = (
-    "75dd08768abd9397a1cb1f3f67b742a126db86bf201745c10fe79b229c44a986"
+    "4b704cfc44024a240bb068faf00069546d6b81670c4822cd8cabe5d96fe8ae07"
 )
 EXPECTED_SEMANTIC_SHA256 = (
     "3f7f8633875d1011671260abdc2dcac23c14ee4489d72b9e24f6f084ea9ee612"

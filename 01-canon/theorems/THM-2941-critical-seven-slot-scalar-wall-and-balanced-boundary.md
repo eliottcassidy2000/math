@@ -10,7 +10,7 @@ status: >
   five-aligned/two-drift face independently of THM-2928, and exact suffix
   filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
   common-status, exact-descent, and antipodal-phase addenda improve the
-  k=2/k=3 first-drift caps from 2142/380 to 1799/306.  THM-2928's later
+  k=2/k=3 first-drift caps from 2142/380 to 1799/298.  THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
   addendum closes the common-level reflected-stalk k=1 diagonal
@@ -1255,10 +1255,10 @@ least finite packet and representative order-two and order-three tails.
 Consequently the `z_1=312` slice is empty.  These `80` rows leave `375,788`
 old necessary rows.  The pinned lossless atlas has no occupied height from
 `307` through `311` and its next occupied height is exactly `306`, so the
-current proved projected `k=3` cap is
+intermediate projected `k=3` cap after closing this slice was
 
 ```text
-z_1<=306.                                               (25q1)
+z_1<=306.                                           (25q1-pre)
 ```
 
 Normal and optimized transcripts are byte-identical.  Frontier
@@ -1285,6 +1285,31 @@ interval implementation.  Its source/output/semantic hashes are
 `a5bec8e5c0ca8a2ca7650f0b577e085c00e90d5b52ba94a6b0555fa164d34a75`,
 `4b704cfc44024a240bb068faf00069546d6b81670c4822cd8cabe5d96fe8ae07`,
 and `4667f8f0ef18add7466f849c6f902048d436692aa04c1f9037c2a3623709c91e`.
+
+The next two occupied atlas spikes are also empty.  Height `306` has exactly
+two bodies and nine attained denominator states; all nine fail the common
+status table.  After the empty gap `303..305`, height `302` has exactly nine
+bodies and 32 attained states; crude all-divisor capacity removes two and
+the common status table removes the other 30.  A second exact rational
+checker rebuilds all 39 status witnesses as 16-cell Farkas certificates,
+including their marginals, capacities, load histograms, nonnegative columns,
+and strict contradictions.  No finite label horizon is imposed.
+
+Thus the `z_1=306` and `z_1=302` slices are empty.  They remove eleven more
+old necessary rows, leaving `375,777`.  The pinned atlas has no occupied
+height in `299..301` and its next occupied height is exactly `298`, so (25q1)
+sharpens to
+
+```text
+z_1<=298.                                               (25q1)
+```
+
+The descent now pins the repaired independent `z_1=312` terminal rather than
+the superseded pre-repair artifact.  Normal and optimized descent transcripts
+are byte-identical.  Descent source/output/semantic hashes are
+`f3d1e66e3ecc984fde8a3b05a81f6171745c4e6ec855da18534f70ab73ce8fdb`,
+`67a717bcb96296fa1b71dee632461ba7593f7be605c4a47254db3aa89beab7fa`,
+and `3f7f8633875d1011671260abdc2dcac23c14ee4489d72b9e24f6f084ea9ee612`.
 
 Closing each displayed spike certifies every skipped integer above the next
 spike; the descent does not extrapolate from a sparse search.

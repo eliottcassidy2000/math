@@ -110,7 +110,8 @@
   scalar slices, and their ray-status closures -> matching `.out` files
   [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].  The
   global `200..378` atlas has `6,060` rows and isolated upper spikes
-  `378:9, 364:25, 350:53, 336:8, 330:1, 328:9, 324:45, 312:80`.  Exact
+  `378:9, 364:25, 350:53, 336:8, 330:1, 328:9, 324:45, 312:80, 306:2,
+  302:9, 298:12`.  Exact
   all-label quotients close
   `z1=364` by `1,109=242+867`, `z1=350` by
   `3,200=1,295+1,905`, `z1=336` by `109=71+38`, and `z1=330` by one
@@ -121,9 +122,12 @@
   the four residual bodies gives `27,491` finite packets, all strictly above
   projected mass `36/91`, and `73` unbounded bases: `71` close by a
   half-turn and the denominator-`1911` and `9555` tails by a third-turn.  The
-  all-sign audit visits `15,528` negative low rays and admits none.  Thus the
-  proved projected `k=3` cap is `306` and the old necessary ledger is
-  `375,788`.
+  all-sign audit visits `15,528` negative low rays and admits none.  At the
+  next occupied spikes, `306` contributes nine attained states, all status
+  kills, while `302` contributes 32 states, split as two crude and 30 status
+  kills.  A second exact rational checker replays all 39 status certificates,
+  so the proved projected `k=3` cap is `298` and the old necessary ledger is
+  `375,777`.
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;
   the `z336` source/output/semantic hashes are
   `6e991432a1ce5ec9c1cbe97199cb5fd647c5edc89bdcc60ce560382a70835fcf` /
@@ -138,7 +142,12 @@
   (`69/70` zero-high hostile scalar passes), excludes every multi-high mask
   by positive exact gaps, and closes all `80` resulting one-high fixed-low-
   pair cases by torsion (`78+2`).  Its source/output/semantic hashes begin
-  `a5bec8e5/4b704cfc/4667f8f0`.
+  `a5bec8e5/4b704cfc/4667f8f0`.  The repaired-terminal-pinned `306/302`
+  descent has source/output/semantic hashes
+  `f3d1e66e3ecc984fde8a3b05a81f6171745c4e6ec855da18534f70ab73ce8fdb` /
+  `67a717bcb96296fa1b71dee632461ba7593f7be605c4a47254db3aa89beab7fa` /
+  `3f7f8633875d1011671260abdc2dcac23c14ee4489d72b9e24f6f084ea9ee612`;
+  normal and optimized transcripts are byte-identical.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py` and the corresponding
   `z2060/z2004/z1992/z1940/z1932/z1824/z1812` ray-status closures,
   high-wall descent, combined exact descent, and independent referees ->

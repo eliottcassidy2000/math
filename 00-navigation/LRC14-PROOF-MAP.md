@@ -2,13 +2,13 @@
 
 > **DETAILED MACHINERY MAP:** read [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) first. This panel is current; dated sections preserve searchable history and may be superseded.
 
-## 2026-07-29 current control panel
+## 2026-07-30 current control panel
 
-**Status: OPEN.** THM-2923 leaves at most six body speeds.  THM-2941 gives wall `h/7` with empty zero excess; THM-2928/2941 empty aligned `k>=4`, cap `k=2,3` at `1,799/306`, and empty the canonical reflected-stalk `k=1` family.  The remaining censuses, arbitrary `k<=1`, rung, and LRC(14) are open; `q<=25` is false.
+**Status: OPEN.** THM-2923 leaves at most six body speeds.  THM-2941 gives wall `h/7` with empty zero excess; THM-2928/2941 empty aligned `k>=4`, cap `k=2,3` at `1,799/298`, and empty the canonical reflected-stalk `k=1` family.  The remaining censuses, arbitrary `k<=1`, rung, and LRC(14) are open; `q<=25` is false.
 **Scalable quotient.**  Support transfer/Möbius counting reduce `k=3/2` to `26,970/27,163` rows; do not enumerate `21.4b/951.5b` raw tuples.
 **Status theorem.**  For upward `A`, real maximum is `min(1,tau_H)`, `H=min(A)`: `p` cover variables replace `2^p` cells, losing integer location, threshold coupling, and needle shape.
 **Missing coordinate.**  For drifts `Z`, `P=phi_L(C_E minus union_z D_z)`; aligned completion is `P subset union_(a in A)D_a`.  Compact strict-open seams are pointwise, not a.e.
-**Descending banks.**  For `k=3`, exact kills are `85=36+49` at `328` and `2,346=702+1,643+1` at `324`.  At `312`, ray/status removes `18,179` of `18,249` states; [literal projected/torsion closure](../04-computation/lrc14_j7_k3_z312_torsion_h_drift_closure_thm2941.py) removes all `27,491` finite packets and `73` unbounded bases.  An independent whole-cell referee compresses the same bank to `80` one-high fixed-low-pair torsion cases and proves the high-wall premise is nonredundant, leaving height `306`.  For `k=2`, exact scalar bands leave sixteen rows on `1800..1835`: ten all-label ordinary rows close by status/projection (`558=137+328+93`, then `147/147` packets), and six forced-high rows close by the decreasing-ray envelope, leaving height `1799`.
+**Descending banks.**  For `k=3`, exact kills are `85=36+49` at `328` and `2,346=702+1,643+1` at `324`.  At `312`, ray/status removes `18,179` of `18,249` states; [literal projected/torsion closure](../04-computation/lrc14_j7_k3_z312_torsion_h_drift_closure_thm2941.py) removes all `27,491` finite packets and `73` unbounded bases.  An independent whole-cell referee compresses the same bank to `80` one-high fixed-low-pair torsion cases and proves the high-wall premise is nonredundant.  The next two occupied spikes, `306` and `302`, contain only `41` attained states; crude capacity removes `2` and independently replayed exact status/Farkas certificates remove `39`, leaving height `298`.  For `k=2`, exact scalar bands leave sixteen rows on `1800..1835`: ten all-label ordinary rows close by status/projection (`558=137+328+93`, then `147/147` packets), and six forced-high rows close by the decreasing-ray envelope, leaving height `1799`.
 
 ### The present reduction graph
 

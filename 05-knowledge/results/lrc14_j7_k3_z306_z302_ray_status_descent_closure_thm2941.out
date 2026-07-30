@@ -2,8 +2,8 @@ LRC14 projected k=3 z1=306 and z1=302 all-label ray/status descent closure
 ray_engine_sha256=6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e
 body_atlas_source_sha256=2af6d96882f336a409a8657070ed76a75c09a53b3789101b83103b051e864ded
 body_atlas_output_sha256=cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda
-z312_terminal_source_sha256=a46bd16bf5d8933c639d27b48424aa78b139b26aa1a1cafa9b39f9b98ed1fe3f
-z312_terminal_output_sha256=75dd08768abd9397a1cb1f3f67b742a126db86bf201745c10fe79b229c44a986
+z312_terminal_source_sha256=a5bec8e5c0ca8a2ca7650f0b577e085c00e90d5b52ba94a6b0555fa164d34a75
+z312_terminal_output_sha256=4b704cfc44024a240bb068faf00069546d6b81670c4822cd8cabe5d96fe8ae07
 scope=2 exact z306 bodies plus 9 exact z302 bodies;inherited projected high-label obligation (first itself may clear the wall);no finite label horizon
 ray_law=(z+L)delta(z+L)=zdelta(z);A(L-b)=-A(b);all denominator maxima attained
 pair_overlap_exhaustive_controls=946
