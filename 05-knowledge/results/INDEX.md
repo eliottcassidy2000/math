@@ -110,8 +110,10 @@
   The complete band `1837..1931` is scalar-empty.  At `z1=1836`, an exact
   slice finds five bodies: projected exact-suffix/status/residual tests
   close three, and exact residue-ray maxima make the other two scalar-empty.
-  Thus the current projected `k=2` cap is `1835`, with `2,239,842` rows
-  left.  The global bands are primary exact censuses; the separate
+  The next band `1810..1835` has exactly ten scalar rows, at
+  `1810:8,1812:1,1824:1`, and no row at `1825..1835`.  Thus the current
+  projected `k=2` cap is `1824`, with `2,239,842` rows left.  The global
+  bands are primary exact censuses; the separate
   independent audits cover isolated terminal states, not every band.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
@@ -197,7 +199,7 @@
   `(D,q,M)=(5880,840,7)` has only `240` total exceptional-bit incidences
   but must serve `300` fibres of load at least four; the full simultaneous
   32-cell LP gives the matching exact Farkas certificate.  At that checkpoint
-  the cap was `2141`; the band closures above supersede it with `1991`.
+  the cap was `2141`; the later exact bands supersede it with `1824`.
   Source/output/semantic SHA-256:
   `b9b1cbd3e38a285572f8b35e7220149f6372d3ce4941923aa586101461bee7e4` /
   `97f242c4b5b774c830a8111df6c2e24a725fa1a77771d4937aaa62f96d4400a0` /
@@ -230,6 +232,7 @@
 
   transparent status kill.  There are no survivors, so the current proved
   projected `k=3` cap is `328` and the old necessary ledger is `375,922`.
+  global `200..378` body atlas has `6,060` rows and upper spikes
   `378:9,364:25,350:53,336:8,330:1,328:9,324:45`.  Exact all-label
   quotients close every displayed height through `328`; `z330` has one
   status kill, while `z328` has `85=36+49` crude/status kills.  The current
@@ -279,6 +282,10 @@
 
   The `z1932` primary source/output hashes begin `77c848a2/251d60b3`; its
   independent pair begins
+  all with `mu(P)>=25/91`.  The next exact band has ten rows
+  `1810:8,1812:1,1824:1`, hence the proved cap is `1824` and the old
+  necessary ledger is `2,239,842`.  The `z1932` primary source/output hashes
+  begin `77c848a2/251d60b3`; its independent pair begins
   `80f113c3/ccf6efe6`.  The `z1836` scalar/projected/high-wall source-output
   pairs begin `99a81704/986a5353`, `54ab8787/f159324c`, and
   `4b633061/115286b4`.  New full source-output pins are
@@ -302,14 +309,9 @@
   for the combined exact descent.  All named normal and optimized
   transcripts match stored bytes.
   `4b633061/115286b4`; all three normal and optimized transcripts match.
-  `1837..1931` is scalar-empty.  The five exact rows at `z1=1836` close by
-  projected status/residual or scalar residue-ray tests, giving cap `1835`.
-  The `z1932` primary/independent hashes begin
-  `77c848a2/251d60b3` and `80f113c3/ccf6efe6`; the three `z1836`
-  source/output/semantic triples begin
-  `99a81704/986a5353/5afe9b0c`,
-  `54ab8787/f159324c/77e6ebf9`, and
-  `4b633061/115286b4/18122f5e`.
+  Their semantic hashes begin `5afe9b0c/77e6ebf9/18122f5e`; the
+  `1810..1835` band source/output/semantic triple begins
+  `058c43d6/76f08dc5/68105c55`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` and
   the reflected-stalk/all-level mass closures -> matching `.out`
   files [THM-2941 PROVED STRUCTURAL LAW + SCOPED FINITE-EXACT CLOSURE].
@@ -354,6 +356,7 @@
   subsequent scalar-atlas/ray-status addenda improve the current `k=2/3`
   caps to `1,991/336`.
   `1,835/324`.
+  `1,824/324`.
   For `k=5`, exact prefix incidence kills all `42,912` high-excess and
   `194,073` subcritical drift pairs, minimum margin `1/378105`; THM-2928
   independently closes the same face by divisor/address masks.  With

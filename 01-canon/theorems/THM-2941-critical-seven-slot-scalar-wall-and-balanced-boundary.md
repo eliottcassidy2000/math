@@ -67,6 +67,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_reflected_two_coordinate_q8_mass_closure_thm2941.out
   - 04-computation/lrc14_j7_k3_projected_scalar_atlas_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_projected_scalar_atlas_thm2941.out
+  - 04-computation/lrc14_j7_k3_projected_scalar_body_atlas_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_projected_scalar_body_atlas_thm2941.out
   - 04-computation/lrc14_j7_k3_z364_ray_status_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z364_ray_status_closure_thm2941.out
   - 04-computation/lrc14_j7_k3_z350_scalar_slice_thm2941.py
@@ -1410,6 +1412,27 @@ a4120f84a0bab99ccb55596f4a559383b4e5af82b9cf5dcd9d190ed67df0dc21 /
 cf051d65e11743c9357ae361328cebfa6d738a21cec7161d87ad25d4446c393a
 e83dfeba64f14c53abcf2a2c67ff000dc4f9e79ac786ba4fe20ab9ad4a76d744 /
 c2536ac8100d3dce937c4ca51ca50c0b8a8ef72ce456e339064ae2869ddaab8c.
+```
+
+The next all-body band is also exact.  Among the `78,078` pairs
+`(E,z_1)` with `1810<=z_1<=1835`, its scalar envelope leaves ten rows:
+eight at `1810`, one at `1812`, and one at `1824`.  In particular
+`1813..1823` and `1825..1835` are empty, so
+
+```text
+z_1<=1824.                                              (25q3)
+```
+
+Eight rows have attained exact-suffix maximizers; the two remaining
+`z_1=1810` rows retain an explicit high-tail placeholder and require a
+separate ray closure.  This is a cap improvement and a ten-row frontier,
+not a closure of those rows; the necessary ledger remains `2,239,842`.
+The source/output/semantic hashes are
+
+```text
+058c43d67d0bb110993ec687877edba4f5a7ad472a81455b0a5276b20db7680d /
+76f08dc5b70c98dd7c8fa958f5598f5c50e7cb1df26d0be10531ba8185796952 /
+68105c556b47cfd1d226d659b2e47115bc071f01c07f6e1f65818f58d68cc37e.
 ```
 
 These repeated certificates reveal a quotient family, but do not yet prove
