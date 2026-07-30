@@ -707,6 +707,66 @@ component contributes at most `6/49` to `A_E(b)`.  This recovers the
 component constant in `(25d)` directly from the toothpick amplitude and
 identifies the sharp oscillation scale behind that bound.
 
+The ray law is in fact componentwise, not merely true after summing the
+carrier.  For a positive-length component
+
+```text
+I_s=[a_s/L,b_s/L],
+c_s(z)=mu(I_s intersect D_z),
+delta_s(z)=c_s(z)-|I_s|/7,
+```
+
+the same primitive calculation before summing over `s` gives
+
+```text
+(z+L)delta_s(z+L)=z delta_s(z),
+A_s(b)=z delta_s(z)=g(b*b_s/L)-g(b*a_s/L),
+A_E(b)=sum_s A_s(b).                                    (25o1)
+```
+
+Since `L=14 ell`, the restriction to the fourteen-grid is therefore an
+exact smaller tooth ladder.  For `z=14m`,
+
+```text
+(m+ell)delta_s(14(m+ell))=m delta_s(14m),
+14m delta_s(14m)=g(m*b_s/ell)-g(m*a_s/ell).              (25o2)
+```
+
+This places the literal spacing by fourteen in the upper `k=3` scalar spikes
+below on a visible subladder of the full period-`L` ray system.  It does not
+by itself prove that the interstitial heights are empty.
+
+The component vector is a lawful necessary quotient of a tail cover.  If
+`Z` is the set of nonaligned tails, then every aligned label `La` has
+`delta_s(La)=0`, while pointwise coverage of `I_s` gives
+
+```text
+sum_(z in Z) delta_s(z)
+ = integral_(I_s)(m(t)-1)dt >=0.                         (25o3)
+```
+
+If `|I_s|>=1/105`, the inequality is strict.  Equality would make the
+relative-open owner sets a disjoint pointwise cover of the connected closed
+interval `I_s`, so one tail tooth would contain all of `I_s`.  Every allowed
+tail has `z>=15` and open-tooth length at most `1/105`, which is impossible
+even at equality of lengths.
+
+This exact positive-cone refinement has a sharp universal hostile and is not
+itself a closure.  For every body speed `e in E`, the carrier is disjoint
+from `D_e` up to endpoints, so componentwise
+
+```text
+A_s(e)=-e|I_s|/7,
+A_s(L-e)=+e|I_s|/7.                                     (25o4)
+```
+
+Thus the reflected residue `L-e` supplies a support-one amplitude vector
+strictly positive on every component.  Pure component masses consequently
+prune no aligned sector, even though `(25o3)` is exact.  They forget the
+actual reciprocal height, within-component tooth position, overlap, and
+owner order; the denominator/unit, local-needle, and common-status sidecars
+used below restore part of precisely that lost information.
+
 Thus every drift residue is an exact hyperbolic ray, not merely an
 asymptotic `O(1/z)` tail.  Opposite residue directions have opposite excess;
 the self-opposite denominator-two direction has zero excess.  If
