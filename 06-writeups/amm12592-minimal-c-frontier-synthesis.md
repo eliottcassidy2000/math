@@ -103,7 +103,24 @@ corner routing at `gamma in {1/2, 0.6, 0.75, 0.9}`).
   Artifacts: `04-computation/amm12592_checksum_spine_ledger_laneA_deathstar.py`.
 - **Lane B (DONE, referee 12/12; draft secured):** THM-2967 above.
 - **Lane C (pending):** small-`n` envelope frontier.
-- **Lane D (pending):** carry-ledger sustainability at `gamma < 1`.
+- **Lane D (DONE):** three PROVED ingredients — (i) band geometry: at
+  `gamma<1` the anti-diagonal positions `o in [d_m+2, m-1]` are cell-free
+  for every row forever (band birth `m* ~ (D0+2)/(1-gamma)`; never opens at
+  `gamma=1` — the structural home of the dyadic construction); (ii)
+  choice-independent forced parity `beta_M = (1+x)^{A_M} +
+  (1+x^{M+1})(1+x)^{d_M} mod 2` — at levels `A_M = 2^r-1` every band
+  position of every scheme carries a half-odd homogenized coefficient;
+  (iii) necessary envelope `|D_M(p)| <= (p^{M+1}+q^{M+1})/2`. EVIDENCE:
+  exact greedy carry chains freeze at band birth with residual
+  `2^{-Theta(m*)}` violating the envelope at explicit small `M`, for every
+  tested `gamma < 1` (`1/2..99/100`), while `gamma = 1` amortizes
+  doubly-exponentially. Empirical critical `gamma = 1`, i.e. **C* = 2**
+  pending (a) policy-independence of the freeze and (b) the band-value
+  quasi-conservation theorem. Lane D also shows single-bias / parity-free
+  LP tests can never obstruct, so a genuine lower bound must couple >= 2
+  biases with integrality — precisely certificate (27)'s form; and
+  `p_B` sits within 2.7% of the band edge `6592/9049`.
+  Artifacts: `04-computation/amm12592_carry_ledger_band_freeze_laneD_deathstar.py`.
 - **Lane E (pending):** LRC(14) mixed-sector audit (anchor duty).
 
 ## 6. Classical context
