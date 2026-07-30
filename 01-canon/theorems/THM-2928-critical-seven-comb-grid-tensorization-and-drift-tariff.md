@@ -37,8 +37,13 @@ status: >
   divisor-Mobius formula counts their unordered denominator multisets.
   For every upward status event, the exact real one-marginal transport
   optimum is min(1,tau), where tau is the weighted fractional-cover value
-  of its minimal true clutter.  The critical two-torus carrier integral is
-  positive on every fixed seven-tail affine ray;
+  of its minimal true clutter.  In the k=2,p=5 quotient every support-hard
+  resolving modulus is septimal.  Peeling D=7q splits denominators into
+  transverse one-per-fibre sections and vertical two-level spikes; retaining
+  every deterministic floor and optional spike bit reduces the exact
+  denominator ledger from 951,545,890,235 to 200,389,247,292 occurrences.
+  This is a necessary relaxation, not a sector closure.  The critical
+  two-torus carrier integral is positive on every fixed seven-tail affine ray;
   uniformly, seven tails in one common canonical-ruler quotient block are
   safe once the quotient is at least 315,586.  Branches with four or more
   drifts remain open; this does not prove LRC(14).
@@ -88,6 +93,9 @@ support_transfer_ladder_audit_script: 04-computation/lrc14_aligned_drift_support
 support_transfer_ladder_audit_output: 05-knowledge/results/lrc14_aligned_drift_support_transfer_ladder_independent_audit_thm2928.out
 upward_status_cover_script: 04-computation/lrc14_upward_status_fractional_cover_audit_thm2928.py
 upward_status_cover_output: 05-knowledge/results/lrc14_upward_status_fractional_cover_audit_thm2928.out
+k2_septimal_script: 04-computation/lrc14_k2_septimal_floor_exception_gf_thm2928.py
+k2_septimal_engine: 04-computation/lrc14_k2_septimal_floor_exception_engine_thm2928.cpp
+k2_septimal_output: 05-knowledge/results/lrc14_k2_septimal_floor_exception_gf_thm2928.out
 affine_profile_script: 04-computation/lrc14_j7_affine_profile_min_frequency_thm2928.py
 affine_profile_output: 05-knowledge/results/lrc14_j7_affine_profile_min_frequency_thm2928.out
 ---
@@ -1372,6 +1380,134 @@ referee reconstructs all `3,003` bodies and `251,536` body/divisor rows by
 an endpoint sweep and merged cyclic arcs, and recomputes `(37lM)` by
 downward divisor recurrence.
 
+### Septimal peel and exact floor/exception compression
+
+The enormous `k=2,p=5` column has a distinguished-prime structure that the
+raw multiset count hides.  First, every support-hard resolving modulus is
+divisible by seven.  Indeed, put
+
+```text
+L=14 lcm(F),          M=L/D,
+```
+
+and suppose `7` does not divide `D`.  In one residue fibre
+`j=r+Dt`, the cell word of a body speed `f` has period `P=L/f`.
+The quotient period
+
+```text
+P/gcd(P,D)
+```
+
+is divisible by seven, and the half-open danger block has length `P/7`.
+Consequently that speed removes exactly `M/7` cells from every `D`-fibre.
+Six body speeds remove at most `6M/7`, so every fibre retains a safe cell:
+
+```text
+7 does not divide D  ==>  S_D=Z/DZ.                 (37lS1)
+```
+
+Because the support-transfer cutoff `887/990` is strictly below one, no
+nonseptimal row is support-hard.  The exact implementation independently
+checks all `96,235/96,235` nonseptimal body/divisor rows.
+
+Now write `D=7q`.  For every denominator `d|D`,
+
+```text
+d/gcd(d,q) in {1,7}.                                (37lS2)
+```
+
+If `d` does not divide `q`, the enlarged trace is a transverse section: it
+contributes at most one point to every `q`-fibre.  If `d|q`, it is vertical.
+Writing
+
+```text
+d=7a+r,       w=q/d,       0<=r<7,
+```
+
+the exact number of hit fibres at common phase `u` is
+
+```text
+Y_d(u)=w(a+X_d(u)),             Pr(X_d=1)=r/7.       (37lS3)
+```
+
+In particular `integral Y_d=q/7`, independently of `d` and of the reduced
+numerator.  This is an exact seven-sheeted Fubini law, not a probabilistic
+independence assumption.
+
+Suppose `c` of the five denominators are transverse and let
+
+```text
+N_c=#{b mod q: lambda_q(S_D,b)>c}.
+```
+
+For the remaining vertical denominators, sum their deterministic floors
+`wa` and retain every nonconstant bit `X_d` with its weight `w` and marginal
+`r/7`.  Coverage forces the corresponding upward weighted event throughout
+the compact aligned-safe carrier.  The fractional-cover theorem above gives
+its exact maximum over all joint laws with these marginals.  Compact
+containment in a proper open event makes the necessary comparison with
+`u_2=66/91` strict.  The coarser expectation consequence is
+
+```text
+66 N_c < 13(5-c)q,                                 (37lS4)
+```
+
+with `N_c=0` handled separately; the implemented floor/exception test keeps
+the strictly stronger exact upward-event bound.
+
+For a positive-remainder vertical multiset `P`, zero-remainder multiplicity
+`z`, and transverse multiplicity `c`, exact-lcm completion still avoids
+five-tuple enumeration.  If `ell=lcm(P)`, `U_D(E)` counts transverse
+divisors in the downset of `E|D`, and `Z_D(E)` counts its zero-remainder
+vertical divisors, then the completion coefficient is
+
+```text
+sum_(ell|E|D) mu(D/E)
+  Mult(U_D(E),c) Mult(Z_D(E),z).                    (37lS5)
+```
+
+The exact ledgers are
+
+```text
+stage                         shapes          occurrences       rows
+raw support transfer      50,874,159,718   951,545,890,235     27,163
+expectation screen        36,962,285,549   320,011,786,356      4,592
+floor/exception screen    26,908,162,790   200,389,247,292      4,414.
+                                                               (37lS6)
+```
+
+The last row occupies `2,977` bodies and `149` resolving moduli.  By number
+of transverse sections `c`, its occurrence counts are
+
+```text
+c=1:      3,524,756       c=2: 46,320,209,782
+c=3: 112,812,921,408      c=4: 39,762,283,189
+c=5:  1,490,308,157.                                (37lS7)
+```
+
+Thus the exact screen removes `78.94%` of the raw occurrence ledger, but it
+does not close `k=2`.  The minimum survivor remains
+`D=168`, `F=(1,2,3,4,6,12)`, with four transverse sections and one
+denominator-six vertical mask.  The relaxation still forgets the actual
+common-phase locations of the optional bits, their positions inside the
+seven-sheeted fibres, compatibility between quotient scales, and the
+reduced numerator/unit direction.  Those are precisely the coordinates
+retained by the residue-ray/common-status sidecar of THM-2941.
+
+The Python referee reconstructs all body rows, checks `52,925` literal
+exact-lcm shapes through `D<=300` and `1,880` suffix queries, and requires
+byte-identical ordinary/optimized output.  Its exact C++ engine is required
+to agree under `-O2/-O3`.  Canonical source/engine/output hashes are
+
+```text
+085b4e2747a48bdbc1125e894af7d4f647dfdd7be86a00cf02dea2a8667e26dc
+664d0df36d104d959279605c8ea8539d61ab595b155e5157fa7d0433f1b7944c
+f711376bdfa0064f70d76e42505cf1eb89dadc4c66bcacd90d985b6641c2cd75,
+```
+
+and the survivor semantic digest is
+`2eec9a97f02a7b8f8e36e50f747d53186ff5b84234a14fc3ac64818b54033675`.
+
 ### Finite-ring Kakeya needles and the first three-drift sector
 
 The preceding transversal is one face of a general exact pushforward law.
@@ -2235,15 +2371,17 @@ the joint exceptional-fibre word, and the terminal `98/99` quotient retains
 the local unit-needle shape.  The theorem does **not** close an arbitrary
 mixed-residue seven-wall, branches with four or more drift speeds, or
 LRC(14).  The next aligned sectors have two or three aligned combs and are
-finite by THM-2941, but their four/five-drift censuses have not been run;
-the zero/one-aligned sectors remain the not-yet-finitized address frontier.
-The support-transfer census shows why direct denominator enumeration is the
-wrong next object: it leaves `21,357,714,101` four-drift and
-`951,545,890,235` five-drift body/denominator-multiset occurrences before
-numerators or phases.  Their next exact object is instead the
-fractional-blocker compression of the higher-arity divisor-fibre status
-profile, joined to the single-table all-threshold constraint and local
-unit-needle cover, possibly with a carrier-local multi-endpoint current.
+  finite by THM-2941, but their four/five-drift censuses have not been run;
+  the zero/one-aligned sectors remain the not-yet-finitized address frontier.
+  The support-transfer census shows why direct denominator enumeration is the
+  wrong object: before numerators or phases it has `21,357,714,101`
+  four-drift and `951,545,890,235` five-drift occurrences.  The septimal
+  peel and fractional-blocker compression now reduce the latter to
+  `200,389,247,292`, but still deliberately forget actual optional-bit
+  locations.  The next exact object is the common seven-sheeted support
+  pattern—base load together with located transverse sections and vertical
+  exceptional fibres—joined to the THM-2941 unit-ray/common-status sidecar
+  and, where necessary, a carrier-local multi-endpoint current.
 A tournament on the seven labels forgets the metric widths, cell phases,
 gcd fibres, quotient remainders, status multiplicities, minimal-heavy
 clutter, and located endpoint current, and is therefore not an equivalent

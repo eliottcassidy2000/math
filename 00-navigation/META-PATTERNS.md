@@ -2,39 +2,38 @@
 
 **Status:** CURRENT. **Role/Use:** compact defaults from repeated successes and failures; scan triggers and evidence. Each card states applicability, action, mechanism, and counterindication; new cards require distinct-thread evidence or a severe repaired failure.
 
+## Peel the distinguished prime before enumerating lcm shapes
+
+**Trigger/action:** for density-`1/p` combs on `D`, prove the quotient-index
+dichotomy after `D=pq`, then split transverse sections from vertical spikes
+and Möbius-count only base loads/status bits. **Mechanism:** Fubini fixes spike
+means; compact/open makes the carrier inequality strict. **Caution:** handle
+zero thresholds and restore lost unit, location, and scale data by rays or
+needles. **Evidence:** THM-2928's septimal compression and THM-2941's `M=7`
+ray/status closures.
+
 ## Inventory retained power classes before classifying base-curve genus
 
-**Trigger / action:** after an irreducible eliminant has unwieldy genus, return
-to pre-elimination coordinates, list correctly typed base-field power classes,
-and compute their valuations on one smooth fibre before taking the cheapest
-connected Kummer lift. **Mechanism:** fixed odd valuations and branch parity can
-force genus without the moving discriminant. **Counterindication:** verify base
-field, smoothness, units, irreducibility, and physical realization; a root in a
-quadratic extension is not its base-field square. **Evidence:** THM-2617 uses
-`y^2=B/p`; THM-2636 uses `T^2=Z=rho^3 zeta/t^3`, with its `q`/`T` correction the
-typing hostile.
+**Trigger/action:** before attacking a high-genus eliminant, inventory typed
+base-field power classes and valuations on one smooth fibre, then take the
+cheapest connected Kummer lift. **Mechanism:** odd valuations force genus.
+**Caution/evidence:** verify field, units, irreducibility, and realization;
+see THM-2617/2636 and the latter's `q`/`T` typing repair.
 
 ## Globalize a moving-factor orbit before localizing positivity
 
-**Trigger / action:** if a clean cell or root pattern contains a factor moved by the proposed action, build the complete lawful orbit without that fixed projector; use the cell only to lower-bound a nonnegative global integral, or transport it covariantly.
-**Mechanism:** a fixed projector freezes or duplicates the moving gate; witness restriction preserves a lower bound without changing the packet.
-**Counterindication:** fixed filters are safe when proved invariant/target-neutral, or when only a derived common-filter packet is claimed; unordered fibre counts still do not select an anchor sheet.
-**Evidence:** THM-2403/MISTAKE-266, THM-2365, THM-2370, and MISTAKE-260/THM-2362.
+**Trigger/action:** if an action moves a clean cell's factor, build its lawful orbit and use the cell only as a nonnegative witness. **Mechanism/caution:** fixed projectors duplicate gates unless proved invariant; orbit counts still need an anchor.
+**Evidence:** THM-2403/2365/2370 and MISTAKE-260/266.
 
 ## Demodulate, then average a complete subgroup
 
-**Trigger / action:** when a finite unitary action grades a target, demodulate the desired character and average squared differences over the complete lawful subgroup; Möbius-invert Boolean subcubes, and multiply nonlinear seeds before demodulating.
-**Mechanism:** orthogonality gives an exact `0/2` multiplier, recovering isotypic norms, support masks, and nonnegative interaction defects; an exponent-range certificate can identify a powered Laurent residue with its constant-term square.
-**Counterindication:** labels, unitarity, Hermitian differences, and alias range are load-bearing. Scalar moments, partial colour faces, or phase-cancelled pointwise modes do not supply cross phases or a charged selector.
-**Evidence:** THM-2369, THM-2374/2383, THM-2375, and the audited `gmc2-lowest-face-complete-orbit-certificate-and-radial-boundary` reflection.
+**Trigger/action:** for a finite unitary grading, demodulate the target character and average Hermitian differences over the complete subgroup. **Mechanism/caution:** orthogonality recovers isotypic norms, but labels, alias range, and cross-phase selectors are load-bearing.
+**Evidence:** THM-2369, THM-2374/2383, THM-2375, and the audited GMC2 complete-orbit reflection.
 
 ## Separate symmetry descent from regularity debt
 
-**Trigger:** a deck, residue, phase, or quotient proves descent/repetition, while the target asks for integrality, zero-safety, or an exact inequality.
-**Action:** retain the finite label and define an effective defect--pole divisor, signed endpoint current, continuation profile, or magnitude coordinate--with an exact transformation and vanishing gate.
-**Mechanism:** invariance identifies a fiber but does not make the target fiber-constant; the defect records erased scale or valuation.
-**Counterindication:** skip the sidecar when target constancy is proved or the defect has no exact zero/positivity implication.
-**Evidence:** THM-2158 (deck versus pole divisor), THM-2174 (residue versus `C_r/W`), THM-2176 (unknotting scalar versus continuation profile), audited THM-2612 (a `D4` deck involution must pay a Jelonek pole), and audited THM-2615/THM-2573 (physical-diagonal/full-`X` collapse versus an independent endpoint axis or singular boundary normal).
+**Trigger/action:** when descent/repetition is proved but the target needs integrality or positivity, retain the label and add a transforming defect with an exact vanishing gate. **Mechanism/caution:** invariance identifies a fibre, not target constancy; omit the sidecar only after factorization.
+**Evidence:** THM-2158/2174/2176, audited THM-2612/2615/2573.
 
 ## Localize a metric by common contexts before hunting catalysts
 

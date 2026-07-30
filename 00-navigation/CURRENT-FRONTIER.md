@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — 2026-07-29.** Linked theorems are proof sources; this file records composition and residuals.
+**Rolling state — 2026-07-30.** Linked theorems are proof sources; this file records composition and residuals.
 Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
@@ -30,8 +30,9 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 Direct frontier: `<=6`.  THM-2941 gives wall `h/7` on all `3,003` roots.
 THM-2928/2941 empty aligned `k>=4`, cap `k=2,3` at `1799/312`, and close the
 common-level reflected `k=1` diagonal.  Other censuses, arbitrary `k<=1`, the rung,
-and LRC are open.
-
+and LRC are open.  THM-2928's septimal floor/exception quotient cuts the raw
+five-drift ledger `951,545,890,235 -> 200,389,247,292` occurrences; this is a
+necessary-state compression, not a physical-cover count.
 Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams but not semantic-root identification (kernel `28,393`); THM-2545/2549 give Hall and chronology gates,
 still old-target neutral; THM-2547 is only an external control after
