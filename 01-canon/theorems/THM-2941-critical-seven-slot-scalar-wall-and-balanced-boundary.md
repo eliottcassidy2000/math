@@ -148,6 +148,10 @@ verification:
   - 05-knowledge/results/lrc14_j7_k2_high_wall_descent_1800_1810_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_exact_descent_1800_1824_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_exact_descent_1800_1824_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1750_literal_packet_projected_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1750_literal_packet_projected_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_band_1743_1749_literal_packet_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_band_1743_1749_literal_packet_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -1507,6 +1511,46 @@ z_1<=1799.                                              (25q3)
 These repeated certificates reveal a quotient family, but do not yet prove
 that it closes every lower scalar state: below the isolated upper spikes the
 scalar bank becomes rapidly denser.
+
+Two disjoint lower packages nevertheless close the contiguous integer block
+`1743<=z_1<=1750`.  The all-body slice at `1750` has exactly twelve scalar
+rows.  Exact residue-ray high-wall envelopes make four rows scalar-empty.  On
+the other eight rows the all-label denominator quotient has `682` scalar
+states; common-`K5` status removes `582`, and the last `100` states expand by
+positive scalar slack to exactly `229` literal packets.  Every packet has
+lossless projected residual at least `25/91`, with minimum strict margin
+`4085/54691`, and direct global subtraction agrees with the cellwise De
+Morgan projection.
+
+The independent all-body atlas on `1743..1749` checks all `21,021` candidate
+rows and leaves only
+
+```text
+z_1=1746, E=(1,6,9,10,12,14);
+z_1=1743, E=(1,4,8,10,12,14).
+```
+
+Thus `1744,1745,1747,1748,1749` are scalar-empty rather than interpolated.
+The `1746` row has one exact denominator state and dies by crude fibre
+capacity.  At `1743`, `11` scalar states split as four common-status kills
+and seven survivors; positive slack gives exactly seven literal packets, all
+projected-empty with minimum margin `1026/16471`.  Normal, serial, and
+optimized transcripts agree byte for byte, and direct subtraction again
+checks the minimum projected packet.
+
+This closes only `1743..1750` and does not by itself improve the current cap.
+The dependency chain for a later upgrade is explicit:
+
+```text
+proved closure of every height 1751..1784
+ + exact z_1=1750 closure
+ + exact all-body band 1743..1749
+ => projected k=2 cap z_1<=1742.
+```
+
+The first premise is not supplied by these two packages, so the displayed cap
+upgrade remains conditional until a contiguous `1751..1784` closure is in the
+proved graph.
 
 For `k=5`, there is a second, Gram-facing derivation.  Pointwise
 

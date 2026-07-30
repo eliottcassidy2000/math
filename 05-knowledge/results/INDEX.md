@@ -122,6 +122,31 @@
   necessary rows and proves the current projected `k=2` cap `1799`.
   The global bands are primary exact censuses; separate fixed-state audits
   cover the isolated terminal states rather than every band row.
+- `lrc14_j7_k2_z1750_literal_packet_projected_closure_thm2941.py` and
+  `lrc14_j7_k2_band_1743_1749_literal_packet_closure_thm2941.py` -> matching
+  `.out` files [THM-2941 SCOPED PROVED + FINITE-EXACT + VERIFIED].  The
+  all-`3,003`-body `z1=1750` slice leaves twelve scalar rows: four exact
+  high-wall ray envelopes are negative, while the other eight give
+  `682 -> 582` common-status kills `-> 100` residual states `-> 229`
+  exhaustive finite-slack packets `-> 0` projected survivors, with minimum
+  margin `4085/54691`.  The contiguous all-body band `1743..1749` checks
+  `21,021` candidate rows; only `z1=1746` and `1743` survive scalar, so all
+  five intervening heights are certified scalar-empty.  The two rows close
+  by `1` crude-capacity kill and by `11 -> 4` status kills `-> 7` packets
+  `-> 0`, respectively, with minimum projected margin `1026/16471`.
+  Direct carrier subtraction agrees with the lossless projected-cell engine;
+  normal, serial, and optimized transcripts match stored bytes.  Together
+  these packages close exactly `1743..1750`, but make no present cap claim.
+  Once a proved contiguous `1751..1784` closure is integrated, their explicit
+  dependency chain gives the conditional upgrade `z1<=1742`.  The `1750`
+  source/output/semantic hashes are
+  `70c9faa37a0524673e8178ed82cc6abc040438fff043b944a7ee0227d48c8997` /
+  `5288ace3fa398125045eeaea8c983c74d0019faa77d426784a612b7d2b4ae700` /
+  `71dfba440f4573d82de685adb7f4684909e99b7fafcfe729215ac2fc0573e972`;
+  the `1743..1749` hashes are
+  `635c7c0bf79cb524f42ac2b1002ab8b4e10fb67d417443bd21756ed907145865` /
+  `d046fe640140556b3964d876336ac26c233cc8dbc15a0e10bc5dc721b01f4666` /
+  `e07845eaf675a561995164f61e75d9234abbb45ab53cf0ce54b5fb64679ba174`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:
