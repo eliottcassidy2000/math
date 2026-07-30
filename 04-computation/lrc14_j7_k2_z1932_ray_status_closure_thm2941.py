@@ -645,7 +645,7 @@ def main():
         ],
     ]
     output = "\n".join(lines) + "\n"
-    OUTPUT_PATH.write_text(output)
+    OUTPUT_PATH.write_text(output, encoding="utf-8", newline="\n")
     print(output, end="")
 
 

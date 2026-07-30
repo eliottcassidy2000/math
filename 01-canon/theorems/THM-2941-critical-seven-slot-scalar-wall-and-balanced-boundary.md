@@ -90,6 +90,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_1932_1939_thm2941.out
   - 04-computation/lrc14_j7_k2_z1932_ray_status_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_z1932_ray_status_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_scalar_band_1837_1931_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_scalar_band_1837_1931_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary

@@ -130,7 +130,7 @@
   strengthens this to `720>360` at threshold three.  The interval
   `1837..1931` is scalar-empty, so the current projected `k=2` cap is
   `1836`.  The `z1932` primary source/output hashes begin
-  `20568d19/251d60b3`; its independent pair begins `80f113c3/ccf6efe6`.
+  `77c848a2/251d60b3`; its independent pair begins `80f113c3/ccf6efe6`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` and
   `lrc14_j7_reflected_stalk_k1_mass_closure_thm2941.py` -> matching `.out`
   files [THM-2941 PROVED STRUCTURAL LAW + SCOPED FINITE-EXACT CLOSURE].
