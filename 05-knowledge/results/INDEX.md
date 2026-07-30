@@ -194,7 +194,11 @@
   `q<=4`, and `q>=5` has uniform gap `19/23184`.  It does not close
   independently varying levels or arbitrary `k=1`.  Hardened all-level
   source/output hashes are `2cf08669/22c07847`; normal and optimized
-  transcripts match stored bytes.
+  transcripts match stored bytes.  A heterogeneous addendum then closes all
+  `2,336,334` packets with levels in `1..8` and at most two coordinates away
+  from one.  The inherited cell has exactly `14` strict failures, all repaired
+  by a movable body-safe cell; direct/reflected and merge/slab controls agree.
+  Its source/output/semantic hashes begin `c015572e/a9af5b08/8c104172`.
 - `lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.py`, together
   with the scalar-wall and projected-suffix verifiers, -> matching `.out`
   files [THM-2941 PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY

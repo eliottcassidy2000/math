@@ -14,7 +14,8 @@ status: >
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
   addendum closes the common-level reflected-stalk k=1 diagonal
-  `Z_(E,q)={qL-e:e in E}` for every `q>=1`, but not arbitrary k=1.  The zero/one-aligned
+  `Z_(E,q)={qL-e:e in E}` for every `q>=1` and a finite heterogeneous
+  two-coordinate `q<=8` box, but not arbitrary k=1.  The zero/one-aligned
   sector outside that family, the remaining finite censuses, the full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is
   internal exact computation and proof audit; there is no Lean or external
@@ -62,6 +63,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_reflected_stalk_k1_mass_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_levels_all_q_mass_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_levels_all_q_mass_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_two_coordinate_q8_mass_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_two_coordinate_q8_mass_closure_thm2941.out
   - 04-computation/lrc14_j7_k3_projected_scalar_atlas_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_projected_scalar_atlas_thm2941.out
   - 04-computation/lrc14_j7_k3_z364_ray_status_closure_thm2941.py
@@ -781,6 +784,26 @@ optimized replays agree.  The hardened LF source/output hashes are
 Levels varying independently with `e`, other residue packets, and arbitrary
 `k=1` remain open; this diagonal extension removes no additional row from a
 finite ledger.
+
+The common-level selector is not monotone under heterogeneous levels, but its
+first finite neighbourhood still closes after restoring cell location.  Put
+
+```text
+Z_(E,q_vec)={q_e L-e:e in E},   1<=q_e<=8,
+```
+
+and allow at most two coordinates of `q_vec` to differ from one.  There are
+exactly `3,003*778=2,336,334` labelled packets.  The level-one selected cell
+closes all but fourteen; each of those fourteen has union mass strictly above
+`6/7`, so fixed-selector monotonicity is genuinely false.  An exact scan of
+every body-safe cell repairs all fourteen.  Thirteen have only two bad cells;
+the remaining packet has `66` bad cells among `2,260`.  Direct and reflected
+arc formulae agree in `144,144` singleton checks, and merge and endpoint-slab
+union routes agree in all `84,742` exceptional-cell checks.  Serial, parallel,
+and optimized replays have semantic hash
+`8c104172b30a3bceaec3fb7f24a48f92a785cf573ab69931f8f1345258409d05`.
+This is a finite heterogeneous box, not a common-scale lifting theorem or a
+closure of arbitrary `k=1`.
 
 There is an exact all-scale functional form behind the discrepancy tail.
 Write the carrier components as
