@@ -10,7 +10,7 @@ status: >
   five-aligned/two-drift face independently of THM-2928, and exact suffix
   filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
   common-status addenda improve the k=2/k=3 first-drift caps from
-  2142/380 to 1836/328.  THM-2928's later
+  2142/380 to 1835/328.  THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
   addendum closes the canonical reflected-stalk k=1 family
@@ -96,6 +96,12 @@ verification:
   - 05-knowledge/results/lrc14_j7_k2_z1932_ray_status_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_1837_1931_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_1837_1931_thm2941.out
+  - 04-computation/lrc14_j7_k2_scalar_band_1836_1836_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_scalar_band_1836_1836_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1836_exact_body_projected_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1836_exact_body_projected_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1836_high_wall_exact_ray_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1836_high_wall_exact_ray_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -1141,11 +1147,33 @@ only `240` exceptional events.  At `z_1=1932` the stronger threshold-three
 form has `720` heavy fibres but only `360` events.  Exact 32-cell Farkas
 certificates and independent no-LP Pruefer-tree audits agree.
 
-The global bands contain no other row above the next atlas height `1836`.
-Thus the current proved projected `k=2` cap is
+The next global slice, at `z_1=1836`, leaves exactly five rows.  For the two
+large-period rows, the residue-ray identity
+`delta(r+mL)=A(r)/(r+mL)` makes the all-label top-four envelope exact: the
+first four positive points on each ray dominate every later point.  Replacing
+the fourth unconstrained label by the best label above the forced wall
+`floor(13L/150)+1` puts both scalar sums strictly below `h/91`.
+
+The other three rows have `L=11760`.  Their all-denominator quotient contains
+`887` scalar states: `180` die by crude fibre capacity, `649` by common K5
+status, and `58` remain.  Scalar slack makes the literal ray choices finite,
+giving exactly `84` packets.  For every packet the lossless De Morgan
+projection satisfies
 
 ```text
-z_1<=1836.                                              (25q2)
+mu(P_(E,Z))>=25/91,
+```
+
+with a prefix of at most two body cells; direct interval subtraction agrees
+with the full projected-cell computation.  Since two aligned open combs can
+complete only when `mu(P_(E,Z))<25/91`, all `84` packets are impossible.
+Ordinary and optimized replays match stored bytes, and an independent audit
+checks the ray dominance, finite-slack exhaustiveness, projection direction,
+and exact arithmetic.  These five rows lower the old necessary ledger to
+`2,239,842`.  Thus the current proved projected `k=2` cap is
+
+```text
+z_1<=1835.                                              (25q2)
 ```
 
 These repeated certificates reveal a quotient family, but do not yet prove

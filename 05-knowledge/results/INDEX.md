@@ -131,9 +131,15 @@
   Four spikes use the transparent `(D,q,M)=(5880,840,7)` obstruction
   `300` load-at-least-four fibres versus `240` exceptional events; `z1=1932`
   strengthens this to `720>360` at threshold three.  The interval
-  `1837..1931` is scalar-empty, so the current projected `k=2` cap is
-  `1836`.  The `z1932` primary source/output hashes begin
-  `77c848a2/251d60b3`; its independent pair begins `80f113c3/ccf6efe6`.
+  `1837..1931` is scalar-empty.  At `z1=1836`, a global slice leaves five
+  rows: exact residue-ray high-wall envelopes kill two, while the remaining
+  three reduce from `887` scalar states to `84` literal projected packets,
+  all with `mu(P)>=25/91`.  Hence the proved cap is `1835` and the old
+  necessary ledger is `2,239,842`.  The `z1932` primary source/output hashes
+  begin `77c848a2/251d60b3`; its independent pair begins
+  `80f113c3/ccf6efe6`.  The `z1836` scalar/projected/high-wall source-output
+  pairs begin `99a81704/986a5353`, `54ab8787/f159324c`, and
+  `4b633061/115286b4`; all three normal and optimized transcripts match.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` and
   `lrc14_j7_reflected_stalk_k1_mass_closure_thm2941.py` -> matching `.out`
   files [THM-2941 PROVED STRUCTURAL LAW + SCOPED FINITE-EXACT CLOSURE].
