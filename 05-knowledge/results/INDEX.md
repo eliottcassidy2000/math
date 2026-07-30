@@ -133,7 +133,12 @@
   `5eb30248/c2bf51b8` and `255aa252/3c62328f`.  The `z312` frontier
   source/output/semantic hashes begin `202588c1/75c1f42d/3679bab5`; the
   literal-closure hashes begin `253becac/e94dd7ad/29b61bc2`.  All named
-  normal and optimized transcripts match stored bytes.
+  normal and optimized transcripts match stored bytes.  An independent
+  integer whole-cell referee shows the projected high-wall is nonredundant
+  (`69/70` zero-high hostile scalar passes), excludes every multi-high mask
+  by positive exact gaps, and closes all `80` resulting one-high fixed-low-
+  pair cases by torsion (`78+2`).  Its source/output/semantic hashes begin
+  `a5bec8e5/4b704cfc/4667f8f0`.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py` and the corresponding
   `z2060/z2004/z1992/z1940/z1932/z1824/z1812` ray-status closures,
   high-wall descent, combined exact descent, and independent referees ->

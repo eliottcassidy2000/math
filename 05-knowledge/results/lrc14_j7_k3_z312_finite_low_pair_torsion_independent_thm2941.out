@@ -1,6 +1,6 @@
 LRC14 projected k=3 z1=312 finite-low-pair torsion independent referee
-frontier_source_sha256=d6a80c15c5c4d8ef2ea8be9fc886c40e70e3189123b5d0b3fce48765fa301977
-frontier_output_sha256=d03fc39ed1f5f64cd2be4e7e28f5cf23e8d7adc0c6a737abc6944bdb7672515f
+frontier_source_sha256=202588c1232fc507fa376ae57dbf630d340c54e5b6be727e6e5be5b83cdaa20d
+frontier_output_sha256=75c1f42d86654efbb719c96d882e934ecf64b486c3325ad885e989767745223f
 inherited_gate=first label 312 lies below every body high floor;projected high-wall theorem requires at least one later high label
 hostile_control=zero-high scalar arithmetic is tested separately and is not used as a proof step
 case=E:(1, 8, 10, 11, 12, 14);ds:(2, 5390, 10780, 18480);high_d:2;lows:(10780, 324),(18480, 371);scalar_excess:3503/80216136;torsion:2;cells:9900,9901;clean_cells:24284;phase_gaps:(1,)

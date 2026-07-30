@@ -95,6 +95,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_k3_z312_ray_status_frontier_thm2941.out
   - 04-computation/lrc14_j7_k3_z312_torsion_h_drift_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z312_torsion_h_drift_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_z312_finite_low_pair_torsion_independent_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z312_finite_low_pair_torsion_independent_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_2004_2142_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_2004_2142_thm2941.out
   - 04-computation/lrc14_j7_k2_z2060_ray_status_closure_thm2941.py
@@ -1268,6 +1270,21 @@ Literal-closure source/output/semantic hashes are
 `253becac3d48d73bf8adea7f1986dfa8cb0ab94d6df1e06a383a5769756a588e`,
 `e94dd7adcbd4c5c6c79c6c6f17ea03b5b9e37b0f6bf078fc59a789acca4e9fa1`,
 and `29b61bc296b7dfd63ef7db685cb446b684a54ae9af10ab873b55b7539395f211`.
+
+An independent integer whole-cell referee exposes a stronger organization of
+the same literal closure.  If the inherited projected high-wall condition is
+removed, scalar arithmetic alone admits a zero-high packet on `69` of the
+`70` residual states; this hostile control shows that the wall is an essential
+premise.  Exact positive gaps exclude every mask with two or three high
+labels, so the wall forces exactly one high label.  Direct unit-ray maxima
+then reduce the full literal bank to `80` fixed-low-pair cases (`20` distinct
+low pairs).  Integer whole-cell tests find torsion pairs for all `80`: `78`
+half-turn cases and the same two third-turn cases.  This closes bounded and
+unbounded high labels uniformly, independently of the primary projected-
+interval implementation.  Its source/output/semantic hashes are
+`a5bec8e5c0ca8a2ca7650f0b577e085c00e90d5b52ba94a6b0555fa164d34a75`,
+`4b704cfc44024a240bb068faf00069546d6b81670c4822cd8cabe5d96fe8ae07`,
+and `4667f8f0ef18add7466f849c6f902048d436692aa04c1f9037c2a3623709c91e`.
 
 Closing each displayed spike certifies every skipped integer above the next
 spike; the descent does not extrapolate from a sparse search.
