@@ -12,8 +12,10 @@ status: >
   common-status addenda improve the k=2/k=3 first-drift caps from
   2142/380 to 1836/330.  THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
-  finite-but-uncensused; k=5,6,7 are also empty.  The zero/one-aligned
-  sector, the remaining finite censuses, the full
+  finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
+  addendum closes the canonical reflected-stalk k=1 family
+  `Z_E={L-e:e in E}` uniformly, but not arbitrary k=1.  The zero/one-aligned
+  sector outside that family, the remaining finite censuses, the full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is
   internal exact computation and proof audit; there is no Lean or external
   peer-review claim.

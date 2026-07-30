@@ -141,7 +141,7 @@
   `Z_E={L-e:e in E}` on all `3,003` bodies: a first/second-component
   selector always has local six-drift union mass below `6/7`, with uniform
   gap `4964583434/87692604615`.  The reflected source/output/semantic hashes
-  are `4f7ffa4ac85ad88f1b5d3b7cf6affadbf841fac13affa7bfc7e5a4f1892ee404` /
+  are `5a30b719dcadbf235852804058dfb042260384ee5cf69c46257a9386061162f5` /
   `fa2890c1fad207000b779263d71dc4aaa9077dced05a5eea46fee65d7d304f88` /
   `8fc2b276e8899622d54964325adfa4c5f23259d0d34367f812b12dc4d72c2d6c`.
 - `lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.py`, together

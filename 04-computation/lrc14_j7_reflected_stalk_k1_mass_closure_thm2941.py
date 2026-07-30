@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact closure of THM-2941's canonical reflected-stalk ``k=1`` family.
+r"""Exact closure of THM-2941's canonical reflected-stalk ``k=1`` family.
 
 Let ``E`` be any six-element subset of ``{1,...,14}``, put
 
@@ -358,7 +358,7 @@ def main() -> None:
     ]
     payload = "\n".join(lines) + "\n"
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(payload)
+    args.output.write_text(payload, encoding="utf-8", newline="\n")
     print(payload, end="")
 
 
