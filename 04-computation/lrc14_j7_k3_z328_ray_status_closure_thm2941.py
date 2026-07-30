@@ -6,8 +6,11 @@ six-body carriers.  The residue-ray/reversal law then computes the exact
 infinite-label maximum for every denominator class.  Every remaining state is
 rejected by either a crude fibre overload or the common 16-cell Hunter status
 table.  Each status rejection is replayed below by a second exact rational
-matrix checker independent of the status solver.  No finite label horizon
-remains after the scalar handoff.
+matrix checker independent of the status solver.  It is then normalized by a
+basis-independent minimal split-Smith barcode circuit and a canonical exact
+affine tariff.  Solver-selected Farkas bases are never frozen into partitions,
+representatives, or semantic hashes.  No finite label horizon remains after
+the scalar handoff.
 """
 
 from __future__ import annotations
@@ -16,6 +19,9 @@ import argparse
 import hashlib
 import importlib.util
 from collections import Counter
+from fractions import Fraction as Q
+from functools import lru_cache
+from itertools import combinations
 from math import lcm
 from pathlib import Path
 
@@ -36,7 +42,7 @@ DEFAULT_OUTPUT = (
     "lrc14_j7_k3_z328_ray_status_closure_thm2941.out"
 )
 EXPECTED_RAY_ENGINE_SHA256 = (
-    "6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e"
+    "2ef5e0639354c38b13e17e41f91acb4143c7f60973295b0e2dd0f57eb8f38db2"
 )
 EXPECTED_SCALAR_SHA256 = (
     "75fd846d9070b267003c70e175a9af1225815c3567a5a2558891f5af7a61f8f3"
@@ -45,7 +51,10 @@ EXPECTED_SCALAR_OUTPUT_SHA256 = (
     "f5c11f364a626141af181d84f39d48030ef91a8ddf7d74b9602bb15cd7eb626e"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "3b2ecca5cb0130f69a658ad70b7e1701e01bc22c677a76781377d82d5d20daea"
+    "9c4ea2a20b1799195ffaa0adc57cc94285c5d03e24c1e2b77d7488aca5bf4d68"
+)
+EXPECTED_INSTANCE_TARIFF_SHA256 = (
+    "3959d0bf62626f84758da687687d83156f7f3cee47e63ac2aff722a3a27bdd8b"
 )
 FIRST = 328
 EXPECTED_COUNTS = {
@@ -61,6 +70,14 @@ EXPECTED_COUNTS = {
 }
 EXPECTED_TOTALS = (85, 36, 49, 0)
 EXPECTED_M_HISTOGRAM = ((4, 2), (5, 22), (6, 4), (7, 21))
+EXPECTED_CIRCUIT_CENSUS = (
+    ((2,), 7),
+    ((2, 4), 3),
+    ((2, 5, 6), 1),
+    ((3,), 29),
+    ((4,), 9),
+)
+EXPECTED_DISTINCT_TARIFFS = 25
 
 
 def require(condition, message):
@@ -137,6 +154,204 @@ def independent_farkas_check(q, marginals, capacities, histogram, certificate):
     return tuple(slacks), contradiction
 
 
+def solve_square(rows):
+    """Solve one square augmented rational system, or return ``None``."""
+    matrix = [[Q(value) for value in row] for row in rows]
+    n = len(matrix)
+    require(n and all(len(row) == n + 1 for row in matrix), "nonsquare system")
+    for column in range(n):
+        pivot = next(
+            (row for row in range(column, n) if matrix[row][column]),
+            None,
+        )
+        if pivot is None:
+            return None
+        matrix[column], matrix[pivot] = matrix[pivot], matrix[column]
+        scale = matrix[column][column]
+        matrix[column] = [value / scale for value in matrix[column]]
+        for row in range(n):
+            if row == column or not matrix[row][column]:
+                continue
+            scale = matrix[row][column]
+            matrix[row] = [
+                left - scale * right
+                for left, right in zip(matrix[row], matrix[column])
+            ]
+    return tuple(matrix[row][-1] for row in range(n))
+
+
+STATUS_COLUMNS = tuple(
+    (Q(1), *(Q((pattern >> bit) & 1) for bit in range(4)))
+    for pattern in range(16)
+)
+
+
+@lru_cache(maxsize=None)
+def tariff_vertices(good):
+    """Enumerate all exact affine-majorant vertices for a 16-cell good mask."""
+    good = tuple(map(Q, good))
+    vertices = set()
+    for active in combinations(range(16), 5):
+        answer = solve_square(
+            ((*STATUS_COLUMNS[pattern], good[pattern]) for pattern in active)
+        )
+        if answer is None:
+            continue
+        if all(
+            sum(
+                coefficient * value
+                for coefficient, value in zip(answer, column)
+            )
+            >= good[pattern]
+            for pattern, column in enumerate(STATUS_COLUMNS)
+        ):
+            vertices.add(answer)
+    require(vertices, ("no tariff vertex", good))
+    return tuple(sorted(vertices))
+
+
+def canonical_tariff(q, marginals, good):
+    """Minimum objective, then lexicographically first exact affine tariff."""
+    objective = (Q(q), *(Q(value) for value in marginals))
+    return min(
+        (
+            sum(
+                coefficient * value
+                for coefficient, value in zip(alpha, objective)
+            ),
+            alpha,
+        )
+        for alpha in tariff_vertices(tuple(good))
+    )
+
+
+def canonical_primal(q, marginals, good):
+    """Exact maximum and lexicographically first basic common status table."""
+    rhs = (Q(q), *(Q(value) for value in marginals))
+    candidates = []
+    for basis in combinations(range(16), 5):
+        rows = [
+            tuple(STATUS_COLUMNS[pattern][coordinate] for pattern in basis)
+            + (rhs[coordinate],)
+            for coordinate in range(5)
+        ]
+        values = solve_square(rows)
+        if values is None or any(value < 0 for value in values):
+            continue
+        table = tuple(
+            next(
+                (
+                    values[index]
+                    for index, pattern in enumerate(basis)
+                    if pattern == cell
+                ),
+                Q(0),
+            )
+            for cell in range(16)
+        )
+        require(
+            tuple(
+                sum(
+                    table[pattern] * STATUS_COLUMNS[pattern][coordinate]
+                    for pattern in range(16)
+                )
+                for coordinate in range(5)
+            )
+            == rhs,
+            ("bad canonical primal", basis),
+        )
+        value = sum(table[pattern] * good[pattern] for pattern in range(16))
+        candidates.append((value, table))
+    require(candidates, ("empty marginal polytope", q, marginals))
+    optimum = max(value for value, _table in candidates)
+    table = min(table for value, table in candidates if value == optimum)
+    return optimum, table
+
+
+def demand_at(histogram, grade):
+    return sum(count for load, count in histogram if load >= grade)
+
+
+def histogram_for_selected(q, selected):
+    """Realize selected nested tail demands as a literal load histogram."""
+    selected = tuple(sorted(selected))
+    rows = []
+    if selected and q > selected[0][1]:
+        rows.append((0, q - selected[0][1]))
+    for index, (grade, demand) in enumerate(selected):
+        next_demand = (
+            selected[index + 1][1] if index + 1 < len(selected) else 0
+        )
+        count = demand - next_demand
+        require(count >= 0, ("nonnested tails", selected))
+        if count:
+            rows.append((grade, count))
+    require(sum(count for _load, count in rows) == q, (q, selected, rows))
+    return tuple(rows)
+
+
+def minimal_circuit(q, marginals, capacities, histogram):
+    """Cardinality-first, then lexicographic split-Smith tail circuit."""
+    grades = tuple(
+        load
+        for load, _count in histogram
+        if load > 0 and not all(capacity >= load for capacity in capacities)
+    )
+    demands = {grade: demand_at(histogram, grade) for grade in grades}
+    for size in range(1, len(grades) + 1):
+        for support in combinations(grades, size):
+            if size == 1:
+                good = tuple(Q(capacity >= support[0]) for capacity in capacities)
+                upper, _alpha = canonical_tariff(q, marginals, good)
+                feasible = upper >= demands[support[0]]
+            else:
+                selected = tuple((grade, demands[grade]) for grade in support)
+                synthetic = histogram_for_selected(q, selected)
+                feasible, exact = ray.local.common_status_feasible(
+                    q, marginals, capacities, synthetic
+                )
+                require(exact is not None, ("missing exact circuit check", support))
+            if not feasible:
+                return support, demands
+    raise RuntimeError(("status kill has no barcode circuit", grades))
+
+
+def canonical_barcode_tariff(q, marginals, capacities, histogram):
+    """Return the basis-independent circuit and canonical exact tariff."""
+    support, demand_map = minimal_circuit(
+        q, marginals, capacities, histogram
+    )
+    goods = tuple(
+        tuple(Q(capacity >= grade) for capacity in capacities)
+        for grade in support
+    )
+    demands = tuple(Q(demand_map[grade]) for grade in support)
+    if len(support) == 1:
+        lambdas = (Q(1),)
+        upper, alpha = canonical_tariff(q, marginals, goods[0])
+        primal, table = canonical_primal(q, marginals, goods[0])
+        require(upper == primal, ("primal/dual mismatch", support, upper, primal))
+    else:
+        # The normalized uniform circuit is exact on the complete z=328
+        # universe.  This is a deterministic certificate, not a solver basis.
+        lambdas = tuple(Q(1, len(support)) for _grade in support)
+        combined_good = tuple(
+            sum(
+                weight * good[pattern]
+                for weight, good in zip(lambdas, goods)
+            )
+            for pattern in range(16)
+        )
+        upper, alpha = canonical_tariff(q, marginals, combined_good)
+        table = ()
+    weighted_demand = sum(
+        weight * demand for weight, demand in zip(lambdas, demands)
+    )
+    deficit = weighted_demand - upper
+    require(deficit > 0, ("nonpositive canonical deficit", support, deficit))
+    return support, demands, upper, deficit, lambdas, alpha, table
+
+
 def evaluate_body(body):
     stream = ray.Stream(body)
     trials, states, checks, signs = ray.ray_quotient_states(stream)
@@ -160,8 +375,7 @@ def evaluate_body(body):
         require(gap == target - capacity and gap > 0, "invalid crude witness")
 
     contradictions = []
-    certificate_digest = hashlib.sha256()
-    representative = None
+    canonical_records = []
     for ds, witness in sorted(status.items()):
         q, M, marginals, cap_set, histogram, certificate = witness
         D = lcm(*ds)
@@ -178,9 +392,30 @@ def evaluate_body(body):
             q, marginals, capacities, histogram, certificate
         )
         contradictions.append(contradiction)
-        if representative is None:
-            representative = (body, ds, witness, slacks, contradiction)
-        certificate_digest.update(f"{body}|{ds}|{witness}\n".encode())
+        require(all(value >= 0 for value in slacks), "internal Farkas replay failed")
+        (
+            support,
+            demands,
+            upper,
+            deficit,
+            lambdas,
+            alpha,
+            table,
+        ) = canonical_barcode_tariff(q, marginals, capacities, histogram)
+        canonical_records.append(
+            (
+                body,
+                ds,
+                witness[:-1],
+                support,
+                demands,
+                upper,
+                deficit,
+                lambdas,
+                alpha,
+                table,
+            )
+        )
 
     sign_totals = {
         sign: sum(
@@ -191,10 +426,13 @@ def evaluate_body(body):
         for sign in (-1, 0, 1)
     }
     require(sign_totals[-1] == sign_totals[1], "ray sign imbalance")
+    deterministic_status = tuple(
+        (ds, witness[:-1]) for ds, witness in sorted(status.items())
+    )
     partition = (
         tuple(sorted(states.items())),
         tuple(sorted(crude.items())),
-        tuple(sorted(status.items())),
+        deterministic_status,
         tuple(survivors),
     )
     return (
@@ -212,9 +450,8 @@ def evaluate_body(body):
         tuple(sorted(Counter(w[1] for w in status.values()).items())),
         max(states.items(), key=lambda item: (item[1]["excess"], item[0]), default=None),
         hashlib.sha256(repr(partition).encode()).hexdigest(),
-        certificate_digest.hexdigest(),
         min(contradictions, default=None),
-        representative,
+        tuple(canonical_records),
     )
 
 
@@ -232,7 +469,38 @@ def main():
     for record in records:
         global_m.update(dict(record[11]))
     require(tuple(sorted(global_m.items())) == EXPECTED_M_HISTOGRAM, "M histogram changed")
-    representative = next(record[16] for record in records if record[16] is not None)
+    circuit_census = Counter()
+    tariff_census = Counter()
+    instance_digest = hashlib.sha256()
+    all_canonical_records = []
+    for record in records:
+        for canonical in record[15]:
+            circuit_census[canonical[3]] += 1
+            tariff_census[
+                (
+                    canonical[3],
+                    canonical[4],
+                    canonical[5],
+                    canonical[6],
+                    canonical[7],
+                    canonical[8],
+                )
+            ] += 1
+            instance_digest.update(f"{canonical}\n".encode())
+            all_canonical_records.append(canonical)
+    require(
+        tuple(sorted(circuit_census.items())) == EXPECTED_CIRCUIT_CENSUS,
+        ("canonical circuit census changed", circuit_census),
+    )
+    require(
+        len(tariff_census) == EXPECTED_DISTINCT_TARIFFS,
+        ("canonical tariff census changed", len(tariff_census)),
+    )
+    require(
+        instance_digest.hexdigest() == EXPECTED_INSTANCE_TARIFF_SHA256,
+        ("deterministic instance/tariff digest changed", instance_digest.hexdigest()),
+    )
+    representative = all_canonical_records[0]
     semantic_payload = (
         FIRST,
         BODIES,
@@ -242,7 +510,9 @@ def main():
         pair_rows,
         control_marginals,
         control_caps,
-        control_certificate,
+        tuple(sorted(circuit_census.items())),
+        tuple(sorted(tariff_census.items(), key=repr)),
+        instance_digest.hexdigest(),
         representative,
     )
     semantic_hash = hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
@@ -252,7 +522,7 @@ def main():
     lines = [
         "LRC14 projected k=3 z1=328 all-label ray/status closure",
         f"ray_engine_sha256={file_sha256(RAY_ENGINE_PATH)}",
-        "independent_audit=local exact 16-cell matrix rebuild",
+        "independent_audit=basis-independent minimal barcode/canonical tariff plus internal exact matrix replay",
         f"scalar_source_sha256={file_sha256(SCALAR_PATH)}",
         f"scalar_output_sha256={file_sha256(SCALAR_OUTPUT_PATH)}",
         "scope=9 globally reconstructed scalar bodies;no finite label horizon",
@@ -266,6 +536,9 @@ def main():
             f"status_kills:{totals[2]};survivors:{totals[3]}"
         ),
         f"status_M_histogram={dict(sorted(global_m.items()))}",
+        f"minimal_barcode_circuit_census={dict(sorted(circuit_census.items()))}",
+        f"distinct_canonical_tariffs={len(tariff_census)}",
+        f"deterministic_instance_tariff_sha256={instance_digest.hexdigest()}",
     ]
     for record in records:
         (
@@ -283,11 +556,11 @@ def main():
             status_histogram,
             maximum,
             partition_digest,
-            certificate_digest,
             min_contradiction,
-            _representative,
+            canonical_records,
         ) = record
         states, crude, status, survivors = partition
+        local_circuits = Counter(canonical[3] for canonical in canonical_records)
         lines.append(
             f"E={body};h={h};r={components};L={L};high={high_floor};d1={first_d};"
             f"ray_checks={checks};ray_signs={dict(signs)};"
@@ -295,13 +568,14 @@ def main():
             f"states={len(states)};crude_kills={len(crude)};"
             f"status_kills={len(status)};survivors={len(survivors)};"
             f"status_M={dict(status_histogram)};max_state={maximum};"
-            f"partition_sha256={partition_digest};certificate_sha256={certificate_digest};"
+            f"partition_sha256={partition_digest};"
+            f"minimal_circuits={dict(sorted(local_circuits.items()))};"
             f"min_exact_farkas_contradiction={min_contradiction}"
         )
     lines.extend(
         (
-            f"representative_exact_farkas={representative}",
-            "independent_exact_farkas_checks=49/49:PASS",
+            f"representative_canonical_barcode_tariff={representative}",
+            "internal_solver_farkas_replay=49/49:PASS;solver_bases_not_frozen",
             "conclusion=all 9 projected k=3 z1=328 scalar rows are empty",
             f"semantic_sha256={semantic_hash}",
             "all_exact_controls=PASS",

@@ -3,9 +3,15 @@
 
 The scalar supplier reconstructs its body from all 3,003 six-body carriers.
 The exact residue-ray quotient then has one surviving denominator state.  A
-common 16-cell Hunter status table rejects it by an exact rational Farkas
-certificate, replayed below by a second exact matrix checker independent of
-the status solver.  No finite label horizon remains after the scalar handoff.
+common 16-cell Hunter status table rejects it.  The frozen proof is the
+basis-independent singleton grade-three inequality
+
+    1_[capacity >= 3] <= b_1+b_2+b_3,
+
+whose marginal upper bound is 72 while the required grade-three tail is 144.
+The solver-selected rational Farkas basis is still replayed internally as a
+hostile control, but it is deliberately absent from every digest and displayed
+certificate.  No finite label horizon remains after the scalar handoff.
 """
 
 from __future__ import annotations
@@ -33,7 +39,7 @@ DEFAULT_OUTPUT = (
     "lrc14_j7_k3_z330_ray_status_closure_thm2941.out"
 )
 EXPECTED_RAY_ENGINE_SHA256 = (
-    "6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e"
+    "2ef5e0639354c38b13e17e41f91acb4143c7f60973295b0e2dd0f57eb8f38db2"
 )
 EXPECTED_SCALAR_SHA256 = (
     "5eb30248f2beac09b29ebccc0dc8b203361f97c4b8552021130290566f8de0d1"
@@ -42,12 +48,13 @@ EXPECTED_SCALAR_OUTPUT_SHA256 = (
     "c2bf51b8b661d98d1ce2a8114c6187a6eefb17856e9684a46704a62ccecc81ed"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "2e2fbfa8e85c04d658c7ed04f44d7021a8f08abf7038be0ed56211980b0fe927"
+    "4d5b51acb7029cd94087e5c47830ec1fdd41e74b79d4efcd3ed72b4afc3e82ad"
 )
 FIRST = 330
 EXPECTED_BODY = (1, 2, 6, 8, 12, 14)
 EXPECTED_COUNTS = (1, 0, 1, 0)
 EXPECTED_M = 7
+EXPECTED_GRADE = 3
 
 
 def require(condition, message):
@@ -149,10 +156,30 @@ def main():
         ray.fibre.residue_load_histogram(arcs, q) == histogram,
         "status load histogram changed",
     )
-    slacks, contradiction = independent_farkas_check(
+    _solver_slacks, contradiction = independent_farkas_check(
         q, marginals, capacities, histogram, certificate
     )
     require(contradiction == -1, "normalized Farkas contradiction changed")
+
+    grade = EXPECTED_GRADE
+    demand = sum(count for load, count in histogram if load >= grade)
+    good = tuple(int(capacity >= grade) for capacity in capacities)
+    tariff = (0, 1, 1, 1, 0)
+    tariff_slacks = tuple(
+        tariff[0]
+        + sum(tariff[index + 1] * ((pattern >> index) & 1) for index in range(4))
+        - good[pattern]
+        for pattern in range(16)
+    )
+    upper = tariff[0] * q + sum(
+        tariff[index + 1] * marginals[index] for index in range(4)
+    )
+    deficit = demand - upper
+    require(
+        (demand, upper, deficit) == (144, 72, 72),
+        ("singleton grade-three inequality changed", demand, upper, deficit),
+    )
+    require(all(value >= 0 for value in tariff_slacks), "invalid direct tariff")
 
     sign_totals = {
         sign: sum(
@@ -163,17 +190,32 @@ def main():
         for sign in (-1, 0, 1)
     }
     require(sign_totals[-1] == sign_totals[1], "ray sign imbalance")
+    deterministic_status = tuple(
+        (status_ds, status_witness[:-1])
+        for status_ds, status_witness in sorted(status.items())
+    )
     partition = (
         tuple(sorted(states.items())),
         tuple(sorted(crude.items())),
-        tuple(sorted(status.items())),
+        deterministic_status,
         tuple(survivors),
     )
     partition_digest = hashlib.sha256(repr(partition).encode()).hexdigest()
-    certificate_digest = hashlib.sha256(
-        f"{EXPECTED_BODY}|{ds}|{witness}\n".encode()
+    deterministic_instance = (EXPECTED_BODY, ds, witness[:-1])
+    instance_digest = hashlib.sha256(
+        f"{deterministic_instance}\n".encode()
     ).hexdigest()
-    representative = (EXPECTED_BODY, ds, witness, slacks, contradiction)
+    representative = (
+        EXPECTED_BODY,
+        ds,
+        witness[:-1],
+        grade,
+        demand,
+        upper,
+        deficit,
+        tariff,
+        tariff_slacks,
+    )
     semantic_payload = (
         FIRST,
         EXPECTED_BODY,
@@ -189,7 +231,6 @@ def main():
         pair_rows,
         control_marginals,
         control_caps,
-        control_certificate,
         representative,
     )
     semantic_hash = hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
@@ -200,7 +241,7 @@ def main():
     lines = [
         "LRC14 projected k=3 z1=330 all-label ray/status closure",
         f"ray_engine_sha256={file_sha256(RAY_ENGINE_PATH)}",
-        "independent_audit=local exact 16-cell matrix rebuild",
+        "independent_audit=basis-independent singleton barcode/tariff plus internal exact matrix replay",
         f"scalar_source_sha256={file_sha256(SCALAR_PATH)}",
         f"scalar_output_sha256={file_sha256(SCALAR_OUTPUT_PATH)}",
         "scope=1 globally reconstructed scalar body;no finite label horizon",
@@ -216,10 +257,12 @@ def main():
             f"states={counts[0]};crude_kills={counts[1]};"
             f"status_kills={counts[2]};survivors={counts[3]};M={M};"
             f"max_state={maximum};partition_sha256={partition_digest};"
-            f"certificate_sha256={certificate_digest}"
+            f"deterministic_instance_sha256={instance_digest}"
         ),
-        f"representative_exact_farkas={representative}",
-        "independent_exact_farkas_checks=1/1:PASS",
+        f"representative_canonical_barcode_tariff={representative}",
+        "canonical_circuit_census={(3,): 1};distinct_canonical_tariffs=1",
+        "basis_independent_grade3_bound=H(3):144;maxF(3):72;deficit:72",
+        "internal_solver_farkas_replay=1/1:PASS;solver_basis_not_frozen",
         "conclusion=the unique projected k=3 z1=330 scalar row is empty",
         f"semantic_sha256={semantic_hash}",
         "all_exact_controls=PASS",
