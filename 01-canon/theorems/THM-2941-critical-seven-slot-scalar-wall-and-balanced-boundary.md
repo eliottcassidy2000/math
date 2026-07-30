@@ -13,8 +13,8 @@ status: >
   2142/380 to 1835/328.  THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
-  addendum closes the canonical reflected-stalk k=1 family
-  `Z_E={L-e:e in E}` uniformly, but not arbitrary k=1.  The zero/one-aligned
+  addendum closes the common-level reflected-stalk k=1 diagonal
+  `Z_(E,q)={qL-e:e in E}` for every `q>=1`, but not arbitrary k=1.  The zero/one-aligned
   sector outside that family, the remaining finite censuses, the full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is
   internal exact computation and proof audit; there is no Lean or external
@@ -60,6 +60,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_component_residue_ray_cone_no_go_thm2941.out
   - 04-computation/lrc14_j7_reflected_stalk_k1_mass_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_stalk_k1_mass_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_levels_all_q_mass_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_levels_all_q_mass_closure_thm2941.out
   - 04-computation/lrc14_j7_k3_projected_scalar_atlas_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_projected_scalar_atlas_thm2941.out
   - 04-computation/lrc14_j7_k3_z364_ray_status_closure_thm2941.py
@@ -724,6 +726,39 @@ identity, and an independent endpoint-slab union sweep agree on all
 `18,054` clauses.  Hence the canonical reflected-stalk `k=1` family is
 empty.  This is a scoped family theorem, not a finite reduction or closure
 of the arbitrary six-drift `k=1` sector.
+
+The same selector closes the entire **common-level reflected diagonal**.
+For every integer `q>=1`, put
+
+```text
+Z_(E,q)={qL-e:e in E}.
+```
+
+On the selected body-safe cell, write `u=(r+x)/q`.  The toothpick identity
+
+```text
+(qL-e)(j+u)/L = x-e(qj+r+x)/(qL) mod 1
+```
+
+expresses its union mass as the average of `q` level-one fine-cell masses at
+ruler `qL`.  Exact interval clauses close `q=1,2,3,4`.  For `q>=5`, freezing
+the base intervals and moving their diagonal endpoints gives
+
+```text
+mu(U_j^q) <= 265/336 + sum_(e in E) 2e/(qL-e)
+            <= 265/336 + 14/[3(14q-1)]
+            <= 6/7-19/23184.
+```
+
+Thus `mu(P_(E,Z_(E,q)))>1/7` for all `3,003` bodies and every common level
+`q>=1`, so the final aligned comb cannot contain the projection.  A redundant
+exact census through `q=30`, the analytic tail, and independent normal and
+optimized replays agree.  The hardened LF source/output hashes are
+`2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31` and
+`22c078474377f0b14297497271d16426b46d2017bc8d838e88b7f7e8ba83275b`.
+Levels varying independently with `e`, other residue packets, and arbitrary
+`k=1` remain open; this diagonal extension removes no additional row from a
+finite ledger.
 
 There is an exact all-scale functional form behind the discrepancy tail.
 Write the carrier components as
