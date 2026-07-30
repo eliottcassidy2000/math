@@ -1,0 +1,14 @@
+LRC14 global projected k=2 scalar band 2004..2142
+uniform_ray_status_source_sha256=dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36
+universe=six_body_roots:3003;body_labels:1..14;ordered distinct later nonaligned labels;scalar necessary condition
+first_band=2004..2142;first_candidate_rows=417388;exact_horizon=7000;omitted_slot_bound=6r/[49(H+1)]
+projected_wall=max(15,floor(13L/150)+1);forced-high omitted slot starts max(H+1,projected_wall)
+global_survivors=3;surviving_firsts=(2004, 2060, 2142);surviving_bodies=((1, 4, 8, 10, 12, 14), (1, 4, 8, 10, 12, 14), (1, 4, 8, 10, 12, 14))
+SURVIVOR;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;largest_floor=1020;z1=2004;delta1=2617/3436860;suffix=2060:1867/2119740,2172:263/310415,2142:821/1049580,2534:2911/3724980;lower=1049/267540;upper=6622358579/1633871214990;gap=1123710587/8496130317948
+SURVIVOR;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;largest_floor=1020;z1=2060;delta1=1867/2119740;suffix=2172:263/310415,2142:821/1049580,2534:2911/3724980,3180:279/363580;lower=1049/267540;upper=1052387671/259266989205;gap=1862920471/13481883438660
+SURVIVOR;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;largest_floor=1020;z1=2142;delta1=821/1049580;suffix=2172:263/310415,2534:2911/3724980,3180:279/363580,2396:9419/12327420;lower=1049/267540;upper=5944239779/1507775985765;gap=336828043/15680870251956
+interval_2061_2141_global_survivors=()
+interval_2005_2060_global_survivors=(2060,)
+global_profile_sha256=56412ac97f1c46f33905f0dfad5e13f9836f8e81cba2fae8d41e89903a11c0b2
+semantic_sha256=9b18e07b31bca513e4212439dbef68fb0a81774abcfc2802b4491dd4b40e1eed
+all_exact_controls=PASS
