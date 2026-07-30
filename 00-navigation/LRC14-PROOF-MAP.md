@@ -4,11 +4,11 @@
 
 ## 2026-07-30 current control panel
 
-**Status: OPEN.** THM-2923 leaves at most six body speeds.  THM-2941 gives wall `h/7` with empty zero excess; THM-2928/2941 empty aligned `k>=4`, cap `k=2,3` at `1,742/312`, and empty the common-level reflected `k=1` diagonal.  The remaining censuses, arbitrary `k<=1`, rung, and LRC(14) are open; `q<=25` is false.
+**Status: OPEN.** THM-2923 leaves at most six body speeds.  THM-2941 gives wall `h/7` with empty zero excess; THM-2928/2941 empty aligned `k>=4`, cap `k=2,3` at `1,742/297`, and empty the common-level reflected `k=1` diagonal.  The remaining censuses, arbitrary `k<=1`, rung, and LRC(14) are open; `q<=25` is false.
 **Scalable quotient.**  Support transfer/Möbius counting reduce `k=3/2` to `26,970/27,163` rows; septimal and located-phase screens cut raw occurrences `21.36b/951.55b -> 2.55b/200.14b`.  These are necessary-state quotients, not physical covers; most location/unit data remain.
 **Status theorem.**  For upward `A`, real maximum is `min(1,tau_H)`, `H=min(A)`: `p` cover variables replace `2^p` cells, losing integer location, threshold coupling, and needle shape.
 **Missing coordinate.**  For drifts `Z`, `P=phi_L(C_E minus union_z D_z)`; aligned completion is `P subset union_(a in A)D_a`.  Compact strict-open seams are pointwise, not a.e.
-**Descending banks.**  For `k=3`, exact kills are `85=36+49` at `328` and `2,346=702+1,643+1` at `324`; the last unbounded denominator-`3920` ray closes by an [antipodal cell pair](../04-computation/lrc14_j7_k3_z324_antipodal_h_drift_closure_thm2941.py), leaving height `312`.  For `k=2`, status/projection and forced-high envelopes close the exact bands through `1760..1769`; the all-body `1750..1799` atlas makes `1751..1759` scalar-empty except for the status-empty row at `1758`.  The complete `1750` slice and `1743..1749` band then splice without an integer gap, leaving height `1742` and ledger `2,239,789`.
+**Descending banks.**  For `k=3`, exact kills are `85=36+49` at `328` and `2,346=702+1,643+1` at `324`; the last unbounded denominator-`3920` ray closes by an [antipodal cell pair](../04-computation/lrc14_j7_k3_z324_antipodal_h_drift_closure_thm2941.py).  At `312`, the inherited high wall reduces the `70` status residuals to `80` finite one-high/two-low cases; two clean cells separated by `d/2` (78 cases) or `d/3` (two cases) close every unbounded high ray.  Common-status/Farkas replay then closes `306,302,298` by `137=17+120`, leaving height `297` and ledger `375,765`.  For `k=2`, exact bands through `1760..1769`, the `1750..1799` atlas, the complete `1750` slice, and the `1743..1749` band splice without an integer gap, leaving height `1742` and ledger `2,239,789`.
 
 ### The present reduction graph
 

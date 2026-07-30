@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
-"""Exact all-label closure of the projected k=3 slices z1=306 and z1=302.
+"""Exact all-label closure of projected k=3 slices z1=306, 302, and 298.
 
 The guarded z312 low-pair torsion package leaves the exact body-atlas frontier
 at 306.  The atlas has two bodies there and, after the empty 303..305 gap,
-nine bodies at 302.  Exact periodic residue rays enumerate every attained
+the nine bodies at 302, and the twelve bodies at 298.  Exact periodic residue
+rays enumerate every attained
 four-denominator state with the inherited projected high-label obligation.
-All 41 states are rejected: two by a crude fibre overload and 39 by the common
-16-cell Hunter status table.  Every status rejection is replayed below by a
+All 137 states are rejected: seventeen by a crude fibre overload and 120 by
+the common 16-cell Hunter status table.  Every status rejection is replayed by a
 second exact rational Farkas checker independent of the status solver.
 
 The common-table engine's exhaustive small controls include both a feasible
 positive instance and an incompatible hostile instance.  No finite label
-horizon remains.  Since the next occupied atlas height is 298, closing both
-slices lowers the projected k=3 first-drift cap to 298.
+horizon remains.  Since the next occupied atlas height is 297, closing all
+three slices lowers the projected k=3 first-drift cap to 297.
 """
 
 from __future__ import annotations
@@ -47,11 +48,11 @@ Z312_TERMINAL_OUTPUT_PATH = (
 )
 DEFAULT_OUTPUT = (
     ROOT / "05-knowledge/results/"
-    "lrc14_j7_k3_z306_z302_ray_status_descent_closure_thm2941.out"
+    "lrc14_j7_k3_z306_z302_z298_ray_status_descent_closure_thm2941.out"
 )
 
 EXPECTED_RAY_ENGINE_SHA256 = (
-    "6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e"
+    "2ef5e0639354c38b13e17e41f91acb4143c7f60973295b0e2dd0f57eb8f38db2"
 )
 EXPECTED_BODY_ATLAS_SHA256 = (
     "2af6d96882f336a409a8657070ed76a75c09a53b3789101b83103b051e864ded"
@@ -66,7 +67,7 @@ EXPECTED_Z312_TERMINAL_OUTPUT_SHA256 = (
     "75dd08768abd9397a1cb1f3f67b742a126db86bf201745c10fe79b229c44a986"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "3f7f8633875d1011671260abdc2dcac23c14ee4489d72b9e24f6f084ea9ee612"
+    "b589ac0d64fd94468e0971de3b81a3bcffb8e446e506aa210ff85b4aa29dce5b"
 )
 
 EXPECTED_COUNTS = {
@@ -81,13 +82,26 @@ EXPECTED_COUNTS = {
     (302, (2, 4, 6, 10, 12, 14)): (3, 0, 3),
     (302, (2, 4, 8, 10, 12, 14)): (8, 0, 8),
     (302, (2, 6, 8, 10, 12, 14)): (7, 0, 7),
+    (298, (1, 2, 6, 8, 12, 14)): (1, 0, 1),
+    (298, (1, 2, 6, 10, 12, 14)): (1, 0, 1),
+    (298, (1, 3, 4, 8, 12, 14)): (1, 0, 1),
+    (298, (1, 4, 6, 8, 12, 14)): (6, 2, 4),
+    (298, (1, 4, 6, 9, 12, 14)): (2, 0, 2),
+    (298, (1, 4, 6, 10, 12, 14)): (7, 1, 6),
+    (298, (1, 4, 8, 10, 12, 14)): (44, 10, 34),
+    (298, (1, 6, 8, 10, 12, 14)): (6, 2, 4),
+    (298, (2, 4, 6, 8, 12, 14)): (5, 0, 5),
+    (298, (2, 4, 6, 10, 12, 14)): (3, 0, 3),
+    (298, (2, 4, 8, 10, 12, 14)): (12, 0, 12),
+    (298, (2, 6, 8, 10, 12, 14)): (8, 0, 8),
 }
 EXPECTED_LEVEL_TOTALS = {
     306: (9, 0, 9, 0),
     302: (32, 2, 30, 0),
+    298: (96, 15, 81, 0),
 }
-EXPECTED_TOTALS = (41, 2, 39, 0)
-EXPECTED_M_HISTOGRAM = ((3, 1), (5, 9), (6, 8), (7, 21))
+EXPECTED_TOTALS = (137, 17, 120, 0)
+EXPECTED_M_HISTOGRAM = ((3, 7), (4, 9), (5, 23), (6, 29), (7, 52))
 
 
 def require(condition, message):
@@ -116,11 +130,11 @@ for path, expected in (
 ):
     require(file_sha256(path) == expected, ("dependency changed", path))
 
-ray = load_module("z306_z302_ray_engine", RAY_ENGINE_PATH)
+ray = load_module("z306_z302_z298_ray_engine", RAY_ENGINE_PATH)
 
 
 def atlas_rows():
-    by_level = {306: [], 302: []}
+    by_level = {306: [], 302: [], 298: []}
     counts = Counter()
     pattern = re.compile(r"^row=E=([0-9,]+);.*;z1=([0-9]+);")
     for line in BODY_ATLAS_OUTPUT_PATH.read_text().splitlines():
@@ -143,6 +157,11 @@ def atlas_rows():
         ("z302 body order changed", by_level[302]),
     )
     require(
+        tuple(by_level[298])
+        == tuple(body for first, body in EXPECTED_COUNTS if first == 298),
+        ("z298 body order changed", by_level[298]),
+    )
+    require(
         counts[306] == 2
         and all(counts[value] == 0 for value in range(303, 306))
         and counts[302] == 9
@@ -150,7 +169,10 @@ def atlas_rows():
         and counts[298] == 12,
         ("descent atlas gap changed", counts),
     )
-    return tuple((first, body) for first in (306, 302) for body in by_level[first]), tuple(sorted(counts.items()))
+    require(counts[297] == 7, ("next atlas frontier changed", counts[297]))
+    return tuple(
+        (first, body) for first in (306, 302, 298) for body in by_level[first]
+    ), tuple(sorted(counts.items()))
 
 
 def independent_farkas_check(q, marginals, capacities, histogram, certificate):
@@ -299,7 +321,7 @@ def main():
             sum(len(record[11][index]) for record in records if record[0] == first)
             for index in range(4)
         )
-        for first in (306, 302)
+        for first in (306, 302, 298)
     }
     require(level_totals == EXPECTED_LEVEL_TOTALS, ("level totals changed", level_totals))
     global_m = Counter()
@@ -328,13 +350,13 @@ def main():
         require(semantic_hash == EXPECTED_SEMANTIC_SHA256, "semantic digest changed")
 
     lines = [
-        "LRC14 projected k=3 z1=306 and z1=302 all-label ray/status descent closure",
+        "LRC14 projected k=3 z1=306, z1=302, and z1=298 all-label ray/status descent closure",
         f"ray_engine_sha256={file_sha256(RAY_ENGINE_PATH)}",
         f"body_atlas_source_sha256={file_sha256(BODY_ATLAS_PATH)}",
         f"body_atlas_output_sha256={file_sha256(BODY_ATLAS_OUTPUT_PATH)}",
         f"z312_terminal_source_sha256={file_sha256(Z312_TERMINAL_PATH)}",
         f"z312_terminal_output_sha256={file_sha256(Z312_TERMINAL_OUTPUT_PATH)}",
-        "scope=2 exact z306 bodies plus 9 exact z302 bodies;inherited projected high-label obligation (first itself may clear the wall);no finite label horizon",
+        "scope=2 exact z306 bodies plus 9 exact z302 bodies plus 12 exact z298 bodies;inherited projected high-label obligation (first itself may clear the wall);no finite label horizon",
         "ray_law=(z+L)delta(z+L)=zdelta(z);A(L-b)=-A(b);all denominator maxima attained",
         f"pair_overlap_exhaustive_controls={pair_rows}",
         "common_table_controls=coverable positive instance accepted;incompatible hostile instance rejected",
@@ -360,9 +382,9 @@ def main():
     lines.extend(
         (
             f"representative_exact_farkas={representative}",
-            "independent_exact_farkas_checks=39/39:PASS",
-            "atlas_gaps=303..305 empty;299..301 empty;next occupied height298 with12 bodies",
-            "conclusion=all projected k3 rows at z1=306 and z1=302 are empty;projected k3 cap<=298;next exact frontier=298",
+            "independent_exact_farkas_checks=120/120:PASS",
+            "atlas_gaps=303..305 empty;299..301 empty;next occupied height297 with7 bodies",
+            "conclusion=all projected k3 rows at z1=306, z1=302, and z1=298 are empty;projected k3 cap<=297;next exact frontier=297",
             f"semantic_sha256={semantic_hash}",
             "all_exact_controls=PASS",
         )

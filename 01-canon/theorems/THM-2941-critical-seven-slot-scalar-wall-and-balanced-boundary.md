@@ -9,8 +9,9 @@ status: >
   drift absolutely for k>=2.  The lossless projected residual closes the
   five-aligned/two-drift face independently of THM-2928, and exact suffix
   filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
-  common-status, exact-packet, forced-high-ray, and antipodal-phase addenda
-  improve the k=2/k=3 first-drift caps from 2142/380 to 1742/312.
+  common-status, exact-packet, forced-high-ray, antipodal-phase,
+  finite-low-pair torsion, and status-descent addenda improve the k=2/k=3
+  first-drift caps from 2142/380 to 1742/297.
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -98,6 +99,12 @@ verification:
   - 05-knowledge/results/lrc14_j7_k3_z324_antipodal_h_drift_closure_thm2941.out
   - 04-computation/lrc14_j7_k3_z312_ray_status_frontier_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z312_ray_status_frontier_thm2941.out
+  - 04-computation/lrc14_j7_k3_z312_finite_low_pair_torsion_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z312_finite_low_pair_torsion_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_z312_finite_low_pair_torsion_independent_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z312_finite_low_pair_torsion_independent_thm2941.out
+  - 04-computation/lrc14_j7_k3_z306_z302_z298_ray_status_descent_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z306_z302_z298_ray_status_descent_closure_thm2941.out
   - 04-computation/lrc14_j7_k3_z324_located_two_cell_direct_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z324_located_two_cell_direct_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_2004_2142_thm2941.py
@@ -1276,8 +1283,7 @@ on the representative packet `(324,364,492,12771)`.
 
 Thus all `45` rows at `324` are empty.  These two slices remove `54` further
 rows from the old necessary ledger, leaving `375,868`.  Since the atlas's
-next occupied height is exactly `312`, the current proved projected `k=3`
-cap is
+next occupied height is exactly `312`, this first gave the checkpoint cap
 
 ```text
 z_1<=312.                                               (25q1)
@@ -1286,15 +1292,13 @@ z_1<=312.                                               (25q1)
 Closing each displayed spike certifies every skipped integer above the next
 spike; the descent does not extrapolate from a sparse search.
 
-At the still-occupied endpoint `z_1=312`, the lossless atlas has exactly `80`
+At the then-occupied endpoint `z_1=312`, the lossless atlas has exactly `80`
 bodies.  The exact all-label ray quotient produces `18,249` attained
 denominator states.  Crude all-divisor capacity removes `7,481`, and
 independently rebuilt common-status/Farkas certificates remove `10,698`.
 Exactly `70` states remain, distributed over four bodies as `25+41+2+2`.
-Every attained maximizing packet has four distinct labels, begins with `312`,
-and has exactly one label at or above its body's projected high wall.  This is
-a useful one-moving/three-located geometry, but it is not yet a literal-packet
-classification.
+Every attained maximizing packet has four distinct labels and begins with
+`312`.
 
 The physical-denominator bridge does not shrink this endpoint.  All `70`
 states pass its expected-spike predicate, and all `70` pass its one-threshold
@@ -1302,14 +1306,61 @@ support-status predicate.  Among them denominator `3` and denominator `4`
 never occur; denominator `2` occurs once.  Thus every small-status allowance
 is exactly zero, while the minimum large-capacity support slack is `14,348`.
 This bridge is only necessary and forgets unit directions and literal phases.
-Accordingly the exact endpoint status is
+The terminal closure retains the high-wall coordinate that both quotients
+forget.  Since `312` lies below the high floor on all four residual bodies,
+the inherited projected scalar theorem requires at least one later high
+label.  This hypothesis is essential: the unrestricted zero-high scalar
+relaxation passes `69/70` states.  In the inherited high-wall universe, a
+duplicate-permitting upper relaxation for two or three high labels falls
+strictly below the wall on every body, with positive exact gaps
 
 ```text
-z_1=312: 70 denominator states on four bodies, OPEN.       (25q2)
+271403663/168333225060,
+22539649297/15003760917600,
+295936150144/96567353117235,
+41681149/16799037255.
 ```
 
-No cap improvement follows from this endpoint package.  Its source/output
-and semantic hashes are
+Thus every possible packet has exactly one high label and two finite low
+labels.  Exact ray maxima reduce the `70` states to `80`
+`(state, high denominator, low pair)` cases, or `20` body-distinct low pairs.
+For every case, two complete body-safe cells are missed by `312` and both low
+labels, and their index difference is `d/p mod d` for the high denominator
+`d`: `p=2` in `78` cases and `p=3` in two.  If
+
+```text
+z=(L/d)u+mL,  gcd(u,d)=1,
+```
+
+then the two high-label phases differ by `u/p mod 1`, independently of the
+unbounded height `m`.  This is a half turn for `p=2` and a one-third or
+two-thirds turn for `p=3`; in either case the strict radius-`1/14` danger arcs
+are disjoint.  The projected drift-safe mass is therefore `1>36/91`.
+Primary and independently reconstructed implementations agree on all `80`
+cases, including the nonredundant `69/70` zero-high hostile control.  Hence
+all `80` atlas rows at `312` are empty.
+
+The next occupied heights are `306`, `302`, and `298`, with `2`, `9`, and
+`12` bodies; the intervening atlas levels are empty.  Their exact all-label
+ray quotients contain respectively
+
+```text
+9=0+9,   32=2+30,   96=15+81
+```
+
+states, split into crude fibre-capacity and common-status kills.  The latter
+`120` exclusions are all replayed by a second exact rational Farkas checker
+against the common 16-cell table; positive feasible and incompatible hostile
+controls are both retained.  There are no survivors.  Closing these `23`
+further atlas rows leaves `375,765` necessary rows.  The next occupied height
+is `297`, with seven bodies, so the current proved projected cap is
+
+```text
+z_1<=297.                                               (25q2)
+```
+
+No closure at height `297` is claimed here.  The `z_1=312` frontier
+source/output/semantic hashes are
 
 ```text
 d6a80c15c5c4d8ef2ea8be9fc886c40e70e3189123b5d0b3fce48765fa301977
@@ -1317,8 +1368,30 @@ d03fc39ed1f5f64cd2be4e7e28f5cf23e8d7adc0c6a737abc6944bdb7672515f
 b6152f5a9f10115eb5d39ac402da0b960aad96d127d0d5fb5a640af35c81dd07.
 ```
 
-The primary and independent two-cell implementations agree on the sole state,
-the fixed-clean cells, the half-turn phase law, and the next occupied height.
+The finite-low-pair closure source/output/semantic hashes are
+
+```text
+a46bd16bf5d8933c639d27b48424aa78b139b26aa1a1cafa9b39f9b98ed1fe3f
+75dd08768abd9397a1cb1f3f67b742a126db86bf201745c10fe79b229c44a986
+95f9da4ccf85145f974df62d15c79acfa7000e0917e877bb5b32926e4ff6c3e8.
+```
+
+The independent closure source/output/semantic hashes are
+
+```text
+7de24a50c66b63954c3147131d378315eb1d7c3bacca4598ddf5c81c3031427f
+8ba8bacc9be6b753222f22834b86ab31381a37aaba80a41f9a333dd58e4a9841
+4667f8f0ef18add7466f849c6f902048d436692aa04c1f9037c2a3623709c91e.
+```
+
+The `306/302/298` descent source/output/semantic hashes are
+
+```text
+dee8b7aa3deecb821c7aab95096e14f729832fbecc31beb28623f9e2e88d8923
+835edaf14befcf567fa241ba73e8c8cad5016787583c1fed6e8f8d89f0fd20ab
+b589ac0d64fd94468e0971de3b81a3bcffb8e446e506aa210ff85b4aa29dce5b.
+```
+
 The physical reconciliation source/output pairs are
 `d209433bae4411e1a9597cb60d792b0c18897dffc333e60baaad5abcdaf6cf29 /
 6f24829835f1a9eb2f3afcc668ccfa13d21320bb53b27fb89e30911bd20569ab`

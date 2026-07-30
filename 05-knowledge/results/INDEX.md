@@ -83,27 +83,23 @@
   base/q7/primary/audit source hashes begin
   `2fcd1fa7/3cc07195/05e365a6/a3a65ae7`; output hashes begin
   `aa14b089/eff21ad8`.
-- `lrc14_j7_k3_projected_scalar_body_atlas_thm2941.py`, physical-denominator
-  reconciliation and independent audit, and exact closures through `z1=324`
+- `lrc14_j7_k3_projected_scalar_body_atlas_thm2941.py`, the physical bridge,
+  descending ray/status banks, and the `z312` finite-low-pair torsion closure
   -> matching `.out` files [THM-2941 PROVED NECESSARY ATLAS + FINITE-EXACT
-  CLOSURES + INDEPENDENT AUDIT].  The successive occupied heights are
-  `378:9,364:25,350:53,336:8,330:1,328:9,324:45,312:80`; exact attained-ray
-  quotients close every height through `328`.  At `324`,
-  `2,346=702+1,643+1`: exactly one denominator state survives, on
-  `E=(2,8,10,11,12,14)` with `(3920,4620,10780,10780)`.
-  Scalar thresholding fixes labels `364,492` and leaves an unbounded
-  exact-`3920` tail.  The clean cells `5880,19600` differ by `3920/2`;
-  every primitive unit is odd, so the tail phases are antipodal and their
-  strict radius-`1/14` danger arcs are disjoint.  Primary and independent
-  direct carrier implementations close the state uniformly.  The physical
-  bridge reconciles `375,913` raw/support rows with `247,566` expected-spike
-  and `247,565` joint-screen rows; these are necessary denominator states,
-  not covers or numerator assignments.  Closing `324` leaves `375,868`
-  necessary rows and proves the projected `k=3` cap `312`.
-  Bridge source/output pairs begin `d209433b/6f248298` and
-  `ac7d5e5d/554f7303`; the `z324` frontier, antipodal, and direct
-  source/output pairs begin `7eaaf551/db3c5c68`, `e5fbb516/170523d6`, and
-  `edd44a31/9f19d0b5`.
+  CLOSURES + INDEPENDENT AUDIT].  Through `z324`, exact quotients leave only
+  one unbounded exact-`3920` tail, closed by two antipodal clean cells.  At
+  `z312`, `18,249=7,481+10,698+70`; retaining the inherited high-wall gate
+  (essential because unrestricted zero-high arithmetic passes `69/70`)
+  forces exactly one high label.  The `70` states become `80` finite
+  one-high/two-low cases.  Two cells separated by `d/2` in `78` cases and
+  `d/3` in two make every high ray's strict radius-`1/14` arcs disjoint.
+  Primary and independently reconstructed implementations agree.  Exact
+  common-status/Farkas replay then closes occupied heights `306,302,298` by
+  `137=17+120`, leaving no survivors.  The projected `k=3` cap is `297` and
+  the necessary-row ledger is `375,765`; height `297` is not closed.
+  Torsion source/output/semantic hashes begin `a46bd16b/75dd0876/95f9da4c`;
+  the independent hashes begin `7de24a50/8ba8bacc/4667f8f0`; descent hashes
+  begin `dee8b7aa/835edaf1/b589ac0d`.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py`, the isolated terminal referees,
   and the exact/projected plus forced-high descent packages -> matching
   `.out` files [THM-2941 PROVED NECESSARY BANDS + FINITE-EXACT CLOSURES +
@@ -248,39 +244,26 @@
   `97f242c4b5b774c830a8111df6c2e24a725fa1a77771d4937aaa62f96d4400a0` /
   `fddb52f665e6c974e3e74839bd377907e21936bdae083a7f79ad9cf1905a63b7`.
 - `lrc14_j7_k3_projected_scalar_atlas_thm2941.py`, the descending scalar
-  slices, their ray-status closures, and the `z324` antipodal sidecar ->
-  matching `.out` files
-- `lrc14_j7_k3_projected_scalar_atlas_thm2941.py`, the upper scalar slices,
-  and their ray-status closures -> matching `.out` files
+  slices, ray/status closures, `z324` antipodal sidecar, `z312` finite-low-pair
+  torsion closure plus independent referee, and the combined `z306/z302/z298`
+  descent -> matching `.out` files
   [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].  The
-  global `200..378` atlas has `6,060` rows and isolated upper spikes
-  `378:9, 364:25, 350:53, 336:8, 330:1, 328:9, 324:45, 312:80`.
-  Exact all-label quotients close
-  `z1=364` by `1,109=242+867`, `z1=350` by
-  `3,200=1,295+1,905`, `z1=336` by `109=71+38`, and `z1=330` by one
-  transparent status kill.  They close `z1=328` by `85=36+49`; at `z1=324`,
-  they reduce `2,346=702+1,643+1` to one H-drift tail, closed uniformly by a
-  two-cell antipodal phase certificate.  Hence the current proved projected
-  `k=3` cap is `312` and the old necessary ledger is `375,868`.
+  global `200..378` atlas has `6,060` rows.  Exact quotients close its upper
+  banks through `324`; the sole `z324` survivor is an unbounded
+  denominator-`3920` tail closed by an antipodal clean-cell pair.
 
-  The guarded `z1=312` endpoint package is **FINITE-EXACT but OPEN**: its 80
-  bodies give `18,249=7,481+10,698+70`, leaving 70 denominator states on four
-  bodies (`25+41+2+2`).  Every attained maximizing packet has exactly one
-  high-wall label.  The expected-spike and support-status bridge predicates
-  retain all `70/70`, so this package gives no further cap improvement.
-  Source/output/semantic SHA-256:
-  `d6a80c15c5c4d8ef2ea8be9fc886c40e70e3189123b5d0b3fce48765fa301977` /
-  `d03fc39ed1f5f64cd2be4e7e28f5cf23e8d7adc0c6a737abc6944bdb7672515f` /
-  `b6152f5a9f10115eb5d39ac402da0b960aad96d127d0d5fb5a640af35c81dd07`.
-
-  transparent status kill.  There are no survivors, so the current proved
-  projected `k=3` cap is `328` and the old necessary ledger is `375,922`.
-  global `200..378` body atlas has `6,060` rows and upper spikes
-  `378:9,364:25,350:53,336:8,330:1,328:9,324:45,312:80`.  Exact all-label
-  quotients close every displayed height through `328`; `z330` has one
-  status kill, while `z328` has `85=36+49` crude/status kills.  At `z324`,
-  `2,346=702+1,643+1`, and the sole state closes by a denominator-`3920`
-  antipodal clean-cell pair.  The current projected `k=3` cap is `312`.
+  At `z312`, the status frontier leaves `70` states on four bodies.  The
+  inherited high wall (essential because unrestricted zero-high arithmetic
+  passes `69/70`), finite low labels, and a `d/2` or `d/3` clean-cell
+  separation close all `80` resulting cases uniformly in primitive direction
+  and height.  The next three occupied banks close by `9=0+9`, `32=2+30`,
+  and `96=15+81` crude/status kills; all `120` status certificates are
+  independently rebuilt as exact rational Farkas contradictions.  Thus the
+  current cap is `297`, the old necessary ledger is `375,765`, and height
+  `297` remains open.  Torsion source/output/semantic hashes begin
+  `a46bd16b/75dd0876/95f9da4c`; independent hashes begin
+  `7de24a50/8ba8bacc/4667f8f0`; descent hashes begin
+  `dee8b7aa/835edaf1/b589ac0d`.
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;
   the `z336` source/output/semantic hashes are
   `6e991432a1ce5ec9c1cbe97199cb5fd647c5edc89bdcc60ce560382a70835fcf` /
