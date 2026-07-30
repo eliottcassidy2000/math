@@ -792,7 +792,9 @@ Thus `mu(P_(E,Z_(E,q)))>1/7` for all `3,003` bodies and every common level
 exact census through `q=30`, the analytic tail, and independent normal and
 optimized replays agree.  The hardened LF source/output hashes are
 `2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31` and
-`22c078474377f0b14297497271d16426b46d2017bc8d838e88b7f7e8ba83275b`.
+`22c078474377f0b14297497271d16426b46d2017bc8d838e88b7f7e8ba83275b`;
+the semantic hash is
+`c5898923940813859f7ce7401e227cdfb5c1d223b322974ceee76142b10f25fd`.
 Levels varying independently with `e`, other residue packets, and arbitrary
 `k=1` remain open; this diagonal extension removes no additional row from a
 finite ledger.
@@ -1151,7 +1153,7 @@ from the old `376,020` necessary ledger.
 
 A one-pass scalar atlas over every body and every `200<=z_1<=378` exposes
 the descending upper bank exactly.  It contains `6,060` scalar rows, with
-upper spikes
+successive occupied heights
 
 ```text
 z_1=378,364,350,336,330,328,324,312

@@ -40,8 +40,10 @@
   every `D`-fibre, so `S_D=Z/DZ`; all `96,235` nonseptimal rows are also
   checked exactly.  For a hard row `D=7q`, denominators split into
   transverse one-per-fibre sections and vertical two-level spikes
-  `Y=(q/d)(floor(d/7)+X)`, with `Pr(X=1)=(d mod 7)/7`.  Exact fractional
-  cover of every optional-bit event, combined with divisor-Möbius
+  `Y=(q/d)(floor(d/7)+X)` almost everywhere, with
+  `Pr(X=1)=(d mod 7)/7`; at strict seams this is a lawful pointwise upper
+  envelope.  Exact fractional cover of every optional-bit event, combined
+  with divisor-Möbius
   completion, reduces the five-drift ledger
   `951,545,890,235 -> 320,011,786,356 -> 200,389,247,292` occurrences and
   `27,163 -> 4,592 -> 4,414` rows.  This removes `78.94%` of the raw ledger
@@ -54,35 +56,63 @@
   `664d0df36d104d959279605c8ea8539d61ab595b155e5157fa7d0433f1b7944c` /
   `f711376bdfa0064f70d76e42505cf1eb89dadc4c66bcacd90d985b6641c2cd75` /
   `2eec9a97f02a7b8f8e36e50f747d53186ff5b84234a14fc3ac64818b54033675`.
-- `lrc14_j7_k3_projected_scalar_atlas_thm2941.py`,
-  `lrc14_j7_k3_z364_ray_status_closure_thm2941.py`, and the `z350`
-  scalar-slice/ray-status pair -> matching `.out` files
+- `lrc14_k2_d6_located_phase_closure_thm2928.py` -> matching `.out`
+  [THM-2928 SCOPED PROVED + FINITE-EXACT + VERIFIED].  In the `c=4`
+  five-drift quotient, a sole vertical denominator `6` with `N_4>0` would
+  force the two-aligned safe set into its high event.  Exact Bernoulli
+  overlap gives at most `1/14` for one aligned comb, equality for only one
+  multiplier, and at most `1/28` for every other; two distinct combs cover
+  at most `3/28<1/7` of the low set.  The family is uniformly empty.
+  Residual union removes `8,998,004` shapes and `248,154,771` occurrences,
+  leaving `26,899,164,786` shapes, `200,141,092,521` occurrences, and
+  `4,354` rows.  Source/output SHA-256:
+  `9f300459b273ad1825d3fe3e9274c6afe609f2d581e9df3d2be1780d347e541b` /
+  `187e4f0e48eb2c93bdeac083f09707739b86656f5e88f9e4cbdb6d5019fbd0f7`.
+- `lrc14_k3_four_drift_expected_spike_gf_thm2928.py` and literal audit ->
+  matching `.out` files [THM-2928 PROVED NECESSARY REDUCTION +
+  FINITE-EXACT + INDEPENDENTLY AUDITED].  For `D=7q`, if `c` masks are
+  transverse and `N_c` target fibres have load above `c`, compact/open
+  strictness plus Fubini and Markov force
+  `N_c=0` or `55N_c<13(4-c)q`.  With one vertical spike (`c=3`), the exact
+  superlevel law is
+  `N_3<=(q/d)(floor(d/7)+1_((d mod 7)>=5))`.
+  Intersecting separate support/status predicates leaves the hybrid ledger
+  `398,241,574` shapes, `2,548,901,482` occurrences, `1,904` rows, `1,823`
+  bodies, and `107` moduli.  Only `c=3` receives the exact one-spike screen;
+  this is not a sector closure or a physical-cover count.  Guarded
+  base/q7/primary/audit source hashes begin
+  `2fcd1fa7/3cc07195/05e365a6/a3a65ae7`; output hashes begin
+  `aa14b089/eff21ad8`.
+- `lrc14_j7_k3_projected_scalar_atlas_thm2941.py` and the exact
+  ray/status closures through `z1=328` -> matching `.out` files
   [THM-2941 PROVED NECESSARY ATLAS + FINITE-EXACT CLOSURES].  One exact
-  suffix pass for every `200<=z1<=378` finds upper scalar support only at
-  `(336,8),(350,53),(364,25),(378,9)`.  Exact attained ray maxima plus one
-  common four-needle Hunter-status table close all `25` `z1=364` rows
-  (`1,109=242+867` states) and all `53` `z1=350` rows
-  (`3,200=1,295+1,905` states).  Together with the earlier `378` closure,
-  the current projected `k=3` cap is `336`, with `375,931` rows left from
-  the old `376,020` necessary ledger.  Atlas source/output/semantic:
+  suffix pass for every `200<=z1<=378` has successive occupied heights
+  `378:9,364:25,350:53,336:8,330:1,328:9,324:45`.  Exact attained-ray
+  quotients close the first six heights through `328`; the last two closure
+  state splits are `z330:1=0+1` and `z328:85=36+49`.  THM-2928's general
+  expected-spike proof also closes `z330`.  The current projected `k=3` cap is
+  `324`, with `375,913` rows left from the old `376,020` ledger.  Atlas
+  source/output/semantic:
   `ddb2d19c02c4d70cfa74141265ceac585685932e85768baf4cb98aeb3e37935b` /
   `ce6807de6d6b7022c97839d0bf9fc8ba3b90e7b97bc5b0d4069e88563e232be6` /
   `46535b2b075e15244ec87101f44d74a8034b093244fd8559fe11b5b70425fda8`;
-  closure semantics `008294c3...710da` and `5a47df48...c1c3d8`.
-- `lrc14_j7_k2_scalar_band_2004_2142_thm2941.py` and
-  `lrc14_j7_k2_scalar_band_1992_2003_thm2941.py`, with the
-  `z2060/z2004/z1992` primary and independent ray-status referees ->
+  closure semantics at `z330/z328` are `2e2fbfa8...e927` and
+  `3b2ecca5...daea`.
+- `lrc14_j7_k2_scalar_band_*_thm2941.py`, with the isolated primary and
+  independent ray-status terminal referees ->
   matching `.out` files [THM-2941 PROVED NECESSARY BANDS + FINITE-EXACT +
-  INDEPENDENTLY AUDITED].  The first complete band has scalar rows only at
-  `2004,2060,2142`, all on `E=(1,4,8,10,12,14)`; the next has only `1992`.
-  The exact state counts at `2060/2004/1992` are `16/20/10`, all killed by
+  TERMINAL STATES INDEPENDENTLY AUDITED].  Complete bands isolate only
+  `2142,2060,2004,1992,1940,1932` above `1836`, all on
+  `E=(1,4,8,10,12,14)`, with state counts `1/16/20/10/1/1`; all close by
   crude overload or common K5 status.  Independent fixed-state referees
   expose the recurring transparent obstruction: `300` load-at-least-four
   fibres but only `240` exceptional incidences at `(D,q,M)=(5880,840,7)`.
-  Thus the current projected `k=2` cap is `1991`, with `2,239,849` rows
-  left from the old necessary ledger.  Band semantics are
-  `9b18e07b...e1eed` / `3c434cf6...82587e`; closure semantics are
-  `be28ec4c...8d147`, `d930793a...73b91`, and `1f217116...922ee`.
+  The complete band `1837..1931` is scalar-empty.  At `z1=1836`, an exact
+  slice finds five bodies: projected exact-suffix/status/residual tests
+  close three, and exact residue-ray maxima make the other two scalar-empty.
+  Thus the current projected `k=2` cap is `1835`, with `2,239,842` rows
+  left.  The global bands are primary exact censuses; the separate
+  independent audits cover isolated terminal states, not every band.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:
@@ -159,15 +189,6 @@
   `6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e` /
   `a48a7ca3c3142476deac9b81a48c7f6937bc3312220579520d2440f5c76133a9` /
   `1cbf6c8312428a6fdef27b2f388fd3ad028707586b2097fb4ccc06ab020da726`.
-  The exact ray quotient removes four of the nine inherited `z1=378`
-  bodies and leaves only `38` attained denominator states on the other
-  five; crude all-divisor capacity kills `18`, and the common four-needle
-  Hunter-status table kills `20`, leaving zero.  At that checkpoint this
-  lowered the projected `k=3` first-drift cap to `377`; the atlas/closures
-  above supersede it with `336`.  Source/output/semantic SHA-256:
-  `813d93ffe67cf3bdab06aa27f04680f49b057e387eabc8e713ba9cba35439353` /
-  `ba8e1c3dab6be12724598ebb84ae9a34de784913426d8335ec8fc6c34da4256c` /
-  `4cc1d3528844818857a3ed4c1c08ca03405cb3857e102c95acae5a95462c4669`.
 - `lrc14_j7_k2_frontier_ray_status_closure_thm2941.py` -> matching `.out`
   [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].
   At the unique old `k=2` frontier row `z1=2142`, the exact all-label ray
@@ -184,6 +205,8 @@
 - `lrc14_j7_k3_projected_scalar_atlas_thm2941.py`, the descending scalar
   slices, their ray-status closures, and the `z324` antipodal sidecar ->
   matching `.out` files
+- `lrc14_j7_k3_projected_scalar_atlas_thm2941.py`, the upper scalar slices,
+  and their ray-status closures -> matching `.out` files
   [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].  The
   global `200..378` atlas has `6,060` rows and isolated upper spikes
   `378:9, 364:25, 350:53, 336:8, 330:1, 328:9, 324:45, 312:80`.
@@ -205,6 +228,12 @@
   `d03fc39ed1f5f64cd2be4e7e28f5cf23e8d7adc0c6a737abc6944bdb7672515f` /
   `b6152f5a9f10115eb5d39ac402da0b960aad96d127d0d5fb5a640af35c81dd07`.
 
+  transparent status kill.  There are no survivors, so the current proved
+  projected `k=3` cap is `328` and the old necessary ledger is `375,922`.
+  `378:9,364:25,350:53,336:8,330:1,328:9,324:45`.  Exact all-label
+  quotients close every displayed height through `328`; `z330` has one
+  status kill, while `z328` has `85=36+49` crude/status kills.  The current
+  projected `k=3` cap is `324`.
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;
   the `z336` source/output/semantic hashes are
   `6e991432a1ce5ec9c1cbe97199cb5fd647c5edc89bdcc60ce560382a70835fcf` /
@@ -212,6 +241,7 @@
   `6ec3a326ec7fa66053150954b1f2a9d3910fbe044032de10c6ca57ff0e53d228`;
   repaired `z330` scalar/ray source-output pairs begin
   `5eb30248/c2bf51b8` and `255aa252/3c62328f`.
+  `z330/z328` closure semantics begin `2e2fbfa8/3b2ecca5`.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py` and the corresponding
   `z2060/z2004/z1992/z1940/z1932/z1824/z1812` ray-status closures,
   high-wall descent, combined exact descent, and independent referees ->
@@ -220,6 +250,11 @@
   body `(1,4,8,10,12,14)` at the displayed upper spikes through `z1=1932`.
   The all-label quotients close respectively `16,20,10,1,1` scalar states
   and leave zero.
+  `z2060/z2004/z1992/z1940/z1932` ray-status closures and independent
+  referees -> matching `.out` files [THM-2941 SCOPED PROVED + FINITE-EXACT
+  + TERMINAL STATES INDEPENDENTLY AUDITED].  Global all-body bands isolate only the hostile
+  body `(1,4,8,10,12,14)` at the displayed upper spikes.  The all-label
+  quotients close respectively `16,20,10,1,1` scalar states and leave zero.
   Four spikes use the transparent `(D,q,M)=(5880,840,7)` obstruction
   `300` load-at-least-four fibres versus `240` exceptional events; `z1=1932`
   strengthens this to `720>360` at threshold three.  The interval
@@ -266,8 +301,17 @@
   `c2536ac8100d3dce937c4ca51ca50c0b8a8ef72ce456e339064ae2869ddaab8c`
   for the combined exact descent.  All named normal and optimized
   transcripts match stored bytes.
+  `4b633061/115286b4`; all three normal and optimized transcripts match.
+  `1837..1931` is scalar-empty.  The five exact rows at `z1=1836` close by
+  projected status/residual or scalar residue-ray tests, giving cap `1835`.
+  The `z1932` primary/independent hashes begin
+  `77c848a2/251d60b3` and `80f113c3/ccf6efe6`; the three `z1836`
+  source/output/semantic triples begin
+  `99a81704/986a5353/5afe9b0c`,
+  `54ab8787/f159324c/77e6ebf9`, and
+  `4b633061/115286b4/18122f5e`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` and
-  `lrc14_j7_reflected_stalk_k1_mass_closure_thm2941.py` -> matching `.out`
+  the reflected-stalk/all-level mass closures -> matching `.out`
   files [THM-2941 PROVED STRUCTURAL LAW + SCOPED FINITE-EXACT CLOSURE].
   Every carrier component has the exact ray recurrence and antipodal
   amplitudes, but the reflected residue `L-e` is strictly positive on every
@@ -275,7 +319,9 @@
   cell location instead closes the canonical `k=1` family
   `Z_E={L-e:e in E}` on all `3,003` bodies: a first/second-component
   selector always has local six-drift union mass below `6/7`, with uniform
-  gap `4964583434/87692604615`.  The reflected source/output/semantic hashes
+  gap `4964583434/87692604615`.  Toothpick subdivision and diagonal
+  dilation extend this to every `Z_(E,q)={qL-e:e in E}`, `q>=1`; this is
+  still not arbitrary `k=1`.  The level-one source/output/semantic hashes
   are `5a30b719dcadbf235852804058dfb042260384ee5cf69c46257a9386061162f5` /
   `fa2890c1fad207000b779263d71dc4aaa9077dced05a5eea46fee65d7d304f88` /
   `8fc2b276e8899622d54964325adfa4c5f23259d0d34367f812b12dc4d72c2d6c`.
@@ -289,6 +335,10 @@
   from one.  The inherited cell has exactly `14` strict failures, all repaired
   by a movable body-safe cell; direct/reflected and merge/slab controls agree.
   Its source/output/semantic hashes begin `c015572e/a9af5b08/8c104172`.
+  transcripts match stored bytes.
+  `8fc2b276e8899622d54964325adfa4c5f23259d0d34367f812b12dc4d72c2d6c`;
+  all-level source/output/semantic hashes begin
+  `b6535017/22c07847/c5898923`.
 - `lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.py`, together
   with the scalar-wall and projected-suffix verifiers, -> matching `.out`
   files [THM-2941 PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY
@@ -303,6 +353,7 @@
   `1,836/330`.
   subsequent scalar-atlas/ray-status addenda improve the current `k=2/3`
   caps to `1,991/336`.
+  `1,835/324`.
   For `k=5`, exact prefix incidence kills all `42,912` high-excess and
   `194,073` subcritical drift pairs, minimum margin `1/378105`; THM-2928
   independently closes the same face by divisor/address masks.  With
