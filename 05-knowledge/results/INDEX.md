@@ -149,6 +149,21 @@
   `16bf56ef209f4c8b715f608db048d6e7166fd97756128c32c2b150746749ff92` /
   `5e2e6bd8586c78dca1104cd78d8c1d698a2b0c6cbb2e1e087c6563b7488cfc67` /
   `acc67c59ce2cbf9d84ad4f97942a35dd79db4fc2e93b34614bfe2ba1549fae70`.
+- `lrc14_j7_k2_z1736_exceptional_high_packet_closure_thm2941.py` ->
+  matching `.out` [THM-2941 SCOPED PROVED + FINITE-EXACT + VERIFIED].
+  The sole `z1=1736` forced-high row whose scalar maximum remains positive,
+  `E=(1,8,10,12,13,14)`, has positive exact cutoff
+  `4876247/30609706218`.  Periodic rays leave `501` literal labels, only
+  `13260` reaches the `13L/150` wall, and exact triple enumeration leaves
+  the unique packet `(1736,1836,2004,2340,13260)`.  Its first thirteen
+  projected cells give the hostile lower control zero, while the fourteenth
+  gives `14/17`, margin `849/1547` above `25/91`; direct full-carrier
+  projection independently gives mass one.  Thus this HIGH row is empty
+  uniformly over all distinct later nonaligned labels, with no horizon.
+  Source/output/semantic hashes are
+  `bf8ebd21949d7d82672a8010a9b7882219a42311475c00943180e3373bc8969b` /
+  `519e590ca18d04b1845e7dd278575870aba816a58b39c0a34465441fe0d52bbe` /
+  `2debf1b852cb393a0ed999eada1e2e1aac645848a59b8724459a6cb9132df441`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:
