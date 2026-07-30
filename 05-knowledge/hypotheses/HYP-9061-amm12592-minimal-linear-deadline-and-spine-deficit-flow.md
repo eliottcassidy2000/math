@@ -105,6 +105,24 @@ Sharper structure, elementary to check:
    gate opens (construction, `C* = 9049/6592`-ish) or closes (lower bound)
    at `gamma = 2457/6592` is the live question.
 
+## 2c. Working reading of the certificate (dual side; UNVERIFIED direction)
+
+Truncate the deficit identity `sum p^m q Delta_m + sum q^m p Delta'_m = 0`
+at total degree `A`: the shallow part re-expanded at level `A` has integer
+(after doubling) coefficients `C^(A)_O = sum_(z+o<=A) c_(z,o)
+binom(A-z-o, O-o)`, and the identity forces `C^(A)_O = -(level-A data of
+the deep part)`, whose magnitude is bounded by budgeted cone masses beyond
+level `A`. The mod-2 cone pairing (`lambda_(A,B) = binom(A-z-o, B-o)`,
+Pascal-harmonic, conserved by dyadic split-jumps) can force `|C^(A)_O| >=
+1/2` at cells where the parity count is odd. Infeasibility at slope
+`gamma` follows wherever forced-half beats the deep-mass exponential rate:
+a two-ray tropical comparison, certified at two rational biases -- the
+exact shape of (27). Under this reading (27) is a **lower-bound dual step
+and C* >= 1 + 2457/6592 = 9049/6592 ~ 1.3727** would be the certified
+consequence; the matching upper construction is then the open half.
+This direction assignment is a working hypothesis, not verified: the
+opposite (construction-gate) reading is not yet excluded.
+
 ## 3. Cheapest decisive tests
 
 1. Bounded depth (`gamma = 0`, i.e. `T(n) <= n + D`): (S) forces
