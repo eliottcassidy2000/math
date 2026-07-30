@@ -1,5 +1,5 @@
 LRC14 projected k=2 z1=2142 all-label ray/status closure
-uniform_ray_status_source_sha256=dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36
+uniform_ray_status_source_sha256=34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
 suffix_output_sha256=61e16aab8a368881c574047e576645e6b41837dc9f804f7a78d37230d843612b
 scope=unique inherited projected k=2 frontier body row;four distinct later nonaligned labels;no finite horizon
 body=(1, 4, 8, 10, 12, 14);h=1049/2940;r=34;L=11760;first=2142;first_d=280;high_floor=1020;lower=1049/267540;first_delta=821/1049580
@@ -11,8 +11,8 @@ crude_all_q_kills=0;crude_all_q_survivors=1
 K5_spanning_trees=125;pair_overlap_exhaustive_controls=946;status_cells=32;equality_rows=6
 common_table_control=240 threshold-four fibres:FEASIBLE;actual 300 threshold-four fibres:EXACT_FARKAS_INFEASIBLE
 common_K5_status_kills=1;common_K5_status_survivors=0
-decisive_witness=D=5880;q=840;M=7;marginals=(0, 120, 120, 0, 0);capacity_values=(3, 4, 5, 6, 7);histogram=((0, 120), (3, 420), (4, 112), (5, 168), (6, 20));farkas=((4, 5, 6), (Fraction(1, 60), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60), Fraction(1, 60)))
+decisive_witness=D=5880;q=840;M=7;marginals=(0, 120, 120, 0, 0);capacity_values=(3, 4, 5, 6, 7);histogram=((0, 120), (3, 420), (4, 112), (5, 168), (6, 20));exact_farkas=VERIFIED
 transparent_y4_obstruction=heavy_fibres:300;available_exception_events:240
 conclusion=unique projected k=2 z1=2142 frontier row is empty
-semantic_sha256=fddb52f665e6c974e3e74839bd377907e21936bdae083a7f79ad9cf1905a63b7
+semantic_sha256=c7f8ca7db80c0857a312d1988437d5a938914dd3ca66d054e5e04fe9a1822583
 all_exact_controls=PASS

@@ -1124,14 +1124,19 @@ and the common four-needle Hunter-status test removes all remaining
 finite label horizon.  The source/output and semantic SHA-256 values are
 
 ```text
-dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36
-5abccb7ef700cec83b9989e8abcd83bc24f51c0a35f7f9054522da0dd62109fe
-bcfa48e8b59080ced069a794d02cc04f62db8137f94b163b2fe4c98c3b3f77fa.
+34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
+bd40d2bb59946f599026709ed413a4bcb4a9fae5f768bf9a6facc77cbb18df11
+c3be93a08ba7315136834ccb8dc15ce68421d3b4f102884ac6383bb0768b3948.
 ```
 
 Ordinary and optimized transcripts are byte-identical.  Consequently this
 separate uniform closure leaves `376,018` rows in the old necessary ledger;
 it does not by itself change the current first-drift cap.
+
+Following `MISTAKE-331`, every solver-returned Farkas vector is still checked
+over the exact rationals, but the transcript and semantic digest bind only the
+deterministic infeasible instances and first witness.  They do not bind the
+noncanonical dual-basis representative selected by the LP search.
 
 At the old `k=3` cap, the frontier extraction supplied nine bodies whose
 recorded maximal surviving first drift was `z_1=378`.  This was not yet a
@@ -1174,9 +1179,9 @@ Ordinary and optimized transcripts are byte-identical.  The
 source/output and semantic hashes are
 
 ```text
-6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e
-a48a7ca3c3142476deac9b81a48c7f6937bc3312220579520d2440f5c76133a9
-1cbf6c8312428a6fdef27b2f388fd3ad028707586b2097fb4ccc06ab020da726.
+2ef5e0639354c38b13e17e41f91acb4143c7f60973295b0e2dd0f57eb8f38db2
+51afa1571a99d47b82ec0adbd25bdefb37b2c2d1f7d8ffcb50268208163f4b5c
+c0108ee9009ace7ae9270bae2d32aaf9b0de62b6ad05ba859f4c86e25597e0c8.
 ```
 
 Together with the distinct `z_1=250` closure, this leaves `376,009` rows
@@ -1368,9 +1373,9 @@ Independent ray, carrier, K5-tree, status, and Farkas reconstructions agree.
 The source/output and semantic hashes are
 
 ```text
-b9b1cbd3e38a285572f8b35e7220149f6372d3ce4941923aa586101461bee7e4
-97f242c4b5b774c830a8111df6c2e24a725fa1a77771d4937aaa62f96d4400a0
-fddb52f665e6c974e3e74839bd377907e21936bdae083a7f79ad9cf1905a63b7.
+bc4338935603b8971a99905033753458c880845213fddb5c4c19d8d53d6bc95b
+b90042cbce51580280d94c84f2b798f00928d92a0dc70d2140dbe55ec3228ff7
+c7f8ca7db80c0857a312d1988437d5a938914dd3ca66d054e5e04fe9a1822583.
 ```
 
 Global scalar bands then make the `k=2` descent exact rather than

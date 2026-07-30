@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-331 (2026-07-30, THM-2941 ray/status replay) -- a semantic digest bound a noncanonical LP dual basis
+
+- **What was done:** the three THM-2941 residue-ray/status companions verified
+  every rational Farkas certificate exactly, but then hashed the literal
+  certificate representatives returned after a floating HiGHS search.  The
+  theorem consequently advertised byte-identical replay through a quantity
+  that was not mathematically canonical.
+- **Minimal witness / first failed implication:** an unchanged replay of the
+  `z_1=250` companion preserved all `35,990 -> 1,965 -> 1,266 -> 0` counts,
+  the decisive-modulus histogram, and the displayed first exact witness, but
+  HiGHS selected another valid dual basis.  The raw certificate digest changed
+  from `f017d330...046611` to `bcb55c09...324bfc`, so the frozen semantic hash
+  failed even though every returned certificate passed the exact inequalities.
+- **Exact repair / strongest survivor:** exact verification of every returned
+  certificate remains load-bearing.  Replay hashes now bind the deterministic
+  infeasible instances, counts, and first witness, never the solver-selected
+  dual representative.  The same narrow repair is applied to the `z_1=378`
+  and `k=2` companions because they shared the latent mechanism; none of the
+  ray, capacity, Hunter, Farkas, cap, or ledger conclusions changes.
+- **Rule:** a proof search may use a noncanonical optimizer witness, but a
+  reproducibility digest must bind canonical problem data or a separately
+  canonicalized certificate, not an arbitrary valid basis.
+
 ## MISTAKE-330 (2026-07-30, chained k=2 frontier verifiers) -- descendant evidence pinned superseded atlas bytes
 
 - **What was done:** the standalone `z_1=1824` verifier was produced against
@@ -34,7 +57,6 @@ Format per entry:
   hash graph in topological order and replay every pinned verifier at the
   fetched tip.  An unchanged mathematical row does not make obsolete evidence
   pins current.
-
 ## MISTAKE-329 (2026-07-29, first mixed Lorenz/activity sidecar) -- an ambient half-cap was substituted for the exact reflected parity fibre
 
 - **What was done:** the first four-aligned/three-drift Lorenz/activity

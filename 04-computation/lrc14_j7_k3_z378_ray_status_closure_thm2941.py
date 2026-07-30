@@ -50,10 +50,10 @@ OUTPUT_PATH = (
     / "lrc14_j7_k3_z378_ray_status_closure_thm2941.out"
 )
 EXPECTED_RAY_STATUS_SHA256 = (
-    "dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36"
+    "34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "1cbf6c8312428a6fdef27b2f388fd3ad028707586b2097fb4ccc06ab020da726"
+    "c0108ee9009ace7ae9270bae2d32aaf9b0de62b6ad05ba859f4c86e25597e0c8"
 )
 
 FIRST = 378
@@ -414,13 +414,13 @@ def main():
         and suffix.PROJECTED_RATIOS[3] == F(13, 132),
         "projected k=3 constants changed",
     )
-    pair_rows, control_marginals, control_caps, control_certificate = (
+    pair_rows, control_marginals, control_caps, control_instances = (
         local.controls()
     )
     total_states = total_crude = total_status = total_survivors = 0
     surviving_bodies = []
     records = []
-    certificate_digest = sha256()
+    verified_instance_digest = sha256()
     for body in ORIGINAL_BODIES:
         stream = Stream(body)
         trials, states, checks, signs = ray_quotient_states(stream)
@@ -462,8 +462,14 @@ def main():
         status_histogram = Counter(
             witness[1] for witness in status.values()
         )
-        for ds, witness in sorted(status.items()):
-            certificate_digest.update(
+        status_instances = tuple(
+            (ds, witness[:-1]) for ds, witness in sorted(status.items())
+        )
+        for ds, witness in status_instances:
+            # Each solver-returned certificate was verified exactly in
+            # common_status_feasible.  Hash the deterministic infeasible
+            # instance rather than a noncanonical dual-basis representative.
+            verified_instance_digest.update(
                 f"{body}|{ds}|{witness}\n".encode()
             )
         records.append(
@@ -480,7 +486,7 @@ def main():
                 trials,
                 tuple(sorted(states.items())),
                 tuple(sorted(crude.items())),
-                tuple(sorted(status.items())),
+                status_instances,
                 tuple(survivors),
                 tuple(sorted(status_histogram.items())),
                 maximum,
@@ -510,8 +516,8 @@ def main():
         pair_rows,
         control_marginals,
         control_caps,
-        control_certificate,
-        certificate_digest.hexdigest(),
+        control_instances,
+        verified_instance_digest.hexdigest(),
     )
     semantic_hash = sha256(repr(semantic_payload).encode()).hexdigest()
     if EXPECTED_SEMANTIC_SHA256 is not None:
@@ -592,7 +598,10 @@ def main():
                 f"totals=states:{total_states};crude_kills:{total_crude};"
                 f"status_kills:{total_status};survivors:{total_survivors}"
             ),
-            f"farkas_certificate_sha256={certificate_digest.hexdigest()}",
+            (
+                "verified_farkas_instance_sha256="
+                f"{verified_instance_digest.hexdigest()}"
+            ),
             "conclusion=all ten body candidates checked;"
             "all nine extracted z1=378 rows are empty",
             f"semantic_sha256={semantic_hash}",

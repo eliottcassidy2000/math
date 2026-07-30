@@ -40,13 +40,13 @@ OUTPUT_PATH = (
     / "lrc14_j7_k2_frontier_ray_status_closure_thm2941.out"
 )
 EXPECTED_UNIFORM_SHA256 = (
-    "dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36"
+    "34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46"
 )
 EXPECTED_SUFFIX_OUTPUT_SHA256 = (
     "61e16aab8a368881c574047e576645e6b41837dc9f804f7a78d37230d843612b"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "fddb52f665e6c974e3e74839bd377907e21936bdae083a7f79ad9cf1905a63b7"
+    "c7f8ca7db80c0857a312d1988437d5a938914dd3ca66d054e5e04fe9a1822583"
 )
 EXPECTED_FRONTIER_ROW = (
     "    FRONTIER;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;"
@@ -68,17 +68,12 @@ EXPECTED_SCALAR = (
         (2142, 2172, 2396, 2534, 3180),
     ),
 )
-EXPECTED_STATUS_WITNESS = (
+EXPECTED_STATUS_INSTANCE = (
     840,
     7,
     (0, 120, 120, 0, 0),
     (3, 4, 5, 6, 7),
     ((0, 120), (3, 420), (4, 112), (5, 168), (6, 20)),
-    (
-        (4, 5, 6),
-        (F(1, 60), F(0), F(0)),
-        (F(0), F(1, 60), F(1, 60), F(1, 60), F(1, 60), F(1, 60)),
-    ),
 )
 
 
@@ -276,7 +271,7 @@ def main():
         EXPECTED_FRONTIER_ROW in SUFFIX_OUTPUT.read_text(),
         "inherited unique projected k=2 frontier row changed",
     )
-    pair_rows, control_marginals, control_caps, control_certificate = (
+    pair_rows, control_marginals, control_caps, control_instances = (
         U.controls()
     )
     require(len(TREES5) == 125, "K5 spanning-tree count changed")
@@ -458,14 +453,14 @@ def main():
     require(
         len(status_kills) == 1
         and not status_survivors
-        and status_kills[0][3] == EXPECTED_STATUS_WITNESS,
+        and status_kills[0][3][:-1] == EXPECTED_STATUS_INSTANCE,
         ("K5 common-status closure changed", status_kills, status_survivors),
     )
 
     # A transparent positive/hostile control at the decisive quotient.
     ds, upper, labels, witness = status_kills[0]
     D = lcm(*ds)
-    q, M, marginals, capacity_values, histogram, certificate = witness
+    q, M, marginals, capacity_values, histogram, _certificate = witness
     control_marginals5, control_capacities5 = hunter_status_data5(D, ds, q)
     require(
         (D, q, M, control_marginals5)
@@ -514,13 +509,16 @@ def main():
         tuple(scalar),
         tuple(crude_kills),
         tuple(crude_survivors),
-        tuple(status_kills),
+        tuple(
+            (ds, state_upper, state_labels, state_witness[:-1])
+            for ds, state_upper, state_labels, state_witness in status_kills
+        ),
         tuple(status_survivors),
         len(TREES5),
         pair_rows,
         control_marginals,
         control_caps,
-        control_certificate,
+        control_instances,
         heavy_four,
     )
     semantic_hash = sha256(repr(semantic_payload).encode()).hexdigest()
@@ -577,7 +575,7 @@ def main():
         (
             f"decisive_witness=D={D};q={q};M={M};marginals={marginals};"
             f"capacity_values={capacity_values};histogram={histogram};"
-            f"farkas={certificate}"
+            "exact_farkas=VERIFIED"
         ),
         (
             f"transparent_y4_obstruction=heavy_fibres:{heavy_four};"

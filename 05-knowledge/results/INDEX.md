@@ -211,11 +211,13 @@
   to `1,965` ray-scalar states; crude all-divisor capacity kills `699`, and
   a single common 16-status table with CRT pair floors and Hunter's maximum
   spanning-tree invoice kills the remaining `1,266` by exact rational
-  Farkas certificates.  Ordinary and optimized transcripts byte-match.
+  Farkas certificates.  Following MISTAKE-331, every dual is verified
+  exactly while semantic hashes bind the deterministic infeasible instances,
+  not the noncanonical solver basis.  Ordinary and optimized transcripts byte-match.
   Source/output/semantic SHA-256:
-  `dfa4788297b8c31fc9b5dce1afadf29d20b267cb4159fa95dadb9346b1980b36` /
-  `5abccb7ef700cec83b9989e8abcd83bc24f51c0a35f7f9054522da0dd62109fe` /
-  `bcfa48e8b59080ced069a794d02cc04f62db8137f94b163b2fe4c98c3b3f77fa`.
+  `34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46` /
+  `bd40d2bb59946f599026709ed413a4bcb4a9fae5f768bf9a6facc77cbb18df11` /
+  `c3be93a08ba7315136834ccb8dc15ce68421d3b4f102884ac6383bb0768b3948`.
 - `lrc14_j7_k3_z378_ray_status_closure_thm2941.py` -> matching `.out`
   [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].
   The repaired referee checks the nine extracted `z1=378` rows and also
@@ -224,11 +226,13 @@
   exact ray quotient removes four of those nine rows and leaves only
   `38` attained denominator states on the other five; crude all-divisor
   capacity kills `18`, and the common four-needle Hunter-status table kills
-  `20`, leaving zero.  This lowers the projected `k=3` first-drift cap to
-  `377`.  Source/output/semantic SHA-256:
-  `6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e` /
-  `a48a7ca3c3142476deac9b81a48c7f6937bc3312220579520d2440f5c76133a9` /
-  `1cbf6c8312428a6fdef27b2f388fd3ad028707586b2097fb4ccc06ab020da726`.
+  `20`, leaving zero.  Every returned Farkas vector is exact-verified, while
+  the transcript binds the canonical infeasible instances rather than the
+  solver's noncanonical dual basis.  This lowers the projected `k=3`
+  first-drift cap to `377`.  Source/output/semantic SHA-256:
+  `2ef5e0639354c38b13e17e41f91acb4143c7f60973295b0e2dd0f57eb8f38db2` /
+  `51afa1571a99d47b82ec0adbd25bdefb37b2c2d1f7d8ffcb50268208163f4b5c` /
+  `c0108ee9009ace7ae9270bae2d32aaf9b0de62b6ad05ba859f4c86e25597e0c8`.
 - `lrc14_j7_k2_frontier_ray_status_closure_thm2941.py` -> matching `.out`
   [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].
   At the unique old `k=2` frontier row `z1=2142`, the exact all-label ray
@@ -386,6 +390,9 @@
   `8fc2b276e8899622d54964325adfa4c5f23259d0d34367f812b12dc4d72c2d6c`;
   all-level source/output/semantic hashes begin
   `b6535017/22c07847/c5898923`.
+  `bc4338935603b8971a99905033753458c880845213fddb5c4c19d8d53d6bc95b` /
+  `b90042cbce51580280d94c84f2b798f00928d92a0dc70d2140dbe55ec3228ff7` /
+  `c7f8ca7db80c0857a312d1988437d5a938914dd3ca66d054e5e04fe9a1822583`.
 - `lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.py`, together
   with the scalar-wall and projected-suffix verifiers, -> matching `.out`
   files [THM-2941 PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY

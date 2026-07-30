@@ -15,8 +15,8 @@ ray_excess_kills=34025;ray_excess_survivors=1965;ray_excess_survivor_sha256=bd27
 crude_all_q_kills=699;crude_all_q_survivors=1266
 common_hunter_status_kills=1266;common_hunter_status_survivors=0
 decisive_inner_M_histogram={3: 44, 4: 128, 5: 743, 6: 59, 7: 292}
-first_kill=ds(2, 168, 420, 1176);D=5880;q=1176;M=5;marginals=(588, 168, 840, 168);capacities=(0, 1, 5);target_histogram=((0, 168), (1, 78), (2, 316), (3, 498), (4, 116));farkas=((1, 2, 3, 4), (Fraction(0, 1), Fraction(1, 6), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 6), Fraction(1, 6), Fraction(0, 1), Fraction(1, 6)))
-farkas_certificate_sha256=f017d330dbe1651db49f426a3457a1d1551a9d2247dfa5028e69d9c33e046611
+first_kill=ds(2, 168, 420, 1176);D=5880;q=1176;M=5;marginals=(588, 168, 840, 168);capacities=(0, 1, 5);target_histogram=((0, 168), (1, 78), (2, 316), (3, 498), (4, 116));exact_farkas=VERIFIED
+verified_farkas_instance_sha256=38f794addc17911943975566f55b86442d0386d86e58ea9f5f1cc2bd97049fd2
 conclusion=uniform projected z1=250 row is empty
-semantic_sha256=bcfa48e8b59080ced069a794d02cc04f62db8137f94b163b2fe4c98c3b3f77fa
+semantic_sha256=c3be93a08ba7315136834ccb8dc15ce68421d3b4f102884ac6383bb0768b3948
 all_exact_controls=PASS

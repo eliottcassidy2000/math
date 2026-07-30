@@ -67,7 +67,7 @@ EXPECTED_FIBRE_SHA256 = (
     "42dc165781148c702dfcd3c6535f4d02aee516af60b5ddf602a19cb1d87695e4"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "bcfa48e8b59080ced069a794d02cc04f62db8137f94b163b2fe4c98c3b3f77fa"
+    "c3be93a08ba7315136834ccb8dc15ce68421d3b4f102884ac6383bb0768b3948"
 )
 
 BODY = (1, 4, 8, 10, 12, 14)
@@ -357,28 +357,38 @@ def controls():
         (4, 4, 28, 28),
         2,
     )
+    feasible_histogram = ((9, 2),)
     feasible, primal = common_status_feasible(
         2,
         marginals,
         capacities,
-        ((9, 2),),
+        feasible_histogram,
     )
     require(feasible and primal is not None, "coverable status control rejected")
+    hostile_histogram = ((8, 1), (14, 1))
     hostile, certificate = common_status_feasible(
         2,
         marginals,
         capacities,
-        ((8, 1), (14, 1)),
+        hostile_histogram,
     )
     require(
         not hostile and certificate is not None,
         "incompatible-threshold control survived",
     )
-    return pair_rows, marginals, capacities, certificate
+    # The alpha/z dual representative is noncanonical.  Return only the
+    # deterministic control instances and their active threshold set after
+    # exact certificate verification.
+    control_instances = (
+        feasible_histogram,
+        hostile_histogram,
+        certificate[0],
+    )
+    return pair_rows, marginals, capacities, control_instances
 
 
 def main():
-    pair_rows, control_marginals, control_caps, control_certificate = controls()
+    pair_rows, control_marginals, control_caps, control_instances = controls()
     carrier = suffix.A.carrier_for(BODY)
     h = F(
         sum(right - left for left, right in carrier),
@@ -551,7 +561,7 @@ def main():
     status_kills = []
     status_survivors = []
     kills_by_M = Counter()
-    certificate_digest = sha256()
+    verified_instance_digest = sha256()
     for ds in crude_survivors:
         D = lcm(*ds)
         arcs = arcs_for(D)
@@ -582,7 +592,13 @@ def main():
         else:
             status_kills.append((ds, D, witness))
             kills_by_M[witness[1]] += 1
-            certificate_digest.update(f"{ds}|{D}|{witness}\n".encode())
+            # The exact certificate has already been verified above.  HiGHS
+            # may return a different valid dual basis on another replay, so
+            # freeze the deterministic infeasible instance, not the chosen
+            # certificate representative.
+            verified_instance_digest.update(
+                f"{ds}|{D}|{witness[:-1]}\n".encode()
+            )
     require(
         len(status_kills) == 1266 and not status_survivors,
         ("status closure changed", len(status_kills), status_survivors),
@@ -606,12 +622,16 @@ def main():
         tuple(sorted(kills_by_M.items())),
         ray_digest,
         excess_digest.hexdigest(),
-        certificate_digest.hexdigest(),
-        status_kills[0],
+        verified_instance_digest.hexdigest(),
+        (
+            status_kills[0][0],
+            status_kills[0][1],
+            status_kills[0][2][:-1],
+        ),
         pair_rows,
         control_marginals,
         control_caps,
-        control_certificate,
+        control_instances,
     )
     semantic_hash = sha256(repr(semantic_payload).encode()).hexdigest()
     if EXPECTED_SEMANTIC_SHA256 is not None:
@@ -621,7 +641,7 @@ def main():
         )
 
     first_shape, first_D, first_witness = status_kills[0]
-    q, M, marginals, capacities, histogram, certificate = first_witness
+    q, M, marginals, capacities, histogram, _certificate = first_witness
     lines = [
         "LRC14 k=3 z1=250 uniform ray/status closure",
         f"suffix_source_sha256={file_sha256(SUFFIX_PATH)}",
@@ -653,8 +673,11 @@ def main():
         f"decisive_inner_M_histogram={dict(sorted(kills_by_M.items()))}",
         f"first_kill=ds{first_shape};D={first_D};q={q};M={M};"
         f"marginals={marginals};capacities={capacities};"
-        f"target_histogram={histogram};farkas={certificate}",
-        f"farkas_certificate_sha256={certificate_digest.hexdigest()}",
+        f"target_histogram={histogram};exact_farkas=VERIFIED",
+        (
+            "verified_farkas_instance_sha256="
+            f"{verified_instance_digest.hexdigest()}"
+        ),
         "conclusion=uniform projected z1=250 row is empty",
         f"semantic_sha256={semantic_hash}",
         "all_exact_controls=PASS",
