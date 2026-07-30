@@ -38,7 +38,7 @@ DEFAULT_OUTPUT = (
     ROOT / "05-knowledge" / "results" / "lrc14_j7_k3_z350_ray_status_closure_thm2941.out"
 )
 EXPECTED_RAY_ENGINE_SHA256 = (
-    "813d93ffe67cf3bdab06aa27f04680f49b057e387eabc8e713ba9cba35439353"
+    "6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e"
 )
 EXPECTED_SCALAR_SHA256 = (
     "5aaa5a70e71c4408bae13e2bd3fc1dffb7f6b271fd59cc8feb2ef4aea37205cf"

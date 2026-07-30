@@ -1,5 +1,5 @@
 LRC14 projected k=3 z1=350 all-label ray/status closure
-ray_engine_sha256=813d93ffe67cf3bdab06aa27f04680f49b057e387eabc8e713ba9cba35439353
+ray_engine_sha256=6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e
 scalar_source_sha256=5aaa5a70e71c4408bae13e2bd3fc1dffb7f6b271fd59cc8feb2ef4aea37205cf
 scalar_output_sha256=ad00a09b68620d495b991cd0662863407808d794cfcf4ed22917bcb1b790affa
 scope=53 exact scalar candidate bodies at z1=350;three distinct later nonaligned labels;no finite horizon
