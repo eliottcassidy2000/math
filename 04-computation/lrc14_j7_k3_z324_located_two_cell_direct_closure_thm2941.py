@@ -55,10 +55,10 @@ DEFAULT_OUTPUT = (
     "lrc14_j7_k3_z324_located_two_cell_direct_closure_thm2941.out"
 )
 EXPECTED_FRONTIER_SHA256 = (
-    "7eaaf551d2bd4ae386e2db4452edac7d30c25f7fc67b71967e48454d688bf78e"
+    "23211013829ab4674b958116a21f8bb1c74824c3fddc8992312b7e0bd1c26ff4"
 )
 EXPECTED_FRONTIER_OUTPUT_SHA256 = (
-    "db3c5c68c4aa2f61584ef91dd2171901888270edbf17e860d40f16a64d3a9242"
+    "dde29654a2e3a75191925a109687b5454bcd78a57091dedc691095fff5dc12dd"
 )
 EXPECTED_CARRIER_SHA256 = (
     "5d25a955fe184d6c1a3d8b632b4bbf901dc996ee46ad67c5748836fcc7134404"
@@ -90,7 +90,7 @@ def require(condition, message):
 
 
 def file_sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def load_module(name, path):
