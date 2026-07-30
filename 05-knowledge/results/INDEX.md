@@ -116,8 +116,8 @@
   There are no survivors, so the current projected `k=3` cap is `330`.
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;
   the `z336` source/output/semantic hashes are
-  `2c7eb840659e1215ff3b779f31f6ab604e07a088d14a2a68b714dd73d5c9a59b` /
-  `28b6e7435bf3efdbe55d3c21fe67b869f18f4c0fcedc49a786a972aee8120733` /
+  `6e991432a1ce5ec9c1cbe97199cb5fd647c5edc89bdcc60ce560382a70835fcf` /
+  `e257da724128208a9c80fc5f3e8f0cd4151b2073d3a8afa4814ca1e274f168ac` /
   `6ec3a326ec7fa66053150954b1f2a9d3910fbe044032de10c6ca57ff0e53d228`.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py` and the corresponding
   `z2060/z2004/z1992/z1940/z1932` ray-status closures and independent
