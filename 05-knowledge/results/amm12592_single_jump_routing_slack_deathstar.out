@@ -1,0 +1,11 @@
+l=   2  minimal_conservative_D=0
+l=   4  minimal_conservative_D=4
+l=   8  minimal_conservative_D=8
+l=  16  minimal_conservative_D=16
+l=  32  minimal_conservative_D=32
+l=  64  minimal_conservative_D=64
+l= 128  minimal_conservative_D=128
+increments: [4, 4, 8, 16, 32, 64]
+lemma=single_jump_corner_routing_at_gamma_half_needs_growing_D
+scope=does_not_bound_multi_hop_routings
+status=VERIFIED-EXACT
