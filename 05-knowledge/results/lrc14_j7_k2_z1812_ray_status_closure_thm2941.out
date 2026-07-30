@@ -1,0 +1,18 @@
+LRC14 projected k=2 z1=1812 exact ray/status closure
+z1824_parent_source_sha256=6d825a99d57c8febedfe212fd4076495204ebefe71e3cb47e0d86cb38de238ab
+z1824_parent_output_sha256=06869b6c718e9f63799904bb5e1fb19c88e8e356f9272e10d3eb14175ac3cebd
+scalar_band_source_sha256=058c43d67d0bb110993ec687877edba4f5a7ad472a81455b0a5276b20db7680d
+scalar_band_output_sha256=76f08dc5b70c98dd7c8fa958f5598f5c50e7cb1df26d0be10531ba8185796952
+scope=unique global scalar row at z1=1812;four later distinct nonaligned labels;no finite label horizon
+E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;first_delta=377/1035860;first_d=980;projected_wall=1020
+ray_law=(z+L)delta(z+L)=zdelta(z);ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;denominators=59;trials=557845
+scalar_states=11;crude_all_divisor_kills=4;common_K5_status_kills=7;survivors=0
+crude_witness_census=(((420, 7, 6, 5), 4),)
+status_modulus_census=(((840, 7), 7),)
+exact_Farkas_certificates=7;minimum_dual_gap=1/1;minimum_pattern_slack=0/1
+stage_sha256=('3e0859bbe77c95232a3d1096176fe7e1f0ebfd6ddd95f2ded98f1258278ba5ce', '8dcd5e390f85ab0d08979b4b35a80cc354c3c7ebe318d5275ac048a4fa03df93', 'cb7ff868ba357f68b21009f640ac5dd4eaaedc92c9210e9b3964c91d8ce3bce0', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d')
+conclusion=the unique projected k=2 z1=1812 row is empty uniformly over later nonaligned labels
+consequence=the proved projected k=2 first-drift cap is z1<=1810
+profile_sha256=e0b8768bc9d0749634712f1b92def48652271f633efbcad573923cef354b4b3a
+semantic_sha256=251514d6d7f8bea9d993b0140bbdea454fa7b649fa18ee085a7c85cf37635b48
+all_exact_controls=PASS
