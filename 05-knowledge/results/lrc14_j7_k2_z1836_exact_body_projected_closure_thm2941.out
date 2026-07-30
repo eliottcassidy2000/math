@@ -1,7 +1,7 @@
 LRC14 projected k=2 z1=1836 exact-body projected closure
 projected_residual_source_sha256=76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662
-ray_status_source_sha256=77c848a2b18b6fd0f60b31bd1a2b9c9972793e3fa1fe3838633b46211a64d037
-scalar_slice_output_sha256=986a5353edf40c9c44bcafd98f2f99b1207709146db3e140461785226e0bc7b5
+ray_status_source_sha256=0db812e766eb25ffeed24e7f242edea9bff330514f47b1a0fb459f89cc9c8ead
+scalar_slice_output_sha256=fdbeee8d14057edc7b6d1a5a24c660899846aef5eb2a7c6a3004367caf3aa73b
 scope=three L=11760 exact-suffix bodies;all later labels;no finite label horizon
 ray_law=(z+L)delta(z+L)=zdelta(z);scalar slack gives a positive per-state ray cutoff
 projected_identity=P_(E,Z)=phi_L(C_E minus union_z D_z);two-aligned open-union cap=25/91
@@ -13,5 +13,5 @@ BODY;E=2,4,8,10,12,14;h=281/735;r=36;L=11760;lower=281/66885;first=1836;first_de
 independent_control=direct interval subtraction/projection agrees with full cell De Morgan identity
 conclusion=the three exact-suffix projected k=2 z1=1836 rows are empty uniformly
 profile_sha256=22a873a7b876216b5aebaf9bbb4a88772519a657e10e32a3ca14ed803bac016a
-semantic_sha256=77e6ebf95078b72caccad5537a22db847c59973eaf9299e80046fe254cab57ab
+semantic_sha256=90a2ddda635d89d0173d94eaadc1a9db6d0dc3baf2c7223190f9141cf0898dfa
 all_exact_controls=PASS
