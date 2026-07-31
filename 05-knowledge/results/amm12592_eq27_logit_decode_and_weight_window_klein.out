@@ -1,0 +1,79 @@
+==========================================================================
+1. DECODE: the two logs are LOGITS of two biases
+==========================================================================
+  t = p - q = 2p - 1  =>  (1+t)/(1-t) = p/q  (the odds).
+  p_A = 1285/2181   q_A = 896/2181   odds p_A/q_A = 1285/896   matches 1285/896: True
+  p_B = 8847357/11821757   q_B = 2974400/11821757   odds p_B/q_B = 8847357/2974400   matches 8847357/2974400: True
+  => eq(27) IS   (2457/6592)*logit(p_B) - logit(p_A) > 1/25,   logit(p) = log(p/q).
+
+==========================================================================
+2. EXACT RE-CERTIFICATION of the claimed slack
+==========================================================================
+  computed = 391926968594914200867482400554891567498742649630277/82738859282193417287303438726081463937219800938169600
+  claimed  = 391926968594914200867482400554891567498742649630277/82738859282193417287303438726081463937219800938169600
+  BYTE-EXACT MATCH: True   (> 0: True, = 0.00473691530189204)
+  sandwich orientation: minus term uses UPPER(t_A), plus term uses LOWER(t_B) -- sound direction.
+
+==========================================================================
+3. THE WEIGHT IS NOT PINNED: the admissible set is a half-line
+==========================================================================
+  r_A = logit(p_A) = 0.360573584354389701926576054337
+  r_B = logit(p_B) = 1.09007643236397889963867871664
+  alpha_min = (r_A + 1/25)/r_B = 0.36747293351319543796856057087569088913584292808398
+  admissible weights = { alpha : alpha > alpha_min }.  Exact tests:
+    alpha = 2457/6592   = 0.37272451  certified: True   (half-line predicts True )  margin +4.737e-03
+    alpha = 41/110      = 0.37272727  certified: True   (half-line predicts True )  margin +4.740e-03
+    alpha = 3/8         = 0.37500000  certified: True   (half-line predicts True )  margin +7.211e-03
+    alpha = 2/5         = 0.40000000  certified: True   (half-line predicts True )  margin +3.440e-02
+    alpha = 1/2         = 0.50000000  certified: True   (half-line predicts True )  margin +1.431e-01
+    alpha = 37/100      = 0.37000000  certified: True   (half-line predicts True )  margin +1.774e-03
+    alpha = 7/19        = 0.36842105  certified: True   (half-line predicts True )  margin +5.721e-05
+    alpha = 43/117      = 0.36752137  certified: False  (half-line predicts True )  margin -9.211e-04
+    alpha = 18/49       = 0.36734694  certified: False  (half-line predicts False)  margin -1.111e-03
+    alpha = 11/30       = 0.36666667  certified: False  (half-line predicts False)  margin -1.851e-03
+    alpha = 4/11        = 0.36363636  certified: False  (half-line predicts False)  margin -5.146e-03
+  SIMPLEST CERTIFIED REPLACEMENT:  3*logit(p_B) > 8*logit(p_A) + 8/25
+    exact slack at alpha = 3/8: 596658259725150795444743242340127921681236267940077/82738859282193417287303438726081463937219800938169600
+  => 2457/6592 is an OUTPUT of the construction, not forced by (27).
+
+==========================================================================
+4. STRADDLE PERTURBATION TEST (was an open question)
+==========================================================================
+  dual ray slopes sigma = q/p:  sigma_A = 896/1285 = 0.69727626,  sigma_B = 2974400/8847357 = 0.33619080
+  'capacity straddle' asks sigma_B < alpha < sigma_A, i.e. alpha in (0.336191, 0.697276)
+  intersect with the certificate window alpha > 0.367473:  alpha in (0.367473, 0.697276)
+  window width = 0.329803, which contains 3/8, 2/5, 37/100, 7/19, 41/110 and 2457/6592 alike.
+  VERDICT: the straddle is NOT decisive.  Do not cite it as evidence for the specific weight.
+
+==========================================================================
+5. MULTIPLICATIVE INDEPENDENCE => the linear form never vanishes
+==========================================================================
+  1285*896   primes: [2, 5, 7, 257]
+  8847357*2974400 primes: [2, 3, 5, 11, 13, 2949119]
+  primes on the A side only: [7, 257];  on the B side only: [3, 11, 13, 2949119]
+  If n*r_A = m*r_B then (1285/896)^n = (8847357/2974400)^m; comparing the
+  exponent of 257 forces n = 0, hence m = 0.  So r_A/r_B is IRRATIONAL
+  and alpha*r_B - r_A != 0 for every rational alpha: there is always a floor.
+  PROVED: True
+
+==========================================================================
+6. PRIME FINGERPRINT of the weight (new observation)
+==========================================================================
+  2457 = {3: 3, 7: 1, 13: 1}      6592 = {2: 6, 103: 1}
+  1285 = {5: 1, 257: 1}   896 = {2: 7, 7: 1}
+  8847357 = {3: 1, 2949119: 1}   2974400 = {2: 6, 5: 2, 11: 1, 13: 2}
+  5872957 (num t_B) = {19: 1, 103: 1, 3001: 1}   11821757 = {31: 1, 381347: 1}
+  primes of the weight: [2, 3, 7, 13, 103]
+  all of them divide some bias integer: True
+  STRIKING: 103 | 6592 AND 103 | 5872957 (the numerator of t_B).
+  Heuristic: a random 7-digit integer is divisible by 103 with probability ~1/103 ~ 1%.
+  So this is suggestive of a shared construction, NOT proof.  The other
+  weight primes (2,3,7,13) are small enough to divide something by chance.
+  ACTIONABLE: search constructions whose output ratio is 2457:6592 =
+  (3^3*7*13):(2^6*103), with 103 inherited from t_B's numerator.
+
+==========================================================================
+SUMMARY
+==========================================================================
+  decode=True  exact-recertification=True  half-line-consistent=True  mult-independence=True
+  C = 1 + gamma reading, if gamma = 2457/6592:  C = 9049/6592 = 1.372724514563107
