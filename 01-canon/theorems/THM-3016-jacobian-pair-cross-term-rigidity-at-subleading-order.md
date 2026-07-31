@@ -16,6 +16,11 @@ status: >
   Jac(H, Q_{m-1}) = 0  or  P_{n-1} = kappa H^{a-b} Q_{m-1}. Sampled
   automorphisms satisfy the second alternative identically (W = 0) and have
   K = 1. The mirrored statement holds for b >= a with the roles exchanged.
+  Strengthening: J = 0 with Q_{m-1} != 0 also forces K = 1, so for K >= 2 the
+  dichotomy collapses to  Q_{m-1} = 0 or P_{n-1} = kappa H^{a-b} Q_{m-1}; and
+  with W = 0 the cross term equals kappa(a-b)H^{a-b-1}Q_{m-1}J, so every term
+  of the degree n+m-4 condition carries an explicit power of H (exponents
+  a-1, a-b-1, b-1) and the tower iterates with a Euclidean-reduced pair.
   This constrains, but does not decide, JC(2); no bridge or reduction is claimed.
 source: death-star-2026-07-31-coinC2
 depends_on: []
@@ -27,6 +32,8 @@ external:
   - "Jung (1942), van der Kulk (1953): automorphisms of the affine plane."
 script: 04-computation/jc2_cross_term_rigidity_thm3016.py
 output: 05-knowledge/results/jc2_cross_term_rigidity_thm3016.out
+script2: 04-computation/jc2_cross_term_iteration_thm3016.py
+output2: 05-knowledge/results/jc2_cross_term_iteration_thm3016.out
 ---
 
 # THM-3016 -- cross-term rigidity at subleading order
@@ -125,6 +132,46 @@ Two observations from the sample, recorded as EVIDENCE and not asserted in
 general: every sampled automorphism has `K = 1` (consistent with HYP-9070's
 `K = 1` gate), and every one satisfies the **second** alternative of (X)
 identically, `W = 0`, even though `K = 1` does not force it.
+
+## 4b. The dichotomy collapses, and the tower iterates (PROVED)
+
+**(A) `J = 0` also forces `K = 1`.** If `J = Jac(H, Q_{m-1}) = 0` with
+`Q_{m-1} != 0`, then `H` and `Q_{m-1}` are powers of a common form `G`, so
+`deg G` divides `g` and `deg G` divides `m-1`; since `g | m`, `deg G`
+divides `gcd(m, m-1) = 1`, so again `H` is a pure power of a linear form.
+Hence the first alternative of (X) is unavailable when `K >= 2`, and the
+dichotomy **collapses**:
+
+```text
+K >= 2   =>   Q_{m-1} = 0    or    P_{n-1} = kappa H^{a-b} Q_{m-1}.   (X')
+```
+
+That is: for a counterexample the subleading component of `P` is *determined*
+by that of `Q` (or the latter vanishes). The mirrored statement holds with
+the roles of `P` and `Q` exchanged.
+
+**(B) With `W = 0` the cross term is explicit and the tower iterates.**
+Using `Jac(fg, g) = g Jac(f,g)` (referee-verified) with
+`f = kappa H^{a-b}`, `g = Q_{m-1}`:
+
+```text
+Jac(P_{n-1}, Q_{m-1}) = kappa (a-b) H^{a-b-1} Q_{m-1} J.              (4)
+```
+
+(Verified symbolically at `(a,b) = (4,1), (3,2), (5,2)`.) Substituting (4)
+into the degree `n+m-4` condition
+
+```text
+c a H^{a-1} Jac(H, Q_{m-2}) + Jac(P_{n-1},Q_{m-1})
+                            + c' b H^{b-1} Jac(P_{n-2}, H) = 0
+```
+
+shows that **all three terms carry explicit powers of `H`**, namely
+`a-1`, `a-b-1`, `b-1`. Dividing by `H^{min(a-b-1, b-1)}` therefore produces
+the next relation with a reduced exponent pair -- so the subleading tower
+does not stall at the cross term: it iterates, and the exponents that appear
+are exactly those of a Euclidean step on `(a,b)`. This answers the open
+point flagged in HYP-9070 section 1.
 
 ## 5. Scope
 

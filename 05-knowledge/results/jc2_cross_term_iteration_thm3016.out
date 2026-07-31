@@ -1,0 +1,13 @@
+(A) J=0 with Q_{m-1} != 0 forces H a pure power of a linear form:
+   H=y^2 (g=2), Q_{m-1}=y^5  (m=6, m-1=5): J=0  K(H)=1   J=0 and K=1 (consistent)
+   H=x^3 (g=3), Q_{m-1}=x^8  (m=9, m-1=8): J=0  K(H)=1   J=0 and K=1 (consistent)
+   H=(x*y) (g=2, K=2), Q_{m-1}=x^5 (m=6): J=-5*x**5  K(H)=2   J!=0
+
+(B) cross-term identity when W = 0:
+   Jac(f*g,g) = g*Jac(f,g):  OK
+   (a,b)=(4,1): Jac(P_(n-1),Q_(m-1)) = kappa(a-b)H^(a-b-1)Q_(m-1)J ?  OK
+   (a,b)=(3,2): Jac(P_(n-1),Q_(m-1)) = kappa(a-b)H^(a-b-1)Q_(m-1)J ?  OK
+   (a,b)=(5,2): Jac(P_(n-1),Q_(m-1)) = kappa(a-b)H^(a-b-1)Q_(m-1)J ?  OK
+
+   => the three terms of the n+m-4 equation carry H-powers a-1, a-b-1, b-1;
+      dividing by H^min(a-b-1,b-1) reduces the exponent pair: the tower ITERATES.
