@@ -10,9 +10,11 @@ status: >
   beta(d)=2 floor((d-1)/14)+1 fixed-safe residues clear every unit, while
   beta(d) residues need not.  Gcd-stratum capacities and the exact
   multiplicative transporter refine this threshold whenever residue shape is
-  retained.  This is a reusable refinement of the projected k=3 denominator
-  quotient; it does not assert that any new atlas row is empty and does not
-  improve the current proved cap by itself.
+  retained.  The resulting transport complex is genuinely non-flag, with an
+  explicit irreducible three-cell certificate at d=43.  This is a reusable
+  refinement of the projected k=3 denominator quotient; it does not assert
+  that any new atlas row is empty and does not improve the current proved cap
+  by itself.
 source: codex-lrc14-k3-signed-ray-phase-gate-2026-07-30
 depends_on:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
@@ -295,10 +297,12 @@ This separates scalar reachability from residue geometry.  It also gives two
 cheap compressions below the stratum threshold.  If `S` contains a unit
 `s`, then `us` determines `u`, so only unit residues of `B_d` can index a
 transporter candidate.  If `|S|=|B_d|` and one `u_0` transports `S` into
-`B_d`, cardinality forces `u_0S=B_d`; every transporter is then in the coset
+`B_d`, cardinality forces `u_0S=B_d`.  Comparing any other transported image
+with this equality, and conversely applying any stabilizer to it, gives the
+exact identity
 
 ```text
-Stab(B_d) u_0.                                          (19)
+T_d(S,B_d)=Stab(B_d) u_0.                               (19)
 ```
 
 The stabilizer in `(19)` is explicit.  For `2<=d<=14`, `B_d={0}`, so every
@@ -384,13 +388,83 @@ seven has circular size at least `d/7`.  Hence
 
 ```text
 pair gate:       S is not independent in G(d,7);
-unit obstruction: S is contained in one multiplicative-unit translate of
-                  the particular independent set B_d.                 (24)
+all-unit obstruction: S is contained in one multiplicative-unit translate
+                      of the particular independent set B_d.          (24)
 ```
 
-The second condition is far more rigid than mere pairlessness.  Thus after a
-pair gate fails, the next object is not an arbitrary independent set: it is
-the recognition problem for the unit orbit of one short symmetric band,
-refined first by gcd strata and then by its two-element stabilizer.  This is
-the exact additive--multiplicative interface which the denominator-only
-quotient had erased.
+For a restricted scalar-active set, `(24)` is intersected with `U_active`
+exactly as in `(18)`.  The second condition is far more rigid than mere
+pairlessness.  Thus after a pair gate fails, the next object is not an
+arbitrary independent set: it is the recognition problem for the unit orbit
+of one short symmetric band, refined first by gcd strata and then by its
+two-element stabilizer.  This is the exact additive--multiplicative interface
+which the denominator-only quotient had erased.
+
+## 7. The transport complex is genuinely higher-order
+
+There is a still more faithful finite object.  Define
+
+```text
+K_d={S subset Z/dZ:T_d(S,B_d) is nonempty}.              (25)
+```
+
+This is a simplicial complex: it is downward closed, and its maximal faces
+are the unit translates `u^{-1}B_d`.  Its one-skeleton remembers whether two
+cells can be bad for one common unit.  It does **not** determine the whole
+complex.
+
+A clean hostile control occurs at the prime modulus `d=43`.  Here
+
+```text
+B_43={0,±1,±2,±3}
+S={1,2,15}.                                              (26)
+```
+
+Every two-element subset of `S` is a face of `K_43`, with the following
+explicit primitive multipliers:
+
+```text
+u=1:   {1,2}   -> {1,2};
+u=3:   {1,15}  -> {3,2};
+u=23:  {2,15}  -> {3,1}                 modulo 43.       (27)
+```
+
+But `S` itself is not a face.  Indeed, if `uS subset B_43`, the image of `1`
+forces `u in {±1,±2,±3}`.  Requiring `2u in B_43` leaves only `u=±1`,
+and then `15u=±15` is not in `B_43`.  Hence
+
+```text
+T_43({1,2,15},B_43)=empty.                              (28)
+```
+
+Thus `S` is a three-clique in the one-skeleton of `K_43` but is not a
+two-simplex: `K_43` is non-flag.  Moreover all nonzero differences in `S`
+have additive order `43`, since `43` is prime, so `S` is independent in
+`G(43,7)` and no short-order pair certificate is present.
+
+The exact relation with the short-order graph is
+
+```text
+E(G(d,7)) subset {two-element nonfaces of K_d},
+and this inclusion can be strict.                                  (29)
+```
+
+Indeed a short-order pair cannot lie in one translate of `B_d` by Section 6,
+while the converse need not hold: for `d=15`, the pair `{1,2}` has difference
+of order `15` but cannot be carried into `B_15={0,±1}`.  Even the resulting
+unit-compatibility graph does not determine the full complex, by `(26)--(28)`.
+
+The missing face `(26)` is an irreducible three-cell unit certificate: no
+singleton or pair closes the universal unit gate, while the triple does.  A
+pairwise orientation would discard still more information.  The natural
+recursive sidecar is therefore the full intersection mask
+
+```text
+M_d(S)=intersection_{c in S}{u:uc in B_d}=T_d(S,B_d).    (30)
+```
+
+Its nonemptiness pattern is the face poset of `K_d`; the mask itself retains
+which units survive, information still needed when only `U_active` is
+scalar-reachable.  Small minimal nonfaces, and active-unit versions obtained
+by intersecting `(30)` with `U_active`, are the proof certificates to search
+for.
