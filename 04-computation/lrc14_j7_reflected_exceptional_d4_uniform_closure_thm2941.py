@@ -14,6 +14,13 @@ and 312 proper labelled words over the offsets ``0,...,4`` with both endpoints
 used.  They use four or five colours.  In particular the two singleton labels
 ``(1,2)`` for E1 and ``(2,4)`` for E2 always have distinct levels ``p,q``.
 
+The four-colour rows are a necessary guardrail.  A tempting scout inference
+was that spread four forces all five offsets to occur.  It does not: the
+proper words ``(0,1,2,2,4,4)`` and ``(0,1,2,4,2,4)`` are explicit witnesses,
+and there are exactly 72 four-colour rows on each exceptional body.  Thus a
+``Delta=1`` tail is false here; the proof below retains the correct
+``Delta<=2`` bound.
+
 Every proper word uses at least four offsets, including zero and four, so its
 nearest positive offset ``Delta`` is at most two.  The nearest-level theorem
 therefore closes the tail whenever
@@ -92,7 +99,7 @@ EXPECTED_BASE_SHA256 = "2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa70
 EXPECTED_NEAREST_SHA256 = "367a4b299ebaf802faeedb056f2e3061b707c3df9aeebcb9e7afb941681cd750"
 EXPECTED_UNIVERSAL_SHA256 = ""
 EXPECTED_UNIVERSAL_OUTPUT_SHA256 = ""
-EXPECTED_SEMANTIC_SHA256 = "0be2261e1f396980d33d2251ff1f323ce6f967bcda52f46ed6fd36ffd3aa8689"
+EXPECTED_SEMANTIC_SHA256 = ""
 
 TAIL_START = 795
 FINITE_M_MAX = TAIL_START - 1
@@ -102,6 +109,10 @@ PERTURBATION_COST = F(1, 21021)
 EXPECTED_CASE_COUNTS = (
     (432, ((4, 72), (5, 360)), ((1, 408), (2, 24)), 1272),
     (312, ((4, 72), (5, 240)), ((1, 288), (2, 24)), 924),
+)
+EXPECTED_FOUR_COLOUR_WITNESSES = (
+    (0, 1, 2, 2, 4, 4),
+    (0, 1, 2, 4, 2, 4),
 )
 EXPECTED_WORST = (
     (
@@ -266,6 +277,14 @@ def main() -> None:
                 ("nearest positive offset changed", body, nearest_counts))
         require(all(word[singleton_pair[0]] != word[singleton_pair[1]] for word in proper),
                 ("singleton levels ceased to be distinct", body))
+        four_colour_witness = EXPECTED_FOUR_COLOUR_WITNESSES[case_index]
+        require(
+            four_colour_witness in proper
+            and len(set(four_colour_witness)) == 4
+            and min(four_colour_witness) == 0
+            and max(four_colour_witness) == 4,
+            ("spread-four four-colour guardrail failed", body, four_colour_witness),
+        )
 
         a = body[singleton_pair[0]]
         b = body[singleton_pair[1]]
@@ -387,6 +406,7 @@ def main() -> None:
                 len(proper),
                 colour_counts,
                 nearest_counts,
+                four_colour_witness,
                 singleton_pair,
                 (a, b),
                 perturbation,
@@ -418,6 +438,7 @@ def main() -> None:
             proper_count,
             colour_counts,
             nearest_counts,
+            four_colour_witness,
             singleton_pair,
             labels,
             perturbation,
@@ -431,6 +452,7 @@ def main() -> None:
         lines.append(
             f"CASE;E={body};L={ruler};proper_words={proper_count};"
             f"colour_counts={colour_counts};nearest_positive_counts={nearest_counts};"
+            f"four_colour_spread4_witness={four_colour_witness};"
             f"singleton_indices={singleton_pair};singleton_labels={labels};"
             f"perturbation={qtext(perturbation)};debt_ceiling={qtext(debt_ceiling)};"
             f"static_margin={qtext(static_margin)};dangerous_rows={dangerous_count};"
@@ -444,6 +466,7 @@ def main() -> None:
     lines.extend((
         "conclusion=both exceptional proper-word D=4 lanes close for every m>=1",
         "corollary=the entire reflected D=4 sector closes for every m>=1",
+        "guardrail=spread four does not force all five offsets:72 proper four-colour rows occur on each exceptional body;Delta can equal 2",
         "scope=reflected THM-2941 residual family only; sufficient certificate, not physical-survivor classification; D>=5 remains outside this theorem",
         "normal_vs_python_O=BYTE_IDENTICAL",
         f"base_lf_sha256={sha256(BASE)}",
