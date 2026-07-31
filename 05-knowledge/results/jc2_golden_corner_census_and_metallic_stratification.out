@@ -1,0 +1,37 @@
+battery: Magnus gcd=1, divisibility, Moh max<=100; degrees <= 300
+surviving pairs: 14661   (S137 reports 14,661)
+
+maximal Euclid-proxy chain length: 10
+attained by 1 pair(s): [(178, 288)]
+   (178,288) = 2*(89,144)   cf(n/m) = [1, 1, 1, 1, 1, 1, 1, 1, 1, 2]   n/m = 1.617977528
+   phi = 1.618033989
+
+chain-length distribution (top of the census):
+   length 10:      1 pair(s)   e.g. [(178, 288)]
+   length 9:     11 pair(s)   e.g. [(178, 246), (165, 267), (162, 262), (162, 256)]
+   length 8:     91 pair(s)   e.g. [(236, 278), (230, 298), (228, 291), (224, 286)]
+   length 7:    483 pair(s)   e.g. [(258, 297), (252, 290), (250, 288), (250, 276)]
+   length 6:   1440 pair(s)   e.g. [(282, 298), (278, 300), (270, 298), (270, 296)]
+   length 5:   2848 pair(s)   e.g. [(286, 296), (280, 298), (279, 294), (278, 294)]
+
+--- metallic / Markov stratification test ---
+Fibonacci <= 300: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377]
+Pell      <= 300: [1, 2, 5, 12, 29, 70, 169, 408]   (ratio -> 1+sqrt2, the silver ratio)
+
+longest chain achievable by each metallic family (any scaling):
+   metallic n=1 (x=1.618034, cf=[1;1,1,...]): best surviving chain 10 at (178, 288)
+   metallic n=2 (x=2.414214, cf=[2;2,2,...]): best surviving chain 5 at (58, 140)
+   metallic n=3 (x=3.302776, cf=[3;3,3,...]): best surviving chain 4 at (66, 218)
+   metallic n=4 (x=4.236068, cf=[4;4,4,...]): best surviving chain 3 at (34, 144)
+
+Lagrange spectrum (Hurwitz constants): sqrt5=2.236068, sqrt8=2.828427, sqrt(221)/5=2.973214
+
+READING.  Euclid chain length and Hurwitz approximability are DIFFERENT
+extremal problems.  Chain length is maximised by all-ones partial quotients,
+so the golden family is uniquely extremal and every other metallic family is
+strictly WORSE (larger partial quotients terminate the algorithm faster).
+The Lagrange/Markov spectrum sqrt5 < sqrt8 < ... instead stratifies
+approximation quality, where the silver ratio IS the runner-up.  So the two
+readings of the "golden corner" diverge below the top, and which secondary
+corner is meaningful depends on which statistic the true Abhyankar-Moh
+polygon calculus actually tracks -- the census proxy tracks the first.
