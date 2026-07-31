@@ -76,7 +76,9 @@ def require(condition, message):
 
 
 def sha(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    payload=path.read_bytes()
+    require(b"\r" not in payload.replace(b"\r\n",b""),f"bare CR in {path}")
+    return hashlib.sha256(payload.replace(b"\r\n",b"\n")).hexdigest()
 
 
 def load(name, path):
@@ -251,6 +253,45 @@ def torsion_certificate(cells,d):
             ca,cb,a,b,shift,min(phase),len(cells))
 
 
+def alternate_valid_pair_control():
+    """Separate the sharp cardinality order from the frozen pair policy.
+
+    Filling every quotient bucket before selecting the earliest-created
+    crowded bucket is as valid as stopping at the first collision.  This
+    hostile example makes the two policies return effective orders 3 and 6,
+    respectively, so only the existence of an order at most ``least`` is
+    intrinsic to the cardinality argument.
+    """
+    first=250; body=(1,4,10,11,12,14); low_labels=(260,364); d=64680
+    eng.FIRST=first
+    eng.ray.FIRST=first
+    stream=eng.ray.Stream(body)
+    cells=eng.fixed_safe_cells(stream,low_labels)
+    canonical=torsion_certificate(cells,d)
+    require(canonical[:2]==(6,6),("canonical pair policy changed",canonical))
+    cell_for={}
+    for cell in cells:
+        cell_for.setdefault(cell%d,cell)
+    residues=tuple(sorted(cell_for))
+    quotient=canonical[6]
+    buckets=defaultdict(list)
+    for residue in residues:
+        buckets[residue%quotient].append(residue)
+    key,values=next((key,values) for key,values in buckets.items() if len(values)>=2)
+    a,b=values[:2]
+    shift=(b-a)%d
+    effective=d//gcd(d,shift)
+    require((key,a,b,shift,effective)==(4950,4950,26510,21560,3),
+            ("alternate pair policy changed",key,a,b,shift,effective))
+    require(2<=effective<=canonical[0]<=7,(d,effective,canonical[0]))
+    ca,cb=cell_for[a],cell_for[b]
+    require(all(eng.cell_clean(c,z,stream.L) for c in (ca,cb) for z in (first,*low_labels)),
+            ("alternate cells not clean",ca,cb))
+    return (first,body,low_labels,d,len(residues),canonical[0],
+            (canonical[7],canonical[8]),(canonical[9],canonical[10]),canonical[11],canonical[1],
+            key,(ca,cb),(a,b),shift,effective)
+
+
 def terminal(task):
     first,body,residual=task
     eng.FIRST=first
@@ -322,9 +363,10 @@ def render(records,terminal_records,atlas_counts,pins):
             (TOKEN_ABSENT_CONTROL,"projected-gate control lost"))
     control_terminal=next(row for row in terminal_records if (row[0],row[1])==TOKEN_ABSENT_CONTROL)
     require(control_terminal[6]>0,(TOKEN_ABSENT_CONTROL,"two-high control gap"))
+    pair_control=alternate_valid_pair_control()
     semantic_payload=(LEVELS,WALL,ALIGNED_CAP,records,terminal_records,atlas_counts,level_totals,summaries,
                       tuple(sorted(global_least.items())),tuple(sorted(global_R.items())),pins,
-                      INHERITED_LEDGER,FINAL_LEDGER,NEXT_HEIGHT,NEXT_COUNT)
+                      INHERITED_LEDGER,FINAL_LEDGER,NEXT_HEIGHT,NEXT_COUNT,pair_control)
     semantic=hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
     if SEMANTIC_SHA256 is not None:
         require(semantic==SEMANTIC_SHA256,"semantic digest changed")
@@ -332,6 +374,7 @@ def render(records,terminal_records,atlas_counts,pins):
         "LRC14 projected k=3 z1=270 through z1=247 cardinality-torsion descent",
         f"engine_sha256={sha(ENGINE)}",f"atlas_source_sha256={sha(ATLAS_SOURCE)}",f"atlas_output_sha256={sha(ATLAS)}",
         f"upstream_source_sha256={pins[0]}",f"upstream_output_sha256={pins[1]}",
+        "dependency_hash_basis=SHA-256 after CRLF-to-LF normalization;bare CR rejected",
         "scope=423 exact atlas body rows at fifteen occupied heights270..247;all intervening heights checked empty;no finite high-label horizon",
         f"frontier_totals=states:{totals[0]};crude:{totals[1]};status:{totals[2]};residual:{totals[3]}",
         f"independent_exact_farkas_checks={totals[2]}/{totals[2]}:PASS;solver_basis_not_frozen",
@@ -342,6 +385,8 @@ def render(records,terminal_records,atlas_counts,pins):
         "cayley_alpha=G_d edges have nonzero difference-order<=7;R=max({r:r|d,2<=r<=7} union {1});cosets mod d/R are R-cliques and [0,d/R) is independent;therefore alpha(G_d)=d/R",
         "cardinality_boundary=every fixed-safe residue set has |S|>d/R;this forces torsion order<=7;the independent equality set proves strictness is optimal for cardinality-only arguments",
         f"least_cardinality_forced_r_histogram={dict(sorted(global_least.items()))};optimal_R_histogram={dict(sorted(global_R.items()))}",
+        "witness_policy=choose the least r forced by cardinality,then the first collision encountered while scanning sorted residues modulo d/r;the effective-order histogram belongs to this frozen policy and is not intrinsic",
+        f"alternate_valid_pair_control=z1:{pair_control[0]};E:{pair_control[1]};low_labels:{pair_control[2]};d:{pair_control[3]};residues:{pair_control[4]};least_r:{pair_control[5]};canonical_cells:{pair_control[6]};canonical_residues:{pair_control[7]};canonical_shift:{pair_control[8]};canonical_effective:{pair_control[9]};alternate_bucket:{pair_control[10]};alternate_cells:{pair_control[11]};alternate_residues:{pair_control[12]};alternate_shift:{pair_control[13]};alternate_effective:{pair_control[14]};both_valid:true",
         "strict_seam=primitive high units preserve effective order s<=7;phase gap>=1/s>=1/7;strict-open radius1/14 dangers are disjoint,with only excluded endpoints meeting at s=7",
     ]
     for z in LEVELS:
