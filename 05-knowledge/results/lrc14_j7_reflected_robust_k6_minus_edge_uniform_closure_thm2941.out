@@ -1,0 +1,21 @@
+LRC14 reflected robust-K6-minus-edge uniform closure exact referee
+classification_rows=((0, 1, Fraction(1, 2), (Fraction(1, 1), Fraction(3, 2), Fraction(2, 1), Fraction(3, 1)), (Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(6, 1), Fraction(12, 1)), (Fraction(1, 1), Fraction(12, 1))), (0, 1, Fraction(1, 1), (Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(6, 1)), (Fraction(1, 1), Fraction(3, 2), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(6, 1)), (Fraction(3, 2), Fraction(4, 1))), (1, 0, Fraction(1, 1), (Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(6, 1)), (Fraction(1, 1), Fraction(3, 2), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(6, 1)), (Fraction(3, 2), Fraction(4, 1))), (1, 0, Fraction(2, 1), (Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(6, 1)), (Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(6, 1), Fraction(12, 1)), (Fraction(1, 1), Fraction(12, 1))))
+projective_types=(((Fraction(1, 1), Fraction(3, 2), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(6, 1)), (2, 3, 4, 6, 8, 12), (3, 8)), ((Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(6, 1), Fraction(12, 1)), (1, 2, 3, 4, 6, 12), (1, 12)))
+robust_K6_minus_edge_bodies=59;primitive_labelled_assignments=5664;certificate_kinds=(('low', 5664),);certificate_floors=(('607/8820', 1), ('103/1456', 10), ('111/1568', 8), ('17/240', 28), ('131/1848', 10), ('139/1960', 10), ('153/2156', 2), ('155/2184', 37), ('167/2352', 4), ('207/2912', 8), ('209/2940', 16), ('219/3080', 52), ('251/3528', 10), ('37/520', 53), ('263/3696', 86), ('279/3920', 14), ('307/4312', 7), ('311/4368', 82), ('47/660', 93), ('363/5096', 11), ('389/5460', 104), ('419/5880', 29), ('439/6160', 91), ('519/7280', 102), ('659/9240', 117), ('727/10192', 2), ('779/10920', 88), ('1319/18480', 136), ('1/14', 4453))
+TYPE;index=0;weakest_margin=11634903103299856214368519/168563272427550089513989110;body=(1, 2, 3, 5, 9, 14);nonrobust_edge=(4, 5);levels=(6, 2, 12, 4, 8, 3);floor=1/14;certificate_pair=(0, 5);reduced_channel=(2, 1);gcd=3;j=8144;lift=25;endpoint_radius=612;kind=low
+TYPE;index=1;weakest_margin=7745575244788036048763/117219090152296965822990;body=(1, 2, 4, 5, 12, 13);nonrobust_edge=(4, 5);levels=(2, 3, 4, 6, 12, 1);floor=1/14;certificate_pair=(0, 5);reduced_channel=(2, 1);gcd=1;j=9610;lift=22;endpoint_radius=35;kind=low
+direct_control_scales=(1, 2, 5);direct_controls=16992
+scale_law=multiplying all levels preserves the reduced channel and cell, decreases transport loss and singleton debt
+conclusion=all 59 robust-K6-minus-edge bodies close for every assignment of positive reflected levels
+corollary=arbitrary-level body closure rises from 2217 to 2276;remaining_bodies=727
+scope=reflected THM-2941 residual family only;physical LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+low_phase_sha256=b2418dfda1b48257d1f7582d4ea977203a26f88885e13946bc100ccf264c9ce1
+exceptional_sha256=15c13d721ee695c2a69bc386d5c12eba0382b52f9eabfe052f2fe5fda03c7bc4
+universal_sha256=dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3eae07f0f857689
+body_digest=ce730b7beab0cce88b17bf057c7ec05476d9471b73cb87c38cd7f43fd7e85dca
+assignment_digest=d24d29377e3813f33abea99574f5c1acf6c7d7b56fb4f40ee4461678b4e4f12b
+source_sha256=1a18c91803185033bd1faf8005a88ba817cc93edb0ff76a27287427e2299e97a
+semantic_sha256=fea17af1ab0586db6aa0de1abf384087de93f4a0871be30e426d2a4c40de9431
+all_exact_controls=PASS
