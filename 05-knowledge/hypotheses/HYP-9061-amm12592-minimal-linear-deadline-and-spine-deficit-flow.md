@@ -112,7 +112,31 @@ Sharper structure, elementary to check:
    gate opens (construction, `C* = 9049/6592`-ish) or closes (lower bound)
    at `gamma = 2457/6592` is the live question.
 
-## 2c. Working reading of the certificate (dual side; UNVERIFIED direction)
+## 2c0. Direction status after the coinC2 session (2026-07-30, evening)
+
+The **evaluation reading of (27) is CLOSED as a class**: THM-2977 (the
+evaluation wall) + lane G2 (`laneG2-padic-phi-findings.md`) prove that
+every denominator-clearing functional at engineered rational biases has
+choice-invariance modulus bounded independently of `M` (K = 6 at the
+certificate pair, exactly), that its forced content collapses to one bit
+of boundary bookkeeping (blind to the band), and that the proved envelope
+covers every residue class from `M = 1` on. Hence (27) can only be the
+**numeric gate of a rate/entropy (tropical) dual**: a two-ray
+capacity-vs-forced-mass comparison in which the rapidities
+`r_A, r_B = log(p/q)` are Legendre-dual ray slopes, `alpha = 2457/6592` a
+ray weight, and `1/25` a per-`M` rate margin absorbing `O(D0)`. The
+2-adic bias engineering survives as **checksum alignment** (the minimal
+coupled one-bit invariant exists iff `s_A != s_B` aligns; SPECULATION as
+to intent). Within that reading the LOWER-bound direction
+(`C* >= 9049/6592`) remains favored over the construction gate: the
+construction side lost its two best mechanisms this session (THM-2976's
+corner clock does not rescue transport — greedy at the corner-clocked
+rates `1/3, 1/5` freezes harder than at `1/2`, laneD sec. 5b — and the
+deep-corner clock fires infinitely often ONLY at `gamma = 1/(2^j - 1)`,
+excluding `alpha`, lane G2 T4). Sections 2c/2e below are kept as the
+historical route to this conclusion.
+
+## 2c. Working reading of the certificate (dual side; UNVERIFIED direction — evaluation variants now REFUTED, see 2c0)
 
 Truncate the deficit identity `sum p^m q Delta_m + sum q^m p Delta'_m = 0`
 at total degree `A`: the shallow part re-expanded at level `A` has integer

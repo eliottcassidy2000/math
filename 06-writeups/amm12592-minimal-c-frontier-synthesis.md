@@ -125,6 +125,22 @@ corner routing at `gamma in {1/2, 0.6, 0.75, 0.9}`).
   biases with integrality — precisely certificate (27)'s form; and
   `p_B` sits within 2.7% of the band edge `6592/9049`.
   Artifacts: `04-computation/amm12592_carry_ledger_band_freeze_laneD_deathstar.py`.
+- **Lane G2 (DONE, coinC2; VERIFIED-EXACT + PROVED):** the coupled 2-adic
+  functional `Phi = N_A/2^{1+s_A} + y N_B/2^{1+s_B}` is choice-independent
+  mod 64 (K = 6 exactly; side B binds twice); its forced value collapses
+  to ONE boundary bit `64[(M+1)d_M + floor((M+1)/2)] mod 128` — blind to
+  the band; the product-formula wall is real with gap `2^{sM-1}`; every
+  evaluation variant (rows, differences, telescoping, coupling) fails.
+  THM-2977 makes the wall airtight as a class. **Consequence: (27) must
+  be the gate of a rate/entropy dual.** The deep-corner clock fires
+  infinitely often iff `gamma = 1/(2^j-1)` — excludes `alpha`.
+- **THM-2976 (coinC2, PROVED + Lean-kernel-checked):** binary-clock
+  parity — see sec. 5a2.
+- **Lane C2 (coinC2, running):** exhaustive finite-M DFS against the
+  proved envelope at 9 biases (incl. both certificate biases), depth laws
+  `(1/2, 0)`, `(1/3, 0)`; an exhausted INFEASIBLE at any M is the first
+  unconditional refutation of a `gamma < 1` envelope, and simultaneously
+  closes lane F (no policy can satisfy what no assignment satisfies).
 - **Lane E (DONE, anchor duty):** independent audit of the LRC(14) mixed
   double-2 sector: both MSG-2937 witnesses digit-exact; coarse vs exact
   tests disagree on exactly 2 occurrences; repair already landed
