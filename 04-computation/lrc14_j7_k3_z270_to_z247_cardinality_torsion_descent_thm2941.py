@@ -67,6 +67,7 @@ INHERITED_LEDGER = 375674
 FINAL_LEDGER = 375251
 NEXT_HEIGHT = 246
 NEXT_COUNT = 194
+TOKEN_ABSENT_CONTROL = (250,(1,4,9,10,12,14))
 
 
 def require(condition, message):
@@ -107,6 +108,7 @@ def atlas_tasks():
     pattern = re.compile(r"^row=E=([0-9,]+);.*;L=([0-9]+);high=([0-9]+);z1=([0-9]+);.*;suffix=(.*);lower=")
     counts = Counter()
     tasks = []
+    token_absent_control_seen = False
     for line in ATLAS.read_text().splitlines():
         match = pattern.match(line)
         if match is None:
@@ -115,18 +117,25 @@ def atlas_tasks():
         L, high, first = map(int,match.group(2,3,4))
         counts[first] += 1
         if first in LEVELS:
-            # The ray quotient's projected high obligation is active exactly
-            # when the fixed first label lies below the wall.  The atlas's
-            # printed ``HIGH-TAIL`` token describes its older slotwise
-            # maximizer; it is not the logical gate.
+            suffix_text = match.group(5)
+            # The ray quotient needs an explicit later-high slot exactly when
+            # the fixed first label lies below the wall.  Above it, strict
+            # label ordering makes every actual later label high, while this
+            # quotient harmlessly relaxes order.  The printed ``HIGH-TAIL``
+            # token describes an older slotwise maximizer, not this predicate.
             gate = first < high
             require(high == WALL.numerator*L//WALL.denominator+1, (first,body,"high"))
+            if (first,body) == TOKEN_ABSENT_CONTROL:
+                require(gate and "HIGH-TAIL:" not in suffix_text and "1810:" in suffix_text,
+                        (first,body,"token-absent control changed"))
+                token_absent_control_seen = True
             tasks.append((first,body,L,high,gate))
     require({z:counts[z] for z in LEVELS} == ROW_COUNTS, "row counts changed")
     for z in range(NEXT_HEIGHT+1,max(LEVELS)+1):
         require(counts[z] == ROW_COUNTS.get(z,0), (z,counts[z]))
     require(counts[NEXT_HEIGHT] == NEXT_COUNT, "next frontier changed")
     require(len(tasks) == 423, len(tasks))
+    require(token_absent_control_seen,"token-absent hostile control disappeared")
     return tuple(tasks), tuple((z,counts[z]) for z in range(NEXT_HEIGHT,max(LEVELS)+1))
 
 
@@ -303,6 +312,11 @@ def render(records,terminal_records,atlas_counts,pins):
     require(tuple(aggregate)==TERMINAL_TOTALS,aggregate)
     require(global_least==global_effective and sum(global_least.values())==TERMINAL_TOTALS[1],global_least)
     require(INHERITED_LEDGER-len(records)==FINAL_LEDGER,"ledger")
+    control_record=next(row for row in records if (row[0],row[1])==TOKEN_ABSENT_CONTROL)
+    require(control_record[5] and control_record[12]>0,
+            (TOKEN_ABSENT_CONTROL,"projected-gate control lost"))
+    control_terminal=next(row for row in terminal_records if (row[0],row[1])==TOKEN_ABSENT_CONTROL)
+    require(control_terminal[6]>0,(TOKEN_ABSENT_CONTROL,"two-high control gap"))
     semantic_payload=(LEVELS,WALL,ALIGNED_CAP,records,terminal_records,atlas_counts,level_totals,summaries,
                       tuple(sorted(global_least.items())),tuple(sorted(global_R.items())),pins,
                       INHERITED_LEDGER,FINAL_LEDGER,NEXT_HEIGHT,NEXT_COUNT)
@@ -316,7 +330,9 @@ def render(records,terminal_records,atlas_counts,pins):
         "scope=423 exact atlas body rows at fifteen occupied heights270..247;all intervening heights checked empty;no finite high-label horizon",
         f"frontier_totals=states:{totals[0]};crude:{totals[1]};status:{totals[2]};residual:{totals[3]}",
         f"independent_exact_farkas_checks={totals[2]}/{totals[2]}:PASS;solver_basis_not_frozen",
-        "logical_split=every residual row has first<high_floor,which is exactly the ray quotient's projected high-label gate;the atlas's printed HIGH-TAIL token is not used;duplicate-permitting >=2-high upper has strict positive exact gap on every residual body;therefore exactly one high",
+        "logical_split=every residual row here has first<high_floor,so THM-2941(25f) supplies an explicit later-high slot;when first>=high_floor strict ordering instead makes all actual later labels high;the atlas's printed HIGH-TAIL token is not used;duplicate-permitting >=2-high upper has strict positive exact gap on every residual body;therefore exactly one high in this residual universe",
+        f"token_absent_hostile_control=z1:{TOKEN_ABSENT_CONTROL[0]};E:{TOKEN_ABSENT_CONTROL[1]};first<high_floor:{control_record[3]};printed_HIGH-TAIL:false;printed_exact_high:1810;residual_states:{control_record[12]};two_high_gap:{ft(control_terminal[6])};first_failed_implication=absence of the literal tail token does not negate the projected maximum wall",
+        "repaired_gate=THM-2941(25f) gives max(Z)>13L/132;integer labels and first<floor(13L/132)+1 force some later label>=high_floor;the representative may be an exact high label or HIGH-TAIL",
         f"terminal_reduction=zero_high_hostile_passes:{aggregate[0]};one_high_cases:{aggregate[1]};body_distinct_low_pairs:{aggregate[2]};unit_ray_checks:{aggregate[3]}",
         "cayley_alpha=G_d edges have nonzero difference-order<=7;R=max({r:r|d,2<=r<=7} union {1});cosets mod d/R are R-cliques and [0,d/R) is independent;therefore alpha(G_d)=d/R",
         "cardinality_boundary=every fixed-safe residue set has |S|>d/R;this forces torsion order<=7;the independent equality set proves strictness is optimal for cardinality-only arguments",
