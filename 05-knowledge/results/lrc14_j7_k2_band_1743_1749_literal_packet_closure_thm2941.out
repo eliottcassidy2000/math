@@ -1,17 +1,17 @@
 LRC14 projected k=2 z1=1743..1749 literal-packet closure
-support_source_sha256=70c9faa37a0524673e8178ed82cc6abc040438fff043b944a7ee0227d48c8997
+support_source_sha256=301060cde47e68912901f61cd5ca329d5ef02087a237faec2c5b354836dc667d
 universe=all C(14,6)=3003 bodies;first nonaligned integer labels 1743..1749;four distinct later drifts;two aligned labels
 global_scalar_horizon=7000;omitted_slot_bound=6r/[49(H+1)];candidate_rows=21021;global_scalar_survivors=2
 ray_law=delta(r+mL)=A(r)/(r+mL);scalar_necessary=sum(delta)>=h/91
 projected_identity=P_(E,Z)=phi_L(C_E minus union_z D_z);two_aligned_open_union_cap=25/91
 exact_rows=2;scalar_states=12;crude_kills=1;status_kills=4;residual_states=7
 all_scalar_eligible_literal_packets=7;projected_kills=7;survivors=0;global_minimum_margin=1026/16471;max_prefix_cells=2
-EXACT;z1=1743;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=239/683256;first_d=560;ray_signs=((-1, 5879), (0, 1), (1, 5879));ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;denominators=59;trials=557845;scalar=11;crude=0;status=4;residual_states=7;stage_sha256=('2af40e3595b2bd431e441ef48f06d9c7f80b3e1b9d18d32369154b7c0eb53185', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', '19b2fc11b7b411b910aa25c9efb7a27f23787fe9ceafdef08322ee2ceff67568', 'f8510fddde7fe3b6cb43a6bab1e996b37782b5a4f3cc3799ee1467001805d960');body_cells=4196;literal_packets=7;projected_kills=7;min_margin=1026/16471;max_prefix_cells=2;min_ray_cutoff=89330944589/126678829291560;max_ray_candidates=3;max_group_choices=1;minimum_row=(Fraction(1026, 16471), (1743, 1836, 2060, 2172, 2534), Fraction(61, 181), 1);direct_control_mass=1/1;packet_sha256=2995b91c4bd0e5119db76a417023f1524f1cef7623822a8c96bc78339aaefefb;state_audit_sha256=bf6df9ab5355a8826166f6647691979480a4c53f75f92589432b3bf31c921d2c;conclusion=PROJECTED-EMPTY
+EXACT;z1=1743;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=239/683256;first_d=560;ray_signs=((-1, 5879), (0, 1), (1, 5879));ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;denominators=59;trials=557845;scalar=11;crude=0;status=4;residual_states=7;stage_sha256=('2af40e3595b2bd431e441ef48f06d9c7f80b3e1b9d18d32369154b7c0eb53185', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', 'a8be014e26f17a76dd81bc5dffd5a120fd31a48dd842f218adc446acd56a0d69', 'f8510fddde7fe3b6cb43a6bab1e996b37782b5a4f3cc3799ee1467001805d960');body_cells=4196;literal_packets=7;projected_kills=7;min_margin=1026/16471;max_prefix_cells=2;min_ray_cutoff=89330944589/126678829291560;max_ray_candidates=3;max_group_choices=1;minimum_row=(Fraction(1026, 16471), (1743, 1836, 2060, 2172, 2534), Fraction(61, 181), 1);direct_control_mass=1/1;packet_sha256=2995b91c4bd0e5119db76a417023f1524f1cef7623822a8c96bc78339aaefefb;state_audit_sha256=bf6df9ab5355a8826166f6647691979480a4c53f75f92589432b3bf31c921d2c;conclusion=PROJECTED-EMPTY
 EXACT;z1=1746;E=1,6,9,10,12,14;h=1601/4410;r=32;L=17640;lower=1601/401310;delta1=851/998130;first_d=980;ray_signs=((-1, 8819), (0, 1), (1, 8819));ray_sha256=9709f30567b141fb144162ab676760c78332a2467fbf3e67b90c58ed0cb2143d;denominators=71;trials=1150626;scalar=1;crude=1;status=0;residual_states=0;stage_sha256=('021628300f498327505c8e12fadaa662a557190358ae39283bc7d0d86a85ff94', 'e191526d2e1779a56eb276945530af9a0c5069f750f0673b9b5b2dce4be917da', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d');conclusion=CRUDE-EMPTY
 independent_control=direct interval subtraction/projection agrees with full cell De Morgan identity on the minimum-margin projected packet
 conclusion=the complete projected k=2 first-drift integer band 1743..1749 is empty;no global-cap change claimed
 global_profile_sha256=adc43465d860ef3cd9744bf382ebb370dbe3c504697b4ebfa062cfd5ad316c59
 global_survivor_sha256=33a833973a66b4a2a98a6c371b7e96f30e3db4264c3ec1c77b6a9b13ffac4ded
-profile_sha256=8c7caacc8a1e9c894eb9b0f2ac6c402c27c328c4924ab7384fede69fa4a527fd
-semantic_sha256=e07845eaf675a561995164f61e75d9234abbb45ab53cf0ce54b5fb64679ba174
+profile_sha256=a6e7b486a5418567b3628d823f106d4e38b7953c34a748a4cce9718eef81082d
+semantic_sha256=a77c9bfa446fe8bc0eeb661964f2d9d44b84e0ef93fe76001252cf2dacb4f5cd
 all_exact_controls=PASS
