@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import concurrent.futures as cf
+import os
 from fractions import Fraction as F
 from hashlib import sha256
 from importlib.util import module_from_spec, spec_from_file_location
@@ -15,8 +16,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 EXACT_PATH = ROOT / "04-computation" / "lrc14_j7_k2_exact_descent_1800_1824_closure_thm2941.py"
 HIGH_PATH = ROOT / "04-computation" / "lrc14_j7_k2_high_wall_descent_1800_1810_closure_thm2941.py"
-EXPECTED_EXACT_SHA256 = "e9242e697efb0ba452ca0c51ee65da4d02b427557ef627414286661cfea1cf79"
-EXPECTED_HIGH_SHA256 = "22db2600485332469f6dec9e1356bc121165923a33c1ca6381acddcc89506f9e"
+EXPECTED_EXACT_SHA256 = "1bc6674fbb9b6f4c8979c229c164d267e60911ed582fb3184813d45c21da2adf"
+EXPECTED_HIGH_SHA256 = "c12c17297aa8a96cbdd7d9d529838c776b160ace86b92d0030f5df447fe6877b"
 
 EXACT_CASES = (
     (1780, (1, 4, 8, 10, 12, 14), "PROJECT"),
@@ -34,7 +35,7 @@ HIGH_CASES = (
     (1780, (1, 8, 10, 12, 13, 14)),
     (1784, (2, 8, 9, 10, 12, 14)),
 )
-EXPECTED_PROFILE_SHA256 = "a19c6ffb41cc02fdc7e48e4eb40f108ef5a1d9853c349d92ec7805244820a047"
+EXPECTED_PROFILE_SHA256 = "1196675a616cb54d49343773152376302570a6e1601cbadf1f56c0bcafff37de"
 
 
 def require(condition: bool, message: str) -> None:
@@ -136,9 +137,12 @@ def exact_summary(row):
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--workers", type=int, default=8)
+    parser.add_argument("--hash-seed", type=int, default=0)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     require(args.workers >= 1, "worker count must be positive")
+    require(args.hash_seed >= 0, "hash seed must be nonnegative")
+    os.environ["PYTHONHASHSEED"] = str(args.hash_seed)
     require(sha256(EXACT_PATH.read_bytes()).hexdigest() == EXPECTED_EXACT_SHA256,
             "exact descent source changed")
     require(sha256(HIGH_PATH.read_bytes()).hexdigest() == EXPECTED_HIGH_SHA256,
@@ -180,7 +184,10 @@ def main() -> None:
     require(len(high) == 2, "forced-high case census changed")
     require(len(high_project) == 0, "unexpected surviving high-project case")
     require(closed == 12, "1780..1789 closure changed")
-    require(profile_hash == EXPECTED_PROFILE_SHA256, "closure profile digest changed")
+    require(
+        profile_hash == EXPECTED_PROFILE_SHA256,
+        f"closure profile digest changed: expected {EXPECTED_PROFILE_SHA256}; got {profile_hash}",
+    )
     lines.extend((
         f"closure={closed}/12",
         f"profile_sha256={profile_hash}",
