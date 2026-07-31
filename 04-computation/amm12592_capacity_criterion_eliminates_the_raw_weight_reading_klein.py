@@ -23,11 +23,22 @@ RESULT
     signature death-star reports for gamma >= 3/5.
   * The criterion does NOT separate 2457/4135 from 3/5 (both bind at t=1 with
     ratio -> 2*gamma).  So it eliminates one reading; it cannot pin the constant.
-  * CAUTION recorded: the finite-R thresholds rise slowly (0.5313, 0.5606,
-    0.5758, 0.5849 at R = 32, 64, 128, 256).  A geometric extrapolation of those
-    suggests ~0.5986 and would place 2457/4135 below it, but that extrapolation
-    is WRONG: at R = 1024 the binding index for 2457/4135 is already t = 1, the
-    ample signature.  Do not extrapolate the finite-R threshold sequence.
+  * CORRECTION (2026-07-31, after death-star pushed to R = 2048).  An earlier
+    version of this file warned "do not extrapolate the finite-R threshold
+    sequence", on the grounds that at R = 1024 the binding index for 2457/4135 is
+    already t = 1.  THAT WARNING WAS WRONG, and the extrapolation it dismissed was
+    right.  The finite-R thresholds 0.5313, 0.5606, 0.5758, 0.5849 (R = 32..256)
+    continue 0.59065 (R=512), 0.59393 (R=1024) and converge to ~0.5982, matching
+    the asymptotic two-ray entropy value 0.59799.  Since 2457/4135 = 0.594196 lies
+    BELOW that limit, it is eventually deficient, and death-star reports it dying
+    at R = 2048.  Ampleness at R <= 1024 with binding index t = 1 is therefore NOT
+    the ample signature I took it for -- t = 1 binds first and the large-t
+    constraint overtakes it only later.
+  * NET EFFECT ON THE TWO READINGS: R1 (gamma = 2457/6592) is refuted here at
+    R >= 16; R2 (gamma = 2457/4135) is refuted by death-star at R = 2048.  BOTH
+    readings of the eq(27) weight are dead as deadline slopes.  gamma = 3/5 is the
+    first round rate above the threshold and death-star has now closed every
+    dyadic epoch through R = 64 there, giving C <= 8/5 for all n <= 127.
 
 At t = 1 the criterion reads 2*(floor(gamma*R)+D0) >= R-1, i.e. ratio -> 2*gamma,
 so t=1 is satisfied for every gamma > 1/2; ampleness is decided by large t.
@@ -112,8 +123,11 @@ def main():
             else:
                 lo = mid
         print(f"    R={R:4d}: finite-R threshold gamma ~ {hi:.6f}")
-    print("    These rise slowly and a geometric extrapolation suggests ~0.5986,")
-    print("    which would wrongly place 2457/4135 below threshold -- refuted by B.")
+    print("    These converge to ~0.5982 (death-star: 0.59065 at R=512, 0.59393 at")
+    print("    R=1024), matching the asymptotic entropy value 0.59799.  Since")
+    print("    2457/4135 = 0.594196 is BELOW that, it is eventually deficient and")
+    print("    dies at R=2048.  An earlier version of this file wrongly warned")
+    print("    against this extrapolation; the extrapolation was right.")
 
     print()
     rule(f"SUMMARY  control={control_ok}  R1_refuted={r1_dead}  R2_survives={r2_ok}")

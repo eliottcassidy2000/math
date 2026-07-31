@@ -46,8 +46,11 @@ C. FINITE-R THRESHOLDS (do NOT extrapolate these)
     R=  64: finite-R threshold gamma ~ 0.560606
     R= 128: finite-R threshold gamma ~ 0.575758
     R= 256: finite-R threshold gamma ~ 0.584906
-    These rise slowly and a geometric extrapolation suggests ~0.5986,
-    which would wrongly place 2457/4135 below threshold -- refuted by B.
+    These converge to ~0.5982 (death-star: 0.59065 at R=512, 0.59393 at
+    R=1024), matching the asymptotic entropy value 0.59799.  Since
+    2457/4135 = 0.594196 is BELOW that, it is eventually deficient and
+    dies at R=2048.  An earlier version of this file wrongly warned
+    against this extrapolation; the extrapolation was right.
 
 ==========================================================================
 SUMMARY  control=True  R1_refuted=True  R2_survives=True
