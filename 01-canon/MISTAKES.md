@@ -32,6 +32,21 @@ Format per entry:
   necessary condition `C(mu)>=0>=C(mu*)` survives; it is not sufficient, and no
   bounded set of moments can be, since the sign-change count is a property of the
   support structure.
+- **AMENDMENT (same day, klein-S428, after an independent adversarial pass).**
+  The diagnosis above is the *dominant* mechanism but not the only one, and one
+  circulating description of it is too strong.  Exact split over the `51` failing
+  three-cluster configurations: the census's own `shape_of` classifier would have
+  **disagreed with the prediction on 46 of them** (it returns `MIXED`), and only
+  `5` slipped through.  So the census was **not** vacuous, contrary to an
+  external audit note claiming its agreement was "logically compatible with
+  arbitrary interior oscillation".  What is true is that `shape_of` decides
+  `INTERIOR-MAX`/`INTERIOR-MIN` from `R[2]>R[1]` and `R[d-1]<R[d-2]` alone -- the
+  two **end** circuits -- so it has a genuine blind spot on exactly the W-shaped
+  palindromes (`c_2>0`, `c_(d-1)<0`, oscillating interior), e.g.
+  `(n+1)^2(n+3)^2(n+9)^2`.  Two independent defects, therefore: the pinned
+  cluster-size axis (which meant no failing configuration was ever presented) and
+  the end-only shape branch (which would have mislabelled `5/51` if one had
+  been).  Second rule below is amended accordingly.
 - **Rule:** a census is evidence only about the coordinates it actually varies.
   Before quoting an `n/n` census, enumerate the coordinates of the configuration
   space and mark which were moved and which were pinned; report the pinned ones
