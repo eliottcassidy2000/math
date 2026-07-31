@@ -10,11 +10,11 @@ status: >
   beta(d)=2 floor((d-1)/14)+1 fixed-safe residues clear every unit, while
   beta(d) residues need not.  Gcd-stratum capacities and the exact
   multiplicative transporter refine this threshold whenever residue shape is
-  retained.  The resulting transport complex is genuinely non-flag, with an
-  explicit irreducible three-cell certificate at d=43.  This is a reusable
-  refinement of the projected k=3 denominator quotient; it does not assert
-  that any new atlas row is empty and does not improve the current proved cap
-  by itself.
+  retained.  The resulting transport complex is flag through d=42 and first
+  becomes non-flag at d=43, with an explicit irreducible three-cell
+  certificate.  This is a reusable refinement of the projected k=3
+  denominator quotient; it does not assert that any new atlas row is empty
+  and does not improve the current proved cap by itself.
 source: codex-lrc14-k3-signed-ray-phase-gate-2026-07-30
 depends_on:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
@@ -327,7 +327,29 @@ both signs do stabilize the symmetric band.  In particular, at the sharp
 equality boundary and `d>=15`, a nonempty transporter has exactly two
 elements, `u_0` and `-u_0`; there is no large hidden multiplicative symmetry.
 
-Equations `(15)--(20)` identify the correct recursive search object: a
+The same stabilizer acts on every transporter, without the equality-size
+hypothesis:
+
+```text
+u in T_d(S,B_d), s in Stab(B_d)  implies  su in T_d(S,B_d).             (20a)
+```
+
+Hence every transporter is a union of stabilizer cosets.  For `d>=15` it is
+in particular closed under `u -> -u`, and every forced stabilizer coset has
+two elements.
+The mask can therefore be stored on the projective unit set
+
+```text
+PU_d=(Z/dZ)^*/{±1}.                                     (20b)
+```
+
+This remains exact even when scalar reachability distinguishes the two
+signs.  Mark a projective class active when either representative belongs to
+`U_active`; then `(18)` is nonempty exactly when the projectivized transporter
+contains an active class.  Thus reversal-paired rays halve the finite unit
+search without assuming their amplitudes agree.
+
+Equations `(15)--(20b)` identify the correct recursive search object: a
 bipartite unit--cell incidence relation with multiplicative orbit sidecars,
 not a tournament.  Only after this transporter is nonempty is a
 unit-indexed carrier-overlap or spanning-tree calculation warranted.
@@ -411,7 +433,16 @@ K_d={S subset Z/dZ:T_d(S,B_d) is nonempty}.              (25)
 This is a simplicial complex: it is downward closed, and its maximal faces
 are the unit translates `u^{-1}B_d`.  Its one-skeleton remembers whether two
 cells can be bad for one common unit.  It does **not** determine the whole
-complex.
+complex.  Since `0` belongs to every translate,
+
+```text
+T_d(S union {0},B_d)=T_d(S,B_d).                        (25a)
+```
+
+Thus `K_d` is always a cone with apex `0`, more precisely the join of that
+vertex with its deconed nonzero complex.  The full complex is contractible;
+the decone carries all minimal nonfaces and flag failures and is the
+meaningful object for any nontrivial topology.
 
 A clean hostile control occurs at the prime modulus `d=43`.  Here
 
@@ -441,6 +472,33 @@ Thus `S` is a three-clique in the one-skeleton of `K_43` but is not a
 two-simplex: `K_43` is non-flag.  Moreover all nonzero differences in `S`
 have additive order `43`, since `43` is prime, so `S` is independent in
 `G(43,7)` and no short-order pair certificate is present.
+
+This is the first non-flag modulus.  For `2<=d<=42`, the band radius
+`b=floor((d-1)/14)` is at most two, and the three possible ranges have a
+uniform description.
+
+* For `b=0`, the decone is empty.
+* For `b=1`, its facets are the disjoint antipodal pairs `{±a}`, so it is
+  flag.
+* For `b=2`, its facets are `{±a,±2a}`.  Projectivize each antipodal pair.  If
+  `d` is even, the classes `[a]` and `[2a]` lie in the distinct gcd strata
+  `O_1` and `O_2`; the projective compatibility graph is bipartite and has no
+  triangle.  If `d` is odd, multiplication by `[2]` permutes the projective
+  unit classes and the compatibility graph is a disjoint union of its orbit
+  cycles.  A triangle would force `[2]^3=[1]`, equivalently
+  `8 == ±1 (mod d)`, so `d` would divide `7` or `9`, impossible for
+  `29<=d<=42`.
+
+In either `b=2` case, a clique uses at most two projective classes and is
+contained in the edge witnessing those classes.  Every projective edge lifts
+to its entire sign-saturated four-vertex facet `{±a,±2a}`; restoring the
+antipodal pairs therefore replaces each projective vertex by a simplex and
+preserves flagness.
+Together with `(26)--(28)`, this proves the exact threshold
+
+```text
+K_d is flag for 2<=d<=42, while K_43 is not flag.        (28a)
+```
 
 The exact relation with the short-order graph is
 
