@@ -393,3 +393,66 @@ Referees: `04-computation/amm12592_catalan_w_construction.py` (the reduction
 (W), the unit-atom ladder, and its verification) and
 `04-computation/amm12592_extract_lambda_atoms.py` (the `Lam_k` of the exact
 optima).
+
+
+## 9. The full atom family, and a metallic-ratio negative
+
+### 9.1 Domination is a modulation; alternation saturates
+
+`E_k` is dominated by `(1+u)^(a_k)` exactly when
+
+```text
+[u^i] E_k = binom(a_k,i) * P_k(a_k - i),      |P_k| <= 1,
+```
+
+so the legal atoms are the binomial profile modulated by any function
+bounded by `1`. The two extremes are `P_k = +-1`, giving
+`E_k = +-(1+u)^(a_k)` (`Lam_k = +-1`), and `P_k(y) = +-(-1)^y`, giving
+`E_k = +-(u-1)^(a_k)` (`Lam_k = +-(2w-1)^(a_k)`) -- the **alternating** atom.
+Since `Lam_k(1) = P_k(0)` and `Lam'_k(1) = -a_k(P_k(1)-P_k(0))`, one has
+`|Lam'_k(1)| <= 2 a_k` with equality exactly at the alternating atom: twice
+the reach of the unit atoms `u^c(1+u)^(a-c)`. It is `|Delta^j P(0)| <= 2^j`,
+saturated by alternation, that produces (ARCH). So alternation is the
+extremal atom, and the unit atoms of section 8.4 are the wrong family.
+
+### 9.2 What the ladder over the full family achieves
+
+Taking `P_k` integer-valued in `{-1,0,1}` makes every coefficient integral
+automatically and turns each level into a signed subset-sum with coins
+`binom(a_k, d-k)` over `{-1,0,+1}`. This is implemented and verified and
+improves the small cases from `7/4, 15/8` to
+
+```text
+m = 4 : C = 8/5     m = 8 : C = 8/5     m >= 16 : only C = 2.
+```
+
+Allowing general integer `e_{k,i}` returns exactly the triangular solver of
+THM-3008 (fresh variables always enter with coefficient `1`), now run with an
+**alternating-extreme** splitting policy in place of the centred one. That
+recovers the exact optima `3/2, 14/9, 25/16` for `m <= 16` and gives
+`52/33` at `m = 32`, `109/66` at `m = 64` -- still degrading.
+
+**The uniform construction at `C < 2` remains OPEN.** What is now known is
+where it must live: at the alternating extreme of the box, not near its
+centre, and the obstruction to the greedy is that the level residual must be
+split among fresh unit-coefficient variables without destroying later levels.
+
+### 9.3 Metallic ratios: refuted along the alphabet axis
+
+The `2` in the tangency relation `p = delta/(2-delta)` traces to
+`|Delta^j P(0)| <= 2^j`, i.e. to the binary alphabet. Replacing it by `q` and
+re-solving the stationarity system gives
+
+```text
+q = 2:  delta* = 0.6180339887 = 1/phi,     1/p* = 2.2360679 = sqrt5
+q = 3:  no root
+q = 4:  delta* = 0.5497004779,             1/p* = 6.2766900
+q = 5:  delta* = 0.5385972572,             1/p* = 8.2833744
+```
+
+None of the `q > 2` values is `1/x` for a metallic ratio `x^2 = nx+1`, and
+none of the `1/p*` is `sqrt(n^2+4)`. **The golden ratio here is not the
+`n = 1` member of a metallic family in this parameter**; it is specific to
+the binary alphabet, which is exactly what the Catalan reading of section 8.2
+predicts (`sqrt(1-4w)` at `w = -1`). Referee:
+`04-computation/amm12592_metallic_generalization_test.py`.

@@ -1,0 +1,7 @@
+ladder over the full (modulation) atom family
+  m   best verified slope C           profile a_0
+   4   8/5      = 1.6000          a_0=1
+   8   8/5      = 1.6000          a_0=3
+  16   2        = 2.0000          a_0=15
+  32   2        = 2.0000          a_0=31
+  64   2        = 2.0000          a_0=63
