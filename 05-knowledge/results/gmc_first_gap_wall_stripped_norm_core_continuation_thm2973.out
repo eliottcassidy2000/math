@@ -1,0 +1,19 @@
+FIRST-GAP NORM-CORE WIDTH-27-31 CONTINUATION
+thm2969_dependency_sha256=5be5df0fd058f436593339f78cd6240a47975082d22929c135ba811458753bf5
+scope=first_gap_(0,1,2,M);M=27..31;characteristic=0
+epsilon_support=11,12,21,31;new_quartic_wall=(31,25)
+core;M=27;degree=556;digest=c00583d9eded605bd99fed73892a358e91224a7d4086a19c0a55f0b394285b7f;strict_positive=1;PF2=1;resultant_degree=1216;flag_degree=12;calibrated_degrees=119,119;q200_roots=NONE;c300_roots=NONE;f400_roots=NONE
+core;M=28;degree=577;digest=9a6b8b02f59f2d1f31a7bc262863c4461aa8d1d0c89c1e4b6901237a68558591;strict_positive=1;PF2=1;resultant_degree=1262;flag_degree=13;calibrated_degrees=123,123;q200_roots=NONE;c300_roots=NONE;f400_roots=NONE
+core;M=29;degree=599;digest=98f7a7599769664a781edb7fa1f61bd5b4a71092c3fef345de74c66094a42e18;strict_positive=1;PF2=1;resultant_degree=1308;flag_degree=13;calibrated_degrees=128,128;q200_roots=NONE;c300_roots=22;f400_roots=NONE
+core;M=30;degree=617;digest=ba6fc2329242f5f222295ec261b36d3a57e353206716667d67ee26e38b17c7a1;strict_positive=1;PF2=1;resultant_degree=1354;flag_degree=14;calibrated_degrees=132,132;q200_roots=NONE;c300_roots=NONE;f400_roots=NONE
+core;M=31;degree=639;digest=c9ffa50924c9d0298fd4995b1343fb200d3da0c38e1fcbe07347d97b8908e81c;strict_positive=1;PF2=1;resultant_degree=1400;flag_degree=14;calibrated_degrees=137,137;q200_roots=21;c300_roots=NONE;f400_roots=25
+core_record_digest=cf5513fec8a47aea1b090dca3fa1d931d2a07704cdd576cd20626b197f409fb3
+flag_record_digest=92a1d2eb0a13263f16884fdd796d4e910e048a74522ecb9f985121b72bceead3
+degree_law=23M-2floor(M/3)-2floor(M/2)-floor(2M/3)-3-epsilon;corrected_baseline_d(M+6)-d(M)=124_for_M=21..25
+M29_c22_invoice=(0,1,19,4,0,23,24,24,0);order=(q,c,B,E,H,W,raw,removed,core)
+M31_q21_invoice=(1,0,19,4,0,23,28,28,0);M31_f25_invoice=(0,0,20,4,0,24,24,24,0)
+M31_pure_roots=q21,f25;both_simple;corrected_core_degree=639
+widths=5;determinant_interpolants=10;paired_depth_controls=15
+individual_outside_determinant_evaluations=30
+M32_boundary=NOT_COMPUTED;no_arbitrary_width_extrapolation
+all_exact_checks=PASS
