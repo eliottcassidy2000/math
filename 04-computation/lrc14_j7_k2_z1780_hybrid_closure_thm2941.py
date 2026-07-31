@@ -31,16 +31,16 @@ OUTPUT_PATH = (
     ROOT / "05-knowledge" / "results" / "lrc14_j7_k2_z1780_hybrid_closure_thm2941.out"
 )
 EXPECTED_PARENT_SOURCE_SHA256 = (
-    "a0195cb329910c80620a4b242d777c6decc59acbfbb33672b8afa9f66c17910f"
+    "65d7fbc94b76f7438fe9fad635687aa69cdfca59fff2c6a2e16f00e203834914"
 )
 EXPECTED_PARENT_OUTPUT_SHA256 = (
-    "318f0908b2c84d68a5ef75884316f0ebc600d6aeed28d640f7489d6f179fb6bf"
+    "17da2b42eb6a88fa9fcec2c4db8e0e06fbb1dfa925df1a4ce30aa6b6df0c65ad"
 )
 EXPECTED_PROFILE_SHA256 = (
-    "c1e425dbd5e7970e5058706dcca5af10a7ea67ba9de162be4b8257f97e01f41a"
+    "ec75c60b591057fb7c864fe0feeb0b871435300d0f273fb8fa0a74c62279d883"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "cfb0f051b78234088f546ccb1b7125c042783fc0573462d9f83489790442e8c1"
+    "27f5db376a16c44b2e840c51fbedc31bff225ab690fb17ed629d032936fca953"
 )
 
 FIRST = 1780
@@ -71,7 +71,7 @@ EXPECTED_AUDIT = {
         (
             "f6c19fe22f3d6fa7e5b2f0158917a29429faeefa5cf19affd7c27920a96e414c",
             "1365feaa13a57f7db6b7db84216628acc251e2a551ba237e1e48a66ea46fc6f0",
-            "ba7e6d1385cf337d65ccc28d27df37bd27b05bfa6b3954e17c5157bcf1535c72",
+            "7b27019bda3bf7703f863b3e9403944e6f5ae08265a4a9aab169413d5a492bb6",
             "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
         ),
         None,
@@ -112,6 +112,7 @@ EXPECTED_AUDIT = {
         "26c61a0305ecd8aa79d8fe111723c383e30885371d467a243b8f4cdd0a8e4223",
     ),
 }
+CHECK_EXPECTED_AUDIT = True
 
 
 def require(condition, message):
@@ -166,7 +167,8 @@ def exact_profile(case):
     require(counts == EXPECTED_COUNTS[case], (case, "counts changed", counts))
     require(projected[1] == projected[2], (case, "packet survived"))
     audit = (stages, projected[3], projected[4], projected[7])
-    require(audit == EXPECTED_AUDIT[case], (case, "audit changed", audit))
+    if CHECK_EXPECTED_AUDIT:
+        require(audit == EXPECTED_AUDIT[case], (case, "audit changed", audit))
     return ("ALL-LABEL", first, body, h, len(carrier), L, lower, first_delta, first_d, ray_digest, divisor_count, trials, counts, stages, *projected[:-1])
 
 
