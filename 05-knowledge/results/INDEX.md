@@ -278,6 +278,14 @@
   for byte.  Source/output/profile/semantic SHA-256 are
   `8200ba7c...18574` / `ebed1974...486eb` /
   `ac4dca9b...a5367` / `455f5935...bc92ca`.
+- `lrc14_j7_k2_z1625_forced_high_closure_thm2980.py` -> matching `.out`
+  [FINITE-EXACT THM-2980 BOUNDARY INPUT; THM-2980 REMAINS RESERVED].  After
+  the empty atlas gap `1626..1629`, the singleton body
+  `(1,2,10,12,13,14)` at `1625` is forced-high scalar-empty: its exact
+  one-high gap is `142815671/572047339500>0` (and the duplicate-permitting
+  two-high gap is also positive).  Thus the projected `k=2` cap is `1624`.
+  Source/output/profile/semantic SHA-256 are `ec98feab...e43935` /
+  `85947083...17fe7a` / `1f8244b6...4ab72c` / `863e9fd6...6dd07c`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:
