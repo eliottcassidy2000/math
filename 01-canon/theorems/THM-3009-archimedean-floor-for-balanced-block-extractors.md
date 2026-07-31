@@ -166,14 +166,42 @@ and the `x`-stationarity, using `log_2((1-p)/p) = 1 + H'(delta)`, gives
 gamma = -H'(delta) / [ H(p) + (1 + H'(delta))(1-p) ].
 ```
 
-Solving the remaining equation to 40 digits returns
+**The remaining equation is a quadratic** (this replaces the 40-digit
+root-find of the first draft; the whole chain is now algebraic).
+
+*Lemma.* The closure `alpha_1 = alpha_2` is equivalent to
 
 ```text
-delta* = 0.6180339887498948482045868... = 1/phi     (agreement to 42 digits)
-p*     = 0.4472135954999579392818347... = 1/sqrt5   (exact)
+H(delta) = -H'(delta) (2 - delta).                                (CLO)
 ```
 
-and `p* = 1/sqrt5` then follows *algebraically* from `delta* = 1/phi`:
+*Proof.* With `D = H(p) + (1+H')(1-p)` and `gamma = -H'/D`,
+
+```text
+1/gamma + 1 - p = [D + (1-p)(-H')]/(-H')
+                = [H(p) + (1-p)(1 + H' - H')]/(-H')
+                = [H(p) + 1 - p]/(-H'),
+```
+
+so `alpha_2 = (2-delta)(-H')/[H(p)+1-p]` while
+`alpha_1 = H(delta)/[H(p)+1-p]`. The bracket cancels. QED
+
+*Lemma.* (CLO) is equivalent to `delta^2 = 1 - delta`.
+
+*Proof.* Put `L = log_2 delta`, `M = log_2(1-delta)`. Then
+`H = -delta L - (1-delta) M` and `-H' = L - M`, so (CLO) reads
+`-delta L - (1-delta)M = (2-delta)(L-M)`. Collecting,
+`-2L = -M`, i.e. `2L = M`, i.e. `delta^2 = 1-delta`. QED
+
+The unique root in `(1/2,1)` is `delta* = (sqrt5-1)/2 = 1/phi`. Then
+
+```text
+2 - delta* = (5 - sqrt5)/2 = sqrt5 (sqrt5-1)/2,
+p*  = delta*/(2-delta*) = 1/sqrt5      (exactly),
+-H'(delta*) = log_2(delta*/(1-delta*)) = log_2(1/delta*) = log_2 phi.
+```
+
+So `p* = 1/sqrt5` follows *algebraically* from `delta* = 1/phi`:
 `delta/(2-delta) = ((sqrt5-1)/2)/((5-sqrt5)/2) = 1/sqrt5`. With
 `delta* = 1/phi` one has `H'(1/phi) = -log_2 phi`, and the denominator
 collapses exactly:
@@ -195,7 +223,26 @@ C_arch = 1 + log_5(phi^2) = log_5(5 phi^2) = log_{sqrt5}(sqrt5 * phi)
 ```
 
 with `5 phi^2 = (15+5 sqrt5)/2` and `sqrt5 * phi = (5+sqrt5)/2 = 2+phi`.
-Verified to 51 digits against the stationarity solve.
+Every step above is an identity; the numerics (51 digits) are only a check.
+
+### 3.1a General alphabet: only q = 2 is golden
+
+The `2` in (CLO) is the alphabet size (it enters through
+`|Delta^j P(0)| <= 2^j`). Repeating the second lemma with `q` in place of `2`
+gives `-qL = (1-q)M`, i.e.
+
+```text
+delta^q = (1-delta)^(q-1).
+```
+
+`q = 2` is the golden quadratic `delta^2 = 1-delta`; no other `q` gives a
+metallic equation. Roots: `0.6180339887 (=1/phi), 0.5698402910,
+0.5497004779, 0.5385972572` for `q = 2,3,4,5`, matching the independent
+full-system numerics of section 9.3 to every printed digit (and resolving its
+`q=3` "no root", which was a root-finder artifact). This is the *reason*
+behind the metallic-ratio negative: the golden ratio is not the first member
+of a metallic family here, it is the `q=2` member of the family
+`delta^q = (1-delta)^(q-1)`.
 
 **The extremal profile is therefore a Sturmian (Beatty) sequence of slope
 `log_5(phi^2)`:** `a_k = min(m-1-k, floor(gamma*(m+k)))`.
@@ -252,8 +299,32 @@ python3 04-computation/amm12592_archimedean_lower_bound.py 4 8 16 32 64 128 256
 python3 04-computation/amm12592_archimedean_threshold_asymptotic.py
 ```
 
-QED for reductions A and B and for the finite-`m` bounds; the asymptotic
-constant is a numerical evaluation of (T).
+QED for reductions A and B, for the finite-`m` bounds, and -- since
+section 3.1 -- for the closed form of the asymptotic constant.
+
+## 10. Exactly what is still missing for `C* >= C_arch`
+
+Note first that **no asymptotics are needed for a rigorous bound**: (ARCH) at
+any single `m` is a finite exact-integer computation, and `m = 4096` already
+certifies `C* > 1.597`. What the limit statement `C* >= C_arch` still needs is
+only:
+
+1. **The scaling limit.** `log_2 binom(m-1, delta m)/m -> H(delta)` and
+   `log_2[binom(a,r) 2^(a-r)]/m -> alpha H(r/alpha) + (alpha - r)` uniformly
+   on compacts -- routine Stirling, but it must be stated with the error term,
+   because the sum over `k` has `O(m)` terms and the per-term polynomial
+   factors must not accumulate.
+2. **Interiority.** That the binding `delta` is interior (not at `0` or `1`)
+   and the inner `max_x` is attained in the interior of the admissible range,
+   so that the three stationarity conditions of section 3.1 are the correct
+   optimality system rather than one branch of a boundary case. The inner
+   argmax is known to slide from `x = kappa` to `x = 0` as `delta` grows
+   (section 3.2), so this needs a genuine argument, not an appeal to
+   smoothness.
+
+Neither is deep, but neither is written. Everything else in the chain --
+(ARCH) itself, the reduction to (CLO), and the evaluation
+`(CLO) => delta^2 = 1-delta => C_arch = log_5(5 phi^2)` -- is now proved.
 
 
 ## 7. The construction: what fails, and why (recorded negative)
