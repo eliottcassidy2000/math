@@ -1,11 +1,12 @@
 LRC14 projected k=3 z1=275 through z1=272 septimal torsion/status descent
-upstream_cap275_source_sha256=794f925c2d293ca3123e49f539ba9e753b03a09d3481162d0ce0166fe3bc246b
-upstream_cap275_output_sha256=af77697e3c67f426e0dfd7e0ed9295d8958a2655959ea108afd2ba782fa49ea6
+upstream_cap275_source_sha256=e5eff0899a89b99187bf9dfbb1ac8da40ad9d5f021079771020af7cef43e5114
+upstream_cap275_output_sha256=ad5e01735ca9591c7161b75bb801cd011c6fc24d69f791a004e041ccb85ea075
 atlas_output_sha256=cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda
 scope=all39 exact atlas body rows at occupied heights275,274,273,272;no finite label horizon
 level_totals={275: (2033, 273, 1695, 65), 274: (67, 1, 66, 0), 273: (175, 96, 79, 0), 272: (4, 0, 4, 0)}
 totals=states:2279;crude_kills:370;status_kills:1844;septimal_residuals:65
 status_M_histogram={2: 1, 3: 41, 4: 74, 5: 346, 6: 223, 7: 487, 9: 16, 10: 3, 11: 118, 13: 474, 14: 16, 18: 8, 22: 4, 24: 8, 39: 3, 55: 7, 110: 9, 117: 2, 165: 4}
+canonical_profile_sha256=1139218bdb4e9d19a3a64b22103030ef682e835803f5caf07c1659b0ce788f5b
 independent_exact_farkas_checks=1844/1844:PASS
 pair_overlap_exhaustive_controls=946
 common_table_controls=coverable positive instance accepted;incompatible hostile instance rejected
@@ -128,5 +129,5 @@ SEPTIMAL;row=((2, 5, 9, 11, 13, 14), (10010, 10780, 22932, 1261260), 1261260, (3
 atlas_exact_check=z275:10,z274:7,z273:19,z272:3 body rows;z271 empty;next occupied z270 with26 bodies
 ledger_decrement=375713-39=375674;decrement counts atlas body rows,not quotient states
 conclusion=all projected k3 rows at occupied heights275..272 are empty;with pinned cap275 package,projected k3 cap<=270;next exact frontier=270
-semantic_sha256=a8eb22d49d2e1e05363bcf4bfe7077a63d953010efd9fccd08707398a715dd5f
+semantic_sha256=0960c65f29707e6ce1b295f35f0118960ce420c1d27df58365b91999c1faca9b
 all_exact_controls=PASS

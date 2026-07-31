@@ -30,8 +30,11 @@ Format per entry:
   only `(denominators,q,M,marginals,capacity-set,load-histogram)` and the number
   of verified instances; the certificate itself and its basis-dependent
   contradiction value are excluded.  The repaired `z_1=297` artifact is then
-  repinned through the lower descent.  All ray, high-wall, finite-low-pair,
-  torsion-density, cap, and ledger conclusions survive unchanged.
+  repinned through the lower descent.  The later `z_1=275..272` septimal
+  descendant likewise imports only this certificate-free instance ledger;
+  all `1,844` duals are still checked exactly.  All ray, high-wall,
+  finite-low-pair, torsion-density, cap, and ledger conclusions survive
+  unchanged.
 - **Rule:** a correction to a proof-search digest is a dependency-graph
   invariant, not a one-file patch.  New descendants of a nondeterministic
   solver must reuse the canonical instance ledger explicitly; never copy the

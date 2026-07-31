@@ -1514,12 +1514,52 @@ a9db04e9bf53709199a8fb18f618ae941e58afb21c7ade2078769ce8313305f4
 160b026425cce752b8ac0f8a50561bbc13574db0d5704c901d4a52c53bbff1dc.
 ```
 
+### The `z_1=275` septimal closure and the `274..272` status addendum
+
+THM-2979 closes the ten rows at `z_1=275`.  Their `2,033` attained states
+split as `273` crude capacity kills, `1,695` exact common-status kills, and
+`65` one-high terminals on five bodies.  In every terminal case the complete
+fixed-safe cell count is greater than `L/7` and the high denominator is
+divisible by seven.  Distinct safe residues therefore exceed `d/7`; two lie
+in one coset modulo `d/7` and have exact order seven.  Primitive unit rays
+preserve that order, so their strict radius-`1/14` danger arcs are disjoint.
+This gives the scoped THM-2979 cap `z_1<=274` and ledger `375,703`.
+
+The same exact referee separately evaluates all `29` subsequent occupied
+rows at `274,273,272`.  Their level profiles are
+
+```text
+274: 67  = 1 crude + 66 status + 0 residual
+273: 175 = 96 crude + 79 status + 0 residual
+272: 4   = 0 crude + 4 status + 0 residual.             (25q4)
+```
+
+Thus the lower addendum contains `246=97+149` states and no terminal packet;
+all `149` common-status exclusions are independently checked exact rational
+Farkas contradictions.  Height `271` is empty and the next occupied atlas
+height is `270`, with `26` bodies.  Combining this addendum with THM-2979
+lowers the projected `k=3` cap and ledger to
+
+```text
+z_1<=270,                 375,703-29=375,674.             (25q5)
+```
+
+This is still only the projected `k=3` necessary sector and is not LRC(14).
+The combined referee source/output/profile/semantic hashes are
+
+```text
+44d9369fe3151d78f5a281cb8ecc26d859807b635980552d8e5c95c0b5ff826e
+d31d9ec1f45a3aa5d087a2b8724fc75480b0d0b4d2b99e544832b0947d408b67
+1139218bdb4e9d19a3a64b22103030ef682e835803f5caf07c1659b0ce788f5b
+0960c65f29707e6ce1b295f35f0118960ce420c1d27df58365b91999c1faca9b.
+```
+
 The physical reconciliation source/output pairs are
-`d209433bae4411e1a9597cb60d792b0c18897dffc333e60baaad5abcdaf6cf29 /
-6f24829835f1a9eb2f3afcc668ccfa13d21320bb53b27fb89e30911bd20569ab`
+`4b972500c6772a11e9ebf905e28e9324a736323ea9a4be6e66714b24affd6dc6 /
+e39d4be078a7c69a50860de138378f963926a3a68b7b5582f606302f4e1b7f75`
 and
-`ac7d5e5dfda7451f903c1f79bff1422964225b8a2f1400b2f3e53b41b476b776 /
-554f73032b2e72f324ee83c2ff751b28d58ccb2a3d367b96ee42166dd2086005`.
+`a0b3c0cafbcdef961f444b4a776884ad8e3f897761ba3b2c7df6a2a0a6d3645f /
+c9772f8014b5b68ed7581a68b4365e167da306d72eef6c1e5124037597b886e2`.
 The `z_1=324` frontier source/output pair is
 `7eaaf551d2bd4ae386e2db4452edac7d30c25f7fc67b71967e48454d688bf78e /
 db3c5c68c4aa2f61584ef91dd2171901888270edbf17e860d40f16a64d3a9242`;
