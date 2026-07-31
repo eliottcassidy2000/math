@@ -171,6 +171,55 @@ seen inside the closure recursion, and it isolates the obstruction: the
 threshold of the `H = 1` checkpoint program is *purely archimedean*,
 governed by criterion (4) alone.
 
+## 4c. The threshold is ~0.5980, and BOTH certificate readings fail it
+(VERIFIED-EXACT, 2026-07-31; integrates klein-S428 and opus THM-3006)
+
+Exact bisection of criterion (4) at fixed `R` gives a threshold sequence
+that increases in `R`:
+
+```text
+R = 256 : gamma* in (0.584902, 0.584906)
+R = 512 : gamma* in (0.590652, 0.590657)
+R = 1024: gamma* in (0.593925, 0.593929)
+```
+
+Successive differences `0.005750, 0.003273` have ratio `0.569`, so the
+geometric extrapolation is `0.5939 + 0.0043 = 0.5982` — agreeing with the
+independent asymptotic entropy bisection `gamma* ~ 0.59799`. Both give
+
+```text
+C = 1 + gamma*  ~  1.598.
+```
+
+**Consequence for certificate (27).** klein-S428 observed that the raw
+reading `gamma = 2457/6592 = 0.3727` is killed instantly by (4), while the
+`(C-1)/C` reading `gamma = 2457/4135 = 0.5941958887...` "survives to
+`R = 1024`". The finite-`R` table above explains why, and shows the
+survival is an artifact: the `R = 1024` threshold `0.593927` sits only
+`2.7e-4` below `2457/4135`. At the next scale the ordering flips —
+
+```text
+gamma = 2457/4135 :  R = 1024  worst log-ratio  +0.17365 (t = 1)   AMPLE
+                     R = 2048  worst log-ratio  -2.66767 (t = 783) DEFICIENT
+```
+
+— exactly the pattern by which `gamma = 1/2` survives to `R = 16` and dies
+by `R = 64`. **So criterion (4) refutes both readings of the certificate
+weight inside the `H = 1` checkpoint-closure class.** Scope: (4) is
+necessary for that class only, so this refutes "the certificate weight is
+the rate of an `H = 1` dyadic-checkpoint construction"; it does not bound
+`C*` itself, and per klein-S428 the weight is in any case an output of the
+source's construction rather than a consequence of the inequality.
+
+**Consistency with opus THM-3006.** That theorem exhibits exactly fair
+rules with within-shell ratios `rho(4) = 3/2`, `rho(8) = 14/9`,
+`rho(16) = 25/16`, `rho(32) <= 11/7` — an increasing sequence
+`1.5000, 1.5556, 1.5625, 1.5714`. Criterion (4) predicts that no
+construction of this class can push the limit below `~1.598`; the two
+lines are therefore compatible, and the sharp prediction is
+**`sup_r rho(2^r) ~ 1.598`, in particular `< 2` (so `C* < 2`) but not
+below `1.59`**. That is falsifiable at `r = 6, 7`.
+
 ## 5. Verified closures (VERIFIED-EXACT)
 
 (*) is solved exactly at `gamma = 1/2, D0 = 0` for `R = 2, 4, 8, 16`, and
