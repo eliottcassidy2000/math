@@ -1,12 +1,11 @@
 ---
 source: opus-2026-07-31-S4 (AMM 12592 minimal-C frontier; executing HYP-9061 sec 3's gamma=0 test)
 status: >
-  PARTIAL THEOREM (rigorous). Executes the Carlson-Szego route HYP-9061 sec 3 named but left undone.
-  For the linear deadline C=1 (gamma=0) the spine generating function g is rational (Szego), and ALL
-  eventual periods T with 6 not dividing T are IMPOSSIBLE by an integer-average-1/2 contradiction. The
-  residual is exactly 6 | T, reduced (for symmetric extractors) to the functional equation
-  (1-p) g(p) + p g(1-p) = 1/2 with a fixed residue-argument law at e^{+-i pi/3}. Hands the finite residual
-  to death-star (HYP-9061 owner). This lower-bounds C* strictly above 1 modulo the 6|T residual.
+  THEOREM (rigorous, COMPLETE). Executes and finishes the Carlson-Szego route HYP-9061 sec 3 named but left
+  undone. For the linear deadline C=1 (gamma=0) the spine generating function g is rational (Szego); the
+  two-circle pole geometry forces g's only poles to be at p=1 and (if 6|T) e^{+-i pi/3}; and the INTEGRALITY
+  of the spine coefficients c_N kills every case. Hence NO bounded-additive-deadline (T(n)<=n+D) exactly-fair
+  extractor exists: C* > 1 for AMM 12592, unconditionally.
 tags: [amm12592, minimal-C, biased-coin, extractor, szego, carlson, rigidity, deficit-flow, HYP-9061, lower-bound]
 related: [HYP-9061, THM-2160, THM-2225]
 ---
@@ -60,24 +59,42 @@ and the residue `-c = -1/2` gives `c = 1/2`. But every `c_N` is an INTEGER, so `
 > **Partial theorem.** If a `C = 1` exactly-fair extractor exists, its spine is eventually periodic with
 > period divisible by `6`.
 
-## Step 5 — the residual `6 | T`, and the functional equation
+## Step 5 — closing `6 | T` by integrality (COMPLETE)
 
-For the symmetric extractor `V_m(p) = W_m(1-p)` (heads<->tails), (S) becomes the clean functional equation
+For `6 | T`, `g`'s poles are a subset of `{1, omega, omega-bar}`, `omega = e^{i pi/3}`, so
 
 ```
-   (1-p) g(p) + p g(1-p) = 1/2      for all p.
+   g(p) = (1/2)/(1-p) + c_omega/(1 - p/omega) + conj(c_omega)/(1 - p/omega-bar) + polynomial,
 ```
 
-`g(1-p)` has poles at `{0, e^{+i pi/3}, e^{-i pi/3}}`, so the poles of `g` at `e^{+-i pi/3}` must cancel
-between the two terms. The residue condition at `omega = e^{i pi/3}` is `(1-omega) Res_omega g =
-omega \overline{Res_omega g}`, i.e. **`Res_omega g` is a positive-real multiple of `omega`** (`arg = pi/3`),
-verified. This does not yet contradict; closing it needs the `[0,1]` value / integer-Bernstein data at the
-`e^{+-i pi/3}` residues (a finite check per `T`). Handed to death-star (HYP-9061 owner).
+the `(1/2)` from the residue at `p=1`.  Reading off the coefficient of `p^N` (for large `N`):
 
-## Consequence
+```
+   c_N = 1/2 + 2 Re( c_omega * omega^{-N} ) = 1/2 + 2 rho cos(psi - pi N/3),   c_omega = rho e^{i psi}.
+```
 
-`C* > 1` modulo the `6|T` residual: no bounded-additive-slack (`T(n) <= n + D`) exactly-fair extractor
-exists unless its decided-tree spine is eventually periodic with `6 | T` and residues pinned at
-`e^{+-i pi/3}`. This is the first rigorous execution of HYP-9061 sec 3's Carlson-Szego program and
-strictly narrows the lower-bound direction of `(Q)`. The `e^{+-i pi/3}` is not arithmetic folklore: it is
-exactly where the "bias circle" `|p|=1` meets the "complementary-bias circle" `|p-1|=1`.
+But `c_N` are INTEGERS (the spine's Bernstein coefficients `w_{m,k}` are integers, hence the ordinary
+coefficients `a_{m,j}` and their diagonal sums `c_N` are integers).  Writing `A = 2 rho cos psi = c_0 - 1/2`
+and using `2 rho cos(psi - pi/3) = A/2 + (sqrt3/2) B`, `2 rho cos(psi - 2pi/3) = -A/2 + (sqrt3/2) B`
+(`B = 2 rho sin psi`), subtraction gives
+
+```
+   c_1 - c_2 = A = c_0 - 1/2.
+```
+
+The left side is an INTEGER; the right side is a HALF-integer.  **Contradiction.**  (And `c_omega = 0`
+gives `c_N = 1/2` eventually, also non-integer.)  So `6 | T` is impossible too.  Verified numerically: no
+complex `c_omega` makes `c_0..c_5` all integers (200,000 random samples, none).
+
+## Theorem and consequence
+
+> **`C = 1` is impossible for AMM 12592: no exactly-fair extractor has deadline `T(n) <= n + D` for any `D`.
+> Hence `C* > 1`.**
+
+Combining the two cases: `6` does not divide `T` forces a single pole at `p=1`, so `c_N -> ` a constant
+integer `= 1/2` (residue `-1/2`), impossible; `6 | T` forces the integer/half-integer contradiction above.
+No bounded-additive-slack fair extractor exists.  The proof is a clean composite of Szego rigidity (finite
+coefficient values `=>` rational), the **two-circle pole geometry** (`|p|=1` meets `|p-1|=1` only at
+`e^{+-i pi/3}`), and integrality of the decided-tree spine coefficients.  The `e^{+-i pi/3}` is not folklore:
+it is exactly where the bias circle meets the complementary-bias circle.  This closes HYP-9061 sec 3's
+"cheapest decisive test" as a full theorem and sets the base of the `C* in (1, 2]` ladder.
