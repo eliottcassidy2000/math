@@ -27,6 +27,8 @@ depends_on:
 related:
   - THM-2979-projected-k3-z275-ten-body-status-and-located-torsion-closure
   - THM-2981-projected-k3-z270-to-z247-cardinality-torsion-descent
+  - HYP-2935-lrc14-bigraded-relation-signature
+  - HYP-3003-summand-multiplicand-farey-basis-merge
 ---
 
 # THM-2984 -- signed-ray attainment and primitive-unit phase gate
@@ -425,6 +427,81 @@ maximum-gap profile.  Below the cardinality gate, a terminal computation need
 not enumerate centers: it records the cyclic gaps of each `uS`; the affine
 transporter is empty exactly when every unit has maximum gap at most
 `d-kappa`.
+
+### 4.3 Additive compositions under diagonal unit multiplication
+
+The whole complex has a second exact normal form which exposes the operation
+split hidden by `(13g)`.  Let `S` have `s>=1` elements and let
+
+```text
+Delta_(s-1)(kappa)
+ ={(a_1,...,a_(s-1)): every a_i>=1 and sum_i a_i<=kappa-1},   (13o)
+```
+
+with the unique empty composition when `s=1`.  Then `S` is a face of
+`K_d^tr` if and only if there are an ordering `(x_1,...,x_s)` of `S`, a unit
+`u mod d`, and `a in Delta_(s-1)(kappa)` such that
+
+```text
+u(x_(i+1)-x_i)=a_i mod d,       1<=i<s.                (13p)
+```
+
+If `uS subset C_A`, order the distinct images by their offsets
+`0<=t_1<...<t_s<=kappa-1` and take `a_i=t_(i+1)-t_i`.  Conversely, telescope
+`(13p)`: the images are `ux_1,ux_1+a_1,...,ux_1+sum_i a_i`, all in the block
+beginning at `ux_1`.  This proves the equivalence, including all wraparound
+cases because `kappa<d`.
+
+Thus addition supplies a short positive-composition simplex, while
+multiplication by a unit tests the diagonal orbit of the ordered difference
+chain.  Translation has disappeared.  In this precise finite setting, this
+realizes the operation split proposed in HYP-2935 and HYP-3003; it does not
+promote their broader synthesis claims.
+
+At a prime modulus `p` and for `s>=2`, every adjacent difference is
+invertible.  For a fixed ordering, projectivize its difference chain:
+
+```text
+[x_2-x_1:...:x_s-x_(s-1)] in P^(s-2)(F_p).             (13q)
+```
+
+The ordering contributes a face exactly when this point lies in the
+projective image of `Delta_(s-1)(kappa)`: equality of projective points
+supplies one common nonzero scalar, hence the single unit required in
+`(13p)`, rather than separate coordinatewise units.
+
+Distinctness has also become a standard arrangement complement.  Every
+consecutive subsum of the difference chain is nonzero, since
+
+```text
+sum_(k=i)^j (x_(k+1)-x_k)=x_(j+1)-x_i != 0.            (13q1)
+```
+
+Thus ordered `s`-point configurations modulo affine translation and unit
+scaling lie in the projectivized complement of the type-`A_(s-1)` braid
+hyperplanes; reordering acts by `S_s`.  The face predicate asks whether this
+reordering orbit meets the projective short-composition image.
+
+For a triple this is the finite short-summand ratio set
+
+```text
+R_(p,kappa)={b/a mod p:a,b>=1 and a+b<=kappa-1};        (13r)
+```
+
+one tests the six orderings of the triple.  If `r=(z-y)/(y-x)`, their ratio
+orbit is
+
+```text
+{r,1/r,-1-r,-1/(1+r),-r/(1+r),-(1+r)/r},              (13s)
+```
+
+with repetitions at special orbits.  The set `(13r)` is the modular image
+of a Farey-like positive triangle; injectivity of distinct short fractions
+is not asserted.  This is the first genuinely higher-order sidecar after the
+pair graph `(13k)`, and gives a small projective lookup table for triple
+certificates.  At composite `d`, a difference may be a zero divisor and this
+normalization is unlawful; the diagonal unit orbit together with the
+difference-gcd strata `(13i)` is the correct nonuniform replacement.
 
 ## 5. Gcd-stratum refinement and the exact obstruction
 
