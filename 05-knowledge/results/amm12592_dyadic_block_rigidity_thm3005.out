@@ -1,0 +1,17 @@
+N   l   balanceable  F2-criterion  [2^a,2^g)  brute
+ 1   1   True         True         True      True    ratio=2
+ 1   3   True         True         True      True    ratio=4
+ 1   7   True         True         True      True    ratio=8
+ 1  15   True         True         True      True    ratio=16
+ 2   2   True         True         True      True    ratio=2
+ 2   6   True         True         True      True    ratio=4
+ 2  14   True         True         True      True    ratio=8
+ 4   4   True         True         True      True    ratio=2
+ 4  12   True         True         True      True    ratio=4
+ 8   8   True         True         True      True    ratio=2
+16  16   True         True         True      True    ratio=2
+
+mismatches: 0
+wide sweep N,l <= 299 mismatches: 0
+balanced blocks with ratio < 2 (l < N): []
+balanced blocks with non-dyadic start: []

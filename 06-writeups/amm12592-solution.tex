@@ -424,9 +424,10 @@ balance altogether.
 
 \medskip
 \noindent\textbf{The linear-deadline frame.}
-The proposer's commentary proposes minimizing $C$ such that some method has
-$T(n)\le Cn+D$ for a constant $D$. Four remarks, in increasing order of
-openness.
+The proposer's commentary poses the problem of minimizing $C$ such that, for
+some constant $D$, a method always terminates within $Cn+D$ flips. Five
+remarks, in increasing order of openness. The one we would most like to
+report is remark~4: slope $2$ is \emph{not} optimal.
 
 \emph{1. Taken literally, the pair $(C,D)$ is pinned at $n=1$ and cannot see
 any of these improvements.} By Lemma~\ref{lem:floor}, $T(1)\ge2$ forces
@@ -466,9 +467,10 @@ $\tfrac43n$ unless $n$ is a power of two --- but pays $2n$ at $n=2^k$.
 Theorem~\ref{thm:c}'s method has the complementary profile: fast \emph{at}
 the powers of two ($\tfrac32n$) and at the top of each shell (the floor
 $n+1$), slowest just above a power of two, where every even $n$ is costly.
-The two are Pareto-incomparable, and every
-method we know pays slope close to $2$ somewhere in the vicinity of the
-powers of two. The linear-envelope difficulty concentrates $2$-adically.
+The two are Pareto-incomparable. Both, and every classical construction,
+pay slope close to $2$ somewhere near the powers of two --- though remark~4
+below shows that this is avoidable. The difficulty concentrates
+$2$-adically.
 \begin{center}
 \begin{tabular}{lccccccccccccccc}
 \toprule
@@ -488,27 +490,67 @@ The optimum $T(n)=n+1$ is settled at every odd $n$ and at $n=2^{r+1}-2$; the
 first undetermined value is $T(4)\in\{5,6\}$, with $T(4)=6$ optimal among
 shell-balanced methods.)
 
-\emph{3. Why every known method has slope $2$.} Suppose a method decides
-every sequence with $n$ in a block $[N,N+\ell)$ by flip $N+\ell$, with
-$\ell=2^a$. On the branch $X_1=0$ the terminal words are $0^N$ followed by a
-nonzero tail of length $\ell$, and, $\ell$ being a power of two, Lucas's
-theorem makes every interior tail-weight class $\binom{\ell}{j}$
-($0<j<\ell$) even --- so all of them can be split evenly. The single class
-that cannot is the corner $0^N1^{\ell}$, which is alone in its class and
-forces a deficit of $\tfrac12 p^Nq^{\ell}$; the branch $X_1=1$ forces the
-mirror deficit $\tfrac12 p^{\ell}q^{N}$. When $\ell=N$ --- ratio exactly two,
-i.e.\ slope $2$ --- these two deficits sit on the \emph{same} monomial
-$p^Nq^N$ and cancel: that is precisely the middle pair $0^m1^m$, $1^m0^m$ in
-the solutions above. At any ratio below two the two corners are distinct
-monomials, and their half-unit deficits must be transported to other cells of
-the tree and repaid there within integer budgets. Whether that transport can
-be arranged, uniformly in $N$, is exactly the content of the proposer's
-question.
+\emph{3. The dyadic structure is forced.} Call $[N,N+\ell)$ a \emph{block} if
+a method decides every critical value in it by flip $N+\ell$, and
+\emph{balanced} if every composition class of its terminal set
+$\{0^Ny: y\ne 0^\ell\}\cup\{1^Ny: y\ne 1^\ell\}$ has even size --- the
+hypothesis that makes Lemma~\ref{lem:exact} apply block by block, and which
+all the methods above satisfy. Counting by weight, the class sizes are the
+coefficients of $(1+u^N)(1+u)^\ell-1-u^{N+\ell}$, so the block is balanced
+iff $(1+u^N)(1+u)^\ell=1+u^{N+\ell}$ over $\mathbb F_2$. That happens
+\emph{if and only if $N$ and $N+\ell$ are both powers of two.} Indeed
+sufficiency is $(1+u)^{2^g}=1+u^{2^g}$; for necessity, comparing coefficients
+in degrees $1,\dots,N$ forces $\binom{\ell}{k}$ even for $k<N$ and
+$\binom{\ell}{N}$ odd, so $N=\min\{k\ge1:\binom{\ell}{k}\text{ odd}\}
+=2^{\nu_2(\ell)}$ by Lucas, whence $1+u^N=(1+u)^N$ and the criterion becomes
+$(1+u)^{N+\ell}=1+u^{N+\ell}$. So every balanced block is a dyadic interval
+$[2^a,2^g)$: the shells of parts (a)--(c) are not a design choice. In
+particular $\ell\ge N$, so no balanced block has ratio $(N+\ell)/N$ below
+two.
 
-\emph{4. The frontier.}
-Lemma~\ref{lem:floor} gives $C^{*}\ge1$ and part (a) gives $C^{*}\le2$; we do
-not know whether any method beats slope $2$, nor even whether $C=1$ (that is,
-$T(n)\le n+D$) is impossible, though we expect it is. The question has a
+\emph{4. Nevertheless, slope $2$ is not optimal.} Block ratio and deadline
+slope are different quantities, and the second is much smaller. Fix the shell
+$[m,2m)$ and let a rule decide $n=m+k$ by flip $T(m+k)=m+k+1+a_k$; on the
+branch $X_1=0$ the relative tail is $z=0^k1w$, and the rule reads exactly
+$a_k$ coordinates of $w$, so its heads set on that stratum is
+$S_k\times\{0,1\}^{L_k}$ with $L_k=m-1-k-a_k$. Writing
+$p_{k,i}=\#\{y\in S_k:|y|=i\}$, balance of the shell says precisely
+\[
+\sum_{k=0}^{m-1}\sum_{i=0}^{a_k}p_{k,i}\binom{L_k}{\,j-1-i\,}
+=\tfrac12\binom mj,\qquad 1\le j\le m-1,
+\]
+to be solved in integers with $0\le p_{k,i}\le\binom{a_k}i$; every such
+solution is realized by a rule. (Equivalently
+$u\sum_kP_k(u)(1+u)^{L_k}=\tfrac12[(1+u)^m-1]+cu^m$. Note
+$p_{k,i}=\tfrac12\binom{a_k}i$ solves it identically, so the \emph{only}
+obstruction is that $\binom{a_k}i$ is odd for $i$ a binary submask of $a_k$
+--- the corner deficits again, now confined to one shell.) Feasibility is
+monotone in each $a_k$, so the least achievable
+$\rho(m)=\min\max_kT(m+k)/(m+k)$ is computable. We find
+\[
+\rho(4)=\tfrac32,\quad \rho(8)=\tfrac{14}9,\quad
+\rho(16)=\tfrac{25}{16},\quad \rho(32)\le\tfrac{11}7,
+\]
+with explicit rules --- e.g.\ on $[16,32)$ the deadlines
+$25,26,28,29,31,32,\dots,32$. Since balanced blocks stitch, this gives an
+exactly fair method with
+\[
+T(n)\;\le\;\tfrac{11}{7}\,n \qquad\text{for } 4\le n<64,
+\]
+against $2n-2$ for Theorem~\ref{thm:c}. So the slope-$2$ envelope of the
+classical constructions is an artifact of never optimizing the within-shell
+profile, not a barrier. (These are verified: the $m=4$ row reproduces the
+exhaustive $1\,036\,800$-rule enumeration above, the rules for $m\le16$ were
+rebuilt and brute-force checked, and the $m=32$ witness was re-verified in
+exact integer arithmetic.)
+
+\emph{5. The frontier.}
+Lemma~\ref{lem:floor} gives $C^{*}\ge1$ and part (a) gives $C^{*}\le2$. What
+remark 4 leaves open is uniformity: $C^{*}\le\sup_r\rho(2^r)$, and our four
+values $1.5000,\,1.5556,\,1.5625,\,1.5714$ increase slowly, so we cannot yet
+distinguish a limit near $1.6$ from a logarithmic drift back to $2$. We also
+do not know whether $C=1$ (that is, $T(n)\le n+D$) is impossible, though we
+expect it is. The question has a
 concrete equivalent form. A method with deadline $T$ never stops before the
 first disagreement (Lemma~\ref{lem:floor}), and after the disagreement at
 $0^{n}1$ or $1^{n}0$ its stopping words form a complete prefix code of depth

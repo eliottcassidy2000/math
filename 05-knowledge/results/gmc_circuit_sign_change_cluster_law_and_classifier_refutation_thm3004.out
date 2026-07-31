@@ -49,5 +49,42 @@
   is not evidence about that axis, however large its sample.
 
 ==========================================================================
-SUMMARY  refutation=True  cluster-law=True  m<=2 scope=True  census-audit=True
+5. FREE-FERMION / BAND-FILLING LOCALIZATION: WHERE the reversals sit
+==========================================================================
+  e_k is the canonical k-fermion partition function of a system whose
+  grand partition function is prod(1 + r_i t): single-particle Boltzmann
+  weights r_i, fugacity t.  log h_k is its free energy in the binomial
+  gauge and the circuit is the THIRD derivative in particle number k.
+  Well-separated clusters are BANDS; filling a band is a first-order
+  transition, so reversals must sit at the band-filling numbers, i.e. at
+  the partial sums of the cluster sizes with roots sorted DESCENDING.
+
+    sizes (largest root first)  band-filling k   observed reversal sites
+    (4, 5, 3)                  [4, 9]          [4, 7, 9]              boundaries hit: True  total=3 (=2m-3: True) exact zeros at []
+    (3, 3, 3)                  [3, 6]          [3, 4, 6]              boundaries hit: True  total=3 (=2m-3: True) exact zeros at [5]
+    (6, 2, 4)                  [6, 8]          [6, 7, 8]              boundaries hit: True  total=3 (=2m-3: True) exact zeros at []
+    (2, 7, 3)                  [2, 9]          [2, 5, 9]              boundaries hit: True  total=3 (=2m-3: True) exact zeros at []
+    (5, 4, 2, 3)               [5, 9, 11]      [5, 7, 9, 10, 11]      boundaries hit: True  total=5 (=2m-3: True) exact zeros at []
+    (3, 3, 3, 3)               [3, 6, 9]       [3, 4, 6, 8, 9]        boundaries hit: True  total=5 (=2m-3: True) exact zeros at []
+    (2, 3, 4, 2, 3)            [2, 5, 9, 11]   [2, 3, 5, 7, 9, 10, 11] boundaries hit: True  total=7 (=2m-3: True) exact zeros at []
+
+  DECOMPOSITION.  Every band boundary is a reversal site, and exactly one
+  further reversal sits strictly between each pair of consecutive
+  boundaries.  So
+        sign changes = (m-1) boundary sites + (m-2) inter-band sites
+                     = 2m-3,
+  which is a complete structural account of the count in part 2.
+
+  EXACT ZEROS ARE FORCED BY RIGIDITY, NOT EXTRA REVERSALS.  Equal cluster
+  sizes with geometric separation make the log-root measure SYMMETRIC, so
+  THM-3003 section 1 gives c_k = -c_(d+1-k); when d is odd, k=(d+1)/2 is a
+  fixed point of that involution and c vanishes there EXACTLY.  Check:
+    sizes (3, 3, 3)      d= 9  exact zeros [5]      predicted [5]      OK
+    sizes (2, 2, 2)      d= 6  exact zeros []       predicted []       OK
+    sizes (4, 4, 4)      d=12  exact zeros []       predicted []       OK
+    sizes (2, 2, 2, 2)   d= 8  exact zeros []       predicted []       OK
+  VERDICT 5: LOCALIZATION + FORCED-ZERO CONFIRMED
+
+==========================================================================
+SUMMARY  refutation=True  cluster-law=True  m<=2 scope=True  census-audit=True  band-localization=True
 ==========================================================================

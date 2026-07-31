@@ -11,8 +11,8 @@ related:
   - THM-2991-pf-infinity-arbitrarily-delayed-newton-ratio-return
 script: 04-computation/gmc_circuit_sign_change_cluster_law_and_classifier_refutation_thm3004.py
 output: 05-knowledge/results/gmc_circuit_sign_change_cluster_law_and_classifier_refutation_thm3004.out
-script_sha256: 26ae70c4a19111ddbe0f5d9772bf18fa15ce0dbd74fd79076e1defb9162647f0
-output_sha256: 62fa4e289d4a1e31b80b095b3d24d5ad3458fb603b3627984214d73e94c06e49
+script_sha256: 4e7e6a6c6c273ee6972c2035ecff489c939ecc6c3b2fba69c111733007b6fc8f
+output_sha256: 1309387ee4ede41258fdd9235cd07ad17088d702a377261d16e2d06e3a20d8a8
 hash_basis: LF-normalized bytes
 ---
 
@@ -95,6 +95,37 @@ of THM-3001 control the two *ends* of the circuit and nothing else; the number
 of interior reversals is a **cluster count**, i.e. a property of the root
 measure's support structure, invisible to any fixed finite set of low moments.
 
+## 3a. Localization: WHERE the reversals sit, and the free-fermion reading
+
+`e_k` is exactly the canonical `k`-fermion partition function of a system whose
+grand partition function is `prod_i(1+r_i t)`: single-particle Boltzmann weights
+`r_i`, fugacity `t`.  So `log h_k` is a **free energy** in the binomial gauge and
+the circuit is its **third derivative in particle number**.  Well-separated root
+clusters are **bands**; filling a band is a first-order transition in `k`.
+
+**Localization law (VERIFIED-EXACT).**  Sort the clusters by root size,
+descending, with sizes `s_1,...,s_m`.  Then every partial sum
+`s_1+...+s_j` (`j=1..m-1`) -- the band-filling numbers -- is a sign-change site
+of the circuit, and exactly one further site lies strictly between each pair of
+consecutive band-filling numbers.  Hence
+
+    sign changes = (m-1) band boundaries + (m-2) inter-band sites = 2m-3,   (3)
+
+which is a complete structural account of (2), not just a count.  Confirmed on
+`(4,5,3)`, `(3,3,3)`, `(6,2,4)`, `(2,7,3)`, `(5,4,2,3)`, `(3,3,3,3)`,
+`(2,3,4,2,3)`; e.g. `(2,3,4,2,3)` has band-filling numbers `[2,5,9,11]` and
+reversal sites `[2,3,5,7,9,10,11]`, exactly `2*5-3=7` of them.
+
+**Exact zeros are forced by rigidity, not extra reversals.**  Equal cluster
+sizes under geometric separation make the log-root measure symmetric, so
+THM-3003 section 1 gives `c_k=-c_(d+1-k)`; when `d` is odd, `k=(d+1)/2` is a
+fixed point of that involution and the circuit vanishes there **exactly**.
+Checked: `(3,3,3)` has `d=9` and an exact zero at `k=5`, precisely as predicted,
+while `(2,2,2)`, `(4,4,4)` and `(2,2,2,2)` have even `d` and no zero.  Sign-change
+counts must therefore be taken on the zero-filtered sign word; counting a tie as
+two reversals inflates `(3,3,3)` from `3` to `4` and would falsify (2)
+spuriously.
+
 ## 4. What survives: the classifier is true for at most two clusters
 
 Exhaustive over `936` two-cluster configurations -- `d=4..16`, ratios
@@ -144,6 +175,7 @@ three-cluster row.  That is precisely the axis the failure lives on.
 
     python3 04-computation/gmc_circuit_sign_change_cluster_law_and_classifier_refutation_thm3004.py
 
-Four parts, all reporting `True`: the exhaustive minimal-witness search with
+Five parts, all reporting `True`: the exhaustive minimal-witness search with
 exact rationals and a Newton `R_k>1` control, the cluster law through `m=6`, the
-exhaustive two-cluster scope, and the census audit.
+exhaustive two-cluster scope, the census audit, and the band-localization law
+with its forced-zero control.
