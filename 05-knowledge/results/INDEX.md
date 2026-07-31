@@ -116,7 +116,7 @@
   `d062c7ac/9b37ba12/52d02b6f`; the lower descent hashes begin
   `61868bc6/a9db04e9/160b0264`; the `z275..272`
   source/output/profile/semantic hashes begin
-  `44d9369f/d31d9ec1/1139218b/0960c65f`.
+  `bbb6982f/eea98955/939baa3f/1b1a7276`.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py`, the isolated terminal referees,
   and the exact/projected plus forced-high descent packages -> matching
   `.out` files [THM-2941 PROVED NECESSARY BANDS + FINITE-EXACT CLOSURES +
@@ -340,7 +340,7 @@
   `d062c7ac/9b37ba12/52d02b6f`; lower-descent hashes begin
   `61868bc6/a9db04e9/160b0264`; `z275..272`
   source/output/profile/semantic hashes begin
-  `44d9369f/d31d9ec1/1139218b/0960c65f`.
+  `bbb6982f/eea98955/939baa3f/1b1a7276`.
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;
   the `z336` source/output/semantic hashes are
   `6e991432a1ce5ec9c1cbe97199cb5fd647c5edc89bdcc60ce560382a70835fcf` /
