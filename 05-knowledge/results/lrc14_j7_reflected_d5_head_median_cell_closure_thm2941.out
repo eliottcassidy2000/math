@@ -1,0 +1,23 @@
+LRC14 reflected D=5 finite-head median-cell closure exact proof
+universe=bodies:3003;upstream_arbitrary_level_bodies:2276;head_bodies:727;m:1..15;raw_assignments:7851600
+head_crossdet_repair=choose transport orientation with target A=p(qL-b)/(pL-a)>=1;orientation product AA'=pq
+crossdet_selector_certified=7835524;residual=16076;residual_counts_by_m=(12985, 1511, 773, 427, 235, 53, 43, 23, 8, 9, 5, 2, 0, 0, 2);residual_groups_by_m=(101, 15, 16, 13, 9, 1, 3, 1, 1, 1, 1, 1, 0, 0, 1)
+median_cell_rule=sort all body-safe cells and choose cells[len(cells)//2];one cell per residual body-m group
+median_pair_certificates=16076;distinct_pair_profiles=37444;arc_law_and_singleton_controls=4424
+weakest_pair_margin=898065335348/59407314481515;E=(1, 2, 3, 4, 6, 12);m=1;word=(1, 5, 2, 4, 3, 0);gain=2490/84001;debt=862916237002/59407314481515;cell=90;pair=(1, 2);crossdet_gain=103/43681;safe_cells=88
+exact_union_checks=16076;weakest_union_slack=16740805970074311/167495581632243865;E=(2, 3, 6, 8, 9, 12);m=1;word=(1, 4, 0, 2, 5, 3);union=18118119346998837/23927940233177695;cell=540
+largest_direct_union=18118119346998837/23927940233177695;E=(2, 3, 6, 8, 9, 12);m=1;word=(1, 4, 0, 2, 5, 3);cell=540
+conclusion=every reflected D=5 residual packet closes for every m>=1 (head here, tail upstream)
+scope_boundary=D>=6 remains open;sufficient THM-2941 reflected-family certificate only;physical LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+tail_sha256=d3da8fa8dcb23be7c8766b9fb942dfdf26f9b61055e21314fddcc0107d2b9678
+tail_output_sha256=49d33153da0eec25cc8b127b0b61f565594b457ed53725103e8a08ecf224fae2
+low_phase_sha256=b2418dfda1b48257d1f7582d4ea977203a26f88885e13946bc100ccf264c9ce1
+k6_minus_edge_sha256=1a18c91803185033bd1faf8005a88ba817cc93edb0ff76a27287427e2299e97a
+k6_minus_edge_output_sha256=535f45576ae68792e7bb4a454788650fd5971e9ed6a2087e1a530e37abcf5d7a
+body_digest=95ab8a19a0e31ac306cd3f796a5ff23cf47598f9ca07680ebf5a40bb1b0ab255
+residual_digest=c395605822633d4f428dd3bb7e11a502173f348fad4ad6713f40ac617091f432
+certificate_digest=ffbc3c4b5fa4dda7bd0359a68491cfeb5834acfdd678a642155b997f84a649e2
+source_sha256=78fcc8f741aa9042a5f371f731a01ede730c832a045327eb3acc7484f15c2374
+semantic_sha256=b78766f4e02fd63625531f4d6d276c136a2aeab81d9f5822ce331f83e29903fb
+all_exact_controls=PASS
