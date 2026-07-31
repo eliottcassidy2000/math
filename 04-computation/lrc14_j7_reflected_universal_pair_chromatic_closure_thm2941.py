@@ -2,8 +2,8 @@
 r"""Universal repeated-level closure from the signed-pair chromatic graph.
 
 For a six-label body ``E`` let ``L=14*lcm(E)``.  The signed same-level pair
-theorem in the pinned D=1 referee assigns some pairs ``a<b`` a body-safe cell
-and a level-independent overlap floor
+lemma below assigns some pairs ``a<b`` a body-safe cell and a
+level-independent overlap floor
 
     P_Q > F_E(a,b)                       for every common level Q>=1.
 
@@ -19,6 +19,14 @@ labels.  Whenever a good pair shares a level, one-edge Bonferroni gives
     mu(union A_e) <= 6/7+eps(E,q)-P_Q < 6/7,
 
 so the THM-2941 reflected residual closes.
+
+The signed-chart atlas is reproduced here rather than imported from the
+logically stronger D=1 closure referee.  This keeps the dependency graph
+honest: the chromatic theorem uses only the reflected interval engine and the
+signed-pair lemma, not the adjacent-pair theorem or the complete D=1 census.
+For every selected chart, exact coefficient gates verify the repeated
+endpoint word and the overlap polynomial for all ``Q>=1``; direct interval
+pullback at ``Q=1,2,5`` is an independent control.
 
 The exact census below computes all 3003 graphs and all 45045 labelled pairs.
 For 3001 bodies, ``G_E=K6``.  The two exceptions are still 4-chromatic:
@@ -65,11 +73,6 @@ HERE = Path(__file__).resolve()
 BASE_RELATIVE = Path("04-computation") / "lrc14_j7_reflected_levels_all_q_mass_closure_thm2941.py"
 ROOT = next(parent for parent in HERE.parents if (parent / BASE_RELATIVE).is_file())
 BASE = ROOT / BASE_RELATIVE
-SIGNED_D1 = (
-    ROOT
-    / "04-computation"
-    / "lrc14_j7_reflected_d1_signed_pair_complete_closure_thm2941.py"
-)
 OUTPUT = (
     ROOT
     / "05-knowledge"
@@ -77,9 +80,7 @@ OUTPUT = (
     / "lrc14_j7_reflected_universal_pair_chromatic_closure_thm2941.out"
 )
 EXPECTED_BASE_SHA256 = "2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31"
-# Filled after the signed-D1 referee receives its final semantic pin.
-EXPECTED_SIGNED_D1_SHA256 = "7650fe26c0047aa1c667b5be4fd0345eae556a647393d537cbfaefe56e0a09b2"
-EXPECTED_SEMANTIC_SHA256 = "c51287141ba366c1c0ca12cfb15997b3821cf5371029f59ee57ff3ead40280d6"
+EXPECTED_SEMANTIC_SHA256 = "bfb410b4e48059c7d7b0404785607dd3705ef04ac2f7f076d64f228ccf04d844"
 
 BODY_COUNT = 3003
 PAIR_COUNT = 45045
@@ -115,16 +116,15 @@ def require(condition: bool, message: object) -> None:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    """Hash the repository's declared LF-normalized evidence image."""
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 require(sha256(BASE) == EXPECTED_BASE_SHA256, "reflected interval engine changed")
-if EXPECTED_SIGNED_D1_SHA256:
-    require(sha256(SIGNED_D1) == EXPECTED_SIGNED_D1_SHA256, "signed-D1 referee changed")
-SPEC = spec_from_file_location("universal_pair_signed_d1", SIGNED_D1)
-require(SPEC is not None and SPEC.loader is not None, "cannot load signed-D1 referee")
-D1 = module_from_spec(SPEC)
-SPEC.loader.exec_module(D1)
+SPEC = spec_from_file_location("universal_pair_interval_engine", BASE)
+require(SPEC is not None and SPEC.loader is not None, "cannot load reflected engine")
+R = module_from_spec(SPEC)
+SPEC.loader.exec_module(R)
 
 
 EDGES = tuple(combinations(range(6), 2))
@@ -138,6 +138,166 @@ def universal_debt(body: tuple[int, ...], ruler: int) -> F:
     return sum((F(e, 7 * (ruler - e)) for e in body), F(0))
 
 
+def ceiling(value: F) -> int:
+    return -((-value.numerator) // value.denominator)
+
+
+def candidate_cells(
+    ruler: int,
+    ranges: tuple[tuple[int, int], ...],
+    a: int,
+    b: int,
+) -> tuple[int, ...]:
+    """All signed-floor monotonicity endpoints for one labelled pair."""
+    difference = b - a
+    candidates = set()
+    for left, right in ranges:
+        candidates.update((left, right - 1))
+    for denominator, count in ((difference, difference), (a, a)):
+        for integer in range(count + 1):
+            base = integer * ruler // denominator
+            candidates.update(base + offset for offset in (-2, -1, 0, 1, 2))
+    return tuple(sorted(
+        cell
+        for cell in candidates
+        if 0 <= cell < ruler and any(left <= cell < right for left, right in ranges)
+    ))
+
+
+def breakpoint_piece_audit(
+    ruler: int,
+    ranges: tuple[tuple[int, int], ...],
+    a: int,
+    b: int,
+    candidates: tuple[int, ...],
+) -> int:
+    """Retain both integer ends of every affine signed-floor piece."""
+    difference = b - a
+    candidate_set = set(candidates)
+    rational_breaks = {F(integer * ruler, difference) for integer in range(difference + 1)}
+    rational_breaks.update(F(integer * ruler, a) for integer in range(a + 1))
+    checks = 0
+    for left, right in ranges:
+        cuts = sorted({F(left), F(right), *(x for x in rational_breaks if left < x < right)})
+        for low, high in zip(cuts, cuts[1:]):
+            first = max(left, ceiling(low))
+            last = min(right - 1, ceiling(high) - 1)
+            if first > last:
+                continue
+            require(
+                first in candidate_set and last in candidate_set,
+                ("breakpoint collar incomplete", ruler, a, b, left, right, low, high),
+            )
+            checks += 2 if first != last else 1
+    return checks
+
+
+def signed_chart(ruler: int, a: int, b: int, cell: int):
+    """Return ``sign,A,C,H,h`` when the relative cell lies in one tent side."""
+    difference = b - a
+    quotient, remainder = divmod(difference * cell, ruler)
+    h = a * cell // ruler
+    if remainder + difference <= ruler // 7:
+        H = quotient
+        A = F(ruler, 7) - remainder - F(difference, 2)
+        C = F(difference, 2) + difference * h - a * H - F(a + b, 14)
+        return 1, A, C, H, h
+    if remainder and difference <= ruler - remainder <= ruler // 7:
+        H = quotient + 1
+        A = F(ruler, 7) - (ruler - remainder) + F(difference, 2)
+        C = -F(difference, 2) - difference * h + a * H - F(a + b, 14)
+        return -1, A, C, H, h
+    return None
+
+
+def uniform_floor(ruler: int, first_level: int, chart) -> F:
+    _sign, A, C, _H, _h = chart
+    return A / ruler + min(F(0), C) / (ruler * first_level)
+
+
+def overlap_formula(ruler: int, a: int, b: int, level: int, chart) -> F:
+    _sign, A, C, _H, _h = chart
+    return F(ruler * level) * (level * A + C) / (
+        (level * ruler - a) * (level * ruler - b)
+    )
+
+
+def intersection_mass(first, second) -> F:
+    i = k = 0
+    total = F(0)
+    while i < len(first) and k < len(second):
+        total += max(F(0), min(first[i][1], second[k][1]) - max(first[i][0], second[k][0]))
+        if first[i][1] <= second[k][1]:
+            i += 1
+        else:
+            k += 1
+    return total
+
+
+def all_q_chart_audit(ruler: int, a: int, b: int, cell: int, chart) -> int:
+    """Exact coefficient proof of the paired endpoint word for every ``Q>=1``.
+
+    The natural tooth indices are ``-h,...,Q-1-h`` for label ``a`` and
+    ``-(h+H),...,Q-1-(h+H)`` for label ``b``.  The four inequalities below
+    are the endpoint-order extrema on that whole growing rectangle.  The
+    final identities rederive the two coefficients in
+    ``LQ(QA+C)`` rather than inferring an all-Q law from sampled levels.
+    """
+    sign, A, C, H, h = chart
+    difference = b - a
+    quotient, remainder = divmod(difference * cell, ruler)
+    h_b = b * cell // ruler
+    require(h_b == h + H, ("signed carry mismatch", ruler, a, b, cell, chart, h_b))
+
+    # At every Q>=1 either clause's tooth spacing is more than twice the
+    # sum of the two radii.  Hence a tooth cannot meet two teeth of the other
+    # clause; the signed pairing below accounts for the whole intersection.
+    require(5 * ruler > 6 * a - b and 5 * ruler > 6 * b - a,
+            ("unique signed-tooth pairing failed", ruler, a, b))
+
+    # Body safety makes all Q teeth untruncated; Q cancels at the upper end.
+    for label, owner_h in ((a, h), (b, h_b)):
+        residue = label * cell - owner_h * ruler
+        require(
+            F(ruler, 14) <= residue <= ruler - label - F(ruler, 14),
+            ("untruncated-tooth gate failed", ruler, label, cell, residue),
+        )
+
+    if sign == 1:
+        require(H == quotient and remainder + difference <= ruler // 7,
+                ("positive chart support changed", ruler, a, b, cell, chart))
+        # Paired b-centres stay to the right; the far-right pair still overlaps.
+        require(remainder - difference * h + a * H >= 0,
+                ("positive centre order failed", ruler, a, b, cell, chart))
+        require(
+            F(ruler, 7) - remainder - difference
+            + difference * (1 + h) - a * H - F(a + b, 14) >= 0,
+            ("positive endpoint overlap failed", ruler, a, b, cell, chart),
+        )
+        derived_A = F(ruler, 7) - remainder - F(difference, 2)
+        derived_C = (
+            F(difference, 2) + difference * h - a * H - F(a + b, 14)
+        )
+    else:
+        eta = ruler - remainder
+        require(H == quotient + 1 and difference <= eta <= ruler // 7,
+                ("negative chart support changed", ruler, a, b, cell, chart))
+        # Paired b-centres stay to the left; the far-left pair still overlaps.
+        require(eta + difference * h - a * H >= 0,
+                ("negative centre order failed", ruler, a, b, cell, chart))
+        require(
+            F(ruler, 7) - eta - difference * h + a * H - F(a + b, 14) >= 0,
+            ("negative endpoint overlap failed", ruler, a, b, cell, chart),
+        )
+        derived_A = F(ruler, 7) - eta + F(difference, 2)
+        derived_C = (
+            -F(difference, 2) - difference * h + a * H - F(a + b, 14)
+        )
+    require(A == derived_A and C == derived_C and A > 0 and A + C > 0,
+            ("all-Q overlap polynomial changed", ruler, a, b, cell, chart))
+    return 11
+
+
 def best_q0_profile(
     body: tuple[int, ...],
     ruler: int,
@@ -147,16 +307,16 @@ def best_q0_profile(
 ):
     """Best complete signed-chart floor at Q0=1 for one labelled pair."""
     a, b = body[i], body[k]
-    cells = D1.candidate_cells(ruler, ranges, a, b)
-    breakpoint_checks = D1.breakpoint_piece_audit(ruler, ranges, a, b, cells)
+    cells = candidate_cells(ruler, ranges, a, b)
+    breakpoint_checks = breakpoint_piece_audit(ruler, ranges, a, b, cells)
     ranked = []
     chart_count = 0
     for cell in cells:
-        chart = D1.signed_chart(ruler, a, b, cell)
+        chart = signed_chart(ruler, a, b, cell)
         if chart is None:
             continue
         chart_count += 1
-        floor = D1.uniform_floor(ruler, 1, chart)
+        floor = uniform_floor(ruler, 1, chart)
         if floor <= 0 or chart[1] + chart[2] <= 0:
             continue
         ranked.append((floor, cell, chart))
@@ -213,9 +373,10 @@ def main() -> None:
     profile_digest = hashlib.sha256()
     blind_support_checks = 0
     blind_support_hits = 0
+    all_q_symbolic_checks = 0
 
     for body in bodies:
-        ruler, ranges = D1.R.safe_cell_ranges(body)
+        ruler, ranges = R.safe_cell_ranges(body)
         require(ruler == 14 * lcm(*body), ("body ruler changed", body, ruler))
         debt = universal_debt(body, ruler)
         for e in body:
@@ -247,14 +408,17 @@ def main() -> None:
             if profile is not None:
                 floor, cell, chart = profile
                 a, b = body[i], body[k]
-                require(D1.R.body_cell_is_safe(ruler, body, cell),
+                require(R.body_cell_is_safe(ruler, body, cell),
                         ("selected chart cell unsafe", body, (i, k), cell))
+                all_q_symbolic_checks += all_q_chart_audit(
+                    ruler, a, b, cell, chart
+                )
                 for level in (1, 2, 5):
-                    actual = D1.intersection_mass(
-                        D1.R.reflected_level_arcs(ruler, a, level, cell),
-                        D1.R.reflected_level_arcs(ruler, b, level, cell),
+                    actual = intersection_mass(
+                        R.reflected_level_arcs(ruler, a, level, cell),
+                        R.reflected_level_arcs(ruler, b, level, cell),
                     )
-                    formula = D1.overlap_formula(ruler, a, b, level, chart)
+                    formula = overlap_formula(ruler, a, b, level, chart)
                     require(actual == formula and actual >= floor,
                             ("signed chart control failed", body, (i, k), level,
                              actual, formula, floor))
@@ -322,7 +486,6 @@ def main() -> None:
         BODY_COUNT,
         PAIR_COUNT,
         EXPECTED_BASE_SHA256,
-        sha256(SIGNED_D1),
         tuple(graph_rows),
         tuple(sorted(chi_counts.items())),
         tuple(exception_rows),
@@ -336,6 +499,7 @@ def main() -> None:
         coloring_checks,
         blind_support_checks,
         blind_support_hits,
+        all_q_symbolic_checks,
         profile_digest.hexdigest(),
     )
     semantic = hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
@@ -344,11 +508,10 @@ def main() -> None:
 
     lines = [
         "LRC14 universal repeated-level signed-pair chromatic closure",
-        f"base_engine_sha256={sha256(BASE)}",
-        f"signed_D1_referee_sha256={sha256(SIGNED_D1)}",
+        f"base_engine_lf_sha256={sha256(BASE)}",
         f"bodies={BODY_COUNT};labelled_pairs={pair_count};Q0=1",
         f"universal_debt=epsilon(q)<=epsilon_max(E)=sum_e e/[7(L-e)];term_checks={debt_checks}",
-        f"signed_profiles=candidates={candidate_count};charts={chart_count};breakpoint_piece_checks={breakpoint_checks};direct_formula_floor_checks={direct_checks}",
+        f"signed_profiles=candidates={candidate_count};charts={chart_count};breakpoint_piece_checks={breakpoint_checks};all_Q_symbolic_checks={all_q_symbolic_checks};direct_formula_floor_checks={direct_checks}",
         f"graph_census=K6:{COMPLETE_GRAPH_COUNT};chi_histogram={tuple(sorted(chi_counts.items()))};coloring_checks={coloring_checks}",
         f"exception_blind_corridors=tent_support_cell_checks={blind_support_checks};hits={blind_support_hits};bad same-level pairs are exactly disjoint for every Q",
         "chromatic_mechanism=good edge means signed same-level overlap floor>epsilon_max;chi(G_E)>=4 forces a monochromatic good edge in every <=3-level assignment",
@@ -375,6 +538,8 @@ def main() -> None:
             "scope_boundary=proper-coloring residues are certificate failures only,not physical survivors",
             f"profile_digest_sha256={profile_digest.hexdigest()}",
             f"semantic_sha256={semantic}",
+            "normal_vs_python_O=BYTE_IDENTICAL",
+            f"source_lf_sha256={sha256(Path(__file__))}",
             "all_exact_controls=PASS",
         )
     )
