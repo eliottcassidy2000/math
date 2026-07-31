@@ -1,0 +1,254 @@
+# Lane G3 (repo lane C) raw run logs, death-star-2026-07-30-coinC2 (resumed)
+# Script: 04-computation/amm12592_laneC2_finiteM_bnb_deathstar.py (modes dfs/corridor/pin/witness/extend; --selftest PASS)
+
+===== g3_dfs_g35.log =====
+[g3 dfs g=3/5 D0=0 par=ON] M= 1: FEASIBLE   nodes=3 t=0.0s
+[g3 dfs g=3/5 D0=0 par=ON] M= 2: FEASIBLE   nodes=12 t=0.0s
+[g3 dfs g=3/5 D0=0 par=ON] M= 3: FEASIBLE   nodes=21 t=0.0s
+[g3 dfs g=3/5 D0=0 par=ON] M= 4: FEASIBLE   nodes=36 t=0.0s
+[g3 dfs g=3/5 D0=0 par=ON] M= 5: FEASIBLE   nodes=61 t=0.0s
+[g3 dfs g=3/5 D0=0 par=ON] M= 6: FEASIBLE   nodes=86 t=0.0s
+[g3 dfs g=3/5 D0=0 par=ON] M= 7: FEASIBLE   nodes=288 t=0.0s
+[g3 dfs g=3/5 D0=0 par=ON] M= 8: FEASIBLE   nodes=11551 t=0.1s
+[g3 dfs g=3/5 D0=0 par=ON] M= 9: FEASIBLE   nodes=11628 t=0.1s
+[g3 dfs g=3/5 D0=0 par=ON] M=10: CAP        nodes=89522176 t=440.0s
+[g3 dfs g=3/5 D0=0 par=OFF] M= 1: FEASIBLE   nodes=3 t=0.0s
+[g3 dfs g=3/5 D0=0 par=OFF] M= 2: FEASIBLE   nodes=8 t=0.0s
+[g3 dfs g=3/5 D0=0 par=OFF] M= 3: FEASIBLE   nodes=13 t=0.0s
+[g3 dfs g=3/5 D0=0 par=OFF] M= 4: FEASIBLE   nodes=20 t=0.0s
+[g3 dfs g=3/5 D0=0 par=OFF] M= 5: FEASIBLE   nodes=29 t=0.0s
+[g3 dfs g=3/5 D0=0 par=OFF] M= 6: FEASIBLE   nodes=38 t=0.0s
+[g3 dfs g=3/5 D0=0 par=OFF] M= 7: FEASIBLE   nodes=49 t=0.0s
+[g3 dfs g=3/5 D0=0 par=OFF] M= 8: FEASIBLE   nodes=60 t=0.0s
+[g3 dfs g=3/5 D0=0 par=OFF] M= 9: FEASIBLE   nodes=73 t=0.0s
+[g3 dfs g=3/5 D0=0 par=OFF] M=10: FEASIBLE   nodes=88 t=0.0s
+[g3 dfs g=3/5 D0=0 par=OFF] M=11: FEASIBLE   nodes=103 t=0.0s
+[g3 dfs g=3/5 D0=0 par=OFF] M=12: FEASIBLE   nodes=120 t=0.0s
+
+===== g3_dfs_g34.log =====
+[g3 dfs g=3/4 D0=0 par=ON] M= 1: FEASIBLE   nodes=3 t=0.0s
+[g3 dfs g=3/4 D0=0 par=ON] M= 2: FEASIBLE   nodes=12 t=0.0s
+[g3 dfs g=3/4 D0=0 par=ON] M= 3: FEASIBLE   nodes=27 t=0.0s
+[g3 dfs g=3/4 D0=0 par=ON] M= 4: FEASIBLE   nodes=52 t=0.0s
+[g3 dfs g=3/4 D0=0 par=ON] M= 5: FEASIBLE   nodes=77 t=0.0s
+[g3 dfs g=3/4 D0=0 par=ON] M= 6: FEASIBLE   nodes=120 t=0.0s
+[g3 dfs g=3/4 D0=0 par=ON] M= 7: FEASIBLE   nodes=436 t=0.0s
+[g3 dfs g=3/4 D0=0 par=ON] M= 8: FEASIBLE   nodes=1095 t=0.0s
+[g3 dfs g=3/4 D0=0 par=ON] M= 9: FEASIBLE   nodes=1238 t=0.0s
+[g3 dfs g=3/4 D0=0 par=ON] M=10: FEASIBLE   nodes=6363 t=0.0s
+[g3 dfs g=3/4 D0=0 par=ON] M=11: FEASIBLE   nodes=6894 t=0.0s
+[g3 dfs g=3/4 D0=0 par=ON] M=12: FEASIBLE   nodes=16653 t=0.1s
+[g3 dfs g=3/4 D0=0 par=OFF] M= 1: FEASIBLE   nodes=3 t=0.0s
+[g3 dfs g=3/4 D0=0 par=OFF] M= 2: FEASIBLE   nodes=8 t=0.0s
+[g3 dfs g=3/4 D0=0 par=OFF] M= 3: FEASIBLE   nodes=15 t=0.0s
+[g3 dfs g=3/4 D0=0 par=OFF] M= 4: FEASIBLE   nodes=24 t=0.0s
+[g3 dfs g=3/4 D0=0 par=OFF] M= 5: FEASIBLE   nodes=33 t=0.0s
+[g3 dfs g=3/4 D0=0 par=OFF] M= 6: FEASIBLE   nodes=44 t=0.0s
+[g3 dfs g=3/4 D0=0 par=OFF] M= 7: FEASIBLE   nodes=57 t=0.0s
+[g3 dfs g=3/4 D0=0 par=OFF] M= 8: FEASIBLE   nodes=72 t=0.0s
+[g3 dfs g=3/4 D0=0 par=OFF] M= 9: FEASIBLE   nodes=87 t=0.0s
+[g3 dfs g=3/4 D0=0 par=OFF] M=10: FEASIBLE   nodes=104 t=0.0s
+[g3 dfs g=3/4 D0=0 par=OFF] M=11: FEASIBLE   nodes=123 t=0.0s
+[g3 dfs g=3/4 D0=0 par=OFF] M=12: FEASIBLE   nodes=144 t=0.0s
+
+===== g3_corridor_g12_a.log =====
+[g3 corridor g=1/2 D0=0 par=ON] M=4 Lmax=7 envN=8 | achievable(v>=0)=[0, 2, 4, 6, 8] | infeasible=[1, 3, 5, 7] | undecided=[]
+    (by global-negation symmetry the corridor is -max..max; max_achievable=8, width/env=1.000)
+[g3 corridor g=1/2 D0=0 par=ON] M=5 Lmax=8 envN=8 | achievable(v>=0)=[0, 2, 4, 6, 8] | infeasible=[1, 3, 5, 7] | undecided=[]
+    (by global-negation symmetry the corridor is -max..max; max_achievable=8, width/env=1.000)
+[g3 corridor g=1/2 D0=0 par=ON] M=6 Lmax=10 envN=16 | achievable(v>=0)=[0, 2, 4, 6, 8, 10, 12, 14, 16] | infeasible=[1, 3, 5, 7, 9, 11, 13, 15] | undecided=[]
+    (by global-negation symmetry the corridor is -max..max; max_achievable=16, width/env=1.000)
+[g3 corridor g=1/2 D0=0 par=ON] M=7 Lmax=11 envN=16 | achievable(v>=0)=[0, 2, 4, 6, 8, 10, 12, 14, 16] | infeasible=[1, 3, 5, 7, 9, 11, 13, 15] | undecided=[]
+    (by global-negation symmetry the corridor is -max..max; max_achievable=16, width/env=1.000)
+[g3 corridor g=1/2 D0=0 par=ON] M=8 Lmax=13 envN=32 | achievable(v>=0)=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32] | infeasible=[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31] | undecided=[]
+    (by global-negation symmetry the corridor is -max..max; max_achievable=32, width/env=1.000)
+
+===== g3_corridor_g12_b.log =====
+[g3 corridor g=1/2 D0=0 par=ON] M=9 Lmax=14 envN=32 | achievable(v>=0)=[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28] | infeasible=[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31] | undecided=[30, 32]
+    (by global-negation symmetry the corridor is -max..max; max_achievable=28, width/env=0.875)
+
+===== g3_corridor_g12_M9_resolve.log =====
+[M=9 corridor resolve] v=32: CAP nodes=44535808 t=200.0s
+[M=9 corridor resolve] v=30: FEASIBLE nodes=29352876 t=135.0s
+
+===== g3_corridor_g12_M10max.log =====
+    M=10 v=64: CAP nodes=8000001
+    M=10 v=62: CAP nodes=8000001
+    M=10 v=60: CAP nodes=8000001
+    M=10 v=58: CAP nodes=8000001
+    M=10 v=56: CAP nodes=8000001
+    M=10 v=54: CAP nodes=8000001
+    M=10 v=52: CAP nodes=8000001
+    M=10 v=50: CAP nodes=8000001
+    M=10 v=48: CAP nodes=8000001
+    M=10 v=46: CAP nodes=8000001
+    M=10 v=44: CAP nodes=8000001
+    M=10 v=42: CAP nodes=8000001
+    M=10 v=40: CAP nodes=8000001
+
+===== g3_extend_g12.log =====
+[g3 extend g=1/2 D0=0] base M=10: FEASIBLE nodes=1562
+[g3 extend] M=11 back=1 clamped_rows<=10: INFEASIBLE nodes=91 t=0.0s
+[g3 extend] M=11 back=2 clamped_rows<=9: INFEASIBLE nodes=227 t=0.0s
+[g3 extend] M=11 back=3 clamped_rows<=8: INFEASIBLE nodes=259 t=0.0s
+[g3 extend] M=11 back=4 clamped_rows<=7: INFEASIBLE nodes=5198984 t=35.1s
+[g3 extend] M=11 back=5 clamped_rows<=6: CAP nodes=12775424 t=90.0s
+[g3 extend] M=11 back=6 clamped_rows<=5: CAP nodes=17358848 t=90.0s
+[g3 extend] M=11 back=11 clamped_rows<=0: CAP nodes=18071552 t=90.0s
+[g3 extend] frontier stops at M=10 (no certified verdict at M=11 within budget)
+
+===== g3_witness_g12_M10.log =====
+[g3 witness g=1/2 D0=0 M=10] status=FEASIBLE nodes=1562
+  witness cells (nonzero):
+    m=1 side=0 k=0 (z=1,o=1) cap=1 delta=-1
+    m=1 side=1 k=0 (z=1,o=1) cap=1 delta=1
+  rowend m=1: N(1/2)*2^Lmax=0 env=32768 maxrho=0.0000
+    m=2 side=0 k=0 (z=3,o=1) cap=1 delta=-1
+    m=2 side=1 k=0 (z=1,o=3) cap=1 delta=-1
+    m=2 side=0 k=1 (z=2,o=2) cap=1 delta=-1
+    m=2 side=1 k=1 (z=2,o=2) cap=1 delta=1
+  rowend m=2: N(1/2)*2^Lmax=-8192 env=16384 maxrho=0.5000
+    m=3 side=0 k=0 (z=4,o=1) cap=1 delta=-1
+    m=3 side=1 k=0 (z=1,o=4) cap=1 delta=1
+    m=3 side=0 k=1 (z=3,o=2) cap=1 delta=1
+    m=3 side=1 k=1 (z=2,o=3) cap=1 delta=1
+  rowend m=3: N(1/2)*2^Lmax=-4096 env=8192 maxrho=0.6680
+    m=4 side=0 k=0 (z=6,o=1) cap=1 delta=-1
+    m=4 side=1 k=0 (z=1,o=6) cap=1 delta=-1
+    m=4 side=0 k=1 (z=5,o=2) cap=2 delta=2
+    m=4 side=1 k=1 (z=2,o=5) cap=2 delta=2
+    m=4 side=0 k=2 (z=4,o=3) cap=1 delta=1
+    m=4 side=1 k=2 (z=3,o=4) cap=1 delta=1
+  rowend m=4: N(1/2)*2^Lmax=-2048 env=4096 maxrho=0.8945
+    m=5 side=0 k=0 (z=7,o=1) cap=1 delta=1
+    m=5 side=1 k=0 (z=1,o=7) cap=1 delta=-1
+    m=5 side=0 k=1 (z=6,o=2) cap=2 delta=2
+    m=5 side=0 k=2 (z=5,o=3) cap=1 delta=1
+    m=5 side=1 k=2 (z=3,o=5) cap=1 delta=1
+  rowend m=5: N(1/2)*2^Lmax=-1024 env=2048 maxrho=0.9140
+    m=6 side=0 k=0 (z=9,o=1) cap=1 delta=1
+    m=6 side=1 k=0 (z=1,o=9) cap=1 delta=-1
+    m=6 side=0 k=1 (z=8,o=2) cap=3 delta=3
+    m=6 side=1 k=1 (z=2,o=8) cap=3 delta=-1
+    m=6 side=0 k=2 (z=7,o=3) cap=3 delta=3
+    m=6 side=1 k=2 (z=3,o=7) cap=3 delta=-1
+    m=6 side=0 k=3 (z=6,o=4) cap=1 delta=1
+    m=6 side=1 k=3 (z=4,o=6) cap=1 delta=1
+  rowend m=6: N(1/2)*2^Lmax=-640 env=1024 maxrho=0.9571
+    m=7 side=0 k=0 (z=10,o=1) cap=1 delta=1
+    m=7 side=1 k=0 (z=1,o=10) cap=1 delta=-1
+    m=7 side=0 k=1 (z=9,o=2) cap=3 delta=3
+    m=7 side=1 k=1 (z=2,o=9) cap=3 delta=-1
+    m=7 side=0 k=2 (z=8,o=3) cap=3 delta=3
+    m=7 side=1 k=2 (z=3,o=8) cap=3 delta=1
+    m=7 side=0 k=3 (z=7,o=4) cap=1 delta=1
+    m=7 side=1 k=3 (z=4,o=7) cap=1 delta=1
+  rowend m=7: N(1/2)*2^Lmax=-384 env=512 maxrho=0.9878
+    m=8 side=0 k=0 (z=12,o=1) cap=1 delta=1
+    m=8 side=1 k=0 (z=1,o=12) cap=1 delta=1
+    m=8 side=0 k=1 (z=11,o=2) cap=4 delta=4
+    m=8 side=0 k=2 (z=10,o=3) cap=6 delta=6
+    m=8 side=1 k=2 (z=3,o=10) cap=6 delta=6
+    m=8 side=0 k=3 (z=9,o=4) cap=4 delta=4
+    m=8 side=1 k=3 (z=4,o=9) cap=4 delta=4
+    m=8 side=0 k=4 (z=8,o=5) cap=1 delta=1
+    m=8 side=1 k=4 (z=5,o=8) cap=1 delta=1
+  rowend m=8: N(1/2)*2^Lmax=-160 env=256 maxrho=0.9990
+    m=9 side=0 k=0 (z=13,o=1) cap=1 delta=1
+    m=9 side=1 k=0 (z=1,o=13) cap=1 delta=1
+    m=9 side=0 k=1 (z=12,o=2) cap=4 delta=4
+    m=9 side=1 k=1 (z=2,o=12) cap=4 delta=4
+    m=9 side=0 k=2 (z=11,o=3) cap=6 delta=6
+    m=9 side=1 k=2 (z=3,o=11) cap=6 delta=6
+    m=9 side=0 k=3 (z=10,o=4) cap=4 delta=4
+    m=9 side=1 k=3 (z=4,o=10) cap=4 delta=4
+    m=9 side=0 k=4 (z=9,o=5) cap=1 delta=1
+    m=9 side=1 k=4 (z=5,o=9) cap=1 delta=1
+  rowend m=9: N(1/2)*2^Lmax=-32 env=128 maxrho=0.9984
+    m=10 side=0 k=0 (z=15,o=1) cap=1 delta=1
+    m=10 side=1 k=0 (z=1,o=15) cap=1 delta=1
+    m=10 side=0 k=1 (z=14,o=2) cap=5 delta=5
+    m=10 side=1 k=1 (z=2,o=14) cap=5 delta=5
+    m=10 side=0 k=2 (z=13,o=3) cap=10 delta=10
+    m=10 side=1 k=2 (z=3,o=13) cap=10 delta=10
+    m=10 side=0 k=3 (z=12,o=4) cap=10 delta=8
+    m=10 side=1 k=3 (z=4,o=12) cap=10 delta=10
+    m=10 side=0 k=4 (z=11,o=5) cap=5 delta=5
+    m=10 side=1 k=4 (z=5,o=11) cap=5 delta=5
+    m=10 side=0 k=5 (z=10,o=6) cap=1 delta=1
+    m=10 side=1 k=5 (z=6,o=10) cap=1 delta=1
+  rowend m=10: N(1/2)*2^Lmax=30 env=64 maxrho=0.9977
+  greedy(min |N(1/2)| per cell, no lookahead): first ENV violation at M=4
+    greedy rowend m=1: N(1/2)scaled=0 env=32768
+    greedy rowend m=2: N(1/2)scaled=0 env=16384
+    greedy rowend m=3: N(1/2)scaled=0 env=8192
+    greedy rowend m=4: N(1/2)scaled=0 env=4096  VIOL
+    greedy rowend m=5: N(1/2)scaled=0 env=2048  VIOL
+    greedy rowend m=6: N(1/2)scaled=0 env=1024  VIOL
+    greedy rowend m=7: N(1/2)scaled=0 env=512  VIOL
+    greedy rowend m=8: N(1/2)scaled=0 env=256  VIOL
+    greedy rowend m=9: N(1/2)scaled=0 env=128  VIOL
+    greedy rowend m=10: N(1/2)scaled=0 env=64  VIOL
+  witness-vs-greedy differing cells (48): [(2, 1, 0), (3, 0, 1), (4, 0, 1), (4, 0, 2), (4, 1, 0), (4, 1, 1), (5, 0, 0), (5, 0, 1), (5, 0, 2), (5, 1, 0), (6, 0, 0), (6, 0, 1), (6, 0, 2), (6, 0, 3), (6, 1, 0), (6, 1, 1), (6, 1, 2), (7, 0, 0), (7, 0, 1), (7, 0, 2), (7, 0, 3), (7, 1, 0), (7, 1, 1), (8, 0, 0), (8, 0, 1), (8, 0, 2), (8, 0, 3), (8, 0, 4), (8, 1, 2), (8, 1, 3), (9, 0, 0), (9, 0, 1), (9, 0, 2), (9, 0, 3), (9, 0, 4), (9, 1, 1), (9, 1, 2), (9, 1, 3), (10, 0, 0), (10, 0, 1)]
+  witness: homogenized level A_M=16; forced-parity referee PASS; band o in [7,9] coeffs [-120, 84, 228]
+  greedy: homogenized level A_M=16; forced-parity referee PASS; band o in [7,9] coeffs [-1098, 0, 1098]
+  (band parities are choice-independent == beta_M restriction — PROVED cross-check)
+
+===== g3_pin_g12_M10_deep.log =====
+[g3 pin g=1/2 D0=0 M=10] per-cell feasible |value| sets under ENV_1..ENV_10 at 9 biases (global +- symmetry => sets are sign-symmetric; testing v>=0) rows=[9, 10]
+  cell m=9 side=0 k=0 cap=1 (z=13,o=1): feasible|v|=[1]  <== PINNED|v|=1
+  cell m=9 side=1 k=0 cap=1 (z=1,o=13): feasible|v|=[1]  <== PINNED|v|=1
+  cell m=9 side=0 k=1 cap=4 (z=12,o=2): feasible|v|=[4] undecided=[0, 2]
+  cell m=9 side=1 k=1 cap=4 (z=2,o=12): feasible|v|=[0, 2, 4]
+  cell m=9 side=0 k=2 cap=6 (z=11,o=3): feasible|v|=[6] undecided=[0, 2, 4]
+  cell m=9 side=1 k=2 cap=6 (z=3,o=11): feasible|v|=[0, 2, 4, 6]
+  cell m=9 side=0 k=3 cap=4 (z=10,o=4): feasible|v|=[2, 4] undecided=[0]
+  cell m=9 side=1 k=3 cap=4 (z=4,o=10): feasible|v|=[0, 2, 4]
+  cell m=9 side=0 k=4 cap=1 (z=9,o=5): feasible|v|=[1]  <== PINNED|v|=1
+  cell m=9 side=1 k=4 cap=1 (z=5,o=9): feasible|v|=[1]  <== PINNED|v|=1
+  cell m=10 side=0 k=0 cap=1 (z=15,o=1): feasible|v|=[1]  <== PINNED|v|=1
+  cell m=10 side=1 k=0 cap=1 (z=1,o=15): feasible|v|=[1]  <== PINNED|v|=1
+  cell m=10 side=0 k=1 cap=5 (z=14,o=2): feasible|v|=[3, 5] undecided=[1]
+  cell m=10 side=1 k=1 cap=5 (z=2,o=14): feasible|v|=[1, 3, 5]
+  cell m=10 side=0 k=2 cap=10 (z=13,o=3): feasible|v|=[6, 8, 10] undecided=[0, 2, 4]
+  cell m=10 side=1 k=2 cap=10 (z=3,o=13): feasible|v|=[0, 2, 4, 6, 8, 10]
+  cell m=10 side=0 k=3 cap=10 (z=12,o=4): feasible|v|=[4, 6, 8, 10] undecided=[0, 2]
+  cell m=10 side=1 k=3 cap=10 (z=4,o=12): feasible|v|=[0, 2, 4, 6, 8, 10]
+  cell m=10 side=0 k=4 cap=5 (z=11,o=5): feasible|v|=[1, 3, 5]
+  cell m=10 side=1 k=4 cap=5 (z=5,o=11): feasible|v|=[1, 3, 5]
+  cell m=10 side=0 k=5 cap=1 (z=10,o=6): feasible|v|=[1]  <== PINNED|v|=1
+  cell m=10 side=1 k=5 cap=1 (z=6,o=10): feasible|v|=[1]  <== PINNED|v|=1
+
+===== g3_desc_frontier.log =====
+[desc-order] gamma=1/2 M=11: CAP nodes=46198784 t=210.0s
+[desc-order] gamma=3/5 M=10: CAP nodes=48357376 t=190.0s
+
+===== runB_3bias.log =====
+# depth law d_m = floor(1/2 m) + 0;  biases = 1/2,2/3,3/4;  Mmax=24 tbudget=320.0s scap=1000000 mirror_sym=off
+ROW m=1 d=0 A=2 states=3 t=0.0s bestrho=0.0000 | p=1/2: N in [-5.000e-01,5.000e-01] min|N|=0.000e+00 | p=2/3: N in [-4.444e-01,4.444e-01] min|N|=0.000e+00 | p=3/4: N in [-3.750e-01,3.750e-01] min|N|=0.000e+00
+  exact@1/2: A=2 envN=2 minN=-2 maxN=2 min|N|=0
+ROW m=2 d=1 A=4 states=12 t=0.0s bestrho=0.1071 | p=1/2: N in [-2.500e-01,2.500e-01] min|N|=0.000e+00 | p=2/3: N in [-2.222e-01,2.222e-01] min|N|=2.469e-02 | p=3/4: N in [-1.875e-01,1.875e-01] min|N|=2.344e-02
+  exact@1/2: A=4 envN=4 minN=-4 maxN=4 min|N|=0
+ROW m=3 d=1 A=5 states=69 t=0.0s bestrho=0.0000 | p=1/2: N in [-1.250e-01,1.250e-01] min|N|=0.000e+00 | p=2/3: N in [-1.975e-01,1.975e-01] min|N|=0.000e+00 | p=3/4: N in [-2.109e-01,2.109e-01] min|N|=0.000e+00
+  exact@1/2: A=5 envN=4 minN=-4 maxN=4 min|N|=0
+ROW m=4 d=2 A=7 states=3154 t=0.0s bestrho=0.0471 | p=1/2: N in [-6.250e-02,6.250e-02] min|N|=0.000e+00 | p=2/3: N in [-1.344e-01,1.344e-01] min|N|=9.145e-04 | p=3/4: N in [-2.047e-01,2.047e-01] min|N|=0.000e+00
+  exact@1/2: A=7 envN=8 minN=-8 maxN=8 min|N|=0
+ROW m=5 d=2 A=8 states=47146 t=0.7s bestrho=0.0137 | p=1/2: N in [-3.125e-02,3.125e-02] min|N|=0.000e+00 | p=2/3: N in [-8.901e-02,8.901e-02] min|N|=0.000e+00 | p=3/4: N in [-1.712e-01,1.712e-01] min|N|=0.000e+00
+  exact@1/2: A=8 envN=8 minN=-8 maxN=8 min|N|=0
+STOP: state cap exceeded (1657456 > 1000000) at row m=6 cell #2; exhaustive verdict only through row 5.
+VERDICT: FEASIBLE_THROUGH_5_STATECAP
+
+===== runC_sym3.log =====
+# depth law d_m = floor(1/2 m) + 0;  biases = 1/2,1/3,2/3;  Mmax=24 tbudget=320.0s scap=1000000 mirror_sym=ON
+ROW m=1 d=0 A=2 states=3 t=0.0s bestrho=0.0000 | p=1/2: N in [-5.000e-01,5.000e-01] min|N|=0.000e+00 | p=1/3: N in [-4.444e-01,4.444e-01] min|N|=0.000e+00 | p=2/3: N in [-4.444e-01,4.444e-01] min|N|=0.000e+00
+  exact@1/2: A=2 envN=2 minN=-2 maxN=2 min|N|=0
+ROW m=2 d=1 A=4 states=9 t=0.0s bestrho=0.0741 | p=1/2: N in [-2.500e-01,2.500e-01] min|N|=0.000e+00 | p=1/3: N in [-2.222e-01,2.222e-01] min|N|=2.469e-02 | p=2/3: N in [-2.222e-01,2.222e-01] min|N|=2.469e-02
+  exact@1/2: A=4 envN=4 minN=-4 maxN=4 min|N|=0
+ROW m=3 d=1 A=5 states=36 t=0.0s bestrho=0.0000 | p=1/2: N in [-1.250e-01,1.250e-01] min|N|=0.000e+00 | p=1/3: N in [-1.975e-01,1.481e-01] min|N|=0.000e+00 | p=2/3: N in [-1.481e-01,1.975e-01] min|N|=0.000e+00
+  exact@1/2: A=5 envN=4 minN=-4 maxN=4 min|N|=0
+ROW m=4 d=2 A=7 states=1378 t=0.0s bestrho=0.0067 | p=1/2: N in [-6.250e-02,6.250e-02] min|N|=0.000e+00 | p=1/3: N in [-1.344e-01,1.235e-01] min|N|=9.145e-04 | p=2/3: N in [-1.235e-01,1.344e-01] min|N|=9.145e-04
+  exact@1/2: A=7 envN=8 minN=-8 maxN=8 min|N|=0
+ROW m=5 d=2 A=8 states=16527 t=0.4s bestrho=0.0000 | p=1/2: N in [-3.125e-02,3.125e-02] min|N|=0.000e+00 | p=1/3: N in [-8.901e-02,8.779e-02] min|N|=0.000e+00 | p=2/3: N in [-8.779e-02,8.901e-02] min|N|=0.000e+00
+  exact@1/2: A=8 envN=8 minN=-8 maxN=8 min|N|=0
+STOP: state cap exceeded (1587906 > 1000000) at row m=6 cell #3; exhaustive verdict only through row 5.
+VERDICT: FEASIBLE_THROUGH_5_STATECAP
