@@ -327,6 +327,18 @@
   two-high gap is also positive).  Thus the projected `k=2` cap is `1624`.
   Source/output/profile/semantic SHA-256 are `ec98feab...e43935` /
   `85947083...17fe7a` / `1f8244b6...4ab72c` / `863e9fd6...6dd07c`.
+- `lrc14_j7_k2_z1620_mixed_shell_closure_thm2980.py` -> matching `.out`
+  [FINITE-EXACT THM-2980 BOUNDARY INPUT; THM-2980 REMAINS RESERVED].  After
+  the empty atlas gap `1621..1624`, all eight bodies at `1620` are empty.
+  Seven ordinary rows close by `1,202` exact status certificates and `418`
+  projected packet kills.  The hostile forced-high row
+  `(2,8,9,10,12,14)` has a negative one-high scalar gap, but its `147`
+  exact denominator/low-triple classes all satisfy the THM-2984 pair-free
+  complete-section gate, with minimum surplus `90`; independently, located
+  torsion closes the same `147/147` classes.  Thus the projected `k=2` cap is
+  `1619`.  Source/output/profile/section/class/semantic SHA-256 are
+  `eef6a5c0...e1e8` / `bb4e5df5...504b` / `a0ba343a...df1` /
+  `a96f2b6d...056f` / `aab1b5f7...c78` / `46cd5ec8...89cb`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:
