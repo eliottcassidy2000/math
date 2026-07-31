@@ -12,7 +12,7 @@ status: >
   common-status, exact-packet, forced-high-ray, antipodal-phase,
   finite-low-pair torsion, torsion-density pigeonhole, scalar-splice, and
   status-descent addenda improve the k=2/k=3 first-drift caps from 2142/380
-  to 1732/275.
+  to 1724/275.
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -188,6 +188,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_k2_cap1736_scalar_splice_thm2941.out
   - 04-computation/lrc14_j7_k2_z1736_hybrid_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_z1736_hybrid_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1732_ray_status_projected_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1732_ray_status_projected_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -1845,6 +1847,35 @@ z_1<=1732,                 ledger=2,239,774.              (25q5)
 The cap-`1736` splice pins the complete cap-`1742` verifier and scalar atlas.
 The hybrid closure pins that splice and the exact atlas partition; normal and
 optimized replays match its stored transcript byte for byte.
+
+At the next occupied height, the atlas has exactly the two ordinary rows
+
+```text
+E=(1,4,8,10,12,14): 188 = 33 crude + 155 status + 0,
+E=(2,4,8,10,12,14):  24 =  1 crude +   3 status + 20.
+```
+
+A fresh verifier reconstructs both rows directly from the canonical
+uniform-ray/status and projected-cell engines; it imports no earlier `k=2`
+descent wrapper.  Exact positive-slack expansion turns the last twenty states
+into exactly twenty literal packets, all projected-empty.  The minimum packet
+is `(1732,1736,1750,1810,1836)`: one cell gives only `15/13423`, a hostile
+control below `25/91`, while two cells give `31458/78373`, hence strict margin
+`903353/7131943`; direct full-carrier subtraction gives mass one.  The direct
+control agrees on all twenty packets, ray recurrence and antipodal sign balance
+are exact, and every slack cutoff is positive, so the proof is uniform over all
+distinct later nonaligned labels with no horizon.  Since the atlas has no row
+at any integer height `1725..1731` and its next occupied height is `1724`,
+
+```text
+2,239,774 - 2 = 2,239,772,
+z_1<=1724,                 ledger=2,239,772.              (25q6)
+```
+
+Normal and optimized replays match the stored transcript byte for byte.
+THM-2970 independently closes the nineteen forced-high rows in the same broad
+atlas; it is an orthogonal corroboration, not a dependency of this ordinary-row
+closure.
 
 For `k=5`, there is a second, Gram-facing derivation.  Pointwise
 

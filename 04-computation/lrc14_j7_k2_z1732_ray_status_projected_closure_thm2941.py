@@ -3,8 +3,8 @@
 
 The proof is reconstructed directly from the current canonical THM-2941
 uniform-ray/status and projected-cell engines.  It deliberately does not
-import a prior k=2 descent wrapper.  The only earlier closure used for the
-splice is the hash-pinned ``z1=1736`` theorem transcript.
+import or byte-pin any prior k=2 descent wrapper; the earlier cap enters only
+when canon composes this local closure with the already proved THM-2941 cap.
 
 For each of the two atlas bodies this verifier:
 
@@ -46,18 +46,14 @@ UNIFORM = ROOT / "04-computation/lrc14_j7_k3_uniform_ray_status_closure_thm2941.
 PROJECTED = ROOT / "04-computation/lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.py"
 ATLAS_SOURCE = ROOT / "04-computation/lrc14_j7_k2_scalar_band_1680_1742_thm2941.py"
 ATLAS_OUTPUT = ROOT / "05-knowledge/results/lrc14_j7_k2_scalar_band_1680_1742_thm2941.out"
-PRIOR_SOURCE = ROOT / "04-computation/lrc14_j7_k2_z1736_hybrid_closure_thm2941.py"
-PRIOR_OUTPUT = ROOT / "05-knowledge/results/lrc14_j7_k2_z1736_hybrid_closure_thm2941.out"
 OUTPUT_PATH = ROOT / "05-knowledge/results/lrc14_j7_k2_z1732_ray_status_projected_closure_thm2941.out"
 
-DEPENDENCIES = (UNIFORM, PROJECTED, ATLAS_SOURCE, ATLAS_OUTPUT, PRIOR_SOURCE, PRIOR_OUTPUT)
+DEPENDENCIES = (UNIFORM, PROJECTED, ATLAS_SOURCE, ATLAS_OUTPUT)
 EXPECTED_DEPENDENCY_HASHES = (
     "34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46",
     "76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662",
     "89016f939c961fa979ec5b30812981456df5bfb2af3066f1f1b38e5a83f1a412",
     "4a36611b26585964e185bbaa3d583be3f1c67a7b608cca785920266bc217a779",
-    "5965eddea10a7e2c2d2b70d94052f6d69b3593c865fd72d3a8f1c8052cf1f96f",
-    "548fd0d318e09ae4fa2da1844a2df5a50d8917c3fbfc48ab1b72ddf46f3d9678",
 )
 
 FIRST = 1732
@@ -107,9 +103,8 @@ EXPECTED_PACKET_AUDIT = (
     F(1),
     "70462ba71eb90368300dc9c17e75a82eb70fca2ee04b1fa405f163bbc8018d02",
 )
-# Filled only after a full development replay, then frozen for fail-closed use.
-EXPECTED_PROFILE_SHA256 = None
-EXPECTED_SEMANTIC_SHA256 = None
+EXPECTED_PROFILE_SHA256 = "055e397ce249d59cebb65e1a0a518be29599a3ad0ce611b78105220a2cb2cf76"
+EXPECTED_SEMANTIC_SHA256 = "6c983595686b3b9d7bf28d2572d55108bd81f967b997ea55f4e40208fd2b3d83"
 
 
 def require(condition, message):
@@ -164,10 +159,6 @@ require(tuple(key for key in ATLAS_KEYS if key[0] == FIRST) == CASES, "z1732 row
 require(not any(key[0] == FIRST for key in ATLAS_HIGH), "z1732 unexpectedly forced-high")
 require(not any(1725 <= key[0] <= 1731 for key in ATLAS_KEYS), "splice interval occupied")
 require(sum(key[0] == 1724 for key in ATLAS_KEYS) == 2, "next occupied height changed")
-require(
-    "consequence=projected k=2 first drift label z1<=1732" in PRIOR_OUTPUT.read_text(),
-    "prior cap transcript changed",
-)
 
 
 def spanning_trees(vertex_count):
@@ -731,6 +722,7 @@ def render(profiles):
     lines = [
         "LRC14 projected k=2 ray/status/projected closure at z1=1732",
         *(f"dependency_sha256={path.name}:{file_sha256(path)}" for path in DEPENDENCIES),
+        "composition_input=THM-2941 proved cap z1<=1732;not a byte dependency of this local verifier",
         f"scope=both atlas rows;{QUANTIFIER};no finite label horizon",
         f"atlas=height_counts:{EXPECTED_HEIGHTS};z1732_rows:2;empty:1725..1731;next:1724",
         "universe=first label 1732;four ordered-distinct later nonaligned labels;all denominator multisets and primitive ray directions",

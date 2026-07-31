@@ -26,12 +26,12 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 ### Exact live obligation
 
 Direct frontier: `<=6`.  THM-2941 gives wall `h/7` on all `3,003` roots.
-THM-2928/2941 empty aligned `k>=4`, cap `k=2,3` at `1732/275`, and close the
+THM-2928/2941 empty aligned `k>=4`, cap `k=2,3` at `1724/275`, and close the
 common-level reflected `k=1` diagonal.  Other censuses, arbitrary `k<=1`, the rung,
 and LRC are open.  Septimal floor/exception plus located phase cut the raw five-drift ledger
 `951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
-not physical-cover counts. THM-2970 independently closes all 19 forced-high rows in the `1680..1742` `k=2` atlas. For `k=3`, torsion/status closes through `297`;
+not physical-cover counts. THM-2970 independently closes all 19 forced-high rows in the `1680..1742` `k=2` atlas; the two ordinary `z1=1732` rows close by `212=34+158+20`, with all 20 terminal packets projected-empty. For `k=3`, torsion/status closes through `297`;
 the next 45 occupied rows split `1549=659+882+8`, and order-two/four torsion closes the eight `z286` terminals, leaving `275`.
 Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams but not semantic-root identification (kernel `28,393`); THM-2545/2549 give Hall and chronology gates,

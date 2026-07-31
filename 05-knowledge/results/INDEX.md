@@ -188,6 +188,23 @@
   `5965eddea10a7e2c2d2b70d94052f6d69b3593c865fd72d3a8f1c8052cf1f96f` /
   `548fd0d318e09ae4fa2da1844a2df5a50d8917c3fbfc48ab1b72ddf46f3d9678` /
   `4eb8cf508b9b2b80f7f69cf411117740a7ad3ed93527f41dd1a565077f290e0a`.
+- `lrc14_j7_k2_z1732_ray_status_projected_closure_thm2941.py` -> matching
+  `.out` [THM-2941 PROVED + FINITE-EXACT + VERIFIED].  This fresh local
+  verifier imports no prior `k=2` descent wrapper: it pins the canonical
+  ray/status and projected-cell engines and reconstructs the two atlas rows at
+  `z1=1732`.  Their exact ledgers are `188=33+155+0` and `24=1+3+20`;
+  positive-slack expansion gives twenty literal packets and all twenty are
+  projected-empty.  The minimum margin is `903353/7131943` at
+  `(1732,1736,1750,1810,1836)`.  One projected cell gives the hostile control
+  `15/13423<=25/91`, two give `31458/78373`, and direct full-carrier
+  subtraction gives mass one on every packet.  Exact antipodal ray checks and
+  positive finite cutoffs make the conclusion uniform with no label horizon.
+  With `1725..1731` atlas-empty, the cap is `z1<=1724` and ledger
+  `2,239,772`.  THM-2970's forced-high closure is orthogonal, not a dependency.
+  Source/output/semantic hashes:
+  `e35a85d7e400a3739a71cb5ed4137beb58e11ab85ad47f757576ad47c0a0ef35` /
+  `d40ad2088cc295e6932c227cb586886f6ce7a5d320b8b4aa1e1f64bbf443ba00` /
+  `6c983595686b3b9d7bf28d2572d55108bd81f967b997ea55f4e40208fd2b3d83`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:
