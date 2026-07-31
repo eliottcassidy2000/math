@@ -1,0 +1,57 @@
+==========================================================================
+A. NO-RETURN IS NOT MULTIPLICATIVE -- the N times N* machine
+==========================================================================
+  THM-3001: reversal negates the circuit.  THM-3003 sec 1: a SYMMETRIC
+  log-root measure forces R_k = R_(D-k), an antipalindromic circuit.
+  The root multiset of N*N* is {r} union {1/r}, whose log-root measure is
+  symmetric about 0 BY CONSTRUCTION.  So for every N, the product of the
+  two ratio-monotone polynomials N and N* is ratio-PALINDROMIC, hence not
+  monotone unless its circuit vanishes identically.
+
+  The ANTIPALINDROME is universal (it needs no hypothesis on N).  Whether
+  BOTH FACTORS are monotone is an extra property of the chosen N, and is
+  what turns the identity into a counterexample to multiplicativity.
+  machine applied to several N (A = N, B = N* up to scaling):
+    N = (n+1)^2(n+2)       c(N)=-        c(N*)=+        c(N N*)=--++           antipalindrome=True product monotone=False  [counterexample]
+    N = (n+1)^3(n+5)       c(N)=--       c(N*)=++       c(N N*)=---+++         antipalindrome=True product monotone=False  [counterexample]
+    N = (n+1)(n+2)(n+7)    c(N)=-        c(N*)=+        c(N N*)=--++           antipalindrome=True product monotone=False  [counterexample]
+    N = (n+2)^2(n+9)^3     c(N)=++-      c(N*)=+--      c(N N*)=++++----       antipalindrome=True product monotone=False  [factors not both monotone (identity still holds)]
+
+  MINIMAL INTEGER WITNESS (exhaustive over integer roots <=6, degree <=5 each):
+    total degree 6:  A roots ['1', '1', '2'],  B roots ['1', '2', '2']
+      c(A)   = -   monotone=True
+      c(B)   = +   monotone=True
+      c(A*B) = ++--   monotone=False
+    B is exactly A's reversal up to scaling (A roots {1,1,2}, reciprocals
+    {1,1,1/2} = (1/2){2,2,1} = B roots), so this is the machine at its
+    smallest, not a sporadic coincidence.
+  VERDICT A: NOT CLOSED UNDER MULTIPLICATION (proved + minimal witness)
+
+==========================================================================
+B. THE FIRST-GAP WALL IS ITSELF RATIO-MONOTONE
+==========================================================================
+   M   deg(W)  distinct scales  sign changes  monotone   C(mu_W)     C(mu_W*)   C>=0>=C*
+    6     129         7              0        True     +0.137011   -2.974661   True
+    8     178         9              0        True     +0.151536   -4.730729   True
+   10     229        11              0        True     +0.165714   -6.626403   True
+   12     281        13              0        True     +0.178905   -8.720673   True
+   14     330        15              0        True     +0.193836  -10.926369   True
+  The wall's circuit is strictly POSITIVE throughout: zero reversals at
+  degree 330.  THM-3001's necessary condition holds with a margin that
+  GROWS in M on both sides.  The wall is not the obstruction.
+  VERDICT B: WALL IS MONOTONE AND CLEARS THE NECESSARY CONDITION
+
+==========================================================================
+C. DICHOTOMY: separation, not root count, creates reversals
+==========================================================================
+  same number of distinct scales, two extremes:
+    near-continuum (the wall, M=10): 11 distinct scales spread over
+      [1/2, 10] with ratios -> 1 :  sign changes = 0
+    well separated: 11 distinct scales with ratio 10^6 :  sign changes = 19  (2m-3 = 19)
+  Same scale COUNT, opposite behaviour.  THM-3004's cluster law needs
+  separation; a near-continuum root measure sits at the other extreme with
+  no reversals at all.
+
+==========================================================================
+SUMMARY  non-multiplicative=True  wall-monotone=True  dichotomy=True
+==========================================================================
