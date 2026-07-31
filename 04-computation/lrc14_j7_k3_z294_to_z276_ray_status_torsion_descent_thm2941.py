@@ -50,16 +50,16 @@ DEFAULT_OUTPUT = (
 )
 
 EXPECTED_Z297_SHA256 = (
-    "f4464e01f0ada1515510a7d59b00582db3d677dd2a91b25407d25702d204e4e5"
+    "d062c7ac8ebf6a433c8fb1543293e941c85625e2eb40b82fcf05fc2404539b0a"
 )
 EXPECTED_Z297_OUTPUT_SHA256 = (
-    "a0de530aefe273ff74a5494867ca31d29d00d66811173cbfbeaadbfcab99e421"
+    "9b37ba124ca259482887531cc415a1b2244aa513244bc415e9b8b32c825ca010"
 )
 EXPECTED_ATLAS_SHA256 = (
     "cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "cb202da83bb1b9b419576c1fb1ed7589d2a25d802f55f1845e0c2023f4f5e644"
+    "160b026425cce752b8ac0f8a50561bbc13574db0d5704c901d4a52c53bbff1dc"
 )
 EXPECTED_M_HISTOGRAM = (
     (2, 24),
@@ -156,7 +156,8 @@ def require(condition, message):
 
 
 def file_sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    data = path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return hashlib.sha256(data).hexdigest()
 
 
 def load(name, path):
@@ -307,13 +308,18 @@ def main():
     for first, row in records:
         (
             body, L, high, first_d, trials, checks, signs, states, crude,
-            status, packets, mhist, certificate_digest, minimum_contradiction,
+            status, packets, mhist, instance_digest, verified_count,
+            representative_instance,
         ) = row
+        require(verified_count == len(status), (body, verified_count, len(status)))
         lines.append(
             f"BODY;z1={first};E={body};L={L};high={high};d1={first_d};trials={trials};"
             f"checks={checks};signs={dict(signs)};states={len(states)};crude={len(crude)};"
             f"status={len(status)};residual={len(packets)};M={dict(mhist)};"
-            f"certificate_sha256={certificate_digest};min_exact_farkas_contradiction={minimum_contradiction}"
+            f"verified_farkas_instance_sha256={instance_digest};"
+            f"verified_farkas_checks={verified_count};all_negative=1;"
+            f"representative_infeasible_instance={representative_instance};"
+            "solver_basis_not_frozen;contradiction_magnitudes_not_frozen"
         )
         for packet in packets:
             lines.append(f"RESIDUAL;z1={first};E={body};row={packet}")

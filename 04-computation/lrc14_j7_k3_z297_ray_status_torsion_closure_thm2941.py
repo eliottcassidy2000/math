@@ -48,9 +48,9 @@ THREE_ALIGNED_CAP = Q(36, 91)
 EXPECTED_RAY_SHA256 = "2ef5e0639354c38b13e17e41f91acb4143c7f60973295b0e2dd0f57eb8f38db2"
 EXPECTED_ATLAS_SOURCE_SHA256 = "2af6d96882f336a409a8657070ed76a75c09a53b3789101b83103b051e864ded"
 EXPECTED_ATLAS_SHA256 = "cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda"
-EXPECTED_UPSTREAM_SHA256 = "97fbefb8ffb17bf6742948027ec2d18dd9212bf76d35f5511e0b1c8dff64b4fc"
-EXPECTED_UPSTREAM_OUTPUT_SHA256 = "316d069c3f560ebc504283ea9f9ab19ce0987f73d8763bb8a27eeda48fcac24a"
-EXPECTED_SEMANTIC_SHA256 = "1a4d141dc2dfc49fc0b15b1ec7ba7f4f637827985b3b946f5f367960aa0cbee6"
+EXPECTED_UPSTREAM_SHA256 = "1e06537c7a9f194b93c6913ed87559027e18104f46bfad4347aa964cfe6b29f2"
+EXPECTED_UPSTREAM_OUTPUT_SHA256 = "2a5845c36712c5b91991bed27ddf578150e11b73fe61972494618765e3c476ef"
+EXPECTED_SEMANTIC_SHA256 = "52d02b6f0cec464f24b0e3076f1dee5bd954a41d07d8bc42b1b1bc51d9cac768"
 INHERITED_LEDGER = 375_765
 FINAL_LEDGER = 375_758
 EXPECTED_BODIES = (
@@ -90,7 +90,8 @@ def require(condition, message):
 
 
 def file_sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    payload = path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return hashlib.sha256(payload).hexdigest()
 
 
 def load(name, path):
@@ -285,7 +286,8 @@ def evaluate(body):
         )
         require(gap == target - capacity and gap > 0, (body, ds, witness))
     contradictions = []
-    certificate_digest = hashlib.sha256()
+    verified_instance_digest = hashlib.sha256()
+    representative_instance = None
     arcs_cache = {}
     histogram_cache = {}
     for ds, witness in sorted(status.items()):
@@ -308,7 +310,10 @@ def evaluate(body):
         contradictions.append(
             independent_farkas_check(q, marginals, capacities, histogram, certificate)
         )
-        certificate_digest.update(f"{body}|{ds}|{witness}\n".encode())
+        instance = witness[:-1]
+        if representative_instance is None:
+            representative_instance = (body, ds, instance)
+        verified_instance_digest.update(f"{body}|{ds}|{instance}\n".encode())
     packets = []
     for ds in survivors:
         state = states[ds]
@@ -338,8 +343,9 @@ def evaluate(body):
         tuple(sorted(status)),
         tuple(packets),
         tuple(sorted(Counter(witness[1] for witness in status.values()).items())),
-        certificate_digest.hexdigest(),
-        min(contradictions, default=None),
+        verified_instance_digest.hexdigest(),
+        len(contradictions),
+        representative_instance,
     )
 
 
@@ -677,6 +683,9 @@ def render(records, terminal_records, frontier_rows, atlas_counts, next_height, 
     require(THREE_ALIGNED_CAP < 1, THREE_ALIGNED_CAP)
     require(len(frontier_rows) == 7 and next_height == 294 and next_count == 1, (frontier_rows, next_height, next_count))
     require(INHERITED_LEDGER - len(frontier_rows) == FINAL_LEDGER, "ledger arithmetic")
+    representative_instance = next(
+        row[14] for row in records if row[14] is not None
+    )
     semantic_payload = (
         FIRST,
         PROJECTED_WALL,
@@ -690,6 +699,7 @@ def render(records, terminal_records, frontier_rows, atlas_counts, next_height, 
         INHERITED_LEDGER,
         FINAL_LEDGER,
         EXPECTED_UPSTREAM_OUTPUT_SHA256,
+        representative_instance,
     )
     semantic = hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
     if EXPECTED_SEMANTIC_SHA256 is not None:
@@ -715,17 +725,22 @@ def render(records, terminal_records, frontier_rows, atlas_counts, next_height, 
         f"least_qualifying_r_histogram={dict(sorted(qualifying_histogram.items()))};effective_order_histogram={dict(sorted(effective_histogram.items()))}",
         "phase_separation=high z=(L/d)u+hL with gcd(u,d)=1;height cancels and multiplication by u preserves effective order;the nonzero circular gap is >=1/r>=1/7,so two strict-open radius-1/14 danger conditions cannot coexist (at r=7 only excluded endpoints meet)",
         f"projected_consequence=all {total_cases} cases have full projected drift-safe mass 1>three-aligned union cap {ftext(THREE_ALIGNED_CAP)}",
+        f"representative_infeasible_instance={representative_instance};exact_farkas=VERIFIED;solver_basis_not_frozen",
     ]
     for row in records:
         (
             body, L, high, first_d, trials, checks, signs, states, crude,
-            status, packets, mhist, certificate_digest, minimum_contradiction,
+            status, packets, mhist, instance_digest, verified_count,
+            _representative_instance,
         ) = row
+        require(verified_count == len(status), (body, verified_count, len(status)))
         lines.append(
             f"BODY;E={body};L={L};high={high};d1={first_d};trials={trials};checks={checks};"
             f"signs={dict(signs)};states={len(states)};crude={len(crude)};status={len(status)};"
-            f"residual={len(packets)};M={dict(mhist)};certificate_sha256={certificate_digest};"
-            f"min_exact_farkas_contradiction={minimum_contradiction}"
+            f"residual={len(packets)};M={dict(mhist)};"
+            f"verified_farkas_instance_sha256={instance_digest};"
+            f"verified_farkas_checks={verified_count};all_negative=1;"
+            "solver_basis_not_frozen;contradiction_magnitudes_not_frozen"
         )
         for packet in packets:
             lines.append(f"RESIDUAL;E={body};row={packet}")

@@ -2,8 +2,8 @@ LRC14 projected k=3 z1=297 ray/status and located-torsion closure
 ray_source_sha256=2ef5e0639354c38b13e17e41f91acb4143c7f60973295b0e2dd0f57eb8f38db2
 atlas_source_sha256=2af6d96882f336a409a8657070ed76a75c09a53b3789101b83103b051e864ded
 atlas_output_sha256=cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda
-upstream_z298_source_sha256=97fbefb8ffb17bf6742948027ec2d18dd9212bf76d35f5511e0b1c8dff64b4fc
-upstream_z298_output_sha256=316d069c3f560ebc504283ea9f9ab19ce0987f73d8763bb8a27eeda48fcac24a
+upstream_z298_source_sha256=1e06537c7a9f194b93c6913ed87559027e18104f46bfad4347aa964cfe6b29f2
+upstream_z298_output_sha256=2a5845c36712c5b91991bed27ddf578150e11b73fe61972494618765e3c476ef
 scope=seven exact z297 scalar-atlas body rows;three distinct later nonaligned labels;no finite label horizon
 projected_high_gate=each pinned atlas row is HIGH-TAIL;first=297<floor(13L/132)+1;therefore at least one later label is high
 ray_law=(z+L)delta(z+L)=zdelta(z);all arbitrarily large high labels reduced to finitely many unit directions
@@ -18,10 +18,11 @@ torsion_pigeonhole=S is a set of distinct mod-d residues represented by complete
 least_qualifying_r_histogram={2: 49, 3: 14, 4: 6, 6: 4};effective_order_histogram={2: 52, 3: 17, 4: 4}
 phase_separation=high z=(L/d)u+hL with gcd(u,d)=1;height cancels and multiplication by u preserves effective order;the nonzero circular gap is >=1/r>=1/7,so two strict-open radius-1/14 danger conditions cannot coexist (at r=7 only excluded endpoints meet)
 projected_consequence=all 73 cases have full projected drift-safe mass 1>three-aligned union cap 36/91
-BODY;E=(1, 4, 10, 11, 12, 14);L=64680;high=6371;d1=1960;trials=147440;checks=64679;signs={-1: 32337, 0: 5, 1: 32337};states=73;crude=0;status=72;residual=1;M={4: 8, 7: 64};certificate_sha256=8ab8bd05c9f9de5c8c7527f8c717ce3ba07b3c5b0a7e0982ce564010af2c8901;min_exact_farkas_contradiction=-1
+representative_infeasible_instance=((1, 4, 10, 11, 12, 14), (21, 924, 1960, 2310), (9240, 7, (1320, 1320, 0, 1320), (1, 2, 7), ((0, 1320), (2, 3038), (3, 4508), (4, 194), (5, 70), (6, 110))));exact_farkas=VERIFIED;solver_basis_not_frozen
+BODY;E=(1, 4, 10, 11, 12, 14);L=64680;high=6371;d1=1960;trials=147440;checks=64679;signs={-1: 32337, 0: 5, 1: 32337};states=73;crude=0;status=72;residual=1;M={4: 8, 7: 64};verified_farkas_instance_sha256=aa83b1482774f0efdfccf8fea72b9428b67aeef67fef815b4194adade08614f3;verified_farkas_checks=72;all_negative=1;solver_basis_not_frozen;contradiction_magnitudes_not_frozen
 RESIDUAL;E=(1, 4, 10, 11, 12, 14);row=((1960, 2310, 5390, 6468), (297, 364, 324, 7270), Fraction(157873132, 14441742315), Fraction(1813837, 57766969260))
-BODY;E=(1, 8, 10, 11, 12, 13);L=240240;high=23661;d1=7280;trials=682640;checks=240239;signs={-1: 120116, 0: 7, 1: 120116};states=317;crude=195;status=122;residual=0;M={4: 70, 6: 8, 8: 16, 11: 9, 13: 17, 14: 2};certificate_sha256=bc665924209e7702c6cd6994846eb6c4704dca516ebbc777fc62bcaedd6d1048;min_exact_farkas_contradiction=-1
-BODY;E=(1, 8, 10, 11, 12, 14);L=129360;high=12741;d1=3920;trials=287980;checks=129359;signs={-1: 64676, 0: 7, 1: 64676};states=545;crude=76;status=423;residual=46;M={4: 128, 6: 8, 7: 248, 12: 19, 14: 4, 24: 8, 33: 8};certificate_sha256=a851f352f78ae65d91f9b5cd2d84908f536391139b97dc87f16ac9483910bbaf;min_exact_farkas_contradiction=-1
+BODY;E=(1, 8, 10, 11, 12, 13);L=240240;high=23661;d1=7280;trials=682640;checks=240239;signs={-1: 120116, 0: 7, 1: 120116};states=317;crude=195;status=122;residual=0;M={4: 70, 6: 8, 8: 16, 11: 9, 13: 17, 14: 2};verified_farkas_instance_sha256=9a9f19b4cbacc23671092d554c9dba51d0fd7b8ea4fdba39260623e8b37cbd6d;verified_farkas_checks=122;all_negative=1;solver_basis_not_frozen;contradiction_magnitudes_not_frozen
+BODY;E=(1, 8, 10, 11, 12, 14);L=129360;high=12741;d1=3920;trials=287980;checks=129359;signs={-1: 64676, 0: 7, 1: 64676};states=545;crude=76;status=423;residual=46;M={4: 128, 6: 8, 7: 248, 12: 19, 14: 4, 24: 8, 33: 8};verified_farkas_instance_sha256=7385e62671ba690b8b21ca41df38650679b47b375fba8524f874cfd4a97301b1;verified_farkas_checks=423;all_negative=1;solver_basis_not_frozen;contradiction_magnitudes_not_frozen
 RESIDUAL;E=(1, 8, 10, 11, 12, 14);row=((3, 3920, 5390, 10780), (297, 86240, 312, 324), Fraction(38861, 3531528), Fraction(9391, 17657640))
 RESIDUAL;E=(1, 8, 10, 11, 12, 14);row=((15, 3920, 5390, 10780), (297, 60368, 312, 324), Fraction(247393, 22473360), Fraction(132527, 247206960))
 RESIDUAL;E=(1, 8, 10, 11, 12, 14);row=((147, 1848, 3920, 5390), (297, 19360, 350, 312), Fraction(26320373, 2330808480), Fraction(382345, 466161696))
@@ -68,10 +69,10 @@ RESIDUAL;E=(1, 8, 10, 11, 12, 14);row=((3920, 4620, 10780, 25872), (297, 364, 32
 RESIDUAL;E=(1, 8, 10, 11, 12, 14);row=((3920, 4620, 10780, 43120), (297, 364, 324, 16581), Fraction(1023284527, 97593776280), Fraction(1264849, 97593776280))
 RESIDUAL;E=(1, 8, 10, 11, 12, 14);row=((3920, 4620, 10780, 64680), (297, 364, 324, 13598), Fraction(96995623, 9234945720), Fraction(285601, 9234945720))
 RESIDUAL;E=(1, 8, 10, 11, 12, 14);row=((3920, 4620, 10780, 129360), (297, 364, 324, 13039), Fraction(46457641, 4427653230), Fraction(180911, 8855306460))
-BODY;E=(1, 10, 11, 12, 13, 14);L=840840;high=82811;d1=25480;trials=1179616;checks=840839;signs={-1: 420418, 0: 3, 1: 420418};states=0;crude=0;status=0;residual=0;M={};certificate_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855;min_exact_farkas_contradiction=None
-BODY;E=(2, 6, 8, 10, 11, 14);L=129360;high=12741;d1=3920;trials=287980;checks=129359;signs={-1: 64679, 0: 1, 1: 64679};states=0;crude=0;status=0;residual=0;M={};certificate_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855;min_exact_farkas_contradiction=None
-BODY;E=(2, 8, 10, 11, 12, 13);L=240240;high=23661;d1=7280;trials=682640;checks=240239;signs={-1: 120115, 0: 9, 1: 120115};states=0;crude=0;status=0;residual=0;M={};certificate_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855;min_exact_farkas_contradiction=None
-BODY;E=(2, 8, 10, 11, 12, 14);L=129360;high=12741;d1=3920;trials=287980;checks=129359;signs={-1: 64678, 0: 3, 1: 64678};states=237;crude=0;status=213;residual=24;M={5: 43, 7: 152, 14: 2, 24: 12, 33: 4};certificate_sha256=d4c2ffc50fca9cc16eb0fb3c174347e881ffcc09aced36c755b045a5e51a99b5;min_exact_farkas_contradiction=-1
+BODY;E=(1, 10, 11, 12, 13, 14);L=840840;high=82811;d1=25480;trials=1179616;checks=840839;signs={-1: 420418, 0: 3, 1: 420418};states=0;crude=0;status=0;residual=0;M={};verified_farkas_instance_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855;verified_farkas_checks=0;all_negative=1;solver_basis_not_frozen;contradiction_magnitudes_not_frozen
+BODY;E=(2, 6, 8, 10, 11, 14);L=129360;high=12741;d1=3920;trials=287980;checks=129359;signs={-1: 64679, 0: 1, 1: 64679};states=0;crude=0;status=0;residual=0;M={};verified_farkas_instance_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855;verified_farkas_checks=0;all_negative=1;solver_basis_not_frozen;contradiction_magnitudes_not_frozen
+BODY;E=(2, 8, 10, 11, 12, 13);L=240240;high=23661;d1=7280;trials=682640;checks=240239;signs={-1: 120115, 0: 9, 1: 120115};states=0;crude=0;status=0;residual=0;M={};verified_farkas_instance_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855;verified_farkas_checks=0;all_negative=1;solver_basis_not_frozen;contradiction_magnitudes_not_frozen
+BODY;E=(2, 8, 10, 11, 12, 14);L=129360;high=12741;d1=3920;trials=287980;checks=129359;signs={-1: 64678, 0: 3, 1: 64678};states=237;crude=0;status=213;residual=24;M={5: 43, 7: 152, 14: 2, 24: 12, 33: 4};verified_farkas_instance_sha256=8f8cee480fe5d0954f93ca1786ecfb6f7fff877b450b6d4f135ff39753ad8e07;verified_farkas_checks=213;all_negative=1;solver_basis_not_frozen;contradiction_magnitudes_not_frozen
 RESIDUAL;E=(2, 8, 10, 11, 12, 14);row=((147, 3920, 4620, 5390), (297, 19360, 364, 312), Fraction(8557259, 776936160), Fraction(225023, 776936160))
 RESIDUAL;E=(2, 8, 10, 11, 12, 14);row=((294, 3920, 4620, 5390), (297, 12760, 364, 312), Fraction(2826139, 256035780), Fraction(160577, 512071560))
 RESIDUAL;E=(2, 8, 10, 11, 12, 14);row=((588, 3920, 4620, 5390), (297, 12980, 364, 312), Fraction(1436056, 130225095), Fraction(315677, 1041800760))
@@ -175,5 +176,5 @@ CASE;E=(2, 8, 10, 11, 12, 14);row=((3920, 4620, 5390, 129360), 129360, ((4620, 3
 atlas_exact_check=z297 rows:7;z295..296 empty;next occupied z294 with1 body
 ledger_decrement=375765-7=375758;decrement counts body rows,not 71 quotient states
 conclusion=all seven projected k3 z1=297 body rows are empty;with pinned z298 closure,projected k3 cap<=294
-semantic_sha256=1a4d141dc2dfc49fc0b15b1ec7ba7f4f637827985b3b946f5f367960aa0cbee6
+semantic_sha256=52d02b6f0cec464f24b0e3076f1dee5bd954a41d07d8bc42b1b1bc51d9cac768
 all_exact_controls=PASS

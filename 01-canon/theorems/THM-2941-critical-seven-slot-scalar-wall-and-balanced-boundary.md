@@ -1154,7 +1154,8 @@ it does not by itself change the current first-drift cap.
 Following `MISTAKE-331`, every solver-returned Farkas vector is still checked
 over the exact rationals, but the transcript and semantic digest bind only the
 deterministic infeasible instances and first witness.  They do not bind the
-noncanonical dual-basis representative selected by the LP search.
+noncanonical dual-basis representative selected by the LP search, nor any
+contradiction magnitude derived from that representative.
 
 At the old `k=3` cap, the frontier extraction supplied nine bodies whose
 recorded maximal surviving first drift was `z_1=378`.  This was not yet a
@@ -1500,17 +1501,17 @@ cd50c3e7c9c766160eb7167b85416fd5e11fb5680d1b27c500840021bfc4de46.
 The `z_1=297` torsion-density source/output/semantic hashes are
 
 ```text
-f4464e01f0ada1515510a7d59b00582db3d677dd2a91b25407d25702d204e4e5
-a0de530aefe273ff74a5494867ca31d29d00d66811173cbfbeaadbfcab99e421
-1a4d141dc2dfc49fc0b15b1ec7ba7f4f637827985b3b946f5f367960aa0cbee6.
+d062c7ac8ebf6a433c8fb1543293e941c85625e2eb40b82fcf05fc2404539b0a
+9b37ba124ca259482887531cc415a1b2244aa513244bc415e9b8b32c825ca010
+52d02b6f0cec464f24b0e3076f1dee5bd954a41d07d8bc42b1b1bc51d9cac768.
 ```
 
 The `z_1=294` through `276` descent source/output/semantic hashes are
 
 ```text
-f4d7292d5f3ce1b6f10f65706c15457490058a3dc59823e8c176066024307309
-f709b8594af9e506f1a6028c9263c743b6340086deb21d41fd28994aa3e2aad7
-cb202da83bb1b9b419576c1fb1ed7589d2a25d802f55f1845e0c2023f4f5e644.
+61868bc605b10bf3649dbed0b2323133ff2ed5df8d0c93587f3645975a6c274a
+a9db04e9bf53709199a8fb18f618ae941e58afb21c7ade2078769ce8313305f4
+160b026425cce752b8ac0f8a50561bbc13574db0d5704c901d4a52c53bbff1dc.
 ```
 
 The physical reconciliation source/output pairs are
