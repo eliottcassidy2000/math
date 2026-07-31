@@ -1,0 +1,32 @@
+reference points
+  P(y) = (-1)^y            I = 1.000000   <- ARCH extremal
+  P(y) = 1  (constant)     I = 0.000000
+  P(y) = (-1)^y 2^-y       I = 0.750000   <- alternating but decaying
+
+THM-3010 ballot columns: circuit, its sign pattern, and I
+  binom(2k,k)          circuit +++++++++++  changes=0  I(values)=0.405749
+  Catalan              circuit +++++++++++  changes=0  I(values)=0.383177
+  binom(2k,k-1) [B]    circuit ---++++++++  changes=1  I(values)=0.425865
+  binom(2k+1,k-1)      circuit ----------+  changes=1  I(values)=0.377465
+
+THM-3010 metallic recurrences (the maximal-alternation extremals)
+  n=1 (golden)  circuit +-+-+-+-+-+-+  changes=12
+        I(sign seq) = 1.000000    I(values) = 0.700362
+  n=2 (silver)  circuit +-+-+-+-+-+-+  changes=12
+        I(sign seq) = 1.000000    I(values) = 0.590433
+  n=3 (bronze)  circuit +-+-+-+-+-+-+  changes=12
+        I(sign seq) = 1.000000    I(values) = 0.547518
+  n=4 (n=4)  circuit +-+-+-+-+-+00  changes=10
+        I(sign seq) = 1.000000    I(values) = 0.528546
+
+VERDICT
+  On SIGN sequences the conjecture is true but empty: "maximal circuit
+  alternation" MEANS the sign sequence is +-(-1)^k, and any such sequence has
+  I = 1 by definition.  No content.
+  On VALUE sequences it is FALSE.  Simson gives R_k = 1/(1+(-1)^k/a_k^2), so
+  the circuit alternates in sign but its magnitude decays like a_k^-2, i.e.
+  geometrically; a geometrically decaying alternating sequence has I -> 1/2
+  (the j=1 difference dominates and later differences cannot keep up).  Our
+  ARCH extremal has CONSTANT magnitude, which is what pins I = 1.
+  So the shared feature is sign-alternation only; the index does NOT transfer
+  as a nontrivial common invariant.

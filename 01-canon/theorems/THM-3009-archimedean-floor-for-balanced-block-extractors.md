@@ -480,20 +480,56 @@ realisable at slope C}` is the precise home of the gap `C*_1 - C*`**, and it
 is finitely checkable one degree at a time. The cheapest question: can two
 adjacent shells compensate each other at all?
 
-### 12.2 The alternation index (a cross-agent invariant)
+### 12.2 The alternation index -- TESTED, and REFUTED as a shared invariant
 
-Our extremal atom saturates `|Delta^j P(0)| <= 2^j sup|P|` at `P(y) =
-+-(-1)^y`; klein's THM-3010 (ballot-column Newton ratios, bronze
-log-concavity threshold, **metallic maximal alternation**) independently
-reaches maximal alternation for circuit sign changes, and HYP-9070 uses it as
-a JC(2) search gate. Define the **alternation index** of a finite sequence as
-`max_j |Delta^j P(0)| / (2^j sup|P|) in [0,1]`. Conjecture: the extremal
-objects in both settings are exactly the index-1 elements. This is cheap to
-test -- compute the index of klein's ballot-column extremals -- and if it
-holds it is a genuine shared invariant between the coin extractor's capacity
-bound and the GMC circuit work, which the user's "metallic ratios and circuit
-alternation" pairing anticipated. Note the metallic ratios live on klein's
-side, not in our threshold constant (section 9.3).
+Our extremal atom saturates `|Delta^j P(0)| <= 2^j sup|P|` at
+`P(y) = +-(-1)^y`; klein's THM-3010 proves the metallic recurrences
+`a_k = n a_(k-1) + a_(k-2)` attain MAXIMAL circuit alternation, via Simson
+`a_(k-1)a_(k+1) - a_k^2 = (-1)^k`. Define
+
+```text
+I(P) = max_(j>=1) |Delta^j P(0)| / (2^j sup|P|)  in [0,1]
+```
+
+(`j >= 1`, since at `j = 0` the ratio is `1` for every `P`). The conjecture
+was that the extremals of both settings are exactly the `I = 1` elements.
+**Tested against THM-3010's objects; refuted.**
+
+*On sign sequences it is true but empty.* "Maximal circuit alternation"
+*means* the sign sequence is `+-(-1)^k`, and every such sequence has `I = 1`
+by definition. `I(sign) = 1.000000` for `n = 1,2,3,4`. No content.
+
+*On value sequences it is false.* Simson gives
+`R_k = 1/(1 + (-1)^k/a_k^2)`, so the circuit alternates in sign but its
+magnitude decays like `a_k^-2`, geometrically. A geometrically decaying
+alternating sequence has `I -> 1/2`; our ARCH extremal has CONSTANT
+magnitude, which is exactly what pins `I = 1`. Measured:
+
+```text
+metallic n =        1        2        3        4
+I(values)      0.700362 0.590433 0.547518 0.528546     (-> 1/2)
+```
+
+The index also fails to separate klein's distinguished strand: the four
+ballot columns give `I(values) = 0.4057, 0.3832, 0.4259, 0.3775`, and the one
+with a sign change (`binom(2k,k-1)`, strand B) is not meaningfully above the
+others. So `I` is **not** a shared invariant.
+
+*What survives.* `I` is a strict TIE-BREAKER inside klein's extremal class.
+All metallic recurrences attain the same maximal sign-change count (12 in the
+computed range), so THM-3010's criterion cannot distinguish them; `I` orders
+them strictly, `0.7004 > 0.5904 > 0.5475 > 0.5285`, with **golden maximal**.
+The reason is transparent: Fibonacci grows slowest, so `a_k^-2` decays
+slowest and the alternation is the most sustained. `I` therefore measures
+"alternation with sustained magnitude", not alternation. Worth contrasting
+with THM-3010 sec 2, whose ballot family contains only the BRONZE
+discriminant and no golden one -- the two selection principles pick different
+metals.
+
+(Caveat: at `n = 4` the circuit underflows in double precision for large `k`,
+so its `I` is slightly contaminated; the `n = 1,2,3` values are clean and
+carry the trend.)
 
 Referees: `04-computation/amm12592_interiority_and_stirling.py`,
-`04-computation/amm12592_fold_constant_and_compensation.py`.
+`04-computation/amm12592_fold_constant_and_compensation.py`,
+`04-computation/amm12592_alternation_index_vs_thm3010.py`.
