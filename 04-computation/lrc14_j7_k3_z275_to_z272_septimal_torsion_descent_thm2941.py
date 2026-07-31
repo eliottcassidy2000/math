@@ -50,12 +50,17 @@ DEFAULT_OUTPUT = (
     "lrc14_j7_k3_z275_to_z272_septimal_torsion_descent_thm2941.out"
 )
 EXPECTED_UPSTREAM_SHA256 = (
-    "794f925c2d293ca3123e49f539ba9e753b03a09d3481162d0ce0166fe3bc246b"
+    "e5eff0899a89b99187bf9dfbb1ac8da40ad9d5f021079771020af7cef43e5114"
 )
 EXPECTED_UPSTREAM_OUTPUT_SHA256 = (
-    "af77697e3c67f426e0dfd7e0ed9295d8958a2655959ea108afd2ba782fa49ea6"
+    "ad5e01735ca9591c7161b75bb801cd011c6fc24d69f791a004e041ccb85ea075"
 )
-EXPECTED_SEMANTIC_SHA256 = None
+EXPECTED_PROFILE_SHA256 = (
+    "1139218bdb4e9d19a3a64b22103030ef682e835803f5caf07c1659b0ce788f5b"
+)
+EXPECTED_SEMANTIC_SHA256 = (
+    "0960c65f29707e6ce1b295f35f0118960ce420c1d27df58365b91999c1faca9b"
+)
 EXPECTED_M_HISTOGRAM = (
     (2, 1), (3, 41), (4, 74), (5, 346), (6, 223), (7, 487),
     (9, 16), (10, 3), (11, 118), (13, 474), (14, 16), (18, 8),
@@ -336,6 +341,38 @@ def main():
     septimal = septimal_certificates(terminal_records)
     require(INHERITED_LEDGER - len(tasks) == FINAL_LEDGER, "ledger arithmetic changed")
 
+    profile_payload = (
+        tasks,
+        tuple(
+            (
+                first,
+                row[0],
+                row[1],
+                row[2],
+                row[3],
+                row[4],
+                row[5],
+                row[6],
+                tuple(len(row[index]) for index in (7, 8, 9, 10)),
+                row[11],
+                row[12],
+                row[13],
+            )
+            for first, row in records
+        ),
+        tuple(row[:-1] for row in terminal_records),
+        totals,
+        tuple(sorted(level_totals.items())),
+        m_histogram,
+        atlas_counts,
+        controls,
+        INHERITED_LEDGER,
+        FINAL_LEDGER,
+    )
+    profile = hashlib.sha256(repr(profile_payload).encode()).hexdigest()
+    if EXPECTED_PROFILE_SHA256 is not None:
+        require(profile == EXPECTED_PROFILE_SHA256, "profile digest changed")
+
     # ``records`` come from the repaired MISTAKE-333 engine.  Every rejected
     # common-status instance has its exact dual checked there, but its
     # solver-selected dual basis is deliberately excluded: the stored record
@@ -368,6 +405,7 @@ def main():
         f"level_totals={level_totals}",
         f"totals=states:{totals[0]};crude_kills:{totals[1]};status_kills:{totals[2]};septimal_residuals:{totals[3]}",
         f"status_M_histogram={dict(m_histogram)}",
+        f"canonical_profile_sha256={profile}",
         "independent_exact_farkas_checks=1844/1844:PASS",
         f"pair_overlap_exhaustive_controls={controls[0]}",
         "common_table_controls=coverable positive instance accepted;incompatible hostile instance rejected",
