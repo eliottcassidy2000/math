@@ -6,15 +6,17 @@ status: >
   of a scalar-admissible height is decided by a three-way sign/attainment
   law.  Retaining the primitive unit also makes every fixed-cell phase
   independent of height, giving a finite unit-by-unit strict-open exclusion
-  gate.  Its cardinality shadow is sharp: more than
+  gate.  Its centered cardinality shadow is sharp: more than
   beta(d)=2 floor((d-1)/14)+1 fixed-safe residues clear every unit, while
-  beta(d) residues need not.  Gcd-stratum capacities and the exact
-  multiplicative transporter refine this threshold whenever residue shape is
-  retained.  The resulting transport complex is flag through d=42 and first
-  becomes non-flag at d=43, with an explicit irreducible three-cell
-  certificate.  This is a reusable refinement of the projected k=3
-  denominator quotient; it does not assert that any new atlas row is empty
-  and does not improve the current proved cap by itself.
+  beta(d) residues need not.  An arbitrarily translated open danger band has
+  the different sharp capacity ceil(d/7); the two bounds must not be
+  conflated.  Gcd-stratum capacities and the exact multiplicative transporter
+  refine the centered threshold whenever residue shape is retained.  The
+  resulting transport complex is flag through d=42 and first becomes
+  non-flag at d=43, with an explicit irreducible three-cell certificate.  This
+  is a reusable refinement of the projected k=3 denominator quotient; it does
+  not assert that any new atlas row is empty and does not improve the current
+  proved cap by itself.
 source: codex-lrc14-k3-signed-ray-phase-gate-2026-07-30
 depends_on:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
@@ -235,6 +237,64 @@ actual shape of `S` can still make every intersection `S ∩ u^{-1}B_d`
 proper; this is exactly the information retained by the finite ray-resolved
 test and lost by a count-only quotient.
 
+### 4.1 The sharp translated-band capacity
+
+The exact centered count `beta(d)` must not be used after an arbitrary local
+phase translation.  For a real phase `theta` and a primitive unit `u mod d`,
+put
+
+```text
+B_d(theta,u)={r mod d:||theta+ur/d||<1/14}.             (13a)
+```
+
+Then the sharp uniform capacity is
+
+```text
+|B_d(theta,u)|<=kappa(d):=ceil(d/7).                    (13b)
+```
+
+Indeed multiplication by `u` permutes the residues.  The strict danger arc
+has length `1/7` on the unit circle, hence length `d/7` after scaling the
+residue lattice to unit spacing.  Cut the circle outside this arc and lift
+its `k` occupied lattice points to integers
+
+```text
+n_1<...<n_k
+```
+
+in one open real interval of length `d/7`.  Unit spacing and strict openness
+give
+
+```text
+k-1<=n_k-n_1<d/7,
+```
+
+so the integer `k` is at most `ceil(d/7)`.  Conversely a suitably shifted
+open interval of length `d/7` contains exactly `ceil(d/7)` lattice points;
+thus `(13b)` is sharp among translation-uniform count bounds.
+
+Consequently
+
+```text
+|S|>ceil(d/7)
+implies that for every primitive u and every theta
+some c in S lies outside B_d(theta,u).                  (13c)
+```
+
+The distinction from `(12)` is real.  At `d=28`,
+
+```text
+beta(28)=3,                 kappa(28)=4,
+S={0,1,2,3} subset (-1/2,7/2) mod 28.                  (13d)
+```
+
+Thus four residues can all lie in one translated open danger band although
+no centered band contains more than three.  The `beta(d)` gate is exact for
+the absolute phase `(8)`; `(13b)--(13c)` is the required gate when aligned
+coordinates leave an arbitrary translation `theta`.  This scope guard is
+especially important in projected terminal arguments: a local shift cannot
+be silently recentered unless the fixed-cell sidecar proves that operation.
+
 ## 5. Gcd-stratum refinement and the exact obstruction
 
 The total count in `(12)` is not the end of the finite reduction.  Let
@@ -401,6 +461,18 @@ The first inequality follows immediately from `(10)`, and the second from
 the absolute-unit count hypothesis `|S|>beta(d)`.  The gain can be strict:
 for `d=14m`, `beta(d)=d/7-1`.  Retaining absolute cell addresses can therefore
 save a whole residue fibre before any transporter-shape refinement is used.
+
+For the translated gate `(13c)`, the correct comparison is instead
+
+```text
+kappa(d)=ceil(d/7)<=d/R.                               (23a)
+```
+
+Thus the same pair-density count `|S|>d/R` also implies universal escape from
+every translated band, without selecting a pair.  What cannot be done is to
+replace `kappa(d)` by the smaller centered value `beta(d)` in that translated
+argument; `(13d)` is a canonical boundary mechanism to test whenever such a
+recentring is proposed.
 
 This admits a useful graph-theoretic rephrasing without inventing an
 orientation.  The bad band `B_d` is itself an independent set in
