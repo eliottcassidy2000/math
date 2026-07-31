@@ -14,10 +14,10 @@ ROOT = Path(__file__).resolve().parents[1]
 PARENT_SOURCE = ROOT / "04-computation" / "lrc14_j7_k2_z1776_ray_status_closure_thm2941.py"
 PARENT_OUTPUT = ROOT / "05-knowledge" / "results" / "lrc14_j7_k2_z1776_ray_status_closure_thm2941.out"
 OUTPUT_PATH = ROOT / "05-knowledge" / "results" / "lrc14_j7_k2_z1768_high_wall_closure_thm2941.out"
-EXPECTED_PARENT_SOURCE_SHA256 = "1046e3dad02219829028469f7bc924ce27cd5b2f854ae7e8a7ddec737ab5c319"
-EXPECTED_PARENT_OUTPUT_SHA256 = "d0444dbf5b00de46d4cda6c25664184934963538a54ffd13efe357dd5a4a17de"
+EXPECTED_PARENT_SOURCE_SHA256 = "b8de0dd88fbc3ce0a8322d9a424fddb9bcdcd22af733f2a59e21d2a1a29cceab"
+EXPECTED_PARENT_OUTPUT_SHA256 = "e9f942598572a4e8ba94ea904687b5da3c2140668b8502f3228c698b289c4bc7"
 EXPECTED_PROFILE_SHA256 = "32b8ba9c891fb99495d3923a587ac76a270b64b61ae3c469ae7e2fc2469ed9e2"
-EXPECTED_SEMANTIC_SHA256 = "4eeefc4e8054fc3069e065a4242901410fef1638f67b959e189a456eaeedaf71"
+EXPECTED_SEMANTIC_SHA256 = "8657e811fb1bbcae75e02c8e0990bec2a894f33a64836aab6fad3fbf6d8e01f0"
 
 CASE = (1768, (1, 8, 10, 12, 13, 14))
 HIGH_OBLIGATION = "one later label at or beyond the projected wall"

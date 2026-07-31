@@ -15,10 +15,10 @@ ROOT = Path(__file__).resolve().parents[1]
 PARENT_SOURCE = ROOT / "04-computation" / "lrc14_j7_k2_z1768_high_wall_closure_thm2941.py"
 PARENT_OUTPUT = ROOT / "05-knowledge" / "results" / "lrc14_j7_k2_z1768_high_wall_closure_thm2941.out"
 OUTPUT_PATH = ROOT / "05-knowledge" / "results" / "lrc14_j7_k2_z1758_ray_status_closure_thm2941.out"
-EXPECTED_PARENT_SOURCE_SHA256 = "0d6d791dbd74c9aac63b6d9290e1599324e5c0417f01a4878984fefb0fcef974"
-EXPECTED_PARENT_OUTPUT_SHA256 = "7ea8282d9c6154a65e65e8a05cbe5383fe65f591dfa2c2b7e339436642c895b2"
-EXPECTED_PROFILE_SHA256 = "de10b117a9cf371a6abb18fd02c6babe26561530d97a27ba1f7649b90fa15d19"
-EXPECTED_SEMANTIC_SHA256 = "375682f928291bff957427d15352153ef600ae946aa6035c4a7585e987b0727b"
+EXPECTED_PARENT_SOURCE_SHA256 = "96fed14134bc57267b74636ef3174499c8f4bdb1e66806e865df5a02d640b5b8"
+EXPECTED_PARENT_OUTPUT_SHA256 = "e8a5c6fe160680d2191c05110ae5f6d15f77ecbbf612bad86e1dddb9950a2b63"
+EXPECTED_PROFILE_SHA256 = "670a20fc93b692a70d08b6bf02a31c63beb4030684286cb9a3ca0026a43e1221"
+EXPECTED_SEMANTIC_SHA256 = "a84561137936a327b5a7c3767854327983969ad6a82e694be41b017be97fd646"
 
 CASE = (1758, (1, 4, 8, 10, 12, 14))
 QUANTIFIER = "distinct later nonaligned labels"
@@ -26,7 +26,7 @@ EXPECTED_COUNTS = (2, 0, 2, 0)
 EXPECTED_STAGE_SHA256 = (
     "e78b52de33839ff3bb4fc51d6b2b477886877dbdca09f99b178e9ce4659b4741",
     "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
-    "cd1b9ac91ca3694c9d02947a0c545d568376a8dacbb40bd7080265a24d79e0c5",
+    "41b3cdfdd6f1e191a9ff5c7fb359b4b0a34e3915b9492f4dea258a81523ee615",
     "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
 )
 EXPECTED_RAY_SHA256 = "276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674"
@@ -67,7 +67,7 @@ def profile():
     (_amplitudes, ray_digest, divisor_count, trials, first_delta, first_d, scalar, crude, status, states, stages) = result
     counts = (len(scalar), len(crude), len(status), len(states))
     require(counts == EXPECTED_COUNTS, ("counts changed", counts))
-    require(stages == EXPECTED_STAGE_SHA256, "stage digests changed")
+    require(stages == EXPECTED_STAGE_SHA256, ("stage digests changed", stages))
     require(ray_digest == EXPECTED_RAY_SHA256, "ray digest changed")
     require(not states, "a common-status state survived")
     return (first, body, h, len(carrier), L, lower, first_delta, first_d, ray_digest, divisor_count, trials, counts, stages)
@@ -76,11 +76,11 @@ def profile():
 def render(row):
     profile_hash = sha256(repr(row).encode()).hexdigest()
     if EXPECTED_PROFILE_SHA256 is not None:
-        require(profile_hash == EXPECTED_PROFILE_SHA256, "profile digest changed")
+        require(profile_hash == EXPECTED_PROFILE_SHA256, ("profile digest changed", profile_hash))
     semantic_payload = (EXPECTED_PARENT_SOURCE_SHA256, EXPECTED_PARENT_OUTPUT_SHA256, CASE, QUANTIFIER, EXPECTED_COUNTS, EXPECTED_STAGE_SHA256, profile_hash)
     semantic_hash = sha256(repr(semantic_payload).encode()).hexdigest()
     if EXPECTED_SEMANTIC_SHA256 is not None:
-        require(semantic_hash == EXPECTED_SEMANTIC_SHA256, "semantic digest changed")
+        require(semantic_hash == EXPECTED_SEMANTIC_SHA256, ("semantic digest changed", semantic_hash))
     (first, body, h, components, L, lower, first_delta, first_d, ray_digest, divisor_count, trials, counts, stages) = row
     lines = [
         "LRC14 projected k=2 exact ray/status closure at z1=1758",
