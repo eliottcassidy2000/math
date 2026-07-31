@@ -112,6 +112,33 @@ Sharper structure, elementary to check:
    gate opens (construction, `C* = 9049/6592`-ish) or closes (lower bound)
    at `gamma = 2457/6592` is the live question.
 
+## 2b0. THE CONSTRUCTION SIDE OPENS (2026-07-31, THM-3002 + lane G5)
+
+`C* = 2` is no longer the favoured answer. Lane G5's checkpoint-closure
+reduction (closing the books exactly at every dyadic checkpoint
+`M = 2^r - 1` is *sufficient* for `C* <= 1 + gamma`) plus THM-3002 give:
+
+1. **Every dyadic epoch through `[16,31]` closes at `gamma = 1/2`**
+   (VERIFIED-EXACT, witnesses re-derived independently): an exactly fair
+   extractor exists for all critical values `n <= 31` with
+   `T(n) = n + 1 + floor(n/2)`.
+2. **Normal form:** block closure forces `F = q^{m_lo-1}H`,
+   `G = -p^{m_lo-1}H`; `H = 1` says the epoch's entire imbalance is the
+   single middle pair `0^R 1^R` vs `1^R 0^R` — THM-2160's trick promoted
+   from one row to a whole epoch — and decouples the two sides.
+3. **Sharp capacity criterion:** `max |[p^t]Delta| = binom(d,t)2^t` over the
+   Lucas box, so `sum_{i<=t} binom(d_i,t-i)2^{t-i} >= binom(R-1,t)` is
+   necessary. Exact ledger: exponentially deficient for `gamma < 1/2`,
+   marginal-then-deficient at `gamma = 1/2` (dead by `R = 64`), uniformly
+   ample for `gamma >= 3/5`. Asymptotic threshold `gamma* ~ 0.598` from a
+   **two-ray entropy comparison** — structurally the shape of (27).
+4. So the `gamma = 1/2` successes are finite-size, and the live target is
+   `gamma ~ 3/5` (`C = 8/5`): (*) is already solved there for `R = 8, 16`.
+
+Falsifier for `C* = 2`: closure of all epochs at any `gamma < 1`.
+Falsifier for the program: an `R` at which (*) is exhaustively infeasible
+at every `gamma < 1` and every `H`.
+
 ## 2c0. Direction status after the coinC2 session (2026-07-30, evening)
 
 The **evaluation reading of (27) is CLOSED as a class**: THM-2977 (the
