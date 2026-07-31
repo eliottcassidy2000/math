@@ -164,6 +164,21 @@
   `bf8ebd21949d7d82672a8010a9b7882219a42311475c00943180e3373bc8969b` /
   `519e590ca18d04b1845e7dd278575870aba816a58b39c0a34465441fe0d52bbe` /
   `2debf1b852cb393a0ed999eada1e2e1aac645848a59b8724459a6cb9132df441`.
+- `lrc14_j7_k2_z1736_hybrid_closure_thm2941.py` -> matching `.out`
+  [THM-2941 PROVED + FINITE-EXACT + VERIFIED].  A self-contained replay
+  against the current canonical uniform-ray and projected-cell sources
+  partitions all fifteen atlas rows at `z1=1736` as `9+5+1`.  The nine
+  ordinary rows give `929 = 0 crude + 774 status + 155 residual`, then
+  `286` finite-slack packets and `286` projected kills.  Five HIGH rows
+  have negative exact forced-wall maxima.  The last HIGH row is the unique
+  packet above, with projected margin `849/1547`.  The routes are disjoint,
+  exhaust the atlas height, quantify over all distinct later nonaligned
+  labels, and impose no horizon.  Since `1733..1735` are scalar-empty, the
+  proved cap is `z1<=1732` and the ledger is `2,239,774`.  Ordinary and
+  optimized transcripts match stored bytes.  Source/output/semantic hashes:
+  `5965eddea10a7e2c2d2b70d94052f6d69b3593c865fd72d3a8f1c8052cf1f96f` /
+  `548fd0d318e09ae4fa2da1844a2df5a50d8917c3fbfc48ab1b72ddf46f3d9678` /
+  `4eb8cf508b9b2b80f7f69cf411117740a7ad3ed93527f41dd1a565077f290e0a`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:

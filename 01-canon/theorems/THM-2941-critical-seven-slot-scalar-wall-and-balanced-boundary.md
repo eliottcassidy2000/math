@@ -11,7 +11,7 @@ status: >
   filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
   common-status, exact-packet, forced-high-ray, antipodal-phase,
   finite-low-pair torsion, scalar-splice, and status-descent addenda improve
-  the k=2/k=3 first-drift caps from 2142/380 to 1736/297.
+  the k=2/k=3 first-drift caps from 2142/380 to 1732/297.
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -181,6 +181,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_k2_cap1742_splice_thm2941.out
   - 04-computation/lrc14_j7_k2_cap1736_scalar_splice_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_cap1736_scalar_splice_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1736_hybrid_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1736_hybrid_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -1692,16 +1694,42 @@ The hash-pinned all-body scalar atlas then exhausts every first label in
 1722:11, 1724:2, 1732:2, 1736:15.
 ```
 
-Thus every integer height `1737..1742` is empty without interpolation.  The
-fifteen rows at `1736` remain live in this package.  The proved projected
-`k=2` cap is therefore
+Thus every integer height `1737..1742` is empty without interpolation.  A
+self-contained replay against the current canonical uniform-ray and
+projected-cell engines partitions the fifteen rows at `1736` into nine
+ordinary rows and six explicit `HIGH-TAIL` rows.  On the ordinary rows the
+exact ledger is
 
 ```text
-z_1<=1736,                 ledger=2,239,789.              (25q5)
+929 scalar states = 0 crude kills + 774 common-status kills + 155 residuals;
+155 residuals -> 286 literal packets -> 286 projected kills -> 0.
 ```
 
-The cap-`1736` splice pins the complete cap-`1742` verifier and scalar atlas;
-normal and optimized replays match its stored transcript.
+Five HIGH rows have strictly negative exact forced-wall scalar maxima.  On
+the sixth, `E=(1,8,10,12,13,14)`, the scalar maximum is positive by
+`91785/20406470812`, so scalar closure alone is genuinely insufficient.
+The positive cutoff `4876247/30609706218` leaves `501` literal labels, only
+`13260` reaches the forced `13L/150` wall, and exactly one packet remains:
+
+```text
+(1736,1836,2004,2340,13260).
+```
+
+Its first thirteen projected cells give the hostile lower control zero;
+the fourteenth gives residual `14/17`, margin `849/1547` above `25/91`,
+and direct full-carrier projection independently gives mass one.  These
+three disjoint routes exhaust all fifteen atlas rows over all distinct later
+nonaligned labels, with no finite label horizon.  Since `1733..1735` are
+also scalar-empty, no interpolation is used.  The updated ledger and cap are
+
+```text
+2,239,789 - 15 = 2,239,774,
+z_1<=1732,                 ledger=2,239,774.              (25q5)
+```
+
+The cap-`1736` splice pins the complete cap-`1742` verifier and scalar atlas.
+The hybrid closure pins that splice and the exact atlas partition; normal and
+optimized replays match its stored transcript byte for byte.
 
 For `k=5`, there is a second, Gram-facing derivation.  Pointwise
 
