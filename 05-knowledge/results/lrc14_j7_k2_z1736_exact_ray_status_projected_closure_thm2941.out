@@ -1,0 +1,33 @@
+LRC14 projected k=2 exact ray/status/projected closure at z1=1736
+frontier_engine_sha256=bc4338935603b8971a99905033753458c880845213fddb5c4c19d8d53d6bc95b
+projected_engine_sha256=76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662
+uniform_engine_sha256=34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
+scalar_source_sha256=89016f939c961fa979ec5b30812981456df5bfb2af3066f1f1b38e5a83f1a412
+scalar_output_sha256=4a36611b26585964e185bbaa3d583be3f1c67a7b608cca785920266bc217a779
+scope=all fifteen z1736 scalar rows;all later distinct nonaligned labels;no finite label horizon
+routing=nine ordinary PROJECT;five HIGH strict-negative exact rays;one positive-HIGH row widened to all-label PROJECT
+direction=dropping forced-HIGH enlarges the universe;the widened closure is sufficient only in that direction
+ordinary_totals=scalar:929;crude:0;status:774;residual:155;packets:286;kills:286
+EXACT;z1=1736;E=1,2,8,10,12,14;counts=(46, 0, 16, 30, 43);cells=4196;packets=43;kills=43;min_margin=23897/1434069;max_prefix=4;minimum=(Fraction(23897, 1434069), (1736, 1790, 1836, 2060, 2142), Fraction(4592, 15759), 3);direct=1;state_sha256=77491cb5de95588fee59c489e0f8427b9365799aa40d02350f8c68765e35e5e3;closed=1
+EXACT;z1=1736;E=1,4,8,10,12,14;counts=(617, 0, 611, 6, 8);cells=4196;packets=8;kills=8;min_margin=161107/6585579;max_prefix=3;minimum=(Fraction(161107, 6585579), (1736, 1836, 2060, 2172, 2365), Fraction(21652, 72369), 3);direct=1;state_sha256=9cf36665aa9b9aa3b5d1845bb8abc3d8b23d1c917610ba951cb2c1cd651cc490;closed=1
+EXACT;z1=1736;E=1,6,8,10,12,14;counts=(30, 0, 23, 7, 10);cells=4196;packets=10;kills=10;min_margin=590/2821;max_prefix=2;minimum=(Fraction(590, 2821), (1736, 1784, 1810, 1836, 2004), Fraction(15, 31), 1);direct=1;state_sha256=ae15f835044caddbfe3a81d637ce360b8d7d3a331c7e9906d2bbbbf86405a2d1;closed=1
+EXACT;z1=1736;E=2,3,8,10,12,14;counts=(3, 0, 1, 2, 2);cells=4196;packets=2;kills=2;min_margin=681/2821;max_prefix=1;minimum=(Fraction(681, 2821), (1736, 1810, 1836, 1946, 2172), Fraction(16, 31), 1);direct=1;state_sha256=bb6d1f3147315ebda37641915eb8a385283bfad504e12c5e6fd4e27162958439;closed=1
+EXACT;z1=1736;E=2,4,6,8,10,14;counts=(1, 0, 1, 0, 0);cells=4496;packets=0;kills=0;min_margin=None;max_prefix=0;minimum=None;direct=None;state_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;closed=1
+EXACT;z1=1736;E=2,4,8,10,12,14;counts=(198, 0, 109, 89, 194);cells=4496;packets=194;kills=194;min_margin=681/2821;max_prefix=2;minimum=(Fraction(681, 2821), (1736, 1750, 1780, 1810, 1836), Fraction(16, 31), 1);direct=1;state_sha256=d3484bf4398240d2a64b78dd5f4075037bfde530a599d8f9fea77f9123140748;closed=1
+EXACT;z1=1736;E=2,6,8,10,12,14;counts=(30, 0, 9, 21, 29);cells=4356;packets=29;kills=29;min_margin=49915/510601;max_prefix=2;minimum=(Fraction(49915, 510601), (1736, 1810, 1836, 1946, 2262), Fraction(2090, 5611), 2);direct=1;state_sha256=34c8a735ae7198acdef49ff96ceff9b151226e97cf0880c98abbba038f4b6e1c;closed=1
+EXACT;z1=1736;E=3,4,8,10,12,14;counts=(3, 0, 3, 0, 0);cells=4476;packets=0;kills=0;min_margin=None;max_prefix=0;minimum=None;direct=None;state_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;closed=1
+EXACT;z1=1736;E=4,6,8,10,12,14;counts=(1, 0, 1, 0, 0);cells=4776;packets=0;kills=0;min_margin=None;max_prefix=0;minimum=None;direct=None;state_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;closed=1
+HIGH;z1=1736;E=1,2,10,11,12,14;L=64680;high_floor=5606;branch=GLOBAL_TOP3_PLUS_BEST_HIGH;upper=10493888198/2905755670125;gap=-17704278379/151099294846500;route=EXACT-RAY;ray_closed=1
+HIGH;z1=1736;E=1,2,10,12,13,14;L=76440;high_floor=6625;branch=GLOBAL_TOP3_PLUS_BEST_HIGH;upper=2496169499/682056443250;gap=-2122333151/17733467524500;route=EXACT-RAY;ray_closed=1
+HIGH;z1=1736;E=1,4,10,12,13,14;L=76440;high_floor=6625;branch=GLOBAL_TOP3_PLUS_BEST_HIGH;upper=16478382631/4556137040910;gap=-7353136579/118459563063660;route=EXACT-RAY;ray_closed=1
+HIGH;z1=1736;E=1,8,10,12,13,14;L=152880;high_floor=13250;branch=GLOBAL_TOP3_PLUS_BEST_HIGH;upper=1374367/392432131;gap=91785/20406470812;route=PROJECT;ray_closed=0
+HIGH;z1=1736;E=2,3,10,11,12,14;L=64680;high_floor=5606;branch=GLOBAL_TOP3_PLUS_BEST_HIGH;upper=3967821257/1145842649875;gap=-47509753883/178751453380500;route=EXACT-RAY;ray_closed=1
+HIGH;z1=1736;E=2,8,9,10,12,14;L=35280;high_floor=3058;branch=GLOBAL_TOP3_PLUS_BEST_HIGH;upper=1119784148851/304550513170680;gap=-7891025249/164964861300785;route=EXACT-RAY;ray_closed=1
+HIGH-PROJECT;z1=1736;E=1,8,10,12,13,14;counts=(827, 2, 607, 218, 749);cells=48660;packets=749;kills=749;min_margin=121/18109;max_prefix=31;minimum=(Fraction(121, 18109), (1736, 1791, 1836, 2004, 2340), Fraction(56, 199), 14);direct=1;state_sha256=aa644ef827e84923f548a30c13d415d02f8633b949787b115f9d7b5925774ae5;closed=1
+closure=15/15;survivors=0;global_min_projected_margin=121/18109;global_max_prefix=31
+next_occupied=((1732, (1, 4, 8, 10, 12, 14)), (1732, (2, 4, 8, 10, 12, 14)))
+consequence=projected k=2 first drift label z1<=1732
+ledger=2239789-15=2239774
+profile_sha256=1c697481b42a05547b84e7fd8a45114faf6df2f923185de823e08ec5bf07643d
+semantic_sha256=a950a1a6d0d1fc887dde710778e87181b8de76db64688fd3d9b713fe03e72cd4
+all_exact_controls=PASS
