@@ -1,0 +1,15 @@
+THM2998 exact quartic cross-wall real/cyclic quotient companion
+norm=2^8*Delta^2*H irreducible=1 affine_weight=24
+PGL2_hostile_H=-641584271212871414216880
+real_chambers=zero:H>0 two:H>=0 four:gap-sign
+two_real_oriented_classes=-1-sqrt3,-1+sqrt3,1-sqrt3,1+sqrt3
+four_real_gap_walls=4 sign_controls=negative/positive
+ordered_plane_cubics=Cplus/Cminus smooth=1 genus=1
+C3_action=free quotient_degree=3
+ordered_j=-15625/28
+quotient_E0=y^2-x*(x^2+13*x+128)
+X0_14=Y^2+X*Y+Y-X^3-4*X+6
+X0_change=x:4X-4,y:8Y+4X+4
+quotient_j=9938375/21952 ordered_not_birational=1
+wall_hostile_D_K_H=2401,-16807,0
+all_exact_checks=PASS
