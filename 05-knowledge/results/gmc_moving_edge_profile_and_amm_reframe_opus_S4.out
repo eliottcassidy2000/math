@@ -1,0 +1,41 @@
+THM-3000 INDEPENDENT VERIFY + MOVING-EDGE PROBE (real-rooted, exact e_k, curvature = 3x^2-2z-1)
+============================================================================================
+
+arithmetic roots 1..200:  curvature 3x^2-2z-1 = 0.32673
+   k       d^2 log(R_k/R_k-1)   k/d
+       2              0.33149   0.010   <- fixed-k universal
+       3              0.33452   0.015   <- fixed-k universal
+       4              0.33759   0.020   <- fixed-k universal
+      25              0.41362   0.125   <- MOVING EDGE
+      50              0.54456   0.250   <- MOVING EDGE
+     100              1.11445   0.500   <- MOVING EDGE
+     150              3.67456   0.750   <- MOVING EDGE
+     198            180.14282   0.990   <- MOVING EDGE
+
+arithmetic roots 1..400:  curvature 3x^2-2z-1 = 0.33002
+   k       d^2 log(R_k/R_k-1)   k/d
+       2              0.33241   0.005   <- fixed-k universal
+       3              0.33393   0.007   <- fixed-k universal
+       4              0.33545   0.010   <- fixed-k universal
+      50              0.41927   0.125   <- MOVING EDGE
+     100              0.55336   0.250   <- MOVING EDGE
+     200              1.14251   0.500   <- MOVING EDGE
+     300              3.87324   0.750   <- MOVING EDGE
+     398            573.81266   0.995   <- MOVING EDGE
+
+arithmetic roots 1..800:  curvature 3x^2-2z-1 = 0.33167
+   k       d^2 log(R_k/R_k-1)   k/d
+       2              0.33287   0.003   <- fixed-k universal
+       3              0.33363   0.004   <- fixed-k universal
+       4              0.33439   0.005   <- fixed-k universal
+     100              0.42214   0.125   <- MOVING EDGE
+     200              0.55784   0.250   <- MOVING EDGE
+     400              1.15699   0.500   <- MOVING EDGE
+     600              3.97958   0.750   <- MOVING EDGE
+     798           1847.75826   0.998   <- MOVING EDGE
+
+============================================================================================
+BOLD REFRAME PROBE: AMM-12592 certificate biases as a 2-point root measure
+  bias p_A=1285/2181 -> roots {q_A,p_A}: curvature = 0.003036
+  bias p_B two-point: curvature = 0.182734
+  targets to spot: 2457/6592=0.372725, 1/25=0.04, gamma-ish; log_B/log_A~3.02
