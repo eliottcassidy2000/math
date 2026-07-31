@@ -1,0 +1,16 @@
+LRC14 projected k=2 exact descent closure at z1=1724
+parent_source_sha256=efd2768ebfef640dd7c29584a7133f514669f320966f667c37220bc216a12cdb
+parent_output_sha256=f43783b8436cb8648be5533a98de6e45517dc8fe359e8de8b87bd43472fe915a
+scope=both scalar-atlas rows;all distinct later nonaligned labels;no finite label horizon
+routes=periodic rays;canonical common-status instances;lossless projected residual
+atlas=top:1724;empty:1723;next occupied height:1722
+projected_identity=P_(E,Z)=phi_L(C_E minus union_z D_z);two-aligned cap=25/91
+global_counts=scalar:578;crude:99;status:394;status_survivors:85;literal_packets:98;projected_kills:98;survivors:0
+global_minimum_margin=681/2821;maximum_prefix_cells=2
+CASE;z1=1724;E=1,4,8,10,12,14;h=1049/2940;carrier_components=34;L=11760;lower=1049/267540;delta1=6311/8869980;first_d=2940;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;divisors=59;trials=557845;scalar=462;crude=91;status=370;status_survivors=1;stage_sha256=ca094df3d0778ce40b543f249186d0510b4cf0d34b2c1041b3a49555b62b5fd5/a77304b8945bbab76af5d240c744a40bbaa6759ad9c0fe1834c0d41997d01319/224b2bc0f4ad97ad6e6789c4c74cc5b340cc96ca44034a62afb8bf90daa8fce6/0dfc035bf962c388dc39047659c2064a3f79e47659e4f84be608bdfdb02a0430;cells=4196;packets=1;projected_kills=1;minimum_margin=1588507/4039763;maximum_prefix_cells=2;minimum_row=(Fraction(1588507, 4039763), (1724, 1743, 1836, 2060, 2172), Fraction(29652, 44393), 2);direct_mass=1/1;state_sha256=51869de5c4e729b2d8a5180cbf8db8f37ee9e0f849ee9b4bea6b229df707c3b5;survivors=0
+CASE;z1=1724;E=2,4,8,10,12,14;h=281/735;carrier_components=36;L=11760;lower=281/66885;delta1=3163/4434990;first_d=2940;ray_sha256=e9789d4e58cf3d7b32375a56737d3ba49793dffdd8409ea1ea0d43dbfee06476;divisors=59;trials=557845;scalar=116;crude=8;status=24;status_survivors=84;stage_sha256=9cf44022620714fdbe76b352bdba48b744d47cc68a8c87230b8e170b51ae5713/16560b82d715ede634928645c49613969d431d7a6d4c00f60b3760b423700fc1/b8482ba4e80f17b610279566bd86c6b796b3b9dac1ffd1163bc8b08ecb2effb0/8a1e482c95812241f8ac9aabd9254aee6df1cc7ce4c9785a552cf43c1b60942e;cells=4496;packets=97;projected_kills=97;minimum_margin=681/2821;maximum_prefix_cells=2;minimum_row=(Fraction(681, 2821), (1724, 1736, 1750, 1810, 1836), Fraction(16, 31), 1);direct_mass=1/1;state_sha256=aaa62b017a0397a0bd743385a683c0ce6f5ccca164856c65f744cfd8d3e3adf8;survivors=0
+global_z1724_rows=2;empty=2;survivors=0
+consequence=projected k=2 first drift label z1<=1722
+profile_sha256=e6b8de7255cd0b009b24d317de8fa4e7b921efd1bad5f4f3549cafd2448cb735
+semantic_sha256=768507af439960e491fb1a1a8183f484dd991f11cc2267de5c0b65ceffc933f5
+all_exact_controls=PASS
