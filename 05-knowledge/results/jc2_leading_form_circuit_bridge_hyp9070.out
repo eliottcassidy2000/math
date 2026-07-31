@@ -1,0 +1,15 @@
+corrected THM-3003 bridge:  reciprocal-closed <=> antipalindromic circuit
+  reciprocal {2,1/2}               recip=True  antipal=True  AGREE
+  reciprocal {3,1/3,1}             recip=True  antipal=True  AGREE
+  reciprocal {2,1/2,5,1/5}         recip=True  antipal=True  AGREE
+  scaled recip mu=4 {4,1,8,1/2}    recip=True  antipal=True  AGREE
+  generic {1,2,4}                  recip=True  antipal=True  AGREE
+  generic {1,2,5,7}                recip=False antipal=False AGREE
+  generic {1,2,3,9}                recip=False antipal=False AGREE
+
+BRIDGE VERIFIED
+
+THM-3004 cluster law check: sign changes <= 2K-3 (K = # distinct roots)
+  (n+1)^2(n+3)^2(n+8)  [THM-3004 witness]    d=5 K=3 word=-+- changes=2 bound 2K-3=3 OK
+  (n+1)^2(n+3)^2(n+9)^2                      d=6 K=3 word=+-+- changes=3 bound 2K-3=3 OK
+  (n+1)^2(n+3)^2(n+9)^2(n+27)^2              d=8 K=4 word=+++--- changes=1 bound 2K-3=5 OK

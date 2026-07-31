@@ -1,0 +1,26 @@
+Verification of L0/L1 on genuine Jacobian pairs (automorphisms of C^2):
+  F=(x, y+x^3)
+     deg=(1,3)  g=1  (a,b)=(1,3)  Jac=1
+     L0: Jac(P_n,Q_m) = 0   OK
+     L1: Jac(P_n,Q_{m-1})+Jac(P_{n-1},Q_m) = 0   OK
+     P_n factors: x
+     Q_m factors: x**3
+  F=(x+y^2, y+(x+y^2)^3)
+     deg=(2,6)  g=2  (a,b)=(1,3)  Jac=1
+     L0: Jac(P_n,Q_m) = 0   OK
+     L1: Jac(P_n,Q_{m-1})+Jac(P_{n-1},Q_m) = 0   OK
+     P_n factors: y**2
+     Q_m factors: y**6
+  deeper composite
+     deg=(12,6)  g=6  (a,b)=(2,1)  Jac=1
+     L0: Jac(P_n,Q_m) = 0   OK
+     L1: Jac(P_n,Q_{m-1})+Jac(P_{n-1},Q_m) = 0   OK
+     P_n factors: y**12
+     Q_m factors: y**6
+
+ALL L0/L1 CHECKS PASS
+
+Jung-van der Kulk consequence (degrees of automorphisms):
+  every pair above has n|m or m|n -> (a,b) has a=1 or b=1, tower
+  terminates immediately.  A counterexample needs a,b>=2 coprime,
+  i.e. a NON-TRIVIAL continued fraction: this is the search lattice.

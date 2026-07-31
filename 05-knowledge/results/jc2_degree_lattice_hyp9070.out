@@ -1,0 +1,28 @@
+max Euclidean depth among coprime (a,b), 2<=a<b<=N, per N:
+   max b=  8: depth 5  attained at (5, 8)  cf=[0, 1, 1, 1, 2]
+   max b= 13: depth 6  attained at (8, 13)  cf=[0, 1, 1, 1, 1, 2]
+   max b= 21: depth 7  attained at (13, 21)  cf=[0, 1, 1, 1, 1, 1, 2]
+   max b= 34: depth 8  attained at (21, 34)  cf=[0, 1, 1, 1, 1, 1, 1, 2]
+   max b= 55: depth 9  attained at (34, 55)  cf=[0, 1, 1, 1, 1, 1, 1, 1, 2]
+
+metallic convergent pairs (a,b) up to 200:
+   q=1 (golden/Fibonacci): [1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+        consecutive coprime ratios: [(1, 2), (2, 3), (3, 5), (5, 8), (8, 13), (13, 21)]
+   q=2 (silver/Pell): [2, 5, 12, 29, 70, 169]
+        consecutive coprime ratios: [(2, 5), (5, 12), (12, 29), (29, 70), (70, 169)]
+   q=3 (bronze): [3, 10, 33, 109]
+        consecutive coprime ratios: [(3, 10), (10, 33), (33, 109)]
+
+candidate degree ratios a/b with a,b>=2 coprime, by depth:
+   depth 8: 21/34  cf=[0, 1, 1, 1, 1, 1, 1, 2]
+   depth 7: 29/37  cf=[0, 1, 3, 1, 1, 1, 2]
+   depth 7: 25/39  cf=[0, 1, 1, 1, 3, 1, 2]
+   depth 7: 23/37  cf=[0, 1, 1, 1, 1, 1, 4]
+   depth 7: 21/29  cf=[0, 1, 2, 1, 1, 1, 2]
+   depth 7: 19/31  cf=[0, 1, 1, 1, 1, 2, 2]
+   depth 7: 19/30  cf=[0, 1, 1, 1, 2, 1, 2]
+   depth 7: 18/31  cf=[0, 1, 1, 2, 1, 1, 2]
+   depth 7: 18/29  cf=[0, 1, 1, 1, 1, 1, 3]
+   depth 7: 13/34  cf=[0, 2, 1, 1, 1, 1, 2]
+   depth 7: 13/21  cf=[0, 1, 1, 1, 1, 1, 2]
+   depth 6: 33/38  cf=[0, 1, 6, 1, 1, 2]
