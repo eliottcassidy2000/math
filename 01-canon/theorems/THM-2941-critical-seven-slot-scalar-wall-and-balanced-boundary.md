@@ -856,6 +856,50 @@ Levels varying independently with `e`, other residue packets, and arbitrary
 `k=1` remain open; this diagonal extension removes no additional row from a
 finite ledger.
 
+The body-safe cells have an exact fixed-point-free reflection, which explains
+the median-cell selector used below.  For every six-body `E`, with even ruler
+`L=14*lcm(E)`, define
+
+```text
+J_E={j in {0,...,L-1}:
+     ||e(j+u)/L|| >= 1/14 for every e in E and every u in [0,1]}.
+```
+
+The weak endpoint inequality is intentional: danger is the strict condition
+`||et||<1/14`.  Equality is harmless, while a strictly dangerous endpoint
+would, by continuity, create a positive interior dangerous interval and so
+could not belong to a safe cell.  Put `iota(j)=L-1-j` and `u'=1-u`.  Then, for
+every `e in E`,
+
+```text
+e(iota(j)+u')/L = e-e(j+u)/L,
+```
+
+so `j in J_E` if and only if `iota(j) in J_E`.  Since `L` is even, `iota` has
+no fixed integer cell.  Thus `|J_E|=2r`, and if
+`J_E={c_0<...<c_(2r-1)}`, then
+
+```text
+c_k+c_(2r-1-k)=L-1,
+c_(r-1)+c_r=L-1.                                      (25i0)
+```
+
+This is not merely a carrier symmetry.  For every positive integer level `q`,
+every label `e`, every `j in J_E`, and every `u in [0,1]`,
+
+```text
+||(qL-e)(j+u)/L||<1/14
+  iff
+||(qL-e)(iota(j)+1-u)/L||<1/14.                       (25i0a)
+```
+
+Indeed the two arguments differ by the integer `qL-e` after a sign change.
+The strict danger predicate, including equality at its boundary, is therefore
+preserved exactly.  Lebesgue reflection `u -> 1-u` gives equal singleton,
+pair-intersection, and full-union masses on the two median mates.  Hence the
+right median `c_r` is a canonical half-turn flank, not a uniquely stronger
+cell: the lower median `c_(r-1)` gives the same certificate data.
+
 The common-level selector is not monotone under heterogeneous levels, but its
 first finite neighbourhood still closes after restoring cell location.  Put
 
