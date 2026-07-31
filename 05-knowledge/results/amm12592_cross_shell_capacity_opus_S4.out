@@ -1,0 +1,11 @@
+per-shell archimedean margin min_delta[supply-H(delta)] (governs within- AND cross-shell):
+  gamma=0.5780 (golden-0.0200): margin=-0.024256  (DEFICIENT)
+  gamma=0.5930 (golden-0.0050): margin=-0.0060202  (DEFICIENT)
+  gamma=0.5980 (golden+0.0000): margin=1.1748e-5  (ample)
+  gamma=0.6030 (golden+0.0050): margin=0.0060208  (ample)
+  gamma=0.6180 (golden+0.0200): margin=0.014116  (ample)
+
+at gamma=golden, binding delta=1/phi=0.61803: supply-H = -1.092e-7, supply argmax x*=0.03875 (shell START)
+extending routing range never raises supply => cross-shell gives no benefit.
+
+=> C*_general = C*_block = 1 + log_5(phi^2) = log_5(5 phi^2) = 1.5979874356654

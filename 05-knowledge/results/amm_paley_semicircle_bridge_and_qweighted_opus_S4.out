@@ -1,0 +1,12 @@
+BRIDGE: Paley loop eq  1*F^2 + F - 1  at F = 1/phi = C(-1): 0.0 (=0)
+        => AMM golden edge C(-1)=F(1)=1/phi is the edge of the Paley semicircle GF.
+
+q-weighted path-ratio R_q(7) vs limit e^{q^2}:
+  q=0.50: R_q(7)=1.265625  ->  e^{q^2}=1.284025
+  q=1.00: R_q(7)=2.4  ->  e^{q^2}=2.718282
+
+cluster edge F_q(1)=(sqrt(1+4q^2)-1)/(2q^2)  [solves q^2 F^2+F-1=0]:
+  q=0.50: F_q(1)=0.828427124746   loop residual=-1.69e-21
+  q=1.00: F_q(1)=0.61803398875   loop residual=-1.69e-21
+  q=2.00: F_q(1)=0.390388203202   loop residual=0.0
+  q=1 => F_1(1)=0.618033988749895 == 1/phi (AMM golden)
