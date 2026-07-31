@@ -249,6 +249,12 @@ def all_q_chart_audit(ruler: int, a: int, b: int, cell: int, chart) -> int:
     h_b = b * cell // ruler
     require(h_b == h + H, ("signed carry mismatch", ruler, a, b, cell, chart, h_b))
 
+    # At every Q>=1 either clause's tooth spacing is more than twice the
+    # sum of the two radii.  Hence a tooth cannot meet two teeth of the other
+    # clause; the signed pairing below accounts for the whole intersection.
+    require(5 * ruler > 6 * a - b and 5 * ruler > 6 * b - a,
+            ("unique signed-tooth pairing failed", ruler, a, b))
+
     # Body safety makes all Q teeth untruncated; Q cancels at the upper end.
     for label, owner_h in ((a, h), (b, h_b)):
         residue = label * cell - owner_h * ruler
@@ -289,7 +295,7 @@ def all_q_chart_audit(ruler: int, a: int, b: int, cell: int, chart) -> int:
         )
     require(A == derived_A and C == derived_C and A > 0 and A + C > 0,
             ("all-Q overlap polynomial changed", ruler, a, b, cell, chart))
-    return 9
+    return 11
 
 
 def best_q0_profile(
