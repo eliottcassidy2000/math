@@ -11,9 +11,10 @@ distinct levels ``p,q`` on labels ``a<b``, a body-safe-cell pair floor
     c^-1 (F_PQ,min-2|eta|),
     c=1-a/(pL),              eta=(qa-pb)/(pL-a).          (1)
 
-This file proves that every such packet closes whenever ``m>=8D``.  The
-point is that the estimate is conical: it depends on the ratio ``D/m``, not
-on fixing ``D`` first.
+This file proves that every such packet closes whenever ``D>=4`` and
+``m>=5D``.  The point is that the estimate is conical: it depends on the
+ratio ``D/m``, not on fixing ``D`` first.  Spreads below four are already
+closed by the stronger bounded-spread theorem.
 
 There is always an admissible distinct pair with
 
@@ -36,10 +37,13 @@ and hence
 
     F_PQ,min >= 1/49-12/(49PQ).                        (3)
 
-If ``m>=8D`` and ``r=Q-P``, then ``P>=8r``.  Therefore ``PQ>=110`` except
-for ``(P,Q)=(8,9),(9,10)``.  Formula (3) gives ``1/55`` once ``PQ>=110``;
-the two exceptions have exact floors ``5/252`` and ``2/105``.  Equality is
-attained at ``(10,11)``, so the near-diagonal floor is sharply
+If ``m>=5D`` and ``r=Q-P``, then ``P>=5r``.  Formula (3) gives ``1/55``
+once ``PQ>=110``.  The five smaller coprime pairs are
+
+    (5,6),(6,7),(7,8),(8,9),(9,10),
+
+and their exact floors are all larger.  Equality is attained at ``(10,11)``,
+so the near-diagonal floor is sharply
 
     F_PQ,min >= 1/55.                                  (3a)
 
@@ -58,33 +62,34 @@ is
 
     1915198706/76797355635 < 1/39
 
-on the same hostile body.  Now fix ``C=8``.  At ``m=CD`` the transport bound
-is
+on the same hostile body.  Now fix ``C=5`` and ``D_0=4``.  At ``m=CD`` the
+transport bound is
 
     2D[C(b-a)+b]/[CDL-b],
 
-which decreases with ``D``; the debt is largest at ``m=C``.  Consequently
-the all-``D`` margin is bounded below by the finite body expression
+which decreases with ``D``; the debt also decreases.  Consequently all
+``D>=D_0`` are bounded below by the finite body expression
 
     M_C(E)=1/55
-           -2[C(b-a)+b]/[CL-b]
-           -sum_e e/[7(CL-e)].                         (5)
+           -2D_0[C(b-a)+b]/[CD_0L-b]
+           -sum_e e/[7(CD_0L-e)].                      (5)
 
 An exact audit of all 3,003 bodies gives the unique minimum
 
-    M_8(1,2,3,4,6,12)
-      =742418365461/2597970620075215 > 0.               (6)
+    M_5(1,2,3,4,6,12)
+      =33073441051905679/105976173248680729995 > 0.     (6)
 
-The analogous separated-envelope margin at ``C=7`` is negative on this
-body.  Thus eight is sharp for this proof invoice (not claimed sharp for the
+At ``C=4`` the sharp near-diagonal phase floor is only ``1/70`` and the
+hostile limiting phase-minus-transport margin is ``-1/280`` before debt.
+Thus five is sharp for this proof invoice (not claimed sharp for the
 underlying reflected problem).
 
 The homotopy used in (1) is safely inside its slope range: the same bounds
-give ``|eta|<1``, while both integer slopes are at least ``m>=8``.
+give ``|eta|<1``, while both integer slopes are at least ``m>=20``.
 
-Hence every reflected residual packet with ``m>=8D`` closes, for every
-``D>=1`` and every body.  In particular all still-open spreads ``D>=6`` are
-reduced to the wedge ``m<8D``.  This is a sufficient theorem inside the
+Hence every reflected residual packet with ``D>=4,m>=5D`` closes on every
+body.  In particular all still-open spreads ``D>=6`` are reduced to the
+wedge ``m<5D``.  This is a sufficient theorem inside the
 THM-2941 reflected family, not a proof of physical LRC(14).
 """
 
@@ -113,7 +118,7 @@ EXPECTED_UNIVERSAL_SHA256 = "dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3e
 EXPECTED_UNIVERSAL_OUTPUT_SHA256 = "3231959168d80a48ae87ca5f13d02bfd0ce76e58721a5165e2ce4eccf404fcaf"
 EXPECTED_D5_SHA256 = "d3da8fa8dcb23be7c8766b9fb942dfdf26f9b61055e21314fddcc0107d2b9678"
 EXPECTED_D5_OUTPUT_SHA256 = "49d33153da0eec25cc8b127b0b61f565594b457ed53725103e8a08ecf224fae2"
-EXPECTED_SEMANTIC_SHA256 = "fea363714f68f5a3adca20768c592a07f6e2df1b145c216e86e0f318592a54b5"
+EXPECTED_SEMANTIC_SHA256 = "21471954712a0f3150304723b1e9f91de15a08c1221797cb0033542e9333a0fc"
 
 BODY_COUNT = 3003
 COMPLETE_BODY_COUNT = 3001
@@ -123,11 +128,12 @@ EXCEPTIONS = (
     ((2, 4, 7, 9, 11, 13), ((2, 4), (3, 5))),
 )
 
-CONE_CONSTANT = 8
+CONE_CONSTANT = 5
+MIN_CONE_SPREAD = 4
 NEAR_DIAGONAL_FLOOR = F(1, 55)
 EXPECTED_PHASE_CORRECTION_MINIMUM = -F(12, 49)
-EXPECTED_WORST_CONE_MARGIN = F(742418365461, 2597970620075215)
-EXPECTED_C7_HOSTILE_MARGIN = -F(13202823531938, 23016930802790925)
+EXPECTED_WORST_CONE_MARGIN = F(33073441051905679, 105976173248680729995)
+EXPECTED_C4_LIMIT_MARGIN = -F(1, 280)
 EXPECTED_DEBT_MAXIMUM = F(1915198706, 76797355635)
 EXPECTED_DEBT_GAP = F(53964259, 76797355635)
 DIRECT_CASES = (5, 13)
@@ -302,9 +308,12 @@ def main() -> None:
         (P, Q)
         for P in range(1, 110)
         for Q in range(P + 1, 110)
-        if gcd(P, Q) == 1 and P >= 8 * (Q - P) and P * Q < 110
+        if gcd(P, Q) == 1 and P >= 5 * (Q - P) and P * Q < 110
     )
-    require(near_small == ((8, 9), (9, 10)), near_small)
+    require(
+        near_small == ((5, 6), (6, 7), (7, 8), (8, 9), (9, 10)),
+        near_small,
+    )
     near_small_floors = tuple(
         (
             F(1, 49) + phase_correction(P % 14, Q % 14)[0] / (P * Q),
@@ -314,7 +323,14 @@ def main() -> None:
         for P, Q in near_small
     )
     require(
-        near_small_floors == ((F(5, 252), 8, 9), (F(2, 105), 9, 10)),
+        near_small_floors
+        == (
+            (F(2, 105), 5, 6),
+            (F(1, 49), 6, 7),
+            (F(1, 49), 7, 8),
+            (F(5, 252), 8, 9),
+            (F(2, 105), 9, 10),
+        ),
         near_small_floors,
     )
     require(
@@ -340,12 +356,15 @@ def main() -> None:
         body_rows.append(row)
         debt_rows.append((debt, body, ruler))
         delta = body[j] - body[i]
-        cone_debt = singleton_debt(body, ruler, (CONE_CONSTANT,) * 6)
+        cone_level = CONE_CONSTANT * MIN_CONE_SPREAD
+        cone_debt = singleton_debt(body, ruler, (cone_level,) * 6)
         cone_margin = (
             NEAR_DIAGONAL_FLOOR
             - F(
-                2 * (CONE_CONSTANT * delta + body[j]),
-                CONE_CONSTANT * ruler - body[j],
+                2
+                * MIN_CONE_SPREAD
+                * (CONE_CONSTANT * delta + body[j]),
+                cone_level * ruler - body[j],
             )
             - cone_debt
         )
@@ -367,7 +386,7 @@ def main() -> None:
     )
     require(F(1, 39) - EXPECTED_DEBT_MAXIMUM == EXPECTED_DEBT_GAP > 0, EXPECTED_DEBT_GAP)
 
-    # Exact finite invoice behind the universal m>=8D cone.
+    # Exact finite invoice behind the universal D>=4, m>=5D cone.
     worst_cone = min(cone_rows)
     require(
         worst_cone
@@ -376,19 +395,13 @@ def main() -> None:
             HOSTILE,
             168,
             (0, 1),
-            F(7775518093802, 2597970620075215),
+            F(2298991660251998, 1926839513612376909),
         ),
         worst_cone,
     )
-    c7_debt = singleton_debt(HOSTILE, 168, (7,) * 6)
-    c7_margin = (
-        NEAR_DIAGONAL_FLOOR
-        - F(2 * (7 + 2), 7 * 168 - 2)
-        - c7_debt
-    )
     require(
-        c7_margin == EXPECTED_C7_HOSTILE_MARGIN < 0,
-        (c7_margin, EXPECTED_C7_HOSTILE_MARGIN),
+        F(1, 70) - F(2 * (4 + 2), 4 * 168) == EXPECTED_C4_LIMIT_MARGIN < 0,
+        EXPECTED_C4_LIMIT_MARGIN,
     )
     require(
         F(13) + F(14, CONE_CONSTANT)
@@ -406,7 +419,7 @@ def main() -> None:
         tuple(sorted(pair_histogram.items())),
         body_digest.hexdigest(),
         worst_cone,
-        c7_margin,
+        EXPECTED_C4_LIMIT_MARGIN,
         controls,
     )
     semantic = hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
@@ -416,16 +429,16 @@ def main() -> None:
     lines = [
         "LRC14 reflected all-spread conical tail closure exact proof",
         f"universe=bodies:{len(body_rows)};complete_same_level_graph:{COMPLETE_BODY_COUNT};exceptions:{EXCEPTIONS}",
-        f"cone=every spread D>=1 closes whenever minimum level m>={CONE_CONSTANT}D",
+        f"cone=every spread D>={MIN_CONE_SPREAD} closes whenever minimum level m>={CONE_CONSTANT}D",
         "pair_selection=complete bodies use minimum 2(b-a)/L;exceptions use same-level-good slots (0,1)",
         f"sharp_pair_ratio=max_E min_pair 2(b-a)/L={qtext(worst_pair_rows[0][0])};unique_body={HOSTILE};L=168",
         f"singleton_debt=m^-1 monotone envelope;maximum_at_m1={qtext(EXPECTED_DEBT_MAXIMUM)};gap_below_1/39={qtext(EXPECTED_DEBT_GAP)}",
         f"phase_correction_bank=196;minimum={qtext(EXPECTED_PHASE_CORRECTION_MINIMUM)};multiplicity=8",
-        f"sharp_near_diagonal_floor=P>=8(Q-P);minimum={qtext(NEAR_DIAGONAL_FLOOR)};equality=(10,11)",
-        f"finite_cone_invoice=M_C(E)=1/55-2[C(b-a)+b]/[CL-b]-debt_E(C);C={CONE_CONSTANT}",
+        f"sharp_near_diagonal_floor=P>=5(Q-P);minimum={qtext(NEAR_DIAGONAL_FLOOR)};equality=(10,11)",
+        f"finite_cone_invoice=M_C(E)=1/55-2D0[C(b-a)+b]/[CD0L-b]-debt_E(CD0);C={CONE_CONSTANT};D0={MIN_CONE_SPREAD}",
         f"unique_worst_cone_margin={qtext(worst_cone[0])};body={worst_cone[1]};pair={worst_cone[3]}",
-        f"C7_separated_envelope_hostile_margin={qtext(c7_margin)}<0;C8_is_sharp_for_this_invoice",
-        f"homotopy_slope_gate=|eta|<1 and integer slopes>=m>={CONE_CONSTANT}",
+        f"C4_limit_phase_minus_transport={qtext(EXPECTED_C4_LIMIT_MARGIN)}<0;C5_is_sharp_for_this_invoice",
+        f"homotopy_slope_gate=|eta|<1 and integer slopes>=m>={CONE_CONSTANT * MIN_CONE_SPREAD}",
     ]
     for D, m, levels, floor, c, eta, transported, debt, actual in controls:
         lines.append(
@@ -435,7 +448,7 @@ def main() -> None:
             f"minimum_actual_overlap={qtext(actual[0])};cell={actual[1]}"
         )
     lines.extend((
-        f"conclusion=all reflected residual packets in the cone m>={CONE_CONSTANT}D close on all 3003 bodies",
+        f"conclusion=all reflected residual packets with D>={MIN_CONE_SPREAD},m>={CONE_CONSTANT}D close on all 3003 bodies",
         f"corollary=every still-open D>=6 sector is confined to m<{CONE_CONSTANT}D",
         "scope=reflected THM-2941 sufficient family only;physical LRC14 remains open",
         "normal_vs_python_O=BYTE_IDENTICAL",
