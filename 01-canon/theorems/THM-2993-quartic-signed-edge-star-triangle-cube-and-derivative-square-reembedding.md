@@ -2,8 +2,8 @@
 id: THM-2993
 title: "Quartic signed-edge star/triangle cube and derivative-square re-embedding"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For a separable depressed quartic, the eight simultaneous choices
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a separable
+  depressed quartic, the eight simultaneous choices
   of its three signed matching roots split into four coherent root-stars and
   four complementary triangles.  Their block-discriminant products are the
   roots of two explicit reciprocal quartics A_star and A_triangle.  The star
@@ -34,8 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2993 -- the three signed edges assemble into a star/triangle cube
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and main statement
 
@@ -300,7 +299,8 @@ separate local gauges still do not determine the common origin.
 
 ## 6. Grade-three branch-character corollary
 
-Suppose a cubic branch polynomial has the THM-2473 discriminant form
+Suppose the matching cubic `(2)`--or another cubic conditionally identified
+with that matching cubic--has the THM-2473 discriminant form
 
 ```text
 D=-4W^2 L.                                               (34)
@@ -312,11 +312,13 @@ Then `(16)` becomes
 Disc(A_star)=-2^30 (c K W^3)^2 L^3.                     (35)
 ```
 
-On `cK!=0`, the reduced branch support is still `L`, and the square-class
-character is the same as that of `D`.  But the exponent has risen from one
-to three because the derivative-square basis index contributes `D^2` in
-`(30)`.  Thus the grade-three discriminant anatomy transfers as a branch
-character while its integral owner/Jelonek sheet does not.
+On `c*K*W!=0`, the local reduced branch divisor is still `L`.  Globally the
+raw discriminant support is `V(W) union V(L)`, while the even multiplicity of
+`W` means that the odd-multiplicity discriminant character remains `[-L]`,
+the same square class as for `D`.  The exponent of `L` has risen from one to
+three because the derivative-square basis index contributes `D^2` in `(30)`.
+Thus the grade-three discriminant anatomy transfers as an odd branch
+character while its raw support and integral owner/Jelonek sheet do not.
 
 There is one useful **conditional coefficient comparison**, not a physical
 quartic construction.  THM-2473's core cubic is
@@ -496,4 +498,6 @@ script  9ad6834d99c9d0ff083a021322e2a44ac8ccad5c1948d016835ff739be4773b0
 output  60d38b0a78ab519d7e8f3cb3b78f2aa0bb6985369ad1c1a0c713ff48d02f45b5
 ```
 
-Promotion remains blocked on the independent hostile audit.
+The independent hostile audit reproduced every exact identity and transcript,
+and caught the raw-support versus odd-character distinction repaired in
+Section 6.
