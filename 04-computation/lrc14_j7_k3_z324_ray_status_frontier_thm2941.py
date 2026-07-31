@@ -55,7 +55,7 @@ EXPECTED_BODY_ATLAS_OUTPUT_SHA256 = (
     "cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "7b8735af10d90c3f22b939993fb3ff3c9786b4c23ea3f17af7c9ed4783653f17"
+    "ede800d69a62c95045872fd5b6b69df56f6b267602151ba4d9f3f4a13aeff541"
 )
 
 FIRST = 324
@@ -157,7 +157,7 @@ def independent_farkas_check(q, marginals, capacities, histogram, certificate):
         alpha[row] * tail_rhs[row] for row in range(len(alpha))
     )
     require(contradiction < 0, ("nonnegative Farkas contradiction", contradiction))
-    return contradiction
+    return contradiction < 0
 
 
 def evaluate_body(body):
@@ -179,7 +179,8 @@ def evaluate_body(body):
         require(gap == target - capacity and gap > 0, "invalid crude witness")
 
     instance_digest = hashlib.sha256()
-    contradictions = []
+    verified_farkas_checks = 0
+    all_negative = True
     for ds, witness in sorted(status.items()):
         q, M, marginals, cap_set, histogram, certificate = witness
         D = lcm(*ds)
@@ -192,9 +193,11 @@ def evaluate_body(body):
             ray.fibre.residue_load_histogram(arcs, q) == histogram,
             "status load histogram changed",
         )
-        contradictions.append(
-            independent_farkas_check(q, marginals, capacities, histogram, certificate)
+        certificate_negative = independent_farkas_check(
+            q, marginals, capacities, histogram, certificate
         )
+        verified_farkas_checks += 1
+        all_negative = all_negative and certificate_negative
         # The infeasible instance is canonical; the solver's Farkas basis is
         # not.  Keep the latter only in the exact replay above.
         instance_digest.update(f"{body}|{ds}|{witness[:-1]}\n".encode())
@@ -220,7 +223,8 @@ def evaluate_body(body):
         tuple(survivors),
         tuple(sorted(Counter(witness[1] for witness in status.values()).items())),
         instance_digest.hexdigest(),
-        min(contradictions, default=None),
+        verified_farkas_checks,
+        all_negative,
     )
 
 
@@ -242,6 +246,11 @@ def main():
         sum(len(record[index]) for record in records) for index in (5, 6, 7, 8)
     )
     require(totals == EXPECTED_TOTALS, ("global counts changed", totals))
+    require(
+        sum(record[11] for record in records) == totals[2],
+        "exact Farkas check count changed",
+    )
+    require(all(record[12] for record in records), "nonnegative Farkas replay")
     global_m = Counter()
     for record in records:
         global_m.update(dict(record[9]))
@@ -251,10 +260,11 @@ def main():
     )
     require(residuals == ((RESIDUAL_BODY, RESIDUAL_DS),), ("residual changed", residuals))
     semantic_hash = hashlib.sha256(repr(records).encode()).hexdigest()
-    require(
-        semantic_hash == EXPECTED_SEMANTIC_SHA256,
-        ("semantic digest changed", semantic_hash),
-    )
+    if EXPECTED_SEMANTIC_SHA256 is not None:
+        require(
+            semantic_hash == EXPECTED_SEMANTIC_SHA256,
+            ("semantic digest changed", semantic_hash),
+        )
 
     lines = [
         "LRC14 projected k=3 z1=324 exact all-label ray/status frontier",
@@ -274,7 +284,10 @@ def main():
         f"status_M_histogram={dict(EXPECTED_M_HISTOGRAM)}",
     ]
     for record in records:
-        body, L, checks, signs, trials, states, crude, status, survivors, mhist, idigest, minimum = record
+        (
+            body, L, checks, signs, trials, states, crude, status, survivors,
+            mhist, idigest, verified_checks, all_negative,
+        ) = record
         partition_digest = hashlib.sha256(
             repr((states, crude, status, survivors)).encode()
         ).hexdigest()
@@ -285,7 +298,8 @@ def main():
             f"survivors={survivors};status_M={dict(mhist)};"
             f"partition_sha256={partition_digest};"
             f"deterministic_instance_sha256={idigest};"
-            f"min_exact_farkas_contradiction={minimum}"
+            f"verified_farkas_checks={verified_checks};"
+            f"all_farkas_contradictions_negative={int(all_negative)}"
         )
     lines.extend(
         (

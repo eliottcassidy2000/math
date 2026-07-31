@@ -63,7 +63,7 @@ EXPECTED_BODY_ATLAS_OUTPUT_SHA256 = (
     "cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "8efe5bdb2830e66fa83b05870f600dcca8957ecf64bf3ad1569b291b1001e13f"
+    "01738342225279bff3f3421aea6f79c598478565e4dd528c070999e29c165e30"
 )
 
 FIRST = 312
@@ -254,7 +254,7 @@ def independent_farkas_check(q, marginals, capacities, histogram, certificate):
         alpha[row] * tail_rhs[row] for row in range(len(alpha))
     )
     require(contradiction < 0, ("nonnegative Farkas contradiction", contradiction))
-    return contradiction
+    return contradiction < 0
 
 
 def bridge_record(stream, ds):
@@ -318,7 +318,8 @@ def evaluate_body(body):
         require(gap == target - capacity and gap > 0, "invalid crude witness")
 
     verified_instance_digest = hashlib.sha256()
-    contradictions = []
+    verified_farkas_checks = 0
+    all_negative = True
     for ds, witness in sorted(status.items()):
         q, M, marginals, cap_set, histogram, certificate = witness
         D = lcm(*ds)
@@ -331,9 +332,11 @@ def evaluate_body(body):
             ray.fibre.residue_load_histogram(arcs, q) == histogram,
             "status load histogram changed",
         )
-        contradictions.append(
-            independent_farkas_check(q, marginals, capacities, histogram, certificate)
+        certificate_negative = independent_farkas_check(
+            q, marginals, capacities, histogram, certificate
         )
+        verified_farkas_checks += 1
+        all_negative = all_negative and certificate_negative
         # The exact certificate was replayed above.  HiGHS may choose a
         # different valid dual basis, so freeze the deterministic infeasible
         # instance and never the solver-selected certificate representative.
@@ -385,7 +388,8 @@ def evaluate_body(body):
         tuple(bridge_rows),
         tuple(sorted(Counter(witness[1] for witness in status.values()).items())),
         verified_instance_digest.hexdigest(),
-        min(contradictions, default=None),
+        verified_farkas_checks,
+        all_negative,
     )
 
 
@@ -411,6 +415,11 @@ def main():
         sum(len(record[index]) for record in records) for index in (7, 8, 9, 10)
     )
     require(totals == EXPECTED_TOTALS, ("global counts changed", totals))
+    require(
+        sum(record[14] for record in records) == totals[2],
+        "exact Farkas check count changed",
+    )
+    require(all(record[15] for record in records), "nonnegative Farkas replay")
     global_m = Counter()
     for record in records:
         global_m.update(dict(record[12]))
@@ -472,7 +481,8 @@ def main():
     for record in records:
         (
             body, L, high_floor, first_d, checks, signs, trials, states, crude,
-            status, packets, _bridges, mhist, cdigest, minimum,
+            status, packets, _bridges, mhist, cdigest, verified_checks,
+            all_negative,
         ) = record
         partition_digest = hashlib.sha256(
             repr((states, crude, status, tuple(packet[0] for packet in packets))).encode()
@@ -484,7 +494,8 @@ def main():
             f"status_kills={len(status)};survivors={len(packets)};"
             f"status_M={dict(mhist)};partition_sha256={partition_digest};"
             f"verified_farkas_instance_sha256={cdigest};"
-            f"min_exact_farkas_contradiction={minimum}"
+            f"verified_farkas_checks={verified_checks};"
+            f"all_farkas_contradictions_negative={int(all_negative)}"
         )
 
     lines.extend(

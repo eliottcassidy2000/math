@@ -1475,10 +1475,18 @@ The `z_1=312` frontier
 source/output/semantic hashes are
 
 ```text
-b2fa83a8d4cc05558d8fbc2dcb9e207595e7a38c0cf985bce6623cc108d45e43
-a5eff5feb166d2e6ac96940ad7c1fbdc60b17f92211be9f4d715fa8fbb38e876
-8efe5bdb2830e66fa83b05870f600dcca8957ecf64bf3ad1569b291b1001e13f.
+6475d9b8d04a3f1f222ffd2d4dc499f9618a4cbd591e258b244a3171a84e6843
+e61d5129d71c84e291e678a94e8d1ea115360eb11ce77e6e9c31009f589d9a4f
+01738342225279bff3f3421aea6f79c598478565e4dd528c070999e29c165e30.
 ```
+
+After the final MISTAKE-331 evidence repair, the `z_1=324`, `328`, and `312`
+ray/status records and transcripts retain only the deterministic infeasible
+instances, the number of exactly checked Farkas certificates, and the
+basis-invariant fact that every contradiction is negative.  They do not hash
+or print a solver-selected dual basis, normalization, slack vector, or
+contradiction magnitude.  All three ray partitions, counts, residuals, caps,
+and ledger consequences are unchanged.
 
 The finite-low-pair closure source/output/semantic hashes are
 
@@ -1566,9 +1574,14 @@ e39d4be078a7c69a50860de138378f963926a3a68b7b5582f606302f4e1b7f75`
 and
 `a0b3c0cafbcdef961f444b4a776884ad8e3f897761ba3b2c7df6a2a0a6d3645f /
 c9772f8014b5b68ed7581a68b4365e167da306d72eef6c1e5124037597b886e2`.
-The `z_1=324` frontier source/output pair is
-`7eaaf551d2bd4ae386e2db4452edac7d30c25f7fc67b71967e48454d688bf78e /
-db3c5c68c4aa2f61584ef91dd2171901888270edbf17e860d40f16a64d3a9242`;
+The `z_1=328` closure source/output/semantic hashes are
+`138a109c90d337a282bcf6893110ff64a7c0b4c6509bd1f80fd658c5027b52c4 /
+9761baf7813a847a0411774a4215d8eb9a7f65853d9c74c831e037dc095350fb /
+70164f3126f95ecfd6c38f88fc1d3c65ba90264e9fe8e1ecd61d394f5d91c5ab`.
+The `z_1=324` frontier source/output/semantic hashes are
+`e34541d6a6a08118b6639492f2b8dae74cdbb66030ca874ddde3d6c1b4da2364 /
+6481516d5d37a2751d105d4fbe30974060779e26dc138e4cf22e945ff0fc036e /
+ede800d69a62c95045872fd5b6b69df56f6b267602151ba4d9f3f4a13aeff541`;
 the antipodal and independent direct closure pairs are
 `e5fbb5166975ddfaf42b30802269c0f76da605df8165f7f2bb05f881d99c5237 /
 170523d62180e4779c6eb88b297df75f952b8efa28a58289c5e07dd8d2947d61`

@@ -51,7 +51,7 @@ EXPECTED_SCALAR_OUTPUT_SHA256 = (
     "f5c11f364a626141af181d84f39d48030ef91a8ddf7d74b9602bb15cd7eb626e"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "9c4ea2a20b1799195ffaa0adc57cc94285c5d03e24c1e2b77d7488aca5bf4d68"
+    "70164f3126f95ecfd6c38f88fc1d3c65ba90264e9fe8e1ecd61d394f5d91c5ab"
 )
 EXPECTED_INSTANCE_TARIFF_SHA256 = (
     "3959d0bf62626f84758da687687d83156f7f3cee47e63ac2aff722a3a27bdd8b"
@@ -151,7 +151,7 @@ def independent_farkas_check(q, marginals, capacities, histogram, certificate):
     )
     require(all(value >= 0 for value in slacks), "negative Farkas column")
     require(contradiction < 0, "nonnegative Farkas contradiction")
-    return tuple(slacks), contradiction
+    return tuple(slacks), contradiction < 0
 
 
 def solve_square(rows):
@@ -374,7 +374,8 @@ def evaluate_body(body):
         )
         require(gap == target - capacity and gap > 0, "invalid crude witness")
 
-    contradictions = []
+    verified_farkas_checks = 0
+    all_negative = True
     canonical_records = []
     for ds, witness in sorted(status.items()):
         q, M, marginals, cap_set, histogram, certificate = witness
@@ -388,10 +389,11 @@ def evaluate_body(body):
             ray.fibre.residue_load_histogram(arcs, q) == histogram,
             "status load histogram changed",
         )
-        slacks, contradiction = independent_farkas_check(
+        slacks, certificate_negative = independent_farkas_check(
             q, marginals, capacities, histogram, certificate
         )
-        contradictions.append(contradiction)
+        verified_farkas_checks += 1
+        all_negative = all_negative and certificate_negative
         require(all(value >= 0 for value in slacks), "internal Farkas replay failed")
         (
             support,
@@ -450,7 +452,8 @@ def evaluate_body(body):
         tuple(sorted(Counter(w[1] for w in status.values()).items())),
         max(states.items(), key=lambda item: (item[1]["excess"], item[0]), default=None),
         hashlib.sha256(repr(partition).encode()).hexdigest(),
-        min(contradictions, default=None),
+        verified_farkas_checks,
+        all_negative,
         tuple(canonical_records),
     )
 
@@ -465,6 +468,11 @@ def main():
         sum(len(record[10][index]) for record in records) for index in range(4)
     )
     require(totals == EXPECTED_TOTALS, ("global counts changed", totals))
+    require(
+        sum(record[14] for record in records) == totals[2],
+        "exact Farkas check count changed",
+    )
+    require(all(record[15] for record in records), "nonnegative Farkas replay")
     global_m = Counter()
     for record in records:
         global_m.update(dict(record[11]))
@@ -474,7 +482,7 @@ def main():
     instance_digest = hashlib.sha256()
     all_canonical_records = []
     for record in records:
-        for canonical in record[15]:
+        for canonical in record[16]:
             circuit_census[canonical[3]] += 1
             tariff_census[
                 (
@@ -556,7 +564,8 @@ def main():
             status_histogram,
             maximum,
             partition_digest,
-            min_contradiction,
+            verified_checks,
+            all_negative,
             canonical_records,
         ) = record
         states, crude, status, survivors = partition
@@ -570,7 +579,8 @@ def main():
             f"status_M={dict(status_histogram)};max_state={maximum};"
             f"partition_sha256={partition_digest};"
             f"minimal_circuits={dict(sorted(local_circuits.items()))};"
-            f"min_exact_farkas_contradiction={min_contradiction}"
+            f"verified_farkas_checks={verified_checks};"
+            f"all_farkas_contradictions_negative={int(all_negative)}"
         )
     lines.extend(
         (

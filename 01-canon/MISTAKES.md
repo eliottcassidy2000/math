@@ -40,13 +40,16 @@ Format per entry:
   solver must reuse the canonical instance ledger explicitly; never copy the
   old witness tuple merely because its exact checker passes.
 
-## MISTAKE-331 (2026-07-30, THM-2941 ray/status replay) -- a semantic digest bound a noncanonical LP dual basis
+## MISTAKE-331 (2026-07-30, THM-2941 ray/status replay) -- a semantic digest bound a noncanonical LP dual basis or magnitude
 
 - **What was done:** the three THM-2941 residue-ray/status companions verified
   every rational Farkas certificate exactly, but then hashed the literal
   certificate representatives returned after a floating HiGHS search.  The
   theorem consequently advertised byte-identical replay through a quantity
-  that was not mathematically canonical.
+  that was not mathematically canonical.  The first repair removed the raw
+  certificates but still retained a minimum exact-contradiction field in the
+  `z_1=324`, `z_1=328`, and `z_1=312` records, semantic hashes, and outputs.
+  That derived magnitude is equally basis- and scale-dependent.
 - **Minimal witness / first failed implication:** an unchanged replay of the
   `z_1=250` companion preserved all `35,990 -> 1,965 -> 1,266 -> 0` counts,
   the decisive-modulus histogram, and the displayed first exact witness, but
@@ -55,11 +58,13 @@ Format per entry:
   failed even though every returned certificate passed the exact inequalities.
 - **Exact repair / strongest survivor:** exact verification of every returned
   certificate remains load-bearing.  Replay hashes now bind the deterministic
-  infeasible instances, counts, and first witness, never the solver-selected
-  dual representative.  The same narrow repair is applied to the `z_1=378`,
-  `z_1=312`, downstream `z_1=306/302/298`, and `k=2` companions because they
-  shared the latent mechanism; none of the ray, capacity, Hunter, Farkas,
-  cap, or ledger conclusions changes.  The later
+  infeasible instances, counts, first witness, exact-check count, and the
+  basis-invariant fact that every replayed contradiction is negative, never
+  the solver-selected dual representative or its magnitude.  This final
+  magnitude repair covers `z_1=324`, `z_1=328`, and `z_1=312`; the same narrow
+  basis repair is applied to `z_1=378`, downstream `z_1=306/302/298`, and
+  `k=2` companions because they shared the latent mechanism.  None of the ray,
+  capacity, Hunter, Farkas, cap, or ledger conclusions changes.  The later
   `lrc14_j7_k2_z1736_hybrid_closure_thm2941.py` and
   `lrc14_j7_k2_z1736_exact_ray_status_projected_closure_thm2941.py`
   status-stage replays regressed to hashing raw HiGHS certificates; their
@@ -68,7 +73,8 @@ Format per entry:
   deterministic closure supersedes them.
 - **Rule:** a proof search may use a noncanonical optimizer witness, but a
   reproducibility digest must bind canonical problem data or a separately
-  canonicalized certificate, not an arbitrary valid basis.
+  canonicalized certificate, not an arbitrary valid basis or a scalar derived
+  from its normalization.
 
 ## MISTAKE-330 (2026-07-30, chained k=2 frontier verifiers) -- descendant evidence pinned superseded atlas bytes
 
