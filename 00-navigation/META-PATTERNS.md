@@ -2,6 +2,24 @@
 
 **Status:** CURRENT. **Role/Use:** compact defaults from repeated successes and failures; scan triggers and evidence. Each card states applicability, action, mechanism, and counterindication; new cards require distinct-thread evidence or a severe repaired failure.
 
+## Close the reading class; the survivor inherits the semantics
+
+**Trigger/action:** when an exact decoded object (certificate, constant,
+inequality) has two or more candidate semantic readings, do not hunt
+instances inside a favored reading; formalize each reading as a *class*
+of arguments and prove a closing theorem (wall) for whole classes until
+one survives. **Mechanism:** class closure converts "we could not find
+how it works" into "it cannot work this way"; the surviving class then
+dictates the next computation. **Counterindication:** the wall must state
+its class boundary honestly — an overbroad informal class gives false
+confidence (THM-2977 closes archimedean-envelope evaluation only; a
+forced 2-adic envelope would evade it). **Evidence:** THM-2977 + lane G2
+(evaluation class closed, entropy dual forced, AMM 12592 thread); the
+opus-S4 height cliff (all integer coefficient choices killed at once,
+snippet-decode thread); klein-S404's no-near-cancellation discriminator
+(Baker class killed, LRC-side decode thread); THM-2967's Polya-Carlson
+closure of the entire sublinear-excess envelope class.
+
 ## Peel the distinguished prime, then force a small torsion collision
 
 **Trigger/action:** for density-`1/p` combs on `D`, prove the quotient-index dichotomy after `D=pq`, split transverse sections from vertical spikes, and
