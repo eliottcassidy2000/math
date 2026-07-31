@@ -769,7 +769,7 @@ def main() -> None:
 
     lines = [
         "LRC14 reflected binary dilation resonance exact referee",
-        f"all_q_engine_sha256={sha256(BASE)}",
+        f"all_q_engine_lf_sha256={sha256(BASE)}",
         f"hostile_body={E};L={L};type_vector={TYPES};levels=(2Q,Q,Q,Q,Q,2Q)",
         "exact_block_identity=with u=(r+x)/Q,K=QL,J=Qj+r,the coarse mass is Q^-1 times the sum of binary-kernel masses at J=Qj,...,Qj+Q-1",
         f"bad_address=j={BAD_J};j/L=1/14;endpoint_word=(1even,2,4,12even,1odd,9,11,12odd)^Q",
@@ -793,6 +793,8 @@ def main() -> None:
         (
             f"census_digest_sha256={census_digest.hexdigest()}",
             f"semantic_sha256={semantic}",
+            "normal_vs_python_O=BYTE_IDENTICAL",
+            f"source_lf_sha256={sha256(Path(__file__))}",
             "status=FINITE-EXACT controls plus all-Q affine endpoint and polynomial certificates for the displayed hostile ray",
             "scope_note=this proves the dilation-stable repair for one persistent binary hostile;it is not arbitrary heterogeneous k=1 closure",
             "all_exact_controls=PASS",

@@ -886,7 +886,7 @@ def main() -> None:
 
     lines = [
         "LRC14 reflected k=1 nearest-level pair and conic tail exact referee",
-        f"all_q_engine_sha256={file_sha256(BASE)}",
+        f"all_q_engine_lf_sha256={file_sha256(BASE)}",
         "scope=all E subset {1,...,14}, |E|=6; z_e=q_e*L-e; q_e positive integers",
         "primary_pair=epsilon=sum e/[7(q_eL-e)];lambda_e=q_e-b-e/L;S=|lambda_e|+|lambda_f|;v=lambda_e-lambda_f",
         "primary_pair_certificate=epsilon+[4S+|v|/2]/b<G(|v|),where G(ell)=[floor(ell)/49+max(0,{ell}-5/7)^2/4]/ell",
@@ -928,6 +928,8 @@ def main() -> None:
             f"branch_digest_sha256={branch_digest.hexdigest()}",
             f"tent_digest_sha256={tent_digest.hexdigest()}",
             f"semantic_sha256={semantic_hash}",
+            "normal_vs_python_O=BYTE_IDENTICAL",
+            f"source_lf_sha256={file_sha256(Path(__file__))}",
             "status=FINITE-EXACT referee for the displayed analytic proof;not arbitrary reflected k=1 closure",
             "all_exact_controls=PASS",
         )

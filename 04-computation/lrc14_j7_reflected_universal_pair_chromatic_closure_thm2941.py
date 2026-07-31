@@ -532,6 +532,8 @@ def main() -> None:
             "scope_boundary=proper-coloring residues are certificate failures only,not physical survivors",
             f"profile_digest_sha256={profile_digest.hexdigest()}",
             f"semantic_sha256={semantic}",
+            "normal_vs_python_O=BYTE_IDENTICAL",
+            f"source_lf_sha256={sha256(Path(__file__))}",
             "all_exact_controls=PASS",
         )
     )

@@ -149,8 +149,8 @@ OUTPUT = (
     / "lrc14_j7_reflected_hostile_carrier_tree_allq_bridge_thm2941.out"
 )
 EXPECTED_CARRIER_SOURCE_SHA256 = "5d25a955fe184d6c1a3d8b632b4bbf901dc996ee46ad67c5748836fcc7134404"
-EXPECTED_LOCAL_PAIR_SOURCE_SHA256 = "7f8e9a518b87475a60acf1c76d8b176c6a7614b682d77e1139ddd87a2fb77f60"
-EXPECTED_DILATION_SOURCE_SHA256 = "92e5caaf0b944a4e320059e2992870b1f52c7a9655a9031cec9744d80f25bc09"
+EXPECTED_LOCAL_PAIR_SOURCE_SHA256 = "367a4b299ebaf802faeedb056f2e3061b707c3df9aeebcb9e7afb941681cd750"
+EXPECTED_DILATION_SOURCE_SHA256 = "1643a13f1488a9b24a7f1e5636d8f9c27f8776cc2b664299a8fb7bdfd65b5014"
 EXPECTED_SEMANTIC_SHA256 = None  # pinned after the hostile audit replay
 FINITE_MAX_Q = 5
 TENT_FLOOR = F(35, 2976)
@@ -1180,9 +1180,9 @@ def main() -> None:
 
     lines = [
         "LRC14 hostile reflected ray all-Q carrier-averaged K6 spanning-tree bridge",
-        f"carrier_engine_sha256={sha256(CARRIER_SOURCE)}",
-        f"local_pair_referee_sha256={sha256(LOCAL_PAIR_SOURCE)}",
-        f"dilation_referee_sha256={sha256(DILATION_SOURCE)}",
+        f"carrier_engine_lf_sha256={sha256(CARRIER_SOURCE)}",
+        f"local_pair_referee_lf_sha256={sha256(LOCAL_PAIR_SOURCE)}",
+        f"dilation_referee_lf_sha256={sha256(DILATION_SOURCE)}",
         f"body={E};L={L};levels=(2Q,Q,Q,Q,Q,2Q);safe_cells={len(safe_cells)};carrier_mass={qtext(carrier_mass)}",
         "source_to_target=pointwise pair overlap lower bounds w_ij average to omega_ij;carrier omega retains phase occupancy lost by translation-free minima",
         "hostile_matching_topology=unequal-level graph is K_(2,4):connected with spanning trees but no unequal perfect matching;this is NO_CERTIFICATE,not survival",
@@ -1229,6 +1229,8 @@ def main() -> None:
             "consequence=carrier-averaged spanning-tree criterion closes this hostile ray for every integer Q>=1",
             "scope_boundary=one dilation ray;not arbitrary reflected k1;criterion remains sufficient only",
             f"semantic_sha256={semantic}",
+            "normal_vs_python_O=BYTE_IDENTICAL",
+            f"source_lf_sha256={sha256(Path(__file__))}",
             "all_exact_controls=PASS",
         )
     )

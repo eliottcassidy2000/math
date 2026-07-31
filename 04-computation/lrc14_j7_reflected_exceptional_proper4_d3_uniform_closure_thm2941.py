@@ -69,7 +69,7 @@ UNIVERSAL = (
     / "lrc14_j7_reflected_universal_pair_chromatic_closure_thm2941.py"
 )
 EXPECTED_BASE_SHA256 = "2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31"
-EXPECTED_NEAREST_SHA256 = "7f8e9a518b87475a60acf1c76d8b176c6a7614b682d77e1139ddd87a2fb77f60"
+EXPECTED_NEAREST_SHA256 = "367a4b299ebaf802faeedb056f2e3061b707c3df9aeebcb9e7afb941681cd750"
 EXPECTED_UNIVERSAL_SHA256 = ""
 EXPECTED_SEMANTIC_SHA256 = "61b456316b2e0d4b694af399c749586b4c6a3896cacaf581e29ddaf6adf7e1ed"
 
@@ -386,10 +386,10 @@ def main() -> None:
         "corollary=the entire reflected D=3 sector closes for every m>=1",
         "scope=reflected THM-2941 residual family only; sufficient certificate, not physical-survivor classification; D>=4 remains outside this theorem",
         "normal_vs_python_O=BYTE_IDENTICAL",
-        f"base_sha256={sha256(BASE)}",
-        f"nearest_sha256={sha256(NEAREST)}",
-        f"universal_sha256={sha256(UNIVERSAL)}",
-        f"source_sha256={source_sha}",
+        f"base_lf_sha256={sha256(BASE)}",
+        f"nearest_lf_sha256={sha256(NEAREST)}",
+        f"universal_lf_sha256={sha256(UNIVERSAL)}",
+        f"source_lf_sha256={source_sha}",
         f"semantic_sha256={semantic}",
         "all_exact_controls=PASS",
     ))
