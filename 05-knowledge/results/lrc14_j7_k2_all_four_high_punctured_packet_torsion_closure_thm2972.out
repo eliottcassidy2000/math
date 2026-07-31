@@ -1,6 +1,6 @@
 LRC14 k=2 all-four-high literal-ray packet torsion closure
-dependency=04-computation/lrc14_j7_k2_scalar_band_1680_1742_thm2941.py;lf_sha256=89016f939c961fa979ec5b30812981456df5bfb2af3066f1f1b38e5a83f1a412
-dependency=05-knowledge/results/lrc14_j7_k2_scalar_band_1680_1742_thm2941.out;lf_sha256=4a36611b26585964e185bbaa3d583be3f1c67a7b608cca785920266bc217a779
+dependency=04-computation/lrc14_j7_k2_scalar_band_1680_1742_thm2941.py;lf_sha256=1224d5594571f21c91c55fe3ab165c4fc34ba7968719862d12660d24efac919d
+dependency=05-knowledge/results/lrc14_j7_k2_scalar_band_1680_1742_thm2941.out;lf_sha256=c20607cb478ed491d7000f2b8a49213f57d1606a5152700ac3b50c836e2dc66c
 rows=39;packets=19640;killed=19640;open=0
 finite_candidates_total=1401;maximum_row_candidates=456
 row_height_histogram={1694: 7, 1702: 3, 1708: 9, 1722: 7, 1724: 2, 1732: 2, 1736: 9}

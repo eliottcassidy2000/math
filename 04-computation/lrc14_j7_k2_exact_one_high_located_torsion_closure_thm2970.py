@@ -26,8 +26,8 @@ ATLAS_OUTPUT = ROOT / "05-knowledge/results/lrc14_j7_k2_scalar_band_1680_1742_th
 DEFAULT_OUTPUT = ROOT / "05-knowledge/results/lrc14_j7_k2_exact_one_high_located_torsion_closure_thm2970.out"
 
 EXPECTED_HASHES = {
-    ATLAS_SOURCE: "89016f939c961fa979ec5b30812981456df5bfb2af3066f1f1b38e5a83f1a412",
-    ATLAS_OUTPUT: "4a36611b26585964e185bbaa3d583be3f1c67a7b608cca785920266bc217a779",
+    ATLAS_SOURCE: "1224d5594571f21c91c55fe3ab165c4fc34ba7968719862d12660d24efac919d",
+    ATLAS_OUTPUT: "c20607cb478ed491d7000f2b8a49213f57d1606a5152700ac3b50c836e2dc66c",
 }
 
 RULER = 14 * lcm(*range(1, 15))

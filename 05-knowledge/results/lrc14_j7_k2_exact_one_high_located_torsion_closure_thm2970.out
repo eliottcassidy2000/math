@@ -1,6 +1,6 @@
 LRC14 projected k=2 forced-high exact-ray/located-torsion closure
-dependency=04-computation/lrc14_j7_k2_scalar_band_1680_1742_thm2941.py;sha256=89016f939c961fa979ec5b30812981456df5bfb2af3066f1f1b38e5a83f1a412
-dependency=05-knowledge/results/lrc14_j7_k2_scalar_band_1680_1742_thm2941.out;sha256=4a36611b26585964e185bbaa3d583be3f1c67a7b608cca785920266bc217a779
+dependency=04-computation/lrc14_j7_k2_scalar_band_1680_1742_thm2941.py;sha256=1224d5594571f21c91c55fe3ab165c4fc34ba7968719862d12660d24efac919d
+dependency=05-knowledge/results/lrc14_j7_k2_scalar_band_1680_1742_thm2941.out;sha256=c20607cb478ed491d7000f2b8a49213f57d1606a5152700ac3b50c836e2dc66c
 input_rows=58;height_histogram=((1683, 1), (1694, 10), (1702, 3), (1708, 14), (1722, 11), (1724, 2), (1732, 2), (1736, 15))
 forced_high_rows=19;height_histogram=((1683, 1), (1694, 3), (1708, 5), (1722, 4), (1736, 6))
 ordinary_all_four_high_rows=39;height_histogram=((1694, 7), (1702, 3), (1708, 9), (1722, 7), (1724, 2), (1732, 2), (1736, 9));next_frontier_height=1736;lowest_remaining_height=1694
