@@ -157,7 +157,14 @@ extractor exists for all critical values `n <= 31` with
    (dead already at `R = 64`). So `C* <= 3/2` does **not** follow from the
    verified epochs, and any claim of a `3/2` construction must either leave
    the `H = 1` normal form or change rate.
-2. Criterion (4) is necessary for (*), i.e. for the `H = 1` normal form of
+2. The resemblance between (4)'s entropy form and certificate (27) is
+   **structural only**. Per klein-S428 the inequality (27) admits an open
+   half-line of weights `alpha > 0.3674729...`, so `2457/6592` is an output
+   of the source's construction and cannot be recovered by inverting the
+   inequality; `1/25` is a chosen safety margin. No numeric identification
+   of `gamma*` with `alpha` is claimed here, and the earlier
+   "capacity straddle" reading is retracted as evidence.
+3. Criterion (4) is necessary for (*), i.e. for the `H = 1` normal form of
    the checkpoint-closure class. It is **not** proved necessary for closure
    with general `H`, and not for extractors outside the checkpoint class.
    It is likewise not sufficient: ampleness at `gamma >= 3/5` predicts, but

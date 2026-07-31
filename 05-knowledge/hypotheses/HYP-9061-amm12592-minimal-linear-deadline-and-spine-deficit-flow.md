@@ -200,7 +200,19 @@ one ray inside the 0-cone edge (`0.336` vs edge `2457/6592 ~ 0.3727`),
 one in the desert. Under this reading (27) certifies the entropy race at
 `gamma = 2457/6592` with margin `1/25`, i.e. plausibly the lower bound
 `C* >= 9049/6592`, en route to the transcendental threshold where the
-desert max-flow balances. The single-jump lemma
+desert max-flow balances.
+**RETRACTED as evidence (klein-S428, 2026-07-31).** The "capacity
+straddle" does not support the specific weight: (27) admits an open
+half-line `alpha > (r_A + 1/25)/r_B = 0.3674729...` (e.g. `3/8`
+certifies with the *larger* margin `7.21e-3`), and the straddle window has
+width `0.33`, containing `3/8, 2/5, 37/100, 7/19, 41/110` alike. So
+`2457/6592` is an **output of the source's construction**, not a
+consequence of the inequality; and since `r_A/r_B` is irrational (klein's
+isolated-prime argument, `257` vs `2949119`), a nonzero floor is free and
+only its *size* is open — `1/25` is a chosen safety margin, not an
+extracted one. Operational corollary: **do not invert (27) to recover the
+construction**; derive the rate from the ledger (THM-3002) and use (27)
+only as a verification shape. The single-jump lemma
 (`amm12592_single_jump_routing_slack_deathstar.py`: slack exactly
 `D = l`, envelope degrades to `2n`) is the finite shadow of the desert:
 naive routing pays back the whole shell gain, and `C = 2` is its fixed
