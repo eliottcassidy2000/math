@@ -1,0 +1,54 @@
+==========================================================================
+A. CRITERION LEDGER (min ratio; >=1 is AMPLE)
+==========================================================================
+  --- D0 = 0 ---
+    gamma                       R=8            R=16           R=32           R=64           
+    1/2 (death-star control)     1.286 AMPLE   1.133 AMPLE   0.469 DEFIC   0.044 DEFIC  
+    2457/6592  = READING R1      0.524 DEFIC   0.162 DEFIC   0.008 DEFIC   0.000 DEFIC  
+    2457/4135  = READING R2      1.286 AMPLE   1.267 AMPLE   1.258 AMPLE   1.222 AMPLE  
+    3/5                          1.286 AMPLE   1.267 AMPLE   1.258 AMPLE   1.222 AMPLE  
+    2/3                          1.571 AMPLE   1.400 AMPLE   1.387 AMPLE   1.349 AMPLE  
+
+  --- D0 = 1 ---
+    gamma                       R=8            R=16           R=32           R=64           
+    1/2 (death-star control)     1.571 AMPLE   1.267 AMPLE   1.058 AMPLE   0.101 DEFIC  
+    2457/6592  = READING R1      1.000 AMPLE   0.374 DEFIC   0.021 DEFIC   0.000 DEFIC  
+    2457/4135  = READING R2      1.571 AMPLE   1.400 AMPLE   1.323 AMPLE   1.254 AMPLE  
+    3/5                          1.571 AMPLE   1.400 AMPLE   1.323 AMPLE   1.254 AMPLE  
+    2/3                          1.857 AMPLE   1.533 AMPLE   1.452 AMPLE   1.381 AMPLE  
+
+  --- D0 = 2 ---
+    gamma                       R=8            R=16           R=32           R=64           
+    1/2 (death-star control)     1.857 AMPLE   1.400 AMPLE   1.194 AMPLE   0.233 DEFIC  
+    2457/6592  = READING R1      1.286 AMPLE   0.800 DEFIC   0.051 DEFIC   0.000 DEFIC  
+    2457/4135  = READING R2      1.857 AMPLE   1.533 AMPLE   1.387 AMPLE   1.286 AMPLE  
+    3/5                          1.857 AMPLE   1.533 AMPLE   1.387 AMPLE   1.286 AMPLE  
+    2/3                          2.143 AMPLE   1.667 AMPLE   1.516 AMPLE   1.413 AMPLE  
+
+  POSITIVE CONTROL (gamma=1/2 ample at R=8,16 and dead by R=64): True
+  READING R1 (gamma=2457/6592) deficient at every R>=16, D0<=2: True
+
+==========================================================================
+B. DEEP CHECK: does READING R2 survive large R?
+==========================================================================
+    R=  256  2457/4135 (R2)   min ratio=  1.1961 at t=   1  AMPLE   (2*gamma = 1.1884)
+    R=  256  3/5              min ratio=  1.2039 at t=   1  AMPLE   (2*gamma = 1.2000)
+    R=  512  2457/4135 (R2)   min ratio=  1.1918 at t=   1  AMPLE   (2*gamma = 1.1884)
+    R=  512  3/5              min ratio=  1.2035 at t=   1  AMPLE   (2*gamma = 1.2000)
+    R= 1024  2457/4135 (R2)   min ratio=  1.1896 at t=   1  AMPLE   (2*gamma = 1.1884)
+    R= 1024  3/5              min ratio=  1.2014 at t=   1  AMPLE   (2*gamma = 1.2000)
+  READING R2 uniformly ample through R=1024, binding at t=1: True
+
+==========================================================================
+C. FINITE-R THRESHOLDS (do NOT extrapolate these)
+==========================================================================
+    R=  32: finite-R threshold gamma ~ 0.531250
+    R=  64: finite-R threshold gamma ~ 0.560606
+    R= 128: finite-R threshold gamma ~ 0.575758
+    R= 256: finite-R threshold gamma ~ 0.584906
+    These rise slowly and a geometric extrapolation suggests ~0.5986,
+    which would wrongly place 2457/4135 below threshold -- refuted by B.
+
+==========================================================================
+SUMMARY  control=True  R1_refuted=True  R2_survives=True
+==========================================================================
