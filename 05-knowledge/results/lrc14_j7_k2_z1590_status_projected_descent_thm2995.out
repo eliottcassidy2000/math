@@ -1,0 +1,16 @@
+LRC14 projected k=2 exact status/projected descent at z1590
+referee_source_sha256=04e00a86c6d5b3a7554bb837dfa7866cf1ca4149c7313958d4f8bd76a54a20f6
+base_source_sha256=53fdc5c3c146d4b66a2656d249ea2c8ddec6721342c69063b49c41976e2c021f
+base_output_sha256=7afd64dcbb294fca43ff8d254fcf72389592f8c414ce4f7f49319f1d4353dc7a
+inherited_cap=1593;atlas_gap=1591..1593 empty;boundary_rows=z1590:3
+closure_partition=all_label_status_projected:3;empty:3;survivors:0
+closure_ledger=scalar:70;crude:6;status:30;status_survivors:34;exact_status_certificates:30;literal_packets:51;projected_kills:51
+CASE;route=ALL-LABEL;z1=1590;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=149/545370;first_d=392;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;divisors=59;trials=557845;counts=(15, 0, 15, 0);stage_sha256=('eaf9c9fcfff4d84bd73225af0a2e543607a9103a40fab17ca1602648ee2d0a36', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', 'e504d421b1a7b1fc7b788b003656c3c2b8439b846032b45d77ac49ddb38170bf', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d');exact_status_certificates=15;cells=0;packets=0;kills=0;minimum_margin=NONE;maximum_prefix_cells=0;direct_mass=NONE;state_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;conclusion=EMPTY
+CASE;route=ALL-LABEL;z1=1590;E=1,6,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=23/36358;first_d=392;ray_sha256=45c578666d68a83df513e4654d213ae979df51b73ce88f4882ac62d6941e9779;divisors=59;trials=557845;counts=(26, 4, 13, 9);stage_sha256=('1523f5544cc5dd1c275cc465bd2a00fa8305c633d7c5110a2306b881f04d47c6', '17fa9f9f5d108d351e627748238b37972b93ec26eebbfffb6f862d215ab24d87', '2ede8117fd59ec1aaddddfa3e3bac5a6f12c97f6bf95b9e2a83527f91738023f', 'd840595ed07d30eaa078484daa21ad9504a8c568728e45a4695ce779c8c5ee65');exact_status_certificates=13;cells=4196;packets=17;kills=17;minimum_margin=1026/16471;maximum_prefix_cells=2;direct_mass=1/1;state_sha256=7f0df936634e979c97ca7ae35aa5a55ebb27164b8114e6e0e2226cc7cb1dcd7f;conclusion=EMPTY
+CASE;route=ALL-LABEL;z1=1590;E=2,6,8,10,12,14;h=363/980;r=36;L=11760;lower=363/89180;delta1=121/181790;first_d=392;ray_sha256=68608cea42c53a4b9bbb5d24fb488e0f6f3fa66976dad962a045791619ff0c99;divisors=59;trials=557845;counts=(29, 2, 2, 25);stage_sha256=('aff9d4bcc1c9d7257accbbf970d67125f0c456d67b9b7114ea9c11e09f5722ab', '1d08e4eefd2c319e4a78eafb86ff2d78f7df34b32154ebc0e57327052c2e6ad8', '0bfd81ddd5d13595db45696a509280a4b4856a857a41f5b5fea19c49d5bf3314', '8ab7b5be0fd81a95ec05263e326fc61dd4dcd31343d25f827af49b1629ee9092');exact_status_certificates=2;cells=4356;packets=34;kills=34;minimum_margin=1296/5551;maximum_prefix_cells=5;direct_mass=1/1;state_sha256=1dcbf6af920b80d160762a66c15234d6c79c7733cd2867044e514f496b3fbd81;conclusion=EMPTY
+hostile_control=34 status survivors expand rather than being identified with packets;the exact packet count is 51 and the minimum projected margin is 1026/16471
+consequence=projected k=2 first drift label z1<=1589
+scope_boundary=finite-exact THM-2995 input only;remaining 1580..1589 band, other sectors, and LRC(14) remain open
+profile_sha256=c7785733f36acb06e7ad7f596407414980ae13dc3f89f5a65f828804609044a4
+semantic_sha256=e7e7f3b4a9789e74e14593f4d800015f4688882e7ad00b675948491455793c25
+all_exact_controls=PASS
