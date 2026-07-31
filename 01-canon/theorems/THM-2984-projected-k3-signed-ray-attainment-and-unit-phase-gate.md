@@ -8,9 +8,11 @@ status: >
   independent of height, giving a finite unit-by-unit strict-open exclusion
   gate.  Its cardinality shadow is sharp: more than
   beta(d)=2 floor((d-1)/14)+1 fixed-safe residues clear every unit, while
-  beta(d) residues need not.  This is a reusable refinement of the projected
-  k=3 denominator quotient; it does not assert that any new atlas row is
-  empty and does not improve the current proved cap by itself.
+  beta(d) residues need not.  Gcd-stratum capacities and the exact
+  multiplicative transporter refine this threshold whenever residue shape is
+  retained.  This is a reusable refinement of the projected k=3 denominator
+  quotient; it does not assert that any new atlas row is empty and does not
+  improve the current proved cap by itself.
 source: codex-lrc14-k3-signed-ray-phase-gate-2026-07-30
 depends_on:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
@@ -211,7 +213,7 @@ that unit is `u^{-1}B_d` and also has `beta(d)` elements.  Consequently
 This is sharp among arguments using only `|S|`: at equality take
 `S=u^{-1}B_d`, for which every cell is bad for that unit.  Thus `(12)` is the
 exact independence-number analogue for the bipartite unit--cell incidence
-graph.  It complements, rather than subsumes, the Cayley pair threshold
+graph.  Its representation differs from the Cayley pair threshold
 `|S|>d/R` in THM-2979:
 
 ```text
@@ -230,3 +232,165 @@ and the unit gate closes all primitive directions.  When `(13)` fails, the
 actual shape of `S` can still make every intersection `S ∩ u^{-1}B_d`
 proper; this is exactly the information retained by the finite ray-resolved
 test and lost by a count-only quotient.
+
+## 5. Gcd-stratum refinement and the exact obstruction
+
+The total count in `(12)` is not the end of the finite reduction.  Let
+
+```text
+O_g={r mod d:gcd(r,d)=g},
+```
+
+where `g|d`.  Every primitive unit preserves every `O_g`, because
+
+```text
+gcd(ur mod d,d)=gcd(ur,d)=gcd(r,d).                    (14)
+```
+
+Therefore the same injection argument can be applied inside one orbit
+stratum:
+
+```text
+|S intersect O_g|>|B_d intersect O_g|
+   for some g|d
+implies that every primitive u has a c in S with uc notin B_d.          (15)
+```
+
+This can be stronger than `(12)`: a large part of `B_d` may lie in gcd
+classes which `S` never uses.  The capacities in `(15)` are themselves
+explicit.  With `b=floor((d-1)/14)`, the zero stratum has
+
+```text
+|B_d intersect O_d|=1.
+```
+
+For a proper divisor `g<d`, reflection `r -> d-r` pairs the two bad flanks
+and gives
+
+```text
+|B_d intersect O_g|
+ =2 #{a:1<=a<=floor(b/g), gcd(a,d/g)=1}.                (16)
+```
+
+Indeed every nonzero bad residue on the lower flank is uniquely `r=ga` with
+the displayed conditions, and the two flanks are disjoint since `b<d/14`.
+Thus the shape-sensitive refinement costs only partial-totient counts.  For
+prime `d`, for example, the unit stratum has capacity `beta(d)-1`: the extra
+bad residue counted by `beta(d)` is zero and cannot receive a unit cell.
+
+The intrinsic remaining object is the multiplicative transporter
+
+```text
+T_d(S,B_d)={u in (Z/dZ)^*:uS subset B_d}.               (17)
+```
+
+If `U_active` is the set of primitive directions surviving the signed
+attainment law `(4)`, the absolute-cell gate is unresolved exactly when
+
+```text
+T_d(S,B_d) intersect U_active is nonempty.              (18)
+```
+
+This separates scalar reachability from residue geometry.  It also gives two
+cheap compressions below the stratum threshold.  If `S` contains a unit
+`s`, then `us` determines `u`, so only unit residues of `B_d` can index a
+transporter candidate.  If `|S|=|B_d|` and one `u_0` transports `S` into
+`B_d`, cardinality forces `u_0S=B_d`; every transporter is then in the coset
+
+```text
+Stab(B_d) u_0.                                          (19)
+```
+
+The stabilizer in `(19)` is explicit.  For `2<=d<=14`, `B_d={0}`, so every
+unit stabilizes it.  For every `d>=15`,
+
+```text
+Stab(B_d)={+1,-1}.                                      (20)
+```
+
+To prove this, note first that `1 in B_d`; hence a stabilizing unit has a
+least absolute representative of size `1<=a<=b`.  Since reflection already
+stabilizes `B_d`, replace the unit by its negative if necessary and take this
+representative to be `+a`.  If `a>=2`, put
+`k=floor(b/a)+1`.  Then `k<=b`, while
+
+```text
+b<ak<=b+a<=2b<d-b.
+```
+
+Thus `k` is bad but `ak` is not, a contradiction.  Reflection shows that
+both signs do stabilize the symmetric band.  In particular, at the sharp
+equality boundary and `d>=15`, a nonempty transporter has exactly two
+elements, `u_0` and `-u_0`; there is no large hidden multiplicative symmetry.
+
+Equations `(15)--(20)` identify the correct recursive search object: a
+bipartite unit--cell incidence relation with multiplicative orbit sidecars,
+not a tournament.  Only after this transporter is nonempty is a
+unit-indexed carrier-overlap or spanning-tree calculation warranted.
+
+## 6. Every short-order pair is already a universal unit certificate
+
+The pair and unit views are not merely parallel.  A located pair certificate
+feeds the unit gate directly.  Suppose `c_1,c_2 in S` are distinct and their
+difference modulo `d` has additive order `2<=r<=7`.  For every primitive
+unit `u`, the difference `u(c_2-c_1)` still has order `r`.  Writing an
+order-`r` residue as `(d/r)a` with `gcd(a,r)=1` shows that its circular
+distance from zero is at least
+
+```text
+d/r >= d/7.                                             (21)
+```
+
+If both `uc_1` and `uc_2` lay in `B_d`, their circular separation would be
+strictly less than `d/14+d/14=d/7`, contradicting `(21)`.  Thus for every
+primitive `u`, at least one member of this same pair satisfies the absolute
+cell test `(8)`.  This extends THM-2979's exact order-seven argument verbatim
+to every order at most seven.
+
+Consequently the logical hierarchy is one-way:
+
+```text
+located order-at-most-seven pair
+  => universal primitive-unit cell escape
+  => closure of every scalar-active primitive ray.       (22)
+```
+
+The converse fails: the `d=8`, `S={1}` control in Section 3 has no pair but
+escapes the bad band for every primitive unit.  The unit-resolved gate is
+therefore a genuine extension of pair-only closure, while the pair witness
+remains a cheaper unit-blind certificate when present.  This also explains
+why a terminal already closed by THM-2979's located torsion test must pass the
+THM-2984 absolute-cell test: agreement of those two audits is a theorem, not
+independent numerical luck.
+
+The count-only comparison has the same direction.  If `R` is THM-2979's
+largest divisor of `d` at most seven, then
+
+```text
+beta(d) <= ceil(d/7) <= d/R.                            (23)
+```
+
+The first inequality follows immediately from `(10)`, and the second from
+`R<=7` and `R|d`.  Thus the pair-density hypothesis `|S|>d/R` always implies
+the absolute-unit count hypothesis `|S|>beta(d)`.  The gain can be strict:
+for `d=14m`, `beta(d)=d/7-1`.  Retaining absolute cell addresses can therefore
+save a whole residue fibre before any transporter-shape refinement is used.
+
+This admits a useful graph-theoretic rephrasing without inventing an
+orientation.  The bad band `B_d` is itself an independent set in
+THM-2979's Cayley graph `G(d,7)`: two bad residues have circular separation
+strictly below `d/7`, whereas every nonzero residue of additive order at most
+seven has circular size at least `d/7`.  Hence
+
+```text
+pair gate:       S is not independent in G(d,7);
+unit obstruction: S is contained in one multiplicative-unit translate of
+                  the particular independent set B_d.                 (24)
+```
+
+The second condition is far more rigid than mere pairlessness.  Thus after a
+pair gate fails, the next object is not an arbitrary independent set: it is
+the recognition problem for the unit orbit of one short symmetric band,
+refined first by gcd strata and then by its two-element stabilizer.  This is
+the exact additive--multiplicative interface which the denominator-only
+quotient had erased.
