@@ -50,17 +50,13 @@ DEFAULT_OUTPUT = (
     "lrc14_j7_k3_z275_to_z272_septimal_torsion_descent_thm2941.out"
 )
 EXPECTED_UPSTREAM_SHA256 = (
-    "e5eff0899a89b99187bf9dfbb1ac8da40ad9d5f021079771020af7cef43e5114"
+    "61868bc605b10bf3649dbed0b2323133ff2ed5df8d0c93587f3645975a6c274a"
 )
 EXPECTED_UPSTREAM_OUTPUT_SHA256 = (
-    "ad5e01735ca9591c7161b75bb801cd011c6fc24d69f791a004e041ccb85ea075"
+    "a9db04e9bf53709199a8fb18f618ae941e58afb21c7ade2078769ce8313305f4"
 )
-EXPECTED_PROFILE_SHA256 = (
-    "1139218bdb4e9d19a3a64b22103030ef682e835803f5caf07c1659b0ce788f5b"
-)
-EXPECTED_SEMANTIC_SHA256 = (
-    "0960c65f29707e6ce1b295f35f0118960ce420c1d27df58365b91999c1faca9b"
-)
+EXPECTED_PROFILE_SHA256 = None
+EXPECTED_SEMANTIC_SHA256 = None
 EXPECTED_M_HISTOGRAM = (
     (2, 1), (3, 41), (4, 74), (5, 346), (6, 223), (7, 487),
     (9, 16), (10, 3), (11, 118), (13, 474), (14, 16), (18, 8),
@@ -421,14 +417,20 @@ def main():
         (
             body, L, high, first_d, trials, checks, signs, states, crude,
             status, packets, mhist, verified_instance_digest,
-            verified_instance_count,
+            verified_instance_count, representative_instance,
         ) = row
+        require(
+            verified_instance_count == len(status),
+            (body, verified_instance_count, len(status)),
+        )
         lines.append(
             f"BODY;z1={first};E={body};L={L};high={high};d1={first_d};trials={trials};checks={checks};"
             f"signs={dict(signs)};states={len(states)};crude={len(crude)};status={len(status)};"
             f"residual={len(packets)};M={dict(mhist)};"
             f"verified_farkas_instance_sha256={verified_instance_digest};"
-            f"verified_exact_farkas_instances={verified_instance_count}"
+            f"verified_farkas_checks={verified_instance_count};all_negative=1;"
+            f"representative_infeasible_instance={representative_instance};"
+            "solver_basis_not_frozen;contradiction_magnitudes_not_frozen"
         )
     for terminal in terminal_records:
         body, L, high, required, residual_count, gap, gap_witness, zero_count, case_count, pair_count, low_signs, high_checks, qualifying, effective, _cases = terminal

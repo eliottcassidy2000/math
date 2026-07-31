@@ -1407,6 +1407,12 @@ of radius `1/14` cannot both contain these phases.  Equality at `s=7` is
 allowed: only their excluded endpoints meet.  The lemma requires a set of
 distinct residues; counting safe cells with multiplicity would not suffice.
 
+THM-2979 records the sharp extremal boundary of this count-only gate.  If
+`G(d,K)` joins two residue classes when their nonzero difference has order at
+most `K`, and `R=max{r:r|d, r<=K}`, then `alpha(G(d,K))=d/R`.  Thus no smaller
+universal threshold can follow from residue cardinality alone; an improvement
+at or below `d/R` must retain the shape or location of the residue set.
+
 For each of the `73` endpoint cases, `S` is precisely the distinct residue
 classes modulo the high denominator represented by complete body cells
 missed by `297` and both fixed low labels.  The least qualifying `r`
