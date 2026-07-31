@@ -8,11 +8,12 @@ status: >
   and differ exactly on the binary generator.  The discriminant subgroup is
   C3*C3 and makes the two actions identical.  None of the literal six-sheet
   graphs is a partial cube; their lossy Bass--Serre incidence shadows are.
-  The local extension frame is D8/C2=V4, and the A4 restriction carries a
-  chiral octahedral partial tournament with three antipodal ties and all
-  eight triangular faces cyclically oriented.  Explicit finite-kernel,
-  graceful, tournament, and source-typing hostiles block every Farey, Keller,
-  JC, or LRC overclaim.
+  The marked descents are the two classes in H^1(C2,Aut_A4(X))=H^1(C2,C2),
+  with stabilizers V4 and C4.  The local extension frame is D8/C2=V4, and
+  the A4 restriction carries a chiral octahedral partial tournament with
+  three antipodal ties and all eight triangular faces cyclically oriented.
+  Explicit finite-kernel, graceful, tournament, and source-typing hostiles
+  block every Farey, Keller, JC, or LRC overclaim.
 source: codex-modular-six-sheet-schreier-boundary-2026-07-30
 depends_on:
   - THM-2968-quartic-edge-and-oriented-cycle-s4-complements
@@ -23,8 +24,8 @@ related:
   - THM-2965-modular-signed-pair-complements-and-v4-compound-shadow
 script: 04-computation/modular_s4_six_sheet_schreier_thm2975.py
 output: 05-knowledge/results/modular_s4_six_sheet_schreier_thm2975.out
-script_sha256: b04d3d945b3872383f281c5d99b95e855b6ae6651cecdb524e04883a4212c2ea
-output_sha256: f3c075e28eff54c8f4a718aee51e7efb1036e7187f7e21f255459e95e58d069d
+script_sha256: 17440a00620ce23698bfd4277f16de1b55122e3aa7a757081dd6a8db9dc5ef02
+output_sha256: 170a5987ad469f890895453ab91bd90d431a5acf14c09b4e850ebd88b4a9e064
 hash_basis: LF-normalized bytes
 ---
 
@@ -221,6 +222,35 @@ three ways to extend the common discriminant-cover `C2` stabilizer inside
 its centralizer.  It is neither a `V4` action on the six sheets nor the
 normal quotient `(14)`.
 
+There is a complementary marked-descent classification.  Let `X=A4/H` be
+the common six-sheet set and retain the selected odd generator `a` and base
+sheet `H`.  Then
+
+```text
+Aut_A4(X)=N_A4(H)/H=V4/H=C2.                            (17a)
+```
+
+A descent operator is an involution `T` satisfying
+
+```text
+T rho(n) T^-1 = rho(a n a^-1),             n in A4.    (17b)
+```
+
+The quotient `C2` acts trivially on the coefficient group in `(17a)`, and
+the exact six-sheet enumeration finds precisely two marked descents up to
+`A4`-equivariant isomorphism:
+
+```text
+H^1(C2,Aut_A4(X))=H^1(C2,C2)=C2.                       (17c)
+```
+
+Reconstructing `rho_T(n a^e)=rho(n)T^e` gives base-sheet stabilizer
+`V4_edge` for one class and `C4` for the other.  The two operators differ by
+the unique nontrivial equivariant automorphism, the three-pair flip.  In the
+already identified `D8/H` frame, their affine difference is the normal-`V4`
+line.  Thus the discriminant cover forgets exactly one binary descent bit;
+the common `A4`-set alone cannot choose edge versus orientation descent.
+
 In the marked modular factor frame the normalizer of the unordered pair
 `{<b>,<aba>}` is `V4_edge`.  On the four weighted-square nodes its edge-lift
 action has image only `C2`, while its orientation-lift action realizes the
@@ -277,8 +307,8 @@ in `C3*C3`, while its `A4` image has order two.  Thus
 
 in the finite action.  These short hostiles show that the Schreier graph
 does not retain the Farey flank, Bass--Serre path, modular word, or THM-2056
-Gram-owner cross term.  The finite six-state action is a congruence quotient,
-not the binary fraction tree or ternary Pythagorean reduction tree.
+Gram-owner cross term.  The finite six-state action is a finite octahedral
+quotient, not the binary fraction tree or ternary Pythagorean reduction tree.
 
 ## 7. Graceful and external-origin boundaries
 
@@ -352,9 +382,11 @@ Both modes byte-match the LF-stored transcript
 ```
 
 The dependency-free companion checks all 24 root relabellings; the two
-marked actions and their `A4` restrictions; every factor-orbit incidence
-matrix; the normal and local `V4` frames; the literal partial-cube
-obstructions and the incidence-shadow survivors; all directed orbitals and
-the eight cyclic octahedral faces; the graceful witnesses/nonexistence scan;
-the invariant-tournament obstruction; and both finite-kernel words.  It uses
-explicit `require(...)` checks, so optimized mode verifies the same claims.
+marked actions and their `A4` restrictions; all 720 candidate six-sheet
+descent operators and the reconstructed `V4`/`C4` stabilizers; every factor-
+orbit incidence matrix; the normal and local `V4` frames; the literal
+partial-cube obstructions and the incidence-shadow survivors; all directed
+orbitals and the eight cyclic octahedral faces; the graceful witnesses and
+nonexistence scan; the invariant-tournament obstruction; and both finite-
+kernel words.  It uses explicit `require(...)` checks, so optimized mode
+verifies the same claims.

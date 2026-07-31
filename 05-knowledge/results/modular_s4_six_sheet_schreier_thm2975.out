@@ -7,6 +7,7 @@ orientation_loopless=edges:7;degrees:(2, 2, 2, 2, 3, 3);partial_cube:NO
 A4_generators=b,aba;common_graph=K2,4_plus_2K2;edges:10;degrees:(3, 3, 3, 3, 4, 4);partial_cube:NO
 V4_orbits=((0,1),(2,3),(4,5));point_stabilizer_order=2;torsor:NO
 local_extension_frame=C_S4((01)(23))/C2=D8/C2=V4;lines=normal_V4,edge_V4,orientation_C4
+binary_descent_h1=Aut_A4(X):C2;semilinear_involutions:2;classes:edge_V4,orientation_C4;difference:three_pair_flip
 Bass_Serre_incidence=edge:((1, 0), (0, 1), (1, 1), (1, 1));orientation:((1, 1), (2, 0), (0, 2));A4:((1, 2), (2, 1))
 incidence_simple_shadows=edge:C4_plus_two_opposite_leaves;orientation:P5;A4:C4;partial_cubes:YES
 A4_weighted_C4_abstract_aut=V4_regular:4;physical_factor_pair_normalizer:4;common_stabilizer:2

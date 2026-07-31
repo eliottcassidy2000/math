@@ -283,6 +283,37 @@ require(
 )
 common_a4_group = permutation_group((edge_b, edge_c))
 
+# Marked descent of the common A4-set.  Its equivariant automorphism group is
+# exactly the three-pair flip C2.  Relative to the chosen odd generator a,
+# there are exactly two semilinear involutions, namely the edge and
+# orientation descents.
+identity6 = tuple(range(6))
+sheet_permutations = tuple(permutations(range(6)))
+equivariant_automorphisms = {
+    u
+    for u in sheet_permutations
+    if all(compose(u, g) == compose(g, u) for g in common_a4_group)
+}
+require(
+    equivariant_automorphisms == {identity6, global_pair_flip},
+    "Aut_A4(X) is not the expected C2",
+)
+require(
+    compose(global_pair_flip, edge_a) == compose(edge_a, global_pair_flip),
+    "the quotient C2 acts nontrivially on the descent coefficient C2",
+)
+semilinear_descents = {
+    u
+    for u in sheet_permutations
+    if compose(u, u) == identity6
+    and compose(compose(u, edge_b), inverse(u)) == edge_c
+    and compose(compose(u, edge_c), inverse(u)) == edge_b
+}
+require(
+    semilinear_descents == {edge_a, or_a},
+    "the marked A4-set does not have exactly the two expected descents",
+)
+
 for name, (pa, pb, pc) in actions.items():
     original_edges = (
         undirected_generator_edges(pa) | undirected_generator_edges(pb)
@@ -592,6 +623,43 @@ require(
     "a V4 extension acquired order four",
 )
 
+# Reconstruct the full S4 action from each semilinear descent and verify the
+# actual base-sheet stabilizer.  Cycle types alone would not identify the two
+# H^1 classes.
+a4_sheet_action = {
+    g: induced_permutation(edges, relabel_edge, g)
+    for g in A4
+}
+
+
+def reconstructed_s4_action(descent, g):
+    if parity(g) == 0:
+        return a4_sheet_action[g]
+    even_part = compose(g, a)  # g=(g a)a and g a lies in A4
+    require(even_part in a4_sheet_action, "odd element did not split over A4")
+    return compose(a4_sheet_action[even_part], descent)
+
+
+for descent, objects, relabel, expected_stabilizer in (
+    (edge_a, edges, relabel_edge, edge_stabilizer),
+    (or_a, orientations, relabel_cycle, orientation_stabilizer),
+):
+    require(
+        all(
+            reconstructed_s4_action(descent, g)
+            == induced_permutation(objects, relabel, g)
+            for g in S4
+        ),
+        "semilinear descent failed to reconstruct the marked S4 action",
+    )
+    reconstructed_stabilizer = {
+        g for g in S4 if reconstructed_s4_action(descent, g)[0] == 0
+    }
+    require(
+        reconstructed_stabilizer == expected_stabilizer,
+        "descent class did not recover its claimed stabilizer",
+    )
+
 factor_nodes = tuple(
     frozenset(orbit)
     for orbit in orbit_partition(edge_b) + orbit_partition(edge_c)
@@ -699,6 +767,10 @@ print("V4_orbits=((0,1),(2,3),(4,5));point_stabilizer_order=2;torsor:NO")
 print(
     "local_extension_frame=C_S4((01)(23))/C2=D8/C2=V4;"
     "lines=normal_V4,edge_V4,orientation_C4"
+)
+print(
+    "binary_descent_h1=Aut_A4(X):C2;semilinear_involutions:2;"
+    "classes:edge_V4,orientation_C4;difference:three_pair_flip"
 )
 print(
     "Bass_Serre_incidence="

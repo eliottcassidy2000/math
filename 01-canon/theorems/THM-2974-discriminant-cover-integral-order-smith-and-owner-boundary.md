@@ -261,7 +261,7 @@ be invisible to that inertia.  Here the inertia is itself a nontrivial
 Jelonek divisor; it is the minimal hostile to reconstructing the required
 owner from sextic fixed points.
 
-## 6. Every parameter-line boundary is nonintegral for this coordinate
+## 6. Every parameter-line boundary is non-unimodular for this coordinate
 
 The factors in `(3)` are squarefree away from the displayed multiplicity
 `t^2`, and the residual `Delta` and `J_or` factors are coprime.  Formula
@@ -275,10 +275,13 @@ simple root of J_or:           2v(J_or)=2.               (20)
 ```
 
 Thus this exact edge/orientation coordinate change is a graph-order
-isomorphism only on the generic `q Delta J_or !=0` open.  It is nonintegral
-on every component where THM-2971 loses separability or primitivity.  One
-can identify the two maximal orders after normalization, but normalization
-is an extra sidecar and still cannot reconstruct the missing quartic owner.
+isomorphism only on the generic `q Delta J_or !=0` open.  It fails to be an
+integral graph-order isomorphism on every component where THM-2971 loses
+separability or primitivity.  At a simple `J_or` root the map itself is
+integral and `R_or` is a proper suborder of `R_edge`; the order-two
+determinant says precisely that the change is non-unimodular.  One can
+identify the two maximal orders after normalization, but normalization is
+an extra sidecar and still cannot reconstruct the missing quartic owner.
 
 ## 7. Scope and next gate
 
