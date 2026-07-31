@@ -399,6 +399,33 @@ Thus
 K_d^tr is flag for 2<=d<=8, while K_9^tr is not flag.    (13l)
 ```
 
+There is also an exact gap formula which removes the translation coordinate
+before any search over `a`.  For nonempty `S` and a fixed unit `u`, sort the
+distinct residues of `uS` cyclically and let `Delta_1,...,Delta_s` be their
+positive forward gaps, summing to `d`; for a singleton take `Delta_1=d`.
+Then
+
+```text
+#{a:uS subset C_a}
+  =sum_i max(0,Delta_i-(d-kappa)).                       (13m)
+```
+
+Indeed the complement of `C_a` is a consecutive block of `d-kappa`
+residues.  It avoids `uS` precisely when it lies among the `Delta_i-1`
+unselected residues inside one cyclic gap, and that gap admits
+`max(0,(Delta_i-1)-(d-kappa)+1)` placements.  In particular,
+
+```text
+there exists a with uS subset C_a
+  iff max_i Delta_i>=d-kappa+1.                         (13n)
+```
+
+Thus the continuous-center obstruction is equivalently a unit-indexed
+maximum-gap profile.  Below the cardinality gate, a terminal computation need
+not enumerate centers: it records the cyclic gaps of each `uS`; the affine
+transporter is empty exactly when every unit has maximum gap at most
+`d-kappa`.
+
 ## 5. Gcd-stratum refinement and the exact obstruction
 
 The total count in `(12)` is not the end of the finite reduction.  Let
