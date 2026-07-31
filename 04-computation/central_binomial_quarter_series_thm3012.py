@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Referee for THM-3010: the series S(k) = sum C(2n,n)C(4n,2n)/((kn+1)64^n).
+"""Referee for THM-3012: the series S(k) = sum C(2n,n)C(4n,2n)/((kn+1)64^n).
 
 Checks (exact where possible, else high-precision mpmath):
   C1  C(2n,n)C(4n,2n)/64^n = (1/4)_n(3/4)_n/(n!)^2  as exact rationals, n<60.
@@ -157,4 +157,4 @@ def c9():
 if __name__ == "__main__":
     mp.dps = 60
     c1(); c2(); c3(); c4(); c5(); c6(); c7(); c8(); c9()
-    print("ALL THM-3010 REFEREE CHECKS PASSED")
+    print("ALL THM-3012 REFEREE CHECKS PASSED")

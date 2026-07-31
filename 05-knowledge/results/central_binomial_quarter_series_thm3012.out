@@ -8,4 +8,4 @@ C7 Schwarz angle sum of 2F1(1,4/k;1+2/k;.) = 8/k-1 > 1 (spherical) for k<=3, EXA
 C8 arctan(sqrt2/5)=pi-3arctan(sqrt2); pi S(3)=2sqrt3 log(sqrt3+sqrt2)-2pi+6arctan(sqrt2): OK
 C9 positive control: k=3 recovered (14 relations), e.g. [1, -1, 2] on ('r3log(5+2r6)', 'atan(r2/5)')
 C9 no relation for k=4,5,6,12 in the same pool (search validated): OK
-ALL THM-3010 REFEREE CHECKS PASSED
+ALL THM-3012 REFEREE CHECKS PASSED

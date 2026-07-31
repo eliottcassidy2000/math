@@ -1,5 +1,5 @@
 ---
-id: THM-3010
+id: THM-3012
 title: "The central-binomial quarter series S(k) and the spherical/Euclidean wall at k=4"
 status: >
   PROVED + VERIFIED-EXACT. For S(k) = sum_{n>=0} C(2n,n)C(4n,2n)/((kn+1)64^n):
@@ -26,11 +26,11 @@ related:
   - THM-2000
 external:
   - "Owner-supplied problem, 2026-07-31 (series over products of central binomial coefficients)."
-script: 04-computation/central_binomial_quarter_series_thm3010.py
-output: 05-knowledge/results/central_binomial_quarter_series_thm3010.out
+script: 04-computation/central_binomial_quarter_series_thm3012.py
+output: 05-knowledge/results/central_binomial_quarter_series_thm3012.out
 ---
 
-# THM-3010 -- the central-binomial quarter series and the k = 4 wall
+# THM-3012 -- the central-binomial quarter series and the k = 4 wall
 
 For an integer `k >= 1`,
 
@@ -148,4 +148,4 @@ of irrationality or of non-existence in a wider constant class. What *is*
 proved for all `k` is the closed form (6): a single balanced `3F2` at 1 with
 one `k`-dependent parameter, equivalently the `K`-moment (4).
 
-Referee: C1-C9 exact/high-precision, `ALL THM-3010 REFEREE CHECKS PASSED`. QED.
+Referee: C1-C9 exact/high-precision, `ALL THM-3012 REFEREE CHECKS PASSED`. QED.
