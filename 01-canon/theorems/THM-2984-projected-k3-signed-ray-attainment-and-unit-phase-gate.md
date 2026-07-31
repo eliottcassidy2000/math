@@ -10,14 +10,16 @@ status: >
   beta(d)=2 floor((d-1)/14)+1 fixed-safe residues clear every unit, while
   beta(d) residues need not.  An arbitrarily translated open danger band has
   the different sharp capacity ceil(d/7), and its continuous center compresses
-  exactly to a finite affine interval-orbit complex; the two bounds must not
-  be conflated.  Gcd-stratum capacities and the exact multiplicative
-  transporter refine the centered threshold whenever residue shape is
-  retained.  The resulting centered transport complex is flag through d=42
-  and first becomes non-flag at d=43, with an explicit irreducible three-cell
-  certificate.  This is a reusable refinement of the projected k=3
-  denominator quotient; it does not assert that any new atlas row is empty
-  and does not improve the current proved cap by itself.
+  exactly to a finite affine interval-orbit complex.  The complement of that
+  complex's one-skeleton is exactly the short-order graph, and the affine
+  complex is flag through d=8 but not at d=9; the centered and translated
+  bounds must not be conflated.  Gcd-stratum capacities and the exact
+  multiplicative transporter refine the centered threshold whenever residue
+  shape is retained.  The resulting centered transport complex is flag
+  through d=42 and first becomes non-flag at d=43, with an explicit
+  irreducible three-cell certificate.  This is a reusable refinement of the
+  projected k=3 denominator quotient; it does not assert that any new atlas
+  row is empty and does not improve the current proved cap by itself.
 source: codex-lrc14-k3-signed-ray-phase-gate-2026-07-30
 depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
@@ -358,6 +360,45 @@ each difference and multiplication by a unit preserves its gcd with `d`.
 This is why THM-2979's short-order pair gate survives arbitrary local
 translation even though the absolute point-stratum capacities `(16)` do not.
 
+In fact the pair relation is exact.  For distinct `x,y mod d`, put
+`g=gcd(x-y,d)`.  Then
+
+```text
+{x,y} in K_d^tr
+  iff g<=kappa-1
+  iff the additive order of x-y is greater than 7.       (13j)
+```
+
+For the forward direction, two points in one `kappa`-block have a nonzero
+integer difference of absolute value at most `kappa-1`; unit multiplication
+preserves the gcd with `d`.  Conversely, reduction of units
+`(Z/dZ)^* -> (Z/(d/g)Z)^*` is onto (prime-power lifting and CRT), so some unit
+`u` has `u(y-x)=g mod d`.  If `g<=kappa-1`, the two images lie together in
+the block beginning at `ux`.  Finally
+
+```text
+g<=ceil(d/7)-1  iff  g<d/7  iff  d/g>7,
+```
+
+which proves `(13j)`.  Therefore the two-element nonfaces of `K_d^tr` are
+**exactly** the edges of THM-2979's short-order Cayley graph:
+
+```text
+{two-element nonfaces of K_d^tr}=E(G(d,7)).              (13k)
+```
+
+This also gives the first affine flag failure without enumeration.  For
+`2<=d<=7`, `kappa=1`, so `K_d^tr` is discrete and flag.  For `d=8`, its
+two-point facets have unit difference; every such difference is odd, so the
+one-skeleton is bipartite by parity and has no triangle.  At `d=9`, however,
+`kappa=2` and every pair in `{0,1,2}` has unit difference.  The triple is a
+three-clique but cannot be a face of a complex whose facets have size two.
+Thus
+
+```text
+K_d^tr is flag for 2<=d<=8, while K_9^tr is not flag.    (13l)
+```
+
 ## 5. Gcd-stratum refinement and the exact obstruction
 
 The total count in `(12)` is not the end of the finite reduction.  Let
@@ -501,10 +542,11 @@ The conclusion is translation-robust.  If both
 difference would again have circular distance strictly below `1/7`; the
 common `theta` cancels, contradicting `(21)` after division by `d`.  Hence
 every facet `u^{-1}C_a` of `K_d^tr` is an independent set in THM-2979's
-short-order Cayley graph `G(d,7)`, or equivalently
+short-order Cayley graph `G(d,7)`.  The unit-lifting converse in `(13j)`
+shows that this is exact, not merely a necessary condition:
 
 ```text
-E(G(d,7)) subset {two-element nonfaces of K_d^tr}.       (21a)
+E(G(d,7))={two-element nonfaces of K_d^tr}.              (21a)
 ```
 
 This is the precise affine survival mechanism behind the difference strata
