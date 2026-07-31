@@ -73,10 +73,22 @@ EDGE11 = (
     / "04-computation"
     / "lrc14_j7_reflected_robust_edge11_threshold_shapes_uniform_closure_thm2941.py"
 )
+EDGE11_OUTPUT = (
+    ROOT
+    / "05-knowledge"
+    / "results"
+    / "lrc14_j7_reflected_robust_edge11_threshold_shapes_uniform_closure_thm2941.out"
+)
 EDGE12 = (
     ROOT
     / "04-computation"
     / "lrc14_j7_reflected_robust_edge12_threshold_shapes_uniform_closure_thm2941.py"
+)
+EDGE12_OUTPUT = (
+    ROOT
+    / "05-knowledge"
+    / "results"
+    / "lrc14_j7_reflected_robust_edge12_threshold_shapes_uniform_closure_thm2941.out"
 )
 OUTPUT = (
     ROOT
@@ -85,11 +97,13 @@ OUTPUT = (
     / "lrc14_j7_reflected_robust_edge10_threshold_block_uniform_closure_thm2941.out"
 )
 EXPECTED_BASE_SHA256 = "2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31"
-EXPECTED_LOW_PHASE_SHA256 = "b2418dfda1b48257d1f7582d4ea977203a26f88885e13946bc100ccf264c9ce1"
-EXPECTED_EXCEPTIONAL_SHA256 = "15c13d721ee695c2a69bc386d5c12eba0382b52f9eabfe052f2fe5fda03c7bc4"
-EXPECTED_UNIVERSAL_SHA256 = "dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3eae07f0f857689"
-EXPECTED_EDGE11_SHA256 = "58685796af62dfb425bfa17a6363d9cc5ca4cbb72e0f1d42ecc23dcbf10c01b4"
-EXPECTED_EDGE12_SHA256 = "76110afdfb1e607fd63df1909a05259d9252da1855b4ae2a9fc6da5d936fbaa3"
+EXPECTED_LOW_PHASE_SHA256 = "416c36f16f7c821feb8d260882711d2717069147b8604a93ba60432785cf1d1c"
+EXPECTED_EXCEPTIONAL_SHA256 = "bde992db1edbd9dd744ff22744a1afef79cf4bcc54a2f918793c2603f062df7c"
+EXPECTED_UNIVERSAL_SHA256 = "a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8"
+EXPECTED_EDGE11_SHA256 = "d5ddf85650d2786da10107919c07f7f578e9c234609965491ef856b8f90b3085"
+EXPECTED_EDGE11_OUTPUT_SHA256 = "8c3f9e6c14eca3f0276fba9cb8aa5babbcee3618f4277f77f99302cab9034b32"
+EXPECTED_EDGE12_SHA256 = "a47791c4cbb211e401b080f7b56380bae5c52b1ce865d596be594210cdb6eee6"
+EXPECTED_EDGE12_OUTPUT_SHA256 = "e7dc1bba56ae281685e76b8b855fb6b702f1116c9797246b959249d85c63d576"
 EXPECTED_SEMANTIC_SHA256 = "d7b87d6121721aae103209b935c5469655f1984e468c07b946285d76689c997e"
 
 BODY_COUNT = 3003
@@ -158,7 +172,7 @@ def require(condition: bool, message: object) -> None:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def qtext(value: F) -> str:
@@ -171,7 +185,9 @@ for path, expected in (
     (EXCEPTIONAL, EXPECTED_EXCEPTIONAL_SHA256),
     (UNIVERSAL, EXPECTED_UNIVERSAL_SHA256),
     (EDGE11, EXPECTED_EDGE11_SHA256),
+    (EDGE11_OUTPUT, EXPECTED_EDGE11_OUTPUT_SHA256),
     (EDGE12, EXPECTED_EDGE12_SHA256),
+    (EDGE12_OUTPUT, EXPECTED_EDGE12_OUTPUT_SHA256),
 ):
     require(sha256(path) == expected, ("upstream theorem changed", path, sha256(path), expected))
 
@@ -529,7 +545,9 @@ def main() -> None:
         f"exceptional_sha256={sha256(EXCEPTIONAL)}",
         f"universal_sha256={sha256(UNIVERSAL)}",
         f"edge11_sha256={sha256(EDGE11)}",
+        f"edge11_output_sha256={sha256(EDGE11_OUTPUT)}",
         f"edge12_sha256={sha256(EDGE12)}",
+        f"edge12_output_sha256={sha256(EDGE12_OUTPUT)}",
         f"body_digest={body_digest.hexdigest()}",
         f"assignment_digest={assignment_digest.hexdigest()}",
         f"source_sha256={source_sha}",
