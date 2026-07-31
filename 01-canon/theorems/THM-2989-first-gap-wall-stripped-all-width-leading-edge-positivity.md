@@ -15,8 +15,8 @@ depends_on:
   - THM-2969-first-gap-wall-stripped-resultant-norm-core-atlas
   - THM-2973-first-gap-wall-stripped-norm-core-continuation-through-thirty-one
   - THM-2978-first-gap-wall-stripped-norm-core-at-thirty-two
-related:
   - THM-2982-first-gap-wall-stripped-norm-core-strict-ulc-through-thirty-four
+related:
   - THM-2986-first-gap-transfer-one-checkerboard-sign
   - THM-2988-first-gap-self-curvature-negativity
 script: 04-computation/gmc_first_gap_wall_stripped_all_width_leading_edge_positivity_thm2989.py
@@ -31,11 +31,10 @@ hash_basis: LF-normalized bytes
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This theorem proves the leading strict-ULC circuit for the explicitly encoded
-continuation wall invoice.  For actual norm cores it is unconditional only on
-the already proved range M=6..32.  Width 33 uses the separate THM-2982 finite
-candidate, and every actual width M>=34 requires the continuation hypotheses
-stated below.  There is no full-ULC, interior no-return, arbitrary-radial, or
-GMC(2) conclusion.
+continuation wall invoice.  For actual norm cores it is unconditional on the
+proved range M=6..34 by THM-2982; every actual width M>=35 requires the
+continuation hypotheses stated below.  There is no full-ULC, interior
+no-return, arbitrary-radial, or GMC(2) conclusion.
 
 ## 1. The leading circuit
 
@@ -94,11 +93,10 @@ the package itself for arbitrary M.
 For every M>=34 satisfying the encoded continuation wall invoice,
 the leading circuit (3) of N_M is strictly positive.
 
-On actual proved cores, (3) is unconditionally positive for M=6..32 by
-THM-2969, THM-2973, and THM-2978.  The separate THM-2982 candidate supplies
-the exact actual-core checks at M=33,34.  Consequently, conditional on
-promotion of that finite candidate and on (4)--(6) for every M>=35, the
-leading circuit is positive for every first-gap width M>=6.
+On actual proved cores, (3) is unconditionally positive for M=6..34 by
+THM-2982 and its finite-atlas dependencies.  Consequently, conditional only
+on (4)--(6) for every M>=35, the leading circuit is positive for every
+first-gap width M>=6.
 
 No assertion is made about the other d-2 ULC circuits.
 
@@ -270,5 +268,3 @@ normalization, and the exact width-34 equality control.  Normal, optimized,
 and stored transcripts match byte-for-byte.  No defect was found.
 
 **QED.**
-
-
