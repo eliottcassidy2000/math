@@ -11,7 +11,7 @@ distinct levels ``p,q`` on labels ``a<b``, a body-safe-cell pair floor
     c^-1 (F_PQ,min-2|eta|),
     c=1-a/(pL),              eta=(qa-pb)/(pL-a).          (1)
 
-This file proves that every such packet closes whenever ``m>=30D``.  The
+This file proves that every such packet closes whenever ``m>=11D``.  The
 point is that the estimate is conical: it depends on the ratio ``D/m``, not
 on fixing ``D`` first.
 
@@ -41,29 +41,38 @@ and subtracting the limiting transport term exactly gives
       =2b[LD+(b-a)]/[L(mL-b)]
       <=28(D+13/168)/(168m-14).                        (4)
 
-The singleton debt is at most ``1/(39m)``.  Indeed ``m`` times each debt
-term decreases with ``m``; the exact ``m=1`` all-body maximum is
+The singleton debt decreases with ``m``.  Its exact ``m=1`` all-body maximum
+is
 
     1915198706/76797355635 < 1/39
 
-on the same hostile body.  Finally, for ``m>=30D`` and ``D>=1``,
+on the same hostile body.  Now fix ``C=11``.  For ``m>=CD`` the phase error
+is at most ``1/(2C^2)``.  At ``m=CD`` the transport bound is
 
-    D^2/[2m(m+1)]                    <= 1/1800,
-    28(D+13/168)/(168m-14)           <= 181/30156,
-    1/(39m)                          <= 1/1170.
+    2D[C(b-a)+b]/[CDL-b],
 
-Combining (1)--(4) with ``1/49-1/84=5/588`` leaves the explicit strict
-margin
+which decreases with ``D``; the debt is largest at ``m=C``.  Consequently
+the all-``D`` margin is bounded below by the finite body expression
 
-    5/588-1/1800-181/30156-1/1170
-      =149699/137209800 > 0.                            (5)
+    M_C(E)=1/49-1/(2C^2)
+           -2[C(b-a)+b]/[CL-b]
+           -sum_e e/[7(CL-e)].                         (5)
+
+An exact audit of all 3,003 bodies gives the unique minimum
+
+    M_11(1,2,3,4,6,12)
+      =1623460480282577/89735571946692461790 > 0.       (6)
+
+The analogous separated-envelope margin at ``C=10`` is negative on this
+body.  Thus eleven is sharp for this proof invoice (not claimed sharp for the
+underlying reflected problem).
 
 The homotopy used in (1) is safely inside its slope range: the same bounds
-give ``|eta|<1``, while both integer slopes are at least ``m>=30``.
+give ``|eta|<1``, while both integer slopes are at least ``m>=11``.
 
-Hence every reflected residual packet with ``m>=30D`` closes, for every
+Hence every reflected residual packet with ``m>=11D`` closes, for every
 ``D>=1`` and every body.  In particular all still-open spreads ``D>=6`` are
-reduced to the wedge ``m<30D``.  This is a sufficient theorem inside the
+reduced to the wedge ``m<11D``.  This is a sufficient theorem inside the
 THM-2941 reflected family, not a proof of physical LRC(14).
 """
 
@@ -92,7 +101,7 @@ EXPECTED_UNIVERSAL_SHA256 = "dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3e
 EXPECTED_UNIVERSAL_OUTPUT_SHA256 = "3231959168d80a48ae87ca5f13d02bfd0ce76e58721a5165e2ce4eccf404fcaf"
 EXPECTED_D5_SHA256 = "d3da8fa8dcb23be7c8766b9fb942dfdf26f9b61055e21314fddcc0107d2b9678"
 EXPECTED_D5_OUTPUT_SHA256 = "49d33153da0eec25cc8b127b0b61f565594b457ed53725103e8a08ecf224fae2"
-EXPECTED_SEMANTIC_SHA256 = "c5415b6bfe80e3a4b6da22cd19011c8e6719043499336acb58a46812d2ccfdc1"
+EXPECTED_SEMANTIC_SHA256 = "0aa608ddf669abfa4674d37d8859ca6a3096dec74e737ed9c610d18ad8b43366"
 
 BODY_COUNT = 3003
 COMPLETE_BODY_COUNT = 3001
@@ -102,11 +111,9 @@ EXCEPTIONS = (
     ((2, 4, 7, 9, 11, 13), ((2, 4), (3, 5))),
 )
 
-BASELINE = F(5, 588)
-PHASE_ERROR = F(1, 1800)
-TRANSPORT_ERROR = F(181, 30156)
-DEBT_ERROR = F(1, 1170)
-FINAL_MARGIN = F(149699, 137209800)
+CONE_CONSTANT = 11
+EXPECTED_WORST_CONE_MARGIN = F(1623460480282577, 89735571946692461790)
+EXPECTED_C10_HOSTILE_MARGIN = -F(161287014730148569, 125395966466160553800)
 EXPECTED_DEBT_MAXIMUM = F(1915198706, 76797355635)
 EXPECTED_DEBT_GAP = F(53964259, 76797355635)
 DIRECT_CASES = (5, 13)
@@ -183,7 +190,7 @@ def chosen_pair(body: tuple[int, ...], ruler: int) -> tuple[F, int, int]:
 def direct_control(D: int):
     body = HOSTILE
     ruler, safe_ranges = R.safe_cell_ranges(body)
-    m = 30 * D
+    m = CONE_CONSTANT * D
     levels = (m + D, m, m + 1, m + 2, m + 3, m + 4)
     a, b = body[0], body[1]
     p, q = levels[0], levels[1]
@@ -205,8 +212,11 @@ def direct_control(D: int):
         for left, right in safe_ranges
         for cell in range(left, right)
     )
-    require(P == 30 and Q == 31, (D, P, Q))
-    require(transported - debt > FINAL_MARGIN, (D, transported, debt, FINAL_MARGIN))
+    require(P == CONE_CONSTANT and Q == CONE_CONSTANT + 1, (D, P, Q))
+    require(
+        transported - debt > EXPECTED_WORST_CONE_MARGIN,
+        (D, transported, debt, EXPECTED_WORST_CONE_MARGIN),
+    )
     require(actual[0] >= transported > debt, (D, actual, transported, debt))
     return D, m, levels, phase_floor, c, eta, transported, debt, actual
 
@@ -223,6 +233,7 @@ def main() -> None:
     pair_histogram: Counter[F] = Counter()
     body_digest = hashlib.sha256()
     debt_rows = []
+    cone_rows = []
     for body in combinations(range(1, 15), 6):
         ruler = 14 * lcm(*body)
         ratio, i, j = chosen_pair(body, ruler)
@@ -233,6 +244,18 @@ def main() -> None:
         row = (ratio, body, ruler, (i, j), debt)
         body_rows.append(row)
         debt_rows.append((debt, body, ruler))
+        delta = body[j] - body[i]
+        cone_debt = singleton_debt(body, ruler, (CONE_CONSTANT,) * 6)
+        cone_margin = (
+            F(1, 49)
+            - F(1, 2 * CONE_CONSTANT * CONE_CONSTANT)
+            - F(
+                2 * (CONE_CONSTANT * delta + body[j]),
+                CONE_CONSTANT * ruler - body[j],
+            )
+            - cone_debt
+        )
+        cone_rows.append((cone_margin, body, ruler, (i, j), cone_debt))
         pair_histogram[ratio] += 1
         body_digest.update(f"{row}\n".encode())
 
@@ -250,13 +273,34 @@ def main() -> None:
     )
     require(F(1, 39) - EXPECTED_DEBT_MAXIMUM == EXPECTED_DEBT_GAP > 0, EXPECTED_DEBT_GAP)
 
-    # Exact arithmetic behind the universal m>=30D cone.
-    require(F(1, 49) - F(1, 84) == BASELINE, BASELINE)
-    require(F(28 * 181, 168 * 5026) == TRANSPORT_ERROR, TRANSPORT_ERROR)
-    require(F(13) + F(14, 30) < F(168) - F(14, 30), "homotopy slope gate")
+    # Exact finite invoice behind the universal m>=11D cone.
+    worst_cone = min(cone_rows)
     require(
-        BASELINE - PHASE_ERROR - TRANSPORT_ERROR - DEBT_ERROR == FINAL_MARGIN > 0,
-        FINAL_MARGIN,
+        worst_cone
+        == (
+            EXPECTED_WORST_CONE_MARGIN,
+            HOSTILE,
+            168,
+            (0, 1),
+            F(115127095011542, 52972592648578785),
+        ),
+        worst_cone,
+    )
+    c10_debt = singleton_debt(HOSTILE, 168, (10,) * 6)
+    c10_margin = (
+        F(1, 49)
+        - F(1, 200)
+        - F(2 * (10 + 2), 10 * 168 - 2)
+        - c10_debt
+    )
+    require(
+        c10_margin == EXPECTED_C10_HOSTILE_MARGIN < 0,
+        (c10_margin, EXPECTED_C10_HOSTILE_MARGIN),
+    )
+    require(
+        F(13) + F(14, CONE_CONSTANT)
+        < F(168) - F(14, CONE_CONSTANT),
+        "homotopy slope gate",
     )
 
     controls = tuple(direct_control(D) for D in DIRECT_CASES)
@@ -266,11 +310,8 @@ def main() -> None:
         worst_debt_rows,
         tuple(sorted(pair_histogram.items())),
         body_digest.hexdigest(),
-        BASELINE,
-        PHASE_ERROR,
-        TRANSPORT_ERROR,
-        DEBT_ERROR,
-        FINAL_MARGIN,
+        worst_cone,
+        c10_margin,
         controls,
     )
     semantic = hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
@@ -280,14 +321,14 @@ def main() -> None:
     lines = [
         "LRC14 reflected all-spread conical tail closure exact proof",
         f"universe=bodies:{len(body_rows)};complete_same_level_graph:{COMPLETE_BODY_COUNT};exceptions:{EXCEPTIONS}",
-        "cone=every spread D>=1 closes whenever minimum level m>=30D",
+        f"cone=every spread D>=1 closes whenever minimum level m>={CONE_CONSTANT}D",
         "pair_selection=complete bodies use minimum 2(b-a)/L;exceptions use same-level-good slots (0,1)",
         f"sharp_pair_ratio=max_E min_pair 2(b-a)/L={qtext(worst_pair_rows[0][0])};unique_body={HOSTILE};L=168",
         f"singleton_debt=m^-1 monotone envelope;maximum_at_m1={qtext(EXPECTED_DEBT_MAXIMUM)};gap_below_1/39={qtext(EXPECTED_DEBT_GAP)}",
-        "phase_error=D^2/[2m(m+1)]<=1/1800;gcd(p,q)<=D",
-        "transport_excess<=28(D+13/168)/(168m-14)<=181/30156",
-        "homotopy_slope_gate=|eta|<1 and integer slopes>=m>=30",
-        f"uniform_margin=5/588-1/1800-181/30156-1/1170={qtext(FINAL_MARGIN)}>0",
+        f"finite_cone_invoice=M_C(E)=1/49-1/(2C^2)-2[C(b-a)+b]/[CL-b]-debt_E(C);C={CONE_CONSTANT}",
+        f"unique_worst_cone_margin={qtext(worst_cone[0])};body={worst_cone[1]};pair={worst_cone[3]}",
+        f"C10_separated_envelope_hostile_margin={qtext(c10_margin)}<0;C11_is_sharp_for_this_invoice",
+        f"homotopy_slope_gate=|eta|<1 and integer slopes>=m>={CONE_CONSTANT}",
     ]
     for D, m, levels, floor, c, eta, transported, debt, actual in controls:
         lines.append(
@@ -297,8 +338,8 @@ def main() -> None:
             f"minimum_actual_overlap={qtext(actual[0])};cell={actual[1]}"
         )
     lines.extend((
-        "conclusion=all reflected residual packets in the cone m>=30D close on all 3003 bodies",
-        "corollary=every still-open D>=6 sector is confined to m<30D",
+        f"conclusion=all reflected residual packets in the cone m>={CONE_CONSTANT}D close on all 3003 bodies",
+        f"corollary=every still-open D>=6 sector is confined to m<{CONE_CONSTANT}D",
         "scope=reflected THM-2941 sufficient family only;physical LRC14 remains open",
         "normal_vs_python_O=BYTE_IDENTICAL",
         f"base_sha256={sha256(BASE)}",
