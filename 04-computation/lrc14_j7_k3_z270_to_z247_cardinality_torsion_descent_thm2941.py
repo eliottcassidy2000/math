@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""DEVELOPMENT compositor for projected k=3 heights 270 through 247.
+"""Canonical exact compositor for projected k=3 heights 270 through 247.
 
 The final theorem is not canonical until the upstream source/output and this
 file's semantic digest are non-None and normal/-O transcripts agree.  The
@@ -34,7 +34,7 @@ ATLAS_SOURCE_SHA256 = "2af6d96882f336a409a8657070ed76a75c09a53b3789101b83103b051
 ATLAS_SHA256 = "cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda"
 UPSTREAM_SHA256 = "4137ab250def3ad6a66b4c75a5e1b5b1a82ba4100b00ea5f8616faa46fb501a9"
 UPSTREAM_OUTPUT_SHA256 = "eea98955f91371d38d95cdeeb88b60a2305d34d0bddd2ea26570af8eede1b8e3"
-SEMANTIC_SHA256 = None
+SEMANTIC_SHA256 = "827cb7a34c93d94f7ceb9180ca12e1e8792c3f7f45d68dcad6426279bd11f608"
 
 LEVELS = (270, 268, 265, 260, 259, 257, 256, 255, 254, 253, 252, 251, 250, 249, 247)
 ROW_COUNTS = {270:26,268:27,265:3,260:140,259:16,257:4,256:1,255:3,254:1,253:4,252:1,251:3,250:176,249:10,247:8}
@@ -68,6 +68,11 @@ FINAL_LEDGER = 375251
 NEXT_HEIGHT = 246
 NEXT_COUNT = 194
 TOKEN_ABSENT_CONTROL = (250,(1,4,9,10,12,14))
+TERMINAL_BODY_COUNT = 69
+MIN_TWO_HIGH_GAP = Q(1438897,5584915336)
+GLOBAL_LEAST_HISTOGRAM = ((2,6335),(3,620),(4,271),(5,155),(6,168),(7,4))
+GLOBAL_R_HISTOGRAM = ((2,177),(3,93),(4,358),(5,933),(6,1065),(7,4927))
+MIN_OPTIMAL_SLACK = 1
 
 
 def require(condition, message):
@@ -340,6 +345,7 @@ def render(records,terminal_records,atlas_counts,pins):
     require(level_totals==LEVEL_TOTALS,level_totals)
     grouped=defaultdict(list)
     for row in terminal_records: grouped[row[0]].append(row)
+    require(len(terminal_records)==TERMINAL_BODY_COUNT,len(terminal_records))
     require(set(grouped)==set(TERMINAL),tuple(sorted(grouped)))
     summaries={}; global_least=Counter(); global_effective=Counter(); global_R=Counter()
     aggregate=[0,0,0,0]
@@ -357,6 +363,10 @@ def render(records,terminal_records,atlas_counts,pins):
         aggregate=[a+b for a,b in zip(aggregate,values)]
     require(tuple(aggregate)==TERMINAL_TOTALS,aggregate)
     require(global_least==global_effective and sum(global_least.values())==TERMINAL_TOTALS[1],global_least)
+    require(tuple(sorted(global_least.items()))==GLOBAL_LEAST_HISTOGRAM,global_least)
+    require(tuple(sorted(global_R.items()))==GLOBAL_R_HISTOGRAM,global_R)
+    require(min(row[6] for row in terminal_records)==MIN_TWO_HIGH_GAP,"two-high minimum")
+    require(min(row[16] for row in terminal_records)==MIN_OPTIMAL_SLACK,"cardinality slack")
     require(INHERITED_LEDGER-len(records)==FINAL_LEDGER,"ledger")
     control_record=next(row for row in records if (row[0],row[1])==TOKEN_ABSENT_CONTROL)
     require(control_record[5] and control_record[12]>0,
@@ -381,9 +391,9 @@ def render(records,terminal_records,atlas_counts,pins):
         "logical_split=every residual row here has first<high_floor,so THM-2941(25f) supplies an explicit later-high slot;when first>=high_floor strict ordering instead makes all actual later labels high;the atlas's printed HIGH-TAIL token is not used;duplicate-permitting >=2-high upper has strict positive exact gap on every residual body;therefore exactly one high in this residual universe",
         f"token_absent_hostile_control=z1:{TOKEN_ABSENT_CONTROL[0]};E:{TOKEN_ABSENT_CONTROL[1]};first:{control_record[0]};high_floor:{control_record[3]};first_below_high_floor:{control_record[5]};printed_HIGH-TAIL:false;printed_exact_high:1810;residual_states:{control_record[12]};two_high_gap:{ft(control_terminal[6])};first_failed_implication=absence of the literal tail token does not negate the projected maximum wall",
         "repaired_gate=THM-2941(25f) gives max(Z)>13L/132;integer labels and first<floor(13L/132)+1 force some later label>=high_floor;the representative may be an exact high label or HIGH-TAIL",
-        f"terminal_reduction=zero_high_hostile_passes:{aggregate[0]};one_high_cases:{aggregate[1]};body_distinct_low_pairs:{aggregate[2]};unit_ray_checks:{aggregate[3]}",
+        f"terminal_reduction=residual_bodies:{TERMINAL_BODY_COUNT};zero_high_hostile_passes:{aggregate[0]};one_high_cases:{aggregate[1]};body_distinct_low_pairs:{aggregate[2]};unit_ray_checks:{aggregate[3]};minimum_two_high_gap:{ft(MIN_TWO_HIGH_GAP)}",
         "cayley_alpha=G_d edges have nonzero difference-order<=7;R=max({r:r|d,2<=r<=7} union {1});cosets mod d/R are R-cliques and [0,d/R) is independent;therefore alpha(G_d)=d/R",
-        "cardinality_boundary=every fixed-safe residue set has |S|>d/R;this forces torsion order<=7;the independent equality set proves strictness is optimal for cardinality-only arguments",
+        f"cardinality_boundary=every fixed-safe residue set has |S|>d/R;minimum_slack:{MIN_OPTIMAL_SLACK};this forces torsion order<=7;the independent equality set proves strictness is optimal for cardinality-only arguments",
         f"least_cardinality_forced_r_histogram={dict(sorted(global_least.items()))};optimal_R_histogram={dict(sorted(global_R.items()))}",
         "witness_policy=choose the least r forced by cardinality,then the first collision encountered while scanning sorted residues modulo d/r;the effective-order histogram belongs to this frozen policy and is not intrinsic",
         f"alternate_valid_pair_control=z1:{pair_control[0]};E:{pair_control[1]};low_labels:{pair_control[2]};d:{pair_control[3]};residues:{pair_control[4]};least_r:{pair_control[5]};canonical_cells:{pair_control[6]};canonical_residues:{pair_control[7]};canonical_shift:{pair_control[8]};canonical_effective:{pair_control[9]};alternate_bucket:{pair_control[10]};alternate_cells:{pair_control[11]};alternate_residues:{pair_control[12]};alternate_shift:{pair_control[13]};alternate_effective:{pair_control[14]};both_valid:true",
