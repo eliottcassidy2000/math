@@ -8,6 +8,7 @@ depends_on:
   - THM-3004-circuit-sign-change-cluster-law-and-classifier-refutation
 related:
   - THM-438-paley-cluster-integrals-are-catalan
+  - 04-computation/three_strand_sequence.py (kind-pasteur-2026-03-14-S87)
   - THM-224-golden-exceptional-points
   - THM-3003-antipodal-circuit-rigidity-and-the-multipole-spread-criterion
 script: 04-computation/gmc_ballot_column_newton_ratios_and_metallic_alternation_thm3010.py
@@ -70,6 +71,34 @@ the crossing at
 
 bracketed exactly between `k=3` and `k=4` in the computed pattern `>><<<<<`.
 No golden discriminant occurs anywhere in the family.
+
+
+## 2a. Connection to the repo's three-strand sequence (kind-pasteur-2026-03-14-S87)
+
+`04-computation/three_strand_sequence.py` already identified the sequence
+
+    1, 1, 2, 3, 4, 6, 10, 15, 20, 35, 56, 70, 126, 210, 252, 462, 792, 924, ...
+
+as the interleaving of three Pascal strands
+`A: binom(2n+1,n)`, `B: binom(2n+2,n)`, `C: binom(2n,n)`.  Equivalently -- and
+this is the compact description -- it is the **central band of Pascal's triangle
+of width two**, i.e. the row-distinct values of `binom(n,k)` with `|n-2k|<=2`.
+Checked exactly: rows `n=1..9` give precisely its first `13` terms.
+
+Section 1 now gives every strand a Newton-circuit meaning, and the answer is a
+clean trichotomy:
+
+| strand | `h_k` | `1-R_k` | behaviour |
+|---|---|---|---|
+| A | `binom(2k+1,k)` | `1/D` | log-convex throughout, no change of sense |
+| C | `binom(2k,k)` | `1/(k(2k+1))` | log-convex throughout, no change of sense |
+| B | `binom(2k,k-1) = 1,4,15,56,210` | `(k^2-3k-1)/D` | **flips at the bronze ratio** |
+
+So of the three strands, two have constant discriminant `Q=1` and never change
+sense, while the third -- and only the third -- carries a metallic discriminant
+and changes from log-concave to log-convex at `(3+sqrt13)/2`.  That is the
+Newton-circuit content of kind-pasteur's decomposition, and it identifies strand
+`B` as the distinguished one.
 
 ## 3. Metallic recurrences attain the MAXIMAL circuit alternation
 
