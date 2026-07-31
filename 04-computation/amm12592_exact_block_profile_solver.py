@@ -152,6 +152,34 @@ def solve(m, a, policy="proportional", p0_choices=(1, 0)):
                 assign, left = [], R
                 for _, b in boxes:
                     take = min(b, left); assign.append(take); left -= take
+            elif policy.startswith("alt"):
+                # The extracted optima sit at BOX EXTREMES with alternating
+                # signs (P_k ~ +-(-1)^y, the alternating atom), not near the
+                # box centre.  Aim each fresh variable at +-its box with the
+                # sign alternating in the level index, then correct to hit R.
+                sgn = 1 if policy.endswith("+") else -1
+                pref = []
+                for idx, (kv, b) in enumerate(boxes):
+                    s_i = sgn * (1 if (t + kv[0]) % 2 == 0 else -1)
+                    pref.append(b if s_i > 0 else 0)
+                need = R - sum(pref)
+                assign = pref[:]
+                j = 0
+                while need != 0 and j < 4 * len(boxes) + 4:
+                    for idx in range(len(boxes)):
+                        b = boxes[idx][1]
+                        if need > 0 and assign[idx] < b:
+                            step = min(b - assign[idx], need)
+                            assign[idx] += step; need -= step
+                        elif need < 0 and assign[idx] > 0:
+                            step = min(assign[idx], -need)
+                            assign[idx] -= step; need += step
+                        if need == 0:
+                            break
+                    j += 1
+                if need != 0:
+                    ok = False
+                    break
             elif policy == "greedy-last":
                 assign, left = [0] * len(boxes), R
                 for idx in range(len(boxes) - 1, -1, -1):
@@ -233,7 +261,7 @@ def profile(m, C):
     return a
 
 
-def rho_bounds(m, policies=("proportional", "greedy-last", "greedy-first")):
+def rho_bounds(m, policies=("alt+", "alt-", "proportional", "greedy-last", "greedy-first")):
     cands = sorted({Fraction(m + k + 1 + aa, m + k)
                     for k in range(m) for aa in range(m - k)})
 
