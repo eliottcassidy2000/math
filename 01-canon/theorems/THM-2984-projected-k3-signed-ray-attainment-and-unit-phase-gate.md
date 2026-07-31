@@ -139,6 +139,18 @@ sidecars that the coarser quotient destroys:
 primitive direction u,          zero attained versus zero only approached.
 ```
 
+Strictness already appears at `d=8`.  Take a fixed-safe residue set
+`S={1}`.  It contains no pair, hence no pair-difference torsion certificate
+of any order.  But every primitive unit is one of `1,3,5,7`, and
+
+```text
+min(u,8-u)>=1,             so 14 min(u,8-u)>=14>8.
+```
+
+Thus the absolute-cell test `(8)` closes all primitive directions.  The
+ray-resolved gate can therefore certify a case that every pair-only gate
+necessarily leaves undecided.
+
 The three boundary controls are:
 
 ```text
