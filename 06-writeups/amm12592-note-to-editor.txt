@@ -227,8 +227,9 @@ causality of every early stop.
 6. THE LINEAR-DEADLINE QUESTION (Cn + D)
 
 The accompanying commentary asks for the least C such that, for some constant
-D, a method always terminates within Cn + D flips.  Four remarks, in
-increasing order of openness.
+D, a method always terminates within Cn + D flips.  Five remarks, in
+increasing order of openness.  The one we would most like to report is
+remark (4): slope 2 is NOT optimal.
 
 (1) TAKEN LITERALLY, THE PAIR (C,D) IS PINNED AT n = 1 AND CANNOT SEE ANY OF
 THESE IMPROVEMENTS.  By the Floor Lemma, T(1) >= 2 forces C + D >= 2; so once
@@ -267,10 +268,10 @@ floor n+1 at EVERY ODD n, and stays within (4/3)n unless n is a power of two
 -- but pays 2n at n = 2^k.  The method of the Theorem has the complementary
 profile: fast AT the powers of two ((3/2)n) and at the top of each shell (the
 floor n+1), slowest just above a power of two, where every even n is costly.
-The two are Pareto-incomparable, and
-every method we know of pays slope close to 2 somewhere near the powers of
-two.  The difficulty concentrates 2-adically; a single linear envelope is a
-hull over a self-similar staircase.
+The two are Pareto-incomparable.  Both, and every classical construction, pay
+slope close to 2 somewhere near the powers of two -- though remark (4) below
+shows that this is avoidable.  The difficulty concentrates 2-adically; a
+single linear envelope is a hull over a self-similar staircase.
 
     n                 1  2  3  4  5  6  7   8   9  10  11  12  13  14  15
     floor n+1         2  3  4  5  6  7  8   9  10  11  12  13  14  15  16
@@ -285,24 +286,70 @@ The optimum T(n) = n+1 is settled at every odd n and at n = 2^{r+1} - 2.  The
 first undetermined value is T(4), which is 5 or 6, with 6 optimal among
 shell-balanced methods.)
 
-(3) WHY EVERY KNOWN METHOD HAS SLOPE 2.  Suppose a method decides every
-sequence with n in a block [N, N+l) by flip N+l, with l = 2^a.  On the branch
-X_1 = 0 the terminal words are 0^N followed by a nonzero tail of length l;
-l being a power of two, Lucas's theorem makes every interior tail-weight
-class C(l, j) (0 < j < l) even, so all of those can be split evenly.  The one
-class that cannot is the corner 0^N 1^l, alone in its class, which forces a
-deficit of (1/2) p^N q^l; the branch X_1 = 1 forces the mirror deficit
-(1/2) p^l q^N.  When l = N -- ratio exactly two, i.e. slope 2 -- these two
-deficits sit on the SAME monomial p^N q^N and cancel: that is precisely the
-middle pair 0^m 1^m, 1^m 0^m in all the solutions above.  At any ratio below
-two the two corners are distinct monomials, and their half-unit deficits must
-be transported to other cells of the tree and repaid there within integer
-budgets.  Whether that can be arranged uniformly in n is exactly the content
-of the question.
+(3) THE DYADIC STRUCTURE IS FORCED.  Call [N, N+l) a BLOCK if a method
+decides every critical value in it by flip N+l, and BALANCED if every
+composition class of its terminal set
 
-(4) THE FRONTIER.  The Floor Lemma gives C* >= 1 and part (a) gives C* <= 2.
-We do not know whether any method beats slope 2, nor even whether C = 1 (that
-is, T(n) <= n + D) is impossible, though we expect it is.  The question has a
+    {0^N y : y != 0^l}   union   {1^N y : y != 1^l}
+
+has even size -- the hypothesis that makes the Exactness Lemma apply block by
+block, and which every method above satisfies.  Counting by weight, the class
+sizes are the coefficients of (1+u^N)(1+u)^l - 1 - u^(N+l), so the block is
+balanced iff
+
+    (1 + u^N)(1 + u)^l  =  1 + u^(N+l)      over F_2,
+
+and THAT HOLDS IF AND ONLY IF N AND N+l ARE BOTH POWERS OF TWO.  Sufficiency
+is (1+u)^(2^g) = 1 + u^(2^g).  For necessity: comparing coefficients in
+degrees 1..N forces C(l,k) even for k < N and C(l,N) odd, so
+N = min{k >= 1 : C(l,k) odd} = 2^{v_2(l)} by Lucas; then 1+u^N = (1+u)^N and
+the criterion becomes (1+u)^(N+l) = 1 + u^(N+l).  So every balanced block is
+a dyadic interval [2^a, 2^g): the shells of parts (a)-(c) are not a design
+choice but the only option.  In particular l >= N, so no balanced block has
+ratio (N+l)/N below two.
+
+(4) NEVERTHELESS, SLOPE 2 IS NOT OPTIMAL.  Block ratio and deadline slope are
+different quantities, and the second is much smaller.  Fix the shell [m, 2m)
+and let a rule decide n = m+k by flip T(m+k) = m+k+1+a_k.  On the branch
+X_1 = 0 the relative tail is z = 0^k 1 w, and the rule reads exactly a_k
+coordinates of w, so its heads set on that stratum is S_k x {0,1}^(L_k) with
+L_k = m-1-k-a_k.  Writing p_{k,i} = #{y in S_k : |y| = i}, balance of the
+shell says precisely
+
+    sum_k sum_i p_{k,i} C(L_k, j-1-i) = C(m,j)/2,     1 <= j <= m-1,   (*)
+
+to be solved in integers with 0 <= p_{k,i} <= C(a_k,i); every solution is
+realized by a rule, and conversely.  Equivalently
+u sum_k P_k(u)(1+u)^(L_k) = [(1+u)^m - 1]/2 + c u^m.  Note that
+p_{k,i} = C(a_k,i)/2 solves this identically, so the ONLY obstruction is that
+C(a_k,i) is odd for i a binary submask of a_k -- the corner deficits again,
+now confined to a single shell.
+
+Feasibility of (*) is monotone increasing in each a_k, so the least
+achievable within-shell ratio rho(m) = min over rules of max_k T(m+k)/(m+k)
+is computable.  We find
+
+    rho(4) = 3/2,   rho(8) = 14/9,   rho(16) = 25/16,   rho(32) <= 11/7,
+
+with explicit rules; on [16,32) the deadlines are 25,26,28,29,31,32,...,32,
+and on [8,16) they are 12,14,15,16,...,16.  Since balanced blocks stitch,
+this gives an exactly fair method with
+
+    T(n) <= (11/7) n        for 4 <= n < 64,
+
+against 2n-2 for the Theorem in section 2.  So the slope-2 envelope of the
+classical constructions is an artifact of never optimizing the within-shell
+profile, not a barrier.  (Verified: the m=4 row reproduces the exhaustive
+1,036,800-rule enumeration of section 5, the rules for m <= 16 were rebuilt
+and brute-force checked, and the m=32 witness was re-verified in exact
+integer arithmetic.)
+
+(5) THE FRONTIER.  The Floor Lemma gives C* >= 1 and part (a) gives C* <= 2.
+What remark (4) leaves open is uniformity: C* <= sup_r rho(2^r), and our four
+values 1.5000, 1.5556, 1.5625, 1.5714 increase slowly, so we cannot yet
+distinguish a limit near 1.6 from a logarithmic drift back to 2.  We also do
+not know whether C = 1 (that is, T(n) <= n + D) is impossible, though we
+expect it is.  The question has a
 concrete equivalent form.  A method with deadline T never stops before the
 first disagreement, and after the disagreement at 0^n 1 or 1^n 0 its stopping
 words form a complete prefix code of depth at most d_n := T(n) - n - 1.

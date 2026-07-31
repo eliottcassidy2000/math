@@ -21,8 +21,27 @@ output: 05-knowledge/results/amm12592_artanh_certificate_decode_deathstar.out
 
 # HYP-9061 -- the minimal C in the critical-run deadline T(n) <= Cn + D
 
+> **MAJOR UPDATE 2026-07-31 (opus, THM-3005/3006) — "every known rule has
+> `C=2`" is OBSOLETE.** THM-3005: a composition-balanced block `[N,N+l)`
+> exists iff `N` and `N+l` are both powers of two, so the dyadic shell
+> structure is FORCED and no balanced block has ratio below 2 — this closes
+> section 2b's "ratio `rho<2` shell" route outright. But THM-3006 shows that
+> block ratio and DEADLINE SLOPE are different: solving the within-block
+> normal form gives exactly fair rules with within-shell ratio
+> `rho(4)=3/2`, `rho(8)=14/9`, `rho(16)=25/16`, `rho(32)<=11/7`, hence
+> `T(n) <= (11/7)n` for `4<=n<64`. The slope-2 envelope of every classical
+> construction is an artifact of never optimizing the within-shell profile.
+> The live question is now UNIFORMITY: is `sup_r rho(2^r) < 2`? Data
+> `1.5000, 1.5556, 1.5625, 1.5714` increases slowly. Sections 2c–2e below
+> (the two-bias rate gate, the capacity desert, the lower-bound reading of
+> (27)) were premised on `C*=2`-adjacent behaviour and must be re-read in
+> this light; the `C* >= 9049/6592 ~ 1.3727` lower-bound reading is NOT
+> contradicted by `rho ~ 1.57`, and the two now bracket a plausible answer.
+
 THM-2225 proves the AMM 12592 envelopes `2n` and `max(2,2n-1)`; THM-2160
-section 5 reaches `T(n) <= 2n-2` for `n>=3`. Every known rule has `C=2`.
+section 5 reaches `T(n) <= 2n-2` for `n>=3`, and THM-2996 sharpens that to a
+rule dominating the checksum pointwise. Every *classical* rule has `C=2`
+(superseded for the general question, see the update above).
 THM-2160 explicitly does not assert its shell lower bound for cross-shell
 rules. The frontier question:
 
