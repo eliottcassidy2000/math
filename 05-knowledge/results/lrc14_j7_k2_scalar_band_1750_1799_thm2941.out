@@ -1,5 +1,5 @@
 LRC14 global projected k=2 scalar band 1750..1799
-parent_atlas_source_sha256=108c55c274c90fbea26131c29110d30d29f29c8133db14869e546ed2c13810b8
+parent_atlas_source_sha256=000b89e4e6745bcfece0f78b7fbd386300dd4162ac22d3da3eaa69aef16cd495
 universe=six_body_roots:3003;body_labels:1..14;ordered distinct later nonaligned labels;scalar necessary condition
 first_band=1750..1799;first_candidate_rows=150143;exact_horizon=7000;omitted_slot_bound=6r/[49(H+1)]
 projected_wall=max(15,floor(13L/150)+1);forced-high omitted slot starts max(H+1,projected_wall)
@@ -42,5 +42,5 @@ SURVIVOR;E=2,8,9,10,12,14;h=1993/5880;r=36;L=35280;largest_floor=3058;z1=1790;de
 SURVIVOR;E=4,6,8,10,12,14;h=199/490;r=36;L=11760;largest_floor=1020;z1=1790;delta1=661/920955;suffix=EXACT:1836:862/787185,EXACT:1810:883/931245,EXACT:2172:278/310415,EXACT:2534:521/620830;lower=199/44590;upper=229318861/51008013630;gap=10894067/331552088595
 global_profile_sha256=3bcb4c6e57756834f44ac6a4d0090a66e980ba1b1e24b1d47ecbd6d8764a014d
 survivor_sha256=9b7742f3f306f3cec85436de20754dedb7b35e72cce9d231221440914a6a700c
-semantic_sha256=9978a23d95861bd423bcbd02f0c6e26eaf1032986385431b0def035a364c454d
+semantic_sha256=0b1af1c4808d398529b779388e0b17590d7e4a45a779714763c7bedc462c166a
 all_exact_controls=PASS
