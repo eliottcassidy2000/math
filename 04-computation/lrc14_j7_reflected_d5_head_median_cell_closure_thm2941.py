@@ -38,6 +38,15 @@ The referee also constructs that union and checks its mass directly.  Thus
 the median cell closes all 16,076 residual profiles; no search over cells and
 no two-edge correction are required.
 
+This median is canonical rather than asymmetric.  If ``J_E`` is the set of
+integer cells on which ``||e(j+u)/L||>=1/14`` for every ``e`` and every
+``u in [0,1]``, then ``j -> L-1-j`` is a fixed-point-free involution of
+``J_E``.  The weak endpoint is exact because danger is strict.  Moreover
+``u -> 1-u`` carries every reflected clause on ``j`` to the corresponding
+clause on ``L-1-j``.  Thus the lower and upper medians sum to ``L-1`` and
+have equal singleton, pair, and union masses.  The runtime referee checks
+both the cell involution and every reflected arc identity it uses.
+
 Together with the proved ``m>=16`` tail theorem, this closes the entire
 reflected ``D=5`` sector.  This remains a sufficient certificate inside the
 THM-2941 reflected residual family, not a classification of physical LRC(14)
@@ -63,11 +72,11 @@ K6_MINUS_EDGE = ROOT / "04-computation" / "lrc14_j7_reflected_robust_k6_minus_ed
 K6_MINUS_EDGE_OUTPUT = ROOT / "05-knowledge" / "results" / "lrc14_j7_reflected_robust_k6_minus_edge_uniform_closure_thm2941.out"
 OUTPUT = ROOT / "05-knowledge" / "results" / "lrc14_j7_reflected_d5_head_median_cell_closure_thm2941.out"
 
-EXPECTED_TAIL_SHA256 = "d3da8fa8dcb23be7c8766b9fb942dfdf26f9b61055e21314fddcc0107d2b9678"
-EXPECTED_TAIL_OUTPUT_SHA256 = "49d33153da0eec25cc8b127b0b61f565594b457ed53725103e8a08ecf224fae2"
-EXPECTED_LOW_PHASE_SHA256 = "b2418dfda1b48257d1f7582d4ea977203a26f88885e13946bc100ccf264c9ce1"
-EXPECTED_K6_MINUS_EDGE_SHA256 = "1a18c91803185033bd1faf8005a88ba817cc93edb0ff76a27287427e2299e97a"
-EXPECTED_K6_MINUS_EDGE_OUTPUT_SHA256 = "535f45576ae68792e7bb4a454788650fd5971e9ed6a2087e1a530e37abcf5d7a"
+EXPECTED_TAIL_SHA256 = "1575b9fabec292bccf0bd639b47b3775922a1531e421b8e4441c6909cc2cedb7"
+EXPECTED_TAIL_OUTPUT_SHA256 = "73e8242e68431bd42d3a39b40a8dd0cc6ae8f9e1439e80038a54835bedc3ac55"
+EXPECTED_LOW_PHASE_SHA256 = "416c36f16f7c821feb8d260882711d2717069147b8604a93ba60432785cf1d1c"
+EXPECTED_K6_MINUS_EDGE_SHA256 = "3b5752836263df2f6b694c9dfe737e489c22dc2c267144530dcfac74cc972b29"
+EXPECTED_K6_MINUS_EDGE_OUTPUT_SHA256 = "21245a473a09f9537d82673c5fecc3174910e4050bd25b69cc7f9aae6b29b178"
 EXPECTED_SEMANTIC_SHA256 = "b78766f4e02fd63625531f4d6d276c136a2aeab81d9f5822ce331f83e29903fb"
 
 BODY_COUNT = 3003
@@ -106,7 +115,7 @@ def require(condition: bool, message: object) -> None:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def qtext(value: F) -> str:
@@ -227,7 +236,17 @@ def main() -> None:
             _, ranges = R.safe_cell_ranges(body)
             cells = tuple(j for left, right in ranges for j in range(left, right))
             require(cells, ("empty safe-cell set", body))
+            require(
+                cells == tuple(L - 1 - j for j in reversed(cells)),
+                ("safe-cell involution failed", body, L),
+            )
+            require(len(cells) % 2 == 0, ("safe-cell parity failed", body, len(cells)))
+            lower_median = cells[len(cells) // 2 - 1]
             cell = cells[len(cells) // 2]
+            require(
+                lower_median + cell == L - 1,
+                ("median mates failed", body, L, lower_median, cell),
+            )
             require(R.body_cell_is_safe(L, body, cell), ("median cell unsafe", body, cell))
 
             needed_slots = {(i, word[i]) for word, _, _, _ in residual for i in range(6)}
@@ -237,6 +256,14 @@ def main() -> None:
                 reflected = R.reflected_level_arcs(L, body[i], level, cell)
                 direct = R.direct_multiplier_arcs(L, level * L - body[i], cell)
                 require(reflected == direct, ("arc-law mismatch", body, m, cell, i, d))
+                mate = R.reflected_level_arcs(L, body[i], level, lower_median)
+                reflected_mate = tuple(
+                    sorted((F(1) - right, F(1) - left) for left, right in reflected)
+                )
+                require(
+                    mate == reflected_mate,
+                    ("reflected median-mate arc mismatch", body, m, i, d),
+                )
                 require(
                     R.interval_mass(reflected) == F(1, 7) + singleton_terms[i, d],
                     ("singleton mass mismatch", body, m, cell, i, d),
@@ -329,6 +356,7 @@ def main() -> None:
         "head_crossdet_repair=choose transport orientation with target A=p(qL-b)/(pL-a)>=1;orientation product AA'=pq",
         f"crossdet_selector_certified={selector_certified};residual={pair_certified};residual_counts_by_m={count_vector};residual_groups_by_m={group_vector}",
         "median_cell_rule=sort all body-safe cells and choose cells[len(cells)//2];one cell per residual body-m group",
+        "median_involution=j->L-1-j is fixed-point-free;lower+upper=L-1;all used arcs reflect under u->1-u",
         f"median_pair_certificates={pair_certified};distinct_pair_profiles={profile_checks};arc_law_and_singleton_controls={arc_controls}",
         f"weakest_pair_margin={qtext(weakest_pair[0])};E={weakest_pair[1]};m={weakest_pair[2]};word={weakest_pair[3]};gain={qtext(weakest_pair[4])};debt={qtext(weakest_pair[5])};cell={weakest_pair[6]};pair={weakest_pair[7]};crossdet_gain={qtext(weakest_pair[8])};safe_cells={weakest_pair[9]}",
         f"exact_union_checks={union_checks};weakest_union_slack={qtext(weakest_union_slack[0])};E={weakest_union_slack[1]};m={weakest_union_slack[2]};word={weakest_union_slack[3]};union={qtext(weakest_union_slack[4])};cell={weakest_union_slack[5]}",

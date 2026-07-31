@@ -114,10 +114,10 @@ D5_OUTPUT = ROOT / "05-knowledge/results/lrc14_j7_reflected_d5_crossdet_tail_clo
 OUTPUT = ROOT / "05-knowledge/results/lrc14_j7_reflected_all_spread_conical_tail_closure_thm2941.out"
 
 EXPECTED_BASE_SHA256 = "2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31"
-EXPECTED_UNIVERSAL_SHA256 = "dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3eae07f0f857689"
-EXPECTED_UNIVERSAL_OUTPUT_SHA256 = "3231959168d80a48ae87ca5f13d02bfd0ce76e58721a5165e2ce4eccf404fcaf"
-EXPECTED_D5_SHA256 = "d3da8fa8dcb23be7c8766b9fb942dfdf26f9b61055e21314fddcc0107d2b9678"
-EXPECTED_D5_OUTPUT_SHA256 = "49d33153da0eec25cc8b127b0b61f565594b457ed53725103e8a08ecf224fae2"
+EXPECTED_UNIVERSAL_SHA256 = "a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8"
+EXPECTED_UNIVERSAL_OUTPUT_SHA256 = "7364d5866171405fa90539a9ad76727c0c52f020ac1a104a1ab4f0276aedd115"
+EXPECTED_D5_SHA256 = "1575b9fabec292bccf0bd639b47b3775922a1531e421b8e4441c6909cc2cedb7"
+EXPECTED_D5_OUTPUT_SHA256 = "73e8242e68431bd42d3a39b40a8dd0cc6ae8f9e1439e80038a54835bedc3ac55"
 EXPECTED_SEMANTIC_SHA256 = "21471954712a0f3150304723b1e9f91de15a08c1221797cb0033542e9333a0fc"
 
 BODY_COUNT = 3003
@@ -145,7 +145,7 @@ def require(condition: bool, message: object) -> None:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def qtext(value: F) -> str:

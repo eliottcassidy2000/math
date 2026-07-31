@@ -94,9 +94,9 @@ OUTPUT = (
     / "lrc14_j7_reflected_exceptional_low_channel_uniform_closure_thm2941.out"
 )
 EXPECTED_BASE_SHA256 = "2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31"
-EXPECTED_LOW_PHASE_SHA256 = "b2418dfda1b48257d1f7582d4ea977203a26f88885e13946bc100ccf264c9ce1"
-EXPECTED_SUPPORT_SHA256 = "0c3404d5017a97545f2acb187e91e8089c71a50b2119065d1b013e31801f2a48"
-EXPECTED_UNIVERSAL_SHA256 = "dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3eae07f0f857689"
+EXPECTED_LOW_PHASE_SHA256 = "416c36f16f7c821feb8d260882711d2717069147b8604a93ba60432785cf1d1c"
+EXPECTED_SUPPORT_SHA256 = "0638649a35c390092a78077cef3b26b691476b61d2114fd60f460887e91e344a"
+EXPECTED_UNIVERSAL_SHA256 = "a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8"
 EXPECTED_SEMANTIC_SHA256 = "05e0d61ce1eadd8c4f471a48200dab024416b6b563c8bdfa96d22516b3b52370"
 EXCEPTIONS = (
     (1, 2, 7, 9, 11, 13),
@@ -152,7 +152,7 @@ def require(condition: bool, message: object) -> None:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def qtext(value: F) -> str:

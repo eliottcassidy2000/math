@@ -9,8 +9,8 @@ exception_residuals=(((1, 2, 7, 9, 11, 13), ((2, 3), (3, 4), (4, 5)), 24, 360, 1
 scope=closes arbitrary reflected k=1 levels on 2215 bodies; the 786 noncomplete-robust bodies and 1584 exceptional low-clique rays are certificate residues, not physical survivors
 normal_vs_python_O=BYTE_IDENTICAL
 base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
-universal_sha256=dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3eae07f0f857689
+universal_sha256=a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8
 body_digest=443474b6ccaef009d213e07160ce3cebfde1bbaa99e8ce9a55acf959d7d86d1c
-source_sha256=b2418dfda1b48257d1f7582d4ea977203a26f88885e13946bc100ccf264c9ce1
+source_sha256=416c36f16f7c821feb8d260882711d2717069147b8604a93ba60432785cf1d1c
 semantic_sha256=0063d2beb7c627f1836576081689720d41f45a078b4b7b3e06aeb81574039248
 all_exact_controls=PASS
