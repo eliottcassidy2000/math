@@ -115,9 +115,12 @@ def atlas_tasks():
         L, high, first = map(int,match.group(2,3,4))
         counts[first] += 1
         if first in LEVELS:
-            gate = "HIGH-TAIL:" in match.group(5)
+            # The ray quotient's projected high obligation is active exactly
+            # when the fixed first label lies below the wall.  The atlas's
+            # printed ``HIGH-TAIL`` token describes its older slotwise
+            # maximizer; it is not the logical gate.
+            gate = first < high
             require(high == WALL.numerator*L//WALL.denominator+1, (first,body,"high"))
-            require(not gate or first < high, (first,body,"gate"))
             tasks.append((first,body,L,high,gate))
     require({z:counts[z] for z in LEVELS} == ROW_COUNTS, "row counts changed")
     for z in range(NEXT_HEIGHT+1,max(LEVELS)+1):
@@ -313,7 +316,7 @@ def render(records,terminal_records,atlas_counts,pins):
         "scope=423 exact atlas body rows at fifteen occupied heights270..247;all intervening heights checked empty;no finite high-label horizon",
         f"frontier_totals=states:{totals[0]};crude:{totals[1]};status:{totals[2]};residual:{totals[3]}",
         f"independent_exact_farkas_checks={totals[2]}/{totals[2]}:PASS;solver_basis_not_frozen",
-        "logical_split=every residual row has inherited HIGH-TAIL;duplicate-permitting >=2-high upper has strict positive exact gap on every residual body;therefore exactly one high",
+        "logical_split=every residual row has first<high_floor,which is exactly the ray quotient's projected high-label gate;the atlas's printed HIGH-TAIL token is not used;duplicate-permitting >=2-high upper has strict positive exact gap on every residual body;therefore exactly one high",
         f"terminal_reduction=zero_high_hostile_passes:{aggregate[0]};one_high_cases:{aggregate[1]};body_distinct_low_pairs:{aggregate[2]};unit_ray_checks:{aggregate[3]}",
         "cayley_alpha=G_d edges have nonzero difference-order<=7;R=max({r:r|d,2<=r<=7} union {1});cosets mod d/R are R-cliques and [0,d/R) is independent;therefore alpha(G_d)=d/R",
         "cardinality_boundary=every fixed-safe residue set has |S|>d/R;this forces torsion order<=7;the independent equality set proves strictness is optimal for cardinality-only arguments",
@@ -351,13 +354,13 @@ def main():
         records=tuple(evaluate(t) for t in tasks)
     else:
         with mp.get_context("spawn").Pool(min(args.processes,len(tasks))) as pool:
-            records=tuple(pool.map(evaluate,tasks))
+            records=tuple(pool.map(evaluate,tasks,chunksize=1))
     terminal_tasks=tuple((row[0],row[1],row[13]) for row in records if row[12])
     if args.processes==1:
         terminal_records=tuple(terminal(t) for t in terminal_tasks)
     else:
         with mp.get_context("spawn").Pool(min(args.processes,len(terminal_tasks))) as pool:
-            terminal_records=tuple(pool.map(terminal,terminal_tasks))
+            terminal_records=tuple(pool.map(terminal,terminal_tasks,chunksize=1))
     payload=render(records,terminal_records,atlas_counts,pins)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(payload)
