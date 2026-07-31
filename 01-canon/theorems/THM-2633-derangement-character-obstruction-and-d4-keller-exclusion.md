@@ -26,15 +26,21 @@ status: >
   frontiers reduce from D4/A4/S4 to A4/S4.  On character-support components,
   A4 is forced to have three-cycle inertia and exactly one finite branch,
   while S4 is forced to have transposition inertia and one or two finite
-  branches.  No A4 or S4 exclusion, JC(2), general JC, or DC(2) follows.
+  branches.  As a local application, any A4/S4 Keller quartic whose standard
+  matching-resolvent order realizes the THM-1310 generic Q-fold must have a
+  pure order-index fold `(d4,i4;d3,i3)=(0,1;0,1)`; normalized quartic
+  branching there is impossible.  No A4 or S4 exclusion, JC(2), general JC,
+  or DC(2) follows.
 source: inverse-spectral-residues-2026-07-27
 related:
   - THM-2465-g1-exclusion-package-for-degree-four-twojet-keller
+  - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
   - THM-2612-d4-deck-pole-tax-and-depressed-resolvent-gcd-gate
   - THM-2621-planar-degree-four-inverse-spectral-keller-congruence-and-sheet-defect-pole-ledger
   - THM-2627-d4-jelonek-quadratic-character-rank-and-component-gate
   - THM-2628-d4-opposite-pair-escape-and-deck-pole-census
+  - THM-2655-quartic-keller-resolvent-v4-quasietale-torsor-and-kummer-class-group-gate
 script: 04-computation/jacobian_derangement_character_d4_exclusion_thm2633.py
 output: 05-knowledge/results/jacobian_derangement_character_d4_exclusion_thm2633.out
 script_sha256: 70535c0c85d949257b6a1af2a29358e83f603955fe6a5c75c95b6763971f2a83
@@ -490,6 +496,71 @@ S4 support component:       transposition inertia, k_D=1 or 2. (21b)
 
 These are necessary component types, not exclusions.  They are the precise
 residual boundary objects on which the degree-four search should now focus.
+
+### 5.1 Projection-fold index transfer
+
+There is one useful local application to the proposed quartic-to-grade-three
+bridge.  Let `D` be the generic divisor
+
+```text
+Q=0,                    L!=0                              (21c)
+```
+
+of THM-1310's cubic `x`-order, and work over the geometric strict-henselian
+DVR transverse to `D`.  For the quartic order and its standard three-matching
+resolvent order, write
+
+```text
+e_j=v_D(Disc O_j),
+d_j=v_D(Disc O_j_tilde),
+i_j=length(O_j_tilde/O_j),             e_j=d_j+2i_j.     (21d)
+```
+
+Monicizing THM-1310's cubic is lawful because `L` is a unit, and gives
+
+```text
+Disc(N/L)=-4Q^2/L^3.                                    (21e)
+```
+
+Thus `e_3=2`.  The divisor is a projection fold, not a Jelonek divisor:
+the actual degree-three normalization has three finite etale source
+branches.  Hence
+
+```text
+(d_3,i_3)=(0,1).                                         (21f)
+```
+
+Now suppose an `A4`- or `S4`-Keller quartic graph order has its **actual
+standard matching-resolvent order** locally isomorphic to this order, with
+the raw quartic/resolvent discriminant ideals identified up to a unit.
+Trivial normalized cubic inertia puts the quartic inertia in the kernel of
+the action on the three matchings, namely the normal `V4`.  But (9)--(10)
+give a quartic sheet fixed by that inertia, whereas every nonidentity element
+of `V4` is a double-transposition derangement.  Therefore the quartic
+inertia is trivial.  Raw discriminant equality then yields
+
+```text
+e_4=2,             (d_4,i_4)=(0,1),
+(d_4,i_4;d_3,i_3)=(0,1;0,1).                            (21g)
+```
+
+This is a projection-fold **index-transfer theorem**, not a transfer of the
+THM-1310 map or its Jelonek owner.  An arbitrary cubic algebra with the same
+discriminant does not qualify.  Neither does `L=0` (or `Q=L=0`): there `L`
+is not a unit, the cubic loses degree, monicization fails, and nontrivial
+matching inertia is allowed.
+
+The boundary is sharp.  THM-2598/2769/2974's non-Keller
+double-transposition family has the same raw exponent and an unramified
+matching quotient, but
+
+```text
+(d_4,i_4;d_3,i_3)=(2,0;0,1).                            (21h)
+```
+
+It lacks the affine Keller fixed sheet used above.  Thus discriminant
+equality, the cubic fold, and the `S3` quotient do not imply `(21g)` without
+the local graph-order compatibility and Keller owner.
 
 More generally, **every** nontrivial regular transitive group is excluded,
 without any abelian-quotient hypothesis.  In a regular action the point

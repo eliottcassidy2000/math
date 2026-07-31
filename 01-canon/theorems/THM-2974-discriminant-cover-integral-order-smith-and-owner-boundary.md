@@ -21,6 +21,7 @@ depends_on:
   - THM-2769-full-s4-pair-sum-affine-divisor-parity-hostile
   - THM-2971-discriminant-cover-edge-orientation-sextic-algebra-intertwiner
 related:
+  - THM-2633-derangement-character-obstruction-and-d4-keller-exclusion
   - THM-2655-quartic-keller-resolvent-v4-quasietale-torsor-and-kummer-class-group-gate
   - THM-2685-equivariant-kummer-boundary-parity-completion-and-divisor-residue-gate
   - THM-2968-quartic-edge-and-oriented-cycle-s4-complements
@@ -260,6 +261,12 @@ be invisible to that inertia.  Here the inertia is itself a nontrivial
 `V4` element.  The example is not a Keller map and is not being used as a
 Jelonek divisor; it is the minimal hostile to reconstructing the required
 owner from sextic fixed points.
+
+THM-2633's projection-fold index-transfer addendum makes this sharp.  If the
+same local standard-resolvent order occurred for an actual `A4`/`S4` Keller
+quartic at a generic THM-1310 `Q`-fold, the fixed affine sheet would force
+trivial quartic inertia and the tuple `(d_4,i_4;d_3,i_3)=(0,1;0,1)` instead
+of this hostile's `(2,0;0,1)`.
 
 ## 6. Every parameter-line boundary is non-unimodular for this coordinate
 
