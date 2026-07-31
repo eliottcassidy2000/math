@@ -1,0 +1,11 @@
+C1 C(2n,n)C(4n,2n)/64^n = (1/4)_n(3/4)_n/(n!)^2 exactly, n<60: OK
+C2 S(k)=3F2(1/4,3/4,1/k;1,1+1/k;1); k=1,2,3 closed forms to 195 digits: OK
+C3 quadratic transformation + elementary kernel F(z)=(1/pi)int_0^pi dphi/sqrt(1+sqrt z cos phi): OK
+C4 K-moment S(k)=(16/(k pi sqrt2))int mu^{4/k-1}(2-mu^2)^{-2/k-1/2}K: OK
+C5 Thomae normal form S(k)=(8sqrt2/(3 pi k))3F2(1-1/k,1,1;5/4,7/4;1): OK
+C6 uniform rep S(k)=(2/pi)int_0^{pi/2}2F1(1,4/k;1+2/k;(1-sqrt2 sin th)/2): OK
+C7 Schwarz angle sum of 2F1(1,4/k;1+2/k;.) = 8/k-1 > 1 (spherical) for k<=3, EXACTLY 1 (Euclidean) for all k>=4: OK  <- k=4 is the wall
+C8 arctan(sqrt2/5)=pi-3arctan(sqrt2); pi S(3)=2sqrt3 log(sqrt3+sqrt2)-2pi+6arctan(sqrt2): OK
+C9 positive control: k=3 recovered (14 relations), e.g. [1, -1, 2] on ('r3log(5+2r6)', 'atan(r2/5)')
+C9 no relation for k=4,5,6,12 in the same pool (search validated): OK
+ALL THM-3010 REFEREE CHECKS PASSED
