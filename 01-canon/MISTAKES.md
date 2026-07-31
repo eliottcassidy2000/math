@@ -9,6 +9,37 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-337 (2026-07-31, THM-3001 section 6 classifier census) -- a 42/42 census held the failing axis fixed
+
+- **What was done:** THM-3001 section 6 proposed that the two end curvatures
+  `(sign C(mu), sign C(mu*))` classify the global shape of the Newton-ratio
+  sequence, and supported it with an exact-rational census reporting `42/42`
+  agreement across two-cluster, three-cluster and geometric families.
+- **Why it was wrong:** the census varied the root ratios, the cluster count and
+  the degree, but every three-cluster row used **equal** cluster sizes
+  (`d//3` each).  Unequal multiplicities are exactly where the classifier
+  breaks.  Restricted to equal sizes the failure rate is `0/30`; over all
+  three-cluster configurations with `d=6..12` it is `51/2100 = 2.43%`.
+- **Minimal witness (THM-3004):** `N(n)=(n+1)^2(n+3)^2(n+8)`, degree `5`,
+  `R=(256/215, 1849/1600, 10000/8643, 4489/4000)` -- down, up, down, so two
+  circuit sign changes, while both end curvatures are positive.  All roots real
+  and positive, so the witness is PF-infinity, Hurwitz and strictly ULC: it is
+  interior to every class in the lane, not a boundary artefact.
+- **Exact repair / strongest survivor:** the classifier is true exactly for at
+  most two clusters (exhaustive, `936` configurations, zero violations).  The
+  correct general law is a **cluster count**: `m` well-separated clusters give up
+  to `2m-3` sign changes, attained for every `m<=6`.  THM-3001's proved
+  necessary condition `C(mu)>=0>=C(mu*)` survives; it is not sufficient, and no
+  bounded set of moments can be, since the sign-change count is a property of the
+  support structure.
+- **Rule:** a census is evidence only about the coordinates it actually varies.
+  Before quoting an `n/n` census, enumerate the coordinates of the configuration
+  space and mark which were moved and which were pinned; report the pinned ones
+  next to the score.  Sample size never substitutes for an un-varied axis.
+  Second rule: when a mechanism is available (here the multipole/step-function
+  picture of THM-3003), derive the predicted failure mode and search for it
+  directly instead of sampling.
+
 ## MISTAKE-336 (2026-07-31, merge `f737bbe22922`) -- unresolved conflict markers were committed into PROVED canon
 
 - **What was done:** the merge commit `f737bbe22922` ("Merge branch 'main'")
