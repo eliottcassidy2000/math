@@ -9,14 +9,15 @@ status: >
   gate.  Its centered cardinality shadow is sharp: more than
   beta(d)=2 floor((d-1)/14)+1 fixed-safe residues clear every unit, while
   beta(d) residues need not.  An arbitrarily translated open danger band has
-  the different sharp capacity ceil(d/7); the two bounds must not be
-  conflated.  Gcd-stratum capacities and the exact multiplicative transporter
-  refine the centered threshold whenever residue shape is retained.  The
-  resulting transport complex is flag through d=42 and first becomes
-  non-flag at d=43, with an explicit irreducible three-cell certificate.  This
-  is a reusable refinement of the projected k=3 denominator quotient; it does
-  not assert that any new atlas row is empty and does not improve the current
-  proved cap by itself.
+  the different sharp capacity ceil(d/7), and its continuous center compresses
+  exactly to a finite affine interval-orbit complex; the two bounds must not
+  be conflated.  Gcd-stratum capacities and the exact multiplicative
+  transporter refine the centered threshold whenever residue shape is
+  retained.  The resulting centered transport complex is flag through d=42
+  and first becomes non-flag at d=43, with an explicit irreducible three-cell
+  certificate.  This is a reusable refinement of the projected k=3
+  denominator quotient; it does not assert that any new atlas row is empty
+  and does not improve the current proved cap by itself.
 source: codex-lrc14-k3-signed-ray-phase-gate-2026-07-30
 depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
@@ -256,8 +257,9 @@ Then the sharp uniform capacity is
 
 Indeed multiplication by `u` permutes the residues.  The strict danger arc
 has length `1/7` on the unit circle, hence length `d/7` after scaling the
-residue lattice to unit spacing.  Cut the circle outside this arc and lift
-its `k` occupied lattice points to integers
+residue lattice to unit spacing.  If there are no occupied residues the bound
+is trivial.  Otherwise cut the circle outside this arc and lift its `k`
+occupied lattice points to integers
 
 ```text
 n_1<...<n_k
@@ -286,7 +288,10 @@ The distinction from `(12)` is real.  At `d=28`,
 
 ```text
 beta(28)=3,                 kappa(28)=4,
-S={0,1,2,3} subset (-1/2,7/2) mod 28.                  (13d)
+u=1, theta=-3/56:           B_28(theta,u)={0,1,2,3}.
+
+Equivalently, after scaling by 28, all four lattice points lie in the open
+interval (-1/2,7/2) of length 4.                        (13d)
 ```
 
 Thus four residues can all lie in one translated open danger band although
@@ -295,6 +300,63 @@ the absolute phase `(8)`; `(13b)--(13c)` is the required gate when aligned
 coordinates leave an arbitrary translation `theta`.  This scope guard is
 especially important in projected terminal arguments: a local shift cannot
 be silently recentered unless the fixed-cell sidecar proves that operation.
+
+### 4.2 The affine transport complex removes the continuous phase
+
+The translated gate has an exact finite shape-sensitive form.  Put
+`kappa=ceil(d/7)` and let
+
+```text
+C_a={a,a+1,...,a+kappa-1} mod d.                        (13e)
+```
+
+Since
+
+```text
+kappa-1<d/7,                                            (13f)
+```
+
+every `C_a` lies in some open circular interval of length `d/7`.  Conversely,
+if lattice residues lie in such an interval, cut and lift as in `(13b)`.
+Their integer span is at most `kappa-1`, so they extend to a consecutive
+`kappa`-block.  Therefore the translated obstruction is the simplicial
+complex
+
+```text
+K_d^tr={S:there exist u in (Z/dZ)^* and a in Z/dZ
+             with uS subset C_a}.                       (13g)
+```
+
+Its maximal faces are precisely the affine images `u^{-1}C_a`, all of size
+`kappa`.  Equivalently the continuous parameter `theta` in `(13a)` is
+compressed without loss to the finite affine transporter
+
+```text
+T_d^tr(S)={(u,a):uS subset C_a}.                         (13h)
+```
+
+Thus `(13c)` is exactly the facet-cardinality gate for the orbit of one short
+cyclic interval under the affine group `(Z/dZ) semidirect (Z/dZ)^*`.  At or
+below `kappa`, the correct next search is membership in this affine orbit,
+or small minimal nonfaces of `K_d^tr`, rather than another count.
+
+The centered complex studied below is a subcomplex of `K_d^tr`: its symmetric
+band `B_d` is one cyclic consecutive block of length `beta(d)<=kappa`, possibly
+properly contained in a facet.  The inclusion can be strict, as `(13d)`
+shows.  Translation also destroys the gcd strata anchored at zero.  Hence the
+gcd refinements in Section 5 apply to the centered transporter `(17)`, not
+automatically to `(13h)`; an affine application must retain the translation
+coordinate or replace gcd by a genuinely affine invariant.
+The first such survivor is the multiset of pair-difference strata
+
+```text
+{gcd(c-c',d):c,c' in S},                               (13i)
+```
+
+equivalently the additive orders `d/gcd(c-c',d)`.  Translation cancels in
+each difference and multiplication by a unit preserves its gcd with `d`.
+This is why THM-2979's short-order pair gate survives arbitrary local
+translation even though the absolute point-stratum capacities `(16)` do not.
 
 ## 5. Gcd-stratum refinement and the exact obstruction
 
@@ -433,6 +495,20 @@ strictly less than `d/14+d/14=d/7`, contradicting `(21)`.  Thus for every
 primitive `u`, at least one member of this same pair satisfies the absolute
 cell test `(8)`.  This extends THM-2979's exact order-seven argument verbatim
 to every order at most seven.
+
+The conclusion is translation-robust.  If both
+`theta+uc_1/d` and `theta+uc_2/d` lay in the translated band `(13a)`, their
+difference would again have circular distance strictly below `1/7`; the
+common `theta` cancels, contradicting `(21)` after division by `d`.  Hence
+every facet `u^{-1}C_a` of `K_d^tr` is an independent set in THM-2979's
+short-order Cayley graph `G(d,7)`, or equivalently
+
+```text
+E(G(d,7)) subset {two-element nonfaces of K_d^tr}.       (21a)
+```
+
+This is the precise affine survival mechanism behind the difference strata
+`(13i)`.
 
 Consequently the logical hierarchy is one-way:
 
@@ -622,6 +698,16 @@ Together with `(26)--(28)`, this proves the exact threshold
 ```text
 K_d is flag for 2<=d<=42, while K_43 is not flag.        (28a)
 ```
+
+This threshold is centered only.  It does not transfer to the affine
+translated complex: for the same `d=43` witness,
+
+```text
+3*{1,2,15}={2,3,6} subset C_0={0,1,...,6},
+```
+
+so `{1,2,15}` is a face of `K_43^tr`.  No first-nonflag threshold for
+`K_d^tr` is claimed here.
 
 The exact relation with the short-order graph is
 
