@@ -68,8 +68,21 @@ The exponent pair has moved from `(a,b)` to `(a-b, b)`: **the tower runs the
 subtractive Euclidean algorithm on `(a,b)`**, so its depth is the continued
 fraction of `a/b`. (L0) and (L1) were verified symbolically on genuine
 Jacobian pairs of several degrees, including composites of triangular maps.
-*The claim that the higher orders continue to run the Euclidean algorithm
-without further degeneration is CONJECTURAL and is the first thing to test.*
+**Divisibility verified with content (decisive test 2).** On genuine
+Jacobian pairs the residual of (L1) is exactly `0` and the divisibility
+`H^{a-b} | Jac(...)` holds with a *nonzero* dividend in each case:
+
+```text
+(x+y^2, y+(x+y^2)^3)     deg (2,6)  (a,b)=(1,3)  H=y   H^2 | Jac  HOLDS
+deeper composite         deg (12,6) (a,b)=(2,1)  H=y   H^1 | Jac  HOLDS
+(x+(y+x^2)^4, y+x^2)     deg (8,2)  (a,b)=(4,1)  H=x   H^3 | Jac  HOLDS
+```
+
+Script: `04-computation/jc2_tower_divisibility_hyp9070.py`.
+*Whether the higher orders `n+m-4, n+m-5, ...` continue to run the Euclidean
+algorithm remains CONJECTURAL: at order `n+m-4` the cross term
+`Jac(P_{n-1},Q_{m-1})` carries no a-priori factor of `H`, so the clean step
+may break there. That is the sharpest open point of this file.*
 
 ## 2. The degree lattice (PROVED, classical input)
 
