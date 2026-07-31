@@ -2,16 +2,16 @@
 
 **Status:** CURRENT. **Role/Use:** compact defaults from repeated successes and failures; scan triggers and evidence. Each card states applicability, action, mechanism, and counterindication; new cards require distinct-thread evidence or a severe repaired failure.
 
-## Peel the distinguished prime before enumerating lcm shapes
+## Peel the distinguished prime, then force a small torsion collision
 
-**Trigger/action:** for density-`1/p` combs on `D`, prove the quotient-index
-dichotomy after `D=pq`, split transverse sections from vertical spikes, and
-Möbius-count only base loads/status bits.  If one even denominator `d` leaves
-one unbounded primitive-unit label, seek two fixed-clean cells separated by
-`d/2`: odd units make its phases antipodal at every ray height. **Caution:**
-restore lost unit/location/scale; odd `d`, several moving labels, or no common
-clean cells defeat the torsion finish. **Evidence:** THM-2928, THM-2941
-(`M=7` and denominator `3920`), and THM-2072's antipodal dyadic seam.
+**Trigger/action:** for density-`1/p` combs on `D`, prove the quotient-index dichotomy after `D=pq`, split transverse sections from vertical spikes, and
+Möbius-count only base loads/status bits.  After a wall forces one unbounded
+primitive-unit label of denominator `d`, let `S` be the distinct residues of
+the fixed-clean cells mod `d`.  If `r|d`, `2<=r<=7`, and `|S|>d/r`, two
+residues share a coset of the order-`r` subgroup; their effective order is at
+most `r`, so every unit phase separates them by at least `1/7`. **Caution:**
+prove the high wall and finite low-pair reduction first; zero-high relaxations often pass,
+and several movers defeat the finish. **Evidence:** THM-2928/2941 (`M=7`, `z=324/312`) and THM-2072's antipodal dyadic seam.
 
 ## Inventory retained power classes before classifying base-curve genus
 
