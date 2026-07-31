@@ -21,6 +21,8 @@ status: >
   with W = 0 the cross term equals kappa(a-b)H^{a-b-1}Q_{m-1}J, so every term
   of the degree n+m-4 condition carries an explicit power of H (exponents
   a-1, a-b-1, b-1) and the tower iterates with a Euclidean-reduced pair.
+  The Q_{m-1}=0 escape also closes: for K>=2 it forces P_{n-1}=0, so the
+  subleading layer is either entirely empty or entirely carried by Q_{m-1}.
   This constrains, but does not decide, JC(2); no bridge or reduction is claimed.
 source: death-star-2026-07-31-coinC2
 depends_on: []
@@ -149,6 +151,24 @@ K >= 2   =>   Q_{m-1} = 0    or    P_{n-1} = kappa H^{a-b} Q_{m-1}.   (X')
 That is: for a counterexample the subleading component of `P` is *determined*
 by that of `Q` (or the latter vanishes). The mirrored statement holds with
 the roles of `P` and `Q` exchanged.
+
+**(A2) The remaining branch closes too: a clean dichotomy.** Suppose
+`K >= 2` and `Q_{m-1} = 0`. Then (L1) reads
+`0 = - c' b H^{b-1} Jac(P_{n-1}, H)`, so `Jac(P_{n-1}, H) = 0`. If
+`P_{n-1} != 0` this makes `P_{n-1}` and `H` powers of a common form `G` with
+`deg G` dividing `n-1` and `g | n`, hence `deg G | gcd(n-1,n) = 1` and
+`K = 1` -- a contradiction. So `Q_{m-1} = 0` forces `P_{n-1} = 0`, and
+symmetrically. The full statement for a counterexample is therefore the
+**dichotomy**
+
+```text
+K >= 2  =>   (i)  P_{n-1} = Q_{m-1} = 0,   or
+             (ii) both nonzero and  P_{n-1} = kappa H^{a-b} Q_{m-1}.   (X'')
+```
+
+In (i) the whole subleading layer is empty; in (ii) it is one-dimensional,
+carried entirely by `Q_{m-1}`. Either way the layer has **no free
+parameters** beyond `Q_{m-1}` itself.
 
 **(B) With `W = 0` the cross term is explicit and the tower iterates.**
 Using `Jac(fg, g) = g Jac(f,g)` (referee-verified) with
