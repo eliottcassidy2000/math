@@ -30,6 +30,11 @@ so pointwise
 
     1_(union A_i) <= sum_i 1_A_i-sum_(ij in T)1_(A_i intersect A_j).  (F)
 
+More precisely, the right side minus the left is
+``components(T[S])-1``.  The Hunter slack is therefore an integrated
+connectivity tax.  An endpoint-owner word telescopes exactly when all of its
+nonempty active sets induce connected subtrees of one common tree.
+
 Every edge belongs to 432 of the 1296 labelled spanning trees of K6.  Thus
 the average tree contains one third of the total pair overlap.  This both
 strictly strengthens matching subtraction and removes the old level-
@@ -290,6 +295,27 @@ def unequal_level_graph_connected(levels: tuple[int, ...]) -> bool:
                 seen.add(other)
                 frontier.append(other)
     return len(seen) == 6
+
+
+def induced_component_count(tree, active: set[int]) -> int:
+    """Number of components of the tree induced by a labelled active set."""
+    unseen = set(active)
+    count = 0
+    while unseen:
+        count += 1
+        seed = unseen.pop()
+        frontier = [seed]
+        while frontier:
+            vertex = frontier.pop()
+            neighbors = {
+                right if left == vertex else left
+                for left, right in tree
+                if left == vertex or right == vertex
+            }
+            new = neighbors & unseen
+            unseen.difference_update(new)
+            frontier.extend(new)
+    return count
 
 
 def minimum_to_higher_double_star(levels: tuple[int, ...]):
@@ -662,9 +688,14 @@ def main() -> None:
         for mask in range(64):
             active = {vertex for vertex in range(6) if mask & (1 << vertex)}
             induced_edges = sum(i in active and j in active for i, j in tree)
+            components = induced_component_count(tree, active)
             require(
                 induced_edges <= max(0, len(active) - 1),
                 ("forest pointwise inequality failed", tree, mask, induced_edges),
+            )
+            require(
+                len(active) - induced_edges == components,
+                ("induced-forest component identity failed", tree, mask, components),
             )
             forest_subset_checks += 1
     active_set_digest = hashlib.sha256(repr(ADDRESS_ACTIVE_SETS).encode()).hexdigest()
@@ -675,6 +706,10 @@ def main() -> None:
         require(
             induced_edges == len(active) - 1,
             ("address tree does not span active segment", active_row, induced_edges),
+        )
+        require(
+            induced_component_count(ADDRESS_TREE, active) == 1,
+            ("address active set disconnected", active_row),
         )
 
     expected_chain_names = (
@@ -1150,7 +1185,7 @@ def main() -> None:
         f"body={E};L={L};levels=(2Q,Q,Q,Q,Q,2Q);safe_cells={len(safe_cells)};carrier_mass={qtext(carrier_mass)}",
         "source_to_target=pointwise pair overlap lower bounds w_ij average to omega_ij;carrier omega retains phase occupancy lost by translation-free minima",
         "hostile_matching_topology=unequal-level graph is K_(2,4):connected with spanning trees but no unequal perfect matching;this is NO_CERTIFICATE,not survival",
-        "forest_inequality=for active S and forest T,|E(T[S])|<=|S|-1;subtract every tree edge pointwise",
+        "forest_identity=for nonempty active S in a tree T,|S|-|E(T[S])|-1=components(T[S])-1;Hunter slack is the integrated connectivity tax",
         f"Cayley_ledger=1296 labelled K6 trees;5 edges each;every edge occurs 432 times;tree average=all-pair total/3;forest_subset_checks={forest_subset_checks}",
         f"tree_tariff={qtext(TREE_TARIFF)};identity=5*(35/2976)-1/39=(9/2)*tariff",
         "unequal_graph=complete multipartite;connected iff level word nonconstant;minimum-to-higher double-star supplies 5 unequal edges",

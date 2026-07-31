@@ -410,6 +410,25 @@ cellwise overlap -> carrier average -> one low-union cell.
 It forgets which cell closes.  The endpoint word `(32)` is the sidecar that
 restores enough local mass for the infinite tail.
 
+There is an exact way to measure this loss.  At a point `u`, let `S_j(u)` be
+the set of active labels and let `c_T(S)` be the number of connected
+components of the subgraph induced by `S` in `T` (with `c_T(empty)=0`).  Since
+an induced subgraph of a tree is a forest,
+
+```text
+sum_i 1_(A_i)(u)-sum_(ik in T)1_(A_i intersect A_k)(u)
+ -1_(U_j)(u)
+ =c_T(S_j(u))-1                     when S_j(u) is nonempty. (39)
+```
+
+Thus Hunter's slack is exactly an integrated **connectivity tax**.  A fixed
+tree telescopes on an endpoint-owner word if and only if every nonempty active
+set in that word induces a connected subtree.  This reframes the address
+problem as simultaneous induced connectivity of the active-set hypergraph;
+it is more faithful than asking only for a matching or for large unlabelled
+pair totals.  The exact audit verifies `(39)` on every one of the `1296*64`
+tree/mask pairs.
+
 The unequal-level graph of `(28)` is `K_(2,4)`.  It is connected and has a
 spanning tree, but it has no unequal-level perfect matching.  This explains
 why the earlier matching topology stalls while a tree can still use physical
@@ -419,7 +438,7 @@ floor is zero.
 At `j_*`, the fixed tree
 
 ```text
-T_*={1-9,1-11,2-9,4-11,11-12}                          (39)
+T_*={1-9,1-11,2-9,4-11,11-12}                          (40)
 ```
 
 induces a tree on the active label set of every open endpoint segment in
@@ -427,43 +446,43 @@ induces a tree on the active label set of every open endpoint segment in
 
 ```text
 sum_(ik in T_*) mu(A_i(j_*) intersect A_k(j_*))
- =6/7+epsilon(E,q)-M_Q>5/14.                           (40)
+ =6/7+epsilon(E,q)-M_Q>5/14.                           (41)
 ```
 
 Every other cell contribution is nonnegative, so
 
 ```text
-sum_(ik in T_*) omega_ik(Q)>5/(14*2260).                (41)
+sum_(ik in T_*) omega_ik(Q)>5/(14*2260).                (42)
 ```
 
 Also `epsilon_Q<=epsilon_1/Q`, and the exact value satisfies
 
 ```text
-5 < (14*2260/5)epsilon_1 < 6.                          (42)
+5 < (14*2260/5)epsilon_1 < 6.                          (43)
 ```
 
-Equations `(41)`--`(42)` prove `(38)` for every `Q>=6`.
+Equations `(42)`--`(43)` prove `(38)` for every `Q>=6`.
 
 For `1<=Q<=5`, use the `1296=6^4` labelled spanning trees of `K_6`.  Each
 edge occurs in `432` of them, so their average weight is one third of the
 total pair weight.  Pointwise,
 
 ```text
-binom(k,2)>=k-1_(k>0),                                 (43)
+binom(k,2)>=k-1_(k>0),                                 (44)
 ```
 
 where `k` is the number of active clauses.  Hence some tree has carrier
 weight at least
 
 ```text
-[6/7+epsilon_Q-average_j mu(U_j)]/3.                   (44)
+[6/7+epsilon_Q-average_j mu(U_j)]/3.                   (45)
 ```
 
-The exact five-row census makes `(44)` strictly larger than `epsilon_Q`; its
+The exact five-row census makes `(45)` strictly larger than `epsilon_Q`; its
 smallest margin is
 
 ```text
-956812421768354854111/11531953382864939723790          (45)
+956812421768354854111/11531953382864939723790          (46)
 ```
 
 at `Q=1`.  A second path reconstructs all fifteen literal carrier edge
