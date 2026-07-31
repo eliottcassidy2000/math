@@ -1,0 +1,18 @@
+two-circle point e^{i pi/3}: |p|=1.0000, |1-p|=1.0000
+  gamma=0.00000: domain value = 1.0  (ON boundary -> rigidity applies)
+  gamma=0.10000: domain value = 1.0717735  (OUTSIDE -> no analytic control)
+  gamma=0.30000: domain value = 1.2311444  (OUTSIDE -> no analytic control)
+  gamma=0.59799: domain value = 1.5136063  (OUTSIDE -> no analytic control)
+  gamma=1.00000: domain value = 2.0  (OUTSIDE -> no analytic control)
+
+radius of convergence R(gamma)  (r(1+2r)^gamma = 1 on the negative axis):
+  gamma=0.00: R = 1.0   (<1 for gamma>0 => coefficients unbounded => Szego inapplicable)
+  gamma=0.10: R = 0.90203056   (<1 for gamma>0 => coefficients unbounded => Szego inapplicable)
+  gamma=0.50: R = 0.65729811   (<1 for gamma>0 => coefficients unbounded => Szego inapplicable)
+  gamma=1.00: R = 0.5   (<1 for gamma>0 => coefficients unbounded => Szego inapplicable)
+
+CONCLUSION: Carlson-Szego-two-circle proves EXACTLY gamma=0 impossible (C*>1, general) and,
+provably, nothing more. A quantitative general floor must be archimedean, not analytic-rigidity.
+  von Neumann sum at p=0.50: 0.5  (=1/2; resummation is essential -- truncation/limits invalid)
+  von Neumann sum at p=0.10: 0.5  (=1/2; resummation is essential -- truncation/limits invalid)
+  von Neumann sum at p=0.01: 0.5  (=1/2; resummation is essential -- truncation/limits invalid)
