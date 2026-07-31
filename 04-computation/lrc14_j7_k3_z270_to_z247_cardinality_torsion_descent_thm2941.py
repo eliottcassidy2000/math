@@ -230,11 +230,16 @@ def torsion_certificate(cells,d):
     require(len(residues)>alpha,(d,len(residues),alpha,"sharp cardinality gate"))
     least=next(r for r in divisors if len(residues)>d//r)
     quotient=d//least
-    buckets=defaultdict(list)
+    buckets={}
+    collision=None
     for residue in residues:
-        buckets[residue%quotient].append(residue)
-    crowded=next(row for row in buckets.values() if len(row)>=2)
-    a,b=crowded[:2]
+        key=residue%quotient
+        if key in buckets:
+            collision=(buckets[key],residue)
+            break
+        buckets[key]=residue
+    require(collision is not None,(d,least,"pigeonhole collision"))
+    a,b=collision
     shift=(b-a)%d
     effective=d//gcd(d,shift)
     require(2<=effective<=least<=7,(d,least,effective))
