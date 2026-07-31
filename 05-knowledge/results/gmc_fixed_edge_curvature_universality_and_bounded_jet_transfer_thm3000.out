@@ -1,0 +1,150 @@
+==========================================================================
+A. UNIVERSALITY OF THE LEADING d^-2 CURVATURE ACROSS FIXED EDGES
+==========================================================================
+  curvature C(x,z) = 3x^2 - 2z - 1 = (-m1**4 - 2*m1*m3 + 3*m2**2)/m1**4
+   k=2: [d^0]=0? True   [d^-1]=0? True   [d^-2]==curvature? True
+   k=3: [d^0]=0? True   [d^-1]=0? True   [d^-2]==curvature? True
+   k=4: [d^0]=0? True   [d^-1]=0? True   [d^-2]==curvature? True
+   k=5: [d^0]=0? True   [d^-1]=0? True   [d^-2]==curvature? True
+   k=6: [d^0]=0? True   [d^-1]=0? True   [d^-2]==curvature? True
+   k=7: [d^0]=0? True   [d^-1]=0? True   [d^-2]==curvature? True
+   k=8: [d^0]=0? True   [d^-1]=0? True   [d^-2]==curvature? True
+   k=9: [d^0]=0? True   [d^-1]=0? True   [d^-2]==curvature? True
+  VERDICT A: UNIVERSAL (k-independent, constant 1)
+
+==========================================================================
+D. GRADING: k-degree of the d^-r coefficient, and first occurrence of m_j
+==========================================================================
+   d^-2: k-degree = 0   (predicted r-2 = 0)  OK
+   d^-3: k-degree = 1   (predicted r-2 = 1)  OK
+   d^-4: k-degree = 2   (predicted r-2 = 2)  OK
+   d^-5: k-degree = 3   (predicted r-2 = 3)  OK
+
+   m_3: first order d^-2   (predicted d^-2)  OK
+        coefficient = -2/m1**3 * C(k-2,0)  -> OK
+   m_4: first order d^-3   (predicted d^-3)  OK
+        coefficient = 6/m1**4 * C(k-2,1)  -> OK
+   m_5: first order d^-4   (predicted d^-4)  OK
+        coefficient = -24/m1**5 * C(k-2,2)  -> OK
+   m_6: first order d^-5   (predicted d^-5)  OK
+        coefficient = 120/m1**6 * C(k-2,3)  -> OK
+   m_7: first order d^-None   (predicted d^-6)  beyond window
+   m_8: first order d^-None   (predicted d^-7)  beyond window
+   m_9: first order d^-None   (predicted d^-8)  beyond window
+   m_10: first order d^-None   (predicted d^-9)  beyond window
+
+==========================================================================
+B. CUMULANT FORM OF THE CURVATURE
+==========================================================================
+  3x^2-2z-1  in cumulants  = -(2*kappa1*kappa3 - 3*kappa2**2)/kappa1**4
+  target (3k2^2-2k1k3)/k1^4 = -(2*kappa1*kappa3 - 3*kappa2**2)/kappa1**4
+  VERDICT B: IDENTITY HOLDS
+  => curvature > 0  <=>  3 kappa_2^2 > 2 kappa_1 kappa_3.
+     equal roots (kappa_2=kappa_3=0) is the exact zero of the curvature;
+     symmetric root measures (kappa_3=0) give curvature 3 kappa_2^2/kappa_1^4 >= 0.
+
+==========================================================================
+C. MECHANISM: WHERE EACH OF 3x^2, -2z, -1 COMES FROM
+==========================================================================
+  log (d)_k = k log d - C(k,2)/d - S_2(k)/(2 d^2) - ... ,  S_2(k)=sum_{i<k} i^2
+    Delta^3 [ -C(k,2) ] = 0  (quadratic -> 0)
+    Delta^3 S_2(k) = 2  => +Delta^3 log(d)_k contributes -1 * d^-2   <-- THE '-1'
+
+  k! e_k = d^k [ 1 - C(k,2) m2/d + (3C(k,4) m2^2 + 2C(k,3) m3)/d^2 + O(d^-3) ]
+    (partitions of [k]: singletons -> d^k; one doubleton -> -C(k,2) m2 d^{k-1};
+     two doubletons -> +3C(k,4) m2^2 d^{k-2}; one tripleton -> +2C(k,3) m3 d^{k-2})
+    log-correction merges 3C(k,4) with -C(k,2)^2/2 :
+      3C(k,4) - C(k,2)^2/2 = -(binomial(k, 2)**2 - 6*binomial(k, 4))/2 = k(k-1)(3-2k)/4  (CUBIC)
+    Delta^3 of that cubic = -3  => -(-3) m2^2 = +3 m2^2
+    Delta^3 [ 2C(k,3) ] = 2  => -(2) m3 = -2 m3
+  => leading coefficient  3 m2^2 - 2 m3 - 1  (m1 = 1),  k CANCELS EXACTLY.
+  VERDICT C: MECHANISM CONFIRMED
+
+==========================================================================
+G. INVARIANT JET FORM AND WEIGHT GRADING  (wt J_j = j-1, wt 1/d = 1)
+==========================================================================
+   weight 2: weight-2-homogeneous? True   k-free? True
+     W_2 = 3*J2**2 - 2*J3 - 1/d**2    <-- k-INDEPENDENT UNIVERSAL PART
+   weight 3: weight-3-homogeneous? True   k-free? False
+     k-degree 1 (predicted 1) OK
+     W_3(k=3) = -28*J2**3 + 30*J2*J3 - 6*J4 - 4/d**3
+   weight 4: weight-4-homogeneous? True   k-free? False
+     k-degree 2 (predicted 2) OK
+     W_4(k=3) = 321*J2**4/2 - 210*J2**2*J3 + 36*J2*J4 + 26*J3**2 - 25/(2*d**4)
+   weight 5: weight-5-homogeneous? True   k-free? False
+     k-degree 3 (predicted 3) OK
+     W_5(k=3) = -816*J2**5 + 1278*J2**3*J3 - 198*J2**2*J4 - 348*J2*J3**2 + 48*J3*J4 - 36/d**5
+
+  first-occurrence law:  [weight j-1] contains  -(j-1)! * C(k-2, j-3) * J_j
+   J_3: coefficients [-2, -2, -2, -2, -2, -2, -2, -2]  vs  -(2)!*C(k-2,0) [-2, -2, -2, -2, -2, -2, -2, -2]  -> OK
+   J_4: coefficients [0, -6, -12, -18, -24, -30, -36, -42]  vs  -(3)!*C(k-2,1) [0, -6, -12, -18, -24, -30, -36, -42]  -> OK
+   J_5: coefficients [0, 0, -24, -72, -144, -240, -360, -504]  vs  -(4)!*C(k-2,2) [0, 0, -24, -72, -144, -240, -360, -504]  -> OK
+   J_6: coefficients [0, 0, 0, -120, -480, -1200, -2400, -4200]  vs  -(5)!*C(k-2,3) [0, 0, 0, -120, -480, -1200, -2400, -4200]  -> OK
+  VERDICT G: INVARIANT FORM CONFIRMED
+
+==========================================================================
+E. EXACT CLOSED FORMS (no asymptotics)
+==========================================================================
+  second edge:  h2^3 - h1^3 h3 = G_2 * u^6 / (d**6*(d - 2)*(d - 1)**3)
+    G_2 = d**2*(3*x**2 - 2*z - 1) + d*(-x**3 - 6*x**2 + 3*x + 4*z) + 2*x**3 - 2*z
+    matches THM-2997 (8)?  True
+
+  third edge:   h1 h3^3 - h2^3 h4 = G_3 * u^10 / (d**10*(d - 3)*(d - 2)**3*(d - 1)**4)
+    [d^6] 3*x**2 - 2*z - 1
+    [d^5] 6*w + x**3 - 12*x**2 - 12*x*z + 9*x + 8*z
+    [d^4] -18*w*x - 24*w - 15*x**4 - 4*x**3 + 30*x**2*z - 15*x**2 + 48*x*z + 12*z**2 - 14*z
+    [d^3] 18*w*x**2 + 72*w*x + 24*w + 3*x**5 + 60*x**4 + 8*x**3*z + 31*x**3 - 120*x**2*z - 36*x*z**2 - 12*x*z - 48*z**2
+    [d^2] -2*(3*w*x**3 + 36*w*x**2 + 36*w*x + 6*x**5 + 30*x**4 + 16*x**3*z - 33*x**2*z - 72*x*z**2 - 4*z**3 - 18*z**2)
+    [d^1] 4*(6*w*x**3 + 18*w*x**2 + 3*x**5 + 8*x**3*z - 27*x*z**2 - 8*z**3)
+    [d^0] -24*(w*x**3 - z**3)
+    leading [d^6] == 3x^2-2z-1 ?  True
+    w enters first at [d^5] with coefficient 6 ?  True    (= 6*C(k-2,1) at k=3, matching D)
+
+==========================================================================
+POSITIVE CONTROL: real-rooted families with bounded jets
+==========================================================================
+  N(n) = prod_{i=1}^{d} (n + r_i);  curvature predicted from the roots.
+
+  -- two-point 1,2 (half/half)
+     d=  60  curvature=   0.037037  d^2 log(R2/R1)=   0.038496  d^2 log(R3/R2)=   0.037624  signs match: True
+     d= 120  curvature=   0.037037  d^2 log(R2/R1)=   0.037756  d^2 log(R3/R2)=   0.037345  signs match: True
+     d= 240  curvature=   0.037037  d^2 log(R2/R1)=   0.037394  d^2 log(R3/R2)=   0.037194  signs match: True
+
+  -- arithmetic 1..d rescaled
+     d=  60  curvature=   0.311834  d^2 log(R2/R1)=   0.327257  d^2 log(R3/R2)=   0.337285  signs match: True
+     d= 120  curvature=   0.322405  d^2 log(R2/R1)=   0.330271  d^2 log(R3/R2)=   0.335309  signs match: True
+     d= 240  curvature=   0.327824  d^2 log(R2/R1)=   0.331796  d^2 log(R3/R2)=   0.334321  signs match: True
+
+  -- geometric 2^{-i}, i<d
+     d=  60  curvature=   1.972017  d^2 log(R2/R1)=   2.036526  d^2 log(R3/R2)=   1.995829  signs match: True
+     d= 120  curvature=   2.167602  d^2 log(R2/R1)=   2.200632  d^2 log(R3/R2)=   2.175011  signs match: True
+     d= 240  curvature=   2.167602  d^2 log(R2/R1)=   2.184474  d^2 log(R3/R2)=   2.173095  signs match: True
+
+  -- heavy tail one big root
+     d=  60  curvature=-203.090081  d^2 log(R2/R1)=-596.647467  d^2 log(R3/R2)=-188.662279  signs match: True
+     d= 120  curvature=-855.591921  d^2 log(R2/R1)=-2416.556804  d^2 log(R3/R2)=-760.703064  signs match: True
+     d= 240  curvature=-3510.592837  d^2 log(R2/R1)=-9726.195064  d^2 log(R3/R2)=-3054.866105  signs match: True
+
+  VERDICT (positive control): sign of both edges tracks the single universal curvature
+
+==========================================================================
+F. HOSTILE: unbounded fourth normalized jet
+==========================================================================
+  x = 1, z = 1/4  ->  curvature 3x^2-2z-1 = 3/2 (>0)
+  w_d = -alpha*d with alpha = 1/2;  predicted third-edge sign flip iff 6*alpha > curvature  ->  6*alpha = 3
+
+   d      R_1<R_2 ?         R_2<R_3 ?      d^2*log(R2/R1)   d^2*log(R3/R2)
+    200   True  (edge2)    False (edge3)         1.522794        -1.507276
+    400   True  (edge2)    False (edge3)         1.511323        -1.503695
+    800   True  (edge2)    False (edge3)         1.505643        -1.501861
+   1600   True  (edge2)    False (edge3)         1.502817        -1.500934
+   3200   True  (edge2)    False (edge3)         1.501407        -1.500468
+
+  VERDICT F: HOSTILE CONFIRMED -- edge 2 rises, edge 3 falls, all d
+  => 'bounded higher log jets' is INDISPENSABLE, and the sharp condition
+     is GRADED: m_j / m_1^j = o(d^{j-3}) for 3 <= j <= k+1, not uniform
+     boundedness.  At j=4 the threshold w ~ d is attained exactly.
+
+==========================================================================
+SUMMARY  A=True  B=True  C=True  D/G=True  E=True  positive-control=True  F=True
+==========================================================================
