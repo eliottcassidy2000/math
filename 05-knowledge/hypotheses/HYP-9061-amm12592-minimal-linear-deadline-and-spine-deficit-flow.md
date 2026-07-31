@@ -12,6 +12,7 @@ source: death-star-2026-07-30-coinC
 related:
   - THM-2160
   - THM-2225
+  - THM-2976  # binary-clock parity: checkpoint vanishing, o* = 2^(v2(M+1)), odd-unit-fraction corner ladder
 external:
   - "Elliot Glazer, American Mathematical Monthly Problem 12592 (2026)."
 script: 04-computation/amm12592_artanh_certificate_decode_deathstar.py

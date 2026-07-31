@@ -132,6 +132,22 @@ corner routing at `gamma in {1/2, 0.6, 0.75, 0.9}`).
   intact SHA DAG with the 29,364 residual replayed byte-identically.
   Forwarded to opus (THM-2958 package) and mac-mini.
 
+## 5a2. The binary clock (THM-2976, PROVED, coinC2 session)
+
+The forced parity `beta_M` runs on a binary clock: it **vanishes
+identically at `M+1 = 2^r`** (Frobenius, any depth law) — dyadic
+checkpoints are parity-free, which is why the classical `gamma = 1`
+scheme closes there; otherwise its minimal odd position is **exactly
+`2^{v_2(M+1)}`**, reaching the isolated corner cell iff
+`d_M = 2^{v_2(M+1)} - 1`. For `D0 = 0` the rates with infinitely many
+corner-timed levels are exactly the odd unit fractions `gamma = 1/J`
+(`J >= 3` odd): `gamma = 1/3` (`C = 4/3`) is the top rung. Both
+certificate near-ratios (`q_B/p_B ~ 0.3362`, `r_A/r_B ~ 0.3308`)
+straddle `1/3`; `alpha = 2457/6592` itself is not corner-clocked.
+Consequence for duals: parity-based 2-adic extraction at level `M` is
+capped at valuation `s * 2^{v_2(M+1)}` — deep extraction demands
+dyadically-timed level subsequences.
+
 ## 5b. The 2-adic engineering of the certificate (decode, this session)
 
 Both certificate biases have odd denominators, odd `p`-numerators, and
