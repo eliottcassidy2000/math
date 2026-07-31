@@ -2,7 +2,7 @@ LRC14 projected k=2 exact descent closure 1800..1824
 uniform_engine_sha256=34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
 projected_engine_sha256=76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662
 scalar_band_1810_sha256=b29e1ccd9c3406c14bcfe2a53d5b6cee990c3d7a5e876bd5badcb27e2b506f0e
-scalar_band_1800_sha256=a652db146760a151572ca2ff8f093cf297cf3a6322df441e530d9da3fb24ba0a
+scalar_band_1800_sha256=ef9c9a2042c8d13d2f94acf8463fff1207bc6d03e8f1a3cb8589e8fb7d0db918
 scope=ten exact-suffix rows;all distinct later nonaligned labels;no finite label horizon
 pipeline=residue rays;denominator multisets;all-divisor crude;common-K5 status;scalar-slack literal packets;projected residual
 projected_identity=P_(E,Z)=phi_L(C_E minus union_z D_z);two-aligned cap=25/91

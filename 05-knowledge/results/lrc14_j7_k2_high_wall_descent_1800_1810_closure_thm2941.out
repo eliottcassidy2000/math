@@ -1,7 +1,7 @@
 LRC14 projected k=2 forced-high exact-ray descent closure 1800..1810
 uniform_engine_sha256=34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
 scalar_band_1810_sha256=b29e1ccd9c3406c14bcfe2a53d5b6cee990c3d7a5e876bd5badcb27e2b506f0e
-scalar_band_1800_sha256=a652db146760a151572ca2ff8f093cf297cf3a6322df441e530d9da3fb24ba0a
+scalar_band_1800_sha256=ef9c9a2042c8d13d2f94acf8463fff1207bc6d03e8f1a3cb8589e8fb7d0db918
 scope=six inherited HIGH-TAIL rows;all distinct later nonaligned labels;no label horizon
 ray_law=delta(r+mL)=A(r)/(r+mL);search=first four points of every positive ray plus the first wall-eligible point
 forced_high_wall=floor(13L/150)+1;scalar_necessary=sum(delta)>=h/91
