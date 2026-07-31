@@ -298,6 +298,15 @@
   `1619`.  Source/output/profile/section/class/semantic SHA-256 are
   `eef6a5c0...e1e8` / `bb4e5df5...504b` / `a0ba343a...df1` /
   `a96f2b6d...056f` / `aab1b5f7...c78` / `46cd5ec8...89cb`.
+- `lrc14_j7_k2_z1618_z1616_status_descent_thm2980.py` -> matching `.out`
+  [FINITE-EXACT THM-2980 BOUNDARY INPUT; THM-2980 REMAINS RESERVED].  The
+  singleton `(2,6,8,10,12,14)` at `1618` leaves exactly three literal
+  packets after common status, all killed by projected cells with minimum
+  margin `1296/5551`; the singleton `(1,4,8,10,12,14)` at `1616` closes by
+  five exact status certificates.  The atlas heights `1619` and `1617` are
+  empty, so the projected `k=2` cap is `1615`.  Source/output/profile/semantic
+  SHA-256 are `3d8a0a3d...af8a` / `20fdd107...fd2` /
+  `555fe793...0793` / `889fbb40...7e67`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:
