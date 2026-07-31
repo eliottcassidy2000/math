@@ -1,0 +1,18 @@
+THM2794 RAIL-EIGHT ALL-COMPONENT SEMANTIC-ATOM NO-GO EXACT REFEREE
+config=(rail8,sector0,edge1,kappa1,h6) metadata=(1,4,12)
+source_carry=12 private_root=12 missing_label=1 active_labels=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+facet_clock_values=(0, 1509311690628117483066960, 3259498009127699308489520, 3259498009127699308489520, 0, 0, 0)
+marked_clock_values=(0, 339633525654239542165440, 750593782703678965571520, 719200126392878704654080, 0, 0, 0)
+fixed_base_piece_counts=(0, 239, 516, 516, 0, 0, 0)
+marked_source_piece_counts=(0, 239, 526, 504, 0, 0, 0)
+delayed_component_counts=(0, 165291, 356973, 356973, 0, 0, 0)
+component_positive_overlap_raw=(0, 0, 0, 0, 0, 0, 0)
+component_closure_seams=(0, 94, 207, 202, 0, 0, 0)
+base_positive_overlap_raw=(0, 0, 0, 0, 0, 0, 0)
+base_closure_seams=(0, 189, 416, 406, 0, 0, 0)
+positive_clock_supports=facet:(1,2,3) marked:(1,2,3)
+total_positive_delayed_components=879237 total_component_seams=503
+stronger_route=fixed-facet base intersect marked source is empty before delayed prefix on every clock
+mechanism=all closure contacts are facet-right to marked-left; strict open supports do not cross
+scope=one carry and one fixed rail8 configuration; no other-configuration, full-union, row, or LRC14 exclusion
+ALL EXACT CHECKS PASSED

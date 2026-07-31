@@ -39,6 +39,9 @@ TournamentH7/
     ├── LRCObserverGluingLedger.lean
     │                          S259 observer-chart gluing ledger for the
     │                          direct-arc / pair-scissors / terminal interface
+    ├── LRCC169CarrySelector.lean
+    │                          exact C13 carry cocycle, nonsplit C169 lift,
+    │                          seam clutch, and independent origin-selector XOR
     └── Verify.lean           #print axioms audit
 ```
 
@@ -173,6 +176,44 @@ for the 17 wallpaper groups, 230 three-dimensional space groups, 14 Bravais
 lattice types, and four Jacobi theta channels; proves the De Moivre quintic
 fold over `Rat`; and keeps theta/crystallographic residual production
 conditional on observer-gluing or finite-address packet output.
+
+`LRCC169CarrySelector.lean` is the current sorry-free formal interface for the
+THM-2878/2882 carry and THM-2886 selector coordinates.  It proves the
+base-thirteen carry cocycle, the nonsplit `Fin 169` lift, the exponent-three
+seam clutch, and the selector XOR law while keeping carry and selector parity
+as independent coordinates.  Its semantic-`V4` addendum formalizes the two
+distinct characters `det(QB,-)` and `det(QA,-)`, proves that no single
+character types both the selector seam and `QB` carry-edge reversal, proves
+that the reduced event pattern is not a vertex character, and shows that the
+joint two-character map is injective.  The module is root-imported; both
+
+```bash
+lake env lean TournamentH7/LRCC169CarrySelector.lean
+lake build TournamentH7.LRCC169CarrySelector
+```
+
+pass, and its twelve `#print axioms` checks report no `sorryAx`.  The aggregate
+`lake build TournamentH7` currently reaches this module and then fails in the
+older `LRCCoherentBlockerChronology.lean` at its rationally typed inference
+from `0 <= k < c` to `0 <= c-k-1`; that pre-existing integral-address typing
+debt is unrelated to `LRCC169CarrySelector`.
+
+`LRCResidualSemilatticeNoGo.lean` is the sorry-free bridge guardrail between
+THM-2888/2893's unmarked literal-residual algebra and THM-2889's ordered
+quaternionic clutch.  It proves that finite-support deletion is order-blind,
+idempotent, and remains order-blind after every later unmarked continuation;
+no function on that carrier can assign distinct values to the two insertion
+orders; and every union-multiplicative invariant from it to a group is
+trivial.  Thus the heavy-flag carrier cannot retain the central sign without a
+new marked/oriented sidecar.  Both
+
+```bash
+lake env lean TournamentH7/LRCResidualSemilatticeNoGo.lean
+lake build TournamentH7.LRCResidualSemilatticeNoGo
+```
+
+pass; the five `#print axioms` reports contain only standard Mathlib
+foundational axioms and no `sorryAx`.
 
 ## Proof sketch
 

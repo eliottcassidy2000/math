@@ -1,0 +1,6 @@
+THM-2790 INDEPENDENT DETERMINANT-COORDINATE RESPONSE AUDIT
+status=VERIFIED-EXACT independent dual-field companion
+p=352341050142921841 spatial=28392 modes=26208 carry_spatial=2184 carry_modes=2016
+p=956354278959359281 spatial=28392 modes=26208 carry_spatial=2184 carry_modes=2016
+both_fields spatial=56784 modes=52416 carry_spatial=4368 carry_modes=4032
+INDEPENDENT CENTRAL-RESPONSE AUDIT PASSED

@@ -1,5 +1,24 @@
 # THM-1365: The Galois Reduction — a Jacobian Conjecture that holds (polynomial-deck case), and the fixed-point bridge
 
+> **SCOPE PIN AND LATER UPDATE (THM-2598 / MISTAKE-297 / THM-2633).**
+> “Polynomial-deck” is a
+> load-bearing hypothesis, not a presentation choice.  For monodromy `G`
+> with point stabilizer `H`, the generic group `N_G(H)/H` acts on the
+> finite-etale cover over the complement of the Jelonek set, but its elements
+> need not extend polynomially across that set.  Therefore this theorem does
+> **not** prove that every Keller stabilizer is self-normalizing and does not
+> exclude the `D4` degree-four branch by that route.  Its statements (A)--(C)
+> below, and its
+> explicitly conjectural Deck-Poverty paragraph, remain unchanged.  THM-2598
+> sharpens the gap: the generic element does extend over the finite
+> normalization, and becomes polynomial exactly when it preserves the open
+> affine source; the then-live `D4` branch therefore needed an unramified
+> missing divisor exchanged with an included divisor over the same target
+> component.  THM-2633 later excludes `D4` independently: affine openness and
+> purity force every Keller point stabilizer to normally generate `G` (and
+> therefore surject onto `G^ab`).  Thus the current degree-four list is
+> `A4,S4`, without any deck extension.
+
 **Status:** VERIFIED (modulo three classical citations, named below)
 **Author:** boxeph-2026-07-20-S150 (HYP-8210)
 **Companion:** `07-reflections/the-galois-reduction-and-deck-poverty-boxeph-S150.md`

@@ -1,0 +1,19 @@
+LRC14 half/C221 cycle semantic gate probe
+status=VERIFIED-EXACT stopping certificate; canonical typed row
+row=(1, 14, 27, 40, 53, 66, 13, 2197, 742586); clocks=(2, 4, 6)
+half_delayed_cycle=(Fraction(11, 24), Fraction(11, 24)); C221_delayed_cycle=(Fraction(4, 17), Fraction(13, 17))
+delayed_endpoint_rows=(family,y,c1_distance,bits)=(('half', Fraction(11, 24), Fraction(1, 24), (True, (True, True, True, True, True), False, True, False)), ('half', Fraction(11, 24), Fraction(1, 24), (True, (True, True, True, True, True), False, True, False)), ('C221', Fraction(4, 17), Fraction(1, 17), (True, (True, True, True, True, True), False, True, False)), ('C221', Fraction(13, 17), Fraction(1, 17), (True, (True, True, True, True, True), False, True, False)))
+delayed_endpoint_verdict=all pass guard, five units, target-a, target-b-safe; all fail only the unshifted-c1-safe bit
+physical_event_rows=(family,event,x,exclusive_sources,T6x,word)=(('half', 0, Fraction(55232507, 115843416), (), Fraction(11, 24), (1, 2)), ('half', 1, Fraction(58313459, 115843416), (), Fraction(11, 24), (1, 2)), ('C221', 0, Fraction(39123022, 82055753), (), Fraction(4, 17), (1, 2)), ('C221', 1, Fraction(41305508, 82055753), (), Fraction(13, 17), (1, 2)))
+physical_verdict=no event centre is an exclusive source; T6 reaches the deepest fork Q_(3,{1,2}) but not along an E3 source branch
+B1_even_clock_constants=(k,(13^k-1)/24)=((2, Fraction(7, 1)), (4, Fraction(1190, 1)), (6, Fraction(201117, 1)))
+prescribed_clock_verdict=B1^k=B0^k for k=2,4,6; the half phase cannot change any THM2305 endpoint span
+B1_length6_certificate_partition={'a@0->c1-danger@2': 32, 'a@1->c1-danger@3': 16, 'a@2->c1-danger@4': 8, 'a@3->c1-danger@5': 4, 'b@0,1->speed14-danger@5': 4}
+B1_factor_sparse=a@j forces c1-danger@j+2; b@j,b@j+1 force speed14-danger@j+5
+B1_strict_word=bbba:witness=12894291/80000000:states=((Fraction(12894291, 80000000), 'b', Fraction(10260037, 560000000)), (Fraction(47625783, 80000000), 'b', Fraction(1272987, 560000000)), (Fraction(19135179, 80000000), 'b', Fraction(6115129, 280000000)), (Fraction(48757327, 80000000), 'a', Fraction(3083243, 560000000)))
+B1_scope=all length-six literal words empty and no recurrent SCC; this probe does not decide whether some length-five word exists
+THM2644_C221=(modulus,labels,M,E,delta,R,J,2a)=(221, (114, 107), 2, 2, 2, 2, 0, 7)
+THM2644_C2=(M,E,R,identity_mass)=(1, 1, 1, 0)
+THM2644_verdict=C221 is the inverse-pair equality/backtracking boundary; C2 has A*=A and is the sharp even-group hostile; neither supplies one odd-torsor same-oriented semantic transition
+SCOPE: no semantic cospan, endpoint current, scalar row, row exclusion, or LRC14 conclusion
+ALL CHECKS PASSED

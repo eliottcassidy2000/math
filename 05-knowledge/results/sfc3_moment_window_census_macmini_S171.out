@@ -1,0 +1,37 @@
+sfc3_moment_window_census_macmini_S171.py — bounded-exact census for the
+Strong Factorial Conjecture SFC(3) (Edo–van den Essen), all three-slot
+supports and shifted windows in the box:
+
+  f = a z^p + b z^q + c z^r,  0 <= p < q < r <= 9   (120 support triples)
+  window k in {0,...,6}:  L(f^{k+1}) = L(f^{k+2}) = L(f^{k+3}) = 0 ?
+  (L(z^n) = n!)
+
+RESULT:  census done: 840 cells, certified-empty 840, flagged 0: []
+
+Certificate per cell (rigorous, one-way): with degrees (k+1,k+2,k+3) and
+D = 3k+4, the Macaulay multiplication matrix {x^alpha F_m} spans the full
+degree-D graded piece mod a prime (rank C(D+2,2) over F_p, p in
+{1000000007, 998244353, 754974721}); full rank over F_p implies full rank
+over Q, hence the ideal contains all degree-D forms and the projective
+variety V(F_{k+1},F_{k+2},F_{k+3}) in P^2 is EMPTY over C.  Any common zero
+with a zero coordinate is excluded a priori (pure-power moments are nonzero
+factorials; two-term vanishing windows of length 3 > 2 contradict the proved
+SFC(2)), so emptiness is exactly "SFC(3) holds on this cell".  No cell was
+rank-deficient, so no exact escalation was needed.
+
+Controls:
+  * smoke boxes (r<=5,k<=3): 80/80 and (r<=4,k<=2): 30/30 certified empty;
+  * consecutive supports (p,p+1,p+2), k=0 are re-proved (they are covered by
+    the symbolic theorem THM-2812) — census verdicts agree;
+  * independent engine: sympy Groebner over QQ with saturation t*abc-1 on the
+    non-consecutive shifted cell (p,q,r,k) = (0,2,5,1): reduced basis = [1],
+    matching the rank certificate.
+
+Interpretation: SFC(3) — if a 3-term univariate f has 3 consecutive
+vanishing factorial power-moments then f = 0 — holds for all supports up to
+z^9 and all windows starting at k <= 6.  Complements THM-2812 (all
+consecutive supports, first window) in both open directions (arbitrary
+supports, shifted windows), each cell with a checkable certificate.
+
+Reproduce:
+  python3 04-computation/sfc3_moment_window_census_macmini_S171.py 9 6

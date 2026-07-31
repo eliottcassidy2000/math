@@ -1,0 +1,15 @@
+THM-2612 exact companion
+d4_group_order=8
+point_stabilizer_order=2
+point_stabilizer_normalizer_order=4
+quartic_field_automorphisms=C2
+proper_intermediate_fields=1
+deck_formula=tau(w)=-w-(q-2zw)/(2w^2+p+z)
+deck_denominator_norm=Sprime(z)^2
+deck_formula_involutive=YES
+tax_positive_inertia=double_transposition,four_cycle
+positive_tax_gate=prime_divides_gcd(q,p^2-4r)
+gcd_gate_sufficient=NO
+gcd_zero_tax_hostile_indices=(1,1)
+residue_characteristic_two_covered=NO
+ALL CHECKS PASSED

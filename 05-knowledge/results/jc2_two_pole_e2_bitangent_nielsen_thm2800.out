@@ -1,0 +1,16 @@
+THM-2800 TWO-POLE E=2 BITANGENT/NIELSEN AUDIT
+N | Q_N(s) | Nielsen classes
+ 4 | 2*(2*s - 1) | 1
+ 5 | 5*s**2 - 6*s + 2 | 2
+ 6 | (2*s - 1)*(6*s**2 - 9*s + 4)/2 | 3
+ 7 | (49*s**4 - 140*s**3 + 156*s**2 - 78*s + 15)/7 | 4
+ 8 | degree 5 squarefree | 5
+ 9 | degree 6 squarefree | 6
+10 | degree 7 squarefree | 7
+exact algebra degrees N=4..10: 7
+normalized pair placements checked: 84
+N=4 monodromy order=12 (A4)
+N=5 raw candidates=8, centralizer orbits=2, group order=20
+N=5 field polynomial=5*a^2+2*a+1, discriminant=-16
+bitangent eliminant and response converse gates: PASS
+assert_nodes=0

@@ -1,0 +1,19 @@
+[1] well-formed (all triples coprime): True
+[1] weights prime to char 3 (tame): True
+[2] Fano index sum(w)-d = 4 > 0: True
+[3] degree-14 monomials: 11, mixed (both blocks): 0 (structurally decoupled: True)
+[4] a(t) = t^7 + t^2 + 2 over F_3 irreducible: True
+[4] gcd(a,a') = [1] (separable: True)
+[4] quasi-smoothness: grad F = (A_0, A_1, 2x2, 2x3); x2=x3=0 & Euler(7=1!=0 mod 3) => A=A_0=A_1=0 => common root of (a,a') => none (separable). At (1:0): A_0=7x0^6!=0. QED
+[5] singular pts: 7 distinct geometric roots of A on P(2,2)-line, each 1/2(1,1)=A_1 (tame); 2 roots of x2^2+x3^2 on P(7,7)-line (over F_9, i=sqrt(-1)), each 1/7-cyclic (tame). Total 9.
+[6] divisor laws: div(l_i)=C_i+D_i=2H; div(s)=sum_i C_i=7H; D_i=2H-C_i (so C_i is NOT numerically D_i)
+[6] intersections: H^2=H.C_i=1/14; C_i^2=-5/14; C_i.C_j=1/7 (i!=j); C_i.D_i=1/2; C_i.D_j=0 (i!=j)
+[6] Gram(C_1,...,C_7): determinant=1/128, rank=7
+[7] Frobenius: C_i -> D_(i+1)=2H-C_(i+1); on v_i=C_i-H it is v_i -> -v_(i+1)
+[7] Frobenius fixed dimension=1; order=14; traces k=1..4: [Fraction(2, 1), Fraction(0, 1), Fraction(2, 1), Fraction(0, 1)]
+[8] q=3: #X(F_q) = 16 = q^2 + (2)*q + 1   [sing pts rational here: A1s:0, 1/7s:0]
+[8] q=3: independent affine-cone/G_m orbit count = 16 (PASS)
+[8] q=9: #X(F_q) = 82 = q^2 + (0)*q + 1   [sing pts rational here: A1s:0, 1/7s:2]
+[8] q=9: independent affine-cone/G_m orbit count = 82 (PASS)
+[8] q=27: #X(F_q) = 784 = q^2 + (2)*q + 1   [sing pts rational here: A1s:0, 1/7s:0]
+[8] q=81: #X(F_q) = 6562 = q^2 + (0)*q + 1   [sing pts rational here: A1s:0, 1/7s:2]

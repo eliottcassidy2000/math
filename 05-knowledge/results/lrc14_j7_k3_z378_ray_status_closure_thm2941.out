@@ -1,0 +1,62 @@
+LRC14 projected k=3 z1=378 all-label ray/status closure
+ray_status_source_sha256=34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
+scope=nine extracted z1=378 rows plus the carried-forward old-frontier body;three distinct later nonaligned labels;no finite horizon
+ray_law=(z+L)delta(z+L)=zdelta(z);A(L-b)=-A(b);all denominator maxima attained
+pair_overlap_exhaustive_controls=946
+common_table_controls=loads(9,9):FEASIBLE;loads(14,8):EXACT_FARKAS_INFEASIBLE
+candidate_bodies=10;ray_scalar_surviving_bodies=5;eliminated_bodies=((1, 4, 8, 10, 12, 14), (1, 6, 8, 10, 13, 14), (1, 6, 10, 12, 13, 14), (2, 6, 8, 10, 13, 14), (2, 6, 10, 12, 13, 14))
+E=(1, 4, 8, 10, 12, 14);h=1049/2940;r=34;L=11760;high=1159;d1=280;ray_checks=11759;ray_signs={-1: 5879, 0: 1, 1: 5879};denominator_classes=59;denominator_trials=35990;scalar_states=0;crude_kills=0;status_kills=0;survivors=0;status_M_histogram={}
+  scalar_state_denominators=()
+  crude_kill_denominators=()
+  status_kill_denominators=()
+  max_state=None
+E=(1, 2, 6, 10, 12, 14);h=577/1470;r=30;L=5880;high=580;d1=140;ray_checks=5879;ray_signs={-1: 2937, 0: 5, 1: 2937};denominator_classes=47;denominator_trials=18424;scalar_states=11;crude_kills=3;status_kills=8;survivors=0;status_M_histogram={3: 7, 5: 1}
+  scalar_state_denominators=((21, 98, 140, 196), (84, 98, 140, 196), (84, 140, 196, 588), (98, 140, 140, 196), (98, 140, 196, 420), (98, 140, 196, 490), (98, 140, 196, 588), (98, 140, 196, 980), (98, 140, 196, 1470), (140, 196, 420, 980), (140, 196, 588, 980))
+  crude_kill_denominators=((98, 140, 140, 196), (98, 140, 196, 490), (98, 140, 196, 980))
+  status_kill_denominators=((21, 98, 140, 196), (84, 98, 140, 196), (84, 140, 196, 588), (98, 140, 196, 420), (98, 140, 196, 588), (98, 140, 196, 1470), (140, 196, 420, 980), (140, 196, 588, 980))
+  max_state=((98, 140, 196, 588), {'labels': (378, 660, 390, 410), 'total': Fraction(3794638, 271486215), 'excess': Fraction(43319, 41767110)})
+E=(1, 6, 8, 10, 12, 14);h=1049/2940;r=34;L=11760;high=1159;d1=280;ray_checks=11759;ray_signs={-1: 5879, 0: 1, 1: 5879};denominator_classes=59;denominator_trials=35990;scalar_states=2;crude_kills=1;status_kills=1;survivors=0;status_M_histogram={3: 1}
+  scalar_state_denominators=((196, 280, 392, 980), (280, 392, 840, 980))
+  crude_kill_denominators=((196, 280, 392, 980),)
+  status_kill_denominators=((280, 392, 840, 980),)
+  max_state=((280, 392, 840, 980), {'labels': (378, 390, 1358, 492), 'total': Fraction(22575641, 1915211844), 'excess': Fraction(118817, 4788029610)})
+E=(1, 6, 8, 10, 13, 14);h=1587/5096;r=34;L=152880;high=15057;d1=3640;ray_checks=152879;ray_signs={-1: 76437, 0: 5, 1: 76437};denominator_classes=119;denominator_trials=287980;scalar_states=0;crude_kills=0;status_kills=0;survivors=0;status_M_histogram={}
+  scalar_state_denominators=()
+  crude_kill_denominators=()
+  status_kill_denominators=()
+  max_state=None
+E=(1, 6, 9, 10, 12, 14);h=1601/4410;r=32;L=17640;high=1738;d1=140;ray_checks=17639;ray_signs={-1: 8819, 0: 1, 1: 8819};denominator_classes=71;denominator_trials=62196;scalar_states=15;crude_kills=10;status_kills=5;survivors=0;status_M_histogram={3: 5}
+  scalar_state_denominators=((84, 140, 588, 2940), (98, 140, 588, 2940), (140, 196, 588, 2940), (140, 252, 588, 2940), (140, 294, 588, 2940), (140, 315, 588, 2940), (140, 490, 588, 2940), (140, 588, 735, 2940), (140, 588, 882, 2940), (140, 588, 980, 2940), (140, 588, 1260, 2940), (140, 588, 1470, 2940), (140, 588, 1764, 2940), (140, 588, 1960, 2940), (140, 588, 2940, 2940))
+  crude_kill_denominators=((84, 140, 588, 2940), (98, 140, 588, 2940), (140, 196, 588, 2940), (140, 294, 588, 2940), (140, 490, 588, 2940), (140, 588, 735, 2940), (140, 588, 980, 2940), (140, 588, 1470, 2940), (140, 588, 1960, 2940), (140, 588, 2940, 2940))
+  status_kill_denominators=((140, 252, 588, 2940), (140, 315, 588, 2940), (140, 588, 882, 2940), (140, 588, 1260, 2940), (140, 588, 1764, 2940))
+  max_state=((140, 490, 588, 2940), {'labels': (378, 1836, 390, 402), 'total': Fraction(8453812, 685638135), 'excess': Fraction(495773, 1371276270)})
+E=(1, 6, 10, 12, 13, 14);h=2657/7644;r=34;L=76440;high=7529;d1=1820;ray_checks=76439;ray_signs={-1: 38217, 0: 5, 1: 38217};denominator_classes=95;denominator_trials=147440;scalar_states=0;crude_kills=0;status_kills=0;survivors=0;status_M_histogram={}
+  scalar_state_denominators=()
+  crude_kill_denominators=()
+  status_kill_denominators=()
+  max_state=None
+E=(2, 6, 8, 10, 12, 14);h=363/980;r=36;L=11760;high=1159;d1=280;ray_checks=11759;ray_signs={-1: 5877, 0: 5, 1: 5877};denominator_classes=59;denominator_trials=35990;scalar_states=4;crude_kills=0;status_kills=4;survivors=0;status_M_histogram={5: 2, 7: 2}
+  scalar_state_denominators=((280, 392, 392, 840), (280, 392, 588, 840), (280, 392, 840, 840), (280, 392, 840, 980))
+  crude_kill_denominators=()
+  status_kill_denominators=((280, 392, 392, 840), (280, 392, 588, 840), (280, 392, 840, 840), (280, 392, 840, 980))
+  max_state=((280, 392, 840, 840), {'labels': (378, 390, 574, 1358), 'total': Fraction(118814329, 9576059220), 'excess': Fraction(939299, 4788029610)})
+E=(2, 6, 8, 10, 13, 14);h=5053/15288;r=34;L=152880;high=15057;d1=3640;ray_checks=152879;ray_signs={-1: 76439, 0: 1, 1: 76439};denominator_classes=119;denominator_trials=287980;scalar_states=0;crude_kills=0;status_kills=0;survivors=0;status_M_histogram={}
+  scalar_state_denominators=()
+  crude_kill_denominators=()
+  status_kill_denominators=()
+  max_state=None
+E=(2, 6, 10, 12, 13, 14);h=2803/7644;r=34;L=76440;high=7529;d1=1820;ray_checks=76439;ray_signs={-1: 38219, 0: 1, 1: 38219};denominator_classes=95;denominator_trials=147440;scalar_states=0;crude_kills=0;status_kills=0;survivors=0;status_M_histogram={}
+  scalar_state_denominators=()
+  crude_kill_denominators=()
+  status_kill_denominators=()
+  max_state=None
+E=(2, 8, 10, 12, 13, 14);h=1689/5096;r=38;L=152880;high=15057;d1=3640;ray_checks=152879;ray_signs={-1: 76435, 0: 9, 1: 76435};denominator_classes=119;denominator_trials=287980;scalar_states=6;crude_kills=4;status_kills=2;survivors=0;status_M_histogram={5: 2}
+  scalar_state_denominators=((168, 3640, 7644, 10920), (980, 3640, 7644, 10920), (2184, 3640, 7644, 10920), (3640, 3640, 7644, 10920), (3640, 7644, 10920, 10920), (3640, 7644, 10920, 12740))
+  crude_kill_denominators=((2184, 3640, 7644, 10920), (3640, 3640, 7644, 10920), (3640, 7644, 10920, 10920), (3640, 7644, 10920, 12740))
+  status_kill_denominators=((168, 3640, 7644, 10920), (980, 3640, 7644, 10920))
+  max_state=((3640, 3640, 7644, 10920), {'labels': (378, 16254, 380, 574), 'total': Fraction(98132383, 8961787380), 'excess': Fraction(5502473, 233006471880)})
+totals=states:38;crude_kills:18;status_kills:20;survivors:0
+verified_farkas_instance_sha256=983c8c90c12b13e968a226aa1daab378fcd66ca31a0ae4ca0e8ab11589773615
+conclusion=all ten body candidates checked;all nine extracted z1=378 rows are empty
+semantic_sha256=c0108ee9009ace7ae9270bae2d32aaf9b0de62b6ad05ba859f4c86e25597e0c8
+all_exact_controls=PASS

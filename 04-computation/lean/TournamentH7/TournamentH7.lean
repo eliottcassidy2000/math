@@ -783,3 +783,5 @@ import TournamentH7.GMC2FrameBridgeDvd
 import TournamentH7.GMC2DvdKConnector
 import TournamentH7.GMC2DvdKTransposeAssembly
 import TournamentH7.GMC2DvdKPhiCoincide
+import TournamentH7.LRCC169CarrySelector  -- codex / THM-2878 + THM-2882: kernel-pure base-thirteen carry cocycle, nonsplit Fin 169 lift, exponent-three seam clutch, and independent two-origin selector XOR coordinate. No sorry/native_decide
+import TournamentH7.LRCResidualSemilatticeNoGo  -- THM-2888/2889 bridge guardrail: finite-support deletion is commutative/idempotent, every multiplicative group image is trivial, and no ordered central clutch descends. No sorry/native_decide

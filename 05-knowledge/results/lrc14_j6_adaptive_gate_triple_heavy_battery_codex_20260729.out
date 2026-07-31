@@ -1,0 +1,16 @@
+LRC14 J=6 ADAPTIVE GATE / TRIPLE-HEAVY SCOPED BATTERY
+status=FINITE-EXACT-SCOPED-PROBE;NO-UNIFORM-THEOREM
+seven_body_strata=low:792,one_of_13_14:1848,both:792;THM885_j6_low_inherited=NO
+root_sample=low:n=12,top12_pass=10,max_adaptive_K=16|one:n=12,top12_pass=5,max_adaptive_K=20|both:n=12,top12_pass=5,max_adaptive_K=21;max_top30_threshold=1554;sealed_tail_first=1601
+fixed_top12_failures=16/36;first=(1, 4, 7, 8, 10, 11, 12);margin=-238717/34474440;adaptive_K=16
+sample_digest_sha256=ce3be5476ee287f7d972d1853f4e9fe52175583347832a75f103fd6e9172ba51
+battery_E=(2, 8, 9, 10, 11, 13, 14);adaptive_K=19;rank1_apex=19;B2_margin=10392751/283936380;cheap_T3_margin=-52261333/3123300180;exact_T3_margin=31389571261/3605249423160;triple_paid=15496;triple_max=(17, 23, 37);H=29;edges=179;triangles=524;all_triangle_residual_pair_caps=PASS;minimum_pair_margin=26013829031/1000056692250;triangle=(17, 23, 37);maxpair=(108, 125)
+strong_pair_E=(2, 8, 9, 10, 11, 13, 14);apex=19;B2_below_4h7_margin=16277273/1441523160;H3=33;scalar_triple_candidates=5456;heavy_triples=1574;reused_pair_residuals=452;all_heavy_triple_residual_pair_caps=PASS;minimum_pair_margin=26013829031/1000056692250;triangle=(17, 23, 37);maxpair=(108, 125)
+battery_E=(1, 3, 9, 10, 11, 12, 14);adaptive_K=20;rank1_apex=39;B2_margin=68105413/1150689540;cheap_T3_margin=230037889/21863101260;exact_T3_margin=810055139/33369996660;triple_paid=18839;triple_max=(17, 23, 29);H=6;edges=8;triangles=1;all_triangle_residual_pair_caps=PASS;minimum_pair_margin=696070189/19068569520;triangle=(17, 19, 29);maxpair=(16, 23)
+strong_pair_E=(1, 3, 9, 10, 11, 12, 14);apex=39;B2_below_4h7_margin=34136897/1150689540;H3=12;scalar_triple_candidates=220;heavy_triples=2;reused_pair_residuals=1;all_heavy_triple_residual_pair_caps=PASS;minimum_pair_margin=696070189/19068569520;triangle=(17, 19, 29);maxpair=(16, 23)
+battery_E=(2, 5, 9, 11, 12, 13, 14);adaptive_K=21;rank1_apex=16;B2_margin=1224397/29429400;cheap_T3_margin=-5025621/451250800;exact_T3_margin=2283219/451250800;triple_paid=1799;triple_max=(20, 23, 25);H=54;edges=770;triangles=5581;all_triangle_residual_pair_caps=PASS;minimum_pair_margin=150937051/7017941700;triangle=(20, 23, 25);maxpair=(34, 37)
+strong_pair_E=(2, 5, 9, 11, 12, 13, 14);apex=16;B2_below_4h7_margin=2622107/176576400;H3=24;scalar_triple_candidates=2024;heavy_triples=631;reused_pair_residuals=619;all_heavy_triple_residual_pair_caps=PASS;minimum_pair_margin=150937051/7017941700;triangle=(20, 23, 25);maxpair=(34, 37)
+battery_counts=roots:3,H:89,maxH:54,edges:957,triangles:6106,pair_residuals:6106,pair_paid:49472,strong_H3:69,max_strong_H3:33,strong_candidates:7700,strong_heavy_triples:2207,strong_reused:1072,strong_pair_paid_including_reuse:25143
+battery_digest_sha256=865478ea6969df9633ae2d08346f90f93dbac10d4d945994a07988202d4c8cc1
+scope=36 deterministic roots plus three rank-one hostile apices;not all 3432 roots,not the seven-body rung,not LRC14
+all_exact_controls=PASS

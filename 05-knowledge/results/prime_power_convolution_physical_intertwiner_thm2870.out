@@ -1,0 +1,12 @@
+PRIME-POWER CONVOLUTION / PHYSICAL-DIAGONAL INTERTWINER AUDIT - exact
+abstract F3^2 unit/projection controls: 144; hist=(0, 0):27;(0, 1):20;(0, 2):1;(1, 0):27;(1, 1):20;(1, 2):1;(2, 0):27;(2, 1):20;(2, 2):1
+classification: CT=TD factors im(D)->ker(C-1); DT=TC factors coker(C-1)->im(D)
+dimension in both orientations: rank(D)*dim ker(C-1); no semisimplicity used
+C5 proper Boolean p-unit masks: 30; hist=(1, 1, 1):4;(1, 5, 5):1;(2, 0, 0):10;(3, 0, 0):10;(4, 0, 0):5
+C5 Cayley tournaments: 4; hist=(0, 0):4
+C9 Cayley tournaments: 16; hist=(1, 4):12;(3, 12):4
+C3 singleton sharpness: e=1; Hom dimensions=(1, 1); both explicit maps have rank 1
+C6 mixed-prime hostile: mass=3 is a 2-unit but convolution rank=2<6
+Fourier boundary: convolution diagonalizes to hhat, not h; a prime-power unit hhat has no zero while a proper Boolean h does
+scope: same-mask linear obstruction only; no physical translation, positive inverse, endpoint current, target/carry bridge, or LRC decrement
+PASS

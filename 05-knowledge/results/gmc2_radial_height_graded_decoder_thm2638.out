@@ -1,0 +1,8 @@
+THM-2638 exact radial-height graded Wick decoder
+hostile_private_levels=12/12 channel_counts=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+hostile_height_ranges=((6, 18), (12, 36), (18, 54), (24, 72), (30, 90), (36, 108), (42, 126), (48, 144), (54, 162), (60, 180), (66, 198), (72, 216))
+fourth_shell_heights=(6, 18) scalar_pushforward=0 shell_nonzero=1
+equal_height_channels=((0, 2, 0), (1, 0, 1)) height=2 radial_private=0
+source_character_checks=49 angular_classes=1
+mixed_radix_modulus=27 codes=(18, 12, 6, 10, 4, 2) selector_checks=36
+verdict=PASS: radial height restores the private hostile rows; scalar L and source characters retain the stated boundaries

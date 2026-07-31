@@ -1,0 +1,24 @@
+LRC14 lawful odometer alternating THM2640 unit-line boundary
+target_rows=(7, 9) metadata=((1, 3, 0), (1, 4, 12)) global_content=26
+cycle=(plus:4879851/9653618,minus:4773767/9653618) carries=(7,5) future=(h:6,wall:1/2)
+coefficient_covariant_profiles=(('plus_positive', (0, 0, 0, 0, 8, 8, 7)), ('minus_positive', (0, 5, 2, 2, 0, 0, 0)), ('plus_negative', (0, 0, 0, 0, 11, 11, 8)), ('minus_negative', (0, 6, 5, 5, 0, 0, 0)))
+coefficient_covariance=positive side Yminus(ell)=10*Yplus(-ell); negative side scalar=4; all four are units
+one_sided_private_geometry=(('plus', 'positive', 7, 1, 0, 3, False, 1, 2, True), ('minus', 'positive', 5, 1, 0, 12, False, 1, 11, True), ('plus', 'negative', 7, 0, 1, 1, False, 0, 2, True), ('minus', 'negative', 5, 0, 1, 10, False, 0, 11, True))
+local_geometric_unit_profiles=(('plus_positive', (0, 0, 0, 0, 9, 5, 4)), ('minus_positive', (0, 3, 9, 9, 0, 0, 0)), ('plus_negative', (0, 0, 0, 0, 4, 4, 10)), ('minus_negative', (0, 9, 8, 4, 0, 0, 0)))
+local_profile_covariance=NONE: no nonzero scalar times reversed plus profile equals minus
+all_clock_present_free_gap_plus=(Fraction(202105, 399854), Fraction(202131, 399854))
+minus_cycle_present_clocks=(3,) symmetric_gap_claim=False
+largest_standard_radius_Hge1=1/188245551 contained_in_plus_gap=True
+plus_current_present_horizon_census=((1, (Fraction(1195, 2366), Fraction(171, 338)), 569, Fraction(3411, 5198102)), (2, (Fraction(63433983, 125497034), Fraction(444095003, 878479238)), 12, Fraction(11337, 878479238)), (3, (Fraction(5772835171, 11420230094), Fraction(824698899, 1631461442)), 0, Fraction(0, 1)))
+fixed_h6_boundary=H2 has positive mass; H3 has zero mass and lies strictly inside the plus gap
+dynamic_present_horizon_census=((1, 6380, Fraction(7021099, 12298709332), ((0, Fraction(285989, 6149354666)), (2, Fraction(2799, 62748517)), (3, Fraction(2922, 62748517)), (4, Fraction(2963, 62748517)), (5, Fraction(3106, 62748517)), (6, Fraction(47457, 878479238)), (7, Fraction(2984, 62748517)), (8, Fraction(2923, 62748517)), (9, Fraction(2923, 62748517)), (10, Fraction(2923, 62748517)), (11, Fraction(2923, 62748517)), (12, Fraction(85341, 1756958476)))), (2, 561, Fraction(76227, 1756958476), ((0, Fraction(1940, 439239619)), (2, Fraction(266, 62748517)), (3, Fraction(266, 62748517)), (4, Fraction(225, 62748517)), (5, Fraction(82, 62748517)), (6, Fraction(919, 878479238)), (7, Fraction(204, 62748517)), (8, Fraction(265, 62748517)), (9, Fraction(265, 62748517)), (10, Fraction(265, 62748517)), (11, Fraction(265, 62748517)), (12, Fraction(7745, 1756958476)))), (3, 42, Fraction(5807, 1756958476), ((0, Fraction(293, 878479238)), (2, Fraction(20, 62748517)), (3, Fraction(20, 62748517)), (4, Fraction(20, 62748517)), (7, Fraction(21, 62748517)), (8, Fraction(21, 62748517)), (9, Fraction(21, 62748517)), (10, Fraction(21, 62748517)), (11, Fraction(21, 62748517)), (12, Fraction(601, 1756958476)))), (4, 4, Fraction(405, 1756958476), ((0, Fraction(2, 62748517)), (2, Fraction(2, 62748517)), (3, Fraction(2, 62748517)), (4, Fraction(2, 62748517)), (7, Fraction(1, 62748517)), (8, Fraction(1, 62748517)), (9, Fraction(1, 62748517)), (10, Fraction(1, 62748517)), (11, Fraction(1, 62748517)), (12, Fraction(41, 1756958476)))), (5, 1, Fraction(1883, 275716983698), ((7, Fraction(1883, 275716983698)),)), (6, 0, Fraction(0, 1), ()))
+last_dynamic_survivor=(H:5,h:7,interval:(Fraction(31719032, 62748517), Fraction(139373428491, 275716983698)))
+first_empty_dynamic_cylinder=(H:6,interval:(Fraction(1811854513263, 3584320788074), Fraction(12682981649963, 25090245516518)))
+dynamic_present_free_gap=(Fraction(31719030, 62748517), Fraction(31719032, 62748517)) relative_margins=(3/(26R),1/(26R)) missing_future_digits=(5,6)
+all_event_dynamic_present_census=((1, 6380, Fraction(7021099, 12298709332)), (2, 4298, Fraction(687145, 22840460188)), (3, 3207, Fraction(780376, 519620469277)), (4, 1645, Fraction(67780, 965009442943)), (5, 68, Fraction(1259, 7168641576148)), (6, 0, Fraction(0, 1)))
+open_H5_all_event_witness=(Fraction(31719032, 62748517), Fraction(905927272953, 1792160394037)) length=1/13^11 digit_word=(7, 0, 0, 0, 0)
+all_event_boundary=earlier states split the H5 survivor into 68 components but do not kill it; state zero binds at H6
+sharp_dynamic_boundary=H5 survives only in one h=7 component; H6 is empty; nesting forces all H>=6 empty
+verdict=coefficient-line covariance is exact, but it is not physical packet transport
+first_failures=claimed covariant edge misses the near-cycle private half; repaired local edge is unit but loses scalar covariance; fixed h=6 dies at H3 and dynamically typed current-present support dies at H6
+scope=selected alternating rail cycle and all current-present event factors; delayed words,private geometry over surviving components,configuration switching,semantic transition,row exclusion,and LRC14 remain untested

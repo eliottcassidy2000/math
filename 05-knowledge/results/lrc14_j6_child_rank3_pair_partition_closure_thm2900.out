@@ -1,0 +1,7 @@
+THM-2900 CHILD q3+B2 INDEPENDENT AUDIT
+pairs=784;closed=784
+minimum_margin=1720879997/753665913000;E=(2, 8, 9, 10, 11, 13, 14);rank=1;apex=19;H4pair=(37, 125);q3=1113566829/28324045750;B2=1335801387779/17334315999000
+recursive_H2_rows_needed=0
+canonical_ledger_sha256=60ad47208695c5aa22ec79ca428eccfdd5e214cd7cf4a20a85629aa5023a6fa2
+mode=LOCKED
+all_independent_controls=PASS

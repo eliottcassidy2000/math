@@ -1,0 +1,17 @@
+S4 QUARTIC / V4 QUASI-ETALE HOSTILE
+group orders: |G|=24, |H|=6, |V|=4, sheets=4
+quartic action: faithful permutations=24, V cycle types=[(2, 2), (2, 2), (2, 2)]
+V fixed-locus codimensions=[2, 2, 2]; quotient is unramified in codimension one
+V-invariant ring: C[a,b,c,d]/(d^2-abc); singular locus is the three coordinate axes
+Q=S3 invariant ring: C[A=a+b+c,B=ab+ac+bc,d]
+quartic source map: (e1,e2,e3) -> (e1^2-2e2,e2^2-2e1e3,e3)
+Jacobian=4*(e1*e2 - e3); NON-KELLER hostile
+quartic: T^4-2*A*T^2-8*d*T+(A^2-4*B)
+squared-pair resolvent: U^3-4*A*U^2+16*B*U-64*d^2; roots 4a,4b,4c
+normalized cubic disc: Disc_Q(F)=Disc_H*(Jac(F)/4)^2
+squared-pair cubic disc: Disc_U=4096*Disc_Q (scaling recorded explicitly)
+Cl lattice Smith diagonal=(1, 2, 2); Cl(R)=(Z/2)^2
+Q action on Cl[2]: 6 elements, one orbit of 3 nonzero classes
+units: C* by the connected positive grading; the rank-two carrier lies in Cl(R)[2]
+CHECKS PASSED: 38
+FAILED CHECKS: NONE

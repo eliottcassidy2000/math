@@ -1,0 +1,10 @@
+THM2866 exact certificate
+symbolic_prefix_terms=93
+positive_semiring_cells=363
+triple_product_cells=343
+four_tensor_cells=1512
+cyclic_kernel_cells=12740; prefix_zero=7; middle_zero=7
+top_face_cells=2300; right_endpoint_equalities=23
+boundary_hostile=a0_requires_U(0)_corrections
+signed_hostile=(D0,D1,C0,C1)=(2,1,18,-27)
+THM2866_ALL_EXACT_CHECKS_PASSED

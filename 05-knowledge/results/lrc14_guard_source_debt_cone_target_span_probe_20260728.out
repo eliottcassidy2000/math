@@ -1,0 +1,17 @@
+LRC14 signed guard/source-clock debt cone target-span probe
+status=PROVED-ELEMENTARY exact stopping certificate
+field=F_13; roles=('H', 'j', 'k_a', 'k_b', 'a', 'c')
+debt_boundary_rows_BA=((-1, 1), (1, -1)); (dim_H0,dim_H1)=(1, 1)
+debt_role_incidence_rows=((-1, 1), (1, -1), (0, 0), (0, 0), (0, 0), (0, 0))
+target_covector_matrix=((0, 0, -1, 0, 1, 0), (0, 0, 0, -1, 0, 1)); rank=2
+target_of_debt_edges=((0, 0), (0, 0)); rank=0
+common_ancestry_anchor=K_f^+(r,0)=0; lambda_H=lambda_j=0; therefore Ktilde_f(r,delta)=0 for every target delta
+anchored_table_dimensions=(domain,neutral_image,active_image)=(156, 0, 156)
+formal_active_graft_image=((12, 0), (0, 12)); rank=2
+lawful_paired_dipole_image=((2, 0), (0, 2)); rank=2
+verdict=the full endpoint bank spans F13^2, but the currently generated guard/source debt operator span maps identically to zero
+minimal_formal_escape=one of k_a,k_b; minimal lawful escape=co-translate its paired blocker on the same ancestry
+typing_boundary=THM2379 moves the graft complement while freezing the paired blocker; THM2563 supplies a paired moving endpoint on another old-head packet, not a chain map from the THM2701 debt SCC
+cheapest_test=insert the paired table u_1(a*x-s/13)u_L(k_a*x+s/13) into the exact debt cylinder and retain the left residue eta.u before endpoint completion
+SCOPE: generated-operator-span no-go only; no abstract linear-map no-go, scalar-row exclusion, or LRC14 conclusion
+ALL CHECKS PASSED

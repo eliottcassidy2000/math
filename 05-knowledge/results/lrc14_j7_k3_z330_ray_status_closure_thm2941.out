@@ -1,0 +1,16 @@
+LRC14 projected k=3 z1=330 all-label ray/status closure
+ray_engine_sha256=2ef5e0639354c38b13e17e41f91acb4143c7f60973295b0e2dd0f57eb8f38db2
+independent_audit=basis-independent singleton barcode/tariff plus internal exact matrix replay
+scalar_source_sha256=5eb30248f2beac09b29ebccc0dc8b203361f97c4b8552021130290566f8de0d1
+scalar_output_sha256=c2bf51b8b661d98d1ce2a8114c6187a6eefb17856e9684a46704a62ccecc81ed
+scope=1 globally reconstructed scalar body;no finite label horizon
+ray_law=(z+L)delta(z+L)=zdelta(z);A(L-b)=-A(b);all denominator maxima attained
+pair_overlap_exhaustive_controls=946
+E=(1, 2, 6, 8, 12, 14);h=83/196;r=26;L=2352;high=232;d1=392;ray_checks=2351;ray_signs={-1: 1173, 0: 5, 1: 1173};denominator_trials=4495;states=1;crude_kills=0;status_kills=1;survivors=0;M=7;max_state=((56, 84, 168, 392), {'labels': (330, 378, 364, 350), 'total': Fraction(1868707, 132432300), 'excess': Fraction(9941, 66216150)});partition_sha256=877fe87182cd09e00012e931b02a869f8816d788acac04cc98cf0f052bab552b;deterministic_instance_sha256=608357bf964b1bcf11404140ba8a953015004dfdb129110ae04f7ede3d687380
+representative_canonical_barcode_tariff=((1, 2, 6, 8, 12, 14), (56, 84, 168, 392), (168, 7, (24, 24, 24, 0), (1, 2, 7), ((0, 24), (3, 28), (4, 98), (5, 14), (6, 4))), 3, 144, 72, 72, (0, 1, 1, 1, 0), (0, 0, 0, 1, 0, 1, 1, 2, 0, 0, 0, 1, 0, 1, 1, 2))
+canonical_circuit_census={(3,): 1};distinct_canonical_tariffs=1
+basis_independent_grade3_bound=H(3):144;maxF(3):72;deficit:72
+internal_solver_farkas_replay=1/1:PASS;solver_basis_not_frozen
+conclusion=the unique projected k=3 z1=330 scalar row is empty
+semantic_sha256=4d5b51acb7029cd94087e5c47830ec1fdd41e74b79d4efcd3ed72b4afc3e82ad
+all_exact_controls=PASS

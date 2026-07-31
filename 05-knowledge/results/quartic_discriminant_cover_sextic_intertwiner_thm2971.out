@@ -1,0 +1,13 @@
+THM-2971 discriminant-cover sextic algebra intertwiner
+group_orders=|S4|:24;|A4|:12;edge_stabilizer:V4;orientation_stabilizer:C4
+A4_common_stabilizer=C2;S4_transposition_fixed_counts=edge:2/orientation:0
+symbolic_degrees=S:3;E:6;O:6;A:5
+intertwiner=T(Y)=sqrt(Delta)*A(Y)=-8*q*sqrt(Delta)/E'(Y) mod E
+kummer_gate=F(U)=Delta*U*B(U)^2 mod S;degree_B:2
+root_formula_symbolic=s(d1^2-d2^2):-4q;V:d1*d2*Sprime(s^2);PASS
+power_basis_det=2^30*q^5*J_or^2*sqrt(Delta);discriminant_ratio:PASS
+symbolic_gates=Eprime_inverse:PASS;T_square:PASS;O_of_T:PASS;oddness:PASS
+numeric_control=(p,q,r,Delta,V)=(-15,10,24,2286144,1512)
+six_root_controls=((-5, 24), (5, -24), (-2, -480), (2, 480), (-1, 840), (1, -840))
+boundary=(p,q,r)=(1,4,-3);Delta=-22000;J_or=0;O=(Z^2-1280)^2(Z^2+14080)
+all_exact_controls=PASS

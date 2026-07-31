@@ -1,0 +1,17 @@
+S4 SIX-EDGE PARITY ERASURE / MATCHING RESTORATION AUDIT
+class size sign edge_cycle matching_cycle
+1^4      1 +1 1^6     1^3
+1^2 2    6 -1 1^2 2^2 1 2
+2^2      3 +1 1^2 2^2 1^3
+1 3      8 +1 3^2     3
+4        6 -1 2 4     1 2
+edge_action=faithful image_subset=A6 ambient_sign=trivial
+matching_action=quotient_S3 kernel=V4 sign_pullback=quartic_sign
+binary_collision=edge_cycle(03)=edge_cycle((01)(23))=1^2 2^2
+matching_separation=reflection_vs_identity
+marked_images=double+C3:A4->C3 transposition+C3:S4->S3
+labelled_hostile=edge02 maps under (03) to (2, 3), under (01)(23) to (1, 3)
+joint_hostile=edge_cycle((03)*C3)=2 4 edge_cycle((01)(23)*C3)=3^2
+factor_boundary=edge_cycle_class_does_not_determine_matching_class
+SCOPE: finite permutation information-loss theorem; no Keller or LRC exclusion
+FAILED CHECKS: NONE

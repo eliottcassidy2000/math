@@ -1,0 +1,9 @@
+LRC14 COMPACT D2 MACRO / RELATIVE-SEGAL REFEREE
+central_raw_radius=1/10541750856; central_defect_measure_floor=1/2635437714; central_midpoints=(Fraction(23, 24), Fraction(1, 24))
+macro_endpoints=(Fraction(4, 17), Fraction(13, 17)); forced_midpoints=(Fraction(1, 17), Fraction(16, 17))
+c4_danger_signatures=(('c1', 'c2'), ('H',), ('c1', 'c2'), ('H',))
+macro_lifts=(4472391, 1956127); root_data=((2,), (12,), 2, 8)
+packet_slacks=(Fraction(11, 853068347561612), Fraction(11, 853068347561612))
+three_state_radius=11/24364485074707200332; open_length=11/12182242537353600166
+factorization_rule=M_K=F_b*F_a for 13*a+b=K mod R; every middle delayed phase is B0(y), independent of a,b
+verdict=PASS

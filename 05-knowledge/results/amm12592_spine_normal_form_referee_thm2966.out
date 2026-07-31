@@ -1,0 +1,5 @@
+A_budget_box=depths_0..3_exact_equality
+B_checksum_telescoping=M2,4,8,16_polynomial_identity=half_minus_half(p^M+q^M)
+C_dyadic_jump=N<=256_all_dyadic_D_pass;nondyadic_failures=5930
+D_corners=interior_even_l=2^a<=128;rho2_collision;rho<2_disjoint
+status=THM-2966_SPINE_NORMAL_FORM_VERIFIED_EXACT

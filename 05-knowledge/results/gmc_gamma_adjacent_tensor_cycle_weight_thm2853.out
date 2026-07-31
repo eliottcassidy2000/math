@@ -1,0 +1,7 @@
+GAMMA ADJACENT TENSOR CYCLE-WEIGHT AUDIT
+coefficient_profiles=360
+literal_permutation_profiles=136
+numeric_positive_profiles=6534
+first_order_zero_controls=90
+sharp_lower_equalities=((2, (0, 0)), (3, (0, 0, 0)))
+ALL EXACT CHECKS PASSED

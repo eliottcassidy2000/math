@@ -1,0 +1,38 @@
+THM-741 FLOOD TAIL: FOUR EXACT RANKED-EXCEPTION COVERAGE CERTIFICATES
+============================================================================================
+dependency_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
+prior-ten-output_sha256=8654ecafa11749504d33ecfd8ff030eae842b5365ae1462001a3a3c88bb7af55
+coverage path: sparse/full/direct-union/direct-tooth on each finite bank; tail sealed by THM-735(ii) via THM-731/732
+head path: cached full nested carriers through three speeds, sparse fourth; five full-terminal samples and direct/full minimum replay per root
+edge=23 root_r=30 root_m=358427/2522520; K=36 finite_w=15..1796
+  q_(K+1)=c(350)=29/1225; gate=30353/410960550; previous_gate=-667243/3328780455; top4_margin=-2106724/156165009
+  threshold=535134600/297953; u(W)-q_(K+1)=2753/39641401800; q_(K+1)-u(W+1)=95647/52884631800
+  head C(K,4)=58905; caches=(33, 561, 6545); union-bound exceptions=79; all positive
+  global head minimum=1068173/39939900 at (16, 19, 22, 25) r=20; its union margin=453289/19969950; exception minimum=144107/5360355 at (17, 19, 21, 46)
+  coverage_manifest=adfae16545284a401c5d671af649f9f4e84d4c686dbdfa230e7a46996606b553; terminal_manifest=1a8f2f7931130e11269c126dea548b1d04eb4e2f545cfa9c20fba779965ed4f8; sample_manifest=e9d6b972e94693417d6a55f9ea3c271a193ccbf085c91d4a6b4854ac218443ad
+edge=25 root_r=26 root_m=409261/2522520; K=22 finite_w=15..1175
+  q_(K+1)=c(117)=317/11466; gate=37841/551170620; previous_gate=-2069/91861770; top4_margin=-5458325/468495027
+  threshold=92756664/78919; u(W)-q_(K+1)=26839/20747727000; q_(K+1)-u(W+1)=31/12360348
+  head C(K,4)=7315; caches=(19, 190, 1330); union-bound exceptions=31; all positive
+  global head minimum=11739671/340723656 at (17, 19, 23, 25) r=14; its union margin=-493437023/93699005400; exception minimum=11739671/340723656 at (17, 19, 23, 25)
+  coverage_manifest=a91cac4bbfef1383b44e8a2ee04fae09e1f4a96bfc85d21971bb46e283e6b822; terminal_manifest=925419f37dbbb0092098137d27ad92bb48fcd322184cc70862f932b11324b77e; sample_manifest=81b2339db971e17c9483edbe0c0a6d101c180f1ee6b3bf6d075c235131e25da4
+edge=26 root_r=30 root_m=413747/2522520; K=10 finite_w=15..840
+  q_(K+1)=c(25)=3303/107800; gate=69547/612411800; previous_gate=-81687/306205900; top4_margin=-1226821/122482360
+  threshold=267567300/318211; u(W)-q_(K+1)=643/88288200; q_(K+1)-u(W+1)=48151/37125188100
+  head C(K,4)=210; caches=(7, 28, 84); union-bound exceptions=21; all positive
+  global head minimum=287374099/9369900540 at (17, 19, 22, 46) r=20; its union margin=-12199184/2342475135; exception minimum=287374099/9369900540 at (17, 19, 22, 46)
+  coverage_manifest=0af94db053d66ef6032b5361c4ec45dc3a3567fd180bc318335f2a18914ae553; terminal_manifest=53ad5f6c0542db1a05daa8521a2926c666a342f2522446ed16c07595b6873c8d; sample_manifest=8eb53c720cad71e29564f8a38cd28989c64fe27957635cb2e16779536767adde
+edge=27 root_r=22 root_m=52147/315315; K=23 finite_w=15..924
+  q_(K+1)=c(92)=206/7245; gate=15721/367447080; previous_gate=-1269581/58424085720; top4_margin=-1002853/76488984
+  threshold=225648423/244061; u(W)-q_(K+1)=589/203062860; q_(K+1)-u(W+1)=108002/46958286375
+  head C(K,4)=8855; caches=(20, 210, 1540); union-bound exceptions=36; all positive
+  global head minimum=39526373/1338557220 at (17, 19, 26, 46) r=18; its union margin=15302/3677355; exception minimum=1158361/32761890 at (17, 19, 21, 23)
+  coverage_manifest=c64b6de24cc7f1369ca108e72c55cd5e58c3790ffe2753c85c0de7fc2830a282; terminal_manifest=76abdedf0da76014c2eee31fdb8d567d7097ca79081f1f890f520af635da72c7; sample_manifest=23e21f6d77d4241e8b77944b605626f61ddf7a89c931854307ee33c4ce640dcd
+suite-manifest SHA256=87b551cd093e4aa122f9c7578ad596893800249fdd5de4d22b9fc9a4ccbabe34
+new uniformly closed roots=((2,3),(2,5),(2,6),(2,7)); count=4
+composition: hash-pinned prior ten roots + these four =14/21; with independent canonical root37 exception certificate =15/21
+remaining literal flood roots=((1,2),(1,3),(1,4),(1,5),(1,6),(1,7))
+scope: four literal roots, no Fano/chi_7 transport; global THM-741 and LRC(14) remain open
+VERDICT: roots 23,25,26,27 are uniformly lonely over all 15<=a<b<c<d; exact combined flood census is 15/21
+source_sha256=a7c001887ba645ac372bc4b9a6713752d8c5c440c8e1b2726fc7c565ba8ecd4f
+ALL FOUR RANKED-EXCEPTION COVERAGE CHECKS PASSED

@@ -1,0 +1,13 @@
+THM-2844 SIGNED ADJACENT PASCAL BOUNDARY - exact referee
+symbolic direct A/B checks: 30
+singleton signs positive/zero/negative: 66 / 12 / 78
+Cartesian support pairs / support-cut legal: 3969 / 321
+rational t bank / below / above: 1112 / 116 / 996
+nearest rational bank bracket: -7/12 < alpha < -11/19
+primitive adjacent pairs / hostiles / first: 386 / 102 / (-2, 3)
+V-star Delta0 / orientation: -116 / -2088
+V-dagger Delta0 / R0 / R1 / long-secant orientation: -446 / 646 / 1715/3 / 24792
+height-two A0-zero controls: 36
+V-star I1 survivor: -6392/27
+all arithmetic exact: integers/rationals/symbolic polynomials only
+THM-2844 exact companion: PASS

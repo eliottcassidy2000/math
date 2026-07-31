@@ -114,6 +114,13 @@ vanish through moments `3` and `5`, respectively. Thus the proposed `2t`
 cutoff is support-sharp from below already on arbitrary two- and three-slot
 radial addresses.
 
+THM-2812/2824 prove the matching upper cutoff for every three-slot envelope,
+THM-2828 allows one arbitrary positive prefix cone, and THM-2830 allows two
+arbitrary positive cones separated by a support cut.  The last result uses a
+strict Pascal-kernel quotient and gives moment-six detection for arbitrarily
+many occupied slots.  Signed or interlaced radial coefficients remain outside
+that theorem, so it does not settle the full effective tower conjecture.
+
 ## Exact evidence and falsification pressure
 
 Exact rational/symbolic saturation sweeps give:

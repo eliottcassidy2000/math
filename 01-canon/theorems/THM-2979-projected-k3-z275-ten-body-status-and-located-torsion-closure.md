@@ -1,0 +1,163 @@
+---
+id: THM-2979
+title: "Projected k3 z275 ten-body status and located-torsion closure"
+status: >
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The ten projected
+  k=3 atlas rows at z1=275
+  contain exactly 2,033 attained denominator states.  Crude fibre capacity
+  removes 273 and the common 16-status table removes 1,695 with independently
+  replayed exact rational Farkas checks.  The remaining 65 states force
+  exactly one high label and are all closed by a uniform order-seven
+  clean-cell residue collision.  Hence the projected k=3 cap is z1<=274 and
+  the necessary-row ledger is 375,703.  The underlying order-at-most-K
+  residue Cayley graph has independence number d/R, proving this density gate
+  sharp among cardinality-only tests.  This is not LRC(14).
+source: codex-lrc14-k3-z275-ten-body-closure-2026-07-30
+audit: >
+  Independent post-promotion audit rederived every proof direction, count,
+  cap, and ledger transition.  Clean normal and optimized executions are
+  byte-identical to the stored transcript after repairing the dependency hash
+  helper to normalize LF bytes.  The referee freezes the complete ten-row
+  atlas order, all stage counts, 1,695 exact dual rechecks, positive feasible
+  and incompatible hostile status controls, five positive two-high gaps, 65
+  zero-high hostile passes, all literal negative low amplitudes, 2,585,952
+  high-unit recurrence checks across the combined package, and a concrete
+  exact order-seven cell pair in every terminal.
+depends_on:
+  - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
+related:
+  - MISTAKE-333
+  - THM-2984-projected-k3-signed-ray-attainment-and-unit-phase-gate
+script: 04-computation/lrc14_j7_k3_z275_to_z272_septimal_torsion_descent_thm2941.py
+output: 05-knowledge/results/lrc14_j7_k3_z275_to_z272_septimal_torsion_descent_thm2941.out
+script_sha256: 4137ab250def3ad6a66b4c75a5e1b5b1a82ba4100b00ea5f8616faa46fb501a9
+output_sha256: eea98955f91371d38d95cdeeb88b60a2305d34d0bddd2ea26570af8eede1b8e3
+profile_sha256: 939baa3f333a7a456859bee290b26f21985a07dd9eb3a02be1fd2cb95b9a87a1
+semantic_sha256: 1b1a72765f35991d5fd243ffbb3ff7dfa26804017d68dee7b25e913b8152d3e7
+hash_basis: LF-normalized bytes
+---
+
+# THM-2979 -- projected k3 z275 ten-body status and located-torsion closure
+
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+
+## Statement
+
+In the lossless projected `k=3` scalar atlas inherited from THM-2941, all ten
+body rows with first drift `z_1=275` are empty.  Consequently
+
+```text
+z_1 <= 274,                                                (1)
+```
+
+and removing these ten rows lowers the necessary-row ledger from `375,713`
+to `375,703`.  This is a scoped projected-sector theorem, not LRC(14).
+
+## Exact finite reduction
+
+The ten rows contain exactly
+
+```text
+2,033 = 273 crude + 1,695 common-status + 65 residual       (2)
+```
+
+attained denominator states.  The crude exclusions are exact fibre-capacity
+inequalities.  Each common-status exclusion rebuilds the same finite
+16-pattern feasibility problem and verifies an exact rational Farkas dual.
+Positive feasible and incompatible hostile controls remain active.
+
+The `65` residuals occur on precisely five bodies.  Their inherited
+`HIGH-TAIL` gate is essential: the zero-high hostile relaxation passes all
+`65`.  On each body, a duplicate-permitting upper bound for two or more high
+labels misses the scalar wall by a positive exact gap.  Hence every possible
+packet has exactly one high label.  Literal enumeration retains all low
+labels, including negative-amplitude ones, and leaves exactly one low pair on
+each survivor body:
+
+```text
+E=(1,5,7,9,11,13)       low pair (287,351), C=115050, L=630630
+E=(1,5,9,11,13,14)      low pair (351,378), C=240580, L=1261260
+E=(1,8,10,11,12,14)     low pair (312,364), C=24978,  L=129360
+E=(2,5,7,9,11,13)       low pair (287,351), C=232068, L=1261260
+E=(2,5,9,11,13,14)      low pair (351,378), C=244176, L=1261260.
+```
+
+Here `C` is the number of complete body cells missed by the first and two low
+labels.  In every row `7C>L`.
+
+## Uniform septimal closure
+
+Fix one residual case and let `d` be its high denominator.  Exact enumeration
+gives `7|d`.  Let `S` be the set of residues modulo `d` represented by those
+`C` clean cells.  A residue fibre contains at most `L/d` cells, whence
+
+```text
+C <= |S| L/d  and  7C>L  imply  |S|>d/7.                  (3)
+```
+
+There are only `d/7` cosets modulo `d/7`; therefore two distinct elements of
+`S` lie in one coset.  Their nonzero difference has exact order seven modulo
+`d` (seven is prime).  Every high label has the unit-ray form
+
+```text
+z=(L/d)u+hL,  gcd(u,d)=1.                                 (4)
+```
+
+Multiplication by `u` preserves order seven and the height term cancels.
+The two high phases thus have circular separation at least `1/7`.  Two
+strict-open danger arcs of radius `1/14` cannot both contain them; at equality
+their excluded endpoints merely touch.  At least one of the two complete
+cells stays safe for every primitive direction and every ray height.  All
+`65` residual cases retain full projected drift-safe mass `1`, strictly above
+the three-aligned union cap `36/91`, and are empty.
+
+### The residue-cardinality gate is sharp
+
+The pigeonhole threshold above is not an artifact of the proof.  For integers
+`d,K>=1`, let `G(d,K)` be the simple Cayley graph on `Z/dZ` in which distinct
+`x,y` are adjacent exactly when the additive order of `x-y` is at most `K`,
+and put
+
+```text
+R=max{r:r|d and 1<=r<=K}.
+```
+
+Then
+
+```text
+alpha(G(d,K))=d/R.                                      (5)
+```
+
+Indeed, the cosets of the unique subgroup of order `R` are cliques: every
+nonzero difference inside such a coset has order dividing `R`, hence at most
+`K`.  The `d/R` cosets therefore give the upper bound `alpha<=d/R`.
+Conversely, the interval of residue representatives
+
+```text
+I={0,1,...,d/R-1}
+```
+
+is independent.  If `0<a<d/R` had order `r<=K`, then `r|d`, so `r<=R`, and
+`a` would be a positive multiple of `d/r>=d/R`, a contradiction.  Thus
+`|I|=d/R` gives the matching lower bound.
+
+For the terminal rows here, `K=7` and `7|d`, so `R=7`.  Consequently
+`|S|>d/7` is the optimal universal test that uses only the number of distinct
+safe residues.  At or below the boundary an order-at-most-seven collision may
+still be forced, but only from additional information about the shape or
+location of `S` (or from a cell-to-residue sidecar); cardinality alone cannot
+do more.  THM-2984 develops one such next sidecar by retaining the primitive
+ray unit and an absolute fixed-safe cell.  It is related future machinery,
+not a dependency of the closure proved here.
+
+## Reproducibility and scope boundary
+
+The referee checks all ten `z_1=275` rows and also continues through the next
+29 occupied rows.  THM-2979 uses only the first level and therefore proves
+the cap `(1)`, not the later cap.  The `z_1=274,273,272` continuation is
+recorded separately as a THM-2941 addendum.
+
+The MISTAKE-333 repair boundary is explicit.  Every solver-selected Farkas
+basis is checked exactly but excluded from stored row and semantic digests;
+only certificate-free problem data and the verified-instance count are
+hashed.  Normal and optimized Python executions are byte-identical.

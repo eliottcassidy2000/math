@@ -1,0 +1,26 @@
+THM-2859 PUNCTURED-V4 EXTENSION / COMPLETION AUDIT
+bank=nonempty:193,common:63308,roots:587,half_step:401080680
+semantic_triples=(((False, True, False), 14), ((True, False, True), 573))
+right_semantic=(('dead', 14), ('live', 573))
+semantic_internal_flip=max_covered:28,unmatched:559
+semantic_completion=current_live_dead:(1160, 601),missing_live_dead:(14, 573),full_live_dead:(1174, 1174)
+relative_V4_character_defects=(((0, 1), (-587, 587)), ((1, 0), (587, -587)), ((1, 1), (587, -587)))
+root_factor_holes=((('E3',), 319), (('E3', 'c2'), 37), (('c2',), 217), (('q1',), 14))
+full_factor_counts=(((0, False), 587), ((1, True), 587), ((2, True), 587))
+carrier_types=R:(source_empty,target_delta0),M1/M2:(source_delta0,target_delta0);verified_triples=587
+carrier_orbit_no_go=C13-translations fix the empty mask and permute the 13 deltas;the two orbits are disjoint
+partial_grade_dims=(((0, 0), 3), ((1, 0), 2), ((0, 1), 2), ((1, 1), 2))
+partial_product_defect_histogram=((0, 7), (1, 9))
+partial_product_defects=(((0, 0), (0, 0), 3, 3, ()), ((0, 0), (1, 0), 2, 2, ()), ((0, 0), (0, 1), 2, 2, ()), ((0, 0), (1, 1), 2, 2, ()), ((1, 0), (0, 0), 2, 2, ()), ((1, 0), (1, 0), 2, 3, ((0, 0),)), ((1, 0), (0, 1), 1, 2, ((0, 1),)), ((1, 0), (1, 1), 1, 2, ((0, 2),)), ((0, 1), (0, 0), 2, 2, ()), ((0, 1), (1, 0), 1, 2, ((1, 0),)), ((0, 1), (0, 1), 2, 3, ((1, 1),)), ((0, 1), (1, 1), 1, 2, ((1, 2),)), ((1, 1), (0, 0), 2, 2, ()), ((1, 1), (1, 0), 1, 2, ((2, 0),)), ((1, 1), (0, 1), 1, 2, ((2, 1),)), ((1, 1), (1, 1), 2, 3, ((2, 2),)))
+full_V4_grade_dims=(((0, 0), 4), ((1, 0), 4), ((0, 1), 4), ((1, 1), 4))
+globalization_added_grade_dims=(((0, 0), 1), ((1, 0), 2), ((0, 1), 2), ((1, 1), 2));per_root_matrix_units=7;all_roots_added=4109
+corner_model=M3=p*M4*p for p=e00+e11+e01;the complement e10 is the unique missing object
+pair_groupoid_sign_cohomology=(('C1', 6), ('Z1', 2), ('C2', 12), ('Z2', 4), ('B2', 4), ('H2', 0))
+cocycle_support_no_go=nonzero scalar twists rescale existing products but preserve all nine one-arrow graded defects
+V4_subgroup_orbit_sizes=((1, 4), (2, 2), (2, 2), (2, 2), (4, 1));three_point_orbit=no
+partial_cube=P3_edges:(((0, 0), (1, 1)), ((0, 1), (1, 1))),C4_edges:(((0, 0), (1, 0)), ((0, 0), (1, 1)), ((0, 1), (1, 0)), ((0, 1), (1, 1)));plus_2h_is_distance_2;adding_it_as_edge_gives_K3
+koszul_filler=X=Pi(R),D0=(d,id),D1=(a,-S),D1D0=0;(('dim_C0', 587), ('dim_C1', 1174), ('dim_C2', 587), ('rank_D0', 587), ('rank_D1', 587), ('H0', 0), ('H1', 0), ('H2', 0), ('minimum_filler_dimension', 587))
+filler_rank_no_go=any alternate factorization y*x=-S has dim(X)>=rank(S)=587
+inherited_endpoint_orbit=translation_exists:74,no_translation:513;target_translation_zero:587
+typed_conclusion=the formal fourth corner preserves root annotations as a parity-shifted copy, but its edge to M2 still crosses source empty->delta0 and root native holes->all-six; quotienting those predicates is not a typed completion
+ALL EXACT CHECKS PASSED

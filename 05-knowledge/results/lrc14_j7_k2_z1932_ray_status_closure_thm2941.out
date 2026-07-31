@@ -1,0 +1,20 @@
+LRC14 projected k=2 z1=1932 all-label ray/status closure
+uniform_ray_status_source_sha256=34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
+prior_referee_source_sha256=e19162cd4366bc57e77845e9563e2da03416eeded7f7535b79e42c6fd4545c10
+scalar_band_output_sha256=bfe1f8d8bd794bd73fbb1aaffa3d9c8ecc53a937cc74275af3f1a8aa7913cee2
+scope=inherited projected k=2 z1=1932 body row;four distinct later nonaligned labels;no finite horizon
+body=(1, 4, 8, 10, 12, 14);h=1049/2940;r=34;L=11760;first=1932;first_d=140;high_floor=1020;lower=1049/267540;first_delta=101/157780
+ray_law=(z+L)delta(z+L)=zdelta(z);A(L-b)=-A(b);all denominator maxima attained
+ray_checks=11759;ray_signs={-1: 5879, 0: 1, 1: 5879};ray_amplitude_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674
+nontrivial_denominators=59;denominator_trials=557845;all_n_scalar_states=1;scalar_state_sha256=6c10c2f2b8a166722521ea617eec48461d4151e9f087f5e5d9132dffc84d9616
+fixed_projected_scalar_state=((140, 280, 588, 840, 980), Fraction(442380823, 112512089655), (1932, 2060, 2142, 2172, 2534))
+state[1]=(140, 280, 588, 840, 980);upper=442380823/112512089655;labels=(1932, 2060, 2142, 2172, 2534);kill=COMMON_STATUS;kill_q=840;kill_M=7;marginals=(120, 120, 0, 120, 0);exact_farkas=VERIFIED
+crude_all_q_kills=0;crude_all_q_survivors=1
+K5_spanning_trees=125;pair_overlap_exhaustive_controls=946;status_cells=32;equality_rows=6
+fixed_state_transparent_obstruction=720 load>=3 fibres;only 360 exceptional-status events;EXACT_FARKAS_INFEASIBLE
+common_K5_status_kills=1;common_K5_status_survivors=0
+decisive_witness=D=5880;q=840;M=7;marginals=(120, 120, 0, 120, 0);capacity_values=(2, 3, 4, 7);histogram=((0, 120), (3, 420), (4, 112), (5, 168), (6, 20));exact_farkas=VERIFIED
+transparent_y3_obstruction=heavy_fibres:720;available_exception_events:360
+conclusion=projected k=2 z1=1932 row is empty uniformly
+semantic_sha256=d6c780a9f008d8e1fae9d2a59f8461834dadf0a01c78a583f8e0ee9c277ee55f
+all_exact_controls=PASS

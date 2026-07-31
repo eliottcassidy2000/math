@@ -1,0 +1,14 @@
+THM-2708 C3 HERMITIAN GAIN-HOLONOMY AUDIT
+free_orbit_matrices_checked=32900
+free_matrices_with_standard_kernel=14898
+fixed_coupling_matrices_checked=16384
+forest_gain_assignments_checked=10588
+triangle_gain_assignments=27 balanced=9 unbalanced=18
+balanced_lift=3K3 det=8 smith=(1^6,2^3) standard_multiplicity=1
+unbalanced_lift=C9 det=2 smith=(1^8,2) standard_multiplicity=0
+standard_multiplicity=F4_nullity_of_Hermitian_block
+representative_switching=diagonal_F4_gauge
+tree_case=balanced_gain_specialization
+surface_gate_requires_full_rank_boundary_lattice
+gain_holonomy_is_not_physical_LRC_homology
+PASS

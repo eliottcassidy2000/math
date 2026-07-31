@@ -25,6 +25,10 @@ PR2 = 31013
 def say(*a):
     print(*a); sys.stdout.flush()
 
+def require(condition, message='verification failed'):
+    if not condition:
+        raise RuntimeError(message)
+
 def br(u, v, w):
     return Matrix.hstack(u, v, w).det()
 
@@ -221,7 +225,7 @@ def solve_lin_for_C(A, B, dC, p, which):
     return Cm.subs(subsd), rank, len(csyms)
 
 def assert_zero_modp(expr, p, label):
-    assert Poly(expand(expr), x, y, modulus=p).is_zero, 'NOT ZERO mod p: ' + label
+    require(Poly(expand(expr), x, y, modulus=p).is_zero, 'NOT ZERO mod p: ' + label)
 
 def polydeg_modp(expr, p):
     pp = Poly(expand(expr), x, y, modulus=p)
@@ -239,12 +243,12 @@ A1 = Matrix(3, 1, [1, 0, 0]); B1 = Matrix(3, 1, [0, 0, 1]); C1 = Matrix(3, 1, [x
 F1 = A1*z**2 + B1*z + C1
 inv1 = [P1s - P3s**2, P2s, P3s]
 comp = [expand(F1[i].subs({x: inv1[0], y: inv1[1], z: inv1[2]})) for i in range(3)]
-assert comp == [P1s, P2s, P3s]
+require(comp == [P1s, P2s, P3s], 'T1 inverse composition failed')
 comp2 = [expand(e.subs({P1s: F1[0], P2s: F1[1], P3s: F1[2]})) for e in inv1]
-assert comp2 == [x, y, z]
+require(comp2 == [x, y, z], 'T1 reverse inverse composition failed')
 D_T1 = dsystem(A1, B1, C1)
-assert D_T1[:5] == [0, 0, 0, 0, 0] and D_T1[5] == 1
-assert expand(detJ_of(A1, B1, C1)) == 1
+require(D_T1[:5] == [0, 0, 0, 0, 0] and D_T1[5] == 1, 'T1 D-system failed')
+require(expand(detJ_of(A1, B1, C1)) == 1, 'T1 determinant failed')
 say('T1 = (x+z^2, y, z): polynomial inverse (P1-P3^2, P2, P3) verified both ways.')
 say('    det J = 1, D5..D1 = 0, D0 = 1, box (dA,dB,dC) = (0,0,1). FIELD DEGREE = 1.')
 
@@ -252,17 +256,17 @@ say('    det J = 1, D5..D1 = 0, D0 = 1, box (dA,dB,dC) = (0,0,1). FIELD DEGREE =
 A2 = Matrix(3, 1, [x, 1, 0]); B2 = Matrix(3, 1, [y, 0, 1])
 C2 = Matrix(3, 1, [x*y - x**3 + x, 3*x**2 - 2*y, x])
 F2 = A2*z**2 + B2*z + C2
-assert expand(detJ_of(A2, B2, C2)) == -2
+require(expand(detJ_of(A2, B2, C2)) == -2, 'T2 determinant failed')
 D_T2 = dsystem(A2, B2, C2)
-assert D_T2[:5] == [0, 0, 0, 0, 0] and D_T2[5] == -2
+require(D_T2[:5] == [0, 0, 0, 0, 0] and D_T2[5] == -2, 'T2 D-system failed')
 Xi = P1s - (P3s**3 - P3s*P2s)/2
 Zi = P3s - Xi
 Yi = ((P3s - Xi)**2 + 3*Xi**2 - P2s)/2
 inv2 = [Xi, Yi, Zi]
 comp = [expand(F2[i].subs({x: inv2[0], y: inv2[1], z: inv2[2]}, simultaneous=True)) for i in range(3)]
-assert comp == [P1s, P2s, P3s], comp
+require(comp == [P1s, P2s, P3s], 'T2 inverse composition failed: %s' % (comp,))
 comp2 = [expand(e.subs({P1s: F2[0], P2s: F2[1], P3s: F2[2]}, simultaneous=True)) for e in inv2]
-assert comp2 == [x, y, z], comp2
+require(comp2 == [x, y, z], 'T2 reverse inverse composition failed: %s' % (comp2,))
 say('T2 = (xz^2+yz+xy-x^3+x, z^2+3x^2-2y, x+z): NEW EXPLICIT POLYNOMIAL INVERSE')
 say('    x = P1 - (P3^3 - P2*P3)/2 ;  z = P3 - x ;  y = ((P3-x)^2 + 3x^2 - P2)/2')
 say('    verified both compositions = identity. det J = -2, D5..D1 = 0, D0 = -2.')
@@ -273,24 +277,25 @@ u_ = 1 + x*y
 AW = Matrix(3, 1, [0, 0, 0])
 BW = Matrix(3, 1, [u_**3, 3*x*u_**2, -x**3])
 CW = Matrix(3, 1, [y**2*u_*(4 + 3*x*y), y + 3*x*y**2*(4 + 3*x*y), 2*x - 3*x**2*y])
-assert expand(detJ_of(AW, BW, CW)) == -2
+require(expand(detJ_of(AW, BW, CW)) == -2, 'wild control determinant failed')
 D_W = dsystem(AW, BW, CW)
-assert D_W[:5] == [0, 0, 0, 0, 0] and D_W[5] == -2
-assert expand(BW[1]**3 + 27*BW[0]**2*BW[2]) == 0   # cuspidal-cubic cone (THM-2446 / THM-1340)
+require(D_W[:5] == [0, 0, 0, 0, 0] and D_W[5] == -2, 'wild control D-system failed')
+require(expand(BW[1]**3 + 27*BW[0]**2*BW[2]) == 0,
+        'wild control cuspidal-cubic cone failed')  # THM-2446 / THM-1340
 n1, s1 = space_count(AW, BW, CW, PR)
 n2, s2 = space_count(AW, BW, CW, PR2)
 say('W = THM-1310 map: det J = -2, D-system (0,0,0,0,0,-2), B on cusp cone 27B1^2B3+B2^3=0.')
-say('    fiber count mod %d: %s (%.1fs), mod %d: %s (%.1fs)  -- expected 3' % (PR, n1, s1, PR2, n2, s2))
-assert n1 == 3 and n2 == 3
+say('    fiber count mod %d: %s, mod %d: %s  -- expected 3' % (PR, n1, PR2, n2))
+require(n1 == 3 and n2 == 3, 'wild control fibre count failed')
 say('    D0(T2) = D0(W) = -2 with field degrees 1 vs 3: D0 carries NO field-degree info.')
 
 # B nowhere zero / C immersion consequences of D0 = const (Nullstellensatz certs)
 GB = groebner([BW[0], BW[1], BW[2]], x, y, order='grevlex')
-assert GB.polys[0].is_one or any(pl.is_one for pl in GB.polys)
+require(GB.polys[0].is_one or any(pl.is_one for pl in GB.polys), 'wild inverse ideal failed')
 C2x, C2y = C2.diff(x), C2.diff(y)
 w2 = C2x.cross(C2y)
 GC = groebner([w2[0], w2[1], w2[2]], x, y, order='grevlex')
-assert any(pl.is_one for pl in GC.polys)
+require(any(pl.is_one for pl in GC.polys), 'wild reverse inverse ideal failed')
 say('D0-consequences verified: ideal(B_W) = (1) [B nowhere 0]; ideal(C2_x x C2_y) = (1)')
 say('    [C is an everywhere-immersion for T2]. Both are forced by D0 = const != 0.')
 
@@ -305,14 +310,15 @@ E2 = Av[1]*z**2 + Bv[1]*z + Cv[1]
 E3 = Av[2]*z**2 + Bv[2]*z + Cv[2]
 uv = Av.cross(Bv); av = -Av.cross(Cv); bv = Bv.cross(Cv)   # Cv plays C~ = C - P
 r12 = expand(resultant(E1, E2, z))
-assert expand(r12 - (av[2]**2 - uv[2]*bv[2])) == 0
+require(expand(r12 - (av[2]**2 - uv[2]*bv[2])) == 0, 'projected resultant r12 failed')
 r13 = expand(resultant(E1, E3, z))
-assert expand(r13 - (av[1]**2 - uv[1]*bv[1])) == 0
+require(expand(r13 - (av[1]**2 - uv[1]*bv[1])) == 0, 'projected resultant r13 failed')
 r23 = expand(resultant(E2, E3, z))
-assert expand(r23 - (av[0]**2 - uv[0]*bv[0])) == 0
+require(expand(r23 - (av[0]**2 - uv[0]*bv[0])) == 0, 'projected resultant r23 failed')
 say('Res_z(E_i, E_j) = a_k^2 - u_k b_k  for (i,j,k) cyclic  -- EXACT, 9 generic symbols.')
-assert expand(uv.dot(Av)) == 0 and expand(uv.dot(Bv)) == 0
-assert expand(uv.dot(Cv) - Matrix.hstack(Av, Bv, Cv).det()) == 0
+require(expand(uv.dot(Av)) == 0 and expand(uv.dot(Bv)) == 0, 'frame kernel identities failed')
+require(expand(uv.dot(Cv) - Matrix.hstack(Av, Bv, Cv).det()) == 0,
+        'frame determinant identity failed')
 say('u.A = u.B = 0 and u.C~ = det[A|B|C~] = g1: u = AxB is the LEFT KERNEL of the')
 say('fiber matrix on {g1=0}; u_k != 0 makes E_k redundant, so the fiber bijects with')
 say('{g1 = 0, g2_k = 0, u_k != 0} via z = a_k/u_k.  (Lemma proof in report.)')
@@ -328,11 +334,11 @@ for box in [(0, 1, 2), (1, 2, 3)]:
         target = [random.randrange(PR) for _ in range(3)]
         ns, ts = space_count(A, B, C, PR, target)
         raw, sat, k, tp = plane_counts(A, B, C, PR, target)
-        say('box %s inst %d: space=%s (%.1fs)  plane raw=%s sat=%s (chart k=%d, %.1fs)'
-            % (box, inst, ns, ts, raw, sat, k, tp))
-        assert ns == sat, 'plane saturated count must equal space count'
+        say('box %s inst %d: space=%s  plane raw=%s sat=%s (chart k=%d)'
+            % (box, inst, ns, raw, sat, k))
+        require(ns == sat, 'plane saturated count must equal space count')
 n_t2, _ = space_count(A2, B2, C2, PR)
-assert n_t2 == 1
+require(n_t2 == 1, 'T2 projected count failed')
 say('T2 control through engine: fiber count = 1 OK')
 
 say('')
@@ -353,18 +359,18 @@ for box in [(0, 1, 2), (1, 2, 3), (1, 1, 3)]:
     n2_, t2_ = space_count(A, B, C, PR2)
     say('box %s: measured %s (+ mod %d: %s), predicted N_max = %d'
         % (box, vals, PR2, n2_, predictions[box]))
-    assert max(vals) == predictions[box]
+    require(max(vals) == predictions[box], 'Table A prediction failed for %s' % (box,))
 # (2,3,4): plane-saturated engine (validated in LEG 3); one space attempt, time-boxed by fate
 box = (2, 3, 4)
 vals = []
 for inst in range(2):
     A = rvec(2, PR); B = rvec(3, PR); C = rvec(4, PR)
     raw, sat, k, tp = plane_counts(A, B, C, PR)
-    say('box (2,3,4) inst %d: plane raw=%s sat=%s (chart k=%s, %.1fs), predicted 56'
-        % (inst, raw, sat, k, tp))
+    say('box (2,3,4) inst %d: plane raw=%s sat=%s (chart k=%s), predicted 56'
+        % (inst, raw, sat, k))
     vals.append(sat)
 say('box (2,3,4): measured %s, predicted N_max = 56' % (vals,))
-assert max(vals) == predictions[box]
+require(max(vals) == predictions[box], 'large-box prediction failed')
 say('Projected-system Bezout bookkeeping per staircase box: deg g1 = 3d+3, deg g2 = 4d+4,')
 say('product 12(d+1)^2 = 12/48/108 vs true 8/26/56: excess 6d^2+12d+4 sits entirely at')
 say('plane-infinity (raw affine counts above already equal N on random instances).')
@@ -381,9 +387,9 @@ witnesses = {
 }
 for N, (A, B, C, name) in sorted(witnesses.items()):
     n_, _ = space_count(A, B, C, PR)
-    n2_, _ = space_count(A, B, C, PR)
+    n2_, _ = space_count(A, B, C, PR2)
     say('  N = %d witness %-22s measured %s,%s' % (N, name, n_, n2_))
-    assert n_ == N and n2_ == N
+    require(n_ == N and n2_ == N, 'minimal-box witness count failed for N=%s' % N)
 say('  N = 8: generic (Table A).  Searching coefficient range {-1,0,1} for 5,6,7 ...')
 found = {}
 tries = 0
@@ -395,11 +401,13 @@ while len(found) < 8 and tries < 220:
     n_, _ = space_count(A, B, C, PR)
     if n_ is None or n_ == 0 or n_ in found:
         continue
-    n2_, _ = space_count(A, B, C, PR)
+    n2_, _ = space_count(A, B, C, PR2)
     if n2_ != n_:
         continue
     found[n_] = (list(A), list(B), list(C))
 say('  observed degree spectrum in %d small-coefficient samples: %s' % (tries, sorted(found)))
+require({5, 6, 7}.issubset(found),
+        'deterministic minimal-box search did not recover degrees 5, 6, and 7')
 for N in sorted(found):
     if N in (5, 6, 7):
         A_, B_, C_ = found[N]
@@ -410,34 +418,47 @@ say('--- the quartic S4 witness Q4 = (x, z^2+y^2+y, yz+x), box (0,1,2), NON-Kell
 AQ = Matrix(3, 1, [0, 1, 0]); BQ = Matrix(3, 1, [0, 0, y]); CQ = Matrix(3, 1, [x, y**2 + y, x])
 nQ, _ = space_count(AQ, BQ, CQ, PR)
 say('  fiber count = %s (expected 4)' % nQ)
-assert nQ == 4
+require(nQ == 4, 'quartic witness fibre count failed')
 q_, s_ = symbols('q_ s_')
 elim = expand(resultant(z**2 + y**2 + y - q_, y*z + s_, y))
-say('  z-eliminant (x=P1, s=P3-P1): %s' % elim)
-assert expand(elim - (z**4 - q_*z**2 + s_*z + s_**2)) == 0
-say('  = z^4 - q z^2 + s z + s^2 : DEPRESSED quartic (no z^3 -- structural for 2-jet route).')
-pdep, qdep, rdep = -q_, s_, s_**2
+say('  z-eliminant (x=P1, s=P1-P3): %s' % elim)
+require(expand(elim - (z**4 - q_*z**2 - s_*z + s_**2)) == 0,
+        'quartic eliminant identity failed')
+say('  = z^4 - q z^2 - s z + s^2 : DEPRESSED quartic (no z^3 -- structural for 2-jet route).')
+pdep, qdep, rdep = -q_, -s_, s_**2
 Iq = pdep**2 + 12*rdep
 Jq = 2*pdep**3 + 27*qdep**2 - 72*pdep*rdep
 Delta4 = expand((4*Iq**3 - Jq**2)/27)
 say('  I = %s,  J = %s' % (expand(Iq), expand(Jq)))
 say('  Delta4 = %s' % factor(Delta4))
+
+# Exact Galois-group certificate, independent of the statistics below.
+fS4 = Poly(z**4 + 10*z**2 - z + 1, z)
+require(fS4.discriminant() == 144869, 'quartic S4 certificate discriminant failed')
+pat2 = tuple(sorted(g.degree() for g, mult in Poly(fS4.as_expr(), z, modulus=2).factor_list()[1]
+                    for _ in range(mult)))
+pat5 = tuple(sorted(g.degree() for g, mult in Poly(fS4.as_expr(), z, modulus=5).factor_list()[1]
+                    for _ in range(mult)))
+require(pat2 == (4,), 'quartic S4 certificate mod-2 pattern failed')
+require(pat5 == (1, 3), 'quartic S4 certificate mod-5 pattern failed')
+say('  exact S4 certificate: q=-10,s=1, Delta=144869; good-prime patterns mod 2=(4), mod 5=(1,3).')
+say('  Irreducible + a 4-cycle + a 3-cycle force the transitive Galois group S4.')
 cyc = Counter(); tot = 0
 t0 = time.time()
 while tot < 2500:
     qq = random.randrange(PR); ss = random.randrange(1, PR)
-    f = Poly(z**4 - qq*z**2 + ss*z + ss**2, z, modulus=PR)
+    f = Poly(z**4 - qq*z**2 - ss*z + ss**2, z, modulus=PR)
     if f.discriminant() % PR == 0:
         continue
     fl = f.factor_list()[1]
     part = tuple(sorted(sum([[g.degree()]*m for g, m in fl], [])))
     cyc[part] += 1; tot += 1
-say('  cycle statistics over %d unramified specializations mod %d (%.0fs):' % (tot, PR, time.time() - t0))
+say('  cycle statistics over %d unramified specializations mod %d:' % (tot, PR))
 th_S4 = {(1,1,1,1): 1/24, (1,1,2): 6/24, (2,2): 3/24, (1,3): 8/24, (4,): 6/24}
 for part in sorted(cyc, key=lambda s: (len(s), s)):
     say('    %-12s observed %.4f   S4-Chebotarev %.4f' % (part, cyc[part]/tot, th_S4.get(part, 0.0)))
 say('  A4 predicts no (1,1,2)/(4,); V4 predicts only (1,1,1,1)/(2,2); D4/C4 have no (1,3)')
-say('  at rate 1/3.  Verdict: monodromy S4.  ==> degree 4 with FULL S4 is reachable by')
+say('  at rate 1/3.  Statistics agree with the exact S4 certificate.  ==> degree 4 with FULL S4 is reachable by')
 say('  the 2-jet SHAPE already in the minimal box; only KELLER kills it there (Wang).')
 
 say('')
@@ -539,12 +560,12 @@ Acon = M*Matrix(3, 1, [f_**2, f_*g_, g_**2])
 Bfree = rvec(3, PR); Cfree = rvec(4, PR)
 assert_zero_modp(dsystem(Acon, Bfree, Cfree)[0], PR, 'D5 conic cap 234')
 raw, sat, k, tp = plane_counts(Acon, Bfree, Cfree, PR)
-say('  conic-cap A, free B,C: plane raw=%s sat=%s (%.1fs)' % (raw, sat, tp))
+say('  conic-cap A, free B,C: plane raw=%s sat=%s' % (raw, sat))
 B4c, rankB = solve_D4_for_B(Acon, 3, PR)
 say('  [D4 linear system on 30 B-coeffs: rank %s]' % rankB)
 assert_zero_modp(dsystem(Acon, B4c, Cfree)[1], PR, 'D4 conic cap')
 raw2, sat2, k2, tp2 = plane_counts(Acon, B4c, Cfree, PR)
-say('  conic-cap A + D4=0 B: plane raw=%s sat=%s (%.1fs)' % (raw2, sat2, tp2))
+say('  conic-cap A + D4=0 B: plane raw=%s sat=%s' % (raw2, sat2))
 C32c, rankC, ncoef = solve_lin_for_C(Acon, B4c, 4, PR, which=[2, 3])
 if C32c is None:
     say('  + D3=D2=0 on C: affine system INCONSISTENT for random D4-kernel B')
@@ -555,7 +576,7 @@ else:
     assert_zero_modp(dsystem(Acon, B4c, C32c)[2], PR, 'D3 conic cap')
     assert_zero_modp(dsystem(Acon, B4c, C32c)[3], PR, 'D2 conic cap')
     raw3, sat3, k3, tp3 = plane_counts(Acon, B4c, C32c, PR)
-    say('  conic-cap A + D4=D3=D2=0: plane raw=%s sat=%s (%.1fs)' % (raw3, sat3, tp3))
+    say('  conic-cap A + D4=D3=D2=0: plane raw=%s sat=%s' % (raw3, sat3))
 
 say('')
 say('ALL CHECKS PASSED')

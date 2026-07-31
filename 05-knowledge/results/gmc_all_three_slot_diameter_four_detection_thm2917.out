@@ -1,0 +1,11 @@
+THM-2917 ALL THREE-SLOT DIAMETER-FOUR DETECTION
+support=(0, 1, 2);moment_profile=(2, 4, 12, 3, 6, 22);resultant=18,19;unit=4;factor_profile=1^7,1^6,5^1;nonlinear=5,29,132895f955d191bc3822c732bbc37b43331b43f8fd9bcf677fa9e3282cfd146c
+support=(0, 1, 3);moment_profile=(2, 6, 15, 3, 9, 28);resultant=24,25;unit=16;factor_profile=1^7,1^1,1^6,10^1;nonlinear=10,1453192,6fa8012c7b9d57e35886cbbecc477a43f7ffe42168c3798b24b55f8da35c3685
+support=(0, 2, 3);moment_profile=(2, 6, 18, 3, 9, 34);resultant=30,31;unit=4;factor_profile=1^5,1^7,1^6,12^1;nonlinear=12,39189888,cd6fdf453309116c9620eff9eadd17b51b25bbbccd60f597ff1f82b99c33fb12
+support=(0, 1, 4);moment_profile=(2, 8, 18, 3, 12, 34);resultant=30,31;unit=4;factor_profile=1^7,1^2,1^1,1^6,14^1;nonlinear=14,765149683104,cf35e711e297e259fdf0358655e349b4e1ed0443fc09a876b513d94b34d9b43f
+support=(0, 2, 4);moment_profile=(2, 8, 21, 3, 12, 40);resultant=36,37;unit=16;factor_profile=1^5,1^7,1^1,1^6,17^1;nonlinear=17,16074139599576,98b87bf47164bb6cb73c5f141ec76be103e7642fbcb6099677c508974cc03727
+support=(0, 3, 4);moment_profile=(2, 8, 24, 3, 12, 46);resultant=42,43;unit=4;factor_profile=1^5,1^5,1^7,1^6,19^1;nonlinear=19,744201921369600,820ecaabdbf14eb2b21e7cb56d5235cc167bf49d1e44361ffd93296d8cb73db1
+all_resultant_factors_have_positive_coefficients=true
+two_term_boundary=positive_L2_after_L1
+scope=first-window SFC(3), every translated three-subset of five consecutive exponents
+all_exact_checks=PASS

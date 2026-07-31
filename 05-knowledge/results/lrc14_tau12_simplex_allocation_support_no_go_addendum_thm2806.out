@@ -1,0 +1,18 @@
+THM-2806 TAU-TWELVE SIMPLEX ALLOCATION-SUPPORT ADDENDUM
+status=FINITE-EXACT primary; independent hostile audit required
+dependency_sha256=(('lrc14_semantic_arm_right_wing_central_digit_thm2782.py', '7fbc6bb1ec303ded98eaad6e5d8205eb3d247258ada32b6f9904fc439ebb11fb'), ('lrc14_positive_graded_address_two_simplex_thm2807.py', '11cdbe3c6cc7f9d5b6b24863ced71eb91cc84adc67fe38a3f8a3e637362453fb'), ('lrc14_literal_fixed_sheet_allocation_thm2806.py', '311d0d85500f0c65945ebe5913f09d34a16293119c942b42eeaa854fbf85f71e'))
+universe=rail8;(clock,sigma,tau)=(1,0,12);addresses=(3454614,3454627,4143978);both_relative_safeties;target_root1;delayed_carry6
+typing=A=source_one_sided;B=pullback(target_one_sided);M=A_intersect_B;L=A_minus_B;R=B_minus_A
+tau12_raw_piece_counts_(A,B,M,L,R)=(240, 241, 0, 240, 241);M_empty_before_address_restriction=yes;therefore_address_independent_on_this_fixed_sheet=yes
+tau12_vertex=address:3454614;central_index:0;allocation_rows:(('A', 0, 0, 0), ('B', 1, Fraction(60781651775958960, 371293), 790161473087466480), ('M', 0, 0, 0), ('L', 0, 0, 0), ('R', 1, Fraction(60781651775958960, 371293), 790161473087466480))
+tau12_vertex=address:3454627;central_index:1;allocation_rows:(('A', 0, 0, 0), ('B', 1, Fraction(60781651775958960, 371293), 790161473087466480), ('M', 0, 0, 0), ('L', 0, 0, 0), ('R', 1, Fraction(60781651775958960, 371293), 790161473087466480))
+tau12_vertex=address:4143978;central_index:53028;allocation_rows:(('A', 0, 0, 0), ('B', 1, Fraction(60781651775958960, 371293), 790161473087466480), ('M', 0, 0, 0), ('L', 0, 0, 0), ('R', 1, Fraction(60781651775958960, 371293), 790161473087466480))
+selected_right_cofiber_tables=tau3:((Fraction(60781651775958960, 371293), 790161473087466480), (0, 0), (Fraction(60781651775958960, 371293), 790161473087466480));tau12:((Fraction(60781651775958960, 371293), 790161473087466480), (Fraction(60781651775958960, 371293), 790161473087466480), (Fraction(60781651775958960, 371293), 790161473087466480));whole_cylinder_translation=3/3
+separate_81_label_common_bank_clock_counts=(0, 81, 56, 56, 0, 0, 0);right_cofiber_clock_counts=(0, 81, 56, 56, 0, 0, 0);cellwise_nonempty_support_agreement=567/567
+common_piece_histograms=(((0, 81),), ((189, 54), (213, 18), (239, 9)), ((0, 25), (190, 7), (426, 28), (474, 14), (526, 7)), ((0, 25), (382, 7), (404, 28), (409, 7), (452, 7), (504, 7)), ((0, 81),), ((0, 81),), ((0, 81),));common_bank_vs_right_cofiber_disjoint=567/567;tau12_not_in_common_target_bank=yes
+Omega_digits_n0_nplus_na=((7, 6), (7, 7), (7, 7));projected_mod169=(85,98,98)
+CLOSES=THM2807_item1_only_for_the_specified_tau12_simplex:the_requested_common_allocation_atom_is_empty
+FIRST_FAILED_IMPLICATION=positive_same_ancestry_address_simplex_does_not_imply_one_common_physical_allocation_atom
+DECODER_BOUNDARY=THM2803_two_value_ratio_requires_one_shared_physical_current_and_scalar;this_tau12_simplex_is_target_only_before_endpoint_origin_or_Fourier_data_exist
+NEXT_TEST=construct_a_typed_boundary_map_from_the_separate_common_bank_to_the_tau12_right_cofiber_or_find_a_positive_address_simplex_inside_the_common_bank_before_endpoint_allocation
+ALL EXACT CHECKS PASSED

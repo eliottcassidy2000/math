@@ -1,0 +1,16 @@
+THM-2625/2635 clock-two half-compatibility referee
+T=297836897838480; N6=1437601819018855810320; minimal_endpoint_phase_order=110584755309142754640
+clock2_target_projection_182=((0, 26), (156, 182))
+compatible_probes_eps0=(1, 11, 12); compatible_probes_eps1=(1, 2, 12)
+h3_eps1_r9_common_atom=EMPTY: [113,126) lies strictly between 26 and 156
+h10_source_normalized_mod13=(0, 0, 0, 1, 0, 0, 0); unit_determinant=1
+h10_private_labels(c,b,epsilon,r,outgoing,offset)=(0,1,1,2,11,11)
+field_prime=7188009095094279051601; exact_N6_root=656356768; Lucas/order_gate=PASS
+h10_witness_mass=320917389308122335557400; endpoint_mod_p=1441723002435168223705
+fixed_gauge_mass_hist=((0, 5), (320917389308122335557400, 8)); positive_gauges=(0, 1, 2, 3, 9, 10, 11, 12)
+fixed_mask(M,E,delta,R)=(8,8,56,7); purity_return_gate=NO
+equivariant_gauges=13/13; mass=320917389308122335557400; endpoint_mod_p=1441723002435168223705
+orbit_saturated_mass=2567339114464978684459200; endpoint_mod_p=4345774924387066738039; descended_gauges=13/13
+orbit_labelled_unit_copies=13; unlabelled_mod13_vector=(0, 0, 0, 0, 0, 0, 0)
+verdict=PASS: h=3 is atomwise incompatible with clock two; h=10 has a nonzero common endpoint atom, but a fixed carrier does not descend; equivariant translation/orbit labelling repairs the quotient gauge
+SCOPE: exact canonical-control referee; not semantic two-root gluing, current transport, a row exclusion, or LRC(14)

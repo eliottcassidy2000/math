@@ -1,0 +1,16 @@
+THM-2780 INDEPENDENT MARKED-D3 DESCENT HOSTILE
+d3_root_lines=6 even_states=4 weyl_elements=24
+weight_colouring_spectrum=1^9,2^3,3^3
+weight3=state_orthogonal_triangle weight2=state_independent_opposition_matching
+colouring_map=injective_W(D3)-equivariant V4_regular
+retained_chamber_scores=(1, 2, 2, 3, 3, 4) retained_chamber_tournament=chiral
+chamber_free_weighted_switching_class=self_converse
+switching_witness=switch(a12); relabel(a23,a13)(b13,b23)
+quartic_reconstruction=half_Hadamard_exact
+affine_inertia_action=nonzero_even_word_translates_four_colourings_freely
+quasi_etale_gate=all_normalized_divisor_rows_zero
+twin_base=(Gm)^4 with simultaneous_S3
+twin_planes=WX=<x1,x2,x3>, WY=<y1,y2,y3>
+twin_planes=S3_standard_distinct all_divisor_rows_zero common_sum_zero
+minimal_lost_coordinate=embedded_Q_equivariant_Kummer_H1_class
+FAILED CHECKS: NONE

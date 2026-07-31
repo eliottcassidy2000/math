@@ -1,0 +1,24 @@
+THM-2818 x THM-2820 HALF-STEP/HASSE TRANSPORT PROBE
+coordinate=X=one rooted physical half-step; [L]_X=(1-X^L)/(1-X); E_m(X)=(1-X^(2m))/(1-X^2)
+block convention: next root is 50 half-steps after the previous block's last term
+clock=1; starts=(0, 194); lengths=(145, 96); raw=X^0[145]_X + X^194[96]_X
+clock=1; live=X^0E_73(X) + X^194E_48(X); dead=X^1E_72(X) + X^195E_48(X)
+clock=1; jets=(exact_J0,exact_J1,J0_mod13,J1_mod13,b): raw=(241, 33624, 7, 6, 12); live=(121, 16824, 4, 2, 7); dead=(120, 16800, 3, 4, 10); contrast=(1, 24, 1, 11, 11)
+clock=1; live_residue_vector=(10, 10, 10, 9, 9, 9, 9, 9, 9, 9, 9, 9, 10); live_orbit=regular_13; root_shift_killing_b=6
+clock=1; X*live-dead endpoint_defect=(145,)
+clock=2; starts=(0, 192, 530); lengths=(143, 289, 96); raw=X^0[143]_X + X^192[289]_X + X^530[96]_X
+clock=2; live=X^0E_72(X) + X^192E_145(X) + X^530E_48(X); dead=X^1E_71(X) + X^193E_144(X) + X^531E_48(X)
+clock=2; jets=(exact_J0,exact_J1,J0_mod13,J1_mod13,b): raw=(528, 162697, 8, 2, 10); live=(265, 81528, 5, 5, 1); dead=(263, 81169, 3, 10, 12); contrast=(2, 359, 2, 8, 4)
+clock=2; live_residue_vector=(8, 7, 7, 7, 7, 7, 7, 7, 7, 7, 9, 7, 9); live_orbit=regular_13; root_shift_killing_b=12
+clock=2; X*live-dead endpoint_defect=(143, 481)
+clock=3; starts=(0, 192, 530); lengths=(143, 289, 74); raw=X^0[143]_X + X^192[289]_X + X^530[74]_X
+clock=3; live=X^0E_72(X) + X^192E_145(X) + X^530E_37(X); dead=X^1E_71(X) + X^193E_144(X) + X^531E_37(X)
+clock=3; jets=(exact_J0,exact_J1,J0_mod13,J1_mod13,b): raw=(506, 149178, 12, 3, 10); live=(254, 74774, 7, 11, 9); dead=(252, 74404, 5, 5, 1); contrast=(2, 370, 2, 6, 3)
+clock=3; live_residue_vector=(7, 6, 7, 6, 7, 6, 6, 6, 6, 6, 8, 6, 8); live_orbit=regular_13; root_shift_killing_b=4
+clock=3; X*live-dead endpoint_defect=(143, 481)
+formal_live_barycenters=(7,1,9); all nonzero in the live-head root; all are root-gauge killable
+same_one_axis_motion_hostile: transverse=(L=0,zL=0,q=(1, 0))->(1, 0); marked_pure_gauge=(L=W,zL=1,q=(1, -1))->(0, 0)
+fixed_target12_vs_regular_target_shift_failures=39/39
+unoriented_affine_target_to_root_identifications=156; generator_preserving_origin_choices=13
+verdict=formal rooted Hasse translator positive; physical gauge-transversality and common-interval transport not selected
+assert_nodes=0; ALL EXACT CHECKS PASSED

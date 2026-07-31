@@ -1,0 +1,467 @@
+---
+id: THM-2975
+title: "Modular six-sheet Schreier graphs and Farey/partial-cube boundary"
+status: >
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the marked
+  C2*C3 -> S4 quotient of THM-2968, the edge and
+  oriented-cycle six-sheet Schreier graphs agree on the ternary generator
+  and differ exactly on the binary generator.  The discriminant subgroup is
+  C3*C3 and makes the two actions identical.  None of the literal six-sheet
+  graphs is a partial cube; their lossy Bass--Serre incidence shadows are.
+  The two index-six stabilizers have genus-zero signatures
+  `(e2;e3;cusps)=(2;0;4,2)` and `(0;0;4,1,1)`; the orientation stabilizer is
+  exactly Gamma_0(4), while the edge stabilizer is a distinct level-four
+  congruence subgroup.  Their weighted incidence graphs retain free ranks
+  one and two that the simple C4/P5 shadows erase.
+  The marked descents are the two classes in H^1(C2,Aut_A4(X))=H^1(C2,C2),
+  with stabilizers V4 and C4.  The local extension frame is D8/C2=V4, and
+  the A4 restriction carries a chiral octahedral partial tournament with
+  three antipodal ties and all eight triangular faces cyclically oriented.
+  Explicit finite-kernel, graceful, tournament, and source-typing hostiles
+  block every Farey, Keller, JC, or LRC overclaim.
+source: codex-modular-six-sheet-schreier-boundary-2026-07-30
+depends_on:
+  - THM-2862-modular-level-three-four-congruence-ladder-and-inequivalent-six-lifts
+  - THM-2968-quartic-edge-and-oriented-cycle-s4-complements
+  - THM-2971-discriminant-cover-edge-orientation-sextic-algebra-intertwiner
+related:
+  - THM-2596-modular-free-factor-farey-gram-owner-cocycle
+  - THM-2606-affine-v4-parity-channels-partial-cubes-and-feuerbach-origin
+  - THM-2965-modular-signed-pair-complements-and-v4-compound-shadow
+script: 04-computation/modular_s4_six_sheet_schreier_thm2975.py
+output: 05-knowledge/results/modular_s4_six_sheet_schreier_thm2975.out
+script_sha256: a3295bc08c68f61ca4b88551804bb22ca9bd8a3e6a50c72bd5a0936b8f74cf4b
+output_sha256: 36ab0e645c5bb5a846f1305230cacedfc0638fcb8771f818facba2c8dbff3465
+hash_basis: LF-normalized bytes
+---
+
+# THM-2975 -- modular six-sheet Schreier graphs and Farey/partial-cube boundary
+
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+
+## 1. Inheritance and statement
+
+[THM-2968, the two quartic `S4`
+complements](THM-2968-quartic-edge-and-oriented-cycle-s4-complements.md)
+identifies the six edges and six oriented Hamiltonian four-cycles as two
+inequivalent lifts of one matching `S3` frame.  [THM-2971, the discriminant-
+cover algebra intertwiner](THM-2971-discriminant-cover-edge-orientation-sextic-algebra-intertwiner.md)
+proves that their restrictions to `A4` are literally the same six-point
+action.  This theorem computes the marked modular Schreier graphs and says
+exactly where the proposed partial-cube, `V4`, Farey, graceful, and tournament
+analogies are true or false.
+
+Use the THM-2968 generators
+
+```text
+Gamma=C2*C3=<a,b | a^2=b^3=1>,
+a=(2 3),                 b=(0 2 1),
+<a,b>=S4.                                                     (1)
+```
+
+Label the edge sheets by
+
+```text
+0=01, 1=23, 2=02, 3=13, 4=03, 5=12,                         (2)
+```
+
+and use THM-2968's matching order and orientation gauge on the oriented
+cycles.  Then the induced permutations are
+
+```text
+edge:        a=(2 4)(3 5),          b=(0 2 5)(1 3 4),
+orientation: a=(0 1)(2 5)(3 4),    b=(0 2 5)(1 3 4).         (3)
+```
+
+Thus the two actions agree on the ternary generator.  The binary generator
+has type `1^2 2^2` on edges and `2^3` on orientations.  This is the exact
+Schreier-graph form of THM-2968's central sign twist.
+
+Let a **literal six-sheet generator graph** mean the colored Schreier graph,
+or its loopless simple shadow, on these six state vertices.  The loopless
+edge graph consists of two `b`-triangles joined by `2--4` and `3--5`; it has
+eight edges and degree sequence
+
+```text
+(2,2,3,3,3,3).                                              (4)
+```
+
+The loopless orientation graph consists of the same two triangles joined by
+the bridge `0--1`; its other two `a`-edges coincide with `b`-edges.  It has
+seven simple edges and degree sequence
+
+```text
+(2,2,2,2,3,3).                                              (5)
+```
+
+Both contain triangles, so neither literal graph is bipartite or a partial
+cube.
+
+## 2. Discriminant restriction: `C3*C3`
+
+Let `epsilon:Gamma->C2` count the parity of the `a` letters.  The index-two
+Reidemeister--Schreier calculation gives
+
+```text
+Gamma^+=ker(epsilon)=<b,c | b^3=c^3=1>=C3*C3,
+c=aba.                                                       (6)
+```
+
+Its image is `A4`.  In the common six-sheet gauge,
+
+```text
+c=(0 4 3)(1 5 2)                                           (7)
+```
+
+on both actions.  Hence the two colored actions restrict literally to one
+`A4`-set, not merely to isomorphic permutation characters.
+
+The loopless simple graph generated by `b,c` is
+
+```text
+K_(2,4) plus the disjoint edges 2--5 and 3--4.              (8)
+```
+
+It has ten edges, degrees `(3,3,3,3,4,4)`, and four visible triangles.  It is
+not a partial cube.  The exact free-factor change is
+
+```text
+C2*C3  --discriminant kernel-->  C3*C3.                    (9)
+```
+
+The quadratic cover replaces the one binary factor by a second conjugate
+ternary factor.  It does not replace `C2` by a `V4` translation and it does
+not make the six sheets into a tree.
+
+## 3. Bass--Serre incidence shadows
+
+There is a second graph construction.  Replace the six states by the orbits
+of each free factor and retain one incidence edge for each state.  This is
+the finite quotient of the appropriate Bass--Serre tree.  The exact orbit-
+intersection matrices are
+
+```text
+edge C2/C3 quotient:             orientation C2/C3 quotient:
+    [1 0]                            [1 1]
+    [0 1]                            [2 0]
+    [1 1]                            [0 2]
+    [1 1]
+
+common C3/C3 quotient:
+    [1 2]
+    [2 1].                                                     (10)
+```
+
+After every positive multiplicity is replaced by one, the three simple
+shadows are
+
+```text
+edge:        C4 with one leaf at each of two opposite vertices;
+orientation: P5;
+cover:       C4.                                               (11)
+```
+
+All three in `(11)` are partial cubes.  The path is a tree, `C4=Q2`, and
+each attached leaf uses a fresh hypercube coordinate at its attachment
+vertex.  This is the strongest correct partial-cube survivor.
+
+It is sharply lossy.  The doubled end links in the orientation matrix and
+the alternating `1,2,1,2` weights on the common square disappear in `(11)`.
+Those multiplicities record factor stabilizers and are part of the action.
+Thus a statement about the incidence shadow must not be transferred back to
+the literal six-sheet graph.
+
+There is an exact modular-orbifold refinement.  Let
+
+```text
+T=a^(-1)b=ab                                                   (11a)
+```
+
+be the standard parabolic.  Its cycle lengths on a transitive coset action
+are the cusp widths of the corresponding sheet stabilizer.  The exact
+permutations in `(3)` give
+
+```text
+edge:        T=(0 4 1 5)(2 3),       cusp widths (4,2);
+orientation: T=(0 5 1 4)(2)(3),      cusp widths (4,1,1).      (11b)
+```
+
+The number of fixed points of `a` and `b` gives the order-two and
+order-three elliptic census.  Hence the two index-six subgroups have
+signatures
+
+```text
+edge:        g=0, e2=2, e3=0, two cusps;
+orientation: g=0, e2=0, e3=0, three cusps.                   (11c)
+```
+
+Indeed
+
+```text
+g=1+6/12-e2/4-e3/3-c/2=0                                   (11d)
+```
+
+in both cases.  Under THM-2862's identification of the orientation sheets
+with `P^1(Z/4)`, the selected infinity-sheet stabilizer is exactly
+`Gamma_0(4)`; its image modulo four is the cyclic group `C4`.  The edge
+stabilizer is instead the preimage of the nonnormal `V4_edge`.  It is a
+level-four congruence subgroup, but it is not conjugate to `Gamma_0(4)`:
+the elliptic censuses and cusp-width multisets already separate them.
+More explicitly, for
+
+```text
+gamma=[A B; C D] in Gamma_0(2),
+chi_edge(gamma)=B+C/2 mod 2,
+H_edge=ker(chi_edge).                                      (11d')
+```
+
+The determinant-one condition makes `A,D` odd, so `chi_edge` is a
+well-defined homomorphism even after quotienting by `+-I`; its mod-four
+kernel is exactly the displayed nonnormal edge `V4`.
+
+This is the precise equal-area surgery carried by the binary descent bit.
+The common width-four cusp remains, while the edge width-two cusp splits
+into two width-one cusps and the two order-two cone points disappear.  The
+orbifold Euler characteristic stays `-1`, as index six requires.
+
+The weighted incidence graphs, rather than their simple shadows, are the
+corresponding Bass--Serre graphs of groups.  They have
+
+```text
+edge:        beta1=1 with two C2 vertex groups,  C2*C2*Z;
+orientation: beta1=2 with no elliptic groups,    F2;
+cover A4:    beta1=3 with no elliptic groups,    F3.          (11e)
+```
+
+Thus the orientation's three binary-factor orbit nodes and two ternary-
+factor orbit nodes do form the visible `P5`, but its doubled links carry two
+independent cycles.  Collapsing multiplicities destroys the cusp and free-
+word data.  Likewise the common weighted square has cycle rank three, not
+the cycle rank one of its unweighted `C4` shadow.
+
+The common weighted square has abstract automorphism group `V4`, acting
+regularly on its four factor-orbit vertices, when interchange of the two
+`C3` factors is allowed.  This is a `V4` torsor at the four incidence nodes,
+not at the six state vertices.
+
+## 4. The exact `S3` quotient and local `V4` frame
+
+Let
+
+```text
+N={1,(01)(23),(02)(13),(03)(12)}                           (12)
+```
+
+be the normal quartic `V4`.  On either six-sheet set it has the three orbits
+
+```text
+{0,1}, {2,3}, {4,5},                                      (13)
+```
+
+and every sheet has stabilizer `C2` in `N`.  The six sheets are therefore
+not an `N`-torsor.  The quotient
+
+```text
+S4/N=S3                                                     (14)
+```
+
+is exactly the common three-block matching/inverse-pair frame.  It forgets
+the within-pair bit that distinguishes the two binary actions in `(3)`.
+
+There is nevertheless a second exact `V4` object.  Put
+
+```text
+d=(01)(23),                  H=<d>.                        (15)
+```
+
+`H` is the selected common sheet stabilizer after restriction to `A4`.  Its
+centralizer is `D=C_S4(d)=D8`.  The three order-four subgroups of `D`
+containing `H` are exactly
+
+```text
+the normal quartic V4 N,
+the selected edge stabilizer V4_edge,
+the selected orientation stabilizer C4.                   (16)
+```
+
+They meet pairwise in `H`, and their images are the three nonzero lines of
+
+```text
+D/H=D8/C2=V4.                                              (17)
+```
+
+Equation `(17)` is the correct local extension frame.  It classifies the
+three ways to extend the common discriminant-cover `C2` stabilizer inside
+its centralizer.  It is neither a `V4` action on the six sheets nor the
+normal quotient `(14)`.
+
+There is a complementary marked-descent classification.  Let `X=A4/H` be
+the common six-sheet set and retain the selected odd generator `a` and base
+sheet `H`.  Then
+
+```text
+Aut_A4(X)=N_A4(H)/H=V4/H=C2.                            (17a)
+```
+
+A descent operator is an involution `T` satisfying
+
+```text
+T rho(n) T^-1 = rho(a n a^-1),             n in A4.    (17b)
+```
+
+The quotient `C2` acts trivially on the coefficient group in `(17a)`, and
+the exact six-sheet enumeration finds precisely two marked descents up to
+`A4`-equivariant isomorphism:
+
+```text
+H^1(C2,Aut_A4(X))=H^1(C2,C2)=C2.                       (17c)
+```
+
+Reconstructing `rho_T(n a^e)=rho(n)T^e` gives base-sheet stabilizer
+`V4_edge` for one class and `C4` for the other.  The two operators differ by
+the unique nontrivial equivariant automorphism, the three-pair flip.  In the
+already identified `D8/H` frame, their affine difference is the normal-`V4`
+line.  Thus the discriminant cover forgets exactly one binary descent bit;
+the common `A4`-set alone cannot choose edge versus orientation descent.
+
+In the marked modular factor frame the normalizer of the unordered pair
+`{<b>,<aba>}` is `V4_edge`.  On the four weighted-square nodes its edge-lift
+action has image only `C2`, while its orientation-lift action realizes the
+full regular `V4`.  This is a finite graph shadow of the central twist:
+the same root relabellings acquire one extra factor-orbit reflection only in
+the oriented descent.
+
+## 5. The chiral octahedral partial tournament
+
+Under full `S4`, the unordered pairs of six sheets form orbitals of sizes
+`3,12`, and the directed orbitals have sizes `6,24`.  Both directed orbitals
+are self-paired.  Hence no `S4`-invariant pairwise orientation exists.
+
+The discriminant cover gives one positive survivor.  Under `A4`, the six
+directed opposite pairs remain one self-paired orbital, while the 24 directed
+incident pairs split into two inverse orbitals of size 12.  Choosing either
+one gives an `A4`-invariant chiral orientation of the octahedral incident
+graph `L(K4)`:
+
+```text
+outdegree=indegree=2,
+three antipodal/opposite pairs remain ties,
+all eight octahedral triangular faces are directed cycles.                 (18)
+```
+
+Thus no full `A4`-invariant tournament exists: the three opposite pairs are
+an unavoidable self-paired orbital.  But every nonopposite pair has a
+canonical orientation up to simultaneous reversal.  The exact repaired
+size-six tournament analogy is therefore an oriented octahedron with three
+ties, not a tournament.  The marked generator graph `(8)` is only a ten-edge
+subgraph of this twelve-edge orbital graph.
+
+## 6. Farey and finite-kernel hostiles
+
+[THM-2596, modular free factors and the Farey/Gram-owner
+boundary](THM-2596-modular-free-factor-farey-gram-owner-cocycle.md) proves
+that the positive Farey children are parabolic words in the two torsion
+generators and that the off-diagonal Gram entry is load-bearing.
+
+Here `ab` is parabolic and has infinite order in `C2*C3`, but its `S4` image
+has order four.  Therefore
+
+```text
+(ab)^4=1                                                   (19)
+```
+
+on both six-sheet actions although it is a nontrivial reduced modular word.
+After the discriminant cover, the reduced word `b(aba)` has infinite order
+in `C3*C3`, while its `A4` image has order two.  Thus
+
+```text
+(b aba)^2=1                                                (20)
+```
+
+in the finite action.  These short hostiles show that the Schreier graph
+does not retain the Farey flank, Bass--Serre path, modular word, or THM-2056
+Gram-owner cross term.  The finite six-state action is a finite octahedral
+quotient, not the binary fraction tree or ternary Pythagorean reduction tree.
+
+## 7. Graceful and external-origin boundaries
+
+Exact exhaustive controls give graceful labellings for both pre-cover
+loopless graphs:
+
+```text
+edge:        (0,2,1,4,7,8),
+orientation: (0,6,5,2,3,7).                              (21)
+```
+
+The common ten-edge `A4` generator graph `(8)` is not graceful.  Gracefulness
+therefore neither distinguishes the two complements nor survives the
+discriminant restriction.  It is an existential labelling predicate, not an
+equivariant sidecar.
+
+[THM-2606, affine `V4` parity channels and the Feuerbach origin
+boundary](THM-2606-affine-v4-parity-channels-partial-cubes-and-feuerbach-origin.md)
+shows how external tangency data can select an origin on a separate
+four-state sign torsor.  No such origin is constructed here.  Importing it
+would be extra labelled source data, not a consequence of the Schreier
+graphs.
+
+## 8. Transfer contract and scope
+
+```text
+source:
+  the marked modular quotient and its Bass--Serre tree;
+
+target:
+  the edge/orientation six-sheet quartic actions;
+
+map:
+  a -> the displayed sheet involution, whose edge/orientation cycle types
+       are 1^2 2^2 and 2^3;
+  b -> the common displayed order-three sheet permutation of type 3^2;
+
+preserved:
+  factor orders, the common S3 block quotient, and the identical A4
+  restriction after the discriminant cover;
+
+destroyed:
+  reduced modular word, Farey depth and flank, Gram-owner state, affine
+  source and divisor ownership, and the within-pair bit after block quotient;
+
+needed sidecars for affine use:
+  a common source/owner chart, discriminant orientation, maximal-order and
+  divisor data, and the THM-2056 Gram cross term;
+
+cheapest decisive hostile:
+  the finite-kernel word (ab)^4.
+```
+
+This theorem is finite group and graph structure only.  It constructs no
+Keller source, quasi-etale cover, Jelonek owner, multiplication intertwiner,
+LRC endpoint current, or physical tournament observable.  It proves no
+degree-four point-cap Keller statement, `JC(2)`, `DC(2)`, SFC(4), GMC,
+N-body, supergroup, or `LRC(14)` closure.
+
+## 9. Exact evidence
+
+Run
+
+```text
+python 04-computation/modular_s4_six_sheet_schreier_thm2975.py
+python -O 04-computation/modular_s4_six_sheet_schreier_thm2975.py
+```
+
+Both modes LF-normalize byte-for-byte to the stored transcript
+
+```text
+05-knowledge/results/modular_s4_six_sheet_schreier_thm2975.out.
+```
+
+The dependency-free companion checks all 24 root relabellings; the two
+marked actions and their `A4` restrictions; all 720 candidate six-sheet
+descent operators and the reconstructed `V4`/`C4` stabilizers; every factor-
+orbit incidence matrix; the normal and local `V4` frames; the literal
+partial-cube obstructions and the incidence-shadow survivors; all directed
+orbitals and the eight cyclic octahedral faces; the graceful witnesses and
+nonexistence scan; the invariant-tournament obstruction; and both finite-
+kernel words.  It uses explicit `require(...)` checks, so optimized mode
+verifies the same claims.

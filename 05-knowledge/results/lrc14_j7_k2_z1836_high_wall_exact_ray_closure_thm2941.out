@@ -1,0 +1,25 @@
+LRC14 projected k=2 z1=1836 high-wall exact ray closure
+source_sha256=5d25a955fe184d6c1a3d8b632b4bbf901dc996ee46ad67c5748836fcc7134404
+scalar_band_output_sha256=fdbeee8d14057edc7b6d1a5a24c660899846aef5eb2a7c6a3004367caf3aa73b
+scope=two inherited HIGH-TAIL body rows;all distinct later labels;no finite label horizon
+ray_law=delta(r+mL)=A(r)/(r+mL);search=first four points of every positive ray plus first high point
+forced_high_wall=floor(13L/150)+1;scalar_necessary=sum(delta)>=h/91;projected_threshold=25/91
+ROW;E=1,4,10,12,13,14;L=76440;h=853/2548;r=34;high_floor=6625;positive_residues=38217;recurrence_checks=76439
+  unconstrained_top4=2340:239/267540,2004:3425/4467918,2114:1873/2693236,1989:706/1137045
+  first_omitted_ray_point=329940:829/113169420;fourth_top=1989:706/1137045
+  best_high=6708:53/176988
+  exact_constrained_suffix=2340:239/267540,2004:3425/4467918,2114:1873/2693236,6708:53/176988
+  delta1=6269/8186724;upper=75911656201/22192796554110;lower=853/231868;gap=-149021255959/577012710406860
+  projected_packet=(1836, 2004, 2114, 2340, 6708);exact_residual=1/1;threshold_prefix_cells=7;threshold_prefix_mass=11765/23103;common_danger_empty_at=14;body_safe_cells=25590
+  conclusion=SCALAR-EMPTY
+ROW;E=1,8,10,12,13,14;L=152880;h=811/2548;r=38;high_floor=13250;positive_residues=76434;recurrence_checks=152879
+  unconstrained_top4=2340:149/160524,2004:1877/2233959,1946:1567/2479204,2114:1663/2693236
+  first_omitted_ray_point=646620:439/110895330;fourth_top=2114:1663/2693236
+  best_high=13260:149/909636
+  exact_constrained_suffix=2340:149/160524,2004:1877/2233959,1946:1567/2479204,13260:149/909636
+  delta1=1081/1364454;upper=23624875/7038460156;lower=811/231868;gap=-3228564/22874995507
+  projected_packet=(1836, 1946, 2004, 2340, 13260);exact_residual=1/1;threshold_prefix_cells=14;threshold_prefix_mass=14/17;common_danger_empty_at=27;body_safe_cells=48660
+  conclusion=SCALAR-EMPTY
+global_high_wall_rows=2;scalar_empty=2;survivors=0
+semantic_sha256=8b303e85838d5a8850e3550887ffade1499de07a0a0799d7121ddcb311f9f8ef
+all_exact_controls=PASS

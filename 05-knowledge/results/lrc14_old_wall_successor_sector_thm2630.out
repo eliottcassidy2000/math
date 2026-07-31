@@ -1,0 +1,19 @@
+THM-2630 exact old-wall/successor-sector controls
+priority_wall_patterns=[((False, True, False), 36), ((True, False, False), 4), ((True, True, False), 44)]
+priority_middle_positive=80 pure_low_cells=((7, 0), (7, 1), (7, 2), (7, 3))
+thm2600_selector_patterns=[((0, (False, True, False)), 30), ((0, (False, True, True)), 39), ((1, (False, True, False)), 7), ((1, (True, True, False)), 8)]
+naive_theta0_formula_failures=15 corrected_failures=0
+full_common_x_middle_support_hist=[(12, 12), (24, 23), (36, 37), (48, 12)]
+old_wall_formula=h=qprime=7*(tau-epsilon-theta)_mod13
+strict_hostiles=((Fraction(11, 260), Fraction(1, 10), 7), (Fraction(3, 52), Fraction(1, 2), 9))
+middle_successor_sectors_by_kappa=((0, 1, 2, 3, 4, 5, 6), (6, 7, 8, 9, 10, 11, 12))
+later_partition_checks=61248 ambiguous_rails=158/162
+later_signature_hist=[((0, 1), 158), ((0, 10), 484), ((0, 11), 1254), ((1, 1), 158), ((1, 10), 286), ((1, 11), 1452)]
+later_ambiguous_hist=[((0, 10), 484), ((0, 11), 1254), ((1, 10), 286), ((1, 11), 1452)]
+later_signatures=3792 ambiguous=3476 functional=316
+later_ambiguous_base_cells=84/84
+clock_retained_hist=[(1, 712), (7, 1452), (8, 484), (9, 2904), (10, 2948), (11, 1980)]
+clock_retained_signatures=10480 ambiguous=9768 base_cells=84/84
+affine_bijections=156 visible_signatures=888 support_floor=5 max_support_hist=[(9, 74), (10, 74), (11, 8)]
+opposite_graph_physical_spectrum=((7, 132), (8, 143), (9, 266), (10, 257), (11, 90))
+verdict=PASS: old wall clutches affinely; later probe needs successor-sector/carry data

@@ -1,8 +1,12 @@
 ---
 id: THM-1440
-title: "THE SHEET-LOSS STATEMENT IS RUNG 2 OF FIVE, AND ITS OWN AXIS IS NOT WHERE THE ROOM IS. (0) PLACEMENT: 'a constant-Jacobian polynomial local biholomorphism with no loss of sheets at infinity — e.g. a proper Keller map — is an automorphism' is exactly the classical properness rung of THM-1375's lattice, the second-weakest of five. Ours is considerably more comprehensive: three strictly stronger rungs sit above it (nodal-Jelonek, Galois/Campbell, and Smith's non-self-normalising stabiliser as the maximal element), with the ordering PROVED strict by the D₄ witness. (I) THE QUANTITATIVE WEAKENING (Q_k) — 'Keller + at most k sheets lost ⟹ automorphism' — is FALSE at k = 2, witnessed by the THM-1300 map itself: exact elimination finds targets q = (0,−1,−1) and (0,0,−5/3) whose fibre is a single point, defect 2, with the resultant degree collapsing 3 → 1. (II) A DISCREPANCY I DID NOT RESOLVE AND AM NOT ASSERTING AWAY: THM-1315 states the drop is 3 → 2 'by a sheet leaving through infinity', defect 1. My probes found only defect-2 points and never a defect-1 point. Both can coexist as different strata of the non-properness locus, but (Q_1) is NOT established here and must not be cited as settled. (III) AN INSTRUMENT FAILURE, recorded because its signature is the useful part: my first fibre counter used Groebner standard monomials with an unpinned monomial order and a truncated counting box. It returned the correct 3 on the known triple-collision control while returning the box cap 40 on every generic target — a control passing while generic input fails is the signature of a broken instrument, not of a phenomenon"
+title: "Sheet-loss placement and the exact defect-two Keller witness"
 status: >
-  (0) Placement is exact; the lattice and its strictness are THM-1375, already proved.
+  (0) CORRECTED BY MISTAKE-297 AND SUPERSEDED IN PART BY THM-2633.
+  Properness, nodal-Jelonek, and
+  Galois/Campbell remain the proved placement chain.  The former fifth Smith
+  rung, its claimed strictness, and its D4 exclusion by deck extension are
+  RETRACTED.  THM-2633 later excludes D4 by a distinct openness/Kummer gate.
   (I) VERIFIED-EXACT by elimination (solve F₃ for z, resultant in y, count distinct
   roots, x = 0 branch handled separately), with the instrument validated on BOTH the
   known control and five generic targets before any drop was reported — all six give
@@ -16,31 +20,39 @@ status: >
   Nothing here advances JC₂, DC₁ or DC₂.
 source: kind-pasteur-2026-07-20-S128c113 (owner: is the no-loss-of-sheets statement roughly equivalent to our understanding, or is ours more comprehensive?)
 depends_on:
-  - THM-1375    # the five-rung lattice this places the statement in
+  - THM-1375    # corrected proper/nodal/Galois chain
   - THM-1315    # the 3 -> 2 drop this partially disagrees with
-related: [THM-1330, THM-1430]
+related: [THM-1330, THM-1430, THM-2633-derangement-character-obstruction-and-d4-keller-exclusion, MISTAKE-297]
 script: 04-computation/sheet_defect_sharpness_kps_S128c113.py (+ .out)
 ---
 
 # THM-1440 — placing the sheet-loss statement, and one number I could not confirm
+
+> **MISTAKE-297 CORRECTION.** The former non-self-normalizing-stabilizer
+> endpoint of the displayed lattice is retracted. Deck transformations on
+> the punctured source were not shown to extend freely over affine space.
+> THM-2633 later excludes `D4` without that extension, by proving the separate
+> point-stabilizer abelianization gate.  The defect-two computation and every
+> statement in Sections I--III are unaffected.
 
 ## 0. The answer to the comparison
 
 > *"A constant-Jacobian polynomial local biholomorphism with no loss of sheets at
 > infinity — e.g. a proper Keller map — is an automorphism."*
 
-This is **true, classical, and rung 2 of five** in THM-1375's lattice:
+This is **true and classical**.  In the corrected THM-1375 chain it sits as
+the properness rung:
 
 ```
-injective  ⟹  PROPER  ⟹  nodal Jelonek  ⟹  Galois  ⟹  non-self-normalising stabiliser
-(Ax–Groth.)   ^^^^^^^^    (Zariski–Lefschetz   (Campbell    (Smith selection rule,
-              the quoted    + Deligne–Fulton)   1973)        the MAXIMAL element)
+injective  ⟹  PROPER  ⟹  nodal Jelonek  ⟹  Galois  ⟹  automorphism
+(Ax–Groth.)   ^^^^^^^^    (Zariski–Lefschetz   (Campbell 1973)
+              the quoted    + Deligne–Fulton)
               statement
 ```
 
-Each arrow *weakens* the hypothesis, so each rung is a strictly stronger theorem, and
-THM-1375 verified the ordering is **strict** — `D₄` at cover degree 4 is killed by Smith
-and not by Campbell. "No loss of sheets at infinity" is precisely "the Jelonek set is
+Each arrow *weakens* the hypothesis.  The former further Smith rung and its
+claimed proof of `D4` strictness are false as stated; THM-2633 now excludes
+`D4` by an independent openness/Kummer argument. "No loss of sheets at infinity" is precisely "the Jelonek set is
 empty", and THM-1330 records that a counterexample's Jelonek set is *always* non-empty, so
 the quoted statement is the trivial direction of that fact.
 

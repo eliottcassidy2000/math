@@ -1,0 +1,8 @@
+beta closed form == direct F2 convolution on 300 random (M,d): OK
+T1 checkpoint vanishing (M+1=2^r, every d): OK
+T2 clock o* = 2^(v2(M+1)) for all non-dyadic M+1 in box: OK
+T3 corner timing iff d = 2^(v2(M+1)) - 1: OK
+C4 ladder gamma=1/(2^k-1) hits corner timing at M=2^r-2^(r-k)-1: OK
+C5(i) unit fractions 1/J, J odd: corner-timed at every M=J*2^v-1: OK
+C5 hits (count, last) M<200000: {'1/2': (0, None), '1/4': (2, 5), '2/5': (1, 2), '3/8': (2, 5), '1/3': (17, 196607), '1/5': (18, 163839), '1/1': (0, None), '2457/6592': (2, 5)}
+ALL REFEREE CHECKS PASSED

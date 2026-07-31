@@ -1,0 +1,13 @@
+A4 CYCLIC-RESOLVENT MOD-2 GATE
+theorem input: X=A^n_C, E/K cyclic cubic, R=normalization, U=R_reg
+invariant descent: H^1_et(U,mu_2)^C3=0
+mechanism: invariant C2 torsor -> C6 closure -> unramified quadratic quotient of A^n -> contradiction
+representation consequence: H^1_et(U,mu_2) is a direct sum of standard F2[C3] planes
+quartic A4 test: H^1_et(U,mu_2) must be nonzero, hence has dimension at least two
+Kummer test: units must be nonconstant modulo squares or Cl(R)[2] must be nonzero
+regular-chart test: any nonempty A^n or G_m x A^(n-1) chart excludes the A4 resolvent
+negative control: (t,u,v)->(t^3,u,v) has smooth normalization A^3 and Kummer rank zero
+positive carrier: d^2=abc has Cl[2]=(F2)^2 with the standard cyclic action
+scope: necessary resolvent obstruction only; no general A4, degree-four, or Jacobian exclusion
+CHECKS PASSED: 19
+FAILED CHECKS: NONE

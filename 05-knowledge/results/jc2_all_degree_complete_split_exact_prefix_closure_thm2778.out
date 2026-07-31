@@ -1,0 +1,12 @@
+THM-2778 ALL-DEGREE SPLIT CLOSURE CERTIFICATE
+checked_k=1..30
+checked_M=2..118 step 4
+section_reconstruction=1..22 excluding multiples of 4
+triple_saturation=2,6,10,14,18
+exact_gates=2384
+tail_square_interface=PASS
+nonzero_prefix_gcd_interface=PASS
+rootzero_section_interface=PASS
+full_bank_slope_four_interface=PASS
+vertical_and_M2_interfaces=PASS
+AUDIT_EXACT_CONTROLS=PASS

@@ -1,0 +1,15 @@
+QUARTIC OPPOSITE-SUM / IMPRIMITIVE KELLER WALL AUDIT
+coefficient_grid=2401 T_walls=133
+depressed_linear_coefficient=-T/8 exact
+distinct_root_census=210 central_walls=50
+T_zero=central_symmetry=opposite_pair_sum_collision
+matching_stabilizer_order=8 isomorphic_to=D4
+matching_stabilizer_subgroups=10
+transitive_wall_groups=C4:1,V4:1,D4:1
+A4_edge_orbit=6 S4_edge_orbit=6
+S4_six_edge_action=alternating
+sharp_control=x^4-2 irreducible_D4_wall
+KELLER_INPUT=THM2633_excludes_C4_V4_D4
+KELLER_SURVIVOR=T_nonzero_pair_sum_sextic_irreducible_separable_square_disc
+SCOPE=field_level_sidecar_not_affine_cover_not_JC2
+FAILED CHECKS: NONE

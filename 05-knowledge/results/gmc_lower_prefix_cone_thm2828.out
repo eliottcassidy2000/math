@@ -1,0 +1,7 @@
+THM-2828 LOWER-PREFIX FACTORIAL CONE
+tensor_max_index=24; cubic_tensor_checks=15625; pascal_fixed_point_checks=625
+smallest_cubic_tensor=2; index=(0, 0, 0); all_strict_positive=True
+cone_bank_b<=16; c<=24; cone_directions=1488; inherited_atom_checks=1768
+prefix_equivalence=all; cubic_orientation=all_strict; mixed_orientation=all_nonnegative; I2=all_strict_negative
+gaussian_eligible_lambda0_zero=267; scope=many lower slots in one prefix cone, not arbitrary radial coefficients
+ALL EXACT CHECKS PASSED

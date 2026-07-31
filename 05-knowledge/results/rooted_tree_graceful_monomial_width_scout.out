@@ -1,0 +1,14 @@
+ROOTED TREE GRACEFUL MONOMIAL WIDTH SCOUT
+n=2 degree=1 lower=1 recursive=1 shapes=1 width_hist=1:1
+shape_widths=11:1
+n=3 degree=5 lower=2 recursive=2 shapes=1 width_hist=2:1
+shape_widths=211:2
+n=4 degree=12 lower=3 recursive=6 shapes=2 width_hist=3:1,4:1
+shape_widths=2211:4,3111:3
+n=5 degree=22 lower=5 recursive=24 shapes=3 width_hist=5:3
+shape_widths=22211:5,32111:5,41111:5
+n=6 degree=35 lower=6 recursive=120 shapes=6 width_hist=6:6
+shape_widths=222211:6,322111:6,322111:6,331111:6,421111:6,511111:6
+unrooted_shape_tests=13 peak_states=5593
+SCOPE: finite coefficient scout only; no improved uniform bound proved
+FAILED CHECKS: NONE

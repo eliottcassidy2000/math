@@ -1,0 +1,29 @@
+LRC14 mod-17 typed handoff semigroup scout
+status=PROVED-ELEMENTARY projection/residue laws + FINITE-EXACT corridor
+parameters=R:4826809,target:2197,guards:(14, 27, 40, 53, 66, 742586)
+denominator17_danger_residues=(0, 1, 16)
+target_candidates=(0, 4, 13); raw_W17=(4, 13)
+factor_centered_residues_at_4=(Fraction(-1, 17), Fraction(5, 17), Fraction(6, 17), Fraction(7, 17), Fraction(8, 17), Fraction(-8, 17), Fraction(2, 17))
+typing=G_k:x->x+k/R gives y->y; slope-seven k=7delta is a deck/carry-root sidecar
+typing=D_(eps,k):x->eps*13x+k/R gives y->eps*13y for integer k
+typing=mixed one-D plus any G-word has delayed multiplier eps*13, not 7 or 18
+signed_images_of_W17={1: (1, 16), -1: (16, 1)}; intermediate_target_failure=(1, 16)
+mod17_powers_of_13=(1, 13, 16, 4); opposite_signed_two_step=1; unsigned_four_step=1
+phase_arrows_eps-1_t3=((13, 4),)
+phase_arrows_eps-1_t5=((4, 4),)
+phase_arrows_eps-1_t12=((13, 13),)
+phase_arrows_eps-1_t14=((4, 13),)
+phase_arrows_eps+1_t3=((4, 4),)
+phase_arrows_eps+1_t5=((13, 4),)
+phase_arrows_eps+1_t12=((4, 13),)
+phase_arrows_eps+1_t14=((13, 13),)
+internal_edge_phase_numerators=(3, 5, 12, 14)
+quarter_torsion_raw_W_moduli_below100=((17, 4), (43, 32), (47, 35), (51, 38), (63, 47), (71, 53), (95, 71)); first=17
+fixed_delayed_map=y->13y+3/17; fixed_y=4/17
+fixed_component=(2446165/10396204,2446177/10396204); margins=(11/176735468,193/176735468)
+all_H_corridor=(4/17-(11/176735468)/13^(H-1),4/17+(193/176735468)/13^(H-1))
+all_H_width=(3/2599051)/13^(H-1)
+circle_lift_beta=3/82055753; fixed_x=20513938/82055753; local_(carry,h)=(3,3)
+typing_debt=R*beta:3/17; c3*beta:6/221; pure_jump_examples:(0, 1)
+scope=raw delayed word and typed-operation projection only; no globally typed carry/root lift, packet, endpoint, row exclusion, or LRC14
+ALL CHECKS PASSED

@@ -1,0 +1,15 @@
+THM-2608 exact alternative-rail clock-collapse controls
+global_content=4244240
+alternative_positive_pairs=1012/1092
+alternative_positive_rails=79/84
+marginal_good_s=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12) edges=(156, 156, 144, 156, 156, 156, 156) product=156 returns=(12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12)
+marginal_exception_s6=((132, 132, 0, 0, 0, 0, 0), 0, (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+formal_13_reference_histogram={(156, (12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12)): 143, (0, (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)): 13}
+lawful_clock_products_zero=72/72
+lawful_clock_edge_signature_histogram={(156, 132, 132, 0, 0, 0, 144): 11, (0, 0, 0, 0, 144, 0, 132): 11, (132, 0, 144, 0, 144, 0, 132): 11, (0, 132, 0, 0, 0, 132, 132): 11, (0, 156, 0, 0, 0, 144, 0): 11, (0, 0, 0, 144, 132, 0, 0): 11, (0, 0, 0, 0, 0, 0, 0): 4, (0, 0, 0, 0, 132, 0, 0): 1, (132, 0, 0, 0, 0, 0, 0): 1}
+combined_91_state_case_histogram={(2760, 4320): 143, (264, 0): 13}
+combined_91_state_twisted_trace_histogram={47: 1584, 48: 132, 0: 156}
+combined_1183_state_good_twisted_trace=(612, 612, 612, 612, 612, 612, 612, 612, 612, 612, 612, 612)
+combined_1183_state_exception_s6=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+reference_c_to_q0=((0, 5), (1, 3), (2, 7), (3, 1), (4, 10), (5, 12), (6, 11), (7, 6), (8, 4), (9, 0), (10, 2), (11, 9), (12, 8))
+verdict=PASS: future-clock marginal is formally dense; every C7-equivariant clock-matched product collapses

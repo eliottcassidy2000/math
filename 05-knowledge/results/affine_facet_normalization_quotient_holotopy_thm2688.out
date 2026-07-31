@@ -1,0 +1,19 @@
+n=13
+refined_K_fvector=(156, 858, 2860, 6435, 10296, 12012, 10296, 6435, 2860, 858, 156, 13)
+vertical_image_boundary_fvector=(13, 78, 286, 715, 1287, 1716, 1716, 1287, 715, 286, 78, 13)
+diagonal_quotient_fvector=(12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1)
+K_homology=reduced_H0:12
+vertical_image_homology=reduced_H11:1
+diagonal_quotient_homology=0
+Cone(vertical_projection)=wedge(S11,12*S1)
+Cone(vertical_projection)_reduced_H1=Z^12 H11=Z
+Cone(diagonal_quotient)=12*S1
+mapping_torus(diagonal_generator)=Delta11_x_S1
+label_action_on_boundary=free_C13
+boundary_label_quotient=L11(13;1,2,3,4,5,6)
+lens_reduced_homology=H1,H3,H5,H7,H9:Z/13 H11:Z
+lens_exact_controls=weights=(1, 2, 3, 4, 5, 6):homology=('Z', 'Z/13', '0', 'Z/13', '0', 'Z/13', '0', 'Z/13', '0', 'Z/13', '0', 'Z'):bockstein=7
+positive_controls=n3,n5,n7 chain complexes over F2,F3,F5,F7,F11
+hostiles=constant_missing_map; non-generator_component_step
+physical_boundary=g^13_is_not_identity_after_lift: 91/13^6=7/13^5
+ALL EXACT CHECKS PASSED

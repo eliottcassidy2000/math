@@ -1,0 +1,14 @@
+THM-2826 UNIFORM TRIPLE-POLE FABER AUDIT -- exact finite controls
+assert_nodes=0
+float_literals=0
+rows R=1..18: recurrence = independent generalized multinomial
+H_R explicit formula checked R=2..18; every term lies in Q[T,s,Td]
+regular H valuation bounds checked R=2..18
+mod-three cycle R=7..18 = ((7, 'phi', 4), (8, 'H', 4), (9, 'psi', 6), (10, 'phi', 6), (11, 'H', 6), (12, 'psi', 8), (13, 'phi', 8), (14, 'H', 8), (15, 'psi', 10), (16, 'phi', 10), (17, 'H', 10), (18, 'psi', 12))
+cycle faces are unique and beat every retained row for all three regular weights
+prefix P_R,Q_R direct formulas and gcd=1 checked R=7..18
+prefix degree pairs = ((7, 2, 2), (8, 2, 2), (9, 2, 3), (10, 3, 3), (11, 3, 3), (12, 3, 4), (13, 4, 4), (14, 4, 4), (15, 4, 5), (16, 5, 5), (17, 5, 5), (18, 5, 6))
+all nonnegative (a,b) lanes represented on the 8x8 hostile grid
+high-pole partitions checked through N=24: 1235
+uniform target translation checked R=7..18
+ALL EXACT FINITE CONTROLS PASS

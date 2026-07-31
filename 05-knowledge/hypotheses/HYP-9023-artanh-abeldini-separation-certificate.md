@@ -14,9 +14,13 @@ status: >
   "31^5 381347^5 in den(r)" was an artifact of the t^5/5 truncation order, not eq (27).
   VERIFIED CONSTRUCTION: the same 3-term artanh sandwich certifies a genuine THM-2000
   mass ordering M(6,2)>M(4,3) float-free (log2 >= 842/1215 > 9/13 => 26 log2 - 18 >=
-  22/1215 > 0). HOME (opus-S4/klein-S404/mac-mini-S169): the log-energy-beats-floor family,
-  LRC(14) wider-gap n=13 leading (2457=3*S2(AP{1..13}), 6592=2^6*S1(GW{1..11,13,24}),
-  1/25~1/(2n-1)); RULED OUT this session -- figurate-mass ordering (no M(s,d) difference
+  22/1215 > 0). HOME RESOLVED (2026-07-30, death-star coinC2): AMM Problem 12592
+  minimal-C deadline analysis — the fragment was re-supplied with the 12592 problem
+  statement and minimal-C framing adjacent (see HYP-9061 and
+  05-knowledge/results/amm12592-snippet-context-confirmation-deathstar-coinC2.md);
+  the former leading candidate LRC(14) wider-gap n=13 (opus-S4/klein-S404/mac-mini-S169;
+  2457=3*S2(AP{1..13}), 6592=2^6*S1(GW{1..11,13,24}), 1/25~1/(2n-1)) is RETIRED as
+  numerology. RULED OUT earlier -- figurate-mass ordering (no M(s,d) difference
   matches; both logs below the mass band), BOTH candidate LRC papers (Bedert 2511.16636 and
   2604.23906, by direct fetch), and standard binomial Pade (integers are non-hypergeometric).
   Irrationality-MEASURE not fully killed. See 07-reflections/artanh-two-log-form-pinned-and-homed-opus-S4.md.
@@ -28,7 +32,14 @@ related:
   - HYP-9022  # prior session: metagraph isoperimetric dimension (also a "seed -> repo" bridge)
 script: 04-computation/certified_logratio_abeldini_opus_S2.py
 output: 05-knowledge/results/certified_logratio_abeldini_opus_S2.out
-lean_target: 04-computation/lean/TournamentH7/TournamentH7/SupportHarmonicFigurate.lean
+lean_target: >
+  DELIVERED (death-star coinC2, 2026-07-30):
+  04-computation/lean/TournamentH7/TournamentH7/ArtanhSandwich.lean —
+  log_ratio_lower/upper (the sandwich), certificate_27 (the decoded (27)
+  itself, kernel-checked), log_two_lower (842/1215), and
+  mass_ordering_M62_M43 (22/1215 <= 26 log 2 - 18); axioms standard.
+  Original target file (algebraic kernel) unchanged:
+  04-computation/lean/TournamentH7/TournamentH7/SupportHarmonicFigurate.lean
 reflection: 07-reflections/the-artanh-abeldini-separation-certificate-opus-S2.md
 ---
 

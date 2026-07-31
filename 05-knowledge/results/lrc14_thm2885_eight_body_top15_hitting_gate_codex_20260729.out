@@ -1,0 +1,10 @@
+THM-2885 EIGHT-BODY GLOBAL TOP-FIFTEEN HITTING GATE
+status=FINITE-EXACT+GLOBAL-TAIL-SEALED
+universe=C(14,8)=3003;external_speeds=w>=15
+raw_top5=positive:16,nonpositive:2987
+top10_hitting=3003/3003;minimum_margin=61/12936;minimum_body=(1, 3, 5, 7, 8, 9, 11, 13);minimum_complement=36,42,84,25,72
+maximum_rank15_threshold=1002456/953;body=(2, 8, 9, 10, 11, 12, 13, 14);tail_first=1052;maximum_top15_speed=243
+vector_scalar_controls=6006
+top15_ledger_sha256=f1c478fc386171e4bfbdab52100808d7a37853ae755a49c9e45c6412708bb20a
+scope=global top-ten hitting reduction only;ranked-apex carrier closure and the j=5 rung remain open
+all_exact_controls=PASS

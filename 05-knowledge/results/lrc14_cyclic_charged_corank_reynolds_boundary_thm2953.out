@@ -1,0 +1,10 @@
+THM2953 CYCLIC CHARGED CORANK / REYNOLDS BOUNDARY
+p=7 augmentation_dim=6 real_character_pairs=3
+stable_kernel_nullity=EVEN rank_gate=one_nonzero_5minor_implies_rank6
+Reynolds_kernel=intersection_of_seven_rotated_kernels
+hostile_original_rank=1 kernel_shift_stable=NO
+averaged_rank=6 determinant=1/2401 equivariant=YES
+fifth_minors_nonzero=30/36 canonical=3/2401 energy=36/823543
+general_det=p3:1,p5:1/25,p7:1/2401,p11:1/214358881
+scope=joint_rotated_injectivity_not_owner_or_carrier_survival
+ALL CHECKS PASS

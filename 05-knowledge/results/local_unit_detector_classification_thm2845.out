@@ -1,0 +1,12 @@
+THM-2845 finite exact controls
+split F_2 ranks 1..5: exact; rank5 detectors=16
+split F_3 ranks 1..5: exact; rank5 detectors=10
+split F_5 ranks 1..5: exact; rank5 detectors=20
+dual F_2[e]/(e^2): detectors=1; every detector kills (e)
+dual F_3[e]/(e^2): detectors=2; every detector kills (e)
+dual F_5[e]/(e^2): detectors=4; every detector kills (e)
+UT_2(F_3): units=12 detectors=4; off-diagonal radical killed
+UT_3(F_2): units=8 detectors=4; full three-diagonal trace works
+M_2(F_2): units=6 nonzero forms=15 detectors=0
+F_4 over F_2: units=3 nonzero forms=3 detectors=0
+all exact controls passed

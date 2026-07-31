@@ -1,0 +1,14 @@
+ALL-EVEN LAMBDA-ZERO EXACT COMPANION
+faber_rows=recurrence_equals_independent_multinomial degrees=2,6,10,14,22
+exact_factorization=F23(lambda=0)=q*A20; every even R_j divisible_by_q
+regular_sequence_faces=gcd(A20_infty,G24_infty)=1;gcd(q,G24_infty)=1
+h0_support=P_infty_plus_five_smooth_coarse_points
+smooth_points=q_nonzero,s_nonzero,d_nonzero,transverse,R22_nonzero
+local_order_rows=((22, 0, 5, 6, 6), (14, 8, 3, 4, 4), (10, 12, 2, 3, 3), (6, 16, 1, 2, 2), (2, 20, 0, 1, 1))
+valuation_gate=b=min(vq,vs)<4a forces coprime A5/G6 faces;therefore b>=4a
+consequence_at_P_infty=v(q/h^3)>=v(h)>0 on every nonvertical branch
+smooth_exact_prefix_resultant=-76608*omega**6
+exceptional_face_identity=R_ex=-(Q/2)*A20_ex;simple_pole_claim=REFUTED
+simple_pole_source_hostile=U=x^2,R=-1/x,U*Rprime=1
+proof_sidecar=global_regular_q_on_complete_component_then_q=0_then_third_flux_contradiction
+PASS

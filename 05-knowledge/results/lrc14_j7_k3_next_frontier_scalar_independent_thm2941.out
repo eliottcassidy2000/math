@@ -1,0 +1,11 @@
+LRC14 projected k=3 next-frontier independent scalar audit
+primary_engine_sha256=37a39f7a7409848cc637c9689c519e4452eda71b83d9042bfb1fc98b3ffd8efc
+universe=six_body_roots=3003;first_drift=379;three_distinct_later_drifts;nonzero_mod_L;exact_horizon=7000
+engine=rational_intervals+guarded_numpy_vector_primitive;omitted_tail=delta(z)<=6r/(49z)
+crude_all_tail_rows=2579
+exact_projected_scalar_rows=0
+closest_rejection=E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;high=1159;z1=379;delta1=-2087/3119928;suffix=1500:237/171500,380:1531/391020,492:2981/843780;lower=1049/89180;upper=826476859/101267663000;gap=-4741191283/1316479619000
+positive_control=E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;high=1159;z1=380;delta1=1531/391020;suffix=1500:237/171500,492:2981/843780,410:2687/843780;lower=1049/89180;upper=401287/33399625;gap=437649/1736780500
+semantic_sha256=48ab29334a93fd0087d9645513be14f884a30bd014c2f05329c1f7d0c295d4ee
+independent_agreement=PASS
+all_exact_controls=PASS

@@ -1,0 +1,14 @@
+THM-2974 DISCRIMINANT-COVER INTEGRAL-ORDER SMITH AND OWNER BOUNDARY
+family=X^4-2X^2-8tX+1-4t
+t0_quartic_leading_roots=1+/-sqrt(3)*sqrt(t);-1+/-i*sqrt(t)
+maximal_inertia=double_transposition;quartic_cycle=2^2;sextic_cycle=2^2*1^2
+fixed_sheets=quartic:0;edge:2;orientation:2
+edge_newton=(1/2^4,0^2);orientation_newton=(1/2^4,2^2)
+kummer_orders=edge:(1,1,0);orientation:(1,1,4);residue=110
+discriminant_orders=maximal:2;edge_order:6;orientation_order:18
+normalization_colengths=edge:2;orientation:8;relative:6
+relative_lattice_smith=(-1,0,0,1,2,4);orders_not_nested
+intertwiner_det_order_t0=6;simple_Delta_cover=1;simple_Jor=2
+FIRST_FAILURE=fixed_sextic_sheet_does_not_imply_fixed_quartic_owner
+SCOPE=field_inertia_and_Kummer_residues_preserved;graph_order_and_owner_not_preserved
+ALL_EXACT_CONTROLS=PASS

@@ -1,0 +1,9 @@
+LRC14 J=5 WEIGHTED-TRANSVERSAL STRUCTURAL SCOUT
+status=FINITE-EXACT-SCOUT;not_a_positivity_proof;rank_feasible_means_finite_head_only
+root_universe=C(14,8)=3003;thm885_terminal_bodies=C(12,8)=495;active_bodies_meeting_13_or_14=2508
+first_apices=30030;direct=13969;rank3_feasible=10939;failed=5122;direct_equalities=0;R3_equalities=1;classification_digest=3fa73b8db5c473ab6dffce1241a5b654abc07a7b1f9ae06a0d2d3178aad3ec8d
+active_first_apices=25080;direct=11325;rank3_feasible=9177;failed=4578
+max_top4_tail=1570;body=(2, 4, 5, 6, 8, 9, 10, 11);rank=10;apex=156;threshold=731350620/465923
+max_rank3_head_tail=29559816;body=(1, 2, 3, 8, 10, 12, 13, 14);rank=10;apex=110;threshold=29559816/1
+first_weighted_gate_roots=2508;structurally_terminal=1834;residual=674;equalities=0;minimum_margin=-240623/2522520;minimum_body=(2, 3, 4, 7, 8, 10, 12, 14);minimum_allowed=22,18,26,44,52;gate_digest=663ea790facb58bf613ab287a3e783079440606d76e05ce00ec5fc4ff2cdcfe0;residual_digest=8563213ecc3f5e007c674971ebdb5b0f3933083667558ab7dbdbd1a4f30ae3ee
+phase1_exact_controls=PASS

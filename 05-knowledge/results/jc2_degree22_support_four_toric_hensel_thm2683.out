@@ -1,0 +1,24 @@
+degree-22 support-four terminal Hensel/toric closure
+base_thm2636_sha256=0866a29f665aedc6d2c226f35943852e56907ff821e705a0dbca2651e71fa15c
+parent_thm2671_sha256=6245dd4cc85d0a70bdbc8e56a0511ffad7889b6274130aed759e5729f92472e6
+general_resultant_content=28344976 terms=60
+fixed_quintic_degree=5 root_field_degree=5 pair_field_degree=10
+BCDE:terms=54:degrees=10,5:terminal=11:support=0,0,1;0,1,1;1,0,0;1,1,0;1,2,0;2,0,1;3,0,0:content=1:v5=-88239118492602
+BCDE_root:rank=4:pivots=(0, 1, 2, 3):toric_quadrics=3:macaulay_shape=(15, 18):macaulay_pivots=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15):macaulay_minor_degree=4:macaulay_minor_terms=5:macaulay_minor_digest=3df995446b6ce494aa6fcd37da780361aac48174e812eaf4dbe3b080e620ff72:uniform=True
+BCDE_pair:rank=4:pivots=(0, 1, 2, 3):toric_quadrics=3:macaulay_shape=(15, 18):macaulay_pivots=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15):macaulay_minor_degree=9:macaulay_minor_terms=10:macaulay_minor_digest=2b04c535fd5d8428843d85681ef7df95756adcecb389130e868b9cb9bd949b38:uniform=True
+BCDW:terms=50:degrees=10,5:terminal=11:support=1,0,0;1,1,0;1,2,0;3,0,0;1,0,1:content=1:v5=-88239118492602
+BCDW_root:rank=4:kernel_rows=(0, 1, 2, 3):all_kernel_coords_uniform=True:toric_defect_degree=4:toric_defect_terms=5:toric_defect_digest=32c3befea4674e4ff2900c5210753260fdc8f0a84f2d8c06e29894d7c35718bd:uniform=True
+BCDW_pair:rank=4:kernel_rows=(0, 1, 2, 3):all_kernel_coords_uniform=True:toric_defect_degree=9:toric_defect_terms=10:toric_defect_digest=8de0da3bd0aed7bdf62b3b706240dbeadaf5c7d250341a58398ea90c33a9e8d7:uniform=True
+BCEW:terms=47:degrees=10,5:terminal=11:support=0,1,0;0,1,1;1,0,0;1,0,1;2,1,0;3,0,0:content=1:v5=-88239118492602
+BCEW_root:rank=4:pivots=(0, 1, 2, 3):two_toric_quadrics_coefficients_uniform=True:sylvester_degree=4:sylvester_terms=5:sylvester_digest=a7846c6cd848e619fe62d19dd482171ea4a9f1f57ee0b2e0ce2b344e39876833:uniform=True
+BCEW_pair:rank=4:pivots=(0, 1, 2, 3):two_toric_quadrics_coefficients_uniform=True:sylvester_degree=9:sylvester_terms=10:sylvester_digest=d8d17d914d6de0d97a15acec27fa579e511e454787492f62e3a3e4b6efd653b1:uniform=True
+BDEW:terms=42:degrees=10,5:terminal=11:support=0,1,0;0,1,1;1,1,0:content=1:v5=-88239118492602
+BDEW_root:rank=3:nonzero_minors=7:first_minor_degree=4:first_minor_terms=5:uniform=True
+BDEW_pair:rank=3:nonzero_minors=7:first_minor_degree=9:first_minor_terms=10:uniform=True
+CDEW:terms=28:degrees=10,5:terminal=11:support=0,1,0;0,1,1;2,0,0:content=9:v5=-9804346499178
+CDEW_root:rank=3:nonzero_minors=7:first_minor_degree=4:first_minor_terms=5:uniform=True
+CDEW_pair:rank=3:nonzero_minors=7:first_minor_degree=9:first_minor_terms=10:uniform=True
+closed_support_four_charts=BCDE,BCDW,BCEW,BDEW,CDEW
+all_five_support_four_strata=EMPTY
+remaining_degree22_coefficient_chart=full_support_BCDEW
+ALL CHECKS PASSED

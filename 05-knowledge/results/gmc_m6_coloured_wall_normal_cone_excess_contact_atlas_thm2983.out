@@ -1,0 +1,50 @@
+M6 COLOURED WALL NORMAL-CONE AND EXCESS-CONTACT ATLAS
+dependency_thm2969_lf_sha256=5be5df0fd058f436593339f78cd6240a47975082d22929c135ba811458753bf5
+chart=ORIGINAL_F;degree=312;resultant_degree=250;topjet_inertia=1+,3-
+transverse_trace=244051230785617/5627343750;transverse_det=-10882890806368883653776584/376988067626953125
+halfwall=rank30;nullity6;first_normal=(f+2z)^6
+root=1;exact_rank=34;nullity=2;modular_ranks=34,34,34;flag_order=0;W6_order=6;common_kernel=R0L0
+root=2;exact_rank=26;nullity=10;modular_ranks=26,26,26;flag_order=1;W6_order=24;common_kernel=R5L2
+root=3;exact_rank=21;nullity=15;modular_ranks=21,21,21;flag_order=1;W6_order=26;common_kernel=R8L10
+root=4;exact_rank=26;nullity=10;modular_ranks=26,26,26;flag_order=0;W6_order=24;common_kernel=R9L8
+root=5;exact_rank=27;nullity=9;modular_ranks=27,27,27;flag_order=0;W6_order=23;common_kernel=R8L8
+root=6;exact_rank=21;nullity=15;modular_ranks=21,21,21;flag_order=1;W6_order=20;common_kernel=R0L0
+arc_root=1;direction=n;liftable=(2, 2, 1, 1, 0);contact=6
+arc_root=1;direction=1235;liftable=(2, 0);contact=2
+arc_root=1;direction=2357;liftable=(2, 1, 0);contact=3
+arc_root=1;direction=signed;liftable=(2, 0);contact=2
+arc_root=2;direction=n;liftable=(10, 9, 4, 2, 0);contact=25
+arc_root=2;direction=1235;liftable=(10, 5, 2, 0);contact=17
+arc_root=2;direction=2357;liftable=(10, 5, 2, 0);contact=17
+arc_root=2;direction=signed;liftable=(10, 5, 2, 0);contact=17
+arc_root=3;direction=n;liftable=(15, 10, 2, 0);contact=27
+arc_root=3;direction=1235;liftable=(15, 10, 2, 0);contact=27
+arc_root=3;direction=2357;liftable=(15, 10, 2, 0);contact=27
+arc_root=3;direction=signed;liftable=(15, 10, 2, 0);contact=27
+arc_root=4;direction=n;liftable=(10, 9, 4, 1, 0);contact=24
+arc_root=4;direction=1235;liftable=(10, 9, 4, 1, 0);contact=24
+arc_root=4;direction=2357;liftable=(10, 9, 4, 1, 0);contact=24
+arc_root=4;direction=signed;liftable=(10, 9, 4, 1, 0);contact=24
+arc_root=5;direction=n;liftable=(9, 8, 5, 1, 0);contact=23
+arc_root=5;direction=1235;liftable=(9, 8, 5, 1, 0);contact=23
+arc_root=5;direction=2357;liftable=(9, 8, 5, 1, 0);contact=23
+arc_root=5;direction=signed;liftable=(9, 8, 5, 1, 0);contact=23
+arc_root=6;direction=n;liftable=(15, 6, 0);contact=21
+arc_root=6;direction=1235;liftable=(15, 0);contact=15
+arc_root=6;direction=2357;liftable=(15, 0);contact=15
+arc_root=6;direction=signed;liftable=(15, 0);contact=15
+root6_factor_geometry=A=z+6c;L=C*A+B*(c-q);Q=A*(f-2c+q)+12*(c-q)*(c-f)
+root6_incidence=A_cap_L_subset_Q;quadric_singular=(-6,1,1,1)
+root6_AQ_null_conic_coefficients=63299,121066,114169,57772,108669,50919
+root6_AQ_null_arc=C_s=s^11*ell*H;F_s=s^17*ell^2*H;resultant=IDENTICALLY_ZERO
+root6_stratum=generic;zero_set=none;liftable=(15, 0);contact=15
+root6_stratum=A;zero_set=A;liftable=(15, 2, 0);contact=17
+root6_stratum=L;zero_set=L;liftable=(15, 1, 0);contact=16
+root6_stratum=Q;zero_set=Q;liftable=(15, 6, 0);contact=21
+root6_stratum=A_Q;zero_set=A+Q;liftable=(15, 6, 6, 6, 6, 6);contact=NULL_ARC_PREFIX
+root6_stratum=L_Q;zero_set=L+Q;liftable=(15, 6, 1, 0);contact=22
+root6_stratum=triple_generic;zero_set=A+L+Q;liftable=(15, 9, 9, 9, 9, 9);contact=NULL_ARC_PREFIX
+root6_stratum=triple_singular;zero_set=A+L+Q;liftable=(15, 15, 15, 15, 15, 15);contact=NULL_ARC_PREFIX
+record_digest=86faededb67f94a9e03134b39d1017e83920b39184502b6434bd3830bb59f37f
+exact_qq_fmpz_ranks=PRIMARY;three_prime_ranks=CROSS_CHECK
+all_exact_checks=PASS

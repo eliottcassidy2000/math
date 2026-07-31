@@ -2,15 +2,16 @@
 """Exact companion for THM-2592's THM-2584/2586 x THM-2585 pullback.
 
 It keeps the route-two physical coordinate ``x`` before either theorem
-marginalizes.  On the THM-2586-selected theta=0
-rail it intersects
+marginalizes.  On the THM-2586-selected theta=0 rail it intersects
 
 * the b-word depth-five Perron packet and its (ell4,v,t) cell; and
 * the THM-2585 literal target slice s5=-q, source phase ell5, deep probe r,
   and the old=future digit diagonal at the fixed clock 13^6.
 
 Because v=floor(13x), the THM-2585 digit restriction uses h=v and enforces
-floor(13 {13^6 x})=v.  All arithmetic is integer/Fraction arithmetic.
+floor(13 {13^6 x})=v.  The final hostile pass replaces h=v by every affine
+graph h=v+c and, independently, tests each primary rail against the entire
+unconditioned delayed word.  All arithmetic is integer/Fraction arithmetic.
 One global content is removed only after the complete joint bank is built.
 """
 
@@ -202,12 +203,19 @@ def main():
     # THM-2585 delayed word, split by its old/future root digit.
     word = module.build_word_Ta()
     word_prefix = [[None] * P for _ in range(Q7)]
+    whole_word_prefix = [None] * Q7
     for ell in range(Q7):
         q_ell = module.subtract_comb(word, module.C1, 182, 26 * ell - 13, 26 * ell + 13)
+        whole_word_prefix[ell] = module.make_prefix(q_ell)
         for h in range(P):
             digit = sat.intersect_interval(q_ell, h * T // P, (h + 1) * T // P)
             word_prefix[ell][h] = module.make_prefix(digit)
     digit_lengths = [[prefix[2][-1] for prefix in row] for row in word_prefix]
+    require(
+        all(sum(digit_lengths[ell]) == whole_word_prefix[ell][2][-1]
+            for ell in range(Q7)),
+        "future-digit pieces do not partition the delayed word",
+    )
     require(all(digit_lengths[ell][0] == 0 for ell in range(Q7)),
             "the exact future-digit-zero hole disappeared")
     require(all(digit_lengths[ell][6] > 0 for ell in range(Q7)),
@@ -260,10 +268,14 @@ def main():
     grouped_zero_controls = 0
     grouped_positive_controls = 0
     comb_controls = 0
+    primary_whole_totals = {}
+    fallback_digit_totals = {}
     for j, (s4, ell4, v, t, rail_pieces) in enumerate(rail_bank):
         for q in range(P):
             s5 = (-q) % P
             total = 0
+            primary_whole_total = 0
+            fallback_by_h = [0] * P
             for ell5 in range(Q7):
                 present = intersect_weighted_union(
                     rail_pieces, f_cache[ell5, s5], f_starts[ell5, s5]
@@ -275,7 +287,19 @@ def main():
                     probed = intersect_weighted_comb(
                         present, module.C3, 182, 14 * r - 13, 14 * r + 13
                     )
-                    value = delayed_weighted_numerator(probed, prefix)
+                    if v == 0:
+                        primary_whole_total += delayed_weighted_numerator(
+                            probed, whole_word_prefix[ell5]
+                        )
+                        value = delayed_weighted_numerator(probed, prefix)
+                    else:
+                        values_by_h = [
+                            delayed_weighted_numerator(probed, word_prefix[ell5][h])
+                            for h in range(P)
+                        ]
+                        for h, h_value in enumerate(values_by_h):
+                            fallback_by_h[h] += h_value
+                        value = values_by_h[v]
                     if comb_controls < 3:
                         grouped = {}
                         for a, b, w in present:
@@ -309,6 +333,11 @@ def main():
                         total += value
                         positive_entries += 1
                         content = gcd(content, value)
+            label = (s4, ell4, v, t, q)
+            if v == 0:
+                primary_whole_totals[label] = primary_whole_total
+            else:
+                fallback_digit_totals[label] = tuple(fallback_by_h)
             pair_totals.append(total)
             positive_pairs += int(total > 0)
         if (j + 1) % 7 == 0:
@@ -331,6 +360,32 @@ def main():
         if sum(joint[j][q][ell][r] for ell in range(Q7) for r in range(1, P)) > 0
     ]
 
+    # Union-first affine-offset hostile.  The 81 primary rails are orthogonal
+    # to the whole delayed word, so every one of its thirteen nonnegative
+    # digit pieces (and every selector subordinate to them) vanishes there.
+    require(len(primary_whole_totals) == 81 * P,
+            "primary whole-word pair census changed")
+    require(not any(primary_whole_totals.values()),
+            "a primary rail meets the unconditioned delayed word")
+    require(len(fallback_digit_totals) == 3 * P,
+            "fallback digit pair census changed")
+    fallback_positive_by_h = Counter()
+    for totals in fallback_digit_totals.values():
+        for h, h_value in enumerate(totals):
+            fallback_positive_by_h[h] += int(h_value > 0)
+    require(
+        fallback_positive_by_h == Counter({h: 39 for h in range(1, 12)}),
+        "fallback future-digit support changed",
+    )
+    offset_positive_pairs = []
+    for c in range(P):
+        # Every fallback rail has v=6.  Primary rails vanish before splitting.
+        offset_positive_pairs.append(fallback_positive_by_h[(6 + c) % P])
+    expected_offset_pairs = [39] * P
+    expected_offset_pairs[6] = expected_offset_pairs[7] = 0
+    require(offset_positive_pairs == expected_offset_pairs,
+            "affine future-digit offset spectrum changed")
+
     # Remove exactly one global content, then recompute every first Bockstein.
     valuation13 = 0
     temp = content
@@ -344,6 +399,7 @@ def main():
     zero_beta_profiles = []
     y_digest_rows = []
     positive_slice_data = []
+    fallback_y_rows = {4: {}, 5: {}, 6: {}}
     for j in range(84):
         for q in range(P):
             y = []
@@ -359,12 +415,107 @@ def main():
             unit_slices += int(det != 0)
             if any(y):
                 positive_slice_data.append((rail_bank[j][:4], q, tuple(y), det))
+            s4, ell4, v, t = rail_bank[j][:4]
+            if (s4, v, t) == (7, 6, 12) and ell4 in fallback_y_rows:
+                fallback_y_rows[ell4][q] = tuple(y)
             for kappa in range(1, Q7):
                 nz = any(sat.owner_factor(y, kappa))
                 beta_nonzero += int(nz)
                 if not nz:
                     zero_beta_profiles.append((rail_bank[j][:4], q, kappa, tuple(y)))
             y_digest_rows.append(tuple(y))
+
+    # Boolean q-section aggregates on each actual fallback carrier.  These
+    # are sums after the one global primitive-content reduction, never a
+    # slice-by-slice reprimitivization.
+    boolean_atlas = {}
+    for ell4, rows in fallback_y_rows.items():
+        require(set(rows) == set(range(P)), "fallback q-row atlas incomplete")
+        fibres = Counter()
+        zero_subsets = []
+        unit_subsets = 0
+        owner_nonzero = 0
+        for mask in range(1 << P):
+            raw = tuple(
+                sum(rows[q][ell] for q in range(P) if mask >> q & 1) % P
+                for ell in range(Q7)
+            )
+            reduced = tuple((raw[ell] - raw[-1]) % P for ell in range(Q7 - 1))
+            fibres[reduced] += 1
+            if reduced == (0,) * (Q7 - 1):
+                zero_subsets.append(tuple(q for q in range(P) if mask >> q & 1))
+            unit_subsets += int(sat.multiplication_determinant_7(reduced) != 0)
+            if reduced != (0,) * (Q7 - 1):
+                for kappa in range(1, Q7):
+                    require(any(sat.owner_factor(raw, kappa)),
+                            "nonzero section aggregate lost an owner colour")
+                    owner_nonzero += 1
+        boolean_atlas[ell4] = (
+            len(fibres), tuple(zero_subsets), max(fibres.values()),
+            unit_subsets, (1 << P) - unit_subsets, owner_nonzero,
+        )
+    require(
+        boolean_atlas == {
+            4: (864, ((),), 40, 8118, 74, 8191 * 6),
+            5: (516, ((),), 88, 8029, 163, 8191 * 6),
+            6: (328, ((), (10,)), 110, 8114, 78, 8190 * 6),
+        },
+        "fallback Boolean q-section atlas changed",
+    )
+
+    # Cross-chart transversals: choose exactly one q-section on each selected
+    # fallback chart, always using the same global primitive normalization.
+    pair_transversals = {}
+    for left, right in ((4, 5), (4, 6), (5, 6)):
+        fibres = Counter()
+        nonzero = 0
+        for q_left in range(P):
+            for q_right in range(P):
+                raw = tuple(
+                    (fallback_y_rows[left][q_left][ell]
+                     + fallback_y_rows[right][q_right][ell]) % P
+                    for ell in range(Q7)
+                )
+                reduced = tuple((raw[ell] - raw[-1]) % P
+                                for ell in range(Q7 - 1))
+                fibres[reduced] += 1
+                nonzero += int(reduced != (0,) * (Q7 - 1))
+        pair_transversals[left, right] = (
+            nonzero, len(fibres), max(fibres.values())
+        )
+    require(all(data[0] == P * P for data in pair_transversals.values()),
+            "a two-chart singleton transversal cancelled")
+
+    triple_fibres = Counter()
+    triple_units = 0
+    triple_owner_nonzero = 0
+    for q4 in range(P):
+        for q5 in range(P):
+            for q6 in range(P):
+                raw = tuple(
+                    (fallback_y_rows[4][q4][ell]
+                     + fallback_y_rows[5][q5][ell]
+                     + fallback_y_rows[6][q6][ell]) % P
+                    for ell in range(Q7)
+                )
+                reduced = tuple((raw[ell] - raw[-1]) % P
+                                for ell in range(Q7 - 1))
+                require(reduced != (0,) * (Q7 - 1),
+                        "a three-chart singleton transversal cancelled")
+                triple_fibres[reduced] += 1
+                triple_units += int(sat.multiplication_determinant_7(reduced) != 0)
+                for kappa in range(1, Q7):
+                    require(any(sat.owner_factor(raw, kappa)),
+                            "triple transversal lost an owner colour")
+                    triple_owner_nonzero += 1
+    triple_transversal = (
+        sum(triple_fibres.values()), len(triple_fibres),
+        max(triple_fibres.values()), triple_units,
+        sum(triple_fibres.values()) - triple_units,
+        triple_owner_nonzero,
+    )
+    require(triple_transversal == (2197, 295, 103, 2173, 24, 2197 * 6),
+            "three-chart singleton transversal atlas changed")
 
     serialization = ";".join(
         ",".join(str(joint[j][q][ell][r] // content)
@@ -414,6 +565,26 @@ def main():
     print("positive-pair support histogram: " + ",".join(
         f"{k}:{v}" for k, v in sorted(Counter(pair_supports).items())
     ))
+    print("primary whole-word overlap: 0/1053; hence all digit selectors vanish")
+    print("fallback positive pairs by future digit: " + ",".join(
+        f"{h}:{fallback_positive_by_h[h]}" for h in range(P)
+    ))
+    print("affine h=v+c positive pairs: " + ",".join(
+        f"{c}:{offset_positive_pairs[c]}" for c in range(P)
+    ))
+    print("fallback Boolean q-section atlas: " + "; ".join(
+        f"ell4={ell}:images={data[0]},zeros={data[1]},max_fibre={data[2]},"
+        f"units={data[3]},nonunits={data[4]},owner_nonzero={data[5]}"
+        for ell, data in sorted(boolean_atlas.items())
+    ))
+    print("two-chart singleton transversals: " + "; ".join(
+        f"{left}{right}:nonzero={data[0]},images={data[1]},max_fibre={data[2]}"
+        for (left, right), data in sorted(pair_transversals.items())
+    ))
+    print("three-chart singleton transversals: "
+          f"total={triple_transversal[0]},images={triple_transversal[1]},"
+          f"max_fibre={triple_transversal[2]},units={triple_transversal[3]},"
+          f"nonunits={triple_transversal[4]},owner_nonzero={triple_transversal[5]}")
     print(f"pre-route numerator global gcd: {content}; v13={valuation13}")
     print(f"actual raw global content (including route-two 13): {actual_content}")
     print(f"primitive common denominator: {primitive_denominator}")

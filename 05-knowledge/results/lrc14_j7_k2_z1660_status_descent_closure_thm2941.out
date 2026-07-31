@@ -1,0 +1,14 @@
+LRC14 projected k=2 exact common-status descent at z1=1660
+base_source_sha256=9019e9da5f6e42b69652e6328c13e37c1704b165316f14030987f23fb2734ed6
+base_output_sha256=e24fdb898c0c576e68d33d2a921a96e8cad251676010a94959fef32d8c86515e
+inherited_cap=1660;scope=unique z1660 scalar-atlas row;all distinct later nonaligned labels;no finite label horizon
+atlas_band=1656..1660;candidate_rows=15015;height_counts=((1656, 5), (1660, 1));empty_firsts=1657..1659;next_occupied_height=1656
+closure_counts=scalar:1;crude:0;status:1;status_survivors:0;literal_packets:0;survivors:0
+status_replay=one infeasibility certificate verified exactly over Q;solver-selected dual basis excluded from stage and semantic digests
+CASE;z1=1660;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=377/1708140;first_d=588;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;divisors=59;trials=557845;stage_sha256=('a8b36d9993c1b049a6f283e637aa05685e8bc176491718a9203c842dcce4385f', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', '902bc4e219c6dbeb1bfae07eda99eb2a29985143303ea004b7c688ad738284d2', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d');exact_status_certificates=1;conclusion=EMPTY
+consequence=projected k=2 first drift label z1<=1656
+atlas_profile_sha256=3d7a1a61c5278876444296cd52c059c69a1d58bf6beeb0abd18e05c2b4641120
+atlas_survivor_sha256=f36b8b517d97b5552de4ed791006a75184c786ac6c09186f5102968bbcf439fc
+closure_profile_sha256=79ac8bab2f4b3b6412231814589864111fe91f3a1893565338b9b061b701ae7a
+semantic_sha256=8464180d15abbcadb40b3e87097af3fea51803a2bfb8ea7c445ab847b35ca345
+all_exact_controls=PASS

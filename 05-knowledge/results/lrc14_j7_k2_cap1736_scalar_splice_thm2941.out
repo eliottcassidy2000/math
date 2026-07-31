@@ -1,0 +1,14 @@
+LRC14 projected k=2 cap-1736 scalar splice
+dependency_sha256=lrc14_j7_k2_cap1742_splice_thm2941.py:847f6619cb6aa0039c3335a77b545ec8ad3017820f1a6b3234fe0a0b3ebccb14
+dependency_sha256=lrc14_j7_k2_cap1742_splice_thm2941.out:61b8cd7ae66a212ea60423a77b7cc6d9b1de67f5af2469e8b13043de17c8dcd6
+dependency_sha256=lrc14_j7_k2_scalar_band_1680_1742_thm2941.py:1224d5594571f21c91c55fe3ab165c4fc34ba7968719862d12660d24efac919d
+dependency_sha256=lrc14_j7_k2_scalar_band_1680_1742_thm2941.out:c20607cb478ed491d7000f2b8a49213f57d1606a5152700ac3b50c836e2dc66c
+inherited_chain=all integer first-drift labels z1>=1743 are empty;cap z1<=1742
+atlas_universe=all 3003 bodies;every integer first label 1680..1742;scalar necessary condition
+atlas_height_counts=((1683, 1), (1694, 10), (1702, 3), (1708, 14), (1722, 11), (1724, 2), (1732, 2), (1736, 15))
+closed_integer_interval=(1737, 1738, 1739, 1740, 1741, 1742)
+splice_check=no scalar-eligible row at 1737..1742;no interpolation
+consequence=projected k=2 first drift label z1<=1736
+profile_sha256=5a17a8f7ed05f7a9cee48e94a980de08a23db99b1ebecc4f79a40d0ff1272a2a
+semantic_sha256=5dd3a81f7f7ab362dd9c068a7595c067c4891f7d65884744152262b5ee7d47ec
+all_exact_controls=PASS

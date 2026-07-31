@@ -1,0 +1,8 @@
+THM-2702 polynomial graph coordinate-pair Keller classification
+jacobians=(A,d):2(f_x+x f_y);(B,d):-2(y f_x+f f_y);(A,B):-4(x f_x+x^2 f_y+f-xy)
+Ad_family=f=(kappa/2)x+H(y-x^2/2);triangular=(A,d)=(-2t,(kappa/2)x+H(t))
+Bd_family=EMPTY_for_kappa_nonzero;LND_ladders=x:4,y:3;divergence=f_y
+AB_family=f=xy/2-x^3/8-kappa/4;triangular=(A,B)=(-2t,t^2+kappa*x/2)
+degree_6_control=Ad_free_H:7:Ad_forced:20:Euler_spectrum:[1, 2, 3, 4, 5, 6, 7]
+constant_J0_graph_degrees=[2, 3, 3]
+ALL CHECKS PASSED

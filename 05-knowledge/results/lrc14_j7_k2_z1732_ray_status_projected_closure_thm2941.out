@@ -1,0 +1,21 @@
+LRC14 projected k=2 ray/status/projected closure at z1=1732
+dependency_sha256=lrc14_j7_k3_uniform_ray_status_closure_thm2941.py:34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
+dependency_sha256=lrc14_j7_five_aligned_two_drift_projected_closure_thm2941.py:76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662
+dependency_sha256=lrc14_j7_k2_scalar_band_1680_1742_thm2941.py:89016f939c961fa979ec5b30812981456df5bfb2af3066f1f1b38e5a83f1a412
+dependency_sha256=lrc14_j7_k2_scalar_band_1680_1742_thm2941.out:4a36611b26585964e185bbaa3d583be3f1c67a7b608cca785920266bc217a779
+composition_input=THM-2941 proved cap z1<=1732;not a byte dependency of this local verifier
+scope=both atlas rows;all distinct later nonaligned labels;no finite label horizon
+atlas=height_counts:((1683, 1), (1694, 10), (1702, 3), (1708, 14), (1722, 11), (1724, 2), (1732, 2), (1736, 15));z1732_rows:2;empty:1725..1731;next:1724
+universe=first label 1732;four ordered-distinct later nonaligned labels;all denominator multisets and primitive ray directions
+negative_ray_control=exact recurrence plus antipodal sign balance;negative amplitudes cannot improve scalar excess
+routes=exact ray maxima -> crude fibre capacity -> rational common-K5 Farkas -> finite positive-slack packets -> lossless projected residual
+global_counts=scalar:212;crude:34;status:158;status_survivors:20;literal_packets:20;projected_survivors:0
+CASE;z1=1732;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=1647/2970380;first_d=2940;ray_signs=(5879, 5879, 1);ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;denominators=59;trials=557845;counts=(188, 33, 155, 0, 0);stage_sha256=('c4ce1fde263280dda337184ded196f4f31fae14ed1d0adb197478847d54d7467', 'b26ca570b73cfa3c4f867e4895cc4078179e232dd5167d34f592e519be79cd85', 'e9411b800f9dd248b14669be866015a9251c1c0f40ff3e0720ada710a326abae', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d');body_cells=4196;packets=0;kills=0;direct_controls=0;min_margin=NONE;max_prefix_cells=0;minimum_row=None;hostile_one_cell=NONE;direct_minimum_mass=NONE;state_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;conclusion=EMPTY
+CASE;z1=1732;E=2,4,8,10,12,14;h=281/735;r=36;L=11760;lower=281/66885;delta1=801/1485190;first_d=2940;ray_signs=(5879, 5879, 1);ray_sha256=e9789d4e58cf3d7b32375a56737d3ba49793dffdd8409ea1ea0d43dbfee06476;denominators=59;trials=557845;counts=(24, 1, 3, 20, 20);stage_sha256=('14b8157df7fb8300a5a4d41bafa2bd3786d4995e8e9b2a90f4daa05e49d7d70d', '678cd0cd9a69539e98a0618175e0354641c600e6d0ec63135f589974c8f5cf94', '78293ffc40054b2b6a37384a9f1c53205b4009b812fc47285671b70664a6d571', 'be0363f9e947ad7ab2bf768614433e933b2712e02bfb1276b2d42a2dd46ab03e');body_cells=4496;packets=20;kills=20;direct_controls=20;min_margin=903353/7131943;max_prefix_cells=2;minimum_row=(Fraction(903353, 7131943), (1732, 1736, 1750, 1810, 1836), Fraction(31458, 78373), 2);hostile_one_cell=15/13423;direct_minimum_mass=1/1;state_sha256=70462ba71eb90368300dc9c17e75a82eb70fca2ee04b1fa405f163bbc8018d02;conclusion=EMPTY
+global_z1732_rows=2;empty=2;survivors=0;partition_complete=yes
+necessary_ledger=2239774-2=2239772
+splice=no occupied height at 1725..1731;no interpolation
+consequence=projected k=2 first drift label z1<=1724
+profile_sha256=055e397ce249d59cebb65e1a0a518be29599a3ad0ce611b78105220a2cb2cf76
+semantic_sha256=6c983595686b3b9d7bf28d2572d55108bd81f967b997ea55f4e40208fd2b3d83
+all_exact_controls=PASS

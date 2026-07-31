@@ -1,0 +1,22 @@
+THM-2595 exact audit
+GL(2,F2): order=6, element_orders=[1,2,2,2,3,3]
+presentation: S^2=T^3=1, <S,T>=GL(2,F2)
+Z1(C2*C3,V): 8 cocycles
+B1(C2*C3,V): 4 coboundaries
+H1(C2*C3,V): order=2
+restrictions: |Z1(C2)|=|B1(C2)|=2
+restrictions: |Z1(C3)|=|B1(C3)|=4
+rows: c(s), c(t), H1-class, Fix(s-affine), Fix(t-affine), image, orbits
+((0, 0), (0, 0), 'zero', ((0, 0), (1, 1)), (0, 0), 6, (1, 3))
+((0, 0), (1, 0), 'nonzero', ((0, 0), (1, 1)), (0, 1), 24, (4,))
+((0, 0), (0, 1), 'zero', ((0, 0), (1, 1)), (1, 1), 6, (1, 3))
+((0, 0), (1, 1), 'nonzero', ((0, 0), (1, 1)), (1, 0), 24, (4,))
+((1, 1), (0, 0), 'nonzero', ((1, 0), (0, 1)), (0, 0), 24, (4,))
+((1, 1), (1, 0), 'zero', ((1, 0), (0, 1)), (0, 1), 6, (1, 3))
+((1, 1), (0, 1), 'nonzero', ((1, 0), (0, 1)), (1, 1), 24, (4,))
+((1, 1), (1, 1), 'zero', ((1, 0), (0, 1)), (1, 0), 6, (1, 3))
+class census: zero -> 4 lifts of image 6 and orbit sizes 1+3
+class census: nonzero -> 4 lifts of image 24 and orbit size 4
+AGL(2,F2)=Sym(V): order=24
+left-invariant tournament on S3: impossible (3 involution reversals)
+FAILED CHECKS: NONE

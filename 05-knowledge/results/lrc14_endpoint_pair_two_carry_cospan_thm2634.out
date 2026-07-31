@@ -1,0 +1,10 @@
+THM-2634 exact endpoint-pair two-carry cospan certificate
+field=F_53; primitive13root=16; endpoint_plane=F13^2
+right-continuous carry quotient-gauge checks=6591: PASS
+dense factorization: support(old,difference,character,matched)=(2143,27888,28363,2144)
+dense sha256(old,difference,character)=(dcbd196d215211f7b2c1310f29dcd48869b14de9676670e199c7958bcd80c8f1,0e30112cec22d53611b2ed0ad116d97aab3e2bfeff4553d6a144ecb43cd2dd5a,c066220a07f01e0f418cd08b1324e73c4b7732d6cbf0cc995ed48897d969e575)
+sharp hostile: old endpoint cells=28561; old determinant sectors=2185; matched supports=(2185,0); shifted character support=28405
+pair-twist exact quadrature checks=53: PASS
+affine section checks=369096; per-alpha sections=2184; alpha=0 parallel, alpha!=0 invertible: PASS
+single-c typing: ABSENT without pair twist/common section
+all exact checks passed

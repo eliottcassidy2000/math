@@ -1,0 +1,29 @@
+GMC CONE-AVOIDING DIRECT ENDPOINT RESULTANT FACTOR SCOUT
+status=FINITE-EXACT SCOUT / NO BRANCH CLOSURE YET
+chart=consecutive high coordinates X<0,Y<0
+source_profiles=P:(21,15,352);A:(22,10,251);N:(22,10,253);F:(121,55,6820)
+P_digest=7e5ebd7a14df0d3668c58c7cb5071af3c7a83ca5326000cdd18d6055ae344aa3
+A_digest=5e69953a389352dd25de625db1e750228ab7641a57fa1e670af203e1ecf2dec2
+N_digest=7a24b154f26eec348a960989f1b636af9a8d61b625ceb6eaf0e256465d2b7cff
+direct_resultant=Res_Y(P,F)
+direct_resultant_profile=degree:2804;terms:2805
+direct_resultant_unit=29689953907912469126309633703868076428283685981115757674007453784323289714139441247236807691599872
+direct_resultant_factor_degrees=203^1,19^3,65^10,1^15,1^24,1^37,1^48,10^50,1^105,5^161,1^360
+direct_resultant_linear_factors=(n+3)^15*(2n+1)^24*(3n+1)^37*(n+1)^48*(3n+2)^105*(n+2)^360
+factor203=GN-mixed;digest:eac4e0d0fdb5a6a787b2614bd3704d8d777e7bf41fae9ddf9f5e1ce1cd89ab22
+factor65=GN-mixed;digest:2182971d85ea1aed55dfc0b4211544bc76b502896ccb7fd003cd75172706cda6
+factor19=GN-positive;digest:c725b7cf35b3efcd4304ffe50a34e5f2d61069497a4caf8fad3958256621f8a5
+factor10=GN-positive;digest:cd924e68200c7b69719b57aee6a712e6f74eba50fa1e2f30d858b687ed693da8
+factor5=GN-positive;digest:bb1a42b92837273e8d421ae22300fbf785edf0418b4837aec6807a9e8e388fce
+mod43_factor203_degrees=1,2,3,44,153
+mod43_factor65_degrees=3,10,22,30
+mod47_factor203_degrees=1,3,17,20,45,117
+mod47_factor65_degrees=1,2,4,4,53
+primitive_field_remainder_profile=(918,14,13785)
+primitive_field_remainder_digest=059a967bdf7651b959169a370990c4dff49e44fd99047350e2730ac5a3f1279d
+primitive_field_remainder_n_content=degree64;factor_degrees:1^1,1^1,1^2,1^3,19^3;GN-positive-at-n>=1
+newton_bernstein_K=right:(negative=0,positive=0,mixed=919,zero=0);left:(negative=0,positive=0,mixed=919,zero=0)
+completed_mechanism=direct endpoint resultant is dramatically smaller than the cleared field-remainder resultant (degree 2804 versus 13898), and exact factorization isolates only two GN-mixed nonlinear blocks
+open_gate_1=prove integer nonvanishing of the exact degree-65 and degree-203 factors (Sturm and factor-level root-free-prime audits running)
+open_gate_2=prove Res_Y(P,A) and Res_Y(P,selector-content) nonzero at every integer n>=1, so selector clearing has no exceptional cubic fiber
+scope=no branch endpoint exit, cone-avoiding closure, general mixed-line closure, GMC(2), DvdK removal, or JC consequence is claimed

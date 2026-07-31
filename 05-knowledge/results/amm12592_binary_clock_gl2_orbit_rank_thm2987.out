@@ -1,0 +1,11 @@
+THM-2987 binary-clock ledger GL2 orbit referee
+box=N1..128,d0..64 cases=8320 rank_counts={0: 520, 1: 120, 2: 840, 3: 6840}
+S_N_zero_iff_N_power_of_two=PASS; physical_beta=S_N*(p+q)^d=PASS
+non_dyadic_rank=d0:1,d_positive_power2:2,otherwise:3=PASS
+corner_scan_N2..256={'v0_rank1': 127, 'v1_rank2': 63, 'vge2_rank3': 57}
+odd_unit_ladders_J3..31_clock0..8=ranks[1,2,3,3,3,3,3,3,3]=PASS
+GL2_F2_size=6 order_profile={1: 1, 2: 3, 3: 2} pointed_line_stabilizer=2
+V4_translation_directions=three_K4_perfect_matchings=PASS
+positive_lift_T2=((1, 1), (1, 2)) signed_lift_T3=((1, 0), (0, 1))
+entrywise_nonnegative_integral_projective_order3_lift=IMPOSSIBLE
+ALL THM-2987 CANDIDATE REFEREE CHECKS PASSED

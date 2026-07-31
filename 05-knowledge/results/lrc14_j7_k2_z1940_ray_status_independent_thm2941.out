@@ -1,0 +1,12 @@
+LRC14 projected k=2 z1=1940 independent fixed-state referee
+uniform_ray_status_source_sha256=34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
+primary_z1940_source_imported=False;tree_engine=Pruefer;LP_used=False
+body=(1, 4, 8, 10, 12, 14);first=1940;labels=(1940, 2060, 2142, 2172, 2534);ds=(280, 588, 588, 840, 980);lower=1049/267540;upper=1864535549/474507508545;gap=209808419/24674390444340
+all_label_ray_maxima=((280, Fraction(821, 1049580), 2142, 2142), (588, Fraction(1867, 2119740), 2060, 2060), (840, Fraction(2911, 3724980), 2534, 2534), (980, Fraction(263, 310415), 2172, 2172))
+D=5880;q=840;M=7;marginals=(120, 0, 0, 120, 0);capacity_values=(3, 4, 5, 6, 7);histogram=((0, 120), (3, 420), (4, 112), (5, 168), (6, 20))
+transparent_threshold4=heavy_fibres:300;exception_events:240;300>240
+farkas=alpha:1/60,z:(0,1/60,1/60,1/60,1/60,1/60);min_cell_slack=0/1;contradiction=-1/1
+Pruefer_K5_trees=125;status_cells=32
+conclusion=fixed projected z1=1940 scalar state is impossible
+semantic_sha256=fa174fed4ecbab653d1e600e784159eb6d91d086e5f3f417abc80b6a14f2d6bd
+all_exact_controls=PASS

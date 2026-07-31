@@ -1,193 +1,119 @@
 # Current Mathematical Frontier
 
-**Rolling state — refreshed 2026-07-27.** This supersedes dated snapshots; linked theorems are proof sources, while this file records composition and residuals.
-Status: **PROVED** in-repo proof; **CITED** scoped import; **FINITE-EXACT** exhaustive stated universe; **VERIFIED** reproducible evidence; **CONDITIONAL**, **OPEN**, **REFUTED**, and **SUPERSEDED** are literal.
+**Rolling state — 2026-07-30.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
 ### Headline
 
-**OPEN.** The standard reduction has 13 distinct nonzero relative speeds (14 total runners); external work settles at most 13 total runners. The residual is neither a routine finite run nor a uniform small-period lemma.
-
-The current proof graph is:
-
-```text
-counterexample
-  -> genuine support-3..5 relation, height <= 2^20       [THM-2051]
-  -> bounded sparse relation code of rank >= 11          [THM-2052]
-       |-- rank 12 -> finite maximal-minor box
-       `-- rank 11 -> finite two-anchor star atlas
-            -> deck + sufficient gate / indexed open 26-disk failure carrier [THM-2053]
-            -> signed-hull owner fan / Kelvin-Farey certificate [THM-2055/2056]
-            -> primitive packets + one coprime owner interval [THM-2058]
-            -> exact core/tail CRT compatibility on each clock [THM-2059]
-            -> clock, pair-sum, Fejer, Euler, or rank discharge [OPEN]
-```
-
-The rank-eleven residual is a finite but enormous labelled intersection, not merely a plane or quadratic form; rank twelve is a separate undecided finite box.
-Its indispensable coordinates are primitive parameter, integral columns, transverse deck/bad modulus, signed-hull owner cone, pair-sum clock, and phase/endpoint sidecar. Gate failure means **uncertified**, not unsafe. The reusable architecture is `seed + selector + preserver + pointwise exit`.
+**OPEN.** THM-2923 closes all `3,432` seven-in-window roots; the direct
+remainder has at most six in-window speeds.
+THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Proved reductions and terminals
 
-- **CITED:** LRC through 13 total runners. The newest step is
-  [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture), a computer-assisted proof for 10–12 nonzero speeds.
-- **PROVED finite-circuit alternative:**
-  [THM-2051](../01-canon/theorems/THM-2051-fejer-bv-small-relation-alternative-for-lrc14.md)
-  closes the coarse analytic “middle” sought by THM-935/946. THM-965 gives the
-  sharp pair-covariance floor `delta_(a,b)>=-6/637`. Without a support-three-
-  through-five relation of height `2^20`, Fejer--BV gives positive strict-safe
-  measure. THM-2074 counts the finite hyperplane ledger and proves density one;
-  descent/classification within it, including the AP boundary, remains open.
-- **PROVED rank descent and explicit residual atlas:** THM-2052 combines
-  THM-763's finite primitive-height bound with a pigeonhole/code argument.
-  Every hypothetical counterexample has eleven independent support-at-most-three
-  relations of height `91^6`, hence is rank-twelve finite-box or lies in one of
-  finitely many two-anchor stars `a_i v_p+b_i v_q+c_i v_i=0`, `c_i!=0`.
-  Modulo dilation each star has one projective parameter; pair clusters and
-  cross-cluster triples give the same split. THM-2053 proves
-  `max_i|a z_i-b u_i|<=(a^2+b^2)/91`, removing `||(a,b)||>=91L`, while adjacent
-  normalized columns raise the parameter torus elementarily to margin `1/13`.
-  Every row obeys `M(v)>=1/13-R/(2N)`, `N|(v_i+v_j)`; the exact deck `D_N(m)`
-  removes longitudinal fibers, with a divisibility down-set and AP cutoff `156`.
-  THM-2055 restricts failure to hull-owner sectors while non-hull deck sidecars
-  remain essential. THM-2056 Kelvin-inverts them to `(1/91)R^{-1}K^o` and proves
-  `2u.v>=A_p(u)+A_p(v)` on acute unimodular cones. THM-2057 closes two
-  one-tail planes; THM-2059 gives the exact arbitrary-`N` CRT histogram product
-  and isolates its disjoint-support zero. THM-2060--2080 reduce the dyadic
-  tower to depth four, with MISTAKE-238 forbidding empty-row descent.
-  THM-2081 gives the relative Hunter inequality and closes `4,120` small
-  rank-seven pairs; THM-2082 retains residue incidence. THM-2083 and
-  THM-2085/2087 force the height-57 cut, THM-2086 closes the modular/lacunary
-  lanes, and THM-2088 and THM-2089 make the persistent cut finite or flat.
-  THM-2090/THM-2092/THM-2093 close the apparent unbounded splice and global star;
-  THM-2091/2094 remove the four-`7|q` profile, while THM-2095/2097/2112 make
-  every remaining rank-seven template explicitly finite (not enumerated).
-  For guarded sizes `8..10`, THM-2098--2119 separate transverse, mixed, and
-  vertical lanes, force affine clocks and `11`/`13` content, and add the
-  Toeplitz sidecar. THM-2116--2138 reduce and empty the no-terminal and
-  simultaneous-blocker pencils. THM-2139/2141 leave profiles `(1,6,1)`,
-  `(1,7,0)`, `(2,6,0)`, `(3,5,0)`; THM-2148/2168 reduce the last to the
-  rank-one scalar `5+3` tail. THM-2121's joint gate still needs its
-  Toeplitz/Fejer and phase sidecars.
-- **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
-  lifts bounded scalar relations; `H=2^19` clears recorded margins.
-  MISTAKE-080/082 still require shape-specific torus models.
-- **Scope separation:** [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
-  separates tight deletion from an all-loose crown; extract the deletion before applying its equality classification.
-- **Local-comb ceiling:** THM-1252 through THM-1274 close or sharply saturate
-  local six-comb arguments. The live residue is global endpoint/child transport
-  or a phase-located turn tax, not another unlocated local charge.
+- **CITED:** LRC through 13 total runners; see
+  [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture).
+- **PROVED + FINITE-EXACT:** THM-741/2883/2888/2892/2893/885 close `2002` nine- and `3003` eight-body roots; audited THM-2923 closes `3432` seven-body roots.  Prior splits are intermediate.
+- **PROVED:** THM-965/2051--2092/2074 give the relation, pair floor, rank atlas
+  and ledger; THM-2148/2168 reach scalar `5+3`.  THM-2054 decorrelates
+  recorded margins at `H=2^19`, subject to MISTAKE-080/082's shape-specific
+  tori.  THM-1252--1274 saturate six-comb arguments, leaving endpoint/child
+  transport as the live move.
+  Routes: THM-2081, THM-2082, THM-2083, THM-2085/2087, THM-2085, THM-2086,
+  THM-2088, THM-2089, THM-2090, THM-2092.
+
 ### Exact live obligation
 
-Finite rank-twelve boxes and rank-eleven stars remain undecided (HYP-8871).
-Exactly `165` rows survive in `nu_7(c_3)<=M`; THM-2417/2426/2436 empty the
-complement (THM-2356 kernel `28,393`; THM-2363/THM-2368 remain typed sidecars).
-THM-2440--2466 close the local comb, endpoint, complete-mask, drift/service,
-word-copy, and delayed-mixing debts on supplied common root bases.  THM-2461
-isolates one target-active first-failure role, while THM-2471--2539 add its
-collision colours, ancestry/clock carriers, scalar walls, and `216` boundary
-incidences.  These results retain strong observables but do not identify the
-later semantic root.
+Direct frontier: `<=6`. THM-2941 gives wall `h/7` on all `3,003` roots; THM-2928/2941/2970/2972/2981
+empty aligned `k>=4`, cap `k=2,3` at `1656/246`, and close the common-level reflected `k=1` diagonal. Other censuses, arbitrary `k<=1`, the rung,
+and LRC are open.  Septimal floor/exception plus located phase cut the raw five-drift ledger
+`951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
+`21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
+not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
+`1680..1742` `k=2` atlas, giving cap `1679`; three canonical atlases check `78,078` rows and give cap `1656` with five boundary rows. For `k=3`, torsion/status closes through `297`;
+THM-2981: 423 rows z270..247 close; cap246, ledger375251; z246 has 194 rows.
+Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
+THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams but not semantic-root identification (kernel `28,393`); THM-2545/2549 give Hall and chronology gates,
+still old-target neutral; THM-2547 is only an external control after
+MISTAKE-281.  THM-2551--2712 recover determinant/carry/root/quotient sidecars
+and six-step nilpotence, but no transverse physical gluing (MISTAKE-300).
+THM-2721's positive `C3` corolla is current-zero and misses all `1134`
+placements.
 
-The exact stopping complex is now small.  THM-2545 gives the word-stratified
-Hall criterion; THM-2548 retains every root-charged horizontal C91 mode but
-has semantic vertical degree zero.  THM-2549 supplies positive same-base
-chronology on all `165` rows, yet its future pullback algebra is old-target
-neutral/root-constant and yields only the cemetery Hall table.  THM-2555
-classifies the omitted natural-extension sheet: top digit plus old carry
-recovers the old head, whereas the immediate future digit plus new carry is
-a distinct root; invariant gauges and offset-one cylinders make the gap
-sharp.  THM-2547 remains only a **FINITE-EXACT EXTERNAL CONTROL** after
-MISTAKE-281, not physical target/owner ancestry.
+THM-2720/2742 restore the missing target (`936/1183` sections and every
+primitive character); MISTAKE-310 preserves the half-tooth overlap.  The
+THM-2744 `7/13^6` clutch preserves raw private units, and THM-2749 inserts the
+full `E3 -> D^6 -> Q_(3,{1,2})` fork with both endpoint masks.  Its frozen,
+coindexed, one-sided and clock-blind sections are distinct.
 
-The holotopy audits explain the gap.  THM-2551--2553 show that transfer keeps
-the unit-projector kernel, common-future gain is a coboundary, and rotation
-duty sees augmentation rather than weighted jet phase.  THM-2556's first
-non-product square is `duty curvature + fibre covariance`: all `168` gains
-are live, but a nonunit section can cancel them exactly.
+MISTAKE-313 restores clock `e=1`.  THM-2751 has empty left coefficient and
+right `GQ`, with `Q` mod-`91` invertible but raw `GQ=0 mod91` and `G/26` only
+an `F_13` unit.  No physical wing map follows; the one-sided bank has gain
+`11`, while the older rank-three table is clock-blind.
 
-THM-2557/2564 recover the rank-72 signed interaction from six teeth but make
-its carry noncanonical.  THM-2559 gives all `165` rows an old-head deep/repair
-coefficient; THM-2563 adds moving dipoles and THM-2565 a same-root return only
-for a changed selector.  THM-2568 proves full-`X` completion annihilates every
-coarse target character (twisted-pair kernel dimension `156`).  THM-2569
-conditions first, yielding mass `>=63rho^2/26`, yet `h=b` stays a spectator
-and annihilation is rootwise.  THM-2562/2567 force six rigid deep replicas
-whose augmentation cancels.
+THM-2754's two-clock carrier has `B_(e,j)=a_e 1_(j!=0)` on all `3969` cells.
+Its `7 x 7` unit-pair chamber has four multipliers, gains
+`0:10,2:19,11:20`, and all `168` label modes, but no carrier action.
+THM-2750 blocks arm-blind charging; THM-2757's marked `K4` transgression
+still lacks a physical carrier.
 
-THM-2571 finds the primitive 13-primary carry; THM-2579 makes its target
-translates one torsor.  Differences and unnormalized numerators fill, while
-normalized division may restore the class.  THM-2573 identifies the Abel
-normal with a handoff moment but has a deep blind kernel.  THM-2574
-diagonalizes the tooth label; the pure Boolean gate stays normal-blind.  The
-live coordinate is a tooth mode of the **actual covariant layer weights**.
+THM-2763's address has size `13^4` (`13^3` after loss), not THM-2625's
+endpoint plane.  THM-2779's Heisenberg center needs degree `169`; a literal
+`13`-root action kills it.  THM-2782's three positive arms have `567/567`
+disjoint opposite cofibres.  THM-2788--2803 close coefficient
+odometer/transport/origin/projective response, not physical gluing;
+THM-2791/2807 give ancestry homotopy.
 
-THM-2575 constructs a common-base owner-clock host; THM-2577 puts every
-positive return at depth `3` on `{a}` and depth `5` on `{b},{a,b}`.  The host
-lives on the distinct `{a}`, depth-3 packet, so the facts do not multiply.
-THM-2581 repairs that mismatch on the `{b}`, depth-5 fibre.  THM-2584 retains
-the roots: in `w=t/2` every owner cell has path `0--0--6--6--12`; all joint
-colours and every nonzero endogenous `theta=t-2v` collision survive.
-THM-2586 then disintegrates the two theta-zero rails into literal Boolean
-ancestry sheets on all `84` nonzero-displacement/owner cells and continues
-`v=w=7t` to a genuinely later `k_a` physical root at exact time `N+5`.
-THM-2587 computes the exact comparison with translated deep gates: the
-absolute digit sees a three-state, two-neighbour danger-incidence wall, and
-`theta` cannot select an incident danger edge.  Eleven constant offsets per
-rail are uniformly safe but are only gauges.  Both projected danger and safe
-tensors are already spectrally saturated.  What they permanently omit is the
-oppositely translated `k_b` factor and THM-2334's left relation residue.
+THM-2806's flat raw point has bare-only `D3=144w`; its tau-twelve common
+carrier is empty.  THM-2813's conditional address jet is not Rees `D3`;
+THM-2814 separates contrast from holonomy, THM-2818 proves positive-copy
+multipliers, and THM-2819 proves the sharp marked target eleven-face.
+THM-2825's half-step scale uniquely picks `+h/+2h` on all 587 rights; the
+norm-one Schur collars are absent from the coarse algebra.  Its labelled path
+forest has a transverse/tangent `M_3 tensor I_587`, but source data change and
+endpoint matches are only `74/587` versus `587/587`.
+THM-2820 proves Boolean tangent rigidity.  THM-2829/2835 give the unique
+91-unit response and `449`-sheet carry-blind semantic horn (ranks `13/26`),
+but change `QB -> QA`; endpoint/word copies have empty fibre product.
+THM-2839 gives its full `13^5`-character rank `371293`, yet its inverse is
+signed and only the unrotated response is physical.
 
-Next: attach THM-2537's selected old head, or THM-2569's old-head/future
-packet, to a THM-2586 arrival sheet, then insert the paired `k_b` translate
-and left endpoint residue on that same ancestry before full-`X` pushforward.
-The frozen sheet is not old-action covariant, and the present typed-row
-projection is spectrally saturated; more untyped nonvanishing is not
-progress.  No row is removed. Ledger: `165`.
+THM-2847 gives a `42`-cell q3/q11 bank and `20`-cell E3 horn: the `449`
+columns have rank four but E3 rank three.  THM-2851 exposes
+`L_9L_8=T L_4` versus flat `A_5A_3=A_8`; carry fidelity costs `13` states
+(`169` jointly), and its derivative has norm `898`, ranks `12/371292`.
+THM-2852 adds full signed convolution rank and six borrow-aware arrows.
+THM-2857 gives a free Galois `C13` endpoint torsor but only `K0`-linear
+carry.
+THM-2859's q0 `Z^8` germ hits only `{0,4,8,9}`: no rootless hit, square,
+or literal q3/q11 attachment.
+THM-2861/2863 give Hermitian/Prony; THM-2868 its atlas. THM-2874
+`F`-clutches Galois/`C169`, but q7 stays flat. THM-2876 kills the q3 edge.
+THM-2880/2878/2882 reach q3 but flat carry.
+THM-2884/2886 find `V4` and transport q3/q11/q7 parity/current; scalar Prony fails.
+THM-2887/2889 give Arf-one `Q8`/dicyclic channels; THM-2894 blocks central-sign descent through unmarked residuals.
+Next: `e9=(-9,+9,QB)`, clutch `(13,13,-1)`. Ledger `165`.
 
 ### Independent routes that remain live
 
-- **AP-core / tight-deletion supplier.**
-   [THM-1017](../01-canon/theorems/THM-1017-ap-core-bridge-reduction.md) proves
-   `AP core -> far element -> LRC(14)`. The extraction of that AP core from the
-   compact Cover14 residual is open (the current
-   [HYP-6820 audit](../05-knowledge/hypotheses/HYP-6820-q25-and-n12-uniformity-audit.md)).
-   Uniform emptiness of non-AP/deep multi-defect twelve-speed branches remains
-   open.
-- **Euler/global phase route.** THM-2047 proves the corresponding labelled phase-height carrier:
-  it retains sign, owner, side, height, and exact deletion;
-  `chi(G_delta)` detects isolated tight points. THM-2050 shows complete local
-  period-14 germs can agree while
-  global maxima differ, so first-exit magnitude or gluing is mandatory.
-- **Peel and comb routes.** Every zero-measure covering packet obeys THM-731's
-  necessary peel inequality `disc_v>=6|G'_{~v}|^2`; THM-2048's integer fiber tax
-  strictly sharpens it but is still a pruning gain, not a classifier. Local
-  six-comb return machinery is saturated; pursue endpoint/child transport or a
-  phase-located turn tax.
-- **Effective spectrum.** THM-1289 imports an ineffective one-sided isolated
-  gap. THM-1290 is exact through maximum speed 55 (and empties
-  `(1/14,3/41)` through 64). Extend computation only with a structural filter
-  or make the gap effective.
-- **Exact per-row pair-sum evaluator.** THM-1002/2047 reduce a fixed row's
-  maximum to rational pair-sum vertices; reflection halves the phase interval.
-  HYP-8900 replays several rows exactly, including value `14/183` for the deep
-  well. This is not a uniform finite family or a proof of its Wall-A restatement.
-- **Artanh/Gibbs boundary.** THM-2143 proves the strict criterion
-  `p_0>0 iff Z_V(z)>z` for some rational `0<z<1`; the supplied fugacities fail
-  hostile defect-seven controls, finite-temperature bounds miss tight APs, and unrestricted signed log-Riesz functionals are unsound.
+- **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
+- **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
+- **Foreign-base phase.** The FINITE-EXACT `C_221` stalk has a typed
+  `4/17 <-> 13/17` two-cycle, but no exclusive source, lawful return, or
+  semantic endpoint current.
+- **Artanh/Gibbs.** THM-2143's criterion is exact, but current fugacities fail
+  defect-seven hostiles and signed log-Riesz shortcuts are unsound.
 
 ### Mandatory controls and perspective prompts
 
-- The rows `26*{1,...,12} union {339}` and `{1,...,12,5460}` refute uniform
-  `q<=25` and the old `q<=1200` scan. AP13 and its `12->26` lift also share
-  complete local germs but have maxima `1/14` and `1/12`.
-- THM-2058 preserves every prescribed finite lift depth while escaping at
-  `47/113`; raw jets, bad Farey rays, and fixed lift depth are not certificates.
-- Determinant polygons are basis-dependent, not Heegner discriminants.
-  THM-2047's slice is not an ordinary toric complement, and no Bessel-to-sinc
-  analogy proves LRC.
-- Test columns, gaps, clocks, residues, wall events, endpoints, circuits, and
-  proof obligations as vertices; record each quotient's lost sidecar.
+- `26*{1,...,12} union {339}` and `{1,...,12,5460}` refute bounded-`q`
+  scans; AP13 and its lift share germs but not maxima.
+- THM-2058 preserves every fixed lift depth but escapes at `47/113`;
+  finite jets/Farey rays fail.
+- Determinant polygons are basis-dependent; analogy does not prove LRC.
+- Test gaps, clocks, residues, endpoints, circuits and proof obligations;
+  record every quotient loss.
 
 ## NC2 and Gaussian moments
 
@@ -197,13 +123,14 @@ progress.  No row is removed. Ledger: `165`.
   proves NC2 and hence unrestricted GMC(2).
 - **REFUTED for higher dimensions:** explicit GMC(3) counterexamples now exist;
   GMC is false for every dimension at least 3. See the current external preprint
-  entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
-- **FORMALIZATION COMPLETE:** `GMC2Main` exposes unconditional, root-imported
-  `dvdK1`, `nc2`, and `gmc2`, each kernel-pure with only `propext`, `Classical.choice`, and `Quot.sound`.
-  Legacy implication endpoints retain `DvdK1`, while `GMC2DvdKOmegaWiring.singlePolyCrux_holds`
-  discharges the premise in the front-door theorem. THM-2101's three additive
-  routes remain valuable optional formalization targets, not proof blockers.
-  Its orbit/Lagrange core is kernel-checked; THM-2111 gives the effective seed, while THM-2067 is only the historical small-root-product route.
+  entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md);
+  [THM-2801](../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md)
+  sharply gives `SIC(1)` true / `SIC(n>=2)` false, not `JC(2)`.
+- **FORMALIZATION COMPLETE:** `GMC2Main` exposes unconditional `dvdK1`, `nc2`,
+  and `gmc2`, kernel-pure up to `propext`, choice, and quotient soundness;
+  `singlePolyCrux_holds` discharges the legacy `DvdK1` premise.  THM-2101's
+  additive routes remain optional; THM-2111 is the effective seed and THM-2067
+  only the historical small-root-product route.
 
 ### Why THM-2022 works
 
@@ -240,22 +167,68 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   embeds every Laurent polynomial as a horizontal face; its aperiodic dihedral
   control has cofinite returns but infinitely many zero constant terms, killing
   the S222/S223 saddle and semigroup shortcuts.
-
+- [THM-2639](../01-canon/theorems/THM-2639-gmc-equal-mass-two-rung-persistent-collision-certificate.md)
+  gives a DvdK-free persistent-collision class: a free equal-mass two-ray face
+  has `k+1` channels at level `k*ell`, yet its first two return polynomials
+  generate a nonzero torus monomial by an explicit negative-determinant Bezout
+  identity.  This is nonlinear ideal elimination, not a raw-moment decoder.
+- THM-2810/2815 give the finite-state boundary: no bounded factorial carrier;
+  at height `2D-1` the unique optimum is the `D`-dimensional Laguerre quotient,
+  which splits uniquely into `D` positive Gauss--Laguerre atoms.  The `D=2`
+  polynomial `x-1` has zero scalar readout but no zero node value, so positive
+  splitting still does not supply MISTAKE-211's multiplier observations.
+- THM-2812/2824 close three-slot envelopes; THM-2828 reaches lower-prefix
+  cones.  THM-2830 now proves the two-disjoint-positive-cone orientation:
+  `R_n=L(d_nV^2)/L(d_nV)` is strictly increasing because its cyclic Pascal
+  kernel is at least `6H_n(p)H_n(q)H_n(r)`.  The same ratio ladder proves
+  interlaced positive cones whenever shifted upper coefficients
+  monotone-likelihood-ratio dominate the lower coefficients.  This bypasses
+  the stronger four-index matching inequality.  THM-2841 then proves that
+  every tensor of two or more nonnegative adjacent-difference cone elements
+  has positive factorial readout, via an exact forbidden-board rook count and
+  derangement floor; THM-2853 extends to Gamma shapes.
+  THM-2842 identifies the missing multipliers as
+  radial-variance jets: `k` jets invert an ordered `k`-cone span, but ordinary
+  Gaussian nullity does not supply them. THM-2844 proves a support cut is
+  exactly necessary for every pair in two full positive coordinate orthants
+  and gives the sharp first signed-ray threshold.  Its two divisibility
+  invariants are coprime for every real ray parameter, so failure below the
+  orientation threshold is only a certificate failure, not a moment
+  counterexample.
+- THM-2843 reduces every four-slot window either to an immediate
+  positive-dimensional common zero or to a nonnegative complete-intersection
+  norm of length `d(d+1)(d+2)`.  In the first window, common nullity is a
+  moving-real-plane divisibility problem, equivalently a binary
+  sextic--octic resultant; two exact certificates close `{0,1,2,3}`, while an
+  abstract hidden plane proves coordinate faces insufficient.  Its
+  conjugate-pair/three-plane count does not carry the standard holomorphic
+  `C_2*C_3` action. THM-2845 classifies finite-algebra scalar detectors
+  (two-way iff local residue-`K`); THM-2846 gives a positive cone line
+  vanishing through Gaussian moment six but exiting at eight, with a
+  variance-jet plane detector. THM-2848 reduces four slots to
+  `F^o=0` or a shared cubic--quartic line; THM-2866 excludes the first.
+  THM-2879/2890/2891 close consecutive cone-cutting planes.
+  THM-2906/10/14/18 give holonomy/`C3` exits; THM-2929 makes high first gaps
+  effective.  THM-2949/2952 close all `364` four-slot supports through width
+  `14`; THM-2955/2957/2959 close first-gap `15<=M<=24` by modular gates.
+  THM-2960 gives Smith walls through `24` (two charts through `20`);
+  THM-2964 makes the pure ladder universal; THM-2963 kills next-prime gates;
+  THM-2969/2973/2978 prove positive PF2 wall-stripped cores for `6<=M<=32`, including quartic wall `(31,25)`; width `>=33` is outside this finite atlas.
+  THM-2860 identifies
+  Euler-tangent cubic lines with Möbius
+  support chords and excludes them on all 31,465 supports through exponent
+  `30`.  The unbounded shared-line, general norm, and scalar multiplier-access
+  problems remain open.
 ### Live work
 
-Package THM-2022 for publication and sharpen THM-2111's compound degree from
-the binomial bound toward the conjecturally sharp `M+N`. The external DvdK
-dependency is removed both on paper and in the unconditional Lean front door.
-Formalizing THM-2101's additive monodromy, transcendental, and t-adic packet
-routes remains useful independent corroboration, not a dependency of
-`GMC2Main.gmc2`. Positive/two-charge/unique-channel leaves are reusable special cases, not the general mechanism.
-But HYP-8931's `LowestFaceUniqueChannel P` class is inconsistent by the empty
-level-set witness `lambda=0, delta=-1, F=empty` (MISTAKE-240), so its
-kernel-checked implication is vacuous and not wired into NC2. Its `98/116`
-figure is a bounded census, not a theorem. THM-2070 refutes HYP-8890's saddle/Watson bypass and
-HYP-8895's semigroup bypass; only their explicitly positive or two-charge
-subcases survive. Continue to transfer the `seed/selector/preserver/exit`
-design without pretending a preserver supplies the seed.
+Publish THM-2022; sharpen THM-2111's binomial degree toward `M+N`; formalize
+THM-2639's ring identity/sign.  THM-2101's additive routes are corroboration,
+not `GMC2Main.gmc2` dependencies, and positive/two-charge/unique-channel leaves
+are special cases.  HYP-8931's `LowestFaceUniqueChannel` is inconsistent by
+the empty level set (MISTAKE-240), so its implication is vacuous and `98/116`
+only a census.  THM-2070 refutes HYP-8890's saddle/Watson and HYP-8895's
+semigroup bypasses outside their positive/two-charge cases.  Transfer the
+`seed/selector/preserver/exit` design without treating a preserver as a seed.
 
 ## Tournaments
 
@@ -263,8 +236,7 @@ design without pretending a preserver supplies the seed.
 
 - THM-1805 makes directed triangles the Vandermonde-cancellation atom; THM-1862/1936 make `H` and signed Rédei data multiplicative under order-join while `c3` is additive.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md) makes `d_iso` exactly `l1` on fixed order-join patches by image-swap uncrossing; the ambient quotient still has triangles and is not a partial cube.
-- [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) classifies the universal product iff transitive. Marked partial-automorphism cost is a weighted Hamming derivative and PSD-Gram permutation-trace defect; THM-2242/2249 close the transitive response and give every quotient a forced-pair envelope with one scaled-automorphism zero set.
-  THM-2256's scale dichotomy is bounded under zero-cost automorphism/nonautomorphism contact and linear otherwise. The transitive quotient has exact gap one; `C_3` has THM-2249's sharp linear floor. Residual `G-F_R`, larger nontransitive quotients, and unpinned transport remain open.
+- [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) classifies the universal product iff transitive. THM-2242/2249 give the transitive response and universal forced-pair envelope; THM-2256 separates bounded contact from linear scale. Nontransitive quotients and unpinned transport remain open.
 - THM-1880/1885 give the Chebyshev--Pell/`BS(1,2)^+` transitive frame.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
@@ -315,8 +287,6 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
 
 ### Established landmarks
 
-- Hostile-audited [THM-2422](../01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md) separates operation shadows from labelled fibres: strict closure from `{2,3}` is `N\{1,4,6}`, and synchronous growth is `M_t=27*2^(t-4)+1`.
-  Every twin centre through `10^8` has distinct earlier parents (FINITE-EXACT; all-centre extension OPEN). Polygonal supports have digamma/trigamma clocks.
 - Hostile-audited [THM-2433](../01-canon/theorems/THM-2433-operation-fibre-deletion-incidence-and-startup-scar.md) gives the finite-hole Burnside calculus. The additive scar stabilizes at three lost pairs, while multiplication propagates along `4N` and `6N`; internal transitive closures, four exceptional divisibility covers, and the unique artificial twin-centre atom `12` are exact. Chain difference and divisor Möbius inversion are analogues, not a Stirling identification.
 - Hostile-audited [THM-2438](../01-canon/theorems/THM-2438-poisson-newton-ternary-half-and-harmonic-divisor-incidence.md)
   gives the exact Poisson--Newton EGF conjugacy. Central-binomial Newton
@@ -359,71 +329,79 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
 Classify profiles under support operations; study analytic continuation and automatic/Mahler structure; track collision taxes; and feed support identities into tournament laws and LRC residue packets.
 ## Other active portfolio
 
-- **Knots / operation-ready relations:** THM-2176 gives the continuation kernel; THM-2191 gives catalytic localization and stable group length; [THM-2281](../01-canon/theorems/THM-2281-common-optimal-context-for-finite-catalytic-families.md) puts every finite localized metric packet isometrically in one ordinary translated slice. THM-2220 gives fixed-context slopes; THM-2242 makes the kernel embedding isometric and identifies its atoms.
-  THM-2292 confines the Brittenham--Hermiller `T(2,7)`/mirror plane to two same-sign chambers. THM-2308 proves `u((#^P K)#(#^Q mirror(K)))>=P+Q`, puts the stable diagonal in `[2,5]`, and reduces the chambers to one concave profile between sharp abstract norm envelopes.
-  THM-2317 identifies factor forgetting as an exact metric quotient. [THM-2330](../01-canon/theorems/THM-2330-partition-lattice-gordian-lift-spectrum.md) inserts every intermediate factor partition and target: lift costs decrease under coarsening, merge drops form an exact coboundary, disjoint packets min-plus convolve, and the stable spectrum exists; its unknot slice is exactly THM-2248's partition transform.
-  [THM-2336](../01-canon/theorems/THM-2336-prime-target-gordian-owner-diagram-and-bypass-split.md) makes prime-target fibres weighted owner diagrams and splits two-prime translation from bypass.
-  [THM-2339](../01-canon/theorems/THM-2339-prime-owner-deletion-and-target-allocation-hypergraph.md) makes composite lifts finite prime-token allocations with a coloured Möbius hypergraph and exact fixed-owner deletion.
-  THM-2346 gives unique global ANOVA tensors and score-table gauge; pair couplings are symmetric cohabitation energies, not orientations.
-  [THM-2348](../01-canon/theorems/THM-2348-prime-type-rectangularity-and-target-token-conditioning.md) equates robust prime-type factorization with mixed-tensor/rectangle vanishing, gives exact token conditioning, and makes the two-prime correction a bounded continuation of `-sigma`.
-  THM-2374 inverts the squared complete-subcube Walsh bank; THM-2383 recovers complex coefficients exactly from labelled spanning references. Physical references, owners, and knot realization remain open.
-  THM-2351 proves the canonical self-target ANOVA is exactly an affine reparameterization of the directional catalysis--bypass ledger; its optimum and skew pair sector add no information. Positive catalysis and the stable diagonal remain open.
+- **Knots / operation-ready relations:** THM-2176/2191/2281 localize finite
+  metric packets in translated slices; THM-2242/2330--2383 give the atomic,
+  owner, ANOVA, rectangle, and labelled-reference inversion layers.  Physical
+  references, positive catalysis, knot realization, and the stable diagonal
+  remain open.  THM-2646 classifies `B3` conjugacy by modular and exponent
+  classes, but exponent is not Markov-invariant.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
-- **Jacobian/Dixmier:** THM-1300/1315's three-dimensional collision has
-  unsettled provenance (MISTAKE-205); `DC(2)` remains open.  For that fixed
-  sporadic map, THM-2473/2546 prove the exact Jelonek and omitted-fibre laws,
-  while THM-2566/MISTAKE-287 show that its cusp and Weierstrass descriptions
-  are **saturated** pullbacks: the raw discriminant loci also contain
-  coefficient-zero planes, and the `3/1/0`--Kodaira dictionary is exact only
-  on `a!=0`.  THM-2570 then normalizes the whole Jelonek surface by an affine
-  plane: on `c!=0` it is literally a cusp cylinder, and its exact conductor,
-  reduced singular locus, and omitted-fibre support are the same curve `E`;
-  the `c=0` boundary is smooth.  THM-2576 proves the general set-level
-  nonproperness composition law and computes the square's second component:
-  `S_(F o F)=V(LH)` with `L,H` distinct irreducibles.  Composite
-  discriminant parity is exact on three slices (`H` odd, `L` even) but remains
-  outside global canon; all higher component counts remain open.
-  At degree eighteen, THM-2314/2316 close sparse supports,
-  THM-2371/2376 close `H_2`, and audited THM-2406 forces THM-2389's `H_4`
-  pole system onto the closed common-root wall. The inherited nonsplit
-  exact-square-prefix reduced degree-eighteen branch is closed; `JC(2)`,
-  `DC(2)`, and branches outside THM-2262 remain open.
+- **Jacobian/Dixmier:** `JC(2)` and `DC(2)` remain open; THM-1300/1315
+  provenance is unsettled (MISTAKE-205).  THM-2473--2576 settle only the fixed
+  sporadic map.  For the `A4/S4` route, THM-2681 excludes the proposed cubic
+  identification and THM-2685/2686/2695 locate the surviving standard plane in
+  units, `Cl[2]`, and `Pic[2]/2Pic[4]`; the spin/reflection and saturation
+  coordinates remain missing.  THM-2690/2696/2700 exclude the toric,
+  reflection-quotient, and Danielewski models in their stated scopes.
+  THM-2703/2708 identify the general boundary object as the saturated
+  `H^1(U,mu_2)` gain-holonomy kernel, not a scalar Gram rank.  THM-2743--2780
+  refine the `V4`, opposition, and inertia typing but still supply no
+  equivariant Kummer realization.  THM-2862/2864/2968/2971 give two sextic
+  lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
+  affine sidecars remain.  THM-2867 gives the regular `S3` carrier.  THM-2871 makes that face unramified and
+  puts the first paired escape at `A=B=0`: `C in (B)` gives integral
+  depression; square/Jelonek/reconstruction remain open.  On planar slices
+  THM-2699--2722 classify
+  affine-linear targets and fixed-`d` pairs; unrestricted `C[A,d]^2` is
+  equivalent to `JC(2)` after a coordinate change, while `B`-targets and
+  nongraph surfaces stay open.  The degree-eighteen lane closes sparse and
+  `H_2` branches and sends `H_4` to the common-root wall.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
-- **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
-  THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
-  THM-2127--2136 reduce arbitrary tails to coarsened-power/short Newton edges.
-  THM-2158/2180 make deck descent automatic and reduce the twice-odd nonmonic
-  branch to `V|(4gamma-(beta/V)^2)`. THM-2189 forces this pole congruence on
-  every nonsplit deck and, without a deck hypothesis, in reduced mate degree
-  two, and THM-2194 closes reduced degree six. THM-2202 closes every twice-odd
-  reduced degree `4r-2`: below the cusp
-  `r nu(Lambda)=(2r-1)nu(c)` the first/second flux orders separate, while
-  above it the unique `c^(2r-1)` boundary tooth does. Thus no quartic
-  finite-pole survivor remains. THM-2181 closes monic depressed quartics;
-  THM-2214 closes nonsplit terminal degrees through ten, and THM-2217 forces
-  odd-leading survivors to degree `>=14` with `R deg(q)>=deg(V)`. THM-2245
-  forces degree fourteen onto a singular spectral quartic; THM-2247 closes it.
-  THM-2262 makes the degree-eighteen generic spectrum a genus-four trigonal
-  cover and leaves an explicit degree-twelve branch locus; THM-2297 removes
-  target translation, yields a weighted `(2,3,4,5)` cone, and closes every
-  one-sparse stratum plus the `B=D=0` plane by genus. THM-2311 reduces the
-  exactly two-sparse locus to `31` ratios; THM-2314/2316/2320/2324/2328
-  close all `31`. THM-2332 leaves Mordell square classes of degrees
-  `0,2,4`, and THM-2335 eliminates degree `0`. THM-2345/2347 close
-  `126D=25B^2` and `20BC+21W=0`; audited THM-2359 closes
-  `504D=115B^2`. THM-2357 gives `R_10=H_2S_4^2` and its exact pivot;
-  audited THM-2371 eliminates every common-root and singular-order
-  component, making THM-2360's linear-times-cube descent unconditional
-  on `H_2`; hostile-audited THM-2376 eliminates that coprime cube locus
-  and closes the full degree-eighteen `H_2S_5^2` stratum. THM-2373 gives
-  root-free charts on `H_4`; THM-2386 removes common roots; hostile-audited
-  THM-2389 gives its pole-jet system. Independently hostile-audited THM-2406
-  closes the reduced degree-eighteen wall. THM-2411 empties `A=0`; THM-2423/2425/2428 empty the five one-sparse axes.
-  THM-2429/2437/2463/2468 close `C,W`, `D,W`, `B,D`, `B,W`; THM-2469/2470/2472 close `C,D`, `E,W`, `D,E`; THM-2475/2476 close `C,E`, `B,E`; THM-2480 closes `B,C` by sparse Hensel irreducibility and wall-stratified ramification. All ten support-two planes are empty; only higher mixed strata remain.
-  Split/even edges and integral `2`-adic raising remain; THM-2206 blocks field-valued `C_2` Hasse repair.
-  THM-2446 opens six-brackets; THM-2451 and extensions refute its cone shortcut off point/common-plane boundaries. `JC(2)` and `DC(2)` remain open.
+- **Planar source fibres:** THM-2063/THM-2084--2247 close the affine-through-
+  quartic and terminal-through-fourteen strata; THM-2262/2297--2480, including
+  THM-2371/THM-2376, close the stated degree-eighteen trigonal strata.
+  THM-2671/2683/2692 empty all support strata of the inherited
+  nonsplit degree-22 branch.  On the chosen split sheet THM-2719--2778 close
+  every reduced exact-square-prefix terminal degree `M=4k-2`; the engine is
+  the all-degree response truncation, exact-prefix gcd, unique infinity pole,
+  and `q/h^3` slope-four contradiction.  THM-2781 proves the sharp abstract
+  `d-1` terminal-coefficient perfect-power certificate, but does not enter an
+  arbitrary Keller pair into the Faber chart.
+  On the genuine nonsplit deck THM-2784/2796 reduce to
+  `F=VG^2`, `2VG'+V'G=2kappa` and a three-value passport.  THM-2823/2826 close
+  the local simple-pole pair; THM-2827 restricts balanced passports and
+  THM-2831 excludes the cyclic `d=s=0` residual.  Nonzero `d` or `s`, other
+  carriers/fluxes, global chart entry, and nonpolynomial-prefix degrees stay
+  open.  At the abstract accessory layer, THM-2799/2800/2805/2808 complete
+  `e=2`, THM-2817 completes the sextic `N=6,e=3` layer, and THM-2840 closes
+  the highest-symmetry heptic `(2,2,2,1)` multiset as the single unmarked
+  `T_7` carrier with six marked charts.  The heptic `(4,1,1,1)` and
+  `(3,2,1,1)` multisets remain open.  None of these scoped charts proves
+  `JC(2)` or `DC(2)`.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
+
+### Arithmetic-Kakeya forcing certificates (opened 2026-07-28, klein-S691)
+
+**OPEN external benchmark; in-repo workbench live.** Certificate score s
+claims AK(s) (benchmark's theorem, CITED); human record 1.67513 (Katz–Tao
+2002); target ≤ 1.675. Session facts (FINITE-EXACT): literal spec rule-(1)
+UNSOUND (score→1 family; 14/9 at n=9 — report upstream); proved floor
+score ≥ 1; k=1 paths floor 2 (exhaustive small, greedy-seed caveat);
+strict record **13/7** on [2,2,2]; per-suffix merge-free record **7/4 =
+the KT99 exponent** (3 independent witnesses — a plateau exactly at the
+human rung); with identifications **12/7**. Label algebras: verifiable =
+(prefix+step), intuitive same-H = (step+suffix) — complementary; the
+compilation lemmas between them are the benchmark's unstated equivalence
+claims and the workbench's top theory target. Mechanism: species-flow
+with junction algebra; firing = illegal (1,−1)-junction; foreign seeds =
+reusable junction fuel; merges = free hubs (NOT denominator savings).
+Files: `04-computation/ak_forcing_engine.py` (+exploit, +search, +anneal,
++mode3), `06-writeups/AK-FORCING-WORKBENCH-klein-S691.md`,
+`05-knowledge/results/AK-RUNG-LADDER-WITNESSES-klein-S691.md`. Next: 5/3
+hunt (< 1.675 modulo soundness+format), same-H legal 7/4, compilation
+lemmas, k=1 floor proof. Related external raid: mac-mini-S171 owns other
+Epoch lanes (sensitivity, Legendre, del Pezzo, SFC(3), Grechuk).
 
 ## Cross-domain connection discipline
 
@@ -439,6 +417,7 @@ The most reusable current bridges are not literal object identifications:
 | Support Dirichlet profile | integer sequences | Do tournament/LRC census supports have functional or automatic structure? |
 | Continuation congruence / min-plus kernel | Gordian connected-sum profile and THM-840/853 | Which finite sidecar is a target-preserving quotient under every named future operation? |
 | Relation-cone circuit/carry atlas | THM-2196/2199 | NC2 charge channels, ordered tournament joins, and invariant-null knot packets inherit affine carry charts, but respectively still need whole-face coefficient phase, SCC/block order, and the full continuation kernel; JC pole descent additionally loses residue roots and flux. |
+| Transverse-information tax | THM-2612; THM-2615; THM-2573 | When the preferred open/diagonal locus erases a symmetry or charge, retain a transverse object: Jelonek pole, independent endpoint axis, or singular boundary normal. These are parallel moves, not an identification of pole order with Fourier charge; each needs its own sidecar and zero control. |
 | Phase reconstruction | THM-2307/2022 | Scalar codes can be impostors; retain signed coefficient current. Not a GMC-to-LRC reduction. |
 | Integrality/support-hole spectrum | THM-2200 | Nineteen scalar holes fill bounded Hafnian powers while Frobenius kills prime dilates modulo the prime; tournament join similarly fills the doubled `(8,10)` hole, whereas the flow `K_3` obstruction is LP-separated. Retain semigroup coefficients and operation sidecars, not convex support alone. |
 | Weighted-sector obstruction | THM-2045 factorized `R` family | Does the unique constant-producing sector fail on a broader Lee–Li inner edge? |
@@ -447,3 +426,24 @@ HYP-8810's “JC(2) and LRC(14) share AP-rigidity” is a **wildcard frame, not 
 proved reduction**. LRC has the one-way THM-1017 supplier; the planar-JC wall
 still needs an exact map and preserved predicate. THM-2045 supplies one exact
 JC-side sector obstruction to compare, not an AP reduction. A bridge must name its map, preserved predicate, loss, sidecar, and hostile control.
+
+
+## External open-problem lane (Epoch FrontierMath) — mac-mini S171, 2026-07-28
+
+Orthogonal to LRC/JC; recorded so later sessions do not re-derive.
+
+- **PROVED/FINITE-EXACT:** THM-2832 (max point sensitivity of degree-3 Boolean
+  functions = 6; Kushilevitz optimal; two engines), THM-2838 (m(4) = 9,
+  CP-SAT single-engine with bidirectional controls — independent-engine audit
+  wanted), THM-2833 (no Legendre-333 pair with asymmetric multiplier
+  invariance, orders >= 7, <= 25 orbits; extends arXiv:2607.20765),
+  THM-2834 (char-3 klt del Pezzo X_14 in P(2,2,7,7), nine tame singular
+  points, arithmetic rank one — answers Epoch's del Pezzo challenge;
+  Method-A cap at 4 proved), THM-2836 (SFC(3) certified census: supports
+  <= 12, windows k <= 8 — extends the GMC-lane THM-2812 in both open
+  directions), THM-2837 (Grechuk cubic Diophantine divisor/Mordell reduction
+  + polynomial-family exclusions).
+- **OPEN residuals:** (5,14) sensitivity cell (needs > 8 GB CP-SAT or a DRAT
+  engine); book-Ramsey R(B_99, B_100) 398-vertex witness (two-level annealer
+  at class-energy ~400-530, best sizes |U|=94, |D|=104 by budget-slack scan);
+  unrestricted Legendre-333; Apery-style irrationality cluster untouched.

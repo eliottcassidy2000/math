@@ -1,0 +1,13 @@
+GRAPH EDGE-SUM DISCRIMINANT / GRACEFUL SIGN-GAUGE AUDIT
+factorization=codegree_vertex_factors*disjoint_edge_energy_factors
+graph_census_n2_to_n6=33866
+edge_pair_instances=871926 adjacent=499398 disjoint=372528
+numeric_factorization_patterns=2_per_graph all_exact
+K4_specialization=codegree2+3_opposite_pairs=THM2758
+bipartite_gauge=x_A=label x_B=-label edge_sum=oriented_difference
+disc(edge_difference_squares)=disc(oriented)*mirror_plus_factor
+graceful_census_graphs=23 injections=764 graceful=158
+hostile=P3 labels(0,1,2) oriented=(-1,1) disc=4 mirror=0
+positive=P3 labels(0,2,1) absolute_differences=(2,1)
+SCOPE: universal graph identity and graceful criterion; no existence theorem
+FAILED CHECKS: NONE

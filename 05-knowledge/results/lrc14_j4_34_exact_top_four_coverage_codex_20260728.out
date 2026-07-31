@@ -1,0 +1,22 @@
+THM-741 PURE (3,4) FLOOD TAIL: EXACT TOP-FOUR COVERAGE ENVELOPE
+========================================================================================
+dependency_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
+body E=(3, 4, 8, 9, 10, 11, 12, 13, 14); external universe: all integers 15<=a<b<c<d
+root r=28 m=433607/2522520
+finite exact bank: w=15..472 (458 speeds); sparse/full/direct-union/direct-tooth paths agree
+coverage rank 1: w=17 c(w)=85973/1786785
+coverage rank 2: w=23 c(w)=240307/5801796
+coverage rank 3: w=19 c(w)=14017/363090
+coverage rank 4: w=32 c(w)=11521/315315
+finite-coverage manifest SHA256=3130e4d1eecf19b49dc4740f8e302fff1f60b630cef49849b8e15b0566652e6d
+tail law: c(w)<u(w)=m/7+(99/70)r/(7w) for w>=473; threshold=33297264/70523
+cutoff hostility: u(472)-c(32)=1301/347266920; c(32)-u(473)=1093/50618568
+global top-four cover sum<=308603791/1873980108
+uniform union-bound survivor>=135228493/18739801080>0
+extremal individual-cover family=(3, 4, 8, 9, 10, 11, 12, 13, 14, 17, 19, 23, 32); exact survivor r=16 m=805109/16702140
+hostile old-envelope control: B11 at distinct starts 15,16,17,18 gives -81555377/62537475<0
+proof partition: exact c(w) for 15<=w<=472; THM-735(ii) (via THM-731/732) monotone cap for every w>=473; four-speed union bound
+scope: one literal root edge (3,4), no Fano/chi_7 transport; global THM-741 and LRC(14) remain open
+VERDICT: E_(3,4) union {a,b,c,d} is lonely for every 15<=a<b<c<d; this closes a fourth whole flood body
+source_sha256=71e93272cb01ad5bfc4212f8e772dfcbb3174504b510dc161c29613baf98eeac
+ALL EXACT TOP-FOUR COVERAGE CHECKS PASSED

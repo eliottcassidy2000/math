@@ -1,0 +1,26 @@
+THM-2670 physical D-handoff independent referee -- exact
+T=297836897838480 Tprime=13*T=3871879671900240 R=13^6=4826809
+sector=safe->safe atoms=(7436, 7436) formal_state_keys=510632 base_positive=31944 word_empty=14784 skew_zero=0 physical_state_keys=17160
+  physical_by_clock=(792, 1320, 1320, 1584, 2640, 1848, 1848, 1848, 1584, 2376)
+sector=safe->danger atoms=(7436, 1636) formal_state_keys=67729 base_positive=4752 word_empty=0 skew_zero=264 physical_state_keys=4488
+  physical_by_clock=(264, 528, 528, 528, 264, 528, 528, 528, 264, 528)
+sector=danger->safe atoms=(1636, 7436) formal_state_keys=141593 base_positive=5016 word_empty=1320 skew_zero=0 physical_state_keys=3696
+  physical_by_clock=(660, 660, 660, 660, 396, 132, 132, 132, 132, 132)
+sector=danger->danger atoms=(1636, 1636) formal_state_keys=27640 base_positive=0 word_empty=0 skew_zero=0 physical_state_keys=0
+  physical_by_clock=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+safe clock=(3, 0, 3) excluded_s1=6 state_support_per_active_source=6
+safe clock=(3, 0, 4) excluded_s1=6 state_support_per_active_source=10
+safe clock=(3, 0, 5) excluded_s1=6 state_support_per_active_source=10
+safe clock=(3, 0, 6) excluded_s1=6 state_support_per_active_source=12
+safe clock=(3, 1, 0) excluded_s1=6 state_support_per_active_source=20
+safe clock=(4, 0, 1) excluded_s1=7 state_support_per_active_source=14
+safe clock=(4, 0, 2) excluded_s1=7 state_support_per_active_source=14
+safe clock=(4, 0, 3) excluded_s1=7 state_support_per_active_source=14
+safe clock=(4, 0, 4) excluded_s1=7 state_support_per_active_source=12
+safe clock=(4, 6, 0) excluded_s1=7 state_support_per_active_source=18
+danger/danger: all 27640 formal state chains are base-zero
+safe/safe labelled atom pairs: base-positive=32736 word-compatible=17688 skew-zero=528 physical-positive=17160
+guard-free disjoint sector union by clock=(1716, 2508, 2508, 2772, 3300, 2508, 2508, 2508, 1980, 3036)
+guard-free total=25344; per-active-source states=(13,19,19,21,25,19,19,19,15,23)
+cospan union clock atlas=S10; composable two-edge pairs=0
+verdict=PASS: exact physical chronology has positive two-edge handoffs but no three-edge chain

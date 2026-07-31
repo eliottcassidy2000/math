@@ -1,0 +1,32 @@
+script_sha256=9f300459b273ad1825d3fe3e9274c6afe609f2d581e9df3d2be1780d347e541b
+ordinary_output_sha256=350497cccd8fffcf925affc124cda97a2cddc2b1ec255548c877b2d13125c8cc
+optimized_output_sha256=350497cccd8fffcf925affc124cda97a2cddc2b1ec255548c877b2d13125c8cc
+ordinary_optimized_byte_identical=PASS
+LRC14 k2 c4 sole-d6 located-phase closure
+base_script_sha256=085b4e2747a48bdbc1125e894af7d4f647dfdd7be86a00cf02dea2a8667e26dc
+base_engine_output_sha256=49cbf8fb160a78125d426cf7348c3c35e4859f110f493bb4b03acfc2f0c92125
+bernoulli_h_tables={1: (0, -1, 5, -3, 3, -5, 1, 0, -1, 5, -3, 3, -5, 1), 5: (0, -5, 4, -8, 8, -4, 5, 0, -5, 4, -8, 8, -4, 5)}
+sharp_one_comb_overlap=1/14 equality_only_at_a=2s
+second_distinct_overlap_bound=1/28
+two_comb_low_cover_bound=3/28<1/7
+literal_overlap_controls=1000
+literal_lcm_controls=(18, 1029)
+participating_d6_shapes=18064772
+deleted_global_shapes=8998004
+deleted_occurrences=248154771
+touched_rows_bodies_divisors=(2406, 2148, 105)
+killed_semantic_sha256=a14c202ee92936958eab161b5aad857c5ce8f243b27a0db0778c5d62ef437d89
+residual_shapes=26899164786
+residual_occurrences=200141092521
+residual_rows=4354
+residual_bodies=2966
+residual_divisors=147
+residual_shapes_by_c=Counter({2: 12908211669, 3: 10562966029, 4: 3199399598, 5: 225129605, 1: 3457885})
+residual_occurrences_by_c=Counter({3: 112812921408, 2: 46320209782, 4: 39514128418, 5: 1490308157, 1: 3524756})
+residual_rows_by_c=Counter({4: 3185, 3: 2425, 5: 2409, 2: 779, 1: 45})
+residual_bodies_by_c=Counter({4: 2812, 3: 2337, 5: 1244, 2: 779, 1: 45})
+residual_divisors_by_c=Counter({4: 130, 3: 115, 5: 91, 2: 71, 1: 15})
+residual_minimum=(336, (1, 2, 3, 4, 8, 12), 336, 160, ((2, 14), (3, 14), (4, 14), (5, 2), (6, 4)), 4, 6, 2095)
+residual_minimum_by_c={1: (13860, (1, 2, 3, 5, 9, 11), 13860, 5058, ((1, 550), (2, 698), (3, 216), (4, 296), (5, 40), (6, 180)), 1, 1430, 8), 2: (840, (1, 2, 3, 4, 5, 12), 840, 370, ((2, 60), (3, 30), (5, 20), (6, 10)), 2, 60, 326), 3: (336, (1, 2, 3, 6, 8, 12), 336, 164, ((2, 6), (3, 26), (4, 10), (5, 2), (6, 4)), 3, 16, 200), 4: (336, (1, 2, 3, 4, 8, 12), 336, 160, ((2, 14), (3, 14), (4, 14), (5, 2), (6, 4)), 4, 6, 2095), 5: (392, (1, 2, 4, 7, 8, 14), 784, 224, ((0, 8), (4, 16), (5, 32)), 5, 0, 35)}
+residual_semantic_sha256=c4eca31da58ee8db462970519e45edb9c514fd43a9642c2b8e925a8d9987b7e9
+all_exact_controls=PASS

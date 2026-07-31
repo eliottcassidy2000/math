@@ -1,0 +1,36 @@
+THM-2830 DISJOINT-CONE CYCLIC-SPLIT THEOREM -- exact referee
+status=PROVED ANALYTICALLY; VERIFIED-EXACT CERTIFICATES
+triple_tensor_cells=343
+pair_product_cells=64
+polarization_controls=105
+matching_cells=4950
+matching_strict=4935
+matching_equalities=15
+normalized_forward_cells=19800
+minimum_positive_matching_gap=30
+pair_factorial_phi=1467522360/901
+pair_factorial_endpoint=1629012
+pair_factorial_gap=-217452/901
+laguerre_t=1/1000_gap=-4099/781250
+cone_cells=3016
+cone_equalities=16
+pascal_identity_cells=275
+strict_ratio_cells=1375
+newton_bridge_cells=2000
+cyclic_aggregation_cells=1400
+adjacent_part_cells=1080
+global_quarter_cells=1080
+ratio_base_ge_terms=17
+ratio_base_lt_terms=11
+m1_d0_terms=27
+m1_positive_d_terms=424
+m2_small_terms_each=164
+m2_tail_terms=474
+global_high_qx_terms=46
+global_high_qxy_terms=51
+global_high_qxyz_terms=46
+global_quarter_px_terms=140
+global_quarter_pxy_terms=145
+global_quarter_pxyz_terms=136
+stronger_matching_inequality_status=OPEN
+all_exact_controls=PASS

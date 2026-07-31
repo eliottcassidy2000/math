@@ -1,0 +1,13 @@
+LRC14 projected k=2 z1=2004 independent fixed-state referee
+uniform_ray_status_source_sha256=34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
+primary_z2004_source_imported=False;tree_engine=Pruefer;LP_used=False
+body=(1, 4, 8, 10, 12, 14);first=2004;labels=(2004, 2060, 2142, 2172, 2534);ds=(280, 588, 840, 980, 980);lower=1049/267540;upper=6622358579/1633871214990;gap=1123710587/8496130317948
+all_label_ray_maxima=((280, Fraction(821, 1049580), 2142, 2142), (588, Fraction(1867, 2119740), 2060, 2060), (840, Fraction(2911, 3724980), 2534, 2534), (980, Fraction(263, 310415), 2172, 2172))
+independent_crude_kill=ds:(196, 588, 980, 980, 2940);D:2940;q:420;M:7;target:6;capacity:5;histogram:((4, 210), (5, 190), (6, 20))
+D=5880;q=840;M=7;marginals=(120, 0, 120, 0, 0);capacity_values=(3, 4, 5, 6, 7);histogram=((0, 120), (3, 420), (4, 112), (5, 168), (6, 20))
+transparent_threshold4=heavy_fibres:300;exception_events:240;300>240
+farkas=alpha:1/60,z:(0,1/60,1/60,1/60,1/60,1/60);min_cell_slack=0/1;contradiction=-1/1
+Pruefer_K5_trees=125;status_cells=32
+conclusion=fixed projected z1=2004 scalar state is impossible
+semantic_sha256=5cead518b79fb5f992d70fa894f7cf2914c2403bb5d5a0af4893efc2e0cce67d
+all_exact_controls=PASS

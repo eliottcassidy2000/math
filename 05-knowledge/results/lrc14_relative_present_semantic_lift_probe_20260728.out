@@ -1,0 +1,24 @@
+LRC14 RELATIVE-PRESENT SEMANTIC LIFT PROBE
+status=FINITE-EXACT relative-complement carrier and zero-root clutch no-go
+R=4826809 delayed=11195237/20792408 state=(sector0,h6,kappa1) active_clocks=(1, 2, 3, 4, 5, 6)
+fixed_packet_vertices=3346 semantics=(((0, None), 3081), ((2, None), 265))
+atom_vertices=304 semantics=(((0, None), 280), ((2, None), 24))
+fixed_packet_min_semantic_stability=337/100360982066072 q_common_radius=1/100360982066072
+existing_carrier_semantic_handoff_vertices=0
+expanded_source_one_semantics=(((0, None), 301390), ((1, (2, 3)), 493), ((1, (3,)), 4996), ((1, None), 13639), ((2, None), 11406), ((3, (1, 2)), 12848))
+E3_fork_residue_counts=((7, 6404), (8, 6444))
+E3_present_label_union=EMPTY; unique_active_rail=True; private_root=True
+coefficient_contents=(('free', 2122120), ('old', 2122120), ('relative', 2122120)) canonical_content=26
+unit_rail_banks=(('old', ((7, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)), (8, ()))), ('free', ((7, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)), (8, (0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)))), ('relative', ((7, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)), (8, (0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)))))
+E3_rail_residue_counts=(((0, 7), 351), ((0, 8), 352), ((1, 7), 351), ((1, 8), 352), ((2, 7), 553), ((2, 8), 557), ((3, 7), 264), ((3, 8), 266), ((4, 7), 528), ((4, 8), 532), ((5, 7), 341), ((5, 8), 343), ((6, 7), 528), ((6, 8), 530), ((7, 7), 637), ((7, 8), 640), ((8, 7), 637), ((8, 8), 642), ((9, 7), 528), ((9, 8), 532), ((10, 7), 341), ((10, 8), 343), ((11, 7), 528), ((11, 8), 532), ((12, 7), 264), ((12, 8), 266), ((13, 7), 553), ((13, 8), 557))
+relative_survivor_rail_residue_counts=(((0, 7), 351), ((0, 8), 352), ((1, 7), 351), ((1, 8), 352), ((2, 7), 553), ((2, 8), 557), ((3, 7), 264), ((4, 7), 528), ((4, 8), 532), ((5, 7), 341), ((5, 8), 343), ((6, 7), 528), ((6, 8), 530), ((7, 7), 637), ((7, 8), 640), ((8, 7), 637), ((8, 8), 642), ((9, 7), 528), ((9, 8), 532), ((10, 7), 341), ((10, 8), 343), ((11, 7), 528), ((11, 8), 532), ((12, 7), 264), ((12, 8), 266), ((13, 7), 553), ((13, 8), 557))
+relative_residue_counts=((7, 6404), (8, 6178)) directed_bipartite_edges=79127824
+full_target_label_size_profiles=(((9, 9), 4344), ((9, 10), 1583), ((9, 11), 175), ((10, 9), 3236), ((10, 10), 1413), ((10, 11), 73), ((11, 9), 1138), ((11, 10), 563), ((11, 11), 29), ((12, 9), 19), ((12, 10), 9)) every_vertex_has_nonzero_t=True
+relative_clock_counts=((7, (((1, 0), 351), ((1, 1), 224), ((1, 4), 120), ((1, 5), 264), ((2, 1), 177), ((2, 2), 264), ((2, 3), 264), ((2, 4), 264), ((2, 6), 264), ((3, 1), 152), ((3, 2), 264), ((3, 3), 264), ((3, 4), 253), ((3, 5), 77), ((4, 2), 77), ((4, 3), 253), ((4, 4), 264), ((4, 5), 264), ((4, 6), 152), ((5, 1), 264), ((5, 3), 264), ((5, 4), 264), ((5, 5), 264), ((5, 6), 177), ((6, 0), 351), ((6, 2), 264), ((6, 3), 120), ((6, 6), 224))), (8, (((1, 0), 352), ((1, 1), 225), ((1, 4), 121), ((1, 5), 266), ((2, 1), 178), ((2, 2), 266), ((2, 3), 265), ((2, 4), 266), ((2, 6), 266), ((3, 1), 154), ((3, 2), 266), ((3, 3), 265), ((3, 4), 255), ((3, 5), 77), ((4, 2), 77), ((4, 3), 254), ((4, 4), 266), ((4, 5), 266), ((4, 6), 154), ((5, 3), 265), ((5, 4), 266), ((5, 5), 266), ((5, 6), 178), ((6, 0), 352), ((6, 2), 266), ((6, 3), 121), ((6, 6), 225))))
+reverse_clock_unordered_pairs=1083056 directed_pairs=2166112
+relative_min_radius=1/100360982066072 common_I_survivors=12582/12582
+relative_scalar_pair=((n=618,q=46963490466309/100360982066072,rail=2,clock=(1, 1),edge=1,root=12),(n=619,q=46963636013165/100360982066072,rail=2,clock=(1, 1),edge=0,root=1),k=(7,4826802),common_s=(0, 2, 3, 4, 7, 8, 9, 10, 11, 12),common_t=(2, 3, 6, 7, 8, 9, 10, 11))
+private_root_transport=EMPTY: every residue7<->8 scalar lift preserves edge and lands at root0; the lawful endpoint lies on the opposite half-tooth edge
+mechanism=present-free=present+relative-complement coefficientwise; the complement repairs the residue8 determinant on 13/14 rails; full U_(s,t) labels survive but do not repair the zero-root clutch
+SCOPE: relative-present endpoint/unit support and scalar lifts; private-root lift attachment is empty; no canonical transition amplitude, spectral endpoint pair, row exclusion, or LRC14
+ALL CHECKS PASSED

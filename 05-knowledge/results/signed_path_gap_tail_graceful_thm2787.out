@@ -1,0 +1,22 @@
+THM2787 SIGNED PATH / GAP-TAIL EXACT REFEREE
+signed assignments: 48794 {2: 2, 3: 24, 4: 768, 5: 48000}
+gap iff: 2650 graceful labelings; 140516 marked gap cases
+matrix checks: 15314 consecutive-one rows; 20614 threshold columns
+gap graceful counts: {2: 2, 3: 4, 4: 16, 5: 68, 6: 376, 7: 2184}
+marked n=2: shapes=1 marked=2 search_graceful=1 all_extend=1
+marked n=3: shapes=1 marked=3 search_graceful=1 all_extend=1
+marked n=4: shapes=2 marked=8 search_graceful=3 all_extend=1
+marked n=5: shapes=3 marked=15 search_graceful=7 all_extend=1
+marked n=6: shapes=6 marked=36 search_graceful=20 all_extend=1
+marked n=7: shapes=11 marked=77 search_graceful=98 all_extend=1
+marked n=8: shapes=23 marked=184 search_graceful=359 all_extend=1
+marked n=9: shapes=47 marked=423 search_graceful=2403 all_extend=1
+marked witness sha256: a838da45aa50a01ade774984c619bbd51c556d1ac8eacc8d5191d06aee26718d
+P3 nonzero/no-cap: (0, 1, 3) span=3>2
+P4 cap/zero-path: (0, 1, -2, 0) span=3 zero=1
+root-only hostile: (0, 1, -2) leaf-gap=3
+fixed K1,3 marked-leaf gap witnesses: 0
+six-vertex extreme hostile: graceful=12 marked_extreme=0
+six-vertex gap repair: ((1, 4, 2, 3, 5, 0), 3, 2, (1, 5, 2, 4, 6, 0, 3))
+naive P5 leaf-compression differences: [2, 2, 3]
+ALL EXACT CHECKS PASSED

@@ -1,0 +1,13 @@
+[PASS] C1 decided-tree fact d=0  |rules G-set|=2 |target|=2
+[PASS] C1 decided-tree fact d=1  |rules G-set|=4 |target|=4
+[PASS] C1 decided-tree fact d=2  |rules G-set|=12 |target|=12
+[PASS] C1 decided-tree fact d=3  |rules G-set|=64 |target|=64
+[PASS] C2 Vandermonde refinement bound d<=8
+[PASS] C3 |coeff((1-p)W)| <= 2*3^d for d<=6  max ratio |coeff|/3^d over vertices = 1
+[PASS] C4 {|z|=1,|1-z|=1} = primitive 6th roots; 1-z = conj(z) = z^5; Phi6 roots
+[PASS] C5 Phi6(1-p)=Phi6(p); 1/Phi6 period-6; linear/Phi6 coeffs; quasi-poly classes
+[PASS] C6 von Neumann positive control for identity (S)
+[PASS] C7 d=0: no eventually periodic S (L<=2, P<=8) admits a valid companion T  tested 3570 configs, flags = []
+[PASS] C8 d=1: no purely periodic (W_m), P<=5, admits ANY companion (V_m) to depth 60  tested 1364 configs, flags = []
+[PASS] C9 Newton backward-propagation identity (deg<=5) and integer C(x,i), x in Z
+LANE-B REFEREE: ALL CHECKS PASS

@@ -1,0 +1,53 @@
+grechuk_cubic_dioph_family_exclusion_macmini_S171.py — polynomial-family
+exclusions for the ten smallest-open cubic Diophantine equations
+(Grechuk catalogue / Epoch FrontierMath "small Diophantine equations"):
+
+  z^2 + y^2 z + P(x) = 0,  P in {x^3+2 (warmup), x^3-2, x^3-x-1, x^3+x-1,
+    x^3+x+1, x^3-3, x^3+3, x^3-x-2, x^3-x+2}, and z^2+y^2z-z+x^3+2=0.
+
+All ten cubics P are irreducible over Q (sympy check, recorded).
+
+STRUCTURE (proved, elementary):
+  z(z+y^2) = -P(x)  <=>  with A = -z:  A·B = P(x), A + B = y^2 (+e, e=-1 for
+  the -z variant).  So integer solutions correspond exactly to divisor pairs
+  d | P(x) with d + P(x)/d = y^2; polynomial FAMILIES correspond to
+  factorizations P(x(t)) = A(t)B(t) in Z[t] with A + B a perfect square.
+
+  Fixing the divisor parameter d and clearing denominators gives the Mordell
+  family  V^2 = U^3 + d^3(d^2 + c)  (U = dx, V = dy·d):  infinitude of
+  integer solutions of the original equation  <=>  infinitely many d whose
+  Mordell curve carries an integral point of the shape (U, V) = (dx, d^2 y).
+
+EXCLUSIONS:
+  [P1] (PROVED) deg x = 1 is impossible: an affine substitution preserves
+       irreducibility, so P(x(t)) has no nontrivial Z[t]-factorization.
+  [P2] (PROVED) any split with both parts of distinct degrees requires the
+       larger degree even (A+B = y^2); for deg x = 3 this leaves only
+       (1,8) — dead: a linear factor gives a rational root of P — and (3,6),
+       open only through the "norm-form" channel (A = product over the three
+       conjugate roots of one t-root of x(t) = theta each), which requires
+       x(t) - theta to be reducible over Q(theta): non-generic, unresolved.
+  [F1] (FINITE-EXACT) deg x = 2, split (2,4): no family with all coefficient
+       leads in {(1,1),(-1,-1),(2,2),(-2,-2),(3,3),(-3,-3)} and coefficients
+       bounded by 14 — exhaustive integer scan, 0 families for all ten
+       equations.
+  [F2] (FINITE-EXACT) deg x = 2, constant divisor A = d in {±1,±2,±3,±4,
+       ±8,±9}: y must be a cubic with (dy)^2 = d P(x) + d^3-type identity —
+       exhaustive box-14 scan: 0 families.
+  [F3] (FINITE-EXACT) deg x = 2 with negative-square lead L in {-1,-4,-9}
+       and cancelling cubic split (A, B cubic, opposite leads, y of degree
+       <= 1; equivalently y^4 - 4P(x) a perfect square of a cubic):
+       exhaustive box-12 scan: 0 families.
+  [R1] (REMARK, sketch) the natural Pell-type two-parameter shape
+       z = -m^2, x quadratic in m forces, at the m^0 coefficient, a rational
+       root of P — impossible.  (The m^2-coefficient also forces w^2 = 3d^2
+       + s Pell conditions; for s = -1 the negative Pell for 3 is empty.)
+
+INTERPRETATION: any polynomial parametrization for these equations must have
+deg x >= 4 (even splits), pass through the deg-3 norm-form channel, or not
+exist at all — with solutions instead arising from irregular integral points
+(the equations sit in the same log-Calabi–Yau difficulty class as sums of
+three cubes).  This localizes the remaining search space sharply.
+
+Reproduce:
+  python3 04-computation/grechuk_cubic_dioph_family_exclusion_macmini_S171.py 12

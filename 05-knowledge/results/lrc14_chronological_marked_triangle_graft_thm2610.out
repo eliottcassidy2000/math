@@ -1,0 +1,8 @@
+proper_profiles=1092
+nonzero_profile_characters=13104
+koopman_graph_selector_checks=28561
+root_deck_erasure_checks=104
+c91_to_c7_rebase_checks=728
+same_time_complement_overlap=0
+chronological_complement_overlap=35
+all_exact_checks=PASS

@@ -1,0 +1,22 @@
+THM2809 SHARP LABELWISE ELEVEN-LABEL MAXIMUM EXACT REFEREE
+first14_rail_metadata=((1, 0, 12), (1, 0, 0), (1, 1, 12), (1, 1, 0), (1, 2, 12), (1, 2, 0), (1, 3, 12), (1, 3, 0), (1, 4, 12), (1, 4, 0), (1, 5, 12), (1, 5, 0), (1, 6, 12), (1, 6, 0))
+configuration_universe_per_rail=2*2*2*13=104
+source_unit_config_counts=(28, 22, 28, 28, 28, 28, 28, 28, 28, 26, 28, 24, 28, 28)
+marked_deep_band=(169, 181)/182
+geometric_half_types=((0, 0, (169, 182)), (1, 12, (168, 181)))
+unique_source_label0_row=(0, 1, 1, 6, 12, 12, 12, (168, 181))
+unique_wrapped_label1_row=(1, 0, 1, 12, 6, 1, 0, (169, 182))
+source_label0_anchor=F_(ell,7)
+marked_source_anchor=F_(ell,7)^c
+label1_future_half_digit=(25,26)/26
+marked_future_half_digit=(13,14)/26
+delayed_prefix_piece_rows=((0, 2017, 0, 0), (1, 2067, 625, 0), (2, 2067, 625, 0), (3, 2067, 625, 0), (4, 1526, 625, 0), (5, 1541, 625, 0), (6, 1117, 625, 0))
+twelve_face_failure_census=12_label0_anchor+1_label1_digit
+consequence=all13 arbitrary-configuration twelve-faces have empty full marked-source intersection
+marked_prefix_subset_rows=((0, 1076, 0), (1, 1701, 625), (2, 1701, 625), (3, 1701, 625), (4, 1351, 625), (5, 1275, 625), (6, 1401, 625))
+positive_eleven_face_labels=(2,3,4,5,6,7,8,9,10,11,12)
+edge_assignments_per_rail=2^11=2048
+positive_eleven_face_rows=(((1,), 399580256360672050023360), ((6,), 74205644260590152069760), ((2, 3), 724908063903933297548160), ((5,), 565104521676801927300480), ((2, 3), 1130171627188809393027840), ((4, 6), 682117240653421081629120), ((2, 3), 1267162127454119622485760), ((5, 6), 941819893732588135224960), ((1, 2, 3), 1449825103908006680574720), ((5,), 596479469905204957431360), ((1, 3), 676409208657101856256320), ((5,), 562231844838877400066880), ((2,), 582228901121553500855040), ((5,), 399555625773821502585600))
+sharp_maximum_label_cardinality=11; simplex_dimension=10
+scope=first14 THM2749 source rails/carry12; no target endpoint, outside-rail, row, or LRC14 exclusion
+ALL EXACT CHECKS PASSED

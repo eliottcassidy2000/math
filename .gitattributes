@@ -1,6 +1,13 @@
 scripts/*.sh text eol=lf
 scripts/*.ps1 text eol=crlf
 
+# Exact mathematical artifacts are frequently hash-pinned across machines.
+# Keep their checkout bytes invariant even when core.autocrlf is enabled.
+*.py text eol=lf
+*.out text eol=lf
+*.md text eol=lf
+*.lean text eol=lf
+
 # ─── Concurrency: union-merge only for genuinely append-only archives ─────────
 # The built-in `union` driver preserves both sides without understanding truth.
 # Never apply it to bounded current digests or correction canon: doing so can

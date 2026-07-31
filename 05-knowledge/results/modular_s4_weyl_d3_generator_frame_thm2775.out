@@ -1,0 +1,18 @@
+MODULAR S4 TO WEYL D3 GENERATOR-FRAME AUDIT
+X_S(d1,d2,d3)=(d1,-d3,-d2) order=2
+X_A(d1,d2,d3)=(d1,-d2,-d3) order=2
+Y_S(d1,d2,d3)=(d2,d3,d1) order=3
+Y_A(d1,d2,d3)=(-d3,d1,-d2) order=3
+order(X_S*Y_S)=4 square=diag(-1,-1,1)
+order(X_A*Y_A)=3
+generated_S_image=W(D3)=S4 order=24
+generated_A_image=orientation_subgroup=A4 order=12
+Hadamard_X_S=(12) Hadamard_Y_S=(234)
+Hadamard_X_A=(12)(34) Hadamard_Y_A=(123)
+S4_over_V4=S3 binary_retained
+A4_over_V4=C3 binary_collapsed
+modular_kernel_ranks=A4:F3,S4:F5,S3:F2
+boundary_code={000,110,101,011}
+nonzero_boundary_orbit={110,101,011}
+SCOPE=finite_generator_frame_not_affine_monodromy_or_JC2
+FAILED CHECKS: NONE

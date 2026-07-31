@@ -1,0 +1,11 @@
+THM-2909 exact nonconsecutive response-row TP3 arc
+row_zero_d4_matrix=1,812,3854466;5,5040,33243210;15,22260,201170970
+row_zero_d4_determinant=-339570000
+row_zero_d4_normalized_curvature=-4527600
+signed_hostile_A=3/5,2/5,1/5
+signed_hostile_determinant=-1728/15625
+proved_gap_weighted_chord_cells=17640
+unproved_gap_finite_evidence_cells=52920
+finite_scan_minimum=12;cell=p0,h1,x1,y0,rows1-2-3
+scope=h in {1,2} proved; h=3..8 is finite-exact evidence only
+all_exact_checks=PASS

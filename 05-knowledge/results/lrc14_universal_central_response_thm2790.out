@@ -1,0 +1,15 @@
+THM-2790 UNIVERSAL DEPTH-TWO CENTRAL RESPONSE
+status=VERIFIED-EXACT dual-field coefficient-side companion
+carrier_points=169 carry_wall_points=13
+carrier_law=XY=ZYX; [X,Y]=Z under XYX^-1Y^-1
+edge_gate_constant_product_hostile=26/26
+current_normalization=unnormalized_P_times_Q; full_current_differs_by_one_common_nonzero_scalar
+digest_basis=J_response:lex_s_then_R;modes:lex_s_then_lex_min_cycle_then_k;unsigned_8_byte_big_endian
+p=352341050142921841 J_support=28392/28392 response_support=28392/28392 per_s=169..169 full_s=168/168 active_cycles_per_s=13..13 carry_wall_support=2184/2184 per_s_carry=13..13
+p=352341050142921841 central_nonzero_modes=26208/26208 per_s_modes=156..156 carry_wall_modes=2016/2016 per_s_carry_modes=12..12
+p=352341050142921841 J_sha256=fb738f7aca8dc6c08e0a6178e0fd9603f60deffec4bb26e16c7b9f4abae33d3f response_sha256=4bf698c20fe9099ade588112c44f8d0506a4a23b7261a2db3d2c744c240476da central_modes_sha256=29916cc2fb6a66c939cda174be1623e57643e7d4a0707702e2b4f3a66189b4c2
+p=956354278959359281 J_support=28392/28392 response_support=28392/28392 per_s=169..169 full_s=168/168 active_cycles_per_s=13..13 carry_wall_support=2184/2184 per_s_carry=13..13
+p=956354278959359281 central_nonzero_modes=26208/26208 per_s_modes=156..156 carry_wall_modes=2016/2016 per_s_carry_modes=12..12
+p=956354278959359281 J_sha256=af3c9c215bf56b9ecb80f0f6d83ac3d746aed7cf0cf65100d94ce3af0fe5fe71 response_sha256=7635f9584e36aa3227432125749393f35169ad7bfba1bc3220087625db44cb72 central_modes_sha256=e07cd3af43dd3969c2d4afb5706debc178375e04e76440f0a624d1aebe840ff4
+scope=coefficient endpoint response to the depth-two central Z quotient; no physical high-sheet descent, Boolean carrier, or wing-current identification
+ALL EXACT CHECKS PASSED

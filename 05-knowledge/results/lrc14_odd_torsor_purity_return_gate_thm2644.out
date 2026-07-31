@@ -1,0 +1,10 @@
+THM-2644 ODD-TORSOR PURITY/RETURN EXACT REFEREE
+small_odd_weight_profiles=2457
+C13_boolean_profiles=8192 strict_gate_profiles=1
+C13_sparse_height3_profiles=8464 strict_gate_profiles=15
+controls identity=(1,1,0,1) translated=(1,1,0,0) inverse_pair=(2,2,2,2)
+robust_nonpure=(M4,E10,delta6,R9) dense=(M13,E13,delta156,R13)
+hostiles signed=(M0,E2,delta-2,R0) even_C2=(M1,E1,delta0,R1)
+kfold_C13_checks=325 coprime_positive=23 p_divisible_nonzero_hostiles=24
+reverse_gram_and_same_orientation_compositions=EXACT
+PASS

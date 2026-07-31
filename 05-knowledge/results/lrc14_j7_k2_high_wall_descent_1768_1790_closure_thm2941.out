@@ -1,0 +1,12 @@
+LRC14 projected k=2 forced-high exact-ray descent closure at 1768
+high_wall_engine_sha256=22db2600485332469f6dec9e1356bc121165923a33c1ca6381acddcc89506f9e
+scalar_band_sha256=2ce806d361d7eb97d9ae2d23e438898c8e1f895a89501c9a1847e51f61ca8009
+z1790_closure_sha256=b03b46a6c438773ef1c433c435828a5426e18c998999cbee543541904b85f20b
+z1784_closure_sha256=318f0908b2c84d68a5ef75884316f0ebc600d6aeed28d640f7489d6f179fb6bf
+z1780_closure_sha256=afa96047c84a544b77142e34dfd25ad3923bace4d54f3f5ce47b0910f99ee27b
+scope=last remaining scalar-empty HIGH-TAIL row below 1780;all later distinct nonaligned labels;no label horizon
+CASE;z1=1768;E=1,8,10,12,13,14;L=152880;high_floor=13250;ray_signs=+76434/-76434/0:11;branch=GLOBAL_TOP3_PLUS_BEST_HIGH;upper=1701389/506364040;gap=-906233/6582732520;conclusion=SCALAR-EMPTY
+remaining_high_wall_rows=1;scalar_empty=1;survivors=0
+profile_sha256=24dcf4d1e7d05aa2f69a8e191eb8d57ebed224486dd77c2ecbba034e1e15cd03
+semantic_sha256=3d62a60ad5841b8190305fb5e60d7632e078466c20517a6930a870b91a9b67d2
+all_exact_controls=PASS

@@ -1,0 +1,17 @@
+THM-2799 ONE-POLE E=2 CHEBYSHEV RESPONSE AUDIT
+N | ratio polynomial R_N(t) | affine classes
+ 4 | 2*(t + 1) | 1
+ 5 | 3*t**2 + 4*t + 3 | 1
+ 6 | 2*(t + 1)*(2*t**2 + t + 2) | 2
+ 7 | 5*t**4 + 8*t**3 + 9*t**2 + 8*t + 5 | 2
+ 8 | 2*(t + 1)*(3*t**4 + 2*t**3 + 4*t**2 + 2*t + 3) | 3
+ 9 | 7*t**6 + 12*t**5 + 15*t**4 + 16*t**3 + 15*t**2 + 12*t + 7 | 3
+10 | 2*(t + 1)*(4*t**6 + 3*t**5 + 6*t**4 + 4*t**3 + 6*t**2 + 3*t + 4) | 4
+11 | degree 8 reciprocal squarefree | 4
+12 | degree 9 reciprocal squarefree | 5
+13 | degree 10 reciprocal squarefree | 5
+14 | degree 11 reciprocal squarefree | 6
+all-degree identities checked symbolically through N=14: 11
+affine classes in checked range: 36
+N=4 split boundary and N>=5 nonsplit criterion: PASS
+Chebyshev critical-point root count: PASS

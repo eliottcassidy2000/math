@@ -1,0 +1,13 @@
+LRC14 THM2698 PAIRED DEBT-CYLINDER EXACT PROBE
+status=FINITE-EXACT positive moving-endpoint partial result; endpoint-current typing remains open
+typed_row=(H=1,units=(14, 27, 40, 53, 66),j=13,a=2197,c=742586); k_b=14; unresolved_k_a=(27, 40, 53, 66)
+events=(x,r)=((Fraction(55232507, 115843416), 7), (Fraction(58313459, 115843416), 3))
+open_packet_radius=1/301082946198216; open_packet_mass=1/150541473099108; three_state_radius=1/50883017907498504
+closest_inserted_factor_wall_radius=71/810903912; wall_radius_over_packet_radius=26361803
+table_law=K_(i,k_a)(s)=2*open_packet_radius on support, 0 off support
+event_rows=(k_a,support,size,zero_shift_present,nonzero_primitive_character_count)=(((27, (0, 3, 4, 5, 8, 9, 10, 11, 12), 9, True, 12), (40, (0, 1, 2, 3, 4, 5, 8, 9, 10, 11), 10, True, 12), (53, (0, 1, 2, 3, 4, 5, 8, 11, 12), 9, True, 12), (66, (0, 1, 2, 3, 4, 5, 8, 9, 10, 11, 12), 11, True, 12)), ((27, (1, 2, 3, 4, 7, 8, 9, 10, 11), 9, False, 12), (40, (1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 10, False, 12), (53, (1, 2, 3, 6, 7, 8, 9, 10, 11), 9, False, 12), (66, (1, 2, 3, 4, 5, 6, 7, 8, 9), 9, False, 12)))
+character_certificate=for every row and every h in F_13^*, sum_(s in support) zeta_13^(h*s) is nonzero by exact reduction mod Phi_13
+zero_plane_boundary=all four k_a candidates are safe at both old heads; event0 contains s=0 and event1 omits it only because the a-factor changes, not because k_a is dangerous
+first_typing_obstruction=THM2698 retains no atomic left relation index u, so eta.u is undefined and the surviving character types only the moving residue -eta.v, not eta.(u-v)
+secondary_typing_obstructions=k_a is not selected among four ordinary roles; no canonical ancestry map identifies the THM2701 BABA debt SCC with the THM2698 B1 half-cycle
+SCOPE=no completed THM2334 target current, semantic endpoint, scalar-row exclusion, or LRC14 conclusion

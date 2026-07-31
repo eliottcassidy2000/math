@@ -1,0 +1,13 @@
+KUMMER / CARRY SECONDARY BOCKSTEIN EXACT AUDIT
+odometer_lift=7 odometer_class_mod13=7
+mu4_lift=1 mu4_class_mod2=1
+wrap_pairs_odometer=78 wrap_pairs_mu4=1
+one_step_pushout_middle_orders=169,4
+cross_prime_additive_homs=0
+c3_fixed_h2=[(0, 0, 0), (1, 1, 1)]
+q8_line_restrictions=[1, 1, 1]
+thm2681_boundary_rank=2
+toric_Cl2_size=4 twice_image_size=1 beta_rank=2
+divisible_Cl4_two_torsion_size=4 twice_image_size=4 beta_rank=0
+three_level_spectrum={'ordered_root_completion': (2, None), 'toric_quasietale_class_plane': (0, 2), 'unit_plane_on_Gm2': (0, 0), 'four_divisible_class_plane': (0, 0)}
+PASS

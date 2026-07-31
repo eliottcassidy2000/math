@@ -1,0 +1,13 @@
+LRC14 projected k=2 forced-high exact closure at z1=1768
+parent_source_sha256=b8de0dd88fbc3ce0a8322d9a424fddb9bcdcd22af733f2a59e21d2a1a29cceab
+parent_output_sha256=e9f942598572a4e8ba94ea904687b5da3c2140668b8502f3228c698b289c4bc7
+scope=unique z1768 HIGH-TAIL row;one later label at or beyond the projected wall;no finite label horizon
+forced_high_dependency=atlas HIGH-TAIL;projected wall=floor(13L/150)+1;four suffix slots
+ray_law=delta(r+mL)=A(r)/(r+mL);optimum=unrestricted top three plus best wall-eligible point
+CASE;z1=1768;E=1,8,10,12,13,14;h=811/2548;r=38;L=152880;high_floor=13250;delta1=1927/3032120;lower=811/231868;ray_signs=+76434/-76434/0:11;ray_sha256=83725ca3db416fdd7c1adf56b57a472128377ac328e2da4f8dee69b1f9a4f5ef;unrestricted_top4=((Fraction(149, 160524), 2340, 2340, 0), (Fraction(1877, 2233959), 2004, 2004, 0), (Fraction(1081, 1364454), 1836, 1836, 0), (Fraction(3365, 4958408), 1807, 1807, 0));first_omitted=(Fraction(439, 110895330), 646620, 35100);best_high=(Fraction(149, 909636), 13260, 13260);branch=GLOBAL_TOP3_PLUS_BEST_HIGH;constrained=((Fraction(149, 160524), 2340, 2340, 0), (Fraction(1877, 2233959), 2004, 2004, 0), (Fraction(1081, 1364454), 1836, 1836, 0), (Fraction(149, 909636), 13260, 13260, 0));upper=1701389/506364040;gap=-906233/6582732520;conclusion=SCALAR-EMPTY
+global_z1768_rows=1;empty=1;survivors=0
+atlas=next occupied height:1758
+consequence=projected k=2 first drift label z1<=1758
+profile_sha256=32b8ba9c891fb99495d3923a587ac76a270b64b61ae3c469ae7e2fc2469ed9e2
+semantic_sha256=8657e811fb1bbcae75e02c8e0990bec2a894f33a64836aab6fad3fbf6d8e01f0
+all_exact_controls=PASS

@@ -1,0 +1,8 @@
+LRC14 MIXED D/SLOPE-SEVEN CONFIGURATION-SWITCH SCOUT
+object=E_current(x) AND E_following(Dx) AND two THM2640 slope-seven charts at Dx
+two_chart_witness={'component': (Fraction(960117507257, 1930018885886), Fraction(324519717452867, 652346383429468)), 'x': Fraction(649039434905733, 1304692766858936), 'z': Fraction(46873542509301, 100360982066072), 'D_labels': (3, 1, 0), 'D_current': (1, 2, 5, 2, 0, 0), 'D_following': (1, 0, 2, 6, 1, 1), 'private_config': (0, 0, 0, 1, 6, 1), 'carry_root': (2, 6), 'successful_slope_switches': ((1, 9, 7, Fraction(46873688056157, 100360982066072)), (2, 3, 8, Fraction(46873833603013, 100360982066072)), (3, 10, 9, Fraction(46873979149869, 100360982066072)), (4, 4, 10, Fraction(46874124696725, 100360982066072)), (5, 11, 11, Fraction(46874270243581, 100360982066072)), (6, 5, 12, Fraction(46874415790437, 100360982066072)), (9, 0, 2, Fraction(46874852431005, 100360982066072)), (10, 7, 3, Fraction(46874997977861, 100360982066072)), (11, 1, 4, Fraction(46875143524717, 100360982066072)), (12, 8, 5, Fraction(46875289071573, 100360982066072))), 'components_scanned': 1, 'slope_candidates_tested': 12}
+selected_twelve_chart_first_midpoint_spotcheck=None
+strict_membership=all factors hold at rational interior points; hence a positive open component exists
+preserved=physical common point, D owner/shallow covariance, D digit covariance, rail/source labels, predecessor carry, future half-digit, and private root across one nonzero slope label
+lost=slope leg is a translated packet correspondence, not THM2365 target action or canonical owner/endpoint transition
+verdict=PASS: mixed support bypass exists; D-chain nilpotence is grammar-specific, not a universal two-simplex obstruction

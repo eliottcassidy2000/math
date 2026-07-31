@@ -1,0 +1,16 @@
+LRC14 odometer-twisted central-clock escape
+status=VERIFIED-EXACT SCOUT; envelope/intrinsic-clock/state level only
+p=13 q=7 R=4826809 central_tooth=[13/28,15/28)
+minimal_cycle_control=(4826811/9653618,4826807/9653618):stored_edges=((4,4),(3,3)):existing_interface=False
+lawful_central_cycle=(4879851/9653618,4773767/9653618) amplitude=26521/4826809
+alternating_lifts=(-371294, 371294) quotient_root_steps=(11, 2)
+cycle_stored_edges=((4, 3), (3, 4)) interface_glues=True
+cycle_carries=(7, 5) future_digits=(6, 6)
+fixed_lift=-14:zero_thresholds=(14/62748517,196/815730721,2562/10604499373):first_flip_length=14/815730721:second_consecutive_flip=EMPTY
+fixed_lift=14:zero_thresholds=(-14/62748517,-196/815730721,-2562/10604499373):first_flip_length=14/815730721:second_consecutive_flip=EMPTY
+alternating_horizon=3:initial_radius=1/31813498119:positive_interval_length=2/31813498119:stored_edges_nonconstant=True:interfaces_glue=True
+alternating_horizon=7:initial_radius=1/908625319776759:positive_interval_length=2/908625319776759:stored_edges_nonconstant=True:interfaces_glue=True
+alternating_horizon=12:initial_radius=1/337366220855872179387:positive_interval_length=2/337366220855872179387:stored_edges_nonconstant=True:interfaces_glue=True
+mechanism=minimal lifts are cosmetic; lifts +/-(13^5+1) align intrinsic owner/shallow clocks on a repelling two-cycle
+not_tested=labelled rail fibre; present factors; delayed words; primitive units; semantic endpoint; row exclusion; LRC14
+ALL CHECKS PASSED

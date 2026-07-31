@@ -1,0 +1,12 @@
+THM-2925 GENERAL-WIDTH TERMINAL-POLE CANCELLATION
+terminal_grid=M:1..12,m:2..7,b:0..M-1;one_nontop_controls=468;PASS
+terminal_identity=all_top:-m*C;each_one_nontop:+C;sum_over_m_positions:0
+divisibility_grid=M:3..8,m:2..5;supports=56;coefficients=2912;PASS
+numeric_specialization_controls=936;PASS
+terminal_digest_sha256=ea5dd5b769e0bc5a053dd8dd32b634e488265370d62b293a84b1c7ecd94d8c84
+scaled_coefficient_digest_sha256=e3e9401adde8ff27e214eb1ed4ffc092ecdef69de91102c8e716203cdf73d5ec
+proved_denominator=prod_(r=1)^(M-1)(n+r)^(m-1)*(n+M)^(m-2)
+proved_scaled_degree_bound=(m-1)*M-1
+fixed_20Q_10C_6F_minor_degree_bound=58*M-36
+scope=denominator and degree law only;no uniform minor nonvanishing or arbitrary-width SFC4
+all_exact_checks=PASS

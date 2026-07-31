@@ -1,0 +1,21 @@
+degree-6 C2 primitive-row order-raising hostile referee
+columns=E6,E5,E3,E2,E1:monic_Faber_normalization
+coefficient_ring=Z_(2)[a,c,Lambda,Omega]:formal_chosen_sheet
+primitive_row_scales=boundary:2^8,phi_over_4:2^10,psi_over_4:2^9
+mod2_boundary=[0,a^5,0,0,0]
+mod2_phi_over_4=[0,a^6,0,0,0]
+mod2_psi_over_4=[0,a^7*Lambda,0,0,0]
+odd_column_rank_over_F2(a,c,Lambda,Omega)=1
+odd_graded_survivors=E3,E1
+exact_square=T=(1+X)^2:a=1,c=Lambda=Omega=0
+exact_square_normalized_bank=E6+128E5+32E3+E1
+exact_square_observables=boundary:0,phi_over_4:0,psi_over_4:0
+exact_square_odd_kernel=[128,32,1]:primitive_E1_class=True
+exact_square_primitive_matrix=[[3,-16,128],[-5,24,-128],[0,0,0]]
+exact_square_nonzero_row_smith_factors=1,8:cokernel_has_Z/8_torsion
+augmentation_kernel=2^(j-1)*[128,32,1]*epsilon_nonzero_on_every_gr_j
+rowwise_rescaling_cannot_remove_an_exact_kernel=True
+verdict=CANONICAL_PRIMITIVE_ROW_TEST_FAILS_AT_DEGREE_6
+repair_requires=extra_saturated_Rees_source_lattice_or_additional_observable
+scope=FINITE_EXACT_REFUTATION_OF_STATED_TEST_NOT_ALL_INTEGRAL_ORDER_RAISING_NOT_JC2
+ALL CHECKS PASSED

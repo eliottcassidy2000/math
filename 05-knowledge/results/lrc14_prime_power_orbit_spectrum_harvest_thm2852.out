@@ -1,0 +1,8 @@
+simplex_normalized=(order=4826809,mass=3,det_mod13=3,rank_Q=4826809); physical_scalar_mod13=0
+ancestry_arrow_counts=(66099, 65612, 65579, 65612, 65579, 65098); remainders_mod13=(7, 1, 7, 1, 7, 7); rank_each_Q=371293
+ancestry_auxiliary=(raw_target=(66099, 65652),same_section=(66099, 65612),reverse=65619); remainders_mod13=(7, 2),(7, 1),8
+cyclic_C5=(inverse_pairs=2,all_orientations=4,det_residues_mod5=(2,))
+cyclic_C9=(inverse_pairs=4,all_orientations=16,det_residues_mod3=(1,))
+heisenberg_H3=(inverse_pairs=13,fixed_orientation_controls=100,det_residues_mod3=(1,),right_multiplication=adjacency_transpose,reverse_orientation=adjacency_transpose)
+hostiles=(C169_subgroup_mass=13,rank=13,rational_scaled_mass=1;C6_odd_mass=3,rank=2)
+ALL CHECKS PASS

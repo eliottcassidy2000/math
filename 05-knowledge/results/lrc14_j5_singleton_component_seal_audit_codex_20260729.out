@@ -1,0 +1,8 @@
+LRC14 J=5 SINGLETON COMPONENT SEAL AUDIT
+body=(1, 5, 6, 7, 8, 9, 11, 13);apex=19;triangle=(37, 121, 130)
+residual_mass=1099999/24444420;components=42
+longest_component=911/220220;left=939/1820;right=881/1694
+singleton_speed_bound=31460/911;geometric_horizon=34;closed_tooth_candidates=27
+finite_head_max=7111/459800;maximizer=25;exact_finite_margin=137171599/4644439800
+candidate_27_coverage=77101/8368360;candidate_27_margin=33241751/928887960
+all_exact_controls=PASS

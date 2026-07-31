@@ -1,0 +1,10 @@
+THM-2646 BRAID/MODULAR CENTRAL-PULLBACK AUDIT
+presentation: x^2=y^3=z, e(x,y,z)=(3,2,6), quotient=C2*C3
+Burau: braid_relation=PASS, rho(z)=t^3 I, rho(z)|t=-1=-I
+minimal hostile: beta_-=(s1s2)^-1 length=2 e=-2 closure=T(3,-1)=unknot
+minimal hostile: beta_+=(s1s2)^2  length=4 e=4  closure=T(3,2)=trefoil
+radius-three knot words checked=8; nonzero central pair=NONE
+central fibre (k,q,genus): (-2, -7, 6), (-1, -4, 3), (0, -1, 0), (1, 2, 1), (2, 5, 4), (3, 8, 7)
+affine V4 common fixed translations=[(0, 0)]; central translation=0
+Burau normalized hostiles: A(beta_-)=t^-2, A(beta_+)=t^2-t+1
+Burau numerator recurrence roots=(1,t^3,t^6): PASS for k=0..8

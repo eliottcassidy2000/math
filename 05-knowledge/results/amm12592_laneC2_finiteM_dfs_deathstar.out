@@ -1,0 +1,37 @@
+=== gamma=1/2 D0=0, parity ON ===
+[g1/2,par] M= 1: FEASIBLE   nodes=3
+[g1/2,par] M= 2: FEASIBLE   nodes=12
+[g1/2,par] M= 3: FEASIBLE   nodes=21
+[g1/2,par] M= 4: FEASIBLE   nodes=36
+[g1/2,par] M= 5: FEASIBLE   nodes=51
+[g1/2,par] M= 6: FEASIBLE   nodes=76
+[g1/2,par] M= 7: FEASIBLE   nodes=240
+[g1/2,par] M= 8: FEASIBLE   nodes=1444
+[g1/2,par] M= 9: FEASIBLE   nodes=1487
+[g1/2,par] M=10: FEASIBLE   nodes=1562
+[g1/2,par] M=11: NODE-CAP after 150000001 nodes
+=== gamma=1/2 D0=0, parity OFF (control) ===
+[g1/2,nopar] M= 1: FEASIBLE   nodes=3
+[g1/2,nopar] M= 2: FEASIBLE   nodes=8
+[g1/2,nopar] M= 3: FEASIBLE   nodes=13
+[g1/2,nopar] M= 4: FEASIBLE   nodes=20
+[g1/2,nopar] M= 5: FEASIBLE   nodes=27
+[g1/2,nopar] M= 6: FEASIBLE   nodes=36
+[g1/2,nopar] M= 7: FEASIBLE   nodes=45
+[g1/2,nopar] M= 8: FEASIBLE   nodes=56
+[g1/2,nopar] M= 9: FEASIBLE   nodes=67
+[g1/2,nopar] M=10: FEASIBLE   nodes=80
+=== gamma=1/3 D0=0, parity ON ===
+[g1/3,par] M= 1: FEASIBLE   nodes=3
+[g1/3,par] M= 2: FEASIBLE   nodes=8
+[g1/3,par] M= 3: FEASIBLE   nodes=17
+[g1/3,par] M= 4: FEASIBLE   nodes=26
+[g1/3,par] M= 5: FEASIBLE   nodes=35
+[g1/3,par] M= 6: FEASIBLE   nodes=50
+[g1/3,par] M= 7: FEASIBLE   nodes=154
+[g1/3,par] M= 8: FEASIBLE   nodes=239
+[g1/3,par] M= 9: FEASIBLE   nodes=988
+[g1/3,par] M=10: FEASIBLE   nodes=2596
+[g1/3,par] M=11: FEASIBLE   nodes=73953390
+[g1/3,par] M=12: FEASIBLE   nodes=73953981
+DONE

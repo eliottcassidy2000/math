@@ -1,0 +1,18 @@
+LRC14 THM-2707 FULL-FIBRE SEMANTIC COSPAN AUDIT
+status=FINITE-EXACT WHOLE-OPEN-CYLINDER NO-GO
+packet_addresses=3346 common_base_I=(Fraction(960117507257, 1930018885886), Fraction(324519717452867, 652346383429468))
+physical_q_radius=1/100360982066072
+source_counts=((0, 3081), (2, 265))
+source_residue_counts=(((0, 0), 280), ((0, 1), 281), ((0, 2), 280), ((0, 3), 281), ((0, 4), 280), ((0, 5), 281), ((0, 6), 280), ((0, 9), 276), ((0, 10), 280), ((0, 11), 281), ((0, 12), 281), ((2, 0), 24), ((2, 1), 24), ((2, 2), 24), ((2, 3), 24), ((2, 4), 24), ((2, 5), 24), ((2, 6), 24), ((2, 9), 25), ((2, 10), 24), ((2, 11), 24), ((2, 12), 24))
+semantic_counts=(((0, None), 3081), ((2, None), 265))
+nonexclusive_A0_zero_blockers=3081
+near_Q2_{1}_except_c2_safe=16 all_nonzero_lifts=True
+semantic_cut_addresses=0 maximum_open_cells=1
+open_cell_semantic_counts=(((0, None), 3081), ((2, None), 265))
+open_cell_semantic_lengths=(((0, None), Fraction(237, 3860037771772)), ((2, None), Fraction(265, 50180491033036)))
+E2_prescribed_endpoint_identity=c2*D^4(q_n)=13^7*z+91*n mod1
+fixed_c2_endpoint_phase=1598741/1599416 distance=675/1599416 whole_cylinder_danger_slack=12/169
+verdict=no packet cylinder contains a positive open literal THM-2305 exclusive-source-to-terminal-word cospan
+first_failed_predicate=all 265 exclusive E2 sources retain source blocker c2 at D^4; remaining 3081 addresses are not exclusive sources
+scope=THM-2707 fixed packet skeleton only; no row exclusion; LRC14 remains open
+ALL CHECKS PASSED

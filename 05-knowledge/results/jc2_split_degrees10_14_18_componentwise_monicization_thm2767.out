@@ -1,0 +1,26 @@
+THM-2767 split degrees 10/14/18 exact closure certificate
+status=FINITE_EXACT_SUPPORT_FOR_PROPOSED_COMPONENTWISE_CLOSURE
+q1_index_cover_counts=M10:3,M14:6,M18:10
+M10_prefix_gcd=q**3
+M10_prefix_reduced_Phi=5*omega**2
+M10_prefix_reduced_Psi=-5*(32*omega**3 + q)/32
+M14_prefix_gcd=q**4
+M14_prefix_reduced_Phi=-7*(80*omega**3 + q)/64
+M14_prefix_reduced_Psi=35*omega*(16*omega**3 + q)/64
+M18_prefix_gcd=omega*q**5
+M18_prefix_reduced_Phi=63*(32*omega**3 + q)/128
+M18_prefix_reduced_Psi=-63*omega*(32*omega**3 + 3*q)/128
+M18_only_prefix_exception=P_q:[d:q:s]=[0:1:0]
+M18_E18_z0_pure_q6=-21/1024
+M18_E18_z0_support=all_weight18;pure_q6_unique;lower_Ej_weights_less_than18
+prefix_display_formulas=hard_checked_exact
+top_faces=exact_odd_even_parts;pure_qk_in_Psi_iff_k_even
+P_infty_subslope_response_ratio_top=-1/2
+lower_even_response_rows=strictly_later_below_slope4
+odd_row_response_over_Phi=(j+1)/(2(j+3))
+P_infty_no_active_odd_or_lambda=coprime_top_faces_force_unique_flux
+vertical_second_flux=nonzero_triangular_polynomial_in_s
+vertical_even_responses=zero_exactly_at_q0
+vertical_first_flux_odd_d_degrees=1,2,...,(M/2)
+finite_degree_basis=direct_exact_Faber_recurrence_not_all_degree_inheritance
+ALL CHECKS PASSED

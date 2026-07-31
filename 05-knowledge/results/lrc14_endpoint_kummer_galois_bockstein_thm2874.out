@@ -1,0 +1,13 @@
+THM-2874 ENDPOINT KUMMER--GALOIS BOCKSTEIN TRANSGRESSION
+C169_lift_actions=2197; cocycle_compositions=28561_per_field
+L1^13=one_carry; q3_frequency_fibre=13_nonzero_chi3_states
+projective_t_r=(-xi^-65)*(c_r-mean_c); -xi^-65=(xi^13)^86_in_Q(zeta91)
+seam=(q3:r0,q11:r8,q7:r4); q11_to_q7_ratio=omega
+cotangent_shadow=449*(omega-1)=7*(omega-1)_mod_(13,(omega-1)^2)
+field=352341050142921841; clutch=245443015620960570; seam_ratio=266762412650247847; seam_derivative=332707281510778755; flat_edges=(281297096586550883, 266762412650247847, 52898510157149071); ancestry_via=39714007455759520; cech_defect=163737527228894923; carry_derivative_chi3=185854826122021857; normalization=228627987973355456
+field=956354278959359281; clutch=5388416813675170; seam_ratio=60270986858140389; seam_derivative=283753288442974344; flat_edges=(68696610051776926, 60270986858140389, 296883150266331485); ancestry_via=257673921998609436; cech_defect=621800821204607582; carry_derivative_chi3=760171996868891537; normalization=488145051182125057
+flat_holonomy=1; ancestry_holonomy=omega^3; global_edge_gauge=0
+target_mask=delta3; convolution_rank=13; diagonal_rank=1; convolution_one_eigenspace_dim=1
+deep_bit_flip=all_nine_safe; six_q_origin_restrictions_empty=1
+scope=external_frequency_fibre_over_q3_only; q11_cancels_q7_E3_zero; no_physical_C169_extension_or_LRC14
+ALL EXACT CHECKS PASSED

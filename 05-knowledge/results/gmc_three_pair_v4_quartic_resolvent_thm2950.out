@@ -1,0 +1,11 @@
+THM-2950 THREE-CONJUGATE-PAIR V4/RESOLVENT AUDIT
+half_systems=8;mod_global_conjugation=4
+V4_translations=4;fixed_point_free_nonidentity=3
+affine_group_order=24;affine_group=S4
+pairing_action_image=6;kernel=4
+quartic_resolvent_discriminant_controls=4
+same_norm_hostile=1;traces_real=(2, 2, 2, 2);traces_one_imaginary=(0, 0, 0, 0)
+generic_norm=130;generic_half_traces=(-6, 18, 14, 22)
+consequence=full_norm_forgets_the_V4_half_system_phase
+scope=no_canonical_C3_order_or_SFC4_or_JC2_conclusion
+all_exact_checks=PASS

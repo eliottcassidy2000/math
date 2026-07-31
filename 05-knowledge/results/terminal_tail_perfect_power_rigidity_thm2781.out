@@ -1,0 +1,12 @@
+THM-2781 TERMINAL-TAIL PERFECT-POWER CERTIFICATE
+parameter_rows=163
+positive_power_rows=326
+nonpower_rows=83
+exact_gates=2103
+recurrence_terminal_multiplier=PASS
+bth_power_equivalence_controls=PASS
+vanishing_top_coefficient_control=PASS
+cubic_dminus2_hostile=PASS
+quartic_dminus2_hostile=PASS
+unreduced_exponent_hostile=PASS
+TERMINAL_TAIL_EXACT_CONTROLS=PASS

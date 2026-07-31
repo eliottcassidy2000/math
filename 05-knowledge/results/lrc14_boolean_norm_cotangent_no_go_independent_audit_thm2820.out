@@ -1,0 +1,6 @@
+THM-2820 independent Boolean/norm hostile audit
+finite_ring_idempotents=66 tangent_candidates=922 coordinate_module_rows=19624: arbitrary-characteristic involution gate PASS
+cyclic_basis_primes=12 automorphisms=185 augmentation_spanning_rows=4345 hom_rows=4530: norm/top and cotangent-character split PASS
+F13_tensor_pairs=144 fixed_axis_vectors=1 fixed_mixed_scalars=1: independent-character no-go PASS
+p=2 boundary PASS: odd-p Hom no-go is not overclaimed
+PASS scope=algebraic equivariance only; THM-2806 D3 is not identified with a group norm; no LRC row is excluded

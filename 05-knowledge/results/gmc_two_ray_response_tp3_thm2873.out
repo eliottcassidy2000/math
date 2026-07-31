@@ -1,0 +1,22 @@
+THM-2873 exact two-ray factorial-response TP3 certificate
+gap=1
+shifted_term_counts=69,83,98,114,131,149,168
+shifted_min_coefficients=12,72,180,240,180,72,12
+certificate_sha256=c97819308c4ea3817b15fdc63197ad58b4fe9e5a141cbe0f5bb5c989e072ce60
+gap=2
+shifted_term_counts=69,98,131,168,209,254,303
+shifted_min_coefficients=12,72,180,240,180,72,12
+certificate_sha256=a234806f39364c4788826d6001c2cd82f8cbd17e0b033d9ca1c9cbdf2c9ad926
+normalization_cells=168
+singleton_shifted_terms=27;minimum=1
+singleton_n0_polynomial_values_j0_to_j3=12,217,748,1143
+singleton_n0_negative_for_j_ge_4=true
+hostile_d4_n0_curvature=-4527600
+raw_output_measure_minor=-2
+canonical_holonomy_terms=30
+canonical_holonomy_lower=-1965120367409971587404977893331001634459/3125000000000000000000000000000000
+canonical_holonomy_upper=-239202401274182466677656578205832473701/390625000000000000000000000000000
+canonical_cubic_null_rectangle_endpoint_exit=true
+universal_newton_scout=924_label_multisets;17556_positive_coefficients;minimum=720
+scope=two-ray gaps 1,2 proved; universal six-label TP3 remains open
+all_exact_checks=PASS

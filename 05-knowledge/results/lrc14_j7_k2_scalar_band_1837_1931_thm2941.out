@@ -1,0 +1,10 @@
+LRC14 global projected k=2 scalar band 1837..1931
+uniform_ray_status_source_sha256=34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
+universe=six_body_roots:3003;body_labels:1..14;ordered distinct later nonaligned labels;scalar necessary condition
+first_band=1837..1931;first_candidate_rows=285278;exact_horizon=7000;omitted_slot_bound=6r/[49(H+1)]
+projected_wall=max(15,floor(13L/150)+1);forced-high omitted slot starts max(H+1,projected_wall)
+global_survivors=0;surviving_firsts=();surviving_bodies=()
+interval_1837_1931_global_survivors=()
+global_profile_sha256=6e882a048678f263ae17f9fd665fd4fbcb76532775d2fdd13e85b66a285a0df3
+semantic_sha256=46b2762804e01a27c0625ee983bdfa2b87561799e9ccb3e520ff94fff7099619
+all_exact_controls=PASS

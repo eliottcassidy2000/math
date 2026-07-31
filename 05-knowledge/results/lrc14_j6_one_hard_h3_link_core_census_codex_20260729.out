@@ -1,0 +1,22 @@
+LRC14 j6 one-hard actual-H3 link and bad-triangle closure
+h3_counts=(61, 24, 461, 1961, 2, 23, 920)
+h3_size_quantiles=((0, 2), (25, 5), (50, 7), (75, 9), (90, 12), (95, 15), (99, 23), (100, 23))
+link_counts=(1961, 1908, 53, 1409, 484, 14, 1, 86, 60333, 1260, 10104)
+link_routes=(('cardinality', 1409), ('top3', 484), ('q3+B2', 14), ('finite-open', 1), ('delta-failure', 53))
+pairwise_closed_roots=51
+bad_graph_counts=(10, 54, 2)
+bad_triangles=(((1,3,6,9,11,12,13),(15,24,33)),((1,3,6,9,11,12,13),(24,30,33)))
+triangle_child_1=(57247/630630,32,661/19110,1231/28028,27,191,9469/145530,(27,39),10,4399/112420308)
+triangle_child_2=(33323/315315,34,2069/105105,31235/756756,27,140,293767/3783780,(15,27),2,8023/33108075)
+closed_roots=61
+overlap_THM2902=((1,2,3,4,5,10,12),(1,2,3,4,5,12,13))
+proved_union=76
+official_residual=3356
+root61_digest=f58c4143f329d215ff9bb7ec594d172e831fbccbab713a2398dc6cb53c60b8b7
+pairwise_closed51_digest=e2a7f23111c3dc8b41a6518fa83571c3a334b1f601e8216ee5eb0a701539c92a
+bad_triangle_digest=635acf7fbc9a23257c9a746fc5f5ed1eb4db4538baff7ffe42632cfbd678ece3
+link_ledger_digest=b27ca638baf6194be3ee436916233389fe5b7ace7f49020bacc1bd1221c92ebb
+proof_digest=08dc4a539544a417ff884ef4631b10d6eb14fd63d7b62b06e76d92e3d4d9b162
+mode=LOCKED ordinary_and_optimized_replays_agree
+scope=61 non-direct one-hard roots; exact actual-H3 links, unresolved-pair triangles, and literal triangle children; not LRC14
+all_exact_controls=PASS

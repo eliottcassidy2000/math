@@ -13,8 +13,8 @@ bound for ALL of V.
 THEOREM (cascade): sorting V = {h₁ > h₂ > … } and folding down k steps,
     M(V) ≥ M(body) − Σᵢ maxᵢ₊₁/(2(hᵢ + maxᵢ₊₁)),
 so if every descent ratio hᵢ/maxᵢ₊₁ ≥ R then M(V) ≥ 1/(14−k) − k/(2(R+1))
-(body floor = settled LRC(14−k)).  Uniform R = 134 gives M ≥ 3/41 for all
-k = 1..13; k = 1 (= T-B, constant 533/4) is the binding case.
+(body floor = settled LRC(14−k)).  Uniform R = 133 gives M ≥ 3/41 for all
+legal k = 1..12; k = 1 (= T-B, exact ratio 529/4) is the binding case.
 THE APEX-7 WALL IS BROKEN in the separated regime: no Bonferroni charge,
 no 6/41-per-far, any k.
 
@@ -115,7 +115,7 @@ def main():
         V = list(body)
         cur = max(body)
         for i in range(k):
-            nxt = cur * 134 + 1                  # ratio >= 134 each step
+            nxt = cur * 133 + 1                  # ratio >= 133 each step
             V.append(nxt)
             cur = nxt
         cert, tc = cascade_certificate(sorted(V))
@@ -125,17 +125,17 @@ def main():
     print("  THE APEX-7 WALL IS BROKEN in the separated regime (any k).")
 
     print("\n== (4) per-k sharp cascade constants R_k (need 1/(14-k) - k/(2(R+1)) >= 3/41) ==")
-    for k in range(1, 14):
-        lhs = F(1, 14 - k) - GAP_HI if k < 13 else F(1, 2) - GAP_HI
+    for k in range(1, 13):
         body_floor = F(1, 14 - k)
         need = body_floor - GAP_HI
         if need <= 0:
             print(f"  k={k:>2}: body floor {body_floor} <= 3/41 — cascade alone insufficient")
             continue
-        Rk = -(-int(F(k, 2) / need)) - 1  # ceil(k/(2 need)) - 1
+        critical = F(k, 2) / need - 1
         import math
-        Rk = math.ceil(k / (2 * need)) - 1
-        print(f"  k={k:>2}: body floor {body_floor}, R_k = {Rk + 1} (ratio >= {Rk + 1} suffices)")
+        Rk = math.ceil(critical)
+        print(f"  k={k:>2}: body floor {body_floor}, critical ratio = {critical}, "
+              f"integer R_k = {Rk} (ratio >= {Rk} suffices)")
 
     print("\n== (5) T-A corner values, re-verified exact ==")
     for W, want in [

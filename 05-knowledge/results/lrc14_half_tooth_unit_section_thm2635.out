@@ -1,0 +1,15 @@
+epsilon=0 selected_positive_common=(1, 3, 4, 5, 6, 7, 8, 9, 10) hist=((10, 21), (11, 63))
+epsilon=0 selected_unit_common=(9,) hist=((5, 1), (9, 18), (10, 15), (11, 50))
+epsilon=0 either_rail_unit_common=(3, 5, 6, 7, 9) hist=((9, 5), (10, 6), (11, 73))
+epsilon=1 selected_positive_common=(1, 3, 4, 5, 6, 7, 8, 9, 10) hist=((9, 2), (10, 82))
+epsilon=1 selected_unit_common=(3, 8, 10) hist=((5, 1), (8, 2), (9, 21), (10, 60))
+epsilon=1 either_rail_unit_common=(1, 3, 4, 6, 8, 10) hist=((8, 2), (9, 3), (10, 79))
+global_half_content=26
+half_positive_entries=1201816
+half_partition_digit_checks=2299752
+half_graph_digest=6827925d5fd66cc96d92db80e61b7b3f0ed275cc9a45708015d697f71dba9eb9
+recombined_selected_unit_common=(3, 4, 5, 8, 9, 10) hist=((7, 1), (10, 22), (11, 61))
+chronological_closures=((1, 3, 0, 4, 9), (1, 7, 1, 8, 5))
+unit_chronological_closures=((1, 3, 0, 4, 9),)
+verdict=PASS: one literal half-tooth edge carries a uniform opposite-graph unit; only h=3 also closes to the adjacent predecessor digit, in reversed orientation
+SCOPE: imposed coefficient section on the THM-2616 carrier; not a successor checksum, semantic two-root gluing, THM-2625 current transport, or LRC(14)

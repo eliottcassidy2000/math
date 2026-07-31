@@ -1,0 +1,12 @@
+THM2642 cyclic difference-relation exact referee
+prime=13
+p7_nonempty_two_set_pairs=16129 cauchy_davenport=PASS convolution=PASS
+sharp_two_edge_size_profiles=169
+near_threshold_sizes=(6,7) excess=11 support=12 missing=(12,)
+threshold_sizes=(6,8) excess=12 support=13
+eleven_sheet_pairs=6084 carry_triples=79092
+representation_census={9:55770,10:22308,11:1014}
+section_census={117:55770,130:22308,143:1014}
+eleven_sheet_min_per_base=9 min_sections=117
+thin_cycle_supported_clutches=1 sections_on_supported_clutch=13
+PASS

@@ -1,0 +1,21 @@
+QUARTIC SEXTIC-RESOLVENT TRIANGLE AUDIT - exact
+symbolic roots: S((a+c)^2)=0 Omega^2=F(u) Delta=Vandermonde^2
+symbolic coefficient ring: Norm(Z-F) terms=14 disc(S)=Delta C(u)^2*u*F(u)-16*q^2*Delta mod S=(0,0,0)
+orientation collision invariant: Theta=2^24*q^4*J_or^2*Delta terms=21
+orientation sextic discriminant: Disc_Y(O)=2^18*q^4*Delta*Theta^2=2^66*q^12*J_or^4*Delta^3
+generic control roots=(-6,-2,3,5): (p,q,r)=(-37,24,180) Delta=768398400
+generic edge orbit: values=[-8, -3, -1, 1, 3, 8] multiplicity=4 stabilizer=V4 orders=[1,2,2,2]
+generic matching orbit: values=[1, 9, 64] multiplicity=8 stabilizer=D8 orders=[1,2,2,2,2,2,4,4]
+generic orientation orbit: values=[-5280, -2016, -96, 96, 2016, 5280] multiplicity=4 stabilizer=C4 orders=[1,2,4,4]
+orbit polynomials: E(Y)=S(Y^2); O(Y)=Norm(Y^2-F)
+generic edge coefficients: [-576, 0, 649, 0, -74, 0, 1]
+generic orientation coefficients: [-1044218460399206400, 0, 113599337988096, 0, -31951872, 0, 1]
+generic radicand product: 16*q^2*Delta=7081559654400 J_or=41150840832 Theta=7242837504244111370149524738039459977625600
+D8 character triangle: chi_edge*chi_orientation=chi_discriminant on 8/8
+theorem root control=(-3,0,1,2): (p,q,r)=(-7,6,0) edge=[-3,-2,-1,1,2,3] Omega=[-120,-96,-24,24,96,120] J_or=34992
+q=0 boundary roots=(-5,-2,2,5): Delta=311169600 edge_distinct=5 orientation_distinct=3
+Delta=0 boundary roots=(-4,-1,-1,6): q=-50 edge_distinct=4 orientation_distinct=3
+orientation-only collision roots=(-30,2,10,18): q=6720 Delta=3958241859993600 J_or=0 edge_distinct=6 orientation_distinct=4
+coefficient wall (p,q,r)=(1,4,-3): Delta=-22000 J_or=0 E=(Y^2-1)(Y^4+3Y^2+16) O=(Y^2-1280)^2(Y^2+14080) gcd=Y^2-1280
+specialization scope: edge separable iff q*Delta!=0; orientation separable iff q*Delta*J_or!=0 (characteristic zero)
+PASS

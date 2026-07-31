@@ -1,0 +1,14 @@
+split degree-6 monicization exact bank referee
+status=THM-2759_PROVED_AND_INDEPENDENTLY_HOSTILE_AUDITED
+columns=E6,E5,E3,E2,E1:full_chosen_sheet_bank
+boundary_h0=P_d:[1:0:0],P_q:[0:1:0]
+response_at_P_q=-1/4:forced_response_pole
+Q_z0_E6=(8C^3+12CE+3q^2)/8
+Q_z0_lower_pole_ceiling_at_P_q=strictly_less_than_q^2
+P_d_low_slope_response_residues_g1_g3_g5=21/8,5/2,9/4
+P_d_lambda_gap7_response_is_top_only_nonzero=True
+vertical_Psi=(3s^2-4a2s-2W)/2
+vertical_Phi_identically_zero_iff=a5=a3=a1=lambda=0
+vertical_exception_response=0
+scope=FINITE_ALGEBRA_REFEREE_FOR_PROVED_THM2759_DVR_GLOBAL_REGULARITY_PROOF
+ALL CHECKS PASSED

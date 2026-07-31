@@ -1,0 +1,16 @@
+GMC POSITIVE GAUSS-LAGUERRE FINITE CARRIER
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED; addendum_to=THM-2815
+N_range=1..12
+positive_root_counts=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+weight_residue_degrees=(0, 1, 2, 2, 4, 5, 6, 7, 8, 9, 10, 11)
+exact_moment_trace_checks=156
+first_failure_checks=12
+successive_coprime_checks=12
+christoffel_darboux_checks=12
+alternate_weight_checks=12
+N2_node_polynomial=x**2 - 4*x + 2
+N2_weight_residue=1 - x/4
+N2_scalar_null_hostile=x-1; atomic_values_nonzero=1
+N12_degree24_quadrature_moment=620448172290706636800000
+scope=unique positive N-atom real splitting through degree 2N-1; cutoff-dependent algebraic nodes; no tower quotient or nullity separation
+ALL EXACT CHECKS PASSED

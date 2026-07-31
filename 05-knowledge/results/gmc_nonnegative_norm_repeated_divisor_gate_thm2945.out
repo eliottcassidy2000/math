@@ -1,0 +1,15 @@
+THM-2945 NONNEGATIVE NORM AND REPEATED-DIVISOR GATE
+thm2843_dependency_sha256=4832a9e4cda1608473e3a4bcfcb880a7fa3f1c6db47b7e939b4b5183cb9549aa
+thm2925_dependency_sha256=83d70a95f0943992d0e4b7027eede431d4dc968b66655e37b43fd0acfc692e47
+abstract_gate=nonzero_H>=0_on_[0,infinity);zeros_(0,infinity)=positive_roots_gcd(H,Hprime)
+endpoint_gate=H(0)_separate;simple_endpoint_H=t_is_missed_by_derivative_gcd
+sign_hostile=H=t-1_has_simple_positive_root_and_gcd_1;nonnegativity_is_load_bearing
+clearing_hostile=N=1,D=(t+1)^2;gcd(DN,(DN)prime)=t+1_has_only_negative_root
+strict_clearing_required=D=(t-3)^2_adds_false_positive_ray_divisor
+binary_CI_model=c6=(u2+1)(u2+4)(u2+9),f8=v6*(u2+(t-2)v2)
+model_resultant=(t-3)^2*(t-6)^2*(t-11)^2;model_gcd=(t-3)(t-6)(t-11)
+conjugate_local_norm=a^2+b^2;nonreduced_pair_control=PASS
+factor_structured_controls=1296;simple_endpoint_controls=324;negative_repeated_controls=720;interior_zero_controls=1152
+factor_structured_digest_sha256=13e9e99f56cd246abf748d9c3ce6f0c999be20278937f6be3c828d90f30e789c
+factorial_scope=conditional_after_positive_clearing_and_positive_extraneous_multiplier;no_universal_terminal_pole_divisor_formula
+all_exact_checks=PASS

@@ -1,0 +1,21 @@
+THM-741 RANK-IMPOSSIBLE PAIR-RESIDUAL CLOSURE
+status=FINITE-EXACT+GLOBAL-TAIL-SEALED
+root_universe=38 scalar-A2-failing non-flood rank-impossible roots
+body_digest_sha256=81e0807f389f0b10ac0ff4bfd9e3c84f86b003edc9b5469d1c581ca6e25b0c4d
+minimum_q1_margin_below_4m7=5633/490490;body=1,2,3,5,7,8,10,11,13
+maximum_pair_entry_threshold=57081024/189619;body=1,2,6,8,9,10,12,13,14;horizon=2500
+exact_pair_head_checks=313;pair_tail_cap=q1+u(2501)
+minimum_global_pair_margin_below_5m7=56731/40612572;body=1,2,3,5,7,8,10,11,13
+maximum_root_cutoff=4628;body=1,2,3,5,7,8,10,11,13
+minimum_multi_tail_margin=58481/313325992980;body=1,2,3,5,7,8,10,11,13;W=4628
+one_tail_scalar_triples=82346;exact_pair_carriers=328;exact_triple_carriers=686;failures=0
+minimum_one_tail_survivor=110133/8472100;family=1,4,5,6,7,8,9,11,13,19,20,48;h=30721/1452360;r=16
+all_head_pair_carriers=381;triple_carriers=827;literal_quadruple_obligations=343;positive=all;tight=0
+minimum_head_survivor=67811/8621550;family=1,3,4,5,7,8,10,11,13,17,18,23,25;r=8
+pair_ledger_sha256=2929656c496ab00fe415790fcedda8e5c627186891eb32721cd0c48a155d9ac2
+one_tail_ledger_sha256=298f679473c4faadbd4c7171c858e82c8ed90bbfa4b9023a77ab95abfde52ffc
+all_head_ledger_sha256=42cd555dd945fe0d1e4487fb5820c23fb2d3a077ec1c675675a946a285db1232
+consequence_ledger_sha256=f17bb1d243cf7657948a4da530f130618df34881ee5a318d3ec90f4481e04529
+whole_root_composition=38 pure tails + THM-738 small-speed chamber
+scope=38 new whole THM-741 roots; global THM-741 and LRC14 remain open
+all_exact_controls=PASS

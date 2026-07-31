@@ -1,0 +1,21 @@
+EXACT-PREFIX EVEN FABER FLUX GCD -- THM-2760
+family=m=4k-2,alpha=k-1/2
+specialization=d=-omega^2,q=r*omega^3,s=r*omega^4
+normalized_quartic=(1-x^2)^2+r*x^3*(1-x)
+checked_k=1..18
+independent_paths=Faber_recurrence,binomial_coefficients
+differential_relation=(k-3theta)Q=-(k+theta)P
+carrier=S=P-3Q;P=(k-3theta)S/(4k);Q=-(k+theta)S/(4k)
+carrier_formula=kk!(k-1-l)!/[32^l*l!*(k-3l)!*(k+l)!]
+mod3_schur_factors=two_Jacobi_transforms
+factor_and_carrier_roots=simple_negative_exact_Sturm_count
+localized_gcd(Phi_m/q,Psi_m)=r^(k-1)
+nonlocalized_extra_omega=iff_k_mod_3_equals_2
+omega_zero_projective_chart=q_nonzero
+omega_zero_common_flux=iff_k_mod_3_equals_2,iff_m_mod_12_equals_6
+omega_zero_response=nonzero_on_projective_common_flux_lane
+P6=-33*(3*r + 56)/256
+Q6=33*(3*r**2 + 896*r + 7168)/32768
+S6_normalized=(9*r**2 + 3072*r + 28672)/28672
+resultant6=-43016589/33554432
+PASS

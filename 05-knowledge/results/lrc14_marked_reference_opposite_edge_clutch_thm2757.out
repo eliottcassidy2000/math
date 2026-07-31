@@ -1,0 +1,22 @@
+THM2757 exact marked-reference opposite-edge clutch transgression
+field=F13 formal_alpha=12 formal_beta=2 omega=3
+DDt=4I3
+DtD=4I4-J4
+matching_total_constant=1
+integral_factorization=2T-(alpha+beta)S-(alpha-beta)D=0
+flat_vertex_tables=169
+charged_vertex_tables=28392
+charge_iff_three_arms_not_equal=1
+marked_swap_D_profile=delta*(1,-1,-1)
+marked_swap_Q3_target=delta*(11,1,1)
+marked_swap_chi1=12*delta
+marked_swap_chi2=12*delta
+mixed_rectangles=delta*(2,2,0)
+target_difference=5*mixed_rectangle
+s01_matching_action=(0, 2, 1)
+d01_23_matching_action=(0, 1, 2)
+equal_corolla_edge_table_collision=1
+formal_12_2_specialization_only=1
+physical_wing_diagonal_from_THM2751=0
+physical_LRC_four_point_carrier=0
+lrc14_closed=0

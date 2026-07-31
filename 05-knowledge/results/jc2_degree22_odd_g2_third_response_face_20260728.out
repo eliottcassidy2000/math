@@ -1,0 +1,12 @@
+DEGREE22 ODD G2 THIRD-RESPONSE FACE
+cover_tangent=Re((q+i*s)^6)=I2(6)=G2_reflection_arrangement
+central_C2_pairs_six_lines_to_three_coarse_branches
+Phi21_at_infinity=88179/131072
+R21_at_infinity=323323/1048576
+R21_over_Phi21=11/24
+top_orders=Phi22:6,Psi22:6,R22:6
+solved_R25_face=1771/1024*q*s*(q^2-3s^2)*(3q^2-s^2)
+gcd(solved_R25_face,Psi22_face)=1
+each_coarse_branch_poles=physical_q:17,affine_response:144
+scope=FINITE_EXACT_SIDECAR_NOT_THIRD_FLUX_CLOSURE_NOT_JC2
+PASS

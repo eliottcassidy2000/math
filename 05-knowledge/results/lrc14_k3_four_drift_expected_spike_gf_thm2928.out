@@ -1,0 +1,49 @@
+LRC14 k=3/four-drift expected-spike x c3 exact GF scout
+body_count=3003
+body_divisor_rows=251536
+support_rows=26970
+support_divisors=217
+literal_distribution_D_controls=6
+literal_distribution_shapes=1215
+one_spike_residue_controls=7
+all_c_features=133182
+c3_denominator_features=6973
+all_c_feature_semantic_sha256=027510f7b7e0aada9e43860384f89ad0d745ed4aee9f60aae47c5d631a9ef71f
+c3_feature_semantic_sha256=dcc4288895b95600a923ce9ef2149257aace6f2b9ce4dc234e7831af4f0a8e8f
+mean_equality_row_c_pairs=0
+mean_equality_by_c=Counter()
+mean_equality_support_occurrences_killed=0
+mean_equality_support_by_c=Counter()
+minimum_mean_equality=None
+c3_positive_allowance_endpoint_occurrences=7530354
+c3_positive_allowance_endpoint_feature_types=237
+c3_positive_allowance_endpoint_shapes=1974798
+minimum_c3_positive_allowance_endpoint=(840, (1, 3, 4, 5, 6, 10), 840, 366, (0, 0, 0), 5, 24)
+final_c3_occurrences_by_d_mod_7=Counter({0: 318139472, 5: 135661055, 6: 133557367, 1: 123234054, 2: 120142909, 3: 119577959, 4: 115004656})
+final_c3_shapes_by_d_mod_7=Counter({0: 35225950, 5: 11680906, 6: 11670538, 2: 11258566, 3: 11234187, 1: 11097946, 4: 11095095})
+minimum_final_survivor=(840, (1, 3, 4, 5, 6, 10), (0, 0, 0), 3, 528, 5)
+minimum_final_c3_survivor=(840, (1, 3, 4, 5, 6, 10), 840, 366, (0, 0, 0), 5, 528, 24, 24)
+stage=raw,occurrences=21357714101,shapes=694921995,rows=26970,bodies=3003,divisors=217,semantic_sha256=964cebef8f435f0964807831f5a7cfdb262e11c886e06d87713573c188fd6fc7
+stage=raw,c_occurrences=Counter({1: 8827603609, 2: 8065782797, 3: 3723831973, 4: 740495722})
+stage=raw,c_shapes=Counter({1: 311028538, 2: 260046909, 3: 105691001, 4: 18155547})
+stage=raw,pattern_occurrences=Counter({(0, 0, 0): 20129326373, (0, 0, 1): 403514538, (1, 0, 0): 396086067, (0, 1, 0): 393523830, (0, 1, 1): 6109040, (0, 0, 2): 5889070, (1, 0, 1): 5889070, (1, 1, 0): 5802957, (0, 2, 0): 5607629, (2, 0, 0): 5577587, (0, 1, 2): 45122, (0, 2, 1): 45122, (1, 1, 1): 45122, (1, 2, 0): 38572, (2, 1, 0): 38572, (0, 0, 3): 37035, (1, 0, 2): 37035, (2, 0, 1): 37035, (0, 3, 0): 33064, (3, 0, 0): 31261})
+stage=raw,pattern_shapes=Counter({(0, 0, 0): 672632936, (0, 0, 1): 7316240, (1, 0, 0): 7316240, (0, 1, 0): 7313920, (0, 0, 2): 56760, (0, 1, 1): 56760, (1, 0, 1): 56760, (1, 1, 0): 56760, (2, 0, 0): 56760, (0, 2, 0): 56478, (0, 0, 3): 240, (0, 1, 2): 240, (0, 2, 1): 240, (1, 0, 2): 240, (1, 1, 1): 240, (1, 2, 0): 240, (2, 0, 1): 240, (2, 1, 0): 240, (3, 0, 0): 240, (0, 3, 0): 221})
+stage=support_status,occurrences=13280722299,shapes=694254050,rows=18599,bodies=3003,divisors=186,semantic_sha256=7576fc60722ef889ef541a3c0ede7011593fda0c71899960fb67a8a4156a24ac
+stage=support_status,c_occurrences=Counter({1: 5772724626, 2: 4996119349, 3: 2128489379, 4: 383388945})
+stage=support_status,c_shapes=Counter({1: 310775715, 2: 259806865, 3: 105553288, 4: 18118182})
+stage=support_status,pattern_occurrences=Counter({(0, 0, 0): 12852450428, (0, 0, 1): 145162215, (0, 1, 0): 141138960, (1, 0, 0): 136399958, (1, 1, 0): 1311147, (0, 2, 0): 1309141, (0, 1, 1): 1046378, (0, 0, 2): 944323, (1, 0, 1): 944323, (2, 0, 0): 10376, (0, 3, 0): 3778, (0, 2, 1): 631, (1, 1, 1): 631, (0, 0, 3): 2, (0, 1, 2): 2, (1, 0, 2): 2, (1, 2, 0): 2, (3, 0, 0): 2})
+stage=support_status,pattern_shapes=Counter({(0, 0, 0): 672351643, (0, 0, 1): 7292613, (1, 0, 0): 7188058, (0, 1, 0): 7162274, (0, 1, 1): 52498, (1, 1, 0): 51811, (0, 0, 2): 50649, (1, 0, 1): 50649, (0, 2, 0): 50633, (2, 0, 0): 2947, (0, 3, 0): 133, (0, 2, 1): 66, (1, 1, 1): 66, (0, 0, 3): 2, (0, 1, 2): 2, (1, 0, 2): 2, (1, 2, 0): 2, (3, 0, 0): 2})
+stage=expected_spike_AND_support,occurrences=2934202044,shapes=400005870,rows=2120,bodies=2037,divisors=115,semantic_sha256=2dde966a4dfe379c2192689160a7ad117d93f130b4b3e1cfc74fa780a59b720a
+stage=expected_spike_AND_support,c_occurrences=Counter({3: 1450618034, 2: 1351841956, 1: 71619386, 4: 60122668})
+stage=expected_spike_AND_support,c_shapes=Counter({2: 255882564, 3: 105027484, 1: 30050140, 4: 9045682})
+stage=expected_spike_AND_support,pattern_occurrences=Counter({(0, 0, 0): 2844993871, (0, 0, 1): 30183290, (0, 1, 0): 29734783, (1, 0, 0): 28706118, (1, 1, 0): 123388, (0, 2, 0): 123174, (0, 1, 1): 120383, (0, 0, 2): 108139, (1, 0, 1): 108139, (2, 0, 0): 679, (0, 3, 0): 30, (0, 2, 1): 25, (1, 1, 1): 25})
+stage=expected_spike_AND_support,pattern_shapes=Counter({(0, 0, 0): 389108822, (0, 0, 1): 3649403, (0, 1, 0): 3597080, (1, 0, 0): 3558618, (0, 1, 1): 19517, (0, 0, 2): 18047, (1, 0, 1): 18047, (1, 1, 0): 17988, (0, 2, 0): 17774, (2, 0, 0): 537, (0, 3, 0): 13, (0, 2, 1): 12, (1, 1, 1): 12})
+stage=c3_exact_one_spike_AND_expected_AND_support,occurrences=2548901482,shapes=398241574,rows=1904,bodies=1823,divisors=107,semantic_sha256=06b3e5a7a05d5c9a2f1633d74061f1605c2aab856b315026ad697245bac84964
+stage=c3_exact_one_spike_AND_expected_AND_support,c_occurrences=Counter({2: 1351841956, 3: 1065317472, 1: 71619386, 4: 60122668})
+stage=c3_exact_one_spike_AND_expected_AND_support,c_shapes=Counter({2: 255882564, 3: 103263188, 1: 30050140, 4: 9045682})
+stage=c3_exact_one_spike_AND_expected_AND_support,pattern_occurrences=Counter({(0, 0, 0): 2488749465, (0, 0, 1): 20274383, (0, 1, 0): 19984145, (1, 0, 0): 19309507, (1, 1, 0): 123388, (0, 2, 0): 123174, (0, 1, 1): 120383, (0, 0, 2): 108139, (1, 0, 1): 108139, (2, 0, 0): 679, (0, 3, 0): 30, (0, 2, 1): 25, (1, 1, 1): 25})
+stage=c3_exact_one_spike_AND_expected_AND_support,pattern_shapes=Counter({(0, 0, 0): 388597173, (0, 0, 1): 3226638, (0, 1, 0): 3183743, (1, 0, 0): 3142073, (0, 1, 1): 19517, (0, 0, 2): 18047, (1, 0, 1): 18047, (1, 1, 0): 17988, (0, 2, 0): 17774, (2, 0, 0): 537, (0, 3, 0): 13, (0, 2, 1): 12, (1, 1, 1): 12})
+mean_predicate=N_c==0 OR 55*N_c<13*(4-c)*q
+c3_predicate=N_3<=floor(d/7)*(q/d)+I[d_mod_7>=5]*(q/d)
+intersection_scope=separate necessary screens; shared-bit intersection not optimized
+all_exact_controls=PASS

@@ -1,0 +1,15 @@
+LRC14 half-clock affine-handoff positive triple probe
+general_q_formula_controls=129 q_range=3..128_plus_257_509_1021
+identity=F(x)={p*x+1/(2q)} has F^2=D_p^2 because (p+1)/(2q)=1
+q=7_orbit=(x,Fx,F2x)=(Fraction(2187, 61516), Fraction(2525, 4732), Fraction(3, 364))
+tooth_word=endpoint-low,central,endpoint-low
+intrinsic_shallow_word=(3, 0, 1) owner_prefix=(0, 1)
+thm2584_rail_keys=((0, 1, 0, 0), (6, 1, 1, 0), (0, 1, 3, 0)) stored_clock_edges=((3, 0), (0, 1), (1, 3))
+positive_component=(14215/399854,2031/57122) length=1/199927
+component_grid_length=251764072560 component_weight=20702634537282262924225949552448
+component_weighted_grid_numerator=5212179583827493668055819744957417797626880
+all_selected_fibre_components=1 total_weighted_grid_mass=5212179583827493668055819744957417797626880
+local_inverse_constraints=((Fraction(83, 2366), Fraction(1, 28)), (Fraction(6, 169), Fraction(547, 15379)), (Fraction(14215, 399854), Fraction(2031, 57122)))
+independent_routes=full weighted common-grid pullback and local rational branch intersection agree
+scope=positive THM2584 rail-clock fibre product for a boundary-scale affine handoff only
+not_lawful_odometer=1/14 is not k/13^6; carry,root,delayed-prefix,unit,semantic transition,row exclusion,and LRC14 remain untested

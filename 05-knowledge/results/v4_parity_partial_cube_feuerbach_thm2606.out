@@ -1,0 +1,14 @@
+THM-2606 AFFINE V4 / PARTIAL-CUBE / FEUERBACH AUDIT
+GL2 order=6, AGL2 order=24, parity channels=3
+marked parity actions: C2=(1, 0, 2), C3=(2, 0, 1)
+AGL-invariant graph edge counts=[0, 6]
+pointed GL-invariant graph edge counts=[0, 3, 3, 6]
+translation-invariant tournaments on X=0
+graceful controls: K4=PASS, C4=PASS, K1,3=PASS
+six-edge orbitals: incident=12, disjoint=3
+S4-invariant tournaments on six edges=0
+opposition-compatible C6 graphs=4=origins
+graceful labelings of C6=0
+Feuerbach sign classes=4, side action order=6
+four-body integer controls=729, ordered controls=17
+FAILED CHECKS: NONE

@@ -1,0 +1,78 @@
+LRC14 k=2 all-four-high literal-ray packet torsion closure
+dependency=04-computation/lrc14_j7_k2_scalar_band_1680_1742_thm2941.py;lf_sha256=1224d5594571f21c91c55fe3ab165c4fc34ba7968719862d12660d24efac919d
+dependency=05-knowledge/results/lrc14_j7_k2_scalar_band_1680_1742_thm2941.out;lf_sha256=c20607cb478ed491d7000f2b8a49213f57d1606a5152700ac3b50c836e2dc66c
+rows=39;packets=19640;killed=19640;open=0
+finite_candidates_total=1401;maximum_row_candidates=456
+row_height_histogram={1694: 7, 1702: 3, 1708: 9, 1722: 7, 1724: 2, 1732: 2, 1736: 9}
+packet_height_histogram={1694: 1585, 1702: 199, 1708: 12023, 1722: 516, 1724: 1653, 1732: 306, 1736: 3358}
+below_1736_rows=30;below_1736_packets=16282;all_killed=yes
+all_five_distinguished_work=19630/19640
+distinguished_count_histogram={1: 5, 3: 3, 4: 2, 5: 19630}
+chosen_index_histogram={0: 1730, 1: 723, 2: 822, 3: 2113, 4: 14252}
+chosen_first_order_histogram={2: 19640}
+all_witness_order_histogram={2: 95097, 3: 56040, 4: 86654, 5: 74611, 6: 54774, 7: 98032}
+safe_cell_range=0..2106
+chosen_safe_cell_range=188..2106
+row_semantic_sha256=c5bbb617c3f1cd15fce322751a0d4857adf731545a0408cd07fb7f5b97a7cf55
+packet_semantic_sha256=774e915486b0284718808af4dfb8ef59ddfdd3a7080aea38b2e1ef92e2a90236
+witness_semantic_sha256=4d8e5ba05dd1f8effb1e61b544f054df13be89a1aed730d402b6b1f2843fb7b2
+partial_semantic_sha256=ef3d7d97893b939c95dc61a9d1fc94fa257f122b1748c0f92fb3054e0a083fe6;partial_packets=10
+failure_semantic_sha256=01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+q7_strict_open=L:14;d:7;u:1;m:1;z:16;j:0;k:1;theta:13/16;norms:1/14,1/14;open dangers disjoint
+q8_hostile=L:56;d:8;u:1;m:1;z:63;j:0;k:1;theta:5/6;norms:1/16,1/16;danger overlap:1/56
+row_census_begin
+z=1694;E=1,2,8,10,12,14;L=11760;candidates=9;packets=15;failures=0;threshold=4427906129/6244041683880;top3=1836,1708,1736
+z=1694;E=1,4,8,10,12,14;L=11760;candidates=87;packets=1210;failures=0;threshold=11773268777/31119498069660;top3=1836,1708,2060
+z=1694;E=1,6,8,10,12,14;L=11760;candidates=17;packets=36;failures=0;threshold=7246387727/12251991892140;top3=1836,1810,1722
+z=1694;E=2,4,6,8,10,14;L=11760;candidates=4;packets=1;failures=0;threshold=308607121/373536338175;top3=1810,1750,2142
+z=1694;E=2,4,8,10,12,14;L=11760;candidates=18;packets=235;failures=0;threshold=153168437/251775874350;top3=1836,1708,1750
+z=1694;E=2,6,8,10,12,14;L=11760;candidates=23;packets=87;failures=0;threshold=2464893709/4083997297380;top3=1810,1836,1722
+z=1694;E=4,6,8,10,12,14;L=11760;candidates=4;packets=1;failures=0;threshold=189834548/224121802905;top3=1836,1810,2172
+z=1702;E=1,4,8,10,12,14;L=11760;candidates=20;packets=178;failures=0;threshold=62830671047/109432615112730;top3=1836,1708,2060
+z=1702;E=2,4,8,10,12,14;L=11760;candidates=9;packets=20;failures=0;threshold=2909768009/3541508579700;top3=1836,1708,1750
+z=1702;E=2,6,8,10,12,14;L=11760;candidates=4;packets=1;failures=0;threshold=1161683317/1436149462839;top3=1810,1836,1722
+z=1708;E=1,2,8,10,12,14;L=11760;candidates=18;packets=146;failures=0;threshold=29199049/51603650280;top3=1836,1736,2142
+z=1708;E=1,4,8,10,12,14;L=11760;candidates=456;packets=10274;failures=0;threshold=3956369731/23275327068630;top3=1836,2060,2172
+z=1708;E=1,6,8,10,12,14;L=11760;candidates=29;packets=96;failures=0;threshold=3166411397/6176624011740;top3=1836,1810,1722
+z=1708;E=2,3,8,10,12,14;L=11760;candidates=7;packets=4;failures=0;threshold=19525830869/28020782102040;top3=1810,1836,1736
+z=1708;E=2,4,6,8,10,14;L=11760;candidates=4;packets=1;failures=0;threshold=292933997/376623415350;top3=1810,1750,2142
+z=1708;E=2,4,8,10,12,14;L=11760;candidates=64;packets=1312;failures=0;threshold=82243066/188311707675;top3=1836,1750,1810
+z=1708;E=2,6,8,10,12,14;L=11760;candidates=28;packets=152;failures=0;threshold=1114546519/2058874670580;top3=1810,1836,1722
+z=1708;E=3,4,8,10,12,14;L=11760;candidates=9;packets=14;failures=0;threshold=7701736067/11298702460500;top3=1836,2172,1750
+z=1708;E=4,6,8,10,12,14;L=11760;candidates=19;packets=24;failures=0;threshold=74458208/112987024605;top3=1836,1810,2172
+z=1722;E=1,2,8,10,12,14;L=11760;candidates=6;packets=3;failures=0;threshold=25592699/34684420680;top3=1836,1736,2142
+z=1722;E=1,4,8,10,12,14;L=11760;candidates=19;packets=137;failures=0;threshold=9254741261/15644072292030;top3=1836,2060,2172
+z=1722;E=1,6,8,10,12,14;L=11760;candidates=38;packets=171;failures=0;threshold=7929068449/16909773933780;top3=1836,1810,2004
+z=1722;E=1,6,9,10,12,14;L=17640;candidates=5;packets=2;failures=0;threshold=5317269203/7366383554985;top3=1836,1746,1810
+z=1722;E=2,3,8,10,12,14;L=11760;candidates=6;packets=3;failures=0;threshold=13226374129/18833640429240;top3=1810,1836,1736
+z=1722;E=2,6,8,10,12,14;L=11760;candidates=34;packets=199;failures=0;threshold=2353384951/4691534085420;top3=1810,1836,1946
+z=1722;E=4,6,8,10,12,14;L=11760;candidates=4;packets=1;failures=0;threshold=61200058/75942098505;top3=1836,1810,2172
+z=1724;E=1,4,8,10,12,14;L=11760;candidates=109;packets=1522;failures=0;threshold=28242530023/82226770217865;top3=1836,2060,2172
+z=1724;E=2,4,8,10,12,14;L=11760;candidates=15;packets=131;failures=0;threshold=1714743697/2661060524850;top3=1836,1750,1810
+z=1732;E=1,4,8,10,12,14;L=11760;candidates=32;packets=282;failures=0;threshold=8269057126/16521666591339;top3=1836,2060,2172
+z=1732;E=2,4,8,10,12,14;L=11760;candidates=8;packets=24;failures=0;threshold=2187518861/2673408833550;top3=1836,1750,1810
+z=1736;E=1,2,8,10,12,14;L=11760;candidates=14;packets=66;failures=0;threshold=85575293/141275567160;top3=1836,2142,2004
+z=1736;E=1,4,8,10,12,14;L=11760;candidates=193;packets=2831;failures=0;threshold=12574232089/47313779614920;top3=1836,2060,2172
+z=1736;E=1,6,8,10,12,14;L=11760;candidates=20;packets=44;failures=0;threshold=7124260469/12785438827980;top3=1836,1810,2004
+z=1736;E=2,3,8,10,12,14;L=11760;candidates=5;packets=3;failures=0;threshold=321100049/459357083640;top3=1810,1836,2142
+z=1736;E=2,4,6,8,10,14;L=11760;candidates=4;packets=1;failures=0;threshold=81147331/95699392425;top3=1810,1750,2142
+z=1736;E=2,4,8,10,12,14;L=11760;candidates=32;packets=370;failures=0;threshold=195068569/382797569700;top3=1836,1750,1810
+z=1736;E=2,6,8,10,12,14;L=11760;candidates=19;packets=39;failures=0;threshold=2149612511/3547257479220;top3=1810,1836,1946
+z=1736;E=3,4,8,10,12,14;L=11760;candidates=5;packets=3;failures=0;threshold=2150650891/2870981772750;top3=1836,2172,1750
+z=1736;E=4,6,8,10,12,14;L=11760;candidates=4;packets=1;failures=0;threshold=180482987/229678541820;top3=1836,1810,2172
+row_census_end
+partial_packets_begin
+z=1708;E=1,4,8,10,12,14;packet=1708,1836,2060,2172,10236;working=4;missing=0,1,2,3
+z=1708;E=1,4,8,10,12,14;packet=1708,1836,2060,2172,8556;working=0,2,4;missing=1,3
+z=1708;E=1,4,8,10,12,14;packet=1708,1836,2060,2172,8892;working=0,2,4;missing=1,3
+z=1708;E=1,4,8,10,12,14;packet=1708,1836,2060,2172,11580;working=4;missing=0,1,2,3
+z=1708;E=1,4,8,10,12,14;packet=1708,1836,2060,2172,10460;working=4;missing=0,1,2,3
+z=1708;E=1,4,8,10,12,14;packet=1708,1836,2060,2172,8660;working=0,1,3,4;missing=2
+z=1708;E=1,4,8,10,12,14;packet=1708,1836,2060,2172,8780;working=0,1,3,4;missing=2
+z=1708;E=1,4,8,10,12,14;packet=1708,1836,2060,2172,11244;working=4;missing=0,1,2,3
+z=1708;E=1,4,8,10,12,14;packet=1708,1836,2060,2172,9228;working=0,2,4;missing=1,3
+z=1708;E=1,4,8,10,12,14;packet=1708,1836,2060,2172,10374;working=4;missing=0,1,2,3
+partial_packets_end
+scope=39 exact-suffix rows of the projected k=2 1680..1742 atlas;all distinct later labels meeting the exact scalar wall;no HIGH-TAIL rows
+consequence=every exact-suffix row is empty;combined with a separate closure of the 19 HIGH-TAIL rows, the full 1680..1742 band is empty
+all_exact_controls=PASS

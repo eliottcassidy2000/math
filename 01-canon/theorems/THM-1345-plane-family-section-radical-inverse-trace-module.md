@@ -55,7 +55,8 @@ algebraic; over {g=0} it degenerates to Family 2's rational-plus-quadratic form.
 **Consequence for the salvage catalog / realization program (new dichotomy):**
 every explicit JC counterexample currently known (F, its conjugates, the towers
 F^{∘m} — solvable iterated-S₃ monodromy) is **RADICAL-INVERTIBLE**: fibers are
-expressible in radicals. By klein's Smith rule, degree-5 admits A₅; an
+expressible in radicals. The transitive group census leaves `A₅` as a
+possible degree-5 monodromy (not a realized Keller cover); an
 icosahedral Keller map would be the first **Abel–Ruffini-obstructed**
 counterexample — non-injective AND non-radical. "Radical-invertible or not" is
 a new coarse invariant slicing the realization program at exactly the

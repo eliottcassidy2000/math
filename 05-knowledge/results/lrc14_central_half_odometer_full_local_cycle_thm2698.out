@@ -1,0 +1,18 @@
+LRC14 HALF-ODOMETER CHANGED DELAYED CARRIER EXACT SCRATCH SCOUT
+scales=(R=4826809,alpha=1/2)
+fixed_delayed_phases=((Fraction(11, 24), ((0,), (1, 2, 3, 4, 5, 6))), (Fraction(13, 24), ((0,), (1, 2, 3, 4, 5, 6))))
+candidate_count=332668
+candidate_phase_counts=((Fraction(11, 24), 156798), (Fraction(13, 24), 175870)); nonconstant_phase_counts=((Fraction(11, 24), 134968), (Fraction(13, 24), 146770))
+nonconstant_clock_edge_support_count=51; reciprocal_1_4_present_at_both_phases=True
+pair_checks=1
+first={'x': Fraction(55232507, 115843416), 'N': 2301354, 'y': Fraction(11, 24), 'j': 8, 'shallow': 1, 'owner': 4, 'carry': 3, 'h': 5, 'kappa': 1, 'edge': 0, 'root': 7}
+second={'x': Fraction(58313459, 115843416), 'N': 2429727, 'y': Fraction(11, 24), 'j': 3, 'shallow': 4, 'owner': 1, 'carry': 1, 'h': 5, 'kappa': 1, 'edge': 0, 'root': 3}
+half_lifts=(k0=1472973,k1=4502560); root_steps=(4,8)
+intermediate_D_roots=(first=(12,),second=(12,))
+doubled_digit_laws=(((5, Fraction(23, 24), 24, 1, 12), (1, Fraction(11, 24), 11, 0, 3)), ((5, Fraction(23, 24), 24, 1, 12), (3, Fraction(11, 24), 11, 0, 7)))
+direct_target_carries=(1, 3); factorization=A_half=tau_odd_after_D
+packet_slacks=(first=1/301082946198216,second=1/301082946198216); three_state_open_radius=1/50883017907498504; open_length=1/25441508953749252
+binding_margin_ledgers=(first=(('carry', Fraction(11, 115843416)), ('delayed', Fraction(1, 301082946198216)), ('half_digit', Fraction(1, 1505964408)), ('half_tooth', Fraction(1, 115843416)), ('owner_clock', Fraction(316879, 810903912)), ('present', Fraction(1481, 8109039120)), ('rail', Fraction(316879, 810903912)), ('shallow_clock', Fraction(1002343, 810903912))),second=(('carry', Fraction(11, 115843416)), ('delayed', Fraction(1, 301082946198216)), ('half_digit', Fraction(1, 1505964408)), ('half_tooth', Fraction(1, 115843416)), ('owner_clock', Fraction(401, 810903912)), ('present', Fraction(167, 810903912)), ('rail', Fraction(401, 810903912)), ('shallow_clock', Fraction(391751, 115843416))))
+delayed_base_cycle=y -> {13y+1/2}=y; inherited sector0 and clocks1..6 recur
+typing_boundary=C_(2R)=C_2 x C_R; H(x)=x+1/2 is central and commutes with D, every odd lift is H times an integral odometer lift, and the filtration retains residual C2; existing (carry,h,kappa,edge) data type the pure half-translation root step through a_edge=2carry+floor((2h+kappa)/13)+1_{edge=left}
+verdict=POSITIVE SCOUT: a changed delayed carrier has a full local rail/present/delayed/private-unit two-cycle; semantic cospan, endpoint, and LRC consequence remain unproved

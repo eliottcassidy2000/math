@@ -1,0 +1,12 @@
+THM-2779 UNIVERSAL BOCKSTEIN/SYMPLECTIC ENDPOINT GATE
+status=VERIFIED-EXACT coefficient-side secondary companion
+validity_gate=THM2625 dual Lucas/order embeddings PASS
+normalized_frames=2184
+source_edges_per_field=(28392, 28392)
+target_edges_per_field=(28392, 28392)
+normalized_endpoint_squares=62377224
+witness=L=(0, 0),R=(0, 0),s=(0, 1),t=(12, 0),det=1
+p=352341050142921841 factors=(153528379476679734, 205065739500452496, 153829297094820499, 338655797145668320) Hadamard=(340901553381135615, 319769238334939305, 60314403185657026, 233858556407273320) Pluecker=0
+p=956354278959359281 factors=(955153878005214586, 313954411340872907, 902111039187286496, 3971292277140798) Hadamard=(511989854700512392, 62552333514892978, 86125904489159431, 419745850041132014) Pluecker=0
+scope=all four corners are endpoint coefficients of one marked triangle, not Boolean allocation states on one physical support
+ALL EXACT CHECKS PASSED

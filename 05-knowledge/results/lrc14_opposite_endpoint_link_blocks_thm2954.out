@@ -1,0 +1,6 @@
+THM-2954 OPPOSITE ENDPOINT-LINK CONTROL
+ordered_pairs=40000;links=1666;classification=PASS
+nonempty_complete_bipartite_blocks=20;block_census=PASS
+nonempty_directed_c7_supports=63;all_nonbipartite=PASS
+strict_seam=(1,13,1/14);a.e._switch=yes;pointwise_cover=no
+all_exact_checks=PASS

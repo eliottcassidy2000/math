@@ -1,0 +1,22 @@
+LRC14 k=3 z1=250 uniform ray/status closure
+suffix_source_sha256=a003d287f618eb301edf6974d0b67dc128c4f380a169e7809ed5b5754e8b8303
+fibre_source_sha256=42dc165781148c702dfcd3c6535f4d02aee516af60b5ddf602a19cb1d87695e4
+scope=body (1,4,8,10,12,14), z1=250, three arbitrary later nonaligned drifts; no finite horizon
+carrier_h=1049/2940;L=11760;cell=429;lower=1049/89180;delta250=484/128625
+ray_law=(La+b)(c(La+b)-h/7)=b(c(b)-h/7);b=0 amplitude 0;A(L-b)=-A(b)
+positive_control=b260;amplitude=1483/1029;delta12020=1483/12368580
+negative_control=b980;amplitude=-2/3;delta12740=-1/19110
+zero_control=b5880;amplitude=0;delta17640=0
+ray_amplitude_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674
+pair_overlap_exhaustive_controls=946
+common_table_controls=loads(9,9):FEASIBLE;loads(14,8):EXACT_FARKAS_INFEASIBLE
+nontrivial_denominators=59;all_denominator_multisets=35990
+ray_excess_kills=34025;ray_excess_survivors=1965;ray_excess_survivor_sha256=bd27ff30bf9aa37e8ed7a4b0780b8b3d171315524c6506b4e3fc1eca5d99a6f5
+crude_all_q_kills=699;crude_all_q_survivors=1266
+common_hunter_status_kills=1266;common_hunter_status_survivors=0
+decisive_inner_M_histogram={3: 44, 4: 128, 5: 743, 6: 59, 7: 292}
+first_kill=ds(2, 168, 420, 1176);D=5880;q=1176;M=5;marginals=(588, 168, 840, 168);capacities=(0, 1, 5);target_histogram=((0, 168), (1, 78), (2, 316), (3, 498), (4, 116));exact_farkas=VERIFIED
+verified_farkas_instance_sha256=38f794addc17911943975566f55b86442d0386d86e58ea9f5f1cc2bd97049fd2
+conclusion=uniform projected z1=250 row is empty
+semantic_sha256=c3be93a08ba7315136834ccb8dc15ce68421d3b4f102884ac6383bb0768b3948
+all_exact_controls=PASS

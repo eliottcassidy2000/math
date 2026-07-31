@@ -1,0 +1,28 @@
+degree-6 C2 R_Q / differential-Rees hostile referee
+columns=E6,E5,E3,E2,E1:monic_Faber_normalization
+depressed_relation=p/a^2=c-1/2
+Rj_over_4=a^(j+3)*(A3+A2+(1+2c)A1/8)
+primitive_R_over_4_scale=2^15
+mod2_R=[0,a^8,0,0,0]
+relative_differential_constants=Faber_seed_coefficients
+d_of_primitive_R_common_content=2^3
+primitive_dR_effective_scale=2^12*d(R_over_4)
+mod2_primitive_dR=[0,a^7*da+a^8*dc,0,0,0]
+odd_depths_B=E5:0,E3:4,E1:7
+odd_depths_F=E5:0,E3:3,E1:7
+odd_depths_G=E5:0,E3:4,E1:7
+odd_depths_R=E5:0,E3:6,E1:8
+odd_depths_dR=E5:0,E3:4,E1:7
+combined_odd_tooth_profile=E5:0,E3:3,E1:7
+first_differential_grade_odd_rank=1:E3,E1_survive
+exact_square_raw_diagonals_r0_r1_r2_r3=0,0,0,1/256
+exact_square_R_over_4=1/256:physical_R=1/64
+exact_square_R_is_free_constant=zero_in_derivative_and_finite_place_principal_part
+exact_square_R_gradient=(1/2,-1/2,-3,6)
+positive_tangent_da=1:R_derivative=1/2
+hostile_tangent_da=dc=1:R_derivative=0
+physical_constraint=contraction_with_actual_derivation_not_universal_one_form
+verdict=FIRST_CANONICAL_DIFFERENTIAL_GRADE_STILL_FAILS_TO_RAISE_E3_E1
+later_Rees_weights_E3:3,E1:7=EXTRA_STRUCTURE_NOT_INHERITED
+scope=FINITE_EXACT_STOPPING_CERTIFICATE_NOT_ALL_REES_LATTICES_NOT_JC2
+ALL CHECKS PASSED

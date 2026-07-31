@@ -1,0 +1,15 @@
+LRC14 raw delayed-word foreign-slope fixed-point scout
+status=VERIFIED-EXACT SCOUT; alternate base only
+raw_sector_components=safe:32578,danger:14906,union:47484
+fixed_multiplier_search=2..34
+first_multiplier_with_interior_fixed_point=18
+smaller_multipliers_2..17=NONE
+slope18_fixed_points=(Fraction(4, 17), Fraction(13, 17))
+point_component=(Fraction(2446165, 10396204), Fraction(2446177, 10396204)); margins=(Fraction(11, 176735468), Fraction(193, 176735468))
+reflected_component=(Fraction(7950027, 10396204), Fraction(7950039, 10396204)); margins=(Fraction(193, 176735468), Fraction(11, 176735468))
+delayed_factor_distances=target:1/17; units:(Fraction(5, 17), Fraction(6, 17), Fraction(7, 17), Fraction(8, 17), Fraction(8, 17)); high:2/17
+thm789_U0_clearances=(Fraction(4, 17), Fraction(8, 17), Fraction(5, 17), Fraction(3, 17), Fraction(6, 17), Fraction(2, 17), Fraction(2, 17), Fraction(6, 17), Fraction(7, 17), Fraction(3, 17)); minimum=2/17
+fixed_multiplier_family_b_eq_1_mod17=(18, 35, 52, 69, 86)
+mechanism=13^3*4=-1 mod17; five ordinary units have distances 5,6,7,8,8; high speed has distance2
+scope=no physical multiplier-18 handoff, endpoint transport, row exclusion, or LRC14
+ALL CHECKS PASSED

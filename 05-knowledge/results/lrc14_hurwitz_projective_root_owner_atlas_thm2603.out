@@ -1,0 +1,29 @@
+THM-2603 Hurwitz/projective root-owner atlas exact companion
+free_factors=x:order2,y:order3 generated_group=PSL2(F13):1092
+owner_A=xy:(12, 2, 3, 6) cycles=((0, 9, 12, 1, 3, 6, 2), (4, 10, 7, 8, 5, 11, 13))
+root_C=[x,y]:(5, 9, 9, 6) cycles=((0, 8, 13, 2, 10, 4, 1, 7, 11, 12, 3, 9, 6), (5,))
+companion_A^-1C:(12, 3, 2, 6) cycles=((0, 7, 5, 8, 11, 9, 3), (1, 10, 13, 6, 2, 4, 12))
+nonabelian_norm=PASS order=6,5,4,3,2,1,0 moving_cusps=(5, 11, 13, 4, 10, 7, 8) reverse_order=13
+affine_chart=C:q->q+1 owner_cycles=((0, 4, 6, 10, 7, 5, 3), (1, 8, 13, 2, 9, 12, 11)) owner_8->inf->2
+element_orders=1:1,2:91,3:182,6:182,7:468,13:168 order91=ABSENT
+order7_trace_square_classes=t3:9x156,t5:12x156,t6:10x156 exhaustive=468
+general_pair_closure_exhaustion=468_order7x12_exponentsx2_orientations coordinates=trace,gamma,orientation PASS
+norm_closure_t3=F:6,8,9,10,11 R:2,3,4,5,7 union:2,3,4,5,6,7,8,9,10,11
+norm_closure_t5=F:2,8,10,11,12 R:1,2,3,5,11 union:1,2,3,5,8,10,11,12
+norm_closure_t6=F:1,3,9,11,12 R:1,2,4,10,12 union:1,2,3,4,9,10,11,12
+norm_closure_total_union=1,2,3,4,5,6,7,8,9,10,11,12 orientation_R(a)=F(-a)^-1
+norm_signature_per_state=identity:5,unipotent_nonsquare:2,order3:2,order6:2,order2:1
+normalized_pair_norm_selector_cover_number=3 minimal=(U,g3,F)+(U,g3,R)+(U,g6,F);(U,g3,F)+(U,g3,R)+(U,g6,R) trace5=REDUNDANT gamma=-1
+root_scale_hostile=g3prime:(0,4,3,3) gamma=3 same_order7_class=YES same_forward_order=YES DUD^-1=U^4 closure_F:1,5,6,10,11!=6,8,9,10,11
+norm_connection_coordinates=trace,orientation,root_scale_gamma physical_selector=NOT_CONSTRUCTED
+centralizers=C7:7,C13:13 commuting_nontrivial_C7xC13_pairs=0
+root_normalizer=78=C13:13*C6:6 frame_conjugation_exponents=1,3,4,9,10,12
+homogeneous_carrier=G/H~G/U:84 projective_fibres=14x6 left_A_orbits=12x7 right_frame_orbits=14x6
+left_C_orbits=6x1+6x13 boundary_frames=6 affine_frames=78 frame_on_A_orbits=2x6
+left_C7_right_C6=COMMUTE physical_equivariant_bijection=NOT_CONSTRUCTED
+anharmonic_S3_orbits=boundary3:(0,12,inf);harmonic3:(1,6,11);generic6:(2,4,5,7,8,10);equianharmonic2:(3,9)
+anharmonic_stabilizers=2,2,1,3 transverse_split=3+6+2
+barning_mod2=swap,swap,identity ternary_arity_is_not_C3
+farey_hostile_defects=(10, -449, 711) safe->unsafe->safe
+physical_common_LRC_carrier=NOT_CONSTRUCTED
+ALL_CHECKS=PASS checks=275

@@ -1,0 +1,13 @@
+THM-2959 FIRST-GAP WIDTH 21-24 MODULAR DEPTH CONTINUATION
+thm2949_dependency_sha256=9a1c7068e079e232dc97fd6eb925621aa74b3d636380a85995f8e0db8b30aa54
+supports=(0,1,2,M),21<=M<=24;fixed_rank35_cofactor=YES
+M=21;degree=1120;B_floor_degree=447;surplus_negative_factors=((17, 1),);B_effective_degree=448;core_degree=531;root_free_prime=127;core_digest=3826e18fe51b3f8f3f7359257355823fc107cdb414b54447728ec813dac0e1fe;gate_digest=365eeeafc09b137555bae4711574baa3b14c7d2b36c73bab9bf027c41535b0e7;sign_runs=0..70:+,71..133:-,134..441:+;GN_tail_base=134;GN_tail_digest=d8d073a344a7649afee6d4373c65d6bf70d52662585aa6816850ae5ed41b8fca;fourM_status=FAIL;outside_determinants=3;integer_nonzero=YES
+M=22;degree=1175;B_floor_degree=470;surplus_negative_factors=NONE;B_effective_degree=470;core_degree=557;root_free_prime=107;core_digest=5fa6bb6af27d164d4d69e40f3da1be5a7f7885968068701f25a1e29c8f7d8bd7;gate_digest=9432915e09a30033831510b7832068ec47a2635147962af06dd5a5425f36b488;sign_runs=0..79:+,80..150:-,151..484:+;GN_tail_base=151;GN_tail_digest=13494fc018c276ea8fedb0fc83e9aca50e66d533696f84ee982818d7a848fee7;fourM_status=FAIL;outside_determinants=3;integer_nonzero=YES
+M=23;degree=1230;B_floor_degree=490;surplus_negative_factors=NONE;B_effective_degree=490;core_degree=585;root_free_prime=113;core_digest=4aa61de9c1793b40354540dbdc06bb771aa49795ddd2e5d694a5d90743bc0c8b;gate_digest=deb2e21c89809291ca19d728dc6a8682cbfd04b689d44936c1bd88006cd4c31c;sign_runs=0..89:+,90..169:-,170..529:+;GN_tail_base=170;GN_tail_digest=36c93dd5e27fb71436ceae3de415fe2b7e01d895bcfe743bc30498af008e8e7c;fourM_status=FAIL;outside_determinants=3;integer_nonzero=YES
+M=24;degree=1285;B_floor_degree=516;surplus_negative_factors=NONE;B_effective_degree=516;core_degree=607;root_free_prime=137;core_digest=0379f6fdc92f0380698f7e48fc3b8b4a9a6aeba4cbdd52f3765ca23a710992a2;gate_digest=315d7cea1008f6546286f580889b1d65efe4d144140bda83c5629482e8982129;sign_runs=0..99:+,100..189:-,190..576:+;GN_tail_base=190;GN_tail_digest=081beb5f76430d613afabe15c1a98bf17b37163c937bab9ecfb37df4f5320945;fourM_status=FAIL;outside_determinants=3;integer_nonzero=YES
+record_digest=c45265c9537ba68f8ee8c73ff4a23dde3a634fd6e590dcb9ba96b72687655e66
+width21_surplus=(n+17)^1;negative_root_only=YES
+all_GN_tail_bases_exceed_4M=YES
+consequence=first-window_SFC4_on_four_first-gap_supports
+scope=integer_depths;not_complete_width21-24;not_arbitrary_width;not_real-ray positivity;not_nextprime_rank_shortcut;not NC2 or GMC2
+all_exact_checks=PASS

@@ -1,0 +1,30 @@
+THM-2924 DIAMETER-SIX MACAULAY--NEWTON ATLAS
+constructor=hash-pinned THM-2922/2921 ordinary multinomial forms;width-six denominators rebuilt
+selected_rows=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,35,36,37,38,39,40,41;allocation=(20Q,10C,6F)
+scaled_row_degrees=(5,11,17);determinant_degree_bound=312
+family=(0, 1, 2, 6);newton_base=5;low_signs=-----;n0_raw_digits=118;form_digest=c9ef6742fd4cfb78326ca7206f4ead4db3b944548615fd6c2d520666577c31ca;newton_digest=eec573d85b5773278bb93d62190533d23cb653b8f65f01484675997164ad5dd6
+family=(0, 1, 2, 6);newton_count=313;first_digits=414;last_digits=774;all_positive=YES;degree_exhaustion=YES
+family=(0, 1, 3, 6);newton_base=5;low_signs=-----;n0_raw_digits=132;form_digest=22dde06095b3d17bb2f59bcd60909d109a941920cf4979c7db0e54371956fb97;newton_digest=2d11cc64fdbd0e7ef2af58a2c2ddfb2ff2c737b3eebdf90c24307914f4cadefc
+family=(0, 1, 3, 6);newton_count=313;first_digits=430;last_digits=792;all_positive=YES;degree_exhaustion=YES
+family=(0, 1, 4, 6);newton_base=5;low_signs=-----;n0_raw_digits=142;form_digest=15d593fd03b39a65699095a2bf95b9da2a3611d4bbfbc380524a51e27be8ec50;newton_digest=0efaed1c8806d63f12d942c4ae0f31ebfb3f5c7ed38ab64c96434219032a5921
+family=(0, 1, 4, 6);newton_count=313;first_digits=442;last_digits=804;all_positive=YES;degree_exhaustion=YES
+family=(0, 1, 5, 6);newton_base=5;low_signs=-----;n0_raw_digits=147;form_digest=774fa943dd2852e08f208850d5fed3b60fc7b21ed94e8c8dcc25a31410cef9bc;newton_digest=e0bc172157e37ee57927914fccec70dc558fb6bb8a6e6453507c4379679f7777
+family=(0, 1, 5, 6);newton_count=313;first_digits=448;last_digits=811;all_positive=YES;degree_exhaustion=YES
+family=(0, 2, 3, 6);newton_base=2;low_signs=--;n0_raw_digits=135;form_digest=1c3d9f79c6ce2acdaec27296cc19a4657fd8280c24d67113320f36a2cef1c717;newton_digest=1c1e2bc71c2512076101f922d5ae5ab20335edab41b7e064303bc3ef62622266
+family=(0, 2, 3, 6);newton_count=313;first_digits=367;last_digits=798;all_positive=YES;degree_exhaustion=YES
+family=(0, 2, 4, 6);newton_base=2;low_signs=--;n0_raw_digits=148;form_digest=2862920421220e19febd2856b48deaa80baab9caec2927bda31c7d0b2b3ad065;newton_digest=fb67ff0b1893a36bb607ceaa49732b21884ef37a8ea7e70a4d6593947692885c
+family=(0, 2, 4, 6);newton_count=313;first_digits=381;last_digits=813;all_positive=YES;degree_exhaustion=YES
+family=(0, 2, 5, 6);newton_base=2;low_signs=--;n0_raw_digits=155;form_digest=3e9b3e1604b8f4bef7745f189b82ca7a0ffeb30ab95f2be47db9654892f0c1e4;newton_digest=8d9c818c7ef7e83f488794ec81a6c31170b70f30aeb8a1a26109f9d2e6f49893
+family=(0, 2, 5, 6);newton_count=313;first_digits=388;last_digits=821;all_positive=YES;degree_exhaustion=YES
+family=(0, 3, 4, 6);newton_base=0;low_signs=none;n0_raw_digits=148;form_digest=aee4e05d07935c0e5c7fbb5b63cf666bda63ee4f82203924066a3a262449f020;newton_digest=0f9ea4560bc28a1dc03137b0c008313cc3fd7f76593d5ef8c6c9b63d4ff98fd9
+family=(0, 3, 4, 6);newton_count=313;first_digits=286;last_digits=815;all_positive=YES;degree_exhaustion=YES
+family=(0, 3, 5, 6);newton_base=0;low_signs=none;n0_raw_digits=158;form_digest=af71b69032ead22f104a4367d00ec199242a9646eba15adbb0b868dfad17b191;newton_digest=af49f5013875199e4f025b90248c05659763c3a442fe3e57aa3570e272659575
+family=(0, 3, 5, 6);newton_count=313;first_digits=296;last_digits=827;all_positive=YES;degree_exhaustion=YES
+family=(0, 4, 5, 6);newton_base=0;low_signs=none;n0_raw_digits=158;form_digest=534b1e4f1d36360b0725662b4b0613733f3b5412b2ba13f4c7599141a3f6b74c;newton_digest=bdbf6993457af9545455fce5402ae6fd6e790286141672204b9d4a69c2fc3870
+family=(0, 4, 5, 6);newton_count=313;first_digits=296;last_digits=827;all_positive=YES;degree_exhaustion=YES
+symbolic_denominator_division=PASS;families=10
+positive_newton_coefficients=3130;degree_exhaustions=10;PASS
+independent_direct_constructor_mod_p=1000003;minor_checks=70;PASS
+consequence=fixed maximal minor nonzero for every integer n>=0
+scope=first-window SFC(4) for all ten translated four-slot supports of diameter exactly six
+all_exact_checks=PASS

@@ -1,0 +1,14 @@
+THM-2696 REFLECTION-COMPLETED S4 RELATIVE DIFFERENT -- exact checks
+C2_C3_generate_GL2F2_order=6 nonzero_orbit=3: PASS
+graph_quartic_and_squared_pair_resolvent: PASS
+disc_graph_quartic_equals_disc_scaled_resolvent: PASS
+relative_Jacobian=4*(s1*s2-s3): PASS
+DiscQ_pullback=DiscH*(Jac/4)^2: PASS
+DiscP_pullback=256*DiscH*Jac^2: PASS
+triangular_source_target_generator_control_preserves_different: PASS
+dominant_polynomial_sandwich_retains_nonconstant_factor: PASS
+constant_J0_slice_image_relation_resultant_and_birational_recovery: PASS
+constant_J0_slice_lex_elimination_kernel=(Rc): PASS
+constant_J0_slice_no_extraneous_component_gcd: PASS
+constant_J0_slice_singular_double_preimage_t^3=-8c^2: PASS
+scope=fixed_S4_quotient_and_polynomial_coordinate_family_only; general_S4_JC2_DC2_open

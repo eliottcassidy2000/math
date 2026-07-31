@@ -1,0 +1,9 @@
+LRC14 J=5 FIVE-HOSTILE REFINED K4 SCOUT
+status=FINITE-EXACT-SCOUT;refined_graph_is_necessary_not_equivalent
+hostile=E(1, 2, 3, 7, 8, 10, 11, 13);rank=5;apex=19;exceptional=(17, 18);theta=10006475/220468248;head_tail=1031;head=24;coarse_edges=184;refined_edges=0;triangles=0;head_K4=0;first_triangle=None;first_K4=None;minimum_removed_margin=107083894/9534924945;minimum_removed_edge=(17, 84);minimum_removed_maxpair=(18, 37)
+hostile=E(1, 2, 3, 7, 8, 10, 11, 13);rank=7;apex=17;exceptional=(18, 19);theta=49331041/986305320;head_tail=782;head=16;coarse_edges=87;refined_edges=0;triangles=0;head_K4=0;first_triangle=None;first_K4=None;minimum_removed_margin=346626179567/43981430462970;minimum_removed_edge=(19, 37);minimum_removed_maxpair=(18, 125)
+hostile=E(1, 4, 6, 7, 9, 10, 11, 13);rank=6;apex=23;exceptional=(16, 17);theta=192931/4696692;head_tail=2045;head=47;coarse_edges=709;refined_edges=0;triangles=0;head_K4=0;first_triangle=None;first_K4=None;minimum_removed_margin=13681079513/2840499545520;minimum_removed_edge=(16, 19);minimum_removed_maxpair=(17, 108)
+hostile=E(2, 3, 4, 8, 10, 12, 13, 14);rank=6;apex=16;exceptional=(18, 22);theta=75191/1009008;head_tail=779;head=15;coarse_edges=61;refined_edges=0;triangles=0;head_K4=0;first_triangle=None;first_K4=None;minimum_removed_margin=26683/1261260;minimum_removed_edge=(17, 18);minimum_removed_maxpair=(22, 26)
+hostile=E(2, 4, 6, 8, 10, 12, 13, 14);rank=4;apex=16;exceptional=(18, 22);theta=80183/1009008;head_tail=716;head=13;coarse_edges=48;refined_edges=0;triangles=0;head_K4=0;first_triangle=None;first_K4=None;minimum_removed_margin=356/35035;minimum_removed_edge=(18, 20);minimum_removed_maxpair=(22, 26)
+coarse_edges=1089;refined_edges=0;triangles=0;head_K4=0;refined_digest=1d682c78bb1b2b9a9b907b3d25d62b15f86f85044334d0a19ea3b7839b6426f5
+all_exact_controls=PASS

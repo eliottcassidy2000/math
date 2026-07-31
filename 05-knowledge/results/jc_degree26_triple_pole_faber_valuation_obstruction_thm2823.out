@@ -1,0 +1,14 @@
+THM-2823 DEGREE-26 TRIPLE-POLE AUDIT -- exact
+assert_nodes=0
+Faber rows 26,18,14,10,6,2: recurrence = direct multinomial
+target translation kills E22 with c=2*a22/13
+K=-(d/2)*(Phi/q)+T*H26; H26 terms = 12
+generic polar cases checked: ((0, 0), (1, 0), (2, 0), (1, 1))
+generic cubic resultant = -2097152
+exceptional weights Phi/Psi/H = (-12, -14, -10)
+exceptional Groebner basis = [1]
+exceptional quintic resultant = -605033360992960659270402048
+regular regions: H bounds and unique 143*T^4/16384 pole checked
+power carrier: every root of x^3-1 has (v(V),v(M))=(3,1)
+Chebyshev carrier: y=+/-1 has (v(V),v(M))=(3,1)
+ALL EXACT CONTROLS PASS

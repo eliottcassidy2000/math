@@ -1,0 +1,350 @@
+---
+id: THM-2624
+title: "Two-clock root tomography and disjoint-carrier holotopy boundary"
+status: >
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  For each of THM-2614's 84 base cells, form the globally primitive integer
+  matrix whose active target-section rows q record the twelve nonzero
+  deep-probe-root weights.  Every one of the 144 mixed C13 characters is
+  nonzero, but no one-clock matrix has full root rank: the exact rank
+  histogram is 5^6,6^12,7^4,8^22,9^6,10^2,11^32.  The 32 rank-eleven
+  kernels have two exact projective coordinate-pattern classes.  For every
+  fixed source shift s, some pair of owner clocks stacks to rank twelve;
+  60 of 84 adjacent cyclic pairs already do so, and consecutive windows have
+  sharp width histogram 2^60,3^22,4^2.  Thus two charts give a rational
+  signed left inverse.  They do not give physical descent: the clock strata
+  are disjoint, every available row is strictly positive on all twelve roots,
+  and hence no nonnegative left inverse exists.  Any Boolean wall cospan
+  internal to one clock chart still supplies no common clock overlap; it gives
+  positive root tomography only if its refinement creates private root rows.
+  No ancestry connector, row exclusion, or proof of LRC(14) follows.
+source: wild-holotopy-mining-2026-07-28-two-clock-tomography
+depends_on:
+  - THM-2614-punctured-target-root-cosupport-and-principal-deck-no-go
+related:
+  - THM-356-endpoint-transfer-witness-criterion
+  - THM-2356-finite-field-chirp-gram-tomography-and-bockstein-pairing
+  - THM-2616-cross-time-target-future-diagonal-and-principal-action-no-go
+  - THM-2622-affine-torsor-holonomy-fixed-section-spectrum-and-v4-c13-dictionary
+script: 04-computation/lrc14_two_clock_root_tomography_thm2624.py
+output: 05-knowledge/results/lrc14_two_clock_root_tomography_thm2624.out
+script_sha256: 332ab33e78448590003d7ebf6ad5609b3d1d8790ec5880fc9c008b83465d1ac4
+output_sha256: 592672cae123679c36f1b16159d03029030038381d8d07739afca5b29024fbbc
+hash_basis: LF-normalized bytes
+---
+
+# THM-2624 -- two clocks see every root direction, but do not glue a root
+
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+
+THM-2614 finds maximal support: in each retained base cell the same-event
+target/deep-probe relation is `Q_(s,ell) x F_13^*`.  Support, however, forgets
+the weights.  Restoring those weights reveals a sharp intermediate object.
+No single clock chart determines all twelve root coordinates, even though
+every mixed Fourier character survives.  Two clock charts do determine them
+linearly.  The inverse is necessarily signed and the two charts live on
+disjoint physical strata, so this is tomography rather than transport.
+
+That distinction is the finite holotopy boundary needed after THM-2614 and
+THM-2616: local separation of states is not descent of states.
+
+## 1. The canonical target/root weight matrices
+
+Use THM-2614's exact notation.  Its globally primitive content is
+
+```text
+G=4,244,240.                                                (1)
+```
+
+For a base cell `c=(s,ell_4)`, let `E_c` be its one or two retained rails and
+let `Q_c` be its active unit target-section set.  Define the integer matrix
+
+```text
+W_c(q,r)
+ =G^(-1) sum_(e in E_c, e unit at q) sum_(ell_5=0)^6
+             A_(e,q;ell_5,r),
+
+q in Q_c,                    r in F_13^*={1,...,12}.         (2)
+```
+
+Here `A_(e,q;ell_5,r):=num(J_(e,q;ell_5,r))` is the exact nonnegative
+common-`x` numerator in THM-2614's pre-route integer normalization.
+Division by `G` is entrywise integral.  The aggregate unit predicate still
+belongs to the whole `(ell_5,r)` slice; equation (2) does not assign it to a
+hidden Perron sheet.
+
+THM-2614's product support has a useful weighted consequence:
+
+```text
+W_c(q,r)>0 for every q in Q_c and every r in F_13^*.        (3)
+```
+
+There are exactly `1,080` such strictly positive rows over all `84` cells.
+
+## 2. Every mixed character survives, but every one-clock matrix is singular
+
+For `alpha,beta in F_13^*`, form
+
+```text
+F_c(alpha,beta)
+ =sum_(q in Q_c) sum_(r=1)^12 W_c(q,r) zeta_13^(alpha q+beta r).
+                                                                    (4)
+```
+
+Exact reduction modulo
+`Phi_13(X)=1+X+...+X^12` gives
+
+```text
+F_c(alpha,beta) !=0
+for all 84*12*12=12,096 choices.                            (5)
+```
+
+Nevertheless the exact rational ranks are
+
+```text
+rank          5   6   7   8   9  10  11
+cells         6  12   4  22   6   2  32.                  (6)
+```
+
+In particular no `W_c` has column rank twelve.  Thus even simultaneous
+nonvanishing of every mixed cyclotomic character does not imply linear root
+reconstruction.
+
+The `32` rank-eleven kernels split into two exact coordinate-pattern classes,
+each on `16` cells.  Under the following **display compression only** --
+primitive projectivization, reversal, and cyclic rotation of the printed
+ordered column list `(1,...,12)` -- representatives are
+
+```text
+v_small=(0,0,0,0,0,0,0,0,0,1,0,-1),
+
+v_large=(0,0,0,0,0,84919023,-829466001,7730416511,
+         829466001,-15630671068,0,7815335534).             (7)
+```
+
+The compression in (7) is not asserted to be a physical `C_13` deck
+symmetry; it only records the exact finite atlas compactly.  The small class
+has primitive height one and the large class height `15,630,671,068`.
+
+## 3. Two-clock signed tomography is exact and sharp
+
+Fix `s` and stack two clock matrices vertically:
+
+```text
+W_(s;ell,ell') = [ W_(s,ell) ; W_(s,ell') ].               (8)
+```
+
+For every `s in F_13^*`, at least one pair `{ell,ell'}` has exact rational
+rank twelve.  Since no one-clock matrix has rank twelve, the minimum number
+of clock charts is exactly two for every fixed `s`.
+
+Equivalently, with
+
+```text
+K_(s,ell)=ker_Q W_(s,ell) subset Q^12,                     (9)
+```
+
+a winning pair is exactly a transverse pair
+
+```text
+K_(s,ell) intersect K_(s,ell')={0}.                        (10)
+```
+
+The `12` labelled two-clock graphs on vertex set `F_7` have only three exact
+types.  For
+
+```text
+s in {1,3,4,5,8,9,10,12},                                 (11)
+```
+
+there are `18` winning pairs.  For each of the two classes
+
+```text
+{2,7},                 {6,11},                             (12)
+```
+
+there are `6` winning pairs, with the exact edge lists printed by the
+companion.  Over all `12*binom(7,2)=252` fixed-`s` clock pairs, the exact
+rank histogram is
+
+```text
+rank                         8   9  10  11  12
+pairs                        6  14  26  38 168.            (13)
+```
+
+In the cyclic adjacent subatlas,
+
+```text
+rank of W_(s;ell,ell+1)   9  10  11  12
+oriented pairs             8   6  10  60.                 (14)
+```
+
+Starting from a labelled clock and adding consecutive cyclic clocks, the
+first full-rank width has histogram
+
+```text
+width                       2  3  4
+starting cells              60 22  2,                     (15)
+```
+
+and width four occurs exactly at `(s,ell)=(2,5),(11,0)`.
+
+Full column rank in (8) gives a rational left inverse
+
+```text
+L_(s;ell,ell') W_(s;ell,ell')=I_12.                        (16)
+```
+
+This is the precise positive result: if one independently supplies a single
+root vector that is common to both charts, its two response tables determine
+it exactly.
+
+## 4. The inverse is necessarily signed
+
+There is a useful abstract criterion behind the computation.  If
+`A in R_(>=0)^(m x n)`, then
+
+```text
+there exists L>=0 with LA=I_n
+
+iff for every column j there is a row k_j with
+    A_(k_j,j)>0 and A_(k_j,i)=0 for every i!=j.             (17)
+```
+
+Indeed, if `L>=0` and `LA=I`, every off-diagonal zero forces every row used
+by the `j`-th row of `L` to vanish on all columns except `j`; the diagonal
+one forces at least one such private row to be positive at `j`.  Conversely,
+one normalized private row per column gives a nonnegative left inverse.
+
+This is the ordered-real analogue of THM-356's private-child witness
+criterion.  Full rank permits cancellation; a positive inverse requires
+private measurements.
+
+Equation (3) violates (17) maximally.  Every available row is positive in all
+twelve root coordinates, so no root column has a private row.  Equivalently,
+a nonzero nonnegative row combination is strictly positive in all twelve
+coordinates and cannot equal a coordinate row of `I_12`.  Therefore
+
+```text
+no stack of the available W_c has a nonnegative left inverse.              (18)
+```
+
+In particular every left inverse in (16) uses cancellation.  It is not a
+stochastic kernel, a Markov transport, a Boolean owner selector, or a positive
+physical correspondence.  This remains true even if all seven owner clocks
+are stacked.
+
+This is stronger than merely saying that the inverse is noncanonical: its
+sign is an invariant obstruction to interpreting the reconstruction as a
+positive root transition on the present carrier.
+
+## 5. Why disjoint clock charts do not form descent data
+
+The clock label `ell_4` in THM-2614 selects disjoint owner-clock strata of the
+physical base.  The vertical stack in (8) therefore has no common physical overlap
+on which to compare two root origins.  It proves injectivity of the formal map
+
+```text
+x |-> (W_(s,ell)x, W_(s,ell')x)                            (19)
+```
+
+for one vector `x` *assumed beforehand* to be common.  It does not prove that
+the two physical strata carry the same `x`, nor provide a transition map that
+could make them so.
+
+In a Cech-style analogy, the response family is jointly separating after two
+charts, but no physical presheaf or overlap isomorphism has been supplied and
+hence no descent datum follows.  Empty intersections make compatibility
+vacuous; they do not identify fibres.  In THM-2622's affine-holonomy language,
+(16) recovers coordinates after a frame has been imposed, while the affine
+translation/cocycle between frames remains absent.
+
+This is the promised holotopy distinction:
+
+```text
+two-chart coefficient tomography:  PROVED, exact, signed;
+common-carrier root transport:      NOT SUPPLIED.          (20)
+```
+
+This is the linear root analogue of THM-2356 and MISTAKE-261.  There, planar
+chirp data reconstruct a refined graph signal but independent graph phases
+prevent descent to the coarse physical target.  Here, two clocks reconstruct
+a root vector only after one declares it common across the clock label; the
+missing clock-overlap map is the corresponding phase/reference debt.  In both
+cases tomography is valid on the refined carrier and invalid after forgetting
+the label that made the reconstruction meaningful.
+
+## 6. Conditional wall-cospan comparison
+
+This section records a proved structural implication, not a dependency on
+the still-reserved THM-2623 guard computation.  Suppose a lawful Boolean wall
+bit refines each row of a fixed clock chart into nonnegative sectors
+
+```text
+W_(s,ell)=W^0_(s,ell)+W^1_(s,ell).                         (21)
+```
+
+Such a split is a genuine cospan *inside that fixed clock chart*.  It does not
+create an overlap between distinct `ell` strata in (8), so (21) alone cannot
+turn the signed two-clock inverse into affine descent data.
+
+The positive-inverse criterion (17) gives the exact second gate.  If **every
+nonzero** refined sector row still has support on at least two root columns,
+then no row is private and no nonnegative left inverse follows.  If a refinement
+does create one private physical row for every root column, it repairs the
+positive-tomography obstruction, but a chronological overlap/cocycle is still
+needed to identify the root origins of two disjoint clocks.
+
+Finally, raw Boolean tensors add in (21), while the predicate "the
+seven-clock Bockstein is a unit" is nonlinear.  Unit-support atlases therefore
+cannot be unioned or recombined without a separate exact calculation.
+
+Thus a common wall-edge name is not by itself descent data.  A successful
+sidecar must supply at least one of:
+
+1. a positive root-atomic row or selector, rather than another full-support
+   positive row;
+2. a lawful chronological overlap map identifying the same root state on two
+   clock strata; or
+3. an affine transition cocycle whose translations are physically typed and
+   satisfy the cycle law.
+
+This conditional test is the precise interface offered to THM-2623 and later
+wall refinements.  No numerical guard-sector census is asserted here.
+
+## 7. Exact evidence and scope
+
+Run
+
+```text
+python 04-computation/lrc14_two_clock_root_tomography_thm2624.py
+python -O 04-computation/lrc14_two_clock_root_tomography_thm2624.py
+```
+
+The companion rebuilds THM-2614's complete exact bank, divides only by its one
+global primitive content, checks all `12,096` mixed characters by exact
+cyclotomic reduction, and uses `Fraction` row reduction for every rank,
+kernel, two-clock edge, and consecutive window.  It checks every numerical
+claim with explicit optimized-mode guards.  Normal and optimized executions
+must byte-match the stored transcript after LF normalization.
+
+An independent immutable audit rebuilt the typed matrices from the proved
+unit rails, rechecked the global content, strict row positivity, exact
+cyclotomic criterion, all rational ranks and kernels, all `252` pair ranks,
+the consecutive-window census, and both directions of the private-row lemma.
+It also verified that the `ell_4` strata are physically disjoint and that
+Section 6 is purely conditional.  Normal and optimized runs byte-match the
+stored output, with the declared LF-normalized hashes.
+
+The theorem concerns the one canonical typed row and the collapsed integer
+matrices (2).  It does not assign unitness to a hidden sheet, retain one old
+root across clocks, build a principal `C_13` action, identify THM-2613's local
+root with THM-2585's next target, preserve semantic owner/repair provenance,
+exclude a scalar profile, or prove LRC(14).
+
+THM-2625 is transverse rather than a repair: its target difference and right
+endpoint are vectors in `F_13^2`, whereas this theorem's `q,r` are scalar
+target-section and deep-root labels.  Signed cyclotomic sector support does
+not provide a common clock root vector or a nonnegative left inverse.
+
+QED.

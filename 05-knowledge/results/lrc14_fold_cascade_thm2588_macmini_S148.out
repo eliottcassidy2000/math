@@ -7,28 +7,27 @@
   (certificate is a true lower bound; both clear 3/41)
 
 == (3) the certificate at ANY height: separated towers k = 7..12 ==
-  k= 7: v_max ~ 10^15, certificate = 0.139668 >= 3/41 = 0.073171: True
-  k= 8: v_max ~ 10^17, certificate = 0.161710 >= 3/41 = 0.073171: True
-  k= 9: v_max ~ 10^19, certificate = 0.199997 >= 3/41 = 0.073171: True
-  k=10: v_max ~ 10^21, certificate = 0.246269 >= 3/41 = 0.073171: True
-  k=11: v_max ~ 10^23, certificate = 0.333324 >= 3/41 = 0.073171: True
-  k=12: v_max ~ 10^25, certificate = 0.500000 >= 3/41 = 0.073171: True
+  k= 7: v_max ~ 10^15, certificate = 0.140709 >= 3/41 = 0.073171: True
+  k= 8: v_max ~ 10^17, certificate = 0.162918 >= 3/41 = 0.073171: True
+  k= 9: v_max ~ 10^19, certificate = 0.199978 >= 3/41 = 0.073171: True
+  k=10: v_max ~ 10^21, certificate = 0.244379 >= 3/41 = 0.073171: True
+  k=11: v_max ~ 10^23, certificate = 0.330818 >= 3/41 = 0.073171: True
+  k=12: v_max ~ 10^25, certificate = 0.496241 >= 3/41 = 0.073171: True
   THE APEX-7 WALL IS BROKEN in the separated regime (any k).
 
 == (4) per-k sharp cascade constants R_k (need 1/(14-k) - k/(2(R+1)) >= 3/41) ==
-  k= 1: body floor 1/13, R_k = 134 (ratio >= 134 suffices)
-  k= 2: body floor 1/12, R_k = 99 (ratio >= 99 suffices)
-  k= 3: body floor 1/11, R_k = 85 (ratio >= 85 suffices)
-  k= 4: body floor 1/10, R_k = 75 (ratio >= 75 suffices)
-  k= 5: body floor 1/9, R_k = 66 (ratio >= 66 suffices)
-  k= 6: body floor 1/8, R_k = 58 (ratio >= 58 suffices)
-  k= 7: body floor 1/7, R_k = 51 (ratio >= 51 suffices)
-  k= 8: body floor 1/6, R_k = 43 (ratio >= 43 suffices)
-  k= 9: body floor 1/5, R_k = 36 (ratio >= 36 suffices)
-  k=10: body floor 1/4, R_k = 29 (ratio >= 29 suffices)
-  k=11: body floor 1/3, R_k = 22 (ratio >= 22 suffices)
-  k=12: body floor 1/2, R_k = 15 (ratio >= 15 suffices)
-  k=13: body floor 1, R_k = 8 (ratio >= 8 suffices)
+  k= 1: body floor 1/13, critical ratio = 529/4, integer R_k = 133 (ratio >= 133 suffices)
+  k= 2: body floor 1/12, critical ratio = 487/5, integer R_k = 98 (ratio >= 98 suffices)
+  k= 3: body floor 1/11, critical ratio = 1337/16, integer R_k = 84 (ratio >= 84 suffices)
+  k= 4: body floor 1/10, critical ratio = 809/11, integer R_k = 74 (ratio >= 74 suffices)
+  k= 5: body floor 1/9, critical ratio = 1817/28, integer R_k = 65 (ratio >= 65 suffices)
+  k= 6: body floor 1/8, critical ratio = 967/17, integer R_k = 57 (ratio >= 57 suffices)
+  k= 7: body floor 1/7, critical ratio = 1969/40, integer R_k = 50 (ratio >= 50 suffices)
+  k= 8: body floor 1/6, critical ratio = 961/23, integer R_k = 42 (ratio >= 42 suffices)
+  k= 9: body floor 1/5, critical ratio = 1793/52, integer R_k = 35 (ratio >= 35 suffices)
+  k=10: body floor 1/4, critical ratio = 791/29, integer R_k = 28 (ratio >= 28 suffices)
+  k=11: body floor 1/3, critical ratio = 1289/64, integer R_k = 21 (ratio >= 21 suffices)
+  k=12: body floor 1/2, critical ratio = 457/35, integer R_k = 14 (ratio >= 14 suffices)
 
 == (5) T-A corner values, re-verified exact ==
    65 corner: M = 5/66 (agent claimed 5/66) OK

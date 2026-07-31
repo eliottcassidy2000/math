@@ -1,0 +1,20 @@
+QUARTIC HOMOGENEOUS ORIENTATION BOUNDARY AUDIT - exact
+edge invariants: P=8AC-3B^2; Q=B^3-4ABC+8A^2D; R=-3B^4+16AB^2C-64A^2BD+256A^3E; 4K=P^2-R
+edge sextic: V^6+P V^4+K V^2-Q^2; Disc=2^30*A^12*Q^2*Disc(f)^2
+matching blow-up: T(B^2+A*t)=A^3*U(t); U=t^3+8Ct^2+16(C^2+BD-4AE)t+64(BCD-B^2E-AD^2)
+leading conjugacy: U0(t)=-64B^2*h(-(t+4C)/(4B)); roots t_i=-4(C+B*alpha_i)
+natural coordinate: W=A^3*Omega; O=W^6+2H W^4-Q^2 I L W^2-Q^4 Disc(f)
+natural quotients: P^2+3R=64A^2 I; PR-9Q^2=16A^2 L; R^2-P^2R+12PQ^2=128A^2 H; rawJ=256A^3 J
+natural discriminants: Disc_(W^2)=Q^4*J^2*Disc(f); Disc_W(O)=2^6*Q^12*J^4*Disc(f)^3
+raw g-coordinate: G=Omega_Y=256A*W; Disc_G=(256A)^30*Disc_W; generic A-order=30
+raw A-orders: coefficients=(2,4,6); rawJ=3; cubicDisc=12; sexticDisc=30; edgeDisc=12
+A=0 edge=(V^2-B^2)^3; O0=W^6-2B^4I0 W^4+B^8I0^2 W^2-B^14 Delta3
+A=0 invariants: J|0=-B^6*tau3; 4I0^3-tau3^2=27B^2*Delta3
+generic quartic: roots=(-4,-1,2,6); (A,B,C,D,E)=(3,-9,-72,84,144); (P,Q,R,K)=(-1971,-2457,1131165,688419); Disc=166659897600
+generic edge roots: [-39, -21, -3, 3, 21, 39] multiplicity=4
+generic natural orientation roots: [-73710, -14742, -2268, 2268, 14742, 73710] multiplicity=4
+cubic ordered-pair control: roots=(-3,1,6); orientation roots=(-9,-5,-4,4,5,9); S3 regular; transposition=2^3; 3-cycle=3^2; signs agree
+boundary hostile x^3-x+1: edge triple-collapses; O0=W^6-6W^4+9W^2+23 is squarefree
+collision hostile x^4+x^2+4x-3: Disc=-22000; J=0; O=(W^2-1280)^2(W^2+14080)
+scope: A-orders are universal generic orders and may rise on B*I0*tau3*Delta3=0; the blow-up and residual are coordinate identities, not a Keller divisor gate
+PASS

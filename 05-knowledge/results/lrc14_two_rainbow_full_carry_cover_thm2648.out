@@ -1,0 +1,16 @@
+THM2648 TWO-RAINBOW FULL-CARRY COVER EXACT REFEREE
+relation_pairs=6084 matching_charts=12168 matching_edges=133848
+pair_classes={step_distinct:5070,step_matched:1014}
+atlas_chart_types={affine_all:11154,nonlinear_chosen:1014} degenerate_affine_controls=1014
+normal_form_holes={parallel_nonlinear:(3,12),antiparallel_nonlinear:(2,11)}
+affine_anchored_repair={distance2:0,distance3:2_each_normal_form,union:14}
+unrestricted_optimum={overlap:9,union:13,parallel:(0,2)|(6,9),antiparallel:(1,12)|(5,8)}
+same_hole_nonlinear_collision=parallel_holes_(6,9)
+every_pair_holes=disjoint every_pair_colour_union=13
+cover_multiplicity_census={one:24336,two:54756}
+cover_character_checks=73008_all_nonzero centered_energy=36/169
+chart_swap_checks=73008_all_nonzero C2_energies={even:9/169,odd:1/13}
+matched_three_chart={profile:1^2_2^2_3^9,energy:94/169,C3_each:4/117,checks:24336}
+edge_overlap_census={one:5070,eight:1014} retained_edges={21:5070,14:1014}
+matched_class=one_affine_plus_one_nonlinear
+PASS

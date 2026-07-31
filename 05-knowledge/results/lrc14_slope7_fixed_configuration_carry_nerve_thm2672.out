@@ -1,0 +1,19 @@
+THM-2640 common same-configuration physical overlap probe
+cells=84 content=26
+configuration=(cell,rail,sector,edge,kappa,h); carry_set={c: normalized seven-clock row is a THM2640 unit}
+physical_intersection=all translated rail supports AND all translated present F_(ell5,-h) factors AND aligned private deep half-tooth AND predecessor-carry/future-half-digit delayed word
+twelve_carry_configurations_tested=534
+missing_carry_hist=((0, 133), (6, 269), (12, 132))
+missing_delta_hist_at_c0_min=((11, 265), (12, 269))
+positive_twelve_carry_common_overlaps=534
+opposite_edge_prefilter=preserve (cell,h,kappa), use the unique root-zero carry, switch edge, and scan every rail/sector of that cell for a nonzero THM2640 unit
+opposite_edge_candidate_configurations=0/534
+opposite_edge_candidate_by_h=()
+opposite_edge_candidate_by_kappa=()
+opposite_edge_candidate_by_cell=()
+opposite_edge_candidate_strata=((cell,h,kappa,candidates,maximal_configs),...)=()
+raw_overlap_min_max_distinct_gcd_sum=(442778772135550408718160, 15728067643498917694609986, 168, 9646, 3906217098274809335852947294)
+first_positive=(((1, 0), 0, 0, 0, 0, 6, (0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12), 6, 5018707614055955700881000, 1038), ((1, 0), 0, 0, 1, 1, 6, (0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12), 6, 6544584452790156372640040, 1038), ((1, 0), 0, 1, 1, 0, 0, (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), 0, 3407930839411003344252996, 666), ((1, 0), 1, 0, 0, 0, 6, (0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12), 6, 3437069129022501205273040, 545), ((1, 0), 1, 0, 1, 1, 6, (0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12), 6, 2582584416235327950446000, 545), ((1, 0), 1, 1, 0, 1, 12, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), 12, 6968014508326624454277576, 1168), ((1, 0), 1, 1, 1, 0, 0, (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), 0, 6306134234488501580471304, 666), ((1, 1), 2, 0, 0, 0, 6, (0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12), 6, 7076267062593461627654760, 1500), ((1, 1), 2, 0, 1, 1, 6, (0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12), 6, 9474297865993204518714440, 1500), ((1, 1), 2, 1, 0, 1, 12, (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), 12, 7042512460678563092192514, 742), ((1, 1), 2, 1, 1, 0, 0, (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), 0, 6475275164710142494348554, 1036), ((1, 1), 3, 0, 0, 0, 6, (0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12), 6, 6087876636373083044613120, 964))
+base_component_count_hist=((95, 2), (121, 2), (424, 2), (447, 2), (493, 9), (545, 20), (598, 9), (640, 9), (666, 19), (742, 10), (964, 20), (986, 27), (988, 18), (990, 18), (1010, 9), (1012, 9), (1034, 18), (1035, 10), (1036, 10), (1037, 20), (1038, 20), (1061, 9), (1069, 20), (1072, 20), (1086, 18), (1116, 9), (1118, 9), (1127, 30), (1130, 9), (1168, 10), (1183, 19), (1202, 10), (1274, 19), (1352, 19), (1466, 9), (1500, 12), (1522, 10), (1620, 9), (1670, 10), (1673, 10), (1692, 10))
+fixed_configuration_upper=for fixed edge/root branch and every nonzero base root r0, (r0+delta)_(delta in F13)=F13 with one zero; one fixed configuration therefore has multiplicity <=12
+scope_boundary=the adjacent left/right half-tooths overlap, so configuration switching can change root at the missing label; this census does not bound the full union-labelled chart nerve

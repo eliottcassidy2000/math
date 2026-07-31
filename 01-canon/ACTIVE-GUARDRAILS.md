@@ -1,6 +1,6 @@
 # Active Guardrails
 
-**Short hazard sheet — refreshed 2026-07-24.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
+**Short hazard sheet — refreshed 2026-07-28.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
 
 ## Universal
 
@@ -20,39 +20,19 @@
    later multiple can supply a missing residue before pruning it.
 10. **Local six-comb returns are saturated.** A charge without phase,
     location, endpoint, or child data repeats THM-1252--1274 extremals.
-11. **HYP-8815 is not a disproof characterization.** Primitive Cover14,
-    `M<1/14`, and non-AP deletion are necessary; near-AP, anti-golden, CF, and
-    autocorrelation claims remain heuristic. THM-731/2048 only prune.
-12. **Complete local coordinates need not be global carriers.** THM-2043/2050
-    require owner height and a global first-exit/magnitude/gluing sidecar.
-13. **The BONF5 middle is closed; relation branches are not.** THM-2051 forces
-    a support-`3..5`, height-`2^20` relation. It does not classify its
-    hyperplanes or the AP boundary.
-14. **A bad deck, disk, or Farey ray means uncertified—not unsafe.** THM-2053/
-    2055/2056 are sufficient gates. Keep basis, non-hull runners, tie owners,
-    clocks, pair sums, and endpoints. No Heegner form (MISTAKE-229).
-15. **THM-2057 closes two planes; THM-2059 joins packets.** CRT zero rejects
-    one clock grid, not the row; no uniform selector follows.
-16. **THM-2058 is a carrier, not LRC(14).** It gives reduced-order packets,
-    labelled transport, trichotomy, and one coprime interval per fixed cell;
-    it does not discharge that interval.
-17. **THM-2060/2064 give capacity, not signed ownership.** The sheet order is
-    `a/gcd(a,w)` and the strict union bound is sufficient. Equality `(2,2)` is
-    the dyadic residual, not evidence of failure.
-18. **THM-2061 is a reduction, not an empty-seam theorem.** Closed core safety
-    and open tail teeth are load-bearing; `max(C)<=19` leaves the signed seam.
-19. **THM-2062 filters heredity, not phase height.** A fixed `N` wheel may die
-    at `p=2`, while global primitive-direction density stays positive.
-20. **THM-2065 is PROVED only as a reduction.** Circuit-free strict residuals
-    become finitely many rays; persistent height-`2^20` marked circuits remain.
-21. **THM-2066 is a bounded closure.** Its owner-word atlas closes primitive
-    divisor-complete eleven-cores through maximum `24`, not unbounded cores or
-    every lower-cardinality terminal.
-22. **THM-2068 is menu-relative.** Seven clocks are minimum inside `15..34`;
-    this is not a universal owner-clock bank.
-23. **No fixed finite bank is uniform.** THM-2072's common-multiple core proves
-    sensor blindness, not mathematical hardness. Its antipodal/quarter-fan
-    certificates close only their stated subclasses.
+11. **HYP-8815 is not a disproof characterization.** Primitive Cover14, `M<1/14`, and non-AP deletion are necessary; near-AP, anti-golden, CF, and autocorrelation claims remain heuristic. THM-731/2048 only prune.
+12. **Complete local coordinates need not be global carriers.** THM-2043/2050 require owner height and a global first-exit/magnitude/gluing sidecar.
+13. **The BONF5 middle is closed; relation branches are not.** THM-2051 forces a support-`3..5`, height-`2^20` relation; it does not classify its hyperplanes or the AP boundary.
+14. **A bad deck, disk, or Farey ray means uncertified—not unsafe.** THM-2053/2055/2056 are sufficient gates. Keep basis, non-hull runners, tie owners, clocks, pair sums, and endpoints. No Heegner form (MISTAKE-229).
+15. **THM-2057 closes two planes; THM-2059 joins packets.** CRT zero rejects one clock grid, not the row; no uniform selector follows.
+16. **THM-2058 is a carrier, not LRC(14).** It gives reduced-order packets, labelled transport, trichotomy, and one coprime interval per fixed cell; it does not discharge that interval.
+17. **THM-2060/2064 give capacity, not signed ownership.** The sheet order is `a/gcd(a,w)` and the strict union bound is sufficient. Equality `(2,2)` is the dyadic residual, not evidence of failure.
+18. **THM-2061 is a reduction, not an empty-seam theorem.** Closed core safety and open tail teeth are load-bearing; `max(C)<=19` leaves the signed seam.
+19. **THM-2062 filters heredity, not phase height.** A fixed `N` wheel may die at `p=2`, while global primitive-direction density stays positive.
+20. **THM-2065 is PROVED only as a reduction.** Circuit-free strict residuals become finitely many rays; persistent height-`2^20` marked circuits remain.
+21. **THM-2066 is a bounded closure.** Its owner-word atlas closes primitive divisor-complete eleven-cores through maximum `24`, not unbounded cores or every lower-cardinality terminal.
+22. **THM-2068 is menu-relative.** Seven clocks are minimum inside `15..34`; this is not a universal owner-clock bank.
+23. **No fixed finite bank is uniform.** THM-2072's common-multiple core proves sensor blindness, not mathematical hardness; its antipodal/quarter-fan certificates close only their stated subclasses.
 24. **The dyadic tower is lossless but still open.** THM-2073's internal
     depth-eight bound is superseded: THM-2075/2077 retain terminal components,
     addresses, endpoint owners, and outer tails; THM-2078 forces maximum
@@ -87,11 +67,28 @@
     THM-2187/2193 force rank seven; THM-2196/2199 force rank twelve but do not enumerate its finite box. THM-2203 closes scalar transport only in dyadic rank eight. THM-2250/2257 empty final depth-three `(3,4,5)`, leaving exactly `165` first-depth-one rows. THM-2349 now puts all `165` on one delayed marked-current/inverse-correlation frontier, but excludes no row; cross-axis noncancellation, all-unit visibility, and phase transport remain. None proves LRC(14).
 27d. **Refined graph activity is not coarse target landing.** MISTAKE-261: THM-2356 reconstructs each planar graph only up to its own phase, while the THM-2334 target is the cross-graph row sum. Its zero-only kernel has dimension `28,393`; vertical tensors form only the `169`-dimensional refined-zero subspace.
     THM-2363 is a derived coefficient detector with `D_graph >= E_coarse/169`, not a converse or a lawful physical probe. MISTAKE-260 separately forbids recovering an anchored nonzero-mode sum from an unordered inverse-root count.
-
+27e. **Formal clock paths are not chronology; the inherited `D` path is
+    closed.** THM-2670 forgets witnesses.  THM-2680 restores them and finds
+    `146/252` formal but only `10` physical triples; THM-2682 leaves two-event
+    products but kills every three-event product.  THM-2684's `324` rails have
+    one three-tooth envelope and clock-diagonal raw returns; reflection changes
+    labels, not cylinders.  THM-2689 restores support without global clocks,
+    THM-2691 closes the depth-six central lift, and THM-2693's positive
+    three-event lift still has empty inherited word at four.  THM-2701/2710
+    make the unshifted/half literal languages nilpotent by six; THM-2707's SCC
+    is support, not semantic current.  The `BABA` debt `A->2B` is erased by
+    Boolean/mod-two views.  Change phase, guard, slope, word, or edge—not only
+    the carry alphabet.  No row is excluded.
+27f. **A disconnected label nerve is not physical Cech topology.** THM-2672 has twelve-fold components on all `534` maximal fixed configurations; THM-2687 restores a `12/13` cap after edge switching.
+    Carry-forgetting still turns thirteen disjoint `Delta^11`s into a false
+    `boundary Delta^12`; do not infer endpoint emptiness or export the cap.
+27g. **Copies are not common atoms.** THM-2806 has bare-only `D3`/empty `M`; THM-2818's positive copies fail native/source/endpoint sidecars. Neither pays THM-2772.
+27h. **A generator-valued endpoint germ is not a physical allocation action.** THM-2825's `+h/+2h`, `M_3 tensor I_587`, and punctured `V_4` cross absent/present source carrier; the missing corner cannot permute a `573/14` bank.
+    THM-2859 finds one decorated `Z^8` endpoint arrow, but the complete 685-path forest realizes only labels `{0,4,8,9}` and its 98 rootless paths supply none. No `C13` action/intertwiner, q/E3 descent, rank-587 base object, row exclusion, or LRC(14) follows.
 ## NC2 / GMC
 
-28. **Scalar moments do not separate return atoms.** MISTAKE-211; use a
-    whole-face theorem or genuinely independent data.
+28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211/THM-2631;
+    THM-2639 survives nonlinearly, but THM-2815's positive splitting still does not make a zero scalar sum nodewise or termwise.
 29. **Tournament dominance is sufficient, not iff.** MISTAKE-212.
 30. **Vandermonde nodes are not tournament scores.** MISTAKE-214; repeated
     nodes do not imply a Paley/regular wall.
@@ -138,8 +135,8 @@
     convention-safe `beta_1/beta_2` results as canon pending the court case.
 44. **Equal ranks do not identify lattices.** MISTAKE-227: the AP chain has
     saturation index `11!` and is not THM-2052's signed code.
-45. **Small-prime Paley spectra assign no LRC roles.** MISTAKE-228. Fibonacci,
-    apex, rank, and tight/slack labels remain heuristics without a map.
+45. **Small-prime Paley spectra assign no LRC roles.** MISTAKE-228. Fibonacci, apex, rank, and tight/slack labels remain heuristics without a map.
+45a. **Six-edge ambient parity is not quartic parity.** THM-2753: the faithful `S4` action on `E(K4)` lies in `A6`, and transposition/double-transposition one-generator cycle types collide; the three matchings restore sign through `S4/V4=S3`. Retain the opposition/address sidecar, but the full subgroup orbitals do recover it.
 
 ## Sequences and cross-domain transfers
 
@@ -167,24 +164,26 @@
     moments, and diagonal energy have different weights and constraints.
 57. **Fiber size is observable-relative Hartley ambiguity.** MISTAKE-230/231;
     no universal Shannon law follows without a probability model.
-58. **The binary symmetric Hessian is not full JC(2).** MISTAKE-237: the exact
-    homogeneous binary calculation lands in THM-2063, but the general target
-    has four variables and no NC2/GMC-to-JC chain.
+58. **Restricted kernels are not full JC(2).** MISTAKE-237/THM-2801: full
+    `SIC(n>=2)` is false, but Zhao's cubic/Hessian sectors remain open.  Do not
+    reverse SIC-to-JC, confuse operator `E_n` with scalar `F_n`, or erase `SIC(1)`.
 59. **THM-1330 is a necessary atlas, not a classification.** MISTAKE-236;
     inverse realization and irreducible Keller seeds remain open.
-60. **THM-2071 closes the quadratic-fiber locus, not JC(2).** Centered parity
-    and pole noncancellation force the square factor constant and the reduced
-    complement fiber-linear, hence tame. Survivors have fiber degree at least
-    three; THM-2084's cubic lower bound is likewise a source-fiber statement,
-    not generic cover degree, Jelonek geometry, VC(4), or full JC(2).
-61. **Spectral/factor-support walls are not JC(2).** THM-2202 removes every
-    twice-odd finite pole; THM-2214 closes only nonsplit terminal degrees
-    `2,6,10`, and THM-2217 gives only an odd-leading factor-support inequality. Split/even descent, other short edges, `JC(2)`, and `DC(2)` remain open.
-62. **Safe-torus mass is not primitive-line recurrence.** THM-2193 gives a uniform Haar floor and many septimal torsion points, while its THM-2188
-    factorization preserves these across opposite primitive-slope outcomes.
+60. **THM-2071 closes the quadratic-fiber locus, not JC(2).** It makes the
+    reduced complement fiber-linear; THM-2084's cubic floor is also a source-
+    fiber statement, not generic degree, Jelonek geometry, VC(4), or JC(2).
+61. **Closing every complete chosen-sheet split exact-prefix degree is not JC(2), and a response count is not response existence.** THM-2778 closes the complete chosen-sheet split polynomial exact-square-prefix terminal family for all `M=4k-2`; THM-2671/2683/2692 separately close the inherited nonsplit degree-22 branch. THM-2781 proves the sharp universal `d-1` terminal-coefficient perfect-power certificate, but does not construct or prove constancy of the needed observables.
+    These exhaust only their stated quartic charts. THM-2784 handles squarefree `V`; THM-2796 classifies balanced `e<=1` but not the degree-26 bank or `e>=2`. Full-chart intersection, nonpolynomial prefixes, chart entry, other source-fibre branches, raising/descent, `JC(2)`, and `DC(2)` remain open.
+62. **Safe-torus mass is not primitive-line recurrence.** THM-2188/2193
+    preserve Haar mass across opposite slopes, not a primitive recurrence.
+63. **Degree-four `D4` is excluded, but not by Smith.** THM-2633 gives `normal_closure_G(H)=G` and `1<=k_D<=d-1`, leaving only `A4,S4`; retain old `D4` ledgers as hostiles and never reuse MISTAKE-297's deck extension.
+64. **A resolvent discriminant is not its Kummer carrier.** THM-2655 forces the live quartic `V4` kernel into a quasi-etale torsor on the full Galois resolvent normalization. THM-2685's even-weight divisor code is the exact extension gate: test all boundary rows, unit squareclasses, and `Cl(R)[2]`; do not transfer grade-three Keller anatomy from a shared discriminant or one non-Galois root field. THM-2696 excludes proper reflection quotients and its constant-different slice, not arbitrary `S4`.
+    THM-2703/2708 compute the required standard-plane multiplicity by a moving-arm mod-two kernel or an `F4` Hermitian gain nullity; boundary relations, exceptional units outside the full-rank scope, and geometric realization remain.
+65. **The actual THM-1310 field is excluded only as an exact `S4` resolvent.** THM-2681 identifies its full normalization on `g!=0` with `G_m x A^2`, whose procyclic etale fundamental group has no `V4` quotient. This survives polynomial target automorphisms or an explicit base-ring identification, not arbitrary birational transport. Shared `-L`, cusp/Jelonek, odd-valuation shadows, unrelated `S3` fields, and the quartic `A4` branch remain open.
+66. **Invariant Kummer vanishing is not total vanishing.** THM-2686 gives
+    `H^1(R_reg,mu_ell)^Q=0` in coprime degree; at `(2,C3)` it removes trivial
+    lines but permits standard planes.  Nonvanishing is only the abstract `A4` carrier gate; test units/`Cl[2]` and retain actual versus abstract torsors. THM-2704's split even-Faber genus `89` is generic and all-one, not uniform: an exceptional rational member must gain at least `89` delta, become reducible/nonflat, or leave the chart, and the eleven odd seeds are absent.
 
 ## Promotion checklist
-Audit types, quantifiers, dimensions, symmetries, logical direction, quotient
-loss, hostile controls, dependencies, correction lineage, and optimized versus
-ordinary replay. Preserve every false claim's witness, first failed step,
-surviving mechanism, repaired statement, and next question.
+Audit types, quantifiers, symmetries, direction, quotient loss, hostiles,
+dependencies, correction lineage, both replays, and every failure boundary.

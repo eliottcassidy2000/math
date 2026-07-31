@@ -1,0 +1,12 @@
+THM-2906 exact mixed-endpoint holonomy no-go
+atomic_positive_cells=31
+endpoint_polynomial=degree_5_5;terms=30;positive=13;negative=17
+selected_coefficients=273888,-5839200,5559264,-82033920
+endpoint_polynomial_sha256=ecdc5d1d5cdc752c4c0a618cf0e9f69234b3026ffb5384acb4c30c2e07c2ac30
+cell_1_1=g(30,37,46);rL=73097746/75;rR=515413080/529;J=610878432
+cell_1_1=I(141000,169320);TP3(36467293512,86548240800)
+cell_1_2=g(30,61,126);rL=142883488/75;rR=120168140/63;J=-33115086144
+cell_1_2=I(957960,2436120);TP3(36467293512,2255452579800)
+quotient_endpoint_derivatives=2rL,2rR
+missing_predicate=simultaneous_cubic_nullity
+all_exact_checks=PASS

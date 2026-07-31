@@ -1,0 +1,12 @@
+THM-2740 POLYNOMIAL-COORDINATE FIRST-TARGET AUDIT
+generic_degree4_coefficients=15 free_G_coefficients=5
+coordinate_identity=Jac(A,V)=2*dV/dx_at_fixed_t
+generic_solution=V=kappa*x/2+G(t)
+nonlinear_coordinate_control=U=x+y^2 kappa=7 inverse=PASS
+mixed_H=-d^2+2d+A^3+2A
+mixed_sections=(-x-y,y-x+2) common_target=YES kappa=-4
+mixed_triangular_inverse=PASS
+zero_response_boundary=PASS
+characteristic3_hostile=(x,y+y^3) Jacobian=1 degree=3
+nongraph_and_noncoordinate_first_targets_not_tested
+PASS

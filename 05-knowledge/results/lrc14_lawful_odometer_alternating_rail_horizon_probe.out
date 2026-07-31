@@ -1,0 +1,15 @@
+LRC14 lawful odometer alternating THM2584 rail-horizon probe
+scales=P:13 R:4826809 S:371293 lift_magnitude:371294 quotient_steps=(11, 2)
+cycle=(plus:4879851/9653618,minus:4773767/9653618) amplitude=26521/4826809
+cycle_stored_edges=((4,3),(3,4)) interfaces_glue=True
+selected_keys=((6, 1, 3, 0), (6, 1, 4, 12)) selected_source=1 local_weights=(27580222516, 27580222516)
+local_rail_intervals=((Fraction(1195, 2366), Fraction(171, 338)), (Fraction(167, 338), Fraction(1171, 2366)))
+local_shallow_intervals=((Fraction(1, 2), Fraction(93, 182)), (Fraction(89, 182), Fraction(1, 2)))
+one_sided_margins=(outer:14281/33787663,inner:2040/4826809)
+arbitrary_horizon_law=H-event component length 1/(7*13^(H+1)); last pulled-back rail is binding
+sample_horizon_components=((1, (Fraction(1195, 2366), Fraction(171, 338)), Fraction(1, 1183)), (2, (Fraction(63433983, 125497034), Fraction(444095003, 878479238)), Fraction(1, 15379)), (3, (Fraction(5772835171, 11420230094), Fraction(824698899, 1631461442)), Fraction(1, 199927)), (7, (Fraction(164878761049651, 326173191714734), Fraction(23554108729539, 46596170244962)), Fraction(1, 5710115047)), (12, (Fraction(8745475691001844407, 17300831838762675866), Fraction(61218329837012967971, 121105822871338731062)), Fraction(1, 2120125746145771)))
+direct_H3_coefficients=(0, -371294, -4455528) components=1 weighted_grid_numerator=5281862026471789144215385912817309094005760
+independent_routes=128 exact local inverse-cylinder intersections plus literal H3 weighted common-grid fibre agree
+infinite_horizon_boundary=repelling cycle singleton only; no uniform positive open interval
+transported=THM2584 b-word depth-five product profile,source displacement,arrival,owner,deep label; explicit shallow clock
+not_transported=THM2640 present factor,delayed sector/clock word,predecessor carry,private edge/root,primitive unit,semantic transition,row exclusion,LRC14

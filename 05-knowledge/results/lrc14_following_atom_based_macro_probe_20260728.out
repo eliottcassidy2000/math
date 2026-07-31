@@ -1,0 +1,14 @@
+LRC14 FOLLOWING-ATOM-BASED PHYSICAL MACRO AUDIT
+p=13 R=4826809 I=(960117507257/1930018885886,324519717452867/652346383429468) length=1/652346383429468
+following_atom=rail=(1, 0, 12) future=1 j=2 h=6 epsilon=1 kappa=1 mass=867661831383617727737280
+packet_addresses=3346 atom_endpoints=304 transit_packets=3042
+atom_endpoint_residue_counts=((0, 304),)
+atom_endpoint_characterization=midpoint_atom=whole_open_I_atom=packet_residue_0
+reduced_atom_modulus=371293 runs=35 clock_centres=(0, 53041, 106083, 159125, 212167, 265209, 318251) cluster_sizes=(41, 44, 45, 45, 44, 43, 42)
+clock_centre_base13_words=((0, 0, 0, 0, 0), (1, 11, 1, 11, 1), (3, 9, 3, 9, 3), (5, 7, 5, 7, 5), (7, 5, 7, 5, 7), (9, 3, 9, 3, 9), (11, 1, 11, 1, 11))
+clock_tooth_offsets=(((0, 8), (13, 32), (37, 43), (319, 322), (326, 326)), ((0, 9), (13, 33), (38, 44), (319, 323), (327, 327)), ((0, 9), (13, 33), (37, 44), (319, 323), (327, 327)), ((0, 9), (13, 33), (37, 44), (319, 323), (327, 327)), ((0, 9), (13, 33), (37, 44), (319, 322), (327, 327)), ((0, 8), (13, 33), (37, 44), (319, 322), (327, 327)), ((0, 8), (13, 32), (37, 44), (319, 322), (327, 327)))
+atom_to_transit_edges=924768 transit_to_atom_edges=924768 two_step_atom_macros=281129472
+canonical_loop=0->1->0 signed_lift_numerators=(7, -7) positive_representatives=(7, 4826802) phase_sum=0
+canonical_descent=0->1->13 signed_lift_numerators=(7, 84) total=91 depth5_numerator=7 midpoint_independent=True
+scope=whole-I fixed-atom support macro;no_target_action;no_relation-index-identification;no_semantic_endpoint_current
+ALL CHECKS PASSED

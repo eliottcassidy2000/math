@@ -1,0 +1,20 @@
+THM-2890 DISCRETE-NEWTON STRICT LOW-WEDGE CLOSURE
+status=PROVED+VERIFIED-EXACT
+high_selector_content=positive(n)*Gram; discriminant=-4*(2n+3)
+low_invariant_profiles=(b5,a3,n8,153);(b5,a4,n7,136)
+resultant_factor_profile=[(0, 1, 2, 2), (0, 1, 3, 2), (0, 1, 3, 2), (0, 1, 18, 2), (0, 5, 1, 6), (0, 10, 1, 11), (1, 0, 2, 1), (2, 5, 1, 18), (4, 4, 1, 25), (15, 22, 1, 368)]
+positive_factors=n-only,a-boundary,Q4
+Q2_n_ge_2=18/18 shifted coefficients positive
+Q2_n1=(109*a^2-435*a-595)/109;saturated_residual_degrees=(4,4);norm_nonzero
+Q2_n1_saturation_sha256=efb3a831ee7a5d2429e1e48919a2397702bdd85c524df1db6fe255ab27823e76
+R15=degree_n:22,degree_a:15,terms:368
+R15_monomial_hostile=raw:326+/42-;shift_n=m+1:364+/4-
+R15_sha256=c9c35f414c1411800080d561e8df2b7ebedab505414275021bf15ed858b3e81d
+Newton_rows=23;D0..D21=strictly_positive_on_a>0
+D22=1024*22!*(a+2)^6*(a+3)^3*(a^2-12a-36)^2*(7a^2+24a+18)>=0
+Newton_sha256=b9f87fb39354603d3976a538e2f82510433decd38e7ece8230cb472885c8db63
+fixed_positive_root_counts={1: 0, 2: 0, 8: 0, 64: 0}
+consequence=no cubic-divisible strict low wedge for any integer n>=1
+composition=with THM-2879, all three strict consecutive cone-cutting wedge charts miss a shared cubic-quartic line
+scope=strict consecutive wedges only; boundaries and the general mixed four-slot branch remain open
+all_exact_controls=PASS

@@ -1,0 +1,39 @@
+THM741_LABEL1_HEAD_TAIL_PARTITION
+optimization_modes=normal_and_O_share_truth_gates
+python=3.10.0
+core_sha256=5aa81d9d78273c8f9e3e7a6574091a3bc3f64ab6086c7024c15f9420c99dac96
+finite_universe=15..2500; tail=2501..infinity
+root_universe=12,13,14,15,16,17
+tail_cap=m/7+(99/70)r/(7w)
+coverage_paths=sparse_subtract,full_subtract,direct_union,tooth_incidence
+candidate_paths=specialized_ranked_loops,generic_upper_envelope_recursion
+root=12 r=32 m=319927/2522520 top2=23:453587/11603592,46:212279/5801796 tail_cap_2501=182859895/8832351528 two_tail_margin=4947963661/507860212860 top4_hostile=-3653017/275585310
+root=12 dangerous_triples=1 recursive_nodes=4 speeds=19,23,46 min_tail_margin=71621894273/1608224007390 min_tail_at=19,23,46 residual_m=29780131/551170620 residual_r=22
+root=12 head_quadruples=2589 recursive_nodes=2614 min_survivor=17069726431/693372639960 min_at=17,19,23,37 components=16
+root=12 coverage_manifest=5011d9d975e9d6858e2f54aa4f2b3736fc0d72b330021f5f748ee9d539dff0f5 triple_manifest=b407e9ed61b369129cc81bdf2c0fd44e7336d6a72efd91366be5f4ffce3008dd quad_manifest=2e2574f8f0eb18958feb97f1da1ebdaadbc695bc51f262ab1b695494dd2706bc
+root=13 r=30 m=3319/25740 top2=23:453587/11603592,17:67493/1786785 tail_cap_2501=65750513/3154411260 two_tail_margin=25633591579/2466749605320 top4_hostile=-25012943/1249320072
+root=13 dangerous_triples=6 recursive_nodes=12 speeds=17,19,23;17,19,46;17,21,23;17,23,46;19,21,23;19,23,46 min_tail_margin=34858373223/959291513180 min_tail_at=17,19,23 residual_m=958105/21917896 residual_r=14
+root=13 head_quadruples=7609 recursive_nodes=7642 min_survivor=48080163/2027405380 min_at=17,19,23,37 components=16
+root=13 coverage_manifest=b75802caecacca8b43a4b01040e80ba79ff18c9178ea1ed60cee6228dba283dd triple_manifest=c9864972896330c6b7218bdda6ba1d5ba400d25a4de5b2b7be6b1486025bf7fc quad_manifest=352972a15489feee86199beba567a1d73cfc0d33823efcea11434d047c71dd22
+root=14 r=30 m=335047/2522520 top2=23:240307/5801796,17:135481/3573570 tail_cap_2501=944979467/44161757640 two_tail_margin=61555969441/5755749079080 top4_hostile=-50908597/3747960216
+root=14 dangerous_triples=1 recursive_nodes=4 speeds=17,19,23 min_tail_margin=1865084760919/54679616251260 min_tail_at=17,19,23 residual_m=154798927/3747960216 residual_r=16
+root=14 head_quadruples=2581 recursive_nodes=2604 min_survivor=162578519/7415750160 min_at=19,23,32,37 components=16
+root=14 coverage_manifest=365498ca72dec323a18c511d18cdaa845f41e5846c97b3e6530a335d0342cc36 triple_manifest=ceccc28c4d61439997cf3ba87cf1d0234e716f47c54ccea4ff8b9d6ca3fa35c6 quad_manifest=9e02f456eda2f955a3a3cb0c462011cf6ae498b77d319bf8b9dbd1b4ab93e23d
+root=15 r=26 m=6716/45045 top2=23:41075/892584,19:36649/798798 tail_cap_2501=527231/22531509 two_tail_margin=9555282629/918985147080 top4_hostile=-68144053/3747960216
+root=15 dangerous_triples=4 recursive_nodes=7 speeds=17,19,23;19,23,25;19,23,38;19,23,46 min_tail_margin=15348916166/365505456225 min_tail_at=19,23,25 residual_m=6349621/125266050 residual_r=18
+root=15 head_quadruples=7290 recursive_nodes=7320 min_survivor=544970477/18539375400 min_at=19,23,25,37 components=16
+root=15 coverage_manifest=7794967988d1961970f1c796c3d955e85ab4ef0cb2cc712621fe32d69afc1d43 triple_manifest=fb061c2d737aaedfb28ba26e643f7632efba1df27b82d8b15acecb844d28c168 quad_manifest=7f34243d912fb4bf39a28a3c511377b0ccdaccb445778bed893bfb38a05a7037
+root=16 r=30 m=365567/2522520 top2=19:377149/7987980,23:47539/1054872 tail_cap_2501=1021309987/44161757640 two_tail_margin=15408825262/2412336011085 top4_hostile=-6867281/312330018
+root=16 dangerous_triples=6 recursive_nodes=10 speeds=17,19,23;17,19,46;19,21,23;19,23,25;19,23,38;19,23,46 min_tail_margin=156275963542/4556634687605 min_tail_at=17,19,23 residual_m=6484031/156165009 residual_r=16
+root=16 head_quadruples=7522 recursive_nodes=7556 min_survivor=1707671939/77041404440 min_at=17,19,23,37 components=16
+root=16 coverage_manifest=a67a83cd28f9f06d07d52f70944506cea9694cfdba9b70cc52a7c515036998ce triple_manifest=ec6715015f524723afb2c7af2efe1de315b59ab3ad40c1648b8d1041f2c5155b quad_manifest=4928a466aa690a73ed1bb8f1a2f6242e7264d917b8bc505fb46fc48e8fcf15f3
+root=17 r=22 m=384011/2522520 top2=19:128503/2662660,23:25331/552552 tail_cap_2501=1038897919/44161757640 two_tail_margin=106901554667/9649344044340 top4_hostile=-228625/11639628
+root=17 dangerous_triples=3 recursive_nodes=6 speeds=17,19,23;19,23,38;19,23,46 min_tail_margin=12865251479/300437451930 min_tail_at=17,19,23 residual_m=1052099/20593188 residual_r=12
+root=17 head_quadruples=5087 recursive_nodes=5112 min_survivor=13420153/455992020 min_at=17,19,23,31 components=16
+root=17 coverage_manifest=d7683b3db66169e0da59febc8c949994b31be3d72c04f3ba9458fa2f54ea88e9 triple_manifest=0e150e74a2b1ceab8b5d1cf82e6a58a82f3e65dd95b659d1cf12cc66b977e75c quad_manifest=3045929547d2a7cc78a1226e588916a30f5e9662cae19a672942265658ecd61a
+combined_manifest=556e997f0fb7b270943611ab560ce72a32f077c97ed3e6354da8d6176d2c76e4
+partition_complete=6/6
+combined_flood_census=21/21
+global_THM741=OPEN
+LRC14=OPEN
+THM741_LABEL1_HEAD_TAIL_PARTITION_OK

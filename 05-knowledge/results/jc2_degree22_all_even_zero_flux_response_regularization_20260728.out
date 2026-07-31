@@ -1,0 +1,21 @@
+DEGREE22 ALL-EVEN ZERO-FIRST-FLUX RESPONSE REGULARIZATION
+even_degrees=2,6,10,14,22
+local_orders=1,2,3,4,6
+common_face_invoice=(22-m)+4*k_m=24
+all_m_4ell_plus_2_control=m_2_through_38:q3,orders,gcd,pure_terms
+P_infty_top_degree6_gcd=1
+universal_h0_boundary=P_infty_plus_five_transverse_coarse_points
+five_smooth_points=R22_nonzero
+unequal_subfour_slopes_killed_by=Psi22_pure_q6_and_s6
+D2=0
+D6=-q**3/4
+D10=5*q**3*s/8
+D14=7*q**3*(d*q**2 - 5*s**2)/32
+D22=-33*q**3*(6*d**2*q**4 - 84*d*q**2*s**2 + 3*q**4*s + 70*s**4)/1024
+homogeneous_identity=R25+(d/2)F23=sum_even_a_m*h^(22-m)*D_m
+branch_valuation=min(vq,vs)>=4*v(h)
+on_F23_zero:v(R25)>=28*v(h)>25*v(h)
+P_infty_response=regular_and_vanishing
+smooth_prefix_resultant=-76608*omega**6
+all_even_zero_flux_edge=componentwise_empty_subject_to_projective_argument
+PASS

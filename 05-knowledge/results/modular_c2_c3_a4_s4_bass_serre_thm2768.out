@@ -1,0 +1,16 @@
+MODULAR C2-C3 / A4-S4 BASS-SERRE AUDIT
+A4_triangle_orders=(2,3,3) quotient_order=12
+S4_triangle_orders=(2,3,4) quotient_order=24
+A4_kernel=torsion_free_F3
+S4_kernel=torsion_free_F5
+A4_bass_serre_vertices=(6_C2,4_C3) edges=12 beta1=3
+S4_bass_serre_vertices=(12_C2,8_C3) edges=24 beta1=5
+A4_degree2_suppression=K4 isomorphisms=24
+S4_degree2_suppression=cube isomorphisms=48
+matching_kernel=V4
+A4_over_V4=C3 binary_generator=collapsed
+S4_over_V4=S3 binary_and_ternary_generators=retained
+A4_V4_preimage=C2*C2*C2 with kernel_F3
+S4_V4_preimage=F2 with kernel_F5
+SCOPE=finite_quotients_of_C2*C3_not_identifications_or_JC2
+FAILED CHECKS: NONE

@@ -1,0 +1,16 @@
+THM-2929 EFFECTIVE HIGH-GAP CUBIC-NULL CUTOFF
+dependency=THM-2914:57e796b1d5115080939b9d19f35d95e1b5de584d632335fbcfd6105267270c8c
+box=[217/100,221/100]x[245/100,249/100];map=G=(D F_inf(219/100,247/100))^-1*F_R
+positive_selector=u_in_(15069319,15069320)/10^6;unique_positive_quadrant;inside_box
+finite_R=13..19;oriented_faces>1/160;contraction<1/5;J/H>19
+finite_counts=faces:160;contraction:560;endpoint:252
+finite_certificate_digest_sha256=3f760cd9dff45ec3064b323623ff0876cbb641f9e637703509fd7d5e5f5af0c7
+R12_boundary=lower_eta_Bernstein_slot3<-1/200;certificate_failure_only
+tail_types=quadratic:9,cubic:22,quartic:45;every_successive_ratio<1/2_for_R>=20
+tail_ratio_digest_sha256=91ec49b07cf15bb869c168be9079a4fbbfce0b13069684d4c56382756b2fdfba
+R20_envelopes=map<1/700;derivative_row<1/900;endpoint<1/400
+tail_envelope_digest_sha256=0b2493cd5f6f0593244866311d22eb2c765822fb3ff4acfdc8d765b2877bc561
+limit_floors=face:13337106413/712822507500;contraction:305733792/2376075025;endpoint:1929107681/100000000
+combined_tail=face>323/18900;contraction<59/450;J/H>7599/400
+conclusion=unique_box_zero_and_positive_endpoint_for_every_R>=13;no_global_branch_uniqueness_or_optimal_cutoff_claim
+all_exact_checks=PASS

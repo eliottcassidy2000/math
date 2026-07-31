@@ -1,0 +1,10 @@
+THM2647 endpoint-anchored two-point deconvolution exact referee
+odd_inverse_checks=42 determinant_checks=42
+even_alternating_hostiles=6
+C13_cayley_checks=12 determinant=2 l1_inverse=13/2 signs=7plus6minus
+ordered_endpoint_pairs=6084 oriented_recoveries=12168
+fixed_A_candidate_profiles=6084 solutions_per_fixed_A=1
+common_origin_gauge_checks=79092 orbit_size=13
+one_point_anchor_checks=6084 representatives_per_orbit=2
+energy_only_hostile=distinct_profiles_same_36/169
+PASS

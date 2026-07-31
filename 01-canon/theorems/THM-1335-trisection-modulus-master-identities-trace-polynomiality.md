@@ -2,7 +2,8 @@
 
 **Status:** VERIFIED-EXACT (symbolic identities + 16-sample 9×-overdetermined exact
 fit for Tr(z); marked items pending). **Author:** kind-pasteur-2026-07-20-S128c99
-(HYP-8130). Pulls: klein-S324 (u-side cubic, T₃(W)=1), klein-S325 (Smith rule),
+(HYP-8130). Pulls: klein-S324 (u-side cubic, T₃(W)=1), klein-S325
+(historical Smith rule, corrected by MISTAKE-297),
 mac-mini THM-1315 (surjectivity), my THM-1310 (x-side geometry), boxeph-S142,
 death-star THM-1305/1320/1325.
 
@@ -95,10 +96,12 @@ middle, and k=5: ALL **EMPTY**, certified by Rabinowitsch + Gröbner over
 GF(32003) — GB = [1] for (Keller system + t·det(0) − 1) — with the k=3 system
 CONSISTENT as control (GB size 28). Specialization caveat: mod-p emptiness is
 evidence-grade for ℂ (good-prime argument), not a ℚ̄-proof. Combined with
-c98's ℚ-boxes, boxeph's weight-3 emptiness, and Smith's d=2 exclusion:
+c98's ℚ-boxes, boxeph's weight-3 emptiness, and Campbell's degree-two
+Galois exclusion:
 **the ORDER-{1,3} CONJECTURE** — a z-affine Keller map of ℂ³ has field degree
 1 or 3 — is now the sharpest supported structural dichotomy; degree-4 seeds
-(A₄/S₄ by Smith) require z-degree ≥ 2 ("the 2-jet architecture").
+(`D₄/A₄/S₄` after MISTAKE-297) require z-degree ≥ 2
+("the 2-jet architecture").
 
 ## Files
 - `04-computation/jacobian_trisection_modulus_kps_S128c99.py` + `.out`

@@ -1,0 +1,16 @@
+THM-2842 LAGUERRE VARIANCE-JET OBSERVABILITY - exact audit
+variance jet kernels / functional polynomial identities: 9 / 9
+adjacent jet / monomial response identities: 8 / 8
+symbolic point Vandermonde determinants (jet / monomial): 5 / 5
+ordered positive-cone configurations: 24
+multilinear positive Vandermonde summands: 262
+mixture determinant / positivity / basis-change checks: 24 / 24 / 24
+sharp Krylov dimensions D=2..12: 11
+Krylov forced zeros / exits / quotient Pade numerators: 66 / 11 / 11
+consecutive Laguerre coprimality checks: 11
+trace-zero units / nonzero norms / nonzero resultants D=2..8: 7 / 7 / 7
+finite-horizon agreements / first divergences / first aliases: 42 / 7 / 7
+single-selector iff patterns / positive selector patterns D=2..6: 1089 / 114
+sharp THM-2830 complex/Gaussian witness checks: 1
+all arithmetic exact: integers/rationals only
+THM-2842 exact companion: PASS

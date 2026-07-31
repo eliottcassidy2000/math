@@ -1,0 +1,8 @@
+LRC14 k3 expected-spike literal phase audit
+individual_mask_cases=485
+strict_boundary_cells_checked=7904
+exact_one_spike_thresholds=441
+literal_four_mask_shapes=219
+literal_markov_thresholds=626
+zero_demand_predicate=N_c==0 OR 55*N_c<13*m*q
+all_exact_controls=PASS

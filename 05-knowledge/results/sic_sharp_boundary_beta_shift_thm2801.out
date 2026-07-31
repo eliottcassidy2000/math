@@ -1,0 +1,13 @@
+THM-2801 SHARP SPECIAL IMAGE BOUNDARY EXACT AUDIT
+two-pair literal powers checked: 8
+two-pair first marked value: 240
+two-pair eighth marked value: 345443560282182275501578518528000000
+angular Taylor/Beta identities checked: 30
+Z-power observer-ladder identities checked: 174
+three-pair user-witness literal powers checked: 8
+three-pair first t coefficient: 24
+three-pair eighth t coefficient: 625411988947105354874880000000
+general f_r literal pairs checked: 16
+r=1 four-term bidegree-(2,2) witness: PASS
+three-pair binomial identities checked: 100
+radial Gamma(2), low-order side terms, and hostile control: PASS

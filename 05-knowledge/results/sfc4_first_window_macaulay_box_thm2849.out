@@ -1,0 +1,13 @@
+SFC4 FIRST-WINDOW MACAULAY BOX -- exact finite-field referee
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
+prime=1000003 top_exponent=15 target_degree=7
+universe=C(16,4)=1820 supports; moments=(1,2,3,4)
+mean_elimination=H=sum_(i<3)x_i(f_ai-f_a3)
+constructors=substitution+ordered-difference-tensor exact agreement
+macaulay_rows=Q*R5(21)+C*R4(15)+F*R3(10)=46 columns=R7=36
+full_rank_cells=1820 rank_range=(36,36)
+sample_ranks={(0, 1, 2, 3): 36, (0, 5, 10, 15): 36, (1, 2, 3, 4): 36}
+quartic_deleted_control=(1,2,3,4) rank=30<36
+certificate_digest_sha256=becbc51a7eeeb1ded8cea45d11a497a07427e38b789ee9767f9f17f963e4c10f
+implication=nonzero mod-p minor => rank36 over Q => empty projective variety
+scope=SFC(4) k=0 and max support exponent15 only

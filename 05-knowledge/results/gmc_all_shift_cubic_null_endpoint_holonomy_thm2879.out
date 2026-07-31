@@ -1,0 +1,17 @@
+THM-2879 ALL-SHIFT ENDPOINT-HOLONOMY EXIT
+status=PROVED-CANDIDATE+VERIFIED-EXACT
+normalized_direct_tensor_controls=351
+endpoint_scale_controls=3
+cubic_resultant=positive_factors*Gram(y)^2*P15(y)
+positive_cubic_branch=unique for every integer n>=1
+bottom_n0_positive_branch_count=0
+selector=A(n,y)*x-N(n,y); terms=251,253; coefficients=positive
+endpoint_denominator=positive
+pseudo_remainder=degree_n:982,degree_y:14,terms:14745,all_coefficients:negative
+pseudo_multiplier=LC(P15)^41>0
+remainder_sha256=c1ed1aa0ff682a7226f67c752aceb7bb4924708a2973126fe903c62c686d67a2
+fixed_direct_controls={1: (11, 11, 15), 2: (11, 11, 15), 8: (11, 11, 15)}
+consequence=J_n<0 and beta*kappa_U<alpha*kappa_V for every n>=1
+shared_quartic_line_on_shifted_family=EMPTY
+scope=the THM-2855 shifted high-tooth family only; general mixed shared line remains open
+all_exact_controls=PASS

@@ -9,6 +9,995 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-335 (2026-07-30, first THM-2991 promotion) -- a late directional turn was called a global leading-edge return
+
+- **What was done:** the first promoted THM-2991 used
+  `(x+1)^n(x+B)^n`.  Its exact reciprocal symmetry gives an arbitrarily long
+  ladder `R_1<...<R_n` followed by `R_(n+1)=R_(n-1)<R_n`.  The theorem then
+  said this disproved global no-return from the leading edge.
+- **First failed implication / minimal witness:** `R_(n+1)<R_n` only says the
+  ratio path changes direction.  For `n>2`, the same ladder and symmetry give
+  `R_(n+1)=R_(n-1)>R_1`; the later circuit has not returned below the leading
+  edge.  The proof and exact transcript were correct, but the claimed
+  consequence conflated directional monotonicity with the stronger property
+  `R_j>=R_1` for all `j`.
+- **Exact repair / strongest survivor:** the two-cluster family remains a
+  sharp directional-turn control.  Repaired THM-2991 uses
+  `(x+1)^n(x+3)(x+C)^n`: as `C` grows, `R_1<...<R_n`, while reciprocal-edge
+  asymptotics give `R_(2n)<R_1`.  This is the required arbitrarily delayed
+  global return inside PF-infinity, Hurwitz stability, and strict ULC.
+- **Rule:** define a path obstruction by the actual comparison relation.
+  A late negative discrete derivative does not imply return below an earlier
+  baseline; freeze both a directional witness and a baseline-crossing witness.
+
+## MISTAKE-334 (2026-07-30, projected k3 unit-count simplification) -- a centered bad-band count was applied after translation
+
+- **What was done:** a proposed simplification of the `z_1=270..247`
+  terminal closure used THM-2984's centered bad-band cardinality
+  `beta(d)=2 floor((d-1)/14)+1` after the three aligned coordinates had left
+  an arbitrary local phase translation.  The proposal would have replaced a
+  pair certificate by the test `|S|>beta(d)`.
+- **Minimal witness / first failed implication:** for `d=28`, `beta(28)=3`,
+  but the four residues `S={0,1,2,3}` all lie in the translated open circular
+  interval `(-1/2,7/2)` of length `d/7=4`.  Rotation preserves arc length but
+  not which strict endpoints meet the residue lattice.  The first invalid
+  step was silently recentering a translated open band at the integer zero.
+- **Exact repair / strongest survivor:** an arbitrary translated danger band
+  has the different sharp lattice capacity
+  `kappa(d)=ceil(d/7)`.  THM-2984 now proves this separately and preserves
+  `beta(d)` only for the absolute centered phase.  The projected terminal
+  simplification still works because its stronger deterministic count is
+  `|S|>alpha`, where `alpha=d/R`, `R|d`, and `R<=7`; hence
+  `alpha>=ceil(d/7)`.  No pair-selection policy is required, but the replay
+  must track `kappa`, not `beta`.
+- **Rule:** every circular-band count must declare its center/translation
+  sidecar.  Centered strict-open endpoint savings do not survive arbitrary
+  rotation; use `beta(d)` only at an absolute phase and `ceil(d/7)` when the
+  local phase is translated.
+
+## MISTAKE-333 (2026-07-30, THM-2941 `z_1=297` torsion descent) -- the repaired LP-dual digest bug recurred in a new descendant
+
+- **What was done:** the first `z_1=297` located-torsion verifier exactly
+  checked all `830` Farkas certificates, but hashed each complete status
+  witness, including the arbitrary solver-selected dual basis.  It also put
+  those complete witnesses and the basis-dependent minimum contradiction in
+  its semantic payload.  The first `z_1=294..276` descendant imported that
+  payload wholesale.
+- **First failed implication:** exact validity of a returned Farkas
+  certificate was again treated as uniqueness of its representation.  The
+  closure counts `1172=271+830+71`, the `73` located torsion cases, and the
+  later `1549=659+882+8` descent are canonical; the chosen HiGHS dual vectors
+  are not.  Thus the advertised byte/semantic replay could change under an
+  equally valid optimizer basis without changing any infeasible instance or
+  proof conclusion.  This is the precise mechanism already recorded in
+  MISTAKE-331.
+- **Exact repair / strongest survivor:** every solver certificate is still
+  rebuilt and verified over exact rationals.  Reproducibility records now bind
+  only `(denominators,q,M,marginals,capacity-set,load-histogram)` and the number
+  of verified instances; the certificate itself and its basis-dependent
+  contradiction value are excluded.  The repaired `z_1=297` artifact is then
+  repinned through the lower descent.  The later `z_1=275..272` septimal
+  descendant likewise imports only this certificate-free instance ledger;
+  all `1,844` duals are still checked exactly.  All ray, high-wall,
+  finite-low-pair, torsion-density, cap, and ledger conclusions survive
+  unchanged.  A post-promotion audit also found that this descendant declared
+  an LF-normalized dependency-hash basis while its helper hashed raw checkout
+  bytes.  The helper now normalizes CRLF and bare CR to LF before hashing;
+  the stored output, profile, semantic digest, cap, and ledger are unchanged.
+- **Rule:** a correction to a proof-search digest is a dependency-graph
+  invariant, not a one-file patch.  New descendants of a nondeterministic
+  solver must reuse the canonical instance ledger explicitly; never copy the
+  old witness tuple merely because its exact checker passes.
+
+## MISTAKE-332 (2026-07-30, first `z_1=1736` hybrid replay) -- a repaired status rule was not inherited by a duplicated solver
+
+- **What was done:** commit `a90c87e293cd` independently duplicated the K5
+  common-status solver for the fifteen-row `z_1=1736` closure after
+  MISTAKE-331, but its stage digests again hashed the floating solver's full
+  `(alpha,z)` Farkas representative.  The resulting closure is mathematically
+  valid, yet its advertised byte-level evidence is noncanonical.
+- **Minimal witness / first failed implication:** on
+  `E=(1,2,8,10,12,14)`, all counts remain `46 -> 0+16+30`, while the raw-dual
+  status digest `9e7a9bb7...46732` becomes the canonical infeasible-instance
+  digest `f63ad05b...7f4b`.  Both runs exactly verify their returned rational
+  certificates; equality of a solver-selected basis is the first invalid
+  reproducibility demand.
+- **Exact repair / strongest survivor:** retain exact rational verification of
+  every dual, but hash each deterministic status-kill row with
+  `witness[:-1]`, omitting only the noncanonical certificate representative.
+  The repaired all-label replay preserves the complete fifteen-row closure
+  and strengthens the exceptional body to all `749` unrestricted packets,
+  with minimum projected margin `121/18109`.
+- **Rule:** copying a proof engine also copies its repaired evidence boundary.
+  Every duplicate status solver must be audited against MISTAKE-331 before it
+  can become a canonical replay dependency.
+
+## MISTAKE-331 (2026-07-30, THM-2941 ray/status replay) -- a semantic digest bound a noncanonical LP dual basis or magnitude
+
+- **What was done:** the three THM-2941 residue-ray/status companions verified
+  every rational Farkas certificate exactly, but then hashed the literal
+  certificate representatives returned after a floating HiGHS search.  The
+  theorem consequently advertised byte-identical replay through a quantity
+  that was not mathematically canonical.  The first repair removed the raw
+  certificates but still retained a minimum exact-contradiction field in the
+  `z_1=324`, `z_1=328`, and `z_1=312` records, semantic hashes, and outputs.
+  That derived magnitude is equally basis- and scale-dependent.
+- **Minimal witness / first failed implication:** an unchanged replay of the
+  `z_1=250` companion preserved all `35,990 -> 1,965 -> 1,266 -> 0` counts,
+  the decisive-modulus histogram, and the displayed first exact witness, but
+  HiGHS selected another valid dual basis.  The raw certificate digest changed
+  from `f017d330...046611` to `bcb55c09...324bfc`, so the frozen semantic hash
+  failed even though every returned certificate passed the exact inequalities.
+- **Exact repair / strongest survivor:** exact verification of every returned
+  certificate remains load-bearing.  Replay hashes now bind the deterministic
+  infeasible instances, counts, first witness, exact-check count, and the
+  basis-invariant fact that every replayed contradiction is negative, never
+  the solver-selected dual representative or its magnitude.  This final
+  magnitude repair covers `z_1=324`, `z_1=328`, and `z_1=312`; the same narrow
+  basis repair is applied to `z_1=378`, downstream `z_1=306/302/298`, and
+  `k=2` companions because they shared the latent mechanism.  None of the ray,
+  capacity, Hunter, Farkas, cap, or ledger conclusions changes.  The later
+  `lrc14_j7_k2_z1736_hybrid_closure_thm2941.py` and
+  `lrc14_j7_k2_z1736_exact_ray_status_projected_closure_thm2941.py`
+  status-stage replays regressed to hashing raw HiGHS certificates; their
+  mathematical checks may survive, but their transcript, profile, and
+  semantic pins are noncanonical until the same repair is applied or a
+  deterministic closure supersedes them.
+- **K2 follow-through audit:** the later canonical descent supersedes those two
+  `z_1=1736/1732` replays.  A targeted duplicate-solver scan also repaired the
+  independent `z_1=1784` referee and the redundant `z_1=1836 -> 1824 -> 1812`
+  side chain.  Those programs still reconstruct and verify every rational
+  certificate, but their stage, profile, semantic, and displayed replay data
+  now exclude the certificate basis and every magnitude derived from its
+  arbitrary normalization.  The cap-`1656` lineage uses this canonical
+  boundary throughout.
+- **Rule:** a proof search may use a noncanonical optimizer witness, but a
+  reproducibility digest must bind canonical problem data or a separately
+  canonicalized certificate, not an arbitrary valid basis or a scalar derived
+  from its normalization.
+
+## MISTAKE-330 (2026-07-30, chained k=2 frontier verifiers) -- descendant evidence pinned superseded atlas bytes
+
+- **What was done:** the standalone `z_1=1824` verifier was produced against
+  the first `1810..1835` scalar-atlas transcript.  The atlas was then repaired
+  to state the scalar-empty `z_1=1811` slice explicitly, but the verifier kept
+  the old source/output hashes and old exact-line sentinel.  The later
+  `z_1=1812` verifier inherited those stale atlas pins and also pinned the
+  pre-repair `z_1=1824` source/output pair.
+- **First failed implication:** mathematical equality of the surviving
+  `z_1=1824` and `z_1=1812` rows was treated as sufficient dependency
+  stability.  Replaying either descendant at the current canonical tip
+  stopped at its hash gate before reaching the unchanged exact quotient.
+  Thus these were reproducibility failures, not counterexamples to either
+  row closure.
+- **Exact repair / strongest survivor:** the `z_1=1824` verifier now pins the
+  repaired atlas pair and full empty-slice sentinel, with regenerated profile
+  and semantic digests; the `z_1=1812` verifier then pins that repaired parent
+  and the current atlas pair.  Ordinary and optimized replays are
+  byte-identical.  Their `38=15+23` and `11=4+7` crude/status closures survive,
+  and the independent combined ten-row descent already proves the stronger
+  current cap `z_1<=1799` from current atlas bytes.
+- **Rule:** after repairing a truth-bearing artifact, traverse its descendant
+  hash graph in topological order and replay every pinned verifier at the
+  fetched tip.  An unchanged mathematical row does not make obsolete evidence
+  pins current.
+## MISTAKE-329 (2026-07-29, first mixed Lorenz/activity sidecar) -- an ambient half-cap was substituted for the exact reflected parity fibre
+
+- **What was done:** the first four-aligned/three-drift Lorenz/activity
+  sidecar handled repeated denominators `(2,2,d_3)` with the coarse test
+  `|S_D|>2C_3`, where `C_3` is the third needle's ambient capacity.  It
+  reported a residual of `29,221`.
+- **Minimal witnesses / first failed implication:** reflection
+  `r -> D-1-r` makes the two parity loads of `S_D` exactly equal, but the
+  third needle's capacity inside one parity is the sharp `q=2` fibre value,
+  not half of its full ambient capacity.  The correct kill is
+  `|S_D|/2>fibre_cap(D,d_3,2)`.  The coarse replacement misses exactly
+  two rows:
+
+  ```text
+  F=(1,4,5,7,9,11),  D=194040, S=55392,
+  (d_1,d_2,d_3)=(2,2,194040),  27696>13860;
+
+  F=(1,5,7,8,9,11),  D=388080, S=109044,
+  (d_1,d_2,d_3)=(2,2,388080),  54522>27720.
+  ```
+
+- **Exact repair / strongest survivor:** the sidecar now reconstructs the
+  reflected parity histogram and applies the exact `q=2` fibre cap.  Its
+  corrected chain is `544,571 -> 419,364 -> 29,219`; ordinary and optimized
+  replays agree.  The former scratch `29,221` TSV/digest is superseded.
+  The load-bearing closure
+  `544,571 -> 419,511 -> 29,364 -> 19 -> 0` never depended on that TSV and
+  is unchanged.
+- **Rule:** a symmetry-balanced target load must be compared with the exact
+  capacity in the corresponding symmetry fibre.  A full ambient capacity,
+  even when divided by the orbit size, can lose gcd/remainder information
+  and is only a relaxation.
+
+## MISTAKE-328 (2026-07-29, THM-2908 infinity replay) -- a SymPy structural comparison was used as a polynomial identity gate
+
+- **What was done:** after repairing the removable `n+3` content in the first
+  projective-infinity invariant, the THM-2908 companion compared the reduced
+  second numerator to its displayed factorization with Python/SymPy `==`.
+- **First failed implication / minimal witness:** the exact reconstruction
+  reduces the second invariant to
+  `-2(n+2)(4n+5)/(3(3n+4)(3n+5))`, so its numerator differs from the stated
+  `-2(n+2)(4n+5)` by the zero polynomial.  Nevertheless the long ordinary and
+  optimized replays both stopped at that structural comparison.  SymPy `==`
+  is not a general algebraic-identity decision procedure across differently
+  normalized expression trees.
+- **Exact repair / strongest survivor:** every infinity comparison is now
+  made after cancelling the difference and testing it against zero.  A
+  separate direct reconstruction confirms both displayed reduced invariants;
+  the degree-`2804` finite factorization and all preceding certificates were
+  unchanged.
+- **Rule:** truth-bearing symbolic gates compare a normalized difference with
+  zero (or use an explicit polynomial identity), never raw expression-tree
+  equality after a long exact computation.
+
+## MISTAKE-327 (2026-07-29, THM-594 pair overlap) -- a one-wrap Fourier branch was used as an all-pair formula
+
+- **What was claimed:** THM-594(B) asserted that for every coprime
+  `p<q` with `(p+q)/14>1`,
+  `mu(D_p intersect D_q)=(q+2p-14)/(7pq)` at danger radius `1/14`.
+- **Minimal witness / first failed implication:** for `(p,q)=(50,51)`, that
+  expression is `137/17850`, while the exact finite trapezoid sum of the
+  later LEM-042 is `73/3570`; their difference is `38/2975`.  The
+  product-to-sum quadratic was continued after the first wrap without
+  retaining subsequent periodic wraps, so the purported second branch was
+  not global.
+- **Strongest survivor:** THM-594(A)'s Fourier support, THM-594(C)'s
+  divisor-minimal no-exact-tiling argument, and the Parseval floor in
+  THM-594(D)--(E) do not use the false branch and survive.  LEM-042
+  supersedes all pair-mass calculations with
+  `g sum_j min((W-|j| delta)_+,w_min)` and records both below- and
+  above-`1/49` families.
+- **Rule:** pair overlap past the first Farey cell is a periodic trapezoid
+  sum, not a two-cell formula.  Preserve gcd, reduced residues, and all
+  wraps; for inherited carriers also retain the positioned-window
+  discrepancy, since full-circle mass does not localize.
+
+## MISTAKE-326 (2026-07-29, concurrent THM-2926 reservations) -- a successful push does not prevent a later session from reserving the same namespace
+
+- **What happened:** the seven-wall session reserved `THM-2926` at
+  `9578144779f6`.  Two concurrently based GMC sessions then used the same
+  identifier; one was repaired to `THM-2927`, while the consecutive
+  four-slot stub remained `THM-2926`.
+- **First failed implication:** a pushed reservation was treated as globally
+  exclusive without every later session rechecking the fetched remote tip.
+  The result was two filenames and two YAML records with `id: THM-2926`.
+- **Exact repair:** before either stub became a proved dependency, the
+  seven-wall namespace was moved to the freshly fetched and independently
+  checked `THM-2928`.  The mathematical statement and provenance are
+  unchanged; no theorem ever depended on the ambiguous ID.
+- **Rule:** immediately before *each* reservation commit, fetch and check the
+  remote filenames, YAML IDs, and recent history.  After the next pull, scan
+  the claimed ID again: reservation is a protocol, not a lock.
+
+## MISTAKE-325 (2026-07-29, THM-2908 projective-infinity replay) -- `together` was mistaken for reduced rational form
+
+- **What was done:** the candidate THM-2908 companion compared the numerator
+  returned by `together(I_1).as_numer_denom()` at the missing infinity point
+  with the reduced cubic invariant stated in the theorem.
+- **First failed implication / minimal witness:** `together` combines a rational
+  expression over one denominator but need not cancel its polynomial gcd.  In
+  this cell its raw first numerator is
+  `-(n+2)^2(n+3)(28n^2+87n+66)` and the raw denominator also contains
+  `n+3`.  The candidate therefore aborted after its long resultant replay even
+  though the reduced invariant is exactly the theorem's
+  `-(n+2)^2(28n^2+87n+66)`.  The second invariant has no such removable
+  content.
+- **Exact repair / strongest survivor:** apply `cancel` before extracting the
+  numerator, and retain an explicit hostile gate proving that the raw
+  numerator and denominator each differ from the reduced pair by exactly
+  `n+3`.  The projective-infinity nonvanishing statement and every finite-chart
+  certificate are unchanged.
+- **Rule:** when a proof identifies a rational invariant rather than a chosen
+  clearing, normalize by gcd before comparing numerators.  If removable
+  content is mathematically relevant to replay portability, freeze both the
+  raw and reduced pairs explicitly.
+
+## MISTAKE-324 (2026-07-29, THM-2920 depth-two working audit) -- a pair statistic was mistaken for a two-slot residual
+
+- **What was inferred:** after an ordered five-cover branch fixed centres
+  `x` and `y`, a preliminary audit compared the twice-subtracted carrier
+  with its global top two singleton coverages and reported the branch
+  closed.
+- **First failed implication / minimal witness:** fixing `x` leaves four
+  labels and fixing `y` leaves **three**, not two.  The fact that the next
+  certificate computes a pair cap does not consume a second label.  On the
+  five live THM-2920 tips, the top-two inequalities are true but insufficient:
+  a third allowed danger comb is still available.
+- **Exact repair / strongest survivor:** retain the correct three-slot type.
+  The exact global pair cap combined with the leading singleton closes three
+  of the five tips.  The lawful three-slot Hunter envelope closes all five,
+  with strict margins
+  `4211/280280`, `2459243/348107760`, `52873/2802800`,
+  `143831/12892880`, and `7009/420420`.  Thus the intended two-H3-row
+  closure survives, but not by the discarded top-two argument.
+- **Rule:** every recursive toothpick node carries an explicit remaining-slot
+  counter.  Subtracting one chosen centre decrements it by exactly one;
+  computing a pair cap, matching bound, or tree credit changes the bound,
+  not the arity.  Before promoting a terminal inequality, reconstruct the
+  family size `fixed labels + remaining slots` directly.
+
+## MISTAKE-323 (2026-07-29, first THM-2921 scratch certificate) -- a divided-power coefficient table was convolved as an ordinary polynomial
+
+- **What was done:** the first diameter-four Macaulay probe stored one
+  symmetric order-`m` tensor entry for each exponent triple and inserted
+  those values directly as coefficients of ordinary monomials.  The
+  resulting fixed determinant had an attractive degree-`196`
+  Gregory--Newton certificate.
+- **First failed implication / minimal witness:** a symmetric tensor table
+  is a divided-power coefficient table.  Ordinary multiplication requires
+  the multinomial multiplicity `m!/(alpha_0!alpha_1!alpha_2!)`; equivalently,
+  divided powers multiply with binomial structure constants.  Already at
+  depth zero on offsets `(0,1,2,4)`, the correct mixed quadratic coefficient
+  is twice the stored tensor entry.  A direct original-form determinant
+  therefore failed the claimed scaling identity.  The entire first minor
+  and its apparent factorization were invalid and were retracted before any
+  theorem reservation or promotion.
+- **Exact repair / strongest survivor:** THM-2921 multiplies every tensor
+  entry by its multinomial count, proves the common denominators by exact
+  division in `Z[n]`, and recomputes the minor.  A genuinely separate direct
+  four-variable multinomial expansion reproduces the repaired forms and
+  selected minors modulo `1000003` at `21` family/depth controls.  The
+  fixed-chart plus Gregory--Newton strategy survives and closes all three
+  nonconsecutive diameter-four families, but none of the false determinant's
+  coefficients or factors is retained.
+- **Rule:** declare the polynomial basis before turning a symmetric tensor
+  into a coefficient dictionary.  For an ordinary monomial basis, audit one
+  mixed coefficient against an ordered-word or direct multinomial expansion
+  before computing any resultant, determinant, or positivity certificate.
+
+## MISTAKE-322 (2026-07-29, first THM-2901 promotion) -- the full-arity same-cap deadlock was applied to a lower-arity pair flag
+
+- **What was written:** the first promotion of THM-2901 said that reusing a
+  parent cap after selecting an `H_3` pair `L` was “precisely the same-cap
+  deadlock” of THM-2893.
+- **First failed implication:** THM-2893's algebraic deadlock assumes
+  `ell=s`, so the selected flag itself is heavy and
+  `U_C(L)+B>=h`.  Here `(s,ell)=(3,2)`: the pair need not be heavy, and an
+  inherited parent-carrier certificate can succeed.  On THM-2900's exact
+  control it succeeds on `204/784` pair flags, which directly refutes the
+  claimed impossibility.
+- **Exact repair / stronger survivor:** every extension
+  `L union {w}` inside a hypothetical cover is a heavy triple.  On the
+  literal residual `C_L`, this gives the exact link condition
+  `c_(C_L)(w)>=h_L-B_2` for **each** of the three remaining labels.
+  THM-2893 now records the general heavy-link recursion, and THM-2901 routes
+  its `12,919` pair branches as link-constrained children.  Parent caps are
+  optional sufficient tests; literal child caps retain the link and
+  forbidden-prefix sidecars.
+- **Rule:** before invoking a no-go theorem, audit its arity equality.  A
+  lower-arity selected flag retains nontrivial links into the child; it is
+  not a full-arity heavy flag and need not inherit the same obstruction.
+
+## MISTAKE-321 (2026-07-29, concurrent THM-2889 reservation) -- a local filename scan was not replayed after the reservation fetch
+
+- **What happened:** the GMC low-sector session found no `THM-2889` in its
+  freshly fetched tree and reserved that identifier.  The immediately
+  preceding remote commit had already reserved `THM-2889` for the dicyclic
+  reverse-action carrier, but the filename check was run before that fetched
+  commit was made visible in the worktree.
+- **First failed implication:** “absent from the checked tree and prior
+  history” was treated as “still absent after the concurrent fetch/rebase.”
+  The dicyclic reservation at `b01066a1c736` precedes the GMC reservation at
+  `0a614c4e623c`, so chronology gives `THM-2889` to the dicyclic theorem.
+- **Exact repair:** the GMC stub is moved to the independently rechecked free
+  namespace `THM-2890`; no proved dependency ever used either empty stub.
+- **Rule:** after the fetch that immediately precedes a reservation commit,
+  rerun the filename, YAML-ID, index, and remote-history checks against the
+  fetched remote tip—not only against the pre-fetch worktree.
+
+## MISTAKE-320 (2026-07-29, first THM-2878 promotion) -- a zero-address census is not global uniqueness
+
+- **What was claimed:** the first promoted wording described `(guard,u1)` as
+  the unique full factor square and `(u3,D->S)` as the unique one of the
+  eighteen oriented factor toggles without retaining the zero-address
+  qualifier.  The companion had exhausted only the distinguished
+  `ell=0` word orbit for those two uniqueness claims.
+- **Minimal witnesses / first failed implication:** at canonical address
+  `(1,0)`, the unique full pair is `(u1,u5)`, not `(guard,u1)`.  At address
+  `(7,0)`, both `(u1,D->S)` and `(u3,D->S)` count
+  `floor((q+h)/13)` on every one of the `169` positive edges.  Therefore a
+  section-level exhaustive census cannot be promoted by silently
+  quantifying over the quotient address.
+- **Exact repair:** THM-2878 now audits all `169` canonical addresses on both
+  source and target word orbits.  Full-pair counts have histogram
+  `{0:54,1:64,2:38,3:10,4:3}`, with `38` distinct full-pair sets.  The
+  marker census has `121` addresses with only `u3`, `44` with `u3` plus
+  one shifted `u1/u2` event, and `4` with `u3` plus two.  Thus `(guard,u1)`
+  is uniquely full at zero address, while `(u3,D->S)` is the unique
+  **address-uniform** carry marker: it works at all `169` addresses, whereas
+  each extra orientation works at only `13`.
+- **Strongest survivor:** the carry theorem, all `169` edge identities, all
+  `2,197` composition identities, and the `omega^3` seam survive unchanged.
+  The full word supplies the carry transition but still not its initial
+  ancestry state or a physical `QA->QAB` current.
+- **Rule:** whenever a computation selects a distinguished section, audit
+  the claimed property on every quotient fibre/address before asserting
+  global uniqueness.  Record separately “unique in this chart,” “pointwise
+  unique,” and “unique object present uniformly across charts.”
+
+## MISTAKE-319 (2026-07-28, provisional THM-2846 geometry) -- cubic divisibility cancellation is not orientation cancellation
+
+- **What was claimed:** the provisional positive-cone hostile said that two
+  opposed transport contributions “cancel exactly” on the locus
+  `I1=I2=0`, suggesting that the THM-2830 orientation `D(U,V)` vanished
+  there.
+- **First failed implication:** THM-2824's exact factorization is
+  `I2=-g11 D-t111 g22^2`.  Hence `I2=0` forces
+  `D=-t111 g22^2/g11<0`, because the Gram entries are positive and
+  THM-2841 gives `t111=L(U^3)>0`.  For the displayed witness the numerical
+  value is about `-4101.29`, emphatically not zero.
+- **Strongest survivor / repair:** the construction itself survives.  The
+  two **quadratic-division remainders** vanish, so the positive plane really
+  contains a nonzero factorial moment-one/two/three null line.  Its
+  orientation is strictly negative, its fourth moment is nonzero, and its
+  first variance jet survives.  THM-2846 now states this corrected
+  transverse geometry and the exact companion certifies the complete
+  resultant factor and the algebraic point's rational rectangle.
+- **Rule:** when several derived quantities encode the same cubic tensor,
+  name the exact vanishing object.  Cancellation of Euclidean-division
+  remainders does not imply cancellation of an oriented determinant;
+  substitute the defining relation before giving geometric prose.
+
+## MISTAKE-318 (2026-07-28, THM-2834 first Picard-lattice proof) -- conjugate split curves are complementary, not numerically equal
+
+- **What was claimed:** for the fourteen curves on
+  `X_14 subset P(2,2,7,7)`, the first proof wrote `C_i ≡ D_i` and
+  `C_i.C_j=delta_ij/2`, then treated Frobenius as the ordinary seven-cycle
+  on the `C_i`.
+- **First failed implication:** the weight-two form `ell_i` cuts
+  `C_i union D_i`, so its divisor gives the unavoidable identity
+  `C_i+D_i=2H`.  Thus `D_i=2H-C_i`, not `C_i`.  The old positive-definite
+  matrix also violated the Hodge-index signature.  On the tame local covers,
+  distinct `C_i,C_j` meet at the common `1/7(1,1)` point with intersection
+  `1/7`, while `C_i,D_i` meet at an `A_1` point with intersection `1/2`.
+  Therefore
+  `C_i^2=-5/14`, `C_i.C_j=1/7` for `i!=j`, and `C_i.D_j=0` for `i!=j`.
+- **Strongest survivor / repair:** the theorem's ranks and point counts
+  survive.  The corrected `C_1,...,C_7` Gram determinant is `1/128`, so the
+  seven classes are independent.  Since Frobenius interchanges the two
+  factors, it acts by
+  `C_i -> D_(i+1)=2H-C_(i+1)`, or by the **negative** seven-cycle
+  `v_i=C_i-H -> -v_(i+1)` on `sum v_i=0`.  Its fixed space is exactly `Q.H`,
+  proving `rho(X/F_3)=1`; its eigenvalues
+  `{1} union {-zeta_7^j:1<=j<=6}` still give traces `2,0,2,0`, matching the
+  direct counts.
+- **Rule:** whenever a reducible coordinate divisor produces two conjugate
+  curve families, write every principal-divisor relation before identifying
+  numerical classes, and test the proposed Gram matrix against the
+  Hodge-index signature.  A transitive orbit on geometric curves does not
+  mean Frobenius acts by the corresponding permutation after quotienting by
+  divisor relations.
+
+## MISTAKE-317 (2026-07-28, provisional THM-2827 all-pole extrapolation) -- a unique Newton face need not miss the prescribed response valuation
+
+- **What was assumed:** after the `nu=3` and `nu=4` local Faber obstructions,
+  the same polar/pure/regular trichotomy was claimed provisionally for every
+  `nu=ord(V)>=3`.  In the pure-`q` cone, exact controls verified that the
+  `Phi/H/Psi` top face is unique and strictly below every retained lower row.
+- **First failed implication / minimal resonance:** for `R=3k+2`, put
+  `delta=nu-2a>0`.  The unique `H` face has valuation `-2k delta`, while
+  `K=TH` prescribes `v(H)=nu+1-3a=1-a+delta`.  These are equal exactly when
+  `a=1+(2k+1)delta`, equivalently
+  `nu=2+(4k+3)delta`.  The first relevant ray is
+  `R=8,k=2,nu=13,a=6,delta=1` (with `b>=7`).  Face uniqueness prevents
+  coefficient cancellation but does not contradict an equal required
+  valuation.
+- **Repair / strongest survivor:** no false proved theorem was promoted.
+  The pushed empty THM-2827 reservation was immediately narrowed and is being
+  rebuilt as a nonresonance atlas: all `R!=2 mod 3` pole orders and all
+  off-ray `R=3k+2` pole orders remain candidates for the uniform argument;
+  `nu=4` is unconditionally off every ray.  Any resonant closure must use
+  the leading coefficient in `A_src K=lambda M` or a later response, not
+  pure-face valuation alone.
+
+## MISTAKE-316 (2026-07-28, provisional THM-2784 passport wording) -- a distinguished degree-one cycle is not nontrivial inertia
+
+- **What was written:** the balanced square-potential passport was described
+  as having an involution over zero and one nontrivial cycle over the third
+  value.
+- **Minimal boundary witness / first failed implication:** the sharp map
+  `F=4x/(x-1)`, `V=x(x-1)^3` has degree `N=1`, with `e=0` and `r=1`.
+  Every permutation is the identity.  A displayed length-`r` distinguished
+  cycle need not be nontrivial, and `2^e1^s` may likewise be identity.
+- **Repair / survivor:** the product-one passport is correct with “involution
+  or identity” over zero and “at most one nontrivial cycle” over the third
+  distinguished value.  The Riemann--Hurwitz ledger, transitivity, and all
+  divisor classifications survive; the independent `3185`-gate audit checks
+  the repaired degree-one boundary explicitly.
+
+## MISTAKE-315 (2026-07-28, THM-2781 exact companion) -- degree four does not certify non-fourth-power status
+
+- **What was done:** the unreduced-exponent hostile `f=(1+z^2)^2`, displayed
+  with exponent `2/4`, was correctly described as a square that is not a
+  fourth power, but its original exact gate checked only `deg(f)=4`.
+- **First failed implication:** a polynomial of degree four can be a fourth
+  power of a linear polynomial.  The gate verified a compatible intermediate
+  statistic, not the advertised consequence.
+- **Repair / strongest survivor:** a constant-one fourth root would have to
+  be `1+uz`; its linear coefficient forces `u=0`, while `f` has quadratic
+  coefficient `2`.  The primary companion now tests the unique linear
+  candidate explicitly.  An independent coefficient-root engine exhausts
+  `3408` small polynomials and verifies the theorem, the repaired hostile,
+  the all-degree sharp family, and a characteristic-two failure.  The theorem
+  statement and example were correct; only the truth-bearing gate was weak.
+
+## MISTAKE-314 (2026-07-28, concurrent THM-2759 reservation) -- a clean local scan was not replayed after the reservation rebase
+
+- **What happened:** the exact-prefix even Faber flux-gcd theorem was first
+  reserved as `THM-2759`.  Concurrent mainline work had already claimed that
+  identifier for the split degree-six componentwise monicization closure.
+  Replaying the reservation above the incoming commit temporarily left two
+  distinct files with the same YAML theorem ID.
+- **First failed implication:** a namespace check made before a concurrent
+  reservation does not remain valid after rebase, even when the textual rebase
+  is conflict-free.  Git detects path conflicts, not duplicated identifiers in
+  different paths.
+- **Repair / survivor:** the first-pushed split degree-six theorem keeps
+  `THM-2759`; the exact-prefix gcd theorem and all its citations moved
+  coherently to the freshly checked `THM-2760` namespace.  No mathematical
+  statement changed.  After every reservation rebase, search both filenames
+  and YAML IDs on the rebased tree before pushing; a clean merge is not a clean
+  namespace audit.
+
+## MISTAKE-313 (2026-07-28, THM-2749 Section 5 / provisional THM-2751) -- a clock-blind natural-sheet carrier was subtracted from a fully marked common section
+
+- **What was assumed:** the legacy helper
+  `lrc14_semantic_root_zero_clutch_refinement_probe_20260728.py::restrict_e3_and_sheet`
+  was treated as the fully marked natural `U_(0,3)` source/target sheet.  Its
+  coefficients were compared with THM-2749's two-sided common section, leading
+  to provisional THM-2751's symmetric weighted wings and normalized gains
+  `12` (common), `2` (formal wing), and `7` (folded natural sheet).
+- **Why it was wrong:** the helper inserts `E3` and the four shifted
+  `q1/c2/q2/c3` gates but never intersects the source with the source-one clock
+  comb `d_(1,ell)`.  THM-2749 constructs its common section through
+  `source_present_section(...,source_clock=1,...)`.  The delayed prefix banks
+  are identical, so the omitted clock factor is the first and only typing
+  mismatch; exact replay of the legacy script merely certified the wrong
+  carrier.  A hostile audit that checked the candidate only against its pinned
+  legacy constructor reproduced the same error until the factor lists were
+  compared directly.
+- **Repair / survivor:** the former gain-`2` THM-2751 body was retracted before
+  promotion.  The current file at that slug is a separately rebuilt
+  `RESERVED PROOF-COMPLETE` fixed-clock candidate awaiting hostile audit.  With
+  the actual clocked constructor, the natural source coefficient equals the common
+  coefficient `C=339633525654239542165440`, so its physically nonempty left
+  wing is coefficient-null.  At `t=3` the target coefficient is
+  `345341652135823400016960`; the right-wing coefficient is
+  `5708126481583857851520`.  After content/root normalization the source,
+  target, and right-wing profiles are `9,8,4`, respectively, and the actual
+  folded target/source ratio is `11`, not `7`.  The source-clocked one-sided
+  bank extends gain `11` uniformly across all `81` canonical endpoint labels;
+  it is not THM-2749's two-sided fibre product.  THM-2749's two-sided common
+  clutch, all-rail raw equality, normalized sign `-1`, target window/unit,
+  open cylinder, and primitive target-character profiles are unaffected.
+  General rule: before subtracting two exact interval tables, compare the
+  complete factor constructors, not merely their prefix banks and output
+  hashes.
+- **Independent retyping check:** if the two legacy outer sheets are instead
+  treated honestly as full unclocked unions, their literal intersection is
+  `M=disjoint-union_e M_e`, not `M_1`; the same-clock `e=2,3` pieces are
+  nonzero and all cross-clock pieces are empty.  The resulting wings have
+  `v_13(L)=1`, `v_13(R)=2`, with source profile `(0,0,0,12,0,0,0)` and target
+  profile `(0,9,2,2,0,0,0)`.  Both physical-present profiles are `Phi_7`
+  units: their determinants are `1` and `11`, and the exact coefficient-ring
+  ratio is
+  `g=2z+2z^2+2z^3+2z^4+6z^5`, with `det(g)=11` and `g s=p`.
+  The target nevertheless augments to zero, so folding to the repeated
+  delayed-clock scalar gives the zero profile and no augmented scalar gain.
+  The ratio `g` is not a physical carrier map.  The clock-blind whole-sheet
+  scalar ratio `7` belongs to the unclocked union, not to the fully marked
+  fixed-clock carrier.  Thus the two valid repairs are distinct and neither
+  supplies a physical `L -> R` map, relative phase, endpoint current, or LRC
+  exclusion.
+- **All-label sharpening:** the forgotten-`e` target augmentation is zero at
+  the displayed `(s,t)=(0,3)` cell, not uniformly on the `81`-label bank.
+  Exact fixed-`j` reconstruction gives a source unit precisely on a Cartesian
+  `7 x 7` rectangle.  On its `49` cells the augmented gain census is
+  `0:10, 2:19, 11:20`; the target physical-clock profile is a `Phi_7` unit on
+  all `81` cells.  There are four coefficient-ring ratios, so neither the
+  chosen determinant-`11` ratio nor the revived gain `2` is a global action.
+  The strongest survivor is the exact rectangle/chamber law recorded in
+  `lrc14-physical-wing-rectangle-and-target-chamber-20260728.md`.
+- **Endpoint/address hostile:** on the fixed THM-2334 triangle, exhaustive
+  search finds no scalar-times-character-times-quotient-shift covariance for
+  either endpoint wing or even the two common carriers.  Transporting every
+  present endpoint factor does restore an exact scalar, paired with its
+  reciprocal in the reverse chart.  The reason is structural: left/right
+  carrier harmonics `k,l` satisfy `r.W=l-k`, so exact address lives on the
+  extended lattice `Lambda_tilde={(r,k,l):r.W=l-k}`; the old `Lambda` is only
+  its diagonal `k=l`.  Interval collapse remembers merely `pi(r mod 13)`.
+  A Bezout correction is noncanonical and changes the address.  Hence the
+  factor-level harmonic origin (or a declared Bezout section) is an essential
+  sidecar, and the formal gain is one moment rather than an addresswise map.
+
+## MISTAKE-312 (2026-07-28, root-zero clutch dependency pins) -- LF evidence hashes were checked against raw platform bytes
+
+- **What was recorded:** the finite-exact root-zero overlap companion pinned
+  six audited dependencies by their LF SHA256 values but hashed each dependency's
+  raw worktree bytes at runtime.  It passed on an LF checkout and failed before
+  mathematics on a Windows CRLF checkout.
+- **Why it was wrong:** a declared LF evidence address is portable only if the
+  verifier applies the same normalization.  Replaying the main script alone
+  had not exercised this cross-platform branch.
+- **Repair / survivor:** dependency bytes are now normalized from CRLF to LF
+  before hashing.  Normal and optimized Windows runs again byte-match the
+  stored transcript; all six dependency pins and every finite-exact overlap
+  count survive.  The script digest was refreshed after the repair.
+
+## MISTAKE-310 (2026-07-28, relative-present root-zero clutch) -- a forbidden root label was mistaken for empty physical support
+
+- **What was assumed:** the relative-present scout correctly found that every
+  edge-preserving translation from the residue-7 right-root-12 chart lands in
+  the right-root-0 chart.  Because root `0` is omitted from the private-root
+  label bank, the accompanying reflection then declared the induced
+  private-root lift relation empty and treated an unconstructed edge switch as
+  the terminal obstruction.
+- **Why it was wrong:** the private half-tooth labels form overlapping charts,
+  not a partition.  In the canonical `182`-grid,
+  `H_0^R=(0,13)/182` and `H_1^L=(1,14)/182`, so their open overlap is
+  `(1,13)/182`.  Translation by `7/13^6` sends right root `12` to right root
+  `0`, but a point in that overlap is simultaneously a lawful left-root-`1`
+  point.  The exact adjacent witness
+  `47850889647341/100360982066072 ->
+  47851035194197/100360982066072` lies strictly inside the overlap and has
+  common rail, clock, relative-present, semantic, and full-target support.
+- **Repair / survivor:** landing at the zero **label** proves only that the
+  full edge-preserving labelled row does not intertwine.  It does not prove
+  physical emptiness after a chart change.  THM-2744 now proves the corrected
+  partial Cech clutch: the restricted raw vectors agree and are units, while
+  their root-normalized classes differ by `-1`.  The relative coefficient
+  census, aggregate unit tables, endpoint counts, midpoint full-target
+  coexistence, and empty unrestricted fixed-edge nonzero-root label relation
+  survive.  Whole-cylinder target stability is proved only for the displayed
+  rail-`8` pair; a global target action, endpoint current, row exclusion, and
+  LRC(14) still do not follow.
+
+## MISTAKE-311 (2026-07-28, THM-2727 evidence and provenance) -- a reserved candidate carried a stale script hash and cited an empty namespace for a proved formula
+
+- **What was recorded:** reserved/provisional THM-2727 declared a script
+  SHA-256 beginning `1e95f268` and called its private-root equation the
+  “THM-2717 formula.”
+- **Why it was wrong:** the tracked LF-normalized script hashes to
+  `a6368190...`; normal and optimized executions still byte-match the stored
+  transcript.  At the time of the bad attribution THM-2717 was still an
+  `UNPROVED EMPTY STUB`; after its independent promotion, the formula
+  `r=2c+floor(d/13)+1_(edge=left) mod13` remains sourced directly to the
+  earlier proved THM-2640.  The same
+  synthesis also blurred fourteen coefficient-only constant matches with the
+  physical signature census, whose intersection is actually zero.
+- **Repair / survivor:** THM-2727 now depends explicitly on THM-2640 and the
+  subsequently proved THM-2717 bank, declares the tracked hash, and
+  separates fourteen non-source constant coefficient matches from zero
+  same-clock physical signature matches.  Its exact fixed-rail Frobenius
+  no-go survives unchanged and is now independently audited and proved; it does not
+  constrain THM-2742, prove THM-2744, or decide the joint `C13` coefficient.
+
+## MISTAKE-308 (2026-07-28, THM-2636/2692 Kummer field typing) -- a spectral nonsquare was identified with its physical square before pullback
+
+- **What was recorded:** the first promoted THM-2692 text wrote
+  `mathscr H=rho^3*zeta/t^3=Z=T^2` inside the spectral-curve discussion and
+  immediately called `mathscr H` nonsquare.  THM-2636 used the same compressed
+  equality while separately describing the intended function-field embedding.
+- **Why it was wrong:** `mathscr H` lives first in the abstract spectral
+  function field, whereas `Z,T` live in the physical rational function field.
+  A literal equality in one field would make `mathscr H` a square and
+  contradict the odd-valuation argument.  The missing symbol was the
+  hypothetical trajectory embedding, not a missing mathematical hypothesis.
+- **Repair / survivor:** define `mathscr H=rho^3*zeta/t^3` on the spectral
+  curve.  Its five valuations `-3` make it nonsquare and its connected double
+  cover has genus at least two.  Only after a nonconstant physical trajectory
+  gives `phi:K(C)->C(x)` do the equations assert
+  `phi(mathscr H)=Z=T^2`; the physical `T` then lifts `phi` to that cover, giving
+  the contradiction.  THM-2636 and THM-2692 now state this typed pullback
+  explicitly.  Their exact computations and closure conclusions are unchanged.
+
+## MISTAKE-306 (2026-07-28, concurrent THM-2693 reservation) -- a later stub duplicated a live theorem namespace
+
+- **What was recorded:** commit `2e3a42992` first reserved THM-2693 for the
+  odometer delayed-tail theorem.  Commit `1fee894c1` later added a distinct
+  mixed-dilation/slope-seven empty stub with the same YAML ID and theorem
+  number before observing the first push.
+- **Why it was wrong:** a filename reservation is shared only after its push;
+  concurrent local scans do not serialize namespace allocation.  Two current
+  files declaring the same theorem ID make every bare citation ambiguous even
+  when both are honest empty stubs.
+- **Repair / survivor:** the first claimant remains THM-2693 and has since
+  been proved.  The later mixed-word stub is coherently moved to the freshly
+  checked THM-2694 namespace; its mathematical intent and unproved status are
+  unchanged.  Re-fetch immediately before reserving, and yield to the first
+  pushed claimant after a race.
+
+## MISTAKE-307 (2026-07-28, THM-2588 separation constants) -- the threshold for rho+1 was reported as the threshold for rho
+
+- **What was recorded:** with descent ratio `rho=h/w`, THM-2588 called
+  `134,99,...,15` the sharp integer ratio thresholds and called `533/4`
+  the binding real threshold in the one-fold case.
+- **Why it was wrong:** the snap loss is `1/[2(rho+1)]`.  Solving
+  `1/[2(rho+1)] <= 1/13-3/41=2/533` gives
+  `rho+1>=533/4`, hence `rho>=529/4`.  The script correctly subtracted one
+  internally and then added it back when printing.  The same display error
+  shifted every row of the table by one.
+- **Strongest survivor / repair:** the proof strengthens.  The exact real
+  one-fold threshold is `529/4`; the legal integer thresholds for
+  `k=1,...,12` are `133,98,84,74,65,57,50,42,35,28,21,14`.  Uniform
+  separation `rho>=133` closes every legal depth, and every gap family obeys
+  `v_max/v_(2)<529/4`.  The fold identity, snap inequality, and all existing
+  certificates remain valid.
+
+## MISTAKE-305 (2026-07-28, THM-2588 fold-cascade boundary) -- a thirteenth fold was assigned to a 13-speed family
+
+- **What was recorded:** THM-2588 and its referee printed a constants table
+  for `k=1,...,13` and claimed the uniform separated-tower conclusion over
+  that range.  The final row used the formal expression
+  `1/(14-13)=1` as an empty-body floor.
+- **Why it was wrong:** a 13-speed family has only twelve consecutive ratios
+  and only twelve legal snap-fold removals, ending at a singleton.  There is
+  no thirteenth partner, no thirteenth fold modulus, and no empty-family
+  lonely-runner floor.  The script's `k=13` row was not used by any
+  certificate and was internally inconsistent with its own special-case
+  comment.
+- **Strongest survivor / repair:** the fold identity, snap lemma, all
+  certificates, T-A/T-B, and every constants row `k=1,...,12` are unchanged.
+  THM-2588, its companion, and the stored transcript now quantify only over
+  this legal range.  When iterating a peel/fold recurrence, count actual
+  edges of the ordered speed list, not vertices or the stationary runner.
+
+## MISTAKE-304 (2026-07-28, THM-2688 hardening) -- a concurrent script/output hardening left stale declared hashes
+
+- **What was recorded:** the hardened THM-2688 frontmatter declared primary
+  script/output SHA-256 values beginning `4013f471` / `3f1c7ad9`.
+- **Why it was wrong:** the same incoming commit changed the primary companion
+  and transcript after those digest values had been calculated.  The committed
+  LF-normalized bytes instead hash to `16685599...` / `fecc6762...`.  This was
+  a reproducibility-metadata race, not a mathematical or transcript mismatch:
+  normal and optimized runs both reproduce the committed output byte for byte.
+- **Repair / rule:** THM-2688 now records the hashes of the actual hardened
+  files, and its independent referee has separate frozen hashes.  After a
+  concurrent rebase or any hardening edit, recompute digests from `HEAD` and
+  replay both interpreter modes; never carry pre-edit hashes across the
+  checkpoint merely because the visible theorem statement is unchanged.
+## MISTAKE-309 (2026-07-28, THM-2683 evidence portability) -- checkout bytes and Python's integer-print cap leaked into exact replay
+
+- **What failed:** THM-2683 declared LF-normalized hashes for its THM-2636
+  and THM-2671 executable dependencies but called `sha256(read_bytes())`.
+  The promoted companion therefore aborted before its mathematics on a
+  Windows CRLF checkout, even though both normalized dependency hashes were
+  exactly the declared values.
+- **Repair:** dependency text is normalized from CRLF to LF before hashing;
+  the theorem now describes LF-normalized transcript/dependency equality.
+  A retained optimized replay then exposed a second platform boundary: Python
+  3.11+ refused to stringify the already-computed BCDE certificate because
+  one exact integer exceeded its default 4,300-digit display cap.  The trusted
+  companion now explicitly disables that display cap before forming its
+  declared digest.  These are evidence-portability defects only: no algebraic
+  certificate, stored output, or theorem conclusion changed.
+- **Rule:** a declared normalized hash basis must also be implemented at every
+  dependency lock, not merely when frontmatter hashes are computed; a digest
+  serializer must also declare any runtime size limit that its exact objects
+  exceed.
+## MISTAKE-303 (2026-07-28, THM-2648 edge-thinning sharpness) -- a minimum relative to the affine chart was promoted as the unrestricted minimum
+
+- **What was claimed:** the first repaired THM-2648 proved that no
+  two-edge change of the matched-wall affine rainbow remains rainbow, found a
+  three-edge repair, and called its fourteen-edge union globally sharp.
+- **First failed implication:** the hostile fixed the affine chart before
+  minimizing.  Two nonlinear rainbow charts can differ in two positions even
+  though a transposition of the affine chart cannot.  In the parallel normal
+  form the target vectors
+  `(2,3,4,6,8,5,10,7,12,9,11)` and
+  `(2,12,4,6,8,5,10,7,3,9,11)` have disjoint holes `{0,2}` and `{6,9}`, share
+  nine edges, and have union thirteen.  Subtracting one from every target
+  gives the antiparallel witness, and affine transport covers every matched
+  endpoint pair.
+- **Strongest survivor / repair:** fourteen is sharp **conditional on
+  retaining the affine chart**; its three-edge alternating six-cycle is the
+  local `K_(3,3)`/`C3 semidirect C2` mechanism.  Thirteen is the unrestricted
+  sharp value, since distinct bijections cannot differ at exactly one source;
+  it is attained by the displayed nonlinear pair through an alternating
+  four-cycle.  The resulting binary/ternary fork is structural: the binary
+  switch is globally thinner but loses the affine reference, while the
+  ternary switch pays one edge to retain it.  Always state which baseline or
+  symmetry stratum is fixed before calling a local repair minimal.
+
+## MISTAKE-302 (2026-07-28, THM-2648 rainbow atlas census) -- a selected nonlinear atlas was reported as the universe of nonlinear charts
+
+- **What was claimed:** promoted THM-2648 said that there are exhaustively
+  `11,154` affine and `1,014` nonlinear rainbow charts.  Its companion had in
+  fact enumerated every affine chart but had only *constructed one chosen
+  nonlinear repair per matched-step pair*.
+- **First failed implication:** counting the members selected by a complete
+  covering atlas does not count every chart that could occupy one atlas slot.
+  In each matched normal form there are `50,283` rainbow matchings and
+  `43,122` nonlinear second charts compatible with the affine hole pair.  A
+  minimal same-hole witness is the pair of target vectors
+  `(2,4,11,5,6,7,8,9,3,10,12)` and
+  `(2,10,3,5,6,7,8,9,11,4,12)`, both with holes `{6,9}`.
+- **Strongest survivor / repair:** the exact `11,154` affine census, existence
+  of a two-chart cover for every pair, two-chart minimality, `1^4 2^9`
+  incidence, and charged energy all survive.  THM-2648 now calls `1,014` the
+  chosen nonlinear-atlas size.  Its selected matched-wall chart was sharpened
+  to an affine-anchored alternating six-cycle: three moved edges give a sharp
+  fourteen-edge union relative to that anchor, and the affine chart plus the two inverse repairs are
+  the three one-factors of `K_(3,3)` with local `C_3 semidirect C_2=S_3`
+  symmetry.  The occurrence-level chart bit, not carry support or residual
+  reflection, is the missing physical selector.  Never label a constructed
+  atlas count as a universe count without enumerating the ambient objects.
+
+## MISTAKE-301 (2026-07-28, THM-2621 trace--Liouville sidecar) -- closed was mistaken for possibly nonexact after forgetting the polynomial source primitive
+
+- **What was assumed:** the first promoted form of THM-2621 correctly proved
+  that `omega_F=Tr(x dy)-4 kappa^(-1)u dv` is a closed rational one-form, then
+  proposed that a polynomial degree-four Keller map could have a nonzero
+  trace--Liouville class or divisor residue along the Jelonek boundary.
+- **First failed implication:** the trace was taken before using the stronger
+  source fact.  On `A^2`, the polynomial form
+  `theta_F=x dy-kappa^(-1)P dQ` is closed by the Keller equation and hence has
+  a polynomial primitive `H_F`.  Trace commutes with differentiation, so
+  `omega_F=d Tr(H_F)` is exact.  Every divisor residue is therefore zero for
+  every actual polynomial Keller realization, regardless of monodromy.
+- **Strongest survivor / repair:** the inverse-quartic congruence, resultant
+  pole ledger, depression warning, affine exact-change formula, and curvature
+  calculation all survive.  The corrected THM-2621 proves that the trace
+  primitive is regular off the Jelonek set and has only second-kind derivative
+  poles there.  The missing coordinate is branchwise: every normalization
+  branch obeys `Res(x dy)=sum_j j x_(-j)y_j=0`, while in the `D_4` lane the
+  anti-invariant potential `H_F-tau(H_F)` survives the trace.  For an abstract
+  rational inverse-spectral pair, a nonzero traced residue is an obstruction
+  to polynomial realization, never a feature of a polynomial Keller map.
+  The repaired theorem strengthens this to a localized power-sum potential
+  and, in the `D4` lane, an exact opposite-pair potential before the final
+  quadratic trace.  A rational `D4` one-sheet-defect family realizes arbitrary
+  residue despite the PDE, pole law, and polynomial companion coefficients;
+  a second `D4` family has exact base trace but cancelling nonzero pair
+  residues.  These are minimal hostiles to recovering polynomial realization
+  from the abstract inverse-spectral data.  Always pull a quotient-side closed form back to the claimed
+  affine source before promoting it to an independent boundary invariant.
+
+## MISTAKE-300 (2026-07-28, THM-2618 candidate scope) -- the canonical selected source was conflated with a distinct target-informed head
+
+- **What was assumed:** the first candidate form of THM-2618 proved a lawful
+  product-torus orbit for THM-2537's canonical selected source and then said
+  that this unfreezes the selector inside THM-2573's `w_(N,h)`, closing its
+  target-action type gate.
+- **First failed implication:** both objects choose a marked root, but they are
+  not the same Boolean event.  THM-2537 selects the occupied tail
+  `s_tau(e)` from the complete old-carrier root word.  THM-2565/2569 instead
+  use the target-informed head `A=T_delta`; its marker comes from a separate
+  `k_a` failure mask and slope stratum, and `w_(N,h)=A_h(x)A_h(T^N x)` also
+  contains a genuinely later occurrence.  Covariance of the first selector
+  says nothing formal about covariance of the second.
+- **Strongest survivor / repair:** THM-2618's product-torus restriction,
+  Boolean Mobius factorization, dipole covariance, proper-profile hole,
+  complete function-level source spectrum, and free profile-atom orbit all
+  survive independent hostile audit.  They form a lawful source-side model
+  and ingredient only.  Closing THM-2573 still requires a labelled
+  whole-event lift of `A_h(x)A_h(T^N x)`, including every failure-mask,
+  old-danger/safe, selector, and later-occurrence factor before any target DFT
+  or Abel smoothing.  Shared vocabulary such as "selector" is never a map;
+  equality of the underlying truth functions must be proved before transport.
+
+## MISTAKE-299 (2026-07-28, THM-2603 proof-graph overwrite) -- a new theorem reused an already proved canonical ID
+
+- **What happened:** a concurrent PSL2(F13) transition audit replaced the
+  proved and independently audited THM-2603 Hurwitz root-owner atlas, together
+  with its exact companion, under the same theorem ID.  The incoming result is
+  mathematically distinct: it studies retained-target normalizers, natural
+  chart holonomy, and a Bruhat-square target-zero wall.
+- **First failed implication:** thematic continuity and reuse of the same
+  matrices do not make two theorem statements the same proof-graph node.  A
+  later, stronger-looking obstruction cannot silently discard the earlier
+  proved projective atlas, its normalized root-scale guardrail, or its exact
+  reproducibility paths.
+- **Repair:** the proved Hurwitz/root-owner atlas and its original companion
+  remain `THM-2603`.  The incoming PSL2(F13) retained-target theorem, script,
+  and output are preserved under the freshly all-ref-checked `THM-2619`
+  namespace, still at candidate status.  Cross-links may be added after audit;
+  neither result is treated as a replacement for the other.
+
+## MISTAKE-298 (2026-07-28, concurrent THM-2611/2615/2617/2618 reservations) -- a local reservation broadcast was mistaken for a shared proof-graph reservation
+
+- **What happened:** the endpoint-pair parabolic-transvection theorem reserved
+  `THM-2611` after a fresh `origin/main` and all-remote-ref scan, and broadcast
+  that choice.  Its empty stub was committed locally but could not yet be
+  pushed while stronger concurrent theorem edits were being integrated.
+  Before the next fetch, `origin/main` assigned `THM-2611` to the distinct
+  principal-deck holotopy theorem.  The same failure then recurred after the
+  endpoint theorem was moved locally to `THM-2615`: before that move could be
+  pushed, the shared branch assigned `THM-2615` to the physical diagonal
+  toric-kernel theorem and `THM-2616` to a Keller reduction.  A third local
+  move to `THM-2617` again lost a push race when the Keller reduction was
+  renumbered there and `THM-2616` was reused for the cross-time diagonal.  A
+  fourth move to `THM-2618` met two independently pushed stubs bearing that
+  same ID: the selected-source product-torus lift and the affine holotopy
+  spectrum.
+- **First failed implication:** a local commit plus coordination broadcast is
+  not a proof-graph reservation.  Only a pushed, current shared stub occupies
+  the namespace; an earlier clean scan says nothing about assignments made
+  before the local branch rejoins `origin/main`.
+- **Repair:** the principal-deck and physical diagonal-kernel theorems retain
+  `THM-2611` and `THM-2615`, respectively, while the two later incoming
+  theorems retain `THM-2616` and `THM-2617`; the shared `THM-2618` collision is
+  left visible for its authors to repair.  The unpublished endpoint theorem,
+  script, and output are coherently moved to the freshly all-ref-checked
+  `THM-2620` namespace before promotion.  Mathematics is unchanged.  Future
+  sessions that cannot push a reservation immediately must treat its ID as
+  provisional, repeat the full remote/YAML/history scan immediately before
+  integration, and prefer an immediate small pushed reservation checkpoint
+  over another local-only rename.
+
+## MISTAKE-297 (2026-07-28, degree-four Keller monodromy audit) -- Smith theory was applied across the omitted Jelonek divisor
+
+- **What was assumed:** T1549 and the first THM-1375/1440/2465 formulations
+  argued that the deck group of the finite etale cover over
+  `A^n minus A_F` acts freely on the contractible source `A^n`.  Smith
+  fixed-point theory was then used to require a self-normalizing point
+  stabilizer, leaving only `A4/S4` at degree four and hence no proper
+  intermediate field.
+- **First failed implication:** a deck transformation is regular and free on
+  the open source above `A^n minus A_F`; it need not extend regularly, let
+  alone freely, across the omitted divisor.  The toy map `z -> z^2` on
+  `C^*` already has a free deck involution which extends to `C` with the
+  fixed boundary point `0`.  Contractibility of the completed source
+  therefore cannot be fed to Smith without a separate extension theorem.
+- **Minimal algebraic hostile:** `T^4-2` has transitive Galois group `D4`.
+  Its quartic root field contains `Q(sqrt(2))`, while its squared-pair
+  resolvent `W(W^2+8)` exposes the different quadratic
+  `Q(sqrt(-2))`.  Thus degree four can have a proper intermediate field and
+  the resolvent quadratic need not be that field.
+- **Strongest survivor / repair:** Campbell's Galois-Keller theorem still
+  excludes degree two and the regular degree-four groups `C4,V4`.  A wild
+  degree-four Keller cover is restricted to `D4,A4,S4`; maximal
+  point-stabilizer arguments apply only in the `A4/S4` lanes.  The useful
+  primitive-coordinate conclusion survives in `D4` for a different reason:
+  a quartic `D4` root field has only one proper intermediate, so if
+  `K_4=K(x,y)` then at least one of `x,y` generates `K_4`.  The `S4/A4`
+  tower statements of THM-2465/2598 remain valid when lane-scoped, while
+  `D4` is restored as an open branch with a reducible `1+2` resolvent
+  algebra.  Historical Smith-selection tables are provenance, not current
+  canon, unless an extension-across-Jelonek theorem is supplied.
+  More precisely, the generic involution extends over the finite Zariski-main
+  normalization and is polynomial exactly when it preserves the open affine
+  source.  Since normalization ramification is invariant, any surviving `D4`
+  map needs an unramified missing boundary divisor exchanged with an included
+  divisor over the same target component; normalizer data alone cannot see
+  that ownership sidecar.
+- **Later superseding repair (THM-2633):** restoring `D4` was the correct
+  response to the invalid Smith proof, but it was not the final classification.
+  THM-2633 excludes `D4` by a different mechanism: etale openness and the
+  absence of nonconstant units on affine space give a fixed affine sheet for
+  every boundary inertia group, while Kummer support forbids a nonzero
+  monodromy quotient that kills every point stabilizer.  Equivalently, a
+  Keller point stabilizer normally generates `G` (hence surjects onto
+  `G^ab`); the point stabilizer of `D4` normally generates only its proper
+  source-deck kernel.
+  No deck transformation is extended across the Jelonek divisor, so this does
+  not revive the failed implication recorded here.  The current degree-four
+  list is `A4,S4`; the `D4` ledgers remain conditional hostile controls.
+
+## MISTAKE-296 (2026-07-28, concurrent theorem reservation) -- a later empty stub reused the live THM-2604 accessibility ID
+
+- **What happened:** the independently audited future-root accessibility
+  theorem was reserved and proved as
+  `THM-2604-unshifted-future-root-accessibility-and-selector-cross-mixing-boundary.md`
+  on a public session branch.  Before that branch was merged to `main`, a
+  later session reserved the distinct alternative-rail clock-collapse
+  candidate under the same numeric ID.  The filenames did not conflict, so
+  both YAML IDs briefly appeared on `main` after integration.
+- **Why it was wrong:** theorem IDs are proof-graph keys.  An empty reserved
+  stub cannot share the key of an earlier public, proved, audited theorem;
+  checking only `origin/main` misses concurrently published session branches.
+- **Repair:** the proved accessibility theorem retains `THM-2604` and its
+  full slug.  The later `RESERVED / UNPROVED EMPTY STUB` is moved without any
+  mathematical promotion to
+  `THM-2608-alternative-rail-clock-collapse-and-missing-transition-index.md`.
+  Future reservations must scan all remote refs immediately before commit;
+  current citations continue to use theorem ID plus slug.
+
 ## MISTAKE-295 (2026-07-28, THM-2594 hostile control) -- constant-column erasure was mislabeled as fixed-root slaving
 
 - **What was claimed:** because replacing every deep column by the same
@@ -8063,3 +9052,74 @@ number of algebra generators separate.
 - **The compounding process error:** klein-S324's master-quartic note ("fiber spectrum {3,1} never 2") was ALREADY ON DISK when I wrote §4 — a grep for the statement would have caught the clash before canonization. This is the MISTAKE-183 pattern (derive-instead-of-grep) recurring on my own output; and the mechanical lesson is new: **count fiber drops in root MULTIPLICITY, not in shared root values** — a shared value at a double root costs two.
 - **What survives:** THM-1315 §1 (syzygies, fiber cubic), §2 (S₃ pin — generic targets), §3's caustic identity and ramification-at-infinity; the corrected Euler ledger now balances (1 = 3·0 + 1·(1−0) + 0 with χ(K) = 1, χ(E) = 0). Banner added to THM-1315; the S142 reflection updated.
 - **Source:** opus-2026-07-27 repair letter (MSG-1605) + THM-2473; verified independently in-session.
+
+## MISTAKE-318 (2026-07-28, root audit of klein-S691) — a changed-diagram unknot certificate proves `u<=1`, not `u=1`
+
+**What was claimed.**  The first version of
+`04-computation/unknot1_decider.py` returned `TRUE_CERTIFIED` whenever one
+crossing change produced a diagram which greedily reduced to the empty
+diagram by Reidemeister R1/R2 moves.  The implementation attempted to reject
+the input unknot first, but used the same incomplete greedy R1/R2 reducer.
+
+**Why it is wrong.**  The crossing-change certificate proves only
+
+```text
+u(K)<=1.
+```
+
+To conclude `u(K)=1`, one must separately prove `K` is nontrivial.  Failure of
+one simplification heuristic is not such a proof.  The exact hostile PD
+
+```text
+[[1,11,2,10],[6,10,7,9],[3,8,4,9],
+ [11,5,12,4],[7,2,8,3],[5,1,6,12]]
+```
+
+is an unknot obtained from the one-crossing unknot by legal reverse moves
+`R1,R2,R2,R3,R3`.  Greedy R1/R2 stalls on this six-crossing input.  Changing
+crossing four then reduces by `R2,R1,R2,R1`, so the old engine returned
+`TRUE_CERTIFIED` although the represented knot has `u=0`.
+
+**Repair.**  A true certificate now has two independent halves:
+
+1. an input-nontriviality certificate (currently `det(K)!=1` or
+   `sigma(K)!=0`); and
+2. a one-crossing change followed by an explicit R1/R2 unknot certificate.
+
+If (2) holds without (1), the engine returns `UNKNOWN` and reports only the
+proved upper bound `u<=1`.  The hostile PD is frozen in the 16-check
+ordinary/optimized regression suite.  The Murasugi and gated Lickorish
+`u>=2` false-certificates are unaffected.
+
+**Reusable rule.**  An exact witness for the result of a move does not certify
+the starting object's distance is exactly one.  Every exact-distance
+certificate needs both an upper-bound path and an independent lower-bound
+obstruction; a failed search is never the latter.
+
+## MISTAKE-319 (2026-07-28, root audit of klein-S691) — the `3+3+1=7` fragment is Keller escape, not an Arithmetic-Kakeya `mu_3` identification
+
+**What was claimed.**  A truncated owner fragment about a depth-two tree with
+seven rather than nine points was provisionally decoded as a `mu_3`-fixed
+branch on which two points coincide.  The AK workbench then treated that
+putative collision as evidence for identification-gluing.
+
+**Exact resolution.**  The fragment is THM-2473's inverse tree for the
+sporadic Keller map.  Its three level-one points have `3,1,3` finite
+preimages.  On the middle branch the cubic eliminant loses its leading
+coefficient and becomes linear; two sheets escape on the Jelonek
+nonproperness surface.  Because the Jacobian determinant is the nonzero
+constant `-2`, no finite collision or ramification occurs.  The symmetry
+fixing the middle point is the order-two involution
+`diag(-1,-1,1)` and the generic monodromy is `S3`, not `mu_3`.
+
+**Repair and survivor.**  The fragment note and AK workbench now withdraw the
+transfer.  Identification-gluing remains a legitimate independently
+testable AK mechanism: a merged vertex may inherit several incident species.
+It receives no support from this Keller fibre.  A transfer based only on the
+shared count `9 -> 7` loses the decisive coordinate—finite vertex
+identification versus loss of properness at infinity.
+
+**Reusable rule.**  Reconstruct a fragment's generating object before using
+its numerical pattern elsewhere.  Equal cardinality defects do not identify
+mechanisms; record whether mass collides, cancels, is quotiented, or escapes
+the ambient space.

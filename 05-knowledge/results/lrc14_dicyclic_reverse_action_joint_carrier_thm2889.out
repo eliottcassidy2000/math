@@ -1,0 +1,27 @@
+THM-2889 DICYCLIC HERMITIAN ENVELOPE FOR THE THM-2886/2887 HORN
+presentation=Dic_338=<a,x | a^676=1, x^2=a^338, x*a*x^-1=a^-1>; convention |Dic_n|=4n; order=1352
+embedding=C169=<c=a^344>=<a^4>; QA=x; QB=a^169; QAB=QA*QB; Q8=<QA,QB>; C169_intersection_Q8=1; product_size=1352
+section_gauge=printed QAB is QA*QB; THM2887 canonical lift has QA*QB=-QAB, differing by the central sign only
+action=chi(h)=det(QB,h); kernel=<QB>={1,QB,-1,-QB} order4; QA,QAB invert c; QB fixes c
+horn_Ad_QB_sign_Q0_QA_QAB=(0, 1, 1); four_character_patterns=((0, 0, 0), (0, 1, 1), (0, 0, 1), (0, 1, 0)); unique_match=det(QB,-)
+edge_character_patterns_on_QA_QB_QAB=((0, 0, 0), (1, 0, 1), (0, 1, 1), (1, 1, 0)); selector_shadow=chi_s=u has target (0,1,1) but fixes edge QB; carry_shadow=chi_c=v has target (0,0,1) and inverts edge QB; no_single_character_does_both=1; carry_event_pattern_(0,1,0)_is_not_a_character=1
+carry_shadow_via_direct=(c^8 QA)(c^9 QB)=(c^13*(-1))(c^4 QAB_canonical); clutch_order=26; QB inverts clutch; clutch_square=c^26
+element_order_census={1: 1, 2: 1, 4: 678, 13: 12, 26: 12, 52: 24, 169: 156, 338: 156, 676: 312}
+conjugacy_class_census={(1, 1): 1, (2, 1): 1, (4, 2): 1, (4, 338): 2, (13, 2): 6, (26, 2): 6, (52, 2): 12, (169, 2): 78, (338, 2): 78, (676, 2): 156}; class_count=341; center_size=2
+derived_subgroup=<a^2> order338; abelianization=V4; C169 is killed by all four one-dimensional characters
+joint_carrier=B=(C169_s x C169_c) semidirect Q8; QA flips s only, QB flips c only, QAB flips both; order=228488; center={+/-1}; derived=C169^2 x {+/-1} order57122; abelianization=V4
+central_quotient=B/<-1> is the product of two groups (C169 semidirect C2), each of order338
+joint_element_order_census={1: 1, 2: 1, 4: 57798, 13: 168, 26: 168, 52: 8112, 169: 28392, 338: 28392, 676: 105456}
+joint_conjugacy_class_census={(1, 1): 1, (2, 1): 1, (4, 338): 2, (4, 57122): 1, (13, 2): 12, (13, 4): 36, (26, 2): 12, (26, 4): 36, (52, 338): 24, (169, 2): 156, (169, 4): 7020, (338, 2): 156, (338, 4): 7020, (676, 338): 312}; class_count=14789
+joint_fibre_product=two Dic_338 shadows over shared Q8; orders=(1352,1352,8)->228488; dual_weight_orbits={1: 1, 2: 168, 4: 7056}; minimal_faithful_semisimple_degree=4; physical diagonal address has four-point Q8 orbit and its minimal stable abelian envelope within the coordinatewise-inversion model is all C169^2
+reflection_classes=QA and QAB give the two distinct size-338 order-4 classes; each has 169 central-sign-normalized lifts and their negatives
+q7_fillers=13 checked ancestry pairs; each pair (13a+7,QAB),(13(a+1)+7,QAB) is distinct, squares to -1, and is conjugate by c^91 because 2*91=13 mod169; joint diagonal lifts retain both coordinates and obey the same law, but conjugacy/class functions do not separate them
+typed_joint_right_action=e8=(8,8,QA), e9=(-9,+9,QB), direct=(4,4,QAB_canonical); e8*e9 lands at +17 diagonal and differs from direct by (13,13,-1); checks=13
+field=352341050142921841; eta676=310853166993638469; rho169=23532008422341145; rho13=omega3=39714007455759520; spinor_half_phase_s=303330773634141935; Prony_t0=304174682735739267; faithful_matrix_count=1352; C169_gauge_checks=2197; wrap_scalar_omega2=13536101352958454
+field=956354278959359281; eta676=356084900158026651; rho169=152473855030923045; rho13=omega3=257673921998609436; spinor_half_phase_s=593150979859056736; Prony_t0=223267090638481188; faithful_matrix_count=1352; C169_gauge_checks=2197; wrap_scalar_omega2=696085000327097221
+selector_shadow_projective_coherence=C=(U/V); bar is cyclotomic root inversion before finite-field specialization; c:C->rho*C; QA:C->-bar(C); QB:C->-C; QAB:C->bar(C); c^13:C->omega^3*C; carry shadow swaps QA,QB, giving QA:C->-C and QB:C->-bar(C)
+balanced_hermitian_torus=cs^130*cc^130=diag(E,1,1,E^-1), E=omega^4; this is exactly conjugation by raw D=diag(E,1) on (U*bar(V),|U|^2,|V|^2,V*bar(U)); only the torus diagonals coincide: Hermitianization kills z=-1/global phase and factors through B/<z>, whereas the faithful B-module sends z to -I4; the literal Prony plane e_+ tensor K^2 is sent by QA to the complementary plane and is not Q8-stable
+wrapped_edge=diag(omega^4,1)=omega^2*diag(omega^2,omega^-2), with determinant-one factor a^104=c^130; this is the raw Prony frame, while gauge-normalized +9 is c^9; omega^2 cannot be a global scalar character because both carry circles lie in the relevant derived subgroup
+positive=selector provenance and carry/Hermitian reversal each have an exact Dic_338 shadow; within the full-C169 coordinatewise-inversion stable-diagonal model their minimal joint faithful semisimple envelope is the four-channel bi-dicyclic fibre product, and it separates the two q7 ancestry lifts
+hostile=no one Q8 character types both selector parity and the q11-to-q7 carry edge; the literal carry pattern is Bockstein curvature, not a vertex character.  The construction uses a state-dependent relative-channel gauge and abstract Q8 actions; no physical four-channel operator, canonical unmarked Hermitian quadrature, row exclusion, or LRC14 conclusion is proved
+ALL EXACT CHECKS PASSED

@@ -1,0 +1,19 @@
+THM-2798 STAR GRACEFUL-DEFECT MINIMAX AUDIT
+formula: defect_m(c)=min(c,m-c)
+barrier: B_r(m)=max(0,ceil((m-r)/2))
+m | C2 radius1 | C2+C3 radius2 | radius3
+ 1 |          0 |              0 |       0
+ 2 |          1 |              0 |       0
+ 3 |          1 |              1 |       0
+ 4 |          2 |              1 |       1
+ 5 |          2 |              2 |       1
+ 6 |          3 |              2 |       2
+ 7 |          3 |              3 |       2
+ 8 |          4 |              3 |       3
+ 9 |          4 |              4 |       3
+10 |          5 |              4 |       4
+11 |          5 |              5 |       4
+12 |          6 |              5 |       5
+position pairs checked: 3320
+full permutation minimax cases through m=6: 15
+single-seed bounded-defect barrier is unbounded: PASS

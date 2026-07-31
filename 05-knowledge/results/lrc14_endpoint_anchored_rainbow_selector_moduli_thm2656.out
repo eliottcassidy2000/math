@@ -1,0 +1,11 @@
+THM2656 ENDPOINT-ANCHORED RAINBOW SELECTOR MODULI EXACT REFEREE
+endpoint_pairs=6084 endpoint_reconstructions=6084 orientation_checks=24336
+symmetric_atlas=orientation_independent individually_reflection_equivariant
+symmetric_chart_types={affine:11154,nonlinear:1014}
+symmetric_edge_overlap={one:6084} retained_edges={21:6084}
+disjoint_template_rows=12 disjoint_second_charts={nonlinear:6084}
+disjoint_edge_overlap={zero:6084} retained_edges={22:6084}
+both_colour_profiles=1^4_2^9 both_charged_energy=36/169
+charged_character_checks={symmetric:73008,disjoint:73008}_all_nonzero
+individual_reflection_fixed_edge=midpoint selector_overlap_not_invariant
+PASS

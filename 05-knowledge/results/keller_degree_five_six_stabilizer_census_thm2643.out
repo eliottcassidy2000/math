@@ -1,0 +1,26 @@
+THM-2643 KELLER STABILIZER CENSUS EXACT REFEREE
+5T1 C5 |G,H,N,Q|=(5,1,1,5) gate=EXCLUDE outside={(5,): 4}
+5T2 D10 |G,H,N,Q|=(10,2,10,1) gate=PASS outside={}
+5T3 F20 |G,H,N,Q|=(20,4,20,1) gate=PASS outside={}
+5T4 A5 |G,H,N,Q|=(60,12,60,1) gate=PASS outside={}
+5T5 S5 |G,H,N,Q|=(120,24,120,1) gate=PASS outside={}
+6T1 C6 |G,H,N,Q|=(6,1,1,6) gate=EXCLUDE blocks={(2, 2): 1, (3, 3): 1, (6, 6): 1} outside={(2, 2, 2): 1, (3, 3): 2, (6,): 2}
+6T2 S3_regular |G,H,N,Q|=(6,1,1,6) gate=EXCLUDE blocks={(2, 2): 1, (3, 6): 3, (6, 6): 1} outside={(2, 2, 2): 3, (3, 3): 2}
+6T3 D12_hexagon |G,H,N,Q|=(12,2,6,2) gate=EXCLUDE blocks={(2, 2): 1, (3, 6): 1, (6, 12): 1} outside={(2, 2, 2): 4, (6,): 2}
+6T4 A4_C2_cosets |G,H,N,Q|=(12,2,4,3) gate=EXCLUDE blocks={(3, 3): 1, (6, 12): 1} outside={(3, 3): 8}
+6T5 S3xC3 |G,H,N,Q|=(18,3,9,2) gate=EXCLUDE blocks={(2, 2): 1, (6, 18): 1} outside={(2, 2, 2): 3, (6,): 6}
+6T6 A4xC2 |G,H,N,Q|=(24,4,8,3) gate=EXCLUDE blocks={(3, 3): 1, (6, 24): 1} outside={(3, 3): 8, (6,): 8}
+6T7 S4_edges |G,H,N,Q|=(24,4,24,1) gate=PASS blocks={(3, 6): 1, (6, 24): 1} outside={}
+6T8 S4_C4_cosets |G,H,N,Q|=(24,4,24,1) gate=PASS blocks={(3, 6): 1, (6, 24): 1} outside={}
+6T9 S3xS3 |G,H,N,Q|=(36,6,18,2) gate=EXCLUDE blocks={(2, 2): 1, (6, 36): 1} outside={(2, 2, 2): 6, (6,): 12}
+6T10 C3sq_C4 |G,H,N,Q|=(36,6,18,2) gate=EXCLUDE blocks={(2, 2): 1, (6, 36): 1} outside={(4, 2): 18}
+6T11 S4xC2 |G,H,N,Q|=(48,8,48,1) gate=PASS blocks={(3, 6): 1, (6, 48): 1} outside={}
+6T12 A5_degree6 |G,H,N,Q|=(60,10,60,1) gate=PASS blocks={(6, 60): 1} outside={}
+6T13 S3wrC2 |G,H,N,Q|=(72,12,36,2) gate=EXCLUDE blocks={(2, 2): 1, (6, 72): 1} outside={(2, 2, 2): 6, (4, 2): 18, (6,): 12}
+6T14 S5_exotic |G,H,N,Q|=(120,20,120,1) gate=PASS blocks={(6, 120): 1} outside={}
+6T15 A6 |G,H,N,Q|=(360,60,360,1) gate=PASS blocks={(6, 360): 1} outside={}
+6T16 S6 |G,H,N,Q|=(720,120,720,1) gate=PASS blocks={(6, 720): 1} outside={}
+degree5_excluded=1/5 degree6_excluded=9/16 all_failure_cosets=derangements
+regular_quotient_criterion=PASS singleton_quotients_included=YES
+quartic_controls=A4_natural_PASS,S4_natural_PASS action_sensitive=YES
+ALL CHECKS PASSED

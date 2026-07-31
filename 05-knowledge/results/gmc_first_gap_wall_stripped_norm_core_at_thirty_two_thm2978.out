@@ -1,0 +1,16 @@
+FIRST-GAP NORM-CORE WIDTH-32 CONTINUATION
+thm2969_dependency_sha256=5be5df0fd058f436593339f78cd6240a47975082d22929c135ba811458753bf5
+scope=first_gap_(0,1,2,32);characteristic=0
+core;M=32;degree=660;digest=3dc8b52265fd9b96d92851cc1f69df9f987c681843f61b6893ac68506edd323e;strict_positive=1;PF2=1;resultant_degree=1446;flag_degree=15;calibrated_degrees=141,141;q200_roots=NONE;c300_roots=NONE;f400_roots=NONE
+M=32;degree=15;roots=3,4,5,6,7,8,9,10,11,12,13,14,15,16,32
+pure_integer_walls=q:NONE,c:NONE,f:NONE;exceptional_M32_smith_correction=NONE;core_integer_roots=NONE
+degree_law=23M-2floor(M/3)-2floor(M/2)-floor(2M/3)-3;M32_degree=660
+calibrated_chart_gcd_degree=0;wall_complement_integral=1
+degree_invoice=B693,E108,H15,W786,resultant1446,raw_gcd1679,removed1019,core660
+W_integer_orders=r1:6,r2:24,r3..10:28,r11..16:26,r17..21:24,r22..31:23,r32:20;half_wall_order=6
+associated_over_Q=G~q^5*c*R*H~q^5*c*B*E*N;R~W*N;W=(B*E)/H
+positivity_chain=n>=0=>N(n)>0_and_W(n)>0=>R(n)!=0=>no_common_ternary_zero=>first_four_factorial_moments_not_all_zero
+determinant_interpolants=2;paired_depth_controls=3
+individual_outside_determinant_evaluations=6
+M33_boundary=NOT_COMPUTED;no_arbitrary_width_or_radial_extrapolation
+all_exact_checks=PASS

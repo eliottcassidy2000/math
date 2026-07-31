@@ -1,0 +1,15 @@
+THM-2827 POLE-ORDER FABER NONRESONANCE AUDIT -- exact finite controls
+assert_nodes=0
+float_literals=0
+rows R=1..18: direct multinomial and explicit H_R identity agree
+prefix degree laws/gcd checked R=1..18
+nu=3..25 lane counts = {'polar': 2194, 'pure': 2212, 'regular-H': 4909}
+all polar top/lower inequalities checked through R=18
+all pure faces, retained rows, and prescribed H valuations checked through R=18
+all regular-H cone inequalities/monomials checked through R=18
+resonance records = ((8, 13, 6, 1), (11, 17, 8, 1), (14, 21, 10, 1), (8, 24, 11, 2), (17, 25, 12, 1))
+first resonance = (8, 13, 6, 1)
+first formal witness H coefficient = -195/131072
+nu=4 resonance count = 0
+passport divisibility p=(4k+3)delta checked on every recorded ray
+ALL EXACT FINITE CONTROLS PASS

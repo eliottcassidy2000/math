@@ -1,0 +1,10 @@
+THM-2657 exact odometer carry/root lift certificate
+p=13 R=4826809 kernel=371293 total_lifts=4826809
+lift_fibre_size=371293 nonzero_lifts=4455516
+carry_root_checks=4826809; all nonzero lifts order=4826809
+13_torsion=(0, 371293, 742586, 1113879, 1485172, 1856465, 2227758, 2599051, 2970344, 3341637, 3712930, 4084223, 4455516); quotient_nonzero_intersection=0
+minimal_section=7*delta; cocycle_k_hist=((0, 91), (91, 78))
+physical_wrap=7/13^5; H2_class_mod13=7
+section_checks=169
+canonical_phase_grid_speeds=(742586,)
+nonsplit odometer extension: PASS

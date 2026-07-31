@@ -1,0 +1,15 @@
+DEGREE22 HIGHEST-ODD COMPONENTWISE CLOSURE
+h0_support=P_infty_plus_five_smooth_coarse_points
+smooth_quotient_p5_degree=5 squarefree=YES unique_rho=YES
+smooth_points=q_nonzero,d_nonzero,transverse,R22_nonzero
+h_divisor_degree=3*g*(6/g)+5=23
+smooth_poles=q_aff:3,R_aff:25
+P_infty_response_pole_min=8
+source_one_pole=>physical_component_has_exactly_one_infinity_point
+pullback_response_order_gt_1=>U_nonconstant=>unique_source_pole_finite
+finite_pole_exact_prefix=h^2*H=W^2+d;h^4*L=qW-s
+smooth_prefix_resultant=-76608*W**6
+P_infty_tangent_after_omega2=-1_and_sstar=qstar*omega=32*qstar^6
+all_odd_response_members=componentwise_empty_including_reducible_nonreduced
+residual=all_even_zero_first_flux_only_not_JC2
+PASS

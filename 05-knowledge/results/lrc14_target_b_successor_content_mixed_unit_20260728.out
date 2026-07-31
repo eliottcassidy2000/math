@@ -1,0 +1,19 @@
+LRC14 target-b successor-half-cell content and BABA unit certificate
+status=VERIFIED-EXACT COMPANION; canonical THM-2623 universe
+target_b_word_census_safe_danger=((188634, 10807572370920), (86950, 4981755322960))
+target_b_danger_split_census_narrow_annulus=((44222, 2533638252600), (42728, 2448117070360))
+shards=(((0, 41), 520, 787088, 44772, 4656288, 0, 520, 834432, 6984432, 0), ((41, 82), 520, 720690, 44772, 4656288, 0, 520, 764910, 6984432, 0), ((82, 123), 520, 720690, 44772, 4656288, 0, 520, 764910, 6984432, 0), ((123, 162), 520, 758384, 42588, 4429152, 0, 520, 803616, 6643728, 0))
+target_b_global_content=520 positives=2986852 fine_checks=176904 subdigit_values=18398016 nondivisible_by_26=0
+target_b_refined_content=520 refined_positives=3167868 refined_subdigit_values=27597024 refined_nondivisible_by_26=0
+inherited_target_a_content=26 joint_a_b_broad_content=gcd(26,520)=26 joint_a_b_refined_content=gcd(26,520)=26
+mixed_slices=(('b', 1, (1, 1, 0), 1, 1, 0, 2), ('a', 0, (1, 0, 12), 1, 1, 6, 3), ('b', 1, (1, 1, 0), 0, 0, 12, 2), ('a', 0, (1, 0, 12), 0, 0, 6, 3))
+mixed_broad_raw_rows=((4309920398987335347415200, 0, 0, 0, 0, 2977872061687057873578240, 0), (0, 4739038043912456963078400, 0, 4132799542775583874594400, 0, 0, 0), (4309920398987335347415200, 0, 0, 0, 4325213800307453419285920, 4130222830935034241247840, 0), (0, 3903227101897658322627840, 0, 3282427472572462219285280, 0, 0, 0))
+mixed_debt_raw_rows=((4309920398987335347415200, 0, 0, 0, 0, 2962318523250804183385920, 0), (0, 4739038043912456963078400, 0, 4132799542775583874594400, 0, 0, 0), (4309920398987335347415200, 0, 0, 0, 4309777716805797477040800, 4115487899784899166328800, 0), (0, 3903227101897658322627840, 0, 3282427472572462219285280, 0, 0, 0))
+mixed_annulus_b_raw_rows=((0, 0, 0, 0, 0, 15553538436253690192320, 0), (0, 0, 0, 0, 15436083501655942245120, 14734931150135074919040, 0))
+mixed_broad_vectors_div26_mod13=((9, 0, 0, 0, 0, 1, 0), (0, 0, 0, 2, 0, 0, 0), (9, 0, 0, 0, 10, 10, 0), (0, 0, 0, 11, 0, 0, 0))
+mixed_debt_vectors_div26_mod13=((9, 0, 0, 0, 0, 12, 0), (0, 0, 0, 2, 0, 0, 0), (9, 0, 0, 0, 2, 4, 0), (0, 0, 0, 11, 0, 0, 0))
+mixed_annulus_b_vectors_div26_mod13=((0, 0, 0, 0, 0, 2, 0), (0, 0, 0, 0, 8, 6, 0))
+mixed_broad_root_normalized_determinants=(12, 12, 10, 12)
+mixed_debt_root_normalized_determinants=(12, 12, 8, 12)
+verdict=all four narrow BABA debt-sector rows have nonzero unit determinant after joint /26 normalization
+SCOPE: no unit transport, terminal-word transition, endpoint transport, row exclusion, or LRC14 conclusion

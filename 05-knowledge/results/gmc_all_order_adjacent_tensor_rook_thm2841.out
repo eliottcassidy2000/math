@@ -1,0 +1,10 @@
+THM-2841 ALL-ORDER ADJACENT TENSOR ROOK REFEREE
+status=PROOF-COMPLETE CANDIDATE; VERIFIED-EXACT
+formula_cells=3424
+positive_cells=3424
+lower_bound_equalities=33
+minimum_ratio_to_derangement_bound=1
+permutation_cells=182
+random_cells=2000
+subfactorials_k2_to_k10=1,2,9,44,265,1854,14833,133496,1334961
+all_exact_controls=PASS

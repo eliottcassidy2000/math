@@ -1,0 +1,23 @@
+THM-2928 literal one-drift clock audit
+safe target: 61/273
+phase-load tariffs k=1..6: (Fraction(0, 1), Fraction(7, 78), Fraction(7, 26), Fraction(119, 338), Fraction(308, 585), Fraction(77, 117))
+two-drift finite box: c1/d1<585/154, c2/d2<13(max A)
+direct six-body universal ruler: L divides 5,045,040
+stable 2/25 deletion cone: c2/d2<(25/3)(max A)
+2/25 reciprocal tariffs: (Fraction(15, 112), Fraction(1, 6), Fraction(13, 84), Fraction(17, 154), Fraction(1, 24))
+2/25 gap-branch multiplier caps: (141, 3384, 65597, 1188463, 28523112)
+coindex cutoff: d<=12
+density candidates: (1, 2, 3, 4, 8)
+reflection survivors: (1, 3, 8)
+phase numerators: {1: (1,), 3: (1, 2, 4), 8: (1, 3, 5, 7, 9, 11)}
+d=1 masses: {1: Fraction(1, 7)}
+d=3 masses: {1: Fraction(0, 1), 2: Fraction(3, 14), 4: Fraction(3, 28)}
+d=8 reflected-pair masses: {1: (Fraction(1, 7), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), 3: (Fraction(0, 1), Fraction(0, 1), Fraction(1, 21), Fraction(0, 1)), 5: (Fraction(0, 1), Fraction(1, 35), Fraction(0, 1), Fraction(0, 1)), 7: (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 49)), 9: (Fraction(2, 63), Fraction(0, 1), Fraction(0, 1), Fraction(1, 63)), 11: (Fraction(0, 1), Fraction(1, 77), Fraction(2, 77), Fraction(0, 1))}
+largest candidate phase mass: 3/14 < 61/273
+five-aligned safe target: 478/1365
+five-aligned one-drift numerators: {1: (), 3: (1,), 8: (1, 3)}
+five-aligned d=3 masses: {1: Fraction(0, 1)}
+five-aligned d=8 reflected-pair masses: {1: (Fraction(1, 7), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), 3: (Fraction(0, 1), Fraction(0, 1), Fraction(1, 21), Fraction(0, 1))}
+largest five-aligned phase mass: 1/7 < 478/1365
+PASS: no one drift covers the five-aligned residual on the full body carrier
+PASS: the literal six-body/six-aligned-plus-one-drift branch is empty

@@ -1,0 +1,16 @@
+THM2996 prime-modular affine-defect exact companion
+module: S=[[0,1],[1,0]], T=[[0,-1],[1,-1]]
+p=2: Z1=8 B1=4 H1=2; local=(1,1); points=4 image=24 cusp=4; bases=6; triangle=spherical; disc_character=S3-sign
+p=3: Z1=27 B1=9 H1=3; local=(1,3); points=9 image=54 cusp=6; bases=48; triangle=euclidean; disc_character=S3-sign
+p=5: Z1=125 B1=25 H1=5; local=(1,1); points=25 image=150 cusp=10; bases=480; triangle=hyperbolic; disc_character=trivial
+p=7: Z1=343 B1=49 H1=7; local=(1,1); points=49 image=294 cusp=14; bases=2016; triangle=hyperbolic; disc_character=S3-sign
+p=11: Z1=1331 B1=121 H1=11; local=(1,1); points=121 image=726 cusp=22; bases=13200; triangle=hyperbolic; disc_character=S3-sign
+p=13: Z1=2197 B1=169 H1=13; local=(1,1); points=169 image=1014 cusp=26; bases=26208; triangle=hyperbolic; disc_character=trivial
+p=3 dual boundary: Cartan_det=3; root_H1=3 dual_H1=9; restriction_fibres=1/3; classes=(('cusp-only', 2), ('local-only', 2), ('transitive', 4), ('zero', 1)); transitive_lines=((0, 1), (1, 2))
+  dual b=00: classes=1 image=6 orbits=1+1+1+6 cusp=2 t_fixed=3
+  dual b=10,20: classes=2 image=6 orbits=3+3+3 cusp=2 t_fixed=0
+  dual b=11,22: classes=2 image=18 orbits=3+6 cusp=6 t_fixed=3
+  dual b=01,02,12,21: classes=4 image=18 orbits=9 cusp=6 t_fixed=0
+faithful S3 transitive on V\{0}: unique field/dimension/size=F_2^2/4
+p=13 LRC-shaped abstract control: 169 points, image 1014, cusp 26, no physical identification
+all exact checks passed

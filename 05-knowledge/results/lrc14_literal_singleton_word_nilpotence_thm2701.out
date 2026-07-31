@@ -1,0 +1,12 @@
+LRC14 literal singleton-word one-step dilation nilpotence
+status=PROVED + VERIFIED-EXACT; canonical typed row
+row=(1, 14, 27, 40, 53, 66, 13, 2197, 742586); B(y)={13y}; Qa=E_c2; Qb=E_c3
+literal_word_bits=guard-safe + five unit-safes + unshifted-c1-safe + exactly one target danger
+length6_certificate_partition={'a@0->guard@3': 32, 'a@1->guard@4': 16, 'a@2->guard@5': 8, 'b@0,1->speed14@5': 8}
+factor_sparse_a=Qa@j forces guard-danger@j+3
+factor_sparse_b=Qb@0,Qb@1 force speed14-danger@5
+sharp_word=bbbbb:y0=132661/742586:states=(Fraction(132661, 742586), Fraction(18417, 57122), Fraction(841, 4394), Fraction(165, 338), Fraction(9, 26)):min_safe_margins=(Fraction(186041, 5198102), Fraction(3314, 199927), Fraction(1493, 30758), Fraction(66, 1183), Fraction(15, 182)):B5_endpoint=1/2:speed14_distance=0
+period4_modulus=28560:rows={'baba': ((1176, 27384), ()), 'abab': ((13272, 15288), ())}:BABA_orbit=(Fraction(7, 170), Fraction(91, 170), Fraction(163, 170), Fraction(79, 170)):defects=('guard-danger', 'unshifted-c1-danger', 'guard-danger', 'unshifted-c1-danger')
+verdict=literal Qa/Qb language is positive at five states and empty at six; no one-step semantic recurrent SCC
+exit=enlarge the state by guard/source-clock debt or change the chronology; phase-scheduled tooth switching is not a terminal-word transition
+SCOPE: canonical typed row; no scalar-row exclusion and no LRC14 conclusion

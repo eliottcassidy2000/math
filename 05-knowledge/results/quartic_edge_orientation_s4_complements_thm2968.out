@@ -1,0 +1,23 @@
+THM-2968 quartic signed-pair complement bridge
+S4=24 W=48 H0=24 H1=24
+orientation_pairs=(((0, 2, 1, 3), (0, 3, 1, 2)), ((0, 3, 2, 1), (0, 1, 2, 3)), ((0, 1, 3, 2), (0, 2, 3, 1)))
+pointwise_rho_or=z^sgn*rho_edge checks=24
+edge_image=24 class=H0 condition=p=0
+orientation_image=24 class=H1 condition=p=s
+edge_cycle_table={(1, 1, 1, 1): (1, 1, 1, 1, 1, 1), (2, 1, 1): (2, 2, 1, 1), (2, 2): (2, 2, 1, 1), (3, 1): (3, 3), (4,): (4, 2)}
+orientation_cycle_table={(1, 1, 1, 1): (1, 1, 1, 1, 1, 1), (2, 1, 1): (2, 2, 2), (2, 2): (2, 2, 1, 1), (3, 1): (3, 3), (4,): (4, 1, 1)}
+edge_U=1+2+3 edge_Lambda5=1+2+3
+orientation_U=1+2+3sgn orientation_Lambda5=sgn+2+3
+odd_sheet_transposition=(0, 1, 3, 2)
+edge_transposition_control=(000,(0,2,1))
+orientation_transposition_control=(111,(0,2,1))
+ternary_sheet_generator=(2, 0, 1, 3)
+common_ternary_control=(011,(1,2,0))
+binary_ternary_generate_S4=24
+THM2769_Delta=-4096*t**2*(27*t**2 - 14*t + 3)
+THM2769_J_or=4096*(t - 1)*(27*t**3 - 25*t**2 + 8*t - 1)
+edge_discriminant_squareclass=1
+orientation_discriminant_squareclass=Delta
+THM2769_generic_S4_witness=imported
+physical_generic_S4_realizes=H0+H1
+quartic_edge_orientation_s4_complements_thm2968=PASS

@@ -1,0 +1,12 @@
+THM2951 FIFTH-COMPOUND / V4 PHASE AUDIT
+basis_dims fifth=6 third=20 balanced=8 two_forms=15
+W_order=48 character_inner_numerator=0 Hom_W=0
+contraction_unbalanced_rank=15 pure_kernel=0
+projected_contraction_rank=12 kernel=3
+reconstruction_controls=2 detC_equals_N5=PASS
+balanced_weight_controls=8 spectral_formula=PASS
+scalar_hostile N=1 E5=6 selected_cofactor=1
+trace_identity=(2,2,2,2)
+trace_rotation=(0,0,0,0)
+singular_C5_ranks rank4=0 rank5=1
+ALL CHECKS PASS

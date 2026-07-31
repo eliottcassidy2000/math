@@ -1,0 +1,19 @@
+split prime-23 component divisor budget
+base_split_lambda_sha256=1bbadb900e27112f57f600b0b5b73a3b85fc5b02f23e3f8f687dac4fa1c41fc3
+quadratic_norm=Res_zeta(f2,zeta*f1^4-X)=C0*D^4-X*T+A^5*X^2
+split_eliminant=C0*D^4-eta*t^23*T+A^5*eta^2*t^46
+zeta2_leading_A=15944049
+D_norm=degree_t10:degree_v5:terms60
+T_trace=degree_t23:degree_v11:terms1220
+fixed_C0=-672*G3
+fixed_D=-16071601392*L5
+fixed_T=degree11:terms12:coprime_to_G3_and_L5
+naive_component_degrees=1..23
+divisor_budget=23r<=5(4r+s);23s<=3(4r+s)
+budget_survivors=(r,s,d)=(5,3,23)_only
+uniform_component_consequence=one_geometric_component
+exact_zero_divisors=div0(F1)=23O;div0(zeta)=23N;div(q)=5N-3O
+rational_normal_form=q=a^5/b^3;t=a*b^4/H;zeta=a^23/H^3;f1=-b^23/H^5
+rational_form_degrees=deg_a3:deg_b5:deg_H23
+scope=UNIFORM_GEOMETRIC_INTEGRALITY_REDUCTION_NOT_RATIONALITY_EXCLUSION
+ALL CHECKS PASSED

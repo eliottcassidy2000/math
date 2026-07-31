@@ -1,0 +1,15 @@
+THM-2806 TAU-TWELVE SIMPLEX INDEPENDENT HOSTILE AUDIT
+status=FINITE-EXACT independent audit
+dependency_sha256=(('lrc14_opposite_wing_common_atom_virtual_sector_audit_thm2782.py', 'f696867c5242e86593de64f3ee7944bf44a3887e7818291ed059c7358f959c1a'), ('lrc14_positive_graded_address_two_simplex_thm2807.py', '11cdbe3c6cc7f9d5b6b24863ced71eb91cc84adc67fe38a3f8a3e637362453fb'), ('lrc14_literal_fixed_sheet_allocation_independent_audit_thm2806.py', '90386206fa441edaa121b54b501347f14005e997b4c0e8f95947f2fac14050b4'))
+implementation=full_one_sided_source_and_target_carriers;insert_full_semantic_section;pull_target_back;direct_set_differences;no_primary_addendum_or_carrier_objects_import
+universe=(clock,sigma,tau)=(1,0,12);addresses=(3454614,3454627,4143978);rail8;target_root1;delayed_carry6
+tau12_full_section_piece_counts_(A,B,M,L,R)=(0, 241, 0, 0, 241);source_empty_target_only_before_cylinder=yes
+tau12_vertex=address:3454614;central_index:0;pieces:1;mass:60781651775958960/371293;coefficient:790161473087466480
+tau12_vertex=address:3454627;central_index:1;pieces:1;mass:60781651775958960/371293;coefficient:790161473087466480
+tau12_vertex=address:4143978;central_index:53028;pieces:1;mass:60781651775958960/371293;coefficient:790161473087466480
+independent_selected_tables=tau3:((Fraction(60781651775958960, 371293), 790161473087466480), (0, 0), (Fraction(60781651775958960, 371293), 790161473087466480));tau12:((Fraction(60781651775958960, 371293), 790161473087466480), (Fraction(60781651775958960, 371293), 790161473087466480), (Fraction(60781651775958960, 371293), 790161473087466480));whole_cylinder_translation=3/3
+separate_common_bank_clock_counts=(0, 81, 56, 56, 0, 0, 0);right_cofiber_clock_counts=(0, 81, 56, 56, 0, 0, 0);pair_type_histogram=(((False, False), 374), ((True, True), 193))
+cellwise_nonempty_support_agreement=567/567;common_vs_right_disjoint=567/567;tau12_not_in_common_target_bank=yes
+VERDICT=ACCEPT:the_THM2807_tau12_simplex_has_no_common_allocation_atom_and_is_literally_target_only_in_the_independent_full_section_constructor
+SCOPE=item1_for_this_fixed_simplex_only;no_endpoint_origin;no_Fourier_or_root_deck_map;no_row_exclusion;no_LRC14
+ALL INDEPENDENT CHECKS PASSED

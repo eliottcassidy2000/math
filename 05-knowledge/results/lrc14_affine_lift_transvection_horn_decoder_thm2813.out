@@ -1,0 +1,14 @@
+THM-2813 AFFINE-LIFT TRANSVECTION AND PROJECTIVE HORN DECODER
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
+p=13; modulus=4826809; top_step=371293; addresses=(3454614,3454627,4143978)
+affine_lifts=13; least=(2652079, 352469); last=(2280786, 2951520)
+common_depth2_shear=(v,w)->(v,w+10(v-7)); affine_pair=(131, 104)
+relative_lift=A_t(y)=y+t*13^5*(y-7 mod13); top_quotient=(r,h)->(r,h+t*r)
+group_law_checks=169; depth2_checks=2197; top_quotient_checks=2197
+fixed_residue_checks=156; fixed_sheet_size=371293; free_offsheet_orbits=342732
+normal_jet_checks=169; normal_jets=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+inherited_thm2803_directions=168; w6_w7_minors=13104; collapsed_flags=13x13; jet_augmented_flags=169
+thm2806_support={'B': 169, 'P': 13, 'Q': 13, 'H': 1, 'all': 1, 'omega': 144}; central=(169, 13, 13, 1); hadamard=(196, 168, 168, 144); raw_fourfold_omega=0
+formal_rees_scalar_repetition=(1,...,1); no_t_action_typed=yes; genuine_normal_jets=(0,1,...,12); scalar_not_jet=yes
+scope=relative address transvection and conditional common-scalar projective decoder only; no physical allocation-to-endpoint map, root/Cech map, row exclusion, or LRC14
+ALL EXACT CHECKS PASSED

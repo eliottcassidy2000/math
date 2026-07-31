@@ -1,0 +1,11 @@
+ENDPOINT PRONY SPLITTER / CARRY CHARACTER-THREE INTERTWINER
+multipliers=(38,64,90,116); all_gcd_91=1
+physical_rows=q3_origin00=q11_origin00=q11_origin12;q3_origin12=empty
+reduced_exponents=((2203, 65), (2216, 234), (2229, 403), (2242, 572)); dual_field_nonzero=8/8
+all_integer_endpoint_numerators_nonzero=1; every_Prony_window_nonsingular=1
+two_nodes=(orders=182,14); recurrence_order=2; Prony_determinant=1910
+first_six_specialized_coefficients=(1712, 3831, 1267, 931, 106, 1000)
+relative_module=trivial+character3; carry_character3=4292; endpoint_character3=3228; intertwiner=3309
+node_only_swapped_weight_hostile=PASS
+scope=endpoint factors and normalized linear interface only; common full-current bank/E3 transport OPEN
+ALL EXACT CHECKS PASSED

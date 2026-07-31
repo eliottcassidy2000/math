@@ -1,0 +1,9 @@
+LRC14 THM2915 postcomposition with THM2916/2919/2920
+counts=(thm2915_union=1315,thm2916_closed=394,thm2916_outside=0,thm2920_repairs=296,thm2920_overlap=1,thm2920_new=295,thm2919_route=2,thm2919_outside=0,current_union=1610,current_residual=1822)
+thm2916_overlap_digest=c68d09676683f6204df3b04353a3b3107ebbb4285d13a3b6001446372e351e1b
+thm2920_overlap_roots=((1, 2, 3, 6, 9, 11, 12),)
+thm2920_new_digest=6c4556f9fd07fafa1fe7f62a4088b7842bd08de32b188eab231313f748f77703
+current_union_digest=675631dfe7a4bf5924b7f16a100e7eebe60901d25190e493fa4a640325475a50
+mode=LOCKED
+scope=exact root-set composition only;THM2915 remains independent of THM2916/2919/2920;not LRC14
+all_exact_controls=PASS

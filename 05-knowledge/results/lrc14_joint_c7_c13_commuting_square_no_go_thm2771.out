@@ -1,0 +1,9 @@
+FIXED-CLOCK CHART x TARGET-LABEL FOUR-CORNER AUDIT
+status=THM-2771 FINITE-EXACT candidate; object commutator versus boundary profile
+object_commutator_failures=() over 13*13 labelled squares
+primitive_right_cofiber=(0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 121)
+right_cofiber_difference_rank_Q=12
+four_corner_boundary_census_(delta,nonzero_t_ell_cells,L1_grid_mass)=((0, 0, 0), (1, 21, 89595253440), (2, 35, 90705938400), (3, 49, 91816623360), (4, 56, 92186851680), (5, 56, 92186851680), (6, 56, 92186851680), (7, 56, 92186851680), (8, 56, 92186851680), (9, 56, 92186851680), (10, 49, 91816623360), (11, 35, 90705938400), (12, 21, 89595253440))
+verdict=target and chart actions commute exactly; nonzero Delta_target(r) and the alternating four-corner support are mixed coboundaries, not a transition commutator/holonomy 2-cocycle
+THM2591_SCOPE: does not pay the mixed-square invoice without an independently noncommuting semantic/common-ancestry transition or reference
+ALL CHECKS PASSED

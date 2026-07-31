@@ -1,0 +1,19 @@
+LRC14 relative Segal macro and ghost-midpoint exact probe
+status=VERIFIED-EXACT packet-support completion; no semantic cospan
+parameters=P:13,R:4826809,L:82055753
+packet_points=(Fraction(39123022, 82055753), Fraction(41305508, 82055753)); numerators=(39123022, 41305508)
+ordinary_D2_macro_translations=(4472399, 1954775); root_steps=(5, 8)
+ordinary_D2_packet_cycle=x0--A_4472399D2-->x1--A_1954775D2-->x0
+delayed_B0_orbit=(Fraction(4, 17), Fraction(1, 17), Fraction(13, 17), Fraction(16, 17), Fraction(4, 17))
+orbit_grading=grade0 endpoints {4/17,13/17}; grade1 ghosts {1/17,16/17}; B0 toggles grade and B0^2 is reflection
+clock_grading=off_diagonal_endpoints:((1, 4), (4, 1)); forced_diagonal_ghosts:((4, 4), (1, 1))
+endpoint_semantic_rows=(phase,bits,exclusive_sources,D6endpoint,deep_word)=((Fraction(4, 17), (True, (True, True, True, True, True), False, True, False), (), Fraction(4, 17), (1, 2)), (Fraction(13, 17), (True, (True, True, True, True, True), False, True, False), (), Fraction(13, 17), (1, 2)))
+all_ordinary_two_D_factorizations=((0, Fraction(1, 17), (4, 4), {'factorizations': 4826809, 'clock_glued': 106080, 'present': 27249, 'rail': 8160, 'present_and_rail': 2925, 'present_rail_and_both_roots': 2925}), (1, Fraction(16, 17), (1, 1), {'factorizations': 4826809, 'clock_glued': 106080, 'present': 15988, 'rail': 8160, 'present_and_rail': 2479, 'present_rail_and_both_roots': 2479}))
+selected_clock_glued_ghost_lifts=((0, 1485215, 4471840, 41513423, Fraction(1, 17), (4, 4), (2441966, 7, 0, 1), 11, ((0, 2), (1, 1)), ((0, 2), (1, 1)), (), (False, (True, True, True, True, True), True, False, False), ()), (1, 4459459, 1903516, 38392136, Fraction(16, 17), (1, 1), (2258360, 0, 12, 0), 11, ((0, 2), (1, 1)), ((0, 12), (1, 11)), (), (False, (True, True, True, True, True), True, False, False), (2,)))
+minimality=zero ghosts impossible because forced phases are outside the delayed word; one ghost cannot cover distinct phases 1/17 and16/17; the two selected lifts suffice for the clock-glued four-cycle
+fixed_grading_cycle=(1,4)->(4,4)->(4,1)->(1,1)->(1,4)
+physical_boundary=some diagonal ghosts retain rail,present,current-root,and D-root, but every ghost has no inherited delayed sector and lies outside the nonconstant clock class
+semantic_boundary=macro endpoints fail literal Qa only at c1-safe and lie in no exclusive E_j; adjoining ghosts is a relative Segal factorization completion, not a THM2305 endpoint/current cospan
+next_target=new mapping-cone current absorbing c1/guard debt, or re-root at an actual exclusive source; endpoint equality alone cannot supply either
+SCOPE: no terminal current, scalar row, row exclusion, or LRC14 conclusion
+ALL CHECKS PASSED

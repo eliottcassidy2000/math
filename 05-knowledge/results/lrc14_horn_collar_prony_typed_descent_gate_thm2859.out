@@ -1,0 +1,18 @@
+THM-2859 Z8 / PRONY TYPED DESCENT GATE
+pinned_local=(('lrc14_horn_collar_endpoint_carry_thm2859.py', '6e062f3cc57c80fcff372c272bc138e280205bb953e484f1cc267340774260f0'), ('lrc14_horn_collar_endpoint_orbit_action_thm2859.py', 'a4c145892ec3caf1f199a13bac07472e726f5dada0b523e86274ad8c14ce2846'), ('lrc14_q3_q11_transverse_endpoint_horn_thm2847.py', '258659c5093d98eea84056bdd3599b32d2a244bcd37dfa5f22dc5b25946ffe72'), ('lrc14_literal_fixed_sheet_allocation_thm2806.py', '311d0d85500f0c65945ebe5913f09d34a16293119c942b42eeaa854fbf85f71e'))
+pinned_prony_commit=ab30502ddcd54fa9b4d597dd101184f2d3916b52;pinned_prony_blobs=(('04-computation/lrc14_endpoint_prony_carry_character3_thm2863.py', '3d09e2f06cd17c38a34b00fa133f67963287173e5a69092e4e2d2b190f4459b9'), ('05-knowledge/results/lrc14_endpoint_prony_carry_character3_thm2863.out', '2cf1902b19fd6ae9c6780521da0e431c8c7e1887235ea94ef4a8a5ca7cf9c7e4'))
+edge_labels=12;physical_edge_rank=1;source=(142004992589460, 142005019034340);target=(142031463914340, 142031490359220);delta_h=66;endpoint_value=Z8
+q_centered_displacements_in_h={3: 171366, 11: -114244};strict_complete_forest_same_cell_state_rows=0/48;strict_complete_forest_any_cell_state_rows=0/48;strict_same_sheet_edge_rows=0/24
+strict_minimal_witnesses={(2, 3): ((1, 0, 5), (142004992589460, 142005019034340), (210736584398340, 210736610843220), False), (2, 11): ((1, 0, 5), (142004992589460, 142005019034340), (96183931383540, 96183957828420), False), (68, 3): ((1, 0, 5), (142031463914340, 142031490359220), (210763055723220, 210763082168100), False), (68, 11): ((1, 0, 5), (142031463914340, 142031490359220), (96210402708420, 96210429153300), False)}
+relaxed_factor_carrier_state_rows=48/48;relaxed_pre_endpoint_edge_rows=24/24;factor_order=('E3', 'clock', 'q1', 'q2', 'c2', 'c3');carrier_weight=27581135604
+base_root_ancestry=counts=(966606, 28534);digest=15c804c7cea9f61feab3b641eccdc035d937142b446d1cc14e059210eb1534fd;symmetric_differences=(0,0)
+q_shifted_ancestry={3: ((0, 28535), 'bdf95bb641f8d0ab0d8ebe764fecda782b9a7fe4995031c7f23e2f02868de931'), 11: ((0, 28534), '89a69bdfdedb80eeabcf8eb3401012714a33cc2cb9690221f835c923d4cf9dd2')};U_empty_on_q3_q11=1
+q0_endpoint_translation_positive_control=(((0, 8),), ((0, 8),))
+q3_endpoint_rectangles=((0, 1, 2, 3, 4, 5, 6, 7, 8, 9), (0, 3, 4, 5, 8, 9, 10, 11, 12), 90, True)->((0, 1, 2, 3, 4, 5, 6, 7, 8, 9), (0, 5, 6, 7, 8, 9, 10, 11, 12), 90, True);all_translation_deltas=((), ());Z8_hamming=(80, 80);Z8_lost_gained_first=(40, 40, (0, 1), (0, 6));second_axis_gap_necklaces=((1, 1, 1, 1, 1, 3, 1, 1, 3), (1, 1, 1, 1, 1, 1, 1, 1, 5))
+q11_endpoint_rectangles=((0, 1, 2, 3, 4, 5, 8, 9, 12), (0, 1, 2, 3, 4, 5, 8, 11, 12), 81, True)->((0, 1, 2, 3, 4, 5, 8, 9, 12), (0, 1, 2, 5, 6, 7, 8, 11, 12), 81, True);all_translation_deltas=((), ());Z8_hamming=(72, 72);Z8_lost_gained_first=(36, 36, (0, 3), (0, 1));second_axis_gap_necklaces=((1, 1, 1, 1, 1, 1, 1, 3, 3), (1, 1, 1, 1, 3, 1, 1, 1, 3))
+named_prony_origin_occupancy_before_after={3: ((1, 0), (1, 0)), 11: ((1, 1), (1, 1))}
+probe_gate_rows=(Y,strict_typed,relaxed_pre_endpoint,relaxed_fully_typed)=((38, 0, 24, 0), (64, 0, 24, 0), (90, 0, 24, 0), (116, 0, 24, 0))
+FIRST_STRICT_LOSS=physical same-labelled-cell forest vertex; q3/q11 pulled intervals are not forest vertices and have empty U ancestry
+FIRST_RELAXED_LOSS=full endpoint-address transport; q3/q11 rectangles lie in different translation orbits in both frames
+PRONY_SPLIT=SKIPPED_BY_TYPE_GATE; no scalar endpoint sums or Pi3(delta8-delta0) comparison formed
+ALL EXACT CHECKS PASSED

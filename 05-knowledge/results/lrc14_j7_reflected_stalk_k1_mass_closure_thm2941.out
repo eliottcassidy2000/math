@@ -1,0 +1,21 @@
+LRC14 THM-2941 canonical reflected-stalk k=1 mass closure
+scope=all six-body roots E subset {1,...,14};Z_E={L-e:e in E};one remaining aligned label a;not the whole j=7 sector
+clause_on_safe_cell=(L-e)(j+u)=-ej+(L-e)u mod L;U_j=union_e {u:||((L-e)u-ej)/L||<1/14}
+projection_law=T\P_(E,Z_E)=intersection_{j in J_E} U_j a.e.;therefore mu(P)>=1-mu(U_j)
+final_comb_obstruction=P subset D_a implies mu(P)<=1/7 for every positive integer a;a witness mu(U_j)<6/7 rules out all a without a label horizon
+selector=leftmost cell of first positive safe component;on failure use leftmost cell of second positive safe component
+body_roots=3003;first_component_witnesses=2997;second_component_witnesses=6
+first_component_exceptions=((1, 3, 5, 7, 9, 11), (1, 3, 5, 7, 9, 12), (1, 3, 5, 7, 10, 12), (1, 3, 5, 8, 10, 12), (1, 3, 6, 8, 10, 12), (1, 4, 6, 8, 10, 12))
+exception_witness_rows=(((1, 3, 5, 7, 9, 11), 48510, 4725, Fraction(210343150034130160526, 284119297644863459701)), ((1, 3, 5, 7, 9, 12), 17640, 1575, Fraction(1321788712616465299, 1804868160159151527)), ((1, 3, 5, 7, 10, 12), 5880, 525, Fraction(4883694028221289, 6664626641683275)), ((1, 3, 5, 8, 10, 12), 1680, 150, Fraction(8060053807544, 10974129185305)), ((1, 3, 6, 8, 10, 12), 1680, 150, Fraction(6713483824064, 9139647888657)), ((1, 4, 6, 8, 10, 12), 1680, 150, Fraction(5032695388564, 6850648417437)))
+reflected_clause_route_comparisons=18054;direct_body_safe_checks=18054
+union_mass_routes=merged_exact_intervals;independent_endpoint_slab_sweep;all_equal
+maximum_selected_union_mass=10028643748/12527514945;body=(1, 3, 4, 6, 8, 12);L=336;j=24;safe_component_index=0
+maximum_selected_union_intervals=((Fraction(0, 1), Fraction(48, 335)), (Fraction(16, 111), Fraction(30, 83)), (Fraction(4, 11), Fraction(28, 55)), (Fraction(21, 41), Fraction(27, 41)), (Fraction(22, 27), Fraction(26, 27)))
+uniform_gap_6/7_minus_union=4964583434/87692604615
+uniform_residual_floor=1/7+4964583434/87692604615;strictly_greater_than_final_comb_mass=1/7
+endpoint_status=open danger intervals retained algebraically;mass uses closed representatives only at finitely many seams;strict uniform gap makes seam convention irrelevant
+component_sidecar=not invoked;the stronger mass obstruction closes the family before monochromatic-component or exact 7-bin recursion
+witness_digest_sha256=34988e90b7d921824ed6f56b7473f606c24156df5ad17f62c8fa710ffdd23d5c
+semantic_sha256=8fc2b276e8899622d54964325adfa4c5f23259d0d34367f812b12dc4d72c2d6c
+conclusion=canonical reflected-stalk k=1 family is empty for all 3003 body roots
+all_exact_controls=PASS

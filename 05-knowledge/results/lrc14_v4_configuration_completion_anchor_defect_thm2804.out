@@ -1,0 +1,20 @@
+THM2804 FOURTEEN-RAIL V4 CONFIGURATION COMPLETION EXACT REFEREE
+v4_configs=(('A', 0, 0, 0, 6), ('B', 0, 1, 1, 6), ('C', 1, 1, 0, 0), ('D', 1, 0, 1, 0))
+v4_bits=even_parity_subgroup_of_F2^3
+height_law=h=6*(1-sector)
+agl22_order=24 translation_v4_order=4 abstract_quotient_order=6
+carry_capacities_ABCD=(12, 12, 12, 11)
+carry_supports_ABCD=((0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12), (0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12))
+source12_private_roots_ABCD=(12, 12, 11, 12)
+missing_target_labels_ABCD=((1,), (1,), (2,), (1, 2))
+carry_diamond=U_D=U_A_intersect_U_C=U_B_intersect_U_C; U_A_union_U_C=F13
+physical_asymmetry=D alone has capacity11; abstract Aut(V4)=S3 does not act as semantic transport
+d_facet_supports=((1,), (6,), (1, 2, 3), (0, 5), (2, 3), (0, 4, 6), (0, 2, 3), (0, 4, 5, 6), (0, 1, 2, 3), (0, 4, 5), (0, 1, 3), (4, 5), (0, 2), (4, 5, 6))
+marked_supports=((1,), (6,), (2, 3), (5,), (2, 3), (4, 6), (2, 3), (5, 6), (1, 2, 3), (5,), (1, 3), (5,), (2,), (5, 6))
+d_common_positive_supports=((1,), (6,), (2, 3), (5,), (2, 3), (4, 6), (2, 3), (5, 6), (1, 2, 3), (5,), (1, 3), (5,), (2,), (5, 6))
+d_first_failure_hist=(('anchor', 23), ('marked-empty', 75))
+d_total_source12_facet_mass=103771702146779222198643000
+d_seam_rows=((0, 0, 0), (1, 0, 0), (2, 0, 0), (3, 0, 0), (4, 0, 0), (5, 0, 0), (6, 0, 0), (7, 0, 0), (8, 0, 0), (9, 0, 0), (10, 0, 0), (11, 0, 0), (12, 0, 0), (13, 0, 0))
+d_total_overlap=0 d_forward_seams=0 d_reverse_seams=0
+scope=abstract V4/S3 boundary plus one eleven-label D packet on first14 rails; no physical S3 action, labelwise union, row, or LRC14 exclusion
+ALL EXACT CHECKS PASSED

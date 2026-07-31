@@ -1,0 +1,5 @@
+LRC14 J=5 REFINED RESIDUAL GRAPH 50-CARRIER SAMPLE
+status=FINITE-EXACT-SCOUT;deterministic_lex_sample;not_all_carriers
+sample=50;first=((1, 2, 3, 4, 5, 6, 7, 9), 3, 39);last=((1, 2, 3, 4, 6, 7, 9, 10), 4, 39);sample_digest=229e68ecbac2963c1fccf23bd04edb7d08f98a39a90e4ae0606fece6cb853148
+head_total=279;head_max=10;coarse_edges=434;coarse_max=31;refined_edges=0;nonempty_carriers=0;first_nonempty=None;edge_digest=075feff178850a6d1ba7632ecaed9ddd56c324bba1945031f2c4b71792dccb5a
+all_exact_controls=PASS

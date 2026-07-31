@@ -1,0 +1,11 @@
+THM-2823 INDEPENDENT DEGREE-26 TRIPLE-POLE VALUATION AUDIT
+method=log-derivative Faber recurrence + weighted Newton initials; no primary import
+degree26_bank=Phi,Psi,K reconstructed; K=-(d/2)(Phi/q)+T*H_26
+valuation_partition=3 regular regions + 4 generic polar lanes + 1 exceptional lane
+regular_gates=H bounds 0,0; unique Phi/q monomial (143/16384)T^4
+generic_initials=s^6*f(r),s^7*g(r); resultant=-2^21
+exceptional_initials=P,G,J; Groebner ideal=<1>
+exceptional_quintic_resultant=-2^36*3^2*31^9*37
+stronger_source_relation=r=-1; f(-1)=g(-1)=-64; exceptional direct gate=nonzero
+carrier_local_orders=power and Chebyshev both have (ord V,ord M)=(3,1)
+ALL INDEPENDENT EXACT CHECKS PASSED

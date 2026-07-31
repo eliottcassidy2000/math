@@ -1,0 +1,14 @@
+ONE LONG WALL SIGNED-COMPONENT IMBALANCE AUDIT
+B_selections_k2_to_k6=390242 rank_k_minus_1=277730
+balanced_full_rank_zero_frames=35358
+det_formula=2^c*abs(sum_U epsilon)
+unique_deficient_component=unanchored_signed_tree
+square_components=half_edge_tree:det1,unbalanced_cycle:det2
+determinant_histograms=k2:det0=1,det1=2,det2=1;k3:det0=3,det1=24,det2=6,det3=3;k4:det0=124,det1=232,det2=170,det3=12,det4=22;k5:det0=3160,det1=5345,det2=2930,det3=775,det4=285,det5=125,det6=30;k6:det0=144582,det1=104166,det2=101007,det3=6690,det4=17076,det5=750,det6=2436,det8=285
+nonzero_supports=k2={1,2};k3={1,2,3};k4={1,2,3,4};k5={1,2,3,4,5,6};k6={1,2,3,4,5,6,8}
+classified_rank_shapes=277730
+odd_prime_divisors<=deficient_size<=k
+difference_spanning_tree_attains_det_k
+P4_mu3_character=total_degree_mod3=12_mod3=0_no_coefficient_split
+SCOPE=one_selected_frame_not_global_arrangement_or_graceful_proof
+FAILED CHECKS: NONE

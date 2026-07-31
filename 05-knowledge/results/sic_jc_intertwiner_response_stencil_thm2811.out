@@ -1,0 +1,10 @@
+THM-2811 exact controls
+intertwiner generator matrix: PASS
+two-pole fibre/potential rows: PASS (777)
+e=2 polynomializability rows: PASS (9916)
+N=4 response residues/moments: PASS
+rational-node Lagrange rows: PASS (84)
+SIC equispaced stencil rows: PASS (860)
+response/binomial mismatch rows: PASS (398)
+one-/three-pole quartic Hessian hostiles: PASS
+PASS checks=43476

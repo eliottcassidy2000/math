@@ -1,0 +1,32 @@
+sens_degree_fullsens_cpsat_macmini_S171.py — CP-SAT evidence for m(4) = 9
+(THM-2838; originally pushed as THM-2835, renumbered in the root-lrc collision repair).  Encoder: Boolean var per point of {0,1}^n; one integer equality
+per subset with |S| > d (vanishing Moebius coefficient); degree-sequence
+symmetry breaking on pair values.  OR-Tools CP-SAT 9.15.6755, 8 workers.
+
+  n=10 d=4 : INFEASIBLE      (walltime 96.86 s, deterministic_time 857.33,
+                              conflicts 16, branches 2191, lp_iterations 227595)
+  n=9  d=4 : FEASIBLE        (control through the same code path; explicit
+                              fully sensitive degree-4 truth table returned,
+                              polynomial printed in the log)
+  n=7  d=3 : INFEASIBLE      (control agreeing with the independent exhaustive
+                              C engine of THM-2832)
+
+Conclusion: no Boolean function of multilinear degree <= 4 has 10 sensitive
+coordinates at any input; NAE∘NAE attains 9, so m(4) = 9 sharp.  SECOND ENGINE (same session): HiGHS 1.x MIP (independent solver family,
+feasibility model, identical constraint mathematics, no symmetry breaking):
+  n=10 d=4 : kInfeasible        n=9 d=4 : kOptimal (feasible, control)
+  n=7 d=3 : kInfeasible (agrees with the exhaustive C engine)
+  LP relaxation of (4,10): feasible => the infeasibility is genuinely
+  integral (no one-shot Farkas certificate; branching required).
+Two independent engines with bidirectional controls; external hostile audit
+still welcome per repo custom.  (5,14) attempt on this host OOMs at 8 GB with 8
+workers; both a memory-capped CP-SAT run and a HiGHS attempt made no search progress
+within the session on this 8 GB host — (5,14) is explicitly COMPUTE-WANTED
+on a larger machine (model: 16384 binaries, 12911 equality rows, ~4.7M nnz).
+
+Consequence chain recorded in THM-2835: any Epoch-valid construction
+(s0 = deg^a, a > log6/log3) needs degree >= 5 and s0 >= 14.
+
+Reproduce:
+  python3 04-computation/sens_degree_fullsens_cpsat_macmini_S171.py 10 4
+  python3 04-computation/sens_degree_fullsens_cpsat_macmini_S171.py 9 4

@@ -1,0 +1,16 @@
+LRC14 TWO-TARGET PRESENT / SEMANTIC ATTACHMENT AUDIT
+row=(1, 14, 27, 40, 53, 66, 13, 2197, 742586) p=13 R=4826809 T=297836897838480
+canonical_present_dependency_sha256=6ba64a68a9fd008d2e06949b1f1cf75012f1f4e734f75f55ce0af58ae20ad7b9
+one_target_t0_source_section_counts=E1:13,E2:72,E3:0
+one_target_index_laws=E1 iff ell=0; E2 iff ell!=0 and s!=0; E3 never
+uniform_t0_mechanism=every F_(ell,s,0) contains c3-safe; exclusive E3 contains c3-danger; strict intersection empty
+two_target_E3_source_sections=936 index_law=ell!=0,t!=0,all_s
+two_target_E3_source_mass_min=(1, 9, 1, 242609986080, 7865) max=(3, 0, 2, 1362887826300, 23791)
+two_target_E3_to_D6_fork_sections=936 index_law=ell!=0,t!=0,all_s
+two_target_semantic_mass_min=(1, 9, 1, Fraction(114819491, 12545122758259)) max=(3, 0, 2, Fraction(672887730, 12545122758259))
+marked_(ell,s)_deep_target_moving_characters=936/936
+aggregated_deep_target_profile=(Fraction(0, 1), Fraction(15967606709, 12545122758259), Fraction(28713195195, 12545122758259), Fraction(30768136722, 12545122758259), Fraction(61156409883, 25090245516518), Fraction(122988281925, 50180491033036), Fraction(27052533, 11420230094), Fraction(27052533, 11420230094), Fraction(122988281925, 50180491033036), Fraction(61156409883, 25090245516518), Fraction(30768136722, 12545122758259), Fraction(28713195195, 12545122758259), Fraction(15967606709, 12545122758259))
+aggregated_deep_target_moving_characters=12/12
+strict_witness_key=(1, 0, 1) x=15991693680925/100360982066072 D6x=3179229/20792408
+scope=canonical typed row and full lawful two-target present sheet;positive semantic mass and deepest-target coefficients;no paired left relation residue;no affine-cycle attachment;no row exclusion;no LRC14 conclusion
+ALL CHECKS PASSED

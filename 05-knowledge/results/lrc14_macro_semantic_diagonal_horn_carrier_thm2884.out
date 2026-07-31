@@ -1,0 +1,13 @@
+scale=(p=13,depth=371293,T=297836897838480,U=22910530602960); horn_labels=449; range=(59306,311961); residue_mod169=156
+four_words=Q0=(0,0),QA=(1,0),QB=(0,1),QAB=(1,1); Q0_intervals=132262; Q0_measure_numerator=45425355597700
+horn_word_by_q=('QB', 'Q0', 'Q0', 'Q0', 'Q0', 'Q0', 'QA', 'QAB', 'QA', 'QA', 'QA', 'QA', 'QA'); source_word=QB; q7_zero_and_one_borrow=QAB; q3_Q0_global=66104; q3_Q0_horn=449/449
+zero_macro_E3=(0, 3, 11); stepped_macro_E3=(0, 11)
+H=ker(e_XOR_u_XOR_v)=((0, 0, 0), (0, 1, 1), (1, 0, 1), (1, 1, 0)); source=(1, 0, 1); q3_step=(0, 0, 0); q11=(1, 1, 0); q7=(0, 1, 1); edges=(3to11=(1, 1, 0),11to7=(1, 0, 1),3to7=(0, 1, 1))
+H_support_zero=(0, 1, 2, 4, 5, 7, 11); H_support_stepped=(0, 1, 2, 3, 4, 5, 7, 11); origin_parity=delta_q3
+seam_q=(0, 3, 11, 7); H_nonzero_indicator=(1, 0, 1, 1); desired_positive_selector_parity=(1,0,1,1); H_nonzero_is_size3_not_subgroup_coset_or_character_fibre; all_q_counterexamples=(1,2,4,5,6,8,9,10,12)
+cells=(q3=56,q11=63,q3capq11=42,q7_E3_only=49,q11capq7_E3_only=35,diagonal=20); diagonal_cells=((0, 5, 1), (0, 6, 1), (0, 9, 1), (0, 10, 1), (3, 5, 1), (3, 6, 1), (3, 9, 1), (3, 10, 1), (8, 5, 1), (8, 6, 1), (8, 9, 1), (8, 10, 1), (9, 5, 1), (9, 6, 1), (9, 9, 1), (9, 10, 1), (12, 5, 1), (12, 6, 1), (12, 9, 1), (12, 10, 1))
+complete_stepped_packets=20*449=8980; two_q7_fillers=17960; intervals=(I,J0,J3,J11,J7); other_native_factors=(clock,q1,q2,c2,c3)
+field_rows=((352341050142921841, 26, ((3,),), 26), (956354278959359281, 26, ((3,),), 26)); signed_diagonal_support=q3_only; q3_orientation=zero_minus_stepped=-base_nonzero; q11_q7=origin_even_cancel
+C13_actions_on_H=1_identity_only; V4_edge_triangle=flat_but_not_global_C13_action; carry_boundary=q7_a_and_a+1_have_same_QAB_H_state
+CONCLUSION: the correlated physical selector H=ker(E3_bit XOR outer_slot7 XOR outer_slot8) repairs the THM-2835 macro/word mismatch.  On every one of the 449 horn sheets, the stepped-origin q3 target is the fully bare state 000, while q11, q7, and the fixed source are the other three V4 states.  Twenty native cells retain I,J0,J3,J11,J7 and all five remaining factors, giving 8980 complete stepped packets.  The same origin-independent rule is a canonical origin-odd q3 selector, but q11 and q7 remain origin-even and cancel in the signed coefficient.  The V4 edge labels do not extend to a C13 action and remain blind to the q7 ancestry carry.  Thus this is a physical carrier/clutch candidate, not a row exclusion or an LRC(14) proof.
+ALL EXACT CHECKS PASSED

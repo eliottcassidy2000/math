@@ -1,0 +1,63 @@
+== THM-2604: unshifted future-root accessibility ==
+interval-union/integer-inequality agreement: 5200 cells PASS
+exact tooth safe-gap length: (7-L)/(7k) PASS
+L=1 masks k=1..11:
+  k= 1: [0, 12]
+  k= 2: [0, 6, 12]
+  k= 3: [0, 4, 8, 12]
+  k= 4: [0, 3, 6, 9, 12]
+  k= 5: [0, 2, 5, 7, 10, 12]
+  k= 6: [0, 2, 4, 6, 8, 10, 12]
+  k= 7: [0, 1, 3, 5, 7, 9, 11, 12]
+  k= 8: [0, 1, 3, 4, 6, 8, 9, 11, 12]
+  k= 9: [0, 1, 2, 4, 5, 7, 8, 10, 11, 12]
+  k=10: [0, 1, 2, 3, 5, 6, 7, 9, 10, 11, 12]
+  k=11: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12]
+L=2 masks k=1..9:
+  k= 1: [0, 1, 11, 12]
+  k= 2: [0, 5, 6, 7, 12]
+  k= 3: [0, 3, 4, 8, 9, 12]
+  k= 4: [0, 2, 3, 6, 9, 10, 12]
+  k= 5: [0, 2, 4, 5, 7, 8, 10, 12]
+  k= 6: [0, 1, 2, 4, 6, 8, 10, 11, 12]
+  k= 7: [0, 1, 2, 3, 5, 7, 9, 10, 11, 12]
+  k= 8: [0, 1, 3, 4, 5, 6, 7, 8, 9, 11, 12]
+  k= 9: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12]
+all-root thresholds: ordinary L=1 iff k>=12; guard L=2 iff k>=10 PASS
+uniform translated access above the thresholds: 64220 (k,h,s) cells PASS
+sharp hostiles: (k,L,h)=(11,1,6) and (9,2,6) are inaccessible PASS
+shifted atlas at (k,L)=(11,1) has 22 boundaries in I_6 PASS
+shifted atlas at (k,L)=(9,2) has 18 boundaries in I_6 PASS
+pivot combinatorics: 4032 maximal/big-set cases, 3963 admit an all-root k_a PASS
+fixed-q_star tests: 12288; a distinct k_a and u_0 always exist PASS
+criterion: B_big nonempty, except B_big={b}=Max_7 with b the forced q_star
+typed non-cover control: H=1, q=(4,2,3,6,10), all six nu_7=0, no all-root role PASS
+fixed canonical-head hostile on z in (13/56,15/56):
+  masks H,1,2,4,5,7 = [[0, 4, 8, 9], [0, 12], [0, 6], [3], [5, 10], [9, 11]]
+  safe mask {1,2,7}; tau_H=4 selects source 7 -> head 11 PASS
+  eligible future union is F_13\{1,11}; q_star=7 is sole current head failure PASS
+  nested blockers (52,169,13^5) have strict depths (1,2,5), owner c1 only PASS
+  HOSTILE SCOPE: positive local fibre, not a global scalar cover
+global image-pump audit of the fixed-head hostile:
+  46 walls / 45 open cells; n(z) histogram = {3: '389/980', 4: '451/980', 5: '1/21', 6: '1/42', 7: '1/28', 8: '1/140', 9: '2/245', 10: '1/49'}
+  min n=3, mu(T(A_0))=1, mu(A_0)=226/735 > 0 PASS
+  scalar cover would force T(A_0) into three 1/7 blocker sets: impossible PASS
+  THM-2558 sample: 366 walls, min n=2, mu(T(A_0))=1, mu(A_0)=107297/329868; globally impossible PASS
+  THM-2561 primitive row: 1964 walls, min n=1, mu(T(A_0))=1, mu(A_0)=5785336/17784855; globally impossible PASS
+complete no-all-root census: 2,310 tuples on an expanded 221-cell refinement PASS
+  refinement also includes q=12,H=11 cross-check walls; cell count is not invariant
+  min mu(T(A_0))=171/245 at H=1, q={3,4,5,7,11} > 3/7
+  consequence: every genuine scalar cover has at least one all-root role
+pairwise-distinct 1..12 census: 2,772 tuples PASS
+  image minimum 171/245; physical A_0 minimum 19841/97020
+forced sole all-root role census:
+  ordinary q_star: remaining >=3-root mass >=43/77 >3/7, impossible PASS
+  guard cardinality alone gives 137/441 <3/7 (hostile control)
+  guard four-block shape: 5,544 cases, compatible mass <=904/2695
+  hence guard survival >=1791/2695 >3/7, impossible PASS
+uniform conclusion: every scalar cover admits a pivot-eligible all-root k_a PASS
+exact preimage-grid cross-mixing controls: 700 interior witnesses PASS
+SCOPE: exact accessibility, image-pump, and finite small-role discharge;
+all scalar rows admit an eligible all-root role; canonical-head cross-mixing follows;
+no target current,
+row exclusion, or LRC(14) conclusion. All exact checks passed.

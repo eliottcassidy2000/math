@@ -13,8 +13,11 @@ status: >
   simultaneously supplies a nontrivial higher quadratic-deck jet and the
   square-prefix Hamiltonian information used in the quartic Jacobian
   reductions. Over Z_2, by contrast, I^j=2^(j-1)I and the filtration is
-  separated. Turning that identity into a Keller proof requires an unproved
-  integral order-raising lemma; none is asserted here.
+  separated. The degree-six primitive-row test named below is now
+  FINITE-EXACT REFUTED: boundary/Phi/Psi and the added Keller row R_Q,
+  even after quotienting its free constant and saturating its universal
+  differential, all have first-grade odd rank one. Any weighted Rees repair
+  is therefore a new integral hypothesis; none is asserted here.
 source: codex-2026-07-24-quadratic-deck-characteristic-audit
 depends_on: []
 related:
@@ -269,3 +272,75 @@ decisive test:
 Therefore ordinary field-valued Hasse jets cannot repair the terminal
 square-prefix descent. The `Z_2[C_2]` filtration is a precise, nonvacuous
 research target, but it remains OPEN. QED for the obstruction.
+
+## 5. Exact audit of the named degree-six test
+
+The proposed test in Section 4 has now been run in the monic Faber column
+order
+
+```text
+E6,E5,E3,E2,E1.
+```
+
+After canonical rowwise primitive `Z_(2)` clearing, the boundary, first-flux,
+and second-flux rows reduce modulo two to
+
+```text
+[0,a^5,0,0,0],
+[0,a^6,0,0,0],
+[0,a^7 Lambda,0,0,0].                                  (23)
+```
+
+Thus their odd-column map on `(E5,E3,E1)` has rank one.  At the exact square
+`T=(1+X)^2`, the primitive vector
+
+```text
+(128,32,1)
+```
+
+lies in the characteristic-zero kernel of all three rows and has a unit
+`E1` coordinate on every augmentation grade.
+
+The missing Hamiltonian row does not repair this.  In THM-2129 notation its
+exact normalized form is
+
+```text
+R_j/4=a^(j+3)(A_3+A_2+(1+2c)A_1/8).                    (24)
+```
+
+Its primitive reduction again sees only `E5`.  More importantly, `R_Q`
+carries the Keller response only after differentiation; its additive constant
+is free.  Quotienting that constant by passing to the universal relative
+differential and saturating the common two-content gives
+
+```text
+2^12 d(R/4) mod2=[0,a^7 da+a^8 dc,0,0,0].              (25)
+```
+
+This stronger universal envelope still has odd-column rank one, so every
+physical tangent contraction is weaker.  The square kernel has `R_Q=1/64`,
+but that is an allowed additive constant with zero derivative and no finite
+principal part.  Across all four canonical Hamiltonian rows the first
+2-adic appearances of `(E5,E3,E1)` are
+
+```text
+(0,3,7).                                               (26)
+```
+
+Using `(26)` as source-column weights would define a different Rees lattice;
+it is not inherited from the monic Faber coefficient module and is not stable
+under arbitrary complex specialization without further proof.
+
+The exact independent companions are
+
+```text
+04-computation/jc2_degree6_c2_primitive_order_raising_referee_20260728.py
+05-knowledge/results/jc2_degree6_c2_primitive_order_raising_referee_20260728.out
+04-computation/jc2_degree6_c2_keller_differential_rees_referee_20260728.py
+05-knowledge/results/jc2_degree6_c2_keller_differential_rees_referee_20260728.out
+```
+
+Normal and optimized executions byte-match the stored transcripts.  This
+refutes only the named canonical first-grade test and its immediate `R_Q`
+repair.  It does not refute a separately constructed torsion-free weighted
+Rees lattice, produce a Keller survivor, or settle `JC(2)` or `DC(2)`.

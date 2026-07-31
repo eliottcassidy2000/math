@@ -1,0 +1,5 @@
+PASS exact upward-event transport/cover audit
+monotone_event_counts=[3, 6, 20, 168]
+marginal_grids=[3,9,27,81]
+event_marginal_pairs=14211
+basic_feasible_laws_total_by_p=[3, 10, 38, 192]

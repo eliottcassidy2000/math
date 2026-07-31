@@ -1,0 +1,21 @@
+FULL S4 AFFINE DIVISOR-PARITY HOSTILE AUDIT
+F_t=Y^4-2Y^2-8tY+1-4t
+R_t=U^3-4U^2+16tU-64t^2
+inverse_quartic_branches=q=+/-8t
+pair_sum_product=(8t)^2
+rational_root_cases=j0,j1,j2 all_blocked
+disc_R=disc_F=-2^12*t^2*(27t^2-14t+3)
+quadratic_factor_discriminant=-128 nonsquare
+disc_R(V^2)=2^36*t^6*(27t^2-14t+3)^2
+six_root_square_root=2^18*t^3*(27t^2-14t+3)
+newton_hull=((0,2),(2,0),(3,0))
+root_valuations=(1,1,0) parity=110
+small_root_scaled_quadratic_discriminant=-48
+S3_relation_module=irreducible_dimension_2
+kummer_rank=2
+even_sign_group=V4_semidirect_S3=S4 order=24
+boundary_code={000,110,101,011}
+even_base_change_control=000
+T=64t generic_nonzero; F_0=(Y^2-1)^2
+SCOPE=non_Keller_affine_boundary_hostile_not_JC2_or_DC2
+FAILED CHECKS: NONE

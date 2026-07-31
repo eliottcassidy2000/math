@@ -1,0 +1,40 @@
+THM-2751 FIXED-CLOCK ROOT-ZERO MAYER-VIETORIS WING TARGET SPECTRUM
+status=PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
+constructor_audit=legacy_sha256:b3b623a4c016b1303ac3a74c72f9ae0bbd69cdb97a553f613143f0005a3dd286 missing:(clock_comb,source_clock) canonical_present=True
+prefix_audit=historical_and_actual_Q3_prefixes_equal_14/14 masses=((0, 0), (206986279500, 206986279500), (206986279500, 206986279500), (206986279500, 206986279500), (206986279500, 206986279500), (206986279500, 206986279500), (206986279500, 206986279500)); first_failure_is_source-one_factor_not_terminal_prefix
+t=0 pre_relative_interval_mass=(A:0,B:0,M:0,L:0,R:0) amp=(A:0,B:0,Ms:0,Mt:0,L:0,R:0)
+t=1 pre_relative_interval_mass=(A:0,B:0,M:0,L:0,R:0) amp=(A:0,B:0,Ms:0,Mt:0,L:0,R:0)
+t=2 pre_relative_interval_mass=(A:0,B:0,M:0,L:0,R:0) amp=(A:0,B:0,Ms:0,Mt:0,L:0,R:0)
+t=3 pre_relative_interval_mass=(A:13751337600,B:13808634840,M:6320326320,L:7431011280,R:7488308520) amp=(A:339633525654239542165440,B:345341652135823400016960,Ms:339633525654239542165440,Mt:339633525654239542165440,L:0,R:5708126481583857851520)
+t=4 pre_relative_interval_mass=(A:13751337600,B:13808634840,M:6320326320,L:7431011280,R:7488308520) amp=(A:339633525654239542165440,B:345341652135823400016960,Ms:339633525654239542165440,Mt:339633525654239542165440,L:0,R:5708126481583857851520)
+t=5 pre_relative_interval_mass=(A:13751337600,B:13808634840,M:6320326320,L:7431011280,R:7488308520) amp=(A:339633525654239542165440,B:345341652135823400016960,Ms:339633525654239542165440,Mt:339633525654239542165440,L:0,R:5708126481583857851520)
+t=6 pre_relative_interval_mass=(A:13751337600,B:13808634840,M:6320326320,L:7431011280,R:7488308520) amp=(A:339633525654239542165440,B:345341652135823400016960,Ms:339633525654239542165440,Mt:339633525654239542165440,L:0,R:5708126481583857851520)
+t=7 pre_relative_interval_mass=(A:13751337600,B:13808634840,M:6320326320,L:7431011280,R:7488308520) amp=(A:339633525654239542165440,B:345341652135823400016960,Ms:339633525654239542165440,Mt:339633525654239542165440,L:0,R:5708126481583857851520)
+t=8 pre_relative_interval_mass=(A:13751337600,B:13808634840,M:6320326320,L:7431011280,R:7488308520) amp=(A:339633525654239542165440,B:345341652135823400016960,Ms:339633525654239542165440,Mt:339633525654239542165440,L:0,R:5708126481583857851520)
+t=9 pre_relative_interval_mass=(A:13751337600,B:13808634840,M:6320326320,L:7431011280,R:7488308520) amp=(A:339633525654239542165440,B:345341652135823400016960,Ms:339633525654239542165440,Mt:339633525654239542165440,L:0,R:5708126481583857851520)
+t=10 pre_relative_interval_mass=(A:13751337600,B:13808634840,M:6320326320,L:7431011280,R:7488308520) amp=(A:339633525654239542165440,B:345341652135823400016960,Ms:339633525654239542165440,Mt:339633525654239542165440,L:0,R:5708126481583857851520)
+t=11 pre_relative_interval_mass=(A:13751337600,B:13808634840,M:6320326320,L:7431011280,R:7488308520) amp=(A:339633525654239542165440,B:345341652135823400016960,Ms:339633525654239542165440,Mt:339633525654239542165440,L:0,R:5708126481583857851520)
+t=12 pre_relative_interval_mass=(A:7404566400,B:7435418760,M:0,L:7404566400,R:7435418760) amp=(A:0,B:345341652135823400016960,Ms:0,Mt:0,L:0,R:345341652135823400016960)
+supports={'A': (3, 4, 5, 6, 7, 8, 9, 10, 11), 'B': (3, 4, 5, 6, 7, 8, 9, 10, 11, 12), 'Ms': (3, 4, 5, 6, 7, 8, 9, 10, 11), 'Mt': (3, 4, 5, 6, 7, 8, 9, 10, 11), 'L': (), 'R': (3, 4, 5, 6, 7, 8, 9, 10, 11, 12)}
+factorization=C=339633525654239542165440=119*G G=2854063240791928925760 B0=121*G=345341652135823400016960
+target_polynomials=A=Ms=Mt=C*W, B=121G*U, L=0, R=G*Q
+W=z^3+...+z^11; U=z^3+...+z^12; Q=2(z^3+...+z^11)+121z^12
+root_profiles=A:R12->9/det1; B:L1->8/det12; Ms:R12->9/det1; Mt:L1->4/det1; L=zero; R:t3..11->4/det1,t12->8/det12
+gains=common Mt/Ms=4/9=12; fixed-clock common-label B/A=8/9=11; global scalar/dihedral impossible because support sizes are 9 versus 10
+direct_target_audit=B_and_M_pulled_equal_direct_for_all_13_labels
+left_terminal_annihilation=t3..11_present_seam_mass_26444880_each_clock_but_all_14_terminal_cells_empty; t12_present_seam_mass_zero
+normalized_shape_norms=(W:1,U:1,Q:8492431042211308167354471) Q_mod91=1
+raw_shape_boundary=gcd(G,91)=91 normalized_scalar=G/26=109771663107381881760 gcd_normalized_scalar_13=1 gcd_normalized_scalar_91=7
+raw_resultants=(A:C^12,B:(121G)^12,M:C^12,L:0,R:G^12*Norm(Q))
+cross_profile_L_times_R=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) all_target_characters_zero=True resultant=0
+positive_decoders=W^-1=(z2+z6+z10), U^-1=(z+z4+z7+z10) modulo uniform
+fixed_profile_positive_decoder_K=U*W^-1=(3, 3, 2, 2, 2, 3, 2, 2, 2, 3, 2, 2, 2); W*K=U+20N
+fixed_profile_decoder_identity=121[A*K]=119[B] modulo the uniform target-null line; coefficient-derived only, not a physical packet action
+Q_positive_decoder=(0, 7929439954473079186265, 133267004550058088654, 135506751609875725618, 137784176006680359662, 6831978049261891988, 4707019620677081960, 2508704797329205596, 235167466079606368, 124296699975702408, 47276146686603592, 5907597936307760, 2054490908689296)
+Q_decoder_convolution=(960304259241135830069757, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038, 16700810106546033697038) primitive_delta=943603449134589796372719 integral_index=8492431042211308167354471 delta_mod91=81
+Q_shape_mod91_decoder=9*K_Q convolution=(11, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10)=delta_0+10N; Q alone is a unit after rational/localized or mod91 scalar extension
+conditional_holotopy=the normalized target-window shape Q generates the rational/localized and mod91 augmentation quotients, but the actual right-cofiber coefficient GQ is zero mod91 and G/26 is only an F13 unit; therefore the canonically normalized physical coefficient generates only the F13 augmentation quotient; physical attachment to one common-ancestry semantic vertical edge remains absent
+wing_decoder=IMPOSSIBLE: L functional is identically zero while R is nonzero; no scalar, dihedral, linear convolution, or positive decoder sends L to R
+full_unclocked_boundary=bd53dc4c5 has M=disjoint_union_e M_e and a target augmentation rank drop; this theorem is only the fixed e=1 fibre
+SCOPE: fixed-e=1 rail8 marked source sheet and pulled target sheet; coefficient transport only, no whole-packet action or endpoint current
+ALL CHECKS PASSED

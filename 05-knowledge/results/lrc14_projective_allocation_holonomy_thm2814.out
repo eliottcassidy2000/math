@@ -1,0 +1,16 @@
+THM-2814 PROJECTIVE ALLOCATION HOLONOMY EXACT COMPANION
+status=VERIFIED-EXACT; no row exclusion or LRC14 conclusion
+branch_A=idempotents=(0, 1);normalized_nonzero_Segre_contrasts=121;linear_provenance_checks=20736
+coarse_hostile=(4, 2, 2, 1);mu=1;source=joint-absent sector
+branch_B=cross_ratio_fibres=((1, 1728), (2, 1728), (3, 1728), (4, 1728), (5, 1728), (6, 1728), (7, 1728), (8, 1728), (9, 1728), (10, 1728), (11, 1728), (12, 1728));gauge_checks=248832
+kappa_one_chart_hostile=(1, 2, 3, 6);mu=2;normalized=(1, 1, 1, 1)
+character_faces_by_origin=(0, 28, 49, 11, 6, 38, 25, 38, 52, 40, 37, 47, 13);representative_factors=(1, 10, 16, 1);normalized=(1, 1, 1, 1)
+quarter_turn=mixed_vector=(0, -2);scalar_readout=(1, 1, 1, -1)
+thm2593_atlas=edges=156;unit_contrasts=152;nonunits=((9, 5, 1), (12, 5, 4), (1, 8, 9), (4, 8, 12));nonzero_ordered_products=24336;unit_products=23104;crt={(): 152, (6,): 4}
+thm2806_rees=central=(169, 13, 13, 1);valuations=(2, 1, 1, 0);leading_units=(1, 1, 1, 1);curvature=0;common_grade=(169, 169, 169, 169)
+heisenberg=weyl_checks=13;cocycle_square=(1, 1, 1, 10);kappa=10
+symplectic_frames=determinant_counts=((0, 2353), (1, 2184), (2, 2184), (3, 2184), (4, 2184), (5, 2184), (6, 2184), (7, 2184), (8, 2184), (9, 2184), (10, 2184), (11, 2184), (12, 2184));oriented_nondegenerate=26208;swap_inverts_holonomy=yes
+thm2807=edges=(13, 689351, 689364);holonomy=1;vertical_residue=10
+thm2771_copy_germ=shifts=(-13, 1248);residues=(12, 5);epsilon=(2, 4, 11, 9, 6, 0, 1, 12, 1, 12, 1, 12, 1);weighted=(5, 10, 8, 3, 2, 0, 9, 4, 9, 4, 9, 4, 9)
+boundary=Branch A needs independently normalized non-idempotent toggles on one raw physical atom. Branch B needs nontrivial square holonomy when only vertex lines are supplied. Existing fixed, charged-atlas, address-simplex, and cofiber objects pay neither physical invoice; THM-2779 pays Branch B only abstractly.
+ALL EXACT CHECKS PASSED

@@ -1,0 +1,14 @@
+THM2672 HETEROGENEOUS FULL-UNION SERVICE EXACT REFEREE
+content=26 rails=162 sectors=2 edges=2
+raw_rows=92696 unit_rows=80955 manual_phi7_gcd_checks=219024
+service_table_d_h_kappa_size_missing=((0, 0, 0, 12, (0,)), (1, 0, 1, 11, (0, 6)), (2, 1, 0, 11, (0, 6)), (3, 1, 1, 11, (0, 6)), (4, 2, 0, 11, (0, 6)), (5, 2, 1, 11, (0, 6)), (6, 3, 0, 11, (0, 6)), (7, 3, 1, 11, (0, 6)), (8, 4, 0, 11, (0, 6)), (9, 4, 1, 11, (0, 6)), (10, 5, 0, 11, (0, 6)), (11, 5, 1, 11, (0, 6)), (12, 6, 0, 12, (6,)), (13, 6, 1, 12, (6,)), (14, 7, 0, 11, (6, 12)), (15, 7, 1, 11, (6, 12)), (16, 8, 0, 11, (6, 12)), (17, 8, 1, 11, (6, 12)), (18, 9, 0, 11, (6, 12)), (19, 9, 1, 11, (6, 12)), (20, 10, 0, 11, (6, 12)), (21, 10, 1, 11, (6, 12)), (22, 11, 0, 11, (6, 12)), (23, 11, 1, 11, (6, 12)), (24, 12, 0, 11, (6, 12)), (25, 12, 1, 12, (12,)))
+compressed_missing_law=d0:{0}; d1..11:{0,6}; d12..13:{6}; d14..24:{6,12}; d25:{12}
+service_size_hist=((11, 22), (12, 4))
+raw_missing_equals_unit_missing=True
+slope7_orbit_checks=13
+two_configuration_full_cover_count=0 best_pair_size_hist=((11, 22), (12, 4))
+mechanism=the slope-seven lift fixes the physical future half-digit but permutes all predecessor carries; every fixed half-digit has an all-configuration seam puncture among carries {0,6,12}
+first_failed_predicate=raw THM2640 row service itself; rail/present common components, delayed gains, and Helly balance are never reached
+scope=no arbitrary per-label THM2640 slope-seven 13-fold chart; with THM2672's positive 12-fold witness the exact maximum is 12
+ALL EXACT CHECKS PASSED
+

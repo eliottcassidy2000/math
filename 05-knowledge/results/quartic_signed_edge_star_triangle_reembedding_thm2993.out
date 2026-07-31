@@ -1,0 +1,16 @@
+THM2993 exact quartic star/triangle cube companion
+matching_disc_equals_quartic_disc=PASS
+signed_cube=8 star=4 triangle=4 physical_H0=24 origins=4
+star_products=64,196,324,254016
+triangle_products=4,3136,5184,15876
+Astar_minus_Atriangle=64*c*Z*(Z^2-Delta)
+disc_A=2^24*c^2*K^2*Delta^3
+cross_resultant=2^32*c^4*Delta^4*H
+basis_det=2^12*q^2*K*Delta
+explicit_inverse_degree=3
+free_factor_pairs=48 split=24 full=24 cusp_orders=2/4
+K_hostile=(p,q,r)=(1,1,3/4),Delta=125
+H_hostile=(p,q,r)=(-7,7,0),common=Z-49
+q0_hostile=(p,q,r)=(-5,0,4),halves_equal=1
+grade3_disc=-2^30*(c*K*W^3)^2*L^3
+all_exact_checks=PASS

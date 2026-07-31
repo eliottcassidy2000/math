@@ -1,12 +1,12 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-07-25; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — refreshed 2026-07-30; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
 1. **Main prize:** LRC(14), with 13 nonzero relative speeds, is **OPEN**; LRC is known through 13 total runners.
 2. **Do not chase old shortcuts:** uniform good period `q <= 25` is false; uniform emptiness of the twelve-speed sporadic branch remains open.
-3. **Major closure:** THM-2022 proves NC2 and GMC(2); `GMC2Main.gmc2` now gives an unconditional, root-imported, kernel-pure Lean theorem. THM-2111 is effective, while THM-2101's three additive proofs remain optional alternate formalization routes rather than a blocker.
+3. **Major closures:** THM-2022 proves NC2/GMC(2), and THM-2801 makes the Special Image boundary true at one pair and false from two; neither settles the restricted planar-JC sectors.
 4. **Truth discipline:** corrected canon outranks canon, exact computation, hypothesis, synthesis, and historical prose.
 5. **Research posture:** use Anchor / Niche / Wildcard; demand mechanisms, hostile controls, and preserved/lost coordinates.
 
@@ -20,9 +20,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) is the first unresolved runner count in the present literature.**
-   The cited lower cases are scoped in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md);
-   hostile-audited THM-2436 empties the three deep-`c_3` types; the `c_3<=M` graft and all `165` rows remain.
+1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; THM-2928/2941/2970/2972/2981 empty `k>=4`, cap `k=2,3` at `1656/246` (five `k=2` boundary rows), compress the raw `k=2/3` denominator ledgers to `200.14b/2.55b`, and close the common-level reflected `k=1` diagonal. Other `k<=1` and the rung are open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
@@ -42,7 +40,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    The root-imported `GMC2Main.gmc2` is unconditional and kernel-pure through
    `GMC2DvdKOmegaWiring.singlePolyCrux_holds`; its axiom audit is standard.
    THM-2101's three additive proofs, including the purely t-adic packet route,
-   retain partial alternate wrappers but are no longer a formal proof leaf.
+   retain partial wrappers; THM-2801 gives `SIC(1)` true / `SIC(n>=2)` false, not `JC(2)`.
 8. **Support return is not coefficient noncancellation.** THM-2070 gives a
    cofinite aperiodic return set with infinitely many zero odd constant terms.
    HYP-8930's fixed-support unique-channel lemma survives. HYP-8931 is vacuous:
@@ -65,7 +63,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     THM-2314/2316/2320/2324/2328 close all `31` exactly two-sparse ratios.
     THM-2332 leaves squarefree branch degree `0`, `2`, or `4`; THM-2335 eliminates `0`; THM-2345/2347 close two divisors.
     THM-2359 closes the perfect-quartic divisor. THM-2371 and THM-2376 close the full degree-eighteen `H_2S_5^2` stratum; hostile-audited THM-2406 closes the remaining `H_4` locus and hence the inherited reduced degree-eighteen branch.
-    At degree `22`, hostile-audited THM-2411 closes `mathcal A=0`; hostile-audited THM-2423/2425/2428 close all five one-sparse axes in `mathcal A!=0`. THM-2429/2437/2463/2468/2469/2470/2472/2475/2476/2480 close all ten support-two planes; only higher mixed strata, split/even descent, integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
+    At degree `22`, THM-2671/2683/2692 close the inherited nonsplit branch and THM-2725/2745/2752/2755 the split family. THM-2778 closes every complete chosen-sheet split polynomial exact-prefix degree. THM-2796 classifies balanced nonsplit `e<=1` responses and exposes the live carrier `A(R_Q/q)=VG`. Degrees `>=26`, nonpolynomial prefixes, chart entry, raising/descent, other branches, `JC(2)`, and `DC(2)` remain open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
@@ -118,7 +116,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     THM-2337/2340 identify pure-word landing with main effects or interaction; THM-2343/2344 reduce zero-only failure to a shifted endpoint convolution inverse. THM-2344's strengthened hostile proves that an arbitrary nonconstant word on one aligned active axis still cannot break it.
     THM-2368 retains root modes but admits zero-drift hostiles. THM-2378/2381/2382/2385 empty hard `W=k=1` and every `k=2` septimal alternative except `(t,b)=(1,0)`; retain its multiplicity-excess word. THM-2379/2380/2384 leave owner-typed dual incidence open.
     MISTAKE-260 forbids extracting an anchored nonzero Fourier sum from an unordered inverse-root count. MISTAKE-261 corrects the separate quotient loss: THM-2356's planar graph tomography detects refined target--jet support, but coarse target landing is a row sum with a `28,393`-dimensional kernel. THM-2363's derived detector dominates coarse energy only in the forward direction and is not yet a lawful physical probe.
-    THM-2452--2542 close the spatial phase/anchor/clock seams but not arrival. THM-2541 gives `169/169` unrestricted `A(q)` only on a typed non-cover. Live: uniform same-ancestry arrival and all-unit `B(q)`.
+    THM-2452--2542 close spatial phase/anchor/clock seams but not arrival. THM-2763 replaces the old `169` carrier quotient by exact address `(r,k,l)`, `r.W=l-k`: size `13^4` two-sided and `13^3` for imbalance. Neither is THM-2625's endpoint plane or a factor allocation. Live: attach the labelled sidecar to one determinant sector and all-unit `B(q)`.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.

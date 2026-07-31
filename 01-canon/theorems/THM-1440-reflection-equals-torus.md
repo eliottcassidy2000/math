@@ -119,7 +119,7 @@ relation.
 3. **Two sheets, not one.** The `3 → 1` drop (§2b) is a stronger degeneration than the
    generic `3 → 2`. Whether that is forced by the three-cuspidal (rather than nodal)
    Jelonek type is a concrete question about the rung between nodal and cuspidal that
-   THM-1375 wants to insert below Smith.
+   THM-1375 places between nodal and cuspidal in the corrected geometric chain.
 
 ## Verification
 

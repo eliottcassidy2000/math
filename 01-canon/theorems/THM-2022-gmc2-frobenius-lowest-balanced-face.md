@@ -497,9 +497,10 @@ Remark 3.
 
 ## 10. Lean formalization ledger
 
-The kernel-checked development is gathered by
-`TournamentH7.GMC2Formalization`. The aggregator now includes a conditional
-`NC2`/GMC(2) endpoint with its exact remaining internal interface visible.
+The kernel-checked front door is `TournamentH7.GMC2Main`.  It exposes
+unconditional theorems `GMC2.dvdK1`, `GMC2.nc2`, and `GMC2.gmc2`; the older
+`TournamentH7.GMC2Formalization` aggregator and implication endpoints remain
+useful architectural layers but are no longer the formal proof boundary.
 
 1. `GMC2Reduction` and `GMC2ChargeGeometry` prove both strict charge branches,
    identify failure of one-sidedness with charge straddling, define full
@@ -513,9 +514,11 @@ The kernel-checked development is gathered by
    balanced height floor, equality on the face, scaling to mass `p*m0`, and
    the strict integer off-face gap.
 4. `GMC2DvdKInterface` states the one-variable input as an explicit
-   proposition. Its mathematical content is now proved internally by
-   THM-2111 (with THM-2067 as an alternate route), while the Lean proof remains
-   to be implemented. `GMC2FaceSeed`,
+   proposition.  The legacy downstream lemmas still accept it as a visible
+   argument.  `GMC2DvdKOmegaWiring.singlePolyCrux_holds` now proves the
+   small-root packet-product crux over the algebraic closure of Laurent
+   series, and `dvdK1_unconditional` derives that exact interface internally.
+   `GMC2FaceSeed`,
    `GMC2FaceSeedChannel`, and the reference-channel bridge turn it into a
    nonzero exact face seed and an actual balanced multiplicity vector; no
    custom Lean axiom is declared.
@@ -548,18 +551,13 @@ characteristic `p`, not an explicit carry count. It is slightly stronger
 than the manuscript narration: it does not need `p>m0`. Retaining `p>m0`
 above is harmless and keeps the elementary two-digit Kummer explanation.
 
-One explicit Lean interface remains: `DvdK1`, whose mathematical content is
-proved by THM-2067 but whose root-factorization/Galois proof is not yet in
-Lean. The former `HeightWitnessSupplier` interface is discharged by
-`GMC2NC2.heightWitnessSupplier_holds`: sealing the `P.coeff` lookup avoids the
-elaborator's earlier `whnf` explosion without new axioms or a heartbeat
-increase.
-
-Formalizing the stronger published DvdK theorem is unnecessary for this
-paper proof: THM-2111 gives the required existence statement effectively and
-without a Galois endgame. Formalizing its small-root identity plus compound
-coefficient argument is still a separate project, so `DvdK1` remains visible
-as a Lean theorem hypothesis rather than being hidden behind `axiom`, `sorry`,
-or `native_decide`. Thus the paper proof is now internally closed, while the
-Lean theorem remains honestly conditional on the one proved-but-unformalized
-`DvdK1` proposition.
+`DvdK1` remains visible only as a modular proposition and as a hypothesis of
+legacy implication theorems.  It is not an assumption of the root-imported
+front door: `GMC2DvdKOmegaWiring.dvdK1_unconditional` proves it from
+`singlePolyCrux_holds`, then derives unconditional `nc2` and `gmc2`.
+`GMC2NC2.heightWitnessSupplier_holds` likewise discharges the former height
+interface.  The `#print axioms` audits for the three `GMC2Main` endpoints use
+only `propext`, `Classical.choice`, and `Quot.sound`; there is no `sorry`,
+`native_decide`, or custom axiom.  Formalizing THM-2111's alternative
+compound-coefficient route remains useful independent corroboration, not a
+dependency of the completed front door.

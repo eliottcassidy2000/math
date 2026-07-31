@@ -1,0 +1,38 @@
+sens_degree_fullsens_search_macmini_S171.c — exact decision of:
+  exists Boolean f:{0,1}^n -> {0,1}, real (multilinear) degree <= d,
+  f(0)=0, f(e_i)=1 for all i  ("full sensitivity n at the point 0").
+
+Reduction (trivial, proved): any multilinear integer-coefficient P Boolean on
+the cube with s := sum_i |P(0)-P(e_i)| restricts (set non-sensitive coords to
+0, complement if P(0)=1) to a full-sensitivity witness with n = s and degree
+<= deg P.  Hence the table below is a complete census of the pairs (d, s0max).
+
+Engine 1 (C DFS, masks in numeric order, forced Moebius levels > d, exhaustive):
+  n=3 d=2: SAT   (solutions=1, nodes=20)          [NAE; known]
+  n=4 d=2: UNSAT (solutions=0, nodes=33)          => m(2)=3 (sharp; also by hand)
+  n=6 d=3: SAT   (solutions=12, nodes=790491)     [Kushilevitz-type functions]
+  n=7 d=3: UNSAT (solutions=0, nodes=818943)      => m(3)=6  ** NEW SHARP BOUND **
+
+Engine 2 (independent: OR-Tools CP-SAT, Boolean encoding + degree-sequence
+symmetry breaking, sens_degree_fullsens_cpsat_macmini_S171.py):
+  n=7 d=3: INFEASIBLE  (confirms m(3)=6)
+
+Consequences.
+  * Kushilevitz's 6-variable degree-3 function is OPTIMAL among all Boolean
+    functions of degree 3, at every point, for every number of variables:
+    max 0-sensitivity of a cubic Boolean function is exactly 6.
+  * The route "beat a = log 6/log 3 at degree 3" (Epoch FrontierMath
+    degree-vs-sensitivity problem) is CLOSED: s0 <= 6 = 3^{log_3 6}.
+  * Frontier moves to (d,s)=(4,10): SAT would give a = log_4 10 ~ 1.661
+    (record-beating); UNSAT gives m(4)=9 sharp (NAE∘NAE attains 9).
+    CP-SAT run in progress at close of session S171.
+
+Controls: (2,3) SAT reproduces NAE exactly; (2,4) UNSAT agrees with the
+hand cascade proof (all pair-coefficients forced to -1, then f(1111) = -2);
+(3,6) SAT reproduces Kushilevitz-type truth tables (12 of them, all with
+full degree 3), matching the classical construction's existence.
+
+Reproduce:
+  gcc -O3 -o sens_search 04-computation/sens_degree_fullsens_search_macmini_S171.c
+  ./sens_search 7 3 5 0
+  python3 04-computation/sens_degree_fullsens_cpsat_macmini_S171.py 7 3

@@ -1,0 +1,18 @@
+LRC14 projected k=2 exceptional HIGH packet closure at z1=1736
+uniform_engine_sha256=34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
+projected_engine_sha256=76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662
+scalar_band_source_sha256=89016f939c961fa979ec5b30812981456df5bfb2af3066f1f1b38e5a83f1a412
+scalar_band_output_sha256=4a36611b26585964e185bbaa3d583be3f1c67a7b608cca785920266bc217a779
+scope=body:1,8,10,12,13,14;first:1736;all distinct later nonaligned labels;no finite label horizon
+high_tail=wall_ratio:13/150;high_floor:13250;suffix_slots:4;obligation:at least one later label >= high_floor
+body=h:811/2548;components:38;L:152880;delta1:215/276458;lower:811/231868;suffix_target:57/20956
+cutoff_lemma=each chosen suffix delta >= target minus unrestricted_top3;top3:((Fraction(149, 160524), 2340, 2340, Fraction(745, 343)), (Fraction(1877, 2233959), 2004, 2004, Fraction(7508, 4459)), (Fraction(1081, 1364454), 1836, 1836, Fraction(6486, 4459)));threshold:4876247/30609706218;positive:yes
+rays=signs:+76434/-76434/0:11;ray_sha256:83725ca3db416fdd7c1adf56b57a472128377ac328e2da4f8dee69b1f9a4f5ef;candidate_count:501;candidate_sha256:0e5c14b04f2e7e345db548d7dcb0b8582c0f543b475f21b01f4baad851a4c8fd;best_excluded:(Fraction(5, 346087), 157404, 4524)
+high_candidates=((Fraction(149, 909636), 13260, 13260, Fraction(745, 343)),);nonempty_triple_pairs:1;scalar_packets:1;packet_sha256:05d7c674460f95c286b8bf6c9145e1ab1b2dd4057b7c3fdb6615ab207de32634
+unique_packet=labels:(1736, 1836, 2004, 2340, 13260);scalar_gap:91785/20406470812;forced_high_scalar_test:SURVIVES
+hostile_control=first_13_cells_lower:0/1;body_cells:48660;projected_cells_used:14
+projected_lower:14/17;common_danger:((Fraction(0, 1), Fraction(3, 17)),);two_aligned_cap:25/91;margin:849/1547;direct_projected_mass:1/1;conclusion:EMPTY
+atlas_row_sha256=c8da5797f19dbb6a2f1d1b4a3d65442a9206c76341f6746a6493a93d85ad7268
+profile_sha256=105c65782ef21ba4880a92257f8cd6e1e84d6453c9b807e6252c4af1492a6a26
+semantic_sha256=2debf1b852cb393a0ed999eada1e2e1aac645848a59b8724459a6cb9132df441
+all_exact_controls=PASS

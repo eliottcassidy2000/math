@@ -1,0 +1,35 @@
+degree-22 split even-Faber prime-23 intrinsic geometry
+base_split_lambda_sha256=1bbadb900e27112f57f600b0b5b73a3b85fc5b02f23e3f8f687dac4fa1c41fc3
+scope=ALL_ONE_EXACT_GENUS89_PLUS_GENERIC_OPEN_NOT_UNIFORM_NOT_FULL_SPLIT
+weighted_closure=P(1,1,2,3)_complete_intersection_degrees_6_23
+all_one_degree6_surface=SMOOTH_EXACT_AFFINE_AND_INFINITY
+all_one_degree6_surface_irreducible=True
+ambient_weight_singular_points_avoided=True
+generic_complete_intersection=lci_Gorenstein_on_smooth_surface
+pencil_base_support=G3_plus_L5:no_h=t=0_base_point
+all_one_tv_eliminant=irreducible_over_Q:bidegree_46_23:terms_553
+tv_zeta_subresultant_degrees=5,2,1,0:generic_gcd_degree1:birational
+all_one_tv_newton_triangle=(0,0),(46,0),(0,23):interior_484
+all_one_geometric_irreducibility=prime23_plus_nontrivial_4cycle_inertia
+generic_infinity_resultant=irreducible_degree23:terms_1416:content_11^30
+generic_infinity_leading_coefficient=2^25*3^21*7^5*11^40:constant
+all_one_infinity=irreducible_mod17:23_transverse_points:ord_t=-1
+generic_infinity_ramification=0
+universal_t0_local_types=five_x^4=t^23_cusps_plus_three_smooth_points
+weighted_arithmetic_genus=254
+each_old_cusp_delta=(4-1)(23-1)/2=33
+bertini_generic_other_singularities=none
+generic_normalization_genus=254-5*33=89
+generic_RH=degree23:total_ramification222:t0_15:infinity_0:elsewhere_207
+fixed_plus_infinity_alone_do_not_force_positive_genus:genus0_budget_elsewhere29
+q_plane=birational_Q_irreducible:bidegree_15_23:terms_75
+q_plane_v_subresultant_degrees=3,2,1,0:linear_with_sole_q_content
+q_plane_newton_hull=(0,3),(15,0),(15,23):interior_158
+q_plane_all_three_boundary_faces=squarefree
+q_plane_Q69_sha256=239dcceebc110b863b8008071e66835264406bf39346d61654acbd409e21d9bf:squarefree=True
+q_plane_Q69_controls=two_finite_distinct_v_preimages:transverse_collision:nonzero_Hessian
+q_plane_singular_value_gcd=q^30*Q69^2:no_other_torus_singular_values
+all_one_q_plane_nodes=69_ordinary:normalization_genus_158-69=89
+q_plane_projection_delta_on_generic_genus89_locus=158-89=69
+Kummer_reformulation=globally_trivial_from_base_scout
+ALL CHECKS PASSED

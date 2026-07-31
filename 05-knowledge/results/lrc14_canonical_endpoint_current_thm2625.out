@@ -1,0 +1,14 @@
+THM-2625 exact canonical endpoint-current sector certificate
+W=(1, 14, 27, 40, 53, 66, 13, 2197, 742586); profile=(1, 3, 5); sigma={a}; R=169
+(X,m,Y)=(13,1,742599); T_DEN=297836897838480; N=50334435734703120
+validity gate: Lucas primality + exact N-order checks PASS
+base measures: E=1882176/28589561; Q_a=143103830843/5727632650740; E meet T^-2 Q_a=21376087/17907461390
+separate P/Q quotient-gauge checks: PASS
+field 1: p=352341050142921841; support(L,R,A,J,S,S_nondeg,J_nondeg)=(169,169,169,28561,2185,2016,26208)
+field 1: sha256(L,R,S)=('33d77c87c2970bf99bd1f0f139e74b8eef70677ba28844391f6d681ebf2e6c69', '755b046e39d71fbe83295dd7e43727eaa30a5220f359e2d389268d124e6a8f27', 'd7e20ba35d1b25c1761b03c297f2449d74b29be0defbc7496b10eff8b9458b41')
+field 2: p=956354278959359281; support(L,R,A,J,S,S_nondeg,J_nondeg)=(169,169,169,28561,2185,2016,26208)
+field 2: sha256(L,R,S)=('97471c735336996fab845da55ebbca7a19786297ebe5dd9f7f5026a0a816c9ee', '07bc100112b3cf83cfddec6a6354df5caf7d5a12edd7f9d10c921ff08153271b', 'bb09105d839e5abdfadf7b4e1959bcc8e5a4af680a8dbe21ec485ab7bb7ec8f2')
+structural zeros: exactly q=(0,0), Delta=1,...,12
+all admissible sectors, all 2,016 nondegenerate sectors, and all their 13 edges survive
+Radon control sum_Delta S*(q,Delta)=169*Anum(q): PASS in both fields
+all exact checks passed

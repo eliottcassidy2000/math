@@ -1,0 +1,10 @@
+THM-2807 POSITIVE GRADED-ADDRESS TWO-SIMPLEX
+status=VERIFIED-EXACT candidate; no endpoint allocation or LRC14
+addresses=(3454614,3454627,4143978); quotient_mod169=(85,98,98)
+tau3_cells=((Fraction(60781651775958960, 371293), 790161473087466480), (0, 0), (Fraction(60781651775958960, 371293), 790161473087466480)); tau12_cells=((Fraction(60781651775958960, 371293), 790161473087466480), (Fraction(60781651775958960, 371293), 790161473087466480), (Fraction(60781651775958960, 371293), 790161473087466480))
+whole_cylinder_weight=27581135604; tau3_equals_tau12_on_diagonal=yes
+edge_gaps=(13,689351,689364)=(Z1,Z2^4079,Z1*Z2^4079); transgression=4079_mod13=10
+physical_shifts=(7/371293,28553/28561,371196/371293); triangle_commutes=yes
+affine_address_lifts=13; exponent_class=23098_mod_28561; least_lift=(m,v)=(2652079,352469); all_fix_n0_and_send_nplus_to_na=yes; common_on_residue7_sheet=yes; distinct_off_sheet=yes
+scope=positive collapsed-carrier/address nerve simplex only; no factor covariance, endpoint origin, K4 allocation, Cech map, row exclusion, or LRC14
+ALL EXACT CHECKS PASSED

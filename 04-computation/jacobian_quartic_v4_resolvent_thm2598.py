@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 """Exact companion for THM-2598: quartic V4 resolvent transfer boundary."""
 
+<<<<<<< HEAD
+=======
+from itertools import permutations
+
+>>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 import sympy as sp
 
 
@@ -96,7 +101,10 @@ zero("first biquadratic quotient algebra is split",
 zero("second biquadratic quotient algebra is split",
      (U**3 - 28*U**2 + 160*U) - U*(U - 8)*(U - 20))
 
+<<<<<<< HEAD
 # Tame inertia ledger: action on four roots and on three pairings.
+=======
+>>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 pairings = (
     frozenset((frozenset((0, 1)), frozenset((2, 3)))),
     frozenset((frozenset((0, 2)), frozenset((1, 3)))),
@@ -108,6 +116,186 @@ def apply_pairing(perm, pairing):
     return frozenset(frozenset((perm[a], perm[b])) for a, b in pairing)
 
 
+<<<<<<< HEAD
+=======
+# Exhaustive transitive-subgroup and field/deck typing.  Permutations are
+# tuples mapping old labels to new labels; composition is left after right.
+ID4 = (0, 1, 2, 3)
+ID3 = (0, 1, 2)
+ALL_S4 = set(permutations(range(4)))
+
+
+def compose(left, right):
+    return tuple(left[right[i]] for i in range(len(right)))
+
+
+def inverse(perm):
+    answer = [0] * len(perm)
+    for old, new in enumerate(perm):
+        answer[new] = old
+    return tuple(answer)
+
+
+def generated(*generators):
+    group = {ID4}
+    frontier = [ID4]
+    while frontier:
+        old = frontier.pop()
+        for generator in generators:
+            new = compose(old, generator)
+            if new not in group:
+                group.add(new)
+                frontier.append(new)
+    return group
+
+
+def orbit_sizes(group, degree, action=lambda g: g):
+    unseen = set(range(degree))
+    sizes = []
+    while unseen:
+        seed = min(unseen)
+        orbit = {action(g)[seed] for g in group}
+        sizes.append(len(orbit))
+        unseen -= orbit
+    return tuple(sorted(sizes))
+
+
+def matching_action(perm):
+    return tuple(pairings.index(apply_pairing(perm, pairing)) for pairing in pairings)
+
+
+def point_stabilizer(group, point=0):
+    return {g for g in group if g[point] == point}
+
+
+def normalizer(group, subgroup):
+    answer = set()
+    for g in group:
+        gi = inverse(g)
+        if {compose(compose(g, h), gi) for h in subgroup} == subgroup:
+            answer.add(g)
+    return answer
+
+
+def conjugate_group(group, by):
+    byi = inverse(by)
+    return {compose(compose(by, g), byi) for g in group}
+
+
+def all_subgroups_of_s4():
+    trivial = frozenset((ID4,))
+    known = {trivial}
+    frontier = [trivial]
+    while frontier:
+        subgroup = frontier.pop()
+        for element in ALL_S4 - set(subgroup):
+            enlarged = frozenset(generated(*(tuple(subgroup) + (element,))))
+            if enlarged not in known:
+                known.add(enlarged)
+                frontier.append(enlarged)
+    return known
+
+
+def parity(perm):
+    return sum(perm[i] > perm[j] for i in range(4) for j in range(i + 1, 4)) % 2
+
+
+r4 = (1, 2, 3, 0)
+s_vertex = (0, 3, 2, 1)
+dt1 = (1, 0, 3, 2)
+dt2 = (2, 3, 0, 1)
+C4 = generated(r4)
+V4 = generated(dt1, dt2)
+D4 = generated(r4, s_vertex)
+A4 = {perm for perm in ALL_S4 if parity(perm) == 0}
+S4 = ALL_S4
+
+group_rows = (
+    ("C4", C4, 2, (1, 2), 1, 4),
+    ("V4", V4, 1, (1, 1, 1), 1, 4),
+    ("D4", D4, 2, (1, 2), 2, 2),
+    ("A4", A4, 3, (3,), 3, 1),
+    ("S4", S4, 6, (3,), 6, 1),
+)
+for name, group, image_order, matching_orbits, stabilizer_order, deck_order in group_rows:
+    image = {matching_action(g) for g in group}
+    H = point_stabilizer(group)
+    deck = normalizer(group, H)
+    require(f"transitive branch {name}: image/orbits/stabilizer/deck",
+            orbit_sizes(group, 4) == (4,)
+            and len(image) == image_order
+            and orbit_sizes(group, 3, matching_action) == matching_orbits
+            and len(H) == stabilizer_order
+            and len(deck) // len(H) == deck_order)
+
+subgroups = all_subgroups_of_s4()
+transitive_subgroups = [set(group) for group in subgroups
+                        if orbit_sizes(set(group), 4) == (4,)]
+types_seen = set()
+classification_ok = len(subgroups) == 30
+for subgroup in transitive_subgroups:
+    matches = [name for name, named_group, *_ in group_rows
+               if any(conjugate_group(named_group, by) == subgroup for by in S4)]
+    classification_ok = classification_ok and len(matches) == 1
+    types_seen.update(matches)
+require("all 30 S4 subgroups give exactly five transitive conjugacy types",
+        classification_ok and len(transitive_subgroups) == 9
+        and types_seen == {"C4", "V4", "D4", "A4", "S4"})
+
+kernel = {g for g in S4 if matching_action(g) == ID3}
+require("matching kernel is exactly V4 and every S3 label has four lifts",
+        kernel == V4 and len({matching_action(g) for g in S4}) == 6
+        and all(sum(matching_action(g) == image for g in S4) == 4
+                for image in {matching_action(g) for g in S4}))
+
+# In the D4 branch, the matching quadratic and the quadratic intermediate
+# inside the quartic root field are different subfields of the closure.
+H_D4 = point_stabilizer(D4)
+root_intermediate_stabilizer = normalizer(D4, H_D4)
+require("D4 generic deck C2 needs polynomial extension",
+        len(H_D4) == 2 and len(root_intermediate_stabilizer) == 4)
+require("D4 matching quadratic is not the root-field quadratic intermediate",
+        H_D4.isdisjoint(V4 - {ID4})
+        and generated(*(tuple(H_D4 | V4))) == D4
+        and root_intermediate_stabilizer != V4)
+
+# The unique rational D4 matching is the antipodal matching of its canonical
+# square, and the generic deck C2 is its central half-turn.  This identifies
+# the exact owner pair that a non-polynomial deck involution must split.
+D4_fixed_pairings = [index for index in range(3)
+                     if all(matching_action(g)[index] == index for g in D4)]
+D4_center = {g for g in D4 if all(compose(g, h) == compose(h, g) for h in D4)}
+D4_half_turns = D4_center - {ID4}
+D4_channel_stabilizer = {g for g in S4
+                         if apply_pairing(g, pairings[D4_fixed_pairings[0]])
+                         == pairings[D4_fixed_pairings[0]]}
+D4_half_turn = next(iter(D4_half_turns))
+D4_antipodes = frozenset(
+    frozenset((vertex, D4_half_turn[vertex])) for vertex in range(4)
+)
+require("D4 rational matching is the canonical square's antipodal matching",
+        len(D4_fixed_pairings) == 1
+        and len(D4_center) == 2
+        and D4_channel_stabilizer == D4
+        and D4_antipodes == pairings[D4_fixed_pairings[0]])
+require("D4 generic deck C2 is the central antipodal half-turn",
+        D4_half_turn in root_intermediate_stabilizer - H_D4
+        and D4_half_turn in V4
+        and matching_action(D4_half_turn) == ID3
+        and all(compose(D4_half_turn, g) == compose(g, D4_half_turn)
+                for g in D4))
+
+# In the irreducible A4/S4 rows the quartic and matching fields are likewise
+# incomparable: their stabilizers are incomparable and generate the closure.
+for name, group in (("A4", A4), ("S4", S4)):
+    H_root = point_stabilizer(group)
+    H_matching = {g for g in group if matching_action(g)[0] == 0}
+    require(f"{name} quartic and matching fields are incomparable",
+            not H_root <= H_matching and not H_matching <= H_root
+            and generated(*(tuple(H_root | H_matching))) == group)
+
+# Tame inertia ledger: action on four roots and on three pairings.
+>>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 def cycle_count(perm):
     seen = set()
     count = 0
@@ -150,6 +338,12 @@ zero("double-transposition family quartic discriminant", sp.discriminant(fst, T)
 zero("double-transposition family resolvent discriminant", sp.discriminant(Rst, W) - Dst)
 zero("t=0 resolvent is one simple plus one double root",
      Rst.subs(t, 0) - (W + 2)**2*(W - 2))
+<<<<<<< HEAD
+=======
+zero("normalized double-transposition chart has separable residual quadratic",
+     sp.expand(Rst.subs(W, -2 + t*Z)/t**2)
+     - (t*Z**3 - 4*Z**2 + 4*s*Z - 1))
+>>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 
 special = sp.Poly(fst.subs({s: 2, t: 1}), T)
 degrees_mod2 = sorted(poly.degree() for poly, exponent in sp.factor_list(special, modulus=2)[1]

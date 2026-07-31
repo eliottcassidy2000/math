@@ -1,0 +1,12 @@
+THM-2840 HEPTIC e=3 PASSPORT (2,2,2,1) CHEBYSHEV ACCESSORY AUDIT
+universe=N=7,e=3,s=1,h=4; poles (0,1,lambda,mu) with (2,2,2,1)
+equations=2*lambda**2 + 2*lambda*mu - 3*lambda - 3*mu**2 + 2*mu + 2 ; 4*lambda**2*mu + 3*lambda**2 - 5*lambda*mu**2 + 6*lambda*mu + 3*lambda - 5*mu**2 + 4*mu
+accessory_modulus=(lambda**3 - 2*lambda**2 - lambda + 1)*(lambda**3 - lambda**2 - 2*lambda + 1)
+radical_saturated_length=6; all collision/value/discriminant/separation gates are units
+cubic_branches: mu=lambda^2-lambda ; mu=1+lambda-lambda^2
+response=D+A=S*E^2 with F'=2G, F=VG^2, 2VG'+V'G=2
+source_normalization=F(infinity)=1 with total order 7
+carrier=F=(T7(Y)+1)/(T7(Y)-1), Y=1+7(x-mu)/(6mu-2lambda-2)
+Nielsen_histogram={(3, 2, 1, 1): 21, (4, 1, 1, 1): 7, (2, 2, 2, 1): 7}
+Nielsen_target=6 marked charts, 1 unmarked class
+ALL EXACT PROBE CHECKS PASSED

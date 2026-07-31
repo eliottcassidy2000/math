@@ -1,0 +1,12 @@
+LRC14 global projected k=2 scalar band 1932..1939
+uniform_ray_status_source_sha256=34ab29162ed33d90093e6d2bf781def36c420a1cd6596158b5d6579a3a8f3f46
+universe=six_body_roots:3003;body_labels:1..14;ordered distinct later nonaligned labels;scalar necessary condition
+first_band=1932..1939;first_candidate_rows=24024;exact_horizon=7000;omitted_slot_bound=6r/[49(H+1)]
+projected_wall=max(15,floor(13L/150)+1);forced-high omitted slot starts max(H+1,projected_wall)
+global_survivors=1;surviving_firsts=(1932,);surviving_bodies=((1, 4, 8, 10, 12, 14),)
+SURVIVOR;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;largest_floor=1020;z1=1932;delta1=101/157780;suffix=2060:1867/2119740,2172:263/310415,2142:821/1049580,2534:2911/3724980;lower=1049/267540;upper=442380823/112512089655;gap=12804017/1170125732412
+interval_1933_1939_global_survivors=()
+interval_1932_1939_global_survivors=(1932,)
+global_profile_sha256=d0be2b51e09cbca74b416f4498b3fe39831041de26e5e8d37677143fb9ee472b
+semantic_sha256=46b75dadce6ba67df10f8aa491c7224aea04a1975648e2913df61ed2d62bc62a
+all_exact_controls=PASS
