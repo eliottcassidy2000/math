@@ -6,9 +6,11 @@ status: >
   of a scalar-admissible height is decided by a three-way sign/attainment
   law.  Retaining the primitive unit also makes every fixed-cell phase
   independent of height, giving a finite unit-by-unit strict-open exclusion
-  gate.  This is a reusable refinement of the projected k=3 denominator
-  quotient; it does not assert that any new atlas row is empty and does not
-  improve the current proved cap by itself.
+  gate.  Its cardinality shadow is sharp: more than
+  beta(d)=2 floor((d-1)/14)+1 fixed-safe residues clear every unit, while
+  beta(d) residues need not.  This is a reusable refinement of the projected
+  k=3 denominator quotient; it does not assert that any new atlas row is
+  empty and does not improve the current proved cap by itself.
 source: codex-lrc14-k3-signed-ray-phase-gate-2026-07-30
 depends_on:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
@@ -163,3 +165,68 @@ They separate all weak/strict directions in `(4)`.  The next computational
 use must still pin the exact universe, upstream hashes, ordinary and optimized
 transcripts, and positive and hostile controls before claiming an atlas
 closure.
+
+## 4. Sharp cardinality shadow of the unit gate
+
+The unit-resolved test also has a closed cardinality threshold which is
+different from the pair-collision threshold.  For `d>=2`, let
+
+```text
+B_d={r in {0,...,d-1}:14 min(r,d-r)<d}.
+```
+
+Put
+
+```text
+beta(d)=2 floor((d-1)/14)+1.                            (10)
+```
+
+Then
+
+```text
+|B_d|=beta(d).                                         (11)
+```
+
+Indeed, if `b=floor((d-1)/14)`, the strict inequality defining `B_d`
+is equivalent to
+
+```text
+r in {0,1,...,b} or r in {d-b,...,d-1}.
+```
+
+The displayed intervals are disjoint because `b<d/14`; they have `b+1` and
+`b` elements, respectively, so their union has `2b+1` elements.  Strict
+openness is visible in the `d-1` in `(10)`: residues at exact distance
+`d/14` are safe.
+
+Let `S` be any set of fixed-safe cell residues modulo `d`.  Multiplication by
+a primitive unit `u` permutes the residue classes, so the set of cells bad for
+that unit is `u^{-1}B_d` and also has `beta(d)` elements.  Consequently
+
+```text
+|S|>beta(d)  implies that for every primitive u mod d
+             some c in S satisfies 14 min(uc mod d,d-(uc mod d))>=d.    (12)
+```
+
+This is sharp among arguments using only `|S|`: at equality take
+`S=u^{-1}B_d`, for which every cell is bad for that unit.  Thus `(12)` is the
+exact independence-number analogue for the bipartite unit--cell incidence
+graph.  It complements, rather than subsumes, the Cayley pair threshold
+`|S|>d/R` in THM-2979:
+
+```text
+pair view:  S must contain a short-order difference;
+unit view:  S must escape every multiplicative translate of B_d.
+```
+
+There is also a useful cell-count form.  If `d|L` and `C` complete grid cells
+map to `S`, each residue modulo `d` has at most `L/d` preimages.  Hence
+
+```text
+C>beta(d)L/d  implies |S|>beta(d),                     (13)
+```
+
+and the unit gate closes all primitive directions.  When `(13)` fails, the
+actual shape of `S` can still make every intersection `S ∩ u^{-1}B_d`
+proper; this is exactly the information retained by the finite ray-resolved
+test and lost by a count-only quotient.
