@@ -19,6 +19,7 @@ status: >
   proved cap by itself.
 source: codex-lrc14-k3-signed-ray-phase-gate-2026-07-30
 depends_on:
+  - THM-1166-seven-wall-fano-gcd-discrepancy
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
 related:
   - THM-2979-projected-k3-z275-ten-body-status-and-located-torsion-closure
@@ -473,6 +474,56 @@ every translated band, without selecting a pair.  What cannot be done is to
 replace `kappa(d)` by the smaller centered value `beta(d)` in that translated
 argument; `(13d)` is a canonical boundary mechanism to test whenever such a
 recentring is proposed.
+
+### 6.1 Complete-cell projection corollary
+
+The translated-band gate becomes the exact missing sidecar when an argument
+keeps whole complete cells rather than only their distinguished endpoints.
+Let `C` be a set of complete-cell addresses throughout which the body and all
+fixed drift labels are safe, put `S=C mod d`, and choose once a representative
+`c_r in C` for each `r in S`.  Write a high label as
+
+```text
+z=(L/d)u+mL,                 m in Z,
+```
+
+and parametrize the complete cell with address `c` by `x=(c+y)/L`,
+`0<=y<1`.  Then
+
+```text
+zx == uc/d+(u/d+m)y  (mod 1).                           (23b)
+```
+
+Apply `(13b)` with `theta=(u/d+m)y`.  At every fixed local coordinate `y`, at
+most `ceil(d/7)` selected representatives are high-danger.  The pointwise
+high-safe count
+
+```text
+M_z(y)=#{r in S:x_r=(c_r+y)/L is high-safe}
+```
+
+satisfies
+
+```text
+M_z(y)>=|S|-ceil(d/7).                                  (23c)
+```
+
+In particular the inherited hypothesis `|S|>d/R>=ceil(d/7)` gives
+`M_z(y)>=1` for every `y`.  For each `y`, choose one such `r`.  The point
+`x_r` is safe for the body, every fixed drift, and the high drift, while
+`phi_L(x_r)=y`.  In the notation of THM-2941 `(25g)`, this proves
+
+```text
+P_(E,Z)=T.                                               (23d)
+```
+
+An aligned completion would instead force `P_(E,Z) subset U_A`.  This is
+impossible whenever `mu(U_A)<1`; in the three-comb applications the proved
+THM-1166 cap is `mu(U_A)<=36/91`.  This is the pair-free complete-cell
+implication needed by the reserved THM-2981 descent, without choosing a
+collision pair or a pair-selection policy.  Notice that `(23c)` is a
+pointwise section argument, not a claim that the raw Haar mass of one
+complete cell is one.
 
 This admits a useful graph-theoretic rephrasing without inventing an
 orientation.  The bad band `B_d` is itself an independent set in
