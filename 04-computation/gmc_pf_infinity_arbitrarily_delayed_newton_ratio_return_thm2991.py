@@ -68,7 +68,16 @@ def main() -> None:
             all(limits[k] > limits[k - 1] for k in range(1, len(limits))),
             f"limit ladder failed at n={n}",
         )
-        center_constant = Fraction(1, (n + 1) ** 2)
+        center_lead = Fraction(1, comb(2 * n, n))
+        adjacent_left_lead = Fraction(n, comb(2 * n, n - 1))
+        adjacent_right_lead = Fraction(n, comb(2 * n, n + 1))
+        center_constant = center_lead**2 / (
+            adjacent_left_lead * adjacent_right_lead
+        )
+        require(
+            center_constant == Fraction(1, (n + 1) ** 2),
+            f"central growth constant failed at n={n}",
+        )
         asymptotic_records.append(
             f"n={n};L1={fraction_text(limits[0])};"
             f"Llast={fraction_text(limits[-1])};"

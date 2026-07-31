@@ -1,23 +1,29 @@
 ---
 id: THM-2991
 title: "PF-infinity arbitrarily delayed Newton-ratio return"
-status: PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT
+status: PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
 source: codex-gmc-pf-infinity-delayed-return-2026-07-30
+audit: >
+  An independent hostile audit rederived the complete asymptotic ladder,
+  central growth constant, reciprocal indexing, PF-infinity/Hurwitz typing,
+  and strict Newton equality boundary.  It extended exact convolution
+  controls through n=60 and replayed normal, optimized, and stored output.
+  Its sole evidence request--directly checking the central leading-coefficient
+  quotient--is installed before promotion.
 depends_on: []
 related:
   - THM-2982-first-gap-wall-stripped-norm-core-strict-ulc-through-thirty-four
   - THM-2989-first-gap-wall-stripped-all-width-leading-edge-positivity
 script: 04-computation/gmc_pf_infinity_arbitrarily_delayed_newton_ratio_return_thm2991.py
 output: 05-knowledge/results/gmc_pf_infinity_arbitrarily_delayed_newton_ratio_return_thm2991.out
-script_sha256: fbc347ebc8a1f597b5c6335e6d4b54100db06b019f0488a0ee81eaa14b6eab5d
+script_sha256: 29f2bd92b13ec180badc334f47792c5c69a26865da9e2b1e1fc8208c3be9d054
 output_sha256: 15a83465e78783e127453925715d61b78fa715a5b27d35555b5c142710101b2a
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2991 -- PF-infinity arbitrarily delayed Newton-ratio return
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE
-AUDIT.**  This file is not yet a proved dependency.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
@@ -189,13 +195,16 @@ python 04-computation/gmc_pf_infinity_arbitrarily_delayed_newton_ratio_return_th
 python -O 04-computation/gmc_pf_infinity_arbitrarily_delayed_newton_ratio_return_thm2991.py --output .scratch/thm2991.opt.out
 ```
 
-Promotion requires an immutable independent hostile audit of the asymptotic
-normalization, the central growth constant, reciprocal indexing, strict
-Newton equality boundary, and exact transcript.
-
 Frozen LF hashes are
 
 ```text
-script  fbc347ebc8a1f597b5c6335e6d4b54100db06b019f0488a0ee81eaa14b6eab5d
+script  29f2bd92b13ec180badc334f47792c5c69a26865da9e2b1e1fc8208c3be9d054
 output  15a83465e78783e127453925715d61b78fa715a5b27d35555b5c142710101b2a
 ```
+
+The independent audit rederived every proof identity, extended the exact
+coefficient-convolution controls through `n=60`, and replayed normal,
+optimized, and stored transcripts.  After its requested direct central
+leading-coefficient quotient check was added, no defect remained.
+
+**QED.**
