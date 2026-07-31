@@ -1,6 +1,6 @@
 LRC14 projected k=2 exact common-status descent at z1=1660
-base_source_sha256=4719dea2b29b0b1da645bd9902fbd883b602b6fad4f1d63300aedcfb30198764
-base_output_sha256=3b3a5d577e41afd4b9a2c9748c74dfb23db70b6723f1101e66d5fae939adff7a
+base_source_sha256=9019e9da5f6e42b69652e6328c13e37c1704b165316f14030987f23fb2734ed6
+base_output_sha256=e24fdb898c0c576e68d33d2a921a96e8cad251676010a94959fef32d8c86515e
 inherited_cap=1660;scope=unique z1660 scalar-atlas row;all distinct later nonaligned labels;no finite label horizon
 atlas_band=1656..1660;candidate_rows=15015;height_counts=((1656, 5), (1660, 1));empty_firsts=1657..1659;next_occupied_height=1656
 closure_counts=scalar:1;crude:0;status:1;status_survivors:0;literal_packets:0;survivors:0
@@ -10,5 +10,5 @@ consequence=projected k=2 first drift label z1<=1656
 atlas_profile_sha256=3d7a1a61c5278876444296cd52c059c69a1d58bf6beeb0abd18e05c2b4641120
 atlas_survivor_sha256=f36b8b517d97b5552de4ed791006a75184c786ac6c09186f5102968bbcf439fc
 closure_profile_sha256=79ac8bab2f4b3b6412231814589864111fe91f3a1893565338b9b061b701ae7a
-semantic_sha256=3d0ee0388a8ea9ef5f49b923423a75410c7a51a9c6f48a4384bf49b4c3a689ee
+semantic_sha256=8464180d15abbcadb40b3e87097af3fea51803a2bfb8ea7c445ab847b35ca345
 all_exact_controls=PASS
