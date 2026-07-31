@@ -79,10 +79,16 @@ deeper composite         deg (12,6) (a,b)=(2,1)  H=y   H^1 | Jac  HOLDS
 ```
 
 Script: `04-computation/jc2_tower_divisibility_hyp9070.py`.
-*Whether the higher orders `n+m-4, n+m-5, ...` continue to run the Euclidean
-algorithm remains CONJECTURAL: at order `n+m-4` the cross term
-`Jac(P_{n-1},Q_{m-1})` carries no a-priori factor of `H`, so the clean step
-may break there. That is the sharpest open point of this file.*
+**RESOLVED (THM-3016).** The `n+m-4` cross term does *not* run free. The
+planar Plucker identity `Jac(B,C)grad A + Jac(C,A)grad B + Jac(A,B)grad C = 0`
+applied to `(H, P_{n-1}, Q_{m-1})`, combined with (L1'), yields the single
+scalar identity `J * Jac(W,H) = 0` where `J = Jac(H,Q_{m-1})` and
+`W = P_{n-1} - kappa H^{a-b} Q_{m-1}` is a form of degree `n-1`. Since
+`deg G | gcd(n-1, g) | gcd(n-1, n) = 1`, `J != 0` and `W != 0` would force
+`H` to be a pure power of a LINEAR form, i.e. `K = 1`. So with the `K >= 2`
+gate above, a counterexample must satisfy
+`Jac(H,Q_{m-1}) = 0` or `P_{n-1} = kappa H^{a-b} Q_{m-1}`. Every sampled
+automorphism satisfies the second alternative identically (`W = 0`).
 
 ## 2. The degree lattice (PROVED, classical input)
 
