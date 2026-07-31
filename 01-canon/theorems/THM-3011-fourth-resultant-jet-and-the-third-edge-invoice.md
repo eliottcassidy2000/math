@@ -60,6 +60,38 @@ exponential tail is comparable to or larger than the polynomial part (at `M=20`
 the tail is `~1.0e8` against `p_4(R)=1.3e8`).  Every sign statement below is
 computed from exact values, never from (2).
 
+
+## 2a. Independent confirmation of `A_4`'s leading coefficients (klein-S428)
+
+The reconstruction of section 2 is corroborated by a route that uses **only the
+frozen `j=1,2,3` table**, with no large-width fit.  Reading the top `U`-column
+`[U^(4j)]P_j = c_j A_j` off the frozen data gives
+
+    A_1 = 23M^2 - 12M + 66
+    A_2 = -(23/3)M^3 + 6M^2 - (47/24)M - 2793/4
+    A_3 = (23/6)M^4 - 4M^3 + (47/24)M^2 + 0*M + 210669/24
+
+and the top three coefficients obey exact laws, verified on all three:
+
+    [M^(j+1)] A_j = (-1)^(j+1) * 46/(j(j+1))
+    [M^j]     A_j = (-1)^j * 12/j
+    [M^(j-1)] A_j = (-1)^(j+1) * 47/24            (j >= 2; j=1 is contaminated
+                                                   by the O(1) endpoint atoms)
+
+The first is exactly the equidistribution law `p_j(R) ~ 46M^(j+1)/(j+1)` combined
+with `L_j = (-1)^(j-1)p_j/j`.  Extrapolating to `j=4` **predicts**
+
+    [M^5] = -46/20 = -23/10,   [M^4] = +12/4 = 3,   [M^3] = -47/24,
+
+which matches section 2's `A_4` in all three coefficients.  So the two highest
+orders of `A_4` are corroborated independently of the fit.
+
+**Scope.**  This confirms only the top three coefficients.  The remaining ones --
+`0*M^2`, `+707/3840 M`, `-15797937/128` -- are **not** predicted by these laws and
+rest on the reconstruction alone; the `M^(j-2)` coefficient in particular is `0`
+at `j=3` and `j=4` but `+66`, `-2793/4`, `210669/24` at the constant end show no
+comparable pattern.  The overall status of section 2 is unchanged.
+
 ## 3. Equidistribution, and the invoice discharged
 
 (2) confirms the conjecture `sigma_j(R_M)=46M^(j+1)/(j+1)+O(M^j)` at `j=4`, and
