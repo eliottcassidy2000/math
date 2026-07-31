@@ -152,8 +152,9 @@ residuals `|D_inf(1/2)| = 4.179e-2` and `7.295e-2` — *larger* than
 corner clocking does **not** rescue greedy transport; the clock's live role
 is extraction-side (lower bounds), not construction-side, unless an
 anticipatory policy (lane F wave 2) exploits it in a way greedy cannot.
-Driver: session scratch `gamma_onethird_freeze.py` over this file's Ledger
-(verbatim import), envelope violations from `m = 10` on at all three rates.
+Driver: `04-computation/amm12592_oddladder_greedy_freeze_deathstar.py` over
+this file's Ledger (verbatim import); envelope violations from `m = 10` on
+at all three rates.
 
 ## 6. Next obligations
 
