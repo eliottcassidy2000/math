@@ -293,8 +293,56 @@ def c3_c6():
               f"(epoch [{R},{2*R-1}])")
 
 
+# ------------------------------- C7: parity lemma and the mod-2 clock ------
+def c7():
+    """C7a: for deg <= d, the Lucas box parity condition on Bernstein-d
+    coefficients is EQUIVALENT to Delta(p) == 1 (mod 2) coefficientwise.
+    C7b: hence the residual recursion reduces mod 2 to the depth-free map
+    sigma_i = (sigma_{i-1}+1)/p over F_2[p] from sigma_{-1} = (1+p)^{R-1};
+    for every dyadic R this orbit survives all R-1 steps and ends at 1."""
+    import itertools
+    for d in range(0, 9):
+        for coeffs in itertools.product(range(-2, 3), repeat=d + 1):
+            # build Delta from Bernstein coefficients, test both sides
+            uni = [0] * (d + 1)
+            inbox = True
+            for k, dk in enumerate(coeffs):
+                if abs(dk) > comb(d, k):
+                    inbox = False
+                    break
+                if dk:
+                    for t, c in enumerate(basis_poly(d, k)):
+                        uni[t] += dk * c
+            if not inbox:
+                continue
+            lucas = all((dk - comb(d, k)) % 2 == 0 for k, dk in enumerate(coeffs))
+            univ1 = (uni[0] - 1) % 2 == 0 and all(c % 2 == 0 for c in uni[1:])
+            require(lucas == univ1, f"C7a fails d={d} coeffs={coeffs}")
+    print("C7a parity lemma (Lucas box parity <=> Delta == 1 mod 2), d <= 8: OK")
+
+    def T(f):
+        if not f or f[0] != 1:
+            return None
+        g = list(f)
+        g[0] ^= 1
+        return g[1:] if len(g) > 1 else [0]
+
+    for r in range(1, 12):
+        R = 2 ** r
+        sig = [comb(R - 1, j) & 1 for j in range(R)]
+        for i in range(R - 1):
+            sig = T(sig)
+            require(sig is not None, f"C7b clock dies at R={R}, step {i}")
+        while sig and sig[-1] == 0:
+            sig.pop()
+        require(sig == [1], f"C7b clock ends at {sig[:6]} != 1 for R={R}")
+    print("C7b mod-2 parity clock closes for every dyadic R <= 2048 "
+          "(depth-free: constrains every gamma identically): OK")
+
+
 if __name__ == "__main__":
     c1_c2()
+    c7()
     c4()
     c5()
     c3_c6()

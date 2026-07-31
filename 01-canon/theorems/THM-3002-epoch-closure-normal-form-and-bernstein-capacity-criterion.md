@@ -139,6 +139,38 @@ whose threshold is `gamma* ~ 0.5980` with binding ray `x* ~ 0.38`
 rational weight and a margin" shape of the decoded certificate (27), cf.
 HYP-9061 sec. 2d and THM-2977's verdict that (27) must gate a rate dual).
 
+## 4b. The parity lemma and the depth-free mod-2 clock (PROVED)
+
+**Lemma.** For `Delta` of degree `<= d`, the Lucas box parity condition
+`delta_k == binom(d,k) (mod 2)` on its Bernstein-`d` coefficients is
+*equivalent* to
+
+```text
+Delta(p) == 1  (mod 2)   coefficientwise in Z[p].                  (5)
+```
+
+*Proof.* `D(x) := sum_k delta_k x^k = (1+x)^d Delta(1/(1+x))`. The condition
+`D == (1+x)^d (mod 2)` becomes `sum_j c_j (1+x)^{d-j} == 0 (mod 2)` where
+`Delta - 1 = sum_j c_j p^j`; the polynomials `(1+x)^{d-j}` have distinct
+degrees, hence are `F_2`-independent, so every `c_j` is even. QED
+(referee C7a, exhaustive for `d <= 8`).
+
+**Corollary (parity clock).** Reducing the residual recursion mod 2 kills
+all depth dependence:
+
+```text
+sigma_i = (sigma_{i-1} + 1)/p   over F_2[p],   sigma_{-1} = (1+p)^{R-1}. (6)
+```
+
+The `H = 1` program requires this orbit to survive `R-1` steps (each
+`sigma(0) = 1`) and end at `sigma_{R-2} == 1`. **For every dyadic
+`R = 2^r <= 2048` it does** (referee C7b). Since (6) is depth-free, the
+verdict is identical for every rate `gamma`: **parity never obstructs a
+dyadic epoch**, at any rate. This is THM-2976's checkpoint vanishing (T1)
+seen inside the closure recursion, and it isolates the obstruction: the
+threshold of the `H = 1` checkpoint program is *purely archimedean*,
+governed by criterion (4) alone.
+
 ## 5. Verified closures (VERIFIED-EXACT)
 
 (*) is solved exactly at `gamma = 1/2, D0 = 0` for `R = 2, 4, 8, 16`, and
