@@ -113,8 +113,8 @@
   Torsion source/output/semantic hashes begin `bbd4b011/5e8b37b7/95f9da4c`;
   the independent hashes begin `d34fcd0f/2f3d9a45/4667f8f0`; descent hashes
   begin `1e06537c/2a5845c3/cd50c3e7`; `z297` hashes begin
-  `286c7a2e/18844be3/52e3c73b`; the lower descent hashes begin
-  `e5eff089/ad5e0173/2a518b84`; the `z275..272`
+  `d062c7ac/9b37ba12/52d02b6f`; the lower descent hashes begin
+  `61868bc6/a9db04e9/160b0264`; the `z275..272`
   source/output/profile/semantic hashes begin
   `44d9369f/d31d9ec1/1139218b/0960c65f`.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py`, the isolated terminal referees,
@@ -337,8 +337,8 @@
   `bbd4b011/5e8b37b7/95f9da4c`; independent hashes begin
   `d34fcd0f/2f3d9a45/4667f8f0`; descent hashes begin
   `1e06537c/2a5845c3/cd50c3e7`; `z297` hashes begin
-  `286c7a2e/18844be3/52e3c73b`; lower-descent hashes begin
-  `e5eff089/ad5e0173/2a518b84`; `z275..272`
+  `d062c7ac/9b37ba12/52d02b6f`; lower-descent hashes begin
+  `61868bc6/a9db04e9/160b0264`; `z275..272`
   source/output/profile/semantic hashes begin
   `44d9369f/d31d9ec1/1139218b/0960c65f`.
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;

@@ -8,7 +8,9 @@ status: >
   replayed exact rational Farkas checks.  The remaining 65 states force
   exactly one high label and are all closed by a uniform order-seven
   clean-cell residue collision.  Hence the projected k=3 cap is z1<=274 and
-  the necessary-row ledger is 375,703.  This is not LRC(14).
+  the necessary-row ledger is 375,703.  The underlying order-at-most-K
+  residue Cayley graph has independence number d/R, proving this density gate
+  sharp among cardinality-only tests.  This is not LRC(14).
 source: codex-lrc14-k3-z275-ten-body-closure-2026-07-30
 audit: >
   Normal and optimized executions are byte-identical.  The referee freezes
@@ -21,6 +23,7 @@ depends_on:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
 related:
   - MISTAKE-333
+  - THM-2984-projected-k3-signed-ray-attainment-and-unit-phase-gate
 script: 04-computation/lrc14_j7_k3_z275_to_z272_septimal_torsion_descent_thm2941.py
 output: 05-knowledge/results/lrc14_j7_k3_z275_to_z272_septimal_torsion_descent_thm2941.out
 script_sha256: 44d9369fe3151d78f5a281cb8ecc26d859807b635980552d8e5c95c0b5ff826e
@@ -103,6 +106,45 @@ their excluded endpoints merely touch.  At least one of the two complete
 cells stays safe for every primitive direction and every ray height.  All
 `65` residual cases retain full projected drift-safe mass `1`, strictly above
 the three-aligned union cap `36/91`, and are empty.
+
+### The residue-cardinality gate is sharp
+
+The pigeonhole threshold above is not an artifact of the proof.  For integers
+`d,K>=1`, let `G(d,K)` be the simple Cayley graph on `Z/dZ` in which distinct
+`x,y` are adjacent exactly when the additive order of `x-y` is at most `K`,
+and put
+
+```text
+R=max{r:r|d and 1<=r<=K}.
+```
+
+Then
+
+```text
+alpha(G(d,K))=d/R.                                      (5)
+```
+
+Indeed, the cosets of the unique subgroup of order `R` are cliques: every
+nonzero difference inside such a coset has order dividing `R`, hence at most
+`K`.  The `d/R` cosets therefore give the upper bound `alpha<=d/R`.
+Conversely, the interval of residue representatives
+
+```text
+I={0,1,...,d/R-1}
+```
+
+is independent.  If `0<a<d/R` had order `r<=K`, then `r|d`, so `r<=R`, and
+`a` would be a positive multiple of `d/r>=d/R`, a contradiction.  Thus
+`|I|=d/R` gives the matching lower bound.
+
+For the terminal rows here, `K=7` and `7|d`, so `R=7`.  Consequently
+`|S|>d/7` is the optimal universal test that uses only the number of distinct
+safe residues.  At or below the boundary an order-at-most-seven collision may
+still be forced, but only from additional information about the shape or
+location of `S` (or from a cell-to-residue sidecar); cardinality alone cannot
+do more.  THM-2984 develops one such next sidecar by retaining the primitive
+ray unit and an absolute fixed-safe cell.  It is related future machinery,
+not a dependency of the closure proved here.
 
 ## Reproducibility and scope boundary
 
