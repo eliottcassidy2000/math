@@ -30,6 +30,8 @@ related:
   - THM-2769-full-s4-pair-sum-affine-divisor-parity-hostile
   - THM-2950-three-conjugate-pair-v-four-torsor-and-quartic-resolvent-frame
   - THM-2951-fifth-compound-reconstruction-and-v-four-phase-scalarization-boundary
+  - THM-2974-discriminant-cover-integral-order-smith-and-owner-boundary
+  - THM-2975-modular-six-sheet-schreier-graphs-and-farey-partial-cube-boundary
 script: 04-computation/quartic_discriminant_cover_sextic_intertwiner_thm2971.py
 output: 05-knowledge/results/quartic_discriminant_cover_sextic_intertwiner_thm2971.out
 script_sha256: 6ca7c7f5695876dc38dc0a9423b4c5f81d648c29a5af90cb11b287ea0169b693
