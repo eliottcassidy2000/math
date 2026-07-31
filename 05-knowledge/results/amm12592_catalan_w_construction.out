@@ -1,0 +1,38 @@
+carry ladder in the w = u/(1+u) coordinate
+  m=   4  smallest slope reached: C=7/4 = 1.7500  (eps=+1)  VERIFIED
+  m=   8  smallest slope reached: C=15/8 = 1.8750  (eps=+1)  VERIFIED
+  m=  16  smallest slope reached: C=2 = 2.0000  (eps=+1)  VERIFIED
+  m=  32  smallest slope reached: C=2 = 2.0000  (eps=+1)  VERIFIED
+  m=  64  smallest slope reached: C=2 = 2.0000  (eps=+1)  VERIFIED
+  m= 128  smallest slope reached: C=2 = 2.0000  (eps=+1)  VERIFIED
+  m= 256  smallest slope reached: C=2 = 2.0000  (eps=+1)  VERIFIED
+
+Catalan [1, 1, 2, 5, 14, 42, 132, 429]
+ballot C(2n,n-1) [1, 4, 15, 56, 210, 792, 3003]
+
+=== m=8 ===
+  k= 0 a= 3  Lam_k = [1, 0, -6, 6]   (pos=7, neg=6)
+  k= 1 a= 4  Lam_k = [-1, 8, -20, 24, -12]   (pos=32, neg=33)
+  k= 2 a= 4  Lam_k = [-1, 0, 0, 0, 2]   (pos=2, neg=1)
+  k= 3 a= 4  Lam_k = [-1]   (pos=0, neg=1)
+  k= 4 a= 3  Lam_k = [-1]   (pos=0, neg=1)
+  k= 5 a= 2  Lam_k = [1, 0, -2]   (pos=1, neg=2)
+  k= 6 a= 1  Lam_k = [1]   (pos=1, neg=0)
+  k= 7 a= 0  Lam_k = [1]   (pos=1, neg=0)
+=== m=16 ===
+  k= 0 a= 8  Lam_k = [1, 0, 0, 0, -104, 394, -604, 440, -128]   (pos=835, neg=836)
+  k= 1 a= 8  Lam_k = [1, 0, 0, -90, 450, -1012, 1236, -802, 218]   (pos=1905, neg=1904)
+  k= 2 a= 9  Lam_k = [1, -8, 28, -140, 448, -772, 780, -524, 264, -78]   (pos=1521, neg=1522)
+  k= 3 a= 9  Lam_k = [1, 0, -72, 336, -756, 1008, -840, 504, -270, 90]   (pos=1939, neg=1938)
+  k= 4 a=10  Lam_k = [-1, 20, -180, 720, -1680, 2520, -2520, 1680, -720, 186, -26]   (pos=5126, neg=5127)
+  k= 5 a=10  Lam_k = [-1]   (pos=0, neg=1)
+  k= 6 a= 9  Lam_k = [-1, 0, 0, 0, 0, 0, 0, 0, 4, -4]   (pos=4, neg=5)
+  k= 7 a= 8  Lam_k = [-1, 0, 0, 0, 0, 0, 0, 6, -4]   (pos=6, neg=5)
+  k= 8 a= 7  Lam_k = [-1, 0, 0, 0, 0, 2, 6, -6]   (pos=8, neg=7)
+  k= 9 a= 6  Lam_k = [-1, 0, 0, 0, 0, 12, -10]   (pos=12, neg=11)
+  k=10 a= 5  Lam_k = [-1, 0, 0, 0, 2]   (pos=2, neg=1)
+  k=11 a= 4  Lam_k = [-1, 0, 0, 2]   (pos=2, neg=1)
+  k=12 a= 3  Lam_k = [1, -6, 6]   (pos=7, neg=6)
+  k=13 a= 2  Lam_k = [1, -4, 2]   (pos=3, neg=4)
+  k=14 a= 1  Lam_k = [1, -2]   (pos=1, neg=2)
+  k=15 a= 0  Lam_k = [1]   (pos=1, neg=0)
