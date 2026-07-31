@@ -1,0 +1,54 @@
+==========================================================================
+A. EXACT RATIONAL NEWTON RATIOS OF THE BALLOT COLUMNS
+==========================================================================
+  binom(2k,k)   central              1-R_k = (1) / (k*(2*k + 1))
+  Catalan binom(2k,k)/(k+1)          1-R_k = (1) / ((k + 1)*(2*k + 1)/3)
+  binom(2k,k-1)   = 1,4,15,56,210    1-R_k = (k**2 - 3*k - 1) / ((k - 1)*(k + 1)**2*(2*k + 1))
+  binom(2k+1,k-1) = 1,5,21,84,330    1-R_k = (k**2 - 7*k - 6) / ((k - 1)*(k + 1)*(k + 2)*(2*k + 3))
+
+  numeric check of the closed forms against direct computation:
+    Catalan            R = ['4/5', '25/28', '14/15', '21/22']  circuit +++++
+    binom(2k,k-1)      R = ['16/15', '225/224', '224/225', '175/176']  circuit ---++
+    binom(2k+1,k-1)    R = ['25/21', '21/20', '56/55', '275/273']  circuit -----
+    binom(2k,k)        R = ['9/10', '20/21', '35/36', '54/55']  circuit +++++
+  VERDICT A: all ratios exactly rational, deg Q <= 2
+
+==========================================================================
+B. THE UNIQUE METALLIC DISCRIMINANT IN THE FAMILY IS BRONZE
+==========================================================================
+    (a,b)=(0,-1): Q = k**2 - 3*k - 1  ->  x^2-3x-1  BRONZE
+    (a,b)=(0,1): Q = k**2 - 3*k - 1  ->  x^2-3x-1  BRONZE
+    every metallic hit is n=3: True
+    bronze root (3+sqrt13)/2 = 3.302775638
+    binom(2k,k-1) log-concavity pattern R_k vs 1, k=2..: >><<<<<
+    flip occurs between k=3 and k=4, bracketing 3.3028: True
+  VERDICT B: BRONZE IS THE UNIQUE METALLIC COLUMN
+
+==========================================================================
+C. METALLIC RECURRENCES ATTAIN MAXIMAL CIRCUIT ALTERNATION
+==========================================================================
+    n=1 GOLDEN  phi=(1+sqrt5)/2  a = [1, 1, 2, 3, 5, 8, 13]
+        Simson a_(k-1)a_(k+1)-a_k^2 = [1, -1, 1, -1, 1, -1]  (norm form, all +-1)
+        R_k vs 1: <><><><><><  strict alternation True
+        circuit  +-+-+-+-+-  sign changes 9 of max 9  MAXIMAL True
+    n=2 silver  1+sqrt2          a = [1, 2, 5, 12, 29, 70, 169]
+        Simson a_(k-1)a_(k+1)-a_k^2 = [1, -1, 1, -1, 1, -1]  (norm form, all +-1)
+        R_k vs 1: <><><><><><  strict alternation True
+        circuit  +-+-+-+-+-  sign changes 9 of max 9  MAXIMAL True
+    n=3 BRONZE  (3+sqrt13)/2     a = [1, 3, 10, 33, 109, 360, 1189]
+        Simson a_(k-1)a_(k+1)-a_k^2 = [1, -1, 1, -1, 1, -1]  (norm form, all +-1)
+        R_k vs 1: <><><><><><  strict alternation True
+        circuit  +-+-+-+-+-  sign changes 9 of max 9  MAXIMAL True
+    n=4 copper  2+sqrt5          a = [1, 4, 17, 72, 305, 1292, 5473]
+        Simson a_(k-1)a_(k+1)-a_k^2 = [1, -1, 1, -1, 1, -1]  (norm form, all +-1)
+        R_k vs 1: <><><><><><  strict alternation True
+        circuit  +-+-+-+-+-  sign changes 9 of max 9  MAXIMAL True
+    n=5 metallic-5               a = [1, 5, 26, 135, 701, 3640, 18901]
+        Simson a_(k-1)a_(k+1)-a_k^2 = [1, -1, 1, -1, 1, -1]  (norm form, all +-1)
+        R_k vs 1: <><><><><><  strict alternation True
+        circuit  +-+-+-+-+-  sign changes 9 of max 9  MAXIMAL True
+  VERDICT C: ALL METALLIC RECURRENCES MAXIMALLY ALTERNATE
+
+==========================================================================
+SUMMARY  ballot-closed-forms=True  bronze-unique=True  metallic-maximal=True
+==========================================================================
