@@ -1,0 +1,23 @@
+gamma* (raw two-ray optimizer) = 0.5979827048098849631827834436852979300702
+gamma* = 2 ln(phi)/ln 5        = 0.5979874356654401497450265020486215780406
+  |raw - closed form|          = 4.731e-6
+
+binding x* = (3-sqrt5)/2 = 1/phi^2 = 0.381966011250105151795413165634
+  death-star delta = 1-x* = 1/phi  = 0.618033988749894848204586834366 (their 0.6180)
+  y-opt frac = 2x*/(1+x*) = 1-1/sqrt5 = 0.552786404500042060718165266254
+
+branch B'' at x* = 0.5979874356654401497450265020486215780406
+branch C'' at x* = 0.5979874356654401497450265020486215780406
+both = 2 ln phi/ln5?  True
+raw slack at (x*, gamma*) = 1.33638e-51 (~0 confirms saddle)
+
+structural identities at x*:
+  ln x*   = -2 ln phi : -1.336e-51
+  ln(1-x*)= -ln phi   : 2.005e-51
+  ln(1+x*)= ln5/2-lnphi: 0.0
+  H(x*) = (1+x*)ln phi : 0.0
+
+=> C* = 1 + log_5(phi^2) = log_5(5 phi^2) = log_5((15+5 sqrt5)/2)
+     = 1.597987435665440149745026502048621578041
+   log_5(5 phi^2) = 1.597987435665440149745026502048621578041 (same)
+   8/5 = 1.6 ruled out; answer is transcendental.
