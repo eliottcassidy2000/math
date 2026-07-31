@@ -6,7 +6,8 @@ file's semantic digest are non-None and normal/-O transcripts agree.  Every
 terminal already has |S|>alpha=d/R.  THM-2984 makes primitive-unit phases
 height-free, while the local translated high-danger band has length d/7 and
 contains at most ceil(d/7)<=alpha residue classes.  Thus one clean cell
-escapes every local band without selecting a torsion pair.  The smaller
+escapes at every local coordinate, giving the full projected section without
+selecting a torsion pair.  The smaller
 centered-band number beta(d) is deliberately not used.
 """
 
@@ -36,7 +37,7 @@ ATLAS_SOURCE_SHA256 = "2af6d96882f336a409a8657070ed76a75c09a53b3789101b83103b051
 ATLAS_SHA256 = "cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda"
 UPSTREAM_SHA256 = "4137ab250def3ad6a66b4c75a5e1b5b1a82ba4100b00ea5f8616faa46fb501a9"
 UPSTREAM_OUTPUT_SHA256 = "eea98955f91371d38d95cdeeb88b60a2305d34d0bddd2ea26570af8eede1b8e3"
-SEMANTIC_SHA256 = None
+SEMANTIC_SHA256 = "5b9789fbb40a557837ddcad3f3e2d6b5527640601d22d27636066920704367bd"
 
 LEVELS = (270, 268, 265, 260, 259, 257, 256, 255, 254, 253, 252, 251, 250, 249, 247)
 ROW_COUNTS = {270:26,268:27,265:3,260:140,259:16,257:4,256:1,255:3,254:1,253:4,252:1,251:3,250:176,249:10,247:8}
@@ -71,6 +72,8 @@ TERMINAL_BODY_COUNT = 69
 MIN_TWO_HIGH_GAP = Q(1438897,5584915336)
 GLOBAL_R_HISTOGRAM = ((2,177),(3,93),(4,358),(5,933),(6,1065),(7,4927))
 MIN_ALPHA_SLACK = 1
+MIN_TRANSLATED_BAND_SLACK = 1
+MIN_ALPHA_MINUS_CEIL7 = 0
 
 
 def require(condition, message):
@@ -317,6 +320,10 @@ def render(records,terminal_records,atlas_counts,pins):
     require(tuple(sorted(global_R.items()))==GLOBAL_R_HISTOGRAM,global_R)
     require(min(row[6] for row in terminal_records)==MIN_TWO_HIGH_GAP,"two-high minimum")
     require(min(row[14] for row in terminal_records)==MIN_ALPHA_SLACK,"alpha slack")
+    require(min(row[15] for row in terminal_records)==MIN_TRANSLATED_BAND_SLACK,
+            "translated-band slack")
+    require(min(row[16] for row in terminal_records)==MIN_ALPHA_MINUS_CEIL7,
+            "alpha-minus-ceil7 boundary")
     require(INHERITED_LEDGER-len(records)==FINAL_LEDGER,"ledger")
     control_record=next(row for row in records if (row[0],row[1])==TOKEN_ABSENT_CONTROL)
     require(control_record[5] and control_record[12]>0,
@@ -331,7 +338,7 @@ def render(records,terminal_records,atlas_counts,pins):
     if SEMANTIC_SHA256 is not None:
         require(semantic==SEMANTIC_SHA256,"semantic digest changed")
     lines=[
-        "LRC14 projected k=3 z1=270 through z1=247 cardinality-torsion descent",
+        "LRC14 projected k=3 z1=270 through z1=247 cardinality translated-band descent",
         f"engine_sha256={sha(ENGINE)}",f"atlas_source_sha256={sha(ATLAS_SOURCE)}",f"atlas_output_sha256={sha(ATLAS)}",
         f"upstream_source_sha256={pins[0]}",f"upstream_output_sha256={pins[1]}",
         "dependency_hash_basis=SHA-256 after CRLF-to-LF normalization;bare CR rejected",
@@ -341,10 +348,10 @@ def render(records,terminal_records,atlas_counts,pins):
         "logical_split=every residual row here has first<high_floor,so THM-2941(25f) supplies an explicit later-high slot;when first>=high_floor strict ordering instead makes all actual later labels high;the atlas's printed HIGH-TAIL token is not used;duplicate-permitting >=2-high upper has strict positive exact gap on every residual body;therefore exactly one high in this residual universe",
         f"token_absent_hostile_control=z1:{TOKEN_ABSENT_CONTROL[0]};E:{TOKEN_ABSENT_CONTROL[1]};first:{control_record[0]};high_floor:{control_record[3]};first_below_high_floor:{control_record[5]};printed_HIGH-TAIL:false;printed_exact_high:1810;residual_states:{control_record[12]};two_high_gap:{ft(control_terminal[6])};first_failed_implication=absence of the literal tail token does not negate the projected maximum wall",
         "repaired_gate=THM-2941(25f) gives max(Z)>13L/132;integer labels and first<floor(13L/132)+1 force some later label>=high_floor;the representative may be an exact high label or HIGH-TAIL",
-        f"terminal_reduction=residual_bodies:{TERMINAL_BODY_COUNT};zero_high_hostile_passes:{aggregate[0]};one_high_cases:{aggregate[1]};body_distinct_low_pairs:{aggregate[2]};unit_ray_checks:{aggregate[3]};minimum_two_high_gap:{ft(MIN_TWO_HIGH_GAP)}",
+        f"terminal_reduction=residual_bodies:{TERMINAL_BODY_COUNT};zero_high_hostile_passes:{aggregate[0]};one_high_cases:{aggregate[1]};body_distinct_low_pairs:{aggregate[2]};high_ray_recurrence_checks:{aggregate[3]};minimum_two_high_gap:{ft(MIN_TWO_HIGH_GAP)}",
         "cayley_alpha=G_d edges have nonzero difference-order<=7;R=max({r:r|d,2<=r<=7} union {1});cosets mod d/R are R-cliques and [0,d/R) is independent;therefore alpha(G_d)=d/R",
         f"pair_graph_boundary=every fixed-safe residue set has |S|>alpha=d/R;minimum_alpha_slack:{MIN_ALPHA_SLACK};the equality interval proves alpha sharp only for forcing a short-order pair;no pair is selected,hashed,or used",
-        f"translated_band_gate=THM-2984 makes primitive-unit cell phases height-free;for every local translate the strict high-danger band has length d/7 and contains at most ceil(d/7)<=alpha residues;every terminal has |S|>alpha;minimum_band_slack:{min(row[15] for row in terminal_records)};minimum_alpha_minus_ceil7:{min(row[16] for row in terminal_records)};each primitive unit and local translate has a fixed-safe cell",
+        f"translated_band_gate=THM-2984 makes primitive-unit phases height-free and its complete-cell corollary is pointwise in the local coordinate;every translated strict high-danger band has length d/7 and contains at most ceil(d/7)<=alpha distinct residues;every terminal has |S|>alpha;minimum_band_slack:{min(row[15] for row in terminal_records)};minimum_alpha_minus_ceil7:{min(row[16] for row in terminal_records)};therefore every primitive direction and height has full projected section",
         f"centered_beta_hostile=d:{band_control[0]};S:{band_control[1]};open_interval:({ft(band_control[2])},{ft(band_control[3])});length:d/7;beta:{band_control[4]};ceil7:{band_control[5]};all_four_residues_fit:true;first_failed_implication=centered beta does not bound a translated local danger band",
         f"optimal_R_histogram={dict(sorted(global_R.items()))}",
         "strict_local_boundary=an open circular interval of length d/7 contains at most ceil(d/7) lattice residues;the bound is sharp and endpoint equality is safe",
@@ -361,7 +368,7 @@ def render(records,terminal_records,atlas_counts,pins):
     lines += [f"atlas_exact_check=selected_rows:423;all gaps270..247 empty;next occupied z1={NEXT_HEIGHT} with {NEXT_COUNT} rows",
               f"ledger_decrement={INHERITED_LEDGER}-423={FINAL_LEDGER};decrement counts body rows,not quotient states",
               "nonconsequence=projected scalar-atlas descent only;does not close z1=246,k<=1,the rung,or LRC(14)",
-              "dependency=THM-2984 primitive-unit height-free phase law is used;its centered-beta,gcd-stratum,transporter,and nonflag-complex gates are not used for the translated local band",
+              "dependency=THM-2984 equations(7),(13a)-(13c),(23a)-(23d) give the height-free phase,translated capacity,and complete-cell projection;its centered-beta,gcd-stratum,centered transporter,and nonflag-complex gates are not used",
               f"conclusion=all projected k3 rows at occupied heights270..247 are empty;with pinned z275..z272 package,projected k3 cap<={NEXT_HEIGHT};next exact frontier={NEXT_HEIGHT}",
               f"semantic_sha256={semantic}","all_exact_controls=PASS"]
     return "\n".join(lines)+"\n"

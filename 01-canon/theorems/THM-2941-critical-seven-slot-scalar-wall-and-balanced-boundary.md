@@ -2,7 +2,9 @@
 id: THM-2941
 title: "Critical seven-slot scalar wall, projected aligned-sector closure, and the A6 boundary"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY AUDITED.  On all 3,003
+  PROVED + FINITE-EXACT + VERIFIED.  The core and descending banks through
+  z1=272 are independently audited; the THM-2981 z1=270..247 addendum is
+  exact and hostile-audited, with no independent-implementation claim.  On all 3,003
   literal six-body carriers the seven-slot pair-Hunter scalar first crosses
   exactly at h/7, while a literal zero-excess cover is impossible and its
   hypothetical Gram is (h/49)(7I-J).  Aligned safe surplus bounds the first
@@ -10,9 +12,10 @@ status: >
   five-aligned/two-drift face independently of THM-2928, and exact suffix
   filters make k=2,3,4 uniformly finite-reducible.  Exact residue-ray and
   common-status, exact-packet, forced-high-ray, antipodal-phase,
-  finite-low-pair torsion, torsion-density pigeonhole, scalar-splice, and
-  status-descent addenda improve the k=2/k=3 first-drift caps from 2142/380
-  to 1656/270.
+  finite-low-pair torsion, torsion-density pigeonhole, scalar-splice,
+  status-descent, and cardinality translated-band addenda improve the
+  k=2/k=3 first-drift caps from 2142/380
+  to 1656/246.
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -110,6 +113,10 @@ verification:
   - 05-knowledge/results/lrc14_j7_k3_z297_ray_status_torsion_closure_thm2941.out
   - 04-computation/lrc14_j7_k3_z294_to_z276_ray_status_torsion_descent_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z294_to_z276_ray_status_torsion_descent_thm2941.out
+  - 04-computation/lrc14_j7_k3_z275_to_z272_septimal_torsion_descent_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z275_to_z272_septimal_torsion_descent_thm2941.out
+  - 04-computation/lrc14_j7_k3_z270_to_z247_cardinality_torsion_descent_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z270_to_z247_cardinality_torsion_descent_thm2941.out
   - 04-computation/lrc14_j7_k3_z324_located_two_cell_direct_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z324_located_two_cell_direct_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_2004_2142_thm2941.py
@@ -1575,6 +1582,49 @@ eea98955f91371d38d95cdeeb88b60a2305d34d0bddd2ea26570af8eede1b8e3
 939baa3f333a7a456859bee290b26f21985a07dd9eb3a02be1fd2cb95b9a87a1
 1b1a72765f35991d5fd243ffbb3ff7dfa26804017d68dee7b25e913b8152d3e7.
 ```
+
+### The `z_1=270` through `247` cardinality translated-band descent
+
+THM-2981 continues the same lossless projected `k=3` atlas across all `423`
+body rows at the fifteen occupied heights from `270` through `247`; every
+intervening height is checked empty.  The exact quotient partition is
+
+```text
+202,807 = 84,483 crude + 114,027 common-status + 4,297 residual.  (25q6)
+```
+
+All status instances are rebuilt and their exact rational Farkas
+contradictions checked, while solver-selected bases remain outside the
+semantic digest.  The residuals have first label below the integer high
+floor; equation `(25f)`, rather than the atlas's optional printed
+`HIGH-TAIL` token, forces a later high label.  A positive exact two-high gap
+on every residual body makes that label unique.  Literal low-label and
+safe high-ray upper-envelope enumeration leaves `7,553` candidate one-high
+cases on `795` low pairs.
+
+For high denominator `d`, let `R` be the largest divisor of `d` at most
+seven and put `alpha=d/R`.  Every terminal fixed-safe residue set satisfies
+`|S|>alpha`.  THM-2984 makes primitive-unit cell phases independent of ray
+height and proves that an arbitrary translated strict high-danger band of
+length `d/7` contains at most `kappa=ceil(d/7)` residue classes.  Since
+`kappa<=alpha<|S|`, its complete-cell corollary gives a fixed-safe cell at
+every local coordinate, hence full projected section, for every primitive
+direction and height.  All cases close without selecting a torsion pair.  The
+smaller centered-band count `beta(d)` is not valid after translation:
+at `d=28`, four residues fit in the open interval `(-1/2,7/2)` of length
+`d/7` although `beta(28)=3`.  The exact local count-only boundary is
+`kappa`, while `alpha` remains the sharp threshold for the unused
+difference-order Cayley graph.
+
+The next occupied height is `246`, with `194` rows.  Consequently
+
+```text
+z_1<=246,                 375,674-423=375,251.            (25q7)
+```
+
+This remains a projected necessary-sector theorem, not LRC(14).  Its
+source/output/semantic hashes begin `f41fbdec/45762f14/5b9789fb` and are
+recorded in THM-2981.
 
 The physical reconciliation source/output pairs are
 `4b972500c6772a11e9ebf905e28e9324a736323ea9a4be6e66714b24affd6dc6 /

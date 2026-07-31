@@ -85,9 +85,11 @@
   `aa14b089/eff21ad8`.
 - `lrc14_j7_k3_projected_scalar_body_atlas_thm2941.py`, the physical bridge,
   descending ray/status banks, the `z312` finite-low-pair torsion closure,
-  and the `z275..272` septimal/status descent
+  the `z275..272` septimal/status descent, and the `z270..247`
+  cardinality translated-band descent
   -> matching `.out` files [THM-2941 PROVED NECESSARY ATLAS + FINITE-EXACT
-  CLOSURES + INDEPENDENT AUDIT].  Through `z324`, exact quotients leave only
+  CLOSURES + INDEPENDENT AUDIT THROUGH `z272`; THM-2981 PROVED +
+  VERIFIED-EXACT + HOSTILE-AUDITED THROUGH `z247`].  Through `z324`, exact quotients leave only
   one unbounded exact-`3920` tail, closed by two antipodal clean cells.  At
   `z312`, `18,249=7,481+10,698+70`; retaining the inherited high-wall gate
   (essential because unrestricted zero-high arithmetic passes `69/70`)
@@ -108,15 +110,34 @@
   `2033=273+1695+65`; clean-cell density above `1/7` gives an exact
   order-seven collision in every terminal.  The next 29 occupied rows at
   `274,273,272` close by `246=97+149`, with no residual packet.  Height `271`
-  is empty.  The projected `k=3` cap is `270`, and the necessary-row ledger is
-  `375,674`.
+  is empty.  THM-2981 then closes `423` rows at the fifteen occupied heights
+  `270..247`: `202807=84483+114027+4297`, followed by `7553` one-high cases
+  closed pair-free by THM-2984's height-free unit phase and the sharp
+  translated-band capacity `ceil(d/7)<=d/R<|S|`.  The projected `k=3`
+  cap is `246`, and the necessary-row ledger is `375,251`.
   Torsion source/output/semantic hashes begin `bbd4b011/5e8b37b7/95f9da4c`;
   the independent hashes begin `d34fcd0f/2f3d9a45/4667f8f0`; descent hashes
   begin `1e06537c/2a5845c3/cd50c3e7`; `z297` hashes begin
   `d062c7ac/9b37ba12/52d02b6f`; the lower descent hashes begin
   `61868bc6/a9db04e9/160b0264`; the `z275..272`
   source/output/profile/semantic hashes begin
-  `4137ab25/eea98955/939baa3f/1b1a7276`.
+  `4137ab25/eea98955/939baa3f/1b1a7276`.  THM-2981
+  source/output/semantic hashes begin `f41fbdec/45762f14/5b9789fb`.
+- `lrc14_j7_k3_z270_to_z247_cardinality_torsion_descent_thm2941.py` ->
+  matching `.out` [THM-2981 PROVED + VERIFIED-EXACT + HOSTILE-AUDITED].
+  Freezes all `423` projected `k=3` rows at the fifteen occupied heights
+  `270..247` and the partition `202807=84483+114027+4297`; all `114027`
+  common-status exclusions receive exact rational Farkas rechecks with the
+  solver basis omitted from semantic data.  The residuals give `7553`
+  candidate one-high cases.  For each high denominator, the certificate
+  stores `(d,R,d/R,|S|,ceil(d/7),|S|-ceil(d/7),|S|-d/R,|C|)`.  THM-2984 makes
+  primitive-unit phases height-free, and its complete-cell corollary turns the
+  sharp arbitrary-translate bound `ceil(d/7)<=d/R<|S|` into a pointwise full
+  projected section without selecting a torsion pair.  The `d=28`,
+  `S={0,1,2,3}` hostile prevents replacing the translated
+  threshold by the smaller centered `beta(28)=3`.  Cap `246`, ledger
+  `375,251`; this is not LRC(14).  Source/output/semantic hashes begin
+  `f41fbdec/45762f14/5b9789fb` and are frozen in the theorem frontmatter.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py`, the isolated terminal referees,
   and the exact/projected plus forced-high descent packages -> matching
   `.out` files [THM-2941 PROVED NECESSARY BANDS + FINITE-EXACT CLOSURES +
@@ -327,7 +348,8 @@
   descent, the `z297` torsion-density closure, and the `z294` through `z276`
   status/torsion descent plus the `z275..272` septimal/status descent ->
   matching `.out` files
-  [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].  The
+  [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED THROUGH
+  `z272`; THM-2981 PROVED + VERIFIED-EXACT + HOSTILE-AUDITED THROUGH `z247`].  The
   global `200..378` atlas has `6,060` rows.  Exact quotients close its upper
   banks through `324`; the sole `z324` survivor is an unbounded
   denominator-`3920` tail closed by an antipodal clean-cell pair.
@@ -346,15 +368,19 @@
   closes the eight `z286` terminals.  THM-2979 closes all ten `z275` rows by
   `2033=273+1695+65`, with exact order-seven clean-cell collisions on the
   last `65`; the `274,273,272` addendum closes `246=97+149` further states
-  without a residual.  Thus the current cap is `270` and the necessary
-  ledger is `375,674`.  Torsion source/output/semantic hashes begin
+  without a residual.  THM-2981 closes the next `423` rows through `z247` by
+  `202807=84483+114027+4297`, then closes `7553` one-high cases pair-free with
+  THM-2984's height-free phase and the translated-band count
+  `ceil(d/7)<=d/R<|S|`.  Thus the current cap is `246` and the
+  necessary ledger is `375,251`.  Torsion source/output/semantic hashes begin
   `bbd4b011/5e8b37b7/95f9da4c`; independent hashes begin
   `d34fcd0f/2f3d9a45/4667f8f0`; descent hashes begin
   `1e06537c/2a5845c3/cd50c3e7`; `z297` hashes begin
   `d062c7ac/9b37ba12/52d02b6f`; lower-descent hashes begin
   `61868bc6/a9db04e9/160b0264`; `z275..272`
   source/output/profile/semantic hashes begin
-  `4137ab25/eea98955/939baa3f/1b1a7276`.
+  `4137ab25/eea98955/939baa3f/1b1a7276`; THM-2981
+  source/output/semantic hashes begin `f41fbdec/45762f14/5b9789fb`.
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;
   the `z336` source/output/semantic hashes are
   `6e991432a1ce5ec9c1cbe97199cb5fd647c5edc89bdcc60ce560382a70835fcf` /

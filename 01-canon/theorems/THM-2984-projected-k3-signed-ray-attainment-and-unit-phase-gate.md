@@ -742,7 +742,7 @@ P_(E,Z)=T.                                               (23d)
 An aligned completion would instead force `P_(E,Z) subset U_A`.  This is
 impossible whenever `mu(U_A)<1`; in the three-comb applications the proved
 THM-1166 cap is `mu(U_A)<=36/91`.  This is the pair-free complete-cell
-implication needed by the reserved THM-2981 descent, without choosing a
+implication used by the THM-2981 descent, without choosing a
 collision pair or a pair-selection policy.  Notice that `(23c)` is a
 pointwise section argument, not a claim that the raw Haar mass of one
 complete cell is one.
