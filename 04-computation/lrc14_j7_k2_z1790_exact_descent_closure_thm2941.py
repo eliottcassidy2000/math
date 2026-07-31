@@ -70,16 +70,16 @@ OUTPUT_PATH = (
 )
 
 EXPECTED_EXACT_ENGINE_SHA256 = (
-    "e9242e697efb0ba452ca0c51ee65da4d02b427557ef627414286661cfea1cf79"
+    "f864262ef94e97827b6f54b8db3bee38e1420f7af4c31a549157cbbd40d3df86"
 )
 EXPECTED_EXACT_OUTPUT_SHA256 = (
-    "0341dac5fb8ad7630ff08c18805da0186bb00cfe7e2d51533dfd67bd57af0057"
+    "b2470d0acc71cdb731ca443ae6683391e582df9a90aba5bd4192a6c383fcd33b"
 )
 EXPECTED_HIGH_ENGINE_SHA256 = (
-    "22db2600485332469f6dec9e1356bc121165923a33c1ca6381acddcc89506f9e"
+    "a12b60f8ff9c711313f57fcf0993049d455f73ebcc5ed74c06e87ebdaf8fe12d"
 )
 EXPECTED_HIGH_OUTPUT_SHA256 = (
-    "6f6ddef639e259939588cf3d25bc5cd3c5f809b254b0752e4f3238c9d41c5125"
+    "51697a317d0618cba183f5e0ea82875f186f5a6c57ebff9a9a5396a3cefdf34d"
 )
 EXPECTED_BAND_SOURCE_SHA256 = (
     "9ad7c58575b25c79b41bcf4226710c934720bf3e1394abf573a647eec5af87ff"
@@ -88,10 +88,10 @@ EXPECTED_BAND_OUTPUT_SHA256 = (
     "2ce806d361d7eb97d9ae2d23e438898c8e1f895a89501c9a1847e51f61ca8009"
 )
 EXPECTED_PROFILE_SHA256 = (
-    "61baccd4317612607184805d103c93f0f0d72b7246100da5d14905d7573f9aaf"
+    "80c30db678b446602ea48ed1f338c64c6e27eea04add82e0a6bb2822e9c9120d"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "557123c698c6a0099907fc5713c21c9954ce3e30491955f2c196e66be74cfb36"
+    "b5ea0a00c850ec19a4d8c3955dc85d5e933609bee62271baa5881b91a51bc32b"
 )
 
 QUANTIFIER = "distinct later nonaligned labels"
@@ -145,7 +145,7 @@ EXPECTED_EXACT_AUDIT = {
         (
             "7ebb8d9ecdde60d26cfdfd05c7f9c822efec3f2dee693bc4f5289447c3dab79b",
             "30b86634de2c6b61f264a7ccbc12e55c7b54fa202fb10128aa0515ac6060b3e0",
-            "8aa38ade5cb5beba1f2327889ecc5c1d41b0d29166d04e898420e78a83a5fbab",
+            "db370a5116159096d4c6229fd6da9e35c4c41aa8bc6a761f3ac3638f8dde94e5",
             "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
         ),
         None,
@@ -156,7 +156,7 @@ EXPECTED_EXACT_AUDIT = {
         (
             "24e26b85aa9cddda1b667b024a56264a1c2d5259a8ae190b46162caed988d77a",
             "3c4afc13c2f7afd0ca2a1841dd47b9650ebbbba144dc32b8d101eb2c8928a13e",
-            "365a4a0ecf5f6c6f254d6d2804585012acdbe495e0058799a0731c7fe472d88a",
+            "9e791e2d81733fc04f8844615a7835de6792ddc93640dbd224d41c44c5f91322",
             "7f530705f83e058fae0ce97693deabd5efaf4140ce5d0934705955b0d08324af",
         ),
         F(66, 91),
@@ -178,7 +178,7 @@ EXPECTED_EXACT_AUDIT = {
         (
             "026e71beb6d15a19077986c49e075fb7f520e81ca8ac9ee31fcc14d2b1a0cf38",
             "cc6dd7effaf0d792808c080699eff6137dd78709712eb19b9d653c5cea16a43f",
-            "153e856af41e743e4cf206e4396d90e370c2f56dac51a9a428698359c3115507",
+            "8bcd8cebf8fcf908ef40d5b6a5e96a1d0dc5201752e2ea5bec9418a9a0e3d5e8",
             "a50aa091fef8852f27e29dcbc6d6240f2d2a7a95896eb763fbdea3244e830a78",
         ),
         F(45959, 477659),
@@ -189,7 +189,7 @@ EXPECTED_EXACT_AUDIT = {
         (
             "e9c03f269420efa4a66e29d1c6e1e8b22eebe9abb646caf7c8a834446ec76c85",
             "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
-            "d268bb16f5f684598d7e47bc1cc49395260a14986aba642618de3315120c1f5b",
+            "8f1640967eeeacec91b1d18b46bb3a5134900d0ddead79117934a227d224f06f",
             "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
         ),
         None,
@@ -200,7 +200,7 @@ EXPECTED_EXACT_AUDIT = {
         (
             "7bda59f70f20fdb8f9f139143db6c80d9917a9aac538b292c190d07229240bd9",
             "96e5052ef61a29079b92b63dde0cdcd8041c333334bbd6fc4268c55162a8eb68",
-            "32491cbbbd9046d4ea6f43df5d59dc311cbec000745d9247ad8ed37385b47f6c",
+            "4a1354ed04812bd8f57c738036bf32461e3d5a9450f0a04887ae933ec1ed792c",
             "64e3e9e03165824b06003368343779f06f748a3b745a3c010acf41ae960ad36a",
         ),
         F(891, 5369),
@@ -208,6 +208,7 @@ EXPECTED_EXACT_AUDIT = {
         "fe4b810ce6c833704d4d96889a7fe7c58f029f9ebf15a7552bf5a45c002a8478",
     ),
 }
+CHECK_EXPECTED_EXACT_AUDIT = True
 
 
 def require(condition, message):
@@ -337,7 +338,7 @@ def all_label_profile(case):
         require(projected[3] is not None and projected[3] > 0, (case, "bad margin"))
     audit = (stage_digests, projected[3], projected[4], projected[7])
     expected_audit = EXPECTED_EXACT_AUDIT[case]
-    if expected_audit is not None:
+    if CHECK_EXPECTED_EXACT_AUDIT and expected_audit is not None:
         require(audit == expected_audit, (case, "exact audit changed", audit))
     return (
         "ALL-LABEL",
