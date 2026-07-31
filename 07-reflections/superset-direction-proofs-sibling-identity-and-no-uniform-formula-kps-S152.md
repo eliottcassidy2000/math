@@ -42,6 +42,10 @@ The extra factor `S_a(2)/T`-weight `= n!/(1/2)_n = 4^n/C(2n,n)` is one elliptic 
 the step that lifts the elementary sibling to the (generically non-elementary) period `S_a(2)`.
 
 ## 4. STRUCTURAL THEOREM: no uniform elementary k=2 formula can exist
+> **RETRACTED by kps-S153.** This section is WRONG. It infers "no uniform formula" from the false premise
+> `S_{1/5}(2)` non-elementary (kps-S151). In fact `S_a(2)` HAS a uniform elementary closed form for all
+> `a != 1/2` (`(4 sin pi a/pi) sum (-1)^n/((2n+1)^2-(1-2a)^2)`, Gauss-digamma); it specializes to all three
+> signature values. Sections 1-3 and 5-6 stand; the "isolated / no-shortcut" framing does not.
 > **Claim.** There is no `(A(a),B(a))` algebraic-valued at rationals with `S_a(2)=A(a)log B(a)` (or any fixed
 > elementary template) valid on an interval of `a`.
 > **Proof.** Such a template would force `S_a(2)` elementary at *every* rational `a`, in particular `a=1/5`.
