@@ -392,33 +392,108 @@ slow upward drift is the expected quadratic-tangency correction: near
 (a fold), so the negative window has width `~sqrt(gamma*-gamma)` and depth
 `~(gamma*-gamma)`.
 
-## 11. Proposed objects
+## 11. The three objects, worked
 
-**11.1 The deficiency fold.** `Phi_gamma(delta) = max_x g_gamma(x,delta) -
-H(delta)` is the right object, not the threshold alone. At `gamma*` it is
-non-negative with a single quadratic tangency at `1/phi`; below `gamma*` it is
-negative on a window. The fold structure converts the empirical `log m/m`
-rate of section 10.3 into a predicted one and should give the exact constant
-`c` from the curvature `Phi''` at the tangency.
+### 11.1 The deficiency fold DERIVES the convergence constant
 
-**11.2 Compensation depth (where the remaining freedom lives).** Every bound
-here is for schemes balanced *shell by shell*. The natural parameter is the
-coarseness of the partition on which balance is demanded: depth 1 is
-per-shell (governed by `C_arch`), and the true problem demands only global
-balance `P(H) = 1/2`. **The entire gap between `C_arch = 1.598` and the true
-`C*` is the value of cross-shell compensation**, and "compensation depth" is
-the object that interpolates. Note the refinement direction is useless:
-balancing each `(n_1,n_2)` class separately is a *finer* partition, hence
-strictly more constraints and a worse slope.
+Near the threshold `Phi_gamma(delta) = max_x g - H(delta)` is a fold,
+`Phi ~ -A(gamma*-gamma) + (B/2)(delta-delta*)^2`, so (ARCH) fails exactly when
+the depth `A(gamma*-gamma)` exceeds the Stirling error `E`, giving
+`gamma* - gamma_m = E/A`. By the envelope theorem `A = dg/dgamma` at the
+maximiser, and at fixed `ell` only `alpha = gamma(2-ell)/(1+gamma)` depends on
+`gamma`, so with `dg/dalpha = 1 - log_2(1-p)`,
 
-**11.3 Syllable-depth deadlines (the A005150 direction).** The critical value
-`n` is the first syllable of the run-length (look-and-say, A005150) parse of
-the stream. The depth-`j` problem lets the deadline depend on the first `j`
-syllables, `T_j(n_1,...,n_j)`; AMM 12592 is `j = 1`. Since the second run is
-read anyway while waiting, depth 2 re-accounts the same rule rather than
-changing it, and the honest question is whether the optimal slope is
-eventually independent of `j` -- a finite-syllable ("cosmological") statement
-in the sense of Conway's decay theorem, though with no evidence yet of any
-link to the constant `lambda = 1.3035772...` itself.
+```text
+A = (2 - ell*)/(1+gamma*)^2 * (1 - log_2(1-p*)) = 1.20581835346289864.
+```
 
-Referee: `04-computation/amm12592_interiority_and_stirling.py`.
+Sharpening the Stirling constant matters here. The central term is
+`2^{nH}/sqrt(2 pi n p(1-p))`, and the `O(m)` summands of (ARCH) form a
+Gaussian of width `~sqrt m`, so the sum costs `+1/2 log_2 m` against the
+left side's `-1/2 log_2 m`: `E = (1/2)log_2(m)/m`, not the crude
+`2 log_2(m)/m` of section 10.3. Hence the prediction
+
+```text
+c := (gamma* - gamma_m)/(log_2(m)/m) = 1/(2A) = 0.414656153279.
+```
+
+The crude bound would give `2/A = 1.6586`, four times too large. Measured:
+
+```text
+m           256      512     1024     2048     4096
+c_m       0.29873  0.31354  0.31861  0.32813  0.33670
+c - c_m   0.11592  0.10112  0.09605  0.08652  0.07795
+(c-c_m)*log_2 m  0.927  0.910  0.960  0.951  0.936
+```
+
+`c_m` rises monotonically toward `1/(2A)`, and the residual times `log_2 m` is
+constant to within 5%: **`c_m ~ 1/(2A) - K/log_2 m` with `K ~ 0.94`**. At
+`m = 4096` this predicts `0.4147 - 0.94/12 = 0.3364` against the measured
+`0.3367`. So the fold accounts for the leading constant *and* the correction,
+and it confirms the sharp Stirling constant against the crude one.
+
+### 11.2 Compensation depth: the hierarchy, and where the gap lives
+
+Let `C*_B` be the least slope over schemes balanced on ratio-`B` blocks
+(THM-3007 forces `B = 2^j`). Coarser balance is strictly fewer constraints, so
+
+```text
+C*_1 >= C*_2 >= C*_4 >= ... >= C*   (global balance only).
+```
+
+**`C_arch = log_5(5 phi^2)` is a lower bound for `C*_1` only.** The entire gap
+between `1.598` and the true `C*` is the value of cross-shell compensation.
+The first decisive test is whether `C*_2 < C*_1`, and there is a concrete
+reason to expect it: in a ratio-`B` block the middle composition range
+`N <= k <= l` carries FREE symmetric deficits `delta_j = delta_{N+l-j}`,
+because the two branches couple there. The ratio-2 block has no such range
+(it degenerates to the single middle pair), so the extra freedom is real and
+localised, and it is exactly the freedom `C_arch` does not see.
+
+### 11.3 Syllable depth: a negative
+
+Refining the balance requirement from `n_1` to `(n_1,...,n_j)` partitions the
+shells FINER, i.e. imposes strictly MORE constraints. So depth-`j` balance can
+only raise the achievable slope, and it is not a weaker hypothesis either --
+it strengthens exactly the assumption one wants to remove. Dead end in both
+directions; its only use is bookkeeping. Recorded as a negative, and it
+disposes of the look-and-say (A005150) reading in this direction: the
+run-length parse refines, and refinement is the wrong way.
+
+## 12. Two further objects
+
+### 12.1 The shell-imbalance module
+
+Give shell `m` its imbalance `D_m(p) = sum_{w in S_m} eps_w p^{z(w)} q^{o(w)}`
+(heads minus tails). Then
+
+```text
+global fairness  <=>  sum_{m} D_m(p) = 0 on (0,1),
+shell balance    <=>  D_m = 0 for every m.
+```
+
+`D_m` is a polynomial of degree `2m`, so the shells have distinct degrees and
+no finite cancellation is possible -- but the sum is infinite and
+`|D_m| <= p^m + q^m`, so it converges and cancellation across infinitely many
+shells is NOT excluded. **The module `{(D_m) : sum D_m = 0, each D_m
+realisable at slope C}` is the precise home of the gap `C*_1 - C*`**, and it
+is finitely checkable one degree at a time. The cheapest question: can two
+adjacent shells compensate each other at all?
+
+### 12.2 The alternation index (a cross-agent invariant)
+
+Our extremal atom saturates `|Delta^j P(0)| <= 2^j sup|P|` at `P(y) =
++-(-1)^y`; klein's THM-3010 (ballot-column Newton ratios, bronze
+log-concavity threshold, **metallic maximal alternation**) independently
+reaches maximal alternation for circuit sign changes, and HYP-9070 uses it as
+a JC(2) search gate. Define the **alternation index** of a finite sequence as
+`max_j |Delta^j P(0)| / (2^j sup|P|) in [0,1]`. Conjecture: the extremal
+objects in both settings are exactly the index-1 elements. This is cheap to
+test -- compute the index of klein's ballot-column extremals -- and if it
+holds it is a genuine shared invariant between the coin extractor's capacity
+bound and the GMC circuit work, which the user's "metallic ratios and circuit
+alternation" pairing anticipated. Note the metallic ratios live on klein's
+side, not in our threshold constant (section 9.3).
+
+Referees: `04-computation/amm12592_interiority_and_stirling.py`,
+`04-computation/amm12592_fold_constant_and_compensation.py`.

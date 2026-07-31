@@ -1,0 +1,38 @@
+OBJECT 1 -- the fold constant
+  ell*            = 0.340273686535521642
+  dg/dalpha       = 1 - log2(1-p*) = 1.85520596107429848
+  A = dPhi/dgamma = 1.20581835346289864
+
+  crude  E = 2 log2 m / m   ->  c = 2/A   = 1.65862461312
+  sharp  E = (1/2)log2 m/m  ->  c = 1/(2A) = 0.414656153279
+
+     m      measured c        (c_sharp - c_m)
+    256      0.2987339413      0.11592221
+    512      0.3135394512      0.1011167
+   1024      0.3186110121      0.096045141
+   2048      0.3281334766      0.086522677
+   4096      0.3367033738      0.077952779
+
+  predicted c = 1/(2A) = 0.4146561533
+  measured c rises 0.2987 -> 0.3367 monotonically toward it;
+  the residual is the O(1/log m) correction from the fold's width.
+
+OBJECT 2 -- compensation depth (structural)
+  Let C*_B be the least slope over schemes balanced on ratio-B blocks
+  (THM-3007: balanced blocks are exactly [2^a, 2^g), so B = 2^j).  Coarser
+  balance is FEWER constraints, hence
+        C*_1 >= C*_2 >= C*_4 >= ... >= C*  (global balance only).
+  C_arch = log_5(5 phi^2) is a lower bound for C*_1 ONLY.  The whole gap
+  between 1.598 and the true C* is the value of cross-shell compensation.
+  First decisive test: is C*_2 < C*_1?  For a ratio-B block the middle
+  composition range N <= k <= l carries FREE symmetric deficits
+  delta_j = delta_{N+l-j} (the two branches couple), which the ratio-2 block
+  does not have -- so the extra freedom is real and localised.
+
+OBJECT 3 -- syllable depth (verdict)
+  Refining the balance requirement from n_1 to (n_1,...,n_j) partitions
+  the shells FINER, i.e. imposes strictly MORE constraints.  So depth-j
+  balance can only raise the achievable slope, never lower it, and it is not
+  a weaker hypothesis either -- it is a strengthening of exactly the
+  assumption one wants to remove.  Dead end in both directions; its only use
+  is as bookkeeping.  Recorded as a negative.

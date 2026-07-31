@@ -13,6 +13,11 @@ corrects: [kps-S150 open-item-3]
 
 # The prime-power law is signature-specific; and the honest proof status
 
+> **RETRACTED IN FULL by kps-S153.** The central claim here -- `S_{1/5}(2)` non-elementary, hence
+> `C_{1/5}={1}` and "the law is signature-specific" -- is a **FALSE NEGATIVE**. `S_{1/5}(2)` IS elementary
+> (a level-20 cyclotomic value; the golden-field PSLQ basis below was incomplete). `k=2` is uniformly
+> elementary for all `a != 1/2`. See kps-S153. Everything below is preserved only as an error record.
+
 `S_lambda(k)=sum_{n>=0}(lambda)_n(1-lambda)_n/((n!)^2(kn+1))=int_0^1 2F1(lambda,1-lambda;1;x^k)dx`.
 `C_lambda={k: S_lambda(k) elementary}` (elementary = Q-comb of `pi`, `log(alg)`, `arctan(alg)`).
 
