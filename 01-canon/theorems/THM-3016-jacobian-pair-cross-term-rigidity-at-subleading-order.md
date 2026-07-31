@@ -170,6 +170,43 @@ In (i) the whole subleading layer is empty; in (ii) it is one-dimensional,
 carried entirely by `Q_{m-1}`. Either way the layer has **no free
 parameters** beyond `Q_{m-1}` itself.
 
+**(A3) Branch (i) is killed by a translation.** Let `tau(x,y) = (x+s,y+t)`.
+Then `Jac(P o tau, Q o tau) = Jac(P,Q) o tau`, so the pair stays Jacobian;
+the leading forms are unchanged, so `H, g, a, b, K` are preserved; and the
+subleading components shift by the directional derivative of the leading
+form (verified symbolically):
+
+```text
+P_{n-1} -> P_{n-1} + (s d_x + t d_y) P_n,
+Q_{m-1} -> Q_{m-1} + (s d_x + t d_y) Q_m.
+```
+
+With `P_n = c H^a`, `Q_m = c' H^b` and `L := (s d_x + t d_y) H` (a form of
+degree `g-1`), a branch-(i) pair becomes
+`P_{n-1}' = c a H^{a-1} L`, `Q_{m-1}' = c' b H^{b-1} L`, and then
+
+```text
+kappa H^{a-b} Q_{m-1}' = (ca/(c'b)) H^{a-b} c' b H^{b-1} L
+                       = c a H^{a-1} L = P_{n-1}',
+```
+
+so the translated pair satisfies **branch (ii) exactly**. In characteristic
+zero `L != 0` for generic `(s,t)` (Euler: `x d_x H + y d_y H = g H != 0` for
+`deg H = g >= 1`). Concretely, `(P,Q) = (x, y+x^3)` has
+`P_{n-1} = Q_{m-1} = 0`, and after `tau = (x+1,y+1)` it has
+`P_{n-1} = 1`, `Q_{m-1} = 3x^2`, still with `Jac = 1`.
+
+**So branch (i) is not a separate case:** after a generic translation every
+counterexample with `K >= 2` satisfies
+
+```text
+P_{n-1} = kappa H^{a-b} Q_{m-1},   both nonzero,                     (X''')
+```
+
+and a pair arriving from branch (i) carries the sharper factorisation
+`Q_{m-1} = c' b H^{b-1} L`, `deg L = g-1`. Script:
+`04-computation/jc2_kill_branch_i_thm3016.py`.
+
 **(B) With `W = 0` the cross term is explicit and the tower iterates.**
 Using `Jac(fg, g) = g Jac(f,g)` (referee-verified) with
 `f = kappa H^{a-b}`, `g = Q_{m-1}`:

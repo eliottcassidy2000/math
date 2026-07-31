@@ -1,0 +1,22 @@
+STEP 1 -- translation preserves Jac and the leading form:
+   Jac(P o tau, Q o tau) = 1
+   leading forms equal: True
+
+STEP 2 -- subleading shift is the directional derivative of the top form:
+   P_{n-1} shift == (s d_x + t d_y) P_n : True
+   Q_{m-1} shift == (s d_x + t d_y) Q_m : True
+
+STEP 3 -- a branch-(i) pair translates into branch (ii) exactly:
+   kappa H^{a-b} Q'  - P'  = 0  (0 means branch (ii) holds)
+
+STEP 4 -- L = (s d_x + t d_y)H is generically nonzero (Euler):
+   H=x*y (g=2, K=2): L=s*y + t*x  nonzero for generic (s,t): True   Euler check: True
+   H=x**2 - y**2 (g=2, K=2): L=2*s*x - 2*t*y  nonzero for generic (s,t): True   Euler check: True
+   H=x*y*(x + y) (g=3, K=3): L=2*s*x*y + s*y**2 + t*x**2 + 2*t*x*y  nonzero for generic (s,t): True   Euler check: True
+   H=x**3 + y**3 (g=3, K=2): L=3*s*x**2 + 3*t*y**2  nonzero for generic (s,t): True   Euler check: True
+
+STEP 5 -- concrete end-to-end demonstration on a genuine Jacobian pair
+   (build a pair whose subleading layer vanishes, then translate):
+   P=x, Q=y+x^3: Jac=1, P_(n-1)=0, Q_(m-1)=0  -> branch (i)
+   after tau=(x+1,y+1): Jac=1, P_(n-1)=1, Q_(m-1)=3*x**2
+   -> subleading layer is now nonzero: branch (i) destroyed by translation.
