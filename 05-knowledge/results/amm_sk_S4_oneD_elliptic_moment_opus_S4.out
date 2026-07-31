@@ -1,0 +1,7 @@
+kernel 2F1(1/4,3/4;1;.7) vs death-star F(.7): 0.0
+S(4) = (2/pi) int_0^1 [asinh+asin]/sqrt(1-s^4) ds = 1.069352554441268058582852463
+   vs target: -1.09e-22
+arcsinh+arcsin keeps only s^{4m+1}: 2.3e-41
+anchor int dtheta/sqrt(1+sin^2) = K(i) = 1.31102877714605991
+I2 (theta-weighted moment) = 0.9576640807506821658195
+PSLQ pi*S(4) vs {K(i),Catalan,pi,lemniscate}: [0, -2, 0, 0, 1]   (coeff 0 on S(4) => independent => irreducible, kps-S148)

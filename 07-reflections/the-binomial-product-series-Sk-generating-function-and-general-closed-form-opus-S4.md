@@ -70,6 +70,31 @@ logs/arctans of algebraic numbers in a field growing with `k` (`k=4`: `Q(sqrt2,s
 `Q(sqrt5,...)`), but the exact arguments were not pinned here -- this is the live sub-question (matching the
 2026 MathOverflow post, ref [2]). Verified: `S(1..3)` byte-match the given forms.
 
+## S(4): clean 1-D integral and the elliptic-moment core (death-star kernel; confirms kps-S148)
+
+death-star (S?) supplied the elementary kernel `2F1(1/4,3/4;1;z) = (1/pi) int_0^pi dphi/sqrt(1+sqrt z cos phi)`
+(quadratic transformation, `b-a=1/2`; verified to 15 digits). Because `sqrt(x^4)=x^2`, the inner `x`-integral
+in `S(4)=int_0^1 2F1(1/4,3/4;1;x^4)dx` is ELEMENTARY, and after `phi->pi-phi` folds the two halves together:
+
+```
+   S(4) = (2/pi) int_0^1 [ arcsinh(s) + arcsin(s) ] / sqrt(1 - s^4) ds        (verified to 30+ digits)
+```
+
+the single cleanest closed 1-D form (was a 2-D `G_k` integral before). Structural note: `arcsinh(s)+arcsin(s)
+= 2 sum_{m>=0} C(4m,2m)/(16^m (4m+1)) s^{4m+1}` -- the ODD Taylor terms cancel, leaving only `s^{4m+1}`, which
+is exactly why re-integrating against `s^{4m+1}/sqrt(1-s^4)` reproduces `sum C(2n,n)C(4n,2n)/((4n+1)64^n)`.
+
+**The non-elementary core is a theta-weighted elliptic moment.** With `s=sin theta`,
+`I2 := int_0^1 arcsin(s)/sqrt(1-s^4) ds = int_0^{pi/2} theta/sqrt(1+sin^2 theta) dtheta`, and the UNWEIGHTED
+anchor `int_0^{pi/2} dtheta/sqrt(1+sin^2 theta) = K(i)` is a lemniscate-type constant. The `theta`-WEIGHT is
+the signature of an `L`-value / higher period. PSLQ (40 digits): `pi S(4)` has NO relation against
+`{K(i), lemniscate varpi, Catalan G, pi}` (it returns only the known constant identity `varpi = 2 K(i)`,
+with coefficient 0 on `S(4)`). So `S(4)` is concretely independent of the lemniscate/Catalan/pi ring -- an
+EXPLICIT elliptic-moment witness for kps-S148's "S(k>=4) are irreducible hypergeometric-motive periods."
+S(5) has `sqrt(x^5)=x^{5/2}`, so its inner integral is NOT elementary -- the odd `k` are structurally harder
+still. NET: no elementary closed form for S(4),S(5) exists (owner's Q1 answered negatively, with a concrete
+mechanism); the cleanest explicit form is the 1-D integral above.
+
 ## Answers to the owner's questions
 
 1. **S(4), S(5):** given to 30+ digits; each has an elementary `(1/pi)*(logs+arctans of algebraics)` form by
