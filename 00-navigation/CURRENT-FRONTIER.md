@@ -1,7 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — 2026-07-30.** Linked theorems are proof sources; this file records composition and residuals.
-Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
+**Rolling state — 2026-07-30.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -32,7 +31,7 @@ common-level reflected `k=1` diagonal.  Other censuses, arbitrary `k<=1`, the ru
 and LRC are open.  Septimal floor/exception plus located phase cut the raw five-drift ledger
 `951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
-not physical-cover counts.  For `k=3`, torsion/status closes through `297`;
+not physical-cover counts. THM-2970 independently closes all 19 forced-high rows in the `1680..1742` `k=2` atlas. For `k=3`, torsion/status closes through `297`;
 the next 45 occupied rows split `1549=659+882+8`, and order-two/four torsion closes the eight `z286` terminals, leaving `275`.
 Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams but not semantic-root identification (kernel `28,393`); THM-2545/2549 give Hall and chronology gates,
@@ -213,8 +212,8 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   effective.  THM-2949/2952 close all `364` four-slot supports through width
   `14`; THM-2955/2957/2959 close first-gap `15<=M<=24` by modular gates.
   THM-2960 gives Smith walls through `24` (two charts through `20`);
-  THM-2964 makes the pure ladder universal; THM-2963 kills next-prime
-  gates. Wider cores stay open.
+  THM-2964 makes the pure ladder universal; THM-2963 kills next-prime gates;
+  THM-2969 proves a positive PF2 wall-stripped core for `6<=M<=26`. Width `>=27` stays open.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent

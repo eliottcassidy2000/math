@@ -1,0 +1,89 @@
+LRC14 projected k=2 forced-high exact-ray/located-torsion closure
+dependency=04-computation/lrc14_j7_k2_scalar_band_1680_1742_thm2941.py;sha256=89016f939c961fa979ec5b30812981456df5bfb2af3066f1f1b38e5a83f1a412
+dependency=05-knowledge/results/lrc14_j7_k2_scalar_band_1680_1742_thm2941.out;sha256=4a36611b26585964e185bbaa3d583be3f1c67a7b608cca785920266bc217a779
+input_rows=58;height_histogram=((1683, 1), (1694, 10), (1702, 3), (1708, 14), (1722, 11), (1724, 2), (1732, 2), (1736, 15))
+forced_high_rows=19;height_histogram=((1683, 1), (1694, 3), (1708, 5), (1722, 4), (1736, 6))
+ordinary_all_four_high_rows=39;height_histogram=((1694, 7), (1702, 3), (1708, 9), (1722, 7), (1724, 2), (1732, 2), (1736, 9));next_frontier_height=1736;lowest_remaining_height=1694
+ordinary_status=38 rows L=11760/floor=1020;1 row L=17640/floor=1529;all suffix certificates EXACT;all four later labels exceed z1>=floor
+analytic_two_high_control=17 closed/2 open;open rows=z1722:E(2,8,9,10,12,14),z1736:E(1,4,10,12,13,14);the atlas HIGH-TAIL bound is not used for exact-one-high
+exact_two_high_invoice=2H+max(H,l1)+max(H,l2);min_l2_minus_H=3131/11953620
+exact_ray_two_high_gap_min=121670443/941781292179;witness=z1722:E(2, 8, 9, 10, 12, 14);exactly_one_high=19/19
+exact_ray_empty_rows=16;closest_gap=1323977953/569777681768295;witness=z1694:E(2, 8, 9, 10, 12, 14)
+exact_ray_live_rows=((1708, (2, 8, 9, 10, 12, 14), 2), (1722, (2, 8, 9, 10, 12, 14), 10), (1736, (1, 8, 10, 12, 13, 14), 1));literal_upper_classes=13;distinct_row_low_packets=9
+ordinary=z:1694;E:1,2,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1694;E:1,4,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1694;E:1,6,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1694;E:2,4,6,8,10,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1694;E:2,4,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1694;E:2,6,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1694;E:4,6,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1702;E:1,4,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1702;E:2,4,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1702;E:2,6,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1708;E:1,2,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1708;E:1,4,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1708;E:1,6,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1708;E:2,3,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1708;E:2,4,6,8,10,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1708;E:2,4,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1708;E:2,6,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1708;E:3,4,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1708;E:4,6,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1722;E:1,2,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1722;E:1,4,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1722;E:1,6,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1722;E:1,6,9,10,12,14;L:17640;floor:1529;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1722;E:2,3,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1722;E:2,6,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1722;E:4,6,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1724;E:1,4,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1724;E:2,4,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1732;E:1,4,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1732;E:2,4,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1736;E:1,2,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1736;E:1,4,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1736;E:1,6,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1736;E:2,3,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1736;E:2,4,6,8,10,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1736;E:2,4,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1736;E:2,6,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1736;E:3,4,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+ordinary=z:1736;E:4,6,8,10,12,14;L:11760;floor:1020;status:ALL-FOUR-HIGH-EXACT
+exact_empty=z:1694;E:2,8,9,10,12,14;gap:1323977953/569777681768295;top_lows:(1810, 1790, 1722);best_high_d:588;best_high_label:3180
+exact_empty=z:1736;E:2,8,9,10,12,14;gap:7891025249/164964861300785;top_lows:(1810, 1790, 1946);best_high_d:588;best_high_label:3180
+exact_empty=z:1736;E:1,4,10,12,13,14;gap:7353136579/118459563063660;top_lows:(2340, 2004, 1836);best_high_d:490;best_high_label:6708
+exact_empty=z:1722;E:1,6,10,11,12,14;gap:22660915271/199841002861500;top_lows:(1750, 1836, 1800);best_high_d:4620;best_high_label:6062
+exact_empty=z:1736;E:1,2,10,11,12,14;gap:17704278379/151099294846500;top_lows:(1800, 1836, 1750);best_high_d:4620;best_high_label:6062
+exact_empty=z:1708;E:4,8,10,11,12,14;gap:800258664617/6825071735732250;top_lows:(1836, 1750, 2060);best_high_d:2156;best_high_label:11580
+exact_empty=z:1736;E:1,2,10,12,13,14;gap:2122333151/17733467524500;top_lows:(2340, 1836, 1750);best_high_d:490;best_high_label:6708
+exact_empty=z:1708;E:2,8,10,11,12,14;gap:15099688181/109554549544440;top_lows:(1736, 1836, 2142);best_high_d:2156;best_high_label:11580
+exact_empty=z:1708;E:1,4,10,11,12,14;gap:338931714761/1675828542843000;top_lows:(1836, 1750, 1736);best_high_d:4620;best_high_label:6062
+exact_empty=z:1722;E:1,2,10,11,12,14;gap:10733887586/49960250715375;top_lows:(1800, 1836, 1750);best_high_d:4620;best_high_label:6062
+exact_empty=z:1708;E:1,2,10,11,12,14;gap:68529875899/297324418891500;top_lows:(1800, 1836, 1750);best_high_d:4620;best_high_label:6062
+exact_empty=z:1722;E:2,3,10,11,12,14;gap:3110955371/13496886903500;top_lows:(1800, 1750, 1736);best_high_d:4620;best_high_label:6062
+exact_empty=z:1694;E:1,2,10,12,13,14;gap:4024571354/17304432019875;top_lows:(2340, 1836, 1750);best_high_d:490;best_high_label:6708
+exact_empty=z:1694;E:1,4,10,12,13,14;gap:23075231323/93683706736620;top_lows:(2340, 1736, 2004);best_high_d:490;best_high_label:6708
+exact_empty=z:1683;E:1,2,10,11,12,14;gap:631361867/2437085400750;top_lows:(1800, 1836, 1750);best_high_d:4620;best_high_label:6062
+exact_empty=z:1736;E:2,3,10,11,12,14;gap:47509753883/178751453380500;top_lows:(1800, 1750, 2534);best_high_d:4620;best_high_label:6062
+class=1;z:1708;E:2,8,9,10,12,14;d:588;lows:(1722, 1790, 1810);high_rep:3180;unit:53;scalar_excess:15597127373/1148973176458380;safe_cells:4864;orders:(2, 3, 4, 6, 7);q2:(1764, 1470);q7:(1764, 1848)
+class=2;z:1708;E:2,8,9,10,12,14;d:588;lows:(1790, 1810, 1946);high_rep:3180;unit:53;scalar_excess:4451874759/1298433101851340;safe_cells:4920;orders:(2, 3, 4, 6, 7);q2:(1764, 1470);q7:(1764, 5376)
+class=3;z:1722;E:2,8,9,10,12,14;d:504;lows:(1790, 1810, 1946);high_rep:3710;unit:53;scalar_excess:11058937907/218179332688135;safe_cells:4946;orders:(2, 3, 4, 6, 7);q2:(1512, 1764);q7:(1512, 1584)
+class=4;z:1722;E:2,8,9,10,12,14;d:504;lows:(1790, 1810, 1836);high_rep:3710;unit:53;scalar_excess:8905026773/480308459011290;safe_cells:5176;orders:(2, 3, 4, 6, 7);q2:(1512, 1764);q7:(1512, 1584)
+class=5;z:1722;E:2,8,9,10,12,14;d:504;lows:(1790, 1810, 2142);high_rep:3710;unit:53;scalar_excess:8905026773/480308459011290;safe_cells:4938;orders:(2, 3, 4, 6, 7);q2:(1512, 1764);q7:(1512, 1584)
+class=6;z:1722;E:2,8,9,10,12,14;d:588;lows:(1790, 1810, 1946);high_rep:3180;unit:53;scalar_excess:66781639703/654537998064405;safe_cells:4946;orders:(2, 3, 4, 6, 7);q2:(1764, 1470);q7:(1764, 5376)
+class=7;z:1722;E:2,8,9,10,12,14;d:588;lows:(1790, 1810, 1836);high_rep:3180;unit:53;scalar_excess:33564683249/480308459011290;safe_cells:5176;orders:(2, 3, 4, 6, 7);q2:(1764, 1470);q7:(1764, 1848)
+class=8;z:1722;E:2,8,9,10,12,14;d:588;lows:(1790, 1810, 2142);high_rep:3180;unit:53;scalar_excess:33564683249/480308459011290;safe_cells:4938;orders:(2, 3, 4, 6, 7);q2:(1764, 1470);q7:(1764, 1848)
+class=9;z:1722;E:2,8,9,10,12,14;d:588;lows:(1810, 1836, 1946);high_rep:3180;unit:53;scalar_excess:29221241767/745953919581780;safe_cells:5152;orders:(2, 3, 4, 6, 7);q2:(1764, 1470);q7:(1764, 1260)
+class=10;z:1722;E:2,8,9,10,12,14;d:588;lows:(1810, 1946, 2142);high_rep:3180;unit:53;scalar_excess:29221241767/745953919581780;safe_cells:4908;orders:(2, 3, 4, 6, 7);q2:(1764, 1470);q7:(1764, 1260)
+class=11;z:1722;E:2,8,9,10,12,14;d:588;lows:(1810, 1836, 2142);high_rep:3180;unit:53;scalar_excess:4189407/596286106780;safe_cells:5172;orders:(2, 3, 4, 6, 7);q2:(1764, 1470);q7:(1764, 1260)
+class=12;z:1722;E:2,8,9,10,12,14;d:2520;lows:(1790, 1810, 1946);high_rep:3514;unit:251;scalar_excess:14330261429/1033264386881545;safe_cells:4946;orders:(2, 3, 4, 5, 6, 7);q2:(2706, 1446);q7:(2706, 5586)
+class=13;z:1736;E:1,8,10,12,13,14;d:196;lows:(1836, 2004, 2340);high_rep:13260;unit:17;scalar_excess:91785/20406470812;safe_cells:24790;orders:(2, 4, 7);q2:(13725, 14019);q7:(13725, 13753)
+torsion_order_histogram={2: 13, 3: 12, 4: 13, 5: 1, 6: 12, 7: 13};pair_failures=0;q2_closes=13/13;q7_closes=13/13
+q7_strict_open=L=14,d=7,u=1,m=1,z=16,j=0,k=1,theta=13/16;arguments have norm exactly 1/14, so closures meet and both open dangers exclude the seam
+q8_hostile=L=56,d=8,u=1,m=1,z=63,j=0,k=1,theta=5/6;arguments have norm 1/16<1/14 and both dangers fire;arc-overlap=1/56
+first_failed_global_implication=for 39 rows z1>=high_floor, so ordering makes every later label high and the finite-three-low packet does not exist
+second_failure_boundary=the analytic HIGH-TAIL placeholder is only an upper bound, not an attained unit ray; exact ray maxima empty 16 of 19 forced-high rows
+reversed_gap_near_miss=atlas gap is upper-minus-lower; treating it as lower-minus-upper falsely closes the two analytic hostiles; exact unit-ray maxima must precede the at-most-one-high conclusion
+load_bearing_geometric_hypothesis=both located cells are complete body cells and the entire fixed packet is safe on each whole cell, not merely at a root/sample
+class_semantic_sha256=1642cd1b5f7bcca7c79abf37850e7eee3c7b4aede31a17dada82dc1cac6dc427
+all_exact_controls=PASS
