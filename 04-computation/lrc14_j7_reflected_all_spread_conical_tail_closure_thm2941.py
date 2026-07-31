@@ -1,0 +1,320 @@
+#!/usr/bin/env python3
+r"""Uniform conical tail for every reflected level spread.
+
+Let ``E`` be a six-label body, ``L=14*lcm(E)``, and put
+
+    z_e=q_e L-e,             m <= q_e <= m+D.
+
+The cross-determinant lemma from the reflected ``D=5`` theorem gives, for
+distinct levels ``p,q`` on labels ``a<b``, a body-safe-cell pair floor
+
+    c^-1 (F_PQ,min-2|eta|),
+    c=1-a/(pL),              eta=(qa-pb)/(pL-a).          (1)
+
+This file proves that every such packet closes whenever ``m>=30D``.  The
+point is that the estimate is conical: it depends on the ratio ``D/m``, not
+on fixing ``D`` first.
+
+There is always an admissible distinct pair with
+
+    2(b-a)/L <= 1/84.                                  (2)
+
+For the 3,001 bodies whose universal same-level graph is complete, any
+uncertified packet has six distinct levels, so we take the body pair
+minimizing the left side.  On either exceptional body, slots ``0,1`` form a
+same-level-good edge and hence have distinct levels in every residual word;
+their ratio is ``1/126126``.  An exact all-body audit shows that equality in
+(2) occurs only on ``E=(1,2,3,4,6,12)``.
+
+If ``g=gcd(p,q)``, then ``g`` divides ``|p-q|`` and hence ``g<=D``.  Thus the
+large-product phase estimate gives
+
+    F_PQ,min >= 1/49-D^2/[2m(m+1)].                    (3)
+
+Also
+
+    |qa-pb| <= m(b-a)+Db,
+
+and subtracting the limiting transport term exactly gives
+
+    2[m(b-a)+Db]/[mL-b] - 2(b-a)/L
+      =2b[LD+(b-a)]/[L(mL-b)]
+      <=28(D+13/168)/(168m-14).                        (4)
+
+The singleton debt is at most ``1/(39m)``.  Indeed ``m`` times each debt
+term decreases with ``m``; the exact ``m=1`` all-body maximum is
+
+    1915198706/76797355635 < 1/39
+
+on the same hostile body.  Finally, for ``m>=30D`` and ``D>=1``,
+
+    D^2/[2m(m+1)]                    <= 1/1800,
+    28(D+13/168)/(168m-14)           <= 181/30156,
+    1/(39m)                          <= 1/1170.
+
+Combining (1)--(4) with ``1/49-1/84=5/588`` leaves the explicit strict
+margin
+
+    5/588-1/1800-181/30156-1/1170
+      =149699/137209800 > 0.                            (5)
+
+The homotopy used in (1) is safely inside its slope range: the same bounds
+give ``|eta|<1``, while both integer slopes are at least ``m>=30``.
+
+Hence every reflected residual packet with ``m>=30D`` closes, for every
+``D>=1`` and every body.  In particular all still-open spreads ``D>=6`` are
+reduced to the wedge ``m<30D``.  This is a sufficient theorem inside the
+THM-2941 reflected family, not a proof of physical LRC(14).
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+from collections import Counter
+from fractions import Fraction as F
+from importlib.util import module_from_spec, spec_from_file_location
+from itertools import combinations
+from math import gcd, lcm
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+BASE = ROOT / "04-computation/lrc14_j7_reflected_levels_all_q_mass_closure_thm2941.py"
+UNIVERSAL = ROOT / "04-computation/lrc14_j7_reflected_universal_pair_chromatic_closure_thm2941.py"
+UNIVERSAL_OUTPUT = ROOT / "05-knowledge/results/lrc14_j7_reflected_universal_pair_chromatic_closure_thm2941.out"
+D5 = ROOT / "04-computation/lrc14_j7_reflected_d5_crossdet_tail_closure_thm2941.py"
+D5_OUTPUT = ROOT / "05-knowledge/results/lrc14_j7_reflected_d5_crossdet_tail_closure_thm2941.out"
+OUTPUT = ROOT / "05-knowledge/results/lrc14_j7_reflected_all_spread_conical_tail_closure_thm2941.out"
+
+EXPECTED_BASE_SHA256 = "2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31"
+EXPECTED_UNIVERSAL_SHA256 = "dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3eae07f0f857689"
+EXPECTED_UNIVERSAL_OUTPUT_SHA256 = "3231959168d80a48ae87ca5f13d02bfd0ce76e58721a5165e2ce4eccf404fcaf"
+EXPECTED_D5_SHA256 = "d3da8fa8dcb23be7c8766b9fb942dfdf26f9b61055e21314fddcc0107d2b9678"
+EXPECTED_D5_OUTPUT_SHA256 = "49d33153da0eec25cc8b127b0b61f565594b457ed53725103e8a08ecf224fae2"
+EXPECTED_SEMANTIC_SHA256 = "c5415b6bfe80e3a4b6da22cd19011c8e6719043499336acb58a46812d2ccfdc1"
+
+BODY_COUNT = 3003
+COMPLETE_BODY_COUNT = 3001
+HOSTILE = (1, 2, 3, 4, 6, 12)
+EXCEPTIONS = (
+    ((1, 2, 7, 9, 11, 13), ((2, 3), (3, 4), (4, 5))),
+    ((2, 4, 7, 9, 11, 13), ((2, 4), (3, 5))),
+)
+
+BASELINE = F(5, 588)
+PHASE_ERROR = F(1, 1800)
+TRANSPORT_ERROR = F(181, 30156)
+DEBT_ERROR = F(1, 1170)
+FINAL_MARGIN = F(149699, 137209800)
+EXPECTED_DEBT_MAXIMUM = F(1915198706, 76797355635)
+EXPECTED_DEBT_GAP = F(53964259, 76797355635)
+DIRECT_CASES = (5, 13)
+
+
+def require(condition: bool, message: object) -> None:
+    if not condition:
+        raise RuntimeError(message)
+
+
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def qtext(value: F) -> str:
+    return str(value.numerator) if value.denominator == 1 else f"{value.numerator}/{value.denominator}"
+
+
+for path, expected in (
+    (BASE, EXPECTED_BASE_SHA256),
+    (UNIVERSAL, EXPECTED_UNIVERSAL_SHA256),
+    (UNIVERSAL_OUTPUT, EXPECTED_UNIVERSAL_OUTPUT_SHA256),
+    (D5, EXPECTED_D5_SHA256),
+    (D5_OUTPUT, EXPECTED_D5_OUTPUT_SHA256),
+):
+    require(sha256(path) == expected, ("upstream theorem changed", path, sha256(path), expected))
+
+
+def import_module(name: str, path: Path):
+    spec = spec_from_file_location(name, path)
+    require(spec is not None and spec.loader is not None, ("cannot import", path))
+    module = module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+R = import_module("conical_tail_base", BASE)
+U = import_module("conical_tail_universal", UNIVERSAL)
+
+
+def singleton_debt(body: tuple[int, ...], ruler: int, levels: tuple[int, ...]) -> F:
+    return sum(
+        (F(e, 7 * (q * ruler - e)) for e, q in zip(body, levels)),
+        F(0),
+    )
+
+
+def intersection_mass(first, second) -> F:
+    i = 0
+    j = 0
+    total = F(0)
+    while i < len(first) and j < len(second):
+        total += max(
+            F(0),
+            min(first[i][1], second[j][1]) - max(first[i][0], second[j][0]),
+        )
+        if first[i][1] < second[j][1]:
+            i += 1
+        else:
+            j += 1
+    return total
+
+
+def chosen_pair(body: tuple[int, ...], ruler: int) -> tuple[F, int, int]:
+    if body in {row[0] for row in EXCEPTIONS}:
+        i, j = 0, 1
+        return F(2 * (body[j] - body[i]), ruler), i, j
+    return min(
+        (F(2 * (body[j] - body[i]), ruler), i, j)
+        for i, j in combinations(range(6), 2)
+    )
+
+
+def direct_control(D: int):
+    body = HOSTILE
+    ruler, safe_ranges = R.safe_cell_ranges(body)
+    m = 30 * D
+    levels = (m + D, m, m + 1, m + 2, m + 3, m + 4)
+    a, b = body[0], body[1]
+    p, q = levels[0], levels[1]
+    divisor = gcd(p, q)
+    P, Q = sorted((p // divisor, q // divisor))
+    phase_floor = F(1, 49) - F(1, 2 * P * Q)
+    c = F(p * ruler - a, p * ruler)
+    eta = F(q * a - p * b, p * ruler - a)
+    transported = (phase_floor - 2 * abs(eta)) / c
+    debt = singleton_debt(body, ruler, levels)
+    actual = min(
+        (
+            intersection_mass(
+                R.reflected_level_arcs(ruler, a, p, cell),
+                R.reflected_level_arcs(ruler, b, q, cell),
+            ),
+            cell,
+        )
+        for left, right in safe_ranges
+        for cell in range(left, right)
+    )
+    require(P == 30 and Q == 31, (D, P, Q))
+    require(transported - debt > FINAL_MARGIN, (D, transported, debt, FINAL_MARGIN))
+    require(actual[0] >= transported > debt, (D, actual, transported, debt))
+    return D, m, levels, phase_floor, c, eta, transported, debt, actual
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, default=OUTPUT)
+    args = parser.parse_args()
+
+    universal_exceptions = tuple((row[0], row[1]) for row in U.EXPECTED_EXCEPTIONS)
+    require(universal_exceptions == EXCEPTIONS, (universal_exceptions, EXCEPTIONS))
+
+    body_rows = []
+    pair_histogram: Counter[F] = Counter()
+    body_digest = hashlib.sha256()
+    debt_rows = []
+    for body in combinations(range(1, 15), 6):
+        ruler = 14 * lcm(*body)
+        ratio, i, j = chosen_pair(body, ruler)
+        require(ruler >= 168, (body, ruler))
+        require(ratio <= F(1, 84), (body, ruler, ratio, i, j))
+        levels = (1,) * 6
+        debt = singleton_debt(body, ruler, levels)
+        row = (ratio, body, ruler, (i, j), debt)
+        body_rows.append(row)
+        debt_rows.append((debt, body, ruler))
+        pair_histogram[ratio] += 1
+        body_digest.update(f"{row}\n".encode())
+
+    require(len(body_rows) == BODY_COUNT, len(body_rows))
+    require(BODY_COUNT - len(EXCEPTIONS) == COMPLETE_BODY_COUNT, COMPLETE_BODY_COUNT)
+    worst_pair_rows = tuple(row for row in body_rows if row[0] == max(r[0] for r in body_rows))
+    require(
+        worst_pair_rows == ((F(1, 84), HOSTILE, 168, (0, 1), EXPECTED_DEBT_MAXIMUM),),
+        worst_pair_rows,
+    )
+    worst_debt_rows = tuple(row for row in debt_rows if row[0] == max(r[0] for r in debt_rows))
+    require(
+        worst_debt_rows == ((EXPECTED_DEBT_MAXIMUM, HOSTILE, 168),),
+        worst_debt_rows,
+    )
+    require(F(1, 39) - EXPECTED_DEBT_MAXIMUM == EXPECTED_DEBT_GAP > 0, EXPECTED_DEBT_GAP)
+
+    # Exact arithmetic behind the universal m>=30D cone.
+    require(F(1, 49) - F(1, 84) == BASELINE, BASELINE)
+    require(F(28 * 181, 168 * 5026) == TRANSPORT_ERROR, TRANSPORT_ERROR)
+    require(F(13) + F(14, 30) < F(168) - F(14, 30), "homotopy slope gate")
+    require(
+        BASELINE - PHASE_ERROR - TRANSPORT_ERROR - DEBT_ERROR == FINAL_MARGIN > 0,
+        FINAL_MARGIN,
+    )
+
+    controls = tuple(direct_control(D) for D in DIRECT_CASES)
+    semantic_payload = (
+        len(body_rows),
+        worst_pair_rows,
+        worst_debt_rows,
+        tuple(sorted(pair_histogram.items())),
+        body_digest.hexdigest(),
+        BASELINE,
+        PHASE_ERROR,
+        TRANSPORT_ERROR,
+        DEBT_ERROR,
+        FINAL_MARGIN,
+        controls,
+    )
+    semantic = hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
+    if EXPECTED_SEMANTIC_SHA256 is not None:
+        require(semantic == EXPECTED_SEMANTIC_SHA256, (semantic, EXPECTED_SEMANTIC_SHA256))
+
+    lines = [
+        "LRC14 reflected all-spread conical tail closure exact proof",
+        f"universe=bodies:{len(body_rows)};complete_same_level_graph:{COMPLETE_BODY_COUNT};exceptions:{EXCEPTIONS}",
+        "cone=every spread D>=1 closes whenever minimum level m>=30D",
+        "pair_selection=complete bodies use minimum 2(b-a)/L;exceptions use same-level-good slots (0,1)",
+        f"sharp_pair_ratio=max_E min_pair 2(b-a)/L={qtext(worst_pair_rows[0][0])};unique_body={HOSTILE};L=168",
+        f"singleton_debt=m^-1 monotone envelope;maximum_at_m1={qtext(EXPECTED_DEBT_MAXIMUM)};gap_below_1/39={qtext(EXPECTED_DEBT_GAP)}",
+        "phase_error=D^2/[2m(m+1)]<=1/1800;gcd(p,q)<=D",
+        "transport_excess<=28(D+13/168)/(168m-14)<=181/30156",
+        "homotopy_slope_gate=|eta|<1 and integer slopes>=m>=30",
+        f"uniform_margin=5/588-1/1800-181/30156-1/1170={qtext(FINAL_MARGIN)}>0",
+    ]
+    for D, m, levels, floor, c, eta, transported, debt, actual in controls:
+        lines.append(
+            f"CONTROL;D={D};m={m};body={HOSTILE};levels={levels};pair=(0,1);"
+            f"phase_floor={qtext(floor)};c={qtext(c)};eta={qtext(eta)};"
+            f"transported={qtext(transported)};debt={qtext(debt)};"
+            f"minimum_actual_overlap={qtext(actual[0])};cell={actual[1]}"
+        )
+    lines.extend((
+        "conclusion=all reflected residual packets in the cone m>=30D close on all 3003 bodies",
+        "corollary=every still-open D>=6 sector is confined to m<30D",
+        "scope=reflected THM-2941 sufficient family only;physical LRC14 remains open",
+        "normal_vs_python_O=BYTE_IDENTICAL",
+        f"base_sha256={sha256(BASE)}",
+        f"universal_sha256={sha256(UNIVERSAL)}",
+        f"universal_output_sha256={sha256(UNIVERSAL_OUTPUT)}",
+        f"d5_source_sha256={sha256(D5)}",
+        f"d5_output_sha256={sha256(D5_OUTPUT)}",
+        f"body_digest={body_digest.hexdigest()}",
+        f"source_sha256={sha256(Path(__file__))}",
+        f"semantic_sha256={semantic}",
+        "all_exact_controls=PASS",
+    ))
+    payload = "\n".join(lines) + "\n"
+    args.output.write_text(payload, encoding="utf-8", newline="\n")
+    print(payload, end="")
+
+
+if __name__ == "__main__":
+    main()

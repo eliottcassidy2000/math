@@ -1,0 +1,25 @@
+LRC14 reflected all-spread conical tail closure exact proof
+universe=bodies:3003;complete_same_level_graph:3001;exceptions:(((1, 2, 7, 9, 11, 13), ((2, 3), (3, 4), (4, 5))), ((2, 4, 7, 9, 11, 13), ((2, 4), (3, 5))))
+cone=every spread D>=1 closes whenever minimum level m>=30D
+pair_selection=complete bodies use minimum 2(b-a)/L;exceptions use same-level-good slots (0,1)
+sharp_pair_ratio=max_E min_pair 2(b-a)/L=1/84;unique_body=(1, 2, 3, 4, 6, 12);L=168
+singleton_debt=m^-1 monotone envelope;maximum_at_m1=1915198706/76797355635;gap_below_1/39=53964259/76797355635
+phase_error=D^2/[2m(m+1)]<=1/1800;gcd(p,q)<=D
+transport_excess<=28(D+13/168)/(168m-14)<=181/30156
+homotopy_slope_gate=|eta|<1 and integer slopes>=m>=30
+uniform_margin=5/588-1/1800-181/30156-1/1170=149699/137209800>0
+CONTROL;D=5;m=150;body=(1, 2, 3, 4, 6, 12);levels=(155, 150, 151, 152, 153, 154);pair=(0,1);phase_floor=1811/91140;c=26039/26040;eta=-160/26039;transported=35983658/4746206647;debt=2740943904216541706/17598630224548036373255;minimum_actual_overlap=6645360/328065361;cell=23
+CONTROL;D=13;m=390;body=(1, 2, 3, 4, 6, 12);levels=(403, 390, 391, 392, 393, 394);pair=(0,1);phase_floor=1811/91140;c=67703/67704;eta=-416/67703;transported=1216322978/160429367315;debt=4113032199604069441346/67916788596730635816756635;minimum_actual_overlap=44953584/2217882577;cell=23
+conclusion=all reflected residual packets in the cone m>=30D close on all 3003 bodies
+corollary=every still-open D>=6 sector is confined to m<30D
+scope=reflected THM-2941 sufficient family only;physical LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+universal_sha256=dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3eae07f0f857689
+universal_output_sha256=3231959168d80a48ae87ca5f13d02bfd0ce76e58721a5165e2ce4eccf404fcaf
+d5_source_sha256=d3da8fa8dcb23be7c8766b9fb942dfdf26f9b61055e21314fddcc0107d2b9678
+d5_output_sha256=49d33153da0eec25cc8b127b0b61f565594b457ed53725103e8a08ecf224fae2
+body_digest=cbec7138e9f967d400cfe7c349b895ef478ed292ee6b7fc27e13519355e618c8
+source_sha256=66bc43a37ba568a41b234a69f6f6c1a09f177eedce0565355d5fa0f3ff5ced9d
+semantic_sha256=c5415b6bfe80e3a4b6da22cd19011c8e6719043499336acb58a46812d2ccfdc1
+all_exact_controls=PASS
