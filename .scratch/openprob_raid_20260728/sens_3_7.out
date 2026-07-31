@@ -1,0 +1,2 @@
+RESULT n=7 d=3: UNSAT  (solutions=0, nodes=818943) [exhaustive]
+EXIT 0

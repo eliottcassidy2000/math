@@ -1,0 +1,707 @@
+ON FEIGE’S CONJECTURE
+ZIPEI NIE AND JIAYE WEI
+
+arXiv:2607.24528v1 [math.PR] 27 Jul 2026
+
+Abstract. We present a short proof of Feige’s conjecture: for n independent
+nonnegative random variables with´expectation
+one, the probability that their
+¯n
+n
+sum is less than n ` 1 is at least n`1
+ě 1e . The proof was obtained with
+the assistance of GPT-5.6 Sol and builds on the recent breakthrough of Vlassis
+and Thomas establishing Gaffke’s conjecture on the finite-sample validity of a
+distribution-free p-value. We also discuss the implications of the subsequent work
+of Ming, Ramdas, Shen, Wang, and Waudby-Smith.
+
+1. Introduction
+For independent nonnegative random variables X1 , . . . , Xn with respective expectations µ1 , . . . , µn ď 1, Feige [Fei06] proved the concentration inequality
+¸
+˜
+ˆ
+˙
+n
+n
+ÿ
+ÿ
+δ
+1
+µi ` δ ě min
+Xi ă
+(1)
+P
+,
+1 ` δ 13
+i“1
+i“1
+for every δ ą 0, without imposing any assumptions on the variances of the Xi .
+Because it provides a dimension-free lower-tail bound under only independence
+and nonnegativity, Feige’s inequality has found applications across a wide range
+of areas, including randomized graph algorithms [Fei06], extremal combinatorics
+[AHS12, FK22], randomized search heuristics [DL15, DLN19, LO19], and the study
+of innovation diffusion in social networks [ABPY20].
+Beyond its applications, Feige’s inequality is also of intrinsic probabilistic inter1
+est. Feige [Fei06] conjectured that the constant 13
+in (1) can be replaced by 1e for
+every δ ą 0.
+Conjecture 1.1 (Feige’s conjecture for arbitrary δ). Let X1 , . . . , Xn be independent
+nonnegative random variables with E pXi q “ µi ď 1 for each i “ 1, . . . , n. Then,
+for every δ ą 0,
+˜
+¸
+ˆ
+˙
+n
+n
+ÿ
+ÿ
+δ
+1
+P
+Xi ă
+µi ` δ ě min
+,
+.
+1`δ e
+i“1
+i“1
+By replacing Xi with Xi ` 1 ´ µi , one may equivalently assume that all the
+random variables have expectation one. The case δ “ 1 is commonly known as
+Feige’s conjecture.
+
+Date: July 28, 2026.
+1
+
+2
+
+ZIPEI NIE AND JIAYE WEI
+
+Conjecture 1.2 (Feige’s conjecture). Let X1 , . . . , Xn be independent nonnegative
+random variables with expectation one. Then
+¸
+˜
+n
+ÿ
+1
+Xi ă n ` 1 ě .
+P
+e
+i“1
+Prior to the present work, the constant in Feige’s conjecture was successively
+7
+1
+to 81 by He, Zhang, and Zhang [HZZ10], to 50
+by Garnett [Gar20],
+improved from 13
+and to 0.1798 by Guo, He, Ling, and Liu [GHLL20], which was the best previously
+known result. Related partial results were obtained in [Pau17, AAMM24, EG25].
+Our main result is the following bound for every 0 ă δ ď 1.
+Theorem 1.3. Let X1 , . . . , Xn be independent nonnegative random variables with
+expectation one. Then, for every 0 ă δ ď 1,
+¸
+˜
+˙n
+ˆ
+n
+ÿ
+n
+.
+Xi ă n ` δ ě δ
+P
+n`δ
+i“1
+When δ “ 1, Theorem 1.3 gives the sharp bound for every n, and hence proves
+Feige’s conjecture (Conjecture 1.2). Sharpness follows by taking each Xi to be equal
+1
+to n ` 1 with probability n`1
+and to 0 otherwise. The arbitrary-δ version of Feige’s
+conjecture (Conjecture 1.1) remains open.
+The paper is organized as follows. In Section 2, we prove Theorem 1.3 using the
+finite-sample validity result [VT26] of Vlassis and Thomas. In Section 3, we discuss
+the subsequent work [MRS` 26] of Ming, Ramdas, Shen, Wang, and Waudby-Smith
+and its implications.
+Acknowledgement. The authors acknowledge the use of GPT-5.6 Sol in the discovery and exploration of the proof. All arguments were independently verified by
+the authors. The manuscript was written entirely by the authors, who take full
+responsibility for its content.
+2. Proof of Theorem 1.3
+In this section, we prove Theorem 1.3. We begin by recalling the definition of a
+merger from [MRS` 26] and recording a simple reduction.
+Definition 2.1 (Merger). A Borel measurable function F : r0, 8qn Ñ r0, 1s is
+called a merger if, for every collection of independent nonnegative random variables
+X1 , . . . , Xn satisfying EpXi q ď 1 for all i, and every α P r0, 1s,
+P pF pX1 , . . . , Xn q ď αq ď α.
+The following lemma reduces the proof to a pointwise bound on a merger.
+Lemma 2.2. Let δ ą 0, let F be a merger, and let α P r0, 1s. Suppose that
+F px1 , . . . , xn q ď α
+whenever x1 , . . . , xn ě 0 and
+
+n
+ÿ
+i“1
+
+xi ě n ` δ.
+
+ON FEIGE’S CONJECTURE
+
+3
+
+Then, for any independent nonnegative random variables X1 , . . . , Xn with expectation one,
+¸
+˜
+n
+ÿ
+Xi ă n ` δ ě 1 ´ α.
+P
+i“1
+
+Proof. By assumption,
+#
+n
+ÿ
+
++
+Xi ě n ` δ
+
+Ď tF pX1 , . . . , Xn q ď αu .
+
+i“1
+
+Since F is a merger and the Xi are independent nonnegative random variables with
+expectation one, we have
+¸
+˜
+n
+ÿ
+Xi ă n ` δ
+P
+i“1
+
+˜
+
+n
+ÿ
+
+“1 ´ P
+
+¸
+Xi ě n ` δ
+
+i“1
+
+ě1 ´ P pF pX1 , . . . , Xn q ď αq
+ě1 ´ α.
+□
+We apply this reduction to the merger Kn introduced in the recent work [VT26]
+of Vlassis and Thomas.
+Definition 2.3 (Function Kn ). Let pD0 , D1 , . . . , Dn q „ Dirp1, 1, . . . , 1q be a vector
+of Dirichlet weights. For x “ px1 , . . . , xn q P r0, 8qn , define
+˜
+¸
+n
+ÿ
+Kn px1 , . . . , xn q “ P
+xi Di ď 1 .
+i“1
+
+Theorem 2.4. [VT26] The function Kn is a merger for every n ě 1.
+It therefore remains to bound Kn on the region where the sum of its arguments
+is at least n ` δ. The required estimate follows from a geometric inequality for
+half-space sections of a simplex.
+Lemma 2.5. For each 0 ă δ ď 1 and each px1 , . . . , xn q P r0, 8qn satisfying
+n
+ÿ
+
+xi ě n ` δ,
+
+i“1
+
+we have
+ˆ
+Kn px1 , . . . , xn q ď 1 ´ δ
+Proof. Let P denote the hyperplane
+#
+P “
+
+n`1
+
+pd0 , . . . , dn q P R
+
+:
+
+n
+n`δ
+
+n
+ÿ
+i“0
+
+˙n
+.
+
++
+di “ 1 ,
+
+4
+
+ZIPEI NIE AND JIAYE WEI
+
+and let ∆ denote the n-simplex
+#
+∆“
+
+pd0 , . . . , dn q P r0, 8qn`1 :
+
+n
+ÿ
+
++
+di “ 1 .
+
+i“0
+
+´
+¯
+1
+1
+The centroid of ∆ is n`1
+. By the density formula for the Dirichlet
+, . . . , n`1
+distribution, pD0 , . . . , Dn q is uniformly distributed on ∆.
+Let
+řn
+řn
+˙
+ˆ řn
+i“1 xi
+i“1 xi
+i“1 xi
+u“ ´
+, x1 ´
+, . . . , xn ´
+n`1
+n`1
+n`1
+and
+ˆ
+˙
+1
+1
+1
+v “ D0 ´
+.
+, D1 ´
+, . . . , Dn ´
+n`1
+n`1
+n`1
+Both u and v are parallel to P , and u is nonzero. Moreover,
+řn
+řn
+ˆ
+˙ ÿ
+˙ˆ
+˙
+n ˆ
+1
+1
+i“1 xi
+i“1 xi
+xu, vy “ ´
+xi ´
+D0 ´
+`
+Di ´
+n`1
+n`1
+n`1
+n`1
+i“1
+ř
+řn
+n
+n
+n
+ÿ
+xi ÿ
+xi
+xi Di ´ i“1
+Di
+“ ´ i“1 D0 `
+n`1
+n ` 1 i“1
+i“1
+řn
+n
+ÿ
+xi
+“
+xi Di ´ i“1 .
+n`1
+i“1
+řn
+
+x
+
+i“1 i
+As pD0 , . . . , Dn q ranges over ∆, the minimum of xu, vy is ´ n`1
+, attained at
+řn
+p1, 0, . . . , 0q. Since i“1 xi ě n ` δ, we have
++
+ř
+"
+* #ÿ
+n
+1 ´ δ ni“1 xi
+xu, vy ą
+Ď
+xi Di ą 1 .
+n`δ n`1
+i“1
+
+Therefore, [LY24, Theorem 4], applied to the centered simplex, gives
+¸
+˜
+n
+ÿ
+xi Di ą 1
+Kn px1 , . . . , xn q “ 1 ´ P
+i“1
+
+ř
+ˆ
+˙
+1 ´ δ ni“1 xi
+ď 1 ´ P xu, vy ą
+n`δ n`1
+ˆ
+˙n ˆ
+˙
+ˆ
+˙
+n
+1 ´ δ n´1
+1´δ
+ď1´
+1`
+1´n
+n`1
+n`δ
+n`δ
+ˆ
+˙n
+n
+“1´δ
+.
+n`δ
+□
+We can now complete the proof of the main theorem.
+Proof of Theorem 1.3. Set
+ˆ
+α“1´δ
+
+n
+n`δ
+
+˙n
+.
+
+Since 0 ă δ ď 1, we have α P r0, 1s. By Lemma 2.5, we have
+Kn px1 , . . . , xn q ď α
+
+ON FEIGE’S CONJECTURE
+
+whenever x1 , . . . , xn ě 0 and
+
+n
+ÿ
+
+5
+
+xi ě n ` δ.
+
+i“1
+
+Thus, by Lemma 2.2 and Theorem 2.4, we have
+¸
+˜
+ˆ
+˙n
+n
+ÿ
+n
+Xi ă n ` δ ě 1 ´ α “ δ
+P
+.
+n`δ
+i“1
+□
+3. The merger K2ad
+Although the merger Kn allows us to prove Feige’s conjecture (Conjecture 1.2),
+the bound obtained from Kn is not sharp for arbitrary δ (Conjecture 1.1). In recent
+work, Ming, Ramdas, Shen, Wang, and Waudby-Smith [MRS` 26] studied whether
+Kn can be improved as a merger.
+A merger G is said to dominate a merger F if G ď F pointwise, and to strictly
+dominate F if the inequality is strict at some point. A merger is admissible if it is
+not strictly dominated by any other merger.
+For n “ 2, they constructed a merger K2ad , which is the unique admissible merger
+among those that dominate K2 . This is particularly relevant here, since Lemma 2.2
+shows that a smaller merger may yield a stronger lower-tail bound. We now recall
+their construction.
+Definition 3.1 (Function K2ad ). For x, y ě 0, let a “ minpx, yq and b “ maxpx, yq.
+When 0 ď a ă 1 ă b, let τ pa, bq be the larger root of
+t2 ´ bp1 ` aqt ` ab “ 0.
+Define K2ad : r0, 8q2 Ñ r0, 1s by
+$
+’
+’
+&1,
+K2ad pa, bq “
+
+b ď 1,
+
+1
+2
+τ pa,bq ´ τ pa,bq2 ,
+’
+’
+%1
+ab ,
+
+0 ď a ă 1 ă b,
+1 ď a.
+
+Theorem 3.2. [MRS` 26, Theorem 3.6] The function K2ad is a merger.
+The improved merger satisfies the following pointwise estimate.
+Lemma 3.3. For each δ ą 0 and each x, y ě 0 satisfying
+x ` y ě 2 ` δ,
+we have
+
+˜
+K2ad px, yq ď 1 ´ min
+
+δ
+,
+1`δ
+
+ˆ
+
+1`δ
+2`δ
+
+˙2 ¸
+
+Proof. Let a “ minpx, yq and b “ maxpx, yq. Since
+2b ě a ` b “ x ` y ě 2 ` δ ą 2,
+we have b ą 1.
+
+.
+
+6
+
+ZIPEI NIE AND JIAYE WEI
+
+If a ě 1, then
+1
+1
+1
+K2ad pa, bq “
+ď
+ď
+ď 1 ´ min
+ab
+a`b´1
+1`δ
+
+˜
+
+δ
+,
+1`δ
+
+ˆ
+
+1`δ
+2`δ
+
+˙2 ¸
+.
+
+Suppose that 0 ď a ă 1 ă b. By [MRS` 26, Lemma 3.4],
+˜
+˙2 ¸
+ˆ
+δ
+1
+`
+δ
+K2ad px, yq ď 1 ´ min
+,
+1`δ 2`δ
+if and only if
+bě
+
+1
+p1 ´ sqp1 ` asq
+
+where
+˜c
+s “ min
+
+δ
+1`δ
+,
+1`δ 2`δ
+
+¸
+ă 1.
+
+Since a concave function can only attain its minimum at a boundary point, we
+have
+bp1 ´ sqp1 ` asq
+ěp2 ` δ ´ aqp1 ´ sqp1 ` asq
+`
+˘
+ě min p2 ` δqp1 ´ sq, p1 ` δqp1 ´ s2 q
+ě1.
+This proves the result.
+
+□
+
+Combining this estimate with the merger property gives the sharp two-variable
+form of Feige’s conjecture for every δ ą 0.
+Theorem 3.4. Let X1 and X2 be independent nonnegative random variables with
+expectation one. Then, for every δ ą 0,
+˜
+ˆ
+˙ ¸
+δ
+1`δ 2
+P pX1 ` X2 ă 2 ` δq ě min
+,
+.
+1`δ 2`δ
+Proof. Set
+˜
+α “ 1 ´ min
+
+δ
+,
+1`δ
+
+ˆ
+
+1`δ
+2`δ
+
+˙2 ¸
+.
+
+By Lemma 3.3, we have
+K2ad px1 , x2 q ď α
+whenever x1 , x2 ě 0 and x1 ` x2 ě 2 ` δ. Thus, by Lemma 2.2 and Theorem 3.2,
+we have
+˜
+ˆ
+˙ ¸
+δ
+1`δ 2
+P pX1 ` X2 ă 2 ` δq ě 1 ´ α “ min
+,
+.
+1`δ 2`δ
+□
+
+ON FEIGE’S CONJECTURE
+
+7
+
+Although Theorem 3.4 is elementary and already known, it is instructive to
+compare the bounds obtained from K2 and K2ad . For 0 ă δ ă 1, the bound obtained
+from K2 , namely Theorem 1.3 with n “ 2, is not sharp, whereas the bound obtained
+from K2ad in Theorem 3.4 is sharp for every δ ą 0.
+To see the sharpness of the first term in Theorem 3.4, take X1 “ 1 determinis1
+and 0 otherwise. Then
+tically and let X2 equal 1 ` δ with probability 1`δ
+P pX1 ` X2 ă 2 ` δq “
+
+δ
+.
+1`δ
+
+For the second term, let X1 and X2 be independent, with each Xi equal to 2 ` δ
+1
+and 0 otherwise. Then
+with probability 2`δ
+ˆ
+P pX1 ` X2 ă 2 ` δq “
+
+1`δ
+2`δ
+
+˙2
+.
+
+Constructing higher-dimensional analogues of K2ad is substantially more difficult,
+leaving the arbitrary-δ version of Feige’s conjecture (Conjecture 1.1) open.
+
+References
+[AAMM24] Abdulmajeed Alqasem, Heshan Aravinda, Arnaud Marsiglietti, and James Melbourne.
+On a conjecture of Feige for discrete log-concave distributions. SIAM Journal on
+Discrete Mathematics, 38(1):93–102, 2024.
+[ABPY20] Itai Arieli, Yakov Babichenko, Ron Peretz, and H Peyton Young. The speed of innovation diffusion in social networks. Econometrica, 88(2):569–594, 2020.
+[AHS12]
+Noga Alon, Hao Huang, and Benny Sudakov. Nonnegative k-sums, fractional covers, and probability of small deviations. Journal of Combinatorial Theory, Series B,
+102(3):784–796, 2012.
+[DL15]
+Duc-Cuong Dang and Per Kristian Lehre. Simplified runtime analysis of estimation
+of distribution algorithms. In Proceedings of the 2015 Annual Conference on Genetic
+and Evolutionary Computation, pages 513–518, 2015.
+[DLN19]
+Duc-Cuong Dang, Per Kristian Lehre, and Phan Trung Hai Nguyen. Level-based analysis of the univariate marginal distribution algorithm. Algorithmica, 81(2):668–702,
+2019.
+[EG25]
+Martı́n Egozcue and Luis Fuentes Garcı́a. A short proof of Feige’s conjecture for
+identically distributed random variables. arXiv preprint arXiv:2509.19949, 2025.
+[Fei06]
+Uriel Feige. On sums of independent random variables with unbounded variance and
+estimating the average degree in a graph. SIAM Journal on Computing, 35(4):964–984,
+2006.
+[FK22]
+Peter Frankl and Andrey Kupavskii. The Erdős matching conjecture and concentration inequalities. Journal of Combinatorial Theory, Series B, 157:366–400, 2022.
+[Gar20]
+Brian Garnett. Small deviations of sums of independent random variables. Journal of
+Combinatorial Theory, Series A, 169:105119, 2020.
+[GHLL20] Jiayi Guo, Simai He, Zi Ling, and Yicheng Liu. Bounding probability of small deviation on sum of independent random variables: Combination of moment approach and
+Berry-Esseen theorem. arXiv preprint arXiv:2003.03197, 2020.
+[HZZ10]
+Simai He, Jiawei Zhang, and Shuzhong Zhang. Bounding probability of small deviation: A fourth moment approach. Mathematics of Operations Research, 35(1):208–232,
+2010.
+
+8
+
+ZIPEI NIE AND JIAYE WEI
+
+[LO19]
+
+Andrei Lissovoi and Pietro S. Oliveto. On the time and space complexity of genetic
+programming for evolving Boolean conjunctions. Journal of Artificial Intelligence Research, 66:655–689, 2019.
+[LY24]
+Brayden Letwin and Vladyslav Yaskin. A generalization of Grünbaum’s inequality.
+arXiv preprint arXiv:2410.04741, 2024.
+[MRS` 26] Jiahao Ming, Aaditya Ramdas, Yi Shen, Ruodu Wang, and Ian Waudby-Smith.
+Gaffke’s confidence interval for the mean of bounded data is inadmissible but asymptotically efficient. arXiv preprint arXiv:2607.18661, 2026.
+[Pau17]
+Roland Paulin. On some conjectures of Samuels and Feige. arXiv preprint
+arXiv:1703.05152, 2017.
+[VT26]
+Nikos Vlassis and Philip S Thomas. An exact distribution-free test for means of nonnegative random variables. arXiv preprint arXiv:2607.08415, 2026.
+Department of Mathematics, University of Illinois at Urbana–Champaign, Urbana,
+IL 61801, USA
+Email address: znie@illinois.edu
+Chair of Discrete Optimization, Institute of Mathematics, École Polytechnique
+Fédérale de Lausanne, 1015 Lausanne, Switzerland
+Email address: jiaye.wei@epfl.ch
+
+

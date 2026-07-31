@@ -1,0 +1,18 @@
+LRC14 j6 pair-cap-exception intrinsic child-H2 census
+counts=(18290, 14043, 4247, 0, 4237, 10, 12821172, 3028, 1922445, 167, 1395, 13235, 33, 18649, 9984, 170275, 120, 32, 16, 2, 52, 52)
+routes=(('H2-empty', 4237), ('boundary', 10), ('top3', 14043))
+h2_cutoff_quantiles=((0, 167), (25, 364), (50, 439), (75, 545), (90, 667), (95, 749), (99, 934), (100, 1395))
+h2_size_quantiles=((0, 2), (25, 2), (50, 3), (75, 4), (90, 5), (95, 6), (99, 8), (100, 33))
+minimum_H2_entry=(Fraction(12275, 1765764), (2, 4, 6, 8, 10, 12, 14), 1, (16, 26))
+boundary_flags=((16, 18), (16, 20), (16, 26), (16, 48), (18, 20), (18, 26), (18, 48), (20, 26), (20, 48), (26, 48))
+boundary_tail_incidence=(((16, 18, 20, 24, 26), ((16, 18), (16, 20), (16, 26), (18, 20), (18, 26), (20, 26))), ((16, 18, 20, 26, 48), ((16, 18), (16, 20), (16, 26), (16, 48), (18, 20), (18, 26), (18, 48), (20, 26), (20, 48), (26, 48))))
+BOUNDARY;tail=(16, 18, 20, 24, 26);full=(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26);gcd=2;normalized=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);weak_t=1/28;weak_min=1/14;exit=THM-369:lonely_of_no_multiple
+BOUNDARY;tail=(16, 18, 20, 26, 48);full=(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 26, 48);gcd=2;normalized=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24);weak_t=1/28;weak_min=1/14;exit=THM-369:lonely_of_no_multiple
+closed_prefix_branch_count=52
+closed_prefix_branch_digest=ae895885371a12b3986e9cc4d47f3bc1540bd519052cae4ac1b456d1c21a2d12
+root_consequence=52 marked branches discharged;no whole-root claim in this scoped census
+semantic_digest=7ab6db7e83beb02338f7a490af7cc3ffa9364036c346fe0b196f96ebac45f831
+ledger_sha256=95743f31996588e977fbeea05a26cba4f42bbe3822ad18af0f181a5eb0a062bc
+mode=DISCOVERY
+scope=52 pair-cap exceptions;18,290 actual H4 flags;exact child top-three/H2/singleton recursion;two THM-369 boundary exits;not LRC14
+all_exact_controls=PASS

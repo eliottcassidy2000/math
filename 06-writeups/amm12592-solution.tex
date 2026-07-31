@@ -1,12 +1,17 @@
 % Solution to AMM Problem 12592 (proposed by Elliot Glazer), for submission.
-% Parts (a),(b) follow THM-2225 (dyadic block compression; cyclic checksum).
-% The "Note to the editor" section is the part (c) extension: THM-2160 S5
-% (half-tail rule, max(n+1,2n-2)) + THM-2253 (dyadic contrast, n+2^{nu_2(n)})
-% + the linear-deadline (Cn+D) discussion (HYP-9061 frontier, stated as open).
-% Everything below was machine-verified exactly; see
-% 04-computation/{dyadic_coin_critical_run_checksum_thm2225,
-%   biased_coin_dyadic_half_tail_referee_codex_20260724,
-%   categorical_coin_online_dyadic_contrast_thm2253}.py
+%
+% Parts (a),(b): THM-2225 (dyadic block compression; cyclic checksum).
+% "Note to the editor": the part (c) extension --- THM-2160 S5 (half-tail rule)
+% SHARPENED here by one flip (the z_m-oblivious completion, verified
+% exhaustively through the shell 2m=32), plus THM-2253 (dyadic contrast,
+% n+2^{nu_2(n)}), plus the linear-deadline (Cn+D) discussion (HYP-9061
+% frontier, stated as open).
+%
+% Machine-verified exactly; see
+%   04-computation/dyadic_coin_critical_run_checksum_thm2225.py
+%   04-computation/biased_coin_dyadic_half_tail_referee_codex_20260724.py
+%   04-computation/categorical_coin_online_dyadic_contrast_thm2253.py
+%   04-computation/amm12592_refined_half_tail_referee.py     (the sharpening)
 \documentclass[11pt]{article}
 \usepackage[margin=1.1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
@@ -188,129 +193,261 @@ verdict, and $p+q=1$.) By Lemma~\ref{lem:exact} the method is exactly fair.
 %======================================================================
 \section*{Note to the editor: a part (c), and the linear-deadline frontier}
 
-The mechanisms above can be pushed one step further. We record here a
-sharper envelope with full proof, the matching small-$n$ optimality, and
-what we can and cannot say about the proposer's linear-deadline question
+The mechanisms above can be pushed further. We record here a sharper
+envelope with full proof, the values of $n$ at which it is provably optimal,
+and what we can and cannot say about the proposer's linear-deadline question
 (minimize $C$ such that, for some constant $D$, a method always terminates
-within $Cn+D$ flips). Write $T(n)$ for the worst-case number of flips a
-given method uses over all sequences of critical value $n$.
+within $Cn+D$ flips). Write $T(n)$ for the worst-case number of flips a given
+method uses over all sequences of critical value $n$.
 
 \begin{lemma}[Floor]\label{lem:floor}
 For every exactly fair method, no stopping word is constant; consequently
-$T(n)\ge n+1$ for every $n$. In particular $T(1)\ge2$, $T(2)\ge3$,
-$T(3)\ge4$.
+$T(n)\ge n+1$ for every $n$.
 \end{lemma}
 
 \begin{proof}
 If the method could stop at the constant word $b^k$ with verdict $v$, then
-$\Pr(v)\ge \Pr(X_1=\dots=X_k=b)=p^k$ or $q^k$, which exceeds $\tfrac12$ for
-$p$ near $0$ or $1$, contradicting exact fairness. Since the first $n$ flips
-of a critical-value-$n$ sequence are constant, no verdict can be reached
-before flip $n+1$.
+$\Pr(v)\ge \Pr(X_1=\dots=X_k=b)$, which is $p^k$ or $q^k$ and exceeds
+$\tfrac12$ for $p$ near $1$ or near $0$, contradicting exact fairness. Since
+the first $n$ flips of a critical-value-$n$ sequence are constant, no verdict
+can be reached before flip $n+1$.
 \end{proof}
 
 So the envelope $\max(2,2n-1)$ of part (b) is already optimal at $n=1$ and
 $n=2$, and \emph{no} method achieves the uniform shift $\max(2,2n-2)$: that
 would require deciding critical value $2$ by flip $2$, i.e.\ stopping at the
-constant words $00$ and $11$. The correct sharpening carries an exception at
-$n=2$ and is best possible at $n=1,2,3$:
+constant words $00$ and $11$. In particular an envelope of the shape
+$\max(n,2n-2)$ is not attainable either; the correct sharpening carries
+exceptions at $n\le 3$, where it meets the floor:
 
 \begin{theorem}[a part (c)]\label{thm:c}
-There is an exactly fair method with
+There is an exactly fair method whose deadline is $T(1)=2$ and, for
+$m\le n\le 2m-1$ with $m=2^{r}\ge 2$ as in \eqref{eq:shell},
+\begin{equation}\label{eq:cdeadline}
+T(n)=
+\begin{cases}
+\tfrac32 m, & n=m,\\[2pt]
+2m-1, & m<n\le 2m-2 \quad (\text{so } m\ge4),\\[2pt]
+2m=n+1, & n=2m-1 .
+\end{cases}
+\end{equation}
+Consequently
 \[
-T(n)\;\le\;\max(n+1,\;2n-2)\qquad\text{for every } n\ge 1,
+T(n)\le\max(n+1,\,2n-2)\ \text{ for all } n\ge1,
+\qquad
+T(n)\le\max(n+1,\,2n-3)\ \text{ for all } n\ge5 .
 \]
-that is, $T(1)=2$, $T(2)=3$, and $T(n)\le 2n-2$ for all $n\ge3$. Moreover
-this method stops within $\tfrac32 n$ flips when $n$ is a power of two,
-$n\ge4$, and within $n+1$ flips when $n=2m-1$ in \eqref{eq:shell}. By
-Lemma~\ref{lem:floor}, its values at $n=1,2,3$ are exactly optimal.
+The floor $T(n)=n+1$ of Lemma~\ref{lem:floor} is attained at $n=1$ and at
+$n=2^{r+1}-2$ and $n=2^{r+1}-1$ for every $r\ge1$; in particular this method
+is pointwise optimal at $n=1,2,3,6,7,14,15,30,31,\dots$.
 \end{theorem}
 
 \begin{proof}
 For $n=1$ use flips one and two as in part (b). Fix a shell
-\eqref{eq:shell} with $m\ge2$ and put $t=m/2$, $b=X_1$, and
-$z_i=X_{m+i}\oplus b$ ($1\le i\le m$), the tail relative to the run bit;
-membership in the shell says exactly that $z\ne0$, and $z_1=1$ if and only
-if $n=m$. The rule has two strata.
-
-\emph{(i) If $z_1=1$} (so $n=m$), stop at flip $m+t=\tfrac32 m$ and declare
-\head{} iff $b+z_2+\dots+z_t\equiv 0 \pmod 2$. (For $m=2$ the sum is empty:
-$001{*}\mapsto\head$, $110{*}\mapsto\tail$ at flip $3$.)
-
-\emph{(ii) If $z_1=0$} (so $n\ge m+1$), read through flip $2m$ and declare
-by a fixed table, constructed as follows. Work on the branch $b=0$ and let
-$1\le j\le m-1$. Stratum (i) has already assigned verdicts to the weight-$j$
-relative words with $z_1=1$; let $A_j$ of them be \head. Among the
-$\binom{m-1}{j}$ weight-$j$ words with $z_1=0$, declare the first
+\eqref{eq:shell} with $m\ge2$, put $t=m/2$, and set $b=X_1$ and
 \[
-R_j:=\tfrac12\tbinom mj-A_j
+z_i=X_{m+i}\oplus b\qquad(1\le i\le m),
 \]
-of them (in lexicographic order) \head{} and the rest \tail. On the branch
-$b=1$, give the relative word $z$ the opposite verdict to the one it
-receives on the branch $b=0$.
+the tail relative to the run bit. Membership in the shell says exactly that
+$z\ne0$, and $z_1=1$ if and only if $n=m$. The verdict will be a function of
+$b$ and $z$; on the branch $b=1$ we always give the relative word $z$ the
+verdict opposite to the one it receives on the branch $b=0$, so it is enough
+to describe the branch $b=0$, i.e.\ a set $H\subseteq\{0,1\}^m\setminus\{0\}$
+of \head{} words.
 
-\emph{The table is legal, i.e.\ $R_j$ is an integer with $0\le R_j\le
-\binom{m-1}j$.} Counting stratum-(i) \head{} words of weight $j$ (one for
-$z_1$; an even number among $z_2,\dots,z_t$; anything among
-$z_{t+1},\dots,z_m$) gives the generating function
+\emph{What has to be checked.} A composition class of $S_m$ with $k$ ones is:
+for $1\le k\le m-1$, the branch-$0$ words with $|z|=k$; for
+$m+1\le k\le 2m-1$, the branch-$1$ words with $|z|=2m-k$; and for $k=m$, the
+pair $\{0^m1^m,1^m0^m\}$, which is the \emph{same} relative word $z=1^m$ on
+the two branches and therefore automatically receives opposite verdicts.
+Since branch $1$ carries the complementary labels, Lemma~\ref{lem:exact}
+reduces exact fairness to the single requirement
+\begin{equation}\label{eq:layer}
+\#\{z\in H:\ |z|=j\}=\tfrac12\tbinom mj \qquad (1\le j\le m-1),
+\end{equation}
+with $z=1^m$ free.
+
+\emph{The rule.} It has two strata.
+
+\emph{(i) If $z_1=1$}, so $n=m$: declare \head{} iff
+$z_2+\dots+z_t\equiv0\pmod2$, and stop at flip $m+t=\tfrac32m$. (For $m=2$
+the sum is empty, so $00\,1{*}\mapsto\head$ and $11\,0{*}\mapsto\tail$ at
+flip $3$.)
+
+\emph{(ii) If $z_1=0$}, so $n\ge m+1$: declare by a fixed table on
+$(z_2,\dots,z_m)$ built below, and stop at flip $2m-1$ if $m\ge4$ and
+$n\le 2m-2$, and at flip $2m$ otherwise.
+
+\emph{Step 1: the counts the completion must realize.} Let $A_j$ be the
+number of weight-$j$ words already put in $H$ by stratum (i). Choosing $z_1=1$,
+an even number of ones among $z_2,\dots,z_t$, and anything among
+$z_{t+1},\dots,z_m$ gives
 \[
 \sum_j A_j u^j
 = u\,\frac{(1+u)^{t-1}+(1-u)^{t-1}}2\,(1+u)^{t}
 = \tfrac12\Bigl[u(1+u)^{m-1}+u(1+u)(1-u^2)^{t-1}\Bigr].
 \]
-Writing $e_j:=[u^j]\,u(1+u)(1-u^2)^{t-1}$, so that
-$e_{2a+1}=e_{2a+2}=(-1)^a\binom{t-1}a$ for $0\le a\le t-1$, we get
-$A_j=\tfrac12\bigl[\binom{m-1}{j-1}+e_j\bigr]$ and, by Pascal's identity,
+Write $e_j:=[u^j]\,u(1+u)(1-u^2)^{t-1}$, so that
+\begin{equation}\label{eq:e}
+e_{2a+1}=e_{2a+2}=(-1)^a\tbinom{t-1}a \qquad (0\le a\le t-1)
+\end{equation}
+and all other $e_j$ vanish. Then $A_j=\tfrac12[\binom{m-1}{j-1}+e_j]$, so by
+\eqref{eq:layer} and Pascal's identity stratum (ii) must contribute exactly
+\begin{equation}\label{eq:R}
+R_j:=\tfrac12\tbinom mj-A_j=\tfrac12\Bigl[\tbinom{m-1}{j}-e_j\Bigr]
+\qquad(1\le j\le m-1)
+\end{equation}
+\head{} words of weight $j$, out of the $\binom{m-1}j$ available. Both
+$m-1=2^r-1$ and $t-1=2^{r-1}-1$ have all binary digits equal to $1$, so by
+Lucas's theorem $\binom{m-1}j$ and $\binom{t-1}a$ are odd and $R_j$ is an
+integer. For the range, write $m-1=(t-1)+t$ and use Vandermonde's identity:
+$\binom{m-1}{2a+1}\ge\binom{t-1}a\binom{t}{a+1}$ and
+$\binom{m-1}{2a+2}\ge\binom{t-1}a\binom{t}{a+2}$, and the second factors are
+at least $1$ in the relevant ranges ($j=2a+2\le m-1$ forces $a\le t-2$); with
+\eqref{eq:e} this says $|e_j|\le\binom{m-1}j$, i.e.\
+$0\le R_j\le\binom{m-1}j$. Taking the first $R_j$ words of each layer in
+lexicographic order already proves the theorem with $2m$ in place of $2m-1$
+in \eqref{eq:cdeadline}.
+
+\emph{Step 2: the completion can ignore the last flip.} This step is what
+makes the method dominate part (b) rather than merely cross it: without it
+the rule needs $2m$ flips throughout stratum (ii), which is worse than the
+checksum's $2m-1$ at every $n$ with $m<n\le2m-2$. Assume $m\ge4$. We
+choose the stratum-(ii) table to be independent of $z_m$, so that it is
+determined by $y:=(z_2,\dots,z_{m-1})\in\{0,1\}^{m-2}$; then the whole rule
+ignores flip $2m$, since stratum (i) ignores $z_{t+1},\dots,z_m$ as well.
+Such a table is a set $S\subseteq\{0,1\}^{m-2}$, and the chosen $y$
+contributes one \head{} word of weight $|y|$ (namely $z_m=0$) and one of
+weight $|y|+1$ (namely $z_m=1$) --- except for $y=0^{m-2}$, whose weight-$0$
+partner is $z=0^m$, not a shell word. Writing $s_j=\#\{y\in S:|y|=j\}$ and
+$S(u)=\sum_j s_ju^j$, requirement \eqref{eq:R} becomes
 \[
-R_j=\tfrac12\Bigl[\tbinom{m-1}{j}-e_j\Bigr].
+R_j=s_j+s_{j-1}\ \ (1\le j\le m-1),
+\qquad\text{i.e.}\qquad
+(1+u)\,S(u)=s_0+R(u),\quad R(u)=\sum_{j=1}^{m-1}R_ju^j
 \]
-Both $m-1=2^r-1$ and $t-1=2^{r-1}-1$ have all binary digits equal to one,
-so by Lucas's theorem $\binom{m-1}j$ and $\binom{t-1}a$ are odd and $R_j$ is
-an integer. For the range, $|e_j|=\binom{t-1}a\le\binom{2t-1}{j}$ for
-$j\in\{2a+1,2a+2\}$, $j\le m-1$: by Vandermonde,
-$\binom{2t-1}{2a+1}\ge\binom{t-1}a\binom{t}{a+1}$ and
-$\binom{2t-1}{2a+2}\ge\binom{t-1}a\binom{t}{a+2}$, and the second factors
-are $\ge1$ in the stated ranges (for $j=2a+2\le m-1$ one has $a\le t-2$).
-Hence $0\le R_j\le\binom{m-1}j$.
+(there is no requirement at $j=0$). By \eqref{eq:R} and $e_0=0$,
+\[
+2R(u)=\bigl[(1+u)^{m-1}-1\bigr]-\bigl[u(1+u)(1-u^2)^{t-1}-e_mu^m\bigr],
+\qquad e_m=(-1)^{t-1}=-1 ,
+\]
+the last because $t=m/2$ is a power of two with $t\ge2$, hence even. Taking
+$s_0=1$ we get
+\[
+2(1+u)S(u)=(1-u^{m})+(1+u)^{m-1}-u(1+u)(1-u^2)^{t-1} ,
+\]
+and since $m$ is even we may divide by
+$1+u$ using $1-u^m=(1+u)\sum_{i=0}^{m-1}(-u)^i$:
+\begin{equation}\label{eq:S}
+2\,S(u)=\sum_{i=0}^{m-1}(-u)^i+(1+u)^{m-2}-u(1-u^2)^{t-1} .
+\end{equation}
+Reading off coefficients, and using $[u^{2a+1}]u(1-u^2)^{t-1}=(-1)^a\binom{t-1}a$,
+\[
+s_j=\tfrac12\Bigl[\tbinom{m-2}{j}+1\Bigr]\ (j \text{ even}),
+\qquad
+s_{2a+1}=\tfrac12\Bigl[\tbinom{m-2}{2a+1}-1-(-1)^a\tbinom{t-1}a\Bigr].
+\]
+As $m-2=2^r-2$ has binary expansion $1\cdots10$, Lucas's theorem makes
+$\binom{m-2}j$ odd for even $j\le m-2$ and even for odd $j$, so both
+expressions are integers. They also satisfy $0\le s_j\le\binom{m-2}j$. For
+even $j$ this says $\binom{m-2}j\ge1$. For $j=2a+1$ the two inequalities read
+\[
+\binom{m-2}{2a+1}\ \ge\ 1+\binom{t-1}a \ \ (a \text{ even}),
+\qquad
+\binom{m-2}{2a+1}\ \ge\ \binom{t-1}a-1 \ \ (a \text{ odd}),
+\]
+and the first implies the second. Since $t$ is even, $a=t-1$ is odd, and
+there the requirement is $\binom{m-2}{m-1}=0\ge\binom{t-1}{t-1}-1=0$. For
+$a\le t-2$, writing $m-2=(t-1)+(t-1)$, Vandermonde gives
+$\binom{m-2}{2a+1}\ge\binom{t-1}a\binom{t-1}{a+1}$, which is at least
+$2\binom{t-1}a\ge1+\binom{t-1}a$ unless $\binom{t-1}{a+1}=1$, i.e.\ unless
+$a=t-2$; and for $a=t-2$ one has
+$\binom{m-2}{m-3}=m-2=2t-2\ge1+(t-1)=\binom{t-1}{t-2}+1$. So $S$ exists;
+take the first $s_j$ words of each layer of $\{0,1\}^{m-2}$ in lexicographic
+order.
 
-\emph{Fairness.} On branch $b=0$, the weight-$j$ layer has exactly
-$A_j+R_j=\tfrac12\binom mj$ \head{} words for $1\le j\le m-1$; branch $b=1$
-carries the complementary verdicts, so its layers are evenly split as well.
-A composition class of the shell with $k$ ones is: for $1\le k\le m-1$, the
-branch-$0$ layer $j=k$; for $m+1\le k\le 2m-1$, the branch-$1$ layer
-$j=2m-k$; and for $k=m$, the pair $\{0^m1^m,\,1^m0^m\}$, which consists of
-the \emph{same} relative word $z=1^m$ on the two branches and therefore
-receives opposite verdicts. Every class splits evenly, and
-Lemma~\ref{lem:exact} applies.
-
-\emph{Deadlines.} Stratum (i) uses $m+t=\tfrac32m$ flips: this is $3$ when
-$m=2$ ($=n+1$) and at most $2m-2=2n-2$ when $m\ge4$. Stratum (ii) uses $2m$
-flips with $n\ge m+1$, so $2m\le 2n-2$; when $n=2m-1$ this reads
-$2m=n+1$. Together with $T(1)=2$ this is the claimed envelope.
+\emph{Conclusion.} Requirement \eqref{eq:layer} holds by construction, so the
+method is exactly fair by Lemma~\ref{lem:exact}. For the deadline: stratum
+(i) reads flips $1,\dots,m+t$, giving $\tfrac32m$; stratum (ii) reads
+$b,z_2,\dots,z_{m-1}$, i.e.\ flips $1,\dots,2m-1$, and the verdict is known
+as soon as the first disagreement has also been seen --- which happens by
+flip $2m-1$ exactly when $n\le2m-2$, and otherwise ($n=2m-1$) at flip
+$2m=n+1$. This is \eqref{eq:cdeadline}. Finally $\tfrac32m\le2m-2$ for
+$m\ge4$ and $\tfrac32m=3=n+1$ for $m=2$; $2m-1\le2n-3$ for $n\ge m+1$; and
+$2m=n+1$ for $n=2m-1$. The floor is met at $n=1$; at $n=2m-2=2^{r+1}-2$,
+where $T=2m-1=n+1$ for $m\ge4$ and $T=3=n+1$ for $m=2$; and at
+$n=2m-1=2^{r+1}-1$, where $T=2m=n+1$.
 \end{proof}
 
-For the sample $00001$ ($n=m=4$): the method stops after \emph{one} further
+For the sample $00001$ ($n=m=4$) the method stops after \emph{one} further
 flip, declaring \head{} iff $X_6=0$.
 
-We verified all three constructions by machine, exhaustively through the
-shell $2m=32$: exact composition balance in every shell (hence exact
-fairness for every $p$), and the stated deadlines on every path.
+\begin{remark}
+The one flip saved in Step 2 is all that the shell structure permits. Encode
+a branch-$0$ verdict rule by $f\colon\{0,1\}^m\to\{\pm1\}$. If $f$ ignores a
+set of $c\ge1$ coordinates, then $f$ extends canonically to $z=0$ and
+$F(u):=\sum_zf(z)u^{|z|}=(1+u)^cG(u)$ for some $G\in\mathbb Z[u]$. But
+\eqref{eq:layer} kills the coefficients of $u^1,\dots,u^{m-1}$, so
+$F(u)=\varepsilon_0+\varepsilon_mu^m$ with $\varepsilon_j=\pm1$; divisibility
+by $1+u$ at even $m$ forces $\varepsilon_m=-\varepsilon_0$ and hence
+$F(u)=\varepsilon_0(1-u^m)$, whose root at $u=-1$ is simple. Thus $c\le1$:
+no exactly fair shell rule can ignore two of the tail flips
+$X_{m+1},\dots,X_{2m}$. Our rule ignores flip $2m$. Within the scheme of
+Theorem~\ref{thm:c} the same conclusion is visible directly: making the
+stratum-(ii) table ignore $z_{m-1}$ as well requires
+$(1+u)^2\mid s_0+R(u)$, i.e.\ $S(-1)=0$, whereas \eqref{eq:S} gives
+$S(-1)=m/2$.
+\end{remark}
+
+We verified all three constructions by machine --- exact composition balance
+in every shell, hence exact fairness for every $p$, together with the stated
+deadlines and the causality of every early stop --- exhaustively through the
+shell $2m=32$. Call a method \emph{shell-balanced} if it decides every
+sequence of critical value $n$ by flip $2m$ and splits every composition
+class of every shell evenly; all the methods above are of this kind, and by
+Lemma~\ref{lem:exact} any such method is exactly fair. On the first
+nontrivial shell $m=4$ there are exactly $1\,036\,800$ shell-balanced rules;
+enumerating all of them shows that the achievable deadline vectors
+$(T(4),T(5),T(6),T(7))$ are precisely
+\[
+T(4),T(5)\in\{6,7,8\},\qquad T(6)\in\{7,8\},\qquad T(7)=8,
+\qquad\text{subject to } \ (T(4),T(5))\ne(6,6).
+\]
+So $T(4)\ge6$, and the values $T(6)=7$, $T(7)=8$ of Theorem~\ref{thm:c} meet
+the floor. There are exactly two Pareto-minimal vectors, $(6,7,7,8)$ ---
+attained by Theorem~\ref{thm:c} --- and $(7,6,7,8)$: within a shell one may
+buy $T(5)=6$, but only by paying a flip at $n=4$. (The dyadic-contrast method
+of remark 2 below realizes $(8,6,8,8)$ here, which is not minimal.) Two
+consequences worth recording: the componentwise minimum $(6,6,7,8)$ is
+attained by no single rule, and any method with $T(4)=5$ must abandon shell
+balance altogether.
 
 \medskip
 \noindent\textbf{The linear-deadline frame.}
 The proposer's commentary proposes minimizing $C$ such that some method has
-$T(n)\le Cn+D$ for a constant $D$. Three remarks, in increasing order of
+$T(n)\le Cn+D$ for a constant $D$. Four remarks, in increasing order of
 openness.
 
-\emph{1. The literal frame is degenerate at small $n$.}
-By Lemma~\ref{lem:floor}, $T(1)\ge2$ forces $C+D\ge2$; so once $C=2$, the
-smallest admissible constant is $D=0$ --- and $2n+0$ is already attained by
-part (a). Parts (b) and (c) improve every $n\ge2$, resp.\ $n\ge3$,
-pointwise, yet leave the optimal pair $(C,D)=(2,0)$ unchanged: a linear
-envelope cannot register these gains. The finer object is the exact envelope
-$T(\cdot)$ itself, ordered pointwise.
+\emph{1. Taken literally, the pair $(C,D)$ is pinned at $n=1$ and cannot see
+any of these improvements.} By Lemma~\ref{lem:floor}, $T(1)\ge2$ forces
+$C+D\ge2$; so once $C=2$ the smallest admissible constant is $D=0$, and
+$2n+0$ is already attained by part (a). The three methods are in fact totally
+ordered pointwise: the exact worst-case profiles are $T(n)=2m$ for part (a);
+$T(n)=2m-1$, except $2m$ at $n=2m-1$ and $2$ at $n=1$, for part (b); and
+\eqref{eq:cdeadline} for part (c). So part (b) beats part (a) at every $n$
+outside $\{1\}\cup\{2m-1\}$, and part (c) beats part (b) exactly at the powers
+of two $n=2^r$, $r\ge2$, where it saves $2^{r-1}-1$ flips. Yet all three leave
+the optimal pair $(2,0)$ untouched. The quantity a linear envelope \emph{can} see is
+asymptotic, so the question should be read as being about
+$C^{*}:=\inf\{C:\ T(n)\le Cn+D$ for some method and some $D\}$, with the
+finitely many small $n$ absorbed into $D$. The finer object, and the one our
+constructions actually move, is the exact envelope $T(\cdot)$ ordered
+pointwise. A useful normalization is the \emph{excess} over the floor,
+$d_n:=T(n)-n-1\ge0$; then $C=1+{}$(growth rate of $d_n$), and
+$C^{*}=1+\gamma^{*}$ where $\gamma^{*}$ is the least $\gamma$ for which
+$d_n=\gamma n+O(1)$ is feasible.
 
-\emph{2. Which $n$ are hard is a $2$-adic question.}
+\emph{2. Which $n$ are hard is a $2$-adic question, not a linear one.}
 There is a second exactly fair method, of a different design, with
 \[
 T(n)\;\le\;n+2^{\nu_2(n)}\qquad\text{for every } n ,
@@ -323,58 +460,79 @@ interval is again a probability-preserving, verdict-reversing involution on
 stopped prefixes (no earlier stopping interval is created or destroyed), so
 the method is exactly fair; and if $L=2^{\nu_2(n)}$, the blocks
 $[n-L+1,n]$ and $[n+1,n+L]$ are the two halves of an aligned interval, the
-left one inside the initial run, so a stop occurs by flip $n+L$. Thus this
-method reaches the floor $n+1$ at \emph{every odd} $n$, stays within
-$\tfrac43n$ whenever $n$ is not a power of two, but pays $2n$ at
-$n=2^k$. Theorem~\ref{thm:c}'s method has the mirror-image profile: fast
-($\tfrac32n$) \emph{at} powers of two, slowest ($2n-2$) just above them. The
-two are Pareto-incomparable, and every method we know pays slope $2$
-somewhere in the vicinity of the powers of two: the linear-envelope
-difficulty of the problem concentrates $2$-adically.
+left one inside the initial run, so a stop occurs by flip $n+L$. This method
+therefore meets the floor $n+1$ at \emph{every odd} $n$ and stays within
+$\tfrac43n$ unless $n$ is a power of two --- but pays $2n$ at $n=2^k$.
+Theorem~\ref{thm:c}'s method has the complementary profile: fast \emph{at}
+the powers of two ($\tfrac32n$) and at the top of each shell (the floor
+$n+1$), slowest just above a power of two, where every even $n$ is costly.
+The two are Pareto-incomparable, and every
+method we know pays slope close to $2$ somewhere in the vicinity of the
+powers of two. The linear-envelope difficulty concentrates $2$-adically.
 \begin{center}
-\begin{tabular}{lcccccccccc}
+\begin{tabular}{lccccccccccccccc}
 \toprule
-$n$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\
+$n$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15\\
 \midrule
-floor $n+1$ & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11\\
-Theorem~\ref{thm:c} & 2 & 3 & 4 & 6 & 8 & 8 & 8 & 12 & 16 & 16\\
-dyadic contrast & 2 & 4 & 4 & 8 & 6 & 8 & 8 & 16 & 10 & 12\\
-best known & 2 & 3 & 4 & 6 & 6 & 8 & 8 & 12 & 10 & 12\\
-optimal? & yes & yes & yes & ? & yes & ? & yes & ? & yes & ?\\
+floor $n+1$          & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16\\
+Theorem~\ref{thm:c}  & 2 & 3 & 4 & 6 & 7 & 7 & 8 & 12 & 15 & 15 & 15 & 15 & 15 & 15 & 16\\
+dyadic contrast      & 2 & 4 & 4 & 8 & 6 & 8 & 8 & 16 & 10 & 12 & 12 & 16 & 14 & 16 & 16\\
+best known           & 2 & 3 & 4 & 6 & 6 & 7 & 8 & 12 & 10 & 12 & 12 & 15 & 14 & 15 & 16\\
+optimal?             & y & y & y & ? & y & y & y & ? & y & ? & y & ? & y & y & y\\
 \bottomrule
 \end{tabular}
 \end{center}
 (``Best known'' minimizes over the two methods separately; no single method
-attaining the whole row is known. Odd $n$ are settled at the floor; the
-first open value is $T(4)\in\{5,6\}$.)
+attaining the whole row is known, and on the shell $m=4$ we know none exists.
+The optimum $T(n)=n+1$ is settled at every odd $n$ and at $n=2^{r+1}-2$; the
+first undetermined value is $T(4)\in\{5,6\}$, with $T(4)=6$ optimal among
+shell-balanced methods.)
 
-\emph{3. The frontier.}
-Let $C^{*}=\inf\{C:\ T(n)\le Cn+D \text{ for some method and constant }
-D\}$. Lemma~\ref{lem:floor} gives $C^{*}\ge1$ and part (a) gives
-$C^{*}\le2$; we do not know whether any method beats slope $2$, nor even
-whether $C=1$ (that is, $T(n)\le n+D$) is impossible, though we expect it
-is. The question has a concrete equivalent form. A method with deadline
-$Cn+D$ never stops before the break (Lemma~\ref{lem:floor}), and after the
-break at $b^m\bar b$ its stopping words form a complete prefix code of
-depth at most $d_m:=(C-1)m+D-1$; padding to exact depth $d_m$ as in
-Lemma~\ref{lem:exact} and collecting \head{} words, one checks that such a
-method exists if and only if there are polynomials
+\emph{3. Why every known method has slope $2$.} Suppose a method decides
+every sequence with $n$ in a block $[N,N+\ell)$ by flip $N+\ell$, with
+$\ell=2^a$. On the branch $X_1=0$ the terminal words are $0^N$ followed by a
+nonzero tail of length $\ell$, and, $\ell$ being a power of two, Lucas's
+theorem makes every interior tail-weight class $\binom{\ell}{j}$
+($0<j<\ell$) even --- so all of them can be split evenly. The single class
+that cannot is the corner $0^N1^{\ell}$, which is alone in its class and
+forces a deficit of $\tfrac12 p^Nq^{\ell}$; the branch $X_1=1$ forces the
+mirror deficit $\tfrac12 p^{\ell}q^{N}$. When $\ell=N$ --- ratio exactly two,
+i.e.\ slope $2$ --- these two deficits sit on the \emph{same} monomial
+$p^Nq^N$ and cancel: that is precisely the middle pair $0^m1^m$, $1^m0^m$ in
+the solutions above. At any ratio below two the two corners are distinct
+monomials, and their half-unit deficits must be transported to other cells of
+the tree and repaid there within integer budgets. Whether that transport can
+be arranged, uniformly in $N$, is exactly the content of the proposer's
+question.
+
+\emph{4. The frontier.}
+Lemma~\ref{lem:floor} gives $C^{*}\ge1$ and part (a) gives $C^{*}\le2$; we do
+not know whether any method beats slope $2$, nor even whether $C=1$ (that is,
+$T(n)\le n+D$) is impossible, though we expect it is. The question has a
+concrete equivalent form. A method with deadline $T$ never stops before the
+first disagreement (Lemma~\ref{lem:floor}), and after the disagreement at
+$0^{n}1$ or $1^{n}0$ its stopping words form a complete prefix code of depth
+at most $d_n:=T(n)-n-1$; padding to exact depth $d_n$ and counting \head{}
+leaves by weight, one checks that such a method exists \emph{if and only if}
+there are integers $0\le w_{n,k},v_{n,k}\le\binom{d_n}k$ for which the
+polynomials $W_n(p)=\sum_{k}w_{n,k}p^{\,d_n-k}q^{\,k}$ and
+$V_n(p)=\sum_{k}v_{n,k}q^{\,d_n-k}p^{\,k}$ satisfy
 \[
-W_m(p)=\sum_{k=0}^{d_m}w_{m,k}\,p^{\,d_m-k}q^{\,k},\qquad
-V_m(p)=\sum_{k=0}^{d_m}v_{m,k}\,p^{\,d_m-k}q^{\,k},
-\]
-with integer coefficients $0\le w_{m,k},v_{m,k}\le\binom{d_m}k$, satisfying
-\[
-\sum_{m\ge1}p^{m}q\,W_m(p)\;+\;\sum_{m\ge1}q^{m}p\,V_m(p)\;=\;\frac12
+\sum_{n\ge1}p^{n}q\,W_n(p)\;+\;\sum_{n\ge1}q^{n}p\,V_n(p)\;=\;\frac12
 \qquad\text{for all } p\in(0,1).
 \]
-Part (a) solves this with $d_m=m-1$; whether it is solvable with
-$d_m=\gamma m+O(1)$ for some $\gamma<1$ is exactly the proposer's question,
-with $C^{*}=1+\inf\gamma$. For $C=1$ the $W_m$ range over a fixed finite
-set of polynomials, which is why we expect a rigidity argument to refute
-that case; and small instances --- e.g.\ whether $T(4)=5$ is attainable at
-all --- are finite feasibility questions. We would be glad to learn what
-value of $C$ the proposer has in mind, and whether the intended reading of
-$Cn+D$ is uniform or asymptotic.
+(The two sums run over the $0$-spine and the $1$-spine; the coefficients
+$p^nq$ and $q^np$ are the probabilities of the two disagreement patterns and
+sum to $1$, so the identity says exactly that the conditional heads-share
+averages to $\tfrac12$.) Part (a) solves this with $d_n=n-1$, part (b) with
+$d_n=n-2$, and Theorem~\ref{thm:c} with $d_n$ dropping to $\tfrac n2-1$ at
+$n=2^r$ and to $0$ at $n=2^{r+1}-2$ and $n=2^{r+1}-1$. Whether it is solvable
+with $d_n=\gamma n+O(1)$ for some $\gamma<1$ is exactly the proposer's
+question, with $C^{*}=1+\inf\gamma$. For $C=1$ the $W_n$ range over a fixed finite set
+of polynomials, which is why we expect a rigidity argument to refute that
+case; and individual small values --- e.g.\ whether $T(4)=5$ is attainable by
+any method at all --- are finite feasibility questions. We would be glad to
+learn what value of $C$ the proposer has in mind, and whether the intended
+reading of $Cn+D$ is uniform or asymptotic.
 
 \end{document}

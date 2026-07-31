@@ -1,0 +1,17 @@
+LRC14 aligned/drift support-transfer ladder scout
+combined_script_sha256=42dc165781148c702dfcd3c6535f4d02aee516af60b5ddf602a19cb1d87695e4
+combined_output_sha256=2e211620ad7064ea06f7544b5fbac709d6d52d9a0e261b464ae26b595f09b669
+shape_control_cases=240
+body_count=3003
+body_divisor_rows=251536
+safe_floors={0: Fraction(1, 1), 1: Fraction(6, 7), 2: Fraction(66, 91), 3: Fraction(55, 91), 4: Fraction(558, 1183), 5: Fraction(478, 1365), 6: Fraction(61, 273), 7: Fraction(15, 154)}
+support_cutoffs={0: Fraction(139, 154), 1: Fraction(106, 117), 2: Fraction(887, 990), 3: Fraction(125, 143), 4: Fraction(26, 31), 5: Fraction(375, 478), 6: Fraction(39, 61), 7: Fraction(0, 1)}
+k=0,p=7,cutoff=139/154,rows=27210,bodies=3003,divisors=219,denominator_shapes=161535777082757,raw_occurrences=1504842061942849,semantic_sha256=e7ecc3d7aed7b692564a03734f0f240d4f9c6ca9d68d012a66f5a4a626d0a7c4
+k=1,p=6,cutoff=106/117,rows=27240,bodies=3003,divisors=219,denominator_shapes=3095010121875,raw_occurrences=38954725590760,semantic_sha256=931e04a95f70e4b16a3004496df981a0678f0839dbfa85bc6194d89290a4a76b
+k=2,p=5,cutoff=887/990,rows=27163,bodies=3003,divisors=219,denominator_shapes=50874159718,raw_occurrences=951545890235,semantic_sha256=2c2909d3d1e514b4e8f09166d23145ac6b577fe6e10f39d39a205094e7656dd5
+k=3,p=4,cutoff=125/143,rows=26970,bodies=3003,divisors=217,denominator_shapes=694921995,raw_occurrences=21357714101,semantic_sha256=3738fce411911b8cfb64596a6ed595a01d54f9093b502b4a4161fcd63ac91b2a
+k=4,p=3,cutoff=26/31,rows=13778,bodies=3003,divisors=206,denominator_shapes=7483350,raw_occurrences=298255882,semantic_sha256=86109feddd36a3ece9068d4e50d091b8423930a226f3c50c5024578df41572b0
+k=5,p=2,cutoff=375/478,rows=10976,bodies=3003,divisors=193,denominator_shapes=56419,raw_occurrences=3066274,semantic_sha256=38aa87113f5acf83273d756e1ad9c261f745d1f3ae106b6d1d1aa5d02ef03739
+k=6,p=1,cutoff=39/61,rows=6237,bodies=3003,divisors=171,denominator_shapes=171,raw_occurrences=6237,semantic_sha256=ee5bd68fe275192c6eeb6b09081982c226251b0305268fdbb91df894da250941
+k=7,p=0,cutoff=0,rows=0,bodies=0,divisors=0,denominator_shapes=0,raw_occurrences=0,semantic_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+all_exact_controls=PASS

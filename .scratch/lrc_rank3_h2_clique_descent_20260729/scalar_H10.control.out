@@ -1,0 +1,10 @@
+LRC14 j6 strongest-r3 graph-free ordered Hunter-star peel
+core_range=0..10;branches=0;closed=0;survivors=0
+vertices=0;peeled=0;residual=0;residual_histogram=()
+pair_queries=0;cache_hits=0;candidate_scans=0;retests=0;threshold_ties=0;controls=0
+residual_max=None
+closed_keys=()
+canonical_ledger_sha256=a1f16d71431fc1c78a721a7db8282ff46725b98361388c7a0eab2cc743c24500
+orientation=acyclic proof-elimination gauge only;queried pair unions symmetric;not tournament
+scope=exact graph-free Hunter-star peel;residual size >=4 is unresolved, not a cover witness
+all_exact_controls=PASS

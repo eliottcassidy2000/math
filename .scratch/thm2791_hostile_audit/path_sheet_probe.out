@@ -1,0 +1,17 @@
+THM-2791 LITERAL BOOLEAN PATH-SHEET PROBE
+status=FINITE-EXACT independent ancestry refinement
+dependency_hashes=BEGIN
+99deb8891f8be1e218e7b4c5a7bad7a918ddc1da37b05b53ccbbc3ca7b8c7998  04-computation/lrc14_base_only_bridge_opus_20260728.py
+38c8eac0925d119331ef248fa7197f61bd985166c56704575cec18c361543647  04-computation/lrc14_b_r5_owner_clock_host_thm2581.py
+99cbb46c4cf3554fb468dda2d6bbf029f3dd7298a4f8b6009d94513484c7849d  04-computation/lrc14_b_r5_theta_target_tensor_thm2584.py
+7fbc6bb1ec303ded98eaad6e5d8205eb3d247258ada32b6f9904fc439ebb11fb  04-computation/lrc14_semantic_arm_right_wing_central_digit_thm2782.py
+f16754bd38ae0dfa0d7d91cc404b4447dbf359635101aa7b4223363f8064352f  04-computation/lrc14_relative_present_semantic_lift_probe_20260728.py
+dependency_hashes=END
+sheet_definition=U:(a,b) in Z/13^5 x Z/169; V:e' in Z/13^5; full fixed collision labels=(u,v,s,t)=(5,6,1,12)
+physical_shift=371196/371293; coordinate_shift=297759088186560; exact_cylinder_map=PASS
+raw_wall_counts=(U:34,V:14); U_chamber=(140890500190440, 144190879112280); V_chamber=(140562551935260, 161191947456540); common_chamber=(140890500190440, 144190879112280)
+probe_pair=(142082432180573,142004622528653); factor_counts=(966606,28534); product=27581135604
+path_set_digest=15c804c7cea9f61feab3b641eccdc035d937142b446d1cc14e059210eb1534fd; identity_label_bijection=PASS
+supplied_path=(59162, 26, 56658); active_at_both_cylinders=yes; active_on_incoming_same_atom_interval=yes
+first_lost_label=none_through_(u,v,a,b,e'); remaining_boundary=later_endpoint_origin_or_endpoint_atom_labels_are_not_constructed_by_this_probe
+verdict=SAME-ANCESTRY PARTIAL GERM AT THE THM-2471 RAIL SHEET

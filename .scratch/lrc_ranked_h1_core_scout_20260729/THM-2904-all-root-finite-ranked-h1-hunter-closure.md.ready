@@ -1,0 +1,287 @@
+---
+id: THM-2904
+title: "All-root finite ranked-H1 Hunter closure and 121 new j=6 roots"
+status: >
+  PROVED + FINITE-EXACT + VERIFIED.  Of the 6,180 scalar-hard marked
+  suffixes satisfying the rank-four H1 entry condition, all 5,999 with
+  exact discrepancy cutoff at most 15,000 close: 5,975 by an ordered
+  Hunter star and 24 by a nonstar maximum spanning tree.  Together with
+  the scalar layer this closes 132 roots, 121 new beyond the official
+  17-root union, raising that union to 138 and leaving 3,294 roots.
+source: codex-lrc-event-twisted-coefficient-local-system-2026-07-29
+depends_on:
+  - THM-735-bonferroni-simultaneous-multi-peel-defeats-the-clustered-non-isolated-wall
+  - THM-2892-eight-body-five-slot-heavy-triangle-closure
+  - THM-2893-complement-cap-finite-core-flag-lemma
+  - THM-2896-seven-body-adaptive-six-cover-hitting-gate-atlas
+  - THM-2897-partition-cap-tropical-convolution-and-alternating-pair-ladder
+  - THM-2899-all-root-ranked-suffix-scalar-census
+related:
+  - THM-2895-singleton-complement-parity-descent-and-four-root-j6-closure
+  - THM-2898-unique-max-gate-five-parity-matching-closure
+  - THM-2901-all-hard-exact-global-pair-cap-and-route-partition
+  - THM-2902-omission-six-ranked-h1-depth-one-closure
+---
+
+# THM-2904 -- all-root finite ranked-H1 Hunter closure and 121 new j=6 roots
+
+**PROVED + FINITE-EXACT + VERIFIED.**
+
+## 1. Exact marked-suffix universe
+
+Use the `41,415` marked gate branches of THM-2899.  On each of its
+`14,806` scalar-hard branches retain the literal data
+
+```text
+E, gate rank j, apex a_j, excluded prefix P_j,
+C=G_E minus D_(a_j), h=|C|, and components(C).
+```
+
+Let
+
+```text
+q_1>=...>=q_5
+```
+
+be the globally sealed allowed singleton coverages on `C`, and put
+
+```text
+R_4=q_1+q_2+q_3+q_4.
+```
+
+Exactly `6,180` hard branches satisfy
+
+```text
+R_4<6h/7.                                                   (1)
+```
+
+For such a branch, THM-2897 makes `R_4` a valid four-set complement cap.
+THM-2893 with `(k,s)=(5,1)` therefore forces all five labels of a
+hypothetical cover into
+
+```text
+H_1={w>=15:w notin P_j and c_C(w)>=h-R_4}.                 (2)
+```
+
+Put
+
+```text
+epsilon=6h/7-R_4>0,
+N=ceil((99/70) components(C)/(7 epsilon))-1.               (3)
+```
+
+The strict THM-735(ii) discrepancy estimate proves that every member of
+`H_1` is at most `N`.  Thus scanning every allowed `15<=w<=N` computes the
+whole core; no finite-window proposal is used as a global statement.
+
+This theorem takes the exact finite stratum
+
+```text
+N<=15000.                                                   (4)
+```
+
+It contains `5,999` branches.  The other `181` rows satisfying `(1)` lie
+outside the theorem's route and remain explicitly deferred.
+
+## 2. Ordered Hunter stars
+
+Order each exact core
+
+```text
+H_1=(x_1,...,x_t)
+```
+
+by decreasing `c_C`, breaking ties by speed.  Any five-set in `H_1` has a
+unique earliest member `x_i`; its other four labels lie in the exact later
+core suffix.  Put
+
+```text
+C_i=C minus D_(x_i).
+```
+
+If the four largest exact child coverages
+
+```text
+|C_i intersect D_y|,             y in {x_(i+1),...,x_t},
+```
+
+sum to less than `|C_i|`, subadditivity closes every five-set assigned to
+`x_i`.  The implementation first tries the inherited upper bounds
+`c_C(y)` on that same suffix, and computes exact child coverages only when
+needed.  It never reintroduces labels outside the later `H_1` suffix.
+
+This is exactly THM-2893's ordered high-core pivot.  In THM-2897's
+relative-Hunter language it is the spanning-tree star at `x_i`: if
+
+```text
+i(x,y)=|C intersect D_x intersect D_y|,
+S(Q)=sum_(v in Q)c_C(v),
+sigma_x(Q)=sum_(y in Q minus {x})i(x,y),
+```
+
+then the pivot invoice is
+
+```text
+S(Q)-sigma_x(Q)
+ =c_C(x)+sum_(y in Q minus {x})|C_x intersect D_y|.        (5)
+```
+
+The exact ordered-star test closes `5,975` of the `5,999` finite branches.
+Their core sizes and raw five-set workloads reach
+
+```text
+|H_1|=444,                    binom(444,5)=140,578,526,088.
+```
+
+The nearest-rank core-size quantiles are
+
+```text
+percent      0  25  50  75  90  95  99  100
+|H_1|        5   8  16  36  83 141 283  444.              (6)
+```
+
+The smallest positive star/local margin is `1/3166020`.
+
+## 3. Nonstar Hunter repair
+
+Exactly `24` branches have a star-open pivot.  On every one it is the
+first core vertex, and there is no other open pivot.  A star-invoice
+branch-and-bound leaves only `54` hostile five-sets in total, between one
+and ten per branch.
+
+For each such five-set `Q`, compute the exact complete overlap graph and
+the maximum spanning-tree credit
+
+```text
+tau_5(Q)=max_T sum_({x,y} in T)i(x,y),
+psi_5(Q)=S(Q)-tau_5(Q).                                    (7)
+```
+
+Every one of the `54` sets satisfies
+
+```text
+psi_5(Q)<h.                                                 (8)
+```
+
+The minimum strict margin in `(8)` is
+
+```text
+1799771/75716368
+```
+
+at
+
+```text
+E=(1,2,4,6,10,11,13), gate rank 4.
+```
+
+Thus all `24` star survivors close by a genuinely nonstar Hunter tree.
+The independent exact residual branch-and-bound also closes them, but is
+not needed in the theorem mechanism.  Consequently
+
+```text
+5975 star closures + 24 nonstar-tree closures = 5999.       (9)
+```
+
+No witness occurs.
+
+## 4. Whole-root consequence
+
+For exactly `132` seven-body roots, every scalar-hard marked branch belongs
+to the finite closed stratum `(9)`; all other gate branches close by
+THM-2899's scalar test.  The ordered THM-2896 gate therefore excludes every
+external six-label cover on each of these roots.  THM-2892 closes the
+eight-body chamber when an added label lies in `{1,...,14} minus E`.
+Hence all `132` roots are proved.
+
+The locked output lists all `132` roots and has root-set digest
+
+```text
+c5eb5a86bbe82c2dc46113527e67f6a1f50add87b100cad916ee6367d7177a13.
+```
+
+The official proved union before this theorem has `17` roots, including
+THM-2902's two omission-six roots.  Eleven of those `17` occur in the
+displayed `132`; the exact set difference has
+
+```text
+132-11=121
+```
+
+new roots and digest
+
+```text
+3b133f35fa91191819b35a2760dcdf822cf8523818776584b02de36939658b47.
+```
+
+The resulting official union and residual are
+
+```text
+proved roots = 17+121 = 138,
+remaining roots = 3432-138 = 3294.                         (10)
+```
+
+The proved-union digest is
+
+```text
+8536e577993aa395a6d2e676ea2c6ea0b29b99d1d15787dee4c7480fa0eebffa.
+```
+
+No provisional later root claim is included in this comparison.
+
+## 5. Verification
+
+The core verifier reconstructs every literal carrier directly, compares it
+with apex subtraction, excludes the actual prefix, computes every exact
+core label through `(3)`, checks strict inequalities, and directly
+reconstructs any returned witness.  Thirty-two deterministic shards cover
+the exact ordered body atlas once.  The locked merge verifies all shard
+hashes, counts, the exact `132`-root list, the `121`-root set difference,
+and the official union.
+
+Exact aggregate:
+
+```text
+roots                                  3432
+marked gate branches                  41415
+scalar-hard branches                  14806
+rank-four H1 eligible                  6180
+finite N<=15000 branches               5999
+closed                                 5999
+witnesses                                 0
+deferred cutoff branches                181
+whole roots closed                       132.              (11)
+```
+
+The shard-file digest is
+
+```text
+d686d1afd01b494ca6aa9a4733816c774f7e8e4ed398081f556c44e4af7869a0,
+```
+
+and the aggregate semantic shard-ledger digest is
+
+```text
+f02aea1d70f89b2c634b84b313da9bba78b26718e85fe1731dbb9ef496559a9b.
+```
+
+The all-survivor Hunter semantic digest is
+
+```text
+030c5af7cdb8fe5c2c8188b3debb78e8e0aabb79a7e553308d0f11a411ded74b.
+```
+
+The locked merge and Hunter survivor audit have byte-identical ordinary
+and optimized outputs and use explicit guards rather than Python
+`assert`.  The full core shards likewise have no assertions; their
+ordinary/optimized byte-parity audit is recorded in the result artifact.
+
+## 6. Scope
+
+This theorem closes exactly the finite rank-four route `(4)` and the `132`
+whole roots certified by it.  It does not close or classify the `181`
+eligible branches with `N>15000`, close the remaining `3294` roots, or
+prove LRC(14).  A failure of `(1)` or `(4)` is not evidence for a cover.
+The literal carrier, excluded gate prefix, later-core suffix, and
+maximum-tree edge credits are theorem-bearing data and are not replaced by
+unmarked residuals or scalar summaries.

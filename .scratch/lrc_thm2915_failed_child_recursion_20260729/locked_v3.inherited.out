@@ -1,0 +1,9 @@
+LRC14 THM2915-failure recursion inherited-slice audit
+thm2913=(children=42,seconds=29,routes=(('hunter', 10), ('pair', 22), ('recursive', 10)))
+thm2920=(children=367,seconds=283,routes=(('hunter', 111), ('pair', 149), ('recursive', 107)))
+thm2920_deep=(('hunter3', 2), ('pair_single', 3))
+thm2920_roots=(slice=296,pt2=3410,contained=296)
+normalized_tie_policy=coverage-values-and-margins
+semantic_sha256=95994f318f3f3c689acded4452a0b7b0f77768f60fcb7896240a38db621ad0df
+mode=LOCKED
+all_exact_controls=PASS

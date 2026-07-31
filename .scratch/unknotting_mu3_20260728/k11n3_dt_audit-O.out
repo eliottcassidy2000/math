@@ -1,0 +1,5 @@
+encounters = 1:O@X1 2:U@X4 3:O@X3 4:U@X1 5:O@X2 6:O@X7 7:U@X6 8:U@X3 9:O@X4 10:U@X2 11:U@X5 12:O@X11 13:U@X8 14:O@X6 15:U@X7 16:O@X5 17:U@X9 18:O@X10 19:U@X11 20:O@X8 21:U@X10 22:O@X9
+signed DT = [4, 8, 10, -14, 2, -16, -20, -6, -22, -12, -18]
+KnotTheory string = bdeGaHJCKFI
+table zero-based index = 618
+identified knot = K11n3

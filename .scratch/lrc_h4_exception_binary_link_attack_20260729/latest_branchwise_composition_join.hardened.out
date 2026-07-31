@@ -1,0 +1,9 @@
+LRC14 latest branchwise H4 composition join
+branch_counts=(G5=2964,pivot=279,exception=52,H1=5999,G5P=3243,G5PE=3295,H1G5P=6118,H1G5PE=6170)
+hard_root_counts=(('G5', 16), ('G5P', 26), ('G5PE', 26), ('H1G5', 129), ('H1G5P', 133), ('H1G5PE', 133))
+proved_T2904_plus_H4=(baseline=88,additive=0,union=88,residual=3344)
+proved_H4_additive_roots=()
+old_candidate_finite_H1_G5=(baseline=179,plus_pivot=181,plus_pivot_H4=181,H4_additive=0,residual=3251)
+old_candidate_H4_additive_roots=()
+digests=(provedH4=1d87837628cdd1372c82d3dd1ee11ca18076caf812a54cea0df8749addadf943,candidateP=b212344775220997898a56948c019d3eceea7c202deb24ac66b2da9945c62245,candidatePE=4f43c9f7d0f3c14a694f4484648b3810f9be47e45dee0f2fc0ee32ef75362569)
+all_exact_controls=PASS

@@ -1,0 +1,10 @@
+LRC14 j6 H4 all recursive H2 census
+totals=(('compatible_covers', 0), ('direct_closed', 2921), ('flags', 3611), ('h2_closed', 690), ('h2_routes', 690), ('heavy_pairs', 1354), ('leaf_checks', 18444), ('singleton_covers', 0))
+parent_partition=(((66, 56, 10, 10, 0, 4, 38, 0, 0), 1), ((153, 121, 32, 32, 0, 43, 386, 0, 0), 1), ((231, 172, 59, 59, 0, 106, 1252, 0, 0), 1), ((231, 192, 39, 39, 0, 42, 752, 0, 0), 1), ((276, 234, 42, 42, 0, 57, 652, 0, 0), 1), ((325, 250, 75, 75, 0, 191, 3638, 0, 0), 1), ((351, 323, 28, 28, 0, 50, 376, 0, 0), 1), ((378, 364, 14, 14, 0, 17, 128, 0, 0), 1), ((780, 517, 263, 263, 0, 606, 8516, 0, 0), 1), ((820, 692, 128, 128, 0, 238, 2706, 0, 0), 1))
+minimum_H2_entry=(Fraction(92311, 7063056), (2, 4, 6, 10, 12, 13, 14), 1, (18, 26), Fraction(25133, 336336), Fraction(77513, 630630))
+maximum_H2_size=(14, (2, 4, 6, 10, 12, 13, 14), 1, (18, 26), 803)
+maximum_leaf_horizon=(70, (2, 4, 6, 10, 12, 13, 14), 1, (26, 220), (16, 18), Fraction(5, 2464))
+unresolved_rows=()
+semantic_digest=8a9cff6e3a7eb429587116ee73c540dd4e50a232aac56af9bfe70be3c360291c
+scope=all;parents=42:52;direct top-three or recursive H2+singleton leaf;parent binary-link sidecar retained
+all_exact_controls=PASS

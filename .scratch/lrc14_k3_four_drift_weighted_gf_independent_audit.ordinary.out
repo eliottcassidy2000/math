@@ -1,0 +1,10 @@
+LRC14 k3/four-drift weighted GF independent exact-lcm audit
+resolving_D=217
+support_rows=26970
+total_shapes=694921995
+total_features=121260
+maximum_lcm_dp_states=294562
+maximum_feature_D=720720
+maximum_features=8925
+semantic_sha256=74025f848b523df246d98b4d76c0a3835027da95b757868f122b1d2b6a0ccac2
+all_exact_controls=PASS

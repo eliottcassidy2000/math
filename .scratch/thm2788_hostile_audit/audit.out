@@ -1,0 +1,15 @@
+THM-2788 INDEPENDENT MODULAR/HEISENBERG HOSTILE AUDIT
+convention=composition_left_after_right;commutator=[g,h]=g*h*g^-1*h^-1;section_s(a,b)=Y^b*X^a
+laws=H:(a,b,c)(a',b',c')=(a+a',b+b',c+c'+a*b');M=H+floor((b+b')/p)
+p=2:mult=48;cocycle=64;cocycle_identity=128;center={'H': 2, 'M': 2};derived={'H': 2, 'M': 2};H_orders=((1, 1), (2, 5), (4, 2));M_orders=((1, 1), (2, 5), (4, 2));index_p_kernels=3;actions={'H': (4, 2, 1), 'M': (4, 2, 1)};boundary=same_D8_after_quotient_basis_change;intersection=8;wreath_rank=2;join_order=8;wall=None
+p=3:mult=162;cocycle=324;cocycle_identity=1458;center={'H': 3, 'M': 3};derived={'H': 3, 'M': 3};H_orders=((1, 1), (3, 26));M_orders=((1, 1), (3, 8), (9, 18));index_p_kernels=4;actions={'H': (9, 3, 1), 'M': (9, 3, 1)};boundary=nonisomorphic_by_exponent_and_order_spectrum;intersection=9;wreath_rank=3;join_order=81;wall=None
+p=5:mult=750;cocycle=2500;cocycle_identity=31250;center={'H': 5, 'M': 5};derived={'H': 5, 'M': 5};H_orders=((1, 1), (5, 124));M_orders=((1, 1), (5, 24), (25, 100));index_p_kernels=6;actions={'H': (25, 5, 1), 'M': (25, 5, 1)};boundary=nonisomorphic_by_exponent_and_order_spectrum;intersection=25;wreath_rank=5;join_order=15625;wall=None
+p=7:mult=2058;cocycle=9604;cocycle_identity=235298;center={'H': 7, 'M': 7};derived={'H': 7, 'M': 7};H_orders=((1, 1), (7, 342));M_orders=((1, 1), (7, 48), (49, 294));index_p_kernels=8;actions={'H': (49, 7, 1), 'M': (49, 7, 1)};boundary=nonisomorphic_by_exponent_and_order_spectrum;intersection=49;wreath_rank=7;join_order=5764801;wall=None
+p=11:mult=7986;cocycle=58564;cocycle_identity=3543122;center={'H': 11, 'M': 11};derived={'H': 11, 'M': 11};H_orders=((1, 1), (11, 1330));M_orders=((1, 1), (11, 120), (121, 1210));index_p_kernels=12;actions={'H': (121, 11, 1), 'M': (121, 11, 1)};boundary=nonisomorphic_by_exponent_and_order_spectrum;intersection=121;wreath_rank=11;join_order=3138428376721;wall=None
+p=13:mult=13182;cocycle=114244;cocycle_identity=9653618;center={'H': 13, 'M': 13};derived={'H': 13, 'M': 13};H_orders=((1, 1), (13, 2196));M_orders=((1, 1), (13, 168), (169, 2028));index_p_kernels=14;actions={'H': (169, 13, 1), 'M': (169, 13, 1)};boundary=nonisomorphic_by_exponent_and_order_spectrum;intersection=169;wreath_rank=13;join_order=3937376385699289;wall=(156, 13)
+p13_tower_(depth,unit_order,group_order,kernel_to_depth2,center_order,commutator_steps)=((2, 13, 2197, 1, 13, (13, 0)), (3, 169, 371293, 169, 13, (13, 169, 0)), (4, 2197, 62748517, 28561, 13, (13, 169, 2197, 0)), (5, 28561, 10604499373, 4826809, 13, (13, 169, 2197, 28561, 0)), (6, 371293, 1792160394037, 815730721, 13, (13, 169, 2197, 28561, 371293, 0)))
+minimal_faithful_degree=p^2:all_smaller_orbits_have_index_1_or_p_stabilizers;every_index_p_kernel_contains_Z;displayed_transitive_actions_are_faithful
+novel_scope=M_p_presentation+carry_Bockstein_cocycle+odd_prime_power/order_separation;H_p_degree+D8_H_boundary+p13_wall_are_inherited_from_THM-2779
+THM2782_scope=central_+p_segment_only;cannot_detect_full_successor_carry;no_physical_M13_current_or_endpoint/root_intertwiner
+assert_nodes=0
+ALL EXACT CHECKS PASSED

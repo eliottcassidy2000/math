@@ -1,0 +1,15 @@
+LRC14 k=3/four-drift bounded q-fibre profile GF scout
+D=84
+rows=65
+positive_profile_checks=12
+positive_union_size=44
+raw_no_small_shapes=246
+q_values=[1, 2, 3, 4, 6, 7, 12, 14]
+scalar_shapes=20
+scalar_occurrences=20
+q_summaries=(q,local_modulus,features,occurrences,shapes,rows)=[(1, 84, 4, 20, 20, 1), (2, 42, 10, 12, 12, 1), (3, 28, 10, 14, 14, 1), (4, 21, 4, 0, 0, 0), (6, 14, 10, 6, 6, 1), (7, 12, 164, 0, 0, 0), (12, 7, 4, 0, 0, 0), (14, 6, 103, 5, 5, 1)]
+best_single_q_occurrence_upper=0
+best_single_q_rows=0
+best_q_histogram=Counter({(1, 84): 64, (4, 21): 1})
+scalar_survivor_rows=[((1, 2, 3, 4, 6, 12), 168, 54, {1: 20, 2: 12, 3: 14, 4: 0, 6: 6, 7: 0, 12: 0, 14: 5})]
+all_exact_controls=PASS

@@ -1,0 +1,7 @@
+LRC14 j6 H4 nonpositive-link exact child-q1 scout
+counts=(('child_equality', 0), ('child_finite', 179), ('input_nonpositive', 179), ('scalar_closed', 29), ('scanned', 88485))
+closest_positive=(Fraction(12275, 1765764), (2, 4, 6, 8, 10, 12, 14), 1, (26, 16), Fraction(28753, 280280), Fraction(33461, 504504), 18, 94)
+closest_nonpositive=None
+max_scan=(572, 554, (2, 3, 8, 10, 12, 13, 14), 1, (18, 80), 16)
+semantic_digest=e9ba8d8c738497bd1429e19d9e5430618fda18e9f5cccb3aba527d9645b86696
+scope=179 inherited-nonpositive H4 pair links;exact child singleton cap and finiteness retest only;failed tests are not cover witnesses

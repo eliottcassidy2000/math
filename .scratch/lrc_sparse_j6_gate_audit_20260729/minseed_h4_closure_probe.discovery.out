@@ -1,0 +1,40 @@
+J6 MINIMUM-SEED SUFFIX-H4 CLOSURE PROBE
+seed_branches=15;B1_below_3h7=15;B1_failures=0
+BRANCH E=(2, 8, 9, 10, 11, 13, 14);seed_index=1;root_rank=2;apex=17;prefix=(17,);3h7-q1=478633/24690120;H=30;Htail=1418
+BRANCH E=(2, 8, 9, 10, 11, 13, 14);seed_index=2;root_rank=3;apex=23;prefix=(17, 23);3h7-q1=854941/33843810;H=17;Htail=1024
+BRANCH E=(2, 8, 9, 10, 11, 13, 14);seed_index=3;root_rank=4;apex=46;prefix=(17, 23, 46);3h7-q1=13339/586040;H=24;Htail=1421
+BRANCH E=(2, 8, 9, 10, 11, 13, 14);seed_index=4;root_rank=5;apex=24;prefix=(17, 23, 46, 24);3h7-q1=11377/399399;H=15;Htail=908
+BRANCH E=(1, 3, 9, 10, 11, 12, 14);seed_index=1;root_rank=1;apex=39;prefix=(39,);3h7-q1=371799/9319310;H=12;Htail=730
+BRANCH E=(1, 3, 9, 10, 11, 12, 14);seed_index=2;root_rank=2;apex=23;prefix=(39, 23);3h7-q1=167567/4214980;H=7;Htail=692
+BRANCH E=(1, 3, 9, 10, 11, 12, 14);seed_index=3;root_rank=5;apex=16;prefix=(39, 23, 16);3h7-q1=87541/2199120;H=7;Htail=691
+BRANCH E=(2, 5, 9, 11, 12, 13, 14);seed_index=1;root_rank=1;apex=16;prefix=(16,);3h7-q1=8468/307671;H=16;Htail=881
+BRANCH E=(2, 5, 9, 11, 12, 13, 14);seed_index=2;root_rank=2;apex=23;prefix=(16, 23);3h7-q1=25079/714714;H=12;Htail=784
+BRANCH E=(2, 5, 9, 11, 12, 13, 14);seed_index=3;root_rank=4;apex=19;prefix=(16, 23, 19);3h7-q1=148663/4526522;H=12;Htail=689
+BRANCH E=(2, 5, 9, 11, 12, 13, 14);seed_index=4;root_rank=5;apex=40;prefix=(16, 23, 19, 40);3h7-q1=3827/100100;H=10;Htail=888
+BRANCH E=(2, 5, 9, 11, 12, 13, 14);seed_index=5;root_rank=7;apex=46;prefix=(16, 23, 19, 40, 46);3h7-q1=46146/1128127;H=7;Htail=751
+BRANCH E=(2, 3, 4, 5, 6, 7, 8);seed_index=1;root_rank=1;apex=22;prefix=(22,);3h7-q1=21683/490490;H=11;Htail=512
+BRANCH E=(2, 3, 4, 5, 6, 7, 8);seed_index=2;root_rank=2;apex=26;prefix=(22, 26);3h7-q1=9181/178360;H=5;Htail=283
+BRANCH E=(2, 3, 4, 5, 6, 7, 8);seed_index=3;root_rank=9;apex=33;prefix=(22, 26, 33);3h7-q1=73181/1358280;H=7;Htail=510
+PAIR_SUMMARY E=(2, 8, 9, 10, 11, 13, 14);seed_index=1;apex=17;pairs=435;top3=435;B2q1=423;union=435
+PAIR_SUMMARY E=(2, 8, 9, 10, 11, 13, 14);seed_index=2;apex=23;pairs=136;top3=136;B2q1=136;union=136
+PAIR_SUMMARY E=(2, 8, 9, 10, 11, 13, 14);seed_index=3;apex=46;pairs=276;top3=276;B2q1=276;union=276
+PAIR_SUMMARY E=(2, 8, 9, 10, 11, 13, 14);seed_index=4;apex=24;pairs=105;top3=105;B2q1=105;union=105
+PAIR_SUMMARY E=(1, 3, 9, 10, 11, 12, 14);seed_index=1;apex=39;pairs=66;top3=66;B2q1=66;union=66
+PAIR_SUMMARY E=(1, 3, 9, 10, 11, 12, 14);seed_index=2;apex=23;pairs=21;top3=21;B2q1=21;union=21
+PAIR_SUMMARY E=(1, 3, 9, 10, 11, 12, 14);seed_index=3;apex=16;pairs=21;top3=21;B2q1=21;union=21
+PAIR_SUMMARY E=(2, 5, 9, 11, 12, 13, 14);seed_index=1;apex=16;pairs=120;top3=117;B2q1=112;union=118
+PAIR_SUMMARY E=(2, 5, 9, 11, 12, 13, 14);seed_index=2;apex=23;pairs=66;top3=66;B2q1=66;union=66
+PAIR_SUMMARY E=(2, 5, 9, 11, 12, 13, 14);seed_index=3;apex=19;pairs=66;top3=66;B2q1=66;union=66
+PAIR_SUMMARY E=(2, 5, 9, 11, 12, 13, 14);seed_index=4;apex=40;pairs=45;top3=45;B2q1=45;union=45
+PAIR_SUMMARY E=(2, 5, 9, 11, 12, 13, 14);seed_index=5;apex=46;pairs=21;top3=21;B2q1=21;union=21
+PAIR_SUMMARY E=(2, 3, 4, 5, 6, 7, 8);seed_index=1;apex=22;pairs=55;top3=55;B2q1=55;union=55
+PAIR_SUMMARY E=(2, 3, 4, 5, 6, 7, 8);seed_index=2;apex=26;pairs=10;top3=10;B2q1=10;union=10
+PAIR_SUMMARY E=(2, 3, 4, 5, 6, 7, 8);seed_index=3;apex=33;pairs=21;top3=21;B2q1=21;union=21
+RECURSIVE E=(2, 5, 9, 11, 12, 13, 14);seed_index=1;apex=16;H4pair=(23, 25);H2=(20, 37);heavy=((20, 37),);ell=('33/7252',);W=(31,);checks=13;covers=()
+RECURSIVE E=(2, 5, 9, 11, 12, 13, 14);seed_index=1;apex=16;H4pair=(25, 34);H2=(20, 23);heavy=((20, 23),);ell=('19/4508',);W=(33,);checks=15;covers=()
+totals=pairs:1464,top3:1461,B2q1:1444,union:1462,hard:2,paid_pairs:17971,recursive_closed:2,recursive_open:0,heavy_edges:2,singleton_checks:28
+canonical_ledger_sha256=08712e5aff4875c8fd2ba336f21b29d4ac2694ddf69b1aaa258f6df74073a05c
+mode=DISCOVERY
+consequence=all 15 ordered seed branches close;locked scalar bootstrap closes all four root gates
+scope=four-root minimum-seed atlas;not uniform;not LRC14
+all_exact_controls=PASS

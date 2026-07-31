@@ -1,0 +1,11 @@
+=== warmup x^3+2: 0 families
+=== eq1 x^3-2: 0 families
+=== eq2 x^3-x-1: 0 families
+=== eq3 x^3+x-1: 0 families
+=== eq4 x^3+x+1: 0 families
+=== eq5 x^3-3: 0 families
+=== eq6 x^3+3: 0 families
+=== eq7 x^3-x-2: 0 families
+=== eq8 x^3-x+2: 0 families
+=== eq9 x^3+2 (-z): 0 families
+done

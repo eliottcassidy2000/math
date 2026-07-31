@@ -1,0 +1,11 @@
+LRC14 k4 exact projected-suffix typed transition scout
+suffix_rows=87975;suffix_roots=3003;maximum_z1=182
+first_apex_max=1871;aligned_first_rows=706;aligned_first_states=758
+drift_apex_pair_candidates=49129013;scalar_killed=40630772;scalar_finite_z3=2032220;scalar_paid_unbounded=6466021
+complementary_aligned_apex_states=758;p5_types={'aligned_possible': 758};p5_max_apex=3489;p5_aligned_multiplier_max=9
+recursive_aligned_states=5368;states_by_selected_depth={1: 758, 2: 1052, 3: 1427, 4: 2131};bounded_z2_branches_by_depth={1: 758, 2: 990, 3: 1293, 4: 543};closed_complements_by_depth={2: 54, 3: 684, 4: 2131}
+raw_uniform_z2_cap=6515;raw_recursive_pair_bank=50285016;interval_rows=87975;maximum_intervals_per_row=1
+full_recursive_scalar_candidates=50285016;full_recursive_scalar_killed=41770842;full_recursive_finite_z3=2042669;full_recursive_paid_unbounded=6471505
+screened_uniform_z2_cap=2163;necessary_non_aligned_(E,z1,z2)_bank=8514174;surviving_(E,z1)_rows=87975;killed_(E,z1)_rows=0
+typed_stage_digest=dd61a0fd587b01a446c105d5eec083f761a8de3d844b3f4208ab53c2168ca2b9
+all_exact_controls=PASS

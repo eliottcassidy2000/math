@@ -1,0 +1,13 @@
+all-81 physical-wing common-atom/factor-origin audit
+dependency_sha256=(('lrc14_root_zero_full_target_semantic_clutch_20260728.py', '208f71020efa19fa47f66d2da061ab03fa7bc87beeb077b4008c069f499736d8'), ('lrc14_natural_single_sheet_root_zero_target_bank_20260728.py', '591241e912c452b1985c7fc700884183a6e50440a579e1d853123d276cd416a8'))
+one_sided_source/target=source-clocked natural carriers; wing=one_sided-common
+literal_one_sided_equals_common_plus_wing=567/567
+physical_nonempty_wings=(source=193/567,target=193/567)
+source_wing_intersect_pullback_target_wing=empty:567/567
+allocation_K4_both_wing_corner=ABSENT-PHYSICALLY
+A_8_3_3={'source_origin_values': (2853968755527296447040, 0, 0, 0, 0, 0), 'target_origin_values': (5707937511054592894080, 0, 0, 0, 5707937511054592894080, 0), 'source_origin_masses': (2188067024426754240, 0, 0, 0, 1458711349617836160, 0), 'target_origin_masses': (1458711349617836160, 0, 0, 0, 1458711349617836160, 0), 'source_value': 2853968755527296447040, 'target_value': 11415875022109185788160, 'source_pieces': 5, 'target_pieces': 4, 'source_mass': 3646778374044590400, 'target_mass': 2917422699235672320, 'chart_translate': False}
+gain2_B_2_3_3={'source_origin_values': (2853968755527296447040, 0, 0, 0, 0, 0), 'target_origin_values': (5707937511054592894080, 0, 0, 0, 5707937511054592894080, 0), 'source_origin_masses': (2188067024426754240, 0, 0, 0, 1458711349617836160, 0), 'target_origin_masses': (1458711349617836160, 0, 729355674808918080, 0, 1458711349617836160, 0), 'source_value': 2853968755527296447040, 'target_value': 11415875022109185788160, 'source_pieces': 5, 'target_pieces': 5, 'source_mass': 3646778374044590400, 'target_mass': 3646778374044590400, 'chart_translate': False}
+gain2_D_0_10_3={'source_origin_values': (2853968755527296447040, 0, 0, 0, 0, 0), 'target_origin_values': (5707937511054592894080, 0, 0, 0, 0, 0), 'source_origin_masses': (2188067024426754240, 0, 0, 0, 0, 0), 'target_origin_masses': (1458711349617836160, 0, 0, 0, 0, 0), 'source_value': 2853968755527296447040, 'target_value': 5707937511054592894080, 'source_pieces': 3, 'target_pieces': 2, 'source_mass': 2188067024426754240, 'target_mass': 1458711349617836160, 'chart_translate': False}
+CONCLUSION: independent endpoint Fourier products may form a virtual mixed face, but the physical source and target wing cofibres never occupy one common ancestry atom.  A is additionally mixed in its first-failure factor; D removes that factor ambiguity but remains disjoint, nontranslate, and mass-unequal.
+scope=no common-wing K4 atom; one-sided/common carriers and atom-dependent allocation lifts remain unexcluded
+ALL EXACT CHECKS PASSED

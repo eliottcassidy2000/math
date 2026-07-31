@@ -1,0 +1,33 @@
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/all_open_pivot_child_top4_scout.py", line 253, in profile_parent
+    return [
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/all_open_pivot_child_top4_scout.py", line 254, in <listcomp>
+    child_row(row, index, carrier, components)
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/all_open_pivot_child_top4_scout.py", line 227, in child_row
+    require(tail_gap >= 0, "head limit does not seal fourth child rank")
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/all_open_pivot_child_top4_scout.py", line 52, in require
+    raise RuntimeError(message)
+RuntimeError: head limit does not seal fourth child rank
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/all_open_pivot_child_top4_scout.py", line 420, in <module>
+    main()
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/all_open_pivot_child_top4_scout.py", line 311, in main
+    nested = pool.map(profile_parent, selected, chunksize=1)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/multiprocessing/pool.py", line 771, in get
+    raise self._value
+RuntimeError: head limit does not seal fourth child rank
+real 4.72
+user 26.01
+sys 0.85

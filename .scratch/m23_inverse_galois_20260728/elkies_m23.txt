@@ -1,0 +1,494 @@
+                         THE OPEN BOOK SERIES 1
+
+
+
+ ANTS X
+ Proceedings of the Tenth
+ Algorithmic Number Theory Symposium
+
+The complex polynomials P .x/ with Gal.P .x/   t/ Š M23
+                     Noam D. Elkies
+
+
+
+
+                           msp
+THE OPEN BOOK SERIES 1 (2013)
+Tenth Algorithmic Number Theory Symposium                                                     msp
+dx.doi.org/10.2140/obs.2013.1.359
+
+
+
+
+              The complex polynomials P .x/ with
+                    Gal.P .x/ t / Š M23
+                                        Noam D. Elkies
+
+
+     We find the polynomials P 2 CŒX  of degree 23 such that the Galois group of
+     P .x/ t over C.t / is the Mathieu group M23 . This completes the computation
+     of polyomials P for which the Galois group of P .x/ t is among the exceptional
+     groups listed by Müller.
+
+
+                                        1. Introduction
+
+For P 2 CŒx of degree n > 0, define GP to be the Galois group of P .x/ t
+over C.t/. Since P .x/ t is irreducible, GP is a transitive subgroup of the
+symmetric group Sn . Generically1 GP is all of Sn , but it can be as small as
+the cyclic or dihedral group for special choices such as P D x n or P D Tn .x/
+(Chebyshev polynomial) respectively. If P decomposes as P .x/ D P1 .P2 .x//
+with each deg.Pi / > 1, then GP permutes the proper subsets fx W P2 .x/ D ug of
+the roots with P1 .u/ D t , and is therefore imprimitive. The converse implication
+is shown in [8, Proposition 3.4]. Müller [12] determined all GP that can arise for
+indecomposable polynomials: they are the symmetric and alternating groups, the
+cyclic groups of prime order, the dihedral groups of order twice an odd prime, and
+twelve exceptional permutation groups with n D 6; 7; : : : ; 23; 31, the last two for
+the sporadic Mathieu group M23 and the linear group GL5 .Z=2Z/.
+   The proof uses covering-space methods and Riemann’s existence theorem, and
+thus does not yield explicit polynomials. But it is still a natural question to exhibit
+all P that realize each possible group GP , except for the cases of An and Sn ,
+MSC2010: primary 12F12; secondary 20D08.
+Keywords: Mathieu group M23 , Galois groups, Chebotarev density theorem.
+    1 In particular, G D S if dP =dx has n          1 distinct roots at which P takes distinct values;
+                       P       n
+equivalently, if disc t .discx .P .x/ t// ¤ 0. This sufficient (but far from necessary) condition was
+already noted by Hilbert ([10], see also [15, §4.4]); the formulation in terms of the discriminant of
+the discriminant is attributed to Davenport in [3, p. 422].
+
+                                                 359
+360                                        NOAM D. ELKIES
+
+
+which occur in “many, not reasonably classifiable types” [12]. Say P; Q 2 CŒx
+are equivalent if Q.x/ D L1 .P .L2 .x/// for some polynomials L1 ; L2 both of
+degree 1; then GP D GQ . Up to this equivalence, the cyclic and dihedral groups
+occur only for powers and Chebyshev polynomials respectively. Some of the ex-
+ceptional groups were realized in [12], or earlier by Matzat [11]; most of the others
+were realized by Cassou-Noguès and Couveignes [4],2 leaving only M23 . Here we
+find the polynomials P with GP Š M23 .
+   The main novelty here is not in the computation of P but in the proof that
+GP Š M23 . The coefficients of P were computed using a known p-adic method for
+finding polynomial identities by solving the equivalent system of nonlinear equa-
+tions in the coefficients, though here the search for the initial approximation took
+several CPU-days. The difficulty was that these equations cannot distinguish be-
+tween polynomials with Galois group M23 and A23 , and there are four M23 -covers
+but numerous A23 -covers with the same cycle structure (with all the A23 -covers
+probably defined only over number fields of rather high degree). Once we found P
+with coefficients in a quartic number field F , we quickly convinced ourselves that
+GP must be M23 by factoring P .x/ t0 mod  for many primes  of F and choices
+of t0 mod  at which P .x/ t0 has distinct roots: in each case the degrees of the fac-
+tors matched one of the 12 cycle structures of elements of M23 , out of the 632 that
+arise in A23 . Moreover, the fraction of t0 values that yield each cycle structure was
+quite near to the fraction of elements of M23 with that cycle structure, as promised
+by the Chebotarev density theorem for Galois extensions of function fields. (I later
+learned from Mark Watkins that Samir Siksek had independently used much the
+same technique to find P and gather overwhelming evidence that GP Š M23 .)
+   Still this did not amount to a proof that GP Š M23 . However, if GP were
+actually A23 then we would observe a very different distribution of cycle structures,
+which would contradict the Chebotarev theorem once the residue field of  got large
+enough. In our function-field setting such a calculation turns out to be feasible
+thanks to Weil’s proof of the Riemann hypothesis for curves over finite fields. We
+did this for a  whose residue field is prime of characteristic l D 108 C 7 (the
+smallest 9-digit prime, which happens to lie under a degree-1 prime of F ). We
+showed that the resulting distribution of cycle structures implies that GP is not
+5-transitive, which soon yields GP Š M23 as desired.
+   The factorization of 108 polynomials mod  was a somewhat extravagant com-
+putation (two days of CPU time in gp [13]). This is not the only way to prove
+that GP Š M23 ; for example, one could do it also by numerically lifting mon-
+odromy generators to permutations of 23 preimages, as Granboulan did for the 24
+      2 Michael Zieve had already obtained but not published polynomials for a few of these cases, with
+
+groups PGL2 .Z=7Z/ (n D 8), P L2 .F8 / (n D 9, both classes), and M11 (n D 11); he also calculated
+that there are four M23 polynomials up to equivalence, but was not able to exhibit such a polynomial.
+                          POLYNOMIALS WITH GALOIS GROUP M23                                    361
+
+
+preimages of an M24 -cover [9]. Still our technique using Chebotarev plus Weil has
+some advantages over the monodromy computation: while our computation took
+rather long to run, it was very easy to code, whereas the monodromy calculation
+would require some careful estimates to guarantee that the precision was sufficient
+to obtain the correct permutations; and our technique works also for Galois groups
+of extensions in positive characteristic. This approach also raises the theoretical
+question of how large a residue field is necessary: perhaps it can be shown that the
+counts over a field of size much smaller than 108 would have sufficed.
+   In the next section we exhibit F and P 2 F Œx and give some details on its
+calculation. In the following section we report on the results of our computation
+mod , use them to prove that GP © A23 , and deduce that a polynomial P1 satisfies
+GP1 Š M23 if and only if P1 is equivalent to the image of our P under one of the
+four embeddings of F into C.
+
+                                   2. Computation of P
+
+Suppose GP Š M23 . By [12], the map P W P1 ! P1 is branched above only three
+points, with orders 23 (at t D 1), 2, and 4. The group M23 contains only one
+conjugacy class of order 2 and one of order 4. The corresponding monodromy
+generators 2 and 4 must have 2 4 of order 23. Up to conjugation in M23 ,
+there are four such pairs . 2 ; 4 /, two for each of the two conjugacy classes of
+elements of order 23 in M23 , and in each case 2 and 4 generate M23 . Since M23
+is its own normalizer in S23 , we conclude that there are four equivalence p   classes
+of M23 polynomials, each defined over a number field F containing Q.               23/
+with degree 1 or 2. We eventually found that F is the dihedral quartic field of
+discriminant 3  233 generated by a root of g 4 C g 3 C 9g 2 10g C 8, which indeed
+contains the square roots ˙.2g 3 C 4g 2 C 16g 7/=3 of 23.
+    The permutations 2 and 4 of 23 objects have cycle structures 17 28 and 13 22 44 .
+Thus P is equivalent to a monic polynomial with two double and four quadruple
+roots. Then, if  is the value of P at its finite critical points other than zeros, we
+can write
+                            P D P22 P3 P44 D P7 P82 C ;                            (1)
+where the Pi (i D 2; 3; 4; 7; 8) are pairwise coprime monic polynomials of degree i,
+and  is a nonzero constant. It may seem that we have 10 coefficients to determine:
+the 2C3C4 non-leading coefficients of P2 ; P3 ; P4 , together with  . We can reduce
+this to 8 variables using the remaining equivalences (translate x, and multiply x
+by some nonzero  and divide each Pi by i ). One further variable is eliminated
+using a familiar3 differentiation trick: dP =dx has leading term 23x 22 and is a
+   3 The earliest published references I know of are [6; 2], but the trick must have been known and
+
+used long before that.
+362                                NOAM D. ELKIES
+
+
+multiple of P2 P43 P8 , so must equal 23P2 P43 P8 ; hence
+                  1 dP =dx   1
+                                2P20 P3 P4 C P2 P30 P4 C 4P2 P3 P40 :
+                                                                   
+           P8 D          3
+                           D                                                         (2)
+                  23 P2 P4   23
+Still the remaining nonlinear equations are too complicated to solve directly by
+techniques such as Gröbner bases, especially since they do not distinguish between
+M23 - and A23 -covers.
+   Instead we use the following strategy. Suppose the solution is defined over a
+number field F with a prime  of small residue field at which the cover P W P1 ! P1
+has good reduction. We can then find our cover mod  by exhaustive search. An
+arbitrary lift to the -adic numbers is then an approximate solution, which can
+be improved by a multivariate Newton iteration. Once we have the solution to
+high enough -adic precision, we can recognize it as an F -rational point by lattice
+reduction, and verify that it satisfies the equations exactly.
+   For a general system of nonlinear equations we could not know in advance
+which  satisfy the condition of good reduction. In our setting, we are seeking
+a “Belyi map” (a cover of P1 ramified only above three points), so Beckmann’s
+theorem [1] gives a sufficient condition: if the characteristic of the residue field of 
+does not divide the order of the Galois group then the cover has good reduction
+at . But we do not know F in advance, and thus do not know which residue fields
+arise. We therefore tried small prime fields Z=p Z in the hope that one would work.
+But searches over .Z=p Z/7 became ever longer without finding the desired cover.
+For example, a search mod 13 (the smallest prime not dividing jM23 j) found only
+
+       P2 D x 2    3x    6;   P3 D x 4     4x   4;    P4 D x 4 C 5x 2    5x    1
+
+with  D 5; but the resulting P D P22 P3 P44 cannot have Galois group M23 because
+there are t0 ¤ 0; 5 for which the factorization of P t0 mod 13 has degrees not
+seen in any of the M23 cycle structures — for instance, P 1 has an irreducible
+factor of degree 19. In retrospect we know there is no M23 polynomial over Z=13Z,
+because F has no primep of degree 1 above 13 (even though 13 does split in the
+quadratic subfield Q.      23/).
+   To bring larger p within reach, we applied the following refinement. For j  0
+and any Q 2 CŒx, denote by cj .Q/ the x j coefficient of Q; for example ci .Pi / D 1
+for each i D 2; 3; 4; 7; 8. For any monic P2 ; P3 ; P4 , let R be the remainder
+when P23 is divided by P82 , where P23 and P8 are defined by (1) and (2). Then R
+has degree deg.P82 / 1 D 15 generically, but must vanish at the desired solu-
+tion. We noticed that if we hold all but c0 .P4 / and c1 .P4 / fixed then c15 .R/ and
+c14 .R/ are polynomials of degree only 2 in c0 .P4 / and of degree 3 in c1 .P4 /;
+in fact, c15 .R/ and c14 .R/ have degrees 2 and 3 respectively in .c0 .P4 /; c1 .P4 //
+together. We could have solved the simultaneous equations c15 .R/ D c14 .R/ D 0 in
+                             POLYNOMIALS WITH GALOIS GROUP M23                                     363
+
+
+.c0 .P4 /; c1 .P4 //, reducing the search from O.p 7 / to O.p 5 / but with quite a large
+O-constant. Instead we opted for the following strategy, which is still O.p 7 / but
+with a much smaller constant. Having fixed all but c0 .P4 / and c1 .P4 /, compute R
+at the 12 sample points with c0 .P4 / D 0; 1; 2 and c1 .P4 / D 0; 1; 2; 3, and then use
+the fact that both c15 .R/ and c14 .R/ are quadratic in c0 .P4 / and cubic in c1 .P4 /
+to recursively evaluate them at all other choices of c0 .P4 / and c1 .P4 /. If both
+vanish, test whether deg.R/ D 0. This way, instead of computing p 2 polynomial
+remainders we need on average only 13: twelve sample points, and one more for
+the expected number of solutions of c15 .R/ D c14 .R/ D 0.
+   We implemented this search in gp (which we used also for the earlier O.p 7 /
+method), and finally succeeded at p D 29. We assumed that c2 .P3 / D 0, and
+that c0 .P3 / D c1 .P3 / if both c0 .P3 / and c0 .P1 / are nonzero; every choice of
+P2 ; P3 ; P4 with c0 .P3 /c1 .P3 / ¤ 0 is equivalent to exactly one satisfying these
+conditions. (One can also make a unique choice if c0 .P3 / D 0 or c1 .P3 / D 0, but
+here this was not necessary.) The search took 46 CPU-hours, compressed to less
+than five hours by running on 10 heads in parallel, which is an order of magnitude
+smaller than the time to compute some 297 polynomial remainders. The result-
+ing list of solutions contained two for which every P .x/ t0 has a factorization
+consistent with GP Š M23 . One of these was
+
+   P2 D x 2    x        3;    P3 D x 3          3x      3;   P4 D x 4   3x 3     11x 2 C 13x C 7
+
+with  D 5. Lifting to Z=p 128 Z (while retaining the conditions c2 .P3 / D 0 and
+c0 .P3 / D c1 .P3 /) gave more than enough precision to identify all the coefficients
+as elements of the quartic field F D QŒg=.g 4 C g 3 C 9g 2 10g C 8/.
+   These elements of F are quite complicated because of the normalization c0 .P3 / D
+c1 .P3 /. Once we have found one choice of P2 ; P3 ; P4 2 F Œx that works, we can
+find equivalent but simpler ones by removing this normalization and the spurious
+bad reduction that it entails. One reasonably simple choice we found (dropping
+also the condition that the Pi be monic) is as follows:
+
+P2 D .8g 3 C 16g 2           20g C 20/x 2            .7g 3 C 17g 2   7g C 76/x
+                3             2
+           13g C 25g                      107g C 596I
+P3 D 8.31g 3 C 405g 2                 459g C 333/x 3 C .941g 3 C 1303g 2          1853g C 1772/x
+                 3                2
+         C 85g          385g C 395g               220I
+P4 D 32.4g 3         69g 2 C 74g             49/x 4 C 32.21g 3 C 53g 2     68g C 58/x 3
+           8.97g 3 C 95g 2                 145g C 148/x 2 C 8.41g 3      89g 2     g C 140/x
+                    3                 2
+           123g C 391g                      93g C 3228:
+364                                    NOAM D. ELKIES
+
+
+With this choice,
+                    238 317
+             D             .47323g 3      1084897g 2 C 7751g           711002/;
+                     233
+the last factor having norm 227 323 510 .
+
+                          3. Proof of Gal.P.x/           t/ Š M23
+
+We chose the degree-1 prime  of F above the rational prime l D 108 C 7 at
+which g  36436770 mod l. We reduced P mod  to obtain a polynomial P
+with coefficients in F D Z= l Z, and factored P t0 for each of the l 2 values
+of t0 mod l for which P t0 has no repeated roots. In each case the degrees of
+the irreducible factors, and thus the cycle structure of the action of Frobenius at
+t D t0 , agreed with the cycle structure of one or two of the conjugacy classes of M23 .
+Table 1 lists the key information for each class or pair of classes c  M23 , including
+the difference between the expected and the actual number of occurrences of c’s
+cycle structure. The agreement is quite close: the discrepancy never exceeds twice
+the square root of the expected value.
+   In particular, because each of the M23 cycle structures occurs (and GP  A23 be-
+cause discx .P .x/ t/ is a square) we know that GP is a transitive subgroup of A23
+containing elements of order p for each of the prime factors p D 2; 3; 5; 7; 11; 23
+
+
+                                                                  Occurrences
+      ATLAS label     Cycle structure jcj=jM23 j        Expected         Actual             
+         1A                  123           1=jM23 j           10             9           1
+         2A                 17 28          1=2688          37202         37235          33
+         3A                 15 36          1=180          555556        556547         991
+         4A                13 22 44        1=32          3125000       3123317        1683
+         5A                 13 54          1=15          6666667       6665816         851
+         6A               1 22 32 62       1=12          8333334       8329354        3980
+        7A, 7B              12 73          2=14         14285715      14290600        4885
+         8A               1 2 4 82         1=8          12500001      12493007        6994
+       11A, 11B             1 112          2=11         18181819      18185450        3631
+       14A, 14B            2 7 14          2=14         14285715      14289505        3790
+       15A, 15B            3 5 15          2=15         13333334      13331689        1645
+       23A, 23B               23           2=23          8695653       8697476        1823
+        Table 1. Data on conjugacy classes. For each class or pair of classes c  M23 ,
+        we list the ATLAS label [5, p. 71], the cycle structure, the fraction jcj=jM23 j,
+        the integer nearest to .jcj=jM23 j/.l 2/ (which is the expected number of occur-
+        rences of this cycle structure), the actual number of times it appeared, and the
+        difference between the actual and expected counts.
+                        POLYNOMIALS WITH GALOIS GROUP M23                                     365
+
+
+of jM23 j D 27  32  5  7  11  23 D 10200960. This shows that GP is either M23
+or A23 .
+   One could try various strategies for deducing GP © A23 from the counts in
+Table 1. The following approach was the one that worked most easily. We shall
+take C0 and C1 to be the projective t - and x-lines in the following general setup.
+   Suppose C1 =C0 is a degree-n covering of curves over some finite field F . Let Cz
+be the Galois closure, with Galois group G  Sn . Assume that G is k-transitive.
+Let Gk be the stabilizer of a k-element set, so the action of Gk on that set gives a
+surjective homomorphism Gk ! Sk whose kernel is the k-point stabilizer; write
+Ck D Cz =Gk , so Ck =C0 is a cover of degree kn . If the cover C1 =C0 is given
+by a polynomial Q of degree n, then with finitely many exceptions a point of Ck
+corresponds to a degree-k factor of a specialization of Q.
+   Let Nk be the number of F -rational points of Ck . For an unramified F -rational
+point t0 on C0 , let Nk .t0 / be the number of F -rational points of Ck lying over t0 .
+We next express Nk .t0 / in terms of the Galois structure of the preimage of t0 in C1 .
+Let  be the Frobenius permutation of the preimage of t0 in C1 .
+Lemma. Let c1 ; c2 ; : : : ; cm (with m
+                                       P
+                                         i D1 cm DQ
+                                                  n) be the cycle lengths of . Then
+Nk .t0 / is the X k coefficient of the polynomial m            ci
+                                                    i D1 .1 C X /.
+Proof. A k-element subset of the preimage of t0 yields a rational point of Ck if and
+only if it is taken to itself by ; equivalently, if and only if it is the union of orbits
+of . Since these orbits have sizes ci , the expansion of m                    ci
+                                                                Q
+                                                                    i D1 .1 C X / yields
+             m                                         k
+a sum of 2 monomials, with each monomial X corresponding to a k-element
+subset.                                                                                
+   We now take C0 and C1 to be the t - and x-lines. Then G D GP by Beckmann’s
+criterion [1] (since l is too large to be a factor of jGj even if G D A23 ). Using the
+entries in Table 1, we find for each k D 1; 2; : : : ; 22 the sum of m             ci
+                                                                      Q
+                                                                       i D1 .1 C X /
+over the l 2 unramified points t0 . The sum is invariant under k $ n k, so we
+                                                           P
+need only tabulate up to k D 11. In each case we write t0 Nk .t0 / D Al B with
+A 2 Z minimizing jBj; the results are given in Table 2.
+   In each case Al B is a lower bound for Nk , with the difference coming from
+the counts above the three ramified points. If G acts k-transitively then Ck is an
+
+            k A           B         k A                 B             k A            B
+            1    1    10             5   2 10892                       9   5 487620
+            2    1 6592              6   3 60120                      10   5 742744
+            3    1 19784             7   4 109978                     11   7 883854
+            4    1 2326              8   5 243430
+                                               P
+         Table 2. Integers A and B such that       t0 Nk .t0 / D Al    B, with jBj minimal.
+366                                     NOAM D. ELKIES
+
+
+irreducible curve, and then the Weil bound gives jNk .l C 1/j  2l 1=2 g.Ck /.
+Table 2 suggests that this might happen for k  4 but not for k D 5 (and indeed C5
+has two components, one for each of the orbits of the action of M23 on 5-element
+subsets). We next prove that G is not 5-transitive by bounding g.C5 /. If GP D A23
+then Ck has genus at most
+                                                              
+                   1       1 1      1                     1 19 23
+              1C       1                 ŒCk W C0  D 1 C
+                   2       2 4 23                         2 92 k
+by the Riemann-Hurwitz formula. For k D 5 this gives 27805=8, so g.C5 / < 3476.
+Therefore
+                   jN5 .l C 1/j < 2l 1=2  3476 < 7  107 :                 (3)
+But the k D 5 row of Table 2 gives
+                            N5     .l C 1/  l      10893 > 9  107 ;                            (4)
+even without including the preimages of the ramified points. The conflict between
+inequalities (3) and (4) refutes the hypothesis that GP D A23 and completes the
+proof that GP Š M23 .                                                          
+
+                                      Acknowledgments
+
+I thank Michael Zieve for telling me of the remaining M23 case in Müller’s list, and
+of the earlier work of himself and of Cassou-Noguès and Couveignes on the other
+groups. I also thank: the referee, for a careful reading resulting in several local cor-
+rections and improvements; John Voight, for the reference [2]; Mark Watkins, for
+apprising me of Siksek’s independent work on this problem; and Watkins, Voight,
+and Zieve also for other helpful correspondence on this and similar problems.
+    This research was supported in part by NSF grants DMS-0501029 and DMS-
+1100511.
+
+                                           References
+[1]   Sybilla Beckmann, Ramified primes in the field of moduli of branched coverings of curves, J.
+      Algebra 125 (1989), no. 1, 236–255. MR 90i:11063
+[2] Bryan Birch, Noncongruence subgroups, covers and drawings, in Schneps [14], 1994, pp. 25–
+    46. MR 95k:11055
+[3]   B. J. Birch and H. P. F. Swinnerton-Dyer, Note on a problem of Chowla, Acta Arith. 5 (1959),
+      417–423. MR 22 #4675
+[4]   Pierrette Cassou-Noguès and Jean-Marc Couveignes, Factorisations explicites de g.y/      h.z/,
+      Acta Arith. 87 (1999), no. 4, 291–317. MR 99m:11023
+[5] J. H. Conway, R. T. Curtis, S. P. Norton, R. A. Parker, and R. A. Wilson, ATLAS of finite groups:
+    maximal subgroups and ordinary characters for simple groups, Oxford University Press, Eyn-
+    sham, 1985. MR 88g:20025
+                          POLYNOMIALS WITH GALOIS GROUP M23                                     367
+
+
+[6]   Noam D. Elkies, ABC implies Mordell, Internat. Math. Res. Notices (1991), no. 7, 99–109.
+      MR 93d:11064
+[7]   Michael D. Fried, Shreeram S. Abhyankar, Walter Feit, Yasutaka Ihara, and Helmut Voelklein
+      (eds.), Recent developments in the inverse Galois problem: Papers from the Joint Summer Re-
+      search Conference held at the University of Washington, Seattle, Washington, July 17–23, 1993,
+      Contemporary Mathematics, no. 186, American Mathematical Society, Providence, RI, 1995.
+      MR 96c:00033
+[8]   Michael D. Fried and R. E. MacRae, On the invariance of chains of fields, Illinois J. Math. 13
+      (1969), no. 1, 165–171. MR 39 #179
+[9]   Louis Granboulan, Construction d’une extension régulière de Q.T / de groupe de Galois M24 ,
+      Experiment. Math. 5 (1996), no. 1, 3–14. MR 98c:12006
+[10] David Hilbert, Ueber die Irreducibilität ganzen rationaler Functionen mit ganzzahligen Coeffi-
+     cienten, J. Reine Angew. Math. 110 (1892), 104–129.
+[11] B. Heinrich Matzat, Konstruktion von Zahl- und Funktionenkörpern mit vorgegebener Galois-
+     gruppe, J. Reine Angew. Math. 349 (1984), 179–220. MR 85j:11164
+[12] Peter Müller, Primitive monodromy groups of polynomials, in Fried et al. [7], 1995, pp. 385–
+     401. MR 96m:20004
+[13] PARI Group, PARI/GP (version 2.4.3), 2011. http://pari.math.u-bordeaux.fr/
+[14] Leila Schneps (ed.), The Grothendieck theory of dessins d’enfants: Papers from the Conference
+     on Dessins d’Enfant held in Luminy, April 19–24, 1993, London Mathematical Society Lecture
+     Note Series, no. 200, Cambridge University Press, 1994. MR 95f:11001
+[15] Jean-Pierre Serre, Topics in Galois theory, Research Notes in Mathematics, no. 1, Jones and
+     Bartlett Publishers, Boston, 1992. MR 94d:12006
+
+N OAM D. E LKIES : elkies@math.harvard.edu
+Department of Mathematics, Harvard University, Cambridge, MA 02138, United States
+
+
+
+
+                                                                                              msp
+                            VOLUME EDITORS
+
+
+          Everett W. Howe                        Kiran S. Kedlaya
+Center for Communications Research         Department of Mathematics
+        4320 Westerra Court             University of California, San Diego
+    San Diego, CA 92121-1969                9500 Gilman Drive #0112
+            United States                   La Jolla, CA 92093-0112
+
+
+
+
+Front cover artwork based on a detail of
+Chicano Legacy 40 Años © 2010 Mario Torero.
+The contents of this work are copyrighted by MSP or the respective authors.
+All rights reserved.
+Electronic copies can be obtained free of charge from http://msp.org/obs/1
+and printed copies can be ordered from MSP (contact@msp.org).
+The Open Book Series is a trademark of Mathematical Sciences Publishers.
+ISSN: 2329-9061 (print), 2329-907X (electronic)
+ISBN: 978-1-935107-00-2 (print), 978-1-935107-01-9 (electronic)
+First published 2013.
+
+
+
+
+  msp
+MATHEMATICAL SCIENCES PUBLISHERS
+798 Evans Hall #3840, c/o University of California, Berkeley CA 94720-3840
+contact@msp.org                                               http://msp.org
+THE OPEN BOOK SERIES 1
+Tenth Algorithmic Number Theory Symposium
+
+The Algorithmic Number Theory Symposium (ANTS), held biennially since 1994, is the premier
+international forum for research in computational number theory. ANTS is devoted to algorithmic
+aspects of number theory, including elementary, algebraic, and analytic number theory, the
+geometry of numbers, arithmetic algebraic geometry, the theory of finite fields, and cryptography.
+This volume is the proceedings of the tenth ANTS meeting, held July 9–13, 2012, at the Univer-
+sity of California, San Diego. It includes revised and edited versions of the 25 refereed papers
+presented at the conference, together with extended abstracts of two of the five invited talks.
+
+TABLE OF CONTENTS
+
+Deterministic elliptic curve primality proving for a special sequence of numbers — Alexander Abatzoglou,          1
+    Alice Silverberg, Andrew V. Sutherland, and Angela Wong
+Imaginary quadratic fields with isomorphic abelian Galois groups — Athanasios Angelakis and Peter                21
+    Stevenhagen
+Iterated Coleman integration for hyperelliptic curves — Jennifer S. Balakrishnan                                 41
+Finding ECM-friendly curves through a study of Galois properties — Razvan Bărbulescu, Joppe W. Bos, Cyril       63
+     Bouvier, Thorsten Kleinjung, and Peter L. Montgomery
+Two grumpy giants and a baby — Daniel J. Bernstein and Tanja Lange                                               87
+Improved techniques for computing the ideal class group and a system of fundamental units in number fields —    113
+    Jean-François Biasse and Claus Fieker
+Conditionally bounding analytic ranks of elliptic curves — Jonathan W. Bober                                    135
+                                     √
+A database of elliptic curves over Q( 5): a first report — Jonathan Bober, Alyson Deines, Ariah Klages-Mundt,   145
+    Benjamin LeVeque, R. Andrew Ohana, Ashwath Rabindranath, Paul Sharaba, and William Stein
+Finding simultaneous Diophantine approximations with prescribed quality — Wieb Bosma and Ionica Smeets          167
+Success and challenges in determining the rational points on curves — Nils Bruin                                187
+Solving quadratic equations in dimension 5 or more without factoring — Pierre Castel                            213
+Counting value sets: algorithm and complexity — Qi Cheng, Joshua E. Hill, and Daqing Wan                        235
+Haberland’s formula and numerical computation of Petersson scalar products — Henri Cohen                        249
+Approximate common divisors via lattices — Henry Cohn and Nadia Heninger                                        271
+Explicit descent in the Picard group of a cyclic cover of the projective line — Brendan Creutz                  295
+Computing equations of curves with many points — Virgile Ducet and Claus Fieker                                 317
+Computing the unit group, class group, and compact representations in algebraic function fields — Kirsten       335
+   Eisenträger and Sean Hallgren
+The complex polynomials P(x) with Gal(P(x) − t) ∼
+                                                = M23 — Noam D. Elkies                                          359
+Experiments with the transcendental Brauer-Manin obstruction — Andreas-Stephan Elsenhans and Jörg Jahnel        369
+Explicit 5-descent on elliptic curves — Tom Fisher                                                              395
+On the density of abelian surfaces with Tate-Shafarevich group of order five times a square — Stefan Keil and   413
+    Remke Kloosterman
+Improved CRT algorithm for class polynomials in genus 2 — Kristin E. Lauter and Damien Robert                   437
+Fast computation of isomorphisms of hyperelliptic curves and explicit Galois descent — Reynald Lercier,         463
+     Christophe Ritzenthaler, and Jeroen Sijsling
+Elliptic factors in Jacobians of hyperelliptic curves with certain automorphism groups — Jennifer Paulhus       487
+Isogeny volcanoes — Andrew V. Sutherland                                                                        507
+On the evaluation of modular polynomials — Andrew V. Sutherland                                                 531
+Constructing and tabulating dihedral function fields — Colin Weir, Renate Scheidler, and Everett W. Howe        557
+

@@ -1,0 +1,35 @@
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/graph_free_star_peel_batched.py", line 299, in profile
+    ).run()
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/graph_free_star_peel_batched.py", line 277, in run
+    row = super().run()
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/graph_free_star_peel.py", line 345, in run
+    result = self.test_pivot(pivot)
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/graph_free_star_peel_batched.py", line 232, in test_pivot
+    self.prepare_pair_batch(pivot, tuple(prospective))
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/graph_free_star_peel_batched.py", line 98, in prepare_pair_batch
+    child_rows = G.P.S.G.T.coverages_many(self.after[pivot], missing)
+  File "/Users/e/Documents/GitHub/math/04-computation/lrc14_thm2885_eight_body_top15_hitting_gate_codex_20260729.py", line 133, in coverages_many
+    require(
+  File "/Users/e/Documents/GitHub/math/04-computation/lrc14_thm2885_eight_body_top15_hitting_gate_codex_20260729.py", line 63, in require
+    raise RuntimeError(message)
+RuntimeError: vector primitive component arithmetic would overflow int64
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/graph_free_star_peel_batched.py", line 432, in <module>
+    main()
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/graph_free_star_peel_batched.py", line 341, in main
+    profiled = list(pool.imap(profile, tasks, chunksize=1))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/multiprocessing/pool.py", line 870, in next
+    raise value
+RuntimeError: vector primitive component arithmetic would overflow int64
+real 33.75
+user 91.11
+sys 4.84

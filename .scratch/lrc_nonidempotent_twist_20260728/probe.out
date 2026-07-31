@@ -1,0 +1,19 @@
+NON-IDEMPOTENT SAME-ATOM ALLOCATION PROBE
+status=FINITE-EXACT scratch; abstract lemmas proved in REPORT.md
+field=53; primitive_13th_root=10
+idempotent=field_idempotents=(0, 1);fourfold_nonidempotent_unit_successes=121;coarse_graining_checks=20736
+coarse_nonzero_examples=(((0, 0, 0, 0), (0, 0, 0, 0), (-1, -1, -1, -1), -4), ((0, 0, 0, 0), (0, 0, 0, 0), (-1, -1, -1, 0), -3), ((0, 0, 0, 0), (0, 0, 0, 0), (-1, -1, -1, 1), -2))
+conditional_expectation_hostile=(B,P,Q,H)=(4, 2, 2, 1);mu=1;source_of_mu=both-absent atom, not fourfold-common atom
+allocation_sign=flat_spectrum=(4, 0, 0, 0);alternating_twist_spectrum=(0, 0, 0, 4);verdict=twist shifts trivial mass into mixed character
+character_faces_by_marked_origin=(0, 43, 20, 40, 10, 44, 31, 2, 28, 47, 9, 48, 9)
+representative_gauge=vertex_factors=(1, 10, 16, 1);verdict=no common scalar descent
+canonical_local_system_transport=raw=(1, 36, 24, 16);transported=(1, 1, 1, 1);covariant_mu=0
+thm2593_charged_atlas=nontrivial_edges=156;unit_edge_contrasts=152;nonunit_edge_contrasts=((9, 5, 1), (12, 5, 4), (1, 8, 9), (4, 8, 12));ordered_nonzero_mixed_products=24336;unit_mixed_products=23104;crt_zero_component_histogram={(): 152, (6,): 4};verdict=coefficient-positive-control but coboundary between different sheets
+quarter_turn=v=(1, 0);Jv=(0, 1);J2v=(-1, 0);mixed_vector=(0, -2);scalar_readout=(1, 1, 1, -1);verdict=minimal integral signed local-system escape
+rees=central=(169, 13, 13, 1);valuations=(2, 1, 1, 0);leading_units=(1, 1, 1, 1);valuation_curvature=0;common_grade=(169, 169, 169, 169);verdict=ungraded_mu_is_orbit-cardinality_contrast_not_2-curvature
+projective_square_gauge=nonzero_squares=20736;kappa_fibre_histogram={1: 1728, 2: 1728, 3: 1728, 4: 1728, 5: 1728, 6: 1728, 7: 1728, 8: 1728, 9: 1728, 10: 1728, 11: 1728, 12: 1728};anchored_orbit_sizes={1: 1728, 2: 1728, 3: 1728, 4: 1728, 5: 1728, 6: 1728, 7: 1728, 8: 1728, 9: 1728, 10: 1728, 11: 1728, 12: 1728};kappa_one_mu_histogram={0: 276, 1: 121, 2: 121, 3: 121, 4: 121, 5: 121, 6: 121, 7: 121, 8: 121, 9: 121, 10: 121, 11: 121, 12: 121};flat_example=((1, 1, 1, 1), 0);rephased_segre_example=((1, 2, 3, 6), 2);verdict=kappa classifies row/column gauge orbits, while additive mu is not projectively intrinsic
+symplectic_heisenberg_frames=ordered_nondegenerate_frames=26208;determinant_histogram={1: 2184, 2: 2184, 3: 2184, 4: 2184, 5: 2184, 6: 2184, 7: 2184, 8: 2184, 9: 2184, 10: 2184, 11: 2184, 12: 2184};phase_histogram={16: 2184, 44: 2184, 15: 2184, 28: 2184, 24: 2184, 13: 2184, 49: 2184, 42: 2184, 36: 2184, 46: 2184, 47: 2184, 10: 2184};swap_inverse_checks=26208;verdict=each nontrivial central phase occurs 2184 times and frame swap inverts it
+heisenberg_escape=weyl_checks=13;cocycle_square=(1, 1, 1, 10);cross_ratio=10;verdict=nontrivial_gauge-invariant_joint_phase_requires_internal_fibre
+thm2807_triangle=integer_edges=(13, 689351, 689364);formal_edges=((1, 0), (0, 4079), (1, 4079));holonomy=1;vertical_residue=10
+thm2771_cofiber_copies=address_shifts=(-13, 1248);depth_one_residues=(12, 5);epsilon_coefficients=(2, 4, 11, 9, 6, 0, 1, 12, 1, 12, 1, 12, 1);bockstein_weighted_coefficients=(5, 10, 8, 3, 2, 0, 9, 4, 9, 4, 9, 4, 9);verdict=two disjoint atoms give a unit copy-germ, not same-atom face
+frontier=a fixed nontrivial edge phase is the cheapest additive escape, and a joint cocycle kappa!=1 is the cheapest edge-rephasing-invariant escape.  Existing phases are signed or are coboundaries between distinct sheets; positive averaging preserves bare-only provenance.  THM-2791/2807/cofiber sheets do not realize either escape on one full physical atom.

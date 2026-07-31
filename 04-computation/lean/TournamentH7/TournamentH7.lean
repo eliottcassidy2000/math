@@ -66,6 +66,9 @@
                                       attainment on a compact period.
     · TournamentH7.LRCWitnessAttainmentBridge — equivalence between the
                                       margin and concrete Mreach interfaces.
+    · TournamentH7.LRCSignedRayGate — exact signed-ray attainment, primitive
+                                      unit phase, translated-band capacity,
+                                      and affine flag arithmetic for THM-2984.
     · TournamentH7.LRCMaxGapPigeonhole — finite max-gap pigeonhole and the
                                       seven-gap equality boundary for `hnu1`.
     · TournamentH7.LRCDenseCovers — pointwise dense-cover inclusion
@@ -336,6 +339,7 @@ import TournamentH7.LRCTorusRate  -- mac-mini-2026-07-06-S10: the elementary lif
 import TournamentH7.LRCUniformCell  -- mac-mini-2026-07-06-S3: the UNIFORM CELL LEMMA core -- the stratification apparatus parametric over every Farey cell (c,q): dInt_scale_cell, binder_dvd_cell, grid_div_cell, pair_sum_dvd_cell + NEW binder_unit_cell (quotient binders are units mod q) + witness_determined_cell (coprime cancellation) (HYP-4252)
 import TournamentH7.LRCCertCompleteness  -- kps-S3(2026-07-05): certificate completeness (margin => atom cert, modulus bound s <= B/(2(beta'-beta))+1) + gap filters (not_loose covering/near-unit/mod-13,14 pinning INTO the gap, +-pair covering) (HYP-4105)
 import TournamentH7.LRCGridAttainment  -- kps-S4(2026-07-05): THM-592 grid attainment (margin max at m/(|vi|+|vj|), perturbation proof) + grid_margin_domination + loose_branch_cert_2B (modulus <= 2B, zero slack) (HYP-4108)
+import TournamentH7.LRCSignedRayGate  -- THM-2984 signed-ray/unit-phase gate and translated-capacity arithmetic
 import TournamentH7.LRCMergeExclusion  -- kps-S5(2026-07-05): the merge exclusion formal (margin value = k/s on the grid; gap (1/13,2/25) forces |vi|+|vj| >= 38 via omega incl. the k=2 parity kill) (HYP-4110)
 import TournamentH7.LRCPeelCompression  -- kps-S6(2026-07-05): the 24B top-compression of gap violators (citation floor 1/12 beats gap ceiling 2/25 by 1/300; real-dialect interval escape + peel; gap_compressed_24) (HYP-4112)
 import TournamentH7.LRCGapLadder  -- kps-S7(2026-07-05): the l>=2 peel ladder at rho=2/25 on klein's S136 stack (gap_tower_step + gap_ladder_rung: order-statistic compression C_l = 150l(13-l)/((2l-1)(25-4l)), l<=6) (HYP-4115)

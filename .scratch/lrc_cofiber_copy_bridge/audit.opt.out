@@ -1,0 +1,29 @@
+THM-2806/THM-2771 RAIL-EIGHT COFIBER COPY AUDIT
+status=FINITE-EXACT scratch; no LRC conclusion
+cell=(0, 4, 1); factor_order=('E3', 'clock', 'q1', 'q2', 'c2', 'c3'); I=(142004992589460, 142005019034340); Jminus=(142004190428100, 142004216872980); Jplus=(142082000080020, 142082026524900)
+translations=(Jminus-I=-T/13^5,Jplus-I=96T/13^5); full_address_shifts=(-13,+1248)
+objects=(I in M=A_intersect_B; (Jminus,Jplus) in R=B_minus_A); raw_R_piece_count=241;coefficient_effective_piece_count=2
+M_factor_masks=(source_native=(True, True, True, True, True, True),source_pulled=(True, True, True, True, True, True),target_native=(True, True, True, True, True, True),target_adjacent=(True, True, True, True, True, True))
+R-_factor_masks=(source_native=(False, True, True, True, True, True),source_pulled=(True, True, True, True, True, True),target_native=(True, True, True, True, True, True),target_adjacent=(False, True, True, True, True, True))
+R+_factor_masks=(source_native=(False, True, True, True, False, True),source_pulled=(True, True, True, True, True, True),target_native=(True, True, True, True, True, True),target_adjacent=(False, True, True, True, False, True))
+first_factor_failure=(Rminus:E3,Rplus:E3_then_c2); both_pass_all_pulled_target_factors
+ancestry=(U=966606,V=28534,product=27581135604,digest=15c804c7cea9f61feab3b641eccdc035d937142b446d1cc14e059210eb1534fd,identity_sets_on_all_three=yes,supplied_path=(59162, 26, 56658):active)
+M_semantic=(source_nonzero=((12, (0, 103478815440)),),target_nonzero=((6, (0, 103478815440)),),roots_deep=(5, 6, 12),full_address=2301363)
+M_carrier_twist_masks=(source=(True, False, False, False, False, False, False, False, False, False, False, False, False),target=(True, False, False, False, False, False, False, False, False, False, False, False, False))
+M_S_endpoint_mask=(zero_one_counts=(88, 81),digest=681c43d56526b5b52b1f0bb3521f08cf8bf8ba9f3b51967a2283be760565e4ee)
+M_T_endpoint_mask=(zero_one_counts=(88, 81),digest=681c43d56526b5b52b1f0bb3521f08cf8bf8ba9f3b51967a2283be760565e4ee)
+R-_semantic=(source_nonzero=((12, (0, 103478815440)),),target_nonzero=((6, (0, 103478815440)),),roots_deep=(5, 6, 12),full_address=2301350)
+R-_carrier_twist_masks=(source=(False, False, False, False, False, False, False, False, False, False, False, False, False),target=(True, False, False, False, False, False, False, False, False, False, False, False, False))
+R-_S_endpoint_mask=(zero_one_counts=(169, 0),digest=605d47a6802a6ba6675ce2970606011e1d53eebdd846effd6f47bd0903d7ed13)
+R-_T_endpoint_mask=(zero_one_counts=(88, 81),digest=681c43d56526b5b52b1f0bb3521f08cf8bf8ba9f3b51967a2283be760565e4ee)
+R+_semantic=(source_nonzero=((12, (0, 103478815440)),),target_nonzero=((6, (0, 103478815440)),),roots_deep=(5, 6, 12),full_address=2302611)
+R+_carrier_twist_masks=(source=(False, False, False, False, False, False, False, False, False, False, False, False, False),target=(True, False, False, False, False, False, False, False, False, False, False, False, False))
+R+_S_endpoint_mask=(zero_one_counts=(79, 90),digest=e58ebf4b115e803796a8fd10516811a739a445a5db8b879f799a9db9f921c8de)
+R+_T_endpoint_mask=(zero_one_counts=(70, 99),digest=5243cf1be640698c0960708c6ae595b93b735a1188893f269d82fffbe18c34ae)
+endpoint_mask_comparisons={('S', 'R-'): (81, ()), ('S', 'R+'): (27, ()), ('T', 'R-'): (0, ((0, 0),)), ('T', 'R+'): (18, ())}
+copy_vector=(0, 2854063240791928925760, 2854063240791928925760, 2854063240791928925760, 2854063240791928925760, 2854063240791928925760, 2854063240791928925760); right_total_vector=(0, 5708126481583857851520, 5708126481583857851520, 5708126481583857851520, 5708126481583857851520, 5708126481583857851520, 5708126481583857851520)
+arithmetic=57068*k1=w:27581135604;57068*c=g0:5905329039529920;each_copy=wc=g0*k1:2854063240791928925760;right_total=2wc:5708126481583857851520;primitive=2k1:966606
+intrinsic_Bockstein_mod13=(each_copy=9,sum=5=9+9)
+lawful_positive=after the inherited coefficient filters, R is the literal disjoint union of two equal coefficient/Bockstein summands
+minimal_obstruction=no cospan from M to the copies in the typed physical category: native E3 already fails on both; Rplus also fails c2; source carrier-twist support is empty and endpoint masks are not translates
+boundary=the additive Bockstein split survives, but it supplies neither THM-2771 target convolution nor a target-role/root-deck intertwiner; equal content is not a common-ancestry map

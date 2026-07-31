@@ -1,5 +1,25 @@
 # Script Results Index
 
+- `lrc14_projected_k3_signed_ray_gate_thm2984.py` -> matching `.out`
+  [THM-2984 PROVED + FINITE-EXACT + HOSTILE-AUDITED + LEAN-CORE-FORMALIZED].
+  Exact residue replay checks the centered bad-band cardinality and transporter,
+  arbitrary-translation capacity `ceil(d/7)`, affine containment/realization,
+  the cyclic-gap and composition-orbit normal forms, the short-order pair
+  criterion, and the complete affine flag classification
+  `d in {2,3,4,5,6,7,8,10,12,14,15}`.  Controls include all subsets through
+  `d=15`, every equality split through `d=5000`, all `58` signed units in the
+  six sporadic gap tables, and the uniform `d=7m` obstruction for
+  `4<=m<=1000`, `m!=6`.  Ordinary and optimized Python are byte-identical;
+  every gate uses explicit `require`, not `assert`.  The sorry-free root-imported
+  module `TournamentH7/LRCSignedRayGate.lean` formalizes signed-ray attainment,
+  height-free primitive-unit phase, centered and translated capacity arithmetic,
+  and the uniform flag-obstruction arithmetic; its axiom audit contains only
+  `propext`, `Classical.choice`, and `Quot.sound`, with no `native_decide`.
+  Source/output/semantic/Lean SHA-256:
+  `291818c42929dabf3b261ca91604d5f0fdfa16a210faf51e19bcac71a38a1b41` /
+  `9e33756dd352042ba6a4571a0af1af626e70e0991e94624c0dfe18711a229dbc` /
+  `756ae7ed291fc438648ed76f57b07eae1cde4a1879b184f9564b6ca8adc94f48` /
+  `6f3ab284fc1936ebc0b565bf812fcdc38e6940d17e93d607b802f80d6261bc91`.
 - `lrc14_upward_status_fractional_cover_audit_thm2928.py` -> matching `.out`
   [THM-2928 PROVED GENERAL LP THEOREM + FINITE-EXACT HOSTILE AUDIT].  For
   every upward event `A` on `p` status bits with fixed one-marginals `r`,

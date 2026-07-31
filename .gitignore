@@ -61,3 +61,6 @@ test_images/
 04-computation/lean/**/.lake/
 lrc14_thm741_detached_run_log.txt
 lrc14_thm741_detached_run_err.txt
+
+# Vendored third-party packages downloaded into scratch (not project work)
+.scratch/**/vendor/

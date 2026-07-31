@@ -1,0 +1,14 @@
+LRC14 j6 edge-local matching cutoff probe
+parameters=scope:unique,max_high:20000,max_partner:20000,workers:1
+counts=(1, 25, 6, 2, 1, 1, 131, 87, 315)
+status_distribution=(('ENUMERATED', 2), ('PARTNER_GATE_FAILED', 4))
+ROW E=(1, 8, 10, 11, 12, 13, 14);rank=1;a=23;status=PARTNER_GATE_FAILED;eta=8951513/2498640144;Nh=2143;H=48;bad=((17, Fraction(-61029877, 43726202520), None, 'NONPOSITIVE'), (18, Fraction(-193354199, 43726202520), None, 'NONPOSITIVE'), (19, Fraction(-5152099, 3363554040), None, 'NONPOSITIVE'), (27, Fraction(-430366309, 131178607560), None, 'NONPOSITIVE'), (34, Fraction(-24746705, 8745240504), None, 'NONPOSITIVE'));Nmax=18091;edges=0;hostile=0;matching=None;closed=0
+ROW E=(1, 8, 10, 11, 12, 13, 14);rank=2;a=27;status=PARTNER_GATE_FAILED;eta=58153279/23149166040;Nh=3538;H=66;bad=((17, Fraction(-678998647, 98383955670), None, 'NONPOSITIVE'), (19, Fraction(-115289077, 11574583020), None, 'NONPOSITIVE'), (25, Fraction(-5457121, 4133779650), None, 'NONPOSITIVE'), (34, Fraction(-7040767, 1405485081), None, 'NONPOSITIVE'), (37, Fraction(-145878247, 107064892935), None, 'NONPOSITIVE'), (38, Fraction(-33040939, 11574583020), None, 'NONPOSITIVE'), (41, Fraction(1133707, 9684855180), 86298, 'TOO_LARGE'), (46, Fraction(-8940187, 1653511860), None, 'NONPOSITIVE'), (53, Fraction(19028411, 43818064290), 23262, 'TOO_LARGE'));Nmax=86298;edges=0;hostile=0;matching=None;closed=0
+ROW E=(1, 8, 10, 11, 12, 13, 14);rank=3;a=19;status=PARTNER_GATE_FAILED;eta=65813591/15752296560;Nh=1644;H=33;bad=((17, Fraction(1239577, 9188839660), 41935, 'TOO_LARGE'), (18, Fraction(-85784971, 13783259490), None, 'NONPOSITIVE'), (46, Fraction(-149048461, 105671656090), None, 'NONPOSITIVE'));Nmax=41935;edges=0;hostile=0;matching=None;closed=0
+ROW E=(1, 8, 10, 11, 12, 13, 14);rank=4;a=46;status=ENUMERATED;eta=14001067/1841103264;Nh=1115;H=15;bad=();Nmax=1746;edges=84;hostile=313;matching=(Fraction(210257, 1381380), (34, 44), (17, 18));closed=0
+ROW E=(1, 8, 10, 11, 12, 13, 14);rank=5;a=18;status=PARTNER_GATE_FAILED;eta=5687791/888287400;Nh=1009;H=12;bad=((17, Fraction(-25076417, 43526082600), None, 'NONPOSITIVE'),);Nmax=1618;edges=0;hostile=0;matching=None;closed=0
+ROW E=(1, 8, 10, 11, 12, 13, 14);rank=6;a=17;status=ENUMERATED;eta=66538477/6611104500;Nh=682;H=2;bad=();Nmax=696;edges=3;hostile=2;matching=None;closed=1
+canonical_ledger_sha256=1e680561e42b62777a11c02d61ae30a37cc56e38301136400fda289f43bda5a9
+graph=undirected exact weighted graph;ties retained;no orientation
+scope=edge-local finite-tail matching certificate only
+all_exact_controls=PASS

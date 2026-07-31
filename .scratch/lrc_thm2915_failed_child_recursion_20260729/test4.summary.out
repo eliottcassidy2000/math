@@ -1,0 +1,32 @@
+selected=4
+pair_positive=3
+pair_nonpositive=1
+pair_equal=0
+hunter_positive_after_pair=1
+hunter_nonpositive_after_pair=0
+hunter_equal=0
+pair_horizon_extensions=0
+maximum_pair_horizon=2000
+minimum_pair_tail_gap=285521305/96576696216
+paid_pairs=54
+recursive_processed=0
+recursive_closed=0
+recursive_open=0
+second_pivots=0
+second_closed=0
+second_open=0
+maximum_second_core=0
+maximum_second_cutoff=0
+maximum_top3_horizon=0
+minimum_top3_tail_gap=None
+closed_children=4
+open_children=0
+route_histogram=(('hunter', 1), ('pair', 3))
+composition={'failed_parents': 3, 'failed_roots': 3, 'completed_parents': 3, 'remaining_parents': 0, 'completed_roots': 3, 'remaining_roots': 0, 'completed_root_set': ((1, 2, 3, 4, 5, 7, 8), (1, 2, 3, 4, 5, 7, 9), (1, 2, 3, 4, 5, 7, 10))}
+pair_seconds=0.47793670799910615
+recursive_seconds=0.0
+pair_semantic_sha256=fe6db24dd2f8adad1c4eb3e7a90a1bba2072d7e35d3a72616f4ff40e7dea621c
+recursive_semantic_sha256=None
+closest_pair_positive=PAIR;E=1,2,3,4,5,7,9;rank=1;a=24;P=24;x=22;earlier=;h=6451/38808;r=30;M=2000;scan=1984;top4=39:2447/48510,26:13271/280280,52:34423/840840,23:915/24794;B2=4146017/51711660;B2w=39,41;B2tail=6359867/82361160;B2gap=285521305/96576696216;paid=29;extensions=0;pairmargin=607847/103423320;G4=124620091/792912120;G4margin=5388443/594684090;lambda=None;route=pair
+closest_pair_failure=PAIR;E=1,2,3,4,5,7,10;rank=1;a=22;P=22;x=24;earlier=;h=12553/64680;r=32;M=2000;scan=1984;top4=26:1163/21560,27:467/9240,18:677/13860,52:37657/840840;B2=40847/420420;B2w=26,27;B2tail=3204842/37748865;B2gap=8020953/654313660;paid=5;extensions=0;pairmargin=-199/840840;G4=80099/420420;G4margin=997/280280;lambda=None;route=hunter
+closest_hunter_positive=PAIR;E=1,2,3,4,5,7,10;rank=1;a=22;P=22;x=24;earlier=;h=12553/64680;r=32;M=2000;scan=1984;top4=26:1163/21560,27:467/9240,18:677/13860,52:37657/840840;B2=40847/420420;B2w=26,27;B2tail=3204842/37748865;B2gap=8020953/654313660;paid=5;extensions=0;pairmargin=-199/840840;G4=80099/420420;G4margin=997/280280;lambda=None;route=hunter

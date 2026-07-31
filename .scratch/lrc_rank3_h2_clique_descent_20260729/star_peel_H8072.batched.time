@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/graph_free_star_peel_batched.py", line 523, in <module>
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/graph_free_star_peel_batched.py", line 425, in main
+    profiled = [profile(task) for task in tasks]
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/graph_free_star_peel_batched.py", line 425, in <listcomp>
+    profiled = [profile(task) for task in tasks]
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/graph_free_star_peel_batched.py", line 386, in profile
+    ).run()
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/graph_free_star_peel_batched.py", line 360, in run
+    row = super().run()
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/graph_free_star_peel.py", line 345, in run
+    result = self.test_pivot(pivot)
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/graph_free_star_peel_batched.py", line 315, in test_pivot
+    self.prepare_pair_batch(pivot, tuple(prospective))
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc_rank3_h2_clique_descent_20260729/graph_free_star_peel_batched.py", line 169, in prepare_pair_batch
+    self.after[pivot] = G.P.S.R.subtract_local(carrier, pivot)
+  File "/Users/e/Documents/GitHub/math/04-computation/lrc14_thm741_residual_apex_hitting_closure_codex_20260729.py", line 263, in subtract_local
+    if cursor >= right:
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/fractions.py", line 727, in __ge__
+    return a._richcmp(b, operator.ge)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/fractions.py", line 691, in _richcmp
+    def _richcmp(self, other, op):
+KeyboardInterrupt
+time: command terminated abnormally
+real 125.11
+user 99.43
+sys 5.82

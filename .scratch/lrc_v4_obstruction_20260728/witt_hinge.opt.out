@@ -1,0 +1,11 @@
+LRC V4 / WITT-CARRY HINGE AUDIT
+carry_cocycle_checks=28561;L1_order=169;T_order=13;L1^13=T
+C169_residue_generator_lift_orders=((169, 13),);section=no
+split_plane=|GL2(F13)|:26208,p_power_linear_candidates:169,linear_orders:((1, 1), (13, 168)),affine_candidates:28561,killed_by_13:28561;AGL2(F13)_order169=no
+mechanism=an affine p-element embeds as a unipotent 3x3 matrix;for p=13 its nilpotence index is <13, hence its exponent is 13
+sharp_realization=C169=(W2(F13),+) has the same 169 underlying states as F13^2 but exponent169 rather than exponent13
+q3_q11_q7=(0, 3)->(0, 11)->(1, 7);direct=(0, 7);two_step=T*direct
+distinguished_hinge=R:(142004190428100, 142004216872980)->M1:(142004591508780, 142004617953660)->M2:(142004992589460, 142005019034340);h=401080680;the 20-label collapse is an inherited concurrent-scout fact, not reconstructed by this script
+formal_V4_degree=horn:(1, 1)+even_collar:(0, 1)=(1, 0)
+composition_boundary=the horn q3/q11/q7 atoms and the collar q0 triple are not a common object; adding degree labels is not composition.  A faithful comparison must first lift them to the same nonsplit C169 carry torsor.
+ALL EXACT CHECKS PASSED

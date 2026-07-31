@@ -1,0 +1,9 @@
+det J_F = -2
+F^-1(v*) x-polynomial = x**3 - x
+P- fiber cubic = 21119*x**3 - 404*x - 208
+P0 fiber Groebner basis = [z, y, x + 1/8]
+P+ fiber cubic = 20929*x**3 + 532*x - 208
+L(P0) = 0
+core E(x;P0) = 4*x + 1/2
+depth-two finite count = 3 + 1 + 3 = 7
+interpretation: two sheets escape at infinity; no finite collision

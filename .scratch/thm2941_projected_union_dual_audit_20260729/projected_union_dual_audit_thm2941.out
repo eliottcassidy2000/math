@@ -1,0 +1,12 @@
+THM-2941 direct projected-safe UNION dual audit
+canonical_sha256=62d32329cde2d5e939a01a9dc5f027fd860159faa9409225ba1d639ff280d869
+universe=(six_body_roots=3003,canonical_terminal_pairs=236985,all_prefix_arithmetic=exact_rational)
+high_excess_pairs=42912
+subcritical_pairs=194073
+combined_pairs=236985
+maximum_cell_prefix=871
+minimum_certificate=(Fraction(1, 378105), ('high', (1, 2, 3, 5, 9, 10), 24, 277, 1260, Fraction(180, 277), 1))
+direct_union_digest=e03500f6687b835ff1bf925b6731236caa8d3e2409d44a8cd62b353ede5d1dcf
+direct_union_equals_complement_engine=PASS
+finite_de_morgan_identity_every_prefix=PASS
+all_direct_union_certificates_close=PASS

@@ -1,0 +1,31 @@
+LRC14 k=3 aligned / four-drift divisor-status GF scout
+combined_script_sha256=42dc165781148c702dfcd3c6535f4d02aee516af60b5ddf602a19cb1d87695e4
+support_cutoff=125/143
+three_aligned_safe_floor=55/91
+activity_control_count=11
+weighted_shape_control_cases=60
+max_D=100
+body_count=3003
+body_divisor_rows=251536
+support_rows=147
+support_divisors=7
+aggregated_features=103
+stage=raw,occurrences=54183,shapes=1266,rows=147,bodies=78,divisors=7,semantic_sha256=ca9113110cc4c34a243b9f7f1fb3ef980740252aef3d37ad9dfd28faacc69e23
+stage=raw,pattern_occurrences=Counter({(0, 0, 0): 20671, (0, 0, 1): 7310, (1, 0, 0): 7232, (0, 1, 0): 5750, (0, 1, 1): 2145, (0, 0, 2): 1911, (1, 0, 1): 1911, (2, 0, 0): 1841, (1, 1, 0): 1431, (0, 2, 0): 1389, (0, 1, 2): 390, (0, 2, 1): 390, (1, 1, 1): 390, (0, 0, 3): 228, (1, 0, 2): 228, (2, 0, 1): 228, (3, 0, 0): 208, (1, 2, 0): 186, (2, 1, 0): 186, (0, 3, 0): 158})
+stage=raw,pattern_shapes=Counter({(0, 0, 0): 503, (1, 0, 0): 204, (0, 0, 1): 140, (0, 1, 0): 112, (2, 0, 0): 63, (0, 0, 2): 41, (1, 0, 1): 41, (0, 1, 1): 33, (1, 1, 0): 33, (0, 2, 0): 30, (3, 0, 0): 11, (0, 0, 3): 7, (1, 0, 2): 7, (2, 0, 1): 7, (0, 1, 2): 6, (0, 2, 1): 6, (1, 1, 1): 6, (1, 2, 0): 6, (2, 1, 0): 6, (0, 3, 0): 4})
+stage=raw,divisor_occurrences_top=[(84, 44525), (70, 3864), (42, 2352), (56, 1950), (98, 1173), (28, 306), (14, 13)]
+stage=scalar,occurrences=20408,shapes=777,rows=147,bodies=78,divisors=7,semantic_sha256=1094d38094a31dbab77254c79a99de19bdedb524f7d33d9c322d744c9ffb55d7
+stage=scalar,pattern_occurrences=Counter({(1, 0, 0): 7232, (0, 1, 1): 2145, (1, 0, 1): 1911, (2, 0, 0): 1841, (1, 1, 0): 1431, (0, 2, 0): 1389, (0, 1, 0): 844, (0, 0, 1): 456, (0, 0, 2): 437, (0, 1, 2): 390, (0, 2, 1): 390, (1, 1, 1): 390, (0, 0, 3): 228, (1, 0, 2): 228, (2, 0, 1): 228, (3, 0, 0): 208, (1, 2, 0): 186, (2, 1, 0): 186, (0, 3, 0): 158, (0, 0, 0): 130})
+stage=scalar,pattern_shapes=Counter({(1, 0, 0): 204, (0, 0, 1): 120, (0, 1, 0): 112, (2, 0, 0): 63, (0, 0, 2): 41, (1, 0, 1): 41, (0, 0, 0): 34, (0, 1, 1): 33, (1, 1, 0): 33, (0, 2, 0): 30, (3, 0, 0): 11, (0, 0, 3): 7, (1, 0, 2): 7, (2, 0, 1): 7, (0, 1, 2): 6, (0, 2, 1): 6, (1, 1, 1): 6, (1, 2, 0): 6, (2, 1, 0): 6, (0, 3, 0): 4})
+stage=scalar,divisor_occurrences_top=[(84, 16091), (70, 1495), (42, 1122), (56, 960), (98, 575), (28, 156), (14, 9)]
+stage=ambient_status,occurrences=249,shapes=81,rows=29,bodies=17,divisors=3,semantic_sha256=09d3d77851f4420d29587ee67f1b834f7d9b59176fbd86f15a8514eddb2d6118
+stage=ambient_status,pattern_occurrences=Counter({(0, 0, 0): 130, (0, 2, 1): 30, (1, 1, 1): 30, (0, 3, 0): 28, (0, 2, 0): 8, (1, 1, 0): 8, (0, 1, 2): 6, (0, 0, 3): 3, (1, 0, 2): 3, (1, 2, 0): 2, (3, 0, 0): 1})
+stage=ambient_status,pattern_shapes=Counter({(0, 0, 0): 34, (0, 2, 0): 8, (1, 1, 0): 8, (0, 1, 2): 6, (0, 2, 1): 6, (1, 1, 1): 6, (0, 3, 0): 4, (0, 0, 3): 3, (1, 0, 2): 3, (1, 2, 0): 2, (3, 0, 0): 1})
+stage=ambient_status,divisor_occurrences_top=[(84, 137), (56, 110), (42, 2)]
+stage=support_status,occurrences=130,shapes=34,rows=16,bodies=15,divisors=2,semantic_sha256=ca0aa239744b21210db771c22fa3392fd93276f8ff81a846cd82fd1aaff20e9c
+stage=support_status,pattern_occurrences=Counter({(0, 0, 0): 130})
+stage=support_status,pattern_shapes=Counter({(0, 0, 0): 34})
+stage=support_status,divisor_occurrences_top=[(56, 110), (84, 20)]
+ambient_status_limit_types=56
+ambient_status_limit_top=[(((0, 0, 0), 0, 0), 7), (((1, 0, 0), 7, 0), 1), (((2, 0, 0), 14, 0), 1), (((3, 0, 0), 21, 7), 1), (((1, 0, 0), 14, 0), 1), (((2, 0, 0), 28, 0), 1), (((3, 0, 0), 42, 14), 1), (((0, 0, 1), 7, 0), 1), (((0, 0, 2), 14, 7), 1), (((0, 0, 3), 21, 14), 1), (((1, 0, 1), 21, 7), 1), (((1, 0, 2), 28, 14), 1), (((2, 0, 1), 35, 7), 1), (((1, 0, 0), 21, 0), 1), (((2, 0, 0), 42, 0), 1), (((3, 0, 0), 63, 21), 1), (((0, 1, 0), 14, 0), 1), (((0, 2, 0), 28, 14), 1), (((0, 3, 0), 42, 28), 1), (((1, 1, 0), 35, 14), 1), (((1, 2, 0), 49, 21), 1), (((2, 1, 0), 56, 14), 1), (((1, 0, 0), 28, 0), 1), (((2, 0, 0), 56, 0), 1), (((3, 0, 0), 84, 28), 1), (((0, 0, 1), 14, 0), 1), (((0, 0, 2), 28, 14), 1), (((0, 0, 3), 42, 28), 1), (((1, 0, 1), 42, 14), 1), (((1, 0, 2), 56, 28), 1)]
+all_exact_controls=PASS

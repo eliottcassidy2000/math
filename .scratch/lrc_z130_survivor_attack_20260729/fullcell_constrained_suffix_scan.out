@@ -1,0 +1,20 @@
+LRC14 k-aligned conservative full-cell constrained suffix scan
+independent_source_sha256=5d25a955fe184d6c1a3d8b632b4bbf901dc996ee46ad67c5748836fcc7134404
+support_sha256=5482e10635ecf72840bc0c083360fd7ddad65c2885d743820061bcba58cd5609
+universe=(six_body_roots=3003,body_labels=1..14,external_drifts>=15,drift_mod_L_nonzero,k=3..5)
+exact_horizon=7000
+necessary_largest_drift=max(15,floor(kL/[14(14-k)])+1)
+omitted_tail=delta(w)<=6r/(49w), started at max(H+1,largest_floor)
+k=3;drifts=4;candidate_first_rows=2578195;baseline_surviving_first_rows=498150;fullcell_surviving_first_rows=419380;baseline_max_first=432;fullcell_max_first=410;frontier_rows=2
+  FRONTIER;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;analytic_cap=1415;largest_floor=230;z1=410;delta1=2687/843780;suffix=492:2981/843780,574:2351/843780,432:499/185220;lower=1049/89180;upper=9263/759402;gap=42947/98722260
+  FRONTIER;E=2,4,8,10,12,14;h=281/735;r=36;L=11760;analytic_cap=1399;largest_floor=230;z1=410;delta1=157/42189;suffix=492:1423/421890,574:659/210945,560:13/5145;lower=281/22295;upper=5377/421890;gap=155/1096914
+k=4;drifts=3;candidate_first_rows=1460123;baseline_surviving_first_rows=229638;fullcell_surviving_first_rows=112301;baseline_max_first=260;fullcell_max_first=208;frontier_rows=2
+  FRONTIER;E=1,2,8,10,12,14;h=1049/2940;r=34;L=11760;analytic_cap=811;largest_floor=337;z1=208;delta1=899/133770;suffix=364:292/66885,260:1189/267540;lower=17833/1159340;upper=277/17836;gap=43/289835
+  FRONTIER;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;analytic_cap=811;largest_floor=337;z1=208;delta1=899/133770;suffix=364:1273/267540,260:1483/267540;lower=17833/1159340;upper=759/44590;gap=1901/1159340
+k=5;drifts=2;candidate_first_rows=626787;baseline_surviving_first_rows=36301;fullcell_surviving_first_rows=5942;baseline_max_first=130;fullcell_max_first=78;frontier_rows=4
+  FRONTIER;E=1,4,5,6,8,12;h=3/7;r=18;L=1680;analytic_cap=159;largest_floor=67;z1=78;delta1=10/637;suffix=104:23/1911;lower=88/3185;upper=53/1911;gap=1/9555
+  FRONTIER;E=2,4,5,6,8,12;h=13/28;r=18;L=1680;analytic_cap=147;largest_floor=67;z1=78;delta1=137/7644;suffix=104:95/7644;lower=22/735;upper=58/1911;gap=4/9555
+  FRONTIER;E=2,4,6,8,10,12;h=16/35;r=24;L=1680;analytic_cap=199;largest_floor=67;z1=78;delta1=211/12740;suffix=130:257/19110;lower=1408/47775;upper=1147/38220;gap=103/191100
+  FRONTIER;E=2,4,6,9,12,14;h=64/147;r=28;L=3528;analytic_cap=244;largest_floor=141;z1=78;delta1=485/26754;suffix=182:134/13377;lower=5632/200655;upper=251/8918;gap=31/401310
+frontier_digest=190d28dc8a9fffe5fe1a9f5e6037c29cc29abbcbbc18318dc99a8defdfeef46c
+all_exact_controls=PASS

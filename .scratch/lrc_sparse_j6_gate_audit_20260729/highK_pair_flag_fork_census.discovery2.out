@@ -1,0 +1,12 @@
+LRC14 j6 K>=20 pair-cap flag-fork census
+universe=roots:62,branches:394
+marginal_counts_H3_H2_H1=(392, 308, 158)
+eligibility_union=392;survivors=2
+bit_histogram=(((False, False, False), 2), ((True, False, False), 84), ((True, True, False), 150), ((True, True, True), 158))
+per_K_histogram=((20, (((False, False, False), 1), ((True, False, False), 37), ((True, True, False), 67), ((True, True, True), 75))), (21, (((False, False, False), 1), ((True, False, False), 30), ((True, True, False), 52), ((True, True, True), 51))), (22, (((True, False, False), 12), ((True, True, False), 22), ((True, True, True), 24))), (23, (((True, False, False), 5), ((True, True, False), 5), ((True, True, True), 6))), (25, (((True, True, False), 4), ((True, True, True), 2))))
+survivor_rows=(((1, 3, 7, 8, 10, 11, 13), 21, 1, 18, ('-1848989/5703417720', '-1265297389/65589303780', '-125320907/2851708860'), '21237/140140', '5179/127512', '70819523/814773960'), ((1, 4, 9, 10, 12, 13, 14), 20, 1, 22, ('-157867/116035920', '-58997/2109744', '-3147959/58017960'), '4643/25740', '1201/22932', '2423647/23207184'))
+minimum_margins=(('-157867/116035920', (1, 4, 9, 10, 12, 13, 14), 1, 22), ('-58997/2109744', (1, 4, 9, 10, 12, 13, 14), 1, 22), ('-3147959/58017960', (1, 4, 9, 10, 12, 13, 14), 1, 22))
+pair_paid=3061
+canonical_ledger_sha256=3575f3b5c6850b2a72a791968526f6748d9bcc7aed3c083938ce6f79cde25d10
+scope=eligibility only;flag children remain proof obligations
+all_exact_controls=PASS

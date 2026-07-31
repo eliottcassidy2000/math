@@ -1,0 +1,27 @@
+LRC14 ORIGIN-ODD SELECTOR / 449-SHEET PHYSICALITY AUDIT
+status=FINITE-EXACT SCRATCH; no row exclusion or LRC14 conclusion
+universe=13 residues x 2 marked origins x 2 E3-truth blocks x 4 selector pairs; 32 object-independent componentwise Boolean recharts (including origin swap); 449 whole semantic sheets; 2 certified endpoint fields x 26 raw samples; 2 fields x 13 split-channel carry states
+fixed_source_truth=(1, 1); target_E3_supports=(origin0=(0, 3, 11),origin1=(0, 11)); truth_parity=(0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0)=delta_q3
+positive_selector_bits=((1, 0), (0, 1), (0, 1), (1, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (1, 0), (0, 1)); selector_parity=(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1)=1_XOR_delta_q3; toggle_edges=(2, 3)
+seam_selector=(q11=(1, 0),q7=(0, 1)); target_truth=(q11=(1,1),q7=(0,0)); the_unique_bijective_target/selector_transport_is_global_E3_complement
+all_object-independent_target/selector_recharts=[((0, 1), ((0, 0), (1, 0)), (0, 0)), ((0, 1), ((1, 0), (1, 0)), (0, 0))]; source_preserving_recharts=[]; same-block_baseline_no_go=every_target/selector_rechart_sends_source_(1,1)_to_(0,0)
+selector_target_only_support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12); lawful_same-block_current_support=(0, 3, 11); union_over_all_selectors=(0, 3, 11); q7_same-block_origin_flags=(0,0)_for_all_four_selectors
+H=ker(e_E3_XOR_u7_XOR_v8)=((0, 0, 0), (0, 1, 1), (1, 0, 1), (1, 1, 0)); states={'Qempty': (0, 0, 0), 'QB': (1, 0, 1), 'QA': (1, 1, 0), 'QAB': (0, 1, 1)}; fixed_source_QB_membership=(1, 1)
+local_H_membership_by_origin={3: (0, 1), 11: (1, 1), 7: (1, 1)}; local_H_signed_zero-minus-stepped={3: -1, 11: 0, 7: 0}; local_H_restriction_is_exactly_q3_(zero_empty,stepped_full)_but_re-evaluation_is_origin-even_and_cancels_at_q11/q7
+H_seeded_transported_selector={3: (0, 0), 11: (0, 1), 7: (1, 0)}; ordered_pairs_are_(zero_origin,stepped_origin); occupancy=(0,1)_at_q3,q11,q7; signed_orientation=zero-minus-stepped=-1; parity=(0,1,1)=1_XOR_delta_q3_on_the_seam
+typed_objects=source_(I,a,QB,E3,fixed)_to_targets_(J3,a,Qempty,stepped-notE3),(J11,a,QA,stepped-E3),(J7,a+1,QAB,stepped-notE3); zero-origin_component_is_transported_empty
+endpoint_piece_maps=q3_plus8U_to_q11_and_q11_plus9U_to_q7_hold_at_both_origins; literal_cylinder_checks=898; q11_plus9U_wrap_is_a_to_a+1
+fixed_horn_cell=(0, 5, 1); factor_order=(E3,clock,q1,q2,c2,c3); signatures=(source=(True, True, True, True, True, True),q3=(True, True, True, True, True, True),q11=(True, True, True, True, True, True),q7=(False, True, True, True, True, True)); q7_loses_only_E3_and_preserves_the_other_five_factors
+semantic_sheets=(count=449,first=59306,last=311961,source_residue_mod169=156,successor_residue_mod169=157); Qempty(q3,a)=449/449; QA(q11,a)->QAB(q7,a+1)=449/449
+same-block_sheetwise_gate=(q11=1*449,q7=0*449); q7_target_only_coefficient_gate=1*449; minimal_witness=a=59306
+selector_carry_independence=q11_to_q7_has_carry1_but_parity1_to1; q12_to_q0_has_carry1_but_parity1_to1; q0_to_q3_has_carry0_but_parity1_to0
+field=352341050142921841; fixed_source=254455016269350867; crossgraded_raw_(q11,q7)=(331376477583784499,331376477583784499); native_diagonal_raw_(q11,q7)=(331376477583784499,0); H_seeded_raw_(q3,q11,q7)=(20964572559137342,20964572559137342,20964572559137342); 449_sheet_sum_q7=252225775336698692; charged_edge_E=omega^4=78158889736220929; sample_(U8,V8)=(345225567226371515,26104004983225775); recombined_scalar_failures=13/13
+field=956354278959359281; fixed_source=318932490657369324; crossgraded_raw_(q11,q7)=(395033745332057749,395033745332057749); native_diagonal_raw_(q11,q7)=(395033745332057749,0); H_seeded_raw_(q3,q11,q7)=(561320533627301532,561320533627301532,561320533627301532); 449_sheet_sum_q7=511744232346896965; charged_edge_E=omega^4=682071808062747971; sample_(U8,V8)=(48351232445454689,482074204885093064); recombined_scalar_failures=13/13
+recombined_current_checks=676; crossgraded_support=all13_on_all_52_field/sample_rows; native_diagonal_support={0,3,11}; q11_crossgraded_equals_q7_crossgraded_nonzero_but_q7_native=0
+H_seeded_origin-resolved_raw_current=q3=q11=q7_nonzero_on_all_52_field/sample_rows; 449-fold_sums_nonzero; this_closes_the_selector_parity_and_fixed-source_coefficient_transport_on_the_typed_sheetwise_horn
+downstream_hostile_after_freely_adjoining_crossgrade=(U,V)->(E*U,V), E=omega^4 on q11->q7; S'=E*U+V differs from E*S by (1-E)*V !=0 on 26/26 field/state rows
+POSITIVE_RESULT=the_H-selected_stepped-only_q3_subcopy_has_a_unique_empty/full_preserving_originwise_transport_to_q11_and_q7; the_single_q11_QA(a)_to_q7_QAB(a+1)_operation_is_source-fixed,origin-odd,truth-complementing,and_raw-current-preserving
+FIRST_FAILED_IMPLICATION=the_proved_raw_recombined_current_does_not_become_a_scalar_charged_carry_current: diag(E,1)_on_(U,V)_does_not_descend_through_U+V; additionally_canon_still_needs_the_sheetwise_H/product_subcopy_registered_as_a_full_current_functor
+VERDICT=YES_at_finite_exact_origin-resolved_endpoint/semantic_raw-current_level; NO_scalar_Bockstein_transport_on_recombined_U+V_and_no_LRC14_conclusion
+NEXT_TEST=formalize_the_H-graded_transported_subcopy_in_the_canonical_current_interface_then_seek_a_lawful_two-channel_or_Hermitian_observable_instead_of_a_scalar_action_on_U+V
+ALL EXACT CHECKS PASSED
