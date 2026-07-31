@@ -94,16 +94,36 @@ m = 2:     27 vectors   -> none
 m = 4:  91875 vectors   -> none
 ```
 
-**A guessed obstruction is refuted.** We expected the two-word middle class
-(`N_(2m) = 2`, THM-3007's cancelling corner pair) to be the bottleneck. It is
-not: the minimum of `|sum_j c_j binom(2m,j)|` over admissible nonzero `c` is
-`0` at both `m = 2` and `m = 4`, so the middle constraint is satisfiable. The
-actual binding index at `m = 2` is `i = 2`, at the LOW-order edge: for
-`c = (0,-2,0,2,0)` the convolution gives `|c^(4)_2| = 8` against
-`N^(4)_2 = binom(4,2) = 6`. The obstruction is the edge of the row, where the
-box `binom(2m,i)` grows more slowly than convolution with `(1+u)^(2m)`
-amplifies -- not the middle, where the box is smallest but the weighted sum
-can be cancelled.
+**Where it binds -- two true statements that must not be conflated.**
+(i) The middle constraint ALONE is satisfiable: the minimum of
+`|sum_j c_j binom(2m,j)|` over admissible nonzero `c` is `0` at both `m = 2`
+and `m = 4`, so the two-word middle class is not an obstruction by itself.
+(ii) Nevertheless the LEAST-OVERFLOW witnesses bind at or just below the
+middle. Minimising `max_i |c^(2m)_i| / N^(2m)_i` over the admissible box:
+
+```text
+m = 2:  minimum 2     at i = 4  (= the middle 2m),  c = (0,-2,2,0,0)
+m = 4:  minimum 3/2   at i = 7  (= 2m-1),           c = (0,-4,6,-4,0,4,-6,4,0)
+```
+
+An earlier draft reported the binding index as the LOW-order `i = 2`; that
+was for one hand-picked `c`, not the optimum, and is corrected here.
+
+**No trend may be read from these two points.** `2, 3/2` invites `1 + 2/m`,
+which would send the overflow to `1` and make compensation possible for large
+`m` -- a conclusion that would matter a great deal, since it would mean
+`C_arch` does not bound the true `C*`. But the natural candidate family
+`c = [(1-u)^m - 1 - (-u)^m](1-u^m)` (the mean-eliminated alternating
+extremal, which happens to BE the optimum at `m = 4`) has overflow
+
+```text
+m       2      4        8         16        32
+ratio  5/2    3/2    110.5     90670.5   8.4e11
+```
+
+-- it diverges. So the family that fits the small cases is not the right
+generalisation, and `m >= 8` is genuinely unknown (exhaustive search is
+~10^11 vectors). Extrapolation is unwarranted.
 
 ## 5. Open
 
@@ -200,3 +220,40 @@ log_5(5 phi^2)` is pinned algebraically by `delta^2 = 1-delta` (THM-3009 sec
 3.1), so there is no room in it for a lemniscatic identity. The shared object
 is the central binomial appearing in both capacity boxes and quarter series,
 which is an adjacency of tools, not a link between the constants.
+
+
+## 8. Transfer test: THM-2922's window machinery
+
+**The core does NOT transfer, for a decisive structural reason.** THM-2922's
+Macaulay resultant row chart and Gregory--Newton minors exist to show that a
+NONLINEAR system (`L(H^k) = 0`, degree `k` in the coefficients) over an
+UNCONSTRAINED coefficient space meets only the origin. Elimination theory acts
+on the variety cut out by the equations. Here the variety is everything:
+
+```text
+m        1    2    4    8   16
+dim_Q    1    3    7   15   31        ( = 2m-1, the equations impose NOTHING)
+```
+
+because `c^(2m) = -c^(m)(1+u)^(2m)` is LINEAR and `c^(m)` is free. Every
+`c^(m)` solves the compensation equations. The entire obstruction is the
+integer box `|c_i| <= N_i`, `c_i = N_i (mod 2)` -- a lattice-point question,
+on which resultants are silent. The two difficulties are exactly
+complementary: SFC is nonlinear-and-unconstrained, this is
+linear-and-constrained.
+
+**Two peripheral steps do transfer.**
+
+1. *Mean elimination.* THM-2922 kills the first moment using the differences
+   `f_a - f_(a+5)`. Our analogue was derived independently in section 2:
+   `N_0 = N_(2m) = 0` and `C^(m)(1) = 0` force
+   `C^(m)(u) = 2u(1-u)G(u)`. Same move, already in hand.
+2. *Positivity certificates in the family parameter.* THM-2922 proves its
+   statement for ALL translations `n` by exhibiting Gregory--Newton positive
+   certificates in `n`. That is exactly what the shell module needs: non-
+   compensation is verified only at `m = 1, 2, 4`, and a certificate positive
+   in `m` would deliver all dyadic `m` at once. **This is the one genuinely
+   importable idea and it is not yet done** -- and section 4's failed
+   extrapolation shows why it is needed rather than optional.
+
+Referee: `04-computation/amm12592_thm2922_window_transfer_test.py`.
