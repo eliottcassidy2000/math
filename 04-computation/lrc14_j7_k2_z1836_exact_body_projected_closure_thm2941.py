@@ -61,10 +61,10 @@ EXPECTED_BAND_OUTPUT_SHA256 = (
     "fdbeee8d14057edc7b6d1a5a24c660899846aef5eb2a7c6a3004367caf3aa73b"
 )
 EXPECTED_PROFILE_SHA256 = (
-    "22a873a7b876216b5aebaf9bbb4a88772519a657e10e32a3ca14ed803bac016a"
+    "956197a829ac189232695e7ffc65dfc36ee6ab3f67b02a05b790cfd1dd5583e9"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "90a2ddda635d89d0173d94eaadc1a9db6d0dc3baf2c7223190f9141cf0898dfa"
+    "f776c4dc7806047dbc146461ab419e2005c5a600a165c31816b832507a4aca08"
 )
 
 BODIES = (
@@ -81,7 +81,7 @@ EXPECTED = {
         1,
         "cc7d09e5dde9a53a4c977c5ca636bb571ba683060cad078ab8b6cc772d378233",
         2,
-        "9729c53968383c1e564dcbb0305451c12a6c06654dfc81d8a02d3e227cdf5012",
+        "f5adf490aa2d12dbc506736ca27f37c94a6dd78d2cdff877671bd87a5f22a95f",
         5,
         "b04f724b0d97f0f970bd274725d958b53aca490f43f8c5da187308c0449bf048",
         8,
@@ -93,7 +93,7 @@ EXPECTED = {
         178,
         "75c6775879cf8fa6ae7b7a6f1d0eb85564b7d2725557ec1b99b6b74e80d100fc",
         617,
-        "ba77eebe632221284842594c00a60dba869ed371e724184fa0d4021f9f93b7dd",
+        "d96a4c55611f74be4f82890ff2834fd6c09fd59e43801a39fc6af5b1f8bf9695",
         12,
         "89b65b61c0a0f4463fe32eec67290b158f6b307c0c3c7ac3eb0edc73d4ec28d5",
         12,
@@ -105,7 +105,7 @@ EXPECTED = {
         1,
         "20435ec408888fda377c2614e00e1e926cc4f16ebcca5489423e6146c2335a9d",
         30,
-        "90c0c3b05299b0dfa6cd1e652188f43f8472dd35a711f92fbae9089c27fc9787",
+        "c3a8392a1de5ee23f7054e24d9b2be93706ea686d6c148cb5ee63952cfc66bba",
         41,
         "2cbbc9cf2fb5933d204643c330129de283e6ba0ba7991cda2ea655551e87f4ad",
         64,
@@ -314,24 +314,31 @@ def scalar_status_frontier(body, carrier, h, lower, L, first_delta, first_d):
         row = (ds, upper, labels, witness)
         (status_survivors if witness is None else status_kills).append(row)
 
+    # A HiGHS dual basis is a solver-selected proof witness, not a canonical
+    # status instance (MISTAKE-331).  Verify it through the imported engine,
+    # but remove only that final coordinate from the replay digest.
+    canonical_status_kills = tuple(
+        (ds, upper, labels, witness[:-1])
+        for ds, upper, labels, witness in status_kills
+    )
+    require(
+        not status_kills
+        or sha256(repr(tuple(status_kills)).encode()).hexdigest()
+        != sha256(repr(canonical_status_kills).encode()).hexdigest(),
+        (body, "raw LP certificate entered status digest"),
+    )
     digests = tuple(
         sha256(repr(tuple(rows)).encode()).hexdigest()
-        for rows in (scalar, crude_kills, status_kills, status_survivors)
+        for rows in (scalar, crude_kills, canonical_status_kills, status_survivors)
     )
     expected = EXPECTED[body]
+    actual = (
+        len(scalar), digests[0], len(crude_kills), digests[1],
+        len(status_kills), digests[2], len(status_survivors), digests[3],
+    )
     require(
-        (
-            len(scalar),
-            digests[0],
-            len(crude_kills),
-            digests[1],
-            len(status_kills),
-            digests[2],
-            len(status_survivors),
-            digests[3],
-        )
-        == expected[:8],
-        (body, "scalar/status frontier changed", digests),
+        all(want is None or got == want for got, want in zip(actual, expected[:8])),
+        (body, "scalar/status frontier changed", actual, expected[:8]),
     )
     return (
         tuple(amplitudes),
@@ -575,7 +582,14 @@ def render(profiles):
     global_margin = min(row[18] for row in profiles)
     profile_hash = sha256(repr(tuple(profiles)).encode()).hexdigest()
     if EXPECTED_PROFILE_SHA256 is not None:
-        require(profile_hash == EXPECTED_PROFILE_SHA256, "profile digest changed")
+        require(
+            profile_hash == EXPECTED_PROFILE_SHA256,
+            (
+                "profile digest changed",
+                profile_hash,
+                tuple((row[0], row[15]) for row in profiles),
+            ),
+        )
     semantic_payload = (
         EXPECTED_PROJECTED_SHA256,
         EXPECTED_PRIMARY_SHA256,
@@ -596,7 +610,7 @@ def render(profiles):
     if EXPECTED_SEMANTIC_SHA256 is not None:
         require(
             semantic_hash == EXPECTED_SEMANTIC_SHA256,
-            "projected-closure semantic digest changed",
+            ("projected-closure semantic digest changed", semantic_hash),
         )
     require(
         (

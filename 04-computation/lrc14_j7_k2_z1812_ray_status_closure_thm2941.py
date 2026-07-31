@@ -58,22 +58,22 @@ OUTPUT_PATH = (
 )
 
 EXPECTED_PARENT_SHA256 = (
-    "d18157c7e4d074b7d2d2d6081641d801441bb8cd64f38fbc4f8224c597d12e60"
+    "5662de2ab58e7ffb18a9ee4ddd2dd7eacda43131cfc15427eba026f29a590d77"
 )
 EXPECTED_PARENT_OUTPUT_SHA256 = (
-    "6f3d7bb75d9b475ba28a005fd796d71f2f910511346c257975df1d1b604107ad"
+    "006e8a1675c318dd4e72ea808d2f6fe7eba019384921927bb1b86554b0229473"
 )
 EXPECTED_BAND_SOURCE_SHA256 = (
-    "60a916b6d4cfafc995b9ebc791057dd9afef1a33f312c32ef4da7fdc0151cec4"
+    "a09b13e994ad6ab35e3324bd336e773b435b07859e6a3c924b84ec77f3e2aced"
 )
 EXPECTED_BAND_OUTPUT_SHA256 = (
-    "d197eb6179a3f7c7da08d4389fde988c0bd1fbc5db8cfaf8e30435ace3c7d87f"
+    "b29e1ccd9c3406c14bcfe2a53d5b6cee990c3d7a5e876bd5badcb27e2b506f0e"
 )
 EXPECTED_PROFILE_SHA256 = (
-    "e0b8768bc9d0749634712f1b92def48652271f633efbcad573923cef354b4b3a"
+    "20796b74d20be22e20c50064caddc66773bb22e845f7ee76679da9b734a74539"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "5c288be9fd8d316fc3a16d44bc50ec42f2a8dac9dcc84fc2614ae1a3cf0f21d2"
+    "d97af187a81c5ade5abde85b0fbd07c0476f610c15d034fd9b7c51f01c6888c0"
 )
 
 BODY = (1, 4, 8, 10, 12, 14)
@@ -98,7 +98,7 @@ EXPECTED_STAGE = (
     4,
     "8dcd5e390f85ab0d08979b4b35a80cc354c3c7ebe318d5275ac048a4fa03df93",
     7,
-    "cb7ff868ba357f68b21009f640ac5dd4eaaedc92c9210e9b3964c91d8ce3bce0",
+    "9cc51edeca8e25b2606941d731dbec603af0efd5a48a790df4285d519e2d8567",
     0,
     "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
 )
@@ -220,7 +220,7 @@ def compute_profile():
     require(crude_witnesses == EXPECTED_CRUDE_WITNESSES, "crude census changed")
 
     status_moduli = Counter()
-    exact_dual_rows = []
+    exact_certificate_count = 0
     for ds, upper, labels, witness in status_kills:
         require(witness is not None, "status kill lost its witness")
         q, M, marginals, capacity_values, histogram, certificate = witness
@@ -235,18 +235,19 @@ def compute_profile():
             and tuple(sorted(set(recomputed_capacities))) == capacity_values,
             "status witness failed exact reconstruction",
         )
-        dual_gap, minimum_slack = A.exact_farkas_audit(
+        A.exact_farkas_audit(
             q, marginals, recomputed_capacities, histogram, certificate
         )
         status_moduli[(q, M)] += 1
-        exact_dual_rows.append(
-            (ds, upper, labels, q, M, dual_gap, minimum_slack, certificate)
-        )
+        exact_certificate_count += 1
     require(status_moduli == EXPECTED_STATUS_MODULI, "status modulus census changed")
     require(not status_survivors, "a z1=1812 status survivor appeared")
 
-    minimum_dual_gap = min(row[5] for row in exact_dual_rows)
-    minimum_dual_slack = min(row[6] for row in exact_dual_rows)
+    require(exact_certificate_count == len(status_kills), "certificate ledger changed")
+    canonical_status_kills = tuple(
+        (ds, upper, labels, witness[:-1])
+        for ds, upper, labels, witness in status_kills
+    )
     profile_payload = (
         BODY,
         FIRST,
@@ -265,15 +266,18 @@ def compute_profile():
         trials,
         tuple(scalar),
         tuple(crude_kills),
-        tuple(status_kills),
+        canonical_status_kills,
         stage_digests,
         tuple(sorted(crude_witnesses.items())),
         tuple(sorted(status_moduli.items())),
-        tuple(exact_dual_rows),
+        exact_certificate_count,
     )
     profile_hash = sha256(repr(profile_payload).encode()).hexdigest()
     if EXPECTED_PROFILE_SHA256 is not None:
-        require(profile_hash == EXPECTED_PROFILE_SHA256, "profile digest changed")
+        require(
+            profile_hash == EXPECTED_PROFILE_SHA256,
+            ("profile digest changed", profile_hash),
+        )
     return (
         h,
         len(carrier),
@@ -292,8 +296,7 @@ def compute_profile():
         stage_digests,
         crude_witnesses,
         status_moduli,
-        minimum_dual_gap,
-        minimum_dual_slack,
+        exact_certificate_count,
         profile_hash,
     )
 
@@ -317,8 +320,7 @@ def render(profile) -> str:
         stage_digests,
         crude_witnesses,
         status_moduli,
-        minimum_dual_gap,
-        minimum_dual_slack,
+        exact_certificate_count,
         profile_hash,
     ) = profile
     semantic_payload = (
@@ -338,13 +340,15 @@ def render(profile) -> str:
         stage_digests,
         tuple(sorted(crude_witnesses.items())),
         tuple(sorted(status_moduli.items())),
-        minimum_dual_gap,
-        minimum_dual_slack,
+        exact_certificate_count,
         profile_hash,
     )
     semantic_hash = sha256(repr(semantic_payload).encode()).hexdigest()
     if EXPECTED_SEMANTIC_SHA256 is not None:
-        require(semantic_hash == EXPECTED_SEMANTIC_SHA256, "semantic digest changed")
+        require(
+            semantic_hash == EXPECTED_SEMANTIC_SHA256,
+            ("semantic digest changed", semantic_hash),
+        )
     lines = [
         "LRC14 projected k=2 z1=1812 exact ray/status closure",
         f"z1824_parent_source_sha256={file_sha256(PARENT)}",
@@ -371,9 +375,8 @@ def render(profile) -> str:
         f"crude_witness_census={tuple(sorted(crude_witnesses.items()))}",
         f"status_modulus_census={tuple(sorted(status_moduli.items()))}",
         (
-            f"exact_Farkas_certificates={status_count};"
-            f"minimum_dual_gap={ftext(minimum_dual_gap)};"
-            f"minimum_pattern_slack={ftext(minimum_dual_slack)}"
+            f"exact_Farkas_certificates={exact_certificate_count};"
+            "certificate_replay=PASS;solver_selected_basis_excluded_from_digests"
         ),
         f"stage_sha256={stage_digests}",
         (

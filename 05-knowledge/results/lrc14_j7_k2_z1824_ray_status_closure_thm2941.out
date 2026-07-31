@@ -1,17 +1,17 @@
 LRC14 projected k=2 z1=1824 exact ray/status closure
-closure_engine_sha256=54ab8787af4dd410d3c809e5a15b94fb06e7c6129def4003021bb923f0dfb766
-scalar_band_source_sha256=60a916b6d4cfafc995b9ebc791057dd9afef1a33f312c32ef4da7fdc0151cec4
-scalar_band_output_sha256=d197eb6179a3f7c7da08d4389fde988c0bd1fbc5db8cfaf8e30435ace3c7d87f
+closure_engine_sha256=b07e9c455fac73a005b44f9e628f2d5b131cef8dfba16eac00df32e0681fb248
+scalar_band_source_sha256=a09b13e994ad6ab35e3324bd336e773b435b07859e6a3c924b84ec77f3e2aced
+scalar_band_output_sha256=b29e1ccd9c3406c14bcfe2a53d5b6cee990c3d7a5e876bd5badcb27e2b506f0e
 scope=unique global scalar row at z1=1824;four later distinct nonaligned labels;no finite label horizon
 E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;first_delta=1447/3128160;first_d=245;projected_wall=1020
 ray_law=(z+L)delta(z+L)=zdelta(z);ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;denominators=59;trials=557845
 scalar_states=38;crude_all_divisor_kills=15;common_K5_status_kills=23;survivors=0
 crude_witness_census=(((1, 980, 840, 700), 2), ((1, 1960, 1504, 1400), 3), ((420, 7, 6, 5), 10))
 status_modulus_census=(((420, 7), 1), ((490, 6), 1), ((588, 5), 1), ((840, 7), 14), ((980, 3), 1), ((980, 6), 5))
-exact_Farkas_certificates=23;minimum_dual_gap=1/1;minimum_pattern_slack=0/1
-stage_sha256=('33e9ff8243d644706423af0394d2124d31f9b8661199e057c3daae6945b2e4ed', '90011e470875553d54bf83405af93e4c3a5f959a22ed9256711e3cffcd743069', '9d74b69817c80a2fa41cea5d40702566ff545b58a2db400c0d94938c2e1ffbf1', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d')
+exact_Farkas_certificates=23;certificate_replay=PASS;solver_selected_basis_excluded_from_digests
+stage_sha256=('33e9ff8243d644706423af0394d2124d31f9b8661199e057c3daae6945b2e4ed', '90011e470875553d54bf83405af93e4c3a5f959a22ed9256711e3cffcd743069', '40c98902dfc7f248e6ad3b9f6c20298cfb84faa50c094c0cc729d29d573a4c45', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d')
 conclusion=the unique projected k=2 z1=1824 row is empty uniformly over later nonaligned labels
 consequence=the proved projected k=2 first-drift cap is z1<=1812
-profile_sha256=86bca0e4172101d7bfaa00c036f31e137b82bc7a6c24477fc6ddfb51411cd02d
-semantic_sha256=1613917ed5ea5df385148a7774863116963bff1d56b6225ece3d5447dec992cc
+profile_sha256=c2f45f33abd62a995a0fb7edc6ebc8df6d032ccb4243d9aa9538d8c3b29526fd
+semantic_sha256=7864df5722e2b5854ad319633759a9c849f73dd8d0ec103a4bd57ba559d3025a
 all_exact_controls=PASS
