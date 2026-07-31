@@ -152,12 +152,46 @@ def partC():
     return ok
 
 
+
+def partD():
+    """D. THE NORM DICHOTOMY: metallic and reciprocal are DISJOINT strata."""
+    print()
+    rule("D. NORM DICHOTOMY -- metallic (norm -1) vs reciprocal (norm +1)")
+    print("  x^2 - n x - 1 has root product -1, so the pair is {lam, -1/lam}: closed")
+    print("  under r -> -1/r, an ANTI-reciprocal map, and containing a negative element.")
+    print("  THM-3003 section 1's rigidity needs {r} = {mu/r} with mu = e_d^(2/d) > 0,")
+    print("  i.e. norm +1 and positive roots.  So the two extremal strata cannot meet.")
+    print()
+    print("  test: are the metallic h-sequences antipalindromic (R_k = R_(d-k))?")
+    ok = True
+    for n in (1, 2, 3):
+        for d in (6, 7, 8):
+            a = [0, 1]
+            for i in range(2, d + 2):
+                a.append(n * a[-1] + a[-2])
+            h = [Fr(1)] + [Fr(x) for x in a[1:]][:d]
+            R = [None] + [h[k] ** 2 / (h[k - 1] * h[k + 1]) for k in range(1, d)]
+            pal = all(R[k] == R[d - k] for k in range(1, d))
+            ok &= (not pal)
+            if d == 6:
+                print(f"    n={n} d={d}: R = {[str(R[k]) for k in range(1, d)]}"
+                      f"   antipalindromic? {pal}")
+    print("    antipalindromic in 0 of 9 cases (n=1,2,3 x d=6,7,8):", ok)
+    print("  => maximal alternation (norm -1) and swap-stability (norm +1) are")
+    print("     DISJOINT, not nested.  A two-element direction multiset cannot be in")
+    print("     both strata, so the pair is a branching dichotomy, not a containment.")
+    print(f"  VERDICT D: {'DISJOINT STRATA CONFIRMED' if ok else 'FAILED'}")
+    return ok
+
+
 def main():
     a = partA()
     b = partB()
     c = partC()
+    e = partD()
     print()
-    rule(f"SUMMARY  ballot-closed-forms={a}  bronze-unique={b}  metallic-maximal={c}")
+    rule(f"SUMMARY  ballot-closed-forms={a}  bronze-unique={b}  metallic-maximal={c}"
+         f"  norm-dichotomy={e}")
 
 
 if __name__ == "__main__":

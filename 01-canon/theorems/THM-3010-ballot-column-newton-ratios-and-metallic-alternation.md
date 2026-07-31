@@ -13,8 +13,8 @@ related:
   - THM-3003-antipodal-circuit-rigidity-and-the-multipole-spread-criterion
 script: 04-computation/gmc_ballot_column_newton_ratios_and_metallic_alternation_thm3010.py
 output: 05-knowledge/results/gmc_ballot_column_newton_ratios_and_metallic_alternation_thm3010.out
-script_sha256: c49c17605939b804333b3bb16881892b97d6d8149ddcd4a6d730ff7252d3a079
-output_sha256: 2818ed7d24d1a4c1c1b6d65282cf51b972eaaa77d23f15736216b4a07120dcc3
+script_sha256: 11b115d861eae1f31416e5fc8fe7089f023fc58c93412cdc4d79511a218ff703
+output_sha256: 00cee818d95c7dd288e1d16bc9e501db0d26a7adf4aacb90e158e637163245b3
 hash_basis: LF-normalized bytes
 ---
 
@@ -125,6 +125,42 @@ algebraically as a quadratic order of norm `-1`.  The golden ratio is the `n=1`
 member, so `phi` is not incidental here: it is the smallest metallic parameter,
 hence the extreme case of maximal Newton-circuit alternation.
 
+
+## 3a. The norm dichotomy: metallic and reciprocal are DISJOINT strata
+
+Metallic quadratics `x^2-nx-1` have root **product `-1`**, so the pair is
+`{lam, -1/lam}`: closed under `r -> -1/r`, an *anti*-reciprocal map, and
+containing a negative element.  THM-3003 section 1's rigidity requires
+`{r} = {mu/r}` with `mu = e_d^(2/d) > 0` -- norm `+1` and positive roots.
+
+**Theorem.**  The two extremal strata are mutually exclusive:
+
+    norm +1 (reciprocal-closed)  <=>  antipalindromic circuit  (THM-3003 sec 1)
+    norm -1 (metallic)           <=>  MAXIMAL alternation      (section 3 above)
+
+and a two-element direction multiset cannot lie in both.  Verified: the metallic
+`h`-sequences are antipalindromic in **0 of 9** cases (`n=1,2,3` by `d=6,7,8`);
+e.g. `n=1, d=6` gives `R = (1, 1/2, 4/3, 9/10, 25/24)`, with `R_1 = 1` against
+`R_5 = 25/24`.
+
+It is the same sign that makes section 3 work at all: the alternation comes from
+the norm form `a_(k-1)a_(k+1)-a_k^2 = (-1)^k`, **norm minus one**.  Norm `+1`
+would give an antipalindromic, non-alternating circuit.  So the sign of the norm
+of the quadratic order **separates** the two extremes.
+
+**Provenance and use.**  This corrects claim (iii) of death-star's HYP-9070,
+which asserted the metallic stratum sits *inside* the reciprocal one on the
+grounds that `lam * (1/lam) = 1`; the product is `-1`.  For that lane the
+correction is favourable: the two conditions cut the space of directions at
+infinity in different directions and give a **branching dichotomy** rather than
+a containment.  HYP-9070's other observations stand -- in particular that the
+JC(2) leading-form tower runs the subtractive Euclidean algorithm on the exponent
+pair `(a,b)`, so by Lame the depth-maximal coprime pairs are consecutive
+**Fibonacci** pairs.  Combined with section 3, the golden ray is extremal in two
+*independent* senses -- Euclidean depth and Newton-circuit alternation -- neither
+containing the other; both are visible in the continued fraction, Lame through
+all-ones partial quotients and section 3 through the norm `-1`.
+
 ## 4. Boundaries
 
 - Section 1 is an identity for each displayed row; the "degree `<=2`" statement is
@@ -134,10 +170,14 @@ hence the extreme case of maximal Newton-circuit alternation.
 - Section 3 is proved from (2), which is classical; the maximality statement is
   about the `h`-sequence, and these `h` need not come from a real-rooted
   polynomial.  Nothing here claims a real-rooted realization.
-- Nothing here bears on no-return for the first-gap family, GMC(2), or ULC.
+- Section 3a's dichotomy is proved for the two-element case that HYP-9070 needs;
+  the `0/9` census is a control, not the proof.
+- Nothing here bears on no-return for the first-gap family, GMC(2), or ULC, and
+  nothing here is a bridge to JC(2) -- MISTAKE-237 retracted one such bridge and
+  HYP-9070 is explicitly a stratification, not a reduction.
 
 ## 5. Reproduction
 
     python3 04-computation/gmc_ballot_column_newton_ratios_and_metallic_alternation_thm3010.py
 
-Three parts, all reporting `True`.
+Four parts, all reporting `True`.

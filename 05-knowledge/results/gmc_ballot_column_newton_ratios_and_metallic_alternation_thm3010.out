@@ -50,5 +50,23 @@ C. METALLIC RECURRENCES ATTAIN MAXIMAL CIRCUIT ALTERNATION
   VERDICT C: ALL METALLIC RECURRENCES MAXIMALLY ALTERNATE
 
 ==========================================================================
-SUMMARY  ballot-closed-forms=True  bronze-unique=True  metallic-maximal=True
+D. NORM DICHOTOMY -- metallic (norm -1) vs reciprocal (norm +1)
+==========================================================================
+  x^2 - n x - 1 has root product -1, so the pair is {lam, -1/lam}: closed
+  under r -> -1/r, an ANTI-reciprocal map, and containing a negative element.
+  THM-3003 section 1's rigidity needs {r} = {mu/r} with mu = e_d^(2/d) > 0,
+  i.e. norm +1 and positive roots.  So the two extremal strata cannot meet.
+
+  test: are the metallic h-sequences antipalindromic (R_k = R_(d-k))?
+    n=1 d=6: R = ['1', '1/2', '4/3', '9/10', '25/24']   antipalindromic? False
+    n=2 d=6: R = ['1/2', '4/5', '25/24', '144/145', '841/840']   antipalindromic? False
+    n=3 d=6: R = ['1/3', '9/10', '100/99', '1089/1090', '11881/11880']   antipalindromic? False
+    antipalindromic in 0 of 9 cases (n=1,2,3 x d=6,7,8): True
+  => maximal alternation (norm -1) and swap-stability (norm +1) are
+     DISJOINT, not nested.  A two-element direction multiset cannot be in
+     both strata, so the pair is a branching dichotomy, not a containment.
+  VERDICT D: DISJOINT STRATA CONFIRMED
+
+==========================================================================
+SUMMARY  ballot-closed-forms=True  bronze-unique=True  metallic-maximal=True  norm-dichotomy=True
 ==========================================================================
