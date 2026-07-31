@@ -99,12 +99,16 @@
   inherited high gate and an exact two-high upper reduce the `71` residuals
   to `73` one-high cases.  In every case a density pigeonhole on distinct
   fixed-safe residues finds effective torsion order at most `7`, uniformly
-  separating the strict high-danger arcs.  All seven rows close, the
-  projected `k=3` cap is `294`, and the necessary-row ledger is `375,758`.
+  separating the strict high-danger arcs.  All seven rows close.  The next
+  45 occupied rows through `z276` have `1549=659+882+8` states: crude and
+  exact-Farkas screens remove the first `1541`, while a one-high reduction
+  and order-two/four density collisions close all eight `z286` terminals.
+  The projected `k=3` cap is `275`, and the necessary-row ledger is `375,713`.
   Torsion source/output/semantic hashes begin `6b644fbb/c94568f5/95f9da4c`;
   the independent hashes begin `80e731d1/c0daca33/4667f8f0`; descent hashes
   begin `97fbefb8/316d069c/b589ac0d`; `z297` hashes begin
-  `f4464e01/a0de530a/1a4d141d`.
+  `f4464e01/a0de530a/1a4d141d`; the lower descent hashes begin
+  `f4d7292d/f709b859/cb202da8`.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py`, the isolated terminal referees,
   and the exact/projected plus forced-high descent packages -> matching
   `.out` files [THM-2941 PROVED NECESSARY BANDS + FINITE-EXACT CLOSURES +
@@ -281,7 +285,8 @@
 - `lrc14_j7_k3_projected_scalar_atlas_thm2941.py`, the descending scalar
   slices, ray/status closures, `z324` antipodal sidecar, `z312` finite-low-pair
   torsion closure plus independent referee, and the combined `z306/z302/z298`
-  descent, and the `z297` torsion-density closure -> matching `.out` files
+  descent, the `z297` torsion-density closure, and the `z294` through `z276`
+  status/torsion descent -> matching `.out` files
   [THM-2941 SCOPED PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED].  The
   global `200..378` atlas has `6,060` rows.  Exact quotients close its upper
   banks through `324`; the sole `z324` survivor is an unbounded
@@ -296,12 +301,15 @@
   independently rebuilt as exact rational Farkas contradictions.  The
   `z297` quotient then has `1172=271+830+71`; exact one-high reduction and
   the order-at-most-seven torsion-density lemma close all `73` terminal
-  cases.  Thus the current cap is `294` and the necessary ledger is
-  `375,758`.  Torsion source/output/semantic hashes begin
+  cases.  The next 45 occupied rows contribute `1549=659+882+8`; exact
+  capacity/status screens close `1541`, and order-two/four located torsion
+  closes the eight `z286` terminals.  Thus the current cap is `275` and the
+  necessary ledger is `375,713`.  Torsion source/output/semantic hashes begin
   `6b644fbb/c94568f5/95f9da4c`; independent hashes begin
   `80e731d1/c0daca33/4667f8f0`; descent hashes begin
   `97fbefb8/316d069c/b589ac0d`; `z297` hashes begin
-  `f4464e01/a0de530a/1a4d141d`.
+  `f4464e01/a0de530a/1a4d141d`; lower-descent hashes begin
+  `f4d7292d/f709b859/cb202da8`.
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;
   the `z336` source/output/semantic hashes are
   `6e991432a1ce5ec9c1cbe97199cb5fd647c5edc89bdcc60ce560382a70835fcf` /

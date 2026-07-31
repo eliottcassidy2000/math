@@ -12,7 +12,7 @@ status: >
   common-status, exact-packet, forced-high-ray, antipodal-phase,
   finite-low-pair torsion, torsion-density pigeonhole, scalar-splice, and
   status-descent addenda improve the k=2/k=3 first-drift caps from 2142/380
-  to 1732/294.
+  to 1732/275.
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -108,6 +108,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_k3_z306_z302_z298_ray_status_descent_closure_thm2941.out
   - 04-computation/lrc14_j7_k3_z297_ray_status_torsion_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z297_ray_status_torsion_closure_thm2941.out
+  - 04-computation/lrc14_j7_k3_z294_to_z276_ray_status_torsion_descent_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z294_to_z276_ray_status_torsion_descent_thm2941.out
   - 04-computation/lrc14_j7_k3_z324_located_two_cell_direct_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z324_located_two_cell_direct_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_2004_2142_thm2941.py
@@ -1422,6 +1424,44 @@ checkpoint cap is
 z_1<=294.                                               (25q2)
 ```
 
+Continuing down the exact atlas, the occupied levels
+
+```text
+294, 291, 288, 287, 286, 285, 278, 276
+```
+
+contain `45` body rows and `1,549` attained denominator states.  Exact crude
+fibre capacity removes `659`; the common 16-status table removes `882`, and
+all `882` exclusions are replayed as exact rational Farkas contradictions.
+Positive feasible and incompatible hostile controls remain active.  Only
+eight states survive, all at `z_1=286` on
+`E=(1,8,10,11,12,14)`.
+
+That row is a pinned `HIGH-TAIL` branch.  Its unrestricted zero-high scalar
+relaxation passes all `8/8` states, while the duplicate-permitting
+two-or-more-high upper misses the wall by exactly
+
+```text
+31003267/10140586456 > 0.
+```
+
+Thus every possible packet has exactly one high label.  Retaining every
+literal low label, including negative-amplitude labels, leaves eight
+one-high/two-low cases and only the low pairs `(312,350)` and `(312,364)`.
+For their distinct fixed-safe residues, the least qualifying `r` and
+effective-order histograms both equal `{2:6,4:2}`.  The torsion-density lemma
+therefore gives phase separation at least `1/4>1/7` on every primitive high
+ray, uniformly in its height.  All eight states are empty.
+
+The intervening atlas heights `293,292,290,289,284..279,277` are empty.
+The next occupied height is `275`, with ten bodies.  Removing the `45` closed
+body rows lowers the necessary ledger from `375,758` to `375,713`, and the
+proved cap is
+
+```text
+z_1<=275.                                               (25q3)
+```
+
 The `z_1=312` frontier
 source/output/semantic hashes are
 
@@ -1461,6 +1501,14 @@ The `z_1=297` torsion-density source/output/semantic hashes are
 f4464e01f0ada1515510a7d59b00582db3d677dd2a91b25407d25702d204e4e5
 a0de530aefe273ff74a5494867ca31d29d00d66811173cbfbeaadbfcab99e421
 1a4d141dc2dfc49fc0b15b1ec7ba7f4f637827985b3b946f5f367960aa0cbee6.
+```
+
+The `z_1=294` through `276` descent source/output/semantic hashes are
+
+```text
+f4d7292d5f3ce1b6f10f65706c15457490058a3dc59823e8c176066024307309
+f709b8594af9e506f1a6028c9263c743b6340086deb21d41fd28994aa3e2aad7
+cb202da83bb1b9b419576c1fb1ed7589d2a25d802f55f1845e0c2023f4f5e644.
 ```
 
 The physical reconciliation source/output pairs are
