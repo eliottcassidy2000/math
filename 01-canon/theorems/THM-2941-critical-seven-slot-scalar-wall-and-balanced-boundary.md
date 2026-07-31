@@ -12,7 +12,7 @@ status: >
   common-status, exact-packet, forced-high-ray, antipodal-phase,
   finite-low-pair torsion, torsion-density pigeonhole, scalar-splice, and
   status-descent addenda improve the k=2/k=3 first-drift caps from 2142/380
-  to 1724/275.
+  to 1656/270.
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -174,8 +174,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_k2_1780_1789_exact_descent_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_1770_1779_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_1770_1779_thm2941.out
-  - 04-computation/lrc14_j7_k2_z1776_exact_descent_closure_thm2941.py
-  - 05-knowledge/results/lrc14_j7_k2_z1776_exact_descent_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1776_ray_status_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1776_ray_status_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_1760_1769_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_scalar_band_1760_1769_thm2941.out
   - 04-computation/lrc14_j7_k2_z1768_high_wall_closure_thm2941.py
@@ -186,10 +186,18 @@ verification:
   - 05-knowledge/results/lrc14_j7_k2_cap1742_splice_thm2941.out
   - 04-computation/lrc14_j7_k2_cap1736_scalar_splice_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_cap1736_scalar_splice_thm2941.out
-  - 04-computation/lrc14_j7_k2_z1736_hybrid_closure_thm2941.py
-  - 05-knowledge/results/lrc14_j7_k2_z1736_hybrid_closure_thm2941.out
-  - 04-computation/lrc14_j7_k2_z1732_ray_status_projected_closure_thm2941.py
-  - 05-knowledge/results/lrc14_j7_k2_z1732_ray_status_projected_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1736_exact_descent_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1736_exact_descent_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1732_exact_descent_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1732_exact_descent_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1724_exact_descent_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1724_exact_descent_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1672_z1670_exact_descent_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1672_z1670_exact_descent_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1668_composite_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1668_composite_closure_thm2941.out
+  - 04-computation/lrc14_j7_k2_z1660_status_descent_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k2_z1660_status_descent_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -1730,18 +1738,18 @@ bands, the two redundant single-row checks, the high-wall closure, and the
 combined exact descent are, respectively,
 
 ```text
-60a916b6d4cfafc995b9ebc791057dd9afef1a33f312c32ef4da7fdc0151cec4 /
-d197eb6179a3f7c7da08d4389fde988c0bd1fbc5db8cfaf8e30435ace3c7d87f
-108c55c274c90fbea26131c29110d30d29f29c8133db14869e546ed2c13810b8 /
-a652db146760a151572ca2ff8f093cf297cf3a6322df441e530d9da3fb24ba0a
-d18157c7e4d074b7d2d2d6081641d801441bb8cd64f38fbc4f8224c597d12e60 /
-6f3d7bb75d9b475ba28a005fd796d71f2f910511346c257975df1d1b604107ad
-a4120f84a0bab99ccb55596f4a559383b4e5af82b9cf5dcd9d190ed67df0dc21 /
-7dcb6602efb3b266f669a3acc0b4c458c6db8f31e8fac66511fbb4cf53184566
-853941bc3621ef44e053a2f3382621799c30d89cc1d7ef30c63bf114554270ed /
-cf051d65e11743c9357ae361328cebfa6d738a21cec7161d87ad25d4446c393a
-e83dfeba64f14c53abcf2a2c67ff000dc4f9e79ac786ba4fe20ab9ad4a76d744 /
-c2536ac8100d3dce937c4ca51ca50c0b8a8ef72ce456e339064ae2869ddaab8c.
+a09b13e994ad6ab35e3324bd336e773b435b07859e6a3c924b84ec77f3e2aced /
+b29e1ccd9c3406c14bcfe2a53d5b6cee990c3d7a5e876bd5badcb27e2b506f0e
+000b89e4e6745bcfece0f78b7fbd386300dd4162ac22d3da3eaa69aef16cd495 /
+ef9c9a2042c8d13d2f94acf8463fff1207bc6d03e8f1a3cb8589e8fb7d0db918
+5662de2ab58e7ffb18a9ee4ddd2dd7eacda43131cfc15427eba026f29a590d77 /
+006e8a1675c318dd4e72ea808d2f6fe7eba019384921927bb1b86554b0229473
+7541876cf0fba4b6e74397a5ddb09db04a190b3d778171aa26dae8e1591409ad /
+3c91d6c9b39051f46481ec993e2d1d70e3384a0401dc5b1dfbb1266aec095849
+c12c17297aa8a96cbdd7d9d529838c776b160ace86b92d0030f5df447fe6877b /
+8038d1c15e157998abd1c8995a92b0ec5b28436a7d04cc2406468a079eecca41
+1bc6674fbb9b6f4c8979c229c164d267e60911ed582fb3184813d45c21da2adf /
+8d65c8758897bc97c9c463280c1d833e0570ef4763553fdb0c187d1a8996d42e.
 ```
 
 The next two all-body bands are exact.  On `1810<=z_1<=1835`, the scalar
@@ -1904,38 +1912,63 @@ also scalar-empty, no interpolation is used.  The updated ledger and cap are
 z_1<=1732,                 ledger=2,239,774.              (25q5)
 ```
 
-The cap-`1736` splice pins the complete cap-`1742` verifier and scalar atlas.
-The hybrid closure pins that splice and the exact atlas partition; normal and
-optimized replays match its stored transcript byte for byte.
-
-At the next occupied height, the atlas has exactly the two ordinary rows
+The cap-`1736` splice remains a historical cross-check.  The canonical current
+closure is the strengthened exact-descent replay: ten rows are treated over all
+later nonaligned labels, giving
 
 ```text
-E=(1,4,8,10,12,14): 188 = 33 crude + 155 status + 0,
-E=(2,4,8,10,12,14):  24 =  1 crude +   3 status + 20.
+1756 scalar = 2 crude + 1381 common-status + 373 status survivors,
+373 survivors -> 1035 literal packets -> 1035 projected kills,
 ```
 
-A fresh verifier reconstructs both rows directly from the canonical
-uniform-ray/status and projected-cell engines; it imports no earlier `k=2`
-descent wrapper.  Exact positive-slack expansion turns the last twenty states
-into exactly twenty literal packets, all projected-empty.  The minimum packet
-is `(1732,1736,1750,1810,1836)`: one cell gives only `15/13423`, a hostile
-control below `25/91`, while two cells give `31458/78373`, hence strict margin
-`903353/7131943`; direct full-carrier subtraction gives mass one.  The direct
-control agrees on all twenty packets, ray recurrence and antipodal sign balance
-are exact, and every slack cutoff is positive, so the proof is uniform over all
-distinct later nonaligned labels with no horizon.  Since the atlas has no row
-at any integer height `1725..1731` and its next occupied height is `1724`,
+with minimum margin `121/18109`; five further forced-high rows are scalar-empty.
+Every returned Farkas certificate is verified over `Q`, but the status digest
+binds only the deterministic infeasible instance.  The earlier hybrid replay
+and raw `z1732` replay hashed solver-selected LP bases and are **SUPERSEDED** by
+this lineage under MISTAKE-331/332.
+
+The canonical descendants retain useful hostile overlap controls.  At `z1=1732`
+the two rows give `212=34+158+20`, and all twenty exact packets are projected
+empty with minimum margin `903353/7131943`.  At `z1=1724` the two rows give
+`578=99+394+85`; the last `85` states expand to `98` packets, all projected
+empty with minimum margin `681/2821`.  Ordinary and optimized transcripts are
+byte-identical at every step.
+
+The decisive lower descent starts from the independent THM-2970/2972 closure of
+all `58` scalar-atlas rows on `1680<=z1<=1742`, which gives `z1<=1679`.
+Three complete all-body atlas replays then leave no unexamined integer height:
 
 ```text
-2,239,774 - 2 = 2,239,772,
-z_1<=1724,                 ledger=2,239,772.              (25q6)
+band       candidate rows   occupied heights
+1668..1679      36,036      1668:9, 1670:2, 1672:1
+1660..1668      27,027      1660:1, 1665:1, 1668:9
+1656..1660      15,015      1656:5, 1660:1.
 ```
 
-Normal and optimized replays match the stored transcript byte for byte.
-THM-2970 independently closes the nineteen forced-high rows in the same broad
-atlas; it is an orthogonal corroboration, not a dependency of this ordinary-row
-closure.
+At `1670/1672`, the exact ledger is
+`259=32 crude+226 status+1 residual`; its one literal packet is projected-empty
+with margin `8929/15197`.  At `1665/1668`, six all-label rows give
+`298=49+229+20`, and all twenty packets are projected-empty with minimum margin
+`1296/5551`; exact forced-high ray envelopes make the other four rows
+scalar-empty.  Finally the unique `z1=1660` state has one exact common-status
+infeasibility witness.  Thus `1669,1671,1673..1679`,
+`1661..1664,1666,1667`, and `1657..1659` are certified empty bands, while the
+five scalar rows at `1656` are the next unresolved boundary.  In total, all
+`456` status certificates in this lower descent are verified exactly and
+excluded from the canonical digest representative.  Therefore
+
+```text
+z_1<=1656,                                                    (25q6)
+```
+
+uniformly over all distinct later nonaligned labels, with no finite label
+horizon.  The three final source/output/semantic hash triples are
+
+```text
+z1672/z1670  b87b7e0e...bb11e4 / bfcf783f...149134 / 6f3d3bd7...c6493a
+z1668/z1665  9019e9da...734ed6 / e24fdb89...86515e / 17f0eaf3...95d1f4
+z1660         b7d33448...5b305a / 1a1a8508...2fed2e / 8464180d...ca345.
+```
 
 For `k=5`, there is a second, Gram-facing derivation.  Pointwise
 

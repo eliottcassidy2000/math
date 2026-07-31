@@ -94,6 +94,14 @@ Format per entry:
   mathematical checks may survive, but their transcript, profile, and
   semantic pins are noncanonical until the same repair is applied or a
   deterministic closure supersedes them.
+- **K2 follow-through audit:** the later canonical descent supersedes those two
+  `z_1=1736/1732` replays.  A targeted duplicate-solver scan also repaired the
+  independent `z_1=1784` referee and the redundant `z_1=1836 -> 1824 -> 1812`
+  side chain.  Those programs still reconstruct and verify every rational
+  certificate, but their stage, profile, semantic, and displayed replay data
+  now exclude the certificate basis and every magnitude derived from its
+  arbitrary normalization.  The cap-`1656` lineage uses this canonical
+  boundary throughout.
 - **Rule:** a proof search may use a noncanonical optimizer witness, but a
   reproducibility digest must bind canonical problem data or a separately
   canonicalized certificate, not an arbitrary valid basis or a scalar derived

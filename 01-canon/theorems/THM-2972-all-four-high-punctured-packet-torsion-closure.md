@@ -7,7 +7,8 @@ status: >
   all-four-high packets meeting the projected k=2 scalar wall. Every packet
   has a selectable puncture with a complete-cell order-two torsion pair.
   Together with THM-2970 this empties all 58 rows on 1680<=z_1<=1742 and
-  lowers the projected k=2 cap to z_1<=1679. This is not LRC(14).
+  gives the intermediate projected k=2 cap z_1<=1679. The later canonical
+  THM-2941 descent reaches 1656. This is not LRC(14).
 source: codex-lrc14-all-four-high-punctured-packet-torsion-2026-07-30
 depends_on:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
@@ -16,8 +17,8 @@ related:
   - MISTAKE-331
 script: 04-computation/lrc14_j7_k2_all_four_high_punctured_packet_torsion_closure_thm2972.py
 output: 05-knowledge/results/lrc14_j7_k2_all_four_high_punctured_packet_torsion_closure_thm2972.out
-script_sha256: 9a9d4c5c6d1af54e5ddd668074dbdfc5804d4969b89fda23be8555000f55aa65
-output_sha256: 12bd1e08d8e8fa0db9e018d5329ef04eeab2d64d634c041d6e008f26826b5c72
+script_sha256: b92f7c6cf295f29a3ec2c64730f6bd4486073b9197f322202df98df497369d97
+output_sha256: f6b34a08c30964f2c6ebf71b5e4f580fb6c75a4cf62762cb530ef892f9d4af25
 hash_basis: LF-normalized bytes
 ---
 
@@ -59,9 +60,10 @@ with the proved prior cap `z_1<=1742`, this gives
 projected k=2 cap: z_1<=1679.                             (3)
 ```
 
-The pre-existing `z_1=1736` hybrid closes fifteen of the fifty-eight rows and
-is an overlap control. Thus forty-three row closures are new relative to that
-shell theorem. Equation `(3)` is a projected scalar-atlas descent, not a
+The canonical `z_1=1736` exact-descent replay closes fifteen of the fifty-eight
+rows and is an overlap control. Thus forty-three row closures are new relative
+to that shell theorem. The earlier hybrid replay is superseded evidence under
+MISTAKE-331/332. Equation `(3)` is a projected scalar-atlas descent, not a
 decrement of the 165-profile LRC ledger and not a proof of LRC(14).
 
 ## Proof
@@ -237,8 +239,8 @@ Normal, optimized, and stored output are byte-identical. The canonical files
 are already LF; their hashes are
 
 ```text
-script  9a9d4c5c6d1af54e5ddd668074dbdfc5804d4969b89fda23be8555000f55aa65
-output  12bd1e08d8e8fa0db9e018d5329ef04eeab2d64d634c041d6e008f26826b5c72.
+script  b92f7c6cf295f29a3ec2c64730f6bd4486073b9197f322202df98df497369d97
+output  f6b34a08c30964f2c6ebf71b5e4f580fb6c75a4cf62762cb530ef892f9d4af25.
 ```
 
 The independent audit used a separate pure-Python implementation: heap-merged

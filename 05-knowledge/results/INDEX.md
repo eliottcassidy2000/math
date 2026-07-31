@@ -155,17 +155,24 @@
   both lower packages, verifies the complete integer cover `1743..1750`, and
   proves `z1<=1742` with ledger `2,239,789`; no interpolation is used.  The `1750`
   source/output/semantic hashes are
-  `70c9faa37a0524673e8178ed82cc6abc040438fff043b944a7ee0227d48c8997` /
-  `5288ace3fa398125045eeaea8c983c74d0019faa77d426784a612b7d2b4ae700` /
-  `71dfba440f4573d82de685adb7f4684909e99b7fafcfe729215ac2fc0573e972`;
+  `301060cde47e68912901f61cd5ca329d5ef02087a237faec2c5b354836dc667d` /
+  `b07df194381ce2077f589eac69246530b1375b3dbc8d290370191c9363a57e6e` /
+  `5f99ccca886e67b3171c57a5ed6423f992f0aeaf25d7ef728899e7f0fbc1e43b`;
   the `1743..1749` hashes are
-  `635c7c0bf79cb524f42ac2b1002ab8b4e10fb67d417443bd21756ed907145865` /
-  `d046fe640140556b3964d876336ac26c233cc8dbc15a0e10bc5dc721b01f4666` /
-  `e07845eaf675a561995164f61e75d9234abbb45ab53cf0ce54b5fb64679ba174`;
+  `77931381a606bb184e0cd2890b29ff38f24f5bb83279096463da981364b3787b` /
+  `542ac68365b0915ef6902d91ae111b40d96c994b442d233afa1c5fb8a075c867` /
+  `a77c9bfa446fe8bc0eeb661964f2d9d44b84e0ef93fe76001252cf2dacb4f5cd`;
   the splice source/output/semantic hashes are
-  `16bf56ef209f4c8b715f608db048d6e7166fd97756128c32c2b150746749ff92` /
-  `5e2e6bd8586c78dca1104cd78d8c1d698a2b0c6cbb2e1e087c6563b7488cfc67` /
-  `acc67c59ce2cbf9d84ad4f97942a35dd79db4fc2e93b34614bfe2ba1549fae70`.
+  `847f6619cb6aa0039c3335a77b545ec8ad3017820f1a6b3234fe0a0b3ebccb14` /
+  `61b8cd7ae66a212ea60423a77b7cc6d9b1de67f5af2469e8b13043de17c8dcd6` /
+  `3059c2f8814ef29757672380b97a0983cb01a97368f73dfdb0a2e19534775f1e`.
+  The immediately preceding canonical `z1776`, `z1768`, and `z1758`
+  source/output/semantic triples begin `b8de0dd8/e9f94259/4ab856d7`,
+  `96fed141/e8a5c6fe/8657e811`, and `5ef9883e/eed52f92/a8456113`.
+  The scalar cap-`1736` splice triple is
+  `94b2bdd71e4a2fb6230019b6a1851fe34fa0a9ca1f60ddc6072e9f36f0784bbe` /
+  `3d1e1d9016394b1450b640a0577976bda4e51d746853e785a9c0c36d06918d89` /
+  `5dd3a81f7f7ab362dd9c068a7595c067c4891f7d65884744152262b5ee7d47ec`.
 - `lrc14_j7_k2_z1736_exceptional_high_packet_closure_thm2941.py` ->
   matching `.out` [THM-2941 SCOPED PROVED + FINITE-EXACT + VERIFIED].
   The sole `z1=1736` forced-high row whose scalar maximum remains positive,
@@ -181,38 +188,45 @@
   `bf8ebd21949d7d82672a8010a9b7882219a42311475c00943180e3373bc8969b` /
   `519e590ca18d04b1845e7dd278575870aba816a58b39c0a34465441fe0d52bbe` /
   `2debf1b852cb393a0ed999eada1e2e1aac645848a59b8724459a6cb9132df441`.
-- `lrc14_j7_k2_z1736_hybrid_closure_thm2941.py` -> matching `.out`
-  [THM-2941 PROVED + FINITE-EXACT + VERIFIED].  A self-contained replay
-  against the current canonical uniform-ray and projected-cell sources
-  partitions all fifteen atlas rows at `z1=1736` as `9+5+1`.  The nine
-  ordinary rows give `929 = 0 crude + 774 status + 155 residual`, then
-  `286` finite-slack packets and `286` projected kills.  Five HIGH rows
-  have negative exact forced-wall maxima.  The last HIGH row is the unique
-  packet above, with projected margin `849/1547`.  The routes are disjoint,
-  exhaust the atlas height, quantify over all distinct later nonaligned
-  labels, and impose no horizon.  Since `1733..1735` are scalar-empty, the
-  proved cap is `z1<=1732` and the ledger is `2,239,774`.  Ordinary and
-  optimized transcripts match stored bytes.  Source/output/semantic hashes:
-  `5965eddea10a7e2c2d2b70d94052f6d69b3593c865fd72d3a8f1c8052cf1f96f` /
-  `548fd0d318e09ae4fa2da1844a2df5a50d8917c3fbfc48ab1b72ddf46f3d9678` /
-  `4eb8cf508b9b2b80f7f69cf411117740a7ad3ed93527f41dd1a565077f290e0a`.
-- `lrc14_j7_k2_z1732_ray_status_projected_closure_thm2941.py` -> matching
-  `.out` [THM-2941 PROVED + FINITE-EXACT + VERIFIED].  This fresh local
-  verifier imports no prior `k=2` descent wrapper: it pins the canonical
-  ray/status and projected-cell engines and reconstructs the two atlas rows at
-  `z1=1732`.  Their exact ledgers are `188=33+155+0` and `24=1+3+20`;
-  positive-slack expansion gives twenty literal packets and all twenty are
-  projected-empty.  The minimum margin is `903353/7131943` at
-  `(1732,1736,1750,1810,1836)`.  One projected cell gives the hostile control
-  `15/13423<=25/91`, two give `31458/78373`, and direct full-carrier
-  subtraction gives mass one on every packet.  Exact antipodal ray checks and
-  positive finite cutoffs make the conclusion uniform with no label horizon.
-  With `1725..1731` atlas-empty, the cap is `z1<=1724` and ledger
-  `2,239,772`.  THM-2970's forced-high closure is orthogonal, not a dependency.
-  Source/output/semantic hashes:
-  `e35a85d7e400a3739a71cb5ed4137beb58e11ab85ad47f757576ad47c0a0ef35` /
-  `d40ad2088cc295e6932c227cb586886f6ce7a5d320b8b4aa1e1f64bbf443ba00` /
-  `6c983595686b3b9d7bf28d2572d55108bd81f967b997ea55f4e40208fd2b3d83`.
+- `lrc14_j7_k2_z1736_hybrid_closure_thm2941.py` and
+  `lrc14_j7_k2_z1732_ray_status_projected_closure_thm2941.py` -> matching
+  `.out` files [**SUPERSEDED / NONCANONICAL EVIDENCE**].  Their mathematical
+  closures survive, but their stage/profile/semantic digests include a
+  solver-selected HiGHS dual basis.  MISTAKE-331/332 remove them from the
+  current proof graph; use the exact-descent lineage below.
+- `lrc14_j7_k2_z1736_exact_descent_closure_thm2941.py`,
+  `lrc14_j7_k2_z1732_exact_descent_closure_thm2941.py`, and
+  `lrc14_j7_k2_z1724_exact_descent_closure_thm2941.py` -> matching `.out`
+  [THM-2941 PROVED + FINITE-EXACT + VERIFIED].  The strengthened `z1736`
+  replay treats ten bodies over all later labels and five forced-high bodies:
+  `1756=2+1381+373`, followed by `1035/1035` projected kills, minimum margin
+  `121/18109`.  Its canonical status digest omits only the verified rational
+  certificate representative.  The two `z1732` rows retain
+  `212=34+158+20`, twenty projected kills, and minimum margin
+  `903353/7131943`; the two `z1724` rows give `578=99+394+85`, ninety-eight
+  packet kills, and minimum margin `681/2821`.  Normal and optimized outputs
+  match byte for byte.  Source/output/semantic triples are
+  `1a77ea86...4d0e65` / `74626678...c087c` / `0e65288a...5d2c`,
+  `40718586...07cf1b` / `d201c2ef...ab978` / `ce4fda72...e5099`, and
+  `11d4c083...ba313` / `ef38b823...98245` / `6222d8f4...e75be`.
+- `lrc14_j7_k2_z1672_z1670_exact_descent_closure_thm2941.py`,
+  `lrc14_j7_k2_z1668_composite_closure_thm2941.py`, and
+  `lrc14_j7_k2_z1660_status_descent_closure_thm2941.py` -> matching `.out`
+  [THM-2941 PROVED + FINITE-EXACT + VERIFIED; CURRENT K2 CAP].  Starting from
+  THM-2972's cap `1679`, the complete `1668..1679` atlas checks `36,036`
+  candidate rows and leaves only `1668:9,1670:2,1672:1`; `1670/1672` close as
+  `259=32+226+1`, with the last packet killed at margin `8929/15197`.
+  The complete `1660..1668` atlas checks `27,027` rows and leaves only
+  `1660:1,1665:1,1668:9`; four forced-high exact-ray rows and six all-label
+  rows close, the latter as `298=49+229+20` with minimum margin `1296/5551`.
+  The `15,015`-row `1656..1660` atlas then closes the sole `z1660` state by
+  exact common status and leaves exactly five rows at `1656`.  All `456`
+  rational status certificates are checked, while canonical digests omit the
+  solver-selected basis.  Hence the current projected `k=2` cap is `1656`.
+  Source/output/semantic triples are
+  `b87b7e0e...bb11e4` / `bfcf783f...149134` / `6f3d3bd7...c6493a`,
+  `9019e9da...734ed6` / `e24fdb89...86515e` / `17f0eaf3...95d1f4`, and
+  `b7d33448...5b305a` / `1a1a8508...2fed2e` / `8464180d...ca345`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:
@@ -396,31 +410,29 @@
   `z1932` primary source/output hashes
   begin `77c848a2/251d60b3`; its independent pair begins
   `80f113c3/ccf6efe6`.  The `z1836` scalar/projected/high-wall source-output
-  pairs begin `99a81704/986a5353`, `54ab8787/f159324c`, and
-  `4b633061/115286b4`.  New full source-output pins are
-  `60a916b6d4cfafc995b9ebc791057dd9afef1a33f312c32ef4da7fdc0151cec4` /
-  `d197eb6179a3f7c7da08d4389fde988c0bd1fbc5db8cfaf8e30435ace3c7d87f`
+  pairs begin `4afbd91c/fdbeee8d`, `b07e9c45/0324b916`, and
+  `0a74e16d/d4c9a555`.  Current full source-output pins are
+  `a09b13e994ad6ab35e3324bd336e773b435b07859e6a3c924b84ec77f3e2aced` /
+  `b29e1ccd9c3406c14bcfe2a53d5b6cee990c3d7a5e876bd5badcb27e2b506f0e`
   for the `1810..1835` band,
-  `108c55c274c90fbea26131c29110d30d29f29c8133db14869e546ed2c13810b8` /
-  `a652db146760a151572ca2ff8f093cf297cf3a6322df441e530d9da3fb24ba0a`
+  `000b89e4e6745bcfece0f78b7fbd386300dd4162ac22d3da3eaa69aef16cd495` /
+  `ef9c9a2042c8d13d2f94acf8463fff1207bc6d03e8f1a3cb8589e8fb7d0db918`
   for `1800..1809`,
-  `d18157c7e4d074b7d2d2d6081641d801441bb8cd64f38fbc4f8224c597d12e60` /
-  `6f3d7bb75d9b475ba28a005fd796d71f2f910511346c257975df1d1b604107ad`
+  `5662de2ab58e7ffb18a9ee4ddd2dd7eacda43131cfc15427eba026f29a590d77` /
+  `006e8a1675c318dd4e72ea808d2f6fe7eba019384921927bb1b86554b0229473`
   for repaired `z1824`,
-  `a4120f84a0bab99ccb55596f4a559383b4e5af82b9cf5dcd9d190ed67df0dc21` /
-  `7dcb6602efb3b266f669a3acc0b4c458c6db8f31e8fac66511fbb4cf53184566`
+  `7541876cf0fba4b6e74397a5ddb09db04a190b3d778171aa26dae8e1591409ad` /
+  `3c91d6c9b39051f46481ec993e2d1d70e3384a0401dc5b1dfbb1266aec095849`
   for repaired `z1812`,
-  `853941bc3621ef44e053a2f3382621799c30d89cc1d7ef30c63bf114554270ed` /
-  `cf051d65e11743c9357ae361328cebfa6d738a21cec7161d87ad25d4446c393a`
+  `c12c17297aa8a96cbdd7d9d529838c776b160ace86b92d0030f5df447fe6877b` /
+  `8038d1c15e157998abd1c8995a92b0ec5b28436a7d04cc2406468a079eecca41`
   for the high wall, and
-  `e83dfeba64f14c53abcf2a2c67ff000dc4f9e79ac786ba4fe20ab9ad4a76d744` /
-  `c2536ac8100d3dce937c4ca51ca50c0b8a8ef72ce456e339064ae2869ddaab8c`
+  `1bc6674fbb9b6f4c8979c229c164d267e60911ed582fb3184813d45c21da2adf` /
+  `8d65c8758897bc97c9c463280c1d833e0570ef4763553fdb0c187d1a8996d42e`
   for the combined exact descent.  All named normal and optimized
-  transcripts match stored bytes.
-  `4b633061/115286b4`; all three normal and optimized transcripts match.
-  Their semantic hashes begin `5afe9b0c/77e6ebf9/18122f5e`; the hardened
-  `1810..1835` band source/output/semantic triple begins
-  `60a916b6/d197eb61/68105c55`.
+  transcripts match stored bytes.  The hardened `1810..1835` band
+  source/output/semantic triple begins
+  `a09b13e9/b29e1ccd/790e1a9f`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` and
   the reflected-stalk/all-level mass closures -> matching `.out`
   files [THM-2941 PROVED STRUCTURAL LAW + SCOPED FINITE-EXACT CLOSURE].
@@ -4692,8 +4704,8 @@ optimized runs byte-match the stored transcript.
 | `amm12592_laneC2_finiteM_dfs_deathstar.out` | [FINITE-EXACT; HYP-9061 lane C2] | Exhaustive-with-witness finite-M feasibility of the PROVED prefix envelope at 9 biases (incl. both certificate biases): gamma=1/2 D0=0 FEASIBLE M=1..10 (M=11 FEASIBLE via randomized hunter `amm12592_m11_witness_hunt_deathstar.py`, witness exactly re-verified, near mirror-antisymmetric); gamma=1/3 D0=0 FEASIBLE M=1..12; parity-OFF control trivially feasible. No finite-M infeasibility: parity is the entire obstruction content but finitely-many-bias prefix envelopes cannot convert it at small M — the greedy freeze (lane D) is a policy artifact. Script/output SHA-256: `54cf6401adcf1dae135f05230c1b059453a6a4e11a9e420bf0150b001ffe7143` / `86d30056c06de48425c648496d1a42a94ddd3276611537da5fe888bdeeed23ec`. | death-star-2026-07-30-coinC2 |
 | `amm12592_evaluation_wall_thm2977.out` | [PROVED + VERIFIED-EXACT; THM-2977] | Evaluation-wall referee: W1 exact AP of o=1 cells (stride g1+g2, incl. gamma=2457/6592); LTE v2(rho^h-1)=v2(rho-1)+v2(h) on unit ratios (strides to 9049); K-bound (finite-difference kill) vs true K on certificate + hostile bias pairs, 4 depth laws x 12 weights; wall margin table (K=7 vs log2(B) growing ~35 bits/level from M=2). Together with lane G2's one-bit collapse this closes the evaluation reading of certificate (27) as a class. Script/output SHA-256: `41be1455ec7dd25e32c89f74b4f7f517b5c120d07a6f05a93512c893661b664f` / `6ab7712ee34aaa819ae63c30a6a983d5e9fad4502ed0e4ea976ab826e8e69a7c`. | death-star-2026-07-30-coinC2 |
 | `gmc_first_gap_wall_stripped_norm_core_atlas_thm2969.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2969] | For every support `{n,n+1,n+2,n+M}` with `n>=0` and `6<=M<=26`, two full Macaulay charts have the same explicit half-wall and the same primitive wall-stripped pure-resultant core.  All 21 cores are dense, coefficient-positive, and PF2, so `L(H),L(H^2),L(H^3),L(H^4)` cannot vanish simultaneously.  Calibrated chart pairs are coprime and obey the Sylvester resultant divisor bound.  The result is finite-width only: `M>=27`, fixed-prime gates, and arbitrary radial GMC(2) remain open.  Script/output SHA-256: `5be5df0fd058f436593339f78cd6240a47975082d22929c135ba811458753bf5` / `7867d6dfc1d08053dc6563c95c5822a087bfab763edea2fba6eed183454eef6a`. | codex-gmc-first-gap-norm-core-atlas-2026-07-30; independent hostile extension audit |
-| `lrc14_j7_k2_exact_one_high_located_torsion_closure_thm2970.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2970] | In the projected `k=2`, `1680<=z1<=1742` scalar atlas, exact all-residue unit-ray envelopes force exactly one high later label on all nineteen forced-high rows. Sixteen are scalar-empty; the thirteen literal classes on the other three rows are killed on complete body cells by both order-two and order-seven torsion pairs. The order-seven open seam is sharp and order eight fails. Its relative residual has thirty-nine all-four-high rows; the later THM-2941 hybrid independently closes the nine at `z1=1736` and sets the current cap `1732`. THM-2970 itself does not lower the cap or close LRC(14). Script/output SHA-256: `a4991062e4a26c223946cd88c9a3b53cf453c9987b9fe63b792a5702c423a0bb` / `d829f603ee7ed68f008dd64bd61077a7b33212082d1ae68175980f41c5004d51`. | codex-lrc14-located-low-cell-torsion-tail-2026-07-30; independent hostile audit |
-| `lrc14_j7_k2_all_four_high_punctured_packet_torsion_closure_thm2972.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2972] | The thirty-nine exact-suffix rows in the projected `k=2`, `1680<=z1<=1742` atlas contain exactly 19,640 literal scalar-admissible packets. Every packet has a selectable puncture with two complete fixed-safe cells separated by order two in the distinguished denominator, so located torsion makes the projected safe residual full. Ten packets refute all-puncture service and 3,075 working punctures refute universal order two, while the deterministic existential witness survives. Together with THM-2970 this empties all fifty-eight rows and lowers the projected `k=2` cap to `1679`; it does not close LRC(14). Script/output SHA-256: `9a9d4c5c6d1af54e5ddd668074dbdfc5804d4969b89fda23be8555000f55aa65` / `12bd1e08d8e8fa0db9e018d5329ef04eeab2d64d634c041d6e008f26826b5c72`. | codex-lrc14-all-four-high-punctured-packet-torsion-2026-07-30; independent heap/recursive/set audit |
+| `lrc14_j7_k2_exact_one_high_located_torsion_closure_thm2970.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2970] | In the projected `k=2`, `1680<=z1<=1742` scalar atlas, exact all-residue unit-ray envelopes force exactly one high later label on all nineteen forced-high rows. Sixteen are scalar-empty; the thirteen literal classes on the other three rows are killed on complete body cells by both order-two and order-seven torsion pairs. The order-seven open seam is sharp and order eight fails. Its relative residual has thirty-nine all-four-high rows, which THM-2972 closes. THM-2970 itself does not close LRC(14). Script/output SHA-256: `eeba4fa6968365269b776832cbcbd3753affcac10915726eb28fb7a817c9eec4` / `8f1dd4702b64caef2b94cfdf8e474bba137900ef48200bf5d9aabb2e440e454f`. | codex-lrc14-located-low-cell-torsion-tail-2026-07-30; independent hostile audit |
+| `lrc14_j7_k2_all_four_high_punctured_packet_torsion_closure_thm2972.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2972] | The thirty-nine exact-suffix rows in the projected `k=2`, `1680<=z1<=1742` atlas contain exactly 19,640 literal scalar-admissible packets. Every packet has a selectable puncture with two complete fixed-safe cells separated by order two in the distinguished denominator, so located torsion makes the projected safe residual full. Ten packets refute all-puncture service and 3,075 working punctures refute universal order two, while the deterministic existential witness survives. Together with THM-2970 this empties all fifty-eight rows and gives the intermediate cap `1679`; the canonical THM-2941 atlas descent continues to the current cap `1656`. It does not close LRC(14). Script/output SHA-256: `b92f7c6cf295f29a3ec2c64730f6bd4486073b9197f322202df98df497369d97` / `f6b34a08c30964f2c6ebf71b5e4f580fb6c75a4cf62762cb530ef892f9d4af25`. | codex-lrc14-all-four-high-punctured-packet-torsion-2026-07-30; independent heap/recursive/set audit |
 | `gmc_first_gap_wall_stripped_norm_core_continuation_thm2973.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2973] | For supports `{n,n+1,n+2,n+M}` with `n>=0` and `27<=M<=31`, the two full Macaulay charts have the same explicit common flag and primitive wall-stripped pure-resultant core. The width-31 correction must include the simple quartic wall `(31,25)` beside the quadratic wall `(31,21)`. All five cores are dense, coefficient-positive, and PF2; `R=W N` excludes a common quadratic/cubic/quartic projective zero and hence simultaneous vanishing of the first four factorial moments. Calibrated chart coprimality is a separate check. `M=32` and arbitrary width are outside scope. Script/output SHA-256: `3539d1fcd7dd317659aab8296a86ab928999a7efff237e3f00571481a80cdad3` / `7146c4bb062d453de50af3285a9d8f7764184b4716fb3d690ee2eed78d5e7bd8`. | codex-gmc-first-gap-norm-core-continuation-2026-07-30; independent hostile algebra/replay audit |
 | `gmc_first_gap_wall_stripped_norm_core_at_thirty_two_thm2978.out` | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2978] | For support `{n,n+1,n+2,n+32}`, the two full Macaulay charts have the same explicit flag and degree-660 primitive wall-stripped pure-resultant core. All 661 coefficients are positive and PF2; q/c/f and the core have no integer wall root, and no exceptional width-32 Smith correction is needed. Associated common-factor relations exclude a common ternary projective zero and simultaneous vanishing of the first four factorial moments. Width 33, fixed-prime gates, and arbitrary radial coefficients remain open. Script/output SHA-256: `4787aac1159f8ee9bdf7ad27df9654c3ed46ab32060d38965ba691b662c132cb` / `32e0ac71ffe557868238a9e1cf8e019864f6260675093a9cb45bfeb2e24c7f76`. | codex-gmc-first-gap-norm-core-m32-2026-07-30; independent hostile algebra/replay audit |
 | `circuit_holotopy_slack_persistence_probe.out` | [PROVED ABSTRACT LEMMAS + VERIFIED-EXACT CONTROLS; REFLECTION] | Closed compact minimal infeasibility carries one selected-nerve sphere whose death is the exact uniform-slack minimax value, but row scaling changes that metric lifetime. The weak projective-ray fibre compactifies to a finite segment or full cylinder; at strict zero residual the infinity point is excluded. Mod-p cokernels, Farkas supports, physical nerves, and Gaussian Sylvester Smith bars are kept type-distinct. This is a proof-space/obstruction synthesis, not GMC or LRC closure. Script/output SHA-256: `0d750b0658f8dc7b3037905e44be32ea87e884057c084279712da8a5d9c040ae` / `bf6544f2dc71373e8ede515fb3d462f9e313a6000a088718a185cd60308e044f`. | codex/circuit-holotopy-synthesis-2026-07-30; independent hostile audit |

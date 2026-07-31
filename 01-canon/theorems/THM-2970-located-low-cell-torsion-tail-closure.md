@@ -8,8 +8,8 @@ status: >
   label; sixteen rows are scalar-empty and every one of the thirteen
   remaining literal classes is killed by a whole-cell order-two (also
   order-seven) torsion pair.  The theorem-local residual has thirty-nine
-  all-high rows; the later THM-2941 hybrid addendum independently closes its
-  nine rows at height 1736.
+  all-high rows; the canonical THM-2941 exact-descent lineage independently
+  closes all fifteen atlas rows, including those nine rows at height 1736.
 source: codex-lrc14-located-low-cell-torsion-tail-2026-07-30
 audit: >
   An independent hostile auditor replayed the settled normal and optimized
@@ -24,8 +24,8 @@ related:
   - THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff
 script: 04-computation/lrc14_j7_k2_exact_one_high_located_torsion_closure_thm2970.py
 output: 05-knowledge/results/lrc14_j7_k2_exact_one_high_located_torsion_closure_thm2970.out
-script_sha256: a4991062e4a26c223946cd88c9a3b53cf453c9987b9fe63b792a5702c423a0bb
-output_sha256: d829f603ee7ed68f008dd64bd61077a7b33212082d1ae68175980f41c5004d51
+script_sha256: eeba4fa6968365269b776832cbcbd3753affcac10915726eb28fb7a817c9eec4
+output_sha256: 8f1dd4702b64caef2b94cfdf8e474bba137900ef48200bf5d9aabb2e440e454f
 hash_basis: LF-normalized bytes
 ---
 
@@ -41,23 +41,23 @@ The exact referee is
 
 ```text
 04-computation/lrc14_j7_k2_exact_one_high_located_torsion_closure_thm2970.py
-SHA256 a4991062e4a26c223946cd88c9a3b53cf453c9987b9fe63b792a5702c423a0bb
+SHA256 eeba4fa6968365269b776832cbcbd3753affcac10915726eb28fb7a817c9eec4
 ```
 
 and its stored transcript is
 
 ```text
 05-knowledge/results/lrc14_j7_k2_exact_one_high_located_torsion_closure_thm2970.out
-SHA256 d829f603ee7ed68f008dd64bd61077a7b33212082d1ae68175980f41c5004d51
+SHA256 8f1dd4702b64caef2b94cfdf8e474bba137900ef48200bf5d9aabb2e440e454f
 ```
 
 The script pins and verifies these two inputs before doing mathematics:
 
 ```text
 04-computation/lrc14_j7_k2_scalar_band_1680_1742_thm2941.py
-  89016f939c961fa979ec5b30812981456df5bfb2af3066f1f1b38e5a83f1a412
+  1224d5594571f21c91c55fe3ab165c4fc34ba7968719862d12660d24efac919d
 05-knowledge/results/lrc14_j7_k2_scalar_band_1680_1742_thm2941.out
-  4a36611b26585964e185bbaa3d583be3f1c67a7b608cca785920266bc217a779
+  c20607cb478ed491d7000f2b8a49213f57d1606a5152700ac3b50c836e2dc66c
 ```
 
 Reproduction:
@@ -311,9 +311,10 @@ Removing the nineteen forced-high rows leaves thirty-nine rows:
 ```
 
 Within the relative residual of this reduction, the top height is `1736`, with
-nine rows, and the lowest occupied height is `1694`.  The later THM-2941 hybrid
-addendum independently closes that entire `1736` shell and sets the current
-global projected `k=2` cap to `1732`; it does not alter the exact census here.
+nine rows, and the lowest occupied height is `1694`.  The canonical THM-2941
+exact-descent lineage independently closes the entire `1736` shell; later
+all-body descents continue to the current global projected `k=2` cap `1656`.
+Neither later step alters the exact census here.
 Of the thirty-nine rows, thirty-eight
 have `L=11760` and high floor `1020`; one, namely
 
@@ -331,7 +332,9 @@ This theorem does **not** close its thirty-nine-row relative residual, does not
 change the LRC ledger by itself, and does not assert that a pointwise or
 root-only safe pair suffices.  Its exact scope is the nineteen `HIGH-TAIL` rows
 and complete whole-cell fixed-packet safety.  Current navigation must compose
-it with, rather than overwrite, THM-2941's later `z_1=1736` hybrid closure.
+it with, rather than overwrite, THM-2941's canonical exact-descent and
+lower-atlas closures.  The earlier `z_1=1736` hybrid is superseded evidence
+under MISTAKE-331/332 because its digest included a solver-selected basis.
 
 ## Correction boundary
 
