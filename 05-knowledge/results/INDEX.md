@@ -284,6 +284,22 @@
   optimized outputs agree byte for byte.  Source/output/profile/semantic
   SHA-256 are `593988b1...0fa6b3` / `c93f0fd1...b1207` /
   `0928270d...13d35c` / `10c0562f...365321`.
+- `lrc14_j7_k2_z1650_shell_closure_thm2980.py` -> matching `.out`
+  [FINITE-EXACT THM-2980 BOUNDARY INPUT; THM-2980 REMAINS RESERVED].  A
+  complete `1600..1655` scalar atlas checks `168,168` candidate rows and has
+  49 survivors; its top shell consists of twelve rows at `1650`, while
+  `1651..1655` is empty.  Three all-label rows close with `365` exact rational
+  status certificates and `329/329` projected packet kills; eight forced-high
+  rows are scalar-empty.  The last body `(1,10,11,12,13,14)` reduces to 167
+  denominator classes sharing the single low triple `(1736,1800,2340)`.
+  Located torsion closes 166 classes.  The exceptional denominator `143` has
+  exactly three eligible high labels, and each is killed by a 146-cell
+  projected prefix with safe mass `2/5`, margin `57/455`.  Hence the current
+  projected `k=2` cap is `1649`.  This does not prove reserved THM-2980's full
+  band statement or LRC(14).  Normal and optimized outputs agree byte for
+  byte.  Source/output/atlas-survivor/semantic SHA-256 are
+  `d38929a7...d23377e` / `a1a3cfe4...0e0b26` /
+  `2b567b15...4d701` / `a38d0d4a...66998f`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:
