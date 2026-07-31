@@ -1,8 +1,14 @@
 ---
 id: THM-2994
 title: "First-gap norm-core Hurwitz and Hermite--Biehler prefix through width sixteen"
-status: PROVED CANDIDATE + VERIFIED-EXACT + CERTIFIED-ARB / FINAL REPAIR AUDIT PENDING
+status: PROVED + VERIFIED-EXACT + CERTIFIED-ARB + INDEPENDENTLY HOSTILE-AUDITED
 source: codex-gmc-first-gap-hurwitz-prefix-2026-07-30
+audit: >
+  Independent immutable replay and proof audit accepted the canonical
+  THM-2994 package after all three required repairs. Normal, optimized, and
+  stored transcripts are byte-identical; reciprocal Routh scaling, strict
+  Hurwitz inference, Hermite--Biehler typing, Arb certification, hashes,
+  record digest, and the repaired THM-2991 global-return control all pass.
 depends_on:
   - THM-2969-first-gap-wall-stripped-resultant-norm-core-atlas
 related:
@@ -18,10 +24,8 @@ hash_basis: LF-normalized bytes
 
 # THM-2994 -- first-gap Hurwitz/Hermite--Biehler prefix
 
-**PROVED CANDIDATE + VERIFIED-EXACT + CERTIFIED-ARB / FINAL REPAIR AUDIT
-PENDING.**  The core proof passed an independent hostile audit.  Its three
-required repairs are installed below; this file is not a proved dependency
-until the repaired immutable package receives its final audit.
+**PROVED + VERIFIED-EXACT + CERTIFIED-ARB + INDEPENDENTLY
+HOSTILE-AUDITED.**
 
 ## 1. Statement
 
@@ -194,8 +198,8 @@ missing for no-return:
 
 ## 7. Scope
 
-This candidate proves, after exact replay and independent audit, only the
-finite Hurwitz statement `(1)--(2)` and its Hermite--Biehler corollary.  It
+This theorem proves only the finite Hurwitz statement `(1)--(2)` and its
+Hermite--Biehler corollary.  It
 does not prove:
 
 - Hurwitz stability for `M>=17`;
@@ -226,6 +230,7 @@ The independent hostile audit rederived reciprocal orientation, fraction-free
 Routh scaling, strict Hurwitz inference, Hermite--Biehler interlacing, Arb
 certification, and scope.  It required the repaired three-cluster control,
 precise first-column height label, and canonical THM-2994 namespace installed
-here.  Final immutable replay/audit is pending.
+here.  The final immutable normal and optimized replays both equal the stored
+transcript byte-for-byte: `19` lines and `4666` LF bytes.
 
-**QED as a proof-complete exact candidate; not yet a proved dependency.**
+**QED.**
