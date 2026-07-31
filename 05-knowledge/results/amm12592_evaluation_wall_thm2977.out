@@ -1,0 +1,12 @@
+R1 (W1 AP structure, stride g1+g2 per residue class): OK
+R2 (LTE v2(rho^h - 1) = v2(rho-1) + v2(h) on unit ratios): OK
+R3 (true K <= W2 bound; certificate + hostile pairs, 4 laws x 12 weights): OK
+    certificate pair, x=(1,1), gamma=1/2, M=12: true K=7, bound=13
+R4 wall margin (certificate pair):
+    M=  2: K=  7  log2(B)=     92.8  margin=     85.8
+    M=  4: K=  7  log2(B)=    162.4  margin=    155.4
+    M=  8: K=  7  log2(B)=    301.7  margin=    294.7
+    M= 12: K=  7  log2(B)=    441.0  margin=    434.0
+    M= 16: K=  7  log2(B)=    580.3  margin=    573.3
+R4 (envelope covers every residue class mod 2^K from M=1 on): OK
+ALL THM-2977 REFEREE CHECKS PASSED
