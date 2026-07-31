@@ -1,0 +1,34 @@
+selected=4866
+pair_positive=1612
+pair_nonpositive=3254
+pair_equal=0
+hunter_positive_after_pair=1175
+hunter_nonpositive_after_pair=2079
+hunter_equal=0
+pair_horizon_extensions=6
+maximum_pair_horizon=4056
+minimum_pair_tail_gap=50423/214911136440
+paid_pairs=40753
+recursive_processed=2079
+recursive_closed=1884
+recursive_open=195
+second_pivots=6172
+second_closed=5944
+second_open=228
+maximum_second_core=7
+maximum_second_cutoff=626
+maximum_top3_horizon=2000
+minimum_top3_tail_gap=1067146889/381167448480
+closed_children=4671
+open_children=195
+route_histogram=(('hunter', 1175), ('pair', 1612), ('recursive', 2079))
+slot_chain=((9, 4), (10, 3))
+composition={'failed_parents': 3451, 'failed_roots': 2182, 'completed_parents': 3277, 'remaining_parents': 174, 'completed_roots': 2031, 'remaining_roots': 151, 'completed_root_sha256': '673ccf08cab64957d0cc794179de7972c327a79998c11cae7406fe68bf5cd636'}
+pair_semantic_sha256=2b0580c8e98e13aeb34adc2f4ec3f8da5be30363adb882cd6794da192ce9476c
+recursive_semantic_sha256=c9e4a568f17778355b4ce91ee387add8f67dd6dcca257108ec945a2dfe1bd327
+closest_pair_positive=PAIR;E=2,3,7,9,11,12,13;rank=2;a=20;P=15,20;x=16;earlier=;h=149/980;r=30;M=2000;scan=1983;top4=23:1737563/38678640,46:22133/552552,19:11535/304304,38:24026/665665;B2=21317293/280420140;B2w=23,29;B2tail=547050277/7851763920;B2gap=116163/18302480;paid=8;extensions=0;pairmargin=103/40060020;G4=3197184409/21311930640;G4margin=6156989/3044561520;lambda=None;route=pair
+closest_pair_failure=PAIR;E=2,3,5,7,8,12,14;rank=1;a=22;P=22;x=19;earlier=26,18;h=3775/20482;r=34;M=2000;scan=1982;top4=52:217753/3993990,17:19765/379848,27:503779/11060280,50:4087/93100;B2=509647/5530140;B2w=17,27;B2tail=785851043/9323969655;B2gap=2643406411/335662907580;paid=11;extensions=0;pairmargin=-1/125685;G4=3347681/18433800;G4margin=647/239400;lambda=None;route=hunter
+closest_hunter_positive=PAIR;E=1,5,7,8,11,12,13;rank=1;a=19;P=19;x=18;earlier=27,17,50;h=322237/2396394;r=24;M=2000;scan=1981;top4=37:68/1813,23:164077/4499352,20:1849/54340,46:1439/43263;B2=65873077/976359384;B2w=23,31;B2tail=122414748359/2069921263410;B2gap=2137615050629/256670236662840;paid=13;extensions=0;pairmargin=-177953/379695316;G4=262569935/1952718768;G4margin=4573/1242639216;lambda=None;route=hunter
+closest_hunter_failure=PAIR;E=1,2,4,5,9,12,14;rank=1;a=22;P=22;x=26;earlier=;h=12371/70070;r=30;M=2000;scan=1984;top4=40:9593/180180,16:65173/1261260,32:446099/10090080,20:925/22932;B2=29012/315315;B2w=16,20;B2tail=95978413/1177764588;B2gap=6881783/654313660;paid=9;extensions=0;pairmargin=-4709/630630;G4=161953/917280;G4margin=-59/10090080;lambda=185665/4036032;route=recursive
+closest_second_positive=E=1,4,6,7,10,11,13;rank=2;a=16;P=17,16;x=23;earlier=;y=27;margin=1/697680
+closest_second_failure=E=1,4,6,7,10,12,14;rank=1;a=22;P=22;x=16;earlier=;y=26;margin=-1/13230

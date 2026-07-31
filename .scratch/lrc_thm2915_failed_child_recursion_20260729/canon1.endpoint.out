@@ -1,0 +1,16 @@
+LRC14 THM2915-failure recursion endpoint equality audit
+body=(2, 4, 6, 8, 10, 12, 14)
+branch=(rank=1,apex=22,prefix=(22,),x=18,y=26,z=16)
+pair_witness=(20, 24)
+family=(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26)
+primitive=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+time=1/28
+target=1/14
+strict_danger=()
+boundary=(2, 26)
+closed_carrier=(components=0,mass=0/1)
+perturbation_clearance=(left=249999993/3500000000,right=249999909/3500000000)
+thm2907_endpoint_join=PASS
+semantic_sha256=5286d8ee47e47ea2444d16dd0298eba9c02182d78c10e984c11c4bb56b487393
+mode=LOCKED
+all_exact_controls=PASS

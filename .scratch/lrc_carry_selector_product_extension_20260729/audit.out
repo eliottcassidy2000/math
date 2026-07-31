@@ -1,0 +1,16 @@
+CARRY / SELECTOR PRODUCT-EXTENSION AND QUOTIENT AUDIT
+truth_rows=((1, 1), (0, 0), (0, 0), (1, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (1, 1), (0, 0)); positive_selector=((1, 0), (0, 1), (0, 1), (1, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (1, 0), (0, 1)); selector_parity=(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1); selector_unit_edges=(2, 3); carry_unit_edges=(12,)
+independence_witnesses=q0--3->q3:(selector_delta=1,kappa=0),q12--1->q0:(selector_delta=0,kappa=1); selector_edge=delta(p)_is_exact; carry_is_nonsplit
+composition_checks=(selector=2197,carry=2197,joint=57122); selector_gauge_checks=4394
+fixed_positive_section=truth_mismatch_(0,1)_constant; no_extra_state_if_this_external_section_is_frozen; carrier_size=169
+independent_selector_parity_lift=C169xC2_direct_product_torsor; carrier_size=338; unit_action=two_disjoint_C169_cycles; adjoining_free_flip_is_regular
+full_two_origin_selector_lift=C169xV4_direct_product_torsor; carrier_size=676; unit_action=four_disjoint_C169_cycles; mismatch=s_XOR_truth_is_constant
+semidirect_classification=GL2F2_orders=(1, 2, 2, 2, 3, 3); C169_to_AutV4_eligible=1_identity_only; C2_to_AutC169_involutions=(1, 168); V4_to_AutC169_actions=4_with_only_1_orientation-preserving; inversion_reverses_positive_orientation_and_moves_truth_q3_to_q10; therefore_joint_action_is_direct_not_dihedral
+cohomology=V4_(C1,C2,rankB2,dimZ2)=(3, 9, 3, 3),H2=0; C13_carry_(coboundary_rank,augmented_rank)=(11, 12); selector_F2_coboundary_cannot_host_Bockstein
+parity_quotient_classes=(((0, 0), (1, 1)), ((0, 1), (1, 0))); preserves_nonzero_support_but_identifies_amplitudes_+1_and_-1; three_value_quotient_not_V4_equivariant_witness=((0, 0), (1, 1), (0, 1), (0, 1), (1, 0))
+vertical_T=diag(omega^3,1); scalar_sum_intertwiners=(); mu2_intersection_mu13={1}; any_quotient_retaining_T_has_no_scalar_action_on_U+V
+recombined_edges=(fail=144,survive=25); a_quotient_killing_T_allows_recombination_only_by_losing_the_character-three_carry; split_pair_or_charged_U_remains_lawful
+THM2880_connection=q0_to_q3_selector_provenance_changes_with_zero_carry; independent-origin_F2_is_exactly_its_unclosed_broader_signed_coupling_sidecar
+VERDICT=smallest_faithful_joint_parity_extension_is_338-state_C169xC2_direct_product_groupoid/torsor; full_signed_selector_transport_requires_676-state_C169xV4; no selector quotient_both_preserves_sign_and_descends_the_recombined_current_while_retaining_Bockstein_T
+scope=exact abstract residue/selector/coefficient representation; no constructed physical origin coupling, QA/QAB attachment, row exclusion, or LRC14 conclusion
+ALL EXACT CHECKS PASSED

@@ -1,0 +1,86 @@
+same-sheet common-carrier endpoint-square exact audit
+dependency_sha256=(('lrc14_root_zero_full_target_semantic_clutch_20260728.py', '208f71020efa19fa47f66d2da061ab03fa7bc87beeb077b4008c069f499736d8'), ('lrc14_natural_single_sheet_root_zero_target_bank_20260728.py', '591241e912c452b1985c7fc700884183a6e50440a579e1d853123d276cd416a8'), ('lrc14_extended_carrier_endpoint_lib.py', '4b3f9f195b1634e1e84a1bc8bccb878a1c8c44aec13f24d197f92547c9e36c57'))
+physical_cell_(s,t,clock)=(0, 4, 1)
+aligned_objects=A_source,B_target_pullback,C=A_intersect_B
+opposite_wing_census=(cells,source_nonempty,target_nonempty)=(567, 193, 193);opposite_wings_disjoint=567/567
+nonempty_common_cells_by_clock_0_to_6=(0, 81, 56, 56, 0, 0, 0);fixed_rail_eight_common_supports_only_3_of_7_clocks
+common_weighted_piece=(142004992589460, 142005019034340, 27581135604)
+unit_sheet_interval_weight1=(142004992589460, 142005019034340, 1)
+unit_sheet_target_translate=(142005424522500, 142005450967380, 1)
+atom_selector_idempotence=(1_xi*C_source_0=1_xi,1_Txi*C_target_0=1_Txi):PASS
+fixed_xi_carrier_twist_intersections=(source=(((142004992589460, 142005019034340),), (), (), (), (), (), (), (), (), (), (), (), ()),target=(((142005424522500, 142005450967380),), (), (), (), (), (), (), (), (), (), (), (), ()))
+fixed_xi_carrier_twist_support_bits=(source=(True, False, False, False, False, False, False, False, False, False, False, False, False),target=(True, False, False, False, False, False, False, False, False, False, False, False, False))
+fixed_xi_representative_gauge_mask_transport=(source_delta0_to_delta1=(False, True, False, False, False, False, False, False, False, False, False, False, False),target_delta0_to_delta12=(False, False, False, False, False, False, False, False, False, False, False, False, True),k0_sums=(1,1))
+factor_order=(E3,clock,q1,q2,c2,c3)
+complete_simultaneous_factor_signature=(source_native=(True, True, True, True, True, True),source_adjacent=(True, True, True, True, True, True),target_native=(True, True, True, True, True, True),target_adjacent=(True, True, True, True, True, True))
+first_failure_labels=(source=common_after_all_factors,target=common_after_all_factors)
+semantic_states=(source=(7, 1, 12, 12),target=(8, 0, 6, 1),delayed_half=1)
+unit_delayed_values=(source_carry12=(0, 103478815440),target_carry6=(0, 103478815440))
+boolean_ancestry_factorization=966606*28534=27581135604
+boolean_label_sets=(U_source_target=(966606, 966606),V_source_target=(28534, 28534),mismatches=(0,0))
+boolean_label_digests=(U=bb425c11d9dba01b1965a19431bf1e8e28e5b0935d4f652964d2ca554f064642,V=876afcfd817d7ee32d07d325ff52e1ba4b41ff186284a82be41f2f0d8ea0643b)
+concrete_boolean_label_(a,b,eprime)=(59162, 26, 56658)
+concrete_label_inverse_branch_constraints=(('source_U_Q', 138281416853580, 159555480984900), ('source_U_E', 21274064131320, 19795516674193260), ('source_V_E', 126379842514380, 161191947456540), ('target_U_Q', 138280984920540, 159555049051860), ('target_U_E', 21273632198280, 19795516242260220), ('target_V_E', 126379410581340, 161191515523500))
+concrete_label_joint_source_x_range=(138281416853580, 159555049051860)
+selected_interval_slacks_inside_joint_range=(3723575735880, 17550030017520)
+aggregate_forgets=(a,b,eprime);factor/clock/semantic/carry/endpoint masks depend on projected x and are constant on the selected interval; the concrete triple is retained separately
+fixed_origin_full_pullback_address=(r=0,k=0,l=0,L=(0,0),R=(0,0),q=0,Delta=0);r=0_is_the_distinguished_e0_section
+representative_gauge=(ell,a,b)~(ell+W,a+1,b-1):PASS_2197_left_and_2197_right_in_each_field
+field_prime=352341050142921841
+dual_support=(left=522/2197,right=522/2197);dual_digests=(712344d74d777d3e8015c8be3b45a8291214b97d7ed1e59240d0d202ec0ec986,1adb2de2cbdd5670a53ce8b0d97c2d84d7ce533084d1d641b37ee8c888f67b70)
+fixed_carrier_gauge_hostile=(left_mismatches=436,right_mismatches=436,first_left=(((0, 0), 0), 254455016269350867, 0),first_right=(((0, 0), 0), 231164267889491750, 0))
+fixed_sheet_h0_gauge_rows=(source_h0_to_h1=169/169,target_h0_to_h12=169/169)
+bare_endpoint_support=(left=169/169,right=169/169)
+literal_fixed_xi_bare_to_present_covariances=(left=(((0, 0), (0, 0), 325237892439620161),),right=(((0, 0), (0, 0), 325237892439620161),))
+moving_xi_orbit_bare_covariances=(left=(),right=())
+moving_orbit_endpoint_samples_(P_L,P_LplusS,Q_R,Q_RplusT)=(345283638862540358, 180096700909697779, 167108689435423878, 144423867160388279)
+moving_orbit_sample_products_(v00,v10,v01,v11)=(347197813355232446, 3438130309897238, 320064096166488418, 146419401152414063)
+moving_orbit_sample_hadamard_(D0,D1,D2,D3)=(112437340698188483, 236493496489149044, 165063327916487722, 170114988031260853)
+moving_orbit_sample_mixed_face_D3=170114988031260853;nonzero=True
+pluecker_D0D3_minus_D1D2=0 (rank_one_identity)
+atom_local_allocation_constructor=bare keeps fixed xi constant over the omitted carrier-twist variable; present keeps outer selector xi and multiplies by C_h, so only h=0 survives; therefore Pbare=13*Ppresent and Qbare=13*Qpresent at every endpoint
+fixed_origin_allocation_factors_(Pbare,Ppresent,Qbare,Qpresent)=(161934023005863791, 175075409527953449, 300649489018742460, 50230041473974177)
+fixed_origin_allocation_products=(346389504894336138, 351883238969953710, 351883238969953710, 216790045382338969)
+fixed_origin_allocation_hadamard_(D0,D1,D2,D3)=(209922877787817004, 129599459511997169, 129599459511997169, 211754122479689528)
+fixed_origin_allocation_D3=211754122479689528;nonzero=True;status=central_post_carrier_DFT_coefficient
+fixed_origin_universal_allocation_profile=base_product*(169,13,13,1);hadamard=base_product*(196,168,168,144)
+primal_carrier_twist_support_counts_(B,P,Q,H)=(169, 13, 13, 1);sole_fourfold_point=((0, 0),)
+sole_primal_fourfold_vector_(B,P,Q,H)=(216790045382338969,216790045382338969,216790045382338969,216790045382338969);raw_mobius=0
+raw_primal_mobius_support=12x12_bare_only_complement;count=144;value=216790045382338969;central_sum=211754122479689528
+intrinsic_allocation_endpoint_steps=(source=(0,0),target=(0,0));scalar_covariances=(1/13,1/13);determinant_mixed_face=0
+translated_allocation_candidate_factors_(Pbare00,Ppresent10,Qbare00,Qpresent01)=(161934023005863791, 44764945482710722, 300649489018742460, 254351476220525733)
+translated_allocation_candidate_products=(346389504894336138, 212567688727555814, 122462567010893996, 54757114460427982)
+translated_allocation_candidate_hadamard_(D0,D1,D2,D3)=(31494774807370248, 29396462007648133, 201527268717246338, 66116363616314310)
+translated_allocation_candidate_D3=66116363616314310;nonzero=True;status=extrinsic_nonzero_endpoint_sample_not_the_fixed_xi_allocation_toggle
+field_prime=956354278959359281
+dual_support=(left=522/2197,right=522/2197);dual_digests=(639b76c7a20317ca0b2dbbf2d194986cfa5be22e20837d1f8e7c210d13ad5efa,3402ea5c5832334f86c461ee53c76f30cdf553fe1a0b4dace57c1c25ce27e70d)
+fixed_carrier_gauge_hostile=(left_mismatches=436,right_mismatches=436,first_left=(((0, 0), 0), 318932490657369324, 0),first_right=(((0, 0), 0), 630230755085920022, 0))
+fixed_sheet_h0_gauge_rows=(source_h0_to_h1=169/169,target_h0_to_h12=169/169)
+bare_endpoint_support=(left=169/169,right=169/169)
+literal_fixed_xi_bare_to_present_covariances=(left=(((0, 0), (0, 0), 882788565193254721),),right=(((0, 0), (0, 0), 882788565193254721),))
+moving_xi_orbit_bare_covariances=(left=(),right=())
+moving_orbit_endpoint_samples_(P_L,P_LplusS,Q_R,Q_RplusT)=(77115584218272234, 620226426191367084, 950936471790018101, 445878683356068526)
+moving_orbit_sample_products_(v00,v10,v01,v11)=(788257626617883404, 251268809443191686, 161379668316310808, 381695617330433150)
+moving_orbit_sample_hadamard_(D0,D1,D2,D3)=(626247442748459767, 496451150414331132, 316672868160569376, 757304766188814060)
+moving_orbit_sample_mixed_face_D3=757304766188814060;nonzero=True
+pluecker_D0D3_minus_D1D2=0 (rank_one_identity)
+atom_local_allocation_constructor=bare keeps fixed xi constant over the omitted carrier-twist variable; present keeps outer selector xi and multiplies by C_h, so only h=0 survives; therefore Pbare=13*Ppresent and Qbare=13*Qpresent at every endpoint
+fixed_origin_allocation_factors_(Pbare,Ppresent,Qbare,Qpresent)=(155560747474790541, 11966211344214657, 879469786637801433, 361914377113479889)
+fixed_origin_allocation_products=(17884554354397974, 295638590014756546, 295638590014756546, 96307143767239679)
+fixed_origin_allocation_hadamard_(D0,D1,D2,D3)=(705468878151150745, 877931689546517576, 877931689546517576, 479268797051483842)
+fixed_origin_allocation_D3=479268797051483842;nonzero=True;status=central_post_carrier_DFT_coefficient
+fixed_origin_universal_allocation_profile=base_product*(169,13,13,1);hadamard=base_product*(196,168,168,144)
+primal_carrier_twist_support_counts_(B,P,Q,H)=(169, 13, 13, 1);sole_fourfold_point=((0, 0),)
+sole_primal_fourfold_vector_(B,P,Q,H)=(96307143767239679,96307143767239679,96307143767239679,96307143767239679);raw_mobius=0
+raw_primal_mobius_support=12x12_bare_only_complement;count=144;value=96307143767239679;central_sum=479268797051483842
+intrinsic_allocation_endpoint_steps=(source=(0,0),target=(0,0));scalar_covariances=(1/13,1/13);determinant_mixed_face=0
+translated_allocation_candidate_factors_(Pbare00,Ppresent10,Qbare00,Qpresent01)=(155560747474790541, 754011861070156781, 879469786637801433, 659025017448095022)
+translated_allocation_candidate_products=(17884554354397974, 837631828341846575, 574225575517477659, 584707675162883455)
+translated_allocation_candidate_hadamard_(D0,D1,D2,D3)=(101741075457887101, 652937410975242716, 126124905326504884, 147089104617316476)
+translated_allocation_candidate_D3=147089104617316476;nonzero=True;status=extrinsic_nonzero_endpoint_sample_not_the_fixed_xi_allocation_toggle
+endpoint_pairs=(((0, 0), (0, 0)), ((0, 1), (0, 0)), ((0, 0), (12, 0)), ((0, 1), (12, 0)))
+endpoint_target_differences_q=((0, 0), (0, 1), (1, 0), (1, 1))
+endpoint_determinant_values=(0, 0, 0, 1)
+endpoint_determinant_mixed_face=det(source_step,target_step)=1
+scope=one literal common Boolean ancestry label gives a fixed-xi central post-carrier-DFT allocation coefficient square with nonzero D3 in two exact-order fields.  The sole primal twist point with all four allocation states has raw Mobius face zero; the central D3 is the sum of the 12x12 bare-only complement, so this is not a pre-Fourier common-atom mixed face.  Its intrinsic allocation action is scalar with zero endpoint steps, hence zero determinant face.  Moving xi through the carrier orbit gives a separate endpoint parallelogram with nonzero sample D3 and determinant-label face, but exhaustive empty orbit/bare covariance proves it is not the fixed-xi allocation.  This fixed rail-eight bank has common cells on only 3 of 7 clocks.  No seven-clock Cech/root-deck map, row exclusion, THM-2772 common-atom gate, or LRC14 conclusion is inferred.
+ALL EXACT CHECKS PASSED

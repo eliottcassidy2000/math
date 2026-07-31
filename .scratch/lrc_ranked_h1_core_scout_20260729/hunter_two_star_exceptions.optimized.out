@@ -1,0 +1,6 @@
+K>=20 ordered-H1 relative-Hunter exception audit
+E=(1, 2, 5, 7, 8, 9, 11);rank=5;a=65;P=(26, 19, 17, 23, 65);h=20947/114660;H=51;pivot=25;nodes=189;star_prunes=138;star_safe_leaves=46;star_hostile=1;hunter_repairs=1;hunter_hard=0;pairs=56;maxPsi=6673/54600;margin=69337/1146600;min_extra_credit=47/770;maxrow=(Fraction(6673, 54600), (20, 25, 30, 40, 60), Fraction(110063, 600600), Fraction(123, 1925), ((20, 40, Fraction(3, 140)), (30, 60, Fraction(19, 924)), (20, 30, Fraction(2, 105)), (25, 60, Fraction(1, 350))));ledger=fca84cb1d96bff3d77f02c8524261cf37e522651dab3c87fb0dbc342c38d6147
+E=(1, 2, 5, 7, 9, 11, 12);rank=3;a=23;P=(26, 16, 23);h=12072/61985;H=29;pivot=32;nodes=101;star_prunes=72;star_safe_leaves=24;star_hostile=1;hunter_repairs=1;hunter_hard=0;pairs=34;maxPsi=12978773/89258400;margin=4404907/89258400;min_extra_credit=94663/1915900;maxrow=(Fraction(12978773, 89258400), (17, 25, 32, 34, 50), Fraction(295612237, 1517392800), Fraction(100137, 1915900), ((25, 50, Fraction(43, 2100)), (17, 34, Fraction(2141, 114954)), (17, 25, Fraction(92, 8925)), (25, 32, Fraction(1, 350))));ledger=d472351a1d14a6d3ddefc1c93132b536f058bc0c34cd0a2148690823f3fbbaa5
+aggregate_sha256=be88409549d4af1e3276d1556c09f30b8d4781958edd9c674cbf801b9205f31d
+scope=two K>=20 star exceptions;finite exact;not LRC14
+all_exact_controls=PASS

@@ -1,0 +1,26 @@
+LRC14 three-drift terminal independent audit candidate
+primary_script_sha256=13e524e728736480798d52acc736afe0cbd7b651a487aeef5d771d2b5dfa1338
+terminal_record_semantic_sha256=ca19dda6a982440c56461267e7b4fc649d026dabeddf42ce9a2e2879a1a55543
+needle_quotient_cases=692416
+literal_fibre_traces=14279768
+monotone_status_words=20
+lp_integer_comparisons=10520
+lp_equalities=10503
+lp_fractional_cases=17
+lp_maximum_gap=1/2
+positive_threshold_unions=252
+hostile_threshold_witness=(6, 2, 6, Fraction(5, 1), (0, 1, 1, 1, 1, 1, 1, 1))
+strict_false_rejection=(2, 21, 1, Fraction(0, 1), (0, 0, 0, 0, 0, 0, 0, 0))
+positive_local_control_size=6
+hostile_local_control_size=12
+terminal_kills=19
+terminal_survivors=0
+terminal_kill_moduli={99: 18, 98: 1}
+terminal_family_counts={(99, 11, 2): 55, (99, 33, 5): 330, (99, 99, 15): 2970, (98, 49, 7): 1029, (98, 98, 14): 2058}
+terminal_witness_semantic_sha256=ebcf13933da70160e66fdbadd8eec1206677c2ad06e0c806c6c82c94798d1a94
+first_terminal_witness=(((1, 4, 7, 9, 11, 12), 38808, 38808, 13248, 9702, 12936, 19404, 0), (99, 392, 0, 34, ((99, 33, 5), (99, 99, 15), (99, 99, 15))))
+last_terminal_witness=(((1, 5, 7, 8, 9, 11), 388080, 388080, 109044, 77616, 129360, 388080, 0), (99, 3920, 0, 28, ((99, 33, 5), (99, 99, 15), (99, 99, 15))))
+literal_family_cache=CacheInfo(hits=460069, misses=355, maxsize=None, currsize=355)
+one_coverable_cache=CacheInfo(hits=1116092, misses=453537, maxsize=None, currsize=453537)
+two_coverable_cache=CacheInfo(hits=7075, misses=2424, maxsize=None, currsize=2424)
+all_exact_controls=PASS

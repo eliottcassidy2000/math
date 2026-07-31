@@ -1,0 +1,25 @@
+LRC14 finite-r4/H1 plus Hunter-star G5 branchwise join
+branch_counts=(hard=14806,H1=5999,G5=2964,both=2909,union=6054,H1_only=3090,G5_only=55)
+root_counts=(H1_hard=127,H1_all=132,G5=16,join_hard=129,join_all=134)
+join_minus_H1=((1, 2, 3, 4, 5, 8, 9), (5, 7, 8, 10, 11, 13, 14))
+genuinely_mixed=(((1, 2, 3, 4, 5, 8, 9), (('G5', 1, 22), ('H1', 2, 33))),)
+mixed_branch_details=((1, 22, Fraction(-193, 2522520), None, Fraction(43, 84084)), (2, 33, Fraction(26111, 2522520), 585, Fraction(-1, 10010)))
+against_T2903=(baseline=76,H1_intersection=30,H1_additive=102,H1_union=178,join_intersection=31,join_additive=103,join_union=179,residual=3253)
+baseline_overlap_decomposition=(H1_prior15=9,H1_one_hard=21,join_prior15=10,join_one_hard=21,H1_T2905_additions=6,join_T2905_additions=6)
+against_T2905=(baseline=82,H1_intersection=36,H1_additive=96,H1_union=178,join_intersection=37,join_additive=97,join_union=179,residual=3253)
+H1_root_digest=c5eb5a86bbe82c2dc46113527e67f6a1f50add87b100cad916ee6367d7177a13
+join_root_digest=01c7f66d905d432c45f1fa3a7700ffd0ba8b4127fec3dcfd0f9fe71e42ee71dc
+T2903_digest=c3047048d012af24a28120a6603d83199cc16ab05b5ede4a96d8ee629932bea3
+T2905_digest=b1d4f1a63637f59f45da770c7b8dab830c6b455198a2e59e9913b10486c0158e
+H1_additive_T2903_digest=25abd8c593160cba48f05c401401856dcacbbd592b6b2454b32500383b2980a8
+H1_union_T2903_digest=9d36c7ecd2b976903b962a3497a0fb3cbe0620c005bb7b26d8be7772658e43ab
+H1_additive_T2905_digest=012dacc4d9d1ca7ae3cfa4489b582c614e40cf06f35c4dfa0bdfa5983f727ca4
+H1_union_T2905_digest=9d36c7ecd2b976903b962a3497a0fb3cbe0620c005bb7b26d8be7772658e43ab
+join_additive_T2903_digest=87008e33a57448a71400866a6ae1b22b835d751ec50916568c4097c19631c291
+join_additive_T2905_digest=c124dbdce3731c0ac0a5087d36897153cac7802f1accee8056d590fd6665eddc
+proved_union_digest=1339dd69415bbf76b07537584ba95f5661b10436f5c015e3d756025426e4b0b4
+H1_branch_digest=a1e4ef2b0764bb63afca2d7c941c4c26850429ad62a009be7c5cd350733ca674
+G5_branch_digest=500ac256d71fd179d328e790028e0fb0c0708b8f220ac1b8d554bdd19b287f58
+branch_union_digest=58c95b823a0ac7747a2a80f6c28d709ba52278591a8b5c5559493db8aa0342e4
+scope=14806 hard branches plus five scalar-terminal roots;not LRC14
+all_exact_controls=PASS

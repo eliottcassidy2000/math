@@ -86,6 +86,24 @@ Facts (THM-2966 corollaries + lane A verification on THM-2225):
    gates a construction remains open: both readings are recorded in
    HYP-9061 with the lower-bound reading currently favored.
 
+## 3b. The construction side (THM-3002 + lane G5, 2026-07-31)
+
+Closing the books *exactly* at dyadic checkpoints is **sufficient** for
+`C* <= 1+gamma` (lane G5's G5-1, six lines from THM-2966), and parity is
+free exactly at dyadic cuts (THM-2976 T1). Block closure has a normal
+form: `F = q^{m_lo-1}H`, `G = -p^{m_lo-1}H`, and `H = 1` means the epoch's
+whole imbalance is one middle pair `0^R1^R` vs `1^R0^R` — THM-2160 at
+epoch scale — which decouples the sides and leaves
+`(*) q^{R-1} = sum_i p^i Delta_i`. The exact capacity identity
+`max|[p^t]Delta| = binom(d,t)2^t` yields a necessary criterion whose ledger
+is a sharp trichotomy: deficient below `gamma = 1/2`, marginal at `1/2`,
+ample from `3/5`, asymptotic threshold `gamma* ~ 0.598` — a **two-ray
+entropy comparison**, i.e. exactly the object (27) was predicted to gate.
+Verified: all dyadic epochs through `[16,31]` close at `gamma = 1/2`
+(fair extractor for every `n <= 31` at `T(n) = n+1+floor(n/2)`), and (*)
+solves at `gamma = 3/5` for `R = 8, 16`. **`C* = 2` is no longer the
+favoured answer**; lane D's freeze is a policy artifact.
+
 ## 4. Open tension
 
 Hand analysis of smarter routings (along-the-cone-edge hopping with

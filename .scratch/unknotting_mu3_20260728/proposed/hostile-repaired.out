@@ -1,0 +1,16 @@
+crossings: 6   writhe: +2
+det(K)  = 1
+sigma(K)= +0   (Goeritz + Gordon-Litherland, dual-coloring cross-checked)
+Alexander polynomial: NOT COMPUTED (Seifert-matrix route descoped this pass)
+obstructions (u >= 2):
+  (none fired)
+crossing-change search (4 sites tried):
+  #1: screened out (det=5 != 1)
+  #2: screened out (det=13 != 1)
+  #3: screened out (det=3 != 1)
+  #4: UNKNOT CERTIFIED (reduced to 0 crossings)
+VERDICT: UNKNOWN
+upper-bound certificate only: change crossing #4 (1-indexed), then reduce: R2@(3,5),R1@0,R2@(1,4),R1@2
+note: linking form: det 1: H1(Sigma) trivial, linking-form test vacuous
+note: the crossing change certifies u(K)<=1, but exact u(K)=1 is WITHHELD: greedy failure does not certify that the input is nontrivial; use an exact unknot oracle or another nontriviality certificate
+scope: Scope: UNKNOWN is possible; deciding u(K)=1 in general is research-level. TRUE needs (i) an independently certified nontrivial input, (ii) the unknotting change to be visible in THIS diagram, and (iii) the changed diagram to simplify monotonically under face-local R1/R2 (no R3 / no crossing-increasing exploration). A visible change without (i) certifies only u(K)<=1 and is reported as UNKNOWN. FALSE uses Murasugi |sigma|<=2u, cyclicity of H1 of the double branched cover, and the Lickorish linking-form test (gated by a 7_4 self-test). Deeper tools (Ozsvath-Szabo d-invariants, Alexander/Seifert route) are not implemented.

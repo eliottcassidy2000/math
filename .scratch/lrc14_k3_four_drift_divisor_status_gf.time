@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc14_k3_four_drift_divisor_status_gf.py", line 574, in <module>
+    )
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc14_k3_four_drift_divisor_status_gf.py", line 477, in main
+    local_weights, local_marginals = small_vectors(
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc14_k3_four_drift_divisor_status_gf.py", line 220, in status_need_limit
+    high = sum(weights) + 1
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc14_k3_four_drift_divisor_status_gf.py", line 190, in maximum_upward_mass
+    for chosen in combinations(range(len(constraints)), count):
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc14_k3_four_drift_divisor_status_gf.py", line 133, in solve_square
+    if row == column or not matrix[row][column]:
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc14_k3_four_drift_divisor_status_gf.py", line 134, in <listcomp>
+    continue
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/fractions.py", line 358, in forward
+    return monomorphic_operator(a, b)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/fractions.py", line 495, in _mul
+    return Fraction(na * nb, db * da, _normalize=False)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/fractions.py", line 62, in __new__
+    def __new__(cls, numerator=0, denominator=None, *, _normalize=True):
+KeyboardInterrupt
+time: command terminated abnormally
+real 576.11
+user 402.05
+sys 4.54

@@ -1,0 +1,20 @@
+LRC14 complete seven-body/six-slot recursive pair-Hunter closure
+universe=3432 roots E in C([14],7); six external slots
+stage1=(failures=4866,pair=1612,hunter4=1175,recursive=2079)
+stage2=(second_pivots=6172,top3_closed=5944,failed_grandchildren=228)
+stage3=(pair_plus_singleton=65,hunter3=114,third_recursive=49)
+terminal=(third_pivots=117,strict=116,equality=1)
+endpoint=(family=2*{1,...,13},time=1/28,boundary={2,26},thm2907_join=PASS)
+composition=(parents=11842,E=52,P=279,T2=11562,E_union_P_union_T2=11842)
+roots=(deep_route=3411,baseline=351,overlap=330,union=3432,residual=0)
+inherited_controls=(thm2913_children=42,thm2920_children=367,thm2920_roots=296)
+independent_hostile_audit=(auditor=thm2903_2905_union_audit,status=PASS,parents=11842,terminal=116+1,route_bits=recomputed,union=3432)
+artifact_manifest=(('COMPOSITION', 'fc58f23e4a502f6e7bda56847cf4ee2b09cfd9279b195636ab5e6611bebf18f0'), ('ENDPOINT', '8fe9e2c8f2e2dd41ab97223d793a71325b1749f9486f44e8197071818a3d4c8d'), ('GRANDCHILD', 'a121a239b08024c0cb91ed292e1a0ccee1a403f567d21f532bdc9ee3439f7893'), ('INHERITED', 'd5d5d6ba2cb9b47920aa4b9de615ffe829a91ddc7dc5b7da0d6b6a7310f8f2e9'), ('PAIR', '76bfbdbc6cab524a4536c638a8ed58b0921131f21d0a2c99ada2c6fb4ef65632'), ('RECURSIVE', 'a5f2c832f2feadfbf06971b013ba8b070a987fcd865ae38bf0c3757940807ec9'), ('ROOTS', 'bfe95330f6ede745f4a16997377935999d915650b69cde1e5ab121441a167f58'), ('STAGE1_SUMMARY', 'c9ed0849443a433fdf75899d98d033d273c19316d08e579ca8c4d9d6e9815be0'), ('STAGE2_SUMMARY', '161d702bc98f25d3d3dcfcd8d832e3aa2703f246a54d39ec55935ef134166f88'), ('THIRD', 'd6d3fd59bfff3f46aabcb9c80580ecce48cad79dced9782460ed917158c4946f'))
+combined_ledger_semantic_sha256=a2555163f07f6787e3a789b365ef27c47957ed39a82074ee9067b9bac89f3104
+why_stop_j7=(q7>=h/7 and B2>=2h/7 imply G7(h/7)=h;lambda=h/7;THM735 finite-core gate unavailable)
+scope=complete seven-in-window/six-external rung only
+remaining_scope=at-most-six-in-window (j>=7) loose-spread sector OPEN
+not_unrestricted_LRC14=TRUE
+semantic_sha256=c2ef8608ac64f068e6cc83481c8b91c126c1146b4808bd21b9e42d61e08d6abb
+mode=LOCKED
+all_exact_controls=PASS

@@ -1,0 +1,20 @@
+extended-address selected-wing determinant-sector probe
+dependency_sha256=(('lrc14_extended_carrier_endpoint_lib.py', '4b3f9f195b1634e1e84a1bc8bccb878a1c8c44aec13f24d197f92547c9e36c57'), ('lrc14_root_zero_full_target_semantic_clutch_20260728.py', '208f71020efa19fa47f66d2da061ab03fa7bc87beeb077b4008c069f499736d8'))
+selected_label_(s,t,e)=(0, 10, 3)
+first_failure_order=(shifted_E3,shifted_clock,shifted_q1,shifted_q2,shifted_c2,shifted_c3)
+source_first_failure_masses=(2188067024426754240, 0, 0, 0, 0, 0)
+target_first_failure_masses=(1458711349617836160, 0, 0, 0, 0, 0)
+raw_selected_coefficients=(source=2853968755527296447040,target=5707937511054592894080,target/source=2)
+weighted_piece_counts=(source=3,target=2)
+weighted_masses=(source=2188067024426754240,target=1458711349617836160)
+chart_translate_equal=False
+dual_support=(left=641/2197,right=510/2197)
+representative_gauge=(ell,a,b)~(ell+W,a+1,b-1):PASS
+pullback_coordinates=(L,k,R,l); equivalently=(q=L-R,k,l,R)=G_full_x_V
+pullback_size=13^6=4826809
+tested_sector=(q=(1, 0),Delta=1,k=0,l=0)
+tested_sector_edge_support=13/13
+tested_sector_value_mod_352341050142921841=64970359711488738
+tested_sector_nonzero=True
+scope=one exact weighted factor-labelled wing cell and one extended endpoint sector; no translate/action/current positivity/row exclusion/LRC14 conclusion
+ALL EXACT CHECKS PASSED

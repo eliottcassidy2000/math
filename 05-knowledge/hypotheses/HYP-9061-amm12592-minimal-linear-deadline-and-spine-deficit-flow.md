@@ -112,6 +112,33 @@ Sharper structure, elementary to check:
    gate opens (construction, `C* = 9049/6592`-ish) or closes (lower bound)
    at `gamma = 2457/6592` is the live question.
 
+## 2b0. THE CONSTRUCTION SIDE OPENS (2026-07-31, THM-3002 + lane G5)
+
+`C* = 2` is no longer the favoured answer. Lane G5's checkpoint-closure
+reduction (closing the books exactly at every dyadic checkpoint
+`M = 2^r - 1` is *sufficient* for `C* <= 1 + gamma`) plus THM-3002 give:
+
+1. **Every dyadic epoch through `[16,31]` closes at `gamma = 1/2`**
+   (VERIFIED-EXACT, witnesses re-derived independently): an exactly fair
+   extractor exists for all critical values `n <= 31` with
+   `T(n) = n + 1 + floor(n/2)`.
+2. **Normal form:** block closure forces `F = q^{m_lo-1}H`,
+   `G = -p^{m_lo-1}H`; `H = 1` says the epoch's entire imbalance is the
+   single middle pair `0^R 1^R` vs `1^R 0^R` — THM-2160's trick promoted
+   from one row to a whole epoch — and decouples the two sides.
+3. **Sharp capacity criterion:** `max |[p^t]Delta| = binom(d,t)2^t` over the
+   Lucas box, so `sum_{i<=t} binom(d_i,t-i)2^{t-i} >= binom(R-1,t)` is
+   necessary. Exact ledger: exponentially deficient for `gamma < 1/2`,
+   marginal-then-deficient at `gamma = 1/2` (dead by `R = 64`), uniformly
+   ample for `gamma >= 3/5`. Asymptotic threshold `gamma* ~ 0.598` from a
+   **two-ray entropy comparison** — structurally the shape of (27).
+4. So the `gamma = 1/2` successes are finite-size, and the live target is
+   `gamma ~ 3/5` (`C = 8/5`): (*) is already solved there for `R = 8, 16`.
+
+Falsifier for `C* = 2`: closure of all epochs at any `gamma < 1`.
+Falsifier for the program: an `R` at which (*) is exhaustively infeasible
+at every `gamma < 1` and every `H`.
+
 ## 2c0. Direction status after the coinC2 session (2026-07-30, evening)
 
 The **evaluation reading of (27) is CLOSED as a class**: THM-2977 (the
@@ -173,7 +200,19 @@ one ray inside the 0-cone edge (`0.336` vs edge `2457/6592 ~ 0.3727`),
 one in the desert. Under this reading (27) certifies the entropy race at
 `gamma = 2457/6592` with margin `1/25`, i.e. plausibly the lower bound
 `C* >= 9049/6592`, en route to the transcendental threshold where the
-desert max-flow balances. The single-jump lemma
+desert max-flow balances.
+**RETRACTED as evidence (klein-S428, 2026-07-31).** The "capacity
+straddle" does not support the specific weight: (27) admits an open
+half-line `alpha > (r_A + 1/25)/r_B = 0.3674729...` (e.g. `3/8`
+certifies with the *larger* margin `7.21e-3`), and the straddle window has
+width `0.33`, containing `3/8, 2/5, 37/100, 7/19, 41/110` alike. So
+`2457/6592` is an **output of the source's construction**, not a
+consequence of the inequality; and since `r_A/r_B` is irrational (klein's
+isolated-prime argument, `257` vs `2949119`), a nonzero floor is free and
+only its *size* is open — `1/25` is a chosen safety margin, not an
+extracted one. Operational corollary: **do not invert (27) to recover the
+construction**; derive the rate from the ledger (THM-3002) and use (27)
+only as a verification shape. The single-jump lemma
 (`amm12592_single_jump_routing_slack_deathstar.py`: slack exactly
 `D = l`, envelope degrades to `2n`) is the finite shadow of the desert:
 naive routing pays back the whole shell gain, and `C = 2` is its fixed

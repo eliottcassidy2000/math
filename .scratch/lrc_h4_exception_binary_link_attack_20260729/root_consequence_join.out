@@ -1,0 +1,11 @@
+LRC14 H4-exception whole-root consequence join
+branch_counts=(hard=14806,G5=2964,H1=5999,H1G5=6054,exceptions=52,exception_in_H1=0,G5_exception_union=3016,H1G5_exception_union=6106)
+root_certificate_counts=(G5=16,G5_exception=16,H1G5=134,H1G5_exception=134)
+against_T2905=(baseline=82,certificate_intersection=16,additive=0,union=82,residual=3350)
+T2905_additive_roots=()
+after_candidate_T2904=(baseline=179,certificate_intersection=134,additive=0,union=179,residual=3253)
+T2904_additive_roots=()
+exception_body_root_intersections=(T2905=0,T2904=0,G5_exception=0,H1G5_exception=0)
+digests=(G5E=0a1a7fbc4a614c05987663aa4dca8325560e4440a654216c605a473f290f6a79,H1G5E=b4e0bba9411171fb8231fd5e3c35cbdfcfdc082ad41e1910c34a4163f84c5c9b,current=e9972f76ed46a1262262c307f2f5c82279917ed7bcdb9ca73984c1b6b133c158,candidate=512304d9440e52b62ad5f772d1237f9413b47ab47986fcd2f1381259fdcdb79b)
+scope=52 discharged pair-cap-exception branches;whole-root joins against current and candidate branch baselines
+all_exact_controls=PASS

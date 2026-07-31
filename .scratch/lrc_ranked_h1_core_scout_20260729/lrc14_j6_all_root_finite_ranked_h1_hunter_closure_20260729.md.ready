@@ -1,0 +1,144 @@
+# All-root finite ranked-H1 Hunter closure
+
+Status: `FINITE-EXACT + VERIFIED` after completion of the recorded
+ordinary/optimized shard parity.  Scope is the `5,999` rank-four/H1
+branches with exact discrepancy cutoff `N<=15000`; the `181` larger-cutoff
+branches are outside this route.
+
+## Result
+
+```text
+roots                                  3432
+marked gate branches                  41415
+scalar-hard branches                  14806
+rank-four H1 eligible                  6180
+finite N<=15000 branches               5999
+ordered-star closures                  5975
+nonstar Hunter-tree closures             24
+witnesses                                 0
+deferred cutoff branches                181
+whole roots closed                       132
+new beyond official THM-2895/2898/
+  2899/2901/2902 union                   121
+official proved union                    138
+official residual                       3294
+```
+
+The `24` star survivors contain exactly `54` star-hostile five-sets.  Exact
+maximum spanning trees repair all `54`; the smallest strict Hunter margin
+is `1799771/75716368`.  The finite cores have size quantiles
+
+```text
+min 5, p25 8, median 16, p75 36, p90 83, p95 141,
+p99 283, max 444.
+```
+
+The raw largest five-set universe is
+
+```text
+binom(444,5)=140,578,526,088.
+```
+
+## Proof architecture
+
+The main verifier imports only the tracked THM-2899 ranked-suffix engine,
+which in turn hash-pins the gate and interval engines.  For every branch it
+reconstructs the actual literal apex residual, actual excluded gate
+prefix, strict rank-four margin, exact discrepancy cutoff, and complete
+`H1` core.  It checks the ordered later-core star certificate and falls
+back to an exact residual search only as an independent control.
+
+The Hunter audit reopens precisely the `24` star survivors.  It enumerates
+only star-hostile five-sets, computes every required pair intersection from
+literal residual subtraction, runs exact maximum-spanning-tree Kruskal,
+and checks `Psi5<h`.
+
+The merge verifier hash-pins all 32 deterministic shard outputs, checks
+that the body atlas is covered once, merges exact counts and core
+histograms, checks the one-index-zero-pivot anatomy, and locks the complete
+`132`-root list and its difference from the official `17`.
+
+The merge verifier does **not** recompute the interval mathematics inside
+the shards.  Therefore, in the present architecture, the 32 optimized raw
+shard outputs are canonical proof artifacts.  The byte-identical ordinary
+copies are replay controls and need not both be promoted.  Alternatively,
+a future orchestrator may replay all shards into a temporary directory and
+then invoke the same merge checks, in which case the raw files can become
+regenerable rather than canonical.
+
+## Exact scratch files to promote
+
+Main exact core verifier:
+
+```text
+.scratch/lrc_ranked_h1_core_scout_20260729/scout.py
+sha256 6abc06972cda64bb4f53db26cca62bbea5362ca178bdbf5bf7398e8b0f28317a
+```
+
+Hunter base and all-survivor audit:
+
+```text
+.scratch/lrc_ranked_h1_core_scout_20260729/hunter_two_star_exceptions.py
+sha256 c452781c7cf6a2ada6be8984b9c9cbe7aab8369c5a9333721ef8ecc8e0207393
+
+.scratch/lrc_ranked_h1_core_scout_20260729/hunter_all_24_star_survivors.py
+sha256 cd401a6172218c42898adc5349ee28ace718aefb0b428b08c1c0b64ef7c14692
+
+.scratch/lrc_ranked_h1_core_scout_20260729/hunter_all_24_star_survivors.out
+sha256 c142f6389a38549f3b2096b1d4b785f2c19b4062c8879eeeebd2ae04d7be5c7f
+semantic digest 030c5af7cdb8fe5c2c8188b3debb78e8e0aabb79a7e553308d0f11a411ded74b
+```
+
+Locked merge/root-list verifier and compact output:
+
+```text
+.scratch/lrc_ranked_h1_core_scout_20260729/merge_all_32_shards.py
+sha256 0677f03ec4699d2b652d7e118e96553d9dcefd2c9ee0e2109835bf429870a3c9
+
+.scratch/lrc_ranked_h1_core_scout_20260729/merge_all_32_shards.ordinary.out
+sha256 dd2d08d523cd481173f7c0d75fb23e458eea935f0f0bd55a5c5d9cac2461f70d
+```
+
+The compact merge output lists every closed root and every new root.  Its
+locked set digests are
+
+```text
+132 closed roots:
+c5eb5a86bbe82c2dc46113527e67f6a1f50add87b100cad916ee6367d7177a13
+
+121 new roots:
+3b133f35fa91191819b35a2760dcdf822cf8523818776584b02de36939658b47
+
+138-root official union:
+8536e577993aa395a6d2e676ea2c6ea0b29b99d1d15787dee4c7480fa0eebffa
+```
+
+Raw optimized shards:
+
+```text
+.scratch/lrc_ranked_h1_core_scout_20260729/all_s00_of32.out
+...
+.scratch/lrc_ranked_h1_core_scout_20260729/all_s31_of32.out
+```
+
+Their individual hashes are embedded in `merge_all_32_shards.py`.  Their
+ordered aggregate file digest and semantic-ledger digest are
+
+```text
+d686d1afd01b494ca6aa9a4733816c774f7e8e4ed398081f556c44e4af7869a0
+f02aea1d70f89b2c634b84b313da9bba78b26718e85fe1731dbb9ef496559a9b.
+```
+
+The theorem draft is
+
+```text
+.scratch/lrc_ranked_h1_core_scout_20260729/
+  THM-2903-all-root-finite-ranked-h1-hunter-closure.md.ready
+```
+
+## Scope boundary
+
+The theorem claims no result on the `181` rows with `N>15000`, on the
+other ranked-core routes, or on the remaining `3294` roots.  Cutoff failure
+is not evidence for a cover.  No provisional G5 root claim is included in
+the official comparison.

@@ -1,0 +1,8 @@
+n=24 N=94 m=47 iters=300000 seed=7 restarts=6
+[r0] done bestE=50
+[r1] done bestE=39
+[r2] done bestE=47
+[r3] done bestE=45
+[r4] done bestE=31
+[r5] done bestE=42
+NO WITNESS: best energy 31 over 6 restarts

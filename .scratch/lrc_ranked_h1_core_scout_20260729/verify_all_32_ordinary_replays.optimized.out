@@ -1,0 +1,6 @@
+LRC14 ranked-H1 all-32 ordinary replay parity
+shards=32;byte_matches=32;failures=0
+worker_schedule=(shard0:4,shards1-31:1)
+shard_file_digest=d686d1afd01b494ca6aa9a4733816c774f7e8e4ed398081f556c44e4af7869a0
+ordinary_replay_corpus_digest=7a30bf625c8b0f8f3d1789d051582be2272686312e4df4e30c49c0acc398bfa0
+all_exact_controls=PASS

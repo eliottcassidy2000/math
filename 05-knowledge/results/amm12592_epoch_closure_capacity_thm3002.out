@@ -1,0 +1,28 @@
+C1 reduction + C2 normal form on the audited [8,15] witness: H = 1, 0-side deficit = (pq)^8   OK
+C7a parity lemma (Lucas box parity <=> Delta == 1 mod 2), d <= 8: OK
+C7b mod-2 parity clock closes for every dyadic R <= 2048 (depth-free: constrains every gamma identically): OK
+C4 capacity identity max|[p^t]Delta| = binom(d,t) 2^t, d <= 39: OK
+C5 gamma=1/3  R=  16: worst cap/target =     0.101299 at t=   6  DEFICIENT
+C5 gamma=1/3  R=  64: worst cap/target =     0.000001 at t=  27  DEFICIENT
+C5 gamma=1/3  R= 256: worst cap/target =     0.000000 at t= 108  DEFICIENT
+C5 gamma=2/5  R=  16: worst cap/target =     0.244755 at t=   6  DEFICIENT
+C5 gamma=2/5  R=  64: worst cap/target =     0.000089 at t=  26  DEFICIENT
+C5 gamma=2/5  R= 256: worst cap/target =     0.000000 at t= 105  DEFICIENT
+C5 gamma=1/2  R=  16: worst cap/target =     1.133333 at t=   1  ample
+C5 gamma=1/2  R=  64: worst cap/target =     0.043677 at t=  25  DEFICIENT
+C5 gamma=1/2  R= 256: worst cap/target =     0.000000 at t= 101  DEFICIENT
+C5 gamma=3/5  R=  16: worst cap/target =     1.266667 at t=   1  ample
+C5 gamma=3/5  R=  64: worst cap/target =     1.222222 at t=   1  ample
+C5 gamma=3/5  R= 256: worst cap/target =     1.203922 at t=   1  ample
+C5 gamma=2/3  R=  16: worst cap/target =     1.400000 at t=   1  ample
+C5 gamma=2/3  R=  64: worst cap/target =     1.349206 at t=   1  ample
+C5 gamma=2/3  R= 256: worst cap/target =     1.337255 at t=   1  ample
+C5 gamma=3/4  R=  16: worst cap/target =     1.666667 at t=   1  ample
+C5 gamma=3/4  R=  64: worst cap/target =     1.539683 at t=   1  ample
+C5 gamma=3/4  R= 256: worst cap/target =     1.509804 at t=   1  ample
+C5 dichotomy (deficient < 1/2 <= marginal < 3/5 <= ample): OK
+C6 (*) solved and C3 mirror closure verified at R=  2 (epoch [2,3])
+C6 (*) solved and C3 mirror closure verified at R=  4 (epoch [4,7])
+C6 (*) solved and C3 mirror closure verified at R=  8 (epoch [8,15])
+C6 (*) solved and C3 mirror closure verified at R= 16 (epoch [16,31])
+ALL THM-3002 REFEREE CHECKS PASSED

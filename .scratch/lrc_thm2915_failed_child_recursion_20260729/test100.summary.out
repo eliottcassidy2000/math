@@ -1,0 +1,33 @@
+selected=100
+pair_positive=35
+pair_nonpositive=65
+pair_equal=0
+hunter_positive_after_pair=32
+hunter_nonpositive_after_pair=33
+hunter_equal=0
+pair_horizon_extensions=0
+maximum_pair_horizon=2000
+minimum_pair_tail_gap=285521305/96576696216
+paid_pairs=770
+recursive_processed=0
+recursive_closed=0
+recursive_open=0
+second_pivots=0
+second_closed=0
+second_open=0
+maximum_second_core=0
+maximum_second_cutoff=0
+maximum_top3_horizon=0
+minimum_top3_tail_gap=None
+closed_children=67
+open_children=33
+route_histogram=(('hunter', 32), ('pair', 35), ('recursive', 33))
+composition={'failed_parents': 79, 'failed_roots': 58, 'completed_parents': 47, 'remaining_parents': 32, 'completed_roots': 30, 'remaining_roots': 28, 'completed_root_set': ((1, 2, 3, 4, 5, 7, 8), (1, 2, 3, 4, 5, 7, 9), (1, 2, 3, 4, 5, 7, 10), (1, 2, 3, 4, 5, 7, 11), (1, 2, 3, 4, 5, 8, 14), (1, 2, 3, 4, 5, 9, 10), (1, 2, 3, 4, 5, 9, 14), (1, 2, 3, 4, 5, 10, 14), (1, 2, 3, 4, 5, 11, 14), (1, 2, 3, 4, 5, 13, 14), (1, 2, 3, 4, 6, 9, 11), (1, 2, 3, 4, 6, 10, 12), (1, 2, 3, 4, 7, 8, 10), (1, 2, 3, 4, 7, 8, 11), (1, 2, 3, 4, 7, 9, 10), (1, 2, 3, 4, 7, 9, 13), (1, 2, 3, 4, 7, 10, 13), (1, 2, 3, 4, 7, 11, 13), (1, 2, 3, 4, 7, 12, 13), (1, 2, 3, 4, 8, 11, 12), (1, 2, 3, 4, 8, 11, 14), (1, 2, 3, 4, 9, 10, 11), (1, 2, 3, 4, 9, 12, 13), (1, 2, 3, 4, 9, 12, 14), (1, 2, 3, 4, 9, 13, 14), (1, 2, 3, 4, 10, 12, 13), (1, 2, 3, 4, 11, 12, 14), (1, 2, 3, 4, 12, 13, 14), (1, 2, 3, 5, 6, 8, 9), (1, 2, 3, 5, 6, 8, 12))}
+pair_seconds=2.0185392499988666
+recursive_seconds=0.0
+pair_semantic_sha256=cc8cfe73642ddbcf15f043ee24c8d073dc5be70ecd1345e5082618741cd5ff25
+recursive_semantic_sha256=None
+closest_pair_positive=PAIR;E=1,2,3,4,5,8,14;rank=1;a=22;P=22;x=36;earlier=18;h=131/660;r=38;M=2000;scan=1983;top4=26:68767/1261260,20:267/5390,52:31111/630630,39:118949/2522520;B2=2404/24255;B2w=20,26;B2tail=36474653/420630210;B2gap=347701/28042014;paid=4;extensions=0;pairmargin=5/19404;G4=70487/360360;G4margin=1039/360360;lambda=None;route=pair
+closest_pair_failure=PAIR;E=1,2,3,4,6,7,10;rank=1;a=22;P=22;x=24;earlier=26;h=4217/21560;r=32;M=2000;scan=1983;top4=18:41/693,27:911/16632,52:6443/140140,54:94/2079;B2=949/9702;B2w=18,42;B2tail=81842003/905972760;B2gap=2258539/301990920;paid=12;extensions=0;pairmargin=-1/27720;G4=715151/3783780;G4margin=9973/1513512;lambda=None;route=hunter
+closest_hunter_positive=PAIR;E=1,2,3,4,7,9,10;rank=1;a=24;P=24;x=22;earlier=;h=10541/64680;r=32;M=2000;scan=1984;top4=26:14811/280280,39:4673/105105,52:4351/105105,41:877/25256;B2=558533/6446440;B2w=23,26;B2tail=7788584/98147049;B2gap=95663/13130040;paid=5;extensions=0;pairmargin=-199439/19339320;G4=64528459/396456060;G4margin=55067/264304040;lambda=None;route=hunter
+closest_hunter_failure=PAIR;E=1,2,3,4,7,9,11;rank=1;a=24;P=24;x=26;earlier=;h=43037/252252;r=28;M=2000;scan=1984;top4=20:377/6930,15:34/735,25:284/6825,30:61/1470;B2=5103199/58017960;B2w=20,23;B2tail=480535793/5888822940;B2gap=3255557/512071560;paid=10;extensions=0;pairmargin=-5498/1036035;G4=49624871/290089800;G4margin=-6301/13813800;lambda=551819/12612600;route=recursive

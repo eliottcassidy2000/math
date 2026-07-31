@@ -1,0 +1,11 @@
+LRC14 all-open-centre exact child-top-four scout
+mode=EVEN_SAMPLE;selected_parent_rows=32;selected_children=139
+closed_children=120;failed_children=19;closed_parent_rows=20/32;closed_sample_bodies=20/32
+child_component_histogram=((20, 1), (22, 1), (24, 8), (26, 11), (28, 13), (30, 18), (32, 15), (34, 17), (36, 16), (38, 8), (40, 8), (42, 8), (44, 3), (46, 7), (48, 4), (56, 1))
+open_centres_per_selected_parent=((1, 2), (2, 9), (3, 5), (4, 2), (5, 4), (6, 2), (7, 4), (8, 2), (9, 1), (11, 1))
+closest_positive=(2, 3, 8, 10, 11, 13, 14);rank=1;a=18;x=24;margin=3839/4127760
+closest_failure=(1, 2, 4, 6, 7, 10, 14);rank=2;a=26;x=16;margin=-111/586040
+minimum_tail_gap=51520283/12618906300
+semantic_digest=111adf820990e96556330510ca7fc21f043ecf4317a94e8c472cd07be2b39071
+scope=G5-surviving THM2904 rows;every inherited open ordered centre;exact child top4;sample unless mode=ALL;not LRC14
+all_exact_controls=PASS

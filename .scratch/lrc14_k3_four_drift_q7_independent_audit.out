@@ -1,0 +1,9 @@
+LRC14 k3/four-drift q7 independent all-D audit
+resolving_D=217
+total_features=79336
+maximum_lcm_dp_states=176730
+feature_semantic_sha256=d88f0bcc0f29f1a3eccb101c456f775038938c0c13aa02bd031729b6bb38379b
+stage=raw_no_small,occurrences=20129326373,shapes=672632936,rows=26970,divisors=217,semantic_sha256=dbb12162c4c29bfdb9d3e0a4447b7704965cb070e4db0ea0730d85722992be8c
+stage=scalar_no_small,occurrences=12852450428,shapes=672351643,rows=18599,divisors=186,semantic_sha256=3327619ea1133c4bf17bd11c675c604eef18891fb63f6837e695669cf5592b2b
+stage=q7_and_scalar,occurrences=1437089787,shapes=171159117,rows=2209,divisors=112,semantic_sha256=01a33f9973ddf12cf7175cc8acc1a9bd17f83d1c700fa91decd7c3ac14c44e04
+all_exact_controls=PASS

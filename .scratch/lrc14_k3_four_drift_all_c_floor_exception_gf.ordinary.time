@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc14_k3_four_drift_all_c_floor_exception_gf.py", line 439, in <module>
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc14_k3_four_drift_all_c_floor_exception_gf.py", line 286, in main
+    full = full_distribution(D)
+  File "/Users/e/Documents/GitHub/math/.scratch/lrc14_k3_four_drift_all_c_floor_exception_gf.py", line 115, in full_distribution
+    states[state] = states.get(state, 0) + multiplicity
+KeyboardInterrupt
+time: command terminated abnormally
+real 342.30
+user 260.87
+sys 3.93

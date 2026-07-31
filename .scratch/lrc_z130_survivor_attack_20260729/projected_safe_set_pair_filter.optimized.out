@@ -1,0 +1,8 @@
+LRC14 k5 exact projected-safe-set pair filter
+first_apex_rows=257;candidate_pairs=42912
+killed_by_projected_measure=42912;surviving_pairs=0;surviving_roots=0
+aligned_union_cap=887/1365;u5=478/1365
+maximum_cell_prefix_used_before_decision=22
+minimum_certificate_margin=(Fraction(1, 378105), ((1, 2, 3, 5, 9, 10), 24, 277, 1260, Fraction(136, 315), 14, Fraction(43, 126), 26, 391, 154, Fraction(180, 277), 1))
+survivor_digest=3f001616fc494fca31891589993823d9aab957b9a5b73b96159cc899361d27bd
+all_exact_controls=PASS

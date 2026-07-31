@@ -1,0 +1,512 @@
+enumerating subgroups of (Z/333)^* ...
+  found 80 subgroups; orders: [1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 27, 36, 54, 72, 108, 216]
+  57 subgroups with |H|>=7:
+    |H|=216 orbits=  6 enumerable=YES
+    |H|= 72 orbits=  8 enumerable=YES
+    |H|= 72 orbits=  8 enumerable=YES
+    |H|=108 orbits=  8 enumerable=YES
+    |H|=108 orbits=  9 enumerable=YES
+    |H|= 72 orbits= 10 enumerable=YES
+    |H|=108 orbits= 10 enumerable=YES
+    |H|= 36 orbits= 12 enumerable=YES
+    |H|= 36 orbits= 12 enumerable=YES
+    |H|= 72 orbits= 12 enumerable=YES
+    |H|= 36 orbits= 13 enumerable=YES
+    |H|= 36 orbits= 13 enumerable=YES
+    |H|= 54 orbits= 13 enumerable=YES
+    |H|= 36 orbits= 14 enumerable=YES
+    |H|= 36 orbits= 14 enumerable=YES
+    |H|= 36 orbits= 14 enumerable=YES
+    |H|= 36 orbits= 15 enumerable=YES
+    |H|= 54 orbits= 15 enumerable=YES
+    |H|= 54 orbits= 15 enumerable=YES
+    |H|= 24 orbits= 18 enumerable=YES
+    |H|= 24 orbits= 18 enumerable=YES
+    |H|= 36 orbits= 18 enumerable=YES
+    |H|= 36 orbits= 18 enumerable=YES
+    |H|= 24 orbits= 20 enumerable=YES
+    |H|= 36 orbits= 20 enumerable=YES
+    |H|= 18 orbits= 21 enumerable=YES
+    |H|= 18 orbits= 21 enumerable=YES
+    |H|= 36 orbits= 21 enumerable=YES
+    |H|= 18 orbits= 23 enumerable=YES
+    |H|= 18 orbits= 23 enumerable=YES
+    |H|= 18 orbits= 23 enumerable=YES
+    |H|= 18 orbits= 23 enumerable=YES
+    |H|= 18 orbits= 23 enumerable=YES
+    |H|= 18 orbits= 25 enumerable=YES
+    |H|= 27 orbits= 25 enumerable=YES
+    |H|= 18 orbits= 27 enumerable=no
+    |H|= 12 orbits= 30 enumerable=no
+    |H|= 12 orbits= 30 enumerable=no
+    |H|= 24 orbits= 30 enumerable=no
+    |H|= 12 orbits= 32 enumerable=no
+    |H|= 12 orbits= 32 enumerable=no
+    |H|= 12 orbits= 32 enumerable=no
+    |H|= 12 orbits= 33 enumerable=no
+    |H|= 12 orbits= 33 enumerable=no
+    |H|= 18 orbits= 33 enumerable=no
+    |H|= 12 orbits= 35 enumerable=no
+    |H|= 18 orbits= 35 enumerable=no
+    |H|= 12 orbits= 36 enumerable=no
+    |H|= 18 orbits= 39 enumerable=no
+    |H|=  9 orbits= 41 enumerable=no
+    |H|=  9 orbits= 41 enumerable=no
+    |H|=  9 orbits= 45 enumerable=no
+    |H|= 12 orbits= 48 enumerable=no
+    |H|=  8 orbits= 50 enumerable=no
+    |H|= 12 orbits= 50 enumerable=no
+    |H|= 12 orbits= 57 enumerable=no
+    |H|=  9 orbits= 65 enumerable=no
+  35 enumerable sides
+  side |H|=216 orbits=6: 0 distinct PAF classes (0.0s)
+  side |H|=72 orbits=8: 0 distinct PAF classes (0.0s)
+  side |H|=72 orbits=8: 0 distinct PAF classes (0.0s)
+  side |H|=108 orbits=8: 0 distinct PAF classes (0.0s)
+  side |H|=108 orbits=9: 0 distinct PAF classes (0.0s)
+  side |H|=72 orbits=10: 0 distinct PAF classes (0.0s)
+  side |H|=108 orbits=10: 0 distinct PAF classes (0.0s)
+  side |H|=36 orbits=12: 0 distinct PAF classes (0.0s)
+  side |H|=36 orbits=12: 0 distinct PAF classes (0.0s)
+  side |H|=72 orbits=12: 0 distinct PAF classes (0.0s)
+  side |H|=36 orbits=13: 0 distinct PAF classes (0.0s)
+  side |H|=36 orbits=13: 0 distinct PAF classes (0.0s)
+  side |H|=54 orbits=13: 0 distinct PAF classes (0.0s)
+  side |H|=36 orbits=14: 0 distinct PAF classes (0.0s)
+  side |H|=36 orbits=14: 0 distinct PAF classes (0.0s)
+  side |H|=36 orbits=14: 0 distinct PAF classes (0.0s)
+  side |H|=36 orbits=15: 840 distinct PAF classes (0.1s)
+  side |H|=54 orbits=15: 80 distinct PAF classes (0.1s)
+  side |H|=54 orbits=15: 0 distinct PAF classes (0.1s)
+  side |H|=24 orbits=18: 0 distinct PAF classes (0.5s)
+  side |H|=24 orbits=18: 0 distinct PAF classes (0.5s)
+  side |H|=36 orbits=18: 0 distinct PAF classes (0.5s)
+  side |H|=36 orbits=18: 0 distinct PAF classes (0.5s)
+  side |H|=24 orbits=20: 0 distinct PAF classes (2.3s)
+  side |H|=36 orbits=20: 0 distinct PAF classes (2.4s)
+  side |H|=18 orbits=21: 0 distinct PAF classes (4.8s)
+  side |H|=18 orbits=21: 0 distinct PAF classes (4.8s)
+  side |H|=36 orbits=21: 0 distinct PAF classes (4.8s)
+  side |H|=18 orbits=23: 42884 distinct PAF classes (34.8s)
+  side |H|=18 orbits=23: 0 distinct PAF classes (21.0s)
+  side |H|=18 orbits=23: 0 distinct PAF classes (20.8s)
+  side |H|=18 orbits=23: 291720 distinct PAF classes (35.0s)
+  side |H|=18 orbits=23: 42866 distinct PAF classes (36.2s)
+  side |H|=18 orbits=25: 297492 distinct PAF classes (119.0s)
+  side |H|=27 orbits=25: 80169 distinct PAF classes (115.9s)
+pair |HA|=72,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 291720 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 42866 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 297492 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 42884 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 291720 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 297492 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 42884 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 42866 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 840 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 291720 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42866 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 297492 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 840 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42884 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 291720 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 297492 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 42884 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 291720 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 42866 classes, hits so far 0
+pair |HA|=72,|HB|=18,∩=6: joined 297492 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42884 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 291720 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 297492 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 291720 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42866 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 297492 classes, hits so far 0
+pair |HA|=54,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=54,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=54,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42884 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42866 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 840 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42884 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 291720 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 297492 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 840 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 291720 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42866 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 297492 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42884 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42866 classes, hits so far 0
+pair |HA|=54,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=54,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=54,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=54,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=54,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=54,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=54,∩=6: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 840 classes, hits so far 0
+pair |HA|=24,|HB|=54,∩=6: joined 80 classes, hits so far 0
+pair |HA|=24,|HB|=54,∩=6: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 42884 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 291720 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 42866 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 297492 classes, hits so far 0
+pair |HA|=24,|HB|=27,∩=3: joined 80169 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=54,∩=6: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 840 classes, hits so far 0
+pair |HA|=24,|HB|=54,∩=6: joined 80 classes, hits so far 0
+pair |HA|=24,|HB|=54,∩=6: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=36,∩=4: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 42884 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 291720 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 42866 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=2: joined 297492 classes, hits so far 0
+pair |HA|=24,|HB|=27,∩=3: joined 80169 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=24,∩=4: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42884 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42866 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 840 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42884 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 291720 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42866 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 297492 classes, hits so far 0
+pair |HA|=24,|HB|=54,∩=6: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=54,∩=6: joined 80 classes, hits so far 0
+pair |HA|=24,|HB|=54,∩=6: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=6: joined 42884 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=6: joined 291720 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=6: joined 42866 classes, hits so far 0
+pair |HA|=24,|HB|=18,∩=6: joined 297492 classes, hits so far 0
+pair |HA|=24,|HB|=27,∩=3: joined 80169 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 840 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42884 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 291720 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42866 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=3: joined 297492 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 840 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=6: joined 291720 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 42866 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 297492 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 840 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 42884 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=6: joined 291720 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 297492 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42884 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 291720 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 42866 classes, hits so far 0
+pair |HA|=36,|HB|=18,∩=6: joined 297492 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 840 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 291720 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=6: joined 42866 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 297492 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 840 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 42884 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 291720 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=6: joined 297492 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 840 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 291720 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 42866 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=6: joined 297492 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 42884 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 42866 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 840 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=6: joined 42884 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 291720 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 297492 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=72,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=2: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=24,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=36,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 42884 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=6: joined 0 classes, hits so far 0
+pair |HA|=18,|HB|=18,∩=3: joined 42866 classes, hits so far 0
+pair |HA|=27,|HB|=24,∩=3: joined 0 classes, hits so far 0
+pair |HA|=27,|HB|=24,∩=3: joined 0 classes, hits so far 0
+pair |HA|=27,|HB|=24,∩=3: joined 0 classes, hits so far 0
+DONE. total verified Legendre pairs found: 0
+NEGATIVE: no Legendre pair of length 333 exists with A,B invariant under (possibly different) subgroups of (Z/333)^* of order >= 7 with |H_A ∩ H_B| <= 6, among enumerable orbit counts <= 25.

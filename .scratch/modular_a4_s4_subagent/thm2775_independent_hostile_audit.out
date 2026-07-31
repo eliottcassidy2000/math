@@ -1,0 +1,16 @@
+THM-2775 INDEPENDENT HOSTILE AUDIT
+root_derived_XS=(d1,-d3,-d2) XA=(d1,-d2,-d3)
+root_derived_YS=(d2,d3,d1) YA=(-d3,d1,-d2)
+triangle_orders=S:(2,3,4) A:(2,3,3)
+images=S:W(D3)=S4_order24 A:det_plus_order12
+centered_state_actions=XS:(12),YS:(234),XA:(12)(34),YA:(123)
+half_Hadamard_identity=H*D=4I-J
+translation_hostile=diagonal_kernel_dimension1
+absolute_root_recovery_requires_common_sum_e1
+S_face_square=diag(-1,-1,1)
+THM2769_Newton_valuations=(1,1,0)
+THM2769_residual_discriminant=-48 simple_U4_derivative=16
+face_square_equals_110_local_Kummer_inertia
+boundary_code={000,110,101,011}
+VERDICT=ACCEPT_WITH_CENTERED_ROOT_WORDING_GUARD
+FAILED CHECKS: NONE

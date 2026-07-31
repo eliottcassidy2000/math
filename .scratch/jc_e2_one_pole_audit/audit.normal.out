@@ -1,0 +1,13 @@
+INDEPENDENT BALANCED e=2,h=1 ONE-POLE HOSTILE AUDIT
+rows_(N,ordered,affine_classes,dessin_survivors)=((4, 1, 1, 2), (5, 2, 1, 5), (6, 3, 2, 9), (7, 4, 2, 14), (8, 5, 3, 20), (9, 6, 3, 27), (10, 7, 4, 35), (11, 8, 4, 44), (12, 9, 5, 54), (13, 10, 5, 65), (14, 11, 6, 77))
+unit_aware_reduced_scheme_checks=true
+primary_generic_denominator_guard_is_too_weak_in_isolation=true
+actual_primary_denominators_are_units_on_every_ratio_component=true
+euler_sign_and_exact_double_zero_checks=true
+inversion_is_realized_by_source_scaling=true
+chebyshev_U_derivative_bridge_and_unit_circle_locus=true
+independent_dessin_centralizer_orbit_counts_agree=true
+N4_split=true;N_ge_5_nonsplit=true
+N14_degree_V=26;ordered=11;affine_classes=6
+scope=response_factor_classification_only;no_chart_entry_or_JC2
+ALL INDEPENDENT EXACT CHECKS PASSED

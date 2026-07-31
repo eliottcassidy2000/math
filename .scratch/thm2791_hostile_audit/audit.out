@@ -1,0 +1,13 @@
+THM-2791 INDEPENDENT HOSTILE AUDIT
+hash_pins=17 PASS
+full_address_scan=4826809 support=(0, 689364) PASS
+central_scans=main:(0, 53028),exceptional:121
+two_point_metadata=(((7, 6), (3, (1, 2)), 6, True, (True, True, True, True, True, True, True, True, True), True), ((7, 7), (3, (1, 2)), 6, True, (True, True, True, True, True, True, True, True, True), True)) PASS
+periods=13^6,13^5; all_full_characters_and_conductors=PASS
+lower_central=Z1*Z2^10*Z3*Z4^11*Z5; first_transgression=10 PASS
+partial_germ_shift=371196/371293 whole_piece_transfer=PASS
+pushforward=c*z^6*(1+z); normalized_unit=PASS; raw_Z_group_ring_unit=NO; descent=NO
+exceptional_profile_and_all_13_decoded_targets=PASS
+lower_central_difference_sizes=(4, 4, 4, 4, 4, 0) PASS
+scope=TRANSFER_BY_PUSHFORWARD_PLUS_PARTIAL_GERM;NOT_DESCENT;NOT_PURE_Z1_COVARIANCE;NOT_ENDPOINT_ALLOCATION
+verdict=PASS;PROMOTE_AFTER_INDEPENDENT_AUDIT_METADATA

@@ -1,0 +1,35 @@
+LRC14 projected k=3 z1=330 expected-spike closure
+atlas_output_sha256=ce6807de6d6b7022c97839d0bf9fc8ba3b90e7b97bc5b0d4069e88563e232be6
+atlas_source_sha256=ddb2d19c02c4d70cfa74141265ceac585685932e85768baf4cb98aeb3e37935b
+physical_output_sha256=61e16aab8a368881c574047e576645e6b41837dc9f804f7a78d37230d843612b
+physical_source_sha256=a003d287f618eb301edf6974d0b67dc128c4f380a169e7809ed5b5754e8b8303
+projection_output_sha256=2e211620ad7064ea06f7544b5fbac709d6d52d9a0e261b464ae26b595f09b669
+projection_source_sha256=42dc165781148c702dfcd3c6535f4d02aee516af60b5ddf602a19cb1d87695e4
+support_output_sha256=648327d3b9b5b9a50c7760f0afd89a7a33161f57fa98c1b9e181d6b5b791a25f
+support_source_sha256=778842c0e8e7172835ca6ae673fb6156f212d4296e672bce4e7cc2815195bf1a
+z336_closure_output_sha256=e257da724128208a9c80fc5f3e8f0cd4151b2073d3a8afa4814ca1e274f168ac
+z336_closure_source_sha256=6e991432a1ce5ec9c1cbe97199cb5fd647c5edc89bdcc60ce560382a70835fcf
+dependency=THM-2928-(37lS8)-expected-spike;independent direct predicate
+strictness=if open event E is whole circle its mass is 1;otherwise compact R subset E gives strict mass
+atlas_counts=z330:1;z328:9;z331..335:0
+target_row=E=1,2,6,8,12,14;h=83/196;r=26;L=2352;high=232;z1=330;delta1=61/45276;suffix=378:167/37044,364:19/4459,350:137/34300;lower=249/17836;upper=1868707/132432300;gap=9941/66216150
+target_fixed_denominator=392
+resolving_D=(392, 784, 1176, 2352)
+support_cutoff=125/143
+literal_profile_total=4495
+D=392;q=56;support=308;N=(56, 56, 56, 56, 56);tests=(c,multiplicity,N,55N,13(4-c)q,slack)=((1, 84, 56, 3080, 2184, 896), (2, 112, 56, 3080, 1456, 1624), (3, 70, 56, 3080, 728, 2352), (4, 20, 56, 3080, 0, 3080));load_histogram=((5, 28), (6, 28))
+D=784;q=112;support=578;N=(112, 112, 112, 112, 98);tests=(c,multiplicity,N,55N,13(4-c)q,slack)=((1, 81, 112, 6160, 4368, 1792), (2, 113, 112, 6160, 2912, 3248), (3, 65, 112, 6160, 1456, 4704), (4, 15, 98, 5390, 0, 5390));load_histogram=((4, 14), (5, 66), (6, 32))
+D=1176;q=168;support=570;N=(144, 144, 144, 116, 18);tests=(c,multiplicity,N,55N,13(4-c)q,slack)=((1, 596, 144, 7920, 6552, 1368), (2, 848, 144, 7920, 4368, 3552), (3, 470, 116, 6380, 2184, 4196), (4, 100, 18, 990, 0, 990));load_histogram=((0, 24), (3, 28), (4, 98), (5, 14), (6, 4))
+D=2352;q=336;support=996;N=(288, 288, 260, 134, 22);tests=(c,multiplicity,N,55N,13(4-c)q,slack)=((1, 569, 288, 15840, 13104, 2736), (2, 827, 260, 14300, 8736, 5564), (3, 440, 134, 7370, 4368, 3002), (4, 85, 22, 1210, 0, 1210));load_histogram=((0, 48), (2, 28), (3, 126), (4, 112), (5, 18), (6, 4))
+minimum_failure_slack=896
+physical_positive_control=E=(1, 2, 8, 10, 12, 14);z1=328;D=11760;profile=(1470, 2, 49, 784);c=3;N_c=278;lhs=15290;rhs=21840:PASS
+hostile_equality_control=(N,c,q)=(39,1,55):REJECTED
+adjacent_strict_control=(N,c,q)=(38,1,55):ACCEPTED
+zero_demand_control=(N,c,q)=(0,4,1):ACCEPTED
+literal_residue_vs_event_sweep=PASS
+literal_three_multiset_lcm_counts=PASS
+input_snapshot_guard=start/after_module_load/end:PASS
+conclusion=unique projected k=3 z1=330 row is empty;next occupied atlas height is 328
+projected_k3_first_drift_cap<=328
+semantic_sha256=333189ce8bf219abcce5f0590296991c63ae7691fd3a31b65da06b3c9b69ccb9
+all_exact_controls=PASS

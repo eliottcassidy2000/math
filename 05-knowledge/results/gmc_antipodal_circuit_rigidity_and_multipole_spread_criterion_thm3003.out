@@ -1,0 +1,117 @@
+==========================================================================
+LAYER 1.  R_k = R_(d-k) for all k   <=>   roots reciprocal-closed up to scale
+==========================================================================
+
+  (<=) reciprocal-closed families must be ratio-palindromic:
+    balanced two-cluster (1,2)^4       reciprocal-closed=True  ratio-palindromic=True
+    balanced two-cluster (3,7)^3       reciprocal-closed=True  ratio-palindromic=True
+    geometric 2^-i, d=7                reciprocal-closed=True  ratio-palindromic=True
+    mirror pair set {2,3,1/2·6,1/3·6}  reciprocal-closed=True  ratio-palindromic=True
+    scaled mirror {1,4,,}              reciprocal-closed=True  ratio-palindromic=True
+
+  (=>) EXHAUSTIVE SEARCH for a ratio-palindromic set that is NOT
+       reciprocal-closed (small rational root multisets):
+    tested 7722 multisets (d=4,5,6 over a 10-element rational pool)
+    counterexamples found: 0   NONE -- rigidity holds
+
+  numeric confirmation of the PROOF's intermediate identity
+    e_k * e_d == mu^k * e_(d-k)   with mu = e_d^(2/d):
+    balanced two-cluster (1,2)^4       max|e_k e_d - mu^k e_(d-k)| = 0.000e+00
+    balanced two-cluster (3,7)^3       max|e_k e_d - mu^k e_(d-k)| = 1.043e-07
+    geometric 2^-i, d=7                max|e_k e_d - mu^k e_(d-k)| = 3.176e-22
+
+  VERDICT LAYER 1: RIGIDITY CONFIRMED
+
+==========================================================================
+LAYER 2.  reversal = ANTIPODAL MAP;  c(-ell) = -reverse(c(ell))
+==========================================================================
+  equivariance (*), random configurations:
+    d=  5  max|c(-ell) + reverse(c(ell))| = 6.661e-16
+    d=  6  max|c(-ell) + reverse(c(ell))| = 6.661e-16
+    d=  7  max|c(-ell) + reverse(c(ell))| = 1.554e-15
+    d=  8  max|c(-ell) + reverse(c(ell))| = 4.441e-15
+    d= 12  max|c(-ell) + reverse(c(ell))| = 5.773e-15
+
+  (2a) BALANCED-LOCUS CROSSING.  Phi := sum_k c_k = log(R_(d-1)/R_1) is
+       an ODD function of ell (w = 1 is reversal-symmetric), so ANY path
+       from ell to -ell must cross Phi = 0.  The straight path is a
+       degenerate witness (it passes through ell = 0, all roots equal),
+       so the real test uses a GREAT-CIRCLE path of constant norm that
+       never degenerates:  ell(t) = cos(pi t) ell + sin(pi t) ell_perp.
+    d=  6  |ell(t)| constant to 4.44e-16 (never degenerates: True)
+          Phi(0)=-0.010016  Phi(1)=+0.010016  opposite signs: True
+          crossing found in sub-interval(s) [3]   (NOT at the degenerate center)
+    d=  9  |ell(t)| constant to 8.88e-16 (never degenerates: True)
+          Phi(0)=-0.142156  Phi(1)=+0.142156  opposite signs: True
+          crossing found in sub-interval(s) [1, 5, 7]   (NOT at the degenerate center)
+    d= 14  |ell(t)| constant to 8.88e-16 (never degenerates: True)
+          Phi(0)=+0.001071  Phi(1)=-0.001071  opposite signs: True
+          crossing found in sub-interval(s) [2]   (NOT at the degenerate center)
+
+  (2b) BORSUK-ULAM.  S c : S^(d-2) -> R^ceil((d-2)/2) is odd, so it has
+       a zero.  Sphere dim d-2 vs target dim ceil((d-2)/2):
+    d=  4  sphere dim   2  target dim   1  BU applies: True   expected zero-set dim   1   log-symmetric locus dim in the sphere   1
+    d=  5  sphere dim   3  target dim   2  BU applies: True   expected zero-set dim   1   log-symmetric locus dim in the sphere   1
+    d=  6  sphere dim   4  target dim   2  BU applies: True   expected zero-set dim   2   log-symmetric locus dim in the sphere   2
+    d=  7  sphere dim   5  target dim   3  BU applies: True   expected zero-set dim   2   log-symmetric locus dim in the sphere   2
+    d=  8  sphere dim   6  target dim   3  BU applies: True   expected zero-set dim   3   log-symmetric locus dim in the sphere   3
+    d=  9  sphere dim   7  target dim   4  BU applies: True   expected zero-set dim   3   log-symmetric locus dim in the sphere   3
+    d= 10  sphere dim   8  target dim   4  BU applies: True   expected zero-set dim   4   log-symmetric locus dim in the sphere   4
+    d= 11  sphere dim   9  target dim   5  BU applies: True   expected zero-set dim   4   log-symmetric locus dim in the sphere   4
+    d= 12  sphere dim  10  target dim   5  BU applies: True   expected zero-set dim   5   log-symmetric locus dim in the sphere   5
+       (the two dimensions agree, which is Layer 1: the BU zero set IS
+        the log-symmetric locus, nothing more and nothing less.)
+  VERDICT LAYER 2: EQUIVARIANCE + CROSSING CONFIRMED
+
+==========================================================================
+LAYER 3.  MULTIPOLE DICTIONARY AND THE SPREAD CRITERION
+==========================================================================
+  (i) jets are additive over factorisation  (= FMM superposition):
+    trial 0: p_j(F*G) == p_j(F) + p_j(G) for j=1..5 : True
+    trial 1: p_j(F*G) == p_j(F) + p_j(G) for j=1..5 : True
+    trial 2: p_j(F*G) == p_j(F) + p_j(G) for j=1..5 : True
+    => THM-2997 (21)'s wall subtraction A=P_1-w_1 D^2 etc. is exactly
+       multipole subtraction; w_j are the WALL's multipole moments.
+
+  (ii) SPREAD CRITERION.  kappa = max|r| / (p_1/d);  |p_j| <= d max|r|^j
+       gives m_j/m_1^j <= kappa^j, so THM-3000's graded hypothesis
+       m_j/m_1^j = o(d^(j-3)) for j <= k+1 follows from
+            kappa = o(d^(1 - 3/(k+1))).
+       edge k :  required spread exponent 1 - 3/(k+1)
+         k=2:  no j>=4 jet enters; curvature alone
+         k=3:  kappa = o(d^0.2500)   (j<=k+1 binding at j=4)
+         k=4:  kappa = o(d^0.4000)   (j<=k+1 binding at j=4)
+         k=5:  kappa = o(d^0.5000)   (j<=k+1 binding at j=4)
+         k=6:  kappa = o(d^0.5714)   (j<=k+1 binding at j=4)
+         k=7:  kappa = o(d^0.6250)   (j<=k+1 binding at j=4)
+         k=8:  kappa = o(d^0.6667)   (j<=k+1 binding at j=4)
+
+  (iii) numeric check of the bound m_j/m_1^j <= kappa^j:
+    uniform i/d, d=60      kappa=  1.9672
+        j=2: m_j/m_1^j =      1.32240 <= kappa^j =        3.86993  True
+        j=3: m_j/m_1^j =      1.96721 <= kappa^j =        7.61297  True
+        j=4: m_j/m_1^j =      3.12146 <= kappa^j =       14.97634  True
+        j=5: m_j/m_1^j =      5.15920 <= kappa^j =       29.46165  True
+    two-cluster 1,2 d=60   kappa=  1.3333
+        j=2: m_j/m_1^j =      1.11111 <= kappa^j =        1.77778  True
+        j=3: m_j/m_1^j =      1.33333 <= kappa^j =        2.37037  True
+        j=4: m_j/m_1^j =      1.67901 <= kappa^j =        3.16049  True
+        j=5: m_j/m_1^j =      2.17284 <= kappa^j =        4.21399  True
+    one heavy root d=60    kappa= 30.2521
+        j=2: m_j/m_1^j =     15.50314 <= kappa^j =      915.18961  True
+        j=3: m_j/m_1^j =    461.56618 <= kappa^j =    27686.40823  True
+        j=4: m_j/m_1^j =  13959.59711 <= kappa^j =   837572.01356  True
+        j=5: m_j/m_1^j = 422305.24897 <= kappa^j = 25338313.01540  True
+
+  (iv) FIRST-GAP CONSEQUENCE.  THM-2997 (24) gives d/M -> 62/3 and
+       u/M^2 -> 131/12, so mean root -> (131/12)/(62/3) M = 0.5282 M.
+       mean root  ~ 0.528226 M ,  d ~ 20.6667 M
+       third edge needs kappa = o(d^(1/4)), i.e.
+           max|r| = o(0.5282 * (20.667 M)^(1/4) * M) = o(1.1263 M^(5/4)).
+       So a root-modulus bound |r| = o(M^(5/4)) on the wall-stripped core
+       CLOSES the third edge -- no P_4, no new Macaulay chart.
+  VERDICT LAYER 3: DICTIONARY + CRITERION CONFIRMED
+
+==========================================================================
+SUMMARY  layer1(rigidity)=True  layer2(antipodal)=True  layer3(multipole)=True
+==========================================================================

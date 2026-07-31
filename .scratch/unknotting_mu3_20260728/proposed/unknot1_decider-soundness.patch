@@ -1,0 +1,179 @@
+--- a/04-computation/unknot1_decider.py
++++ b/04-computation/unknot1_decider.py
+@@ -10,7 +10,10 @@
+ Verdicts
+   TRUE_CERTIFIED  -- an explicit crossing change is exhibited whose changed
+                      diagram is reduced to the 0-crossing diagram by
+-                     face-local Reidemeister R1/R2 moves (a certificate).
++                     face-local Reidemeister R1/R2 moves, AND the input is
++                     independently certified nontrivial.  The latter condition
++                     is essential: a crossing change from one unknot diagram
++                     to another only proves u(K) <= 1, not u(K) = 1.
+   FALSE_CERTIFIED -- a named obstruction proves u(K) >= 2:
+                      (i)  Murasugi: |sigma(K)| <= 2 u(K), so |sigma| >= 4;
+                      (ii) H1(Sigma(K)) must be cyclic if u = 1 (Montesinos);
+@@ -58,11 +61,20 @@
+ VERDICT_FALSE = "FALSE_CERTIFIED"
+ VERDICT_UNKNOWN = "UNKNOWN"
+ 
++
++def require(condition, message):
++    """Optimization-stable internal validity check."""
++    if not condition:
++        raise ArithmeticError(message)
++
++
+ SCOPE_NOTES = (
+     "Scope: UNKNOWN is possible; deciding u(K)=1 in general is "
+-    "research-level. TRUE needs the unknotting change to be visible in THIS "
+-    "diagram and the changed diagram to simplify monotonically under "
+-    "face-local R1/R2 (no R3 / no crossing-increasing exploration). FALSE "
++    "research-level. TRUE needs (i) an independently certified nontrivial "
++    "input, (ii) the unknotting change to be visible in THIS diagram, and "
++    "(iii) the changed diagram to simplify monotonically under face-local "
++    "R1/R2 (no R3 / no crossing-increasing exploration). A visible change "
++    "without (i) certifies only u(K)<=1 and is reported as UNKNOWN. FALSE "
+     "uses Murasugi |sigma|<=2u, cyclicity of H1 of the double branched "
+     "cover, and the Lickorish linking-form test (gated by a 7_4 self-test). "
+     "Deeper tools (Ozsvath-Szabo d-invariants, Alexander/Seifert route) are "
+@@ -83,6 +95,16 @@
+              [11, 16, 12, 17], [7, 15, 8, 14], [15, 7, 16, 6],
+              [13, 20, 14, 21], [17, 22, 18, 1], [21, 18, 22, 19],
+              [19, 12, 20, 13]]
++# An exact hostile control for the distinction u(K)=1 versus u(K)<=1.
++# This is an unknot diagram obtained from the one-crossing unknot by the
++# legal reverse-Reidemeister path R1+, R2+, R2+, R3, R3.  Greedy R1/R2
++# stalls on the input, but changing crossing #4 makes greedy R1/R2 reach
++# the empty diagram.  The unrepaired engine therefore returned a false
++# TRUE_CERTIFIED for this u=0 knot.
++HOSTILE_UNKNOT6 = [
++    [1, 11, 2, 10], [6, 10, 7, 9], [3, 8, 4, 9],
++    [11, 5, 12, 4], [7, 2, 8, 3], [5, 1, 6, 12],
++]
+ 
+ # SECTION: linalg
+ # Exact linear algebra over Z / Q (Fractions only; no floats anywhere).
+@@ -111,7 +133,7 @@
+             f = A[i][k] / A[k][k]
+             if f:
+                 A[i] = [A[i][j] - f * A[k][j] for j in range(m)]
+-    assert det.denominator == 1
++    require(det.denominator == 1, "exact determinant became nonintegral")
+     return int(det)
+ 
+ 
+@@ -152,7 +174,7 @@
+         row = []
+         for j in range(m):
+             v = inv[i][j] * d
+-            assert v.denominator == 1, "adjugate not integral -- bug"
++            require(v.denominator == 1, "adjugate not integral -- bug")
+             row.append(int(v))
+         adj.append(row)
+     return adj, d
+@@ -587,7 +609,8 @@
+         if len(surv) == 1:
+             start = surv[0]
+             chain, final = walk(eid, start)
+-            assert final is not None and final[0] not in removed
++            require(final is not None and final[0] not in removed,
++                    "dissolve chain did not end at a surviving crossing")
+             visited.update(chain)
+             keep = chain[0]
+             for e in chain[1:]:
+@@ -671,7 +694,8 @@
+     for eid in set(old):
+         d.edges[eid] = [(cc, (ss - k) % 4) if cc == c else (cc, ss)
+                         for (cc, ss) in d.edges[eid]]
+-    assert d.heads[(c, 0)] and not d.heads[(c, 2)]
++    require(d.heads[(c, 0)] and not d.heads[(c, 2)],
++            "crossing flip did not restore the PD under-strand convention")
+     return d
+ 
+ 
+@@ -724,6 +748,8 @@
+ def decide(pd):
+     """Full pipeline.  Returns a result dict (see report())."""
+     res = {"pd": pd, "verdict": VERDICT_UNKNOWN, "certificate": None,
++           "upper_bound_certificate": None,
++           "nontriviality_certificates": [],
+            "obstructions": [], "notes": [], "invariants": {},
+            "search": None}
+     dg = parse_pd(pd)
+@@ -739,6 +765,14 @@
+             "u(K)=0 != 1 (R1/R2 certificate: %s)" % ",".join(log) if log
+             else "input is the 0-crossing unknot: u(K)=0 != 1")
+         return res
++    # A stalled simplifier is not a certificate that the knot is nontrivial.
++    # Use only invariants whose value differs from that of the unknot.
++    if inv["det"] != 1:
++        res["nontriviality_certificates"].append(
++            "det(K)=%d != 1=det(unknot)" % inv["det"])
++    if inv["sigma"] != 0:
++        res["nontriviality_certificates"].append(
++            "sigma(K)=%+d != 0=sigma(unknot)" % inv["sigma"])
+     # obstruction battery
+     if abs(inv["sigma"]) >= 4:
+         res["obstructions"].append(
+@@ -765,10 +799,23 @@
+     if res["obstructions"]:
+         res["verdict"] = VERDICT_FALSE
+     elif certified is not None:
+-        res["verdict"] = VERDICT_TRUE
+-        res["certificate"] = (
++        change_certificate = (
+             "change crossing #%d (1-indexed), then reduce: %s"
+             % (certified["crossing"] + 1, ",".join(certified["log"])))
++        if res["nontriviality_certificates"]:
++            res["verdict"] = VERDICT_TRUE
++            res["certificate"] = (
++                "%s; input nontrivial because %s"
++                % (change_certificate,
++                   "; ".join(res["nontriviality_certificates"])))
++        else:
++            res["verdict"] = VERDICT_UNKNOWN
++            res["upper_bound_certificate"] = change_certificate
++            res["notes"].append(
++                "the crossing change certifies u(K)<=1, but exact u(K)=1 "
++                "is WITHHELD: greedy failure does not certify that the input "
++                "is nontrivial; use an exact unknot oracle or another "
++                "nontriviality certificate")
+     else:
+         res["verdict"] = VERDICT_UNKNOWN
+         if any("probably-unknot" in e["status"] for e in sresults):
+@@ -801,6 +848,13 @@
+     w("VERDICT: %s\n" % res["verdict"])
+     if res["certificate"]:
+         w("certificate: %s\n" % res["certificate"])
++    if res.get("upper_bound_certificate"):
++        w("upper-bound certificate only: %s\n"
++          % res["upper_bound_certificate"])
++    if res.get("nontriviality_certificates"):
++        w("input nontriviality certificates:\n")
++        for cert in res["nontriviality_certificates"]:
++            w("  * %s\n" % cert)
+     for nt in res["notes"]:
+         w("note: %s\n" % nt)
+     w("scope: %s\n" % SCOPE_NOTES)
+@@ -842,6 +896,21 @@
+           "(%s)" % s74["lickorish"]["detail"])
+     check("7_4 verdict FALSE_CERTIFIED", s74["verdict"] == VERDICT_FALSE,
+           "(got %s)" % s74["verdict"])
++    hostile = decide(HOSTILE_UNKNOT6)
++    hi = hostile["invariants"]
++    check("hostile unknot det=1 sigma=0",
++          hi["det"] == 1 and hi["sigma"] == 0,
++          "(got det=%d sigma=%+d)" % (hi["det"], hi["sigma"]))
++    _, hostile_log, hostile_reduced = try_reduce(parse_pd(HOSTILE_UNKNOT6))
++    check("hostile input greedy R1/R2 stalls",
++          not hostile_reduced and not hostile_log,
++          "(log=%s)" % hostile_log)
++    check("hostile u=0 diagram is NOT TRUE_CERTIFIED",
++          hostile["verdict"] == VERDICT_UNKNOWN,
++          "(got %s)" % hostile["verdict"])
++    check("hostile retains only u<=1 certificate",
++          hostile["upper_bound_certificate"] is not None,
++          "(certificate=%s)" % hostile["upper_bound_certificate"])
+     return fails
+ 
+ 

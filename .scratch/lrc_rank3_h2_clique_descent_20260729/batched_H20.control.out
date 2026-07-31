@@ -1,0 +1,10 @@
+LRC14 j6 strongest-r3 graph-free ordered Hunter-star peel
+core_range=0..20;branches=13;closed=6;survivors=7
+vertices=231;peeled=168;residual=63;residual_histogram=((0, 6), (5, 1), (6, 2), (9, 1), (11, 1), (12, 1), (14, 1))
+pair_queries=1512;cache_hits=181;candidate_scans=1693;retests=0;threshold_ties=0;controls=52
+residual_max=(14, 19, (1, 5, 7, 8, 9, 11, 12), 4)
+closed_keys=(((1, 5, 8, 9, 11, 13, 14), 6, 17), ((1, 5, 8, 11, 12, 13, 14), 6, 16), ((1, 9, 10, 11, 12, 13, 14), 5, 19), ((2, 5, 9, 11, 12, 13, 14), 8, 20), ((2, 6, 7, 8, 10, 11, 14), 5, 15), ((2, 6, 8, 10, 11, 12, 14), 7, 19))
+canonical_ledger_sha256=ff919a12d04a9a3db32a60532bd44860ec77ca5574c3d149e97024ffd257efd5
+orientation=acyclic proof-elimination gauge only;queried pair unions symmetric;not tournament
+scope=exact graph-free Hunter-star peel;residual size >=4 is unresolved, not a cover witness
+all_exact_controls=PASS

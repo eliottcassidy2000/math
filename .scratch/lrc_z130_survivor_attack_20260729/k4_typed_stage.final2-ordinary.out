@@ -1,0 +1,21 @@
+LRC14 k4 exact projected-suffix ordered typed-apex verifier
+geometric_source_sha256=a003d287f618eb301edf6974d0b67dc128c4f380a169e7809ed5b5754e8b8303
+projected_source_sha256=76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662
+support_sha256=ae3377d67325f820e84a05d006c3c888f83472f1b99457f70237b966bad385b4
+physical_order=z1<z2<z3;denominator_sidecar=d(z)=L/gcd(z,L),not physically ordered;diagonal denominator triples are independently empty
+integer_apex_lemma=A_p(R)=floor(6*p*r/[7*(7-p)*h]);if_all_integer_w>A_then_w>T_and_the_p_sum<h
+projected_wall=alpha4*L>max(E),so_z3>=floor(alpha4*L)+1;minimum_wall=(Fraction(56784, 3125), (1, 2, 3, 4, 6, 12), 19)
+suffix_rows=87975;suffix_roots=3003;maximum_z1=182
+first_apex_max=1871;aligned_first_rows=706;aligned_first_states=758
+initial_drift_apex_candidates=49129013;initial_scalar_killed=40630772;initial_scalar_finite_z3=2032220;initial_no_positive_gap_z3_cap=6466021
+complementary_aligned_apex_states=758;p5_types={'aligned_possible': 758};p5_max_apex=3489;p5_aligned_multiplier_max=9
+recursive_aligned_candidate_states=5368;states_by_selected_depth={1: 758, 2: 1052, 3: 1427, 4: 2131};bounded_z2_branches_by_depth={1: 758, 2: 990, 3: 1293, 4: 543};closed_complements_by_depth={2: 54, 3: 684, 4: 2131}
+raw_uniform_z2_cap=6515;raw_recursive_pair_bank=50285016;interval_rows=87975;maximum_intervals_per_row=1
+full_recursive_scalar_candidates=50285016;full_recursive_scalar_killed=41770842;full_recursive_finite_z3=2042669;full_recursive_no_positive_gap_z3_cap=6471505
+screened_uniform_z2_cap=2163;necessary_non_aligned_(E,z1,z2)_bank=8514174;surviving_(E,z1)_rows=87975;killed_(E,z1)_rows=0
+cap_witness_schema=(E,z1,z2,L,z3_floor,scalar_class,z3_cap)
+raw_cap_witnesses=(((2, 3, 4, 8, 9, 12), 156, 6515, 1008, 6516, 'scalar_killed', None),)
+screened_cap_witnesses=(((2, 3, 4, 6, 8, 12), 44, 2163, 336, 2164, 'finite_z3_cap', 23477),)
+cap_witness_digest=9c3469a3600a928aebcdae07d51a1c3f16fc221740505502250e59ca716efefe
+typed_stage_digest=5303930eea27eb9713a81245efa0a975f7e2b21869edcd028e4b2f2bb56f8fb3
+all_exact_controls=PASS

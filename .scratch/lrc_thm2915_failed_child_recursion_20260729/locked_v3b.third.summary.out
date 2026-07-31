@@ -1,0 +1,31 @@
+failed_grandchildren=228
+pair_single_positive=65
+pair_single_nonpositive=163
+pair_single_equal=0
+hunter3_positive=114
+hunter3_nonpositive=49
+hunter3_equal=0
+third_recursive_rows=49
+third_recursive_closed=48
+third_recursive_open=1
+third_pivots=117
+third_pivots_closed=116
+third_pivots_open=1
+maximum_third_core=5
+maximum_third_cutoff=441
+maximum_pair_horizon=4259
+minimum_pair_tail_gap=507443/2217543127800
+upgraded_second_pivots=227
+remaining_second_pivots=1
+newly_closed_first_children=194
+remaining_first_children=1
+slot_chain=((10, 3), (11, 2), (13, 0))
+route3_histogram=(('hunter3', 114), ('pair_single', 65), ('third_recursive', 49))
+grandchild_semantic_sha256=0b70905f638bb2a548e74a265df76506769f33424989c1385aa170b73c8a302a
+third_semantic_sha256=55c2e237e4b22475d2daa1dd08f8d8df25653952387c62813dd33edc2f66ae67
+closest_pair_single_positive=E=1,5,6,7,8,10,13;rank=1;a=22;P=22;x=23;earlier=;y=17;yearlier=36;margin=10679/986305320
+closest_pair_single_failure=E=2,3,9,10,12,13,14;rank=1;a=22;P=22;x=16;earlier=;y=19;yearlier=;margin=-813/1224823600
+closest_hunter3_positive=E=1,4,5,6,7,11,13;rank=1;a=17;P=17;x=23;earlier=16;y=27;yearlier=;margin=160063/864913896
+closest_hunter3_failure=E=2,4,5,6,7,8,14;rank=1;a=22;P=22;x=26;earlier=;y=20;yearlier=;margin=-1/20020
+closest_third_positive=E=1,3,4,7,10,11,13;rank=1;a=18;P=18;x=17;earlier=;y=16;yearlier=;z=23;margin=7017779/1460244240
+closest_third_failure=E=2,4,6,8,10,12,14;rank=1;a=22;P=22;x=18;earlier=;y=26;yearlier=;z=16;margin=0/1

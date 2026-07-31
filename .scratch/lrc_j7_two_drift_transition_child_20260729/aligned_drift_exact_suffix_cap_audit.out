@@ -1,0 +1,41 @@
+LRC14 k-aligned exact smallest-drift suffix audit
+independent_source_sha256=5d25a955fe184d6c1a3d8b632b4bbf901dc996ee46ad67c5748836fcc7134404
+support_sha256=5482e10635ecf72840bc0c083360fd7ddad65c2885d743820061bcba58cd5609
+universe=(six_body_roots=3003,body_labels=1..14,external_drifts>=15,drift_mod_L_nonzero,k=2..6)
+exact_horizon=7000
+tail=delta(w)<=6r/(49w)<=6r/(49*(H+1)) for omitted w>H
+eta=(k2:1/91,k3:3/91,k4:51/1183,k5:88/1365,k6:22/273)
+k=2;drifts=5;candidate_first_rows=9787617;surviving_first_rows=2537423;max_first=2340;frontier_rows=3;tail_used_at_frontier=3
+  FRONTIER;E=1,8,10,12,13,14;h=811/2548;r=38;L=152880;analytic_cap=6651;z1=2340;delta1=149/160524;suffix=TAIL:228/343049,TAIL:228/343049,TAIL:228/343049,TAIL:228/343049;lower=811/231868;upper=4030861/1123828524;gap=92921/1043555058
+  FRONTIER;E=1,10,11,12,13,14;h=32029/105105;r=38;L=840840;analytic_cap=6947;z1=2340;delta1=823/980980;suffix=TAIL:228/343049,TAIL:228/343049,TAIL:228/343049,TAIL:228/343049;lower=32029/9564555;upper=24020063/6867840980;gap=73919/496930980
+  FRONTIER;E=2,10,11,12,13,14;h=66071/210210;r=38;L=840840;analytic_cap=6735;z1=2340;delta1=7187/8828820;suffix=TAIL:228/343049,TAIL:228/343049,TAIL:228/343049,TAIL:228/343049;lower=66071/19129110;upper=214640347/61810568820;gap=38821/2087110116
+k=3;drifts=4;candidate_first_rows=2578195;surviving_first_rows=498150;max_first=432;frontier_rows=2;tail_used_at_frontier=0
+  FRONTIER;E=1,8,10,12,13,14;h=811/2548;r=38;L=152880;analytic_cap=1773;z1=432;delta1=6289/1926288;suffix=574:2057/731276,520:25/8918,492:5023/2193828;lower=2433/231868;upper=882233/78977808;gap=695705/1026711504
+  FRONTIER;E=2,8,10,12,13,14;h=1689/5096;r=38;L=152880;analytic_cap=1703;z1=432;delta1=5219/1926288;suffix=574:5007/1462552,520:459/178360,560:171/71344;lower=5067/463736;upper=274031/24680565;gap=453379/2566778760
+k=4;drifts=3;candidate_first_rows=1460123;surviving_first_rows=229638;max_first=260;frontier_rows=2;tail_used_at_frontier=0
+  FRONTIER;E=1,8,10,11,12,14;h=10273/32340;r=36;L=129360;analytic_cap=965;z1=260;delta1=7933/1471470;suffix=312:27259/5885880,364:11981/2942940;lower=174641/12752740;upper=2127/150920;gap=10181/25505480
+  FRONTIER;E=2,8,10,11,12,14;h=21041/64680;r=38;L=129360;analytic_cap=995;z1=260;delta1=6353/1177176;suffix=364:2059/452760,350:9371/2263800;lower=357697/25505480;upper=138161/9809800;gap=951/15940925
+k=5;drifts=2;candidate_first_rows=626787;surviving_first_rows=36301;max_first=130;frontier_rows=4;tail_used_at_frontier=0
+  FRONTIER;E=1,4,8,10,12,13;h=3/8;r=26;L=21840;analytic_cap=263;z1=130;delta1=109/10920;suffix=156:31/2184;lower=11/455;upper=11/455;gap=0/1
+  FRONTIER;E=1,6,8,10,11,14;h=19951/64680;r=32;L=129360;analytic_cap=394;z1=130;delta1=4913/452760;suffix=182:54797/5885880;lower=19951/1003275;upper=59333/2942940;gap=12151/44144100
+  FRONTIER;E=1,6,8,10,12,13;h=821/2184;r=26;L=21840;analytic_cap=262;z1=130;delta1=307/25480;suffix=156:187/15288;lower=9031/372645;upper=232/9555;gap=17/372645
+  FRONTIER;E=2,6,8,10,11,14;h=20831/64680;r=34;L=129360;analytic_cap=401;z1=130;delta1=13073/1177176;suffix=182:61837/5885880;lower=20831/1003275;upper=63601/2942940;gap=37451/44144100
+k=6;drifts=1;candidate_first_rows=224618;surviving_first_rows=1602;max_first=44;frontier_rows=16;tail_used_at_frontier=0
+  FRONTIER;E=1,2,8,10,12,14;h=1049/2940;r=34;L=11760;analytic_cap=144;z1=44;delta1=7361/226380;suffix=;lower=11539/401310;upper=7361/226380;gap=33221/8828820
+  FRONTIER;E=1,4,5,8,12,14;h=55/147;r=26;L=11760;analytic_cap=105;z1=44;delta1=7241/226380;suffix=;lower=1210/40131;upper=7241/226380;gap=16199/8828820
+  FRONTIER;E=1,4,7,8,10,12;h=713/1960;r=24;L=11760;analytic_cap=100;z1=44;delta1=4897/150920;suffix=;lower=7843/267540;upper=4897/150920;gap=18437/5885880
+  FRONTIER;E=1,4,8,9,12,14;h=1355/3528;r=28;L=7056;analytic_cap=110;z1=44;delta1=8461/271656;suffix=;lower=14905/481572;upper=8461/271656;gap=2069/10594584
+  FRONTIER;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;analytic_cap=144;z1=44;delta1=8831/226380;suffix=;lower=11539/401310;upper=8831/226380;gap=90551/8828820
+  FRONTIER;E=1,4,8,12,13,14;h=1923/5096;r=30;L=30576;analytic_cap=120;z1=44;delta1=12587/392392;suffix=;lower=7051/231868;upper=12587/392392;gap=8509/5101096
+  FRONTIER;E=1,7,8,10,12,14;h=359/980;r=28;L=11760;analytic_cap=116;z1=44;delta1=1193/37730;suffix=;lower=3949/133770;upper=1193/37730;gap=1544/735735
+  FRONTIER;E=1,8,10,12,13,14;h=811/2548;r=38;L=152880;analytic_cap=181;z1=44;delta1=491/17836;suffix=;lower=8921/347802;upper=491/17836;gap=1307/695604
+  FRONTIER;E=2,4,7,8,10,12;h=783/1960;r=24;L=11760;analytic_cap=91;z1=44;delta1=5107/150920;suffix=;lower=2871/89180;upper=5107/150920;gap=3229/1961960
+  FRONTIER;E=2,4,8,10,12,14;h=281/735;r=36;L=11760;analytic_cap=143;z1=44;delta1=4003/113190;suffix=;lower=6182/200655;upper=4003/113190;gap=20113/4414410
+  FRONTIER;E=2,7,8,10,12,14;h=733/1960;r=30;L=11760;analytic_cap=121;z1=44;delta1=4607/150920;suffix=;lower=8063/267540;upper=4607/150920;gap=2287/5885880
+  FRONTIER;E=4,7,8,9,10,12;h=1703/4410;r=24;L=35280;analytic_cap=94;z1=44;delta1=7193/226380;suffix=;lower=1441/46305;upper=7193/226380;gap=1333/2037420
+  FRONTIER;E=4,7,8,10,12,13;h=3691/9555;r=26;L=152880;analytic_cap=102;z1=44;delta1=23344/735735;suffix=;lower=81202/2608515;upper=23344/735735;gap=17194/28693665
+  FRONTIER;E=4,7,8,10,12,14;h=803/1960;r=30;L=11760;analytic_cap=111;z1=44;delta1=527/13720;suffix=;lower=8833/267540;upper=527/13720;gap=2887/535080
+  FRONTIER;E=4,8,9,10,12,14;h=2203/5880;r=36;L=35280;analytic_cap=146;z1=44;delta1=44131/1358280;suffix=;lower=24233/802620;upper=44131/1358280;gap=40577/17657640
+  FRONTIER;E=4,8,10,12,13,14;h=145/392;r=38;L=152880;analytic_cap=156;z1=44;delta1=13005/392392;suffix=;lower=1595/53508;upper=13005/392392;gap=3925/1177176
+frontier_digest=914736878bab6a8ce2add6fe93d3c467012418640ec608eabfc877882f350fe2
+all_exact_controls=PASS

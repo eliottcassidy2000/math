@@ -1,0 +1,9 @@
+LRC14 j6 H4 all recursive H2 census
+totals=(('compatible_covers', 0), ('direct_closed', 296), ('flags', 406), ('h2_closed', 110), ('h2_routes', 110), ('heavy_pairs', 192), ('leaf_checks', 3594), ('singleton_covers', 0))
+parent_partition=(((406, 296, 110, 110, 0, 192, 3594, 0, 0), 1),)
+minimum_H2_entry=(Fraction(179261, 8828820), (1, 2, 4, 6, 8, 10, 14), 1, (18, 48), Fraction(27173, 458640), Fraction(14407, 129360))
+maximum_H2_size=(8, (1, 2, 4, 6, 8, 10, 14), 1, (18, 48), 716)
+maximum_leaf_horizon=(65, (1, 2, 4, 6, 8, 10, 14), 1, (48, 140), (18, 26), Fraction(19, 8736))
+semantic_digest=565ba292f44ed5c4858d9a99253434887a6e9fdedb7d62a085fefab8e821b12b
+scope=all;parents=0:1;direct top-three or recursive H2+singleton leaf;parent binary-link sidecar retained
+all_exact_controls=PASS

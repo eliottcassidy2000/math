@@ -1,0 +1,16 @@
+ENDPOINT CONJUGACY / ELEVEN-SPINE / POSITIVE-COPY AUDIT
+status=FINITE-EXACT scratch; no typed chart-to-cofiber map
+nonwrap_conjugacy_rows=((1, 0, 6, Fraction(0, 1)), (2, 1, 0, Fraction(-7, 4826809)), (3, 2, 7, Fraction(-14, 4826809)), (4, 3, 1, Fraction(-21, 4826809)), (5, 4, 8, Fraction(-28, 4826809)), (6, 5, 2, Fraction(-35, 4826809)), (7, 6, 9, Fraction(-42, 4826809)), (8, 7, 3, Fraction(-49, 4826809)), (9, 8, 10, Fraction(-56, 4826809)), (10, 9, 4, Fraction(-63, 4826809)), (11, 10, 11, Fraction(-70, 4826809)), (12, 11, 5, Fraction(-77, 4826809)))
+wrap=(left=7/4826809,right=-84/4826809,defect=7/371293=91/R=7/13^5)
+exceptional_chain_half_step=1/742586;wrap_defect_in_half_steps=14;parity_shadow=preserved
+thm2809_source_face=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+nonwrap_transported_face=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+thm2818_clock_support={1: (3, 4, 5, 6, 7, 8, 9, 10, 11, 12), 2: (2, 3, 4, 5, 6, 7, 8, 9, 12), 3: (2, 3, 4, 5, 6, 7, 10, 11, 12)}
+thm2818_projection=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+projection_fibres=((2, 2), (3, 3), (4, 3), (5, 3), (6, 3), (7, 3), (8, 2), (9, 2), (10, 2), (11, 2), (12, 3));six_triple+five_double=28
+identity_coordinate_symmetric_difference=(1,12);shifted_shadow_match=t->t-1
+wrap_column_raw_live_dead=((241, 121, 120), (528, 265, 263), (506, 254, 252));aggregate=1275=640_live+635_zero
+wrap_holonomy_block_overlap={1: (213, 107, 106, 14, 14), 2: (486, 244, 242, 21, 21), 3: (464, 233, 231, 21, 21)};interblock_gap=50_half_steps;outgoing_flux_per_block=7_live+7_zero
+selected_cell_hostile=(clock,t)=(1,4):both copies fail native E3;plus fails native c2;both source carrier masks empty
+verdict=exact conjugacy on the twelve nonwrap labels and exact positive eleven-face transfer; cyclic conjugacy fails by odometer holonomy; cofiber support is the same eleven-spine only as a label shadow
+ALL EXACT CHECKS PASSED

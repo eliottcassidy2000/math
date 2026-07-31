@@ -1,0 +1,10 @@
+named controls = trefoil, figure-eight, 7_4
+7_4 form orbit = [11, 14] ; targets = [2, 13]
+explicit incomplete-generator SNF = [1, 1, 105] ; obstructed = False
+PD relabel/order checks = 400
+independent SNF checks = 1000
+cyclic presentations = 940
+noncyclic presentations = 60
+safe incomplete generator searches = 0
+FALSE-lane finite audit = PASS
+scope = algebra/implementation probes, not a replacement for the Gordon--Litherland and Montesinos--Lickorish theorems

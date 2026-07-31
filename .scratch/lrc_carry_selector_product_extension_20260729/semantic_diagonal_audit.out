@@ -1,0 +1,15 @@
+449-SHEET MACRO/SEMANTIC DIAGONAL AUDIT
+labels=(count=449,first=59306,last=311961,residue_mod169=156); q7_QAB_at_a+1=449
+Qempty_global_counts_q0_to_q12=(0, 66100, 66101, 66104, 66107, 66107, 65653, 0, 66108, 66106, 66106, 66103, 66100); Qempty_hits_on_449_q1_to_q5=(449, 449, 449, 449, 449)
+H=ker(e_XOR_slot7_XOR_slot8)=((0, 0, 0), (0, 1, 1), (1, 0, 1), (1, 1, 0))=graph_of_outer_parity; H_is_V4
+semantic_states={'Qempty': (0, 0, 0), 'QB': (1, 0, 1), 'QA': (1, 1, 0), 'QAB': (0, 1, 1)}; QB_XOR_QA=QAB; observed_QB_QA_QAB_is_H_minus_identity_and_is_neither_subgroup_nor_coset
+Qempty_chi_pairs_q1_to_q5=((0, 0), (0, 0), (1, 0), (0, 0), (0, 0)); stepped_q3=000_completes_H; zero_q3=100_lies_in_opposite_coset
+checkpoint_chi_by_origin={0: (0, 0), 3: (1, 0), 11: (0, 0), 7: (0, 0)}; defect_parity={0: 0, 3: 1, 11: 0, 7: 0}; diagonal_signed_amplitude={0: 0, 3: -1, 11: 0, 7: 0}
+seam_nonzero_indicator={0: 1, 3: 0, 11: 1, 7: 1}=desired_parity; q1_to_q5_nonzero_hostile=(0, 0, 0, 0, 0)_versus_desired=(1, 1, 0, 1, 1); H_minus_zero_is_P1(F2)_and_is_not_a_character_fibre
+all_256_semantic_Boolean_observables={'q3_distinguishing': 128, 'q11_or_q7_bad': 0}; origin_tilted_kernel_chi_XOR_o={0: (1, 0), 3: (0, 0), 11: (1, 0), 7: (1, 0)}
+selector_relation=diagonal_defect_parity_is_delta_q3; THM2882_positive_selector_parity_is_1_XOR_defect; diagonal_explains_q3_origin_asymmetry_but_is_origin-even_and_signed-cancelling_at_q11_and_q7
+edge_increments=(source_QB_to_q11_QA:(0, 1, 1),q11_QA_to_q7_QAB:(1, 0, 1)_with_a_to_a+1)
+C169xV4_connection=projection_H_to_(slot7,slot8)_is_an_isomorphism_and_free_independent_H_would_have_676_states; current_449-fold_object_is_a_complete_support_section_not_a_proved_physical_V4_action
+needed_sidecar=an_origin-coupled_affine_translate_or_external_origin_character_such_as_chi_XOR_o_at_q11/q7_plus_complete-packet_intertwiners; mere_H-membership_cannot_prevent_q11/q7_signed_cancellation
+scope=finite-exact_sheetwise_support_and_F2_character_anatomy; no_lawful_free_H_action_on_the_physical_current_or_LRC14_conclusion
+ALL EXACT CHECKS PASSED

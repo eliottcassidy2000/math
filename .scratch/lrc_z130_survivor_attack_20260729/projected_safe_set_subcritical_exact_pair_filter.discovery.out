@@ -1,0 +1,9 @@
+LRC14 k5 subcritical exact-pair projected-safe prefix filter
+analytic_first_rows=2290;projected_suffix_rows=618;suffix_roots=435
+finite_z2_candidates=7218110;exact_excess_admissible_pairs=194073;pair_roots=407;pair_(E,z1)_rows=590
+killed_by_projected_prefix=194073;surviving_pairs=0;surviving_roots=0
+maximum_cell_prefix=871
+minimum_certificate=(Fraction(1, 378105), ((2, 3, 4, 5, 6, 9), 22, 554, 2520, Fraction(13, 30), 16, Fraction(191, 6930), Fraction(13, 34650), 308, 5221, Fraction(4, 9695), Fraction(180, 277), 1))
+bank_digest=4827dabbc24f07bdf9e628e6b706fe66e7ed451c893cece993499a4cf13394c0
+survivor_digest=340938a1ca495881500b8a704aeb88c2e4fa5b976eb031fb675f23c3b028c33a
+all_exact_controls=PASS

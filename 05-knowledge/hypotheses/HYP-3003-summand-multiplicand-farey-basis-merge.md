@@ -6,6 +6,8 @@ source: codex-2026-06-24-S171
 script: 04-computation/summand_multiplicand_farey_basis_merge_codex_s171.py
 result: 05-knowledge/results/summand_multiplicand_farey_basis_merge_codex_s171.out
 related:
+  - THM-2984
+  - THM-2992
   - HYP-3000
   - HYP-2999
   - HYP-2998
@@ -39,6 +41,40 @@ axis.  HYP-3003 adds the missing two-graph normal form: `p+q` is not just a
 number, it is a summand-graph antidiagonal; `p*q` is not just a scalar product,
 it is a factor/Kpq incidence fiber.  The power lanes `q^p,p^q` remain stress
 tests unless the root packet and forgotten fibers are retained.
+
+## Proved affine fragment
+
+THM-2984 now realizes one precise part of this synthesis in the projected
+LRC `k=3` quotient.  A translated danger-band face is equivalent to an
+ordered positive composition
+
+```text
+(a_1,...,a_(s-1)),       a_i>=1,       sum a_i<=ceil(d/7)-1,
+```
+
+lying in the diagonal unit orbit of the adjacent-difference chain of the
+residue set.  Thus addition supplies the short composition simplex, while
+multiplication supplies one common unit acting on every coordinate.  For a
+prime modulus this becomes a projective difference-chain test; for triples,
+the six orderings form the anharmonic `S_3` orbit of a short positive ratio.
+The same abstract `S_3~=S_4/V_4` occurs in THM-2992's quartic matching
+quotient, but no LRC-to-quartic predicate map is known.
+
+The proved map and its loss boundary are:
+
+```text
+source:     translated residue set with one common primitive unit;
+map:        choose an ordering and take adjacent differences;
+target:     diagonal-unit orbit of a short positive composition;
+preserved:  affine face membership and all difference-gcd strata;
+destroyed:  absolute phase, ordering, and at composite d any illegal
+            coordinatewise normalization;
+sidecar:    cyclic gap profile or the full diagonal-unit transporter.
+```
+
+This fragment does not prove the broader Goldbach, prime, or operation-graph
+claims below; it identifies one setting in which the proposed addition versus
+multiplication split is exact.
 
 ## Fibonacci Row
 

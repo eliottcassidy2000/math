@@ -168,9 +168,23 @@ separate a directional turn from a baseline crossing -- is respected: sections
 2 and 5 claim only the directional/monotonicity statement, never a crossing
 below `R_1`.  Crossing remains THM-2991's.
 
-## 6. HYPOTHESIS: the two-number sign classifier
+## 6. RETRACTED: the two-number sign classifier is FALSE
 
-**HYP (unproved).**  For a positive real-rooted `N` with bounded jets at both
+> **RETRACTION (klein-S428, 2026-07-31).  The hypothesis stated in this section
+> is REFUTED by [THM-3004](THM-3004-circuit-sign-change-cluster-law-and-classifier-refutation.md).**
+> Witness: `N(n)=(n+1)^2(n+3)^2(n+8)`, degree `5`, all roots real and positive,
+> `R_1=256/215, R_2=1849/1600, R_3=10000/8643, R_4=4489/4000` -- down, up, down,
+> so the circuit has **two** sign changes while `C(mu)=+0.1414` and
+> `C(mu*)=+0.4129` are both positive.  The correct law is a **cluster count**:
+> with `m` well-separated root clusters the circuit has up to `2m-3` sign
+> changes, attained.  The classifier is true exactly for `m<=2`.
+> The `42/42` census below is not evidence: it held cluster **sizes** equal in
+> every three-cluster row, which is the axis the failure lives on (MISTAKE-337).
+> Sections 1--5 and 7--9 of this file are unaffected; the proved necessary
+> condition `C(mu)>=0>=C(mu*)` still stands, but it is **not** sufficient.
+
+**HYP (REFUTED -- see the retraction above; retained for the correction
+lineage).**  For a positive real-rooted `N` with bounded jets at both
 ends, the pair `(sign C(mu), sign C(mu*))` determines the global shape:
 
     C(mu)>0>C(mu*)  =>  R strictly increasing,

@@ -1,0 +1,95 @@
+THE UNKNOTTING NUMBER OF 11n102 IS 2
+
+arXiv:2606.12431v1 [math.GT] 15 May 2026
+
+TYE LIDMAN
+
+We prove that the unknotting number of the knot 11n102 is 2. It is known, see e.g. KnotInfo [LM26],
+that the unknotting number is 1 or 2, so we will assume for a contradiction it is 1. By the Montesinos
+trick [Mon73], the branched double cover of 11n102 is half-integral surgery on some knot J in S 3 . Up
+to mirroring, the knot 11n102 is the determinant 3 Montesinos knot M (−2/3, 1/3, 2/7) [LM26]; with this
+orientation, the branched double cover Y is the Seifert fibered space S 2 (0; −2/3, 1/3, 2/7) [Mon73], which
+has H1 = Z/3. We can alternatively write this manifold as S 2 (1; 1/3, 1/3, 2/7), where our conventions mean
+that in the keychain link surgery diagram, the central circle has surgery coefficient 1 and the three other
+components have surgery coefficients 3, 3, 7/2. From this, it is easy to check that the associated plumbing
+bounding Y is positive-definite. Consequently, the Heegaard Floer homology of Y is readily computed using
+the algorithms of Némethi [N0́5] or Ozsváth-Szabó [OS03b]: there are two spinc structures with HFred = 0
+and d = 1/6, while the third has HFred = F2 and d = −1/2. In principle, Y could be either +3/2-surgery or
+−3/2-surgery on J. The mod 2 d-invariants of Y agree with those of +3/2-surgery on the unknot and not
+−3/2 surgery [OS03a, Proposition 4.8], so the Ni-Wu formula [NW15, Proposition 1.6] implies that Y must
+be +3/2 surgery on J. (The sign of the surgery coefficient can also be deduced by computing the linking
+form of Y .) In fact, the d-invariants of Y agree with L(3, 2), so in Ni-Wu’s notation we have V0 (J) = 0 and
+hence Vs (J) = H−s (J) = 0 for all s ≥ 0 [NW15, Theorem 2.5, Lemma 2.7]. Because the surgery is positive,
+we have from [NW15] and Gainullin’s work [Gai17, Corollary 14, Proposition 15] that HFred (Y, si ) ∼
+= Ared
+i,3/2 ;
+c
+here, the notation means there is an ordering of the three
+spin
+structures
+on
+Y
+,
+denoted
+s
+,
+s
+,
+s
+,
+and
+a
+0
+1
+2
+L
+for
+each
+i.
+(Only
+finitely
+many
+Q
+are
+sequence of vector spaces Qs for s ∈ Z so that Ared
+=
+Q
+i+3k
+s
+k∈Z ⌊
+⌋
+i,3/2
+2
+
+i+1+3k
+non-zero.) For any i and k, note that ⌊ i+3k
+⌋ or ⌊ i−1+3k
+⌋. Therefore, each Qs shows
+2 ⌋ equals either ⌊
+2
+2
+red
+up in two of the three Ai,3/2 . This means it is impossible for exactly one of the HFred (Y, si ) to be non-zero.
+This gives the desired contradiction.
+
+References
+[Gai17] Fyodor Gainullin. The mapping cone formula in Heegaard Floer homology and Dehn surgery on knots in S 3 . Algebr.
+Geom. Topol., 17(4):1917–1951, 2017.
+[LM26] Charles Livingston and Allison H. Moore. Knotinfo: Table of knot invariants. knotinfo.org, May 2026.
+[Mon73] José M. Montesinos. Seifert manifolds that are ramified two-sheeted cyclic coverings. Bol. Soc. Mat. Mexicana (2),
+18:1–32, 1973.
+[N0́5]
+András Némethi. On the Ozsváth-Szabó invariant of negative definite plumbed 3-manifolds. Geom. Topol., 9:991–1042,
+2005.
+[NW15] Yi Ni and Zhongtao Wu. Cosmetic surgeries on knots in S 3 . J. Reine Angew. Math., 706:1–17, 2015.
+[OS03a] Peter Ozsváth and Zoltán Szabó. Absolutely graded Floer homologies and intersection forms for four-manifolds with
+boundary. Adv. Math., 173(2):179–261, 2003.
+[OS03b] Peter Ozsváth and Zoltán Szabó. On the Floer homology of plumbed three-manifolds. Geom. Topol., 7:185–224, 2003.
+Department of Mathematics, North Carolina State University, Raleigh, NC 27607
+Email address: tlid@math.ncsu.edu
+
+TL was partially supported by NSF grant DMS-2506277 and a Simons Travel Award. He thanks Chuck Livingston and
+Allison Moore for their immensely valuable work on KnotInfo. No AI was harmed during the writing of this note.
+1
+
+

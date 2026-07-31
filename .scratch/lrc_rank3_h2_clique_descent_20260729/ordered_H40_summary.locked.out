@@ -1,0 +1,12 @@
+LRC14 j6 K>=20 strongest-r3 H2<=40 ordered Hunter closure
+branches=62;closed=62;survivors=0;vertices=1662;edges=12090;initial_K4=93754
+ordered_partition=star_steps:1454,star_K4:81429,paid_steps:208,paid_K4:12325
+paid_closure=tree:12286,tree_hard:39,literal:39,empty:0,witnesses:0
+singleton=scans:295,controls:67;star_only_branches:29
+counts=(62, 62, 0, 1662, 12090, 0, 93754, 1454, 81429, 208, 12325, 12286, 39, 0, 39, 0, 0, 295, 67, 29)
+canonical_ledger_sha256=2088b2016179d14e1b5e76d6c9eddfe88e8352c943f49970bfb201b46583cd47
+mode=LOCKED
+orientation=ordered proof-branch gauge only;heavy graph and overlap weights symmetric;not tournament
+controls=source hashes;ordered K4 partition;Kruskal-vs-16-trees;literal sequential-vs-simultaneous;singleton containment-vs-literal-vs-scalar
+scope=exact K>=20 strongest-r3 H2<=40 slice;not LRC14
+all_exact_controls=PASS

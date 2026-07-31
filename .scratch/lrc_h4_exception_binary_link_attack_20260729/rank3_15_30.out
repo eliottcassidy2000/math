@@ -1,0 +1,10 @@
+LRC14 j6 pair-cap-exception H4 child rank3/link census
+counts=(('closed_union', 3899), ('finite_link', 4703), ('open', 842), ('open_finite_link', 831), ('open_nonfinite_link', 11), ('pairs', 4741), ('rank3_scanned', 3373472), ('rank_pair_closed', 0), ('scalar_closed', 3899))
+parent_partition=(((91, 81, 10, 90, 10, 0), 1), ((136, 89, 47, 135, 46, 1), 1), ((153, 133, 20, 152, 20, 0), 1), ((210, 198, 12, 209, 12, 0), 1), ((231, 184, 47, 228, 47, 0), 1), ((231, 200, 31, 231, 31, 0), 1), ((253, 213, 40, 252, 40, 0), 1), ((276, 264, 12, 274, 12, 0), 1), ((300, 259, 41, 299, 41, 0), 1), ((325, 226, 99, 323, 98, 1), 1), ((378, 309, 69, 376, 69, 0), 1), ((406, 385, 21, 405, 21, 0), 1), ((435, 286, 149, 428, 147, 2), 1), ((496, 435, 61, 494, 60, 1), 1), ((820, 637, 183, 807, 177, 6), 1))
+largest_link_cutoff=(58544, (2, 3, 4, 6, 8, 10, 14), 1, (18, 48), None)
+largest_rank3_tail=(2170, (2, 3, 4, 8, 10, 12, 14), 1, (246, 364))
+minimum_rank_pair_margin=(Fraction(-79561, 921690), (2, 3, 4, 10, 12, 13, 14), 1, (22, 18), ((Fraction(949, 35280), 17), (Fraction(120209, 5045040), 26), (Fraction(2038373, 95855760), 19)), Fraction(244589, 1681680))
+minimum_scalar_margin=(Fraction(-53099, 1261260), (2, 3, 4, 6, 8, 10, 14), 1, (26, 16), ((Fraction(33461, 504504), 18), (Fraction(61, 1001), 36), (Fraction(3625, 84084), 72)))
+semantic_digest=6fda70103f5a3c7c6a1d5e94a13e546dc103aab7936378cd570f4e7521066eba
+mode=RANK3;base_horizon=600;parent_slice=15:30;failed certificates are not cover witnesses
+all_exact_controls=PASS

@@ -1,0 +1,35 @@
+/Users/e/Documents/GitHub/math/.scratch/signed_ray_gate_referee/LeanNewClaims.lean:24:6: error: Type mismatch: After simplification, term
+  abs_sub_le (x - ↑(round x)) 0 (y - ↑(round y))
+has type
+  |x - ↑(round x) - (y - ↑(round y))| ≤ |x - ↑(round x)| + |↑(round y) - y|
+but is expected to have type
+  |x - ↑(round x) - (y - ↑(round y))| ≤ |x - ↑(round x)| + |y - ↑(round y)|
+/Users/e/Documents/GitHub/math/.scratch/signed_ray_gate_referee/LeanNewClaims.lean:139:33: error: Application type mismatch: The argument
+  x.isLt
+has type
+  ↑x < d
+but is expected to have type
+  Fin.valEmbedding x ∈ Finset.range d
+in the application
+  And.intro x.isLt
+/Users/e/Documents/GitHub/math/.scratch/signed_ray_gate_referee/LeanNewClaims.lean:142:25: error: Application type mismatch: The argument
+  hrd
+has type
+  r ∈ Finset.range d
+but is expected to have type
+  r < d
+in the application
+  ⟨r, hrd⟩
+/Users/e/Documents/GitHub/math/.scratch/signed_ray_gate_referee/LeanNewClaims.lean:166:13: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  e ((Equiv.symm e) ?x)
+in the target expression
+  e ((Equiv.symm e).toEmbedding y) ∈ B
+
+α : Type u_1
+inst† : DecidableEq α
+B : Finset α
+e : Equiv.Perm α
+x y : α
+hy : y ∈ B
+hxy : (Equiv.symm e).toEmbedding y = x
+⊢ e ((Equiv.symm e).toEmbedding y) ∈ B

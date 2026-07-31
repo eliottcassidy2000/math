@@ -1,0 +1,18 @@
+THM-2777 MARKED D3 DETERMINANT-TOURNAMENT SCOUT
+tie_count=0 weight_spectrum={1:9,2:3,3:3}
+weight3=A2_triangle weight2=three_opposition_pairs
+tournament_scores=(1,2,2,3,3,4)
+cyclic_triangles=6 strongly_connected=True Hamiltonian_paths=23
+marked_tournament=rigid_chiral
+A2_chambers=6 distinct_tournaments=6 one_switching_class
+W(D3)_covariance=even_preserves_odd_globally_reverses
+marked_preserved_character=quartic_sign_via_global_reversal
+chamber_free_weighted_switching_class=self_converse
+X_line_cycle=(2,2,1,1) face110_line_cycle=(2,2,1,1)
+Y_line_cycle=(3,3)
+orientation_character_blindness=000_and_110_both_determinant_plus
+labelled_line_action_distinguishes_identity_from_face110
+VERDICT=NONCOSMETIC_SIGN_ONLY_WITH_MARKED_CHAMBER
+CHAMBER_FREE_SURVIVOR=WEIGHTED_A2_OPPOSITION_INCIDENCE
+NO_NEW_AFFINE_KUMMER_OR_LRC_COORDINATE
+FAILED CHECKS: NONE

@@ -1,0 +1,37 @@
+sanity suite:
+  [PASS] trefoil det=3 (got 3)
+  [PASS] trefoil |sigma|=2 (got -2)
+  [PASS] trefoil sigma=-2 (Knot Atlas 3_1 convention) 
+  [PASS] trefoil verdict TRUE_CERTIFIED (got TRUE_CERTIFIED)
+  [PASS] mirror trefoil sigma=+2 (got +2)
+  [PASS] fig8 det=5 (got 5)
+  [PASS] fig8 sigma=0 (got +0)
+  [PASS] fig8 verdict TRUE_CERTIFIED (got TRUE_CERTIFIED)
+  [PASS] 7_4 det=15 (got 15)
+  [PASS] 7_4 |sigma|=2 (got +2)
+  [PASS] 7_4 Lickorish gate 
+  [PASS] 7_4 linking form obstructed (linking form q/d = 11/15; generator self-linkings {q*t^2 mod d} do NOT contain +-2)
+  [PASS] 7_4 verdict FALSE_CERTIFIED (got FALSE_CERTIFIED)
+example (11-crossing):
+crossings: 11   writhe: -3
+det(K)  = 43
+sigma(K)= -2   (Goeritz + Gordon-Litherland, dual-coloring cross-checked)
+Alexander polynomial: NOT COMPUTED (Seifert-matrix route descoped this pass)
+obstructions (u >= 2):
+  (none fired)
+crossing-change search (11 sites tried):
+  #1: screened out (det=31 != 1)
+  #2: screened out (det=59 != 1)
+  #3: screened out (det=3 != 1)
+  #4: screened out (det=3 != 1)
+  #5: screened out (det=53 != 1)
+  #6: screened out (det=35 != 1)
+  #7: screened out (det=35 != 1)
+  #8: screened out (det=9 != 1)
+  #9: screened out (det=7 != 1)
+  #10: screened out (det=7 != 1)
+  #11: screened out (det=9 != 1)
+VERDICT: UNKNOWN
+note: linking form: linking form q/d = 6/43; generator self-linkings {q*t^2 mod d} DO contain +-2
+scope: Scope: UNKNOWN is possible; deciding u(K)=1 in general is research-level. TRUE needs the unknotting change to be visible in THIS diagram and the changed diagram to simplify monotonically under face-local R1/R2 (no R3 / no crossing-increasing exploration). FALSE uses Murasugi |sigma|<=2u, cyclicity of H1 of the double branched cover, and the Lickorish linking-form test (gated by a 7_4 self-test). Deeper tools (Ozsvath-Szabo d-invariants, Alexander/Seifert route) are not implemented.
+suite failures: 0

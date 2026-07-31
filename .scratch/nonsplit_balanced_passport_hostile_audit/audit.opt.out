@@ -1,0 +1,15 @@
+BALANCED PASSPORT INDEPENDENT HOSTILE AUDIT
+converse_without_balance=REFUTED_BY_S=E=1,T=x,p=1,F=4/x
+required_converse_repair=retain_sum_p=s+2e_and_nonzero_infinity
+balanced_symbolic_packets=31
+moment_indexing=m_0_through_m_(r-1)_zero;m_r=C
+square_defect=degree_rplus2;LC=vC/r
+chord_monodromy_controls=25
+N5_duplicate_witness=(12)(34)_vs_(14)(23);passport=(4,1);orders=20
+AK_identity=AK=VG=lambda*M
+response_log_derivative=2kappa/(AK)=C/M
+squared_gate=V*T*K^2=(AK)^2=lambda^2*M^2
+THM2245_scope=retrospective_degree14_control_only
+live_scope=derive_degree26_K_then_test_AK_before_spectral_normalization
+assert_nodes=0
+verdict=REPAIR_CONVERSE_QUANTIFIER_AND_SCOPE;CORE_ALGEBRA_PASS

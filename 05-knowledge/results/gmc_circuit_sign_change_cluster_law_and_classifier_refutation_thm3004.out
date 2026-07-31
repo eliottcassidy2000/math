@@ -1,0 +1,53 @@
+==========================================================================
+1. MINIMAL WITNESS: exhaustive search for >=2 circuit sign changes
+==========================================================================
+  smallest degree with >=2 sign changes in this pool: d = 5
+  N(n) = (n+1)^2 (n+3)^2 (n+8)^1
+    R_1 =          256/215 = 1.190697674419
+    R_2 =        1849/1600 = 1.155625000000
+    R_3 =       10000/8643 = 1.157005669328
+    R_4 =        4489/4000 = 1.122250000000
+  sign(c_2..c_4) = -+-   sign changes = 2
+  curvature C(mu)  = +0.14135742
+  curvature C(mu*) = +0.41294497
+  Both end curvatures positive => the classifier PREDICTS 'interior maximum',
+  i.e. exactly one sign change.  The truth is two.  CLASSIFIER REFUTED.
+  All roots are real and positive: PF-infinity, Hurwitz, strictly ULC.
+  VERDICT 1: REFUTED (witness verified, Newton R_k>1 throughout)
+
+==========================================================================
+2. CLUSTER LAW: max sign changes with m well-separated clusters = 2m-3
+==========================================================================
+    m   best sizes found      max sign changes    predicted 2m-3
+    1   None                         0                 0         OK
+    2   [3, 2]                       1                 1         OK
+    3   [4, 5, 2]                    3                 3         OK
+    4   [5, 4, 5, 3]                 5                 5         OK
+    5   [5, 2, 3, 4, 4]              7                 7         OK
+    6   [2, 3, 4, 4, 3, 4]           9                 9         OK
+  mechanism: c_k ~ -Delta^2(sorted log-root step function); a step function
+  with m-1 kinks has 2(m-1) alternating second-difference spikes, and the
+  boundary trims exactly one, leaving 2m-3.
+  VERDICT 2: CLUSTER LAW CONFIRMED AND ATTAINED
+
+==========================================================================
+3. SURVIVING POSITIVE SCOPE: the classifier holds for m<=2
+==========================================================================
+  exhaustive two-cluster: 936 configurations, d=4..16,
+  ratios {1/3, 2, 3, 5, 7, 10, 100, 10^4}, every multiplicity split
+  max sign changes = 1;  violations = 0
+  VERDICT 3: CLASSIFIER HOLDS FOR m<=2
+
+==========================================================================
+4. WHY THE 42/42 CENSUS MISSED IT (MISTAKE-337)
+==========================================================================
+  ALL three-cluster configs, d=6..12: 51/2100 fail = 2.43%
+  EQUAL-SIZE three-cluster configs only: 0/30 fail = 0.00%
+  The original census varied the ROOT RATIOS and the number of clusters but
+  held the cluster SIZES equal (d//3 each).  That single un-varied axis is
+  exactly the one the failure lives on.  A census that does not vary an axis
+  is not evidence about that axis, however large its sample.
+
+==========================================================================
+SUMMARY  refutation=True  cluster-law=True  m<=2 scope=True  census-audit=True
+==========================================================================
