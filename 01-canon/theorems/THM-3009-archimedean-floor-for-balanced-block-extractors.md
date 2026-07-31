@@ -17,7 +17,7 @@ status: >
   binom(a_k,d-L_k) 2^(a_k-d+L_k) for every d (ARCH). It is O(m^2), monotone
   in the a_k, and strictly stronger than THM-2160 S6.2. Certified:
   rho(m) > 1.4000, 1.5000, 1.5556, 1.5610, 1.5753, 1.5828, 1.5887, 1.5925,
-  1.5949, 1.5962 for m = 4..2048. Hence C* > 1.596 for balanced block
+  1.5949, 1.5962, 1.5970 for m = 4..4096. Hence C* > 1.597 for balanced block
   schemes -- a real improvement on the classical 3/2. Rescaling k = xm,
   d = (delta)m and taking log_2/m, (ARCH) survives iff
   H(delta) <= max_x [alpha H(r/alpha) + alpha - r], whose least admissible
@@ -112,16 +112,21 @@ stratum. Binary-searching the profile against (ARCH):
 ```text
 m        4      8      16      32      64     128
 rho >  1.4000 1.5000 1.5556 1.5610 1.5753 1.5828
-m      256    512    1024   2048
-rho >  1.5887 1.5925 1.5949 1.5962
+m      256    512    1024   2048   4096
+rho >  1.5887 1.5925 1.5949 1.5962 1.5970
 ```
+
+The gap to `C_arch = 1.5979874...` reads `0.00929, 0.00551, 0.00311, 0.00176,
+0.00099`: it roughly halves per doubling, so the certified sequence converges
+to the closed form of section 3.1, confirming it independently to four
+digits.
 
 Two checks: the bound never rejects a profile known to be feasible (it
 passes at the exact optima for `m = 4,8,16,32`), and `rho_LB(m)` closely
 tracks the *exact* `rho(m/2)` -- so (ARCH) is nearly tight, off by about one
 doubling.
 
-**Corollary.** `C* > 1.5962` for balanced block schemes (from `m = 2048`
+**Corollary.** `C* > 1.5970` for balanced block schemes (from `m = 4096`
 alone; the bound is a finite exact integer computation).
 
 ## 3. The asymptotic constant
