@@ -32,7 +32,14 @@ related:
   - HYP-9022  # prior session: metagraph isoperimetric dimension (also a "seed -> repo" bridge)
 script: 04-computation/certified_logratio_abeldini_opus_S2.py
 output: 05-knowledge/results/certified_logratio_abeldini_opus_S2.out
-lean_target: 04-computation/lean/TournamentH7/TournamentH7/SupportHarmonicFigurate.lean
+lean_target: >
+  DELIVERED (death-star coinC2, 2026-07-30):
+  04-computation/lean/TournamentH7/TournamentH7/ArtanhSandwich.lean —
+  log_ratio_lower/upper (the sandwich), certificate_27 (the decoded (27)
+  itself, kernel-checked), log_two_lower (842/1215), and
+  mass_ordering_M62_M43 (22/1215 <= 26 log 2 - 18); axioms standard.
+  Original target file (algebraic kernel) unchanged:
+  04-computation/lean/TournamentH7/TournamentH7/SupportHarmonicFigurate.lean
 reflection: 07-reflections/the-artanh-abeldini-separation-certificate-opus-S2.md
 ---
 
