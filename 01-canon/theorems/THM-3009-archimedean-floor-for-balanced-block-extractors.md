@@ -290,3 +290,106 @@ problem is a **middle-weighted** decomposition of `eps u^(m-1)` into
 `(1+u)^(a_k)`; note `u^c (1+u)^(a-c)` is always legal, since
 `binom(a-c, i-c) <= binom(a,i)`, so such blocks are the natural atoms.
 Referee: `04-computation/amm12592_division_ladder_construction_attempt.py`.
+
+
+## 8. The Catalan substitution, and what the true atoms are
+
+### 8.1 The substitution kills the L_k
+
+Put `w = u/(1+u)`, so `1+u = 1/(1-w)`, `u = w/(1-w)` -- the Catalan/Riordan
+substitution. Write `E_k(u) = (1+u)^(a_k) Lam_k(w)`. Since
+`a_k + L_k = m-1-k` identically,
+
+```text
+E_k(u)(1+u)^(L_k) = (1+u)^(m-1-k) Lam_k(w) = Lam_k(w)(1-w)^(-(m-1-k)),
+u^(m-1) = w^(m-1) (1-w)^(-(m-1)),
+```
+
+so multiplying the system by `(1-w)^(m-1)` gives
+
+```text
+sum_(k=0)^(m-1) Lam_k(w) (1-w)^k = eps w^(m-1),   deg Lam_k <= a_k.   (W)
+```
+
+**The `L_k` disappear entirely.** (W) is a `(1-w)`-adic digit expansion of
+`eps w^(m-1)` with per-digit degree bounds -- a much cleaner object than the
+`u`-side system.
+
+### 8.2 Why the golden ratio was inevitable here
+
+The Catalan generating function `C(w) = (1 - sqrt(1-4w))/(2w)` satisfies
+
+```text
+C(-1)              = (1-sqrt5)/(-2) = (sqrt5-1)/2 = 1/phi = delta*,
+sqrt(1-4w)|_(w=-1) = sqrt5                        = 1/p*.
+```
+
+Both threshold constants of section 3.1 are Catalan-GF data at `w = -1`,
+which is the natural evaluation point of (W) (`1-w = 2` there). The user's
+sequences `C(2n,n-1) = 1,4,15,56,210`, `C(2n+1,n-1) = 1,5,21,84,330`,
+Catalan `1,2,5,14,42,132` and the central binomials are the Catalan-triangle
+entries that (W) manufactures.
+
+### 8.3 The exact invariant: Lam_k(1) = +-1
+
+Evaluating (W) and its derivatives at `w = 1` gives `Lam_0(1) = eps` and the
+carry recursion `R_(k+1)(1) = Lam'_k(1) - R'_k(1)`, with `Lam_k(1) = R_k(1)`
+forced. Moreover the box constraint at the top coefficient `i = a_k` reads
+exactly `|Lam_k(1)| <= 1`. Extracting `Lam_k` from the verified optima
+confirms this with no exceptions:
+
+```text
+m = 8 :  Lam_k(1) = +1,-1,+1,-1,-1,-1,+1,+1
+m = 16:  Lam_k(1) = -1,+1,... all +-1 for every k
+```
+
+The `i = a_k - 1` constraint then reproduces `a_0 >= (m-1)/2`, i.e.
+THM-2160 S6.2, for a third independent time.
+
+### 8.4 The unit-atom construction, and why it is not enough
+
+If the positive coefficients of `Lam_k` sum to at most `1` and the negative
+ones to at least `-1`, then `|[u^i]E_k| <= binom(a_k,i)` automatically
+(because `0 <= binom(a_k-c, i-c) <= binom(a_k,i)`). Over the integers those
+are exactly the **middle-weighted unit atoms**
+
+```text
+Lam_k  in  { 0,  +- w^c,  w^c - w^(c') },    c, c' <= a_k,
+```
+
+and (W) becomes a carry ladder whose digit is the exponent `c`
+(`Lam'_k(1) = sigma c`, or `c - c'`). This is implemented and VERIFIED, but
+the one-sided digit range (when `Lam_k(1) = +-1` only `Lam'_k(1)` of one sign
+is reachable) makes the greedy myopic: it attains `C = 7/4` at `m = 4`,
+`15/8` at `m = 8` and only `C = 2` from `m = 16` on.
+
+### 8.5 What the true atoms actually are
+
+Extracting `Lam_k` from the exact optima shows the unit-atom family is far
+too narrow -- the real solutions use massive cancellation (`m = 16, k = 4`
+has positive part `5126` and negative part `5127`). Their shape is instead
+
+```text
+Lam_4 = -1 + 20 w(1-w)^9 + (small corrections),
+```
+
+and since `(1+u)^a * w(1-w)^(a-1) = u` identically, this is
+
+```text
+E_k = sigma_k (1+u)^(a_k) + (low-degree monomial corrections),
+```
+
+i.e. **the full binomial -- the maximally middle-weighted object -- plus
+adjustments in the low-order coefficients, where the box `binom(a_k,i)` still
+has room.** The legality condition is just
+`|sigma_k binom(a_k,i) + d_{k,i}| <= binom(a_k,i)`.
+
+So the correct atom family for a matching construction is
+`sigma(1+u)^a + D(u)` with `D` low-degree, NOT the unit atoms
+`u^c(1+u)^(a-c)`; the latter are legal but cannot carry the required mass.
+Building the ladder over this larger family is the remaining step.
+
+Referees: `04-computation/amm12592_catalan_w_construction.py` (the reduction
+(W), the unit-atom ladder, and its verification) and
+`04-computation/amm12592_extract_lambda_atoms.py` (the `Lam_k` of the exact
+optima).
