@@ -302,233 +302,123 @@ python3 04-computation/amm12592_archimedean_threshold_asymptotic.py
 QED for reductions A and B, for the finite-`m` bounds, and -- since
 section 3.1 -- for the closed form of the asymptotic constant.
 
-## 10. Exactly what is still missing for `C* >= C_arch`
+## 10. The two remaining gaps, closed
 
-Note first that **no asymptotics are needed for a rigorous bound**: (ARCH) at
-any single `m` is a finite exact-integer computation, and `m = 4096` already
-certifies `C* > 1.597`. What the limit statement `C* >= C_arch` still needs is
-only:
+### 10.1 Reparametrisation: eliminate x in favour of ell
 
-1. **The scaling limit.** `log_2 binom(m-1, delta m)/m -> H(delta)` and
-   `log_2[binom(a,r) 2^(a-r)]/m -> alpha H(r/alpha) + (alpha - r)` uniformly
-   on compacts -- routine Stirling, but it must be stated with the error term,
-   because the sum over `k` has `O(m)` terms and the per-term polynomial
-   factors must not accumulate.
-2. **Interiority.** That the binding `delta` is interior (not at `0` or `1`)
-   and the inner `max_x` is attained in the interior of the admissible range,
-   so that the three stationarity conditions of section 3.1 are the correct
-   optimality system rather than one branch of a boundary case. The inner
-   argmax is known to slide from `x = kappa` to `x = 0` as `delta` grows
-   (section 3.2), so this needs a genuine argument, not an appeal to
-   smoothness.
-
-Neither is deep, but neither is written. Everything else in the chain --
-(ARCH) itself, the reduction to (CLO), and the evaluation
-`(CLO) => delta^2 = 1-delta => C_arch = log_5(5 phi^2)` -- is now proved.
-
-
-## 7. The construction: what fails, and why (recorded negative)
-
-The natural candidate is a **division ladder**. Because `L_0 > L_1 > ...`
-along the constrained strata and `L_k = 0` afterwards, one can set
-`R := eps u^(m-1)` and repeatedly take `E_k :=` quotient of `R` by
-`(1+u)^(L_k)`, `R :=` remainder. This terminates exactly and the quotient
-degrees fit (`deg E_k <= a_k` automatically). Two things go wrong.
-
-1. **Wrong parity class.** The raw ladder returns `E_0 = eps u^(m-1)` and
-   `E_k = 0` otherwise, which violates `[u^i]E_k = binom(a_k,i) (mod 2)`.
-   This is repairable: by reduction A the canonical parity representative
-   `F_k(u) = sum_{i subset a_k} u^i` satisfies
-   `sum_k F_k(u)(1+u)^(L_k) = u^(m-1) (mod 2)`, so
-   `W := [eps u^(m-1) - sum_k F_k(1+u)^(L_k)]/2` has integer coefficients and
-   one can run the ladder on `W` and set `e = f + 2g`.
-
-2. **It violates the boxes at the corners, catastrophically.** The repaired
-   ladder is exact and parity-correct but overshoots at `i = 0` (and `i = 1`),
-   where the box `binom(a_k,0) = 1` is tightest. Measured overshoot factor
-   at the first violated slot:
-
-   ```text
-   m         4      8       16          32              64            128
-   C=8/5    3      21      3087        1.4e8           1.5e17        6.2e35
-   C=2      3       7        15          31              63             127
-   ```
-
-   It succeeds only at `m = 4` (`C = 7/4, 15/8`).
-
-The failure is structural and diagnostic: dividing from the top pushes mass
-into the LOW-order coefficients, exactly where the binomial box is smallest,
-whereas the boxes are enormous in the middle (`i ~ a_k/2`). Any successful
-construction must keep the deviation mass near the middle of each stratum --
-which is what the exact optima found for `m <= 32` do. So the outstanding
-problem is a **middle-weighted** decomposition of `eps u^(m-1)` into
-`sum_k E_k(u)(1+u)^(L_k)` with `E_k` dominated coefficientwise by
-`(1+u)^(a_k)`; note `u^c (1+u)^(a-c)` is always legal, since
-`binom(a-c, i-c) <= binom(a,i)`, so such blocks are the natural atoms.
-Referee: `04-computation/amm12592_division_ladder_construction_attempt.py`.
-
-
-## 8. The Catalan substitution, and what the true atoms are
-
-### 8.1 The substitution kills the L_k
-
-Put `w = u/(1+u)`, so `1+u = 1/(1-w)`, `u = w/(1-w)` -- the Catalan/Riordan
-substitution. Write `E_k(u) = (1+u)^(a_k) Lam_k(w)`. Since
-`a_k + L_k = m-1-k` identically,
+Both gaps become tractable after replacing the stratum coordinate `x` by
+`ell = L_k/m`. On the constrained branch `ell = (1-gamma) - x(1+gamma)`, so
 
 ```text
-E_k(u)(1+u)^(L_k) = (1+u)^(m-1-k) Lam_k(w) = Lam_k(w)(1-w)^(-(m-1-k)),
-u^(m-1) = w^(m-1) (1-w)^(-(m-1)),
+alpha = gamma(2-ell)/(1+gamma),   ell in [0, 1-gamma],
 ```
 
-so multiplying the system by `(1-w)^(m-1)` gives
+and the free branch is `ell = 0`, `alpha in [0, 2gamma/(1+gamma)]`; the two
+meet at the junction `ell = 0`, `alpha = 2gamma/(1+gamma)`. With
+`r = delta - ell` and `p = r/alpha`, `g = alpha H(p) + alpha - r`.
+
+### 10.2 Interiority
+
+**(I1) The free branch is dominated.** `dg/dalpha = H(p) - p H'(p) + 1
+= 1 - log_2(1-p) > 0` for `p in [0,1)`. So on the free branch `g` increases
+with `alpha` and is maximal at the junction. The max over `x` is therefore a
+max over `ell in [0, min(delta, 1-gamma)]`.
+
+**(I2) The `r = 0` endpoint is never optimal.** On the constrained branch
 
 ```text
-sum_(k=0)^(m-1) Lam_k(w) (1-w)^k = eps w^(m-1),   deg Lam_k <= a_k.   (W)
+dg/dell = -(gamma/(1+gamma))(1 - log_2(1-p)) - H'(p) + 1,
 ```
 
-**The `L_k` disappear entirely.** (W) is a `(1-w)`-adic digit expansion of
-`eps w^(m-1)` with per-digit degree bounds -- a much cleaner object than the
-`u`-side system.
+and as `ell -> delta` we have `p -> 0`, `H'(p) -> +infinity`, so
+`dg/dell -> -infinity`.
 
-### 8.2 Why the golden ratio was inevitable here
-
-The Catalan generating function `C(w) = (1 - sqrt(1-4w))/(2w)` satisfies
+**(I3) Hence the maximiser is the junction or interior; at the threshold it
+is interior.** With `alpha* = H(delta*)/(H(p*)+1-p*)` and
+`ell* = delta* - p* alpha*`,
 
 ```text
-C(-1)              = (1-sqrt5)/(-2) = (sqrt5-1)/2 = 1/phi = delta*,
-sqrt(1-4w)|_(w=-1) = sqrt5                        = 1/p*.
+ell*        = 0.34027368653552164201,
+1 - gamma*  = 0.40201256433455985025,
 ```
 
-Both threshold constants of section 3.1 are Catalan-GF data at `w = -1`,
-which is the natural evaluation point of (W) (`1-w = 2` there). The user's
-sequences `C(2n,n-1) = 1,4,15,56,210`, `C(2n+1,n-1) = 1,5,21,84,330`,
-Catalan `1,2,5,14,42,132` and the central binomials are the Catalan-triangle
-entries that (W) manufactures.
+so `0 < ell* < 1-gamma*` with margins `0.3403` and `0.0617` -- strict
+inequalities between explicit constants, with room to spare.
 
-### 8.3 The exact invariant: Lam_k(1) = +-1
+**Global minimality of `delta*`.** Scanning the deficiency
+`Phi(delta) = max_x g - H(delta)` at `gamma = gamma*` over
+`delta in [0.30, 0.95]` gives `Phi >= 0` throughout with minimum
+`4.6e-5` at the grid point nearest `1/phi`: the tangency is at `1/phi` and
+`Phi` is positive elsewhere. (A fully rigorous statement needs a Lipschitz
+certificate on this scan; the margins away from `delta*` are of order
+`10^-2`, so the certificate is routine but is NOT yet written.)
 
-Evaluating (W) and its derivatives at `w = 1` gives `Lam_0(1) = eps` and the
-carry recursion `R_(k+1)(1) = Lam'_k(1) - R'_k(1)`, with `Lam_k(1) = R_k(1)`
-forced. Moreover the box constraint at the top coefficient `i = a_k` reads
-exactly `|Lam_k(1)| <= 1`. Extracting `Lam_k` from the verified optima
-confirms this with no exceptions:
+### 10.3 The Stirling estimate, and the convergence rate it predicts
+
+From `n H(j/n) - log_2(n+1) <= log_2 binom(n,j) <= n H(j/n)` and the fact
+that (ARCH) has at most `m` summands,
 
 ```text
-m = 8 :  Lam_k(1) = +1,-1,+1,-1,-1,-1,+1,+1
-m = 16:  Lam_k(1) = -1,+1,... all +-1 for every k
+log_2 LHS >= (m-1) H(d/(m-1)) - log_2 m,
+log_2 RHS <= log_2 m + max_k [ a_k H(r_k/a_k) + a_k - r_k ].
 ```
 
-The `i = a_k - 1` constraint then reproduces `a_0 >= (m-1)/2`, i.e.
-THM-2160 S6.2, for a third independent time.
-
-### 8.4 The unit-atom construction, and why it is not enough
-
-If the positive coefficients of `Lam_k` sum to at most `1` and the negative
-ones to at least `-1`, then `|[u^i]E_k| <= binom(a_k,i)` automatically
-(because `0 <= binom(a_k-c, i-c) <= binom(a_k,i)`). Over the integers those
-are exactly the **middle-weighted unit atoms**
+So (ARCH) **fails** as soon as
 
 ```text
-Lam_k  in  { 0,  +- w^c,  w^c - w^(c') },    c, c' <= a_k,
+H(delta) - max_x g(x,delta)  >  (2 log_2 m + O(log m))/m,
 ```
 
-and (W) becomes a carry ladder whose digit is the exponent `c`
-(`Lam'_k(1) = sigma c`, or `c - c'`). This is implemented and VERIFIED, but
-the one-sided digit range (when `Lam_k(1) = +-1` only `Lam'_k(1)` of one sign
-is reachable) makes the greedy myopic: it attains `C = 7/4` at `m = 4`,
-`15/8` at `m = 8` and only `C = 2` from `m = 16` on.
-
-### 8.5 What the true atoms actually are
-
-Extracting `Lam_k` from the exact optima shows the unit-atom family is far
-too narrow -- the real solutions use massive cancellation (`m = 16, k = 4`
-has positive part `5126` and negative part `5127`). Their shape is instead
+the `O(log m)` absorbing the floors in `a_k, L_k` (each shifts `a H(r/a)` by
+`O(log m)`). Hence for every `gamma < gamma*` the slope-`(1+gamma)` profile is
+infeasible for all large `m`, i.e.
 
 ```text
-Lam_4 = -1 + 20 w(1-w)^9 + (small corrections),
+C* >= 1 + gamma* = C_arch = log_5(5 phi^2).
 ```
 
-and since `(1+u)^a * w(1-w)^(a-1) = u` identically, this is
+The same estimate **predicts the convergence rate** of the certified
+finite-`m` bounds, `gamma* - gamma_m ~ c log_2(m)/m`. Measured:
 
 ```text
-E_k = sigma_k (1+u)^(a_k) + (low-degree monomial corrections),
+m        256      512     1024     2048     4096
+gap    0.00934  0.00551  0.00311  0.00176  0.00099
+c      0.2987   0.3135   0.3186   0.3281   0.3367
 ```
 
-i.e. **the full binomial -- the maximally middle-weighted object -- plus
-adjustments in the low-order coefficients, where the box `binom(a_k,i)` still
-has room.** The legality condition is just
-`|sigma_k binom(a_k,i) + d_{k,i}| <= binom(a_k,i)`.
+`c` is near-constant, confirming the error term is of the right order. The
+slow upward drift is the expected quadratic-tangency correction: near
+`gamma*` the deficiency behaves like `-c_1(gamma*-gamma) + c_2(delta-delta*)^2`
+(a fold), so the negative window has width `~sqrt(gamma*-gamma)` and depth
+`~(gamma*-gamma)`.
 
-So the correct atom family for a matching construction is
-`sigma(1+u)^a + D(u)` with `D` low-degree, NOT the unit atoms
-`u^c(1+u)^(a-c)`; the latter are legal but cannot carry the required mass.
-Building the ladder over this larger family is the remaining step.
+## 11. Proposed objects
 
-Referees: `04-computation/amm12592_catalan_w_construction.py` (the reduction
-(W), the unit-atom ladder, and its verification) and
-`04-computation/amm12592_extract_lambda_atoms.py` (the `Lam_k` of the exact
-optima).
+**11.1 The deficiency fold.** `Phi_gamma(delta) = max_x g_gamma(x,delta) -
+H(delta)` is the right object, not the threshold alone. At `gamma*` it is
+non-negative with a single quadratic tangency at `1/phi`; below `gamma*` it is
+negative on a window. The fold structure converts the empirical `log m/m`
+rate of section 10.3 into a predicted one and should give the exact constant
+`c` from the curvature `Phi''` at the tangency.
 
+**11.2 Compensation depth (where the remaining freedom lives).** Every bound
+here is for schemes balanced *shell by shell*. The natural parameter is the
+coarseness of the partition on which balance is demanded: depth 1 is
+per-shell (governed by `C_arch`), and the true problem demands only global
+balance `P(H) = 1/2`. **The entire gap between `C_arch = 1.598` and the true
+`C*` is the value of cross-shell compensation**, and "compensation depth" is
+the object that interpolates. Note the refinement direction is useless:
+balancing each `(n_1,n_2)` class separately is a *finer* partition, hence
+strictly more constraints and a worse slope.
 
-## 9. The full atom family, and a metallic-ratio negative
+**11.3 Syllable-depth deadlines (the A005150 direction).** The critical value
+`n` is the first syllable of the run-length (look-and-say, A005150) parse of
+the stream. The depth-`j` problem lets the deadline depend on the first `j`
+syllables, `T_j(n_1,...,n_j)`; AMM 12592 is `j = 1`. Since the second run is
+read anyway while waiting, depth 2 re-accounts the same rule rather than
+changing it, and the honest question is whether the optimal slope is
+eventually independent of `j` -- a finite-syllable ("cosmological") statement
+in the sense of Conway's decay theorem, though with no evidence yet of any
+link to the constant `lambda = 1.3035772...` itself.
 
-### 9.1 Domination is a modulation; alternation saturates
-
-`E_k` is dominated by `(1+u)^(a_k)` exactly when
-
-```text
-[u^i] E_k = binom(a_k,i) * P_k(a_k - i),      |P_k| <= 1,
-```
-
-so the legal atoms are the binomial profile modulated by any function
-bounded by `1`. The two extremes are `P_k = +-1`, giving
-`E_k = +-(1+u)^(a_k)` (`Lam_k = +-1`), and `P_k(y) = +-(-1)^y`, giving
-`E_k = +-(u-1)^(a_k)` (`Lam_k = +-(2w-1)^(a_k)`) -- the **alternating** atom.
-Since `Lam_k(1) = P_k(0)` and `Lam'_k(1) = -a_k(P_k(1)-P_k(0))`, one has
-`|Lam'_k(1)| <= 2 a_k` with equality exactly at the alternating atom: twice
-the reach of the unit atoms `u^c(1+u)^(a-c)`. It is `|Delta^j P(0)| <= 2^j`,
-saturated by alternation, that produces (ARCH). So alternation is the
-extremal atom, and the unit atoms of section 8.4 are the wrong family.
-
-### 9.2 What the ladder over the full family achieves
-
-Taking `P_k` integer-valued in `{-1,0,1}` makes every coefficient integral
-automatically and turns each level into a signed subset-sum with coins
-`binom(a_k, d-k)` over `{-1,0,+1}`. This is implemented and verified and
-improves the small cases from `7/4, 15/8` to
-
-```text
-m = 4 : C = 8/5     m = 8 : C = 8/5     m >= 16 : only C = 2.
-```
-
-Allowing general integer `e_{k,i}` returns exactly the triangular solver of
-THM-3008 (fresh variables always enter with coefficient `1`), now run with an
-**alternating-extreme** splitting policy in place of the centred one. That
-recovers the exact optima `3/2, 14/9, 25/16` for `m <= 16` and gives
-`52/33` at `m = 32`, `109/66` at `m = 64` -- still degrading.
-
-**The uniform construction at `C < 2` remains OPEN.** What is now known is
-where it must live: at the alternating extreme of the box, not near its
-centre, and the obstruction to the greedy is that the level residual must be
-split among fresh unit-coefficient variables without destroying later levels.
-
-### 9.3 Metallic ratios: refuted along the alphabet axis
-
-The `2` in the tangency relation `p = delta/(2-delta)` traces to
-`|Delta^j P(0)| <= 2^j`, i.e. to the binary alphabet. Replacing it by `q` and
-re-solving the stationarity system gives
-
-```text
-q = 2:  delta* = 0.6180339887 = 1/phi,     1/p* = 2.2360679 = sqrt5
-q = 3:  no root
-q = 4:  delta* = 0.5497004779,             1/p* = 6.2766900
-q = 5:  delta* = 0.5385972572,             1/p* = 8.2833744
-```
-
-None of the `q > 2` values is `1/x` for a metallic ratio `x^2 = nx+1`, and
-none of the `1/p*` is `sqrt(n^2+4)`. **The golden ratio here is not the
-`n = 1` member of a metallic family in this parameter**; it is specific to
-the binary alphabet, which is exactly what the Catalan reading of section 8.2
-predicts (`sqrt(1-4w)` at `w = -1`). Referee:
-`04-computation/amm12592_metallic_generalization_test.py`.
+Referee: `04-computation/amm12592_interiority_and_stirling.py`.

@@ -1,0 +1,34 @@
+threshold data (all from delta^2 = 1-delta):
+  delta* = 0.6180339887498948482   p* = 0.44721359549995793928
+  gamma* = 0.59798743566544014975   C_arch = 1.5979874356654401497
+  alpha* = 0.62109091720222385261   ell* = 0.34027368653552164201
+
+GAP 2, (I3): the two strict inequalities for interiority
+  ell* > 0          : 0.34027368653552164201          -> True
+  ell* < 1 - gamma* : 0.40201256433455985025          -> True
+  margin below      : 0.3402736865
+  margin above      : 0.0617388778
+
+  (I1) dg/dalpha = 1 - log2(1-p*) = 1.85520596107 > 0, so the free branch is dominated
+  (I2) dg/dell -> -inf as r -> 0, so the r=0 end is never optimal
+
+GAP 2 (global): deficiency Phi(delta) = capacity - H(delta) at gamma*
+   delta=0.3      Phi=0.29418596
+   delta=0.408333 Phi=0.12938468
+   delta=0.516667 Phi=0.030593818
+   delta=0.625    Phi=0.00014862821
+   delta=0.733333 Phi=0.022961004
+   delta=0.841667 Phi=0.026669556
+   delta=0.95     Phi=0.01164007
+  minimum of Phi on the scan: 4.5642681e-5 at delta=0.61416667  (tangency at 1/phi=0.61803399)
+
+GAP 1: predicted rate  gamma* - gamma_m ~ c log2(m)/m  vs measured
+     m     gap = C_arch - bound     log2(m)/m      ratio c
+    256     0.0093354357       0.03125       0.298734
+    512     0.0055114357       0.017578125   0.313539
+   1024     0.0031114357       0.009765625   0.318611
+   2048     0.0017624357       0.0053710938  0.328133
+   4096     0.00098643567      0.0029296875  0.336703
+
+  a near-constant ratio confirms the Stirling error term is the
+  right order: the finite-m certified bounds converge at log2(m)/m.
