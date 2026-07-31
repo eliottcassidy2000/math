@@ -2,8 +2,8 @@
 id: THM-2975
 title: "Modular six-sheet Schreier graphs and Farey/partial-cube boundary"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For the marked C2*C3 -> S4 quotient of THM-2968, the edge and
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the marked
+  C2*C3 -> S4 quotient of THM-2968, the edge and
   oriented-cycle six-sheet Schreier graphs agree on the ternary generator
   and differ exactly on the binary generator.  The discriminant subgroup is
   C3*C3 and makes the two actions identical.  None of the literal six-sheet
@@ -31,8 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2975 -- modular six-sheet Schreier graphs and Farey/partial-cube boundary
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and statement
 
@@ -342,7 +341,9 @@ target:
   the edge/orientation six-sheet quartic actions;
 
 map:
-  a -> a sheet transposition, b -> a sheet three-cycle;
+  a -> the displayed sheet involution, whose edge/orientation cycle types
+       are 1^2 2^2 and 2^3;
+  b -> the common displayed order-three sheet permutation of type 3^2;
 
 preserved:
   factor orders, the common S3 block quotient, and the identical A4
@@ -375,7 +376,7 @@ python 04-computation/modular_s4_six_sheet_schreier_thm2975.py
 python -O 04-computation/modular_s4_six_sheet_schreier_thm2975.py
 ```
 
-Both modes byte-match the LF-stored transcript
+Both modes LF-normalize byte-for-byte to the stored transcript
 
 ```text
 05-knowledge/results/modular_s4_six_sheet_schreier_thm2975.out.

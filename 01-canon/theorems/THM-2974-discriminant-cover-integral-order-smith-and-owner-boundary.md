@@ -2,7 +2,7 @@
 id: THM-2974
 title: "Discriminant-cover integral-order Smith and owner boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On THM-2769's divisor t=0, the THM-2971 discriminant-cover isomorphism
   preserves the common normalized rank-six algebra, double-transposition
   inertia, and all three V4 Kummer residues, whose common nonzero word is
@@ -33,7 +33,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2974 -- discriminant-cover integral-order Smith and owner boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and statement
 
