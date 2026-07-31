@@ -20,7 +20,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; THM-2928/2941/2970/2972/2981 empty `k>=4`, cap `k=2,3` at `1656/246` (five `k=2` boundary rows), compress the raw `k=2/3` denominator ledgers to `200.14b/2.55b`, and close the common-level reflected `k=1` diagonal. Other `k<=1` and the rung are open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
+1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; THM-2928/2941/2970/2972/2981 and the finite-exact `z1=1656` boundary referee empty `k>=4`, give cap `k=2,3` at `1655/246`, compress the raw `k=2/3` denominator ledgers to `200.14b/2.55b`, and close the common-level reflected `k=1` diagonal. Other `k<=1` and the rung are open; reserved THM-2980's full band statement is not yet proved. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see

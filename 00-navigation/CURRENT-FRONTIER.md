@@ -25,14 +25,14 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`. THM-2941 gives wall `h/7` on all `3,003` roots; THM-2928/2941/2970/2972/2981
-empty aligned `k>=4`, cap `k=2,3` at `1656/246`, and close the common-level reflected `k=1` diagonal. Other censuses, arbitrary `k<=1`, the rung,
+Direct frontier: `<=6`. THM-2941 gives wall `h/7` on all `3,003` roots; THM-2928/2941/2970/2972
+empty aligned `k>=4`, cap `k=2,3` at `1655/246`, and close the common-level reflected `k=1` diagonal. Other censuses, arbitrary `k<=1`, the rung,
 and LRC are open.  Septimal floor/exception plus located phase cut the raw five-drift ledger
 `951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
 not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
-`1680..1742` `k=2` atlas, giving cap `1679`; three canonical atlases check `78,078` rows and give cap `1656` with five boundary rows. For `k=3`, torsion/status closes through `297`;
-THM-2981: 423 rows z270..247 close; cap246, ledger375251; z246 has 194 rows.
+`1680..1742` `k=2` atlas, giving cap `1679`; three canonical atlases check `78,078` rows and give cap `1656` with five boundary rows.  A separate finite-exact boundary referee closes all five (`434` exact status certificates and `36` projected packet kills, plus one forced-high scalar maximum), giving cap `1655`; reserved THM-2980's full `1600..1679` claim remains open. For `k=3`, torsion/status closes through `297`;
+THM-2981 closes `423` rows at `z=270..247`, giving cap `246` and ledger `375,251`; `z=246` has `194` rows.
 Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams but not semantic-root identification (kernel `28,393`); THM-2545/2549 give Hall and chronology gates,
 still old-target neutral; THM-2547 is only an external control after

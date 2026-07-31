@@ -253,7 +253,7 @@
 - `lrc14_j7_k2_z1672_z1670_exact_descent_closure_thm2941.py`,
   `lrc14_j7_k2_z1668_composite_closure_thm2941.py`, and
   `lrc14_j7_k2_z1660_status_descent_closure_thm2941.py` -> matching `.out`
-  [THM-2941 PROVED + FINITE-EXACT + VERIFIED; CURRENT K2 CAP].  Starting from
+  [THM-2941 PROVED + FINITE-EXACT + VERIFIED; INHERITED K2 CAP].  Starting from
   THM-2972's cap `1679`, the complete `1668..1679` atlas checks `36,036`
   candidate rows and leaves only `1668:9,1670:2,1672:1`; `1670/1672` close as
   `259=32+226+1`, with the last packet killed at margin `8929/15197`.
@@ -263,11 +263,27 @@
   The `15,015`-row `1656..1660` atlas then closes the sole `z1660` state by
   exact common status and leaves exactly five rows at `1656`.  All `456`
   rational status certificates are checked, while canonical digests omit the
-  solver-selected basis.  Hence the current projected `k=2` cap is `1656`.
+  solver-selected basis.  Hence this lineage supplies the inherited projected
+  `k=2` cap `1656` and its five boundary inputs.
   Source/output/semantic triples are
   `b87b7e0e...bb11e4` / `bfcf783f...149134` / `6f3d3bd7...c6493a`,
   `9019e9da...734ed6` / `e24fdb89...86515e` / `17f0eaf3...95d1f4`, and
   `b7d33448...5b305a` / `1a1a8508...2fed2e` / `8464180d...ca345`.
+- `lrc14_j7_k2_z1656_boundary_closure_thm2980.py` -> matching `.out`
+  [FINITE-EXACT THM-2980 BOUNDARY INPUT; THM-2980 REMAINS RESERVED].  The five
+  inherited scalar rows at `z1=1656` split into four ordinary all-label rows
+  and one exceptional forced-high row.  Exact rational status replay checks
+  `434` Farkas certificates; all `36` remaining literal packets are killed by
+  projected certificates with positive margin.  In the exceptional row the
+  unrestricted top-four gap is positive, but forcing a fourth label at least
+  `13250` replaces it by the exact best high label `13260` and makes the gap
+  `-56372503/681312815820`.  Thus all five rows are empty uniformly over
+  distinct later nonaligned labels, with no label horizon, and the projected
+  `k=2` cap is `1655`.  This is only a boundary input: it neither proves the
+  reserved full `1600..1679` THM-2980 statement nor closes LRC(14).  Normal and
+  optimized outputs agree byte for byte.  Source/output/profile/semantic
+  SHA-256 are `593988b1...0fa6b3` / `c93f0fd1...b1207` /
+  `0928270d...13d35c` / `10c0562f...365321`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:
