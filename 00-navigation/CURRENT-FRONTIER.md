@@ -25,6 +25,7 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
+<<<<<<< HEAD
 Direct frontier: `<=6`. THM-2941 gives wall `h/7` on all `3,003` roots; THM-2928/2941/2970/2972
 empty aligned `k>=4`, cap `k=2,3` at `1649/246`, and close the common-level reflected `k=1` diagonal. Other censuses, the remaining reflected sector, `k=0`, the rung,
 and LRC are open.  Septimal floor/exception plus located phase cut the raw five-drift ledger
@@ -36,6 +37,24 @@ THM-2981 closes `423` rows at `z=270..247`, giving cap `246` and ledger `375,251
 For reflected `k=1`, signed difference graphs close spread at most four on all
 `3,003` bodies; phase floors `1/105,1/42` close arbitrary levels on `2,217`.
 The other `786`, `k=0`, the rung, and LRC remain open.
+=======
+Direct frontier: `<=6`. THM-2928/2941/2970/2972 empty aligned `k>=4` and
+give `k=2,3` caps `1611/270`; reserved THM-2980 remains open.  The lower
+`k=2` atlases make `78,078` evaluations but `72,072` distinct rows.  Exact
+boundary referees close the five `z1656` rows, all twelve `z1650` rows,
+singleton shells through `z1616`, and the complete `z1620` and `z1612`
+shells; intervening atlas gaps are empty.  THM-2984's pair-free translated
+complete-section gate closes the hostile `z1620` row and all `7,094` exact
+classes in the four hard `z1612` rows.  The `k=3` descent closes through
+`z272`.
+
+For reflected `k=1`, signed difference graphs close spread at most five on
+all `3,003` bodies.  At arbitrary spread, threshold-graph certificates close
+`2,354` bodies and the exact phase/transport cone closes every body for
+`m >= 5D`; the remaining `649` bodies at `D >= 6, m < 5D`, `k=0`, the rung,
+and LRC remain open.  The raw `k=2/3` ledgers compress to
+`200,141,092,521/2,548,901,482` necessary states, not physical-cover counts.
+>>>>>>> f2d9054b9555 (lrc14: close projected k2 shell at z1612)
 Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams but not semantic-root identification (kernel `28,393`); THM-2545/2549 give Hall and chronology gates,
 still old-target neutral; THM-2547 is only an external control after
