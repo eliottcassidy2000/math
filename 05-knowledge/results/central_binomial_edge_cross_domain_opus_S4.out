@@ -1,0 +1,12 @@
+AMM (signature 2, a curve):
+  Catalan C(-1) = 0.618033988749895  = 1/phi = 0.618033988749895
+  sqrt(1-4w)|_{-1} = sqrt5 = 2.2360679775  (=1/p*)
+  => C* = log_5(5 phi^2) = 1.59798743566544  (algebraic edge)
+
+S(k) (signature 4, a surface):
+  C(2n,n)C(4n,2n)/64^n == (1/4)_n(3/4)_n/n!^2 for n=1..7: True  (Catalan (x) Catalan)
+  S(4) = 1.069352554441268  PSLQ vs {K(i),Catalan,pi,varpi}: [0, -2, 0, 0, 1] (coeff 0 on S(4) => irreducible edge)
+
+Jacobian (tree/Catalan skeleton):
+  F=(x+y^2,y) J=1 -> formal inverse G = [x - y**2, y] -> TERMINATES (polynomial)
+  (capacity role inverted vs AMM: JC conjectures termination always holds; open in 2D)
