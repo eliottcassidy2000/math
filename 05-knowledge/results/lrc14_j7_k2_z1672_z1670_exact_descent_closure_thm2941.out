@@ -1,0 +1,34 @@
+LRC14 projected k=2 exact descent through z1=1672 and z1=1670
+thm2972_source_sha256=9a9d4c5c6d1af54e5ddd668074dbdfc5804d4969b89fda23be8555000f55aa65
+thm2972_output_sha256=12bd1e08d8e8fa0db9e018d5329ef04eeab2d64d634c041d6e008f26826b5c72
+atlas_engine_sha256=a09b13e994ad6ab35e3324bd336e773b435b07859e6a3c924b84ec77f3e2aced
+status_engine_sha256=00207c75e9a4240b9efd941be909be0b2492c0d783f96a1531fc1d4df2a2c741
+status_output_sha256=c04d687660946a55a43502d40924c63b3fe7080575a3631102ea436f01abd54e
+inherited_cap=1679;dependency=THM-2972
+universe=six_body_roots:3003;body_labels:1..14;ordered distinct later nonaligned labels;scalar necessary condition
+atlas_band=1668..1679;candidate_rows=36036;survivors=12;height_counts=((1668, 9), (1670, 2), (1672, 1));high_tail_rows=4
+empty_first_bands=1669,1671,1673..1679;closed_heights=1670,1672;next_occupied_height=1668
+status_replay=226 infeasibility certificates verified exactly over Q;solver-selected dual bases excluded from stage and semantic digests
+closure_counts=scalar:259;crude:32;status:226;status_survivors:1;literal_packets:1;projected_kills:1;survivors:0
+global_minimum_margin=8929/15197;maximum_prefix_cells=1
+ATLAS;z1=1668;E=1,2,10,11,12,14;type=HIGH-TAIL
+ATLAS;z1=1668;E=1,4,8,10,12,14;type=EXACT
+ATLAS;z1=1668;E=1,6,8,10,12,14;type=EXACT
+ATLAS;z1=1668;E=1,6,9,10,12,14;type=EXACT
+ATLAS;z1=1668;E=1,6,10,11,12,14;type=HIGH-TAIL
+ATLAS;z1=1668;E=1,8,10,11,12,14;type=HIGH-TAIL
+ATLAS;z1=1668;E=2,4,8,10,12,14;type=EXACT
+ATLAS;z1=1668;E=2,6,8,10,12,14;type=EXACT
+ATLAS;z1=1668;E=2,8,10,11,12,14;type=HIGH-TAIL
+ATLAS;z1=1670;E=1,4,8,10,12,14;type=EXACT
+ATLAS;z1=1670;E=1,6,8,10,12,14;type=EXACT
+ATLAS;z1=1672;E=1,4,8,10,12,14;type=EXACT
+CASE;z1=1670;E=1,4,8,10,12,14;h=1049/2940;carrier_components=34;L=11760;lower=1049/267540;delta1=1637/3436860;first_d=1176;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;divisors=59;trials=557845;scalar=170;crude=24;status=146;status_survivors=0;stage_sha256=be0032ac5897299cb2995847c6d644a5efa28f57756a7ff5c361f7bb0ef97bff/067e2a739064ede6614151128cd9bb8a37c6cd0f67fecdcc15ee9ce031cd2f8f/43f3c899f26879481586355b18a9d924db38c2ad8ccf22bac4e561aaaeb6ffa7/2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;cells=0;packets=0;projected_kills=0;minimum_margin=NONE;maximum_prefix_cells=0;minimum_row=None;direct_mass=NONE;state_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;exact_status_certificates=146;conclusion=EMPTY
+CASE;z1=1670;E=1,6,8,10,12,14;h=1049/2940;carrier_components=34;L=11760;lower=1049/267540;delta1=1637/3436860;first_d=1176;ray_sha256=45c578666d68a83df513e4654d213ae979df51b73ce88f4882ac62d6941e9779;divisors=59;trials=557845;scalar=1;crude=0;status=0;status_survivors=1;stage_sha256=8e2845a17f9c354f392028998bfad183a155c4567f0382fd012dd434729e048c/2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d/2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d/4015991e031b38f4086e451350af5e8059e22c05f140fff2cffa181cc8eb58be;cells=4196;packets=1;projected_kills=1;minimum_margin=8929/15197;maximum_prefix_cells=1;minimum_row=(Fraction(8929, 15197), (1670, 1722, 1810, 1836, 2004), Fraction(144, 167), 1);direct_mass=1/1;state_sha256=2891878ad27c5aa660c82c54f2513b5425ab201b1954c3d458f824a507345277;exact_status_certificates=0;conclusion=EMPTY
+CASE;z1=1672;E=1,4,8,10,12,14;h=1049/2940;carrier_components=34;L=11760;lower=1049/267540;delta1=1679/4301220;first_d=1470;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;divisors=59;trials=557845;scalar=88;crude=8;status=80;status_survivors=0;stage_sha256=77d72cf86fce6add9fb33c01e0ae7e35f0424619c49b5271199755744035be49/0860083380b840b591ec034d1166cc464144657c8f7dbc28ff92f924f7f29efe/bac229cc1f2e7e5e7365efd5547a2fee9fc0edeb7eeb95a38ae16db270a2c0f2/2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;cells=0;packets=0;projected_kills=0;minimum_margin=NONE;maximum_prefix_cells=0;minimum_row=None;direct_mass=NONE;state_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;exact_status_certificates=80;conclusion=EMPTY
+consequence=projected k=2 first drift label z1<=1668
+atlas_profile_sha256=10b07e2eb300d3ddbd1c4b99340a6a52ee6ef3a54d27cbd30c1a2138196f602f
+atlas_survivor_sha256=bb45977b91e5b064be778e65bd5cb45f020607716ff72902674721a675a32f64
+closure_profile_sha256=c010bfb55df4401529dcdd48370c003834a438732e7dc2f874db22ad9631aad4
+semantic_sha256=f1842b572a2d7e9f7baf774831386714a8cbe7d772ea7fae72f1bb67c7f0b25e
+all_exact_controls=PASS
