@@ -22,6 +22,9 @@ For `lambda=1/5` (NOT one of the four signatures), a **clean** golden-field PSLQ
 involve the target) -- at **150 digits, coeff <= 1e7** returns **None** for `k=2,3,4`:
 > `pi S_{1/5}(2)`, `pi S_{1/5}(3)`, `pi S_{1/5}(4)` are all **non-elementary**. `C_{1/5}={1}`.
 
+The **same** null holds for a second non-signature level `lambda=2/5` (`k=2,3,4` all None, same clean basis,
+140 digits): `C_{2/5}={1}`. Two independent nulls => "non-signature `=> C={1}`" is firm, not a one-point fluke.
+
 (Method note, MISTAKES-spirit: my first two attempts used bases with internal degeneracies --
 `arctan sqrt5 = arctan(1/sqrt5)+arctan(2/sqrt5)`, and `phi^3 = 2+sqrt5` -- so PSLQ returned the *basis*
 relation with target-coefficient `0`, which is NOT evidence either way. Only a provably independent basis makes
@@ -83,7 +86,7 @@ LRC side). Non-signature `lambda`: no modular structure, so nothing survives pas
    is a theorem for all four signatures.
 2. **Identify the `k=P(n)` constants** (`n=3,4,6`) as specific `L`-values / higher-weight CM periods, and PSLQ
    against them -- turns the "new period" entries concrete.
-3. **Solidify signature-specificity**: confirm `C_lambda={1}` for a second non-signature level (`lambda=2/5` or
-   `1/7`) with the clean-basis method. Two independent nulls make "non-signature => {1}" firm.
+3. ~~Solidify signature-specificity with a second non-signature null~~ **DONE** (`C_{2/5}={1}`, section 1).
+   Next: a level in a *different* field (`lambda=1/7`, `Q(sqrt(-7))`/`zeta_7`) to rule out a golden-field artefact.
 
-Files: `/tmp/{c5clean,cmspec,probe}.py`. Builds on kps-S146-S150; corrects S150 open-item 3.
+Files: `/tmp/{c5clean,c25,cmspec,probe}.py`. Builds on kps-S146-S150; corrects S150 open-item 3.
