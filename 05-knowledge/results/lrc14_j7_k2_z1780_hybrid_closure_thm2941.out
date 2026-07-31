@@ -1,6 +1,6 @@
 LRC14 projected k=2 hybrid exact closure at z1=1780
-parent_source_sha256=65d7fbc94b76f7438fe9fad635687aa69cdfca59fff2c6a2e16f00e203834914
-parent_output_sha256=17da2b42eb6a88fa9fcec2c4db8e0e06fbb1dfa925df1a4ce30aa6b6df0c65ad
+parent_source_sha256=90c84cff41dde9f52c60478bba97b63f1f2f9b60ed2a68106991549c41359fdf
+parent_output_sha256=f14dfe4a5ea4a4a10a7341092064dcd4cebd0f77f2ba1dd4d21be48a3425bf5c
 scope=four rows over all distinct later nonaligned labels;one row under one later label at or beyond the projected wall;no finite label horizon
 routes=four all-label ray/status/projected closures;one exact forced-high scalar maximum
 forced_high_dependency=atlas HIGH-TAIL;projected wall=floor(13L/150)+1;four suffix slots
@@ -15,5 +15,5 @@ global_z1780_rows=5;empty=5;survivors=0
 atlas=next occupied height:1776
 consequence=projected k=2 first drift label z1<=1776
 profile_sha256=ec75c60b591057fb7c864fe0feeb0b871435300d0f273fb8fa0a74c62279d883
-semantic_sha256=27f5db376a16c44b2e840c51fbedc31bff225ab690fb17ed629d032936fca953
+semantic_sha256=c85fe45e05a6cf151c26aae15d2e3f35edded5ba034936018325b84183454f7a
 all_exact_controls=PASS
