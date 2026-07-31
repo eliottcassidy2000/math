@@ -2,7 +2,7 @@
 id: THM-2971
 title: "Discriminant-cover edge/orientation sextic algebra intertwiner"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For a full-S4 depressed quartic on q*Delta*J_or nonzero, the edge and
   oriented-cycle sextic algebras are generically nonisomorphic over the base
   field but become explicitly isomorphic over the discriminant quadratic
@@ -14,6 +14,14 @@ status: >
   Delta=0 and loses primitivity at J_or=0, so it supplies neither a Keller
   layer nor an SFC(4)/JC(2) closure.
 source: codex-discriminant-cover-sextic-algebra-intertwiner-2026-07-30
+audit: >
+  Independent hostile audit rederived both root-level signs, the cubic-base
+  Kummer identity, the actual rank-six algebra isomorphism and its
+  2^30*q^5*J_or^2*sqrt(Delta) power-basis determinant, the nonconjugate
+  V4_edge/C4 base-field obstruction, the identical embedded C2 stabilizer
+  over A4, and every q/Delta/J_or and Keller-scope boundary.  Normal and
+  optimized raw transcripts match each other; both LF-normalize to the stored
+  output, and the declared LF hashes were independently recomputed.
 depends_on:
   - THM-2864-quartic-edge-orientation-sextic-resolvents-and-d8-radicand-product
   - THM-2968-quartic-edge-and-oriented-cycle-s4-complements
@@ -31,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2971 -- discriminant-cover edge/orientation sextic algebra intertwiner
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and statement
 
@@ -291,4 +299,4 @@ script  6ca7c7f5695876dc38dc0a9423b4c5f81d648c29a5af90cb11b287ea0169b693
 output  c9c41a197031b54f12c1bda7661cdadd1a97bf5149655d718575b6f9665dba49
 ```
 
-**QED CANDIDATE.**
+**QED.**
