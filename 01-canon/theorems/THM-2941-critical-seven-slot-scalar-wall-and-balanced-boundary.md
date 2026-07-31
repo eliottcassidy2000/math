@@ -1570,7 +1570,7 @@ This is still only the projected `k=3` necessary sector and is not LRC(14).
 The combined referee source/output/profile/semantic hashes are
 
 ```text
-bbb6982f52ccff9040732d20beb1677e90dae1eaff11630ca8e93ae80d86b5da
+4137ab250def3ad6a66b4c75a5e1b5b1a82ba4100b00ea5f8616faa46fb501a9
 eea98955f91371d38d95cdeeb88b60a2305d34d0bddd2ea26570af8eede1b8e3
 939baa3f333a7a456859bee290b26f21985a07dd9eb3a02be1fd2cb95b9a87a1
 1b1a72765f35991d5fd243ffbb3ff7dfa26804017d68dee7b25e913b8152d3e7.

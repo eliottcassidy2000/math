@@ -2,7 +2,8 @@
 id: THM-2979
 title: "Projected k3 z275 ten-body status and located-torsion closure"
 status: >
-  PROVED + VERIFIED-EXACT.  The ten projected k=3 atlas rows at z1=275
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The ten projected
+  k=3 atlas rows at z1=275
   contain exactly 2,033 attained denominator states.  Crude fibre capacity
   removes 273 and the common 16-status table removes 1,695 with independently
   replayed exact rational Farkas checks.  The remaining 65 states force
@@ -13,12 +14,15 @@ status: >
   sharp among cardinality-only tests.  This is not LRC(14).
 source: codex-lrc14-k3-z275-ten-body-closure-2026-07-30
 audit: >
-  Normal and optimized executions are byte-identical.  The referee freezes
-  the complete ten-row atlas order, all stage counts, 1,695 exact dual
-  rechecks, positive feasible and incompatible hostile status controls, five
-  positive two-high gaps, 65 zero-high hostile passes, all literal negative
-  low amplitudes, 2,585,952 high-unit recurrence checks across the combined
-  package, and a concrete exact order-seven cell pair in every terminal.
+  Independent post-promotion audit rederived every proof direction, count,
+  cap, and ledger transition.  Clean normal and optimized executions are
+  byte-identical to the stored transcript after repairing the dependency hash
+  helper to normalize LF bytes.  The referee freezes the complete ten-row
+  atlas order, all stage counts, 1,695 exact dual rechecks, positive feasible
+  and incompatible hostile status controls, five positive two-high gaps, 65
+  zero-high hostile passes, all literal negative low amplitudes, 2,585,952
+  high-unit recurrence checks across the combined package, and a concrete
+  exact order-seven cell pair in every terminal.
 depends_on:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
 related:
@@ -26,7 +30,7 @@ related:
   - THM-2984-projected-k3-signed-ray-attainment-and-unit-phase-gate
 script: 04-computation/lrc14_j7_k3_z275_to_z272_septimal_torsion_descent_thm2941.py
 output: 05-knowledge/results/lrc14_j7_k3_z275_to_z272_septimal_torsion_descent_thm2941.out
-script_sha256: bbb6982f52ccff9040732d20beb1677e90dae1eaff11630ca8e93ae80d86b5da
+script_sha256: 4137ab250def3ad6a66b4c75a5e1b5b1a82ba4100b00ea5f8616faa46fb501a9
 output_sha256: eea98955f91371d38d95cdeeb88b60a2305d34d0bddd2ea26570af8eede1b8e3
 profile_sha256: 939baa3f333a7a456859bee290b26f21985a07dd9eb3a02be1fd2cb95b9a87a1
 semantic_sha256: 1b1a72765f35991d5fd243ffbb3ff7dfa26804017d68dee7b25e913b8152d3e7
@@ -35,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2979 -- projected k3 z275 ten-body status and located-torsion closure
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## Statement
 

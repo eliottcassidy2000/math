@@ -34,7 +34,10 @@ Format per entry:
   descendant likewise imports only this certificate-free instance ledger;
   all `1,844` duals are still checked exactly.  All ray, high-wall,
   finite-low-pair, torsion-density, cap, and ledger conclusions survive
-  unchanged.
+  unchanged.  A post-promotion audit also found that this descendant declared
+  an LF-normalized dependency-hash basis while its helper hashed raw checkout
+  bytes.  The helper now normalizes CRLF and bare CR to LF before hashing;
+  the stored output, profile, semantic digest, cap, and ledger are unchanged.
 - **Rule:** a correction to a proof-search digest is a dependency-graph
   invariant, not a one-file patch.  New descendants of a nondeterministic
   solver must reuse the canonical instance ledger explicitly; never copy the

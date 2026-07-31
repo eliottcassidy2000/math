@@ -166,7 +166,8 @@ def require(condition, message):
 
 
 def file_sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    payload = path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return hashlib.sha256(payload).hexdigest()
 
 
 def load(name, path):
