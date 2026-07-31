@@ -1,6 +1,6 @@
 LRC14 projected k=2 all-label exact closure at z1=1784
-parent_source_sha256=ecd2f8e8179545f971ed6bd4a33b816c0f34f0693aeb0dda37c3a5c445a70435
-parent_output_sha256=c1090a83e242f2ded17e8d8aabd74983f0925466f55a85c33bfccfbe385f57b6
+parent_source_sha256=cf18eb773f84e89de7b842956e686450877334454eda4ec5456a1673f46c8dfc
+parent_output_sha256=542970df3d4c901ac1e6120e69b768b9a7999cd4c778663d2bce99aafe8fa62c
 scope=six z1784 atlas rows;all distinct later nonaligned labels;no finite label horizon
 pipeline=residue rays;denominator multisets;all-divisor crude;common-K5 status;scalar-slack literal packets;projected residual
 projected_identity=P_(E,Z)=phi_L(C_E minus union_z D_z);two-aligned cap=25/91
@@ -15,5 +15,5 @@ global_z1784_rows=6;empty=6;survivors=0
 atlas=empty:1785..1790 after inherited closures;next occupied height:1780
 consequence=projected k=2 first drift label z1<=1780
 profile_sha256=8edd0da2514cbdb502303523bfcaf547662b447780d0e8c8efb58386177332ab
-semantic_sha256=e49cc640ba9654b5a0331b387368414242029632c09f674babd08f0068a12137
+semantic_sha256=b455326cb0ec051bb2eb7db9d737efb59e45a7b802082c4ab11f1400f9fc76c0
 all_exact_controls=PASS
