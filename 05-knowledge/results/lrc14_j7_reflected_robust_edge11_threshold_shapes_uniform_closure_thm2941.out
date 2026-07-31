@@ -1,0 +1,22 @@
+LRC14 reflected robust-edge-11 clique-anchor uniform closure exact referee
+edge11_code_hist=(('IDIII', 7), ('IIDID', 8));shape_bank=(('edge', 96, 2), ('p3', 96, 8), ('2k2', 16, 1), ('star3', 312, 26), ('triangle', 0, 0), ('p4', 128, 32), ('star4', 672, 28), ('paw', 184, 46))
+assignment_categories=(('2k2', 128), ('edge', 5760), ('p3', 7872), ('p4', 2048), ('paw', 1472), ('star3', 11232), ('star4', 4704));total_primitive_assignments=33216;certificate_kinds=(('low', 33216),);certificate_floor_values=28
+weakest_margin=2703015168079847245426187/43021744871641066038616290;category=star3;body=(1, 2, 3, 7, 13, 14);nonrobust_edges=((2, 5), (3, 4), (3, 5), (4, 5));high_edges=((2, 5), (3, 5), (4, 5));levels=(6, 3, 1, 2, 4, 9);floor=81/1274;certificate_pair=(0, 1);reduced_channel=(2, 1);gcd=3;j=4874;lift=2;endpoint_radius=666;kind=low
+direct_control_scales=(1, 2, 5);direct_controls=99648
+classification_law=maximum low clique plus one finite symmetric-ratio bank per outside vertex
+scale_law=multiplying all levels preserves the reduced channel and cell, decreases transport loss and singleton debt
+conclusion=all 15 robust-edge-11 bodies close for every assignment of positive reflected levels
+corollary=arbitrary-level body closure rises from 2339 to 2354;remaining_bodies=649
+scope=reflected THM-2941 residual family only;physical LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+low_phase_sha256=b2418dfda1b48257d1f7582d4ea977203a26f88885e13946bc100ccf264c9ce1
+exceptional_sha256=15c13d721ee695c2a69bc386d5c12eba0382b52f9eabfe052f2fe5fda03c7bc4
+universal_sha256=dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3eae07f0f857689
+edge13_sha256=027cf455babba5eb7647ffabb6e678e091b3a9c8426fa51703bec05cd5ab1586
+edge12_sha256=76110afdfb1e607fd63df1909a05259d9252da1855b4ae2a9fc6da5d936fbaa3
+body_digest=412a09ae06ec9c57f6e47e162a5ef0e5e2bbe879224aa95af4efa4d5cf77a9f9
+assignment_digest=bc9ae2e7435ac8b35a965e1d4a87de62b1a4c5bcb019c28fd3d6454cb07b37b2
+source_sha256=58685796af62dfb425bfa17a6363d9cc5ca4cbb72e0f1d42ecc23dcbf10c01b4
+semantic_sha256=3e3ed7b68c58233aef3b4f2450f60b945ec59cd7c7826783abece85eb16a739f
+all_exact_controls=PASS
