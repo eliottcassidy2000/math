@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-335 (2026-07-30, first THM-2991 promotion) -- a late directional turn was called a global leading-edge return
+
+- **What was done:** the first promoted THM-2991 used
+  `(x+1)^n(x+B)^n`.  Its exact reciprocal symmetry gives an arbitrarily long
+  ladder `R_1<...<R_n` followed by `R_(n+1)=R_(n-1)<R_n`.  The theorem then
+  said this disproved global no-return from the leading edge.
+- **First failed implication / minimal witness:** `R_(n+1)<R_n` only says the
+  ratio path changes direction.  For `n>2`, the same ladder and symmetry give
+  `R_(n+1)=R_(n-1)>R_1`; the later circuit has not returned below the leading
+  edge.  The proof and exact transcript were correct, but the claimed
+  consequence conflated directional monotonicity with the stronger property
+  `R_j>=R_1` for all `j`.
+- **Exact repair / strongest survivor:** the two-cluster family remains a
+  sharp directional-turn control.  Repaired THM-2991 uses
+  `(x+1)^n(x+3)(x+C)^n`: as `C` grows, `R_1<...<R_n`, while reciprocal-edge
+  asymptotics give `R_(2n)<R_1`.  This is the required arbitrarily delayed
+  global return inside PF-infinity, Hurwitz stability, and strict ULC.
+- **Rule:** define a path obstruction by the actual comparison relation.
+  A late negative discrete derivative does not imply return below an earlier
+  baseline; freeze both a directional witness and a baseline-crossing witness.
+
 ## MISTAKE-334 (2026-07-30, projected k3 unit-count simplification) -- a centered bad-band count was applied after translation
 
 - **What was done:** a proposed simplification of the `z_1=270..247`

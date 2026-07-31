@@ -1,12 +1,13 @@
-THM-2991 PF-INFINITY ARBITRARILY DELAYED NEWTON-RATIO RETURN
-family=(x+1)^n*(x+B)^n;degree=2n;B_positive_integer
-asymptotic_n=2..40;records=39;digest=538d801b08ffb81f3bf4fb841aee98b782a6ecea73d2631468a9a8bba234a403
-concrete_n=2..40;B=1000000;records=39;digest=b7b96930753d3d822c4de013aabbf2ebf30396835cee67beeb9ebca239a71ab7
-limit_ladder=STRICT;center_ratio_over_B=1/(n+1)^2
-reciprocal_identity=b_(2n-k)=B^(n-k)*b_k;all_1677_coefficients=PASS
-ratio_symmetry=R_(2n-k)=R_k;all_1599_circuits=PASS
-first_return=n+1;concrete_witnesses=39;strict_ULC=PASS
-degree4_b=1,3/2,13/6,3,4
-degree4_R=27/26,169/162,27/26
-scope=generic_PF_infinity_no_return_boundary;not_first_gap_core_counterexample
+THM-2991 PF-INFINITY ARBITRARILY DELAYED GLOBAL NEWTON-RATIO RETURN
+family=(x+1)^n*(x+3)*(x+C)^n;degree=2n+1;C_positive_integer
+asymptotic_n=2..60;records=59;digest=c68c28d06300500cc73bdc07c5ae4e1f8edfe5f5502385a2bb9f09216740c223
+concrete_n=2..60;C=1000000;records=59;digest=42ec9223a21878be56dfa2a6816cc72ca535391f77b8623174c398e6e0e23225
+limit_ladder=STRICT;center_ratio_over_C=1/((n+3)(n+2))
+last_edge_limit_gap=2t(2n-t(n-1))/(d(n-1)(n-1+2t));t=1/3;POSITIVE
+reciprocal_last_edge=PASS;coefficient_checks=3776
+strict_ULC_and_global_return=PASS;circuit_checks=3658
+degree5_b=1,9,607/10,2283/10,584,1200
+degree5_R=810/607,368449/205470,5212089/3544880,42632/34245
+two_cluster_boundary=directional_turn_only;opposite_inner_ratio_above_R1
+scope=generic_PF_infinity_global_no_return_boundary;not_first_gap_core_counterexample
 all_exact_checks=PASS
