@@ -55,11 +55,11 @@ OUTPUT = (
     / "results"
     / "lrc14_j7_k2_z1784_independent_referee_thm2941.out"
 )
-EXPECTED_ATLAS_SHA256 = "2ce806d361d7eb97d9ae2d23e438898c8e1f895a89501c9a1847e51f61ca8009"
-EXPECTED_Z1788_SHA256 = "9656de4784eb936919113e8a4151f60514c21089a3f110994b94654ea0c070ba"
-EXPECTED_Z1790_SHA256 = "b03b46a6c438773ef1c433c435828a5426e18c998999cbee543541904b85f20b"
-EXPECTED_PROFILE_SHA256 = "1f79a9be9b466e88eb2c27c875c75fefa975e73f365cc6b1e084763d0b22de6a"
-EXPECTED_SEMANTIC_SHA256 = "98be8452ee0494dd510520fb6d2d2deb94cb009e21a1038d405ecce07a391aef"
+EXPECTED_ATLAS_SHA256 = "00973f3679ebe5cf9e401a0311a9a19181ffcf4edb7c30f4c81b71f0d4a73d36"
+EXPECTED_Z1788_SHA256 = "542970df3d4c901ac1e6120e69b768b9a7999cd4c778663d2bce99aafe8fa62c"
+EXPECTED_Z1790_SHA256 = "56e1a1613ddd019cc97a1bdc5cda2ee2430ca8f87cc93d625ffdad1d304b9836"
+EXPECTED_PROFILE_SHA256 = "c98cbb2b4e18457c521edb7f4d4f06668681866130190fa6d22b39bd566780b2"
+EXPECTED_SEMANTIC_SHA256 = "d3e0d76ece1fe58845fa6043f67dc960b4843fbad42028cf71c63cdd2d66bf4e"
 
 FIRST = 1784
 MASTER = 14 * lcm(*range(1, 15))
@@ -711,7 +711,20 @@ def profile(body: tuple[int, ...]) -> tuple[object, ...]:
     require(minimum_margin == expected[5], (body, "margin mismatch", minimum_margin, expected[5]))
     require(maximum_prefix == expected[6], (body, "prefix mismatch", maximum_prefix, expected[6]))
 
-    stage_payloads = (scalar, crude_kills, status_kills, survivors, packet_rows)
+    # The exact Farkas representative is solver-selected and therefore not a
+    # canonical part of the infeasible status instance (MISTAKE-331).  Keep
+    # verifying it above, but hash only q and M at this evidence boundary.
+    canonical_status_kills = tuple(
+        (ds, upper, labels, witness[:-1])
+        for ds, upper, labels, witness in status_kills
+    )
+    require(
+        not status_kills
+        or sha256(repr(tuple(status_kills)).encode()).hexdigest()
+        != sha256(repr(canonical_status_kills).encode()).hexdigest(),
+        (body, "raw LP certificate entered status digest"),
+    )
+    stage_payloads = (scalar, crude_kills, canonical_status_kills, survivors, packet_rows)
     stage_hashes = tuple(sha256(repr(tuple(rows)).encode()).hexdigest() for rows in stage_payloads)
     return (
         body,
@@ -771,7 +784,10 @@ def render(profiles: tuple[tuple[object, ...], ...]) -> str:
     require(sum(int(row[17]) for row in profiles) == 1, "HIGH-TAIL row count")
     require(not any(row[18] for row in profiles), "a high side filter was applied")
     profile_hash = sha256(repr(profiles).encode()).hexdigest()
-    require(profile_hash == EXPECTED_PROFILE_SHA256, "profile digest changed")
+    require(
+        profile_hash == EXPECTED_PROFILE_SHA256,
+        f"profile digest changed: expected {EXPECTED_PROFILE_SHA256}; got {profile_hash}",
+    )
     semantic_payload = (
         FIRST,
         BODIES,
@@ -785,7 +801,10 @@ def render(profiles: tuple[tuple[object, ...], ...]) -> str:
         digest(Z1790),
     )
     semantic_hash = sha256(repr(semantic_payload).encode()).hexdigest()
-    require(semantic_hash == EXPECTED_SEMANTIC_SHA256, "semantic digest changed")
+    require(
+        semantic_hash == EXPECTED_SEMANTIC_SHA256,
+        f"semantic digest changed: expected {EXPECTED_SEMANTIC_SHA256}; got {semantic_hash}",
+    )
     lines = [
         "LRC14 projected k=2 z1784 independent hostile referee",
         f"referee_source_sha256={digest(SOURCE)}",
