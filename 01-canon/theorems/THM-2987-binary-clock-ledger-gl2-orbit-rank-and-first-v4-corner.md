@@ -2,8 +2,8 @@
 id: THM-2987
 title: "Binary-clock ledger GL2 orbit rank and first V4 corner"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT. For the three GL(2,F_2)-conjugate padding gauges of the THM-2976
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For the three
+  GL(2,F_2)-conjugate padding gauges of the THM-2976
   homogeneous forced-parity ledger, dyadic checkpoints vanish. At every
   non-dyadic checkpoint their span has rank one for depth zero, rank two and
   an exact affine V4 carrier for positive power-of-two depth, and rank three
@@ -24,12 +24,16 @@ output: 05-knowledge/results/amm12592_binary_clock_gl2_orbit_rank_thm2987.out
 script_sha256: 45f542fbb5b6c0e2fab924cc7d0e64458ec4dfc6aa0ed9dae6b92e3cc5ca9dd2
 output_sha256: 8f5fca5d1fa10aa93bf832408d389f4209780e07edb56fa87e9e55c8080a434f
 hash_basis: LF-normalized bytes
+audit: >
+  thm2987-hostile-audit-2026-07-30 (independent Frobenius/Lucas and
+  set-polynomial rank derivation; THM-2976 corner, pointed-line, and K4 audit;
+  PGL(2,Z) no-nonnegative-projective-order-three proof and bounded hostile
+  census; normal/-O/stored LF-hash replay and docs: ACCEPT)
 ---
 
 # THM-2987 -- binary-clock ledger GL2 orbit rank and first V4 corner
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2976 proves the binary clock of one physically distinguished homogeneous
 padding gauge. The abstract `V4 semidirect S3` anatomy is already canonical
@@ -39,7 +43,8 @@ form a `V4`, and does that structure persist along its corner-timed ladder?
 
 The answer is a sharp trichotomy. The `V4` occurs at one clock depth only.
 Moreover, the order-three permutation of the three gauges is not a symmetry
-of the pointed physical ledger and has no positive integral linear lift.
+of the pointed physical ledger and admits no entrywise-nonnegative integral
+lift remaining projectively order three.
 
 ## 1. The homogeneous factorization
 
@@ -288,7 +293,7 @@ runner packet, or a THM-2966 scheme. In particular, the abstract zero in
 `(22)` does not select a physical quartic section or repair the pointed-line
 loss in `(17)`.
 
-## 7. Exact evidence and candidate scope
+## 7. Exact evidence and audited scope
 
 The dependency-free companion represents homogeneous `F_2[p,q]`
 polynomials as q-exponent bitsets. It independently checks:
@@ -315,7 +320,7 @@ Normal and optimized transcripts LF-normalize byte-for-byte to the declared
 stored output, and both declared hashes match.
 
 ```text
-CANDIDATE CONCLUSIONS:
+PROVED CONCLUSIONS:
   exact ledger-orbit rank trichotomy;
   exact V4 carrier at positive dyadic depth;
   first-nontrivial-clock-only V4 corner;
@@ -326,8 +331,7 @@ NOT CLAIMED:
   a physical symmetry of the THM-2966 scheme;
   preservation of cells, capacities, owners, endpoints, or phase;
   a new extractor construction or lower bound;
-  an LRC, Keller, quartic, or tournament consequence;
-  promotion before an independent hostile audit.          (24)
+  an LRC, Keller, quartic, or tournament consequence.      (24)
 ```
 
-**Candidate proof complete; independent audit pending.**
+**QED.**
