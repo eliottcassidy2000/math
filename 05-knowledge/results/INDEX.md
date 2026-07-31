@@ -97,9 +97,9 @@
   common-status/Farkas replay then closes occupied heights `306,302,298` by
   `137=17+120`, leaving no survivors.  The projected `k=3` cap is `297` and
   the necessary-row ledger is `375,765`; height `297` is not closed.
-  Torsion source/output/semantic hashes begin `a46bd16b/75dd0876/95f9da4c`;
-  the independent hashes begin `7de24a50/8ba8bacc/4667f8f0`; descent hashes
-  begin `dee8b7aa/835edaf1/b589ac0d`.
+  Torsion source/output/semantic hashes begin `6b644fbb/c94568f5/95f9da4c`;
+  the independent hashes begin `80e731d1/c0daca33/4667f8f0`; descent hashes
+  begin `97fbefb8/316d069c/b589ac0d`.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py`, the isolated terminal referees,
   and the exact/projected plus forced-high descent packages -> matching
   `.out` files [THM-2941 PROVED NECESSARY BANDS + FINITE-EXACT CLOSURES +
@@ -276,9 +276,9 @@
   independently rebuilt as exact rational Farkas contradictions.  Thus the
   current cap is `297`, the old necessary ledger is `375,765`, and height
   `297` remains open.  Torsion source/output/semantic hashes begin
-  `a46bd16b/75dd0876/95f9da4c`; independent hashes begin
-  `7de24a50/8ba8bacc/4667f8f0`; descent hashes begin
-  `dee8b7aa/835edaf1/b589ac0d`.
+  `6b644fbb/c94568f5/95f9da4c`; independent hashes begin
+  `80e731d1/c0daca33/4667f8f0`; descent hashes begin
+  `97fbefb8/316d069c/b589ac0d`.
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;
   the `z336` source/output/semantic hashes are
   `6e991432a1ce5ec9c1cbe97199cb5fd647c5edc89bdcc60ce560382a70835fcf` /

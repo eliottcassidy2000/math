@@ -1,6 +1,6 @@
 LRC14 projected k=3 z1=312 exact all-label ray/status OPEN frontier
 status=FINITE-EXACT through ray/status/bridge;OPEN at 70 literal-phase residuals
-ray_engine_sha256=6ff8676255d51d818d7c24102a8fc755e673544f0ac6b99be4bfc262c892df1e
+ray_engine_sha256=2ef5e0639354c38b13e17e41f91acb4143c7f60973295b0e2dd0f57eb8f38db2
 body_atlas_source_sha256=2af6d96882f336a409a8657070ed76a75c09a53b3789101b83103b051e864ded
 body_atlas_output_sha256=cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda
 scope=80 lossless scalar-atlas bodies;no finite label horizon
@@ -170,6 +170,6 @@ residual=E:(1, 8, 11, 12, 13, 14);ds:(1078, 3822, 8008, 336336);max_labels:(312,
 residual=E:(2, 8, 10, 11, 12, 14);ds:(3920, 4312, 4620, 5390);max_labels:(312, 12771, 390, 364);high_labels:(12771,);total:453503/41415192;excess:64258/284729445;D:129360;q:18480;c:3;N_c:1056;expected_margin:182160;small_pattern:(0, 0, 0);support:42082;large_capacity:73920;support_slack:31838
 residual=E:(2, 8, 10, 11, 12, 14);ds:(4312, 4620, 5390, 11760);max_labels:(312, 390, 364, 13541);high_labels:(13541,);total:15861067/1449103656;excess:800461/3622759140;D:129360;q:18480;c:3;N_c:1056;expected_margin:182160;small_pattern:(0, 0, 0);support:42082;large_capacity:73920;support_slack:31838
 independent_exact_farkas_checks=10698/10698:PASS
-semantic_sha256=b6152f5a9f10115eb5d39ac402da0b960aad96d127d0d5fb5a640af35c81dd07
+semantic_sha256=09fc1f3f6a84fb906a3afdfd5a91268795f9db600e97090650028dca945fb5fd
 consequence=OPEN residual 70;no z1 cap improvement claimed
 all_exact_controls=PASS
