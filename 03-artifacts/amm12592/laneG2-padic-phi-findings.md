@@ -233,6 +233,21 @@ SPECULATION).
 | (27) is a tropical/entropy dual, not an evaluation bound | EVIDENCE (forced by the wall within the evaluation class) | Sec. 5 |
 | 2-adic engineering = checksum alignment | SPECULATION | Sec. 5 |
 
+## 6b. Independent replication audit (same session, later pass)
+
+The lane script was re-run (exit 0, "ALL LANE-G2 CHECKS PASS", ~1.5 s), and
+an independently coded audit (fresh ledger/evaluation implementation,
+different RNG path, no imports from the lane script) confirmed, in exact
+integer arithmetic: (A1) Psi mod 128 choice-invariance at the CERTIFICATE
+slope `gamma = 2457/6592, D0 = 0, M = 13` — a case absent from T1 — across
+25 random schemes, with the one-bit law predicting the value (64)
+correctly; (A2) the one-bit law from full (non-modular) integers on the
+fresh depth law `gamma = 5/7, D0 = 1`, `M = 2..16`; (A3) Phi-integrality
+and `v_2(N_X) = s_X` iff `M` even on that law; (A4) the wall chain
+`env >= (b-a)^{A_M} >= 2^{s A_M} > 2^{s+1}` at both biases, `M <= 25`,
+cert slope. Audit script: session scratchpad `laneG2_audit.py` (not
+committed; trivially reproducible from this description).
+
 **Next obligations (for other lanes):** (i) lane G's reconstruction should
 now target ONLY the entropy/max-flow dual: weights `(-1, alpha)` on the
 two rapidities as a two-ray capacity-vs-mass rate inequality, margin
