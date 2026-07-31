@@ -1,0 +1,12 @@
+THM-2991 PF-INFINITY ARBITRARILY DELAYED NEWTON-RATIO RETURN
+family=(x+1)^n*(x+B)^n;degree=2n;B_positive_integer
+asymptotic_n=2..40;records=39;digest=538d801b08ffb81f3bf4fb841aee98b782a6ecea73d2631468a9a8bba234a403
+concrete_n=2..40;B=1000000;records=39;digest=b7b96930753d3d822c4de013aabbf2ebf30396835cee67beeb9ebca239a71ab7
+limit_ladder=STRICT;center_ratio_over_B=1/(n+1)^2
+reciprocal_identity=b_(2n-k)=B^(n-k)*b_k;all_1677_coefficients=PASS
+ratio_symmetry=R_(2n-k)=R_k;all_1599_circuits=PASS
+first_return=n+1;concrete_witnesses=39;strict_ULC=PASS
+degree4_b=1,3/2,13/6,3,4
+degree4_R=27/26,169/162,27/26
+scope=generic_PF_infinity_no_return_boundary;not_first_gap_core_counterexample
+all_exact_checks=PASS
