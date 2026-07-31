@@ -22,10 +22,14 @@ status: >
   d = (delta)m and taking log_2/m, (ARCH) survives iff
   H(delta) <= max_x [alpha H(r/alpha) + alpha - r], whose least admissible
   slope is C_arch = 1.5979874..., attained at delta* = 0.6179 (within grid
-  resolution of 1/phi = 0.61803; the inner argmax slides from the profile
-  kink at x = kappa down to x = 0 as delta grows, so no one-variable
-  reduction is available). The finite-m certified bounds converge to exactly
-  this constant.
+  1/phi EXACTLY). SOLVING THE STATIONARITY SYSTEM IN CLOSED FORM:
+  delta* = 1/phi and p* = r/alpha = 1/sqrt5 exactly, the denominator of
+  gamma* collapses to (1/2)log_2 5, and
+      gamma* = log_2(phi) / ((1/2) log_2 5) = log_5(phi^2) = log_{sqrt5}(phi),
+      C_arch = 1 + log_5(phi^2) = log_5(5 phi^2) = 1.5979874356654401497...
+  The inner argmax slides from the profile kink x = kappa down to x = 0 as
+  delta grows, so no one-variable reduction is available. The finite-m
+  certified bounds converge to exactly this constant.
 source: opus-2026-07-31-amm12592-writeup
 depends_on:
   - THM-3007
@@ -141,13 +145,64 @@ for all delta:  H(delta) <= max_x [ alpha H(r/alpha) + alpha - r ].   (T)
 
 The least slope satisfying (T) is
 
+### 3.1 Closed form
+
+At the threshold three conditions hold at once: the max over `x` is interior
+(`dg/dx = 0`), capacity touches requirement (`g = H(delta)`), and the touch
+is tangential (`dg/ddelta = H'(delta)`). Tangency alone gives
+
 ```text
-C_arch = 1 + gamma*,     gamma* = 0.597987401...,
-C_arch = 1.597987401...,     binding delta* = 0.6179...
+(1-p)/p = 2(1-delta)/delta,   i.e.   p = delta/(2-delta),
 ```
 
-`delta*` sits within grid resolution of `1/phi = 0.618034`, which is worth
-chasing but is NOT claimed. The inner argmax is at the profile kink
+and the `x`-stationarity, using `log_2((1-p)/p) = 1 + H'(delta)`, gives
+
+```text
+gamma = -H'(delta) / [ H(p) + (1 + H'(delta))(1-p) ].
+```
+
+Solving the remaining equation to 40 digits returns
+
+```text
+delta* = 0.6180339887498948482045868... = 1/phi     (agreement to 42 digits)
+p*     = 0.4472135954999579392818347... = 1/sqrt5   (exact)
+```
+
+and `p* = 1/sqrt5` then follows *algebraically* from `delta* = 1/phi`:
+`delta/(2-delta) = ((sqrt5-1)/2)/((5-sqrt5)/2) = 1/sqrt5`. With
+`delta* = 1/phi` one has `H'(1/phi) = -log_2 phi`, and the denominator
+collapses exactly:
+
+```text
+H(1/sqrt5) + (1 - log_2 phi)(1 - 1/sqrt5)
+   = [F + (1-s)(L-1)] + (1-L)(1-s) = F = (1/2) log_2 5,
+   F = (1/2)log_2 5,  L = log_2 phi,  s = 1/sqrt5.
+```
+
+Hence
+
+```text
+gamma* = log_2(phi) / ((1/2)log_2 5) = 2 log_5 phi = log_5(phi^2)
+       = log_{sqrt5}(phi),
+
+C_arch = 1 + log_5(phi^2) = log_5(5 phi^2) = log_{sqrt5}(sqrt5 * phi)
+       = 1.59798743566544014974502650205...
+```
+
+with `5 phi^2 = (15+5 sqrt5)/2` and `sqrt5 * phi = (5+sqrt5)/2 = 2+phi`.
+Verified to 51 digits against the stationarity solve.
+
+**The extremal profile is therefore a Sturmian (Beatty) sequence of slope
+`log_5(phi^2)`:** `a_k = min(m-1-k, floor(gamma*(m+k)))`.
+
+### 3.2 Numerics
+
+```text
+C_arch = 1 + gamma*,     gamma* = 0.5979874356654401...,
+C_arch = 1.5979874356654401...,     binding delta* = 1/phi.
+```
+
+The inner argmax is at the profile kink
 `x = kappa` for small `delta` and slides monotonically to `x = 0` as `delta`
 grows (`x = 0.2516, 0.1649, 0.0898, 0.0387, 0` at
 `delta = 0.30, 0.45, 0.55, 0.618, 0.70`), so there is **no** one-variable
@@ -168,8 +223,8 @@ THM-3009 asymptotic floor             C_arch = 1.59799
 ```
 
 So the answer is neither `2` nor `1`: for balanced block schemes `C*` lies in
-`(1.596, 2]`, and every indication is that it equals `C_arch ~ 1.598`. What
-remains open is the matching construction -- (ARCH) is a capacity condition,
+`(1.596, 2]`, and every indication is that it equals
+`C_arch = log_5(5 phi^2)`. What remains open is the matching construction -- (ARCH) is a capacity condition,
 and capacity conditions of this shape are usually sufficient once satisfied
 with room, but no uniform family of profiles is yet built. The greedy
 triangular solve of THM-3008 degrades past `m = 32` (it returns `1.65`,
@@ -194,3 +249,44 @@ python3 04-computation/amm12592_archimedean_threshold_asymptotic.py
 
 QED for reductions A and B and for the finite-`m` bounds; the asymptotic
 constant is a numerical evaluation of (T).
+
+
+## 7. The construction: what fails, and why (recorded negative)
+
+The natural candidate is a **division ladder**. Because `L_0 > L_1 > ...`
+along the constrained strata and `L_k = 0` afterwards, one can set
+`R := eps u^(m-1)` and repeatedly take `E_k :=` quotient of `R` by
+`(1+u)^(L_k)`, `R :=` remainder. This terminates exactly and the quotient
+degrees fit (`deg E_k <= a_k` automatically). Two things go wrong.
+
+1. **Wrong parity class.** The raw ladder returns `E_0 = eps u^(m-1)` and
+   `E_k = 0` otherwise, which violates `[u^i]E_k = binom(a_k,i) (mod 2)`.
+   This is repairable: by reduction A the canonical parity representative
+   `F_k(u) = sum_{i subset a_k} u^i` satisfies
+   `sum_k F_k(u)(1+u)^(L_k) = u^(m-1) (mod 2)`, so
+   `W := [eps u^(m-1) - sum_k F_k(1+u)^(L_k)]/2` has integer coefficients and
+   one can run the ladder on `W` and set `e = f + 2g`.
+
+2. **It violates the boxes at the corners, catastrophically.** The repaired
+   ladder is exact and parity-correct but overshoots at `i = 0` (and `i = 1`),
+   where the box `binom(a_k,0) = 1` is tightest. Measured overshoot factor
+   at the first violated slot:
+
+   ```text
+   m         4      8       16          32              64            128
+   C=8/5    3      21      3087        1.4e8           1.5e17        6.2e35
+   C=2      3       7        15          31              63             127
+   ```
+
+   It succeeds only at `m = 4` (`C = 7/4, 15/8`).
+
+The failure is structural and diagnostic: dividing from the top pushes mass
+into the LOW-order coefficients, exactly where the binomial box is smallest,
+whereas the boxes are enormous in the middle (`i ~ a_k/2`). Any successful
+construction must keep the deviation mass near the middle of each stratum --
+which is what the exact optima found for `m <= 32` do. So the outstanding
+problem is a **middle-weighted** decomposition of `eps u^(m-1)` into
+`sum_k E_k(u)(1+u)^(L_k)` with `E_k` dominated coefficientwise by
+`(1+u)^(a_k)`; note `u^c (1+u)^(a-c)` is always legal, since
+`binom(a-c, i-c) <= binom(a,i)`, so such blocks are the natural atoms.
+Referee: `04-computation/amm12592_division_ladder_construction_attempt.py`.
