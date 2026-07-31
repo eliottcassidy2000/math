@@ -2,8 +2,8 @@ LRC14 projected k=3 z1=297 ray/status and located-torsion closure
 ray_source_sha256=2ef5e0639354c38b13e17e41f91acb4143c7f60973295b0e2dd0f57eb8f38db2
 atlas_source_sha256=2af6d96882f336a409a8657070ed76a75c09a53b3789101b83103b051e864ded
 atlas_output_sha256=cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda
-upstream_z298_source_sha256=3290aa012f0569eaebce599b06a36854a23929b9f50d281c4504b89e5dd2be54
-upstream_z298_output_sha256=f6119ba5af9c76e6c8884ed5eeb01e7d06b9a1b9039d9563ed00f2fc509effaf
+upstream_z298_source_sha256=1e06537c7a9f194b93c6913ed87559027e18104f46bfad4347aa964cfe6b29f2
+upstream_z298_output_sha256=2a5845c36712c5b91991bed27ddf578150e11b73fe61972494618765e3c476ef
 scope=seven exact z297 scalar-atlas body rows;three distinct later nonaligned labels;no finite label horizon
 projected_high_gate=each pinned atlas row is HIGH-TAIL;first=297<floor(13L/132)+1;therefore at least one later label is high
 ray_law=(z+L)delta(z+L)=zdelta(z);all arbitrarily large high labels reduced to finitely many unit directions
@@ -175,5 +175,5 @@ CASE;E=(2, 8, 10, 11, 12, 14);row=((3920, 4620, 5390, 129360), 129360, ((4620, 3
 atlas_exact_check=z297 rows:7;z295..296 empty;next occupied z294 with1 body
 ledger_decrement=375765-7=375758;decrement counts body rows,not 71 quotient states
 conclusion=all seven projected k3 z1=297 body rows are empty;with pinned z298 closure,projected k3 cap<=294
-semantic_sha256=21df96426867c5a09a6a56d6de536b3fe5d2b9b57d2167fed40166c546557a9c
+semantic_sha256=52e3c73b20f55b8126142b19fad194a84b584eb9f34ad40c82f54f561344179f
 all_exact_controls=PASS

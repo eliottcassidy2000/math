@@ -1,6 +1,6 @@
 LRC14 projected k=3 z1=294 through z1=276 exact ray/status and located-torsion descent
-z297_source_sha256=6147066a29e20145bec47d87f2eb1bb054fa5e6ffeaa78e977affe2796e1a0a0
-z297_output_sha256=7b7da4228c105847d482f22b54d27beeea237a61758c3295f71cb5584aedfa25
+z297_source_sha256=286c7a2eef8c4ce498a7ff3b6c768e97f56a84ef5ed285a1eb93a3d70474bc36
+z297_output_sha256=18844be32646062ae4299b037c5eca48a7d52a64a967a0618b16aa0a442a7015
 atlas_output_sha256=cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda
 scope=all 45 exact scalar-atlas body rows at occupied heights 294,291,288,287,286,285,278,276;no finite label horizon
 level_totals={294: (2, 0, 2, 0), 291: (3, 3, 0, 0), 288: (439, 247, 192, 0), 287: (6, 0, 6, 0), 286: (354, 154, 192, 8), 285: (16, 7, 9, 0), 278: (15, 0, 15, 0), 276: (714, 248, 466, 0)}
@@ -78,5 +78,5 @@ CASE;z1=286;E=(1, 8, 10, 11, 12, 14);row=((4620, 5390, 5880, 43120), 43120, ((46
 atlas_exact_check=heights293,292,290,289,284..279,277 empty;next occupied z275 with10 bodies
 ledger_decrement=375758-45=375713;decrement counts atlas body rows,not quotient states
 conclusion=all projected k3 rows at occupied heights294..276 are empty;with pinned z297 closure,projected k3 cap<=275;next exact frontier=275
-semantic_sha256=a553a7e6717d3d41a8bdc3b8e799e5378a17bac27c2e6c40c24265f2a28ab8e8
+semantic_sha256=2a518b841970c6150e102b00312ba8360b6413a25ba6de428f5e61bf4f198d7b
 all_exact_controls=PASS

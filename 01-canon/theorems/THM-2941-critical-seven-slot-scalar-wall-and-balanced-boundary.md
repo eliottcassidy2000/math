@@ -12,7 +12,7 @@ status: >
   common-status, exact-packet, forced-high-ray, antipodal-phase,
   finite-low-pair torsion, torsion-density pigeonhole, scalar-splice, and
   status-descent addenda improve the k=2/k=3 first-drift caps from 2142/380
-  to 1724/275.
+  to 1724/270.
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -37,6 +37,7 @@ related:
   - THM-1176-seven-wall-slow-gap-harmonic-crowding
   - THM-1221-seven-wall-strict-spectrum-hunter-floor
   - THM-2184-two-scale-tail-continuation-profile
+  - THM-2979-projected-k3-z275-ten-body-status-and-located-torsion-closure
 verification:
   - 04-computation/lrc14_j7_critical_scalar_wall_balanced_boundary_thm2941.py
   - 05-knowledge/results/lrc14_j7_critical_scalar_wall_balanced_boundary_thm2941.out
@@ -110,6 +111,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_k3_z297_ray_status_torsion_closure_thm2941.out
   - 04-computation/lrc14_j7_k3_z294_to_z276_ray_status_torsion_descent_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z294_to_z276_ray_status_torsion_descent_thm2941.out
+  - 04-computation/lrc14_j7_k3_z275_to_z272_septimal_torsion_descent_thm2941.py
+  - 05-knowledge/results/lrc14_j7_k3_z275_to_z272_septimal_torsion_descent_thm2941.out
   - 04-computation/lrc14_j7_k3_z324_located_two_cell_direct_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_z324_located_two_cell_direct_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_scalar_band_2004_2142_thm2941.py
@@ -1500,25 +1503,65 @@ cd50c3e7c9c766160eb7167b85416fd5e11fb5680d1b27c500840021bfc4de46.
 The `z_1=297` torsion-density source/output/semantic hashes are
 
 ```text
-f4464e01f0ada1515510a7d59b00582db3d677dd2a91b25407d25702d204e4e5
-a0de530aefe273ff74a5494867ca31d29d00d66811173cbfbeaadbfcab99e421
-1a4d141dc2dfc49fc0b15b1ec7ba7f4f637827985b3b946f5f367960aa0cbee6.
+286c7a2eef8c4ce498a7ff3b6c768e97f56a84ef5ed285a1eb93a3d70474bc36
+18844be32646062ae4299b037c5eca48a7d52a64a967a0618b16aa0a442a7015
+52e3c73b20f55b8126142b19fad194a84b584eb9f34ad40c82f54f561344179f.
 ```
 
 The `z_1=294` through `276` descent source/output/semantic hashes are
 
 ```text
-f4d7292d5f3ce1b6f10f65706c15457490058a3dc59823e8c176066024307309
-f709b8594af9e506f1a6028c9263c743b6340086deb21d41fd28994aa3e2aad7
-cb202da83bb1b9b419576c1fb1ed7589d2a25d802f55f1845e0c2023f4f5e644.
+e5eff0899a89b99187bf9dfbb1ac8da40ad9d5f021079771020af7cef43e5114
+ad5e01735ca9591c7161b75bb801cd011c6fc24d69f791a004e041ccb85ea075
+2a518b841970c6150e102b00312ba8360b6413a25ba6de428f5e61bf4f198d7b.
+```
+
+### The `z_1=275` septimal closure and the `274..272` status addendum
+
+THM-2979 closes the ten rows at `z_1=275`.  Their `2,033` attained states
+split as `273` crude capacity kills, `1,695` exact common-status kills, and
+`65` one-high terminals on five bodies.  In every terminal case the complete
+fixed-safe cell count is greater than `L/7` and the high denominator is
+divisible by seven.  Distinct safe residues therefore exceed `d/7`; two lie
+in one coset modulo `d/7` and have exact order seven.  Primitive unit rays
+preserve that order, so their strict radius-`1/14` danger arcs are disjoint.
+This gives the scoped THM-2979 cap `z_1<=274` and ledger `375,703`.
+
+The same exact referee separately evaluates all `29` subsequent occupied
+rows at `274,273,272`.  Their level profiles are
+
+```text
+274: 67  = 1 crude + 66 status + 0 residual
+273: 175 = 96 crude + 79 status + 0 residual
+272: 4   = 0 crude + 4 status + 0 residual.             (25q4)
+```
+
+Thus the lower addendum contains `246=97+149` states and no terminal packet;
+all `149` common-status exclusions are independently checked exact rational
+Farkas contradictions.  Height `271` is empty and the next occupied atlas
+height is `270`, with `26` bodies.  Combining this addendum with THM-2979
+lowers the projected `k=3` cap and ledger to
+
+```text
+z_1<=270,                 375,703-29=375,674.             (25q5)
+```
+
+This is still only the projected `k=3` necessary sector and is not LRC(14).
+The combined referee source/output/profile/semantic hashes are
+
+```text
+44d9369fe3151d78f5a281cb8ecc26d859807b635980552d8e5c95c0b5ff826e
+d31d9ec1f45a3aa5d087a2b8724fc75480b0d0b4d2b99e544832b0947d408b67
+1139218bdb4e9d19a3a64b22103030ef682e835803f5caf07c1659b0ce788f5b
+0960c65f29707e6ce1b295f35f0118960ce420c1d27df58365b91999c1faca9b.
 ```
 
 The physical reconciliation source/output pairs are
-`d209433bae4411e1a9597cb60d792b0c18897dffc333e60baaad5abcdaf6cf29 /
-6f24829835f1a9eb2f3afcc668ccfa13d21320bb53b27fb89e30911bd20569ab`
+`4b972500c6772a11e9ebf905e28e9324a736323ea9a4be6e66714b24affd6dc6 /
+e39d4be078a7c69a50860de138378f963926a3a68b7b5582f606302f4e1b7f75`
 and
-`ac7d5e5dfda7451f903c1f79bff1422964225b8a2f1400b2f3e53b41b476b776 /
-554f73032b2e72f324ee83c2ff751b28d58ccb2a3d367b96ee42166dd2086005`.
+`a0b3c0cafbcdef961f444b4a776884ad8e3f897761ba3b2c7df6a2a0a6d3645f /
+c9772f8014b5b68ed7581a68b4365e167da306d72eef6c1e5124037597b886e2`.
 The `z_1=324` frontier source/output pair is
 `7eaaf551d2bd4ae386e2db4452edac7d30c25f7fc67b71967e48454d688bf78e /
 db3c5c68c4aa2f61584ef91dd2171901888270edbf17e860d40f16a64d3a9242`;
