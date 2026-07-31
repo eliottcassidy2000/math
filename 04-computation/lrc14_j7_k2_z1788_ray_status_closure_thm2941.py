@@ -38,16 +38,16 @@ OUTPUT_PATH = (
     / "lrc14_j7_k2_z1788_ray_status_closure_thm2941.out"
 )
 EXPECTED_PARENT_SOURCE_SHA256 = (
-    "c80c152300e60a2830d7cff4af1ac104d0f7ca1dfea978033dbaf03a11809d5b"
+    "0e790d585e9cd12889bc645bdf9699d3cd7a20db3c6bf70f353f026bf94feb40"
 )
 EXPECTED_PARENT_OUTPUT_SHA256 = (
-    "b03b46a6c438773ef1c433c435828a5426e18c998999cbee543541904b85f20b"
+    "3edf368964e36912874582b08168dcf0f7d8ee858e96f71b4ec81d8492e37fda"
 )
 EXPECTED_PROFILE_SHA256 = (
-    "faf85ab98de47cf4a32c9fc019356739b81c95d2712ef10ddd30aab63f40dbe0"
+    "0b712c278ece11c5ab94fd1034ce5194eac10328557da6d2cddfb432fabce714"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "16bef50e606fab62abb7e3d9737be4ebc93f466ae5847c570dd0e975631556a1"
+    "03538961380ce57e54b86501818efd6442adeb479d1566b3a4e11abd39914c49"
 )
 
 CASE = (1788, (1, 4, 8, 10, 12, 14))
@@ -56,9 +56,10 @@ EXPECTED_COUNTS = (39, 19, 20, 0)
 EXPECTED_STAGE_SHA256 = (
     "2715b8e5c1d0c60676548d5890bfed0cf9e74585b4595cfe8c523ab5af6c470f",
     "b7f971d2ccafdb7329e6d2941025c7edc80a480ce588a5cb31aed4ca133a2013",
-    "400c7e0575eda1edc440d6c8e64f396a026ac3806ee5e7c8d536d98d76ca0ccb",
+    "04443d44c74ef991bf8473c56faa3de9260747d0f5b25406353ce9bc850c022f",
     "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
 )
+CHECK_EXPECTED_STAGE = True
 EXPECTED_RAY_SHA256 = (
     "276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674"
 )
@@ -124,7 +125,8 @@ def profile():
     ) = P.E.ray_and_status(first, body, carrier, h, lower, L)
     counts = (len(scalar), len(crude_kills), len(status_kills), len(states))
     require(counts == EXPECTED_COUNTS, ("stage counts changed", counts))
-    require(stage_digests == EXPECTED_STAGE_SHA256, "stage digests changed")
+    if CHECK_EXPECTED_STAGE:
+        require(stage_digests == EXPECTED_STAGE_SHA256, "stage digests changed")
     require(ray_digest == EXPECTED_RAY_SHA256, "ray digest changed")
     require(not states, "a common-status state survived")
     return (
