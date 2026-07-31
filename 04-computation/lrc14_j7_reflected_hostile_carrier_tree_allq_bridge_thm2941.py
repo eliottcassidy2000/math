@@ -8,15 +8,18 @@ reflected ray
     E=(1,2,4,9,11,12),  L=5544,
     q=(2Q,Q,Q,Q,Q,2Q),  z_i=q_i L-e_i.                    (1)
 
-The local pair referee gives a pointwise lower bound ``w_ij`` for every
+The pinned local-pair referee gives a pointwise lower bound ``w_ij`` for every
 body-safe cell overlap.  Averaging preserves it, so ``omega_ij>=w_ij`` for
 
     omega_ij = |J|^{-1} sum_(j in J) mu(A_i(j) intersect A_j(j)).
 
 The map loses the address of a repair cell but retains the Hunter forest
 predicate.  The body carrier is the sidecar which recovers low-level overlap.
-On (1), every local translation-free ``w_ij`` is zero, yet the actual carrier
-weights close for every ``Q>=1``.
+On (1), the unequal-level graph is ``K_(2,4)``: it is connected and has a
+spanning tree, but it has no perfect matching.  The carrier certificate uses
+actual same-level as well as unequal-level overlaps and closes for every
+``Q>=1``.  This is a precise topology repair, not a claim that every analytic
+pair floor vanishes uniformly in ``Q``.
 
 The relevant combinatorial object is a spanning tree, not merely a matching.
 For any forest ``T`` and active clause set ``S``,
@@ -143,7 +146,7 @@ OUTPUT = (
 EXPECTED_CARRIER_SOURCE_SHA256 = "5d25a955fe184d6c1a3d8b632b4bbf901dc996ee46ad67c5748836fcc7134404"
 EXPECTED_LOCAL_PAIR_SOURCE_SHA256 = "173b0edc01159be5ae7ec8f2c6a0d7d36bae347c67c8d1592c1f0976af6c1fb5"
 EXPECTED_DILATION_SOURCE_SHA256 = "207131cb3e8d35902c626415ffa2edd3bf51e50e1665291cc45b6fddd5bf44c3"
-EXPECTED_SEMANTIC_SHA256 = "08aa4a394b7eecdb567bd3896aee70dd8193da439ebfe7d0607b8069a3f31b01"
+EXPECTED_SEMANTIC_SHA256 = None  # pinned after the hostile audit replay
 FINITE_MAX_Q = 5
 TENT_FLOOR = F(35, 2976)
 TREE_TARIFF = F(1283, 174096)
@@ -169,6 +172,7 @@ def load(name: str, path: Path):
 
 
 CARRIER = load("hostile_carrier_engine", CARRIER_SOURCE)
+LOCAL_PAIR = load("hostile_carrier_local_pair", LOCAL_PAIR_SOURCE)
 DILATION = load("hostile_carrier_dilation", DILATION_SOURCE)
 E = DILATION.E
 TYPES = DILATION.TYPES
@@ -205,6 +209,22 @@ TREES = tuple(
         }
     )
 )
+
+
+def perfect_matchings(vertices: tuple[int, ...] = tuple(range(6))):
+    if not vertices:
+        return ((),)
+    first = vertices[0]
+    rows = []
+    for position in range(1, len(vertices)):
+        second = vertices[position]
+        rest = vertices[1:position] + vertices[position + 1 :]
+        for tail in perfect_matchings(rest):
+            rows.append(tuple(sorted((canonical_edge(first, second),) + tail)))
+    return tuple(sorted(set(rows)))
+
+
+PERFECT_MATCHINGS = perfect_matchings()
 
 # Labels are indexed by E=(1,2,4,9,11,12).  The event orders below are exactly
 # the three good components proved by the dilation referee's bivariate
@@ -334,12 +354,22 @@ def unit_gap_edge_floor(body: tuple[int, ...], ruler: int, low: int, high: int) 
     require(F(-11, 168) <= delta <= F(11, 168), ("label delta escaped", body, low, high, delta))
     if delta >= 0:
         # G(d+delta)=d/[49(d+delta)], increasing in d.
-        return F(1, 49) / (1 + delta)
+        floor = F(1, 49) / (1 + delta)
+        require(
+            floor == LOCAL_PAIR.minimum_tent_average(1 + delta),
+            ("positive unit-gap floor disagrees with pair theorem", body, low, high),
+        )
+        return floor
     # Here floor(d+delta)=d-1 and frac(d+delta)=1+delta>5/7.
     # The derivative numerator in d is nonnegative on [-11/168,0].
     derivative_numerator = (1 + delta) / 49 - (F(2, 7) + delta) ** 2 / 4
     require(derivative_numerator >= 0, ("negative d-derivative", body, low, high, delta))
-    return (F(2, 7) + delta) ** 2 / (4 * (1 + delta))
+    floor = (F(2, 7) + delta) ** 2 / (4 * (1 + delta))
+    require(
+        floor == LOCAL_PAIR.minimum_tent_average(1 + delta),
+        ("negative unit-gap floor disagrees with pair theorem", body, low, high),
+    )
+    return floor
 
 
 def maximum_floor_tree(body: tuple[int, ...], mask: int):
@@ -444,6 +474,91 @@ def finite_profile(safe_cells: tuple[int, ...], scale: int):
     return scale, average_union, tree_lower, debt, tree_lower - debt
 
 
+def exact_carrier_tree_profile(safe_cells: tuple[int, ...], scale: int):
+    """Independent consequence path using every literal carrier edge weight."""
+    z = labels(scale)
+    singleton_sum = F(6, 7) + epsilon(scale)
+    edge_totals = {edge: F(0) for edge in combinations(range(6), 2)}
+    union_total = F(0)
+    singleton_checks = 0
+    pointwise_hunter_checks = 0
+    for cell in safe_cells:
+        clauses = {
+            index: DILATION.R.merge_intervals(
+                DILATION.R.direct_multiplier_arcs(L, z[index], cell)
+            )
+            for index in range(6)
+        }
+        literal_singleton = sum(
+            (DILATION.R.interval_mass(row) for row in clauses.values()),
+            F(0),
+        )
+        require(
+            literal_singleton == singleton_sum,
+            ("carrier singleton law failed", scale, cell, literal_singleton),
+        )
+        singleton_checks += 6
+        union = DILATION.R.interval_mass(
+            DILATION.R.merge_intervals(
+                tuple(piece for row in clauses.values() for piece in row)
+            )
+        )
+        union_total += union
+        cell_weights = {
+            edge: DILATION.R.interval_mass(
+                interval_intersection(clauses[edge[0]], clauses[edge[1]])
+            )
+            for edge in edge_totals
+        }
+        for edge, weight in cell_weights.items():
+            edge_totals[edge] += weight
+        # The abstract 1,296-tree inequality is checked separately through all
+        # active masks.  Here one fixed, non-star tree is also tested against
+        # every literal cell as a direct geometry-to-combinatorics control.
+        require(
+            union + sum((cell_weights[edge] for edge in ADDRESS_TREE), F(0))
+            <= literal_singleton,
+            ("literal cell tree-Hunter failed", scale, cell, ADDRESS_TREE),
+        )
+        pointwise_hunter_checks += 1
+
+    cell_count = len(safe_cells)
+    average_union = union_total / cell_count
+    carrier_weights = {
+        edge: total / cell_count for edge, total in edge_totals.items()
+    }
+    pair_total = sum(carrier_weights.values(), F(0))
+    tree_rows = tuple(
+        (sum((carrier_weights[edge] for edge in tree), F(0)), tree)
+        for tree in TREES
+    )
+    best_weight, best_tree = max(tree_rows)
+    cayley_average = sum((weight for weight, _ in tree_rows), F(0)) / len(TREES)
+    require(cayley_average == pair_total / 3, ("Cayley average changed", scale))
+    require(
+        pair_total >= singleton_sum - average_union,
+        ("literal pair overcount failed", scale, pair_total, average_union),
+    )
+    require(
+        average_union + best_weight <= singleton_sum,
+        ("averaged tree-Hunter failed", scale, average_union, best_weight),
+    )
+    debt = epsilon(scale)
+    require(best_weight > debt, ("literal carrier tree did not close", scale, best_weight, debt))
+    return (
+        scale,
+        average_union,
+        pair_total,
+        cayley_average,
+        best_tree,
+        best_weight,
+        debt,
+        best_weight - debt,
+        singleton_checks,
+        pointwise_hunter_checks,
+    )
+
+
 def addressed_control(safe_cells: tuple[int, ...], scale: int):
     z = labels(scale)
     clauses = {
@@ -514,9 +629,26 @@ def main() -> None:
     require(E == (1, 2, 4, 9, 11, 12), ("hostile body changed", E))
     require(TYPES == (2, 1, 1, 1, 1, 2), ("type vector changed", TYPES))
     require(L == 14 * lcm(*E) == 5544, ("hostile ruler changed", L))
+    require(LOCAL_PAIR.TENT_FLOOR == TENT_FLOOR, "local-pair tent floor changed")
+    require(
+        LOCAL_PAIR.PAIR_CLEAN_LEVEL(1) == 413,
+        "local-pair nearest-level control changed",
+    )
     require(len(TREES) == 6**4 == 1296, ("Cayley tree count changed", len(TREES)))
     require(all(len(tree) == 5 for tree in TREES), "tree edge count changed")
+    require(len(PERFECT_MATCHINGS) == 15, ("K6 perfect-matching count changed", len(PERFECT_MATCHINGS)))
     require(ADDRESS_TREE in TREES, ("address tree missing from Cayley ledger", ADDRESS_TREE))
+    hostile_levels = TYPES
+    require(unequal_level_graph_connected(hostile_levels), "hostile unequal-level graph disconnected")
+    unequal_hostile_matchings = tuple(
+        matching
+        for matching in PERFECT_MATCHINGS
+        if all(hostile_levels[i] != hostile_levels[j] for i, j in matching)
+    )
+    require(
+        not unequal_hostile_matchings,
+        ("hostile K(2,4) unexpectedly has an unequal perfect matching", unequal_hostile_matchings),
+    )
     edge_multiplicities = tuple(
         (edge, sum(edge in tree for tree in TREES))
         for edge in combinations(range(6), 2)
@@ -754,6 +886,23 @@ def main() -> None:
         F(9, 2) * label_tax + F(1, 39)
     ) / (5 * worst_gap_floor(1))
     require(gap_constant == F(330328, 17797), ("gap-tail constant changed", gap_constant))
+    # Universal (not sampled) sign gates behind the gap-sensitive cone.  On
+    # delta in [-a,0], the derivative numerator of G(d+delta) is
+    # d(98delta+24)+49delta^2; it increases in delta and is positive already
+    # at (d,delta)=(1,-a).  The remaining forward differences have the
+    # displayed coefficient signs for every integer d>=1.
+    require(
+        24 - 98 * MAX_LABEL_DELTA + 49 * MAX_LABEL_DELTA**2 > 0,
+        "negative-delta universal derivative gate failed",
+    )
+    require(
+        387_072 + 72_912 - 146_795 > 0,
+        "d/g-star universal monotonicity gate failed",
+    )
+    require(
+        all(value > 0 for value in (2_654_208, 499_968, 161_024_765)),
+        "R(D)-221D coefficient sign gate failed",
+    )
     gap_digest = hashlib.sha256()
     for gap in (1, 2, 3, 7, 64, 1000):
         floor = worst_gap_floor(gap)
@@ -901,6 +1050,17 @@ def main() -> None:
         for scale in range(1, FINITE_MAX_Q + 1)
     )
     minimum = min((row[4], row[0]) for row in finite_rows)
+    literal_carrier_rows = tuple(
+        exact_carrier_tree_profile(safe_cells, scale)
+        for scale in range(1, FINITE_MAX_Q + 1)
+    )
+    require(
+        all(exact[1] == lower[1] for exact, lower in zip(literal_carrier_rows, finite_rows)),
+        "literal carrier and direct average-union routes differ",
+    )
+    literal_carrier_digest = hashlib.sha256(
+        repr(literal_carrier_rows).encode()
+    ).hexdigest()
     addressed_rows = tuple(
         addressed_control(safe_cells, scale)
         for scale in (1, 5, 6, 64)
@@ -915,6 +1075,8 @@ def main() -> None:
         carrier,
         carrier_mass,
         TREES,
+        PERFECT_MATCHINGS,
+        unequal_hostile_matchings,
         edge_multiplicities,
         forest_subset_checks,
         ADDRESS_TREE,
@@ -960,6 +1122,8 @@ def main() -> None:
         threshold_product,
         finite_rows,
         minimum,
+        literal_carrier_rows,
+        literal_carrier_digest,
         addressed_rows,
     )
     semantic = hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
@@ -985,7 +1149,7 @@ def main() -> None:
         f"dilation_referee_sha256={sha256(DILATION_SOURCE)}",
         f"body={E};L={L};levels=(2Q,Q,Q,Q,Q,2Q);safe_cells={len(safe_cells)};carrier_mass={qtext(carrier_mass)}",
         "source_to_target=pointwise pair overlap lower bounds w_ij average to omega_ij;carrier omega retains phase occupancy lost by translation-free minima",
-        "hostile_local_behavior=all pointwise analytic w_ij weights vanish;this is NO_CERTIFICATE,not survival",
+        "hostile_matching_topology=unequal-level graph is K_(2,4):connected with spanning trees but no unequal perfect matching;this is NO_CERTIFICATE,not survival",
         "forest_inequality=for active S and forest T,|E(T[S])|<=|S|-1;subtract every tree edge pointwise",
         f"Cayley_ledger=1296 labelled K6 trees;5 edges each;every edge occurs 432 times;tree average=all-pair total/3;forest_subset_checks={forest_subset_checks}",
         f"tree_tariff={qtext(TREE_TARIFF)};identity=5*(35/2976)-1/39=(9/2)*tariff",
@@ -1012,6 +1176,14 @@ def main() -> None:
         lines.append(
             f"FINITE;Q={row[0]};average_union={qtext(row[1])};tree_weight_lower={qtext(row[2])};epsilon={qtext(row[3])};margin={qtext(row[4])}"
         )
+    for row in literal_carrier_rows:
+        lines.append(
+            f"LITERAL_CARRIER;Q={row[0]};average_union={qtext(row[1])};pair_total={qtext(row[2])};"
+            f"cayley_average={qtext(row[3])};best_tree={row[4]};best_weight={qtext(row[5])};"
+            f"epsilon={qtext(row[6])};margin={qtext(row[7])};singleton_checks={row[8]};"
+            f"literal_tree_checks={row[9]}"
+        )
+    lines.append(f"literal_carrier_digest_sha256={literal_carrier_digest}")
     for row in addressed_rows:
         lines.append(
             f"ADDRESS_CONTROL;Q={row[0]};union={qtext(row[2])};pair_total={qtext(row[3])};fixed_tree={row[4]};fixed_weight={qtext(row[5])};best_tree={row[6]};best_weight={qtext(row[7])};carrier_weight={qtext(row[8])}"
