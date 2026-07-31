@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-334 (2026-07-30, projected k3 unit-count simplification) -- a centered bad-band count was applied after translation
+
+- **What was done:** a proposed simplification of the `z_1=270..247`
+  terminal closure used THM-2984's centered bad-band cardinality
+  `beta(d)=2 floor((d-1)/14)+1` after the three aligned coordinates had left
+  an arbitrary local phase translation.  The proposal would have replaced a
+  pair certificate by the test `|S|>beta(d)`.
+- **Minimal witness / first failed implication:** for `d=28`, `beta(28)=3`,
+  but the four residues `S={0,1,2,3}` all lie in the translated open circular
+  interval `(-1/2,7/2)` of length `d/7=4`.  Rotation preserves arc length but
+  not which strict endpoints meet the residue lattice.  The first invalid
+  step was silently recentering a translated open band at the integer zero.
+- **Exact repair / strongest survivor:** an arbitrary translated danger band
+  has the different sharp lattice capacity
+  `kappa(d)=ceil(d/7)`.  THM-2984 now proves this separately and preserves
+  `beta(d)` only for the absolute centered phase.  The projected terminal
+  simplification still works because its stronger deterministic count is
+  `|S|>alpha`, where `alpha=d/R`, `R|d`, and `R<=7`; hence
+  `alpha>=ceil(d/7)`.  No pair-selection policy is required, but the replay
+  must track `kappa`, not `beta`.
+- **Rule:** every circular-band count must declare its center/translation
+  sidecar.  Centered strict-open endpoint savings do not survive arbitrary
+  rotation; use `beta(d)` only at an absolute phase and `ceil(d/7)` when the
+  local phase is translated.
+
 ## MISTAKE-333 (2026-07-30, THM-2941 `z_1=297` torsion descent) -- the repaired LP-dual digest bug recurred in a new descendant
 
 - **What was done:** the first `z_1=297` located-torsion verifier exactly
