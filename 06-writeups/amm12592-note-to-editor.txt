@@ -344,10 +344,47 @@ profile, not a barrier.  (Verified: the m=4 row reproduces the exhaustive
 and brute-force checked, and the m=32 witness was re-verified in exact
 integer arithmetic.)
 
-(5) THE FRONTIER.  The Floor Lemma gives C* >= 1 and part (a) gives C* <= 2.
-What remark (4) leaves open is uniformity: C* <= sup_r rho(2^r), and our four
-values 1.5000, 1.5556, 1.5625, 1.5714 increase slowly, so we cannot yet
-distinguish a limit near 1.6 from a logarithmic drift back to 2.  We also do
+(5) AND SLOPE 1.5 IS NOT ACHIEVABLE EITHER: A FLOOR NEAR 1.598.  In
+deviation form -- p_{k,i} = (C(a_k,i) + e_{k,i})/2, legitimate because every
+level of (*) is exactly centred (the box total at level t is
+sum_k C(m-1-k,t-k+1) = C(m,t+1) by hockey-stick, exactly twice the target) --
+the system becomes homogeneous:
+
+    sum_k E_k(u)(1+u)^(L_k) = +- u^(m-1),
+    |[u^i]E_k| <= C(a_k,i),   [u^i]E_k = C(a_k,i)  (mod 2).
+
+Two reductions.  MOD 2 THERE IS NO OBSTRUCTION AT ALL: the forced-odd slots
+are the binary submasks i of a_k, sum_{i submask of a} u^i = (1+u)^a over
+F_2, so the forced pattern collapses to sum_k (1+u)^(m-1-k) =
+[(1+u)^m - 1]/u = u^(m-1), the last step exactly because m is a power of two.
+Every coefficient below the top vanishes identically, for every depth
+profile; the one surviving parity is the free label of z = 1^m.  So the
+obstruction is archimedean, not 2-adic.  AT u = -1 it becomes visible:
+substituting u = -1+v turns (1+u)^(L_k) into v^(L_k), and since
+|[v^r]E_k(-1+v)| <= sum_i C(a_k,i)C(i,r) = C(a_k,r) 2^(a_k-r), every profile
+must satisfy
+
+    C(m-1,d) <= sum_{k : 0 <= d-L_k <= a_k} C(a_k, d-L_k) 2^(a_k-d+L_k)
+
+for all d.  This is O(m^2) and monotone, and it certifies
+
+    rho(m) > 1.4000, 1.5000, 1.5556, 1.5610, 1.5753, 1.5828, 1.5887,
+             1.5925, 1.5949, 1.5962   for m = 4, 8, ..., 2048,
+
+so C* > 1.596 for such schemes -- well above the 3/2 that the classical
+argument gives.  Rescaling k = xm, d = (delta)m and taking log_2/m, the
+condition survives iff H(delta) <= max_x [alpha H(r/alpha) + alpha - r], and
+the least admissible slope is
+
+    C_arch = 1.5979874...,   binding delta* = 0.6179...
+
+The finite-m bounds above converge to precisely this constant.
+
+(6) THE FRONTIER.  So C* is neither 2 nor 1: for balanced block schemes it
+lies in (1.596, 2], and both the exact small-m values and the near-tightness
+of the bound in (5) point at C* = C_arch ~ 1.598.  What is missing is the
+matching construction -- a uniform family of profiles -- since the capacity
+condition of (5) is necessary, not yet shown sufficient.  We also do
 not know whether C = 1 (that is, T(n) <= n + D) is impossible, though we
 expect it is.  The question has a
 concrete equivalent form.  A method with deadline T never stops before the

@@ -544,11 +544,34 @@ exhaustive $1\,036\,800$-rule enumeration above, the rules for $m\le16$ were
 rebuilt and brute-force checked, and the $m=32$ witness was re-verified in
 exact integer arithmetic.)
 
-\emph{5. The frontier.}
-Lemma~\ref{lem:floor} gives $C^{*}\ge1$ and part (a) gives $C^{*}\le2$. What
-remark 4 leaves open is uniformity: $C^{*}\le\sup_r\rho(2^r)$, and our four
-values $1.5000,\,1.5556,\,1.5625,\,1.5714$ increase slowly, so we cannot yet
-distinguish a limit near $1.6$ from a logarithmic drift back to $2$. We also
+\emph{5. Nor is slope $3/2$ achievable: a floor near $1.598$.} Put
+$p_{k,i}=\tfrac12(\binom{a_k}i+e_{k,i})$, legitimate because every level is
+exactly centred; the system becomes homogeneous,
+$\sum_kE_k(u)(1+u)^{L_k}=\pm u^{m-1}$ with
+$|[u^i]E_k|\le\binom{a_k}i$ and $[u^i]E_k\equiv\binom{a_k}i\ (2)$. Modulo
+$2$ there is \emph{no} obstruction: the forced-odd slots are the binary
+submasks of $a_k$ and $\sum_{i\subseteq a}u^i=(1+u)^a$ over $\mathbb F_2$,
+so the pattern collapses to $\sum_k(1+u)^{m-1-k}=[(1+u)^m-1]/u=u^{m-1}$,
+the last step exactly because $m$ is a power of two --- every coefficient
+below the top vanishes identically, for every profile. The obstruction is
+archimedean, and appears at $u=-1$: writing $u=-1+v$ turns $(1+u)^{L_k}$
+into $v^{L_k}$, and $|[v^r]E_k(-1+v)|\le\binom{a_k}r2^{a_k-r}$ forces
+\[
+\binom{m-1}{d}\;\le\!\!\sum_{k\,:\,0\le d-L_k\le a_k}\!\!
+\binom{a_k}{d-L_k}2^{\,a_k-d+L_k}\qquad\text{for all }d .
+\]
+This certifies $\rho(m)>1.4000,1.5000,1.5556,1.5610,1.5753,1.5828,1.5887,
+1.5925,1.5949,1.5962$ for $m=4,\dots,2048$, hence $C^{*}>1.596$ --- well
+above the $3/2$ of the classical argument. Rescaling $k=xm$, $d=\delta m$,
+the condition survives iff $H(\delta)\le\max_x[\alpha H(r/\alpha)+\alpha-r]$,
+whose least admissible slope is $C_{\mathrm{arch}}=1.5979874\ldots$ at
+$\delta^{*}=0.6179\ldots$; the finite-$m$ bounds converge to it.
+
+\emph{6. The frontier.}
+So $C^{*}$ is neither $2$ nor $1$: for balanced block schemes it lies in
+$(1.596,2]$, and both the exact small-$m$ values and the near-tightness of
+remark 5 point at $C^{*}=C_{\mathrm{arch}}\approx1.598$. What is missing is
+the matching construction. We also
 do not know whether $C=1$ (that is, $T(n)\le n+D$) is impossible, though we
 expect it is. The question has a
 concrete equivalent form. A method with deadline $T$ never stops before the
