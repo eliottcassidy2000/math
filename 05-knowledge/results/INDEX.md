@@ -307,6 +307,20 @@
   empty, so the projected `k=2` cap is `1615`.  Source/output/profile/semantic
   SHA-256 are `3d8a0a3d...af8a` / `20fdd107...fd2` /
   `555fe793...0793` / `889fbb40...7e67`.
+- `lrc14_j7_k2_z1612_shell_closure_thm2980.py` -> matching `.out`
+  [FINITE-EXACT THM-2980 BOUNDARY INPUT; THM-2980 REMAINS RESERVED].  All
+  `19` rows at `1612` are empty: eight all-label rows close by `843` exact
+  status certificates and `155` projected packet kills, seven high-tail rows
+  are scalar-empty, and four genuine one-high rows close by THM-2984's
+  pointwise complete-section gate.  The latter audit covers `7,094` exact
+  denominator/low-triple classes: `6,751` pass the whole-cell count gate and
+  the remaining `343` pass exact residue counting, with minimum residue
+  surplus `1`.  It deliberately retains `54` zero-supremum classes at
+  denominators `2,4`, and independently matches vectorized and scalar
+  fixed-safe cells.  The empty atlas gap `1613..1615` gives projected `k=2`
+  cap `1611`.  Source/output/profile/section/semantic SHA-256 are
+  `8861a4d0...edb3` / `77c8e4d3...a99b` / `d83d42c0...9a56` /
+  `8eb65444...c51f` / `1e3bf172...e971`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:
