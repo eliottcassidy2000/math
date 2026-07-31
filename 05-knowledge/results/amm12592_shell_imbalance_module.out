@@ -1,0 +1,18 @@
+Can two ADJACENT shells compensate?  (shells m and 2m)
+
+  m=  1: searched 3 vectors, NO nonzero compensating pair
+  m=  2: searched 27 vectors, NO nonzero compensating pair
+  m=  4: searched 91875 vectors, NO nonzero compensating pair
+
+the middle-class bottleneck: |sum_j c_j binom(2m,j)| must be <= 2
+  m=1: no admissible nonzero c with sum c_j = 0
+  m=2: minimum over admissible nonzero c is 0   (at c = [0, -2, 0, 2, 0])   -> OK
+  m=4: minimum over admissible nonzero c is 0   (at c = [0, -4, -6, -4, 0, 4, 6, 4, 0])   -> OK
+
+READING.  The middle composition class of a shell always has exactly
+TWO words (0^M 1^M and 1^M 0^M, THM-3007's cancelling corner pair), so the
+compensating vector may put at most +-2 there.  But c^{(2m)} at the middle is
+sum_j c_j binom(2m,j), a binomially WEIGHTED sum of an even, zero-sum vector,
+and the central binomial weight is the largest in the row.  That is the
+obstruction, and it is the same middle pair that makes ratio-2 blocks work in
+the first place.
