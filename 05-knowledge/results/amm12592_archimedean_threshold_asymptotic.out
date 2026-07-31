@@ -1,0 +1,16 @@
+gamma* = 0.597987
+C_arch = 1 + gamma* = 1.597987
+just above: feasible=True
+just below: feasible=False  worst delta=0.6180 deficit=0.00121
+
+ gamma   C=1+gamma   ARCH survives?   binding delta
+ 0.500     1.5000   False            0.604
+ 0.550     1.5500   False            0.611
+ 0.580     1.5800   False            0.616
+ 0.600     1.6000   True             -
+ 0.620     1.6200   True             -
+ 0.630     1.6300   True             -
+ 0.640     1.6400   True             -
+ 0.650     1.6500   True             -
+ 0.700     1.7000   True             -
+ 0.800     1.8000   True             -

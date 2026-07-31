@@ -21,11 +21,11 @@ output: 05-knowledge/results/amm12592_artanh_certificate_decode_deathstar.out
 
 # HYP-9061 -- the minimal C in the critical-run deadline T(n) <= Cn + D
 
-> **MAJOR UPDATE 2026-07-31 (opus, THM-3005/3006) — "every known rule has
-> `C=2`" is OBSOLETE.** THM-3005: a composition-balanced block `[N,N+l)`
+> **MAJOR UPDATE 2026-07-31 (opus, THM-3007/3006) — "every known rule has
+> `C=2`" is OBSOLETE.** THM-3007: a composition-balanced block `[N,N+l)`
 > exists iff `N` and `N+l` are both powers of two, so the dyadic shell
 > structure is FORCED and no balanced block has ratio below 2 — this closes
-> section 2b's "ratio `rho<2` shell" route outright. But THM-3006 shows that
+> section 2b's "ratio `rho<2` shell" route outright. But THM-3008 shows that
 > block ratio and DEADLINE SLOPE are different: solving the within-block
 > normal form gives exactly fair rules with within-shell ratio
 > `rho(4)=3/2`, `rho(8)=14/9`, `rho(16)=25/16`, `rho(32)<=11/7`, hence

@@ -1,5 +1,5 @@
 ---
-id: THM-3005
+id: THM-3007
 title: "Dyadic block rigidity for critical-run fair extractors"
 status: >
   PROVED + VERIFIED-EXACT. Call [N, N+l) a BLOCK if a fair-coin extractor
@@ -16,14 +16,14 @@ status: >
   This generalizes THM-2160 S6.1 (the l = N case) to the full two-parameter
   family and closes the "shell of ratio below two" route of HYP-9061 sec 2b.
   IMPORTANT SCOPE: it constrains the BLOCK GEOMETRY, not the deadline slope;
-  see THM-3006, which builds balanced block rules of slope well below 2.
+  see THM-3008, which builds balanced block rules of slope well below 2.
 source: opus-2026-07-31-amm12592-writeup
 depends_on: []
 related:
   - THM-2160  # S6.1: composition-exact h-shell extraction iff h is dyadic
   - THM-2225
   - THM-2996  # sharpened half-tail extractor
-  - THM-3006  # within-block deadline profiles; slope below 2
+  - THM-3008  # within-block deadline profiles; slope below 2
   - HYP-9061  # the minimal linear deadline C*
 external:
   - "Elliot Glazer, American Mathematical Monthly Problem 12592 (2026)."
@@ -31,7 +31,7 @@ script: 04-computation/amm12592_dyadic_block_rigidity_thm3005.py
 output: 05-knowledge/results/amm12592_dyadic_block_rigidity_thm3005.out
 ---
 
-# THM-3005 -- balanced blocks are exactly the dyadic intervals
+# THM-3007 -- balanced blocks are exactly the dyadic intervals
 
 Bits are independent with `P(0)=p`, `P(1)=q=1-p`, `0<p<1` unknown; `n` is
 the length of the maximal constant initial run.
@@ -118,7 +118,7 @@ by Lucas's theorem. In particular `N` is a power of two and `N | l`. Then
 
 It constrains the block *geometry*, not the *deadline*. Inside a block
 `[m, 2m)` a rule may decide many critical values long before flip `2m`, and
-THM-3006 exhibits balanced block rules whose worst within-block deadline
+THM-3008 exhibits balanced block rules whose worst within-block deadline
 ratio is `3/2, 14/9, 25/16, 11/7` for `m = 4, 8, 16, 32` -- all far below the
 block ratio `2`. So "balanced blocks have ratio `>= 2`" must NOT be read as
 "balanced schemes have deadline slope `>= 2`"; that inference is false.

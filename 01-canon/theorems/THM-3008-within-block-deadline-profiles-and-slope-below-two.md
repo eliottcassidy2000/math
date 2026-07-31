@@ -1,5 +1,5 @@
 ---
-id: THM-3006
+id: THM-3008
 title: "Within-block deadline profiles and exactly fair extractors of slope below two"
 status: >
   PROVED + VERIFIED-EXACT. Block normal form: a balanced block rule on the
@@ -16,12 +16,12 @@ status: >
   standing expectation (HYP-9061, PROBLEM-LEDGER) that every known/available
   scheme has slope C = 2: the classical 2n, max(2,2n-1), 2n-2 envelopes are
   far from optimal, and the slope-2 barrier is NOT a consequence of the
-  dyadic block geometry of THM-3005. Whether sup_r rho(2^r) < 2 -- which
+  dyadic block geometry of THM-3007. Whether sup_r rho(2^r) < 2 -- which
   would settle the proposer's minimal-C challenge with C* < 2 -- is OPEN;
   the data 1.5000, 1.5556, 1.5625, 1.5714 is increasing but slowly.
 source: opus-2026-07-31-amm12592-writeup
 depends_on:
-  - THM-3005
+  - THM-3007
 related:
   - THM-2160
   - THM-2225
@@ -35,9 +35,9 @@ referee: 04-computation/amm12592_fast_block_referee_thm3006.py
 output: 05-knowledge/results/amm12592_fast_block_referee_thm3006.out
 ---
 
-# THM-3006 -- the within-block deadline profile, and slope below two
+# THM-3008 -- the within-block deadline profile, and slope below two
 
-By THM-3005 every balanced block is dyadic; take the finest shells
+By THM-3007 every balanced block is dyadic; take the finest shells
 `[m, 2m)`, `m = 2^r`. On the branch `X_1 = 0` write the relative tail
 `z = (X_(m+1),...,X_(2m))`, `z != 0`; critical value `n = m+k` iff
 `z = 0^k 1 w` with `w in {0,1}^(m-1-k)`. Balance of the shell is exactly
@@ -149,7 +149,7 @@ Minimality below the stated value is solver-certified only for `m <= 8`.
    THM-2996. The repeated claim that "every known rule has `C = 2`" is
    therefore superseded: the classical schemes simply never optimized the
    within-block profile.
-2. **THM-3005 does not imply slope 2.** Block ratio `>= 2` (THM-3005) and
+2. **THM-3007 does not imply slope 2.** Block ratio `>= 2` (THM-3007) and
    deadline slope `>= 2` are different statements; the second is false at
    every `m` computed here.
 3. **The remaining question is uniformity.** `C* <= sup_r rho(2^r)` if that
