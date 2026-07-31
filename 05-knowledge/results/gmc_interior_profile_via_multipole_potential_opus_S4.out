@@ -1,0 +1,13 @@
+GMC INTERIOR PROFILE via the multipole/log-potential reframe:  g(alpha) = -Phi'''(alpha)
+(uniform root measure; g(0)=curvature 1/3=0.33333 = THM-3000; endpoints = THM-3001)
+   alpha g_pred=-Phi3(a)  g_actual d=1600     k  match
+   0.020         0.34583          0.34478    32  MATCH
+   0.050         0.36598          0.36483    80  MATCH
+   0.125         0.42505          0.42359   200  MATCH
+   0.250         0.56239          0.56011   400  MATCH
+   0.500         1.17179          1.16435   800  MATCH
+   0.750         4.09104          4.03464  1200  MATCH
+   0.900        21.36112         20.53997  1440  MATCH
+  alpha->0: g_pred(0.01)=0.33949 -> curvature 1/3 (far field / fixed edge)
+VERDICT: the open uniform-in-k interior profile is the Legendre-transform third derivative
+of the root charge measure's log-potential. FMM: fixed edge=far field, moving edge=near field.
