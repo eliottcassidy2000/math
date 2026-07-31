@@ -1,0 +1,20 @@
+LRC(14) defect>=7 wall.  Level-3 Bonferroni POSITIVITY route -- REFUTED (klein-S428).
+The inequality  L >= m_E - S1 + S2 - S3  is a correct lower bound, but its RHS is NEGATIVE:
+
+  defect 7: V=[1, 2, 3, 4, 5, 6, 14, 15, 16, 17, 18, 19, 20]
+     m_E=0.29565 S1=0.4248 S2=0.4460 S3=0.3829
+     Bonferroni RHS = m_E-S1+S2-S3 = -0.066049   <-- NEGATIVE (route fails)
+     TRUE L(V)                     = +0.100153   <-- POSITIVE (target survives)
+  defect 8: V=[1, 2, 3, 4, 5, 19, 21, 22, 23, 24, 25, 26, 27]
+     m_E=0.23318 S1=0.3842 S2=0.3410 S3=0.2571
+     Bonferroni RHS = m_E-S1+S2-S3 = -0.067154   <-- NEGATIVE (route fails)
+     TRUE L(V)                     = +0.026427   <-- POSITIVE (target survives)
+  defect 9: V=[3, 6, 9, 12, 30, 33, 36, 38, 39, 42, 48, 51, 54]
+     m_E=0.17839 S1=0.2873 S2=0.2018 S3=0.0974
+     Bonferroni RHS = m_E-S1+S2-S3 = -0.004509   <-- NEGATIVE (route fails)
+     TRUE L(V)                     = +0.017442   <-- POSITIVE (target survives)
+
+census N=19999 (axes: d~U[7,13], small subset of 1..13, large subset of 14..399):
+  Bonferroni RHS <= 0 (route FAILS) on 6/19999 configs  (was invisible at N=3000)
+  worst RHS = -0.01108 at V=[1, 2, 3, 5, 7, 8, 81, 171, 300, 305, 315, 334, 337]
+  but min TRUE L over census = +0.07688 > 0  ==> defect>=7 => gap>3/41 STILL PLAUSIBLE/OPEN
