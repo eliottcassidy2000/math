@@ -9,6 +9,40 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-336 (2026-07-31, merge `f737bbe22922`) -- unresolved conflict markers were committed into PROVED canon
+
+- **What was done:** the merge commit `f737bbe22922` ("Merge branch 'main'")
+  was committed with **unresolved** conflict markers still in five tracked
+  files: `THM-2596`, `THM-2597`, `THM-2598` and the companions
+  `04-computation/jacobian_quartic_v4_resolvent_thm2598.py`,
+  `04-computation/modular_farey_gram_owner_cocycle_thm2596.py`
+  (`35` conflict blocks total).  It was then carried forward through
+  `e4ee2e93710a` onto `origin/main`.
+- **Why it was wrong:** the three theorem files are PROVED canon.  Every reader
+  and every downstream citation between the merge and the repair saw
+  interleaved `<<<<<<<`/`=======`/`>>>>>>>` text with two contradictory status
+  lines in the same frontmatter, and `agents/check_docs.py` failed globally
+  ("tracked files contain merge-conflict markers").  A conflicted PROVED file
+  is worse than a `RESERVED` stub: it *looks* citable.
+- **Minimal witness:** `git grep -lE "^<<<<<<< "` on `origin/main` returned five
+  files; `THM-2598` carried `13` blocks including two different `status:`
+  values (`PROOF-COMPLETE CANDIDATE ... AWAITING INDEPENDENT HOSTILE AUDIT`
+  versus `PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED`).
+- **Exact repair (klein-S428):** the two merge parents were both clean.  Parent
+  `949488f90070` holds the later, audited promotions of exactly these
+  theorems; parent `db42ecbe246e` holds their pre-audit candidate copies, and
+  every line unique to it is superseded status text or prose that the audit
+  rewrote -- no unique mathematics.  The five paths were restored to
+  `949488f90070`, `check_docs.py` was re-run green, and each restored
+  `.md`/`.py` pair was re-hashed against its recorded `script_sha256`
+  (both match).  No other path in the merge was touched.
+- **Rule:** never commit a merge without `git grep -lE "^<<<<<<< "` returning
+  empty, and run `agents/check_docs.py` **before** committing, not after.  When
+  repairing someone else's conflicted canon, do not adjudicate mathematics:
+  check whether one parent is the audited successor of the other, verify no
+  unique content is lost, restore that parent verbatim, re-verify the recorded
+  hashes, and report the exact commands.
+
 ## MISTAKE-335 (2026-07-30, first THM-2991 promotion) -- a late directional turn was called a global leading-edge return
 
 - **What was done:** the first promoted THM-2991 used

@@ -202,8 +202,6 @@ for n in range(2, 41):
             require(mvec(M, triple) == child, "Berggren/parameter intertwining")
             branch_cases += 1
 print(f"Berggren ternary cross-section exact rational cases: {branch_cases}")
-<<<<<<< HEAD
-=======
 
 farey_left = lambda x: x / (1 + x)
 farey_right = lambda x: Fraction(1, 2 - x)
@@ -219,6 +217,5 @@ for n in range(2, 101):
                 "C is the double-left Farey prefix")
         prefix_cases += 1
 print(f"binary/ternary PGL prefix-code exact rational cases: {prefix_cases}")
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 print("all Berggren matrices are I mod 2 and none is order 3: V4/S3 torsor reading fails")
 print("ALL CHECKS PASSED")

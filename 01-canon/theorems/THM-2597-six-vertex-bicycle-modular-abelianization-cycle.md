@@ -2,13 +2,8 @@
 id: THM-2597
 title: "The first six-vertex bicycle is the modular abelianization cycle"
 status: >
-<<<<<<< HEAD
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  In the tile graph K_6 minus its frozen base path, the
-=======
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the tile
   graph K_6 minus its frozen base path, the
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
   unique nonzero bicycle is delta({1,4,5})=delta({2,3,6}), supported on the
   spanning cycle (1,3,5,2,4,6).  It is K_3,3 minus the frozen perfect
   matching and splits into the two derangement perfect matchings.  Its
@@ -29,10 +24,7 @@ depends_on:
 related:
   - THM-648-blue-selfloops-only-at-even-n
   - THM-2587-deep-root-coshift-incidence-wall-and-theta-selector-no-go
-<<<<<<< HEAD
-=======
   - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
   - THM-2596-modular-free-factor-farey-gram-owner-cocycle
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
 external:
@@ -46,15 +38,9 @@ hash_basis: normalized repository blobs (LF)
 
 # THM-2597 -- the first bicycle is an order-six fork
 
-<<<<<<< HEAD
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**  The bicycle, matching, partial-cube, modular, and graceful
-claims have short proofs below.  The tile-mask, isomorphism, Hamiltonian,
-=======
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The bicycle,
 matching, partial-cube, modular, and graceful claims have short proofs
 below.  The tile-mask, isomorphism, Hamiltonian,
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 automorphism, and blue-self-loop claims are finite-exact and reproduced by
 the dependency-free companion.
 
@@ -272,12 +258,8 @@ Modulo two, however, the sum of absolute edge differences equals
 
 ```text
 sum_({u,v} in E) (f(u)+f(v))
-<<<<<<< HEAD
- =sum_v deg(v) f(v)=0,                                   (21)
-=======
  congruent sum_v deg(v) f(v)
  congruent 0                                      (mod 2). (21)
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 ```
 
 because every degree of `C_6` is two.  This contradicts (20).  The
@@ -296,16 +278,6 @@ advances the graceful tree conjecture beyond that example.
 
 ## 6. What does not transfer to LRC
 
-<<<<<<< HEAD
-THM-2587 has six live wall pieces indexed by
-
-```text
-theta in C2  times  {low,middle,high},                     (23)
-```
-
-with each `theta` rail carrying exact census counts `48,154,48`.  Its three-state
-factor is an ordered interval/reflection wall, not a cyclic `C_3` action.
-=======
 THM-2587 has six live wall pieces indexed physically by
 
 ```text
@@ -316,7 +288,6 @@ Here `{0,1}` records two values related by the reflection wall; it is not an
 additive `C_2` action on the LRC carrier.  Each `theta` rail carries exact
 census counts `48,154,48`.  Its three-state factor is an ordered
 interval/reflection wall, not a cyclic `C_3` action.
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 Therefore the shared cardinality six does not identify the LRC selector
 wall with the bicycle `C_6` or with the `S_3` matching completion.
 

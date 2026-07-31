@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
 """Exact companion for THM-2598: quartic V4 resolvent transfer boundary."""
 
-<<<<<<< HEAD
-=======
 from itertools import permutations
 
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 import sympy as sp
 
 
@@ -101,10 +98,6 @@ zero("first biquadratic quotient algebra is split",
 zero("second biquadratic quotient algebra is split",
      (U**3 - 28*U**2 + 160*U) - U*(U - 8)*(U - 20))
 
-<<<<<<< HEAD
-# Tame inertia ledger: action on four roots and on three pairings.
-=======
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 pairings = (
     frozenset((frozenset((0, 1)), frozenset((2, 3)))),
     frozenset((frozenset((0, 2)), frozenset((1, 3)))),
@@ -116,8 +109,6 @@ def apply_pairing(perm, pairing):
     return frozenset(frozenset((perm[a], perm[b])) for a, b in pairing)
 
 
-<<<<<<< HEAD
-=======
 # Exhaustive transitive-subgroup and field/deck typing.  Permutations are
 # tuples mapping old labels to new labels; composition is left after right.
 ID4 = (0, 1, 2, 3)
@@ -295,7 +286,6 @@ for name, group in (("A4", A4), ("S4", S4)):
             and generated(*(tuple(H_root | H_matching))) == group)
 
 # Tame inertia ledger: action on four roots and on three pairings.
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 def cycle_count(perm):
     seen = set()
     count = 0
@@ -338,12 +328,9 @@ zero("double-transposition family quartic discriminant", sp.discriminant(fst, T)
 zero("double-transposition family resolvent discriminant", sp.discriminant(Rst, W) - Dst)
 zero("t=0 resolvent is one simple plus one double root",
      Rst.subs(t, 0) - (W + 2)**2*(W - 2))
-<<<<<<< HEAD
-=======
 zero("normalized double-transposition chart has separable residual quadratic",
      sp.expand(Rst.subs(W, -2 + t*Z)/t**2)
      - (t*Z**3 - 4*Z**2 + 4*s*Z - 1))
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 
 special = sp.Poly(fst.subs({s: 2, t: 1}), T)
 degrees_mod2 = sorted(poly.degree() for poly, exponent in sp.factor_list(special, modulus=2)[1]
