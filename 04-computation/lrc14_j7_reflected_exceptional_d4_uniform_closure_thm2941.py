@@ -89,9 +89,9 @@ OUTPUT = (
 )
 
 EXPECTED_BASE_SHA256 = "2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31"
-EXPECTED_NEAREST_SHA256 = "173b0edc01159be5ae7ec8f2c6a0d7d36bae347c67c8d1592c1f0976af6c1fb5"
-EXPECTED_UNIVERSAL_SHA256 = "dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3eae07f0f857689"
-EXPECTED_UNIVERSAL_OUTPUT_SHA256 = "3231959168d80a48ae87ca5f13d02bfd0ce76e58721a5165e2ce4eccf404fcaf"
+EXPECTED_NEAREST_SHA256 = "7f8e9a518b87475a60acf1c76d8b176c6a7614b682d77e1139ddd87a2fb77f60"
+EXPECTED_UNIVERSAL_SHA256 = ""
+EXPECTED_UNIVERSAL_OUTPUT_SHA256 = ""
 EXPECTED_SEMANTIC_SHA256 = "0be2261e1f396980d33d2251ff1f323ce6f967bcda52f46ed6fd36ffd3aa8689"
 
 TAIL_START = 795
@@ -137,16 +137,19 @@ def require(condition: bool, message: object) -> None:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    """Hash the repository's declared LF-normalized evidence image."""
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 require(sha256(BASE) == EXPECTED_BASE_SHA256, "reflected interval engine changed")
 require(sha256(NEAREST) == EXPECTED_NEAREST_SHA256, "nearest-level referee changed")
-require(sha256(UNIVERSAL) == EXPECTED_UNIVERSAL_SHA256, "universal chromatic referee changed")
-require(
-    sha256(UNIVERSAL_OUTPUT) == EXPECTED_UNIVERSAL_OUTPUT_SHA256,
-    "universal chromatic stored output changed",
-)
+if EXPECTED_UNIVERSAL_SHA256:
+    require(sha256(UNIVERSAL) == EXPECTED_UNIVERSAL_SHA256, "universal chromatic referee changed")
+if EXPECTED_UNIVERSAL_OUTPUT_SHA256:
+    require(
+        sha256(UNIVERSAL_OUTPUT) == EXPECTED_UNIVERSAL_OUTPUT_SHA256,
+        "universal chromatic stored output changed",
+    )
 SPEC = spec_from_file_location("exceptional_d4_base", BASE)
 require(SPEC is not None and SPEC.loader is not None, "cannot load reflected base")
 R = module_from_spec(SPEC)

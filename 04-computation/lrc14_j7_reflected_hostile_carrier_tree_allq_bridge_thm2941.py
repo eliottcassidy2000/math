@@ -149,8 +149,8 @@ OUTPUT = (
     / "lrc14_j7_reflected_hostile_carrier_tree_allq_bridge_thm2941.out"
 )
 EXPECTED_CARRIER_SOURCE_SHA256 = "5d25a955fe184d6c1a3d8b632b4bbf901dc996ee46ad67c5748836fcc7134404"
-EXPECTED_LOCAL_PAIR_SOURCE_SHA256 = "173b0edc01159be5ae7ec8f2c6a0d7d36bae347c67c8d1592c1f0976af6c1fb5"
-EXPECTED_DILATION_SOURCE_SHA256 = "207131cb3e8d35902c626415ffa2edd3bf51e50e1665291cc45b6fddd5bf44c3"
+EXPECTED_LOCAL_PAIR_SOURCE_SHA256 = "7f8e9a518b87475a60acf1c76d8b176c6a7614b682d77e1139ddd87a2fb77f60"
+EXPECTED_DILATION_SOURCE_SHA256 = "92e5caaf0b944a4e320059e2992870b1f52c7a9655a9031cec9744d80f25bc09"
 EXPECTED_SEMANTIC_SHA256 = None  # pinned after the hostile audit replay
 FINITE_MAX_Q = 5
 TENT_FLOOR = F(35, 2976)
@@ -165,7 +165,8 @@ def require(condition: bool, message: object) -> None:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    """Hash the repository's declared LF-normalized evidence image."""
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def load(name: str, path: Path):

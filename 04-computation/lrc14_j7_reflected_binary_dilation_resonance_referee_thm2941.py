@@ -131,7 +131,8 @@ def require(condition: bool, message: object) -> None:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    """Hash the repository's declared LF-normalized evidence image."""
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 require(sha256(BASE) == EXPECTED_BASE_SHA256, "all-q reflected engine changed")
