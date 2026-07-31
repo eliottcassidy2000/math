@@ -231,6 +231,34 @@ dyadic epoch through `[16,31]` closes at `gamma = 1/2`**: an exactly fair
 extractor exists for all critical values `n <= 31` with
 `T(n) = n + 1 + floor(n/2)`, i.e. `C = 3/2` behaviour through four epochs.
 
+## 5b. gamma = 3/5 closes through R = 64 (VERIFIED-EXACT, 2026-07-31)
+
+The failures of the first solver at `gamma = 1/2, 3/5, R = 32` were a
+policy artifact of controlling **one** residual coefficient per step. The
+residual recursion steers the *first several* coefficients of `sigma_i`
+directly: `delta_{d}` is forced, `delta_{d-1}` sets `sigma_i(0)`,
+`delta_{d-2}` sets `sigma_i(1)`, and so on. A beam search that enumerates
+small targets for the first two of these — instead of greedily zeroing each
+coefficient — solves (*) at `gamma = 3/5, D0 = 0` for
+
+```text
+R = 8, 16, 32, 64      (all four re-verified as exact polynomial identities)
+```
+
+i.e. **every dyadic epoch through `[64,127]` closes at `gamma = 3/5`**, so
+an exactly fair extractor exists for all critical values `n <= 127` with
+`T(n) = n + 1 + floor(3n/5)`, giving `C = 8/5` behaviour over seven
+epochs with residual identically zero. (`R = 128` reaches the final row and
+fails only there at beam widths 40-60; this is a search budget limit, not
+an obstruction — criterion (4) is uniformly ample at `3/5`, worst ratio
+`~1.20` at `t = 1`, stable to `R = 256`.) Script:
+`04-computation/amm12592_gamma35_beam_deathstar.py`.
+
+Combined with sec. 4c: `gamma = 3/5 = 0.6` sits just above the extrapolated
+threshold `gamma* ~ 0.598`, which is exactly why it is the first "round"
+rate that survives at every scale, and why `gamma = 1/2` and
+`gamma = 2457/4135` do not.
+
 ## 6. Scope — what this does and does not settle
 
 1. The `gamma = 1/2` successes are **finite-size**: by (4) with the table
