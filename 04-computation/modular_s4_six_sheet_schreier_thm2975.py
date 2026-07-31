@@ -2,8 +2,9 @@
 
 Compare the marked C2*C3 -> S4 actions on the six edges of K4 and the six
 oriented Hamilton cycles.  Audit their discriminant-subgroup restriction,
-Bass--Serre incidence shadows, local V4 frame, chiral A4 octahedron,
-partial-cube/graceful/tournament boundaries, and finite-kernel hostiles.
+Bass--Serre incidence shadows and orbifold signatures, local V4 frame,
+chiral A4 octahedron, partial-cube/graceful/tournament boundaries, and
+finite-kernel hostiles.
 """
 
 from itertools import combinations, permutations
@@ -744,6 +745,50 @@ edge_graceful = graceful_labeling(6, tuple(sorted(edge_graph)))
 or_graceful = graceful_labeling(6, tuple(sorted(or_graph)))
 common_graceful = graceful_labeling(6, tuple(sorted(common_graph)))
 
+# Modular-orbifold signatures of the two index-six sheet stabilizers.  The
+# standard parabolic is T=a^{-1}b=ab because a is an involution.  A fixed
+# point of a (respectively b) is an elliptic point of order two
+# (respectively three), and the T-cycle lengths are the cusp widths.
+edge_parabolic = compose(edge_a, edge_b)
+or_parabolic = compose(or_a, or_b)
+edge_cusp_widths = tuple(sorted(len(cycle) for cycle in cycles_of(edge_parabolic)))
+or_cusp_widths = tuple(sorted(len(cycle) for cycle in cycles_of(or_parabolic)))
+edge_e2 = sum(edge_a[i] == i for i in range(6))
+or_e2 = sum(or_a[i] == i for i in range(6))
+edge_e3 = sum(edge_b[i] == i for i in range(6))
+or_e3 = sum(or_b[i] == i for i in range(6))
+
+
+def twelve_times_genus(index, e2, e3, cusp_count):
+    """Return 12g from the finite-index PSL2(Z) signature formula."""
+
+    return 12 + index - 3 * e2 - 4 * e3 - 6 * cusp_count
+
+
+require(edge_cusp_widths == (2, 4), "edge cusp widths are not (2,4)")
+require(or_cusp_widths == (1, 1, 4), "orientation cusp widths are not (1,1,4)")
+require((edge_e2, edge_e3) == (2, 0), "edge elliptic census changed")
+require((or_e2, or_e3) == (0, 0), "orientation elliptic census changed")
+require(
+    twelve_times_genus(6, edge_e2, edge_e3, len(edge_cusp_widths)) == 0,
+    "edge stabilizer genus is not zero",
+)
+require(
+    twelve_times_genus(6, or_e2, or_e3, len(or_cusp_widths)) == 0,
+    "orientation stabilizer genus is not zero",
+)
+
+# The weighted factor-orbit incidence graphs are the Bass--Serre
+# graphs-of-groups.  Their cycle ranks retain the free factors erased by the
+# simple P5/C4 shadows.
+edge_incidence_beta = 6 - len(edge_incidence) - len(edge_incidence[0]) + 1
+or_incidence_beta = 6 - len(or_incidence) - len(or_incidence[0]) + 1
+plus_incidence_beta = 6 - len(plus_incidence) - len(plus_incidence[0]) + 1
+require(
+    (edge_incidence_beta, or_incidence_beta, plus_incidence_beta) == (1, 2, 3),
+    "Bass--Serre incidence cycle ranks changed",
+)
+
 print("modular S4 six-sheet Schreier probe")
 print(f"sheet_generators=a:{a};b:{b};aba:{c}")
 print(f"edge_cycles=a:{cycles_of(edge_a)};b:{cycles_of(edge_b)}")
@@ -779,6 +824,17 @@ print(
 print(
     "incidence_simple_shadows=edge:C4_plus_two_opposite_leaves;"
     "orientation:P5;A4:C4;partial_cubes:YES"
+)
+print(
+    "modular_signatures="
+    f"edge:e2={edge_e2},e3={edge_e3},cusps={edge_cusp_widths},g=0;"
+    f"orientation:e2={or_e2},e3={or_e3},cusps={or_cusp_widths},g=0"
+)
+print(
+    "Bass_Serre_graph_of_groups="
+    f"edge:C2*C2*Z,beta={edge_incidence_beta};"
+    f"orientation:F2,beta={or_incidence_beta};"
+    f"A4_stabilizer:F3,beta={plus_incidence_beta}"
 )
 print(
     "A4_weighted_C4_abstract_aut="

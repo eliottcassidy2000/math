@@ -8,6 +8,11 @@ status: >
   and differ exactly on the binary generator.  The discriminant subgroup is
   C3*C3 and makes the two actions identical.  None of the literal six-sheet
   graphs is a partial cube; their lossy Bass--Serre incidence shadows are.
+  The two index-six stabilizers have genus-zero signatures
+  `(e2;e3;cusps)=(2;0;4,2)` and `(0;0;4,1,1)`; the orientation stabilizer is
+  exactly Gamma_0(4), while the edge stabilizer is a distinct level-four
+  congruence subgroup.  Their weighted incidence graphs retain free ranks
+  one and two that the simple C4/P5 shadows erase.
   The marked descents are the two classes in H^1(C2,Aut_A4(X))=H^1(C2,C2),
   with stabilizers V4 and C4.  The local extension frame is D8/C2=V4, and
   the A4 restriction carries a chiral octahedral partial tournament with
@@ -16,6 +21,7 @@ status: >
   block every Farey, Keller, JC, or LRC overclaim.
 source: codex-modular-six-sheet-schreier-boundary-2026-07-30
 depends_on:
+  - THM-2862-modular-level-three-four-congruence-ladder-and-inequivalent-six-lifts
   - THM-2968-quartic-edge-and-oriented-cycle-s4-complements
   - THM-2971-discriminant-cover-edge-orientation-sextic-algebra-intertwiner
 related:
@@ -24,8 +30,8 @@ related:
   - THM-2965-modular-signed-pair-complements-and-v4-compound-shadow
 script: 04-computation/modular_s4_six_sheet_schreier_thm2975.py
 output: 05-knowledge/results/modular_s4_six_sheet_schreier_thm2975.out
-script_sha256: 17440a00620ce23698bfd4277f16de1b55122e3aa7a757081dd6a8db9dc5ef02
-output_sha256: 170a5987ad469f890895453ab91bd90d431a5acf14c09b4e850ebd88b4a9e064
+script_sha256: a3295bc08c68f61ca4b88551804bb22ca9bd8a3e6a50c72bd5a0936b8f74cf4b
+output_sha256: 36ab0e645c5bb5a846f1305230cacedfc0638fcb8771f818facba2c8dbff3465
 hash_basis: LF-normalized bytes
 ---
 
@@ -164,6 +170,74 @@ the alternating `1,2,1,2` weights on the common square disappear in `(11)`.
 Those multiplicities record factor stabilizers and are part of the action.
 Thus a statement about the incidence shadow must not be transferred back to
 the literal six-sheet graph.
+
+There is an exact modular-orbifold refinement.  Let
+
+```text
+T=a^(-1)b=ab                                                   (11a)
+```
+
+be the standard parabolic.  Its cycle lengths on a transitive coset action
+are the cusp widths of the corresponding sheet stabilizer.  The exact
+permutations in `(3)` give
+
+```text
+edge:        T=(0 4 1 5)(2 3),       cusp widths (4,2);
+orientation: T=(0 5 1 4)(2)(3),      cusp widths (4,1,1).      (11b)
+```
+
+The number of fixed points of `a` and `b` gives the order-two and
+order-three elliptic census.  Hence the two index-six subgroups have
+signatures
+
+```text
+edge:        g=0, e2=2, e3=0, two cusps;
+orientation: g=0, e2=0, e3=0, three cusps.                   (11c)
+```
+
+Indeed
+
+```text
+g=1+6/12-e2/4-e3/3-c/2=0                                   (11d)
+```
+
+in both cases.  Under THM-2862's identification of the orientation sheets
+with `P^1(Z/4)`, the selected infinity-sheet stabilizer is exactly
+`Gamma_0(4)`; its image modulo four is the cyclic group `C4`.  The edge
+stabilizer is instead the preimage of the nonnormal `V4_edge`.  It is a
+level-four congruence subgroup, but it is not conjugate to `Gamma_0(4)`:
+the elliptic censuses and cusp-width multisets already separate them.
+More explicitly, for
+
+```text
+gamma=[A B; C D] in Gamma_0(2),
+chi_edge(gamma)=B+C/2 mod 2,
+H_edge=ker(chi_edge).                                      (11d')
+```
+
+The determinant-one condition makes `A,D` odd, so `chi_edge` is a
+well-defined homomorphism even after quotienting by `+-I`; its mod-four
+kernel is exactly the displayed nonnormal edge `V4`.
+
+This is the precise equal-area surgery carried by the binary descent bit.
+The common width-four cusp remains, while the edge width-two cusp splits
+into two width-one cusps and the two order-two cone points disappear.  The
+orbifold Euler characteristic stays `-1`, as index six requires.
+
+The weighted incidence graphs, rather than their simple shadows, are the
+corresponding Bass--Serre graphs of groups.  They have
+
+```text
+edge:        beta1=1 with two C2 vertex groups,  C2*C2*Z;
+orientation: beta1=2 with no elliptic groups,    F2;
+cover A4:    beta1=3 with no elliptic groups,    F3.          (11e)
+```
+
+Thus the orientation's three binary-factor orbit nodes and two ternary-
+factor orbit nodes do form the visible `P5`, but its doubled links carry two
+independent cycles.  Collapsing multiplicities destroys the cusp and free-
+word data.  Likewise the common weighted square has cycle rank three, not
+the cycle rank one of its unweighted `C4` shadow.
 
 The common weighted square has abstract automorphism group `V4`, acting
 regularly on its four factor-orbit vertices, when interchange of the two

@@ -10,6 +10,8 @@ local_extension_frame=C_S4((01)(23))/C2=D8/C2=V4;lines=normal_V4,edge_V4,orienta
 binary_descent_h1=Aut_A4(X):C2;semilinear_involutions:2;classes:edge_V4,orientation_C4;difference:three_pair_flip
 Bass_Serre_incidence=edge:((1, 0), (0, 1), (1, 1), (1, 1));orientation:((1, 1), (2, 0), (0, 2));A4:((1, 2), (2, 1))
 incidence_simple_shadows=edge:C4_plus_two_opposite_leaves;orientation:P5;A4:C4;partial_cubes:YES
+modular_signatures=edge:e2=2,e3=0,cusps=(2, 4),g=0;orientation:e2=0,e3=0,cusps=(1, 1, 4),g=0
+Bass_Serre_graph_of_groups=edge:C2*C2*Z,beta=1;orientation:F2,beta=2;A4_stabilizer:F3,beta=3
 A4_weighted_C4_abstract_aut=V4_regular:4;physical_factor_pair_normalizer:4;common_stabilizer:2
 factor_frame_actions=(((0, 1, 2, 3), (0, 1, 2, 3), (0, 1, 2, 3)), ((0, 1, 3, 2), (2, 3, 0, 1), (3, 2, 1, 0)), ((1, 0, 2, 3), (0, 1, 2, 3), (1, 0, 3, 2)), ((1, 0, 3, 2), (2, 3, 0, 1), (2, 3, 0, 1)));edge_image:C2;orientation_image:V4_regular
 Farey_hostile=(ab)^4 collapses although ab is parabolic infinite order;cover_hostile=(b*aba)^2 collapses in C3*C3
