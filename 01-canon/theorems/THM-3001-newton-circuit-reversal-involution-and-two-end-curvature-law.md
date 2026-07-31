@@ -155,6 +155,19 @@ So the **simplest non-degenerate real-rooted positive family already refutes
 global no-return**, with an exact interior maximum at the midpoint, and no
 construction is required.
 
+**Lineage.**  MISTAKE-335 already records "the exact reciprocal symmetry" of
+the balanced two-cluster family `(x+1)^n(x+B)^n` and its consequence
+`R_(n+1)=R_(n-1)`.  Section 5 is not new for that single family.  What is new
+here is (i) the general involution (1)--(3) valid for **every**
+positive-coefficient polynomial, of which the two-cluster symmetry is one
+instance; (ii) the exact characterization of the palindromic class as
+**log-symmetric root profiles**, which also covers every geometric root set;
+and (iii) the class-level no-go of section 2, which shows that the failure is
+structural rather than a property of one lucky family.  MISTAKE-335's rule --
+separate a directional turn from a baseline crossing -- is respected: sections
+2 and 5 claim only the directional/monotonicity statement, never a crossing
+below `R_1`.  Crossing remains THM-2991's.
+
 ## 6. HYPOTHESIS: the two-number sign classifier
 
 **HYP (unproved).**  For a positive real-rooted `N` with bounded jets at both

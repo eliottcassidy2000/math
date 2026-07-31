@@ -1,16 +1,9 @@
 ---
 id: THM-2596
-<<<<<<< HEAD
-title: "Modular free factors, Farey children, and the Gram-owner cocycle"
-status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  The Bass--Serre tree of PSL_2(Z)=C_2*C_3 is
-=======
 title: "Modular free factors, Farey children, and Gram-owner covariance"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The Bass--Serre
   tree of PSL_2(Z)=C_2*C_3 is
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
   (2,3)-biregular; contracting its degree-two vertices gives the trivalent
   Farey-dual tree, whose rooted noninitial branching is binary.  The two
   positive Farey children are parabolic words in the torsion generators.
@@ -18,63 +11,36 @@ status: >
   (U^T U,U^T w), transforming by congruence under every GL_2(Z) basis
   move.  Equal endpoint defects do not determine the mediant: two acute
   unimodular flanks with endpoint values (-90,-89) have child defects -177
-<<<<<<< HEAD
-  and +1.  Active order-three motion can likewise change a nonnegative
-  defect into a negative one, so the THM-2056 Euclidean defect certificate
-  is not invariant under active modular motion.  The three Berggren
-  branches form a disjoint PGL_2(Z) reduction cross-section of (0,1), not
-=======
   and +1.  The active integral lift of the projective order-three generator
   can likewise change a nonnegative defect into a negative one, so the
   THM-2056 Euclidean defect certificate is not invariant under active
   modular motion.  The three Berggren
   branches form a PGL_2(Z) reduction cross-section of (0,1) up to the seams
   {1/3,1/2}, not
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
   a C_3 action; their triple matrices are identity mod 2 and not order
   three.  This repairs the binary/ternary "one object" analogy without
   proving LRC(14) or identifying a V_4 torsor.
 source: codex-2026-07-27-modular-transfer
 depends_on:
-<<<<<<< HEAD
-  - THM-2056-kelvin-polar-farey-defect-certificate
-related:
-=======
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
   - THM-2056-kelvin-polar-farey-defect-certificate
 related:
   - THM-2467-bicycle-spaces-of-the-star-flip-split
-<<<<<<< HEAD
-=======
   - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
   - THM-2597-six-vertex-bicycle-modular-abelianization-cycle
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
 script: 04-computation/modular_farey_gram_owner_cocycle_thm2596.py
 output: 05-knowledge/results/modular_farey_gram_owner_cocycle_thm2596.out
-<<<<<<< HEAD
-script_sha256: 096ec9b646794d981ec02951fa6144efb9496b1d7c1f80f6dfb5028944bbdf12
-output_sha256: 450d30bacdfdcc6b56353de1e608e5cec37f432abe4b3ccf36671fb8e66c831b
-=======
 script_sha256: 98c21e789fb8db463713b05ca17b4403290c101341b81173cf9974d7df668ea0
 output_sha256: cfdd76d8ff96fb91aad70bfbd755c4f997e665472d683ea67459ed35fc55e4de
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 hash_basis: normalized repository blobs (LF)
 ---
 
 # THM-2596 -- the modular tree needs a metric sidecar
 
-<<<<<<< HEAD
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**  The group, matrix, and hostile statements are proved
-below.  The dependency-free companion checks the displayed identities and
-`582,340` exact integer/rational instances.  The LRC paragraph is a
-=======
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The group,
 matrix, and hostile statements are proved below.  The dependency-free
 companion checks the displayed identities and
 `587,290` exact integer/rational instances.  The LRC paragraph is a
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 faithful reformulation of the proved THM-2056 defect, not a new LRC gate.
 
 The tempting slogan is that a binary fraction tree and a ternary triple
@@ -177,15 +143,9 @@ R: G -> [a+2b+c, b+c;      b+c, c      ], ell -> (r+s,s). (10)
 
 On a fixed signed hull-owner cone of THM-2056, `F_w>=0` is precisely its
 determinant certificate.  Equation (7) is therefore the exact
-<<<<<<< HEAD
-finite-dimensional state
-on which a modular/Farey dynamic program may run.  The scalar endpoint
-defects are only two evaluations of this quadratic polynomial.
-=======
 finite-dimensional state on which a modular/Farey dynamic program may run.
 The scalar endpoint defects are only two evaluations of this quadratic
 polynomial.
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 
 The mediant law isolates the missing coordinate:
 
@@ -250,13 +210,6 @@ But the Euclidean norm is not:
 F_w(d)=2025,                 F_(w')(d')=-4140.             (18)
 ```
 
-<<<<<<< HEAD
-Thus the order-three generator can change the sign of the displayed
-Euclidean defect.  Passive basis covariance (8) is lawful; active invariance
-of the THM-2056 defect certificate without the transformed Gram metric is
-false.  No actual LRC row or full LRC-safe predicate is transported by this
-hostile.
-=======
 Thus this integral lift of the projective order-three generator can change
 the sign of the displayed Euclidean defect.  The matrix itself has order
 six in `GL_2(Z)` because `C^3=-I`; the point is the failure already on one
@@ -264,7 +217,6 @@ lawful lift of the modular `C_3` class.  Passive basis covariance (8) is
 lawful; active invariance of the THM-2056 defect certificate without the
 transformed Gram metric is false.  No actual LRC row or full LRC-safe
 predicate is transported by this hostile.
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 
 ## 4. The ternary Pythagorean tree is a reduction cross-section
 
@@ -295,8 +247,6 @@ seams.  Their inverses are respectively
 2-1/y,                   1/y-2,                  y/(1-2y). (21)
 ```
 
-<<<<<<< HEAD
-=======
 There is an exact binary-prefix interpretation, but it uses the
 orientation-reversing PGL gauge.  On `(0,1)` put
 
@@ -317,22 +267,16 @@ This is the precise sense in which the binary and ternary grammars cover
 the same rational interval.  Removing `j` changes the middle branch, so
 the identity is PGL/Farey reduction data, not a `C_3`-torsion action.
 
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 Hence every non-seam positive rational has one reduction branch.  This is
 the positive meaning of the ternary tree “covering the same area”: it is a
 three-cylinder PGL_2(Z) cross-section of the same rational line on which
 Farey bases live.  The middle matrix has determinant `-1`; the other two
-<<<<<<< HEAD
-have determinant `+1`.  All three act lawfully on the same Gram-owner state
-by (8), because (8) holds for all of `GL_2(Z)`.
-=======
 have determinant `+1`.  All three admit the same **passive basis
 reinterpretation** on the Gram-owner state by (8), because (8) holds for all
 of `GL_2(Z)`: one must simultaneously replace the coordinate by
 `z'=g^(-1)z` as in (9).  This does not say that the active parameter move
 (20) preserves the fixed Euclidean defect predicate; Section 3 proves the
 contrary.
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 
 On triples the corresponding Berggren matrices are
 
@@ -380,16 +324,10 @@ THM-2597 supplies the other natural order-six quotient,
 PSL_2(Z)_ab = C_2 x C_3 isomorphic to C_6.                (25)
 ```
 
-<<<<<<< HEAD
-There the free factors commute and all commutator/word data are lost.  In
-`S_3` they do not commute.  The fork `(25)` versus `(24)` is the exact
-distinction hidden by cardinality six.
-=======
 There the free factors commute: commutators, reduced-word ordering, and
 Bass--Serre path history are lost, while exponent residues modulo two and
 three survive.  In `S_3` the two factor images do not commute.  The fork
 `(25)` versus `(24)` is the exact distinction hidden by cardinality six.
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 
 ## 6. Transfer contract and stopping boundary
 
@@ -427,12 +365,8 @@ S^2=-I, C^3=-I, L=-SC, R=SC^(-1);
 580,000 passive Gram-owner evaluations;
 the active C3 and matched-endpoint hostiles;
 all Lorentz/determinant/mod-two/order checks in (22)--(23);
-<<<<<<< HEAD
-2,340 exact rational branch/intertwining cases.           (26)
-=======
 2,340 exact rational branch/intertwining cases;
 4,950 exact binary/ternary PGL prefix cases.               (26)
->>>>>>> 949488f9007082127ef2a12f7245bf92045a501d
 ```
 
 All truth-bearing checks use explicit exceptions and remain active under
