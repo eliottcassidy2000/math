@@ -1,6 +1,6 @@
 LRC14 projected k=2 exact descent closure at z1=1724
-parent_source_sha256=efd2768ebfef640dd7c29584a7133f514669f320966f667c37220bc216a12cdb
-parent_output_sha256=f43783b8436cb8648be5533a98de6e45517dc8fe359e8de8b87bd43472fe915a
+parent_source_sha256=40718586f9cc537a4e21d85cc8f5e272d5236c487dc4a77cc3c6aaa43007cf1b
+parent_output_sha256=d201c2ef454c7895db4801c6fbd552d4658b1188af6d4813c1c24437f4bab978
 scope=both scalar-atlas rows;all distinct later nonaligned labels;no finite label horizon
 routes=periodic rays;canonical common-status instances;lossless projected residual
 atlas=top:1724;empty:1723;next occupied height:1722
@@ -12,5 +12,5 @@ CASE;z1=1724;E=2,4,8,10,12,14;h=281/735;carrier_components=36;L=11760;lower=281/
 global_z1724_rows=2;empty=2;survivors=0
 consequence=projected k=2 first drift label z1<=1722
 profile_sha256=e6b8de7255cd0b009b24d317de8fa4e7b921efd1bad5f4f3549cafd2448cb735
-semantic_sha256=768507af439960e491fb1a1a8183f484dd991f11cc2267de5c0b65ceffc933f5
+semantic_sha256=6222d8f465e39b199781fad71902dab4da042c4598085fe351361b8b6f7e75be
 all_exact_controls=PASS
