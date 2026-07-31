@@ -102,6 +102,24 @@ family with per-cell budget `binom(d_m,k)` growing like `2^{gamma m}`. So:
 > grading is the source of difficulty and the reason the single-object (block / removable-atom) treatment does
 > not transfer.
 
+**The exact general-vs-block distinction (clean).** Every fair extractor equals the balanced baseline plus a
+DEFICIT FIELD `b_{h,t} = a_{h,t} - N_{h,t}/2`: since `sum N_{h,t} p^h q^t = sum_leaves p^h q^t = 1`,
+
+```
+   sum_{h,t} b_{h,t} p^h (1-p)^t = 0,   b_{h,t} in (1/2)Z,  b_{h,t} half-integer exactly when N_{h,t} is odd,
+   |b_{h,t}| <= N_{h,t}/2.
+```
+
+The balanced extractor is `b == 0` (needs every `N_{h,t}` even -> dyadic blocks, THM-3007). A general extractor
+carries a nonzero `b` -- the forced half-integer deficits (odd `N_{h,t}`, Lucas) -- which must cancel under
+`sum b p^h q^t = 0`. **THM-3009's `(ARCH)` is exactly the capacity of this cancellation WITHIN one dyadic shell;
+the general class differs only by allowing the deficit to route ACROSS shells (anywhere in the cone
+`t <= gamma h + O(D)`).** So the entire "general vs block" gap is one question:
+
+> **Does cross-shell deficit routing have more capacity than within-shell, asymptotically?** If no, then
+> `C*_general = C*_block = log_5(5 phi^2)`. If yes, the general floor is strictly smaller and cross-shell
+> routing is the mechanism.
+
 This says the missing lemma is one of two:
 (a) **Reduction / rearrangement:** every exactly-fair extractor can be symmetrized to a balanced-block one
    without increasing `C` (then `C*_general = golden`). Plausible -- a balanced tree is fair for free
