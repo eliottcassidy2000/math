@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-332 (2026-07-30, first `z_1=1736` hybrid replay) -- a repaired status rule was not inherited by a duplicated solver
+
+- **What was done:** commit `a90c87e293cd` independently duplicated the K5
+  common-status solver for the fifteen-row `z_1=1736` closure after
+  MISTAKE-331, but its stage digests again hashed the floating solver's full
+  `(alpha,z)` Farkas representative.  The resulting closure is mathematically
+  valid, yet its advertised byte-level evidence is noncanonical.
+- **Minimal witness / first failed implication:** on
+  `E=(1,2,8,10,12,14)`, all counts remain `46 -> 0+16+30`, while the raw-dual
+  status digest `9e7a9bb7...46732` becomes the canonical infeasible-instance
+  digest `f63ad05b...7f4b`.  Both runs exactly verify their returned rational
+  certificates; equality of a solver-selected basis is the first invalid
+  reproducibility demand.
+- **Exact repair / strongest survivor:** retain exact rational verification of
+  every dual, but hash each deterministic status-kill row with
+  `witness[:-1]`, omitting only the noncanonical certificate representative.
+  The repaired all-label replay preserves the complete fifteen-row closure
+  and strengthens the exceptional body to all `749` unrestricted packets,
+  with minimum projected margin `121/18109`.
+- **Rule:** copying a proof engine also copies its repaired evidence boundary.
+  Every duplicate status solver must be audited against MISTAKE-331 before it
+  can become a canonical replay dependency.
+
 ## MISTAKE-331 (2026-07-30, THM-2941 ray/status replay) -- a semantic digest bound a noncanonical LP dual basis
 
 - **What was done:** the three THM-2941 residue-ray/status companions verified
