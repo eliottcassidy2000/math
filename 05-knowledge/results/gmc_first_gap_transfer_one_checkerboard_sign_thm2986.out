@@ -1,0 +1,13 @@
+FIRST-GAP TRANSFER-ONE CHECKERBOARD ALL-WIDTH CERTIFICATE
+response_space=span{1-x^M,x-x^M,x^2-x^M}
+direct_formula_match=M3..50;cases=6;equalities=288
+pair=23;signed_numerator_sign=1;tail=25;margin=14081865922424343364772654133/39614081257132168796771975168
+pair=24;signed_numerator_sign=-1;tail=25;margin=1423058678816606772702161/13249474533898474022240256
+pair=32;signed_numerator_sign=1;tail=30;margin=1334504361243610627652012697506433/5192296858534827628530496329220096
+pair=34;signed_numerator_sign=1;tail=18;margin=86807696439009361/369768517790072832
+pair=42;signed_numerator_sign=-1;tail=15;margin=333379720232789933/32425917317067571200
+pair=43;signed_numerator_sign=1;tail=16;margin=49905085875636783/288230376151711744
+record_digest=f91325c10019e93b4e55e17a4bafbb99fb2a646e8b087e6be4ef8fd5a67e1772
+singular_boundary=M1,M2;strict_cardinal_sign=ALL_M_GE_3
+first_gap_checkerboard_sign=PROVED_FOR_ALL_M_GE_6
+all_exact_checks=PASS
