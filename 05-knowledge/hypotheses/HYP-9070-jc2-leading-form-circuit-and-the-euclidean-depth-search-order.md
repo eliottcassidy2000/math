@@ -81,10 +81,32 @@ terminates at the first step. Therefore
 a counterexample requires  a, b >= 2  and  gcd(a,b) = 1,             (D)
 ```
 
-i.e. a **non-trivial continued fraction**. In every automorphism example
-checked, the leading form was a pure power of a single linear form
-(`K = 1` distinct root); whether `K = 1` is forced for automorphisms is
-open and is a cheap experiment.
+i.e. a **non-trivial continued fraction**.
+
+**The `K = 1` gate (EVIDENCE, decisive test 1 now run).** Sampling random
+automorphisms built as composites of affine and triangular maps (degrees up
+to `(9,9)`, `Jac` a nonzero constant in every case), **both** leading forms
+were in every case a pure power of a *single* linear form:
+
+```text
+observed (K(P_n), K(Q_m)) over the sample : {(1,1)}   -- K = 1 always
+observed (a,b)                            : (1,1), (1,2), (1,3), (2,1)
+                                             -- always a = 1 or b = 1
+```
+
+e.g. `deg = (9,9)`, `P_9 = 314928 (x-y)^9`; `deg = (4,2)`,
+`P_4 = -8748 (x+y)^4`; `deg = (2,6)`, `P_2 = -3(3x+2y)^2`. So the
+automorphism locus sits in `K = 1`, and
+
+```text
+a counterexample requires  K >= 2                                     (K)
+```
+
+i.e. **at least two distinct directions at infinity** — the leading form is
+not a pure power of a linear form. (`K = 1` is the classical "one place at
+infinity" situation, so (K) is expected to be classical; what is new here is
+that it combines with THM-3004 to bound the counterexample's circuit.)
+Script: `04-computation/jc2_K1_automorphism_gate_hyp9070.py`.
 
 **Search order.** (D) makes Euclidean depth `depth(a,b)` (the length of the
 continued fraction of `a/b`) the natural complexity of a candidate, not the
