@@ -26,12 +26,12 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 ### Exact live obligation
 
 Direct frontier: `<=6`. THM-2941 gives wall `h/7` on all `3,003` roots; THM-2928/2941/2970/2972
-empty aligned `k>=4`, cap `k=2,3` at `1641/270`, and close the common-level reflected `k=1` diagonal. Other censuses, arbitrary `k<=1`, the rung,
+empty aligned `k>=4`, cap `k=2,3` at `1629/270`, and close the common-level reflected `k=1` diagonal. Other censuses, arbitrary `k<=1`, the rung,
 and LRC are open.  Septimal floor/exception plus located phase cut the raw five-drift ledger
 `951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
 not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
-`1680..1742` `k=2` atlas, giving cap `1679`; three canonical atlases check `78,078` rows and give cap `1656` with five boundary rows.  Finite-exact boundary referees close those five and the twelve-row `z1650` shell, giving cap `1649`; singleton status/projected closures at `1645` and `1642`, together with their empty intervening gaps, give cap `1641`.  Reserved THM-2980's full `1600..1679` claim remains open. For `k=3`, torsion/status closes through `297`;
+`1680..1742` `k=2` atlas, giving cap `1679`; three canonical atlases check `78,078` rows and give cap `1656` with five boundary rows.  Finite-exact boundary referees close those five and the twelve-row `z1650` shell, then singleton shells at `1645,1642,1631,1630`; the atlas gaps are empty, giving cap `1629`.  Reserved THM-2980's full `1600..1679` claim remains open. For `k=3`, torsion/status closes through `297`;
 the next 45 occupied rows split `1549=659+882+8`; torsion then splices through `z272`, leaving cap `270`.
 Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams but not semantic-root identification (kernel `28,393`); THM-2545/2549 give Hall and chronology gates,

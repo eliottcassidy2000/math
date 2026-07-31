@@ -269,6 +269,15 @@
   optimized outputs agree byte for byte.  Source/output/profile/semantic
   SHA-256 are `f1b4ee77...3786c8` / `e98282c6...39148` /
   `cc71cf7d...b2f21` / `4526c21a...02425`.
+- `lrc14_j7_k2_z1631_z1630_status_descent_thm2980.py` -> matching `.out`
+  [FINITE-EXACT THM-2980 BOUNDARY INPUT; THM-2980 REMAINS RESERVED].  The
+  atlas gap `1632..1641` leads to adjacent singleton shells at `1631/1630`.
+  The first has one scalar packet and is killed with projected margin
+  `10555/21203`; the second is killed by one exact status certificate.  Thus
+  the projected `k=2` cap is `1629`.  Normal and optimized outputs agree byte
+  for byte.  Source/output/profile/semantic SHA-256 are
+  `8200ba7c...18574` / `ebed1974...486eb` /
+  `ac4dca9b...a5367` / `455f5935...bc92ca`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:
