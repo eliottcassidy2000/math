@@ -1,0 +1,17 @@
+LRC14 exceptional-body distinct-low-channel uniform closure exact referee
+exception_bodies=((1, 2, 7, 9, 11, 13), (2, 4, 7, 9, 11, 13));oriented_low_channels=16;profiles=480;uniform_skeleton_floor=1/42
+BODY;E=(1, 2, 7, 9, 11, 13);L=252252;eps_max=487425160807264342822652/20014978569752477975754425125;weakest_floor=1/42;weakest_margin=2813465937513647399802451258963/120209961289933382722381077300750;labels=(11, 13);channel=(1, 6);cross_difference=-53;j=227681;lift=48;endpoint_radius=41003
+BODY;E=(2, 4, 7, 9, 11, 13);L=504504;eps_max=4171698934310078342981596/320265049370713655040295609125;weakest_floor=1/42;weakest_margin=15135609878977256911491328933433/641170628840168737390671809468250;labels=(11, 13);channel=(1, 6);cross_difference=-53;j=486485;lift=51;endpoint_radius=54054
+direct_control_scales=(1, 2, 5);direct_controls=1440
+conclusion=both exceptional chromatic bodies close for every assignment of positive reflected levels
+corollary=all 2217 robust-K6 bodies close at arbitrary reflected levels;the 1584 exceptional low-clique scale rays are discharged
+scope=reflected THM-2941 residual family only;the 786 noncomplete-robust bodies and physical LRC14 remain open
+normal_vs_python_O=BYTE_IDENTICAL
+base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+low_phase_sha256=b2418dfda1b48257d1f7582d4ea977203a26f88885e13946bc100ccf264c9ce1
+support_sha256=0c3404d5017a97545f2acb187e91e8089c71a50b2119065d1b013e31801f2a48
+universal_sha256=dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3eae07f0f857689
+profile_digest=0166321b06955065e95e39ed28db47832cf8524cc06cb95c31e2d7cfcd2247a2
+source_sha256=15c13d721ee695c2a69bc386d5c12eba0382b52f9eabfe052f2fe5fda03c7bc4
+semantic_sha256=05e0d61ce1eadd8c4f471a48200dab024416b6b563c8bdfa96d22516b3b52370
+all_exact_controls=PASS
