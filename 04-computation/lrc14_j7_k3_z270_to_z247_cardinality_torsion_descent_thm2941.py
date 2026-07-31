@@ -2,10 +2,12 @@
 """Canonical exact compositor for projected k=3 heights 270 through 247.
 
 The final theorem is not canonical until the upstream source/output and this
-file's semantic digest are non-None and normal/-O transcripts agree.  The
-mathematical terminal is the exact Cayley bound alpha(G_d)=d/R, where edges
-have difference-order at most seven and R is the largest divisor of d at
-most seven.  Thus |S|>d/R is a sharp cardinality-only torsion certificate.
+file's semantic digest are non-None and normal/-O transcripts agree.  Every
+terminal already has |S|>alpha=d/R.  THM-2984 makes primitive-unit phases
+height-free, while the local translated high-danger band has length d/7 and
+contains at most ceil(d/7)<=alpha residue classes.  Thus one clean cell
+escapes every local band without selecting a torsion pair.  The smaller
+centered-band number beta(d) is deliberately not used.
 """
 
 from __future__ import annotations
@@ -34,7 +36,7 @@ ATLAS_SOURCE_SHA256 = "2af6d96882f336a409a8657070ed76a75c09a53b3789101b83103b051
 ATLAS_SHA256 = "cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda"
 UPSTREAM_SHA256 = "4137ab250def3ad6a66b4c75a5e1b5b1a82ba4100b00ea5f8616faa46fb501a9"
 UPSTREAM_OUTPUT_SHA256 = "eea98955f91371d38d95cdeeb88b60a2305d34d0bddd2ea26570af8eede1b8e3"
-SEMANTIC_SHA256 = "827cb7a34c93d94f7ceb9180ca12e1e8792c3f7f45d68dcad6426279bd11f608"
+SEMANTIC_SHA256 = None
 
 LEVELS = (270, 268, 265, 260, 259, 257, 256, 255, 254, 253, 252, 251, 250, 249, 247)
 ROW_COUNTS = {270:26,268:27,265:3,260:140,259:16,257:4,256:1,255:3,254:1,253:4,252:1,251:3,250:176,249:10,247:8}
@@ -47,17 +49,13 @@ LEVEL_TOTALS = {
     249:(391,171,156,64), 247:(845,227,538,80),
 }
 # zero-high hostile passes, one-high cases, body-distinct low pairs,
-# high-ray recurrence checks, least cardinality-forced r histogram.
+# high-ray recurrence checks.
 TERMINAL = {
-    270:(146,159,18,300073,((2,115),(3,23),(4,11),(5,3),(6,6),(7,1))),
-    268:(57,60,7,117819,((2,55),(3,2),(4,2),(6,1))),
-    260:(3016,6236,606,1292385,((2,5276),(3,507),(4,200),(5,126),(6,127))),
-    259:(8,9,1,31081,((2,8),(4,1))),
-    257:(21,24,2,13487,((2,22),(3,2))),
-    253:(32,35,2,92111,((2,30),(3,2),(4,2),(6,1))),
-    250:(645,886,149,1475580,((2,703),(3,74),(4,51),(5,23),(6,32),(7,3))),
-    249:(58,64,3,41118,((2,58),(3,5),(5,1))),
-    247:(74,80,7,168058,((2,68),(3,5),(4,4),(5,2),(6,1))),
+    270:(146,159,18,300073), 268:(57,60,7,117819),
+    260:(3016,6236,606,1292385), 259:(8,9,1,31081),
+    257:(21,24,2,13487), 253:(32,35,2,92111),
+    250:(645,886,149,1475580), 249:(58,64,3,41118),
+    247:(74,80,7,168058),
 }
 TOTALS = (202807,84483,114027,4297)
 TERMINAL_TOTALS = (4057,7553,795,3531712)
@@ -68,11 +66,11 @@ FINAL_LEDGER = 375251
 NEXT_HEIGHT = 246
 NEXT_COUNT = 194
 TOKEN_ABSENT_CONTROL = (250,(1,4,9,10,12,14))
+TRANSLATED_BAND_CONTROL = (28,(0,1,2,3),Q(-1,2),Q(7,2))
 TERMINAL_BODY_COUNT = 69
 MIN_TWO_HIGH_GAP = Q(1438897,5584915336)
-GLOBAL_LEAST_HISTOGRAM = ((2,6335),(3,620),(4,271),(5,155),(6,168),(7,4))
 GLOBAL_R_HISTOGRAM = ((2,177),(3,93),(4,358),(5,933),(6,1065),(7,4927))
-MIN_OPTIMAL_SLACK = 1
+MIN_ALPHA_SLACK = 1
 
 
 def require(condition, message):
@@ -228,73 +226,25 @@ def cayley_alpha(d):
     return _ALPHA[d]
 
 
-def torsion_certificate(cells,d):
-    cell_for={}
-    for cell in cells:
-        cell_for.setdefault(cell%d,cell)
-    residues=tuple(sorted(cell_for))
-    R,alpha,divisors=cayley_alpha(d)
-    require(len(residues)>alpha,(d,len(residues),alpha,"sharp cardinality gate"))
-    least=next(r for r in divisors if len(residues)>d//r)
-    quotient=d//least
-    buckets={}
-    collision=None
-    for residue in residues:
-        key=residue%quotient
-        if key in buckets:
-            collision=(buckets[key],residue)
-            break
-        buckets[key]=residue
-    require(collision is not None,(d,least,"pigeonhole collision"))
-    a,b=collision
-    shift=(b-a)%d
-    effective=d//gcd(d,shift)
-    require(2<=effective<=least<=7,(d,least,effective))
-    phase=tuple(min(u,effective-u) for u in range(1,effective) if gcd(u,effective)==1)
-    require(phase and 7*min(phase)>=effective,(d,effective,"phase"))
-    ca,cb=cell_for[a],cell_for[b]
-    require((cb-ca)%d==shift,(d,"cell shift"))
-    return (least,effective,R,alpha,len(residues),len(residues)-alpha,quotient,
-            ca,cb,a,b,shift,min(phase),len(cells))
+def translated_band_certificate(cells,d):
+    """Freeze the deterministic local-band data, with no pair choice."""
+    residues=len({cell%d for cell in cells})
+    R,alpha,_divisors=cayley_alpha(d)
+    ceiling=(d+6)//7
+    require(ceiling<=alpha,(d,ceiling,alpha,"threshold hierarchy"))
+    require(residues>alpha,(d,residues,alpha,"translated-band gate"))
+    return (d,R,alpha,residues,ceiling,residues-ceiling,residues-alpha,len(cells))
 
 
-def alternate_valid_pair_control():
-    """Separate the sharp cardinality order from the frozen pair policy.
-
-    Filling every quotient bucket before selecting the earliest-created
-    crowded bucket is as valid as stopping at the first collision.  This
-    hostile example makes the two policies return effective orders 3 and 6,
-    respectively, so only the existence of an order at most ``least`` is
-    intrinsic to the cardinality argument.
-    """
-    first=250; body=(1,4,10,11,12,14); low_labels=(260,364); d=64680
-    eng.FIRST=first
-    eng.ray.FIRST=first
-    stream=eng.ray.Stream(body)
-    cells=eng.fixed_safe_cells(stream,low_labels)
-    canonical=torsion_certificate(cells,d)
-    require(canonical[:2]==(6,6),("canonical pair policy changed",canonical))
-    cell_for={}
-    for cell in cells:
-        cell_for.setdefault(cell%d,cell)
-    residues=tuple(sorted(cell_for))
-    quotient=canonical[6]
-    buckets=defaultdict(list)
-    for residue in residues:
-        buckets[residue%quotient].append(residue)
-    key,values=next((key,values) for key,values in buckets.items() if len(values)>=2)
-    a,b=values[:2]
-    shift=(b-a)%d
-    effective=d//gcd(d,shift)
-    require((key,a,b,shift,effective)==(4950,4950,26510,21560,3),
-            ("alternate pair policy changed",key,a,b,shift,effective))
-    require(2<=effective<=canonical[0]<=7,(d,effective,canonical[0]))
-    ca,cb=cell_for[a],cell_for[b]
-    require(all(eng.cell_clean(c,z,stream.L) for c in (ca,cb) for z in (first,*low_labels)),
-            ("alternate cells not clean",ca,cb))
-    return (first,body,low_labels,d,len(residues),canonical[0],
-            (canonical[7],canonical[8]),(canonical[9],canonical[10]),canonical[11],canonical[1],
-            key,(ca,cb),(a,b),shift,effective)
+def translated_band_hostile_control():
+    """Refute use of THM-2984's smaller centered beta after translation."""
+    d,residues,left,right=TRANSLATED_BAND_CONTROL
+    beta=2*((d-1)//14)+1
+    ceiling=(d+6)//7
+    require(right-left==Q(d,7),(d,left,right,"band length"))
+    require(all(left<r<right for r in residues),(d,residues,left,right))
+    require((beta,ceiling,len(residues))==(3,4,4),(beta,ceiling,len(residues)))
+    return (d,residues,left,right,beta,ceiling)
 
 
 def terminal(task):
@@ -311,27 +261,29 @@ def terminal(task):
     cases=eng.one_high_cases(stream,residual,low,high)
     low_pairs={tuple(sorted(z for _d,z in rows)) for _ds,_hd,rows,_e in cases}
     clean_cache={}
-    witness_cache={}
-    least_hist=Counter(); effective_hist=Counter(); R_hist=Counter()
-    minimum_slack=None
+    certificate_cache={}
+    R_hist=Counter()
+    minimum_alpha_slack=None; minimum_band_slack=None; minimum_alpha_gain=None
     digest=hashlib.sha256()
     for ds,high_d,low_rows,excess in cases:
         labels=tuple(sorted(z for _d,z in low_rows))
         if labels not in clean_cache:
             clean_cache[labels]=eng.fixed_safe_cells(stream,labels)
         key=(labels,high_d)
-        if key not in witness_cache:
-            witness_cache[key]=torsion_certificate(clean_cache[labels],high_d)
-        witness=witness_cache[key]
-        least_hist[witness[0]]+=1; effective_hist[witness[1]]+=1; R_hist[witness[2]]+=1
-        minimum_slack=witness[5] if minimum_slack is None else min(minimum_slack,witness[5])
-        require(all(eng.cell_clean(c,z,stream.L) for c in (witness[7],witness[8]) for z in (first,*labels)),(first,body,ds,"cell"))
-        digest.update(repr((ds,high_d,low_rows,excess,witness)).encode()+b"\n")
-    require(least_hist==effective_hist,(first,body,"effective order"))
+        if key not in certificate_cache:
+            certificate_cache[key]=translated_band_certificate(clean_cache[labels],high_d)
+        certificate=certificate_cache[key]
+        R_hist[certificate[1]]+=1
+        alpha_slack=certificate[6]; band_slack=certificate[5]
+        alpha_gain=certificate[2]-certificate[4]
+        minimum_alpha_slack=alpha_slack if minimum_alpha_slack is None else min(minimum_alpha_slack,alpha_slack)
+        minimum_band_slack=band_slack if minimum_band_slack is None else min(minimum_band_slack,band_slack)
+        minimum_alpha_gain=alpha_gain if minimum_alpha_gain is None else min(minimum_alpha_gain,alpha_gain)
+        digest.update(repr((ds,high_d,low_rows,excess,certificate)).encode()+b"\n")
     return (first,body,stream.L,stream.high_floor,stream.lower-stream.first_delta,len(residual),
             gap,gap_witness,len(zero),len(cases),len(low_pairs),low_signs,ray_checks,
-            tuple(sorted(least_hist.items())),tuple(sorted(effective_hist.items())),
-            tuple(sorted(R_hist.items())),minimum_slack,len(witness_cache),digest.hexdigest())
+            tuple(sorted(R_hist.items())),minimum_alpha_slack,minimum_band_slack,
+            minimum_alpha_gain,len(certificate_cache),digest.hexdigest())
 
 
 def ft(q):
@@ -347,36 +299,34 @@ def render(records,terminal_records,atlas_counts,pins):
     for row in terminal_records: grouped[row[0]].append(row)
     require(len(terminal_records)==TERMINAL_BODY_COUNT,len(terminal_records))
     require(set(grouped)==set(TERMINAL),tuple(sorted(grouped)))
-    summaries={}; global_least=Counter(); global_effective=Counter(); global_R=Counter()
+    summaries={}; global_R=Counter()
     aggregate=[0,0,0,0]
     for z,expected in TERMINAL.items():
         rows=grouped[z]
         values=(sum(r[8] for r in rows),sum(r[9] for r in rows),sum(r[10] for r in rows),sum(r[12] for r in rows))
         require(values==expected[:4],(z,values))
-        least=Counter(); effective=Counter(); Rh=Counter()
+        Rh=Counter()
         for row in rows:
-            least.update(dict(row[13])); effective.update(dict(row[14])); Rh.update(dict(row[15]))
-        require(tuple(sorted(least.items()))==expected[4],(z,least))
-        require(least==effective,(z,least,effective))
-        global_least.update(least); global_effective.update(effective); global_R.update(Rh)
-        summaries[z]=(values,tuple(sorted(least.items())),tuple(sorted(Rh.items())),min(r[16] for r in rows))
+            Rh.update(dict(row[13]))
+        global_R.update(Rh)
+        summaries[z]=(values,tuple(sorted(Rh.items())),min(r[14] for r in rows),
+                      min(r[15] for r in rows),min(r[16] for r in rows))
         aggregate=[a+b for a,b in zip(aggregate,values)]
     require(tuple(aggregate)==TERMINAL_TOTALS,aggregate)
-    require(global_least==global_effective and sum(global_least.values())==TERMINAL_TOTALS[1],global_least)
-    require(tuple(sorted(global_least.items()))==GLOBAL_LEAST_HISTOGRAM,global_least)
+    require(sum(global_R.values())==TERMINAL_TOTALS[1],global_R)
     require(tuple(sorted(global_R.items()))==GLOBAL_R_HISTOGRAM,global_R)
     require(min(row[6] for row in terminal_records)==MIN_TWO_HIGH_GAP,"two-high minimum")
-    require(min(row[16] for row in terminal_records)==MIN_OPTIMAL_SLACK,"cardinality slack")
+    require(min(row[14] for row in terminal_records)==MIN_ALPHA_SLACK,"alpha slack")
     require(INHERITED_LEDGER-len(records)==FINAL_LEDGER,"ledger")
     control_record=next(row for row in records if (row[0],row[1])==TOKEN_ABSENT_CONTROL)
     require(control_record[5] and control_record[12]>0,
             (TOKEN_ABSENT_CONTROL,"projected-gate control lost"))
     control_terminal=next(row for row in terminal_records if (row[0],row[1])==TOKEN_ABSENT_CONTROL)
     require(control_terminal[6]>0,(TOKEN_ABSENT_CONTROL,"two-high control gap"))
-    pair_control=alternate_valid_pair_control()
+    band_control=translated_band_hostile_control()
     semantic_payload=(LEVELS,WALL,ALIGNED_CAP,records,terminal_records,atlas_counts,level_totals,summaries,
-                      tuple(sorted(global_least.items())),tuple(sorted(global_R.items())),pins,
-                      INHERITED_LEDGER,FINAL_LEDGER,NEXT_HEIGHT,NEXT_COUNT,pair_control)
+                      tuple(sorted(global_R.items())),pins,INHERITED_LEDGER,FINAL_LEDGER,
+                      NEXT_HEIGHT,NEXT_COUNT,band_control)
     semantic=hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
     if SEMANTIC_SHA256 is not None:
         require(semantic==SEMANTIC_SHA256,"semantic digest changed")
@@ -393,11 +343,11 @@ def render(records,terminal_records,atlas_counts,pins):
         "repaired_gate=THM-2941(25f) gives max(Z)>13L/132;integer labels and first<floor(13L/132)+1 force some later label>=high_floor;the representative may be an exact high label or HIGH-TAIL",
         f"terminal_reduction=residual_bodies:{TERMINAL_BODY_COUNT};zero_high_hostile_passes:{aggregate[0]};one_high_cases:{aggregate[1]};body_distinct_low_pairs:{aggregate[2]};unit_ray_checks:{aggregate[3]};minimum_two_high_gap:{ft(MIN_TWO_HIGH_GAP)}",
         "cayley_alpha=G_d edges have nonzero difference-order<=7;R=max({r:r|d,2<=r<=7} union {1});cosets mod d/R are R-cliques and [0,d/R) is independent;therefore alpha(G_d)=d/R",
-        f"cardinality_boundary=every fixed-safe residue set has |S|>d/R;minimum_slack:{MIN_OPTIMAL_SLACK};this forces torsion order<=7;the independent equality set proves strictness is optimal for cardinality-only arguments",
-        f"least_cardinality_forced_r_histogram={dict(sorted(global_least.items()))};optimal_R_histogram={dict(sorted(global_R.items()))}",
-        "witness_policy=choose the least r forced by cardinality,then the first collision encountered while scanning sorted residues modulo d/r;the effective-order histogram belongs to this frozen policy and is not intrinsic",
-        f"alternate_valid_pair_control=z1:{pair_control[0]};E:{pair_control[1]};low_labels:{pair_control[2]};d:{pair_control[3]};residues:{pair_control[4]};least_r:{pair_control[5]};canonical_cells:{pair_control[6]};canonical_residues:{pair_control[7]};canonical_shift:{pair_control[8]};canonical_effective:{pair_control[9]};alternate_bucket:{pair_control[10]};alternate_cells:{pair_control[11]};alternate_residues:{pair_control[12]};alternate_shift:{pair_control[13]};alternate_effective:{pair_control[14]};both_valid:true",
-        "strict_seam=primitive high units preserve effective order s<=7;phase gap>=1/s>=1/7;strict-open radius1/14 dangers are disjoint,with only excluded endpoints meeting at s=7",
+        f"pair_graph_boundary=every fixed-safe residue set has |S|>alpha=d/R;minimum_alpha_slack:{MIN_ALPHA_SLACK};the equality interval proves alpha sharp only for forcing a short-order pair;no pair is selected,hashed,or used",
+        f"translated_band_gate=THM-2984 makes primitive-unit cell phases height-free;for every local translate the strict high-danger band has length d/7 and contains at most ceil(d/7)<=alpha residues;every terminal has |S|>alpha;minimum_band_slack:{min(row[15] for row in terminal_records)};minimum_alpha_minus_ceil7:{min(row[16] for row in terminal_records)};each primitive unit and local translate has a fixed-safe cell",
+        f"centered_beta_hostile=d:{band_control[0]};S:{band_control[1]};open_interval:({ft(band_control[2])},{ft(band_control[3])});length:d/7;beta:{band_control[4]};ceil7:{band_control[5]};all_four_residues_fit:true;first_failed_implication=centered beta does not bound a translated local danger band",
+        f"optimal_R_histogram={dict(sorted(global_R.items()))}",
+        "strict_local_boundary=an open circular interval of length d/7 contains at most ceil(d/7) lattice residues;the bound is sharp and endpoint equality is safe",
     ]
     for z in LEVELS:
         lines.append(f"LEVEL;z1={z};rows={ROW_COUNTS[z]};states={level_totals[z][0]};crude={level_totals[z][1]};status={level_totals[z][2]};residual={level_totals[z][3]};terminal={summaries.get(z)}")
@@ -406,12 +356,12 @@ def render(records,terminal_records,atlas_counts,pins):
         require(verified==status,(first,body,"verified"))
         lines.append(f"BODY;z1={first};E={body};L={L};high={high};d1={d1};high_gate={gate};trials={trials};checks={checks};signs={dict(signs)};states={states};crude={crude};status={status};residual={residual};M={dict(mhist)};instance_sha256={instance_digest};verified={verified};representative={representative};stage_sha256={stage_digest};residual_sha256={hashlib.sha256(repr(residual_ds).encode()).hexdigest()}")
     for row in terminal_records:
-        first,body,L,high,required,residual,gap,witness,zero,cases,pairs,low_signs,checks,least,effective,Rh,slack,certs,digest=row
-        lines.append(f"TERMINAL;z1={first};E={body};L={L};high={high};required={ft(required)};residual={residual};two_high_gap={ft(gap)};gap_witness={witness};zero_high={zero};cases={cases};low_pairs={pairs};low_signs={dict(low_signs)};ray_checks={checks};least_r={dict(least)};effective={dict(effective)};optimal_R={dict(Rh)};minimum_optimal_slack={slack};certificates={certs};case_sha256={digest}")
+        first,body,L,high,required,residual,gap,witness,zero,cases,pairs,low_signs,checks,Rh,alpha_slack,band_slack,alpha_gain,certs,digest=row
+        lines.append(f"TERMINAL;z1={first};E={body};L={L};high={high};required={ft(required)};residual={residual};two_high_gap={ft(gap)};gap_witness={witness};zero_high={zero};cases={cases};low_pairs={pairs};low_signs={dict(low_signs)};ray_checks={checks};optimal_R={dict(Rh)};minimum_alpha_slack={alpha_slack};minimum_translated_band_slack={band_slack};minimum_alpha_minus_ceil7={alpha_gain};certificates={certs};case_sha256={digest}")
     lines += [f"atlas_exact_check=selected_rows:423;all gaps270..247 empty;next occupied z1={NEXT_HEIGHT} with {NEXT_COUNT} rows",
               f"ledger_decrement={INHERITED_LEDGER}-423={FINAL_LEDGER};decrement counts body rows,not quotient states",
               "nonconsequence=projected scalar-atlas descent only;does not close z1=246,k<=1,the rung,or LRC(14)",
-              "next_sidecar=THM-2984 primitive-unit reach is related but unused here",
+              "dependency=THM-2984 primitive-unit height-free phase law is used;its centered-beta,gcd-stratum,transporter,and nonflag-complex gates are not used for the translated local band",
               f"conclusion=all projected k3 rows at occupied heights270..247 are empty;with pinned z275..z272 package,projected k3 cap<={NEXT_HEIGHT};next exact frontier={NEXT_HEIGHT}",
               f"semantic_sha256={semantic}","all_exact_controls=PASS"]
     return "\n".join(lines)+"\n"
