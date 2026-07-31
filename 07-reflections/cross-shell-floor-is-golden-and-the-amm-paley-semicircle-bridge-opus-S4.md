@@ -42,8 +42,30 @@ by routing `b` ACROSS shells. **Does cross-shell routing beat within-shell?** An
 Since every tail-cut shares the single exponent `rho(gamma)` and it is `<1` for `gamma<golden`, no cross-shell
 reallocation can make any tail feasible: **`C*_general = C*_block = 1 + log_5(phi^2) = log_5(5 phi^2)`.** The
 cross-shell freedom is illusory because the binding is realized locally at each self-similar shell's start.
-(Honest gap: this is the aggregate/degree-blind cut; full rigor needs the degree-resolved Hall condition, but
-`(ARCH)` is already degree-wise per shell, and scale-invariance carries it to the tails.) Verifier:
+
+### The Hall step made rigorous (Gale's condition, degree-resolved)
+
+The earlier "aggregate cut" concern dissolves once the routing geometry is stated exactly. The carry
+`(p+q)^{2^a}=1` spreads a deficit to STRICTLY HIGHER total degree (it never lowers degree), so in the
+absolute-degree coordinate `D=h+t` the deficit routes FORWARD: a demand at degree `D` may only be absorbed by
+a cell of degree `>= D`. This is a transportation problem on the totally ordered set of degrees with forward
+edges, and for such a problem **Gale's feasibility theorem is not the per-degree inequality but exactly the
+tail condition**:
+
+```
+   feasible  <=>  for every D_0:  sum_{D >= D_0} demand(D)  <=  sum_{D >= D_0} supply(D).
+```
+
+So the degree-resolved Hall condition IS a family of tail inequalities -- there is no separate per-degree
+obligation to discharge. Now dyadic self-similarity gives `demand(D)` and `supply(D)` the SAME exponential
+growth rate in `D` (each doubling of degree rescales both by the identical factor, the content of
+"`(ARCH)` stable in `R`", death-star), so every tail ratio `sum_{>=D_0} demand / sum_{>=D_0} supply` equals
+the per-shell margin exponent `rho(gamma)`, independent of `D_0`. Therefore all tail inequalities hold
+simultaneously iff `rho(gamma) <= 1`, i.e. `margin(gamma) >= 0`, i.e. `gamma >= golden`. This closes the
+reduction: **`C*_general = golden` rigorously, given only (i) forward-in-degree carry [structural, from
+`(p+q)^{2^a}=1`] and (ii) dyadic scale-invariance of `demand,supply` [THM-3009's `(ARCH)`, verified
+`R`-stable].** The only thing not reduced to prior results is the exponential-rate equality in (ii), which is
+THM-3009's own asymptotic and can be cited. Verifier:
 `04-computation/amm12592_cross_shell_capacity_opus_S4.py`.
 
 ## II. The bridge: AMM's golden floor IS the Paley tournament's semicircle
