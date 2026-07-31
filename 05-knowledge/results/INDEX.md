@@ -259,6 +259,16 @@
   byte.  Source/output/atlas-survivor/semantic SHA-256 are
   `d38929a7...d23377e` / `a1a3cfe4...0e0b26` /
   `2b567b15...4d701` / `a38d0d4a...66998f`.
+- `lrc14_j7_k2_z1645_z1642_status_descent_thm2980.py` -> matching `.out`
+  [FINITE-EXACT THM-2980 BOUNDARY INPUT; THM-2980 REMAINS RESERVED].  The
+  pinned atlas has singleton shells at `1645` and `1642`, separated from the
+  inherited cap by empty gaps `1646..1649` and `1643..1644`.  At `1645`, four
+  exact status certificates leave one literal packet, killed with projected
+  margin `46807/260897`; at `1642`, all sixteen scalar states are exactly
+  status-infeasible.  Hence the projected `k=2` cap is `1641`.  Normal and
+  optimized outputs agree byte for byte.  Source/output/profile/semantic
+  SHA-256 are `f1b4ee77...3786c8` / `e98282c6...39148` /
+  `cc71cf7d...b2f21` / `4526c21a...02425`.
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:
