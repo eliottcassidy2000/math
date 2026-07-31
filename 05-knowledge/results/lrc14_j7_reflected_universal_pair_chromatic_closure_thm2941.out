@@ -12,7 +12,8 @@ EXCEPTION;E=(2, 4, 7, 9, 11, 13);bad_edges_slots=((2, 4), (3, 5));bad_edges_labe
 weakest_good_margin=321692483216665992817789205/24976183956869361050998460388;E=(2, 3, 6, 7, 11, 13);pair_slots=(3, 5);pair_labels=(7, 13);floor=33/2548;cell=68249;chart=(-1, Fraction(1089, 1), Fraction(4, 7), 5, 5);epsilon_max=4896776765901250909162/68615889991399343546699067
 consequence=every reflected k=1 packet using at most three distinct positive levels closes
 corollary=the full normalized D=2 sector q_e in {m,m+1,m+2} is empty for every m>=1
-scope_boundary=packets using four,five,or six distinct levels remain outside this certificate
+bodywise_reduction=on 3001 K6 bodies any uncertified word has six pairwise-distinct levels;on the two exceptions it is a proper coloring of the displayed chi4 graph
+scope_boundary=proper-coloring residues are certificate failures only,not physical survivors
 profile_digest_sha256=121263524467a26d3257e174bd15a7c79507dec5c70db36ca394588102d580c7
 semantic_sha256=c51287141ba366c1c0ca12cfb15997b3821cf5371029f59ee57ff3ead40280d6
 all_exact_controls=PASS
