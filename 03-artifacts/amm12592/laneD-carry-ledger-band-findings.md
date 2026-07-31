@@ -141,6 +141,20 @@ Re-verified exactly: `(2457/6592) L(t_B) - U(t_A) = 1/25 + F, F > 0`, hence
 - 2457/6592 as gamma directly: no ledger quantity computed here selects it.
   Status of (27)'s role: OPEN.
 
+## 5b. Odd-ladder addendum (coinC2 session, greedy control at 1/3 and 1/5)
+
+THM-2976 (binary-clock parity) singles out the odd unit fractions
+`gamma = 1/J` as the corner-clocked rates, `1/3` the top rung. Greedy runs
+at `gamma = 1/3, 1/5` (D0 = 0, M = 120, same referee asserts): **frozen**,
+residuals `|D_inf(1/2)| = 4.179e-2` and `7.295e-2` — *larger* than
+`gamma = 1/2` (3.33e-3), consistent with the frozen-residual law
+`-Theta(m*)` since band birth is earlier (`m* = 3` resp. `2.5`). Verdict:
+corner clocking does **not** rescue greedy transport; the clock's live role
+is extraction-side (lower bounds), not construction-side, unless an
+anticipatory policy (lane F wave 2) exploits it in a way greedy cannot.
+Driver: session scratch `gamma_onethird_freeze.py` over this file's Ledger
+(verbatim import), envelope violations from `m = 10` on at all three rates.
+
 ## 6. Next obligations
 
 1. Attempt a theorem: "band value is asymptotically conserved" — quantify

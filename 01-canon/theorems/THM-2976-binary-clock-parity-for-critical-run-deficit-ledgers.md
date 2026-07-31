@@ -25,6 +25,12 @@ external:
   - "Elliot Glazer, American Mathematical Monthly Problem 12592 (2026)."
 script: 04-computation/amm12592_binary_clock_parity_thm2976.py
 output: 05-knowledge/results/amm12592_binary_clock_parity_thm2976.out
+lean: >
+  04-computation/lean/TournamentH7/TournamentH7/BinaryClockParity.lean —
+  T1 (checkpoint_vanishing) and T2 (clock_coeff_lt / clock_coeff_top)
+  kernel-checked in the TournamentH7 project via the expand-bracket
+  factorization; axiom audit standard (propext, Classical.choice,
+  Quot.sound); single-module `lake build TournamentH7.BinaryClockParity`.
 ---
 
 # THM-2976 -- binary-clock parity for critical-run deficit ledgers
