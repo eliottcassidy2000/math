@@ -1,0 +1,18 @@
+LRC14 projected k=2 exact z1608/z1604 terminal descent
+referee_source_sha256=23298a37076b7b291fa2ba5dbbe849ed98b1dff33e94be8f2e06cc5e47a83c8a
+base_source_sha256=8861a4d02bab7a49c8f19a5b5c118b914e57ce504cfafe5926b6a647574fedb3
+base_output_sha256=77c8e4d359c0649143bdca3a6cfcfedb69625251f4eeaaa31599ce2d5d6fa99b
+atlas_source_sha256=d38929a73bcdd36824273b727ca10a19c842f5c70e35310d1c041e8d3d23377e
+atlas_output_sha256=a1a3cfe48e4e8034760c61b7fdbae282a10e052e3d0374a837788fd08e0e0b26
+inherited_cap=1611;atlas_gaps=1609..1611,1605..1607,1600..1603 empty;boundary_rows=z1608:2,z1604:1
+closure_partition=all_label_status:2;forced_high_scalar:1;empty:3;survivors:0
+ordinary_ledger=scalar:136;crude:22;status:114;status_survivors:0;exact_status_certificates:114;literal_packets:0;projected_kills:0
+CASE;route=ALL-LABEL;z1=1608;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=26/114905;first_d=490;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;divisors=59;trials=557845;counts=(1, 0, 1, 0);stage_sha256=('e8b49a478f910cd888206fda9660efeb78ee518aaa0d6535b4cf3e2ac8f99b43', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', '80973542366e3994dd3e5e4133d6ab87a16c1bb3e67d70a6f8bd874d61f6fa18', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d');exact_status_certificates=1;cells=0;packets=0;kills=0;minimum_margin=NONE;maximum_prefix_cells=0;direct_mass=NONE;state_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;conclusion=EMPTY
+CASE;route=FORCED-HIGH;z1=1608;E=1,4,10,12,13,14;h=853/2548;r=34;L=76440;high_floor=6625;delta1=475/1792518;lower=853/231868;two_high_gap=264874483/310625444220;exact_one_high_gap=80927993/310625444220;top_lows=(1612, 2340, 1736);best_high_d=490;best_high_value=53/176988;best_high_label=6708;amplitude_sha256=7ea2123f3a76d969c5d381c546529d3d0f0fda268e95be3674f60e9415c46879;conclusion=SCALAR-EMPTY
+CASE;route=ALL-LABEL;z1=1604;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=727/1650516;first_d=2940;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;divisors=59;trials=557845;counts=(135, 22, 113, 0);stage_sha256=('7e7e5061d5af36562f24deebc6f16c3f14f6518decb75800353795fc9efdfaa5', '3e7013bd78def653bcc4175a646b6d26ed7c56abefd68d2cc0c419d63d77a19c', '53bfb3350f27f69d800532bdf1bded12ff51bd77abbd440d98ada4b573105ceb', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d');exact_status_certificates=113;cells=0;packets=0;kills=0;minimum_margin=NONE;maximum_prefix_cells=0;direct_mass=NONE;state_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;conclusion=EMPTY
+band_consequence=all projected k=2 scalar rows with 1600<=z1<=1679 are empty
+consequence=projected k=2 first drift label z1<=1599
+scope_boundary=finite-exact intended THM-2980 band input complete;THM-2980 remains reserved pending integrated promotion audit;LRC(14) remains open
+profile_sha256=be809cc1d19c45e0f451fd77404666ce397e79a55c41dbf87fd451efe48026c9
+semantic_sha256=42238eae59f0df241ca68919b5987444f482f7a009eda6e813b23991a3553796
+all_exact_controls=PASS
