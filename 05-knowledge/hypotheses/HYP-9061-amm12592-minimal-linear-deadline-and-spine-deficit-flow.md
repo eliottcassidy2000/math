@@ -1,7 +1,13 @@
 ---
 id: HYP-9061
 title: "AMM 12592 minimal linear deadline: spine deficit flow and the two-bias rate gate"
-status: OPEN (frontier question named; certificate decoded and verified exact)
+status: >
+  OPEN (frontier question named; certificate decoded and verified exact;
+  context CONFIRMED 2026-07-30: fragment re-supplied with the AMM 12592
+  problem statement and minimal-C framing adjacent, margin F byte-identical
+  to the repo reconstruction — see
+  05-knowledge/results/amm12592-snippet-context-confirmation-deathstar-coinC2.md;
+  rival homes HYP-9023/klein-S402-S404/mac-mini-S168 demoted on provenance)
 source: death-star-2026-07-30-coinC
 related:
   - THM-2160

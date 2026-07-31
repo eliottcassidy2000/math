@@ -74,7 +74,11 @@ Facts (THM-2966 corollaries + lane A verification on THM-2225):
    2n` at every `gamma` — shell gain and routing cost cancel identically.
 6. **The two-bias certificate:** the externally supplied gate
    `(2457/6592) log(8847357/2974400) - log(1285/896) > 1/25` (decoded and
-   exactly refereed this session) matches the shape of the desert's
+   exactly refereed this session; context **CONFIRMED to AMM 12592** on
+   2026-07-30 by a re-supply of the fragment with the problem statement
+   and minimal-C framing adjacent — rival LRC/Abel-Dini homes retired,
+   see `05-knowledge/results/amm12592-snippet-context-confirmation-deathstar-coinC2.md`)
+   matches the shape of the desert's
    entropy max-flow condition; its biases are the Legendre duals of lattice
    rays of slopes `q_A/p_A ~ 0.697` and `q_B/p_B ~ 0.336`, one in the
    desert, one just inside the 0-cone edge (`2457/6592 ~ 0.3727`). Whether
