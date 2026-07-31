@@ -2,24 +2,6 @@
 
 **Status:** CURRENT. **Role/Use:** compact defaults from repeated successes and failures; scan triggers and evidence. Each card states applicability, action, mechanism, and counterindication; new cards require distinct-thread evidence or a severe repaired failure.
 
-## Close the reading class; the survivor inherits the semantics
-
-**Trigger/action:** when an exact decoded object (certificate, constant,
-inequality) has two or more candidate semantic readings, do not hunt
-instances inside a favored reading; formalize each reading as a *class*
-of arguments and prove a closing theorem (wall) for whole classes until
-one survives. **Mechanism:** class closure converts "we could not find
-how it works" into "it cannot work this way"; the surviving class then
-dictates the next computation. **Counterindication:** the wall must state
-its class boundary honestly — an overbroad informal class gives false
-confidence (THM-2977 closes archimedean-envelope evaluation only; a
-forced 2-adic envelope would evade it). **Evidence:** THM-2977 + lane G2
-(evaluation class closed, entropy dual forced, AMM 12592 thread); the
-opus-S4 height cliff (all integer coefficient choices killed at once,
-snippet-decode thread); klein-S404's no-near-cancellation discriminator
-(Baker class killed, LRC-side decode thread); THM-2967's Polya-Carlson
-closure of the entire sublinear-excess envelope class.
-
 ## Peel the distinguished prime, then force a small torsion collision
 
 **Trigger/action:** for density-`1/p` combs on `D`, prove the quotient-index dichotomy after `D=pq`, split transverse sections from vertical spikes, and
@@ -140,12 +122,12 @@ THM-2022, THM-2159/2165, THM-2162/2163/2166, THM-2193/2298, and THM-2160.
 target difference loses endpoint origin/determinant, while the restored joint
 current fills every cell and every admissible parabolic sector.
 
-## A local factorization transfers only through a stated functor
+## Refine and saturate before transporting a factor or shadow
 
-**Trigger / action:** when a source factorization is transferred to a wall, limit, optimization, or topological object, draw the construction and prove multiplicativity; otherwise keep it source-side and test rectangles or all separable perturbations.
-**Mechanism:** scalar summation, confluence, limits, constant terms, and passage to another cell complex need not preserve products, vanishing orders, or argmins.
-**Counterindication:** use product closure when an exact functorial theorem supplies it.
-**Evidence:** MISTAKE-215/223; THM-2348 (mixed-ANOVA criterion); and THM-2033's special-matrix scope.
+**Trigger / action:** before taking or transferring a Fourier, resultant, image, factor, or curvature shadow, refine to complete atoms or the full coefficient ideal, construct there, and saturate chart/wall artifacts.
+**Mechanism:** early smoothing or elimination creates off-diagonal leakage and false components; completion recovers the supported object.
+**Counterindication:** division is not functorial--Lorentzian factors and copied masks need a typed strict transform, lawful action, saturated ideal, or other multiplicative functor.
+**Evidence:** THM-2452/2345/2576, MISTAKE-287/215/223, THM-2348/2033, and THM-2942/2969's open coloured wall lift.
 
 ## Controlled forgetting requires a sidecar
 
@@ -257,11 +239,11 @@ THM-2682 two-simplex; THM-2658 requires a common gain section.
 **Mechanism / counterindication:** exactification reveals shape; numerics remain scouts only with an error model and no arithmetic claim.
 **Evidence:** MISTAKE-176 and S399’s exactification bounty.
 
-## A failed certificate is not a failed theorem
+## Close semantic reading classes before judging a theorem
 
-**Trigger / action:** when a sufficient order, invariant, sieve, or projection fails, mark its exact boundary and seek phase, confluence, recurrence, or another sidecar before judging the target.
-**Mechanism / counterindication:** certificate failure diagnoses information loss; only a counterexample to the target is decisive.
-**Evidence:** MISTAKE-212/213 and S399’s “frames describe, do not prove” phase.
+**Trigger/action:** for competing semantic readings or a failed sufficient certificate, formalize each class, prove its exact wall, and let survivors choose the next computation.
+**Mechanism/counterindication:** closure proves impossibility only inside an honestly bounded class; only a target counterexample refutes the theorem.
+**Evidence:** THM-2977/2967, lane G2, opus-S4, klein-S404, MISTAKE-212/213, and S399.
 
 ## Formal verification needs a semantic witness
 
