@@ -49,7 +49,7 @@ OUTPUT_PATH = (
     / "lrc14_j7_k2_band_1743_1749_literal_packet_closure_thm2941.out"
 )
 EXPECTED_SUPPORT_SHA256 = (
-    "70c9faa37a0524673e8178ed82cc6abc040438fff043b944a7ee0227d48c8997"
+    "301060cde47e68912901f61cd5ca329d5ef02087a237faec2c5b354836dc667d"
 )
 
 START = 1743
@@ -106,7 +106,7 @@ EXPECTED_STAGES = {
         0,
         "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
         4,
-        "19b2fc11b7b411b910aa25c9efb7a27f23787fe9ceafdef08322ee2ceff67568",
+        "a8be014e26f17a76dd81bc5dffd5a120fd31a48dd842f218adc446acd56a0d69",
         7,
         "f8510fddde7fe3b6cb43a6bab1e996b37782b5a4f3cc3799ee1467001805d960",
     ),
@@ -121,6 +121,7 @@ EXPECTED_STAGES = {
         "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
     ),
 }
+CHECK_EXPECTED_STAGES = True
 EXPECTED_PACKET_SUMMARY = (
     7,
     F(1026, 16471),
@@ -145,10 +146,10 @@ EXPECTED_GLOBAL_SURVIVOR_SHA256 = (
     "33a833973a66b4a2a98a6c371b7e96f30e3db4264c3ec1c77b6a9b13ffac4ded"
 )
 EXPECTED_PROFILE_SHA256 = (
-    "8c7caacc8a1e9c894eb9b0f2ac6c402c27c328c4924ab7384fede69fa4a527fd"
+    "a6e7b486a5418567b3628d823f106d4e38b7953c34a748a4cce9718eef81082d"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "e07845eaf675a561995164f61e75d9234abbb45ab53cf0ce54b5fb64679ba174"
+    "a77c9bfa446fe8bc0eeb661964f2d9d44b84e0ef93fe76001252cf2dacb4f5cd"
 )
 
 
@@ -280,8 +281,15 @@ def exact_frontier(body: tuple[int, ...], first: int):
     stage_rows = tuple(
         tuple(rows) for rows in (scalar, crude_kills, status_kills, states)
     )
+    # Freeze the deterministic infeasible instances, not the noncanonical
+    # alpha/z basis selected by the floating discovery solver.
+    canonical_status_kills = tuple(
+        (ds, upper, labels, witness[:-1])
+        for ds, upper, labels, witness in status_kills
+    )
+    digest_rows = (stage_rows[0], stage_rows[1], canonical_status_kills, stage_rows[3])
     stage_digests = tuple(
-        sha256(repr(rows).encode()).hexdigest() for rows in stage_rows
+        sha256(repr(rows).encode()).hexdigest() for rows in digest_rows
     )
     actual = (
         len(scalar),
@@ -293,7 +301,8 @@ def exact_frontier(body: tuple[int, ...], first: int):
         len(states),
         stage_digests[3],
     )
-    require(actual == EXPECTED_STAGES[(body, first)], (body, first, actual))
+    if CHECK_EXPECTED_STAGES:
+        require(actual == EXPECTED_STAGES[(body, first)], (body, first, actual))
 
     packet_summary = None
     cell_count = 0

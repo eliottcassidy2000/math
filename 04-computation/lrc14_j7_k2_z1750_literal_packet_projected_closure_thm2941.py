@@ -70,13 +70,13 @@ OUTPUT_PATH = (
     / "lrc14_j7_k2_z1750_literal_packet_projected_closure_thm2941.out"
 )
 EXPECTED_SCALAR_BASE_SHA256 = (
-    "99a8170413b34c2887eb7deac1ab038e6492c74b6d2f36ef8b9d0127afccd19e"
+    "4afbd91c68d6dbfd792f7cccede15bc0d0f5ae70ec6af30670edcc13466c4c3b"
 )
 EXPECTED_PROJECTED_SHA256 = (
     "76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662"
 )
 EXPECTED_RAY_STATUS_SHA256 = (
-    "77c848a2b18b6fd0f60b31bd1a2b9c9972793e3fa1fe3838633b46211a64d037"
+    "0db812e766eb25ffeed24e7f242edea9bff330514f47b1a0fb459f89cc9c8ead"
 )
 
 FIRST = 1750
@@ -133,7 +133,7 @@ EXPECTED_EXACT_STAGES = {
         0,
         "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
         1,
-        "37de3656c0dbd7dddcf11a3fd45acfb701e322b92489515b16b4da8782daada8",
+        "d380b217a5cb12fd59aed4fc006c8211f032f19f0fc82f6c6acb4e4add99e65c",
         0,
         "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
     ),
@@ -143,7 +143,7 @@ EXPECTED_EXACT_STAGES = {
         0,
         "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
         471,
-        "ebc7448c7d8b3196159c5abdfded0a4e799754c8c13c29fbad6b3f3c2c18ff51",
+        "a9d8732aa59cbc99194e1e7e907085a770f726b00d83ae6c2eb0995ead9493ee",
         3,
         "6f36b3ba5b851a76a629e75aaa479ead9caf0491bd0424112712c99376e80c6b",
     ),
@@ -153,7 +153,7 @@ EXPECTED_EXACT_STAGES = {
         0,
         "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
         7,
-        "2d5a5128006454e1f3696ba0d29c79b71c95b818ef8b181d92d5e5530094e7a1",
+        "da5c3bb0778e4723d7439e9ec2cb2010ea0b2da18ec33e9dcf1991d25ae942c2",
         0,
         "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
     ),
@@ -163,7 +163,7 @@ EXPECTED_EXACT_STAGES = {
         0,
         "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
         5,
-        "0c734a03ed364ec7f0101157b9ea6b5720a152818f6cd739d5da457ac01e5d5d",
+        "fc99d0cc9240afec87c6023d1aea18bf4cb30d8fa6fd6440e2813bc1ab6a5200",
         0,
         "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
     ),
@@ -173,7 +173,7 @@ EXPECTED_EXACT_STAGES = {
         0,
         "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
         94,
-        "810f82af8d5398d037dbcc97d73872f1fbbaa38e7aa4f92e75a88ee130088997",
+        "a7f6adf2555cf20e2726d3159bf5b3b667752ec6caf3625c837ad29db1c53350",
         92,
         "424ca96366625136417d1b705b514cf92b35b141e234b8fd5a9213515c90c334",
     ),
@@ -183,7 +183,7 @@ EXPECTED_EXACT_STAGES = {
         0,
         "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
         1,
-        "790bb3c706ca2fa6b2670349cbb60df25bcd9d12bfe5a743916ff2b593235f95",
+        "201c167c8c25d1b949f8b93d1629b1a970153cf5b871395b63863acc1a61686a",
         4,
         "91a2f8f9d4a97a346ad7c49559d3fa5d57dd2fa0981d4fa174c992d9994a9370",
     ),
@@ -193,7 +193,7 @@ EXPECTED_EXACT_STAGES = {
         0,
         "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
         2,
-        "fa65b693b9011270ca20740e0681c1b07eab3f3b7ed262f34f5bb43b586df633",
+        "d1a6a874fe46b57cf3a5df282b967f88ed237654d071bf9b9457e7c0e081c725",
         0,
         "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
     ),
@@ -203,11 +203,12 @@ EXPECTED_EXACT_STAGES = {
         0,
         "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
         1,
-        "742fabb93b9eeb620506f69b224bb2b7ecf57be8ef5c356e4f30a7bce0a8bf51",
+        "599ddf74b69a195a817219dc94b60063f4169dbebda43e3dc1ea8e0c8472b4c6",
         1,
         "475eef6bca4067a12390d49befb62b600b73d8088733be0fb026ff317fc83a74",
     ),
 }
+CHECK_EXPECTED_EXACT_STAGES = True
 
 EXPECTED_PACKET_SUMMARIES = (
     (
@@ -292,10 +293,10 @@ EXPECTED_PACKET_SUMMARIES = (
     ),
 )
 EXPECTED_PROFILE_SHA256 = (
-    "0c911c7222dc6686735e878a2905a0dcf42d3bd00ecc56c7835b5447741969da"
+    "96041a2c4b397c730e229f39af07f6a25f5dee651a55f7065b3bc28ca32c8c3c"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "71dfba440f4573d82de685adb7f4684909e99b7fafcfe729215ac2fc0573e972"
+    "5f99ccca886e67b3171c57a5ed6423f992f0aeaf25d7ef728899e7f0fbc1e43b"
 )
 
 
@@ -570,7 +571,14 @@ def exact_status_frontier(body, carrier, h, lower, period, first_delta, first_d)
         (states if witness is None else status_kills).append(row)
 
     stage_rows = (tuple(scalar), tuple(crude_kills), tuple(status_kills), tuple(states))
-    stage_digests = tuple(sha256(repr(rows).encode()).hexdigest() for rows in stage_rows)
+    # Exact rational verification remains mandatory, but the final dual basis
+    # selected by HiGHS is not canonical.  Bind only the infeasible instances.
+    canonical_status_kills = tuple(
+        (ds, upper, labels, witness[:-1])
+        for ds, upper, labels, witness in status_kills
+    )
+    digest_rows = (stage_rows[0], stage_rows[1], canonical_status_kills, stage_rows[3])
+    stage_digests = tuple(sha256(repr(rows).encode()).hexdigest() for rows in digest_rows)
     actual = (
         len(scalar),
         stage_digests[0],
@@ -581,7 +589,8 @@ def exact_status_frontier(body, carrier, h, lower, period, first_delta, first_d)
         len(states),
         stage_digests[3],
     )
-    require(actual == EXPECTED_EXACT_STAGES[body], (body, "status frontier changed", actual))
+    if CHECK_EXPECTED_EXACT_STAGES:
+        require(actual == EXPECTED_EXACT_STAGES[body], (body, "status frontier changed", actual))
     return (
         amplitudes,
         signs,
