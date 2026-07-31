@@ -58,10 +58,10 @@ DEFAULT_OUTPUT = (
 )
 
 EXPECTED_FRONTIER_SOURCE_SHA256 = (
-    "24bfd9702d00454782ced222e35d3a003eaea0219c58b34dd9bffacd5e264bd4"
+    "b2fa83a8d4cc05558d8fbc2dcb9e207595e7a38c0cf985bce6623cc108d45e43"
 )
 EXPECTED_FRONTIER_OUTPUT_SHA256 = (
-    "e8fa74d4757d4a1947ce93fdc29cf8de00b75d468af0bc9ed33a8d798cfcac85"
+    "a5eff5feb166d2e6ac96940ad7c1fbdc60b17f92211be9f4d715fa8fbb38e876"
 )
 EXPECTED_PROJECTION_SHA256 = (
     "76f891edfcc029a08202481304a809e03e8bd81f247afaeabab685825c4d3662"
@@ -99,7 +99,7 @@ def require(condition, message):
 
 
 def file_sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def load_module(name, path):

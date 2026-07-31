@@ -7,7 +7,8 @@ four-denominator multiset, with the projected high-label obligation retained.
 Crude all-divisor fibre overload rejects 7,481 of the 18,249 attained states;
 the common 16-cell Hunter table rejects another 10,698.  Every Hunter rejection
 is replayed here with exact rational matrix arithmetic independent of the
-status solver.
+status solver.  Replay hashes bind the deterministic infeasible instances,
+not the noncanonical dual basis selected by the solver.
 
 Seventy states remain, on four bodies.  For each one the script records its
 attained maximizing literal packet and checks the older physical-denominator
@@ -62,7 +63,7 @@ EXPECTED_BODY_ATLAS_OUTPUT_SHA256 = (
     "cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "09fc1f3f6a84fb906a3afdfd5a91268795f9db600e97090650028dca945fb5fd"
+    "8efe5bdb2830e66fa83b05870f600dcca8957ecf64bf3ad1569b291b1001e13f"
 )
 
 FIRST = 312
@@ -179,7 +180,7 @@ def require(condition, message):
 
 
 def file_sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def load_module(name, path):
@@ -316,7 +317,7 @@ def evaluate_body(body):
         )
         require(gap == target - capacity and gap > 0, "invalid crude witness")
 
-    certificate_digest = hashlib.sha256()
+    verified_instance_digest = hashlib.sha256()
     contradictions = []
     for ds, witness in sorted(status.items()):
         q, M, marginals, cap_set, histogram, certificate = witness
@@ -333,7 +334,16 @@ def evaluate_body(body):
         contradictions.append(
             independent_farkas_check(q, marginals, capacities, histogram, certificate)
         )
-        certificate_digest.update(f"{body}|{ds}|{witness}\n".encode())
+        # The exact certificate was replayed above.  HiGHS may choose a
+        # different valid dual basis, so freeze the deterministic infeasible
+        # instance and never the solver-selected certificate representative.
+        verified_instance_digest.update(
+            f"{body}|{ds}|{witness[:-1]}\n".encode()
+        )
+
+    status_instances = tuple(
+        (ds, witness[:-1]) for ds, witness in sorted(status.items())
+    )
 
     sign_totals = {
         sign: sum(
@@ -370,11 +380,11 @@ def evaluate_body(body):
         trials,
         tuple(sorted(states)),
         tuple(sorted(crude)),
-        tuple(sorted(status)),
+        status_instances,
         tuple(packet_rows),
         tuple(bridge_rows),
         tuple(sorted(Counter(witness[1] for witness in status.values()).items())),
-        certificate_digest.hexdigest(),
+        verified_instance_digest.hexdigest(),
         min(contradictions, default=None),
     )
 
@@ -390,7 +400,7 @@ def main():
     args = parser.parse_args()
     require(args.processes >= 1, "process count must be positive")
     bodies = bodies_from_atlas()
-    pair_rows, control_marginals, control_caps, control_certificate = ray.local.controls()
+    pair_rows, control_marginals, control_caps, control_instances = ray.local.controls()
     if args.processes == 1:
         records = tuple(evaluate_body(body) for body in bodies)
     else:
@@ -429,7 +439,7 @@ def main():
         pair_rows,
         control_marginals,
         control_caps,
-        control_certificate,
+        control_instances,
     )
     semantic_hash = hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
     if EXPECTED_SEMANTIC_SHA256 is not None:
@@ -473,7 +483,8 @@ def main():
             f"states={len(states)};crude_kills={len(crude)};"
             f"status_kills={len(status)};survivors={len(packets)};"
             f"status_M={dict(mhist)};partition_sha256={partition_digest};"
-            f"certificate_sha256={cdigest};min_exact_farkas_contradiction={minimum}"
+            f"verified_farkas_instance_sha256={cdigest};"
+            f"min_exact_farkas_contradiction={minimum}"
         )
 
     lines.extend(

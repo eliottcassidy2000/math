@@ -25,9 +25,16 @@ Format per entry:
 - **Exact repair / strongest survivor:** exact verification of every returned
   certificate remains load-bearing.  Replay hashes now bind the deterministic
   infeasible instances, counts, and first witness, never the solver-selected
-  dual representative.  The same narrow repair is applied to the `z_1=378`
-  and `k=2` companions because they shared the latent mechanism; none of the
-  ray, capacity, Hunter, Farkas, cap, or ledger conclusions changes.
+  dual representative.  The same narrow repair is applied to the `z_1=378`,
+  `z_1=312`, downstream `z_1=306/302/298`, and `k=2` companions because they
+  shared the latent mechanism; none of the ray, capacity, Hunter, Farkas,
+  cap, or ledger conclusions changes.  The later
+  `lrc14_j7_k2_z1736_hybrid_closure_thm2941.py` and
+  `lrc14_j7_k2_z1736_exact_ray_status_projected_closure_thm2941.py`
+  status-stage replays regressed to hashing raw HiGHS certificates; their
+  mathematical checks may survive, but their transcript, profile, and
+  semantic pins are noncanonical until the same repair is applied or a
+  deterministic closure supersedes them.
 - **Rule:** a proof search may use a noncanonical optimizer witness, but a
   reproducibility digest must bind canonical problem data or a separately
   canonicalized certificate, not an arbitrary valid basis.

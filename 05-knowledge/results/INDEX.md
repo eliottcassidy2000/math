@@ -104,9 +104,9 @@
   exact-Farkas screens remove the first `1541`, while a one-high reduction
   and order-two/four density collisions close all eight `z286` terminals.
   The projected `k=3` cap is `275`, and the necessary-row ledger is `375,713`.
-  Torsion source/output/semantic hashes begin `6b644fbb/c94568f5/95f9da4c`;
-  the independent hashes begin `80e731d1/c0daca33/4667f8f0`; descent hashes
-  begin `97fbefb8/316d069c/b589ac0d`; `z297` hashes begin
+  Torsion source/output/semantic hashes begin `bbd4b011/5e8b37b7/95f9da4c`;
+  the independent hashes begin `d34fcd0f/2f3d9a45/4667f8f0`; descent hashes
+  begin `1e06537c/2a5845c3/cd50c3e7`; `z297` hashes begin
   `f4464e01/a0de530a/1a4d141d`; the lower descent hashes begin
   `f4d7292d/f709b859/cb202da8`.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py`, the isolated terminal referees,
@@ -322,9 +322,9 @@
   capacity/status screens close `1541`, and order-two/four located torsion
   closes the eight `z286` terminals.  Thus the current cap is `275` and the
   necessary ledger is `375,713`.  Torsion source/output/semantic hashes begin
-  `6b644fbb/c94568f5/95f9da4c`; independent hashes begin
-  `80e731d1/c0daca33/4667f8f0`; descent hashes begin
-  `97fbefb8/316d069c/b589ac0d`; `z297` hashes begin
+  `bbd4b011/5e8b37b7/95f9da4c`; independent hashes begin
+  `d34fcd0f/2f3d9a45/4667f8f0`; descent hashes begin
+  `1e06537c/2a5845c3/cd50c3e7`; `z297` hashes begin
   `f4464e01/a0de530a/1a4d141d`; lower-descent hashes begin
   `f4d7292d/f709b859/cb202da8`.
   The atlas source/output/semantic hashes begin `ddb2d19c/ce6807de/46535b2b`;

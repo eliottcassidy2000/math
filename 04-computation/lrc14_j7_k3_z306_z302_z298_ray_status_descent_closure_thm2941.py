@@ -9,6 +9,8 @@ four-denominator state with the inherited projected high-label obligation.
 All 137 states are rejected: seventeen by a crude fibre overload and 120 by
 the common 16-cell Hunter status table.  Every status rejection is replayed by a
 second exact rational Farkas checker independent of the status solver.
+Replay hashes bind the deterministic infeasible instances, never the
+noncanonical dual basis selected by the solver.
 
 The common-table engine's exhaustive small controls include both a feasible
 positive instance and an incompatible hostile instance.  No finite label
@@ -61,13 +63,13 @@ EXPECTED_BODY_ATLAS_OUTPUT_SHA256 = (
     "cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda"
 )
 EXPECTED_Z312_TERMINAL_SHA256 = (
-    "6b644fbb4abdbcb9b929b1789a7e73177bcce3116ad1bdc3b4ee4216adb7042c"
+    "bbd4b0112fbfbc21b8596d21e616009a6fcf77ae8a8488c06283a28c5f72b4ef"
 )
 EXPECTED_Z312_TERMINAL_OUTPUT_SHA256 = (
-    "c94568f5970948e985f920da6bc9873173e85c79e0712b1c84000a939f4612a0"
+    "5e8b37b7737b50b982caa00f066423c9eab3d93ac074ac7a86d18fc45eb618d1"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "b589ac0d64fd94468e0971de3b81a3bcffb8e446e506aa210ff85b4aa29dce5b"
+    "cd50c3e7c9c766160eb7167b85416fd5e11fb5680d1b27c500840021bfc4de46"
 )
 
 EXPECTED_COUNTS = {
@@ -110,7 +112,7 @@ def require(condition, message):
 
 
 def file_sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def load_module(name, path):
@@ -239,9 +241,9 @@ def evaluate_body(task):
         )
         require(gap == target - capacity and gap > 0, "invalid crude witness")
 
-    contradictions = []
-    certificate_digest = hashlib.sha256()
-    representative = None
+    exact_farkas_checks = 0
+    verified_instance_digest = hashlib.sha256()
+    representative_instance = None
     for ds, witness in sorted(status.items()):
         q, M, marginals, cap_set, histogram, certificate = witness
         D = lcm(*ds)
@@ -254,13 +256,16 @@ def evaluate_body(task):
             ray.fibre.residue_load_histogram(arcs, q) == histogram,
             "status load histogram changed",
         )
-        slacks, contradiction = independent_farkas_check(
-            q, marginals, capacities, histogram, certificate
-        )
-        contradictions.append(contradiction)
-        if representative is None:
-            representative = (task, ds, witness, slacks, contradiction)
-        certificate_digest.update(f"{task}|{ds}|{witness}\n".encode())
+        independent_farkas_check(q, marginals, capacities, histogram, certificate)
+        exact_farkas_checks += 1
+        instance = witness[:-1]
+        if representative_instance is None:
+            representative_instance = (task, ds, instance)
+        verified_instance_digest.update(f"{task}|{ds}|{instance}\n".encode())
+
+    status_instances = tuple(
+        (ds, witness[:-1]) for ds, witness in sorted(status.items())
+    )
 
     sign_totals = {
         sign: sum(
@@ -274,7 +279,7 @@ def evaluate_body(task):
     partition = (
         tuple(sorted(states.items())),
         tuple(sorted(crude.items())),
-        tuple(sorted(status.items())),
+        status_instances,
         tuple(survivors),
     )
     return (
@@ -293,9 +298,9 @@ def evaluate_body(task):
         tuple(sorted(Counter(witness[1] for witness in status.values()).items())),
         max(states.items(), key=lambda item: (item[1]["excess"], item[0]), default=None),
         hashlib.sha256(repr(partition).encode()).hexdigest(),
-        certificate_digest.hexdigest(),
-        min(contradictions, default=None),
-        representative,
+        verified_instance_digest.hexdigest(),
+        exact_farkas_checks,
+        representative_instance,
     )
 
 
@@ -308,7 +313,7 @@ def main():
     tasks, atlas_counts = atlas_rows()
     require(tasks == tuple(EXPECTED_COUNTS), "global task order changed")
 
-    pair_rows, control_marginals, control_caps, control_certificate = ray.local.controls()
+    pair_rows, control_marginals, control_caps, control_instances = ray.local.controls()
     if args.processes == 1:
         records = tuple(evaluate_body(task) for task in tasks)
     else:
@@ -330,7 +335,9 @@ def main():
     m_histogram = tuple(sorted(global_m.items()))
     if EXPECTED_M_HISTOGRAM is not None:
         require(m_histogram == EXPECTED_M_HISTOGRAM, "M histogram changed")
-    representative = next(record[17] for record in records if record[17] is not None)
+    representative_instance = next(
+        record[17] for record in records if record[17] is not None
+    )
 
     semantic_payload = (
         tasks,
@@ -342,8 +349,8 @@ def main():
         pair_rows,
         control_marginals,
         control_caps,
-        control_certificate,
-        representative,
+        control_instances,
+        representative_instance,
     )
     semantic_hash = hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
     if EXPECTED_SEMANTIC_SHA256 is not None:
@@ -368,7 +375,7 @@ def main():
         (
             first, body, h, components, L, high_floor, first_d, checks, signs,
             denominator_classes, trials, partition, status_histogram, maximum,
-            partition_digest, certificate_digest, min_contradiction, _representative,
+            partition_digest, instance_digest, exact_checks, _representative_instance,
         ) = record
         states, crude, status, survivors = partition
         lines.append(
@@ -377,11 +384,13 @@ def main():
             f"denominator_trials={trials};states={len(states)};crude_kills={len(crude)};"
             f"status_kills={len(status)};survivors={len(survivors)};status_M={dict(status_histogram)};"
             f"max_state={maximum};partition_sha256={partition_digest};"
-            f"certificate_sha256={certificate_digest};min_exact_farkas_contradiction={min_contradiction}"
+            f"verified_farkas_instance_sha256={instance_digest};"
+            f"exact_farkas_checks={exact_checks}:PASS;solver_basis_not_frozen"
         )
     lines.extend(
         (
-            f"representative_exact_farkas={representative}",
+            f"representative_infeasible_instance={representative_instance};"
+            "exact_farkas=VERIFIED;solver_basis_not_frozen",
             "independent_exact_farkas_checks=120/120:PASS",
             "atlas_gaps=303..305 empty;299..301 empty;next occupied height297 with7 bodies",
             "conclusion=all projected k3 rows at z1=306, z1=302, and z1=298 are empty;projected k3 cap<=297;next exact frontier=297",

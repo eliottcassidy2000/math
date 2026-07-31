@@ -28,8 +28,8 @@ ROOT = Path(__file__).resolve().parents[1]
 FRONTIER = ROOT / "04-computation/lrc14_j7_k3_z312_ray_status_frontier_thm2941.py"
 FRONTIER_OUTPUT = ROOT / "05-knowledge/results/lrc14_j7_k3_z312_ray_status_frontier_thm2941.out"
 DEFAULT_OUTPUT = ROOT / "05-knowledge/results/lrc14_j7_k3_z312_finite_low_pair_torsion_independent_thm2941.out"
-EXPECTED_FRONTIER_SHA256 = "24bfd9702d00454782ced222e35d3a003eaea0219c58b34dd9bffacd5e264bd4"
-EXPECTED_FRONTIER_OUTPUT_SHA256 = "e8fa74d4757d4a1947ce93fdc29cf8de00b75d468af0bc9ed33a8d798cfcac85"
+EXPECTED_FRONTIER_SHA256 = "b2fa83a8d4cc05558d8fbc2dcb9e207595e7a38c0cf985bce6623cc108d45e43"
+EXPECTED_FRONTIER_OUTPUT_SHA256 = "a5eff5feb166d2e6ac96940ad7c1fbdc60b17f92211be9f4d715fa8fbb38e876"
 EXPECTED_SEMANTIC_SHA256 = "4667f8f0ef18add7466f849c6f902048d436692aa04c1f9037c2a3623709c91e"
 EXPECTED_GAPS = {
     (1, 8, 10, 11, 12, 14): F(271403663, 168333225060),
@@ -63,7 +63,7 @@ def require(condition, message):
 
 
 def file_sha256(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def load(name, path):
