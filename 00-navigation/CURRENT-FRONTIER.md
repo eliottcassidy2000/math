@@ -219,41 +219,6 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   support chords and excludes them on all 31,465 supports through exponent
   `30`.  The unbounded shared-line, general norm, and scalar multiplier-access
   problems remain open.
-
-### Newton-circuit structure (klein-S428, new)
-
-- **PROVED:** [THM-3000](../01-canon/theorems/THM-3000-fixed-edge-cumulant-curvature-universality-and-bounded-jet-transfer.md)
-  discharges codex's reservation.  For **every** fixed edge `k>=2`,
-  `log(R_k/R_(k-1))=(3x^2-2z-1)d^(-2)+O_k(d^(-3))` with the leading coefficient
-  literally `k`-independent (coefficient `1`, not merely proportional).  In
-  cumulants `3x^2-2z-1=(3kappa_2^2-2kappa_1kappa_3)/kappa_1^4`, so the
-  certificate is `3*variance^2 > 2*mean*third-central-moment`; symmetric root
-  profiles can never fail it.  The mechanism is a set-partition Moebius residue:
-  `3C(k,4)-C(k,2)^2/2=k(k-1)(3-2k)/4` is cubic and `Delta^3` of a cubic is
-  constant; the `-1` is `Delta^3` of the falling-factorial normalization.  It
-  also gives the **exact** third-edge polynomial `G_3` (with `[w]G_3=6(d-x)^3(d-2)^2`)
-  and the graded jet law `[J_j]=-(j-1)!C(k-2,j-3)`.  Hostile: `w~ -d/2` keeps
-  edge `2` rising while edge `3` falls at every width, so the sharp hypothesis is
-  `m_j/m_1^j=o(d^(j-3))`, **graded not uniform**.  For the first-gap family this
-  reduces the third edge to a crude `|p_4|=O(M^5)` bound on the core's fourth
-  power sum -- no new Macaulay chart.
-- **PROVED:** [THM-3001](../01-canon/theorems/THM-3001-newton-circuit-reversal-involution-and-two-end-curvature-law.md).
-  Coefficient reversal gives the exact involution `R*_k=R_(d-k)`, so reversal
-  **negates every Newton circuit**.  Consequence: no reversal-closed hypothesis
-  class -- positivity, positive real-rootedness, PF-infinity, Hurwitz stability,
-  strict ULC, or any combination -- can imply global no-return unless the ratio
-  sequence is constant.  This explains why THM-2991's decorations are inert and
-  why its construction had to be one-sided; THM-2991 remains strictly stronger
-  for the baseline-crossing statement (MISTAKE-335's distinction is preserved).
-  Two-end law: the bottom is `+C(mu)`, the top is `-C(mu*)` with `mu*` the
-  reciprocal root measure, so **asymptotic no-return requires `C(mu)>=0>=C(mu*)`**
-  -- a two-scalar screen.  Log-symmetric root profiles (balanced two-cluster,
-  geometric) are exactly ratio-palindromic with an interior maximum at the
-  midpoint.  Open: HYP that the two signs classify the global shape (census
-  `42/42`, needs a discrete-unimodality interior theorem).  First-gap invoice:
-  THM-2997 already gives `C(mu_M)>0`; the one remaining necessary scalar is
-  `C(mu*_M)<=0`, computable from the core's **bottom** coefficients.
-
 ### Live work
 
 Publish THM-2022; sharpen THM-2111's binomial degree toward `M+N`; formalize
