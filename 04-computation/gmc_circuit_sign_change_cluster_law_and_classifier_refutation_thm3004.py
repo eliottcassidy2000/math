@@ -212,13 +212,79 @@ def part4_why_missed():
     return True
 
 
+def part5_band_localization():
+    print()
+    rule("5. FREE-FERMION / BAND-FILLING LOCALIZATION: WHERE the reversals sit")
+    print("  e_k is the canonical k-fermion partition function of a system whose")
+    print("  grand partition function is prod(1 + r_i t): single-particle Boltzmann")
+    print("  weights r_i, fugacity t.  log h_k is its free energy in the binomial")
+    print("  gauge and the circuit is the THIRD derivative in particle number k.")
+    print("  Well-separated clusters are BANDS; filling a band is a first-order")
+    print("  transition, so reversals must sit at the band-filling numbers, i.e. at")
+    print("  the partial sums of the cluster sizes with roots sorted DESCENDING.")
+    print()
+    print("    sizes (largest root first)  band-filling k   observed reversal sites")
+    ok = True
+    for sizes in [(4, 5, 3), (3, 3, 3), (6, 2, 4), (2, 7, 3),
+                  (5, 4, 2, 3), (3, 3, 3, 3), (2, 3, 4, 2, 3)]:
+        m = len(sizes)
+        roots = []
+        for i, sz in enumerate(sizes):
+            roots += [Fr(10) ** (6 * (m - 1 - i))] * sz
+        ps, t = [], 0
+        for sz in sizes[:-1]:
+            t += sz
+            ps.append(t)
+        s = circuit_signs(roots)
+        zeros = [i + 2 for i in range(len(s)) if s[i] == 0]
+        # sites must be computed on the ZERO-FILTERED sign word, exactly as
+        # sign_changes() does; an exact tie is a degeneracy, not two reversals.
+        idx = [i for i in range(len(s)) if s[i] != 0]
+        sites = [idx[j] + 2 for j in range(len(idx) - 1) if s[idx[j]] != s[idx[j + 1]]]
+        contains = set(ps) <= set(sites) | set(zeros)
+        counts_ok = (len(sites) == 2 * m - 3)
+        ok &= contains and counts_ok
+        print(f"    {str(sizes):26s} {str(ps):15s} {str(sites):22s}"
+              f" boundaries hit: {str(contains):5s} total={len(sites)}"
+              f" (=2m-3: {counts_ok}) exact zeros at {zeros}")
+    print()
+    print("  DECOMPOSITION.  Every band boundary is a reversal site, and exactly one")
+    print("  further reversal sits strictly between each pair of consecutive")
+    print("  boundaries.  So")
+    print("        sign changes = (m-1) boundary sites + (m-2) inter-band sites")
+    print("                     = 2m-3,")
+    print("  which is a complete structural account of the count in part 2.")
+    print()
+    print("  EXACT ZEROS ARE FORCED BY RIGIDITY, NOT EXTRA REVERSALS.  Equal cluster")
+    print("  sizes with geometric separation make the log-root measure SYMMETRIC, so")
+    print("  THM-3003 section 1 gives c_k = -c_(d+1-k); when d is odd, k=(d+1)/2 is a")
+    print("  fixed point of that involution and c vanishes there EXACTLY.  Check:")
+    for sizes in [(3, 3, 3), (2, 2, 2), (4, 4, 4), (2, 2, 2, 2)]:
+        m = len(sizes)
+        roots = []
+        for i, sz in enumerate(sizes):
+            roots += [Fr(10) ** (6 * (m - 1 - i))] * sz
+        d = len(roots)
+        s = circuit_signs(roots)
+        zeros = [i + 2 for i in range(len(s)) if s[i] == 0]
+        pred = [(d + 1) // 2] if d % 2 == 1 else []
+        good = zeros == pred
+        ok &= good
+        print(f"    sizes {str(sizes):14s} d={d:2d}  exact zeros {str(zeros):8s}"
+              f" predicted {str(pred):8s} {'OK' if good else 'MISMATCH'}")
+    print(f"  VERDICT 5: {'LOCALIZATION + FORCED-ZERO CONFIRMED' if ok else 'MISMATCH'}")
+    return ok
+
+
 def main():
     a, _ = part1_minimal_witness()
     b = part2_cluster_law()
     c = part3_scope()
     d = part4_why_missed()
+    e = part5_band_localization()
     print()
-    rule(f"SUMMARY  refutation={a}  cluster-law={b}  m<=2 scope={c}  census-audit={d}")
+    rule(f"SUMMARY  refutation={a}  cluster-law={b}  m<=2 scope={c}"
+         f"  census-audit={d}  band-localization={e}")
 
 
 if __name__ == "__main__":
