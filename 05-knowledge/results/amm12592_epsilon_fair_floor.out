@@ -1,0 +1,37 @@
+epsilon = 2^{-beta m};  predicted critical beta* = 1/phi^2 = 0.3819660
+
+   m   beta      epsilon=2^-(beta m)   certified floor rho >
+    64   exact     0                    1.575342
+    64   0.25      2^-16                1.530864
+    64   0.34      2^-21                1.546667
+    64   0.38      2^-24                1.561644
+    64   0.42      2^-26                1.565789
+    64   0.50      2^-32                1.575342
+    64   0.70      2^-44                1.575342
+
+   128   exact     0                    1.582781
+   128   0.25      2^-32                1.546763
+   128   0.34      2^-43                1.568750
+   128   0.38      2^-48                1.576642
+   128   0.42      2^-53                1.581250
+   128   0.50      2^-64                1.582781
+   128   0.70      2^-89                1.582781
+
+   256   exact     0                    1.588652
+   256   0.25      2^-64                1.556391
+   256   0.34      2^-87                1.579710
+   256   0.38      2^-97                1.586441
+   256   0.42      2^-107               1.588652
+   256   0.50      2^-128               1.588652
+   256   0.70      2^-179               1.588652
+
+READING.  The floor is EXACTLY INTACT for beta above 1/phi^2 (at m=256,
+beta = 0.42 and 0.50 both reproduce the exact-fairness value 1.588652) and
+DEGRADES CONTINUOUSLY below it (0.38 -> 1.586441, 0.34 -> 1.579710,
+0.25 -> 1.556391).  The onset sits right at the predicted 1/phi^2 = 0.38197.
+It is a smooth degradation, not a cliff: the floor does not vanish, it erodes.
+So the golden ratio appears twice -- delta* = 1/phi is the binding degree
+fraction and 1 - delta* = 1/phi^2 is the critical slack exponent, the two
+tied by the same quadratic delta^2 = 1 - delta.  Caveat: this is a statement
+about the lower-bound METHOD, not a construction; it shows the bound is not
+robust to slack, not that C*(epsilon) itself drops.

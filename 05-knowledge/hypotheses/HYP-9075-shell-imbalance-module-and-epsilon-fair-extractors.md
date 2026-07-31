@@ -141,7 +141,62 @@ C*(epsilon) -> C*(0)   as   epsilon -> 0.
 Two reasons this is worth doing: it is the natural home of the
 exact-vs-approximate dichotomy that the cited paper exemplifies, and a fast
 decay would say the exact problem's rigidity is an integrality artifact
-rather than a real information barrier. NOT yet computed; the (ARCH)
-derivation should carry over with `binom(m-1,d)` replaced by
-`binom(m-1,d) - epsilon 2^m`-ish, which is a one-line change to the existing
-referee.
+rather than a real information barrier. **COMPUTED.** The relaxation is exact: allowing `|c_j| <= 2 eps binom(m,j)`
+(sufficient, since the Bernstein functions are a partition of unity) turns
+the identity into `sum_k E_k(u)(1+u)^(L_k) = +-u^(m-1) + Gamma(u)`, and
+expanding at `u = -1` with `sum_j binom(m,j)binom(j,d) = binom(m,d)2^(m-d)`
+gives
+
+```text
+binom(m-1,d) - 2 eps binom(m,d) 2^(m-d) <= sum_k binom(a_k,d-L_k)2^(a_k-d+L_k).
+```
+
+**The scaling is decisive.** At `d = delta m` the main term has `log_2`
+exponent `m H(delta)` but the correction has `m[H(delta) + 1 - delta]` --
+exponentially larger for every `delta < 1`. So the floor survives exactly
+when `eps <~ 2^(-m(1-delta*)) = 2^(-m/phi^2)`, predicting a critical exponent
+
+```text
+eps = 2^(-beta m):   beta* = 1 - delta* = 1/phi^2 = 0.3819660...
+```
+
+Measured (certified floor, `m = 256`, exact-fairness value `1.588652`):
+
+```text
+beta    0.25      0.34      0.38      0.42      0.50
+floor  1.556391  1.579710  1.586441  1.588652  1.588652
+```
+
+Exactly intact above `beta*`, eroding continuously below, with the onset at
+`0.38-0.42` straddling `1/phi^2`. Same picture at `m = 64, 128`. So the
+golden ratio appears TWICE: `delta* = 1/phi` is the binding degree fraction
+and `1 - delta* = 1/phi^2` the critical slack exponent, tied by the one
+quadratic `delta^2 = 1-delta`. **The rigidity behind `C_arch` is an exact-
+fairness (integrality) phenomenon**: slack beyond `2^(-m/phi^2)` erodes it.
+Caveat: this concerns the lower-bound METHOD, not a construction -- it shows
+the bound is not robust, not that `C*(epsilon)` itself drops.
+Referee: `04-computation/amm12592_epsilon_fair_floor.py`.
+
+## 7. Two adjacent repo threads (leads, not links)
+
+**Strong Factorial Conjecture.** SFC is live here (THM-2922 proves
+first-window `SFC(4)` on six families; THM-2891 lists `SFC(4)` among its
+targets). The kinship with our module is real and structural: with
+`L(x^alpha) = alpha!` the factorial functional is the moment functional of the
+PRODUCT exponential measure, `L(f) = int_{[0,inf)^n} f e^{-sum x_i}`, so SFC
+says a polynomial whose powers all have vanishing moment against a product
+measure must vanish. Our statement is the same shape with the Bernoulli
+product measure and the family indexed by `p` instead of by powers, and our
+Bernstein argument (`D_m = 0` iff the composition vector vanishes) is exactly
+a moment-determinacy step. Whether the Macaulay-Newton window machinery of
+THM-2922 transfers to the shell module is untested.
+
+**Lemniscate of Bernoulli.** It enters via THM-3012, whose signature-4 series
+`2F1(1/4,3/4;1;x)` and central-binomial quarter series sit in lemniscatic
+territory; its constant hunt already lists `varpi = Gamma(1/4)^2/(2 sqrt(2pi))`
+alongside the golden ratio and `log(1+sqrt2)`. Honest verdict: that is a
+constant-IDENTIFICATION context, and our constant needs none -- `C_arch =
+log_5(5 phi^2)` is pinned algebraically by `delta^2 = 1-delta` (THM-3009 sec
+3.1), so there is no room in it for a lemniscatic identity. The shared object
+is the central binomial appearing in both capacity boxes and quarter series,
+which is an adjacency of tools, not a link between the constants.
