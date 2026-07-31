@@ -2,8 +2,8 @@
 id: THM-2996
 title: "Prime-modular affine-defect trichotomy and spherical quartic uniqueness"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For the displayed integral C2*C3 -> S3 module reduced modulo any
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the displayed
+  integral C2*C3 -> S3 module reduced modulo any
   prime p, translation-gauge classes of affine lifts form F_p, with defect
   lambda=2b2-b1 and cusp translation (st)^2=lambda e1.  A nonzero class has
   transitive image F_p^2 semidirect S3, order 6p^2, and cusp order 2p.
@@ -34,8 +34,9 @@ hash_basis: LF-normalized bytes
 
 # THM-2996 -- prime-modular affine defect and spherical quartic uniqueness
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**  This file is not a proved dependency until that audit promotes it.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  Independent
+replay and a separate cohomology, orbit, bad-prime, and discriminant-character
+audit reproduce the theorem and all stated scope boundaries.
 
 ## 1. Inheritance and statement
 
