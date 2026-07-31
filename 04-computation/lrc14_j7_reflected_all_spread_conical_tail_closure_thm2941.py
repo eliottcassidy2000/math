@@ -11,7 +11,7 @@ distinct levels ``p,q`` on labels ``a<b``, a body-safe-cell pair floor
     c^-1 (F_PQ,min-2|eta|),
     c=1-a/(pL),              eta=(qa-pb)/(pL-a).          (1)
 
-This file proves that every such packet closes whenever ``m>=11D``.  The
+This file proves that every such packet closes whenever ``m>=8D``.  The
 point is that the estimate is conical: it depends on the ratio ``D/m``, not
 on fixing ``D`` first.
 
@@ -26,10 +26,22 @@ same-level-good edge and hence have distinct levels in every residual word;
 their ratio is ``1/126126``.  An exact all-body audit shows that equality in
 (2) occurs only on ``E=(1,2,3,4,6,12)``.
 
-If ``g=gcd(p,q)``, then ``g`` divides ``|p-q|`` and hence ``g<=D``.  Thus the
-large-product phase estimate gives
+The phase fibre has a sharper exact functional form than its earlier
+``1/(2PQ)`` error bound.  The quantity ``T_s(z)-s^2`` is one-periodic in
+``s``.  An exact ``14 by 14`` residue bank gives
 
-    F_PQ,min >= 1/49-D^2/[2m(m+1)].                    (3)
+    min_z [(T_A-A^2)-(T_B-B^2)] >= -12/49,
+
+and hence
+
+    F_PQ,min >= 1/49-12/(49PQ).                        (3)
+
+If ``m>=8D`` and ``r=Q-P``, then ``P>=8r``.  Therefore ``PQ>=110`` except
+for ``(P,Q)=(8,9),(9,10)``.  Formula (3) gives ``1/55`` once ``PQ>=110``;
+the two exceptions have exact floors ``5/252`` and ``2/105``.  Equality is
+attained at ``(10,11)``, so the near-diagonal floor is sharply
+
+    F_PQ,min >= 1/55.                                  (3a)
 
 Also
 
@@ -46,33 +58,33 @@ is
 
     1915198706/76797355635 < 1/39
 
-on the same hostile body.  Now fix ``C=11``.  For ``m>=CD`` the phase error
-is at most ``1/(2C^2)``.  At ``m=CD`` the transport bound is
+on the same hostile body.  Now fix ``C=8``.  At ``m=CD`` the transport bound
+is
 
     2D[C(b-a)+b]/[CDL-b],
 
 which decreases with ``D``; the debt is largest at ``m=C``.  Consequently
 the all-``D`` margin is bounded below by the finite body expression
 
-    M_C(E)=1/49-1/(2C^2)
+    M_C(E)=1/55
            -2[C(b-a)+b]/[CL-b]
            -sum_e e/[7(CL-e)].                         (5)
 
 An exact audit of all 3,003 bodies gives the unique minimum
 
-    M_11(1,2,3,4,6,12)
-      =1623460480282577/89735571946692461790 > 0.       (6)
+    M_8(1,2,3,4,6,12)
+      =742418365461/2597970620075215 > 0.               (6)
 
-The analogous separated-envelope margin at ``C=10`` is negative on this
-body.  Thus eleven is sharp for this proof invoice (not claimed sharp for the
+The analogous separated-envelope margin at ``C=7`` is negative on this
+body.  Thus eight is sharp for this proof invoice (not claimed sharp for the
 underlying reflected problem).
 
 The homotopy used in (1) is safely inside its slope range: the same bounds
-give ``|eta|<1``, while both integer slopes are at least ``m>=11``.
+give ``|eta|<1``, while both integer slopes are at least ``m>=8``.
 
-Hence every reflected residual packet with ``m>=11D`` closes, for every
+Hence every reflected residual packet with ``m>=8D`` closes, for every
 ``D>=1`` and every body.  In particular all still-open spreads ``D>=6`` are
-reduced to the wedge ``m<11D``.  This is a sufficient theorem inside the
+reduced to the wedge ``m<8D``.  This is a sufficient theorem inside the
 THM-2941 reflected family, not a proof of physical LRC(14).
 """
 
@@ -101,7 +113,7 @@ EXPECTED_UNIVERSAL_SHA256 = "dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3e
 EXPECTED_UNIVERSAL_OUTPUT_SHA256 = "3231959168d80a48ae87ca5f13d02bfd0ce76e58721a5165e2ce4eccf404fcaf"
 EXPECTED_D5_SHA256 = "d3da8fa8dcb23be7c8766b9fb942dfdf26f9b61055e21314fddcc0107d2b9678"
 EXPECTED_D5_OUTPUT_SHA256 = "49d33153da0eec25cc8b127b0b61f565594b457ed53725103e8a08ecf224fae2"
-EXPECTED_SEMANTIC_SHA256 = "0aa608ddf669abfa4674d37d8859ca6a3096dec74e737ed9c610d18ad8b43366"
+EXPECTED_SEMANTIC_SHA256 = "fea363714f68f5a3adca20768c592a07f6e2df1b145c216e86e0f318592a54b5"
 
 BODY_COUNT = 3003
 COMPLETE_BODY_COUNT = 3001
@@ -111,9 +123,11 @@ EXCEPTIONS = (
     ((2, 4, 7, 9, 11, 13), ((2, 4), (3, 5))),
 )
 
-CONE_CONSTANT = 11
-EXPECTED_WORST_CONE_MARGIN = F(1623460480282577, 89735571946692461790)
-EXPECTED_C10_HOSTILE_MARGIN = -F(161287014730148569, 125395966466160553800)
+CONE_CONSTANT = 8
+NEAR_DIAGONAL_FLOOR = F(1, 55)
+EXPECTED_PHASE_CORRECTION_MINIMUM = -F(12, 49)
+EXPECTED_WORST_CONE_MARGIN = F(742418365461, 2597970620075215)
+EXPECTED_C7_HOSTILE_MARGIN = -F(13202823531938, 23016930802790925)
 EXPECTED_DEBT_MAXIMUM = F(1915198706, 76797355635)
 EXPECTED_DEBT_GAP = F(53964259, 76797355635)
 DIRECT_CASES = (5, 13)
@@ -130,6 +144,35 @@ def sha256(path: Path) -> str:
 
 def qtext(value: F) -> str:
     return str(value.numerator) if value.denominator == 1 else f"{value.numerator}/{value.denominator}"
+
+
+def triangle_sum(s: F, z: F) -> F:
+    """Exact periodized tent."""
+    bound = s.numerator // s.denominator + 3
+    return sum(
+        (max(F(0), s - abs(z + n)) for n in range(-bound, bound + 1)),
+        F(0),
+    )
+
+
+def phase_correction(residue_p: int, residue_q: int) -> tuple[F, F]:
+    """Minimum numerator correction for one pair of residues modulo fourteen."""
+    A = F((residue_p + residue_q) % 14, 14)
+    B = F((residue_q - residue_p) % 14, 14)
+    events = {F(0), F(1)}
+    for s in (A, B):
+        for n in range(-3, 4):
+            for z in (-F(n), s - n, -s - n):
+                if 0 <= z <= 1:
+                    events.add(z)
+    return min(
+        (
+            (triangle_sum(A, z) - A * A)
+            - (triangle_sum(B, z) - B * B),
+            z,
+        )
+        for z in events
+    )
 
 
 for path, expected in (
@@ -196,7 +239,7 @@ def direct_control(D: int):
     p, q = levels[0], levels[1]
     divisor = gcd(p, q)
     P, Q = sorted((p // divisor, q // divisor))
-    phase_floor = F(1, 49) - F(1, 2 * P * Q)
+    phase_floor = F(1, 49) + phase_correction(P % 14, Q % 14)[0] / (P * Q)
     c = F(p * ruler - a, p * ruler)
     eta = F(q * a - p * b, p * ruler - a)
     transported = (phase_floor - 2 * abs(eta)) / c
@@ -229,6 +272,58 @@ def main() -> None:
     universal_exceptions = tuple((row[0], row[1]) for row in U.EXPECTED_EXCEPTIONS)
     require(universal_exceptions == EXCEPTIONS, (universal_exceptions, EXCEPTIONS))
 
+    # The tent error is integer-periodic in its radius.  The linked pair of
+    # residues therefore reduces to this complete 14 by 14 bank.
+    for residue in range(14):
+        alpha = F(residue, 14)
+        for integer in range(3):
+            for z in (F(0), F(1, 14), F(3, 7), F(1, 2), F(13, 14)):
+                require(
+                    triangle_sum(alpha + integer, z) - (alpha + integer) ** 2
+                    == triangle_sum(alpha, z) - alpha ** 2,
+                    ("tent radius recurrence", residue, integer, z),
+                )
+    correction_rows = tuple(
+        (*phase_correction(residue_p, residue_q), residue_p, residue_q)
+        for residue_p in range(14)
+        for residue_q in range(14)
+    )
+    require(len(correction_rows) == 196, len(correction_rows))
+    require(
+        min(row[0] for row in correction_rows)
+        == EXPECTED_PHASE_CORRECTION_MINIMUM,
+        min(correction_rows),
+    )
+    require(
+        sum(row[0] == EXPECTED_PHASE_CORRECTION_MINIMUM for row in correction_rows) == 8,
+        "sharp phase-correction multiplicity",
+    )
+    near_small = tuple(
+        (P, Q)
+        for P in range(1, 110)
+        for Q in range(P + 1, 110)
+        if gcd(P, Q) == 1 and P >= 8 * (Q - P) and P * Q < 110
+    )
+    require(near_small == ((8, 9), (9, 10)), near_small)
+    near_small_floors = tuple(
+        (
+            F(1, 49) + phase_correction(P % 14, Q % 14)[0] / (P * Q),
+            P,
+            Q,
+        )
+        for P, Q in near_small
+    )
+    require(
+        near_small_floors == ((F(5, 252), 8, 9), (F(2, 105), 9, 10)),
+        near_small_floors,
+    )
+    require(
+        F(1, 49)
+        + phase_correction(10, 11)[0] / 110
+        == NEAR_DIAGONAL_FLOOR,
+        "sharp near-diagonal equality",
+    )
+
     body_rows = []
     pair_histogram: Counter[F] = Counter()
     body_digest = hashlib.sha256()
@@ -247,8 +342,7 @@ def main() -> None:
         delta = body[j] - body[i]
         cone_debt = singleton_debt(body, ruler, (CONE_CONSTANT,) * 6)
         cone_margin = (
-            F(1, 49)
-            - F(1, 2 * CONE_CONSTANT * CONE_CONSTANT)
+            NEAR_DIAGONAL_FLOOR
             - F(
                 2 * (CONE_CONSTANT * delta + body[j]),
                 CONE_CONSTANT * ruler - body[j],
@@ -273,7 +367,7 @@ def main() -> None:
     )
     require(F(1, 39) - EXPECTED_DEBT_MAXIMUM == EXPECTED_DEBT_GAP > 0, EXPECTED_DEBT_GAP)
 
-    # Exact finite invoice behind the universal m>=11D cone.
+    # Exact finite invoice behind the universal m>=8D cone.
     worst_cone = min(cone_rows)
     require(
         worst_cone
@@ -282,20 +376,19 @@ def main() -> None:
             HOSTILE,
             168,
             (0, 1),
-            F(115127095011542, 52972592648578785),
+            F(7775518093802, 2597970620075215),
         ),
         worst_cone,
     )
-    c10_debt = singleton_debt(HOSTILE, 168, (10,) * 6)
-    c10_margin = (
-        F(1, 49)
-        - F(1, 200)
-        - F(2 * (10 + 2), 10 * 168 - 2)
-        - c10_debt
+    c7_debt = singleton_debt(HOSTILE, 168, (7,) * 6)
+    c7_margin = (
+        NEAR_DIAGONAL_FLOOR
+        - F(2 * (7 + 2), 7 * 168 - 2)
+        - c7_debt
     )
     require(
-        c10_margin == EXPECTED_C10_HOSTILE_MARGIN < 0,
-        (c10_margin, EXPECTED_C10_HOSTILE_MARGIN),
+        c7_margin == EXPECTED_C7_HOSTILE_MARGIN < 0,
+        (c7_margin, EXPECTED_C7_HOSTILE_MARGIN),
     )
     require(
         F(13) + F(14, CONE_CONSTANT)
@@ -308,10 +401,12 @@ def main() -> None:
         len(body_rows),
         worst_pair_rows,
         worst_debt_rows,
+        correction_rows,
+        near_small_floors,
         tuple(sorted(pair_histogram.items())),
         body_digest.hexdigest(),
         worst_cone,
-        c10_margin,
+        c7_margin,
         controls,
     )
     semantic = hashlib.sha256(repr(semantic_payload).encode()).hexdigest()
@@ -325,9 +420,11 @@ def main() -> None:
         "pair_selection=complete bodies use minimum 2(b-a)/L;exceptions use same-level-good slots (0,1)",
         f"sharp_pair_ratio=max_E min_pair 2(b-a)/L={qtext(worst_pair_rows[0][0])};unique_body={HOSTILE};L=168",
         f"singleton_debt=m^-1 monotone envelope;maximum_at_m1={qtext(EXPECTED_DEBT_MAXIMUM)};gap_below_1/39={qtext(EXPECTED_DEBT_GAP)}",
-        f"finite_cone_invoice=M_C(E)=1/49-1/(2C^2)-2[C(b-a)+b]/[CL-b]-debt_E(C);C={CONE_CONSTANT}",
+        f"phase_correction_bank=196;minimum={qtext(EXPECTED_PHASE_CORRECTION_MINIMUM)};multiplicity=8",
+        f"sharp_near_diagonal_floor=P>=8(Q-P);minimum={qtext(NEAR_DIAGONAL_FLOOR)};equality=(10,11)",
+        f"finite_cone_invoice=M_C(E)=1/55-2[C(b-a)+b]/[CL-b]-debt_E(C);C={CONE_CONSTANT}",
         f"unique_worst_cone_margin={qtext(worst_cone[0])};body={worst_cone[1]};pair={worst_cone[3]}",
-        f"C10_separated_envelope_hostile_margin={qtext(c10_margin)}<0;C11_is_sharp_for_this_invoice",
+        f"C7_separated_envelope_hostile_margin={qtext(c7_margin)}<0;C8_is_sharp_for_this_invoice",
         f"homotopy_slope_gate=|eta|<1 and integer slopes>=m>={CONE_CONSTANT}",
     ]
     for D, m, levels, floor, c, eta, transported, debt, actual in controls:
