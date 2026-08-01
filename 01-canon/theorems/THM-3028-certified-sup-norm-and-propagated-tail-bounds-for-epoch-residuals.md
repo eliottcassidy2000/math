@@ -28,7 +28,10 @@ status: >
   degree of freedom -- D0 has always been taken constant, but T(n) = n + 1 +
   floor(3n/5) + e(n) gives C = 8/5 for any BOUNDED e, so the admissible degree
   profiles d_i = floor(3(R+i)/5) + e_i form a far larger space than the
-  one-parameter family used so far. A first probe reaches miss 1.009.
+  one-parameter family used so far. A first probe reaches miss 1.009, but a
+  systematic sweep of 26 further bounded-e profiles does NOT improve on it
+  (best 1.022), so the ~1% miss floor is ROBUST. Reading: suggestive of search
+  limitation but NOT decisive -- R = 128 remains open in both directions.
   DIAGNOSTIC CONSEQUENCE, refining the THM-3002 5b correction: under the
   certified filter, R = 128 fails at a row that MOVES STRONGLY with the
   constant slack D0 -- row 42 (D0=0), 51 (D0=1), 97 (D0=2), 90 (D0=4), 80
@@ -204,13 +207,36 @@ e = 3, last  4 rows +2 :  best |want|/cap = 1.022
 e = 3, last 16 rows +1 :  best |want|/cap = 2.864   (not monotone -- the profile matters)
 ```
 
-`R = 128` still does not close, but the best miss is now **0.9%**, from a
-search that has explored essentially none of the bounded-`e` space. Combined
-with the `D0`-mobility of the death row (section 5), this is the strongest
-available evidence that the `R = 128` failure is a **search** phenomenon.
-The non-monotonicity in the bump width is itself a warning: the profile is not
-a single knob to be turned up, and a systematic search over bounded `e` is the
-natural next attack.
+`R = 128` still does not close, but the best miss is **0.9%**.
+
+**A systematic probe of the bounded-`e` space does NOT improve on that.** Over
+26 further profiles -- staircases (`base in {2,3}`, segment `8/16/32`, bump
+`1/2`), linear ramps (`2->4,2->5,2->6,3->4,3->5,3->6`), and 8 sorted random
+profiles with `e_i in [2,5]` -- the best miss is `1.022`, *worse* than the
+`1.009` above. Two robust features:
+
+```text
+base 2 profiles           : die at rows 96-105, never reach the final row
+base 3 profiles           : reach the final row, misses cluster at 1.02-1.03
+                            with outliers to 3.58
+best over all 26 profiles : 1.022   ("base3 seg8 bump1 staircase")
+```
+
+So the `~1%` miss floor is **robust across a fairly diverse profile family**,
+and the non-monotonicity in bump width persists.
+
+**Balanced reading.** This cuts both ways and should not be overstated in
+either direction. In favour of search limitation: the death row is `D0`-mobile
+(42 -> 97 -> reaches the end), the failure is a *single* capacity violation
+short by *one degree at one index*, and the beam explores a vanishing fraction
+of the state space. Against it: a `~1%` miss that neither beam width (to 4000),
+targeted-tail length (6 to 96), nor 26 bounded-`e` profiles can close is a
+stubborn floor, and one would expect a pure search artefact to be less
+reproducible. **The honest conclusion is that `R = 128` remains open and the
+evidence is suggestive but not decisive**; the earlier reading in section 5
+("leans away from an obstruction") should be read with this section's caveat
+attached. A decisive answer needs either a solution or a certified obstruction,
+and this file supplies neither.
 
 ## 6. Scope
 
