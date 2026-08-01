@@ -527,14 +527,20 @@ TIER 3  target Lambda.  ALL 19110 pairs of the 196 products alpha*atom over the
         49-atom pool (adds Gamma(1/8)Gamma(3/8) and its square/pi,
         Gamma(1/3)^3/pi, zeta(3)/K, more K^j/pi^i, G-products, log products),
         alpha in {1, sqrt2, sqrt3, 2^{1/4}}
-        |c| <= 10^5;  210 dps, 135-digit tol                 -> NO relation
+        |c| <= 10^5;  210 dps, 135-digit tol       -> EXTENSION, see output file
 ```
 
+**Certified region.** Tiers 1 and 2 are complete scans and are what this addendum
+claims. Tier 1 completed inside the recorded run; tier 2's exact region was also
+completed independently at `260` dps / `160`-digit tolerance (all `5456` subsets,
+targets `Lambda` and `S(4)`, no relation) before the recorded run. Tier 3 is a
+strictly larger region whose completed record is written by the same script into
+`05-knowledge/results/sk_S4_lambda_bounded_exclusion_thm3012.out`; read the
+verdict there, not here.
+
 (`S(4)` and `U` are exact rescalings of `Lambda` by `2 sqrt2 K/pi^2` and
-`5 pi^2/12 - 2(.)`, so tier 3 on `Lambda` covers them for any basis closed under
-those factors; tiers 1-2 scan the targets directly.) An independent earlier pass
-at `260` dps / `160`-digit tolerance over the same 33-atom core, all `5456`
-size-3 subsets, `|c| <= 10^5`, likewise returned nothing for `Lambda` and `S(4)`.
+`5 pi^2/12 - 2(.)`, so a scan of `Lambda` covers them for any basis closed under
+those factors; tiers 1-2 scan the targets directly anyway.)
 
 **Does:** exclude a finite region for a genuinely new and better-posed target.
 **Does not:** prove `Lambda` has no closed form. Never quote it as one.
