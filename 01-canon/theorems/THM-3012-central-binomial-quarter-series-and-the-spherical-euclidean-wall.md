@@ -595,3 +595,454 @@ lemniscatic singular point, where `K(sqrt x) = K(sqrt(1-x))` and the two-term
 Referee: `04-computation/sk_S4_lemniscatic_eisenstein_reduction_thm3012.py`,
 all checks passed. QED for (R1)-(R2); (R4) is an obstruction argument; (R5) is a
 bounded exclusion.
+
+## Addendum 6, 2026-08-01 (death-star, S4-contiguous lane): contiguity reduces at k=1 and nowhere else; S(4) in one balanced 3F2; a new closed form at k=2
+
+**Headline.**
+
+```text
+(a)  A classical 3F2(1) summation or contiguous reduction applies to the family
+     -- anywhere in its COMPLETE Thomae orbit -- iff k = 1.          [PROVED]
+(b)  S(4) = varpi/2 - W/(2 varpi),  W = 3F2(3/4,3/4,1/2 ; 3/2,3/2 ; 1),
+     varpi the lemniscate constant.               [VERIFIED-EXACT, 170 digits]
+(c)  3F2(3/4, 3/4, 1/4 ; 3/2, 5/4 ; 1) = varpi (pi - 2 log(1+sqrt2))/pi
+     -- a NEW closed form, and the product-of-transcendentals calibration
+     object this file has been missing since addendum 3.  [VERIFIED-EXACT]
+(d)  Contiguity's exact content is a FIRST-ORDER Mellin ladder
+     (s+1/4)(s+3/4) M(s+1) = s^2 M(s) + 1/(pi sqrt2);  the integer ladder is
+     Gauss-anchored, the ladder through 1/k (k>=2) is not.           [PROVED]
+```
+
+
+The configuration `3F2(1/4, 3/4, 1/k ; 1, 1+1/k ; 1)` is *contiguous*: the upper
+parameter `1/k` sits one below the lower `1+1/k`; and at `k = 4` that upper
+`1/k = 1/4` additionally *repeats* the upper `1/4`. This addendum settles what
+the degeneracy buys, exactly.
+
+Scripts and outputs (all four in `04-computation/` and `05-knowledge/results/`):
+
+```text
+sk_S4_contiguous_thomae_thm3012.py         structural, exact: orbit + rule scan
+                                           + the Mellin ladder
+sk_S4_contiguous_pslq_thm3012.py           170-digit verification + integralities
+sk_S4_contiguous_pslq_weight1_thm3012.py   the B1/B3 bounded exclusions
+sk_S4_contiguous_product_basis_thm3012.py  the B4 PRODUCT-basis exclusion, and the
+                                           new closed form of (C7)
+```
+
+### (C1) The complete Thomae orbit, symbolically in `x = 1/k` (PROVED)
+
+Every parameter is an exact affine function of `x` over `Q`. Closing the family
+under Thomae's transformation and all `3! * 2!` permutations gives **7** distinct
+parameter multisets. The classical count is `120/(3! 2!) = 10`, and the generator
+was validated on three generic seeds -- generic, generic *balanced*, and generic
+`x`-dependent -- each of which returns exactly 10. So the drop to 7 is a genuine
+extra degeneracy of this family (it is caused by the lower parameter `1`), not an
+artefact of balancedness or of the implementation:
+
+```text
+[0] 3F2(1-x, 1/4, 1/4 ; 1, 5/4 ; 1)          s = x+3/4
+[1] 3F2(1-x, 3/4, 3/4 ; 1, 7/4 ; 1)          s = x+1/4
+[2] 3F2(1-x, 1, 1 ; 5/4, 7/4 ; 1)            s = x     <- eq (6) of this file
+[3] 3F2(1/4, 3/4, x ; 1, x+1 ; 1)            s = 1     <- the defining form
+[4] 3F2(1/4, 1, x+1/4 ; 5/4, x+1 ; 1)        s = 3/4
+[5] 3F2(3/4, 1, x+3/4 ; 7/4, x+1 ; 1)        s = 1/4
+[6] 3F2(x, x+1/4, x+3/4 ; x+1, x+1 ; 1)      s = 1-x
+```
+
+Each form, times its Gamma prefactor, was checked numerically against `S(k)` for
+`k = 4, 5, 7` (max deviation `~1e-26` at `dps = 25`).
+
+### (C2) THE ANSWER: a classical reduction exists iff k = 1 (PROVED, exhaustive)
+
+Six rules were applied to **all 7 forms**, each solved as an *exact linear
+equation in `x`* -- so the result is a statement about all real `k >= 1`, not a
+scan:
+
+* **G** Gauss cancellation (an upper equals a lower) -> `2F1(1)` = Gamma quotient;
+* **R** contiguous reduction (upper - lower `= m in Z_{>=1}`) -> finite sum of `2F1(1)`;
+* **T** termination (an upper in `Z_{<=0}`), which with balancedness is Saalschutz;
+* **D** Dixon (well poised); **W** Watson; **P** Whipple.
+
+```text
+hits: k = 1 ONLY, and there FIVE of the six rules fire at once
+      (G on forms [3],[4],[5];  T on [0],[1],[2];  D on [0],[1],[4],[5];
+       W on [3],[4],[5],[6];    P on [2],[3])
+no hit for any k >= 2, in particular none for k = 4 and none for k = 5.
+```
+
+*Positive control:* `k = 1` is detected, i.e. `S(1) = 2F1(1/4,3/4;2;1) = 8sqrt2/(3pi)`.
+*Negative controls:* `k = 2, 3` are **not** detected -- **yet both have closed
+forms.** That is the calibration that makes the `k = 4, 5` null meaningful and
+that also caps it: *"no classical 3F2(1) theorem applies" is strictly weaker than
+"no closed form exists."*
+
+**Mechanism.** `(1/k)_n/(1+1/k)_n = (1/k)/(n+1/k)` is a rational function of `n`
+*with a pole*. The reduction of a `3F2` to `2F1`'s needs this ratio to be a
+*polynomial* in `n`, i.e. `1/k - 1 in Z_{>=0}`, i.e. `k = 1`. For `k >= 2` the
+`3F2` collapses to a Mellin moment (addendum 2), never to a finite sum.
+
+The same six-rule battery, run on the complete Thomae orbit (5 forms) of the
+*residual* family `3F2(3/4, 3/4, 3/4-x ; 3/2, 7/4-x ; 1)` of (C4) below, also
+hits at `k = 1` and at no other `k`.
+
+### (C3) The exact content of contiguity: a first-order Mellin ladder (PROVED)
+
+With `M(s) = int_0^1 z^{s-1} 2F1(1/4,3/4;1;z) dz = sum_n c_n/(n+s)` and
+`S(k) = M(1/k)/k`,
+
+```text
+(s + 1/4)(s + 3/4) M(s+1)  =  s^2 M(s)  +  1/(pi sqrt2).            (L)
+```
+
+*Proof.* `c_{n+1}(n+1)^2 = c_n (n+1/4)(n+3/4)`; divide the numerator by `n+s+1`,
+`(n+1/4)(n+3/4) = (n+s+1)(n-s) + (s^2+s+3/16)`. Summing `n = 0..N-1` on the left
+and `m = 1..N` on the right, the two copies of the (individually divergent)
+`sum c_n (n-s)` cancel; the surviving boundary term is `c_N(N-s) -> 1/(pi sqrt2)`
+because `c_N ~ 1/(pi sqrt2 N)`. QED
+
+(L) **is** the contiguous relation, in its sharpest form: first order,
+inhomogeneous, rational coefficients, inhomogeneity `1/(pi sqrt2)`. Homogeneous
+solution `h(s) = Gamma(s)^2/(Gamma(s+1/4)Gamma(s+3/4))`, so there is exactly
+**one free constant per ladder `s + Z`**. Consequences:
+
+* the **integer** ladder is Gauss-anchored at `M(1) = S(1) = 8sqrt2/(3pi)`, hence
+  every integer moment is rational times `sqrt2/pi`:
+  ```text
+  r_m := M(m) pi/sqrt2,   r_1 = 8/3,   r_{m+1} = 16(m^2 r_m + 1/2)/((4m+1)(4m+3))
+  r = 8/3, 152/105, 10568/10395, 178328/225225, 47453768/72747675,
+      782539544/1405485081, 51331850888/105411381075,
+      838519635608/1933976154825, ...          (each verified to ~50 digits)
+  ```
+* the ladder through `s = 1/k`, `k >= 2`, contains **no integer**, hence no Gauss
+  point. (L) relates `S(k)` only to `M(1/k + j)`, `j >= 1`, which are not members
+  of the `S`-family. **Contiguity propagates `S(k)` but can never compute it.**
+
+(L) was verified numerically at `s = 1, 2, 1/2, 1/3, 1/4, 1/5, 1/7` and at a
+generic real `s`, residual `<= 6e-62` in every case.
+
+### (C4) Two new two-term reductions, valid for all k (PROVED)
+
+Euler's integral for `2F1(1/4,3/4;1;z)` plus `M1` makes the inner `u`-integral
+`int_0^1 (1-tu^k)^{-1/4} du = 2F1(1/4, x; 1+x; t)` -- itself contiguous, hence an
+*incomplete Beta*, for **every** `k`. Two Fubinis (positive integrands) and one
+interchange give, with `beta = 3/4 - x` (needs `k >= 2`) and `gam = 1/4 - x`
+(needs `k >= 5`):
+
+```text
+(A)  (pi sqrt2 / x) S(k) = B(x, 3/4) B(3/4-x, 1/4)
+                         - [Gamma(3/4)^2/(beta Gamma(3/2))] 3F2(3/4,3/4,beta; 3/2,1+beta; 1)
+
+(B)  (pi sqrt2 / x) S(k) = B(x, 1/4) B(1/4-x, 3/4)
+                         - [Gamma(1/4)^2/(gam Gamma(1/2))]  3F2(1/4,1/4,gam;  1/2,1+gam;  1)
+```
+
+Both are of **non-terminating-Saalschutz shape**: a balanced `3F2(1)` equals a
+Gamma quotient *minus* a second balanced `3F2(1)`. The residual is **not** in the
+Thomae orbit of (C1) (orbits verified disjoint at `k = 4, 5`) -- a two-term
+relation is not a one-term one. Verified `k = 2..8` for (A) and `k = 5..9` for
+(B) at `dps = 60`.
+
+### (C5) `S(4)` in ONE balanced 3F2 (PROVED; VERIFIED-EXACT to 170 digits)
+
+`k = 4` is exactly where (A) degenerates: `beta = 1/2`, so the lower parameter
+`1+beta = 3/2` **equals** the other lower `3/2`. The residual acquires a repeated
+upper *and* a repeated lower, and the leading Beta product collapses to the
+lemniscate constant. Result:
+
+```text
+        S(4)  =  varpi/2  -  W/(2 varpi),
+        W     =  3F2(3/4, 3/4, 1/2 ; 3/2, 3/2 ; 1),
+        varpi =  Gamma(1/4)^2/(2 sqrt(2 pi))   (lemniscate constant)
+
+W    = 1.267377930871768371750405432734219729951834196668985622433...
+varpi= 2.622057554292119810464839589891119413682754951431623162817...
+S(4) = 1.069352554441268058582961939534278061325932014506308037563...
+```
+
+Residual `0.0` at `dps = 170`, i.e. **VERIFIED-EXACT to 170 digits**, with `W`
+computed two independent ways -- the defining `3F2` series and the iterated-Beta
+integral of (A) -- agreeing to 131 digits.
+
+Equivalently `W = varpi^2 - 2 varpi S(4)`, and this **rederives addendum 5**:
+`W = varpi^2 (1 - 4 Lambda/pi^2)` to the full working precision. The gain is that
+the entire transcendental content of `S(4)` is now a *single balanced `3F2` with
+repeated parameters* -- **no Catalan constant, no Eichler integral, no Eisenstein
+tail**.
+
+### (C6) Why `k = 4` and no other integer (PROVED, four independent criteria)
+
+```text
+(i)   orbit collapse   : the 7 forms of (C1) stay distinct for every k except
+                         k = 1 (Gauss) and k = 4, where they collapse to 4.
+(ii)  ODE resonance    : the exponents at z = infinity are the upper parameters
+                         (1/4, 3/4, 1/k); they are repeated iff 1/k in {1/4,3/4},
+                         i.e. iff k = 4 among integers.  k = 4 is the unique
+                         integer k at which the equation is LOGARITHMIC at infinity.
+(iii) the (A) parameter: beta = 3/4 - 1/k equals 1/2 -- the coincident-lower
+                         point -- iff k = 4.
+(iv)  K-moment weight  : in eq (4) the weight mu^{4/k-1}(2-mu^2)^{-2/k-1/2} is a
+                         RATIONAL function of mu iff BOTH exponents are integers:
+                         4/k-1 in Z forces k | 4, i.e. k in {1,2,4}; and then
+                         2/k+1/2 in Z forces k = 4.  This is exactly the
+                         hypothesis under which addendum 5's moment recurrence
+                         4m^2 M_{2m} = (2m-1)^2 M_{2m-2} + 1 can be applied.
+```
+
+`k = 5` fails all four. Its two residuals
+
+```text
+W5a = 3F2(3/4, 3/4, 11/20 ; 3/2, 31/20 ; 1) = 1.28783310672123019536336223730224486585...
+W5b = 3F2(1/4, 1/4,  1/20 ; 1/2, 21/20 ; 1) = 1.01014347743357758443860712406668353805...
+```
+
+carry an irreducible denominator 20: no repeated parameter, no coincident lower,
+no orbit collapse, no singular value. **The `k = 4` mechanism has no analogue at
+`k = 5`** -- which is a *reason*, not merely a failed search.
+
+### (C7) A NEW closed form -- and the calibration object the file has been missing
+
+Identity (A) at `k = 2` is exactly solvable, because `S(2) = 4 log(1+sqrt2)/pi` is
+known and, uniquely among `k >= 2`, the leading Beta product is ELEMENTARY:
+`B(1/2,3/4) B(1/4,1/4) = 4 pi sqrt2`.
+Solving for the residual gives (VERIFIED-EXACT, residual `0.0` at `dps = 50`,
+against the defining `3F2` series and against (A) independently):
+
+```text
+   3F2(3/4, 3/4, 1/4 ; 3/2, 5/4 ; 1)  =  varpi (pi - 2 log(1 + sqrt2)) / pi
+                                      =  varpi  -  2 varpi log(1+sqrt2)/pi
+                                      =  1.150821447753979605424774878953724959491...
+```
+
+Beyond being a new evaluation, **this is the calibration object this lane has
+needed.** It is a *product of two transcendentals* -- the lemniscate constant
+times a logarithm -- and it lies outside every **certified** region of this file:
+
+* addendum 4's weight-1 basis `E1` (`algebraic x log`) cannot represent it;
+* addendum 4's weight-2 basis `E2` (`G, pi^2, log^2, Li_2`) cannot represent it;
+* addendum 5's tiers 1-2 contain `K(1/sqrt2)` and `log(1+sqrt2)` as SEPARATE atoms
+  but not their product, and `varpi = sqrt2 K(1/sqrt2)`, so they cannot either.
+
+(For the record: section 5's *wide* sweep did list `varpi log(1+sqrt2)` among its
+atoms -- but that is precisely the battery addendum 3 withdrew as uncalibrated,
+so it certifies nothing. No certified region has ever covered this shape.)
+
+Yet it is an exact value of *exactly the object* those sweeps were probing. Any
+future search on `S(4)`, `S(5)` or their residuals must carry a basis of
+**products `Gamma`-type x elementary** and must demonstrate that it recovers this
+`W_2` before its null is quoted. That is now a required control in this lane,
+alongside `pi S(3)`.
+
+### (C8) Bounded exclusions, each with its own live control (CERTIFIED)
+
+Three instruments, three separately-stated regions. `H = 10^6`, `P = 170` dps.
+
+```text
+B1   {algebraic} x {1, pi, logs, arctans}          96 elements,  4560 pairs
+     CONTROL 3/5: rediscovers pi S(3) BLIND, with its irrational sqrt3
+     coefficient, from an unhinted scan of all pairs; also pi S(1), pi S(2).
+     (It has no Gamma atoms, so varpi^2 and Gamma quotients are outside it.)
+B3   B1 u ({algebraic} x {varpi, varpi^2, Catalan, zeta(3), Gamma(1/5)- and
+     Gamma(1/8)-products, the Beta values of (A)/(B)})
+                                                  282 elements, 39621 pairs
+     CONTROL 5/5: pi S(3), pi S(1), pi S(2), varpi^2, a pure Gamma quotient.
+     B1 and B3 contain algebraic x elementary and algebraic x Gamma products,
+     but NOT Gamma x elementary products -- that class is B4's job.
+B4   {algebraic} x {1, varpi, varpi^2, B(1/5,3/4)B(11/20,1/4), Gamma(1/5)-
+     products, Gamma(1/8)Gamma(3/8)} x {1, 1/pi, 1/pi^2, log/pi, arctan/pi,
+     G/pi^2}  -- the PRODUCT basis      308 elements (deduped), 47278 pairs
+     CONTROL 5/5, and it is the decisive one: B4 rediscovers
+     W_2 = varpi - 2 varpi log(1+sqrt2)/pi  BLIND -- a transcendental times a
+     transcendental -- and also S(3), S(2), S(1), varpi^2.  (B4 normalises
+     everything by 1/pi, so it is a basis for S(k), not for pi S(k).)
+```
+
+`B2` (a `Gamma`/weight-2 basis with no logarithm atoms) is deliberately reported
+as **uninformative rather than negative**: it fails the `pi S(3)` control, i.e. it
+is the exact failure mode addendum 3 diagnosed. Its scan is not quoted.
+
+Verdicts are in the `.out` files; the region excluded is: *no*
+`T = c1 b_i + c2 b_j` with `c in Z`, `|c| <= 10^6`, `b_i, b_j` in the stated basis
+(all pairs), at 170 digits, for `T` among `W_4, W_5, S(4), pi S(4), S(5), pi S(5),
+pi^2 S(5)`. **This is a finite exclusion, not an impossibility proof.**
+
+### (C9) Scope
+
+**PROVED:** (C1) the orbit; (C2) classical reducibility iff `k = 1`; (C3) the
+Mellin ladder (L) and its two consequences; (C4) identities (A) and (B); (C6) the
+four integrality criteria singling out `k = 4`.
+**VERIFIED-EXACT:** (C5) `S(4) = varpi/2 - W/(2 varpi)` to 170 digits; (C7)
+`3F2(3/4,3/4,1/4;3/2,5/4;1) = varpi(pi - 2 log(1+sqrt2))/pi`.
+**Bounded exclusion:** (C8).
+**OPEN:** closed forms for `S(4)` and `S(5)`. Nothing here proves non-existence.
+The contribution to that question is (C2)+(C3): the *mechanism* of the `k <= 3`
+evaluations -- reduction of a contiguous `3F2` to Gauss values -- is available at
+`k = 1` and provably at no other `k`, and the contiguous ladder (L) can propagate
+`S(k)` but never compute it.
+
+## Addendum 2, 2026-08-01 (death-star, S4-quadratic lane): the quadratic-surd basis is closed off for `pi S(4)`, with a working positive control
+
+The previous addendum warned that the coefficient in `pi S(3)` is the
+*irrational* `sqrt3`, so that any PSLQ sweep seeking **rational** coefficients
+over logarithms and arctangents returns "no closed form" spuriously. This
+addendum redoes the `k = 4` search with that defect repaired: the basis consists
+of **products `alpha * L`**, `alpha` a quadratic surd and `L` a
+logarithm/arctangent/`pi`/Catalan, and the pipeline is required to rediscover
+`pi S(3)` blind before any negative is reported. It does.
+
+Script `04-computation/s4_quadratic_relation_lane.py`, output
+`05-knowledge/results/s4_quadratic_relation_lane.out`.
+
+### 1. Two corrections to the record
+
+**(a) The `S(3)` decimal printed in Addendum 1 is wrong.** It states "the true
+`S(3) = 1.08838540640395`". The correct value is
+
+```text
+S(3) = 1.0884041641172768712701774968372772011989808537277...
+```
+
+The *closed form* in Addendum 1 is right; only the decimal is mistyped. Equation
+(8) reproduces `1.0884041641...` to **460 digits**, which also re-confirms (8).
+
+**(b) The owner's elliptic representation is now confirmed to 460 digits**, not
+`~30`: with `S(k)` evaluated by the elementary-kernel quadrature
+
+```text
+S(k) = (2/pi) int_0^1 (1+t^{k/2})^{-1/2} K( 2 t^{k/2}/(1+t^{k/2}) ) dt
+```
+
+(`K` in the `m = k^2` convention -- this is (3) rewritten, and it is the
+evaluation route to use; it is fast and has only an integrable log singularity
+at `t = 1`), the difference `S(4)_kernel - (2 sqrt2/pi) int_0^1 K(k)/(2-k^2) dk`
+is `0.0` at 460 digits.
+
+### 2. The basis, and the two elements that must be stripped
+
+`alpha` ranges over `{1, sqrt2, sqrt3, sqrt5, sqrt6, sqrt10, sqrt15, sqrt30}` --
+a `Q`-basis of `Q(sqrt2,sqrt3,sqrt5)` -- and `L` over `1, pi, log2, log3, log5,
+log(1+sqrt2), log(2+sqrt3), log(5+2sqrt6), log(phi), atan(sqrt2), atan(1/sqrt2),
+atan(sqrt2/5), Catalan`. Two of the thirteen are `Q`-dependent on the others,
+
+```text
+atan(1/sqrt2) = pi/2 - atan(sqrt2),      atan(sqrt2/5) = pi - 3 atan(sqrt2),
+```
+
+and were **stripped**. (Left in, the search returns exactly the degeneracy
+`-alpha*atan(sqrt2) + 2 alpha*atan(1/sqrt2) - alpha*atan(sqrt2/5) = 0`; verified
+-- PSLQ at 400 digits on the unstripped 104-element basis returns precisely that
+and nothing else.) **88 basis elements remain.**
+
+### 3. Method: exact integer LLL with a rigorous exclusion bound
+
+Relations are sought by exact integer LLL (de Weger, `delta = 3/4`, all
+arithmetic in Python `int`s) on the lattice spanned by
+`r_i = (e_i | round(10^P x_i))`. Beyond reporting relations, each subset yields a
+**rigorous** exclusion bound: `delta = 3/4` guarantees
+`|b_1| <= 2^{(n-1)/2} lambda_1`, and a relation with `max|c_i| <= H` would put a
+lattice vector of norm `<= sqrt(n) H (1 + sqrt(n)/2)` in the lattice, so no
+relation exists with
+
+```text
+max|c_i|  <=  |b_1| / ( 2^{(n-1)/2} sqrt(n) (1 + sqrt(n)/2) )  =:  H_cert.
+```
+
+`H_cert` is independent of any acceptance cap, and is minimised over all subsets
+scanned. **That minimum is the entire content of the null result.**
+
+### 4. The positive control passes (blind)
+
+The identical sweep, given `pi S(1)`, `pi S(2)`, `pi S(3)` and told nothing:
+
+```text
+size 1, P = 200:  +1*[pi S(2)] -4*[log(1+sqrt2)] = 0
+                  +3*[pi S(1)] -8*[sqrt2]        = 0
+size 3, P =  60:  -1*[pi S(3)] -2*[pi] +6*[atan(sqrt2)] +1*[sqrt3*log(5+2sqrt6)] = 0
+```
+
+all C(88,3) = 109736 size-3 subsets were scanned and **that is the only relation
+reported, for either target**. The recovered `k = 3` form carries the irrational
+multiplier `sqrt3`, i.e. precisely the feature a rational-coefficient basis
+cannot see. So the negatives below are meaningful.
+
+A second, sharper control comes from the size-4 sweep run deliberately with an
+acceptance cap *above* its precision-supported level: of the 143 reported hits,
+exactly **one** has `max|c| < 10^5` -- the genuine `pi S(3)` relation, with
+`max|c| = 6` -- and the other 142 all have 8-digit coefficients in
+`[2.7 x 10^7, 9.9 x 10^7]`, i.e. pure lattice noise. The true relation is
+separated from noise by seven orders of magnitude, and **no `pi S(4)` hit has
+`max|c|` below `2.7 x 10^7`.**
+
+### 5. The negative for `pi S(4)` (BOUNDED, not absolute)
+
+Over the 88-element basis `B` of section 2, with `P` digits of working
+precision, no integer relation involving `pi S(4)` exists with
+
+```text
+ support size 1 :  P = 200 dig,       88 subsets,  max|c| <= 1.24 x 10^98
+ support size 2 :  P = 200 dig,    3 828 subsets,  max|c| <= 3.42 x 10^64
+ support size 3 :  P =  60 dig,  109 736 subsets,  max|c| <= 1.17 x 10^12
+```
+
+and over the 44-element sub-basis with `alpha in {1,sqrt2,sqrt3,sqrt6}` -- the
+field `Q(sqrt2,sqrt3)` in which all three known closed forms live -- no relation
+of support size 4 among C(44,4) = 135751 subsets at `P = 45` (see the output
+file for the final bound).
+
+**This is not a proof that no closed form exists.** It is exactly: *no
+`Z`-linear relation over the stated basis, of the stated support size, with
+coefficients below the stated bound, at the stated precision.*
+
+### 6. The lemniscatic lane is closed off too
+
+`k = 4` is the lemniscatic case: with `varpi = Gamma(1/4)^2/(2 sqrt(2 pi))`,
+
+```text
+K(m = 1/2) = varpi/sqrt2,     int_0^1 dv/sqrt(1-v^4) = varpi/2,
+```
+
+so the natural shape of a `k = 4` closed form is `varpi x (weight-one
+constant)`, not a weight-one constant itself. Taking the target to be
+`pi S(4)/varpi` against the *same* 88-element basis gives no relation with
+`max|c| <= 9.57 x 10^11` over all 109736 size-3 subsets (`P = 60`), and likewise
+nothing for `pi S(4)/varpi^2`, `A/varpi`, `B/varpi`, `A`, `B` at sizes 1-2 with
+bounds `>= 4.3 x 10^17`. So the obvious lemniscatic normalisations do not help.
+
+### 7. New exact structure for `pi S(4)` (VERIFIED-EXACT)
+
+**(a) Split.** `pi S(4) = 2(A + B)` with
+
+```text
+A = int_0^1 arcsin(v) /sqrt(1-v^4) dv = int_0^{pi/2} a  da / sqrt(1+sin^2 a),
+B = int_0^1 arcsinh(v)/sqrt(1-v^4) dv = int_0^{pi/2} arcsinh(sin a) da / sqrt(1+sin^2 a),
+```
+
+verified to 460 digits. The two right-hand integrands are **smooth on the closed
+interval** (no endpoint singularity at all), so `A` and `B` are individually the
+cheapest high-precision handle on `S(4)` this repo has.
+
+**(b) By-parts normal form.** Let `V(v) = int_0^v dt/sqrt(1-t^4) =
+v * 2F1(1/4,1/2;5/4;v^4)` be the lemniscatic arcsine, `V(1) = varpi/2`.
+Integrating `A` and `B` by parts against `dV` gives, exactly,
+
+```text
+pi S(4) = varpi * ( arcsin 1 + arcsinh 1 ) - 2W
+        = varpi * ( pi/2 + log(1+sqrt2) )  - 2W,
+W = int_0^1 V(v) [ (1-v^2)^{-1/2} + (1+v^2)^{-1/2} ] dv = 1.5351302588974203377...
+```
+
+(checked to 22 digits, quadrature-limited). This isolates the *elementary
+lemniscatic* part `varpi(arcsin 1 + arcsinh 1)` and shows the entire obstruction
+sits in the single second-kind period `W`. It is the sharpest reformulation of
+`S(4)` currently in the repo, and the natural next target: `W`, not `S(4)`.
+
+### 8. Scope
+
+Sections 4-6 upgrade the section-4/5 assessment of this file from a battery run
+over a *rational*-coefficient pool to one run over a **quadratic-surd-coefficient
+pool**, with the control that Addendum 1 showed to be indispensable. The
+conclusion is unchanged in direction and much stronger in content: `k = 1,2,3`
+are elementary, and `k = 4` is not reachable in that class within the recorded
+bounds. The monodromy statement (7) remains the *explanation*; this addendum is
+the *evidence*, now with the basis defect repaired. Nothing here bears on wider
+constant classes -- in particular `W` of section 7(b) is unclassified.
