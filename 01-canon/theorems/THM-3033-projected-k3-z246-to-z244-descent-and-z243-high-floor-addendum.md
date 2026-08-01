@@ -2,7 +2,7 @@
 id: THM-3033
 title: "Projected k3 z246 to z244 descent and z243 high-floor addendum"
 status: >
-  PROVED-CANDIDATE + VERIFIED-EXACT; AWAITING FINAL INDEPENDENT PROMOTION.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the lossless projected k=3 atlas, all 197 body rows at z1=246,245,244
   are empty, as are the three first-at-or-above-high-floor rows at z1=243.
   The projected cap therefore descends to z1<=243 and the necessary-row
@@ -17,8 +17,10 @@ audit: >
   six-case z1=245 terminal.  Two full development executions independently
   reproduced the frozen 29,236 Farkas checks, 1,758 terminal cases, transcript,
   and semantic digest.  Post-freeze ordinary, optimized, and stored
-  transcripts are byte-identical and the documentation gate passes.  Final
-  independent promotion review remains required by the status above.
+  transcripts are byte-identical and the documentation gate passes.  A final
+  independent promotion audit rechecked the dependency scope, sharp
+  translated-band direction, cap/ledger consequence, LF hashes, absence of
+  optimization-stripped assertions, and the frozen semantic transcript.
 depends_on:
   - THM-2981-projected-k3-z270-to-z247-cardinality-torsion-descent
   - THM-2984-projected-k3-signed-ray-attainment-and-unit-phase-gate
@@ -35,14 +37,14 @@ hash_basis: LF-normalized bytes
 
 # THM-3033 -- projected k3 z246 to z244 descent and z243 high-floor addendum
 
-**PROVED-CANDIDATE + VERIFIED-EXACT; AWAITING FINAL INDEPENDENT PROMOTION.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## Statement
 
 In the lossless projected `k=3` scalar atlas inherited from THM-2981, every
 body row at `z_1=246`, `245`, or `244` is empty.  The three `z_1=243` rows
 whose first label is already at or above the integer high floor are also
-empty.  Consequently the candidate conclusion is
+empty.  Consequently
 
 ```text
 projected k=3 cap: z_1<=243,                              (1)
@@ -51,7 +53,7 @@ projected k=3 cap: z_1<=243,                              (1)
 while exactly `151` first-below-floor rows at `z_1=243` remain open.
 
 The closed bank contains `197+3=200` body rows.  Relative to THM-2981 its
-candidate necessary-row ledger is therefore
+necessary-row ledger is therefore
 
 ```text
 375,251-197-3=375,051.                                   (2)
@@ -190,7 +192,7 @@ E=(2,4,6,8,12,14):  1=0 crude+1 status+0 residual.       (13)
 
 The last status exclusion is independently checked over the exact rationals.
 The other `151` rows have first label below `H` and are deliberately left
-open.  Equations `(4)`--`(13)` therefore prove precisely the candidate cap
+open.  Equations `(4)`--`(13)` therefore prove precisely the cap
 and ledger in `(1)`--`(2)`, with no silent claim at the remaining boundary.
 
 ## 4. Exact verification and promotion boundary
@@ -212,6 +214,8 @@ python -O 04-computation/lrc14_j7_k3_z246_to_z244_translated_band_descent_thm294
 ```
 
 The frozen ordinary and optimized transcripts are byte-identical to the stored
-output.  The theorem remains a proof candidate until a final independent
-review promotes its status.  No cap, ledger, or LRC consequence may be cited
-from this file before that promotion.
+output.  An independent promotion audit rechecked the inherited theorem
+typing, the strict inequality in the translated-band gate, the distinction
+between the used cardinality mechanism and the unused maximum-gap fallback,
+the exact row and ledger quantifiers, and the frozen hashes/transcript.  The
+result is now proved canon in precisely the scoped projected sector above.
