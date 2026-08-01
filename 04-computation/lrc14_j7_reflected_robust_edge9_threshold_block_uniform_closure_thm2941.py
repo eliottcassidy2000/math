@@ -60,7 +60,7 @@ OUTPUT = (
     / "results"
     / "lrc14_j7_reflected_robust_edge9_threshold_block_uniform_closure_thm2941.out"
 )
-EXPECTED_EDGE10_SHA256 = "74ec98098e8bf4a5c2f9bcf0a26b0088b28127cd536e6a472ad570c1e414aefa"
+EXPECTED_EDGE10_SHA256 = "cd2a4e84b2527f3fc7bf79980d2816ad207d770639fae9b42a1b9202d54cd2cd"
 EXPECTED_SEMANTIC_SHA256 = "d8e5718d66156a8ddb51227d7bbb9f0474e2fcaea687e2662e029b0db580974a"
 
 BODY_COUNT = 3003
@@ -143,7 +143,7 @@ def require(condition: bool, message: object) -> None:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def qtext(value: F) -> str:

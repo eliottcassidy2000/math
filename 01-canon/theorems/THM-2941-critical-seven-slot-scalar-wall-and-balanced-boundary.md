@@ -15,7 +15,7 @@ status: >
   finite-low-pair torsion, torsion-density pigeonhole, scalar-splice,
   status-descent, and cardinality translated-band addenda improve the
   k=2/k=3 first-drift caps from 2142/380
-  to 1655/246.
+  to 1579/243.
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -24,9 +24,11 @@ status: >
   of level spread at most five.  The projective phase graph has clique number
   five and its fully periodized high-channel fibre has sharp floor 1/105;
   threshold-block refinements close arbitrary positive reflected levels on
-  2,421 of the 3,003 bodies.  A three-reverse-ladder certificate closes every
-  body for spread D>=6 and base m>=3D.  The remaining reflected problem is
-  confined to 582 bodies in D>=6,m<3D; the finite censuses, full
+  a bank of 2,421 of the 3,003 bodies, leaving 582 uncovered rather than
+  proving them impossible.  A three-reverse-ladder certificate closes every
+  body for spread D>=6 and base m>=3D.  The remaining reflected
+  certificate-failure locus is confined to those 582 bodies in D>=6,m<3D;
+  the finite censuses, full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is internal
   exact computation and proof audit; there is no Lean or external peer-review
   claim.
