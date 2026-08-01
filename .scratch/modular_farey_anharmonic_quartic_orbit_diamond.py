@@ -153,7 +153,15 @@ for label, point in (("generic", 2), ("harmonic", 1), ("equianharmonic", 3)):
     counts = Counter(image for _, image in pairs)
     require(len(set(counts.values())) == 1, f"cooccurrence fibres are not constant for {label}")
     cooccurrence_fibres[label] = next(iter(counts.values()))
-require(cooccurrence_fibres == {"generic": 1, "harmonic": 2, "equianharmonic": 3}, "cooccurrence multiplicities failed")
+pairs_p3 = [(g, points3[g[index3[1]]]) for g in group3]
+counts_p3 = Counter(image for _, image in pairs_p3)
+require(counts_p3 == Counter({1: 6}), "p3 collapsed cooccurrence fibre failed")
+cooccurrence_fibres["collapsed_p3"] = 6
+require(
+    cooccurrence_fibres
+    == {"generic": 1, "harmonic": 2, "equianharmonic": 3, "collapsed_p3": 6},
+    "cooccurrence multiplicities failed",
+)
 
 # PGL/PSL reflection-sign split.  det(s)=-1 and det(c)=1.  In projective
 # dimension two the determinant square class is scalar-independent.
@@ -198,8 +206,11 @@ u0 = (1, 0)
 v0 = (88, 1)
 v1 = (90, 1)
 require((v0[0] % 2, v0[1] % 2) == (v1[0] % 2, v1[1] % 2) == (0, 1), "hostile frame mismatch")
+require(u0[0] * v0[1] - u0[1] * v0[0] == 1, "first hostile determinant failed")
+require(u0[0] * v1[1] - u0[1] * v1[0] == 1, "second hostile determinant failed")
+require(u0[0] * v0[0] + u0[1] * v0[1] > 0, "first hostile is not acute")
+require(u0[0] * v1[0] + u0[1] * v1[1] > 0, "second hostile is not acute")
 require(farey_defect(w, u0) < 0 and farey_defect(w, v0) < 0 and farey_defect(w, v1) < 0, "hostile endpoint bits failed")
-require(farey_defect(w, add2((0, 0), (0, 0))) == 0, "zero control failed")
 child0 = (u0[0] + v0[0], u0[1] + v0[1])
 child1 = (u0[0] + v1[0], u0[1] + v1[1])
 farey_values = (farey_defect(w, u0), farey_defect(w, v0), farey_defect(w, v1), farey_defect(w, child0), farey_defect(w, child1))

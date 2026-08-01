@@ -220,6 +220,6 @@ Farey frames, and the exact hostile `(12)`.
 The frozen LF-normalized hashes are
 
 ```text
-script  f5b7f493abcc35544a5c686505a3f34054c17f7472ee76759c1267e4fec5e478
-output  405ad3127937fe9937fc594b2c2a794d10045651160225d9a7473f935255a818
+script  a2e7c8e79340023499353ef17419dd1ffa095b17fed5bf1b8a837c9f6eee6672
+output  f5cf56eb89f8e25c2be7fdc823edb2d77c9c747f162f31dd129dd474e853c352
 ```
