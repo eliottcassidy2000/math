@@ -295,13 +295,17 @@ robust_min = transport_min_cost(robust_p, robust_q, robust_edges, robust_pointed
 robust_delta = hall_deficiency(robust_p, robust_q, robust_edges, robust_pointed)
 robust_u = (-2, -1, -1, 0, 0)
 robust_v = (0, 2, 2, 1, 1)
+robust_perm = (1, 4, 2, 3, 0)
 for i, j in robust_edges:
     require(robust_u[i] + robust_v[j] <= int(i == j), "robust dual witness is infeasible")
 robust_dual = sum(robust_u) + sum(robust_v)
+require(sorted(robust_perm) == list(range(5)), "robust primal is not a permutation")
+require(all((i, robust_perm[i]) in robust_edges for i in range(5)), "robust primal uses a forbidden edge")
+require(sum(int(i == robust_perm[i]) for i in range(5)) == 2, "robust primal cost changed")
 require((robust_min, robust_delta, robust_dual) == (2, 1, 2), "robust Hall hostile changed")
 require(all(any((i, j) in robust_off for j in range(5)) for i in range(5)), "robust row incidence failed")
 require(all(any((i, j) in robust_off for i in range(5)) for j in range(5)), "robust column incidence failed")
-print(jdump({"robust_multilevel_hostile":{"dual_value":robust_dual,"every_column_offdiagonal":True,"every_row_offdiagonal":True,"exact_minimum":robust_min,"max_single_hall_deficiency":robust_delta,"primal_permutation":[1,4,2,3,0]}}))
+print(jdump({"robust_multilevel_hostile":{"dual_value":robust_dual,"every_column_offdiagonal":True,"every_row_offdiagonal":True,"exact_minimum":robust_min,"max_single_hall_deficiency":robust_delta,"primal_permutation":list(robust_perm)}}))
 
 # Balanced nonnegative flows: zero first ghost forces a higher cycle ghost.
 balanced = balanced_loopless = 0

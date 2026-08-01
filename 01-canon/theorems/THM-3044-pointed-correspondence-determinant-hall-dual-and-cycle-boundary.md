@@ -25,7 +25,7 @@ related:
   - THM-3040-formal-corner-resultant-width-quotient-and-all-order-bernoulli-law
 script: 04-computation/lrc14_pointed_correspondence_determinant_hall_dual_thm3044.py
 output: 05-knowledge/results/lrc14_pointed_correspondence_determinant_hall_dual_thm3044.out
-script_sha256: 2dcc0b5139d37c3b41bbb4192b880f956d13b36c9fb736b4e8a5b5773714c49a
+script_sha256: d035d6def40c55a046fd6eab9c54dae50f43407cbdd928a08c3f131969865305
 output_sha256: 6a4efabb85472c492692ea2da971a30959ba807ab1b8f6f6bf22acb7a674ba21
 hash_basis: LF-normalized bytes
 ---
@@ -286,8 +286,9 @@ conservation prevents a dead end and finiteness forces a repeated vertex.  A
 loop contributes to `gamma_1`; otherwise the first extracted cycle has length
 at least two, and its positive edge product occurs in `tr(A^r)`.
 
-More sharply, let `ell` be the length of the shortest directed cycle after
-loops are removed.  Then `gamma_r=0` for `1<=r<ell` and
+More sharply, work in the zero-first-ghost branch `gamma_1=0`.  Nonnegativity
+then says that there are no positive loops.  Let `ell` be the length of the
+shortest directed cycle.  Then `gamma_r=0` for `1<=r<ell` and
 
 ```text
 [t^ell]log det(I+tA)
@@ -338,8 +339,10 @@ endomorphism, and `I+tC` is ill typed.  The lawful invariant is `(5)`, in which
 `J_iota` transforms with `C`.
 
 This gives the exact stopping rule for the unpointed determinant programme:
-all unpointed marginals, singular data, and class functions may survive while
-semantic arrival changes.  THM-2829 and THM-2835 supply paths and one-way
+all marginals, singular data, and lawful independent-left/right-gauge
+invariants may survive while semantic arrival changes.  An ordinary
+square-matrix class function already presupposes the missing common basis.
+THM-2829 and THM-2835 supply paths and one-way
 cospans, not the return map `(3)`; THM-2870 rules out the tempting invertible
 same-mask convolution/physical-diagonal intertwiner; THM-2889 and THM-2894
 show why conjugate or unmarked endpoint data cannot manufacture a pointing.
@@ -409,8 +412,9 @@ checks:
 - every support graph and every margin pair of total mass `1..4` for two heads
   versus two roots plus cemetery: `2667` feasible transportation instances,
   all matching the min-cost dual and Hall zero gate;
-- `110` instances where the largest single Hall deficiency is strictly below
-  the exact minimum, including `(15)--(17b)` and the five-root robust hostile;
+- `110` small instances where the largest single Hall deficiency is strictly
+  below the exact minimum, including `(15)--(17)`, plus the separate five-root
+  robust hostile `(17a)--(17b)`;
 - all `1214` nonzero balanced `3x3` tables with entries `0,1,2`; each of the
   `44` loopless tables has a length-two or length-three cycle ghost;
 - aligned/permutation double-gauge hostiles, the unbalanced nilpotent-path
