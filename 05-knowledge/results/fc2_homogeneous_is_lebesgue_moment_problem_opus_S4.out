@@ -1,0 +1,12 @@
+reduction L(f^m) = (dm+1)! int_0^1 phi^m da  (f = x^2-3xy+y^2):
+  m=1: L=1.0  reduction=1.0  match=0.0
+  m=2: L=20.0  reduction=20.0  match=0.0
+  m=3: L=540.0  reduction=540.0  match=0.0
+
+Lebesgue PMP int_0^1 phi^m da = 0 (leading coeff = 1), exact solve:
+  deg 2: NONE (no non-constant solution => FC(2)-homogeneous holds)
+  deg 3: NONE (no non-constant solution => FC(2)-homogeneous holds)
+  deg 4: NONE (no non-constant solution => FC(2)-homogeneous holds)
+
+GUARD: a phi whose double-precision moments fake ~1e-12 but are truly ~1e-6:
+  high-precision |int_0^1 phi^1 da| = 5.51009e-6  (double precision had reported ~6.8e-12 for the full residual -- WRONG)
