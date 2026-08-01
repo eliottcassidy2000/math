@@ -1,0 +1,4 @@
+radial bridge EGF: int_0^1 e^{s phi} da = 1.099339222  = sum s^m<phi^m>/m! = 1.099339222  (Q=s*phi is a POLYNOMIAL in a)
+deg-1: int_0^1 e^{at+b} = (1.408439937 + 0.4441828081j)  (transcendental unless e^a=1, i.e. a in 2pi i Z)
+full FC(2): leak EGF = int_0^1 e^{s phi_D + phi_{D-1}/(D phi_D)} da = int e^{poly+RATIONAL} (weighted generalization)
+golden AMM constant C = 1 + 2 log(phi)/log 5 = 1.59798743567 (klein THM-3027 = opus two-ray)
