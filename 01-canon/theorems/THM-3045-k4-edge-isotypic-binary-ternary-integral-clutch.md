@@ -2,7 +2,7 @@
 id: THM-3045
 title: "K4 edge isotypic binary-ternary integral clutch"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The six-edge permutation lattice of K4 has rational S4 decomposition
   1+[22]+[31].  The sum of the three integral intersection lattices has
   index 24 and Smith form 1,1,1,2,2,6.  Its exact equivariant quotient is
@@ -13,6 +13,12 @@ status: >
   theorem, not an identification of the binary/ternary trees and not a
   Keller, affine-owner, tournament, or LRC exclusion.
 source: codex-k4-edge-integral-clutch-2026-08-01
+audit: >
+  Independent hostile audit reproduced normal and optimized transcripts and
+  LF hashes; independently computed determinantal divisors 1,1,1,2,4,24;
+  reconstructed the quotient kernel, surjectivity, S4/V4 action, projector
+  integrality equivalence, and prime-local 2/3 decomposition; and accepted
+  every stated stopping boundary without repair.
 depends_on:
   - THM-2756-opposite-edge-projectors-parity-cancellation-and-integral-clutch
 related:
@@ -30,7 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3045 -- the six-edge lattice carries separate binary and ternary clutches
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and exact statement
 
