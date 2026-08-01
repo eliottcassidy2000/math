@@ -38,9 +38,10 @@ status: >
   (D0=8) out of 128 -- with only MARGINAL misses (best achievable ratio 1.04
   to 1.25, not orders of magnitude) and a starved beam (2-16 states passing)
   immediately before death. A structural wall would not move 55 rows under a
-  constant that leaves C = 8/5 unchanged. So the R = 128 failure is evidence
-  of SEARCH LIMITATION; the question remains formally open, but the balance of
-  evidence now leans away from an obstruction.
+  constant that leaves C = 8/5 unchanged. Taken alone that is evidence of
+  SEARCH LIMITATION, but section 5b's robust ~1% miss floor pulls the other
+  way; the combined verdict is SUGGESTIVE BUT NOT DECISIVE, and R = 128 is
+  open in both directions. C <= 8/5 verified for n <= 127 only.
 source: death-star-2026-08-01-coinC2
 depends_on:
   - THM-3002
@@ -165,8 +166,13 @@ limit, not an obstruction"; the withdrawal stands, because nothing there
 established it. What the certified filter adds is genuine evidence, and it
 points back toward search limitation: the failure is `D0`-mobile and marginal.
 The honest status is unchanged in form -- **`R = 128` is formally open, and
-`C <= 8/5` is verified for `n <= 127` only** -- but the balance of evidence now
-leans away from an obstruction.
+`C <= 8/5` is verified for `n <= 127` only** -- and on this section's evidence
+alone the balance would lean away from an obstruction.
+
+**Do not read this section standalone.** Section 5b sharpens the search and
+then finds a `~1%` miss floor that survives everything thrown at it, which
+pulls the other way. The combined verdict there is *suggestive but not
+decisive*, and that is the one to quote.
 
 ## 5b. The near-miss, and an unused degree of freedom
 
