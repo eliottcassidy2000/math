@@ -1,0 +1,18 @@
+gamma* (proved asymptotic floor rate) = 0.5979874356654402
+3/5                                   = 0.6000000000000000
+
+  R      gamma_c(R)      gamma_c - gamma*    is 3/5 admissible?   room below 3/5
+    8   0.3750000000   -0.2229874357      YES                 +0.2250000000
+   16   0.4411764706   -0.1568109651      YES                 +0.1588235294
+   32   0.5000000000   -0.0979874357      YES                 +0.1000000000
+   64   0.5434782609   -0.0545091748      YES                 +0.0565217391
+  128   0.5676691729   -0.0303182627      YES                 +0.0323308271
+  256   0.5808270677   -0.0171603680      YES                 +0.0191729323
+  512   0.5886194030   -0.0093680327      YES                 +0.0113805970
+ 1024   0.5928909953   -0.0050964404      YES                 +0.0071090047
+
+Reading: gamma_c(R) is the NECESSARY-condition floor at finite R.  Any
+construction rate must be >= it.  If the empirical construction threshold
+gamma_R equals gamma_c(R), the construction is TIGHT against the necessary
+condition; if gamma_R is stuck at 3/5 while gamma_c(R) is well below, the
+gap is a CONSTRUCTION deficiency, not a capacity one.
