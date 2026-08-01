@@ -1,0 +1,18 @@
+CHECK (i)+(ii) symbolically: a vanishing-moment g forces int e^g = 1.
+   deg 1: moment system has 1 solution(s); NONZERO ones: 0  -> FC(2) holds in degree 1: True
+   deg 2: moment system has 1 solution(s); NONZERO ones: 0  -> FC(2) holds in degree 2: True
+   deg 3: moment system has 1 solution(s); NONZERO ones: 0  -> FC(2) holds in degree 3: True
+
+   and the identity int_0^1 e^g = 1 whenever all m>=1 moments vanish is formal:
+      int_0^1 e^g du = sum_m (1/m!) int_0^1 g^m du = 1 + sum_{m>=1} 0 = 1.  QED
+
+CHECK (iii): the moment conditions are polynomial over Q in the coefficients.
+   m=1: int_0^1 g^m du is a polynomial in the c_i with ALL-RATIONAL coefficients: True   (e.g. c0 + c1/2 + c2/3 + c3/4)
+   m=2: all-rational coefficients: True
+
+CONTRAST -- the two candidate hypotheses, on the SAME hypothetical counterexample:
+   int_0^1 e^Q dt = 1.
+     'int e^Q != 0'          : 1 != 0  -> SATISFIED, no contradiction, FC(2) NOT implied.
+     'int e^Q transcendental': 1 is rational -> CONTRADICTION, FC(2) IS implied.
+
+=> The bridge REQUIRES the transcendence form.  The nonvanishing form is insufficient.
