@@ -30,6 +30,12 @@ status: >
   sum_j C(n,j)(-1)^j (sj)! z^{n-j} satisfies Phi_n' = n Phi_{n-1}, so a common
   root of (I_m, I_{m+1}) is exactly a MULTIPLE root of Phi_{m+1}:
   SFC(2) at window k (p = 0)  <=>  Phi_{k+2} is SQUAREFREE.
+  (H6) AND POSITIVITY OF THE MEASURE IS NOT ENOUGH EITHER. For the positive
+  measure nu = d_0 + (81/16) d_1 + (1/16) d_3 on [0,inf),
+  Phi_4(z) = (7z^2 - 12z + 9)^2 / 8 is a PERFECT SQUARE: every root is double.
+  Two atoms can never do this, so three is minimal. Hence soft positivity at
+  EITHER level fails, and SFC(2) is irreducibly a statement about the SPECIFIC
+  measure dnu = (1/s) u^{1/s-1} e^{-u^{1/s}} du -- about Gamma, not positivity.
   Census: 250 cells, s <= 10, m <= 25 (windows to k = 24), zero failures.
   Scope: the Hadamard question is SETTLED (negatively, as posed) and replaced
   by Appell squarefreeness; SFC(2) for s >= 2 remains OPEN in that form.
@@ -219,6 +225,42 @@ radius of convergence is **zero**: `N` is a Gevrey-`s` divergent series,
 Borel-summable but not analytic at the origin, and none of that machinery is
 available. **That is the precise structural reason `s >= 2` is hard**, and it
 is invisible in the Hadamard formulation.
+
+## 5b. Positivity of the measure is not enough either (H6)
+
+Section 3 replaced "positive coefficients" by "positive measure". That
+hypothesis is *also* insufficient. Take the three-atom positive measure
+
+```text
+nu = 1 * delta_0 + (81/16) * delta_1 + (1/16) * delta_3     on [0,inf).
+```
+
+Then, exactly,
+
+```text
+Phi_4(z) = (7 z^2 - 12 z + 9)^2 / 8,      Phi_3(z) = (7z-6)(7 z^2 - 12 z + 9)/8,
+disc(Phi_4) = 0,   gcd(Phi_4, Phi_3) = 7 z^2 - 12 z + 9,
+```
+
+so `Phi_4` is a **perfect square** -- both its roots `z = (6 +- 3 i sqrt 3)/7`
+are double, and `Phi_4, Phi_3` share them. **Two** atoms can never do this: if
+`p_1 (z-u_1)^n + p_2 (z-u_2)^n = 0` and the same with `n-1`, then with
+`r = (z-u_1)/(z-u_2)` we get `r^n = r^{n-1}`, so `r = 1` and `u_1 = u_2`.
+Three atoms is therefore minimal, and numerically the phenomenon is not rare:
+solutions with strictly positive weights exist for every `n >= 4` tested.
+
+**Consequence.** Soft positivity fails at *both* levels -- positive
+coefficients (section 2) and positive measure (here). What remains is the
+specific measure `dnu = (1/s) u^{1/s-1} e^{-u^{1/s}} du`. SFC(2) is a theorem
+about `Gamma`, not a theorem about positivity, and any proof must use
+something finer than a Hankel or Stieltjes condition. This is a strong
+narrowing: it eliminates in one stroke every argument of the form "the
+coefficients/moments are nice, therefore the zeros separate".
+
+(Note the discriminant does not change sign near such a point -- the double
+root is a *complex* conjugate pair, so `disc` touches zero from above. An
+intermediate-value argument on `disc` would have missed this entirely; the
+witness has to be exhibited.)
 
 ## 6. Census
 

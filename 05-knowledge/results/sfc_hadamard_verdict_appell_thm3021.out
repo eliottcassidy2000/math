@@ -52,3 +52,15 @@ H4c sector theorem: if every zeta_k = 1/(1-a_k/a) has |arg zeta_k| < pi/(2(s-1))
     s=2 m=8: min_k Re(zeta_k) at the max-modulus root = +0.5000  (>= 1/2 as proved)
 
 ALL THM-3021 REFEREE CHECKS PASSED
+
+H6  is 'nu a positive measure on [0,inf)' enough to force Phi_n squarefree?  NO.
+    nu = 1*d_0 + (81/16)*d_1 + (1/16)*d_3   (all weights > 0, atoms in [0,inf))
+    Phi_4(z) = (7*z**2 - 12*z + 9)**2/8   -- a PERFECT SQUARE
+    Phi_3(z) = (7*z - 6)*(7*z**2 - 12*z + 9)/8
+    disc(Phi_4) = 0;  Phi_4' - 4 Phi_3 = 0
+    gcd(Phi_4,Phi_3) = (7*z**2 - 12*z + 9)/7
+    z0 = 6/7 + 3*sqrt(3)*I/7: Phi_4(z0) = 0, Phi_3(z0) = 0
+    Every root of Phi_4 is DOUBLE.  Two atoms can never do this (r^n = r^{n-1} => r=1),
+    so three is minimal.  => soft positivity, at EITHER level (coefficients or
+    measure), is insufficient: SFC(2) is a statement about the SPECIFIC measure
+    dnu = (1/s) u^{1/s-1} e^{-u^{1/s}} du, i.e. about Gamma, not about positivity.

@@ -111,3 +111,21 @@ for m_ in (3, 5, 8):
     mn = min(float(sp.re(sp.expand(1 / (1 - rk / amax))).evalf()) for rk in rts if rk != amax)
     print(f"    s=2 m={m_}: min_k Re(zeta_k) at the max-modulus root = {mn:+.4f}  (>= 1/2 as proved)")
 print("\nALL THM-3021 REFEREE CHECKS PASSED")
+
+# --- H6: positivity of the MEASURE is not enough either (exact counterexample)
+print("\nH6  is 'nu a positive measure on [0,inf)' enough to force Phi_n squarefree?  NO.")
+uu = [0, 1, 3]
+pp = [sp.Integer(1), sp.Rational(81, 16), sp.Rational(1, 16)]
+P4 = sp.expand(sum(pp[i] * (z - uu[i]) ** 4 for i in range(3)))
+P3 = sp.expand(sum(pp[i] * (z - uu[i]) ** 3 for i in range(3)))
+print(f"    nu = 1*d_0 + (81/16)*d_1 + (1/16)*d_3   (all weights > 0, atoms in [0,inf))")
+print(f"    Phi_4(z) = {sp.factor(P4)}   -- a PERFECT SQUARE")
+print(f"    Phi_3(z) = {sp.factor(P3)}")
+print(f"    disc(Phi_4) = {sp.discriminant(P4, z)};  Phi_4' - 4 Phi_3 = {sp.expand(sp.diff(P4,z)-4*P3)}")
+print(f"    gcd(Phi_4,Phi_3) = {sp.factor(sp.gcd(sp.Poly(P4,z),sp.Poly(P3,z)).as_expr())}")
+z0 = (6 + 3 * sp.sqrt(3) * sp.I) / 7
+print(f"    z0 = {z0}: Phi_4(z0) = {sp.simplify(P4.subs(z,z0))}, Phi_3(z0) = {sp.simplify(P3.subs(z,z0))}")
+print("    Every root of Phi_4 is DOUBLE.  Two atoms can never do this (r^n = r^{n-1} => r=1),")
+print("    so three is minimal.  => soft positivity, at EITHER level (coefficients or")
+print("    measure), is insufficient: SFC(2) is a statement about the SPECIFIC measure")
+print("    dnu = (1/s) u^{1/s-1} e^{-u^{1/s}} du, i.e. about Gamma, not about positivity.")
