@@ -129,11 +129,22 @@ common evaluation functional and an index dictionary, nothing more.
 The parallel `t <-> K` and `m <-> k` is suggestive because both lanes already have
 a depth law: SFC needs depth `t` for a `t`-atom object, and THM-3004 gives
 `2K-3` sign changes for a `K`-cluster object.  Two cheap tests follow:
-(i) does the sequence `L(f^m)`, `m=1..t`, obey a sign-change bound in `t` of the
-THM-3004 shape?  (ii) does the binomial transform `Phi_k` have an SFC-side
-meaning -- i.e. is `L(z^2 Phi_k)` ever an `L(f^m)` for an explicit `f`?
-A negative answer to (ii) would pin the dictionary as cosmetic and is worth
-having recorded.
+**Test (i) is answered, NEGATIVELY, in this file.**  Does `L(f^m)` obey a
+sign-change bound of the THM-3004 shape `2t-3`?  **No.**  Randomised exact search
+over `t=2,3,4` with supports in `[0,8)` and integer coefficients finds sequences
+`L(f), ..., L(f^8)` that alternate at **every** step -- `7` of `7` possible sign
+changes -- at every `t`, including `t=2` where `2t-3=1`.  Example: `t=2`,
+support `(1,5)`, coefficients `(2,-9)`.  The reason is structural and kills the
+analogy cleanly: the sign of `L(f^m)` is driven by which term dominates the
+`m`-th power, so a single negative coefficient of large modulus alternates the
+whole sequence irrespective of `t`.  Sign-change count is therefore **not** the
+right SFC-side invariant, and the `t <-> K` half of the dictionary does not
+transport THM-3004's law.
+
+That leaves (ii): does the binomial transform `Phi_k` have an SFC-side meaning --
+is `L(z^2 Phi_k)` ever an `L(f^m)` for an explicit `f`?  Given (i), a negative
+answer to (ii) would pin the dictionary as cosmetic, and that is now the honest
+default expectation rather than an open hope.
 
 ## 5. Boundaries
 
