@@ -1,0 +1,8 @@
+R1 L(f^m) = (dm+n-1)! * int_Delta g^m  (n=2 d<=3, n=3 d<=2): OK
+R2 restriction to the simplex is a bijection onto polys of deg <= d: OK
+R3 FC(2) degree 1: moment system forces g = 0 (exact Groebner): OK
+R3 FC(2) degree 2: moment system forces g = 0 (exact Groebner): OK
+R3 FC(2) degree 3: moment system forces g = 0 (exact Groebner): OK
+R4 S_3 mechanism: g o sigma = omega^2 g forces int_T g^m = 0 for 3 not| m, exactly (m<=9); m = 3,6,9 survive nonzero: OK
+   surviving values: m=3 -> 1/20, m=6 -> 1/56, m=9 -> 1/110
+ALL THM-3018 REFEREE CHECKS PASSED
