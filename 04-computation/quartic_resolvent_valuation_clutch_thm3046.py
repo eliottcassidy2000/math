@@ -100,6 +100,35 @@ def root_valuation_vector(roots, prime):
     return tuple(vp(roots[i] - roots[j], prime) for i, j in EDGES)
 
 
+def base_roots_for_t_a(t, a, prime=5):
+    """Realize matching sums (t+a,t,t) with four distinct rational roots."""
+    require(t >= 0 and a >= 0, "negative cluster depth")
+    if t == 0 and a == 0:
+        return (0, 1, 2, 3)
+    if t == 0:
+        return (0, prime**a, 1, 2)
+    if a == 0:
+        return (0, prime**t, 2 * prime**t, 1)
+    return (0, prime ** (t + a), prime**t, 1)
+
+
+def realize_clutch_class(kappa, tau, prime=5):
+    """Return honest roots realizing a prescribed F2^3 x F3 class."""
+    special = next(
+        i for i in range(3) if kappa[(i + 1) % 3] == kappa[(i + 2) % 3]
+    )
+    common = kappa[(special + 1) % 3]
+    t = common
+    parity_a = (kappa[special] - common) % 2
+    a = next(value for value in range(6) if value % 2 == parity_a and value % 3 == tau)
+    base = base_roots_for_t_a(t, a, prime)
+    for perm in permutations(VERTICES):
+        roots = tuple(base[perm[i]] for i in VERTICES)
+        if clutch(root_valuation_vector(roots, prime)) == (kappa, tau):
+            return roots
+    raise RuntimeError("failed to place special matching coordinate")
+
+
 # Root-level polynomial identities.
 z = sp.symbols("z0:4")
 u = (
@@ -114,6 +143,13 @@ identities = (
 )
 for number, identity in enumerate(identities, 1):
     require(sp.expand(identity) == 0, f"resolvent difference identity {number}")
+
+plucker_terms = (
+    (z[0] - z[1]) * (z[2] - z[3]),
+    -(z[0] - z[2]) * (z[1] - z[3]),
+    (z[0] - z[3]) * (z[1] - z[2]),
+)
+require(sp.expand(sum(plucker_terms)) == 0, "Pluecker relation")
 
 quartic_vandermonde = sp.prod(z[i] - z[j] for i in range(4) for j in range(i + 1, 4))
 resolvent_vandermonde = (u[0] - u[1]) * (u[0] - u[2]) * (u[1] - u[2])
@@ -141,6 +177,18 @@ for x in product(range(6), repeat=6):
 require(len(fibre_counts) == 24, "clutch map is not onto all 24 classes")
 require(set(fibre_counts.values()) == {6**6 // 24}, "clutch fibres are not uniform")
 require(projector_good == 6**6 // 24, "wrong integral-projector census")
+
+# The tropical Pluecker restriction still realizes all 24 clutch classes.
+root_realizations = {}
+for kappa in product(range(2), repeat=3):
+    for tau in range(3):
+        roots = realize_clutch_class(kappa, tau)
+        x = root_valuation_vector(roots, 5)
+        s = matching_sums(x)
+        require(clutch(x) == (kappa, tau), "root clutch realization mismatch")
+        require(s.count(min(s)) >= 2, "tropical Pluecker minimum is not repeated")
+        root_realizations[(kappa, tau)] = (roots, s)
+require(len(root_realizations) == 24, "not all clutch classes are root-realized")
 
 # S4 relabelling permutes the three binary matching coordinates and fixes tau.
 for perm in permutations(VERTICES):
@@ -185,16 +233,20 @@ semantic_payload = repr(
         two_pairs_depth_1,
         two_pairs_depth_2,
         triple_refinement,
+        sorted(root_realizations.items()),
     )
 ).encode("ascii")
 
 print("THM-3046 QUARTIC RESOLVENT VALUATION CLUTCH")
 print("root_difference_identities=3")
 print("discriminant_identity=quartic_equals_resolvent")
+print("tropical_pluecker_identity=PASS")
 print("residue_vectors=46656")
 print("clutch_classes=24")
 print("uniform_fibre_size=1944")
 print(f"integral_projector_classes={projector_good}")
+print("root_realized_clutch_classes=24")
+print("root_realization_prime=5")
 print("s4_permutations=24")
 print("s4_basis_equivariance_checks=144")
 print(f"depth1_matching_sums={matching_sums(two_pairs_depth_1)}")

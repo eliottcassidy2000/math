@@ -2,7 +2,7 @@
 id: THM-3046
 title: "Quartic resolvent-root valuation realization of the binary-ternary clutch"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For four labelled distinct roots in a discretely valued splitting field,
   the valuations of the three cubic-resolvent root differences are exactly
   the three opposite-edge valuation sums.  Their parities are THM-3045's
@@ -11,7 +11,17 @@ status: >
   modulo three.  Thus the two exceptional primes have a literal quartic
   valuation realization.  The theorem does not supply an affine owner,
   a Keller restriction, a canonical root labelling, or an LRC consequence.
+  The tropical Pluecker law forces the minimum matching sum to occur at
+  least twice, yet all 24 clutch classes occur on honest 5-adic quartics.
 source: codex-quartic-resolvent-valuation-clutch-2026-08-01
+audit: >
+  Independent hostile audit rederived the three indexed root-difference
+  products, common discriminant valuation, exact THM-3045 quotient map,
+  S4/V4 action, projector integrality equivalence, and prime-local split;
+  checked all three rational 5-adic hostiles and the tropical Pluecker law;
+  independently validated the CRT construction of all 24 honest quartic
+  classes; required the final projected-restriction wording repair; and then
+  reproduced normal, optimized, stored output, and both LF hashes exactly.
 depends_on:
   - THM-3045-k4-edge-isotypic-binary-ternary-integral-clutch
 related:
@@ -22,14 +32,14 @@ related:
   - THM-2992-signed-quartic-edge-block-discriminant-parity-and-keller-owner-line-boundary
 script: 04-computation/quartic_resolvent_valuation_clutch_thm3046.py
 output: 05-knowledge/results/quartic_resolvent_valuation_clutch_thm3046.out
-script_sha256: 845f979893c6fe651b77ed3adac5b855d5780841fcbdbb30e38df0aadcd19fde
-output_sha256: 404cdc7f96153eb9d73d3f8a2f529bc7684b9999f896ebbd3dfb7ea98bbbe31b
+script_sha256: 239faeeaa873f3ea892215274d33b81438423ca05033b4f9916ffdecf111f50f
+output_sha256: 7daf9acd6fbd0e6c6a9b1dab6e28315cd304967e4c38ebd0f3b68d5da8b537d4
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3046 -- quartic root valuations realize the binary-ternary clutch
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and exact statement
 
@@ -117,6 +127,47 @@ product_(i<j)(u_i-u_j)^2
 which is `(7)`.  This is the root-level mechanism behind the exact
 quartic/resolvent discriminant identity in THM-2455 and THM-2598.
 
+### Tropical restriction and full clutch realizability
+
+The three products on the right side of `(8)` satisfy the Pluecker relation
+
+```text
+(z_0-z_1)(z_2-z_3)
+ -(z_0-z_2)(z_1-z_3)
+ +(z_0-z_3)(z_1-z_2)=0.                                (10)
+```
+
+The ultrametric inequality therefore forces the minimum of
+`s_1,s_2,s_3` to occur at least twice.  This is the projected cluster-tree
+restriction on the three matching sums.  The full six-edge valuation vector
+obeys additional triangle ultrametric constraints.  The projected
+restriction does **not** remove any class from `(1)`.
+
+Indeed, prescribe `(kappa,tau) in F2^3 x F3`.  Choose a special coordinate
+so the other two binary entries have a common value `c`; this is always
+possible for three bits.  Put `t=c in {0,1}` and choose the unique
+`a in {0,...,5}` satisfying
+
+```text
+a=kappa_special-c mod 2,                 a=tau mod 3.    (11)
+```
+
+Over the `5`-adic valuation, the following rational roots realize matching
+sums `(t+a,t,t)`:
+
+```text
+t=a=0:       (0,1,2,3);
+t=0<a:       (0,5^a,1,2);
+0<t, a=0:    (0,5^t,2*5^t,1);
+0<t, 0<a:    (0,5^(t+a),5^t,1).                        (12)
+```
+
+Relabelling the four roots places the special matching in any of the three
+positions.  Since the sum of `(t+a,t,t)` is `3t+a`, `(11)` gives exactly the
+prescribed binary parities and ternary total.  Thus all `24` clutch classes
+occur on honest separable quartics even after imposing the tropical
+Pluecker law.
+
 ## 3. Exact identification with the integral quotient
 
 The six integers in `(2)` form an element of the edge lattice
@@ -126,7 +177,7 @@ sum of all six edge coordinates modulo three.  Equation `(5)` therefore
 identifies the former with `s_i mod 2`, while
 
 ```text
-sum_(i<j)x_ij=s_1+s_2+s_3                            (10)
+sum_(i<j)x_ij=s_1+s_2+s_3                            (13)
 ```
 
 identifies the latter with `(6)` and `(7)`.
@@ -140,7 +191,7 @@ Let `P_0,P_22,P_31` be THM-3045's rational isotypic projectors.  Their values
 on `x` are all integral exactly when
 
 ```text
-s_1,s_2,s_3 are even,             s_1+s_2+s_3=0 mod 3. (11)
+s_1,s_2,s_3 are even,             s_1+s_2+s_3=0 mod 3. (14)
 ```
 
 Equivalently, all three resolvent-root difference valuations are even and,
@@ -163,7 +214,7 @@ Use the `5`-adic valuation on rational roots.
 roots                   (s_1,s_2,s_3)    kappa     tau   v(Disc)
 (0,5,1,6)                 (2,0,0)          000       2        4
 (0,25,1,26)               (4,0,0)          000       1        8
-(0,25,5,1)                (2,1,1)          011       1        8. (12)
+(0,25,5,1)                (2,1,1)          011       1        8. (15)
 ```
 
 The last two packets have the same discriminant valuation and the same
@@ -188,7 +239,7 @@ preserved:    S4 relabelling, matching quotient, common discriminant;
 destroyed:    root units, residue phases, affine presence, owner labels;
 needed sidecar for geometry:
               a physical labelled root/owner realization and compatible
-              divisor-to-source transport.                              (13)
+              divisor-to-source transport.                              (16)
 ```
 
 In particular, this theorem does not constrain a hypothetical degree-four
@@ -206,13 +257,14 @@ python 04-computation/quartic_resolvent_valuation_clutch_thm3046.py
 python -O 04-computation/quartic_resolvent_valuation_clutch_thm3046.py
 ```
 
-Both executions byte-match the stored `16`-line transcript
+Both executions byte-match the stored `19`-line transcript
 `05-knowledge/results/quartic_resolvent_valuation_clutch_thm3046.out`.  The
 companion uses explicit exceptions and no truth-bearing Python assertions.
 It verifies `(8)--(9)` symbolically; exhausts all `6^6=46,656` denominator-six
 residue vectors; checks the `24` uniform quotient fibres, projector
-integrality, all `24` sheet permutations on an edge basis, and the three
-root-realizable controls `(12)`.
+integrality, all `24` sheet permutations on an edge basis, the tropical
+Pluecker identity, explicit `5`-adic representatives of all `24` clutch
+classes, and the three root-realizable controls `(15)`.
 
 ## 7. Boundary ledger
 
@@ -221,6 +273,8 @@ PROVED IN THE CANDIDATE: root/resolvent difference factorization;
                          exact valuation clutch realization;
                          half-discriminant ternary checksum;
                          S4/V4 equivariance;
+                         tropical Pluecker boundary and all-class
+                         5-adic realizability;
                          projector integrality criterion;
                          root-realizable independence hostiles.
 
