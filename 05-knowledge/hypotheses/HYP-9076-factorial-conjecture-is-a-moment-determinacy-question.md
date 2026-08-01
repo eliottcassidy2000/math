@@ -84,7 +84,14 @@ Pushed into the regime where the determinacy argument stops working:
 homogeneous cubic, n=2, coeffs in [-6,6], m=1..5 :  0 / 28560
 homogeneous cubic, n=2, coeffs in [-9,9], m=1..4 :  0 / 130320
 two-term cubics, coeffs in [-40,40], only L(f)=L(f^2)=0 : 0
+n=2, deg <= 3 (all 9 monomials), coeffs in [-1,1], m=1..4 : 0 / 19682
+n=2, deg <= 3 (all 9 monomials), coeffs in [-2,2], m=1..3 : 0 / 1953124
+n=3, deg <= 3 : NOT COMPLETED -- 19 monomials, ~1.2e9 vectors, cut by timeout
 ```
+
+The `n = 2` inhomogeneous sweep over `1953124` vectors is the substantial one:
+allowing every monomial of total degree `<= 3` and coefficients up to `+-2`
+still kills everything by the third moment.
 
 The two-term case is the sharpest: `L(f) = 0` already pins the coefficient
 ratio to a fixed rational `-c!d!/(a!b!)`, and the quadratic `L(f^2)` then has
