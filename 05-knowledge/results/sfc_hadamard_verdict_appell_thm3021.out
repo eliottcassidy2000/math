@@ -1,0 +1,54 @@
+H2  THE VERDICT: the Hadamard statement is FALSE for general positive a_j.
+    s=2:  A = (lam + 5)*(lam + 9)
+          B = 30*lam**2 + 168*lam + 90 = 6*(lam + 5)*(5*lam + 3)
+          gcd(A,B) = lam + 5   -> SHARED ROOT lam = -5   (A(-5)=0, B(-5)=0)
+    Why our a_j escape: the counterexample's implied moments mu=(45,7,1) have
+    Hankel det mu0*mu2 - mu1^2 = -4 < 0  -> NOT a moment sequence.
+    Ours: mu_j = (sj)! = (1,2,24) for s=2 -> Hankel = 20 > 0.  POSITIVITY OF
+    COEFFICIENTS IS NOT THE OPERATIVE HYPOTHESIS; the moment structure is.
+
+H1  root criterion  B(alpha) = sum_i c_i alpha^i A^(i)(alpha),  c_i = Delta^i W(0)/i!
+    s=1: c = [1]  all>0: True;  criterion == B-s!A mod A: True
+    s=2: c = [10, 4]  all>0: True;  criterion == B-s!A mod A: True
+    s=3: c = [114, 135, 27]  all>0: True;  criterion == B-s!A mod A: True
+    s=4: c = [1656, 4272, 2176, 256]  all>0: True;  criterion == B-s!A mod A: True
+    s=5: c = [30120, 150000, 145000, 40625, 3125]  all>0: True;  criterion == B-s!A mod A: True
+
+H4  pairing identity and the max-modulus theorem
+    1/(1-r) + 1/(1-1/r) simplifies to 1  (each unordered pair gives 1)
+    s=2 m=4: at the max-modulus root, Re(sum 1/(1-a_k/a)) = +1.6645 > 0 => criterion 11.684 != 0
+    s=2 m=6: at the max-modulus root, Re(sum 1/(1-a_k/a)) = +2.8010 > 0 => criterion 16.220 != 0
+    s=2 m=7: at the max-modulus root, Re(sum 1/(1-a_k/a)) = +3.3866 > 0 => criterion 18.546 != 0
+
+H5  APPELL REFORMULATION:  Phi_n' = n Phi_{n-1}, so a common root of
+    (I_m, I_{m+1}) is exactly a MULTIPLE root of Phi_{m+1}.
+    s=1: Phi_n'=n Phi_(n-1) and Phi_n squarefree for n=1..8, and squarefreeness  <=>  gcd(I_m,I_(m+1))=1 : True
+    s=2: Phi_n'=n Phi_(n-1) and Phi_n squarefree for n=1..8, and squarefreeness  <=>  gcd(I_m,I_(m+1))=1 : True
+    s=3: Phi_n'=n Phi_(n-1) and Phi_n squarefree for n=1..8, and squarefreeness  <=>  gcd(I_m,I_(m+1))=1 : True
+    s=4: Phi_n'=n Phi_(n-1) and Phi_n squarefree for n=1..8, and squarefreeness  <=>  gcd(I_m,I_(m+1))=1 : True
+
+    Structural reason s=1 is easy and s>=2 is hard:
+      generating function  sum Phi_n(z) xi^n/n! = e^{xi z} N(xi),  N(xi)=int e^{-xi t^s - t}dt.
+      s=1: N(xi)=1/(1+xi), MEROMORPHIC (radius 1).  s>=2: N has Taylor coefficients
+      (-1)^n (sn)!/n!, radius ZERO -- a Gevrey-s divergent series, no entire-function
+      (Laguerre-Polya / Hermite-Biehler) machinery is available.
+
+ALL CHECKS PASSED
+
+H4b trace identity (s=2): sum over ALL roots of the normalised criterion
+    m=2: sum = 28.000000+0.000000j   predicted m(c1+c2(m-1)) = 28
+    m=3: sum = 54.000000+0.000000j   predicted m(c1+c2(m-1)) = 54
+    m=4: sum = 88.000000+0.000000j   predicted m(c1+c2(m-1)) = 88
+    m=5: sum = 130.000000+0.000000j   predicted m(c1+c2(m-1)) = 130
+    m=6: sum = 180.000000+0.000000j   predicted m(c1+c2(m-1)) = 180
+    m=7: sum = 238.000000-0.000000j   predicted m(c1+c2(m-1)) = 238
+
+H4c sector theorem: if every zeta_k = 1/(1-a_k/a) has |arg zeta_k| < pi/(2(s-1))
+    then every e_{i-1}(zeta), i<=s, has |arg| < (s-1)*pi/(2(s-1)) = pi/2, so
+    Re( sum_i c_i i! e_{i-1}(zeta) ) > 0 and B(alpha) != 0.  s=2 needs only Re zeta>0,
+    which the MAX-MODULUS root supplies (|w|<=1, w!=1 => Re 1/(1-w) >= 1/2).
+    s=2 m=3: min_k Re(zeta_k) at the max-modulus root = +0.5684  (>= 1/2 as proved)
+    s=2 m=5: min_k Re(zeta_k) at the max-modulus root = +0.5565  (>= 1/2 as proved)
+    s=2 m=8: min_k Re(zeta_k) at the max-modulus root = +0.5000  (>= 1/2 as proved)
+
+ALL THM-3021 REFEREE CHECKS PASSED

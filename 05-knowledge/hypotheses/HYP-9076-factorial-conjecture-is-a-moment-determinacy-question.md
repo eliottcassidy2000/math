@@ -336,3 +336,79 @@ two-slot discriminants, and the `Q > 0` step would become a rational-function
 positivity check in `k` rather than an inequality -- which is the same shape as
 the Gregory--Newton certificates THM-2922 already uses. That is a concrete,
 untried bridge between the two programs.
+
+
+## 11. CORRECTION: my dimension count is MISTAKE-246, and the lower half is THM-2173
+
+An extensive repo search settles the status of the `M = N` threshold, and it
+is not what section 8 claimed.
+
+### The counting argument is an already-quarantined error
+
+MISTAKE-246 (audit of THM-1790) records exactly this reasoning and rejects it:
+
+> "`d` equations in `d` affine variables may cut out the empty set or only a
+> forbidden point; equation counting alone supplies no solution."
+
+Section 8 argued "solvable iff `2M+1 <= 2N`" by counting equations against
+parameters. **The forward direction is true but not for that reason, and the
+reverse direction does not follow at all.** Equation counting cannot show that
+`M = N` forces `f = 0`; that inference is precisely the retracted step.
+
+### The lower half is already a theorem, by Krull height
+
+**THM-2173** (sparse projective factorial moment floor) proves, for every
+`t >= 2` and every `t`-dimensional envelope `V ⊂ C[s]`, that there is a
+nonzero `H in V` with `L(H^j) = 0` for `1 <= j <= t-1`. The proof is Krull's
+height theorem: if the `t-1` homogeneous moment equations had only the origin
+as common zero, their radical would have height `t`, which is impossible.
+
+So the "solvable for `M <= N-1`" half of my numerics is **already proved,
+rigorously and for all `N`** -- my least-squares runs rediscovered THM-2173.
+Its own scope note is apt: *"a dimension obstruction, not a factorial
+peculiarity."*
+
+### The upper half is the open program
+
+There is **no** general "`N` slots need `N` moments" theorem in the repo, and
+no hypothesis file conjectures one; the phrase occurs only in my own script's
+docstring. The upper half is strictly case-by-case: `N = 2` external
+(Edo--van den Essen) and section 9 here; `N = 3` arbitrary support (THM-2824);
+`N = 4` only in pieces (THM-2908/2940 consecutive, THM-2921 diameter 4,
+THM-2922 diameter 5, THM-2849 bounded box). Every `N = 4` theorem explicitly
+disclaims SFC(5), and no SFC(5) file exists.
+
+**Net status of the request.** The threshold `M = N` is NOT proved rigorously
+in general, cannot be by counting, and the honest decomposition is:
+lower half `M <= N-1` = THM-2173 (proved, Krull height); upper half `M = N`
+= the open SFC program, with `N = 2` closed by section 9.
+
+## 12. What the search says about section 9 and 10
+
+* The two-slot proof of section 9 is, per the survey, **the strongest
+  uncanonized asset in this lane** -- rigorous, all dimensions, arbitrary
+  distinct multi-indices -- and it is cited by nothing. THM-3019 and THM-3020
+  re-derive two-slot results by unrelated resultant and ODE methods and would
+  be shortened by it. It should be promoted to canon.
+* Its inequality `C^2 <= D E` is a **Turan-type inequality** for the factorial
+  sequence, and the survey confirms Turan inequalities are **entirely absent**
+  from the repo -- every `Turan` hit is extremal graph theory or
+  Erdos--Turan discrepancy. That is a naming/vocabulary gap worth closing,
+  since the Gamma-Turan literature is exactly the right toolbox.
+* The THM-3010 Newton-ratio identification of section 10 stands, and the
+  survey confirms log-convexity appears in only two other places repo-wide.
+
+### A free certificate at two slots, in the THM-2922 style
+
+For a TRANSLATED two-slot support `alpha = n+a`, `beta = n+b` in one variable,
+put `d = b-a >= 1` and `N_0 = 2n+2a`. Then the discriminant ratio is
+
+```text
+rho(n) = (2n+a+b)!^2 / ((2n+2a)!(2n+2b)!)
+       = prod_(i=1)^(d) (N_0+i)/(N_0+d+i)   <  1,
+```
+
+each factor being `< 1`. Verified exactly for several `(a,b)` and `n`.
+Positivity therefore holds for ALL translations at once with no resultant and
+no case analysis -- the same kind of statement THM-2922 needs a 197-term
+Gregory--Newton certificate for at four slots, free at two.

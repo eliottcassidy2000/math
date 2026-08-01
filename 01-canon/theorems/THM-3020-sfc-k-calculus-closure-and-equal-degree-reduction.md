@@ -161,7 +161,11 @@ The gap named in THM-3019 is closed **as a calculus**: (K1)-(K3) show the
 multiplicity bound for all `p, s`. What is *not* closed is the conjecture:
 `s = 1, p = 0` is proved, and for `s >= 2` the problem is now the sharp
 equal-degree question (K6) -- can a positive-coefficient polynomial and its
-Hadamard product with the increasing multiplier `w_j` share a root? The
+Hadamard product with the increasing multiplier `w_j` share a root?
+**[SETTLED by THM-3021: as posed the answer is YES -- `45 + 14 lam + lam^2`
+is a counterexample at `s = 2` -- so positivity of coefficients is the wrong
+hypothesis and no Polya-Schur argument can work. The surviving content is
+squarefreeness of the Appell sequence `Phi_n(z) = int (z-u)^n dnu(u)`.]** The
 `p >= 1` families need the full (K3), where `P_1, P_2` depend on `m` and the
 multiplicity argument of section 4 weakens (the two terms have orders `p` and
 `p+s`, so no order matching is forced).

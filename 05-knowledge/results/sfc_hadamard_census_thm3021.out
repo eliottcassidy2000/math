@@ -1,0 +1,16 @@
+Hadamard census: does A share a root with its w-Hadamard transform B?
+(equivalently SFC(2) at p=0, window k = m-1)
+
+   s= 1: m=1..25 -> no shared root anywhere
+   s= 2: m=1..25 -> no shared root anywhere
+   s= 3: m=1..25 -> no shared root anywhere
+   s= 4: m=1..25 -> no shared root anywhere
+   s= 5: m=1..25 -> no shared root anywhere
+   s= 6: m=1..25 -> no shared root anywhere
+   s= 7: m=1..25 -> no shared root anywhere
+   s= 8: m=1..25 -> no shared root anywhere
+   s= 9: m=1..25 -> no shared root anywhere
+   s=10: m=1..25 -> no shared root anywhere
+
+   TOTAL 250 (s,m) cells, s<=10, m<=25 (windows k<=24)
+   cells with a shared root: NONE
