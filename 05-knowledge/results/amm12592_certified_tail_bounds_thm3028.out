@@ -1,0 +1,22 @@
+(SUP) every admissible block has |Delta(t)| <= 1 on [0,1]
+   2000 random admissible blocks (d<=12): max |Delta(t)| = 1 (<= 1: True); bound attained: True
+
+(PROP) |sigma_{j-1}(t)| <= (1-t^{R-j})/(1-t) -- EXACT, on true solution paths
+   R= 16: exact max violation ratio along the TRUE path = 1  (satisfies and SATURATES (PROP): True)
+   R= 32: exact max violation ratio along the TRUE path = 1  (satisfies and SATURATES (PROP): True)
+   R= 64: exact max violation ratio along the TRUE path = 1  (satisfies and SATURATES (PROP): True)
+
+(FLOAT) the same quantity in double precision is meaningless
+   R=64: exact = 1   float = 3.198873
+   => all (SUP)/(PROP) testing must be exact.
+
+FILTER SOUNDNESS + D0 death-row table (exact arithmetic throughout)
+   soundness R= 16: SOLVES through the filter  verify=True
+   soundness R= 32: SOLVES through the filter  verify=True
+   soundness R= 64: SOLVES through the filter  verify=True
+   R=128 death row vs constant slack D0 (C = 8/5 for every fixed D0):
+      D0=0: died row 42 of 128, best achievable ratio 1.252
+      D0=1: died row 51 of 128, best achievable ratio 1.169
+      D0=2: died row 97 of 128, best achievable ratio 1.183
+      D0=4: died row 90 of 128, best achievable ratio 1.164
+      D0=8: died row 80 of 128, best achievable ratio 1.04
