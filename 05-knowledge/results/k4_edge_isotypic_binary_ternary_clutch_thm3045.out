@@ -1,0 +1,15 @@
+THM3045 K4 EDGE ISOTYPIC INTEGRAL CLUTCH: PASS
+edge_order=01,02,03,12,13,23
+rational_blocks=1+[22]+[31] ranks=1,2,3
+orthogonal_gram_determinants=6,12,8
+intersection_lattice_index=24
+smith=1,1,1,2,2,6
+quotient=F2[three_matchings]+F3_trivial size=24
+residue_universe=46656 kernel=1944 images=24
+binary_map=kappa_m=x_e+x_opposite(e) mod2
+ternary_map=tau=sum_edges(x_e) mod3
+integral_all_projectors iff kappa=0 and tau=0
+S4_matching_kernel_size=4
+C2_matching_action=(0, 2, 1) C3_matching_action=(2, 0, 1)
+prime_support=2(binary matching clutch),3(ternary scalar clutch)
+scope=no tree identification, no affine owner, no Keller/LRC exclusion
