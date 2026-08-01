@@ -1,0 +1,12 @@
+LEMMA (M): product of admissible blocks is admissible at the SUM of degrees.
+   400 random admissible pairs (d,e <= 9): all products admissible at d+e AND the polynomial identity is exact: True
+
+LEMMA (L): admissibility lifts to any larger degree.
+   400 random lifts d -> d' (the lifting block is delta_k = binom(d'-d,k), which is (x+(1-x))^(d'-d) = 1): True
+
+LEMMA (D): for gamma=3/5, d_i + d_i' <= d'_{i+i'} for all i,i' and R.
+   violations over R = 8..128: NONE
+
+=> the per-block capacity is EXACTLY preserved by doubling (Vandermonde);
+   the only obstruction to a doubling induction is redistributing the
+   ~j pairs (i,i') that land in row j.  That is combinatorial, not archimedean.
