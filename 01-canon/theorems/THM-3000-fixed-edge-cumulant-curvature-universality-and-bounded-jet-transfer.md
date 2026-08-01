@@ -1,7 +1,7 @@
 ---
 id: THM-3000
 title: "Fixed-edge cumulant-curvature universality and bounded-jet transfer"
-status: PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT
+status: PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
 source: codex-gmc-fixed-edge-curvature-2026-07-31 (reservation); klein-S428 (proof, mechanism, third-edge closed form, hostile)
 depends_on: []
 related:
@@ -9,16 +9,17 @@ related:
   - THM-2989-first-gap-wall-stripped-all-width-leading-edge-positivity
   - THM-2988-first-gap-self-curvature-negativity
   - THM-2994-first-gap-hurwitz-hermite-biehler-prefix
+  - MISTAKE-339
 script: 04-computation/gmc_fixed_edge_curvature_universality_and_bounded_jet_transfer_thm3000.py
 output: 05-knowledge/results/gmc_fixed_edge_curvature_universality_and_bounded_jet_transfer_thm3000.out
-script_sha256: 7afadec661c38d9c10428ef26a48a3d20a768dabfc19d4de7a5b7b393bba6464
-output_sha256: 19842edfe95d6c035ec4d9b27bc6713182bae2158b2799a5129618db18d0342a
+script_sha256: 6cd895b12fa53a2b772f2d03a3b014a3d0eea0f8e6ce9f4559ce1df086a578cc
+output_sha256: 4c5cb347fe3fc5c12cb4b0b3bd90e002e6311aff72945f30614ffd979871d92b
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3000 -- fixed-edge cumulant-curvature universality and bounded-jet transfer
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This is an abstract coefficient theorem about normalized Newton ratios of an
 arbitrary real polynomial.  It has **no** proved dependency on any first-gap,
@@ -81,8 +82,9 @@ exact coefficient
 
     [J_j] W_(j-1)^(k)=-(j-1)! binom(k-2,j-3).           (8)
 
-In the moment normalization (`m_j` bounded, equivalently `J_j asymp d^(1-j)`),
-weight `r` is order `d^(-r)` and (7) reads
+After scaling to `m_1=1`, if the relative moments
+`q_j=m_j/m_1^j` are bounded (equivalently `J_j=O(d^(1-j))`), weight `r` is
+order `d^(-r)` and (7) reads
 
     log(R_k/R_(k-1))=(3x^2-2z-1)d^(-2)+O_k(d^(-3)).     (9)
 
@@ -102,9 +104,10 @@ root measure (`kappa_2` variance, `kappa_3` third central moment).  Then
 Hence the universal curvature is **positive iff `3kappa_2^2>2kappa_1kappa_3`**.
 Consequences, all sharp:
 
-- equal roots give `kappa_2=kappa_3=0`: the curvature vanishes identically, so
-  the second-order test is blind exactly on the degenerate point (this is the
-  boundary that THM-2988's self-curvature negativity probes from the inside);
+- equal roots give `kappa_2=kappa_3=0`, hence one exact zero of the curvature
+  (the boundary that THM-2988's self-curvature negativity probes from the
+  inside); globally the zero set is the full surface in `(10)`, not just this
+  point;
 - any symmetric root measure has `kappa_3=0` and curvature
   `3kappa_2^2/kappa_1^4>=0`, with equality only at equal roots.  This is the
   precise sense in which the certificate is "Gaussian": a Gaussian root profile
@@ -140,9 +143,30 @@ a **cubic** in `k` with `Delta^3=-3`; and `Delta^3[2binom(k,3)]=2`.  Therefore
     -Delta^3 log(k!e_k)|_(d^(-2))=3m_2^2-2m_3,
 
 with every quartic and quadratic `k`-dependence cancelling inside (11).  This
-is the whole content of universality: a quartic-in-`k` term and a
+is the weight-two content of universality: a quartic-in-`k` term and a
 squared-quadratic-in-`k` term differ by a cubic, and `Delta^3` of a cubic is a
-constant.  At weight `r` the same bookkeeping leaves `k`-degree `2r-2-r=r-2`.
+constant.
+
+Here is the all-order argument. Scale to `m_1=1` and put
+`A_k=k!e_k/d^k`. View its set-partition formula as a labelled hard-core
+polymer gas: a non-singleton block `B` is a polymer of excess `|B|-1`, while
+unused labels are singleton blocks. The coefficient of `d^(-r)` has total
+polymer excess `sum_B(|B|-1)=r`. The standard Mayer expansion of `log A_k`
+retains only clusters whose polymer-intersection graph is connected. For such
+a cluster, adjoining each polymer along an intersection shows that its union
+has at most `1+sum_B(|B|-1)=r+1` labels. Hence its contribution is a polynomial
+in `k` of degree at most `r+1`. The single polymer of size `r+1` contributes
+
+    (-1)^r r! binom(k,r+1) q_(r+1),
+
+and no other term contains `q_(r+1)`. Hence the degree is exactly `r+1` in the
+formal moment ring. The falling-factorial term has degree at most `r+1` and
+contains no `q_(r+1)`, so it cannot cancel this top-moment coefficient.
+Applying `-Delta^3` at `k-2` gives exact degree `r-2`. Since
+`Delta^3 binom(k,r+1)=binom(k,r-2)`, and
+`q_j/d^(j-1)=(-1)^(j-1)J_j`, the same calculation gives `(8)` for every `j`.
+This proves the all-order degree and first-occurrence statements; the finite
+symbolic checks are corroboration, not their proof.
 
 ## 5. Exact closed forms (no asymptotics)
 
@@ -204,13 +228,17 @@ the remaining coefficients are free.  By (12) and (14),
 **Consequence.**  Uniform boundedness of the normalized log jets is *not* a
 technical convenience: without it the second-edge certificate does not transfer
 to the third edge, and the two edges can have opposite signs at every width.
-The sharp hypothesis is **graded, not uniform**:
+The sharp higher-jet hypothesis is **graded, not uniform**:
 
-    m_j/m_1^j=o(d^(j-3))   for 3<=j<=k+1                (16)
+    m_j/m_1^j=o(d^(j-3))   for 4<=j<=k+1.               (16)
 
-suffices for (9) to determine the sign of edge `k`, by (8); uniform boundedness
-is the case `o(1)`, and `j=4` with `w asymp d` shows (16) is attained.  The
-alternating signs in (8) mean the failure direction alternates with `j`.
+Together with bounded `x,z` and curvature separated from zero, `(16)` suffices
+for `(9)` to determine the sign of edge `k`, by `(8)`. Jet `j=3` belongs to the
+leading curvature and is not a remainder hypothesis. Uniform boundedness of
+all relative moments is a stronger sufficient special case, because
+`O(1)=o(d^(j-3))` for every `j>=4`; the `j=4` hostile with `w asymp d` shows
+the first threshold is attained. The alternating signs in `(8)` mean the
+failure direction alternates with `j`.
 
 ## 7. CONDITIONAL transfer to the first-gap family
 
@@ -225,28 +253,34 @@ for every `M>=43`, and on that box `3x^2-2z-1>=923/10000`.  By section 2, the
 **same** box gives the same positive leading curvature at **every** fixed edge
 `k>=2`.  What is missing per edge is only the jet invoice (16).
 
-For `k=3` the invoice is a single one-sided bound.  By (15), `[w]G_3>0` on (17),
-so `G_3>0` for all `w` above the threshold `-G_3|_(w=0)/(6(d-x)^3(d-2)^2)`.
-Minimising over the box (17):
+For `k=3` the invoice is a single one-sided bound. By `(15)`, `[w]G_3>0` on
+`(17)`, and uniformly on that compact box
 
-    d=701:    third edge positive whenever w>=-7.4613...
-    d=1000:   ...                              w>=-12.063...
-    d=5000:   ...                              w>=-73.602...
-    d=10^5:   ...                              w>=-1535.02...
+    G_3/d^6=(3x^2-2z-1)+6w/d+O((1+|w|/d)/d).            (18)
 
-matching the asymptotic threshold `-(1/6)(3x^2-2z-1)d`, i.e.
-`-(923/60000)d` on the box.  In jet form, using `w=-d^3 ell4/u^4`, the invoice is
+Consequently `w=o(d)` suffices. More generally, the sharp uniform asymptotic
+condition is
 
-    ell4 <= (923/60000) u^4/d^2,                        (18)
+    liminf w/d > -923/60000,                            (19)
 
-equivalently `p_4 >= -(923/60000)u^4/d^2` for the fourth power sum of the
-wall-stripped core.  For the first-gap family THM-2997 (24) gives
-`u/M^2->131/12`, `d/M->62/3`, so the right-hand side of (18) grows like
-`(923/60000)(131/12)^4(3/62)^2 M^6 = 0.511...M^6`, while any core whose roots
-have modulus `O(M)` has `|p_4|=O(dM^4)=O(M^5)`.
+or, using `w=-d^3 ell4/u^4`,
+
+    limsup d^2 ell4/u^4 < 923/60000.
+
+A convenient strict sufficient form is
+`ell4 <= (923/60000-epsilon)u^4/d^2` eventually for some `epsilon>0`.
+The strict margin is essential; the former finite threshold table and its
+non-strict boundary were false and are recorded in MISTAKE-339.
+
+For the first-gap family THM-2997 (24) gives `u/M^2->131/12` and
+`d/M->62/3`. Thus the scale on the right is asymptotic to `0.511...M^6`,
+while any core whose roots have modulus `O(M)` has
+`|p_4|=O(dM^4)=O(M^5)`. Equivalently
+`d^2|p_4|/u^4=O(M^(-1))`, which clears `(19)` by a factor of `M` regardless
+of the sign of `p_4`.
 
 **So the third-edge invoice for the first-gap family is not a delicate exact
-computation: a crude `|p_4|=O(M^5)` bound clears (18) by a factor of `M`.**
+sign computation: a crude `|p_4|=O(M^5)` bound suffices asymptotically.**
 The precise obligation handed to the resultant lane is therefore:
 
 > supply the fourth reduced resultant log-jet numerator `P_4` and the wall's
@@ -274,7 +308,27 @@ Macaulay/resultant recomputation by a per-edge scalar jet bound.
 - Nothing here supplies THM-2842's missing radial-variance multipliers, and
   nothing here is a moment decoder; MISTAKE-211 still applies.
 
-## 9. Reproduction
+## 9. Independent hostile audit
+
+The independent audit rederived the connected-partition proof above, checked
+the conversion between raw moments and normalized log jets, and replayed both
+exact closed forms. It found and repaired two pre-promotion boundary defects.
+First, `(16)` formerly started at `j=3`, although `J_3` is part of `W_2`; the
+remainder condition starts at `j=4`. Second, the former finite box-threshold
+table was not a safe uniform bound. At the exact corner
+
+    d=701, x=129/100, z=39/20, w=-149/20,
+
+the old claim applied (`-7.45>=-7.4613`) but the exact numerator is
+
+    G_3=-114191274399994230172453/10000000000<0.
+
+The repaired strict asymptotic statement `(18)--(19)` survives and is exactly
+what the first-gap `O(M^5)` argument needs. The audit also checked the hostile
+family's top coefficients directly and confirmed that it inhabits the stated
+arbitrary-real-polynomial universe; it makes no real-rootedness claim.
+
+## 10. Reproduction
 
     python3 04-computation/gmc_fixed_edge_curvature_universality_and_bounded_jet_transfer_thm3000.py
 

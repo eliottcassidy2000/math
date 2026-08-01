@@ -9,6 +9,38 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-339 (2026-08-01, pre-promotion THM-3000/3003 audit) -- the leading third jet was charged as a remainder and an asymptotic threshold was reported as an exact finite bound
+
+- **What was assumed:** the first THM-3000 candidate imposed
+  `m_j/m_1^j=o(d^(j-3))` starting at `j=3`, described uniform boundedness as
+  its `o(1)` case, and promoted a decimal finite-width threshold for the third
+  edge as though it were uniform on the whole `(x,z)` box. THM-3003 then
+  translated that invoice to the spread exponent
+  `kappa=o(d^(1-3/(k+1)))` and called `2/5` the fourth-edge exponent.
+- **Minimal witness / first failed implication:** `J_3` is part of the leading
+  curvature `3J_2^2-2J_3-d^(-2)`, so it is not a remainder jet. At the exact
+  box point
+  `(d,x,z,w)=(701,129/100,39/20,-149/20)`, the advertised decimal condition
+  applies, but the exact third-edge numerator is
+  `-114191274399994230172453/10000000000<0`. Downstream, for edge `k=4` the
+  old spread claim permits `kappa=d^(3/10)`, yet
+  `q_4<=kappa^4=d^(6/5)` does not imply the required `q_4=o(d)`.
+- **Exact repair / strongest survivor:** the graded remainder condition starts
+  at `j=4`. Uniformly on curvature at least `923/10000`, the exact third-edge
+  formula gives
+  `G_3/d^6=C+6w/d+O((1+|w|/d)/d)`, so the safe boundary is the strict
+  `liminf w/d>-923/60000`; in particular `w=o(d)` suffices. A labelled-polymer
+  cluster expansion proves the all-order degree and first-occurrence law, so
+  `q_j=o(d^(j-3))` for `4<=j<=k+1` is correct. Under
+  `|q_j|<=kappa^j`, the binding exponent is always `j=4`, hence the single
+  sufficient condition is `kappa=o(d^(1/4))` for **every fixed edge**.
+- **Rule:** separate jets already present in the leading invariant from true
+  remainder jets. Never turn a leading-order asymptotic threshold into a
+  finite non-strict bound without an exact monotone remainder estimate. When
+  collapsing a family of exponent inequalities to one spread exponent, take
+  the minimum over the actual jet range rather than substituting only its
+  largest index.
+
 ## MISTAKE-338 (2026-07-30, pre-promotion THM-2980 audit) -- a positive-ray cutoff omitted zero and negative suffix rays
 
 - **What was assumed:** the first THM-2980 candidate enumerated only suffix
