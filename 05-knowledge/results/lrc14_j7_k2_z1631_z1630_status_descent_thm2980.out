@@ -1,0 +1,13 @@
+LRC14 projected k=2 exact z1631/z1630 singleton descent
+referee_source_sha256=8200ba7c4bb40db669aa9b830cdbef0707b6349412e9f66ee26a51cc05018574
+base_source_sha256=f1b4ee77b3749b52be5e67a3b733282b2f1ccb8c70197240af5a820c7a3786c8
+base_output_sha256=e98282c6266f474378ddeb725b18f7d2542b82e58ca5b6a6512f8a7600a39148
+inherited_cap=1641;atlas_gap=1632..1641 empty;boundary_rows=z1631:1,z1630:1
+closure_ledger=scalar:2;crude:0;status:1;status_survivors:1;exact_status_certificates:1;literal_packets:1;projected_kills:1
+CASE;z1=1631;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=657/3196760;first_d=1680;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;divisors=59;trials=557845;counts=(1, 0, 0, 1);stage_sha256=('20821d5f0aca13b9c49ead7fa072d5cab9903e651cd3c32ac1083653732907dd', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', 'fcfe0ac8275fafde0a745063210af4348e303af9647560962eaa8ea60b59d24a');exact_status_certificates=0;cells=4196;packets=1;kills=1;minimum_margin=10555/21203;maximum_prefix_cells=1;direct_mass=1/1;state_sha256=f0f599b6f9d66db9722b65b83aa469c572b0669d1a03212c6d0e94b47af7eb19;conclusion=EMPTY
+CASE;z1=1630;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=751/3354540;first_d=1176;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;divisors=59;trials=557845;counts=(1, 0, 1, 0);stage_sha256=('c79449b4a9e2f0f63180d71a556d4a678981af46307727bb6692f46ca98b1cd9', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', 'ceef3adde664e209d46dc760c8d6196b429bc501401428d366e7e66b58f1df3d', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d');exact_status_certificates=1;cells=0;packets=0;kills=0;minimum_margin=NONE;maximum_prefix_cells=0;direct_mass=NONE;state_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;conclusion=EMPTY
+consequence=projected k=2 first drift label z1<=1629
+scope_boundary=finite-exact THM-2980 input only;full reserved theorem and LRC(14) remain open
+profile_sha256=ac4dca9bc74e2a860c39a0be8cf402c131f47868d189fa7915727c0193aa5367
+semantic_sha256=455f5935c9e83011ba1e9eae34708e92ec4114ad9e919a198b0a572f19bc92ca
+all_exact_controls=PASS

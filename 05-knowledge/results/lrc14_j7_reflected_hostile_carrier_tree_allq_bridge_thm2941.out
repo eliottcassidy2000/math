@@ -1,0 +1,41 @@
+LRC14 hostile reflected ray all-Q carrier-averaged K6 spanning-tree bridge
+carrier_engine_sha256=5d25a955fe184d6c1a3d8b632b4bbf901dc996ee46ad67c5748836fcc7134404
+local_pair_referee_sha256=173b0edc01159be5ae7ec8f2c6a0d7d36bae347c67c8d1592c1f0976af6c1fb5
+dilation_referee_sha256=207131cb3e8d35902c626415ffa2edd3bf51e50e1665291cc45b6fddd5bf44c3
+body=(1, 2, 4, 9, 11, 12);L=5544;levels=(2Q,Q,Q,Q,Q,2Q);safe_cells=2260;carrier_mass=565/1386
+source_to_target=pointwise pair overlap lower bounds w_ij average to omega_ij;carrier omega retains phase occupancy lost by translation-free minima
+hostile_local_behavior=all pointwise analytic w_ij weights vanish;this is NO_CERTIFICATE,not survival
+forest_inequality=for active S and forest T,|E(T[S])|<=|S|-1;subtract every tree edge pointwise
+Cayley_ledger=1296 labelled K6 trees;5 edges each;every edge occurs 432 times;tree average=all-pair total/3;forest_subset_checks=82944
+tree_tariff=1283/174096;identity=5*(35/2976)-1/39=(9/2)*tariff
+unequal_graph=complete multipartite;connected iff level word nonconstant;minimum-to-higher double-star supplies 5 unequal edges
+label_tax=optimized_max=11/42;unique_witness=(Fraction(11, 42), 44, 168, (1, 2, 3, 4, 6, 12), 32, ((0, 5), (1, 5), (2, 5), (3, 5), (4, 5)), (5,), (0, 1, 2, 3, 4));rows=186186;digest=7aa315a4785c36d78b2861944b051704e2d48a51766f1e0bc7002a49a1fcbfa1;second_ruler=(336, (1, 2, 3, 4, 6, 8))
+edge_floor=minimum_over_integer_gap_d>=1_is_G(1+(e_low-e_high)/L);joint_tree_digest=b735d5de7b718d346b7a218c0499aba45cda7ea24e02e1a635dabb5aded502b0;hostile_bruteforce_tree_checks=2592
+joint_floor_minimum=(Fraction(142918133, 1987853616), Fraction(-11, 42), Fraction(44726706360, 142918133), Fraction(-29794139316, 1857935729), Fraction(551653043364, 1857935729), (1, 2, 3, 4, 6, 12), 31, ((4, 5, Fraction(7, 432), -6), (3, 5, Fraction(5, 336), -8), (2, 5, Fraction(169, 11872), -9), (1, 5, Fraction(361, 26544), -10), (0, 5, Fraction(1369, 105504), -11)));unique_count=1;selected_tax_maximum=(Fraction(11, 42), (1, 2, 3, 4, 6, 12), 32, ((5, 4, Fraction(4, 203), 6), (5, 3, Fraction(3, 154), 8), (5, 2, Fraction(8, 413), 9), (5, 1, Fraction(12, 623), 10), (5, 0, Fraction(24, 1253), 11)))
+joint_slope_maximum=(Fraction(44726706360, 142918133), Fraction(142918133, 1987853616), Fraction(-11, 42), Fraction(44726706360, 142918133), Fraction(-29794139316, 1857935729), Fraction(551653043364, 1857935729), (1, 2, 3, 4, 6, 12), 31, ((4, 5, Fraction(7, 432), -6), (3, 5, Fraction(5, 336), -8), (2, 5, Fraction(169, 11872), -9), (1, 5, Fraction(361, 26544), -10), (0, 5, Fraction(1369, 105504), -11)));unique_count=1
+joint_D1_maximum=(Fraction(551653043364, 1857935729), Fraction(142918133, 1987853616), Fraction(-11, 42), Fraction(44726706360, 142918133), Fraction(-29794139316, 1857935729), Fraction(551653043364, 1857935729), (1, 2, 3, 4, 6, 12), 31, ((4, 5, Fraction(7, 432), -6), (3, 5, Fraction(5, 336), -8), (2, 5, Fraction(169, 11872), -9), (1, 5, Fraction(361, 26544), -10), (0, 5, Fraction(1369, 105504), -11)));unique_count=1
+coarse_double_star_cone=m>(13392/35)D+65224/3185;clean=m>=383D+21;uncertified_wedge=m<=383D+20;partition_checks=4096;digest=37e245a0bf09fa41a0fc7db55b3f5678cb7a580451731c47aaca433912cccb22
+joint_tree_cone=all slopes<313 and all D=1 thresholds<297;clean m>=313D-16;uncertified_wedge=m<=313D-17
+gap_floor=g*(d)=(2304d-935)/[672(168d-11)];max_label_delta=11/168;gap_constant=330328/17797;digest=3432886ad2b7fe1a77fb41dbd089fa4fd7a2974d0c43684e02e0b7efc487c996
+gap_tail=R(D)=3024D(168D-11)/(2304D-935)+330328/17797;D2_excess_over_442=7302253542/65368381;margin_to_112=19005130/65368381
+final_tree_cone=D=1:m>=297;D>=2:m>=221D+112;uncertified_wedge=D=1:m<=296,D>=2:m<=221D+111
+positive_tariff_control=levels=(10000, 10000, 10001, 10001, 10002, 10002);tree=((0, 2), (0, 3), (0, 4), (0, 5), (1, 2));tariff=103/140000
+addressed_word=tree=((0, 3), (0, 4), (1, 3), (2, 4), (4, 5));active_sets=((2,), (2, 4), (0, 2, 4), (2, 4), (2, 4, 5), (4, 5), (5,), (1,), (1, 3), (0, 1, 3), (0, 3), (0,), (5,));active_set_digest=83e295e11395a23e20a0961773eaa63886ede3f2b0984d761e74375878ed4c5c
+symbolic_endpoint_digest=f77f43a29782f354a37f07056f540f67a59babf658ba51abf24f7a591cee4e15;closed_mass_limit=9505/22176
+addressed_bridge=fixed tree spans every active segment,so its overlap telescopes exactly to singleton_sum-union>5/14
+large_Q_floor=fixed carrier tree weight>5/(14*2260);epsilon_Q<=epsilon_1/Q
+epsilon_1=2852911661906924/3401756160137150361;(14|J|/5)epsilon_1=2579032142363859296/485965165733878623;analytic_tail=Q>=6
+finite_prefix=1<=Q<=5;rows=5;all_closed;minimum_margin=956812421768354854111/11531953382864939723790@Q=1
+FINITE;Q=1;average_union=111027801026258693409/183046879093094281330;tree_weight_lower=138069113186031332353/1647421911837848531970;epsilon=2852911661906924/3401756160137150361;margin=956812421768354854111/11531953382864939723790
+FINITE;Q=2;average_union=534237341135025129008263/881206912570602930489250;tree_weight_lower=221452120382478491433217/2643620737711808791467750;epsilon=2287393981334301022/5458803883180726118075;margin=1542410577080626159567939/18505345163982661540274250
+FINITE;Q=3;average_union=6090252156318817007836331/10047315105983949262805150;tree_weight_lower=2524538289725596991708449/30141945317951847788415450;epsilon=17382731333807451312/62240005081316499858085;margin=17612840568857571682011463/210993617225662934518908150
+FINITE;Q=4;average_union=228219720709234955205052/376533336021000415743655;tree_weight_lower=283805998620173367424148/3388800024189003741692895;epsilon=14655547408319892826/69975221738416006465635;margin=1981673759769793128301022/23721600169323026191850265
+FINITE;Q=5;average_union=130620252928487113013678919/215517284416445190713020630;tree_weight_lower=54144955607825106922653581/646551853249335572139061890;epsilon=223675447357871925844/1335062823818687022116057;margin=378256429488232562629963907/4525862972745349004973433230
+ADDRESS_CONTROL;Q=1;union=16838563109346/39273720743335;pair_total=1390430706455000464/2429825828669393115;fixed_tree=((0, 3), (0, 4), (1, 3), (2, 4), (4, 5));fixed_weight=1042960586177285656/2429825828669393115;best_tree=((0, 3), (0, 4), (1, 3), (2, 4), (4, 5));best_weight=1042960586177285656/2429825828669393115;carrier_weight=260740146544321414/1372851593198207109975
+ADDRESS_CONTROL;Q=5;union=10540507701263430/24590412062289151;pair_total=109001666203166017546840/190723260545526717445151;fixed_tree=((0, 3), (0, 4), (1, 3), (2, 4), (4, 5));fixed_weight=81756845831424303741820/190723260545526717445151;best_tree=((0, 3), (0, 4), (1, 3), (2, 4), (4, 5));best_weight=81756845831424303741820/190723260545526717445151;carrier_weight=4087842291571215187091/21551728441644519071302063
+ADDRESS_CONTROL;Q=6;union=21858214814389206/50994511438804165;pair_total=13020954123001416178476/22784317114150837639501;fixed_tree=((0, 3), (0, 4), (1, 3), (2, 4), (4, 5));fixed_weight=48831791548009079994126/113921585570754188197505;best_tree=((0, 3), (0, 4), (1, 3), (2, 4), (4, 5));best_weight=48831791548009079994126/113921585570754188197505;carrier_weight=24415895774004539997063/128731391694952232663180650
+ADDRESS_CONTROL;Q=64;union=16649773215322585536/38845196185903713905;pair_total=434184894188021605830963584/759924906595932808672979505;fixed_tree=((0, 3), (0, 4), (1, 3), (2, 4), (4, 5));fixed_weight=325656207757135504381297856/759924906595932808672979505;best_tree=((0, 3), (0, 4), (1, 3), (2, 4), (4, 5));best_weight=325656207757135504381297856/759924906595932808672979505;carrier_weight=81414051939283876095324464/429357572226702036900233420325
+consequence=carrier-averaged spanning-tree criterion closes this hostile ray for every integer Q>=1
+scope_boundary=one dilation ray;not arbitrary reflected k1;criterion remains sufficient only
+semantic_sha256=08aa4a394b7eecdb567bd3896aee70dd8193da439ebfe7d0607b8069a3f31b01
+all_exact_controls=PASS

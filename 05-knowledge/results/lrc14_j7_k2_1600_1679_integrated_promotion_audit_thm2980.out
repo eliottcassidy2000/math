@@ -1,0 +1,17 @@
+LRC14 projected k=2 integrated promotion audit for z1=1600..1679
+referee_source_sha256=56a074db49eb30a5579522d34bf21fd434680ae2212843d49bf959931ae45bcd
+atlas_engine_sha256=a09b13e994ad6ab35e3324bd336e773b435b07859e6a3c924b84ec77f3e2aced
+component_manifest_sha256=5fcbe3af0d01135f528eede15a1db7a9c5611c2b4ce47c8b7956c980f839c0da;component_files=12
+universe=six_body_roots:3003;body_labels:1..14;ordered distinct later nonaligned labels;scalar necessary condition
+monolithic_atlas_band=1600..1679;candidate_rows=240240;survivors=68;height_counts=((1604, 1), (1608, 2), (1612, 19), (1616, 1), (1618, 1), (1620, 8), (1625, 1), (1630, 1), (1631, 1), (1642, 1), (1645, 1), (1650, 12), (1656, 5), (1660, 1), (1665, 1), (1668, 9), (1670, 2), (1672, 1));high_tail_rows=28
+closure_partition=upper_thm2941:19;reserved_band_components:49;component_case_counts=(3, 10, 1, 5, 12, 2, 2, 1, 8, 2, 19, 3);conclusions=(('EMPTY', 40), ('LITERAL-CLOSURE-BELOW', 1), ('LITERAL-TORSION-EMPTY', 1), ('SCALAR-EMPTY', 22), ('SECTION-CLOSURE-BELOW', 4))
+set_join=monolithic_atlas:68;component_cases:68;duplicates:0;missing:0;extra:0;upper_lower_overlap:0
+handoff_caps=(1668, 1660, 1656, 1655, 1649, 1641, 1629, 1624, 1619, 1615, 1611, 1599);terminal_cap=1599
+hostile_audit=positive and zero-high scalar controls remain typed inside their component transcripts;only certified EMPTY/SCALAR-EMPTY/LITERAL-CLOSURE-BELOW/LITERAL-TORSION-EMPTY/SECTION-CLOSURE-BELOW CASE records enter the set join
+semantic_boundary=finite-exact projected k=2 scalar necessary sector only;does not close z1<=1599, other k sectors, the full six-body/seven-tail rung, or LRC(14)
+promotion_state=all reserved THM-2980 computational inputs frozen;canonical theorem promotion remains a separate proof-text audit
+atlas_profile_sha256=8ef2eead4eb68eeff33e38152c09648032e5652886594c71214c54bd55e39d83
+atlas_survivor_sha256=b94748a736bc0069efb3b091b112527ad42a146b7eb549bd15f101658d2249d6
+closure_key_sha256=ee1fdaf1e6b60daeaf7c4402b542db1f702bb559588e4e1c31a662cb77a73245
+semantic_sha256=857b3594c55da9401a575754bb6a5164e6fd1a54f0a7c1837c2a595fa6bf30ef
+all_exact_controls=PASS

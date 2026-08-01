@@ -1,0 +1,18 @@
+LRC14 reflected robust-edge-9 threshold-block uniform closure exact referee
+edge9_code_hist=(('DIIID', 18), ('IDIDI', 17));code_row_counts=(('DIIID', 259200), ('IDIDI', 181152))
+connected_projective_rows=433008;star5_cylinder_templates=4320;k5e_component_words=168;k5e_component_orbits=14;k5e_cylinder_templates=3024;total_certificate_rows=440352;certificate_kinds=(('low', 440352),)
+weakest_margin=15922411415672011132257703/273113614278530404150800600;code=IDIDI;category=(5, (3, 3, 2, 1, 1, 0), 1);body=(1, 2, 4, 9, 12, 13);nonrobust_edges=((1, 5), (2, 4), (2, 5), (3, 4), (3, 5), (4, 5));high_edges=((1, 5), (2, 4), (2, 5), (3, 4), (4, 5));levels=(12, 3, 2, 4, 9, 16);floor=409/6552;certificate_pair=(2, 3);reduced_channel=(1, 2);gcd=2;j=5966;lift=1;endpoint_radius=586;kind=low
+star5_cylinder_weakest=131561040198654363844061/1976502746201064220713840;k5e_cylinder_weakest=621859723357427846213739/9331732975464874113195364
+direct_control_scales=(1, 2, 5);per_body_weakest_controls=105
+component_law=each disconnected low component has a finite primitive bank while the isolated center contributes only worst-case level-one debt
+scale_law=dilating a connected component preserves its reduced channel and cell and decreases loss and component debt
+conclusion=all 35 robust-edge-9 bodies close for every assignment of positive reflected levels
+corollary=arbitrary-level body closure rises from 2386 to 2421;remaining_bodies=582
+scope=reflected THM-2941 residual family only;physical LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+edge10_sha256=74ec98098e8bf4a5c2f9bcf0a26b0088b28127cd536e6a472ad570c1e414aefa
+body_digest=59edd32058cdea9892b59ebac933ff2485785a6bfb7896b286a336f9da7699dc
+assignment_digest=4555266e6e3e5ac600fb2e9b207e15e7490ddd48171a44250b0ed1ab466d0285
+source_sha256=8540d1689ca002f284e9dcfb1730c382bb8eb6a79b62d09084f53707629ab621
+semantic_sha256=d8e5718d66156a8ddb51227d7bbb9f0474e2fcaea687e2662e029b0db580974a
+all_exact_controls=PASS

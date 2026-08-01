@@ -1,0 +1,14 @@
+LRC14 reflected D=1 signed equal-level pair complete closure exact referee
+upstream_base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31;adjacent_referee_sha256=e66cf9712535077a338c2ddb7970aa2e9cf1e59e135413cffcd34416eef61de8
+universe=bodies:3003;masks_per_body:62;total:186186;adjacent_closed:133200;signed_residual:52986
+signed_chart_candidates=750910;breakpoint_piece_endpoint_checks=2148769;selected_direct_formula_floor_checks=270240
+closed=52986;open=0;reason_counts=(('FLOOR_NOT_ABOVE_EPSILON', 0), ('NO_SIGNED_CHART', 0))
+positive_chart: A=L/7-r-d/2,C=d/2+d*h-a*H-(a+b)/14
+negative_chart: A=L/7-(L-r)+d/2,C=-d/2-d*h+a*(H+1)-(a+b)/14
+pair_formula=LQ(QA+C)/((LQ-a)(LQ-b));uniform_floor=A/L+min(0,C)/(LQ0)
+all_m_reduction=epsilon_m_termwise_decreasing;denominator<(LQ)^2;one_edge_Bonferroni
+D1_COMPLETE_CLOSURE=adjacent:133200+signed_difference:52986=186186;ALL integers m>=1
+weakest_closed_margin=765484673861/12987405485040;E=(1, 2, 3, 4, 6, 8);mask=58;epsilon=2573628208/270570947605;floor=23/336;pair=(6, 8);Q0=1;j=180;chart=(1, Fraction(23, 1), Fraction(0, 1), 1, 3)
+source_sha256=7650fe26c0047aa1c667b5be4fd0345eae556a647393d537cbfaefe56e0a09b2
+semantic_sha256=6aedecdb0b663e357ee573b2937bea4d12797a0d9020215684270b9c1b20577e
+all_exact_controls=PASS

@@ -1,0 +1,13 @@
+LRC14 projected k=2 exact z1618/z1616 singleton descent
+referee_source_sha256=3d8a0a3daa4775826beeee7d98cd26c8f3483e410239274c4f6d41c4d82faf8a
+base_source_sha256=eef6a5c0e7e988783357460c8f4144f3ce3a1a4e0cd7a52b949c6575661ce1e8
+base_output_sha256=bb4e5df57439de20b40b72481257a20e9ebacd278d42a3a25b947b8d8f39504b
+inherited_cap=1619;atlas_gaps=1619,1617 empty;boundary_rows=z1618:1,z1616:1
+closure_ledger=scalar:8;crude:0;status:5;status_survivors:3;exact_status_certificates:5;literal_packets:3;projected_kills:3
+CASE;z1=1618;E=2,6,8,10,12,14;h=363/980;r=36;L=11760;lower=363/89180;delta1=764/1387435;first_d=5880;ray_sha256=68608cea42c53a4b9bbb5d24fb488e0f6f3fa66976dad962a045791619ff0c99;divisors=59;trials=557845;counts=(3, 0, 0, 3);stage_sha256=('1e6e51507d7ce4bc7f29db2238ef3366896cf3c6b739a22908e0f6a45205ce68', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', '1d826a3626f89c0213d036c0a4e92b701e40a27ee73dadd46e61a03b115d615d');exact_status_certificates=0;cells=4356;packets=3;kills=3;minimum_margin=1296/5551;maximum_prefix_cells=5;direct_mass=1/1;state_sha256=2304329e69ea925fc4caba05bd54079fcda4e42da3b6c4804309920254a985be;conclusion=EMPTY
+CASE;z1=1616;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=69/277144;first_d=735;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;divisors=59;trials=557845;counts=(5, 0, 5, 0);stage_sha256=('7e71ae3d9ae39fe728ee893dfc1c882d3670f0ba0b56a54586d1e608b976546f', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', '4a054b713a2122541924100dfa12c76a482adac74db2948a52e8448c2eac9d96', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d');exact_status_certificates=5;cells=0;packets=0;kills=0;minimum_margin=NONE;maximum_prefix_cells=0;direct_mass=NONE;state_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;conclusion=EMPTY
+consequence=projected k=2 first drift label z1<=1615
+scope_boundary=finite-exact THM-2980 input only;full reserved theorem and LRC(14) remain open
+profile_sha256=555fe793a7505a96bc6efa4fbb6798e405d3faa83f564c6f0608600d7af80793
+semantic_sha256=889fbb401744fc4ec809e2de5e283b708610053b31824986833ab1b8952e7e67
+all_exact_controls=PASS

@@ -1,0 +1,11 @@
+LRC14 projected k=2 exact z1625 forced-high closure
+referee_source_sha256=ec98feabf60fe138df56647fc436ddec54b3f36b0704043c46af21e648e43935
+base_source_sha256=8200ba7c4bb40db669aa9b830cdbef0707b6349412e9f66ee26a51cc05018574
+base_output_sha256=ebed197453c407e38fd3f07cafd09c4addf868866759234ee6d25afbad6486eb
+inherited_cap=1629;atlas_gap=1626..1629 empty;boundary_rows=z1625:1
+CASE;z1=1625;E=1,2,10,12,13,14;h=2629/7644;r=34;L=76440;high_floor=6625;delta1=27/44590;lower=2629/695604;required=1577/496860;two_high_gap=17490371/22881893580;exact_one_high_gap=142815671/572047339500;top_lows=(2340, 1836, 1750);best_high_d=490;best_high_value=239/766948;best_high_label=6708;amplitude_sha256=a7d70bcd7967fca11ac44641f52d7851296b2a58ed70226a732835ec16c22fff;conclusion=SCALAR-EMPTY
+consequence=projected k=2 first drift label z1<=1624
+scope_boundary=finite-exact THM-2980 input only;full reserved theorem and LRC(14) remain open
+profile_sha256=1f8244b6fca00ce97cd4fd99ce482d944e889c66f43ea634e05ba2f7b44ab72c
+semantic_sha256=863e9fd6fc6cd34e8658c8399f381558300c32e451ff433617e06eefc86dd07c
+all_exact_controls=PASS
