@@ -410,8 +410,10 @@ Lambda = 2G + D,      D = int_{1/sqrt2}^1 [K(k) - K'(k)] dk/k
 D      = 4 sum_{m>=1} Ti_2(e^{-pi m}) = 0.180626976197176342114173896235722280237...
 ```
 
-The `sech` form is geometrically convergent: `~40` terms give `100` digits,
-against the defining series' `~1/N` tail (the trap of addendum 1).
+Both tails are geometric in `e^{-pi} = 0.0432...`: the `D`-series (odd `n` only)
+gains `~2.7` digits per term, so `~37` terms give `100` digits, and the `sech`
+series `~74`. Contrast the defining series' `~1/N` tail (the trap of addendum 1):
+`N = 4000` there leaves `~1e-5`.
 
 ### (R2) Proof chain
 
@@ -515,23 +517,24 @@ TIER 1  targets Lambda, U, S(4).  size <= 2 over 18 simple atoms
         {1, pi, pi^2, pi^3, G, piG, K, K^2/pi, K^2/pi^2, pi^2/K^2, pi^3/K^2,
          KG/pi, zeta(3), log2, Ls, K^4/pi^3, sqrt2, sqrt2 pi^2}
         |c| <= 10^8, 10^12, 10^20;  300 dps, 190-digit tol   -> NO relation
-TIER 2  targets Lambda, S(4).  ALL 18424 size-3 subsets of the 49-atom pool
-        (powers of pi; G and G-products; K^j/pi^i and pi^i/K^j up to j=4;
-         log2, Ls and their squares/products with pi; zeta(3) and zeta(3)/pi,
-         zeta(3)/K; Gamma(1/3)^3/pi, Gamma(1/3)^6/pi^4; Gamma(1/8)Gamma(3/8)
-         and its square/pi; log Gamma(1/4), log pi)
+TIER 2  targets Lambda, S(4).  ALL 5456 size-3 subsets of a 33-atom core
+        (1, pi, pi^2, pi^3, G, piG, G/pi, K, K/pi, K^2/pi, K^2/pi^2, pi/K,
+         pi^2/K^2, pi^3/K^2, KG/pi, K^2G/pi^2, K^4/pi^3, pi^4/K^4, log2, Ls,
+         log2^2, Ls^2, pi log2, pi Ls, zeta(3), zeta(3)/pi, Gamma(1/3)^6/pi^4,
+         log Gamma(1/4), log pi, sqrt2, sqrt2 K^2/pi, sqrt2 pi^2, sqrt2 G)
         |c| <= 10^5;  210 dps, 135-digit tol                 -> NO relation
-TIER 3  target Lambda.  ALL 43071 pairs of the 294 products alpha*atom,
-        alpha in {1, sqrt2, 1/sqrt2, sqrt3, sqrt5, 2^{1/4}}
+TIER 3  target Lambda.  ALL 19110 pairs of the 196 products alpha*atom over the
+        49-atom pool (adds Gamma(1/8)Gamma(3/8) and its square/pi,
+        Gamma(1/3)^3/pi, zeta(3)/K, more K^j/pi^i, G-products, log products),
+        alpha in {1, sqrt2, sqrt3, 2^{1/4}}
         |c| <= 10^5;  210 dps, 135-digit tol                 -> NO relation
 ```
 
-(`S(4)` and `U` are exact rescalings of `Lambda` by
-`2 sqrt2 K/pi^2` and `5 pi^2/12 - 2(.)`, so tier 3 on `Lambda` covers them for any
-basis closed under those factors; tiers 1-2 scan all three targets directly.)
-An independent earlier pass with a 33-atom pool at `260` dps / `160`-digit
-tolerance, all `5456` size-3 subsets, `|c| <= 10^5`, likewise returned nothing for
-`Lambda` and for `S(4)`.
+(`S(4)` and `U` are exact rescalings of `Lambda` by `2 sqrt2 K/pi^2` and
+`5 pi^2/12 - 2(.)`, so tier 3 on `Lambda` covers them for any basis closed under
+those factors; tiers 1-2 scan the targets directly.) An independent earlier pass
+at `260` dps / `160`-digit tolerance over the same 33-atom core, all `5456`
+size-3 subsets, `|c| <= 10^5`, likewise returned nothing for `Lambda` and `S(4)`.
 
 **Does:** exclude a finite region for a genuinely new and better-posed target.
 **Does not:** prove `Lambda` has no closed form. Never quote it as one.
