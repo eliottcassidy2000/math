@@ -1,0 +1,25 @@
+/tmp/math-wt-coinC2/04-computation/appell_complete_monotonicity_hyp9078.py:26: RuntimeWarning: overflow encountered in cdouble_scalars
+  return sum(comb(n, j) * (-1) ** j * factorial(j) * y ** (n - j) for j in range(n + 1))
+/tmp/math-wt-coinC2/04-computation/appell_complete_monotonicity_hyp9078.py:26: RuntimeWarning: invalid value encountered in cdouble_scalars
+  return sum(comb(n, j) * (-1) ** j * factorial(j) * y ** (n - j) for j in range(n + 1))
+/tmp/math-wt-coinC2/04-computation/appell_complete_monotonicity_hyp9078.py:29: RuntimeWarning: invalid value encountered in multiply
+  return sum(q[k] * a[k] ** (-n - 1) * Psi(n, a[k] * z) for k in range(len(q)))
+Sanity: Phi_n for a SINGLE exponential is Psi_n (squarefree, truncated exp).
+   n=3: min root separation of Psi_n = 2.016409
+   n=4: min root separation of Psi_n = 1.777949
+   n=5: min root separation of Psi_n = 1.775241
+   n=6: min root separation of Psi_n = 1.676701
+   n=7: min root separation of Psi_n = 1.672534
+   n=8: min root separation of Psi_n = 1.617757
+
+Search: 2 exponentials, q=(1,q2)>0, a=(1,a2)>0.  4 real eqs, 4 real unknowns.
+   n=3: positive-weight multiple-root solutions found = 0
+   n=4: positive-weight multiple-root solutions found = 0
+   n=5: positive-weight multiple-root solutions found = 0
+   n=6: positive-weight multiple-root solutions found = 0
+   n=7: positive-weight multiple-root solutions found = 0
+
+Search: 3 exponentials, q=(1,q2,q3)>0, a=(1,a2,a3)>0 (underdetermined -> easier).
+   n=4: positive-weight multiple-root solutions found = 0
+   n=5: positive-weight multiple-root solutions found = 0
+   n=6: positive-weight multiple-root solutions found = 0
