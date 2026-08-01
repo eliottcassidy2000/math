@@ -8,17 +8,21 @@ edge8_dependency_source_sha256=bb01fa45050de8d7f54846a2d65edcaada36df85c81482f29
 edge8_dependency_semantic_sha256=f197d1a7f237526b03c3ca97a47fb48900d560d9a6bd75838140c74d0c59a04b
 residual_transitions=(element,residual_to_residual,residual_to_bank)=(('1', 561, 0), ('s', 61, 500), ('c', 58, 503), ('c2', 58, 503), ('sc', 25, 536), ('sc2', 245, 316))
 orbit_profile=((orbit_size,residual_count),orbit_count)=(((1, 0), 1), ((1, 1), 1), ((2, 0), 2), ((3, 0), 12), ((3, 1), 20), ((3, 2), 1), ((6, 0), 130), ((6, 1), 191), ((6, 2), 139), ((6, 3), 23))
+residual_complete_representative_multiplicity=((number_of_S3_elements_landing_in_robust_K6),body_count)=((0, 1), (2, 48), (3, 131), (4, 276), (5, 105))
+residual_orbit_complete_profile=((orbit_size,residual_count,distinct_robust_K6_members),orbit_count)=(((1, 1, 0), 1), ((3, 1, 1), 4), ((3, 1, 2), 16), ((3, 2, 1), 1), ((6, 1, 2), 1), ((6, 1, 3), 9), ((6, 1, 4), 76), ((6, 1, 5), 105), ((6, 2, 2), 4), ((6, 2, 3), 43), ((6, 2, 4), 92), ((6, 3, 2), 11), ((6, 3, 3), 12))
 point_orbits=(('boundary', (12, 13, 14)), ('harmonic', (1, 6, 11)), ('equianharmonic', (3, 9)), ('generic', (2, 4, 5, 7, 8, 10)))
 fixed_bodies=(body,robust_edges,point-orbit-description)=(((1, 6, 11, 12, 13, 14), 15, 'boundary+harmonic'), ((2, 4, 5, 7, 8, 10), 2, 'generic'))
 unique_trapped_orbit=((2,4,5,7,8,10),);this is the generic P1(F13) orbit
 c2_hard_body_orbits=(('H', (((1, 2, 3, 4, 6, 12), 0), ((1, 2, 3, 5, 11, 13), 15), ((1, 6, 7, 8, 9, 14), 9), ((1, 7, 9, 10, 11, 12), 15), ((3, 4, 5, 6, 11, 14), 15), ((6, 8, 9, 10, 11, 13), 15))), ('H2', (((1, 2, 3, 7, 11, 13), 15), ((1, 2, 6, 7, 9, 14), 0), ((1, 3, 4, 6, 8, 12), 0), ((1, 5, 9, 10, 11, 12), 15), ((3, 5, 6, 10, 11, 14), 15), ((4, 6, 8, 9, 11, 13), 15))), ('B', (((1, 2, 4, 6, 8, 12), 0), ((1, 2, 5, 7, 11, 13), 15), ((1, 2, 6, 7, 8, 14), 1), ((1, 5, 7, 10, 11, 12), 15), ((4, 5, 6, 10, 11, 14), 15), ((4, 6, 8, 10, 11, 13), 15))), ('E', (((1, 2, 3, 5, 7, 13), 15), ((1, 2, 7, 8, 9, 14), 9), ((2, 3, 4, 6, 8, 12), 0), ((3, 4, 5, 10, 11, 14), 15), ((4, 6, 8, 9, 10, 13), 15), ((5, 7, 9, 10, 11, 12), 15))))
-positive_signal=every nontrivial S3 body orbit meeting the 561 residual also meets the 2442-body uniform closure bank
+positive_signal=every nontrivial S3 body orbit meeting the 561 residual contains a robust-K6 representative with all 15 edges
+scheduling_implication=pulling a robust-K6 representative back gives the full K6 incidence graph, hence every star, two-star, and spanning-tree schedule;all physical edge weights must still be recomputed on the source body at one common cell
+margin_distortion_identity_checks=270270;M_E(a,b)-M_gE(ga,gb)=(D_gE-D_E)+u_gE(a)+u_gE(b)
 destroyed_data=integer label order and gaps;14*lcm(E);safe-cell ruler/address and owner;pair-overlap floor;singleton debt and exact margin;level word and physical packet Z(E,q)
 guardrail=the anharmonic action is not a symmetry of the robust predicate or of the reflected physical packet;no LRC closure follows
-needed_map=for each residual body and every C2-wedge level word, a one-way owner-labelled pullback of an exact certificate from a closed orbit representative preserving legal range, physical ownership, and every positive margin
+needed_map=for each residual body and every C2-wedge level word, a one-way common-cell weighted-certificate comparison controlling the exact scalar-plus-vertex-potential distortion;graph scheduling alone is already lossless
 body_digest=40419fbac9827f975c217f7e8dc517a929d8908d03c68977c153dd19136cf12a
 orbit_digest=d0df274a6d6a78ce771be6714247a96a73c8b90b580149ad9864aab9cb6968c1
-source_sha256=464d6befe3480fd4d18551842a5e7ca224eb112cf485f6755142c1ad9252147b
-semantic_sha256=a9b174728c0749b12a5194d428f4ffc47c0556025ae05690c48b76991f0fd112
+source_sha256=5173b47eea103083713361a95c787a50718f569df53b4d1d5b4792c43faa9d83
+semantic_sha256=6a11b642f35bf619271516da5897364f3db8bfd28bcfff98a7b04fbfd0b8b008
 normal_vs_python_O=BYTE_IDENTICAL
 all_exact_controls=PASS
