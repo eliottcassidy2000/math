@@ -1,0 +1,11 @@
+product basis size = 275; pairs = 37675
+
+=== pi*S(4) = 3.359470129130167158990022473022424065692
+   scanned 37675 pairs in 262s at dps=150, |coeff| <= 1e5, tol 1e-130
+   NEGATIVE: no Z-relation pi*S(4) = c1*A + c2*B over any PAIR from the
+   275-element product basis with |coeff| <= 1e5 at 150 digits.
+
+=== pi*S(5) = 3.320937262641017493336722965877474626326
+   scanned 37675 pairs in 281s at dps=150, |coeff| <= 1e5, tol 1e-130
+   NEGATIVE: no Z-relation pi*S(5) = c1*A + c2*B over any PAIR from the
+   275-element product basis with |coeff| <= 1e5 at 150 digits.

@@ -1,0 +1,129 @@
+==============================================================================
+mp.dps = 100
+==============================================================================
+
+(N0) PSLQ HARNESS CONTROLS (must pass before any relation result is quoted)
+  [PASS] POSITIVE control sqrt2 detected as algebraic   deg=2 rel=[2, 0, -1]
+  [PASS] POSITIVE control phi detected as algebraic   deg=2 rel=[1, 1, -1]
+  [PASS] POSITIVE control 2^(1/3) detected as algebraic   deg=3 rel=[2, 0, 0, -1]
+  [PASS] POSITIVE control 1+sqrt(3) detected as algebraic   deg=2 rel=[-2, -2, 1]
+  [PASS] NEGATIVE control pi NOT detected as algebraic
+  [PASS] NEGATIVE control e NOT detected as algebraic
+  [PASS] NEGATIVE control log2 NOT detected as algebraic
+  [PASS] NEGATIVE control e^2 NOT detected as algebraic
+  [PASS] NEGATIVE control Gamma(1/3) NOT detected as algebraic
+
+(N1) Lindelof ORDER of the two competing objects
+     order = limsup_{R->inf} log log M(R) / log R,  M(R)=max_{|t|=R}|F(t)|
+     The log log M / log R limit converges like 1/log R and is useless at
+     attainable R.  We instead test the two DEFINING growth laws directly:
+        Psi_g :  log M(R)/R   -> max_[0,1]|g| = 7   (order 1, finite type)
+        D     :  log M(R)/R   -> infinity, log M(R)/R^2 -> 1  (order 2)
+     Order 1 with finite type is exactly what (E2)+(E3) force; order 2 is
+     incompatible with being an E-function.
+
+      R      [Psi] logM/R      [D] logM/R       [D] logM/R^2
+       10     6.60961437002      9.7009331826     0.97009331826
+       20     6.76994353134     19.8156187238    0.990780936191
+       40     6.86759231834     39.8904571527    0.997261428819
+       80     6.92511922457     79.9365613041    0.999207016301
+
+     Sharp model: the max of |g| on [0,1] sits at the ENDPOINT u=0 with
+     g(0)=7, g'(0)=-5, so one-sided Laplace gives Psi_g(R) ~ e^{7R}/(5R):
+        R      log M(R) - 7R + log(5R)   (-> 0)
+       10          0.008166705588
+       20          0.004040812801
+       40          0.002010100105
+       80          0.001002512422
+  [PASS] Psi_g: log M(R) = 7R - log(5R) + o(1)  => ORDER 1, TYPE exactly 7   residual at R=80 is 0.0010025124
+  [PASS] Psi_g: the residual is DECREASING (asymptotic confirmed, not fitted)   |resid| 0.00816671 -> 0.00100251
+  [PASS] Psi_g: log M(R)/R -> 7 from below (type is finite: order <= 1)   measured 6.92511922457
+  [PASS] D: log M(R)/R^2 -> 1  => ORDER 2 (NOT an E-function)   measured 0.999207016301
+  [PASS] D: log M(R)/R grows without bound (doubles when R doubles)   ratio = 2.00390186
+
+(N2) the NONVANISHING form is FALSE over C (so algebraicity is the whole content)
+  [PASS] int_0^1 e^{2 pi i t} dt = 0 exactly   |I| = 6.16544e-106
+     degree-2 zeros: solve int_0^1 e^{a t^2 + b t} dt = 0 for b, at fixed a.
+     a=         1.0  b=(-1.0 + 5.980447289018471885576708767695294652354j)   |I|=6.089e-106
+     a=        -1.0  b=(1.0 + 6.618231563474704611910496122627523533937j)   |I|=6.139e-106
+     a=         2.0  b=(-2.0 + 5.706820294245798800205103671620160831093j)   |I|=5.915e-106
+     a=(0.0 + 1.0j)  b=(0.3177318391719765157304018277076280660912 + 5.267087563631907648994037828093069718886j)   |I|=7.31e-106
+  [PASS] degree-2 vanishing locus is NONEMPTY over C   4 zeros located to 70+ digits
+
+     STRUCTURE (exact).  For REAL a the located zeros all have Re(b) = -a.
+     Reason: put b = -a + i*beta and v = t - 1/2.  Then
+        int_0^1 e^{a t^2 + b t} dt = e^{-a/4 + i beta/2} * int_{-1/2}^{1/2} e^{a v^2} (cos(beta v) + i sin(beta v)) dv,
+     the sine part is odd and drops, so the integral vanishes exactly when
+        K_a(beta) := int_{-1/2}^{1/2} e^{a v^2} cos(beta v) dv = 0,
+     a REAL equation.  At a = 0, K_0(beta) = 2 sin(beta/2)/beta, first zero
+     beta = 2 pi -- Lindemann's case, recovered as the a -> 0 limit.
+  [PASS]   Re(b) = -a exactly for a=1.0   Re(b)+a = 0.0
+  [PASS]   Re(b) = -a exactly for a=-1.0   Re(b)+a = 0.0
+  [PASS]   Re(b) = -a exactly for a=2.0   Re(b)+a = 0.0
+  [PASS]   K_0 first zero = 2 pi to 80 digits   |beta - 2pi| = 5.738e-102
+     beta(a=1) = 5.98044728901847188557670876769529465235376872344257938568394
+
+     PSLQ-test the zeros' free parameter for algebraicity (must FAIL):
+  [PASS]   Im(b) at a=1.0: NO algebraic relation (deg<=6, ht<=1e8, dps=100, tol=1e-60)
+       Re(b) at a=1.0: algebraic, = -a as predicted  rel=[1, 1]
+  [PASS]   Im(b) at a=-1.0: NO algebraic relation (deg<=6, ht<=1e8, dps=100, tol=1e-60)
+       Re(b) at a=-1.0: algebraic, = -a as predicted  rel=[1, -1]
+  [PASS]   Im(b) at a=2.0: NO algebraic relation (deg<=6, ht<=1e8, dps=100, tol=1e-60)
+       Re(b) at a=2.0: algebraic, = -a as predicted  rel=[-2, -1]
+
+     PRECISION DISCIPLINE.  A first pass ran beta(a=1) in the LARGER box
+     (deg<=8, ht<=1e10) at dps=100 / tol=1e-60 and reported a degree-6 relation
+     with coefficients ~4.4e9.  That is a SPURIOUS hit: PSLQ on n numbers with
+     height-10^H coefficients needs working precision comfortably above n*H
+     digits, and 9 numbers x 10 digits = 90 > the 60 digits of tolerance used.
+     The controls above were run in the SMALLER box, so they did not cover it.
+     Re-run below at dps=300 / tol=1e-200, WITH the controls re-run in the SAME
+     box -- which is the only way the result means anything.
+     beta(a=1) to 200 digits =
+       5.9804472890184718855767087676952946523537687234425793856839400415948948386085616324059550992695366139795529053210556262718710971418980365489510078878001654823347924575506498817737277248105830293272394
+     residual |K_1(beta)| = 7.78933e-324
+     controls re-run in the SAME box (deg<=8, ht<=1e10, dps=320, tol=1e-200):
+  [PASS]     POSITIVE control sqrt2 still detected   deg=2
+  [PASS]     POSITIVE control 2^(1/5) still detected   deg=5
+  [PASS]     POSITIVE control phi still detected   deg=2
+  [PASS]     NEGATIVE control pi still rejected
+  [PASS]     NEGATIVE control e still rejected
+  [PASS]     NEGATIVE control Gamma(1/3) still rejected
+  [PASS]     NEGATIVE control log 2 still rejected
+  [PASS]     NEGATIVE control 2 pi still rejected
+  [PASS]   beta(a=1): NO algebraic relation at dps=320, tol=1e-200 (deg<=8, ht<=1e10) -- the dps=100 hit was spurious and does not survive
+     => the vanishing locus exists but its points look transcendental:
+        EVIDENCE (a census cannot prove transcendence), consistent with the
+        claim that no ALGEBRAIC Q lands on it.
+
+(N3) THM-3018 sec 4b Laplace growth for Psi_g -- the step that forbids
+     Psi_g from being a POLYNOMIAL (needed to convert Beukers into transcendence)
+     A = max|g| = 4.0 at u* = 1.0,  theta = -1.57079632679
+     u* = 1 is an ENDPOINT of [0,1], so the Laplace exponent is s^{-1}
+     (one-sided), not the interior-critical-point s^{-1/2}.
+       s      |Psi(s e^{i th})| * s * e^{-sA}    (-> 1/|g'(u*)|)
+        20    0.19721495952151
+        40    0.19666663257542
+        80    0.19639158482714
+       160    0.19625390196422
+       320    0.19618502804636
+     predicted limit 1/|g'(u*)| = 0.19611613513818
+  [PASS] |Psi(s e^{i th})| ~ e^{sA}/(|g'(u*)| s): normalised ratio stabilises   last ratio-of-ratios = 0.99964906
+  [PASS] and it converges to the predicted 1/|g'(u*)|   measured*|g'(u*)| = 1.000351286
+     => Psi_g grows EXPONENTIALLY on that ray, so it is not a polynomial,
+        and a fortiori not identically 1.  (This alone re-proves FC(2).)
+
+(N4) Phi_f is a DIVERGENT series (f = x^2, n=1: a_m = (2m)!, a_m/m! = (2m)!/m!)
+     Terms shrink then explode; the least term sits at m ~ 1/(4t) and the
+     series is asymptotic (Gevrey-1), never convergent.
+     t=0.1: least term at m=3 (predicted ~2), log|term_min|=-2.1202635, log|term_199|=672.37217
+  [PASS] terms eventually blow up at t=0.1 (radius of convergence 0)
+     t=0.01: least term at m=25 (predicted ~25), log|term_min|=-24.655093, log|term_899|=2321.9306
+  [PASS] terms eventually blow up at t=0.01 (radius of convergence 0)
+     t=0.001: least term at m=250 (predicted ~250), log|term_min|=-249.65359, log|term_3999|=7087.929
+  [PASS] terms eventually blow up at t=0.001 (radius of convergence 0)
+     A divergent asymptotic series is not entire; E-function-hood is impossible.
+
+==============================================================================
+ALL kps-S166 NUMERIC CHECKS PASSED (dps=100)
+==============================================================================

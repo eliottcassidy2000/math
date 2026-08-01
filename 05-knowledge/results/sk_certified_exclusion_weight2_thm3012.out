@@ -1,0 +1,9 @@
+weight-2 product basis: 64 elements
+  S(4)      : 0 hit(s)  (none)
+  pi*S(4)   : 0 hit(s)  (none)
+  pi^2*S(4) : 0 hit(s)  (none)
+  S(5)      : 0 hit(s)  (none)
+  pi*S(5)   : 0 hit(s)  (none)
+
+CONTROL: the same weight-2 machinery must NOT spuriously fire on pi*S(2)
+  pi*S(2) against weight-2 basis: 0 hit(s)  (expect 0 -- it is weight 1)
