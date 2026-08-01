@@ -1,0 +1,16 @@
+THM3034 ordered-quartic X1(14) diamond referee
+projection_Cplus_to_quartic=PASS
+quartic_to_E1_birational_map=PASS
+inverse_dense_chart=PASS
+rho_equals_translation_by_T_0_0=PASS
+T_order=3
+velu_E1_to_E0=PASS
+short_velu_models=PASS
+E1_invariants=c4:25,c6:-253,Delta:-28,j:-15625/28
+E0_invariants=c4:-215,c6:5291,Delta:-21952,j:9938375/21952
+diamond_units=[1, 3, 5, 9, 11, 13]
+diamond_mod_pm1=[(1, 13), (3, 11), (5, 9)]=C3
+THM2998_symmetric_origin_image=(9,-33)
+odd_flank=sheet_exchange; synchronized_groupoid_model=negation
+odd_flank_is_not_diamond_C2_or_Fricke=PASS
+all_exact_checks=PASS
