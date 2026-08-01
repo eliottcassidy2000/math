@@ -1,0 +1,16 @@
+n=2, deg<=3: 10 monomials, Gram <u,v>=L(uv) min eigenvalue 0.0252876  -> positive definite: True
+n=3, deg<=3: 20 monomials, Gram <u,v>=L(uv) min eigenvalue 0.0150431  -> positive definite: True
+
+CONSEQUENCE: for real f != 0, L(f^2) = <f,f> > 0, so no real f can
+satisfy even the m=2 condition.  The HYP-9076 censuses were vacuous.
+
+explicit real pair (g,h) in n=3, deg<=3 with the m=1,2 conditions:
+   L(g) = 8.882e-16   L(h) = -4.441e-15
+   <g,h> = 9.095e-13   <g,g>-<h,h> = 5.457e-12
+   so f = g + i h satisfies L(f) = L(f^2) = 0 while f != 0.
+
+=> The m <= 2 level is NON-EMPTY over C and empty over R for a
+trivial reason.  Any meaningful FC census must search COMPLEX f, i.e. pairs
+(g,h) already constrained to be L-mean-zero, orthogonal and equinormal, with
+the first real content at m = 3.  That is the structural reduction the n = 3,
+degree 3 case needs: not a bigger box, a different space.

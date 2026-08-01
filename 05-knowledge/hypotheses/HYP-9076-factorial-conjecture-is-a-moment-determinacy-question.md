@@ -11,7 +11,12 @@ status: >
   tail exp(-t^{1/d}), so the argument closes for deg f <= 2 in EVERY number of
   variables and fails from cubics on. Census: zero survivors among all small
   integer f of degree <= 2 in 2 and 3 variables with the first 3-4 moments
-  vanishing. Degree >= 3 untested and is the real regime.
+  vanishing -- but see section 6: ALL of those censuses are VACUOUS, because
+  L is positive definite and so L(f^2) > 0 for every real f != 0. The real
+  case of FC is trivial; the conjecture lives entirely over C, and the
+  structural reduction is to pairs (g,h) of real polynomials that are
+  L-mean-zero, ORTHOGONAL and EQUINORMAL in the Gram form <u,v> = L(uv),
+  with the first genuine content at m = 3.
 source: opus-2026-07-31-amm12592-writeup
 related:
   - THM-2922  # first-window SFC(4), Macaulay-Newton atlas
@@ -115,3 +120,50 @@ composition vector vanishes), so all our difficulty is in the integer box,
 whereas FC has no box and all its difficulty is in the determinacy. The two
 problems are complementary in exactly the way HYP-9075 sec 8 found for
 THM-2922's machinery.
+
+
+## 6. CORRECTION: the censuses were vacuous, and the real reduction
+
+`L(g) = int_{[0,inf)^n} g(x) e^{-(x_1+...+x_n)} dx` is a POSITIVE functional:
+`L(g) > 0` whenever `g >= 0`, `g != 0`. Hence for **real** `f`,
+
+```text
+L(f^2) = int f(x)^2 e^{-|x|} dx > 0    unless f = 0.
+```
+
+Verified directly: the Gram matrix `<u,v> = L(uv) = sum (alpha+beta)!` is
+positive definite (least eigenvalue `0.0253` at `n=2, deg<=3`; `0.0150` at
+`n=3, deg<=3`).
+
+**Every census in sections 3 and 4 imposed `m = 1..M` with `M >= 2` over
+INTEGER, hence real, coefficients. Their emptiness was therefore forced by
+positivity alone and carries NO information about FC.** They are marked
+vacuous. This includes the degree-3 runs and the `1953124`-vector sweep that
+were reported as substantial; they were not.
+
+### The reduction
+
+Write `f = g + i h` with `g, h` real. With `<u,v> := L(uv)`:
+
+```text
+L(f)   = 0  <=>  L(g) = 0  and  L(h) = 0
+L(f^2) = 0  <=>  <g,g> = <h,h>   and   <g,h> = 0
+L(f^3) = 0  <=>  L(g^3) = 3L(g h^2)   and   3L(g^2 h) = L(h^3)
+```
+
+So FC is a question of EUCLIDEAN GEOMETRY in `(R[x]_{<=d}, <,>_L)`: seek `g`
+orthogonal to `h`, of equal norm, both `L`-mean zero, satisfying in addition
+the cubic identities and their analogues at every `m`. The `m <= 2` level is
+just "an orthogonal equinormal mean-zero pair", which is trivially non-empty
+-- an explicit pair in `n = 3, deg <= 3` is produced by the referee, giving a
+nonzero `f` with `L(f) = L(f^2) = 0`.
+
+**Consequence for the n = 3, degree 3 problem.** The obstacle was never the
+size of the box. Searching real coefficient vectors answers a trivial
+question; the meaningful search space is the variety of orthogonal equinormal
+mean-zero PAIRS, on which `m = 1, 2` are already satisfied by construction and
+the first real conditions are the two cubic identities. That is the structural
+reduction, and it also explains why every census so far returned zero: they
+were all measuring positivity, not FC.
+
+Referee: `04-computation/fc_real_case_is_trivial_and_the_complex_reduction.py`.
