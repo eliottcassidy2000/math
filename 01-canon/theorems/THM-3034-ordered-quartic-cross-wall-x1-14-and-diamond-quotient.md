@@ -2,7 +2,7 @@
 id: THM-3034
 title: "Ordered quartic cross-wall X1(14) identification and diamond quotient"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The positive ordered quartic cross-wall is explicitly Q-isomorphic to
   X_1(14); its even flank cycle is translation by the visible rational
   three-torsion point, and its normalized quotient is the natural degree-three
@@ -18,14 +18,14 @@ related:
   - THM-2996-prime-modular-affine-defect-trichotomy-and-spherical-quartic-uniqueness
 script: 04-computation/quartic_cross_wall_x1_14_diamond_thm3034.py
 output: 05-knowledge/results/quartic_cross_wall_x1_14_diamond_thm3034.out
-script_sha256: 39019d1a0efb8e2f8bc343d1db2e48a1842bfb2125fd1e0ba126ce0370a5ca2d
-output_sha256: f939f2201e6b3c1db08911e32b26f72570fd80314185cc803d689fbcc3122d10
+script_sha256: 1622ec8bd7bc5b42c8c0f77155dbd60c56cfe54ea852309702fb76c50c4785dd
+output_sha256: aede3ef8efd9b3f21c79e78cc1fd29674f9644b0b03461d9fa324ad4bc67651e
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3034 -- ordered quartic cross-wall as `X_1(14)`
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and statement
 
@@ -226,26 +226,40 @@ The coarse diamond deck group is
 ```
 
 The natural forgetful map therefore has degree three and a rational free
-`C_3` deck action.  By the uniqueness of the rational order-three subgroup in
-Section 3, its kernel is `<T>`.  Hence `(14)` and the THM-2998 cyclic quotient
-are the modular cover `(5)`, with the generator determined only up to
-inversion (`<3>` versus `<5>`) until a modular cusp labelling is chosen.
+`C_3` deck action.  Both modular curves have genus one, so Riemann--Hurwitz
+makes this degree-three cover unramified and its deck action fixed-point-free.
+With a rational origin, every rational curve automorphism is a translation
+followed by an origin-fixing elliptic automorphism.  Here
+`j(E_1)=-15625/28` is nonintegral, hence `E_1` is non-CM and the latter
+automorphism is `+-1`.  A translation followed by `[-1]` has order at most
+two, so a fixed-point-free order-three deck transformation must be translation
+by a rational three-torsion point.  Section 3 leaves only `+-T`; therefore its
+kernel is `<T>`.  Hence `(14)` and the THM-2998 cyclic quotient are the modular
+cover `(5)`, with the generator determined only up to inversion (`<3>` versus
+`<5>`) until a modular cusp labelling is chosen.
 
 ## 5. Pointed and unpointed quotients are different data
 
-THM-2998's symmetric quotient coordinates are not the pointed Velu map
-`(14)`.  At `O_+`, its symmetric coordinates are `t=s=0`, and its equations
-(33)--(35) give
+Write `phi` for the pointed Velu map `(14)`, and let `q_sym` be THM-2998's
+symmetric quotient.  Pulling the elementary symmetric functions through
+`(11)` and applying the generalized Weierstrass addition law gives the exact
+identity
 
 ```text
-O_+ -> (9,-33) in E_0(Q),                              (19)
+q_sym(P)=(9,-33)-phi(P).                                (19)
+```
+
+In particular, at `O_+` its symmetric coordinates are `t=s=0`, and
+THM-2998's equations (33)--(35) give
+
+```text
+O_+ -> (9,-33) in E_0(Q),                              (19a)
 ```
 
 not the point at infinity.  The point `(9,-33)` satisfies `(3)`.  Thus the
-displayed THM-2998 quotient is the same unpointed `C_3` cover followed by a
-target translation and possibly target negation.  A compatible choice of
-source and target cusps is the sidecar needed to identify literal pointed
-coordinate formulas.
+displayed quotient is the pointed Velu map followed first by target negation
+and then translation by `(9,-33)`.  A compatible choice of source and target
+cusps is the sidecar needed to identify literal pointed coordinate formulas.
 
 The first failed implication is therefore
 
@@ -262,6 +276,16 @@ An odd flank transposition `sigma` changes the Vandermonde sign, so
 ```text
 sigma:C_+ -> C_-,                   sigma rho sigma^-1=rho^-1.       (21)
 ```
+
+The THM-2998 coordinates `(t,s)` are elementary symmetric functions, hence
+the two quotient maps satisfy literally
+
+```text
+q_- o sigma=q_+.                                             (21a)
+```
+
+The odd arrow therefore lies over the identity of `X_0(14)`; it cannot be a
+nontrivial Fricke action on the quotient.
 
 After transporting origins and a generator orientation between the two
 copies, it may be represented by elliptic negation
@@ -330,5 +354,12 @@ Both modes byte-match
 The companion checks the plane-cubic projection, both birational directions,
 the exact flank-translation formulas, the division polynomial, the normalized
 quotient and both short models, the modular invariants, the diamond classes,
-the target-origin hostile, and the odd/even permutation signs.  It contains no
-truth-bearing Python `assert`.
+the exact identity `q_sym(P)=(9,-33)-phi(P)`, and the odd/even permutation
+signs.  It contains no truth-bearing Python `assert`.
+
+The independent audit rederived the projection sign, both inverse charts,
+the exact `rho=+T` action, the irreducible division-polynomial factor, both
+Velu models, all invariants, and the odd/even permutation signs.  It required
+the genus-one/unramified bridge in Section 4 and sharpened the former vague
+target-normalization statement to the exact identity `(19)` before accepting
+promotion.  Fresh normal and optimized runs byte-match the stored transcript.

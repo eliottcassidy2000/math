@@ -11,6 +11,6 @@ x0_model=Y^2+XY+Y=X^3+4X-6
 x0_short_model=Y^2=X^3+5805X-285714
 x0_j=9938375/21952
 diamond_group=(Z/14Z)^*/{+-1}=C3
-thm2998_symmetric_target_origin=(9,-33);normalization=translation
+thm2998_symmetric_map=(9,-33)-velu(P):PASS
 odd_flank_scope=sheet_exchange_and_C3_inversion_not_diamond_C2
 all_exact_controls=PASS

@@ -257,6 +257,38 @@ def main() -> None:
         "translated quotient origin not on X0(14)",
     )
 
+    # Pull THM-2998's symmetric quotient through the inverse C_+ chart.  It is
+    # exactly Q0-phi(P), not merely an unspecified target translation of phi.
+    tau_q = V / (U * (U - 1))
+    eta_q = (2 * U - 1) * tau_q**2 + tau_q - 1
+    xi_q = (eta_q + tau_q**2 - tau_q - 1) / (2 * (tau_q - 1))
+    e1_q = xi_q + 1 + tau_q
+    e2_q = xi_q + xi_q * tau_q + tau_q
+    e3_q = xi_q * tau_q
+    t_q = sp.cancel(e2_q / e1_q**2)
+    s_q = sp.cancel(e3_q / e1_q**3)
+    sym_u = sp.cancel(9 - 28 * t_q)
+    sym_v = sp.cancel(-33 + 140 * t_q - 392 * s_q)
+
+    # Generalized E0 addition law for Q0=(9,-33) plus -phi(P).
+    phi_neg_v = -quotient_v - quotient_u - 1
+    lam = sp.cancel((phi_neg_v + 33) / (quotient_u - 9))
+    nu = sp.cancel((-33 * quotient_u - 9 * phi_neg_v) / (quotient_u - 9))
+    q0_minus_phi_u = sp.cancel(lam**2 + lam - quotient_u - 9)
+    q0_minus_phi_v = sp.cancel(-(lam + 1) * q0_minus_phi_u - nu - 1)
+    require_zero_mod(
+        sym_u - q0_minus_phi_u,
+        abstract_e1,
+        V,
+        "THM2998 quotient x normalization",
+    )
+    require_zero_mod(
+        sym_v - q0_minus_phi_v,
+        abstract_e1,
+        V,
+        "THM2998 quotient y normalization",
+    )
+
     # An odd flank permutation exchanges the two Vandermonde sign sheets and
     # conjugates the C3 generator to its inverse.  After synchronizing origins
     # this is elliptic negation, not another diamond or Fricke involution.
@@ -290,7 +322,7 @@ def main() -> None:
     print("x0_short_model=Y^2=X^3+5805X-285714")
     print("x0_j=9938375/21952")
     print("diamond_group=(Z/14Z)^*/{+-1}=C3")
-    print("thm2998_symmetric_target_origin=(9,-33);normalization=translation")
+    print("thm2998_symmetric_map=(9,-33)-velu(P):PASS")
     print("odd_flank_scope=sheet_exchange_and_C3_inversion_not_diamond_C2")
     print("all_exact_controls=PASS")
 
