@@ -77,8 +77,8 @@ Let `W_M` be the explicit wall of THM-2997 eq (9).  Its roots are
 
 The wall's circuit is **strictly positive throughout** -- zero reversals at
 degree `330` -- so `W_M` satisfies global no-return outright.  THM-3001's proved
-necessary condition `C(mu)>=0>=C(mu*)` holds at every width with a margin that
-**grows** on both sides.
+limiting screen holds at every listed width with a margin that **grows** on
+both sides; in particular it is far outside MISTAKE-341's `O(1/d)` ambiguity.
 
 **The wall is therefore not the obstruction.**
 

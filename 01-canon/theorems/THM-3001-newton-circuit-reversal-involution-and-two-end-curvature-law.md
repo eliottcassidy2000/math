@@ -1,8 +1,24 @@
 ---
 id: THM-3001
 title: "Newton-circuit reversal involution and the two-end curvature law"
-status: PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT
+status: >
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The exact reversal
+  involution, class no-go, two-end expansion, scaled-reciprocal fixed-locus
+  characterization, circuit antipalindrome, and parity wall are proved.  The
+  former finite-degree curvature sign screen is repaired to its sharp
+  O(1/d)-tolerant asymptotic form.  The two-number global classifier remains
+  explicitly REFUTED by THM-3004.
 source: klein-S428
+audit: >
+  Independent hostile audit ACCEPT after scope repair.  It rederived the
+  reversal formulas and two-end signs, identified the missing O(1/d) tolerance
+  in the necessary curvature screen, proved the converse fixed-locus theorem,
+  and checked the odd/even chamber wall.  Its exact independent companion
+  exhausts 3267 positive coefficient rows, 114 balanced two-cluster controls,
+  seven fixed-locus parity controls, three equivariant path midpoints, and a
+  constant-R=2 positive-real-rooted non-equality control (five roots counted
+  by an exact Sturm chain).  Primary and independent normal,
+  optimized, and stored transcripts all byte-match.
 depends_on:
   - THM-3000-fixed-edge-cumulant-curvature-universality-and-bounded-jet-transfer
 related:
@@ -10,19 +26,27 @@ related:
   - THM-2989-first-gap-wall-stripped-all-width-leading-edge-positivity
   - THM-2997-first-gap-wall-stripped-all-width-second-edge-circuit-positivity
   - THM-2994-first-gap-hurwitz-hermite-biehler-prefix
+  - THM-3003-antipodal-circuit-rigidity-and-the-multipole-spread-criterion
+  - THM-3004-circuit-sign-change-cluster-law-and-classifier-refutation
 script: 04-computation/gmc_newton_circuit_reversal_involution_and_two_end_curvature_law_thm3001.py
 output: 05-knowledge/results/gmc_newton_circuit_reversal_involution_and_two_end_curvature_law_thm3001.out
-script_sha256: 75411c55dbda4b223a9cbbf4758ed9fdc97e902103d703a2eca64ed79b51b231
-output_sha256: 90bd4140a2a2ddc053c0ae0e43904493c5ed26fc43dd88a175ab3019fccd91f2
+script_sha256: 430e8a83795ab65bd3ab6df6baed427894c7917ae3939f3581991582338ef7e5
+output_sha256: f72746c15b96e4f77df801e42dec908c6c2c4738783700f6212a3f60e94bf00f
+independent_script: 04-computation/gmc_newton_reversal_fixed_locus_referee_thm3001.py
+independent_output: 05-knowledge/results/gmc_newton_reversal_fixed_locus_referee_thm3001.out
+independent_script_sha256: 1eae2e618d0607a7cf33db59ade085d3ec1f71dc7706f20332af956d4ba2b89c
+independent_output_sha256: 7ba4dd7017b8dcf69e5f2150a1b8b2100a1f3c89029eec50e3c521f6f5542f5b
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3001 -- Newton-circuit reversal involution and the two-end curvature law
 
-**PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Sections 1--3 are unconditional and exact.  Section 4 inherits THM-3000's
-hypotheses.  Section 6 is an explicitly unproved HYPOTHESIS with a census.
+hypotheses.  Section 5 includes the exact fixed-locus strengthening.  Section 6
+retains an explicitly refuted hypothesis and its misleading census only under
+the displayed retraction.
 
 ## 1. The involution
 
@@ -75,9 +99,16 @@ non-constant ratio sequence:
 - Hurwitz stability (`Re(rho)<0 <=> Re(1/rho)<0`);
 - strict ULC (by (1) log-concavity of `h` and of `h*` are the same statement).
 
-Non-constancy witnesses: every `(n+a)^m(n+b)^m`, `a!=b`, and every geometric
-root set; the script prints exact ratio sequences.  Newton equality forces
-`R_k=1` for all `k` only when all roots coincide.
+Non-constancy witnesses: `(n+a)^m(n+b)^m` for `a!=b,m>=2`, and geometric root
+sets of length at least three with ratio different from one; the script prints
+exact ratio sequences.  Within the positive
+real-rooted/PF-infinity class, equality in every Newton inequality gives
+`R_k=1` and forces all roots to coincide.  In the unrestricted
+positive-coefficient universe, **and even on some positive-real-rooted
+examples**, a constant ratio sequence need not be the Newton-equality sequence:
+the independent referee includes an exact `R_k=2` control.  Thus the class
+no-go above concludes only that the ratio sequence is constant; it does not
+conclude `R_k=1` or coincident roots.
 
 **Relation to THM-2991.**  THM-2991 is *strictly stronger in its own
 direction*: it adds an arbitrarily long improving **leading prefix** -- a
@@ -114,46 +145,81 @@ use (2) twice: `R*_k=R_(d-k)` and `R*_(k-1)=R_(d-k+1)`, so
 `log(R*_k/R*_(k-1))=-log(R_(d-k+1)/R_(d-k))`.  QED.
 
 So **the two ends of the Newton circuit are governed by two explicit cumulant
-numbers**, and the bottom and top signs are `sign C(mu)` and `-sign C(mu*)`.
+numbers**.  When the curvatures stay a fixed distance from zero, the bottom and
+top signs are eventually `sign C(mu)` and `-sign C(mu*)`.
 
-**PROVED NECESSARY CONDITION.**  Asymptotic global no-return requires
+**PROVED NECESSARY CONDITION (quantitative form).**  For a sequence of degrees
+`d->infinity` satisfying the two uniform bounded-jet hypotheses, asymptotic
+global no-return requires
 
-    C(mu)>=0>=C(mu*).                                    (7)
+    C(mu_d)>=-O(d^-1),   C(mu_d*)<=O(d^-1).              (7)
 
-This is a cheap two-scalar screen that replaces a per-edge circuit
-computation at both ends.
+Consequently `liminf C(mu_d)>=0` and `limsup C(mu_d*)<=0`.  If the two
+curvatures are independent of `d`, or converge with a nonzero limiting margin,
+this reduces to the formerly displayed sign screen `C(mu)>=0>=C(mu*)`.  The
+`O(d^-1)` tolerance is load-bearing when a curvature approaches zero; the
+`O(d^-3)` remainder in (5)--(6) does not determine its finite-degree sign.
 
 Verified numerically at `d=120,240,480` on balanced and unbalanced two-cluster,
 three-cluster, and geometric families; predicted and measured end values agree
 to the expected `O(d^(-3))`.
 
-## 5. Newton-ratio-palindromic families: log-symmetry
+## 5. Newton-ratio-palindromic families and the reversal fixed locus
 
-**Theorem.**  If the root multiset satisfies `mu*=mu` up to scale -- equivalently
-if the empirical measure of `log r` is **symmetric about a point** -- then
+**Theorem (exact characterization).**  The following are equivalent:
 
-    R_k=R_(d-k) for all k,                               (8)
+1. `R_k=R_(d-k)` for every `1<=k<=d-1`;
+2. there are `A,B>0` such that `h_(d-k)=A B^k h_k` for every `k`;
+3. `N*(x)=A^-1 N(x/B)`;
+4. the root-parameter multiset is closed under `r->1/(B r)`.
 
-so the ratio sequence is an exact palindrome and cannot be monotone unless it
-is constant.  By (5)--(6) its two ends then carry opposite signs `+C(mu)` and
-`-C(mu)`.
+For positive real root parameters, condition 4 says exactly that the empirical
+measure of `log r` is symmetric about `-log(B)/2`.  Thus log-symmetry is not
+merely sufficient: it is the complete reversal-fixed locus seen by the Newton
+ratios.
 
-*Proof.* Scale invariance of `R` plus (2).  QED.
+*Proof.*  Put `y_k=log h_k` and `z_k=y_(d-k)-y_k`.  Palindromy of `R` says
+
+    2z_k-z_(k-1)-z_(k+1)=0,
+
+so `z_k` is affine and `h_(d-k)=A B^k h_k`.  Since
+`h_(d-k)/h_k=a_k/a_(d-k)`, this is equivalent to
+
+    a_k=A B^k a_(d-k),   N*(x)=A^-1 N(x/B).            (8)
+
+Comparing root multisets gives condition 4.  Every implication reverses, and
+(2) gives the ratio palindrome.  QED.
+
+The circuit coordinates `c_k=log(R_k/R_(k-1))` therefore satisfy
+
+    c_k=-c_(d+1-k).                                     (8a)
+
+If `d=2m+1` is odd, the central coordinate is fixed by this involution, hence
+`c_(m+1)=0` and `R_(m+1)=R_m`.  If `d=2m` is even, the two central coordinates
+are opposites.  In particular the symmetric positive-coefficient path
+
+    gamma(t)=(1-t)N+tN*,   gamma(1-t)=gamma(t)*,         (8b)
+
+has a self-reciprocal midpoint; in odd degree that midpoint lies on the exact
+central circuit wall.  This is the chamber-holotopy content of reversal: an
+equivariant path cannot pass through the fixed locus while retaining a strict
+central orientation.
 
 **Instances, all exact in the output.**
 
 - every balanced two-cluster `(n+a)^m(n+b)^m`: `log` roots are `log a`, `log b`
-  with equal weights, symmetric about their midpoint.  Checked for
-  `(a,b,m)=(1,2,4),(1,3,6),(2,5,8),(1,10,10),(3,7,5)`: `R_k=R_(d-k)` exactly,
-  strictly rising for `k<=m` and strictly falling from `k=m+1`, with the turn
-  exactly at the midpoint;
+  with equal weights, symmetric about their midpoint, hence `R_k=R_(d-k)`
+  exactly.  The five printed controls
+  `(a,b,m)=(1,2,4),(1,3,6),(2,5,8),(1,10,10),(3,7,5)` additionally rise
+  strictly through the midpoint and then fall; the general theorem here needs
+  only exact palindromy and nonconstancy, not an unaudited global shape claim;
 - every geometric root set `{q^i}_(i<d)`: `log` roots form an arithmetic
   progression, symmetric.  Exact palindromic `R` printed for
   `q=1/2,2/3,9/10,1/3`.
 
 So the **simplest non-degenerate real-rooted positive family already refutes
-global no-return**, with an exact interior maximum at the midpoint, and no
-construction is required.
+global no-return**: its ratio path is palindromic and nonconstant, hence cannot
+be monotone.  The listed controls have an exact midpoint maximum.
 
 **Lineage.**  MISTAKE-335 already records "the exact reciprocal symmetry" of
 the balanced two-cluster family `(x+1)^n(x+B)^n` and its consequence
@@ -161,8 +227,8 @@ the balanced two-cluster family `(x+1)^n(x+B)^n` and its consequence
 here is (i) the general involution (1)--(3) valid for **every**
 positive-coefficient polynomial, of which the two-cluster symmetry is one
 instance; (ii) the exact characterization of the palindromic class as
-**log-symmetric root profiles**, which also covers every geometric root set;
-and (iii) the class-level no-go of section 2, which shows that the failure is
+**log-symmetric root profiles**, its parity wall, and its equivariant path; and
+(iii) the class-level no-go of section 2, which shows that the failure is
 structural rather than a property of one lucky family.  MISTAKE-335's rule --
 separate a directional turn from a baseline crossing -- is respected: sections
 2 and 5 claim only the directional/monotonicity statement, never a crossing
@@ -180,8 +246,8 @@ below `R_1`.  Crossing remains THM-2991's.
 > changes, attained.  The classifier is true exactly for `m<=2`.
 > The `42/42` census below is not evidence: it held cluster **sizes** equal in
 > every three-cluster row, which is the axis the failure lives on (MISTAKE-337).
-> Sections 1--5 and 7--9 of this file are unaffected; the proved necessary
-> condition `C(mu)>=0>=C(mu*)` still stands, but it is **not** sufficient.
+> Sections 1--5 and 7--9 of this file are unaffected; the corrected necessary
+> condition (7) still stands, but it is **not** sufficient.
 
 **HYP (REFUTED -- see the retraction above; retained for the correction
 lineage).**  For a positive real-rooted `N` with bounded jets at both
@@ -192,7 +258,7 @@ ends, the pair `(sign C(mu), sign C(mu*))` determines the global shape:
     C(mu)>0, C(mu*)>0  =>  interior maximum,
     C(mu)<0, C(mu*)<0  =>  interior minimum.                (9)
 
-Only (7) -- the necessary half of the first line -- is proved.  The census in
+Only the quantitative necessary half (7) of the first line is proved.  The census in
 the output tests `42` families (two-cluster over nine multiplicity splits and
 four root ratios, three geometric, three three-cluster) at `d=60` in exact
 rational arithmetic: **agreement 42/42**.  Illustrative rows:
@@ -214,17 +280,19 @@ THM-2997 (25) gives, for the first-gap wall-stripped core,
 
     C(mu_M) -> 21630685837/71563480803 > 0,
 
-so the **bottom** of the circuit is settled asymptotically.  By (7), the
-remaining necessary condition for that family is the single new scalar
+so the **bottom** of the circuit is settled asymptotically.  Since its degree is
+linear in `M`, (7) makes the remaining necessary screen
 
-    C(mu*_M) <= 0,                                       (10)
+    C(mu*_M)<=O(M^-1),   hence limsup_M C(mu*_M)<=0.     (10)
 
 the same cumulant functional of the **reciprocal** root measure, computable from
 the **bottom** coefficients `a_0,a_1,a_2,a_3` of the core -- equivalently from
 the first three log jets of `N*_M`.  This is a bounded new obligation of exactly
 the shape THM-2989/2997 already discharge at the top, applied to the reversed
-core.  Note that a positive `C(mu*_M)` would **refute** global no-return for the
-family outright, so (10) is a decisive test, not a convenience.
+core.  A reciprocal curvature bounded below by one fixed positive constant
+would **refute eventual** global no-return.  A single positive finite-`M` value,
+or a positive value of order `M^-1`, need not: that was the scope defect repaired
+by the hostile audit.
 
 ## 8. Boundaries and losses
 
@@ -245,7 +313,24 @@ family outright, so (10) is a decisive test, not a convenience.
 ## 9. Reproduction
 
     python3 04-computation/gmc_newton_circuit_reversal_involution_and_two_end_curvature_law_thm3001.py
+    python3 -O 04-computation/gmc_newton_circuit_reversal_involution_and_two_end_curvature_law_thm3001.py
+    python3 04-computation/gmc_newton_reversal_fixed_locus_referee_thm3001.py --output .scratch/thm3001.referee.normal.out
+    python3 -O 04-computation/gmc_newton_reversal_fixed_locus_referee_thm3001.py --output .scratch/thm3001.referee.opt.out
 
 Five checks (I involution, II reversal-closure of the standard classes with
 exact PF-3 Toeplitz minors and strict-ULC controls, III two-end law, IV exact
 palindromy, V classifier census); all report `True`.
+
+The primary normal/optimized/stored transcript is 7,442 LF bytes; the
+independent normal/optimized/stored transcript is 815 LF bytes.  Frozen hashes:
+
+    primary script      430e8a83795ab65bd3ab6df6baed427894c7917ae3939f3581991582338ef7e5
+    primary output      f72746c15b96e4f77df801e42dec908c6c2c4738783700f6212a3f60e94bf00f
+    independent script  1eae2e618d0607a7cf33db59ade085d3ec1f71dc7706f20332af956d4ba2b89c
+    independent output  7ba4dd7017b8dcf69e5f2150a1b8b2100a1f3c89029eec50e3c521f6f5542f5b
+
+The hostile audit treats the `42/42` classifier census only as a preserved
+negative lesson.  Its mathematical promotion covers sections 1--5 and the
+quantitative screen (7), not the refuted implication (9).
+
+**QED.**

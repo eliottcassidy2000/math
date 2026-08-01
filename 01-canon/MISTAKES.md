@@ -38,6 +38,36 @@ Format per entry:
   explicitly) until after that step; casting an address identity into a field
   does not license field-typing its order argument.
 
+## MISTAKE-341 (2026-08-01, THM-3001 promotion audit) -- an asymptotic two-end expansion was read as an exact finite curvature sign
+
+- **What was assumed:** from
+  `log(R_k/R_(k-1))=C(mu_d)d^-2+O(d^-3)` and its reversed analogue, the
+  candidate asserted the finite-degree necessary screen
+  `C(mu_d)>=0>=C(mu_d*)`.  It then said any positive reciprocal curvature at
+  one width refutes global no-return.  The same section slid from the proved
+  conclusion "the ratio sequence is constant" to Newton equality `R_k=1`.
+- **First failed implication / sharp hostile:** multiplying a nonnegative
+  circuit by `d^2` gives only `C(mu_d)>=-O(1/d)`; at the other end it gives
+  `C(mu_d*)<=O(1/d)`.  A curvature of size `1/(2d)` can be positive while an
+  allowed `d^-3` remainder keeps the reversed circuit nonnegative.  Separately,
+  the positive coefficient polynomial with normalized coefficients
+  `h_k=2^(-k(k-1)/2)` has the constant ratio `R_k=2`, so a constant ratio need
+  not mean equality in every Newton inequality.  Constant-ratio and
+  Newton-equality are different conclusions; the former is all that the
+  reversal-closed class argument supplies.
+- **Exact repair / strongest survivor:** audited THM-3001 now states the
+  quantitative screen and only concludes `liminf C(mu_d)>=0` and
+  `limsup C(mu_d*)<=0`, or exact limiting signs under a fixed margin.  A
+  reciprocal curvature bounded below by a positive constant still refutes
+  eventual no-return.  The audit also proved the exact converse fixed-locus
+  law: ratio palindromy is equivalent to
+  `N*(x)=A^-1 N(x/B)`, its circuit is antipalindromic, and every odd-degree
+  reversal-equivariant path hits the central circuit wall.
+- **Rule:** an `O(d^(-r-1))` remainder leaves an `O(1/d)` ambiguity after
+  rescaling the leading invariant.  State finite signs only with a remainder
+  bound or a fixed margin; otherwise state liminf/limsup.  Do not silently
+  upgrade a constant Newton-ratio sequence to the equality sequence `R=1`.
+
 ## MISTAKE-339 (2026-08-01, pre-promotion THM-3000/3003 audit) -- the leading third jet was charged as a remainder and an asymptotic threshold was reported as an exact finite bound
 
 - **What was assumed:** the first THM-3000 candidate imposed
@@ -128,9 +158,10 @@ Format per entry:
   most two clusters (exhaustive, `936` configurations, zero violations).  The
   correct general law is a **cluster count**: `m` well-separated clusters give up
   to `2m-3` sign changes, attained for every `m<=6`.  THM-3001's proved
-  necessary condition `C(mu)>=0>=C(mu*)` survives; it is not sufficient, and no
-  bounded set of moments can be, since the sign-change count is a property of the
-  support structure.
+  quantitative necessary condition
+  `C(mu_d)>=-O(1/d), C(mu_d*)<=O(1/d)` survives (MISTAKE-341); it is not
+  sufficient, and no bounded set of moments can be, since the sign-change count
+  is a property of the support structure.
 - **AMENDMENT (same day, klein-S428, after an independent adversarial pass).**
   The diagnosis above is the *dominant* mechanism but not the only one, and one
   circulating description of it is too strong.  Exact split over the `51` failing

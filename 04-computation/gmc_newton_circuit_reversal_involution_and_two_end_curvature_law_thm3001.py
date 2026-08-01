@@ -26,13 +26,15 @@ CLAIMS PROVED / VERIFIED HERE
        where C(N) = (3 kappa_2^2 - 2 kappa_1 kappa_3)/kappa_1^4 is THM-3000's
        cumulant curvature of the root measure and C(N*) is the same functional
        of the RECIPROCAL root measure.  So the two ends of the Newton circuit
-       are governed by two explicit cumulant numbers, and C(N)>0, C(N*)>0
-       forces an interior maximum.
+       are governed by two explicit cumulant numbers.  Fixed positive margins
+       for C(N),C(N*) force eventual opposite end signs and at least one turn,
+       not the refuted unique-turn classifier.
   IV.  (Newton-ratio-palindromic class)  R_k is invariant under root scaling,
        so if the root multiset is closed under reciprocal UP TO A SCALAR then
        R_k = R_{d-k} exactly.  Every balanced two-cluster (n+a)^m (n+b)^m is in
-       this class: its ratio sequence is exactly symmetric about k = m, so it
-       rises then falls with an exact turn at the midpoint.
+       this class: its ratio sequence is exactly symmetric about k = m.  The
+       printed controls rise then fall; the theorem uses only palindromy and
+       nonconstancy.
 
 Relation to THM-2991.  THM-2991 is STRICTLY STRONGER in one direction: it adds
 an arbitrarily long improving LEADING PREFIX (not a reversal-closed hypothesis)
@@ -265,7 +267,7 @@ def claim_IV():
 
 
 # --------------------------------------------------------------------------
-# V. the two-number sign classifier: proved necessary condition + census
+# V. the two-number sign classifier: quantitative necessary condition + census
 # --------------------------------------------------------------------------
 def shape_of(roots):
     d = len(roots)
@@ -298,10 +300,11 @@ def predicted(roots):
 def claim_V():
     print()
     print("=" * 74)
-    print("V. TWO-NUMBER SIGN CLASSIFIER  (proved necessary condition + census)")
+    print("V. TWO-NUMBER SIGN CLASSIFIER  (quantitative necessary condition + census)")
     print("=" * 74)
     print("  PROVED (from I + III): asymptotic global no-return REQUIRES")
-    print("        C(N) >= 0 >= C(N*).")
+    print("        C(N_d) >= -O(1/d),   C(N_d*) <= O(1/d).")
+    print("  Zero-tolerance signs at finite d are only a stronger census observation.")
     print("  OBSERVED (census below, NOT proved): on these families the pair of")
     print("  signs (C(N), -C(N*)) also determines the global shape.")
     print()
@@ -317,13 +320,13 @@ def claim_V():
         tests.append((f"three-cluster {a_},{b_},{c_}",
                       [Fr(a_)] * (d // 3) + [Fr(b_)] * (d // 3) + [Fr(c_)] * (d - 2 * (d // 3))))
     agree = 0
-    nec_ok = True
+    strict_screen = True
     rows = []
     for name, roots in tests:
         s, p = shape_of(roots), predicted(roots)
         agree += (s == p)
         if s == "INCREASING":
-            nec_ok &= (curvature(roots) >= 0 >= curvature([Fr(1) / r for r in roots]))
+            strict_screen &= (curvature(roots) >= 0 >= curvature([Fr(1) / r for r in roots]))
         rows.append((name, s, p, float(curvature(roots)),
                      float(curvature([Fr(1) / r for r in roots]))))
     for name, s, p, c1, c2 in rows[:14]:
@@ -332,11 +335,11 @@ def claim_V():
     print(f"   ... {len(rows)} families total")
     print()
     print(f"  classifier agreement: {agree}/{len(rows)}")
-    print(f"  proved necessary condition C(N)>=0>=C(N*) held on every INCREASING case: {nec_ok}")
+    print(f"  observed strict sign screen C(N)>=0>=C(N*) on every INCREASING case: {strict_screen}")
     print("  VERDICT V:", "CLASSIFIER MATCHES ON EVERY CENSUS FAMILY"
-          if agree == len(rows) and nec_ok else
-          f"PARTIAL ({agree}/{len(rows)}); necessary condition {nec_ok}")
-    return nec_ok, agree == len(rows)
+          if agree == len(rows) and strict_screen else
+          f"PARTIAL ({agree}/{len(rows)}); strict screen {strict_screen}")
+    return strict_screen, agree == len(rows)
 
 
 def main():
@@ -347,7 +350,7 @@ def main():
     nec, cls = claim_V()
     print()
     print("=" * 74)
-    print("SUMMARY  I=%s  II=%s  III=%s  IV=%s  V(necessary)=%s  V(classifier census)=%s"
+    print("SUMMARY  I=%s  II=%s  III=%s  IV=%s  V(strict-screen census)=%s  V(classifier census)=%s"
           % (a, b, c, e, nec, cls))
     print("=" * 74)
 
