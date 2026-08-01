@@ -10,9 +10,10 @@ status: >
   sheet and parabolic order four.  Their squares are respectively zero or two distinct nonzero
   V4 elements generating the kernel.  Keller inertia or a simple/index-free raw
   discriminant order eliminates the width-four branch, but the surviving
-  section belongs first to the finite normalization: an affine-source owner,
-  a point over the cusp, and a global monodromy reduction require separate
-  sidecars.  No quartic Keller, G1, JC(2), DC(2), or LRC exclusion follows.
+  section belongs first to the finite normalization: an affine-source owner
+  and a point over the cusp require separate sidecars.  For a connected
+  global degree-four cover, the local point-stabilizer instead forces global
+  monodromy S4.  No quartic Keller, G1, JC(2), DC(2), or LRC exclusion follows.
 source: codex-quartic-cusp-braid-lift-2026-08-01
 depends_on:
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
@@ -206,8 +207,9 @@ local braid lift is the split branch:
 quartic parabolic order / maximal cusp width=2.             (13)
 ```
 
-This is a local statement.  It neither excludes global `S4` monodromy nor
-puts the **common** fixed sheet into the original affine source.
+This is a local statement.  It does not put the **common** fixed sheet into
+the original affine source.  Under global connectedness it actually forces,
+rather than excludes, `S4` monodromy as shown in Section 5.
 
 ## 4. Independent simple-order discriminant selector
 
@@ -319,6 +321,26 @@ the local group fixes sheet `4`, but adjoining remote monodromy `(1 4)`
 generates all of `S4`.  A local common sheet therefore does not reduce the
 global monodromy group.
 
+For a connected global degree-four cover this is forced, not merely a
+hostile possibility.  Let `G<=S4` be the transitive global geometric
+monodromy and let `H=<X,Y>` be the split local subgroup.  If `x` is its
+unique common fixed sheet, then
+
+```text
+H = (S4)_x = S3,             H <= G_x <= (S4)_x.          (19)
+```
+
+Thus `G_x=H`.  Transitivity and orbit--stabilizer give
+
+```text
+|G|=4|G_x|=24,                 hence G=S4.                (20)
+```
+
+Changing the base path merely conjugates `H` and `x`.  Connectedness is
+load-bearing: a disconnected global `1+3` cover may have only the local
+`S3`.  For an irreducible degree-four graph/function-field cover, generic
+connectedness supplies the required transitivity.
+
 ## 6. Relation to the existing modular and grade-three frontiers
 
 The full branch is conjugate to the width-four `S4` modular quotient behind
@@ -343,7 +365,7 @@ The exact information ledger is:
 | `B3 -> C2*C3` | modular braid class after centre kill | integer full-twist height | discriminant winding |
 | `S4 -> S3` | matching monodromy | `V4` square defect | lifted meridians |
 | split local cover -> finite section | one common normalization sheet | affine ownership | Zariski-main open/closed incidence |
-| local -> global monodromy | local inertia subgroup | remote sheet motion | global generation/control |
+| split local -> connected global | point-stabilizer `S3`; transitivity | its common fixed sheet | group is forced `S4`; owner transport remains missing |
 | resolvent cusp -> grade-three model | cusp/discriminant shadow | affine coordinates and valuations | explicit field/base-ring realization |
 
 No quartic Keller-map exclusion, `G1`, Jacobian conjecture, Dixmier
