@@ -78,8 +78,8 @@ many mask labels are presented. -/
 theorem classThreshold_eq_two_of_small_period
     (Q r : ℕ) (hQ : 1 ≤ Q) (hsmall : Q ≤ 14) :
     classThreshold Q r = 2 := by
-  unfold classThreshold windowCount ceilDiv14
-  omega
+  interval_cases Q <;>
+    norm_num [classThreshold, windowCount, ceilDiv14] at hQ hsmall ⊢
 
 /-- One common point saves four units from the naive sum of five row sizes. -/
 theorem five_union_card_add_four_le_sum_cards

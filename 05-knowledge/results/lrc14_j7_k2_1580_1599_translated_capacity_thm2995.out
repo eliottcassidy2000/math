@@ -1,0 +1,7 @@
+LRC14 projected k2 1580..1599 translated-capacity closure
+dependency=04-computation/lrc14_j7_k2_1600_1679_zero_high_and_high_order_phase_closure_thm2980.py;lf_sha256=7cc93dfe2e9365aa1e313d97ab19e76bce0943fd9f6a243e8c1b33c80d439ef4
+dependency=05-knowledge/results/lrc14_j7_k2_scalar_band_1580_1599_thm2995.out;lf_sha256=01577b566a51d37c96c2fed783f133e27403ad3566c3df002aa5f129883f2ba4
+capacity=kappa(d)=ceil(d/7);strict_open=1;complete_cell_projection=THM-2984
+LARGE;z=1586;E=1,8,10,12,13,14;eta=2179445/164752242291;packets=29372;prefixes=249;tests=5507;tail_min=1;tail_max=12585;fixed_cell_min=23688;min_slack=6;min_witness=((1612, 2004, 2340), 7, 7, 1, 24568);record_sha256=e57e932e96b76b6b2463ad652f2e8db0446e5672672632779116812b5023aef0
+EXCEPTIONAL;z=1586;E=1,10,11,12,13,14;required=433091/166696530;positive_lows=35697;triples=5;denominators=191;tests=955;cell_gate_passes=889;min_slack=1;min_witness=((1612, 1800, 2340), 2, 2, 1, 133802);record_sha256=db9c797808461490372331ae99385c1b26d3889eaadaa768af58e6795cda089c
+all_exact_checks=PASS

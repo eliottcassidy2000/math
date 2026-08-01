@@ -1,0 +1,10 @@
+LRC14 PROJECTED K2 NONPOSITIVE TRANSLATED-CARRIER CAPACITY
+dependency=04-computation/lrc14_j7_k2_1600_1679_zero_high_and_high_order_phase_closure_thm2980.py;lf_sha256=7cc93dfe2e9365aa1e313d97ab19e76bce0943fd9f6a243e8c1b33c80d439ef4
+capacity=kappa(d)=ceil(d/7);phase_scope=arbitrary_translation;strict_open=1
+hostile=d28,u1,theta=-3/56,S=0,1,2,3;centered_beta=3;translated_kappa=4;all_danger=1
+ROW;E=1,8,10,12,13,14;triples=18;denominators=119;carrier_denominator_tests=2142;failures=0;cell_count_gate_passes=1926;min_slack=1;min_witness=((2340, 2004, 1836), 2, 2, 1, 24754)
+ROW;E=1,10,11,12,13,14;triples=9;denominators=191;carrier_denominator_tests=1719;failures=0;cell_count_gate_passes=1601;min_slack=1;min_witness=((1800, 2340, 1736), 2, 2, 1, 135472)
+TOTAL;carrier_denominator_tests=3861;failures=0;global_min_slack=1;global_witness=((1, 8, 10, 12, 13, 14), (2340, 2004, 1836), 2, 2, 1, 24754)
+centered_beta_not_used=1;translated_capacity_is_load_bearing=1
+exhaustive_unit_replay_role=HOSTILE_REGRESSION_NOT_CONCEPTUAL_PROOF
+all_exact_checks=PASS

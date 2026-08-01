@@ -16,7 +16,7 @@
   and the uniform flag-obstruction arithmetic; its axiom audit contains only
   `propext`, `Classical.choice`, and `Quot.sound`, with no `native_decide`.
   Source/output/semantic/Lean SHA-256:
-  `291818c42929dabf3b261ca91604d5f0fdfa16a210faf51e19bcac71a38a1b41` /
+  `23be12885b44efb1e23acfb6a58b9dd285ef57cba666c60f9235bde05fc27af5` /
   `9e33756dd352042ba6a4571a0af1af626e70e0991e94624c0dfe18711a229dbc` /
   `756ae7ed291fc438648ed76f57b07eae1cde4a1879b184f9564b6ca8adc94f48` /
   `6f3ab284fc1936ebc0b565bf812fcdc38e6940d17e93d607b802f80d6261bc91`.
@@ -133,8 +133,8 @@
   is empty.  THM-2981 then closes `423` rows at the fifteen occupied heights
   `270..247`: `202807=84483+114027+4297`, followed by `7553` one-high cases
   closed pair-free by THM-2984's height-free unit phase and the sharp
-  translated-band capacity `ceil(d/7)<=d/R<|S|`.  The projected `k=3`
-  cap is `246`, and the necessary-row ledger is `375,251`.
+  translated-band capacity `ceil(d/7)<=d/R<|S|`.  At that checkpoint the
+  projected `k=3` cap was `246`, with necessary-row ledger `375,251`.
   Torsion source/output/semantic hashes begin `bbd4b011/5e8b37b7/95f9da4c`;
   the independent hashes begin `d34fcd0f/2f3d9a45/4667f8f0`; descent hashes
   begin `1e06537c/2a5845c3/cd50c3e7`; `z297` hashes begin
@@ -158,6 +158,15 @@
   threshold by the smaller centered `beta(28)=3`.  Cap `246`, ledger
   `375,251`; this is not LRC(14).  Source/output/semantic hashes begin
   `f41fbdec/45762f14/5b9789fb` and are frozen in the theorem frontmatter.
+- `lrc14_j7_k3_z246_to_z244_translated_band_descent_thm2941.py` -> matching
+  `.out` [THM-3033 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  All `197` rows at `z=246,245,244` close, as do the three `z=243` rows whose
+  first label is already at or above the integer high floor.  Exact screens
+  account for `49,704=18,946+29,236+1,522` inherited states; `1,758` terminal
+  one-high cases pass the strict translated-band cardinality gate.  Hence the
+  projected cap is `243` and the ledger is `375,051`; the other `151`
+  first-below-floor boundary rows remain open.  Source/output/semantic hashes
+  are frozen in THM-3033.
 - `lrc14_j7_k2_scalar_band_*_thm2941.py`, the isolated terminal referees,
   and the exact/projected plus forced-high descent packages -> matching
   `.out` files [THM-2941 PROVED NECESSARY BANDS + FINITE-EXACT CLOSURES +
@@ -392,6 +401,22 @@
   with the earlier `K6`, `K6-e`, edge-13, edge-12, and edge-11 strata,
   arbitrary-level closure rises `2,217 -> 2,421`; exactly `582` bodies remain.
   Ordinary and optimized outputs are byte-identical.
+- `lrc14_j7_reflected_robust_edge8_threshold_block_uniform_closure_thm2941.py`
+  -> matching `.out` [THM-2941 PROVED + FINITE-EXACT + VERIFIED].  All
+  `652,688=641,144+11,544` exact certificate rows pass, closing the `21`
+  robust-edge-eight bodies for arbitrary positive levels.  Maximum-low-clique
+  normalization followed by low-spanning-tree growth exhausts connected
+  labelled projective words; disconnected cases retain their free-center
+  cylinders.  Arbitrary-level closure is now `2,442/3,003`, leaving `561`.
+  Ordinary and optimized outputs are byte-identical.
+- `lrc14_j7_reflected_upper_median_two_star_d6_d8_exact_thm2941.py` ->
+  matching `.out` [THM-2941 PROVED + FINITE-EXACT + VERIFIED].  On all `649`
+  active bodies, the canonical upper-median two-star maximum spanning tree
+  closes all `55,606,320` injective assignments at `m=1,D=6,7,8`, with zero
+  failures.  The paired `median_star_chord_scout_20260801.py/.out` separately
+  records `11,856` ordered all-nine-low primitive rays and `7,694,544`
+  positive scale-one checks; that ray bank is FINITE-EXACT at scale one only,
+  while all-dilation transport remains OPEN.
 - `lrc14_j7_reflected_d5_crossdet_tail_closure_thm2941.py` and
   `lrc14_j7_reflected_d5_head_median_cell_closure_thm2941.py` -> matching
   `.out` [THM-2941 PROVED + FINITE-EXACT + VERIFIED].  Cross-determinant
@@ -406,7 +431,7 @@
   transport closes `1,295/1,298` orientations and three explicit reverse
   ladders close the residuals.  Exact drift/debt monotonicity then closes all
   `3,003` bodies for `D>=6,m>=3D`.  Combined with the threshold-block result,
-  the open reflected region is confined to `582` bodies in `D>=6,m<3D`.
+  the open reflected region is confined to `561` bodies in `D>=6,m<3D`.
   This is a sufficient reflected-family theorem, not LRC(14).
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray

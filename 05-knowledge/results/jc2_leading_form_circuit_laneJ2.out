@@ -1,0 +1,169 @@
+==========================================================================
+PART A -- automorphism census: K = #distinct directions at infinity
+==========================================================================
+  automorphisms tested          : 119
+  Jac(P_n,Q_m)=0 (L0)           : 119/119
+  n|m or m|n     (L2, JvdK)     : 119/119
+  P_n=cH^a, Q_m=c'H^b           : 119/119
+  L1 identity (n+m>=4 only)     : 104/104
+  K = 1  (H = c L^g)            : 119/119
+  R(H) == 1 (general position)  : 87/87
+  VIOLATIONS                    : 0
+  distinct degree pairs (n,m)   : 22
+    sample: [(1, 2), (1, 3), (2, 1), (2, 2), (2, 4), (3, 3), (4, 2), (4, 4), (4, 8), (6, 2), (6, 6), (8, 4), (8, 8), (9, 3)]
+  observed (a,b) multiset       : [(1, 1), (1, 2), (1, 3), (2, 1), (3, 1)]
+  observed multiplicity vectors : [(1,), (2,), (3,), (4,), (6,), (8,), (9,), (12,), (18,), (27,)]
+  --> every automorphism tested has a SINGLE direction at infinity,
+      of full multiplicity g; multiplicity vector = (g).
+
+  induction-step check (Q' = Q - lam P^(m/n) drops the degree):
+    degree strictly drops and Jac preserved in every trial: True
+
+==========================================================================
+PART B -- the gate:  R_k = 1 for all k  <=>  K = 1  (H = c L^g)
+==========================================================================
+  random binary forms tested    : 383
+  (R == all ones)  ==  (K == 1) : 383/383   violations: 0
+  K histogram                   : {1: 6, 2: 68, 3: 84, 4: 87, 5: 92, 6: 39, 7: 7}
+  PROOF (exact, all fields, A_k != 0): R_k=1 for all k <=> h_k geometric
+        <=> A_k = binom(g,k) r^k <=> H = A_0 (x + r y)^g <=> K=1.
+  COROLLARY (with PART A): an automorphism of C^2 of degree > 1 has
+        R(H) == 1 identically, i.e. leading-form circuit c(H) == 0.
+        Contrapositive: c(H) != 0  ==>  (P,Q) is NOT an automorphism.
+
+==========================================================================
+PART C -- THM-3003 over C, and: the P<->Q swap IS the repo reversal
+==========================================================================
+  C1  R_k(H o (x<->y)) = R_(g-k)(H) exactly            : True
+      (H o sigma reverses the coefficient sequence A_k -> A_(g-k),
+       i.e. r_i -> 1/r_i.  So the involution tau(P,Q)=(Q o sigma,
+       P o sigma) -- a Jacobian pair with (n,m) swapped -- acts on the
+       leading-form circuit as THM-3001's reversal.)
+  C2  reciprocal-closed (complex mu) => R palindromic  : True  (40 multisets, degrees [2, 3, 4, 5, 6, 7])
+  C3  palindromic => reciprocal-closed, exhaustive     : True  (103 palindromic of 1698 multisets, g=4,5)
+
+==========================================================================
+PART D -- the antipalindromic locus, coordinate-free
+==========================================================================
+  THM-3003 (extended in PART C): the circuit of H is antipalindromic
+  <=> the direction multiset is invariant under t -> mu/t.  Every
+  non-identity involution of P^1 is PGL_2-conjugate to such a map, and
+  a linear change of (x,y) acts on directions by the full PGL_2.  So:
+    'SOME coordinate system makes the leading-form circuit
+     antipalindromic'  <=>  'the direction divisor has a nontrivial
+     involutive PGL_2 symmetry'.
+
+  K=2, mults (1,3)                       involutive symmetry: True   K=2: involution fixing both points, matrix [
+  K=2, mults (2,2)                       involutive symmetry: True   K=2: involution fixing both points, matrix [
+  K=3, mults (1,1,3)                     involutive symmetry: True   permutation (1, 0, 2), matrix [0, -1, -1, 0]
+  K=3, mults (1,2,3)                     involutive symmetry: False  none
+  K=4, mults (1,1,2,2) harmonic          involutive symmetry: True   permutation (0, 1, 3, 2), matrix [1, 0, 0, -
+  K=4, mults (1,2,3,4)                   involutive symmetry: False  none
+  K=5, mults (1,1,1,1,1) sym             involutive symmetry: True   permutation (2, 1, 0, 4, 3), matrix [1, -1, 
+
+  PROVED: K>=3 with pairwise-DISTINCT multiplicities has NO nontrivial
+  involutive symmetry (the only multiplicity-preserving involutive
+  permutation is the identity, and a Mobius map fixing 3 points is the
+  identity).  Hence for such H the leading-form circuit is
+  antipalindromic in NO coordinate system whatsoever.
+
+  exact control: H with K=3, mults [3, 2, 1], 103 random SL2(Z)
+  coordinate changes -> palindromic circuits found: 0  (expected 0)
+  mirror control: roots ['2', '1/2', '1', '1', '1'] (mults 1,1,3, K=3)
+    R = ['121/115', '23/22', '23/22', '121/115']
+    palindromic: True   (predicted True)
+
+  census: fraction of REDUCED K-point direction divisors (all m_i=1)
+  admitting a nontrivial involutive PGL_2 symmetry
+  (= fraction for which SOME coordinate frame gives an antipalindromic
+   leading-form circuit):
+    K=3:  60/60 symmetric   (moduli dim 0; symmetric locus dim ~ 0)
+    K=4:  60/60 symmetric   (moduli dim 1; symmetric locus dim ~ 1)
+    K=5:   2/60 symmetric   (moduli dim 2; symmetric locus dim ~ 1)
+    K=6:   5/60 symmetric   (moduli dim 3; symmetric locus dim ~ 2)
+
+==========================================================================
+PART E -- the exact ORDER LAW at each direction, extracted from L1
+==========================================================================
+  Write H = prod_i L_i^(m_i), e_i = ord_(L_i) P_(n-1), f_i = ord_(L_i) Q_(m-1).
+  Lemma (exact):  ord_(L_i) Jac(F, H) = ord_(L_i)F + m_i - 1 + (extra),
+  with extra >= 1 exactly when  ord_(L_i)(F) * g = m_i * deg F.
+  Feeding this into L1 (Jac(P_n,Q_(m-1)) + Jac(P_(n-1),Q_m) = 0) gives
+
+        e_i - f_i  =  m_i (a - b)  +  eps_i - delta_i            (J2-LAW)
+
+  with delta_i = 0 unless e_i g = m_i (n-1), eps_i = 0 unless f_i g =
+  m_i (m-1).  COROLLARY (n > m, both Jacobians nonzero): e_i >= 1 for
+  every i, i.e. rad(H) divides P_(n-1) -- every direction at infinity
+  reappears in the SUB-leading form of the higher-degree component.
+
+   (n,m)=(  2,  2) a,b=(1,1) g= 2  e= 0 f= 0  d=0 eps=0  e-f=  0  law_rhs=  0  match=True
+   (n,m)=(  6,  6) a,b=(1,1) g= 6  e= 4 f= 4  d=0 eps=0  e-f=  0  law_rhs=  0  match=True
+   (n,m)=(  6,  2) a,b=(3,1) g= 2  e= 4 f= 0  d=0 eps=0  e-f=  4  law_rhs=  4  match=True
+   (n,m)=(  4,  2) a,b=(2,1) g= 2  e= 2 f= 0  d=0 eps=0  e-f=  2  law_rhs=  2  match=True
+   (n,m)=(  2,  2) a,b=(1,1) g= 2  e= 0 f= 0  d=0 eps=0  e-f=  0  law_rhs=  0  match=True
+   (n,m)=(  4,  2) a,b=(2,1) g= 2  e= 2 f= 0  d=0 eps=0  e-f=  2  law_rhs=  2  match=True
+   (n,m)=(  4,  4) a,b=(1,1) g= 4  e= 2 f= 2  d=0 eps=0  e-f=  0  law_rhs=  0  match=True
+  (J2-LAW) exact, ALL instances                      : 81/81
+  non-resonant instances with e-f = m_i(a-b)         : 81/81
+  order lemma (extra>=1 <=> ord*g = m_i*deg)         : 162/162
+
+  order lemma on forms with K >= 2 (the counterexample regime):
+    exact instances (K in [2, 3, 4, 5, 6]) : 1004/1004
+
+==========================================================================
+PART F -- leading-form anatomy of actual repo objects
+==========================================================================
+  THM-1300 map: det JF = -2   (expected -2)
+    deg F1 = 7, top form = x**3*y**3*z
+    deg F2 = 6, top form = 3*x**3*y**2*z
+    deg F3 = 4, top form = -x**3*z
+    det of the top-form Jacobian = 0   (L0 analogue: 0)
+    gcd of the three top forms   = x**3*z
+    cofactors                    = y**3, 3*y**2, -1
+    --> all three leading forms are C[y]-multiples of the SINGLE form
+        x^3 z: the dim-3 analogue of P_n = cH^a, Q_m = c'H^b.
+    --> the direction divisor at infinity (the gcd) is  x^3 * z^1  :
+        K = 2 distinct components, multiplicity vector (3,1).
+    generic-line restriction = two-cluster profile (mults 3,1);
+    circuit sign words over a scan of the ratio q/p:
+      q/p =       2 : word   --  sign changes 0
+      q/p =       3 : word   --  sign changes 0
+      q/p =       5 : word   --  sign changes 0
+      q/p =      10 : word   --  sign changes 0
+      q/p =     100 : word   --  sign changes 0
+      q/p =     1/2 : word   ++  sign changes 0
+      q/p =     1/5 : word   ++  sign changes 0
+      q/p =   1/100 : word   ++  sign changes 0
+      q/p =     7/3 : word   --  sign changes 0
+      q/p =      -2 : word   -+  sign changes 1
+    observed max alternation = 1;  THM-3004 cap 2K-3 = 1
+
+  homogeneous Keller family (jc2_resonance_dictionary_leadingform_S107):
+    F = I + H, H homogeneous of degree d, Keller <=> H = c(bx-ay)^d (a,b)
+    (a,b,c,d)=(1,2,1,3): Jac={(0, 0): Fraction(1, 1)}  (n,m)=(3,3)  g=3 (a,b)=(1,1)  K=1  mults=[3]
+    (a,b,c,d)=(2,-1,3,4): Jac={(0, 0): Fraction(1, 1)}  (n,m)=(4,4)  g=4 (a,b)=(1,1)  K=1  mults=[4]
+    (a,b,c,d)=(1,1,1,5): Jac={(0, 0): Fraction(1, 1)}  (n,m)=(5,5)  g=5 (a,b)=(1,1)  K=1  mults=[5]
+    --> K=1 throughout, as PART A predicts (shears are automorphisms).
+
+  repo JC(2) degree-pair lattice (jc2_degree_lattice_hyp9070 / THM-2823):
+    a counterexample needs a,b >= 2 coprime (L2), so g = gcd(n,m) >= 2
+    and deg H = g >= 2, hence 1 <= K <= g.  Automorphisms sit in K=1.
+    (n,m)=(178,288): g=  2 (a,b)=( 89,144) coprime=True  cf(a/b)=[0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]  1<=K<=2
+    (n,m)=(16,24): g=  8 (a,b)=(  2,  3) coprime=True  cf(a/b)=[0, 1, 2]  1<=K<=8
+    (n,m)=(26,39): g= 13 (a,b)=(  2,  3) coprime=True  cf(a/b)=[0, 1, 2]  1<=K<=13
+    (n,m)=(55,89): g=  1 (a,b)=( 55, 89) coprime=True  cf(a/b)=[0, 1, 1, 1, 1, 1, 1, 1, 1, 2]  1<=K<=1
+    (n,m)=(64,96): g= 32 (a,b)=(  2,  3) coprime=True  cf(a/b)=[0, 1, 2]  1<=K<=32
+
+==========================================================================
+SUMMARY
+==========================================================================
+  A automorphism census K=1              True
+  A induction step                       True
+  B R==1 <=> K==1                        True
+  C THM-3003 over C + swap=reversal      True
+  D involutive-symmetry criterion        True
+  E order law from L1                    True
+  F repo object anatomy                  True
+
+  ALL: True

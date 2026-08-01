@@ -9,6 +9,165 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-340 (2026-08-01, THM-1254 Lean full-invoice consumer) -- integer tooth addresses were generalized to rationals across a discrete gap step
+
+- **What was done:**
+  `LRCCoherentBlockerChronology.binary_speed_descent_same_edge_full_invoice`
+  typed the carrier address `c`, gap address `k`, and binary relative digit
+  `delta` as rationals.  Its reflected branch then tried to infer
+  `0<=c-k-delta` from `0<=k<c` and `delta in {0,1}`.  The paper theorem and
+  the preceding Lean address lemmas all use integer tooth addresses.
+- **Why it was wrong / minimal witness:** over the rationals take
+  `(c,k,delta)=(1/2,0,1)`, marked positions `(a,aNext)=(0,1)`, and reflected
+  data `n0R=nrR=DeltaR=s0R=1`, `residualR=1/2`.  Complete the unused original
+  data by `n0=nr=Delta=s0=1`, `residual=2`.  Then every identity and positivity
+  hypothesis holds, with the reflected identity following from
+  `residualR=1+1*(1/2-0-1)`, but the asserted invoice would require
+  `1<=1/2`.  The original disjunct is unavailable because `aNext<a` is false.
+  Thus the theorem statement itself, not merely its attempted tactic proof,
+  was false at the generalized rational type.
+- **Exact repair / strongest survivor:** only `c,k,delta` in the full-invoice
+  consumer are restored to `Int`; their two nonnegative factors are then cast
+  into the rational residual identities.  All speeds, drifts, and residuals
+  remain rational.  There are no downstream calls to the theorem, direct Lean
+  elaboration passes, and its axiom report is exactly within
+  `{propext, Classical.choice, Quot.sound}`.  THM-1254's paper statement and
+  mathematical consequence are unchanged.
+- **Rule:** when a proof uses `k<c => k+1<=c`, the discreteness is a load-bearing
+  hypothesis.  Keep addresses in `Int` (or state the unit-gap hypothesis
+  explicitly) until after that step; casting an address identity into a field
+  does not license field-typing its order argument.
+
+## MISTAKE-341 (2026-08-01, THM-3001 promotion audit) -- an asymptotic two-end expansion was read as an exact finite curvature sign
+
+- **What was assumed:** from
+  `log(R_k/R_(k-1))=C(mu_d)d^-2+O(d^-3)` and its reversed analogue, the
+  candidate asserted the finite-degree necessary screen
+  `C(mu_d)>=0>=C(mu_d*)`.  It then said any positive reciprocal curvature at
+  one width refutes global no-return.  The same section slid from the proved
+  conclusion "the ratio sequence is constant" to Newton equality `R_k=1`.
+- **First failed implication / sharp hostile:** multiplying a nonnegative
+  circuit by `d^2` gives only `C(mu_d)>=-O(1/d)`; at the other end it gives
+  `C(mu_d*)<=O(1/d)`.  A curvature of size `1/(2d)` can be positive while an
+  allowed `d^-3` remainder keeps the reversed circuit nonnegative.  Separately,
+  the positive coefficient polynomial with normalized coefficients
+  `h_k=2^(-k(k-1)/2)` has the constant ratio `R_k=2`, so a constant ratio need
+  not mean equality in every Newton inequality.  Constant-ratio and
+  Newton-equality are different conclusions; the former is all that the
+  reversal-closed class argument supplies.
+- **Exact repair / strongest survivor:** audited THM-3001 now states the
+  quantitative screen and only concludes `liminf C(mu_d)>=0` and
+  `limsup C(mu_d*)<=0`, or exact limiting signs under a fixed margin.  A
+  reciprocal curvature bounded below by a positive constant still refutes
+  eventual no-return.  The audit also proved the exact converse fixed-locus
+  law: ratio palindromy is equivalent to
+  `N*(x)=A^-1 N(x/B)`, its circuit is antipalindromic, and every odd-degree
+  reversal-equivariant path hits the central circuit wall.
+- **Rule:** an `O(d^(-r-1))` remainder leaves an `O(1/d)` ambiguity after
+  rescaling the leading invariant.  State finite signs only with a remainder
+  bound or a fixed margin; otherwise state liminf/limsup.  Do not silently
+  upgrade a constant Newton-ratio sequence to the equality sequence `R=1`.
+
+## MISTAKE-342 (2026-08-01, THM-3030 hostile audit) -- finite slot fitting was promoted as an all-order law, and its next test was assigned to the terminal slot
+
+- **What was assumed:** the `j<=8` corner tables were said to prove the unique
+  all-order odd-slot sign/constant laws.  The canonical companion also described
+  two disjoint interpolation grids and out-of-sample checks that it never runs,
+  and the theorem named `P_9` as the next test of `c_5`.
+- **First failed implication / evidence defect:** finitely many values never
+  uniquely determine an unrestricted sequence.  The current script only reloads
+  frozen tables; neither grid engine nor its referenced pickle is stored.  More
+  sharply, `c_m` occupies slot `k=2m-1` under the explicit hypothesis `k<j`.
+  For `m=5`, `k=9` is the exceptional terminal slot of `P_9`, so it supplies no
+  test at all; the first nonterminal occurrence is `P_10`.
+- **Exact repair / strongest survivor:** audited THM-3030 is scoped
+  `FINITE-EXACT TABLE-INTERNAL` through `j=8`.  A new independent companion
+  checks all eight table hashes, `48` visible odd slots, `36` even-zero slots,
+  and the corrected `(-1)^(j+m)` sign.  It also discovers the exact finite
+  identity
+  `(-1)^(j-1)jC_j=46 sum_(s=1)^(M-1)s^j+20M^j+K_j`, so Faulhaber proves on the
+  visible range `c_m^C=46|B_(2m)|/(2m)!`.  This closes the observed denominators
+  `6,360,15120,604800` without pretending to prove the continuation.
+- **New decisive tests:** the Bernoulli continuation preregisters
+  `c_5^C=23/23950080` at `P_10`.  At `P_12` it predicts
+  `c_6^C=15893/653837184000`, with `15893=23*691` from
+  `B_12=-691/2730`; this is the first test that separates the Bernoulli law from
+  the observed reduced-numerator-`23` extrapolation.
+- **Rule:** distinguish an exact finite atlas from an all-order theorem; keep
+  reported build controls separate from executable evidence; and compute the
+  first legal index from every strict slot inequality before advertising the
+  next experiment.
+
+## MISTAKE-339 (2026-08-01, pre-promotion THM-3000/3003 audit) -- the leading third jet was charged as a remainder and an asymptotic threshold was reported as an exact finite bound
+
+- **What was assumed:** the first THM-3000 candidate imposed
+  `m_j/m_1^j=o(d^(j-3))` starting at `j=3`, described uniform boundedness as
+  its `o(1)` case, and promoted a decimal finite-width threshold for the third
+  edge as though it were uniform on the whole `(x,z)` box. THM-3003 then
+  translated that invoice to the spread exponent
+  `kappa=o(d^(1-3/(k+1)))` and called `2/5` the fourth-edge exponent.
+- **Minimal witness / first failed implication:** `J_3` is part of the leading
+  curvature `3J_2^2-2J_3-d^(-2)`, so it is not a remainder jet. At the exact
+  box point
+  `(d,x,z,w)=(701,129/100,39/20,-149/20)`, the advertised decimal condition
+  applies, but the exact third-edge numerator is
+  `-114191274399994230172453/10000000000<0`. Downstream, for edge `k=4` the
+  old spread claim permits `kappa=d^(3/10)`, yet it does not imply the required
+  `q_4=o(d)`. This is realized inside the positive-coefficient universe by
+  `N_n(t)=((t+1)^2+n^6)^(n^10)`: here `d=2n^10`,
+  `kappa=sqrt(1+n^6)=o(d^(2/5))`, but
+  `q_4=1-6n^6+n^12` and `q_4/d~n^2/2`.
+- **Exact repair / strongest survivor:** the graded remainder condition starts
+  at `j=4`. Uniformly on curvature at least `923/10000`, the exact third-edge
+  formula gives
+  `G_3/d^6=C+6w/d+O((1+|w|/d)/d)`, so the safe boundary is the strict
+  `liminf w/d>-923/60000`; in particular `w=o(d)` suffices. A labelled-polymer
+  cluster expansion proves the all-order degree and first-occurrence law, so
+  `q_j=o(d^(j-3))` for `4<=j<=k+1` is correct. Under
+  `|q_j|<=kappa^j`, the binding exponent is always `j=4`, hence the single
+  sufficient condition is `kappa=o(d^(1/4))` for **every fixed edge**.
+  THM-3003 sharpens this with the cancellation tax
+  `chi=mean|r|/|mean r|`: bounded `chi` improves `1/4` to `1/3`.
+- **Rule:** separate jets already present in the leading invariant from true
+  remainder jets. Never turn a leading-order asymptotic threshold into a
+  finite non-strict bound without an exact monotone remainder estimate. When
+  collapsing a family of exponent inequalities to one spread exponent, take
+  the minimum over the actual jet range rather than substituting only its
+  largest index.
+
+## MISTAKE-338 (2026-07-30, pre-promotion THM-2980 audit) -- a positive-ray cutoff omitted zero and negative suffix rays
+
+- **What was assumed:** the first THM-2980 candidate enumerated only suffix
+  rays with positive scalar numerator. On three exceptional rows it split the
+  remaining universe into four positive low labels or one positive high label
+  plus three positive lows, then claimed this exhausted every packet.
+- **Minimal witnesses / first failed implication:** on
+  `E=(1,8,10,12,13,14)`, the packet
+  `(1612,1836,2004,2340,20384)` is scalar-admissible and the last numerator is
+  zero. On `E=(1,10,11,12,13,14)`, the same happens for
+  `(1612,1736,1800,2340,210210)`. A negative ray `A/z` increases toward zero
+  as height increases, so positive-ray monotone truncation reverses direction:
+  if three positive lows have strict surplus, every negative residue ray is
+  eventually admissible. The candidate also called the `z_1=1650` row
+  non-finite although its positive cutoff is exact and positive.
+- **Exact repair / strongest survivor:** the positive finite, zero-high, and
+  one-high censuses survive unchanged. Exact gaps show that a packet with one
+  nonpositive suffix must have exactly three positive companions, all below
+  the high floor. There are only `18+9` such low triples on the first two
+  rows and none on the third. The repaired verifier keeps every nonpositive
+  residue/unit. For first representatives `r<L`, the correct translated-band
+  capacity `kappa(d)=ceil(d/7)` closes all `3,861` fixed-carrier denominator
+  pairs; the `5,159,799` exact unit instances independently regress that
+  quotient. The smaller centered capacity is forbidden here by MISTAKE-334.
+  If `z>=L` and that carrier contains one complete cell, `a=z/L>=1` supplies
+  at least `floor(a)` full phase turns; the punctured safe image has mass at
+  least `(6/7)floor(a)/a>=3/7>25/91`, so every later height and residue zero
+  close.
+- **Rule:** before compactifying a rational ray, audit the sign. Positive
+  `A/z` decreases and admits an upper cutoff; negative `A/z` increases and
+  generally creates an infinite tail. A finite residue quotient must retain
+  zero and negative rays whenever the other slots already have strict scalar
+  surplus.
 ## MISTAKE-337 (2026-07-31, THM-3001 section 6 classifier census) -- a 42/42 census held the failing axis fixed
 
 - **What was done:** THM-3001 section 6 proposed that the two end curvatures
@@ -29,9 +188,10 @@ Format per entry:
   most two clusters (exhaustive, `936` configurations, zero violations).  The
   correct general law is a **cluster count**: `m` well-separated clusters give up
   to `2m-3` sign changes, attained for every `m<=6`.  THM-3001's proved
-  necessary condition `C(mu)>=0>=C(mu*)` survives; it is not sufficient, and no
-  bounded set of moments can be, since the sign-change count is a property of the
-  support structure.
+  quantitative necessary condition
+  `C(mu_d)>=-O(1/d), C(mu_d*)<=O(1/d)` survives (MISTAKE-341); it is not
+  sufficient, and no bounded set of moments can be, since the sign-change count
+  is a property of the support structure.
 - **AMENDMENT (same day, klein-S428, after an independent adversarial pass).**
   The diagnosis above is the *dominant* mechanism but not the only one, and one
   circulating description of it is too strong.  Exact split over the `51` failing

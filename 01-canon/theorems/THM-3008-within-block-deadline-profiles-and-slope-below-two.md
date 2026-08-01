@@ -26,7 +26,7 @@ related:
   - THM-2160
   - THM-2225
   - THM-2966  # spine normal form (across shells); this is the within-shell dual
-  - THM-2996
+  - THM-3032
   - HYP-9061
 external:
   - "Elliot Glazer, American Mathematical Monthly Problem 12592 (2026)."
@@ -125,7 +125,7 @@ m=32   T(n), n=32..63  = 50,51,53,55,56,58,59,61,62,64,64,...,64
 ```
 
 The `m = 4` row agrees with the exhaustive enumeration of all `1036800`
-shell-balanced `m=4` rules (THM-2996 sec 4), including the infeasibility of
+shell-balanced `m=4` rules (THM-3032 sec 4), including the infeasibility of
 `T = (6,6,7,8)`; this validates the normal form against ground truth.
 
 Values are exact upper bounds: each was produced with HiGHS and then the
@@ -146,7 +146,7 @@ Minimality below the stated value is solver-certified only for `m <= 8`.
    ```
 
    versus `2n`, `max(2,2n-1)`, `max(n+1,2n-2)` for the classical schemes and
-   THM-2996. The repeated claim that "every known rule has `C = 2`" is
+   THM-3032. The repeated claim that "every known rule has `C = 2`" is
    therefore superseded: the classical schemes simply never optimized the
    within-block profile.
 2. **THM-3007 does not imply slope 2.** Block ratio `>= 2` (THM-3007) and

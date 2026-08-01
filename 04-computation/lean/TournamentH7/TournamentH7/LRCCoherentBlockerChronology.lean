@@ -108,15 +108,17 @@ paper topology supplies a binary speed-descent edge and distinct marked
 positions; according to their order, either the original or reflected mixed
 residual pays its entire strictly positive chronological drift. -/
 theorem binary_speed_descent_same_edge_full_invoice
-    {c k delta residual residualR n₀ nᵣ Delta s₀
-      n₀R nᵣR DeltaR s₀R : ℚ}
+    {c k delta : ℤ}
+    {residual residualR n₀ nᵣ Delta s₀ n₀R nᵣR DeltaR s₀R : ℚ}
     {a aNext : ℤ}
     (hk : 0 ≤ k) (hkc : k < c)
     (hbinary : delta = 0 ∨ delta = 1)
     (hne : aNext ≠ a)
-    (hidentity : residual = n₀ * nᵣ * Delta + s₀ * (k + delta))
+    (hidentity :
+      residual = n₀ * nᵣ * Delta + s₀ * ((k : ℚ) + (delta : ℚ)))
     (hidentityR :
-      residualR = n₀R * nᵣR * DeltaR + s₀R * (c - k - delta))
+      residualR = n₀R * nᵣR * DeltaR +
+        s₀R * ((c : ℚ) - (k : ℚ) - (delta : ℚ)))
     (hn₀ : 0 < n₀) (hnᵣ : 0 < nᵣ) (hDelta : 0 < Delta)
     (hs₀ : 0 ≤ s₀)
     (hn₀R : 0 < n₀R) (hnᵣR : 0 < nᵣR) (hDeltaR : 0 < DeltaR)
@@ -126,8 +128,14 @@ theorem binary_speed_descent_same_edge_full_invoice
     (a < aNext ∧ 0 < n₀R * nᵣR * DeltaR ∧
       n₀R * nᵣR * DeltaR ≤ residualR) := by
   have hpos : aNext < a ∨ a < aNext := by omega
-  have hfactors : 0 ≤ k + delta ∧ 0 ≤ c - k - delta := by
-    rcases hbinary with rfl | rfl <;> constructor <;> linarith
+  have hfactorsZ : 0 ≤ k + delta ∧ 0 ≤ c - k - delta :=
+    binary_speed_descent_factors c k delta hk hkc hbinary
+  have hfactors :
+      0 ≤ (k : ℚ) + (delta : ℚ) ∧
+        0 ≤ (c : ℚ) - (k : ℚ) - (delta : ℚ) := by
+    constructor
+    · exact_mod_cast hfactorsZ.1
+    · exact_mod_cast hfactorsZ.2
   rcases hpos with hdown | hup
   · left
     refine ⟨hdown, ?_⟩

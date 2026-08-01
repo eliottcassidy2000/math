@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — 2026-07-30.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
+**Rolling state — 2026-08-01.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -25,14 +25,14 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`.  THM-2980/2995 and THM-2981 give `k=2,3` caps `1579/246`; aligned `k>=4` and the common-level reflected diagonal are empty.
+Direct frontier: `<=6`.  THM-2980/2995 and THM-2981/3033 give `k=2,3` caps `1579/243`; aligned `k>=4` and the common-level reflected diagonal are empty.
 The remaining censuses, reflected wedge, `k=0`, rung, and LRC are open; all displayed ledgers are necessary states, not physical covers.
 
 For `k=2`, atlases audit `300,300` body-height rows and join `94` candidates to seventeen component referees, giving cap `1579`.
-For `k=3`, THM-2981 closes `423` rows at `z=270..247`, giving cap `246` and ledger `375,251`; `z=246` has `194` rows.
+For `k=3`, THM-2981/3033 give cap `243` and ledger `375,051`; `151` below-floor rows at `z=243` remain open.
 
-For reflected `k=1`, signed difference graphs close spread at most five on every body; threshold blocks close arbitrary levels on `2,421`, and the reverse-ladder cone closes every body for `D>=6,m>=3D`.
-The open reflected region is confined to `582` bodies in the wedge `D>=6,m<3D`.
+For reflected `k=1`, difference graphs close `D<=5`; threshold blocks close arbitrary levels on `2,442`, the median two-star closes the distinct box `1..9`, and the cone closes `m>=3D`.
+The open wedge `D>=6,m<3D` has `561` bodies, outside that finite box.
 Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams but not semantic-root identification (kernel `28,393`); THM-2545/2549 give Hall and chronology gates,
 still old-target neutral; THM-2547 is only an external control after
@@ -213,7 +213,7 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   `14`; THM-2955/2957/2959 close first-gap `15<=M<=24` by modular gates.
   THM-2960 gives Smith walls through `24` (two charts through `20`);
   THM-2964 makes the pure ladder universal; THM-2963 kills next-prime gates;
-  THM-2969/2973/2978 prove positive PF2 wall-stripped cores for `6<=M<=32`, including quartic wall `(31,25)`; width `>=33` is outside this finite atlas.
+  THM-2969/73/78/82 give strict ULC through M34. Audited THM-2997 has `R2>R1` at M34, fails M33, and is conditional beyond 34 on encoded wall; THM-3000/3003 are invoices.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent

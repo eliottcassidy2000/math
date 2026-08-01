@@ -179,7 +179,7 @@ def report_B():
     ok = sp.simplify(lhs - rhs) == 0
     print("  VERDICT B:", "IDENTITY HOLDS" if ok else "FAILED")
     print("  => curvature > 0  <=>  3 kappa_2^2 > 2 kappa_1 kappa_3.")
-    print("     equal roots (kappa_2=kappa_3=0) is the exact zero of the curvature;")
+    print("     equal roots (kappa_2=kappa_3=0) give one exact zero of the curvature;")
     print("     symmetric root measures (kappa_3=0) give curvature 3 kappa_2^2/kappa_1^4 >= 0.")
     return ok
 
@@ -272,6 +272,40 @@ def exact_edges():
 
 
 # --------------------------------------------------------------------------
+# H.  regression for the repaired finite/asymptotic transfer boundary
+# --------------------------------------------------------------------------
+def threshold_regression(G3, symbols):
+    x, z, w, _u = symbols
+    print()
+    print("=" * 74)
+    print("H. THRESHOLD REGRESSION (exact hostile + strict asymptotic repair)")
+    print("=" * 74)
+
+    witness = sp.factor(G3.subs({d: 701,
+                                 x: sp.Rational(129, 100),
+                                 z: sp.Rational(39, 20),
+                                 w: -sp.Rational(149, 20)}))
+    expected = -sp.Rational(114191274399994230172453, 10000000000)
+    hostile_ok = witness == expected and witness < 0
+    print("  exact old-boundary hostile:")
+    print("    (d,x,z,w) = (701,129/100,39/20,-149/20)")
+    print("    G_3 =", witness)
+    print("    negative and exact expected value?", hostile_ok)
+
+    beta = sp.symbols('beta', real=True)
+    scaled_limit = sp.factor(sp.limit(G3.subs(w, beta * d) / d ** 6,
+                                             d, sp.oo))
+    expected_limit = 3 * x ** 2 - 2 * z - 1 + 6 * beta
+    asymptotic_ok = sp.simplify(scaled_limit - expected_limit) == 0
+    print("  lim_{d->infinity} G_3(d,x,z,beta*d)/d^6 =", scaled_limit)
+    print("    equals 3*x^2-2*z-1+6*beta?", asymptotic_ok)
+    print("  => on curvature >= 923/10000, the safe uniform condition is strict:")
+    print("     liminf w/d > -923/60000 (and w=o(d) is sufficient).")
+    print("  VERDICT H:", "REPAIR CONFIRMED" if hostile_ok and asymptotic_ok else "FAILED")
+    return hostile_ok and asymptotic_ok
+
+
+# --------------------------------------------------------------------------
 # F.  the hostile: unbounded fourth jet flips the third edge only
 # --------------------------------------------------------------------------
 def exact_ratios(coeffs, dd):
@@ -332,18 +366,20 @@ def hostile(alpha_num=1, alpha_den=1, xval=Fr(1), zval=Fr(1, 2), ds=(200, 400, 8
     print("  VERDICT F:", "HOSTILE CONFIRMED -- edge 2 rises, edge 3 falls, all d"
           if all_flip else "NOT A HOSTILE at these d")
     print("  => 'bounded higher log jets' is INDISPENSABLE, and the sharp condition")
-    print("     is GRADED: m_j / m_1^j = o(d^{j-3}) for 3 <= j <= k+1, not uniform")
-    print("     boundedness.  At j=4 the threshold w ~ d is attained exactly.")
+    print("     is GRADED: m_j / m_1^j = o(d^{j-3}) for 4 <= j <= k+1;")
+    print("     j=3 belongs to the leading curvature and is not a remainder condition")
+    print("     at all.  Uniform boundedness is sufficient but stronger than necessary.")
+    print("     At j=4 the threshold w ~ d is attained exactly.")
     return all_flip
 
 
 # --------------------------------------------------------------------------
-# positive control: bounded jets -> universality actually predicts the sign
+# real-rooted sign controls, including one deliberately unbounded-spread case
 # --------------------------------------------------------------------------
 def positive_control():
     print()
     print("=" * 74)
-    print("POSITIVE CONTROL: real-rooted families with bounded jets")
+    print("POSITIVE CONTROL: real-rooted sign controls (bounded and unbounded spread)")
     print("=" * 74)
     import math
     print("  N(n) = prod_{i=1}^{d} (n + r_i);  curvature predicted from the roots.")
@@ -458,14 +494,15 @@ def main():
     b = report_B()
     c = report_C()
     g = report_G(exp)
-    e, _, _ = exact_edges()
+    e, G3, edge_symbols = exact_edges()
+    h = threshold_regression(G3, edge_symbols)
     p = positive_control()
     # hostile: curvature +1/2 > 0 but 6*alpha = 3 > 1/2
     f = hostile(alpha_num=1, alpha_den=2, xval=Fr(1), zval=Fr(1, 4))
     print()
     print("=" * 74)
-    print("SUMMARY  A=%s  B=%s  C=%s  D/G=%s  E=%s  positive-control=%s  F=%s"
-          % (a, b, c, g, e, p, f))
+    print("SUMMARY  A=%s  B=%s  C=%s  D/G=%s  E=%s  H=%s  positive-control=%s  F=%s"
+          % (a, b, c, g, e, h, p, f))
     print("=" * 74)
 
 

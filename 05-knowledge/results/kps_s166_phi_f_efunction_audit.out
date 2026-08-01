@@ -1,0 +1,180 @@
+==============================================================================
+SECTION 1.  Phi_f(t) = sum_m L(f^m) t^m/m!  and the counterexample -> constant
+==============================================================================
+
+(1a) polar identity  L(f^m) = (d m + 1)! * int_0^1 g^m du,  g = f|_(u,1-u):
+  [PASS] exact for m<=6   [d=1  f = 2x1-3x2]
+  [PASS] exact for m<=6   [d=2  f = x1^2-5x1x2+7x2^2]
+        int_0^1 g^m du, m=0..5 : ['1', '11/6', '73/10', '5069/140', '124009/630', '1041253/924']
+        L(f^m),        m=0..5 : ['1', '11', '876', '182484', '71429184', '44982129600']
+  [PASS] exact for m<=6   [d=3  f = x1^3+2x1^2x2-x2^3]
+  [PASS] exact for m<=6   [d=2  f = x1^2+I x1x2-x2^2]
+
+(1b) Phi_f(t) = int_{R_+^2} e^{tf-|x|}dx: termwise coefficient of t^m is
+     L(f^m)/m!, identical to the series definition (exact, m<=6):
+  [PASS] coefficientwise identity   [d=1  f = 2x1-3x2]
+  [PASS] coefficientwise identity   [d=2  f = x1^2-5x1x2+7x2^2]
+  [PASS] coefficientwise identity   [d=3  f = x1^3+2x1^2x2-x2^3]
+
+(1c) a FC(2) counterexample forces Phi_f == 1 (exact, n=2):
+  [PASS] L(1) = 0! * 0! = 1 for n=2
+        if L(f^m)=0 for all m>=1 then Phi_f(t) = L(1) = 1 identically.
+        Moment system, degree 2 g = c0+c1 u+c2 u^2 (all coefficients RATIONAL):
+          m=1:  c0 + c1/2 + c2/3
+          m=2:  c0**2 + c0*c1 + 2*c0*c2/3 + c1**2/3 + c1*c2/2 + c2**2/5
+          m=3:  c0**3 + 3*c0**2*c1/2 + c0**2*c2 + c0*c1**2 + 3*c0*c1*c2/2 + 3*c0*c2**2/5 + c1**3/4 + 3*c1**2*c2/5 + c1*c2**2/2 + c2**3/7
+        Groebner basis of the moment ideal: [c0 + c1/2 + c2/3, c1**2 + 2*c1*c2 + 16*c2**2/15, c2**3]
+  [PASS] degree-2 moment ideal has radical (c0,c1,c2): only g=0   last generator = c2**3
+  [PASS] degree-3 moment ideal likewise forces g=0   last generator = c3**6
+
+==============================================================================
+SECTION 2.  Is Phi_f an E-FUNCTION?  (the kps-S166 claim)   VERDICT: NO
+==============================================================================
+
+E-function (Siegel/Shidlovskii, strict): F(z) = sum_m a_m z^m/m! with
+ (E1) a_m in a number field K;  (E2) |sigma(a_m)| = O(C^m) for all embeddings;
+ (E3) den(a_0..a_m) = O(C^m);   (E4) F holonomic over Qbar(z).
+(E2)+(E3) force F ENTIRE OF ORDER <= 1.  For Phi_f the a_m are
+     a_m = L(f^m) = (d m + n - 1)! * mu_m ,     mu_m = int_Delta g^m dA.
+
+(2a) exact a_m = L(f^m) and the consecutive ratios a_m/a_(m-1)
+     ((E2) demands these stay BOUNDED):
+      [d=1  f = 2x1-3x2]  a_m/a_(m-1), m=1..9  ~ [1.0, 14.0, 5.57, 16.92, 12.09, 20.89, 19.06, 25.62, 25.86]
+  [PASS] d=1: ratios grow ~ linearly in m (already fails (E2))  [d=1  f = 2x1-3x2]   ratio_9/ratio_3 = 4.641
+      [d=2  f = x1^2-5x1x2+7x2^2]  a_m/a_(m-1), m=1..9  ~ [11.0, 79.64, 208.32, 391.43, 629.74, 923.83, 1273.85, 1679.86, 2141.86]
+  [PASS] d=2: ratios blow up like (dm)^d -> (E2) FAILS  [d=2  f = x1^2-5x1x2+7x2^2]   ratio_9/ratio_3 = 10.28
+      [d=3  f = x1^3+2x1^2x2-x2^3]  a_m/a_(m-1), m=1..9  ~ [4.0, 462.0, 210.39, 3686.22, 1163.89, 12318.07, 3486.37, 28972.16, 7813.54]
+  [PASS] d=3: ratios blow up like (dm)^d -> (E2) FAILS  [d=3  f = x1^3+2x1^2x2-x2^3]   ratio_9/ratio_3 = 37.14
+
+(2b) radius of convergence, via the SHARP GEVREY LAW.
+     a_m/m! = (dm+n-1)!/m! * mu_m, and Stirling gives
+        |a_m/m!|^(1/m)  ~  K * m^(d-1),   K = d^d * max|g| / e^(d-1).
+     So the diagnostic ratio  R := |a_30/30!|^(1/30) / |a_15/15!|^(1/15)
+     must converge to 2^(d-1):  1 for d=1 (radius > 0), 2 for d=2, 4 for d=3.
+      [d=1  f = 2x1-3x2]  |a_m/m!|^(1/m) at m=5,10,15,20,30 : [2.6593, 2.8539, 2.8993, 2.9244, 2.9494]
+                R = 1.0173,  predicted 2^(d-1) = 1.0000
+  [PASS] d=1: Gevrey law R = 2^(d-1) confirmed  [d=1  f = 2x1-3x2]   radius > 0 but FINITE (pole)
+      [d=2  f = x1^2-5x1x2+7x2^2]  |a_m/m!|^(1/m) at m=5,10,15,20,30 : [51.8527, 103.3929, 154.9085, 206.4179, 309.4305]
+                R = 1.9975,  predicted 2^(d-1) = 2.0000
+  [PASS] d=2: Gevrey law R = 2^(d-1) confirmed  [d=2  f = x1^2-5x1x2+7x2^2]   => radius of convergence 0
+      [d=3  f = x1^3+2x1^2x2-x2^3]  |a_m/m!|^(1/m) at m=5,10,15,20,30 : [106.8089, 436.5505, 881.2757, 1602.9862, 3500.4957]
+                R = 3.9721,  predicted 2^(d-1) = 4.0000
+  [PASS] d=3: Gevrey law R = 2^(d-1) confirmed  [d=3  f = x1^3+2x1^2x2-x2^3]   => radius of convergence 0
+
+(2c) the cleanest witnesses (exact):
+  [PASS] n=1, f=x1 (d=1): Phi_f(t) = 1/(1-t) -- RATIONAL with a pole at t=1   Phi_f = -1/(t - 1)
+     n=1, f=x1^2 (d=2): a_m = (2m)!, a_m/m! = (2m)!/m! = ['1', '2', '12', '120', '1680', '30240', '665280', '17297280']
+     ((2m)!/m!)^(1/m) at m=5,10,15,20,26 : [7.873, 15.228, 22.585, 29.942, 38.77]
+     ((2m)!/m!)^(1/m) / m  at the same m  : [1.5745, 1.5228, 1.5056, 1.4971, 1.4912]  -> 4/e = 1.4715
+  [PASS] (2m)!/m! obeys ^(1/m) ~ (4/e) m  => radius 0, Gevrey order 1   measured 1.49117 vs 4/e = 1.47152
+
+     For d >= 2 the DEFINING INTEGRAL also diverges: on the ray x = r u the
+     integrand is e^{t r^d g(u) - r}, and whenever Re(t g(u)) > 0 for some u in
+     Delta the exponent -> +inf as r -> inf.  So Phi_f is not a function at all
+     for such t -- only a formal (Gevrey-(d-1)) series.
+
+     VERDICT: kps-S166's "Phi_f ... is exactly an E-function rigidity" is FALSE.
+     Phi_f is not entire, hence not an E-function, at ANY degree d >= 1.
+
+==============================================================================
+SECTION 3.  The object that IS an E-function: Psi_g(t) = int_Delta e^{tg}dA
+==============================================================================
+
+Psi_g(t) = sum_m mu_m t^m/m!.  Then a_m = mu_m and:
+ (E1) mu_m in K whenever g in K[u].                                     trivial
+ (E2) |mu_m| <= Area(Delta) (max_Delta|g|)^m = O(C^m).                  elementary
+ (E3) g in (1/N) O_K[u] => mu_m in (1/(N^m lcm(1..dm+1))) O_K = O(C^m). elementary
+ (E4) holonomic -- Section 5.
+Also |Psi_g(t)| <= Area * e^{|t| max|g|}: ORDER 1, TYPE max_Delta |g|.
+
+(3a) (E3) exact denominators for g = u^2-5u+7 (want lcm(den)^(1/m) bounded):
+     den(mu_m)          = ['1', '6', '10', '140', '630', '924', '4004', '17160', '24310', '923780']
+     lcm(den(mu_0..m))  = ['1', '6', '30', '420', '1260', '13860', '180180', '360360']
+     lcm^(1/m), m=1..15 = [6.0, 5.4772, 7.4889, 5.9579, 6.7352, 7.5154, 6.2204, 7.0534, 7.8744, 6.4061, 7.1955, 6.9805, 6.5414, 7.2756, 8.3927]
+  [PASS] (E3) holds: lcm^(1/m) stays bounded (geometric denominators)   max over m>=5 is 8.3927
+
+(3b) (E2) exact |mu_m|^(1/m) vs max_[0,1]|g| = 7:
+     |mu_m|^(1/m), m=1..15 = [4.83333, 4.96991, 5.09925, 5.21888, 5.32771, 5.42573, 5.51359, 5.59226, 5.66278, 5.72618, 5.78339, 5.83522, 5.88237, 5.92544, 5.96493]
+  [PASS] (E2) holds: |mu_m|^(1/m) <= max_[0,1]|g| = 7
+     The bound is approached only logarithmically because the max sits at the
+     ENDPOINT u=0 (g(0)=7, g'(0)=-5): Laplace gives mu_m ~ 7^(m+1)/(5m), so
+     |mu_m|^(1/m) = 7 * exp(-log(5m/7)/m) -> 7 like 1 - log m/m.  Sharp test:
+     mu_m * 5m / 7^(m+1), m=1..15 = [0.4932, 0.72012, 0.82836, 0.88277, 0.91213, 0.92936, 0.94043, 0.94814, 0.95389, 0.95838, 0.96203, 0.96507, 0.96765, 0.96987, 0.9718]
+  [PASS] (E2) type is exactly 7: mu_m * 5m/7^(m+1) -> 1 (endpoint Laplace law)   m=15 value 0.971799, m=5 value 0.912128
+
+(3c) contrast, same test applied to Phi_f's coefficients: (E2) fails outright.
+
+==============================================================================
+SECTION 4.  klein-S428 sec 8: 'D(z)=int_0^z e^{u^2}du IS an E-function'
+==============================================================================
+
+klein-S428 writes: "D IS an E-function: D(z)=sum_n z^(2n+1)/(n!(2n+1)), so the
+coefficient of z^m at m=2n+1, times m!, is (2n)!/n! -- an integer of moderate
+growth."  The identity is right; "moderate growth" is not.  (E2) demands
+|a_m| = O(C^m):
+
+     a_(2n+1) = (2n)!/n! = ['1', '2', '12', '120', '1680', '30240', '665280', '17297280', '518918400']
+     |a_m|^(1/m) at m=3,11,21,41,61,81 = [1.2599, 2.5546, 3.6573, 5.2497, 6.4777, 7.5135]
+     |a_m|^(1/m) / sqrt(m) at the same m = [0.72742, 0.77025, 0.79809, 0.81987, 0.82938, 0.83483]  -> sqrt(2/e) = 0.8578
+  [PASS] (2n)!/n! FAILS (E2): |a_m|^(1/m) ~ sqrt(2m/e) -> infinity, NOT O(1)   |a_81|^(1/81)/sqrt(81) = 0.83483; ratio to m=21 = 2.054
+
+     Independent confirmation: D(iy) = i*int_0^y e^{-(-1)v^2}... concretely
+     |D(iy)| ~ e^{y^2}/(2y), so D has ORDER 2 -- no order-2 entire function is an
+     E-function.  (Numeric check in kps_s166_efunction_numerics.py, N1.)
+
+     The CORRECT statement:  D(z) = z * M(z^2),  M(w) = 1F1(1/2;3/2;w)
+     = sum_n w^n/((2n+1) n!), whose a_n = 1/(2n+1) IS bounded.  M is the
+     E-function.  opus-S4's degree-2 transcendence proof uses M, not D, so that
+     proof stands; only klein-S428's sentence is wrong.
+
+  [PASS] M(w) has a_n = 1/(2n+1), bounded => (E2),(E3) hold
+  [PASS] D(z) = z * M(z^2) exactly (to z^23)
+(4a) PURE-POWER GENERALISATION (new): int_0^z e^{a u^k} du = z * M_k(a z^k),
+     M_k(w) = sum_n w^n/(n!(kn+1)) = 1F1(1/k; 1+1/k; w),  a_n = 1/(kn+1).
+  [PASS] k=2: int_0^z e^(a u^k)du = z*M_k(a z^k) and (1/k)_n/(1+1/k)_n=1/(kn+1) (n<=24)
+  [PASS] k=3: int_0^z e^(a u^k)du = z*M_k(a z^k) and (1/k)_n/(1+1/k)_n=1/(kn+1) (n<=24)
+  [PASS] k=4: int_0^z e^(a u^k)du = z*M_k(a z^k) and (1/k)_n/(1+1/k)_n=1/(kn+1) (n<=24)
+  [PASS] k=5: int_0^z e^(a u^k)du = z*M_k(a z^k) and (1/k)_n/(1+1/k)_n=1/(kn+1) (n<=24)
+  [PASS] k=6: int_0^z e^(a u^k)du = z*M_k(a z^k) and (1/k)_n/(1+1/k)_n=1/(kn+1) (n<=24)
+  [PASS] a_n = 1/(kn+1) bounded for all k => M_k is an E-function at EVERY degree k
+
+==============================================================================
+SECTION 5.  Holonomic ODEs in t
+==============================================================================
+
+(5a) deg g = 1:  g = a u + b.  Psi(t) = (e^{(a+b)t} - e^{bt})/(a t).
+     sympy: Piecewise(((-exp(b*t) + exp(t*(a + b)))/(a*t), Ne(a*t, 0)), (1, True))
+  [PASS] ODE (d/dt-(a+b))(d/dt-b)[a t Psi] = 0  => order 2 = d+1
+
+(5b) deg g = 2:  g = a u^2+b u+c,  alpha=g(1)=a+b+c, beta=g(0)=c.
+     Integration by parts gives the FIRST-ORDER inhomogeneous relation
+       4 a t Psi' + [2a + (b^2-4ac) t] Psi = (2a+b) e^{alpha t} - b e^{beta t}
+  [PASS] IBP relation exact to t^11, (a,b,c)=(1,-5,7)
+  [PASS] IBP relation exact to t^11, (a,b,c)=(2,3,-1)
+  [PASS] IBP relation exact to t^11, (a,b,c)=(1/3,-2/5,7/2)
+  [PASS] IBP relation exact to t^11, (a,b,c)=(1,0,0)
+  [PASS] IBP relation exact to t^11, (a,b,c)=(I,2,-3)
+     Applying (d/dt-alpha)(d/dt-beta) kills the RHS: ORDER-3 ODE. Check:
+  [PASS] order-3 poly-coefficient ODE annihilates Psi_g (t^0..t^14)
+
+(5c) general holonomy of Psi_g, and the ORDER = d+1 pattern.
+     M_k(t)=int_0^1 u^k e^{tg}du.  IBP: [u^k e^{tg}]_0^1 =
+       k M_(k-1) + t sum_j (j+1)c_(j+1) M_(k+j),  leading term t d c_d M_(k+d-1).
+     So span_K(t){1, e^{t g(0)}, e^{t g(1)}, M_0..M_(d-2)} is d/dt-stable of
+     dimension <= d+2, and Psi_g = M_0 is holonomic of order <= d+2.
+     Minimal order found by exact ansatz search over QQ(t):
+     (d = 1 is settled symbolically in (5a) above: order 2 = d+1.  The
+      connection-matrix basis only carries M_0..M_{d-2}, which is empty at
+      d = 1, so the cyclic-vector search below is run for d >= 2.)
+     The GENERIC order is d+1.  It DROPS on exactly two degeneracy loci:
+       (i)  g has a critical point AT an endpoint (g'(0)=0 or g'(1)=0), so the
+            boundary class E_0 or E_1 is absorbed by the de Rham part;
+       (ii) g = P o W is a COMPOSITION with W(0) = W(1) -- the Pakovich-
+            Muzychuk Composition Condition (THM-3018 sec 3d).
+     All three regimes are exhibited below.
+  [PASS] deg 2: u^2-5u+7: minimal ODE order over QQ(t) = 3 (= d+1 = 3); INDEPENDENTLY re-verified to t^40
+        p_i(t) = [-9*(7*t - 8), 6*(19*t - 11), 10 - 43*t, 4*t]
+  [PASS] deg 3: u^3-u+1: minimal ODE order over QQ(t) = 4 (= d+1 = 4); INDEPENDENTLY re-verified to t^39
+        p_i(t) = [23*t**2 - 119*t + 97, -100*t**2 + 389*t - 210, 158*t**2 - 405*t + 105, -27*t*(4*t - 5), 27*t**2]
+  [PASS] deg 4: u^4-3u+1: minimal ODE order over QQ(t) = 5 (= d+1 = 5); INDEPENDENTLY re-verified to t^38
+        p_i(t) = [-268409*t**7 - 308268*t**6 - 521386*t**5 - 339232*t**4 + 78804*t**3 + 199880*t**2 + 1440*t + 480, -2*(53376*t**7 - 271097*t**6 - 347194*t**5 - 474188*t**4 - 347900*t**3 - 112080*t**2 - 2160*t - 800), t*(375161*t**6 + 569772*t**5 + 702718*t**4 + 381328*t**3 - 136960*t**2 - 222960*t - 1600), 16*t**2*(4448*t**5 - 15792*t**4 - 24759*t**3 - 22932*t**2 - 5490*t + 4600), -128*t**3*(834*t**4 - 181*t**3 - 552*t**2 - 926*t - 520), 256*t**4*(139*t**3 + 132*t**2 + 106*t + 40)]

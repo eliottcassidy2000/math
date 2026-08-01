@@ -2,26 +2,30 @@
 id: THM-3030
 title: "The eighth resultant log-jet P_8, and closed forms for the corner-slice constants"
 status: >
-  VERIFIED-EXACT. P_8 is built: 4883 terms, degrees (M,U,V) = (16,32,16),
-  support b+2c <= 32, content c_8 = 2^28 * 3^11 * 5 * 7 = 1664338750341120,
-  sha256 bba6b4b9916a316c41b800a044861a15840820b6048133b754d85cfad78873ad.
-  Two DISJOINT tensor grids (no shared M, U or V) return identical polynomials
-  for every j=1..8, with 6 out-of-sample widths per grid and 0 coefficient
-  mismatches; the frozen THM-2997 digest cfb36557... and the THM-3013/3015
-  P_4..P_7 digests are all re-emitted byte-for-byte. eq(2) for the term count
-  holds at j=8 (4883 = 17^3 - 3*10). The corner-slice slot law is corrected:
-  the sign is (-1)^(j+m), NOT (-1)^(j+k) -- since k = 2m-1 the latter collapses
-  to (-1)^(j+1) and is right only for odd m, which is why the error survived to
-  j=7. With that correction all 24 pre-registered j=8 coefficients in slots
-  k=-1..6 CONFIRM. The new content is closed forms for the constant sequences
-  c_m = a_m/d_m, of which three of four pieces were confirmed OUT OF SAMPLE at
-  m=4: a_m^A = 3 + 44*16^(m-1) (predicted 180227, exact), a_m^E = 4 + 33*9^(m-1)
-  (predicted 24061, exact), a_m^C = 23 constant, and the slice ratios
-  d_m^A/d_m^C = 4^(2m-1), d_m^E/d_m^C = 3^(2m-1) (predicted 4^7, 3^7, both
-  exact). The one REFUTED guess is the base sequence: d_m^C = (3m)!/(2m-2)!
-  fits m=1,2,3 and predicts 665280 at m=4 where the truth is 604800 (ratio
-  11/10). d_m^C = 6, 360, 15120, 604800 is the single remaining gap.
+  FINITE-EXACT TABLE-INTERNAL (j<=8) + INDEPENDENTLY HOSTILE-AUDITED;
+  all-order continuation OPEN.  The frozen P_8 table has 4883 terms, degrees
+  (M,U,V)=(16,32,16), support b+2c<=32, content
+  2^28*3^11*5*7, and LF hash bba6b4b9....  Its historically reported two-grid
+  interpolation and out-of-sample build are NOT replayed by the canonical
+  companion and no build artifact is stored, so that provenance is reported,
+  not independently verified.  Direct table arithmetic verifies all visible
+  slot laws, repairs the odd-slot sign to (-1)^(j+m), and proves on j<=8 the
+  exact Faulhaber identity p_j=46 sum_(s<M)s^j+20M^j+K_j.  Consequently the
+  measured C-slice constants are 46|B_(2m)|/(2m)! for m=1..4, closing the
+  observed denominator sequence 6,360,15120,604800.  Extension to all m is a
+  conjecture.  P_10, not P_9, is its first new nonterminal test; P_12 would see
+  the first Bernoulli-numerator break through B_12=-691/2730.
 source: klein-S428
+audit: >
+  Independent hostile audit ACCEPTS the frozen-table claims after scope repair.
+  A dependency-free referee checks all eight table hashes and shapes, 48 visible
+  odd slots, 36 even-zero slots, the j=8 sign hostile, eight exact width
+  recurrences, and the Bernoulli-Faulhaber identity.  It identified three truth
+  boundaries recorded in MISTAKE-342: finite pattern uniqueness is not an
+  all-order proof; the advertised interpolation-grid/OOS controls are absent
+  from the executable companion; and P_9 cannot test c_5 because k=9 is its
+  exceptional terminal slot.  Primary and independent normal/-O/stored
+  transcripts byte-match.
 depends_on:
   - THM-3015
   - THM-3013
@@ -32,9 +36,19 @@ related:
   - THM-3006
 script: 04-computation/gmc_eighth_resultant_jet_and_the_corner_constant_laws_thm3030.py
 output: 05-knowledge/results/gmc_eighth_resultant_jet_and_the_corner_constant_laws_thm3030.out
+script_sha256: c730b9d6c49ff2909abd274b7413bc7f5957b9348bffb83b340ab1d1a93c70b6
+output_sha256: e32ee36076e26be2fde8eb0dc28b0c8c21a06f1ac8dca2601e8315eec640220c
+independent_script: 04-computation/gmc_eighth_resultant_jet_bernoulli_faulhaber_referee_thm3030.py
+independent_output: 05-knowledge/results/gmc_eighth_resultant_jet_bernoulli_faulhaber_referee_thm3030.out
+independent_script_sha256: 045282d09a255a55ccdb6a42af86948c88ed1e03115b926c3f0d72f83f807913
+independent_output_sha256: 1edb2bca1c15c686f8f4f86200ea36c2fdffb93d8966b44137f817df1229a96a
+hash_basis: LF-normalized bytes
 ---
 
 # THM-3030 -- `P_8` and the corner-slice constant closed forms
+
+**FINITE-EXACT TABLE-INTERNAL (`j<=8`) + INDEPENDENTLY HOSTILE-AUDITED;
+ALL-ORDER CONTINUATION OPEN.**
 
 ## 1. The jet
 
@@ -61,19 +75,21 @@ primes `<= j+1`, and at `j = 8` that is `{2,3,5,7}`.
 matching eq (2) of THM-3015, `|P_j| = (2j+1)^3 - 3(2j-2-floor(j/2)) - [j=3]`.
 At `j = 8`: `17^3 - 3*10 = 4913 - 30 = 4883`.
 
-### Controls
+### Controls and evidence boundary
 
-All four pass, and they are the reason this is `VERIFIED-EXACT` rather than
-merely computed:
+The canonical primary companion reproducibly checks the frozen tables: it
+re-emits THM-2997's `P_1,P_2,P_3` rows byte-for-byte, reproduces the
+THM-3013/3015 `P_4,...,P_7` digests, checks `P_8`'s shape and support, and
+replays every displayed corner coefficient.  The independent referee reads no
+primary code; it checks all eight table hashes and shapes directly.
 
-1. Grid `A` (`M=4..26`, `U=2..34`, `V=2..34` even) and grid `B` (`M=27..49`,
-   `U=35..67`, `V=36..68` even) share **no** `M`, `U` or `V` value, and return
-   **identical** polynomials for every `j = 1..8`.
-2. 6 out-of-sample widths per grid, **0** coefficient mismatches.
-3. The frozen THM-2997 `P_1,P_2,P_3` table is re-emitted byte-for-byte, digest
-   `cfb36557e1d54a0328a309375a948ace99c78e0688a54a014aef0906c1b90513`.
-4. The THM-3013 `P_4` and THM-3015 `P_5,P_6,P_7` content-1 digests are all
-   reproduced.
+The historical build report says that grid `A` (`M=4..26`, `U=2..34`,
+`V=2..34` even) and disjoint grid `B` (`M=27..49`, `U=35..67`, `V=36..68`
+even) returned identical jets and that six out-of-sample widths per grid had
+zero mismatches.  **Those grid computations are not present in either
+canonical script, and the referenced interpolation pickle is not stored.**
+They are therefore `REPORTED BUILD PROVENANCE`, not a reproducible control of
+this promotion.  The theorem's audited status is deliberately table-internal.
 
 ## 2. The slot law, corrected
 
@@ -89,7 +105,7 @@ outside the law's range):
    k even >= 2   [M^(j-k)] = 0
 ```
 
-**The correction.** THM-3015 recorded the odd-slot signs case by case
+**The finite correction.** THM-3015 recorded the odd-slot signs case by case
 (`(-1)^(j+1)` at `k=1`, `(-1)^j` at `k=3`, `(-1)^(j+1)` at `k=5`) without
 naming the pattern. The pattern is `(-1)^(j+m)`. Writing it as `(-1)^(j+k)` is
 wrong but *undetectably* wrong through `j = 7`: since `k = 2m-1`,
@@ -99,57 +115,103 @@ value reachable below `j = 8`, where it had already been recorded by hand. The
 error is only exposed by predicting rather than fitting.
 
 **All 24 pre-registered `j = 8` coefficients (3 slices x 8 slots `k = -1..6`)
-confirm**, listed in part D of the output.
+confirm**, listed in part D of the output.  Across all frozen tables the
+independent referee checks `16` visible odd slots per slice and `36` visible
+even-zero slots.  Thus `(-1)^(j+m)` is **FINITE-EXACT through `j=8`**.  No
+finite list makes it a proved all-order law; that continuation remains open.
 
-## 3. The constant sequences (the new content)
+## 3. The Bernoulli--Faulhaber mechanism
 
-Write `c_m = a_m / d_m` per slice. Three of the four pieces have closed forms,
-and all three were **written down from `m <= 3` data and confirmed against
-`m = 4` only afterwards**:
+Put
 
-| piece | closed form | prediction at `m=4` | observed | |
-|---|---|---|---|---|
-| numerator, `A` | `a_m = 3 + 44 * 16^(m-1)` | `180227` | `180227` | CONFIRMED |
-| numerator, `E` | `a_m = 4 + 33 * 9^(m-1)` | `24061` | `24061` | CONFIRMED |
-| numerator, `C` | `a_m = 23` | `23` | `23` | CONFIRMED |
-| ratio `d^A/d^C` | `4^(2m-1)` | `4^7 = 16384` | `16384` | CONFIRMED |
-| ratio `d^E/d^C` | `3^(2m-1)` | `3^7 = 2187` | `2187` | CONFIRMED |
-| base `d_m^C` | `(3m)!/(2m-2)!` | `665280` | `604800` | **REFUTED** |
+    p_j^C(M)=(-1)^(j-1) j C_j(M).
 
-The `m <= 3` inputs were `47/24, 707/23040, 11267/15482880` (`A`),
-`37/18, 301/9720, 2677/3674160` (`E`), `23/6, 23/360, 23/15120` (`C`).
-The measured `m = 4` constants are
+The independent referee finds the following **exact polynomial identity for
+every frozen order `1<=j<=8`**:
 
-```text
-   c_4^A = 180227/9909043200,   c_4^E = 24061/1322697600,   c_4^C = 23/604800.
-```
+    p_j^C(M)=46 sum_(s=1)^(M-1) s^j + 20 M^j + K_j,      (3)
 
-Two remarks.
+where `K_j` is independent of `M`.  Equivalently,
 
-**The `23`.** The `C` slice has numerator exactly `23` at every `m`, and the
-slice-independent `k = -1` law carries `46 = 2*23`. This is the same `23` that
-heads the four-band charge density of THM-3006,
-`lim w_k/M^(k+1) = [23 + (2/3)^(k+1) + 2(1/2)^(k+1) + 2(1/3)^(k+1)]/(k+1)`.
-Recorded as a structural coincidence worth explaining, not as a proved link.
+    p_j^C(M+1)-p_j^C(M)=26M^j+20(M+1)^j.                (4)
 
-**The one gap.** `d_m^C = 6, 360, 15120, 604800` has no closed form. Its
-successive ratios are `60, 42, 40`. The near-miss `(3m)!/(2m-2)!` reproduces the
-first three exactly (`1*2*3`, `3*4*5*6`, `5*6*7*8*9`) and then over-predicts by
-`11/10`, i.e. the fourth term is *not* `7*8*9*10*11*12`. Since the two slice
-ratios and all three numerators are closed-form, `d_m^C` is the entire remaining
-unknown in the corner-slice picture, and `P_9` would decide between candidate
-continuations with a single new data point.
+All eight recurrences are checked coefficientwise over `Q`; this is not a
+floating fit.  Faulhaber's formula now gives, whenever `2m-1<j<=8`,
 
-## 4. Status of each claim
+    [M^(j-2m+1)] C_j
+      =(-1)^(j+1) 46 B_(2m)/(2m)! (j-1)...(j-2m+2).    (5)
+
+Since `sign B_(2m)=(-1)^(m+1)`, (5) is exactly the corrected sign law with
+
+    c_m^C = 46 |B_(2m)|/(2m)!,        m=1,2,3,4.       (6)
+
+Thus the formerly unexplained measured sequence is
+
+    c_m^C = 23/6, 23/360, 23/15120, 23/604800,
+
+and its reduced denominators are `6,360,15120,604800`.  The failed guess
+`(3m)!/(2m-2)!` was approximating the first Bernoulli values; it is replaced,
+on the measured range, by the exact formula (6).
+
+The separately pre-registered slice formulas also survive at `m=4`:
+
+| finite formula | predicted at `m=4` | observed | status |
+|---|---:|---:|---|
+| `a_m^A=3+44*16^(m-1)` | `180227` | `180227` | CONFIRMED |
+| `a_m^E=4+33*9^(m-1)` | `24061` | `24061` | CONFIRMED |
+| reduced `a_m^C=23` | `23` | `23` | CONFIRMED through `m=4` |
+| `d_m^A/d_m^C=4^(2m-1)` | `16384` | `16384` | CONFIRMED |
+| `d_m^E/d_m^C=3^(2m-1)` | `2187` | `2187` | CONFIRMED |
+
+These are finite confirmations, not all-order closed forms.  In particular,
+the Bernoulli continuation predicts that the reduced `C` numerator will not
+remain `23`: `B_12=-691/2730` gives a factor `691` at `m=6`.
+
+**What the `23` now means.**  Within the frozen `C` slice, `23` is no longer an
+unexplained numerator: it is half of the exact bulk density `46` in (3), after
+the Bernoulli coefficient and log-jet normalization.  Its equality with the
+terminal band density `23` in THM-3006 remains an unproved connection between
+two different objects.
+
+## 4. Sharp future tests
+
+Formula (6) beyond `m=4` is `CONJECTURAL`.  Its first new nonterminal slot is
+`k=9` at **`j=10`**, not `j=9`; at `j=9`, `k=j` is the exceptional constant
+term and lies outside the law.  The exact preregistered predictions are
+
+    P_10: c_5^C = 46|B_10|/10! = 23/23950080,
+    P_12: c_6^C = 46|B_12|/12! = 15893/653837184000.
+
+The `P_12` value is the first discriminator between the Bernoulli mechanism
+and the observed reduced-numerator-`23` extrapolation because
+`15893=23*691`.  A more structural proof target is the width quotient suggested
+by (4): establish the `C`-corner log-jet recurrence at the determinant level,
+which would prove (3)--(6) simultaneously at every order.
+
+## 5. Status of each claim
 
 | Claim | Status |
 |---|---|
-| `P_8` shape, content, digest | VERIFIED-EXACT (disjoint grids + OOS) |
-| eq(2) at `j = 8` | VERIFIED-EXACT |
-| slot sign law `(-1)^(j+m)` | PROVED to be the unique law consistent with `j<=8`; supersedes the case-by-case signs of THM-3015 |
+| `P_8` frozen shape, content, digest | FINITE-EXACT table-internal |
+| historical disjoint grids + OOS | REPORTED; build/pickle absent from canon |
+| eq(2) at `j = 8` | FINITE-EXACT |
+| slot sign law `(-1)^(j+m)` | FINITE-EXACT on every visible slot through `j=8`; all-order OPEN |
 | 24 pre-registered `j=8` coefficients | CONFIRMED (genuine pre-registration) |
-| numerator closed forms, `A`/`E`/`C` | CONFIRMED out-of-sample at `m = 4` |
-| slice ratios `4^(2m-1)`, `3^(2m-1)` | CONFIRMED out-of-sample at `m = 4` |
+| numerator/slice-ratio formulas | CONFIRMED at the new `m=4` datum only |
 | `d_m^C = (3m)!/(2m-2)!` | **REFUTED** at `m = 4` |
-| closed form for `d_m^C` | OPEN |
+| `c_m^C=46|B_(2m)|/(2m)!` | PROVED from frozen tables for `m<=4`; all-order OPEN |
+| first new test | `P_10`; `P_9` is terminal and cannot test it |
 | link between the slice `23` and THM-3006's `23` | UNPROVED coincidence |
+
+## 6. Reproduction
+
+    python3 04-computation/gmc_eighth_resultant_jet_and_the_corner_constant_laws_thm3030.py
+    python3 -O 04-computation/gmc_eighth_resultant_jet_and_the_corner_constant_laws_thm3030.py
+    python3 04-computation/gmc_eighth_resultant_jet_bernoulli_faulhaber_referee_thm3030.py
+    python3 -O 04-computation/gmc_eighth_resultant_jet_bernoulli_faulhaber_referee_thm3030.py
+
+The primary transcript is `7,363` LF bytes and the independent transcript is
+`1,264` LF bytes.  Their hashes and both script hashes are frozen in
+frontmatter.  Normal, optimized, and stored output agree byte-for-byte.
+
+**QED for the finite table statements.**

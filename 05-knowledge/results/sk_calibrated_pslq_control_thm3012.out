@@ -1,0 +1,4 @@
+CONTROL: rediscover pi*S(3) by the SAME scan (size 2).
+   hits: 2
+      [1, 2, -1]  over ['1*atan(r2/5)', 'r3*log(5+2r6)']
+      [-1, -2, 3]  over ['1*atan(r2/5)', 'r3/3*log(5+2r6)']

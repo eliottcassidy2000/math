@@ -20,7 +20,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; aligned `k>=4` is empty and the `k=2,3` caps are `1579/246`. Reflected `k=1` closes through spread five on every body, at arbitrary levels on `2,421/3,003`, and for all bodies in the cone `D>=6,m>=3D`; the other `582` bodies in `D>=6,m<3D`, `k=0`, and the rung remain open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
+1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; aligned `k>=4` is empty and the `k=2,3` caps are `1579/243`. Reflected `k=1` closes through spread five on every body, at arbitrary levels on `2,442/3,003`, and for all bodies in the cone `D>=6,m>=3D`; the other `561` bodies in `D>=6,m<3D`, `k=0`, and the rung remain open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see

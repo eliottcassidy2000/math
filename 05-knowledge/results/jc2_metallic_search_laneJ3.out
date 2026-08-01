@@ -1,0 +1,341 @@
+========================================================================
+PART A -- ROOT-metallic strata
+========================================================================
+
+A1. the metallic quadratic H_q = x^2 - q x y - y^2, roots {lam, -1/lam}
+   q=1: lam=1.61803399  roots {lam,-1/lam}  sum=(1+0L) prod=(-1+0L)  reciprocal-closed=True with mu=(-1+0L)
+   q=2: lam=2.41421356  roots {lam,-1/lam}  sum=(2+0L) prod=(-1+0L)  reciprocal-closed=True with mu=(-1+0L)
+   q=3: lam=3.30277564  roots {lam,-1/lam}  sum=(3+0L) prod=(-1+0L)  reciprocal-closed=True with mu=(-1+0L)
+   q=4: lam=4.23606798  roots {lam,-1/lam}  sum=(4+0L) prod=(-1+0L)  reciprocal-closed=True with mu=(-1+0L)
+   q=5: lam=5.19258240  roots {lam,-1/lam}  sum=(5+0L) prod=(-1+0L)  reciprocal-closed=True with mu=(-1+0L)
+  [OK ] A1 metallic quadratic: sum=q, prod=-1, reciprocal-closed with mu=-1 
+   NOTE: deg H = 2 => the ratio sequence has ONE entry R_1 and the circuit
+   c_k (k=2..g-1) is EMPTY.  At g=2 the circuit carries no information at all,
+   and R_k=R_{g-k} is vacuously true.
+
+A1b. PGL_2 triviality of the metallic quadratic
+   H_q has two DISTINCT roots (disc = q^2+4 > 0), and any two distinct points
+   of P^1 are PGL_2(C)-equivalent to {0,infinity}.  Explicit frame:
+   q=1:  with u = x - (1.618034) y,  v = x - (-0.618034) y :  H_q = u*v
+   q=2:  with u = x - (2.414214) y,  v = x - (-0.414214) y :  H_q = u*v
+   q=3:  with u = x - (3.302776) y,  v = x - (-0.302776) y :  H_q = u*v
+  [OK ] A1b metallic quadratic is PGL_2(C)-equivalent to x*y (K=2, no moduli) 
+
+A2. metallic geometric orbits: roots {1, lam, ..., lam^(g-1)}
+   q=1 g=4: word=+-       changes=1  palindromic=True recip-closed=True
+   q=1 g=6: word=++--     changes=1  palindromic=True recip-closed=True
+   q=1 g=8: word=+++---   changes=1  palindromic=True recip-closed=True
+   q=2 g=4: word=+-       changes=1  palindromic=True recip-closed=True
+   q=2 g=6: word=++--     changes=1  palindromic=True recip-closed=True
+   q=2 g=8: word=+++---   changes=1  palindromic=True recip-closed=True
+   q=3 g=4: word=+-       changes=1  palindromic=True recip-closed=True
+   q=3 g=6: word=++--     changes=1  palindromic=True recip-closed=True
+   q=3 g=8: word=+++---   changes=1  palindromic=True recip-closed=True
+   q=4 g=4: word=+-       changes=1  palindromic=True recip-closed=True
+   q=4 g=6: word=++--     changes=1  palindromic=True recip-closed=True
+   q=4 g=8: word=+++---   changes=1  palindromic=True recip-closed=True
+  [OK ] A2 metallic geometric orbits are reciprocal-closed AND have exactly 1 sign change 
+
+A2b. control: NON-metallic geometric ratios give the SAME word
+   g=4: distinct sign words over 8 ratios = ['+-']
+   g=5: distinct sign words over 8 ratios = ['+0-']
+   g=6: distinct sign words over 8 ratios = ['++--']
+   g=7: distinct sign words over 8 ratios = ['++0--']
+   g=8: distinct sign words over 8 ratios = ['+++---']
+   g=9: distinct sign words over 8 ratios = ['+++0---']
+   g=10: distinct sign words over 8 ratios = ['++++----']
+  [OK ] A2b sign word of a geometric root progression is RATIO-INDEPENDENT (1 change) 
+   Structural reason (exact): for roots {T^j}, e_k = T^(k(k-1)/2) * gauss(g,k)_T,
+   and k(k-1)/2 is QUADRATIC in k, so it is annihilated by the third difference
+   that defines the circuit.  The circuit only sees gauss(g,k)_T / C(g,k).
+
+A2c. exact check of the Gaussian-binomial formula for e_k of a geometric orbit
+  [OK ] A2c e_k(1,T,...,T^(g-1)) = T^(k(k-1)/2) * gaussian_binom(g,k)_T 
+
+A3. powers of the metallic quadratic: H_q^a  (this is P_n for a Jacobian pair)
+   q=1 a=2 d=4: word=+-       changes=1 palindromic=True recip-closed=True
+   q=1 a=3 d=6: h_k VANISHES at k=[2, 4]  -> circuit UNDEFINED
+   q=1 a=4 d=8: word=--+-++   changes=3 palindromic=True recip-closed=True
+   q=1 a=5 d=10: word=---+-+++ changes=3 palindromic=True recip-closed=True
+   q=2 a=2 d=4: word=-+       changes=1 palindromic=True recip-closed=True
+   q=2 a=3 d=6: word=-+-+     changes=3 palindromic=True recip-closed=True
+   q=2 a=4 d=8: word=+--++-   changes=3 palindromic=True recip-closed=True
+   q=2 a=5 d=10: word=+-+-+-+- changes=7 palindromic=True recip-closed=True
+   q=3 a=2 d=4: word=-+       changes=1 palindromic=True recip-closed=True
+   q=3 a=3 d=6: word=+-+-     changes=3 palindromic=True recip-closed=True
+   q=3 a=4 d=8: word=+-+-+-   changes=5 palindromic=True recip-closed=True
+   q=3 a=5 d=10: word=++--++-- changes=3 palindromic=True recip-closed=True
+  [OK ] A3 H_q^a is reciprocal-closed whenever the circuit is defined 
+   The vanishing is structural: {lam, -1/lam} has roots of OPPOSITE SIGN, so the
+   coefficient sequence of H_q^a is not sign-definite and h_k can vanish.  The
+   repo circuit needs A_k != 0 (THM-3000 sec 1 / J2-2); the rational metallic
+   root strata systematically violate this.
+
+A4. the rational metallic QUARTIC: Galois closure of {lam, 1/lam}
+   Gal(Q(lam)/Q) sends lam -> -1/lam, so {lam, 1/lam} is NOT Q-rational.
+   The smallest Q-rational reciprocal-closed metallic set is {lam,1/lam,-lam,-1/lam},
+   with form  H = x^4 - (q^2+2) x^2 y^2 + y^4 :
+   q=1: A = [1, 0, -3, 0, 1]   h_k vanishes at k=[1, 3]  -> circuit UNDEFINED (A_1=A_3=0)
+   q=2: A = [1, 0, -6, 0, 1]   h_k vanishes at k=[1, 3]  -> circuit UNDEFINED (A_1=A_3=0)
+   q=3: A = [1, 0, -11, 0, 1]   h_k vanishes at k=[1, 3]  -> circuit UNDEFINED (A_1=A_3=0)
+  [OK ] A4 rational metallic quartic has A_1=A_3=0: circuit undefined 
+
+========================================================================
+PART B -- COEFFICIENT-metallic ('h-metallic') strata: THM-3010's object
+========================================================================
+
+B1. h_k = a_{k+1} with a_0=0,a_1=1,a_k=q a_{k-1}+a_{k-2}; H = sum C(g,k) h_k x^(g-k) y^k
+   q=1 g=6: simson_ok=True word=+-+-      changes=3 MAX=3 palindromic=False
+   q=1 g=8: simson_ok=True word=+-+-+-    changes=5 MAX=5 palindromic=False
+   q=1 g=10: simson_ok=True word=+-+-+-+-  changes=7 MAX=7 palindromic=False
+   q=2 g=6: simson_ok=True word=+-+-      changes=3 MAX=3 palindromic=False
+   q=2 g=8: simson_ok=True word=+-+-+-    changes=5 MAX=5 palindromic=False
+   q=2 g=10: simson_ok=True word=+-+-+-+-  changes=7 MAX=7 palindromic=False
+   q=3 g=6: simson_ok=True word=+-+-      changes=3 MAX=3 palindromic=False
+   q=3 g=8: simson_ok=True word=+-+-+-    changes=5 MAX=5 palindromic=False
+   q=3 g=10: simson_ok=True word=+-+-+-+-  changes=7 MAX=7 palindromic=False
+   q=4 g=6: simson_ok=True word=+-+-      changes=3 MAX=3 palindromic=False
+   q=4 g=8: simson_ok=True word=+-+-+-    changes=5 MAX=5 palindromic=False
+   q=4 g=10: simson_ok=True word=+-+-+-+-  changes=7 MAX=7 palindromic=False
+   q=5 g=6: simson_ok=True word=+-+-      changes=3 MAX=3 palindromic=False
+   q=5 g=8: simson_ok=True word=+-+-+-    changes=5 MAX=5 palindromic=False
+   q=5 g=10: simson_ok=True word=+-+-+-+-  changes=7 MAX=7 palindromic=False
+  [OK ] B1 h-metallic forms attain MAXIMAL circuit alternation g-3 (q=1..5, g=5..10) 
+  [OK ] B1b h-metallic forms are NEVER palindromic => NOT reciprocal-closed 
+
+B2. root anatomy of the h-metallic forms (they are NOT real-rooted)
+   q=1 g=6: all A_k>0=True squarefree(K=g)=True #real roots=0/6
+   q=1 g=8: all A_k>0=True squarefree(K=g)=True #real roots=0/8
+   q=2 g=6: all A_k>0=True squarefree(K=g)=True #real roots=0/6
+   q=2 g=8: all A_k>0=True squarefree(K=g)=True #real roots=0/8
+   q=3 g=6: all A_k>0=True squarefree(K=g)=True #real roots=0/6
+   q=3 g=8: all A_k>0=True squarefree(K=g)=True #real roots=0/8
+  [OK ] B2 h-metallic forms have all A_k>0 (circuit defined) and K=g distinct roots 
+   So the circuit is well defined WITHOUT real-rootedness: positivity of the
+   coefficients is all THM-3000's convention needs.
+
+B3. the two 'metallic strata' are DISJOINT (except degenerately)
+   root-metallic  = reciprocal-closed, 1 sign change  (MINIMAL alternation)
+   coeff-metallic = maximal alternation g-3,          NOT reciprocal-closed
+  [OK ] B3 the maximal-alternation metallic object lies OUTSIDE the reciprocal-closed stratum 
+
+========================================================================
+PART C -- is 'metallic' DISTINGUISHED?  exact alternation thresholds
+========================================================================
+
+C1. doubled geometric family prod (x - T^j y)^2 : THM-3004 3b(ii)'s maximal
+    alternation family, and the only family that is BOTH reciprocal-closed and
+    maximally alternating.  Where in the ratio T does maximality switch on?
+   K=3 d=6 max alternation 3: circuit sign flips in T>1 at [2.49312701]
+   K=4 d=8 max alternation 5: circuit sign flips in T>1 at [3.69521243]
+   K=5 d=10 max alternation 7: circuit sign flips in T>1 at [2.89758317, 4.28523364]
+   metallic ratios lambda_q: q=1:1.618034, q=2:2.414214, q=3:3.302776, q=4:4.236068, q=5:5.192582, q=6:6.162278, q=7:7.140055, q=8:8.123106
+  [OK ] C1 no alternation threshold of the doubled-geometric family is a metallic ratio 
+
+C2. metallic ratios fall on BOTH sides of every threshold
+   K=3: thresholds [2.493127] -> metallic q below ALL: [1, 2]; metallic q above ALL: [3, 4, 5, 6, 7, 8]
+   K=4: thresholds [3.695212] -> metallic q below ALL: [1, 2, 3]; metallic q above ALL: [4, 5, 6, 7, 8]
+   K=5: thresholds [2.897583, 4.285234] -> metallic q below ALL: [1, 2]; metallic q above ALL: [5, 6, 7, 8]
+  [OK ] C2 metallic ratios straddle the thresholds: metallicity is not the operative property 
+
+C3. exact alternation count for the DOUBLED METALLIC orbit prod (x-lam^j y)^2
+   q=1 lam=1.61803 K=3 d=6: word=++--       changes=1 MAX=3 sub-maximal
+   q=1 lam=1.61803 K=4 d=8: word=+++---     changes=1 MAX=5 sub-maximal
+   q=1 lam=1.61803 K=5 d=10: word=++++----   changes=1 MAX=7 sub-maximal
+   q=2 lam=2.41421 K=3 d=6: word=++--       changes=1 MAX=3 sub-maximal
+   q=2 lam=2.41421 K=4 d=8: word=+++---     changes=1 MAX=5 sub-maximal
+   q=2 lam=2.41421 K=5 d=10: word=++++----   changes=1 MAX=7 sub-maximal
+   q=3 lam=3.30278 K=3 d=6: word=+-+-       changes=3 MAX=3 MAXIMAL
+   q=3 lam=3.30278 K=4 d=8: word=+++---     changes=1 MAX=5 sub-maximal
+   q=3 lam=3.30278 K=5 d=10: word=+++-+---   changes=3 MAX=7 sub-maximal
+   q=4 lam=4.23607 K=3 d=6: word=+-+-       changes=3 MAX=3 MAXIMAL
+   q=4 lam=4.23607 K=4 d=8: word=+-+-+-     changes=5 MAX=5 MAXIMAL
+   q=4 lam=4.23607 K=5 d=10: word=+++-+---   changes=3 MAX=7 sub-maximal
+   q=5 lam=5.19258 K=3 d=6: word=+-+-       changes=3 MAX=3 MAXIMAL
+   q=5 lam=5.19258 K=4 d=8: word=+-+-+-     changes=5 MAX=5 MAXIMAL
+   q=5 lam=5.19258 K=5 d=10: word=+-+-+-+-   changes=7 MAX=7 MAXIMAL
+   q=6 lam=6.16228 K=3 d=6: word=+-+-       changes=3 MAX=3 MAXIMAL
+   q=6 lam=6.16228 K=4 d=8: word=+-+-+-     changes=5 MAX=5 MAXIMAL
+   q=6 lam=6.16228 K=5 d=10: word=+-+-+-+-   changes=7 MAX=7 MAXIMAL
+   q=8 lam=8.12311 K=3 d=6: word=+-+-       changes=3 MAX=3 MAXIMAL
+   q=8 lam=8.12311 K=4 d=8: word=+-+-+-     changes=5 MAX=5 MAXIMAL
+   q=8 lam=8.12311 K=5 d=10: word=+-+-+-+-   changes=7 MAX=7 MAXIMAL
+   q=10 lam=10.09902 K=3 d=6: word=+-+-       changes=3 MAX=3 MAXIMAL
+   q=10 lam=10.09902 K=4 d=8: word=+-+-+-     changes=5 MAX=5 MAXIMAL
+   q=10 lam=10.09902 K=5 d=10: word=+-+-+-+-   changes=7 MAX=7 MAXIMAL
+  [OK ] C3 doubled metallic orbits are maximal only when lambda_q exceeds the (non-metallic) threshold 
+
+A5. CONTROL that decides (a): two roots of OPPOSITE sign, multiplicity a each
+    (this is exactly P_n = c H_q^a for the metallic quadratic leading form).
+    THM-3004's cap for K=2 distinct roots is 2K-3 = 1 -- but that law is a
+    POSITIVE-coefficient statement (J2 sec 1.3 scope flag 1).
+   (i) METALLIC reciprocal pair {lam_q, -1/lam_q}, multiplicity a:
+      q=1 lam=1.61803: a=2..8 changes/max = ['1/1', 'und', '3/5', '3/7', '9/9', '7/11', 'und']
+      q=2 lam=2.41421: a=2..8 changes/max = ['1/1', '3/3', '3/5', '7/7', '5/9', '5/11', '7/13']
+      q=3 lam=3.30278: a=2..8 changes/max = ['1/1', '3/3', '5/5', '3/7', '3/9', '7/11', '5/13']
+      q=4 lam=4.23607: a=2..8 changes/max = ['1/1', '3/3', '3/5', '5/7', '5/9', '3/11', '7/13']
+      q=5 lam=5.19258: a=2..8 changes/max = ['1/1', '3/3', '3/5', '3/7', '5/9', '5/11', '3/13']
+      q=6 lam=6.16228: a=2..8 changes/max = ['1/1', '3/3', '3/5', '3/7', '3/9', '5/11', '5/13']
+   (ii) NON-metallic reciprocal pair {r, -1/r}, r rational:
+      r=2: a=2..8 = ['1/1', '1/3', '5/5', '5/7', '5/9', '7/11', '9/13']
+      r=3: a=2..8 = ['1/1', '3/3', '5/5', '3/7', '7/9', '5/11', '7/13']
+      r=5: a=2..8 = ['1/1', '3/3', '3/5', '3/7', '5/9', '5/11', '3/13']
+      r=3/2: a=2..8 = ['1/1', '3/3', '3/5', '5/7', '5/9', '7/11', '9/13']
+      r=7/3: a=2..8 = ['1/1', '3/3', '3/5', '7/7', '7/9', '5/11', '7/13']
+      r=10: a=2..8 = ['1/1', '3/3', '3/5', '3/7', '3/9', '3/11', '3/13']
+   (iii) SAME-sign control {r,s}, r,s>0, multiplicity a (positive coefficients):
+      r=2 s=1: a=2..8 = ['1/1', '1/3', '1/5', '1/7', '1/9', '1/11', '1/13']
+      r=10 s=1: a=2..8 = ['1/1', '1/3', '1/5', '1/7', '1/9', '1/11', '1/13']
+      r=1000 s=1: a=2..8 = ['1/1', '1/3', '1/5', '1/7', '1/9', '1/11', '1/13']
+      r=7 s=3: a=2..8 = ['1/1', '1/3', '1/5', '1/7', '1/9', '1/11', '1/13']
+  [OK ] A5-i positive two-cluster forms obey THM-3004's 2K-3 = 1 cap (0 violations) 
+  [OK ] A5-ii OPPOSITE-sign K=2 forms VIOLATE 2K-3 badly: max observed sign changes = 9 against the cap 1 
+  [OK ] A5-iii metallic alternation counts are INTERSPERSED with generic reciprocal ones (shared counts [1, 3, 5, 7, 9]): metallicity is not the operative property 
+  [OK ] A5-iv every opposite-sign reciprocal pair stays palindromic (reciprocal-closed) 
+
+========================================================================
+PART D -- an actual search for Jacobian pairs over F_p
+========================================================================
+
+D0.  PROVED lemma (characteristic p).  For every P in F_p[x,y] and every
+     R in F_p[x^p,y^p]:  R_x = R_y = 0, hence Jac(P,R) = 0.  The set of
+     Jacobian mates of P is therefore a coset closed under adding F_p[x^p,y^p]:
+     mate degrees are UNBOUNDED, and (n,m) 'admits a Jacobian pair' over F_p
+     for infinitely many m as soon as it does for one.
+  [OK ] D0 Frobenius kernel lemma:  Jac(P, F_p[x^p,y^p]) = 0  (160 random instances) 
+     CONSEQUENCE: the honest characteristic-p invariants are
+       d_min(P) = MINIMAL degree of a Jacobian mate  (the 'primitive' partner degree)
+       d_max(P) = MAXIMAL degree of a Jacobian mate  (what (n,m) is 'realised')
+     A char-p pair at (n,m) with d_min < m is a Frobenius/C[P] inflation of the
+     primitive pair (n,d_min) and is NOT evidence about JC(2) in characteristic 0.
+     Explicit witness: P = x^2+y over F_5 has the mate Q = x^5-x of degree 5,
+     Jac(P,Q) = 1, and (P,Q) is NOT an automorphism (Artin-Schreier), while
+     d_min(P) = 1 with the automorphism mate Q = -x.
+  [OK ] D0b witness (x^2+y, x^5-x) over F_5: Jac = 1 
+  [OK ] D0c witness is NOT an automorphism, while its primitive reduction (2,1) is 
+
+D1. exhaustive F_p search, n = 2 and n = 3, ALL leading forms, ALL lower parts
+    (translation-canonical representatives; translations preserve Jac exactly)
+   (2,3) p=5 (a,b)=(2,3) g=1 | scanned       7 | deficiency hist {0: 4, 1: 3}
+        mates exist for 4; d_min values [1]; d_max values [2]; REALISE deg exactly 3: 0 (primitive d_min []) | sampled auto/non-auto = 0/0 | 0.1s
+   (2,5) p=5 (a,b)=(2,5) g=1 | scanned       7 | deficiency hist {0: 4, 1: 3}
+        mates exist for 4; d_min values [1]; d_max values [5]; REALISE deg exactly 5: 4 (primitive d_min [1]) | sampled auto/non-auto = 0/4 | 0.0s
+        d_min=1 example: P={(0, 2): 1, (1, 0): 1}  Q={(0, 1): 1, (0, 5): 1}  Jac=1  automorphism=False
+   (2,7) p=5 (a,b)=(2,7) g=1 | scanned       7 | deficiency hist {0: 4, 1: 3}
+        mates exist for 4; d_min values [1]; d_max values [7]; REALISE deg exactly 7: 4 (primitive d_min [1]) | sampled auto/non-auto = 0/4 | 0.0s
+        d_min=1 example: P={(0, 2): 1, (1, 0): 1}  Q={(0, 1): 1, (0, 7): 1, (1, 5): 1}  Jac=1  automorphism=False
+   (2,2) p=5 (a,b)=(1,1) g=2 | scanned       7 | deficiency hist {0: 4, 1: 3}
+        mates exist for 4; d_min values [1]; d_max values [2]; REALISE deg exactly 2: 4 (primitive d_min [1]) | sampled auto/non-auto = 4/0 | 0.0s
+        d_min=1 example: P={(0, 2): 1, (1, 0): 1}  Q={(0, 1): 1, (0, 2): 1, (1, 0): 1}  Jac=1  automorphism=True
+   (2,4) p=5 (a,b)=(1,2) g=2 | scanned       7 | deficiency hist {0: 4, 1: 3}
+        mates exist for 4; d_min values [1]; d_max values [4]; REALISE deg exactly 4: 4 (primitive d_min [1]) | sampled auto/non-auto = 4/0 | 0.0s
+        d_min=1 example: P={(0, 2): 1, (1, 0): 1}  Q={(0, 1): 1, (0, 4): 1, (1, 2): 2, (2, 0): 1}  Jac=1  automorphism=True
+   (3,4) p=5 (a,b)=(3,4) g=1 | scanned     645 | deficiency hist {0: 20, 1: 124, 2: 501}
+        mates exist for 20; d_min values [1]; d_max values [3]; REALISE deg exactly 4: 0 (primitive d_min []) | sampled auto/non-auto = 0/0 | 0.5s
+   (3,5) p=5 (a,b)=(3,5) g=1 | scanned     645 | deficiency hist {0: 20, 1: 124, 2: 501}
+        mates exist for 20; d_min values [1]; d_max values [5]; REALISE deg exactly 5: 20 (primitive d_min [1]) | sampled auto/non-auto = 0/20 | 0.4s
+        d_min=1 example: P={(0, 3): 1, (1, 0): 1}  Q={(0, 1): 1, (0, 5): 1}  Jac=1  automorphism=False
+   (3,3) p=5 (a,b)=(1,1) g=3 | scanned     645 | deficiency hist {0: 20, 1: 120, 2: 505}
+        mates exist for 20; d_min values [1]; d_max values [3]; REALISE deg exactly 3: 20 (primitive d_min [1]) | sampled auto/non-auto = 20/0 | 0.2s
+        d_min=1 example: P={(0, 3): 1, (1, 0): 1}  Q={(0, 1): 1, (0, 3): 1, (1, 0): 1}  Jac=1  automorphism=True
+   (3,6) p=5 (a,b)=(1,2) g=3 | scanned     645 | deficiency hist {0: 20, 1: 124, 2: 501}
+        mates exist for 20; d_min values [1]; d_max values [6]; REALISE deg exactly 6: 20 (primitive d_min [1]) | sampled auto/non-auto = 8/12 | 0.6s
+        d_min=1 example: P={(0, 3): 1, (1, 0): 1}  Q={(0, 1): 1, (0, 6): 1, (1, 3): 2, (2, 0): 1}  Jac=1  automorphism=True
+   (2,3) p=7 (a,b)=(2,3) g=1 | scanned       9 | deficiency hist {0: 6, 1: 3}
+        mates exist for 6; d_min values [1]; d_max values [2]; REALISE deg exactly 3: 0 (primitive d_min []) | sampled auto/non-auto = 0/0 | 0.3s
+   (2,5) p=7 (a,b)=(2,5) g=1 | scanned       9 | deficiency hist {0: 6, 1: 3}
+        mates exist for 6; d_min values [1]; d_max values [4]; REALISE deg exactly 5: 0 (primitive d_min []) | sampled auto/non-auto = 0/0 | 0.0s
+   (2,7) p=7 (a,b)=(2,7) g=1 | scanned       9 | deficiency hist {0: 6, 1: 3}
+        mates exist for 6; d_min values [1]; d_max values [7]; REALISE deg exactly 7: 6 (primitive d_min [1]) | sampled auto/non-auto = 0/6 | 0.0s
+        d_min=1 example: P={(0, 2): 1, (1, 0): 1}  Q={(0, 1): 1, (0, 7): 1}  Jac=1  automorphism=False
+   (3,4) p=7 (a,b)=(3,4) g=1 | scanned    1757 | deficiency hist {0: 42, 1: 336, 2: 1379}
+        mates exist for 42; d_min values [1]; d_max values [3]; REALISE deg exactly 4: 0 (primitive d_min []) | sampled auto/non-auto = 0/0 | 1.7s
+   (3,5) p=7 (a,b)=(3,5) g=1 | scanned    1757 | deficiency hist {0: 42, 1: 336, 2: 1379}
+        mates exist for 42; d_min values [1]; d_max values [3]; REALISE deg exactly 5: 0 (primitive d_min []) | sampled auto/non-auto = 0/0 | 1.2s
+
+D2. the a,b >= 2 corner with g = gcd(n,m) > 1: (n,m) = (4,6), (a,b) = (2,3).
+    This is the SMALLEST degree pair a two-variable counterexample with g>1 may have.
+   (4,6) p=3 (a,b)=(2,3) g=2 | scanned   30726 | deficiency hist {0: 156, 1: 1410, 2: 7632, 3: 21528}
+        mates exist for 156; d_min values [1, 2, 5]; d_max values [6]; REALISE deg exactly 6: 156 (primitive d_min [1, 2, 5]) | sampled auto/non-auto = 0/40 | 26.0s
+        d_min=1 example: P={(0, 4): 1, (1, 0): 1}  Q={(0, 1): 1, (0, 6): 1}  Jac=1  automorphism=False
+        d_min=2 example: P={(0, 1): 1, (0, 4): 1, (1, 2): 1, (2, 0): 1}  Q={(0, 2): 1, (0, 6): 1, (1, 0): 2}  Jac=1  automorphism=False
+        d_min=5 example: P={(0, 1): 1, (0, 4): 1, (1, 2): 1}  Q={(0, 2): 2, (0, 5): 1, (0, 6): 1, (1, 0): 2, (1, 3): 2, (2, 1): 1}  Jac=1  automorphism=False
+    p=5: leading forms restricted to P_4 = H^2 -> 3 GL_2(F_5)-classes (representatives [[0, 0, 0, 0, 1], [0, 0, 1, 0, 0], [1, 0, 4, 0, 4]])
+   (4,6) p=5 (a,b)=(2,3) g=2 | scanned  234475 | deficiency hist {0: 116, 1: 1320, 2: 83004, 3: 150035}
+        mates exist for 116; d_min values [1, 2]; d_max values [5]; REALISE deg exactly 6: 0 (primitive d_min []) | sampled auto/non-auto = 0/0 | 267.9s
+    p=3 non-automorphism example: P={(0, 1): 1, (0, 4): 1, (1, 2): 1}
+                                   Q={(0, 2): 2, (0, 5): 1, (0, 6): 1, (1, 0): 2, (1, 3): 2, (2, 1): 1}  Jac const = 1  deg Q = 6
+
+========================================================================
+PART E -- characteristic 0
+========================================================================
+
+E1. exact rational search.  For g = gcd(n,m) = 1 the leading form is c*L^n with
+    L linear, so L = x is WLOG over Q; for g = 2 we take H in {x^2, xy, x^2+y^2}
+    (over C only x^2 and xy are inequivalent).  Lower coefficients range over a box.
+   (n,m)=(2,3) (a,b)=(2,3) g=1: 9 P scanned, deficiency hist {0: 6, 1: 3}, mates for 6, d_min [1], d_max [2]
+  [OK ] E1 (2,3) over Q, box [-1, 0, 1]^2: NO mate of degree exactly 3 
+   (n,m)=(2,5) (a,b)=(2,5) g=1: 9 P scanned, deficiency hist {0: 6, 1: 3}, mates for 6, d_min [1], d_max [4]
+  [OK ] E1 (2,5) over Q, box [-1, 0, 1]^2: NO mate of degree exactly 5 
+   (n,m)=(3,4) (a,b)=(3,4) g=1: 243 P scanned, deficiency hist {0: 18, 1: 216, 2: 9}, mates for 18, d_min [1], d_max [3]
+  [OK ] E1 (3,4) over Q, box [-1, 0, 1]^5: NO mate of degree exactly 4 
+   (n,m)=(3,5) (a,b)=(3,5) g=1: 243 P scanned, deficiency hist {0: 18, 1: 216, 2: 9}, mates for 18, d_min [1], d_max [3]
+  [OK ] E1 (3,5) over Q, box [-1, 0, 1]^5: NO mate of degree exactly 5 
+
+E2. (4,6) in characteristic 0, via two large-prime proxies + exact rational
+    verification of every hit.  Frobenius is absent because p >> deg.
+   p=1000003: 39366 P scanned (2 leading forms x box [-1, 0, 1]^9), deficiency hist {0: 54, 1: 672, 2: 21114, 3: 17526}, mates 54
+   p=999983: 39366 P scanned (2 leading forms x box [-1, 0, 1]^9), deficiency hist {0: 54, 1: 672, 2: 21114, 3: 17526}, mates 54
+   exact rational re-check of all 54 hits: 54 confirmed over Q, 0 were mod-p artefacts; (d_min,d_max) values [(1, 4)]
+  [OK ] E2 no (4,6) Jacobian pair in the char-0 box: every mate has degree < 6 
+
+========================================================================
+PART F -- summary
+========================================================================
+   OK   A1 metallic quadratic: sum=q, prod=-1, reciprocal-closed with mu=-1
+   OK   A1b metallic quadratic is PGL_2(C)-equivalent to x*y (K=2, no moduli)
+   OK   A2 metallic geometric orbits are reciprocal-closed AND have exactly 1 sign change
+   OK   A2b sign word of a geometric root progression is RATIO-INDEPENDENT (1 change)
+   OK   A2c e_k(1,T,...,T^(g-1)) = T^(k(k-1)/2) * gaussian_binom(g,k)_T
+   OK   A3 H_q^a is reciprocal-closed whenever the circuit is defined
+   OK   A4 rational metallic quartic has A_1=A_3=0: circuit undefined
+   OK   B1 h-metallic forms attain MAXIMAL circuit alternation g-3 (q=1..5, g=5..10)
+   OK   B1b h-metallic forms are NEVER palindromic => NOT reciprocal-closed
+   OK   B2 h-metallic forms have all A_k>0 (circuit defined) and K=g distinct roots
+   OK   B3 the maximal-alternation metallic object lies OUTSIDE the reciprocal-closed stratum
+   OK   C1 no alternation threshold of the doubled-geometric family is a metallic ratio
+   OK   C2 metallic ratios straddle the thresholds: metallicity is not the operative property
+   OK   C3 doubled metallic orbits are maximal only when lambda_q exceeds the (non-metallic) threshold
+   OK   A5-i positive two-cluster forms obey THM-3004's 2K-3 = 1 cap (0 violations)
+   OK   A5-ii OPPOSITE-sign K=2 forms VIOLATE 2K-3 badly: max observed sign changes = 9 against the cap 1
+   OK   A5-iii metallic alternation counts are INTERSPERSED with generic reciprocal ones (shared counts [1, 3, 5, 7, 9]): metallicity is not the operative property
+   OK   A5-iv every opposite-sign reciprocal pair stays palindromic (reciprocal-closed)
+   OK   D0 Frobenius kernel lemma:  Jac(P, F_p[x^p,y^p]) = 0  (160 random instances)
+   OK   D0b witness (x^2+y, x^5-x) over F_5: Jac = 1
+   OK   D0c witness is NOT an automorphism, while its primitive reduction (2,1) is
+   OK   E1 (2,3) over Q, box [-1, 0, 1]^2: NO mate of degree exactly 3
+   OK   E1 (2,5) over Q, box [-1, 0, 1]^2: NO mate of degree exactly 5
+   OK   E1 (3,4) over Q, box [-1, 0, 1]^5: NO mate of degree exactly 4
+   OK   E1 (3,5) over Q, box [-1, 0, 1]^5: NO mate of degree exactly 5
+   OK   E2 no (4,6) Jacobian pair in the char-0 box: every mate has degree < 6
+
+   26/26 checks pass.
+
+   LANE J3 VERDICT
+   ---------------
+   (a)  'Metallic stratum' is AMBIGUOUS and the two readings answer oppositely:
+        * ROOT-metallic (roots a metallic orbit / the pair {lam,-1/lam}) IS
+          reciprocal-closed, hence inside lane J2's palindromic stratum -- but it
+          carries MINIMAL circuit alternation (one sign change) when the roots are
+          of one sign, no circuit at all at g=2, and no PGL_2 moduli at g=2.
+        * COEFFICIENT-metallic (THM-3010's h_k = a_k, the object that actually
+          attains maximal alternation) is NEVER palindromic, hence strictly
+          OUTSIDE the reciprocal-closed stratum.
+        So THM-3010's maximal alternation does NOT transfer to the reciprocal-closed
+        stratum through 'metallic'.
+   (b)  The search: see PART D/E.  Over Q nothing appears; over F_p everything that
+        appears is either an automorphism or a Frobenius inflation (D0).
+   (c)  NEGATIVE: the metallic condition supplies no exclusion and no prioritisation.
+        What does control alternation is (i) the SIGN pattern of the roots and
+        (ii) the SIZE of the root ratio against explicit non-metallic thresholds.
+

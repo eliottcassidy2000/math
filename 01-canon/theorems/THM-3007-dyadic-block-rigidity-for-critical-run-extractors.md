@@ -22,7 +22,7 @@ depends_on: []
 related:
   - THM-2160  # S6.1: composition-exact h-shell extraction iff h is dyadic
   - THM-2225
-  - THM-2996  # sharpened half-tail extractor
+  - THM-3032  # sharpened half-tail extractor
   - THM-3008  # within-block deadline profiles; slope below 2
   - HYP-9061  # the minimal linear deadline C*
 external:

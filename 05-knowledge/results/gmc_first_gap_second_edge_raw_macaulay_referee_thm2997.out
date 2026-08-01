@@ -1,0 +1,18 @@
+THM-2997 INDEPENDENT RAW MACAULAY REFEREE
+atlas_dependency_sha256=645353f04d2143f91b7b213e7223761c65c72a81c0ebb522184643fdd97ca24b
+target_dependency_sha256=40959bd9e47fb9ea7bfd9b0ac98b6a303aa1b4b840047b9eef5b2ee214997d5e
+method=actual factorial top-four slices;raw selected 36x36 log determinant;subtract q200^6*c300*K
+normalization=raw leading selected matrix invertible and nonidentity;identity only after local inverse/response normalization
+audited_widths=6,7,8,9,10,11,12,20,33,34
+{"M":6,"flag_leaders_nonzero":true,"jet_digest":"eb852d963f9bf67484144f87a7af0de96b54c591b10a1a2bc2168931a9e39a36","raw_chart_identity":false,"raw_minus_flag_matches_P123":true}
+{"M":7,"flag_leaders_nonzero":true,"jet_digest":"32bd6a838e802f0a267b9eb7ec1467ea63b96a35cfae31c240cbc9381695c751","raw_chart_identity":false,"raw_minus_flag_matches_P123":true}
+{"M":8,"flag_leaders_nonzero":true,"jet_digest":"45c182f20c32d11755115701aaea737d20cace206df182827274578f8f453b59","raw_chart_identity":false,"raw_minus_flag_matches_P123":true}
+{"M":9,"flag_leaders_nonzero":true,"jet_digest":"ead0f1e22ce1599bb872633538a2e2dda61360a9dd5c9652d5dd2fdeb4a198eb","raw_chart_identity":false,"raw_minus_flag_matches_P123":true}
+{"M":10,"flag_leaders_nonzero":true,"jet_digest":"046642fc3d2919527ff862c2605a78b580d9d8b8dcedf296a8fd65c6cdaaf098","raw_chart_identity":false,"raw_minus_flag_matches_P123":true}
+{"M":11,"flag_leaders_nonzero":true,"jet_digest":"d778c90d34c95b882e529e03f9af3303a94253fdb35cc3c9f60daa24e23ac234","raw_chart_identity":false,"raw_minus_flag_matches_P123":true}
+{"M":12,"flag_leaders_nonzero":true,"jet_digest":"3ed8c0dc1d9304351518feef52cc4299e60a7f62176fb89a0022bd9a97350110","raw_chart_identity":false,"raw_minus_flag_matches_P123":true}
+{"M":20,"flag_leaders_nonzero":true,"jet_digest":"dde1af17536415dadd889f65e185f83a0b5bffb668e543b0017cddf5c25567c8","raw_chart_identity":false,"raw_minus_flag_matches_P123":true}
+{"M":33,"flag_leaders_nonzero":true,"jet_digest":"b964c99ad3d680fe00937879cc3764dbbcc153c36edffed0c56d9099f057399c","raw_chart_identity":false,"raw_minus_flag_matches_P123":true}
+{"M":34,"flag_leaders_nonzero":true,"jet_digest":"a2efecdd8d0fb08781217c6a42335bb5985a07b3dce52e28cb5fcb2db74f8127","raw_chart_identity":false,"raw_minus_flag_matches_P123":true}
+record_digest=b11188341b9f7387e021e7ae3c08e541b724dc6bd9e91af9061ddf9bbed85015
+all_exact_checks=PASS

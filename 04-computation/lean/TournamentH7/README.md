@@ -192,11 +192,12 @@ lake env lean TournamentH7/LRCC169CarrySelector.lean
 lake build TournamentH7.LRCC169CarrySelector
 ```
 
-pass, and its twelve `#print axioms` checks report no `sorryAx`.  The aggregate
-`lake build TournamentH7` currently reaches this module and then fails in the
-older `LRCCoherentBlockerChronology.lean` at its rationally typed inference
-from `0 <= k < c` to `0 <= c-k-1`; that pre-existing integral-address typing
-debt is unrelated to `LRCC169CarrySelector`.
+pass, and its twelve `#print axioms` checks report no `sorryAx`.  The formerly
+reported downstream failure in `LRCCoherentBlockerChronology.lean` was a real
+typing defect: rational `0 <= k < c` does not imply `0 <= c-k-1`.  Its
+full-invoice consumer now uses the intended integer tooth addresses and passes
+direct elaboration with no `sorryAx` (MISTAKE-340).  No fresh aggregate-root
+build is claimed by that targeted repair.
 
 `LRCResidualSemilatticeNoGo.lean` is the sorry-free bridge guardrail between
 THM-2888/2893's unmarked literal-residual algebra and THM-2889's ordered

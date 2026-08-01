@@ -1,0 +1,16 @@
+THM3037 cusp-braid S4 lift dichotomy exact certificate
+s4_order=24;s3_order=6;kernel_order=4
+downstairs_ordered_distinct_transposition_pairs=6
+candidate_lift_pairs_per_downstairs_pair=16
+braided_lift_pairs_per_downstairs_pair=8
+all_braided_lift_pairs=48
+universal_class=((2, 1, 1), (2, 1, 1), 6, 1, 2, 1, 1);count=24
+universal_class=((4,), (4,), 24, 0, 4, 3, 1);count=24
+simultaneous_kernel_orbits_per_downstairs_pair=2;sizes=4,4
+split_branch=transposition,transposition;group=S3;common_fixed_sheet=1;cusp_width=2;disc_exponents=1,1
+full_branch=4cycle,4cycle;group=S4;common_fixed_sheet=0;cusp_width=4;disc_exponents=3,1
+mixed_braided_branch_count=0
+square_defect=0,0_or_distinct_nonzero_V4_generators
+braid_centre=(XY)^3=1;modular_relations=A^2=B^3=1;parabolic_AB=X^-1
+global_hostile=<X_split,Y_split,(1 4)>=S4;local_common_sheet_not_global
+all_exact_controls=PASS

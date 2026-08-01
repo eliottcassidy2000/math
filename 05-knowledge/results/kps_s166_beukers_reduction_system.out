@@ -1,0 +1,114 @@
+==============================================================================
+d=2  g = u^2 - 5u + 7   (g(0)=7, g(1)=3)
+==============================================================================
+  [PASS] (C1) IBP relations R_k hold exactly for k=0..6 (to z^19)
+  [PASS] (C2) B=(1,E0,E1,M_0..M_0) is d/dz-stable, dim = 4
+  [PASS] (C3) all poles of the connection matrix are at z = 0 (=> every algebraic xi != 0 is a Beukers point, incl. xi = 1)   denominator factors involving z: ['z']
+      A (row i = d/dz of basis[i]) over QQ(z):
+⎡0   0    0      0   ⎤
+⎢                    ⎥
+⎢0   7    0      0   ⎥
+⎢                    ⎥
+⎢0   0    3      0   ⎥
+⎢                    ⎥
+⎢    5   -3   3⋅z - 2⎥
+⎢0  ───  ───  ───────⎥
+⎣   4⋅z  4⋅z    4⋅z  ⎦
+  [PASS] (C4) B' = A B verified exactly on the power series
+
+==============================================================================
+d=3  g = u^3 - u + 1   (g(0)=1, g(1)=1)
+==============================================================================
+  [PASS] (C1) IBP relations R_k hold exactly for k=0..8 (to z^19)
+  [PASS] (C2) B=(1,E0,E1,M_0..M_1) is d/dz-stable, dim = 5
+  [PASS] (C3) all poles of the connection matrix are at z = 0 (=> every algebraic xi != 0 is a Beukers point, incl. xi = 1)   denominator factors involving z: ['z']
+      A (row i = d/dz of basis[i]) over QQ(z):
+⎡0   0    0      0        0   ⎤
+⎢                             ⎥
+⎢0   1    0      0        0   ⎥
+⎢                             ⎥
+⎢0   0    1      0        0   ⎥
+⎢                             ⎥
+⎢         1   z - 1/3         ⎥
+⎢0   0   ───  ───────   -2/3  ⎥
+⎢        3⋅z     z            ⎥
+⎢                             ⎥
+⎢    2    1            z - 2/3⎥
+⎢0  ───  ───   -2/9    ───────⎥
+⎣   9⋅z  9⋅z              z   ⎦
+  [PASS] (C4) B' = A B verified exactly on the power series
+
+==============================================================================
+d=4  g = u^4 + u^2 - 3   (g(0)=-3, g(1)=-1)
+==============================================================================
+  [PASS] (C1) IBP relations R_k hold exactly for k=0..10 (to z^19)
+  [PASS] (C2) B=(1,E0,E1,M_0..M_2) is d/dz-stable, dim = 6
+  [PASS] (C3) all poles of the connection matrix are at z = 0 (=> every algebraic xi != 0 is a Beukers point, incl. xi = 1)   denominator factors involving z: ['z']
+      A (row i = d/dz of basis[i]) over QQ(z):
+⎡0   0    0      0           0             0      ⎤
+⎢                                                 ⎥
+⎢0  -3    0      0           0             0      ⎥
+⎢                                                 ⎥
+⎢0   0   -1      0           0             0      ⎥
+⎢                                                 ⎥
+⎢         1         1                             ⎥
+⎢0   0   ───  -3 - ───       0            1/2     ⎥
+⎢        4⋅z       4⋅z                            ⎥
+⎢                                                 ⎥
+⎢   -1    3             -(13⋅z + 2)               ⎥
+⎢0  ───  ───     0      ────────────       0      ⎥
+⎢   8⋅z  8⋅z                4⋅z                   ⎥
+⎢                                                 ⎥
+⎢         3     -1                    -(13⋅z + 3) ⎥
+⎢0   0   ───    ───          0        ────────────⎥
+⎣        8⋅z    8⋅z                       4⋅z     ⎦
+  [PASS] (C4) B' = A B verified exactly on the power series
+
+==============================================================================
+d=5  g = 2u^5 - u^3 + u - 4   (g(0)=-4, g(1)=-2)
+==============================================================================
+  [PASS] (C1) IBP relations R_k hold exactly for k=0..12 (to z^19)
+  [PASS] (C2) B=(1,E0,E1,M_0..M_3) is d/dz-stable, dim = 7
+  [PASS] (C3) all poles of the connection matrix are at z = 0 (=> every algebraic xi != 0 is a Beukers point, incl. xi = 1)   denominator factors involving z: ['z']
+      A (row i = d/dz of basis[i]) over QQ(z):
+⎡0    0      0       0         0         0         0    ⎤
+⎢                                                       ⎥
+⎢0   -4      0       0         0         0         0    ⎥
+⎢                                                       ⎥
+⎢0    0     -2       0         0         0         0    ⎥
+⎢                                                       ⎥
+⎢            1          1                               ⎥
+⎢0    0     ───   -4 - ───    4/5        0        -2/5  ⎥
+⎢           5⋅z        5⋅z                              ⎥
+⎢                                                       ⎥
+⎢    1      4                     2      17             ⎥
+⎢0  ────   ────     1/25    -4 - ───     ──        0    ⎥
+⎢   25⋅z   25⋅z                  5⋅z     25             ⎥
+⎢                                                       ⎥
+⎢           4        1                      3      17   ⎥
+⎢0    0    ────     ────      1/25    -4 - ───     ──   ⎥
+⎢          25⋅z     25⋅z                   5⋅z     25   ⎥
+⎢                                                       ⎥
+⎢    -17     57     -17        2         61           4 ⎥
+⎢0  ─────  ─────    ────      ────      ───     -4 - ───⎥
+⎣   250⋅z  250⋅z    250       25⋅z      250          5⋅z⎦
+  [PASS] (C4) B' = A B verified exactly on the power series
+
+==============================================================================
+ALL BEUKERS-REDUCTION SYSTEM CHECKS PASSED
+
+READING.  Beukers' refined Siegel-Shidlovskii theorem applies to (1,E0,E1,M_0..M_{d-2})
+at every algebraic xi != 0.  Hence:
+
+   [ int_0^1 e^{xi g(u)} du is transcendental for all nonconstant g in Qbar[u],
+     all algebraic xi != 0 ]
+                                    <==>
+   [ (R):  M_0 is not in span_{Qbar(z)} {1, E_0, E_1, M_1, ..., M_{d-2}} ]
+
+(R) is the concrete, finite form of opus-S4's "horizontal-endomorphism rigidity".
+At d = 2 the span is {1, E_0, E_1} and (R) is exactly opus-S4's distinct-rate lemma
+-- which is why degree 2 is closed.  For d >= 3 the M_1..M_{d-2} enter and (R) is
+open.  The natural tool for it is the max-modulus Laplace asymptotic of
+THM-3018 sec 4b, which already holds at every degree and for complex coefficients.
+
+==============================================================================

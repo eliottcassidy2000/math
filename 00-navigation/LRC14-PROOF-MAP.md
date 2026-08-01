@@ -4,11 +4,11 @@
 
 ## 2026-07-30 current control panel
 
-**Status: OPEN.** THM-2923 leaves at most six body speeds.  THM-2980/2995 and THM-2981 give `k=2,3` caps `1,579/246`; aligned `k>=4` is empty.  Reflected `k=1` closes through spread five, on `2,421/3,003` bodies at arbitrary levels, and everywhere for `D>=6,m>=3D`.  The `582`-body wedge `D>=6,m<3D`, `k=0`, the rung, and LRC(14) remain open; `q<=25` is false.
+**Status: OPEN.** THM-2923 leaves at most six body speeds.  THM-2980/2995 and THM-2981/3033 give `k=2,3` caps `1,579/243`; aligned `k>=4` is empty.  Reflected `k=1` closes through spread five, on `2,442/3,003` bodies at arbitrary levels, and everywhere for `D>=6,m>=3D`.  The `561`-body wedge `D>=6,m<3D`, `k=0`, the rung, and LRC(14) remain open; `q<=25` is false.
 **Scalable quotient.** Support transfer/Möbius counting reduce `k=3/2` to `26,970/27,163` rows; septimal and located-phase screens cut raw occurrences `21.36b/951.55b -> 2.55b/200.14b`.  These are necessary-state quotients, not physical covers; most location/unit data remain.
 **Status theorem.** For upward `A`, real maximum is `min(1,tau_H)`, `H=min(A)`: `p` cover variables replace `2^p` cells, losing integer location, threshold coupling, and needle shape.
 **Missing coordinate.** For drifts `Z`, `P=phi_L(C_E minus union_z D_z)`; aligned completion is `P subset union_(a in A)D_a`.  Compact strict-open seams are pointwise, not a.e.
-**Descending banks.** THM-2981 closes `423` `k=3` rows at `z270..247` via `202807=84483+114027+4297` states and `7553` translated-section terminals; cap `246`, ledger `375,251`, next shell `194`.  THM-2980/2995 independently rerun `240,240+60,060` `k=2` body-height rows, find `68+26` candidates, and exactly match twelve plus five component referees with no duplicate, missing, or extra key; cap `1579`.
+**Descending banks.** THM-2981/3033 close `623` `k=3` rows through `z244` plus three high-floor `z243` rows; cap `243`, ledger `375,051`, with `151` boundary rows open.  THM-2980/2995 independently rerun `240,240+60,060` `k=2` body-height rows, find `68+26` candidates, and exactly match twelve plus five component referees with no duplicate, missing, or extra key; cap `1579`.
 
 ### The present reduction graph
 

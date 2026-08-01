@@ -1,0 +1,23 @@
+Area(Delta_2) = 0.5  (expect 0.5)
+
+model h(u,v) = exp(2 pi i (2u - u^2));  moments int_Delta h^m dA:
+   m=0: (0.5 + 0.0j)
+   m=1: (-2.8886725348125e-35 - 8.0147124136484e-39j)
+   m=2: (-2.8882583342562e-35 - 4.0694775603621e-39j)
+   m=3: (-2.8899656487496e-35 - 2.503833402612e-38j)
+   m=4: (-2.890854552761e-35 + 3.7864194528523e-38j)
+   m=5: (-6.4224851919989e-35 + 2.7096891457903e-38j)
+
+int_Delta e^h dA = (0.5 + 6.7763135232734785672e-37j)    Area = 0.5    diff = 6.7763e-37
+
+=> FORCED LEVEL for FC(3) is Area(Delta_2) = 1/2, NOT 1.
+   FC(3)-homog follows from:  int_{Delta_2} e^Q dA != 1/2  (nonconstant Q in Qbar[u,v]).
+
+CONTROL -- THM-3018 sec 4's S_3 eigenvector g = u + w v + w^2 (1-u-v), w = e^{2 pi i/3}:
+   m=1: (-2.33174309022e-32 + 2.84655641963e-32j)   (vanishes: 3 does not divide m)
+   m=2: (6.48990328594e-33 + 1.72247244597e-32j)   (vanishes: 3 does not divide m)
+   m=3: (0.05 - 1.88745037135e-32j)   (SURVIVES -- so g is NOT a counterexample)
+   m=4: (-9.32697579659e-33 + 1.13862247637e-32j)   (vanishes: 3 does not divide m)
+   m=6: (0.0178571428571 - 1.34817881676e-32j)   (SURVIVES -- so g is NOT a counterexample)
+   -> confirms THM-3018 sec 4: the S_3 mechanism kills 3-not-dividing-m only; the
+      surviving m=3k moments are nonzero, so this g is a CONTROL, not a witness.

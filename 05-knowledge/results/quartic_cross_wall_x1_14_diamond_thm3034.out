@@ -1,0 +1,16 @@
+THM-3034 ordered quartic cross-wall X1(14) and diamond quotient
+cplus_projection_to_quartic=PASS
+quartic_x1_birational_map_and_inverse=PASS
+even_flank_rho=translation_by_(0,0):PASS
+x1_model=y^2+xy+y=x^3-x
+x1_invariants=(25,-253,-28,-15625/28)
+x1_short_model=Y^2=X^3-675X+13662
+rational_three_torsion=((0,0),(0,-1));unique_subgroup=PASS
+velu_x0_map=PASS;kernel=<((0,0))>;degree=3
+x0_model=Y^2+XY+Y=X^3+4X-6
+x0_short_model=Y^2=X^3+5805X-285714
+x0_j=9938375/21952
+diamond_group=(Z/14Z)^*/{+-1}=C3
+thm2998_symmetric_map=(9,-33)-velu(P):PASS
+odd_flank_scope=sheet_exchange_and_C3_inversion_not_diamond_C2
+all_exact_controls=PASS

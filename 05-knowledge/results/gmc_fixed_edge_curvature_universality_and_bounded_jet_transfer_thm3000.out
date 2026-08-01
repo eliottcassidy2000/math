@@ -40,7 +40,7 @@ B. CUMULANT FORM OF THE CURVATURE
   target (3k2^2-2k1k3)/k1^4 = -(2*kappa1*kappa3 - 3*kappa2**2)/kappa1**4
   VERDICT B: IDENTITY HOLDS
   => curvature > 0  <=>  3 kappa_2^2 > 2 kappa_1 kappa_3.
-     equal roots (kappa_2=kappa_3=0) is the exact zero of the curvature;
+     equal roots (kappa_2=kappa_3=0) give one exact zero of the curvature;
      symmetric root measures (kappa_3=0) give curvature 3 kappa_2^2/kappa_1^4 >= 0.
 
 ==========================================================================
@@ -101,7 +101,20 @@ E. EXACT CLOSED FORMS (no asymptotics)
     w enters first at [d^5] with coefficient 6 ?  True    (= 6*C(k-2,1) at k=3, matching D)
 
 ==========================================================================
-POSITIVE CONTROL: real-rooted families with bounded jets
+H. THRESHOLD REGRESSION (exact hostile + strict asymptotic repair)
+==========================================================================
+  exact old-boundary hostile:
+    (d,x,z,w) = (701,129/100,39/20,-149/20)
+    G_3 = -114191274399994230172453/10000000000
+    negative and exact expected value? True
+  lim_{d->infinity} G_3(d,x,z,beta*d)/d^6 = 6*beta + 3*x**2 - 2*z - 1
+    equals 3*x^2-2*z-1+6*beta? True
+  => on curvature >= 923/10000, the safe uniform condition is strict:
+     liminf w/d > -923/60000 (and w=o(d) is sufficient).
+  VERDICT H: REPAIR CONFIRMED
+
+==========================================================================
+POSITIVE CONTROL: real-rooted sign controls (bounded and unbounded spread)
 ==========================================================================
   N(n) = prod_{i=1}^{d} (n + r_i);  curvature predicted from the roots.
 
@@ -142,9 +155,11 @@ F. HOSTILE: unbounded fourth normalized jet
 
   VERDICT F: HOSTILE CONFIRMED -- edge 2 rises, edge 3 falls, all d
   => 'bounded higher log jets' is INDISPENSABLE, and the sharp condition
-     is GRADED: m_j / m_1^j = o(d^{j-3}) for 3 <= j <= k+1, not uniform
-     boundedness.  At j=4 the threshold w ~ d is attained exactly.
+     is GRADED: m_j / m_1^j = o(d^{j-3}) for 4 <= j <= k+1;
+     j=3 belongs to the leading curvature and is not a remainder condition
+     at all.  Uniform boundedness is sufficient but stronger than necessary.
+     At j=4 the threshold w ~ d is attained exactly.
 
 ==========================================================================
-SUMMARY  A=True  B=True  C=True  D/G=True  E=True  positive-control=True  F=True
+SUMMARY  A=True  B=True  C=True  D/G=True  E=True  H=True  positive-control=True  F=True
 ==========================================================================

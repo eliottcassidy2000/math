@@ -2,7 +2,8 @@
 id: THM-2984
 title: "Projected k3 signed-ray attainment and primitive-unit phase gate"
 status: >
-  PROVED.  On an exact periodic label ray with contribution A/z, existence
+  PROVED + FINITE-EXACT + HOSTILE-AUDITED + LEAN-CORE-FORMALIZED.  On an
+  exact periodic label ray with contribution A/z, existence
   of a scalar-admissible height is decided by a three-way sign/attainment
   law.  Retaining the primitive unit also makes every fixed-cell phase
   independent of height, giving a finite unit-by-unit strict-open exclusion
@@ -22,6 +23,13 @@ status: >
   projected k=3 denominator quotient; it does not assert that any new atlas
   row is empty and does not improve the current proved cap by itself.
 source: codex-lrc14-k3-signed-ray-phase-gate-2026-07-30
+audit: >
+  The exact referee uses explicit require gates, including regression guards
+  for both the 499 formula rows and the six finite flag-gap rows.  Ordinary
+  and optimized Python are byte-identical to the frozen transcript.  The
+  dedicated Lean module elaborates directly and its displayed axiom audit has
+  only propext, Classical.choice, and Quot.sound.  This does not claim that the
+  aggregate project root was rebuilt in the same audit.
 depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
@@ -31,11 +39,20 @@ related:
   - THM-2992-signed-quartic-edge-block-discriminant-parity-and-keller-owner-line-boundary
   - HYP-2935-lrc14-bigraded-relation-signature
   - HYP-3003-summand-multiplicand-farey-basis-merge
+  - MISTAKE-340
+script: 04-computation/lrc14_projected_k3_signed_ray_gate_thm2984.py
+output: 05-knowledge/results/lrc14_projected_k3_signed_ray_gate_thm2984.out
+formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCSignedRayGate.lean
+script_sha256: 23be12885b44efb1e23acfb6a58b9dd285ef57cba666c60f9235bde05fc27af5
+output_sha256: 9e33756dd352042ba6a4571a0af1af626e70e0991e94624c0dfe18711a229dbc
+semantic_sha256: 756ae7ed291fc438648ed76f57b07eae1cde4a1879b184f9564b6ca8adc94f48
+formalization_sha256: 6f3ab284fc1936ebc0b565bf812fcdc38e6940d17e93d607b802f80d6261bc91
+hash_basis: raw file bytes
 ---
 
 # THM-2984 -- signed-ray attainment and primitive-unit phase gate
 
-**PROVED.**
+**PROVED + FINITE-EXACT + HOSTILE-AUDITED + LEAN-CORE-FORMALIZED.**
 
 This theorem records the coordinate discarded by the current projected
 `k=3` denominator envelope.  A denominator remembers the finite cyclic
@@ -1065,18 +1082,19 @@ translated lattice-capacity arithmetic, and the equality-split/pair-count
 arithmetic used in the affine flag classification.  It does not claim a Lean
 formalization of every transporter, gap-word, or composition-orbit argument
 in this document.  Direct elaboration and the dedicated Lake target pass, and
-the module is imported by the project root.  The shared checkout's full root
-build is presently blocked in the unrelated pre-existing
-`LRCCoherentBlockerChronology.lean:130`, whose rational hypotheses do not
-imply its claimed unit-gap inequality.  Every displayed `#print axioms` report
-for `LRCSignedRayGate` is contained in
+the module is imported by the project root.  This audit does not claim a fresh
+aggregate `lake build TournamentH7`.  Its previously exposed
+`LRCCoherentBlockerChronology` obstruction has been repaired separately by
+restoring the intended integer types of its tooth-address variables; see
+MISTAKE-340.  Every displayed `#print axioms` report for `LRCSignedRayGate` is
+contained in
 `{propext, Classical.choice, Quot.sound}`; there is no `sorryAx`, theorem-
 specific axiom, or `native_decide` dependency.
 
 Frozen SHA-256 hashes are
 
 ```text
-source    291818c42929dabf3b261ca91604d5f0fdfa16a210faf51e19bcac71a38a1b41
+source    23be12885b44efb1e23acfb6a58b9dd285ef57cba666c60f9235bde05fc27af5
 output    9e33756dd352042ba6a4571a0af1af626e70e0991e94624c0dfe18711a229dbc
 semantic  756ae7ed291fc438648ed76f57b07eae1cde4a1879b184f9564b6ca8adc94f48
 Lean      6f3ab284fc1936ebc0b565bf812fcdc38e6940d17e93d607b802f80d6261bc91

@@ -15,7 +15,7 @@ status: >
   finite-low-pair torsion, torsion-density pigeonhole, scalar-splice,
   status-descent, and cardinality translated-band addenda improve the
   k=2/k=3 first-drift caps from 2142/380
-  to 1655/246.
+  to 1579/243.
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -24,9 +24,9 @@ status: >
   of level spread at most five.  The projective phase graph has clique number
   five and its fully periodized high-channel fibre has sharp floor 1/105;
   threshold-block refinements close arbitrary positive reflected levels on
-  2,421 of the 3,003 bodies.  A three-reverse-ladder certificate closes every
+  2,442 of the 3,003 bodies.  A three-reverse-ladder certificate closes every
   body for spread D>=6 and base m>=3D.  The remaining reflected problem is
-  confined to 582 bodies in D>=6,m<3D; the finite censuses, full
+  confined to 561 bodies in D>=6,m<3D; the finite censuses, full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is internal
   exact computation and proof audit; there is no Lean or external peer-review
   claim.
@@ -44,6 +44,7 @@ related:
   - THM-1176-seven-wall-slow-gap-harmonic-crowding
   - THM-1221-seven-wall-strict-spectrum-hunter-floor
   - THM-2184-two-scale-tail-continuation-profile
+  - THM-3033-projected-k3-z246-to-z244-descent-and-z243-high-floor-addendum
 verification:
   - 04-computation/lrc14_j7_critical_scalar_wall_balanced_boundary_thm2941.py
   - 05-knowledge/results/lrc14_j7_critical_scalar_wall_balanced_boundary_thm2941.out
@@ -237,6 +238,12 @@ verification:
   - 05-knowledge/results/lrc14_j7_reflected_robust_edge10_threshold_block_uniform_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_robust_edge9_threshold_block_uniform_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_robust_edge9_threshold_block_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_robust_edge8_threshold_block_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_robust_edge8_threshold_block_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_upper_median_two_star_d6_d8_exact_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_upper_median_two_star_d6_d8_exact_thm2941.out
+  - 04-computation/lrc14_j7_reflected_median_star_chord_scout_20260801.py
+  - 05-knowledge/results/lrc14_j7_reflected_median_star_chord_scout_20260801.out
   - 04-computation/lrc14_j7_reflected_d5_crossdet_tail_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_d5_crossdet_tail_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_d5_head_median_cell_closure_thm2941.py
@@ -1021,22 +1028,27 @@ K6 minus one edge             +59 = 2,276
 12 robust edges               +37 = 2,339
 11 robust edges               +15 = 2,354
 10 robust edges               +32 = 2,386
- 9 robust edges               +35 = 2,421.             (25i7)
+ 9 robust edges               +35 = 2,421
+ 8 robust edges               +21 = 2,442.             (25i7)
 ```
 
 Every body counted in `(25i7)` closes for every assignment of positive
 reflected levels.  The edge-nine terminal audits `440,352` exact certificate
 rows; its disconnected `K_(1,5)` and `K5`-minus-edge low components are
-handled as genuine cylinders.  Thus arbitrary-level closure leaves exactly
+handled as genuine cylinders.  The edge-eight terminal audits another
+`652,688` exact rows; a maximum low clique followed by low-spanning-tree
+growth exhausts every connected labelled projective word, while all
+disconnected cases retain their free-center cylinders.  Thus arbitrary-level
+closure leaves exactly
 
 ```text
-3,003-2,421=582                                                (25i8)
+3,003-2,442=561                                                (25i8)
 ```
 
 bodies.  This is a sufficient-certificate residual, not a census of physical
 counterexamples.
 
-There are also two transverse all-body closures.  First, cross-determinant
+There are also transverse all-body closures.  First, cross-determinant
 transport closes spread `D=5` for `m>=16`; an exact `m=1..15` head then checks
 `7,851,600` assignments, of which `16,076` require the canonical median
 body-safe cell.  All of them close, so `(25i2)` strengthens from `D<=4` to
@@ -1048,9 +1060,17 @@ reverse ladders close the residual orientations.  The exact scale law gives
 D>=6 and m>=3D  ==>  every reflected packet closes.           (25i9)
 ```
 
-Consequently the current reflected obligation is confined to the `582`
-bodies in the wedge `D>=6,m<3D`.  No monotonic interpolation between finite
-spread slices and the cone is assumed.
+Third, at the canonical upper-median safe cell, the union of the boundary
+label's star with the least other label's star has nine edges.  Its exact
+maximum-spanning-tree credit closes all `55,606,320` injective assignments at
+`m=1,D=6,7,8`; in particular the `D=8` bank contains every distinct assignment
+from levels `1,...,9`.  This is a finite base theorem, not an insertion or
+all-dilation theorem.
+
+Consequently the current arbitrary-level reflected obligation is confined to
+the `561` bodies in the wedge `D>=6,m<3D`, outside the proved finite base bank.
+No monotonic interpolation between finite spread slices, the base bank, and
+the cone is assumed.
 
 There is an exact all-scale functional form behind the discrepancy tail.
 Write the carrier components as
@@ -2400,9 +2420,9 @@ ordinary and optimized replays are byte-identical.
 
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,
-close the `582`-body reflected wedge `D>=6,m<3D`, finish the remaining
+close the `561`-body reflected wedge `D>=6,m<3D`, finish the remaining
 `k=2,3` finite decision trees, classify the zero/one-aligned multi-drift
 address hypergraph, close the six-body/seven-tail rung, or prove LRC(14).
 The independent THM-2928 divisor-status route closes `k=4`; THM-2980/2995
-and THM-2981 lower the composed `k=2,3` caps to `1579/246`, respectively,
+and THM-2981/3033 lower the composed `k=2,3` caps to `1579/243`, respectively,
 without emptying the sectors below those caps.

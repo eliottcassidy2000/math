@@ -1,0 +1,69 @@
+
+==============================================================================
+(H1)  E(z) = z * M(z^2),  M(w) = 1F1(1/2;3/2;-w) = F_{(1/2),(3/2,1)}(-w)
+==============================================================================
+   coefficient identity  (1/2)_n / ((3/2)_n (1)_n) == 1/(n!(2n+1)) :
+      n = 0..11 : True
+   numerical check of E(z) = z M(z^2) at 120 digits:
+      z = (1.0 + 0.0j)       |E - zM(z^2)| = 9.6815e-122
+      z = (0.0 + 1.0j)       |E - zM(z^2)| = 1.9363e-121
+      z = (-3.0 + 2.0j)      |E - zM(z^2)| = 1.04e-122
+      z = (2.0 - 5.0j)       |E - zM(z^2)| = 1.2994e-113
+
+==============================================================================
+(H2)  M + 2 w M' = e^{-w}   (so T(w) = 2w; only finite singularity w=0)
+==============================================================================
+      w = 1.0             |M + 2wM' - e^{-w}| = 4.8407e-122
+      w = 2.0             |M + 2wM' - e^{-w}| = 2.4204e-122
+      w = (1.0 + 1.0j)    |M + 2wM' - e^{-w}| = 4.8407e-122
+      w = -3.0            |M + 2wM' - e^{-w}| = 0.0
+
+==============================================================================
+(H3)  M is NOT in C(w)(e^{-w}):  the u-graded equations have no rational
+==============================================================================
+      solution.  Writing M = sum_k m_k(w) u^k with u = e^{-w}, u' = -u,
+      the equation M' + M/(2w) = u/(2w) splits into
+         k=0 :  m_0' + m_0/(2 w) = 0        -> m_0 = C w^{-1/2}
+         k=1 :  m_1' - m_1 + m_1/(2 w) = 1/(2 w)
+         k!=0,1: m_k' - k m_k + m_k/(2w) = 0
+      sympy solves k=0 : Eq(m0(w), C1/sqrt(w))  -> not rational unless C1 = 0
+      sympy solves k=1 : (C1 + sqrt(pi)*erf(sqrt(w))/2)*exp(w)/sqrt(w)
+      -> involves lowergamma/e^w w^{-1/2}: not a rational function.
+      Direct elementary proof (in the write-up): a rational m_1 must be
+      regular away from 0, hence polynomial; 2w m_1' - 2w m_1 + m_1 = 1
+      then forces the leading term -2*lead*w^{deg+1} = 0, impossible.
+      Hence M, e^{-w} are algebraically independent over C(w), and
+      Siegel-Shidlovskii/Beukers give: M(alpha) is TRANSCENDENTAL for
+      every algebraic alpha != 0, i.e. Exc(M) = empty.
+
+==============================================================================
+(H4)  psi(M)(z) = sum_n (-1)^n z^n/(2n+1) = arctan(sqrt z)/sqrt z;
+==============================================================================
+      finite singularities S(M) = {-1}
+      z = 0.5              |series - arctan(sqrt z)/sqrt z| = 9.6815e-122
+      z = 0.9              |series - arctan(sqrt z)/sqrt z| = 0.0
+      z = (0.3 + 0.4j)     |series - arctan(sqrt z)/sqrt z| = 1.2102e-122
+      z = -0.7             |series - arctan(sqrt z)/sqrt z| = 1.9363e-121
+      arctan has branch points at +-i, so arctan(sqrt z)/sqrt z has its
+      only finite singularity at sqrt z = +-i, i.e. z = -1.  S(M) = {-1}.
+      (Delaygue Cor. 1.3's condition alpha_i/alpha_j != rho_1/rho_2 with
+       rho in S(M) then reads alpha_i != alpha_j -- automatic.)
+
+==============================================================================
+CONCLUSION (degree 2)
+==============================================================================
+
+   Let Q = a t^2 + b t + c with a,b,c algebraic, a != 0.  s = sqrt(-a),
+   z0 = -b/(2s), z1 = z0 + s are algebraic, z0 != z1, and
+        int_0^1 e^Q dt = e^{c+z0^2} ( z1 M(z1^2) - z0 M(z0^2) ) / s.
+   Vanishing forces  z1 M(z1^2) - z0 M(z0^2) = 0.  Three cases:
+     * z0 = 0            : forces M(z1^2) = 0, contradicting (H3) (z1 != 0).
+     * z1 = -z0 (!= 0)   : forces -2 z0 M(z0^2) = 0, same contradiction.
+     * z0^2 != z1^2      : alpha_0 = -z0^2, alpha_1 = -z1^2 are pairwise
+                           distinct algebraic, M(z_j^2) = F_{a,b}(alpha_j) are
+                           transcendental by (H3), so Delaygue Thm 1.4 makes
+                           1, F(alpha_0), F(alpha_1) linearly independent over
+                           Qbar; the relation is a nontrivial Qbar-linear one.
+   Hence int_0^1 e^{a t^2 + bt + c} dt != 0 for all algebraic a != 0, b, c.
+   CONDITIONAL ON the two cited published theorems; unconditional otherwise.
+

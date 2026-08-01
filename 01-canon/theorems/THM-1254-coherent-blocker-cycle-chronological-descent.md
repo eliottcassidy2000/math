@@ -4,13 +4,13 @@ title: A COHERENT BLOCKER CYCLE UNCONDITIONALLY PAYS A CHRONOLOGICAL DRIFT INVOI
 status: PROVED (common-irredundant-subcover blocker selection; marked-cycle-tooth injection; forced speed-descent edge and binary relative digit; same-edge original/reflected position dichotomy; unconditional full chronological-drift invoice; carrier-at-most-1171 general-digit guardrail; dependency-free exact referee; sorry-free Lean arithmetic core). This is a coupling theorem, not six-comb noncoverage or LRC(14)
 source: codex-2026-07-19 coherent-selection frontier audit
 depends_on: [THM-1198, THM-1240, THM-1248, THM-1250]
-related: [THM-841, THM-848, THM-850, THM-1127, THM-1156, HYP-7870]
+related: [THM-841, THM-848, THM-850, THM-1127, THM-1156, HYP-7870, MISTAKE-340]
 script: 04-computation/lrc14_coherent_blocker_chronology_thm1254.py
 output: 05-knowledge/results/lrc14_coherent_blocker_chronology_thm1254.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCCoherentBlockerChronology.lean
 script_sha256: 6b970ba8da33a877ce37b1cf26bbfba84c5536b3a68f098c7daa7ea1eeef2ee3
 output_sha256: 7986c5ae7828a063beee4a7b56077a9ef15e9e42632f43c24fb11e392d0d5a90
-formalization_sha256: 7d824b37dca5d451d4e5e426a760fb40a5b580c19ea6e2ec1d72370e5d073f87
+formalization_sha256: 06b29a11beda68e5172599ddf358a36b98a8353fc947ea9c6b1fa4e47fffbbf4
 ---
 
 # THM-1254 — a coherent blocker cycle unconditionally pays one tooth-word drift invoice
@@ -349,12 +349,19 @@ covering each centered phase, and selection of the maximum-speed cycle vertex
 remain explicit paper topology providers.  There are no proof placeholders
 or `native_decide` calls.
 
+The full-invoice consumer types `c,k,delta` as integers and casts only their
+two sign factors into the rational residual identities.  An earlier version
+typed those three addresses as rationals, for which `0<=k<c` does not imply
+`c-k>=1`; MISTAKE-340 records the minimal counterexample and the repair.  All
+drift, speed, and residual quantities remain rational, so this restores the
+paper's address semantics without strengthening its analytic hypotheses.
+
 Frozen hashes are
 
 ```text
 script         6b970ba8da33a877ce37b1cf26bbfba84c5536b3a68f098c7daa7ea1eeef2ee3
 output         7986c5ae7828a063beee4a7b56077a9ef15e9e42632f43c24fb11e392d0d5a90
-formalization  7d824b37dca5d451d4e5e426a760fb40a5b580c19ea6e2ec1d72370e5d073f87
+formalization  06b29a11beda68e5172599ddf358a36b98a8353fc947ea9c6b1fa4e47fffbbf4
 ```
 
 THM-1254 does not prove six-comb noncoverage or LRC(14).  It makes the

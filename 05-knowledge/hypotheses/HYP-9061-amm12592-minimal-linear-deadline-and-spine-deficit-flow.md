@@ -39,7 +39,7 @@ output: 05-knowledge/results/amm12592_artanh_certificate_decode_deathstar.out
 > contradicted by `rho ~ 1.57`, and the two now bracket a plausible answer.
 
 THM-2225 proves the AMM 12592 envelopes `2n` and `max(2,2n-1)`; THM-2160
-section 5 reaches `T(n) <= 2n-2` for `n>=3`, and THM-2996 sharpens that to a
+section 5 reaches `T(n) <= 2n-2` for `n>=3`, and THM-3032 sharpens that to a
 rule dominating the checksum pointwise. Every *classical* rule has `C=2`
 (superseded for the general question, see the update above).
 THM-2160 explicitly does not assert its shell lower bound for cross-shell

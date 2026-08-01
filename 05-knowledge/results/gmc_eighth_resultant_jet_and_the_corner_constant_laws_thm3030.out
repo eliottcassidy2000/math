@@ -39,7 +39,7 @@ C. THE CONSTANT SEQUENCES c_m -- closed forms fitted on m=1,2,3 (j<=7 data)
       C    2   23/360              23/360     True
       C    3   23/15120            23/15120     True
 
-    d_m^C = (3m)!/(2m-2)! = ['6', '360', '15120', '604800']
+    measured d_m^C = ['6', '360', '15120', '604800']
     d_m^A / d_m^C = 4^(2m-1) = [4, 64, 1024, 16384]
     d_m^E / d_m^C = 3^(2m-1) = [3, 27, 243, 2187]
     a_m^A = 3 + 44*16^(m-1) = [47, 707, 11267, 180227]
@@ -103,9 +103,9 @@ E. THE GENUINELY NEW SLOT k=7 -- speculative closed form, first testable at j=8
         c_4^E = 24061/1322697600
         c_4^C = 23/604800
 
-  VERDICT E: numerator laws and slice ratios CONFIRMED out-of-sample at
-             m=4 (True); the base sequence d_m^C = 6, 360, 15120, 604800
-             has NO closed form yet and is the open piece.
+  VERDICT E: numerator laws and slice ratios CONFIRMED at held-out
+             m=4 (True); the factorial base guess is refuted.  The independent
+             referee identifies the measured C constants by Bernoulli/Faulhaber.
 
 ==============================================================================
 F. TERMINAL SLOT k=j (the constant term) -- exceptional, recorded not predicted

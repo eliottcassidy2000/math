@@ -1,0 +1,12 @@
+LRC14 projected k2 z1586 exceptional positive prefix-projective audit
+dependency=04-computation/lrc14_j7_k2_1600_1679_zero_high_and_high_order_phase_closure_thm2980.py;lf_sha256=7cc93dfe2e9365aa1e313d97ab19e76bce0943fd9f6a243e8c1b33c80d439ef4
+dependency=05-knowledge/results/lrc14_j7_k2_scalar_band_1580_1599_thm2995.out;lf_sha256=01577b566a51d37c96c2fed783f133e27403ad3566c3df002aa5f129883f2ba4
+E=1,10,11,12,13,14;L=840840;floor=72873;lows=35697;denominators=189
+two_positive_gap=114306737/144692588040;three_gap=-7084117/144692588040;mixed_gap=20089967187/26382281885960;zero_gap=-62974633/72346294020;two_gap=58014017983/79146845657880
+best_high_d=5390;best_high_label=85332;best_high_le_second_low=1
+zero_packets=250647;prefixes=710;prefix_denominator_tests=19587;coarse_passes=19576;exact_folds=11;failures=0;exact_fold_min_slack=10;min_witness=((1612, 1650, 1800), 12, 12, 2, 135762)
+zero_record_sha256=2958bd7ad92fb6e9e942045b6f6a5aa0c3a663cd97c3d8f7313b2db2f38bbfa8
+one_high_classes=997;small_torsion=982;full_projection=15;unit_instances=355
+full_projection_denominators={11: 5, 13: 5, 143: 5};minimum_full_margin=59;minimum_pair_margin=1
+small_class_sha256=7e86dc2c516df5b36b33ffd7473784ebe7230c229e47e8917eef3da00b465e9b;phase_record_sha256=0654f829bf5cd532bf10aada4b2bf8719f507113b5321bee48be2d72a14495b3
+all_exact_checks=PASS

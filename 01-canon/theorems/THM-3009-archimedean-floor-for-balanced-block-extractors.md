@@ -268,7 +268,7 @@ independently confirms the constant to four digits.
 
 ```text
 classical schemes                     C = 2
-THM-2996 (sharpened half-tail)        C = 2   (D improves, slope does not)
+THM-3032 (sharpened half-tail)        C = 2   (D improves, slope does not)
 THM-3008 verified constructions       rho(4,8,16,32) = 3/2, 14/9, 25/16, <=11/7
 THM-3009 certified floor              C* > 1.5962   (balanced block schemes)
 THM-3009 asymptotic floor             C_arch = 1.59799

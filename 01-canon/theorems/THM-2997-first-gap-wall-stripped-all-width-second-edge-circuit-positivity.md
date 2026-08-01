@@ -1,8 +1,24 @@
 ---
 id: THM-2997
 title: "First-gap wall-stripped all-width second-edge circuit positivity"
-status: PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT
+status: >
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Conditional for
+  every encoded continuation width M>=35 and unconditional for the actual
+  proved width M=34.  The audit repaired the false raw-chart identity wording,
+  rederived the circuit and wall asymptotics, replayed every residue tariff and
+  the M=33/34 boundary, and independently reconstructed the first three
+  resultant log jets from actual 36-row Macaulay matrices at ten widths.
 source: codex-gmc-second-edge-circuit-2026-07-31
+audit: >
+  Independent hostile audit ACCEPT.  The main companion replays normal and
+  optimized byte-for-byte against its stored 103555-byte transcript.  A new
+  independent companion builds the actual factorial top-four slices, computes
+  the raw selected 36-by-36 determinant jets, removes the universal
+  q200^6*c300*K flag factor, and exactly matches P1,P2,P3 at widths
+  6,7,8,9,10,11,12,20,33,34.  The raw leading matrix is nonidentity at every
+  audited width; only its local inverse-normalization has identity leading
+  term.  No all-width construction, full no-return, or GMC(2) consequence is
+  asserted.
 depends_on:
   - THM-2969-first-gap-wall-stripped-resultant-norm-core-atlas
   - THM-2973-first-gap-wall-stripped-norm-core-continuation-through-thirty-one
@@ -12,16 +28,22 @@ depends_on:
 related:
   - THM-2986-first-gap-transfer-one-checkerboard-sign
   - THM-2988-first-gap-self-curvature-negativity
+  - THM-3013-symbolic-fourth-resultant-log-jet-P4
+  - THM-3030-eighth-resultant-jet-and-corner-constant-closed-forms
 script: 04-computation/gmc_first_gap_wall_stripped_all_width_second_edge_circuit_positivity_thm2997.py
 output: 05-knowledge/results/gmc_first_gap_wall_stripped_all_width_second_edge_circuit_positivity_thm2997.out
 script_sha256: 40959bd9e47fb9ea7bfd9b0ac98b6a303aa1b4b840047b9eef5b2ee214997d5e
 output_sha256: 96b7c559f88dbf9e32df3dc796a881b76d2a06399c35cda1ac9e60b38eabb0ed
+independent_script: 04-computation/gmc_first_gap_second_edge_raw_macaulay_referee_thm2997.py
+independent_output: 05-knowledge/results/gmc_first_gap_second_edge_raw_macaulay_referee_thm2997.out
+independent_script_sha256: c37482ac79a4283958f92e025100596a24d2d3bc40db26acd6a5ed5f2fc07b28
+independent_output_sha256: 8785a813837a4cf4b7acfe500179049c7946b21da0aadc5020780bb0346ef198
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2997 -- first-gap wall-stripped all-width second-edge circuit positivity
 
-**PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This theorem proves one family-specific no-return step for the explicitly
 encoded first-gap continuation wall invoice: the second normalized Newton
@@ -131,14 +153,28 @@ Set
     U=2^M, V=3^M, D=U^2+3U-3V-1.                     (13)
 
 For the range in scope, `D>0`.  The exact degree-seven Macaulay construction
-uses the monomial-priority 36-row chart for degrees `(2,3,4)`.  After the
-three-by-three response adjugate, its pure leading matrix is the identity.
-The ten degree-seven target monomials divisible by two of
-`x_0^2,x_1^3,x_2^4` index the classical extraneous minor.  Hence
+uses the monomial-priority 36-row chart for degrees `(2,3,4)`.  If its
+top-slice expansion is
 
-    log Res=log det(M_36)-log det(E_10).                (14)
+    M_36(n)=n^s(m_0+t m_1+t^2m_2+t^3m_3+...), t=n^-1,
 
-For a normalized slice `I+tX_1+t^2X_2+t^3X_3`, both determinants use
+then the raw selected leading matrix `m_0` is **not** the identity.  It is
+invertible on the physical widths used here, and left multiplication by
+`m_0^-1` gives the local normalized slice
+
+    I+tX_1+t^2X_2+t^3X_3+..., X_j=m_0^-1m_j.          (14a)
+
+The three-by-three response adjugate is a separate normalization of the
+underlying forms; it does not make the raw selected chart globally equal to
+the identity.  Indeed the generic raw determinant has additional chart walls.
+THM-2942 identifies them exactly:
+
+    det(M_36)=q_200^6 c_300 K(Q,C) Res(Q,C,F).         (14b)
+
+Thus, on this nonvanishing chart, `log Res` is the raw log determinant minus
+`6 log q_200+log c_300+log K`.
+
+For a normalized slice `I+tX_1+t^2X_2+t^3X_3`, the determinant expansion uses
 
     L_1=tr X_1,
     L_2=tr X_2-tr(X_1^2)/2,
@@ -162,9 +198,12 @@ terms.  Their complete coefficient-table digest is
 
     cfb36557e1d54a0328a309375a948ace99c78e0688a54a014aef0906c1b90513.  (18)
 
-This compact table is frozen directly in the companion.  The raw 36-minus-10
-Macaulay rebuild independently reproduces every coefficient.  As a low-width
-control, it gives exactly
+This compact table is frozen directly in the companion.  The independent raw
+referee builds the actual factorial forms and 36-row selected matrices without
+interpolating the `P_j`; after subtracting the THM-2942 flag factor it reproduces
+all three evaluated jets at `M=6,...,12,20,33,34`.  Later disjoint-grid builds
+in THM-3013 and THM-3030 also re-emit the complete frozen table.  As a low-width
+control, the raw referee gives exactly
 
     [n^-3]log Res at M=6
       =958351870363086969113/6204146484375000.          (19)
@@ -344,6 +383,8 @@ Reproduce after installing the repository's exact Python dependencies with
 
     python 04-computation/gmc_first_gap_wall_stripped_all_width_second_edge_circuit_positivity_thm2997.py --output .scratch/thm2997.normal.out
     python -O 04-computation/gmc_first_gap_wall_stripped_all_width_second_edge_circuit_positivity_thm2997.py --output .scratch/thm2997.opt.out
+    python 04-computation/gmc_first_gap_second_edge_raw_macaulay_referee_thm2997.py --output .scratch/thm2997.referee.normal.out
+    python -O 04-computation/gmc_first_gap_second_edge_raw_macaulay_referee_thm2997.py --output .scratch/thm2997.referee.opt.out
 
 Normal and optimized outputs are LF-identical: 80 lines and 103,555 bytes.
 All checks use optimization-stable explicit guards.  Frozen LF hashes are
@@ -351,10 +392,19 @@ All checks use optimization-stable explicit guards.  Frozen LF hashes are
     script  40959bd9e47fb9ea7bfd9b0ac98b6a303aa1b4b840047b9eef5b2ee214997d5e
     output  96b7c559f88dbf9e32df3dc796a881b76d2a06399c35cda1ac9e60b38eabb0ed
 
-Promotion still requires an immutable independent hostile audit of the raw
-36-minus-10 Macaulay reconstruction, every residue digest and tail tariff,
-the exact wall moments, the direct `M=33,34` boundary, and normal/optimized/
-stored transcript equality.
+The independent raw-chart referee also replays normal and optimized against
+its stored transcript.  Its LF hashes are
 
-**QED (candidate; independent audit pending).**
+    independent script  c37482ac79a4283958f92e025100596a24d2d3bc40db26acd6a5ed5f2fc07b28
+    independent output  8785a813837a4cf4b7acfe500179049c7946b21da0aadc5020780bb0346ef198
 
+The hostile audit separately checked the algebraic equivalence of (3), (6),
+and (8); rederived all four wall-moment limits by interval integration; checked
+that the tariff in (31) majorizes every lower exponential base and decreases
+after the recorded tail start; replayed all 150 box records, 30 cleared-circuit
+records, the unreduced residue-four control, and every finite prefix; and
+recomputed the exact `M=33` negative / `M=34` positive boundary.  It found the
+raw-chart identity wording error repaired in (14a)--(14b), but no defect in the
+conditional second-edge conclusion.
+
+**QED.**

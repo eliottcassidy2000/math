@@ -1,0 +1,246 @@
+# lane J1 -- jc2_tower_depth_laneJ1.py
+# Recorded in two invocations (PART 1-2, then PART 3-5) because a single
+# process exceeded the harness's foreground limit; the script's __main__ runs
+# all seven parts in one go and produces exactly this content in order.
+
+PART 1  Lemma J (local Jacobian valuation law)
+   generic cases tested : 207   exceptional cases tested : 43
+   violations           : 0
+   PART1 PASS = True
+
+PART 2  the tower on genuine Jacobian pairs (polynomial automorphisms)
+   [00] L=x + 2*y e=3  a,b=(1,2) g=3
+      u = [3, 2, 0, 0]
+      w = [6, 5, 3, 2, 0, 0, 0]
+      sigma_P=3/2 sigma_Q=3/2   hullA=[Fraction(3, 2), Fraction(0, 1)] hullB=[Fraction(3, 2), Fraction(0, 1)]
+   [01] L=x - 2*y e=2  a,b=(3,1) g=2
+      u = [6, 4, 2, 0, 0, 0, 0]
+      w = [2, 0, 0]
+      sigma_P=2 sigma_Q=2   hullA=[Fraction(2, 1), Fraction(0, 1)] hullB=[Fraction(2, 1), Fraction(0, 1)]
+   [02] L=2*x + y e=4  a,b=(3,1) g=4
+      u = [12, 11, 10, 8, 7, 6, 4, 3, 3, 0, 0, 0, 0]
+      w = [4, 3, oo, 0, 0]
+      sigma_P=4/3 sigma_Q=4/3   hullA=[Fraction(4, 3), Fraction(0, 1)] hullB=[Fraction(4, 3), Fraction(0, 1)]
+   samples analysed          : 30
+   (n,m,g,a,b,K) multiset    : [(2, 6, 2, 1, 3, 1), (2, 8, 2, 1, 4, 1), (3, 6, 3, 1, 2, 1), (3, 9, 3, 1, 3, 1), (4, 8, 4, 1, 2, 1), (6, 2, 2, 3, 1, 1), (6, 3, 3, 2, 1, 1), (6, 18, 6, 1, 3, 1), (8, 4, 4, 2, 1, 1), (9, 3, 3, 3, 1, 1), (9, 27, 9, 1, 3, 1), (12, 3, 3, 4, 1, 1), (12, 4, 4, 3, 1, 1), (12, 6, 6, 2, 1, 1), (16, 4, 4, 4, 1, 1), (27, 9, 9, 3, 1, 1)]
+   graded           :   30 checks, all True = True
+   L0               :   30 checks, all True = True
+   TTL              :   30 checks, all True = True
+   T1div            :   30 checks, all True = True
+   T1exact          :   30 checks, all True = True
+   euclid           :   30 checks, all True = True
+   sigma_scoped     :   29 checks, all True = True
+   hull_dichotomy   :   30 checks, all True = True
+   K1               :   30 checks, all True = True   (observation, not a claim)
+   minab1           :   30 checks, all True = True   (observation, not a claim)
+   sigma_all        :   30 checks, all True = True   (observation, not a claim)
+   hullsets_equal   :   30 checks, all True = True   (observation, not a claim)
+   PART2 PASS = True
+
+=== SUMMARY (part A) ===
+   PART1 LemmaJ                               True
+   PART2 tower on automorphisms               True
+
+
+PART 3  the graded obstruction map  Phi_j(A,B) = Jac(A,Q_m)+Jac(P_n,B)
+   PREDICTION (proved in the artifact, a>=b):
+       dim ker  Phi_j = max(0, m-j+1) + [g0 | j]
+       dim coker Phi_j = (m-2) + [g0 | j]        for 1 <= j <= m
+   where H = c*H0^d, g0 = deg H0.  The '+[g0|j]' is the ONLY free
+   parameter beyond 'P_(n-j) is forced by Q_(m-j)'.
+
+   H                 g g0  a  b   n   m | j: (dimker,dimcoker) pred/obs
+   y^2               2  1  3  2   6   4 | 1:(5,3) 2:(4,3) 3:(3,3) 4:(2,3)
+   y^2               2  1  5  2  10   4 | 1:(5,3) 2:(4,3) 3:(3,3) 4:(2,3)
+   y^2               2  1  4  3   8   6 | 1:(7,5) 2:(6,5) 3:(5,5) 4:(4,5) 5:(3,5) 6:(2,5)
+   y^2               2  1  5  3  10   6 | 1:(7,5) 2:(6,5) 3:(5,5) 4:(4,5) 5:(3,5) 6:(2,5)
+   y^2               2  1  2  1   4   2 | 1:(3,1) 2:(2,1)
+   y^2               2  1  3  1   6   2 | 1:(3,1) 2:(2,1)
+   y^3               3  1  3  2   9   6 | 1:(7,5) 2:(6,5) 3:(5,5) 4:(4,5) 5:(3,5) 6:(2,5)
+   y^3               3  1  5  2  15   6 | 1:(7,5) 2:(6,5) 3:(5,5) 4:(4,5) 5:(3,5) 6:(2,5)
+   y^3               3  1  4  3  12   9 | 1:(10,8) 2:(9,8) 3:(8,8) 4:(7,8) 5:(6,8) 6:(5,8) 7:(4,8) 8:(3,8) 9:(2,8)
+   y^3               3  1  5  3  15   9 | 1:(10,8) 2:(9,8) 3:(8,8) 4:(7,8) 5:(6,8) 6:(5,8) 7:(4,8) 8:(3,8) 9:(2,8)
+   y^3               3  1  2  1   6   3 | 1:(4,2) 2:(3,2) 3:(2,2)
+   y^3               3  1  3  1   9   3 | 1:(4,2) 2:(3,2) 3:(2,2)
+   x^2*y             3  3  3  2   9   6 | 1:(6,4) 2:(5,4) 3:(5,5) 4:(3,4) 5:(2,4) 6:(2,5)
+   x^2*y             3  3  5  2  15   6 | 1:(6,4) 2:(5,4) 3:(5,5) 4:(3,4) 5:(2,4) 6:(2,5)
+   x^2*y             3  3  4  3  12   9 | 1:(9,7) 2:(8,7) 3:(8,8) 4:(6,7) 5:(5,7) 6:(5,8) 7:(3,7) 8:(2,7) 9:(2,8)
+   x^2*y             3  3  5  3  15   9 | 1:(9,7) 2:(8,7) 3:(8,8) 4:(6,7) 5:(5,7) 6:(5,8) 7:(3,7) 8:(2,7) 9:(2,8)
+   x^2*y             3  3  2  1   6   3 | 1:(3,1) 2:(2,1) 3:(2,2)
+   x^2*y             3  3  3  1   9   3 | 1:(3,1) 2:(2,1) 3:(2,2)
+   x*y               2  2  3  2   6   4 | 1:(4,2) 2:(4,3) 3:(2,2) 4:(2,3)
+   x*y               2  2  5  2  10   4 | 1:(4,2) 2:(4,3) 3:(2,2) 4:(2,3)
+   x*y               2  2  4  3   8   6 | 1:(6,4) 2:(6,5) 3:(4,4) 4:(4,5) 5:(2,4) 6:(2,5)
+   x*y               2  2  5  3  10   6 | 1:(6,4) 2:(6,5) 3:(4,4) 4:(4,5) 5:(2,4) 6:(2,5)
+   x*y               2  2  2  1   4   2 | 1:(2,0) 2:(2,1)
+   x*y               2  2  3  1   6   2 | 1:(2,0) 2:(2,1)
+   x*(x+y)           2  2  3  2   6   4 | 1:(4,2) 2:(4,3) 3:(2,2) 4:(2,3)
+   x*(x+y)           2  2  5  2  10   4 | 1:(4,2) 2:(4,3) 3:(2,2) 4:(2,3)
+   x*(x+y)           2  2  4  3   8   6 | 1:(6,4) 2:(6,5) 3:(4,4) 4:(4,5) 5:(2,4) 6:(2,5)
+   x*(x+y)           2  2  5  3  10   6 | 1:(6,4) 2:(6,5) 3:(4,4) 4:(4,5) 5:(2,4) 6:(2,5)
+   x*(x+y)           2  2  2  1   4   2 | 1:(2,0) 2:(2,1)
+   x*(x+y)           2  2  3  1   6   2 | 1:(2,0) 2:(2,1)
+   x*y*(x+y)         3  3  3  2   9   6 | 1:(6,4) 2:(5,4) 3:(5,5) 4:(3,4) 5:(2,4) 6:(2,5)
+   x*y*(x+y)         3  3  5  2  15   6 | 1:(6,4) 2:(5,4) 3:(5,5) 4:(3,4) 5:(2,4) 6:(2,5)
+   x*y*(x+y)         3  3  4  3  12   9 | 1:(9,7) 2:(8,7) 3:(8,8) 4:(6,7) 5:(5,7) 6:(5,8) 7:(3,7) 8:(2,7) 9:(2,8)
+   x*y*(x+y)         3  3  5  3  15   9 | 1:(9,7) 2:(8,7) 3:(8,8) 4:(6,7) 5:(5,7) 6:(5,8) 7:(3,7) 8:(2,7) 9:(2,8)
+   x*y*(x+y)         3  3  2  1   6   3 | 1:(3,1) 2:(2,1) 3:(2,2)
+   x*y*(x+y)         3  3  3  1   9   3 | 1:(3,1) 2:(2,1) 3:(2,2)
+   (x*y)^2           4  2  3  2  12   8 | 1:(8,6) 2:(8,7) 3:(6,6) 4:(6,7) 5:(4,6) 6:(4,7) 7:(2,6) 8:(2,7)
+   (x*y)^2           4  2  2  1   8   4 | 1:(4,2) 2:(4,3) 3:(2,2) 4:(2,3)
+   (x*y)^2           4  2  3  1  12   4 | 1:(4,2) 2:(4,3) 3:(2,2) 4:(2,3)
+   x*y*(x+y)*(x-y)   4  4  3  2  12   8 | 1:(8,6) 2:(7,6) 3:(6,6) 4:(6,7) 5:(4,6) 6:(3,6) 7:(2,6) 8:(2,7)
+   x*y*(x+y)*(x-y)   4  4  2  1   8   4 | 1:(4,2) 2:(3,2) 3:(2,2) 4:(2,3)
+   x*y*(x+y)*(x-y)   4  4  3  1  12   4 | 1:(4,2) 2:(3,2) 3:(2,2) 4:(2,3)
+
+   orders checked : 212      dimension law holds everywhere : True
+   PART3 PASS = True
+
+PART 3b  T2 and T3, the exact determination relations
+   T2 (a>=b): P_(n-1) = H^(a-b) A_1 and  c a Q_(m-1) - c' b A_1 =
+              lambda * H0^((m-1)/g0), with lambda = 0 unless g0 = 1.
+   samples : 22   (n,m,g,a,b,g0) : [(6, 2, 2, 3, 1, 1), (6, 3, 3, 2, 1, 1), (8, 2, 2, 4, 1, 1), (8, 4, 4, 2, 1, 1), (9, 3, 3, 3, 1, 1), (12, 4, 4, 3, 1, 1), (16, 4, 4, 4, 1, 1), (18, 6, 6, 3, 1, 1)]
+   H^(a-b) | P_(n-1) everywhere        : True
+   T2 residue is the allowed H0-power  : True
+   PART3b PASS = True
+
+PART 3c  the REDUCED tower (R_j): order j divided by H^(a-(j-1)b-1)
+   (R_1)  c a Jac(H,Q_(m-1)) + c' b Jac(P_(n-1),H)/H^(a-b-... ) = 0
+   (R_2)  c a H^b Jac(H,Q_(m-2)) + Jac(P_(n-1),Q_(m-1))/H^(a-b-1)
+            + c' b Jac(P_(n-2),H)/H^(a-2b) = 0
+   every term is a form of degree j(m-1)+g-2; valid for
+   1 <= j <= floor((a-1)/b)+1  (= the first partial quotient of a/b).
+   (n,m,g,a,b,jmax_R)       reduced identities hold
+   (  8,  4, 4, 2, 1, 2)        True
+   ( 12,  6, 6, 2, 1, 2)        True
+   (  8,  4, 4, 2, 1, 2)        True
+   ( 12,  6, 6, 2, 1, 2)        True
+   ( 12,  6, 6, 2, 1, 2)        True
+   (  9,  3, 3, 3, 1, 3)        True
+   (  9,  3, 3, 3, 1, 3)        True
+   ( 12,  6, 6, 2, 1, 2)        True
+   (  8,  4, 4, 2, 1, 2)        True
+   (  9,  3, 3, 3, 1, 3)        True
+   (  8,  4, 4, 2, 1, 2)        True
+   (  9,  3, 3, 3, 1, 3)        True
+   (  6,  2, 2, 3, 1, 3)        True
+   (  8,  4, 4, 2, 1, 2)        True
+   (  9,  3, 3, 3, 1, 3)        True
+   ( 12,  6, 6, 2, 1, 2)        True
+   (  8,  4, 4, 2, 1, 2)        True
+   (  9,  3, 3, 3, 1, 3)        True
+   PART3c PASS = True
+
+PART 4  single-slope hull matching  =>  sigma = e/t with 1<=t<=g-1
+   For each L|H with L not dividing P_1 nor Q_1 the two hulls share
+   their descent rate sigma (PART 2 'sigma_scoped').  If both hulls
+   are single-edge, sigma = a e / alpha = b e / beta with alpha,beta
+   integers, alpha<=n-1, beta<=m-1.  gcd(a,b)=1 forces alpha=a t,
+   beta = b t, sigma = e/t, and alpha<=ga-1 forces t<=g-1.
+   parameter triples checked : 5304
+   'single-slope solutions = {(at,bt): 1<=t<=g-1}' holds everywhere : True
+   consequence: single-slope hull matching is IMPOSSIBLE when g=1.
+   PART4 PASS = True
+
+PART 5  search order over coprime exponent pairs (a,b), a,b>=2
+   ordering key = (z = max partial quotient ASC, then a+b ASC).
+   Rationale: the PROVED forced chain  H^(a-ib) | P_(n-i),
+   0<=i<=floor(a/b), is longest when a partial quotient is large, so
+   large-quotient pairs are the MOST constrained and the small-z
+   (golden / metallic) pairs are the hard corner.  z=2 with all
+   leading quotients 1 is exactly the Fibonacci ray.
+   'chain' = floor(a/b); 'sub' = sum of partial quotients = total
+   number of subtractive Euclid steps the tower must run.
+   g_min: JC(2) is classical for gcd(n,m)=1 (and PART 4 kills g=1 for
+   single-slope hulls); CITED classical filters gcd<=8 and Moh's
+   max(deg)<=100 give the last two columns.
+
+  #    a    b  a/b CF          z  dep  sub chain metal fib  minimal (n,m):  g=2        g=9         Moh
+  ----------------------------------------------------------------------------------------------------
+  1     3    2  [1;2]          2   2    3    1  1    Y      (  6,  4) (  27,  18) g=34 ( 102,  68)
+  2     5    2  [2;2]          2   2    4    2  2    -      ( 10,  4) (  45,  18) g=21 ( 105,  42)
+  3     5    3  [1;1;2]        2   3    4    1  1    Y      ( 10,  6) (  45,  27) g=21 ( 105,  63)
+  4     8    3  [2;1;2]        2   3    5    2  -    -      ( 16,  6) (  72,  27) g=13 ( 104,  39)
+  5     7    5  [1;2;2]        2   3    5    1  -    -      ( 14, 10) (  63,  45) g=15 ( 105,  75)
+  6     8    5  [1;1;1;2]      2   4    5    1  1    Y      ( 16, 10) (  72,  45) g=13 ( 104,  65)
+  7    12    5  [2;2;2]        2   3    6    2  2    -      ( 24, 10) ( 108,  45) g=9  ( 108,  45)
+  8    13    5  [2;1;1;2]      2   4    6    2  -    -      ( 26, 10) ( 117,  45) g=9  ( 117,  45)
+  9    11    8  [1;2;1;2]      2   4    6    1  -    -      ( 22, 16) (  99,  72) g=10 ( 110,  80)
+  10   12    7  [1;1;2;2]      2   4    6    1  -    -      ( 24, 14) ( 108,  63) g=9  ( 108,  63)
+  11   13    8  [1;1;1;1;2]    2   5    6    1  1    Y      ( 26, 16) ( 117,  72) g=9  ( 117,  72)
+  12   19    7  [2;1;2;2]      2   4    7    2  -    -      ( 38, 14) ( 171,  63) g=9  ( 171,  63)
+  13   19    8  [2;2;1;2]      2   4    7    2  -    -      ( 38, 16) ( 171,  72) g=9  ( 171,  72)
+  14   17   12  [1;2;2;2]      2   4    7    1  -    -      ( 34, 24) ( 153, 108) g=9  ( 153, 108)
+  15   21    8  [2;1;1;1;2]    2   5    7    2  -    -      ( 42, 16) ( 189,  72) g=9  ( 189,  72)
+  16   19   11  [1;1;2;1;2]    2   5    7    1  -    -      ( 38, 22) ( 171,  99) g=9  ( 171,  99)
+  17   18   13  [1;2;1;1;2]    2   5    7    1  -    -      ( 36, 26) ( 162, 117) g=9  ( 162, 117)
+  18   19   12  [1;1;1;2;2]    2   5    7    1  -    -      ( 38, 24) ( 171, 108) g=9  ( 171, 108)
+  19   21   13  [1;1;1;1;1;2]  2   6    7    1  1    Y      ( 42, 26) ( 189, 117) g=9  ( 189, 117)
+  20   29   12  [2;2;2;2]      2   4    8    2  2    -      ( 58, 24) ( 261, 108) g=9  ( 261, 108)
+  21   30   11  [2;1;2;1;2]    2   5    8    2  -    -      ( 60, 22) ( 270,  99) g=9  ( 270,  99)
+  22   31   12  [2;1;1;2;2]    2   5    8    2  -    -      ( 62, 24) ( 279, 108) g=9  ( 279, 108)
+  23   31   13  [2;2;1;1;2]    2   5    8    2  -    -      ( 62, 26) ( 279, 117) g=9  ( 279, 117)
+  24   26   19  [1;2;1;2;2]    2   5    8    1  -    -      ( 52, 38) ( 234, 171) g=9  ( 234, 171)
+  25   27   19  [1;2;2;1;2]    2   5    8    1  -    -      ( 54, 38) ( 243, 171) g=9  ( 243, 171)
+  26   29   17  [1;1;2;2;2]    2   5    8    1  -    -      ( 58, 34) ( 261, 153) g=9  ( 261, 153)
+  27   34   13  [2;1;1;1;1;2]  2   6    8    2  -    -      ( 68, 26) ( 306, 117) g=9  ( 306, 117)
+  28   30   19  [1;1;1;2;1;2]  2   6    8    1  -    -      ( 60, 38) ( 270, 171) g=9  ( 270, 171)
+  29   31   18  [1;1;2;1;1;2]  2   6    8    1  -    -      ( 62, 36) ( 279, 162) g=9  ( 279, 162)
+  30   29   21  [1;2;1;1;1;2]  2   6    8    1  -    -      ( 58, 42) ( 261, 189) g=9  ( 261, 189)
+  31   31   19  [1;1;1;1;2;2]  2   6    8    1  -    -      ( 62, 38) ( 279, 171) g=9  ( 279, 171)
+  32   34   21  [1;1;1;1;1;1;2]  2   7    8    1  1    Y      ( 68, 42) ( 306, 189) g=9  ( 306, 189)
+  33    4    3  [1;3]          3   2    4    1  -    -      (  8,  6) (  36,  27) g=26 ( 104,  78)
+  34    7    2  [3;2]          3   2    5    3  -    -      ( 14,  4) (  63,  18) g=15 ( 105,  30)
+  35    7    3  [2;3]          3   2    5    2  -    -      ( 14,  6) (  63,  27) g=15 ( 105,  45)
+  36    7    4  [1;1;3]        3   3    5    1  -    -      ( 14,  8) (  63,  36) g=15 ( 105,  60)
+  37   10    3  [3;3]          3   2    6    3  3    -      ( 20,  6) (  90,  27) g=11 ( 110,  33)
+  38   11    3  [3;1;2]        3   3    6    3  -    -      ( 22,  6) (  99,  27) g=10 ( 110,  30)
+  39   11    4  [2;1;3]        3   3    6    2  -    -      ( 22,  8) (  99,  36) g=10 ( 110,  40)
+  40    9    7  [1;3;2]        3   3    6    1  -    -      ( 18, 14) (  81,  63) g=12 ( 108,  84)
+  41   10    7  [1;2;3]        3   3    6    1  -    -      ( 20, 14) (  90,  63) g=11 ( 110,  77)
+  42   11    7  [1;1;1;3]      3   4    6    1  -    -      ( 22, 14) (  99,  63) g=10 ( 110,  70)
+  43   15    4  [3;1;3]        3   3    7    3  -    -      ( 30,  8) ( 135,  36) g=9  ( 135,  36)
+  44   17    5  [3;2;2]        3   3    7    3  -    -      ( 34, 10) ( 153,  45) g=9  ( 153,  45)
+
+   the golden (Fibonacci) ray -- maximal CF depth per size, z=2:
+      (a,b)=(  5,  3)  CF=[1;1;2]                depth=3 sub=4  Moh-minimal (n,m)=(105,63) at g=21
+      (a,b)=(  8,  5)  CF=[1;1;1;2]              depth=4 sub=5  Moh-minimal (n,m)=(104,65) at g=13
+      (a,b)=( 13,  8)  CF=[1;1;1;1;2]            depth=5 sub=6  Moh-minimal (n,m)=(117,72) at g=9
+      (a,b)=( 21, 13)  CF=[1;1;1;1;1;2]          depth=6 sub=7  Moh-minimal (n,m)=(189,117) at g=9
+      (a,b)=( 34, 21)  CF=[1;1;1;1;1;1;2]        depth=7 sub=8  Moh-minimal (n,m)=(306,189) at g=9
+      (a,b)=( 55, 34)  CF=[1;1;1;1;1;1;1;2]      depth=8 sub=9  Moh-minimal (n,m)=(495,306) at g=9
+      (a,b)=( 89, 55)  CF=[1;1;1;1;1;1;1;1;2]    depth=9 sub=10  Moh-minimal (n,m)=(801,495) at g=9
+      (a,b)=(144, 89)  CF=[1;1;1;1;1;1;1;1;1;2]  depth=10 sub=11  Moh-minimal (n,m)=(1296,801) at g=9
+      (a,b)=(233,144)  CF=[1;1;1;1;1;1;1;1;1;1;2] depth=11 sub=12  Moh-minimal (n,m)=(2097,1296) at g=9
+      (a,b)=(377,233)  CF=[1;1;1;1;1;1;1;1;1;1;1;2] depth=12 sub=13  Moh-minimal (n,m)=(3393,2097) at g=9
+
+   metallic rays a_k = q a_(k-1) + a_(k-2)  (THM-3010 alternation):
+      q=1 (golden): [(3, 2), (5, 3), (8, 5), (13, 8), (21, 13), (34, 21), (55, 34)]
+      q=2 (silver): [(5, 2), (12, 5), (29, 12), (70, 29), (169, 70)]
+      q=3 (bronze): [(10, 3), (33, 10), (109, 33)]
+      q=4 (q-metallic): [(17, 4), (72, 17)]
+
+=== SUMMARY (part B) ===
+   PART3 obstruction dimension law            True
+   PART3b T2 determination relation           True
+   PART3c reduced tower (R_j)                 True
+   PART4 hull arithmetic                      True
+   PART5 search order table                   True
+
+=== SUMMARY (combined) ===
+
+   PART1 LemmaJ                               True
+
+   PART2 tower on automorphisms               True
+
+   PART3 obstruction dimension law            True
+
+   PART3b T2 determination relation           True
+
+   PART3c reduced tower (R_j)                 True
+
+   PART4 hull arithmetic                      True
+
+   PART5 search order table                   True
+
+   ALL = True
