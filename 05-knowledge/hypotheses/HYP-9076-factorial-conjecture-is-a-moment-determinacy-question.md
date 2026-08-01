@@ -304,3 +304,35 @@ alone; `N = 2` is the base case and the elimination-theoretic work
 (THM-2824/2917 at three slots, THM-2849/2922 at four) is what the rest costs.**
 
 Referee: `04-computation/fc_two_slot_threshold_proof.py`.
+
+
+## 10. The proof's engine is a Newton ratio -- the THM-3010 connection
+
+The discriminant in section 9 is not a new object. klein's THM-3010 studies
+the **Newton ratio** `R_k = h_k^2 / (h_(k-1) h_(k+1))` of an integer sequence,
+log-concave exactly where `R_k > 1`. The quantity controlling the two-slot
+proof is
+
+```text
+C^2 / (D E) = (alpha+beta)!^2 / ((2alpha)! (2beta)!),
+```
+
+which is precisely a Newton ratio of the factorial sequence taken at the
+midpoint of the segment `[2alpha, 2beta]`. With `h_j = j!` one gets
+`R_n = (n!)^2/((n-1)!(n+1)!) = n/(n+1) < 1`, i.e. **`j!` is log-CONVEX**, and
+that single fact is what makes `Q > 0` and kills the two-slot case.
+
+So two independently developed threads use the same engine: THM-3010 computes
+exact rational Newton ratios `R_k = 1 - Q_(a,b)(k)/D_(a,b)(k)` for BALLOT
+columns, and the factorial-moment program needs Newton ratios of the FACTORIAL
+sequence. A grep confirms log-convexity appears nowhere else in canon --
+THM-3010 and this entry are the only two occurrences -- so the tool is
+essentially unused in the repo despite being decisive here.
+
+**Concrete transfer to try.** THM-3010 gives `R_k` in closed rational form for
+`binom(2k,k)`, Catalan, `binom(2k,k-1)` and `binom(2k+1,k-1)`. Supports whose
+slots are built from those columns would then have *exactly computable*
+two-slot discriminants, and the `Q > 0` step would become a rational-function
+positivity check in `k` rather than an inequality -- which is the same shape as
+the Gregory--Newton certificates THM-2922 already uses. That is a concrete,
+untried bridge between the two programs.
