@@ -40,6 +40,16 @@ OUTPUT = (
     / "05-knowledge/results/"
     / "lrc14_reflected_anharmonic_s3_robust_body_orbit_scout_20260801.out"
 )
+EDGE8_SOURCE = (
+    ROOT
+    / "04-computation"
+    / "lrc14_j7_reflected_robust_edge8_threshold_block_uniform_closure_thm2941.py"
+)
+EDGE8_OUTPUT = (
+    ROOT
+    / "05-knowledge/results"
+    / "lrc14_j7_reflected_robust_edge8_threshold_block_uniform_closure_thm2941.out"
+)
 
 LABELS = tuple(range(1, 15))
 BODY_SIZE = 6
@@ -51,10 +61,13 @@ ROBUST_BANK_THRESHOLD = 8
 EXPECTED_BANK_COUNT = 2442
 EXPECTED_RESIDUAL_COUNT = 561
 EDGE8_DEPENDENCY_SOURCE_SHA256 = (
-    "bb01fa45050de8d7f54846a2d65edcaada36df85c81482f296e35a2e108fe5dd"
+    "3f2552c7e316a6da821f8d78f859aa9d73b2d8b58081c0a31f8d233f37eec2f0"
+)
+EDGE8_DEPENDENCY_OUTPUT_SHA256 = (
+    "90d42c1369532e4d31cfacbf4ddf455fa330075c878b414831e489eec32ecc2b"
 )
 EDGE8_DEPENDENCY_SEMANTIC_SHA256 = (
-    "f197d1a7f237526b03c3ca97a47fb48900d560d9a6bd75838140c74d0c59a04b"
+    "af12592ebd25cd5745c34711c99aaba72c45eeb2cad62ee5b35ec6a7752b8da7"
 )
 EXPECTED_ROBUST_EDGE_HIST = (
     (0, 211),
@@ -183,7 +196,7 @@ EXPECTED_C2_HARD_ORBITS = (
 # full body/orbit transcript, never from an injected expected answer.
 EXPECTED_BODY_DIGEST: str | None = "40419fbac9827f975c217f7e8dc517a929d8908d03c68977c153dd19136cf12a"
 EXPECTED_ORBIT_DIGEST: str | None = "d0df274a6d6a78ce771be6714247a96a73c8b90b580149ad9864aab9cb6968c1"
-EXPECTED_SEMANTIC_SHA256: str | None = "6a11b642f35bf619271516da5897364f3db8bfd28bcfff98a7b04fbfd0b8b008"
+EXPECTED_SEMANTIC_SHA256: str | None = "b953fbbf70537b0e982017030d76d3d703ad5a7c9919efeb82ba0fbb4a014a94"
 
 
 Point = int | None
@@ -195,8 +208,12 @@ def require(condition: bool, message: object) -> None:
         raise RuntimeError(message)
 
 
+def lf_sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+
+
 def source_sha256() -> str:
-    return hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+    return lf_sha256(Path(__file__))
 
 
 def label_to_point(label: int) -> Point:
@@ -283,6 +300,20 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, default=OUTPUT)
     args = parser.parse_args()
+
+    require(
+        lf_sha256(EDGE8_SOURCE) == EDGE8_DEPENDENCY_SOURCE_SHA256,
+        ("edge8 source changed", lf_sha256(EDGE8_SOURCE)),
+    )
+    require(
+        lf_sha256(EDGE8_OUTPUT) == EDGE8_DEPENDENCY_OUTPUT_SHA256,
+        ("edge8 output changed", lf_sha256(EDGE8_OUTPUT)),
+    )
+    require(
+        f"semantic_sha256={EDGE8_DEPENDENCY_SEMANTIC_SHA256}"
+        in EDGE8_OUTPUT.read_text(encoding="utf-8"),
+        "edge8 semantic token changed",
+    )
 
     c2 = compose(cycle, cycle)
     group = (
@@ -460,6 +491,7 @@ def main() -> None:
         c2_hard_orbits,
         ROBUST_BANK_THRESHOLD,
         EDGE8_DEPENDENCY_SOURCE_SHA256,
+        EDGE8_DEPENDENCY_OUTPUT_SHA256,
         EDGE8_DEPENDENCY_SEMANTIC_SHA256,
         margin_distortion_checks,
         body_digest.hexdigest(),
@@ -477,6 +509,7 @@ def main() -> None:
         f"uniform_closure_bank=robust_edges>=8:{len(bank)};residual=robust_edges<8:{len(residual)}",
         "closure_dependency=edge9 bank plus exact uniform closure of all 21 edge8 bodies;the latter is an input, not reproved here",
         f"edge8_dependency_source_sha256={EDGE8_DEPENDENCY_SOURCE_SHA256}",
+        f"edge8_dependency_output_sha256={EDGE8_DEPENDENCY_OUTPUT_SHA256}",
         f"edge8_dependency_semantic_sha256={EDGE8_DEPENDENCY_SEMANTIC_SHA256}",
         f"residual_transitions=(element,residual_to_residual,residual_to_bank)={transitions}",
         f"orbit_profile=((orbit_size,residual_count),orbit_count)={frozen_orbit_profile}",

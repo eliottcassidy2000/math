@@ -203,8 +203,11 @@ python3 -O 04-computation/lrc14_reflected_anharmonic_s3_robust_body_orbit_scout_
 cmp 05-knowledge/results/lrc14_reflected_anharmonic_s3_robust_body_orbit_scout_20260801.out /tmp/lrc14-anharmonic-O.out
 ```
 
-Frozen digests are recorded in the stored output. The semantic digest is
-`6a11b642f35bf619271516da5897364f3db8bfd28bcfff98a7b04fbfd0b8b008`.
+Frozen digests are recorded in the stored output.  The LF-normalized
+source/output/semantic digests are
+`b97db74b9ea1d2879738a46e11dbdcdccf13474071c4cda80c095d509d2d35ca`,
+`345d1ec19e8a7703d34e68fc0c98a872e01b8df3c7eda0a25bfb725c550fee0f`,
+and `b953fbbf70537b0e982017030d76d3d703ad5a7c9919efeb82ba0fbb4a014a94`.
 
 The best next hostile probe is not another orbit count. For each connected
 source high graph, enumerate its feasible tree degree vectors, choose the one

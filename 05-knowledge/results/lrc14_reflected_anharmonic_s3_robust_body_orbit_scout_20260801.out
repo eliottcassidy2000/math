@@ -4,8 +4,9 @@ action_generators=s:r->1/r,c:r->-1/(1+r);permutations=(('1', (1, 2, 3, 4, 5, 6, 
 robust_predicate=1/105-4(a+b)/(14*lcm(E))>sum_e e/[7(14*lcm(E)-e)];edge_hist=((0, 211), (1, 88), (2, 41), (3, 53), (4, 53), (5, 36), (6, 46), (7, 33), (8, 21), (9, 35), (10, 32), (11, 15), (12, 37), (13, 26), (14, 59), (15, 2217))
 uniform_closure_bank=robust_edges>=8:2442;residual=robust_edges<8:561
 closure_dependency=edge9 bank plus exact uniform closure of all 21 edge8 bodies;the latter is an input, not reproved here
-edge8_dependency_source_sha256=bb01fa45050de8d7f54846a2d65edcaada36df85c81482f296e35a2e108fe5dd
-edge8_dependency_semantic_sha256=f197d1a7f237526b03c3ca97a47fb48900d560d9a6bd75838140c74d0c59a04b
+edge8_dependency_source_sha256=3f2552c7e316a6da821f8d78f859aa9d73b2d8b58081c0a31f8d233f37eec2f0
+edge8_dependency_output_sha256=90d42c1369532e4d31cfacbf4ddf455fa330075c878b414831e489eec32ecc2b
+edge8_dependency_semantic_sha256=af12592ebd25cd5745c34711c99aaba72c45eeb2cad62ee5b35ec6a7752b8da7
 residual_transitions=(element,residual_to_residual,residual_to_bank)=(('1', 561, 0), ('s', 61, 500), ('c', 58, 503), ('c2', 58, 503), ('sc', 25, 536), ('sc2', 245, 316))
 orbit_profile=((orbit_size,residual_count),orbit_count)=(((1, 0), 1), ((1, 1), 1), ((2, 0), 2), ((3, 0), 12), ((3, 1), 20), ((3, 2), 1), ((6, 0), 130), ((6, 1), 191), ((6, 2), 139), ((6, 3), 23))
 residual_complete_representative_multiplicity=((number_of_S3_elements_landing_in_robust_K6),body_count)=((0, 1), (2, 48), (3, 131), (4, 276), (5, 105))
@@ -22,7 +23,7 @@ guardrail=the anharmonic action is not a symmetry of the robust predicate or of 
 needed_map=for each residual body and every C2-wedge level word, a one-way common-cell weighted-certificate comparison controlling the exact scalar-plus-vertex-potential distortion;graph scheduling alone is already lossless
 body_digest=40419fbac9827f975c217f7e8dc517a929d8908d03c68977c153dd19136cf12a
 orbit_digest=d0df274a6d6a78ce771be6714247a96a73c8b90b580149ad9864aab9cb6968c1
-source_sha256=5173b47eea103083713361a95c787a50718f569df53b4d1d5b4792c43faa9d83
-semantic_sha256=6a11b642f35bf619271516da5897364f3db8bfd28bcfff98a7b04fbfd0b8b008
+source_sha256=b97db74b9ea1d2879738a46e11dbdcdccf13474071c4cda80c095d509d2d35ca
+semantic_sha256=b953fbbf70537b0e982017030d76d3d703ad5a7c9919efeb82ba0fbb4a014a94
 normal_vs_python_O=BYTE_IDENTICAL
 all_exact_controls=PASS
