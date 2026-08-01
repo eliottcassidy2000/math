@@ -20,7 +20,8 @@ audit: >
   transcripts are byte-identical and the documentation gate passes.  A final
   independent promotion audit rechecked the dependency scope, sharp
   translated-band direction, cap/ledger consequence, LF hashes, absence of
-  optimization-stripped assertions, and the frozen semantic transcript.
+  optimization-stripped assertions, pairwise disjointness of all three screen
+  parts, forced-LF transcript output, and the frozen semantic transcript.
 depends_on:
   - THM-2981-projected-k3-z270-to-z247-cardinality-torsion-descent
   - THM-2984-projected-k3-signed-ray-attainment-and-unit-phase-gate
@@ -29,7 +30,7 @@ related:
   - MISTAKE-334
 script: 04-computation/lrc14_j7_k3_z246_to_z244_translated_band_descent_thm2941.py
 output: 05-knowledge/results/lrc14_j7_k3_z246_to_z244_translated_band_descent_thm2941.out
-script_sha256: 128bea25d4720a15dabe824f53e5702f37fadf9d6657c8b1a883f76bbc163c48
+script_sha256: c063e1d94e1f30c4ccd63acfabb172988d23d96f680a961d9042b3f11862fa79
 output_sha256: d012f84d8e380019b4da8efbe9afd6695079c585f47e4aa2c474828ca62014e4
 semantic_sha256: 3f9945d333b13adef8aa8e7b162960bfde97f1e5a77945edcc735013d8ce4231
 hash_basis: LF-normalized bytes

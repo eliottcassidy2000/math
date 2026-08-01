@@ -4,9 +4,10 @@
 This compositor derives its row universe from the pinned THM-2941 atlas.  It
 inherits THM-2981's exact state/status engine but not its height list.  Rows
 with first label below the integer high floor use the wall + two-high gap +
-one-high translated-band gate.  Rows with first label already at the floor
-use strict label order + the same two-high gap.  The affine max-gap test is
-invoked only when the sharp cardinality test |S|>ceil(d/7) fails.
+one-high translated-band gate.  Every row whose first label is already at the
+floor closes in the exact state/status screen and never enters the terminal
+argument.  The affine max-gap test is invoked only when the sharp cardinality
+test |S|>ceil(d/7) fails.
 """
 
 from __future__ import annotations
@@ -154,6 +155,10 @@ def evaluate(task):
     require(set(states) == set(crude) | set(status) | set(residual),
             (first, body, "partition"))
     require(not (set(crude) & set(status)), (first, body, "overlap"))
+    require(not (set(crude) & set(residual)),
+            (first, body, "crude/residual overlap"))
+    require(not (set(status) & set(residual)),
+            (first, body, "status/residual overlap"))
     for ds, witness in crude.items():
         gap, q, M, target, capacity = witness
         D = lcm(*ds)
@@ -503,7 +508,7 @@ def main():
     payload = render(records, terminals, row_order, atlas_counts, next_records,
                      args.development)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(payload)
+    args.output.write_text(payload, encoding="utf-8", newline="\n")
     print(payload, end="")
 
 
