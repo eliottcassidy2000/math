@@ -5,6 +5,8 @@
         ansatz 1331  missing 18  all at corners: True  -> OK
   P_6: 2176 terms (want 2176)  degrees (12,24,12)  max(b+2c)=24
         ansatz 2197  missing 21  all at corners: True  -> OK
+  P_7: 3348 terms (want 3348)  degrees (14,28,14)  max(b+2c)=28
+        ansatz 3375  missing 27  all at corners: True  -> OK
 
 ==========================================================================
 2. THE SEVEN PRE-REGISTERED PREDICTIONS (recorded before P_5 existed)
@@ -34,6 +36,17 @@
    j=5 E: law -301/810     vs -301/810      OK   (P_5)
    => the two constants the canon flagged as unexplained are the j=4
       members of a single one-parameter family.
+
+==========================================================================
+5. P_7: THE OFF-CORNER TEST, AND THE j=7 PREDICTIONS
+==========================================================================
+   |P_7| = 3348 (eq (2) predicts 3348: True); absences 27; OFF-CORNER 0 (none)
+   => the j=3 sporadic (5,0,3) does NOT recur at j=7.
+   A_7: all 7 pre-registered coefficients CONFIRMED
+   E_7: all 7 pre-registered coefficients CONFIRMED
+   C_7: all 7 pre-registered coefficients CONFIRMED
+   c_7 content: 1/2889476997120 = 1/(2^22 * 3^9 * 5 * 7); prime set {2,3,5,7}
+   = {p <= j+1} at j=7, continuing the law.
 
 ==========================================================================
 SUMMARY  all checks pass: True

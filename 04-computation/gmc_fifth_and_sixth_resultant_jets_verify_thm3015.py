@@ -27,8 +27,9 @@ import json
 from fractions import Fraction as Fr
 
 T = {5: ("05-knowledge/results/gmc_first_gap_resultant_jet_P5_table_thm3015.json", 39813120),
-     6: ("05-knowledge/results/gmc_first_gap_resultant_jet_P6_table_thm3015.json", 120394874880)}
-COUNT = {5: 1313, 6: 2176}
+     6: ("05-knowledge/results/gmc_first_gap_resultant_jet_P6_table_thm3015.json", 120394874880),
+     7: ("05-knowledge/results/gmc_first_gap_resultant_jet_P7_table_thm3015.json", 2889476997120)}
+COUNT = {5: 1313, 6: 2176, 7: 3348}
 
 
 def rule(s):
@@ -49,7 +50,7 @@ def slices(j):
 def main():
     ok = True
     rule("1. SHAPE OF P_5 AND P_6")
-    for j in (5, 6):
+    for j in (5, 6, 7):
         rows, _, _, _ = slices(j)
         a = [r[0] for r in rows]; b = [r[1] for r in rows]; v = [r[2] for r in rows]
         present = {(r[0], r[1], r[2]) for r in rows}
@@ -100,6 +101,31 @@ def main():
             print(f"   j={j} {tag}: law {str(got):12s} vs {str(w):12s}  {'OK' if g else 'MISMATCH'}   ({src})")
     print("   => the two constants the canon flagged as unexplained are the j=4")
     print("      members of a single one-parameter family.")
+
+    print()
+    rule("5. P_7: THE OFF-CORNER TEST, AND THE j=7 PREDICTIONS")
+    rows7, A7, E7, C7 = slices(7)
+    present = {(r[0], r[1], r[2]) for r in rows7}
+    full = {(m, u, w) for m in range(15) for w in range(15) for u in range(29 - 2 * w)}
+    miss = sorted(full - present)
+    off = [m for m in miss if (m[1], m[2]) not in {(28, 0), (0, 14), (0, 0)}]
+    print(f"   |P_7| = {len(rows7)} (eq (2) predicts 3348: {len(rows7) == 3348});"
+          f" absences {len(miss)}; OFF-CORNER {len(off)} {off if off else '(none)'}")
+    print("   => the j=3 sporadic (5,0,3) does NOT recur at j=7.")
+    ok7 = (len(rows7) == 3348 and not off)
+    P7 = {'A_7': (A7, {8: Fr(23, 28), 7: Fr(-12, 7), 6: Fr(47, 24), 5: Fr(0),
+                       4: Fr(-707, 768), 3: Fr(0), 2: Fr(11267, 43008)}),
+          'E_7': (E7, {8: Fr(23, 28), 7: Fr(-11, 7), 6: Fr(37, 18), 5: Fr(0),
+                       4: Fr(-301, 324), 3: Fr(0), 2: Fr(2677, 10206)}),
+          'C_7': (C7, {8: Fr(23, 28), 7: Fr(-3, 7), 6: Fr(23, 6), 5: Fr(0),
+                       4: Fr(-23, 12), 3: Fr(0), 2: Fr(23, 42)})}
+    for nm, (got, want) in P7.items():
+        res = all(got.get(k, Fr(0)) == want[k] for k in want)
+        ok7 &= res
+        print(f"   {nm}: all 7 pre-registered coefficients {'CONFIRMED' if res else 'REFUTED'}")
+    print("   c_7 content: 1/2889476997120 = 1/(2^22 * 3^9 * 5 * 7); prime set {2,3,5,7}")
+    print("   = {p <= j+1} at j=7, continuing the law.")
+    ok &= ok7
 
     print()
     rule(f"SUMMARY  all checks pass: {ok}")

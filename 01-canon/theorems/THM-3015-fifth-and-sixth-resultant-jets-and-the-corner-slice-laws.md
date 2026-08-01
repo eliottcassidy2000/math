@@ -1,6 +1,6 @@
 ---
 id: THM-3015
-title: "The fifth and sixth resultant log-jets, and the extended corner-slice laws"
+title: "The fifth, sixth and seventh resultant log-jets, and the corner-slice laws"
 status: VERIFIED-EXACT (interpolated under a probed degree ansatz; L_5 identity PROVED) / AWAITING INDEPENDENT HOSTILE AUDIT
 source: klein-S428 (two-agent build + adversarial rebuild; shape, predictions and new law re-checked here)
 depends_on:
@@ -13,10 +13,12 @@ table_p5: 05-knowledge/results/gmc_first_gap_resultant_jet_P5_table_thm3015.json
 table_p6: 05-knowledge/results/gmc_first_gap_resultant_jet_P6_table_thm3015.json
 table_p5_sha256: 8cf6ed5cfca3b92a9229f79aae26f87ab1e65db1cf288b4299fe37b4a47b1de9
 table_p6_sha256: 7004c579194e13f10aa03ceb26707adbaeae01e64b5be85d76792987f20c150e
+table_p7: 05-knowledge/results/gmc_first_gap_resultant_jet_P7_table_thm3015.json
+table_p7_sha256: bc53e1a23a9694c277de3aa1e9f6c4401be585452b7a20e35abc0a7a050fb287
 script: 04-computation/gmc_fifth_and_sixth_resultant_jets_verify_thm3015.py
 output: 05-knowledge/results/gmc_fifth_and_sixth_resultant_jets_verify_thm3015.out
-script_sha256: 38180fea5a114678ee4cf692474a2872363aaafdaf5aafa0154782d3712d8f22
-output_sha256: 91ba4558396e727a5a85a8aa2cbfe11aecf75d44e7eec1d975a708d0dd6bf271
+script_sha256: e394453cbbd23295c3860b38e8fa6325680c56a63bbb8ba6829ef73edc528218
+output_sha256: 5407a624633dd4262edd739e366f313bd14559da12a42c434cde28e9e7ae9533
 hash_basis: LF-normalized bytes
 ---
 
@@ -60,6 +62,36 @@ reproduces all six.  The `[j=3]` correction is THM-3013's `(5,0,3)`, still the
 `0,1,2,4,5,8` show **no** pattern.  The one regularity is that the prime set is
 exactly `{p <= j+1}` -- `5` entering at `j=4`, `7` at `j=6` -- consistent with the
 `1/(j(j+1))` equidistribution denominators.
+
+
+## 2a. `P_7`, and the off-corner test
+
+**`P_7` has exactly `3348` terms**, degrees `(M,U,V) = (14,28,14)`, support
+`b+2c <= 28`, `27` absences, and **zero off-corner absences**.  Equation (2)
+predicts `3375 - 3*(14-2-3) = 3348` -- confirmed.  So the `j=3` sporadic
+`(5,0,3)`, the only non-corner absence anywhere, does **not** recur at `j=7`;
+(2) now holds on `j=1..7`.
+
+`c_7`: `1/content = 2889476997120 = 2^22 * 3^9 * 5 * 7`.  The `2`- and
+`3`-exponents `0,4,7,12,15,19,22` and `0,1,2,4,5,8,9` still show no pattern, but
+the prime set is `{2,3,5,7} = {p <= j+1}`, continuing the one regularity there is.
+
+**All 21 pre-registered `j=7` coefficients confirmed**, seven on each of the three
+corner slices:
+
+    A_7 = (23/28)M^8 - (12/7)M^7 + (47/24)M^6 - (707/768)M^4 + (11267/43008)M^2 + 6657676188189/14336
+    E_7 = (23/28)M^8 - (11/7)M^7 + (37/18)M^6 - (301/324)M^4 +  (2677/10206)M^2 +   72615186151/54432
+    C_7 = (23/28)M^8 -  (3/7)M^7 +  (23/6)M^6 -   (23/12)M^4 +       (23/42)M^2 + 102839873747325/224
+
+so the six laws of section 4 now hold on `j=1..7`, including the `[M^(j-4)]=0`
+law at a third point and the `[M^(j-5)]` falling-factorial law at a second.
+
+**Provenance note.**  The `j=7` build agent stalled before returning, but it had
+already written the tables; they were recovered from disk and verified here
+independently against the pre-registered predictions and equation (2).  The
+digest is recorded above.  This is a recovered artifact checked after the fact,
+not a completed audited run -- treat it as one notch weaker than `P_5`/`P_6`
+until someone reproduces the build.
 
 ## 3. Seven pre-registered predictions, all CONFIRMED
 
