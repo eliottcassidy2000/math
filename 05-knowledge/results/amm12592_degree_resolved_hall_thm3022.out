@@ -1,0 +1,31 @@
+CONTROL -- per-shell (ARCH) margin, normalised by m log2.  Sign must flip at golden.
+  m=  128: gamma = golden+(-.03,-.01,0,+.01,+.03) -> +0.0011  +0.0250  +0.0376  +0.0475  +0.0490
+  m=  256: gamma = golden+(-.03,-.01,0,+.01,+.03) -> -0.0160  +0.0086  +0.0203  +0.0277  +0.0286
+  m=  512: gamma = golden+(-.03,-.01,0,+.01,+.03) -> -0.0253  -0.0007  +0.0115  +0.0158  +0.0163
+
+DEGREE-RESOLVED cross-shell tail cuts, shells m = 8,16,...,512 (absolute d fixed):
+  gamma=golden-0.030: tail-cut margin=-0.02533 (at M=8, d=314), per-shell=-0.02533   -> tail no stronger than per-shell
+  gamma=golden-0.010: tail-cut margin=-0.00075 (at M=8, d=315), per-shell=-0.00075   -> tail no stronger than per-shell
+  gamma=golden+0.000: tail-cut margin=+0.01148 (at M=8, d=316), per-shell=+0.01148   -> tail no stronger than per-shell
+  gamma=golden+0.010: tail-cut margin=+0.01577 (at M=8, d=507), per-shell=+0.01577   -> tail no stronger than per-shell
+  gamma=golden+0.030: tail-cut margin=+0.01626 (at M=8, d=508), per-shell=+0.01626   -> tail no stronger than per-shell
+
+WHY IT DECOUPLES (this is a proof, not a numeric).  Forward routing preserves the
+ABSOLUTE degree d (the u-adic order at u=-1 is not rescaled by the shell), so the
+bipartite graph is a DISJOINT UNION over d of forward-in-m chains.  The
+neighbourhood-closed sets are therefore S = union_d {(m,d): m >= M_d}, and the cut
+for such a union is the SUM of the per-d cuts -- implied by them.  Hence the
+degree-resolved Hall condition is EXACTLY the family of per-(M,d) cuts tested above.
+
+And the coarsest (degree-blind) cut is a VALID Hall cut for ANY routing rule in d,
+since aggregating assumes the most generous possible d-mobility.  So opus's
+violation below golden proves infeasibility UNCONDITIONALLY -- their stated gap
+does not threaten the lower bound at all; degree resolution can only ADD
+constraints, i.e. only RAISE the floor.  The test above shows it raises nothing.
+
+Binding degree fraction delta* = d*/m at gamma = golden (should approach 1/phi = 0.618034):
+   m=   64: binding d*=  41,  delta*=0.640625,  margin=+0.06272
+   m=  128: binding d*=  79,  delta*=0.617188,  margin=+0.03765
+   m=  256: binding d*= 158,  delta*=0.617188,  margin=+0.02035
+   m=  512: binding d*= 316,  delta*=0.617188,  margin=+0.01148
+   m= 1024: binding d*= 633,  delta*=0.618164,  margin=+0.00609

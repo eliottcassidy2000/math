@@ -9,6 +9,15 @@ status: >
   NC2-to-JC(2) "bridge", and nothing here claims an arrow into or out of
   JC(2). Everything asserted is either an exact identity verified on genuine
   Jacobian pairs, or a definition plus a cheap decisive test.
+  CORRECTION 2026-07-31 (klein-S428, accepted and reproduced): the claim that
+  the metallic stratum sits INSIDE the reciprocal stratum was WRONG. The
+  metallic quadratic x^2 - qx - 1 has root product -1, so a metallic pair is
+  closed under the ANTI-reciprocal r -> -1/r, not under r -> mu/r with
+  mu > 0; palindromy R_k = R_{d-k} fails in all nine cases q=1,2,3 x d=6,7,8.
+  The two loci are DISJOINT, separated by the sign of the norm
+  a_{k-1}a_{k+1} - a_k^2 (+1 reciprocal/antipalindromic, -1 metallic/maximal
+  alternation). This gives a usable DICHOTOMY rather than a nesting; section 3
+  is rewritten accordingly.
 source: death-star-2026-07-31-coinC2
 related:
   - THM-3003  # circuit is a complete detector of reversal symmetry
@@ -185,13 +194,49 @@ Verified here (corrected convention; an earlier draft of this test used
 equivalence holds on reciprocal, scaled-reciprocal and generic multisets,
 and the THM-3004 bound holds on its own witnesses.
 
-**Metallic strata sit inside the reciprocal stratum.** For the metallic
-number `lambda_q = (q + sqrt(q^2+4))/2` one has `lambda_q * (1/lambda_q) = 1`,
-so a metallic root pair is reciprocal-closed with `mu = 1`, hence
-antipalindromic. Combined with THM-3010 (metallic recurrences attain
-*maximal* circuit alternation), the "maximal alternation" direction data is
-a **sub-stratum of the swap-stable locus** — the two extremal notions the
-owner asked to connect are nested, not independent.
+**[RETRACTED — this claim was WRONG; corrected by klein-S428, 2026-07-31.
+Superseded by the dichotomy below.]** ~~Metallic strata sit inside the
+reciprocal stratum, so maximal alternation and swap-stability are nested.~~
+
+**THE NORM DICHOTOMY (corrected).** The metallic quadratic is
+`x^2 - q x - 1`, so its roots are `lambda_q` and **`-1/lambda_q`**: the root
+product is the constant term, `-1`, **not** `+1`. A metallic pair is therefore
+closed under the *anti*-reciprocal map `r -> -1/r`, not under the positive
+reciprocation `r -> mu/r` (`mu = e_d^{2/d} > 0`) that THM-3003 section 1
+requires, and it contains a negative element, which puts it outside
+THM-3003's positive-coefficient universe altogether. Verified directly: for
+the metallic `h`-sequences at `q = 1,2,3` and `d = 6,7,8` (nine cases), the
+palindromy `R_k = R_{d-k}` holds in **zero** of them (e.g. `q=1, d=6`:
+`R = (5/24, 32/45, 81/160, 5/9, 16/39)`, and `R_1 = 5/24 != 16/39 = R_5`).
+
+So the two extremal loci are **DISJOINT, separated by the sign of the norm**:
+
+```text
+norm +1:  a_{k-1}a_{k+1} - a_k^2 = +1   reciprocal-closed, ANTIPALINDROMIC
+                                        circuit, swap-stable under
+                                        sigma(x,y) = (y,x);  NOT alternating
+norm -1:  a_{k-1}a_{k+1} - a_k^2 = -1   metallic, MAXIMAL circuit alternation
+                                        (THM-3010);  NOT reciprocal-closed
+```
+
+The `-1` is not incidental: it is exactly the norm sign that *produces* the
+alternation in THM-3010 section 3. Reciprocal closure with `mu > 0` gives
+norm `+1` and an antipalindromic, non-alternating circuit.
+
+**This strengthens the stratification rather than weakening it.** Instead of
+one condition nested in the other we have two mutually exclusive extremal
+conditions on the directions at infinity, cutting the search space in
+independent directions. In particular a JC(2) counterexample's direction
+multiset cannot lie in both strata, which is a **clean dichotomy to branch
+on**: either the leading-form directions are reciprocal-closed (norm `+1`,
+antipalindromic circuit, `O(g)` test by THM-3003) or they are not, and the
+maximal-alternation/metallic extreme lives strictly in the complement.
+
+**Caution retained from THM-3004 section 3b (klein):** the `2K-3` bound on
+sign changes for `K` distinct roots is an *upper* bound, attained only under
+separation — THM-3005 exhibits `K = 15` distinct scales with **zero** sign
+changes. So a small observed sign-change count is **not** evidence for small
+`K`, and must not be used as one in the search order below.
 
 ## 4. Cheapest decisive tests (what would make or break this)
 
