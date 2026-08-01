@@ -170,6 +170,31 @@ matching the proved archimedean lower bound (THM-3009, THM-3017, and THM-3024
 for the general class) **exactly** on that range. The previous best
 construction constant was `C <= 8/5 = 1.6`.
 
+## 4b. The trend: the construction-capacity gap is shrinking
+
+Section 4 shows the `gamma*` profile closes; a separate question is how close the
+construction gets to the *finite-R* capacity floor. Minimising the **effective
+rate** `max_i d_i/(R+i)` over all `(gamma, D0)` pairs that close and verify:
+
+```text
+   R    gamma_c(R)    best effective rate achieved   witness        gap
+   8     0.375000            0.444444              107/240, D0=0   0.0694
+  16     0.441176            0.500000              120/240, D0=0   0.0588
+  32     0.500000            0.545455              110/240, D0=3   0.0455
+```
+
+The gap is **monotonically shrinking**: `0.069, 0.059, 0.045`. Since both
+`gamma_c(R)` and any achievable rate must converge to `gamma*` if the floor is
+tight, a shrinking gap is precisely the behaviour required for
+`C* = log_5(5 phi^2)`; a gap bounded away from zero would instead point to
+`C* > gamma* + 1`.
+
+This is **EVIDENCE, not proof** -- three values of `R`, and the "best achieved"
+figures are upper bounds from a heuristic search (by (M) they can only improve,
+never worsen, as the search gets better). It is nevertheless the cleanest
+asymptotic signal available from the construction side, and it points the same
+way as section 4.
+
 ## 5. Scope
 
 (M) and the `D0` analysis are proofs. (C) is a numerical evaluation of (ARCH)
