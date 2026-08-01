@@ -1,0 +1,173 @@
+---
+id: THM-3018
+title: "The Factorial Conjecture is a simplex moment problem; FC(2) is the polynomial moment problem"
+status: >
+  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT. Let
+  L(x^alpha) = alpha! on C[x_1..x_n]. Then L(f) = int_{[0,inf)^n} f e^{-|x|_1}
+  dx, and for f HOMOGENEOUS of degree d the polar substitution x = r u gives
+  L(f^m) = (dm+n-1)! * int_{Delta_{n-1}} g^m dA with g = f|_Delta; since
+  f |-> f|_Delta is a linear BIJECTION onto polynomials of degree <= d in
+  n-1 variables (Bernstein basis), the Factorial Conjecture FC(n) is
+  EQUIVALENT to: for every complex polynomial g in n-1 variables,
+  int_{Delta_{n-1}} g^m dA = 0 for all m >= 1 implies g = 0. In particular
+  FC(2) is exactly the POLYNOMIAL MOMENT PROBLEM on [0,1] with h(u) = u,
+  and FC(3) the same problem on a triangle. Consequences proved here:
+  FC(2) holds whenever the image arc g([0,1]) has connected complement
+  (Cauchy-transform/Plemelj argument), and holds outright for deg g <= 3
+  (exact Groebner elimination); and for FC(3) the area-preserving 3-cycle
+  on barycentric coordinates makes every moment with 3 not dividing m vanish
+  AUTOMATICALLY on its omega-eigenspace, so only m = 3,6,9,... can obstruct.
+  Scope: this is a reformulation with an exact dictionary, not a proof of
+  FC(n) for any n >= 2; and it is a DIFFERENT functional from the repo's
+  Strong Factorial Conjecture lane (one variable, L(z^n) = n!, N-term
+  supports) -- see section 5.
+source: death-star-2026-07-31-coinC2
+depends_on: []
+related:
+  - THM-2836
+  - THM-2812
+  - THM-2849
+  - THM-1435
+external:
+  - "A. van den Essen, D. Wright, W. Zhao, On the image conjecture (2010ish)."
+  - "F. Pakovich, M. Muzychuk, Solution of the polynomial moment problem (2009)."
+script: 04-computation/factorial_conjecture_simplex_reduction_thm3018.py
+output: 05-knowledge/results/factorial_conjecture_simplex_reduction_thm3018.out
+---
+
+# THM-3018 -- the Factorial Conjecture as a simplex moment problem
+
+## 1. The functional is an integral
+
+Let `L : C[x_1,...,x_n] -> C` be linear with `L(x^alpha) = alpha! =
+prod_i (alpha_i)!`. Since `int_0^inf x^a e^{-x} dx = a!`,
+
+```text
+L(f) = int_{[0,inf)^n} f(x) e^{-(x_1 + ... + x_n)} dx.                (1)
+```
+
+**FC(n)** (van den Essen-Wright-Zhao): for `f` homogeneous, if `L(f^m) = 0`
+for all `m >= 1` then `f = 0`.
+
+## 2. The polar reduction (PROVED)
+
+Substitute `x = r u` with `r > 0` and `u` in the standard simplex
+`Delta_{n-1} = {u_i >= 0, sum u_i = 1}`; then `|x|_1 = r` and
+`dx = r^{n-1} dr dA(u)`. For `f` homogeneous of degree `d`, `f(ru)^m =
+r^{dm} g(u)^m` with `g := f|_Delta`, so
+
+```text
+L(f^m) = [ int_0^inf r^{dm+n-1} e^{-r} dr ] * int_{Delta_{n-1}} g^m dA
+       = (dm+n-1)! * int_{Delta_{n-1}} g^m dA.                        (2)
+```
+
+`(dm+n-1)! != 0`, so `L(f^m) = 0` iff the simplex moment vanishes. Moreover
+`f |-> f|_Delta` sends the degree-`d` forms in `n` variables bijectively onto
+polynomials of degree `<= d` in `n-1` variables — this is the Bernstein
+basis `u^beta (1 - sum u)^{d-|beta|}` (referee R2, ranks full for
+`n = 2, d = 3,5` and `n = 3, d = 2,3`). Hence:
+
+```text
+FC(n)  <=>  for every complex polynomial g in n-1 variables,
+            int_{Delta_{n-1}} g^m dA = 0 for all m >= 1  =>  g = 0.   (3)
+```
+
+Referee R1 verifies (2) symbolically for `n = 2` (`d <= 3`, `m <= 3`) and
+`n = 3` (`d <= 2`, `m <= 2`).
+
+## 3. FC(2) is the polynomial moment problem
+
+By (3), **FC(2) says exactly**: for a complex polynomial `g` of one variable,
+`int_0^1 g(u)^m du = 0` for all `m >= 1` forces `g = 0`. Equivalently, with
+`mu := g_*(Lebesgue on [0,1])` a probability measure on `C`,
+
+```text
+int_C z^m dmu = 0 for all m >= 1,   equivalently   int_0^1 e^{t g(u)} du = 1
+                                                    for all t in C.   (4)
+```
+
+**(a) The arc case (PROVED).** Let `Gamma = g([0,1])`, a compact rectifiable
+set of planar measure zero. The Cauchy transform
+`B(w) = int_0^1 du/(w - g(u))` is analytic on `C \ Gamma` and equals `1/w`
+for `|w|` large, hence on the unbounded component. If `C \ Gamma` is
+connected — e.g. `Gamma` is a simple arc — then `B = 1/w` off `Gamma`, so
+`B = 1/w` a.e. on `C`, so as distributions `dbar B = dbar(1/w)`, i.e.
+`mu = delta_0`. Then `g = 0` a.e. on `[0,1]`, so `g = 0`. Equivalently, by
+Plemelj: the jump of `B` across a smooth point of `Gamma` is proportional to
+the density, and both sides lie in the same component, so the density
+vanishes.
+
+**(b) The obstruction is loops, and it is real.** If `Gamma` bounds, the
+argument fails, and it must: the uniform measure on the unit circle has all
+moments `m >= 1` zero (mean value property), so no purely measure-theoretic
+argument can succeed. What excludes it here is that `mu` is a *polynomial*
+pushforward of an interval: no nonconstant polynomial maps `[0,1]` into a
+circle, since `g(u) g^*(u) = 1` on `[0,1]` (with `g^*` the conjugate-
+coefficient polynomial) is a polynomial identity forcing `deg g = 0`.
+
+**(c) Low degree (VERIFIED-EXACT).** Exact Groebner elimination on the
+system `int_0^1 g^m du = 0`, `m = 1..d+3`, gives only `g = 0` for
+`d = 1, 2, 3` (referee R3). For `d = 2` the eliminated basis is
+`{c_0 + c_1/2 + c_2/3, c_1^2 + 2c_1c_2 + 16c_2^2/15, c_2^3}`.
+
+**(d) Where this lands in the literature.** (4) is the polynomial moment
+problem `int_a^b p^m q' = 0` with `q(u) = u`, `q' = 1`, restricted to
+`m >= 1` (the `m = 0` moment is `1`, not `0`, so the standard normalisation
+does not apply verbatim). The classical Composition Condition
+`p = P o W, q = Q o W, W(a) = W(b)` is *unavailable* here: `q = u` forces
+`deg W = 1`, and then `W(0) = W(1)` is impossible. This is the first contact
+in this repo with the Pakovich-Muzychuk circle of results (repo-wide grep:
+zero prior hits for "polynomial moment problem", "composition conjecture",
+"Pakovich", "Briskin", "Yomdin").
+
+## 4. FC(3): the symmetry mechanism (PROVED)
+
+By (3), FC(3) asks: does `int_T g^m dA = 0` for all `m >= 1` force `g = 0`,
+`T` the triangle? Here the pushforward is **two-dimensional**, and any
+rotationally symmetric image measure kills all moments `m >= 1` (e.g. the
+uniform measure on a disc centred at `0`). So FC(3) is genuinely more
+dangerous than FC(2), and the search for a counterexample is the search for
+a polynomial with a "rotationally balanced" image measure.
+
+The triangle has an area-preserving symmetry: the 3-cycle
+`sigma : (u,v,w) -> (v,w,u)` on barycentric coordinates. If
+`g o sigma = omega g` with `omega = e^{2 pi i/3}`, then
+
+```text
+int_T g^m dA = int_T (g o sigma)^m dA = omega^m int_T g^m dA,
+```
+
+so **every moment with `3` not dividing `m` vanishes automatically**. Only
+`m = 3, 6, 9, ...` can obstruct — one third of the conditions, on the
+`omega`-eigenspace (one third of the coefficient space). Referee R4 verifies
+this exactly over `Q(omega)` on the degree-one eigenvector
+`g = u + omega v + omega^2 w`: moments `m = 1,2,4,5,7,8` vanish identically,
+while the survivors are nonzero with the closed form
+
+```text
+int_T (u + omega v + omega^2 w)^{3k} dA = 1/((3k+1)(3k+2))
+   (m = 3: 1/20,  m = 6: 1/56,  m = 9: 1/110),
+```
+
+i.e. exactly the moments of `u` itself. So this particular eigenvector is
+*not* a counterexample, but it isolates the residual obstruction: a
+counterexample in the eigenspace must kill the sparse family `m = 3k`.
+
+## 5. Scope, and the relation to the repo's SFC lane
+
+This file is a **reformulation with an exact dictionary**, not a proof of
+FC(n) for `n >= 2`. Section 3(a) proves FC(2) only under a topological
+hypothesis on `g([0,1])`; 3(c) proves it outright only for `deg g <= 3`;
+section 4 reduces FC(3)'s obstruction to `3 | m` on one eigenspace.
+
+**Type warning (cf. MISTAKE-237).** The repo's large Strong Factorial
+Conjecture lane (THM-2812/2824/2836/2849/2854, `sfc3_*`/`sfc4_*` scripts)
+uses a *different* functional and a *different* parameter: one variable,
+`L(z^n) = n!`, and `SFC(N)` indexes the number of TERMS in the support,
+asking whether the first `N` moments detect an `N`-term polynomial. The
+`FC(n)` here is `n` VARIABLES with `L(x^alpha) = alpha!` and `f`
+homogeneous. The two agree at `n = 1` only. No arrow between them is
+claimed; anyone building one must state the map, the dimension change, the
+preserved predicate and the loss.
+
+Referee: R1-R4 exact, `ALL THM-3018 REFEREE CHECKS PASSED`. QED.
