@@ -1,0 +1,11 @@
+SFC(3) Macaulay census (surjectivity => no common projective zero)
+repo box was p<q<r <= 9 with k <= 6 (THM-2836); extending r and k here.
+
+  window k=0: supports p<q<r<=12 done  (cumulative 286 cells, non-surjective 0)
+  window k=1: supports p<q<r<=12 done  (cumulative 572 cells, non-surjective 0)
+  window k=2: supports p<q<r<=12 done  (cumulative 858 cells, non-surjective 0)
+  window k=3: supports p<q<r<=12 done  (cumulative 1144 cells, non-surjective 0)
+  window k=4: supports p<q<r<=12 done  (cumulative 1430 cells, non-surjective 0)
+
+  TOTAL 1430 cells with 0 <= p < q < r <= 12 and k <= 4
+  non-surjective (i.e. certificate failed) cells: NONE
