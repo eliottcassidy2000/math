@@ -9,8 +9,9 @@ status: >
   correspondence is parallel around a loop with nonzero relative holonomy
   and p is prime, holonomy acts transitively on the pointing torsor: all
   pointed determinants coincide, the norm is their pth power, and every
-  pointing has arrival exactly total root mass/p.  At p=13, THM-2591's 7a
-  holonomy would therefore force arrival from a parallel physical table.
+  pointing has arrival exactly total root mass/p.  At p=13, if THM-2591's
+  root-deck holonomy is lawfully inherited as the endpoint relative holonomy,
+  its 7a class would force arrival from a parallel physical table.
   Current canon has vertexwise selectors but no such whole-table common
   carrier, so this is a sharp conditional bridge and excludes no LRC row.
 source: kind-pasteur-2026-08-01-holotopy-arrival
@@ -26,8 +27,8 @@ related:
   - THM-2835-q11-semantic-word-horn-and-bockstein-blind-support-no-go
 script: 04-computation/lrc14_prime_holonomy_parallel_correspondence_arrival_thm3048.py
 output: 05-knowledge/results/lrc14_prime_holonomy_parallel_correspondence_arrival_thm3048.out
-script_sha256: ec915eeadc09c6e1e25d80f4c7d8675e6cd4ff9a1e72b5dd40ac3e4800f17b98
-output_sha256: f85c8e52e528c18c318630239b8a49cc4f11d6fd85910d4d86c0fd6baa03cc66
+script_sha256: a42bca68fcb43ccc088d4b75bdda22046602b2e4c4d2872ef7d3f91f1ba65eed
+output_sha256: dfa203df7c842027f4d3d76a3038b569ffe6c5cd196d470e9e67e69cb5880f2d
 hash_basis: LF-normalized bytes
 ---
 
@@ -158,15 +159,17 @@ make the pointed answer independent of the missing section.
 
 ## 3. The THM-2591 alternative
 
-THM-2591 proves that the seven-chart root system has relative holonomy
+THM-2591 proves that its seven-chart root-deck system has holonomy
 
 ```text
 g=7a !=0 in F_13                                      (13)
 ```
 
-for every marker `a in F_13^*`.  Therefore any nonzero nonnegative
-THM-3044 root correspondence which is lawfully parallel around those same
-seven charts would satisfy
+for every marker `a in F_13^*`.  Suppose in addition that the head and later
+endpoint torsors of one THM-3044 correspondence are lawfully placed on those
+same physical charts so that their induced **relative** pointing holonomy is
+`g=7a` (or `-7a` after reversing orientation).  Then any nonzero nonnegative
+root correspondence which is parallel around that loop satisfies
 
 ```text
 semantic arrival=M_root/13>0.                           (14)
@@ -207,7 +210,11 @@ This is a lawful LRC construction only if all `p` transported copies in
 before the determinant is formed.  If `P_H,P_B` are merely chart gauges, the
 sum is artificial.  It is then the exact analogue of a Reynolds duty term:
 formally covariant, but not a common-carrier current.  The theorem does not
-infer physicality from the algebraic average.
+infer physicality from the algebraic average.  Sharply, with `P_H=I`,
+`P_B=P_1`, and `C_0=P_1`, the seed has zero identity-pointed arrival while
+`Cbar` is the all-ones matrix and has arrival `13` at every pointing.  The
+orbit sum has enlarged one displacement to all thirteen, and the determinant
+must be taken only after that support-changing sum.
 
 ## 5. Sharp failure boundaries
 
@@ -235,6 +242,20 @@ first ghosts are
 
 Holonomy is nonzero yet has two orbits.  Prime order, or more generally
 `<g>=K`, is the exact transitivity hypothesis.
+
+### Fixed-action pointings
+
+The fixed-generator clause from THM-2611 is also load-bearing.  On `F_13`,
+take `P_H=P_1`, `P_B=P_2`, and
+
+```text
+C(h,b)=1_(b=2h).                                        (17a)
+```
+
+This table is parallel and every translation pointing has arrival `1`, as
+the theorem predicts.  If affine pointings of slope `2` are admitted, their
+arrival ledger becomes `(13,0,...,0)`.  The theorem compares the thirteen
+fixed-action identifications, not the larger affine group.
 
 ### Cemetery mass
 
@@ -273,7 +294,8 @@ The dependency-free exact companion checks:
   and the exact `M_root/p` first ghost;
 - `9` arbitrary-table norm first-ghost identities;
 - `21` pure-shift norms and the exact `p=13` formula `(18)`;
-- the zero-holonomy, nonparallel, composite `C_6`, and cemetery boundaries;
+- the zero-holonomy, nonparallel, composite `C_6`, affine-slope, and Reynolds
+  support hostiles, and records the cemetery/root-mass boundary;
 - transitivity of every THM-2591 holonomy `7a`, `a in F_13^*`.
 
 Reproduce with

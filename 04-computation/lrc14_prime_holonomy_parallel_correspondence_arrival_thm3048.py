@@ -41,6 +41,13 @@ def translation(n, shift):
     return out
 
 
+def affine_pointing(n, slope, shift):
+    out = zero(n)
+    for h in range(n):
+        out[(slope * h + shift) % n][h] = 1
+    return out
+
+
 def trace(a):
     return sum(a[i][i] for i in range(len(a)))
 
@@ -174,12 +181,28 @@ require(composite_c == matmul(composite_c, translation(n, -2)), "composite hosti
 composite_ghosts = [trace(matmul(composite_c, translation(n, c))) for c in range(n)]
 require(composite_ghosts == [0, 6, 0, 6, 0, 6], "composite orbit hostile changed")
 
+# Fixed-action pointings are load-bearing.
+n = 13
+affine_c = [[int(b == (2 * h) % n) for b in range(n)] for h in range(n)]
+require(affine_c == matmul(matmul(translation(n, 1), affine_c), translation(n, -2)), "affine control not parallel")
+translation_ghosts = [trace(matmul(affine_c, translation(n, c))) for c in range(n)]
+affine_ghosts = [trace(matmul(affine_c, affine_pointing(n, 2, c))) for c in range(n)]
+require(translation_ghosts == [1] * n, "fixed-action translation ledger changed")
+require(affine_ghosts == [13] + [0] * 12, "affine-slope hostile changed")
+
+# Reynolds averaging changes support unless every orbit copy is physically lawful.
+reynolds_seed = translation(n, 1)
+reynolds_sum = orbit_sum(reynolds_seed, 0, 1)
+require(reynolds_sum == [[1] * n for _ in range(n)], "Reynolds support hostile changed")
+reynolds_ghosts = [trace(matmul(reynolds_sum, translation(n, c))) for c in range(n)]
+require(trace(reynolds_seed) == 0 and reynolds_ghosts == [13] * n, "Reynolds arrival hostile changed")
+
 holonomy_orbits = []
 for a in range(1, 13):
     g = (7 * a) % 13
     orbit = sorted({(j * g) % 13 for j in range(13)})
     require(orbit == list(range(13)), "THM-2591 nonzero holonomy lost transitivity")
     holonomy_orbits.append(g)
-print(jdump({"boundaries":{"cemetery_only_root_mass":0,"composite_C6_g2":composite_ghosts,"nonparallel_arrival":0,"zero_holonomy_arrival":0},"thm2591_holonomy_permutation":holonomy_orbits}))
+print(jdump({"boundaries":{"affine_slope2_arrivals":affine_ghosts,"cemetery_only_root_mass":0,"composite_C6_g2":composite_ghosts,"fixed_action_arrivals":translation_ghosts,"nonparallel_arrival":0,"reynolds_arrivals":reynolds_ghosts,"zero_holonomy_arrival":0},"thm2591_holonomy_permutation":holonomy_orbits}))
 
 print("all_exact_checks=PASS")
