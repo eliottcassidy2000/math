@@ -3,17 +3,19 @@
 corner-slice constant sequences.
 
 P_8 = 4883 terms, degrees (M,U,V) = (16,32,16), support b+2c <= 32.
-Built on two DISJOINT tensor grids (no shared M, U or V):
+Historical build provenance reports two DISJOINT tensor grids:
    grid A  M=4..26,  U=2..34,  V=2..34 even     (12903 points)
    grid B  M=27..49, U=35..67, V=36..68 even    (12903 points)
-Exact Newton interpolation over Q on each grid independently.
+Exact Newton interpolation over Q on each grid independently was reported, but
+the grid engine and interpolation pickle are not stored and are not replayed by
+this script.
 
-CONTROLS (all must pass, and all are checked below)
+EXECUTABLE TABLE CONTROLS (all checked below)
   a1. the frozen THM-2997 P_1,P_2,P_3 table is re-emitted BYTE-FOR-BYTE,
       digest cfb36557e1d54a0328a309375a948ace99c78e0688a54a014aef0906c1b90513;
   a2. the THM-3013 P_4 and THM-3015 P_5/P_6/P_7 digests are reproduced;
-  b.  the two disjoint grids return IDENTICAL polynomials for every j=1..8;
-  c.  6 out-of-sample widths per grid, 0 coefficient mismatches.
+The historical claims that the disjoint grids agree and that six out-of-sample
+widths per grid have zero mismatches are not executable controls here.
 
 THE PRE-REGISTRATION.  The corner slices are
    A_j = [U^(4j)] Q_j,   E_j = [V^(2j)] Q_j / 9^j,   C_j = Q_j(M,0,0).
@@ -42,23 +44,24 @@ were registered, and part E scores them:
                                                               -- BOTH CONFIRMED
    (iii) BASE SEQUENCE d_m^C = (3m)!/(2m-2)!                   -- REFUTED
 
-(i) and (ii) are genuine out-of-sample successes: 180227 and 24061 were written
+(i) and (ii) are genuine held-out m=4 successes: 180227 and 24061 were written
 down before P_8 was inspected, and both are exact. (iii) fits m=1,2,3 (6, 360,
 15120) and predicts 665280 at m=4, but the truth is 604800, a ratio of 11/10.
 So the measured constants are
 
    c_4^A = 180227/9909043200,  c_4^E = 24061/1322697600,  c_4^C = 23/604800,
 
-and the base sequence d_m^C = 6, 360, 15120, 604800 has NO closed form yet.
-That single sequence is the whole remaining gap in the corner-slice picture.
+The original factorial guess for d_m^C = 6, 360, 15120, 604800 failed.  The
+independent THM-3030 referee subsequently identifies these four measured values
+with the Bernoulli--Faulhaber constants 46|B_(2m)|/(2m)!; continuation beyond
+m=4 remains conjectural.
 
 NOTE the "23": the C slice has CONSTANT numerator 23 at every m, and the
 slice-independent k=-1 law carries 46 = 2*23. This is the same 23 that heads the
 four-band charge density of THM-3006.
 
 Reproduce: python3 04-computation/gmc_eighth_resultant_jet_and_the_corner_constant_laws_thm3030.py
-  (requires the P_8 interpolation pickle; see 05-knowledge/results/
-   gmc_first_gap_resultant_jet_P8_table_thm3030.json for the frozen table)
+  (reads the frozen table in 05-knowledge/results/; it does not rebuild it)
 """
 
 import hashlib
@@ -136,15 +139,16 @@ def a_const(nm, m):
     return {"A": 3 + 44 * 16 ** (m - 1), "E": 4 + 33 * 9 ** (m - 1), "C": 23}[nm]
 
 
-#: d_m^C is the ONE piece with no closed form. Measured values only.
-#: The guess (3m)!/(2m-2)! = 6, 360, 15120, 665280 fits m=1,2,3 and is REFUTED
-#: at m=4, where the truth is 604800 (ratio 11/10). Left as an open sequence.
+#: Measured reduced denominators only in this primary companion.  The guess
+#: (3m)!/(2m-2)! = 6,360,15120,665280 is REFUTED at m=4 (truth 604800).
+#: The independent referee identifies the visible C constants with
+#: 46|B_(2m)|/(2m)! and keeps the all-order continuation open.
 D_C = {1: 6, 2: 360, 3: 15120, 4: 604800}
 
 
 def d_const(nm, m):
     """d_m for each slice. The SLICE RATIOS are closed-form and confirmed
-    out-of-sample at m=4; only the base sequence d_m^C is empirical."""
+    at the held-out m=4 value; the base entries here are measured."""
     dC = Fr(D_C[m])
     return {"A": 4 ** (2 * m - 1) * dC, "E": 3 ** (2 * m - 1) * dC, "C": dC}[nm]
 
@@ -246,7 +250,7 @@ def partC(POLY):
             print(f"      {nm}    {m}   {str(got):19s} {a_const(nm,m)}/{d_const(nm,m)}"
                   f"{'':4s} {got == want}")
     print()
-    print("    d_m^C = (3m)!/(2m-2)! =", [str(d_const("C", m)) for m in (1, 2, 3, 4)])
+    print("    measured d_m^C =", [str(d_const("C", m)) for m in (1, 2, 3, 4)])
     print("    d_m^A / d_m^C = 4^(2m-1) =", [4 ** (2 * m - 1) for m in (1, 2, 3, 4)])
     print("    d_m^E / d_m^C = 3^(2m-1) =", [3 ** (2 * m - 1) for m in (1, 2, 3, 4)])
     print("    a_m^A = 3 + 44*16^(m-1) =", [a_const("A", m) for m in (1, 2, 3, 4)])
@@ -308,9 +312,9 @@ def partE(POLY):
     for nm in "AEC":
         print(f"        c_4^{nm} = {obs[nm]}")
     print()
-    print("  VERDICT E: numerator laws and slice ratios CONFIRMED out-of-sample at")
-    print(f"             m=4 ({ok}); the base sequence d_m^C = 6, 360, 15120, 604800")
-    print("             has NO closed form yet and is the open piece.")
+    print("  VERDICT E: numerator laws and slice ratios CONFIRMED at held-out")
+    print(f"             m=4 ({ok}); the factorial base guess is refuted.  The independent")
+    print("             referee identifies the measured C constants by Bernoulli/Faulhaber.")
     return ok
 
 

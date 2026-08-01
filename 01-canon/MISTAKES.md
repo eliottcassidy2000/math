@@ -68,6 +68,36 @@ Format per entry:
   bound or a fixed margin; otherwise state liminf/limsup.  Do not silently
   upgrade a constant Newton-ratio sequence to the equality sequence `R=1`.
 
+## MISTAKE-342 (2026-08-01, THM-3030 hostile audit) -- finite slot fitting was promoted as an all-order law, and its next test was assigned to the terminal slot
+
+- **What was assumed:** the `j<=8` corner tables were said to prove the unique
+  all-order odd-slot sign/constant laws.  The canonical companion also described
+  two disjoint interpolation grids and out-of-sample checks that it never runs,
+  and the theorem named `P_9` as the next test of `c_5`.
+- **First failed implication / evidence defect:** finitely many values never
+  uniquely determine an unrestricted sequence.  The current script only reloads
+  frozen tables; neither grid engine nor its referenced pickle is stored.  More
+  sharply, `c_m` occupies slot `k=2m-1` under the explicit hypothesis `k<j`.
+  For `m=5`, `k=9` is the exceptional terminal slot of `P_9`, so it supplies no
+  test at all; the first nonterminal occurrence is `P_10`.
+- **Exact repair / strongest survivor:** audited THM-3030 is scoped
+  `FINITE-EXACT TABLE-INTERNAL` through `j=8`.  A new independent companion
+  checks all eight table hashes, `48` visible odd slots, `36` even-zero slots,
+  and the corrected `(-1)^(j+m)` sign.  It also discovers the exact finite
+  identity
+  `(-1)^(j-1)jC_j=46 sum_(s=1)^(M-1)s^j+20M^j+K_j`, so Faulhaber proves on the
+  visible range `c_m^C=46|B_(2m)|/(2m)!`.  This closes the observed denominators
+  `6,360,15120,604800` without pretending to prove the continuation.
+- **New decisive tests:** the Bernoulli continuation preregisters
+  `c_5^C=23/23950080` at `P_10`.  At `P_12` it predicts
+  `c_6^C=15893/653837184000`, with `15893=23*691` from
+  `B_12=-691/2730`; this is the first test that separates the Bernoulli law from
+  the observed reduced-numerator-`23` extrapolation.
+- **Rule:** distinguish an exact finite atlas from an all-order theorem; keep
+  reported build controls separate from executable evidence; and compute the
+  first legal index from every strict slot inequality before advertising the
+  next experiment.
+
 ## MISTAKE-339 (2026-08-01, pre-promotion THM-3000/3003 audit) -- the leading third jet was charged as a remainder and an asymptotic threshold was reported as an exact finite bound
 
 - **What was assumed:** the first THM-3000 candidate imposed
