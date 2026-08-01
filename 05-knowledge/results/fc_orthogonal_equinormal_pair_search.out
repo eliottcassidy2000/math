@@ -1,0 +1,7 @@
+Searching orthogonal/equinormal/mean-zero pairs for m = 1..M
+prediction: solvable while M < N-1  (N = #monomials)
+
+n=2, deg<=3:  N = 10 monomials, 2N = 20 real params, predicted window M < 9
+   M=  2: max|residual| = 7.216e-16   ||f||^2 = 1.0000   -> SOLVED
+   M=  3: max|residual| = 1.066e-14   ||f||^2 = 1.0000   -> SOLVED
+   M=  4: max|residual| = 1.870e-12   ||f||^2 = 1.0000   -> SOLVED
