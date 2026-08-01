@@ -193,7 +193,7 @@ imposes `2M` real conditions on the `2N` real parameters of `f`
 remove two more, so solutions are expected whenever
 
 ```text
-2M < 2N - 2,     i.e.     M < N - 1.
+2M < 2N - 2,     i.e.     M < N - 1.        <-- WRONG, see section 8
 ```
 
 For `n = 2, deg <= 3` that is `N = 10`, so every window `M <= 8` should be
@@ -209,3 +209,48 @@ finite windows are permissive, and FC is genuinely a statement about the
 infinite family.
 
 Referee: `04-computation/fc_orthogonal_equinormal_pair_search.py`.
+
+
+## 8. CORRECTION to the count, and what it explains
+
+The count in section 7 subtracted two for the symmetries `f -> lambda
+e^{i theta} f`. That is wrong: the normalisation `||f|| = 1` already consumes
+the scale freedom, and the phase symmetry does not remove an equation -- it
+only says the solution set, when nonempty, contains circles. The correct
+count is `2M` moment equations plus `1` normalisation against `2N` real
+unknowns, so the window is solvable exactly when
+
+```text
+2M + 1 <= 2N,     i.e.     M <= N - 1,      failing first at M = N.
+```
+
+Tested in ONE variable, where FC is known true and the computation is cheap
+(residual `~1e-12` or better when solvable, `~1e-2` when not -- a clean
+transition, not a numerical grey zone):
+
+```text
+deg<=2, N=3 :  solvable M = 1,2      fails at M = 3 = N
+deg<=3, N=4 :  solvable M = 1,2,3    fails at M = 4 = N
+deg<=4, N=5 :  solvable M = 1,...,4  fails at M = 5 = N
+```
+
+Three independent confirmations of `M <= N-1`, and three refutations of the
+`M < N-1` of section 7.
+
+### This explains the repo's "first window"
+
+The consequence is sharper than "no finite window obstructs". For a polynomial
+with a FIXED support of `N` monomials, only about `N` moments can be killed at
+all: `L(f^m) = 0` for `m = 1..N` already forces `f = 0` generically. **So FC
+restricted to a fixed support is a FINITE problem, of window length exactly
+the support size.**
+
+That is precisely the shape of the repo's SFC results. THM-2922 proves
+first-window `SFC(4)` for FOUR-slot supports using exactly the four moments
+`L(H), L(H^2), L(H^3), L(H^4)` -- `N = 4` slots, `M = 4` moments. The
+dimension count above says `M = N` is exactly where the system first becomes
+over-determined, so the "first window" is not a convenient truncation: it is
+the threshold, and THM-2922 is proving the statement at the first `M` where it
+could possibly be true.
+
+Referee: `04-computation/fc_first_window_threshold.py`.
