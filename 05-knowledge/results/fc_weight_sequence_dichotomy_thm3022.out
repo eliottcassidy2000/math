@@ -1,0 +1,22 @@
+Q_w(a,b) = w_2a w_b^2 - 2 w_a w_b w_(a+b) + w_a^2 w_2b
+Q != 0 for all a!=b  =>  two-slot threshold is 2 (two moments force f=0)
+Q == 0 identically   <=> w geometric <=> L_w is an evaluation, FC FAILS
+
+weight w_j                 log-convex?  Q>0?     Q=0 anywhere?  verdict
+j!                         True         True     False          threshold 2
+geometric 3^j              False        True     True           degenerate
+central binom C(2j,j)      True         True     False          threshold 2
+Catalan                    True         True     False          threshold 2
+ballot C(2j,j-1)           False        True     True           degenerate
+(j!)^2                     True         True     False          threshold 2
+double fact (2j-1)!!       True         True     False          threshold 2
+Fibonacci                  False        True     True           degenerate
+2^(j^2)                    True         True     False          threshold 2
+1/j! (as j!^-1 scaled)     False        False    True           FC FAILS (evaluation)
+
+SHARPNESS (THM-3022 sec 4): w_{n+1}=w_n+w_{n-1} => Delta w_n = w_{n-1},
+so L_w(f^m) = (-1)^m w_0 for f = s(1-s), every m.
+   Fibonacci (w_0=0)    L(f^m), m=1..8: [0, 0, 0, 0, 0, 0, 0, 0]
+   Lucas (w_0=2)        L(f^m), m=1..8: [-2, 2, -2, 2, -2, 2, -2, 2]
+   -> Fibonacci is an exact two-slot counterexample; Lucas never vanishes.
+   The factorial escapes because Delta(n!) = n*n!, never a shift.
