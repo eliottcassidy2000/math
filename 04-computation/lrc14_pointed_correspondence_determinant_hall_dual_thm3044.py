@@ -336,9 +336,15 @@ cycle_poly = det_i_plus_ta(cycle3)
 require(aligned_poly == [1, 3, 3, 1], "aligned determinant control failed")
 require(cycle_poly == [1, 0, 0, 1], "three-cycle determinant control failed")
 require(matmul(identity3, transpose(identity3)) == matmul(cycle3, transpose(cycle3)), "unpointed Gram hostile failed")
+same_double_gauge_orbit = any(
+    matmul(matmul(permutation_matrix(ph), identity3), transpose(permutation_matrix(qb))) == cycle3
+    for ph in perms3
+    for qb in perms3
+)
+require(same_double_gauge_orbit, "aligned/cycle tables left the independent double-gauge orbit")
 swap2 = permutation_matrix((1, 0))
 require(trace(eye(2)) == 2 and trace(swap2) == 0, "minimal two-root hostile failed")
-print(jdump({"unpointed_hostiles":{"aligned_det":"(1+t)^3","cycle_det":"1+t^3","same_double_gauge_orbit":True,"same_gram":True,"two_root_arrivals":[2,0]}}))
+print(jdump({"unpointed_hostiles":{"aligned_det":"(1+t)^3","cycle_det":"1+t^3","same_double_gauge_orbit":same_double_gauge_orbit,"same_gram":True,"two_root_arrivals":[2,0]}}))
 
 # THM-2549's conditional chart is diagonal once the semantic identification is supplied.
 weights = (2, 0, 3, 1)

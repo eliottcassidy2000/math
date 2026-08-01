@@ -14,13 +14,15 @@ status: >
   pointing is constructed here, so no LRC row is excluded.
 source: kind-pasteur-2026-08-01-pointed-arrival-holotopy
 audit: >
-  Two independent immutable-file audits ACCEPTED the typed pointed closure,
+  Three independent immutable-file audits ACCEPTED the typed pointed closure,
   independent-gauge covariance, formal log-trace identity, exact min-cost
   transportation dual, Hall zero gate and strict quantitative hostiles,
   balanced-cycle/acyclic-support boundary, unpointed orbit no-go, and the
   conditional THM-2549 subpacket closure.  They independently replayed normal,
   optimized, and stored output, matched both LF hashes, and passed the
-  documentation checker.  The audits caught and repaired an overbroad
+  documentation checker.  A stronger independent census covered 110,722 gauge
+  cells, 18,636 log identities, and 54,234 small transport instances.  The
+  audits caught and repaired an overbroad
   shortest-cycle quantifier and two executable-evidence wording defects before
   promotion.
 depends_on:
@@ -35,7 +37,7 @@ related:
   - THM-3040-formal-corner-resultant-width-quotient-and-all-order-bernoulli-law
 script: 04-computation/lrc14_pointed_correspondence_determinant_hall_dual_thm3044.py
 output: 05-knowledge/results/lrc14_pointed_correspondence_determinant_hall_dual_thm3044.out
-script_sha256: d035d6def40c55a046fd6eab9c54dae50f43407cbdd928a08c3f131969865305
+script_sha256: 659fd435c949e4dc2756225c27f390c85afd970a674f1b8906cafd53d34908e6
 output_sha256: 6a4efabb85472c492692ea2da971a30959ba807ab1b8f6f6bf22acb7a674ba21
 hash_basis: LF-normalized bytes
 ---
