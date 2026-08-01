@@ -2,7 +2,7 @@
 id: THM-2998
 title: "Affine quartic reciprocal star-triangle wall, real sign chambers, and the cyclic X_0(14) quotient"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The derivative-square star/complement collision polynomial is an
   primitive irreducible matching-coordinate polynomial and weight-24 affine
   relative invariant, with exact norm formula and a strict
@@ -30,7 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2998 -- affine reciprocal wall and its cyclic modular quotient
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and statement
 
@@ -525,17 +525,20 @@ smoothness at `(8)`, the exact projective hostile, both zero-real obstruction
 factors, all four two-real representatives, the four gap walls, three
 four-real chamber controls, smoothness of both ordered cubics, freeness and
 degree of the cyclic action, the ordered binary-quartic invariants, quotient
-equations `(32)--(34)`, the change `(35)`, both Weierstrass invariant triples,
+equations `(32)--(34)`, the changes and inverses `(33)--(35a)`, both
+Weierstrass invariant triples,
 and the unequal `j`-invariants.  Every truth gate uses explicit exceptions;
 there is no truth-bearing `assert`, floating-point decision, or scratch-file
 dependency.
 
-Frozen LF-normalized candidate hashes are
+Frozen LF-normalized audited hashes are
 
 ```text
 script  b469fce48f19e2bb8c7a92f9945b3ef8ce250efaae0f38ec3a7688b757d45749
 output  a4f45a74b0c8ee27b0d84cab861877e338e3a73562b525a546297ead98216d81
 ```
 
-**Candidate proof complete; independent hostile audit remains required before
-promotion.**
+The independent hostile audit rederived the norm and real chambers, checked
+smoothness and the free degree-three quotient, and required the explicit
+inverse formulas `(33a)` and `(35a)` plus the matching-coordinate
+irreducibility scope now recorded above.  QED.
