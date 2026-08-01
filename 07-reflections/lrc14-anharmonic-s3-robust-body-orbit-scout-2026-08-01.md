@@ -154,6 +154,72 @@ An exact theorem of this form would turn the orbit census into a reduction to
 the single generic fixed body. Without it, the census is only a precise source
 of candidate maps and counterexamples.
 
+## Exploratory exact sidecar: a same-owner exchange atom
+
+**Status: FINITE-EXACT EXPLORATORY / NO LRC CLOSURE.**
+
+The strongest surviving replacement for the global S3 action is local. Search
+all 3,003 bodies while fixing
+
+    ruler L = 3920,
+    deterministic upper-median safe cell j = 2100,
+    unique boundary owner e_* = 2.
+
+The connected component of the generic fixed body under a one-label exchange
+(symmetric-difference size two) has exactly thirteen bodies:
+
+```text
+body                    robust edges    safe cells
+(1,2,4,5,7,8)                 6            1602
+(1,2,4,5,8,14)                5            1672
+(1,2,4,7,8,10)                4            1626
+(1,2,4,8,10,14)               3            1632
+(1,2,5,7,8,10)                4            1542
+(1,2,5,7,8,14)                4            1582
+(1,2,5,8,10,14)               3            1588
+(1,2,7,8,10,14)               1            1566
+(2,4,5,7,8,10)                2            1682
+(2,4,5,7,8,14)                2            1682
+(2,4,5,8,10,14)               2            1688
+(2,4,7,8,10,14)               1            1666
+(2,5,7,8,10,14)               1            1622
+```
+
+Equivalently, every member is
+
+    {2,8} union A,
+
+where A is a four-subset of `{1,4,5,7,10,14}` meeting both `{5,10}` and
+`{7,14}`. The induced exchange graph is connected with 44 edges and degree
+histogram `6:4, 7:8, 8:1`. Its robust-count histogram is
+`1:3, 2:3, 3:2, 4:3, 5:1, 6:1`, so none of its bodies belongs to the edge-8
+uniform bank.
+
+This atom joins the two most informative rows. The anharmonic-fixed generic
+body `G=(2,4,5,7,8,10)` has robust label edges `(2,4),(2,5)`. The incoming
+D7/D8 weakest body `W=(1,2,5,7,8,14)` lies in the same component and has
+robust label edges `(1,2),(1,5),(1,7),(2,5)`. Both have exactly the same
+ruler, upper-median cell, and boundary owner.
+
+That preservation is genuine progress over S3: adjacent bodies also retain
+four physical labels. It is still not a certificate map. An exchange changes
+the safe-carrier ranges, one removed and one inserted slope, singleton debt,
+located arcs, pair weights, and margins. The precise next lemma is therefore
+an owner-preserving one-label replacement inequality at the fixed common cell,
+with the four shared arcs held literal and the changed debt recorded exactly.
+
+The sidecar freezes all thirteen rows, all 44 exchange edges, dependency
+hashes, and exact component/semantic digests:
+
+```bash
+python3 04-computation/lrc14_reflected_p1_generic_same_owner_exchange_scout_20260801.py
+python3 -O 04-computation/lrc14_reflected_p1_generic_same_owner_exchange_scout_20260801.py --output /tmp/lrc14-same-owner-O.out
+cmp 05-knowledge/results/lrc14_reflected_p1_generic_same_owner_exchange_scout_20260801.out /tmp/lrc14-same-owner-O.out
+```
+
+Its semantic digest is
+`93da4b6968b248cdf6133ebb8a1756b4c7313c3cb274561c6227c0ce59bee01f`.
+
 ## Connections to the newest incoming work
 
 The common-cell two-star computation closes all bodies for the finite
