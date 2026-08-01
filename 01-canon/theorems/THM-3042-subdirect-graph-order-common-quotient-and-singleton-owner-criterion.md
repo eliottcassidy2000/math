@@ -2,7 +2,7 @@
 id: THM-3042
 title: "Subdirect graph-order common quotient and singleton-owner criterion"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   A subdirect graph order B inside a product S x D is exactly a fibre
   product over one common quotient Q=S/I=D/J.  Its singleton slice and the
   singleton slice of its conductor are both Ie, so the singleton idempotent
@@ -13,6 +13,14 @@ status: >
   This is a finite-order membership criterion, not an affine-owner or
   Keller exclusion.
 source: codex-subdirect-graph-order-2026-08-01
+audit: >
+  kind-pasteur/2026-08-01 independently accepted the subdirect/Goursat
+  classification, conductor singleton slice, common-quotient owner
+  criterion, same-complement discrepancy ideal, local/DVR consequences,
+  and preserve/shrink/split boundaries.  root/2026-08-01 independently
+  rederived those claims and replayed normal, optimized, and stored output
+  with the declared LF hashes.  The optional evaluation-map notation has
+  been made explicit.  ACCEPT.
 depends_on:
   - THM-3038-split-monogenic-order-cross-resultant-conductor-and-affine-owner-boundary
 related:
@@ -29,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3042 -- a full split graph order is governed by one common quotient
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Subdirect-product theorem
 
@@ -147,6 +155,10 @@ B=R x_(R/I_B) C,
 B intersect Re=I_B e,
 e in B iff I_B=R.                                         (13)
 ```
+
+Here the maps to `R/I_B` are ordinary reduction on `R` and
+`hbar |-> h(a) mod I_B` on `C`; the latter is well defined because
+`g(a)=d` belongs to `I_B`.
 
 Indeed `(d,0)` already belongs to `A0`, while
 
