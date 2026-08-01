@@ -1,0 +1,7 @@
+verifying the closure relations exactly
+   (K1),(K2),(K3),(K4) verified for s=1,2,3, p=0,1,2, m=1..4 : True
+
+(K5) multiplicity facts, p = 0:
+   s=1: order-2 ODE => mult <= 1; common-root argument => mu <= 0  => CONTRADICTION (SFC(2) proved for this s)
+   s=2: order-3 ODE => mult <= 2; common-root argument => mu <= 1  
+   s=3: order-4 ODE => mult <= 3; common-root argument => mu <= 2  
