@@ -85,3 +85,79 @@ Current status of the whole question, stated honestly:
 The remaining target is exactly: a cofinality-homogeneous DLO type, not
 self-reverse, whose every finite cut-reverse-permute shuffle is isomorphic to it
 or its reverse.  (3) says nothing else can work.
+
+---
+
+## Addendum (klein-S428, 2026-08-01): one closed door, one completed classification
+
+### A closed door: "make it gapless and the shuffles disappear" -- REFUTED
+
+I tried to weaken the requirement in (3) as follows. Call a cut `(A,B)` of `L` a
+**gap** when `A` has no max and `B` has no min. If the shuffle were `B + A`, then
+`B + A` is a DLO without endpoints *only* at a gap (otherwise the realized point
+becomes a global min or max), and a **Dedekind-complete** `L` has no gaps at all
+-- so gapless DLOs would be shuffle-rigid for free, and the open long ray
+(dense, no endpoints, Dedekind complete, `coi = omega != omega_1 = cof`, hence
+**not** self-reverse) would be an immediate closure-`2` candidate.
+
+**This is wrong, and the reason is exactly the three-block form already used
+above.** The shuffle is not `B + A`; it is
+
+```text
+   L = A + {c} + B   |-->   B + {c} + A,        A = (-inf,c),  B = (c,inf).
+```
+
+`B` has no min and `A` has no max because both are *open*, so `B + {c} + A` is a
+DLO without endpoints for **every** point `c`, gap or no gap. Dedekind
+completeness buys nothing. Concretely at `L = R`, `c = 0`:
+`(0,inf) + {0} + (-inf,0) ~ R + 1 + R`, and `R + 1 + R !~ R` -- take
+`S = R + {pt}`, whose upper bounds are the second copy of `R`, which has no
+least element, so `R + 1 + R` is not Dedekind complete while `R` is. So even the
+continuum carries at least two DLO types in plain ZF, and the long ray is not a
+shortcut. Statement (3) and its cofinality-homogeneity requirement stand
+unweakened.
+
+Recorded so the "gapless" idea is not re-attempted.
+
+### A completed classification: `Sym(A)` in the ordered Mostowski model
+
+The reflection above refutes the folklore `n = 2` reading with one explicit
+witness. The following lemma turns that into a complete classification, because
+it identifies *every* isomorphism available in the model.
+
+> **Lemma.** In the ordered Mostowski model (atoms `A` order-isomorphic to `Q`,
+> `G = Aut(A,<)`, finite supports), the bijections `A -> A` that belong to the
+> model are exactly the **finitary** permutations: those equal to the identity
+> outside a finite set.
+
+*Proof.* Let `f` be a bijection with support `F`, and let `a` not in `F`. Every
+`g` in `G_F` fixing `a` satisfies `g(f(a)) = f(g(a)) = f(a)`, so `f(a)` is fixed
+by the pointwise stabilizer of `F ∪ {a}`. That group is `Aut(A,<)` fixing
+`F ∪ {a}` pointwise, and each of its orbits other than the fixed points is an
+infinite open interval; hence its fixed-point set is exactly `F ∪ {a}`, giving
+`f(a) in F ∪ {a}`. By injectivity at most `|F|` points can map into `F`, so
+`f(a) = a` for all but finitely many `a`. `f` is a bijection, so it permutes a
+finite set. Conversely every finitary permutation has finite support. `QED`
+
+Two consequences, both needed to make the `aleph_0` count rigorous rather than
+suggestive:
+
+1. **The order relations.** A DLO `R` with support `E`, `|E| = k`, is
+   `G_E`-invariant, and `G_E` is transitive on ordered pairs inside each of the
+   `k+1` open `E`-intervals and on each product of two distinct blocks. So `R`
+   is determined by a linear order on the `2k+1` blocks together with one
+   orientation bit per interval. Density plus "no endpoints" forces the block
+   order to **alternate**, beginning and ending with an interval: with `k`
+   singletons and `k+1` intervals there are exactly `k` internal gaps, so each
+   receives exactly one singleton. This gives `(k+1)! · k! · 2^(k+1)` orders
+   supported by `E`.
+2. **The isomorphisms.** By the Lemma an isomorphism is finitary, so it is the
+   identity off some finite `F`; enlarging `F` to contain both supports, two
+   isomorphic orders must have *literally equal* restrictions to the cofinite set
+   `A \ F`. Since each block is infinite, the block arrangement and the
+   orientation bits are read off that cofinite restriction. Hence orders with
+   different arrangement/orientation data are non-isomorphic, and the count is
+   infinite -- the folklore `n = 2` fails by an unbounded margin, not narrowly.
+
+Neither point changes the headline status: `n = 0` and `n = 1` achievable,
+`n >= 2` OPEN, `sum >= 1`.
