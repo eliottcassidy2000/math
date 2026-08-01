@@ -76,12 +76,27 @@ Nothing survives even the first three moments in degree `<= 2`, consistent
 with (and much stronger than) the determinacy argument, which only says the
 infinite family of moments suffices.
 
-## 4. Open
+## 4. Degree three: still nothing
 
-Degree `>= 3` is untested here and is exactly where section 2 says the moment
-argument stops working. That is the regime the repo's SFC machinery
-(THM-2922's four-slot supports of diameter five) actually lives in, and the
-census should be pushed there rather than to higher `n`.
+Pushed into the regime where the determinacy argument stops working:
+
+```text
+homogeneous cubic, n=2, coeffs in [-6,6], m=1..5 :  0 / 28560
+homogeneous cubic, n=2, coeffs in [-9,9], m=1..4 :  0 / 130320
+two-term cubics, coeffs in [-40,40], only L(f)=L(f^2)=0 : 0
+```
+
+The two-term case is the sharpest: `L(f) = 0` already pins the coefficient
+ratio to a fixed rational `-c!d!/(a!b!)`, and the quadratic `L(f^2)` then has
+no solution at all in that range. So degree three is if anything MORE rigid
+in these windows, not less.
+
+**Logical care.** This does not conflict with section 2. The determinacy
+argument failing for `d >= 3` says we lose a PROOF of FC there, not that
+counterexamples appear. A census finding nothing is exactly what one expects
+if FC is true and merely harder to prove past quadratics. Larger degree, wider
+coefficients and deeper windows all remain untested, as does the repo's own
+regime (THM-2922's four-slot supports of diameter five).
 
 ## 5. Relation to HYP-9075
 
