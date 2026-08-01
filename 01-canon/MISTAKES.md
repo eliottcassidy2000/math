@@ -23,8 +23,11 @@ Format per entry:
   `(d,x,z,w)=(701,129/100,39/20,-149/20)`, the advertised decimal condition
   applies, but the exact third-edge numerator is
   `-114191274399994230172453/10000000000<0`. Downstream, for edge `k=4` the
-  old spread claim permits `kappa=d^(3/10)`, yet
-  `q_4<=kappa^4=d^(6/5)` does not imply the required `q_4=o(d)`.
+  old spread claim permits `kappa=d^(3/10)`, yet it does not imply the required
+  `q_4=o(d)`. This is realized inside the positive-coefficient universe by
+  `N_n(t)=((t+1)^2+n^6)^(n^10)`: here `d=2n^10`,
+  `kappa=sqrt(1+n^6)=o(d^(2/5))`, but
+  `q_4=1-6n^6+n^12` and `q_4/d~n^2/2`.
 - **Exact repair / strongest survivor:** the graded remainder condition starts
   at `j=4`. Uniformly on curvature at least `923/10000`, the exact third-edge
   formula gives
@@ -34,6 +37,8 @@ Format per entry:
   `q_j=o(d^(j-3))` for `4<=j<=k+1` is correct. Under
   `|q_j|<=kappa^j`, the binding exponent is always `j=4`, hence the single
   sufficient condition is `kappa=o(d^(1/4))` for **every fixed edge**.
+  THM-3003 sharpens this with the cancellation tax
+  `chi=mean|r|/|mean r|`: bounded `chi` improves `1/4` to `1/3`.
 - **Rule:** separate jets already present in the leading invariant from true
   remainder jets. Never turn a leading-order asymptotic threshold into a
   finite non-strict bound without an exact monotone remainder estimate. When

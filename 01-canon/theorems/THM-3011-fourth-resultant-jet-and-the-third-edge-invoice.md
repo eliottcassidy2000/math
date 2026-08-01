@@ -106,10 +106,11 @@ Combining (2) with THM-3006's `w_4/M^5 -> 90211/19440` and jet additivity
     w = m_4/m_1^4 = d^3 p_4/u^4 -> (62/3)^3 (88637/19440)/(131/12)^4
                                 = 337994862976/119272468005 = 2.83380455...  (4)
 
-Both re-checked here in exact rationals.  **The invoice is cleared by an
-unbounded margin**: THM-3000 (18) needs `w >= -(923/60000)d`, a threshold tending
-to `-infinity`, while the true `w` is a positive `O(1)` constant.  Equivalently,
-THM-3003's graded hypothesis at `j=4` needs `m_4/m_1^4=o(d)` and gets `O(1)`.
+Both re-checked here in exact rationals. **The invoice is cleared by an
+unbounded asymptotic margin**: repaired THM-3000 `(19)` needs
+`liminf w/d>-923/60000`, while the true `w` is a positive `O(1)` constant and
+therefore `w/d->0`. Equivalently, THM-3003's graded hypothesis at `j=4` needs
+`m_4/m_1^4=o(d)` and gets `O(1)`.
 
 ## 4. FINITE-EXACT sign census, and a surprise
 
@@ -122,8 +123,9 @@ encoded wall):
   (`R_3-R_2 = -1.5459e-07` at `32`, `+2.1803e-08` at `33`, `+1.4975e-07` at `34`);
 - the second edge `R_2>R_1` first holds at `M=34`
   (`-2.0451e-08` at `33`, `+1.1691055537e-07` at `34`, matching THM-2997 (35));
-- `w(M=34)=5.609478` at `d=701`, clearing THM-3000 section 7's box-minimised
-  threshold `-7.4613` with margin `13.07`.
+- `w(M=34)=5.609478` at `d=701`; the direct exact ratio computation already
+  proves the third-edge sign there. The former comparison with a purported
+  finite box threshold `-7.4613` is retracted by MISTAKE-339 and is not used.
 
 > **The third edge turns positive one width EARLIER than the second.**  The
 > ordering `1<R_1<R_2<R_3` therefore begins at `M=34` because of the *second*

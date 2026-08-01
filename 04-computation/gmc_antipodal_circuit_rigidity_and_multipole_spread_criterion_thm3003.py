@@ -6,8 +6,10 @@ Continues THM-3000/3001.  Three layers, all about the SAME involution.
 LAYER 1 (rigidity, exact iff).  For positive-coefficient N of degree d,
 
     R_k = R_{d-k}  for every 1 <= k <= d-1
-      <=>  {r_i} = {mu/r_i} as multisets, mu = e_d^{2/d}
-      <=>  the empirical measure of log r is symmetric about its mean.
+      <=>  {r_i} = {mu/r_i} as multisets, mu = e_d^{2/d}.
+
+The log-symmetry phrasing is equivalent only on the positive-real root chamber;
+for complex roots the reciprocal-multiset statement is canonical.
 
 THM-3001 section 5 proved (<=).  Here (=>) is proved too, so the Newton circuit
 DETECTS reciprocal symmetry exactly.  Proof: the binomial normalization
@@ -17,7 +19,7 @@ differ by an affine function of the index, giving e_k = C mu^k e_{d-k}; the
 generating function form of that relation is t^d Q(1/t) = e_d Q(t/mu), whose
 root multiset comparison is exactly {r_i} = {mu/r_i}.  QED.
 
-LAYER 2 (antipodal / Borsuk-Ulam).  In centered log-root coordinates
+LAYER 2 (antipodal / Borsuk-Ulam, positive-real root chamber).  In centered log-root coordinates
 ell_i = log r_i - mean, reversal IS the ANTIPODAL MAP ell -> -ell, and the
 circuit map c(ell) = (log(R_k/R_{k-1}))_{k=2..d-1} is equivariant:
 
@@ -47,14 +49,15 @@ Therefore:
     exactly the multipole/local (far-field/near-field) duality;
   * cumulants are the translation-covariant (M2M) gauge, which is why
     THM-3000's curvature is clean in cumulants.
-  * NEW SUFFICIENT CONDITION.  Let kappa = max|r| / (p_1/d) be the root SPREAD
-    RATIO (max modulus over mean).  Since |p_j| <= d max|r|^j,
-        m_j/m_1^j <= kappa^j,
-    so THM-3000's graded hypothesis m_j/m_1^j = o(d^{j-3}) holds for all
-    j <= k+1 as soon as
-        kappa = o(d^{1 - 3/(k+1)}).
-    Third edge (k=3): kappa = o(d^{1/4}).  This replaces a jet-by-jet invoice
-    by ONE geometric number -- the FMM well-separatedness condition.
+  * NEW SUFFICIENT CONDITION. Let kappa=max|r|/(p_1/d) and let
+        chi=(d^{-1} sum|r|)/(p_1/d).
+    Then |m_j/m_1^j| <= chi*kappa^{j-1} <= kappa^j.  THM-3000's remainder
+    range starts at j=4, so the binding jet is ALWAYS j=4:
+        arbitrary phases: kappa=o(d^{1/4});
+        bounded chi (in particular r_i>0): kappa=o(d^{1/3});
+        chi=O(kappa^theta): kappa=o(d^{1/(3+theta)}).
+    Each condition closes EVERY FIXED edge once the leading curvature box is
+    supplied. It is not uniform when the edge index grows with d.
 
 Reproduce: python3 04-computation/gmc_antipodal_circuit_rigidity_and_multipole_spread_criterion_thm3003.py
 """
@@ -227,7 +230,7 @@ def layer2():
     for d in range(4, 13):
         print(f"    d={d:3d}  sphere dim {d - 2:3d}  target dim {-(-(d - 2) // 2):3d}"
               f"  BU applies: {-(-(d - 2) // 2) <= d - 2}"
-              f"   expected zero-set dim {(d - 2) - (-(-(d - 2) // 2)):3d}"
+              f"   identified zero-set dim {(d - 2) - (-(-(d - 2) // 2)):3d}"
               f"   log-symmetric locus dim in the sphere {d // 2 - 1:3d}")
     print("       (the two dimensions agree, which is Layer 1: the BU zero set IS")
     print("        the log-symmetric locus, nothing more and nothing less.)")
@@ -258,44 +261,72 @@ def layer3():
     print("       multipole subtraction; w_j are the WALL's multipole moments.")
 
     print()
-    print("  (ii) SPREAD CRITERION.  kappa = max|r| / (p_1/d);  |p_j| <= d max|r|^j")
-    print("       gives m_j/m_1^j <= kappa^j, so THM-3000's graded hypothesis")
-    print("       m_j/m_1^j = o(d^(j-3)) for j <= k+1 follows from")
-    print("            kappa = o(d^(1 - 3/(k+1))).")
-    print("       edge k :  required spread exponent 1 - 3/(k+1)")
+    print("  (ii) CANCELLATION-AWARE SPREAD CRITERION.")
+    print("       kappa=max|r|/m1, chi=mean|r|/m1, 1<=chi<=kappa, and exactly")
+    print("            |m_j/m_1^j| <= chi*kappa^(j-1) <= kappa^j.")
+    print("       THM-3000's remainder range is 4<=j<=k+1.  Since j=4 binds:")
+    print("         arbitrary phases:          kappa=o(d^(1/4))")
+    print("         bounded chi / r_i>0:       kappa=o(d^(1/3))")
+    print("         chi=O(kappa^theta):         kappa=o(d^(1/(3+theta))).")
+    print("       edge k : required arbitrary-phase exponent")
     for k in range(2, 9):
-        print(f"         k={k}:  kappa = o(d^{1 - 3 / (k + 1):.4f})"
-              f"   (j<=k+1 binding at j=4)" if k >= 3 else
+        print(f"         k={k}:  kappa = o(d^0.2500)"
+              f"   (4<=j<=k+1, binding at j=4)" if k >= 3 else
               f"         k={k}:  no j>=4 jet enters; curvature alone")
 
     print()
-    print("  (iii) numeric check of the bound m_j/m_1^j <= kappa^j:")
+    print("  (iii) numeric check of |m_j/m_1^j| <= chi*kappa^(j-1) <= kappa^j:")
     for name, roots in [("uniform i/d, d=60", [Fr(i, 60) for i in range(1, 61)]),
                         ("two-cluster 1,2 d=60", [Fr(1)] * 30 + [Fr(2)] * 30),
                         ("one heavy root d=60", [Fr(1)] * 59 + [Fr(60)])]:
         d = len(roots)
         m = [sum(r ** j for r in roots) / d for j in range(1, 6)]
         kappa = float(max(roots) / m[0])
+        chi = float(sum(abs(r) for r in roots) / d / m[0])
         row = []
         for j in range(2, 6):
-            lhs = float(m[j - 1] / m[0] ** j)
-            row.append((j, lhs, kappa ** j, lhs <= kappa ** j + 1e-9))
-        ok &= all(t[3] for t in row)
-        print(f"    {name:22s} kappa={kappa:8.4f}")
-        for j, lhs, rhs, good in row:
-            print(f"        j={j}: m_j/m_1^j = {lhs:12.5f} <= kappa^j = {rhs:14.5f}  {good}")
+            lhs = abs(float(m[j - 1] / m[0] ** j))
+            sharp = chi * kappa ** (j - 1)
+            row.append((j, lhs, sharp, kappa ** j,
+                        lhs <= sharp + 1e-9 and sharp <= kappa ** j + 1e-9))
+        ok &= all(t[4] for t in row)
+        print(f"    {name:22s} kappa={kappa:8.4f} chi={chi:8.4f}")
+        for j, lhs, sharp, coarse, good in row:
+            print(f"        j={j}: |q_j|={lhs:12.5f} <= chi*kappa^(j-1)={sharp:14.5f}"
+                  f" <= kappa^j={coarse:14.5f}  {good}")
 
     print()
-    print("  (iv) FIRST-GAP CONSEQUENCE.  THM-2997 (24) gives d/M -> 62/3 and")
+    print("  (iv) EXACT OLD-EXPONENT HOSTILE WITH ALL POLYNOMIAL COEFFICIENTS POSITIVE:")
+    print("       N_n(t)=((t+1)^2+n^6)^(n^s), roots r=1+/-i*n^3.")
+    print("       m1=1, kappa=chi=sqrt(1+n^6), q4=1-6n^6+n^12.")
+    hostile_ok = True
+    for n in (2, 3, 5, 10):
+        kap2 = 1 + n ** 6
+        q4 = 1 - 6 * n ** 6 + n ** 12
+        d10 = 2 * n ** 10
+        d12 = 2 * n ** 12
+        old_ratio = (kap2 ** 0.5) / (d10 ** 0.4)
+        invoice_ratio = q4 / d10
+        boundary_ratio = q4 / d12
+        hostile_ok &= q4 > 0 and invoice_ratio > 0
+        print(f"    n={n:2d}: kappa/d10^(2/5)={old_ratio:.6f}, q4/d10={invoice_ratio:.6f},"
+              f" q4/d12={boundary_ratio:.6f}")
+    print("       first ratio ->0 but q4/d10 -> infinity; at s=12 q4/d ->1/2.")
+    print("       old k-dependent exponent fails; the general 1/4 boundary is attained.")
+    ok &= hostile_ok
+
+    print()
+    print("  (v) FIRST-GAP CONSEQUENCE.  THM-2997 (24) gives d/M -> 62/3 and")
     print("       u/M^2 -> 131/12, so mean root -> (131/12)/(62/3) M = 0.5282 M.")
     mean_over_M = (131 / 12) / (62 / 3)
     dov = 62 / 3
     print(f"       mean root  ~ {mean_over_M:.6f} M ,  d ~ {dov:.4f} M")
-    print("       third edge needs kappa = o(d^(1/4)), i.e.")
+    print("       every fixed edge needs only kappa = o(d^(1/4)), i.e.")
     print(f"           max|r| = o({mean_over_M:.4f} * ({dov:.3f} M)^(1/4) * M)"
           f" = o({mean_over_M * dov ** 0.25:.4f} M^(5/4)).")
     print("       So a root-modulus bound |r| = o(M^(5/4)) on the wall-stripped core")
-    print("       CLOSES the third edge -- no P_4, no new Macaulay chart.")
+    print("       CLOSES EVERY FIXED EDGE -- not uniformly when k grows with d.")
+    print("       If chi is bounded, max|r|=o(M^(4/3)) is enough instead.")
     print("  VERDICT LAYER 3:", "DICTIONARY + CRITERION CONFIRMED" if ok else "FAILED")
     return ok
 

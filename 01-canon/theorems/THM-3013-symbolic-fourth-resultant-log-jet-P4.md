@@ -106,7 +106,8 @@ a genuinely independent computation, and with it
     p_4(N_M)/M^5 -> 46/5 - 90211/19440 = 88637/19440 = 4.55951646...,
     w = m_4/m_1^4 -> 337994862976/119272468005 = 2.83380455... = O(1),
 
-i.e. the third-edge invoice of THM-3000 (18) is cleared by an unbounded margin.
+i.e. the repaired third-edge invoice of THM-3000 `(19)` is cleared by an
+unbounded asymptotic margin: `w/d->0>-923/60000`.
 
 ## 5. Corrections carried forward
 
