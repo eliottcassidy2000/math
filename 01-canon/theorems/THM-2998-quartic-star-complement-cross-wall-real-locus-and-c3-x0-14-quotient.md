@@ -4,7 +4,8 @@ title: "Affine quartic reciprocal star-triangle wall, real sign chambers, and th
 status: >
   PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
   The derivative-square star/complement collision polynomial is an
-  irreducible affine quartic covariant with exact norm formula and a strict
+  primitive irreducible matching-coordinate polynomial and weight-24 affine
+  relative invariant, with exact norm formula and a strict
   real 0/2/4-root chamber classification.  Marking one colliding root gives
   two smooth ordered plane cubics.  Their free cyclic order-three quotient,
   not either ordered cubic itself, is the elliptic curve
@@ -22,7 +23,7 @@ related:
   - THM-2996-prime-modular-affine-defect-trichotomy-and-spherical-quartic-uniqueness
 script: 04-computation/quartic_cross_wall_real_cyclic_quotient_thm2998.py
 output: 05-knowledge/results/quartic_cross_wall_real_cyclic_quotient_thm2998.out
-script_sha256: b4bf1ecae2a01231d30b151d64e01c45093353a620187a1e3e22819d19452be9
+script_sha256: b469fce48f19e2bb8c7a92f9945b3ef8ce250efaae0f38ec3a7688b757d45749
 output_sha256: a4f45a74b0c8ee27b0d84cab861877e338e3a73562b525a546297ead98216d81
 hash_basis: LF-normalized bytes
 ---
@@ -65,8 +66,10 @@ H=a^6c^2-2a^4bc^2-2a^3b^3c-26a^3c^3+29a^2b^2c^2
 
 The theorem has four parts.
 
-1. `H` is the irreducible affine reciprocal-star wall.  It is a weight-`24`
-   affine covariant, but it is not a `PGL_2` invariant.
+1. `H` is primitive and irreducible in the matching coordinates
+   `Q[a,b,c]`.  It is a weight-`24` affine relative invariant, but it is not
+   a `PGL_2` invariant.  No irreducibility claim is made here for the
+   pulled-back polynomial in the depressed-quartic coordinates `(p,q,r)`.
 2. Over the reals, `H` is strictly positive on the zero-real-root chamber,
    nonnegative on the two-real-root chamber with four exact oriented affine
    equality representatives, and has an explicit signed four-gap formula on
@@ -418,6 +421,12 @@ v=28s+2-9t,
 x_E=32-112t,                    y_E=-112v.               (33)
 ```
 
+The inverse on this affine chart is explicit:
+
+```text
+t=(32-x_E)/112,             s=(64-9x_E-y_E)/3136.       (33a)
+```
+
 On `(32)` one obtains
 
 ```text
@@ -426,13 +435,20 @@ y_E^2=x_E(x_E^2+13x_E+128).                              (34)
 ```
 
 The formulas extend from the dense chart to the smooth projective quotient.
-Finally
+Finally, the change of variables
 
 ```text
 x_E=4X-4,                  y_E=8Y+4X+4                  (35)
 ```
 
-transforms `(34)` into `(5)`.  The exact Weierstrass invariants are
+with inverse
+
+```text
+X=(x_E+4)/4,               Y=(y_E-x_E-8)/8.             (35a)
+```
+
+transforms `(34)` into `(5)`; `(35a)` displays its inverse.  The exact
+Weierstrass invariants are
 
 ```text
 E_0:      (c4,c6,Delta)=(-3440,338624,-2^18*7^3),
@@ -517,7 +533,7 @@ dependency.
 Frozen LF-normalized candidate hashes are
 
 ```text
-script  b4bf1ecae2a01231d30b151d64e01c45093353a620187a1e3e22819d19452be9
+script  b469fce48f19e2bb8c7a92f9945b3ef8ce250efaae0f38ec3a7688b757d45749
 output  a4f45a74b0c8ee27b0d84cab861877e338e3a73562b525a546297ead98216d81
 ```
 

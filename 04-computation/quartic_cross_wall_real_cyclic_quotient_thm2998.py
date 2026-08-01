@@ -123,7 +123,8 @@ require(H_inv == -641584271212871414216880, "PGL2 hostile did not leave H=0")
 # after a real translation.  If f'(u+ib)^4 is positive real then f' is real
 # or purely imaginary.  The two displayed factors show equality with Delta
 # forces b^2=d^2, which is inseparable in either case.
-u, beta, delta = sp.symbols("u beta delta", real=True, positive=True)
+u = sp.symbols("u", real=True)
+beta, delta = sp.symbols("beta delta", real=True, positive=True)
 A_real = u**2 - beta**2 + delta**2
 A_imag = 2 * beta * u
 derivative_complex = sp.expand(2 * sp.I * beta * (A_real + sp.I * A_imag))
@@ -302,11 +303,25 @@ require(
     sp.expand(y_definition**2 - x_definition * (x_definition**2 + 13 * x_definition + 128) + 351232 * quotient_wall) == 0,
     "quotient elliptic model changed",
 )
+t_inverse = (32 - x_e) / 112
+s_inverse = (64 - 9 * x_e - y_e) / 3136
+require(sp.expand(t_inverse.subs(x_e, x_definition) - t) == 0, "quotient inverse t changed")
+require(
+    sp.expand(s_inverse.subs({x_e: x_definition, y_e: y_definition}) - s) == 0,
+    "quotient inverse s changed",
+)
 
 # Exact isomorphism to the standard X_0(14) model.
 X, Y0 = sp.symbols("X Y0")
 x_change = 4 * X - 4
 y_change = 8 * Y0 + 4 * X + 4
+X_inverse = (x_e + 4) / 4
+Y_inverse = (y_e - x_e - 8) / 8
+require(sp.expand(X_inverse.subs(x_e, x_change) - X) == 0, "X0 inverse X changed")
+require(
+    sp.expand(Y_inverse.subs({x_e: x_change, y_e: y_change}) - Y0) == 0,
+    "X0 inverse Y changed",
+)
 E0_equation = sp.expand(y_change**2 - x_change * (x_change**2 + 13 * x_change + 128))
 X014_equation = Y0**2 + X * Y0 + Y0 - X**3 - 4 * X + 6
 require(sp.expand(E0_equation - 64 * X014_equation) == 0, "X0(14) change of variables changed")
