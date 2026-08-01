@@ -2,16 +2,18 @@
 id: THM-3036
 title: "Marked modular S4 Schreier incidence and V4 boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
-  The two six-sheet marked C2*C3 actions agree on the ternary generator and
-  differ by a binary central twist; their discriminant-cover actions agree.
-  The six-sheet graphs are not partial cubes, while their factor-orbit
-  incidence shadows are.  The genuine local V4 classifies three extensions.
+  SUPERSEDED / WEAKER DUPLICATE OF THM-2975.  The exact companion and proof
+  below are valid independent lineage, but PROVED THM-2975 predates this file
+  and proves every stated Schreier, discriminant-cover, incidence-shadow,
+  local-V4, tournament, graceful, and finite-kernel claim, together with
+  stronger orbifold-signature and H^1 descent results.  Do not use THM-3036
+  as a canonical dependency.
 source: codex-modular-s4-schreier-incidence-2026-08-01
 depends_on:
   - THM-2968-quartic-edge-and-oriented-cycle-s4-complements
   - THM-2971-discriminant-cover-edge-orientation-sextic-algebra-intertwiner
 related:
+  - THM-2975-modular-six-sheet-schreier-graphs-and-farey-partial-cube-boundary
   - THM-2056-kelvin-polar-farey-defect-certificate
   - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
   - THM-2996-prime-modular-affine-defect-trichotomy-and-spherical-quartic-uniqueness
@@ -23,9 +25,15 @@ output_sha256: f3c075e28eff54c8f4a718aee51e7efb1036e7187f7e21f255459e95e58d069d
 hash_basis: LF-normalized bytes
 ---
 
+> **SUPERSEDED / WEAKER DUPLICATE.** PROVED THM-2975 predates this file and
+> contains every result below, plus the exact modular-orbifold signatures,
+> congruence-subgroup identification, weighted graph-of-groups ranks, and
+> `H^1(C2,C2)` descent classification.  This independent exact replay is
+> retained only as lineage and must not replace THM-2975 in the proof graph.
+
 # THM-3036 -- marked modular `S4` Schreier incidence and `V4` boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**FINITE-EXACT, BUT SUPERSEDED BY THM-2975.**
 
 This note starts from proved THM-2968 and THM-2971.  It isolates exactly what
 the marked quotient
