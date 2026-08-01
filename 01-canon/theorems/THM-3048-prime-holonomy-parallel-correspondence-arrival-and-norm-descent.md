@@ -2,7 +2,7 @@
 id: THM-3048
 title: "Prime-holonomy parallel-correspondence arrival and norm descent"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For a nonnegative correspondence between two C_p root torsors, the product
   of the pointed determinants over all p equivariant pointings is a canonical
   unpointed norm whose first log ghost is total root mass.  If the whole
@@ -15,6 +15,14 @@ status: >
   Current canon has vertexwise selectors but no such whole-table common
   carrier, so this is a sharp conditional bridge and excludes no LRC row.
 source: kind-pasteur-2026-08-01-holotopy-arrival
+audit: >
+  An independent immutable-file hostile audit ACCEPTED the correspondence and
+  pointing operator types, relative-holonomy sign, complete determinant
+  conjugacy, norm and first-ghost normalizations, prime/generator boundary,
+  conditional THM-2591 application, Reynolds physicality tax, and the zero,
+  composite, nonparallel, affine-slope, cemetery, and semantic-horn hostiles.
+  It replayed normal, optimized, and stored output byte-for-byte, matched both
+  LF hashes, and passed the documentation checker after startup compaction.
 depends_on:
   - THM-2591-theta-zero-selector-cech-coboundary-and-c91-holonomy-no-go
   - THM-2611-principal-c13-bibundle-lift-torsor-and-holonomy-section-obstruction
@@ -34,14 +42,15 @@ hash_basis: LF-normalized bytes
 
 # THM-3048 -- prime holonomy can force pointed arrival
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The root-holotopy frontier has treated nonzero chart holonomy as an obstacle
 to choosing one global root pointing.  For a whole correspondence table the
 same holonomy has an opposite use.  If the table is parallel around the loop,
 holonomy permutes its possible pointings while preserving their determinants.
 At prime order, any nonzero holonomy visits every pointing.  The ambiguity is
-then harmless because every choice has the same strictly positive arrival.
+then harmless because every choice has the same arrival, strictly positive
+whenever `M_root>0`.
 
 This mechanism requires a transported **table**, not one selected root in
 each chart.  That distinction is exactly where current LRC canon stops.
@@ -309,4 +318,4 @@ Both runs equal the stored six-line transcript byte-for-byte.  This theorem
 does not construct `(7)`, identify the chart carriers, preserve a full
 terminal packet, or exclude an LRC row.
 
-**QED (candidate pending independent hostile audit).**
+**QED.**
