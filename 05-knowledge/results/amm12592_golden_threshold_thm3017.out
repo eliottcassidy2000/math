@@ -1,0 +1,14 @@
+phi = 1.618033988749894848204587
+gamma* = 2 log(phi)/log 5 = 0.5979874356654401497450265
+x*     = phi^-2           = 0.3819660112501051517954132
+
+A tangency at gamma*=2log(phi)/log5, x*=phi^-2: margin=0.0, d/dx=-7.06014e-25  OK
+B x* = phi^-2 is the interior minimiser (margin >= 0 nearby): OK
+C rho = d/(d-s) = sqrt5 (err 1.27e-21), sigma = 2(d-s)/s = phi = (1-x*)/x* (err 1.66e-21): OK
+D rho^gamma = sigma, so gamma* = log(phi)/log(sqrt5) = 2log(phi)/log5 = 0.5979874356654401497450265
+  => C = 1 + gamma* = log_5(5 phi^2) = 1.597987435665440149745027
+E R=256 worst log-ratio at gamma=       3/5: +0.1856   (above gamma*)
+E R=256 worst log-ratio at gamma= 2457/4135: +0.1790   (below gamma*)
+E consistency with the THM-3002 finite-R ledger: OK
+
+ALL THM-3017 REFEREE CHECKS PASSED

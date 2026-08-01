@@ -1,0 +1,38 @@
+TRANSFER TEST: THM-2922 window machinery -> shell-imbalance module
+
+1. Size of the variety cut out by the equations
+   SFC side : L(H^k)=0, k=1..4, NONLINEAR in the coefficients,
+              coefficients free over C -> a genuine intersection.
+   shell side: c^(2m) = -c^(m)*(1+u)^(2m) is LINEAR and c^(m) is free.
+     m=  1: solution space over Q has dimension 1   (equations impose 0 conditions)
+     m=  2: solution space over Q has dimension 3   (equations impose 0 conditions)
+     m=  4: solution space over Q has dimension 7   (equations impose 0 conditions)
+     m=  8: solution space over Q has dimension 15   (equations impose 0 conditions)
+     m= 16: solution space over Q has dimension 31   (equations impose 0 conditions)
+
+   => the compensation EQUATIONS cut out nothing.  Every obstruction
+      is in the integer box, which elimination theory cannot see.
+
+2. Where the box actually binds (least-overflow witness)
+   m=2: min over admissible c of max_i |c2_i|/N2_i = 2 = 2.0000 > 1
+        first binding index i=4 of 0..8   (middle index is 4)   witness c=[0, -2, 2, 0, 0]
+   m=4: min over admissible c of max_i |c2_i|/N2_i = 3/2 = 1.5000 > 1
+        first binding index i=7 of 0..16   (middle index is 8)   witness c=[0, -4, 6, -4, 0, 4, -6, 4, 0]
+
+VERDICT.  The core of THM-2922 does NOT transfer.  Its Macaulay
+resultant chart and Gregory-Newton minors exist to prove that a NONLINEAR
+system over an UNCONSTRAINED coefficient space has only the trivial solution.
+Our system is LINEAR and its solution space is full-dimensional; the whole
+obstruction is the integer box, i.e. a lattice-point question, on which
+resultants are silent.  The two difficulties are exactly complementary.
+
+TWO PERIPHERAL STEPS DO TRANSFER.
+ (a) MEAN ELIMINATION.  THM-2922 kills the first moment with the differences
+     f_a - f_(a+5).  Our analogue is already proved independently:
+     N_0 = N_2m = 0 and C^(m)(1) = 0 force C^(m)(u) = 2u(1-u)G(u).  Same move.
+ (b) POSITIVITY CERTIFICATES IN THE FAMILY PARAMETER.  THM-2922 proves its
+     statement for ALL translations n by exhibiting Gregory-Newton positive
+     certificates in n.  That is precisely what the shell module still needs:
+     the non-compensation is verified only at m = 1, 2, 4, and a certificate
+     positive in m would give all dyadic m at once.  This is the one genuinely
+     importable idea, and it is NOT yet done.

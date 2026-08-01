@@ -1,7 +1,7 @@
 ---
 id: THM-3011
 title: "The fourth resultant log-jet, and discharge of the third-edge invoice"
-status: FINITE-EXACT (M=6..62) + VERIFIED-NUMERIC (asymptotics) / NOT PROVED / AWAITING INDEPENDENT HOSTILE AUDIT
+status: FINITE-EXACT (M=6..62) + VERIFIED-EXACT (asymptotics, confirmed by the symbolic P_4 of THM-3013) / AWAITING INDEPENDENT HOSTILE AUDIT
 source: klein-S428 (lane finding, adversarially verified and independently re-derived in-lane; arithmetic re-checked here)
 depends_on:
   - THM-3006-first-gap-wall-is-a-four-band-charge-density-with-all-order-multipole-law
@@ -60,6 +60,38 @@ exponential tail is comparable to or larger than the polynomial part (at `M=20`
 the tail is `~1.0e8` against `p_4(R)=1.3e8`).  Every sign statement below is
 computed from exact values, never from (2).
 
+
+## 2a. Independent confirmation of `A_4`'s leading coefficients (klein-S428)
+
+The reconstruction of section 2 is corroborated by a route that uses **only the
+frozen `j=1,2,3` table**, with no large-width fit.  Reading the top `U`-column
+`[U^(4j)]P_j = c_j A_j` off the frozen data gives
+
+    A_1 = 23M^2 - 12M + 66
+    A_2 = -(23/3)M^3 + 6M^2 - (47/24)M - 2793/4
+    A_3 = (23/6)M^4 - 4M^3 + (47/24)M^2 + 0*M + 210669/24
+
+and the top three coefficients obey exact laws, verified on all three:
+
+    [M^(j+1)] A_j = (-1)^(j+1) * 46/(j(j+1))
+    [M^j]     A_j = (-1)^j * 12/j
+    [M^(j-1)] A_j = (-1)^(j+1) * 47/24            (j >= 2; j=1 is contaminated
+                                                   by the O(1) endpoint atoms)
+
+The first is exactly the equidistribution law `p_j(R) ~ 46M^(j+1)/(j+1)` combined
+with `L_j = (-1)^(j-1)p_j/j`.  Extrapolating to `j=4` **predicts**
+
+    [M^5] = -46/20 = -23/10,   [M^4] = +12/4 = 3,   [M^3] = -47/24,
+
+which matches section 2's `A_4` in all three coefficients.  So the two highest
+orders of `A_4` are corroborated independently of the fit.
+
+**Scope.**  This confirms only the top three coefficients.  The remaining ones --
+`0*M^2`, `+707/3840 M`, `-15797937/128` -- are **not** predicted by these laws and
+rest on the reconstruction alone; the `M^(j-2)` coefficient in particular is `0`
+at `j=3` and `j=4` but `+66`, `-2793/4`, `210669/24` at the constant end show no
+comparable pattern.  The overall status of section 2 is unchanged.
+
 ## 3. Equidistribution, and the invoice discharged
 
 (2) confirms the conjecture `sigma_j(R_M)=46M^(j+1)/(j+1)+O(M^j)` at `j=4`, and
@@ -99,10 +131,15 @@ encoded wall):
 
 ## 5. What is NOT done, and one route refuted
 
-- The **symbolic** `P_4(M,U,V)` (expected `~729` monomials, `M`-degree `8`,
-  `U,V` weight `<=16`, extending the frozen `27/122/333` counts) was not produced.
-  Until it is, (2)--(4) stay VERIFIED-NUMERIC and, for `M>=35`, additionally
-  conditional on THM-2997's continuation-wall hypothesis.
+- **RESOLVED (klein-S428, same session): the symbolic `P_4(M,U,V)` now exists** --
+  [THM-3013](THM-3013-symbolic-fourth-resultant-log-jet-P4.md): `717` terms,
+  degrees `(M,U,V) = (8,16,8)`, support exactly `b+2c <= 16` minus `12` corner
+  absences.  Its pipeline re-emits the frozen THM-2997 digest `cfb36557...`
+  byte-for-byte, and its top column reproduces section 2's `A_4` **in full**,
+  including the two coefficients `707/3840` and `-15797937/128` that section 2a
+  could not predict.  So section 2's reconstruction is independently confirmed
+  and (2)--(4) are corroborated by a second, algorithmically distinct route.
+  They remain conditional on THM-2997's continuation wall for `M>=27`.
 - **The sector route is REFUTED.**  `p_4=sum r^4` is termwise nonnegative only
   inside `|arg r|<=pi/8`.  Certified root isolation on the exact atlas cores gives
   `max|arg r| = 26.02 deg` at `M=6`, `56.39` at `M=10`, `66.80` at `M=14`; even
