@@ -1,0 +1,10 @@
+verifying  Q = D B^2 - 2 A B C + A^2 E > 0  for alpha != beta
+and the two ingredients  C^2 < D E  (log-convexity) and AM-GM
+  pairs tested: 29112   violations: 0
+
+  equality case alpha = beta = (2, 1):  C^2 - D E = 0  (zero, as log-convexity says), Q = 0
+
+So the two-slot case of the first-window principle is PROVED, not
+merely generic: for any two distinct multi-indices in any number of variables,
+L(f) = L(f^2) = 0 forces f = 0.  The proof is log-convexity of Gamma plus
+AM-GM, and the strictness comes exactly from alpha != beta.

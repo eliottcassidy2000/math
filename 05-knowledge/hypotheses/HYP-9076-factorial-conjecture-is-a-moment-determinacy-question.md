@@ -254,3 +254,85 @@ the threshold, and THM-2922 is proving the statement at the first `M` where it
 could possibly be true.
 
 Referee: `04-computation/fc_first_window_threshold.py`.
+
+
+## 9. The threshold at N = 2, PROVED (not generic) -- and why it stops there
+
+**Theorem.** Let `f = c_1 x^alpha + c_2 x^beta` with `alpha != beta`
+multi-indices in any number of variables and `(c_1,c_2) != 0` complex. Then
+`L(f)` and `L(f^2)` cannot both vanish.
+
+*Proof.* Put `A = alpha!`, `B = beta!`, `C = (alpha+beta)!`, `D = (2alpha)!`,
+`E = (2beta)!` (multi-index factorials). Then `L(f) = c_1 A + c_2 B` and
+`L(f^2) = c_1^2 D + 2 c_1 c_2 C + c_2^2 E`. If `L(f) = 0` then
+`c_2 = -c_1 A/B` and `c_1 != 0`, so
+
+```text
+L(f^2) = (c_1^2 / B^2) * Q,     Q := D B^2 - 2 A B C + A^2 E.
+```
+
+Two classical facts finish it. Coordinatewise **log-convexity of Gamma** gives
+`((alpha_i+beta_i)!)^2 <= (2alpha_i)!(2beta_i)!` with equality iff
+`alpha_i = beta_i`; multiplying, `C^2 <= D E`, strict unless `alpha = beta`.
+**AM-GM** gives `D B^2 + A^2 E >= 2 A B sqrt(D E)`. Hence
+
+```text
+Q >= 2 A B ( sqrt(D E) - C ) > 0     when alpha != beta,
+```
+
+so `L(f^2) != 0`. QED
+
+Verified on `29112` multi-index pairs in 1, 2 and 3 variables: no violation,
+and `Q = 0` exactly in the excluded case `alpha = beta`.
+
+### Why the argument does not extend past N = 2
+
+After using `L(f) = 0` to eliminate one coefficient, `N` slots leave `N-1`
+complex unknowns. At `N = 2` that is ONE unknown, and `L(f^2)` becomes
+`c_1^2` times a positive real number -- so it vanishes only at `c_1 = 0`. From
+`N = 3` on there are at least two complex unknowns, and **a complex quadratic
+form in two or more variables always has nontrivial zeros** (a conic in
+`P^1` has points). So `L(f^2) = 0` alone is satisfiable for every `N >= 3`,
+the positivity of `L` gives nothing further, and the higher moments
+`L(f^3), ..., L(f^N)` must be brought in and eliminated.
+
+That is exactly why the repo's program is case-by-case with Macaulay
+resultants rather than a single soft argument: the transition at `N = 3` is
+real, not a gap in effort. **A general rigorous proof of the `M = N` threshold
+is therefore not available here, and should not be expected from positivity
+alone; `N = 2` is the base case and the elimination-theoretic work
+(THM-2824/2917 at three slots, THM-2849/2922 at four) is what the rest costs.**
+
+Referee: `04-computation/fc_two_slot_threshold_proof.py`.
+
+
+## 10. The proof's engine is a Newton ratio -- the THM-3010 connection
+
+The discriminant in section 9 is not a new object. klein's THM-3010 studies
+the **Newton ratio** `R_k = h_k^2 / (h_(k-1) h_(k+1))` of an integer sequence,
+log-concave exactly where `R_k > 1`. The quantity controlling the two-slot
+proof is
+
+```text
+C^2 / (D E) = (alpha+beta)!^2 / ((2alpha)! (2beta)!),
+```
+
+which is precisely a Newton ratio of the factorial sequence taken at the
+midpoint of the segment `[2alpha, 2beta]`. With `h_j = j!` one gets
+`R_n = (n!)^2/((n-1)!(n+1)!) = n/(n+1) < 1`, i.e. **`j!` is log-CONVEX**, and
+that single fact is what makes `Q > 0` and kills the two-slot case.
+
+So two independently developed threads use the same engine: THM-3010 computes
+exact rational Newton ratios `R_k = 1 - Q_(a,b)(k)/D_(a,b)(k)` for BALLOT
+columns, and the factorial-moment program needs Newton ratios of the FACTORIAL
+sequence. A grep confirms log-convexity appears nowhere else in canon --
+THM-3010 and this entry are the only two occurrences -- so the tool is
+essentially unused in the repo despite being decisive here.
+
+**Concrete transfer to try.** THM-3010 gives `R_k` in closed rational form for
+`binom(2k,k)`, Catalan, `binom(2k,k-1)` and `binom(2k+1,k-1)`. Supports whose
+slots are built from those columns would then have *exactly computable*
+two-slot discriminants, and the `Q > 0` step would become a rational-function
+positivity check in `k` rather than an inequality -- which is the same shape as
+the Gregory--Newton certificates THM-2922 already uses. That is a concrete,
+untried bridge between the two programs.
