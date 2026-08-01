@@ -1,5 +1,5 @@
 ---
-id: THM-2996
+id: THM-3032
 title: "Sharpened half-tail critical-run extractor and the shell-four Pareto frontier"
 status: >
   PROVED + VERIFIED-EXACT. The THM-2160 S5 half-tail extractor for AMM 12592
@@ -34,7 +34,7 @@ output: 05-knowledge/results/amm12592_refined_half_tail_referee.out
 writeup: 06-writeups/amm12592-solution.tex
 ---
 
-# THM-2996 -- the sharpened half-tail extractor
+# THM-3032 -- the sharpened half-tail extractor
 
 Bits are independent with `P(0)=p`, `P(1)=q=1-p`, `0<p<1` unknown; `n` is the
 length of the maximal constant initial run. For a nonconstant stream let `m`
