@@ -2,7 +2,7 @@
 id: THM-3044
 title: "Pointed correspondence determinant, Hall dual, and cycle boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; independent hostile audit pending.  A
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A
   supplied physical bijection between selected-head and genuinely later root
   torsors closes each THM-2545 joint table into an endomorphism.  The first
   formal log-determinant coefficient is exactly semantic arrival, and its
@@ -13,6 +13,16 @@ status: >
   physically identified with the carry-corrected ancestry root; no such
   pointing is constructed here, so no LRC row is excluded.
 source: kind-pasteur-2026-08-01-pointed-arrival-holotopy
+audit: >
+  Two independent immutable-file audits ACCEPTED the typed pointed closure,
+  independent-gauge covariance, formal log-trace identity, exact min-cost
+  transportation dual, Hall zero gate and strict quantitative hostiles,
+  balanced-cycle/acyclic-support boundary, unpointed orbit no-go, and the
+  conditional THM-2549 subpacket closure.  They independently replayed normal,
+  optimized, and stored output, matched both LF hashes, and passed the
+  documentation checker.  The audits caught and repaired an overbroad
+  shortest-cycle quantifier and two executable-evidence wording defects before
+  promotion.
 depends_on:
   - THM-2545-word-stratified-hall-arrival-criterion-and-owner-word-transportation-hostile
   - THM-2549-future-pullback-target-neutrality-and-cemetery-hall-boundary
@@ -32,7 +42,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3044 -- pointed correspondence determinant, Hall dual, and cycle boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2545 identifies the exact finite object behind semantic arrival: for each
 terminal word, a nonnegative joint table from a selected empty-head root to a
@@ -431,4 +441,4 @@ Both executions equal the stored nine-line transcript byte-for-byte.  The
 result is a finite correspondence/transport theorem plus a conditional typing
 bridge.  It does not prove that the required physical pointing exists.
 
-**QED, subject only to the pending independent hostile audit.**
+**QED.**
