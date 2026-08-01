@@ -1,0 +1,14 @@
+S_3 mechanism: phi=alpha+omega beta+omega^2 gamma on the triangle (equilateral image, 3-fold symmetric):
+  int_Delta phi^1 = (-2.3317e-32 + 5.6931e-32j)   |.|=6.152e-32   ~0 (3 nmid m)
+  int_Delta phi^2 = (1.8816e-32 + 2.4341e-32j)   |.|=3.077e-32   ~0 (3 nmid m)
+  int_Delta phi^3 = (0.05 - 3.1684e-32j)   |.|=0.05   NONZERO (3|m)
+  int_Delta phi^4 = (-9.327e-33 + 2.2772e-32j)   |.|=2.461e-32   ~0 (3 nmid m)
+  int_Delta phi^5 = (1.0752e-32 + 1.3909e-32j)   |.|=1.758e-32   ~0 (3 nmid m)
+  int_Delta phi^6 = (0.017857 - 2.2631e-32j)   |.|=0.01786   NONZERO (3|m)
+=> 2/3 of moments vanish from the 2-D area-enclosing image -- impossible for a 1-D arc (FC(2)).
+
+disk area measure int_{|z|<=1} z^m dA (the all-moments-zero target):
+  m=1: int z^m dA = 1.161e-37 (=0 for all m>=1; a polynomial realizing this pushforward would refute FC(3))
+  m=2: int z^m dA = 8.71e-38 (=0 for all m>=1; a polynomial realizing this pushforward would refute FC(3))
+  m=3: int z^m dA = 6.968e-38 (=0 for all m>=1; a polynomial realizing this pushforward would refute FC(3))
+  m=6: int z^m dA = 4.357e-38 (=0 for all m>=1; a polynomial realizing this pushforward would refute FC(3))
