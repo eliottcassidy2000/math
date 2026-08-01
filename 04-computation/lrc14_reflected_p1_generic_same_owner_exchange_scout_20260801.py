@@ -39,8 +39,8 @@ OUTPUT = (
 )
 
 EXPECTED_BASE_SHA256 = "2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31"
-EXPECTED_ORBIT_SHA256 = "5173b47eea103083713361a95c787a50718f569df53b4d1d5b4792c43faa9d83"
-EXPECTED_SEMANTIC_SHA256: str | None = "93da4b6968b248cdf6133ebb8a1756b4c7313c3cb274561c6227c0ce59bee01f"
+EXPECTED_ORBIT_SHA256 = "b97db74b9ea1d2879738a46e11dbdcdccf13474071c4cda80c095d509d2d35ca"
+EXPECTED_SEMANTIC_SHA256: str | None = "620f5ab60fe316cb3916bbcd924456d6ccac2eb9d93931dc76b47a51bf9d2c6b"
 
 RULER = 3920
 UPPER_MEDIAN_CELL = 2100
@@ -75,7 +75,7 @@ def require(condition: bool, message: object) -> None:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def load(name: str, path: Path):

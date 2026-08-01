@@ -217,8 +217,10 @@ python3 -O 04-computation/lrc14_reflected_p1_generic_same_owner_exchange_scout_2
 cmp 05-knowledge/results/lrc14_reflected_p1_generic_same_owner_exchange_scout_20260801.out /tmp/lrc14-same-owner-O.out
 ```
 
-Its semantic digest is
-`93da4b6968b248cdf6133ebb8a1756b4c7313c3cb274561c6227c0ce59bee01f`.
+Its LF-normalized source/output/semantic digests are
+`4ca346f2778328bc808de7abb9d660ad764f498bc17ad0ceb3b930c30837902a`,
+`05eda10faa9fae62cdfa9705d53c5c93ab73fd248224d8eb75f00a997b1a5b96`,
+and `620f5ab60fe316cb3916bbcd924456d6ccac2eb9d93931dc76b47a51bf9d2c6b`.
 
 ## Connections to the newest incoming work
 
