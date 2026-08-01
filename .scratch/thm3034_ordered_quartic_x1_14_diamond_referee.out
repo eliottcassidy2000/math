@@ -11,6 +11,7 @@ E0_invariants=c4:-215,c6:5291,Delta:-21952,j:9938375/21952
 diamond_units=[1, 3, 5, 9, 11, 13]
 diamond_mod_pm1=[(1, 13), (3, 11), (5, 9)]=C3
 THM2998_symmetric_origin_image=(9,-33)
+THM2998_symmetric_map=(9,-33)-Velu(P)=PASS
 odd_flank=sheet_exchange; synchronized_groupoid_model=negation
 odd_flank_is_not_diamond_C2_or_Fricke=PASS
 all_exact_checks=PASS

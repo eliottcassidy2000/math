@@ -232,10 +232,18 @@ of THM-2998 give
 O_+ -> (9,-33) in E_0(Q),                          (15)
 ```
 
-not the point at infinity.  Thus the displayed THM-2998 map is the same
-unpointed quotient cover as `(13)`, followed by a target translation and
-possibly target negation.  Translating `(15)` to infinity produces the
-pointed isogeny.  Likewise, identifying the cover with the **named** modular
+not the point at infinity.  The normalization can be pinned exactly.  If
+`phi` denotes the Velu isogeny `(13)` and `Q_0=(9,-33)`, direct substitution
+of `(11)` into THM-2998's symmetric coordinates gives
+
+```text
+q_T2998(P)=Q_0-phi(P).                               (15a)
+```
+
+Thus the displayed THM-2998 map is the normalized quotient followed by
+target negation and translation by `Q_0`.  Translating `(15)` to infinity
+and undoing the target negation produces the pointed isogeny.  Likewise,
+identifying the cover with the **named** modular
 forgetful morphism requires a compatible choice of source and target cusps;
 the quotient subgroup itself requires no such choice.
 
@@ -302,6 +310,6 @@ and both modes must byte-match
 The frozen LF-normalized hashes are
 
 ```text
-script  bce505591d0fad9c61b0ff5edcec7974d3be94e326d8be78824d4c4089999771
-output  b20bb786bff577aaacac08a4ea186a5916eed595ae0d7bb1f53b528d23ced52d
+script  1195d41dc9446d04237fa54b2181b8b302abd4156e7876e44981d784c63843d5
+output  1b9894b116325643a5ca7204ab35ac492ae4fa227dc3086a8ab04748a38e84c3
 ```

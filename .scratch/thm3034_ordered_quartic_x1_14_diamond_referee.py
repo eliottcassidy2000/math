@@ -205,6 +205,39 @@ require(
     "quotient origin image is not on E0",
 )
 
+# Pin the normalization completely.  Recover [xi:1:tau] from a generic E1
+# point, form THM-2998's symmetric quotient, and compare it with Q0-phi(P),
+# where phi is the normalized Velu map above and Q0=(9,-33).
+tau_from_e1 = vv / (uu * (uu - 1))
+eta_from_e1 = (2 * uu - 1) * tau_from_e1**2 + tau_from_e1 - 1
+xi_from_e1 = (
+    eta_from_e1 + tau_from_e1**2 - tau_from_e1 - 1
+) / (2 * (tau_from_e1 - 1))
+e1_sym = xi_from_e1 + 1 + tau_from_e1
+e2_sym = xi_from_e1 + xi_from_e1 * tau_from_e1 + tau_from_e1
+e3_sym = xi_from_e1 * tau_from_e1
+t_from_e1 = sp.cancel(e2_sym / e1_sym**2)
+s_from_e1 = sp.cancel(e3_sym / e1_sym**3)
+q_sym_u = sp.cancel(9 - 28 * t_from_e1)
+q_sym_v = sp.cancel(-33 + 140 * t_from_e1 - 392 * s_from_e1)
+
+# Generalized Weierstrass addition on E0.  Negation is (U,V)->(U,-V-U-1).
+V_phi_neg = -V - U - 1
+lambda_q_minus_phi = sp.cancel((V_phi_neg + 33) / (U - 9))
+nu_q_minus_phi = sp.cancel((-33 * U - 9 * V_phi_neg) / (U - 9))
+q_minus_phi_u = sp.cancel(lambda_q_minus_phi**2 + lambda_q_minus_phi - U - 9)
+q_minus_phi_v = sp.cancel(
+    -(lambda_q_minus_phi + 1) * q_minus_phi_u - nu_q_minus_phi - 1
+)
+require(
+    zero_mod(q_sym_u - q_minus_phi_u, vv, e1_relation),
+    "THM2998 quotient x normalization failed",
+)
+require(
+    zero_mod(q_sym_v - q_minus_phi_v, vv, e1_relation),
+    "THM2998 quotient y normalization failed",
+)
+
 
 # ---------------------------------------------------------------------------
 # Diamond group and the odd sheet-exchange boundary.
@@ -241,6 +274,7 @@ print(f"E0_invariants=c4:{c4_0},c6:{c6_0},Delta:{disc_0},j:{j_0}")
 print(f"diamond_units={units14}")
 print(f"diamond_mod_pm1={diamond_classes}=C3")
 print("THM2998_symmetric_origin_image=(9,-33)")
+print("THM2998_symmetric_map=(9,-33)-Velu(P)=PASS")
 print("odd_flank=sheet_exchange; synchronized_groupoid_model=negation")
 print("odd_flank_is_not_diamond_C2_or_Fricke=PASS")
 print("all_exact_checks=PASS")
