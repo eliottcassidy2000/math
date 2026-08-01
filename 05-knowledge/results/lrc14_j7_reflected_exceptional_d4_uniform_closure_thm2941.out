@@ -2,16 +2,18 @@ LRC14 exceptional-body reflected D=4 uniform closure exact proof
 complete_good_graph_bodies=3001;automatic_pigeonhole_closure=six_labels_into_five_levels
 tail_Delta_max=2;tail_wall=2531336/3185;tail_start=795
 finite_m_max=794;singleton_q_max=798;static_safe_pairs_checked=316223;static_floor=397/2226021;static_minimum_witness=(797, 798, 1, 797, 798)
-CASE;E=(1, 2, 7, 9, 11, 13);L=252252;proper_words=432;colour_counts=((4, 72), (5, 360));nearest_positive_counts=((1, 408), (2, 24));singleton_indices=(0, 1);singleton_labels=(1, 2);perturbation=1/21021;debt_ceiling=487425160807264342822652/20014978569752477975754425125;static_margin=32286945801240546565774417778264/303389907302243535760836108927542875;dangerous_rows=1272;pair_profiles=34;endpoint_cells=44;worst_dangerous_margin=67358106244020066311889523979/2401914229426762691547047386035;worst_m=1;worst_word=(2, 3, 4, 1, 0, 0);worst_levels=(3, 4, 5, 2, 1, 1);worst_pair=(3, 4);worst_reduced=(1, 3, 4);worst_overlap=10713241539/381785167765;worst_debt=41807289679466787302696362/2401914229426762691547047386035;worst_j=146718;worst_direct_union=217432167327592319879772826618/343130604203823241649578198005
-CASE;E=(2, 4, 7, 9, 11, 13);L=504504;proper_words=312;colour_counts=((4, 72), (5, 240));nearest_positive_counts=((1, 288), (2, 24));singleton_indices=(0, 1);singleton_labels=(2, 4);perturbation=1/21021;debt_ceiling=4171698934310078342981596/320265049370713655040295609125;static_margin=571621623153354894327187903209272/4854623416263337595153471605388854875;dangerous_rows=924;pair_profiles=34;endpoint_cells=44;worst_dangerous_margin=823316684250880241382046206698/28824745742245431840091991187315;worst_m=1;worst_word=(4, 1, 2, 0, 2, 0);worst_levels=(5, 2, 3, 1, 3, 1);worst_pair=(5, 2);worst_reduced=(1, 2, 5);worst_overlap=36036/1261259;worst_debt=248132783175715237137477562/28824745742245431840091991187315;worst_j=468468;worst_direct_union=62908110591836276488867223/106110258982162392793980435
+CASE;E=(1, 2, 7, 9, 11, 13);L=252252;proper_words=432;colour_counts=((4, 72), (5, 360));nearest_positive_counts=((1, 408), (2, 24));four_colour_spread4_witness=(0, 1, 2, 2, 4, 4);singleton_indices=(0, 1);singleton_labels=(1, 2);perturbation=1/21021;debt_ceiling=487425160807264342822652/20014978569752477975754425125;static_margin=32286945801240546565774417778264/303389907302243535760836108927542875;dangerous_rows=1272;pair_profiles=34;endpoint_cells=44;worst_dangerous_margin=67358106244020066311889523979/2401914229426762691547047386035;worst_m=1;worst_word=(2, 3, 4, 1, 0, 0);worst_levels=(3, 4, 5, 2, 1, 1);worst_pair=(3, 4);worst_reduced=(1, 3, 4);worst_overlap=10713241539/381785167765;worst_debt=41807289679466787302696362/2401914229426762691547047386035;worst_j=146718;worst_direct_union=217432167327592319879772826618/343130604203823241649578198005
+CASE;E=(2, 4, 7, 9, 11, 13);L=504504;proper_words=312;colour_counts=((4, 72), (5, 240));nearest_positive_counts=((1, 288), (2, 24));four_colour_spread4_witness=(0, 1, 2, 4, 2, 4);singleton_indices=(0, 1);singleton_labels=(2, 4);perturbation=1/21021;debt_ceiling=4171698934310078342981596/320265049370713655040295609125;static_margin=571621623153354894327187903209272/4854623416263337595153471605388854875;dangerous_rows=924;pair_profiles=34;endpoint_cells=44;worst_dangerous_margin=823316684250880241382046206698/28824745742245431840091991187315;worst_m=1;worst_word=(4, 1, 2, 0, 2, 0);worst_levels=(5, 2, 3, 1, 3, 1);worst_pair=(5, 2);worst_reduced=(1, 2, 5);worst_overlap=36036/1261259;worst_debt=248132783175715237137477562/28824745742245431840091991187315;worst_j=468468;worst_direct_union=62908110591836276488867223/106110258982162392793980435
 conclusion=both exceptional proper-word D=4 lanes close for every m>=1
 corollary=the entire reflected D=4 sector closes for every m>=1
+guardrail=spread four does not force all five offsets:72 proper four-colour rows occur on each exceptional body;Delta can equal 2
 scope=reflected THM-2941 residual family only; sufficient certificate, not physical-survivor classification; D>=5 remains outside this theorem
 normal_vs_python_O=BYTE_IDENTICAL
 base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
-nearest_sha256=173b0edc01159be5ae7ec8f2c6a0d7d36bae347c67c8d1592c1f0976af6c1fb5
-universal_sha256=dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3eae07f0f857689
-universal_output_sha256=3231959168d80a48ae87ca5f13d02bfd0ce76e58721a5165e2ce4eccf404fcaf
-source_sha256=5a4be3e9393067e5bb6f23b908c6869883efe9779f73c512b6c2e185b0b97d10
-semantic_sha256=0be2261e1f396980d33d2251ff1f323ce6f967bcda52f46ed6fd36ffd3aa8689
+nearest_sha256=c886867412f851c9a2ad75daf7d7533bee1fbd3617147c459ef226015f230564
+nearest_output_sha256=114ce28bd8a836dfd8d8155b93b37b9037f924d0df7dc532a376eb3f2bf190c0
+universal_sha256=a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8
+universal_output_sha256=7364d5866171405fa90539a9ad76727c0c52f020ac1a104a1ab4f0276aedd115
+source_sha256=1e8bd38e48acad3708f59e55f28a1f0c0dbe90073049a8c9c3ce0799ea3ce925
+semantic_sha256=e5f3c33898bb9f327c20c8ecd81caea23ecef6426ea8386f7e30a3d9c371a216
 all_exact_controls=PASS
