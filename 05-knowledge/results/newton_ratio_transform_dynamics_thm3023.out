@@ -1,0 +1,62 @@
+==========================================================================
+A. T^m IS MULTIPLICATIVE BINOMIAL DIFFERENCING
+==========================================================================
+   m=1: iterated T == prod h^((-1)^(m+i) C(2m,i)) on 16 indices: True
+   m=2: iterated T == prod h^((-1)^(m+i) C(2m,i)) on 14 indices: True
+   m=3: iterated T == prod h^((-1)^(m+i) C(2m,i)) on 12 indices: True
+   m=4: iterated T == prod h^((-1)^(m+i) C(2m,i)) on 10 indices: True
+  VERDICT A: OK
+
+==========================================================================
+B. FIXED POINTS = LYNESS PERIOD-6
+==========================================================================
+   seed (3,5): period 6 True; T(h)==h True
+   seed (2,7): period 6 True; T(h)==h True
+   seed (1/2,5/3): period 6 True; T(h)==h True
+  VERDICT B: OK
+
+==========================================================================
+C/D. EIGENSEQUENCES, Phi_6, AND THE LAPLACIAN SPECTRUM
+==========================================================================
+   mu(x) = 2 - x - 1/x ;  eigen-condition x^2 + (mu-2)x + 1 = 0 (norm +1)
+     mu=0: x = [1]   x=1 (double): geometric h, T(h)=1
+     mu=1: x = [1/2 - sqrt(3)*I/2, 1/2 + sqrt(3)*I/2]   Phi_6(x)=x^2-x+1: primitive 6th roots -> period 6
+     mu=4: x = [-1]   x=-1: pure alternation
+   mu=1 polynomial IS the 6th cyclotomic polynomial: True
+   on |x|=1: mu = 4 sin^2(theta/2) in [0,4]  (discrete Laplacian symbol)
+     theta=pi/6   mu = 0.267949
+     theta=pi/3   mu = 1.000000   <- NEUTRAL
+     theta=pi/2   mu = 2.000000
+     theta=2pi/3  mu = 3.000000
+     theta=pi     mu = 4.000000
+  VERDICT C/D: OK
+
+==========================================================================
+E. METALLIC SIMSON EIGENVALUE = DISCRIMINANT n^2+4
+==========================================================================
+   lambda^2 + lambda^-2 = n**2 + 2   (= n^2+2)
+   Simson mode x = -lambda^-2  ->  mu = n**2 + 4   (= n^2+4 = disc)
+     n=1 GOLDEN : mu = 5   <- 5 = disc(phi)
+     n=2 silver : mu = 8
+     n=3 BRONZE : mu = 13   <- the sqrt13 of THM-3010
+     n=4 copper : mu = 20
+
+   numeric growth rate of |log T^m| at a mid index (should tend to n^2+4):
+     n=1: ratios ['5.0000', '5.0000', '5.0000', '5.0000', '5.0000']  -> predicted 5  OK
+     n=2: ratios ['8.0000', '8.2500', '8.0455', '7.9944', '8.0005']  -> predicted 8  OK
+  VERDICT E: OK
+
+==========================================================================
+F. ORBITS: HYPERGEOMETRIC CONTRACT, METALLIC EXPAND
+==========================================================================
+   Catalan              6.931e-01 3.602e-01 2.511e-01 1.963e-01   contracts  OK
+   central binomial     4.055e-01 2.435e-01 1.824e-01 1.491e-01   contracts  OK
+   factorial            6.931e-01 1.699e-01 8.713e-02 5.617e-02   contracts  OK
+   Fibonacci (golden)   6.931e-01 1.374e+00 2.655e+00 5.087e+00   EXPANDS  OK
+   => smooth hypergeometric logs are low-frequency (theta -> 0, mu -> 0);
+      the metallic Simson mode sits at mu = n^2+4 > 1 and is unstable.
+  VERDICT F: OK
+
+==========================================================================
+SUMMARY  A=True  B=True  C/D=True  E=True  F=True
+==========================================================================
