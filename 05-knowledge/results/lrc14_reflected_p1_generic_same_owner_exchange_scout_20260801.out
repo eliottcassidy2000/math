@@ -1,0 +1,24 @@
+LRC14 P1(F13)-generic same-owner exchange component exact scout
+status=FINITE-EXACT EXPLORATORY SIDECAR;NO LRC CLOSURE
+universe=all 3003 six-subsets of labels 1..14
+selection=ruler=3920;upper_median_safe_cell=2100;unique_boundary_owner=2
+family={2,8} union A;A is a 4-subset of {1,4,5,7,10,14} meeting both {5,10} and {7,14}
+body_rows=(body,robust_edge_count,safe_cell_count,robust_label_edges)=(((1, 2, 4, 5, 7, 8), 6, 1602, ((1, 2), (1, 4), (1, 5), (1, 7), (2, 4), (2, 5))), ((1, 2, 4, 5, 8, 14), 5, 1672, ((1, 2), (1, 4), (1, 5), (2, 4), (2, 5))), ((1, 2, 4, 7, 8, 10), 4, 1626, ((1, 2), (1, 4), (1, 7), (2, 4))), ((1, 2, 4, 8, 10, 14), 3, 1632, ((1, 2), (1, 4), (2, 4))), ((1, 2, 5, 7, 8, 10), 4, 1542, ((1, 2), (1, 5), (1, 7), (2, 5))), ((1, 2, 5, 7, 8, 14), 4, 1582, ((1, 2), (1, 5), (1, 7), (2, 5))), ((1, 2, 5, 8, 10, 14), 3, 1588, ((1, 2), (1, 5), (2, 5))), ((1, 2, 7, 8, 10, 14), 1, 1566, ((1, 2),)), ((2, 4, 5, 7, 8, 10), 2, 1682, ((2, 4), (2, 5))), ((2, 4, 5, 7, 8, 14), 2, 1682, ((2, 4), (2, 5))), ((2, 4, 5, 8, 10, 14), 2, 1688, ((2, 4), (2, 5))), ((2, 4, 7, 8, 10, 14), 1, 1666, ((2, 4),)), ((2, 5, 7, 8, 10, 14), 1, 1622, ((2, 5),)))
+adjacency=one-label exchange, equivalently symmetric-difference size 2
+exchange_edge_count=44;degree_hist=((6, 4), (7, 8), (8, 1));connected_from_generic_fixed_body=YES
+exchange_edges=(((1, 2, 4, 5, 7, 8), (1, 2, 4, 5, 8, 14)), ((1, 2, 4, 5, 7, 8), (1, 2, 4, 7, 8, 10)), ((1, 2, 4, 5, 7, 8), (1, 2, 5, 7, 8, 10)), ((1, 2, 4, 5, 7, 8), (1, 2, 5, 7, 8, 14)), ((1, 2, 4, 5, 7, 8), (2, 4, 5, 7, 8, 10)), ((1, 2, 4, 5, 7, 8), (2, 4, 5, 7, 8, 14)), ((1, 2, 4, 5, 8, 14), (1, 2, 4, 8, 10, 14)), ((1, 2, 4, 5, 8, 14), (1, 2, 5, 7, 8, 14)), ((1, 2, 4, 5, 8, 14), (1, 2, 5, 8, 10, 14)), ((1, 2, 4, 5, 8, 14), (2, 4, 5, 7, 8, 14)), ((1, 2, 4, 5, 8, 14), (2, 4, 5, 8, 10, 14)), ((1, 2, 4, 7, 8, 10), (1, 2, 4, 8, 10, 14)), ((1, 2, 4, 7, 8, 10), (1, 2, 5, 7, 8, 10)), ((1, 2, 4, 7, 8, 10), (1, 2, 7, 8, 10, 14)), ((1, 2, 4, 7, 8, 10), (2, 4, 5, 7, 8, 10)), ((1, 2, 4, 7, 8, 10), (2, 4, 7, 8, 10, 14)), ((1, 2, 4, 8, 10, 14), (1, 2, 5, 8, 10, 14)), ((1, 2, 4, 8, 10, 14), (1, 2, 7, 8, 10, 14)), ((1, 2, 4, 8, 10, 14), (2, 4, 5, 8, 10, 14)), ((1, 2, 4, 8, 10, 14), (2, 4, 7, 8, 10, 14)), ((1, 2, 5, 7, 8, 10), (1, 2, 5, 7, 8, 14)), ((1, 2, 5, 7, 8, 10), (1, 2, 5, 8, 10, 14)), ((1, 2, 5, 7, 8, 10), (1, 2, 7, 8, 10, 14)), ((1, 2, 5, 7, 8, 10), (2, 4, 5, 7, 8, 10)), ((1, 2, 5, 7, 8, 10), (2, 5, 7, 8, 10, 14)), ((1, 2, 5, 7, 8, 14), (1, 2, 5, 8, 10, 14)), ((1, 2, 5, 7, 8, 14), (1, 2, 7, 8, 10, 14)), ((1, 2, 5, 7, 8, 14), (2, 4, 5, 7, 8, 14)), ((1, 2, 5, 7, 8, 14), (2, 5, 7, 8, 10, 14)), ((1, 2, 5, 8, 10, 14), (1, 2, 7, 8, 10, 14)), ((1, 2, 5, 8, 10, 14), (2, 4, 5, 8, 10, 14)), ((1, 2, 5, 8, 10, 14), (2, 5, 7, 8, 10, 14)), ((1, 2, 7, 8, 10, 14), (2, 4, 7, 8, 10, 14)), ((1, 2, 7, 8, 10, 14), (2, 5, 7, 8, 10, 14)), ((2, 4, 5, 7, 8, 10), (2, 4, 5, 7, 8, 14)), ((2, 4, 5, 7, 8, 10), (2, 4, 5, 8, 10, 14)), ((2, 4, 5, 7, 8, 10), (2, 4, 7, 8, 10, 14)), ((2, 4, 5, 7, 8, 10), (2, 5, 7, 8, 10, 14)), ((2, 4, 5, 7, 8, 14), (2, 4, 5, 8, 10, 14)), ((2, 4, 5, 7, 8, 14), (2, 4, 7, 8, 10, 14)), ((2, 4, 5, 7, 8, 14), (2, 5, 7, 8, 10, 14)), ((2, 4, 5, 8, 10, 14), (2, 4, 7, 8, 10, 14)), ((2, 4, 5, 8, 10, 14), (2, 5, 7, 8, 10, 14)), ((2, 4, 7, 8, 10, 14), (2, 5, 7, 8, 10, 14)))
+robust_count_hist=((1, 3), (2, 3), (3, 2), (4, 3), (5, 1), (6, 1));maximum_robust_edges=6;edge8_bank_members=0
+generic_fixed_body=(2, 4, 5, 7, 8, 10);robust_edges=((2, 4), (2, 5));safe_cell_count=1682
+d7_d8_weakest_body=(1, 2, 5, 7, 8, 14);robust_edges=((1, 2), (1, 5), (1, 7), (2, 5));safe_cell_count=1582
+preserved_by_exchange_atom=ruler;upper-median safe cell;boundary owner;four shared body labels on each adjacency
+destroyed_or_changed=two slopes;safe-carrier range set;singleton debt;located arcs and pair weights;certificate margin
+guardrail=same ruler/cell/owner is a stronger sidecar than anharmonic incidence but still does not transport positivity
+needed_map=an owner-preserving one-label replacement inequality for exact common-cell arcs and debt
+component_digest=186c99a33616bb03a1366e4e5d852a9aa17cb92fa2627339aac9cf806e0ce73d
+edge_digest=a24c282afbb53c59965ce6f8baeddb7c55066e5a77f542cd2ecb967a6d6da32e
+base_dependency_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+orbit_dependency_sha256=5173b47eea103083713361a95c787a50718f569df53b4d1d5b4792c43faa9d83
+source_sha256=7c53a767ad719a629c97437a4e5369da3d43b8feb68d49bee5ba78c50c5e47eb
+semantic_sha256=93da4b6968b248cdf6133ebb8a1756b4c7313c3cb274561c6227c0ce59bee01f
+normal_vs_python_O=BYTE_IDENTICAL
+all_exact_controls=PASS
