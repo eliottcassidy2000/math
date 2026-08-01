@@ -1,0 +1,17 @@
+modular/Farey/anharmonic/quartic orbit-diamond referee
+p=2:orbit_(size,stabilizer)=((3, 2),)
+p=3:orbit_(size,stabilizer)=((1, 6), (3, 2))
+p=5:orbit_(size,stabilizer)=((3, 2), (3, 2))
+p=7:orbit_(size,stabilizer)=((2, 3), (3, 2), (3, 2))
+p=11:orbit_(size,stabilizer)=((3, 2), (3, 2), (6, 1))
+p=13:orbit_(size,stabilizer)=((2, 3), (3, 2), (3, 2), (6, 1))
+p=17:orbit_(size,stabilizer)=((3, 2), (3, 2), (6, 1), (6, 1))
+p=19:orbit_(size,stabilizer)=((2, 3), (3, 2), (3, 2), (6, 1), (6, 1))
+p13_boundary=[0,12,inf];harmonic=[1,6,11];generic=[2,4,5,7,8,10];equianharmonic=[3,9]
+permutation_characters_id_transposition_3cycle={'regular': (6, 0, 0), 'natural3': (3, 1, 0), 'parity2': (2, 0, 2), 'trivial1': (1, 1, 1)}
+cooccurrence_second_projection_fibres={'generic': 1, 'harmonic': 2, 'equianharmonic': 3, 'collapsed_p3': 6}
+H_p_intersection_PSL_sizes=[(3, 3), (5, 6), (7, 3), (11, 3), (13, 6), (17, 6), (19, 3)]
+PSL_involution_alpha=-1/r;PGL_reflection_s=1/r;alias_only_at_p2=PASS
+Farey_mod2_frames=6=regular_S3
+Farey_same_frame_hostile_Fu_Fv0_Fv1_Fchild0_Fchild1=(-90, -263, -89, -177, 1)
+all_exact_checks=PASS
