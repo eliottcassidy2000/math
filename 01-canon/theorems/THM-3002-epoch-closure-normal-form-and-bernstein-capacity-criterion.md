@@ -249,9 +249,32 @@ i.e. **every dyadic epoch through `[64,127]` closes at `gamma = 3/5`**, so
 an exactly fair extractor exists for all critical values `n <= 127` with
 `T(n) = n + 1 + floor(3n/5)`, giving `C = 8/5` behaviour over seven
 epochs with residual identically zero. (`R = 128` reaches the final row and
-fails only there at beam widths 40-60; this is a search budget limit, not
-an obstruction — criterion (4) is uniformly ample at `3/5`, worst ratio
-`~1.20` at `t = 1`, stable to `R = 256`.) Script:
+fails only there at beam widths 40-60.)
+
+**SCOPE CORRECTION, 2026-07-31 (death-star, correcting my own claim).** This
+sentence originally continued: *"this is a search budget limit, not an
+obstruction"*. **That reading was asserted without adequate evidence and is
+withdrawn.** Re-tested at beam widths to `900`, `ctrl` to `3`, `span` to `3`,
+and constant slack `D0 = 0..12` — `D0` leaves `C = 1 + 3/5 = 8/5` unchanged
+and strictly enlarges every capacity `binom(d_i + D0, k)` — and **every
+configuration still fails, always at the final row, always in mode F1
+(capacity)**. What the diagnosis does show is that the solver, not the
+arithmetic, is the suspect: only **~6 states** survive to the final row out of
+a beam of 250, all with the *same* residual degree (151 at `D0 = 0`), whereas
+at `R = 64` the surviving residual degrees spread over `[0,74]` and the
+winners are the *short* ones. The final-row overshoot is erratic rather than
+monotone in `D0` (`1.2e13, 5.8e4, 3.87, 3.00, 3.06, 7.82, 4.27, 7.60, 1.4e13,
+26.5` for `D0 = 0,1,2,3,4,5,6,8,10,12`), the signature of an under-diversified
+beam rather than of a wall.
+
+**Honest status: whether `gamma = 3/5` closes at `R = 128` is UNRESOLVED.**
+The evidence supports neither "search budget" nor "obstruction", so `C <= 8/5`
+stands verified for `n <= 127` only. Criterion (4) being uniformly ample at
+`3/5` (worst ratio `~1.20` at `t = 1`, stable to `R = 256`) remains true, but
+it is a *necessary*-condition statement and does not license the sufficiency
+reading withdrawn here. Cf. THM-3026: the failure of the natural
+square-and-multiply doubling lift likewise carries no archimedean information.
+Script:
 `04-computation/amm12592_gamma35_beam_deathstar.py`.
 
 Combined with sec. 4c: `gamma = 3/5 = 0.6` sits just above the extrapolated
