@@ -1,0 +1,6 @@
+Re f_D=0: f=i(x^2+y^2)+(1+i)x, psi=a^2+(1-a)^2 real, max|psi|= 1.0
+  m= 4: |L(f^m)|=128211.0  [|L|/(2m)!]^(1/m)=1.335368 (->max|psi|, and L!=0)
+  m= 8: |L(f^m)|=6.00862e+13  [|L|/(2m)!]^(1/m)=1.140957 (->max|psi|, and L!=0)
+  m=12: |L(f^m)|=1.70224e+24  [|L|/(2m)!]^(1/m)=1.087743 (->max|psi|, and L!=0)
+  m=16: |L(f^m)|=7.08095e+35  [|L|/(2m)!]^(1/m)=1.063825 (->max|psi|, and L!=0)
+=> real-modulus Laplace, no continuous Stokes; unique max => descent closes unconditionally.
