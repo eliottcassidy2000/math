@@ -1,0 +1,28 @@
+R_w(a,b,c): resultant of the restricted quadric and cubic on the line L(f)=0
+R_w != 0  =>  three moments force f = 0 (three-slot threshold 3)
+
+  factorial j!:
+     (a,b,c)=(0,1,2):  R = 7424*u**6   -> threshold 3
+     (a,b,c)=(0,1,3):  R = 33900062976*u**6   -> threshold 3
+     (a,b,c)=(1,2,3):  R = 15355506327552*u**6   -> threshold 3
+     (a,b,c)=(0,2,4):  R = 25889213959319045799936*u**6   -> threshold 3
+  [0,1] Lebesgue 1/(j+1):
+     (a,b,c)=(0,1,2):  R = u**6/154314720000   -> threshold 3
+     (a,b,c)=(0,1,3):  R = 81*u**6/899153920000   -> threshold 3
+     (a,b,c)=(1,2,3):  R = u**6/10975554216345600000   -> threshold 3
+     (a,b,c)=(0,2,4):  R = 5570035712*u**6/5307363323807466796875   -> threshold 3
+  central binom:
+     (a,b,c)=(0,1,2):  R = 18432*u**6   -> threshold 3
+     (a,b,c)=(0,1,3):  R = 1006608384*u**6   -> threshold 3
+     (a,b,c)=(1,2,3):  R = 20639121408*u**6   -> threshold 3
+     (a,b,c)=(0,2,4):  R = 1198078521959614464*u**6   -> threshold 3
+  geometric 3^j:
+     (a,b,c)=(0,1,2):  R = 0   -> VANISHES
+     (a,b,c)=(0,1,3):  R = 0   -> VANISHES
+     (a,b,c)=(1,2,3):  R = 0   -> VANISHES
+     (a,b,c)=(0,2,4):  R = 0   -> VANISHES
+  Fibonacci:
+     (a,b,c)=(0,1,2):  R = 0   -> VANISHES
+     (a,b,c)=(0,1,3):  R = 0   -> VANISHES
+     (a,b,c)=(1,2,3):  R = 0   -> VANISHES
+     (a,b,c)=(0,2,4):  R = 0   -> VANISHES
