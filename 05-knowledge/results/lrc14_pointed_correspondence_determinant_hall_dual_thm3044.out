@@ -1,0 +1,9 @@
+THM-3044 POINTED CORRESPONDENCE DETERMINANT AND HALL DUAL
+{"pointed_gauge":{"covariance_cells":432,"log_trace_cells":36}}
+{"transport_exhaustion":{"complete_formula_cases":139,"dual_cases":2667,"feasible_cases":2667,"hall_gate_cases":2667,"strict_hall_lower_bound_cases":110,"universe":"2 heads x (2 roots + cemetery), all supports, total mass 1..4"}}
+{"restricted_graph_hostile":{"dual_witness_value":2,"exact_minimum":2,"max_single_hall_deficiency":1,"unique_table":[[1,0],[0,1]]}}
+{"robust_multilevel_hostile":{"dual_value":2,"every_column_offdiagonal":true,"every_row_offdiagonal":true,"exact_minimum":2,"max_single_hall_deficiency":1,"primal_permutation":[1,4,2,3,0]}}
+{"cycle_boundary":{"balanced_nonzero_tables":1214,"balanced_zero_first_ghost":44,"first_witness_length_counts":{"2":40,"3":4},"unbalanced_path_all_ghosts_zero_through":4}}
+{"unpointed_hostiles":{"aligned_det":"(1+t)^3","cycle_det":"1+t^3","same_double_gauge_orbit":true,"same_gram":true,"two_root_arrivals":[2,0]}}
+{"conditional_thm2549":{"b_w_equals_head":true,"first_ghost":6,"packet_mass":6,"semantic_identification_required":true}}
+all_exact_checks=PASS

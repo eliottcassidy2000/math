@@ -1,0 +1,10 @@
+THM3042_SUBDIRECT_GRAPH_ORDER_COMMON_QUOTIENT_EXACT
+finite_ring_modulus 12
+congruence_subdirect_products 6
+one_generator_enlargements 864
+two_generator_controls 4
+sharp_preserve quotient_size 4 order_size 36 singleton 0
+sharp_shrink quotient_size 2 order_size 72 singleton 0
+sharp_split quotient_size 1 order_size 144 singleton 1
+semantic_sha256 78c6e763e10458790373539360f83bda6eead9f5c8f64ef080383d1a56cab768
+all_runtime_checks_explicit 1

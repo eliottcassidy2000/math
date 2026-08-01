@@ -1,0 +1,286 @@
+
+==============================================================================
+PART 1  certified evaluation of S(k)
+==============================================================================
+S(1..8) at dps = 150 computed in 12.71 s
+   |S(1) - known closed form| = 1.5275e-151
+   |S(2) - known closed form| = 0.0
+   |S(3) - known closed form| = 0.0
+   S(4) = 1.06935255444126805858296193953427806132593201
+   S(5) = 1.05708716209477162686360610231100103612637198
+PART 1 CONTROL (three known closed forms reproduced to > 140 digits): PASS
+
+==============================================================================
+PART 2  the exact Thomae orbit of 3F2(1/4,3/4,x ; 1,1+x ; 1),  x = 1/k
+==============================================================================
+ORBIT-GENERATOR CONTROL: generic seed -> 10, generic BALANCED seed -> 10,
+                         generic x-dependent seed -> 10.  The classical
+                         count is 120/(3! 2!) = 10, so the generator is sound: PASS
+
+orbit size = 7 distinct parameter multisets
+(the generic count -- balanced or not -- is 10; THIS family degenerates to 7,
+ an extra degeneracy caused by the lower parameter 1 of the signature-4 2F1)
+
+  [0]  3F2(-x+1, 1/4, 1/4 ; 1, 5/4 ; 1)               s = x+3/4
+  [1]  3F2(-x+1, 3/4, 3/4 ; 1, 7/4 ; 1)               s = x+1/4
+  [2]  3F2(-x+1, 1, 1 ; 5/4, 7/4 ; 1)                 s = x
+  [3]  3F2(1/4, 3/4, x ; 1, x+1 ; 1)                  s = 1
+  [4]  3F2(1/4, 1, x+1/4 ; 5/4, x+1 ; 1)              s = 3/4
+  [5]  3F2(3/4, 1, x+3/4 ; 7/4, x+1 ; 1)              s = 1/4
+  [6]  3F2(x, x+1/4, x+3/4 ; x+1, x+1 ; 1)            s = -x+1
+
+form [3] is the defining one; form [2] is THM-3012 eq (6), the recorded
+Thomae normal form 3F2(1-1/k,1,1;5/4,7/4;1) with prefactor 8sqrt2/(3 pi k).
+
+numeric confirmation (each form times its Gamma prefactor must equal S(k)):
+   k = 4 : max over all 7 forms of |form - S(k)| = 2.585e-26
+   k = 5 : max over all 7 forms of |form - S(k)| = 5.17e-26
+   k = 7 : max over all 7 forms of |form - S(k)| = 2.585e-26
+PART 2 CONTROL (generator control + orbit + prefactors): PASS
+
+==============================================================================
+PART 3  does ANY orbit member satisfy a classical 3F2(1) theorem?
+==============================================================================
+rules applied to every one of the 7 orbit members, EXACTLY, for all x = 1/k:
+  G  Gauss cancellation   (an upper equals a lower)     -> 2F1(1) = Gamma quotient
+  R  contiguous reduction (upper - lower = m in Z_{>=1}) -> finite sum of 2F1(1)
+  T  termination          (an upper in Z_{<=0})          -> + balanced = Saalschutz
+  D  Dixon (well poised)      W  Watson       P  Whipple
+  m up to 12; every solution is an EXACT rational x, admissible iff x = 1/k, k in Z_{>=1}
+
+  k = 1 :
+        D-Dixon              form [0]   well poised  (x = 1)
+        D-Dixon              form [1]   well poised  (x = 1)
+        D-Dixon              form [4]   well poised  (x = 1)
+        D-Dixon              form [5]   well poised  (x = 1)
+        G-cancellation       form [3]   x = 1  (x = 1)
+        G-cancellation       form [4]   x+1/4 = 5/4  (x = 1)
+        G-cancellation       form [5]   x+3/4 = 7/4  (x = 1)
+        P-Whipple            form [2]   Whipple pattern  (x = 1)
+        P-Whipple            form [3]   Whipple pattern  (x = 1)
+        T-terminating        form [0]   -x+1 = 0  (x = 1)
+        T-terminating        form [1]   -x+1 = 0  (x = 1)
+        T-terminating        form [2]   -x+1 = 0  (x = 1)
+        W-Watson             form [3]   Watson pattern  (x = 1)
+        W-Watson             form [4]   Watson pattern  (x = 1)
+        W-Watson             form [5]   Watson pattern  (x = 1)
+        W-Watson             form [6]   Watson pattern  (x = 1)
+
+VERDICT (PART 3, PROVED for all real k >= 1, not merely scanned):
+  over the COMPLETE Thomae orbit, a classical summation theorem or a
+  contiguous reduction to Gamma quotients applies for exactly k in [1].
+
+  POSITIVE CONTROL  k = 1 must be found (S(1) = 2F1(1/4,3/4;2;1) = 8sqrt2/(3pi)): PASS
+  NEGATIVE CONTROL  k = 2, 3 must NOT be found -- yet both DO have closed
+                    forms (log(1+sqrt2), sqrt3 log(5+2sqrt6)).  This is the
+                    calibration that makes the k=4,5 negative meaningful: PASS
+  k = 4 found? False     k = 5 found? False
+
+  => the contiguous reduction the task asks for exists iff  1/k - 1 in Z_{>=0},
+     i.e. iff k = 1.  For k >= 2 the ratio (1/k)_n/(1+1/k)_n = (1/k)/(n+1/k)
+     is a rational function with a POLE, not a polynomial in n, so the 3F2
+     collapses to a Mellin moment, not to a finite sum of 2F1(1)'s.
+
+ORBIT COLLAPSE (a genuine, isolated k = 4 degeneracy):
+   k =  1 : 7 of 7 orbit forms distinct
+   k =  2 : 7 of 7 orbit forms distinct
+   k =  3 : 7 of 7 orbit forms distinct
+   k =  4 : 4 of 7 orbit forms distinct   <== collapse
+   k =  5 : 7 of 7 orbit forms distinct
+   k =  6 : 7 of 7 orbit forms distinct
+   k =  7 : 7 of 7 orbit forms distinct
+   k =  8 : 7 of 7 orbit forms distinct
+   k =  9 : 7 of 7 orbit forms distinct
+   k = 10 : 7 of 7 orbit forms distinct
+   k = 11 : 7 of 7 orbit forms distinct
+   k = 12 : 7 of 7 orbit forms distinct
+   k = 1 collapses because x = 1 is the Gauss point; among k >= 2 the ONLY
+   collapse is k = 4, caused by the repeated upper parameter 1/k = 1/4.
+
+   Equivalently: the exponents of the 3F2 ODE at z = infinity are the three
+   upper parameters (1/4, 3/4, 1/k).  They are resonant (repeated) iff
+   1/k in {1/4, 3/4}, i.e. iff k = 4 among integers.  k = 4 is therefore the
+   unique integer k at which the equation is RESONANT at infinity (the
+   configuration in which a logarithmic local solution appears).
+
+==============================================================================
+PART 4  what contiguity DOES give -- two two-term reductions
+==============================================================================
+PROVED.  Euler's integral for 2F1(1/4,3/4;1;z) with the (1-zt)^{-1/4} kernel,
+combined with M1  S(k) = int_0^1 2F1(1/4,3/4;1;u^k) du, makes the inner
+u-integral
+      int_0^1 (1 - t u^k)^{-1/4} du = 2F1(1/4, x ; 1+x ; t),      x = 1/k,
+which is itself CONTIGUOUS (lower = upper + 1) hence an INCOMPLETE BETA
+      2F1(1/4, x; 1+x; t) = x t^{-x} int_0^t v^{x-1}(1-v)^{-1/4} dv,
+for EVERY k.  Two applications of Fubini (all integrands positive) and one
+interchange of the order of integration then give, for k >= 2 so that
+beta := 3/4 - x > 0:
+
+  (A)   (pi sqrt2 / x) S(k) =  B(x, 3/4) B(3/4-x, 1/4)
+                             - [Gamma(3/4)^2 / (beta Gamma(3/2))]
+                               * 3F2(3/4, 3/4, beta ; 3/2, 1+beta ; 1)
+
+and with the mirror kernel (1-zt)^{-3/4}, for k >= 5 so that gam := 1/4-x > 0:
+
+  (B)   (pi sqrt2 / x) S(k) =  B(x, 1/4) B(1/4-x, 3/4)
+                             - [Gamma(1/4)^2 / (gam Gamma(1/2))]
+                               * 3F2(1/4, 1/4, gam ; 1/2, 1+gam ; 1)
+
+Both are of NON-TERMINATING-SAALSCHUTZ shape: a balanced 3F2(1) equals a
+Gamma quotient MINUS a second balanced 3F2(1).  A two-term relation is not a
+one-term one, so the residual 3F2 is NOT in the PART 2 orbit -- checked below.
+
+VERIFIED-EXACT, identity (A), at dps = 60:
+   k = 2 :  |A(k) - S(k)| = 1.556e-61
+   k = 3 :  |A(k) - S(k)| = 1.556e-61
+   k = 4 :  |A(k) - S(k)| = 0.0
+   k = 5 :  |A(k) - S(k)| = 1.556e-61
+   k = 6 :  |A(k) - S(k)| = 1.556e-61
+   k = 7 :  |A(k) - S(k)| = 0.0
+   k = 8 :  |A(k) - S(k)| = 1.556e-61
+VERIFIED-EXACT, identity (B), at dps = 60:
+   k = 5 :  |B(k) - S(k)| = 1.556e-61
+   k = 6 :  |B(k) - S(k)| = 3.112e-61
+   k = 7 :  |B(k) - S(k)| = 0.0
+   k = 8 :  |B(k) - S(k)| = 3.112e-61
+   k = 9 :  |B(k) - S(k)| = 1.556e-61
+PART 4 identity control: PASS
+
+Is the residual 3F2 of (A) a Thomae transform of S(k)?  Compare parameter
+multisets of the two orbits at k = 4 and k = 5:
+   residual-family orbit size = 5
+   k = 4 : |S-orbit| = 4, |residual-orbit| = 3, intersection = 0
+   k = 5 : |S-orbit| = 7, |residual-orbit| = 5, intersection = 0
+   -> disjoint: (A) is a genuinely two-term relation, outside Thomae's group.
+
+k = 4 is exactly where (A) degenerates: beta = 3/4 - 1/4 = 1/2, so 1+beta = 3/2
+EQUALS the other lower parameter.  The residual acquires a repeated upper AND
+a repeated lower, and the leading Beta product collapses to the lemniscate
+constant.  (beta = 1/2 <=> x = 1/4 <=> k = 4; no other k does this.)
+
+   NEW NORMAL FORM (PROVED, verified to high precision in PART II):
+
+        S(4) = varpi/2  -  W / (2 varpi),
+        W    = 3F2(3/4, 3/4, 1/2 ; 3/2, 3/2 ; 1),
+        varpi = Gamma(1/4)^2 / (2 sqrt(2 pi)) = 2.6220575542921198...  (lemniscate)
+
+   varpi                 = 2.62205755429211981046483958989111941368275495
+   W                     = 1.2673779308717683717504054327342197299518342
+   varpi/2 - W/(2 varpi) = 1.06935255444126805858296193953427806132593201
+   S(4)                  = 1.06935255444126805858296193953427806132593201
+   residual              = 0.0   (dps = 60 here)
+
+Consistency with THM-3012 addendum 5 (S(4) = 2 varpi Lambda / pi^2):
+   Lambda = 2G + D               = 2.012558164551614372223380926100490501786
+   the two forms are equivalent iff  W = varpi^2 (1 - 4 Lambda/pi^2):
+   |W - varpi^2 (1 - 4 Lambda/pi^2)| = 4.667e-61
+   so the contiguous route REDERIVES addendum 5 independently, and in a form
+   with NO Eisenstein tail: a single balanced 3F2 with a repeated parameter.
+
+k = 5, by contrast.  beta = 3/4 - 1/5 = 11/20 and gam = 1/4 - 1/5 = 1/20:
+        W5a = 3F2(3/4, 3/4, 11/20 ; 3/2, 31/20 ; 1)
+        W5b = 3F2(1/4, 1/4,  1/20 ; 1/2, 21/20 ; 1)
+Denominator 20; no repeated parameter, no coincident lower, no orbit collapse,
+no singular value.  The k = 4 mechanism has no analogue at k = 5.
+   W5a = 1.287833106721230195363362237302244865853
+   W5b = 1.010143477433577584438607124066683538056
+
+Structural reason, stated sharply: the k-dependence of (A) sits in the SINGLE
+parameter beta = 3/4 - 1/k.  The residual 3F2 degenerates only at
+   beta = 1/2  (k = 4, repeated lower 3/2)        <- the lemniscatic point
+   beta = 3/4  (k = infinity, repeated upper)
+   beta <= 0   (k <= 4/3, non-integral)
+so among integers k >= 2 the family has exactly ONE degeneration, at k = 4.
+
+==============================================================================
+PART 5  the residual family too: same exhaustive scan, exactly in x
+==============================================================================
+The residual of (A) is the one-parameter family
+        3F2(3/4, 3/4, 3/4-x ; 3/2, 7/4-x ; 1),   x = 1/k,
+again contiguous (7/4-x = (3/4-x) + 1).  Run the identical rule battery on
+its complete Thomae orbit:
+   k = 1 :
+        D-Dixon              form [1]   well poised  (x = 1)
+        D-Dixon              form [2]   well poised  (x = 1)
+        D-Dixon              form [4]   well poised  (x = 1)
+        G-cancellation       form [0]   3/4 = -x+7/4  (x = 1)
+        G-cancellation       form [1]   3/4 = -x+7/4  (x = 1)
+        G-cancellation       form [2]   x+3/4 = 7/4  (x = 1)
+        G-cancellation       form [3]   x+3/4 = 7/4  (x = 1)
+        P-Whipple            form [1]   Whipple pattern  (x = 1)
+        T-terminating        form [1]   -x+1 = 0  (x = 1)
+        T-terminating        form [4]   -x+1 = 0  (x = 1)
+        W-Watson             form [0]   Watson pattern  (x = 1)
+        W-Watson             form [3]   Watson pattern  (x = 1)
+   residual-family hits at k in [1]
+
+==============================================================================
+PART 6  the exact content of contiguity: the Mellin ladder  [PROVED]
+==============================================================================
+By THM-3012 addendum 2, S(k) = M(1/k)/k where M is the single Mellin
+transform
+        M(s) = int_0^1 z^{s-1} 2F1(1/4,3/4;1;z) dz = sum_{n>=0} c_n/(n+s),
+        c_n  = (1/4)_n (3/4)_n/(n!)^2 = Gamma(n+1/4)Gamma(n+3/4)/(pi sqrt2 (n!)^2).
+
+THEOREM (PROVED here).  For every s with Re s > 0,
+
+        (s + 1/4)(s + 3/4) M(s+1)  =  s^2 M(s)  +  1/(pi sqrt2).            (L)
+
+PROOF.  c_{n+1}(n+1)^2 = c_n (n+1/4)(n+3/4).  Divide the numerator by n+s+1:
+        (n+1/4)(n+3/4) = (n+s+1)(n-s) + (s^2 + s + 3/16).
+Summing n = 0..N-1 on the left and m = 1..N on the right, the two copies of
+sum c_n (n-s) -- individually divergent -- cancel, leaving the boundary terms
+        -s - c_N(N-s)  and  -s^2/s.
+Since c_N ~ 1/(pi sqrt2 N), c_N(N-s) -> 1/(pi sqrt2), and (L) follows.  QED
+
+(L) IS the contiguous relation of the family, in its sharpest form: a
+FIRST-ORDER inhomogeneous recurrence in the Mellin exponent, with rational
+coefficients and inhomogeneity 1/(pi sqrt2).  Its homogeneous solution is
+        h(s) = Gamma(s)^2 / (Gamma(s+1/4) Gamma(s+3/4)),
+so the general solution has exactly ONE free constant per ladder s + Z.
+
+CONSEQUENCE 1 (the k = 1 ladder is Gauss-anchored).  On the integer ladder,
+M(1) = S(1) = 8 sqrt2/(3 pi) is a Gauss value, so with r_m := M(m) pi/sqrt2,
+        r_1 = 8/3,   r_{m+1} = 16 (m^2 r_m + 1/2) / ((4m+1)(4m+3)),
+and EVERY integer moment is rational times sqrt2/pi:
+   m = 1 :  M(m) pi/sqrt2 = 8/3                       |numeric - exact| = 5.346e-51
+   m = 2 :  M(m) pi/sqrt2 = 152/105                   |numeric - exact| = 2.673e-51
+   m = 3 :  M(m) pi/sqrt2 = 10568/10395               |numeric - exact| = 2.673e-51
+   m = 4 :  M(m) pi/sqrt2 = 178328/225225             |numeric - exact| = 1.336e-51
+   m = 5 :  M(m) pi/sqrt2 = 47453768/72747675         |numeric - exact| = 0.0
+   m = 6 :  M(m) pi/sqrt2 = 782539544/1405485081      |numeric - exact| = 1.336e-51
+   m = 7 :  M(m) pi/sqrt2 = 51331850888/105411381075  |numeric - exact| = 0.0
+   m = 8 :  M(m) pi/sqrt2 = 838519635608/1933976154825  |numeric - exact| = 6.682e-52
+   ladder control: PASS
+
+CONSEQUENCE 2 (why k >= 2 is different).  For k >= 2 the ladder through
+s = 1/k contains no integer, hence no Gauss point: (L) relates S(k) only to
+the values M(1/k + j), j >= 1, which are NOT members of the S-family.  The
+recurrence therefore propagates S(k) but can never COMPUTE it.  This is the
+exact and complete answer to 'does the contiguous configuration reduce S(4)
+to Gauss 2F1(1) values': it does so precisely on the ladder 1/k in Z, i.e.
+k = 1, and on no other.
+
+numerical confirmation of (L) at several s, including the S-family points:
+   s = 1                residual of (L) = 5.834e-62
+   s = 2                residual of (L) = 5.834e-62
+   s = 1/2 (k=2)        residual of (L) = 1.945e-62
+   s = 1/3 (k=3)        residual of (L) = 5.834e-62
+   s = 1/4 (k=4)        residual of (L) = 1.945e-62
+   s = 1/5 (k=5)        residual of (L) = 3.889e-62
+   s = 1/7 (k=7)        residual of (L) = 0.0
+   s = 0.3141592653     residual of (L) = 1.945e-62
+   (L) control: PASS
+
+==============================================================================
+SUMMARY -- PART I
+==============================================================================
+PART 1 control (S(1),S(2),S(3) reproduced to >140 digits): PASS
+PART 2 control (Thomae orbit + prefactors numerically verified): PASS
+PART 3 VERDICT: a classical 3F2(1) summation / contiguous reduction to Gamma
+       quotients exists for k in [1] only.  Positive control k=1 PASSED;
+       negative controls k=2,3 PASSED (they have closed forms yet are NOT
+       detected -- so 'not detected' is NOT 'no closed form').
+PART 4 new identities (A),(B) verified; new normal form S(4)=varpi/2-W/(2varpi).
+PART 5 residual family: classical summability at k in [1]
+PART 6 Mellin ladder (L) PROVED and verified; integer-moment ladder control: PASS ; (L) control: PASS
