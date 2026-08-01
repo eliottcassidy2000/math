@@ -58,4 +58,17 @@ impossibility): the endgame is "`A(p)+B(1-p)=1/2` with `A,B in Z[p]` -> evaluate
 - **Next:** the golden lower bound = extend THM-2967's `zeta_6` integrality argument from `C=1` to the growing-
   degree `gamma < 0.598` regime (an Erdos-Turan/cyclotomic integrality bound on the box lattice), NOT a dual LP.
 
-Files: `/tmp/amm_dual.py`. Corrects kps-S166 sec 3; builds on kps-S164, THM-2966/2967.
+## 5. THM-3027 already closed it -- via exactly the integer structure (record accurate)
+Reading THM-3027 (klein-S428) after this run: **AMM 12592 is SOLVED**, `gamma* = log(phi)/log(sqrt5) = 0.59799`
+PROVED (tangency system, 30+ dps), via the **Bernstein-capacity criterion** `S(t)=sum_i C(d_i,t-i)2^{t-i} >=
+C(R-1,t)` -- a BINOMIAL/INTEGER criterion, the exact integrality my continuous LP lacks. Its finite-R ladder
+(`0.5313, 0.5606, ..., 0.59393` for `R=32..1024`) climbs to `gamma*` from below, and **all** beat my continuous
+LP `~0.38`. So my LP result is **explanatory, not advancing**: it confirms *why* the artanh certificate
+(`2457/6592 = 0.3727 < gamma*`, a THM-3027 "eq(27) death") and every continuous dual are weak, and *why* the
+tight golden requires the integer lattice -- precisely the mechanism THM-3027 uses. Verified THM-3027's closed
+form: `(1-tau)^2=tau`, `tau*=phi^-2=0.38197`, `rho*=1-1/sqrt5`, and the `b`-universality
+`gamma*(b)=log(phi)/log((b+phi)/phi)` (`b=2` gives `sqrt5`). The golden is not a binary/Fibonacci artifact.
+> **Net: the AMM lower-bound question is CLOSED (THM-3027, integer capacity). My contribution is the quantified
+> integrality gap: continuous duality saturates ~0.38, the integer capacity gives the golden 0.598.**
+
+Files: `/tmp/amm_dual.py`. Corrects kps-S166 sec 3; confirms/explains THM-3027; builds on kps-S164, THM-2966/2967.
