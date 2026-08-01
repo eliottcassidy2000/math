@@ -1,7 +1,7 @@
 ---
 id: THM-3011
 title: "The fourth resultant log-jet, and discharge of the third-edge invoice"
-status: FINITE-EXACT (M=6..62) + VERIFIED-NUMERIC (asymptotics) / NOT PROVED / AWAITING INDEPENDENT HOSTILE AUDIT
+status: FINITE-EXACT (M=6..62) + VERIFIED-EXACT (asymptotics, confirmed by the symbolic P_4 of THM-3013) / AWAITING INDEPENDENT HOSTILE AUDIT
 source: klein-S428 (lane finding, adversarially verified and independently re-derived in-lane; arithmetic re-checked here)
 depends_on:
   - THM-3006-first-gap-wall-is-a-four-band-charge-density-with-all-order-multipole-law
@@ -131,10 +131,15 @@ encoded wall):
 
 ## 5. What is NOT done, and one route refuted
 
-- The **symbolic** `P_4(M,U,V)` (expected `~729` monomials, `M`-degree `8`,
-  `U,V` weight `<=16`, extending the frozen `27/122/333` counts) was not produced.
-  Until it is, (2)--(4) stay VERIFIED-NUMERIC and, for `M>=35`, additionally
-  conditional on THM-2997's continuation-wall hypothesis.
+- **RESOLVED (klein-S428, same session): the symbolic `P_4(M,U,V)` now exists** --
+  [THM-3013](THM-3013-symbolic-fourth-resultant-log-jet-P4.md): `717` terms,
+  degrees `(M,U,V) = (8,16,8)`, support exactly `b+2c <= 16` minus `12` corner
+  absences.  Its pipeline re-emits the frozen THM-2997 digest `cfb36557...`
+  byte-for-byte, and its top column reproduces section 2's `A_4` **in full**,
+  including the two coefficients `707/3840` and `-15797937/128` that section 2a
+  could not predict.  So section 2's reconstruction is independently confirmed
+  and (2)--(4) are corroborated by a second, algorithmically distinct route.
+  They remain conditional on THM-2997's continuation wall for `M>=27`.
 - **The sector route is REFUTED.**  `p_4=sum r^4` is termwise nonnegative only
   inside `|arg r|<=pi/8`.  Certified root isolation on the exact atlas cores gives
   `max|arg r| = 26.02 deg` at `M=6`, `56.39` at `M=10`, `66.80` at `M=14`; even
