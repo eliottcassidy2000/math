@@ -167,3 +167,45 @@ reduction, and it also explains why every census so far returned zero: they
 were all measuring positivity, not FC.
 
 Referee: `04-computation/fc_real_case_is_trivial_and_the_complex_reduction.py`.
+
+
+## 7. The m = 3 search: solvable, and no finite window can ever obstruct
+
+Searching the variety of section 6 directly (least-squares on the real and
+imaginary parts of `L(f^m)`, normalised by `||f||_G = 1` to kill the scale
+symmetry and exclude `f = 0`), for `n = 2`, `deg <= 3`:
+
+```text
+M = 2 :  max|residual| = 7.2e-16    ||f||^2 = 1.0000    SOLVED
+M = 3 :  max|residual| = 1.1e-14    ||f||^2 = 1.0000    SOLVED
+M = 4 :  max|residual| = 1.9e-12    ||f||^2 = 1.0000    SOLVED
+```
+
+**So the `m = 3` conditions ARE satisfiable on the orthogonal / equinormal /
+mean-zero variety** -- there is a nonzero complex `f` in two variables of
+degree `<= 3` with `L(f) = L(f^2) = L(f^3) = 0`, found to machine precision.
+
+### The dimension count that explains it
+
+Each `L(f^m) = 0` is ONE COMPLEX equation, i.e. two real ones, so `m = 1..M`
+imposes `2M` real conditions on the `2N` real parameters of `f`
+(`N` = number of monomials). The symmetries `f -> lambda e^{i theta} f`
+remove two more, so solutions are expected whenever
+
+```text
+2M < 2N - 2,     i.e.     M < N - 1.
+```
+
+For `n = 2, deg <= 3` that is `N = 10`, so every window `M <= 8` should be
+solvable; for `n = 3, deg <= 3`, `N = 20` and every `M <= 18`.
+
+**Consequence: no finite window can ever obstruct FC.** Every finite
+truncation is under-determined, so a census over any window will find
+solutions once it is allowed to search `C` rather than `R`. This closes the
+loop on section 6: the earlier censuses returned zero not because finite
+windows are restrictive but because they were confined to the reals, where
+positivity forbids everything at `m = 2`. Over `C` the opposite is true --
+finite windows are permissive, and FC is genuinely a statement about the
+infinite family.
+
+Referee: `04-computation/fc_orthogonal_equinormal_pair_search.py`.

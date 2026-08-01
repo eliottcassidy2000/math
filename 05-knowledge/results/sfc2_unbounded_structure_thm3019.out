@@ -1,0 +1,16 @@
+(S4) exact recurrence check for (p,s)=(0,1): I_m = 1 + m*lam*I_{m-1}
+   verified m=1..8: True
+
+SFC(2) census: Res(I_{k+1},I_{k+2}) != 0 (modular one-way certificates)
+   p=0: done (cumulative tested 72, failures 0)
+   p=1: done (cumulative tested 144, failures 0)
+   p=2: done (cumulative tested 216, failures 0)
+   p=3: done (cumulative tested 288, failures 0)
+   p=4: done (cumulative tested 360, failures 0)
+   p=5: done (cumulative tested 432, failures 0)
+   p=6: done (cumulative tested 504, failures 0)
+   p=7: done (cumulative tested 576, failures 0)
+   p=8: done (cumulative tested 648, failures 0)
+
+   TOTAL tested 648 cells (p<=8, s<=8, k<=8, i.e. exponents up to q = p+s <= 16 and windows to 8)
+   cells with vanishing resultant: NONE
