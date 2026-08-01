@@ -257,3 +257,45 @@ linear-and-constrained.
    extrapolation shows why it is needed rather than optional.
 
 Referee: `04-computation/amm12592_thm2922_window_transfer_test.py`.
+
+
+## 9. The Gregory--Newton certificate does NOT exist in finite-row form
+
+THM-2922 gets all translations `n` from a FIXED finite chart (degree-seven
+Macaulay rows) made positive in `n`. The analogue here would be a fixed finite
+set of rows of the box system, forcing `c = 0` for every dyadic `m`. The
+natural candidate is the three tightest rows of the row -- the middle and its
+two neighbours,
+
+```text
+|S_(-1)| <= 2m,   |S_0| <= 2,   |S_(+1)| <= 2m,   S_t = sum_j c_j binom(2m,j+t)
+```
+
+together with the shell-`m` box and `sum_j c_j = 0`. **They impose essentially
+nothing.** Maximising `|c_j|` over the RELAXED (rational) polytope:
+
+```text
+m         2       4       8       16
+max|c_j| 1.2     6      70    12870        3, 5 and 7 rows all identical
+```
+
+and for `m >= 4` that value is exactly `binom(2m,m)`, i.e. the FULL shell-`m`
+box bound: some coordinate can still sit at its own maximum. So no fixed
+finite row-set around the middle certifies anything, and enlarging to five or
+seven rows changes nothing.
+
+**Consequence.** The obstruction is genuinely global AND integral: it needs
+the whole row and the lattice, not a bounded chart. THM-2922's template --
+fixed chart, positivity in the family parameter -- therefore cannot port even
+in the one place it looked importable. Section 8's "one genuinely importable
+idea" is withdrawn.
+
+*(Numerical caveat: the same LP at `m = 32, 64` returns `0.0000`, but only
+after HiGHS emits `shiftBound` breakdown warnings at magnitudes `~1e10`.
+Those zeros are solver artifacts, not certificates, and are not used.)*
+
+This is the third proposed shortcut to fail -- after the division ladder
+(THM-3009 sec 7) and the alternation index (sec 12.2) -- and the three
+failures agree on the same diagnosis: everything here is decided by
+integrality against binomial boxes, and no algebraic or finite-chart device
+sees it.

@@ -1,0 +1,35 @@
+Do the three middle rows (t = -1,0,1) alone force c = 0?
+  (LP over the RELAXED box; max_j max |c_j| on the polytope)
+
+    m    3 rows      5 rows      7 rows
+     2      1.2000      1.2000      1.2000
+     4      6.0000      6.0000      6.0000
+     8     70.0000     70.0000     70.0000
+HEkkPrimal::shiftBound LB = -1.6869e+09; random_value = 0.624896; value = -3.38437e+09; feasibility = 1.6249e-07; infeasibility = 1.69748e+09; shift = 1.69748e+09; bound = -3.38437e+09; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -6.74759e+09; random_value = 0.249577; value = -9.3153e+09; feasibility = 1.24958e-07; infeasibility = 2.56772e+09; shift = 2.56772e+09; bound = -9.3153e+09; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -4.58018e+09; random_value = 0.806761; value = -7.24696e+09; feasibility = 1.80676e-07; infeasibility = 2.66678e+09; shift = 2.66678e+09; bound = -7.24696e+09; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -5.99785e+09; random_value = 0.549146; value = -3.20037e+10; feasibility = 1.54915e-07; infeasibility = 2.60058e+10; shift = 2.60058e+10; bound = -3.20037e+10; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -2.99893e+09; random_value = 0.0704601; value = -4.13712e+09; feasibility = 1.07046e-07; infeasibility = 1.13819e+09; shift = 1.13819e+09; bound = -4.13712e+09; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -4.13712e+09; random_value = 0.0704601; value = -4.13712e+09; feasibility = 1.07046e-07; infeasibility = 0.000146389; shift = 0.000146496; bound = -4.13712e+09; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -1.90841e+09; random_value = 0.753349; value = -6.21942e+09; feasibility = 1.75335e-07; infeasibility = 4.31101e+09; shift = 4.31101e+09; bound = -6.21942e+09; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -5.99785e+09; random_value = 0.549146; value = -9.93687e+09; feasibility = 1.54915e-07; infeasibility = 3.93901e+09; shift = 3.93901e+09; bound = -9.93687e+09; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -1.90841e+09; random_value = 0.0746529; value = -3.4149e+10; feasibility = 1.07465e-07; infeasibility = 3.22406e+10; shift = 3.22406e+10; bound = -3.4149e+10; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -5.99785e+09; random_value = 0.415819; value = -4.39783e+10; feasibility = 1.41582e-07; infeasibility = 3.79804e+10; shift = 3.79804e+10; bound = -4.39783e+10; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -5.24812e+08; random_value = 0.723517; value = -2.20386e+09; feasibility = 1.72352e-07; infeasibility = 1.67905e+09; shift = 1.67905e+09; bound = -2.20386e+09; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -4.58018e+09; random_value = 0.418672; value = -3.56054e+10; feasibility = 1.41867e-07; infeasibility = 3.10252e+10; shift = 3.10252e+10; bound = -3.56054e+10; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -4.39783e+10; random_value = 0.415819; value = -4.39783e+10; feasibility = 1.41582e-07; infeasibility = 0.000183105; shift = 0.000183247; bound = -4.39783e+10; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -4.1985e+09; random_value = 0.290046; value = -9.30085e+09; feasibility = 1.29005e-07; infeasibility = 5.10235e+09; shift = 5.10235e+09; bound = -9.30085e+09; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -4.58018e+09; random_value = 0.418672; value = -1.35976e+10; feasibility = 1.41867e-07; infeasibility = 9.01738e+09; shift = 9.01738e+09; bound = -1.35976e+10; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -5.99785e+09; random_value = 0.415819; value = -2.8436e+10; feasibility = 1.41582e-07; infeasibility = 2.24381e+10; shift = 2.24381e+10; bound = -2.8436e+10; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -6.74759e+09; random_value = 0.181176; value = -4.84674e+10; feasibility = 1.18118e-07; infeasibility = 4.17198e+10; shift = 4.17198e+10; bound = -4.84674e+10; new_infeasibility = 0; 
+HEkkPrimal::shiftBound LB = -2.99893e+09; random_value = 0.978204; value = -5.27918e+09; feasibility = 1.9782e-07; infeasibility = 2.28026e+09; shift = 2.28026e+09; bound = -5.27918e+09; new_infeasibility = 0; 
+    16   12870.0000   12870.0000   12870.0000
+    32      0.0000      0.0000      0.0000
+    64      0.0000      0.0000      0.0000
+
+READING.  A value of 0 in a column means those rows alone pin c = 0 over
+the rationals, hence a fortiori over the integers, and the certificate needed
+for all dyadic m is that small fixed row-set -- the analogue of THM-2922's
+fixed degree-seven Macaulay chart.  A positive value means the relaxation has
+room and more rows (or the integrality) are doing the work, so no fixed finite
+row-set of this kind can be the certificate.
