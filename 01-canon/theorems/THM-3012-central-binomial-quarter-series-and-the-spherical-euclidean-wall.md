@@ -266,3 +266,44 @@ the `3F2`-level statement carries `k`-dependence.
 `z^{1/k-1}` at the origin, and naive quadrature loses accuracy as `k` grows
 (observed drift `~1e-13` at `k = 4`, `~1e-10` at `k = 5`). Use the `3F2` for any
 high-precision work; (M1) is a structural identity, not an evaluation route.
+
+## Addendum 3, 2026-08-01 (death-star): the section 5 PSLQ negative is WEAKER than stated
+
+Section 5 describes a PSLQ battery at `120-150` digits over a wide basis and calls
+the result "strong evidence that `S(4)`, `S(5)` have no closed form in logarithms
+of algebraic numbers". **That characterisation is withdrawn.** Two calibration
+facts, both established here:
+
+**(P1) The true `S(3)` relation has an IRRATIONAL coefficient.** Addendum 1 records
+`pi S(3) = sqrt3 * log(5+2 sqrt6) - 2 arctan(sqrt2/5)`. A sweep seeking *rational*
+coefficients over logarithms and arctangents therefore cannot represent it at all;
+the basis must contain the **products** `alpha * L` with `alpha` algebraic.
+
+**(P2) PSLQ degrades sharply with basis size -- measured, not assumed.** With the
+target `pi S(3)`, at `mp.dps = 240` and coefficient bound `10^5`:
+
+```text
+basis {1, sqrt3} x {log(5+2sqrt6), arctan(sqrt2/5)}   (4 elements)  -> FOUND, exactly
+basis {1,r2,r3,r5,r6} x {8 logs/arctans}             (40 elements)  -> NOT FOUND
+```
+
+The same relation, present in the small basis, is **missed** by the large one at
+higher precision than section 5 used. So a wide-basis null result in this problem
+carries essentially no information, and section 5's battery was of exactly that
+kind.
+
+**Consequence.** The honest status of "`S(4)`, `S(5)` have no closed form" is
+**OPEN with no strong numerical evidence either way**, not "strong evidence
+against". What remains solid in section 5 is the *structural* discussion (the
+`3F2` Schwarz data), not the numerical negative. A meaningful search must:
+
+1. include algebraic multipliers as basis elements, per (P1);
+2. scan **small** bases systematically rather than one wide basis, per (P2);
+3. carry a **live positive control** -- rediscover `pi S(3)` with the identical
+   pipeline before any negative is reported. A pipeline that cannot find `S(3)`
+   proves nothing about `S(4)`.
+
+Read together with Addendum 2: since `S(k)` is one fixed function's Mellin moment
+at `s = 1/k`, and no function-level argument can separate `k <= 3` from `k >= 4`,
+the numerical route is currently the *only* discriminator available -- which makes
+getting its calibration right the whole ballgame.
