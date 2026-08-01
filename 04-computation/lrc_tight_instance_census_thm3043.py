@@ -1,58 +1,146 @@
-"""THE REAL TRANSFER FROM FC(2): its proof SHAPE is
-   (i) exclude non-rigid configurations by a monodromy/inverse argument
-   (ii) reducing to a RIGID family (flat top f_D = a(x+y)^D)
-   (iii) kill the rigid family by a separate ARITHMETIC argument (transcendence).
-LRC's Route B has the same architecture: inverse theorem -> AP-uniqueness -> kill APs.
-FC therefore tells us WHERE the difficulty must sit, and (i)/(ii) is the analogue of the
-LRC wall.  Test the (ii) half empirically: is the COVERING case exactly the AP family?
+"""Exact corrected referee for THM-3043.
 
-Census: all speed multisets of size n from [1,B], compute mu(Safe) exactly at threshold
-1/(n+1), and classify the covering ones (mu = 0).
+Measure-zero safe sets are tight, not empty covers.  This companion performs
+the finite census with exact rational interval arithmetic, explicitly checks
+that every zero-measure row has a nonempty safe-point witness set, verifies
+the six displayed canonical witness sets, and checks the quantisation law.
+Truth-bearing checks use explicit raises, so ``python -O`` runs the same audit.
 """
+
 from fractions import Fraction as F
-from math import gcd
 from functools import reduce
 from itertools import combinations
+from math import gcd
+
+
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
+
+
+def lcm(a, b):
+    return a // gcd(a, b) * b
+
+
+def lcm_many(values):
+    return reduce(lcm, values, 1)
+
 
 def safe_measure(vs, n1):
+    """Lebesgue measure of {t in [0,1): ||v t|| >= 1/n1}."""
     bad = []
     for v in vs:
-        w = F(1, n1*v)
-        for k in range(0, v+1):
-            c = F(k, v)
-            lo, hi = max(F(0), c-w), min(F(1), c+w)
-            if lo < hi: bad.append((lo, hi))
-    bad.sort(); merged = []
-    for s, e in bad:
-        if merged and s <= merged[-1][1]:
-            merged[-1] = (merged[-1][0], max(merged[-1][1], e))
-        else: merged.append((s, e))
-    return F(1) - sum(e-s for s, e in merged)
+        width = F(1, n1 * v)
+        for k in range(v + 1):
+            center = F(k, v)
+            lo, hi = max(F(0), center - width), min(F(1), center + width)
+            if lo < hi:
+                bad.append((lo, hi))
+    bad.sort()
+    merged = []
+    for start, end in bad:
+        if merged and start <= merged[-1][1]:
+            merged[-1] = (merged[-1][0], max(merged[-1][1], end))
+        else:
+            merged.append((start, end))
+    return F(1) - sum(end - start for start, end in merged)
 
-def is_dilated_AP(vs):
-    """is vs a dilated AP {d, 2d, ..., nd} (as a SET, after sorting)?"""
-    s = sorted(vs); d = s[0]
-    return all(s[i] == (i+1)*d for i in range(len(s)))
 
-def normalise(vs):
-    g = reduce(gcd, vs)
-    return tuple(v//g for v in vs)
+def safe_at(vs, n1, t):
+    for v in vs:
+        residue = (v * t) % 1
+        if min(residue, 1 - residue) < F(1, n1):
+            return False
+    return True
 
-for n, B in [(3, 14), (4, 14), (5, 12)]:
-    n1 = n+1
-    cover, total = [], 0
-    for vs in combinations(range(1, B+1), n):
-        total += 1
-        if safe_measure(vs, n1) == 0:
-            cover.append(vs)
-    aps = [v for v in cover if is_dilated_AP(normalise(v))]
-    non = [v for v in cover if not is_dilated_AP(normalise(v))]
-    print(f"n={n}, speeds from [1,{B}], threshold 1/{n1}:  {total} sets, {len(cover)} COVER")
-    print(f"   dilated-AP after normalising by gcd: {len(aps)}   NOT AP: {len(non)}")
-    if non:
-        print(f"   *** NON-AP COVERING SETS (these are the interesting ones) ***")
-        for v in non[:14]:
-            print(f"       {v}   normalised {normalise(v)}")
+
+def safe_grid_points(vs, n1):
+    """All safe endpoints when the safe measure is zero.
+
+    Every danger endpoint lies on the N=(n+1)lcm(v) grid.  If safe measure is
+    zero, every safe point is an endpoint of the finite open-interval union,
+    hence lies on this grid.
+    """
+    N = n1 * lcm_many(vs)
+    return tuple(F(k, N) for k in range(N) if safe_at(vs, n1, F(k, N)))
+
+
+def normalize(vs):
+    common = reduce(gcd, vs)
+    return tuple(v // common for v in vs)
+
+
+def is_dilated_ap(vs):
+    normalized = normalize(vs)
+    return normalized == tuple(range(1, len(vs) + 1))
+
+
+census_rows = []
+for n, bound, expected_zero, expected_ap, expected_sporadic in (
+    (3, 14, 4, 4, ()),
+    (4, 14, 5, 3, ((1, 3, 4, 7), (2, 6, 8, 14))),
+    (5, 12, 3, 2, ((1, 3, 4, 5, 9),)),
+):
+    zero_rows = []
+    for speeds in combinations(range(1, bound + 1), n):
+        if safe_measure(speeds, n + 1) == 0:
+            witnesses = safe_grid_points(speeds, n + 1)
+            require(witnesses, f"zero-measure row was falsely treated as empty: {speeds}")
+            zero_rows.append((speeds, witnesses))
+    ap_rows = [speeds for speeds, _ in zero_rows if is_dilated_ap(speeds)]
+    sporadic = tuple(speeds for speeds, _ in zero_rows if not is_dilated_ap(speeds))
+    require(len(zero_rows) == expected_zero, f"zero-measure count changed at n={n}")
+    require(len(ap_rows) == expected_ap, f"AP count changed at n={n}")
+    require(sporadic == expected_sporadic, f"sporadic rows changed at n={n}")
+    census_rows.append((n, bound, len(zero_rows), len(ap_rows), len(sporadic)))
+
+
+canonical_witnesses = {
+    (1, 2, 3): (F(1, 4), F(3, 4)),
+    (1, 2, 3, 4): tuple(F(a, 5) for a in range(1, 5)),
+    (1, 3, 4, 7): tuple(F(a, 5) for a in range(1, 5)),
+    (1, 2, 3, 4, 5, 6): tuple(F(a, 7) for a in range(1, 7)),
+    (1, 3, 4, 5, 9): (F(1, 6), F(5, 6)),
+    (1, 2, 3, 4, 5, 6, 7): tuple(F(a, 8) for a in (1, 3, 5, 7)),
+}
+for speeds, expected in canonical_witnesses.items():
+    require(safe_measure(speeds, len(speeds) + 1) == 0,
+            f"canonical row lost tightness: {speeds}")
+    actual = safe_grid_points(speeds, len(speeds) + 1)
+    require(actual == expected, f"canonical witness set changed: {speeds}")
+
+
+quantization_samples = (
+    (1, 2, 3),
+    (1, 2, 3, 4),
+    (1, 3, 4, 5, 7),
+    (1, 2, 3, 4, 5, 6),
+    (2, 3, 5, 7),
+    (1, 4, 5, 6, 7),
+    (1, 2, 3, 4, 5, 6, 7),
+    (3, 5, 7, 11, 13),
+)
+positive_ratios = []
+for speeds in quantization_samples:
+    n1 = len(speeds) + 1
+    N = n1 * lcm_many(speeds)
+    measure = safe_measure(speeds, n1)
+    quantum_count = measure * N
+    require(quantum_count.denominator == 1, f"quantisation failed: {speeds}")
+    if measure == 0:
+        require(safe_grid_points(speeds, n1), f"tight sample became empty: {speeds}")
     else:
-        print(f"   -> every covering set is a dilated AP: AP-uniqueness holds in this box")
-    print()
+        positive_ratios.append(int(quantum_count))
+require(tuple(positive_ratios) == (30, 66, 58, 11020), "positive quantum ratios changed")
+
+
+print("THM3043 LRC TIGHT-INSTANCE CENSUS: CORRECTED PASS")
+for n, bound, zero, ap, sporadic in census_rows:
+    print(f"n={n} B={bound} zero_measure_tight={zero} dilated_AP={ap} sporadic={sporadic}")
+print("sporadic_rows=(1,3,4,7);(2,6,8,14);(1,3,4,5,9)")
+print(f"canonical_witness_sets={len(canonical_witnesses)} all_nonempty=1")
+print("witness_denominators=4,5,5,7,6,8 respectively")
+print(f"quantization_samples={len(quantization_samples)} all_integral=1")
+print("positive_mu_over_quantum=30,66,58,11020")
+print("zero_measure_label=TIGHT_NONEMPTY not COVERED")
+print("all_runtime_checks_explicit=1")

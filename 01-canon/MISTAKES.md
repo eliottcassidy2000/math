@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-343 (2026-08-01, THM-3043 evidence audit) -- zero measure was still labelled COVERED, and a composite-denominator witness family was overstated
+
+- **What was done:** THM-3043's prose correctly repaired the implication
+  `mu(Safe)=0 => Safe=empty`, but its stored transcript still labelled all
+  zero-measure rows `COVERED`.  The committed 58-line companion generated
+  only the first census block and could not reproduce the stored quantisation
+  transcript.  The theorem also wrote the `(1,...,7)` witness set as `a/8`,
+  suggesting every nonzero numerator.
+- **Minimal witness / first failed implication:** at `t=2/8=1/4`, speed `4`
+  has distance zero, so it is not safe.  The exact safe set is only
+  `{1/8,3/8,5/8,7/8}`.  It still has measure zero and is nonempty, so this is
+  precisely the MAX-not-MEAN boundary rather than a counterexample to LRC.
+- **Exact repair / strongest survivor:** the replacement companion performs
+  the full finite rational census, explicitly enumerates a nonempty safe-point
+  set for every zero-measure row, checks all six displayed witness sets, and
+  reproduces the quantisation samples in normal and optimized modes.  Every
+  transcript label is now `TIGHT_NONEMPTY`.  The invariant surviving the
+  numerator repair is sharper: every displayed witness has **reduced**
+  denominator exactly `n+1`.
+- **Rule:** a measure computation cannot certify pointwise covering.  Store an
+  explicit witness/emptiness certificate, and expand shorthand `a/q` whenever
+  a composite denominator makes the allowed numerator set load-bearing.
+
 ## MISTAKE-340 (2026-08-01, THM-1254 Lean full-invoice consumer) -- integer tooth addresses were generalized to rationals across a discrete gap step
 
 - **What was done:**

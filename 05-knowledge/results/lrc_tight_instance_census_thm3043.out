@@ -1,37 +1,11 @@
-n=3, speeds from [1,14], threshold 1/4:  364 sets, 4 COVER
-   dilated-AP after normalising by gcd: 4   NOT AP: 0
-   -> every covering set is a dilated AP: AP-uniqueness holds in this box
-
-n=4, speeds from [1,14], threshold 1/5:  1001 sets, 5 COVER
-   dilated-AP after normalising by gcd: 3   NOT AP: 2
-   *** NON-AP COVERING SETS (these are the interesting ones) ***
-       (1, 3, 4, 7)   normalised (1, 3, 4, 7)
-       (2, 6, 8, 14)   normalised (1, 3, 4, 7)
-
-n=5, speeds from [1,12], threshold 1/6:  792 sets, 3 COVER
-   dilated-AP after normalising by gcd: 2   NOT AP: 1
-   *** NON-AP COVERING SETS (these are the interesting ones) ***
-       (1, 3, 4, 5, 9)   normalised (1, 3, 4, 5, 9)
-
-
-LRC quantisation test:  mu(Safe) in (1/N)Z with N = (n+1)*lcm(v)?
-  v=(1, 2, 3)              n=3 thr=1/4: mu =                0  N=     24  mu*N =            0  integral: True   COVERED
-  v=(1, 2, 3, 4)           n=4 thr=1/5: mu =                0  N=     60  mu*N =            0  integral: True   COVERED
-  v=(1, 3, 4, 5, 7)        n=5 thr=1/6: mu =             1/84  N=   2520  mu*N =           30  integral: True   
-  v=(1, 2, 3, 4, 5, 6)     n=6 thr=1/7: mu =                0  N=    420  mu*N =            0  integral: True   COVERED
-  v=(2, 3, 5, 7)           n=4 thr=1/5: mu =           11/175  N=   1050  mu*N =           66  integral: True   
-  v=(1, 4, 5, 6, 7)        n=5 thr=1/6: mu =          29/1260  N=   2520  mu*N =           58  integral: True   
-  v=(1, 2, 3, 4, 5, 6, 7)  n=7 thr=1/8: mu =                0  N=   3360  mu*N =            0  integral: True   COVERED
-  v=(3, 5, 7, 11, 13)      n=5 thr=1/6: mu =        1102/9009  N=  90090  mu*N =        11020  integral: True   
-
-  quantisation holds on all samples: True
-
-Is the gap usable?  compare mu against the quantum 1/N:
-  v=(1, 2, 3)             : mu = 0 (covering) -- gap principle says nothing
-  v=(1, 2, 3, 4)          : mu = 0 (covering) -- gap principle says nothing
-  v=(1, 3, 4, 5, 7)       : mu = 0.011905, quantum 1/N = 3.968e-04, ratio mu/(1/N) = 30
-  v=(1, 2, 3, 4, 5, 6)    : mu = 0 (covering) -- gap principle says nothing
-  v=(2, 3, 5, 7)          : mu = 0.062857, quantum 1/N = 9.524e-04, ratio mu/(1/N) = 66
-  v=(1, 4, 5, 6, 7)       : mu = 0.023016, quantum 1/N = 3.968e-04, ratio mu/(1/N) = 58
-  v=(1, 2, 3, 4, 5, 6, 7) : mu = 0 (covering) -- gap principle says nothing
-  v=(3, 5, 7, 11, 13)     : mu = 0.122322, quantum 1/N = 1.110e-05, ratio mu/(1/N) = 11020
+THM3043 LRC TIGHT-INSTANCE CENSUS: CORRECTED PASS
+n=3 B=14 zero_measure_tight=4 dilated_AP=4 sporadic=0
+n=4 B=14 zero_measure_tight=5 dilated_AP=3 sporadic=2
+n=5 B=12 zero_measure_tight=3 dilated_AP=2 sporadic=1
+sporadic_rows=(1,3,4,7);(2,6,8,14);(1,3,4,5,9)
+canonical_witness_sets=6 all_nonempty=1
+witness_denominators=4,5,5,7,6,8 respectively
+quantization_samples=8 all_integral=1
+positive_mu_over_quantum=30,66,58,11020
+zero_measure_label=TIGHT_NONEMPTY not COVERED
+all_runtime_checks_explicit=1

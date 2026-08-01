@@ -1,9 +1,9 @@
 ---
 id: THM-3043
-title: "LRC: measure-zero is TIGHTNESS not failure, the tight family is strictly larger than dilated APs, and every tight witness sits at a/(n+1)"
+title: "LRC: measure-zero is tightness, the finite tight census is not only APs, and its witnesses have denominator n+1"
 status: >
-  VERIFIED-EXACT (finite census, exact rational arithmetic) + one methodological correction
-  + an honest NEGATIVE on transferring the FC(2) proof.
+  FINITE-EXACT + VERIFIED-EXACT + CORRECTION (MISTAKE-343) + an honest
+  NEGATIVE on transferring the FC(2) proof.
   (R1) MAX-NOT-MEAN, instantiated. mu(Safe) = 0 does NOT mean the danger arcs cover: the
   witness condition ||v t|| >= 1/(n+1) is CLOSED, so the safe set can be a nonempty finite
   set of POINTS. Every measure-zero instance found below is TIGHT -- LRC holds there with
@@ -15,9 +15,10 @@ status: >
   3, of which (1,3,4,5,9) is NOT. So an inverse theorem phrased as "only dilated APs are
   extremal" is FALSE as stated; the target class contains sporadic members.
   (R3) EVERY TIGHT WITNESS SITS AT t = a/(n+1). In all six tight instances checked, the safe
-  points are exactly rationals with denominator n+1: (1,2,3) -> 1/4, 3/4; (1,2,3,4) and
-  (1,3,4,7) -> a/5; (1,2,3,4,5,6) -> a/7; (1,3,4,5,9) -> 1/6, 5/6; (1,2,3,4,5,6,7) -> a/8.
-  The witness denominator is exactly n+1, not merely "some q".
+  points have reduced denominator n+1: (1,2,3) -> 1/4, 3/4; (1,2,3,4) and
+  (1,3,4,7) -> a/5; (1,2,3,4,5,6) -> a/7; (1,3,4,5,9) -> 1/6, 5/6; and
+  (1,2,3,4,5,6,7) -> a/8 for a in {1,3,5,7}.
+  The reduced witness denominator is exactly n+1, not merely "some q".
   (R4) THE FC(2) TRANSCENDENCE MECHANISM DOES NOT TRANSFER. FC's engine is that a
   counterexample pins a period to a RATIONAL value and transcendence contradicts it
   (THM-3031/THM-3039). The LRC analogue is quantisation: mu(Safe) lies in (1/N)Z with
@@ -39,6 +40,9 @@ external:
   - "Lonely Runner Conjecture; the classical tight instances for small n."
 script: 04-computation/lrc_tight_instance_census_thm3043.py
 output: 05-knowledge/results/lrc_tight_instance_census_thm3043.out
+script_sha256: f2bf9680be73400bc075268890ea90d2cc37f2c544400990fc81fac02c9c3b30
+output_sha256: b1a47938475b504cf1ba8fe805f3c842db56649a55819d7997ebde7c42201c98
+hash_basis: LF-normalized bytes
 ---
 
 # THM-3043 -- tight is not covered, and the tight family is bigger than APs
@@ -91,10 +95,10 @@ grid:
 (1,3,4,7)       thr 1/5 :  t = 1/5, 2/5, 3/5, 4/5
 (1,2,3,4,5,6)   thr 1/7 :  t = a/7
 (1,3,4,5,9)     thr 1/6 :  t = 1/6, 5/6
-(1,2,3,4,5,6,7) thr 1/8 :  t = a/8
+(1,2,3,4,5,6,7) thr 1/8 :  t = 1/8, 3/8, 5/8, 7/8
 ```
 
-**The witness denominator is exactly `n+1` in every case** -- not merely "some
+**The reduced witness denominator is exactly `n+1` in every case** -- not merely "some
 `q`". This sharpens the repo's `t = 1/q` reduction: on the tight locus the
 denominator is pinned, and the sporadic instance `(1,3,4,7)` has *the same*
 witness set as the AP `(1,2,3,4)`, which is a strong hint about what the inverse
@@ -134,3 +138,18 @@ that box, and in particular does not classify tight instances for larger `n`.
 (R1) and (R4)'s quantisation are proofs. (R3) is an exact observation on six
 instances, not a theorem for all `n`. Nothing here bears on the `r`-ladder
 (THM-1123/1132/1134) or on `LRC(14)` itself, which concerns `n = 13`.
+
+## 6. Corrected exact companion
+
+Run
+
+```text
+python 04-computation/lrc_tight_instance_census_thm3043.py
+python -O 04-computation/lrc_tight_instance_census_thm3043.py
+```
+
+Both modes byte-match the stored transcript.  The companion rebuilds every
+finite census row, requires a nonempty exact safe-point set for every
+zero-measure row, checks the six displayed witness sets and eight
+quantisation samples, and uses explicit runtime exceptions rather than
+truth-bearing Python assertions.
