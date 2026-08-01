@@ -1,0 +1,28 @@
+LRC14 reflected binary dilation resonance exact referee
+all_q_engine_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+hostile_body=(1, 2, 4, 9, 11, 12);L=5544;type_vector=(2, 1, 1, 1, 1, 2);levels=(2Q,Q,Q,Q,Q,2Q)
+exact_block_identity=with u=(r+x)/Q,K=QL,J=Qj+r,the coarse mass is Q^-1 times the sum of binary-kernel masses at J=Qj,...,Qj+Q-1
+bad_address=j=396;j/L=1/14;endpoint_word=(1even,2,4,12even,1odd,9,11,12odd)^Q
+bad_all_Q=8Q disjoint components;mass=sum a_eQL/[7(a_eQL-e)]=6/7+sum e/[7(a_eQL-e)]>6/7
+bad_scaled_excess_limit=65/77616
+good_address=j=1584;j/L=2/7;phase_locks=(2,9)->4/7,(4,11)->1/7
+good_endpoint_word=({4,11,1,12}:4->12),({2,9,1}:2->1),({12}:12->12),repeated Q times
+good_closed_mass=33Q(511253875440Q^3-994881888Q^2+494683Q-73)/[(924Q-1)(1386Q-1)(2772Q-1)(11088Q-1)]
+good_half_gap_numerator=5619650962464Q^4-23087810592Q^3+31384122Q^2-11352Q+1>0
+good_all_Q=M_Q<1/2<6/7;limit=9505/22176=3/7+1/22176
+all_Q_affine_gap_certificates=27;symbolic_endpoint_digest_sha256=f77f43a29782f354a37f07056f540f67a59babf658ba51abf24f7a591cee4e15;formal_polynomial_identity=PASS
+control_Q=(1, 2, 3, 4, 5, 7, 9, 16, 31, 64);block_clause_checks=1704;block_digest_sha256=567851e7a3e17ef43b478b6e050b8a8dfd57c5faa8f419ede8c2dcac1d6436e1
+hostile_census;Q=1;safe_cells=2260;bad_cells=66;bad_span=396..5147;max_good=572313134147104218/809941942889797705@j=3784;repair_mass=16838563109346/39273720743335@j=1584
+hostile_census;Q=2;safe_cells=2260;bad_cells=66;bad_span=396..5147;max_good=550863018227795211948/779829126168675159725@j=3784;repair_mass=269679462707226/629088763842925@j=1584
+hostile_census;Q=3;safe_cells=2260;bad_cells=66;bad_span=396..5147;max_good=6280157476570162955346/8891429297330928551155@j=3784;repair_mass=1365695316202536/3185959271901715@j=1584
+hostile_census;Q=4;safe_cells=2260;bad_cells=66;bad_span=396..5147;max_good=470686058389576463880/666430683223009585387@j=3784;repair_mass=4316971810352652/10071097149318745@j=1584
+hostile_census;Q=5;safe_cells=2260;bad_cells=66;bad_span=396..5147;max_good=134699645056738703238750/190723260545526717445151@j=3784;repair_mass=10540507701263430/24590412062289151@j=1584
+hostile_census;Q=6;safe_cells=2260;bad_cells=66;bad_span=396..5147;max_good=80456246642220710097204/113921585570754188197505@j=3784;repair_mass=21858214814389206/50994511438804165@j=1584
+hostile_census;Q=7;safe_cells=2260;bad_cells=66;bad_span=396..5147;max_good=112725500931399205904922/159615434368854659167795@j=3784;repair_mass=40496918044532796/94478700468651115@j=1584
+hostile_census;Q=8;safe_cells=2260;bad_cells=66;bad_span=396..5147;max_good=173905629656583297662832/246247139725507756630325@j=3784;repair_mass=69088355355845496/161182982103413425@j=1584
+hostile_census;Q=9;safe_cells=2260;bad_cells=66;bad_span=396..5147;max_good=916713702152643882015486/1298060825043463073383115@j=3784;repair_mass=110669177781827082/258192057056470615@j=1584
+census_digest_sha256=61471d693370204bce81009b3784946c1b1a6afb54bb3777579004459b990b7a
+semantic_sha256=7c63196cdb90dc4c0d7802ae912d539461237cca744dcb4dd2c407e81352f2c7
+status=FINITE-EXACT controls plus all-Q affine endpoint and polynomial certificates for the displayed hostile ray
+scope_note=this proves the dilation-stable repair for one persistent binary hostile;it is not arbitrary heterogeneous k=1 closure
+all_exact_controls=PASS

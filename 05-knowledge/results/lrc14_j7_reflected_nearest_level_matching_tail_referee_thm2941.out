@@ -1,0 +1,41 @@
+LRC14 reflected k=1 nearest-level pair and conic tail exact referee
+all_q_engine_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+scope=all E subset {1,...,14}, |E|=6; z_e=q_e*L-e; q_e positive integers
+primary_pair=epsilon=sum e/[7(q_eL-e)];lambda_e=q_e-b-e/L;S=|lambda_e|+|lambda_f|;v=lambda_e-lambda_f
+primary_pair_certificate=epsilon+[4S+|v|/2]/b<G(|v|),where G(ell)=[floor(ell)/49+max(0,{ell}-5/7)^2/4]/ell
+nearest_level_corollary=m=min q;Delta=least positive q_e-m;m>(13392/35)Delta+93992/3185;clean m>=383Delta+30
+secondary_cone=nonconstant q closes if there exists integer base m>=1 with Lambda=sum|q_e-m-e/L| and m>(2976/7)Lambda
+body_independent_L1_cone=m>(496/7)(6*sum|q_e-m|+1);best coarse certificate occurs at one of the six level values
+median_note=an integer median minimizes L1 spread but need not maximize the certificate ratio
+range_corollary=m=min(q_e);d_e=q_e-m;D=max(d_e)=max(q_e)-min(q_e)
+D=0=common-level diagonal already closed for every m>=1
+exact_base_optimizer=it suffices to test positive integers in {q_e-1,q_e};coarse_L1_optimizer needs only {q_e}
+D>=1 conclusion=every body-safe cell has six-clause union mass<6/7 when m>=floor(496(30D+1)/7)+1
+contrapositive_wedge=min(q_e)<=floor(496(30D+1)/7)
+geometry=conic tail reduction at bounded projective spread;not an all-k1 closure
+exact_subdivision=z_e(j+(r+x)/m)/L=x+(d_e-e/L)(j+r/m+x/m) mod1
+limit_pair_overlap=phi(v(j+s));phi(y)=max(0,1/7-||y||);v=(d_e-d_f)-(e-f)/L
+minimum_ruler=(168, (1, 2, 3, 4, 6, 12));max_sumE_over_L=(Fraction(1, 6), (1, 2, 3, 4, 6, 12), 168);max_pair_ratio=(Fraction(11, 168), (1, 2, 3, 4, 6, 12), 168, 1, 12)
+max_label_over_L=(Fraction(1, 14), (1, 2, 3, 4, 6, 12), 168, 12);nearest_level_exact_bound=m>(13392/35)Delta+93992/3185;clean=m>=383Delta+30
+coarse_velocity_floor=155/168;subunit_tent_average=35/2976
+uniform_tent_floor=35/2976;limiting_union_gap=35/2976
+all_velocity_tent_gate=ell<1 monotone;ell=k+w,k>=2 gives 2/147;k=1,w<=5/7 gives 1/84;k=1,w>=5/7 has quadratic margin 47111/433972224
+exact_to_sampled_error<=4*sum|d_e-e/L|/m;left_Riemann_error<=sum|d_e-e/L|/m
+min_normalization=sum d_e<=5D;sum|d_e-e/L|<=5D+1/6;total_error<35/2976 at integer m>=floor(496(30D+1)/7)+1
+branch_rows=6010;branch_clause_checks=54114;translated_tent_checks=3007
+pair_rows=3007;pair_certificate_fires=0;pair_digest_sha256=58783e1e6926d6e9109693e477b6eb7250c485ddcb97b6ebdd809334f50ffdda
+velocity_hostile_rows=68096;velocity_hostile_minimum=(Fraction(1369, 105504), Fraction(157, 168), -1, 168, 1, 12)
+coarse_breakpoint_rows=1708;breakpoint_digest_sha256=206e2978162f0bbe6d6edbe830773b4655f5ecd9d6389e4fb9c233962099fa79
+median_not_optimal_control=(1, 1, 1, 2, 1000, 1000);rows=((Fraction(1, 11995), 1, 1999), (Fraction(2, 11995), 2, 1999), (Fraction(1000, 23971), 1000, 3995))
+positive_L1_cone_control=(10000, 10000, 10001, 10001, 10002, 10002);rows=((Fraction(10000, 37), 10000), (Fraction(10002, 37), 10002), (Fraction(10001, 25), 10001));conclusion=CLOSES
+exact_breakpoint_q1_to4_rows=8184;exact_breakpoint_digest_sha256=ab94209c0b320b9485124e4f029cfa6a0ef37b44e44de452b390a765aafbd8e3
+positive_nearest_pair_rows=3003;levels=(413, 414, 413, 413, 413, 413);positive_pair_digest_sha256=13625540cdf995f3c982829fab9f394e7d6357460483d25078f95ec8bd6cd35a;direct_hostile_mass=231557427363331232993387/331781908452893300100075
+moving_cell_q1_to3;E=(1, 2, 3, 4, 6, 12);max_over_vectors_min_over_safe_cells=522473986/843926985;levels=(1, 1, 2, 1, 2, 2);best_j=18;safe_cells=88;gap=1406244008/5907488895
+moving_cell_q1_to3;E=(1, 2, 4, 6, 9, 12);max_over_vectors_min_over_safe_cells=35402863/57635875;levels=(1, 1, 1, 2, 1, 2);best_j=161;safe_cells=240;gap=97995209/403451125
+branch_digest_sha256=a5243d543ec62accc4d775262d2cb4314a8e090e44d7439732585b33d72ae92c
+tent_digest_sha256=80de5ccde3cf0946a98aaafcad5c2c27c32cb61c9d22e035eb2909894bf4ee59
+semantic_sha256=d386be566a00055a955ab63b8cd30b5ae5d8e749782b2d83fbafaf5a422ce3e5
+source_lf_sha256=c886867412f851c9a2ad75daf7d7533bee1fbd3617147c459ef226015f230564
+normal_vs_python_O=BYTE_IDENTICAL
+status=FINITE-EXACT referee for the displayed analytic proof;not arbitrary reflected k=1 closure
+all_exact_controls=PASS

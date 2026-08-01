@@ -1,0 +1,18 @@
+LRC14 reflected k=1 K6 maximum-weight-matching sufficient certificate
+pair_referee_sha256=173b0edc01159be5ae7ec8f2c6a0d7d36bae347c67c8d1592c1f0976af6c1fb5
+edge_weight=max(0,max_b(G(|v|)-(4S+|v|/2)/b))
+edge_base_candidates={max(1,q_i-1),q_i,max(1,q_j-1),q_j}
+closure_if=maximum matching weight>epsilon(E,q);sufficient only
+finite_reduction=nonnegative K6 weights;76 matchings extend to 15 perfect matchings
+matchings=76;perfect_matchings=15;extension_digest_sha256=a2ab20670e721d890eec03f8790b3219ccbbc8f46bc4fce9bb5350d2b2650df7
+body_constant_max_sumE_over_L=(Fraction(1, 6), (1, 2, 3, 4, 6, 12), 168);max_pair_label_gap_over_L=(Fraction(11, 168), (1, 2, 3, 4, 6, 12), 168, 1, 12)
+optimizer_rows=405;optimizer_digest_sha256=4feb855eb7fb2698ab6cc54e0b32c72bfe115ca492a394d2768e92e8fdae2706
+partition_rows=4096;partition_digest_sha256=a32a978a4c7df8a07cad2eaef34fe8cb3bc2c377cee1e5dd3ffc9c1176999c50
+unequal_perfect_matching_iff=maximum level multiplicity<=3
+three_edge_tariff=sum(delta+1/14)/p<373/174096
+positive_levels=(10000, 10000, 10001, 10001, 10002, 10002);tariff=21073/50005000;matching=((0, 2), (1, 4), (3, 5));best_weight=325206640145521/6055090248480000;epsilon=43388962506644867192850742024/18226081406931882132617023653848145;status=CLOSES
+multiplicity_four_hostile=E=(1, 2, 4, 9, 11, 12);levels=(2Q,Q,Q,Q,Q,2Q);rows=((1, Fraction(0, 1), Fraction(2852911661906924, 3401756160137150361)), (2, Fraction(0, 1), Fraction(2287393981334301022, 5458803883180726118075)), (3, Fraction(0, 1), Fraction(17382731333807451312, 62240005081316499858085)), (7, Fraction(0, 1), Fraction(1203284794925217614072, 10055772365237843527571085)), (16, Fraction(0, 1), Fraction(15019750594784204401618, 286933792054724333284671675)), (64, Fraction(0, 1), Fraction(904906947797833028422802, 69153166500229885589241134955)));all_edge_weights=0;status=NO_CERTIFICATE
+nonconsequence=NO_CERTIFICATE does not mean physical survival or union mass>=6/7
+semantic_sha256=a0ab3bf5344312f1bcc40a27c1649c376bc66687cffebc87392c8a323fbeb504
+status=PROVED analytic sufficient corollary plus FINITE-EXACT referee controls
+all_exact_controls=PASS

@@ -1,0 +1,17 @@
+LRC14 projected k=2 exact z1581 terminal descent for the 1580..1599 band
+referee_source_sha256=4949b90b09163c651b11040ded94b1f9c3975005637a1f73f1ea6c6c461b6ccd
+base_source_sha256=036f42af2e6d8ec40cc1cb233c2f2d0bdfd191777ba0e08048b4e62926c67dd4
+base_output_sha256=22c96c5d09087d2dab941346eceb278cc3408923802b6e39b8c446f1445e235d
+inherited_cap=1585;atlas_gaps=1582..1585,1580 empty;boundary_rows=z1581:3
+closure_partition=all_label_projected:1;forced_high_scalar:2;empty:3;survivors:0
+ordinary_ledger=scalar:1;crude:0;status:0;status_survivors:1;exact_status_certificates:0;literal_packets:1;projected_kills:1
+CASE;route=ALL-LABEL;z1=1581;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=319/1446088;first_d=3920;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;divisors=59;trials=557845;counts=(1, 0, 0, 1);stage_sha256=('6c281babddfa0e3951fadf97b3987b8c357708716ca91de79ab981af4954df95', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', '68ed41dde0e3d267e535abc0ab7625def9e60367f924ac0a36ce256094714b3c');exact_status_certificates=0;cells=4196;packets=1;kills=1;minimum_margin=7482/47957;maximum_prefix_cells=1;direct_mass=1/1;state_sha256=07ce469f3d2643e2a8d4bdab781f7385f74781a37b358c4cc5d63cba799ef25a;conclusion=EMPTY
+CASE;route=FORCED-HIGH;z1=1581;E=1,4,10,12,13,14;h=853/2548;r=34;L=76440;high_floor=6625;delta1=12323/46997860;lower=853/231868;two_high_gap=543763/635608155;exact_one_high_gap=3458937/13135901870;top_lows=(1612, 2340, 1736);best_high_d=490;best_high_value=53/176988;best_high_label=6708;amplitude_sha256=7ea2123f3a76d969c5d381c546529d3d0f0fda268e95be3674f60e9415c46879;conclusion=SCALAR-EMPTY
+CASE;route=FORCED-HIGH;z1=1581;E=1,8,10,12,13,14;h=811/2548;r=38;L=152880;high_floor=13250;delta1=2903/10845660;lower=811/231868;two_high_gap=69113/80863965;exact_one_high_gap=163705343/918291186540;top_lows=(1612, 2340, 2004);best_high_d=196;best_high_value=149/909636;best_high_label=13260;amplitude_sha256=3657bf41a83bcaf25698d30f22f15e9cae503c5f7d1e8091eed90b111887163b;conclusion=SCALAR-EMPTY
+hostile_control=the ordinary row is not status-empty and requires its unique projected packet;both HIGH-TAIL rows have strictly positive exact one-high gaps
+band_consequence=all projected k=2 scalar rows with 1580<=z1<=1599 are empty
+consequence=projected k=2 first drift label z1<=1579
+scope_boundary=finite-exact intended THM-2995 band input complete;THM-2995 remains reserved pending integrated promotion audit;other sectors and LRC(14) remain open
+profile_sha256=9619c193ea40a1fa61489cf46dbe6eaa8e5cd54505c9cfccdf1867a9ef9e4c8d
+semantic_sha256=b56b5d091b0e6083061be59a2b4dc2b8f11307b7152da89e29660d4d00db5f26
+all_exact_controls=PASS

@@ -1,0 +1,27 @@
+LRC14 reflected all-spread conical tail closure exact proof
+universe=bodies:3003;complete_same_level_graph:3001;exceptions:(((1, 2, 7, 9, 11, 13), ((2, 3), (3, 4), (4, 5))), ((2, 4, 7, 9, 11, 13), ((2, 4), (3, 5))))
+cone=every spread D>=4 closes whenever minimum level m>=5D
+pair_selection=complete bodies use minimum 2(b-a)/L;exceptions use same-level-good slots (0,1)
+sharp_pair_ratio=max_E min_pair 2(b-a)/L=1/84;unique_body=(1, 2, 3, 4, 6, 12);L=168
+singleton_debt=m^-1 monotone envelope;maximum_at_m1=1915198706/76797355635;gap_below_1/39=53964259/76797355635
+phase_correction_bank=196;minimum=-12/49;multiplicity=8
+sharp_near_diagonal_floor=P>=5(Q-P);minimum=1/55;equality=(10,11)
+finite_cone_invoice=M_C(E)=1/55-2D0[C(b-a)+b]/[CD0L-b]-debt_E(CD0);C=5;D0=4
+unique_worst_cone_margin=33073441051905679/105976173248680729995;body=(1, 2, 3, 4, 6, 12);pair=(0, 1)
+C4_limit_phase_minus_transport=-1/280<0;C5_is_sharp_for_this_invoice
+homotopy_slope_gate=|eta|<1 and integer slopes>=m>=20
+CONTROL;D=5;m=25;body=(1, 2, 3, 4, 6, 12);levels=(30, 25, 26, 27, 28, 29);pair=(0,1);phase_floor=2/105;c=5039/5040;eta=-35/5039;transported=130944/25391521;debt=81792567226138/95567340896565615;minimum_actual_overlap=201000/10576861;cell=30
+CONTROL;D=13;m=65;body=(1, 2, 3, 4, 6, 12);levels=(78, 65, 66, 67, 68, 69);pair=(0,1);phase_floor=2/105;c=13103/13104;eta=-91/13103;transported=4427904/858443045;debt=668292484399439546/1911446502614781698335;minimum_actual_overlap=1361256/71529277;cell=30
+conclusion=all reflected residual packets with D>=4,m>=5D close on all 3003 bodies
+corollary=every still-open D>=6 sector is confined to m<5D
+scope=reflected THM-2941 sufficient family only;physical LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+universal_sha256=a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8
+universal_output_sha256=7364d5866171405fa90539a9ad76727c0c52f020ac1a104a1ab4f0276aedd115
+d5_source_sha256=1575b9fabec292bccf0bd639b47b3775922a1531e421b8e4441c6909cc2cedb7
+d5_output_sha256=73e8242e68431bd42d3a39b40a8dd0cc6ae8f9e1439e80038a54835bedc3ac55
+body_digest=cbec7138e9f967d400cfe7c349b895ef478ed292ee6b7fc27e13519355e618c8
+source_sha256=d2c8b4a26e87bce98c8ea94e82c38e81eae95504a6a7ef70db53670f197e8ec8
+semantic_sha256=21471954712a0f3150304723b1e9f91de15a08c1221797cb0033542e9333a0fc
+all_exact_controls=PASS
