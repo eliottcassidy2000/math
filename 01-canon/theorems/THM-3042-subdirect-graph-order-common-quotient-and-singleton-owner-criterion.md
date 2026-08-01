@@ -159,6 +159,17 @@ generator in `(11)` satisfies the evaluation congruence modulo `I_B`, so the
 whole generated algebra lies in the right side of `(13)`; its first kernel
 is therefore contained in `I_B`.  Equality and `(13)` follow.
 
+For completeness, equality of the two algebras in `(13)` is not being
+inferred from the kernel alone.  If `(r,c)` lies in the displayed fibre
+product, choose a representative `h` of `c`.  Then
+
+```text
+(r,c)=(h(a),c)+(r-h(a),0),                               (14a)
+```
+
+the first summand lies in `A0`, and compatibility says the second belongs to
+the now-identified kernel `I_B e`.  Hence the reverse inclusion is literal.
+
 For a local ring with `d` nonunit, `(13)` says that the singleton splits
 exactly when at least one added discrepancy is a unit.  Over a DVR, with
 `v(0)=infinity`, the remaining gluing length is
