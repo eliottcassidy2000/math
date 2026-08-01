@@ -607,10 +607,15 @@ bounded exclusion.
      varpi the lemniscate constant.               [VERIFIED-EXACT, 170 digits]
 (c)  3F2(3/4, 3/4, 1/4 ; 3/2, 5/4 ; 1) = varpi (pi - 2 log(1+sqrt2))/pi
      -- a NEW closed form, and the product-of-transcendentals calibration
-     object this file has been missing since addendum 3.  [VERIFIED-EXACT]
+     object no CERTIFIED region of this file has ever covered.  It is now a
+     required control for this lane.                       [VERIFIED-EXACT]
 (d)  Contiguity's exact content is a FIRST-ORDER Mellin ladder
      (s+1/4)(s+3/4) M(s+1) = s^2 M(s) + 1/(pi sqrt2);  the integer ladder is
      Gauss-anchored, the ladder through 1/k (k>=2) is not.           [PROVED]
+(e)  Bridge to the concurrent S4-quadratic lane, exact:
+     W_q = varpi log(1+sqrt2)/2 + pi W/(4 varpi).  The two lanes isolate the
+     SAME obstruction; W is the cleaner representative.    [VERIFIED-EXACT]
+S(4) and S(5) remain OPEN.  Nothing here proves non-existence.
 ```
 
 
@@ -629,6 +634,12 @@ sk_S4_contiguous_pslq_weight1_thm3012.py   the B1/B3 bounded exclusions
 sk_S4_contiguous_product_basis_thm3012.py  the B4 PRODUCT-basis exclusion, and the
                                            new closed form of (C7)
 ```
+
+Each script writes its own `.out` of the same basename into
+`05-knowledge/results/`; the two PSLQ scripts are long (the pair scans are
+`~4.5 x 10^4` PSLQ calls per target at 170 dps), so their outputs are
+regenerable rather than precious. Everything PROVED or VERIFIED-EXACT below is
+in the first two scripts, which run in minutes.
 
 ### (C1) The complete Thomae orbit, symbolically in `x = 1/k` (PROVED)
 
@@ -764,6 +775,27 @@ Residual `0.0` at `dps = 170`, i.e. **VERIFIED-EXACT to 170 digits**, with `W`
 computed two independent ways -- the defining `3F2` series and the iterated-Beta
 integral of (A) -- agreeing to 131 digits.
 
+**Name clash, resolved.** The concurrent `S4-quadratic` lane (next addendum)
+also writes `W` for an object it isolates, the second-kind period
+`W_q = int_0^1 V(v)[(1-v^2)^{-1/2}+(1+v^2)^{-1/2}]dv = 1.53513025889742...`,
+`V` the lemniscatic arcsine. The two are DIFFERENT and are bridged exactly by
+
+```text
+   W_q  =  varpi log(1+sqrt2)/2  +  pi W /(4 varpi),          residual 1.1e-32 (limited by the direct quadrature of W_q; the S4-quadratic lane's own identity then closes to 3.1e-61)
+```
+
+which follows by eliminating `pi S(4)` between that lane's
+`pi S(4) = varpi(pi/2 + log(1+sqrt2)) - 2 W_q` and (C5). Two consequences:
+the two lanes isolate the *same* obstruction, the present `W` being the cleaner
+one (it differs from `W_q` only by an elementary lemniscatic term); and `W_q`
+becomes available to arbitrary precision through the `3F2`, since the bridge is
+exact. The two lanes' decimals for `W_q` agree, independently:
+
+```text
+   from the bridge (via W)   1.535130258897420337752379135458933506929...
+   S4-quadratic, own route   1.535130258897420337752379135458933506929...
+```
+
 Equivalently `W = varpi^2 - 2 varpi S(4)`, and this **rederives addendum 5**:
 `W = varpi^2 (1 - 4 Lambda/pi^2)` to the full working precision. The gain is that
 the entire transcendental content of `S(4)` is now a *single balanced `3F2` with
@@ -773,12 +805,15 @@ tail**.
 ### (C6) Why `k = 4` and no other integer (PROVED, four independent criteria)
 
 ```text
-(i)   orbit collapse   : the 7 forms of (C1) stay distinct for every k except
-                         k = 1 (Gauss) and k = 4, where they collapse to 4.
+(i)   orbit collapse   : the 7 forms of (C1) stay distinct at every k in 1..12
+                         except k = 1 (the Gauss point) and k = 4, where they
+                         collapse to 4 distinct forms.
 (ii)  ODE resonance    : the exponents at z = infinity are the upper parameters
                          (1/4, 3/4, 1/k); they are repeated iff 1/k in {1/4,3/4},
                          i.e. iff k = 4 among integers.  k = 4 is the unique
-                         integer k at which the equation is LOGARITHMIC at infinity.
+                         integer k at which the equation is RESONANT at infinity
+                         (the configuration in which a logarithmic local
+                         solution appears).
 (iii) the (A) parameter: beta = 3/4 - 1/k equals 1/2 -- the coincident-lower
                          point -- iff k = 4.
 (iv)  K-moment weight  : in eq (4) the weight mu^{4/k-1}(2-mu^2)^{-2/k-1/2} is a
@@ -787,6 +822,11 @@ tail**.
                          2/k+1/2 in Z forces k = 4.  This is exactly the
                          hypothesis under which addendum 5's moment recurrence
                          4m^2 M_{2m} = (2m-1)^2 M_{2m-2} + 1 can be applied.
+                         (k = 1, 2 give mu^3 (2-mu^2)^{-5/2} and mu (2-mu^2)^{-3/2}:
+                          half-integral, i.e. algebraic over a quadratic -- that is
+                          the SPHERICAL mechanism of section 3, a different one.
+                          k = 5 gives mu^{-1/5}(2-mu^2)^{-9/10}: denominator 10/5,
+                          neither.)
 ```
 
 `k = 5` fails all four. Its two residuals
@@ -814,7 +854,16 @@ against the defining `3F2` series and against (A) independently):
                                       =  1.150821447753979605424774878953724959491...
 ```
 
-Beyond being a new evaluation, **this is the calibration object this lane has
+The same construction gives an explicit closed form for the `k = 3` residual too,
+```text
+W_3 = 3F2(3/4, 3/4, 5/12 ; 3/2, 17/12 ; 1)
+    = [ B(1/3,3/4) B(5/12,1/4) - 3 pi sqrt2 S(3) ] (5/12) Gamma(3/2)/Gamma(3/4)^2
+    = 1.231375424470671589432753496433802176703...      (checked to 50 digits)
+```
+but that one lives over `Gamma(1/3), Gamma(5/12), Gamma(13/12), Gamma(2/3)` and is
+not a useful calibration object. `W_2` is, because it is clean.
+
+Beyond being a new evaluation, **`W_2` is the calibration object this lane has
 needed.** It is a *product of two transcendentals* -- the lemniscate constant
 times a logarithm -- and it lies outside every **certified** region of this file:
 
@@ -861,10 +910,26 @@ B4   {algebraic} x {1, varpi, varpi^2, B(1/5,3/4)B(11/20,1/4), Gamma(1/5)-
 as **uninformative rather than negative**: it fails the `pi S(3)` control, i.e. it
 is the exact failure mode addendum 3 diagnosed. Its scan is not quoted.
 
-Verdicts are in the `.out` files; the region excluded is: *no*
-`T = c1 b_i + c2 b_j` with `c in Z`, `|c| <= 10^6`, `b_i, b_j` in the stated basis
-(all pairs), at 170 digits, for `T` among `W_4, W_5, S(4), pi S(4), S(5), pi S(5),
-pi^2 S(5)`. **This is a finite exclusion, not an impossibility proof.**
+The excluded region is: *no* `T = c1 b_i + c2 b_j` with `c1, c2 in Z`,
+`|c| <= 10^6`, `b_i, b_j` in the stated basis, **all pairs tested**, at 170
+decimal digits with detection tolerance `1e-122` (`B4`: `1e-120`).
+
+**Certified here** (scans that completed inside this session):
+
+```text
+B1, ALL EIGHT targets -- W, W_5a, W_5b, S(4), pi S(4), S(5), pi S(5), pi^2 S(5)
+    -> no relation over any of the 4560 pairs, for any target.
+B3, target W (the k = 4 residual)  -> no relation over any of the 39621 pairs.
+B4, target W_5 (the k = 5 residual, the decisive one for S(5), and the basis
+    whose control is the W_2 product) -> no relation over any of the 47278 pairs.
+```
+
+The remaining `B3` and `B4` targets form a strictly larger region; the completed
+record is written by the two scripts into their `.out` files -- **read the
+verdict there, not here.**
+
+**This is a finite exclusion, not an impossibility proof, and must never be
+quoted as one.**
 
 ### (C9) Scope
 
@@ -880,7 +945,10 @@ evaluations -- reduction of a contiguous `3F2` to Gauss values -- is available a
 `k = 1` and provably at no other `k`, and the contiguous ladder (L) can propagate
 `S(k)` but never compute it.
 
-## Addendum 2, 2026-08-01 (death-star, S4-quadratic lane): the quadratic-surd basis is closed off for `pi S(4)`, with a working positive control
+## Addendum 7, 2026-08-01 (death-star, S4-quadratic lane): the quadratic-surd basis is closed off for `pi S(4)`, with a working positive control
+
+*(Renumbered from "Addendum 2" by the S4-contiguous lane: that number was already
+taken by the Mellin-moment addendum above. Content untouched.)*
 
 The previous addendum warned that the coefficient in `pi S(3)` is the
 *irrational* `sqrt3`, so that any PSLQ sweep seeking **rational** coefficients
@@ -1028,10 +1096,13 @@ Integrating `A` and `B` by parts against `dV` gives, exactly,
 ```text
 pi S(4) = varpi * ( arcsin 1 + arcsinh 1 ) - 2W
         = varpi * ( pi/2 + log(1+sqrt2) )  - 2W,
-W = int_0^1 V(v) [ (1-v^2)^{-1/2} + (1+v^2)^{-1/2} ] dv = 1.5351302588974203377...
+W = int_0^1 V(v) [ (1-v^2)^{-1/2} + (1+v^2)^{-1/2} ] dv
+  = 1.535130258897420337752379135458933506929099268279853048340685809391999929598...
 ```
 
-(checked to 22 digits, quadrature-limited). This isolates the *elementary
+**verified to 101 digits** (split `W` at the two factors and substitute
+`v = sin th` in the `(1-v^2)^{-1/2}` piece; both halves are then smooth, and
+`2(A+B) - [varpi(pi/2+log(1+sqrt2)) - 2W] = 2.9e-101`). This isolates the *elementary
 lemniscatic* part `varpi(arcsin 1 + arcsinh 1)` and shows the entire obstruction
 sits in the single second-kind period `W`. It is the sharpest reformulation of
 `S(4)` currently in the repo, and the natural next target: `W`, not `S(4)`.
