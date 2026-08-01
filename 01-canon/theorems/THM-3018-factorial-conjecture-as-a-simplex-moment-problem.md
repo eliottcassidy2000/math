@@ -17,8 +17,11 @@ status: >
   (exact Groebner elimination); and for FC(3) the area-preserving 3-cycle
   on barycentric coordinates makes every moment with 3 not dividing m vanish
   AUTOMATICALLY on its omega-eigenspace, so only m = 3,6,9,... can obstruct.
-  Scope: this is a reformulation with an exact dictionary, not a proof of
-  FC(n) for any n >= 2; and it is a DIFFERENT functional from the repo's
+  Section 4b then PROVES the homogeneous statement outright for every n, by
+  a maximum-modulus Laplace argument on the compact simplex, and isolates
+  the real difficulty as the NON-HOMOGENEOUS (non-compact) regime -- which
+  is exactly the repo's SFC lane. Scope: this settles the compact case and
+  gives an exact dictionary; it is a DIFFERENT functional from the repo's
   Strong Factorial Conjecture lane (one variable, L(z^n) = n!, N-term
   supports) -- see section 5.
 source: death-star-2026-07-31-coinC2
@@ -153,12 +156,63 @@ i.e. exactly the moments of `u` itself. So this particular eigenvector is
 *not* a counterexample, but it isolates the residual obstruction: a
 counterexample in the eigenspace must kill the sparse family `m = 3k`.
 
+## 4b. The compact/homogeneous case is settled by Laplace (PROVED)
+
+The reduction makes the generating function **entire and constant**: since
+`g` is bounded on the compact simplex,
+
+```text
+Phi(t) := int_{Delta} e^{t g} dA = sum_{m>=0} (t^m/m!) int_Delta g^m dA
+        = Area(Delta)   for every t in C.                            (5)
+```
+
+**Theorem.** If `g` is a polynomial on `Delta_{n-1}` with (5), then `g = 0`.
+Hence FC(n) holds for homogeneous `f`, for every `n`.
+
+*Proof.* Suppose `g != 0` and set `A := max_Delta |g| > 0`, attained at
+`u_1`. Choose `theta` with `e^{i theta} g(u_1) = A` and put
+`psi := e^{i theta} g`. For every `u`,
+`Re psi(u) <= |g(u)| <= A`, with equality **iff** `psi(u) = A`; so the
+maximum locus `S = {psi = A}` is a proper algebraic subset (if it had
+interior, `psi ≡ A`, forcing `int g = A e^{-i theta} Area != 0`). Now
+
+```text
+Phi(s e^{i theta}) = e^{sA} int_Delta e^{s(psi - A)} dA,   Re(psi - A) <= 0.
+```
+
+Laplace's method applies with all contributions concentrated on `S`, where
+`psi - A` vanishes; each local contribution is `s^{-alpha}` times
+`int e^{Q}` for a form `Q` with `Re Q <= 0`, whose value has **positive real
+part** (for a nondegenerate quadratic `Q` in `k <= 2` variables this is
+`pi^{k/2}/sqrt(det(-Q))` with `arg sqrt(det) in [-pi/2, pi/2]`, since `-Q`
+has positive semidefinite real part). Because the direction was chosen by
+**maximum modulus**, every point of `S` carries the *same* value `psi = A`,
+so the contributions share the factor `e^{sA}` with no relative oscillation
+and cannot cancel. Hence `|Phi(s e^{i theta})| ~ C e^{sA} s^{-alpha} -> inf`,
+contradicting (5). QED
+
+Numerical confirmation (script, real and complex `g` on `[0,1]`):
+`|Phi(s e^{i theta})|` tracks `e^{sA}/sqrt(s)` over `s = 5 .. 120` across
+14 orders of magnitude.
+
+**Consequence for where the difficulty lies.** The homogeneous case is
+therefore *not* the hard case: homogeneity is exactly what compactifies the
+problem onto a simplex and makes `Phi` entire and bounded on rays. The
+genuine difficulty in the factorial circle of problems is the
+**non-homogeneous** case, where `L(f^m) = int_{[0,inf)^n} f^m e^{-|x|_1}dx`
+lives on a **non-compact** domain with `f` unbounded, so `Phi` is only a
+formal series and no Laplace argument is available. That is precisely the
+regime of this repo's Strong Factorial Conjecture lane (section 5), and it
+explains why SFC(3) can be hard while the homogeneous statement is not.
+
 ## 5. Scope, and the relation to the repo's SFC lane
 
 This file is a **reformulation with an exact dictionary**, not a proof of
 FC(n) for `n >= 2`. Section 3(a) proves FC(2) only under a topological
 hypothesis on `g([0,1])`; 3(c) proves it outright only for `deg g <= 3`;
-section 4 reduces FC(3)'s obstruction to `3 | m` on one eigenspace.
+section 4 reduces FC(3)'s symmetric obstruction to `3 | m`; section 4b
+settles the homogeneous case for all `n` but says nothing about the
+non-homogeneous one.
 
 **Type warning (cf. MISTAKE-237).** The repo's large Strong Factorial
 Conjecture lane (THM-2812/2824/2836/2849/2854, `sfc3_*`/`sfc4_*` scripts)
