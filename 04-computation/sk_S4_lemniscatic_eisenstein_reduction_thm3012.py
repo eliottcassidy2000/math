@@ -53,17 +53,23 @@ def check(name, cond, extra=""):
 
 
 # --------------------------------------------------------------- C1: S(4) values
-print("C1  S(4) by three independent routes (dps 60)")
+print("C1  S(4) by three independent routes")
 mp.mp.dps = 60
 t0 = time.time()
-S4_hyper = mp.hyper([mp.mpf(1)/4, mp.mpf(3)/4, mp.mpf(1)/4], [1, mp.mpf(5)/4], 1)
+# the defining 3F2 at unit argument is the expensive one -- 40 digits is plenty to
+# pin the two integral routes to it; C5 then carries the pair to 200 digits.
+with mp.workdps(40):
+    S4_hyper = +mp.hyper([mp.mpf(1)/4, mp.mpf(3)/4, mp.mpf(1)/4], [1, mp.mpf(5)/4], 1)
 S4_ell = mp.quad(lambda k: mp.ellipk(k**2)/(2-k**2), [0, 1])*2*mp.sqrt(2)/mp.pi
 S4_smooth = mp.quad(lambda p: (p + mp.asinh(mp.sin(p)))/mp.sqrt(1+mp.sin(p)**2),
                     [0, mp.pi/2])*2/mp.pi
-print("     3F2      =", mp.nstr(S4_hyper, 50))
-check("elliptic route  == 3F2", abs(S4_ell - S4_hyper) < mp.mpf(10)**-55)
-check("smooth  route  == 3F2", abs(S4_smooth - S4_hyper) < mp.mpf(10)**-55,
+print("     3F2 (40 digits) =", mp.nstr(S4_hyper, 38))
+check("elliptic route  == 3F2 (35 digits)", abs(S4_ell - S4_hyper) < mp.mpf(10)**-35)
+check("smooth  route  == 3F2 (35 digits)", abs(S4_smooth - S4_hyper) < mp.mpf(10)**-35,
       f"[{time.time()-t0:.0f}s]")
+check("elliptic route == smooth route (55 digits)",
+      abs(S4_ell - S4_smooth) < mp.mpf(10)**-55)
+S4_hyper = S4_smooth   # high-precision reference for the later checks
 
 # ------------------------------------------------------- C2: the moment recurrence
 print("C2  exact K-moment recurrence  4m^2 M_2m = (2m-1)^2 M_2m-2 + 1")

@@ -72,10 +72,11 @@ IV. RECIPROCAL-CLOSED-UP-TO-SCALAR ROOTS  =>  R_k = R_(d-k) EXACTLY
   VERDICT IV: EXACT PALINDROMY
 
 ==========================================================================
-V. TWO-NUMBER SIGN CLASSIFIER  (proved necessary condition + census)
+V. TWO-NUMBER SIGN CLASSIFIER  (quantitative necessary condition + census)
 ==========================================================================
   PROVED (from I + III): asymptotic global no-return REQUIRES
-        C(N) >= 0 >= C(N*).
+        C(N_d) >= -O(1/d),   C(N_d*) <= O(1/d).
+  Zero-tolerance signs at finite d are only a stronger census observation.
   OBSERVED (census below, NOT proved): on these families the pair of
   signs (C(N), -C(N*)) also determines the global shape.
 
@@ -96,9 +97,9 @@ V. TWO-NUMBER SIGN CLASSIFIER  (proved necessary condition + census)
    ... 42 families total
 
   classifier agreement: 42/42
-  proved necessary condition C(N)>=0>=C(N*) held on every INCREASING case: True
+  observed strict sign screen C(N)>=0>=C(N*) on every INCREASING case: True
   VERDICT V: CLASSIFIER MATCHES ON EVERY CENSUS FAMILY
 
 ==========================================================================
-SUMMARY  I=True  II=True  III=True  IV=True  V(necessary)=True  V(classifier census)=True
+SUMMARY  I=True  II=True  III=True  IV=True  V(strict-screen census)=True  V(classifier census)=True
 ==========================================================================

@@ -168,7 +168,7 @@ named in THM-3001 section 6 exists: roots `1^u 3^(8u) 100^(51u)` (`d=60u`) have
     C(mu)=9523726464503/27595322265625=+0.34512104...,
     C(mu*)=-4425627648481/2464928260081=-1.79543872...,
 
-so THM-3001's `C(mu)>=0>=C(mu*)` holds strictly, the root measure has fixed
+so THM-3001's limiting screen holds with a fixed strict margin, the root measure has fixed
 compact support (bounded jets at both ends), and yet the circuit is
 `+...+-----+` with a strict interior dip that persists and widens proportionally
 to `d`.  Verified exactly at `u=1`.
@@ -221,8 +221,9 @@ strong; the blind spot is precisely the W-shaped palindromes.
 - THM-3000, THM-3001 sections 1--5 and THM-3003 are **untouched**: they concern
   the two ends and the reversal involution, all of which remain exact.  Only
   THM-3001 section 6 is retracted.
-- THM-3001's proved necessary condition `C(mu)>=0>=C(mu*)` for asymptotic global
-  no-return still stands, and is still the cheap two-scalar screen.  What is now
+- THM-3001's repaired quantitative necessary condition
+  `C(mu_d)>=-O(1/d), C(mu_d*)<=O(1/d)` for asymptotic global no-return still
+  stands and is still the cheap two-scalar screen.  What is now
   known is that it is **not** sufficient, and no bounded set of moments can be.
 - This strengthens THM-3001 section 2 in spirit: not only can no reversal-closed
   class prove no-return, but the obstruction is not even a low-moment condition.

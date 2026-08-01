@@ -1,0 +1,9 @@
+THM-3001 INDEPENDENT REVERSAL FIXED-LOCUS REFEREE
+method=exact coefficient arithmetic;no import from primary companion
+{"exhaustive_equivalence":{"palindromic_rows":171,"positive_coefficient_rows":3267}}
+{"fixed_locus":{"equivariant_path_midpoints":3,"even_antipalindrome_checks":3,"odd_fixed_wall_checks":4}}
+{"constant_ratio_not_newton_equality_control":{"coefficients":["1/1024","5/64","5/4","5","5","1"],"constant_ratio":"2","degree":5,"distinct_negative_real_roots":5}}
+{"balanced_controls":{"exact_balanced_two_cluster_controls":114}}
+{"asymptotic_scope":{"finite_exact_sign_without_margin":false,"from_log_circuit_nonnegative":"C(mu_d)>=-O(1/d)","from_reversed_log_circuit_nonnegative":"C(mu_d*)<=O(1/d)"}}
+record_digest=1d0484648a8c6abed41e9c67d8d679e40fa34bd40f4f94b6f71a2cb3fb47a810
+all_exact_checks=PASS

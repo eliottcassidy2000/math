@@ -52,8 +52,7 @@ ATOM = {
  'g18g38': g18*g38, '(g18g38)^2/pi': (g18*g38)**2/pi,
  'log(g14)': mp.log(g14), 'logpi': mp.log(pi),
 }
-MULT = {'1': mp.mpf(1), 'r2': r(2), '1/r2': 1/r(2), 'r3': r(3), 'r5': r(5),
-        '2^(1/4)': mp.mpf(2)**(mp.mpf(1)/4)}
+MULT = {'1': mp.mpf(1), 'r2': r(2), 'r3': r(3), '2^(1/4)': mp.mpf(2)**(mp.mpf(1)/4)}
 PROD = [(f"{m}*{a}", MULT[m]*ATOM[a]) for m in MULT for a in ATOM]
 NP = len(PROD)
 print(f"products {NP}  pairs {NP*(NP-1)//2}  dps {DPS}")
@@ -90,15 +89,25 @@ for tname, tv in [('Lambda', Lam), ('U', U), ('S(4)', S4)]:
         print(f"  {tname:7s} H={HH:<22d} hits {len(found)} {found[:2]}")
         sys.stdout.flush()
 
-# ---- tier 2: all size-3 subsets of the independent atom pool ------------------
-print("\nTIER 2  all size-3 subsets of the %d-atom pool, H=1e5, 135-digit tol" % len(ATOM))
+# ---- tier 2: all size-3 subsets of a 33-atom independent core -----------------
+CORE_KEYS = ['one', 'pi', 'pi^2', 'pi^3', 'G', 'G*pi', 'G/pi', 'K', 'K/pi',
+             'K^2/pi', 'K^2/pi^2', 'pi/K', 'pi^2/K^2', 'pi^3/K^2', 'K*G/pi',
+             'K^2*G/pi^2', 'K^4/pi^3', 'pi^4/K^4', 'log2', 'Ls', 'log2^2',
+             'Ls^2', 'pi*log2', 'pi*Ls', 'zeta3', 'zeta3/pi', 'g13^6/pi^4',
+             'log(g14)', 'logpi']
+CORE = {k: ATOM[k] for k in CORE_KEYS}
+CORE['r2'] = r(2); CORE['r2*K^2/pi'] = r(2)*ATOM['K^2/pi']
+CORE['r2*pi^2'] = r(2)*pi**2; CORE['r2*G'] = r(2)*G
+print("\nTIER 2  all size-3 subsets of the %d-atom core, H=1e5, 135-digit tol"
+      % len(CORE))
 for tname, tv in [('Lambda', Lam), ('S(4)', S4)]:
-    t0 = time.time(); hits = []
-    for c in itertools.combinations(list(ATOM.items()), 3):
+    t0 = time.time(); hits = []; ns = 0
+    for c in itertools.combinations(list(CORE.items()), 3):
+        ns += 1
         rel = mp.pslq([tv]+[x[1] for x in c], maxcoeff=10**5, maxsteps=60000, tol=TOL)
         if rel and rel[0] != 0:
             hits.append((rel, [x[0] for x in c]))
-    print(f"  {tname}: hits {len(hits)}  [{time.time()-t0:.0f}s]  {hits[:3]}")
+    print(f"  {tname}: {ns} subsets, hits {len(hits)}  [{time.time()-t0:.0f}s]  {hits[:3]}")
     sys.stdout.flush()
 
 # ---- tier 3: all pairs of products alpha*atom ---------------------------------

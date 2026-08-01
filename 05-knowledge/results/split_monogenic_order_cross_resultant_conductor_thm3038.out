@@ -1,0 +1,14 @@
+THM3038 split monogenic order conductor exact certificate
+fiber_product=A=R_x_(R/(g(a)))_R[T]/(g)
+cross_resultant_ideal=(Res(T-a,g))=(g(a))
+lattice_determinant=-g(a);dvr_gluing_length=v(g(a))
+singleton_conductor_slice=(g(a))*R*e;idempotent=e=g(T)/g(a)
+split_discriminant=Disc(g)*g(a)^2
+complement_resolver=W=y^2+(a+c2)y+c1;basis_det=g(a)
+cyclic_defects=quartic_gluing=resolvent_order=R/(g(a))
+order_mismatch=f=T*(T^3-T+p);complement_disc=4-27p^2
+order_mismatch=resolvent=W^3+W^2-p^2;raw_disc=p^2*(4-27p^2)
+owner_hostile=g(1)=1-3u-2v;local_unit=1
+owner_cusp=108*(u^3-v^2);branches=(T-2r)*(T+r)^2
+thm2570_source_coordinate_pole_order=-2
+all_exact_controls=PASS

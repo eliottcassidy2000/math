@@ -38,6 +38,66 @@ Format per entry:
   explicitly) until after that step; casting an address identity into a field
   does not license field-typing its order argument.
 
+## MISTAKE-341 (2026-08-01, THM-3001 promotion audit) -- an asymptotic two-end expansion was read as an exact finite curvature sign
+
+- **What was assumed:** from
+  `log(R_k/R_(k-1))=C(mu_d)d^-2+O(d^-3)` and its reversed analogue, the
+  candidate asserted the finite-degree necessary screen
+  `C(mu_d)>=0>=C(mu_d*)`.  It then said any positive reciprocal curvature at
+  one width refutes global no-return.  The same section slid from the proved
+  conclusion "the ratio sequence is constant" to Newton equality `R_k=1`.
+- **First failed implication / sharp hostile:** multiplying a nonnegative
+  circuit by `d^2` gives only `C(mu_d)>=-O(1/d)`; at the other end it gives
+  `C(mu_d*)<=O(1/d)`.  A curvature of size `1/(2d)` can be positive while an
+  allowed `d^-3` remainder keeps the reversed circuit nonnegative.  Separately,
+  the positive coefficient polynomial with normalized coefficients
+  `h_k=2^(-k(k-1)/2)` has the constant ratio `R_k=2`, so a constant ratio need
+  not mean equality in every Newton inequality.  Constant-ratio and
+  Newton-equality are different conclusions; the former is all that the
+  reversal-closed class argument supplies.
+- **Exact repair / strongest survivor:** audited THM-3001 now states the
+  quantitative screen and only concludes `liminf C(mu_d)>=0` and
+  `limsup C(mu_d*)<=0`, or exact limiting signs under a fixed margin.  A
+  reciprocal curvature bounded below by a positive constant still refutes
+  eventual no-return.  The audit also proved the exact converse fixed-locus
+  law: ratio palindromy is equivalent to
+  `N*(x)=A^-1 N(x/B)`, its circuit is antipalindromic, and every odd-degree
+  reversal-equivariant path hits the central circuit wall.
+- **Rule:** an `O(d^(-r-1))` remainder leaves an `O(1/d)` ambiguity after
+  rescaling the leading invariant.  State finite signs only with a remainder
+  bound or a fixed margin; otherwise state liminf/limsup.  Do not silently
+  upgrade a constant Newton-ratio sequence to the equality sequence `R=1`.
+
+## MISTAKE-342 (2026-08-01, THM-3030 hostile audit) -- finite slot fitting was promoted as an all-order law, and its next test was assigned to the terminal slot
+
+- **What was assumed:** the `j<=8` corner tables were said to prove the unique
+  all-order odd-slot sign/constant laws.  The canonical companion also described
+  two disjoint interpolation grids and out-of-sample checks that it never runs,
+  and the theorem named `P_9` as the next test of `c_5`.
+- **First failed implication / evidence defect:** finitely many values never
+  uniquely determine an unrestricted sequence.  The current script only reloads
+  frozen tables; neither grid engine nor its referenced pickle is stored.  More
+  sharply, `c_m` occupies slot `k=2m-1` under the explicit hypothesis `k<j`.
+  For `m=5`, `k=9` is the exceptional terminal slot of `P_9`, so it supplies no
+  test at all; the first nonterminal occurrence is `P_10`.
+- **Exact repair / strongest survivor:** audited THM-3030 is scoped
+  `FINITE-EXACT TABLE-INTERNAL` through `j=8`.  A new independent companion
+  checks all eight table hashes, `48` visible odd slots, `36` even-zero slots,
+  and the corrected `(-1)^(j+m)` sign.  It also discovers the exact finite
+  identity
+  `(-1)^(j-1)jC_j=46 sum_(s=1)^(M-1)s^j+20M^j+K_j`, so Faulhaber proves on the
+  visible range `c_m^C=46|B_(2m)|/(2m)!`.  This closes the observed denominators
+  `6,360,15120,604800` without pretending to prove the continuation.
+- **New decisive tests:** the Bernoulli continuation preregisters
+  `c_5^C=23/23950080` at `P_10`.  At `P_12` it predicts
+  `c_6^C=15893/653837184000`, with `15893=23*691` from
+  `B_12=-691/2730`; this is the first test that separates the Bernoulli law from
+  the observed reduced-numerator-`23` extrapolation.
+- **Rule:** distinguish an exact finite atlas from an all-order theorem; keep
+  reported build controls separate from executable evidence; and compute the
+  first legal index from every strict slot inequality before advertising the
+  next experiment.
+
 ## MISTAKE-339 (2026-08-01, pre-promotion THM-3000/3003 audit) -- the leading third jet was charged as a remainder and an asymptotic threshold was reported as an exact finite bound
 
 - **What was assumed:** the first THM-3000 candidate imposed
@@ -128,9 +188,10 @@ Format per entry:
   most two clusters (exhaustive, `936` configurations, zero violations).  The
   correct general law is a **cluster count**: `m` well-separated clusters give up
   to `2m-3` sign changes, attained for every `m<=6`.  THM-3001's proved
-  necessary condition `C(mu)>=0>=C(mu*)` survives; it is not sufficient, and no
-  bounded set of moments can be, since the sign-change count is a property of the
-  support structure.
+  quantitative necessary condition
+  `C(mu_d)>=-O(1/d), C(mu_d*)<=O(1/d)` survives (MISTAKE-341); it is not
+  sufficient, and no bounded set of moments can be, since the sign-change count
+  is a property of the support structure.
 - **AMENDMENT (same day, klein-S428, after an independent adversarial pass).**
   The diagnosis above is the *dominant* mechanism but not the only one, and one
   circulating description of it is too strong.  Exact split over the `51` failing
