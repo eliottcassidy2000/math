@@ -16,7 +16,7 @@
   and the uniform flag-obstruction arithmetic; its axiom audit contains only
   `propext`, `Classical.choice`, and `Quot.sound`, with no `native_decide`.
   Source/output/semantic/Lean SHA-256:
-  `291818c42929dabf3b261ca91604d5f0fdfa16a210faf51e19bcac71a38a1b41` /
+  `23be12885b44efb1e23acfb6a58b9dd285ef57cba666c60f9235bde05fc27af5` /
   `9e33756dd352042ba6a4571a0af1af626e70e0991e94624c0dfe18711a229dbc` /
   `756ae7ed291fc438648ed76f57b07eae1cde4a1879b184f9564b6ca8adc94f48` /
   `6f3ab284fc1936ebc0b565bf812fcdc38e6940d17e93d607b802f80d6261bc91`.

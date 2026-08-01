@@ -9,6 +9,35 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-340 (2026-08-01, THM-1254 Lean full-invoice consumer) -- integer tooth addresses were generalized to rationals across a discrete gap step
+
+- **What was done:**
+  `LRCCoherentBlockerChronology.binary_speed_descent_same_edge_full_invoice`
+  typed the carrier address `c`, gap address `k`, and binary relative digit
+  `delta` as rationals.  Its reflected branch then tried to infer
+  `0<=c-k-delta` from `0<=k<c` and `delta in {0,1}`.  The paper theorem and
+  the preceding Lean address lemmas all use integer tooth addresses.
+- **Why it was wrong / minimal witness:** over the rationals take
+  `(c,k,delta)=(1/2,0,1)`, marked positions `(a,aNext)=(0,1)`, and reflected
+  data `n0R=nrR=DeltaR=s0R=1`, `residualR=1/2`.  Complete the unused original
+  data by `n0=nr=Delta=s0=1`, `residual=2`.  Then every identity and positivity
+  hypothesis holds, with the reflected identity following from
+  `residualR=1+1*(1/2-0-1)`, but the asserted invoice would require
+  `1<=1/2`.  The original disjunct is unavailable because `aNext<a` is false.
+  Thus the theorem statement itself, not merely its attempted tactic proof,
+  was false at the generalized rational type.
+- **Exact repair / strongest survivor:** only `c,k,delta` in the full-invoice
+  consumer are restored to `Int`; their two nonnegative factors are then cast
+  into the rational residual identities.  All speeds, drifts, and residuals
+  remain rational.  There are no downstream calls to the theorem, direct Lean
+  elaboration passes, and its axiom report is exactly within
+  `{propext, Classical.choice, Quot.sound}`.  THM-1254's paper statement and
+  mathematical consequence are unchanged.
+- **Rule:** when a proof uses `k<c => k+1<=c`, the discreteness is a load-bearing
+  hypothesis.  Keep addresses in `Int` (or state the unit-gap hypothesis
+  explicitly) until after that step; casting an address identity into a field
+  does not license field-typing its order argument.
+
 ## MISTAKE-339 (2026-08-01, pre-promotion THM-3000/3003 audit) -- the leading third jet was charged as a remainder and an asymptotic threshold was reported as an exact finite bound
 
 - **What was assumed:** the first THM-3000 candidate imposed
@@ -79,7 +108,6 @@ Format per entry:
   generally creates an infinite tail. A finite residue quotient must retain
   zero and negative rays whenever the other slots already have strict scalar
   surplus.
-
 ## MISTAKE-337 (2026-07-31, THM-3001 section 6 classifier census) -- a 42/42 census held the failing axis fixed
 
 - **What was done:** THM-3001 section 6 proposed that the two end curvatures
