@@ -1,0 +1,40 @@
+==========================================================================
+1. SHAPE OF P_5 AND P_6
+==========================================================================
+  P_5: 1313 terms (want 1313)  degrees (10,20,10)  max(b+2c)=20
+        ansatz 1331  missing 18  all at corners: True  -> OK
+  P_6: 2176 terms (want 2176)  degrees (12,24,12)  max(b+2c)=24
+        ansatz 2197  missing 21  all at corners: True  -> OK
+
+==========================================================================
+2. THE SEVEN PRE-REGISTERED PREDICTIONS (recorded before P_5 existed)
+==========================================================================
+   A_5[M^6]   predicted 23/15    actual 23/15     CONFIRMED
+   A_5[M^5]   predicted -12/5    actual -12/5     CONFIRMED
+   A_5[M^4]   predicted 47/24    actual 47/24     CONFIRMED
+   E_5[M^6]   predicted 23/15    actual 23/15     CONFIRMED
+   E_5[M^5]   predicted -11/5    actual -11/5     CONFIRMED
+   E_5[M^4]   predicted 37/18    actual 37/18     CONFIRMED
+   E_5[M^3]   predicted 0        actual 0         CONFIRMED
+
+==========================================================================
+3. E_j IS THE V-CORNER RESCALED (simplifies THM-3014 sec 2)
+==========================================================================
+   E_j := [D^(2j)]P_j/c_j equals [V^(2j)]Q_j / 9^j, because D is linear in V
+   with slope -3 and deg_V Q_j = 2j.  Computed from the V-corner above:
+   E_5 = {M^6: 23/15, M^5: -11/5, M^4: 37/18, M^2: -301/810, M^0: 16866997/648}
+
+==========================================================================
+4. THE NEW [M^(j-3)] LAW, AND WHAT IT EXPLAINS
+==========================================================================
+   [M^(j-3)] = (-1)^j * mu * (j-1)(j-2),   mu = 707/23040 (A), 301/9720 (E)
+   j=4 A: law 707/3840     vs 707/3840      OK   (THM-3011's 707/3840)
+   j=4 E: law 301/1620     vs 301/1620      OK   (THM-3014's 301/1620)
+   j=5 A: law -707/1920    vs -707/1920     OK   (P_5)
+   j=5 E: law -301/810     vs -301/810      OK   (P_5)
+   => the two constants the canon flagged as unexplained are the j=4
+      members of a single one-parameter family.
+
+==========================================================================
+SUMMARY  all checks pass: True
+==========================================================================
