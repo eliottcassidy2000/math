@@ -1,0 +1,45 @@
+==========================================================================
+1. SHAPE AND SUPPORT
+==========================================================================
+  rows 717  M-deg 0..8  U-deg 0..16  V-deg 0..8  max(b+2c) 16
+  integer coefficients: True   support violations b+2c>16: 0
+  ansatz 729  present 717  missing 12
+  every absence at a corner (16,0)/(0,8)/(0,0): True
+  absences: [(2, 0, 0), (2, 0, 8), (2, 16, 0), (6, 0, 0), (6, 0, 8), (6, 16, 0), (7, 0, 0), (7, 0, 8), (7, 16, 0), (8, 0, 0), (8, 0, 8), (8, 16, 0)]
+  VERDICT 1: OK
+
+==========================================================================
+2. DIGEST
+==========================================================================
+  sha256(canonical json) = 200fae225af6c381733a386f31e107b81e6d33104699e5f69e8d7cd7e445d163
+  matches recorded digest: True
+
+==========================================================================
+3. TOP U-COLUMN EQUALS THM-3011's A_4, IN FULL
+==========================================================================
+  [U^16] P_4 / c_4 = {M^5: -23/10, M^4: 3, M^3: -47/24, M^1: 707/3840, M^0: -15797937/128}
+  THM-3011 A_4      = {M^5: -23/10, M^4: 3, M^3: -47/24, M^1: 707/3840, M^0: -15797937/128}
+  EXACT MATCH (including 707/3840 and -15797937/128): True
+  Those two were NOT predictable from the frozen-table pattern, so this is
+  a genuine independent confirmation of THM-3011 section 2's reconstruction.
+
+==========================================================================
+4. THM-3011 SECTION 2a LAWS, FROM THE FROZEN TABLE ONLY
+==========================================================================
+  [M^(j+1)] = (-1)^(j+1) 46/(j(j+1))   j=2,3: [True, True]   predicts A_4[M^5] = -23/10   actual -23/10   OK
+  [M^j]     = (-1)^j 12/j              j=2,3: [True, True]   predicts A_4[M^4] = 3   actual 3   OK
+  [M^(j-1)] = (-1)^(j+1) 47/24         j=2,3: [True, True]   predicts A_4[M^3] = -47/24   actual -47/24   OK
+  VERDICT 4: laws hold and predict A_4 top three
+
+==========================================================================
+5. CORRECTED CORNER STATEMENT
+==========================================================================
+  P_3 absences: [(1, 0, 0), (1, 0, 6), (1, 12, 0), (5, 0, 0), (5, 0, 3), (5, 0, 6), (5, 12, 0), (6, 0, 0), (6, 0, 6), (6, 12, 0)]
+  non-corner absences at j=3: [(5, 0, 3)]
+  => 'the absences are always the three corners' is TRUE at j=4 but FALSE at
+     j=3, where (5,0,3) is absent and (0,3) is not a corner.  Record the
+     enumerated lists, not the generalisation.
+
+==========================================================================
+SUMMARY  all checks pass: True
+==========================================================================
