@@ -1,0 +1,20 @@
+LRC14 reflected upper-median star/chord research scout
+status=FINITE-EXACT scale-one low-two-star bank + VERIFIED deterministic D9 sample;not an all-spread closure
+source=04-computation/lrc14_j7_reflected_median_star_chord_scout_20260801.py
+source_sha256=b0eba7785cd73ecf76d2887f3d36316eae6980a76652058daa2587ecbe031276
+ordered_two_star=boundary centre e_* with e_*j=L/14 mod L;second centre is least body label distinct from e_*;all order/orientation data retained
+low_relation=distinct p,q are adjacent iff (p+q)/gcd(p,q)<=7
+all_nine_two_star_edges_low=11856 ordered primitive rays;27 integer levels;maximum primitive level 180
+scale_one_exact_command=python3 04-computation/lrc14_j7_reflected_median_star_chord_scout_20260801.py --ray-audit --body-limit 649 --scale 1
+scale_one_exact_checks=649*11856=7694544;profile_checks=569822;failures=0
+scale_one_weakest_margin=11339689171127830881/99637927188239340409565;E=(2,4,6,9,11,12);L=5544;j=2970;centre_slot=0;second_slot=1;ray=(12,6,4,18,3,9);word=(12,6,4,18,3,9);winning_edge_slots=(0,5);gain=43659/138274291;debt=20120188378425768804/99637927188239340409565
+scale_boundary=this exact bank proves only common dilation scale 1;transport through every integer dilation remains OPEN
+D9_sample_command=python3 04-computation/lrc14_j7_reflected_median_star_chord_scout_20260801.py --m 1 --spread 9 --sample 128
+D9_sample_checks=83072=649*128;low_graph_disconnected_words=64/128;intrinsic_high_graph_connected_checks=41536
+D9_common_cell_high_MST_failures=0
+D9_weakest_high_MST_margin=485197035609/5498467813363;E=(1,2,4,5,10,12);L=840;j=450;word=(10,2,3,8,1,9);high_edges=((0,2),(0,3),(0,4),(0,5),(1,5),(2,3),(3,4),(3,5),(4,5));credit=858473439/9463800023;debt=13576032450/5498467813363
+D9_two_star_MST_failures=0;D9_two_star_pair_failures=0;D9_complete_pair_failures=0
+first_failed_implication=one intrinsic high edge need not beat the whole packet debt
+high_edge_obstruction=E=(1,2,3,4,6,12);L=168;j=90;pivots_slots=(1,0);edge_slots=(0,4);edge_labels=(1,6);ordered_primitive_channel=(5,3);overlap=238/69637;universal_debt=1915198706/76797355635;margin=-1386637610224/64432981377765
+surviving_frame=if the low graph disconnects then its intrinsic high complement connects;all five Hunter-tree overlaps must be evaluated on the same upper-median cell and charged once against the packet debt
+all_exact_controls=PASS
