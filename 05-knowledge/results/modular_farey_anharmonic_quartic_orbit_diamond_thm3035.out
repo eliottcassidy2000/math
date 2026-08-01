@@ -14,4 +14,5 @@ H_p_intersection_PSL_sizes=[(3, 3), (5, 6), (7, 3), (11, 3), (13, 6), (17, 6), (
 PSL_involution_alpha=-1/r;PGL_reflection_s=1/r;alias_only_at_p2=PASS
 Farey_mod2_frames=6=regular_S3
 Farey_same_frame_hostile_Fu_Fv0_Fv1_Fchild0_Fchild1=(-90, -263, -89, -177, 1)
+Farey_fixed_Gram57_hostile_endpoints_and_children=(-26, -41, -90, -1937, 47, -1913)
 all_exact_checks=PASS

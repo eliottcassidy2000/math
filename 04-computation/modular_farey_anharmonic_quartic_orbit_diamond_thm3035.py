@@ -279,6 +279,33 @@ farey_values = (
 )
 require(farey_values == (-90, -263, -89, -177, 1), "Farey hostile values")
 
+# Stronger hostile: even the endpoint signs and the exact Gram product do not
+# determine the child.  What is missing is the full integral defect lift.
+ua, va = (1, -8), (1, -7)
+ub, vb = (1, 0), (57, -1)
+require(
+    tuple(x % 2 for x in ua) == tuple(x % 2 for x in ub) == (1, 0)
+    and tuple(x % 2 for x in va) == tuple(x % 2 for x in vb) == (1, 1),
+    "fixed-Gram hostile frame",
+)
+det_a = ua[0] * va[1] - ua[1] * va[0]
+det_b = ub[0] * vb[1] - ub[1] * vb[0]
+dot_a = ua[0] * va[0] + ua[1] * va[1]
+dot_b = ub[0] * vb[0] + ub[1] * vb[1]
+require((det_a, det_b, dot_a, dot_b) == (1, -1, 57, 57), "fixed-Gram geometry")
+fixed_gram_values = (
+    farey_defect(w, ua),
+    farey_defect(w, va),
+    farey_defect(w, ub),
+    farey_defect(w, vb),
+    farey_defect(w, (ua[0] + va[0], ua[1] + va[1])),
+    farey_defect(w, (ub[0] + vb[0], ub[1] + vb[1])),
+)
+require(
+    fixed_gram_values == (-26, -41, -90, -1937, 47, -1913),
+    "fixed-Gram hostile values",
+)
+
 
 print("modular/Farey/anharmonic/quartic orbit-diamond referee")
 for p, signature in prime_rows:
@@ -290,4 +317,5 @@ print(f"H_p_intersection_PSL_sizes={psl_intersections}")
 print("PSL_involution_alpha=-1/r;PGL_reflection_s=1/r;alias_only_at_p2=PASS")
 print("Farey_mod2_frames=6=regular_S3")
 print(f"Farey_same_frame_hostile_Fu_Fv0_Fv1_Fchild0_Fchild1={farey_values}")
+print(f"Farey_fixed_Gram57_hostile_endpoints_and_children={fixed_gram_values}")
 print("all_exact_checks=PASS")

@@ -2,7 +2,7 @@
 id: THM-3035
 title: "Level-two Farey anharmonic quartic S3 orbit diamond"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The anharmonic S3 action on P1(F_p) has an exact boundary, harmonic,
   equianharmonic, and generic orbit atlas, with structural p=2 and p=3
   degenerations.  Its co-occurrence cover retains the stabilizer phase lost
@@ -19,14 +19,14 @@ related:
   - THM-3034-ordered-quartic-cross-wall-x1-14-and-diamond-quotient
 script: 04-computation/modular_farey_anharmonic_quartic_orbit_diamond_thm3035.py
 output: 05-knowledge/results/modular_farey_anharmonic_quartic_orbit_diamond_thm3035.out
-script_sha256: af88b3644cbea786e39de2509ab01c2ff55407f3769007690f009b200f0e3bd2
-output_sha256: f5cf56eb89f8e25c2be7fdc823edb2d77c9c747f162f31dd129dd474e853c352
+script_sha256: a2a4ae491e8ffd374b8a7772a0ad2bd794b58cb8d47aba73a7fc182326af5f5a
+output_sha256: 9967f0e0a04e349abbc1d573d2c8a02b79552fa91c4ad24a0f74eef5704901d1
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3035 -- the Farey / anharmonic / quartic `S_3` orbit diamond
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance
 
@@ -71,6 +71,27 @@ harmonic:       {1,-2,-1/2}                     =S3/C2,
 equianharmonic: {r:r^2+r+1=0}                   =S3/C3,
 generic:        every remaining orbit           =S3/1.    (3)
 ```
+
+Here is the uniform proof, rather than only the finite controls in the
+companion.  On the boundary, `c=(infinity 0 -1)` and `s` is a transposition,
+so the action is `S_3`.  For odd `p`,
+
+```text
+Fix(s)={-1,1}.
+```
+
+Conjugating through the three transpositions shows that their fixed loci are
+exactly the boundary and harmonic packets.  The order-three fixed locus is
+
+```text
+Fix(c)={r:r^2+r+1=0}.
+```
+
+For `p>=5` these packets are disjoint.  Every nontrivial subgroup of `S_3`
+contains an element of order two or three, so every remaining point has
+trivial stabilizer.  Finally, the order-three fixed points exist exactly when
+`F_p` contains a nontrivial cube root, namely when `p=1 (mod 3)`.
+Orbit-stabilizer now gives the generic counts below.
 
 The equianharmonic orbit is present exactly when `p=1 (mod 3)`.  Therefore
 the number of generic regular orbits is
@@ -216,9 +237,31 @@ same regular S3/V4 frame + same endpoint gate bits
   does not determine the Farey child gate.                              (17)
 ```
 
-The lost coordinate is the integral Gram/carry term in THM-2056.  This is
-why the orbit diamond organizes the two tower grammars but does not close an
-LRC or Keller inequality by itself.
+The identity
+
+```text
+F_w(u+v)=F_w(u)+F_w(v)+2u.v
+```
+
+shows that the finite packet forgets the full integral lift
+`(F_w(u),F_w(v),u.v)`, not merely one Gram/carry scalar.  This distinction is
+sharp.  The two acute unimodular frames
+
+```text
+((1,-8),(1,-7)),             ((1,0),(57,-1))
+```
+
+have determinants `+1,-1`, the same ordered mod-two frame
+`((1,0),(1,1))`, the same dot product `57`, and all-negative endpoint defects
+
+```text
+(-26,-41),                   (-90,-1937),
+```
+
+yet their child defects are respectively `47` and `-1913`.  Endpoint
+magnitudes remain load-bearing even after the Gram product is supplied.  This
+is why the orbit diamond organizes the two tower grammars but does not close
+an LRC or Keller inequality by itself.
 
 ## 6. Connection contract
 
@@ -227,9 +270,9 @@ source:    an ordered level-two Farey frame and a transverse ratio;
 map:       (sigma,r) -> (sigma,sigma.r);
 target:    the regular/natural/parity/trivial S3 orbit ladder;
 preserved: C2/C3 stabilizer type and labelled co-occurrence before projection;
-destroyed: integral Gram term, determinant-square sign, affine origin,
-           physical owner, and quartic sheet phase after coarse projection;
-sidecars:  the THM-2056 Gram/carry coordinate and a PSL/PGL orientation bit;
+destroyed: full integral endpoint/Gram lift, determinant-square sign, affine
+           origin, physical owner, and quartic sheet phase after projection;
+sidecars:  the THM-2056 integral defect/Gram data and a PSL/PGL orientation bit;
 hostiles:  (14), boundary-versus-harmonic aliasing, and (16).             (18)
 ```
 
@@ -253,5 +296,13 @@ Both modes byte-match
 The companion checks every orbit and stabilizer for primes
 `2,3,5,7,11,13,17,19`, all four character rows, the co-occurrence fibres,
 the `PSL/PGL` split, all six mod-two Farey frames, and the exact determinant,
-acute-angle, endpoint, and child values in `(15)--(16)`.  It contains no
-truth-bearing Python `assert`.
+acute-angle, endpoint, fixed-Gram, and child values in `(15)--(17)`.  It
+contains no truth-bearing Python `assert`.
+
+An independent hostile audit reproduced the orbit census for every prime
+below `200`, the small-prime degenerations, all stabilizers and characters,
+the co-occurrence fibres, and the `PSL/PGL` split.  It also found and repaired
+two pre-promotion exposition defects: the omitted uniform fixed-locus proof
+and the overstatement that only the Gram term was lost.  The strengthened
+fixed-Gram hostile above and the final normal/optimized/stored transcript were
+then checked exactly.
