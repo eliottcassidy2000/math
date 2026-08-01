@@ -1,0 +1,7 @@
+D=2: solve int phi^3=0 (phi=A q1+q2), check int phi^6:
+  A=(-0.23345 + 0.183j): |int phi^3|=4.3e-39 |int phi^6|=2.264e-6 (NONZERO -> blocked)
+  A=(0.15358 - 0.26602j): |int phi^3|=6.7e-39 |int phi^6|=8.443e-6 (NONZERO -> blocked)
+  A=(-0.041753 + 0.29367j): |int phi^3|=6.8e-39 |int phi^6|=2.264e-6 (NONZERO -> blocked)
+D=3: solve int phi^{3,6}=0, check UNFITTED int phi^9:
+  |phi^3|=2.0e-37 |phi^6|=5.8e-37  UNFITTED |phi^9|=0.0007111 (NONZERO -> blocked)
+=> full FC(3) counterexample blocked at every degree; the S_3 form only kills 2/3 of the moments.
