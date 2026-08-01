@@ -93,7 +93,9 @@ for all `a != b` -- computed exactly, e.g. `Q_w(0,1) = 1/12`,
 `Q_w(1,3) = 11/1680`, `Q_w(2,5) = 7/3960`, positive throughout `0 <= a < b <= 9`.
 
 **Hence the FC-analogue for the interval measure is settled at two slots by the
-same log-convexity-plus-AM-GM argument**: `M(f) = M(f^2) = 0` forces `f = 0`.
+same log-convexity-plus-AM-GM argument** (and at THREE slots by THM-3028,
+whose resultant invariant `R_w` is nonzero for `w_j = 1/(j+1)` on every tested
+triple): `M(f) = M(f^2) = 0` forces `f = 0`.
 The two-slot dichotomy is therefore not special to the factorial weight; it
 covers the exponential-integral setting too, and THM-3022 sec 4's Fibonacci
 counterexample shows the hypothesis it needs (log-convexity, or merely
@@ -123,3 +125,15 @@ unverified external claim and is NOT used anywhere.
 The repo has no sofic / property-(T) / expander thread to merge it into in any
 case: grepping canon returns only incidental hits (THM-438 Paley/Catalan,
 THM-139 chirality, THM-2228 Mahler, HYP-3832 PSL(2,7) cochain).
+
+
+## 6. Follow-up on the second item's source
+
+The page later supplied as the origin of the nonsofic snippets,
+`openai.com/index/ten-advances-in-mathematics`, returns **HTTP 403 Forbidden**
+to a direct fetch, so its contents could not be read. Combined with section 5
+-- where the cited arXiv id resolves to a different, explicitly CONDITIONAL
+paper -- there is still no verifiable source for the claim, and nothing from
+it is used. This is recorded as a provenance status, not a judgement on the
+underlying mathematics, which may well exist under an identifier not yet
+supplied.
