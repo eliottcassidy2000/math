@@ -2,7 +2,7 @@
 id: THM-3050
 title: "Rational product-Gamma radial nullcone and critical Borel order"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   If the squared radius of one circular complex variable is a positive
   rational scale times any finite product of independent
   positive-rational-shape Gamma variables, its polynomial moment nullcone is
@@ -13,6 +13,15 @@ status: >
   these laws for rational t.  This is one scalar radial grade, not a
   multi-coordinate Wick product or a physical moving-lower resultant.
 source: kind-pasteur-2026-08-01-product-gamma-radial-nc2
+audit: >
+  Two independent hostile audits ACCEPTED the exact-support algebraic
+  descent, scalar product-Pochhammer normalization, Kummer/Lucas/Frobenius
+  residue, rational-parameter boundary, THM-3047 specialization, Borel-order
+  asymptotic and hypergeometric normalization, exponential-integrability
+  hostile, and scalar-versus-vector-grade scope.  One independently swept
+  288,834 integrality and 44,892 strict-divisibility cells.  Both replayed
+  normal, optimized, and stored output after LF normalization, matched the
+  declared hashes, and passed the documentation checker.
 depends_on:
   - THM-2022-gmc2-frobenius-lowest-balanced-face
   - THM-3047-formal-corner-width-product-gamma-moment-and-strict-hankel-positivity
@@ -28,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3050 -- rational product-Gamma radial nullcones
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2022 extends the two-dimensional Gaussian nullcone proof to one rational
 Gamma radial factor.  THM-3047 unexpectedly supplies products of many Gamma
@@ -107,7 +116,7 @@ Write each shape as
 alpha_j=h_j/k_j,
 ```
 
-and choose a sufficiently large rational prime `p` which is good for the
+and choose a sufficiently large rational prime `p>m_0` which is good for the
 specialized coefficients and `Q`, is coprime to all `k_j`, and is a unit for
 the numerator and denominator of `c`.  For every integer `n>=pA_0`,
 
@@ -148,7 +157,7 @@ up.
 
 ## 3. THM-3047 becomes a radial NC2 family
 
-For the `k`-slot character of THM-3040/3047, put
+For the `k`-slot character of THM-3040/3047, with `k>=2`, put
 
 ```text
 A_k=k!(H_k-1),
@@ -178,9 +187,11 @@ THM-2022 up to rational scale.  For `k>=3`, already `I_3=7`; these are genuine
 multi-Gamma radial laws not stated in THM-2022.
 
 Rationality of `t` is load-bearing for this elementary finite-place proof.
-For arbitrary real or transcendental `t`, the coefficient equations live
-over `Q(t)`, and algebraic specialization need not produce number-field
-coefficients or good rational primes.  No such extension is claimed.
+For transcendental `t`, fixed-parameter algebraic specialization need not
+produce number-field coefficients.  For algebraic irrational `t`, a number
+field is available, but the rational arithmetic-progressions in `(4)--(6)`
+must be replaced by a separate prime-ideal/splitting argument.  No such
+extension is claimed here.
 
 ## 4. Sharp Borel-order spectrum
 
@@ -290,12 +301,12 @@ The dependency-free rational companion checks:
 - `2272` exact prime-block integrality cells and `192` strict off-face
   divisibility cells for one through four Gamma factors, including
   nonintegral shapes and scales;
-- `52` critical hypergeometric coefficient recurrences and the three-way
-  radius law;
+- `52` critical hypergeometric coefficient recurrences, and records the
+  proof-level three-way radius law;
 - `84` exact THM-3047 specialization cells for `k=2..5` and three rational
   positive values of `t`;
-- balanced positive and strict one-sided null controls, plus the ordinary
-  exponential-integrability hostile.
+- balanced positive and strict one-sided null controls, and records the
+  proof-level ordinary exponential-integrability hostile.
 
 Reproduce with
 
@@ -304,6 +315,6 @@ python 04-computation/gmc_rational_product_gamma_radial_nc2_borel_thm3050.py
 python -O 04-computation/gmc_rational_product_gamma_radial_nc2_borel_thm3050.py
 ```
 
-Both runs equal the stored six-line transcript byte-for-byte.
+Both runs equal the stored six-line transcript after LF normalization.
 
-**QED (candidate pending independent hostile audit).**
+**QED.**

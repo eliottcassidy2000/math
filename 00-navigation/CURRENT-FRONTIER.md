@@ -211,10 +211,9 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   `14`; THM-2955/2957/2959 close first-gap `15<=M<=24` by modular gates.
   THM-2960 gives Smith walls through `24` (two charts through `20`);
   THM-2964 makes the pure ladder universal; THM-2963 kills next-prime gates;
-  THM-2969/73/78/82 give strict ULC through M34, where THM-2997's conditional
-  `R2>R1` begins. THM-3040's corner quotient
-  `(1+Mt)^26(1+(M+1)t)^20` proves THM-3030's all-order C-law; THM-3047 makes
-  the width flag a product-Gamma moment with strict Hankel positivity.
+  THM-2969/73/78/82 give strict ULC through M34; THM-2997's `R2>R1` is
+  conditional beyond. THM-3040 proves the all-order corner law; THM-3047/3050
+  give product-Gamma/Hankel and rational radial-NC2/Borel consequences.
   Moving-lower transport stays open.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
