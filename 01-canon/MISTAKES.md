@@ -9,6 +9,40 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-338 (2026-07-30, pre-promotion THM-2980 audit) -- a positive-ray cutoff omitted zero and negative suffix rays
+
+- **What was assumed:** the first THM-2980 candidate enumerated only suffix
+  rays with positive scalar numerator. On three exceptional rows it split the
+  remaining universe into four positive low labels or one positive high label
+  plus three positive lows, then claimed this exhausted every packet.
+- **Minimal witnesses / first failed implication:** on
+  `E=(1,8,10,12,13,14)`, the packet
+  `(1612,1836,2004,2340,20384)` is scalar-admissible and the last numerator is
+  zero. On `E=(1,10,11,12,13,14)`, the same happens for
+  `(1612,1736,1800,2340,210210)`. A negative ray `A/z` increases toward zero
+  as height increases, so positive-ray monotone truncation reverses direction:
+  if three positive lows have strict surplus, every negative residue ray is
+  eventually admissible. The candidate also called the `z_1=1650` row
+  non-finite although its positive cutoff is exact and positive.
+- **Exact repair / strongest survivor:** the positive finite, zero-high, and
+  one-high censuses survive unchanged. Exact gaps show that a packet with one
+  nonpositive suffix must have exactly three positive companions, all below
+  the high floor. There are only `18+9` such low triples on the first two
+  rows and none on the third. The repaired verifier keeps every nonpositive
+  residue/unit. For first representatives `r<L`, the correct translated-band
+  capacity `kappa(d)=ceil(d/7)` closes all `3,861` fixed-carrier denominator
+  pairs; the `5,159,799` exact unit instances independently regress that
+  quotient. The smaller centered capacity is forbidden here by MISTAKE-334.
+  If `z>=L` and that carrier contains one complete cell, `a=z/L>=1` supplies
+  at least `floor(a)` full phase turns; the punctured safe image has mass at
+  least `(6/7)floor(a)/a>=3/7>25/91`, so every later height and residue zero
+  close.
+- **Rule:** before compactifying a rational ray, audit the sign. Positive
+  `A/z` decreases and admits an upper cutoff; negative `A/z` increases and
+  generally creates an infinite tail. A finite residue quotient must retain
+  zero and negative rays whenever the other slots already have strict scalar
+  surplus.
+
 ## MISTAKE-337 (2026-07-31, THM-3001 section 6 classifier census) -- a 42/42 census held the failing axis fixed
 
 - **What was done:** THM-3001 section 6 proposed that the two end curvatures
