@@ -219,3 +219,71 @@ observed, correctness unverified.**
 
 The repo still has no sofic / property-(T) / expander thread, and nothing
 from this claim is used in any result here.
+
+## 8. The strengthening BREAKS section 1's reduction (klein-S428, 2026-08-01)
+
+Section 1 reduces the **non-vanishing** claim to non-real coefficients: real
+algebraic coefficients give `e^(Q(t)) > 0` on `[0,1]`, hence `I(Q) > 0`, hence
+`I(Q) != 0`. That is correct, and it disposes of the entire real case.
+
+**It does not survive the strengthening to transcendence.** Positivity yields
+"nonzero", never "transcendental", and a positive real is no less likely to be
+algebraic than any other number. Under the transcendence form the real case is
+therefore **fully loaded**, not trivial:
+
+```text
+   I(t^2) = int_0^1 e^(t^2) dt = (sqrt(pi)/2) erfi(1) = 1.4626517459071816088...
+```
+
+must be transcendental, and no positivity argument comes near it. So the
+sentence in section 1, *"the entire content of the claim is for `Q` with
+non-real coefficients"*, is true of the non-vanishing form and **false of the
+transcendence form**. Anyone attacking the strengthened claim must not inherit
+that reduction. Section 1 is left standing because it is correct for the claim
+it was written about; this section scopes it.
+
+The point is not merely bookkeeping. The real case is *already* the whole
+difficulty: by completing the square, for `a != 0`,
+
+```text
+   int_0^1 e^(a t^2 + b t + c) dt
+       = e^(c - b^2/(4a)) * a^(-1/2) * [ D(sqrt a (1 + b/(2a))) - D(sqrt a b/(2a)) ],
+       D(z) := int_0^z e^(u^2) du,
+```
+
+verified to 60+ digits at six `(a,b,c)`, real and complex, in the script below.
+And `D` **is an E-function**: `D(z) = sum_n z^(2n+1)/(n!(2n+1))`, so the
+coefficient of `z^m` at `m = 2n+1`, times `m!`, is `(2n)!/n!` -- an integer of
+moderate growth. Degree two is exactly
+
+```text
+   (exponential of an algebraic number) x (difference of two E-function values
+    at algebraic points),
+```
+
+which is why Siegel--Shidlovskii plus Beukers is the announced tool, and it is
+this shape *already over the reals*.
+
+### Census: no algebraic value found
+
+`04-computation/exponential_integral_transcendence_census_klein.py`,
+output alongside. 1076 nonconstant `Q` -- 740 with integer coefficients in
+`[-2,2]` at degrees 2 and 3, and 336 with Gaussian-integer coefficients at
+degree 2 -- each integral computed at `dps = 220` and tested by PSLQ on
+`(1, I, ..., I^d)` for an integer relation with `|coeff| <= 10^10`, every
+candidate **residual-verified**. **Zero algebraic hits.**
+
+This is evidence, not proof: it excludes a counterexample of small degree and
+small height, which is all a census can do.
+
+> **Methodological warning, from a failure in this very file's first draft.**
+> The initial version ran `dps = 90`, `maxdeg = 8`, `maxcoeff = 10^14`,
+> `tol = 10^-60` and reported that *every* value tested was algebraic --
+> including, on re-test, `pi` and `e`. PSLQ on `n` numbers with height-`10^H`
+> coefficients needs working precision well above `n*H` digits, and a loose
+> `tol` accepts relations that are merely approximate. **A relation test without
+> a positive and a negative control is not a test.** The script now runs
+> `sqrt 2`, `phi`, `2^(1/3)` (must be found) against `pi`, `e`, `e^2`, `log 2`
+> (must not be), asserts the controls before any census result is reported, and
+> residual-verifies every candidate. Any future PSLQ work in this repo should
+> copy that harness.

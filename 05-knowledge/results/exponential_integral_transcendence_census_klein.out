@@ -1,0 +1,66 @@
+==============================================================================
+A. THE REAL CASE IS NOT TRIVIAL UNDER THE TRANSCENDENCE STRENGTHENING
+==============================================================================
+  HYP-9079 sec 1: real algebraic coefficients => e^Q > 0 on [0,1] => I(Q) > 0.
+  That kills NON-VANISHING in the real case and says NOTHING about
+  transcendence. Under the strengthened claim the real case is loaded.
+
+  PSLQ CONTROLS (a test with no controls is not a test):
+    sqrt(2)      algebraic? YES deg 2    expected YES  ok
+    golden phi   algebraic? YES deg 2    expected YES  ok
+    2^(1/3)      algebraic? YES deg 3    expected YES  ok
+    pi           algebraic? no           expected no   ok
+    e            algebraic? no           expected no   ok
+    e^2          algebraic? no           expected no   ok
+    log 2        algebraic? no           expected no   ok
+    controls pass: True   (dps=220, maxdeg=6, maxcoeff=1e10)
+
+    Q = t^2          I = 1.46265174590718160880404858686    algebraic(deg<=6, H<=1e10)? no
+    Q = -t^2         I = 0.746824132812427025399467436132   algebraic(deg<=6, H<=1e10)? no
+    Q = t^3          I = 1.34190441797741974124910497831    algebraic(deg<=6, H<=1e10)? no
+    Q = t^2+t        I = 2.73992002706292799172585306702    algebraic(deg<=6, H<=1e10)? no
+    Q = 2t^2-3t+1    I = 1.25243123742142673865682100267    algebraic(deg<=6, H<=1e10)? no
+    Q = t^4          I = 1.27128710490414662707044437428    algebraic(deg<=6, H<=1e10)? no
+
+  Cross-check against a closed form: I(t^2) = (sqrt(pi)/2) erfi(1)
+    quad   = 1.462651745907181608804048586856988155121
+    erfi   = 1.462651745907181608804048586856988155121
+    |diff| = 0.0
+  VERDICT A: no real value algebraic of small degree/height, closed form matches: True
+
+==============================================================================
+B. DEGREE 2 IS A DIFFERENCE OF E-FUNCTION VALUES (identity verified)
+==============================================================================
+    a, b, c            quad                       completed-square      |diff|
+    (1, 0, 0)          (1.46265174591 + 0.0j)     1.46265174591         0.0
+    (1, 2, 3)          (110.76177373 + 0.0j)      110.76177373          1.42e-219
+    (-1, 1, 0)         (1.18459307294 + 0.0j)     (1.18459307294 + 0.0j) 0.0
+    (2, -3, 1)         (1.25243123742 + 0.0j)     1.25243123742         2.21e-221
+    (mpc(real='0.0', imag='1.0'), 1, 0) (1.49717808138 + 0.662700956027j) (1.49717808138 + 0.662700956027j) 2.21e-221
+    (mpc(real='1.0', imag='1.0'), mpc(real='0.0', imag='-2.0'), 1) (2.7974383872 - 2.60378782482j) (2.7974383872 - 2.60378782482j) 6.26e-221
+    D(z) = int_0^z e^{u^2} du = sum_n z^(2n+1)/(n!(2n+1)); coefficient of
+    z^m at m=2n+1 times m! is (2n)!/n!, an integer of moderate growth, so D
+    is an E-function. Degree 2 = e^{algebraic} * (difference of two
+    E-function values at algebraic points).
+  VERDICT B: completion-of-square identity holds to 60+ digits: True
+
+==============================================================================
+C. CENSUS -- PSLQ search for an algebraic value
+==============================================================================
+  Q(t) = sum_{k=0}^{deg} c_k t^k, c_k in {Gaussian integers of small height},
+  nonconstant (some c_k != 0 for k >= 1). Test (1, I, ..., I^d) for an
+  integer relation with |coeff| <= 1e14 at 60-digit tolerance.
+
+    real-coefficient family, deg 2-3: 740 nonconstant Q tested, 0 algebraic hits
+    Gaussian-integer family, deg 2:    336 nonconstant Q tested, 0 algebraic hits
+  VERDICT C: no algebraic value found in 1076 nonconstant cases: True
+    (evidence only -- rules out small degree and height, nothing more)
+
+==============================================================================
+SUMMARY  real-case-loaded=True  degree2-is-E-function=True  census-clean=True
+==============================================================================
+  MAIN STRUCTURAL POINT: the transcendence strengthening INVALIDATES
+  HYP-9079 sec 1's reduction to non-real coefficients. Positivity gives
+  nonvanishing, not transcendence; the real case is already the full
+  erf/E-function problem and cannot be set aside.
+DONE

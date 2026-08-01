@@ -13,3 +13,6 @@ rev = "v4.30.0"
 
 [[lean_lib]]
 name = "TournamentH7"
+
+[[lean_lib]]
+name = "ComparatorChallenges"
