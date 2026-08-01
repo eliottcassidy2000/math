@@ -146,3 +146,46 @@ value**, and it is arithmetic rigidity of that value, not its nonvanishing, that
 does the work.
 
 Referee: `expq_fc2_bridge_thm3031.py`.
+
+## Addendum, 2026-08-01: the general-interval form, and external corroboration
+
+**(B5) Over a general interval the forced level is `B - A`.** The `1` in (B1) is
+`int_0^1 g^0 du`, i.e. the length of the interval. So if `g` satisfies
+`int_A^B g^m dx = 0` for all `m >= 1`, then
+
+```text
+int_A^B e^{g(x)} dx  =  sum_{m>=0} (1/m!) int_A^B g^m dx  =  (B - A) + 0  =  B - A,
+```
+
+and the minimal bridge over `[A,B]` reads
+
+```text
+int_A^B e^{Q(x)} dx  !=  B - A   for every nonconstant Q in Qbar[x]   ==>   the
+                                 corresponding moment problem on [A,B] has only g = 0.
+```
+
+Verified at `dps = 60` on the model `h(x) = exp(2 pi i (x-A)/(B-A))`, which has all
+moments `m >= 1` zero: `int_A^B e^h dx` equals `B - A` to `<= 1.6e-68` on
+`[0,1], [-1,2], [sqrt2, sqrt3], [1,5]`.
+
+**When `A, B` are algebraic, `B - A` is algebraic**, so *transcendence still closes the
+bridge* while *nonvanishing still does not* -- (B3) is unchanged in the general setting.
+
+**External corroboration.** The owner supplied `github.com/octonion/mathematics/fc`, a
+draft attacking **general (inhomogeneous)** `FC(2)` for `f in C[x,y]`. Its step 7 is
+
+```text
+for nonconstant q in Qbar[x] and distinct algebraic A, B:
+      int_A^B e^{q(x)} dx is TRANSCENDENTAL (hence nonzero),
+```
+
+proved via `E`-function moment systems and Beukers' refinement of Siegel-Shidlovskii --
+i.e. exactly the general-interval statement (B5) needs, and with **transcendence** as the
+load-bearing half, the parenthetical "(hence nonzero)" being the weaker consequence. The
+relayed form of the claim had kept only that parenthetical, which is what (B3) shows is
+insufficient. Its step 1 (specialisation `C -> Qbar` by Nullstellensatz) independently
+matches (B2).
+
+*Provenance is not verified in this repo* -- the source is a self-described, non-peer-reviewed
+draft. Nothing above depends on its correctness: (B1), (B2), (B4), (B5) are proved here, and
+they are statements about what *would* follow.
