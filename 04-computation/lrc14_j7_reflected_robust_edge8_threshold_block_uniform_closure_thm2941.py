@@ -52,8 +52,8 @@ OUTPUT = (
     / "results"
     / "lrc14_j7_reflected_robust_edge8_threshold_block_uniform_closure_thm2941.out"
 )
-EXPECTED_EDGE9_SHA256 = "8540d1689ca002f284e9dcfb1730c382bb8eb6a79b62d09084f53707629ab621"
-EXPECTED_SEMANTIC_SHA256 = "f197d1a7f237526b03c3ca97a47fb48900d560d9a6bd75838140c74d0c59a04b"
+EXPECTED_EDGE9_SHA256 = "b708f0fc3b5e89d9a17301201b112cadbfa68c279aebe08b9ae486611b273858"
+EXPECTED_SEMANTIC_SHA256 = "af12592ebd25cd5745c34711c99aaba72c45eeb2cad62ee5b35ec6a7752b8da7"
 EXPECTED_BODY_DIGEST = "17c120a9fb01b2e30cf42debad83dc80433f65d4eeba496414b537543c1b1641"
 EXPECTED_ASSIGNMENT_DIGEST = "76c30b33786c99b75b931ad688d9db2840c7ec7466550a727fca39fa65a41adb"
 
@@ -118,7 +118,7 @@ def require(condition: bool, message: object) -> None:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def qtext(value: F) -> str:

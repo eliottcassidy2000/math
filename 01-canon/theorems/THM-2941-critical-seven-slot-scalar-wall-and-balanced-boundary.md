@@ -24,10 +24,10 @@ status: >
   of level spread at most five.  The projective phase graph has clique number
   five and its fully periodized high-channel fibre has sharp floor 1/105;
   threshold-block refinements close arbitrary positive reflected levels on
-  a bank of 2,421 of the 3,003 bodies, leaving 582 uncovered rather than
+  a bank of 2,442 of the 3,003 bodies, leaving 561 uncovered rather than
   proving them impossible.  A three-reverse-ladder certificate closes every
   body for spread D>=6 and base m>=3D.  The remaining reflected
-  certificate-failure locus is confined to those 582 bodies in D>=6,m<3D;
+  certificate-failure locus is confined to those 561 bodies in D>=6,m<3D;
   the finite censuses, full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is internal
   exact computation and proof audit; there is no Lean or external peer-review
@@ -1023,16 +1023,18 @@ K6 minus one edge             +59 = 2,276
 12 robust edges               +37 = 2,339
 11 robust edges               +15 = 2,354
 10 robust edges               +32 = 2,386
- 9 robust edges               +35 = 2,421.             (25i7)
+ 9 robust edges               +35 = 2,421
+ 8 robust edges               +21 = 2,442.             (25i7)
 ```
 
 Every body counted in `(25i7)` closes for every assignment of positive
-reflected levels.  The edge-nine terminal audits `440,352` exact certificate
-rows; its disconnected `K_(1,5)` and `K5`-minus-edge low components are
-handled as genuine cylinders.  Thus arbitrary-level closure leaves exactly
+reflected levels.  The edge-nine and edge-eight terminal audits check
+`440,352` and `652,688` exact certificate rows.  Their disconnected low
+components are handled as genuine cylinders rather than by bounding a free
+level.  Thus arbitrary-level closure leaves exactly
 
 ```text
-3,003-2,421=582                                                (25i8)
+3,003-2,442=561                                                (25i8)
 ```
 
 bodies.  This is a sufficient-certificate residual, not a census of physical
@@ -1050,7 +1052,7 @@ reverse ladders close the residual orientations.  The exact scale law gives
 D>=6 and m>=3D  ==>  every reflected packet closes.           (25i9)
 ```
 
-Consequently the current reflected obligation is confined to the `582`
+Consequently the current reflected obligation is confined to the `561`
 bodies in the wedge `D>=6,m<3D`.  No monotonic interpolation between finite
 spread slices and the cone is assumed.
 
@@ -2400,11 +2402,25 @@ and
 `9aecfd75893a537278dcc4e50af7bd45fa2b7925d017748781a18c7163bb716d`;
 ordinary and optimized replays are byte-identical.
 
+The reflected wedge assembly
+`04-computation/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.py`
+pins eleven LF-normalized terminal sources and transcripts, including the
+edge-eight block.  Its source/output/semantic SHA-256 values are respectively
+`12f64132b0ee51896f5991e153daf19d476b5cccdf7738edade1e9edd6cebfa2`,
+`3d630d3fff4aad69ddb9c69b627366fc670a1418ff3d5accf2d1c04961f8de3f`,
+and `0119bd0d359d97f2881de56cd9e115e695c7ecac006e8981c31a5f1c20d95ef5`.
+Fresh ordinary and optimized replays are byte-identical to each other and to
+the stored transcript.  The edge-eight terminal source/output/semantic hashes
+are `3f2552c7e316a6da821f8d78f859aa9d73b2d8b58081c0a31f8d233f37eec2f0`,
+`90d42c1369532e4d31cfacbf4ddf455fa330075c878b414831e489eec32ecc2b`,
+and `af12592ebd25cd5745c34711c99aaba72c45eeb2cad62ee5b35ec6a7752b8da7`;
+both fresh interpreters replay all `652,688` exact rows.
+
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,
-close the `582`-body reflected wedge `D>=6,m<3D`, finish the remaining
+close the `561`-body reflected wedge `D>=6,m<3D`, finish the remaining
 `k=2,3` finite decision trees, classify the zero/one-aligned multi-drift
 address hypergraph, close the six-body/seven-tail rung, or prove LRC(14).
 The independent THM-2928 divisor-status route closes `k=4`; THM-2980/2995
-and THM-2981 lower the composed `k=2,3` caps to `1579/246`, respectively,
+and THM-2981/3033 lower the composed `k=2,3` caps to `1579/243`, respectively,
 without emptying the sectors below those caps.

@@ -2,9 +2,9 @@
 
 > **DETAILED MACHINERY MAP:** read [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) first. This panel is current; dated sections preserve searchable history and may be superseded.
 
-## 2026-07-30 current control panel
+## 2026-08-01 current control panel
 
-**Status: OPEN.** THM-2923 leaves at most six body speeds. THM-2928--3033 empty aligned `k>=4` and cap projected `k=2,3` at `1,579/243`. THM-3042 confines its reflected-`k=1` certificate failure to the bank-uncovered wedge `582` bodies, `D>=6,1<=m<3D`. Arbitrary `k<=1`, the rung, and LRC(14) remain open; `q<=25` is false.
+**Status: OPEN.** THM-2923 leaves at most six body speeds. THM-2928 empties aligned `k>=4`; THM-2995/3033 cap projected `k=2,3` at `1,579/243`; the audited THM-2941 assembly confines reflected-`k=1` certificate failure to the bank-uncovered wedge `561` bodies, `D>=6,1<=m<3D`. Arbitrary `k<=1`, the rung, and LRC(14) remain open; `q<=25` is false.
 **Scalable quotient.**  Support transfer/Möbius counting reduce `k=3/2` to `26,970/27,163` rows; septimal and located-phase screens cut raw occurrences `21.36b/951.55b -> 2.55b/200.14b`.  These are necessary-state quotients, not physical covers; most location/unit data remain.
 **Status theorem.**  For upward `A`, real maximum is `min(1,tau_H)`, `H=min(A)`: `p` cover variables replace `2^p` cells, losing integer location, threshold coupling, and needle shape.
 **Missing coordinate.**  For drifts `Z`, `P=phi_L(C_E minus union_z D_z)`; aligned completion is `P subset union_(a in A)D_a`.  Compact strict-open seams are pointwise, not a.e.

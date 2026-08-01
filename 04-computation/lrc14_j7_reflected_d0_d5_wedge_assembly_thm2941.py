@@ -7,11 +7,11 @@ tokens used in the logical assembly, and separates three statements which must
 not be conflated:
 
 * every spread ``D <= 5`` closes at every minimum level ``m >= 1``;
-* a bodywise bank closes 2,421 of the 3,003 six-label bodies at arbitrary
+* a bodywise bank closes 2,442 of the 3,003 six-label bodies at arbitrary
   positive levels; and
 * every spread ``D >= 6`` closes when ``m >= 3D``.
 
-Consequently the assembled certificate-failure locus is confined to the 582
+Consequently the assembled certificate-failure locus is confined to the 561
 bodies not covered by that bank and ``D >= 6, 1 <= m < 3D``.  The uncovered
 bodies are not thereby proved to fail some different certificate.  This is a
 theorem about the sufficient reflected residual family inherited from
@@ -114,6 +114,16 @@ COMPONENTS = (
         ),
     ),
     (
+        "ARBITRARY_LEVEL_EDGE8",
+        "lrc14_j7_reflected_robust_edge8_threshold_block_uniform_closure_thm2941",
+        "3f2552c7e316a6da821f8d78f859aa9d73b2d8b58081c0a31f8d233f37eec2f0",
+        "90d42c1369532e4d31cfacbf4ddf455fa330075c878b414831e489eec32ecc2b",
+        (
+            "conclusion=all 21 robust-edge-8 bodies close for every assignment of positive reflected levels",
+            "corollary=arbitrary-level body closure rises from 2421 to 2442;remaining_bodies=561",
+        ),
+    ),
+    (
         "C4_CONE",
         "lrc14_j7_reflected_c4_central_exception_cone_closure_thm2941",
         "48a21cfd26c6250a317d37a59523012548204f7b217538d74a5c4b2e21b6f9ae",
@@ -152,7 +162,7 @@ EXPECTED_D5_RESIDUAL_COUNTS = (
     0,
     2,
 )
-EXPECTED_SEMANTIC_SHA256 = "9bc1da061c14d44ef1016a9b887097666fd50ea6af242ea8302822a6dbe664b1"
+EXPECTED_SEMANTIC_SHA256 = "0119bd0d359d97f2881de56cd9e115e695c7ecac006e8981c31a5f1c20d95ef5"
 
 
 def require(condition: bool, message: object) -> None:
@@ -194,8 +204,8 @@ def main() -> None:
     body_count = comb(14, 6)
     complete_good_graph_bodies = 3001
     exceptional_bodies = 2
-    arbitrary_level_closed = 2421
-    arbitrary_level_residual = 582
+    arbitrary_level_closed = 2442
+    arbitrary_level_residual = 561
     require(body_count == 3003, body_count)
     require(complete_good_graph_bodies + exceptional_bodies == body_count,
             "chromatic body partition changed")
@@ -245,9 +255,9 @@ def main() -> None:
         "D4=3001 complete good graphs by pigeonhole plus two exceptional proper-word lanes;Delta<=2 is sharp",
         "D5=head m=1..15 plus cross-determinant tail m>=16;all 3003 bodies",
         "conclusion_1=every reflected THM-2941 residual packet with D<=5 closes for every m>=1",
-        "conclusion_2=bodywise bank closes 2421/3003 bodies for arbitrary positive reflected levels;582 bodies are uncovered",
+        "conclusion_2=bodywise bank closes 2442/3003 bodies for arbitrary positive reflected levels;561 bodies are uncovered",
         "conclusion_3=every reflected THM-2941 residual packet with D>=6 and m>=3D closes",
-        "remaining_wedge=582 bank-uncovered bodies only;D>=6;1<=m<3D",
+        "remaining_wedge=561 bank-uncovered bodies only;D>=6;1<=m<3D",
         "logical_status=three conclusions are incomparable inputs to the final intersection;none is arbitrary k<=1 or physical-survivor classification",
         "D5_head_counts=raw:7851600;crossdet:7835524;median_residual:16076",
         f"D5_residual_counts_by_m={EXPECTED_D5_RESIDUAL_COUNTS}",
