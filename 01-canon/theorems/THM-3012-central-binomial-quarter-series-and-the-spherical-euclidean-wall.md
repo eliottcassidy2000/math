@@ -149,3 +149,67 @@ proved for all `k` is the closed form (6): a single balanced `3F2` at 1 with
 one `k`-dependent parameter, equivalently the `K`-moment (4).
 
 Referee: C1-C9 exact/high-precision, `ALL THM-3012 REFEREE CHECKS PASSED`. QED.
+
+## Addendum, 2026-08-01 (death-star): a transcription correction and the elliptic representation
+
+**1. The circulating `S(3)` closed form has `3` where `sqrt3` belongs.** The owner
+relayed
+
+```text
+S(3) = -(1/pi) ( 3 log(5 - 2 sqrt6) + 2 arctan(sqrt2/5) )        [AS CIRCULATED -- WRONG]
+```
+
+which evaluates to `2.01363...`, against the true `S(3) = 1.08838540640395...`.
+Since `log(5 - 2 sqrt6) = -log(5 + 2 sqrt6)`, the sign structure is fine; the
+single error is the **rational `3` in place of the algebraic `sqrt3`**. Equation
+(8) of this file is correct:
+
+```text
+pi S(3) = sqrt3 * log(5 + 2 sqrt6) - 2 arctan(sqrt2/5)
+        = 2 sqrt3 * log(sqrt3 + sqrt2) - 2 pi + 6 arctan(sqrt2),
+```
+
+both verified against the `3F2` to **81 digits** (difference `4.2e-81`). Using
+`3` instead gives exactly the circulated `6.32600941...` for `pi S(3)`, which
+identifies the corruption unambiguously.
+
+This matters beyond bookkeeping: **the coefficient is irrational.** A PSLQ sweep
+over a basis of logarithms and arctangents with *rational* coefficients will
+never find (8) -- it must include `sqrt3 * log(5 + 2 sqrt6)` as a basis element,
+exactly as section 5's battery does. A sweep that omits it returns "no closed
+form" spuriously. (Two such spurious negatives were produced while checking this
+addendum before the basis was corrected, and PSLQ instead returned the trivial
+degeneracies `arctan(sqrt2/5) + 3 arctan(sqrt2) = pi` and `3 arctan(sqrt3) = pi`
+-- a reminder to strip dependent basis elements before reading a null result.)
+
+**2. The elliptic representation of `S(4)` is CONFIRMED.** The owner supplied
+
+```text
+S(4) = (2 sqrt2 / pi) * int_0^1 K(k) / (2 - k^2) dk,     K the complete elliptic
+                                                         integral of the first kind.
+```
+
+Evaluated at 60 digits (`K` in the `m = k^2` convention):
+
+```text
+int_0^1 K(k)/(2-k^2) dk        = 1.187752054750793832836583810076862670
+(2 sqrt2/pi) * integral        = 1.069352554441268058582961939534278061
+S(4) = 3F2(1/4,3/4,1/4; 1,5/4; 1) = 1.069352554441268058582961939...
+```
+
+agreeing to `~30` digits. So the representation is a genuine identity and gives
+an independent route to `S(4)`.
+
+**It does not evade the wall of section 4.** The integrand `K(k)/(2-k^2)` is a
+period of the same Legendre family; the representation re-expresses the balanced
+`3F2` rather than reducing its monodromy, and the Euclidean angle sum
+`4/k + |1 - 4/k| = 1` at `k = 4` is unchanged. So the addendum supplies a new
+handle on `S(4)` but no closed form, and the section 5 assessment stands:
+`k = 1,2,3` are elementary, `k >= 4` are not, on the evidence of the PSLQ battery
+plus the monodromy explanation.
+
+**Method warning (cost real time here):** the defining series has terms
+`~ 1/(sqrt2 pi k n^2)`, so the TAIL after `N` terms is `~ 1/(sqrt2 pi k N)`, far
+larger than the last term. Truncating a summation when the *term* falls below
+tolerance leaves an error of order `1e-5` at `N = 4000` and silently corrupts any
+PSLQ. Use the `3F2` evaluation (or the elliptic integral), never naive summation.
