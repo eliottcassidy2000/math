@@ -1,12 +1,12 @@
 ---
-id: THM-3048
+id: THM-3049
 title: "K4 matching-monomial tropical root-extraction clutch"
 status: RESERVED / UNPROVED EMPTY STUB
 source: codex-k4-matching-monomial-clutch-2026-08-01
 depends_on: []
 ---
 
-# THM-3048 -- the K4 matching monomials expose the binary--ternary clutch
+# THM-3049 -- the K4 matching monomials expose the binary--ternary clutch
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
