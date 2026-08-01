@@ -1,0 +1,93 @@
+============================================================================
+A. POSITIVE CONTROL -- the finite-R criterion (THM-3002) as implemented
+============================================================================
+    gamma=1/2  R=  8  min ratio=  1.2857  AMPLE   (expected AMPLE)
+    gamma=1/2  R= 16  min ratio=  1.1333  AMPLE   (expected AMPLE)
+    gamma=1/2  R= 64  min ratio=  0.0437  DEFICIENT   (expected DEFICIENT)
+  death-star's gamma=1/2 trichotomy reproduced: True
+
+============================================================================
+B. VARIATIONAL THRESHOLD BY BISECTION vs THE GOLDEN CONSTANT
+============================================================================
+    bisection gamma*        = 0.597987432738
+    2 log(phi)/log 5        = 0.597987435665
+    difference              = -2.927e-09   (tau-grid is 1/3000)
+    worst tau               = 0.382000   vs  phi^-2 = 0.381966
+    maximizing sigma        = 0.038661   (interior to [0,1]: True)
+    rho = m/D               = 0.552786409   vs  1 - 1/sqrt5 = 0.552786405
+    2(1-rho)/rho            = 1.618033962   vs  phi = 1.618033989
+  VERDICT B: threshold matches the golden constant: True
+
+============================================================================
+C. EXACT SOLUTION OF THE TANGENCY SYSTEM (symbolic, 40 dps)
+============================================================================
+    tau* = (1-u)/(1+u)         = 0.3819660112501051517954131656343618822797
+    phi^-2 = 2 - phi           = 0.3819660112501051517954131656343618822797
+    (1-tau)^2 - tau            = -1.147943701974890144500719274631099294745e-41      <-- eq (!)
+
+    (S)  gamma A               = 0.4812118250596034474977589134243684231352
+         log(2u/(1-u))         = 0.4812118250596034474977589134243684231352
+         residual              = -5.739718509874450722503596373155496473724e-42
+    (T)  2u/(1-u)              = 1.61803398874989484820458683436563811772
+         (1-tau)/tau           = 1.61803398874989484820458683436563811772
+         residual              = 2.29588740394978028900143854926219858949e-41
+
+    KEY IDENTITY  H(rho) + rho log2 = A (1 + gamma rho):
+         LHS                   = 1.070726310794651615353421963562159530186
+         RHS                   = 1.070726310794651615353421963562159530186
+         residual              = 0.0
+
+    D = gamma(1+tau)/(1+gamma rho) = 0.6210909172022238526076006340016804768735
+    sigma* = tau - rho D           = 0.03863539626225450537829621233709417860752   interior: True
+
+    (V)  D[H(rho)+rho log2]    = 0.6650183864440035701326057423726642760572
+         H(tau)                = 0.6650183864440035701326057423726642760573
+         residual              = -2.29588740394978028900143854926219858949e-41
+
+    (V) reduces to 2 log(1-tau) = log tau, i.e. (1-tau)^2 = tau,
+    i.e. tau^2 - 3 tau + 1 = 0 -- the minimal polynomial of phi^2.
+         phi^2 - phi - 1       = 0.0
+  VERDICT C: all of (S),(T),(V) and the key identity vanish to 30+ dps,
+             sigma* interior: True
+
+============================================================================
+D. CONSISTENCY WITH death-star's FINITE-R LADDER
+============================================================================
+      R      finite-R threshold    gamma* - threshold
+       32        0.53130              +0.06669
+       64        0.56060              +0.03739
+      128        0.57580              +0.02219
+      256        0.58490              +0.01309
+      512        0.59065              +0.00734
+     1024        0.59393              +0.00406
+    limit      0.59799  = 2 log(phi)/log 5
+  monotone increasing toward gamma* from below: True
+
+    2457/6592 (eq27 reading R1)    = 0.372725   BELOW gamma* -- eventually deficient
+    2457/4135 (eq27 reading R2)    = 0.594196   BELOW gamma* -- eventually deficient
+    3/5                            = 0.600000   ABOVE gamma* -- survives
+    1/2                            = 0.500000   BELOW gamma* -- eventually deficient
+  Both eq(27) readings sit below gamma*, independently confirming the
+  R>=16 and R=2048 deaths found by direct computation.  3/5 clears it,
+  which is why 3/5 is the first round rate that survives.
+
+============================================================================
+E. THE BINDING FRACTION tau* = phi^-2 IS UNIVERSAL IN THE ALPHABET SIZE
+============================================================================
+  Replacing 2^(t-i) by b^(t-i) leaves the identity (K) and hence the
+  reduction (V) <=> (1-tau)^2 = tau untouched; only (T) moves, giving
+  u*(b) = phi/(b+phi) and gamma*(b) = log(phi)/log((b+phi)/phi).
+
+     b    gamma* numeric   log(phi)/log((b+phi)/phi)   worst tau   phi^-2
+     2    0.597987433      0.597987436            0.382000   0.381966
+     3    0.458840046      0.458840048            0.382000   0.381966
+     4    0.386586952      0.386586954            0.382000   0.381966
+  b=2 is special ONLY because (2+phi)/phi = sqrt 5 exactly
+     (2+phi)/phi = 2.236067977500   sqrt 5 = 2.236067977500
+  VERDICT E: tau* universal, gamma*(b) formula holds: True
+
+============================================================================
+SUMMARY  control=True  bisection=True  exact=True  ladder=True  universal=True
+============================================================================
+  gamma* = log(phi)/log(sqrt 5) = 2 log(phi)/log 5 = 0.597987435665440...
+  C = 1 + gamma* = 1.597987435665440...  is the epoch-closure barrier.
