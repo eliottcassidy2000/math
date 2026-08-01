@@ -2,17 +2,23 @@
 id: THM-3049
 title: "K4 matching-monomial tropical root-extraction clutch"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For the three perfect-matching monomials of K4, the cocharacter map is
   lambda_m=x_e+x_e_bar.  Its three parity residues and the residue of
   sum(lambda_m) modulo three are exactly THM-3045's F2[M]+F3 integral
-  clutch.  Thus the binary obstruction is pairwise square-root divisibility
-  in the value lattice and the ternary obstruction is cube-root divisibility
-  of the total matching monomial.  This is an exact tropical/cocharacter
+  clutch.  Thus the binary obstruction is square-root divisibility of the
+  three matching monomials in the value lattice, while the ternary obstruction
+  is cube-root divisibility of the total matching monomial.  This is an exact tropical/cocharacter
   bridge to the four-vertex Krenn--Gu--Soltesz carrier before matching-fibre
   contraction.  It does not determine field-level roots, endpoint-colour
   selectors, or cancellation in a sum of matching amplitudes.
 source: codex-k4-matching-monomial-clutch-2026-08-01
+audit: >
+  An independent read-only hostile audit rederived the integral kernel and
+  Smith quotient, the S4/V4 action, both value-lattice iff statements, and
+  the Q7 unit and same-colour phase-cancellation hostiles. Fresh ordinary
+  and optimized executions LF-byte-match the stored transcript and declared
+  hashes; namespace and pre-contraction scope are clean.
 depends_on:
   - THM-3045-k4-edge-isotypic-binary-ternary-integral-clutch
 related:
@@ -30,7 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3049 -- tropicalizing the three matching monomials exposes both clutches
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and statement
 
@@ -137,16 +143,16 @@ v(product_m A_m) is three times an integer
     iff sum_m lambda_m mod3=0.                             (13)
 ```
 
-Thus the binary clutch obstructs choosing integral valuations for the three
-pairwise square roots, while the ternary clutch obstructs choosing an
-integral valuation for a cube root of the total matching monomial.  Both
+Thus the binary clutch obstructs choosing integral valuations for square
+roots of the three matching monomials, while the ternary clutch obstructs
+choosing an integral valuation for a cube root of the total matching monomial.  Both
 vanish exactly when all three rational edge-isotypic projectors of THM-3045
 are integral.
 
 This statement is deliberately about cocharacters/valuations.  It is not a
 field-root criterion.  Over `Q_7`, take matching monomials `(3,1,1)`, realized
 by putting weight `3` on one edge and weight `1` on the other five.  Every
-valuation is zero, so `(6)` vanishes, but `3` is neither a square nor a cube
+`7`-adic valuation is zero, so `(6)` vanishes, but `3` is neither a square nor a cube
 modulo `7`.  Unit and residue-field data are the missing sidecar.
 
 The two prime pieces are independent.  Cocharacters with matching sums
