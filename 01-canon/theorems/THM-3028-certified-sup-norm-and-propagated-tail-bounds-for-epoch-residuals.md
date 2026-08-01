@@ -22,6 +22,13 @@ status: >
   ~1e54, so floating-point evaluation is meaningless. Float reported a
   violation ratio of 3.198872 on the true R = 64 path where the exact value is
   1.000000. All (SUP)/(PROP) tests must use exact rational/integer arithmetic.
+  Section 5b: targeting the final row drives R = 128 all the way to the last
+  row with the miss down to 0.9%, failing by ONE DEGREE AT ONE INDEX (k=22,
+  parity correct, binom(157,22) would suffice); and it identifies an UNUSED
+  degree of freedom -- D0 has always been taken constant, but T(n) = n + 1 +
+  floor(3n/5) + e(n) gives C = 8/5 for any BOUNDED e, so the admissible degree
+  profiles d_i = floor(3(R+i)/5) + e_i form a far larger space than the
+  one-parameter family used so far. A first probe reaches miss 1.009.
   DIAGNOSTIC CONSEQUENCE, refining the THM-3002 5b correction: under the
   certified filter, R = 128 fails at a row that MOVES STRONGLY with the
   constant slack D0 -- row 42 (D0=0), 51 (D0=1), 97 (D0=2), 90 (D0=4), 80
@@ -157,6 +164,53 @@ points back toward search limitation: the failure is `D0`-mobile and marginal.
 The honest status is unchanged in form -- **`R = 128` is formally open, and
 `C <= 8/5` is verified for `n <= 127` only** -- but the balance of evidence now
 leans away from an obstruction.
+
+## 5b. The near-miss, and an unused degree of freedom
+
+Targeting the final row directly -- scoring the last `tail` rows by the exact
+sup-norm of the residual (which must end `<= 1` by (SUP), since the final
+residual *is* an admissible block) instead of by residual length -- drives
+`R = 128` all the way to the final row and reduces the miss to a few percent:
+
+```text
+D0 = 3, beam 2500, tail =  6 :  best |want|/cap = 2.391
+D0 = 3, beam 2500, tail = 12 :  best |want|/cap = 1.040
+D0 = 3, beam 2500, tail = 48 :  best |want|/cap = 1.025
+```
+
+increasing the beam to `4000` changes nothing (`1.040`), so the plateau is not
+width-limited. The exact failure at the best survivor is a **single** capacity
+violation:
+
+```text
+k = 22,  want = -341813096342965908899535688,  cap = binom(156,22) = 333519306879392313812741700,
+|want|/cap = 1.024867,  parity CORRECT,  and binom(157,22) >= |want|
+```
+
+-- i.e. it is short by **one degree at one index**.
+
+**The unused lever.** `D0` has always been taken *constant* in this lane. It
+need not be: the deadline `T(n) = n + 1 + floor(3n/5) + e(n)` gives
+`C = lim T(n)/n = 1 + 3/5 = 8/5` for **any bounded** `e`, so the admissible
+degree profiles are `d_i = floor(3(R+i)/5) + e_i` with `e` bounded -- a much
+larger search space than the one-parameter family used so far. A first probe
+of it (`e = 3` with a `+1` or `+2` bump on the last few rows) improves the miss
+further:
+
+```text
+e = 3, last  4 rows +1 :  best |want|/cap = 1.009
+e = 3, last  8 rows +1 :  best |want|/cap = 1.009
+e = 3, last  4 rows +2 :  best |want|/cap = 1.022
+e = 3, last 16 rows +1 :  best |want|/cap = 2.864   (not monotone -- the profile matters)
+```
+
+`R = 128` still does not close, but the best miss is now **0.9%**, from a
+search that has explored essentially none of the bounded-`e` space. Combined
+with the `D0`-mobility of the death row (section 5), this is the strongest
+available evidence that the `R = 128` failure is a **search** phenomenon.
+The non-monotonicity in the bump width is itself a warning: the profile is not
+a single knob to be turned up, and a systematic search over bounded `e` is the
+natural next attack.
 
 ## 6. Scope
 
