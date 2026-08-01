@@ -1,4 +1,4 @@
-LRC14 exceptional proper-four-colour D=3 uniform closure scratch proof
+LRC14 exceptional proper-four-colour D=3 uniform closure exact proof
 universal_proper4_orbits=2;labelled_colourings_per_orbit=24
 tail_Delta=1;tail_wall=1312664/3185;tail_start=413
 finite_m_max=412;singleton_q_max=415;static_safe_pairs_checked=84981;static_floor=137/400890;static_minimum_witness=(414, 415, 1, 414, 415)
@@ -9,8 +9,10 @@ corollary=the entire reflected D=3 sector closes for every m>=1
 scope=reflected THM-2941 residual family only; sufficient certificate, not physical-survivor classification; D>=4 remains outside this theorem
 normal_vs_python_O=BYTE_IDENTICAL
 base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
-nearest_sha256=173b0edc01159be5ae7ec8f2c6a0d7d36bae347c67c8d1592c1f0976af6c1fb5
-universal_sha256=dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3eae07f0f857689
-source_sha256=711f84beffc5f1917b362b7bb3dcb57e3ffe159ba67dcf86b9cf10fb30a3f36c
+nearest_sha256=c886867412f851c9a2ad75daf7d7533bee1fbd3617147c459ef226015f230564
+nearest_output_sha256=114ce28bd8a836dfd8d8155b93b37b9037f924d0df7dc532a376eb3f2bf190c0
+universal_sha256=a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8
+universal_output_sha256=7364d5866171405fa90539a9ad76727c0c52f020ac1a104a1ab4f0276aedd115
+source_sha256=c69a1452514704c44ec5cc128a7606a0cf6f7cf600f83729b10cac46c7210616
 semantic_sha256=61b456316b2e0d4b694af399c749586b4c6a3896cacaf581e29ddaf6adf7e1ed
 all_exact_controls=PASS

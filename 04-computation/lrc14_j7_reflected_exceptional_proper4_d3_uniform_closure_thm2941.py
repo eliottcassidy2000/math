@@ -63,14 +63,28 @@ NEAREST = (
     / "04-computation"
     / "lrc14_j7_reflected_nearest_level_matching_tail_referee_thm2941.py"
 )
+NEAREST_OUTPUT = (
+    ROOT
+    / "05-knowledge"
+    / "results"
+    / "lrc14_j7_reflected_nearest_level_matching_tail_referee_thm2941.out"
+)
 UNIVERSAL = (
     ROOT
     / "04-computation"
     / "lrc14_j7_reflected_universal_pair_chromatic_closure_thm2941.py"
 )
+UNIVERSAL_OUTPUT = (
+    ROOT
+    / "05-knowledge"
+    / "results"
+    / "lrc14_j7_reflected_universal_pair_chromatic_closure_thm2941.out"
+)
 EXPECTED_BASE_SHA256 = "2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31"
-EXPECTED_NEAREST_SHA256 = "173b0edc01159be5ae7ec8f2c6a0d7d36bae347c67c8d1592c1f0976af6c1fb5"
-EXPECTED_UNIVERSAL_SHA256 = "dc6f23a201e817dd9134e8660d35e83d3053c67d26fc271ce3eae07f0f857689"
+EXPECTED_NEAREST_SHA256 = "c886867412f851c9a2ad75daf7d7533bee1fbd3617147c459ef226015f230564"
+EXPECTED_NEAREST_OUTPUT_SHA256 = "114ce28bd8a836dfd8d8155b93b37b9037f924d0df7dc532a376eb3f2bf190c0"
+EXPECTED_UNIVERSAL_SHA256 = "a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8"
+EXPECTED_UNIVERSAL_OUTPUT_SHA256 = "7364d5866171405fa90539a9ad76727c0c52f020ac1a104a1ab4f0276aedd115"
 EXPECTED_SEMANTIC_SHA256 = "61b456316b2e0d4b694af399c749586b4c6a3896cacaf581e29ddaf6adf7e1ed"
 
 TAIL_START = 413
@@ -87,12 +101,17 @@ def require(condition: bool, message: object) -> None:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    """Return the repository's platform-independent LF-normalized digest."""
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 require(sha256(BASE) == EXPECTED_BASE_SHA256, "reflected interval engine changed")
 require(sha256(NEAREST) == EXPECTED_NEAREST_SHA256, "nearest-level referee changed")
+require(sha256(NEAREST_OUTPUT) == EXPECTED_NEAREST_OUTPUT_SHA256,
+        "nearest-level stored output changed")
 require(sha256(UNIVERSAL) == EXPECTED_UNIVERSAL_SHA256, "universal chromatic referee changed")
+require(sha256(UNIVERSAL_OUTPUT) == EXPECTED_UNIVERSAL_OUTPUT_SHA256,
+        "universal chromatic stored output changed")
 SPEC = spec_from_file_location("exceptional_d3_base", BASE)
 require(SPEC is not None and SPEC.loader is not None, "cannot load reflected base")
 R = module_from_spec(SPEC)
@@ -360,7 +379,7 @@ def main() -> None:
     require(semantic == EXPECTED_SEMANTIC_SHA256, ("semantic digest changed", semantic))
     source_sha = sha256(Path(__file__))
     lines = [
-        "LRC14 exceptional proper-four-colour D=3 uniform closure scratch proof",
+        "LRC14 exceptional proper-four-colour D=3 uniform closure exact proof",
         f"universal_proper4_orbits={len(CASES)};labelled_colourings_per_orbit=24",
         f"tail_Delta=1;tail_wall={qtext(tail_wall)};tail_start={TAIL_START}",
         f"finite_m_max={FINITE_M_MAX};singleton_q_max={STATIC_Q_MAX};"
@@ -386,7 +405,9 @@ def main() -> None:
         "normal_vs_python_O=BYTE_IDENTICAL",
         f"base_sha256={sha256(BASE)}",
         f"nearest_sha256={sha256(NEAREST)}",
+        f"nearest_output_sha256={sha256(NEAREST_OUTPUT)}",
         f"universal_sha256={sha256(UNIVERSAL)}",
+        f"universal_output_sha256={sha256(UNIVERSAL_OUTPUT)}",
         f"source_sha256={source_sha}",
         f"semantic_sha256={semantic}",
         "all_exact_controls=PASS",

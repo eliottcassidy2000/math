@@ -77,6 +77,12 @@ NEAREST = (
     / "04-computation"
     / "lrc14_j7_reflected_nearest_level_matching_tail_referee_thm2941.py"
 )
+NEAREST_OUTPUT = (
+    ROOT
+    / "05-knowledge"
+    / "results"
+    / "lrc14_j7_reflected_nearest_level_matching_tail_referee_thm2941.out"
+)
 UNIVERSAL = (
     ROOT
     / "04-computation"
@@ -96,10 +102,11 @@ OUTPUT = (
 )
 
 EXPECTED_BASE_SHA256 = "2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31"
-EXPECTED_NEAREST_SHA256 = "367a4b299ebaf802faeedb056f2e3061b707c3df9aeebcb9e7afb941681cd750"
+EXPECTED_NEAREST_SHA256 = "c886867412f851c9a2ad75daf7d7533bee1fbd3617147c459ef226015f230564"
+EXPECTED_NEAREST_OUTPUT_SHA256 = "114ce28bd8a836dfd8d8155b93b37b9037f924d0df7dc532a376eb3f2bf190c0"
 EXPECTED_UNIVERSAL_SHA256 = "a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8"
 EXPECTED_UNIVERSAL_OUTPUT_SHA256 = "7364d5866171405fa90539a9ad76727c0c52f020ac1a104a1ab4f0276aedd115"
-EXPECTED_SEMANTIC_SHA256 = ""
+EXPECTED_SEMANTIC_SHA256 = "e5f3c33898bb9f327c20c8ecd81caea23ecef6426ea8386f7e30a3d9c371a216"
 
 TAIL_START = 795
 FINITE_M_MAX = TAIL_START - 1
@@ -148,11 +155,14 @@ def require(condition: bool, message: object) -> None:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    """Return the repository's platform-independent LF-normalized digest."""
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 require(sha256(BASE) == EXPECTED_BASE_SHA256, "reflected interval engine changed")
 require(sha256(NEAREST) == EXPECTED_NEAREST_SHA256, "nearest-level referee changed")
+require(sha256(NEAREST_OUTPUT) == EXPECTED_NEAREST_OUTPUT_SHA256,
+        "nearest-level stored output changed")
 require(sha256(UNIVERSAL) == EXPECTED_UNIVERSAL_SHA256, "universal chromatic referee changed")
 require(
     sha256(UNIVERSAL_OUTPUT) == EXPECTED_UNIVERSAL_OUTPUT_SHA256,
@@ -468,6 +478,7 @@ def main() -> None:
         "normal_vs_python_O=BYTE_IDENTICAL",
         f"base_sha256={sha256(BASE)}",
         f"nearest_sha256={sha256(NEAREST)}",
+        f"nearest_output_sha256={sha256(NEAREST_OUTPUT)}",
         f"universal_sha256={sha256(UNIVERSAL)}",
         f"universal_output_sha256={sha256(UNIVERSAL_OUTPUT)}",
         f"source_sha256={source_sha}",

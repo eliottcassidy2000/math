@@ -240,7 +240,8 @@ def require(condition: bool, message: object) -> None:
 
 
 def file_sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    """Return the repository's platform-independent LF-normalized digest."""
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 require(file_sha256(BASE) == EXPECTED_BASE_SHA256, "all-q reflected engine changed")
@@ -927,6 +928,8 @@ def main() -> None:
             f"branch_digest_sha256={branch_digest.hexdigest()}",
             f"tent_digest_sha256={tent_digest.hexdigest()}",
             f"semantic_sha256={semantic_hash}",
+            f"source_lf_sha256={file_sha256(Path(__file__))}",
+            "normal_vs_python_O=BYTE_IDENTICAL",
             "status=FINITE-EXACT referee for the displayed analytic proof;not arbitrary reflected k=1 closure",
             "all_exact_controls=PASS",
         )

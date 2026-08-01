@@ -35,5 +35,7 @@ moving_cell_q1_to3;E=(1, 2, 4, 6, 9, 12);max_over_vectors_min_over_safe_cells=35
 branch_digest_sha256=a5243d543ec62accc4d775262d2cb4314a8e090e44d7439732585b33d72ae92c
 tent_digest_sha256=80de5ccde3cf0946a98aaafcad5c2c27c32cb61c9d22e035eb2909894bf4ee59
 semantic_sha256=d386be566a00055a955ab63b8cd30b5ae5d8e749782b2d83fbafaf5a422ce3e5
+source_lf_sha256=c886867412f851c9a2ad75daf7d7533bee1fbd3617147c459ef226015f230564
+normal_vs_python_O=BYTE_IDENTICAL
 status=FINITE-EXACT referee for the displayed analytic proof;not arbitrary reflected k=1 closure
 all_exact_controls=PASS
