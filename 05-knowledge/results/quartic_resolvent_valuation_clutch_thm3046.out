@@ -1,0 +1,16 @@
+THM-3046 QUARTIC RESOLVENT VALUATION CLUTCH
+root_difference_identities=3
+discriminant_identity=quartic_equals_resolvent
+residue_vectors=46656
+clutch_classes=24
+uniform_fibre_size=1944
+integral_projector_classes=1944
+s4_permutations=24
+s4_basis_equivariance_checks=144
+depth1_matching_sums=(2, 0, 0)
+depth2_matching_sums=(4, 0, 0)
+triple_matching_sums=(2, 1, 1)
+same_discriminant_binary_hostile=PASS
+same_binary_ternary_hostile=PASS
+semantic_sha256=02d5f1bb92d154afd1436d9a19f9c943efc3340c94d1574fbec91ee4f189aa1e
+ALL_EXACT_CHECKS_PASS
