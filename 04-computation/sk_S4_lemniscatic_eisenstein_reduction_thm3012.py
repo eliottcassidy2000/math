@@ -257,6 +257,32 @@ check("C6c5 K((r3-1)/(2r2)) = 3^{1/4} Gamma(1/3)^3/(2^{7/3} pi)",
           - mp.mpf(3)**mp.mpf(0.25)*g13**3/(mp.mpf(2)**(mp.mpf(7)/3)*pi))
       < mp.mpf(10)**-40)
 
+# ------------------------------- C7: the general-x by-product (addendum 5, R6)
+print("C7  int_0^1 K/(1-x k^2) dk = (4/pi)K(sqrt x) G + B(x)  for general x")
+mp.mp.dps = 60
+
+
+def _y1(t):
+    return (2/mp.pi)*mp.ellipk(t)
+
+
+def _y2(t):
+    return (2/mp.pi)*mp.ellipk(1-t)
+
+
+def _B(x):
+    a = mp.quad(lambda t: _y2(t)/(1-t), [0, x])
+    bq = mp.quad(lambda t: _y1(t)/(1-t), [0, x])
+    return (mp.pi/4)*(_y1(x)*a - _y2(x)*bq)
+
+
+ok7 = True
+for xs in ('0.05', '0.3', '0.5', '0.9', '-0.5'):
+    x = mp.mpf(xs)
+    lhs = mp.quad(lambda k: mp.ellipk(k**2)/(1 - x*k**2), [0, 1])
+    ok7 &= abs(lhs - ((4/mp.pi)*mp.ellipk(x)*mp.catalan + _B(x))) < mp.mpf(10)**-50
+check("C7 general-x moment formula at x = 0.05, 0.3, 0.5, 0.9, -0.5", ok7)
+
 print()
 if FAIL:
     print("*** FAILURES:", FAIL)

@@ -554,6 +554,24 @@ The two derivations agree and are independent; only the present one exhibits the
 
 ### (R6) By-product for the whole `K`-moment family
 
+**Route audit (recorded stopping reasons).** Two of the obvious attacks on
+`int_0^1 K/(2-k^2)dk` are dead ends and should not be retried:
+
+* *Partial fractions* `1/(2-k^2) = (1/(2 sqrt2))[1/(sqrt2-k) + 1/(sqrt2+k)]`
+  expands into `log(1+sqrt2) * sum_n c_n 2^n - (correction)`, and
+  `sum_n c_n 2^n` **diverges** (`c_n ~ 1/(pi n)`): the cancellation is essential,
+  the split is formal only.
+* *Fourier-Legendre.* With `K(sqrt x) = sum_n (2/(2n+1))P_n(2x-1)`,
+  `I = sum_n (2/(2n+1)) J_n` with
+  `J_n = int_0^1 P_n(2y^2-1)/(2-y^2)dy = rho_n + P_n(3) log(1+sqrt2)/sqrt2`,
+  `rho_n` rational (`0, -2, -8, -118/3, -200, ...`; verified `n <= 8`). But
+  `P_n(3) ~ (3+2 sqrt2)^n`, so separating the `log(1+sqrt2)` part **diverges**
+  again; the FL series converges only as a whole, and slowly (`n <= 8` gives
+  `1.18928` against `I = 1.18775`).
+
+The route that works is the one above: the moment *recurrence* (which isolates
+`G` with an exact coefficient) plus the Legendre relation as a *Wronskian*.
+
 The same argument at general `x` gives, for `|x| < 1`,
 
 ```text
