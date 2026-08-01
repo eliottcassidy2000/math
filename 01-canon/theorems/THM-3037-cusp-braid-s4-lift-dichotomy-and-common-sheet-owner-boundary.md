@@ -22,6 +22,9 @@ depends_on:
 related:
   - THM-2455-quartic-swallowtail-scaffold-and-endpoint-corrections
   - THM-2570-jelonek-cusp-cylinder-normalization-and-conductor
+  - THM-2596-modular-free-factor-farey-gram-owner-cocycle
+  - THM-2606-affine-v4-parity-channels-partial-cubes-and-feuerbach-origin
+  - THM-2632-farey-v4-theta-channel-and-hurwitz-crt-parity-sidecar
   - THM-2681-thm1310-s3-normalization-and-quartic-v4-torsor-exclusion
   - THM-2975-modular-six-sheet-schreier-graphs-and-farey-partial-cube-boundary
   - THM-3034-ordered-quartic-cross-wall-x1-14-and-diamond-quotient
@@ -349,6 +352,27 @@ It is now a sharp **non-Keller local hostile**: the free factors and killed
 centre are valid, but the geometric parabolic is a derangement.  The split
 branch instead supplies a local point-stabilizer `S3` and a section in the
 finite normalization.
+
+This also sharpens the original binary/ternary-tree proposal without
+reversing the guardrails of
+[THM-2596](THM-2596-modular-free-factor-farey-gram-owner-cocycle.md).
+The rooted binary Farey children are parabolic **words** in the two torsion
+factors, not the `C2` factor by itself.  The literal co-occurrence datum in
+the present quartic action is instead the one-bit quotient (12b).  In its
+nonzero class,
+
+```text
+X^2, Y^2, X^2Y^2
+```
+
+are exactly the three nonzero `V4` directions.  These are the three
+parity/resolvent channels of
+[THM-2606](THM-2606-affine-v4-parity-channels-partial-cubes-and-feuerbach-origin.md),
+now recovered as a square defect of two lifted braid meridians.  This does
+not identify the LRC parity and ternary towers with a common modular action;
+[THM-2632](THM-2632-farey-v4-theta-channel-and-hurwitz-crt-parity-sidecar.md)
+still separates the permutahedral six-state action from the cyclic CRT
+coordinate.  A physical LRC intertwiner remains absent.
 
 Neither branch identifies the local cubic with the special affine cubic of
 THM-1310.  [THM-2681](THM-2681-thm1310-s3-normalization-and-quartic-v4-torsor-exclusion.md)
