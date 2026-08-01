@@ -1,5 +1,5 @@
 ---
-id: HYP-9078
+id: HYP-9079
 title: "The exponential-integral non-vanishing claim, its FC bridge, and what THM-3022 already settles there"
 status: >
   PARTIAL + PROVENANCE NOTE. External claim considered: int_0^1 e^{Q(t)} dt != 0
@@ -118,13 +118,31 @@ Abstract opens: "We investigate structural properties of non-sofic groups,
 It does not contain the phrase "nonsofic groups exist" as a claim, does not
 construct such a group, and is explicitly conditional -- it proves that IF a
 non-sofic group exists THEN the class of omega-non-sofic groups is non-empty.
-So the cited source is evidence that the existence question was still open,
-not that it was settled. The pasted abstract is recorded here as an
-unverified external claim and is NOT used anywhere.
+So the **cited id** was the wrong one. The pasted abstract is recorded here as
+an external claim and is NOT used anywhere.
 
-The repo has no sofic / property-(T) / expander thread to merge it into in any
-case: grepping canon returns only incidental hits (THM-438 Paley/Catalan,
-THM-139 chirality, THM-2228 Mahler, HYP-3832 PSL(2,7) cochain).
+> ### CORRECTION, same day: the CLAIM is true; only the CITATION was wrong.
+>
+> **Non-sofic groups exist.** The source is OpenAI, *Ten Advances in
+> Mathematics and Theoretical Computer Science*, 1 August 2026, Chapter 3:
+> `Theorem 1.1. The unit group L_{F_2}(1,2)^x is not sofic.` The Lean
+> certificate at `github.com/openai/ten-proofs` (`NonSoficGroup.lean`, 34440
+> lines) proves `exists_finitelyPresented_nonsofic_group` with **zero** `sorry`
+> and no extra axioms. Full audit:
+> [`07-reflections/nonsofic-brief-is-not-the-cited-paper-klein-S428.md`](../../07-reflections/nonsofic-brief-is-not-the-cited-paper-klein-S428.md).
+>
+> The sentence above -- "evidence that the existence question was still open"
+> -- was a **non sequitur** and is withdrawn. A wrong citation is evidence about
+> the citation, not about the theorem. That inference is the exact error the
+> reflection's retraction banner documents; it is repeated here only so the two
+> records agree.
+
+**Repo contact is nevertheless nil, and the reason matters.** The canon hits are
+all incidental or homonymous: `THM-2228`'s "nonsofic language" and `HYP-2029`'s
+"sofic shift on chamber symbols" are **sofic shifts** in symbolic dynamics, an
+unrelated notion from Gromov-Weiss group soficity. See
+[`01-canon/ACTIVE-GUARDRAILS.md`](../../01-canon/ACTIVE-GUARDRAILS.md) item 67.
+Do not merge this into any LRC or Mahler thread on the strength of a grep.
 
 
 ## 6. The claim strengthened to TRANSCENDENCE, and degree one PROVED
