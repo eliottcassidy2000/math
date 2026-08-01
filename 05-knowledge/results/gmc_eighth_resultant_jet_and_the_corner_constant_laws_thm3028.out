@@ -1,0 +1,122 @@
+==============================================================================
+A. CONTROLS -- frozen digests re-emitted from the P_8 run
+==============================================================================
+    j=1 frozen rows=  27 mine=  27  ROW-ORDER IDENTICAL=True
+    j=2 frozen rows= 122 mine= 122  ROW-ORDER IDENTICAL=True
+    j=3 frozen rows= 333 mine= 333  ROW-ORDER IDENTICAL=True
+    THM-2997 digest re-emitted: True
+    P_4 content-1 digest reproduced: True
+    P_5 content-1 digest reproduced: True
+    P_6 content-1 digest reproduced: True
+    P_7 content-1 digest reproduced: True
+  VERDICT A: every frozen digest reproduced: True
+
+==============================================================================
+B. SHAPE LEDGER j=1..8   eq(2): |P_j| = (2j+1)^3 - 3(2j-2-floor(j/2)) - [j=3]
+==============================================================================
+    j | terms |  box  | eq(2) | absent | corner-only
+    1 |    27 |    27 |    27 |      0 | True
+    2 |   122 |   125 |   122 |      3 | True
+    3 |   333 |   343 |   333 |     10 | False  (j=3: one expected off-corner absence [(5, 0, 3)])
+    4 |   717 |   729 |   717 |     12 | True
+    5 |  1313 |  1331 |  1313 |     18 | True
+    6 |  2176 |  2197 |  2176 |     21 | True
+    7 |  3348 |  3375 |  3348 |     27 | True
+    8 |  4883 |  4913 |  4883 |     30 | True
+  VERDICT B: eq(2) holds j=1..8, all absences at corners except the one eq(2) predicts at j=3: True
+
+==============================================================================
+C. THE CONSTANT SEQUENCES c_m -- closed forms fitted on m=1,2,3 (j<=7 data)
+==============================================================================
+    slice  m   observed c_m        closed form a_m/d_m      match
+      A    1   47/24               47/24     True
+      A    2   707/23040           707/23040     True
+      A    3   11267/15482880      11267/15482880     True
+      E    1   37/18               37/18     True
+      E    2   301/9720            301/9720     True
+      E    3   2677/3674160        2677/3674160     True
+      C    1   23/6                23/6     True
+      C    2   23/360              23/360     True
+      C    3   23/15120            23/15120     True
+
+    d_m^C = (3m)!/(2m-2)! = ['6', '360', '15120', '604800']
+    d_m^A / d_m^C = 4^(2m-1) = [4, 64, 1024, 16384]
+    d_m^E / d_m^C = 3^(2m-1) = [3, 27, 243, 2187]
+    a_m^A = 3 + 44*16^(m-1) = [47, 707, 11267, 180227]
+    a_m^E = 4 + 33*9^(m-1)  = [37, 301, 2677, 24061]
+    a_m^C = 23 (constant)
+  VERDICT C: closed forms reproduce all nine known constants: True
+
+==============================================================================
+D. PRE-REGISTERED j=8 VALUES, slots k=-1..6 (forced by the j<=7 laws)
+==============================================================================
+    slice A:
+      k=-1  [M^9]  predicted -23/36                 got -23/36                 CONFIRMED
+      k= 0  [M^8]  predicted 3/2                    got 3/2                    CONFIRMED
+      k= 1  [M^7]  predicted -47/24                 got -47/24                 CONFIRMED
+      k= 2  [M^6]  predicted 0                      got 0                      CONFIRMED
+      k= 3  [M^5]  predicted 4949/3840              got 4949/3840              CONFIRMED
+      k= 4  [M^4]  predicted 0                      got 0                      CONFIRMED
+      k= 5  [M^3]  predicted -11267/18432           got -11267/18432           CONFIRMED
+      k= 6  [M^2]  predicted 0                      got 0                      CONFIRMED
+    slice E:
+      k=-1  [M^9]  predicted -23/36                 got -23/36                 CONFIRMED
+      k= 0  [M^8]  predicted 11/8                   got 11/8                   CONFIRMED
+      k= 1  [M^7]  predicted -37/18                 got -37/18                 CONFIRMED
+      k= 2  [M^6]  predicted 0                      got 0                      CONFIRMED
+      k= 3  [M^5]  predicted 2107/1620              got 2107/1620              CONFIRMED
+      k= 4  [M^4]  predicted 0                      got 0                      CONFIRMED
+      k= 5  [M^3]  predicted -2677/4374             got -2677/4374             CONFIRMED
+      k= 6  [M^2]  predicted 0                      got 0                      CONFIRMED
+    slice C:
+      k=-1  [M^9]  predicted -23/36                 got -23/36                 CONFIRMED
+      k= 0  [M^8]  predicted 3/8                    got 3/8                    CONFIRMED
+      k= 1  [M^7]  predicted -23/6                  got -23/6                  CONFIRMED
+      k= 2  [M^6]  predicted 0                      got 0                      CONFIRMED
+      k= 3  [M^5]  predicted 161/60                 got 161/60                 CONFIRMED
+      k= 4  [M^4]  predicted 0                      got 0                      CONFIRMED
+      k= 5  [M^3]  predicted -23/18                 got -23/18                 CONFIRMED
+      k= 6  [M^2]  predicted 0                      got 0                      CONFIRMED
+  VERDICT D: all 24 pre-registered j=8 coefficients confirmed: True
+
+==============================================================================
+E. THE GENUINELY NEW SLOT k=7 -- speculative closed form, first testable at j=8
+==============================================================================
+    j=8 is the first order with k=7 < j, so c_4 was never observed before.
+    Three separate extrapolations from m<=3 were registered. Scoring them:
+
+    (i) NUMERATORS  a_m^A = 3+44*16^(m-1),  a_m^E = 4+33*9^(m-1),  a_m^C = 23
+        A  predicted   180227   observed   180227   CONFIRMED
+        E  predicted    24061   observed    24061   CONFIRMED
+        C  predicted       23   observed       23   CONFIRMED
+
+    (ii) SLICE RATIOS  d_m^A/d_m^C = 4^(2m-1),  d_m^E/d_m^C = 3^(2m-1)
+        A  predicted 4^7 =    16384   observed 16384   CONFIRMED
+        E  predicted 3^7 =     2187   observed 2187   CONFIRMED
+
+    (iii) BASE SEQUENCE  d_m^C = (3m)!/(2m-2)!  ->  predicted d_4^C = 665280
+        observed d_4^C = 604800   ratio predicted/observed = 11/10
+        *** REFUTED *** -- this was the one guess that failed.
+
+    Resulting measured constants:
+        c_4^A = 180227/9909043200
+        c_4^E = 24061/1322697600
+        c_4^C = 23/604800
+
+  VERDICT E: numerator laws and slice ratios CONFIRMED out-of-sample at
+             m=4 (True); the base sequence d_m^C = 6, 360, 15120, 604800
+             has NO closed form yet and is the open piece.
+
+==============================================================================
+F. TERMINAL SLOT k=j (the constant term) -- exceptional, recorded not predicted
+==============================================================================
+    j=4  A=-15797937/128                  C=-75025371/16
+    j=5  A=1184426373/640                 C=8248311801/40
+    j=6  A=-29600152227/1024              C=-306929293461/32
+    j=7  A=6657676188189/14336            C=102839873747325/224
+    j=8  A=-499148977178721/65536         C=-11469768516636435/512
+    These do NOT follow the slot law -- k=j is outside its range of validity.
+
+==============================================================================
+SUMMARY  controls=True  shape=True  closed-forms=True  pre-registered=True  new-slot=True
+==============================================================================
