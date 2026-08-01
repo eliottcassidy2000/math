@@ -200,11 +200,10 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   moving-real-plane divisibility problem, equivalently a binary
   sextic--octic resultant; two exact certificates close `{0,1,2,3}`, while an
   abstract hidden plane proves coordinate faces insufficient.  Its
-  conjugate-pair/three-plane count does not carry the standard holomorphic
-  `C_2*C_3` action. THM-2845 classifies finite-algebra scalar detectors
-  (two-way iff local residue-`K`); THM-2846 gives a positive cone line
-  vanishing through Gaussian moment six but exiting at eight, with a
-  variance-jet plane detector. THM-2848 reduces four slots to
+  conjugate-pair/three-plane count does not carry the holomorphic `C_2*C_3`
+  action. THM-2845 classifies scalar detectors; THM-2846 gives a positive
+  cone line invisible through moment six but seen at eight by a variance jet.
+  THM-2848 reduces four slots to
   `F^o=0` or a shared cubic--quartic line; THM-2866 excludes the first.
   THM-2879/2890/2891 close consecutive cone-cutting planes.
   THM-2906/10/14/18 give holonomy/`C3` exits; THM-2929 makes high first gaps
@@ -212,12 +211,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   `14`; THM-2955/2957/2959 close first-gap `15<=M<=24` by modular gates.
   THM-2960 gives Smith walls through `24` (two charts through `20`);
   THM-2964 makes the pure ladder universal; THM-2963 kills next-prime gates;
-  THM-2969/73/78/82 give strict ULC through M34; THM-2997's `R2>R1`
-  begins there and is conditional beyond it.  THM-3040's exact formal-corner
-  quotient `(1+Mt)^26(1+(M+1)t)^20` proves THM-3030's all-order C-law;
-  THM-3047 realizes its universal width flag as a product-Gamma moment and
-  proves strict generalized-Hankel positivity, while moving-lower transport
-  remains uncontrolled.
+  THM-2969/73/78/82 give strict ULC through M34, where THM-2997's conditional
+  `R2>R1` begins. THM-3040's corner quotient
+  `(1+Mt)^26(1+(M+1)t)^20` proves THM-3030's all-order C-law; THM-3047 makes
+  the width flag a product-Gamma moment with strict Hankel positivity.
+  Moving-lower transport stays open.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent
