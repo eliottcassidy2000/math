@@ -213,7 +213,7 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   `14`; THM-2955/2957/2959 close first-gap `15<=M<=24` by modular gates.
   THM-2960 gives Smith walls through `24` (two charts through `20`);
   THM-2964 makes the pure ladder universal; THM-2963 kills next-prime gates;
-  THM-2969/2973/2978 prove positive PF2 wall-stripped cores for `6<=M<=32`, including quartic wall `(31,25)`; width `>=33` is outside this finite atlas.
+  THM-2969/73/78/82 give strict ULC through M34. Audited THM-2997 has `R2>R1` at M34, fails M33, and is conditional beyond 34 on encoded wall; THM-3000/3003 are invoices.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent

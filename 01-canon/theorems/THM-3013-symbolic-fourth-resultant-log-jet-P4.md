@@ -115,8 +115,9 @@ unbounded asymptotic margin: `w/d->0>-923/60000`.
   its own residual says so.  The degree bounds `M<=8, U<=16, V<=8` were **measured**
   by Newton divided differences with oversampling, not proved.  The correct label
   is the one in the frontmatter.
-- **`m_0` is NOT the identity.**  THM-2997 section 4's remark about the pure
-  leading matrix does not apply to the raw selected chart; `det(m_0)` vanishes on
+- **`m_0` is NOT the identity.**  THM-2997 section 4 previously conflated its
+  locally inverse-normalized slice with the raw selected chart; that wording is
+  now repaired.  For the raw chart, `det(m_0)` vanishes on
   `{U=1} u {V=1} u {V=2U-1} u {D=0}` and carries a high power of `D`
   (exactly `D^24` at `(M,U,V)=(7,3,2)`).  No symbolic inverse is needed because
   `U,V` stay numeric per evaluation.
