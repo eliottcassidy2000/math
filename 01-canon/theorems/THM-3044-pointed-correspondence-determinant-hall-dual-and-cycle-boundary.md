@@ -10,8 +10,9 @@ status: >
   dual.  Hall deficiency is the positivity gate but can be a strict
   quantitative lower bound.  Higher ghosts detect balanced circulation, not
   arrival.  THM-2549 closes conditionally when its semantic later root is
-  physically identified with the carry-corrected ancestry root; no such
-  pointing is constructed here, so no LRC row is excluded.
+  physically identified with the carry-corrected ancestry root on the full
+  semantic packet; no such full-packet pointing is constructed here, so no
+  LRC row is excluded.
 source: kind-pasteur-2026-08-01-pointed-arrival-holotopy
 audit: >
   Three independent immutable-file audits ACCEPTED the typed pointed closure,
@@ -29,6 +30,11 @@ depends_on:
   - THM-2545-word-stratified-hall-arrival-criterion-and-owner-word-transportation-hostile
   - THM-2549-future-pullback-target-neutrality-and-cemetery-hall-boundary
 related:
+  - THM-2565-target-active-self-return-and-future-root-overlap-audit
+  - THM-2604-unshifted-future-root-accessibility-and-selector-cross-mixing-boundary
+  - THM-2610-chronological-paired-slice-marked-triangle-graft-and-action-axis-boundary
+  - THM-2613-canonical-root-diagonal-opposite-shift-section
+  - THM-2615-physical-diagonal-toric-kernel-and-dipole-radon-invoice
   - THM-2829-q11-semantic-reselection-and-fine-ancestry-phase-obstruction
   - THM-2835-q11-semantic-word-horn-and-bockstein-blind-support-no-go
   - THM-2870-prime-power-convolution-versus-physical-diagonal-intertwiner-obstruction
@@ -391,13 +397,29 @@ If certification holds only on a positive subpacket, apply `(26)` after
 restricting `C,D_iota`, and `M_sigma` to that subpacket; on the unreduced
 packet this gives only the corresponding positive lower bound.
 
-The premise of this paragraph is still open in the live LRC proof.  A future
-base digit, a numerical root label, a Bockstein path, or a one-way cospan is
-not that premise.  Nothing in this theorem constructs the genuinely later
-semantic root map, a physical `J_iota`, a target/owner phase, or a scalar-cover
-row exclusion.  Under the conditional premise the pointed support is diagonal,
-so its all-head Hall cut has deficiency `M_sigma`; this is stronger than mere
-positivity.  The LRC ledger is unchanged.
+The premise of this paragraph is still open **for the full THM-2545/2549
+semantic packet**.  This qualification is load-bearing.  Canon already has
+several honest but scoped physical pointings:
+
+- THM-2565 points the head root to a later root for its target-informed
+  changed-selector packet;
+- THM-2604 gives every canonical THM-2537 head a genuinely later
+  target-active occurrence on the same physical root, but not a future
+  terminal word, full-`X` packet, or paired-blocker endpoint;
+- THM-2613 canonically identifies that physical root with the future local
+  paired-shift torsor, and THM-2610 retains the old marked `X,Y,m` beside the
+  future shift colours, but canonically does not identify the future shift
+  with the old relation residue or the next semantic section.
+
+Thus the debt is not “construct any physical pointing.”  It is to construct
+one pointing on a correspondence that simultaneously retains the semantic
+word, endpoint/repair data, and address/current fields required by `(25)`.
+A future base digit, an isolated numerical root label, a Bockstein path, or a
+one-way cospan is not that full premise.  Nothing in this theorem constructs
+that full semantic root map, the corresponding `J_iota`, a target/owner phase,
+or a scalar-cover row exclusion.  Under the conditional premise the pointed
+support is diagonal, so its all-head Hall cut has deficiency `M_sigma`; this
+is stronger than mere positivity.  The LRC ledger is unchanged.
 
 ## 7. Why the GMC quotient suggested this operation
 
@@ -441,6 +463,7 @@ python -O 04-computation/lrc14_pointed_correspondence_determinant_hall_dual_thm3
 
 Both executions equal the stored nine-line transcript byte-for-byte.  The
 result is a finite correspondence/transport theorem plus a conditional typing
-bridge.  It does not prove that the required physical pointing exists.
+bridge.  It does not prove that the required **full-packet** physical pointing
+exists; the scoped pointings listed in Section 6 are already proved.
 
 **QED.**
