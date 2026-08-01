@@ -3,7 +3,8 @@ id: THM-3030
 title: "The eighth resultant log-jet P_8, and closed forms for the corner-slice constants"
 status: >
   FINITE-EXACT TABLE-INTERNAL (j<=8) + INDEPENDENTLY HOSTILE-AUDITED;
-  all-order continuation OPEN.  The frozen P_8 table has 4883 terms, degrees
+  all-order continuation now PROVED separately by THM-3040.  The frozen P_8
+  table has 4883 terms, degrees
   (M,U,V)=(16,32,16), support b+2c<=32, content
   2^28*3^11*5*7, and LF hash bba6b4b9....  Its historically reported two-grid
   interpolation and out-of-sample build are NOT replayed by the canonical
@@ -12,9 +13,9 @@ status: >
   slot laws, repairs the odd-slot sign to (-1)^(j+m), and proves on j<=8 the
   exact Faulhaber identity p_j=46 sum_(s<M)s^j+20M^j+K_j.  Consequently the
   measured C-slice constants are 46|B_(2m)|/(2m)! for m=1..4, closing the
-  observed denominator sequence 6,360,15120,604800.  Extension to all m is a
-  conjecture.  P_10, not P_9, is its first new nonterminal test; P_12 would see
-  the first Bernoulli-numerator break through B_12=-691/2730.
+  observed denominator sequence 6,360,15120,604800.  Extension to all m was a
+  conjecture within this finite table alone.  THM-3040 proves the predicted
+  P_10 and P_12 corner values without constructing either global jet.
 source: klein-S428
 audit: >
   Independent hostile audit ACCEPTS the frozen-table claims after scope repair.
@@ -34,6 +35,7 @@ related:
   - THM-3011
   - THM-3014
   - THM-3006
+  - THM-3040-formal-corner-resultant-width-quotient-and-all-order-bernoulli-law
 script: 04-computation/gmc_eighth_resultant_jet_and_the_corner_constant_laws_thm3030.py
 output: 05-knowledge/results/gmc_eighth_resultant_jet_and_the_corner_constant_laws_thm3030.out
 script_sha256: c730b9d6c49ff2909abd274b7413bc7f5957b9348bffb83b340ab1d1a93c70b6
@@ -48,7 +50,7 @@ hash_basis: LF-normalized bytes
 # THM-3030 -- `P_8` and the corner-slice constant closed forms
 
 **FINITE-EXACT TABLE-INTERNAL (`j<=8`) + INDEPENDENTLY HOSTILE-AUDITED;
-ALL-ORDER CONTINUATION OPEN.**
+ALL-ORDER CONTINUATION PROVED SEPARATELY BY THM-3040.**
 
 ## 1. The jet
 
@@ -117,8 +119,10 @@ error is only exposed by predicting rather than fitting.
 **All 24 pre-registered `j = 8` coefficients (3 slices x 8 slots `k = -1..6`)
 confirm**, listed in part D of the output.  Across all frozen tables the
 independent referee checks `16` visible odd slots per slice and `36` visible
-even-zero slots.  Thus `(-1)^(j+m)` is **FINITE-EXACT through `j=8`**.  No
-finite list makes it a proved all-order law; that continuation remains open.
+even-zero slots.  Thus `(-1)^(j+m)` is **FINITE-EXACT through `j=8` in this
+table**.  No finite list makes it an all-order law.  The independent
+determinant-level mechanism of THM-3040 now proves that continuation; it is not
+inferred from this list.
 
 ## 3. The Bernoulli--Faulhaber mechanism
 
@@ -163,9 +167,10 @@ The separately pre-registered slice formulas also survive at `m=4`:
 | `d_m^A/d_m^C=4^(2m-1)` | `16384` | `16384` | CONFIRMED |
 | `d_m^E/d_m^C=3^(2m-1)` | `2187` | `2187` | CONFIRMED |
 
-These are finite confirmations, not all-order closed forms.  In particular,
-the Bernoulli continuation predicts that the reduced `C` numerator will not
-remain `23`: `B_12=-691/2730` gives a factor `691` at `m=6`.
+The non-C slice rows remain finite confirmations, not all-order closed forms.
+For the C slice, THM-3040 has since proved the Bernoulli continuation and hence
+that the reduced numerator does not remain `23`: `B_12=-691/2730` gives the
+factor `691` at `m=6`.
 
 **What the `23` now means.**  Within the frozen `C` slice, `23` is no longer an
 unexplained numerator: it is half of the exact bulk density `46` in (3), after
@@ -175,7 +180,8 @@ two different objects.
 
 ## 4. Sharp future tests
 
-Formula (6) beyond `m=4` is `CONJECTURAL`.  Its first new nonterminal slot is
+Formula (6) beyond `m=4` was `CONJECTURAL` from this table and is now `PROVED`
+by THM-3040.  Its first new nonterminal slot is
 `k=9` at **`j=10`**, not `j=9`; at `j=9`, `k=j` is the exceptional constant
 term and lies outside the law.  The exact preregistered predictions are
 
@@ -184,9 +190,9 @@ term and lies outside the law.  The exact preregistered predictions are
 
 The `P_12` value is the first discriminator between the Bernoulli mechanism
 and the observed reduced-numerator-`23` extrapolation because
-`15893=23*691`.  A more structural proof target is the width quotient suggested
-by (4): establish the `C`-corner log-jet recurrence at the determinant level,
-which would prove (3)--(6) simultaneously at every order.
+`15893=23*691`.  THM-3040 supplies the formerly requested structural proof:
+its determinant-level width quotient proves (3)--(6) at every order without
+constructing the global `P_10` or `P_12`.
 
 ## 5. Status of each claim
 
@@ -195,12 +201,12 @@ which would prove (3)--(6) simultaneously at every order.
 | `P_8` frozen shape, content, digest | FINITE-EXACT table-internal |
 | historical disjoint grids + OOS | REPORTED; build/pickle absent from canon |
 | eq(2) at `j = 8` | FINITE-EXACT |
-| slot sign law `(-1)^(j+m)` | FINITE-EXACT on every visible slot through `j=8`; all-order OPEN |
+| slot sign law `(-1)^(j+m)` | FINITE-EXACT here through `j=8`; all-order PROVED by THM-3040 |
 | 24 pre-registered `j=8` coefficients | CONFIRMED (genuine pre-registration) |
 | numerator/slice-ratio formulas | CONFIRMED at the new `m=4` datum only |
 | `d_m^C = (3m)!/(2m-2)!` | **REFUTED** at `m = 4` |
-| `c_m^C=46|B_(2m)|/(2m)!` | PROVED from frozen tables for `m<=4`; all-order OPEN |
-| first new test | `P_10`; `P_9` is terminal and cannot test it |
+| `c_m^C=46|B_(2m)|/(2m)!` | PROVED here for `m<=4`; all-order PROVED by THM-3040 |
+| first formerly new test | `P_10`; `P_9` is terminal; THM-3040 proves its corner value |
 | link between the slice `23` and THM-3006's `23` | UNPROVED coincidence |
 
 ## 6. Reproduction

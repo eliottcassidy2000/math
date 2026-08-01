@@ -213,7 +213,9 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   `14`; THM-2955/2957/2959 close first-gap `15<=M<=24` by modular gates.
   THM-2960 gives Smith walls through `24` (two charts through `20`);
   THM-2964 makes the pure ladder universal; THM-2963 kills next-prime gates;
-  THM-2969/73/78/82 give strict ULC through M34. Audited THM-2997 has `R2>R1` at M34, fails M33, and is conditional beyond 34 on encoded wall; THM-3000/3003 are invoices.
+  THM-2969/73/78/82 give strict ULC through M34; THM-2997's `R2>R1`
+  begins there and is conditional beyond it.  THM-3040's exact formal-corner
+  quotient `(1+Mt)^26(1+(M+1)t)^20` proves THM-3030's all-order C-law.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent
@@ -221,14 +223,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   problems remain open.
 ### Live work
 
-Publish THM-2022; sharpen THM-2111's binomial degree toward `M+N`; formalize
-THM-2639's ring identity/sign.  THM-2101's additive routes are corroboration,
-not `GMC2Main.gmc2` dependencies, and positive/two-charge/unique-channel leaves
-are special cases.  HYP-8931's `LowestFaceUniqueChannel` is inconsistent by
-the empty level set (MISTAKE-240), so its implication is vacuous and `98/116`
-only a census.  THM-2070 refutes HYP-8890's saddle/Watson and HYP-8895's
-semigroup bypasses outside their positive/two-charge cases.  Transfer the
-`seed/selector/preserver/exit` design without treating a preserver as a seed.
+Live: publish THM-2022, sharpen THM-2111 toward degree `M+N`, and formalize
+THM-2639.  THM-2101's additive routes are corroborative, not `GMC2Main.gmc2`
+dependencies.  HYP-8931 is vacuous by its empty level set (MISTAKE-240), while
+THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
+`seed/selector/preserver/exit` without mistaking a preserver for a seed.
 
 ## Tournaments
 

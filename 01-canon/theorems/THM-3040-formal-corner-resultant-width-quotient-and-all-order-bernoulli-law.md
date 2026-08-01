@@ -2,7 +2,7 @@
 id: THM-3040
 title: "Formal factorial-resultant corner width quotient and the all-order Bernoulli law"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; independent immutable audit pending.  For
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For
   every fixed three-lower-slot support and every width M above it, the intrinsic
   pure-resultant formal U=V=0 corner germ has exact normalized width quotient
   (1+Mt)^26(1+(M+1)t)^20.  More generally, the k-slot factorial system has
@@ -10,7 +10,16 @@ status: >
   Bernoulli--Faulhaber law holds at every jet order, without constructing the
   global P_j.  This is a coefficientwise t-adic corner, not a physical width,
   raw selected-chart identity, or wall-stripped-core statement.
-source: kind-pasteur-2026-08-01-S?
+source: kind-pasteur-2026-08-01-gmc-formal-corner
+audit: >
+  Two independent immutable-file audits ACCEPTED the coefficientwise t-adic
+  corner, fixed-lower generalized-Vandermonde nonvanishing, resultant
+  multidegree character, exact width quotient, all-order Bernoulli signs and
+  slots, and the intrinsic k-slot extension.  Both independently replayed
+  normal, optimized, and stored output, matched the LF hashes, and passed the
+  documentation checker.  One audit extended the algebraic Bernoulli check
+  through order 64 and the k-slot character through k=20; neither found a
+  mathematical, typing, scope, or evidence defect.
 depends_on:
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
   - THM-2942-macaulay-extraneous-flag-factor-and-pluecker-mutation
@@ -28,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3040 -- the formal corner quotient
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3030 found, through the first eight exact resultant log jets, the width
 difference
@@ -314,10 +323,13 @@ resultant multihomogeneity isolated by THM-2942/2946.  It does **not** use:
 The result is the pure resultant's coefficientwise formal corner.  It is not
 a physical integer width satisfying `2^M=3^M=0`, not the raw selected minor
 (which carries extraneous flag factors), and not a statement about the
-wall-stripped core.  A separately primitive-normalized resultant can alter
+wall-stripped core.  A separately coefficient-content/primitive-normalized
+resultant can alter
 (3) by an `n`-independent rational unit; all positive-degree log jets and
 (5)--(21) are unchanged.  Fixing the standard resultant convention removes
-even that harmless unit.
+even that harmless unit.  Here primitive normalization means multiplication
+by a rational coefficient-content unit, not cancellation of a polynomial
+common factor in `n`.
 
 The hypothesis that `(a,b,c)` is fixed is load-bearing.  If a lower offset
 moves with `M`, the surviving `R_low` need not be width-independent and the
@@ -349,4 +361,4 @@ python -O 04-computation/gmc_formal_corner_resultant_width_quotient_thm3040.py
 
 Both runs equal the stored ten-line transcript byte-for-byte.
 
-**QED, subject only to the pending independent immutable-file audit.**
+**QED.**
