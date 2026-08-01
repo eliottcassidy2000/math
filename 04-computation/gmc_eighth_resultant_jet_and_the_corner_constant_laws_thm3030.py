@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""THM-3028 -- the eighth resultant log-jet P_8, and CLOSED FORMS for the three
+"""THM-3030 -- the eighth resultant log-jet P_8, and CLOSED FORMS for the three
 corner-slice constant sequences.
 
 P_8 = 4883 terms, degrees (M,U,V) = (16,32,16), support b+2c <= 32.
@@ -56,9 +56,9 @@ NOTE the "23": the C slice has CONSTANT numerator 23 at every m, and the
 slice-independent k=-1 law carries 46 = 2*23. This is the same 23 that heads the
 four-band charge density of THM-3006.
 
-Reproduce: python3 04-computation/gmc_eighth_resultant_jet_and_the_corner_constant_laws_thm3028.py
+Reproduce: python3 04-computation/gmc_eighth_resultant_jet_and_the_corner_constant_laws_thm3030.py
   (requires the P_8 interpolation pickle; see 05-knowledge/results/
-   gmc_first_gap_resultant_jet_P8_table_thm3028.json for the frozen table)
+   gmc_first_gap_resultant_jet_P8_table_thm3030.json for the frozen table)
 """
 
 import hashlib
@@ -71,14 +71,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JMAX = 8
 
 TABLES = {
-    1: ("gmc_first_gap_resultant_jet_P1_table_thm3028.json", 1),
-    2: ("gmc_first_gap_resultant_jet_P2_table_thm3028.json", 48),
-    3: ("gmc_first_gap_resultant_jet_P3_table_thm3028.json", 1152),
+    1: ("gmc_first_gap_resultant_jet_P1_table_thm3030.json", 1),
+    2: ("gmc_first_gap_resultant_jet_P2_table_thm3030.json", 48),
+    3: ("gmc_first_gap_resultant_jet_P3_table_thm3030.json", 1152),
     4: ("gmc_first_gap_fourth_resultant_jet_P4_table_thm3013.json", 1658880),
     5: ("gmc_first_gap_resultant_jet_P5_table_thm3015.json", 39813120),
     6: ("gmc_first_gap_resultant_jet_P6_table_thm3015.json", 120394874880),
     7: ("gmc_first_gap_resultant_jet_P7_table_thm3015.json", 2889476997120),
-    8: ("gmc_first_gap_resultant_jet_P8_table_thm3028.json", 1664338750341120),
+    8: ("gmc_first_gap_resultant_jet_P8_table_thm3030.json", 1664338750341120),
 }
 
 

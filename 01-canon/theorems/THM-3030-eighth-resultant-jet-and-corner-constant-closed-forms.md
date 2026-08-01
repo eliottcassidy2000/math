@@ -1,5 +1,5 @@
 ---
-id: THM-3028
+id: THM-3030
 title: "The eighth resultant log-jet P_8, and closed forms for the corner-slice constants"
 status: >
   VERIFIED-EXACT. P_8 is built: 4883 terms, degrees (M,U,V) = (16,32,16),
@@ -30,11 +30,11 @@ related:
   - THM-3011
   - THM-3014
   - THM-3006
-script: 04-computation/gmc_eighth_resultant_jet_and_the_corner_constant_laws_thm3028.py
-output: 05-knowledge/results/gmc_eighth_resultant_jet_and_the_corner_constant_laws_thm3028.out
+script: 04-computation/gmc_eighth_resultant_jet_and_the_corner_constant_laws_thm3030.py
+output: 05-knowledge/results/gmc_eighth_resultant_jet_and_the_corner_constant_laws_thm3030.out
 ---
 
-# THM-3028 -- `P_8` and the corner-slice constant closed forms
+# THM-3030 -- `P_8` and the corner-slice constant closed forms
 
 ## 1. The jet
 
@@ -50,7 +50,7 @@ normalisation `Q_j = D^{2j} L_j` with `D = U^2 + 3U - 3V - 1`, `U = 2^M`,
 | content `c_8` | `2^28 * 3^11 * 5 * 7 = 1664338750341120` |
 | sha256 (content-1 rows) | `bba6b4b9916a316c41b800a044861a15840820b6048133b754d85cfad78873ad` |
 
-Table: [`05-knowledge/results/gmc_first_gap_resultant_jet_P8_table_thm3028.json`](../../05-knowledge/results/gmc_first_gap_resultant_jet_P8_table_thm3028.json).
+Table: [`05-knowledge/results/gmc_first_gap_resultant_jet_P8_table_thm3030.json`](../../05-knowledge/results/gmc_first_gap_resultant_jet_P8_table_thm3030.json).
 `P_1`, `P_2`, `P_3` are emitted in the same content-1 format alongside it
 (`c_1 = 1`, `c_2 = 48`, `c_3 = 1152`).
 
