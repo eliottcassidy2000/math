@@ -225,3 +225,67 @@ claimed; anyone building one must state the map, the dimension change, the
 preserved predicate and the loss.
 
 Referee: R1-R4 exact, `ALL THM-3018 REFEREE CHECKS PASSED`. QED.
+
+## AUDIT FLAG, 2026-08-01 (death-star, on my own section 4b)
+
+A concurrent agent reported section 4b's Laplace step as refuted. I could not
+substantiate a refutation, but I **can** substantiate a genuine gap, so the
+status of 4b is downgraded from PROVED to **AUDIT-REQUIRED** pending the
+resolution below. Nothing else in this file is affected; sections 1-4a and the
+`S_3` mechanism of section 4 stand.
+
+**The gap.** Section 4b argues: `Phi(s) = int_Delta e^{s g} dA` is entire; a
+counterexample forces `Phi ≡ Area`; choosing the direction by maximum modulus
+gives `|Phi| ~ C e^{sA} s^{-a} -> infinity`, contradiction. Two problems.
+
+*(G1) The type shortcut is circular.* One would like "`Phi` has exponential type
+exactly `A = max|g| > 0`, and a constant has type `0`". But the type is
+`limsup_m m|a_m|^{1/m}/e` with `a_m = mu_m/m!`, `mu_m = int g^m`. If `g` is a
+counterexample then **every** `mu_m` with `m >= 1` vanishes, so the type is `0`
+by construction. Establishing `type = max|g|` is therefore equivalent to the
+conclusion, not an input to it.
+
+*(G2) The asymptotic needs a no-cancellation justification.* The claim as
+written is that maximum modulus forces "no relative oscillation". At an
+**interior** maximum `u_1` of `|g|`, `d|g|^2/du = 0` gives
+`Re(conj(g) g') = 0`, so writing `e^{i theta} g(u_1) = A > 0` the derivative
+`e^{i theta} g'(u_1) = i b` is purely **imaginary** with `b` generally nonzero.
+Then near `u_1`, `e^{i theta}g(u) ~ A + i b w - c w^2` and
+
+```text
+int e^{R(A + i b w - c w^2)} dw = e^{R A} sqrt(pi/(R c)) * exp( - R b^2/(4c) ),
+```
+
+so the oscillation contributes a factor `e^{-R b^2/(4c)}` and the growth rate is
+`A - b^2/(4c)`, **not** `A`. That can be `<= 0`. The step therefore requires
+either `b = 0`, or a contour deformation / steepest-descent argument that
+section 4b does not supply.
+
+**What the evidence says.** Tested on the mean-zero family
+`g(u) = (u-1/2) + i lam (u^2 - u + 1/6)` at `lam = 0, 2, 6, 20`, in every case
+`log|Phi(R e^{i theta})| / R -> A = max|g|` (e.g. `lam = 6`: `0.879, 1.041,
+1.094, 1.111` at `R = 20, 80, 320, 1280` against `A = 1.11803`). So the
+conclusion held everywhere tested. **But in all of these the maximum of `|g|`
+was at an ENDPOINT** (`u_1 = 0`), where no stationary point occurs and (G2) does
+not bite. The interior-maximum case, which is exactly the risky one, was not
+exercised: for real `g` an interior modulus maximum forces `g'(u_1) = 0` hence
+`b = 0` and the step is fine, so the open case is **complex `g` with an interior
+maximum of `|g|` and `g'(u_1) != 0`**.
+
+**Also relevant (F1).** The step genuinely uses polynomiality, so it is not
+refuted by the obvious continuous witness: `h(u) = e^{2 pi i u}` has all moments
+`m >= 1` equal to zero and `Phi_h ≡ 1` bounded, but `|h| ≡ 1` attains its maximum
+on **all** of `[0,1]`, whereas for a polynomial `|g|^2` is a real polynomial and
+its maximum is attained at finitely many points. So (F1) is not a refutation.
+
+**Consequence for downstream claims.** Anything asserting "the homogeneous case
+of FC(n) is proved for every n" -- including the inference that FC(2) is thereby
+closed and the `int e^Q` route redundant, and the reading of kps-S166's residual
+as already-settled -- is **suspended** until (G1)/(G2) are resolved. THM-3031's
+bridge is unaffected: it is an implication about what would follow from the
+exponential-integral claim, and does not depend on 4b.
+
+**To close this**, one needs either (a) a proof that a mean-zero polynomial on
+`Delta` cannot have its modulus maximum interior with `b^2 >= 4cA`, or (b) a
+steepest-descent treatment giving the growth of `Phi` from the integral
+representation without assuming the moments.
