@@ -64,9 +64,30 @@ c a H^{a-b} Jac(H, Q_{m-1})  =  - c' b Jac(P_{n-1}, H).            (L1')
 ```
 
 Hence `H^{a-b}` divides `Jac(P_{n-1}, H)` whenever `Jac(H, Q_{m-1}) != 0`.
-The exponent pair has moved from `(a,b)` to `(a-b, b)`: **the tower runs the
-subtractive Euclidean algorithm on `(a,b)`**, so its depth is the continued
-fraction of `a/b`. (L0) and (L1) were verified symbolically on genuine
+The exponent pair has moved from `(a,b)` to `(a-b, b)`.
+
+**SCOPE CORRECTION (lane J1, verified independently here).** The precise
+statement is a **divisibility chain**, proved from a local Jacobian valuation
+law: for every linear `L | H` of multiplicity `e`,
+
+```text
+u_i := v_L(P_{n-i})  >=  (a - i b) e     for 0 <= i <= floor(a/b),
+```
+
+i.e. `H^{a-ib} | P_{n-i}`. So the subtractive Euclidean step runs for the
+**first partial quotient of `a/b`**, not indefinitely, and the *equality*
+form `u_i = (a-ib)e` is **REFUTED**. Witness (an automorphism, reproduced
+exactly here): `P = x + u^3`, `Q = u`, `u = y + x^4`, precomposed with
+`(x,y) -> (2x+y+1, y)`, giving `Jac = 2`, `n,m = 12,4`, `g = 4`,
+`(a,b) = (3,1)`, `H_0 = 2x+y`, `e = 4`:
+
+```text
+u = [12, 11, 10, 8, 7, 6, 4],   w = [4, 3, 2, 0, 0],
+equality prediction (a-ib)e = [12, 8, 4, ...]   ->  u_1 = 11 != 8.
+```
+
+The divisibility survives (`11 >= 8`), and the exact order-one law that does
+hold is the **difference** law `u_1 - w_1 = (a-b)e` (`11 - 3 = 8`). (L0) and (L1) were verified symbolically on genuine
 Jacobian pairs of several degrees, including composites of triangular maps.
 **Divisibility verified with content (decisive test 2).** On genuine
 Jacobian pairs the residual of (L1) is exactly `0` and the divisibility

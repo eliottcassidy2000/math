@@ -243,4 +243,24 @@ natural next questions are whether `J = 0` can be excluded, whether `W = 0`
 is forced in general (the sample suggests it is common), and whether the
 same wedge argument iterates to the degree `n+m-4` condition.
 
+## 6. Independent confirmation (lane J1, 2026-07-31)
+
+An independent derivation via a **local Jacobian valuation law**
+(`v_L(Jac(F,G)) = v_L(F)+v_L(G)-1` unless the densities
+`v_L(F)/deg F`, `v_L(G)/deg G` agree) and the resulting tropical tower law
+reaches the same conclusion as section 4b and sharpens the hypothesis: the
+identity `P_{n-1} = (ca/(c'b)) H^{a-b} Q_{m-1}` holds exactly when
+`g_0 := deg H_0 >= 2`, where `H_0` is the radical of `H` — which is
+literally the condition `K >= 2` used here. When `g_0 = 1` the only residual
+freedom is a single scalar `lambda` with
+`c a Q_{m-1} - c' b A_1 = lambda H_0^{m-1}`, which is exactly the `K = 1`
+branch excluded for counterexamples. That lane also confirms the degenerate
+case: `Jac(H,Q_{m-1}) = 0` with `K >= 2` forces `Q_{m-1} = 0` and hence
+`P_{n-1} = 0`, with no intermediate configuration — matching section 4b(A2).
+
+Separately it **refutes** the *equality* strengthening of the tower step
+(`v_L(P_{n-i}) = (a-ib)e`), while confirming the divisibility
+`H^{a-ib} | P_{n-i}` for `0 <= i <= floor(a/b)`; see the scope correction in
+HYP-9070. Nothing in this file asserted the equality form.
+
 Referee: `ALL CROSS-TERM CHECKS PASS`. QED.
