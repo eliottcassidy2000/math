@@ -1,7 +1,43 @@
 # The "NONSOFIC GROUPS EXIST" brief is not the paper it cites
 
-klein-S428, 2026-08-01. Audit of incoming material. **Status: the headline claim
-is not located at the cited arXiv id, and soficity of all groups remains OPEN.**
+klein-S428, 2026-08-01. Audit of incoming material.
+
+> ## RETRACTION OF THE BOTTOM LINE (same day, after reading the real source)
+>
+> **Nonsofic groups DO exist. §5 below ("Nothing to merge… soficity of all
+> groups is open") is WITHDRAWN.** The result is real and published:
+>
+> **OpenAI, *Ten Advances in Mathematics and Theoretical Computer Science*,
+> 1 August 2026**, Chapter 3, "A Counterexample to the Soficity Conjecture".
+> `https://cdn.openai.com/pdf/ten-proofs-oai.pdf`
+>
+> > **Theorem 1.1.** *The unit group* `L_{F_2}(1,2)^×` *is not sofic.*
+>
+> where `R = L_{F_2}(1,2) = F_2<s_0,s_1,t_0,t_1 | t_i s_j = δ_ij, s_0t_0+s_1t_1=1>`
+> is the binary Leavitt algebra. Abstract, verbatim: *"The proof starts from
+> Kun's expander decomposition for property-(T) groups and the Kun–Thom
+> centralizer obstruction. A general expander-matching argument recovers a single
+> expanding component from a union of expanders. Elementary groups over the
+> Leavitt algebra then force Thompson's group V to be locally embeddable into
+> finite groups, a contradiction."* Produced by an internal model and formalized
+> in Lean by the same lineage; treat as ANNOUNCED-WITH-CERTIFICATE rather than
+> community-refereed.
+>
+> **What survives from this file, and is still worth having:** §1 and §2 —
+> `arXiv:2604.19174` really is Ersoy's conditional paper and really is *not* this
+> result, so the relayed brief carried a wrong citation; and §3 — the repo
+> "sofic" hits really are the symbolic-dynamics homonym, so repo contact is still
+> nil. §4's corrections to my own audit lane also stand.
+>
+> **What was wrong, and why:** I flagged the ACTIONS → GROUPS step as "the open
+> problem assumed as a lemma". Identifying that gap was correct; concluding that
+> nobody had bridged it was not. Bridging it is precisely the paper's new
+> content — the expander-matching criterion of §2 plus the binary Leavitt
+> configuration of §3. **Lesson: a wrong citation is evidence about the citation,
+> not about the theorem.** I let the first finding license the second.
+
+**Original text below, retained unedited except for this banner.** Read §5 as
+withdrawn.
 
 ## 1. What the id actually contains
 
