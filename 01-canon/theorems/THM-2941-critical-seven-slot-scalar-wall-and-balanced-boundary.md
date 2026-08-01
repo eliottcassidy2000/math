@@ -21,13 +21,15 @@ status: >
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
   addendum closes the common-level reflected-stalk k=1 diagonal and a finite
   heterogeneous box.  Signed difference graphs close every reflected packet
-  of level spread at most four.  The projective phase graph has clique number
+  of level spread at most five.  The projective phase graph has clique number
   five and its fully periodized high-channel fibre has sharp floor 1/105;
-  together with an exceptional low-channel floor 1/42 this closes arbitrary
-  positive reflected levels on 2,217 of the 3,003 bodies.  The other 786
-  bodies, the remaining finite censuses, the full six-body/seven-tail rung,
-  and LRC(14) remain open.  Verification is internal exact computation and
-  proof audit; there is no Lean or external peer-review claim.
+  threshold-block refinements close arbitrary positive reflected levels on
+  2,421 of the 3,003 bodies.  A three-reverse-ladder certificate closes every
+  body for spread D>=6 and base m>=3D.  The remaining reflected problem is
+  confined to 582 bodies in D>=6,m<3D; the finite censuses, full
+  six-body/seven-tail rung, and LRC(14) remain open.  Verification is internal
+  exact computation and proof audit; there is no Lean or external peer-review
+  claim.
 source: root-lrc14-j7-critical-wall-2026-07-29
 depends_on:
   - THM-735-bonferroni-simultaneous-multi-peel-defeats-the-clustered-non-isolated-wall
@@ -223,6 +225,26 @@ verification:
   - 05-knowledge/results/lrc14_j7_k2_z1668_composite_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_z1660_status_descent_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_z1660_status_descent_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_robust_k6_minus_edge_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_robust_k6_minus_edge_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_robust_k6_minus_adjacent_pair_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_robust_k6_minus_adjacent_pair_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_robust_edge12_threshold_shapes_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_robust_edge12_threshold_shapes_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_robust_edge11_threshold_shapes_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_robust_edge11_threshold_shapes_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_robust_edge10_threshold_block_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_robust_edge10_threshold_block_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_robust_edge9_threshold_block_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_robust_edge9_threshold_block_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_d5_crossdet_tail_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_d5_crossdet_tail_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_d5_head_median_cell_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_d5_head_median_cell_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_c4_central_exception_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_c4_central_exception_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_c3_three_reverse_ladder_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_c3_three_reverse_ladder_cone_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -985,6 +1007,50 @@ topologically invisible, but by itself supplies no uniform debt margin.
 The remaining arbitrary reflected problem is confined to the `786` bodies
 whose robust graph is not complete.  Failure of the displayed pair
 certificates is not a physical survivor statement.
+
+Subsequent threshold-block addenda sharpen that count without changing the
+pairwise observable.  Sort the bodies by the number of robust edges in the
+graph defined after `(25i4)`.  Exact finite projective banks, including the
+free-center cylinder cases rather than deleting their arbitrary coordinate,
+give the disjoint descent
+
+```text
+robust K6                    2,217
+K6 minus one edge             +59 = 2,276
+13 robust edges               +26 = 2,302
+12 robust edges               +37 = 2,339
+11 robust edges               +15 = 2,354
+10 robust edges               +32 = 2,386
+ 9 robust edges               +35 = 2,421.             (25i7)
+```
+
+Every body counted in `(25i7)` closes for every assignment of positive
+reflected levels.  The edge-nine terminal audits `440,352` exact certificate
+rows; its disconnected `K_(1,5)` and `K5`-minus-edge low components are
+handled as genuine cylinders.  Thus arbitrary-level closure leaves exactly
+
+```text
+3,003-2,421=582                                                (25i8)
+```
+
+bodies.  This is a sufficient-certificate residual, not a census of physical
+counterexamples.
+
+There are also two transverse all-body closures.  First, cross-determinant
+transport closes spread `D=5` for `m>=16`; an exact `m=1..15` head then checks
+`7,851,600` assignments, of which `16,076` require the canonical median
+body-safe cell.  All of them close, so `(25i2)` strengthens from `D<=4` to
+`D<=5`.  Second, the `C=3` phase bank has a unique zero channel `3:4`.
+Located transport closes `1,295/1,298` orientations, and three explicit
+reverse ladders close the residual orientations.  The exact scale law gives
+
+```text
+D>=6 and m>=3D  ==>  every reflected packet closes.           (25i9)
+```
+
+Consequently the current reflected obligation is confined to the `582`
+bodies in the wedge `D>=6,m<3D`.  No monotonic interpolation between finite
+spread slices and the cone is assumed.
 
 There is an exact all-scale functional form behind the discrepancy tail.
 Write the carrier components as
@@ -2334,7 +2400,9 @@ ordinary and optimized replays are byte-identical.
 
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,
-handle arbitrary packets, finish its `k=2,3` finite decision trees, classify
-the zero/one-aligned multi-drift address hypergraph, close the
-six-body/seven-tail rung, or prove LRC(14).  The independent THM-2928
-divisor-status route now closes `k=4`; `k=2,3` remain open.
+close the `582`-body reflected wedge `D>=6,m<3D`, finish the remaining
+`k=2,3` finite decision trees, classify the zero/one-aligned multi-drift
+address hypergraph, close the six-body/seven-tail rung, or prove LRC(14).
+The independent THM-2928 divisor-status route closes `k=4`; THM-2980/2995
+and THM-2981 lower the composed `k=2,3` caps to `1579/246`, respectively,
+without emptying the sectors below those caps.

@@ -362,6 +362,52 @@
   cap `1611`.  Source/output/profile/section/semantic SHA-256 are
   `8861a4d0...edb3` / `77c8e4d3...a99b` / `d83d42c0...9a56` /
   `8eb65444...c51f` / `1e3bf172...e971`.
+- `lrc14_j7_k2_1600_1679_integrated_promotion_audit_thm2980.py` -> matching
+  `.out` [THM-2980 PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY AUDITED].
+  A fresh monolithic atlas checks all `3,003*80=240,240` body-height rows on
+  `1600..1679` and has exactly `68` candidates.  Their key set is exactly the
+  disjoint union of twelve typed component referees: `68` terminals, zero
+  duplicates, missing rows, extras, or upper/lower overlap.  The terminal
+  partition is `40 EMPTY + 22 SCALAR-EMPTY + 1 LITERAL-CLOSURE-BELOW + 1
+  LITERAL-TORSION-EMPTY + 4 SECTION-CLOSURE-BELOW`.  This proves projected
+  cap `1599`, not the sector below it or LRC(14).
+- `lrc14_j7_k2_1580_1599_integrated_promotion_audit_thm2995.py` -> matching
+  `.out` [THM-2995 PROVED + FINITE-EXACT + VERIFIED + INDEPENDENTLY AUDITED].
+  A fresh monolithic atlas checks all `3,003*20=60,060` body-height rows and
+  leaves exactly `26` candidates, at heights
+  `1581:3,1586:11,1588:1,1590:3,1594:2,1595:2,1599:4`.  Their key set equals
+  both the pinned atlas and the five component referees, with zero duplicate,
+  missing, or extra rows.  The partition is `9 EMPTY + 13 SCALAR-EMPTY + 4
+  SECTION-CLOSURE-BELOW`; the four nonpositive one-high controls match the
+  four translated complete-section witnesses.  Handoff caps
+  `1598,1593,1589,1585,1579` prove the projected cap `1579`, not the sector
+  below it or LRC(14).
+- `lrc14_j7_reflected_robust_edge10_threshold_block_uniform_closure_thm2941.py`
+  and `lrc14_j7_reflected_robust_edge9_threshold_block_uniform_closure_thm2941.py`
+  -> matching `.out` [THM-2941 PROVED + FINITE-EXACT + VERIFIED].  The exact
+  threshold-block descent closes the `32` robust-edge-ten and `35`
+  robust-edge-nine bodies for every assignment of positive reflected levels,
+  auditing `188,544+440,352` certificate rows.  Free-center `K5`, `K_(1,5)`,
+  and `K5`-minus-edge cylinders retain their arbitrary coordinate.  Together
+  with the earlier `K6`, `K6-e`, edge-13, edge-12, and edge-11 strata,
+  arbitrary-level closure rises `2,217 -> 2,421`; exactly `582` bodies remain.
+  Ordinary and optimized outputs are byte-identical.
+- `lrc14_j7_reflected_d5_crossdet_tail_closure_thm2941.py` and
+  `lrc14_j7_reflected_d5_head_median_cell_closure_thm2941.py` -> matching
+  `.out` [THM-2941 PROVED + FINITE-EXACT + VERIFIED].  Cross-determinant
+  transport closes every spread-five packet for `m>=16`.  The finite head
+  checks `7,851,600` assignments at `m=1..15`; `16,076` cross-determinant
+  residuals all close in one canonical median body-safe cell.  Hence every
+  reflected packet with `D<=5` closes.  `D>=6` is outside this addendum;
+  ordinary and optimized outputs are byte-identical.
+- `lrc14_j7_reflected_c3_three_reverse_ladder_cone_closure_thm2941.py`, with
+  the `C=4` predecessor -> matching `.out` [THM-2941 PROVED + FINITE-EXACT +
+  VERIFIED].  The `C=3` phase bank has unique zero channel `3:4`; located
+  transport closes `1,295/1,298` orientations and three explicit reverse
+  ladders close the residuals.  Exact drift/debt monotonicity then closes all
+  `3,003` bodies for `D>=6,m>=3D`.  Combined with the threshold-block result,
+  the open reflected region is confined to `582` bodies in `D>=6,m<3D`.
+  This is a sufficient reflected-family theorem, not LRC(14).
 - `lrc14_j7_component_residue_ray_cone_no_go_thm2941.py` -> matching `.out`
   [THM-2941 PROVED STRUCTURAL LAW + FINITE-EXACT HOSTILE].  The residue-ray
   recurrence and antipodal law hold componentwise:

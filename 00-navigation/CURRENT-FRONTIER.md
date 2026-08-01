@@ -25,36 +25,14 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-<<<<<<< HEAD
-Direct frontier: `<=6`. THM-2941 gives wall `h/7` on all `3,003` roots; THM-2928/2941/2970/2972
-empty aligned `k>=4`, cap `k=2,3` at `1649/246`, and close the common-level reflected `k=1` diagonal. Other censuses, the remaining reflected sector, `k=0`, the rung,
-and LRC are open.  Septimal floor/exception plus located phase cut the raw five-drift ledger
-`951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
-`21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
-not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
-`1680..1742` `k=2` atlas, giving cap `1679`; three canonical atlases check `78,078` evaluations (`72,072` distinct rows) and give cap `1656` with five boundary rows.  A separate finite-exact boundary referee closes all five (`434` exact status certificates and `36` projected packet kills, plus one forced-high scalar maximum), giving cap `1655`.  A complete `1600..1655` atlas checks `168,168` candidate rows, has an empty `1651..1655` gap, and leaves twelve rows at `1650`; status/projected and forced-high scalar arguments close eleven, while located torsion and a three-packet projected audit close the last body.  Thus the `k=2` cap is `1649`; reserved THM-2980's full `1600..1679` claim remains open. For `k=3`, torsion/status closes through `297`;
-THM-2981 closes `423` rows at `z=270..247`, giving cap `246` and ledger `375,251`; `z=246` has `194` rows.
-For reflected `k=1`, signed difference graphs close spread at most four on all
-`3,003` bodies; phase floors `1/105,1/42` close arbitrary levels on `2,217`.
-The other `786`, `k=0`, the rung, and LRC remain open.
-=======
-Direct frontier: `<=6`. THM-2928/2941/2970/2972 empty aligned `k>=4` and
-give `k=2,3` caps `1611/270`; reserved THM-2980 remains open.  The lower
-`k=2` atlases make `78,078` evaluations but `72,072` distinct rows.  Exact
-boundary referees close the five `z1656` rows, all twelve `z1650` rows,
-singleton shells through `z1616`, and the complete `z1620` and `z1612`
-shells; intervening atlas gaps are empty.  THM-2984's pair-free translated
-complete-section gate closes the hostile `z1620` row and all `7,094` exact
-classes in the four hard `z1612` rows.  The `k=3` descent closes through
-`z272`.
+Direct frontier: `<=6`.  THM-2980/2995 and THM-2981 give `k=2,3` caps `1579/246`; aligned `k>=4` and the common-level reflected diagonal are empty.
+The remaining censuses, reflected wedge, `k=0`, rung, and LRC are open; all displayed ledgers are necessary states, not physical covers.
 
-For reflected `k=1`, signed difference graphs close spread at most five on
-all `3,003` bodies.  At arbitrary spread, threshold-graph certificates close
-`2,354` bodies and the exact phase/transport cone closes every body for
-`m >= 5D`; the remaining `649` bodies at `D >= 6, m < 5D`, `k=0`, the rung,
-and LRC remain open.  The raw `k=2/3` ledgers compress to
-`200,141,092,521/2,548,901,482` necessary states, not physical-cover counts.
->>>>>>> f2d9054b9555 (lrc14: close projected k2 shell at z1612)
+For `k=2`, atlases audit `300,300` body-height rows and join `94` candidates to seventeen component referees, giving cap `1579`.
+For `k=3`, THM-2981 closes `423` rows at `z=270..247`, giving cap `246` and ledger `375,251`; `z=246` has `194` rows.
+
+For reflected `k=1`, signed difference graphs close spread at most five on every body; threshold blocks close arbitrary levels on `2,421`, and the reverse-ladder cone closes every body for `D>=6,m>=3D`.
+The open reflected region is confined to `582` bodies in the wedge `D>=6,m<3D`.
 Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams but not semantic-root identification (kernel `28,393`); THM-2545/2549 give Hall and chronology gates,
 still old-target neutral; THM-2547 is only an external control after
