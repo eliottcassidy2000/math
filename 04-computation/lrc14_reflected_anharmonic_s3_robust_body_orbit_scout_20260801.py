@@ -11,11 +11,13 @@ exact robust-edge predicate used by the reflected THM-2941 certificate bank,
 including the incoming exact closure of every robust-edge-8 body.
 
 The result is deliberately a hostile as well as a signal.  Every nontrivial
-S3 orbit meeting the 561-body residual also meets the 2,442-body bank, and the
-only trapped orbit is the fixed generic six-set ``{2,4,5,7,8,10}``.  But the
-action does not preserve the robust predicate: it changes integer label order,
-``14*lcm(E)``, safe-cell addresses, overlap floors, singleton debt, and exact
-margins.  No LRC row closes without a new certificate-pullback theorem carrying
+S3 orbit meeting the 561-body residual contains a robust-K6 body (all fifteen
+edges), and the only trapped orbit is the fixed generic six-set
+``{2,4,5,7,8,10}``.  Thus graph incidence pulls back perfectly: any star,
+two-star, or spanning-tree schedule is available.  But the action does not
+preserve the robust predicate: it changes integer label order, ``14*lcm(E)``,
+safe-cell addresses, overlap floors, singleton debt, and exact margins.  No
+LRC row closes without a new weighted certificate-pullback theorem carrying
 those integral and owner sidecars.  In particular, this script uses the exact
 edge-8 closure as an input; it does not reprove that 652,688-row computation.
 """
@@ -92,6 +94,28 @@ EXPECTED_ORBIT_PROFILE = (
     ((6, 2), 139),
     ((6, 3), 23),
 )
+EXPECTED_COMPLETE_REPRESENTATIVE_MULTIPLICITY_HIST = (
+    (0, 1),
+    (2, 48),
+    (3, 131),
+    (4, 276),
+    (5, 105),
+)
+EXPECTED_RESIDUAL_ORBIT_COMPLETE_PROFILE = (
+    ((1, 1, 0), 1),
+    ((3, 1, 1), 4),
+    ((3, 1, 2), 16),
+    ((3, 2, 1), 1),
+    ((6, 1, 2), 1),
+    ((6, 1, 3), 9),
+    ((6, 1, 4), 76),
+    ((6, 1, 5), 105),
+    ((6, 2, 2), 4),
+    ((6, 2, 3), 43),
+    ((6, 2, 4), 92),
+    ((6, 3, 2), 11),
+    ((6, 3, 3), 12),
+)
 EXPECTED_POINT_ORBITS = (
     ("boundary", (12, 13, 14)),
     ("harmonic", (1, 6, 11)),
@@ -159,7 +183,7 @@ EXPECTED_C2_HARD_ORBITS = (
 # full body/orbit transcript, never from an injected expected answer.
 EXPECTED_BODY_DIGEST: str | None = "40419fbac9827f975c217f7e8dc517a929d8908d03c68977c153dd19136cf12a"
 EXPECTED_ORBIT_DIGEST: str | None = "d0df274a6d6a78ce771be6714247a96a73c8b90b580149ad9864aab9cb6968c1"
-EXPECTED_SEMANTIC_SHA256: str | None = "a9b174728c0749b12a5194d428f4ffc47c0556025ae05690c48b76991f0fd112"
+EXPECTED_SEMANTIC_SHA256: str | None = "6a11b642f35bf619271516da5897364f3db8bfd28bcfff98a7b04fbfd0b8b008"
 
 
 Point = int | None
@@ -275,11 +299,15 @@ def main() -> None:
     require(permutation(compose(cycle, c2)) == permutation(identity), "c^3")
 
     body_rows = []
+    body_data: dict[
+        tuple[int, ...], tuple[int, F, tuple[tuple[int, int], ...]]
+    ] = {}
     robust_counts: dict[tuple[int, ...], int] = {}
     body_digest = hashlib.sha256()
     for body in combinations(LABELS, BODY_SIZE):
         ruler, debt, edges = robust_edge_data(body)
         robust_counts[body] = len(edges)
+        body_data[body] = (ruler, debt, edges)
         row = (body, ruler, debt, edges)
         body_rows.append(row)
         body_digest.update((repr(row) + "\n").encode())
@@ -302,7 +330,25 @@ def main() -> None:
     transitions = tuple(transitions)
     require(transitions == EXPECTED_TRANSITIONS, transitions)
 
+    complete_representative_multiplicity_hist = tuple(
+        sorted(
+            Counter(
+                sum(
+                    robust_counts[act_body(action, body)] == 15
+                    for _, action in group
+                )
+                for body in residual
+            ).items()
+        )
+    )
+    require(
+        complete_representative_multiplicity_hist
+        == EXPECTED_COMPLETE_REPRESENTATIVE_MULTIPLICITY_HIST,
+        complete_representative_multiplicity_hist,
+    )
+
     orbit_profile: Counter[tuple[int, int]] = Counter()
+    residual_orbit_complete_profile: Counter[tuple[int, int, int]] = Counter()
     orbit_rows = []
     seen_bodies: set[tuple[int, ...]] = set()
     for body in robust_counts:
@@ -311,11 +357,24 @@ def main() -> None:
         orbit = tuple(sorted({act_body(action, body) for _, action in group}))
         seen_bodies.update(orbit)
         residual_count = sum(member in residual for member in orbit)
+        complete_count = sum(robust_counts[member] == 15 for member in orbit)
         orbit_profile[(len(orbit), residual_count)] += 1
+        if residual_count:
+            residual_orbit_complete_profile[
+                (len(orbit), residual_count, complete_count)
+            ] += 1
         orbit_rows.append(tuple((member, robust_counts[member]) for member in orbit))
     require(len(seen_bodies) == BODY_COUNT, len(seen_bodies))
     frozen_orbit_profile = tuple(sorted(orbit_profile.items()))
     require(frozen_orbit_profile == EXPECTED_ORBIT_PROFILE, frozen_orbit_profile)
+    frozen_residual_orbit_complete_profile = tuple(
+        sorted(residual_orbit_complete_profile.items())
+    )
+    require(
+        frozen_residual_orbit_complete_profile
+        == EXPECTED_RESIDUAL_ORBIT_COMPLETE_PROFILE,
+        frozen_residual_orbit_complete_profile,
+    )
 
     point_orbits = named_point_orbits(group)
     require(point_orbits == EXPECTED_POINT_ORBITS, point_orbits)
@@ -348,6 +407,40 @@ def main() -> None:
     )
     require(c2_hard_orbits == EXPECTED_C2_HARD_ORBITS, c2_hard_orbits)
 
+    margin_distortion_checks = 0
+    for body, (ruler, debt, _) in body_data.items():
+        for _, action in group:
+            target = act_body(action, body)
+            target_ruler, target_debt, _ = body_data[target]
+            scalar = target_debt - debt
+            for left, right in combinations(body, 2):
+                target_left = act_body(action, (left,))[0]
+                target_right = act_body(action, (right,))[0]
+                source_margin = (
+                    FIBER_FLOOR - F(4 * (left + right), ruler) - debt
+                )
+                target_margin = (
+                    FIBER_FLOOR
+                    - F(4 * (target_left + target_right), target_ruler)
+                    - target_debt
+                )
+                left_potential = F(4 * target_left, target_ruler) - F(
+                    4 * left, ruler
+                )
+                right_potential = F(4 * target_right, target_ruler) - F(
+                    4 * right, ruler
+                )
+                require(
+                    source_margin - target_margin
+                    == scalar + left_potential + right_potential,
+                    (body, target, left, right),
+                )
+                margin_distortion_checks += 1
+    require(
+        margin_distortion_checks == BODY_COUNT * len(group) * 15,
+        margin_distortion_checks,
+    )
+
     orbit_digest = hashlib.sha256((repr(tuple(orbit_rows)) + "\n").encode()).hexdigest()
     if EXPECTED_BODY_DIGEST is not None:
         require(body_digest.hexdigest() == EXPECTED_BODY_DIGEST, body_digest.hexdigest())
@@ -359,6 +452,8 @@ def main() -> None:
         edge_hist,
         transitions,
         frozen_orbit_profile,
+        complete_representative_multiplicity_hist,
+        frozen_residual_orbit_complete_profile,
         point_orbits,
         fixed_bodies,
         trapped_orbits,
@@ -366,6 +461,7 @@ def main() -> None:
         ROBUST_BANK_THRESHOLD,
         EDGE8_DEPENDENCY_SOURCE_SHA256,
         EDGE8_DEPENDENCY_SEMANTIC_SHA256,
+        margin_distortion_checks,
         body_digest.hexdigest(),
         orbit_digest,
     )
@@ -384,14 +480,18 @@ def main() -> None:
         f"edge8_dependency_semantic_sha256={EDGE8_DEPENDENCY_SEMANTIC_SHA256}",
         f"residual_transitions=(element,residual_to_residual,residual_to_bank)={transitions}",
         f"orbit_profile=((orbit_size,residual_count),orbit_count)={frozen_orbit_profile}",
+        f"residual_complete_representative_multiplicity=((number_of_S3_elements_landing_in_robust_K6),body_count)={complete_representative_multiplicity_hist}",
+        f"residual_orbit_complete_profile=((orbit_size,residual_count,distinct_robust_K6_members),orbit_count)={frozen_residual_orbit_complete_profile}",
         f"point_orbits={point_orbits}",
         f"fixed_bodies=(body,robust_edges,point-orbit-description)={fixed_bodies}",
         "unique_trapped_orbit=((2,4,5,7,8,10),);this is the generic P1(F13) orbit",
         f"c2_hard_body_orbits={c2_hard_orbits}",
-        "positive_signal=every nontrivial S3 body orbit meeting the 561 residual also meets the 2442-body uniform closure bank",
+        "positive_signal=every nontrivial S3 body orbit meeting the 561 residual contains a robust-K6 representative with all 15 edges",
+        "scheduling_implication=pulling a robust-K6 representative back gives the full K6 incidence graph, hence every star, two-star, and spanning-tree schedule;all physical edge weights must still be recomputed on the source body at one common cell",
+        f"margin_distortion_identity_checks={margin_distortion_checks};M_E(a,b)-M_gE(ga,gb)=(D_gE-D_E)+u_gE(a)+u_gE(b)",
         "destroyed_data=integer label order and gaps;14*lcm(E);safe-cell ruler/address and owner;pair-overlap floor;singleton debt and exact margin;level word and physical packet Z(E,q)",
         "guardrail=the anharmonic action is not a symmetry of the robust predicate or of the reflected physical packet;no LRC closure follows",
-        "needed_map=for each residual body and every C2-wedge level word, a one-way owner-labelled pullback of an exact certificate from a closed orbit representative preserving legal range, physical ownership, and every positive margin",
+        "needed_map=for each residual body and every C2-wedge level word, a one-way common-cell weighted-certificate comparison controlling the exact scalar-plus-vertex-potential distortion;graph scheduling alone is already lossless",
         f"body_digest={body_digest.hexdigest()}",
         f"orbit_digest={orbit_digest}",
         f"source_sha256={source_sha256()}",
