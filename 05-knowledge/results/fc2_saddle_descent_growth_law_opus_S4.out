@@ -1,0 +1,8 @@
+f = x^2+y^2+0.7x (D=2); max_[0,1] phi_2 = 1.0
+growth law [L(f^m)/(2m)!]^{1/m} -> max|phi_D|:
+  m= 3: L(f^m)=2124.018  [L/(2m)!]^(1/m)=1.434196
+  m= 6: L(f^m)=1.3302688e+9  [L/(2m)!]^(1/m)=1.185588
+  m= 9: L(f^m)=1.6840346e+16  [L/(2m)!]^(1/m)=1.113442
+  m=12: L(f^m)=1.5890026e+24  [L/(2m)!]^(1/m)=1.081521
+  m=15: L(f^m)=6.6991948e+32  [L/(2m)!]^(1/m)=1.063712
+=> confirms L(f^m) ~ (Dm)! * (top-form period), reducing inhomogeneous FC(2) to the top-form PMP.
