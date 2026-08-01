@@ -230,7 +230,7 @@ def main() -> None:
     require(len(generalized_determinants) == 286, "fixed-lower triple census changed")
 
     general_k_records = []
-    for slots in range(3, 11):
+    for slots in range(2, 11):
         harmonic = sum((Fraction(1, index) for index in range(1, slots + 1)), Fraction(0))
         total_degree = factorial(slots)
         multidegrees = [total_degree // order for order in range(2, slots + 1)]
@@ -270,8 +270,8 @@ def main() -> None:
         })
     require(
         [(row["old_terminal_promotion_A"], row["new_terminal_B"])
-         for row in general_k_records[:3]] == [(5, 2), (26, 20), (154, 172)],
-        "k=3,4,5 controls changed",
+         for row in general_k_records[:4]] == [(1, 0), (5, 2), (26, 20), (154, 172)],
+        "k=2,3,4,5 controls changed",
     )
 
     width_records = []

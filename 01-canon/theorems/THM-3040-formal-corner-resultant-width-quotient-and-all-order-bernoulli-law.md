@@ -21,8 +21,8 @@ related:
   - THM-3030-eighth-resultant-jet-and-corner-constant-closed-forms
 script: 04-computation/gmc_formal_corner_resultant_width_quotient_thm3040.py
 output: 05-knowledge/results/gmc_formal_corner_resultant_width_quotient_thm3040.out
-script_sha256: 1428cb92776ce9b27839c8fe9fefb3d26c00cf6a3e895e052fa5678bfdc26d0e
-output_sha256: b17fbaecd97e810fe938d6717fc5b21b3a6b74fc51c2947d9aeea49d2ccad404
+script_sha256: 199154424af37dc94b9fe22f932e1be418b3848c3907c8027898c56e2fbbf7bc
+output_sha256: 1886e9a42284be23641db7645ae7474837569950bf43a34e655938ea4876d7e3
 hash_basis: LF-normalized bytes
 ---
 
@@ -229,14 +229,18 @@ observed reduced numerator `23`.
 
 ## 6. General `k`-slot boundary character
 
-The argument is not special to four slots.  Let `k>=3`, fix `k-1` distinct
+The argument is not special to four slots.  Let `k>=2`, fix `k-1` distinct
 lower offsets, and take the `k-1` homogeneous factorial forms of degrees
-`r=2,...,k` in `k-1` variables.  Give the terminal exponential `r^M` its own
-formal symbol and take the augmentation corner that kills every positive
-terminal monomial.  The coefficientwise argument of section 2 leaves one
-fixed low form at each order.
+`r=2,...,k` in `k-1` variables.  Introduce prime-base semigroup variables
+`Y_p=p^M` for the primes `p<=k`, write
+`r^M=product_p Y_p^(v_p(r))`, and take the augmentation corner `Y_p=0` for
+every prime.  The coefficientwise argument of section 2 kills every positive
+terminal monomial and leaves one fixed low form at each order.  This respects
+the multiplicative relations among composite bases; it does not pretend that
+the symbols `r^M` are algebraically independent.
 
-The resultant multidegree of the order-`r` form is
+By the defining multihomogeneity of the intrinsic multivariate resultant, the
+resultant degree in the coefficient block of the order-`r` form is
 
 ```text
 mu_r=product_(2<=s<=k,s!=r) s = k!/r.                 (22)
@@ -273,6 +277,7 @@ The first cases are
 
 | slots `k` | `A_k` | `B_k` | `I_k` |
 |---:|---:|---:|---:|
+| 2 | 1 | 0 | 1 |
 | 3 | 5 | 2 | 7 |
 | 4 | 26 | 20 | 46 |
 | 5 | 154 | 172 | 326 |
@@ -290,9 +295,11 @@ I_k |B_(2m)|/(2m)!,                                   (28)
 ```
 
 and every even nonterminal slot vanishes.  This is an abstract factorial-
-resultant theorem.  It does not assert a global higher-SFC closure, a useful
-sign for its wall-stripped core, or existence of a single physical chart at
-all widths.
+resultant theorem.  THM-2946's maximal-minor/gcd theorem is used only for the
+ternary `(2,3,4)` application; it is **not** being generalized here.  The
+general statement uses the intrinsic multivariate resultant and does not
+assert a global higher-SFC closure, a useful sign for its wall-stripped core,
+or existence of a single physical chart at all widths.
 
 ## 7. What was and was not used
 
@@ -323,8 +330,8 @@ The companion independently checks:
 - all `344` inclusion faces in the three forms (`31` survive, `313` terminal
   faces die at the corner);
 - the character ledger `(46,20,26)` and quotient at every `M=3..40`;
-- the general formulas (23)--(26) for every `k=3..10`, including the exact
-  `5/2`, `26/20`, and `154/172` controls;
+- the general formulas (23)--(26) for every `k=2..10`, including the exact
+  `1/0`, `5/2`, `26/20`, and `154/172` controls;
 - the leading determinant `2` and resultant constant `2^24`;
 - strict generalized-Vandermonde positivity on all `286` triples
   `0<=a<b<c<=12`;
