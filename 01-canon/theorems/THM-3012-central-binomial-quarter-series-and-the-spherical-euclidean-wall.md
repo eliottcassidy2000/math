@@ -213,3 +213,56 @@ plus the monodromy explanation.
 larger than the last term. Truncating a summation when the *term* falls below
 tolerance leaves an error of order `1e-5` at `N = 4000` and silently corrupts any
 PSLQ. Use the `3F2` evaluation (or the elliptic integral), never naive summation.
+
+## Addendum 2, 2026-08-01 (death-star): S(k) is one function's Mellin moment at s = 1/k
+
+Two exact identities, both verified numerically, that reorganise the whole family.
+
+**(M1) The series is a Mellin moment.** Since `1/(kn+1) = (1/k)/(n + 1/k)` and
+`1/(n+c) = int_0^1 t^{n+c-1} dt`,
+
+```text
+S(k) = (1/k) int_0^1 z^{1/k - 1} 2F1(1/4, 3/4; 1; z) dz
+     = int_0^1 2F1(1/4, 3/4; 1; u^k) du            (substitute z = u^k).
+```
+
+Verified against the `3F2` at `k = 1..5`. The second form identifies this family
+with kps's `S_a(k) = int_0^1 2F1(a, 1-a; 1; x^k) dx` at `a = 1/4`.
+
+**(M2) The integrand IS the elliptic K.** The quadratic transformation available
+because `b - a = 1/2` gives, verified to 45 digits at `z = 0.1, 0.5, 0.9, 0.99`,
+
+```text
+2F1(1/4, 3/4; 1; z) = sqrt( 2/(1 + sqrt(1-z)) ) * (2/pi) * K(sqrt w),
+                       w = (1 - sqrt(1-z))/(1 + sqrt(1-z)).
+```
+
+This is the source of the owner's confirmed representation
+`S(4) = (2 sqrt2/pi) int_0^1 K(k)/(2-k^2) dk`: it is (M1) at `k = 4` rewritten
+through (M2).
+
+**Why this matters for the closed-form question.** In (M1) **the function being
+integrated does not depend on `k` at all**; `k` enters *only* through the Mellin
+exponent `s = 1/k`. So
+
+```text
+S(k) = s * M(s)|_{s = 1/k},      M(s) = int_0^1 z^{s-1} 2F1(1/4,3/4;1;z) dz.
+```
+
+Consequently **no argument that works at the level of the function can separate
+`k <= 3` from `k >= 4`** -- the function is identical in every case, and it is a
+complete elliptic integral, transcendental for all of them. Any genuine
+impossibility statement must come from the **arithmetic of the exponent `1/k`**,
+i.e. from which rational Mellin moments of `K` admit closed forms. This is a
+sharper and better-posed target than "does `S(4)` have a closed form", and it is
+the form in which the question should be attacked.
+
+It also means section 4's monodromy discussion must be read carefully: the
+Schwarz data there is that of the `3F2`, whose parameters do vary with `k`, and
+it is *not* a statement about the integrand. The two are consistent, but only
+the `3F2`-level statement carries `k`-dependence.
+
+**Caveat on (M1) numerics:** the Mellin form has an integrable singularity
+`z^{1/k-1}` at the origin, and naive quadrature loses accuracy as `k` grows
+(observed drift `~1e-13` at `k = 4`, `~1e-10` at `k = 5`). Use the `3F2` for any
+high-precision work; (M1) is a structural identity, not an evaluation route.
