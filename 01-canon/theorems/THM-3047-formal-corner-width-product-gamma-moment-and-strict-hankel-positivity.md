@@ -2,7 +2,7 @@
 id: THM-3047
 title: "Formal-corner width product-Gamma moment and strict Hankel positivity"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The universal positive-real width flag isolated by THM-3040 is exactly the
   moment sequence of a scaled product of independent Gamma variables.  It is
   therefore a strict Stieltjes moment sequence: every generalized minor of
@@ -11,6 +11,13 @@ status: >
   coefficientwise formal-corner theorem, not positivity of a physical width,
   raw chart, wall-stripped core, or a corner with moving lower offsets.
 source: kind-pasteur-2026-08-01-product-gamma-width
+audit: >
+  An independent immutable-file hostile audit ACCEPTED the all-k character
+  signs, exact product-Gamma/Mellin representation, continuous full-support
+  product law, Andreief generalized-Hankel strict total positivity, adjacent
+  curvature, all alternating finite-log signs, and every stated scope
+  boundary.  It replayed normal, optimized, and stored output byte-for-byte,
+  matched both LF hashes, and passed the documentation checker.
 depends_on:
   - THM-3040-formal-corner-resultant-width-quotient-and-all-order-bernoulli-law
 related:
@@ -25,7 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3047 -- the formal-corner width flag is a product-Gamma moment sequence
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3040 turns the factorial-resultant corner into a one-dimensional width
 quotient.  The quotient is stronger than a convenient formula: on the
@@ -259,4 +266,4 @@ The theorem identifies a large strictly positive universal width sector, but
 it does not prove the Gaussian Moment Conjecture or any physical-width
 nonvanishing statement.
 
-**QED (candidate pending independent hostile audit).**
+**QED.**

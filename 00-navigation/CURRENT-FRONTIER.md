@@ -214,7 +214,10 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   THM-2964 makes the pure ladder universal; THM-2963 kills next-prime gates;
   THM-2969/73/78/82 give strict ULC through M34; THM-2997's `R2>R1`
   begins there and is conditional beyond it.  THM-3040's exact formal-corner
-  quotient `(1+Mt)^26(1+(M+1)t)^20` proves THM-3030's all-order C-law.
+  quotient `(1+Mt)^26(1+(M+1)t)^20` proves THM-3030's all-order C-law;
+  THM-3047 realizes its universal width flag as a product-Gamma moment and
+  proves strict generalized-Hankel positivity, while moving-lower transport
+  remains uncontrolled.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent
