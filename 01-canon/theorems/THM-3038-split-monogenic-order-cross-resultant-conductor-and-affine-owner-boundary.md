@@ -2,7 +2,7 @@
 id: THM-3038
 title: "Split monogenic order cross-resultant conductor and affine-owner boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For a split monogenic quartic order R[T]/((T-a)g), with R a normal
   local domain, g generically separable, and d=g(a) regular, the order is the fibre product of the
   singleton and complementary cubic orders over R/(d).  Its intermediate
@@ -32,7 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3038 -- the cross-resultant measures sheet gluing, not affine ownership
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and statement
 
@@ -425,3 +425,11 @@ optimized Python:
 
 The ordinary transcript, optimized transcript, and stored output agree
 byte-for-byte after LF normalization.
+
+An independent hostile audit rederived the fibre-product kernel and
+surjectivity, product normalization, conductor slice, resolver matrix and
+Smith reduction, DVR index identities, discriminant duplication, affine-owner
+valuation criterion, both hostile families, and the pointed THM-2993
+star/triangle factorization.  It also reproduced the ordinary and optimized
+transcripts and both declared LF hashes.  No remaining defect or scope
+overclaim was found.

@@ -29,6 +29,7 @@ related:
   - THM-2975-modular-six-sheet-schreier-graphs-and-farey-partial-cube-boundary
   - THM-3034-ordered-quartic-cross-wall-x1-14-and-diamond-quotient
   - THM-3035-level-two-farey-anharmonic-quartic-s3-orbit-diamond
+  - THM-3038-split-monogenic-order-cross-resultant-conductor-and-affine-owner-boundary
 script: 04-computation/quartic_cusp_braid_s4_lift_dichotomy_thm3037.py
 output: 05-knowledge/results/quartic_cusp_braid_s4_lift_dichotomy_thm3037.out
 script_sha256: ec28cfcf1056562f4bc537f8f60bea0d3ff3041a04e00e563c1428661a54fa69
