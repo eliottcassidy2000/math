@@ -307,3 +307,68 @@ Read together with Addendum 2: since `S(k)` is one fixed function's Mellin momen
 at `s = 1/k`, and no function-level argument can separate `k <= 3` from `k >= 4`,
 the numerical route is currently the *only* discriminator available -- which makes
 getting its calibration right the whole ballgame.
+
+## Addendum 4, 2026-08-01 (death-star): two CERTIFIED bounded exclusions for S(4), S(5)
+
+Addendum 3 withdrew the old numerical negative as uncalibrated. This addendum
+replaces it with **controlled** negatives -- bounded statements produced by
+pipelines that demonstrably detect known relations of the same shape. Each is
+stated as what it is: a finite exclusion, **not** an impossibility proof.
+
+### (E1) Weight-1 exclusion (logarithms and arctangents, algebraic multipliers)
+
+*Positive control (passed).* A blind scan over **all** size-2 bases of products
+`alpha * L`, `alpha` algebraic and `L` a logarithm/arctangent, recovers with no
+hint
+
+```text
+1 * pi S(3)  +  2 * arctan(sqrt2/5)  -  1 * sqrt3 * log(5 + 2 sqrt6)  =  0.
+```
+
+*Result.* With the same instrument, basis of `275` products
+(`11` multipliers `x` `25` logs/arctans), all `37675` pairs:
+
+```text
+no Z-relation  pi S(4) = c1 A + c2 B   with |c| <= 10^5, at 150 digits;
+no Z-relation  pi S(5) = c1 A + c2 B   with |c| <= 10^5, at 150 digits.
+```
+
+### (E2) Weight-2 exclusion (Catalan, dilogarithms, pi^2, log^2)
+
+Motivation: `1/(2-k^2)` partial-fractions to `1/(sqrt2 -+ k)` and the base moment
+is `int_0^1 K(k) dk = 2G`, so weight `2` is the natural next home if the family
+climbs one level -- `pi S(1)` is weight `0`, `pi S(2)` and `pi S(3)` weight `1`.
+
+*Positive controls (both passed).* The same size-2 scan over a `64`-element
+weight-2 product basis finds `Li_2(1/2) = pi^2/12 - (log 2)^2/2` (returned as
+`-12 Li_2(1/2) + pi^2 - 6 log^2 2 = 0`), and `pslq` recovers
+`int_0^1 K dk = 2G` as `[1,-2]`.
+
+*Result.* Against that basis, at `130` digits, `|c| <= 10^5`:
+
+```text
+S(4), pi S(4), pi^2 S(4), S(5), pi S(5)   -- no relation over any pair.
+```
+
+*Negative control (passed).* `pi S(2)`, which is weight `1`, produces no hit on
+the weight-2 basis, so the basis does not misfire.
+
+### What this does and does not establish
+
+**Does:** `S(4)` and `S(5)` are not expressible as a two-term `Z`-combination,
+with coefficients below `10^5`, over either of the stated bases -- from
+instruments verified to detect `pi S(3)` and `Li_2(1/2)` respectively. That is a
+genuine unconditional theorem about a finite search region, and it is strictly
+more than section 5 ever established.
+
+**Does not:** rule out three-or-more-term relations, larger coefficients, higher
+weight (`Li_3`, `zeta(3)`), other multiplier fields, or `Gamma`-value bases. It is
+**not** a proof that no closed form exists, and must never be quoted as one.
+
+Combined with Addendum 2 -- `S(k)` is one fixed function's Mellin moment at
+`s = 1/k`, so **no function-level argument can separate `k <= 3` from `k >= 4`** --
+the honest position is: closed forms for `S(4)`, `S(5)` are **OPEN**; the weight-1
+and weight-2 two-term regions are now genuinely excluded; and an unconditional
+impossibility proof would require value-level transcendence machinery
+(Grothendieck period conjecture, Schanuel, or a Siegel-Shidlovskii/Andre
+G-function argument), which is not available here.
