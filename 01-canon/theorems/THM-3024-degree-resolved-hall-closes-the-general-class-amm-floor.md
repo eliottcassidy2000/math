@@ -1,5 +1,5 @@
 ---
-id: THM-3022
+id: THM-3024
 title: "The degree-resolved Hall condition closes the general-class AMM 12592 floor: C*_general = log_5(5 phi^2)"
 status: >
   PROVED (structural) + VERIFIED-NUMERIC (finite shells). Answers the question
@@ -39,11 +39,11 @@ related:
   - HYP-9061
 external:
   - "Gale, Hoffman: feasibility of transportation / flow with supplies and demands."
-script: 04-computation/amm12592_degree_resolved_hall_thm3022.py
-output: 05-knowledge/results/amm12592_degree_resolved_hall_thm3022.out
+script: 04-computation/amm12592_degree_resolved_hall_thm3024.py
+output: 05-knowledge/results/amm12592_degree_resolved_hall_thm3024.out
 ---
 
-# THM-3022 -- the general-class floor is golden
+# THM-3024 -- the general-class floor is golden
 
 ## 0. The question
 
@@ -176,6 +176,6 @@ entirely on the **construction** side: whether the `gamma = 3/5` recursion
 admits a periodic-orbit / doubling induction making `C* <= 8/5` a theorem for
 all `n`, and then whether the gap to golden closes from above.
 
-Referee: `amm12592_degree_resolved_hall_thm3022.py` reproduces the control
+Referee: `amm12592_degree_resolved_hall_thm3024.py` reproduces the control
 (per-shell (ARCH) margin at `m = 128,256,512`), the degree-resolved tail cuts,
 and the `delta* -> 1/phi` table.
