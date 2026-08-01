@@ -1,5 +1,5 @@
 ---
-id: THM-3041
+id: THM-3042
 title: "Reflected spread-five closure and three-D cone"
 status: >
   PROVED + VERIFIED-EXACT + SCOPE-AUDITED.  In the reflected k=1 sufficient
@@ -35,7 +35,7 @@ semantic_sha256: 9bc1da061c14d44ef1016a9b887097666fd50ea6af242ea8302822a6dbe664b
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3041 -- reflected spread-five closure and three-D cone
+# THM-3042 -- reflected spread-five closure and three-D cone
 
 **PROVED + VERIFIED-EXACT + SCOPE-AUDITED.**
 
