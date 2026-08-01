@@ -1,0 +1,28 @@
+(a) THE LOG BRIDGE:  L(g) = int_0^inf g(x) e^{-x} dx = int_0^1 g(-log u) du
+    (x = -log u, dx = -du/u, e^{-x} = u)
+    j=0: L(s^j) = 0! = 1   int_0^1 (-log u)^j du = 1.0
+    j=1: L(s^j) = 1! = 1   int_0^1 (-log u)^j du = 1.0
+    j=2: L(s^j) = 2! = 2   int_0^1 (-log u)^j du = 2.0
+    j=3: L(s^j) = 3! = 6   int_0^1 (-log u)^j du = 6.0
+    j=4: L(s^j) = 4! = 24   int_0^1 (-log u)^j du = 24.0
+    j=5: L(s^j) = 5! = 120   int_0^1 (-log u)^j du = 120.0
+
+    So the FACTORIAL weight and the [0,1] weight are the SAME functional
+    in different coordinates -- but the exponent becomes polynomial in
+    log u, NOT in u.  int_0^1 e^{Q(t)}dt with Q polynomial is a DIFFERENT
+    object; the bridge does not by itself produce it.
+
+(b) DEGREE-1 TRANSCENDENCE, from Lindemann-Weierstrass
+    int_0^1 e^{at+b} dt = (e^{a+b} - e^b)/a.
+    Suppose it equals an algebraic gamma.  Then
+        1*e^{a+b} + (-1)*e^b + (-a*gamma)*e^0 = 0,
+    a Qbar-linear relation among e^alpha for the DISTINCT algebraic
+    exponents a+b, b, 0.  LW says those exponentials are linearly
+    independent over Qbar, forcing the coefficient 1 to vanish --
+    contradiction.  Edge cases: b=0 uses exponents a,0; a+b=0 gives
+    a*gamma = 1 - e^b with e^b transcendental.  So the value is
+    TRANSCENDENTAL for every algebraic a != 0, b.  QED
+
+    a=1, b=0: value = 1.7182818284590452354
+    a=2, b=1: value = 8.6836275473643112528
+    a=0.333333333333333333333333333333, b=0.4: value = 1.7705531593115556466

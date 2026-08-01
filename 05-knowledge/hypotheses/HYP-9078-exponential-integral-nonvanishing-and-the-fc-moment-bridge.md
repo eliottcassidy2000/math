@@ -127,13 +127,77 @@ case: grepping canon returns only incidental hits (THM-438 Paley/Catalan,
 THM-139 chirality, THM-2228 Mahler, HYP-3832 PSL(2,7) cochain).
 
 
-## 6. Follow-up on the second item's source
+## 6. The claim strengthened to TRANSCENDENCE, and degree one PROVED
 
-The page later supplied as the origin of the nonsofic snippets,
-`openai.com/index/ten-advances-in-mathematics`, returns **HTTP 403 Forbidden**
-to a direct fetch, so its contents could not be read. Combined with section 5
--- where the cited arXiv id resolves to a different, explicitly CONDITIONAL
-paper -- there is still no verifiable source for the claim, and nothing from
-it is used. This is recorded as a provenance status, not a judgement on the
-underlying mathematics, which may well exist under an identifier not yet
-supplied.
+The claim as later supplied is stronger: `int_0^1 e^(Q(t)) dt` is
+TRANSCENDENTAL for every nonconstant `Q in Qbar[t]`, not merely nonzero.
+
+**Theorem (degree one).** For algebraic `a != 0` and algebraic `b`,
+`int_0^1 e^(at+b) dt` is transcendental.
+
+*Proof.* The integral is `(e^(a+b) - e^b)/a`. Suppose it equals an algebraic
+`gamma`. Then
+
+```text
+1 * e^(a+b)  +  (-1) * e^b  +  (-a gamma) * e^0  =  0,
+```
+
+a `Qbar`-linear relation among `e^alpha` at the distinct algebraic exponents
+`a+b, b, 0`. Lindemann--Weierstrass says those exponentials are linearly
+independent over `Qbar`, so every coefficient vanishes -- but the first is
+`1`. Contradiction. Edge cases: if `b = 0` use the exponents `a, 0`; if
+`a+b = 0` the relation gives `a gamma = 1 - e^b` with `e^b` transcendental.
+QED
+
+So the transcendence form is true at degree one and, exactly as with the
+non-vanishing form, **algebraicity of the coefficients is the whole
+hypothesis**. Degree two is an error-function value, where Siegel--Shidlovskii
+E-function theory is the natural tool, matching the description supplied.
+
+## 6a. The log bridge -- and why it does NOT give the claimed implication
+
+There is an exact change of variables linking the two functionals. With
+`x = -log u`,
+
+```text
+L(g) = int_0^inf g(x) e^(-x) dx = int_0^1 g(-log u) du,
+```
+
+verified numerically: `int_0^1 (-log u)^j du = j!` for `j = 0..5`. **So the
+factorial weight and the `[0,1]` weight are the same functional in different
+coordinates.**
+
+That is the obvious candidate route from the integral claim to FC, and it does
+NOT work: under the substitution the exponent becomes a polynomial in
+`log u`, not in `u`, so `L(e^(t f))` is `int_0^1 e^(t f(-log u)) du` with a
+LOGARITHMIC exponent, whereas the claim concerns `int_0^1 e^(Q(u)) du` with
+`Q` polynomial in `u`. These are different objects. **Whatever the asserted
+implication "the conjecture implies FC(2)" is, it is not this change of
+variables**, and it remains unreconstructed here.
+
+## 7. Follow-up on the second item's source
+
+**CORRECTION to the earlier entry.** A verifiable source does exist:
+`github.com/openai/ten-proofs`, fetched directly, is a real repository of
+Lean 4 formalizations whose README reads *"This repository contains Lean 4
+formalizations of the results presented in Ten advances in mathematics and
+theoretical computer science by OpenAI"*, with top-level files including
+`NonSoficGroup.lean`, `SpherePacking.lean`, `GapCVP.lean`,
+`ConnesRigidity.lean`, `Permanent.lean`, `MulticolorTriangleRamsey.lean`,
+`EhrhartVolumeInequality.lean`, `QuantumParallelRepetition.lean`,
+`MetricCodes.lean`, `CompactnessAndDegeneracy.lean`. My previous "no
+verifiable source" was wrong and is withdrawn; the arXiv-id mismatch of
+section 5 stands as a separate fact about that identifier only.
+
+**What was checked.** Fetching `NonSoficGroup.lean` (~2900 lines) reports
+**one occurrence of `sorry`**, in the proof of
+`elementaryGroup_finitelyGenerated`. So as fetched the file is not
+sorry-free. Caveats: this is a single automated read, not a compile; a
+`sorry` in a finite-generation support lemma is not the main theorem; and
+the companion page `openai.com/index/ten-advances-in-mathematics` returns
+HTTP 403, so its framing (preliminary vs peer-reviewed) could not be read.
+The honest status is therefore: **artifact exists, one admitted lemma
+observed, correctness unverified.**
+
+The repo still has no sofic / property-(T) / expander thread, and nothing
+from this claim is used in any result here.
