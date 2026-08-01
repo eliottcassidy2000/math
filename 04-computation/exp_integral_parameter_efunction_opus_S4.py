@@ -3,9 +3,11 @@ GENERAL reformulation: I = int_0^1 e^{Q} dt = Phi_Q(1), where Phi_Q(z) = int_0^1
 in the parameter z for EVERY Q in Qbar[t].  Transcendence of I <= RIGIDITY (1 not a horizontal section of the
 differential module of Phi_Q) = critical-value non-resonance.  See companion reflection.
 
-Verifies (all degrees): (A) mu_m=int_0^1 Q^m algebraic + geometric growth (E-function); (B) non-rationality via
-positive indicator width for nonconstant Q (=> Phi_Q entire non-polynomial); (C) the endpoint/saddle exponential
-module and the rate-0 (constant '1') resonance criterion; (D) I=Phi_Q(1)=sum mu_m/m!.
+Verifies (all degrees): (A) mu_m=int_0^1 Q^m algebraic + geometric growth (E-function -- CORRECT, free);
+(B) the indicator width -- but see CORRECTION: width>0 gives only an UPPER bound on |Phi_Q|, NOT non-rationality
+(a complex oscillatory integral can cancel to a constant while |integrand| grows: g=e^{2pi i t} has Phi_g==1).
+So Phi_Q non-rational is EQUIVALENT to FC(2), not free (death-star THM-3031); (C) endpoint/saddle exponential
+module and rate-0 resonance; (D) I=Phi_Q(1)=sum mu_m/m!.
 """
 import mpmath as mp
 import sympy as sp
@@ -25,7 +27,8 @@ def report(name, Q, deg):
     Qv = [complex(sp.N(Q.subs(t, tt))) for tt in ts]
     width = max(max((v*mp.e**(1j*th)).real for v in Qv) - min((v*mp.e**(1j*th)).real for v in Qv)
                 for th in [mp.pi*k/12 for k in range(12)])
-    print(f"  (B) indicator width max_theta = {mp.nstr(width,6)} > 0 => Phi_Q entire non-polynomial => not in Qbar(z)")
+    print(f"  (B) indicator width max_theta = {mp.nstr(width,6)} > 0 => only |Phi_Q| UPPER bound e^{{R.width}};")
+    print(f"      NOT non-rationality (g=e^{{2pi i t}} has Phi_g==1 with width>0). Non-rationality <=> FC(2). [CORRECTED]")
     # (C) critical values {Q(0),Q(1)} U {Q(c):Q'(c)=0}: rate-0 resonance <=> 0 among/related to them
     crit = [Q.subs(t, 0), Q.subs(t, 1)]
     for c in sp.solve(sp.diff(Q, t), t):
