@@ -1,0 +1,25 @@
+rate                          R    result                         D0  eff.rate
+3/5   (control)                 8  CLOSES + verified            D0=0  0.600000
+3/5   (control)                16  CLOSES + verified            D0=0  0.600000
+3/5   (control)                32  CLOSES + verified            D0=0  0.600000
+3/5   (control)                64  CLOSES + verified            D0=0  0.600000
+0.599                           8  CLOSES + verified            D0=0  0.583333
+0.599                          16  CLOSES + verified            D0=0  0.592593
+0.599                          32  did not close                 -
+0.599                          64  did not close                 -
+0.598                           8  CLOSES + verified            D0=0  0.583333
+0.598                          16  CLOSES + verified            D0=0  0.592593
+0.598                          32  did not close                 -
+0.598                          64  did not close                 -
+0.5980                          8  CLOSES + verified            D0=0  0.583333
+0.5980                         16  CLOSES + verified            D0=0  0.592593
+0.5980                         32  did not close                 -
+0.5980                         64  did not close                 -
+100/167 simplest in gap         8  CLOSES + verified            D0=0  0.583333
+100/167 simplest in gap        16  CLOSES + verified            D0=0  0.592593
+100/167 simplest in gap        32  did not close                 -
+100/167 simplest in gap        64  did not close                 -
+0.59799 (just above gamma*)     8  CLOSES + verified            D0=0  0.583333
+0.59799 (just above gamma*)    16  CLOSES + verified            D0=0  0.592593
+0.59799 (just above gamma*)    32  did not close                 -
+0.59799 (just above gamma*)    64  did not close                 -

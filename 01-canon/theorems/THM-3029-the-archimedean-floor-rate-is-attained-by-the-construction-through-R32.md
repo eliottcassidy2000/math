@@ -78,6 +78,24 @@ were recorded in this lane and must not be read as evidence. (M) also converts
 the search problem into: *find any sufficiently small profile that closes*, and
 lift.
 
+**A demonstrated instance, not merely a caution.** Running the direct beam at
+`R = 32` over sub-`3/5` rates produces a uniform negative:
+
+```text
+rate                          R = 8        R = 16       R = 32          R = 64
+3/5 (control)                 CLOSES       CLOSES       CLOSES          CLOSES
+0.599                         CLOSES       CLOSES       "did not close" "did not close"
+0.598                         CLOSES       CLOSES       "did not close" "did not close"
+100/167 (simplest in gap)     CLOSES       CLOSES       "did not close" "did not close"
+0.59799 (just above gamma*)   CLOSES       CLOSES       "did not close" "did not close"
+```
+
+Every `R = 32` entry above is **false**. Section 4 proves those very profiles
+close, by lifting the `(gamma = 1/2, D0 = 3)` solution. So the beam's negatives
+are not weak evidence, they are *wrong*, and no negative from this solver may be
+cited as evidence about a profile without first checking whether some smaller
+profile closes.
+
 ## 2. The slack trap (D0)
 
 With `d_i = floor(gamma(R+i)) + D0`, the **effective rate** of the epoch is
