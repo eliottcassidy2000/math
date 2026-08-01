@@ -152,6 +152,39 @@ situation reported in THM-3002 section 5b, where criterion (4) is uniformly
 ample at `3/5` (worst ratio `~1.20` at `t = 1`, stable to `R = 256`) while the
 beam search nevertheless stalls at `R = 128` on search budget alone.
 
+## 5b. Every row is forced to be active, so "sparse" cannot mean "empty"
+(addendum 2026-08-01)
+
+Section 5 proposed finding a **sparse** factorisation of `q^{2R-1}` -- one where
+row `j` draws on `O(1)` product blocks instead of `~j`. One reading of that,
+leaving most rows empty, is **impossible**.
+
+For any admissible block at degree `d`, capacity gives `|delta_0| <= binom(d,0)
+= 1` and parity gives `delta_0 = binom(d,0) = 1 mod 2`, i.e. `delta_0` is odd.
+The only odd integer of absolute value `<= 1` is `+-1`, so
+
+```text
+delta_{i,0} = +-1     exactly, for EVERY block of EVERY admissible solution.  (F)
+```
+
+Verified on the `gamma = 3/5` solutions at `R = 8, 16, 32, 64`: all `delta_0`
+lie in `{+1,-1}`, giving sign words such as `+---+++-` (`R = 8`) and
+`--++-----++++++-` (`R = 16`). (This is also why the solver rejects any state
+with `|sigma(0)| != 1`.)
+
+Consequences:
+
+* **No row can be empty.** All `2R` rows of a doubled epoch must carry a block,
+  so the row-distribution problem in section 5 cannot be solved by sparsity in
+  the naive sense. A valid scheme has to *redistribute* weight, not remove it.
+* **`(1-x)^{2^k}` is never an admissible block**, at any degree: it would need
+  `delta_0 = 0` while parity forces odd. So the tempting factorisation
+  `q^{2R-1} = q^{R-1} * q^R` cannot be realised by putting `q^R` in a single row.
+* **The solution is a sign word plus corrections.** Every epoch solution is
+  determined by a `+-1` word of length `R` (the `delta_0`s) together with the
+  higher `delta_k`. That is the natural carrier for an induction, and it is
+  where the binary-clock parity structure of THM-2976 enters.
+
 ## 6. Scope
 
 (M), (L) are proofs (Vandermonde plus the exact basis identity); (D) is proved

@@ -1,0 +1,54 @@
+R=32: solve at gamma=1/2, D0=3, then LIFT onto sub-3/5 profiles.
+   source solve: SOLVED, verify=True
+   source profile eff rate = 0.593750
+   0.599               : lifted -> all blocks admissible: True;  epoch identity: True;  eff rate = 0.596774
+   0.598               : lifted -> all blocks admissible: True;  epoch identity: True;  eff rate = 0.596774
+   0.59799             : lifted -> all blocks admissible: True;  epoch identity: True;  eff rate = 0.596774
+   gamma* exactly-ish  : lifted -> all blocks admissible: True;  epoch identity: True;  eff rate = 0.596774
+gamma* (proved asymptotic floor rate) = 0.5979874356654402
+3/5                                   = 0.6000000000000000
+
+  R      gamma_c(R)      gamma_c - gamma*    is 3/5 admissible?   room below 3/5
+    8   0.5000000000   -0.0979874357      YES                 +0.1000000000
+   16   0.5000000000   -0.0979874357      YES                 +0.1000000000
+   32   0.5000000000   -0.0979874357      YES                 +0.1000000000
+   64   0.5434782609   -0.0545091748      YES                 +0.0565217391
+  128   0.5676691729   -0.0303182627      YES                 +0.0323308271
+  256   0.5808270677   -0.0171603680      YES                 +0.0191729323
+  512   0.5886194030   -0.0093680327      YES                 +0.0113805970
+ 1024   0.5928909953   -0.0050964404      YES                 +0.0071090047
+
+Reading: gamma_c(R) is the NECESSARY-condition floor at finite R.  Any
+construction rate must be >= it.  If the empirical construction threshold
+gamma_R equals gamma_c(R), the construction is TIGHT against the necessary
+condition; if gamma_R is stuck at 3/5 while gamma_c(R) is well below, the
+gap is a CONSTRUCTION deficiency, not a capacity one.
+R1  gamma_c(R): the finite-R capacity floor rises to gamma* FROM BELOW
+      R=    8  gamma_c=0.3750000000   gamma*-gamma_c=+0.2229874357
+      R=   16  gamma_c=0.4411764706   gamma*-gamma_c=+0.1568109651
+      R=   32  gamma_c=0.5000000000   gamma*-gamma_c=+0.0979874357
+      R=   64  gamma_c=0.5434782609   gamma*-gamma_c=+0.0545091748
+      R=  128  gamma_c=0.5676691729   gamma*-gamma_c=+0.0303182627
+      R=  256  gamma_c=0.5808270677   gamma*-gamma_c=+0.0171603680
+      R=  512  gamma_c=0.5886194030   gamma*-gamma_c=+0.0093680327
+      R= 1024  gamma_c=0.5928909953   gamma*-gamma_c=+0.0050964404
+
+R2  the gamma* floor profile coincides with the 0.598/0.599 profiles at small R
+      R=  8: identical to gamma* profile: ['0.599', '0.598', '0.59799'];  eff rate 0.583333   (3/5 profile eff rate 0.600000)
+      R= 16: identical to gamma* profile: ['0.599', '0.598', '0.59799'];  eff rate 0.592593   (3/5 profile eff rate 0.600000)
+      R= 32: identical to gamma* profile: ['0.599', '0.598', '0.59799'];  eff rate 0.596774   (3/5 profile eff rate 0.600000)
+      R= 64: identical to gamma* profile: ['0.598', '0.59799'];  eff rate 0.597938   (3/5 profile eff rate 0.600000)
+
+R3  PROFILE MONOTONICITY: a solution lifts to any pointwise-larger profile
+      (each block convolved with [binom(d'-d,k)], which represents the CONSTANT 1)
+      R=32 source: gamma=1/2, D0=3 -> SOLVED, verify=True, eff rate 0.593750
+      target = gamma* floor profile;  pointwise >= source: True
+      lifted blocks all admissible: True;  epoch identity exact: True
+
+R4  THE RESULT: the gamma* floor profile closes at R = 8, 16, 32 with D0 = 0
+      R=  8: direct solve SOLVED, verify=True, eff rate 0.583333
+      R= 16: direct solve SOLVED, verify=True, eff rate 0.592593
+      R= 32: by lifting (R3), admissible=True, identity=True, eff rate 0.596774
+
+      => C = 1 + gamma* = log_5(5 phi^2) = 1.5979874356654402 is ATTAINED for n <= 63,
+         matching the proved archimedean floor exactly (previous best: C <= 8/5 = 1.6).
