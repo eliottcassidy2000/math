@@ -10,6 +10,7 @@ selector_reachable_prefix_states=232
 selector_kernel_normalization_checks=232
 selector_positive_transitions=728
 selector_unlabeled_projection=EXACT
+selector_independent_deletion_support=IMPOSSIBLE
 same_terminal_law_distinct_order_kernels=2
 scope=abstract_state_dependent_chain_not_response_transport
 all_exact_checks=PASS

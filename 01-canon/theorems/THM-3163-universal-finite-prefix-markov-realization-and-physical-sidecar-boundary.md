@@ -9,8 +9,10 @@ status: >
   exchangeable labelled lift, so the chain descends to multiplicity states.
   In particular THM-3158's seven-state law has an exact 29-terminal labelled
   realization.  Bare sequential realizability is therefore automatic and is
-  not the missing GMC sidecar; value-only, response-compatible, or original-
-  current-compatible transport remains unproved.
+  not the missing GMC sidecar.  The same exact law cannot arise from
+  independent Bernoulli deletion, even after conditioning on nonemptiness;
+  value-only, response-compatible, or original-current-compatible transport
+  remains unproved.
 source: root/multiscale-newton-flag/product-gamma-width3-2026-08-02
 depends_on: []
 related:
@@ -21,8 +23,8 @@ related:
   - THM-3160-complete-pluecker-pole-holotopy-and-selector-projection-no-go
 script: 04-computation/gmc_finite_prefix_markov_realization_thm3163.py
 output: 05-knowledge/results/gmc_finite_prefix_markov_realization_thm3163.out
-script_sha256: 35ee2d40987768c23f755fc53201cb13e794ad77be52e055be565e0b6e3832db
-output_sha256: f58aa203072330c18ccec25be7448fa15ad4f8011d3fcee8da3e1445b66fc4cf
+script_sha256: f6c5396851ca986fa46a0e9775ded2b4381069e98b32c8d0c72c0625cbdc2b5a
+output_sha256: 7f961c096477e9f57d16f5a8b06bde1988cb9bf2c477f60a6e7f42bec49ccb82
 hash_basis: LF-normalized bytes
 ---
 
@@ -164,6 +166,17 @@ Consequently the THM-3158 law does have a sequential pole-removal realization
 in this broad sense.  This adds no Hasse positivity beyond THM-3158 and no
 response identity beyond the prescribed terminal distribution.
 
+The realization is necessarily correlated.  In the labelled lift, every one
+of the four singleton sets carried by a pole of value `1` has positive mass,
+and the set of all four such labels has positive mass, but every set of exactly
+two `1`-labels has zero mass.  Under an independent Bernoulli law, positivity
+of the four-label set forces all four inclusion probabilities to be positive,
+while positivity of every singleton forces all four exclusion probabilities
+to be positive.  Every two-label set would then have positive mass, a
+contradiction.  Conditioning on a nonempty outcome does not change support.
+Thus the simplest local product process is excluded even though the abstract
+posterior Markov process always exists.
+
 ## 5. Why this does not solve the selector problem
 
 The construction uses the entire terminal law in every posterior transition.
@@ -210,7 +223,8 @@ The companion uses `Fraction` arithmetic.  It tests `(1)--(8)` on a dense
 four-label probability law, then constructs and independently propagates the
 29-terminal labelled lift of the exact THM-3158 law.  The general proof is the
 finite identity `(4)--(8)`; the companion supplies exact positive and
-repeated-value controls.
+repeated-value controls, the independent-deletion support hostile, and two
+explicit distinct-order kernels with the same terminal law.
 
 ## 7. Scope
 

@@ -169,12 +169,48 @@ require(projected == {
     for state, numerator in SELECTOR_NUMERATORS.items()
 }, "labelled lift failed to recover the unlabeled selector law")
 
+# The same support cannot come from independent Bernoulli deletion, even after
+# conditioning on a nonempty outcome.  All four singleton 1-label sets and the
+# set of all four 1-labels have positive mass, whereas every two-1 set is zero.
+ONE_LABELS = VALUE_LABELS[1]
+ONE_SINGLETON_MASKS = tuple(1 << label for label in ONE_LABELS)
+ALL_ONES_MASK = sum(ONE_SINGLETON_MASKS)
+TWO_ONES_MASK = ONE_SINGLETON_MASKS[0] | ONE_SINGLETON_MASKS[1]
+require(all(mask in SELECTOR_LAW for mask in ONE_SINGLETON_MASKS)
+        and ALL_ONES_MASK in SELECTOR_LAW
+        and TWO_ONES_MASK not in SELECTOR_LAW,
+        "independent-deletion support hostile drift")
+
 
 # Nonuniqueness: delta_{0,1} is realized by either deterministic order.
-target = 0b11
-first_order_terminal = target
-second_order_terminal = target
-require(first_order_terminal == second_order_terminal == target,
+def deterministic_order_kernel(order):
+    state = 0
+    kernel = {}
+    for label in order:
+        kernel[state] = (Fraction(0), {label: Fraction(1)})
+        state |= 1 << label
+    kernel[state] = (Fraction(1), {})
+    return kernel
+
+
+def propagate_explicit_kernel(kernel):
+    arrival = defaultdict(Fraction)
+    terminal = defaultdict(Fraction)
+    arrival[0] = Fraction(1)
+    for state in sorted(kernel, key=lambda mask: (mask.bit_count(), mask)):
+        stop_probability, outgoing = kernel[state]
+        terminal[state] += arrival[state] * stop_probability
+        for label, probability in outgoing.items():
+            arrival[state | (1 << label)] += arrival[state] * probability
+    return {state: mass for state, mass in terminal.items() if mass}
+
+
+FIRST_ORDER_KERNEL = deterministic_order_kernel((0, 1))
+SECOND_ORDER_KERNEL = deterministic_order_kernel((1, 0))
+require(FIRST_ORDER_KERNEL != SECOND_ORDER_KERNEL
+        and propagate_explicit_kernel(FIRST_ORDER_KERNEL)
+        == propagate_explicit_kernel(SECOND_ORDER_KERNEL)
+        == {0b11: Fraction(1)},
         "deterministic-order nonuniqueness control failed")
 
 
@@ -190,6 +226,7 @@ print(f"selector_reachable_prefix_states={SELECTOR['reachable']}")
 print(f"selector_kernel_normalization_checks={SELECTOR['normalization_checks']}")
 print(f"selector_positive_transitions={SELECTOR['transition_count']}")
 print("selector_unlabeled_projection=EXACT")
+print("selector_independent_deletion_support=IMPOSSIBLE")
 print("same_terminal_law_distinct_order_kernels=2")
 print("scope=abstract_state_dependent_chain_not_response_transport")
 print("all_exact_checks=PASS")

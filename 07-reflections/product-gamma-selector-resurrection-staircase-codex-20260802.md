@@ -135,6 +135,60 @@ the model identities.
 If a structured family survives, it supplies the missing sequential sidecar.
 If both fail, their first polynomial relation gives a useful no-go theorem.
 
+## Two Hasse networks and the missing chain map
+
+THM-3163 separates two flows that earlier language blurred together.
+
+- The **prefix network** is the Boolean/submultiset Hasse graph of physical
+  pole deletions.  Its augmented unit flows have the terminal law as their
+  sink distribution.  Every finite law admits such a flow.
+- For each degree `N`, the **partition network** is the refinement Hasse graph
+  of `P_N`.  Its nonnegative edge flows have the selector current
+  `G_N(lambda)` as boundary.  Existence here is the substantive positivity
+  condition.
+
+At vertices the obvious observable is
+
+```text
+delta_sigma  |-->  G_N^sigma.                              (A)
+```
+
+A genuine sequential proof would require more than `(A)`: it needs an edge
+map from physical prefix moves to partition-Hasse transports that commutes
+with boundary and preserves the nonnegative cones.  In schematic form,
+
+```text
+prefix edge flow --L_N--> partition-Hasse edge flow
+       | boundary                    | boundary
+       v                             v
+ terminal law   --(A)-->       selector current.           (B)
+```
+
+THM-3160 identifies information destroyed by the lower arrow when one tries
+to evolve it: same-degree selector rows omit cross-degree endpoint Pluecker
+minors.  The full exterior tensor restores a signed flat connection, but not
+the positivity of `L_N`.  THM-3128's labelled-deletion obstruction is the
+canonical hostile against the cheapest positive edge lift.
+
+Thus the next bridge has explicit typing:
+
+- **source:** a state-dependent prefix-flow edge;
+- **target:** a partition-refinement transport, simultaneously in the needed
+  degree range;
+- **preserved predicate:** boundary and nonnegative flow;
+- **lost datum:** cross-degree endpoint phase/minors;
+- **needed sidecar:** the complete Pluecker pole tensor or a smaller
+  fixed-bank quotient;
+- **cheapest decisive test:** on the live support-`(1,3)`, bank-`I2` fibre,
+  test kernel inclusion for the projected parent-current matrix versus every
+  one-pole child matrix, then test cone rather than span if linear transport
+  survives.
+
+This is the selector analogue of a chain-level holotopy problem: path
+independence exists in the signed enriched object, while positivity is lost
+under projection.  It is more precise than seeking another isolated law or
+another static common-section certificate.
+
 ## Updated concept board
 
 1. **Two-axis selector barcode:** exact birth/death cells in `(D,d)`.
@@ -146,6 +200,9 @@ If both fail, their first polynomial relation gives a useful no-go theorem.
    independent-deletion and value/depth-hazard models test real locality.
 6. **Original-response map:** still absent; no selector theorem alone proves
    NC2 or GMC.
+7. **Positive chain map:** prefix stopping flow and partition Hasse flow are
+   different objects; their boundary-compatible intertwiner is the real
+   sequential sidecar.
 
 The creative lesson is to study the *motion of the dual face* and the *small
 crossing locus* together.  Each alone looks unstable.  Their paired evolution
