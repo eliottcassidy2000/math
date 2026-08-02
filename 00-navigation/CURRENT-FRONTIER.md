@@ -182,34 +182,22 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   conditional beyond. THM-3040/47/50 give corner, Gamma/Hankel, radial-NC2
   laws; THM-3051/53/54 give moving-lower hostiles, prefix flow and affine
   finite-order tail re-entry.  THM-3056 gives reciprocal product-Gamma sign
-  `(-1)^binom(h,2)`, not moment positivity.  THM-3060/62/63 prove the
-  fixed-low hierarchy. THM-3069 gives towers; THM-3075 opens k6
-  bracketings; THM-3082 opens finite `O/P` words simultaneously.
-  THM-3073/77: norm/carry; THM-3093/97/3100: Gamma tails/finite banks, not
-  emptiness. THM-3107 closes product-Gamma `{0,1,2}` for every finite layer
-  count and every anchored AP by dominant mode plus finite histogram; translated
-  and non-AP triples stay open. THM-3101/3105 type zero-child repair by a finite
-  projector/Jordan spectrum but still need the physical endpoint jet. THM-3065 gives reciprocal-Beta
-  Gregory--Newton walls; nonpositive signed prefixes force H2 only, as exact
-  zero-cut H3/H4 hostiles refute the higher lift.  Strict-negative-prefix
-  repair remains OPEN.  These are fixed finite banks, not one all-order tail.
+  `(-1)^binom(h,2)`, not moment positivity.  THM-3060/62/63/69/73/75/77/82
+  build fixed-low towers, norms/carries, bracketings and finite `O/P` words.
+  THM-3093/97/3100 give Gamma tails/finite banks, not emptiness; THM-3107
+  closes product-Gamma `{0,1,2}` for finite layers and anchored APs.
+  Translated/non-AP triples and THM-3101/05's physical endpoint jet stay open.
+  THM-3065 forces H2 only; exact H3/H4 hostiles block the higher all-order lift.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent
   `30`.  The unbounded shared-line, general norm, and scalar multiplier-access
   problems remain open.
-- THM-3115/3127 turn pole-prefix response into exact partition-Hasse currents
-  and upset-dual selector tests.  THM-3158 gives the depth-five staircase
-  `C_12 != empty`, `C_13 = empty`; THM-3169 proves that all 507 depth-six
-  attachments cross the old nine-row wall in exactly 24 places but remain
-  excluded by a new eleven-row wall.  THM-3160/3163/3168 separate three notions
-  that must not be conflated: full Pluecker transport, abstract finite-prefix
-  Markov realization, and fixed-pole current transport (which already fails at
-  depth two).  Depth seven remains open.
-- THM-3170 closes the exact quadratic resonance whenever one of
-  `d-1,...,d-5` is prime; any surviving bad resonance has
-  `d,d-1,...,d-5` all composite.  Its Euclidean-frame determinant walls are
-  finite and should be treated as holotopy singularities, not generic primes.
+- THM-3115/27/58/69: partition-Hasse selectors die at degree 13 through depth
+  six; 24 new cells cross the old wall, but a new eleven-row wall persists.
+  THM-3160/63/68 separate Pluecker, abstract Markov and fixed-pole transport;
+  depth seven is open.  THM-3170 forces bad resonances to have `d,...,d-5`
+  composite; its finite determinant walls are holotopy singularities.
 
 ### Live work
 
