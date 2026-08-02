@@ -331,13 +331,14 @@ Classify profiles under support operations; study analytic continuation and auto
   component is forced, but excluding every Keller `C3` component remains
   OPEN and needs branchwise cofactor units.  THM-3066 retains only their
   product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
-  THM-3068 permits a punctured `C3`; THM-3070/3074/3080 force a finite local
-  Laurent-key tower ending at gcd one.  Polynomial globalization and arbitrary
-  Jelonek straightening remain OPEN.
-  THM-3067's 12-flag `A4` bitorsor loses its `V4` origin in the `C3` quotient;
-  THM-3072 shows that all three conjugate `C2` quotient tables reconstruct it,
-  while the edge/cycle pair alone loses an exact three-dimensional character
-  sector.  Odd reflection and physical realization remain sidecars.
+  THM-3068 permits `C3`; THM-3070/3074/3080 force a finite local Laurent-key
+  tower ending at gcd one, and THM-3081 makes its terminal residue Mobius with
+  a square decoder.  Globalization and arbitrary Jelonek straightening remain
+  OPEN.
+  THM-3067's `A4` bitorsor loses `V4` origin under `C3`.  THM-3072 recovers it
+  from three `C2` tables; edge/cycle loses a 3D character sector.  THM-3076
+  extends this to prime affine-plane tomography, with the characteristic-`p`
+  nilpotent boundary.  Reflection/physical realization are sidecars.
   THM-2862/2864/2968/2971 give two sextic
   lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
   affine sidecars remain.  THM-2867 gives the regular `S3` carrier.  THM-2871 makes that face unramified and

@@ -2,8 +2,8 @@
 id: THM-3076
 title: "Finite affine-plane line-quotient tomography and the p=2 three-view law"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING IMMUTABLE INDEPENDENT
-  HOSTILE AUDIT.  Over any field in which p is invertible, the p+1 line-
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Over any field in
+  which p is invertible, the p+1 line-
   quotient averages on F_p^2 split into one constant channel and p+1
   pairwise-annihilating centered direction channels.  Every nonempty labelled
   s-view bank has rank 1+s(p-1), exact common-mean image, canonical observable
@@ -14,6 +14,12 @@ status: >
   its generators with translation and the ternary A4 chart cycle after one
   relabelling.  No physical quartic, Farey, Keller, or LRC intertwiner follows.
 source: root-finite-plane-tomography-2026-08-01
+audit: >
+  An immutable hostile audit rederived the projector algebra, every good- and
+  bad-characteristic rank, the sharp missing-line witnesses, the joint-label
+  versus separate-table distinction, and the generatorwise PSL2(F3)=A4
+  relabelling.  It independently reproduced the normal transcript and LF
+  hashes; the author normal and optimized replays both match stored output.
 depends_on: []
 related:
   - THM-3072-a4-flag-three-c2-tomography-and-edge-cycle-cospan
@@ -30,8 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3076 -- finite affine-plane line-quotient tomography and the p=2 three-view law
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING IMMUTABLE INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. The affine-plane projector algebra
 
