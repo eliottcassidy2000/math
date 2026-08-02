@@ -25,7 +25,7 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-`<=6`. THM-2928 removes aligned `k>=4`; THM-2995/3114 give projected `k=2,3 <= 1579/225`; THM-2941's exact finite head and phase-free comb tail close `m=1`, leaving `561` reflected bodies at `D>=6,2<=m<D/2`.
+`<=6`. THM-2928 removes aligned `k>=4`; THM-2995/3114 give projected `k=2,3 <= 1579/225`; THM-2941's physical-extreme comb closes `m=1` and `D>=22m`, leaving `561` reflected bodies at `m>=2,2m<D<22m` inside the `D>=6` stage.
 This is not a physical-survivor classification; arbitrary `k<=1`, the rung, and LRC remain open. Septimal floor/exception plus located phase cut the raw five-drift ledger
 `951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,

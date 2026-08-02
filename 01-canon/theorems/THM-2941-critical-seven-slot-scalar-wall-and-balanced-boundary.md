@@ -40,10 +40,12 @@ status: >
   These finite-exact gain facts survive the retraction, and the corrected
   cap-3 theorem subsumes both cones.  The dependent gain relation (3/2)2=3
   accompanies its coupled-debt repair.  The remaining proved
-  reflected certificate-failure locus is confined to those 561 bodies in
-  D>=6,2<=m<D/2.  The complete m=1 branch is now closed: on the residual
-  bodies the physical global-min/global-max pair has an exact finite head
-  through D=44 and a phase-free periodic-comb tail from D=45 onward;
+  reflected certificate-failure locus is confined, inside the inherited
+  D>=6 stage, to those 561 bodies with m>=2 and 2m<D<22m.  The complete m=1
+  branch is closed by its exact finite head and phase-free periodic-comb
+  tail.  For m>=2, the physical global-min/global-max pair has exactly m
+  full low teeth; its exact m=2 base, positive ray increment, and positive
+  Q-increment close the opposite cone D>=22m;
   the finite censuses, full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is internal
   exact computation and proof audit; there is no Lean or external peer-review
@@ -285,6 +287,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_reflected_extreme_pair_d6_m1_distinct_debt_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_extreme_pair_m1_complete_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_extreme_pair_m1_complete_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_extreme_pair_q23m_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_extreme_pair_q23m_cone_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -1356,8 +1360,123 @@ digests.  The tail-row digest is
 Fresh ordinary and optimized replays are byte-identical, and all
 truth-bearing gates remain active under optimization.
 
+The physical extreme pair also closes a uniform cone for every `m>=2`.
+Write the global maximum level as `Q=m+D`, and let `a,b` be the body labels
+in the physical minimum/maximum slots.  Here `Q` is the physical maximum
+level, not the reduced primitive-channel coordinate used earlier.  On a
+body-safe integer cell `j`, put
+`r=(aj mod L)`.  As in `(25i13e)`,
+
+```text
+L/14 <= r <= 13L/14-a.                                    (25i13l)
+```
+
+For `z=mL-a`, the reflected low channel consists of exactly the `m` full,
+pairwise-disjoint teeth
+
+```text
+[(r+kL-L/14)/z, (r+kL+L/14)/z],    k=0,...,m-1.           (25i13m)
+```
+
+Indeed `(25i13l)` puts the first left endpoint at or to the right of zero
+and the last right endpoint at or to the left of one.  The `k=-1` tooth has
+right endpoint strictly below zero, while the `k=m` tooth has left endpoint
+strictly above one.  Thus every retained tooth has length
+`ell=L/[7(mL-a)]`.
+
+The high channel is a periodic comb of period `h=L/(QL-b)` and duty `1/7`.
+Applying the two-endpoint-period argument `(25i13g)` separately to the `m`
+low teeth and summing gives
+
+```text
+overlap >= mL/[49(mL-a)] - 2mL/[7(QL-b)]                 (25i13n)
+```
+
+whenever `ell>2h`.  Six distinct levels force the worst compatible interior
+debt to use `m+1,m+2,m+3,m+4`, assigned in decreasing-label order by the
+same exact rearrangement gap used above.  If these decreasing labels are
+`e_1,...,e_4`, subtracting the full singleton debt from `(25i13n)` gives
+
+```text
+M(m,Q) = mL/[49(mL-a)] - a/[7(mL-a)]
+         - sum_(s=1)^4 e_s/[7((m+s)L-e_s)]
+         - (2mL+b)/[7(QL-b)].                             (25i13o)
+```
+
+An exact census at the single base `(m,Q)=(2,46)` checks all `561*30`
+physical orientations.  Every invoice is positive; the weakest is
+
+```text
+2031150202/35071508756991                                 (25i13p)
+```
+
+on `H=(1,2,3,4,6,12)`, orientation `(5,0)`, first safe cell `12`, with
+levels `(46,6,5,4,3,2)`.  The directly computed overlap-minus-debt there is
+the larger value `4122243623942/315643578812919`.  The weakest direct actual
+margin over the whole base is positive as well,
+`5826258981442/569255309820855`, on `H`, orientation `(5,2)`.
+
+This one finite base propagates in both parameters by exact identities.  On
+the ray `Q=23m`, the increment from `m` to `m+1` is
+
+```text
+ 6aL/[49(mL-a)((m+1)L-a)]
+ + sum_(s=1)^4 e_s L
+     / [7((m+s)L-e_s)((m+s+1)L-e_s)]
+ + 25bL/[7(23mL-b)(23(m+1)L-b)] > 0.                     (25i13q)
+```
+
+For fixed `m`, increasing `Q` by one gives
+
+```text
+M(m,Q+1)-M(m,Q)
+  = (2mL+b)L/[7(QL-b)((Q+1)L-b)] > 0.                    (25i13r)
+```
+
+Finally the endpoint-period domain is automatic throughout this cone:
+
+```text
+ell-2h = L((Q-14m)L+14a-b)
+           / [7(mL-a)(QL-b)] > 0             for Q>=23m. (25i13s)
+```
+
+At the boundary this numerator contains `9mL+14a-b>0`; increasing `Q`
+decreases `h`.  Hence `(25i13m)--(25i13s)`, the exact base `(25i13p)`, and
+induction along `(25i13q)` prove the whole ray `Q=23m` for `m>=2`, after
+which `(25i13r)` proves every larger `Q`.  Equivalently,
+
+```text
+PROVED: within the reflected sufficient family, m>=2 and D>=22m is closed.
+                                                               (25i13t)
+```
+
+At `(m,Q)=(2,45)` the same coarse invoice is negative on `H,(5,0)`, with
+value `-7500666974/34308985983447`.  Thus `Q=46` is sharp for this invoice at
+the base, not for the underlying physical pair.
+
+The exact verifier is
+`04-computation/lrc14_j7_reflected_extreme_pair_q23m_cone_closure_thm2941.py`.
+Its LF source/output/semantic hashes are, respectively,
+`135e94154c400cb612c3f93d03557b121ddafe51f5f6cf064c057848acb72a1d`,
+`e97426ea5016b23beeee3e00ee24439bee37caddbc0528fc3ec53a112fc93131`,
+and `88644e8527610dcfd9c1108889a533ceee5883aeb56a84ed0da5edb6891c7e5e`.
+Its body-bound full-tooth, base, and monotonicity digests are
+`2019f1a46362859bb1bcb5b67cf003ebf01644380255af578fac2d547447d610`,
+`2a5586443d08ef5248ec6300291b32a61b55b0746959f0ea604e37dfa065b730`,
+and `48a1b0aa0e626ebce69b2bb9f7fe9fbb4350a60782cf01f94ee983d2e3f2efd7`.
+Fresh ordinary and optimized replays are byte-identical; all truth-bearing
+gates remain active under optimization.  The finite monotonicity rows are
+hostile controls for the displayed rational identities, not the source of
+their all-`m` quantifier.
+
 Consequently the current **proved** reflected obligation is confined to the
-`561` bodies in the wedge `D>=6,2<=m<D/2`.  This is a
+`561` bodies which, inside the inherited `D>=6` stage, satisfy
+
+```text
+m>=2,                    2m<D<22m.                        (25i13u)
+```
+
+This is a
 sufficient-certificate residual, not a physical-survivor census.  More
 globally, the correction floor `c>=-12/49` makes phase zero imply `PQ<=12`,
 so the zero-gain atlas is exactly
@@ -2761,7 +2880,7 @@ assertions.
 
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,
-close the residual `561`-body reflected wedge `D>=6,2<=m<D/2`, finish the remaining
+close the residual `561`-body reflected wedge `D>=6,m>=2,2m<D<22m`, finish the remaining
 `k=2,3` finite decision trees, classify the zero/one-aligned multi-drift
 address hypergraph, close the six-body/seven-tail rung, or prove LRC(14).
 The independent THM-2928 divisor-status route closes `k=4`; THM-2980/2995

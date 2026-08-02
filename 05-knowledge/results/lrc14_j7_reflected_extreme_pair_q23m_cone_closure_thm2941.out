@@ -1,0 +1,31 @@
+LRC14 reflected physical-extreme Q>=23m cone closure
+universe=residual_bodies:561;physical_orientations:30;same_level_exceptions_disjoint:((1, 2, 7, 9, 11, 13), (2, 4, 7, 9, 11, 13))
+parameters=physical_levels:q_min=m,q_max=Q=m+D;Q_here_is_not_the_reduced_primitive_channel_coordinate
+full_tooth_lemma=safe residue L/14<=r<=13L/14-a gives exactly k=0..m-1 full teeth of length L/[7(mL-a)];k=-1 left and k=m right
+full_tooth_controls=levels:(1, 2, 3, 5, 11, 23);rows:20196;body_bound_digest:2019f1a46362859bb1bcb5b67cf003ebf01644380255af578fac2d547447d610
+interval_comb_lemma=each low tooth loses at most two partial Q-period cells;sum gives mL/[49(mL-a)]-2mL/[7(QL-b)]
+domain=ell-2h=L((Q-14m)L+14a-b)/[7(mL-a)(QL-b)]>0 at Q>=23m and persists as Q increases
+debt=interior levels m+1..m+4 with decreasing-label assignment;strict level decrease plus exact rearrangement gap
+base=m:2;Q:46;rows:16830;weakest_invoice:2031150202/35071508756991@body=(1, 2, 3, 4, 6, 12),pair=(5, 0),cell=12;actual_margin:4122243623942/315643578812919;overlap:168/7727;lower:12764/1460403;debt:2740461337954/315643578812919;levels:(46, 6, 5, 4, 3, 2)
+base_weakest_actual=5826258981442/569255309820855@body=(1, 2, 3, 4, 6, 12),pair=(5, 2),cell=12;invoice:12559236514/37950353988057
+base_body_bound_digest=2a5586443d08ef5248ec6300291b32a61b55b0746959f0ea604e37dfa065b730
+hostile=m:2;Q:45;invoice:-7500666974/34308985983447@body=(1, 2, 3, 4, 6, 12),pair=(5, 0);Q46_is_sharp_for_this_invoice_at_m2
+ray_m_increment=6aL/[49(mL-a)((m+1)L-a)]+sum_r e_rL/[7((m+r)L-e_r)((m+r+1)L-e_r)]+25bL/[7(23mL-b)(23(m+1)L-b)]>0
+Q_increment=(2mL+b)L/[7(QL-b)((Q+1)L-b)]>0
+monotonicity_controls=(2, 3, 4, 5, 11);body_bound_digest:48a1b0aa0e626ebce69b2bb9f7fe9fbb4350a60782cf01f94ee983d2e3f2efd7
+m2_ray_increment_min=443340051875192059805424929595772972478/11832208512683634317092010426877107440959609@body=(1, 3, 4, 5, 10, 14),pair=(0, 5)
+m3_ray_increment_min=3499863550383248918935953916527018635704706/152840758201779229586932138641208402071880963515@body=(1, 3, 4, 5, 10, 14),pair=(0, 5)
+m4_ray_increment_min=405178997422017064194110889288527810320595554/25989981534886009284816846368703753169170088813415@body=(1, 3, 4, 5, 10, 14),pair=(0, 5)
+m5_ray_increment_min=181006166916029837403305591236178611352490278/15951425030999706983530997968524347650427876141985@body=(1, 3, 4, 5, 10, 14),pair=(0, 5)
+m11_ray_increment_min=61408123528576256604772099334662206378341001602/18770990601123197345108626066415391479028965984335995@body=(1, 3, 4, 5, 10, 14),pair=(0, 5)
+analytic_quantifier=the displayed rational identities and positive factors prove every integer m>=2 and Q>=23m;finite controls are hostile replays,not extrapolation
+conclusion=within reflected THM-2941 sufficient family,Q>=23m is closed for every m>=2;equivalently D>=22m
+corollary=inside the inherited D>=6 stage,certificate failure is confined to 561 bodies with m>=2 and 2m<D<22m
+scope=not a physical-survivor census and not LRC14
+normal_vs_python_O=BYTE_IDENTICAL
+m1_source_sha256=691cdad79c7d719cb7c1268c867b919919c46b45ee632d423ac8f8b7f957bcfd
+m1_output_sha256=af1e7868e9e22dc56165ff1f14141c12ff6b7fee43934bdf5a6cdab7de76706d
+m1_semantic_sha256=1b19c0356bb6ac3b88ba93c9a775ff2d8db02d4353789d14d93b0441ef5ad2cc
+source_sha256=135e94154c400cb612c3f93d03557b121ddafe51f5f6cf064c057848acb72a1d
+semantic_sha256=88644e8527610dcfd9c1108889a533ceee5883aeb56a84ed0da5edb6891c7e5e
+all_exact_controls=PASS
