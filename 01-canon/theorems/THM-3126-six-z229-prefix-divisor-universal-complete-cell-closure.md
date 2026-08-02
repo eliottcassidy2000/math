@@ -7,9 +7,11 @@ status: >
   prefixes cannot be extended by any fourth tail: every nonaligned
   denominator projection exceeds the sharp translated danger-band capacity,
   while an aligned extension lies in THM-2928's closed four-aligned branch.
-  This statement is independent of candidate THM-3113's screen exhaustion.
-  It does not promote THM-3113, close z1=228, lower the proved k=3 cap 229,
-  classify physical covers outside these prefixes, or prove LRC(14).
+  This statement is independent of THM-3113's screen exhaustion.
+  By itself it does not prove screen exhaustion or close z1=228.  Subsequent
+  audited THM-3113/3114 do so and lower the projected cap to 225; this theorem
+  is now an independent reconstruction of their six z1=229 terminals.  It
+  does not classify physical covers outside these prefixes or prove LRC(14).
 audit: >
   An independent implementation reconstructed every carrier from intersections
   of closed safe tooth intervals, with a second exact-Fraction replay on the
