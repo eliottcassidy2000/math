@@ -2,8 +2,8 @@
 id: THM-3104
 title: "Multiplicatively infinitely divisible Stieltjes width-three common nullity"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT + CERTIFIED-ARB; INDEPENDENT AUDIT
-  REQUESTED.  There is a unique parameter pair in an explicit positive
+  PROVED + VERIFIED-EXACT + CERTIFIED-ARB + INDEPENDENTLY HOSTILE-AUDITED.
+  There is a unique parameter pair in an explicit positive
   rational box for which the full-support Stieltjes moment law
   exp(a n^(3/2)+b n^2) has a three-slot quadratic/cubic common null line.
   The law is multiplicatively infinitely divisible, every generalized
@@ -12,6 +12,14 @@ status: >
   do not prove width-three detection.  This is not a product-Gamma,
   factorial, or Gaussian counterexample.
 source: low-child-flag-extension-2026-08-02
+audit: >
+  An independent hostile audit rederived the Levy--Khintchine moment law,
+  multiplicative infinite divisibility, full-support generalized-Hankel
+  strictness, alternating curvature identity, exact width-three numerator
+  typing, all four Arb/Taylor face signs, Poincare--Miranda existence,
+  Jacobian uniqueness, Gram positivity, and the non-product-Gamma scope.
+  Fresh normal and optimized executions byte-match the stored transcript;
+  both LF hashes and the documentation checker pass.
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
 related:
@@ -26,8 +34,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3104 -- a strict Stieltjes width-three nullity hostile
 
-**PROVED CANDIDATE + VERIFIED-EXACT + CERTIFIED-ARB; INDEPENDENT AUDIT
-REQUESTED.**
+**PROVED + VERIFIED-EXACT + CERTIFIED-ARB + INDEPENDENTLY
+HOSTILE-AUDITED.**
 
 Strict Stieltjes positivity is not the missing width-three mechanism.  The
 failure persists inside a two-parameter multiplicative convolution semigroup,
@@ -313,4 +321,4 @@ Both modes must byte-match the stored transcript after LF normalization.  The
 script independently derives `(19)--(22)`, verifies the Levy normalization,
 and certifies every face, derivative, Jacobian, and Gram bound quoted above.
 
-**QED, pending independent audit and status promotion.**
+**QED.**
