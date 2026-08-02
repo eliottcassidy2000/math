@@ -37,10 +37,13 @@ At g=6, P>=13 reduces monotonically to P=13,R=40 and is positive on all
 561*30 body/orientation rows using the Fourier floor.  The complete remaining
 bank P=2..12 contains 135 primitive channels and 2,272,050 analytic rows.
 Exactly 150 analytic invoices are nonpositive.  An independent integer
-two-pointer full-tooth engine searches every body-safe cell on those rows;
-all 150 have a positive located physical margin and agree cellwise with the
-promoted Fraction interval engine.  Every loss and debt term decreases with
-g, so all g>=6 follow.
+two-pointer full-tooth engine first finds each row's first scale at which the
+analytic invoice is positive, then searches every body-safe cell at every
+preceding integer scale starting with six.  Every finite bridge row has a
+positive located physical margin and agrees cellwise with the promoted
+Fraction interval engine.  Analytic monotonicity applies only from that first
+positive scale onward, so all g>=6 follow without assuming monotonicity of a
+selected-cell exact overlap.
 
 This closes only a sufficient-certificate branch.  It reduces the current
 THM-2941 reflected residual from gcd(m,Q)<=47 to gcd(m,Q)<=5; it is not a
@@ -144,10 +147,14 @@ EXPECTED_DIRECT_WEAKEST = (
     (3, 5),
     2,
     7,
+    6,
     152,
     F(6084, 295261),
     F(841300116478834, 662437112164402113),
     (16, 15, 14, 12, 13, 42),
+)
+EXPECTED_TRANSITION_HISTOGRAM = (
+    (7, 96), (8, 26), (9, 12), (10, 9), (11, 5), (12, 1), (13, 1),
 )
 EXPECTED_FAILURE_BODY_HISTOGRAM = (
     ((1, 2, 3, 4, 6, 12), 136),
@@ -166,13 +173,13 @@ EXPECTED_FAILURE_DIGEST = (
     "8290d39d340c24bba6f6f883933ce7a90caf73f3c65bf972731182170140f1cb"
 )
 EXPECTED_DIRECT_DIGEST = (
-    "90aadbacf98fb857657319f6721c273084d088ae3a4fa417d4e228ba9f884a8a"
+    "9d58bb2b2e96a2ba37405a0635c73f929cb2cb448895e2426ca9453e3adad72a"
 )
 EXPECTED_BOUNDARY_AUDIT_DIGEST = (
     "d2848403cd1414fb2e75a88bb284dbd0f2a7fe0ee58fc82d106fad1e262f286b"
 )
 EXPECTED_SEMANTIC = (
-    "fb4759685fbd559d5526777b230ef94388eb0b72b337debad6e86915b47aeda5"
+    "d2502cd98963a421b0413e162df8901429fc1b95a780a64eea8a93b9a9bd7aea"
 )
 
 
@@ -485,56 +492,91 @@ def main() -> None:
     for row in failures:
         failure_digest.update(f"{row}\n".encode())
 
-    # Located repair: independent integer engine and promoted engine on every cell.
+    # Located repair at every integer scale before the analytic invoice turns
+    # positive.  No monotonicity of the selected-cell exact margin is assumed.
     direct_digest = hashlib.sha256()
     direct_rows = []
+    transition_rows = []
     engine_comparisons = 0
     for analytic_row in failures:
-        _, body, pair, p, r, floor, loss, debt, levels, minimizers = analytic_row
+        _, body, pair, p, r, floor, _, _, _, minimizers = analytic_row
         ruler, safe_ranges = T.R.safe_cell_ranges(body)
-        best = None
-        for left, right in safe_ranges:
-            for cell in range(left, right):
-                independent = full_tooth_overlap(
-                    ruler,
-                    body[pair[0]],
-                    BASE_SCALE * p,
-                    body[pair[1]],
-                    BASE_SCALE * r,
-                    cell,
-                )
-                imported = B.intersection_mass(
-                    T.R.reflected_level_arcs(
-                        ruler, body[pair[0]], BASE_SCALE * p, cell
-                    ),
-                    T.R.reflected_level_arcs(
-                        ruler, body[pair[1]], BASE_SCALE * r, cell
-                    ),
-                )
+        scale = BASE_SCALE
+        previous_analytic = analytic_row[0]
+        while True:
+            debt, levels, _ = selected_debt(body, pair, scale * p, scale * r)
+            loss = perturbation_loss(body, pair, scale, p, r)
+            analytic_margin = floor - loss - debt
+            if scale > BASE_SCALE:
                 require(
-                    independent == imported,
-                    ("engine disagreement", body, pair, p, r, cell, independent, imported),
+                    analytic_margin > previous_analytic,
+                    ("analytic scale monotonicity failure", body, pair, p, r,
+                     scale, previous_analytic, analytic_margin),
                 )
-                candidate = (
-                    independent - debt,
-                    body,
-                    pair,
-                    p,
-                    r,
-                    cell,
-                    independent,
-                    debt,
-                    levels,
+            if analytic_margin > 0:
+                transition_rows.append(
+                    (scale, analytic_margin, body, pair, p, r, floor, loss, debt, levels)
                 )
-                if best is None or candidate > best:
-                    best = candidate
-                engine_comparisons += 1
-        require(best is not None and best[0] > 0, ("located failure", analytic_row, best))
-        direct_rows.append(best)
-        direct_digest.update(f"{best}|analytic={analytic_row}\n".encode())
+                break
+
+            best = None
+            for left, right in safe_ranges:
+                for cell in range(left, right):
+                    independent = full_tooth_overlap(
+                        ruler,
+                        body[pair[0]],
+                        scale * p,
+                        body[pair[1]],
+                        scale * r,
+                        cell,
+                    )
+                    imported = B.intersection_mass(
+                        T.R.reflected_level_arcs(
+                            ruler, body[pair[0]], scale * p, cell
+                        ),
+                        T.R.reflected_level_arcs(
+                            ruler, body[pair[1]], scale * r, cell
+                        ),
+                    )
+                    require(
+                        independent == imported,
+                        ("engine disagreement", body, pair, p, r, scale, cell,
+                         independent, imported),
+                    )
+                    candidate = (
+                        independent - debt,
+                        body,
+                        pair,
+                        p,
+                        r,
+                        scale,
+                        cell,
+                        independent,
+                        debt,
+                        levels,
+                    )
+                    if best is None or candidate > best:
+                        best = candidate
+                    engine_comparisons += 1
+            require(
+                best is not None and best[0] > 0,
+                ("located bridge failure", analytic_row, scale, best),
+            )
+            direct_rows.append(best)
+            direct_digest.update(f"{best}|base_analytic={analytic_row}\n".encode())
+            previous_analytic = analytic_margin
+            scale += 1
+            require(scale <= 100, ("analytic transition did not arrive", analytic_row))
 
     direct_weakest = min(direct_rows)
-    require(direct_weakest == EXPECTED_DIRECT_WEAKEST, direct_weakest)
+    if EXPECTED_DIRECT_WEAKEST is not None:
+        require(direct_weakest == EXPECTED_DIRECT_WEAKEST, direct_weakest)
+    transition_histogram = tuple(sorted(Counter(row[0] for row in transition_rows).items()))
+    if EXPECTED_TRANSITION_HISTOGRAM is not None:
+        require(
+            transition_histogram == EXPECTED_TRANSITION_HISTOGRAM,
+            transition_histogram,
+        )
 
     digests = {
         "channel_minima": channel_minima_digest.hexdigest(),
@@ -565,6 +607,7 @@ def main() -> None:
         finite_weakest,
         failure_body_histogram,
         tuple(failures),
+        tuple(transition_rows),
         tuple(direct_rows),
         engine_comparisons,
         digests,
@@ -584,9 +627,10 @@ def main() -> None:
         f"large_P_monotone_base=g:{BASE_SCALE};P:{LARGE_P_START};R:{LARGE_R_BASE};rows:{len(large_rows)};weakest_margin:{qtext(large_weakest[0])};body:{large_weakest[1]};pair:{large_weakest[2]};Fourier_floor:{qtext(large_weakest[3])};loss:{qtext(large_weakest[4])};debt:{qtext(large_weakest[5])}",
         f"finite_bank=P2..12;channels:{len(finite_channels)};per_P:{channel_histogram};rows:{finite_count};formula:{FINITE_CHANNEL_COUNT}*{BODY_COUNT}*{ORIENTATION_COUNT};analytic_failures:{len(failures)};failure_body_histogram:{failure_body_histogram}",
         f"finite_weakest_analytic={qtext(finite_weakest[0])}@body={finite_weakest[1]},pair={finite_weakest[2]},P={finite_weakest[3]},R={finite_weakest[4]},floor={qtext(finite_weakest[5])},loss={qtext(finite_weakest[6])},debt={qtext(finite_weakest[7])}",
-        f"located_repairs={len(direct_rows)};all_positive;weakest_margin:{qtext(direct_weakest[0])};body:{direct_weakest[1]};pair:{direct_weakest[2]};P:{direct_weakest[3]};R:{direct_weakest[4]};cell:{direct_weakest[5]};overlap:{qtext(direct_weakest[6])};debt:{qtext(direct_weakest[7])}",
-        f"independent_engine=integer full-tooth two-pointer equals promoted Fraction interval engine on every repair cell;comparisons:{engine_comparisons}",
-        "monotonicity=Fourier floor increases with PR;each perturbation loss decreases in its primitive coordinate and in g;every exact debt denominator increases with P,R,g",
+        f"analytic_transition_scales={transition_histogram};each of the {len(failures)} base failures is exact-scanned at every integer scale 6<=g<g0 and analytic from g0 onward",
+        f"located_bridge_rows={len(direct_rows)};all_positive;weakest_margin:{qtext(direct_weakest[0])};body:{direct_weakest[1]};pair:{direct_weakest[2]};P:{direct_weakest[3]};R:{direct_weakest[4]};g:{direct_weakest[5]};cell:{direct_weakest[6]};overlap:{qtext(direct_weakest[7])};debt:{qtext(direct_weakest[8])}",
+        f"independent_engine=integer full-tooth two-pointer equals promoted Fraction interval engine on every finite-bridge cell;comparisons:{engine_comparisons}",
+        "monotonicity=Fourier floor increases with PR;each analytic perturbation loss decreases in its primitive coordinate and in g;every exact debt denominator increases with P,R,g;no monotonicity of a located exact overlap is assumed",
         "assembly=inside THM-2941 reflected sufficient family every live midratio primitive channel closes for gcd scale g>=6",
         "residual=561 bodies;m>=2;3<Q/m<6;Q/m not in {4,5};gcd(m,Q)<=5",
         "scope=sufficient-certificate residual only;not a physical-survivor census and not LRC14",

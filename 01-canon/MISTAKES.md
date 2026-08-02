@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-353 (2026-08-02, THM-3210 located-scale quantifier bridge) -- analytic monotonicity was transferred to a selected-cell exact overlap
+
+- **What was claimed:** the first pre-routing version of
+  `THM-3210-reflected-midratio-primitive-floor-and-g6-closure` checked the
+  `150` nonpositive analytic invoices by an exact body-safe-cell scan only at
+  gcd scale `g=6`, then invoked monotonicity in `g` to claim all larger
+  scales.
+- **First failed implication:** the proved monotonicity belongs to the
+  *analytic lower invoice*: its one-sided perturbation loss and singleton
+  debt decrease with `g`.  A maximizing physical cell can change with `g`,
+  and no monotonicity theorem was proved for that cell's exact full-tooth
+  overlap.  Thus the scale-six checks alone established only the base slices
+  of those `150` rows.
+- **Repair / strongest survivor:** for each exceptional row, compute its first
+  scale `g_0` at which the analytic invoice is positive; exact-scan every
+  integer `6<=g<g_0`, and use analytic monotonicity only for `g>=g_0`.  The
+  transition histogram is `7:96, 8:26, 9:12, 10:9, 11:5, 12:1, 13:1`, giving
+  `258` finite bridge rows.  Every bridge row is positive, and the independent
+  integer/promoted interval engines agree on all `23,808` tested cells.
+  Normal and optimized replays byte-match.  The repaired theorem therefore
+  retains the uniform `g>=6` conclusion and the residual `gcd(m,Q)<=5`, but
+  explicitly assumes no selected-cell overlap monotonicity.
+
 ## MISTAKE-352 (2026-08-02, modular free-factor synthesis) -- an invariant cyclic substitution was called a `C3` action, and the four-point torsor was mistaken for a faithful modular carrier
 
 - **What was claimed:** the first version of the modular free-factor reflection

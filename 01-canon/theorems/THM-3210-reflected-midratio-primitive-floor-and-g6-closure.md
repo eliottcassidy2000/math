@@ -10,8 +10,10 @@ status: >
   lemma replaces the inherited transport loss 4(a+b)/(gL) by
   a(P+1)/(gLP-a)+b(R+1)/(gLR-b).  Fourier monotonicity closes P>=13 from
   one 16,830-row base.  The remaining 135 primitive channels give 2,272,050
-  exact analytic invoices; independent full-tooth calculations close all
-  150 nonpositive analytic rows on located body-safe cells.  Thus the
+  exact analytic invoices.  For each of the 150 nonpositive scale-six
+  invoices, the verifier finds its first positive analytic scale and checks
+  every preceding integer scale directly, producing 258 positive located
+  bridge rows.  Thus the
   reflected certificate-failure residual has gcd(m,Q)<=5.  This is not a
   physical-survivor census, a proof of LRC(14), or an independent theorem
   about arbitrary reflected packets outside the inherited sufficient family.
@@ -20,8 +22,10 @@ audit: >
   complete fourteen-grid primitive breakpoints, the Fourier handoff, all
   7,644 hostile boundary-displacement rows, the complete finite channel/body/
   orientation universe, and an integer two-pointer engine against the
-  promoted Fraction interval engine on all 14,304 cells used by the 150
-  located repairs.
+  promoted Fraction interval engine on all 23,808 cells used by the 258
+  located bridge rows.  An initial pre-routing draft checked only scale six;
+  this version repairs that quantifier gap and assumes no monotonicity of a
+  selected-cell exact overlap.
 source: root/lrc-midratio-2026-08-02
 depends_on:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
@@ -29,8 +33,8 @@ related:
   - THM-3135-directed-cycle-weak-order-lane-cover-and-reflected-h-boundary
 script: 04-computation/lrc14_reflected_midratio_primitive_floor_g6_closure_thm3210.py
 output: 05-knowledge/results/lrc14_reflected_midratio_primitive_floor_g6_closure_thm3210.out
-script_sha256: 207cdd0194967c2941b2d1eb35de123c05b9619edf0e25213f369bb41b9dcd08
-output_sha256: a462be53c8c7278b3d2687fe348a70a7aa6b7a33ebf35575669dae126e8c4779
+script_sha256: 3df84ebb893f433c4b25a10abbec80cef77b1e61e296e96ac9eb727f866fa85e
+output_sha256: a446655daed77571e0389b9b4e44f4b7ada9f89ace6ee80299afe269c5e9a415
 hash_basis: LF-normalized bytes
 ---
 
@@ -278,27 +282,44 @@ loss `(15)`, and the debt `(5)` at `g=6`.  Exactly `150` invoices are
 nonpositive.  This is failure of the uniform analytic lower bound, not of the
 physical pair.
 
-For each of those `150`, the verifier enumerates every body-safe cell and
-computes the exact physical overlap by an independent integer two-pointer
-intersection of the `gP` and `gR` full teeth.  It compares that result with
-the promoted rational interval engine on all `14,304` tested cells.  Every
-comparison agrees and every row has a positive located cell.  The weakest
-located margin is
+For each of those `150`, let `g_0` be the first scale at which its analytic
+invoice `(9),(15),(5)` is positive.  Strict decrease of every loss and debt
+term proves that the analytic invoice stays positive for all `g>=g_0`.  The
+exact transition histogram is
 
 ```text
-12808546596795938/662437112164402113 > 0                 (19)
+g_0:       7   8   9  10  11  12  13
+rows:     96  26  12   9   5   1   1.                    (19)
+```
+
+For every individual integer scale `6<=g<g_0`, the verifier enumerates every
+body-safe cell and computes the exact physical overlap by an independent
+integer two-pointer intersection of the `gP` and `gR` full teeth.  This gives
+
+```text
+96+2*26+3*12+4*9+5*5+6+7 = 258
+```
+
+finite bridge rows.  It compares the direct result with the promoted rational
+interval engine on all `23,808` tested cells.  Every comparison agrees and
+every bridge row has a positive located cell.  The weakest located margin is
+
+```text
+12808546596795938/662437112164402113 > 0                 (20)
 ```
 
 on `E=(1,2,3,4,6,12)`, orientation `(3,5)`, channel
-`(P,R)=(2,7)`, cell `152`.  There
+`(P,R)=(2,7)`, scale `g=6`, cell `152`.  There
 
 ```text
 overlap = 6084/295261,
 debt    = 841300116478834/662437112164402113.
 ```
 
-This completes every finite channel at `g=6`; the same monotonicity in `g`
-closes all larger scales.
+This completes every finite channel at every `g>=6`: positive analytic rows
+use analytic monotonicity immediately; the other rows use exact located cells
+through `g_0-1` and analytic monotonicity only from `g_0` onward.  No
+monotonicity of a selected-cell exact overlap is asserted or needed.
 
 ## 6. Assembly and the directed-cycle boundary
 
@@ -307,18 +328,18 @@ Combining Sections 4 and 5 proves
 ```text
 PROVED: inside THM-2941's reflected sufficient family, if
         3<Q/m<6, Q/m not in {4,5}, and gcd(m,Q)>=6,
-        then the physical extreme pair closes the packet.                 (20)
+        then the physical extreme pair closes the packet.                 (21)
 ```
 
 Thus the current reflected sufficient-certificate obligation contracts to
 
 ```text
 561 bodies;  m>=2;  3<Q/m<6;  Q/m not in {4,5};
-gcd(m,Q)<=5.                                               (21)
+gcd(m,Q)<=5.                                               (22)
 ```
 
 THM-3135 proves that the older standard uniform single-pair comparison lanes
-on the hostile body `H` form a DAG.  There is no conflict: `(20)` selects the
+on the hostile body `H` form a DAG.  There is no conflict: `(21)` selects the
 intrinsic physical minimum/maximum slots, retains their actual primitive
 ratio, and, only where a uniform invoice fails, retains the body-safe cell.
 It is a located overlap certificate, not a union of weak-order lanes which
@@ -339,7 +360,7 @@ Both outputs byte-match the stored transcript.  All truth-bearing gates use
 explicit exceptions rather than `assert`, so optimized mode checks the same
 universe.
 
-Statement `(20)` is a theorem only inside the reflected sufficient family
-and inherited `561` bodies of THM-2941.  Statement `(21)` is a residual of
+Statement `(21)` is a theorem only inside the reflected sufficient family
+and inherited `561` bodies of THM-2941.  Statement `(22)` is a residual of
 that proof mechanism.  Neither statement enumerates physical LRC survivors,
 closes other six-drift sectors, or proves LRC(14).
