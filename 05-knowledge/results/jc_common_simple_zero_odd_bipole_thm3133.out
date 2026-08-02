@@ -1,0 +1,16 @@
+COMMON-SIMPLE-ZERO REALIZATION PROBE -- exact
+R=7..30 polar, pure-q, and regular-H lanes checked
+all retained lower rows included; no simple-zero resonance
+pure-H coefficients c_0..c_9 = (-1/4, 9/512, -195/131072, 2261/16777216, -108675/8589934592, 1335015/1099511627776, -33296263/281474976710656, 419761485/36028797018963968, -42685927011/36893488147419103232, 546121521715/4722366482869645213696)
+c_0=-1/4 and the rational first-order recurrence is nonvanishing
+ALL EXACT HOSTILE CONTROLS PASS
+ODD BIPOLE BALANCED-RESPONSE PROBE -- exact
+odd d=1..21: factor ODE, square-potential ODE, squarefreeness, and passport pass
+C_1=-2; C_(m+1)=-(2m+3)/(2m+2) C_m (d=2m+1)
+d=11 E = x**11 - 11*x**9/2 + 99*x**7/8 - 231*x**5/16 + 1155*x**3/128 - 693*x/256
+d=11 C = 693/128
+d=11 degree(E^2-(x^2-1)^11) = 10
+d=11 marked clean matchings = 121
+d=11 unmarked orbit count under independent pole rotations = 1
+d=11 representative monodromy order = 40874803200 =2^10*11!
+ALL EXACT HOSTILE CONTROLS PASS
