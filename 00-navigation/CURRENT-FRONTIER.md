@@ -374,7 +374,10 @@ Classify profiles under support operations; study analytic continuation and auto
   cells; THM-3151 excludes every `(D,D)` cell and proves the balanced chart
   floor `N>=4D`.
   General chart entry and `JC(2)`/`DC(2)` remain open.
-- **Factorial:** THM-3124/3131/3142/3143 close `r<=998` and every prime `d=r+2`, prime-power `d-1`, or prime `d-2`. Residual: `r>=999`; `d,d-2` composite; `d-1` not a prime power. `FC(3)`/`SFC(3)` remain OPEN.
+- **Factorial:** THM-3124/3131/3142/3143/3146/3152 close `r<=1098` plus
+  prime `d,d-2,d-3` and prime-power `d-1` exits. THM-3152's exact
+  degree barcode closes all 56 three-exit residuals through `d=1100`.
+  Residual: `r>=1099`; `d,d-2,d-3` composite; `d-1` not a prime power. `FC(3)`/`SFC(3)` remain OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
