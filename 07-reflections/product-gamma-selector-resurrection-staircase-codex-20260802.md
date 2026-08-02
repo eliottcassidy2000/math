@@ -1,8 +1,8 @@
 # Product-Gamma selector resurrection staircase
 
-**Status:** research reflection.  The depth-four/degree-12 cell is a proved
-candidate in THM-3155.  The depth-five figures are finite-exact incoming work
-and are not dependencies until separately scripted and audited.
+**Status:** research reflection.  The depth-four/degree-12 cell is proved in
+THM-3155.  The depth-five/degree-13 cell is an exact proved candidate in
+THM-3158 and is not a proved dependency until independent promotion.
 
 ## The first closed two-axis cell
 
@@ -13,7 +13,7 @@ C_D^(<=d)={laws on physical prefixes of depth <=d
            that are Hasse-positive in every degree 5,...,D}.
 ```
 
-The exact proved-candidate pattern is
+The exact proved pattern is
 
 ```text
 C_11^(<=3)=empty,
@@ -48,38 +48,46 @@ not evidence that the obstruction intrinsically has huge dimension.  The
 correct next algebraic object is the cone-valued pole-subtraction recurrence
 on the endpoint jet.
 
-## The next staircase step
+## The second staircase cell
 
-A fresh exact depth-five law on seven states has denominator `10^9` and
-numerators
-
-```text
-(1)             97185024
-(1,1,1)         53307063
-(1,1,1,1)      143473173
-(1,1,2,2,2)    193810773
-(1,2,2,3,3)     10572006
-(2,2,2,3,3)    118925070
-(5,5,6,7,8)    382726891.
-```
-
-They sum to `10^9` and have gcd one.  Exact enumeration reports strict
-positivity on all `403,539` nontrivial upsets through degree 12.  Thus the next
-positive corner is
+The THM-3158 candidate supplies an exact depth-five law on seven states with
+denominator `10^6` and numerators
 
 ```text
-C_12^(<=5) nonempty.                                       (provisional)
+(1)             97856
+(1,1,1)         56951
+(1,1,1,1)      140643
+(1,1,2,2,2)    194498
+(1,2,2,3,3)      7398
+(2,2,2,3,3)    118572
+(5,5,6,7,8)    384082.
 ```
 
-That specific law fails in degree 13, but this does not yet prove
-`C_13^(<=5)` empty.  The exact next dual search must include all physical
-depth-five states, not only the seven support states of the positive law.
+They sum to `10^6` and have gcd one.  Exact streaming enumeration proves
+strict positivity on all `403,539` nontrivial upsets through degree 12.  A
+separate primitive positive combination of nine upset facets is strictly
+negative on all 682 physical depth-at-most-five states in degrees through 13.
+Thus the next candidate cell is
+
+```text
+C_12^(<=4)=empty,
+C_12^(<=5) nonempty,
+C_13^(<=5)=empty.                                          (candidate)
+```
 
 The depth-four five-row separator is crossed by exactly two depth-five states,
 `(1,2,2,2,3)` and `(5,5,6,7,8)`.  As at depth three, the old obstruction dies
 on a tiny new-state locus.  This is the finite-convex analogue of a bistellar
 flip: the carrier remains almost valid, two cells change side, and a new
 section appears.
+
+The nine-row depth-five separator is crossed by 24 of the 507 new depth-six
+states: nine low states over `{1,2,3,4}` and fifteen high-tail states clustered
+around `{5,5,6,7,8}`.  Nevertheless a full separation oracle still reports
+`C_13^(<=6)=empty`.  Until its new exact certificate is extracted, this last
+statement is discovery evidence only.  The 24-state crossing locus shows why
+the old pattern of merely adjoining one singleton-complement facet has ended:
+the dual wall now mutates along a structured local patch.
 
 ## Possible global theorem and its obstruction
 
@@ -129,8 +137,8 @@ If both fail, their first polynomial relation gives a useful no-go theorem.
 
 1. **Two-axis selector barcode:** exact birth/death cells in `(D,d)`.
 2. **Compressed dual jet:** every current active row uses only `(ell,m_1)`.
-3. **Tiny crossing loci:** one depth-three crosser, two depth-four crossers,
-   two depth-five crossers for the preceding dual.
+3. **Structured crossing loci:** one depth-three crosser, two depth-five
+   crossers of the previous wall, then a 24-state low/high depth-six patch.
 4. **Finite full bank:** only 4,319 nonempty physical states exist.
 5. **Structured stopping laws:** independent-deletion and hazard models are
    the cheapest route back toward a genuine process.
