@@ -144,23 +144,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   polynomial `x-1` has zero scalar readout but no zero node value, so positive
   splitting still does not supply MISTAKE-211's multiplier observations.
 - THM-2812/2824 close three-slot envelopes; THM-2828 reaches lower-prefix
-  cones.  THM-2830 now proves the two-disjoint-positive-cone orientation:
-  `R_n=L(d_nV^2)/L(d_nV)` is strictly increasing because its cyclic Pascal
-  kernel is at least `6H_n(p)H_n(q)H_n(r)`.  The same ratio ladder proves
-  interlaced positive cones whenever shifted upper coefficients
-  monotone-likelihood-ratio dominate the lower coefficients.  This bypasses
-  the stronger four-index matching inequality.  THM-2841 then proves that
-  every tensor of two or more nonnegative adjacent-difference cone elements
-  has positive factorial readout, via an exact forbidden-board rook count and
-  derangement floor; THM-2853 extends to Gamma shapes.
-  THM-2842 identifies the missing multipliers as
-  radial-variance jets: `k` jets invert an ordered `k`-cone span, but ordinary
-  Gaussian nullity does not supply them. THM-2844 proves a support cut is
-  exactly necessary for every pair in two full positive coordinate orthants
-  and gives the sharp first signed-ray threshold.  Its two divisibility
-  invariants are coprime for every real ray parameter, so failure below the
-  orientation threshold is only a certificate failure, not a moment
-  counterexample.
+  cones.  THM-2830 proves the positive-cone ratio ladder (including the
+  interlaced MLR extension), while THM-2841/2853 prove all-order adjacent-
+  difference positivity for integer/Gamma shapes.  THM-2842 identifies the
+  missing multipliers as radial-variance jets; THM-2844 gives the exact support-
+  cut boundary and shows subthreshold failure is only a certificate failure.
 - THM-2843 reduces every four-slot window either to an immediate
   positive-dimensional common zero or to a nonnegative complete-intersection
   norm of length `d(d+1)(d+2)`.  In the first window, common nullity is a
@@ -345,6 +333,8 @@ Classify profiles under support operations; study analytic continuation and auto
   from three `C2` tables; edge/cycle loses a 3D character sector.  THM-3076
   extends this to prime affine-plane tomography, with the characteristic-`p`
   nilpotent boundary.  Reflection/physical realization are sidecars.
+  THM-3157 aligns a supplied sheet owner/matching orientation with the local
+  `C3` edge hexagon and THM-2597 tournament; THM-2681 still blocks a global resolvent.
   THM-2862/2864/2968/2971 give two sextic
   lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
   affine sidecars remain.  THM-2867 gives the regular `S3` carrier.  THM-2871 makes that face unramified and
