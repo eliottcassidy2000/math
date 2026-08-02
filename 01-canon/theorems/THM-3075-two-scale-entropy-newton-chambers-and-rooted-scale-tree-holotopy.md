@@ -2,7 +2,7 @@
 id: THM-3075
 title: "Two-scale entropy-Newton chambers and rooted scale-tree holotopy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  The two
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The two
   noncommuting ordered six-slot limits of THM-3069 open into two explicit
   simultaneous positive sectors.  A factorial-entropy invoice controls every
   term containing an outer lower-equation error, while THM-3073 exactly
@@ -12,6 +12,13 @@ status: >
   sufficient rooted scale-tree chambers, not a maximal fan or arbitrary
   six-slot theorem.
 source: root-gmc-two-scale-tropical-fan-2026-08-01
+audit: >
+  Two independent hostile audits rederived both determinant-one fixed-low
+  pivots and triangular norm splittings, the 3,600-factor entropy invoice,
+  slope thresholds, leakage rates, carrier exponent ledgers, and the raw
+  coefficient-convergence hostiles.  Immutable replay matched normal,
+  optimized, and stored output byte-for-byte with the declared LF hashes;
+  the independent documentation pass also succeeded.
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
   - THM-3063-terminal-suspension-transverse-resultant-and-five-slot-tail-holotopy
@@ -30,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3075 -- two-scale entropy-Newton chambers and rooted scale-tree holotopy
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3069 exhibits two different ordered six-slot cones.  In one, a remote
 fourth low slot is frozen before a terminal pair moves; in the other, the
@@ -401,4 +408,4 @@ chambers, cross a wall, prove arbitrary six-slot SFC, an arbitrary multiscale
 cone, a uniform threshold, one all-order Stieltjes tail, arbitrary-radial
 GMC(2), NC2, LRC(14), JC(2), or DC(2).
 
-**QED, pending independent audit and status promotion.**
+**QED.**
