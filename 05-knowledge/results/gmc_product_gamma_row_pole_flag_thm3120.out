@@ -1,0 +1,14 @@
+support_universe=115:1<=a<=10:a<b<=min(3a+4,21):banks=2:cases=230
+I1_flag=cases:115:coefficients:3953:positive:3953:zero:0:negative:0:degree:2..67:recurrence_order:11..132:order_minus_degree_min:9:minimum:(36, 1, 2, 2, 0)
+I2_flag=cases:115:coefficients:4288:positive:4288:zero:0:negative:0:degree:2..68:recurrence_order:11..133:order_minus_degree_min:9:minimum:(32, 1, 2, 2, 0)
+all_degree_row_positivity=n>=5:certificates=8241:PASS
+newton_chain=ordinary_and_confluent_divided_differences:PASS
+positive_rational_decomposition=denominator_suffixes:PASS
+minimal_recurrence=reduced_split_denominator:PASS
+finite_cancellations=I1:4-6:root8:multiplicity1;I1:8-12:root16:multiplicity1;I2:4-6:root8:multiplicity1;I2:8-12:root16:multiplicity1
+cancellation_family=I1:4-6:root8;I2:4-6:root8;I1:8-12:root16;I2:8-12:root16;I1:12-18:root24;I2:12-18:root24;I1:16-24:root32;I2:16-24:root32;I1:20-30:root40;I2:20-30:root40
+example_1_2=I1:P=[36, -108, -72]:flag=(36, 216, 288):top_pole_absent_atoms=21;I2:P=[32, 24, 40]:flag=(32, 312, 960):top_pole_absent_atoms=21
+virtual_pole_commutator_data=top5_absent:I1=21/24:I2=21/25
+hostile_independent_cycle_z1z2z3=I1:-84:I2:-84
+hostile_second_prefix_strip=I1:1-2:n17:-5901696
+status=PASS
