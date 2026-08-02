@@ -1,0 +1,14 @@
+universal_numerators=N1_terms20;N2_terms23
+denominators=I1:w1^5*w2^3;I2:w1^5*w2^4
+A=1 P_terms=2 Q_terms=2 degree=1 min_coefficients=16/12
+A=2 P_terms=34 Q_terms=34 degree=7 min_coefficients=16/12
+A=3 P_terms=308 Q_terms=308 degree=13 min_coefficients=16/12
+A=4 P_terms=2331 Q_terms=2331 degree=19 min_coefficients=16/12
+A=5 P_terms=16681 Q_terms=16681 degree=25 min_coefficients=16/12
+A=6 P_terms=117439 Q_terms=117439 degree=31 min_coefficients=16/12
+factorization=N1=-q0^4*q1*P_A;N2=-q0^5*q1^2*Q_A
+one_layer=P1=16*theta+40;Q1=12*theta+20
+shape2_support012=I1:-1/2;I2:-11/36
+sign_hostiles=P1(-5/2)=0;Q1(-5/3)=0
+conclusion=positive_shapes_A1_to_A6_support012_detected
+boundary=A0_degenerate;A7plus_open;nonconsecutive_open;soft_MID_insufficient
