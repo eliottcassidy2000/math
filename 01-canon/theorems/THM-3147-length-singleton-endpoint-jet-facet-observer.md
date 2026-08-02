@@ -2,7 +2,7 @@
 id: THM-3147
 title: "Length-singleton endpoint-jet facet observer and finite portability wall"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The length endpoint jet gives exact rank-tail Hasse facets and evolves under
   virtual pole subtraction by a triangular Gregory recurrence.  On the full
   THM-3136 active-prefix bank through degree nine it detects exactly 27 of the
@@ -11,12 +11,20 @@ status: >
   detects all 43.  This is a finite obstruction observer, not a positive
   current or original-response reconstruction theorem.
 source: root/multiscale-newton-flag/low-child-flag-extension-2026-08-02
+audit: >
+  Two independent hostile audits rederived both marked generating factors,
+  the virtual-pole kernels, Gregory recurrence, endpoint/binomial inversion,
+  rank-tail and singleton facet geometry, information-loss hostile, and the
+  related-only heptic S7/D14 classifier.  Fresh normal and optimized runs
+  both reproduce the stored transcript, exact 27+16 census, witnesses,
+  counts, and declared LF hashes.
 depends_on:
   - THM-3120-row-pole-prefix-newton-flag-positivity
   - THM-3127-partition-refinement-strassen-upset-dual-and-filter-response
   - THM-3129-bounded-poset-upset-facet-irredundancy
   - THM-3136-one-sided-fixed-reference-elementary-tail-hasse-no-go
 related:
+  - THM-3123-heptic-e3-remaining-accessory-classification-and-s7-monodromy
   - THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform
   - THM-3137-finite-stochastic-pole-selector-polytope-and-portability-wall
   - THM-3144-mixed-depth-selector-persistence-death-barcode
@@ -29,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3147 -- length-singleton endpoint-jet facet observer and finite portability wall
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3134 shows that a scalar endpoint can hide a complete tournament
 path-cover profile.  The analogous sidecar for the THM-3136 Young current is
@@ -239,6 +247,31 @@ has identically zero length profile, but `V` assigns it mass `1`.  Marking
 to statistics that depend on length alone; it does not assert a unique or
 globally minimal refinement of the full partition profile.
 
+### 4.1 A heptic monodromy interpretation of the new coordinate
+
+The singleton statistic is not an arbitrary separator on the degree-seven,
+length-four slice.  Independently, THM-3123 classifies the complete heptic
+`e=3` accessory atlas indexed by exactly the same three partitions:
+
+```text
+passport          m_1        unmarked monodromy
+(4,1,1,1)          3                 S_7
+(3,2,1,1)          2                 S_7
+(2,2,2,1)          1                 D_14.                  (23a)
+```
+
+Therefore, on that proved passport atlas,
+
+```text
+m_1>=2   iff   the unmarked cover has full monodromy S_7.   (23b)
+```
+
+The `w`-coordinate in `(4)` is exactly the symmetry-breaking coordinate
+separating the two full-symmetric strata from the Chebyshev/dihedral wall.
+This is a shared partition-indexed classifier, not a map from the GMC Young
+current to a response cover: no monodromy, accessory parameter, Keller-chart
+entry, or JC consequence is transported between the two problems.
+
 ## 5. Positivity and partial-reference boundaries
 
 The full jet is not automatically positive when its scalar endpoint is.  At
@@ -304,4 +337,4 @@ profile from monomial symmetric functions, checks both pole kernels on every
 successive prefix, verifies the facet connectivity, and performs the exact
 `27+16` census.
 
-**QED (candidate pending independent hostile audit).**
+QED.

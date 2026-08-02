@@ -1,0 +1,6 @@
+THM-3151 all-R equality-cell exact referee: PASS
+R rows checked: 2..50; resonance k checked: 2..30
+exact gates: 18320
+wall identity: Q_R(z)^2+z P_R(z)^2=(1+z)^R
+consequence: (D,D) equality cell impossible; balanced chart entrant N>=4D
+scope: normalized polynomial exact-square-prefix balanced branch; JC(2) remains open

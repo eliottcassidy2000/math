@@ -1,0 +1,6 @@
+THM-3151 independent all-R equality-cell infinity audit
+direct=factorized flux rows: 62
+even/odd wall gcds: 31
+hostile degree/parity/zero-boundary chambers: 2288
+R=3k+2 samples: 8,11,14,17,20,23,26,29
+RESULT: PASS
