@@ -2,7 +2,7 @@
 id: THM-3058
 title: "K4 hafnian initial-face augmentation and unbounded cancellation jet"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For every finite nonempty indexed fibre over a DVR with residue field
   F_q, the sum has the minimum input valuation exactly when the initial
   residues on the minimum face have nonzero sum.  This is also equivalent
@@ -15,6 +15,13 @@ status: >
   selection and pair aggregation and supplies no quartic origin or physical
   map.
 source: codex-2026-08-01-k4-hafnian-initial-face-augmentation
+audit: >
+  Independent hostile audit rederived the associated-graded equivalence,
+  checked the zero/deep-live pivot construction at every finite jet depth,
+  verified uniformizer and vertex-unit gauges, the finite-field recurrence,
+  the same-clutch and Pluecker hostiles, and the THM-2290 ordering boundary.
+  Fresh normal and optimized executions both LF-byte-match the stored
+  transcript and the declared hashes.
 depends_on:
   - THM-2290-context-selected-colored-pair-kernel-is-hafnian-complete
   - THM-3049-k4-matching-monomial-tropical-root-extraction-clutch
@@ -31,7 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3058 -- K4 hafnian initial-face augmentation and unbounded cancellation jet
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and exact finite-fibre theorem
 
@@ -382,7 +389,7 @@ twelve successively deeper versions of `(20)`.  The exhaustive computation
 is evidence for the general proof, not its source.
 
 ```text
-PROVED CANDIDATE HERE: general finite-fibre initial-face equivalence;
+PROVED HERE:           general finite-fibre initial-face equivalence;
                        exact zero/live lift boundary;
                        unbounded filtered-jet no-go;
                        finite-field zero-sum count;
@@ -390,8 +397,7 @@ PROVED CANDIDATE HERE: general finite-fibre initial-face equivalence;
 
 VERIFIED-EXACT HERE:   the q=5 universes and hostile controls in (28).
 
-NOT PROVED HERE:       promotion through independent hostile audit;
-                       a selector or pair aggregation before THM-2290;
+NOT PROVED HERE:       a selector or pair aggregation before THM-2290;
                        recovery from the 24-valued clutch without F;
                        the conditional physical augmentation (24)--(26);
                        a quartic origin, physical owner/map, Keller, LRC,
