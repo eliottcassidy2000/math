@@ -1,0 +1,31 @@
+LRC14 reflected C=2 full cone closure exact proof
+universe=bodies:3003;arbitrary_level_bank:2442;residual:561;spread:D>=6;cone:m>=2D
+phase_bank_PQ_lt40=((2, 3, Fraction(0, 1)), (3, 4, Fraction(0, 1)), (4, 5, Fraction(1, 70)), (5, 6, Fraction(2, 105)), (5, 7, Fraction(1, 49)));zeros=((2,3),(3,4));nonzero_floor=1/70;unique_equality=(4,5)
+phase_bank_PQ_lt110=((2, 3, Fraction(0, 1)), (3, 4, Fraction(0, 1)), (4, 5, Fraction(1, 70)), (5, 6, Fraction(2, 105)), (5, 7, Fraction(1, 49)), (6, 7, Fraction(1, 49)), (7, 8, Fraction(1, 49)), (7, 9, Fraction(1, 49)), (7, 10, Fraction(1, 49)), (8, 9, Fraction(5, 252)), (8, 11, Fraction(3, 154)), (9, 10, Fraction(2, 105)), (9, 11, Fraction(13, 693)));off_23_34_45_floor=1/55
+zero_graph=after repeated-level discharge,3:4 is a matching and the unique 2:3 endpoint edge may create one P4
+P4_HOSTILE;D=12;m=24;levels=(32, 24, 36, 27);zero_edges=((0, 1), (1, 2), (2, 3))
+homotopy_guard=max_abs_eta<=17/167<1;unique_body=(1, 2, 3, 4, 6, 12);labels=(1,12);integer_slopes>=12;intermediate_slope>=1987/167>1;c_inverse_dropped_only_after_positive_bracket
+component_scaling=full_span_components<=1;collision_bound=9;rational_grid=102;integral_dilation_preserves_ratios
+body_selector=triangle:539;triangle_exceptions:22;two_tier:551;coarse_residual:10
+ten_bodies=((1, 2, 3, 4, 6, 8), (1, 2, 3, 4, 6, 12), (1, 2, 3, 4, 8, 12), (1, 2, 3, 6, 8, 12), (1, 2, 4, 5, 8, 10), (1, 2, 4, 6, 8, 12), (1, 2, 4, 6, 9, 12), (1, 3, 4, 6, 8, 12), (1, 3, 4, 6, 9, 12), (2, 3, 4, 6, 8, 12))
+ten_quality_edges=(((1, 2, 3, 4, 6, 8), ((0, 1),), ((0, 1), (1, 2))), ((1, 2, 3, 4, 6, 12), (), ()), ((1, 2, 3, 4, 8, 12), ((0, 1),), ((0, 1), (1, 2))), ((1, 2, 3, 6, 8, 12), ((0, 1),), ((0, 1), (1, 2))), ((1, 2, 4, 5, 8, 10), ((0, 1), (2, 3)), ((0, 1), (1, 2), (2, 3))), ((1, 2, 4, 6, 8, 12), ((0, 1),), ((0, 1),)), ((1, 2, 4, 6, 9, 12), ((0, 1),), ((0, 1), (1, 2))), ((1, 3, 4, 6, 8, 12), (), ()), ((1, 3, 4, 6, 9, 12), ((1, 2),), ((0, 1), (1, 2))), ((2, 3, 4, 6, 8, 12), (), ((0, 1),)))
+located_48_weakest=170554943656361282/8980213849475477245;body=(2, 3, 4, 6, 8, 12);pair=(0, 1);channel=(5, 4);g0=3;cell=290;skeleton=1/35;eta=-21/5038;digest=1ef0c2811df1fe4426ddd97ae142b97325af0bbce67fd7cca8f69389d5755f32
+H_tail=805396046466515008/9456367360728129366525;endpoint_values=('8/3', '1');first_step=83899451/196998203325>0;finite_channels=28;bad=((2, 3), (3, 2), (3, 4), (4, 3), (5, 4));weakest_positive=75632128506637642/38330753089856894667@(13,9)
+H2_tail=43121847752669072/90608914671529412235;endpoint_values=('4', '1');first_step=6839713/3784405779>0;finite_channels=10;bad=((2, 3), (3, 2), (3, 4), (4, 3));weakest_positive=10284744292731747955/2897759385399959678906@(5,4)
+H_located=(((2, 3), 6, 12, '1/21', '-6/2015', '6383980231300547/160918358899483185'), ((3, 2), 6, 129, '1/21', '-24/3023', '2894340126720701621/97291239790627533651'), ((3, 4), 4, 90, '1/28', '-8/2015', '5531792762040613/214557811865977580'), ((4, 3), 4, 136, '1/28', '-20/2687', '2171883178344875071/115303368096776351492'), ((5, 4), 3, 142, '1/35', '-18/2519', '150944973662516623/12283434729327216455'))
+H2_located=(((2, 3), 6, 24, '1/21', '2/1343', '562210379788894471/12944130667361344605'), ((3, 2), 6, 284, '1/21', '-12/2015', '179975767940783232529/5216484658946621875815'), ((3, 4), 4, 311, '1/28', '0', '595555292967791713/17258840889815126140'), ((4, 3), 4, 290, '1/28', '-28/5373', '2233423499286297810109/92731752100976672750220'))
+uniformity=primitive skeleton is scale-independent;g/(PgL-a) decreases exactly;debt is bounded by all levels twelve;PQ>=s^2;Pg>=s implies L-a/(Pg)>=L-a/s;both tail-loss terms decrease strictly in s;finite head exhausts min(P,Q)<threshold
+conclusion=all reflected residual packets with D>=6,m>=2D close on all 3003 bodies
+corollary=the assembled reflected certificate-failure wedge is confined to 561 bodies,D>=6,1<=m<2D
+scope=reflected THM-2941 sufficient family only;physical LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+c5_sha256=d2c8b4a26e87bce98c8ea94e82c38e81eae95504a6a7ef70db53670f197e8ec8
+low_phase_sha256=416c36f16f7c821feb8d260882711d2717069147b8604a93ba60432785cf1d1c
+universal_sha256=a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8
+edge8_sha256=3f2552c7e316a6da821f8d78f859aa9d73b2d8b58081c0a31f8d233f37eec2f0
+edge8_output_sha256=90d42c1369532e4d31cfacbf4ddf455fa330075c878b414831e489eec32ecc2b
+edge8_semantic_sha256=af12592ebd25cd5745c34711c99aaba72c45eeb2cad62ee5b35ec6a7752b8da7
+body_digest=1f382f27bde53c7afac3ae9cfcd5b79b14ab2b63242b8c3cd9a3ee37976c7a61
+source_sha256=f7eb06c50b11fd810320146a2cded2590790fdbcf6db58cff2a358470fcfd0b6
+semantic_sha256=e052683e114b067648c61e5451001a4871d9940eb465eb4bf2522537d1cbe665
+all_exact_controls=PASS

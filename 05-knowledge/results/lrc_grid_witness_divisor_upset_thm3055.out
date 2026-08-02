@@ -1,0 +1,7 @@
+theorem=grid-safe iff reduced denominator divides no speed
+exhaustive_universe=q=2..12;nonempty residue supports=8177;grid cells=90035;upset cells=30808
+pure_top_rows=2385;pure_top_iff=q unhit and every proper divisor >1 hit
+adjoining_speed_cells=18378;update=remove divisors of gcd(v,q)
+thm3043_rows=6/6;unhit_upsets={q};reduced denominators exactly q
+hostile=q8,S={1};unhit={2,4,8};nonunit grid witnesses survive
+conclusion=grid witness carrier is an upward-closed unhit-divisor upset

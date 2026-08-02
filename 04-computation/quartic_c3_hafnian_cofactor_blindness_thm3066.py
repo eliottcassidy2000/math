@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for THM-3063.
+"""Exact companion for THM-3066.
 
 The calculation checks that a branch-cofactor vertex gauge reaches the three
 quartic matching monomials only through the product of the four cofactors.
@@ -136,7 +136,7 @@ def main() -> None:
     )
     require(broken_jacobian_residues == (2, 2, 2, 1), "twist did not break Keller residues")
 
-    print("theorem=THM-3063")
+    print("theorem=THM-3066")
     print("status=PROVED_VERIFIED_EXACT")
     print("contraction=(c0c1c2c3)*(P1,-P2,P3);sum=0_by_Pluecker")
     print("cofactor_quotient=matching_triple_depends_only_on_product_c0c1c2c3")

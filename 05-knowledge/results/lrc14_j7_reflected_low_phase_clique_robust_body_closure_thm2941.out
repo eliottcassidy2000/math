@@ -1,0 +1,16 @@
+LRC14 reflected low-phase clique and robust-body closure exact referee
+low_ratio_graph=omega_5;normalized_clique_counts=((1, 1), (2, 8), (3, 13), (4, 8), (5, 2));maximum_cliques=((Fraction(1, 1), Fraction(3, 2), Fraction(2, 1), Fraction(3, 1), Fraction(6, 1)), (Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(6, 1)))
+normalized_four_cliques=((Fraction(1, 1), Fraction(4, 3), Fraction(2, 1), Fraction(4, 1)), (Fraction(1, 1), Fraction(3, 2), Fraction(2, 1), Fraction(3, 1)), (Fraction(1, 1), Fraction(3, 2), Fraction(2, 1), Fraction(6, 1)), (Fraction(1, 1), Fraction(3, 2), Fraction(3, 1), Fraction(6, 1)), (Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1)), (Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(6, 1)), (Fraction(1, 1), Fraction(2, 1), Fraction(4, 1), Fraction(6, 1)), (Fraction(1, 1), Fraction(3, 1), Fraction(4, 1), Fraction(6, 1)))
+periodized_fiber_floor=1/105;tail_product_start=46;tail_boundary_margin=1/67620;finite_pairs=63;finite_route_checks=896;equality_channel=(3, 5)
+hostile_414_415_exact_min=12272/601335;minimizers=(3, 4, 5, 6, 7, 8, 9, 10, 11);one_lift_lower=137/400890
+robust_complete_bodies=2217/3003;arbitrary_level_closed_nonexceptional=2215;robust_edge_hist=((0, 211), (1, 88), (2, 41), (3, 53), (4, 53), (5, 36), (6, 46), (7, 33), (8, 21), (9, 35), (10, 32), (11, 15), (12, 37), (13, 26), (14, 59), (15, 2217));robust_clique_hist=((1, 211), (2, 144), (3, 159), (4, 152), (5, 120), (6, 2217))
+sharp_certificate_hostile_levels=(Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(6, 1), Fraction(8, 1), Fraction(12, 1));unique_high_pair=(Fraction(3, 1), Fraction(8, 1));incomplete_body_relabellings_checked=786
+exception_residuals=(((1, 2, 7, 9, 11, 13), ((2, 3), (3, 4), (4, 5)), 24, 360, 192, 720), ((2, 4, 7, 9, 11, 13), ((2, 4), (3, 5)), 24, 240, 192, 480));four_colour_scale_rays=384;five_colour_scale_rays=1200;total_scale_rays=1584
+scope=closes arbitrary reflected k=1 levels on 2215 bodies; the 786 noncomplete-robust bodies and 1584 exceptional low-clique rays are certificate residues, not physical survivors
+normal_vs_python_O=BYTE_IDENTICAL
+base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+universal_sha256=a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8
+body_digest=443474b6ccaef009d213e07160ce3cebfde1bbaa99e8ce9a55acf959d7d86d1c
+source_sha256=416c36f16f7c821feb8d260882711d2717069147b8604a93ba60432785cf1d1c
+semantic_sha256=0063d2beb7c627f1836576081689720d41f45a078b4b7b3e06aeb81574039248
+all_exact_controls=PASS

@@ -1,0 +1,20 @@
+LRC14 reflected robust-edge-13 uniform closure exact referee
+nonrobust_shape=two_adjacent_edges;body_count=26;path_classification_rows=8;projective_path_types=(((Fraction(1, 1), Fraction(4, 3), Fraction(2, 1), Fraction(8, 3), Fraction(4, 1), Fraction(8, 1)), (3, 4, 6, 8, 12, 24), 3, (8, 24)), ((Fraction(1, 1), Fraction(4, 3), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(6, 1)), (3, 4, 6, 9, 12, 18), 4, (9, 18)), ((Fraction(1, 1), Fraction(3, 2), Fraction(2, 1), Fraction(3, 1), Fraction(9, 2), Fraction(6, 1)), (2, 3, 4, 6, 9, 12), 9, (2, 4)), ((Fraction(1, 1), Fraction(3, 2), Fraction(2, 1), Fraction(3, 1), Fraction(6, 1), Fraction(9, 1)), (2, 3, 4, 6, 12, 18), 18, (2, 4)), ((Fraction(1, 1), Fraction(3, 2), Fraction(2, 1), Fraction(3, 1), Fraction(6, 1), Fraction(12, 1)), (2, 3, 4, 6, 12, 24), 24, (2, 3)), ((Fraction(1, 1), Fraction(3, 2), Fraction(3, 1), Fraction(9, 2), Fraction(6, 1), Fraction(9, 1)), (2, 3, 6, 9, 12, 18), 2, (9, 18)), ((Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(6, 1), Fraction(8, 1)), (1, 2, 3, 4, 6, 8), 8, (1, 3)), ((Fraction(1, 1), Fraction(2, 1), Fraction(4, 1), Fraction(6, 1), Fraction(8, 1), Fraction(12, 1)), (1, 2, 4, 6, 8, 12), 1, (8, 12)))
+assignment_categories=(('one', 4992), ('path', 2496));total_primitive_assignments=7488;certificate_kinds=(('low', 7488),);certificate_floor_values=28
+weakest_margin=6022958680656216101363/93345307647398389204440;category=path;type=7;body=(1, 2, 3, 6, 7, 13);nonrobust_edges=((3, 5), (4, 5));levels=(2, 6, 4, 12, 8, 1);floor=1007/15288;certificate_pair=(0, 2);reduced_channel=(1, 2);gcd=2;j=7013;lift=1;endpoint_radius=631;kind=low
+direct_control_scales=(1, 2, 5);direct_controls=22464
+scale_law=multiplying all levels preserves the reduced channel and cell, decreases transport loss and singleton debt
+conclusion=all 26 robust-edge-13 bodies close for every assignment of positive reflected levels
+corollary=arbitrary-level body closure rises from 2276 to 2302;remaining_bodies=701
+scope=reflected THM-2941 residual family only;physical LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+low_phase_sha256=416c36f16f7c821feb8d260882711d2717069147b8604a93ba60432785cf1d1c
+exceptional_sha256=bde992db1edbd9dd744ff22744a1afef79cf4bcc54a2f918793c2603f062df7c
+universal_sha256=a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8
+k6_minus_edge_sha256=3b5752836263df2f6b694c9dfe737e489c22dc2c267144530dcfac74cc972b29
+body_digest=8b96c6e30c0ba9aebc6588561f66dbd6bc14b2c1908c6c99db101ca219482af8
+assignment_digest=1c6dfff9a3067363ac3fbb5589143310ad85e5f29a0dcbf608e50d4240cef5e7
+source_sha256=2fdde052252ea6067fd587dcf1d41db2a4ce381da4b4ab21f8cd5c0efb7d8e3e
+semantic_sha256=4512062600e7915e762b991b7522fd322c4c19e06b934417beffad9ba462e941
+all_exact_controls=PASS

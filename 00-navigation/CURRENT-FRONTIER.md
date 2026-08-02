@@ -25,76 +25,40 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`. THM-2941 gives wall `h/7` on all `3,003` roots; THM-2928/2941/2970/2972/2981
-empty aligned `k>=4`, cap `k=2,3` at `1656/246`, and close the common-level reflected `k=1` diagonal. Other censuses, arbitrary `k<=1`, the rung,
-and LRC are open.  Septimal floor/exception plus located phase cut the raw five-drift ledger
+Direct frontier: `<=6`. THM-2928 empties aligned `k>=4`; THM-2995/3061 cap projected `k=2,3` at `1579/236`; the audited THM-2941 assembly leaves the reflected bank-uncovered wedge: `561` bodies, `D>=6,1<=m<3D/4`.
+This is not a physical-survivor classification; arbitrary `k<=1`, the rung, and LRC remain open. Septimal floor/exception plus located phase cut the raw five-drift ledger
 `951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
 not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
-`1680..1742` `k=2` atlas, giving cap `1679`; three canonical atlases check `78,078` rows and give cap `1656` with five boundary rows. For `k=3`, torsion/status closes through `297`;
+`1680..1742` `k=2` atlas; THM-2980/2995 then close every row at
+`1580..1679`, giving cap `1579`.  For `k=3`, torsion/status closes through `297`;
 THM-2981/3033/3041/3052/3061 close all projected `k=3` rows through
-`z_1=237`, with empty `z_1=241` and `z_1=238`: cap `236`,
-ledger `374780`; next occupied layer: `1` row.
-Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
-THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams, not semantic-root identification (kernel `28,393`); THM-2545/2549/3044 give Hall/pointed dual; THM-2565/2604/2613 point scoped packets; THM-3048 forces arrival from nonzero holonomy only for a whole-table parallel carrier, still absent; THM-2547 is only an external control after
-MISTAKE-281.  THM-2551--2712 recover determinant/carry/root/quotient sidecars
-and six-step nilpotence, but no transverse physical gluing (MISTAKE-300).
-THM-2721's positive `C3` corolla is current-zero and misses all `1134`
+`z_1=237`, with empty `z_1=241` and `z_1=238`: cap `236`, ledger `374780`,
+and the next occupied layer has one row.
+In the reflected gain graph, cap two forces the phase-zero triangle
+`(3/2)(4/3)=2`; by cap `7/3` it is interior and no full-cap component remains.
+The global zero-gain atlas is exactly `4/3,3/2,2,5/2,3,4,5,6`; cap `5/2`
+adds a new prime-five rank direction rather than another circuit.
+Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
+THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
+supplied-root seams, not semantic-root identification (kernel `28,393`).
+THM-2545--2712 recover Hall, pointed-dual, determinant, carry, root and
+quotient sidecars plus six-step nilpotence, but no transverse physical gluing
+(MISTAKE-281/300); THM-2721's current-zero `C3` corolla misses all `1134`
 placements.
 
-THM-2720/2742 restore the missing target (`936/1183` sections and every
-primitive character); MISTAKE-310 preserves the half-tooth overlap.  The
-THM-2744 `7/13^6` clutch preserves raw private units, and THM-2749 inserts the
-full `E3 -> D^6 -> Q_(3,{1,2})` fork with both endpoint masks.  Its frozen,
-coindexed, one-sided and clock-blind sections are distinct.
+THM-2720/2742 restore target sections and primitive characters;
+THM-2744/2749 retain private units and both endpoint masks, with MISTAKE-310's
+half-tooth overlap.  MISTAKE-313 restores clock `e=1`; THM-2750/2751/2754/2757
+show that unit-pair, two-clock and marked-`K4` data still lack a physical
+carrier action.  THM-2763--2839 rebuild address, ancestry, positive-copy,
+half-step, Boolean and full-character sidecars, but either change source data,
+remain carry-blind/signed, or have empty endpoint fibre product.
 
-MISTAKE-313 restores clock `e=1`.  THM-2751 has empty left coefficient and
-right `GQ`, with `Q` mod-`91` invertible but raw `GQ=0 mod91` and `G/26` only
-an `F_13` unit.  No physical wing map follows; the one-sided bank has gain
-`11`, while the older rank-three table is clock-blind.
-
-THM-2754's two-clock carrier has `B_(e,j)=a_e 1_(j!=0)` on all `3969` cells.
-Its `7 x 7` unit-pair chamber has four multipliers, gains
-`0:10,2:19,11:20`, and all `168` label modes, but no carrier action.
-THM-2750 blocks arm-blind charging; THM-2757's marked `K4` transgression
-still lacks a physical carrier.
-
-THM-2763's address has size `13^4` (`13^3` after loss), not THM-2625's
-endpoint plane.  THM-2779's Heisenberg center needs degree `169`; a literal
-`13`-root action kills it.  THM-2782's three positive arms have `567/567`
-disjoint opposite cofibres.  THM-2788--2803 close coefficient
-odometer/transport/origin/projective response, not physical gluing;
-THM-2791/2807 give ancestry homotopy.
-
-THM-2806's flat raw point has bare-only `D3=144w`; its tau-twelve common
-carrier is empty.  THM-2813's conditional address jet is not Rees `D3`;
-THM-2814 separates contrast from holonomy, THM-2818 proves positive-copy
-multipliers, and THM-2819 proves the sharp marked target eleven-face.
-THM-2825's half-step scale uniquely picks `+h/+2h` on all 587 rights; the
-norm-one Schur collars are absent from the coarse algebra.  Its labelled path
-forest has a transverse/tangent `M_3 tensor I_587`, but source data change and
-endpoint matches are only `74/587` versus `587/587`.
-THM-2820 proves Boolean tangent rigidity.  THM-2829/2835 give the unique
-91-unit response and `449`-sheet carry-blind semantic horn (ranks `13/26`),
-but change `QB -> QA`; endpoint/word copies have empty fibre product.
-THM-2839 gives its full `13^5`-character rank `371293`, yet its inverse is
-signed and only the unrotated response is physical.
-
-THM-2847 gives a `42`-cell q3/q11 bank and `20`-cell E3 horn: the `449`
-columns have rank four but E3 rank three.  THM-2851 exposes
-`L_9L_8=T L_4` versus flat `A_5A_3=A_8`; carry fidelity costs `13` states
-(`169` jointly), and its derivative has norm `898`, ranks `12/371292`.
-THM-2852 adds full signed convolution rank and six borrow-aware arrows.
-THM-2857 gives a free Galois `C13` endpoint torsor but only `K0`-linear
-carry.
-THM-2859's q0 `Z^8` germ hits only `{0,4,8,9}`: no rootless hit, square,
-or literal q3/q11 attachment.
-THM-2861/2863 give Hermitian/Prony; THM-2868 its atlas. THM-2874
-`F`-clutches Galois/`C169`, but q7 stays flat. THM-2876 kills the q3 edge.
-THM-2880/2878/2882 reach q3 but flat carry.
-THM-2884/2886 find `V4` and transport q3/q11/q7 parity/current; scalar Prony fails.
-THM-2887/2889 give Arf-one `Q8`/dicyclic channels; THM-2894 blocks central-sign descent through unmarked residuals.
-Next: `e9=(-9,+9,QB)`, clutch `(13,13,-1)`. Ledger `165`.
+THM-2847--2894 add q3/q11/E3 ranks, borrow-aware convolution, Galois `C13`,
+Hermitian/Prony, `V4`, `Q8` and dicyclic channels.  Flat carry and unmarked
+central-sign descent remain the obstruction.  Next: `e9=(-9,+9,QB)`, clutch
+`(13,13,-1)`; ledger `165`.
 
 ### Independent routes that remain live
 
@@ -216,7 +180,17 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   THM-2969/73/78/82 give strict ULC through M34; THM-2997's `R2>R1` is
   conditional beyond. THM-3040/47/50 give corner, Gamma/Hankel, radial-NC2
   laws; THM-3051/53/54 give moving-lower hostiles, prefix flow and affine
-  finite-order tail re-entry. All-order Stieltjes transport stays open.
+  finite-order tail re-entry.  Hostile-audited THM-3056 proves that for every
+  finite positive-shape product-Gamma sequence, every generalized minor of
+  its reciprocal has strict sign `(-1)^(h choose 2)`, including real row nodes
+  against integer columns.  This is column-reversal sign regularity, not
+  moment positivity: the order-two minor is negative.  For THM-3053's
+  Beta--Gamma inventory, terminal prefix zero forces finite rank, while
+  positive terminal prefix remains an OPEN reversal problem.  THM-3060/3062
+  give the physical hierarchy: three slots have a positive face at every
+  width; at four slots it cancels but a fixed-low, fixed-gap transverse Gram
+  term is eventually positive on affine clocks.  These are fixed finite
+  banks, not one all-order Stieltjes tail.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent
@@ -315,6 +289,11 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   retains labelled fibres: parity/square swap walls; closure
   `N\{1,4,6}` with dyadic frontier; local A014574 recurrence refuted at term
   `21`; and distinct ancestry FINITE-EXACT through center `10^8`, ALL-n OPEN.
+- THM-3056 turns each integer-shape width family into a sparse integer support
+  with hypergeometric harmonic mass, absolute Dirichlet abscissa zero, and
+  prime-divisor shadow exactly the primes not dividing its scale.  This is the
+  arithmetic shadow of its all-order Hankel reversal law, not a moment
+  representation.
 - **EXACT identities / heuristic bridge:** corrected HYP-8820 puts caterer,
   cake, Moser, bagel, and Fibonacci in one Pascal array and proves
   `bagel(n)-cake(n)=T_n-1`; Klein-S313 realizes full-rank g-bonacci kernels.
@@ -346,7 +325,19 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2703/2708 identify the general boundary object as the saturated
   `H^1(U,mu_2)` gain-holonomy kernel, not a scalar Gram rank.  THM-2743--2780
   refine the `V4`, opposition, and inertia typing but still supply no
-  equivariant Kummer realization.  THM-2862/2864/2968/2971 give two sextic
+  equivariant Kummer realization.  THM-3057 gives the exact tame height-one
+  quartic invoice, and THM-3059 shows after reciprocal reversal that the
+  cleared discriminant exponent is odd exactly when infinity inertia is an
+  odd permutation.  Its generic-`S4` two-jet and planar families have exact
+  Jelonek loci with `C3` escape and even exponent, refuting HYP-9027 only in
+  its former general-dominant scope.  On the `S4` Keller lane at least one odd
+  component is forced, but excluding every Keller `C3` component remains
+  OPEN and needs branchwise Jacobian-cofactor unit data, not another
+  discriminant scalar.  THM-3066 proves the natural THM-3058 matching
+  augmentation cannot supply it: vertex-gauged matchings retain only the
+  product of four cofactors, while a `C3`-equivariant product-one twist changes
+  the sheetwise Keller values.  The missing invariant is the pointed
+  orbit/fixed Jacobian ratio in the graph order.  THM-2862/2864/2968/2971 give two sextic
   lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
   affine sidecars remain.  THM-2867 gives the regular `S3` carrier.  THM-2871 makes that face unramified and
   puts the first paired escape at `A=B=0`: `C in (B)` gives integral

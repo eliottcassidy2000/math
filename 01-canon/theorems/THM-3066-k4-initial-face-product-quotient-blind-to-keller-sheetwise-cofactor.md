@@ -1,8 +1,8 @@
 ---
-id: THM-3063
+id: THM-3066
 title: "K4 initial-face product quotient is blind to the sheetwise Keller cofactor"
 status: >
-  PROVED + VERIFIED-EXACT (independent audit pending).  Insert four
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Insert four
   branchwise primitive-element cofactors into the quartic root-difference K4
   by the natural vertex-unit gauge.  Every matching monomial then sees only
   the product of the four cofactors, and the oriented contraction remains the
@@ -15,6 +15,12 @@ status: >
   vertex-gauge instantiation, not every possible branch-labelled
   augmentation, and excludes no Keller map or JC branch.
 source: codex-jc-resolvent-bridge-2026-08-01
+audit: >
+  root/2026-08-01 independently checked the oriented Pluecker signs,
+  product-one vertex-gauge quotient, primitive-element chain-rule predicate,
+  comaximal C3/fixed-factor twist, residue-seven roots, derivative/cofactor
+  valuations and units, and the non-realization scope.  Fresh ordinary and
+  optimized executions byte-match the stored transcript and declared hashes.
 depends_on:
   - THM-3046-quartic-resolvent-root-valuation-binary-ternary-clutch
   - THM-3058-k4-hafnian-initial-face-augmentation-and-unbounded-cancellation-jet
@@ -23,16 +29,16 @@ related:
   - THM-3038-split-monogenic-order-cross-resultant-conductor-and-affine-owner-boundary
   - THM-3042-subdirect-graph-order-common-quotient-and-singleton-owner-criterion
   - THM-3049-k4-matching-monomial-tropical-root-extraction-clutch
-script: 04-computation/quartic_c3_hafnian_cofactor_blindness_thm3063.py
-output: 05-knowledge/results/quartic_c3_hafnian_cofactor_blindness_thm3063.out
-script_sha256: 4bca80fdca42fa928fc17e56aacd75635fb169076d022080acf4238bd524b85f
-output_sha256: 76680f699ab6b49ac9a0d8fbe9da0478c6d4cc81d06260b4e9312363698f9bf1
+script: 04-computation/quartic_c3_hafnian_cofactor_blindness_thm3066.py
+output: 05-knowledge/results/quartic_c3_hafnian_cofactor_blindness_thm3066.out
+script_sha256: 06a9d2d4329a82a05127c789139180141c6ea345e53b77954798b26b957b7211
+output_sha256: f4c36f36e710846025133559c4b7cf470e00829d577ef7010e1b61ded1bbb9ed
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3063 -- the hafnian face forgets the sheetwise Keller equation
+# THM-3066 -- the hafnian face forgets the sheetwise Keller equation
 
-**PROVED + VERIFIED-EXACT (independent audit pending).**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. The proposed bridge and its exact contraction
 
@@ -338,8 +344,8 @@ NOT PROVED:        impossibility of every alternative branch-labelled
 Run
 
 ```text
-python3 04-computation/quartic_c3_hafnian_cofactor_blindness_thm3063.py
-python3 -O 04-computation/quartic_c3_hafnian_cofactor_blindness_thm3063.py
+python3 04-computation/quartic_c3_hafnian_cofactor_blindness_thm3066.py
+python3 -O 04-computation/quartic_c3_hafnian_cofactor_blindness_thm3066.py
 ```
 
 Both modes must LF-byte-match the stored transcript.  The companion checks

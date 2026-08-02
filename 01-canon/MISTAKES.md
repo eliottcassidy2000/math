@@ -9,6 +9,22 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-346 (2026-08-01, concurrent THM-3063 reservations) -- two distinct results acquired the same new theorem ID
+
+- **What happened:** the audited quartic cofactor-blindness theorem was frozen
+  as THM-3063 on a topic branch while a concurrent session reserved THM-3063
+  on `origin/main` for the five-slot terminal-suspension theorem.  Both landed
+  in one merge before the cross-branch identifier check was repeated.
+- **Why it was wrong:** filename checks in one worktree do not see an unmerged
+  remote topic reservation, and a clean fetch cannot prevent a reservation
+  pushed after that fetch.  The mathematical statements were distinct, but
+  the shared YAML ID made theorem references ambiguous.
+- **Repair / rule:** the cofactor-blindness theorem, companion, output, and
+  current routes move together to THM-3066; the empty THM-3063 suspension stub
+  retains its first-on-main namespace.  Before final promotion, recheck IDs
+  against both `origin/main` and all fetched topic refs, and repeat after the
+  last merge; a reservation is not complete until its ID is globally unique.
+
 ## MISTAKE-344 (2026-08-01, THM-3052 pre-promotion evidence audit) -- a final wording repair changed the frozen transcript length without updating the theorem's byte count
 
 - **What was done:** THM-3052's status-neutral evidence repair changed the
@@ -46,6 +62,29 @@ Format per entry:
 - **Rule:** a measure computation cannot certify pointwise covering.  Store an
   explicit witness/emptiness certificate, and expand shorthand `a/q` whenever
   a composite denominator makes the allowed numerator set load-bearing.
+## MISTAKE-345 (2026-08-01, reflected four-thirds cone proof candidate) -- monkeypatching the projective cap did not widen a hard-coded primitive-channel generator
+
+- **What was done:** the first four-thirds referee set the imported engine's
+  `RATIO_CAP` from `5/3` to `7/4`, then described its primitive bank as complete
+  on `[4/7,7/4]`.  But `primitive_universe` still selected rows with the
+  literal predicate `3Q<=5P`.  Its `2,492`-row bank therefore omitted every
+  unordered channel in `(5/3,7/4]`.
+- **First failed implication / minimal witness:** the reduced endpoint
+  `(P,Q)=(4,7)` satisfies `Q/P=7/4` and lies far below the computed product
+  bound, yet it was absent.  Changing a global consumed by the CSP embedding
+  did not change a separate literal inside the alphabet generator.  Thus the
+  original `530/31` verdict was not complete evidence even though it happened
+  to be numerically correct.
+- **Exact repair / strongest survivor:** the repaired generator accepts the
+  cap explicitly, checks every emitted row against it, and asserts inclusion
+  of the rational endpoint whenever its product is within the exact bound.
+  The complete bank has `2,728` rows.  Re-running both CSP search orders gives
+  the same `530` closed bodies and same `31` traps; all `158` finite policies,
+  `314` tail-head controls, and direct reflected comparisons still pass.
+- **Rule:** a monkeypatched geometric/search parameter is not evidence that
+  every upstream enumerator consumes it.  Thread changed bounds as explicit
+  arguments and freeze a boundary witness (here `(4,7)`) before trusting an
+  enlarged-domain census.
 
 ## MISTAKE-340 (2026-08-01, THM-1254 Lean full-invoice consumer) -- integer tooth addresses were generalized to rationals across a discrete gap step
 

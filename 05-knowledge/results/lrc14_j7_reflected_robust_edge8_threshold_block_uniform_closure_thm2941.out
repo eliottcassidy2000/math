@@ -1,0 +1,19 @@
+LRC14 reflected robust-edge-8 threshold-block uniform closure exact referee
+edge8_code_hist=(('DIIDI', 13), ('IDDII', 4), ('IDIDD', 4));code_row_counts=(('DIIDI', 430352), ('IDDII', 119808), ('IDIDD', 102528))
+connected_projective_rows=641144;cylinder_templates=11544;category_row_counts=(('(1, (1, 1, 0, 0, 0, 0), 0)', 14112), ('(2, (1, 1, 1, 1, 0, 0), 0)', 2016), ('(2, (2, 1, 1, 0, 0, 0), 0)', 30240), ('(3, (2, 2, 1, 1, 0, 0), 0)', 41728), ('(3, (3, 1, 1, 1, 0, 0), 0)', 63336), ('(4, (2, 2, 1, 1, 1, 1), 0)', 416), ('(4, (2, 2, 2, 1, 1, 0), 0)', 4000), ('(4, (2, 2, 2, 2, 0, 0), 0)', 8288), ('(4, (3, 2, 1, 1, 1, 0), 0)', 51072), ('(4, (3, 2, 2, 1, 0, 0), 1)', 39008), ('(4, (4, 1, 1, 1, 1, 0), 0)', 51744), ('(5, (3, 2, 2, 1, 1, 1), 0)', 4160), ('(5, (3, 2, 2, 2, 1, 0), 0)', 20336), ('(5, (3, 2, 2, 2, 1, 0), 1)', 528), ('(5, (3, 3, 1, 1, 1, 1), 0)', 9568), ('(5, (3, 3, 2, 1, 1, 0), 1)', 27200), ('(5, (3, 3, 2, 2, 0, 0), 2)', 29008), ('(5, (4, 2, 1, 1, 1, 1), 0)', 51168), ('(5, (4, 2, 2, 1, 1, 0), 1)', 49248), ('(6, (3, 3, 2, 2, 2, 0), 0)', 3072), ('(6, (3, 3, 3, 2, 1, 0), 2)', 5568), ('(6, (3, 3, 3, 3, 0, 0), 4)', 3456), ('(6, (4, 2, 2, 2, 1, 1), 0)', 34112), ('(6, (4, 3, 2, 1, 1, 1), 1)', 36400), ('(6, (4, 3, 2, 2, 1, 0), 2)', 46624), ('(7, (4, 3, 3, 3, 1, 0), 4)', 3024), ('(7, (4, 4, 2, 2, 2, 0), 3)', 11712), ('k5_cylinder', 3120), ('k5e_cylinder_a', 2184), ('k5e_cylinder_b', 2184), ('k5p3_cylinder', 4056));total_certificate_rows=652688;certificate_kinds=(('low', 652688),)
+component_word_counts=(240, 168, 168, 312);staged_fallback_words=2624;staged_fallback_high=((0, 5), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5))
+weakest_margin=424512216668439000719269/7282605102107128237009800;code=IDDII;category=(5, (3, 3, 2, 1, 1, 0), 1);body=(1, 3, 4, 9, 12, 13);nonrobust_edges=((1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5), (4, 5));high_edges=((1, 4), (2, 4), (2, 5), (3, 5), (4, 5));levels=(12, 3, 2, 4, 16, 9);floor=409/6552;certificate_pair=(2, 3);reduced_channel=(1, 2);gcd=2;j=5966;lift=1;endpoint_radius=586;kind=low
+direct_control_scales=(1, 2, 5);per_body_weakest_controls=63
+classifier_law=a maximum low clique plus a low spanning-tree growth order enumerates every connected projective word
+component_law=every disconnected edge-8 low graph is a finite five-level component plus one free star center
+scale_law=dilating the connected component preserves its reduced channel and decreases transport loss and component debt
+conclusion=all 21 robust-edge-8 bodies close for every assignment of positive reflected levels
+corollary=arbitrary-level body closure rises from 2421 to 2442;remaining_bodies=561
+scope=reflected THM-2941 residual family only;physical LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+edge9_sha256=b708f0fc3b5e89d9a17301201b112cadbfa68c279aebe08b9ae486611b273858
+body_digest=17c120a9fb01b2e30cf42debad83dc80433f65d4eeba496414b537543c1b1641
+assignment_digest=76c30b33786c99b75b931ad688d9db2840c7ec7466550a727fca39fa65a41adb
+source_sha256=3f2552c7e316a6da821f8d78f859aa9d73b2d8b58081c0a31f8d233f37eec2f0
+semantic_sha256=af12592ebd25cd5745c34711c99aaba72c45eeb2cad62ee5b35ec6a7752b8da7
+all_exact_controls=PASS

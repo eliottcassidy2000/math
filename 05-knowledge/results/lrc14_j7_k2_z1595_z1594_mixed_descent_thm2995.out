@@ -1,0 +1,17 @@
+LRC14 projected k=2 exact mixed descent through z1595 and z1594
+referee_source_sha256=53fdc5c3c146d4b66a2656d249ea2c8ddec6721342c69063b49c41976e2c021f
+base_source_sha256=97dc7a8bdf3103d1e3cf223fe862be217dec4fe128647bf710fb7d26fcf2bf84
+base_output_sha256=435e186056ab2727b518e1f4f24f08e6c76708464c6880ae89f8c92d33168159
+inherited_cap=1598;atlas_gap=1596..1598 empty;boundary_rows=z1595:2,z1594:2
+closure_partition=ordinary_all_label:2;forced_high_scalar_empty:2;empty:4;survivors:0
+ordinary_ledger=scalar:46;crude:7;status:20;status_survivors:19;exact_status_certificates:20;literal_packets:23;projected_kills:23
+CASE;route=ALL-LABEL;z1=1595;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=44/149205;first_d=2352;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;divisors=59;trials=557845;counts=(22, 3, 0, 19);stage_sha256=('548a1bc0236e4c86f0a36b9f1350c5366acb450be12ef2f219b4dba9d11e248f', '769c15dc9bb58952d3d12d97ee06d8fd8c41c86d80d488333dfd7c1dfe0d22bc', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', '725adadf5dd2ddfff382dbc161caaeb8d79fed07c477faba0278f150bb8ecd87');exact_status_certificates=0;cells=4196;packets=23;kills=23;minimum_margin=16/273;maximum_prefix_cells=2;direct_mass=1/1;state_sha256=28765633006071b2d278e9eb256e7a0c2830fc0e1e121686fb8211700d960f10;conclusion=EMPTY
+CASE;route=FORCED-HIGH;z1=1595;E=1,8,10,12,13,14;h=811/2548;r=38;L=152880;high_floor=13250;delta1=23063/56896840;lower=811/231868;two_high_gap=2515378673/3508202257560;exact_one_high_gap=23779715761/585869777012520;top_lows=(1612, 2340, 2004);best_high_d=196;best_high_value=149/909636;best_high_label=13260;amplitude_sha256=3657bf41a83bcaf25698d30f22f15e9cae503c5f7d1e8091eed90b111887163b;conclusion=SCALAR-EMPTY
+CASE;route=ALL-LABEL;z1=1594;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=253/820113;first_d=5880;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;divisors=59;trials=557845;counts=(24, 4, 20, 0);stage_sha256=('c0762b0e2668d2dc3abb1f67b914b66f5fccb9312c7cb114b43b59c527edb0d3', '7c89c215d281495aef6a217a7a386bad96d5762917e3d76e887129a5987e4bd8', '8b40b6b076e8314db18b7d441f0b40e392ffce0795d1ea650013d9bc458ef88d', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d');exact_status_certificates=20;cells=0;packets=0;kills=0;minimum_margin=NONE;maximum_prefix_cells=0;direct_mass=NONE;state_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;conclusion=EMPTY
+CASE;route=FORCED-HIGH;z1=1594;E=1,4,10,12,13,14;h=853/2548;r=34;L=76440;high_floor=6625;delta1=8429/35538230;lower=853/231868;two_high_gap=3253576657/3695051926020;exact_one_high_gap=355145689/1231683975340;top_lows=(1612, 2340, 1736);best_high_d=490;best_high_value=53/176988;best_high_label=6708;amplitude_sha256=7ea2123f3a76d969c5d381c546529d3d0f0fda268e95be3674f60e9415c46879;conclusion=SCALAR-EMPTY
+hostile_controls=the z1595 ordinary row has 19 status survivors requiring 23 exact projected packets;both HIGH-TAIL rows retain strictly positive exact one-high gaps
+consequence=projected k=2 first drift label z1<=1593
+scope_boundary=finite-exact THM-2995 input only;remaining 1580..1593 band, other sectors, and LRC(14) remain open
+profile_sha256=e6e15becad5e29ab6bf7526daaeafa9b2ecd5d1cece3ed52e123613fbcdae207
+semantic_sha256=804b8363a34ecd2ef20bf238bdf7dd294b2e97ea273868aa587edf65cf66cd34
+all_exact_controls=PASS

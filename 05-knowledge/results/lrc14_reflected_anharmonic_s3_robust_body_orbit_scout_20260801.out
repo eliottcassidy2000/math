@@ -1,0 +1,29 @@
+LRC14 reflected anharmonic-S3 robust-body orbit exact scout
+universe=all 3003 six-subsets of labels 1..14;14=P1(F13) infinity;13=0
+action_generators=s:r->1/r,c:r->-1/(1+r);permutations=(('1', (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)), ('s', (1, 7, 9, 10, 8, 11, 2, 5, 3, 4, 6, 12, 14, 13)), ('c', (6, 4, 3, 5, 2, 11, 8, 10, 9, 7, 1, 14, 12, 13)), ('c2', (11, 5, 3, 2, 4, 1, 10, 7, 9, 8, 6, 13, 14, 12)), ('sc', (11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 13, 12, 14)), ('sc2', (6, 8, 9, 7, 10, 1, 4, 2, 3, 5, 11, 14, 13, 12)))
+robust_predicate=1/105-4(a+b)/(14*lcm(E))>sum_e e/[7(14*lcm(E)-e)];edge_hist=((0, 211), (1, 88), (2, 41), (3, 53), (4, 53), (5, 36), (6, 46), (7, 33), (8, 21), (9, 35), (10, 32), (11, 15), (12, 37), (13, 26), (14, 59), (15, 2217))
+uniform_closure_bank=robust_edges>=8:2442;residual=robust_edges<8:561
+closure_dependency=edge9 bank plus exact uniform closure of all 21 edge8 bodies;the latter is an input, not reproved here
+edge8_dependency_source_sha256=3f2552c7e316a6da821f8d78f859aa9d73b2d8b58081c0a31f8d233f37eec2f0
+edge8_dependency_output_sha256=90d42c1369532e4d31cfacbf4ddf455fa330075c878b414831e489eec32ecc2b
+edge8_dependency_semantic_sha256=af12592ebd25cd5745c34711c99aaba72c45eeb2cad62ee5b35ec6a7752b8da7
+residual_transitions=(element,residual_to_residual,residual_to_bank)=(('1', 561, 0), ('s', 61, 500), ('c', 58, 503), ('c2', 58, 503), ('sc', 25, 536), ('sc2', 245, 316))
+orbit_profile=((orbit_size,residual_count),orbit_count)=(((1, 0), 1), ((1, 1), 1), ((2, 0), 2), ((3, 0), 12), ((3, 1), 20), ((3, 2), 1), ((6, 0), 130), ((6, 1), 191), ((6, 2), 139), ((6, 3), 23))
+residual_complete_representative_multiplicity=((number_of_S3_elements_landing_in_robust_K6),body_count)=((0, 1), (2, 48), (3, 131), (4, 276), (5, 105))
+residual_orbit_complete_profile=((orbit_size,residual_count,distinct_robust_K6_members),orbit_count)=(((1, 1, 0), 1), ((3, 1, 1), 4), ((3, 1, 2), 16), ((3, 2, 1), 1), ((6, 1, 2), 1), ((6, 1, 3), 9), ((6, 1, 4), 76), ((6, 1, 5), 105), ((6, 2, 2), 4), ((6, 2, 3), 43), ((6, 2, 4), 92), ((6, 3, 2), 11), ((6, 3, 3), 12))
+point_orbits=(('boundary', (12, 13, 14)), ('harmonic', (1, 6, 11)), ('equianharmonic', (3, 9)), ('generic', (2, 4, 5, 7, 8, 10)))
+fixed_bodies=(body,robust_edges,point-orbit-description)=(((1, 6, 11, 12, 13, 14), 15, 'boundary+harmonic'), ((2, 4, 5, 7, 8, 10), 2, 'generic'))
+unique_trapped_orbit=((2,4,5,7,8,10),);this is the generic P1(F13) orbit
+c2_hard_body_orbits=(('H', (((1, 2, 3, 4, 6, 12), 0), ((1, 2, 3, 5, 11, 13), 15), ((1, 6, 7, 8, 9, 14), 9), ((1, 7, 9, 10, 11, 12), 15), ((3, 4, 5, 6, 11, 14), 15), ((6, 8, 9, 10, 11, 13), 15))), ('H2', (((1, 2, 3, 7, 11, 13), 15), ((1, 2, 6, 7, 9, 14), 0), ((1, 3, 4, 6, 8, 12), 0), ((1, 5, 9, 10, 11, 12), 15), ((3, 5, 6, 10, 11, 14), 15), ((4, 6, 8, 9, 11, 13), 15))), ('B', (((1, 2, 4, 6, 8, 12), 0), ((1, 2, 5, 7, 11, 13), 15), ((1, 2, 6, 7, 8, 14), 1), ((1, 5, 7, 10, 11, 12), 15), ((4, 5, 6, 10, 11, 14), 15), ((4, 6, 8, 10, 11, 13), 15))), ('E', (((1, 2, 3, 5, 7, 13), 15), ((1, 2, 7, 8, 9, 14), 9), ((2, 3, 4, 6, 8, 12), 0), ((3, 4, 5, 10, 11, 14), 15), ((4, 6, 8, 9, 10, 13), 15), ((5, 7, 9, 10, 11, 12), 15))))
+positive_signal=every nontrivial S3 body orbit meeting the 561 residual contains a robust-K6 representative with all 15 edges
+scheduling_implication=pulling a robust-K6 representative back gives the full K6 incidence graph, hence every star, two-star, and spanning-tree schedule;all physical edge weights must still be recomputed on the source body at one common cell
+margin_distortion_identity_checks=270270;M_E(a,b)-M_gE(ga,gb)=(D_gE-D_E)+u_gE(a)+u_gE(b)
+destroyed_data=integer label order and gaps;14*lcm(E);safe-cell ruler/address and owner;pair-overlap floor;singleton debt and exact margin;level word and physical packet Z(E,q)
+guardrail=the anharmonic action is not a symmetry of the robust predicate or of the reflected physical packet;no LRC closure follows
+needed_map=for each residual body and every C2-wedge level word, a one-way common-cell weighted-certificate comparison controlling the exact scalar-plus-vertex-potential distortion;graph scheduling alone is already lossless
+body_digest=40419fbac9827f975c217f7e8dc517a929d8908d03c68977c153dd19136cf12a
+orbit_digest=d0df274a6d6a78ce771be6714247a96a73c8b90b580149ad9864aab9cb6968c1
+source_sha256=b97db74b9ea1d2879738a46e11dbdcdccf13474071c4cda80c095d509d2d35ca
+semantic_sha256=b953fbbf70537b0e982017030d76d3d703ad5a7c9919efeb82ba0fbb4a014a94
+normal_vs_python_O=BYTE_IDENTICAL
+all_exact_controls=PASS

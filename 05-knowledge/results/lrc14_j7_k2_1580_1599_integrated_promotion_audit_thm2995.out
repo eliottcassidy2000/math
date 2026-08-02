@@ -1,0 +1,17 @@
+LRC14 projected k=2 integrated promotion audit for z1=1580..1599
+referee_source_sha256=0c9804f0d4fad9525ecfbd9c0ccac6956fc57e38711cf3653c02432523cc0b19
+atlas_engine_sha256=a09b13e994ad6ab35e3324bd336e773b435b07859e6a3c924b84ec77f3e2aced
+component_manifest_sha256=f2816cc161b27f7b2df0c3cb1c99104bede7624e10c9dc19de85be78cc1c9811;component_files=5
+universe=six_body_roots:3003;body_labels:1..14;ordered distinct later nonaligned labels;scalar necessary condition
+monolithic_atlas_band=1580..1599;candidate_rows=60060;survivors=26;height_counts=((1581, 3), (1586, 11), (1588, 1), (1590, 3), (1594, 2), (1595, 2), (1599, 4));high_tail_rows=17
+closure_partition=component_cases:26;component_case_counts=(4, 4, 3, 12, 3);conclusions=(('EMPTY', 9), ('SCALAR-EMPTY', 13), ('SECTION-CLOSURE-BELOW', 4));translated_section_witnesses=4
+set_join=monolithic_atlas:26;pinned_atlas:26;component_cases:26;duplicates:0;missing:0;extra:0
+handoff_caps=(1598, 1593, 1589, 1585, 1579);terminal_cap=1579
+hostile_audit=four nonpositive exact one-high CASE rows match four zero-failure translated complete-section witnesses;all other CASE records are certified EMPTY or SCALAR-EMPTY
+semantic_boundary=finite-exact projected k=2 scalar necessary sector only;does not close z1<=1579, other k sectors, the full six-body/seven-tail rung, or LRC(14)
+promotion_state=all reserved THM-2995 computational inputs frozen;canonical theorem promotion remains a separate proof-text audit
+atlas_profile_sha256=0f02d797f9a3bc39871d4a4ccf72c42525ca3ca4109773469b8fe95b780780d3
+atlas_survivor_sha256=aab25b18f0bb9e2cb33eaa378176e720e1375c19891be9c97c67371f72ae2636
+closure_key_sha256=3aa39633058336c148fb3fc730e44fe88fbe817827faaa4506b613be4add804c
+semantic_sha256=4ba1d451dd931bb86458d7559ad1c44da9ca7622dd5d753818efe1566251aff9
+all_exact_controls=PASS

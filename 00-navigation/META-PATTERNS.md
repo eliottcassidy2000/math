@@ -49,15 +49,14 @@ THM-840/853.
 
 ## Expose the obstruction first, choose the scale second
 
-**Trigger / action:** if every fixed prime, bandwidth, radix, exponent, or
-cutoff loses cancellation, first retain and prove nonzero the whole colliding
-face, packet, current, or missing-facet deficit; only then choose scale outside
-its finite bad set/error budget. **Mechanism:** the smaller obstruction exposes
-the controlling valuation, spectral quantum, Fourier height, carry, or boundary
-defect; Pascal/Lucas cancellation can preserve exactly the virtual boundary.
-**Counterindication:** scale may be fixed or aggregation target-destroying;
-require a seed and, for primitive targets, a slope/current sidecar. **Evidence:**
-THM-2022, THM-2159/2165, THM-2162/2163/2166, THM-2193/2298, and THM-2160.
+**Trigger / action:** if every fixed scale loses cancellation, retain the face;
+if it vanishes, locate common zero and evaluate a target-bearing
+transverse layer. **Mechanism:** this exposes the valuation,
+carry, or Gram defect; physical structure may select a finite next layer when
+arbitrary lifts cannot. **Counterindication:** require a seed and labels:
+THM-3058 has no bounded jet on an arbitrary zero face, while THM-3066 erases
+the pointed Keller ratio. **Evidence:** THM-2022, THM-2159/2165,
+THM-2193/2298, THM-3058, and the THM-3060/3062 transverse hierarchy.
 
 ## Discretize phase on boundary atlas
 

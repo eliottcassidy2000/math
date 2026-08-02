@@ -1,4 +1,4 @@
-theorem=THM-3063
+theorem=THM-3066
 status=PROVED_VERIFIED_EXACT
 contraction=(c0c1c2c3)*(P1,-P2,P3);sum=0_by_Pluecker
 cofactor_quotient=matching_triple_depends_only_on_product_c0c1c2c3

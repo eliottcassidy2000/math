@@ -15,17 +15,29 @@ status: >
   finite-low-pair torsion, torsion-density pigeonhole, scalar-splice,
   status-descent, and cardinality translated-band addenda improve the
   k=2/k=3 first-drift caps from 2142/380
-  to 1656/246.
+  to 1579/236 (using the THM-3041/3052/3061 continuation).
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
-  addendum closes the common-level reflected-stalk k=1 diagonal
-  `Z_(E,q)={qL-e:e in E}` for every `q>=1` and a finite heterogeneous
-  two-coordinate `q<=8` box, but not arbitrary k=1.  The zero/one-aligned
-  sector outside that family, the remaining finite censuses, the full
-  six-body/seven-tail rung, and LRC(14) remain open.  Verification is
-  internal exact computation and proof audit; there is no Lean or external
-  peer-review claim.
+  addendum closes the common-level reflected-stalk k=1 diagonal and a finite
+  heterogeneous box.  Signed difference graphs close every reflected packet
+  of level spread at most five.  The projective phase graph has clique number
+  five and its fully periodized high-channel fibre has sharp floor 1/105;
+  threshold-block refinements close arbitrary positive reflected levels on
+  a bank of 2,442 of the 3,003 bodies, leaving 561 uncovered rather than
+  proving them impossible.  A recursive cap-aware projective-CSP and
+  located-transport chain closes every body for spread D>=6 and base m>=D,
+  and a residue-class corner refinement extends this to 4m>=3D.
+  At the endpoint the new zero channel 1:2 completes the balanced gain
+  triangle (3/2)(4/3)=2; orientation-split tails close its four unconstrained
+  bodies.  Past cap two the balanced triangle becomes interior and no
+  full-cap component remains; 93 located policies and eleven tail lanes close
+  the cap-7/3 residual.  The remaining reflected certificate-failure locus is
+  confined to those 561 bodies in D>=6,1<=m<3D/4;
+  the finite censuses, full
+  six-body/seven-tail rung, and LRC(14) remain open.  Verification is internal
+  exact computation and proof audit; there is no Lean or external peer-review
+  claim.
 source: root-lrc14-j7-critical-wall-2026-07-29
 depends_on:
   - THM-735-bonferroni-simultaneous-multi-peel-defeats-the-clustered-non-isolated-wall
@@ -71,6 +83,22 @@ verification:
   - 05-knowledge/results/lrc14_j7_reflected_levels_all_q_mass_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_two_coordinate_q8_mass_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_two_coordinate_q8_mass_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_adjacent_pair_all_m_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_adjacent_pair_all_m_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_d1_signed_pair_complete_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_d1_signed_pair_complete_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_universal_pair_chromatic_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_universal_pair_chromatic_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_exceptional_proper4_d3_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_exceptional_proper4_d3_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_exceptional_d4_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_exceptional_d4_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_low_phase_clique_robust_body_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_low_phase_clique_robust_body_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_distinct_low_channel_body_safe_support_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_distinct_low_channel_body_safe_support_thm2941.out
+  - 04-computation/lrc14_j7_reflected_exceptional_low_channel_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_exceptional_low_channel_uniform_closure_thm2941.out
   - 04-computation/lrc14_j7_k3_projected_scalar_atlas_thm2941.py
   - 05-knowledge/results/lrc14_j7_k3_projected_scalar_atlas_thm2941.out
   - 04-computation/lrc14_j7_k3_projected_scalar_body_atlas_thm2941.py
@@ -205,6 +233,44 @@ verification:
   - 05-knowledge/results/lrc14_j7_k2_z1668_composite_closure_thm2941.out
   - 04-computation/lrc14_j7_k2_z1660_status_descent_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_k2_z1660_status_descent_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_robust_k6_minus_edge_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_robust_k6_minus_edge_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_robust_k6_minus_adjacent_pair_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_robust_k6_minus_adjacent_pair_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_robust_edge12_threshold_shapes_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_robust_edge12_threshold_shapes_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_robust_edge11_threshold_shapes_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_robust_edge11_threshold_shapes_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_robust_edge10_threshold_block_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_robust_edge10_threshold_block_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_robust_edge9_threshold_block_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_robust_edge9_threshold_block_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_robust_edge8_threshold_block_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_robust_edge8_threshold_block_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_d5_crossdet_tail_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_d5_crossdet_tail_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_d5_head_median_cell_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_d5_head_median_cell_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_c4_central_exception_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_c4_central_exception_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_c3_three_reverse_ladder_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_c3_three_reverse_ladder_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_c2_full_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_c2_full_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_three_halves_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_three_halves_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_four_thirds_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_four_thirds_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_one_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_one_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_three_quarter_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_three_quarter_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_phase_zero_gain_atlas_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_phase_zero_gain_atlas_thm2941.out
+  - 04-computation/lrc14_j7_k3_z239_gap238_z237_compositional_descent_thm3061.py
+  - 05-knowledge/results/lrc14_j7_k3_z239_gap238_z237_compositional_descent_thm3061.out
+  - 04-computation/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -882,6 +948,196 @@ and optimized replays have semantic hash
 `8c104172b30a3bceaec3fb7f24a48f92a785cf573ab69931f8f1345258409d05`.
 This is a finite heterogeneous box, not a common-scale lifting theorem or a
 closure of arbitrary `k=1`.
+
+The reflected problem admits a stronger pairwise description.  For arbitrary
+positive levels `q_e`, put `z_e=q_eL-e`.  Every body-safe cell has exact
+singleton sum
+
+```text
+sum_e mu(A_e)=6/7+epsilon(E,q),
+epsilon(E,q)=sum_e e/[7(q_eL-e)].                       (25i1)
+```
+
+Thus one pair overlap greater than `epsilon(E,q)` closes that cell by
+Bonferroni and contradicts aligned completion through `(25i)`.  For two labels
+at one level, their relative phase is the tent
+`max(0,1/7-||(b-a)t||)`.  Retaining its signed linear chart gives an exact
+all-level rational overlap formula and closes all `186,186` normalized
+two-level words.  The resulting universal good-pair graph is `K6` on `3,001`
+bodies.  On the two exceptions it has chromatic number four; its five missing
+edges are genuinely blind same-level corridors.  Consequently every word on
+at most three levels closes.  Exact analytic tails plus finite rational heads
+close the exceptional proper colourings at spreads three and four, so every
+reflected packet with
+
+```text
+max_e q_e-min_e q_e <=4                               (25i2)
+```
+
+is empty for every body and every minimum level.
+
+For unequal levels write `p=gP`, `q=gQ`, with `(P,Q)=1`.  The intrinsic
+projective fibre is the full periodization
+
+```text
+F_(P,Q)(z)=
+ [T_((P+Q)/14)(z)-T_(|P-Q|/14)(z)]/(PQ),
+T_s(z)=sum_(n in Z)(s-|z+n|)_+.                        (25i3)
+```
+
+Since `|T_s(z)-s^2|<=1/4`, one has
+
+```text
+F_(P,Q)(z)>=1/49-1/(2PQ).
+```
+
+An exact `63`-channel breakpoint bank sharpens this to
+
+```text
+min_z F_(P,Q)(z)>=1/105  when P+Q>=8,                  (25i4)
+```
+
+with equality only for `(P,Q)=(3,5)`.  The complementary low-phase ratio
+graph `P+Q<=7` has clique number exactly five; up to scaling its only
+five-cliques are
+
+```text
+{1,3/2,2,3,6},          {1,2,3,4,6}.                  (25i5)
+```
+
+Hence six distinct levels always contain a high-phase pair.  Transport from
+the primitive skeleton to the reflected slopes costs at most
+`4(a+b)/(gL)`.  Comparing `(25i4)` with the worst possible singleton debt
+defines a robust graph on the six body labels.  It is `K6` for exactly `2,217`
+of the `3,003` bodies.  The high-phase pair closes six distinct levels, while
+a repeated level closes on the same-level graph, except potentially on the
+two chromatic bodies.
+
+Those two bodies carry a stronger located sidecar.  An exact optimization of
+all `480` label-pair/oriented-low-channel profiles finds a body-safe cell with
+
+```text
+min_(0<=s<=1) F_(P,Q)((Pb-Qa)(j+s)/L)>=1/42.            (25i6)
+```
+
+After the same reflected transport, `(25i6)` still beats the full debt at
+`g=1`; exact direct controls at `g=1,2,5` agree.  It closes every low-channel
+unequal pair on both exceptions.  Thus arbitrary positive reflected levels
+close on all `2,217` robust-`K6` bodies, and the previously isolated `1,584`
+exceptional scale rays are empty.  Independently, all `720,720` distinct
+low-channel/body-pair configurations contain a whole strictly supported
+body-safe cell; the equal-channel control fails at exactly the five blind
+edges above.  This support theorem explains why distinct channels are never
+topologically invisible, but by itself supplies no uniform debt margin.
+
+The remaining arbitrary reflected problem is confined to the `786` bodies
+whose robust graph is not complete.  Failure of the displayed pair
+certificates is not a physical survivor statement.
+
+Subsequent threshold-block addenda sharpen that count without changing the
+pairwise observable.  Sort the bodies by the number of robust edges in the
+graph defined after `(25i4)`.  Exact finite projective banks, including the
+free-center cylinder cases rather than deleting their arbitrary coordinate,
+give the disjoint descent
+
+```text
+robust K6                    2,217
+K6 minus one edge             +59 = 2,276
+13 robust edges               +26 = 2,302
+12 robust edges               +37 = 2,339
+11 robust edges               +15 = 2,354
+10 robust edges               +32 = 2,386
+ 9 robust edges               +35 = 2,421
+ 8 robust edges               +21 = 2,442.             (25i7)
+```
+
+Every body counted in `(25i7)` closes for every assignment of positive
+reflected levels.  The edge-nine and edge-eight terminal audits check
+`440,352` and `652,688` exact certificate rows.  Their disconnected low
+components are handled as genuine cylinders rather than by bounding a free
+level.  Thus arbitrary-level closure leaves exactly
+
+```text
+3,003-2,442=561                                                (25i8)
+```
+
+bodies.  This is a sufficient-certificate residual, not a census of physical
+counterexamples.
+
+There are also two transverse all-body closures.  First, cross-determinant
+transport closes spread `D=5` for `m>=16`; an exact `m=1..15` head then checks
+`7,851,600` assignments, of which `16,076` require the canonical median
+body-safe cell.  All of them close, so `(25i2)` strengthens from `D<=4` to
+`D<=5`.  Second, the `C=3` phase bank has a unique zero channel `3:4`.
+Located transport closes `1,295/1,298` orientations, and three explicit
+reverse ladders close the residual orientations.  The exact scale law gives
+
+```text
+D>=6 and m>=3D  ==>  every reflected packet closes.           (25i9)
+```
+
+Five exact recursive refinements lower this cone boundary without assuming
+monotone interpolation:
+
+```text
+m>=2D,       2m>=3D,       3m>=4D,       m>=D,       4m>=3D. (25i10)
+```
+
+Each refinement regenerates the complete rational channel alphabet at its
+own projective cap, solves the gain-graph CSP in two search orders, and closes
+the residual bodies by oriented located controls plus analytic tails with
+exhaustive finite heads.  MISTAKE-345 records why the cap is an explicit
+generator argument: the first `4D/3` transcript accidentally retained the old
+literal `5/3` cutoff.  Its repaired `7/4` bank has `2,728` rows and reproduces
+the verdict only after the omitted channels are actually included.
+
+At `m=D`, the projective cap is two and the phase-zero gains are
+
+```text
+2, 3/2, 4/3,                  (3/2)(4/3)=2.              (25i11)
+```
+
+The cap-aware CSP closes `492/561` residual bodies and leaves `69`; `21`
+full-span components all contain the balanced gain triangle `(25i11)`.
+Complete policies close `65` traps by `894` oriented controls.  Four bodies
+are unconstrained.  On `H=(1,2,3,4,6,12)`, the reverse `2:1` channel makes the
+old ordered cell vanish, so the proof reverses the label pair below ratio one;
+the two half-interval tails and three whole-interval tails have `124`
+exhaustive head controls.  Therefore
+
+```text
+D>=6 and m>=D  ==>  every reflected packet closes.             (25i12)
+```
+
+The next cone has projective cap `7/3`.  Maximizing the transport error over
+the integer cone `4m>=3D` by the three residue classes of `m mod 3` gives the
+sharp corner `(D,m)=(8,6)`; singleton debt has the separate worst level five.
+The complete cap-aware bank has `9,857` primitive channels.  Its two-order CSP
+closes `459/561` bodies and leaves `102` traps, with no forced full-cap
+component: the gain triangle in `(25i11)` is now interior.  Ninety-three
+constrained traps close by `806` oriented located controls.  The other nine
+bodies close through eleven analytic tail lanes and `276` exhaustive heads;
+two bodies require an orientation split at ratio one.  Hence
+
+```text
+D>=6 and 4m>=3D  ==>  every reflected packet closes.            (25i13)
+```
+
+Consequently the current reflected obligation is confined to the `561`
+bodies in the wedge `D>=6,1<=m<3D/4`.  This is a
+sufficient-certificate residual, not a physical-survivor census.  The next
+qualitative boundary is cap `5/2`, where a new phase-zero gain enters.  In
+fact the correction floor `c>=-12/49` makes phase zero imply `PQ<=12`, so the
+global zero-gain atlas is exactly
+
+```text
+4/3, 3/2, 2, 5/2, 3, 4, 5, 6.                         (25i14)
+```
+
+In the prime-exponent lattice `(2,3,5)`, the prefix rank across `(25i14)` is
+`1,2,2,3,3,3,3,3` and its circuit nullity is
+`0,0,1,1,2,3,4,5`.  Thus cap two creates the first circuit, while cap `5/2`
+adds an independent prime-five direction rather than a new circuit.
 
 There is an exact all-scale functional form behind the discrepancy tail.
 Write the carrier components as
@@ -1984,6 +2240,12 @@ empty with minimum margin `903353/7131943`.  At `z1=1724` the two rows give
 empty with minimum margin `681/2821`.  Ordinary and optimized transcripts are
 byte-identical at every step.
 
+The theorem ID is stratified here.  THM-2970/2972 use only the scalar-wall,
+ray, and projected-residual core proved before this lower-descent addendum;
+they do not depend on the cap conclusion obtained by composing their outputs
+back into this maintained theorem.  Thus the displayed composition is not a
+dependency cycle.
+
 The decisive lower descent starts from the independent THM-2970/2972 closure of
 all `58` scalar-atlas rows on `1680<=z1<=1742`, which gives `z1<=1679`.
 Three complete all-body atlas replays then leave no unexamined integer height:
@@ -1995,6 +2257,10 @@ band       candidate rows   occupied heights
 1656..1660      15,015      1656:5, 1660:1.
 ```
 
+These are `78,078` atlas evaluations, not distinct `(height,body)` rows:
+the handoff heights `1668` and `1660` are deliberately replayed, leaving
+`72,072` distinct pairs.
+
 At `1670/1672`, the exact ledger is
 `259=32 crude+226 status+1 residual`; its one literal packet is projected-empty
 with margin `8929/15197`.  At `1665/1668`, six all-label rows give
@@ -2002,13 +2268,24 @@ with margin `8929/15197`.  At `1665/1668`, six all-label rows give
 `1296/5551`; exact forced-high ray envelopes make the other four rows
 scalar-empty.  Finally the unique `z1=1660` state has one exact common-status
 infeasibility witness.  Thus `1669,1671,1673..1679`,
-`1661..1664,1666,1667`, and `1657..1659` are certified empty bands, while the
-five scalar rows at `1656` are the next unresolved boundary.  In total, all
-`456` status certificates in this lower descent are verified exactly and
-excluded from the canonical digest representative.  Therefore
+`1661..1664,1666,1667`, and `1657..1659` are certified empty bands.  In total,
+all `456` status certificates in this lower descent are verified exactly and
+excluded from the canonical digest representative.
+
+A separate boundary referee closes all five `z1=1656` rows.  Four ordinary
+rows give `434` exact common-status certificates and `36` literal packets,
+all projected-empty.  On the exceptional body `(1,8,10,12,13,14)`, forcing
+one later label above the high wall replaces the positive unrestricted
+top-four scalar sum by an exact gap
 
 ```text
-z_1<=1656,                                                    (25q6)
+-56372503/681312815820<0.
+```
+
+Normal and optimized replays agree byte for byte.  Hence
+
+```text
+z_1<=1655,                                                    (25q6)
 ```
 
 uniformly over all distinct later nonaligned labels, with no finite label
@@ -2017,7 +2294,8 @@ horizon.  The three final source/output/semantic hash triples are
 ```text
 z1672/z1670  b87b7e0e...bb11e4 / bfcf783f...149134 / 6f3d3bd7...c6493a
 z1668/z1665  9019e9da...734ed6 / e24fdb89...86515e / 17f0eaf3...95d1f4
-z1660         b7d33448...5b305a / 1a1a8508...2fed2e / 8464180d...ca345.
+z1660         b7d33448...5b305a / 1a1a8508...2fed2e / 8464180d...ca345
+z1656         593988b1...0fa6b3 / c93f0fd1...b1207 / 10c0562f...365321.
 ```
 
 For `k=5`, there is a second, Gram-facing derivation.  Pointwise
@@ -2207,9 +2485,31 @@ and
 `9aecfd75893a537278dcc4e50af7bd45fa2b7925d017748781a18c7163bb716d`;
 ordinary and optimized replays are byte-identical.
 
+The reflected wedge assembly
+`04-computation/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.py`
+pins sixteen LF-normalized terminal sources and transcripts, including the
+edge-eight block and all five recursive cone refinements.  Its
+source/output/semantic SHA-256 values are respectively
+`bf1ecb29c6df2f5e97dadb35a4d39be8d9db3b70678db487964ebbfaaf448aa6`,
+`93bed962c7f30fbf0cf3c585226250f3d992c0b45beb9a156620f7ee8aa7db07`,
+and `9505b322825e5c5e767942413b462a3fd7c32ad297a9f6d36fb998f85d4ba405`.
+Fresh ordinary and optimized replays are byte-identical to each other and to
+the stored transcript.  The edge-eight terminal source/output/semantic hashes
+are `3f2552c7e316a6da821f8d78f859aa9d73b2d8b58081c0a31f8d233f37eec2f0`,
+`90d42c1369532e4d31cfacbf4ddf455fa330075c878b414831e489eec32ecc2b`,
+and `af12592ebd25cd5745c34711c99aaba72c45eeb2cad62ee5b35ec6a7752b8da7`;
+both fresh interpreters replay all `652,688` exact rows.
+The global phase-zero atlas source/output/semantic hashes are
+`dca35f41c7ca41955385f4f8633d8b6af435d4a15a937cfded83d6187f78be3b`,
+`bab96575535e8fa314d0a6e67e6304242f600048d64d09bd632ba01b55ab9513`,
+and `8a934cf2a5ecbc0e54a720e89d162be89fd0c4d932d1019ef167cb64443b0b18`;
+ordinary and optimized replays are byte-identical.
+
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,
-handle arbitrary packets, finish its `k=2,3` finite decision trees, classify
-the zero/one-aligned multi-drift address hypergraph, close the
-six-body/seven-tail rung, or prove LRC(14).  The independent THM-2928
-divisor-status route now closes `k=4`; `k=2,3` remain open.
+close the `561`-body reflected wedge `D>=6,1<=m<3D/4`, finish the remaining
+`k=2,3` finite decision trees, classify the zero/one-aligned multi-drift
+address hypergraph, close the six-body/seven-tail rung, or prove LRC(14).
+The independent THM-2928 divisor-status route closes `k=4`; THM-2980/2995
+and THM-2981/3061 lower the composed `k=2,3` caps to `1579/236`, respectively,
+without emptying the sectors below those caps.

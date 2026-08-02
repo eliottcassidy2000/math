@@ -1,0 +1,29 @@
+LRC14 reflected C=4 central-exception cone closure exact proof
+universe=bodies:3003;spread:D>=6;cone:m>=4D
+phase_C4_bank=((4, 5, Fraction(1, 70)), (5, 6, Fraction(2, 105)), (6, 7, Fraction(1, 49)), (7, 8, Fraction(1, 49)), (8, 9, Fraction(5, 252)), (9, 10, Fraction(2, 105)), (9, 11, Fraction(13, 693)));global_floor=1/70;unique_equality_channel=(4,5);off_channel_floor=1/55
+pair_selection=ordinary complete bodies use closest normalized label pair;exception slots (0,1) are same-level-good
+pair_ratio_dichotomy=hostile E=(1,2,3,4,6,12) unique at 1/84;all other 3002 bodies <=1/168
+nonhostile_D6_invoice_worst=1374624312892139/775692109936614794;E=(1, 3, 4, 6, 8, 12);L=336;pair=(1, 2);ratio=1/168;debt=15199561634868606/25209993572939980805
+hostile_off_45_D6_margin=32290/11141229;phase=1/55;drift<=12D/(840D-1);debt<=1/(168D-3)
+hostile_forward_45_D6_margin=247277/56716170;levels=(4D,5D);phase=1/70;drift=6D/(672D-1)
+hostile_reverse_45=sole crossdet exception;levels=(5D,4D);central_cell=90;overlap=36D(322D-1)/[(840D-1)(672D-2)]>23/1120>1/70>debt
+reverse_arc_proof=overlaps iff 4k-5l=-2;(k,l)=(5r+2,4r+2);scaled_lengths=12096D-540-1008r
+homotopy_gate=|eta|<=6D/(840D-1)<1 and all transported target slopes remain >1
+CONTROL;D=1;reverse_levels=(5,4);arc_counts=(5,4);segments=1;overlap=5778/281065
+CONTROL;D=2;reverse_levels=(10,8);arc_counts=(10,8);segments=2;overlap=23148/1126609
+CONTROL;D=6;reverse_levels=(30,24);arc_counts=(30,24);segments=6;overlap=208548/10153585
+CONTROL;D=13;reverse_levels=(65,52);arc_counts=(65,52);segments=13;overlap=979290/47683273
+monotonicity=transport and singleton debt decrease with m and D on m>=4D;D=6 invoice is uniform
+conclusion=all reflected residual packets with D>=6,m>=4D close on all 3003 bodies
+corollary=the still-open reflected D>=6 wedge is confined to m<4D
+scope=reflected THM-2941 sufficient family only;physical LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+universal_sha256=a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8
+universal_output_sha256=7364d5866171405fa90539a9ad76727c0c52f020ac1a104a1ab4f0276aedd115
+c5_source_sha256=d2c8b4a26e87bce98c8ea94e82c38e81eae95504a6a7ef70db53670f197e8ec8
+c5_output_sha256=08553b2e00589e65fe3127d7ec5c9d90257978bd03d6c2f11d953527ff4675a7
+body_digest=9ecda3553cc0d48398271df5948349aa908d83313c9a5d242d3ed96a5ead7090
+source_sha256=48a21cfd26c6250a317d37a59523012548204f7b217538d74a5c4b2e21b6f9ae
+semantic_sha256=fd355370e96f889667ea1c5b391eccb1144135ea0f73a24b5a73527536268c97
+all_exact_controls=PASS

@@ -1,0 +1,13 @@
+LRC14 projected k=2 exact z1645/z1642 singleton descent
+referee_source_sha256=f1b4ee77b3749b52be5e67a3b733282b2f1ccb8c70197240af5a820c7a3786c8
+base_source_sha256=d38929a73bcdd36824273b727ca10a19c842f5c70e35310d1c041e8d3d23377e
+base_output_sha256=a1a3cfe48e4e8034760c61b7fdbae282a10e052e3d0374a837788fd08e0e0b26
+inherited_cap=1649;atlas_gaps=1646..1649,1643..1644 empty;boundary_rows=z1645:1,z1642:1
+closure_ledger=scalar:21;crude:0;status:20;status_survivors:1;exact_status_certificates:20;literal_packets:1;projected_kills:1
+CASE;z1=1645;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=31/128968;first_d=336;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;divisors=59;trials=557845;counts=(5, 0, 4, 1);stage_sha256=('e2d07d9695dd56efaadccd257e9298fe981a54ef811ca263a686c9b9934fbcfa', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', 'f2dd91da2a847390bdf66c6979e24b9ff7a96c9576407caf58c74f819061fc2c', '38aca26c0fc6c35ef414f73eddf67369bf71d87e0e225db164c5fc8d948ae4c0');exact_status_certificates=4;cells=4196;packets=1;kills=1;minimum_margin=46807/260897;maximum_prefix_cells=2;direct_mass=1/1;state_sha256=3b8157126f9f961e1a0a8cc285a45e7b58e6cdf122445528721b682536f56360;conclusion=EMPTY
+CASE;z1=1642;E=1,4,8,10,12,14;h=1049/2940;r=34;L=11760;lower=1049/267540;delta1=4741/16896180;first_d=5880;ray_sha256=276909b5f679a0675eb6c79a12d9cf2b5024f1d3528cc0a7df7014a30f607674;divisors=59;trials=557845;counts=(16, 0, 16, 0);stage_sha256=('e129d941ce6cd0b32e0e7200a31bd3ccae5a6bcc873e3a0354832a4aa05d2cd2', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d', 'a22b7b98e832f97b43b6b087dfb1ee180aa46ac786a5843c282ac10a1e458c84', '2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d');exact_status_certificates=16;cells=0;packets=0;kills=0;minimum_margin=NONE;maximum_prefix_cells=0;direct_mass=NONE;state_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d;conclusion=EMPTY
+consequence=projected k=2 first drift label z1<=1641
+scope_boundary=finite-exact THM-2980 input only;full reserved theorem and LRC(14) remain open
+profile_sha256=cc71cf7da4b44c632138022909c14465ca3e39ba86fc944bae5ad86fc3eb2f21
+semantic_sha256=4526c21a7417b69ff0bf51d4b6a5b6d42b532530c4e65069b92c763cd4b02425
+all_exact_controls=PASS

@@ -1,0 +1,37 @@
+LRC14 reflected C=3 three-reverse-ladder cone closure exact proof
+universe=bodies:3003;upstream_arbitrary_level:2354;active_bodies:649;spread:D>=6;cone:m>=3D
+phase_C3_bank=((3, 4, Fraction(0, 1)), (4, 5, Fraction(1, 70)), (5, 6, Fraction(2, 105)), (6, 7, Fraction(1, 49)), (7, 8, Fraction(1, 49)), (7, 9, Fraction(1, 49)), (8, 9, Fraction(5, 252)), (9, 10, Fraction(2, 105)), (9, 11, Fraction(13, 693)));unique_zero=(3,4);off_zero_floor=1/70;unique_next=(4,5);off_34_45_floor=1/55
+nonzero_channel_invoice=647 bodies;D6_worst=1173003125846269/758117895348950710;E=(2, 3, 4, 6, 8, 12);L=336;pair=(0, 1);ratio=1/168;debt=4079143043377062/4927766319768179615
+located_34_transport=1298 orientations;certified=1295;residual=3;weakest_positive=38701426153927529/236532783348872621520;E=(2, 3, 4, 6, 8, 12);cell=180;pair=(0, 1);orientation=(3, 4);phase=1/336;gain=1007/1015728;debt=4079143043377062/4927766319768179615
+three_reverse_residuals=(((1, 2, 3, 4, 6, 12), 90, (0, 1), (4, 3)), ((1, 3, 4, 6, 8, 12), 174, (1, 2), (4, 3)), ((2, 4, 6, 8, 9, 12), 540, (3, 4), (4, 3)))
+reverse_formulas=(30D(91D-2)/[(252D-1)(672D-1)],14D(91D-2)/[(252D-1)(448D-1)],D(924D-17)/[(336D-1)(504D-1)])
+reverse_D6_margins=('182490365907103031562/12371762617323495134105', '276803509033353286134/26486196258041612764945', '6153999974859460056/1201682332635323928935');all_increasing_in_D
+exceptional_nonzero_margins_D6=H_off45:328738/166943865;H2_off45:2026944006691831647523/291348158838457740414395;H_forward45:712897/177052890;H2_reverse45:130921463361507916385/33108238180688563064718
+hostile_reverse45=reuse C4 central ladder at arbitrary scale g>=5;overlap>23/1120>1/70>debt
+scale_law=located primitive phase is invariant;drift and debt decrease with D and m;3:4 can occur only at m=3D
+CONTROL;E=(1, 2, 3, 4, 6, 12);D=1;reverse34_levels=(4,3);arc_counts=(4,3);segments=1;overlap=2670/168421
+CONTROL;E=(1, 2, 3, 4, 6, 12);D=2;reverse34_levels=(8,6);arc_counts=(8,6);segments=2;overlap=10800/675529
+CONTROL;E=(1, 2, 3, 4, 6, 12);D=6;reverse34_levels=(24,18);arc_counts=(24,18);segments=6;overlap=97920/6090841
+CONTROL;E=(1, 2, 3, 4, 6, 12);D=13;reverse34_levels=(52,39);arc_counts=(52,39);segments=13;overlap=92118/5721425
+CONTROL;E=(1, 3, 4, 6, 8, 12);D=1;reverse34_levels=(4,3);arc_counts=(4,3);segments=1;overlap=1246/112197
+CONTROL;E=(1, 3, 4, 6, 8, 12);D=2;reverse34_levels=(8,6);arc_counts=(8,6);segments=2;overlap=1008/90037
+CONTROL;E=(1, 3, 4, 6, 8, 12);D=6;reverse34_levels=(24,18);arc_counts=(24,18);segments=6;overlap=45696/4060057
+CONTROL;E=(1, 3, 4, 6, 8, 12);D=13;reverse34_levels=(52,39);arc_counts=(52,39);segments=13;overlap=214942/19070325
+CONTROL;E=(2, 4, 6, 8, 9, 12);D=1;reverse34_levels=(4,3);arc_counts=(4,3);segments=1;overlap=907/168505
+CONTROL;E=(2, 4, 6, 8, 9, 12);D=2;reverse34_levels=(8,6);arc_counts=(8,6);segments=2;overlap=3662/675697
+CONTROL;E=(2, 4, 6, 8, 9, 12);D=6;reverse34_levels=(24,18);arc_counts=(24,18);segments=6;overlap=33162/6091345
+CONTROL;E=(2, 4, 6, 8, 9, 12);D=13;reverse34_levels=(52,39);arc_counts=(52,39);segments=13;overlap=155935/28608217
+conclusion=all reflected residual packets with D>=6,m>=3D close on all 3003 bodies
+corollary=the still-open reflected D>=6 wedge is confined to m<3D
+scope=reflected THM-2941 sufficient family only;physical LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+low_phase_sha256=416c36f16f7c821feb8d260882711d2717069147b8604a93ba60432785cf1d1c
+edge11_sha256=d5ddf85650d2786da10107919c07f7f578e9c234609965491ef856b8f90b3085
+edge11_output_sha256=8c3f9e6c14eca3f0276fba9cb8aa5babbcee3618f4277f77f99302cab9034b32
+c4_source_sha256=48a21cfd26c6250a317d37a59523012548204f7b217538d74a5c4b2e21b6f9ae
+c4_output_sha256=fe4a949e68fe71fadab5068f688ac1b0d3aeb0c32b13d94a6d49bb2212342aa3
+body_digest=4b231a5a3089abd039f18a34c590b4a92585f805a526f8fcfe420ebeb16f0c4b
+source_sha256=102ef691101bf8d00721e08e1b9b229c893fb532d06dc59959a26a31cb87cbe8
+semantic_sha256=c99dc8d1da0f1b3910641c0889aba79597e03f1562dd41653c75be8e0866e241
+all_exact_controls=PASS

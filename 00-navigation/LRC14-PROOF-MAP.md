@@ -2,13 +2,14 @@
 
 > **DETAILED MACHINERY MAP:** read [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) first. This panel is current; dated sections preserve searchable history and may be superseded.
 
-## 2026-07-30 current control panel
+## 2026-08-01 current control panel
 
-**Status: OPEN.** THM-2923 leaves at most six body speeds.  THM-2941 gives wall `h/7` with empty zero excess; THM-2928/2941/2970/2972/2981 empty aligned `k>=4`, cap `k=2,3` at `1,656/246`, and empty the common-level reflected `k=1` diagonal.  The remaining censuses, arbitrary `k<=1`, rung, and LRC(14) are open; `q<=25` is false.
+**Status: OPEN.** THM-2923 leaves at most six body speeds. THM-2928 empties aligned `k>=4`; THM-2995/3061 cap projected `k=2,3` at `1,579/236`; the audited THM-2941 assembly confines reflected-`k=1` certificate failure to the bank-uncovered wedge `561` bodies, `D>=6,1<=m<3D/4`. Arbitrary `k<=1`, the rung, and LRC(14) remain open; `q<=25` is false.
 **Scalable quotient.**  Support transfer/Möbius counting reduce `k=3/2` to `26,970/27,163` rows; septimal and located-phase screens cut raw occurrences `21.36b/951.55b -> 2.55b/200.14b`.  These are necessary-state quotients, not physical covers; most location/unit data remain.
 **Status theorem.**  For upward `A`, real maximum is `min(1,tau_H)`, `H=min(A)`: `p` cover variables replace `2^p` cells, losing integer location, threshold coupling, and needle shape.
 **Missing coordinate.**  For drifts `Z`, `P=phi_L(C_E minus union_z D_z)`; aligned completion is `P subset union_(a in A)D_a`.  Compact strict-open seams are pointwise, not a.e.
-**Descending banks.**  For `k=3`, torsion/status closes through `297`; the next 45 occupied rows split `1549=659+882+8`, and order-two/four torsion closes the eight `z286` terminals, leaving `275`.  THM-2979 closes the ten `z275` rows by `2033=273+1695+65`; clean-cell density above `1/7` forces an exact order-seven collision in each terminal.  The THM-2941 addendum closes 29 further rows at `274,273,272` by `246=97+149`; height `271` is empty.  THM-2981 then closes `423` rows at the fifteen occupied heights `270..247`: `202807=84483` crude `+114027` exact-status `+4297` residual states.  Its `7553` one-high cases use THM-2984's complete-cell translated-band gate `ceil(d/7)<=d/R<|S|`; no torsion pair is selected.  The `k=3` cap is `246` and ledger `375,251`; `194` rows at the next height remain.  Scan those first by `|S|>ceil(d/7)` and then, below count, by the exact unit-indexed maximum-gap profile of the affine transporter.  For `k=2`, THM-2970/2972 first close all `58` rows on `1680..1742`, giving `1679`.  Three canonical all-body atlases then check `36,036+27,027+15,015=78,078` candidate rows.  Their occupied heights are `1668:9,1670:2,1672:1`; then `1660:1,1665:1,1668:9`; then `1656:5,1660:1`.  Exact status/projected and forced-high-ray closures empty every shell above `1656`; `456` exact rational status witnesses are audited but their solver-selected bases are omitted from digests.  Thus the cap is `1656`, with precisely five scalar rows at that boundary.  The earlier `z1736`, `z1732`, and `z1724` packets remain hostile overlap controls.
+**Reflected cone.**  THM-2941's cap-aware gain CSP now closes `4m>=3D`.  Its global phase-zero atlas is exactly `4/3,3/2,2,5/2,3,4,5,6`.  At cap two the first three form a forced balanced triangle; at cap `7/3` that triangle is interior and no full-cap component remains.  Cap `5/2` adds an independent prime-five direction, not a new circuit.
+**Descending banks.**  For `k=3`, torsion/status closes through `297`; the next 45 occupied rows split `1549=659+882+8`, and order-two/four torsion closes the eight `z286` terminals, leaving `275`.  THM-2979 closes the ten `z275` rows by `2033=273+1695+65`; clean-cell density above `1/7` forces an exact order-seven collision in each terminal.  The THM-2941 addendum closes 29 further rows at `274,273,272` by `246=97+149`; height `271` is empty.  THM-2981 closes `423` rows at the fifteen occupied heights `270..247`, THM-3033 closes 200 more through `244`, and THM-3041/3052/3061 empty every projected row through `z_1=237`, including gaps `241` and `238`: cap `236`, ledger `374,780`, with one row at the next occupied layer.  For `k=2`, THM-2970/2972 close through `1679`; THM-2980's monolithic `3,003*80` audit closes all 68 candidate rows at `1600..1679`, and THM-2995's `3,003*20` audit closes all 26 at `1580..1599`.  Their typed joins include literal, torsion, scalar, and translated-section terminals, giving projected cap `1579`.  The earlier `z1736`, `z1732`, and `z1724` packets remain hostile overlap controls.
 
 ### The present reduction graph
 
@@ -147,7 +148,6 @@ retain ties and hyperedges otherwise.
 7. Partition resonance cells only after proving THM-2054's missing lifted
    plateau; separate its numerical budget from model identification and route
    nonlifting resonances separately.
-
 > ## 2026-07-19 S78 CONTINUATION — TWO FINITE FRONTS MOVE, AND THE FANO QUOTIENT IS LOCAL-SURJECTIVE
 >
 > THM-1258 closes the primitive proper AP-centred Hamming-six face at common

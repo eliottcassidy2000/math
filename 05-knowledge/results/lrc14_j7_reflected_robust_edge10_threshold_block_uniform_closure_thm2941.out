@@ -1,0 +1,25 @@
+LRC14 reflected robust-edge-10 threshold-block uniform closure exact referee
+edge10_code_hist=(('DIIII', 11), ('IDIID', 15), ('IIDDI', 6));code_row_counts=(('DIIII', 89760), ('IDIID', 73440), ('IIDDI', 25344))
+connected_projective_rows=185904;free_center_cylinder_templates=2640;total_certificate_rows=188544;certificate_kinds=(('low', 188544),)
+weakest_margin=5010286913481743662879783/81689790267700879566650040;code=IDIID;category=(5, (4, 2, 2, 1, 1, 0), 1);body=(1, 2, 4, 6, 9, 13);nonrobust_edges=((1, 5), (2, 5), (3, 4), (3, 5), (4, 5));high_edges=((1, 5), (2, 5), (3, 4), (3, 5), (4, 5));levels=(2, 12, 4, 8, 3, 5);floor=59/936;certificate_pair=(2, 3);reduced_channel=(1, 2);gcd=4;j=3564;lift=1;endpoint_radius=578;kind=low
+free_center_weakest_margin=67641571398179833793/1083489281890452517080;body=(1, 2, 3, 5, 6, 13);leaf_levels=(1, 3, 2, 4, 6);floor=719/10920;certificate_pair=(2, 3)
+direct_control_scales=(1, 2, 5);per_body_weakest_controls=96
+free_center_law=the K5 leaf ray dilates while the arbitrary center debt is bounded by its level-one value
+scale_law=multiplying finite words or cylinder leaves preserves the reduced channel and cell and decreases loss and controlled debt
+conclusion=all 32 robust-edge-10 bodies close for every assignment of positive reflected levels
+corollary=arbitrary-level body closure rises from 2354 to 2386;remaining_bodies=617
+scope=reflected THM-2941 residual family only;physical LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+low_phase_sha256=416c36f16f7c821feb8d260882711d2717069147b8604a93ba60432785cf1d1c
+exceptional_sha256=bde992db1edbd9dd744ff22744a1afef79cf4bcc54a2f918793c2603f062df7c
+universal_sha256=a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8
+edge11_sha256=d5ddf85650d2786da10107919c07f7f578e9c234609965491ef856b8f90b3085
+edge11_output_sha256=8c3f9e6c14eca3f0276fba9cb8aa5babbcee3618f4277f77f99302cab9034b32
+edge12_sha256=a47791c4cbb211e401b080f7b56380bae5c52b1ce865d596be594210cdb6eee6
+edge12_output_sha256=e7dc1bba56ae281685e76b8b855fb6b702f1116c9797246b959249d85c63d576
+body_digest=e4449d24aabab0c095e7ce2c5af0d3d8133db400dacc9d75dd8e417de9331b80
+assignment_digest=ae0e86abcf57f8e7ff04818cea691d83d4734d3268d4cac4ebe8f28970802d0c
+source_sha256=cd2a4e84b2527f3fc7bf79980d2816ad207d770639fae9b42a1b9202d54cd2cd
+semantic_sha256=d7b87d6121721aae103209b935c5469655f1984e468c07b946285d76689c997e
+all_exact_controls=PASS

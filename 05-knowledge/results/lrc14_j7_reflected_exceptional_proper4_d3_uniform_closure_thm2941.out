@@ -1,0 +1,18 @@
+LRC14 exceptional proper-four-colour D=3 uniform closure exact proof
+universal_proper4_orbits=2;labelled_colourings_per_orbit=24
+tail_Delta=1;tail_wall=1312664/3185;tail_start=413
+finite_m_max=412;singleton_q_max=415;static_safe_pairs_checked=84981;static_floor=137/400890;static_minimum_witness=(414, 415, 1, 414, 415)
+CASE;E=(1, 2, 7, 9, 11, 13);L=252252;classes=((0,), (1,), (2, 3), (4, 5));singleton_indices=(0, 1);singleton_labels=(1, 2);perturbation=1/21021;debt_ceiling=487425160807264342822652/20014978569752477975754425125;static_margin=897353581215250741617936020493/3325808929021490255319209805320750;dangerous_rows=72;worst_dangerous_margin=26941875554907150716666611331/960757693343931390131409610215;worst_m=1;worst_offsets=(1, 0, 2, 3);worst_levels=(3, 4, 2, 2, 1, 1);worst_pair=(3, 4);worst_reduced=(3, 4);worst_overlap=10713241539/381785167765;worst_debt=17865415390492460351146078/960757693343931390131409610215;worst_j=146718
+CASE;E=(2, 4, 7, 9, 11, 13);L=504504;classes=((0,), (1,), (2, 4), (3, 5));singleton_indices=(0, 1);singleton_labels=(2, 4);perturbation=1/21021;debt_ceiling=4171698934310078342981596/320265049370713655040295609125;static_margin=344116795284793256783971103408747/1223994730455882119678792484274889250;dangerous_rows=72;worst_dangerous_margin=65878002411925276451530027193922/2306053555976270654339569960287055;worst_m=2;worst_offsets=(2, 1, 3, 0);worst_levels=(5, 2, 4, 3, 4, 3);worst_pair=(5, 2);worst_reduced=(2, 5);worst_overlap=36036/1261259;worst_debt=9294283805647410881058149298/2306053555976270654339569960287055;worst_j=468468
+conclusion=the two exceptional proper-four-colour D=3 rays close for every m>=1
+corollary=the entire reflected D=3 sector closes for every m>=1
+scope=reflected THM-2941 residual family only; sufficient certificate, not physical-survivor classification; D>=4 remains outside this theorem
+normal_vs_python_O=BYTE_IDENTICAL
+base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+nearest_sha256=c886867412f851c9a2ad75daf7d7533bee1fbd3617147c459ef226015f230564
+nearest_output_sha256=114ce28bd8a836dfd8d8155b93b37b9037f924d0df7dc532a376eb3f2bf190c0
+universal_sha256=a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8
+universal_output_sha256=7364d5866171405fa90539a9ad76727c0c52f020ac1a104a1ab4f0276aedd115
+source_sha256=c69a1452514704c44ec5cc128a7606a0cf6f7cf600f83729b10cac46c7210616
+semantic_sha256=61b456316b2e0d4b694af399c749586b4c6a3896cacaf581e29ddaf6adf7e1ed
+all_exact_controls=PASS

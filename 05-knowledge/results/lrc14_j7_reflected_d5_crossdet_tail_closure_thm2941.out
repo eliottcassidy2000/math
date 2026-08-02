@@ -1,0 +1,23 @@
+LRC14 reflected D=5 cross-determinant tail closure exact proof
+universe=bodies:3003;complete_good_graph_bodies:3001;tail=m>=16
+crossdet_transport=c=1-a/(pL);eta=(qa-pb)/(pL-a);body-safe omitted tail is exactly empty
+one_sided_comb_loss=||1_B((q+eta)v+beta)-1_B(qv+beta)||_1<=2|eta|;two boundary progressions each contribute<=1
+phase_fibre=F_PQ=[T_((P+Q)/14)-T_((Q-P)/14)]/(PQ);T_s=sum_n(s-|z+n|)_+
+phase_finite_bank=rows:63;unique_minimum=1/105;P=3;Q=5;z=3/7
+phase_large_product=F_PQ>=1/49-1/(2PQ);all_phase_floor=max(1/105,1/49-1/(2PQ))
+coarse_tail=f0(m)-2[m(b-a)+5b]/[mL-b]-1/(39m);monotone_in_m
+coarse_m16_failures=((1, 2, 3, 4, 6, 8), (1, 2, 3, 4, 6, 12), (1, 2, 3, 4, 8, 12), (1, 2, 3, 6, 8, 12), (1, 2, 4, 6, 8, 12), (1, 3, 4, 6, 8, 12), (1, 3, 4, 6, 9, 12), (2, 3, 4, 6, 8, 12))
+eight_body_exact_rows=184320;failures=0;worst_margin=5586391854420596584/4141304415166171876875;worst_E=(1, 2, 3, 4, 6, 12);worst_m=16;worst_word=(4, 2, 5, 1, 3, 0);gain=3752/1380625;debt=4823878739281456/3524514395886103725;edge=(1, 2)
+hostile_48_119_rows=51840;failures=0;worst_margin=459192369424550444960312/68336383941117906135181309;worst_m=55;worst_word=(0, 5, 3, 1, 4, 2);gain=36771708/5154478763;debt=1356343812409289404/3273464819838537633673;edge=(1, 2)
+hostile_direct_control=pair_labels:(2,3);levels:(18,21);safe_cells:88;minimum_overlap=36312/1775425;minimum_cell=12
+EXCEPTION;E=(1, 2, 7, 9, 11, 13);bad_edges=((2, 3), (3, 4), (4, 5));proper_D5_words=2304;singleton_slots=(0,1);always_distinct=true;m16_coarse_margin=69709751/8814689520
+EXCEPTION;E=(2, 4, 7, 9, 11, 13);bad_edges=((2, 4), (3, 5));proper_D5_words=1824;singleton_slots=(0,1);always_distinct=true;m16_coarse_margin=69709751/8814689520
+conclusion=every reflected D=5 residual packet closes for every m>=16
+scope_boundary=finite head m<=15 and D>=6 remain outside this theorem;sufficient reflected-family certificate only
+normal_vs_python_O=BYTE_IDENTICAL
+base_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+universal_sha256=a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8
+universal_output_sha256=7364d5866171405fa90539a9ad76727c0c52f020ac1a104a1ab4f0276aedd115
+source_sha256=1575b9fabec292bccf0bd639b47b3775922a1531e421b8e4441c6909cc2cedb7
+semantic_sha256=413949dab8a7b96657f9f47dc7f11514ed3b5309f53788ec1ecee8cac8d10dc7
+all_exact_controls=PASS

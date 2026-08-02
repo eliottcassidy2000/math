@@ -1,0 +1,20 @@
+LRC14 universal reflected adjacent-pair all-level closure and D=1 peel exact referee
+base_source_sha256=2cf0866932f775cc493f97093333e81e65ac3aa76a8e439de969aa700c993f31
+tree_source_sha256=39ba7ba13197669d654e66cb2043dda619e9644b2f4b2667a11e420a65aa0876
+THEOREM=arbitrary positive levels; any same-level consecutive labels close; other four levels arbitrary; common Q need not be minimum
+CHART_A=max(E)<=12:j=L/14;CHART_B=max(E)>=13:s=terminal-block-start,j=15L/(14s)
+chart_counts=((0, 924), (8, 1), (9, 8), (10, 36), (11, 120), (12, 330), (13, 792), (14, 792));whole_safe_cells=3003
+pair_formula=LQ[Q(L/7-j-1/2)+floor(aj/L)+(3-a)/7]/[(LQ-a)(LQ-a-1)]
+body_pair_rows=6435;direct_reflected_formula_checks=25740;audit_levels=(1, 2, 3, 7)
+pair_census_digest_sha256=e56b620e4731ebbc82d7497f13e40e4b2ea94a5e44312a4a7771de796fa9a4ca
+minimum_compatible_margin=453354931/50853085920;E=(8, 9, 10, 11, 12, 13);L=720720;j=96525;s=8;pair=12,13;unique=1
+D1_LEDGER;rows=186186;adjacent_pair_covered=133200;remaining=52986;digest_sha256=30ca652ee70f1a55378aed649117856e8fc971d42b63ee3ce9443160a337303c
+D1_ORIGINAL_MAX;threshold=551653043364/1857935729;E=(1, 2, 3, 4, 6, 12);mask=31;unique=1
+D1_PEELED_MAX;threshold=122608946603/509473633;E=(1, 2, 3, 4, 6, 12);mask=5;unique=1
+D1_GLOBAL_CONSEQUENCE=all reflected D=1 packets close for m>=241;combined certificate failure forces m<=240
+HOSTILE_CONTROL;E=(1, 2, 3, 4, 6, 12);q=(m,m,m,m,m,m+1);j=12;m=1..296;survivors=0
+HOSTILE_WORST;mass=7636804/12540055;m=2;gap=21782702/87780385;components=6
+HOSTILE_PAIR_MARGIN_MINIMUM=1845934/35374185;m=1
+source_sha256=e66cf9712535077a338c2ddb7970aa2e9cf1e59e135413cffcd34416eef61de8
+semantic_sha256=7478ca70d6178fda71f1cf463bbe7ac88303ff0494a62b3dfbdc181f14953a04
+all_exact_controls=PASS
