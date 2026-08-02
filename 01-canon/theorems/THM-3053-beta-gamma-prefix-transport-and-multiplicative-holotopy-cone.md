@@ -2,8 +2,8 @@
 id: THM-3053
 title: "Beta-Gamma prefix transport and multiplicative holotopy cone"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE-FILE AUDIT
-  REQUESTED.  A finite signed integer Gamma-shape inventory admits a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A finite signed
+  integer Gamma-shape inventory admits a
   cancellation-free factorization into Gamma moments and forward Beta ratios
   exactly when every prefix sum is nonnegative.  The canonical factorization
   is the oriented-path cut flow.  Applied to THM-3047, this enlarges the
@@ -12,6 +12,14 @@ status: >
   Beta-Gamma cone, not the full Stieltjes cone: a strict convex-mixture escape
   and sharp H2/H3 hostiles mark both sides.
 source: kind-pasteur-2026-08-01-beta-gamma-prefix-transport
+audit: >
+  Two independent immutable-file audits ACCEPTED the path-cut iff, canonical
+  and noncanonical Beta-Gamma factorizations, strict total-positivity boundary,
+  THM-3047 transfer criterion, balanced Hausdorff necessity, convex-mixture
+  escape, and H2/H3 hostiles.  They independently rederived the finite counts,
+  replayed normal and optimized execution against the stored transcript,
+  matched both LF hashes, and passed the documentation checker.  Their two
+  factorization/quantifier repairs are incorporated in Sections 4--5.
 depends_on:
   - THM-3047-formal-corner-width-product-gamma-moment-and-strict-hankel-positivity
   - THM-3051-stieltjes-multiplier-gamma-flow-and-moving-lower-hankel-boundary
@@ -27,7 +35,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3053 -- prefix flow is the exact Beta-Gamma transport gate
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3051 gives an adjacent Gamma-shape preservation cone, but its own Beta
 escape shows that coordinatewise nonnegative shape multiplicities are too
@@ -196,8 +204,15 @@ representability.
 Condition `(15)` strictly enlarges THM-3051's coordinatewise Gamma cone
 `n_j>=0`.  For example, at `k=2`, `d_0=-1` gives `n=(2,-1)`: the second
 coordinate is negative, while the prefixes `(2,1)` are positive.  Formula
-`(5)` is precisely the `Gamma(a)*Beta(a,1)` representation found in
-THM-3051.
+`(5)` gives
+
+```text
+Gamma(a+1,1) * Beta(a,1)^2.                            (16)
+```
+
+One contraction by `(11)` yields the law-equivalent
+`Gamma(a,1)*Beta(a,1)` representation found in THM-3051.  The carrier
+multisets are not literally identical.
 
 ## 5. Why the prefix cone is not the full Stieltjes cone
 
@@ -205,20 +220,20 @@ The prefix condition is necessary for a **product** of the carriers `(4)`,
 but convex addition creates new measures.  Take
 
 ```text
-n=(1,-2,1), S=(1,-1,0).                               (16)
+n=(1,-2,1), S=(1,-1,0).                               (17)
 ```
 
 Although the middle prefix is negative,
 
 ```text
 (a)_M(a+2)_M/(a+1)_M^2
- =a/(a+1)+[1/(a+1)] (a)_M/(a+1)_M.                   (17)
+ =a/(a+1)+[1/(a+1)] (a)_M/(a+1)_M.                   (18)
 ```
 
-Thus `(17)` is represented by the probability measure
+Thus `(18)` is represented by the probability measure
 
 ```text
-[a/(a+1)] delta_1 + [1/(a+1)] Beta(a,1).             (18)
+[a/(a+1)] delta_1 + [1/(a+1)] Beta(a,1).             (19)
 ```
 
 It has infinite support and is strictly generalized-Hankel totally positive.
@@ -230,7 +245,7 @@ There is nevertheless a useful necessary boundary for balanced ratios.  Put
 `D=sum_j n_j`.  If `(3)` is Stieltjes, log-convexity makes
 
 ```text
-q_M=G_(M+1)/G_M=c product_j(M+a+j)^(n_j)              (19)
+q_M=G_(M+1)/G_M=c product_j(M+a+j)^(n_j)              (20)
 ```
 
 nondecreasing.  Its asymptotic first forces `D>=0`.  If `D=0`, then
@@ -239,7 +254,7 @@ nondecreasing.  Its asymptotic first forces `D>=0`.  If `D=0`, then
 `[0,c]`; equivalently `G_M/c^M` must be a Hausdorff moment sequence and obey
 
 ```text
-(-1)^r Delta^r(G_M/c^M)>=0 for all M,r>=0.            (20)
+(-1)^r Delta^r(G_M/c^M)>=0 for all M,r>=0.            (21)
 ```
 
 In the balanced case, let `P_r=sum_j n_j j^r` and take the first `r>=1` with
@@ -247,10 +262,12 @@ In the balanced case, let `P_r=sum_j n_j j^r` and take the first `r>=1` with
 `log(q_M/c)` at infinity and `q_M<=c` give the necessary sign
 
 ```text
-(-1)^r P_r>0.                                         (21)
+(-1)^r P_r>0.                                         (22)
 ```
 
-For the mixture `(17)`, these inequalities hold strictly for `r>=1`.
+For `(18)`, the Hausdorff inequalities `(21)` are strict for every `r>=1`.
+Its power sums satisfy `P_1=0` and `P_2=2`, so the first-nonzero test `(22)`
+is strict at `r=2`.
 
 ## 6. Sharp failures outside the cone
 
@@ -261,7 +278,7 @@ For `n=(-1,1)`,
 
 ```text
 G_M=c^M(a+1)_M/(a)_M=c^M(a+M)/a,
-det[[G_0,G_1],[G_1,G_2]]=-c^2/a^2<0.                 (22)
+det[[G_0,G_1],[G_1,G_2]]=-c^2/a^2<0.                 (23)
 ```
 
 The next hostile hides behind strict adjacent log-convexity.  At `a=c=1`
@@ -269,13 +286,13 @@ and `n=(-1,2)`,
 
 ```text
 G_M=M!(M+1)^2,
-G_(M-1)G_(M+1)>G_M^2 for every M>=1,                 (23)
+G_(M-1)G_(M+1)>G_M^2 for every M>=1,                 (24)
 ```
 
 but
 
 ```text
-det[G_(i+j)]_(0<=i,j<=2)=-24.                        (24)
+det[G_(i+j)]_(0<=i,j<=2)=-24.                        (25)
 ```
 
 This is THM-3051's curvature hostile reinterpreted as the first-prefix cut
@@ -294,12 +311,12 @@ The source-to-target contract is
 ```text
 signed shape inventory n
   --oriented prefix/cut map--> nonnegative transport flow
-  --Beta-Gamma Mellin factors--> strict Stieltjes width multiplier.       (25)
+  --Beta-Gamma Mellin factors--> strict Stieltjes width multiplier.       (26)
 ```
 
 The map preserves the complete signed inventory and its cut feasibility.  A
 mere moment sequence forgets the chosen product decomposition; convex mixing
-in `(17)` leaves the transport category entirely.  The cheapest next test for
+in `(18)` leaves the transport category entirely.  The cheapest next test for
 a moving low resultant is therefore to identify a dominant Beta-Gamma face
 and bound the remaining faces, rather than demand an exact factorization of
 the whole correction.
@@ -319,7 +336,7 @@ The dependency-free referee checks:
 - `540` edge split/contract identities `(9)--(10)`;
 - `9,604` exact THM-3047 transfer cells for `(13)--(15)`;
 - `44` mixture identities, `120` strict Hausdorff differences, and both
-  negative-prefix hostiles `(22)--(24)`.
+  negative-prefix hostiles `(23)--(25)`.
 
 Run
 
@@ -330,4 +347,4 @@ python -O 04-computation/gmc_beta_gamma_prefix_transport_thm3053.py
 
 Both modes equal the stored eight-line transcript after LF normalization.
 
-**QED, pending independent immutable-file audit and status promotion.**
+**QED.**
