@@ -1,0 +1,6 @@
+THM-3048 PRIME-HOLONOMY PARALLEL CORRESPONDENCE ARRIVAL
+{"digest":[{"g":1,"ghost":6,"n":3,"seed":1},{"g":1,"ghost":16,"n":3,"seed":2},{"g":2,"ghost":6,"n":3,"seed":1},{"g":2,"ghost":16,"n":3,"seed":2},{"g":1,"ghost":12,"n":5,"seed":1},{"g":1,"ghost":23,"n":5,"seed":2},{"g":2,"ghost":12,"n":5,"seed":1},{"g":2,"ghost":23,"n":5,"seed":2}],"parallel_prime_cells":14}
+{"unpointed_norm_first_ghost_cells":9}
+{"p13_formula":"(1+t)^13(1+t^13)^12","pure_shift_norm_cells":21}
+{"boundaries":{"affine_slope2_arrivals":[13,0,0,0,0,0,0,0,0,0,0,0,0],"cemetery_only_root_mass":0,"composite_C6_g2":[0,6,0,6,0,6],"fixed_action_arrivals":[1,1,1,1,1,1,1,1,1,1,1,1,1],"nonparallel_arrival":0,"reynolds_arrivals":[13,13,13,13,13,13,13,13,13,13,13,13,13],"zero_holonomy_arrival":0},"thm2591_holonomy_permutation":[7,1,8,2,9,3,10,4,11,5,12,6]}
+all_exact_checks=PASS

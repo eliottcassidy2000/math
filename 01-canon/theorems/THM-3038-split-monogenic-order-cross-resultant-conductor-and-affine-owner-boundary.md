@@ -2,12 +2,12 @@
 id: THM-3038
 title: "Split monogenic order cross-resultant conductor and affine-owner boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For a split monogenic quartic order R[T]/((T-a)g), with R a normal
   local domain, g generically separable, and d=g(a) regular, the order is the fibre product of the
-  singleton and complementary cubic orders over R/(d).  Its singleton
-  conductor slice, normalization quotient, and matching-resolvent order
-  defect are the same cyclic module R/(d).  Hence the singleton idempotent
+  singleton and complementary cubic orders over R/(d).  Its intermediate
+  singleton-gluing quotient and matching-resolvent order defect are the same
+  cyclic module R/(d), while its singleton conductor slice is dRe.  Hence the singleton idempotent
   splits exactly when d is a unit.  This calculation applies literally to
   the monogenic order; a larger graph order requires its own module-membership
   test.  Even a split finite-order idempotent does not prove affine ownership:
@@ -22,23 +22,30 @@ related:
   - THM-2570-jelonek-cusp-cylinder-normalization-and-conductor
   - THM-2633-derangement-character-obstruction-and-d4-keller-exclusion
   - THM-2974-discriminant-cover-integral-order-smith-and-owner-boundary
+  - THM-2993-quartic-signed-edge-star-triangle-cube-and-derivative-square-reembedding
 script: 04-computation/split_monogenic_order_cross_resultant_conductor_thm3038.py
 output: 05-knowledge/results/split_monogenic_order_cross_resultant_conductor_thm3038.out
-script_sha256: 6042adbe39bf5b33bd4eeaa5f59836b669460210d883f92dbcde018eed4ee5a4
-output_sha256: b8231fae9dd680c7e8c95a37f84757195585f76d75a8fdc97a1315a074575b7c
+script_sha256: cc84f80a947c8fb16fc9594590eb1c797f699254cda9e5d924d823f4de975453
+output_sha256: 3184c7b15a0fd8f7fb19e224b903419fd7cf2ceb38b3e284bd4380d04250575c
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3038 -- the cross-resultant measures sheet gluing, not affine ownership
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and statement
 
 [THM-3037, the cusp-braid `S4` lift
 dichotomy](THM-3037-cusp-braid-s4-lift-dichotomy-and-common-sheet-owner-boundary.md)
 leaves a unique common quartic sheet in the local split branch, but warns that
-the sheet belongs first to the finite normalization.  [THM-2974, the
+the sheet belongs first to the finite normalization.  [THM-2993, the signed
+matching star/triangle
+cube](THM-2993-quartic-signed-edge-star-triangle-cube-and-derivative-square-reembedding.md)
+already realizes the user's perfect-matching/partial-cube picture exactly:
+the eight one-edge-per-matching transversals split into four root-stars and
+four false-owner triangles.  It reconstructs the unpointed quartic algebra,
+not an integral owner.  [THM-2974, the
 integral-order Smith
 boundary](THM-2974-discriminant-cover-integral-order-smith-and-owner-boundary.md)
 shows independently that an isomorphism of normalized cover algebras need not
@@ -88,7 +95,8 @@ The cross-resultant is therefore an exact gluing coordinate:
 (Res_Y(Y-a,g))=(g(a))=(d).                              (7)
 ```
 
-Over a DVR, the quotient and index formulas are
+Over a DVR for which `Ctilde` is finite over `C` (in particular in the
+intended complete/excellent local bases), the quotient and index formulas are
 
 ```text
 (R x C)/A = R/(d),
@@ -228,7 +236,7 @@ In particular,
 O_res=C  iff  d is a unit  iff  e splits in A.            (22)
 ```
 
-If `R` is a DVR and
+If `R` is a DVR and `Ctilde` is finite over `C`, put
 
 ```text
 i_comp=length(Ctilde/C),
@@ -247,6 +255,25 @@ polynomial identity from [THM-2598](THM-2598-quartic-v4-resolvent-torsor-and-uni
 Formula (24) explains its integral meaning in the split chart: both graph
 orders carry the same extra index.  Comparing those two raw discriminants or
 indices cannot prove that `d` is a unit.
+
+There is a particularly transparent bridge to THM-2993's matching-transversal
+cube.  For the star based at the distinguished root `a`, its derivative-square
+coordinate and the complementary triangle coordinate are
+
+```text
+Z_star(a)=f'(a)^2=g(a)^2=d^2,
+Z_triangle(a)=Disc(f)/f'(a)^2=Disc(g).                    (24a)
+```
+
+Thus, **after the split section `a` has been supplied**, its star/triangle
+pair splits the quartic discriminant into exactly the cross-gluing square and
+the complementary-cubic discriminant.  The unpointed cube contains `d^2`
+among its four star coordinates but does not select that coordinate or recover
+the signed generator `d`; the pointed coordinate detects that `d` is a unit
+exactly when `d^2` is.  The matching resolvent recombines the two factors into
+its raw discriminant and thereby hides precisely the cyclic order defect
+(21).  This is the exact
+perfect-matching/conductor interface; no tournament orientation is involved.
 
 ## 4. The affine-owner test
 
@@ -336,7 +363,9 @@ conductor.  On `u=s^2,v=s^3`, the cubic becomes
 
 Start from the same finite normalization and remove the cubic ramification
 locus.  One may either retain the singleton trace above `Delta`, or also
-delete that trace while retaining the simple cubic branch `T=2s`.  Both opens
+delete that trace while retaining the punctured, generically simple cubic
+branch `T=2s` for `s!=0`.  The point `s=0`, where its derivative also
+vanishes, is part of the removed ramification locus.  Both opens
 retain all four sheets away from `Delta` and are etale over their images.  The
 finite order and conductor are identical, but the singleton owner bit is
 opposite.  This is a local Zariski-main hostile, not a polynomial Keller map.
@@ -384,6 +413,7 @@ The companion verifies, with explicit runtime checks in ordinary and
 optimized Python:
 
 - the cross-resultant and split discriminant identities;
+- the owner-star derivative square and complementary-triangle factor;
 - the coefficient-lattice determinant of the fibre product;
 - the singleton-idempotent numerator relation;
 - the standard quartic/resolvent discriminant identity;
@@ -395,3 +425,11 @@ optimized Python:
 
 The ordinary transcript, optimized transcript, and stored output agree
 byte-for-byte after LF normalization.
+
+An independent hostile audit rederived the fibre-product kernel and
+surjectivity, product normalization, conductor slice, resolver matrix and
+Smith reduction, DVR index identities, discriminant duplication, affine-owner
+valuation criterion, both hostile families, and the pointed THM-2993
+star/triangle factorization.  It also reproduced the ordinary and optimized
+transcripts and both declared LF hashes.  No remaining defect or scope
+overclaim was found.

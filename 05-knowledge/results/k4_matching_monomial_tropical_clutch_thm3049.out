@@ -1,0 +1,16 @@
+THM3049 K4 MATCHING-MONOMIAL TROPICAL CLUTCH: PASS
+edge_order=01,02,03,12,13,23
+matching_map=lambda=(x01+x23,x02+x13,x03+x12)
+cocharacter_rank=3 kernel=opposite_edge_differences
+intersection_index=24
+smith=1,1,1,2,2,6
+quotient=F2[three_matchings]+F3_trivial size=24
+residue_universe=46656 kernel=1944 images=24
+square_value_obstruction=lambda mod2
+cube_total_value_obstruction=sum(lambda) mod3
+S4_matching_kernel_size=4
+independence=lambda200->(000,2),lambda111->(111,0)
+Q7_unit_hostile=3 is neither square nor cube mod7
+fibre_sum_hostile=(1,1,1)->3 versus (1,1,-2)->0
+scope=uncontracted labelled monomials/cocharacters only
+no field-root, coloured-response, Keller, or LRC conclusion

@@ -24,6 +24,10 @@ require(
     sp.expand(sp.discriminant(f, T) - sp.discriminant(g, T) * cross**2) == 0,
     "split discriminant product",
 )
+require(
+    sp.expand(sp.diff(f, T).subs(T, a) - cross) == 0,
+    "owner-star derivative coordinate",
+)
 
 # The coefficient-lattice map A -> R x R[T]/(g).  Its determinant is the
 # cross-resultant, hence its DVR colength is v(g(a)).
@@ -173,6 +177,7 @@ print("cross_resultant_ideal=(Res(T-a,g))=(g(a))")
 print("lattice_determinant=-g(a);dvr_gluing_length=v(g(a))")
 print("singleton_conductor_slice=(g(a))*R*e;idempotent=e=g(T)/g(a)")
 print("split_discriminant=Disc(g)*g(a)^2")
+print("owner_star=f'(a)^2=g(a)^2;owner_triangle=Disc(g)")
 print("complement_resolver=W=y^2+(a+c2)y+c1;basis_det=g(a)")
 print("cyclic_defects=quartic_gluing=resolvent_order=R/(g(a))")
 print("order_mismatch=f=T*(T^3-T+p);complement_disc=4-27p^2")

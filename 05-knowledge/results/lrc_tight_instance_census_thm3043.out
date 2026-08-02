@@ -1,0 +1,11 @@
+THM3043 LRC TIGHT-INSTANCE CENSUS: CORRECTED PASS
+n=3 B=14 zero_measure_tight=4 dilated_AP=4 sporadic=0
+n=4 B=14 zero_measure_tight=5 dilated_AP=3 sporadic=2
+n=5 B=12 zero_measure_tight=3 dilated_AP=2 sporadic=1
+sporadic_rows=(1,3,4,7);(2,6,8,14);(1,3,4,5,9)
+canonical_witness_sets=6 all_nonempty=1
+witness_denominators=4,5,5,7,6,8 respectively
+quantization_samples=8 all_integral=1
+positive_mu_over_quantum=30,66,58,11020
+zero_measure_label=TIGHT_NONEMPTY not COVERED
+all_runtime_checks_explicit=1

@@ -1,0 +1,7 @@
+THM-3047 FORMAL CORNER PRODUCT-GAMMA WIDTH MOMENTS
+{"characters":[{"A":1,"B":0,"I":1,"k":2},{"A":5,"B":2,"I":7,"k":3},{"A":26,"B":20,"I":46,"k":4},{"A":154,"B":172,"I":326,"k":5},{"A":1044,"B":1512,"I":2556,"k":6},{"A":8028,"B":14184,"I":22212,"k":7},{"A":69264,"B":143712,"I":212976,"k":8},{"A":663696,"B":1575648,"I":2239344,"k":9},{"A":6999840,"B":18659520,"I":25659360,"k":10},{"A":80627040,"B":237913920,"I":318540960,"k":11},{"A":1007441280,"B":3254135040,"I":4261576320,"k":12}]}
+{"adjacent_curvature_cells":240,"moment_identity":{"formal_profile_cells":187,"m":"0..16","positive_t":["1/7","2/5","1","3/2"],"rational_cells":272,"rational_k":"2..5"}}
+{"alternating_log_difference_cells":1056,"orders":"1..6"}
+{"strict_hankel_minors":{"cells":13720,"index_window":"0..6","k":"2..5","positive_controls":[[2,"1/2",[0],[0],"1"],[2,"1/2",[0],[1],"1"],[2,"1/2",[0],[2],"3/2"],[2,"1/2",[0],[3],"3"],[2,"1/2",[0],[4],"15/2"],[2,"1/2",[0],[5],"45/2"],[2,"1/2",[0],[6],"315/4"],[2,"1/2",[1],[0],"1"],[2,"1/2",[1],[1],"3/2"],[2,"1/2",[1],[2],"3"],[2,"1/2",[1],[3],"15/2"],[2,"1/2",[1],[4],"45/2"]],"sizes":"1..3","t":["1/2","1"]}}
+{"boundaries":{"moving_lower_full_corner":"uncontrolled extra low-resultant transport","negative_t_k2_F2":"-1","physical_width":false,"raw_chart":false,"t0_hankel2":"0"}}
+all_exact_checks=PASS

@@ -1,0 +1,8 @@
+THM-3053 BETA-GAMMA PREFIX TRANSPORT AND MULTIPLICATIVE HOLOTOPY
+inventory_cells=19607 prefix_feasible=6044
+moment_identity_cells=312 strict_hankel_cells=648
+beta_clutch_cells=540
+formal_width_transfer_cells=9604
+mixture_escape_cells=44 hausdorff_cells=120
+negative_prefix_hostiles=H2:-1,hidden_H2:2,hidden_H3:-24
+all_exact_checks=PASS

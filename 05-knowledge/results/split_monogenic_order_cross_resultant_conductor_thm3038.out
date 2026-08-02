@@ -4,6 +4,7 @@ cross_resultant_ideal=(Res(T-a,g))=(g(a))
 lattice_determinant=-g(a);dvr_gluing_length=v(g(a))
 singleton_conductor_slice=(g(a))*R*e;idempotent=e=g(T)/g(a)
 split_discriminant=Disc(g)*g(a)^2
+owner_star=f'(a)^2=g(a)^2;owner_triangle=Disc(g)
 complement_resolver=W=y^2+(a+c2)y+c1;basis_det=g(a)
 cyclic_defects=quartic_gluing=resolvent_order=R/(g(a))
 order_mismatch=f=T*(T^3-T+p);complement_disc=4-27p^2

@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — 2026-07-30.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
+**Rolling state — 2026-08-01.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -30,11 +30,13 @@ This is not a physical-survivor classification; arbitrary `k<=1`, the rung, and 
 `951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
 not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
-`1680..1742` `k=2` atlas; THM-2980/2995 then close every row at `1580..1679`, giving cap `1579`. For `k=3`, torsion/status closes through `297`;
-THM-2981/3033 close through cap `243`, ledger `375,051`; 151 first-below-floor `z243` rows remain.
+`1680..1742` `k=2` atlas; THM-2980/2995 then close every row at
+`1580..1679`, giving cap `1579`.  For `k=3`, torsion/status closes through `297`;
+THM-2981/3033/3041/3052 close all projected `k=3` rows through `z_1=240`,
+including the empty `z_1=241` layer: cap `239`, ledger `374828`, and the next
+occupied layer has `4` rows.
 Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
-THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams but not semantic-root identification (kernel `28,393`); THM-2545/2549 give Hall and chronology gates,
-still old-target neutral; THM-2547 is only an external control after
+THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams, not semantic-root identification (kernel `28,393`); THM-2545/2549/3044 give Hall/pointed dual; THM-2565/2604/2613 point scoped packets; THM-3048 forces arrival from nonzero holonomy only for a whole-table parallel carrier, still absent; THM-2547 is only an external control after
 MISTAKE-281.  THM-2551--2712 recover determinant/carry/root/quotient sidecars
 and six-step nilpotence, but no transverse physical gluing (MISTAKE-300).
 THM-2721's positive `C3` corolla is current-zero and misses all `1134`
@@ -200,11 +202,10 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   moving-real-plane divisibility problem, equivalently a binary
   sextic--octic resultant; two exact certificates close `{0,1,2,3}`, while an
   abstract hidden plane proves coordinate faces insufficient.  Its
-  conjugate-pair/three-plane count does not carry the standard holomorphic
-  `C_2*C_3` action. THM-2845 classifies finite-algebra scalar detectors
-  (two-way iff local residue-`K`); THM-2846 gives a positive cone line
-  vanishing through Gaussian moment six but exiting at eight, with a
-  variance-jet plane detector. THM-2848 reduces four slots to
+  conjugate-pair/three-plane count does not carry the holomorphic `C_2*C_3`
+  action. THM-2845 classifies scalar detectors; THM-2846 gives a positive
+  cone line invisible through moment six but seen at eight by a variance jet.
+  THM-2848 reduces four slots to
   `F^o=0` or a shared cubic--quartic line; THM-2866 excludes the first.
   THM-2879/2890/2891 close consecutive cone-cutting planes.
   THM-2906/10/14/18 give holonomy/`C3` exits; THM-2929 makes high first gaps
@@ -212,7 +213,10 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   `14`; THM-2955/2957/2959 close first-gap `15<=M<=24` by modular gates.
   THM-2960 gives Smith walls through `24` (two charts through `20`);
   THM-2964 makes the pure ladder universal; THM-2963 kills next-prime gates;
-  THM-2969/73/78/82 give strict ULC through M34. Audited THM-2997 has `R2>R1` at M34, fails M33, and is conditional beyond 34 on encoded wall; THM-3000/3003 are invoices.
+  THM-2969/73/78/82 give strict ULC through M34; THM-2997's `R2>R1` is
+  conditional beyond. THM-3040/47/50 give corner, Gamma/Hankel, radial-NC2
+  laws; THM-3051/53/54 give moving-lower hostiles, prefix flow and affine
+  finite-order tail re-entry. All-order Stieltjes transport stays open.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent
@@ -220,14 +224,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   problems remain open.
 ### Live work
 
-Publish THM-2022; sharpen THM-2111's binomial degree toward `M+N`; formalize
-THM-2639's ring identity/sign.  THM-2101's additive routes are corroboration,
-not `GMC2Main.gmc2` dependencies, and positive/two-charge/unique-channel leaves
-are special cases.  HYP-8931's `LowestFaceUniqueChannel` is inconsistent by
-the empty level set (MISTAKE-240), so its implication is vacuous and `98/116`
-only a census.  THM-2070 refutes HYP-8890's saddle/Watson and HYP-8895's
-semigroup bypasses outside their positive/two-charge cases.  Transfer the
-`seed/selector/preserver/exit` design without treating a preserver as a seed.
+Live: publish THM-2022, sharpen THM-2111 toward degree `M+N`, and formalize
+THM-2639.  THM-2101's additive routes are corroborative, not `GMC2Main.gmc2`
+dependencies.  HYP-8931 is vacuous by its empty level set (MISTAKE-240), while
+THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
+`seed/selector/preserver/exit` without mistaking a preserver for a seed.
 
 ## Tournaments
 
