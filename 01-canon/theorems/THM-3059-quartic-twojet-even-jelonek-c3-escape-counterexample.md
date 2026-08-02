@@ -2,7 +2,7 @@
 id: THM-3059
 title: "Quartic two-jet even-Jelonek C3 escape counterexample and parity-inertia law"
 status: >
-  PROVED + VERIFIED-EXACT (independent audit pending).  Reversing a primitive
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Reversing a primitive
   quartic at a leading-coefficient divisor makes the infinity branches an
   integral quartic order.  In the tame strict-henselian setting, the pole-
   clearing exponent of the monic discriminant is odd exactly when local
@@ -17,6 +17,12 @@ status: >
   Jacobians put the separate odd discriminant factors on ordinary critical
   branches, so the Keller-restricted odd-inertia question and JC remain open.
 source: codex-jc-resolvent-bridge-2026-08-01
+audit: >
+  root/2026-08-01 independently rederived quartic and resolvent
+  irreducibility, generic S4, the discriminant minima, reciprocal Newton
+  wall, tame inertia cases, parity law, exact Jelonek sets, planar shadow,
+  and branchwise Jacobian residues.  Ordinary, optimized, and stored exact
+  transcripts byte-match.  ACCEPT.
 depends_on:
   - THM-2455-quartic-swallowtail-scaffold-and-endpoint-corrections
   - THM-3057-tame-quartic-inertia-clutch-index-resonance
@@ -34,7 +40,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3059 -- odd discriminant clearing is odd inertia, not nonproperness
 
-**PROVED + VERIFIED-EXACT (independent audit pending).**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and result
 
