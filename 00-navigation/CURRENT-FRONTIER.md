@@ -198,6 +198,19 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   support chords and excludes them on all 31,465 supports through exponent
   `30`.  The unbounded shared-line, general norm, and scalar multiplier-access
   problems remain open.
+- THM-3115/3127 turn pole-prefix response into exact partition-Hasse currents
+  and upset-dual selector tests.  THM-3158 gives the depth-five staircase
+  `C_12 != empty`, `C_13 = empty`; THM-3169 proves that all 507 depth-six
+  attachments cross the old nine-row wall in exactly 24 places but remain
+  excluded by a new eleven-row wall.  THM-3160/3163/3168 separate three notions
+  that must not be conflated: full Pluecker transport, abstract finite-prefix
+  Markov realization, and fixed-pole current transport (which already fails at
+  depth two).  Depth seven remains open.
+- THM-3170 closes the exact quadratic resonance whenever one of
+  `d-1,...,d-5` is prime; any surviving bad resonance has
+  `d,d-1,...,d-5` all composite.  Its Euclidean-frame determinant walls are
+  finite and should be treated as holotopy singularities, not generic primes.
+
 ### Live work
 
 Live: publish THM-2022, sharpen THM-2111 toward degree `M+N`, and formalize
