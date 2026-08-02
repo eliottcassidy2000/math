@@ -6,7 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import importlib.util
-from collections import Counter, deque
+from collections import Counter, defaultdict, deque
 from itertools import product
 from pathlib import Path
 
@@ -130,6 +130,7 @@ def atlas(group):
     joint = Counter()
     cycles = Counter()
     subgroup_orbits = Counter()
+    word_subgroup_counts = defaultdict(Counter)
     generating_words = []
     for involution in involutions:
         for three in threes:
@@ -140,6 +141,7 @@ def atlas(group):
             joint[(word_order, subgroup_order)] += 1
             cycles[(word_order, cycle_type(word))] += 1
             subgroup_orbits[(word_order, subgroup_order, point_orbits(subgroup, len(word)))] += 1
+            word_subgroup_counts[word][subgroup_order] += 1
             if subgroup_order == len(group):
                 generating_words.append(word)
     return {
@@ -148,6 +150,7 @@ def atlas(group):
         "joint": joint,
         "cycles": cycles,
         "subgroup_orbits": subgroup_orbits,
+        "word_subgroup_counts": word_subgroup_counts,
         "generating_words": tuple(generating_words),
     }
 
@@ -186,6 +189,28 @@ require(
     AFFINE_COUNTERFEIT["subgroup_orbits"][(8, 48, (1, 8))] == 432
     and AFFINE_COUNTERFEIT["subgroup_orbits"][(8, 432, (9,))] == 864,
     AFFINE_COUNTERFEIT["subgroup_orbits"],
+)
+AFFINE_SPLIT_WORDS = frozenset(
+    word
+    for word, counts in AFFINE_COUNTERFEIT["word_subgroup_counts"].items()
+    if counts[48]
+)
+AFFINE_FULL_WORDS = frozenset(
+    word
+    for word, counts in AFFINE_COUNTERFEIT["word_subgroup_counts"].items()
+    if counts[432]
+)
+require(
+    AFFINE_SPLIT_WORDS == AFFINE_FULL_WORDS and len(AFFINE_SPLIT_WORDS) == 108,
+    (len(AFFINE_SPLIT_WORDS), len(AFFINE_FULL_WORDS)),
+)
+require(
+    all(
+        AFFINE_COUNTERFEIT["word_subgroup_counts"][word][48] == 4
+        and AFFINE_COUNTERFEIT["word_subgroup_counts"][word][432] == 8
+        for word in AFFINE_SPLIT_WORDS
+    ),
+    "AGL exact word multiplicities",
 )
 require(
     PROJECTIVE_COUNTERFEIT["cycles"]
@@ -248,8 +273,9 @@ def main():
         "S4;involutions=9;order3=8;joint=(2,6):24,(3,12):24,(4,24):24;generating_order=4;epimorphisms=24;inner_classes=1;word_cycle=4;half_face=nonzero_V4_translation",
         "AGL2F3;involutions=45;order3=80;joint=(2,6):576,(6,6):144,(6,18):720,(6,54):864,(8,48):432,(8,432):864;generating_order=8;epimorphisms=864;inner_classes=2;word_cycle=1+8;fourth_power=1+2+2+2+2_not_translation",
         "PGL2F8;involutions=63;order3=56;joint=(2,6):504,(7,504):1512,(9,504):1512;generating_orders=7,9;epimorphisms=3024;inner_classes=6;word_cycles=1+1+7_or_9",
-        "affine_origin_hostile=432_order8_pairs_generate_only_GL2F3_order48_with_the_same_1+8_word_cycle",
+        "affine_origin_hostile=split_and_full_rows_have_the_same_108_order8_word_permutations;pair_multiplicities=4_vs8",
         "septimal_split=order7_words_are_split_torus_cycles_1+1+7;order9_words_are_nonsplit_9-cycles;degree9_does_not_choose_between_them",
+        "C7_scope=PGL_split_tori_are_only_abstractly_isomorphic_to_F8*;the_GL_scalar_fibre_dies_projectively",
         "mixed_word_gate=the_first_C2*C3_word_sc_separates_S4_from_both_degree9_counterfeits;only_S4_has_a_nonzero_translation_half-face",
         "scope=marked_finite_quotient_and_natural_permutation_actions_only;no_canonical_modular_marking,quartic_owner,Keller,LRC,or_tree_identification",
         "all_exact_pair_subgroup_cycle_center_and_half_face_controls=PASS",

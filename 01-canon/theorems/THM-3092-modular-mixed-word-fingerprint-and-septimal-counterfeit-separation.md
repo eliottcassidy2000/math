@@ -8,8 +8,8 @@ status: >
   has ord(sc)=8, and every epimorphism to PGL_2(F_8) has ord(sc)=7 or 9.
   The corresponding inner marking counts are 1,2,6.  Only the S4 word has a
   nonzero half-power in the affine translation kernel V4.  At degree nine,
-  order 7 is the split C7 torus while order 9 is nonsplit; neither degree nor
-  the C7 scalar fibre chooses a modular marking.  A sharp AGL_2(F_3) hostile
+  order 7 is a split torus abstractly isomorphic to C7 while order 9 is
+  nonsplit; this is not THM-3088's scalar subgroup.  A sharp AGL_2(F_3) hostile
   shows that the mixed word still cannot detect the affine origin.  No
   quartic realization, Keller, tree, or LRC consequence is asserted.
 source: root-modular-mixed-word-2026-08-01
@@ -22,8 +22,8 @@ related:
   - THM-3088-punctured-projective-direction-algebra-and-exceptional-parity-saturation
 script: 04-computation/modular_mixed_word_fingerprint_thm3092.py
 output: 05-knowledge/results/modular_mixed_word_fingerprint_thm3092.out
-script_sha256: 29aa3f7c87c4c1a188517d0612766da11c9ad7a6a9c5e959320dfd329a9247e9
-output_sha256: 68053b52a425db17227807d1c2c8ec867d8783a0d03752fee434a2933b4b93a3
+script_sha256: 13ae88d774807e7f84fa239287633881dff53142c74e2166a3dcc628f5ec75de
+output_sha256: 76984fb150ecfccade7869bc908ef944a799d07672187963981f06e7cb95fa1f
 hash_basis: LF-normalized bytes
 ---
 
@@ -182,27 +182,33 @@ The order-eight test does not recover the ternary affine origin.  Among the
 864 generate the full affine group of order 432.              (15)
 ```
 
-Both rows give the same word cycle type `(1,8)`.  The point-stabilizer row
-has natural orbits `1+8`; the full row is transitive.  Thus even the complete
-permutation of the mixed word cannot distinguish a split linear complement
-from the full affine lift.  One must retain the joint pair action, an affine
-origin class, or transitivity.  This is the degree-nine analogue of
+The equality is much stronger than a common cycle type.  There are exactly
+`108` distinct order-eight word permutations in either row; every one occurs
+four times among the split pairs and eight times among the full pairs.  The
+point-stabilizer row has natural orbits `1+8`; the full row is transitive.
+Thus even the complete permutation of the mixed word cannot distinguish a
+split linear complement from the full affine lift.  One must retain the joint
+pair action, an affine origin class, or transitivity.  This is the degree-nine analogue of
 THM-2595's warning that local free-factor gauges do not determine the global
 affine cocycle.
 
 There is a different split on the projective side.  An order-seven element
-of `PGL_2(F_8)` lies in the split torus `F_8^*`: its natural cycle type is
-`1+1+7`.  An order-nine element lies in the nonsplit norm-one torus and is a
-`9`-cycle.  The two rows have equal size `1512`.  Therefore THM-3088's
-residual scalar fibre
+of `PGL_2(F_8)` lies in a conjugate of a split maximal torus abstractly
+isomorphic to `F_8^*=C7`: its natural cycle type is `1+1+7`.  An order-nine
+element lies in the nonsplit norm-one torus and is a `9`-cycle.  The two rows
+have equal size `1512`.
+
+This is not a subgroup identification with THM-3088's residual within-line
+scalar fibre
 
 ```text
 F_8^*=C7                                                     (16)
 ```
 
-is visible in one half of the modular markings but is not selected by the
-degree-nine action.  Residual `C7` structure alone does not repair the
-counterfeit or choose a Farey/Hurwitz marking.
+because scalar matrices are central in `GL_2(F_8)` and die in `PGL_2(F_8)`.
+Only the same abstract cyclic group type reappears.  Neither that abstract
+type nor the degree-nine action repairs the counterfeit or chooses a
+Farey/Hurwitz marking.
 
 ## 6. Exact proof and evidence
 
@@ -220,7 +226,8 @@ For every pair satisfying `(4)`, the companion:
 4. enumerates each centre and proves the marking counts `(10)`;
 5. constructs the binary and ternary translation subgroups and checks every
    half-power assertion `(12)--(13)`; and
-6. retains the split-complement hostile `(15)`.
+6. proves equality of the `108` split/full word sets with multiplicities
+   four/eight and retains the projective split/nonsplit hostile.
 
 Run
 
