@@ -378,7 +378,7 @@ A positive left inverse, order-reflecting quotient, or target factorization disc
 
 **Trigger / action:** separately chosen positive witnesses must be put in one
 typed carrier `P_i`; test cumulative intersections and retain a transition
-cocycle if witnesses move. **Caution:** nonempty fibres need not glue and may
-disappear then return; Helly/Farkas makes convex failure finite. Upper-ideal
-loci can instead have Helly number one. **Evidence:** THM-2292 versus THM-3144;
-THM-2658 is the circular-gain analogue.
+cocycle if witnesses move. A fixed law beating every adversary is a coherent
+mixed section (THM-3156); per-adversary maxima are only fibres. **Caution:**
+fibres need not glue; Helly/Farkas makes convex failure finite. **Evidence:**
+THM-2292/3144/2658; THM-3152 instead intersects exact local supports.

@@ -364,7 +364,7 @@ test:       empty positive support intersection
 The next all-height problem is digital: derive the blocks in (24) from the
 base-\(p\) digits of \(d-2,d-1\), then prove that two or three such digit
 languages have empty positive intersection, routing any survivor to the next
-Euclidean row.  THM-3148 and the reserved second-row lane address fixed
+Euclidean row.  THM-3148 and THM-3153's second-row lane address fixed
 offsets; (24) addresses arbitrary composite residuals.  The two mechanisms
 are complementary, but no all-height termination is asserted.
 

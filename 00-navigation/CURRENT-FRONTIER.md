@@ -37,9 +37,9 @@ close projected `k=3` through `z_1=226`: cap `225`, ledger `374172`; next `78` r
 In the reflected gain graph, cap two forces the phase-zero triangle
 `(3/2)(4/3)=2`; by cap `7/3` it is interior and no full-cap component remains.
 The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`.  The proved CSP chain closes
-`3m>=4D`.  MISTAKE-347 leaves later split tails **AUDIT-REQUIRED**. THM-3135
-repairs `H2`; THM-3150 gives `H` a three-channel skeleton and ray tail from
-`62`.  Arbitrary-gcd cones remain **OPEN**.
+`3m>=4D`. MISTAKE-347 leaves split tails **AUDIT-REQUIRED**. THM-3135 repairs
+`H2`; THM-3150 gives its skeleton/tail, and THM-3156 its uniform law through
+`D=100`. Arbitrary-gcd cones remain **OPEN**.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
 supplied-root seams, not semantic-root identification (kernel `28,393`).
@@ -292,11 +292,10 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   retains labelled fibres: parity/square swap walls; closure
   `N\{1,4,6}` with dyadic frontier; local A014574 recurrence refuted at term
   `21`; and distinct ancestry FINITE-EXACT through center `10^8`, ALL-n OPEN.
-- THM-3056 turns each integer-shape width family into a sparse integer support
-  with hypergeometric harmonic mass, absolute Dirichlet abscissa zero, and
-  prime-divisor shadow exactly the primes not dividing its scale.  This is the
-  arithmetic shadow of its all-order Hankel reversal law, not a moment
-  representation.
+- THM-3056 gives integer-shape hypergeometric supports with abscissa zero and
+  prime shadow off the scale. THM-3152 gives finite Newton-barcode supports;
+  THM-3156 gives an exact period-three rational LRC-overlap sequence. These
+  efficient laws do not transfer their underlying predicates.
 - **EXACT identities / heuristic bridge:** corrected HYP-8820 puts caterer,
   cake, Moser, bagel, and Fibonacci in one Pascal array and proves
   `bagel(n)-cake(n)=T_n-1`; Klein-S313 realizes full-rank g-bonacci kernels.
