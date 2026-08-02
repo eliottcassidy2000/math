@@ -9,6 +9,7 @@ hostile_parent_top_and_control=(0,0)
 hostile_child_top_and_control=(-2,0)
 hostile_child_top_N2_N8=(-2, -22, -170, -1150, -7322, -45262, -275690)
 hostile_cross_degree_minor_and_control=(-1,0)
+bounded_lag_L0_L8_children=(-4, -8, -16, -32, -64, -128, -256, -512, -1024)
 bifiltration_maps=(horizon_inclusion,depth_zero_extension)
 survivor=full_cross_degree_endpoint_Pluecker_tensor
 scope=universal_endpoint_transport_not_fixed_bank_positivity

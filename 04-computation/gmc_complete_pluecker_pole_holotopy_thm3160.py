@@ -198,6 +198,25 @@ require(control_child_sequence == (0,) * 7,
         "equal-endpoint child control became nonzero")
 
 
+# No fixed degree-lag cap sees the degree-N/degree-zero minor uniformly.
+bounded_lag_children = []
+for lag in range(9):
+    degree = lag + 2
+    m = 2
+    # A extracts m_(degree), B extracts 1.  The only nonzero minor has
+    # degree gap `degree>lag`; the four-term recurrence gives this child.
+    parent_top = 0
+    omega_hn_one = 1
+    omega_hprev_mn = 0
+    omega_hprev_one = 0
+    child_top = (parent_top - m ** degree * omega_hn_one
+                 - m * omega_hprev_mn
+                 + m ** (degree + 1) * omega_hprev_one)
+    require(degree > lag and child_top == -(2 ** degree),
+            f"bounded-lag hostile failed at {lag}")
+    bounded_lag_children.append(child_top)
+
+
 print("THM-3160 complete Pluecker pole holotopy")
 print("degree_two_basis=(1,h1,m2,m11)")
 print(f"commuting_prefix_square_checks={commuting_checks}")
@@ -209,6 +228,7 @@ print("hostile_parent_top_and_control=(0,0)")
 print("hostile_child_top_and_control=(-2,0)")
 print("hostile_child_top_N2_N8=" + repr(hostile_child_sequence))
 print("hostile_cross_degree_minor_and_control=(-1,0)")
+print("bounded_lag_L0_L8_children=" + repr(tuple(bounded_lag_children)))
 print("bifiltration_maps=(horizon_inclusion,depth_zero_extension)")
 print("survivor=full_cross_degree_endpoint_Pluecker_tensor")
 print("scope=universal_endpoint_transport_not_fixed_bank_positivity")
