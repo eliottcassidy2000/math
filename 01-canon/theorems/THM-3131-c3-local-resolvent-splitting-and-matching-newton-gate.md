@@ -1,5 +1,5 @@
 ---
-id: THM-3127
+id: THM-3131
 title: "C3 local resolvent splitting and matching-Newton gate"
 status: >
   PROVED + VERIFIED-EXACT.  Let a separable depressed quartic with global
@@ -28,14 +28,14 @@ related:
   - THM-3057-tame-quartic-inertia-clutch-index-resonance
   - THM-3059-quartic-twojet-even-jelonek-c3-escape-counterexample
   - THM-3081-terminal-toric-residue-parameter-mobius-rigidity-and-autonomous-decoder
-script: 04-computation/jc_c3_local_resolvent_matching_gate_thm3127.py
-output: 05-knowledge/results/jc_c3_local_resolvent_matching_gate_thm3127.out
-script_sha256: 0f4abf813ae0012e014a474f5d5f06651d4601c31bc5341c1a5faf70cf2be24a
-output_sha256: 1993bab698ee5984fe976b8e84d3cb53b1dc4b4ac740c097023ca1313db0240c
+script: 04-computation/jc_c3_local_resolvent_matching_gate_thm3131.py
+output: 05-knowledge/results/jc_c3_local_resolvent_matching_gate_thm3131.out
+script_sha256: fb3ae1b344011a2389617b5810c6783a605dfb0c127198478a5723bc0982f307
+output_sha256: 3c599a8ee0af69c1f37e7833e043cd54165fe95db7defd02eb8be00ceb451534
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3127 -- a pure `C3` place splits the local `V4` packet
+# THM-3131 -- a pure `C3` place splits the local `V4` packet
 
 **PROVED + VERIFIED-EXACT.**
 
@@ -358,8 +358,8 @@ an exact account of the information that map destroys.
 Run
 
 ```bash
-python3 04-computation/jc_c3_local_resolvent_matching_gate_thm3127.py
-python3 -O 04-computation/jc_c3_local_resolvent_matching_gate_thm3127.py
+python3 04-computation/jc_c3_local_resolvent_matching_gate_thm3131.py
+python3 -O 04-computation/jc_c3_local_resolvent_matching_gate_thm3131.py
 ```
 
 Both executions match the stored transcript.  The companion verifies:
