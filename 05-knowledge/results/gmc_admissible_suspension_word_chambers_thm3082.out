@@ -1,0 +1,13 @@
+THM-3082 ADMISSIBLE SUSPENSION-WORD CHAMBERS
+widths=3..14 word_cells=376 width14_words=144
+invoice=B_k=(k-1)k!;J_k(delta)=B_k*delta*(log(k/delta)+1)
+node_gaps=O:log(k^k/(k-1)^(k-1));P:(k-2)log((k-1)/(k-2))
+P6_threshold_in=(0.00001808125357979,0.00001808125357980)
+O7_threshold_in=(0.00000636703607580,0.00000636703607582)
+safe_example=O4:1/1000,P6:1/100000,O7:1/200000
+K7_carrier=S3^840*U4^1260*E56^168*U5^1008*U6^840*U7^720
+triangular_divergence_hostiles=48 resultant=1
+zero_margin_cancellation_hostiles=4 resultant=0
+repair=group_lower_error_ideal_then_entropy;raw_convergence=FALSE
+scope=all_finite_admissible_OP_words;thin_cones;not_arbitrary_support
+all_exact_checks=PASS
