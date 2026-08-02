@@ -2,7 +2,7 @@
 id: THM-3160
 title: "Complete Pluecker pole holotopy and same-degree selector projection no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Common virtual-pole subtraction acts functorially on the full exterior
   square of the two endpoint profiles.  The usual selector currents are only
   same-degree Pluecker rows and are not an invariant projection: two
@@ -12,6 +12,13 @@ status: >
   but neither Hasse positivity nor pole-local response-compatible stochastic
   transport.
 source: root/multiscale-newton-flag/low-child-flag-extension-2026-08-02
+audit: >
+  Two independent hostile audits rederived the row-image pole-matrix
+  convention, exterior-square recurrence, commuting prefix squares,
+  four-term top-coordinate formula, all-degree one-letter hostile,
+  bounded-lag obstruction, bifiltration maps, and the terminal-Markov and
+  LRC-polarization scope boundaries.  Fresh normal and optimized executions
+  byte-match the stored transcript and both LF-normalized hashes.
 depends_on:
   - THM-3137-finite-stochastic-pole-selector-polytope-and-portability-wall
   - THM-3154-sharp-small-part-profile-jet-and-central-facet-reconstruction
@@ -31,8 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3160 -- complete Pluecker pole holotopy and same-degree selector projection no-go
 
-**PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The selector staircase has two superficially conflicting features.  The
 complete profile jet of THM-3154 observes every partition coordinate and
@@ -322,4 +328,4 @@ Here, same-degree determinant rows lose cross-degree endpoint phase, and the
 exterior tensor restores it.  This is a related algebraic pattern only: no
 LRC observable or endpoint service is constructed from the GMC tensor.
 
-QED (candidate pending independent theorem audit).
+QED.
