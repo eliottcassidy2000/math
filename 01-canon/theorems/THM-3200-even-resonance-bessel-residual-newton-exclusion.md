@@ -1,5 +1,5 @@
 ---
-id: THM-3140
+id: THM-3200
 title: "Even-resonance Bessel residual Newton exclusion for quadratic factorial windows"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  In the resonant
@@ -21,14 +21,14 @@ depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
 related:
   - THM-3131-prime-resonance-newton-slope-separation
-script: 04-computation/factorial_even_resonance_bessel_residual_thm3140.py
-output: 05-knowledge/results/factorial_even_resonance_bessel_residual_thm3140.out
-script_sha256: fd1d7f7c1c87d51ee4fe69355571847547e23545de2d928325471771da0a28cf
+script: 04-computation/factorial_even_resonance_bessel_residual_thm3200.py
+output: 05-knowledge/results/factorial_even_resonance_bessel_residual_thm3200.out
+script_sha256: 9fa20ff2f9be6add524db44fa2eb01bad637b5fcf39209debba74011efa5e89d
 output_sha256: 45431aa35b7a192026fabede50fa1a380d9e6b1202276d45bd661d6965882c21
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3140 -- even-resonance Bessel residual Newton exclusion
+# THM-3200 -- even-resonance Bessel residual Newton exclusion
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
@@ -278,8 +278,8 @@ consecutive residual gcds over `F_2`, and freezes the odd hostile controls in
 by `(10)`--`(21)`, not by the cutoff.  Run
 
 ```text
-python3 04-computation/factorial_even_resonance_bessel_residual_thm3140.py
-python3 -O 04-computation/factorial_even_resonance_bessel_residual_thm3140.py
+python3 04-computation/factorial_even_resonance_bessel_residual_thm3200.py
+python3 -O 04-computation/factorial_even_resonance_bessel_residual_thm3200.py
 ```
 
 and compare both byte-for-byte with the declared output.

@@ -1,5 +1,5 @@
 ---
-id: THM-3141
+id: THM-3201
 title: "C3 local resolvent splitting and matching-Newton gate"
 status: >
   PROVED + VERIFIED-EXACT.  Let a separable depressed quartic with global
@@ -30,14 +30,14 @@ depends_on:
 related:
   - THM-3057-tame-quartic-inertia-clutch-index-resonance
   - THM-3059-quartic-twojet-even-jelonek-c3-escape-counterexample
-script: 04-computation/jc_c3_local_resolvent_matching_gate_thm3141.py
-output: 05-knowledge/results/jc_c3_local_resolvent_matching_gate_thm3141.out
-script_sha256: c88bc78d7aaf2fc650c3d86b3412709215d5b0cb8c356e964647eb0bf008aec2
-output_sha256: 39c0f0a84762f4b8d99450a464a3b9c371b2a2435f81c599c46ce11f7bde6555
+script: 04-computation/jc_c3_local_resolvent_matching_gate_thm3201.py
+output: 05-knowledge/results/jc_c3_local_resolvent_matching_gate_thm3201.out
+script_sha256: 720f9e986fc9e36b8f9116f43f13383a795dbb349492e539d51dd246cd47a9e4
+output_sha256: 44e600c1d58c07a3c853cfbb3fb6fd5a26b22fc34afc4b0800864666bbaece5e
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3141 -- a pure `C3` place splits the local `V4` packet
+# THM-3201 -- a pure `C3` place splits the local `V4` packet
 
 **PROVED + VERIFIED-EXACT.**
 
@@ -441,7 +441,7 @@ q_0=(A_X tau^(m/3)/2)^3.                               (32)
 
 When `3` does not divide `m`, a simple zero or pole of `q_0` is accompanied
 by the exactly required nontrivial order of `tau` modulo three.  Hence no
-zero/pole pattern of `q_0` by itself can violate the THM-3141 cubeclass gate
+zero/pole pattern of `q_0` by itself can violate the THM-3201 cubeclass gate
 for this graph branch.
 
 The calculation also occurs directly in the actual, nondepressed graph
@@ -517,8 +517,8 @@ place algebraization of `L` or `tau`.  No such coupling is proved here.
 Run
 
 ```bash
-python3 04-computation/jc_c3_local_resolvent_matching_gate_thm3141.py
-python3 -O 04-computation/jc_c3_local_resolvent_matching_gate_thm3141.py
+python3 04-computation/jc_c3_local_resolvent_matching_gate_thm3201.py
+python3 -O 04-computation/jc_c3_local_resolvent_matching_gate_thm3201.py
 ```
 
 Both executions match the stored transcript.  The companion verifies:

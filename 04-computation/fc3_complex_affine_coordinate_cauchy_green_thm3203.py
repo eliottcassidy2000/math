@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for THM-3143.
+"""Exact controls for THM-3203.
 
 For an algebraic quadratic phase of Hessian rank at most one, Cauchy--Green
 or Green turns the simplex area period into oriented edge integrals.  This
@@ -8,8 +8,8 @@ discriminant-block extension: edge restrictions and ODEs, singleton/path/
 cycle sources, the odd-cycle obstruction, and the vertical-edge boundary.
 
 Reproduce:
-  python3 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3143.py
-  python3 -O 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3143.py
+  python3 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3203.py
+  python3 -O 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3203.py
 """
 
 from __future__ import annotations
@@ -24,7 +24,7 @@ def check(condition: bool, message: str) -> None:
         raise RuntimeError(message)
 
 
-print("THM-3143 FC(3) ALL ALGEBRAIC QUADRATIC EDGE-CURRENT AUDIT")
+print("THM-3203 FC(3) ALL ALGEBRAIC QUADRATIC EDGE-CURRENT AUDIT")
 
 # Normalize an oriented noncollinear algebraic triangle to vertices
 # z0=0,z1=1,z2=tau=x+i*y, with real y>0.
@@ -217,7 +217,7 @@ print("C5 rational coefficient pole multipliers -n+1/2 nonzero for n=1..12")
 
 # C6. Geometry failure is exact: every turn factor is proportional to y and
 # W=2iy.  At y=0 the triangle, Cauchy--Green area normalization, and cycle
-# source all collapse together; THM-3142's one-dimensional spline takes over.
+# source all collapse together; THM-3202's one-dimensional spline takes over.
 check(W.subs(y, 0) == 0, "collinear Jacobian collapse")
 for j, turn in enumerate(turns):
     check(sp.simplify(turn.subs(y, 0)) == 0, f"collinear turn collapse {j}")
@@ -913,4 +913,4 @@ print(
     "simple-pole c/s coefficient=0; zero-source Taylor coefficients=10"
 )
 
-print("ALL THM-3143 CONTROLS PASSED")
+print("ALL THM-3203 CONTROLS PASSED")

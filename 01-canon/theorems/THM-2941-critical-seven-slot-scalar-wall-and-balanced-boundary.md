@@ -15,7 +15,7 @@ status: >
   finite-low-pair torsion, torsion-density pigeonhole, scalar-splice,
   status-descent, and cardinality translated-band addenda improve the
   k=2/k=3 first-drift caps from 2142/380
-  to 1579/234 (using the THM-3041/3052/3061/3071 continuation).
+  to 1579/225 (using the continuation through THM-3114).
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -39,7 +39,10 @@ status: >
   contain the old triangle and their unique prime-five edge is a bridge.
   These finite-exact gain facts survive the retraction, and the corrected
   cap-3 theorem subsumes both cones.  The dependent gain relation (3/2)2=3
-  accompanies its coupled-debt repair.  The remaining proved
+  accompanies its coupled-debt repair.  THM-3135 proves that the simpler
+  standard single-pair uniform lanes for H form a DAG; the cap-3 repair
+  escapes that obstruction through lane-conditioned and multi-pair cycles.
+  The remaining proved
   reflected certificate-failure locus is confined, inside the inherited
   D>=6 stage, to 561 bodies with m>=2, 3<Q/m<6,
   Q/m not in {4,5}, and gcd(m,Q)<=47; the ratio-six boundary is closed.
@@ -72,6 +75,7 @@ related:
   - THM-1176-seven-wall-slow-gap-harmonic-crowding
   - THM-1221-seven-wall-strict-spectrum-hunter-floor
   - THM-2184-two-scale-tail-continuation-profile
+  - THM-3135-directed-cycle-weak-order-lane-cover-and-reflected-h-boundary
 verification:
   - 04-computation/lrc14_j7_critical_scalar_wall_balanced_boundary_thm2941.py
   - 05-knowledge/results/lrc14_j7_critical_scalar_wall_balanced_boundary_thm2941.out
@@ -1220,6 +1224,12 @@ The stored old-policy witnesses `(3,4,5,8,6,9)` on `H` and
 `3,600+3,600` distinct assignments at `(m,D)=(3,6)` have a positive direct
 pair certificate, proving that the first obstruction was the selector rather
 than the boundary assignments.
+
+THM-3135 sharpens that diagnosis.  Within the older standard single-pair
+uniform-envelope class, all eligible H lanes form a DAG and therefore admit
+a strict-potential adversary.  This does not contradict `(25i13c)`: its
+assignment-complete atlas uses lane-conditioned debt, fixed-pair interval
+chains, and an inverse-pair two-cycle outside that restricted repair class.
 
 The exact global-extreme pair also closes the first point *below* the cap-3
 cone.  The two bodies on which the universal same-level graph is not `K6`
@@ -3223,5 +3233,6 @@ close the residual `561`-body reflected wedge `D>=6,m>=2,2m<D<22m`, finish the r
 `k=2,3` finite decision trees, classify the zero/one-aligned multi-drift
 address hypergraph, close the six-body/seven-tail rung, or prove LRC(14).
 The independent THM-2928 divisor-status route closes `k=4`; THM-2980/2995
-and THM-2981/3071 lower the composed `k=2,3` caps to `1579/234`, respectively,
+and the continuation through THM-3114 lowers the composed `k=2,3` caps to
+`1579/225`, respectively,
 without emptying the sectors below those caps.

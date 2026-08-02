@@ -34,11 +34,12 @@ Format per entry:
   history.  If a collision appears, inspect the two add commits, keep the
   first-on-`main` ID fixed, and move only the later reservation.  Repeat the
   global ID check after the repair lands; do not move both sides speculatively.
-  A later local integration on a host unable to push honored those allocations:
-  the distinct pure-`C3` resolvent, real FC quadratic, and complex FC quadratic
-  packages moved to `THM-3141`, `THM-3142`, and `THM-3143`, respectively,
-  while the prime, forest, common-simple-zero, and tournament results reverted
-  to their first-on-`origin/main` IDs `3131`--`3134`.
+  Later local integrations on a host unable to push honored those allocations
+  and a further first-on-remote `THM-3140` reservation: the distinct even
+  factorial, pure-`C3` resolvent, real FC quadratic, and complex FC quadratic
+  packages moved to `THM-3200`--`THM-3203`, respectively, while the prime,
+  forest, common-simple-zero, and tournament results reverted to their
+  first-on-`origin/main` IDs `3131`--`3134`.
 
 ## MISTAKE-350 (2026-08-02, factorial-conjecture type audit) -- indexing SFC by slot count and restricting FC to homogeneous polynomials
 
@@ -144,6 +145,10 @@ Format per entry:
   `561` bodies with `D>=6,1<=m<D/2`.  The original faulty sources remain
   audit-required correction-lineage controls; their conclusions are
   superseded by the repaired referees.
+  THM-3135 later proves why a simpler repair cannot work for the hostile body
+  H: its eligible standard single-pair uniform lanes form a DAG.  The promoted
+  cap-3 referee survives because its assignment-complete atlas uses
+  lane-conditioned and multi-pair cycles outside that restricted class.
 
 ## MISTAKE-346 (2026-08-01, concurrent THM-3063 reservations) -- two distinct results acquired the same new theorem ID
 
@@ -604,6 +609,13 @@ Format per entry:
   now exclude the certificate basis and every magnitude derived from its
   arbitrary normalization.  The cap-`1656` lineage uses this canonical
   boundary throughout.
+- **Projected-k3 follow-through audit (2026-08-02):** THM-3078's worker field
+  `row[21]` still hashed a solver-selected dual and contradiction magnitude;
+  THM-3102/3106/3109/3111 and the first THM-3113 candidate inherited complete
+  worker rows.  Their state, Farkas, terminal, carrier, ledger, and cap
+  mathematics survives.  The repaired descendants verify every returned dual
+  but hash only `tuple(row[:19])` plus basis-invariant branch counts; the old
+  THM-3078 digest is a noncanonical artifact, not a dependency.
 - **Rule:** a proof search may use a noncanonical optimizer witness, but a
   reproducibility digest must bind canonical problem data or a separately
   canonicalized certificate, not an arbitrary valid basis or a scalar derived

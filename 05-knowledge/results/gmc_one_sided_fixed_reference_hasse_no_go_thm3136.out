@@ -1,0 +1,27 @@
+THM-3136 one-sided fixed-reference elementary-tail Hasse no-go
+all_degree_control=P:(36, -108, -72);poles:(5, 4, 3, 3, 2, 2, 2, 1, 1, 1, 1);tail_flag:(36, 144, 72);Q:(1, 1, 2, 3, 4, 5);H_1^6:11969920
+elementary_response=(16*t^5+40*t^6)/(1+5*t)
+infinite_hostile=scalar_positive_all_N>=5;bottom_facet_fails_even_N>=6
+current=Phi^R(h_N)m_mu(Q)-Phi^R(m_mu)h_N(Q)
+holotopy=bank_prefix_moves;distinguished_Q_fixed
+active_prefixes=8241:N5..9_currents=41205
+scalar_PhiR_hN=positive:33162:zero:0:negative:8043
+upset_sums_checked=6798825:maxflows_checked=41205
+fixed_reference_passes=16858/41205
+thm3128_hostile_comparison=(Fraction(-2324160, 1), 0, Fraction(-1779840, 1), Fraction(470835360, 1), ((5,),))
+thm3128_deletion_image=fixed_reference_changes_image:PASS
+global_minimum_cut=mass:-55698109053414685604638901071924888805732969400:N9:support:(10,21):I2:j68:upset_size:28
+degree=N5:total=8241:pass=8241:scalar_positive=8241:positive_scalar_pass=8241:scalar_negative=0:negative_scalar_pass=0:top_bad=0:bottom_complement_bad=0:extreme_union_bad=0:principal_bad=0:interior_fail=0:interior_principal=0:interior_nonprincipal=0:allprincipal_pass_but_fail=0
+degree=N6:total=8241:pass=2600:scalar_positive=5298:positive_scalar_pass=2600:scalar_negative=2943:negative_scalar_pass=0:top_bad=2943:bottom_complement_bad=5641:extreme_union_bad=5641:principal_bad=5641:interior_fail=0:interior_principal=0:interior_nonprincipal=0:allprincipal_pass_but_fail=0
+degree=N7:total=8241:pass=2820:scalar_positive=7041:positive_scalar_pass=2820:scalar_negative=1200:negative_scalar_pass=0:top_bad=1200:bottom_complement_bad=1492:extreme_union_bad=2692:principal_bad=5386:interior_fail=2729:interior_principal=2694:interior_nonprincipal=35:allprincipal_pass_but_fail=35
+degree=N8:total=8241:pass=1731:scalar_positive=5638:positive_scalar_pass=1731:scalar_negative=2603:negative_scalar_pass=0:top_bad=2603:bottom_complement_bad=6268:extreme_union_bad=6276:principal_bad=6510:interior_fail=234:interior_principal=234:interior_nonprincipal=0:allprincipal_pass_but_fail=0
+degree=N9:total=8241:pass=1466:scalar_positive=6944:positive_scalar_pass=1466:scalar_negative=1297:negative_scalar_pass=0:top_bad=1297:bottom_complement_bad=1983:extreme_union_bad=3240:principal_bad=6767:interior_fail=3535:interior_principal=3527:interior_nonprincipal=8:allprincipal_pass_but_fail=8
+fixed_reference_first_failure=(6, 1, 2, 0, 1, (5,), 612, 297412, Fraction(-11969920, 1), ((6,), (5, 1), (4, 2), (4, 1, 1), (3, 3), (3, 2, 1), (3, 1, 1, 1), (2, 2, 2), (2, 2, 1, 1), (2, 1, 1, 1, 1)))
+fixed_reference_failure_vector=(6,):12555792;(3, 3):9351360;(4, 2):21030768;(5, 1):30783600;(2, 2, 2):-4212368;(3, 2, 1):65837280;(4, 1, 1):7778736;(2, 2, 1, 1):-15163280;(3, 1, 1, 1):-64832448;(2, 1, 1, 1, 1):-75099360;(1, 1, 1, 1, 1, 1):11969920
+first_interior_failure=(7, 1, 2, 0, 1, (5,), 5868, Fraction(-1151498720, 1), ((7,), (6, 1), (5, 2), (5, 1, 1), (4, 3), (4, 2, 1), (4, 1, 1, 1), (3, 3, 1), (3, 2, 2), (3, 2, 1, 1), (3, 1, 1, 1, 1), (2, 2, 2, 1), (2, 2, 1, 1, 1)), ())
+first_interior_vector=(7,):568174968;(4, 3):731469672;(5, 2):886244040;(6, 1):1358031240;(3, 2, 2):120808440;(3, 3, 1):1306791288;(4, 2, 1):2212305840;(5, 1, 1):-169376520;(2, 2, 2, 1):277163368;(3, 2, 1, 1):-2377977096;(4, 1, 1, 1):-2628975464;(2, 2, 1, 1, 1):-2132426912;(3, 1, 1, 1, 1):-1303731584;(2, 1, 1, 1, 1, 1):1486861120;(1, 1, 1, 1, 1, 1, 1):-335362400
+first_nonprincipal_required=(7, 1, 2, 0, 1, (5,), 5868, Fraction(-1151498720, 1), ((7,), (6, 1), (5, 2), (5, 1, 1), (4, 3), (4, 2, 1), (4, 1, 1, 1), (3, 3, 1), (3, 2, 2), (3, 2, 1, 1), (3, 1, 1, 1, 1), (2, 2, 2, 1), (2, 2, 1, 1, 1)), ())
+first_nonprincipal_vector=(7,):568174968;(4, 3):731469672;(5, 2):886244040;(6, 1):1358031240;(3, 2, 2):120808440;(3, 3, 1):1306791288;(4, 2, 1):2212305840;(5, 1, 1):-169376520;(2, 2, 2, 1):277163368;(3, 2, 1, 1):-2377977096;(4, 1, 1, 1):-2628975464;(2, 2, 1, 1, 1):-2132426912;(3, 1, 1, 1, 1):-1303731584;(2, 1, 1, 1, 1, 1):1486861120;(1, 1, 1, 1, 1, 1, 1):-335362400
+scope=finite_exact_fixed_reference_current;no_nonrow_reconstruction_claim
+semantic_sha256=8a81f4b9cbd76aca6695deb6a685bf698336aa00d83a12eb63af48e2a1aeaa0a
+all_exact_checks=PASS

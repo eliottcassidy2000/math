@@ -1,11 +1,11 @@
 ---
-id: THM-3143
+id: THM-3203
 title: "FC(3) algebraic quadratic simplex phases: discriminant-class edge currents cannot cancel"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For every q in
   Qbar[u,v] of degree at most two, int_Delta exp(q)dA is nonzero, and it is
   1/2 iff q is identically zero.  Rank at most one is handled by THM-3116,
-  THM-3142, and the Cauchy--Green/Green discriminant-block proof below.  For
+  THM-3202, and the Cauchy--Green/Green discriminant-block proof below.  For
   full Hessian rank, center q=q0+Q(x-c) and use the Euler field (x-c)/2:
   `sK'+(1-sq0)K` is a constant-weight edge flux.  Normalized quadratic edge
   periods group by kappa=delta/(4a).  The binary determinant identity makes
@@ -20,17 +20,17 @@ status: >
 source: codex-2026-08-02-fc3-simplex
 depends_on:
   - THM-3116
-  - THM-3142
+  - THM-3202
 related:
   - THM-3039
 external:
   - "Cauchy--Green formula."
   - "F. Beukers, A refined version of the Siegel--Shidlovskii theorem, Annals of Mathematics 163 (2006), 369--379, Corollary 1.4."
-script: 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3143.py
-output: 05-knowledge/results/fc3_complex_affine_coordinate_cauchy_green_thm3143.out
+script: 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3203.py
+output: 05-knowledge/results/fc3_complex_affine_coordinate_cauchy_green_thm3203.out
 ---
 
-# THM-3143 — algebraic quadratic phases on the triangle
+# THM-3203 — algebraic quadratic phases on the triangle
 
 ## 0. Promoted statement and reduction map
 
@@ -79,7 +79,7 @@ normal forms.
   q=A x^2+Bx+C+lambda y.                                      (0.6)
   ```
 
-  The case `lambda=0` is THM-3142; the transverse case is section 12.
+  The case `lambda=0` is THM-3202; the transverse case is section 12.
 
 Thus the former affine-coordinate restriction is discharged, not silently
 dropped.  Sections 14--18 discharge the former full-rank boundary.  The
@@ -116,7 +116,7 @@ linear term and sections 14--18 handle full rank.  None of these simplex
 period results proves `FC(3)`.
 
 If the three vertex values of `ell` are collinear, algebraically
-reparameterize their real affine line and apply THM-3142.  If `P` is
+reparameterize their real affine line and apply THM-3202.  If `P` is
 affine, `P(ell)` is affine and THM-3116 applies.  Constant cases reduce to
 Hermite--Lindemann.  It therefore remains to prove (3)--(4) when
 
@@ -151,7 +151,7 @@ Cauchy--Green gives the exact area-to-boundary identity
 W K(s)=integral_(boundary T) conjugate(t) exp(sP(t)) dt.        (8)
 ```
 
-This is the noncollinear replacement for THM-3142's one-dimensional spline
+This is the noncollinear replacement for THM-3202's one-dimensional spline
 pushforward.  It retains all three edge directions, which will be the
 sidecar preventing cancellation.
 
@@ -361,8 +361,8 @@ remaining boundary case.  This completes (3)--(4).
 Run
 
 ```text
-python3 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3143.py
-python3 -O 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3143.py
+python3 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3203.py
+python3 -O 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3203.py
 ```
 
 The frozen exact controls normalize the triangle to vertices
@@ -377,7 +377,7 @@ The frozen exact controls normalize the triangle to vertices
   source in (22);
 * the half-integral pole obstruction in (26); and
 * the exact collinear boundary `y=0`, where `W` and all three turns vanish
-  together and THM-3142's spline mechanism takes over.
+  together and THM-3202's spline mechanism takes over.
 
 The normal and optimized runs are byte-identical.  Section 13 records the
 current combined source and output hashes after the transverse controls.
@@ -641,7 +641,7 @@ opposites.  It is therefore impossible.  This covers vertical edges,
 repeated leading-coordinate values, and every endpoint-value collision.
 
 The discriminant-class system remains ordinary at one, and (50) excludes
-`K_q(1)=0,1/2` exactly as in section 11.  Together with THM-3116, THM-3142,
+`K_q(1)=0,1/2` exactly as in section 11.  Together with THM-3116, THM-3202,
 and sections 1--7, this completes the reduction in section 0.
 
 ## 13. Extended exact verification and sharp scope
@@ -910,6 +910,6 @@ isotropic edge, a two-edge equal-`kappa` class, and a full three-edge tangent
 class.  Normal, optimized, and stored outputs are byte-identical.
 
 ```text
-source sha256 = dcd51bce491a9cacf5b12912ffa5ea72f549bbdafc66ac4142654c20f04bab8a
-output sha256 = e29c446e640b23fb18d2d326d71db1cc702c79c1a33ef3fb145fdf79fd8023bd
+source sha256 = f6e944ee60a05da4157c0f44b0a52e33e64abaa988436e31cc36422715c3e7a4
+output sha256 = 2f94ea043027441f2c51117e01cb969a4eae70f490c18f8c1e2a137064377706
 ```

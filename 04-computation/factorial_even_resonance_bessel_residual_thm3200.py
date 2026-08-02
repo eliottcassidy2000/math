@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for THM-3140's even-resonance Bessel residual proof."""
+"""Exact controls for THM-3200's even-resonance Bessel residual proof."""
 
 from fractions import Fraction
 from math import comb, isqrt
@@ -70,7 +70,7 @@ def direct_bivariate_moment(n: int, d: int):
 
 
 def reindexed_coefficient(n: int, d: int, j: int) -> int:
-    """The k=#constant-factors form in THM-3140 equation (10)."""
+    """The k=#constant-factors form in THM-3200 equation (10)."""
     normalized = sum(
         Fraction((-d) ** k, FACTORIAL[k])
         * comb(n + j - k, 2 * j)

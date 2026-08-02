@@ -32,9 +32,9 @@ OUTPUT = ROOT / (
     "lrc14_j7_k3_z230_exact_screen_compressed_complete_cell_descent_thm3111.out"
 )
 
-SOURCE_3109_SHA256 = "f40df5b485883111fa2245cbb76fc43d8f90418a1529ff022adfeb73a1972e83"
-OUTPUT_3109_SHA256 = "9126830064e15e7e7f4c7128f8cbb968c95e660a8dbf9171657d23c3aeb87e66"
-SEMANTIC_3109_SHA256 = "86fdf94cb22cd0353a28f8a47251a4c175193188de0fe78676c6e9e7d6ff899b"
+SOURCE_3109_SHA256 = "1f74f2b2368c04f514f2c388b54c70a9ee66c9387fbc437093884b807b3eb23c"
+OUTPUT_3109_SHA256 = "e6d56fa6a419ffe229b8334090e02d98c9d2cdf5f2fa5e24baedd5f722dadf70"
+SEMANTIC_3109_SHA256 = "5be5c2fc680d6873600e77227f51264d74a7cd353652795e5ef74215e0fda843"
 
 LEVEL = 230
 NEXT_LEVEL = 229
@@ -45,12 +45,12 @@ EXPECTED_NEXT_ROW_ORDER_SHA256 = "7449dd7ad70cf3c76c32edb2cc509e29989ac008c2e9a9
 EXPECTED_SCREEN = (4156, 2437, 1648, 71)
 EXPECTED_ORDER = (8, 8, 0, 0)
 EXPECTED_FARKAS = (0, 1648)
-EXPECTED_SCREEN_SHA256 = "b74351d30dced85c2697bf8da85ca0ec99f500014b014ed13bce80921f96cfba"
+EXPECTED_SCREEN_SHA256 = "3c7681f663bbb9bbe6f0483918474df76c935dc6a9a6006499848b9898d57477"
 EXPECTED_TERMINAL = (6, 6, 6, 68, 71, 68, 3, 0, 0, 0)
 EXPECTED_TERMINAL_SHA256 = "90b1768cf0165683ceb086359180563081a0ff89a3876c88a47c7240ca036e37"
 EXPECTED_CARRIER_SHA256 = "a8e749413d276397dd8ba521a62bad219e82639d7c53669030c41ec166ebeb5d"
 EXPECTED_DIRECT_SHA256 = "c2640270e1af368ea4c40856ef9b8254d16214bea84ea2be6197f75f6d17e761"
-EXPECTED_SEMANTIC_SHA256 = "b4dd4e0e66d0429cac12dc96d1d769d3f05ab3c503e1dcbb1b94f5e6020c9b6c"
+EXPECTED_SEMANTIC_SHA256 = "4ff290e285dbb748dac71e1b885ce220dbfe04ec6f236ea97a5526bc27baa497"
 
 LEDGER_BEFORE = 374313
 LAYER_ROWS = 50
@@ -208,7 +208,8 @@ def run_screen(rows, processes):
     farkas = (sum(row[19] for row in screened), sum(row[20] for row in screened))
     require(farkas == EXPECTED_FARKAS, farkas)
     require(all(row[16] == row[11] for row in screened), "unverified status row")
-    record_sha = hashlib.sha256(repr(screened).encode()).hexdigest()
+    canonical_screened = tuple(row[:19] for row in screened)
+    record_sha = hashlib.sha256(repr(canonical_screened).encode()).hexdigest()
     if EXPECTED_SCREEN_SHA256 is not None:
         require(record_sha == EXPECTED_SCREEN_SHA256, record_sha)
 
@@ -400,14 +401,15 @@ def main():
     require(LEDGER_BEFORE - LAYER_ROWS == LEDGER_AFTER, "ledger arithmetic")
 
     semantic_packet = (
-        "lrc14-k3-z230-screen-compressed-carrier-v1",
+        "lrc14-k3-z230-screen-compressed-carrier-v2",
         SOURCE_3109_SHA256,
         OUTPUT_3109_SHA256,
         SEMANTIC_3109_SHA256,
         base.thm.ATLAS_SHA256,
         rows,
         next_rows,
-        screened,
+        tuple(row[:19] for row in screened),
+        (screen_totals, order_totals, farkas),
         terminals,
         carriers,
         cases,
@@ -449,6 +451,7 @@ def main():
             "direction_terminal=the_positive_duplicate_permitting_two_high_gap_and_the_wall_at_least_one_high_gate_force_exactly_one_high;zero_high_scalar_passes_are_hostiles_excluded_by_the_wall;the_one_high_bank_uses_high_ray_suprema_and_enlarges_the_actual_assignment_set",
             "direction_carrier=each_direct_complete_cell_is_an_inner_carrier_wholly_contained_in_the_strict_open_safe_set;grouping_by_low_label_pair_reuses_the_same_carrier_without_identifying_distinct_high_cases;the_coarse_lower_bound_or_the_exact_projected_support_above_ceil(d/7)_forces_the_completed_carrier_contradiction",
             "boundary=the_compression_forgets_joint_two_high_compatibility_and_requires_a_separate_common_two_high_carrier_if_a_future_duplicate_two_high_gap_is_nonpositive",
+            "evidence_boundary=all_returned_Farkas_certificates_are_verified_exactly;screen_and_semantic_digests_bind_only_canonical_19_field_problem_result_rows_and_basis_invariant_counts",
             f"promotion_consequence=ledger {LEDGER_BEFORE}-{LAYER_ROWS}={LEDGER_AFTER};projected_k3_cap:z1<={NEXT_CAP};next_layer:z1={NEXT_LEVEL}_rows:{next_census[0]}",
             f"next_layer=z1:{NEXT_LEVEL};rows:{next_census[0]};wall:{next_census[1]};order:{next_census[2]};row_order_sha256:{EXPECTED_NEXT_ROW_ORDER_SHA256};status:occupied_unscouted_handoff",
             "scope=projected_k3_necessary_atlas_only;no_physical_cover_classification_outside_the_projection;no_k<=1_or_final_rung_or_LRC14_claim",

@@ -1,9 +1,9 @@
 LRC14 projected k3 z232 exact screen and complete-cell cardinality descent
-dependency=THM3078_source:2a051babe109f56056fe61476870f8e2e13cfc99b2f9bb7ac122b8780c8fa168;output:d5fc52e922b7e083f5cbe5aa5a6066304c4e5c8c7963904dd3b649477caf5e42;semantic:749a2292da58925c9653ce919d5bab6b374f64f8b713ac52efa1f18fba74c918
-predecessor=THM3102_source:3db29155f4c1332c91605e5589dfdc19319eb81dc309a33ff8af161abb39a036;output:f358eae14c52783b561b8b799b02fb07f2988ef6b1b9f6cd33f3030ce177727d;semantic:6cf01affce52a5dcc67a8634da815780e3d357e72b295a7c4951211c6f12b0da;ledger:374325;cap:232
+screen_engine=THM3078_source:2a051babe109f56056fe61476870f8e2e13cfc99b2f9bb7ac122b8780c8fa168;historical_output_semantic_not_inherited:MISTAKE331_333
+predecessor=THM3102_source:83b02c3dcaf383ece8106ca4a9008da5bbcb8216d5196001be8f21b5da821b18;output:3b518c82bbe451fa13d53363d30cf9766ca5d71f31a2f4541271383f83e0a0a8;semantic:c97a5424b26401a94fb6389c8225ac56a72ce7b79b3fea51d761dc575619750f;ledger:374325;cap:232
 atlas=sha256:cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda;rows:6060;neighbor_census:((231, (9, 5, 4)), (232, (3, 3, 0)), (233, (62, 45, 17)))
 layer=z1:232;rows:3;wall:3;order:0;row_order_sha256:9bda2b6c4582541b8303156c2c9a47bf8b44d6d0ca9ceeb0b30d78860eebb796
-screen=states:147;crude:58;status:65;residual:24;residual_bodies:1;direct_farkas:0;legacy_farkas:65;screen_record_sha256:3ca9c8569f05d8adf0ff04586347700597d7875794525452b13031e15acd909a
+screen=states:147;crude:58;status:65;residual:24;residual_bodies:1;direct_farkas:0;legacy_farkas:65;screen_record_sha256:f0cf14299a1614aa99982d7ade1f1aa35b626ab1198eb853f6776b68c1dfb2c2
 order_control=rows:0;states:0;crude:0;status:0;residual:0;entire_layer_is_wall
 ROW;E=(1, 2, 6, 9, 12, 14);L=3528;high=348;branch=wall;states=2;crude=0;status=2;residual=0;direct=0;legacy=2;stage_sha256=113730b2446c1be0da689117f6f408374520700cb0638e2514b89249f920a7d1;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
 ROW;E=(1, 5, 6, 9, 12, 14);L=17640;high=1738;branch=wall;states=2;crude=2;status=0;residual=0;direct=0;legacy=0;stage_sha256=6ccc7a3c1f50661717767cfa5f0bd575af1a567bd7d8695ff89756197cf7b1ca;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
@@ -37,6 +37,7 @@ CASE;ds=(5544, 9702, 10780, 24255);high_d=5544;low_rows=((9702, 260), (10780, 23
 CASE;ds=(9240, 9702, 10780, 24255);high_d=9240;low_rows=((9702, 260), (10780, 234));excess=31112387/127096161192;cells=37702;capacity=21;coarse_lower_bound=1796;support=9240;kappa=1320;actual_slack=7920;method=coarse-cardinality;support_sha256=59738ce10ae0f40b7728ea16fc1490b673ab13022a75aef1268d66f1253d1514
 CASE;ds=(9702, 10780, 24255, 27720);high_d=27720;low_rows=((9702, 260), (10780, 234));excess=124428659/491759388120;cells=37702;capacity=7;coarse_lower_bound=5386;support=21846;kappa=3960;actual_slack=17886;method=coarse-cardinality;support_sha256=7578c9b61c265952b279e90959d9a251b64630d251777a3b2f9cbf93d3274244
 strict_open_control=E=(1, 9, 10, 11, 12, 14);lows=(234, 260);cells=37702;minimum=(0, 14850, 14, 'L')
+evidence_boundary=all_returned_Farkas_certificates_are_verified_exactly;screen_and_semantic_digests_bind_only_canonical_19_field_problem_result_rows_and_basis_invariant_counts
 direction_screen=ray_quotient_relaxes_global_suffix_order_but_preserves_fixed_first_label_distinct_label_witness_denominators_and_wall_high_gate;crude_and_exact_Farkas_status_exclusions_close_the_enlarged_state_set
 direction_terminal=positive_duplicate_permitting_two_high_gap_plus_wall_at_least_one_high_gate_forces_exactly_one_high;one_high_cases_uses_a_high_ray_supremum_and_is_a_superset_of_actual_literal_assignments
 translated_gate=complete_cell_support_uses_ceil(d/7),not_centered_beta;support_above_that_cap_gives_P_(E,Z)=T_for_every_high_label_on_the_denominator_ray;THM2941_completion_forces_P_subset_U_A_and_THM1166_gives_mu(U_A)<=36/91<1
@@ -53,5 +54,5 @@ NEXT;E=(1, 4, 8, 9, 10, 12);L=5040;high=497;branch=wall
 NEXT;E=(1, 5, 9, 11, 12, 13);L=360360;high=35491;branch=wall
 NEXT;E=(2, 3, 4, 8, 10, 12);L=1680;high=166;branch=order
 scope=projected_k3_necessary_atlas_only;z1=231_is_occupied_but_unscouted;no_physical_cover_classification_outside_the_projection;no_k<=1_or_final_rung_or_LRC14_claim
-semantic_sha256=a14adcd1e52323baf2b791f55d5846c4fbd422e3441fa2411138bdd98acca3d3
+semantic_sha256=7ce917fe1d40b191ab562f3e6d77fe5313ef7c9e46282af37998d040a93308cf
 all_exact_controls=PASS

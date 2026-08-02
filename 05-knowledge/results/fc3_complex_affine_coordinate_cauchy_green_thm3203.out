@@ -1,4 +1,4 @@
-THM-3143 FC(3) ALL ALGEBRAIC QUADRATIC EDGE-CURRENT AUDIT
+THM-3203 FC(3) ALL ALGEBRAIC QUADRATIC EDGE-CURRENT AUDIT
 C1 Cauchy-Green oriented monomial checks=7; W=2*i*y
 C2 conjugate-line and endpoint-correction checks=6
 C3 closed-cycle coefficient relations=6; complex segment ODE recurrences=6; locally derived turning-square sources=3
@@ -11,4 +11,4 @@ C9 Green vertical-edge monomial checks=10; collision currents=2d,3d; all-value o
 C10 full-rank planted cases=5 (including complex algebraic); quadratic_edges=14; affine_nonconstant=1; resonant_edges=3; max_class_size=3
 C11 random exact full-rank cases=18; quadratic_edges=53; affine_edges=1; kappa_classes=52; live_source_groups=102
 C12 ODE gates: half-residue nonresonance; unit-residue orders=2..12; simple-pole c/s coefficient=0; zero-source Taylor coefficients=10
-ALL THM-3143 CONTROLS PASSED
+ALL THM-3203 CONTROLS PASSED

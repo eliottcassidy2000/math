@@ -1,5 +1,5 @@
 ---
-id: THM-3142
+id: THM-3202
 title: "FC(3) real affine-coordinate quadratics: the two-piece spline source cannot cancel"
 status: >
   PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  Let r be a
@@ -25,11 +25,11 @@ related:
 external:
   - "Riesz--Markov--Kakutani representation theorem."
   - "F. Beukers, A refined version of the Siegel--Shidlovskii theorem, Annals of Mathematics 163 (2006), 369--379, Corollary 1.4."
-script: 04-computation/fc3_real_affine_coordinate_quadratic_spline_thm3142.py
-output: 05-knowledge/results/fc3_real_affine_coordinate_quadratic_spline_thm3142.out
+script: 04-computation/fc3_real_affine_coordinate_quadratic_spline_thm3202.py
+output: 05-knowledge/results/fc3_real_affine_coordinate_quadratic_spline_thm3202.out
 ---
 
-# THM-3142 — real affine-coordinate quadratic phases on the triangle
+# THM-3202 — real affine-coordinate quadratic phases on the triangle
 
 ## 1. Statement and exact scope
 
@@ -326,8 +326,8 @@ factorization geometry and is not silently included here.
 Run
 
 ```bash
-python3 04-computation/fc3_real_affine_coordinate_quadratic_spline_thm3142.py
-python3 -O 04-computation/fc3_real_affine_coordinate_quadratic_spline_thm3142.py
+python3 04-computation/fc3_real_affine_coordinate_quadratic_spline_thm3202.py
+python3 -O 04-computation/fc3_real_affine_coordinate_quadratic_spline_thm3202.py
 ```
 
 The frozen controls verify:

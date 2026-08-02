@@ -30,9 +30,9 @@ OUTPUT = ROOT / (
     "lrc14_j7_k3_z231_exact_screen_complete_cell_cardinality_descent_thm3109.out"
 )
 
-SOURCE_3106_SHA256 = "9c38e808e22c9ac376217b9c76da69f198a14a4060cd4af4bf3e10b2c6a604f6"
-OUTPUT_3106_SHA256 = "286bb3e31e1ef28af5640a8ebe5e0df5e57b3e7253aa4c1e5ac0483beb9d0e63"
-SEMANTIC_3106_SHA256 = "a14adcd1e52323baf2b791f55d5846c4fbd422e3441fa2411138bdd98acca3d3"
+SOURCE_3106_SHA256 = "f6f64ab8d8ea9b04a1a03e26fc6026efc864e44518e9cb40df4fe8471a4a7991"
+OUTPUT_3106_SHA256 = "97bc554952a215e2cd87504f3ec16a9966b634723ff27de7e287461a4e4a49e7"
+SEMANTIC_3106_SHA256 = "7ce917fe1d40b191ab562f3e6d77fe5313ef7c9e46282af37998d040a93308cf"
 
 LEVEL = 231
 NEXT_LEVEL = 230
@@ -42,7 +42,7 @@ EXPECTED_LAYER_CENSUS = (9, 5, 4)
 EXPECTED_NEXT_CENSUS = (50, 48, 2)
 EXPECTED_SCREEN = (226, 127, 97, 2)
 EXPECTED_FARKAS = (0, 97)
-EXPECTED_SCREEN_SHA256 = "80cc1065fb84319d2d063b911cfe24576e088596ecf815a98d50e38a6f32a685"
+EXPECTED_SCREEN_SHA256 = "8fa535bb4e987a6ee21657503b769c202d743d99577cf8e05019a5ec93f525f1"
 
 RESIDUAL_BODY = (1, 5, 9, 11, 12, 13)
 RESIDUAL_BANK = (
@@ -71,7 +71,7 @@ LEDGER_BEFORE = 374322
 LAYER_ROWS = 9
 LEDGER_AFTER = 374313
 NEXT_CAP = 230
-EXPECTED_SEMANTIC_SHA256 = "86fdf94cb22cd0353a28f8a47251a4c175193188de0fe78676c6e9e7d6ff899b"
+EXPECTED_SEMANTIC_SHA256 = "5be5c2fc680d6873600e77227f51264d74a7cd353652795e5ef74215e0fda843"
 
 
 def require(condition, message):
@@ -147,8 +147,10 @@ def run_screen(rows, processes):
     require(totals == EXPECTED_SCREEN, totals)
     require(farkas == EXPECTED_FARKAS, farkas)
     require(all(row[16] == row[11] for row in screened), "unverified status row")
-    record_sha = hashlib.sha256(repr(screened).encode()).hexdigest()
-    require(record_sha == EXPECTED_SCREEN_SHA256, record_sha)
+    canonical_screened = tuple(row[:19] for row in screened)
+    record_sha = hashlib.sha256(repr(canonical_screened).encode()).hexdigest()
+    if EXPECTED_SCREEN_SHA256 is not None:
+        require(record_sha == EXPECTED_SCREEN_SHA256, record_sha)
     residual = tuple((row[1], row[13]) for row in screened if row[12])
     require(residual == ((RESIDUAL_BODY, RESIDUAL_BANK),), residual)
     require(hashlib.sha256(repr(residual).encode()).hexdigest() == EXPECTED_RESIDUAL_RECORD_SHA256, residual)
@@ -261,14 +263,15 @@ def main():
     require(LEDGER_BEFORE - LAYER_ROWS == LEDGER_AFTER, "ledger arithmetic")
 
     semantic_packet = (
-        "lrc14-k3-z231-screen-terminal-v1",
+        "lrc14-k3-z231-screen-terminal-v2",
         SOURCE_3106_SHA256,
         OUTPUT_3106_SHA256,
         SEMANTIC_3106_SHA256,
         module.thm.ATLAS_SHA256,
         rows,
         next_rows,
-        screened,
+        tuple(row[:19] for row in screened),
+        (totals, farkas),
         terminal,
         cases,
         carrier_sha,
@@ -296,6 +299,7 @@ def main():
             f"RESIDUAL;E={RESIDUAL_BODY};masks:{len(RESIDUAL_BANK)};sha256:{EXPECTED_RESIDUAL_SHA256};tuples:{RESIDUAL_BANK}",
             f"terminal=two_high_gap:{ftext(terminal[5])};gap_witness:{terminal[6]};zero_high_hostiles:{terminal[7]};one_high_cases:{terminal[8]};low_label_sets:{terminal[9]};coarse_cardinality:{terminal[10]};exact_cardinality:{terminal[11]};failures:{terminal[14]};minimum_certificate_slack:{terminal[16]};case_sha256:{terminal[17]};terminal_sha256:{terminal_sha}",
             f"hostile_terminal_audit=direct_full_grid_equals_scalar_equals_vector;labels:{EXPECTED_LOW_LABELS};cells:{len(cells)};carrier_sha256:{carrier_sha};minimum_weak_endpoint:{endpoint};record_sha256:{EXPECTED_DIRECT_RECORD_SHA256}",
+            "evidence_boundary=all_returned_Farkas_certificates_are_verified_exactly;screen_and_semantic_digests_bind_only_canonical_19_field_problem_result_rows_and_basis_invariant_counts",
         ]
     )
     for record in records:

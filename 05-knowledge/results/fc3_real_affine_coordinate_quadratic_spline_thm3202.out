@@ -1,8 +1,8 @@
-THM-3142 FC(3) REAL AFFINE-COORDINATE QUADRATIC SPLINE AUDIT
+THM-3202 FC(3) REAL AFFINE-COORDINATE QUADRATIC SPLINE AUDIT
 C1 two-piece spline mass=1/2; direct/pushforward moments=7
 C2 quadratic segment ODE coefficient recurrences=14
 C3 corrected-period sources=(d_a^2/(2Ap), -span*d_b^2/(2Apq), d_c^2/(2Aq))
 C4 reflection-collision combined sources nonzero: cases=3
 C5 rational coefficient equation: pole multipliers -n+1/2 nonzero for n=1..12
 C6 hostile knots=(0,1,2): transform=(e^g-1)^2/(2g^2), value at g=2*pi*i is 0
-ALL THM-3142 CONTROLS PASSED
+ALL THM-3202 CONTROLS PASSED

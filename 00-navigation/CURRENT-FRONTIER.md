@@ -25,7 +25,7 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-`<=6`. THM-2928 removes aligned `k>=4`; THM-2995/3114 give projected `k=2,3 <= 1579/225`; THM-2941's physical extreme closes `m=1`, every `Q>6m` by exact circle-window discrepancy, the full rays `Q/m=4,5,6`, and every other ray of gcd scale at least `48`. Inside the `D>=6` stage, its `561`-body reflected residual is `m>=2,3<Q/m<6`, off `4,5`, with `gcd(m,Q)<=47`; ray `6` is the closed boundary.
+`<=6`. THM-2928 removes aligned `k>=4`; THM-2995/3114 give projected `k=2,3 <= 1579/225`. THM-2941 closes `m=1`, `Q>6m`, rays `4,5,6`, and other gcd scales `>=48`. In the `D>=6` stage its `561`-body reflected residual is `m>=2,3<Q/m<6`, off `4,5`, with `gcd(m,Q)<=47`.
 This is not a physical-survivor classification; arbitrary `k<=1`, the rung, and LRC remain open. Septimal floor/exception plus located phase cut the raw five-drift ledger
 `951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
@@ -33,15 +33,13 @@ not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
 `1680..1742` `k=2` atlas; THM-2980/2995 then close every row at
 `1580..1679`, giving cap `1579`.  For `k=3`, torsion/status closes through `297`;
 THM-2981/3033/3041/3052/3061/3071/3078/3094/3098/3102/3106/3109/3111/3113/3114
-close projected `k=3` rows through `z_1=226`: cap `225`, ledger `374172`;
-the next layer has `78` rows. THM-3126 independently reconstructs the six
-`z_1=229` prefix terminals and is now a corroborating sidecar rather than the
-cap theorem.
+close projected `k=3` through `z_1=226`: cap `225`, ledger `374172`; next layer `78` rows. THM-3126 reconstructs six `z_1=229` prefix terminals as a sidecar, not the cap theorem.
 In the reflected gain graph, cap two forces the phase-zero triangle
 `(3/2)(4/3)=2`; by cap `7/3` it is interior and no full-cap component remains.
 The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`.  The MISTAKE-347 cap-`3`
 repair recomputes `561` bodies, both orientations of `253` policies, and
 `35` tail lanes/`1,600` heads, proving `2m>=D` only in the sufficient family.
+THM-3135 shows the standard single-pair uniform H lanes form a DAG; the repaired atlas succeeds through richer lane-conditioned/multi-pair cycles.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
 supplied-root seams, not semantic-root identification (kernel `28,393`).
@@ -337,7 +335,7 @@ Classify profiles under support operations; study analytic continuation and auto
   pair, while THM-3066 retains only the sheetwise cofactor product.
   THM-3068 permits `C3`; THM-3070/3074/3080 force a finite local Laurent-key
   tower ending at gcd one, and THM-3081 makes its terminal residue Mobius with
-  a square decoder.  THM-3141 identifies the genuine local resolvent map: at
+  a square decoder.  THM-3201 identifies the genuine local resolvent map: at
   a pure `C3` place the ramified source and full `S4/V4` resolvent completions
   coincide, all matching Kummer roots are squares, and `v(q)` gives an exact
   `3|v(q)` Newton/discriminant gate.  Its graph-quartic addendum proves the
@@ -377,7 +375,10 @@ Classify profiles under support operations; study analytic continuation and auto
   open.  THM-2799/2800/2805/2808 complete accessory `e=2`; THM-2817 the sextic `e=3`; THM-2840 the heptic `T_7` carrier.
   Audited THM-3123 makes the two remaining accessory algebras reduced length six and yields `1+3` nonsplit `S_7` maps, completing the abstract heptic atlas.
   This supplies no Keller-chart entry and proves neither `JC(2)` nor `DC(2)`.
-- **Factorial:** MISTAKE-350 fixes typing. THM-3131/3140 close prime/even resonances; THM-3116/3142/3143 prove all algebraic quadratic simplex periods. Higher phases and full `FC(3)`/`SFC(3)` remain OPEN.
+- **Factorial:** MISTAKE-350 fixes typing. THM-3131/3138/3200 close prime,
+  adjacent-prime, and even resonances; THM-3116/3202/3203 close all algebraic
+  quadratic simplex periods. Higher phases, odd composites, and full
+  `FC(3)`/`SFC(3)` remain OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
