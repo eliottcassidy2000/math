@@ -1,5 +1,5 @@
 ---
-id: THM-3135
+id: THM-3134
 title: "Tournament endpoint jets and the cubic C3 Gregory-Newton profile transform"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The complete
@@ -27,14 +27,14 @@ related:
   - THM-1975-the-path-cover-polynomial-is-the-refined-compositional-invariant
   - THM-2412-delta-exponential-and-central-newton-layer-split
   - THM-2438-poisson-newton-ternary-half-and-harmonic-divisor-incidence
-script: 04-computation/tournament_c3_endpoint_jet_newton_thm3135.py
-output: 05-knowledge/results/tournament_c3_endpoint_jet_newton_thm3135.out
-script_sha256: 7aa2974d36d6431315f3afa071a7a3cb63407fee1e8c7621c53a5f8917fccb8f
+script: 04-computation/tournament_c3_endpoint_jet_newton_thm3134.py
+output: 05-knowledge/results/tournament_c3_endpoint_jet_newton_thm3134.out
+script_sha256: cb5378c7ca3b085251e72d7f265c6406f0e5211f0d04eb9b3cb03c8ba62e74cb
 output_sha256: 8ba3debc0708fa5091392c6b142662c8fc2c4c4303443cf8539fcc1cdff431c8
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3135 -- tournament endpoint jets and the cubic `C3` Newton transform
+# THM-3134 -- tournament endpoint jets and the cubic `C3` Newton transform
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
@@ -310,8 +310,8 @@ through 243 vertices, all `1,099` labelled tournaments through order five,
 the hostile pair, and transitive Stirling controls.  Run
 
 ```text
-python3 04-computation/tournament_c3_endpoint_jet_newton_thm3135.py
-python3 -O 04-computation/tournament_c3_endpoint_jet_newton_thm3135.py
+python3 04-computation/tournament_c3_endpoint_jet_newton_thm3134.py
+python3 -O 04-computation/tournament_c3_endpoint_jet_newton_thm3134.py
 ```
 
 and compare with the declared transcript.
