@@ -1,0 +1,9 @@
+THM-3280 FC CYCLIC-MODULE ORDINARY-BASIS REPAIR AUDIT
+C1:simultaneous_commutant_nullities=[(3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1)]
+C2:centralizer_trace_gram_abs_determinants=[(3, 4), (4, 27), (5, 256), (6, 3125), (7, 46656), (8, 823543), (9, 16777216), (10, 387420489)]
+C3:proper_cycle_subset_checks=1004;all_noninvariant=YES
+C4:integer_degree_zero_profiles=[(3, 0), (4, 2), (5, 2), (6, 6), (7, 6), (8, 18), (9, 16)]
+C5:pluecker_upper_bounds=[(3, '1/6'), (4, '9/32'), (5, '2/5'), (6, '25/48'), (7, '9/14'), (8, '49/64'), (9, '8/9')];all_strictly_below_one=YES
+C6:d10_degree_one_bound_hostiles=[(4, (6, 7, 8, 9), 1), (5, (5, 6, 7, 8, 9), 1)];submodule_claim=NO
+semantic_sha256=d4f96161ceb285cc7982b708e07def1c3dc561cc67f40f23ee6df4fcde78b5a6
+CONCLUSION=BINOMIAL_VALUE_SPECIALIZATION_REPAIRED_DEGREES_3_TO_9;D10_PLUCKER_BOUND_OPEN

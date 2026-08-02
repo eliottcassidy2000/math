@@ -2,8 +2,8 @@
 id: THM-3253
 title: "Affine binomial phases: cyclic-residue functional nonsplitting and the ordinary-basis gate"
 status: >
-  PROVED STRUCTURAL + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED /
-  PERIOD-VALUE EXCLUSION CONDITIONAL.  For B nonzero, the endpoint primitives
+  PROVED STRUCTURAL IN EVERY DEGREE + PROVED PERIOD VALUES FOR `3<=d<=9` +
+  VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For B nonzero, the endpoint primitives
   of `A(ell-h)^d+B(ell-h)+C` form a rank-(d-1) cyclic
   connection with residues `-j/d`.  Its spectrum is exactly the critical
   value set of `At^d+Bt`.  A weighted packet splits over endpoint
@@ -16,9 +16,10 @@ status: >
   boundary period cannot cancel functionally.  A doubled knot is recovered by
   the same coordinate coprimality.  The selected independent scalar family is
   not yet shown derivative-closed and ordinary at `s=1`, so the former
-  Beukers value exclusion was invalid; see MISTAKE-356.  B=0 remains proved by
-  THM-3250/3251.  For B nonzero, excluding values zero and `1/2` is conditional
-  on the ordinary-basis gate.
+  Beukers value exclusion was invalid; see MISTAKE-356.  THM-3280 proves the
+  cyclic module simple through degree nine and discharges the gate there.
+  B=0 remains proved by THM-3250/3251.  For B nonzero and `d>=10`, excluding
+  values zero and `1/2` remains conditional on the ordinary-basis gate.
 source: codex-2026-08-02-fc3-cubic-frontier
 depends_on:
   - THM-3250-fc3-noncollinear-pure-power-turn-current-exclusion
@@ -26,6 +27,7 @@ depends_on:
 related:
   - THM-3203-fc3-complex-affine-coordinate-quadratic-cauchy-green-cycle-exclusion
   - THM-3252-fc3-depressed-cubic-bessel-marked-copy-splitting-gate
+  - THM-3280-fc-cyclic-module-simplicity-and-ordinary-basis-repair-through-degree-nine
 external:
   - "Cauchy--Green formula."
   - "F. Beukers, A refined version of the Siegel--Shidlovskii theorem, Annals of Mathematics 163 (2006), 369--379, Corollary 1.4."
@@ -35,7 +37,7 @@ script_sha256: 551be5f335985930cf7175ed89757b42b9f5421c82401e044f1ff87da1b499c4
 output_sha256: 6889e2c1ab390d09ad324b2dd3ff9a19baa2074b6cdbcf44f613170134d8cc08
 ---
 
-# THM-3253 -- affine binomials: exact nonsplitting and an open value gate
+# THM-3253 -- affine binomials: structural all-degree theorem and values through degree nine
 
 ## 1. Statement and novelty
 
@@ -51,16 +53,17 @@ q=A(ell-h)^d+B(ell-h)+C,
 K(s)=integral_Delta exp(sq)du dv.
 ```
 
-The desired period conclusion is
+For `3<=d<=9`,
 
 ```text
 K(1)!=0,                         K(1)!=1/2.                 (2)
 ```
 
 When `B=0`, this is the proved pure-power result THM-3250/3251.  For
-`A*B!=0`, (2) is **conditional** on the ordinary-basis gate in section 8.
-The unconditional new result is the exact cyclic connection, splitting
-classification, critical-fibre audit, and functional nonsplitting theorem.
+`A*B!=0` and `3<=d<=9`, THM-3280 discharges the ordinary-basis gate in
+section 8 and proves (2).  For `d>=10`, (2) remains conditional.  In every
+degree the exact cyclic connection, splitting classification, critical-fibre
+audit, and functional nonsplitting theorem below are unconditional.
 It contains the structural depressed-cubic result THM-3252 at `d=3` and
 supplies the same structural control in every higher degree.
 For `d>=4` it does not allow intermediate terms such as `t^2,...,t^(d-1)`;
@@ -486,7 +489,7 @@ G notin mathcal E_{a,b}.                                   (47)
 
 This treats knot multiplicity uniformly in every degree.
 
-## 8. E-functions and the remaining ordinary-basis gate
+## 8. E-functions and the degree-nine ordinary-basis repair
 
 For `1<=j<=r`,
 
@@ -518,9 +521,12 @@ derivative-closed E-function basis ordinary at one containing the selected
 period scalar and the needed exponentials (or proves an equivalent regular
 relation-module specialization statement).
 
-Conditional on that ordinary-basis certificate, Beukers transfers the proved
-functional independence to `Qbar`-linear independence of values at
-`s=1`.
+THM-3280 supplies that certificate for `3<=d<=9`.  Its Pluecker-degree theorem
+proves the cyclic module simple and its endomorphism theorem makes two marked
+copies either independent or proportional modulo exponentials.  In the latter
+case, the exact splitting theorem above makes their difference a constant
+critical-exponential particular.  The resulting independent vector is closed
+under differentiation with denominator only `s`, so Beukers applies at one.
 
 In a three-distinct geometry, (39) says that `K(1)=0` or `1/2` would give
 
@@ -536,19 +542,21 @@ G(1)=0,
 G(1)-(L^2/2)exp(-C)=0.                                    (50)
 ```
 
-All four relations would then be impossible.  Thus (2) is **conditional** for
-`B!=0`; the pure case `B=0` is proved by THM-3250/3251, whose selected block
-vectors are already independent, derivative-closed, and ordinary at one.
+All four relations are therefore impossible for `B!=0` and `3<=d<=9`.
+For `d>=10` they remain conditional on the same certificate.  The pure case
+`B=0` is proved in every degree by THM-3250/3251, whose selected block vectors
+are already independent, derivative-closed, and ordinary at one.
 
 ## 9. Exact boundary and next target
 
-The proof closes exactly the translate-linear perturbations
+The structural proof treats exactly the translate-linear perturbations
 
 ```text
 A(ell-h)^d+B(ell-h)+C.                                    (51)
 ```
 
-Its preserved structure is the monomial cycle in (11).  Adding an
+For their period values, THM-3280 closes `3<=d<=9`; its Pluecker bound first
+loses coercivity at `d=10,m=4`, without producing a counterexample.  Adding an
 intermediate term changes the Euclidean remainders from one cycle edge to a
 denser connection.  The residues `-j/d` survive after a suitable basis
 choice, but three properties used here require a new proof:
@@ -558,10 +566,10 @@ choice, but three properties used here require a new proof:
 2. critical splitting sources need not have the derivative line (19); and
 3. the first two scalar coordinate annihilators may acquire a common factor.
 
-The next honest affine-coordinate target is therefore a trinomial with one
-intermediate exponent, together with an exact common-factor and critical-
-fibre audit.  Merely repeating the moment total is insufficient once a
-two-endpoint critical collision has no nonsplitting singleton.
+The next honest targets are the `d=10` degree-one Pluecker recurrence and a
+trinomial with one intermediate exponent, together with exact common-factor
+and critical-fibre audits.  Merely repeating the moment total is insufficient
+once a two-endpoint critical collision has no nonsplitting singleton.
 
 ## 10. Reproduction contract
 

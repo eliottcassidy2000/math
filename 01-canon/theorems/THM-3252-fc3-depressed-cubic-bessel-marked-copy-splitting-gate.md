@@ -2,7 +2,13 @@
 id: THM-3252
 title: "FC(3) affine-coordinate cubics: Bessel-order functional nonsplitting and the ordinary-basis gate"
 status: >
-  PROVED STRUCTURAL + VERIFIED-EXACT / PERIOD-VALUE EXCLUSION CONDITIONAL.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The exact
+  connection, splitting, collision, and functional nonsplitting arguments are
+  proved here.  MISTAKE-356 retracted the first ordinary-point specialization,
+  but THM-3280 proves the cyclic module simple with scalar endomorphism ring at
+  d=3 and constructs the required independent derivative-closed E-function
+  vector ordinary at one.  Consequently every algebraic affine-coordinate
+  cubic has simplex exponential period neither zero nor `1/2`.
   After exact cubic depression, the `B=0` branch is THM-3250/3251.  For
   `A*B!=0`, the two
   endpoint primitives form one rank-two regular-singular connection with
@@ -18,8 +24,8 @@ status: >
   nonsplit packet.  These conclusions prove functional nonsplitting, but do
   not by themselves produce a linearly independent derivative-closed
   E-function basis ordinary at `s=1`.  The former Beukers specialization was
-  invalid; see MISTAKE-356.  Excluding period values zero and `1/2` in the
-  non-pure cubic branch remains conditional on that ordinary-basis gate.
+  invalid; see MISTAKE-356.  THM-3280 now discharges that ordinary-basis gate
+  for the cubic rank-two module.
 audit: >
   An independent audit rederived both Euclidean divisions, the collision-safe
   rational splitting classification (including its critical top-degree
@@ -39,6 +45,7 @@ related:
   - THM-3039-the-FC-n-exponential-period-bridge-forced-level-is-the-simplex-volume
   - THM-3203-fc3-complex-affine-coordinate-quadratic-cauchy-green-cycle-exclusion
   - THM-3230-marked-c3-trace-centered-norm-and-terminal-prefactor-recovery
+  - THM-3280-fc-cyclic-module-simplicity-and-ordinary-basis-repair-through-degree-nine
 external:
   - "Cauchy--Green formula."
   - "F. Beukers, A refined version of the Siegel--Shidlovskii theorem, Annals of Mathematics 163 (2006), 369--379, Corollary 1.4."
@@ -48,9 +55,9 @@ script_sha256: 90936f7ac2e4e096bc07a825252759120b8c4a97308acd6208fcf09107ea96ce
 output_sha256: 1d93829c3b5a6678984426521b998d901fdda54ad91dd92dc46a274e04547e1a
 ---
 
-# THM-3252 -- affine-coordinate cubics: exact nonsplitting and an open value gate
+# THM-3252 -- every algebraic affine-coordinate cubic is excluded
 
-**PROVED STRUCTURAL + VERIFIED-EXACT / PERIOD-VALUE EXCLUSION CONDITIONAL.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Result and sharp scope
 
@@ -62,20 +69,20 @@ ell in Qbar[u,v] affine and nonconstant,
 Q in Qbar[z],                              deg Q=3.          (T0)
 ```
 
-The desired period conclusion is
+Then
 
 ```text
 int_Delta exp(Q(ell(u,v)))du dv !=0,
 int_Delta exp(Q(ell(u,v)))du dv !=1/2.                      (T1)
 ```
 
-For the non-pure depressed branch, (T1) is **not yet proved**.  What is proved
-below is the exact primitive connection, its collision-safe rational splitting
-classification, and functional nonsplitting of the scalar period packets from
-the endpoint exponentials.  The missing step is to realize the relevant
-independent functions inside a derivative-closed E-function basis whose system
-is ordinary at `s=1`.  Conditional on that gate, (T1) follows.  Pure cubics
-remain covered unconditionally by THM-3250/3251.  Nothing here covers a
+The exact primitive connection, its collision-safe rational splitting
+classification, and functional nonsplitting of the scalar period packets are
+proved below.  THM-3280 proves that the rank-two cyclic module is simple with
+scalar endomorphism ring and uses this structure to realize the relevant
+functions inside an independent derivative-closed E-function vector ordinary
+at `s=1`; it thereby proves (T1) in the non-pure branch.  Pure cubics are
+covered by THM-3250/3251.  Nothing here covers a
 genuinely bivariate cubic, nonalgebraic coefficients, the projective-leading-
 form reduction, or `FC(3)` itself.
 
@@ -124,7 +131,7 @@ It identifies every way a weighted packet `Y_w=sum_x w_xY_x` can become a
 rational combination of its endpoint exponentials.  Sections 8--10 then use
 the geometry retained by the triangle weights to rule out the remaining
 mixed-coordinate cancellation and prove functional nonsplitting.  Section 10
-states the additional specialization hypothesis that would imply (T1).
+records the original specialization gap and its THM-3280 repair.
 
 ## 2. Exact depression of an arbitrary affine-coordinate cubic
 
@@ -581,7 +588,7 @@ The doubled-knot scalar row is cyclic for the rank-two connection.  This is
 the multiplicity boundary that the three-distinct mixed-coordinate proof
 cannot cover directly.
 
-## 10. E-functions and the remaining ordinary-basis gate
+## 10. E-functions and the discharged ordinary-basis gate
 
 The splitting theorem remains unchanged if `mathcal E_X` is enlarged by
 finitely many algebraic exponentials having zero source.  In the proof of
@@ -615,8 +622,8 @@ first value vanishes and the minimal scalar equation for `s-1` is singular at
 one.  Thus Beukers Corollary 1.4 does not presently apply to the selected
 family.
 
-The precise remaining gate is any proof of one of the following equivalent-
-purpose certificates:
+The precise gate was any proof of one of the following equivalent-purpose
+certificates:
 
 1. a linearly independent, derivative-closed E-function vector ordinary at
    `s=1` that contains `F` (respectively `G`) and the needed distinct
@@ -627,8 +634,16 @@ purpose certificates:
 3. a direct specialization theorem controlling the full relation module at
    `s=1`.
 
-Conditional on such a certificate, Beukers transfers the proved functional
-independence to `Qbar`-linear independence of the relevant values.  Indeed, in a
+THM-3280 supplies the first certificate.  It proves this cyclic module simple
+and its differential endomorphism ring scalar.  The two marked packets are
+therefore either independent copies or proportional modulo exponentials; in
+the proportional case, section 6's exact splitting classification makes the
+difference a **constant** critical-exponential particular.  A constant basis
+change then gives the independent derivative-closed vector, with denominator
+only `s`.
+
+Beukers transfers its functional independence to `Qbar`-linear independence
+of the relevant values.  Indeed, in a
 three-distinct geometry, (35) shows that either forbidden value would give
 respectively
 
@@ -644,16 +659,16 @@ G(1)=0,
 G(1)-(L^2/2)exp(-C_0)=0.                                   (53)
 ```
 
-Each would contradict the conditional ordinary-basis certificate.  Hence
-(T1) follows **conditionally** for `A*B!=0`.
+Each contradicts the THM-3280 ordinary vector.  Hence (T1) holds for
+`A*B!=0`.
 
 If the depressed coefficient `B` is zero, THM-3250 and THM-3251 prove the
 same conclusion using independent derivative-closed split residue blocks
 ordinary at one; their Beukers step is unaffected by MISTAKE-356.
 Noncollinear, three-distinct collinear, and doubled-knot images exhaust every
-nonconstant affine coordinate on a triangle.  Thus the exact structural
-reduction is complete for every cubic `Q` in (T0), while the non-pure cubic
-period-value conclusion remains at the stated gate.
+nonconstant affine coordinate on a triangle.  Thus the structural reduction
+here and the ordinary-basis repair in THM-3280 complete every cubic `Q` in
+(T0).
 
 ## 11. Precise C3 dictionary with the Jacobian sidecar
 

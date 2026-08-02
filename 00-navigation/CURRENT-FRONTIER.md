@@ -384,10 +384,10 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-3148 reduces every fixed prime offset's unit-root exceptions to one
   fixed resultant.
   THM-3116/3202/3203 close affine-coordinate quadratics; THM-3250/3251 close
-  pure powers.  THM-3252/3253 prove cyclic connections, collision-safe
-  splitting, and functional nonsplitting for cubics and `At^d+Bt+C`; non-pure
-  value exclusion is CONDITIONAL on an independent derivative-closed E-basis
-  ordinary at one (MISTAKE-356).  Higher/multivariate phases and FC stay OPEN.
+  pure powers.  THM-3252/3253 prove cyclic connections, splitting, and
+  functional nonsplitting for `At^d+Bt+C`; THM-3280 repairs specialization,
+  closing every cubic and binomial values through `d=9`.  At `d>=10` the
+  ordinary-basis gate remains CONDITIONAL (MISTAKE-356); general FC stays OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

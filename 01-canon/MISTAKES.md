@@ -39,6 +39,13 @@ Format per entry:
   full-rank branches of THM-3203 likewise explicitly prove independence of the
   exact displayed system vector before applying Beukers; the full-rank theorem
   already records and avoids this very apparent-singularity shortcut.
+- **Subsequent discharge:** THM-3280 proves the non-pure cyclic module simple
+  with scalar endomorphism ring for `3<=d<=9`.  It classifies the marked
+  packets as independent or proportional copies; exact splitting makes a
+  proportional difference a constant critical-exponential particular.  This
+  constructs the required independent ordinary vector, restores every cubic,
+  and proves affine-binomial period exclusion through degree nine.  The
+  correction remains active for `d>=10`.
 
 ## MISTAKE-354 (2026-08-02, THM-3210 located-scale quantifier bridge) -- analytic monotonicity was transferred to a selected-cell exact overlap
 
