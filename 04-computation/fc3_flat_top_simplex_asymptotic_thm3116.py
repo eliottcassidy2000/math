@@ -4,7 +4,8 @@
 This checks the three-variable radial/projective Jacobian and Gamma shifts,
 the E_{D,3}/E_{D,4} coefficient bookkeeping, the finite multinomial radial
 formula, the affine-simplex exponential formula (including all confluent
-cases), a derivative-aligned quadratic family, and two hostile controls:
+cases), all algebraic one-coordinate quadratic phases through their exact
+E-function recurrence, and two hostile controls:
 
 * q=u+v has the algebraic period 1, so a blanket two-dimensional
   transcendence extension is false.  Its parameter integral is an
@@ -187,6 +188,82 @@ check(
     "derivative-aligned quadratic boundary value",
 )
 print("C4b derivative-aligned quadratics: 3 barycentric boundary formulas exact")
+
+# C4c.  The generic one-coordinate quadratic q=A*s^2+B*s+C has two exact
+# parameter identities.  If
+#
+#   H(z)=int_0^1 exp(z*q(s)) ds,
+#   I(z)=int_0^1 s*exp(z*q(s)) ds,
+#
+# then integration by parts gives
+#
+#   2Az I+Bz H=e^((A+B+C)z)-e^(Cz),
+#   4Az H'+(2A+(B^2-4AC)z)H
+#       =(2A+B)e^((A+B+C)z)-B e^(Cz).
+#
+# Verify these as exact coefficient recurrences.  These controls do not try
+# to numerically test Beukers' arithmetic theorem; they verify the algebraic
+# system to which Corollary 1.4 is applied.
+qA, qB = sp.symbols("qA qB", nonzero=True)
+qC = sp.symbols("qC")
+quadratic_phase = qA * s**2 + qB * s + qC
+quadratic_H_moments = [
+    sp.integrate(sp.expand(quadratic_phase**m), (s, 0, 1)) for m in range(9)
+]
+quadratic_I_moments = [
+    sp.integrate(sp.expand(s * quadratic_phase**m), (s, 0, 1)) for m in range(8)
+]
+
+endpoint_recurrence_checks = 0
+for m in range(1, 9):
+    endpoint_lhs = m * (
+        2 * qA * quadratic_I_moments[m - 1]
+        + qB * quadratic_H_moments[m - 1]
+    )
+    endpoint_rhs = (qA + qB + qC) ** m - qC**m
+    check(
+        sp.expand(endpoint_lhs - endpoint_rhs) == 0,
+        f"quadratic endpoint recurrence m={m}",
+    )
+    endpoint_recurrence_checks += 1
+
+ode_recurrence_checks = 0
+for m in range(9):
+    previous = quadratic_H_moments[m - 1] if m else sp.Integer(0)
+    ode_lhs = (
+        (4 * qA * m + 2 * qA) * quadratic_H_moments[m]
+        + (qB**2 - 4 * qA * qC) * m * previous
+    )
+    ode_rhs = (2 * qA + qB) * (qA + qB + qC) ** m - qB * qC**m
+    check(sp.expand(ode_lhs - ode_rhs) == 0, f"quadratic ODE recurrence m={m}")
+    ode_recurrence_checks += 1
+
+# The coefficient group at exp(Cz) has source -B unless the two endpoints
+# collide (A+B=0), when the combined source is 2A.  Both are nonzero on the
+# generic branch.  A hypothetical pole z^{-n} in the rational coefficient
+# equation has multiplier -n+1/2, never zero for integral n>=1.
+check(-qB != 0, "distinct-endpoint source")
+merged_source = sp.expand((2 * qA + qB) - qB)
+check(merged_source == 2 * qA, "colliding-endpoint combined source")
+quadratic_lambda = qA + qB + qC
+collision_checks = (
+    sp.expand(quadratic_lambda.subs(qC, 0) - (qA + qB)) == 0,
+    sp.expand(quadratic_lambda.subs(qC, -qA - qB)) == 0,
+    sp.expand((quadratic_lambda - qC).subs(qB, -qA)) == 0,
+    sp.expand(quadratic_lambda.subs({qB: -qA, qC: 0})) == 0,
+)
+for collision_index, collision_ok in enumerate(collision_checks):
+    check(collision_ok, f"endpoint-exponent collision {collision_index}")
+for pole_order in range(1, 9):
+    check(
+        -pole_order + sp.Rational(1, 2) != 0,
+        f"rational-independence pole order {pole_order}",
+    )
+print(
+    "C4c one-coordinate quadratic E-system: "
+    f"endpoint recurrences={endpoint_recurrence_checks}; "
+    f"ODE recurrences={ode_recurrence_checks}; collisions={len(collision_checks)}"
+)
 
 # C5. The forced homogeneous level is Area=1/2 at Q=0.  The
 # two-dimensional transcendence extension is nevertheless false even for an

@@ -1,6 +1,6 @@
 ---
 id: THM-3116
-title: "FC(3) flat-top simplex coefficient: exact radial limit, affine nonvanishing, and derivative-aligned quadratic families"
+title: "FC(3) flat-top simplex coefficient: exact radial limit and algebraic one-coordinate quadratic exclusion"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let
   L_3(x^a y^b z^c)=a!b!c!, let f have exact degree D, and suppose its top
@@ -11,17 +11,21 @@ status: >
   counterexample forces this simplex exponential integral to vanish.  After
   algebraic specialization it cannot vanish when A_1/(Da) is affine:
   exact divided-difference formulas plus Lindemann--Weierstrass handle every
-  confluent case. It also cannot vanish on the three derivative-aligned
-  quadratic families c+b(1-lambda_i)^2. The same calculations prove that an
-  algebraic phase in either family has int_Delta exp(Q)=1/2 iff Q=0,
-  sharpening THM-3039's forced-level bridge.
+  confluent case.  More generally it cannot vanish whenever
+  A_1/(Da)=P(1-lambda_i) for a barycentric coordinate lambda_i and an
+  algebraic polynomial P of degree at most two.  The generic quadratic case
+  uses an exact first-order E-function system, a complete functional-linear-
+  independence audit, and Beukers Corollary 1.4 at the ordinary point z=1.
+  The same families have int_Delta exp(Q)=1/2 iff Q=0, sharpening
+  THM-3039's forced-level bridge.
   Hence a flat-top counterexample must have projective
   subleading degree at least two; in particular none has exact degree at
   most two.  This does NOT exclude nonflat leading forms and does not prove
   FC(3).  Exact controls verify the r^2 Jacobian, 125 Dirichlet monomials,
   Gamma(Dm+3), E_(D,3)/E_(D,4), seven direct layer expansions, affine and
-  derivative-aligned quadratic formulas, and two hostile cancellation
-  examples, identically under normal and -O execution.
+  one-coordinate quadratic formulas, the quadratic E-function recurrence,
+  and two hostile cancellation examples, identically under normal and -O
+  execution.
 source: codex-2026-08-02-fc3-simplex
 depends_on: []
 related:
@@ -31,7 +35,7 @@ related:
   - THM-3039
 external:
   - "Riesz--Markov--Kakutani representation theorem."
-  - "F. Beukers, A refined version of the Siegel--Shidlovskii theorem, Annals of Mathematics 163 (2006), 369--379."
+  - "F. Beukers, A refined version of the Siegel--Shidlovskii theorem, Annals of Mathematics 163 (2006), 369--379, Corollary 1.4: https://annals.math.princeton.edu/wp-content/uploads/annals-v163-n1-p08.pdf"
   - "octonion/mathematics/fc, revised research draft (not peer reviewed; only the radial and flat-symbol calculations are independently recovered here)."
 script: 04-computation/fc3_flat_top_simplex_asymptotic_thm3116.py
 output: 05-knowledge/results/fc3_flat_top_simplex_asymptotic_thm3116.out
@@ -91,7 +95,7 @@ There is a further exact exclusion inside the first remaining degree.  Put
 specialized first projective layer have
 
 ```text
-A_1/(Da)=c+b(1-lambda_i)^2.                                    (5a)
+A_1/(Da)=P(1-lambda_i),       P in Qbar[s], deg P<=2.           (5a)
 ```
 
 In particular there is no flat-top counterexample of exact degree `D=1` or
@@ -338,7 +342,7 @@ Q affine over Qbar and int_Delta exp(Q)=1/2   iff   Q=0.          (26)
 This does not prove the nonlinear exponential-period condition in THM-3039,
 but it completely removes its affine locus.
 
-### A derivative-aligned quadratic family
+### One-coordinate quadratics: the elementary boundary family
 
 There is a small nonlinear family where the simplex density itself supplies
 the antiderivative missing in the general quadratic problem.  Let
@@ -371,6 +375,11 @@ The only collisions are `c=0` and `b+c=0`; each would make respectively
 `exp(b)` or `exp(-b)` algebraic.  The case `b=0` reduces to
 `exp(c)=1`, hence `c=0`.
 
+Algebraicity is sharp here.  Taking `b=-2 pi i` and `c=2 pi i` makes
+`exp(b)=1` and the period in (26b) zero.  With `s=1-u`, this is the
+polynomial phase `2 pi i(2u-u^2)` underlying THM-3039's canonical
+nonalgebraic moment hostile.
+
 The mechanism is dimension-free and explains why the exponent is a square
 for FC(3).  On `Delta_(N-1)`, the pushforward of coordinate volume by
 `s=1-lambda_i` has density `s^(N-2)/(N-2)!`.  Hence
@@ -399,25 +408,134 @@ admits `R=s^2/2`.  If `P=Bs+C`, `B!=0`, then
 `R` to be constant, after which (26e) forces `B=0` and `R=1/(2A)`.
 For `deg P>=3`, the highest term of `P'R` cannot be cancelled by `R'`, so no
 nonzero polynomial solution exists.  Thus (26b) is exactly the last
-one-coordinate polynomial phase reducible to endpoints by this mechanism;
-the generic quadratic `As^2+Bs+C` with `AB!=0` is a precise next barrier.
+one-coordinate polynomial phase reducible to endpoints by this elementary
+mechanism.  The generic quadratic `As^2+Bs+C` with `AB!=0` is the first
+non-elementary case; the following argument clears it by retaining its full
+parameter `E`-function rather than asking for an elementary antiderivative.
+
+### The generic quadratic: exact system and `E`-function arithmetic
+
+Let `A,B,C in Qbar` with `AB!=0`, and define
+
+```text
+q(s)=A s^2+B s+C,
+H(z)=int_0^1 exp(z q(s)) ds,
+I(z)=int_0^1 s exp(z q(s)) ds,
+lambda=A+B+C.                                                  (26f)
+```
+
+Integrating `d(exp(zq(s)))/ds` gives the exact endpoint identity
+
+```text
+2Az I(z)+Bz H(z)=exp(lambda z)-exp(Cz).                         (26g)
+```
+
+A second integration by parts, now using
+`d(s exp(zq(s)))/ds`, eliminates the second `s`-moment and gives
+
+```text
+4Az H'(z)+[2A+(B^2-4AC)z]H(z)
+       =(2A+B)exp(lambda z)-B exp(Cz).                          (26h)
+```
+
+The function `H` is an `E`-function, not merely holonomic.  Indeed,
+
+```text
+H(z)=sum_(m>=0) h_m z^m/m!,       h_m=int_0^1 q(s)^m ds.        (26i)
+```
+
+All `h_m` lie in one number field.  After clearing fixed denominators of
+`A,B,C`, expansion of `q^m` shows that a common denominator for
+`h_0,...,h_m` divides a fixed exponential factor times
+`lcm(1,...,2m+1)`, whose logarithm is `O(m)`.  Every conjugate of `h_m` is
+bounded exponentially in `m`.  Equation (26h) supplies the required linear
+differential system; eliminating its two endpoint exponentials, which each
+satisfy a first-order equation, gives a homogeneous scalar differential
+equation over `Qbar[z]` for `H`.  These are exactly the arithmetic, height,
+and differential conditions in the definition of an `E`-function.
+
+It remains to audit functional linear independence before specializing.
+Take the distinct functions among
+
+```text
+H(z), exp(lambda z), exp(Cz), 1.                               (26j)
+```
+
+Distinct algebraic exponentials are linearly independent over `Qbar(z)`.
+Suppose a relation involving `H` existed and solve it for `H` as a rational
+linear combination of the distinct exponentials.  Substitute it into
+(26h), and inspect the coefficient of the exponential whose exponent is
+`C`.  Its rational coefficient `R` would have to satisfy
+
+```text
+zR'(z)+(1/2+kappa z)R(z)=d,
+kappa=B^2/(4A),
+d=-B/(4A)                 if lambda!=C,
+d=1/2                     if lambda=C.                         (26k)
+```
+
+Here `kappa!=0` and `d!=0`.  The second line includes the combined source
+when `lambda=C`, equivalently `A+B=0`: `(2A+B)-B=2A` before division by
+`4A`.  Equation (26k) has no rational solution.  A pole of order `n` at a
+nonzero point produces an uncancellable pole of order `n+1` in `zR'`.  At
+zero, its leading coefficient is `(-n+1/2)r_(-n)`, also nonzero.  Thus `R`
+has no finite poles and is a polynomial.  But `kappa zR` raises the degree,
+so no nonzero polynomial can equal the nonzero constant `d`; `R=0` also
+fails.
+
+This single coefficient audit covers every collision.  If `C=0`, then
+`exp(Cz)=1` and its source is unchanged.  If `lambda=0`, only that endpoint
+exponential merges with `1`.  If `lambda=C`, the source becomes `2A`; and
+when `lambda=C=0`, both endpoint exponentials and `1` merge but that same
+nonzero combined source remains.  Consequently the distinct functions in
+(26j) are linearly independent over `Qbar(z)`.
+
+They form a first-order rational system obtained from (26h) and the three
+exponential equations; after duplicates are removed, its common denominator
+is `T(z)=z`.  Beukers, *A refined version of the Siegel--Shidlovskii
+theorem*, Corollary 1.4 (Annals 163 (2006), p. 371), therefore applies at
+the algebraic point `xi=1`, because `xi T(xi)!=0`.  It makes the values of
+the distinct functions in (26j) linearly independent over `Qbar`.
+
+Now put `z=1` in (26g).  If `I(1)=0`, it becomes
+
+```text
+B H(1)-exp(lambda)+exp(C)=0;                                  (26l)
+```
+
+if `I(1)=1/2`, it becomes
+
+```text
+B H(1)-exp(lambda)+exp(C)+A=0.                                (26m)
+```
+
+Both are nontrivial even after every endpoint collision because the
+coefficient `B` of `H(1)` is nonzero.  Corollary 1.4 excludes both.  The
+axes were already settled: `A=0` is affine, while `B=0` is (26b).  Therefore,
+for every barycentric coordinate `lambda_i` and every algebraic polynomial
+`P` of degree at most two,
+
+```text
+int_Delta exp(P(1-lambda_i)) du dv !=0,
+int_Delta exp(P(1-lambda_i)) du dv =1/2   iff   P=0.            (26n)
+```
 
 Algebraic specialization is legitimate and load-bearing.  If a complex
 counterexample satisfies (2), scale it so the leading form is exactly
 `S^D`.  Parameterize only the lower coefficients (and, when relevant, the
 linear subspace on which `A_1` is affine or lies in one fixed span
-`<1,(1-lambda_i)^2>`).  All equations `L_3(f^m)=0` have
+`<1,1-lambda_i,(1-lambda_i)^2>`).  All equations `L_3(f^m)=0` have
 rational polynomial coefficients.  Their ideal is proper at the assumed
 complex point and is finitely generated by Noetherianity, so the weak
 Nullstellensatz supplies a point over `Qbar` in the same constrained
-subspace.  Applying (19)--(22) or (26b) contradicts (4).
+subspace.  Applying (19)--(22) or (26n) contradicts (4).
 
 For `D=2`, `A_1` is automatically the restriction of a linear form, and for
 `D=1` it is constant.  This proves the final assertion of section 1.  More
 generally, for `D>=2`, an affine `A_1` is equivalent to
 `S^(D-2)` dividing `f_(D-1)`; a flat counterexample must avoid that divisor.
 If its first projective layer is quadratic, it must also avoid each of the
-three derivative-aligned subspaces (5a).
+three one-coordinate subspaces (5a).
 
 ## 5. Riesz--Markov: the exact measure statement and the cancellation gap
 
@@ -555,6 +673,9 @@ The frozen controls verify:
   nonradial quadratic with every lower layer present;
 * all generic and confluent affine formulas and the derivative-aligned
   quadratic boundary formula (26b);
+* eight exact coefficient recurrences for the quadratic endpoint identity
+  (26g), nine for its `E`-function ODE (26h), and the distinct/colliding
+  endpoint sources used in (26k);
 * the exact affine forced-level law (26), algebraic-period hostile (30), its
   exact `E`-function relation and ODE (30a)--(30c), Lambert cancellation
   (31), and numerical convergence to (3).
@@ -564,14 +685,17 @@ The two execution modes are byte-identical.  QED in the stated flat scope.
 An independent hostile audit on 2026-08-02 checked the flat-limit
 multinomial/Gamma domination, every affine confluent
 Lindemann--Weierstrass case, the derivative-aligned quadratic slice and
-forced-level collision cases, the affine `E`-function ODE/relation, and the
-polynomial-antiderivative classification.  It found no mathematical defect.
+forced-level collision cases, the generic quadratic `E`-function coefficient
+bounds and ODE, every endpoint-exponent collision pattern, the rational
+pole/degree obstruction, the ordinary-point hypotheses of Beukers Corollary
+1.4, the affine `E`-function ODE/relation, and the polynomial-antiderivative
+classification.  It found no mathematical defect.
 The audit rechecked the displayed exact identities and proof mechanisms but
 did **not** supply a second independent implementation of the verification
 script; `VERIFIED-EXACT` continues to refer to the frozen implementation
 listed below.
 
 ```text
-source sha256 = ebd11cfc10dd6a24b8eae53efa7d06edcc29e2f4ed4d28a46a382aa606acc103
-output sha256 = bf1b634a84f37d566713b5b3fde787982e8f860a658d6272888f06d3fb9db13c
+source sha256 = 02687e5c59e320d2a6be6d2f82610fa7130ed804e4350552c7658405b887bd8f
+output sha256 = ce3ed343b6c6817c1d62f7a61f971bf8d792836706d60fbf4121335b320261fb
 ```
