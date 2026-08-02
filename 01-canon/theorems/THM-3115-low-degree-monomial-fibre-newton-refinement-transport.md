@@ -2,7 +2,7 @@
 id: THM-3115
 title: "Low-degree monomial-fibre Newton refinement transport"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT / UNDER INDEPENDENT AUDIT.  In degrees
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In degrees
   five through eight, every chamber-Newton coefficient of both normalized
   THM-3110 product-Gamma response banks is a nonnegative transport from a
   Young-subgroup fibre type to coarser fibre types.  Consequently the
@@ -11,9 +11,20 @@ status: >
   stronger than THM-3110's unnormalized low-degree Schur positivity, but not
   an all-degree product-Gamma or Gaussian-moment proof.
 source: root/multiscale-newton-flag-2026-08-02
+audit: >
+  An independent hostile audit rederived the colouring-orbit normalization,
+  biregular refinement coupling, normalized G-vector identity, sharp chamber
+  degree, singleton-root completion, and positive Hasse-boundary argument.
+  It also audited the exact coarsening recursion, rational max-flow, mass
+  cancellation, interpolation shells, off-grid controls, and all four LF
+  hashes.  Fresh normal and optimized primary runs byte-match stored output;
+  an independent N=8 normal replay matches its separately optimized and
+  stored transcript, and documentation checks pass.
 depends_on:
   - THM-3110-arbitrary-anchored-product-gamma-dominant-tail-and-low-histogram-reduction
   - THM-3112-cycle-weighted-young-subgroup-gap-and-uniform-octopus-boundary
+related:
+  - THM-3117-projected-five-forest-boundary-surjectivity-and-signed-holotopy-lift
 script: 04-computation/gmc_monomial_fibre_newton_refinement_thm3115.py
 output: 05-knowledge/results/gmc_monomial_fibre_newton_refinement_thm3115.out
 script_sha256: 81c5a6381a66cddacd902c536c67062ab88466c858f1c4fba96bab2212d2fee5
@@ -27,7 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3115 -- low-degree monomial-fibre Newton refinement transport
 
-**PROVED CANDIDATE + VERIFIED-EXACT / UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3112 decomposes each individual cycle-weighted gap into positive labelled
 Young-subgroup gaps, but its degree-five hostile proves that the signed
@@ -237,6 +248,11 @@ an actual coarsening edge.  One excess interpolation shell and three
 off-grid points per case verify the polynomial reconstruction independently
 of the transport pass.  No floating-point comparison is used.
 
+The secondary `N=8` transcript prints `degree=23` because it reconstructs the
+safe `4N-9` envelope.  Its `24` zero slots are exactly that outer shell; the
+`276` live slots are precisely the sharp degree-at-most-`22` triangle counted
+in `(19)`.
+
 Because every binomial factor in `(16)` is nonnegative at integer
 `A,D>=0`, summing `(18)` proves
 
@@ -276,6 +292,8 @@ Reproduce with
 ```bash
 python 04-computation/gmc_monomial_fibre_newton_refinement_thm3115.py
 python -O 04-computation/gmc_monomial_fibre_newton_refinement_thm3115.py
+python 04-computation/gmc_monomial_fibre_refinement_n8_scout.py 8
+python -O 04-computation/gmc_monomial_fibre_refinement_n8_scout.py 8
 ```
 
 The primary companion independently rebuilds the `N=5,6,7` monomial
