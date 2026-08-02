@@ -1,5 +1,5 @@
 ---
-id: THM-3162
+id: THM-3164
 title: "Falling-factorial order-join path-colour transform"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The complete
@@ -26,20 +26,24 @@ depends_on:
   - THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform
 related:
   - THM-2412-delta-exponential-and-central-newton-layer-split
-script: 04-computation/tournament_order_join_falling_factorial_transform_thm3162.py
-output: 05-knowledge/results/tournament_order_join_falling_factorial_transform_thm3162.out
-script_sha256: ceb1e3901e12940519ec15f45c325386b38b17db853a6f0716e23404ca9ac7fa
-output_sha256: 00f59a138654231ff257b1e9f2e0a7d84010b1b55f27309930a81e090f905aa4
-independent_script: 04-computation/tournament_order_join_falling_factorial_independent_audit_thm3162.py
-independent_output: 05-knowledge/results/tournament_order_join_falling_factorial_independent_audit_thm3162.out
-independent_script_sha256: b8b2b7ff8b61470e844e2e0130b842b64cde9e16aa4425ba9600b2a5d32dc564
-independent_output_sha256: 560a57a1a42651d9936f4c0e143406a51b79fc442fd217f0df757541aeaa1c94
+script: 04-computation/tournament_order_join_falling_factorial_transform_thm3164.py
+output: 05-knowledge/results/tournament_order_join_falling_factorial_transform_thm3164.out
+script_sha256: 331c49103e029fa35f90c3a7967248c4bcc7feda6bbb57b18d0af4f0bee96e4b
+output_sha256: 295ba7ea221824aa091f5fc711775a6c0626450610df79ac25b7939c53544bec
+independent_script: 04-computation/tournament_order_join_falling_factorial_independent_audit_thm3164.py
+independent_output: 05-knowledge/results/tournament_order_join_falling_factorial_independent_audit_thm3164.out
+independent_script_sha256: 8fd309d2f94edddb0a8c673d51d9687d94f2158771a6cd49d8abd8f4b189c793
+independent_output_sha256: 40b57b1247b8aa02652e09f4c27ae7133a15fcee2ba0799357419c9e5aee1871
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3162 -- falling-factorial order-join path-colour transform
+# THM-3164 -- falling-factorial order-join path-colour transform
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+
+**Namespace correction.**  This result was first reserved and promoted as
+`THM-3162`; a near-simultaneous remote reservation created a duplicate YAML
+ID.  It was renumbered to `THM-3164` without changing the statement.
 
 ## 1. Multiplicative path-colour transform
 
@@ -278,9 +282,9 @@ Laguerre/falling-factorial identities, repeated closed forms, and the two
 hostile boundaries.  Run
 
 ~~~text
-python3 04-computation/tournament_order_join_falling_factorial_transform_thm3162.py
-python3 -O 04-computation/tournament_order_join_falling_factorial_transform_thm3162.py
-python3 04-computation/tournament_order_join_falling_factorial_independent_audit_thm3162.py
+python3 04-computation/tournament_order_join_falling_factorial_transform_thm3164.py
+python3 -O 04-computation/tournament_order_join_falling_factorial_transform_thm3164.py
+python3 04-computation/tournament_order_join_falling_factorial_independent_audit_thm3164.py
 ~~~
 
 and compare with the declared transcripts.

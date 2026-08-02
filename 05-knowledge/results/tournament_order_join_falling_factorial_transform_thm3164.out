@@ -1,4 +1,4 @@
-TOURNAMENT ORDER-JOIN FALLING-FACTORIAL TRANSFORM -- THM-3162 EXACT COMPANION
+TOURNAMENT ORDER-JOIN FALLING-FACTORIAL TRANSFORM -- THM-3164 EXACT COMPANION
 status=PROVED+VERIFIED-EXACT;direct subset Hamilton-path/path-cover engine
 labelled_tournament_controls=1099;orders=1..5;transform_inverse=PASS;endpoint=PASS
 SCC_factorization_controls=1099;full_profile_transform_product=PASS
@@ -12,6 +12,6 @@ repeated=pc_(A^join r)(d)=1/d!*sum_j(-1)^(d-j)binom(d,j)Q_A(j)^r
 hostile_order_loss=K1_join_C3 and C3_join_K1 share profile (0, 3, 9, 6, 1)
 cyclic_boundary=Q_transitive3=(0, 0, 0, 1);Q_C3=(0, 2, 0, 1)
 scope=order-join/SCC chains;not cyclic substitution;not arbitrary tournament complexity collapse
-reproduction=python3 04-computation/tournament_order_join_falling_factorial_transform_thm3162.py
-source_sha256=ceb1e3901e12940519ec15f45c325386b38b17db853a6f0716e23404ca9ac7fa
+reproduction=python3 04-computation/tournament_order_join_falling_factorial_transform_thm3164.py
+source_sha256=331c49103e029fa35f90c3a7967248c4bcc7feda6bbb57b18d0af4f0bee96e4b
 all_exact_controls=PASS

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for THM-3162.
+"""Exact companion for THM-3164.
 
 The direct engine counts Hamiltonian paths on every vertex subset and then
 unordered spanning path covers by their least-vertex component.  It audits the
@@ -18,7 +18,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve()
 ROOT = next(parent for parent in HERE.parents if (parent / "00-navigation").is_dir())
-OUTPUT = ROOT / "05-knowledge/results/tournament_order_join_falling_factorial_transform_thm3162.out"
+OUTPUT = ROOT / "05-knowledge/results/tournament_order_join_falling_factorial_transform_thm3164.out"
 
 
 def require(condition: bool, message: object) -> None:
@@ -317,7 +317,7 @@ def main() -> None:
     require(power_polynomial(c3) == (0, 2, 0, 1), c3)
 
     lines = [
-        "TOURNAMENT ORDER-JOIN FALLING-FACTORIAL TRANSFORM -- THM-3162 EXACT COMPANION",
+        "TOURNAMENT ORDER-JOIN FALLING-FACTORIAL TRANSFORM -- THM-3164 EXACT COMPANION",
         "status=PROVED+VERIFIED-EXACT;direct subset Hamilton-path/path-cover engine",
         f"labelled_tournament_controls={tournament_checks};orders=1..5;transform_inverse=PASS;endpoint=PASS",
         f"SCC_factorization_controls={scc_checks};full_profile_transform_product=PASS",
@@ -331,7 +331,7 @@ def main() -> None:
         f"hostile_order_loss=K1_join_C3 and C3_join_K1 share profile {source_c3}",
         f"cyclic_boundary=Q_transitive3={power_polynomial(transitive3)};Q_C3={power_polynomial(c3)}",
         "scope=order-join/SCC chains;not cyclic substitution;not arbitrary tournament complexity collapse",
-        "reproduction=python3 04-computation/tournament_order_join_falling_factorial_transform_thm3162.py",
+        "reproduction=python3 04-computation/tournament_order_join_falling_factorial_transform_thm3164.py",
         f"source_sha256={sha256(HERE)}",
         "all_exact_controls=PASS",
     ]

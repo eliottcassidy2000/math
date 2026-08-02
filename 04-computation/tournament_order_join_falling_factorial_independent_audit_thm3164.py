@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Independent audit of THM-3162.
+"""Independent audit of THM-3164.
 
 This file does not import the main subset-DP engine.  It obtains path-cover
 profiles from permutation backward-adjacency cuts, checks joins directly, and
@@ -17,12 +17,12 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve()
 ROOT = next(parent for parent in HERE.parents if (parent / "00-navigation").is_dir())
-MAIN = ROOT / "04-computation/tournament_order_join_falling_factorial_transform_thm3162.py"
-MAIN_OUTPUT = ROOT / "05-knowledge/results/tournament_order_join_falling_factorial_transform_thm3162.out"
-OUTPUT = ROOT / "05-knowledge/results/tournament_order_join_falling_factorial_independent_audit_thm3162.out"
+MAIN = ROOT / "04-computation/tournament_order_join_falling_factorial_transform_thm3164.py"
+MAIN_OUTPUT = ROOT / "05-knowledge/results/tournament_order_join_falling_factorial_transform_thm3164.out"
+OUTPUT = ROOT / "05-knowledge/results/tournament_order_join_falling_factorial_independent_audit_thm3164.out"
 
-EXPECTED_MAIN_SHA256 = "ceb1e3901e12940519ec15f45c325386b38b17db853a6f0716e23404ca9ac7fa"
-EXPECTED_MAIN_OUTPUT_SHA256 = "00f59a138654231ff257b1e9f2e0a7d84010b1b55f27309930a81e090f905aa4"
+EXPECTED_MAIN_SHA256 = "331c49103e029fa35f90c3a7967248c4bcc7feda6bbb57b18d0af4f0bee96e4b"
+EXPECTED_MAIN_OUTPUT_SHA256 = "295ba7ea221824aa091f5fc711775a6c0626450610df79ac25b7939c53544bec"
 
 
 def require(condition: bool, message: object) -> None:
@@ -244,7 +244,7 @@ def main() -> None:
     require(tuple(qvalue(c3, j) for j in range(4)) == (0, 3, 12, 33), c3)
 
     lines = [
-        "TOURNAMENT ORDER-JOIN FALLING-FACTORIAL TRANSFORM -- THM-3162 INDEPENDENT AUDIT",
+        "TOURNAMENT ORDER-JOIN FALLING-FACTORIAL TRANSFORM -- THM-3164 INDEPENDENT AUDIT",
         "status=INDEPENDENTLY HOSTILE-AUDITED;permutation-cut profile engine;no main import",
         f"permutation_profile_controls={tournament_checks};all labelled tournaments orders 1..5",
         f"direct_join_controls={len(join_pairs)};all total-order<=6 plus 256 selected order-8 joins",
