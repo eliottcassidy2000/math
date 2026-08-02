@@ -1,5 +1,5 @@
 theorem=THM-3068
-status=PROVED_VERIFIED_EXACT_CANDIDATE
+status=PROVED_VERIFIED_EXACT_HOSTILE_AUDITED
 eliminant=t*T^4-u*t*T^3-T+u;lead=t;specialization=-T+u;k_D=1
 coefficient_pole=a1=-1/t;exact_base_order=-1;three_sheets_escape
 split_idempotent=e=(t*T^3-1)/(t*u^3-1);cross_resultant_unit_at_t=0

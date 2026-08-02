@@ -2,7 +2,7 @@
 id: THM-3068
 title: "C3 escape inverse-pole ledger and reciprocal-cofactor shift"
 status: >
-  PROVED + VERIFIED-EXACT (independent audit pending).  A fixed identity
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A fixed identity
   sheet plus a punctured cubic Keller component gives an exact split local
   degree-four inverse pair with tame C3 escape.  Its polynomial eliminant has
   leading coefficient t, specialized degree one, and the exact full pole
@@ -19,6 +19,15 @@ status: >
   coordinate is Laurent and it has a nonconstant unit.  No polynomial Keller
   map or C3 component is constructed or excluded.
 source: codex-jc-resolvent-bridge-2026-08-01
+audit: >
+  An independent audit rederived the punctured map's unit Jacobian, the split
+  idempotent and branch companion, the inverse-spectral identity
+  q_X/f_X'=J_inverse, all Liouville and trace identities, and the quartic
+  reciprocal derivative sign and root-product factor.  It checked the fixed
+  and C3 valuations directly and replayed normal and optimized companions
+  byte-identically to the stored transcript with both declared LF hashes.
+  The audit confirms that the source is disconnected and Laurent, so no
+  polynomial A2 Keller realization is asserted.
 depends_on:
   - THM-2621-planar-degree-four-inverse-spectral-keller-congruence-and-sheet-defect-pole-ledger
   - THM-3057-tame-quartic-inertia-clutch-index-resonance
@@ -29,14 +38,14 @@ related:
   - THM-3059-quartic-twojet-even-jelonek-c3-escape-counterexample
 script: 04-computation/c3_escape_reciprocal_cofactor_shift_thm3068.py
 output: 05-knowledge/results/c3_escape_reciprocal_cofactor_shift_thm3068.out
-script_sha256: 1373f768d8dec256c541d047de001aa7fbe33c0de0d0234d0dd45d8aad98a852
-output_sha256: 6a25ea137a88b16933054416721a65e2a48392ca15ba94f7f5d5267608e3df6c
+script_sha256: 97072cec79f764752364557fb69fd4bbd7dd9b34e51592f3c66908736682dec5
+output_sha256: 884dec30edb43d68149038bf857280d35eea626e4913896d893c2bdb951bfa26
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3068 -- the reciprocal coordinate carries a five-step valuation shift
 
-**PROVED + VERIFIED-EXACT (independent audit pending).**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. The proposed implication and its type error
 

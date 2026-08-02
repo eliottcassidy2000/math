@@ -2,8 +2,8 @@
 id: THM-3065
 title: "Reciprocal Beta Gregory-Newton wall and generalized Hankel sign regularity"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE-FILE AUDIT
-  REQUESTED.  For a,b>0, every strict generalized-Hankel minor of
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a,b>0,
+  every strict generalized-Hankel minor of
   m_k=(b)_k/(a)_k has the sign of product_(j<r)(a-b)_j.  The entire
   arbitrary-offset determinant is that universal product times an explicit
   strictly positive Selberg-Schur/Littlewood-Richardson factor.  Positive
@@ -15,6 +15,15 @@ status: >
   orders three and four.  Higher reciprocal-carrier signs and the strict-dual-
   prefix repair are finite-exact signals only.
 source: root-and-gmc-tight-sequence-frontier-2026-08-01
+audit: >
+  An independent audit rederived the Gregory--Newton termination law, the
+  one-sided alternant, the Selberg--Schur/Littlewood--Richardson positive
+  factor after cancellation and analytic continuation, every integer-wall
+  multiplicity, and the arbitrary-mesh prefix identity.  It separately
+  checked the zero-cut H3/H4 hostiles and the summation-by-parts H2 survivor,
+  then replayed normal and optimized modes byte-identically to the stored
+  transcript and matched both declared LF hashes.  The strict-negative-prefix
+  all-order repair remains explicitly OPEN.
 depends_on:
   - THM-3053-beta-gamma-prefix-transport-and-multiplicative-holotopy-cone
   - THM-3062-four-slot-physical-transverse-augmentation-and-affine-tail-holotopy
@@ -27,7 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3065 -- reciprocal Beta gaps are Gregory-Newton sign walls
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3053 separates the positive-prefix multiplicative cone from the full
 Stieltjes cone.  Its smallest forward edge has moments `(a)_k/(b)_k` with
@@ -516,4 +525,4 @@ higher reciprocal-carrier signature, prove that reciprocal Hankel signs are
 closed under Hadamard product, or add a physical GMC/SFC/NC2/LRC/Jacobian
 consequence.
 
-**QED, pending independent immutable-file audit and status promotion.**
+**QED.**

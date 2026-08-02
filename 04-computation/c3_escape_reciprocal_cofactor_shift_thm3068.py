@@ -188,7 +188,7 @@ def main() -> None:
     require(cubic_discriminant == -27 * t**2, "tame cubic discriminant")
 
     print("theorem=THM-3068")
-    print("status=PROVED_VERIFIED_EXACT_CANDIDATE")
+    print("status=PROVED_VERIFIED_EXACT_HOSTILE_AUDITED")
     print("eliminant=t*T^4-u*t*T^3-T+u;lead=t;specialization=-T+u;k_D=1")
     print("coefficient_pole=a1=-1/t;exact_base_order=-1;three_sheets_escape")
     print("split_idempotent=e=(t*T^3-1)/(t*u^3-1);cross_resultant_unit_at_t=0")

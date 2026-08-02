@@ -183,17 +183,14 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   THM-2969/73/78/82 give strict ULC through M34; THM-2997's `R2>R1` is
   conditional beyond. THM-3040/47/50 give corner, Gamma/Hankel, radial-NC2
   laws; THM-3051/53/54 give moving-lower hostiles, prefix flow and affine
-  finite-order tail re-entry.  Hostile-audited THM-3056 proves that for every
-  finite positive-shape product-Gamma sequence, every generalized minor of
-  its reciprocal has strict sign `(-1)^(h choose 2)`, including real row nodes
-  against integer columns.  This is column-reversal sign regularity, not
-  moment positivity: the order-two minor is negative.  For THM-3053's
-  Beta--Gamma inventory, terminal prefix zero forces finite rank, while
-  positive terminal prefix remains an OPEN reversal problem.  THM-3060/3062
-  give the physical hierarchy: three slots have a positive face at every
-  width; at four slots it cancels but a fixed-low, fixed-gap transverse Gram
-  term is eventually positive on affine clocks.  These are fixed finite
-  banks, not one all-order Stieltjes tail.
+  finite-order tail re-entry.  THM-3056 gives reciprocal product-Gamma sign
+  `(-1)^binom(h,2)`, not moment positivity.  THM-3063's isotropic suspension
+  proves fixed-low terminal tails through five slots; six slots reduce to the
+  arbitrary four-slot resultant.  THM-3065 proves exact reciprocal-Beta
+  Gregory--Newton sign walls.  Nonpositive signed-inventory prefixes force
+  H2 only: zero-cut H3/H4 hostiles refute the higher checkerboard lift, while
+  the strict-negative-prefix repair remains OPEN.  These are fixed finite
+  banks, not one all-order physical Stieltjes tail.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent
@@ -337,6 +334,8 @@ Classify profiles under support operations; study analytic continuation and auto
   component is forced, but excluding every Keller `C3` component remains
   OPEN and needs branchwise cofactor units.  THM-3066 retains only their
   product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
+  THM-3068 shows pole/residue/trace ledgers still permit a punctured `C3`;
+  polynomial `A2` regularity and constant units are the missing gate.
   THM-3067's 12-flag `A4` bitorsor loses its `V4` origin in the `C3` quotient;
   odd reflection and physical realization remain sidecars.
   THM-2862/2864/2968/2971 give two sextic
