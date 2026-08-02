@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-353 (2026-08-02, reflected two-star replay) -- a semantic-preserving upstream normalization silently invalidated raw dependency pins
+
+- **What failed:** the all-`649`-body upper-median two-star referee stopped at
+  import time before checking any of its `55,606,320` assignments.  It pinned
+  raw hashes of the low-phase and robust-edge-11 referees, but their later
+  dependency refresh and line-ending normalization changed those bytes while
+  preserving their proved statements and semantic digests.
+- **First failed implication / exact witness:** a previously stored `PASS`
+  transcript does not imply that the current dependency graph replays.  The
+  exact witness was the stale low-phase pin
+  `b2418d...`, whereas the current audited source is `416c36...`; refreshing
+  that one pin exposed a second stale edge-11 source/output pair.
+- **Repair:** refresh all three dependency pins together, regenerate the
+  transcript, and rerun both ordinary and optimized Python.  Both modes again
+  exhaust the declared `55,606,320` assignments with zero failures and the
+  unchanged semantic digest `aa7f4927...`.  This is a reproducibility repair,
+  not new mathematical evidence and not a change to the finite-exact scope.
+- **Reusable rule:** dependency normalization is still a dependency change.
+  A downstream exact proof must pin the whole current source/output chain and
+  be replayed after any byte-level refresh; matching an old semantic payload
+  is a conclusion of the replay, never a substitute for it.
+
 ## MISTAKE-352 (2026-08-02, modular free-factor synthesis) -- an invariant cyclic substitution was called a `C3` action, and the four-point torsor was mistaken for a faithful modular carrier
 
 - **What was claimed:** the first version of the modular free-factor reflection
