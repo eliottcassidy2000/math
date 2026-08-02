@@ -24,6 +24,7 @@ depends_on:
 related:
   - THM-3131-prime-resonance-newton-slope-separation
   - THM-3200-even-resonance-bessel-residual-newton-exclusion
+  - THM-3142-prime-power-predecessor-newton-separation-and-composite-window-census
 script: 04-computation/factorial_left_factorial_resonance_newton_slopes_thm3138.py
 output: 05-knowledge/results/factorial_left_factorial_resonance_newton_slopes_thm3138.out
 script_sha256: 227eab165bca3f8c4bf68f698188cde72a44cca0d557d96f7364c429d889e1f6
@@ -257,6 +258,11 @@ The surprising move is to inspect a prime adjacent to, rather than dividing,
 the composite resonance.  This is an exact `{0,1,2}` / `SFC(1)`
 factorial-moment theorem.  It does not settle arbitrary-support `SFC(3)`,
 `GMC(2)`, `NC(2)`, or `LRC(14)`.
+
+THM-3142 subsequently extends the exclusion conclusion to every prime-power
+predecessor `d-1=p^k` and closes the finite exact residual through `d=1000`;
+the left-factorial chamber analysis here remains the finer `k=1`, odd-prime
+statement.
 
 For context on the still-open left-factorial problem, see
 Andrejic--Bostan--Tatarevic, *Improved algorithms for left factorial

@@ -29,6 +29,7 @@ related:
   - THM-2831-cyclic-resonance-simple-zero-and-full-lower-bank-exclusion
   - THM-2840-heptic-e3-2221-chebyshev-accessory-classification
   - THM-3123-heptic-e3-remaining-accessory-classification-and-s7-monodromy
+  - THM-3140-r8-odd-bipole-faber-chart-nonentry
   - MISTAKE-317
 script: 04-computation/jc_common_simple_zero_odd_bipole_thm3133.py
 output: 05-knowledge/results/jc_common_simple_zero_odd_bipole_thm3133.out
@@ -356,6 +357,8 @@ No claim is made that the sharp family enters a Keller chart, that every
 balanced response is realized by a Faber bank, or that the planar Jacobian
 conjecture follows.  The common-simple-zero lemma is an all-`R` symbolic
 result; the displayed Faber and Nielsen ranges are verification sidecars.
+THM-3140 subsequently excludes the explicit `d=11` member from the normalized
+`R=8` chart, but not other responses with passport `(11,11)`.
 
 ## 6. Independent hostile audit
 

@@ -19,7 +19,7 @@ from contextlib import redirect_stdout
 from fractions import Fraction
 from hashlib import sha256
 from importlib.util import module_from_spec, spec_from_file_location
-from math import factorial
+from math import comb, factorial
 from pathlib import Path
 
 
@@ -169,7 +169,49 @@ def all_degree_stopping_control():
         bottom = -shifted_elementary[degree] * q_complete[degree]
         require(bottom == 40 * 5 ** (degree - 6) * q_complete[degree] > 0,
                 "even elementary-tail hostile drift")
-    return polynomial, poles, tail_flag, q_roots, h6_bottom
+
+    # Interpolate plethystically between the fixed reference Q and the
+    # co-shifted reference Q-5 by Q_z=Q-[5z], 0<=z<=1.  Then
+    # H_(Q_z)=H_Q(1-5zt) and E_(Q_z)=E_Q/(1+5zt).  In degree six the
+    # bottom coordinate is an exact polynomial in z.  Its Bernstein
+    # coefficients certify positivity on the entire interval at once.
+    qz_e6 = tuple(
+        q_elementary[6 - degree] * (-5) ** degree
+        for degree in range(7)
+    )
+    qz_h6 = (q_complete[6], -5 * q_complete[5])
+    partial_bottom = tuple(
+        scalar[6] * qz_e6[degree]
+        - shifted_elementary[6]
+        * (qz_h6[degree] if degree < len(qz_h6) else 0)
+        for degree in range(7)
+    )
+    require(
+        partial_bottom
+        == (11969920, -11342040, 7634700, -23715000,
+            38250000, -30600000, 9562500),
+        "partial-reference power polynomial drift",
+    )
+    bernstein = tuple(
+        sum(
+            Fraction(partial_bottom[degree] * comb(index, degree),
+                     comb(6, degree))
+            for degree in range(index + 1)
+        )
+        for index in range(7)
+    )
+    require(
+        bernstein
+        == (11969920, 10079580, 8698220, 6640090,
+            5269440, 3400520, 1760080)
+        and all(bernstein[index] > bernstein[index + 1]
+                for index in range(6)),
+        "partial-reference Bernstein certificate drift",
+    )
+    return (
+        polynomial, poles, tail_flag, q_roots, h6_bottom,
+        partial_bottom, bernstein,
+    )
 
 
 def efficient_upsets(types, closures):
@@ -542,6 +584,11 @@ def run_audit():
         "all_degree_control="
         f"P:{stopping[0]};poles:{stopping[1]};tail_flag:{stopping[2]};"
         f"Q:{stopping[3]};H_1^6:{stopping[4]}"
+    )
+    print(
+        "partial_reference_N6="
+        f"power:{stopping[5]};bernstein:{stopping[6]};"
+        f"uniform_bottom>={stopping[6][-1]}"
     )
     print("elementary_response=(16*t^5+40*t^6)/(1+5*t)")
     print("infinite_hostile=scalar_positive_all_N>=5;bottom_facet_fails_even_N>=6")

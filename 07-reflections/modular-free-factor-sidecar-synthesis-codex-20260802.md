@@ -55,12 +55,13 @@ be a *pointed involution* on that torsor: for example, one chosen pair
 reflection together with the orientation datum that tells which lift was
 used.  Forgetting the point recovers only the cubic-resolvent quotient.
 
-The order-three generator also needs a pointer.  The genuine `C_3` action is
-cyclic rotation of the **labelled input triple** of full endpoint jets.  The
-THM-3121/3134 substitution transform is invariant under this rotation, so its
-output forgets the cyclic slot origin even when the complete output jet is
-retained.  Thus the smallest currently honest common state has the schematic
-form
+The order-three generator also needs a pointer.  Cyclic rotation acts on the
+**labelled input triple** of full endpoint jets; for equal or canonically
+identified factors it also becomes the genuine cyclic-wreath automorphism of
+the substituted tournament.  The numerical THM-3121/3134 profile transform
+is invariant under this rotation, so its output forgets the designated cyclic
+slot origin even when the complete output jet is retained.  Thus the smallest
+currently honest common state has the schematic form
 
 ```text
 (pointed V_4 half-system, pair orientation;
@@ -69,8 +70,9 @@ form
 
 A genuine `C_2*C_3` action requires maps `S,R` on one carrier satisfying
 `S^2=1` and `R^3=1`.  No commutation or braid relation should be inserted.
-On the intrinsic four-point half-system torsor, however, a chosen pair flip
-and an oriented three-cycle already satisfy the extra relation
+On the intrinsic four-point half-system torsor, however, after choosing an
+origin, one nonzero pair flip, and an oriented three-cycle (none is canonical
+on THM-2950's unbased torsor), the chosen generators already satisfy the extra relation
 `(SR)^3=1`; they generate `V_4 semidirect C_3 ~= A_4 ~= PSL_2(F_3)`.
 Therefore that torsor is the level-three congruence shadow, not a faithful
 modular carrier.  More importantly, both maps must preserve the same physical
@@ -81,9 +83,10 @@ objects; it does not yet give this common carrier map.
 
 For the ternary face the source is a **rooted labelled triple** of tournament
 path-cover profiles, the target is the substituted profile, and the map is
-THM-3134's Gregory--Newton transform.  It preserves every ordered path-cover
-count and the cyclic-wreath divisibility, but is invariant under cyclic
-rotation of the input labels.  Projection to the endpoint value additionally
+THM-3134's Gregory--Newton transform.  It computes every ordered path-cover
+count and, in the equal-factor case, the cyclic-wreath divisibility, but its
+numerical readout is invariant under cyclic rotation of the input labels.
+Projection to the endpoint value additionally
 destroys the higher run counts.  The endpoint jet restores the run counts;
 the rooted block coordinate separately restores the cyclic phase.
 
@@ -123,9 +126,11 @@ lift obstruction, not evidence against the cubic anatomy itself.
 
 1. **Farey-flank test.**  Reduction
    `P^1(Q) -> P^1(F_3)` preserves the one-way implication “Farey neighbors
-   remain distinct”, but not its converse and not THM-2056's fixed polar
-   gate.  A proposed lift must therefore transport the exact determinant,
-   polar polygon, and quadratic metric, not merely the four residue points.
+   remain distinct”, but not its converse and not THM-2056's fixed sufficient
+   polar certificate.  This does not show that the transported slopes are
+   physically unsafe.  A certificate-level lift must therefore transport the
+   exact determinant, polar polygon, and quadratic metric, not merely the four
+   residue points.
 2. **Reduced-word fingerprint.**  The cheapest test is already decisive:
    `(SR)^3` is the identity on the four-point torsor, whereas in
    `PSL_2(Z)` it is `T^3` and is nontrivial.  For example `T^3(0,1)=(3,1)`;

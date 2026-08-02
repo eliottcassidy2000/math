@@ -1,0 +1,13 @@
+THM-3142 PRIME-POWER PREDECESSOR NEWTON SEPARATION -- EXACT CONTROLS
+exact_composite_universe=d_4_through_220 composites=172 divisor_places=365 all_divisor_places_overlap=True
+even_d_p2_single_slope_one_cases=109
+predecessor_places=303 separations=58 separates_iff_d_minus_1_is_power_of_p=True
+hostile_d=4 p=2 A_slopes=(Fraction(1, 1),) B_slopes=(Fraction(1, 1),) overlap=(Fraction(1, 1),)
+hostile_d=6 p=3 A_slopes=(Fraction(0, 1), Fraction(1, 3)) B_slopes=(Fraction(1, 3), Fraction(1, 1)) overlap=(Fraction(1, 3),)
+hostile_d=132 p=3 A_slopes=(Fraction(0, 1), Fraction(1, 3), Fraction(13, 27), Fraction(40, 81), Fraction(11, 18)) B_slopes=(Fraction(1, 3), Fraction(13, 27), Fraction(40, 81), Fraction(11, 18), Fraction(1, 1)) overlap=(Fraction(1, 3), Fraction(13, 27), Fraction(40, 81), Fraction(11, 18))
+prime_power_predecessor_exact_cases=19 first=(2, 1, 2, '3/2') last=(13, 1, 13, '2/13')
+all_prime_places_p_le_2d_d_le_160 tested=4643 separating=47 exactly_prime_power_predecessors=True
+recurrence_matches_direct_d_4_through_15=True
+modular_gcd_prime=1000003 isprime=True composite_d=203..1000 checked=676 common_factor_flags=[]
+modular_gcd_prime=1000033 isprime=True composite_d=203..1000 checked=676 common_factor_flags=[]
+rational_gcd_hostile_controls=[(4, 0), (6, 0), (8, 0), (9, 0), (10, 0), (12, 0), (15, 0), (16, 0), (18, 0), (20, 0)]

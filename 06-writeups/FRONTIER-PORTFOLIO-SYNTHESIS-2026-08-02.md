@@ -6,35 +6,57 @@ synthesis.
 
 ## Executive answer
 
-The current beach search produced four substantive frontier advances and two
-general structural tools.
+The current beach search produced a coordinated set of frontier advances and
+structural tools, including three further theorems and one bounded LRC scout
+after the first synthesis pass.
 
 1. For **LRC(14)**, the reflected split-tail error is now understood at the
    assignment level.  Weak comparison lanes cover all positive levels exactly
    when their directed graph contains a cycle.  This repairs the exceptional
    body `H2` at caps `7/3` and `5/2`, while proving that the standard
    single-pair uniform-envelope lanes for `H` form a DAG and cannot cover.
+   A genuinely multi-pair upper-median two-star certificate is nevertheless
+   finite-exact for `H` on the boundary `6<=D<=50` and throughout
+   `6<=D<=15,D<=m<=3D`; its analytic Hall-type explanation remains open.
    Independently, THM-3113/3114 close the projected `k=3` layers
    `z1=229,228,227,226`, lowering that cap to `225` and the ledger to `374172`.
 2. For the **planar Jacobian response lane**, a common simple zero of `V` and
    `M` is impossible throughout the normalized nonsplit exact-square-prefix
    Faber bank for `R>=7`.  The first possible balanced boundary is therefore
-   sharply isolated at `R=8`, `D=11`, `N=22`, passport `(11,11)`.
+   sharply isolated at `R=8`, `D=11`, `N=22`, passport `(11,11)`.  THM-3140
+   now proves that the canonical explicit odd-bipole realizing that abstract
+   boundary cannot enter the source chart; other `(11,11)` responses remain.
 3. For **quadratic factorial windows**, every prime resonance is uniformly
-   impossible by disjoint `p`-adic Newton slopes.  Any residual bad window now
-   has `r>=201`, composite `r+2`, and the forced ratio
-   `b/a=-1/(r+2)`.
+   impossible, and every resonance whose predecessor `d-1` is a prime power
+   is excluded by a primitive one-segment Newton polygon.  The prime `2`
+   divisor place is provably blind for every even `d`.  A degree-preserving
+   two-prime census closes all `d<=1000`, so any residual has `r>=999`,
+   composite `d=r+2`, non-prime-power `d-1`, and `b/a=-1/d`.  THM-3143 also
+   removes every prime `d-2` by cancelling a genuinely shared Frobenius face;
+   hence `d-2` is composite too.
 4. For **tournaments and exact sequences**, the complete path-cover profile is
    the endpoint Taylor jet of one centered permutation polynomial.  Cyclic
-   `C3` substitution becomes an exact Gregory--Newton transform, computable in
-   cubic arithmetic for equal factors and iterated exactly through `729`
-   vertices.
+   substitution into the cyclic three-vertex quotient becomes an exact
+   Gregory--Newton transform, computable in cubic arithmetic for equal factors
+   and iterated exactly through `729` vertices.  The output is invariant under
+   rotation of the labelled input triple, so a rooted slot is a separate
+   sidecar rather than an action visible in the output.
 5. A fixed-grid **LRC divisor upset** has an exact totient inclusion--exclusion
    response and a supermodular death law, but its normalized mass does not
    transport upward.
 6. A **projected forest boundary** is surjective in every even rank and misses
    exactly augmentation in every odd rank.  This is a signed lift theorem, not
    a positivity theorem.
+7. A **stochastic pole selector** can repair deterministic Young-positivity
+   failures through degrees `5..9`: the exact feasible laws form a two-facet,
+   `24`-vertex polytope.  The mechanism dies at degree `10` and fails to
+   transport even to a nearby support, giving a sharp finite barcode rather
+   than a uniform positive flag.
+8. The proposed **binary/ternary modular frame** is now exactly classified at
+   its first quotient: the pointed four-sheet action is
+   `PSL_2(F3)=A4`, with first extra relation `(SR)^3=1`.  A faithful lift must
+   restore the lost `Gamma(3)`/Farey coordinate, the rooted cyclic input
+   block, and a common physical atom.
 
 None of these statements proves LRC(14), `JC(2)`, `FC(3)`, or `SFC(3)`.  Their
 value is that several formerly diffuse residuals have become precise objects
@@ -47,12 +69,14 @@ with exact failure mechanisms and cheap next tests.
 | LRC(14), grid response | [THM-3130](../01-canon/theorems/THM-3130-divisor-antichain-totient-response-and-supermodular-witness-loss.md) | principal totient-tail product, antichain inclusion--exclusion, decreasing supermodular insertion loss, divisor-death barcode | fixed grid is not the continuous loneliness profile; normalized upward transport fails at `q=6` |
 | LRC(14), projected `k=3` | THM-3113/3114 | all `43+5+30+13` rows at `z1=229..226` close; cap `225`, ledger `374172`; THM-3126 independently reproves the six `z1=229` terminal prefixes | next layer is the exact `78`-row wall bank at `z1=225`; arbitrary `k<=1`, the rung, and LRC(14) remain open |
 | LRC(14), reflected levels | [THM-3135](../01-canon/theorems/THM-3135-directed-cycle-weak-order-lane-cover-and-reflected-h-boundary.md) | exact cycle/DAG cover criterion; `H2` repaired at caps `7/3,5/2`; `H` isolated as a scoped DAG obstruction | find a multi-pair, nonuniform, median, or tree certificate for `H`; reflected global residual stays `561` |
-| planar Jacobian response | [THM-3133](../01-canon/theorems/THM-3133-common-simple-zero-faber-exclusion-and-odd-bipole-boundary.md) | all common simple zeros excluded; balanced survivor has `s_resp=0`, `R=3k+2`, `N>=2(4k+3)`; bound abstractly sharp | enter the first equality cell `R=8,N=22,(11,11)` into the actual Faber/source chart or exclude it |
-| factorial, exact quadratics | [THM-3131](../01-canon/theorems/THM-3131-prime-resonance-newton-slope-separation.md) | infinitely many shifted windows closed uniformly: every prime `r+2`; residual begins beyond the old `r<=200` census | composite resonances; Newton polygons may overlap and require residual/unit data or another place |
+| LRC(14), body `H` scout | [finite-exact reflection](../07-reflections/lrc-H-upper-median-two-star-matching-scout-codex-20260802.md) | two-star upper-median certificate covers every distinct-level injection for `m=D,6<=D<=50` and `D<=m<=3D,6<=D<=15` | prove the low-overlap channel/Hall mechanism and replay every inherited filter; no cone closure is claimed |
+| planar Jacobian response | [THM-3133](../01-canon/theorems/THM-3133-common-simple-zero-faber-exclusion-and-odd-bipole-boundary.md), [THM-3140](../01-canon/theorems/THM-3140-r8-odd-bipole-faber-chart-nonentry.md) | all common simple zeros excluded; first boundary `(R,N)=(8,22)`; canonical explicit odd-bipole cannot enter its source chart | classify or exclude all other `(11,11)` responses and remaining chart branches; `JC(2)` stays open |
+| factorial, exact quadratics | [THM-3131](../01-canon/theorems/THM-3131-prime-resonance-newton-slope-separation.md), [THM-3142](../01-canon/theorems/THM-3142-prime-power-predecessor-newton-separation-and-composite-window-census.md), [THM-3143](../01-canon/theorems/THM-3143-two-step-prime-resonance-euclidean-newton-separation.md) | every prime `d`, prime-power `d-1`, prime `d-2`, and every `d<=1000` close; even-`d` divisor place is blind | residual `r>=999`, composite `d,d-2`, non-prime-power `d-1`; resolve shared faces or change place |
 | factorial, sparse `FC(3)` | [THM-3125](../01-canon/theorems/THM-3125-monomial-ray-first-window-factorial-closure-in-three-variables.md) | genuine anchored three-variable monomial-ray subclass via positive Gamma layers | translated rays, off-ray supports, shifted windows, full `FC(3)`/`SFC(3)` |
 | tournaments | [THM-3134](../01-canon/theorems/THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform.md) | endpoint-jet dictionary; exact `C3` full-profile recurrence in `O(N^3)` arithmetic and `O(N^2)` memory; wreath divisibility for ordered covers | characterize other low-state quotient kernels; no fixed-order scalar recurrence or arbitrary-profile shortcut |
+| modular congruence shadow | [THM-3141](../01-canon/theorems/THM-3141-quartic-v4-modular-congruence-shadow-and-gamma3-sidecar-boundary.md) | pointed `V4` frame gives exactly `PSL_2(F3)=A4`; `(SR)^3=T^3` is the first lost modular word; rooted ternary input is separately forgotten | build a `Gamma(3)`/Farey lift on one common physical carrier; no faithful modular action or JC/LRC transfer yet |
 | signed forest lifts | [THM-3132](../01-canon/theorems/THM-3132-projected-forest-boundary-parity-and-augmentation.md) | all-rank parity classification: even rank surjective, odd rank augmentation-zero | positivity, locality, denominator, symmetry, and operation compatibility are not supplied |
-| positive refinement | [THM-3129](../01-canon/theorems/THM-3129-bounded-poset-upset-facet-irredundancy.md) plus the active-prefix hostile | every nontrivial upset facet is genuinely needed; first active coarsest-upset failure is explicit | construct a transverse positive selector, not another signed lift |
+| positive refinement | [THM-3137](../01-canon/theorems/THM-3137-finite-stochastic-pole-selector-polytope-and-portability-wall.md) | exact one-pole selector polytope through degrees `5..9`: two facets, `24` support-two vertices; same-mean deterministic replacement fails | degree `10` kills every physical one-/two-pole law; nearby support has a two-upset Farkas wall |
 
 The earlier session gains remain live inputs: [THM-3121](../01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md)
 is the tournament substitution kernel, [THM-3123](../01-canon/theorems/THM-3123-heptic-e3-remaining-accessory-classification-and-s7-monodromy.md)
@@ -68,30 +92,36 @@ promoted THM-3113/3114 descent.
 |---|---|---|---|---|
 | LRC reflected | THM-2941 head/tail envelope and located transport | `H=(1,2,3,4,6,12)` | MISTAKE-347 duplicated one order by reversing both pair and inequality | directed graph of the actual weak inequalities; upper-median/tree response |
 | LRC grid | THM-3055 divisor upset and THM-3129 upset facets | `q=6`, where normalized upset mass decreases | death was mistaken for upward transport | minimal divisor antichain plus `phi(d)` death barcode |
-| planar JC | THM-2796 balanced response and THM-2827 Faber bank | a formal passport need not enter a Keller/source chart | MISTAKE-317 warns that pole order alone loses face coefficients | three-lane valuation fan plus source coordinates `d_F,s_F` |
-| factorial | THM-3124 boundary-forced recurrence | composite `d=4,6` have overlapping Newton slopes despite rational gcd one | MISTAKE-350 confused ambient dimension with support size | prime-by-prime Newton slopes together with residual polynomials and units |
+| planar JC | THM-2796 balanced response and THM-2827 Faber bank | THM-3133's explicit `(11,11)` response is abstractly valid but THM-3140 proves source nonentry | MISTAKE-317 warns that pole order alone loses face coefficients | three-lane valuation fan, wall resultant, and source coordinates `d_F,s_F` |
+| factorial | THM-3124 boundary-forced recurrence | even-`d` polygons have sole slope one at `p=2`; at prime `d-2`, both faces really share slope/residue before Euclidean repair | MISTAKE-350 confused ambient dimension with support size | adjacent place, primitive denominator, or exact Euclidean cancellation plus residual data |
 | tournaments | THM-3121 walk-content kernel and THM-1975 path-cover sidecar | masks `40,76` have the same `H=15` but different `F(2)` | finite sequence fitting is not a closed form (MISTAKE-342) | centered permutation polynomial and its endpoint jet |
-| product-Gamma refinement | THM-3119 labelled deletion and THM-3127 upset dual | first active failure `N=5,(a,b)=(1,3),I2,j=5`, coarsest mass `-2324160` | exact commutation was mistaken for positive transport | invariant coarsening upset plus a transverse Young selector |
+| product-Gamma refinement | THM-3119 labelled deletion and THM-3127 upset dual | deterministic prefix fails, but THM-3137's mixture works only through degree nine and only at fixed support | exact commutation was mistaken for positive transport | selector-polytope facets, moment sidecar, and persistence-death barcode |
 
 ## Live concept board
 
 The current board has seven objects.  Every new idea should be compared with
 all seven rather than only with its home conjecture.
 
-1. **Weak-order digraph:** remembers which literal inequalities a certificate
-   proves; its cycle space controls assignment coverage.
+1. **Weak-order / two-star channel graph:** remembers which literal
+   inequalities or overlap thresholds a certificate proves; directed cycles
+   control uniform-lane coverage, while leaf matching controls the scoped
+   upper-median response.
 2. **Divisor-death barcode:** remembers when each `phi(d)` grid layer is killed
    by speed insertion; it is a deletion process, not a transport process.
 3. **Local Newton polygon:** forgets root residues but can separate algebraic
-   factors by slopes at a chosen prime.
-4. **Pole valuation fan:** forgets global chart entry but can isolate the unique
-   top Faber face in polar, pure-`q`, and regular-`H` lanes.
+   factors by slopes or a primitive slope denominator at a chosen prime; the
+   even-`d` slope-one theorem identifies a full observer kernel, while an
+   exact Euclidean step can expose the layer behind a shared face.
+4. **Pole valuation fan:** forgets other response families but can isolate the
+   unique top Faber face locally and, with wall coefficients, obstruct source
+   entry at infinity.
 5. **Endpoint jet:** remembers precisely the derivatives consumed by a
    substitution operation; its zeroth coordinate is the scalar `H`.
 6. **Signed forest boundary:** reconstructs partition currents efficiently but
    carries no positivity or locality by itself.
-7. **Upset dual / transverse selector:** detects whether a signed or commuting
-   lift actually lies in the positive refinement cone.
+7. **Upset dual / stochastic selector polytope:** detects whether a signed or
+   averaged lift lies in the positive refinement cone and records the first
+   degree/support where every physical law dies.
 
 Two relations are already exact.  A forest is optimal for independent signed
 difference reconstruction, while a directed cycle is necessary for weak-order
@@ -179,6 +209,19 @@ complementary reverse-lane asymptotic limits are negative, so merely moving
 the tail threshold cannot create the missing cycle.  This is a precise
 stopping reason for the saturated single-pair route, not a physical survivor.
 
+A transverse finite-exact scout replaces one uniform pair by the two-star
+
+```text
+01,02,03,04,05,12,13,14,15.                                (5a)
+```
+
+At safe upper-median cell `90`, a four-left maximum-weight matching proves
+that every distinct-level injection for `m=D,6<=D<=50`, and for
+`D<=m<=3D,6<=D<=15`, has a winning edge.  The weakest directed-rounding gap
+is `625580509807/10^15>0` at `D=m=8`.  This is a scoped computational signal,
+not a reflected-cone theorem: its next target is an analytic Hall deficit for
+the low-overlap channel graph plus a replay of every inherited filter.
+
 ### 3. The planar-JC simple-zero wall is empty
 
 In the normalized nonsplit exact-square-prefix Faber bank, suppose a finite
@@ -206,7 +249,29 @@ every odd `d`; its constant first-order recurrence proves nonvanishing.  It
 does not provide `A_src,B_src` or satisfy the remaining Faber chart-entry
 equations automatically.
 
-### 4. Prime factorial resonances separate by slopes
+THM-3140 settles that entry question for the explicit `d=11` member.  Any
+off-pole zero of `A_src` would force order at least three in `A_src K_Q`,
+contradicting squarefreeness of `M`.  The two pole roots then force
+
+```text
+A_src=c(x^2-1)^6,             (x^2-1)^7 | B_src.             (6a)
+```
+
+The exact infinity fan has chambers `deg(d_F)<2deg(s_F)+2`, equality, and
+the reverse inequality.  On the wall the two top flux faces would require a
+common root of
+
+```text
+(z-1)(z^2-6z+1),
+z^4-28z^3+70z^2-28z+1,       resultant=65536.                (6b)
+```
+
+Thus `s_F` is constant, possibly zero, and `d_F` is zero or has degree at
+most two.  The Faber ring gives `ord_infinity(K_Q)>=2`, whereas
+`K_Q=lambda M/A_src` has order `-1`.  This excludes the canonical explicit
+odd-bipole only; another response with passport `(11,11)` remains possible.
+
+### 4. Factorial resonances separate by slopes or an exact syzygy
 
 For `q(t)=a+bt+ct^2`, THM-3124 gives
 
@@ -230,17 +295,63 @@ A_(p-2): {0,1/(p-3)},       A_(p-1): {1/(p-1)}              (8)
 ```
 
 with the evident `p=3` boundary.  The slope sets are disjoint, so the two
-polynomials have no common factor.  This closes infinitely many starts and
-leaves only
+polynomials have no common factor.
+
+THM-3142 changes the place from `d` to a prime-power predecessor.  If
 
 ```text
-r>=201,        r+2 composite,        b/a=-1/(r+2).           (9)
+N=d-1=p^k,
 ```
 
-At composite resonances slope overlap is an observer failure, not evidence
-of a common root: `d=4,6` already have overlapping slopes but rational gcd
-one.  The next proof must add residual polynomials, unit classes, or another
-valuation place.
+then `A_N^(N+1)` has the single Newton segment
+
+```text
+(0,0)--(N,v_p((2N)!)).                                      (8a)
+```
+
+Its slope has reduced denominator `N`: the endpoint valuation is `2 mod p`
+for odd `p` and odd for `p=2`.  Hence every nonconstant `Q_p` factor would
+have degree divisible by `N`; the degree-`N` polynomial is irreducible and
+cannot share a factor with its degree-`N-1` mate.
+
+The observer boundary is equally sharp.  For every even `d` and every `n`,
+the `2`-adic polygon of `A_n^(d)` has sole slope one, so the divisor place
+cannot separate adjacent polynomials.  This is a global no-go for that
+observer, even though exact rational gcds in the hostile cases remain one.
+
+THM-3143 resolves a different overlap rather than avoiding it.  If `d-2=p`
+is an odd prime, the resonant pair `A=A_p`, `B=A_(p+1)` shares both slope
+`2/p` and the normalized Frobenius face `(1+z)^p`.  With
+
+```text
+C=(2p+2)(2p+1),                 R=B-CvA,                    (8b)
+```
+
+the exact Euclidean step preserves every common factor but cancels the whole
+shared face.  The replacement polygon has slopes
+
+```text
+2/(p+1),                         2/(p-1),                   (8c)
+```
+
+both disjoint from `2/p`.  This is the first exact instance here where the
+right repair is not “try another valuation,” but “retain the common residue
+face and cancel it before taking the next graded layer.”
+
+Finally, degree-preserving gcd computations over two primes close every
+composite `203<=d<=1000`; THM-3124 closes `d<=202` and THM-3131 supplies the
+prime cases.  The current exact residual is therefore
+
+```text
+r>=999,        d=r+2 composite,       d-1 not a prime power,
+d-2 composite,
+b/a=-1/d.                                                   (9)
+```
+
+The broader observations that all divisor places overlap through `d<=220`
+and that only prime-power predecessors separate among all small tested places
+are finite-exact scouts, not global classifications.  The next proof must add
+residual polynomials, unit classes, or another valuation place on `(9)`.
 
 ### 5. Tournament profiles are endpoint jets
 
@@ -305,17 +416,32 @@ an invariant upset remains negative.  Commutation, boundary lifting, and
 linear surjectivity are therefore preservers; positivity still needs a
 transverse selector.
 
+THM-3137 supplies exactly such a selector, but only in a sharply bounded
+convex chamber.  At support `(1,3)`, bank `I2`, probability laws on the eight
+physical one-pole currents that are Hasse-positive in every degree `5..9`
+form a two-facet polytope with `24` vertices, each of support two.  A
+`3/5--2/5` law succeeds although its same-mean deterministic synthetic pole
+fails in degrees eight and nine: higher selector moments are a load-bearing
+sidecar.
+
+The repair is not portable or persistent.  A two-upset Farkas certificate
+excludes every law already at support `(1,2)`, bank `I2`; degree ten empties
+the original one-pole polytope, an idle state is only trivially feasible, and
+every physical two-pole law is also excluded.  Thus stochastic averaging is
+a genuine finite positive mechanism with an exact death boundary, not an
+original-response decomposition or a stochastic pole flag.
+
 ## Connection contracts
 
 | source | target | map | preserved predicate | information destroyed | needed sidecar / cheapest hostile |
 |---|---|---|---|---|---|
 | reflected LRC tail | level assignments | lane `->` weak-order edge | literal certified inequality | magnitude and all unselected comparisons | directed cycle; DAG topological potential |
 | fixed-`q` LRC witnesses | divisor response | unhit set `->` upset antichain | exact raw totient count | continuous arcs and normalized lost mass | death barcode; `q=6` upset hostile |
-| resonant factorial pair | local valuation data | `u->v=pu`, Newton polygon | existence of a common algebraic factor forces shared slope | residues and angular root data | endpoint units and residual polynomials; composite `d=4,6` |
-| JC response divisor | Faber valuation fan | local order at a common zero | unique top/lower face separation | global chart entry and monodromy | source coordinates, flux identities, first cell `(11,11)` |
-| tournament factor | substitution state | profile `-> E_T` endpoint jet | every ordered path-cover count | nothing needed by `C3`; scalar value alone loses derivatives | same-`H` masks `40,76` |
+| resonant factorial pair | local valuation data | integral scaling, then Newton polygon or Euclidean syzygy | common factor survives exact row cancellation; primitive slope denominator forces factor degree | residues and next graded layers | digit sums/endpoints; shared Frobenius face at prime `d-2` |
+| explicit odd-bipole response | `R=8` Faber source chart | divisor support, then infinity valuation fan | source divisor identity and flux cancellation | other `(11,11)` responses and global Keller data | exact wall resultant and zero-polynomial cases |
+| tournament factor | substitution state | profile `-> E_T` endpoint jet | every ordered path-cover count | scalar loses derivatives; substitution output also forgets cyclic input root | same-`H` masks `40,76`; rooted labelled triple |
 | forest chains | partition currents | signed projected boundary | rational current in the parity-allowed image | positivity, locality, sparsity | upset inequalities and transverse selector |
-| pole-prefix scalar row | Young refinement current | commuting deletion/plethysm | algebraic commutation | positive cone membership | coarsest upset `{(5)}` already fails |
+| physical pole currents | Young refinement cone | probability law `->` averaged current | total mass and exact upset inequalities | original-response decomposition and selector order | THM-3137 two-facet polytope; degree-10 and cross-support Farkas walls |
 
 These are not reductions between conjectures.  They are typed examples of one
 procedural rule: identify the consumer first, then retain exactly the sidecar
@@ -345,7 +471,9 @@ coefficients -> prove separation -> test the first overlap.                  (15
 ```
 
 The objects themselves are not identified.  When slopes overlap, change the
-place or add residue data; do not infer that the target objects coincide.
+place, add residue data, or cancel a proved common face by an exact syzygy;
+do not infer that the target objects coincide.  THM-3143 is the positive
+control for the third option.
 
 ### C. A closed form should be an operation conjugacy
 
@@ -368,25 +496,41 @@ addition preserves the original target predicate.
 ### E. The binary/ternary modular frame is a sidecar-completion problem
 
 The formal grammar `PSL_2(Z)=C2*C3` is useful only after typing both moves on
-one carrier.  The ternary move is honest `C3` substitution, but it acts on the
-complete tournament endpoint jet, not on `H`.  On the quartic/cubic-resolvent
-side, `S4/V4=S3` retains the quotient while losing the point of the `V4` lift
-torsor; a candidate `C2` generator must therefore be a pointed involution,
-not the unpointed torsor or a scalar cofactor.
+one carrier.  The genuine `C3` action rotates a **rooted labelled input
+triple** of complete tournament endpoint jets.  The substitution output is
+invariant under this rotation and forgets the root, even though its full jet
+retains the output path-cover profile.  On the quartic/cubic-resolvent side,
+`S4/V4=S3` retains the quotient while losing the point of the `V4` lift
+torsor; a candidate `C2` generator must therefore be a pointed involution.
+
+THM-3141 proves that the intrinsic four-point torsor is already too small for
+a faithful modular action.  After choosing an origin, nonzero translation,
+and cyclic orientation, the pair flip `S` and pair-cycle `R` satisfy the extra
+relation `(SR)^3=1` and generate
+
+```text
+V4 semidirect C3=A4=PSL_2(F3).                              (16)
+```
+
+In `PSL_2(Z)`, `(SR)^3=T^3` is nontrivial, and THM-3141 proves this is the
+first extra relation in reduced syllable length.  Thus the four-point object
+is exactly the level-three congruence shadow; MISTAKE-352 records the corrected
+lineage.
 
 No common carrier or faithful modular action is proved.  The strongest
 survivor is a typed search grammar:
 
 ```text
-C3 move sidecar = complete endpoint jet;
-C2 move sidecar = pointed V4 half-system plus pair orientation.             (16)
+ternary sidecar = complete endpoint jet + rooted labelled triple;
+binary sidecar = pointed V4 half-system + pair orientation;
+lift sidecar = Gamma(3)/Farey coordinate + one common physical atom.        (17)
 ```
 
-The cheapest tests are a Farey-flank determinant check, reduced-word collision
-search under `S^2=R^3=1`, and two orthogonal hostiles that vary one sidecar
-while holding the other fixed.  An extra relation would prove factorization
-through a proper quotient; absence in a bounded search would remain evidence,
-not faithfulness.
+The cheapest decisive test is already the reduced word `(SR)^3`: it separates
+the modular carrier from its mod-three shadow.  The live task is to build the
+lost `Gamma(3)`/Farey coordinate on a common physical carrier and then vary
+the root, endpoint jet, and pointed `V4` origin independently.  Until then
+`C2*C3` is a search grammar, not a common action.
 
 ## Specific niche problems considered
 
@@ -394,13 +538,13 @@ not faithfulness.
 |---|---|---|---|
 | Repair the reflected `H2` split tails | **PROVED + FINITE-EXACT** | corrected same-pair low/high two-cycle; all `59` and `114` heads positive | integrate only into the two named caps; do not promote the global cones |
 | Repair `H` by another standard single-pair tail | **REFUTED in the declared envelope class** | all `90` pair/side choices give a DAG; complementary limits are negative | introduce a genuinely multi-pair/nonuniform response or a median/tree cell |
-| Fixed cell-90 two-star insertion for `H` | **FINITE-EXACT SCOUT** | all `569,520` injections into `[D,2D]`, `6<=D<=10`, have a winning single edge; tree was unnecessary | derive why the winning edge exists and extend with the actual inherited filters before canonization |
+| Fixed cell-90 two-star insertion for `H` | **FINITE-EXACT SCOUT** | every distinct-level injection closes for `m=D,6<=D<=50` and `D<=m<=3D,6<=D<=15`; independent subset-DP controls agree | prove the channel-graph Hall deficit and replay all inherited filters; no cone theorem yet |
 | Projected `k=3` layers `z1=229..226` | **PROVED + VERIFIED-EXACT** | THM-3113/3114 close `91` rows; THM-3126 independently reproves the six `z1=229` terminal carriers | attack the exact `78` wall rows at `z1=225`; do not infer a physical-cover census |
-| Composite quadratic factorial resonance | **OPEN, sharply typed** | prime resonances excluded; composite `d=4,6` defeat slope-only inference while gcd remains one | build a prime-place/residual-unit atlas and isolate the true exceptional `d` classes |
-| First balanced JC equality cell `R=8,N=22,(11,11)` | **OPEN chart-entry problem** | THM-3133 proves it is the first possible cell and constructs the abstract odd-bipole boundary | solve or eliminate the source equations `A_src,B_src,d_F,s_F` and all fluxes in this one cell |
+| Residual quadratic factorial resonance | **OPEN, sharply typed** | THM-3142 closes prime-power `d-1` and `d<=1000`; THM-3143 cancels the shared face when `d-2` is prime | start at `r>=999`, composite `d,d-2`, non-prime-power `d-1`; compute residual polynomials and Euclidean flags |
+| First balanced JC equality cell `R=8,N=22,(11,11)` | **PARTLY EXCLUDED / OPEN** | THM-3140 excludes THM-3133's explicit odd-bipole by divisor support plus an infinity-wall resultant | classify other `(11,11)` responses and source branches; do not generalize explicit-witness nonentry |
 | Other tournament quotients with fast transforms | **OPEN classification problem** | `C3` denominator has one diagonal pole and finite-difference separability | enumerate small quotients by denominator geometry and minimal profile-state width, not only by `H` |
-| Common `C2*C3` carrier for quartic lifts and tournament substitution | **STRUCTURAL SYNTHESIS / OPEN** | exact local moves exist only after different sidecars: pointed `V4` origin and endpoint jet | run Farey-flank and reduced-word tests; do not call the shared arities a modular action |
-| Positive Young selector after signed forest lift | **OPEN with exact hostile** | even-rank signed surjectivity, but active coarsest upset `-2324160` | find a selector transverse to the deletion kernel or prove an invariant-upset no-go for a wider class |
+| Common `C2*C3` carrier for quartic lifts and tournament substitution | **PROVED CONGRUENCE SHADOW / FAITHFUL LIFT OPEN** | THM-3141 identifies `PSL_2(F3)`, first relation `(SR)^3`, and the separately forgotten cyclic root | add rooted triple, `Gamma(3)`/Farey coordinate, and a common physical atom |
+| Positive Young selector after signed forest lift | **PROVED FINITE CHAMBER / GLOBAL OPEN** | THM-3137 gives `24` support-two laws through degree nine, then exact degree-ten and cross-support Farkas death | classify mixed-depth persistence without calling it an original-response decomposition |
 
 ## Next decisive work
 
@@ -411,9 +555,9 @@ not faithfulness.
    outside the eligible path or combine multiple pairs nonuniformly; otherwise
    THM-3135 rejects it before head enumeration.
 2. **Explain the cell-90 scout.**  Extract a symbolic upper-median or two-star
-   inequality from the `569,520` finite wins, then replay it with the full
-   THM-2941 inherited filters through at least `D<=20` and hostile boundary
-   levels.
+   Hall deficit from the low-overlap channel graph.  The computation already
+   reaches boundary `D=50` and the box `D<=15,m<=3D`; the next value is a
+   uniform proof and a replay of all THM-2941 filters, not a wider raw scan.
 3. **Continue the projected cap descent.**  THM-3113/3114 and the independent
    THM-3126 route now agree at `z1=229`; the next declared universe is exactly
    the `78` all-wall rows at `z1=225`.  Preserve certificate-free semantic
@@ -421,25 +565,28 @@ not faithfulness.
 
 ### Niche -- factorial sequences
 
-1. For composite `d=r+2`, compute Newton polygons at every prime `p|d`, not
-   only at one chosen divisor.  Record the common slope intervals and the
-   initial residual polynomial on each shared face.
-2. Partition composite `d` by the first place that separates the pair.  A
-   surviving class such as prime powers or highly smooth `d` is more valuable
-   than another unstructured range extension.
-3. On the residual class, seek a contiguous relation or resultant recurrence
-   for the two face polynomials.  Exact gcd controls at `d=4,6` must remain in
-   the test suite.
+1. Start only with `r>=999`, composite `d=r+2` and `d-2`, and
+   non-prime-power `d-1`.
+   Compute the initial residual polynomial on every shared face at primes
+   dividing `d` and `d-1`; `p=2|d` is analytically blind and should be skipped.
+2. Partition the residual by the first place whose **residual** polynomials,
+   rather than slopes alone, are coprime.  Iterate the THM-3143 Euclidean flag
+   when normalized faces agree; separate highly smooth `d` and mixed `d-1`
+   before extending another finite range.
+3. Seek a contiguous relation or subresultant recurrence for the surviving
+   face pair.  Retain exact `d=4,6,132` overlap hostiles and the planted
+   degree-loss modular control.
 
 ### Wildcard -- planar Jacobian
 
-1. Freeze the first equality cell `R=8,D=11,N=22,(11,11)` and retain the
-   source variables `A_src,B_src,d_F,s_F`.  Test all Faber fluxes and the
-   identity `A_src K_Q=lambda M`; do not expand another accessory atlas.
-2. If the odd-bipole response fails chart entry, record the first failed flux
-   and strongest surviving abstract family.  If it enters, compute the marked
-   source orbit and the remaining Keller/Jelonek gates before drawing any JC
-   conclusion.
+1. Freeze the first equality cell `R=8,D=11,N=22,(11,11)`, but remove the
+   explicit THM-3133 odd-bipole now excluded by THM-3140.  Classify the
+   remaining squarefree `M`, two-pole `V` responses before another accessory
+   atlas expansion.
+2. Reuse the divisor-support and three-chamber infinity fan on each response.
+   Record which hypothesis first fails: squarefree support, the wall
+   resultant, polynomial-ring regularity, or a genuinely different source
+   branch.  Only an actual chart entry should advance to Keller/Jelonek gates.
 
 ### Tournament / closed-form lane
 
@@ -450,16 +597,20 @@ not faithfulness.
    substitution.  Classify quotients of small order by this operational width,
    with same-scalar/different-jet pairs as hostiles.
 3. For iterated `C3`, study valuation and automorphism divisibility of the
-   complete ordered profile; do not fit a fixed scalar recurrence to the first
-   six Hamiltonian values.
+   complete ordered profile while retaining the rooted labelled input block;
+   do not fit a fixed scalar recurrence to the first six Hamiltonian values.
 
 ### Positivity / selector lane
 
-1. Treat THM-3132 as removing only the linear obstruction.  Search next in
-   the coarsening-upset dual, where one negative upset is already decisive.
-2. Test whether any proposed selector changes the source current, commutes
-   with the actual insertion/deletion operation, and preserves total mass.
-3. Use the first active hostile before scaling to the full product-Gamma bank.
+1. Start from THM-3137's exact two-facet polytope, not the deterministic
+   prefix.  Compute the mixed-depth persistence/death barcode while retaining
+   all selector moments.
+2. Test support portability with the existing two-upset Farkas wall before
+   searching a universal law.  Any augmentation must remain a physical
+   current and preserve total mass.
+3. Keep the degree-ten one-/two-pole exclusions as the first hostile; do not
+   reinterpret a feasible mixture as an original scalar-response
+   decomposition or a sequential stochastic flag.
 
 ## Procedural exploration loop
 
@@ -474,7 +625,7 @@ For every new object or analogy:
    strongest survivor, and a new typed question;
 6. compare the result with every object on the live concept board.
 
-This loop is the common research method behind all six new theorems.  It is
+This loop is the common research method behind the promoted results.  It is
 also the main defense against false cross-frontier synthesis: a shared
 formula is interesting only after the operation and lost coordinate are
 named.
@@ -499,6 +650,28 @@ python3 -O 04-computation/tournament_c3_endpoint_jet_newton_thm3134.py
 
 python3 04-computation/lrc_reflected_directed_cycle_lane_boundary_thm3135.py
 python3 -O 04-computation/lrc_reflected_directed_cycle_lane_boundary_thm3135.py
+
+python3 04-computation/gmc_stochastic_pole_selector_polytope_scout.py
+python3 -O 04-computation/gmc_stochastic_pole_selector_polytope_scout.py
+
+python3 04-computation/jc_r8_odd_bipole_faber_chart_nonentry_thm3140.py
+python3 -O 04-computation/jc_r8_odd_bipole_faber_chart_nonentry_thm3140.py
+
+python3 04-computation/factorial_prime_power_predecessor_newton_census_thm3142.py
+python3 -O 04-computation/factorial_prime_power_predecessor_newton_census_thm3142.py
+
+python3 04-computation/factorial_two_step_prime_resonance_euclidean_newton_thm3143.py
+python3 -O 04-computation/factorial_two_step_prime_resonance_euclidean_newton_thm3143.py
+
+python3 04-computation/modular_v4_psl2f3_congruence_shadow_thm3141.py
+python3 -O 04-computation/modular_v4_psl2f3_congruence_shadow_thm3141.py
+
+python3 04-computation/lrc_H_upper_median_two_star_matching_scout.py --max-D 50
+python3 -O 04-computation/lrc_H_upper_median_two_star_matching_scout.py --max-D 50
+python3 04-computation/lrc_H_upper_median_two_star_matching_scout.py --max-D 15 --all-m --m-multiples 3
+python3 -O 04-computation/lrc_H_upper_median_two_star_matching_scout.py --max-D 15 --all-m --m-multiples 3
+python3 04-computation/lrc_H_upper_median_two_star_matching_audit.py
+python3 -O 04-computation/lrc_H_upper_median_two_star_matching_audit.py
 ```
 
 The exact outputs and hashes are recorded in the theorem files.  Matching a

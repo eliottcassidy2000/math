@@ -330,22 +330,19 @@ Classify profiles under support operations; study analytic continuation and auto
   `H^1(U,mu_2)` gain-holonomy kernel, not a scalar Gram rank.  THM-2743--2780
   refine the `V4`, opposition, and inertia typing but still supply no
   equivariant Kummer realization.  THM-3057/3059 identify cleared-discriminant
-  parity with tame inertia sign and supply non-Keller `C3` hostiles; uniform
-  Keller-`C3` exclusion remains OPEN.  THM-3064 decodes a supplied pointed
-  pair, while THM-3066 retains only the sheetwise cofactor product.
-  THM-3068 permits `C3`; THM-3070/3074/3080 force a finite local Laurent-key
-  tower ending at gcd one, and THM-3081 makes its terminal residue Mobius with
-  a square decoder.  THM-3201 identifies the genuine local resolvent map: at
-  a pure `C3` place the ramified source and full `S4/V4` resolvent completions
-  coincide, all matching Kummer roots are squares, and `v(q)` gives an exact
-  `3|v(q)` Newton/discriminant gate.  Its graph-quartic addendum proves the
-  residual law `q_0=c_m A_X^3 tau^m` is automatically saturated, and transports
-  it through THM-3081 as `[q_0]=[K]^m`: the decoder fixes `K/L` but leaves the
-  terminal-prefactor cubeclass `[L]` uncontrolled.  The decoder therefore
-  needs multi-place, marked, companion, unit, or class-group gluing to recover
-  new data.
-  Globalization and arbitrary Jelonek straightening remain OPEN.  THM-3067/
-  3072/3076 locate the complementary marked/tomographic sidecars.
+  parity with tame infinity-inertia sign and exhibit non-Keller `C3` hostiles;
+  uniform Keller-`C3` exclusion remains OPEN.  THM-3064 decodes a supplied
+  pointed pair, while THM-3066 retains only the sheetwise cofactor product and
+  THM-3068 still permits punctured `C3`.  THM-3070/3074/3080/3081 terminate the
+  local Laurent-key tower in a Mobius decoder.  THM-3141 shows the `A4`
+  congruence shadow loses its `V4` origin; THM-3067/3072/3076 locate marked and
+  tomographic sidecars.  THM-3201 identifies the pure-`C3` completion and shows
+  its Kummer packet splits, with `3|v(q)` as the exact Newton/discriminant gate;
+  its graph-quartic law `[q_0]=[K]^m` is automatically saturated.  THM-3230
+  replaces the gauge-dependent terminal `[L]` by intrinsic
+  `Lambda=[L theta^(A-1)]` and recovers it from a supplied marked fixed sheet by
+  a trace-centered norm, even when `3|m`.  A global coherent mark, multi-place
+  gluing, and arbitrary Jelonek straightening remain OPEN.
   THM-2862/2864/2968/2971 give two sextic
   lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
   affine sidecars remain.  THM-2867 gives the regular `S3` carrier.  THM-2871 makes that face unramified and
@@ -373,12 +370,15 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2831 excludes the cyclic `d=s=0` residual.  Nonzero `d` or `s`, other
   carriers/fluxes, global chart entry, and nonpolynomial-prefix degrees stay
   open.  THM-2799/2800/2805/2808 complete accessory `e=2`; THM-2817 the sextic `e=3`; THM-2840 the heptic `T_7` carrier.
-  Audited THM-3123 makes the two remaining accessory algebras reduced length six and yields `1+3` nonsplit `S_7` maps, completing the abstract heptic atlas.
-  This supplies no Keller-chart entry and proves neither `JC(2)` nor `DC(2)`.
-- **Factorial:** THM-3131/3138/3200/3204 close prime,
-  adjacent-prime, even, and odd-prime-power resonances; THM-3116/3202/3203 close all algebraic
-  quadratic simplex periods. Higher phases, mixed-prime odd composites, and full
-  `FC(3)`/`SFC(3)` remain OPEN.
+  THM-3123 completes the abstract heptic atlas; THM-3133 isolates the first
+  formal cell `R=8,N=22,(11,11)`, and THM-3140 blocks its explicit odd-bipole,
+  not every response.  General chart entry and `JC(2)`/`DC(2)` remain open.
+- **Factorial:** THM-3124/3131/3138/3142/3143/3200/3204 close `r<=998` and the prime, adjacent-prime, even, odd-prime-power, prime-`d`, prime-power-`d-1`,
+  and prime-`d-2` resonance lanes.  The live exact-quadratic residual has
+  `r>=999`, with `d,d-2` composite and `d-1` not a prime power.  THM-3116/
+  3202/3203 close every algebraic quadratic simplex phase; THM-3250/3251 close
+  every affine-coordinate pure power of degree at least three.  General higher
+  phases, mixed-prime composites, and full `FC(3)`/`SFC(3)` remain OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
