@@ -1,0 +1,9 @@
+THM3273 quartic centered-norm collision covariant exact companion
+packet_degree=4 pair_quotient_checks=6
+disc_packet=(2^12/3^36)*C^2*disc_quartic exact=True
+C=9p^6-1900p^4r+1000p^3q^2+110000p^2r^2-1000000r^3
+six_pair_quotient_product=-(2^6/3^18)*C
+affine_weight_C=12 packet_discriminant_weight=36
+special_fibre_C=27d^12/8
+collision_hostile: p=-10 q=0 r=9 C=0 disc_f_nonzero=True
+positive_control: p=-7 q=6 r=0 C=-11289159
