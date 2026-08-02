@@ -1,0 +1,36 @@
+LRC14 projected k3 z1=236 and z1=235 compositional descent
+dependency=THM3061_source:93a90c48ebed4bc782bca31f378ebb0d4f7ee19ef471a60220fcda3e8927e2fb;output:b30961378985a543a86a82681f8556353243703aca9bacf09bb6b4f61648274c;semantic:2b825c5f12a59048b497b73dba234b79301d78e2db65325c63a580870eaccc88;atlas:cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda
+checkpoint_fingerprint=ab43b8e07f31e2b37adcf445d2a1d6b76828dd7439e86b4f00beb7155dd473e9
+neighbor_census=z239:rows4/wall2/order2;z238:rows0/wall0/order0;z237:rows44/wall33/order11;z236:rows1/wall1/order0;z235:rows11/wall5/order6;z234:rows381/wall330/order51
+universe=occupied_rows:12;wall:6;order:6;row_order_sha256:560fd7ba77b5170e234e2cde486438583791b1ab7696a516ffe23204e980349e
+screen=states:579;crude:101;status:338;residual:140;residual_bodies:4
+order_screen=states:27;crude:9;status:18;residual:0
+terminal=residual_bodies:4;two_high_closed:4;closed:4;zero_high:138;one_high:140;cardinality:140;maxgap:0;failed:0;unit_checks:0
+LEVEL;z1=236;rows=1;wall=1;order=0;states=2;crude=2;status=0;residual=0;order_states=0;order_crude=0;order_status=0;order_residual=0;terminal_bodies=0;two_high_closed=0;closed=0;zero_high=0;one_high=0;cardinality=0;failed=0;row_order_sha256=d37a864a1cb2c8a0116583330fb8a45fa71d02ede2b7190d5b393cd86301184e
+LEVEL;z1=235;rows=11;wall=5;order=6;states=577;crude=99;status=338;residual=140;order_states=27;order_crude=9;order_status=18;order_residual=0;terminal_bodies=4;two_high_closed=4;closed=4;zero_high=138;one_high=140;cardinality=140;failed=0;row_order_sha256=40eb51949079b203ba7552e272741a4dea6e09c38eb5fe5114e26a50e3ba4766
+BOUNDARY;z1=234;rows=381;wall=330;order=51;status=NEXT_OCCUPIED_LAYER_NOT_INCLUDED
+BODY;z1=235;E=(1, 2, 6, 8, 12, 14);L=2352;high=232;wall=False;states=4;crude=0;status=4;residual=0;stage_sha256=b5d5cc2d8b9be74645f1cd6620ab212ac37abb90dffa1046f99065e7d722528a;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
+BODY;z1=235;E=(1, 3, 4, 8, 10, 12);L=1680;high=166;wall=False;states=7;crude=7;status=0;residual=0;stage_sha256=fe247f97539482802adeaff7cd510afd2f0a4a76c2e058939e1f54151c18de02;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
+BODY;z1=235;E=(1, 4, 6, 8, 10, 12);L=1680;high=166;wall=False;states=1;crude=1;status=0;residual=0;stage_sha256=49338fc6f6bae859595c12d178897aeb4c758fe74fed4b17a1536155ab258b3f;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
+BODY;z1=235;E=(1, 4, 6, 8, 12, 14);L=2352;high=232;wall=False;states=6;crude=1;status=5;residual=0;stage_sha256=a4c16a11ab550aedbe477cdf55f612af10b16a4ee571f0dfe6aee559a7a33e5c;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
+BODY;z1=235;E=(1, 4, 7, 9, 11, 13);L=504504;high=49687;wall=True;states=143;crude=0;status=94;residual=49;stage_sha256=76cccdcb1c0fb2aaff81e828e6fbb85562713cd43207195cfac4e78f893cd93f;residual_sha256=81c9afbe0aed130a34ab99a5d082f98031b62c22e4a891d373652677d19cfcb6
+BODY;z1=235;E=(1, 7, 9, 11, 12, 13);L=504504;high=49687;wall=True;states=143;crude=0;status=95;residual=48;stage_sha256=f7129a7c6da10e0b9599f9b4e08e2b6f9229ffc5bcb1dbfdac419fb2346d7fa4;residual_sha256=9f1a40ba33825f7cb91a94f8d0e0264619bdbc49bc1db14defe21e85bd16f5f6
+BODY;z1=235;E=(1, 8, 10, 11, 12, 14);L=129360;high=12741;wall=True;states=119;crude=40;status=68;residual=11;stage_sha256=fb1404396023f32062304bc527017f6a2eb36f3fa8ed372168c87846acd7d7b1;residual_sha256=94e8d47312e4d0ef83a9d65541417a057566794b065fb84f58b93ff438779e19
+BODY;z1=235;E=(1, 9, 11, 12, 13, 14);L=504504;high=49687;wall=True;states=144;crude=49;status=63;residual=32;stage_sha256=b43a04b156aa392c07fa4b39f788a8ac240a001037ae93522ed26b060d1eb09d;residual_sha256=7c3b9d6738d3d4c58e14d46f75f64ebb451c9e876884e12d95dc3242d88324f5
+BODY;z1=235;E=(2, 3, 6, 8, 12, 14);L=2352;high=232;wall=False;states=1;crude=0;status=1;residual=0;stage_sha256=c1475081b589db21ff8a0babf0c3542cc78205307dc00b89839514103b2d2149;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
+BODY;z1=235;E=(2, 4, 6, 8, 12, 14);L=2352;high=232;wall=False;states=8;crude=0;status=8;residual=0;stage_sha256=94b87f90dabc9b24e107d0f7bab93b17c1d1b4129b27c8c652df95506d8c592d;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
+BODY;z1=235;E=(2, 8, 10, 11, 12, 14);L=129360;high=12741;wall=True;states=1;crude=1;status=0;residual=0;stage_sha256=be49cc6588052b7f16adba31e81c40c94b544606f8ea264a5c1975e5ee055151;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
+BODY;z1=236;E=(4, 8, 10, 11, 12, 14);L=129360;high=12741;wall=True;states=2;crude=2;status=0;residual=0;stage_sha256=7c4b45362d2ff62e30ad517be198aa3d5b68f4e28314c3683ed29da5bd4f8a4c;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
+TERMINAL;z1=235;E=(1, 4, 7, 9, 11, 13);residual=49;gap=26116241147/7643877581340;two_high=True;zero_high=49;one_high=49;cardinality=49;maxgap=0;failed=0;slack=33;closed=True;case_sha256=292121a7abf7ef081d64b161d8f3eef7cc9ebbfacedc99b137ff9b98b91208d2
+TERMINAL;z1=235;E=(1, 7, 9, 11, 12, 13);residual=48;gap=41820497743903/11545861849694172;two_high=True;zero_high=48;one_high=48;cardinality=48;maxgap=0;failed=0;slack=33;closed=True;case_sha256=ccb26fc4c8e6891a5b32d3d073692ea385274d1419ac5273aba2c8e838d5b102
+TERMINAL;z1=235;E=(1, 8, 10, 11, 12, 14);residual=11;gap=2514959549/582974243852;two_high=True;zero_high=9;one_high=11;cardinality=11;maxgap=0;failed=0;slack=1;closed=True;case_sha256=2b7f6f06842b50b9ed37ac2ef2c4dce843ffd223390bdec405b12fb852c627a9
+TERMINAL;z1=235;E=(1, 9, 11, 12, 13, 14);residual=32;gap=185192731993517/48776578114994730;two_high=True;zero_high=32;one_high=32;cardinality=32;maxgap=0;failed=0;slack=33;closed=True;case_sha256=0592f4d082421476709416cddae9302c7c1035a65c3a7ceacee9831266b819c8
+first_failed_implication=crude_plus_status closes 439 of 579 states, not the 140 residuals
+repair=all 4 residual bodies have positive two-high gap and all 140 one-high cases pass strict complete-cell cardinality
+safety=no null-set inference;literal covers map to the inherited relaxation and terminal cells retain actual safe residues
+set_difference=THM3061 closed z239:4 and z237:44;current disjoint pinned layers z236:1 and z235:11
+promotion_consequence=ledger 374780-12=374768;projected cap z1<=234
+scope=projected necessary sector only;z234 is not inspected or closed;no physical-cover or LRC14 consequence
+source_sha256=c8735a0e1328b08e98e9f27b86f901d2b0c491f832381d98f7a8a14f11e4f345
+semantic_sha256=d4cfb4c7e497007f044041e9f7e56d3b109107d033421d592f7f3f74e0995f02
+all_exact_controls=PASS
