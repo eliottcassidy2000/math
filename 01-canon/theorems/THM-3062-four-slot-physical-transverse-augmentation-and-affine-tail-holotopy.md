@@ -14,19 +14,21 @@ status: >
   This is not a selected-chart persistence or one all-order Stieltjes tail.
 source: kind-pasteur-2026-08-01-four-slot-physical-augmentation
 audit: >
-  An independent immutable-file audit rederived the normal-ideal filtration,
-  twelve-point concentration, effective transverse scale, Poisson-product
-  multidegrees, powered-line determinant, positive Gram evaluation, C^-17
-  exponent, exact width flag, and finite-bank confluent-alternant stability.
-  Fresh ordinary and optimized executions matched each other and the stored
-  transcript; the LF-normalized script and output hashes matched exactly.
+  Three independent immutable-file audits rederived the high-layer bases,
+  length-twelve localization with multiplicity, Poisson normalization and
+  orientation, full Gamma asymptotic, exact carrier and corrected width flag,
+  affine alternant, and uniform finite-bank holotopy.  All replayed normal,
+  optimized, and stored companions and matched the declared LF hashes.  The
+  final audit also supplied the all-width nonnegative norm boundary and
+  caught the repaired THM-2843 slug and THM-2942 evidence dependency.
 depends_on:
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
+  - THM-2942-macaulay-extraneous-flag-factor-and-pluecker-mutation
   - THM-3047-formal-corner-width-product-gamma-moment-and-strict-hankel-positivity
   - THM-3054-affine-moving-lower-tropical-beta-gamma-tail-holotopy
   - THM-3060-three-slot-physical-terminal-face-and-affine-tail-holotopy
 related:
-  - THM-2843-four-slot-window-complete-intersection-norm-or-common-zero
+  - THM-2843-four-slot-projective-divisibility-and-resolvent-reduction
   - THM-3058-k4-hafnian-initial-face-augmentation-and-unbounded-cancellation-jet
 script: 04-computation/gmc_four_slot_physical_transverse_tail_thm3062.py
 output: 05-knowledge/results/gmc_four_slot_physical_transverse_tail_thm3062.out
@@ -219,6 +221,20 @@ in `(17)` is exponentially smaller.  In particular
 ```text
 R_C>0 for every sufficiently large C.                 (22)
 ```
+
+There is also a sharp all-width boundary.  The quadratic is positive
+definite on the real mean-zero plane, so the six points of its intersection
+with the cubic occur in conjugate pairs.  Poisson evaluation of the quartic
+therefore gives
+
+```text
+R_C>=0 for every admissible C,
+R_C=0 iff F_(2,C),F_(3,C),F_(4,C) have a common point. (22a)
+```
+
+Thus eventual positivity in `(22)` is stronger than an orientation choice,
+while strict positivity at every width is exactly the still-open arbitrary
+four-slot first-window nullity problem.  Nothing here assumes that closure.
 
 Equation `(20)` also proves the tropical optimality which termwise base
 sorting misses.  Once all equal-base contributions are contracted, the
