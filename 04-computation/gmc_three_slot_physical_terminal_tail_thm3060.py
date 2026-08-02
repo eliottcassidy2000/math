@@ -116,8 +116,8 @@ def physical_resultant(depth, moving, gap):
 def width_flag(depth, width):
     # For three slots THM-3047 has (A,B,I)=(5,2,7).
     return (
-        rising(depth + 1, width) ** 5
-        * rising(depth + 2, width) ** 2
+        rising(depth, width) ** 5
+        * rising(depth + 1, width) ** 2
         / depth ** (7 * width)
     )
 

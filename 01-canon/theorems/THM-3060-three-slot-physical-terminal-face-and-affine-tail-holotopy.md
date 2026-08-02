@@ -21,8 +21,8 @@ related:
   - THM-3051-stieltjes-multiplier-gamma-flow-and-moving-lower-hankel-boundary
 script: 04-computation/gmc_three_slot_physical_terminal_tail_thm3060.py
 output: 05-knowledge/results/gmc_three_slot_physical_terminal_tail_thm3060.out
-script_sha256: f6724f8d171688ceb13a821a4fc57ffda2a86f0edaf278c292a079705f020294
-output_sha256: 8ba66d651aec8283ede5cb524a9af2da57a4e776cdb9c3cbedc42fb63adc2290
+script_sha256: 4021e3cc59c40bc338ba7640108aaedba607b20b7e46b3ab9707755a3b961b8f
+output_sha256: 14b5e527271e683c5bb54ffe350f73d3280b6de4b3aeb72755e1d8f5dddd7aa7
 hash_basis: LF-normalized bytes
 ---
 
@@ -143,7 +143,7 @@ blocks of weight `-1`.
 For three slots, THM-3047's exact width flag is
 
 ```text
-F_M=(n+1)_M^5(n+2)_M^2/n^(7M).                        (14)
+F_M=(n)_M^5(n+1)_M^2/n^(7M).                          (14)
 ```
 
 Set
