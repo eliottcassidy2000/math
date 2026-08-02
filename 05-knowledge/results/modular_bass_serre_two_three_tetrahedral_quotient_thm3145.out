@@ -1,12 +1,12 @@
 THM3145 Bass-Serre two-three tree tetrahedral quotient
 abstract_tree=vertices:G/C2_disjoint_G/C3;edges:G;degrees:2,3;faithful:left_regular_edges
-rooted_view=suppress_degree2:three_regular_tree;root_degree3;all_other_forward_degree2
+rooted_view=suppress_degree2:three_regular_tree;three_binary_forward_sectors;one_oriented_root_edge_selects_one_binary_tree
 ternary_view=chosen_C3_cycles_the_three_incident_edges_at_each_C3_vertex
 mod3_quotient=group:12;C2_vertices:6;C3_vertices:4;edges:12
 suppressed_graph=K4;edge_pairs:((0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3));triangles:4;beta1:3
-torsor=normal_V4_acts_regularly_on_the_four_C3_cosets;full_edge_slot_count:6
-congruence_boundary=K4_has_triangles_and_is_not_a_partial_cube;its_universal_Bass_Serre_tree_is_a_partial_cube
-missing_coordinate=Gamma3_cycle_lift;first_triangle_is_the_suppressed_(SR)^3_six_cycle
+torsor=normal_V4_regular_on_four_C3_cosets;six_edges_split_into_three_opposite_pairs:(((0, 1), (2, 3)), ((0, 2), (1, 3)), ((0, 3), (1, 2)))
+partial_cube=subdivided_K4_embeds_as_weight1_and_weight2_vertices_of_Q4;four_Theta_classes_of_size3;suppressed_K4_not_partial_cube
+missing_coordinate=Gamma3_cycle_lift;one_primitive_triangle_is_the_suppressed_(SR)^3_six_cycle
 gate_fibre_hostile=(43,2)_fails:2366>1853;T3(43,2)=(49,2)_passes:2366<=2405;same_P1_F3_point
-record_sha256=b9b91030a83c99a0c4801df582c4e01f873080ea75dacb6ab1b4df7ecd3ab36b
+record_sha256=c84205c487c056d4f845d3343d631bbaa2c23ad721b643ea571b4cd17ae1b33a
 all_exact_controls=PASS
