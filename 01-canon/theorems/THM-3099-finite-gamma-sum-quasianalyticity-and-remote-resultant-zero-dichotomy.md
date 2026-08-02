@@ -2,7 +2,7 @@
 id: THM-3099
 title: "Finite Gamma-sum quasianalyticity and remote-resultant zero dichotomy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  A finite
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A finite
   real linear combination of eventually positive hypergeometric terms whose
   consecutive quotients are rational functions is either the exact zero
   sequence or has a fixed nonzero sign eventually.  Every one-parameter
@@ -11,6 +11,15 @@ status: >
   identity and makes every sufficiently remote terminal extension good.
   The sign of the test value need not be the eventual sign.
 source: multiscale-newton-flag-2026-08-01
+audit: >
+  An independent hostile audit rederived the ordered asymptotic scale,
+  rational-shift evaluation determinant, polynomial inverse bound, and
+  exclusion of all-orders flat nonidentities after choosing a basis from the
+  original positive terms.  It checked that determinant-one elimination and
+  full Newton expansion leave only finite products with eventually positive
+  rational quotients, and independently accepted the finite-core escape
+  corollary.  Normal, optimized, and stored output matched exactly; both LF
+  hashes passed and no truth-bearing assert was present.
 depends_on: []
 related:
   - THM-3069-one-normal-remote-terminal-suspension-and-physical-tropical-flag
@@ -24,7 +33,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3099 -- finite Gamma-sum quasianalyticity
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The remote-terminal theorems identify a leading positive face when a lower
 resultant is already nonzero.  A bad child has no such face, but its exact
@@ -60,7 +69,7 @@ F(n)=sum_(j=1)^J c_j T_j(n),             c_j in R.       (2)
 
 Then exactly one of the following holds:
 
-1. `F(n)=0` for every common admissible index `n`; or
+1. `F(n)=0` for every index in the common admissible tail `n>=n_0`; or
 2. there are `N` and `epsilon in {+1,-1}` such that
 
    ```text
@@ -114,8 +123,9 @@ combination flat to every order.  Section 3 rules that out exactly.
 ## 3. Rational-shift determinant excludes formal ghosts
 
 Work inside one `(delta,Lambda)` class and discard exact constant linear
-dependencies.  Let `G_1,...,G_d` be a remaining basis as sequences on the
-common tail.  Linear independence of their evaluation vectors gives fixed
+dependencies.  Choose `G_1,...,G_d` as a remaining subset of the original
+positive terms that is a basis as sequences on the common tail.  Linear
+independence of their evaluation vectors gives fixed
 nonnegative shifts
 
 ```text
@@ -206,8 +216,8 @@ F_r=L((sum_i x_i f_(lambda_i)+z f_C)^r),
 ```
 
 Because `F_1=sum_i x_i+z`, its determinant-one physical elimination is
-independent of `C`.  Before or after that elimination, a coefficient with
-`k` copies of the remote atom has the form
+independent of `C`.  Before elimination, and for each `k`-layer contribution
+to a coefficient after elimination, the term has the form
 
 ```text
 constant * (kC+b)!/(C!)^k,               0<=k<=r,      (15)
@@ -314,4 +324,4 @@ python -O 04-computation/gmc_finite_gamma_sum_quasianalyticity_thm3099.py
 
 Both modes must equal the stored transcript after LF normalization.
 
-**QED, pending independent audit and status promotion.**
+**QED.**
