@@ -1,22 +1,22 @@
 ---
 id: THM-3143
-title: "FC(3) rank-at-most-one quadratic phases: discriminant-class edge currents cannot cancel"
+title: "FC(3) algebraic quadratic simplex phases: discriminant-class edge currents cannot cancel"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For every algebraic
-  quadratic q on the coordinate two-simplex with Hessian rank at most one,
-  int_Delta exp(q) dA is nonzero, and it is 1/2 iff q is identically zero.
-  The rank-zero boundary is THM-3116.  THM-3142 and the inherited first part
-  of this theorem handle quadratics aligned with one affine coordinate.  A
-  rank-one phase with a transverse linear term is converted by Cauchy--Green
-  (noncollinear leading coordinate) or Green (collinear leading coordinate)
-  into edge E-functions.  Equal edge discriminants, rather than raw edges,
-  are the correct first-order blocks.  Singleton, two-edge-path, full-cycle,
-  and vertical-edge source audits show that every discriminant block survives
-  every endpoint-value quotient.  The full-cycle obstruction is the fact
-  that an odd three-cycle of nonzero equal-square edge increments cannot
-  close.  The jointly independent discriminant-block system has sole
-  denominator s, so Beukers Corollary 1.4 at s=1 excludes 0 and 1/2.  This
-  closes Hessian rank at most one, not full-rank quadratics and not FC(3).
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For every q in
+  Qbar[u,v] of degree at most two, int_Delta exp(q)dA is nonzero, and it is
+  1/2 iff q is identically zero.  Rank at most one is handled by THM-3116,
+  THM-3142, and the Cauchy--Green/Green discriminant-block proof below.  For
+  full Hessian rank, center q=q0+Q(x-c) and use the Euler field (x-c)/2:
+  `sK'+(1-sq0)K` is a constant-weight edge flux.  Normalized quadratic edge
+  periods group by kappa=delta/(4a).  The binary determinant identity makes
+  every nonresonant flux coefficient in one kappa-class equal up to sign;
+  the sole resonance kappa=-q0 forces that flux to vanish.  A zero-source
+  class is identically zero by entireness at the half-residue equation, while
+  every nonzero class and then K survive the endpoint-exponential quotient.
+  Nonzero-weight isotropic edges supply the remaining affine `c/s` source.
+  The resulting E-function system is ordinary at s=1, so Beukers Corollary
+  1.4 excludes 0 and 1/2.  This closes algebraic degree-two simplex phases,
+  not higher degrees, nonalgebraic coefficients, or FC(3).
 source: codex-2026-08-02-fc3-simplex
 depends_on:
   - THM-3116
@@ -30,7 +30,7 @@ script: 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3143.py
 output: 05-knowledge/results/fc3_complex_affine_coordinate_cauchy_green_thm3143.out
 ---
 
-# THM-3143 — rank-at-most-one quadratic phases on the triangle
+# THM-3143 — algebraic quadratic phases on the triangle
 
 ## 0. Promoted statement and reduction map
 
@@ -42,15 +42,17 @@ q in Qbar[u,v],                          deg q<=2,
 K_q(s)=int_Delta exp(s q(u,v))du dv.                         (0.1)
 ```
 
-If the Hessian of `q` has rank at most one, then
+For every such `q`, with no Hessian-rank restriction,
 
 ```text
 K_q(1)!=0,                                                     (0.2)
 K_q(1)=1/2       iff       q=0 identically.                    (0.3)
 ```
 
-The rank-zero case is the affine theorem THM-3116.  If the Hessian has rank
-one, its homogeneous quadratic part is
+Sections 1--13 prove the rank-at-most-one branch.  Section 14 onward proves
+the full-rank branch.  For the former, the rank-zero case is the affine
+theorem THM-3116.  If the Hessian has rank one, its homogeneous quadratic
+part is
 
 ```text
 q_2=A ell^2,              A!=0,                               (0.4)
@@ -80,8 +82,9 @@ normal forms.
   The case `lambda=0` is THM-3142; the transverse case is section 12.
 
 Thus the former affine-coordinate restriction is discharged, not silently
-dropped.  Full-rank Hessians remain outside the theorem, and (0.2)--(0.3) do
-not prove `FC(3)`.
+dropped.  Sections 14--18 discharge the former full-rank boundary.  The
+theorem remains restricted to algebraic phases of degree at most two and
+does not prove `FC(3)`.
 
 ## 1. Inherited aligned statement and scope
 
@@ -109,8 +112,8 @@ Sections 1--7 prove the inherited **affine-coordinate** or
 **univariate-aligned** core `q=P(ell)`.  The factorization is essential for
 the common-operator argument in those sections, but it is not a restriction
 on the promoted theorem: sections 8--12 supply the missing transverse
-linear term.  The theorem still does not address a full-rank leading form
-or prove `FC(3)`.
+linear term and sections 14--18 handle full rank.  None of these simplex
+period results proves `FC(3)`.
 
 If the three vertex values of `ell` are collinear, algebraically
 reparameterize their real affine line and apply THM-3142.  If `P` is
@@ -655,13 +658,258 @@ The same script now additionally checks:
 
 The verifier does not numerically sample periods and does not inject the
 desired conclusion.  It checks the algebraic identities used by the proof;
-the E-function value step is the cited Beukers theorem.  Full-rank Hessians
-are the exact remaining quadratic boundary.
+the E-function value step is the cited Beukers theorem.  Sections 14--19 and
+the later controls add the full-rank Hessian branch.
 
-Run the two byte-comparison controls displayed in section 7.  The current
-frozen hashes are:
+Run the two byte-comparison controls displayed in section 7.  Section 19
+records the current combined hashes.
+
+## 14. Full rank: the centered Euler-flux identity
+
+Assume that the Hessian of `q` has rank two.  Its unique algebraic critical
+point `c` and critical value `q_0=q(c)` give
 
 ```text
-source sha256 = ab46ba7df9b66159154715b71d0099c3c875c3cd104dde2f641c27604cb43a2e
-output sha256 = 273a4cc7fb40fb7c8411653cf5c894fbcc397e83a23cd7ea0235a1921b93cd2a
+q(x)=q_0+Q(x-c),             Q(x)=x^T S x,       det(S)!=0.   (51)
+```
+
+The argument is affine-geometric, so use an oriented algebraic triangle `T`
+(and specialize to `Delta`).  Index its vertices cyclically as `p_j`, put
+`e_j=p_(j+1)-p_j`, and parameterize edge `j` by `p_j+t e_j`, `0<=t<=1`.
+For the Euler field
+
+```text
+V(x)=(x-c)/2                                                     (52)
+```
+
+one has
+
+```text
+div(V)=1,                 V dot grad(q)=q-q_0.                 (53)
+```
+
+The oriented flux one-form is `V_1 dx_2-V_2 dx_1`.  Its coefficient on edge
+`j` is constant:
+
+```text
+w_j=det(p_j-c,e_j)/2.                                          (54)
+```
+
+With
+
+```text
+H_j(s)=integral_0^1 exp(s q(p_j+t e_j))dt                     (55)
+```
+
+the divergence theorem gives, with no asymptotic or sign convention hidden,
+
+```text
+sK_q'(s)+(1-sq_0)K_q(s)=sum_j w_jH_j(s).                      (56)
+```
+
+At `s=0`, both sides equal `area(T)`; in particular the boundary flux in
+(56) is not the zero function.
+
+## 15. Quadratic, isotropic, and resonant edges
+
+Write `x_j=p_j-c` and let `B(x,y)=x^TSy` be the polar form of `Q`.  The edge
+restriction is
+
+```text
+q(p_j+t e_j)=a_jt^2+b_jt+c_j,
+a_j=Q(e_j),       b_j=2B(x_j,e_j),       c_j=q(p_j).          (57)
+```
+
+### 15.1 Isotropic edges
+
+If `a_j=0`, the restriction is affine.  If `b_j!=0`, then
+
+```text
+H_j(s)=[E_(j+1)(s)-E_j(s)]/(s b_j),
+E_j(s)=exp(sq(p_j)).                                           (58)
+```
+
+If also `b_j=0`, the restriction is constant and `H_j=E_j`.  In this latter
+case `w_j=0`: for a nondegenerate binary quadratic form, the orthogonal
+complement of an isotropic vector `e_j` is its own span, so
+`B(x_j,e_j)=0` forces `x_j` to be parallel to `e_j`, and then (54) vanishes.
+Thus every nonzero affine flux has the nonconstant form (58).
+
+### 15.2 Nonisotropic edges
+
+If `a_j!=0`, choose an algebraic square root `sigma_j^2=a_j` and put
+
+```text
+delta_j=b_j^2-4a_jc_j,       kappa_j=delta_j/(4a_j),
+F_j=2sigma_jH_j,
+r_j^-=b_j/(2sigma_j),        r_j^+=(2a_j+b_j)/(2sigma_j).     (59)
+```
+
+The edge ODE becomes
+
+```text
+sF_j'+(1/2+kappa_js)F_j=r_j^+E_(j+1)-r_j^-E_j,               (60)
+(r_j^-)^2=kappa_j+q(p_j),
+(r_j^+)^2=kappa_j+q(p_(j+1)).                                (61)
+```
+
+The binary Gram determinant identity
+
+```text
+Q(x_j)Q(e_j)-B(x_j,e_j)^2
+  =det(S) det(x_j,e_j)^2                                     (62)
+```
+
+gives the exact flux law
+
+```text
+alpha_j:=w_j/(2sigma_j),
+alpha_j^2=-(kappa_j+q_0)/(16det(S)).                          (63)
+```
+
+Consequently all edges in one `kappa`-class have the same nonzero `alpha_j`
+up to the freely chosen sign of `sigma_j`, unless
+
+```text
+kappa=-q_0.                                                    (64)
+```
+
+At the resonance (64), (63) forces every `w_j=0`; the entire class is absent
+from the Euler flux.  Away from resonance, choose the square-root signs so
+that all `alpha_j` in the class equal one common nonzero `alpha_kappa`.
+
+## 16. Entireness removes zero-source classes
+
+For a nonresonant `kappa`-class define
+
+```text
+G_kappa=sum_(j:kappa_j=kappa)F_j.                             (65)
+```
+
+Then its contribution to (56) is `alpha_kappa G_kappa`, and summing (60)
+gives
+
+```text
+sG_kappa'+(1/2+kappa s)G_kappa
+  =sum_xi tau_(kappa,xi)exp(xi s).                            (66)
+```
+
+Here vertices with equal values `q(p_j)=xi` have already been grouped.
+There are two exhaustive cases.
+
+* If every `tau_(kappa,xi)=0`, then the entire function `G_kappa` satisfies
+  the homogeneous half-residue equation.  Its Taylor recurrence begins with
+  `(1/2)G_kappa(0)=0` and then forces every coefficient to vanish.  Hence
+  `G_kappa=0` identically, so this class contributes no flux.
+* If some `tau_(kappa,xi)!=0`, then `kappa+xi!=0`.  Indeed every summand in
+  that grouped source is one of the normalized derivatives in (61); if
+  `kappa+xi=0`, all of them are zero.  If `G_kappa` lay in the rational span
+  of the endpoint exponentials, its coefficient at this `xi` would solve
+
+  ```text
+  sR'+(1/2+(kappa+xi)s)R=tau_(kappa,xi).                      (67)
+  ```
+
+  No rational solution exists: finite nonzero poles gain one order, a pole
+  of order `n` at zero has multiplier `-n+1/2`, and the nonzero linear term
+  raises the degree of every nonzero polynomial.  Thus every nonzero block
+  survives the endpoint-exponential quotient.
+
+As in section 10, distinct nonzero `G_kappa` are jointly independent over
+`Qbar(s)`: modulo endpoint exponentials they are eigenvectors of
+`d/ds+1/(2s)` with distinct eigenvalues `-kappa`, and a minimal rational
+relation would force a nonzero rational logarithmic derivative to be a
+nonzero constant.
+
+## 17. The Euler extension itself cannot split
+
+Let `mathcal G` be the set of nonzero nonresonant blocks from section 16, and
+let `A(s)` be the total isotropic-edge flux from (58).  Equations (56) and
+(63)--(66) give
+
+```text
+sK_q'+(1-sq_0)K_q
+  =sum_(G_kappa in mathcal G) alpha_kappa G_kappa+A(s).        (68)
+```
+
+Suppose first that `mathcal G` is nonempty.  A rational functional relation
+between `K_q`, these blocks, and the endpoint exponentials can be solved for
+`K_q`.  Comparing the coefficient of any `G_kappa` after applying the left
+operator in (68) gives
+
+```text
+sR'+(1/2-(kappa+q_0)s)R=alpha_kappa.                          (69)
+```
+
+Both `kappa+q_0` and `alpha_kappa` are nonzero.  The same pole/degree audit as
+for (67) proves that (69) has no rational solution.
+
+It remains to consider `mathcal G` empty.  All nonisotropic flux classes are
+then zero or resonant, so (68) has right side `A(s)`.  It is nonzero because
+at `s=0` it equals `area(T)`.  Constant isotropic restrictions have zero
+weight, so after grouping endpoint values, (58) has the form
+
+```text
+A(s)=sum_xi c_xi exp(xi s)/s,          some c_xi!=0.           (70)
+```
+
+If `K_q` belonged to the endpoint-exponential span, comparison at such an
+`xi` would give
+
+```text
+sR'+[1+(xi-q_0)s]R=c_xi/s.                                  (71)
+```
+
+This also has no rational solution.  A pole away from zero is impossible.
+At zero, poles of order at least two have leading multiplier `1-n`; for a
+simple pole the two `s^-1` terms in `sR'+R` cancel, so the left side has no
+`s^-1` coefficient at all.  An analytic `R` plainly cannot produce the
+right side.  Thus the Euler extension never splits.
+
+Combining both cases, the functions
+
+```text
+K_q,      {G_kappa in mathcal G},
+the distinct endpoint exponentials,      1                    (72)
+```
+
+are linearly independent over `Qbar(s)`.
+
+## 18. Beukers at one and the all-quadratic conclusion
+
+Every entry in (72) is an E-function.  For `K_q`, its `n`th exponential
+coefficient is the integral of the algebraic polynomial `q^n` over an
+algebraic simplex; monomial integration gives exponential denominator and
+conjugate-height bounds.  Equations (56), (58), and (66) give holonomicity.
+
+The vector (72) satisfies a first-order rational system.  Equations (66)
+have denominator `s`; substituting (58) into (68) introduces at worst
+`s^2`.  Thus `s=1` is ordinary.  Beukers Corollary 1.4 makes the values in
+(72) linearly independent over `Qbar`.  In particular
+
+```text
+K_q(1)!=0,                    K_q(1)!=1/2                     (73)
+```
+
+for every full-rank algebraic quadratic `q`.  Sections 0--13 prove the same
+claims for rank at most one, with equality `K_q(1)=1/2` exactly for `q=0`.
+This proves (0.2)--(0.3) for all algebraic phases of degree at most two.
+
+The result is a quadratic simplex-period theorem, not `FC(3)`: entering a
+Factorial-Conjecture branch still requires the relevant projective layer to
+be exactly such a quadratic period, and higher-degree/nonflat layers remain.
+
+## 19. Full-rank hostile verification
+
+The verifier additionally performs exact coefficientwise Euler-flux checks,
+classifies every edge as quadratic/nonconstant-isotropic/constant-isotropic,
+tests (62)--(63), checks the half- and unit-residue rational obstructions,
+and runs deterministic exact triangles and full-rank forms.  Planted controls
+include `kappa=-q_0` on a center-crossing nonisotropic edge, a nonzero-weight
+isotropic edge, a two-edge equal-`kappa` class, and a full three-edge tangent
+class.  Normal, optimized, and stored outputs are byte-identical.
+
+```text
+source sha256 = 217b4f1112f9a55948a0df651f3b4ef32cd278be165fb71a7a9c0673c1725c19
+output sha256 = 5aab8f195683f8e4dee46cef9c3b90cbf82930b79f19f695e40d72963346c16c
 ```

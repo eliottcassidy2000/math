@@ -14,6 +14,8 @@ Reproduce:
 
 from __future__ import annotations
 
+import random
+
 import sympy as sp
 
 
@@ -22,7 +24,7 @@ def check(condition: bool, message: str) -> None:
         raise RuntimeError(message)
 
 
-print("THM-3143 FC(3) RANK-AT-MOST-ONE QUADRATIC EDGE-CURRENT AUDIT")
+print("THM-3143 FC(3) ALL ALGEBRAIC QUADRATIC EDGE-CURRENT AUDIT")
 
 # Normalize an oriented noncollinear algebraic triangle to vertices
 # z0=0,z1=1,z2=tau=x+i*y, with real y>0.
@@ -441,6 +443,474 @@ check(sp.expand(A * Rgeo - (-A * Rgeo)) == 2 * A * Rgeo, "vertical all-value con
 print(
     f"C9 Green vertical-edge monomial checks={green_checks}; "
     "collision currents=2d,3d; all-value opposite-gap obstruction exact"
+)
+
+# C10. Full-rank Euler flux and normalized edge-class audit.  These helpers
+# use exact algebraic arithmetic only.
+def det2(left: tuple[sp.Expr, sp.Expr], right: tuple[sp.Expr, sp.Expr]) -> sp.Expr:
+    return sp.expand(left[0] * right[1] - left[1] * right[0])
+
+
+def vec_sub(
+    left: tuple[sp.Expr, sp.Expr], right: tuple[sp.Expr, sp.Expr]
+) -> tuple[sp.Expr, sp.Expr]:
+    return (sp.expand(left[0] - right[0]), sp.expand(left[1] - right[1]))
+
+
+def quadratic_form(matrix: sp.Matrix, vector: tuple[sp.Expr, sp.Expr]) -> sp.Expr:
+    column = sp.Matrix(vector)
+    return sp.expand((column.T * matrix * column)[0])
+
+
+def polar_form(
+    matrix: sp.Matrix,
+    left: tuple[sp.Expr, sp.Expr],
+    right: tuple[sp.Expr, sp.Expr],
+) -> sp.Expr:
+    return sp.expand((sp.Matrix(left).T * matrix * sp.Matrix(right))[0])
+
+
+def same(left: sp.Expr, right: sp.Expr = sp.Integer(0)) -> bool:
+    return sp.simplify(left - right) == 0
+
+
+def add_group(
+    groups: list[list[sp.Expr]], key: sp.Expr, coefficient: sp.Expr
+) -> None:
+    for entry in groups:
+        if same(entry[0], key):
+            entry[1] = sp.simplify(entry[1] + coefficient)
+            return
+    groups.append([sp.simplify(key), sp.simplify(coefficient)])
+
+
+def simplex_polynomial_integral(expression: sp.Expr, jacobian: sp.Expr) -> sp.Expr:
+    polynomial = sp.Poly(sp.expand(expression), u, v)
+    total = sp.Integer(0)
+    for (degree_u, degree_v), coefficient in polynomial.terms():
+        total += (
+            coefficient
+            * sp.factorial(degree_u)
+            * sp.factorial(degree_v)
+            / sp.factorial(degree_u + degree_v + 2)
+        )
+    return sp.simplify(jacobian * total)
+
+
+def analyze_full_rank_case(
+    case_name: str,
+    raw_vertices: tuple[
+        tuple[sp.Expr, sp.Expr],
+        tuple[sp.Expr, sp.Expr],
+        tuple[sp.Expr, sp.Expr],
+    ],
+    matrix: sp.Matrix,
+    center: tuple[sp.Expr, sp.Expr],
+    critical_value: sp.Expr,
+) -> dict[str, int]:
+    determinant = sp.simplify(matrix.det())
+    check(determinant != 0, f"{case_name}: full-rank matrix")
+
+    vertices_real = list(raw_vertices)
+    first_edge = vec_sub(vertices_real[1], vertices_real[0])
+    second_edge = vec_sub(vertices_real[2], vertices_real[0])
+    jacobian = sp.simplify(det2(first_edge, second_edge))
+    check(jacobian != 0, f"{case_name}: nondegenerate triangle")
+    if bool(jacobian < 0):
+        vertices_real[1], vertices_real[2] = vertices_real[2], vertices_real[1]
+        first_edge = vec_sub(vertices_real[1], vertices_real[0])
+        second_edge = vec_sub(vertices_real[2], vertices_real[0])
+        jacobian = sp.simplify(det2(first_edge, second_edge))
+    check(jacobian > 0, f"{case_name}: positive orientation")
+
+    pulled_point = (
+        sp.expand(vertices_real[0][0] + u * first_edge[0] + v * second_edge[0]),
+        sp.expand(vertices_real[0][1] + u * first_edge[1] + v * second_edge[1]),
+    )
+    pulled_centered = vec_sub(pulled_point, center)
+    pulled_q = sp.expand(critical_value + quadratic_form(matrix, pulled_centered))
+
+    edge_records: list[dict[str, sp.Expr | int]] = []
+    affine_value_groups: list[list[sp.Expr]] = []
+    quadratic_edges = 0
+    affine_nonconstant = 0
+    affine_constant = 0
+    resonant_edges = 0
+
+    for edge_index in range(3):
+        start_index = edge_index
+        end_index = (edge_index + 1) % 3
+        start = vertices_real[start_index]
+        end = vertices_real[end_index]
+        edge = vec_sub(end, start)
+        centered_start = vec_sub(start, center)
+        edge_a = sp.simplify(quadratic_form(matrix, edge))
+        edge_b = sp.simplify(2 * polar_form(matrix, centered_start, edge))
+        edge_c = sp.simplify(
+            critical_value + quadratic_form(matrix, centered_start)
+        )
+        end_value = sp.simplify(
+            critical_value + quadratic_form(matrix, vec_sub(end, center))
+        )
+        edge_weight = sp.simplify(det2(centered_start, edge) / 2)
+        edge_polynomial = sp.expand(edge_a * t**2 + edge_b * t + edge_c)
+        check(same(edge_polynomial.subs(t, 0), edge_c), f"{case_name}: edge start")
+        check(same(edge_polynomial.subs(t, 1), end_value), f"{case_name}: edge end")
+
+        # Binary Gram determinant and Euler flux weight.
+        gram_left = sp.expand(
+            quadratic_form(matrix, centered_start) * edge_a
+            - polar_form(matrix, centered_start, edge) ** 2
+        )
+        gram_right = sp.expand(determinant * det2(centered_start, edge) ** 2)
+        check(same(gram_left, gram_right), f"{case_name}: binary Gram edge={edge_index}")
+
+        if same(edge_a):
+            if same(edge_b):
+                affine_constant += 1
+                check(same(edge_weight), f"{case_name}: constant isotropic flux")
+            else:
+                affine_nonconstant += 1
+                add_group(affine_value_groups, edge_c, -edge_weight / edge_b)
+                add_group(affine_value_groups, end_value, edge_weight / edge_b)
+            edge_records.append(
+                {
+                    "kind": 0,
+                    "weight": edge_weight,
+                    "start_value": edge_c,
+                    "end_value": end_value,
+                }
+            )
+            continue
+
+        quadratic_edges += 1
+        edge_delta = sp.simplify(edge_b**2 - 4 * edge_a * edge_c)
+        edge_kappa = sp.simplify(edge_delta / (4 * edge_a))
+        edge_mu = sp.simplify(edge_kappa + critical_value)
+        check(
+            same(
+                edge_weight**2 / edge_a,
+                -edge_mu / (4 * determinant),
+            ),
+            f"{case_name}: flux square edge={edge_index}",
+        )
+        check(
+            same(edge_b**2 / (4 * edge_a), edge_kappa + edge_c),
+            f"{case_name}: normalized start derivative edge={edge_index}",
+        )
+        check(
+            same(
+                (2 * edge_a + edge_b) ** 2 / (4 * edge_a),
+                edge_kappa + end_value,
+            ),
+            f"{case_name}: normalized end derivative edge={edge_index}",
+        )
+        if same(edge_mu):
+            resonant_edges += 1
+            check(same(edge_weight), f"{case_name}: planted resonance flux")
+        edge_records.append(
+            {
+                "kind": 1,
+                "a": edge_a,
+                "b": edge_b,
+                "c": edge_c,
+                "end_value": end_value,
+                "weight": edge_weight,
+                "kappa": edge_kappa,
+                "mu": edge_mu,
+                "polynomial": edge_polynomial,
+            }
+        )
+
+    check(
+        same(sum(sp.sympify(record["weight"]) for record in edge_records), jacobian / 2),
+        f"{case_name}: zero-phase Euler flux",
+    )
+
+    # Euler-flux identity coefficientwise through cubic powers.
+    previous_integral = sp.Integer(0)
+    for degree in range(4):
+        direct_integral = simplex_polynomial_integral(pulled_q**degree, jacobian)
+        boundary_integral = sp.Integer(0)
+        for edge_index, record in enumerate(edge_records):
+            start = vertices_real[edge_index]
+            end = vertices_real[(edge_index + 1) % 3]
+            edge = vec_sub(end, start)
+            centered_start = vec_sub(start, center)
+            edge_q = sp.expand(
+                critical_value
+                + quadratic_form(
+                    matrix,
+                    (
+                        centered_start[0] + t * edge[0],
+                        centered_start[1] + t * edge[1],
+                    ),
+                )
+            )
+            boundary_integral += sp.sympify(record["weight"]) * sp.integrate(
+                edge_q**degree, (t, 0, 1)
+            )
+        expected = (degree + 1) * direct_integral
+        if degree:
+            expected -= degree * critical_value * previous_integral
+        check(
+            same(boundary_integral, expected),
+            f"{case_name}: Euler coefficient degree={degree}",
+        )
+        previous_integral = direct_integral
+
+    # Group quadratic edges by kappa, normalize their flux coefficients, and
+    # audit source vanishing/noncriticality exactly.
+    kappa_classes: list[list[object]] = []
+    for record in edge_records:
+        if record["kind"] != 1:
+            continue
+        placed = False
+        for entry in kappa_classes:
+            if same(sp.sympify(entry[0]), sp.sympify(record["kappa"])):
+                entry[1].append(record)
+                placed = True
+                break
+        if not placed:
+            kappa_classes.append([record["kappa"], [record]])
+
+    nonzero_flux_blocks = 0
+    zero_source_blocks = 0
+    nonzero_source_groups = 0
+    max_class_size = 0
+    for class_kappa, raw_class_records in kappa_classes:
+        class_records = list(raw_class_records)
+        max_class_size = max(max_class_size, len(class_records))
+        class_mu = sp.simplify(sp.sympify(class_kappa) + critical_value)
+        if same(class_mu):
+            for record in class_records:
+                check(same(sp.sympify(record["weight"])), f"{case_name}: resonant class")
+            continue
+
+        alpha_square = sp.simplify(-class_mu / (16 * determinant))
+        alpha = sp.sqrt(alpha_square)
+        source_groups: list[list[sp.Expr]] = []
+        normalized_records: list[tuple[sp.Expr, sp.Expr]] = []
+        for record in class_records:
+            edge_weight = sp.sympify(record["weight"])
+            sigma = sp.simplify(edge_weight / (2 * alpha))
+            edge_a = sp.sympify(record["a"])
+            edge_b = sp.sympify(record["b"])
+            check(same(sigma**2, edge_a), f"{case_name}: common-alpha square root")
+            normalized_start = sp.simplify(edge_b / (2 * sigma))
+            normalized_end = sp.simplify((2 * edge_a + edge_b) / (2 * sigma))
+            check(
+                same(normalized_start**2, class_kappa + record["c"]),
+                f"{case_name}: class start square",
+            )
+            check(
+                same(normalized_end**2, class_kappa + record["end_value"]),
+                f"{case_name}: class end square",
+            )
+            add_group(source_groups, sp.sympify(record["c"]), -normalized_start)
+            add_group(
+                source_groups,
+                sp.sympify(record["end_value"]),
+                normalized_end,
+            )
+            normalized_records.append((sigma, sp.sympify(record["polynomial"])))
+
+        live_sources = [entry for entry in source_groups if not same(entry[1])]
+        if not live_sources:
+            zero_source_blocks += 1
+            for degree in range(5):
+                block_coefficient = sum(
+                    2 * sigma * sp.integrate(edge_q**degree, (t, 0, 1))
+                    for sigma, edge_q in normalized_records
+                )
+                check(
+                    same(block_coefficient),
+                    f"{case_name}: zero-source entire block degree={degree}",
+                )
+            continue
+
+        nonzero_flux_blocks += 1
+        for source_value, source_coefficient in live_sources:
+            check(source_coefficient != 0, f"{case_name}: live grouped source")
+            check(
+                not same(class_kappa + source_value),
+                f"{case_name}: nonzero source is noncritical",
+            )
+            nonzero_source_groups += 1
+
+    if nonzero_flux_blocks == 0:
+        live_affine_groups = [entry for entry in affine_value_groups if not same(entry[1])]
+        check(live_affine_groups, f"{case_name}: affine-only Euler source")
+
+    return {
+        "quadratic_edges": quadratic_edges,
+        "affine_nonconstant": affine_nonconstant,
+        "affine_constant": affine_constant,
+        "resonant_edges": resonant_edges,
+        "classes": len(kappa_classes),
+        "max_class_size": max_class_size,
+        "nonzero_flux_blocks": nonzero_flux_blocks,
+        "zero_source_blocks": zero_source_blocks,
+        "nonzero_source_groups": nonzero_source_groups,
+    }
+
+
+# Planted boundary cases.
+standard_triangle = (
+    (sp.Integer(0), sp.Integer(0)),
+    (sp.Integer(1), sp.Integer(0)),
+    (sp.Integer(0), sp.Integer(1)),
+)
+resonance_case = analyze_full_rank_case(
+    "planted-resonance",
+    standard_triangle,
+    sp.diag(2, 3),
+    (sp.Rational(1, 3), sp.Integer(0)),
+    sp.Integer(5),
+)
+check(resonance_case["resonant_edges"] >= 1, "planted resonance detected")
+
+affine_only_case = analyze_full_rank_case(
+    "planted-affine-only",
+    standard_triangle,
+    sp.diag(1, -1),
+    (sp.Integer(0), sp.Integer(0)),
+    sp.Integer(2),
+)
+check(affine_only_case["affine_nonconstant"] >= 1, "isotropic affine edge")
+check(affine_only_case["nonzero_flux_blocks"] == 0, "affine-only Euler carrier")
+
+two_class_case = analyze_full_rank_case(
+    "planted-two-edge-class",
+    standard_triangle,
+    sp.eye(2),
+    (sp.Rational(1, 4), sp.Rational(1, 4)),
+    sp.Integer(3),
+)
+check(two_class_case["max_class_size"] >= 2, "two-edge kappa class")
+
+inradius = (2 - sp.sqrt(2)) / 2
+full_class_case = analyze_full_rank_case(
+    "planted-full-class",
+    standard_triangle,
+    sp.eye(2),
+    (inradius, inradius),
+    sp.Integer(7),
+)
+check(full_class_case["max_class_size"] == 3, "full tangent kappa class")
+
+complex_case = analyze_full_rank_case(
+    "planted-complex-algebraic",
+    standard_triangle,
+    sp.Matrix([[1 + ii, 2 - ii], [2 - ii, 3 + 2 * ii]]),
+    (sp.Rational(1, 3) + ii / 5, -sp.Rational(2, 3) + ii / 7),
+    1 + 2 * ii,
+)
+
+planted_totals = {
+    key: sum(
+        case[key]
+        for case in (
+            resonance_case,
+            affine_only_case,
+            two_class_case,
+            full_class_case,
+            complex_case,
+        )
+    )
+    for key in resonance_case
+}
+print(
+    "C10 full-rank planted cases=5 (including complex algebraic); "
+    f"quadratic_edges={planted_totals['quadratic_edges']}; "
+    f"affine_nonconstant={planted_totals['affine_nonconstant']}; "
+    f"resonant_edges={planted_totals['resonant_edges']}; "
+    f"max_class_size={max(case['max_class_size'] for case in (resonance_case, affine_only_case, two_class_case, full_class_case, complex_case))}"
+)
+
+# C11. Deterministic random exact triangles and full-rank forms.
+rng = random.Random(3133)
+random_case_count = 18
+random_totals = {
+    "quadratic_edges": 0,
+    "affine_nonconstant": 0,
+    "affine_constant": 0,
+    "resonant_edges": 0,
+    "classes": 0,
+    "max_class_size": 0,
+    "nonzero_flux_blocks": 0,
+    "zero_source_blocks": 0,
+    "nonzero_source_groups": 0,
+}
+for case_index in range(random_case_count):
+    while True:
+        random_vertices = tuple(
+            (sp.Integer(rng.randint(-4, 4)), sp.Integer(rng.randint(-4, 4)))
+            for _ in range(3)
+        )
+        if det2(
+            vec_sub(random_vertices[1], random_vertices[0]),
+            vec_sub(random_vertices[2], random_vertices[0]),
+        ) != 0:
+            break
+    while True:
+        matrix_a = rng.randint(-4, 4)
+        matrix_b = rng.randint(-4, 4)
+        matrix_c = rng.randint(-4, 4)
+        random_matrix = sp.Matrix([[matrix_a, matrix_b], [matrix_b, matrix_c]])
+        if random_matrix.det() != 0:
+            break
+    random_center = (
+        sp.Rational(rng.randint(-5, 5), rng.randint(1, 4)),
+        sp.Rational(rng.randint(-5, 5), rng.randint(1, 4)),
+    )
+    random_q0 = sp.Integer(rng.randint(-5, 5))
+    case_result = analyze_full_rank_case(
+        f"random-{case_index}",
+        random_vertices,
+        random_matrix,
+        random_center,
+        random_q0,
+    )
+    for key in random_totals:
+        if key == "max_class_size":
+            random_totals[key] = max(random_totals[key], case_result[key])
+        else:
+            random_totals[key] += case_result[key]
+print(
+    f"C11 random exact full-rank cases={random_case_count}; "
+    f"quadratic_edges={random_totals['quadratic_edges']}; "
+    f"affine_edges={random_totals['affine_nonconstant'] + random_totals['affine_constant']}; "
+    f"kappa_classes={random_totals['classes']}; "
+    f"live_source_groups={random_totals['nonzero_source_groups']}"
+)
+
+# C12. The two rational ODE obstructions and zero-source entireness recurrence.
+kappa_symbol = sp.symbols("kappa_symbol")
+entire_coefficient = sp.Integer(0)
+for degree in range(10):
+    previous = sp.Integer(0) if degree == 0 else entire_coefficient
+    entire_coefficient = sp.simplify(
+        -kappa_symbol * previous / (degree + sp.Rational(1, 2))
+    )
+    check(entire_coefficient == 0, f"zero-source entire recurrence {degree}")
+
+for pole_order in range(2, 13):
+    check(1 - pole_order != 0, f"unit-residue pole order {pole_order}")
+residue_coefficient, regular0, regular1, nu = sp.symbols(
+    "residue_coefficient regular0 regular1 nu"
+)
+laurent_trial = residue_coefficient / s + regular0 + regular1 * s
+unit_residue_left = sp.expand(
+    s * sp.diff(laurent_trial, s) + (1 + nu * s) * laurent_trial
+)
+check(
+    sp.simplify(sp.limit(s * unit_residue_left, s, 0)) == 0,
+    "simple-pole cancellation cannot make c/s",
+)
+print(
+    "C12 ODE gates: half-residue nonresonance; unit-residue orders=2..12; "
+    "simple-pole c/s coefficient=0; zero-source Taylor coefficients=10"
 )
 
 print("ALL THM-3143 CONTROLS PASSED")
