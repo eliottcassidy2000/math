@@ -1,0 +1,18 @@
+THM-3177 depth-seven degree-thirteen strict selector resurrection
+pole_prefix_dependency_sha256=151edb9b8cee4807d3f08dc17af32e45420021ba30dfd116c04d9fcaf8bbd5b7
+signed_bank_dependency_sha256=15b94691d53afbcdc6aefda89fc7cd5497534ca70fb780a686892dabb5646d6f
+poles=(8, 7, 6, 5, 5, 4, 4, 3, 3, 2, 2, 2, 1, 1, 1, 1)
+state_counts_depth1_depth7_total=(8, 33, 93, 200, 348, 507, 631, 1820)
+independent_partition_checks=361
+independent_coarsening_checks=22809
+state_degree_zero_mass_checks=16380
+law_denominator=100000000
+law_items=(((1,), 329341), ((2,), 506132), ((1, 1, 2), 353515), ((1, 1, 1, 1), 589431), ((5, 5, 6, 7, 8), 13469020), ((1, 1, 1, 1, 2, 2), 448483), ((1, 1, 1, 1, 2, 2, 2), 510392), ((1, 1, 2, 2, 2, 3, 3), 446099), ((1, 2, 2, 2, 3, 3, 4), 313313), ((1, 4, 5, 5, 6, 7, 8), 12884975), ((2, 3, 3, 5, 6, 7, 8), 17513294), ((3, 3, 4, 4, 6, 7, 8), 2642438), ((4, 4, 5, 5, 6, 7, 8), 49993567))
+minimum_nontrivial_upsets=((5, Fraction(109628640, 1), 1, ((5,),)), (6, Fraction(72639032313522840, 1), 1, ((6,),)), (7, Fraction(2990897801796238560, 1), 14, ((2, 1, 1, 1, 1, 1),)), (8, Fraction(318185095107504, 1), 21, ((2, 1, 1, 1, 1, 1, 1),)), (9, Fraction(9346991684459633328, 1), 29, ((2, 1, 1, 1, 1, 1, 1, 1),)), (10, Fraction(3288235113012380640, 1), 41, ((2, 1, 1, 1, 1, 1, 1, 1, 1),)), (11, Fraction(2177378045882508776256, 1), 55, ((2, 1, 1, 1, 1, 1, 1, 1, 1, 1),)), (12, Fraction(20818394379371373887136, 1), 75, ((3, 1, 1, 1, 1, 1, 1, 1, 1, 1), (2, 2, 1, 1, 1, 1, 1, 1, 1, 1))), (13, Fraction(1303441821531365341151616, 1), 96, ((3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (2, 2, 2, 2, 2, 1, 1, 1))))
+all_nontrivial_upsets_strict=1
+labelled_lift_counts=(4, 3, 18, 1, 1, 3, 1, 6, 8, 8, 6, 1, 1)
+posterior_chain_counts=(61, 1620, 6692, 289, 908)
+barcode=(C13_depth6_empty,C13_depth7_nonempty)
+scope=fixed_support_bank_averaged_virtual_prefix_currents
+abstract_markov_sidecar=response_compatibility_not_proved
+all_exact_checks=PASS
