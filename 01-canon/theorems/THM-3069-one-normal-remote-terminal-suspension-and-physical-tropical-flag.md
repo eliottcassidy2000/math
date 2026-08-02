@@ -2,8 +2,8 @@
 id: THM-3069
 title: "One-normal remote-terminal suspension and physical tropical flag"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE-FILE AUDIT
-  REQUESTED.  Adjoining one sufficiently remote terminal factorial slot to
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Adjoining one
+  sufficiently remote terminal factorial slot to
   any fixed lower support suspends its first-window resultant: the new
   physical resultant is the kth power of the lower resultant times one
   explicit Beta carrier, up to an exponentially small error.  For four
@@ -12,6 +12,15 @@ status: >
   remote.  Iteration gives actual physical lexicographically remote support
   towers in every slot number.  This is not a uniform moving-low theorem.
 source: kind-pasteur-2026-08-01-remote-terminal-suspension
+audit: >
+  Two independent hostile audits rederived the determinant-one coordinate
+  split, the exact Gamma layers and unique remote survivors, both sharp
+  exponential gaps, the separated Artin norm and sign, one-variable
+  covariance, the four-slot consequence, the recursive exponent ledger, the
+  two noncommuting six-slot ordered cones, and the oriented finite-bank Beta
+  holotopy.  Both replayed normal, optimized, and stored companions and
+  matched the declared LF hashes; the immutable-file audit also checked every
+  proved dependency and the fixed-low/simultaneous-scale boundary.
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
   - THM-2942-macaulay-extraneous-flag-factor-and-pluecker-mutation
@@ -30,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3069 -- one-normal remote-terminal suspension
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3054 identifies a formal terminal face, but does not prove that the
 actual physical first-window resultant has that face.  THM-2918 constructs
@@ -496,4 +505,4 @@ simultaneous moving-low limit, a shifted moment window, one all-order
 Stieltjes tail, a wall-stripped Macaulay core, arbitrary-radial GMC(2), NC2,
 LRC, or a Jacobian statement.
 
-**QED, pending independent immutable-file audit and status promotion.**
+**QED.**
