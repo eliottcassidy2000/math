@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for THM-3091's mesoscopic remote-pair cone."""
+"""Exact companion for THM-3091's arbitrary-gap remote-pair theorem."""
 
 from fractions import Fraction
 from functools import lru_cache
@@ -122,6 +122,7 @@ def log_bounds(value, terms=45):
 # subexponential, while every non-top degree-k coefficient pays one or more
 # copies of log(k/p) per gap unit.
 coefficient_cells = 0
+response_ratio_cells = 0
 for child in range(3, 7):
     p = child + 1
     k = child + 2
@@ -130,8 +131,18 @@ for child in range(3, 7):
             Vp = mixed_ratio(p, p, N, gap)
             Vk = mixed_ratio(k, k, N, gap)
             require(Vp > 0 and Vk > 0, "positive far carriers")
+            response_bound = Fraction(p * (p + 1), p * (p + 1) + 1)
+            require(
+                Vp**k * response_bound ** (-p * k * gap) <= Vk**p,
+                "uniform response-ratio bound",
+            )
+            response_ratio_cells += 1
             for far_count in range(p + 1):
                 coefficient = mixed_ratio(p, far_count, N, gap)
+                require(
+                    coefficient**p <= Vp**far_count,
+                    "degree-p Jensen bound",
+                )
                 bp_power = coefficient**p / Vp**far_count
                 lower, upper = log_bounds(bp_power)
                 bound = Fraction(2 * p * p * gap * (gap + 1), N)
@@ -139,6 +150,10 @@ for child in range(3, 7):
                 coefficient_cells += 1
             for far_count in range(k + 1):
                 coefficient = mixed_ratio(k, far_count, N, gap)
+                require(
+                    coefficient**k <= Vk**far_count,
+                    "degree-k Jensen bound",
+                )
                 bk_power = coefficient**p * Vp ** (k - far_count) / Vk**p
                 if far_count == k:
                     require(bk_power == 1, "exact top coefficient")
@@ -149,6 +164,66 @@ for child in range(3, 7):
                 bound = Fraction(3 * p * k * gap * (gap + 1), N)
                 require(lower >= -bound and upper <= bound, "degree-k decay")
                 coefficient_cells += 1
+
+
+# The same inequalities are the whole-system outer-layer invoice.  In a
+# lower or degree-p row, an atom with x far physical factors pays at most
+# Q_(p,x), while lambda^t pays at least Vp^(-x/p).  In the degree-k row the
+# extra equation scaling leaves
+# Q_(k,x) Vp^((k-x)/p)/Vk <= 1.  Check the latter in integral powers.
+outer_atom_cells = 0
+for child in range(3, 8):
+    p = child + 1
+    k = child + 2
+    for N in (p, p + 3, 31):
+        for gap in (1, 3, 11):
+            Vp = mixed_ratio(p, p, N, gap)
+            Vk = mixed_ratio(k, k, N, gap)
+            for far_count in range(p + 1):
+                Qp = mixed_ratio(p, far_count, N, gap)
+                require(Qp**p <= Vp**far_count, "lower/p outer atom")
+                outer_atom_cells += 1
+            for far_count in range(k + 1):
+                Qk = mixed_ratio(k, far_count, N, gap)
+                require(
+                    Qk ** (p * k) * Vp ** (k * (k - far_count))
+                    <= Vk ** (p * k),
+                    "degree-k outer atom",
+                )
+                outer_atom_cells += 1
+
+            # Raw physical starts jN+D+1, including the maximal admissible
+            # start and t>x fixed-pivot normal degrees.
+            denominator = rising(N + 1, gap)
+            for row_cap in (p, k):
+                for actual_high in range(row_cap + 1):
+                    for far_count in range(actual_high + 1):
+                        for displacement in {
+                            0,
+                            min(2, (row_cap - actual_high) * N),
+                            (row_cap - actual_high) * N,
+                        }:
+                            W = Fraction(
+                                rising(
+                                    actual_high * N + displacement + 1,
+                                    far_count * gap,
+                                ),
+                                denominator**far_count,
+                            )
+                            for far_degree in {far_count, row_cap}:
+                                if row_cap == p:
+                                    require(
+                                        W**p <= Vp**far_degree,
+                                        "raw lower/p outer atom",
+                                    )
+                                else:
+                                    require(
+                                        W ** (p * k)
+                                        * Vp ** (k * (k - far_degree))
+                                        <= Vk ** (p * k),
+                                        "raw degree-k outer atom",
+                                    )
+                                outer_atom_cells += 1
 
 
 # Exact covariance ledger: lambda=Vp^(-1/p),
@@ -244,15 +319,17 @@ for child in range(3, 11):
             macroscopic_k_cells += 1
 
 
-print("THM-3091 MESOSCOPIC REMOTE-PAIR DESUSPENSION")
+print("THM-3091 ARBITRARY-GAP REMOTE-PAIR DESUSPENSION")
 print(f"secondary_coefficient_cells={coefficient_cells} p_growth_and_k_decay=PASS")
+print(f"response_ratio_cells={response_ratio_cells} exact_Jensen_cp_bound=PASS")
+print(f"outer_atom_cells={outer_atom_cells} whole_system_contraction=PASS")
 print(f"covariance_cells={covariance_cells} Etilde=E/Vk^p")
 print(f"triangular_sylvester_cells={triangular_cells} resultant=1")
 print(f"carrier_merge_cells={carrier_cells} Uk(C)*Vk=Uk(C+H)")
 print(f"macroscopic_p_cells={macroscopic_p_cells} two_endpoint_face=PASS")
 print(f"macroscopic_k_cells={macroscopic_k_cells} all_non_top_negative=PASS")
-print("linear_cone=there_exists_kappa_m>0:1<=H<=kappa_m*C")
+print("gap_range=all_integers_H>=1 threshold_in_C_independent_of_H")
 print("unbounded_carrier=S_m^(pk)*Up(C)^(k!/p)*Uk(C+H)^((k-1)!)")
-print("boundary=inner_pair_survives_fixed_delta;outer_child_pair_face_remains")
-print("scope=fixed_width;small_linear_cone;not_arbitrary_two-scale_support")
+print("boundary=fixed_child_and_remote_pair;not_arbitrary_two_scale_support")
+print("scope=fixed_width;arbitrary_gap;whole_system_secondary_scaling")
 print("all_exact_checks=PASS")

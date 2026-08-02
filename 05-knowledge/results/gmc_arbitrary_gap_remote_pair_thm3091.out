@@ -1,12 +1,14 @@
-THM-3091 MESOSCOPIC REMOTE-PAIR DESUSPENSION
+THM-3091 ARBITRARY-GAP REMOTE-PAIR DESUSPENSION
 secondary_coefficient_cells=112 p_growth_and_k_decay=PASS
+response_ratio_cells=8 exact_Jensen_cp_bound=PASS
+outer_atom_cells=15705 whole_system_contraction=PASS
 covariance_cells=18 Etilde=E/Vk^p
 triangular_sylvester_cells=56 resultant=1
 carrier_merge_cells=80 Uk(C)*Vk=Uk(C+H)
 macroscopic_p_cells=208 two_endpoint_face=PASS
 macroscopic_k_cells=272 all_non_top_negative=PASS
-linear_cone=there_exists_kappa_m>0:1<=H<=kappa_m*C
+gap_range=all_integers_H>=1 threshold_in_C_independent_of_H
 unbounded_carrier=S_m^(pk)*Up(C)^(k!/p)*Uk(C+H)^((k-1)!)
-boundary=inner_pair_survives_fixed_delta;outer_child_pair_face_remains
-scope=fixed_width;small_linear_cone;not_arbitrary_two-scale_support
+boundary=fixed_child_and_remote_pair;not_arbitrary_two_scale_support
+scope=fixed_width;arbitrary_gap;whole_system_secondary_scaling
 all_exact_checks=PASS

@@ -10,7 +10,7 @@ depends_on: []
 related:
   - THM-3085-multi-normal-fixed-gap-cluster-and-unconditional-all-width-tail
   - THM-3089-logarithmic-moving-gap-cluster-cone-and-condition-number-boundary
-  - THM-3091-mesoscopic-remote-pair-desuspension-and-linear-gap-cone
+  - THM-3091-arbitrary-gap-remote-pair-desuspension-and-exact-Jensen-contraction
 ---
 
 # THM-3093 -- sublinear arbitrary-cluster flag triangularization
