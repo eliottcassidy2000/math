@@ -1,0 +1,26 @@
+prefix_current=Phi^j(hN)m_mu(Q-Rj)-Phi^j(m_mu)hN(Q-Rj)
+prefix_semantics=virtual_subtraction_by_reduced_row_poles
+row_marginal_cancellation=2/2;Phi^j(p_N)=0
+support_universe=115:bank_cases=230
+active_P_degree_range=2..68
+active_prefix_cases=8241:N5..9_vectors=41205
+controls_j0=1150:all=PASS
+first_pole=1:failure=N9:upset=P_N-minus-singleton:mass=-230041249606656
+first_pole=2:failure=N9:upset=P_N-minus-singleton:mass=-86086680574464
+first_pole=3:failure=N8:upset=P_N-minus-singleton:mass=-164016803808
+first_pole=4:failure=N8:upset=P_N-minus-singleton:mass=-842945556672
+first_pole=5:failure=N8:upset=P_N-minus-singleton:mass=-4210741742976
+first_pole=6:failure=N8:upset=P_N-minus-singleton:mass=-12707727217920
+first_pole=7:failure=N8:upset=P_N-minus-singleton:mass=-24539565851424
+first_pole=8:failure=N8:upset=P_N-minus-singleton:mass=-33677263528128
+active_first_failure=N5:support=(1,3):I2:j=5:Rj=(8, 7, 6, 5, 5):deficit=2324160:witness=((5,), Fraction(2324160, 1))
+active_reduced_poles=(8, 7, 6, 5, 5, 4, 4, 3, 3, 2, 2, 2, 1, 1, 1, 1):P_coefficients=(Fraction(1440, 1), Fraction(-16440, 1), Fraction(51264, 1), Fraction(-37176, 1), Fraction(84240, 1), Fraction(-325248, 1))
+active_coarsest_components=Phi_h:1440,Q_h:-358,Phi_p:0,Q_p:-1614
+active_coefficient_vector=(5,):-2324160;(3, 2):2237760;(4, 1):544320;(2, 2, 1):-915840;(3, 1, 1):-656640;(2, 1, 1, 1):972000;(1, 1, 1, 1, 1):142560
+derangement_ghost_blind_upset=((5,), (4, 1)):Gmass=-1779840:O_N_mass=0
+full_factorial_kernel_blind_upset=WK1_mass:0,WK2_mass:0:no_positive_preimage
+beyond_flag_hostile=N5:support=(1,2):I1:j=4:Rj=(5, 4, 3, 3)
+boundary_flow=14544:demand=22068:deficit=7524:witness=((5,), Fraction(7524, 1))
+boundary_coefficient_vector=(5,):-7524;(3, 2):9360;(4, 1):5256;(2, 2, 1):-8064;(3, 1, 1):-6480;(2, 1, 1, 1):7932;(1, 1, 1, 1, 1):-480
+scope=active_flag_test_finite_exact;all_prefix_preservation_false
+all_exact_checks=PASS

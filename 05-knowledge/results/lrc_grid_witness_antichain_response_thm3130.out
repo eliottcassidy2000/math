@@ -1,0 +1,13 @@
+LRC grid-witness divisor-antichain response and supermodular loss
+source_sha256=61c386720f41936ed8dacea9e47528c695328208c030e6139188ce01a1ff8d66
+exact_universe=q2..84;nonempty_upsets_excluding_bottom=571
+principal_tail_product_checks=390
+static_antichain_response_vectors=571
+speed_insertion_loss_checks=4376
+nested_supermodular_loss_checks=39407
+maximum_antichain_control=(4, (60, (4, 6, 10, 15)))
+q12_control=M:(3,4);T12:8+6-4=10;g6_loss:T6(3)=4
+q6_hostile=U:(2,3,6)->(3,6);upset:(2,6);mass:3/5->1/2;delta:-1/10
+scope=exact_grid witness response;not continuous safe mass or normalized Hasse transport
+semantic_sha256=6c8dc06b82d8b86d469071fe6852736a689ed20dd8bc468dd5df5c1be061608a
+all_exact_checks=PASS

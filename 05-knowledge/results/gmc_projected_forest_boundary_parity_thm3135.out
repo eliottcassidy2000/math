@@ -1,0 +1,11 @@
+projected_forest_boundary=exact_all_rank_parity_controls
+K3=r0:rows1:rank1:forests3;r1:rows3:rank2:forests3
+K4=r0:rows1:rank1:forests6;r1:rows6:rank5:forests15;r2:rows7:rank7:forests16
+K5=r0:rows1:rank1:forests10;r1:rows10:rank9:forests45;r2:rows25:rank25:forests110;r3:rows15:rank14:forests125
+K6=r0:rows1:rank1:forests15;r1:rows15:rank14:forests105;r2:rows65:rank65:forests435;r3:rows90:rank89:forests1080;r4:rows31:rank31:forests1296
+K7=r0:rows1:rank1:forests21;r1:rows21:rank20:forests210;r2:rows140:rank140:forests1295;r3:rows350:rank349:forests5250;r4:rows301:rank301:forests13377;r5:rows63:rank62:forests16807
+elementary_transfer_edges=7134
+endpoint_swap_identities=7134
+even_rank=image_full;odd_rank=image_augmentation_zero
+general_proof=swap_pair_span+fixed_rank_transfer_connectivity+parity
+all_exact_checks=PASS
