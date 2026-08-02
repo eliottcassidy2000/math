@@ -2,7 +2,7 @@
 id: THM-3097
 title: "Translated-support Monge compactification and finite first-bad-prefix spectrum"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  At every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  At every
   fixed width t, translating an arbitrary factorial support sufficiently far
   makes its physical first-window resultant uniformly positive, independently
   of every internal gap.  The minimal bad prefix bank is finite.  Since widths
@@ -11,6 +11,14 @@ status: >
   SFC through width b improves the exponent to t-b-1.  This is existential
   and non-effective and does not prove SFC(4).
 source: root-gmc-translated-support-compactification-2026-08-01
+audit: >
+  An independent immutable-file hostile audit rederived the degree-one/base-
+  zero response, Jensen and covariance normalizations, determinant-one
+  elimination orientation, fixed/divergent-edge compactification, common-
+  origin rebase, generalized-alternant floor, triangular resultant product,
+  minimal-prefix finiteness and exact cylinder count, and the uniform
+  complete-intersection right inverse.  Normal, optimized, and stored output
+  matched byte-for-byte; both LF hashes and documentation checks passed.
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
   - THM-3069-one-normal-remote-terminal-suspension-and-physical-tropical-flag
@@ -29,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3097 -- translated-support compactification and bad-prefix spectrum
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3093 compactifies every internal gap of a remote cluster above a fixed
 good child.  There is a second boundary face that it deliberately excludes:
@@ -39,8 +47,8 @@ There is no lower-system error at all, and the degree-one response is the
 constant row that anchors the Monge staircase.
 
 Combining this translation face with the gap-composition faces gives more
-than a remote-tail theorem.  It makes the arithmetic bad-support locus a
-finite collection of cylinders over minimal bad prefixes.  The first three
+than a remote-tail theorem.  It confines the arithmetic bad-support locus to
+a finite union of cylinders over minimal bad prefixes.  The first three
 prefix widths are empty, so the bad locus has arithmetic codimension at
 least four.
 
@@ -435,4 +443,4 @@ This theorem does not prove SFC(4), SFC in any higher width, the full
 arbitrary-radial GMC(2), NC2 outside the two-charge resultant-good family,
 LRC(14), JC(2), or DC(2).
 
-**QED, pending independent audit and status promotion.**
+**QED.**
