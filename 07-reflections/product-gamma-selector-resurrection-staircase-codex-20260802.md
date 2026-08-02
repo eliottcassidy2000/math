@@ -1,8 +1,8 @@
 # Product-Gamma selector resurrection staircase
 
 **Status:** research reflection.  The depth-four/degree-12 cell is proved in
-THM-3155.  The depth-five/degree-13 cell is an exact proved candidate in
-THM-3158 and is not a proved dependency until independent promotion.
+THM-3155.  The depth-five/degree-13 cell is proved and independently audited
+in THM-3158.
 
 ## The first closed two-axis cell
 
@@ -50,7 +50,7 @@ on the endpoint jet.
 
 ## The second staircase cell
 
-The THM-3158 candidate supplies an exact depth-five law on seven states with
+THM-3158 supplies an exact depth-five law on seven states with
 denominator `10^6` and numerators
 
 ```text
@@ -67,12 +67,12 @@ They sum to `10^6` and have gcd one.  Exact streaming enumeration proves
 strict positivity on all `403,539` nontrivial upsets through degree 12.  A
 separate primitive positive combination of nine upset facets is strictly
 negative on all 682 physical depth-at-most-five states in degrees through 13.
-Thus the next candidate cell is
+Thus the next proved cell is
 
 ```text
 C_12^(<=4)=empty,
 C_12^(<=5) nonempty,
-C_13^(<=5)=empty.                                          (candidate)
+C_13^(<=5)=empty.
 ```
 
 The depth-four five-row separator is crossed by exactly two depth-five states,
@@ -114,16 +114,18 @@ original product-Gamma response.  That realization map remains load-bearing.
 
 ## Product-law and stopping-law probes
 
-The sparse laws found so far are arbitrary points of a simplex.  Two more
-structured families should be tested before treating the coefficients as
-accidental:
+The sparse laws found so far are arbitrary points of a simplex.  THM-3163
+shows that bare sequential realization is automatic: sample a terminal set,
+uniformly order it, and use posterior transitions.  That construction is
+global and response-blind.  Two genuinely structured families should still
+be tested before treating the coefficients as accidental:
 
 - **independent deletion:** each pole label is retained/deleted by a Bernoulli
   parameter, possibly depending only on pole value;
 - **sequential hazard:** remove one remaining labelled pole at each step with
   a value-dependent transition weight and stop with a depth-dependent hazard.
 
-For either family, the source is a small parameter space, the target is the
+For either structured family, the source is a small parameter space, the target is the
 state-law simplex, and the preserved predicate is exact multiplicity validity.
 The destroyed information is arbitrary correlation among deleted poles.  The
 cheapest test is whether the depth-four and depth-five rational laws lie in the
@@ -140,8 +142,8 @@ If both fail, their first polynomial relation gives a useful no-go theorem.
 3. **Structured crossing loci:** one depth-three crosser, two depth-five
    crossers of the previous wall, then a 24-state low/high depth-six patch.
 4. **Finite full bank:** only 4,319 nonempty physical states exist.
-5. **Structured stopping laws:** independent-deletion and hazard models are
-   the cheapest route back toward a genuine process.
+5. **Structured stopping laws:** abstract Markov realization is automatic;
+   independent-deletion and value/depth-hazard models test real locality.
 6. **Original-response map:** still absent; no selector theorem alone proves
    NC2 or GMC.
 

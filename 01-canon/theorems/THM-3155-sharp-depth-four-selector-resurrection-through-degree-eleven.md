@@ -31,7 +31,9 @@ depends_on:
   - THM-3144-mixed-depth-selector-persistence-death-barcode
   - THM-3149-depth-three-selector-persistence-and-cross-support-wall
 related:
+  - MISTAKE-354
   - THM-3147-length-singleton-endpoint-jet-facet-observer
+  - THM-3163-universal-finite-prefix-markov-realization-and-physical-sidecar-boundary
 script: 04-computation/gmc_depth_four_selector_resurrection_barcode_scout.py
 output: 05-knowledge/results/gmc_depth_four_selector_resurrection_barcode_scout.out
 script_sha256: ad3d7c14895f10f16622a0918317d20785cba540e48405977019f6706f37d07b
@@ -260,10 +262,15 @@ hashes are recorded in the frontmatter.
 ## 7. Scope and next boundary
 
 The theorem concerns probability averages of the derived fixed-`Q` virtual
-prefix currents `(2)`.  Although every state is multiplicity-valid, an
-arbitrary law on these unordered states need not be the stopping distribution
-of a sequential pole-removal process.  The theorem supplies neither that
-process nor a decomposition of the original product-Gamma response.
+prefix currents `(2)`.  A previous version said too strongly that an arbitrary
+law on these unordered states need not be a sequential stopping distribution.
+In the unrestricted finite-state sense every law has such a realization:
+sample its terminal prefix, uniformly order the selected labelled poles, and
+use the posterior transition kernel.  THM-3163 records the exact construction.
+What this theorem does **not** supply is a value-only, prescribed-hazard, or
+response-compatible pole process, nor a decomposition of the original
+product-Gamma response.  That stronger compatibility is the load-bearing
+sidecar; bare terminal-law realizability is automatic.
 
 The result does not determine `C_12^(<=5)`, `C_13^(<=5)`, or any arbitrary
 degree/depth limit.  It proves no cross-support portability, arbitrary-radial

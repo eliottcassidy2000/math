@@ -9,6 +9,23 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-354 (2026-08-02, THM-3155 selector-barcode scope audit) -- treating abstract terminal-law realization as a substantive sequential obstruction
+
+- **What failed:** THM-3155's scope said that an arbitrary law on legal
+  unordered pole prefixes need not be the stopping distribution of a
+  sequential pole-removal process.  Without further restrictions on the
+  transition kernel, that statement is false.
+- **Why:** for any finite terminal law, sample the terminal labelled subset and
+  reveal a uniformly random ordering.  Conditional probabilities given the
+  current prefix depend only on that prefix, so they define a state-dependent
+  one-letter-at-a-time Markov chain with exactly the prescribed terminal law.
+  Equal-value symmetrization descends to unordered multiplicity states.
+- **Repair:** THM-3155 now distinguishes automatic abstract Markov realization
+  from the missing value-only, prescribed-hazard, selector-current-compatible,
+  or original-response-compatible transport.  THM-3163 records the exact
+  posterior kernel, its proof, and the labelled lift of THM-3158's law.  No
+  barcode, Hasse-positivity, NC2, or GMC conclusion changed.
+
 ## MISTAKE-353 (2026-08-02, reflected two-star replay) -- a semantic-preserving upstream normalization silently invalidated raw dependency pins
 
 - **What failed:** the all-`649`-body upper-median two-star referee stopped at
