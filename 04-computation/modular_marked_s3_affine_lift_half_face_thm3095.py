@@ -309,9 +309,17 @@ for gauge in S4:
         transported_pair = (conjugate(binary, gauge), conjugate(ternary, gauge))
         require(transported_pair in FRAME_LOOKUP, ("transported pair", transported_pair))
         transported = FRAME_LOOKUP[transported_pair]
-        owner, direction, _, branch = frame
+        owner, direction, orientation, branch = frame
+        transported_orientation = tuple(
+            DIRECTIONS.index(conjugate(DIRECTIONS[index], gauge))
+            for index in orientation
+        )
         require(transported[0] == gauge[owner], ("owner equivariance", frame, gauge))
         require(transported[1] == conjugate(direction, gauge), ("direction equivariance", frame, gauge))
+        require(
+            transported[2] in cyclic_rotations(transported_orientation),
+            ("orientation equivariance", frame, gauge),
+        )
         require(transported[3] == branch, ("branch equivariance", frame, gauge))
 
 

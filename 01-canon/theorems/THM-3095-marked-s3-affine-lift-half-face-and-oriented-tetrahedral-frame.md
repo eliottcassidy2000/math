@@ -2,9 +2,9 @@
 id: THM-3095
 title: "Marked S3 affine-lift half-face and oriented tetrahedral co-occurrence frame"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Every exact-order affine lift of a marked generating C2*C3 -> S3
-  pair is uniquely a quartic owner, a matching direction, a cyclic direction
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every exact-order
+  affine lift of a marked generating C2*C3 -> S3 pair is uniquely a quartic
+  owner, a matching direction, a cyclic direction
   orientation, and the split/full H1 bit.  The first mixed word obeys the
   exact formula w^2=eta d.  In the full branch the 24 S4 markings are the
   4*3*2 oriented tetrahedral co-occurrence frames, and the matching quotient
@@ -14,6 +14,17 @@ status: >
   squared resolvent channel.  No global affine owner, signed-edge descent,
   graph-quartic realization, Keller cofactor, or exclusion follows.
 source: root-modular-resolvent-cooccurrence-2026-08-02
+audit: >
+  An independent opposite-convention enumeration rebuilt all six marked S3
+  pairs, all 48 exact-order lifts, the 24+24 split/full census, the complete
+  frame bijection and inverse, w^2=eta d, quotient fibres, and simultaneous
+  S4 covariance.  It rederived the shifted cubic-resolvent identity and every
+  signed quadratic factorization, and checked the fixed-labelled-fibre
+  2-to-minus-2 hostile.  The audit caught and repaired the distinction
+  between geometric cusp meridians and their derived order-(2,3) modular
+  pair; the companion now directly checks cyclic-orientation transport.
+  Fresh normal and optimized executions byte-match stored output and both LF
+  hashes are exact.
 depends_on:
   - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
@@ -32,15 +43,14 @@ related:
   - THM-3064-pointed-cubic-norm-keller-decoder-and-inverse-different-boundary
 script: 04-computation/modular_marked_s3_affine_lift_half_face_thm3095.py
 output: 05-knowledge/results/modular_marked_s3_affine_lift_half_face_thm3095.out
-script_sha256: c5009bf45ae40a388d3e24aeb0bca6254afbda39c289c3dbee2cc4e0c594ff37
+script_sha256: aacb05302b208f0240ec8484efb7f6a6f9cf209734658f119a14631943d29be1
 output_sha256: b151fcf86735600af483281613366f3c76aa07470c159f8a1f67184942e3fc1c
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3095 -- the marked resolvent forgets the owner, not the half-face
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. The complete marked lift theorem
 
@@ -295,14 +305,21 @@ sharp owner/sign loss inside one full quotient fibre.
 
 ## 5. Cusp, grade-three, and Keller boundary
 
-Suppose the marked `S3` pair is realized by genuine geometric meridians of
-an `A2` cusp in a normalized cubic resolvent.  The quotient word `wbar` is
-a transposition, and `d` is its unique fixed cubic sheet label.  In the full
-quartic lift, `(8)` identifies the same label with the square of the
-order-four quartic meridian.  In the split lift, the same cubic label remains
-but the square is trivial.  This is exactly the two-branch cusp lift of
-THM-3037, now resolved into owner, direction, orientation, and cohomology
-coordinates.
+Suppose `(sbar,cbar)=(Abar,Bbar)` is the modular pair derived from genuine
+`A2`-cusp meridians `(Xbar,Ybar)` as in THM-3037, with
+
+```text
+Abar=Xbar Ybar Xbar,       Bbar=Xbar Ybar.
+```
+
+Then `wbar=Abar Bbar=Xbar^(-1)` is a transposition, and `d` is its unique
+fixed cubic sheet label.  In the full quartic lift, `(8)` identifies the same
+label with the square of the order-four quartic meridian.  In the split lift,
+the same cubic label remains but the square is trivial.  This is exactly the
+two-branch cusp lift of THM-3037, now resolved into owner, direction,
+orientation, and cohomology coordinates.  The order-`(2,3)` modular pair is
+derived from the geometric transposition meridians; it is not itself their
+literal meridian pair.
 
 The conclusion stops at that marked finite cover.  In particular:
 
@@ -381,5 +398,6 @@ The self-contained companion uses explicit `require` gates and no Python
 7. the exact same-quotient split/full pair `(24)`.
 
 Normal and optimized executions byte-match the stored sixteen-line
-transcript after LF normalization.  Promotion remains blocked only on an
-independent hostile audit of this candidate and its scope.
+transcript after LF normalization.
+
+QED.
