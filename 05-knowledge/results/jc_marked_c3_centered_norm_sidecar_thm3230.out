@@ -1,0 +1,9 @@
+THM-3230 exact controls
+centered_norm=eps*t*A**3 + eps**2*t**2*B**3
+marked_cubic_norm=-(27*a1 - 9*a2*a3 + 18*a2*fixed + 2*a3**3 - 3*a3**2*fixed + 15*a3*fixed**2 + 20*fixed**3)/27
+valuation_cells=361:PASS
+bezout_gauge_cells=2233:PASS
+graph_compatibility_cells=672:PASS
+m3_hostile_depressed_q=-(8*eps*t**4 - 1)/(8*t**3)
+m3_hostile_centered_norm=eps*t
+all_exact_controls=PASS
