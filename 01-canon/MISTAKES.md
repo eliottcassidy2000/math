@@ -9,7 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-350 (2026-08-02, THM-3018 truth/type audit) -- a suspended Laplace closure and two indexing errors remained on the truth surface
+## MISTAKE-351 (2026-08-02, two live theorem-reservation races) -- a fresh fetch is only a snapshot, and moving both colliders to the same next ID repeats the collision
+
+- **What happened:** two independently valid results acquired `THM-3130`
+  while their reservation pushes crossed.  The later prime-resonance
+  factorial candidate was repaired to `THM-3131`.  A second race then put the
+  tournament endpoint-jet theorem and the fixed-reference Hasse no-go at
+  `THM-3134`.  Before the later owner completed its repair, the tournament
+  theorem moved to the apparently free `THM-3135`; the other session made the
+  same move from its own snapshot, creating a second collision.
+- **First failed mechanism:** `fetch; search; choose next; push` is not an
+  atomic reservation.  It cannot see a reservation pushed after the search.
+  Once a collision exists, “both choose the next free integer” has the same
+  race and is not a repair protocol.  The mathematics and file contents were
+  sound; the YAML namespace was not.
+- **Repair / authoritative allocation:** first-on-`main` provenance decides
+  ownership.  The current distinct allocation is `THM-3130` for the
+  divisor-antichain response theorem, `THM-3131` for prime-resonance
+  factorial closure, `THM-3134` for the tournament endpoint-jet theorem, and
+  `THM-3136` for the later fixed-reference Hasse no-go.  (`THM-3135` is now
+  free.)  After every
+  reservation push, fetch again and search YAML IDs on the resulting remote
+  history.  If a collision appears, inspect the two add commits, keep the
+  first-on-`main` ID fixed, and move only the later reservation.  Repeat the
+  global ID check after the repair lands; do not move both sides speculatively.
+
+## MISTAKE-350 (2026-08-02, factorial-conjecture type audit) -- indexing SFC by slot count and restricting FC to homogeneous polynomials
 
 - **What was claimed:** THM-3018 advertised a maximum-modulus Laplace proof
   for every homogeneous slice, called that slice full `FC(n)`, and elsewhere

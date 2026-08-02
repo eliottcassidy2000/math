@@ -1,5 +1,5 @@
 ---
-id: THM-3137
+id: THM-3134
 title: "Tournament endpoint jets and the cubic C3 Gregory-Newton profile transform"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The complete
@@ -27,14 +27,14 @@ related:
   - THM-1975-the-path-cover-polynomial-is-the-refined-compositional-invariant
   - THM-2412-delta-exponential-and-central-newton-layer-split
   - THM-2438-poisson-newton-ternary-half-and-harmonic-divisor-incidence
-script: 04-computation/tournament_c3_endpoint_jet_newton_thm3137.py
-output: 05-knowledge/results/tournament_c3_endpoint_jet_newton_thm3137.out
-script_sha256: 2ce798c63f5b36dfbc5d6304c47820264bcb5d34f505af89ce69b55a8969ae5c
+script: 04-computation/tournament_c3_endpoint_jet_newton_thm3134.py
+output: 05-knowledge/results/tournament_c3_endpoint_jet_newton_thm3134.out
+script_sha256: cb5378c7ca3b085251e72d7f265c6406f0e5211f0d04eb9b3cb03c8ba62e74cb
 output_sha256: 8ba3debc0708fa5091392c6b142662c8fc2c4c4303443cf8539fcc1cdff431c8
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3137 -- tournament endpoint jets and the cubic `C3` Newton transform
+# THM-3134 -- tournament endpoint jets and the cubic `C3` Newton transform
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
@@ -298,7 +298,7 @@ conjugacy preserves the entire profile, while the endpoint value destroys all
 higher run counts.  The full Taylor jet and the quotient's rational walk
 series restore the lost data.
 
-The link to factorial THM-3134 is typed but not a reduction.  Both use a
+The link to factorial THM-3131 is typed but not a reduction.  Both use a
 prime-place observer after a Newton reframe, but here `3`-adic divisibility
 comes from free symmetry orbits; the Newton summands can overlap and cancel.
 The link to the Jacobian lane is likewise methodological: retaining a jet can
@@ -310,8 +310,8 @@ through 243 vertices, all `1,099` labelled tournaments through order five,
 the hostile pair, and transitive Stirling controls.  Run
 
 ```text
-python3 04-computation/tournament_c3_endpoint_jet_newton_thm3137.py
-python3 -O 04-computation/tournament_c3_endpoint_jet_newton_thm3137.py
+python3 04-computation/tournament_c3_endpoint_jet_newton_thm3134.py
+python3 -O 04-computation/tournament_c3_endpoint_jet_newton_thm3134.py
 ```
 
 and compare with the declared transcript.
