@@ -1,8 +1,15 @@
 ---
 id: THM-3052
 title: "Projected k3 z242 gap241 z240 compositional descent"
-status: CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT
+status: PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
 source: codex-lrc-z242-z240-composition-2026-08-01
+audit: >
+  An independent immutable-file audit ACCEPTED the pinned atlas grammar,
+  necessary-relaxation directions, tuple joins, six terminal bodies,
+  two-high-to-one-high deduction, complete-cell cardinality certificates,
+  gap and ledger arithmetic.  Fresh ordinary and optimized runs rebuilt two
+  disjoint 78-envelope checkpoint banks and matched the stored 96-line LF
+  transcript exactly.  The audit repaired one stale pre-promotion byte count.
 depends_on:
   - THM-3041-projected-k3-z243-first-below-floor-cardinality-descent
   - THM-3033-projected-k3-z246-to-z244-descent-and-z243-high-floor-addendum
@@ -18,11 +25,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3052 -- projected k3 z242 / gap241 / z240 compositional descent
 
-**CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
-
-This file remains outside the proved dependency graph until an independent
-hostile audit and explicit status promotion.  No navigation or ledger file is
-changed by this candidate.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## Statement
 
@@ -35,19 +38,18 @@ the zero-row atlas gap z_1=241,
 all 52 occupied z_1=240 rows.                           (1)
 ```
 
-The occupied-row decrement in `(1)` is `20+52=72`; the gap costs zero.  Thus,
-**if this candidate is promoted**, THM-3041's proved projected necessary-row
-ledger and cap would update by the exact arithmetic
+The occupied-row decrement in `(1)` is `20+52=72`; the gap costs zero.
+THM-3041's proved projected necessary-row ledger and cap therefore update by
+the exact arithmetic
 
 ```text
 374900-72=374828,
 projected k=3 cap: z_1<=239.                            (2)
 ```
 
-Equation `(2)` is an audit target, not a live ledger or navigation mutation
-while the theorem has candidate status.  This is not LRC(14), says nothing
-about `k<=1` or the final rung, and closes only the named projected necessary
-sector.
+Equation `(2)` is now the live projected ledger update.  This is not LRC(14),
+says nothing about `k<=1` or the final rung, and closes only the named
+projected necessary sector.
 
 ## 1. Pinned disjoint universe and the `241` gap
 
@@ -175,5 +177,5 @@ The exact semantic digest is
 Both fresh checkpoint banks contain `72+6=78` envelopes and have the same
 semantic digest
 `08002b99f7d5e9dde253ed923ae888feb7500906fde75fb6774e58f8533f7598`.
-The canonical transcript has `22,683` LF bytes and `96` lines; ordinary,
+The canonical transcript has `22,664` LF bytes and `96` lines; ordinary,
 optimized, and stored bytes agree exactly.
