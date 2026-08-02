@@ -25,7 +25,7 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`. THM-2928 empties aligned `k>=4`; THM-2995/3114 cap projected `k=2,3` at `1579/226`; repaired THM-2941 leaves `561` reflected bodies in `D>=6,1<=m<D/2`.
+Direct frontier: `<=6`. THM-2928 empties aligned `k>=4`; THM-2995/3114 cap projected `k=2,3` at `1579/226`; repaired THM-2941 leaves `561` reflected bodies in `D>=6,1<=m<D/2`, with `(D,m)=(6,1)` now exactly closed by the physical global-min/global-max pair.
 This is not a physical-survivor classification; arbitrary `k<=1`, the rung, and LRC remain open. Septimal floor/exception plus located phase cut the raw five-drift ledger
 `951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
