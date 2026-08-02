@@ -2,7 +2,7 @@
 id: THM-3112
 title: "Cycle-weighted Young-subgroup gap and uniform-octopus boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; independent audit pending.  Every finite
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every finite
   nonnegative alphabet has a cycle-weighted symmetric-group gap operator
   which is a nonnegative mixture of Young-subgroup projection gaps.  The
   normalized one-row THM-3110 target is exactly a signed combination of these
@@ -12,13 +12,13 @@ status: >
   Gaussian-moment closure.
 source: root/multiscale-newton-flag-2026-08-02
 audit: >
-  The proof derives the group-algebra identity coefficient by coefficient,
-  checks the projection order and Frobenius/Kostka spectrum independently,
-  and proves the alpha-span obstruction analytically.  The exact companion
-  verifies three cycle-colouring controls, both degree-six THM-3110 operators,
-  all Specht spectra, the rank-five versus rank-six span jump, and two
-  coefficientwise-cone hostiles.  Normal, optimized, and stored replay and an
-  independent mathematical audit are still required before promotion.
+  An independent hostile audit rederived the coefficientwise cycle-colouring
+  identity, colour-weight normalization, subgroup projection order,
+  Frobenius/Kostka spectra, singleton alpha normalization, signed beta
+  identity, direct-versus-Cesi sign convention, conjugacy-sum formula,
+  generalized-octopus span obstruction, both degree-six rank/spectrum tables,
+  and the degree-five monomial hostile.  Fresh normal and optimized runs
+  byte-match the stored output; both LF hashes and documentation checks pass.
 depends_on:
   - THM-3110-arbitrary-anchored-product-gamma-dominant-tail-and-low-histogram-reduction
 script: 04-computation/gmc_cycle_weighted_young_subgroup_gap_thm3112.py
@@ -30,7 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3112 -- cycle-weighted Young-subgroup gap and uniform-octopus boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT; independent audit pending.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This theorem isolates the exact operator hidden behind the one-row extremum
 suggested by the post-THM-3110 Young-cover census.  Its positive result is a
