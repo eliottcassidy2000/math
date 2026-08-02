@@ -1,0 +1,33 @@
+LRC14 reflected cap-5/2 tail orientation repair
+predecessor_conclusion=RETRACTED_AND_NOT_INHERITED;only pinned code/data are reused and every surviving downstream obligation is recomputed
+equal_level_gate=residual_bodies:561;P=Q excluded only after universal repeated-level recheck;exception_bodies:((1, 2, 7, 9, 11, 13), (2, 4, 7, 9, 11, 13));intersection:EMPTY
+unaffected_csp=closed:389;traps:172;reverse_order_agrees;trap_digest:b8e1f964d610af641a229d06951c4805167af4310429740501809034e9b2a716;verdict_digest:30650baad0b872b3df4a7278320f6ae4dbc7e3214c6aef16fb90e3a569b800c6
+unaffected_located=policies:160;both_orientation_controls:1566;digest:e0a6c267f4f77017ea56229f3f2c80ba1b1a9c00b065ad9ab0540397ce238a75;monotonicity_digest:e23f2a4c5e572391d03ec3019239f1818ff0cb92740ec549b8a107a6b96622eb
+unaffected_whole_tails=bodies:10;head_controls:300;head_digest:4787fd19180878e0b5d502609121875eb8a4fc1f45e64a15b8be533fa5547dd7;discarded_split_bodies=((1, 2, 3, 4, 6, 12), (1, 3, 4, 6, 8, 12))
+diagnosis=old H low(1,0) and high(0,1) both encode q_0<=q_1;old H2 simultaneous failure q_2<q_1<q_0 is consistent
+hostile_old_policy_controls=H:q=(2, 1),truth=(False, False);H2:q=(5, 4, 2),truth=(False, False)
+affected_tail_bodies=2;unaffected_whole-interval_tail_bodies=10;old constrained policies and CSP remain pinned exact data
+repair=H uses five closed Farey lanes on one fixed ordered pair (0,1);H2 uses one whole interval on fixed pair (0,1)
+interval_endpoint_audit=((Fraction(2, 5), (1,)), (Fraction(3, 7), (1, 2)), (Fraction(1, 2), (2, 3)), (Fraction(2, 3), (3, 4)), (Fraction(11, 9), (4, 5)), (Fraction(5, 2), (5,)));assignment_controls=(((2, 1), Fraction(1, 2), (2, 3)), ((1, 2), Fraction(2, 1), (5,)));closed_endpoint_overlaps=HARMLESS
+coupled_debt=q_max<=5m/2 and pair_max=g*max(P,Q) imply m>=ceil(2g*max(P,Q)/5)
+singleton_debt_levels=H analytic tails use max(4,ceil(2*start/5));H2 whole tail retains the safe base m>=4;every direct and transported head scale uses max(4,ceil(2g*max(P,Q)/5))
+infinite_tail_gate=for every later scale,primitive skeleton is fixed;phase loss is strictly decreasing unless mismatch=0;transport displacement a/(PgL-a) strictly decreases and its favourable inverse factor is discarded;ceiling level is nondecreasing and singleton debt is nonincreasing
+lane_1=body:(1, 2, 3, 4, 6, 12);interval:[2/5,3/7];pair:(0, 1);start:48;numerator:16/5;margin:2044486444853358468349/34800879676094772838678080;previous:-914494081738500132839/103703496257908964996461575;debt_level:20;heads:117
+lane_2=body:(1, 2, 3, 4, 6, 12);interval:[3/7,1/2];pair:(0, 1);start:38;numerator:22/7;margin:875396504929607750564/24391007914980367910464215;previous:-999906171362773001/13648357185529173094295;debt_level:16;heads:145
+lane_3=body:(1, 2, 3, 4, 6, 12);interval:[1/2,2/3];pair:(0, 1);start:26;numerator:3;margin:238362105108335366/21051149400767263422645;previous:-29961088995754378906/126571553651780808991875;debt_level:11;heads:101
+lane_4=body:(1, 2, 3, 4, 6, 12);interval:[2/3,11/9];pair:(0, 1);start:16;numerator:8/3;margin:125415746119405569/839612996789710561600;previous:-609527591245228897/1093014829361256134025;debt_level:7;heads:52
+lane_5=body:(1, 2, 3, 4, 6, 12);interval:[11/9,5/2];pair:(0, 1);start:7;numerator:14/9;margin:17632490906213/142988210858207925;previous:-7014198032612/4168161190742955;debt_level:4;heads:16
+lane_6=body:(1, 3, 4, 6, 8, 12);interval:[2/5,5/2];pair:(0, 1);start:14;numerator:26/5;margin:45635336138525012/1043031165396943398095;previous:-521505586124094633/3340381908984488222855;debt_level:4;heads:174
+replacement_lanes=6;head_channels=605;weakest_tail_margin=4917100104747739/477807176182256408075@body=(1, 2, 3, 4, 6, 12),channel=(42, 17),g_tail=1;maximum_direct_prefix=4@body=(1, 2, 3, 4, 6, 12),channel=(7, 3),g0=2,g_tail=6
+lane_digest=1d90551e665eb8f4868affb7650fdd4e338095812390857525af7a282e87acd3;head_digest=0253483de002db1e2fa32a3feca1811f28b355b43d6f2426d19ba6fdfe58ffdc
+coverage=the five H intervals cover [2/5,5/2] on the same physical pair;the H2 lane covers [2/5,5/2];no reversed-pair disjunction remains
+conclusion=pinned cap-5/2 CSP+located data, ten valid old whole-interval tails, and the repaired H/H2 tails close D>=6,3m>=2D
+corollary=reflected sufficient-certificate failure is again confined to D>=6,1<=m<2D/3
+scope=reflected THM-2941 sufficient family only;physical LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+old_source_sha256=e6e64c909c6bfcc776eaf6bf2ad210f75675a6a32a46ead70d8d29a37f607eb3
+old_output_sha256=e77929c87f9d9f8fb7ce3a347c48522e87f63fa7c7085eb9e2cd8fe0bb4e4a90
+old_semantic_sha256=b34db3e25b9e4c81c1549f1ec7c7ab78e935ec778610daf617934b66b3a47304
+source_sha256=420d21d0c65cfbd57d8cc926c04993b14e61d2554fb291a836af949d1fd664ed
+semantic_sha256=525c8d2d89cf11c9fcc6260dbf81e57d0e47c999049c89b9148ae731dbac4730
+all_exact_controls=PASS
