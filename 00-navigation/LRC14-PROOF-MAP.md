@@ -148,7 +148,6 @@ retain ties and hyperedges otherwise.
 7. Partition resonance cells only after proving THM-2054's missing lifted
    plateau; separate its numerical budget from model identification and route
    nonlifting resonances separately.
-
 > ## 2026-07-19 S78 CONTINUATION — TWO FINITE FRONTS MOVE, AND THE FANO QUOTIENT IS LOCAL-SURJECTIVE
 >
 > THM-1258 closes the primitive proper AP-centred Hamming-six face at common

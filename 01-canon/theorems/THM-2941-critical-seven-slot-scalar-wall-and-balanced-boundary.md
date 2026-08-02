@@ -267,6 +267,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_reflected_three_quarter_cone_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_phase_zero_gain_atlas_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_phase_zero_gain_atlas_thm2941.out
+  - 04-computation/lrc14_j7_k3_z239_gap238_z237_compositional_descent_thm3061.py
+  - 05-knowledge/results/lrc14_j7_k3_z239_gap238_z237_compositional_descent_thm3061.out
   - 04-computation/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.out
 ---

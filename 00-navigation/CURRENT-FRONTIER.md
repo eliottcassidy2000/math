@@ -39,66 +39,26 @@ In the reflected gain graph, cap two forces the phase-zero triangle
 `(3/2)(4/3)=2`; by cap `7/3` it is interior and no full-cap component remains.
 The global zero-gain atlas is exactly `4/3,3/2,2,5/2,3,4,5,6`; cap `5/2`
 adds a new prime-five rank direction rather than another circuit.
-Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
-THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams, not semantic-root identification (kernel `28,393`); THM-2545/2549/3044 give Hall/pointed dual; THM-2565/2604/2613 point scoped packets; THM-3048 forces arrival from nonzero holonomy only for a whole-table parallel carrier, still absent; THM-2547 is only an external control after
-MISTAKE-281.  THM-2551--2712 recover determinant/carry/root/quotient sidecars
-and six-step nilpotence, but no transverse physical gluing (MISTAKE-300).
-THM-2721's positive `C3` corolla is current-zero and misses all `1134`
+Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
+THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
+supplied-root seams, not semantic-root identification (kernel `28,393`).
+THM-2545--2712 recover Hall, pointed-dual, determinant, carry, root and
+quotient sidecars plus six-step nilpotence, but no transverse physical gluing
+(MISTAKE-281/300); THM-2721's current-zero `C3` corolla misses all `1134`
 placements.
 
-THM-2720/2742 restore the missing target (`936/1183` sections and every
-primitive character); MISTAKE-310 preserves the half-tooth overlap.  The
-THM-2744 `7/13^6` clutch preserves raw private units, and THM-2749 inserts the
-full `E3 -> D^6 -> Q_(3,{1,2})` fork with both endpoint masks.  Its frozen,
-coindexed, one-sided and clock-blind sections are distinct.
+THM-2720/2742 restore target sections and primitive characters;
+THM-2744/2749 retain private units and both endpoint masks, with MISTAKE-310's
+half-tooth overlap.  MISTAKE-313 restores clock `e=1`; THM-2750/2751/2754/2757
+show that unit-pair, two-clock and marked-`K4` data still lack a physical
+carrier action.  THM-2763--2839 rebuild address, ancestry, positive-copy,
+half-step, Boolean and full-character sidecars, but either change source data,
+remain carry-blind/signed, or have empty endpoint fibre product.
 
-MISTAKE-313 restores clock `e=1`.  THM-2751 has empty left coefficient and
-right `GQ`, with `Q` mod-`91` invertible but raw `GQ=0 mod91` and `G/26` only
-an `F_13` unit.  No physical wing map follows; the one-sided bank has gain
-`11`, while the older rank-three table is clock-blind.
-
-THM-2754's two-clock carrier has `B_(e,j)=a_e 1_(j!=0)` on all `3969` cells.
-Its `7 x 7` unit-pair chamber has four multipliers, gains
-`0:10,2:19,11:20`, and all `168` label modes, but no carrier action.
-THM-2750 blocks arm-blind charging; THM-2757's marked `K4` transgression
-still lacks a physical carrier.
-
-THM-2763's address has size `13^4` (`13^3` after loss), not THM-2625's
-endpoint plane.  THM-2779's Heisenberg center needs degree `169`; a literal
-`13`-root action kills it.  THM-2782's three positive arms have `567/567`
-disjoint opposite cofibres.  THM-2788--2803 close coefficient
-odometer/transport/origin/projective response, not physical gluing;
-THM-2791/2807 give ancestry homotopy.
-
-THM-2806's flat raw point has bare-only `D3=144w`; its tau-twelve common
-carrier is empty.  THM-2813's conditional address jet is not Rees `D3`;
-THM-2814 separates contrast from holonomy, THM-2818 proves positive-copy
-multipliers, and THM-2819 proves the sharp marked target eleven-face.
-THM-2825's half-step scale uniquely picks `+h/+2h` on all 587 rights; the
-norm-one Schur collars are absent from the coarse algebra.  Its labelled path
-forest has a transverse/tangent `M_3 tensor I_587`, but source data change and
-endpoint matches are only `74/587` versus `587/587`.
-THM-2820 proves Boolean tangent rigidity.  THM-2829/2835 give the unique
-91-unit response and `449`-sheet carry-blind semantic horn (ranks `13/26`),
-but change `QB -> QA`; endpoint/word copies have empty fibre product.
-THM-2839 gives its full `13^5`-character rank `371293`, yet its inverse is
-signed and only the unrotated response is physical.
-
-THM-2847 gives a `42`-cell q3/q11 bank and `20`-cell E3 horn: the `449`
-columns have rank four but E3 rank three.  THM-2851 exposes
-`L_9L_8=T L_4` versus flat `A_5A_3=A_8`; carry fidelity costs `13` states
-(`169` jointly), and its derivative has norm `898`, ranks `12/371292`.
-THM-2852 adds full signed convolution rank and six borrow-aware arrows.
-THM-2857 gives a free Galois `C13` endpoint torsor but only `K0`-linear
-carry.
-THM-2859's q0 `Z^8` germ hits only `{0,4,8,9}`: no rootless hit, square,
-or literal q3/q11 attachment.
-THM-2861/2863 give Hermitian/Prony; THM-2868 its atlas. THM-2874
-`F`-clutches Galois/`C169`, but q7 stays flat. THM-2876 kills the q3 edge.
-THM-2880/2878/2882 reach q3 but flat carry.
-THM-2884/2886 find `V4` and transport q3/q11/q7 parity/current; scalar Prony fails.
-THM-2887/2889 give Arf-one `Q8`/dicyclic channels; THM-2894 blocks central-sign descent through unmarked residuals.
-Next: `e9=(-9,+9,QB)`, clutch `(13,13,-1)`. Ledger `165`.
+THM-2847--2894 add q3/q11/E3 ranks, borrow-aware convolution, Galois `C13`,
+Hermitian/Prony, `V4`, `Q8` and dicyclic channels.  Flat carry and unmarked
+central-sign descent remain the obstruction.  Next: `e9=(-9,+9,QB)`, clutch
+`(13,13,-1)`; ledger `165`.
 
 ### Independent routes that remain live
 
@@ -370,7 +330,11 @@ Classify profiles under support operations; study analytic continuation and auto
   its former general-dominant scope.  On the `S4` Keller lane at least one odd
   component is forced, but excluding every Keller `C3` component remains
   OPEN and needs branchwise Jacobian-cofactor unit data, not another
-  discriminant scalar.  THM-2862/2864/2968/2971 give two sextic
+  discriminant scalar.  THM-3063 proves the natural THM-3058 matching
+  augmentation cannot supply it: vertex-gauged matchings retain only the
+  product of four cofactors, while a `C3`-equivariant product-one twist changes
+  the sheetwise Keller values.  The missing invariant is the pointed
+  orbit/fixed Jacobian ratio in the graph order.  THM-2862/2864/2968/2971 give two sextic
   lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
   affine sidecars remain.  THM-2867 gives the regular `S3` carrier.  THM-2871 makes that face unramified and
   puts the first paired escape at `A=B=0`: `C in (B)` gives integral

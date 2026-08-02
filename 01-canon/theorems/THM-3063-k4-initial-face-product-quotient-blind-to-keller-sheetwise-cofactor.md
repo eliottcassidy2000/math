@@ -2,7 +2,7 @@
 id: THM-3063
 title: "K4 initial-face product quotient is blind to the sheetwise Keller cofactor"
 status: >
-  PROVED + VERIFIED-EXACT (independent audit pending).  Insert four
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Insert four
   branchwise primitive-element cofactors into the quartic root-difference K4
   by the natural vertex-unit gauge.  Every matching monomial then sees only
   the product of the four cofactors, and the oriented contraction remains the
@@ -15,6 +15,12 @@ status: >
   vertex-gauge instantiation, not every possible branch-labelled
   augmentation, and excludes no Keller map or JC branch.
 source: codex-jc-resolvent-bridge-2026-08-01
+audit: >
+  root/2026-08-01 independently checked the oriented Pluecker signs,
+  product-one vertex-gauge quotient, primitive-element chain-rule predicate,
+  comaximal C3/fixed-factor twist, residue-seven roots, derivative/cofactor
+  valuations and units, and the non-realization scope.  Fresh ordinary and
+  optimized executions byte-match the stored transcript and declared hashes.
 depends_on:
   - THM-3046-quartic-resolvent-root-valuation-binary-ternary-clutch
   - THM-3058-k4-hafnian-initial-face-augmentation-and-unbounded-cancellation-jet
@@ -32,7 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3063 -- the hafnian face forgets the sheetwise Keller equation
 
-**PROVED + VERIFIED-EXACT (independent audit pending).**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. The proposed bridge and its exact contraction
 
