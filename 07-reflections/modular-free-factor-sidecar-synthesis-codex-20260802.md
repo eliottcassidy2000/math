@@ -1,8 +1,10 @@
 # The modular free-product frame is a sidecar grammar, not yet an action
 
 Date: 2026-08-02
-Status: **STRUCTURAL SYNTHESIS / REFLECTION**, not a theorem and not a proved
-dependency
+Status: **STRUCTURAL SYNTHESIS / REFLECTION, CORRECTED 2026-08-02**, not a
+theorem and not a proved dependency.  The correction below replaces the
+earlier overstatement that cyclic substitution itself supplied a `C_3`
+action.
 
 ## Inheritance pass
 
@@ -53,29 +55,37 @@ be a *pointed involution* on that torsor: for example, one chosen pair
 reflection together with the orientation datum that tells which lift was
 used.  Forgetting the point recovers only the cubic-resolvent quotient.
 
-The order-three generator is better typed.  Cyclic substitution supplies an
-actual `C_3` action, but it acts on the full path-cover profile, equivalently
-the endpoint jet, not on its scalar Hamiltonian endpoint.  Thus the smallest
-currently honest common state has the schematic form
+The order-three generator also needs a pointer.  The genuine `C_3` action is
+cyclic rotation of the **labelled input triple** of full endpoint jets.  The
+THM-3121/3134 substitution transform is invariant under this rotation, so its
+output forgets the cyclic slot origin even when the complete output jet is
+retained.  Thus the smallest currently honest common state has the schematic
+form
 
 ```text
 (pointed V_4 half-system, pair orientation;
- complete path-cover endpoint jet, quotient walk kernel).                (3)
+ rooted triple of complete path-cover endpoint jets, quotient walk kernel). (3)
 ```
 
 A genuine `C_2*C_3` action requires maps `S,R` on one carrier satisfying
 `S^2=1` and `R^3=1`.  No commutation or braid relation should be inserted.
-More importantly, both maps must preserve the same physical or algebraic
-carrier.  Current canon gives the two operations on different objects; it
-does not yet give this common carrier map.
+On the intrinsic four-point half-system torsor, however, a chosen pair flip
+and an oriented three-cycle already satisfy the extra relation
+`(SR)^3=1`; they generate `V_4 semidirect C_3 ~= A_4 ~= PSL_2(F_3)`.
+Therefore that torsor is the level-three congruence shadow, not a faithful
+modular carrier.  More importantly, both maps must preserve the same physical
+or algebraic carrier.  Current canon gives the two operations on different
+objects; it does not yet give this common carrier map.
 
 ## 2. Source, target, preserved data, and destroyed data
 
-For the ternary face the source is a triple of tournament path-cover
-profiles, the target is the substituted profile, and the map is THM-3134's
-Gregory--Newton transform.  It preserves every ordered path-cover count and
-the cyclic-wreath divisibility.  Projection to the endpoint value destroys
-the higher run counts.  The endpoint jet is the exact sidecar restoring them.
+For the ternary face the source is a **rooted labelled triple** of tournament
+path-cover profiles, the target is the substituted profile, and the map is
+THM-3134's Gregory--Newton transform.  It preserves every ordered path-cover
+count and the cyclic-wreath divisibility, but is invariant under cyclic
+rotation of the input labels.  Projection to the endpoint value additionally
+destroys the higher run counts.  The endpoint jet restores the run counts;
+the rooted block coordinate separately restores the cyclic phase.
 
 For the quartic face the source is multiplication on a reduced three-pair
 real algebra, the target is the four half-system traces (or their cubic
@@ -87,8 +97,9 @@ the missing sidecar.
 
 This gives a useful negative rule:
 
-> Scalarize neither free-factor move before composing them.  The `C_3` move
-> needs a jet; the pointed `C_2` move needs a torsor origin.
+> Scalarize neither free-factor move before composing them.  The ternary move
+> needs both a jet and a rooted cyclic block; the pointed binary move needs a
+> torsor origin.
 
 The two losses are orthogonal.  Restoring only one cannot recover the other.
 
@@ -110,15 +121,17 @@ lift obstruction, not evidence against the cubic anatomy itself.
 
 ## 4. Cheapest decisive experiments
 
-1. **Farey-flank test.**  Put the proposed pointed involution and cyclic move
-   on the same finite slope set and check THM-2056 adjacency determinants.
-   A failed flank immediately refutes the common modular action while leaving
-   both local tower grammars intact.
-2. **Reduced-word fingerprint.**  On the smallest common carrier, enumerate
-   reduced words in `S,R` through a bounded length.  Require `S^2=R^3=1` and
-   record every additional collision.  An extra collision proves that the
-   action factors through a proper quotient of `C_2*C_3`; absence is evidence,
-   not a proof of faithfulness.
+1. **Farey-flank test.**  Reduction
+   `P^1(Q) -> P^1(F_3)` preserves the one-way implication “Farey neighbors
+   remain distinct”, but not its converse and not THM-2056's fixed polar
+   gate.  A proposed lift must therefore transport the exact determinant,
+   polar polygon, and quadratic metric, not merely the four residue points.
+2. **Reduced-word fingerprint.**  The cheapest test is already decisive:
+   `(SR)^3` is the identity on the four-point torsor, whereas in
+   `PSL_2(Z)` it is `T^3` and is nontrivial.  For example `T^3(0,1)=(3,1)`;
+   the two slopes become equal only after reduction modulo `3`.  The missing
+   sidecar is consequently a `Gamma(3)`/Farey lift, not another search for a
+   short torsor word.
 3. **Two-sidecar hostile.**  Hold the endpoint jet fixed and vary the pointed
    `V_4` origin, then hold the origin fixed and vary a higher jet at constant
    endpoint value.  Any proposed common scalar invariant must distinguish
@@ -133,12 +146,16 @@ The binary and ternary towers are not yet proved to be a faithful modular
 action on one object.  What is proved is more precise and already useful:
 
 ```text
-ternary composition is functorial after retaining the full endpoint jet;
+ternary composition is functorial after retaining the full endpoint jet,
+but cyclic input phase additionally needs a rooted block;
 quartic/cubic passage is functorial after retaining a pointed V_4 lift;
 both scalar contractions have exact minimal hostile examples.             (4)
 ```
 
 This reframes the modular proposal as a **sidecar-completion problem**.  The
-next theorem should construct one carrier supporting both completed moves,
-or exhibit the first reduced word whose two implementations disagree.  Until
-then, `C_2*C_3` is a disciplined search grammar rather than a proved symmetry.
+intrinsic exact object is the congruence quotient
+`PSL_2(Z) -> PSL_2(F_3) ~= A_4`; its first lost coordinate is the nontrivial
+`Gamma(3)` action of `(SR)^3=T^3`.  The next theorem should construct one
+carrier supporting that lift together with the rooted endpoint-jet move, or
+prove that their physical predicates cannot coexist.  Until then,
+`C_2*C_3` is a disciplined search grammar rather than a proved symmetry.
