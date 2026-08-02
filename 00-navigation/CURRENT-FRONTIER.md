@@ -332,11 +332,10 @@ Classify profiles under support operations; study analytic continuation and auto
   Jelonek loci with `C3` escape and even exponent, refuting HYP-9027 only in
   its former general-dominant scope.  On the `S4` Keller lane at least one odd
   component is forced, but excluding every Keller `C3` component remains
-  OPEN and needs branchwise Jacobian-cofactor unit data, not another
-  discriminant scalar.  THM-3066's matching retains only the cofactor product.
-  THM-3064's marked shifted norm is iff the supplied-pair Keller congruence;
-  tame `C3` requires inverse-different cofactor valuation `-2`, leaving global
-  polynomial realization as the missing gate.
+  OPEN and needs branchwise cofactor units.  THM-3066 retains only their
+  product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
+  THM-3067's 12-flag `A4` bitorsor loses its `V4` origin in the `C3` quotient;
+  odd reflection and physical realization remain sidecars.
   THM-2862/2864/2968/2971 give two sextic
   lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
   affine sidecars remain.  THM-2867 gives the regular `S3` carrier.  THM-2871 makes that face unramified and
