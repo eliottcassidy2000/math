@@ -7,9 +7,9 @@ status: >
   THM-3110 product-Gamma response banks is a nonnegative transport from a
   Young-subgroup fibre type to coarser fibre types.  Consequently the
   row-normalized central operator is positive semidefinite for every integer
-  anchored support 0<a<b.  This is a new operator decomposition of the
-  already-known low-degree positivity, not an all-degree product-Gamma or
-  Gaussian-moment proof.
+  anchored support 0<a<b.  This is new normalized row-minimum positivity,
+  stronger than THM-3110's unnormalized low-degree Schur positivity, but not
+  an all-degree product-Gamma or Gaussian-moment proof.
 source: root/multiscale-newton-flag-2026-08-02
 depends_on:
   - THM-3110-arbitrary-anchored-product-gamma-dominant-tail-and-low-histogram-reduction
@@ -36,8 +36,10 @@ missing operation is to forget labels only after grouping equal fibre sizes,
 and then transport negative mass upward in the refinement order.  That
 operation succeeds globally in the first four nonzero degrees.
 
-This theorem gives a stronger *mechanism* than the scalar Schur checks already
-contained in THM-3110.  Its degree range is deliberately smaller.
+This theorem strengthens the scalar Schur checks in THM-3110: those prove
+`Phi_j(s_lambda)>=0`, whereas the operator below proves that the normalized
+ratio is minimized by the row partition.  Its degree range is deliberately
+smaller.
 
 ## 1. Uniform Young-fibre gaps
 
