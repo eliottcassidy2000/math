@@ -2,7 +2,7 @@
 id: THM-3252
 title: "FC(3) affine-coordinate cubics: Bessel-order mismatch excludes both simplex periods"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  Let ell be
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let ell be
   any nonconstant algebraic affine polynomial on the coordinate two-simplex
   and Q any algebraic polynomial of degree exactly three.  Then
   `int_Delta exp(Q(ell))dA` is neither zero nor `1/2`.  After exact cubic
@@ -20,6 +20,13 @@ status: >
   nonsplit packet.  Beukers Corollary 1.4 excludes the two values.  This
   closes all algebraic affine-coordinate cubics, not arbitrary bivariate
   cubics, the projective-leading-form reduction, or FC(3).
+audit: >
+  An independent audit rederived both Euclidean divisions, the collision-safe
+  rational splitting classification (including its critical top-degree
+  obstruction), the turn and divided-difference moment packets, the critical
+  fibre directions, the 1/3-versus-2/3 quotient defect, doubled-knot cyclicity,
+  and the Beukers ordinary-point implication.  Fresh normal and optimized
+  runs byte-match the stored transcript and both declared hashes.
 source: codex-2026-08-02-fc3-cubic-frontier
 depends_on:
   - THM-3250-fc3-noncollinear-pure-power-turn-current-exclusion
@@ -38,6 +45,8 @@ output_sha256: c3103797663c6b848de2f90553d2d8e423a090bf253bcaca3de12e4721fc1003
 ---
 
 # THM-3252 -- every algebraic affine-coordinate cubic is excluded
+
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Result and sharp scope
 

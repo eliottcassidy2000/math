@@ -20,7 +20,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) open.** THM-2941 closes `m=1`, `Q>6m`, rays `4/5/6`, and other gcd-`>=48` channels; reflected residual: `561`, `m>=2,3<Q/m<6`, off `4/5`, gcd `<=47`. THM-3135 shows simpler uniform H lanes are a DAG, so the repair needs its richer atlas. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
+1. **LRC(14) open.** THM-2941/3210 reduce the reflected sufficient-family residual to `561` bodies, `m>=2,3<Q/m<6`, off `4/5`, gcd `<=5`; THM-3210 uses 258 exact scale bridges. THM-3135 blocks uniform H lanes. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
@@ -58,7 +58,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is the exact new counterexample. THM-2063/2071 close linear/quadratic source fibers; THM-2084/2118/2102 close cubics; THM-2202 removes every twice-odd finite pole.
     THM-2214/2247 close the stated terminal degrees through `14`; THM-2371/THM-2376/THM-2406 close the inherited degree-`18` branch; THM-2671/2683/2692 and THM-2778 close the inherited nonsplit degree-`22` branch and every complete chosen-sheet split exact-prefix degree. THM-2796 exposes the live carrier `A(R_Q/q)=VG`.
     THM-3057/3059 make quartic Jelonek parity tame infinity-inertia sign; THM-3066 retains only the cofactor product, and THM-3064's pointed norm does not exclude `C3`.
-    THM-3070/3074/3080/3081 terminate the coordinate-line `C3` key tower in a Mobius decoder. THM-3201 identifies its local full-resolvent field and proves the `V4` Kummer packet splits there; its graph-quartic addendum proves the surviving `q_0` cubeclass is automatically saturated and isolates the uncontrolled terminal-prefactor class `[L]`, forcing a multi-place, marked, or companion sidecar.
+    THM-3070/3074/3080/3081/3201 terminate the local `C3` decoder and split its `V4` Kummer packet. THM-3230's centered norm recovers intrinsic `Lambda` from a supplied marked fixed sheet even when `3|m`; a coherent global mark remains open.
     THM-3123 classifies the last two abstract heptic passports and finds four hostile-audited `S7` maps, but does not supply Keller-chart entry.
     THM-3133 excludes simple response zeros; THM-3140 blocks only its explicit `R=8` odd-bipole.
     Degrees `>=26`, nonpolynomial prefixes, chart entry, raising/descent, uniform Keller-`C3` exclusion, other branches, `JC(2)`, and `DC(2)` remain open.
