@@ -2,7 +2,7 @@
 id: THM-3144
 title: "Mixed-depth selector persistence death barcode"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   At support (1,3), bank I2, probability laws on the 41 physical depth-one
   and depth-two virtual-prefix currents exhibit an exact persistence split.
   The law 2/9 delta_(1)+2/9 delta_(2)+5/9 delta_(2,2) is strictly
@@ -14,6 +14,14 @@ status: >
   averaged-current theorem, not an original-response decomposition or a
   sequential stochastic pole flag.
 source: root/multiscale-newton-flag/product-gamma-width3-2026-08-02
+audit: >
+  An independent theorem audit reconstructed the 8+33 physical-state census,
+  every upset/nonzero-row total, the strict 2/9--2/9--5/9 law through degree
+  10, its exact degree-11 deficit, and the exact four-state degree-11 fibre
+  law.  It separately verified the nonnested pass profile and the positive
+  four-row Farkas implication proving C_11 empty while P_11 remains nonempty.
+  Fresh normal and optimized runs byte-match the stored 20-line transcript
+  and its declared LF-normalized hashes.
 depends_on:
   - THM-3115-low-degree-monomial-fibre-newton-refinement-transport
   - THM-3120-row-pole-prefix-newton-flag-positivity
@@ -30,8 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3144 -- mixed-depth selector persistence death barcode
 
-**PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3137 proves that probability laws on the eight physical depth-one pole
 currents can be Hasse-positive through degree 9, but not at degree 10.  It
@@ -311,4 +318,4 @@ stopping-depth law `(11)` through degree 10, together with the separate live
 degree-11 fibre `(18)`.  The missing sidecar is a lawful transport or gluing
 map between selectors at adjacent degrees.
 
-QED (candidate pending independent theorem audit).
+QED.

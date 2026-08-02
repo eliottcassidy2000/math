@@ -1,0 +1,273 @@
+#!/usr/bin/env python3
+"""Exact finite quotient controls for THM-3145."""
+
+from __future__ import annotations
+
+import hashlib
+from collections import Counter, deque
+from itertools import combinations
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+SOURCE_3141 = ROOT / (
+    "04-computation/modular_v4_psl2f3_congruence_shadow_thm3141.py"
+)
+OUTPUT_3141 = ROOT / (
+    "05-knowledge/results/modular_v4_psl2f3_congruence_shadow_thm3141.out"
+)
+SOURCE_3141_SHA256 = "1730c911852c4680bc85ec7eeeee17861dfd4a58265e221e46c194b5e925b1ea"
+OUTPUT_3141_SHA256 = "d87ef15554abb466da6cc63988f3bd1e4f044dc08b8ed9b4aed3ce5a9d935a48"
+RECORD_3141_SHA256 = "578b192b42841ade28003561fe4a56b7bfafc1daf39bc0d98416a3449044769c"
+
+IDENTITY = (0, 1, 2, 3)
+S = (1, 0, 3, 2)
+R = (0, 2, 3, 1)
+
+
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
+
+
+def lf_sha(path):
+    payload = path.read_bytes().replace(b"\r\n", b"\n")
+    require(b"\r" not in payload, ("bare CR", path))
+    return hashlib.sha256(payload).hexdigest()
+
+
+def compose(left, right):
+    """Return left after right."""
+    return tuple(left[right[index]] for index in range(4))
+
+
+def inverse(permutation):
+    answer = [0] * len(permutation)
+    for index, image in enumerate(permutation):
+        answer[image] = index
+    return tuple(answer)
+
+
+def power(permutation, exponent):
+    answer = IDENTITY
+    for _ in range(exponent):
+        answer = compose(permutation, answer)
+    return answer
+
+
+def generated_group(generators):
+    seen = {IDENTITY}
+    queue = deque([IDENTITY])
+    while queue:
+        current = queue.popleft()
+        for generator in generators:
+            nxt = compose(generator, current)
+            if nxt not in seen:
+                seen.add(nxt)
+                queue.append(nxt)
+    return tuple(sorted(seen))
+
+
+def left_coset(representative, subgroup):
+    return tuple(sorted(compose(representative, member) for member in subgroup))
+
+
+def all_cosets(group, subgroup):
+    return tuple(sorted({left_coset(element, subgroup) for element in group}))
+
+
+def induced_action(group_element, cosets):
+    index = {coset: position for position, coset in enumerate(cosets)}
+    return tuple(
+        index[tuple(sorted(compose(group_element, member) for member in coset))]
+        for coset in cosets
+    )
+
+
+def projective_mod3(vector):
+    a, b = (entry % 3 for entry in vector)
+    require((a, b) != (0, 0), vector)
+    pivot = a if a else b
+    inverse_pivot = pow(pivot, -1, 3)
+    return (a * inverse_pivot % 3, b * inverse_pivot % 3)
+
+
+def gate(vector):
+    a, b = vector
+    return max(13 * abs(b), abs(a - 12 * b))
+
+
+def all_distances(adjacency, start):
+    distances = {start: 0}
+    queue = deque([start])
+    while queue:
+        current = queue.popleft()
+        for neighbor in adjacency[current]:
+            if neighbor not in distances:
+                distances[neighbor] = distances[current] + 1
+                queue.append(neighbor)
+    return distances
+
+
+def main():
+    require(lf_sha(SOURCE_3141) == SOURCE_3141_SHA256, "THM-3141 source changed")
+    require(lf_sha(OUTPUT_3141) == OUTPUT_3141_SHA256, "THM-3141 output changed")
+    require(
+        f"record_sha256={RECORD_3141_SHA256}" in OUTPUT_3141.read_text(),
+        "THM-3141 record changed",
+    )
+
+    group = generated_group((S, R))
+    require(len(group) == 12, len(group))
+    subgroup_s = tuple(sorted((IDENTITY, S)))
+    subgroup_r = tuple(sorted((IDENTITY, R, power(R, 2))))
+    cosets_s = all_cosets(group, subgroup_s)
+    cosets_r = all_cosets(group, subgroup_r)
+    require((len(cosets_s), len(cosets_r)) == (6, 4), (cosets_s, cosets_r))
+
+    s_index = {coset: index for index, coset in enumerate(cosets_s)}
+    r_index = {coset: index for index, coset in enumerate(cosets_r)}
+    edges = tuple(
+        (
+            s_index[left_coset(element, subgroup_s)],
+            r_index[left_coset(element, subgroup_r)],
+        )
+        for element in group
+    )
+    require(len(set(edges)) == 12, edges)
+    degree_s = Counter(edge[0] for edge in edges)
+    degree_r = Counter(edge[1] for edge in edges)
+    require(tuple(sorted(degree_s.values())) == (2,) * 6, degree_s)
+    require(tuple(sorted(degree_r.values())) == (3,) * 4, degree_r)
+
+    pair_by_s = []
+    for vertex in range(6):
+        neighbors = tuple(sorted(edge[1] for edge in edges if edge[0] == vertex))
+        require(len(neighbors) == 2 and neighbors[0] != neighbors[1], (vertex, neighbors))
+        pair_by_s.append(neighbors)
+    pair_by_s = tuple(pair_by_s)
+    suppressed_pairs = tuple(sorted(pair_by_s))
+    k4_edges = tuple(combinations(range(4), 2))
+    require(suppressed_pairs == k4_edges, (suppressed_pairs, k4_edges))
+    require(12 - (6 + 4) + 1 == 3, "subdivision cycle rank")
+    require(6 - 4 + 1 == 3, "K4 cycle rank")
+
+    # The normal V4 generated by the three conjugate pair flips acts regularly
+    # on the four C3-cosets.
+    conjugates = tuple(
+        compose(compose(power(R, exponent), S), inverse(power(R, exponent)))
+        for exponent in range(3)
+    )
+    v4 = generated_group(conjugates)
+    require(len(v4) == 4, v4)
+    v4_actions = tuple(induced_action(element, cosets_r) for element in v4)
+    require(len(set(v4_actions)) == 4, v4_actions)
+    require(
+        all(action == IDENTITY or all(action[index] != index for index in range(4)) for action in v4_actions),
+        v4_actions,
+    )
+    remaining_edges = set(k4_edges)
+    opposite_orbits = []
+    while remaining_edges:
+        seed = min(remaining_edges)
+        orbit = {
+            tuple(sorted((action[seed[0]], action[seed[1]])))
+            for action in v4_actions
+        }
+        require(len(orbit) == 2, (seed, orbit))
+        orbit_tuple = tuple(sorted(orbit))
+        require(set(orbit_tuple[0]).isdisjoint(orbit_tuple[1]), orbit_tuple)
+        opposite_orbits.append(orbit_tuple)
+        remaining_edges.difference_update(orbit)
+    opposite_orbits = tuple(sorted(opposite_orbits))
+    require(len(opposite_orbits) == 3, opposite_orbits)
+
+    # The chosen C3 stabilizes one degree-three vertex and cycles its three
+    # incident edge labels.
+    action_r = induced_action(R, cosets_r)
+    fixed_r_vertices = tuple(index for index, image in enumerate(action_r) if index == image)
+    require(len(fixed_r_vertices) == 1, (action_r, fixed_r_vertices))
+    fixed_vertex = fixed_r_vertices[0]
+    incident_elements = tuple(group[index] for index, edge in enumerate(edges) if edge[1] == fixed_vertex)
+    incident_set = set(incident_elements)
+    require(len(incident_set) == 3, incident_set)
+    require({compose(R, element) for element in incident_set} == incident_set, incident_set)
+
+    # The four triangles of K4 are the first quotient cycles after suppressing
+    # the C2 vertices.  Their cycle space has rank three.
+    triangles = tuple(combinations(range(4), 3))
+    require(len(triangles) == 4, triangles)
+    require(all(all(tuple(sorted(edge)) in k4_edges for edge in combinations(triangle, 2)) for triangle in triangles), triangles)
+
+    # The once-subdivided K4 remains a partial cube.  Map its four C3 vertices
+    # to singleton subsets of [4] and its six C2 vertices to 2-subsets.
+    incidence_edges = tuple((s_vertex, 6 + r_vertex) for s_vertex, r_vertex in edges)
+    adjacency = {vertex: set() for vertex in range(10)}
+    for left, right in incidence_edges:
+        adjacency[left].add(right)
+        adjacency[right].add(left)
+    cube_masks = tuple(
+        sum(1 << coordinate for coordinate in pair_by_s[vertex])
+        for vertex in range(6)
+    ) + tuple(1 << vertex for vertex in range(4))
+    require(len(set(cube_masks)) == 10, cube_masks)
+    for source_vertex in range(10):
+        distances = all_distances(adjacency, source_vertex)
+        require(len(distances) == 10, distances)
+        for target_vertex in range(10):
+            hamming = (cube_masks[source_vertex] ^ cube_masks[target_vertex]).bit_count()
+            require(distances[target_vertex] == hamming, (source_vertex, target_vertex, distances[target_vertex], hamming))
+    theta_counts = Counter(
+        (cube_masks[left] ^ cube_masks[right]).bit_length() - 1
+        for left, right in incidence_edges
+    )
+    require(tuple(sorted(theta_counts.items())) == ((0, 3), (1, 3), (2, 3), (3, 3)), theta_counts)
+
+    # One Gamma(3)-fibre already crosses the fixed THM-2056 sufficient gate:
+    # T^3(a,b)=(a+3b,b) is invisible modulo 3 but not to the polar metric.
+    gamma3_pair = ((43, 2), (49, 2))
+    require(projective_mod3(gamma3_pair[0]) == projective_mod3(gamma3_pair[1]), gamma3_pair)
+    invoices = tuple(
+        (91 * gate(vector), sum(entry * entry for entry in vector))
+        for vector in gamma3_pair
+    )
+    require(invoices == ((2366, 1853), (2366, 2405)), invoices)
+    require(invoices[0][0] > invoices[0][1] and invoices[1][0] <= invoices[1][1], invoices)
+
+    record = (
+        group,
+        subgroup_s,
+        subgroup_r,
+        cosets_s,
+        cosets_r,
+        edges,
+        pair_by_s,
+        suppressed_pairs,
+        v4,
+        v4_actions,
+        opposite_orbits,
+        action_r,
+        fixed_vertex,
+        triangles,
+        cube_masks,
+        tuple(sorted(theta_counts.items())),
+        gamma3_pair,
+        invoices,
+    )
+    digest = hashlib.sha256(repr(record).encode()).hexdigest()
+    print("THM3145 Bass-Serre two-three tree tetrahedral quotient")
+    print("abstract_tree=vertices:G/C2_disjoint_G/C3;edges:G;degrees:2,3;faithful:left_regular_edges")
+    print("rooted_view=suppress_degree2:three_regular_tree;three_binary_forward_sectors;one_oriented_root_edge_selects_one_binary_tree")
+    print("ternary_view=chosen_C3_cycles_the_three_incident_edges_at_each_C3_vertex")
+    print(f"mod3_quotient=group:{len(group)};C2_vertices:{len(cosets_s)};C3_vertices:{len(cosets_r)};edges:{len(edges)}")
+    print(f"suppressed_graph=K4;edge_pairs:{suppressed_pairs};triangles:{len(triangles)};beta1:3")
+    print(f"torsor=normal_V4_regular_on_four_C3_cosets;six_edges_split_into_three_opposite_pairs:{opposite_orbits}")
+    print("partial_cube=subdivided_K4_embeds_as_weight1_and_weight2_vertices_of_Q4;four_Theta_classes_of_size3;suppressed_K4_not_partial_cube")
+    print("missing_coordinate=Gamma3_cycle_lift;one_primitive_triangle_is_the_suppressed_(SR)^3_six_cycle")
+    print("gate_fibre_hostile=(43,2)_fails:2366>1853;T3(43,2)=(49,2)_passes:2366<=2405;same_P1_F3_point")
+    print(f"record_sha256={digest}")
+    print("all_exact_controls=PASS")
+
+
+if __name__ == "__main__":
+    main()
