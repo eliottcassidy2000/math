@@ -15,7 +15,7 @@ status: >
   finite-low-pair torsion, torsion-density pigeonhole, scalar-splice,
   status-descent, and cardinality translated-band addenda improve the
   k=2/k=3 first-drift caps from 2142/380
-  to 1579/236 (using the THM-3041/3052/3061 continuation).
+  to 1579/234 (using the THM-3041/3052/3061/3071 continuation).
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -27,18 +27,22 @@ status: >
   a bank of 2,442 of the 3,003 bodies, leaving 561 uncovered rather than
   proving them impossible.  The audited recursive cap-aware projective-CSP
   and located-transport chain closes every body for spread D>=6 and
-  3m>=4D.  The later m>=D, 4m>=3D, and 3m>=2D refinements are
-  AUDIT-REQUIRED by MISTAKE-347: their split-tail lanes reverse both ratio
-  and ordered labels and omit one physical ordering.
+  3m>=4D.  MISTAKE-347 leaves the later m>=D and 4m>=3D refinements
+  AUDIT-REQUIRED: their split-tail lanes reverse both ratio and ordered labels
+  and omit one physical ordering.  A replacement cap-5/2 referee fixes one
+  physical pair, covers its whole ratio interval by closed Farey lanes,
+  couples packet scale to singleton debt, and independently recomputes the
+  surviving 561-body proof graph; it restores D>=6,3m>=2D.  The cap-3
+  half-cone remains retracted.
   At the endpoint the new zero channel 1:2 completes the balanced gain
-  triangle (3/2)(4/3)=2; orientation-split tails close its four unconstrained
-  bodies.  Past cap two the balanced triangle becomes interior and no
-  full-cap component remains; 93 located policies and eleven tail lanes close
-  the cap-7/3 residual.  At cap 5/2 all 65 forced-full zero components contain
-  the old triangle and their unique prime-five edge is a bridge;
-  exact located policies and tails are finite-exact data but do not yet close
-  all assignments.  The remaining proved reflected certificate-failure locus
-  is confined to those 561 bodies in D>=6,1<=m<4D/3;
+  triangle (3/2)(4/3)=2, but its split-tail closure is not proved.  Past cap
+  two the triangle becomes interior; the 93 located policies and eleven old
+  cap-7/3 lanes remain finite-exact sidecars, not a cone theorem.  At cap 5/2
+  all 65 forced-full zero components contain
+  the old triangle and their unique prime-five edge is a bridge.  Repaired
+  same-owner tails close the two formerly omitted assignment orientations.
+  The remaining reflected certificate-failure locus is confined to those 561
+  bodies in D>=6,1<=m<2D/3;
   the finite censuses, full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is internal
   exact computation and proof audit; there is no Lean or external peer-review
@@ -266,6 +270,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_reflected_three_halves_cone_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_four_thirds_cone_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_four_thirds_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_two_thirds_tail_orientation_repair_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_two_thirds_tail_orientation_repair_thm2941.out
   - 04-computation/lrc14_j7_reflected_phase_zero_gain_atlas_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_phase_zero_gain_atlas_thm2941.out
   - 04-computation/lrc14_j7_k3_z239_gap238_z237_compositional_descent_thm3061.py
@@ -1085,6 +1091,9 @@ monotone interpolation.  The final two displayed refinements are retained as
 m>=2D,       2m>=3D,       3m>=4D;      [m>=D, 4m>=3D under audit]. (25i10)
 ```
 
+The independent fixed-owner repair `(25i13c)` below separately proves
+`3m>=2D`; it does not promote either bracketed split-tail route.
+
 Each refinement regenerates the complete rational channel alphabet at its
 own projective cap, solves the gain-graph CSP in two search orders, and closes
 the residual bodies by oriented located controls plus analytic tails with
@@ -1145,14 +1154,49 @@ old balanced triangle, has all four gains `4/3,3/2,2,5/2`, and has exactly one
 coordinate, it cannot lie on a multiplicative cycle; the exact graph audit
 indeed makes it a bridge in all `65` components.  The remaining traps close
 by `1,566` oriented controls on `160` located policies and `426` exhaustive
-heads on fourteen analytic tail lanes.  Therefore
+heads on fourteen analytic tail lanes.  The original assembly therefore made
+the audit-required claim
 
 ```text
 AUDIT-REQUIRED CLAIM: D>=6 and 3m>=2D.                           (25i13a)
 ```
 
-Consequently the current **proved** reflected obligation is confined to the
-`561` bodies in the wedge `D>=6,1<=m<4D/3`.  This is a
+The implication from those split lanes remains invalid, but an independent
+replacement referee proves the same scoped conclusion without it.  It removes
+all four faulty rows and regenerates the `561` bodies, the `389/172` CSP
+partition in both search orders, `160` constrained policies with all `1,566`
+physical orientations, and the ten unaffected whole tails with `300` finite
+heads.  Repeated levels are discharged separately before channel reduction.
+
+Only two bodies then need new tails.  For
+`H=(1,2,3,4,6,12)`, one fixed physical pair `(0,1)` owns the entire interval
+`q_1/q_0 in [2/5,5/2]`, covered by the five closed Farey intervals
+
+```text
+[2/5,3/7], [3/7,1/2], [1/2,2/3], [2/3,11/9], [11/9,5/2].
+```
+
+For `H2=(1,3,4,6,8,12)`, the same fixed pair owns the whole interval at once.
+Thus neither ratio side is coupled to a renamed pair.  The cone gives
+`q_max<=5m/2`; a reduced channel `(P,Q)` at scale `g` therefore forces
+
+```text
+m >= ceil(2g max(P,Q)/5).                                      (25i13b)
+```
+
+All `605` replacement head channels are checked to their first uniform scale.
+Thereafter the phase loss and transport displacement decrease exactly with
+`g`, while the level in `(25i13b)` is nondecreasing and singleton debt is
+nonincreasing.  The first positive tail margin therefore persists at every
+later scale.  Ordinary and optimized replays agree byte-for-byte, including
+the formerly missed assignments `(2,1)` on `H` and `(5,4,2)` on `H2`.  Hence
+
+```text
+PROVED REPAIR: D>=6 and 3m>=2D.                                (25i13c)
+```
+
+The current proved reflected obligation is consequently confined to the
+`561` bodies in the wedge `D>=6,1<=m<2D/3`.  This is a
 sufficient-certificate residual, not a physical-survivor census.  More
 globally, the correction floor `c>=-12/49` makes phase zero imply `PQ<=12`,
 so the zero-gain atlas is exactly
@@ -2539,15 +2583,20 @@ The audit-required cap-`5/2` source/output/semantic hashes are
 `e77929c87f9d9f8fb7ce3a347c48522e87f63fa7c7085eb9e2cd8fe0bb4e4a90`,
 and `b34db3e25b9e4c81c1549f1ec7c7ab78e935ec778610daf617934b66b3a47304`;
 both interpreter modes reproduce all `1,566+426` controls and the 65 bridge
-components exactly.  Those finite facts do not repair MISTAKE-347's missing
-assignment orientation and are no longer dependencies of the proved assembly.
+components exactly.  Those old facts alone do not repair MISTAKE-347.  The
+replacement source/output/semantic hashes are
+`420d21d0c65cfbd57d8cc926c04993b14e61d2554fb291a836af949d1fd664ed`,
+`87db762ba3ff6794748a2a19a4bf192a8cef8d6cebe7c619c871579da669864f`,
+and `525c8d2d89cf11c9fcc6260dbf81e57d0e47c999049c89b9148ae731dbac4730`;
+it regenerates those finite obligations and adds the fixed-owner assignment
+cover, coupled-debt heads, and algebraic infinite-tail audit.
 
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,
-close the `561`-body reflected wedge `D>=6,1<=m<4D/3`, repair the split-tail
-orientation suffix, finish the remaining
+close the `561`-body reflected wedge `D>=6,1<=m<2D/3`, repair the cap-3
+half-cone, finish the remaining
 `k=2,3` finite decision trees, classify the zero/one-aligned multi-drift
 address hypergraph, close the six-body/seven-tail rung, or prove LRC(14).
 The independent THM-2928 divisor-status route closes `k=4`; THM-2980/2995
-and THM-2981/3061 lower the composed `k=2,3` caps to `1579/236`, respectively,
+and THM-2981/3071 lower the composed `k=2,3` caps to `1579/234`, respectively,
 without emptying the sectors below those caps.

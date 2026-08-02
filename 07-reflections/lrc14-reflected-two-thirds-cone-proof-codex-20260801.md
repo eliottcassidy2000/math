@@ -5,6 +5,11 @@
 > one-cone referee.  The bridge and CSP censuses remain finite-exact, but the
 > all-assignment cone conclusion is not proved.
 
+The conclusion is now recovered by the independent fixed-owner replacement
+[`lrc14-reflected-tail-orientation-correction-and-two-thirds-repair-codex-20260801.md`](lrc14-reflected-tail-orientation-correction-and-two-thirds-repair-codex-20260801.md),
+not by promoting the argument preserved below.  The cap-`3` half-cone remains
+retracted.
+
 **Proof candidate + frozen exact referee, 2026-08-01.**  Inside the sufficient
 reflected `k=1` family of
 [THM-2941](../01-canon/theorems/THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary.md),

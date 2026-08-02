@@ -22,12 +22,13 @@ Format per entry:
   Thus the admissible assignment `q_0=2,q_1=1` lies in the cap-two interval
   but in neither asserted lane.  Exhausting every channel *inside* each lane
   did not prove that the lanes cover every assignment.
-- **Repair / strongest survivor:** the cap-`3` half-cone claim is quarantined,
-  and the promoted one, three-quarter, and two-thirds refinements are
-  `AUDIT-REQUIRED` until an assignment-level orientation cover is proved.
-  The last unaffected assembled cone is the full-interval cap-`7/4` theorem
-  `D>=6, 3m>=4D`; hence the current proved reflected certificate-failure wedge
-  is `561` bodies with `D>=6,1<=m<4D/3`.  Future split tails must assert a
+- **Repair / strongest survivor:** the cap-`3` half-cone remains quarantined,
+  as do the old one- and three-quarter-cone split proofs.  A replacement
+  cap-`5/2` referee fixes one physical pair across a closed Farey cover,
+  recomputes every surviving `561`-body obligation, couples channel scale to
+  singleton debt, and checks both hostile orientations.  It independently
+  restores `D>=6,3m>=2D`, so the proved reflected certificate-failure wedge is
+  now `561` bodies with `D>=6,1<=m<2D/3`.  Future split tails must assert a
   disjunction on the original level assignment, not merely enumerate two
   oriented channel lists.
 
