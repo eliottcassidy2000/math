@@ -1,0 +1,18 @@
+FINITE-FIBRE INITIAL-FACE AUGMENTATION / K4 HAFNIAN: VERIFIED-EXACT PASS
+general_law=sigma!=0 iff valuation(sum_i A_i)=minimum valuation
+robust_lift_law=sigma!=0 iff every lift with fixed valuations/residues is nonzero
+zero_sigma_boundary=same first-order data admit exact-zero and higher-valuation nonzero lifts
+actual_nonvanishing=requires the unbounded filtered contraction jet when sigma=0
+zero_sum_formula=((q-1)^r+(-1)^r*(q-1))/q
+F5_zero_sum_counts=r1:0;r2:4;r3:12;r4:52;r5:204;r6:820;r7:3276;r8:13108;exhaustive_tuples:87380
+F5_zero_sigma_lift_constructor_checks=39216;arities=1..5;values=0..2
+truncated=q:5;depth:3;triples:1906624;signatures:1728;sigma_nonzero:1536412;sigma_zero:370212;valuation_exact:1536412;robust_groups:1548;ambiguous_groups:168;top_boundary_groups:12
+deep_hostile_checks=12;depths=1..12
+clutch_hostile=lambda024/live versus lambda222/zero;clutch=(000,0);residues=(1,1,3)
+oriented_Pluecker_sigma_zero_checks=5040;q=5
+S4_matching_image=6;V4_kernel=4;symmetry_checks=10368
+vertex_unit_gauge_checks=1048576;q=5
+selector_scope=apply only after THM2290 endpoint-colour selection and pair aggregation
+torsor_scope=initial face is S3-equivariant and V4-blind;no quartic origin is recovered
+scratch_origin_commit=631ae23d4c76c7cbba40a6aef9a1b3c02d878c8d
+semantic_sha256=ed996d38ec1a9b6c4dc734ed5311af1e789d3a50c9b0d946f823df9dad4169a8
