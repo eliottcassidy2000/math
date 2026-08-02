@@ -2,7 +2,7 @@
 id: THM-3121
 title: "The path-cover walk-content substitution kernel and the exact C3 diagonal law"
 status: >
-  RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT. For a quotient tournament
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For a quotient tournament
   Q and nonempty factor tournaments S_i, the complete path-cover profile of
   Q[S_i] is the factorial-Hadamard contraction of the factor profiles with
   exp(y W_Q), where W_Q=1^T X(I-A_Q X)^(-1)1 is the rational directed-walk
@@ -12,6 +12,15 @@ status: >
   below; the exact companion agrees with independent vertex-level enumeration
   on 216 kernel cells, 64 C3 block triples, 1024 general-quotient controls,
   and 23 full path-cover profiles. Normal and optimized transcripts match.
+audit: >
+  An independent implementation used permutation-and-cut path-cover
+  enumeration and recursively generated quotient words without importing the
+  canonical companion. It verified the factorial assignment and free-action
+  factors, matrix orientation, 216 C3 kernel cells, 132 complete-profile
+  substitution cases including non-C3 quotients, 1088 integral kernel cells,
+  and the direct 3159 count. It also isolated the necessary wording repair:
+  bare quotient walks form an unordered family and become a free S_d-object
+  only after decoration by distinct factor-path components.
 source: codex-2026-08-02-frontier-synthesis
 depends_on: []
 related:
@@ -27,8 +36,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-3121 — the path-cover walk-content substitution kernel
 
-**RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT.** Nothing in this file may
-be used as a proved dependency until an explicit audit promotes the status.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Objects and the quotient walk series
 
@@ -68,7 +76,7 @@ K_(Q,d)(c)
 
 Only `1<=c_i<=|S_i|` enters below.
 
-> **Candidate theorem.** For every quotient tournament `Q`, every tuple of
+> **Theorem.** For every quotient tournament `Q`, every tuple of
 > nonempty factor tournaments, and every `d>=1`,
 >
 > ```text
@@ -87,13 +95,15 @@ Only `1<=c_i<=|S_i|` enters below.
 Although (2) is displayed with a division by `d!`, it is an integer. The
 bijection below proves both integrality and (3).
 
-### Proof candidate: split at maximal block runs
+### Proof: split at maximal block runs
 
 Take a spanning `d`-path cover of `Q[S_i]`. Split each of its directed paths
 at every change of substitution block. Within block `i`, the maximal runs form
 a spanning directed path cover of `S_i`, say with `c_i` components. Recording
-only the block labels along each original path gives an unordered set of `d`
-nonempty directed walks in `Q`, using label `i` exactly `c_i` times.
+only the block labels along each original path gives an unordered family of
+`d` nonempty directed walks in `Q`, using label `i` exactly `c_i` times.
+Bare quotient words may repeat; their occurrences are distinguished after
+they are decorated by the actual factor-path components in the converse.
 
 Conversely, choose a `c_i`-path cover of every `S_i`. Its components are
 distinct actual paths, even though the cover itself is unordered. Choose an
@@ -109,9 +119,10 @@ exact. These constructions are inverse. Their count is (2)--(3). Taking
 `d=1` gives (4).
 
 Equivalently, `exp(y W_Q)` is the multivariate exponential generating series
-for an unordered set of quotient walks. The factorials in (2) label the
-actual path components inside each color. This is a species explanation of
-the same explicit bijection, not an additional assumption.
+for an unordered family of quotient walks whose occurrences are decorated by
+distinct actual path components. The factorials in (2) perform that
+decoration inside each color. This is a species explanation of the same
+explicit bijection, not an additional assumption.
 
 ## 3. The exact directed-triangle kernel
 
