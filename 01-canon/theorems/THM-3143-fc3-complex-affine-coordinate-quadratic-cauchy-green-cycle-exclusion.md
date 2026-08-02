@@ -910,6 +910,6 @@ isotropic edge, a two-edge equal-`kappa` class, and a full three-edge tangent
 class.  Normal, optimized, and stored outputs are byte-identical.
 
 ```text
-source sha256 = 217b4f1112f9a55948a0df651f3b4ef32cd278be165fb71a7a9c0673c1725c19
-output sha256 = 5aab8f195683f8e4dee46cef9c3b90cbf82930b79f19f695e40d72963346c16c
+source sha256 = dcd51bce491a9cacf5b12912ffa5ea72f549bbdafc66ac4142654c20f04bab8a
+output sha256 = e29c446e640b23fb18d2d326d71db1cc702c79c1a33ef3fb145fdf79fd8023bd
 ```

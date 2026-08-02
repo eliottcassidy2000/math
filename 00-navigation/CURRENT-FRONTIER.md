@@ -377,7 +377,7 @@ Classify profiles under support operations; study analytic continuation and auto
   open.  THM-2799/2800/2805/2808 complete accessory `e=2`; THM-2817 the sextic `e=3`; THM-2840 the heptic `T_7` carrier.
   Audited THM-3123 makes the two remaining accessory algebras reduced length six and yields `1+3` nonsplit `S_7` maps, completing the abstract heptic atlas.
   This supplies no Keller-chart entry and proves neither `JC(2)` nor `DC(2)`.
-- **Factorial:** MISTAKE-350 fixes typing; THM-3124/3125 give recurrence/rays and THM-3134 prime windows. THM-3116/3132/3133 prove the simplex-period law for all algebraic quadratics via edge blocks/Euler flux. Higher phases and `FC(3)`/`SFC(3)` remain OPEN.
+- **Factorial:** MISTAKE-350 fixes typing. THM-3131/3140 close prime/even resonances; THM-3116/3142/3143 prove all algebraic quadratic simplex periods. Higher phases and full `FC(3)`/`SFC(3)` remain OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

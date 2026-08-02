@@ -20,7 +20,7 @@ source: root/factorial-composite-newton-2026-08-02
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
 related:
-  - THM-3134-prime-resonance-newton-slope-separation
+  - THM-3131-prime-resonance-newton-slope-separation
 script: 04-computation/factorial_even_resonance_bessel_residual_thm3140.py
 output: 05-knowledge/results/factorial_even_resonance_bessel_residual_thm3140.out
 script_sha256: fd1d7f7c1c87d51ee4fe69355571847547e23545de2d928325471771da0a28cf
@@ -45,10 +45,10 @@ L(q^r)=L(q^(r+1))=L(q^(r+2))=0,                              (2)
 ```
 
 then a contradiction results.  Thus no exact quadratic has a bad
-three-moment window at an even resonance.  Combining this with THM-3134,
+three-moment window at an even resonance.  Combining this with THM-3131,
 every still-open bad resonance is odd composite.
 
-The mechanism repairs the precise information loss left open by THM-3134.
+The mechanism repairs the precise information loss left open by THM-3131.
 At a composite resonance the raw Newton slopes can coincide.  Here they do:
 at `p=2` both polynomials have the single slope `1`.  Their residual initial
 polynomials, however, are consecutive Bessel polynomials modulo `2`, and
@@ -238,7 +238,7 @@ nonzero residue `bar(x)` a common root of `beta_(d-2)` and `beta_(d-1)`.
 This contradicts `(20)`.  Hence `(9)`, and therefore `(2)`, is impossible.
 QED.
 
-Combining THM-3124, THM-3134, and this theorem, a still-open exact-quadratic
+Combining THM-3124, THM-3131, and this theorem, a still-open exact-quadratic
 bad window must now satisfy
 
 ```text
