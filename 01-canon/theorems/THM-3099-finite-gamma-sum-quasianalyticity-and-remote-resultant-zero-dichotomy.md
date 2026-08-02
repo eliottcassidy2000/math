@@ -19,8 +19,11 @@ audit: >
   full Newton expansion leave only finite products with eventually positive
   rational quotients, and independently accepted the finite-core escape
   corollary.  Normal, optimized, and stored output matched exactly; both LF
-  hashes passed and no truth-bearing assert was present.
-depends_on: []
+  hashes passed and no truth-bearing assert was present.  The dependency on
+  THM-3097 and the requirement that an affine-clock test sample lie on that
+  clock are explicit.
+depends_on:
+  - THM-3097-translated-support-monge-compactification-and-cofinite-bad-set-induction
 related:
   - THM-3069-one-normal-remote-terminal-suspension-and-physical-tropical-flag
   - THM-3097-translated-support-monge-compactification-and-cofinite-bad-set-induction
@@ -251,7 +254,9 @@ Consequently:
 > remote terminal exponent makes it good.
 
 The same conclusion holds on any fixed affine clock `C=an+b`, because its
-consecutive clock quotient is again rational and eventually positive.
+consecutive clock quotient is again rational and eventually positive; the
+one exact good sample used to rule out the zero sequence must lie on that
+clock.
 
 There is a finite-core consequence for the first unresolved factorial
 width.  THM-3097 proves that the minimal bad four-prefix bank `C_4` and the
