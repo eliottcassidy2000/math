@@ -1,0 +1,23 @@
+THM-3147 length-singleton endpoint-jet facet observer
+length_profile=Z_X(t,u)=prod_x(1+(u-1)xt)/(1-xt)
+length_pole_kernel=(1-Mt)/(1-(1-u)Mt)
+endpoint_recurrence=A'_(n,j)=A_(n,j)-M*A_(n-1,j)-M*A'_(n-1,j-1)
+singleton_profile=prod_x(1+(uw-1)xt+u(1-w)x^2t^2)/(1-xt)
+singleton_pole_kernel=(1-Mt)/(1+(uw-1)Mt+u(1-w)M^2t^2)
+prefixes=8241:transforms=8011:length_kernel_checks=440605:singleton_kernel_checks=1762420
+facet_connectivity_checks=36:singleton_antichain=((4, 1, 1, 1), (3, 2, 1, 1))
+degree=N5:principal_bad=0:ranktail_bad=0:principal_pass_length_caught=0:principal_pass_singleton_caught=0:singleton_minima_checked=0
+degree=N6:principal_bad=5641:ranktail_bad=5641:principal_pass_length_caught=0:principal_pass_singleton_caught=0:singleton_minima_checked=0
+degree=N7:principal_bad=5386:ranktail_bad=5278:principal_pass_length_caught=19:principal_pass_singleton_caught=16:singleton_minima_checked=16
+degree=N8:principal_bad=6510:ranktail_bad=6451:principal_pass_length_caught=0:principal_pass_singleton_caught=0:singleton_minima_checked=0
+degree=N9:principal_bad=6767:ranktail_bad=6647:principal_pass_length_caught=8:principal_pass_singleton_caught=0:singleton_minima_checked=0
+nonprincipal_completion=length:27+singleton:16=43
+first_length_witness=N7:support=(1,2):I1:j1:R=(5,):mass=-1151498720
+first_length_endpoint=A6=-860675680:A7=-335362400:-A6+6A7=-1151498720
+first_singleton_witness=N7:support=(2,10):I2:j24:R_first_last=(29,13):mass=-2816353101792484700160000
+length_only_kernel_hostile=delta_(4,1,1,1)-delta_(2,2,2,1):same_length_profile;singleton_facet_separates
+scalar_endpoint_jet_hostile=L6=(0, 0, 0, 20, 368, 264, -40):A6=(612, 2612, 4308, 3332, 1088, 24, -40)
+partial_reference_boundary=N6_bottom_Bernstein_min=1760080
+scope=finite_profile_observer;not_full_Hasse_or_original_response
+semantic_sha256=cb86e9af88be54a1969d277b921d0e44d0b3cec73180d638f6fcaadb0bfb3ea1
+all_exact_checks=PASS
