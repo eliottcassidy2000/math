@@ -2,7 +2,7 @@
 id: THM-3158
 title: "Sharp depth-five selector resurrection and degree-thirteen death barcode"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT / INDEPENDENT AUDIT REQUIRED.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   At support (1,3), bank I2, the cumulative selector space through degree 12
   is empty for all physical pole prefixes of depth at most four but becomes
   nonempty at depth five.  An explicit seven-state law of denominator one
@@ -13,6 +13,16 @@ status: >
   prefix theorem, not a sequential stopping process or original-response
   decomposition.
 source: root/multiscale-newton-flag/product-gamma-width3-2026-08-02
+audit: >
+  An independent immutable audit reconstructed the 682-state census and the
+  denominator-one-million law, replayed normal and optimized companions
+  byte-for-byte, and checked all 403,539 strict antichain/upset inequalities.
+  It separately verified that increasing incomparable generators enumerate
+  each upset once, that R5--R8 are lawful upsets with the displayed minimal
+  antichains, and that the nine coefficients are primitive and positive.  All
+  682 separator coordinates, the exact range and equality states, the N13
+  hostile, LF hashes, barcode monotonicity, and fixed-Q averaged-current scope
+  passed.
 depends_on:
   - THM-3115-low-degree-monomial-fibre-newton-refinement-transport
   - THM-3120-row-pole-prefix-newton-flag-positivity
@@ -32,7 +42,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3158 -- sharp depth-five selector resurrection and degree-thirteen death barcode
 
-**PROVED CANDIDATE + VERIFIED-EXACT / INDEPENDENT AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3155 proves that depth four resurrects the support-`(1,3)`, bank-`I2`
 selector through degree 11, but that degree 12 kills every law on the complete
@@ -97,7 +107,7 @@ Let `lambda_sigma=n_sigma/10^6`, with the only nonzero numerators
 | `(5,5,6,7,8)` | 384,082 |
 
 The numerators are positive, primitive, and sum to `10^6`; every displayed
-state is a legal submultiset of `(1)`.
+state is a legal submultiset of the pole multiset in `(1)`.
 
 The companion streams every antichain of every partition-coarsening poset in
 degrees 5 through 12.  By the antichain/upset bijection, this is an exhaustive
