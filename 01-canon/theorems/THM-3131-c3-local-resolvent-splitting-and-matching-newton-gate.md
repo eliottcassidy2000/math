@@ -13,25 +13,27 @@ status: >
   divides n, the two trace values are exact and v(Disc)>4n.  The matching
   clutch is always diagonal with zero ternary checksum.  Although the local
   V4 plane splits, the leading unit of q retains exactly the tame C3
-  cubeclass raised to n.  In THM-3081's
-  additional coordinate-line Keller scope, its terminal Mobius coordinate
-  therefore parametrizes the same local resolvent residue field but cannot
-  recover a nonzero V4 character without a second-place or marked gluing
-  sidecar.  This is a local C3 exclusion test, not a C3, S4, JC(2), or
-  globalization theorem.
+  cubeclass raised to n.  For an actual fixed-plus-escaping-C3 graph quartic,
+  this cubeclass test is automatically saturated: if the primitive graph
+  coordinate has pole order m, then n=-m and its leading depressed coefficient
+  is c_m A_X^3 tau^m, where c_m is -1 off 3|m and 1/8 on 3|m.  In THM-3081's
+  coordinate-line Keller scope this becomes q_0=c_m H_X(theta)^3 K(theta)^m;
+  the decoder fixes K/L but not the individual terminal-prefactor cubeclass
+  [L].  Thus q_0 alone cannot exclude the branch.  This is a local C3 test and
+  information-loss theorem, not a C3, S4, JC(2), or globalization theorem.
 source: jc-c3-resolvent-2026-08-02
 depends_on:
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
   - THM-2685-equivariant-kummer-boundary-parity-completion-and-divisor-residue-gate
   - THM-3046-quartic-resolvent-root-valuation-binary-ternary-clutch
+  - THM-3081-terminal-toric-residue-parameter-mobius-rigidity-and-autonomous-decoder
 related:
   - THM-3057-tame-quartic-inertia-clutch-index-resonance
   - THM-3059-quartic-twojet-even-jelonek-c3-escape-counterexample
-  - THM-3081-terminal-toric-residue-parameter-mobius-rigidity-and-autonomous-decoder
 script: 04-computation/jc_c3_local_resolvent_matching_gate_thm3131.py
 output: 05-knowledge/results/jc_c3_local_resolvent_matching_gate_thm3131.out
-script_sha256: fb3ae1b344011a2389617b5810c6783a605dfb0c127198478a5723bc0982f307
-output_sha256: 3c599a8ee0af69c1f37e7833e043cd54165fe95db7defd02eb8be00ceb451534
+script_sha256: 8ba868cad34507c4b32f8112ff541330236a0419336b232ae7c5e813f07f6554
+output_sha256: 540191f75468c4ff76124d73474772a5d139fd1da16fc750c354767337160f16
 hash_basis: LF-normalized bytes
 ---
 
@@ -336,6 +338,11 @@ cubic unit `epsilon` because `n` is invertible modulo three.  This is cheaper
 than running the Laurent-key tower: depress the graph quartic, read `q`, and
 factor only its leading residue along the proposed component.
 
+This is a useful hostile test for an abstract proposed local packet.  For an
+actual fixed-plus-escaping graph quartic it is never an independent
+obstruction: Section 6 proves that the graph roots saturate `(23a)`
+identically.
+
 But `(7)` says that every displayed matching root represents the zero local
 Kummer class.  Therefore THM-3081's square
 
@@ -353,7 +360,159 @@ This is the precise stopping reason for a direct decoder-to-resolvent
 identification.  It replaces a tempting analogy by an actual local map and
 an exact account of the information that map destroys.
 
-## 6. Exact controls and boundaries
+## 6. Automatic graph-quartic saturation and the missing cubeclass
+
+Retain the coordinate-line Keller scope of Section 5 and assume the actual
+fixed-plus-escaping-`C3` graph anatomy.  Let `X` be a primitive affine source
+coordinate, let `X_f` be its finite fixed-sheet value, and choose the Kummer
+uniformizer from `(8a)`.  Put
+
+```text
+tau=epsilon^(-1),                  t=tau pi^3,
+
+X_0=A_X(u)pi^(-m)+O(pi^(-m+1)),   m>=1,
+X_i=sigma^i(X_0)
+   =A_X(u)zeta^(-im)pi^(-m)+O(pi^(-m+1)),               (25)
+```
+
+where `A_X in C(u)^*` and `X_f` has nonnegative value.  Let `z_f,z_i` be the
+four roots after formal depression and use the three moved pair sums
+
+```text
+beta_i=z_f+z_i=X_f+X_i-(X_f+X_0+X_1+X_2)/2.            (26)
+```
+
+The exact identity `(15b)` remains `prod_i beta_i=-q`.
+
+If `3` does not divide `m`, the leading moved trace vanishes because
+
+```text
+1+zeta^(-m)+zeta^(-2m)=0.
+```
+
+The trace correction in `(26)` has strictly larger value, so
+
+```text
+beta_i=A_X zeta^(-im)pi^(-m)+O(pi^(-m+1)),
+q=-A_X^3 pi^(-3m)+O(pi^(-3m+1)).                       (27)
+```
+
+If `3|m`, the three moved initials are all `A_X pi^(-m)`.  Depression gives
+
+```text
+z_f=-(3/4)A_X pi^(-m)+O(pi^(-m+1)),
+z_i= (1/4)A_X pi^(-m)+O(pi^(-m+1)),
+beta_i=-(1/2)A_X pi^(-m)+O(pi^(-m+1)),
+
+q=(1/8)A_X^3 pi^(-3m)+O(pi^(-3m+1)).                   (28)
+```
+
+Since `pi^3=t/tau`, both lanes have the uniform form
+
+```text
+n=v_t(q)=-m,
+q=t^(-m)(q_0+O(t)),
+
+q_0=c_m A_X^3 tau^m,
+c_m=-1 if 3 does not divide m,
+c_m=1/8 if 3 divides m.                                (29)
+```
+
+Both constants are cubes in `C`.  The expression is independent of the
+normal-parameter gauge: under `pi'=h(u)pi`, one has
+
+```text
+A_X'=A_X h^m,                  tau'=tau h^(-3),
+(A_X')^3(tau')^m=A_X^3 tau^m.                           (30)
+```
+
+Thus the horizontal divisor law is not merely a congruence:
+
+```text
+div(q_0)=3 div(A_X)+m div(tau),
+div(q_0)=n div(epsilon) mod 3.                          (31)
+```
+
+When `3|m`, equation `(29)` explicitly reads
+
+```text
+q_0=(A_X tau^(m/3)/2)^3.                               (32)
+```
+
+When `3` does not divide `m`, a simple zero or pole of `q_0` is accompanied
+by the exactly required nontrivial order of `tau` modulo three.  Hence no
+zero/pole pattern of `q_0` by itself can violate the THM-3131 cubeclass gate
+for this graph branch.
+
+The calculation also occurs directly in the actual, nondepressed graph
+coefficients.  If
+
+```text
+f(T)=T^4+a_3T^3+a_2T^2+a_1T+a_0,
+R(T)=cT^4+r_3T^3+r_2T^2+r_1T+r_0=c f(T),               (33)
+```
+
+then formal depression gives exactly
+
+```text
+q=a_1-a_2a_3/2+a_3^3/8
+ =(8c^2r_1-4cr_2r_3+r_3^3)/(8c^3).                    (34)
+```
+
+Off `3|m`, the leading traces in `(34)` cancel and the escaping triple in
+`a_1` supplies `-A_X^3`.  On `3|m`, the three tied terms have respective
+leading constants `-1`, `9/2`, and `-27/8`, whose sum is `1/8`.  This is the
+graph-coefficient version of `(27)--(28)` and explains rather than merely
+detects the Newton boundary.
+
+There is a sharper contact with THM-3081.  At its terminal stage choose
+integers `A_*,B_*` with `A_*g+B_*e=1`.  Write its Mobius parameter as
+
+```text
+theta=(a u+b)/(c u+d),                 Delta=ad-bc,
+lead(X)=rho^(-m)H_X(theta),
+tau=rho^3 K(theta),
+lead(U)=rho^(3-e)L(theta).                              (35)
+```
+
+Substitution in `(29)` cancels the entire value-one scale:
+
+```text
+q_0=c_m H_X(theta)^3 K(theta)^m,
+[q_0]=[K]^m in C(theta)^*/C(theta)^(*)3.                (36)
+```
+
+THM-3081's autonomous decoder determines only
+
+```text
+K/L= kappa/(3 Delta) theta^(A_*-1)(a-c theta)^2.        (37)
+```
+
+Since every nonzero complex constant is a cube, `(36)--(37)` give the exact
+transport law
+
+```text
+[q_0]
+ =[L]^m [theta]^(m(A_*-1)) [a-c theta]^(2m).            (38)
+```
+
+If `3` does not divide `m`, the exponent `m` is invertible on cubeclasses,
+so `q_0` transports the class of `K` and, after the displayed Mobius
+correction, the class of `L`.  If `3|m`, it transports no cubeclass at all.
+The decoder controls `K/L`; it does **not** independently control `[L]`.
+That terminal two-form-prefactor class is the precise missing coordinate in
+a `q_0`-only argument.  Equivalently, before taking the norm, one may retain
+one marked leading amplitude of `beta_i`; the product `prod beta_i=-q`
+forgets that `C3` phase.
+
+This separates the complementary primes cleanly.  Squaring the `beta_i`
+trivializes the local `2`-primary `V4` packet by `(7)`, while multiplying
+them retains only the automatically compatible `3`-primary tame class by
+`(29)`.  A further exclusion must therefore couple a marked pair sum, the
+companion `b` and Keller congruence of THM-2621, or genuinely global/multi-
+place algebraization of `L` or `tau`.  No such coupling is proved here.
+
+## 7. Exact controls and boundaries
 
 Run
 
@@ -372,10 +531,14 @@ Both executions match the stored transcript.  The companion verifies:
    `(n,v(p),v(p^2-4r),v(Disc))=(3,2,4,14)`;
 5. THM-3059's generic `S4` hostile, which has
    `(-2,-1,-2,-8)` and lands exactly on `(9)`.
+6. the exact depression formula `(34)`, the fixed-plus-cubic hostile
+   `q=-t^(-1)-u^3/8`, both graph leading constants in `(29)`, normal-gauge
+   invariance, and the cancellation of `rho` in `(36)`.
 
 The theorem does **not** assert that every `C3` place has trivial global
 `V4` torsor, that a larger decomposition group is irrelevant before strict
-henselization, that `(24)` is a physical matching root, or that an arbitrary
+henselization, that `(24)` or `(37)` is a physical matching root, that `[L]`
+is independently controlled, or that an arbitrary
 Jelonek component can be straightened to a coordinate line.  It excludes a
 claimed local `C3` model only when one of `(7)--(11)`, or the
 completion intersection ledger fails.  It does not exclude all `C3`, `S4`,
