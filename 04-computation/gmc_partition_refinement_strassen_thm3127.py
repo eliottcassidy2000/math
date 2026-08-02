@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Exact controls for THM-3126.
+"""Exact controls for THM-3127.
 
-The proof of THM-3126 is finite max-flow duality.  This companion checks the
+The proof of THM-3127 is finite max-flow duality.  This companion checks the
 orientation and all boundary conventions exhaustively in the first branching
 partition posets, verifies the normalized filter identity on a genuine signed
 alphabet bank, and records two minimal hostile controls.

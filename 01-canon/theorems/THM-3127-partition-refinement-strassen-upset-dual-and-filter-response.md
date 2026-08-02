@@ -1,8 +1,8 @@
 ---
-id: THM-3126
+id: THM-3127
 title: "Partition-refinement Strassen upset dual and filter response"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.  On every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On every
   finite partition-refinement poset, a zero-mass current is the boundary of
   a nonnegative fine-to-coarse Hasse flow iff it is nonnegative on every
   coarsening upset, equivalently on every isotone test function, equivalently
@@ -11,21 +11,30 @@ status: >
   response inequalities.  Principal upsets alone are insufficient already
   in degree four.
 source: root/multiscale-newton-flag/2026-08-02
+audit: >
+  Two independent hostile audits rederived the max-flow cut orientation and
+  capacity M+c(U), Strassen path decomposition, rational/integral typing,
+  isotone layer-cake, Young-carrier implication and nonconverse, normalized
+  filter identity including the zero-denominator boundary, coefficientwise
+  Newton equivalence, and the nonprincipal-upset hostile.  Fresh normal and
+  optimized runs byte-match the stored transcript; all load-bearing checks
+  remain active under optimization and the declared LF hashes match.
 depends_on:
   - THM-3115-low-degree-monomial-fibre-newton-refinement-transport
 related:
   - THM-3119-factorial-normalized-labelled-deletion-and-young-carrier-order
   - THM-3120-row-pole-prefix-newton-flag-positivity
-script: 04-computation/gmc_partition_refinement_strassen_thm3126.py
-output: 05-knowledge/results/gmc_partition_refinement_strassen_thm3126.out
-script_sha256: dd222aa01d29d1968b1b8b90c39161a1823a459261a5775af15ceaa879da046a
+  - THM-3122-labelled-deletion-positive-kernel-ghost-and-no-upward-induction
+script: 04-computation/gmc_partition_refinement_strassen_thm3127.py
+output: 05-knowledge/results/gmc_partition_refinement_strassen_thm3127.out
+script_sha256: 355324fd3289d2226d746e059c25968d6f8c0145eab157b7a6cb87873d660796
 output_sha256: 08d4dbc2db6366695c9e89b46c4ad5f3f223d4825b94e6230d3f21e1433b3759
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3126 -- partition-refinement Strassen upset dual and filter response
+# THM-3127 -- partition-refinement Strassen upset dual and filter response
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3115 certifies thousands of normalized product-Gamma coefficient vectors
 by max flow on the integer-partition refinement order.  The max flow is not
@@ -269,14 +278,14 @@ gives a second sharp orientation control: its coarsest upset has mass `-1`.
 Run
 
 ```text
-python 04-computation/gmc_partition_refinement_strassen_thm3126.py
-python -O 04-computation/gmc_partition_refinement_strassen_thm3126.py
+python 04-computation/gmc_partition_refinement_strassen_thm3127.py
+python -O 04-computation/gmc_partition_refinement_strassen_thm3127.py
 ```
 
 and compare byte-for-byte with
 
 ```text
-05-knowledge/results/gmc_partition_refinement_strassen_thm3126.out.
+05-knowledge/results/gmc_partition_refinement_strassen_thm3127.out.
 ```
 
 The companion exhausts all bounded zero-mass integer vectors in the first
@@ -293,4 +302,4 @@ Its exact contribution is to identify the missing object: a violating degree
 has a coarsening filter, while a passing degree admits a monotone Strassen
 coupling and a positive refinement holotopy.
 
-**QED (candidate pending independent audit).**
+QED.
