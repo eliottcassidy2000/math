@@ -2,8 +2,8 @@
 id: THM-3093
 title: "Arbitrary-gap remote-cluster Monge flag compactification"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  Above any
-  fixed nonzero physical child resultant, an arbitrary fixed-rank remote
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Above any fixed
+  nonzero physical child resultant, an arbitrary fixed-rank remote
   cluster is eventually positive uniformly over every distinct integer gap
   vector, with no bound on its diameter.  Strict factorial-response Monge
   inequalities expose a staircase flag; multivariate Jensen contracts every
@@ -12,6 +12,16 @@ status: >
   remote offset is independent of all internal gaps.  This is fixed child
   and fixed width, not arbitrary-support GMC(2).
 source: root-gmc-arbitrary-cluster-flag-2026-08-01
+audit: >
+  An independent hostile audit rederived the strict response-Monge law,
+  staircase dual potentials, multivariate Jensen atom contraction, exact
+  carrier covariance, and the compactification of every gap sequence into
+  fixed/divergent adjacent-edge blocks.  It checked that an arbitrary
+  diverging block origin still has the same generalized-alternant limit,
+  proved the stated Schur/Vandermonde floor, and verified the upper-triangular
+  resultant and even-parity orientations.  Fresh normal and optimized runs
+  byte-matched stored output and both LF hashes.  The audit retains the fixed
+  child, fixed rank, nonzero-child-resultant scope.
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
   - THM-3073-upper-triangular-resultant-norm-and-torsion-character-death-barcode
@@ -29,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3093 -- arbitrary-gap remote-cluster Monge flag compactification
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3085 permits any fixed internal gaps.  THM-3089 moves them only through
 a square-root cone because it compares the whole normal system with one line
@@ -439,4 +449,4 @@ python -O 04-computation/gmc_arbitrary_gap_remote_cluster_flag_thm3093.py
 
 Both modes must equal the stored transcript after LF normalization.
 
-**QED, pending independent audit and status promotion.**
+QED.
