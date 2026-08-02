@@ -131,6 +131,7 @@ bezout_cells = 0
 for a in range(1, 21):
     for b in range(1, 21):
         divisor, x, y = extended_gcd(a, b)
+        require(divisor == gcd(a, b), "extended gcd divisor changed")
         alpha, beta = -y, x
         require(a * beta - b * alpha == divisor, "Bezout complement changed")
         bezout_cells += 1

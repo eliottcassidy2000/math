@@ -25,7 +25,7 @@ related:
   - THM-3072-a4-flag-three-c2-tomography-and-edge-cycle-cospan
 script: 04-computation/pointed_norm_augmentation_carry_thm3077.py
 output: 05-knowledge/results/pointed_norm_augmentation_carry_thm3077.out
-script_sha256: 159c637d1b5eb188130f8662e8caf42d8d014ba9b6a445b1edfbd5e27624ad28
+script_sha256: 3f9d2043f0c842b2fc0adc33e56b8ccdc9b6b4ca039dadb100f282db450733ea
 output_sha256: 99c69abaac1dba28e9feb61b5e6711d955e3cdc6a3ec6462b4a57c5dd5d581b5
 hash_basis: LF-normalized bytes
 ---
@@ -177,8 +177,9 @@ but the norm winds `W/q` times and the lifted endpoint is the nontrivial
 diagonal element `zeta_q`.  Endpoint data erase it; continuation and `(12)`
 recover it.
 
-There is also a canonical local normalization.  Over a complete `Q`-algebra,
-if the norm and ratios are unit germs congruent to one, then
+There is also a canonical local normalization.  Let the coefficient ring be
+an `I`-adically complete `Q`-algebra with topologically nilpotent ideal `I`.
+If the norm and ratios lie in `1+I`, then
 
 ```text
 x_1=exp((log N_w-sum_(i=2)^r w_i log r_i)/W)                (15)
@@ -253,7 +254,7 @@ has fixed positive orientation (and `(-1)^14=1` in the one-normal case), so
 applies when both input phases are genuinely variable, as in a proposed
 transport of independently labelled sidecars.
 
-## 5. The tropical flag becomes a carry spectrum
+## 5. The model tropical flag becomes a carry spectrum
 
 At one model suspension stage of THM-3069, set
 
@@ -271,7 +272,9 @@ R_k=R_(k-1)^k U_k^((k-1)!)
 
 Therefore `(R_k,r_k,c_k mod W_k)` with a reference lift reconstructs
 `R_(k-1)` by `(11)--(12)`, and then `U_k=r_kR_(k-1)`.  Iterating turns the
-lexicographic tropical flag into a mixed-radix relation-and-carry inverse.
+augmented model phase torus of the lexicographic tropical flag into a
+mixed-radix relation-and-carry inverse.  In the literal physical carrier
+`U_k>0`, so its phase lane is fixed and the phase reconstruction is simpler.
 The attachment's three-coordinate proof state is now literal:
 
 ```text
