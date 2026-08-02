@@ -2,7 +2,7 @@
 id: THM-3134
 title: "Prime-resonance Newton-slope separation for quadratic factorial windows"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.  For an exact
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For an exact
   quadratic q(t)=a+bt+ct^2, three consecutive zero factorial moments beginning
   at r force the THM-3124 resonance -a/b=r+2.  If r+2 is prime, the two
   remaining resonant moment polynomials have disjoint p-adic Newton slopes and
@@ -21,7 +21,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3134 -- prime-resonance Newton-slope separation for quadratic factorial windows
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Let
 
@@ -127,6 +127,13 @@ sole slope                 1/(p-1).                           (12)
 The slope sets in `(10)` and `(12)` are disjoint.  This is also true at
 `p=3`, where they are `{0}` and `{1/2}`.
 
+The independent audit checked the two possible cancellation points in this
+argument rather than relying on the finite transcript: `(8)` makes exactly
+the asserted endpoint coefficients units, and every intermediate integral
+valuation lies strictly above (not merely on) the fractional endpoint
+segment.  It also checked `p=3` separately, where the first polygon has only
+one edge.
+
 ## 3. Why slope separation excludes a common factor
 
 For completeness, the Newton product lemma says that over a valued field the
@@ -193,4 +200,4 @@ python3 -O 04-computation/factorial_prime_resonance_newton_slopes_thm3134.py
 
 and compare byte-for-byte with the declared output.
 
-**End of proof candidate.**
+**End of proof.**
