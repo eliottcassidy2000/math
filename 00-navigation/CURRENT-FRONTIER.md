@@ -333,11 +333,11 @@ Classify profiles under support operations; study analytic continuation and auto
   its former general-dominant scope.  On the `S4` Keller lane at least one odd
   component is forced, but excluding every Keller `C3` component remains
   OPEN and needs branchwise Jacobian-cofactor unit data, not another
-  discriminant scalar.  THM-3066 proves the natural THM-3058 matching
-  augmentation cannot supply it: vertex-gauged matchings retain only the
-  product of four cofactors, while a `C3`-equivariant product-one twist changes
-  the sheetwise Keller values.  The missing invariant is the pointed
-  orbit/fixed Jacobian ratio in the graph order.  THM-2862/2864/2968/2971 give two sextic
+  discriminant scalar.  THM-3066's matching retains only the cofactor product.
+  THM-3064's marked shifted norm is iff the supplied-pair Keller congruence;
+  tame `C3` requires inverse-different cofactor valuation `-2`, leaving global
+  polynomial realization as the missing gate.
+  THM-2862/2864/2968/2971 give two sextic
   lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
   affine sidecars remain.  THM-2867 gives the regular `S3` carrier.  THM-2871 makes that face unramified and
   puts the first paired escape at `A=B=0`: `C in (B)` gives integral

@@ -2,7 +2,7 @@
 id: THM-3064
 title: "Pointed cubic-norm Keller decoder and inverse-different boundary"
 status: >
-  PROVED + VERIFIED-EXACT (independent audit pending).  After a fixed sheet
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  After a fixed sheet
   of a split quartic f=(T-a)g has been marked and the branchwise
   primitive-element cofactor has been retained, the orbit/fixed physical
   Jacobian ratio is an element rho of the complementary cubic field.  The
@@ -21,6 +21,12 @@ status: >
   changing the order or pole data.  This is not a polynomial-map realization
   or a C3 Keller exclusion.
 source: codex-jc-resolvent-bridge-2026-08-01
+audit: >
+  Independent algebra and replay rederived both resultant normalizations,
+  the irreducible-field gate, the degree-p polynomial decoder, the
+  THM-2621 Jacobian orientation, the graph-order kernel direction, the tame
+  different valuation, and the split rational hostile.  Fresh ordinary and
+  optimized transcripts are byte-identical to the frozen output.
 depends_on:
   - THM-2621-planar-degree-four-inverse-spectral-keller-congruence-and-sheet-defect-pole-ledger
   - THM-3038-split-monogenic-order-cross-resultant-conductor-and-affine-owner-boundary
@@ -39,7 +45,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3064 -- the pointed cubic norm detects Keller equality
 
-**PROVED + VERIFIED-EXACT (independent audit pending).**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and the pointed ratio
 
