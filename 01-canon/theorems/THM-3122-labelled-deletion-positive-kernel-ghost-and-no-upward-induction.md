@@ -2,7 +2,7 @@
 id: THM-3122
 title: "Labelled-deletion derangement kernel ghost and no-upward-induction boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; independent audit pending.  In every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In every
   degree n>=2, factorial-normalized labelled deletion kills an explicit hook
   current whose Young-gap operator is exactly the Laplacian of the
   derangement Cayley graph of Sym_n.  That operator is positive semidefinite
@@ -13,13 +13,14 @@ status: >
   or Gaussian-moment theorem.
 source: root/gmc3000-audit-2026-08-02
 audit: >
-  The hook-kernel recurrence, averaged subgroup coefficient count,
-  derangement-Laplacian identity, positivity factorization, generation and
-  no-induction consequence require independent hostile audit.  The exact
-  companion checks the kernel identity, support coefficients, elementary
-  transposition factorization, and every irreducible scalar through n=10.
-  Normal, optimized, stored-output, and LF-hash checks are required before
-  promotion.
+  Two independent hostile audits rederived the hook-kernel recurrence,
+  averaged subgroup coefficient count, derangement-Laplacian identity,
+  positivity factorization, generation/equality cases, and the repaired
+  ambient-current/PSD-carrier no-induction scope, with no theorem defect.
+  The exact companion checks the kernel identity, support coefficients,
+  elementary transposition factorization, and every irreducible scalar
+  through n=10.  Independent normal and optimized replays both match the
+  stored output and declared LF hashes exactly.
 depends_on:
   - THM-3119-factorial-normalized-labelled-deletion-and-young-carrier-order
 related:
@@ -34,7 +35,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3122 -- labelled-deletion derangement kernel ghost
 
-**PROVED CANDIDATE + VERIFIED-EXACT; independent audit pending.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3119 proves that factorial conjugation turns algebraic block deletion
 into genuine same-label stochastic deletion and that this deletion carries a
@@ -159,10 +160,14 @@ transposition.  For `beta`, a fixed point `x` would say
 trivial isotypic subspace and is strictly positive on every nontrivial
 irreducible representation.
 
+Here conjugation is lawful because `Der_n` is conjugacy-stable, so the
+subgroup it generates is normal; conjugating the displayed factorization
+therefore puts every transposition in that subgroup.
+
 ## 4. The sharp no-upward-induction boundary
 
-Equations `(3)` and `(11)` exhibit a nonzero positive carrier current erased
-by labelled deletion.  In degree three this is already
+Equations `(3)` and `(11)` exhibit a nonzero current with a PSD Young-gap
+carrier erased by labelled deletion.  In degree three this is already
 
 ```text
 kappa_3=e_3-3e_(2,1)+2e_(1,1,1),
@@ -176,9 +181,9 @@ The opposite current `-kappa_n` has the same zero deletion but carries the
 negative nonzero operator `-O_n`.  Hence
 
 ```text
-A c has a positive refinement carrier
+A c has a PSD Young-gap carrier
    does not imply
-c has a positive refinement carrier.                          (14)
+c has a PSD Young-gap carrier.                                (14)
 ```
 
 No argument using only the deleted current, even with exact cone
