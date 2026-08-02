@@ -146,9 +146,9 @@ referee selects the edge with the smallest complete alphabet, retains both
 orientations, and checks `1,566` exact located controls.  Every row proves
 
 ```text
-skeleton-2|eta_(g0)| > debt_5 > 0,
+skeleton-2|eta_(g0)| > debt_4 > 0,
 c=1-a/(Pg0L) in (0,1),
-c^-1(skeleton-2|eta_(g0)|) > debt_5,
+c^-1(skeleton-2|eta_(g0)|) > debt_4,
 direct reflected overlap >= transported lower bound. (9)
 ```
 
