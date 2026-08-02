@@ -2,7 +2,7 @@
 id: THM-3100
 title: "Product-Gamma response-Monge compactification and bad-prefix spectrum"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For every fixed finite product of positive-shape Gamma moments, translating
   an arbitrary fixed-width support sufficiently far makes its first-window
   resultant positive, uniformly over all internal gaps.  Above any fixed
@@ -17,6 +17,14 @@ status: >
   O_t(X^(t-3)); this improves to O_t(X^(t-4)) if width three is separately
   good.  Width three for arbitrary product-Gamma shapes remains open.
 source: root/multiscale-newton-flag/product-gamma-compactification-2026-08-02
+audit: >
+  An independent immutable-file hostile audit rederived the product response
+  and endpoint derivative, factorwise Jensen and covariance, r^A block limit
+  and Schur floor, physical elimination orientation, q>=2 and q=1 remote
+  asymptotics, A-layer deletion/reinsertion inclusion-exclusion and strict
+  marked-cycle family, low widths, minimal-prefix counts, and the exact
+  shape-two certificate boundary.  Normal, optimized, and stored companions
+  matched byte-for-byte; both LF hashes and documentation checks passed.
 depends_on:
   - THM-3069-one-normal-remote-terminal-suspension-and-physical-tropical-flag
   - THM-3073-upper-triangular-resultant-norm-and-torsion-character-death-barcode
@@ -36,7 +44,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3100 -- product-Gamma response-Monge compactification
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The factorial response used by THM-3093 is not isolated.  Every finite
 product-Gamma moment sequence has the same strict response ordering, with
@@ -559,4 +567,4 @@ normalization.  The finite checks audit the exact identities and sharp
 boundaries; the compactness and permutation arguments supply the universal
 quantifiers.
 
-**QED (candidate; independent hostile audit pending).**
+**QED.**
