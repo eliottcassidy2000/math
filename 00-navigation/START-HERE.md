@@ -20,7 +20,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) open.** THM-2941/3210 reduce the reflected sufficient-family residual to `561` bodies, `m>=2,3<Q/m<6`, off `4/5`, gcd `<=5`; THM-3210 uses 258 exact scale bridges. THM-3135 blocks uniform H lanes. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
+1. **LRC(14) open.** THM-2941/3210 reduce the reflected sufficient-family residual to `561` bodies, `m>=2,3<Q/m<6`, off `4/5`, gcd `<=5`; THM-3210 uses 258 exact scale bridges. THM-3135 blocks uniform H lanes; THM-3150 closes fixed H dilation rays from `62`. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see

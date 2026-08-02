@@ -2,13 +2,18 @@
 id: THM-3150
 title: "Cap-two two-star skeleton and common-dilation tail"
 status: >
-  PROVED + VERIFIED-EXACT.  For the reflected body H=(1,2,3,4,6,12) at
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the reflected body H=(1,2,3,4,6,12) at
   upper-median cell 90, every six-distinct cap-two level assignment has at
   least three high primitive channels in the two-star on labels 1 and 2.
   Hence the nine primitive overlap skeletons have total mass at least 1/35.
   Along every fixed integer common-dilation ray, the exact reflected
   two-star certificate closes from dilation 62 onward.  This is not an
   arbitrary-gcd cone theorem, a physical-survivor classification, or LRC(14).
+audit: >
+  An independent audit rederived the complete low-ratio set and S/S table,
+  high-edge count, pivot-blind strengthening, nine-edge loss invoice, common-
+  dilation gcd bound, singleton-debt monotonicity, and exact n=62/61 boundary.
+  Fresh normal and optimized runs byte-match the stored transcript and hashes.
 source: root/frontier-synthesis/2026-08-02
 depends_on:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
@@ -23,7 +28,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3150 -- cap-two two-star skeleton and common-dilation tail
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This theorem turns the finite two-star matching signal into one analytic
 tail, while exposing the coordinate that still prevents an arbitrary-level
