@@ -2,8 +2,8 @@
 id: THM-3092
 title: "Modular mixed-word fingerprint and septimal counterfeit separation"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For exact-order marked generators s^2=c^3=1, every epimorphism to
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For exact-order
+  marked generators s^2=c^3=1, every epimorphism to
   the natural four-point S4 has ord(sc)=4, every epimorphism to AGL_2(F_3)
   has ord(sc)=8, and every epimorphism to PGL_2(F_8) has ord(sc)=7 or 9.
   The corresponding inner marking counts are 1,2,6.  Only the S4 word has a
@@ -13,6 +13,15 @@ status: >
   shows that the mixed word still cannot detect the affine origin.  No
   quartic realization, Keller, tree, or LRC consequence is asserted.
 source: root-modular-mixed-word-2026-08-01
+audit: >
+  An immutable independent implementation rebuilt all three finite
+  permutation groups and reproduced every marked-pair, subgroup, cycle,
+  simultaneous-conjugacy, and half-power count.  It caught and repaired two
+  carrier-scope gaps: the affine split/full rows share exactly the same 108
+  order-eight word permutations with multiplicities four/eight, while the
+  projective split C7 is only abstractly isomorphic to F8* because the GL2
+  scalar subgroup dies in PGL2.  Fresh normal and optimized replays
+  byte-matched stored output and both LF hashes.
 depends_on:
   - THM-3090-affine-projective-prime-power-handshake-and-septimal-counterfeit
 related:
@@ -29,8 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3092 -- modular mixed-word fingerprint and septimal counterfeit separation
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. The marked question
 
@@ -240,7 +248,7 @@ Both modes byte-match the stored transcript after LF normalization.  The
 program uses explicit `require` gates and no truth-bearing Python assertions.
 
 ```text
-PROVED IN THE CANDIDATE:
+PROVED:
   the complete exact-order marked pair tables (5)--(7);
   the disjoint generating mixed-word spectra (8);
   inner marking counts 1,2,6;
@@ -248,11 +256,10 @@ PROVED IN THE CANDIDATE:
   the AGL split-complement and PGL split/nonsplit hostiles.
 
 NOT PROVED:
-  independent hostile audit or promotion;
   a canonical modular marking on a quartic or physical carrier;
   a graph-quartic, resolvent, Jelonek, or Keller realization;
   a literal binary/ternary tree identification;
   a tournament, LRC(14), JC(2), or DC(2) consequence.          (17)
 ```
 
-QED (candidate).
+QED.
