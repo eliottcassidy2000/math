@@ -343,6 +343,6 @@ The normal and optimized executions are byte-identical.  QED in the stated
 real/collinear affine-coordinate scope.
 
 ```text
-source sha256 = 1b64865bdff35391e253e243978769fd8cee0d18eddbda5bcd0f1824ab000216
+source sha256 = 5b5882a3294c05661c9d36cf0a5f3d6c17c7571c30c2eae413f4a0a0f121f9ff
 output sha256 = 6292a290d43a64dfaf4c4e70ce0fe15432c952272aa228daa5682b386e725c3d
 ```

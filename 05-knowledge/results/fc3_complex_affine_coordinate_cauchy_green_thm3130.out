@@ -1,0 +1,8 @@
+THM-3130 FC(3) COMPLEX AFFINE-COORDINATE CAUCHY-GREEN AUDIT
+C1 Cauchy-Green oriented monomial checks=7; W=2*i*y
+C2 conjugate-line and endpoint-correction checks=6
+C3 closed-cycle coefficient relations=6; complex segment ODE recurrences=6; locally derived turning-square sources=3
+C4 noncollinear turns and reflection-collision sources: cases=3
+C5 rational coefficient pole multipliers -n+1/2 nonzero for n=1..12
+C6 collinear boundary y=0: W and all three turning factors vanish exactly
+ALL THM-3130 CONTROLS PASSED

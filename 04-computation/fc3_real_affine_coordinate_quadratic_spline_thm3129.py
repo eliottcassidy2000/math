@@ -66,7 +66,8 @@ print(
 #
 # 4Az H'+[2A+(B^2-4AC)z]H=Q'(y)e^(zQ(y))-Q'(x)e^(zQ(x)).
 # Verify its coefficient recurrence on both spline intervals.
-A, B = sp.symbols("A B", nonzero=True)
+A = sp.symbols("A", nonzero=True)
+B = sp.symbols("B")
 C = sp.symbols("C")
 Q = sp.expand(A * t**2 + B * t + C)
 
