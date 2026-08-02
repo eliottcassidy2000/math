@@ -130,18 +130,16 @@ current fills every cell and every admissible parabolic sector.
 
 ## Controlled forgetting requires a sidecar
 
-**Trigger / action:** when quotienting, projecting, folding, taking moments,
-excluding an atlas label, or replacing an object by an invariant, name the
-consumer, preserved predicate, lost coordinate, and legal sidecar, then test the
-kernel. Before reading an excluded label as empty support, unfold adjacent
-physical charts and recompute their overlap. **Mechanism:** a kernel is gauge
-only if every consumer kills it; otherwise retain a separating response or
-termination, depth, origin, or central-height coordinate. THM-840 gives repair
-rank `dim N(ker R)`; THM-2355 gives quadratic phase repair.
-**Counterindication:** omit the sidecar only after factorization through the
-quotient; autocorrelation can miss full support. **Evidence:** THM-840/2355,
-THM-2237/2240, THM-2163/2174/2228, THM-2411/2419,
-MISTAKE-310/THM-2744, corrected THM-2621/MISTAKE-301, and THM-2646/HYP-2033.
+**Trigger / action:** before quotienting or replacing an object by an invariant,
+name the consumer, preserved predicate, kernel, lost coordinate, and legal
+sidecar.  For a norm/resultant/determinant, compute the diagonal kernel and
+retain augmentation plus a pointed continuation carry before contraction.
+**Mechanism:** a kernel is gauge only if every consumer kills it; weighted norm
+plus augmentation is a finite isogeny whose Kummer lift torsor is reconstructed
+by a point or based path. **Counterindication:** omit only after factorization;
+zeros, incompatible gauges/common atoms, and fixed physical phase slices need
+separate checks. **Evidence:** THM-840/2355, THM-2237/2240, THM-2548/3048,
+THM-2962/3072, THM-3073/3077, MISTAKE-310/THM-2744, and THM-2646/HYP-2033.
 
 ## Test whether a central extension changes the base signature
 

@@ -2,7 +2,7 @@
 id: THM-3077
 title: "Pointed norm-augmentation lift and relation-carry obstruction"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  A weighted
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A weighted
   norm together with the full augmentation/relative phase class is a finite
   isogeny whose exact kernel is the diagonal group mu_W, where W is the sum
   of the weights.  Its fibre is a canonical Kummer lift torsor.  A point,
@@ -12,6 +12,13 @@ status: >
   physical pointer/common-atom and zero-carrier boundaries in GMC, LRC, and
   JC applications.
 source: root-norm-phase-sidecar-2026-08-01
+audit: >
+  Independent hostile audits rederived the weighted norm-augmentation
+  isogeny and its diagonal mu_W kernel, the fppf Kummer lift torsor, the
+  based continuation and exact winding carry, every torsion and Bezout
+  sidecar control, and the GMC/LRC/JC scope boundaries.  The immutable audit
+  additionally replayed normal and optimized execution against the stored
+  transcript, verified the declared LF hashes, and passed documentation.
 depends_on:
   - THM-3069-one-normal-remote-terminal-suspension-and-physical-tropical-flag
   - THM-3073-upper-triangular-resultant-norm-and-torsion-character-death-barcode
@@ -25,14 +32,14 @@ related:
   - THM-3072-a4-flag-three-c2-tomography-and-edge-cycle-cospan
 script: 04-computation/pointed_norm_augmentation_carry_thm3077.py
 output: 05-knowledge/results/pointed_norm_augmentation_carry_thm3077.out
-script_sha256: 159c637d1b5eb188130f8662e8caf42d8d014ba9b6a445b1edfbd5e27624ad28
+script_sha256: 3f9d2043f0c842b2fc0adc33e56b8ccdc9b6b4ca039dadb100f282db450733ea
 output_sha256: 99c69abaac1dba28e9feb61b5e6711d955e3cdc6a3ec6462b4a57c5dd5d581b5
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3077 -- pointed norm-augmentation lift and relation-carry obstruction
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3073 proves that a separated resultant is a weighted norm of its lower
 and normal resultants.  Its scalar remembers magnitude and one relation but
@@ -177,8 +184,9 @@ but the norm winds `W/q` times and the lifted endpoint is the nontrivial
 diagonal element `zeta_q`.  Endpoint data erase it; continuation and `(12)`
 recover it.
 
-There is also a canonical local normalization.  Over a complete `Q`-algebra,
-if the norm and ratios are unit germs congruent to one, then
+There is also a canonical local normalization.  Let the coefficient ring be
+an `I`-adically complete `Q`-algebra with topologically nilpotent ideal `I`.
+If the norm and ratios lie in `1+I`, then
 
 ```text
 x_1=exp((log N_w-sum_(i=2)^r w_i log r_i)/W)                (15)
@@ -253,7 +261,7 @@ has fixed positive orientation (and `(-1)^14=1` in the one-normal case), so
 applies when both input phases are genuinely variable, as in a proposed
 transport of independently labelled sidecars.
 
-## 5. The tropical flag becomes a carry spectrum
+## 5. The model tropical flag becomes a carry spectrum
 
 At one model suspension stage of THM-3069, set
 
@@ -271,7 +279,9 @@ R_k=R_(k-1)^k U_k^((k-1)!)
 
 Therefore `(R_k,r_k,c_k mod W_k)` with a reference lift reconstructs
 `R_(k-1)` by `(11)--(12)`, and then `U_k=r_kR_(k-1)`.  Iterating turns the
-lexicographic tropical flag into a mixed-radix relation-and-carry inverse.
+augmented model phase torus of the lexicographic tropical flag into a
+mixed-radix relation-and-carry inverse.  In the literal physical carrier
+`U_k>0`, so its phase lane is fixed and the phase reconstruction is simpler.
 The attachment's three-coordinate proof state is now literal:
 
 ```text
@@ -338,8 +348,7 @@ The exact companion verifies:
 3. `833` exact winding/carry reconstructions;
 4. five truncated rational unit-germ logarithm/exponential lifts;
 5. exact pointed Fourier cyclotomic reductions at `p=7,13`;
-6. both `k=14` exponent-pair `C91` controls and the fixed-normal physical
-   boundary; and
+6. both `k=14` exponent-pair `C91` controls; and
 7. `2,925` recursive model-flag carry cells.
 
 Run
@@ -356,4 +365,4 @@ does not supply the required physical pointer, common atom, parallel table,
 Kummer plane, simultaneous scale cone, root origin, semantic arrival, LRC
 row decrement, arbitrary-radial GMC(2), NC2, LRC(14), JC(2), or DC(2).
 
-**QED, pending independent audit and status promotion.**
+**QED.**
