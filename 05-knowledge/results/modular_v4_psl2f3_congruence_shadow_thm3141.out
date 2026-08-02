@@ -1,0 +1,11 @@
+THM3141 quartic V4 modular congruence shadow
+orders=S:2;R:3;SR:3;generated_group:12
+first_extra_relation_length=6;words:(('S', 'R', 'S', 'R', 'S', 'R'), ('S', 'r', 'S', 'r', 'S', 'r'), ('R', 'S', 'R', 'S', 'R', 'S'), ('r', 'S', 'r', 'S', 'r', 'S'))
+identification=V4_semidirect_C3:A4:PSL2_F3;full_affine:S4:PGL2_F3
+matrix_relation=SR_is_projective_T;integer_(SR)^3_nontrivial;mod3_(SR)^3_identity
+farey=neighbor_checks:744;converse_det:4
+gate_hostile=d:(-100,-7):8281<=10049;S:118300>10049;R:126581>11498
+ternary_boundary=C3_rotates_the_labelled_input_triple;the_endpoint_jet_readout_is_rotation_invariant_and_forgets_the_root
+missing_sidecar=Gamma3_Farey_lift_plus_rooted_C3_block_plus_common_physical_atom
+record_sha256=578b192b42841ade28003561fe4a56b7bfafc1daf39bc0d98416a3449044769c
+all_exact_controls=PASS
