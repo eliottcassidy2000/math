@@ -10,7 +10,8 @@ import sys
 
 from flint import fmpq_mat, nmod_mat
 
-sys.set_int_max_str_digits(0)
+if hasattr(sys, "set_int_max_str_digits"):
+    sys.set_int_max_str_digits(0)
 
 
 def require(condition, message):
@@ -192,23 +193,32 @@ def top_tensor(depth, order, moving):
     return normalized_tensor(depth, (moving,) * order)
 
 
-def normal_boundary_form(depth, first_low, moving, gap, order):
+def all_high_normal_form(depth, moving, gap, order):
+    """Exact block of (-w f_M+z(f_C-f_M))^order, divided by U_r."""
     width = moving + gap
     form = {}
-    for first_count in range(order + 1):
-        moving_count = order - first_count
-        entries = (first_low,) * first_count + (moving,) * moving_count
-        form[(first_count, moving_count)] = (
-            comb(order, first_count)
-            * signed_inclusion(depth, width, entries)
-            / top_tensor(depth, order, moving)
+    for w_count in range(order + 1):
+        z_count = order - w_count
+        total = Fraction(0)
+        for terminal_z in range(z_count + 1):
+            offsets = (
+                (width,) * (w_count + terminal_z)
+                + (moving,) * (z_count - terminal_z)
+            )
+            total += (
+                (-1) ** (w_count + terminal_z)
+                * comb(z_count, terminal_z)
+                * normalized_tensor(depth, offsets)
+            )
+        form[(w_count, z_count)] = (
+            comb(order, w_count) * total / top_tensor(depth, order, moving)
         )
     return form
 
 
-def boundary_resultant(depth, first_low, moving, gap):
-    fourth = normal_boundary_form(depth, first_low, moving, gap, 4)
-    fifth = normal_boundary_form(depth, first_low, moving, gap, 5)
+def all_high_resultant(depth, moving, gap):
+    fourth = all_high_normal_form(depth, moving, gap, 4)
+    fifth = all_high_normal_form(depth, moving, gap, 5)
     return binary_resultant(fourth, 4, fifth, 5)
 
 
@@ -265,11 +275,19 @@ for slots in range(3, 13):
     require(factorial(slots) // p == slots * factorial(slots - 2), "top multidegree changed")
     require(factorial(slots) // q == factorial(slots - 1), "terminal multidegree changed")
     general_cells += 1
-    if slots >= 4:
-        rho = Fraction(slots - 2, slots - 1) ** (slots - 2)
-        for layer in range(1, slots - 1):
-            require(Fraction(layer, slots - 1) ** layer <= rho, "safe gap failed")
-            gap_cells += 1
+    rho = Fraction(slots - 2, slots - 1) ** (slots - 2)
+    require(Fraction(1, slots - 1) <= rho, "fixed-layer leakage gap failed")
+    gap_cells += 1
+    for layer in range(1, slots - 1):
+        require(Fraction(layer, slots - 1) ** layer <= rho, "lower safe gap failed")
+        gap_cells += 1
+    for layer in range(slots):
+        layer_power = 1 if layer == 0 else layer**layer
+        scaled_base = Fraction(
+            layer_power * (slots - 1) ** (slots - layer), slots**slots
+        )
+        require(scaled_base <= rho, "top scaled safe gap failed")
+        gap_cells += 1
 
 
 # Literal K5 normal-ideal filtration.
@@ -306,26 +324,26 @@ for depth in (1, 2, 3):
 sidecar_digest = sha256("\n".join(sidecar_records).encode("ascii")).hexdigest()
 
 
-# Exact full boundary restrictions and their powered-line limit controls.
+# Exact all-high normal blocks and their powered-line limit controls.
 boundary_records = []
 primary_boundaries = []
-for depth, first_low, moving, gap in (
-    (1, 0, 3, 1),
-    (1, 0, 5, 1),
-    (1, 0, 10, 1),
-    (1, 0, 20, 1),
-    (1, 0, 40, 1),
-    (2, 1, 5, 2),
-    (2, 1, 9, 2),
-    (3, 0, 8, 3),
+for depth, moving, gap in (
+    (1, 3, 1),
+    (1, 5, 1),
+    (1, 10, 1),
+    (1, 20, 1),
+    (1, 40, 1),
+    (2, 5, 2),
+    (2, 9, 2),
+    (3, 8, 3),
 ):
-    value = boundary_resultant(depth, first_low, moving, gap)
+    value = all_high_resultant(depth, moving, gap)
     limit = Fraction((5**gap - 4**gap) ** 20)
-    require(value > 0 and limit > 0, "normal boundary positivity control failed")
+    require(value > 0 and limit > 0, "all-high normal positivity control failed")
     boundary_records.append(
-        f"{depth}:{first_low}:{moving}:{gap}:{value.numerator}/{value.denominator}"
+        f"{depth}:{moving}:{gap}:{value.numerator}/{value.denominator}"
     )
-    if depth == 1 and first_low == 0 and gap == 1:
+    if depth == 1 and gap == 1:
         primary_boundaries.append(value)
 require(
     all(left > right > 1 for left, right in zip(primary_boundaries, primary_boundaries[1:])),
@@ -416,8 +434,8 @@ print(f"general_exponent_cells={general_cells} safe_gap_cells={gap_cells}")
 print(f"normal_ideal_layer_cells={layer_cells}")
 print(f"three_low_sidecar_cells={sidecar_cells} all_positive=1")
 print(f"three_low_sidecar_digest={sidecar_digest}")
-print(f"normal_boundary_cells={len(boundary_records)} all_positive=1")
-print(f"normal_boundary_digest={boundary_digest}")
+print(f"all_high_normal_cells={len(boundary_records)} all_positive=1")
+print(f"all_high_normal_digest={boundary_digest}")
 print(f"beta_factor_cells={beta_cells} width_cells={width_cells}")
 print(f"carrier_hankel_cells={carrier_cells}")
 print(

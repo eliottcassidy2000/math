@@ -10,16 +10,18 @@ status: >
   integer reciprocal gaps are exact Gregory-Newton degree walls; positive
   nonintegral gaps give nonzero sign-regular kernels with a sharp wall-crossing
   parity.  The same ordered-prefix calculus gives one rational-mesh carrier
-  certificate for THM-3062.  Higher reciprocal-carrier signs are finite-exact
-  controls only.
+  certificate for THM-3062.  Nonpositive dual prefixes force every order-two
+  sign but not the higher checkerboard law: exact zero-cut hostiles fail at
+  orders three and four.  Higher reciprocal-carrier signs and the strict-dual-
+  prefix repair are finite-exact signals only.
 source: root-and-gmc-tight-sequence-frontier-2026-08-01
 depends_on:
   - THM-3053-beta-gamma-prefix-transport-and-multiplicative-holotopy-cone
   - THM-3062-four-slot-physical-transverse-augmentation-and-affine-tail-holotopy
 script: 04-computation/gmc_reciprocal_beta_generalized_hankel_wall_thm3065.py
 output: 05-knowledge/results/gmc_reciprocal_beta_generalized_hankel_wall_thm3065.out
-script_sha256: c1b7c687082a0463b232e1fd659341ab760bd6f2b38f1817713adc3aec953d3c
-output_sha256: 2da516482ab149701b5f31a2db8e656eef37860252b9d42a86bdb1128e6a5641
+script_sha256: 83faf0f4a46e7e9af6506cf8e4c25bf8d99f63aae0280e8c273c3a02ec51f1f6
+output_sha256: f5e9ac33a111e9b58d626a04a4ecca5d706366d6b823df100861075ba2d9cb3d
 hash_basis: LF-normalized bytes
 ---
 
@@ -396,6 +398,83 @@ det[[H_x,H_(x+q)],[H_(x+p),H_(x+p+q)]]
 Thus the reciprocal THM-3062 carrier is already excluded from the Stieltjes
 cone at every strict generalized minor of order two.
 
+The natural dual-prefix lift stops exactly there.  More generally, let
+
+```text
+H_k=c^k product_(j=0)^N(alpha_j)_k^(e_j),
+0<alpha_0<...<alpha_N,                E_j=sum_(i<=j)e_i.    (39)
+```
+
+If every `E_j<=0` and the inventory is nonzero, then every generalized minor
+of order two is negative.  Indeed, for the continuous ratio
+
+```text
+q(x)=H_(x+1)/H_x=c product_j(x+alpha_j)^(e_j),
+
+d/dx log q(x)
+ =E_N/(x+alpha_N)
+  +sum_(j=0)^(N-1) E_j
+   [1/(x+alpha_j)-1/(x+alpha_(j+1))]<0.               (40)
+```
+
+Strict decrease of `q` is strict log-concavity, and multiplying the intervening
+ratios proves the arbitrary-gap order-two sign.  This is the strongest
+survivor of the dual-prefix conjecture.
+
+It does **not** lift to the checkerboard signature at higher order.  The
+smallest three-shape zero-cut hostile found is
+
+```text
+(alpha_0,alpha_1,alpha_2)=(1/7,2/3,20),
+(e_0,e_1,e_2)=(-1,1,-1),              E=(-1,0,-1),
+
+H_k=(2/3)_k/[(1/7)_k(20)_k].                          (41)
+```
+
+Its leading order-three determinant has the wrong sign:
+
+```text
+det[H_(i+j)]_(i,j=0)^2
+ =4914161/84138683904000
+ =7^3*14327/[2^12*3^10*5^3*11^2*23] >0,             (42)
+```
+
+where the checkerboard signature at order three is negative.  A powered
+version records the failure independently at even checkerboard parity:
+
+```text
+(e_0,e_1,e_2)=(-3,3,-1),              E=(-3,0,-1),
+u=(0,1,2,7),                          v=(0,1,2,6).    (43)
+```
+
+Its order-four minor, which a checkerboard law would require to be positive,
+is instead
+
+```text
+- 7^58 * 1953596693 * 4434246478119732782469492691
+  /[2^39 * 3^89 * 5^14 * 11^4 * 13^2 * 19^3
+    *23^3 * 29^6 * 43^6 * 71^3] < 0.                 (44)
+```
+
+Thus the first failed implication is
+
+```text
+nonpositive dual prefixes
+  does not imply all-order checkerboard sign regularity.                (45)
+```
+
+The missing coordinate is quantitative: edge multiplicities, shape gaps,
+and terminal reciprocal-Gamma mass remain visible beyond order two.  The two
+nearest strict-prefix repairs `(-2,1,-1)` and `(-3,2,-1)` have prefixes
+`(-2,-1,-2)` and `(-3,-1,-2)` and pass all `6,664` generalized-minor controls
+through order five and offsets in `[0,6]`.  Independently, all `194` exponent
+inventories in `[-4,4]^3` with every prefix strictly negative passed all
+`194*1,225=237,650` arbitrary order-four controls on the same three shapes.
+This supports, but does not prove, the sharper hypothesis that **strictly**
+negative prefixes force the checkerboard law.  For THM-3062 this is still not
+a complete explanation: the actual carrier has terminal mass `46`, while for
+`h>=2` it also has the zero cut displayed in `(37)`.
+
 The exact companion finds the checkerboard signature
 `(-1)^(r choose 2)` for `26,656` reciprocal-carrier minors through order five,
 two bases, four terminal gaps, and every row/column offset set in `[0,6]`.
@@ -414,7 +493,9 @@ The dependency-free exact companion checks:
 - `72` hostile nonconsecutive minors immediately below, on, and above four
   integer walls, including the crossing parity `(31)`;
 - the rational-mesh carrier prefixes, `120` actual-gap flow identities, and
-  the `26,656` explicitly scoped reciprocal-carrier controls.
+  the `26,656` explicitly scoped reciprocal-carrier controls;
+- the exact dual-prefix hostiles `(41)--(44)`, `441` surviving order-two
+  controls, and `6,664` nearest strict-prefix repair controls.
 
 Run
 
@@ -423,9 +504,9 @@ python 04-computation/gmc_reciprocal_beta_generalized_hankel_wall_thm3065.py
 python -O 04-computation/gmc_reciprocal_beta_generalized_hankel_wall_thm3065.py
 ```
 
-Ordinary and optimized execution are byte-identical to the stored ten-line
-transcript.  The LF-normalized script has `13,114` bytes in `377` lines and
-the output has `707` bytes in `10` lines; their hashes are pinned in the
+Ordinary and optimized execution are byte-identical to the stored eleven-line
+transcript.  The LF-normalized script has `16,831` bytes in `459` lines and
+the output has `791` bytes in `11` lines; their hashes are pinned in the
 frontmatter.
 
 The theorem concerns one Gamma-ratio kernel at all orders, and the positive-

@@ -24,8 +24,8 @@ related:
   - THM-3060-three-slot-physical-terminal-face-and-affine-tail-holotopy
 script: 04-computation/gmc_terminal_suspension_five_slot_tail_thm3063.py
 output: 05-knowledge/results/gmc_terminal_suspension_five_slot_tail_thm3063.out
-script_sha256: 8bb9dda3069ced0122ea40dfeeb6138ea5259a2e1cd6115e19fd0cd5814645db
-output_sha256: 3532437efae3e3d182b4b9a8078491064db84aa527a53f8f05c525c6ccb2290f
+script_sha256: bf49a78473bdcc5f83d2e91648887bef7684ab8a87310ebbfbbd7e612e186565
+output_sha256: b08563d21d691ba5bdeeaf019e678f28ffeaffb29de98025ae128625e166ac1b
 hash_basis: LF-normalized bytes
 ---
 
@@ -78,12 +78,15 @@ K={w=z=0} ~= P^(k-4).                                 (5)
 It has vector dimension `k-3`.  Restrict the fixed layers:
 
 ```text
-H_r=F_(r,0,C)|_K,                         2<=r<=k-2,
+H_r=F_(r,0,C)|_K,                         2<=r<=k-1,
 S=Res_K(H_2,...,H_(k-2)).                           (6)
 ```
 
-The forms in `(6)` are independent of `C`.  There are `k-3` of them in
-`k-3` homogeneous variables.  At the endpoints use
+All `H_r` are independent of `C`.  The resultant in `(6)` uses `k-3`
+forms in `k-3` homogeneous variables; the extra fixed form `H_(k-1)` will
+enter the normal contraction but not its obstruction.  The normalization of
+`S` uses the determinant-one `y` coordinates fixed in `(16)`.  At the
+endpoints use
 
 ```text
 k=3: K=P^(-1), S=1;
@@ -136,114 +139,139 @@ Put
 p=k-1, q=k, Delta=k^h-(k-1)^h>0.                     (13)
 ```
 
-The two limiting lines are independent.  Choose once a generic rational
-complete flag in `K` for which the limiting lower Poisson boundary factors
-are nonzero, and let `N~=P^1` be its final complementary normal line.  Define
-the exact, flag-dependent boundary factor
+The two limiting lines are independent.  Define the exact all-high binary
+normal blocks and their resultant by
 
 ```text
-E_C=Res_N(g_(k-1,C)|_N,g_(k,C)|_N).                  (14)
+A_(r,C)=F_(r,r,C)/U_(r,C),
+E_C=Res_bin(A_(k-1,C),A_(k,C)).                       (14)
 ```
 
-This uses the full normalized boundary restrictions, not merely their
-all-high pieces.  It is therefore the literal final Poisson factor.  Yet
-`(12)` gives
+Equation `(12)` gives the full symbol
 
 ```text
-E_C=Delta^[k(k-1)](1+O(C^-1)),                       (15)
+E_C=Delta^[k(k-1)](1+O(C^-1))!=0                     (15)
 ```
 
-with a complete inverse-power expansion.  In particular `E_C!=0` for all
-sufficiently large `C`.  The value in `(14)` depends on the auxiliary flag;
-the final symbol below does not.
+for every sufficiently large `C`.  Unlike a boundary factor from an
+auxiliary projective flag, `(14)` is intrinsic to the fixed quotient
+coordinates `(w,z)`.
 
-## 3. Uniform tube around the transverse space
+## 3. Isotropic normal contraction
 
-For fixed `k,n,(a_i),h`, coefficient norms satisfy
+For `k>=4`, take the unimodular coordinates
 
 ```text
-||F_(r,j,C)/U_(r,C)||
- <=poly(C)(j^j/r^r)^C,                 0<=j<r,        (16)
+y_i=x_i,                         0<=i<=k-4,
+x_(k-3)=w-sum_(i=0)^(k-4)y_i,                           (16)
 ```
 
-with `0^0=1` for the fixed layer.  The exact normal pair in `(14)` has a
-uniformly nonzero binary resultant.  Hence its two powered directions are
-jointly coercive.  At a common zero of `g_(k-1,C),g_(k,C)`, `(10),(16)` give
-the two root inequalities
+together with `z`.  Thus `K={w=z=0}` with homogeneous coordinates `y`, and
+the coordinate determinant is one.  Put
 
 ```text
-c R^r<=poly(C)sum_(j<r)(j^j/r^r)^C R^j,
-r=k-1,k,                                                (17)
+lambda_C=U_(k-1,C)^[-1/(k-1)],
+s_C=U_(k-1,C)^[k/(k-1)]/U_(k,C).                      (17)
 ```
 
-where `R` is projective distance to `K`.  Since
+Substitute `(w,z)->lambda_C(w,z)` in every form and then multiply only the
+order-`k` form by `s_C`.  If `R~_C` is the resultant of the transformed
+system, variable covariance and coefficient-block homogeneity give exactly
 
 ```text
-(j^j/r^r)^[1/(r-j)]<=1/r,                             (18)
+mu_(k-1)=k!/(k-1),                 mu_k=(k-1)!,
+
+R~_C=lambda_C^(2k!) s_C^mu_k R_C
+    =R_C/[U_(k-1,C)^mu_(k-1) U_(k,C)^mu_k].           (18)
 ```
 
-the elementary polynomial root bound yields
+This is an isotropic normal scaling.  It does not make the invalid
+anisotropic replacement of the two exact normal blocks by their limiting
+lines.
+
+The layer estimate behind the contraction is coefficientwise.  For
+`2<=r<=k-2` and `1<=j<=r`, or for `r=k-1` and `1<=j<k-1`, a `j`-high layer
+after `(17)` costs at most
 
 ```text
-R<=poly(C)(k-1)^(-C).                                 (19)
+poly(C)(j/(k-1))^(jC).                                (19a)
 ```
 
-On this tube every lower form satisfies, uniformly on both standard charts
-of `K`,
+The omitted `j=0` fixed layer has a separate elementary estimate:
 
 ```text
-F_(r,C)=H_r+O(poly(C)rho_k^C),             2<=r<=k-2,
-rho_k=((k-2)/(k-1))^(k-2)<1.                         (20)
+F_(r,0,C)(y,lambda_C w)-H_r(y)
+ =O(lambda_C)=O(poly(C)(k-1)^(-C)),       2<=r<=k-1.  (19c)
 ```
 
-Indeed a `j`-high layer costs at most
-`(j/(k-1))^(jC)` after `(19)`; convexity puts the largest endpoint at
-`j=k-2`, which also dominates `j=1`.  The number `rho_k` is a safe gap, not
-a sharp one.  For `k=3` there is no lower layer and `(20)` is vacuous.
-
-This is the load-bearing separation.  It controls whole contracted forms on
-their common zero scheme and never compares equal-base Macaulay monomials
-term by term.
-
-## 4. Repeated Poisson contraction
-
-Scale only the top two coefficient blocks in the resultant.  Their
-multidegrees are
+In the scaled order-`k` form, a `j`-high layer with `0<=j<k` costs at most
 
 ```text
-mu_(k-1)=k!/(k-1),             mu_k=(k-1)!.           (21)
+poly(C)[j^j (k-1)^(k-j)/k^k]^C.                       (19b)
 ```
 
-Repeated homogeneous Poisson formulas along the generic flag from `(14)`
-are exact for all sufficiently large `C`.  At each stage, `(19)--(20)`
-replace the next lower form on the finite intersection scheme by its
-restriction to `K`; local multiplicities are retained.  The separated
-source model is
+Convexity and the endpoint comparison give the common safe gap
 
 ```text
-(H_2,...,H_(k-2)) in the K variables,
-(A_(k-1),A_k)     in the two normal variables.        (22)
+rho_k=((k-2)/(k-1))^(k-2)<1,                         (20)
 ```
 
-Its standard product formula is
+which dominates every base in `(19a)--(19c)`; the largest lower base is the
+`j=r=k-2` boundary in `(19a)`.  Therefore, coefficientwise on the fixed
+projective space,
 
 ```text
-Res(22)=S^[k(k-1)] E^[(k-2)!].                        (23)
+(F~_2,...,F~_k)
+ =(H_2,...,H_(k-2),H_(k-1)+A_(k-1,C),A_(k,C))
+   +O(poly(C)rho_k^C).                                (20a)
 ```
 
-The exponents have a direct intersection meaning.  The normal complete
-intersection has length `k(k-1)`, so it repeats the transverse resultant
-that many times.  Conversely the lower degrees have product
+For `k=3`, there are no `y` variables and the transformed pair is exactly
+the full normalized pair `(g_(2,C),g_(3,C))`.  The same layer estimates give
 
 ```text
-2*3*...*(k-2)=(k-2)!,                                (24)
+(g_(2,C),g_(3,C))
+ =(A_(2,C),A_(3,C))+O(poly(C)2^(-C)).                 (21)
 ```
 
-so they repeat the binary normal resultant `(k-2)!` times.  Equivalently,
-every exponent in `(23)` is forced by the coefficient multidegrees.  The
-Poisson boundary factors telescope along the flag, leaving exactly `(23)`.
+Thus binary-resultant continuity supplies the same conclusion.  This
+whole-form contraction, rather than termwise sorting of equal-base Macaulay
+monomials, is the load-bearing separation.
 
-Consequently the actual physical resultant satisfies the refined formula
+## 4. Separated resultant and the positive face
+
+For fixed `C`, the model system in `(20a)` has resultant
+
+```text
+Res(H_2,...,H_(k-2),H_(k-1)+A_(k-1,C),A_(k,C))
+ =S^[k(k-1)] E_C^[(k-2)!].                            (22)
+```
+
+Indeed `S!=0` makes the homogeneous quotient by
+`H_2,...,H_(k-2)` finite of length
+
+```text
+D=2*3*...*(k-2)=(k-2)!.                              (23)
+```
+
+For every sufficiently large `C`, `(15)` also gives `E_C!=0`.  The lower
+equations then force `y=0` at any common cone zero, and the two normal forms
+have no common projective zero.  Consequently the model resultant is
+nonzero for *every* choice of the coefficients of `H_(k-1)`.  Over `C`, a
+nonconstant polynomial in those coefficients has a zero, so the resultant
+is independent of `H_(k-1)`.  Set that form to zero.  The standard separated
+product formula now repeats `S` through the normal complete intersection of
+length `k(k-1)` and repeats `E_C` through the transverse quotient of length
+`D`.  Its sign is positive in the standard resultant normalization, as is
+seen on the coordinate-power monomial system.  This proves `(22)`; the
+exponent identity is
+
+```text
+k(k-1)(k-2)!=k!.                                      (24)
+```
+
+Since the right side of `(22)` stays away from zero, polynomial continuity
+of the fixed-degree resultant applied to `(20a)` and then `(18)` proves
 
 ```text
 R_C=S^[k(k-1)] E_C^[(k-2)!]
@@ -251,12 +279,7 @@ R_C=S^[k(k-1)] E_C^[(k-2)!]
     (1+O(poly(C)rho_k^C)).                            (25)
 ```
 
-This proof also covers multiple roots: first perturb the fixed generic flag
-and lower coefficients so every Poisson fibre is reduced, apply the exact
-identity, and specialize back by polynomial continuity.  No root is counted
-without its local intersection multiplicity.
-
-Combining `(15)` and `(25)` gives the flag-free leading face
+Combining `(15)` and `(25)` gives the intrinsic leading face
 
 ```text
 R_C~S^[k(k-1)] Delta^(k!)
@@ -269,8 +292,9 @@ Because `k(k-1)` and `k!` are even and every `U` is positive, `(8)` implies
 R_C>0 for every sufficiently large C.                 (27)
 ```
 
-For `k=3`, `(14)` is the whole binary resultant and the lower Poisson product
-is empty.  For `k=4`, `(25)` is THM-3062's exact `G_2^12 E_C^2` mechanism.
+For `k=3`, `(21)` and binary-resultant continuity prove `(25)` with the
+empty lower product.  For `k=4`, `(25)` is THM-3062's exact
+`G_2^12 E_C^2` mechanism.
 
 ## 5. Exact exponential base and power
 
@@ -407,10 +431,11 @@ and the carrier has thirty copies of each
 
 ## 8. Exact evidence and scope
 
-The exact companion checks the normal-ideal filtration, safe layer gaps,
-separated resultant exponent ledger, five-slot transverse binary resultants,
-full normal-boundary resultants, Gauss/Beta products, `(154,172,326)` width
-flag, and finite carrier Hankel minors.  It also builds the literal degree-11
+The exact companion checks the normal-ideal filtration, both isotropically
+scaled layer-gap families including fixed-layer leakage, the separated
+resultant exponent ledger, five-slot transverse binary resultants, exact
+all-high normal resultants, Gauss/Beta products, `(154,172,326)` width flag,
+and finite carrier Hankel minors.  It also builds the literal degree-11
 physical Macaulay map over `F_1000003` on `36` mixed cells.  All maps have
 shape `589x364` and full column rank.  This is a finite nonvanishing control,
 not an intrinsic resultant value or a tail proof.  No unproved selected

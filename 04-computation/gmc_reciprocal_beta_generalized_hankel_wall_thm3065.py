@@ -372,6 +372,88 @@ print(
     "finite_signature=(-1)^binom(order,2)"
 )
 
+# A nonpositive dual prefix is enough for every order-two sign, but not for
+# checkerboard sign regularity.  This exact zero-cut hostile is the first
+# failed lift.  Two nearest strict-prefix repairs are positive controls only.
+dual_shapes = (Fraction(1, 7), Fraction(2, 3), Fraction(20))
+dual_hostile = (-1, 1, -1)
+require(tuple(value for _, value in ordered_prefixes(
+    dict(zip(dual_shapes, dual_hostile)))) == (-1, 0, -1),
+        "dual-prefix hostile ledger changed")
+dual_values = []
+for index in range(14):
+    value = Fraction(1)
+    for shape, exponent in zip(dual_shapes, dual_hostile):
+        factor = rising(shape, index)
+        value = value * factor**exponent if exponent >= 0 else value / factor ** (-exponent)
+    dual_values.append(value)
+minimal_rows = (0, 1, 2)
+minimal_columns = (0, 1, 2)
+minimal_determinant = determinant(
+    [[dual_values[row + column] for column in minimal_columns] for row in minimal_rows]
+)
+require(minimal_determinant == Fraction(4914161, 84138683904000),
+        "minimal dual-prefix order-three hostile changed")
+
+order_four_inventory = (-3, 3, -1)
+order_four_values = []
+for index in range(14):
+    value = Fraction(1)
+    for shape, exponent in zip(dual_shapes, order_four_inventory):
+        factor = rising(shape, index)
+        value = value * factor**exponent if exponent >= 0 else value / factor ** (-exponent)
+    order_four_values.append(value)
+hostile_rows = (0, 1, 2, 7)
+hostile_columns = (0, 1, 2, 6)
+dual_determinant = determinant(
+    [[order_four_values[row + column] for column in hostile_columns] for row in hostile_rows]
+)
+expected_dual_determinant = Fraction(
+    -89813384398251034317167637460105582061544597308528939184258027657887067231528473035487,
+    2712795677868954759419954836150485676184464443881644193874894868030111422768506341215436800000000000000,
+)
+require(dual_determinant == expected_dual_determinant,
+        "dual-prefix order-four hostile changed")
+dual_h2_cells = 0
+for rows in combinations(range(7), 2):
+    for columns in combinations(range(7), 2):
+        value = determinant(
+            [[dual_values[row + column] for column in columns] for row in rows]
+        )
+        require(value < 0, "dual-prefix order-two survivor failed")
+        dual_h2_cells += 1
+
+strict_repair_cells = 0
+for strict_inventory in ((-2, 1, -1), (-3, 2, -1)):
+    prefixes = tuple(value for _, value in ordered_prefixes(
+        dict(zip(dual_shapes, strict_inventory))))
+    require(all(value < 0 for value in prefixes), "strict-prefix control is not strict")
+    values = []
+    for index in range(13):
+        value = Fraction(1)
+        for shape, exponent in zip(dual_shapes, strict_inventory):
+            factor = rising(shape, index)
+            value = value * factor**exponent if exponent >= 0 else value / factor ** (-exponent)
+        values.append(value)
+    for order in range(2, 6):
+        expected = (-1) ** (order * (order - 1) // 2)
+        offset_sets = tuple(combinations(range(7), order))
+        for rows in offset_sets:
+            for columns in offset_sets:
+                value = determinant(
+                    [[values[row + column] for column in columns] for row in rows]
+                )
+                require(sign(value) == expected,
+                        "strict dual-prefix finite control changed")
+                strict_repair_cells += 1
+feed(digest, "D", dual_shapes, dual_hostile, minimal_rows, minimal_columns,
+     minimal_determinant, order_four_inventory, hostile_rows, hostile_columns,
+     dual_determinant)
+print(
+    f"dual_prefix_hostile_signs=H3:{sign(minimal_determinant)},H4:{sign(dual_determinant)} "
+    f"h2_survivor_cells={dual_h2_cells} strict_repair_cells={strict_repair_cells}"
+)
+
 print(f"exact_value_digest={digest.hexdigest()}")
 print("scope=single_ratio_all_orders;carrier_reciprocal_higher_orders_finite_only")
 print("all_exact_checks=PASS")
