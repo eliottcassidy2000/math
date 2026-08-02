@@ -186,10 +186,10 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   finite-order tail re-entry.  THM-3056 gives reciprocal product-Gamma sign
   `(-1)^binom(h,2)`, not moment positivity.  THM-3060/62/63 prove the
   fixed-low suspension hierarchy: five slots are unconditional; six first
-  meet arbitrary four-slot SFC.  THM-3065 gives reciprocal-Beta
-  Gregory--Newton walls; nonpositive signed prefixes force H2 only, as exact
-  zero-cut H3/H4 hostiles refute the higher lift.  Strict-negative-prefix
-  repair remains OPEN.  These are fixed finite banks, not one all-order tail.
+  meet arbitrary four-slot SFC.  THM-3065's nonpositive prefixes force H2;
+  zero-cut H3/H4 refute the higher lift.  THM-3079 repairs all orders for
+  integer meshes ending at `-1` past `alpha_0+u_min+v_min>M`; globally if
+  `alpha_0>M`. Other endings, gaps, and strict prefixes stay OPEN.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent

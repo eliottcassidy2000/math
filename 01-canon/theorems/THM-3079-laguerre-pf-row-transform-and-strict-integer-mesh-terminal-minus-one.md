@@ -2,8 +2,8 @@
 id: THM-3079
 title: "Newton-PF row transform and strict integer-mesh terminal-minus-one cone"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE-FILE AUDIT
-  REQUESTED.  Every finite PF-infinity row filter with positive constant
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every finite
+  PF-infinity row filter with positive constant
   coefficient preserves reversed strict total positivity of the reciprocal-
   Gamma kernel on its positive shifted strip.  If P has only negative real
   roots, its falling-factorial coefficient polynomial is PF-infinity: under
@@ -29,7 +29,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3079 -- Newton-PF row transforms close a strict integer-mesh cone
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3065 proves that nonpositive dual prefixes force the checkerboard sign at
 order two but not at higher order: a zero prefix permits exact order-three and
@@ -276,8 +276,8 @@ minus one or nonintegral gaps leave additional reciprocal-Gamma or
 nonpolynomial Gamma-ratio factors, for which no finite Toeplitz factorization
 is asserted.
 
-That baseline is itself exact and universal.  For an arbitrary increasing
-shape mesh and integer inventory
+That baseline is itself exact and universal.  For an arbitrary strictly
+increasing positive shape mesh `0<alpha_0<...<alpha_N` and integer inventory
 
 ```text
 H_n=product_(j=0)^N(alpha_j)_n^(e_j),
@@ -465,4 +465,12 @@ Both modes byte-match the stored twelve-line transcript.  The LF-normalized
 script has `18,568` bytes in `459` lines and the output has `636` bytes in twelve
 lines; their hashes are pinned in the frontmatter.
 
-**QED, pending independent immutable-file audit and status promotion.**
+An independent audit rederived the summation-by-parts baseline, the residual
+degree `M`, and the exact tail shift by `u_1+v_1`.  It also checked the
+Newton recurrence `D=(z+r)C+zC'`, all pole-interval signs in the strict
+interlacing proof, the lower-Toeplitz orientation, and the distinguished
+Cauchy--Binet minor.  Ordinary Python, optimized Python, and the stored
+transcript agree byte-for-byte at the declared hashes.  Terminal prefixes
+below `-1`, nonintegral gaps, and the shallow strip remain open.
+
+**QED.**
