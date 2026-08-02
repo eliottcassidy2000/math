@@ -17,8 +17,10 @@ audit: >
   elimination orientation, fixed/divergent-edge compactification, common-
   origin rebase, generalized-alternant floor, triangular resultant product,
   minimal-prefix finiteness and exact cylinder count, and the uniform
-  complete-intersection right inverse.  Normal, optimized, and stored output
-  matched byte-for-byte; both LF hashes and documentation checks passed.
+  complete-intersection right inverse on the remote translated family.  It
+  also checked that arbitrary good supports retain existence, but not a
+  width-only norm bound.  Normal, optimized, and stored output matched byte-
+  for-byte; both LF hashes and documentation checks passed.
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
   - THM-3069-one-normal-remote-terminal-suspension-and-physical-tropical-flag
@@ -242,14 +244,17 @@ V_(r,N)(H+d)=V_(r,N)(H)V_(r,N+H)(d)                    (22)
 ```
 
 rebases the block even when its common origin `H` also diverges.  Since
-`N+H->infinity`, its diagonal restriction tends to powers of linear forms
-whose line matrix, up to cancelling positive column multipliers, is
+`N+H->infinity`, its diagonal restriction tends to powers of linear forms.
+For positive within-block potential multipliers `Lambda_j`, its full line
+matrix is
 
 ```text
-L_(i,j)=r_i^d_j/r_i^d_i,                   i,j in I.    (23)
+L_(i,j)=r_i^d_j Lambda_j/(r_i^d_i Lambda_i),
+                                               i,j in I. (23)
 ```
 
-Its generalized alternant has the gap-independent floor
+The row and column `Lambda` products cancel in the determinant.  Its
+generalized alternant therefore has the gap-independent floor
 
 ```text
 det L_I
@@ -285,11 +290,12 @@ The ordered `t`-slot chamber has two kinds of faces at infinity:
    remote normal block.
 
 After positive carrier normalization the resultant section extends to every
-face.  On a gap face its zero divisor is exactly the lower-child resultant:
-the normal generalized alternant never vanishes.  Thus the closure of a bad
-locus can meet infinity only over a bad child stratum.  This is a genuine
-compactified holotopy of support configurations, not only a subsequence
-argument.
+face.  On a gap face its zero-locus support is exactly the lower-child zero
+locus: the lower resultant occurs with the THM-3073 multiplicity `D_z` (and
+with the corresponding later-block powers), while the normal generalized
+alternant never vanishes.  Thus the closure of a bad locus can meet infinity
+only over a bad child stratum.  This is a genuine compactified holotopy of
+support configurations, not only a subsequence argument.
 
 The `n=0` child boundary is included.  In THM-3093's proof every denominator
 is `(n+1)_C`, every response and Jensen inequality remains strict for
@@ -380,13 +386,20 @@ T_B: direct_sum_(j=1)^t S_(E_t-j) -> S_(E_t),
      (A_j) |-> sum_j A_j B_j.                           (34)
 ```
 
-It is surjective.  The coefficient vectors of all translated `B` lie in a
-compact multinomial box; Sections 3--4 keep their closure inside the
-positive-resultant locus.  Therefore the smallest singular value of `(34)`
-has a positive width-only floor.  Minimal-norm right inverses give uniformly
-bounded normalized Bezout certificates for every `x_i^E_t`, independently
-of every internal gap.  Undoing `(17)` costs only the displayed
-`lambda_i`, `a_i`, and carrier scalings; no hidden condition number remains.
+It is surjective.  On the **remote translated family** `N>=N_tr(t)`, the
+coefficient vectors of `B` lie in a compact multinomial box and Sections
+3--4 keep their closure inside the positive-resultant locus.  Therefore the
+smallest singular value of `(34)` has a positive width-only floor on that
+family.  Minimal-norm right inverses give uniformly bounded normalized
+Bezout certificates for every `x_i^E_t`, independently of every internal
+gap there.  Undoing `(17)` costs only the displayed `lambda_i`, `a_i`, and
+carrier scalings; no additional condition number is hidden.
+
+For a general good support outside the remote family, `(34)` is still
+surjective and the same literal certificates exist, but no width-only norm
+bound is asserted.  A sequence of good extensions may approach a bad-child
+gap face and make its smallest singular value tend to zero.  This is exactly
+the bad-prefix boundary from Section 5.
 
 For positive supports, THM-3096 consequently gives arbitrary-complex-radial
 pair-radical certificates through moment `2t` on all but
