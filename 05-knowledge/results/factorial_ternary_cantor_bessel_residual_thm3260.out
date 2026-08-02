@@ -1,3 +1,5 @@
+carry_automaton_states=12 valid_transitions=216 local_potential_certificate=True
+carry_transition_maxima=[((0, 0, 0), 0, 0, 18), ((0, 0, 1), 0, 0, 18), ((0, 1, 0), 0, 0, 18), ((0, 1, 1), 0, 0, 18), ((1, 0, 0), 1, 1, 18), ((1, 0, 1), 0, 0, 18), ((1, 1, 0), 0, 0, 18), ((1, 1, 1), -1, -1, 18), ((2, 0, 0), 2, 2, 18), ((2, 0, 1), 1, 1, 18), ((2, 1, 0), 1, 1, 18), ((2, 1, 1), 0, 0, 18)]
 factorial_unit_contraction_n_lt_1536=True
 cantor_bessel_universe=all_256_words_length_le_8 bessel_face_integrality=True cartier_recursions=True
 direct_chamber_words_length_le_7=64 simple_faces=True residual_gcds_one=True

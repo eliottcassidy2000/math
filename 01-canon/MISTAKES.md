@@ -52,6 +52,34 @@ Format per entry:
   A downstream exact proof must pin the whole current source/output chain and
   be replayed after any byte-level refresh; matching an old semantic payload
   is a conclusion of the replay, never a substitute for it.
+## MISTAKE-355 (2026-08-02, THM-3260 Cantor-window audit) -- an unlisted coupled carry state was hidden inside an asserted digit induction
+
+- **What was done:** the first THM-3260 proof said that `18` low ternary
+  digit triples, “for each incoming bit,” proved the thickened Cantor-window
+  valuation lemma.  It did not define the simultaneous state or display its
+  transition invariant, even though the proof couples the carry from doubling
+  `j`, the carry from adding the doubled word to `N-k-j`, and the deficit in
+  the Cantor decomposition.  The bounded checks of `6,412,320` terms did not
+  repair that unbounded proof gap.
+- **First failed implication:** a finite list of low digits is not an induction
+  until every outgoing carry is part of the next state and a potential is
+  shown nonincreasing.  The original prose therefore did not justify its
+  strict `k>0` claim, despite all tested instances being correct.
+- **Repair / strongest survivor:** the repaired proof uses the explicit
+  twelve states `(rho,d,g)` with `rho in {0,1,2}` and `d,g in {0,1}`, and
+  potential `H=0` for `rho=0`, `H=rho-d-g` otherwise.  All `216` valid local
+  transitions satisfy
+  `beta-gamma-2(d'+g')+H(next)<=H(now)`; the theorem displays the twelve row
+  maxima and the companion verifies every transition.  Kummer then gives the
+  stronger symbolic bounds
+  `2v_3 C(N-k,j)>=j-k` and
+  `2v_3 C(N-1-k,j)>=j-k-1`.  Finally
+  `2v_3(D^k/k!)-k=2(v_3(D)-1)k+s_3(k)>0` for every `k>0`, which proves the
+  required strict face separation.  THM-3260's conclusion survives, but only
+  via this explicit state certificate.  Its Cartier recurrences are now also
+  stated coefficientwise, with all twelve contractions and both Cantor final
+  digits displayed.
+
 ## MISTAKE-352 (2026-08-02, modular free-factor synthesis) -- an invariant cyclic substitution was called a `C3` action, and the four-point torsor was mistaken for a faithful modular carrier
 
 - **What was claimed:** the first version of the modular free-factor reflection

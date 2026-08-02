@@ -9,6 +9,7 @@ resonances.  It also records the minimal hostile to the broader digit rule.
 """
 
 from fractions import Fraction
+from itertools import product
 from math import factorial
 
 
@@ -49,6 +50,57 @@ def factorial_unit(index: int) -> int:
     for integer in range(1, index + 1):
         answer = answer * unit(integer) % PRIME
     return answer
+
+
+def carry_potential(state) -> int:
+    """Potential P(r,d,g) in Lemma 2.1's 12-state carry certificate."""
+    remainder, double_carry, add_carry = state
+    if remainder == 0:
+        return 0
+    return remainder - double_carry - add_carry
+
+
+def carry_transition_certificate():
+    """Check every local transition in the unbounded carry induction.
+
+    A state (r,d,g) records the deficit r in A+B+C+r=M, the incoming
+    carry d in B+B, and the incoming carry g in A+(B+B).  For a Cantor
+    output digit e in {0,2}, the low input digits (a,b,c) determine the
+    next state.  The checked inequality is precisely the induction step
+
+        b-c-2(d'+g') + P(r',d',g') <= P(r,d,g).
+    """
+    maxima = []
+    valid_transitions = 0
+    passed = True
+    for state in product(range(3), range(2), range(2)):
+        remainder, double_carry, add_carry = state
+        values = []
+        for cantor_digit in (0, 2):
+            for a_digit, b_digit, c_digit in product(range(3), repeat=3):
+                numerator = (
+                    a_digit + b_digit + c_digit + remainder - cantor_digit
+                )
+                if numerator < 0 or numerator % 3:
+                    continue
+                next_remainder = numerator // 3
+                if next_remainder > 2:
+                    continue
+                doubled_digit = (2 * b_digit + double_carry) % 3
+                next_double = (2 * b_digit + double_carry) // 3
+                next_add = (a_digit + doubled_digit + add_carry) // 3
+                next_state = (next_remainder, next_double, next_add)
+                value = (
+                    b_digit
+                    - c_digit
+                    - 2 * (next_double + next_add)
+                    + carry_potential(next_state)
+                )
+                values.append(value)
+                valid_transitions += 1
+                passed &= value <= carry_potential(state)
+        maxima.append((state, carry_potential(state), max(values), len(values)))
+    return valid_transitions, passed, maxima
 
 
 def ternary(index: int) -> str:
@@ -304,6 +356,13 @@ def sparse(polynomial):
 
 
 def main():
+    transitions, carry_passed, carry_maxima = carry_transition_certificate()
+    print(
+        f"carry_automaton_states=12 valid_transitions={transitions} "
+        f"local_potential_certificate={carry_passed}"
+    )
+    print(f"carry_transition_maxima={carry_maxima}")
+
     contraction = True
     for m in range(512):
         for remainder in range(3):

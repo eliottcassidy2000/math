@@ -19,8 +19,8 @@ related:
   - THM-3131-prime-resonance-newton-slope-separation
 script: 04-computation/factorial_ternary_cantor_bessel_residual_thm3260.py
 output: 05-knowledge/results/factorial_ternary_cantor_bessel_residual_thm3260.out
-script_sha256: 62059117695a038748099f8a8da173adb4472a85c6386e74791d114b59e67d4c
-output_sha256: cd63c5859ff2cd3e44c5a2eac7651dbb7e01e5c36d323888dbb65af33fcef715
+script_sha256: 94daa134712b930a752e273365b6b93ce4c21590c0ac2833640884ba1cae3a10
+output_sha256: 2cfd78dbcd49f989637090d501bf357f1f7a00cc15a630321b8db53ca7e6fa8f
 hash_basis: LF-normalized bytes
 ---
 
@@ -124,64 +124,122 @@ equality in `(10)` only for odd `j`.
 
 ### Proof
 
-Legendre's formula gives
+We give the complete finite-state certificate for the digit step.  For
+nonnegative integers `A,B,C`, a Cantor integer `M`, and
 
 ```text
-2v(C(m,j))=j+s(j)+s(m-j)-s(m+j).                             (12)
+A+B+C+rho=M,                   rho in {0,1,2},               (12)
 ```
 
-For completeness, here is the digit mechanism behind the lemma.  If
-`B_N(x)` is the total number of borrows when subtracting `x` from `N`, and
-`K_N(x)` the total number of carries when adding `x` to `N`, columnwise
-subtraction and addition give the exact identities
+run two base-`3` additions in parallel:
+
+1. double `B`, with incoming carry `d in {0,1}`;
+2. add `A` to the output digits of that doubling, with incoming carry
+   `g in {0,1}`.
+
+Let `D_d(B)` and `G_(d,g)(A,B)` be the total numbers of outgoing carries in
+the first and second additions.  Define the twelve-state potential
 
 ```text
-s(N-x)=s(N)-s(x)+2B_N(x),
-s(N+x)=s(N)+s(x)-2K_N(x).                                   (13)
+H(rho,d,g)=0                     if rho=0,
+H(rho,d,g)=rho-d-g               if rho=1 or 2.              (13)
 ```
 
-The point of the alphabet `{0,2}` is that a nonzero input digit must be
-paid for on one of the two sides: over a center digit `0` subtraction
-borrows, while over a center digit `2` addition carries.  Incoming
-borrow/carry bits only strengthen this assertion.  Scanning the digits of
-`k` and `j` simultaneously, and charging a borrow chain at its first digit,
-gives
+The exact carry inequality is
 
 ```text
-(2a-1)k+s(k)+s(j)+s(N-k-j)-s(N-k+j) >= 0,                   (14)
-
-(2a-1)k+s(k)+s(j)+s(N-1-k-j)-s(N-1-k+j)+1 >= 0.             (15)
+s(B)-C-2(D_d(B)+G_(d,g)(A,B)) <= H(rho,d,g).                (14)
 ```
 
-In `(15)` use only `j>=1`; `j=0` is immediate from
-`ak-v(k!)>0` for `k>0`.  A zero in `(14)` or `(15)` forces no digit of `k`
-to spend the positive credit supplied by the trailing `a`-digit borrow
-chain, hence forces `k=0`.  At `k=0`, the final digit parity gives the stated
-even/odd equality restrictions.
-
-Here is an equivalent induction audit of the charging step.  Write the
-last digits of `(N,k,j)` as `(epsilon,u,w)`, with
-`epsilon in {0,2}` and `u,w in {0,1,2}`; pass the subtraction borrow and
-addition carry to the next column.  Substitution of
+Here is a fully explicit induction proof.  Write the low digits of
+`(A,B,C,M)` as `(alpha,beta,gamma,epsilon)`, where every digit is in
+`{0,1,2}` and `epsilon in {0,2}`.  The next state is determined by
 
 ```text
-s(3x+r)=s(x)+r,               r=0,1,2,                       (16)
+alpha+beta+gamma+rho = epsilon+3rho',
+2beta+d                  = f+3d',
+alpha+f+g                = h+3g'.                            (15)
 ```
 
-in `(14)`--`(15)` reduces each of the `18` digit triples, for each incoming
-bit, to the same inequality for the shortened words plus a nonnegative
-integer.  The added integer can vanish with `u!=0` only while the initial
-run `epsilon=2` is being scanned; the term `(2a-1)k` pays exactly that run,
-and the outgoing column is then positive.  This proves `(14)`--`(15)` by
-induction on the word length and also proves the equality statement.
-
-Finally, substituting `m=N-k` and `m=N-1-k` in `(12)`, and using
+After deleting the low column, the left side of `(14)` is
 
 ```text
-2v(D^k/k!)=(2a-1)k+s(k),                                    (17)
+beta-gamma-2(d'+g')
+ + [s(B')-C'-2(D_(d')(B')+G_(d',g')(A',B'))] -2C'.          (16)
 ```
 
-turns `(14)` and `(15)` into `(9)` and `(10)`.  This proves the lemma.
+Thus induction follows from the local inequality
+
+```text
+beta-gamma-2(d'+g')+H(rho',d',g') <= H(rho,d,g).            (17)
+```
+
+There are `12` incoming states.  For each state, exactly `18` quadruples
+`(epsilon,alpha,beta,gamma)` satisfy the first equation of `(15)`.  The
+following table gives the maximum of the left side of `(17)` over all
+those transitions.  Equality with the displayed potential in every row is
+the complete transition certificate.
+
+```text
+(rho,d,g)   H    transition maximum       (rho,d,g)   H    transition maximum
+--------------------------------------------------------------------------
+(0,0,0)     0           0                 (0,0,1)     0           0
+(0,1,0)     0           0                 (0,1,1)     0           0
+(1,0,0)     1           1                 (1,0,1)     0           0
+(1,1,0)     0           0                 (1,1,1)    -1          -1
+(2,0,0)     2           2                 (2,0,1)     1           1
+(2,1,0)     1           1                 (2,1,1)     0           0.        (18)
+```
+
+The base case has `A=B=C=M=0`, hence `rho=0`; `(14)` is immediate for all
+four incoming pairs `(d,g)`.  Equations `(15)`--`(18)` therefore prove
+`(14)` for arbitrary word length.  The companion enumerates all `216`
+valid transitions and checks `(17)` exactly; this is a finite certificate
+of the induction, not a bounded integer census.
+
+We now apply the carry inequality.  Kummer's theorem and
+
+```text
+C(m,j)=((2j)!/j!) binom(m+j,2j)                              (19)
+```
+
+give, with `A=m-j` and `B=j`,
+
+```text
+2v(C(m,j))
+ =j-s(j)+2(D_0(j)+G_(0,0)(m-j,j)).                          (20)
+```
+
+First take `(A,B,C,rho)=(N-k-j,j,k,0)` in `(14)`.  Equations
+`(14)` and `(20)` give the stronger shifted-Bessel bound
+
+```text
+2v(C(N-k,j)) >= j-k.                                        (21)
+```
+
+Next take `(A,B,C,rho)=(N-1-k-j,j,k,1)`.  Since
+`H(1,0,0)=1`, the same argument gives
+
+```text
+2v(C(N-1-k,j)) >= j-k-1.                                   (22)
+```
+
+Finally Legendre's formula gives
+
+```text
+2v(D^k/k!)=(2a-1)k+s(k).                                    (23)
+```
+
+For `k>0`, the difference between the right side of `(23)` and `k` is
+
+```text
+2(a-1)k+s(k)>0.                                             (24)
+```
+
+Adding `(21)` or `(22)` to `(23)` proves `(9)` and `(10)`, including
+strictness for every `k>0`.  Equation `(11)` is immediate.  At `k=0`, an
+integer valuation cannot equal `j/2` for odd `j`, or `(j-1)/2` for even
+`j`; this gives the equality parity assertion and completes the proof.
 
 ### Consequence for the full moment pair
 
@@ -192,7 +250,7 @@ Let `h=v((D-1)!)=v((D-2)!)`.  Lemma 2.1 and `(8)` show that every
 ```text
 A_(D-1):       y=h+j/2,
 A_(D-2):       y=h                 on 0<=j<=1,
-               y=h+(j-1)/2        on 1<=j<=D-2.             (18)
+               y=h+(j-1)/2        on 1<=j<=D-2.             (25)
 ```
 
 Thus no cancellation or denominator argument is hidden here: the full
@@ -208,10 +266,10 @@ P_M(X)=sum_(k=0)^(M/2)
   overline(3^(-k) C(M,2k)) X^k,
 
 Q_M(X)=sum_(k=0)^((M-2)/2)
-  overline(3^(-k) C(M-1,2k+1)) X^k.                         (19)
+  overline(3^(-k) C(M-1,2k+1)) X^k.                         (26)
 ```
 
-A coefficient in `(19)` is declared `0` when its valuation is strictly
+A coefficient in `(26)` is declared `0` when its valuation is strictly
 larger than the displayed power.  The `k=0` case of the digit argument in
 Lemma 2.1, which does not require the final digit to be `2`, proves that
 all displayed divisions are integral.
@@ -221,53 +279,135 @@ of `A_(D-1)` and `Q_N` the slope-`1/2` residual edge of `A_(D-2)`.
 
 ## 4. Exact Cartier recurrences
 
-The pair `(P_M,Q_M)` contracts one ternary digit at a time.  If `M` is a
-ternary Cantor integer, then
+We first give the coefficient statement from which the polynomial
+recurrences follow.  If an integer `z` satisfies `v(z)>=e`, write
 
 ```text
-P_(3M)   = P_M^3-X Q_M^3,             Q_(3M)   =-X Q_M^3,   (20)
+[z]_e = overline(3^(-e)z) in F_3.                            (27)
+```
 
-P_(3M+2) = P_M^3+X R_M^3,             Q_(3M+2) =-P_M^3,     (21)
+Thus `[z]_e=0` when `v(z)>e`.  Put
+
+```text
+p_(M,l)=[C(M,2l)]_l,
+q_(M,l)=[C(M-1,2l+1)]_l,                                   (28)
+```
+
+and set either symbol to zero outside its natural range.
+
+### Lemma 4.1 (coefficient Cartier contraction)
+
+For every even ternary Cantor integer `M`, including both endings
+`M==0,2 (mod 3)`, the following twelve identities hold:
+
+```text
+residual index k     3ell                 3ell+1               3ell+2
+----------------------------------------------------------------------------
+p_(3M,k)             p_(M,ell)           -q_(M,ell)            0
+q_(3M,k)             0                    -q_(M,ell)            0
+p_(3M+2,k)           p_(M,ell)            r_(M,ell)            0
+q_(3M+2,k)          -p_(M,ell)            0                     0,      (29)
+```
+
+where
+
+```text
+r_(M,ell)=p_(M,ell)-q_(M,ell)       if M==0 (mod 3),
+r_(M,ell)=-p_(M,ell)-q_(M,ell)      if M==2 (mod 3).          (30)
+```
+
+### Proof
+
+Let `F(m)=v(m!)` and let `U(m)` be the unit part of `m!` modulo `3`.
+Complete blocks of three give the exact one-digit contraction
+
+```text
+F(3m+r)=m+F(m),
+U(3m+r)=(-1)^m U(m) eta_r,
+eta_0=eta_1=1, eta_2=-1.                                   (31)
+```
+
+Apply `(31)` to the numerator factorial and the two denominator factorials
+in
+
+```text
+C(n,j)=(n+j)!/[j!(n-j)!].                                  (32)
+```
+
+In particular, the bracket is computed without any choice of lift by
+
+```text
+[C(n,j)]_e
+ = 1_(F(n+j)-F(j)-F(n-j)=e)
+   U(n+j) U(j)^(-1) U(n-j)^(-1),                            (32a)
+```
+
+because the shifted-Bessel bounds exclude a valuation below `e` in every
+entry used below.
+
+For auditability, the low remainders of those three factorial arguments
+are displayed below.  Each entry is `(n+j,j,n-j) mod 3`; the column is the
+residue class of the residual index `k`, so the Bessel index is `j=2k` in
+a `p` row and `j=2k+1` in a `q` row.
+
+```text
+target row       k=3ell             k=3ell+1           k=3ell+2
+-----------------------------------------------------------------------
+p_(3M,k)          (0,0,0)            (2,2,1)            (1,1,2)
+q_(3M,k)          (0,1,1)            (2,0,2)            (1,2,0)
+p_(3M+2,k)        (2,0,2)            (1,2,0)            (0,1,1)
+q_(3M+2,k)        (2,1,0)            (1,0,1)            (0,2,2).       (33)
+```
+
+The shifted-Bessel bounds `(21)`--`(22)`, with `k=0`, show before division
+that every bracket in `(28)` and `(29)` is integral.  Substitution of
+`(31)` using the twelve remainder triples `(33)` gives, respectively,
+
+```text
+(p,-q,0), (0,-q,0), (p,r,0), (-p,0,0).                     (34)
+```
+
+Here is the only entry in `(34)` not obtained by immediate cancellation of
+the three `eta` factors.  For the middle component of `p_(3M+2,k)`, the
+remainders are `(1,2,0)`.  After the first contraction, reduce the final
+digit of `M`; `(31)` gives
+
+```text
+[C(3M+2,6ell+2)]_(3ell+1)
+ = p_(M,ell)-q_(M,ell)              if M==0 (mod 3),
+ =-p_(M,ell)-q_(M,ell)              if M==2 (mod 3).         (35)
+```
+
+For the six zero entries, the valuation part of `(31)` is at least one
+larger than the displayed normalizing exponent; if the neighboring
+quotient lies on its face, the low remainder in `(33)` supplies that extra
+unit, and otherwise the shifted-Bessel bound already supplies it.  This is
+also read directly from `(34)`, where a bracket of positive valuation
+reduces to zero.  Thus `(34)` is precisely the twelve identities `(29)`,
+for both possible final digits of `M`.  This proves the lemma.
+
+The pair `(P_M,Q_M)` therefore contracts one ternary digit at a time.  In
+polynomial form Lemma 4.1 says
+
+```text
+P_(3M)   = P_M^3-X Q_M^3,             Q_(3M)   =-X Q_M^3,   (36)
+
+P_(3M+2) = P_M^3+X R_M^3,             Q_(3M+2) =-P_M^3,     (37)
 ```
 
 where
 
 ```text
 R_M=P_M-Q_M       if M==0 (mod 3),
-R_M=-(P_M+Q_M)    if M==2 (mod 3).                           (22)
+R_M=-(P_M+Q_M)    if M==2 (mod 3).                           (38)
 ```
 
 These are Frobenius cubes in `F_3[X]`, not suggestive fits.
 
-To prove them, let `U(m)` be the unit part of `m!` modulo `3`.  Complete
-blocks of three give
-
-```text
-v((3m+r)!)=m+v(m!),
-U(3m+r)=(-1)^m U(m) eta_r,
-eta_0=eta_1=1, eta_2=-1.                                   (23)
-```
-
-Apply `(23)` to the three factorials in `C(n,j)`.  Sorting the residual
-exponent `k` modulo `3` gives the complete contraction table
-
-```text
-index k       3ell             3ell+1                         3ell+2
------------------------------------------------------------------------
-P_(3M)        p_(M,ell)       -q_(M,ell)                      0
-Q_(3M)        0               -q_(M,ell)                      0
-P_(3M+2)      p_(M,ell)        r_(M,ell)                      0
-Q_(3M+2)     -p_(M,ell)        0                              0,        (24)
-```
-
-with `r_(M,ell)` the coefficient prescribed by `(22)`.  Terms whose
-normalized valuation is positive give the zeros in `(24)`.  Reading the
-three residue classes as Cartier components is exactly `(20)`--`(21)`.
-
 The base pair is
 
 ```text
-P_0=1,                         Q_0=0.                         (25)
+P_0=1,                         Q_0=0.                         (39)
 ```
 
 ## 5. Coprimality is an invariant of the digit tree
@@ -275,32 +415,32 @@ P_0=1,                         Q_0=0.                         (25)
 We prove by induction that
 
 ```text
-gcd(P_M,Q_M)=1                                                     (26)
+gcd(P_M,Q_M)=1                                                     (40)
 ```
 
 for every ternary Cantor `M`.
 
-If `M=3m`, equations `(20)` say that a common nonzero root must make both
+If `M=3m`, equations `(36)` say that a common nonzero root must make both
 `Q_m` and `P_m` vanish.  The root `X=0` is impossible because
 `P_(3m)(0)=P_m(0)^3=1`.
 
-If `M=3m+2`, equation `(21)` first forces `P_m=0`.  At such a root,
+If `M=3m+2`, equation `(37)` first forces `P_m=0`.  At such a root,
 `R_m` is a nonzero scalar multiple of `Q_m`, so the first equation in
-`(21)` forces `Q_m=0`; again induction excludes it.  Thus `(26)` follows
-from `(25)`.
+`(37)` forces `Q_m=0`; again induction excludes it.  Thus `(40)` follows
+from `(39)`.
 
-When `N` ends in `2`, `(21)` also shows that `Q_N` has the full endpoint
+When `N` ends in `2`, `(37)` also shows that `Q_N` has the full endpoint
 degree `(N-2)/2`, while `P_N` has degree `N/2`.  Consequently the exact
-lower hulls in `(18)` are
+lower hulls in `(25)` are
 
 ```text
 A_(D-1): (0,h)----------------------------(D-1,h+(D-1)/2),
 
-A_(D-2): (0,h)---(1,h)--------------------(D-2,h+(D-3)/2).  (27)
+A_(D-2): (0,h)---(1,h)--------------------(D-2,h+(D-3)/2).  (41)
 ```
 
 Their only shared slope is `1/2`.  Its denominator is prime to `3`, so the
-ordinary residual-polynomial Newton theorem applies.  Equation `(26)` says
+ordinary residual-polynomial Newton theorem applies.  Equation `(40)` says
 that the two residual edges are coprime.  The two full polynomials therefore
 have no common algebraic root, completing the proof of the theorem.
 
@@ -311,14 +451,14 @@ ternary digit is `2` and the trailing digit is `1`” is false.  The first
 hostile inside that broader language is
 
 ```text
-D=201=21110_3,                    D/3=2111_3.                (28)
+D=201=21110_3,                    D/3=2111_3.                (42)
 ```
 
 At the common slope `1/2`, the exact full residual polynomials are
 
 ```text
 Q=1+X^81=(1+X)^81,
-P=1+X+X^81+X^82=(1+X)Q.                                   (29)
+P=1+X+X^81+X^82=(1+X)Q.                                   (43)
 ```
 
 Thus their gcd has degree exactly `81`.  The obstruction is not a random
@@ -334,15 +474,16 @@ lies in the ternary Cantor set.
 
 The companion independently checks:
 
-1. the factorial-unit contraction `(23)`;
-2. every Bessel face and Cartier recurrence for all `256` Cantor words of
+1. the `216` transitions in the unbounded carry certificate `(17)`--`(18)`;
+2. the factorial-unit contraction `(31)`;
+3. every Bessel face and Cartier recurrence for all `256` Cantor words of
    length at most eight;
-3. direct residual gcds for all `64` chamber words of length at most seven;
-4. `6,412,320` individual correction terms in Lemma 2.1 for every chamber
+4. direct residual gcds for all `64` chamber words of length at most seven;
+5. `6,412,320` individual correction terms in Lemma 2.1 for every chamber
    word of length at most six;
-5. equality of the **full** moment and terminal Bessel faces at
+6. equality of the **full** moment and terminal Bessel faces at
    `D=21,57,75,165,183,219,237`; and
-6. the exact factorization `(29)` for `D=201`.
+7. the exact factorization `(43)` for `D=201`.
 
 Reproduce with
 
