@@ -2,17 +2,24 @@
 id: THM-3062
 title: "Four-slot physical transverse augmentation and affine tail holotopy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE-FILE AUDIT
-  REQUESTED.  For two fixed lower offsets, one affine moving lower offset,
-  and a fixed terminal gap, the rank-two all-large physical face cancels but
-  its first transverse augmentation is explicit and positive.  The actual
-  normalized intrinsic resultant is asymptotic to
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For two fixed
+  lower offsets, one affine moving lower offset, and a fixed terminal gap,
+  the rank-two all-large physical face cancels but its first transverse
+  augmentation is explicit and positive.  The actual normalized intrinsic
+  resultant is asymptotic to
   G2^12(4^h-3^h)^24 U3,C^8 U4,C^6, hence to a positive constant times
   12^(24C)C^(-17).  After the exact four-slot width flag is restored, every
   fixed finite generalized-Hankel bank is eventually positive uniformly
   along the straight carrier-to-physical homotopy and every affine clock.
   This is not a selected-chart persistence or one all-order Stieltjes tail.
 source: kind-pasteur-2026-08-01-four-slot-physical-augmentation
+audit: >
+  An independent immutable-file audit rederived the normal-ideal filtration,
+  twelve-point concentration, effective transverse scale, Poisson-product
+  multidegrees, powered-line determinant, positive Gram evaluation, C^-17
+  exponent, exact width flag, and finite-bank confluent-alternant stability.
+  Fresh ordinary and optimized executions matched each other and the stored
+  transcript; the LF-normalized script and output hashes matched exactly.
 depends_on:
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
   - THM-3047-formal-corner-width-product-gamma-moment-and-strict-hankel-positivity
@@ -30,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3062 -- the four-slot physical face survives one transverse level later
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3060 finds the actual terminal face in three slots and proves that its
 two powered lines have nonzero resultant.  It also identifies the exact
@@ -321,4 +328,4 @@ or nonlinear clocks, and proves no new NC2, GMC, SFC, LRC, or Jacobian
 statement.  THM-3058's DVR matching contraction is only a related filtered-
 face analogy; it is not a dependency or a physical map used here.
 
-**QED, pending independent immutable-file audit and status promotion.**
+**QED.**
