@@ -25,7 +25,7 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`. THM-2928 empties aligned `k>=4`; THM-2995/3098 cap projected `k=2,3` at `1579/233`; corrected THM-2941 leaves `561` reflected bodies, `D>=6,1<=m<4D/3`.
+Direct frontier: `<=6`. THM-2928 empties aligned `k>=4`; THM-2995/3098 cap projected `k=2,3` at `1579/233`; repaired THM-2941 leaves `561` reflected bodies in `D>=6,1<=m<D/2`.
 This is not a physical-survivor classification; arbitrary `k<=1`, the rung, and LRC remain open. Septimal floor/exception plus located phase cut the raw five-drift ledger
 `951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
@@ -37,11 +37,10 @@ projected `k=3` rows through `z_1=230`: cap `229`, ledger `374263`; next
 has `43` rows.
 In the reflected gain graph, cap two forces the phase-zero triangle
 `(3/2)(4/3)=2`; by cap `7/3` it is interior and no full-cap component remains.
-The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`.  The proved CSP chain closes
-`3m>=4D`.  Later cones retain exact CSP/gain data (including 65 prime-five
-bridges), but MISTAKE-347 shows
-their split tails cover one level ordering twice; those closure claims are
-AUDIT-REQUIRED.
+The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`.  MISTAKE-347 audits old
+sources.  The cap-`3` repair rebuilds `561` bodies, orients
+`253` policies and closes `26` tails by coupled debt (`35` lanes, `1,600`
+heads), proving `2m>=D`; this is sufficient-family only, not LRC(14).
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
 supplied-root seams, not semantic-root identification (kernel `28,393`).
