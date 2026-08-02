@@ -2,9 +2,9 @@
 id: THM-3101
 title: "Scheme-zero-primary next-moment-unit suspension and conditional codimension-five spectrum"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED AFTER REPAIR.  A
-  fixed zero-resultant physical child in the finite complete-intersection
-  norm branch is healed by every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-REAUDITED AFTER SECOND
+  REPAIR.  A fixed zero-resultant physical child in the finite
+  complete-intersection norm branch is healed by every
   sufficiently remote arbitrary-gap cluster when the vanishing moment is
   scheme-theoretically zero on its full zero-primary algebra and the next
   moment is a unit there.  Reduced/etale zero-primary children automatically
@@ -25,8 +25,15 @@ audit: >
   term.  The repaired theorem requires h_m A_0=0.  An independent re-audit
   accepted the continued Fitting summand, uniform o(tau) operator estimate,
   upper finite-free norm, row-replacement unit, conjugate-pair sign, one-slot
-  converse, and codimension-five count.  Normal, optimized, and stored exact
-  companions agree; both LF hashes and documentation checks pass.
+  converse, and codimension-five count.  A later audit caught that the
+  perturbed lower quotient is finite free over the normal-coordinate ring,
+  not a finite algebra over R.  The repaired proof now uses the lifted
+  lower-ideal identity for h_m, compact upper-root reduction, and the fact
+  that pure upper deformation cannot alter that identity.  This second
+  repair was independently accepted after rederiving finite freeness over
+  R[v], bounded upper reduction, the localized spectral projector, and the
+  resulting uniform o(tau) operator estimate.  Normal, optimized, and stored
+  exact companions agree; both LF hashes and documentation checks pass.
 depends_on:
   - THM-3019-sfc-integral-handle-non-real-locus-and-extended-census
   - THM-3073-upper-triangular-resultant-norm-and-torsion-character-death-barcode
@@ -47,7 +54,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3101 -- scheme-zero-primary next-moment-unit suspension
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED AFTER REPAIR.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-REAUDITED AFTER SECOND
+REPAIR.**
 
 THM-3093 suspends every fixed child whose first-window resultant is nonzero.
 The leading carrier vanishes when the child resultant is zero, but that does
@@ -303,46 +311,82 @@ and the exact exponent identity
 -(m-1)/2 + m(p-1)/(2p)=1/(2p).                         (27)
 ```
 
-## 4. The finite free upper algebra
+## 4. The lower module and the compact upper quotient
 
-Quotient first by the forms in `(26)` of degrees `2,...,m-1`.  Since `(4)`
-is a complete intersection, their quotient is a flat `o(tau_C)` deformation
-`A_C` of `A` after one fixed affine chart.
-
-Choose a fixed finite-free Macaulay trivialization.  Its multiplication
-matrices depend continuously on the lower coefficients.  The Fitting
-idempotent of `(7)` continues, equivalently by a small spectral contour, to a
-rank-`d_0` summand `A_(0,C)`.  The coefficientwise `o(tau_C)` lower error and
-the exact annihilation `(9a)` then give the operator estimate
+Write the first `m-2` equations in `(26)` as
 
 ```text
-M_(h_m)|A_(0,C)=o(tau_C)                               (28a)
+H_r(y)+delta_(r,C)(y,v),                 2<=r<m,       (28a)
 ```
 
-uniformly in the arbitrary gap vector.  This is the precise place where
-scheme-theoretic zero, rather than nilpotence alone, is needed.
-
-The `q` upper equations have a homogeneous normal resultant uniformly
-bounded away from zero by THM-3093.  They therefore define a finite free
-`A_C`-algebra
+where every coefficient of `delta_(r,C)` is `o(tau_C)`, uniformly on the
+composition compactification.  Quotienting by `(28a)` gives
 
 ```text
-mathcal B_C
+mathcal L_C
+ =R[v][y]/(H_2+delta_(2,C),...,H_(m-1)+delta_(m-1,C)). (28b)
 ```
 
-of rank `D_z`.  At a composition-face limit it is
+After finitely many fixed affine/Macaulay charts, `mathcal L_C` is a finite
+free `R[v]`-module of rank `(m-1)!`.  It is **not** a finite `R`-algebra, and
+no such claim is used below.  At the limiting face,
+
+```text
+mathcal L_0=A tensor_R R[v].                           (28c)
+```
+
+Let `e_0 in A` be the Fitting idempotent of `(7)` and choose polynomial lifts
+of `e_0` and the lower ideal.  The scheme-zero hypothesis `(9a)` gives an
+exact identity
+
+```text
+e_0 h_m=sum_(r=2)^(m-1) a_r(y) H_r(y)                 (28d)
+```
+
+in the chosen affine coordinate ring.  In `mathcal L_C`, the same lift says
+
+```text
+e_0 h_m=-sum_r a_r(y) delta_(r,C)(y,v).                (28e)
+```
+
+The analogous lifted identity for `e_0^2-e_0` makes multiplication by `e_0`
+an idempotent up to `o(tau_C)`.  No spectral correction is made yet inside
+the infinite `R[v]`-module `mathcal L_C`.
+
+The upper equations have homogeneous normal resultant uniformly bounded
+away from zero by THM-3093.  Their roots lie in finitely many bounded normal
+charts on the composition compactification, and quotienting `mathcal L_C`
+by them gives a finite-dimensional flat algebra `mathcal B_C` of the fixed
+total rank.  Reduction in the corresponding fixed monomial bases is
+uniformly bounded.  On `mathcal B_C`, let `T_C=M_(e_0)`.  It converges
+uniformly on each compact chart to the exact limiting idempotent.  A fixed
+small spectral contour therefore corrects `T_C` to a projector `Pi_C` of
+rank `nu=d_0D_z`, with `Pi_C-T_C=o(tau_C)`.  Since multiplication by `h_m`
+is uniformly bounded, `(28e)` gives
+
+```text
+Pi_C M_(h_m)
+ =T_C M_(h_m)+(Pi_C-T_C)M_(h_m)=o(tau_C).              (28f)
+```
+
+Thus multiplication by `h_m` on the continued zero-primary upper summand
+is `o(tau_C)`, uniformly in every arbitrary gap vector.  This is the only
+finite-dimensional spectral projection used in the proof.
+
+At a composition-face limit the upper algebra is
 
 ```text
 mathcal B=
 A[v_1,...,v_q]/(h_p+B_1,B_2,...,B_q).                  (28)
 ```
 
-This ordering is important.  The `O(tau_C)` deformation of the upper
-relations changes `mathcal B_C`, but it remains finite free over `A_C` of
-constant rank `D_z`.  Multiplication by the base element `h_m` is still the
-scalar extension of `(28a)`, while the repair multiplication matrix converges
-to the unit proved below.  Thus the upper equality cell cannot create an
-independent base-primary term or cancel the leading unit norm.
+and only this limiting algebra is asserted to be finite free over `A`, of
+rank `D_z`.  The `O(tau_C)` upper equality cell changes the finite quotient,
+but cannot create a pure-upper contribution to `(28f)`: if every
+`delta_(r,C)` is set to zero, identity `(28d)` already vanishes in
+`A_0 tensor R[v]` before imposing any upper relation.  Mixed lower/upper
+terms remain `o(tau_C)` on the compact charts.  The repair multiplication
+matrix converges to the unit proved below.
 
 ## 5. The repair form is a unit on every Monge face
 
@@ -381,8 +425,8 @@ multiple of `v_1^m` and there are no forms `B_2,...,B_q`.
 
 ## 6. Scheme-zero-to-unit determinant and positive sign
 
-Use the finite-free trivializations from Section 4 on the continued
-zero-primary upper summand of rank `nu`.  Equations `(26)` and `(28a)` and
+Use the fixed monomial trivializations from Section 4 on the continued
+zero-primary upper summand of rank `nu`.  Equations `(26)` and `(28f)` and
 the unit conclusion of Section 5 give
 
 ```text

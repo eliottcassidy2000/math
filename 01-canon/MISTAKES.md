@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-349 (2026-08-02, THM-3101 post-promotion module audit) -- treating a normal-variable lower quotient as a finite base algebra
+
+- **What was claimed:** after quotienting the remotely perturbed lower moment
+  forms, the first repaired proof called the result a finite real algebra
+  `A_C` and the subsequent upper quotient a finite-free `A_C`-algebra.  It
+  then described multiplication by `h_m` as a scalar extension of an
+  `o(tau)` operator on `A_C`.
+- **First failed implication:** the perturbed lower forms contain the normal
+  variables `v`.  Their quotient is finite free over `R[v]`, not finite over
+  `R`; imposing the upper equations is a quotient, not a scalar extension.
+  Thus the displayed finite-free tower did not literally justify the
+  operator estimate, even though the scheme-zero mechanism remained
+  available.
+- **Repair / strongest survivor:** keep the lower quotient as a finite-free
+  `R[v]`-module.  The exact scheme-zero identity
+  `e_0 h_m=sum a_r H_r` becomes
+  `e_0 h_m=-sum a_r delta_(r,C)=o(tau)` after the lower deformation.
+  THM-3093 bounds the upper roots on finitely many compact composition
+  charts, so fixed monomial reduction preserves this estimate after the
+  upper quotient.  Pure upper perturbations cannot create `h_m`, because
+  the identity already vanishes before any upper relation is imposed.  The
+  An independent hostile re-audit verified the `R[v]` finite-free bases,
+  bounded upper reduction, and the spectral projector formed only after the
+  finite upper quotient.  The repaired theorem is promoted.
+
 ## MISTAKE-348 (2026-08-01, THM-3097 post-promotion scope audit) -- pointwise good supports were given the remote family's uniform condition-number bound
 
 - **What was claimed:** after proving that every sufficiently translated
