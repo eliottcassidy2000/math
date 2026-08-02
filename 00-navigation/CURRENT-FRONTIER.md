@@ -32,9 +32,9 @@ This is not a physical-survivor classification; arbitrary `k<=1`, the rung, and 
 not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
 `1680..1742` `k=2` atlas; THM-2980/2995 then close every row at
 `1580..1679`, giving cap `1579`.  For `k=3`, torsion/status closes through `297`;
-THM-2981/3033/3041/3052/3061/3071/3078/3094/3098/3102/3106/3109 close all
-projected `k=3` rows through `z_1=231`: cap `230`, ledger `374313`; next has
-`50` rows.
+THM-2981/3033/3041/3052/3061/3071/3078/3094/3098/3102/3106/3109/3111 close
+all projected `k=3` rows through `z_1=230`: cap `229`, ledger `374263`; next
+has `43` rows.
 In the reflected gain graph, cap two forces the phase-zero triangle
 `(3/2)(4/3)=2`; by cap `7/3` it is interior and no full-cap component remains.
 The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`.  The proved CSP chain closes
