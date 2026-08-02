@@ -1,0 +1,11 @@
+pole_operator=(1-Mt)=plethystic_virtual_subtraction:X->X-M
+factorial_vector=Mtilde_N[X]=sum_lambda m_lambda[X]/w_lambda e_lambda
+mixed_square=A*P_M=P_M*A:exact_termwise_before_bank_sum
+common_value=(p1[X]-M)*Mtilde_N[X-M]
+termwise_commutations=735
+row_strip_checks=882
+bank_commutations=30
+literal_deletion_hostile_support=(1,2):M=5
+I1_M_absent=21/24:I2_M_absent=21/25
+scope=algebraic_commutation_only;virtual_subtraction_is_signed
+all_exact_checks=PASS
