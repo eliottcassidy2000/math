@@ -1,8 +1,8 @@
 ---
 id: HYP-9078
-title: "Complete monotonicity is the operative hypothesis for Appell squarefreeness (and hence for SFC(2))"
+title: "Complete monotonicity is the operative hypothesis for Appell squarefreeness (and hence for SlotSFC_1(2))"
 status: >
-  CONJECTURE / EVIDENCE ONLY -- NOT PROVED. THM-3021 showed that SFC(2) at
+  CONJECTURE / EVIDENCE ONLY -- NOT PROVED. THM-3021 showed that SlotSFC_1(2) at
   p = 0 is equivalent to squarefreeness of the Appell sequence
   Phi_n(z) = int (z-u)^n dnu(u), and killed the two obvious hypotheses:
   positivity of the coefficients (H2 counterexample) and positivity of the
@@ -23,7 +23,7 @@ status: >
   (2 atoms in sigma: exactly determined system, n = 3..7, 6000 restarts each;
   3 atoms: underdetermined, n = 4..6, 6000 restarts each) found ZERO
   positive-weight multiple roots, against hundreds of solutions for atomic nu
-  at the same search effort. If CONJECTURE (CM) is true, SFC(2) at p = 0
+  at the same search effort. If CONJECTURE (CM) is true, SlotSFC_1(2) at p = 0
   follows for every s and every window.
 source: death-star-2026-07-31-coinC2
 depends_on:
@@ -38,12 +38,15 @@ output: 05-knowledge/results/appell_complete_monotonicity_hyp9078.out
 
 # HYP-9078 -- complete monotonicity is the operative hypothesis
 
+**Notation correction (MISTAKE-350).** `SlotSFC_1(2)` is the two-monomial
+restriction inside ambient `SFC(1)`, not the original ambient `SFC(2)`.
+
 ## 1. Where this comes from
 
 THM-3021 established
 
 ```text
-SFC(2) at window k, support {0,s}   <=>   Phi_{k+2} squarefree,
+SlotSFC_1(2) at window k, support {0,s}   <=>   Phi_{k+2} squarefree,
 Phi_n(z) = int_0^inf (z-u)^n dnu(u),    Phi_n' = n Phi_{n-1},
 ```
 
@@ -104,7 +107,7 @@ the evidence: the phenomenon is abundant without CM and absent with it.
 
 ## 4. What it would buy, and what is not claimed
 
-If (CM) holds then SFC(2) is proved for `p = 0`, every `s >= 1`, every window
+If (CM) holds then SlotSFC_1(2) is proved for `p = 0`, every `s >= 1`, every window
 `k`, since the SFC measure is CM. That is the whole `p = 0` family at once,
 which is strictly more than THM-3020 (K5) achieved (`s = 1` only).
 

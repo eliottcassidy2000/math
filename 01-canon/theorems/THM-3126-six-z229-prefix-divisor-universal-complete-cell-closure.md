@@ -10,17 +10,18 @@ status: >
   This statement is independent of candidate THM-3113's screen exhaustion.
   It does not promote THM-3113, close z1=228, lower the proved k=3 cap 229,
   classify physical covers outside these prefixes, or prove LRC(14).
-source: root/frontier-synthesis-2026-08-02
 audit: >
-  An independent hostile audit rebuilt every closed safe cell from literal
-  interval intersection with the strict danger arcs, reduced the resulting
-  Boolean group-ring carriers modulo every divisor, and reproduced all six
-  sizes, all 792 support inequalities, the 744 density closures, the 48
-  full-support boundary pairs, the ten exceptional moduli, and the sharp
-  unit slack.  It separately checked the complete-cell projection typing,
-  the d=1 aligned handoff, the d=2 cardinality hostile, and the translated
-  d=28 boundary.  Fresh normal and optimized runs are byte-identical after
-  LF normalization to the stored transcript and the declared hashes match.
+  An independent implementation reconstructed every carrier from intersections
+  of closed safe tooth intervals, with a second exact-Fraction replay on the
+  smallest carrier.  It recovered all six cell counts, the 792=744+48 split,
+  the ten tied moduli, full support in all 48 ties, minimum slack one, and the
+  uniform density margin.  It separately checked the THM-2984 capacity
+  direction, the THM-2941 completion implication, the THM-1166 measure bound,
+  the aligned THM-2928 branch, and the d=2 and translated d=28 hostiles.
+  Normal, optimized, and stored exact transcripts agree; the independent
+  audit script had SHA-256
+  973f50ff615325ac4e5abb39599c6f4860c5a1d7b5ae4a8dfa3b4d3ce228e413.
+source: root/frontier-synthesis-2026-08-02
 depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
   - THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff
@@ -40,8 +41,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3126 -- six z229 prefix divisor-universal complete-cell closure
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
-HOSTILE-AUDITED.**
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Exact scoped statement
 

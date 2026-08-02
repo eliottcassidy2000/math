@@ -19,7 +19,7 @@ status: >
   with the first genuine content at m = 3.
 source: opus-2026-07-31-amm12592-writeup
 related:
-  - THM-2922  # first-window SFC(4), Macaulay-Newton atlas
+  - THM-2922  # first-window SlotSFC_1(4), Macaulay-Newton atlas
   - THM-2891
   - HYP-9075  # the shell-imbalance module, same moment-vanishing shape
 external:
@@ -29,6 +29,10 @@ output: 05-knowledge/results/fc_factorial_conjecture_census.out
 ---
 
 # HYP-9076 -- FC as determinacy
+
+**Notation correction (MISTAKE-350).** `FC(n)` below uses the original
+ambient-variable index.  Every `SlotSFC_1(N)` reference means an
+`N`-monomial restriction inside ambient `SFC(1)`, not `SFC(N)`.
 
 ## 1. The framing
 
@@ -246,7 +250,7 @@ restricted to a fixed support is a FINITE problem, of window length exactly
 the support size.**
 
 That is precisely the shape of the repo's SFC results. THM-2922 proves
-first-window `SFC(4)` for FOUR-slot supports using exactly the four moments
+first-window `SlotSFC_1(4)` for FOUR-slot supports using exactly the four moments
 `L(H), L(H^2), L(H^3), L(H^4)` -- `N = 4` slots, `M = 4` moments. The
 dimension count above says `M = N` is exactly where the system first becomes
 over-determined, so the "first window" is not a convenient truncation: it is

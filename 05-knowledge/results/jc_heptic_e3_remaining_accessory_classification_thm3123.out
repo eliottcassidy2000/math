@@ -1,0 +1,25 @@
+THM-3123 exact companion
+THM-2840 positive control: PASS
+passport: (4, 1, 1, 1)
+symmetric_equations: [8*u**2 + 9*u - 7*v + 8, -25*u**2 - 25*u*v - 25*u - 11*v]
+v_of_u: 8*u**2/7 + 9*u/7 + 8/7
+cubic: 100*u**3 + 244*u**2 + 237*u + 44
+cubic_discriminant: -480200000
+boundary_resultants: {'v': 3430000, 'one_minus_u_plus_v': 68600000, 'lambda_minus_mu_squared': 68600000, 'critical_discriminant': 837402343750000, 'accessory_extra': 49, 'simple_double_resultant': 3430000}
+simple_factor: (5*lambda + 5*mu + 7*x + 5)/7
+accessory_constant: 80*v**2*(u + 1)/343
+actual_saturation_gates: ALL UNITS
+groebner: [(157500*lambda**5 + 446800*lambda**4 + 727623*lambda**3 + 734179*lambda**2 + 550948*lambda + 51700*mu + 236700)/51700, (2500*lambda**6 + 6100*lambda**5 + 10121*lambda**4 + 12558*lambda**3 + 10121*lambda**2 + 6100*lambda + 2500)/2500]
+passport: (3, 2, 1, 1)
+symmetric_equations: [24*u**2 - 16*u - 21*v - 16, -40*u**2 - 50*u*v + 32*u + 61*v]
+v_of_u: 8*u**2/7 - 16*u/21 - 16/21
+cubic: 75*u**3 - 89*u**2 - 31*u + 61
+cubic_discriminant: -149361408
+boundary_resultants: {'v': 27783, 'one_minus_u_plus_v': 36006768, 'lambda_minus_mu_squared': 781396875, 'critical_discriminant': 593373251953125, 'accessory_extra': -2205, 'simple_double_resultant': -20003760}
+simple_factor: (5*lambda + 5*mu + 7*x - 4)/7
+accessory_constant: 9*v**2*(5*u - 4)/343
+actual_saturation_gates: ALL UNITS
+groebner: [-(616875*lambda**5 - 1459525*lambda**4 - 1163843*lambda**3 + 1256649*lambda**2 + 1397860*lambda - 261792*mu + 844544)/261792, (1875*lambda**6 - 2225*lambda**5 - 1967*lambda**4 - 443*lambda**3 + 2072*lambda**2 + 1472*lambda + 512)/1875]
+explicit S7 transposition certificates: PASS
+nielsen: {(4, 1, 1, 1): (6, 1, [5040]), (3, 2, 1, 1): (6, 3, [5040, 5040, 5040]), (2, 2, 2, 1): (6, 1, [14])}
+FAILED CHECKS: NONE

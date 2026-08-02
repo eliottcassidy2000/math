@@ -2,7 +2,7 @@
 id: THM-3125
 title: "Monomial-ray first-window factorial closure in three variables"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / NOT INDEPENDENTLY AUDITED.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For every nonzero exponent vector v in N_0^3 and every d>=1, the first
   three factorial moments detect every polynomial
   A+B(X^v)^d+C(X^v)^(2d).  Gauss multiplication identifies the factorial
@@ -10,6 +10,12 @@ status: >
   nonempty product of positive Gamma shapes; current PROVED THM-3107 then
   closes the initial width-three cell.  This is a genuine sparse subclass of
   FC(3), but only a first-window result and not the ambient SFC(3).
+audit: >
+  An independent audit derived Gauss multiplication by partitioning the
+  factors 1..qn into residue classes, checked the geometric gauge and exact
+  hypotheses of current proved THM-3107, and tested the transfer and both
+  orientation invariants on out-of-box rays with 49 and 55 Gamma layers.
+  Normal, optimized, and stored transcripts and declared hashes agree.
 source: root/frontier-synthesis-2026-08-02
 depends_on:
   - THM-3107-finite-layer-product-gamma-consecutive-width-three-orientation
@@ -25,7 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3125 -- monomial-ray first-window factorial closure in three variables
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / NOT INDEPENDENTLY AUDITED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Let the three-variable factorial functional be
 
@@ -200,4 +206,4 @@ Both executions must byte-match
 `05-knowledge/results/factorial_monomial_ray_fc3_thm3125.out` after LF
 normalization.
 
-**End of proof-complete candidate.**
+**End of proof.**

@@ -2,7 +2,7 @@
 id: THM-3124
 title: "Quadratic factorial-moment recurrence and shifted-window census"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / NOT INDEPENDENTLY AUDITED.
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For an exact three-slot polynomial q(t)=a+bt+ct^2, its factorial moments
   satisfy a division-free second-order recurrence.  Three consecutive zero
   moments beginning at r force the unique resonance b/a=-1/(r+2).  Hence a
@@ -10,7 +10,14 @@ status: >
   unless -a/b is an integer at least three.  At the resonant ratios, a
   two-prime exact polynomial-gcd census excludes every window start
   1<=r<=200.  The recurrence proof is symbolic; the bounded census is
-  FINITE-EXACT.  Neither component has received an independent hostile audit.
+  FINITE-EXACT.
+audit: >
+  An independent derivation checked every integration-by-parts boundary sign,
+  the resonance and automatic third zero, and the primitive modular lifting
+  argument.  A separate SymPy finite-field engine replayed all 200 starts at
+  both primes with no degree loss or common factor.  Normal, optimized, and
+  stored transcripts and declared hashes agree.  The O(N) recurrence cost is
+  a direct consequence, not a fitted extrapolation.
 source: root/frontier-synthesis-2026-08-02
 depends_on: []
 related:
@@ -26,7 +33,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3124 -- quadratic factorial-moment recurrence and shifted-window census
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / NOT INDEPENDENTLY AUDITED.**
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This theorem concerns the original one-variable factorial functional
 
@@ -64,6 +71,11 @@ M_(n+1)
 
 This identity is division-free and is valid for arbitrary complex
 `a,b,c`, including a repeated root of `q`.
+
+Together with `M_0=1` and `M_1=a+b+2c`, `(3)` computes the first `N`
+factorial moments in `O(N)` ring operations and constant recurrence state.
+This is the structural closed form for the sequence; it replaces repeated
+multinomial expansion and is not inferred from a finite fit.
 
 ### Proof
 
@@ -250,4 +262,4 @@ after LF normalization.  The transcript records the symbolic recurrence
 checks, rational gcd controls, both exact prime censuses, degree preservation,
 and both positive controls.
 
-**End of proof-complete candidate.**
+**End of proof.**
