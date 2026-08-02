@@ -1,11 +1,11 @@
 ---
-id: THM-3141
+id: THM-3142
 title: "Prime-power-predecessor Newton separation and composite-window census"
 status: RESERVED / UNPROVED EMPTY STUB
 source: root/frontier-synthesis-2026-08-02
 ---
 
-# THM-3141 -- prime-power-predecessor Newton separation and composite-window census
+# THM-3142 -- prime-power-predecessor Newton separation and composite-window census
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
