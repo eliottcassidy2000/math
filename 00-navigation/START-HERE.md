@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-01; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — refreshed 2026-08-02; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
@@ -20,7 +20,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) is first open.** THM-2923: `<=6` bodies; THM-2928: no aligned `k>=4`; THM-2995/3114: projected `k=2,3 <= 1579/225`; repaired THM-2941: `561` reflected bodies at `D>=6,1<=m<D/2`, with `(6,1)` closed. `k<=1` and the rung remain open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
+1. **LRC(14) is first open.** THM-2923: `<=6` bodies; THM-2928: no aligned `k>=4`; THM-2995/3114: `k=2,3 <= 1579/225`; THM-2941's finite head/analytic comb tail close `m=1`, leaving `561` reflected bodies at `D>=6,2<=m<D/2`. `k<=1`/rung open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see

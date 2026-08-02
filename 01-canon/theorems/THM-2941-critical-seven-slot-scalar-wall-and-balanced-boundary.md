@@ -41,8 +41,9 @@ status: >
   cap-3 theorem subsumes both cones.  The dependent gain relation (3/2)2=3
   accompanies its coupled-debt repair.  The remaining proved
   reflected certificate-failure locus is confined to those 561 bodies in
-  D>=6,1<=m<D/2, with the exact boundary slice (D,m)=(6,1) now closed by
-  the physical global-min/global-max pair;
+  D>=6,2<=m<D/2.  The complete m=1 branch is now closed: on the residual
+  bodies the physical global-min/global-max pair has an exact finite head
+  through D=44 and a phase-free periodic-comb tail from D=45 onward;
   the finite censuses, full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is internal
   exact computation and proof audit; there is no Lean or external peer-review
@@ -280,6 +281,10 @@ verification:
   - 05-knowledge/results/lrc14_j7_k3_z239_gap238_z237_compositional_descent_thm3061.out
   - 04-computation/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.out
+  - 04-computation/lrc14_j7_reflected_extreme_pair_d6_m1_distinct_debt_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_extreme_pair_d6_m1_distinct_debt_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_extreme_pair_m1_complete_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_extreme_pair_m1_complete_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -1245,8 +1250,114 @@ and semantic hash
 This remains a sufficient-certificate statement, not a physical-survivor
 census or LRC(14).
 
+The same extreme-pair mechanism closes the **entire** minimum-level-one
+branch.  If `m=1` and the spread is `D`, the two physical extreme slots have
+
+```text
+q_i=1,       q_j=Q=D+1,       (P,Q,g)=(1,D+1,1).          (25i13d)
+```
+
+On a residual body, any word not already closed by the same-level `K6`
+sidecar has six distinct levels.  Once the endpoint slots in `(25i13d)` are
+fixed, strict decrease of `e/[7(qL-e)]` in `q`, together with the exact
+rearrangement gap above, shows that the worst compatible debt again puts
+levels `2,3,4,5` on the four remaining labels in decreasing-label order.
+This statement is uniform in `Q`: unused intermediate levels can only lower
+the debt.
+
+For the finite head, the exact verifier starts with the maximizing `D=6`
+cell for each of the `561*30` physical endpoint orientations and tests it at
+`D=7,...,44`.  It also runs `D=5` as a hostile bounded-spread control.  Thus
+`656,370` selected-cell rows are checked.  Exactly three inherited cells
+fail, all on `H=(1,2,3,4,6,12)` at `D=9`, in orientations `(5,1)`, `(5,2)`,
+and `(5,4)`.  Exhaustive reselection over `H`'s `88` body-safe cells repairs
+them at cells `152,152,150`, respectively; every repaired and unchanged row
+has positive exact overlap-minus-debt.  This is an instructive failure of
+cell persistence, not of the extreme-pair certificate.
+
+There is a phase-free analytic tail.  Put `L=14 lcm(E)`, let `a` be the
+label at level one and `b` the label at level `Q`, and choose any integer
+body-safe cell `j`.  Body safety gives
+
+```text
+L/14 <= (aj mod L) <= 13L/14-a.                            (25i13e)
+```
+
+Hence the reflected `q=1` arc is one untruncated interval `I` of length
+
+```text
+ell=L/[7(L-a)].                                            (25i13f)
+```
+
+The reflected `q=Q` arcs form a periodic comb of period
+`h=L/(QL-b)` and duty cycle `1/7`.  Partition the line into its period cells.
+Only the cells meeting the two endpoints of `I` can be partial; every full
+intervening cell contributes exactly one seventh of its length.  Therefore
+
+```text
+mu(I intersect comb) >= (ell-2h)/7 = ell/7-2h/7.           (25i13g)
+```
+
+The required positive-length domain already holds at `Q=46`, since
+
+```text
+ell-2h = L((Q-14)L+14a-b)
+           / [7(L-a)(QL-b)] > 0.                           (25i13h)
+```
+
+It persists for every larger `Q` because `h` strictly decreases.  Subtracting
+the worst compatible distinct-level debt from `(25i13g)` gives the exact
+invoice
+
+```text
+M_E,a,b(Q) = L/[49(L-a)] - a/[7(L-a)] - debt_interior
+             - (2L+b)/[7(QL-b)],                           (25i13i)
+```
+
+where `debt_interior` assigns levels `2,3,4,5` as above.  At `Q=46`, all
+`561*30` invoices are positive.  The weakest is
+
+```text
+3316914368/90338710837375
+```
+
+on `H`, orientation `(5,0)`, at the first safe cell `12`; the directly
+computed margin there is the larger value
+`543172541118/90338710837375`.  For every fixed body and orientation,
+
+```text
+M(Q+1)-M(Q) = (2L+b)L/[7(QL-b)((Q+1)L-b)] > 0.             (25i13j)
+```
+
+Thus `Q>=46`, equivalently `D>=45`, is an all-scale tail.  The same coarse
+invoice is negative at `Q=45` on the hostile row, with value
+`-8992715944/88374571660375`; this makes `46` sharp for invoice `(25i13i)`,
+not for the underlying pair certificate.
+
+Combining the inherited `D<=5` theorem, the pinned exact `D=6` slice, the
+finite head `D=7,...,44`, and `(25i13g)--(25i13j)` proves
+
+```text
+PROVED: within the reflected sufficient family, every packet with m=1 is
+        closed on all 3,003 bodies.                         (25i13k)
+```
+
+The exact verifier is
+`04-computation/lrc14_j7_reflected_extreme_pair_m1_complete_closure_thm2941.py`.
+Its LF source/output/semantic hashes are, respectively,
+`691cdad79c7d719cb7c1268c867b919919c46b45ee632d423ac8f8b7f957bcfd`,
+`af1e7868e9e22dc56165ff1f14141c12ff6b7fee43934bdf5a6cdab7de76706d`,
+and `1b19c0356bb6ac3b88ba93c9a775ff2d8db02d4353789d14d93b0441ef5ad2cc`.
+The head digest
+`250ef090ff29cc5bffacf205369ae1115aaa1ebb88bba5f14fd62df286a3310a`
+binds each per-body row digest to its ordered body, rather than sorting bare
+digests.  The tail-row digest is
+`aeaf679cc34288b637658c3c6dd09d9c72090836fd6e08e53a97497cfff25d21`.
+Fresh ordinary and optimized replays are byte-identical, and all
+truth-bearing gates remain active under optimization.
+
 Consequently the current **proved** reflected obligation is confined to the
-`561` bodies in the wedge `D>=6,1<=m<D/2`, excluding `(D,m)=(6,1)`.  This is a
+`561` bodies in the wedge `D>=6,2<=m<D/2`.  This is a
 sufficient-certificate residual, not a physical-survivor census.  More
 globally, the correction floor `c>=-12/49` makes phase zero imply `PQ<=12`,
 so the zero-gain atlas is exactly
@@ -2650,7 +2761,7 @@ assertions.
 
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,
-close the residual `561`-body reflected wedge `D>=6,1<=m<D/2`, finish the remaining
+close the residual `561`-body reflected wedge `D>=6,2<=m<D/2`, finish the remaining
 `k=2,3` finite decision trees, classify the zero/one-aligned multi-drift
 address hypergraph, close the six-body/seven-tail rung, or prove LRC(14).
 The independent THM-2928 divisor-status route closes `k=4`; THM-2980/2995

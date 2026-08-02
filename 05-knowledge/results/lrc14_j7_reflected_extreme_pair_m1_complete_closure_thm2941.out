@@ -1,0 +1,65 @@
+LRC14 reflected m=1 complete extreme-pair closure
+universe=residual_bodies:561;physical_orientations:30;same_level_exceptions_disjoint:((1, 2, 7, 9, 11, 13), (2, 4, 7, 9, 11, 13))
+parameter_translation=m=1;q_min=1;q_max=1+D;reduced_channel=(P,Q,g)=(1,D+1,1);therefore Q=D+1 exactly
+finite_head=D=5 hostile control and D=7..44;rows:656370;D=6 imported from pinned predecessor
+fixed_cell_failures=((Fraction(-32954646, 23410512125), (1, 2, 3, 4, 6, 12), (5, 1), 9, 146, Fraction(12, 839), Fraction(367789146, 23410512125), (5, 10, 4, 3, 2, 1)), (Fraction(-384189062, 302447019875), (1, 2, 3, 4, 6, 12), (5, 2), 9, 142, Fraction(8, 559), Fraction(4712590062, 302447019875), (5, 4, 10, 3, 2, 1)), (Fraction(-3708507072, 10990170183265), (1, 2, 3, 4, 6, 12), (5, 4), 9, 151, Fraction(4, 279), Fraction(1451463038908, 98911531649385), (5, 4, 3, 2, 10, 1)))
+exact_reselections=((Fraction(301879854, 23410512125), (1, 2, 3, 4, 6, 12), (5, 1), 9, 152, Fraction(24, 839), Fraction(367789146, 23410512125), (5, 10, 4, 3, 2, 1), 'reselected'), (Fraction(3944211938, 302447019875), (1, 2, 3, 4, 6, 12), (5, 2), 9, 152, Fraction(16, 559), Fraction(4712590062, 302447019875), (5, 4, 10, 3, 2, 1), 'reselected'), (Fraction(1384709911612, 98911531649385), (1, 2, 3, 4, 6, 12), (5, 4), 9, 150, Fraction(8, 279), Fraction(1451463038908, 98911531649385), (5, 4, 3, 2, 10, 1), 'reselected'))
+head_D5=margin:427972042054/161271937025199;body:(1, 2, 4, 7, 8, 14);pair:(5, 0);cell:722;mode:base-D6-cell;overlap:1732/258665;debt:3259459274926/806359685125995;levels:(6, 5, 4, 3, 2, 1)
+head_D7=margin:32238695262/15701422111375;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);cell:150;mode:base-D6-cell;overlap:24/1343;debt:248352615738/15701422111375;levels:(8, 5, 4, 3, 2, 1)
+head_D8=margin:1380431574/17665561288375;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);cell:150;mode:base-D6-cell;overlap:24/1511;debt:279210879426/17665561288375;levels:(9, 5, 4, 3, 2, 1)
+head_D9=margin:1287369016/742369957875;body:(1, 2, 3, 4, 6, 12);pair:(4, 2);cell:144;mode:base-D6-cell;overlap:8/559;debt:9336887984/742369957875;levels:(5, 4, 10, 3, 1, 2)
+head_D10=margin:857297372/4077158533875;body:(1, 2, 3, 4, 6, 12);pair:(4, 0);cell:100;mode:base-D6-cell;overlap:24/1847;debt:52121481628/4077158533875;levels:(11, 5, 4, 3, 1, 2)
+head_D11=margin:177144130/66957653511;body:(1, 2, 3, 4, 6, 12);pair:(0, 2);cell:149;mode:base-D6-cell;overlap:8/671;debt:6832746178/736534188621;levels:(1, 5, 12, 4, 3, 2)
+head_D12=margin:258486484/88601854509;body:(1, 2, 3, 4, 6, 12);pair:(0, 1);cell:152;mode:base-D6-cell;overlap:2238/182197;debt:829846202/88601854509;levels:(1, 13, 5, 4, 3, 2)
+head_D13=margin:5241575298/1100294069875;body:(1, 2, 3, 4, 6, 12);pair:(5, 1);cell:146;mode:base-D6-cell;overlap:24/1175;debt:17232516342/1100294069875;levels:(5, 14, 4, 3, 2, 1)
+head_D14=margin:8802014586/2677308759125;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);cell:150;mode:base-D6-cell;overlap:48/2519;debt:42214587414/2677308759125;levels:(15, 5, 4, 3, 2, 1)
+head_D15=margin:65963896758/31414535527375;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);cell:150;mode:base-D6-cell;overlap:48/2687;debt:495218725242/31414535527375;levels:(16, 5, 4, 3, 2, 1)
+head_D16=margin:5112577396/1260453450375;body:(1, 2, 3, 4, 6, 12);pair:(4, 0);cell:100;mode:base-D6-cell;overlap:48/2855;debt:16078934204/1260453450375;levels:(17, 5, 4, 3, 1, 2)
+head_D17=margin:46618548519/35373283820875;body:(1, 2, 3, 4, 6, 12);pair:(5, 1);cell:146;mode:base-D6-cell;overlap:333/19643;debt:553050723606/35373283820875;levels:(5, 18, 4, 3, 2, 1)
+head_D18=margin:741234694/129532500405;body:(1, 2, 3, 4, 6, 12);pair:(0, 1);cell:152;mode:base-D6-cell;overlap:24/1595;debt:1207843682/129532500405;levels:(1, 19, 5, 4, 3, 2)
+head_D19=margin:1853255632/272789761041;body:(1, 2, 3, 4, 6, 12);pair:(1, 0);cell:148;mode:base-D6-cell;overlap:4722/278797;debt:2766999434/272789761041;levels:(20, 1, 5, 4, 3, 2)
+head_D20=margin:192263889318/41235231412375;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);cell:150;mode:base-D6-cell;overlap:72/3527;debt:649510043682/41235231412375;levels:(21, 5, 4, 3, 2, 1)
+head_D21=margin:32281125126/8639874117875;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);cell:150;mode:base-D6-cell;overlap:72/3695;debt:136073661474/8639874117875;levels:(22, 5, 4, 3, 2, 1)
+head_D22=margin:136930444074/45205698913375;body:(1, 2, 3, 4, 6, 12);pair:(5, 1);cell:146;mode:base-D6-cell;overlap:36/1931;debt:705847992426/45205698913375;levels:(5, 23, 4, 3, 2, 1)
+head_D23=margin:1134603097753/237884006224865;body:(1, 2, 3, 4, 6, 12);pair:(5, 4);cell:151;mode:base-D6-cell;overlap:167/8723;debt:3419636159332/237884006224865;levels:(5, 4, 3, 2, 24, 1)
+head_D24=margin:1421908220480/252341403316821;body:(1, 2, 3, 4, 6, 12);pair:(3, 0);cell:152;mode:base-D6-cell;overlap:72/4199;debt:2904974618008/252341403316821;levels:(25, 5, 4, 1, 3, 2)
+head_D25=margin:1564638370805/262690467162417;body:(1, 2, 3, 4, 6, 12);pair:(3, 1);cell:151;mode:base-D6-cell;overlap:1551/89503;debt:2987532110284/262690467162417;levels:(5, 26, 4, 1, 3, 2)
+head_D26=margin:295618774518/53071630987375;body:(1, 2, 3, 4, 6, 12);pair:(5, 1);cell:146;mode:base-D6-cell;overlap:48/2267;debt:828085807482/53071630987375;levels:(5, 27, 4, 3, 2, 1)
+head_D27=margin:256847354502/54984205651375;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);cell:150;mode:base-D6-cell;overlap:96/4703;debt:865517889498/54984205651375;levels:(28, 5, 4, 3, 2, 1)
+head_D28=margin:225989090814/56948344828375;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);cell:150;mode:base-D6-cell;overlap:96/4871;debt:896376153186/56948344828375;levels:(29, 5, 4, 3, 2, 1)
+head_D29=margin:77234427166/11168909535105;body:(1, 2, 3, 4, 6, 12);pair:(4, 3);cell:152;mode:base-D6-cell;overlap:24/1259;debt:135675683114/11168909535105;levels:(5, 4, 3, 30, 1, 2)
+head_D30=margin:211197940587/60937563061375;body:(1, 2, 3, 4, 6, 12);pair:(5, 1);cell:146;mode:base-D6-cell;overlap:645/33839;debt:950323622538/60937563061375;levels:(5, 31, 4, 3, 2, 1)
+head_D31=margin:3312044886/502726098875;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);cell:150;mode:base-D6-cell;overlap:24/1075;debt:7911607554/502726098875;levels:(32, 5, 4, 3, 2, 1)
+head_D32=margin:3466730320/450155893257;body:(1, 2, 3, 4, 6, 12);pair:(1, 0);cell:148;mode:base-D6-cell;overlap:8202/460069;debt:4558541186/450155893257;levels:(33, 1, 5, 4, 3, 2)
+head_D33=margin:352289083374/66769040713375;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);cell:150;mode:base-D6-cell;overlap:120/5711;debt:1050667471626/66769040713375;levels:(34, 5, 4, 3, 2, 1)
+head_D34=margin:321430819686/68733179890375;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);cell:150;mode:base-D6-cell;overlap:120/5879;debt:1081525735314/68733179890375;levels:(35, 5, 4, 3, 2, 1)
+head_D35=margin:301509836142/70769978153875;body:(1, 2, 3, 4, 6, 12);pair:(5, 1);cell:146;mode:base-D6-cell;overlap:60/3023;debt:1103120891358/70769978153875;levels:(5, 36, 4, 3, 2, 1)
+head_D36=margin:84685965761/14566692515375;body:(1, 2, 3, 4, 6, 12);pair:(5, 2);cell:142;mode:base-D6-cell;overlap:571/26923;debt:224253655614/14566692515375;levels:(5, 4, 37, 3, 2, 1)
+head_D37=margin:85543061108/14090147764875;body:(1, 2, 3, 4, 6, 12);pair:(4, 0);cell:100;mode:base-D6-cell;overlap:120/6383;debt:179350833892/14090147764875;levels:(38, 5, 4, 3, 1, 2)
+head_D38=margin:478589075934/76589736598375;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);cell:150;mode:base-D6-cell;overlap:144/6551;debt:1204958790066/76589736598375;levels:(39, 5, 4, 3, 2, 1)
+head_D39=margin:460198166586/78635910227875;body:(1, 2, 3, 4, 6, 12);pair:(5, 1);cell:146;mode:base-D6-cell;overlap:72/3359;debt:1225358706414/78635910227875;levels:(5, 40, 4, 3, 2, 1)
+head_D40=margin:416872548558/80518014952375;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);cell:150;mode:base-D6-cell;overlap:144/6887;debt:1266675317442/80518014952375;levels:(41, 5, 4, 3, 2, 1)
+head_D41=margin:77202856974/16496430825875;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);cell:150;mode:base-D6-cell;overlap:144/7055;debt:259506716226/16496430825875;levels:(42, 5, 4, 3, 2, 1)
+head_D42=margin:635747332182/84446293306375;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);cell:150;mode:base-D6-cell;overlap:168/7223;debt:1328391844818/84446293306375;levels:(43, 5, 4, 3, 2, 1)
+head_D43=margin:75155466531/17300368460375;body:(1, 2, 3, 4, 6, 12);pair:(5, 1);cell:146;mode:base-D6-cell;overlap:957/48035;debt:269519304294/17300368460375;levels:(5, 44, 4, 3, 2, 1)
+head_D44=margin:108225704924/16703809675875;body:(1, 2, 3, 4, 6, 12);pair:(4, 1);cell:94;mode:base-D6-cell;overlap:72/3779;debt:210026292076/16703809675875;levels:(5, 45, 4, 3, 1, 2)
+head_digest=250ef090ff29cc5bffacf205369ae1115aaa1ebb88bba5f14fd62df286a3310a
+head_digest_binding=ordered_(body,per_body_digest);body_count=561
+periodic_comb_lemma=for period h and duty 1/7,an interval loses at most its two partial endpoint periods,so overlap>=length/7-2h/7;phase-free
+analytic_tail=Q>=46,equivalently D>=45;q=1 arc length L/[7(L-a)];h=L/(QL-b)
+tail_domain=ell-2h=L((Q-14)L+14a-b)/[7(L-a)(QL-b)]>0;weakest_at_Q46:16257024/163556065@body=(1, 4, 8, 9, 12, 14),pair=(0, 5);h(Q+1)<h(Q),so_domain_persists_for_all_Q>=46
+tail_weakest_invoice=3316914368/90338710837375@body=(1, 2, 3, 4, 6, 12),pair=(5, 0),cell=12;actual_margin=543172541118/90338710837375;overlap=168/7727;lower=11086/703157;debt=1420966635882/90338710837375
+tail_weakest_actual=543172541118/90338710837375@body=(1, 2, 3, 4, 6, 12),pair=(5, 0),cell=12
+tail_monotonicity=M(Q+1)-M(Q)=(2L+b)L/[7(QL-b)((Q+1)L-b)]>0;Q45_hostile_invoice=-8992715944/88374571660375;Q46_is_sharp_for_this_invoice
+tail_rows=16830;tail_digest=aeaf679cc34288b637658c3c6dd09d9c72090836fd6e08e53a97497cfff25d21
+assembly=D<=5 inherited bounded-spread closure;D5 hostile control positive;D6 pinned exact extreme-pair theorem;D7..44 finite head;D>=45 analytic tail
+conclusion=within the pinned reflected THM-2941 sufficient family,the complete m=1 branch closes on all 3003 bodies
+corollary=the reflected certificate-failure wedge is confined to the 561 residual bodies with D>=6 and 2<=m<D/2
+scope=not a physical-survivor census and not LRC14
+normal_vs_python_O=BYTE_IDENTICAL
+base_source_sha256=e605c2e02ba253c687c7fb8c082d543fde9b59ff4212cb4107b85705238a89ed
+base_output_sha256=c5fe094fcdf3092f96957c9d80ac2589460f6050072cb490270bca45f2d2c16c
+base_semantic_sha256=a74dfc2377029e62aa549e7ccfcf84b14348c56b507074efdb92e97fa9ca5dfd
+source_sha256=691cdad79c7d719cb7c1268c867b919919c46b45ee632d423ac8f8b7f957bcfd
+semantic_sha256=1b19c0356bb6ac3b88ba93c9a775ff2d8db02d4353789d14d93b0441ef5ad2cc
+all_exact_controls=PASS
