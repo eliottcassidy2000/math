@@ -1,0 +1,14 @@
+THM-3069 ONE-NORMAL REMOTE-TERMINAL SUSPENSION
+general_k_cells=10 layer_base_cells=425 partition_cells=150 sharp_boundary=(k-1,k-1)
+isotropic_gap=((k-1)/k)^(k-1);resultant_gap=isotropic_gap/k;distinct=1
+coordinate_layer_cells=12 exact_partition=1
+sidecar_cells=4 all_positive=1
+sidecar_digest=d5b4e276d9ebcd3463e2b6998e6cc7eb03eebbfadfe0d19b7dbcd2ceb71f0a82
+separated_sign_cells=8 exact_S4=1 orientation=1
+physical_resultant_cells=12 all_positive=1
+physical_digest=c2866048a773c7b9eaba696557bba11c2621215f456ce58cd8da680b9588dc9b
+largest_gap_ratios=0.999402940060125,0.998769112178072,0.994451207023886,0.982389816402540
+beta_factor_cells=36 carrier_hankel_cells=12
+k4_asymptotic=S3^4*U4^6;base=4^(24C);power=-9;gaps=27/64,27/256
+scope=fixed_lower_support;remote_terminal;finite_order_holotopy
+all_exact_checks=PASS
