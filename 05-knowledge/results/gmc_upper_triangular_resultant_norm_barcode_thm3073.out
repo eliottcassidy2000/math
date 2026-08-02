@@ -1,0 +1,16 @@
+THM-3073 UPPER-TRIANGULAR RESULTANT NORM BARCODE
+degree_cells=7056 multidegree_entries=38304 coordinate_power_sign=+1
+phase_kernel_cells=324 image=q/gcd(q,N,D) kernel=q*gcd(q,N,D)
+one_normal_phase=(u,v)->u^k*v^((k-1)!)
+two_normal_phase=(u,v)->u^(k(k-1))*v^((k-2)!)
+direct_death_C7=one:7/8,two:7/9
+direct_death_C13=one:13/14,two:13/15
+direct_death_C91=one:91/14,two:14/15
+tower_from_m2=durations:5,11,11;terminal_widths:7,13,13
+tower_from_m3=durations:4,10,10;terminal_widths:7,13,13
+tower_cells=76 order_after=N/gcd(N,k!/m!)
+placement_hostile=k8_two_normal:C7_base_dies,C7_normal_survives
+cancellation_hostile=k4_two_normal:C7_u=v_nontrivial,scalar_trivial
+mixed_lower_hostile=resultant(y(y+cz),z(z+dy))=1-cd
+scope=upper_triangular;fixed_composable_tower;pullback_is_not_norm
+all_exact_checks=PASS
