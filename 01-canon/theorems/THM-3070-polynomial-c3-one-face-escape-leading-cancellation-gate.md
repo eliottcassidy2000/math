@@ -2,7 +2,7 @@
 id: THM-3070
 title: "Polynomial C3 one-face escape leading-cancellation gate"
 status: >
-  PROVED + VERIFIED-EXACT (independent audit pending).  Let a polynomial
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let a polynomial
   planar Keller pair have a tame ramification-index-three valuation over the
   target coordinate line t=0, with residue degree one.  Suppose that in a
   coefficient-field uniformizer s exactly one affine source coordinate has a
@@ -37,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3070 -- polynomiality forces a toric cancellation before C3 escape
 
-**PROVED + VERIFIED-EXACT (independent audit pending).**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and result
 
@@ -470,3 +470,12 @@ form, the polynomial-composition degree contradiction through degree ten,
 both Laurent hostiles, and the exact cancellation control.  Every
 truth-bearing executable check uses explicit runtime exceptions rather than
 Python assertions.
+
+An independent audit rederived the differential exponent invoice in the
+coefficient field `C(u)`, checked that nonconstancy of `C` really prevents
+every same-weight cancellation (including the `3|p` lattice), and repeated
+the finite-pole, finite-zero, and infinity cases of the rational ODE lemma.
+It also checked the boundary `r=0`, where the primitive relation simply
+specializes to `Y-c`, and replayed ordinary Python, optimized Python, and the
+stored transcript byte-for-byte.  The coordinate-line, residue-degree-one,
+and one-coordinate-escape hypotheses remain explicit and load bearing.
