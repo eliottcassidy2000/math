@@ -1,0 +1,36 @@
+THM-3170 five-step prime resonance Euclidean--Newton separation
+offset_five_normalization=d=p+5,A=A_(p+3),B=A_(p+4)
+first_quotient=Cv+q C=(2p+8)(2p+7) q=-2(p+4)(p+5)/(2p+5)
+second_quotient_q1=-2(2p+3)(2p+5)/((p+4)(24p+85))
+second_quotient_q0=4(p+5)(2p+3)(28p+95)/((p+4)(2p+1)(24p+85)^2)
+low_residual_A=10(360v^3+21v+37)
+low_residual_R=-75(544v^2+1216v-307)
+low_residual_S=250(2338491v-482198)
+midpoint_formula=-4284000*(-1)^(m-3)*5^(m+4)/(m(m-1)(m-2)(m-3))
+midpoint_constant_factorization={2: 5, 3: 2, 5: 3, 7: 1, 17: 1}
+exact_p=11 S_hull=[(0, 0), (1, 0), (7, 1), (12, 2)] S_slopes=[Fraction(0, 1), Fraction(1, 6), Fraction(1, 5)] midpoint_valuation=1 midpoint_residue=10
+exact_p=17 S_hull=[(0, 0), (1, 0), (18, 2)] S_slopes=[Fraction(0, 1), Fraction(2, 17)] midpoint_valuation=2 midpoint_residue=0
+exact_p=19 S_hull=[(0, 0), (1, 0), (11, 1), (20, 2)] S_slopes=[Fraction(0, 1), Fraction(1, 10), Fraction(1, 9)] midpoint_valuation=1 midpoint_residue=15
+exact_p=29 S_hull=[(0, 0), (1, 0), (16, 1), (30, 2)] S_slopes=[Fraction(0, 1), Fraction(1, 15), Fraction(1, 14)] midpoint_valuation=1 midpoint_residue=15
+exact_p=41 S_hull=[(0, 0), (1, 0), (22, 1), (42, 2)] S_slopes=[Fraction(0, 1), Fraction(1, 21), Fraction(1, 20)] midpoint_valuation=1 midpoint_residue=21
+exact_p=61 S_hull=[(0, 0), (1, 0), (32, 1), (61, 2), (62, 3)] S_slopes=[Fraction(0, 1), Fraction(1, 31), Fraction(1, 29), Fraction(1, 1)] midpoint_valuation=1 midpoint_residue=36
+endpoint_constant_factorization={5: 1, 61: 1, 2969: 1}
+penultimate_constant_factorization={2: 7, 5: 1, 11: 1, 29: 1, 41: 1}
+S_constant_wall_factorization={2: 1, 353: 1, 683: 1}
+S_linear_wall_factorization={3: 1, 601: 1, 1297: 1}
+modular_p=307 A_hull=[(0, 0), (3, 0), (310, 2)] R_hull=[(0, 1), (1, 0), (2, 0), (309, 2)] S_hull=[(0, 0), (1, 0), (155, 1), (308, 2)] S_slopes=[Fraction(0, 1), Fraction(1, 154), Fraction(1, 153)]
+modular_p=353 A_hull=[(0, 0), (3, 0), (356, 2)] R_hull=[(0, 0), (2, 0), (355, 2)] S_hull=[(0, 1), (1, 0), (178, 1), (354, 2)] S_slopes=[Fraction(-1, 1), Fraction(1, 177), Fraction(1, 176)]
+modular_p=601 A_hull=[(0, 0), (3, 0), (604, 2)] R_hull=[(0, 0), (2, 0), (603, 2)] S_hull=[(0, 0), (302, 1), (602, 2)] S_slopes=[Fraction(1, 302), Fraction(1, 300)]
+modular_p=683 A_hull=[(0, 0), (3, 0), (686, 2)] R_hull=[(0, 0), (2, 0), (685, 2)] S_hull=[(0, 1), (1, 0), (343, 1), (684, 2)] S_slopes=[Fraction(-1, 1), Fraction(1, 342), Fraction(1, 341)]
+modular_p=1297 A_hull=[(0, 0), (3, 0), (1300, 2)] R_hull=[(0, 0), (2, 0), (1299, 2)] S_hull=[(0, 0), (650, 1), (1298, 2)] S_slopes=[Fraction(1, 650), Fraction(1, 648)]
+modular_p=2969 A_hull=[(0, 0), (3, 0), (2972, 2)] R_hull=[(0, 0), (2, 0), (2971, 2)] S_hull=[(0, 0), (1, 0), (1486, 1), (2969, 2), (2970, 3)] S_slopes=[Fraction(0, 1), Fraction(1, 1485), Fraction(1, 1483), Fraction(1, 1)]
+delta5=2246282972173187481600 factorization={2: 16, 3: 7, 5: 2, 11: 2, 20747: 1, 249721: 1}
+delta5_exception_p=11 monic_gcd=[9, 1]
+delta5_exception_p=20747 monic_gcd=[15102, 1]
+delta5_exception_p=249721 monic_gcd=[26953, 1]
+neighbor_transport_p20747_q20749_prime=True r=q+1 d=q+3
+neighbor_transport_p249721_q249727_prime=True r=q-3 d=q-1
+finite_fallback=odd_primes_le_197 count=44 max_r=200
+p17_classification=midpoint_wall_and_exact_slope_overlap_2/17
+raised_endpoint_primes=[61,2969]
+all_exact_checks=True
