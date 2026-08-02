@@ -2,7 +2,7 @@
 id: THM-3107
 title: "Finite-layer product-Gamma initial width-three orientation"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT.  For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
   finite nonempty product of positive Gamma shapes, both binary
   quadratic--cubic divisibility invariants on normalized support {0,1,2}
   are strictly negative.  More generally every anchored arithmetic
@@ -29,7 +29,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3107 -- finite-layer product-Gamma initial width-three orientation
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3100 proves every finite product-Gamma family in widths one and two,
 but its factorial width-three atomic determinant already has the wrong sign
@@ -480,10 +480,20 @@ python -O 04-computation/gmc_product_gamma_initial_width_three_orientation_thm31
 Both executions must byte-match the stored ten-line transcript after LF
 normalization.
 
+Two independent hostile audits rebuilt the Laurent tensors and both signed
+response banks rather than trusting the displayed formulas.  They separately
+checked the clearing sign in `(16)`, the unique coordinatewise dominators,
+all negative contraction ratios, monotone propagation beyond the exact
+`14/16` thresholds, the complete short-histogram wall, the per-layer
+multidegree qualification in `(30)`, and the Gauss dilation and translated
+tilt boundaries.  Normal and optimized executions of both companions
+byte-match their stored transcripts, and all four LF hashes agree with the
+declared values.
+
 This theorem proves the initial cell and every anchored three-term arithmetic
 progression.  It does not prove arbitrary translated or non-arithmetic
 three-slot product-Gamma goodness, the conditional `O(X^(t-4))` spectrum of
 THM-3100, SFC in every width, NC2, arbitrary-radial GMC(2), LRC(14), JC(2),
 or DC(2).
 
-**QED candidate, pending independent audit.**
+**QED.**
