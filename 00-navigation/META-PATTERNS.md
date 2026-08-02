@@ -324,35 +324,31 @@ in §1 of
 
 ## Recover niches by more than citation counts
 
-**Trigger / action:** when mining neglected work, distinguish identifier/frame
-dormancy, under-titled results, orphan computations, near-refutations, and
-heavily cited stalls; rank by orthogonality, artifact readiness, transfer value,
-and decisive-probe cost. **Mechanism:** citation counts confuse live code with
-abandonment and stagnation with health. **Counterindication:** citation graphs
-remain useful with semantic inspection. **Evidence:** the S124 blind-spot atlas,
-S79 recovery ledger, and S128c136 corpus atlas.
+**Trigger / action:** when mining neglected work, separate dormant frames,
+under-titled results, orphan computations, near-refutations, and cited stalls;
+rank by orthogonality, artifact readiness, transfer value, and probe cost.
+**Mechanism / boundary:** citation counts confuse live code with abandonment and
+stagnation with health, but remain useful after semantic inspection.
+**Evidence:** the S124 blind-spot atlas, S79 recovery ledger, and S128c136 atlas.
 
 ## Fill operation columns, not only invariant columns
 
-**Trigger:** a field has many objects and invariants but few reusable laws.
-**Action:** ask how each invariant behaves under complement, deletion, ordinal
-sum, duality, lift, product, and degeneration; transport the same operation to
-the dual object.
-**Mechanism:** one operation law fills an entire row of the research grid and
-connects results that scalar invariant hunting leaves siloed.
-**Counterindication:** compute a new invariant first when no existing invariant
-sees the target predicate at all.
-**Evidence:** the meta-gap in
-[`the-procedural-generation-grammar-for-the-tournament-zoo-deathstar-S79.md`](../07-reflections/the-procedural-generation-grammar-for-the-tournament-zoo-deathstar-S79.md)
-and the gap cross-product in the corpus atlas.
+**Trigger / action:** when objects and invariants abound but reusable laws do
+not, test complement, deletion, sum, duality, lift, product, and degeneration
+on the object and its dual. **Mechanism:** one operation law fills a research-grid
+row that scalar hunting leaves siloed. **Counterindication:** first invent an
+invariant if none sees the target. **Evidence:** the S79 procedural grammar and
+the corpus atlas's gap cross-product.
 
 ## Tournament Analysis must preserve content
 
-**Trigger:** pairwise data suggests a tournament representation.
-**Action:** require an intrinsic binary relation, name the preserved target, keep exact ties, audit alternate vertices, and compute endpoint-swap parity before orienting: antisymmetric signs may orient, while symmetric signs are gain/colors and retain switching or phase data.
-**Mechanism:** cosmetic tie-breaking manufactures a contentless tournament; for a character of an alternating field, its value on `-1` decides orientation versus symmetric coloring, while a Pfaffian orientation of a symmetric kernel is an extra gauge whose existence may depend on the contraction family.
-**Counterindication:** a meaningful gauge may resolve ties when its gauge, support, and preserved contraction are part of the theorem.
-**Evidence:** MISTAKE-212/214; THM-2294 (real/`chi_7` tournaments versus `chi_13` coloring); THM-2292 (switched calibration gain graph and mirror tie); THM-2290 (hafnian kernel and the order-four Pfaffian-gauge boundary); and [`the-underlying-object-is-the-support-dirichlet-profile-codex-20260721.md`](../07-reflections/the-underlying-object-is-the-support-dirichlet-profile-codex-20260721.md).
+**Trigger / action:** pairwise data suggests a tournament: require an intrinsic
+binary relation, preserve ties, name the target, test alternate vertices, and
+compute endpoint-swap parity. **Mechanism:** antisymmetric signs may orient;
+symmetric signs are colors/gains, while Pfaffian orientation is an extra gauge.
+**Counterindication:** a gauge may resolve ties only when its support and
+preserved contraction are part of the theorem. **Evidence:** MISTAKE-212/214;
+THM-2290/2292/2294 and the S79 support-Dirichlet reflection.
 
 ## Type a shared sum as a weighted fiber before transferring it
 
@@ -388,10 +384,17 @@ THM-2984/MISTAKE-334; repaired THM-2991/MISTAKE-335.
 
 ## Pay algebraic rank, then audit the physical action
 
-**Trigger / action:** when a finite response, moment, or orbit looks compressible,
-compute its Hankel/circulant rank and minimal carrier, then
-separately type the physical observable, action, positivity, and basepoint.
-**Mechanism / counterindication:** full rank blocks false state compression, but
-a signed inverse or quotient closes the lane only with a supplied physical action and observation map.
-**Evidence:** THM-2810/2815 pay the factorial horizon without nullity selectors;
-THM-2835/2839 separate ranks `13/26` from ancestry rank `13^5` while leaving the positive/basepoint clutch open.
+**Trigger / action:** when a finite response looks compressible, compute its
+Hankel/circulant rank and minimal carrier, then type the physical observable,
+action, positivity, and basepoint. **Mechanism / boundary:** full rank blocks
+false compression; a signed inverse still needs a physical action/observation.
+**Evidence:** THM-2810/2815 and THM-2835/2839.
+
+## Dominate product kernels, then exhaust the short histogram core
+
+**Trigger / action:** if a signed observable over arbitrarily many independent
+layers factors through a finite nonnegative alphabet, delete inactive symbols,
+find a positive mode dominating all negative responses, bound their contraction
+ratios, then enumerate only shorter histograms. **Mechanism:** words collapse to histograms, turning the infinite layer quantifier into a finite exact bank.
+**Counterindication:** phases, coupling, zero dominant coordinates, or ratio-one walls retain carry data. **Evidence:** THM-3107 and its THM-2159 spectral ancestor;
+THM-2418 warns that charged projection can delete the dominant mode.
