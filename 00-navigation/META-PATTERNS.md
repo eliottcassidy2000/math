@@ -38,25 +38,20 @@ see THM-2617/2636 and the latter's `q`/`T` typing repair.
 
 ## Localize a metric by common contexts before hunting catalysts
 
-**Trigger / action:** when common nonexpansive factors can contract distance, form `d_ctx(x,y)=inf_z d(x+z,y+z)`; in noncommutative settings retain left, right, and two-sided contexts separately.
-**Mechanism:** in a commutative metric monoid this is the greatest
-translation-invariant pseudometric below `d` (and group length on the
-Grothendieck completion); its defect measures catalytic capacity, fixed savings
-homogenize, and uncrossing may prove `d_ctx=d`. **Counterindication:** without
-properness, integrality, or cancellation it may collapse; a homogenization gap
-alone does not exhibit a catalyst. **Evidence:** THM-2191, THM-2183, and
-THM-840/853.
+**Trigger / action:** form `d_ctx(x,y)=inf_z d(x+z,y+z)` when common
+nonexpansive factors contract distance; retain left/right/two-sided contexts
+when noncommutative. It is the greatest translation-invariant pseudometric
+below `d` in a commutative metric monoid. **Caution:** without properness,
+integrality, or cancellation it may collapse; homogenization gaps alone do not
+exhibit catalysts. **Evidence:** THM-2191/2183/840/853.
 
 ## Expose the obstruction first, choose the scale second
 
-**Trigger / action:** if every fixed scale loses cancellation, retain the face;
-if it vanishes, locate common zero and evaluate a target-bearing
-transverse layer. **Mechanism:** this exposes the valuation,
-carry, or Gram defect; physical structure may select a finite next layer when
-arbitrary lifts cannot. **Counterindication:** require a seed and labels:
-THM-3058 has no bounded jet on an arbitrary zero face, while THM-3066 erases
-the pointed Keller ratio. **Evidence:** THM-2022, THM-2159/2165,
-THM-2193/2298, THM-3058, and the THM-3060/3062 transverse hierarchy.
+**Trigger / action:** if fixed scales lose cancellation, retain the face; at a
+zero, evaluate a target-bearing transverse layer to expose valuation, carry,
+or Gram defect. **Caution:** require a seed and labels: THM-3058 has no bounded
+jet on an arbitrary zero face, while THM-3066 erases the pointed Keller ratio.
+**Evidence:** THM-2022/2159/2165/2193/2298/3058/3060/3062.
 
 ## Discretize phase on boundary atlas
 
@@ -378,3 +373,12 @@ Quotient only after a good-cover, compatible-section, monotonicity, or factoriza
 
 **Trigger / action:** before using deletion, transfer, or a commuting square to induct positivity, compute its kernel on the positive carrier; test a negative preimage of zero and whether known positive ghosts span the failure. Commutation transports invisibility, not order reflection.
 A positive left inverse, order-reflecting quotient, or target factorization discharges the audit; otherwise name a transverse selector. **Evidence:** THM-3122's positive derangement ghost, THM-2551's preserved all-unit kernel, and THM-3127's upset separators.
+
+## Audit sections, not only fibres
+
+**Trigger / action:** separately chosen positive witnesses must be put in one
+typed carrier `P_i`; test cumulative intersections and retain a transition
+cocycle if witnesses move. **Caution:** nonempty fibres need not glue and may
+disappear then return; Helly/Farkas makes convex failure finite. Upper-ideal
+loci can instead have Helly number one. **Evidence:** THM-2292 versus THM-3144;
+THM-2658 is the circular-gain analogue.
