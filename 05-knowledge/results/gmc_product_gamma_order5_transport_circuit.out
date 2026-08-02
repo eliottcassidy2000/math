@@ -1,0 +1,14 @@
+transport=forward_mass:28;reverse_core:I1:9/9;I2:11/11
+circuit_census=I1-tight:matrix330x21:rank20:nullity1:F16:R5;I1-wide:matrix330x20:rank19:nullity1:F15:R5;I2-tight:matrix328x17:rank16:nullity1:F12:R5;I2-wide:matrix328x20:rank19:nullity1:F14:R6
+edge_order_I1_tight=F:P0>N0x1,P1>N3x4,P2>N3x2,P3>N0x1,P3>N1x3,P3>N5x2,P5>N2x1,P6>N8x1,P7>N5x3,P8>N5x1,P8>N6x3,P8>N9x2,P9>N11x1,P10>N9x1,P10>N10x1,P11>N10x1|R:N2>P4x1,N4>P4x1,N4>P6x2,N7>P9x3,N10>P9x2
+edge_order_I1_wide=F:P0>N0x1,P1>N3x4,P2>N3x2,P3>N0x1,P3>N1x3,P3>N5x2,P5>N2x1,P6>N8x1,P7>N5x3,P8>N5x1,P8>N6x3,P8>N10x2,P9>N11x1,P10>N9x2,P11>N9x1|R:N2>P4x1,N4>P4x1,N4>P6x2,N7>P9x3,N10>P9x2
+edge_order_I2_tight=F:P0>N2x4,P1>N4x1,P1>N8x2,P2>N4x2,P3>N6x1,P4>N1x2,P5>N9x3,P6>N3x2,P6>N10x4,P7>N8x4,P7>N9x2,P9>N0x1|R:N5>P3x3,N7>P8x2,N9>P8x1,N11>P10x4,N12>P11x1
+edge_order_I2_wide=F:P0>N2x2,P0>N3x2,P1>N0x1,P1>N4x1,P1>N8x1,P2>N4x2,P3>N6x1,P4>N1x2,P5>N9x3,P6>N2x2,P6>N10x4,P7>N8x5,P7>N9x1,P9>N9x1|R:N5>P3x3,N7>P8x2,N9>P10x1,N11>P8x1,N11>P10x3,N12>P11x1
+flag_basis=binom(a,i)binom(b,j);Schur_degrees=1..4
+low_degree=annihilation_exact;kernel_dimension=1;full_support=PASS
+degree5_exit=Phi_Ij(s_lambda)=base_j*f_lambda/2*(L_j+kappa_lambda/4)
+tp2_columns=a^2,2b^2-ab,b^2+2ab
+tp2_raw_minors=-1,2:SIGN_CONFLICT
+boundary=no_ordinary_TP_positroid_ECT_or_coefficientwise_Peano_kernel
+needed_sidecar=chamber_adapted_Newton_cone_or_rooted_rank4_flag
+all_exact_checks=PASS
