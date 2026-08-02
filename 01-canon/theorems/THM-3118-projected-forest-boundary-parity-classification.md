@@ -2,7 +2,7 @@
 id: THM-3118
 title: "Projected forest-boundary parity classification"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; independent audit pending.  For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
   N>=r+2, the projection of the simplicial boundary of (r+1)-edge forests
   onto rank-r component partitions has full row rank when r is even and
   codimension exactly one when r is odd, both over F_2 and over Q.  In the
@@ -13,13 +13,14 @@ status: >
   saturation, locality, denominator, or positivity theorem.
 source: root/gmc3000-audit-2026-08-02
 audit: >
-  The proof is symbolic.  Its local double-star lemma, global merge-and-resplit
-  reduction, Johnson-graph connectivity, parity obstruction, and rational
-  rank inference require independent hostile audit.  The exact companion
-  checks the predicted ranks through r=5 and N=8 by deterministic bitset
-  elimination and checks every star/double-star split identity in its stated
-  finite control range.  Normal, optimized, stored-output, and LF-hash checks
-  are required before promotion.
+  Two independent hostile audits rederived the local double-star lemma, global
+  merge-and-resplit reduction, Johnson-graph connectivity, parity obstruction,
+  rational rank inference, and signed-cycle scope, with no theorem defect.
+  The exact companion checks the predicted ranks through r=5 and N=8 by
+  deterministic bitset elimination and checks every star/double-star split
+  identity in its stated finite control range.  After replacing optimization-
+  unsafe asserts by explicit RuntimeError guards, independent normal and -O
+  replays both match the stored output and declared LF hashes exactly.
 depends_on: []
 related:
   - THM-3117-projected-five-forest-boundary-surjectivity-and-signed-holotopy-lift
@@ -33,7 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3118 -- projected forest-boundary parity classification
 
-**PROVED CANDIDATE + VERIFIED-EXACT; independent audit pending.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3117 proves the rank-four cases needed by the two live product-Gamma
 currents.  The full-rank phenomenon is a parity law in every atomic rank.
