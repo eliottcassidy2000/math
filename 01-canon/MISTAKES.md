@@ -9,6 +9,21 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-356 (2026-08-02, THM-3162 live reservation race) -- a second selector reservation landed 51 seconds after the first claimant
+
+- **What failed:** the depth-six selector non-resurrection session reserved
+  `THM-3162` from a fresh snapshot, but the unrelated falling-factorial
+  order-join session had already added its `THM-3162` file to `main` 51 seconds
+  earlier.  The crossed pushes left two distinct files with the same YAML ID.
+- **Why:** a fetch-and-scan reservation is not atomic.  The selector stub was
+  mathematically honest but chronologically second, so its namespace claim
+  was invalid under the first-on-`main` rule.
+- **Repair:** the first claimant
+  `THM-3162-falling-factorial-order-join-path-colour-transform.md` keeps the
+  ID.  The later selector stub is coherently renamed to `THM-3164` before any
+  proof, script, output, dependency, or navigation entry uses it.  This is a
+  namespace repair only; neither theorem's mathematics changes.
+
 ## MISTAKE-355 (2026-08-02, THM-3159 candidate audit) -- losing the odd reflected-pole sign turned the zero-face system into an unrelated quartic gcd
 
 - **What failed:** the first THM-3159 candidate converted a partial fraction
