@@ -1,0 +1,13 @@
+THM-3089 SQUARE-ROOT MOVING-GAP CLUSTER CONE
+factorial_ratio_cells=3850 exact_log_bounds=PASS
+permanent_ratio_cells=31930 maxima=9,375,168268/3,241529660/9
+explicit_schur_condition_bound=PASS
+birkhoff_condition_cells=1361 monomial_bound=PASS
+normal_transform_cells=60 determinant_and_rows=PASS
+conditioning_degree_cells=24 prefix_monotonicity=PASS
+uniform_relative_error=O(H^2/C);physical_cone=H=o(sqrt(C))
+K12_m3_Tz=101378880 A_over_logK=1216546560
+sqrt_boundary_identities=387 strict_gaussian_cells=351
+composition_extension=same_entropy_chamber;moving_internal_gaps
+scope=fixed_width;distinct_gaps;no_H_comparable_to_sqrtC_claim
+all_exact_checks=PASS
