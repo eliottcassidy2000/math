@@ -2,7 +2,7 @@
 id: THM-3128
 title: "Active pole-prefix labelled-deletion no-positive-preimage boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.  The first
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The first
   active THM-3120 pole-prefix Hasse hostile, at I2 support (1,3) and degree
   five, has no nonnegative Hasse-boundary preimage with the same THM-3119
   labelled-deletion image.  This remains true after adding an arbitrary
@@ -10,6 +10,12 @@ status: >
   negative upset is exactly one raw block-deletion coordinate.  Selectors
   that change the deletion image or leave the Hasse cone remain open.
 source: root/multiscale-newton-flag/low-child-flag-extension-2026-08-02
+audit: >
+  An independent hostile audit reconstructed the labelled-deletion matrix,
+  determinant-360 rank certificate, full two-dimensional kernel, factorial
+  gauge, raw conjugated deletion, invariant top-two upset, and the resulting
+  no-positive-preimage implication.  Fresh normal and optimized runs
+  byte-match the stored output; LF hashes and documentation checks pass.
 depends_on:
   - THM-3119-factorial-normalized-labelled-deletion-and-young-carrier-order
   - THM-3120-row-pole-prefix-newton-flag-positivity
@@ -26,7 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3128 -- active pole-prefix labelled-deletion no-positive-preimage boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3120 proves scalar positivity of every active pole-prefix Newton
 coordinate in its exact support bank.  The scalar flag does not always lift
@@ -184,7 +190,46 @@ WK_1=(-120,120,-24,-48,24,0,0),
 WK_2=(120,-120,0,60,0,-20,4).                                (19)
 ```
 
-## 4. The invariant negative upset
+## 4. Universal top-two deletion cut
+
+The invariant used below exists in every degree.  Let `N>=3` and let `B_N`
+be raw unweighted block deletion from partitions of `N` to partitions of
+`N-1`.  A source partition can lower to the one-part target `(N-1)` only in
+two ways:
+
+```text
+(N)       -> (N-1)       by lowering its unique part,
+(N-1,1)   -> (N-1)       by deleting its unique singleton.    (19a)
+```
+
+Both raw coefficients are one.  Therefore the `(N-1)` row of `B_N` is
+
+```text
+[e_(N-1)]B_N e_lambda
+ =1_{U_N}(lambda),
+U_N={(N),(N-1,1)}.                                           (19b)
+```
+
+The set `U_N` is the top-two coarsening upset.  Hence every raw Hasse
+boundary `Y` satisfies
+
+```text
+(B_NY)_(N-1)=Y(U_N)>=0.                                      (19c)
+```
+
+It follows universally that
+
+```text
+(B_NG)_(N-1)<0
+ ==> no raw Hasse boundary Y has B_NY=B_NG.                   (19d)
+```
+
+Via THM-3119 factorial conjugacy, `(19d)` is equally a no-preimage theorem
+for the corresponding labelled-deletion fibre.  This is a reusable
+isotone-row obstruction; the rest of the proof identifies its first active
+pole-prefix instance.
+
+## 5. The invariant negative upset
 
 Consider the coarsening upset
 
@@ -238,7 +283,7 @@ therefore fixes the negative upset mass throughout the entire affine fibre.
 The no-preimage result is an invariant-cut theorem, not a failure of one
 chosen kernel basis or one attempted max flow.
 
-## 5. Exact conclusion and scope
+## 6. Exact conclusion and scope
 
 For the active prefix `(1)--(4)`, there is no raw current `G'` such that
 
@@ -263,7 +308,7 @@ the exact missing datum more sharply: a successful transverse selector must
 alter the deletion-visible `(4)` coordinate, not merely choose another point
 of the existing labelled-deletion fibre.
 
-## 6. Exact companion
+## 7. Exact companion
 
 Reproduce with
 
@@ -277,4 +322,4 @@ the exact `A` and `B` matrices, the rank-five minor, the full two-dimensional
 kernel in both gauges, the invariant upset masses, and the conjugacy of the
 two deletion images.  Both executions must byte-match the stored output.
 
-**QED (candidate pending independent audit).**
+**QED.**
