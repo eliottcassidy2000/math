@@ -1,17 +1,19 @@
 ---
 id: HYP-9027
-title: "The odd-exponent Jelonek law for 2-jet fiber quartics (P1-prime)"
+title: "Odd-exponent Jelonek law: general form refuted, Keller successor open"
 status: >
-  OPEN (three-map exact evidence base + d=3 control; the d=3-style
-  readings are REFUTED: mu need not be a unit, and odd disc
-  components are not exclusively Jelonek). Blocking hypothesis G1:
-  no field-degree-4 2-jet Keller map is known, so the law is filed
-  for general dominant 2-jet maps, not Keller maps.
+  REFUTED IN THE STATED GENERAL-DOMINANT SCOPE + KELLER-RESTRICTED SUCCESSOR
+  OPEN.  THM-3059 gives an explicit dominant field-degree-four two-jet map
+  with generic S4, exact Jelonek plane, C3 infinity inertia, and even cleared
+  exponent 8.  The exact survivor is parity = inertia sign after reciprocal
+  reversal.  No field-degree-four two-jet Keller map is known; whether every
+  Jelonek component of such a Keller map must have odd inertia remains open.
 source: kind-pasteur-2026-07-26-S132
 related:
   - THM-2455-quartic-swallowtail-scaffold-and-endpoint-corrections
   - THM-2446-twojet-zgraded-jacobian-decomposition-and-cone-system
   - THM-1310-conic-pair-fibers-and-design-equations
+  - THM-3059-quartic-twojet-even-jelonek-c3-escape-counterexample
 script: 04-computation/jacobian_twojet_disc_jelonek_maps_kps_S132.py
 output: 05-knowledge/results/jacobian_twojet_disc_jelonek_maps_kps_S132.out
 controls_script: 04-computation/jacobian_twojet_disc_jelonek_controls_kps_S132.py
@@ -24,6 +26,11 @@ controls_output_sha256: b4facd9293a31765f220b6903d5e74a1d9fef4e5acb8764f65417991
 
 # HYP-9027 -- P1-prime: Jelonek components enter the fiber discriminant to odd order
 
+> **SUPERSEDED SCOPE.**  THM-3059 refutes the general-dominant odd-exponent
+> clause below.  Retain this file for the evidence and correction lineage.
+> The live successor asks whether the Keller condition forces odd infinity
+> inertia at every Jelonek component; it does not assume that conclusion.
+
 Corrected successor to THM-2446 (P1), with THM-2455 supplying the
 proved classical layer. Let `F = A z^2 + B z + C : C^3 -> C^3` be
 dominant with generic fiber field degree 4; `N(t)` the primitive
@@ -32,12 +39,13 @@ graph polynomial of a separating coordinate, leading coefficient
 (so `27 disc q = 4 I^3 - J^2`, THM-2455); `L_4` the reduced Jelonek
 polynomial.
 
-## The conjectured law
+## The historical conjectured law
 
 1. Every irreducible component of `{L_4 = 0}` divides `ell` -- the
    Jelonek factor is leading-coefficient-driven (fiber degree drop /
    escape to infinity), not a ramification divisor.
-2. `v_Lambda(disc q)` is **odd** for every component `Lambda` of
+2. **REFUTED in this scope.** `v_Lambda(disc q)` was conjectured to be odd
+   for every component `Lambda` of
    the Jelonek set, with
    `N = (2*4-2) deg_Lambda(ell) - v_Lambda(disc N)` the exact odd
    bookkeeping; equivalently
@@ -58,10 +66,12 @@ polynomial.
 | I: (x^2-z^2+y, xz, y) proper | monic | -16 v^2 ((u-w)^2+4v^2)^2 | empty | 0 | unit |
 | II: (x, xz^2+y, yz+y^2) | lc = u^2 | u^3 Delta, Delta irred | {u=0} | 3 | Delta (S4 Galois) |
 | III: (x, xz^2+y, yz^2) | lc = u | 16 u w (v^2-4uw)^2 | {u=0} | 1 | 16 w (D4 Galois) |
+| IV (THM-3059): (x, xz^2+y, xyz^2+z) | lc = u^2 | u^4 H, H=-27 mod u | {u=0} | 4 | H (S4 Galois) |
 
 Master identities: `u^9 disc(monic II) = Delta`;
 `u^5 disc(monic III) = 16 w (v^2 - 4uw)^2`; d=3:
-`disc(monic) = -4 Q^2 / L^3`. The `N` values `9, 5, 3` are all odd.
+`disc(monic) = -4 Q^2 / L^3`. The original `N` values `9, 5, 3` are all odd,
+but THM-3059's value is `12-4=8`, so that sample pattern is not uniform.
 Monodromy realizations certified in the class: `V_4` (proper),
 `D_4` (non-proper), `S_4` (non-proper). Coordinate-artifact squares
 are real (the witness's `v^2` covers two distinct unramified
@@ -77,15 +87,21 @@ unramified-fiber checks).
   {1,3} realized on point/line caps, so unconditional degree-4
   exclusion there implies the order-{1,3} degree-4 case -- a
   hardness floor); any witness must satisfy the (N1)-(N5) resolvent
-  dossier, which upgrades clause 2 of this hypothesis from
-  conjecture to NECESSARY CONDITION on the S4 branch (purity forces
-  odd Jelonek valuation). Decisive pending: the (1,2,2)+fiber4 GB
-  box.
-- G5: prove the odd-exponent mechanism from lc-degeneration parity.
-- G6 (decoupling search, floors reported): a proper 2-jet map with
+  dossier.  Purity and the sign character force an odd Jelonek component
+  somewhere on an S4 branch; they do **not** force every Jelonek component
+  to be odd.  Decisive pending: the (1,2,2)+fiber4 GB box.
+- G5 is repaired by THM-3059: after reciprocal reversal, the exact formula is
+  `N=6v(ell)-(d_sigma+2i)`, hence `N mod 2` is the sign of infinity inertia.
+  The remaining Keller task is geometric: exclude C3 infinity inertia at a
+  Jelonek component, or prove that it forces a forbidden finite critical
+  divisor.  THM-3059's family shows that all Jacobian valuations can remain
+  zero; the missing local sidecar is the branchwise unit residue of the
+  primitive-element Jacobian cofactor.
+- G6 (decoupling search): a proper 2-jet map with
   Galois not contained in A_4 would decouple "square disc" from
-  "proper"; a non-proper map with even Jelonek exponent would
-  refute clause 2. Neither was searched for yet.
+  "proper".  The other requested decoupling now exists: THM-3059 is a
+  nonproper generic-S4 map with even Jelonek exponent, so clause 2 is
+  refuted for dominant maps.
 - The invariant-form prize: a family identity expressing
   `mu L_4^N` through `4 I^3 - J^2` along a modulus path that
   genuinely crosses the cuspidal edge `{I = J = 0}` -- THM-2455
