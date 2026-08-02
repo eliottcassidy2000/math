@@ -185,8 +185,10 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   laws; THM-3051/53/54 give moving-lower hostiles, prefix flow and affine
   finite-order tail re-entry.  THM-3056 gives reciprocal product-Gamma sign
   `(-1)^binom(h,2)`, not moment positivity.  THM-3060/62/63 prove the
-  fixed-low suspension hierarchy: five slots are unconditional; six first
-  meet arbitrary four-slot SFC.  THM-3065 gives reciprocal-Beta
+  fixed-low hierarchy. THM-3069 gives towers; THM-3075 opens k6
+  bracketings; THM-3082 opens finite `O/P` words simultaneously.
+  THM-3073/3077 give the norm/carry boundary. Arbitrary/equal-scale remains
+  open. THM-3065 gives reciprocal-Beta
   Gregory--Newton walls; nonpositive signed prefixes force H2 only, as exact
   zero-cut H3/H4 hostiles refute the higher lift.  Strict-negative-prefix
   repair remains OPEN.  These are fixed finite banks, not one all-order tail.
