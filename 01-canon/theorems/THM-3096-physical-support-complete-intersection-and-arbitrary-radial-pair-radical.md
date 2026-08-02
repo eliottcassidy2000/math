@@ -227,9 +227,8 @@ In particular:
    three-term radial `C` is detected by moment at most six;
 3. every support supplied by the proved arbitrary-gap remote-pair theorem
    THM-3091 inherits the sharp radial cutoff and literal certificates; and
-4. once candidate THM-3093 is independently promoted, the same holds above
-   every one of its arbitrary-gap remote clusters, including its
-   unconditional low-child tails.
+4. THM-3093 gives the same conclusion above every one of its arbitrary-gap
+   remote clusters, including its unconditional low-child tails.
 
 This is the precise leverage from SFC geometry into NC2: a support resultant
 is upgraded to an arbitrary-coefficient radial nullcone theorem.  It proves
