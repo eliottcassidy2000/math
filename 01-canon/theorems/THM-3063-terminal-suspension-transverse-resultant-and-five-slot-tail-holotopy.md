@@ -2,8 +2,8 @@
 id: THM-3063
 title: "Terminal suspension, transverse resultant, and the five-slot physical tail"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE-FILE AUDIT
-  REQUESTED.  For every k>=3, a fixed-low physical factorial cell with one
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every k>=3,
+  a fixed-low physical factorial cell with one
   moving terminal pair has an eventual positive resultant whenever its
   transverse (k-2)-slot resultant is nonzero.  The exact leading suspension
   is S^[k(k-1)] times the two top normal forms, and every fixed affine finite
@@ -12,6 +12,15 @@ status: >
   THM-2824 proves the hypothesis unconditionally.  The first new obstruction
   is k=6, exactly the arbitrary four-slot first-window resultant.
 source: kind-pasteur-2026-08-01-terminal-suspension
+audit: >
+  Two independent hostile audits rederived the determinant-one coordinate
+  covariance, every scaled layer base including fixed-layer leakage and the
+  k=3 endpoint, independence from H_(k-1), the separated resultant sign and
+  exponents, the five-slot constants, and the carrier holotopy.  Both replayed
+  normal, optimized, and stored companions, matched the declared LF hashes,
+  and cross-checked the executable all-high block against the literal physical
+  top layers.  Their audit replaced the earlier invalid separate-line
+  coercivity argument by the current isotropic whole-form contraction.
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
@@ -31,7 +40,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3063 -- terminal suspension and the five-slot physical tail
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3060 and THM-3062 expose the same phenomenon at consecutive transverse
 depths.  The all-large physical face always has only two normal directions.
@@ -293,8 +302,9 @@ R_C>0 for every sufficiently large C.                 (27)
 ```
 
 For `k=3`, `(21)` and binary-resultant continuity prove `(25)` with the
-empty lower product.  For `k=4`, `(25)` is THM-3062's exact
-`G_2^12 E_C^2` mechanism.
+empty lower product.  For `k=4`, `(25)` recovers the leading
+`G_2^12 E_C^2` mechanism of THM-3062; that theorem's exact Poisson boundary
+factor uses its full boundary restriction rather than only `(14)`.
 
 ## 5. Exact exponential base and power
 
@@ -457,4 +467,4 @@ gap, nonlinear clocks, raw-chart persistence, or a wall-stripped core.  It
 does not prove arbitrary four-slot SFC, the six-slot tail without `(8)`, or
 any new NC2, GMC, LRC, or Jacobian statement.
 
-**QED, pending independent immutable-file audit and status promotion.**
+**QED.**

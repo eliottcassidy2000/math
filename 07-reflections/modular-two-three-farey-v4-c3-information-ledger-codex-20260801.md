@@ -72,6 +72,14 @@ The six undirected quartic edges are a two-to-one quotient of these twelve
 flags. This is a finite quotient of the modular `2/3` grammar, not a proof
 that the full free product acts on the physical carrier.
 
+`01-canon/theorems/THM-3067-tetrahedral-modular-two-three-flag-quotient-and-origin-loss.md`
+makes the finite quotient exact.  The twelve flags are a regular
+`A4=V4 semidirect C3` bitorsor.  Right edge reversal `S` and direction
+rotation `R` satisfy `S^2=R^3=(SR)^3=1`; forgetting the point has kernel
+`V4`, while forgetting edge orientation gives six edges on which `R` no
+longer descends.  The odd involution that reverses the `C3` orientation is a
+second sidecar, not the already-used translation `S`.
+
 The identity
 
 ```text

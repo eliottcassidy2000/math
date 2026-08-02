@@ -186,11 +186,13 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   against integer columns.  This is column-reversal sign regularity, not
   moment positivity: the order-two minor is negative.  For THM-3053's
   Beta--Gamma inventory, terminal prefix zero forces finite rank, while
-  positive terminal prefix remains an OPEN reversal problem.  THM-3060/3062
-  give the physical hierarchy: three slots have a positive face at every
-  width; at four slots it cancels but a fixed-low, fixed-gap transverse Gram
-  term is eventually positive on affine clocks.  These are fixed finite
-  banks, not one all-order Stieltjes tail.
+  positive terminal prefix remains an OPEN reversal problem.  THM-3060/3062/
+  3063 give the physical hierarchy: the three-slot face is positive; the
+  four-slot face survives one transverse level later; and every fixed-low
+  terminal pair suspends precisely its transverse `(k-2)`-slot resultant.
+  Thus five slots are unconditional by THM-2824, while six slots first meet
+  arbitrary four-slot SFC.  These give fixed finite affine-clock banks, not
+  one all-order Stieltjes tail.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent
@@ -332,11 +334,10 @@ Classify profiles under support operations; study analytic continuation and auto
   Jelonek loci with `C3` escape and even exponent, refuting HYP-9027 only in
   its former general-dominant scope.  On the `S4` Keller lane at least one odd
   component is forced, but excluding every Keller `C3` component remains
-  OPEN and needs branchwise Jacobian-cofactor unit data, not another
-  discriminant scalar.  THM-3066's matching retains only the cofactor product.
-  THM-3064's marked shifted norm is iff the supplied-pair Keller congruence;
-  tame `C3` requires inverse-different cofactor valuation `-2`, leaving global
-  polynomial realization as the missing gate.
+  OPEN and needs branchwise cofactor units.  THM-3066 retains only their
+  product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
+  THM-3067's 12-flag `A4` bitorsor loses its `V4` origin in the `C3` quotient;
+  odd reflection and physical realization remain sidecars.
   THM-2862/2864/2968/2971 give two sextic
   lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
   affine sidecars remain.  THM-2867 gives the regular `S3` carrier.  THM-2871 makes that face unramified and
