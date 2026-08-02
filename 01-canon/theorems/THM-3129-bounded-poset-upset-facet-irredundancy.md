@@ -2,7 +2,7 @@
 id: THM-3129
 title: "Bounded-poset upset-facet irredundancy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.  In a finite
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In a finite
   connected poset, the extreme rays of the isotone cone modulo constants are
   exactly indicators of upsets whose Hasse subgraph and complementary Hasse
   subgraph are connected.  Hence in every bounded poset every nontrivial
@@ -10,6 +10,14 @@ status: >
   For integer partitions, no universal coarsening-filter inequality in the
   THM-3127 dual description can be discarded.
 source: root/multiscale-newton-flag/2026-08-02
+audit: >
+  An independent hostile audit rederived the layer-cake reduction, both
+  disconnected-side decompositions, the connected-side extremality proof,
+  full-dimensional polar facet correspondence, bounded-poset connectivity,
+  and partition-Hasse typing.  It independently replayed the complete
+  degree-two-through-eleven census, verified the total 23,949 facets, matched
+  the declared LF hashes, and confirmed normal, optimized, and stored output
+  line by line.
 depends_on:
   - THM-3127-partition-refinement-strassen-upset-dual-and-filter-response
 script: 04-computation/gmc_bounded_poset_upset_facets_thm3129.py
@@ -21,7 +29,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3129 -- bounded-poset upset-facet irredundancy
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3127 turns positive refinement transport into one inequality for every
 coarsening upset.  A natural hope is that only principal upsets, connected
@@ -218,4 +226,4 @@ support flag, Gaussian moment statement, LRC(14), JC(2), or DC(2).  Its sharp
 message is a stopping theorem: principal filters and generic cut pruning
 cannot replace the full coarsening-upset dual.
 
-**QED (candidate pending independent audit).**
+QED.
