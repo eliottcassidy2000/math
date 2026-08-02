@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for THM-3133.
+"""Exact controls for THM-3143.
 
 For a noncollinear algebraic affine coordinate, Cauchy--Green turns the
 simplex area period into three oriented complex-edge integrals.  This script
@@ -9,8 +9,8 @@ turning-square source vector, all endpoint collisions, and the exact
 collinear failure boundary.
 
 Reproduce:
-  python3 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3133.py
-  python3 -O 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3133.py
+  python3 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3143.py
+  python3 -O 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3143.py
 """
 
 from __future__ import annotations
@@ -23,7 +23,7 @@ def check(condition: bool, message: str) -> None:
         raise RuntimeError(message)
 
 
-print("THM-3133 FC(3) COMPLEX AFFINE-COORDINATE CAUCHY-GREEN AUDIT")
+print("THM-3143 FC(3) COMPLEX AFFINE-COORDINATE CAUCHY-GREEN AUDIT")
 
 # Normalize an oriented noncollinear algebraic triangle to vertices
 # z0=0,z1=1,z2=tau=x+i*y, with real y>0.
@@ -216,10 +216,10 @@ print("C5 rational coefficient pole multipliers -n+1/2 nonzero for n=1..12")
 
 # C6. Geometry failure is exact: every turn factor is proportional to y and
 # W=2iy.  At y=0 the triangle, Cauchy--Green area normalization, and cycle
-# source all collapse together; THM-3132's one-dimensional spline takes over.
+# source all collapse together; THM-3142's one-dimensional spline takes over.
 check(W.subs(y, 0) == 0, "collinear Jacobian collapse")
 for j, turn in enumerate(turns):
     check(sp.simplify(turn.subs(y, 0)) == 0, f"collinear turn collapse {j}")
 print("C6 collinear boundary y=0: W and all three turning factors vanish exactly")
 
-print("ALL THM-3133 CONTROLS PASSED")
+print("ALL THM-3143 CONTROLS PASSED")

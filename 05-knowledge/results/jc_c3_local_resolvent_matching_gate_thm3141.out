@@ -1,4 +1,4 @@
-THM-3131 exact controls
+THM-3141 exact controls
 disc_identity=PASS
 disc_formula=16*p**4*r - 4*p**3*q**2 - 128*p**2*r**2 + 144*p*q**2*r - 27*q**4 + 256*r**3
 depressed_q=a1 - a2*a3/2 + a3**3/8

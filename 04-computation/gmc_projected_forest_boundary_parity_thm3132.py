@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Exact controls for THM-3135 projected forest-boundary parity.
+"""Exact controls for THM-3132 projected forest-boundary parity.
 
 For K_n and 0 <= r <= n-2, the integer map under study is
 
     T_(n,r) = P_r partial_(r+1),
 
 from canonically oriented (r+1)-edge forests to rank-r set partitions.
-The proof in THM-3135 is general.  This companion independently checks every
+The proof in THM-3132 is general.  This companion independently checks every
 rank for 3 <= n <= 7 over F_2 and exhausts the endpoint-swap identity on every
 elementary one-point transfer in the same universe.
 """

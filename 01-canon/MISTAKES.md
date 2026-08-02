@@ -27,12 +27,18 @@ Format per entry:
   ownership.  The current distinct allocation is `THM-3130` for the
   divisor-antichain response theorem, `THM-3131` for prime-resonance
   factorial closure, `THM-3134` for the tournament endpoint-jet theorem, and
-  `THM-3136` for the later fixed-reference Hasse no-go.  (`THM-3135` is now
-  free.)  After every
+  `THM-3136` for the later fixed-reference Hasse no-go.  (`THM-3135` was free
+  at that repair checkpoint and was subsequently reserved for the directed-cycle
+  lane.)  After every
   reservation push, fetch again and search YAML IDs on the resulting remote
   history.  If a collision appears, inspect the two add commits, keep the
   first-on-`main` ID fixed, and move only the later reservation.  Repeat the
   global ID check after the repair lands; do not move both sides speculatively.
+  A later local integration on a host unable to push honored those allocations:
+  the distinct pure-`C3` resolvent, real FC quadratic, and complex FC quadratic
+  packages moved to `THM-3141`, `THM-3142`, and `THM-3143`, respectively,
+  while the prime, forest, common-simple-zero, and tournament results reverted
+  to their first-on-`origin/main` IDs `3131`--`3134`.
 
 ## MISTAKE-350 (2026-08-02, factorial-conjecture type audit) -- indexing SFC by slot count and restricting FC to homogeneous polynomials
 

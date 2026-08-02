@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for THM-3136's simple-zero exclusion and odd bipoles."""
+"""Exact controls for THM-3133's simple-zero exclusion and odd bipoles."""
 
 from fractions import Fraction
 from math import factorial

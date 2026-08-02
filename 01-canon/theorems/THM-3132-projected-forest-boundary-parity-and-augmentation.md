@@ -1,5 +1,5 @@
 ---
-id: THM-3135
+id: THM-3132
 title: "Projected forest-boundary parity and augmentation"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
@@ -21,14 +21,14 @@ depends_on: []
 related:
   - THM-3117-projected-five-forest-boundary-surjectivity-and-signed-holotopy-lift
   - THM-3127-partition-refinement-strassen-upset-dual-and-filter-response
-script: 04-computation/gmc_projected_forest_boundary_parity_thm3135.py
-output: 05-knowledge/results/gmc_projected_forest_boundary_parity_thm3135.out
-script_sha256: d4866d44c4d980e38aaeefb1de5d990e4b4096b646b20ef1744548937a13d8de
+script: 04-computation/gmc_projected_forest_boundary_parity_thm3132.py
+output: 05-knowledge/results/gmc_projected_forest_boundary_parity_thm3132.out
+script_sha256: 7a8ab289d0818bfd30d392aacbf775ee5a554e9ae68c61febdc798ebc48fdbc2
 output_sha256: c12dc652a314dc1c31ce2260ede74b185e0f5b2685e0bae5cd9bdb6452fc2f9c
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3135 -- projected forest-boundary parity and augmentation
+# THM-3132 -- projected forest-boundary parity and augmentation
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
@@ -242,8 +242,8 @@ homology.
 Reproduce with
 
 ```text
-python 04-computation/gmc_projected_forest_boundary_parity_thm3135.py
-python -O 04-computation/gmc_projected_forest_boundary_parity_thm3135.py
+python 04-computation/gmc_projected_forest_boundary_parity_thm3132.py
+python -O 04-computation/gmc_projected_forest_boundary_parity_thm3132.py
 ```
 
 The companion independently enumerates every target rank for `K_3` through

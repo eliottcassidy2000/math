@@ -337,7 +337,7 @@ Classify profiles under support operations; study analytic continuation and auto
   pair, while THM-3066 retains only the sheetwise cofactor product.
   THM-3068 permits `C3`; THM-3070/3074/3080 force a finite local Laurent-key
   tower ending at gcd one, and THM-3081 makes its terminal residue Mobius with
-  a square decoder.  THM-3131 identifies the genuine local resolvent map: at
+  a square decoder.  THM-3141 identifies the genuine local resolvent map: at
   a pure `C3` place the ramified source and full `S4/V4` resolvent completions
   coincide, all matching Kummer roots are squares, and `v(q)` gives an exact
   `3|v(q)` Newton/discriminant gate.  Its graph-quartic addendum proves the

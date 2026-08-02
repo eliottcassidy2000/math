@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for THM-3131 and its graph-quartic saturation addendum.
+"""Exact controls for THM-3141 and its graph-quartic saturation addendum.
 
 The theorem is local and its proof is valuation/group theoretic.  This
 companion checks the two polynomial identities used by the proof, the S4
@@ -222,7 +222,7 @@ def main():
     boundary = divisible_boundary_control()
     hostile = thm3059_hostile()
 
-    print("THM-3131 exact controls")
+    print("THM-3141 exact controls")
     print("disc_identity=PASS")
     print(f"disc_formula={df}")
     print(f"depressed_q={q_dep}")

@@ -1,5 +1,5 @@
 ---
-id: THM-3134
+id: THM-3131
 title: "Prime-resonance Newton-slope separation for quadratic factorial windows"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For an exact
@@ -20,14 +20,14 @@ audit: >
 source: root/frontier-synthesis-2026-08-02
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
-script: 04-computation/factorial_prime_resonance_newton_slopes_thm3134.py
-output: 05-knowledge/results/factorial_prime_resonance_newton_slopes_thm3134.out
-script_sha256: 1cdc44a0c255c2a88b297a7fcb47ac125b611e9ea6c187b9b763c15acbd1a011
+script: 04-computation/factorial_prime_resonance_newton_slopes_thm3131.py
+output: 05-knowledge/results/factorial_prime_resonance_newton_slopes_thm3131.out
+script_sha256: 793cbe9510f8cf20b12faf30f2e4bcba3b2a6c4522a178c2c94c0162b85a2c1c
 output_sha256: 1ad97b44f8ca402022d3b885fcd1860766396f7075005d62fb3153d2925e4ffd
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3134 -- prime-resonance Newton-slope separation for quadratic factorial windows
+# THM-3131 -- prime-resonance Newton-slope separation for quadratic factorial windows
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
@@ -206,8 +206,8 @@ polygons for every odd prime through `223` (including new starts above `200`),
 and records both composite hostile controls.  Run
 
 ```text
-python3 04-computation/factorial_prime_resonance_newton_slopes_thm3134.py
-python3 -O 04-computation/factorial_prime_resonance_newton_slopes_thm3134.py
+python3 04-computation/factorial_prime_resonance_newton_slopes_thm3131.py
+python3 -O 04-computation/factorial_prime_resonance_newton_slopes_thm3131.py
 ```
 
 and compare byte-for-byte with the declared output.

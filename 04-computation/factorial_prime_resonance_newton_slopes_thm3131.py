@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for THM-3134's prime-resonance Newton polygons."""
+"""Exact controls for THM-3131's prime-resonance Newton polygons."""
 
 from fractions import Fraction
 from math import comb, factorial, isqrt

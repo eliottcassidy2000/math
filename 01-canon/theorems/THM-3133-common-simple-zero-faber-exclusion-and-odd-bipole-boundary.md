@@ -1,5 +1,5 @@
 ---
-id: THM-3136
+id: THM-3133
 title: "Common-simple-zero Faber exclusion and the sharp odd-bipole response boundary"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
@@ -30,14 +30,14 @@ related:
   - THM-2840-heptic-e3-2221-chebyshev-accessory-classification
   - THM-3123-heptic-e3-remaining-accessory-classification-and-s7-monodromy
   - MISTAKE-317
-script: 04-computation/jc_common_simple_zero_odd_bipole_thm3136.py
-output: 05-knowledge/results/jc_common_simple_zero_odd_bipole_thm3136.out
-script_sha256: d1d9e7218176042235bc30f4a9935368fa6e1adf126da07cd5086fd5888d2d96
+script: 04-computation/jc_common_simple_zero_odd_bipole_thm3133.py
+output: 05-knowledge/results/jc_common_simple_zero_odd_bipole_thm3133.out
+script_sha256: 7c2de38fba53b9942e46bf3e29daae971f3229e4cbad5b9920424e365454dd16
 output_sha256: 32d8a794ce2f25ff969de77e4c3419883cd9aefb04668d7c10baba5bb89836c3
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3136 -- common-simple-zero Faber exclusion and the sharp odd-bipole boundary
+# THM-3133 -- common-simple-zero Faber exclusion and the sharp odd-bipole boundary
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
@@ -346,8 +346,8 @@ nonzero top-face recurrence.  A separate block verifies `(22)--(31)` for odd
 `d<=21` and performs the `d=11` Nielsen census.  Run
 
 ```text
-python3 04-computation/jc_common_simple_zero_odd_bipole_thm3136.py
-python3 -O 04-computation/jc_common_simple_zero_odd_bipole_thm3136.py
+python3 04-computation/jc_common_simple_zero_odd_bipole_thm3133.py
+python3 -O 04-computation/jc_common_simple_zero_odd_bipole_thm3133.py
 ```
 
 and compare byte-for-byte with the declared output.
