@@ -2,7 +2,7 @@
 id: THM-3163
 title: "Universal finite-prefix Markov realization and physical sidecar boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT / INDEPENDENT AUDIT REQUIRED.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Every probability law on the subsets of a finite labelled pole multiset is
   the terminal law of an explicit state-dependent Markov chain that removes
   one remaining label at a time.  A law on unlabeled submultisets has an
@@ -13,6 +13,13 @@ status: >
   independent Bernoulli deletion, even after conditioning on nonemptiness;
   value-only, response-compatible, or original-current-compatible transport
   remains unproved.
+audit: >
+  An independent immutable audit rederived the posterior kernel, its
+  stochasticity and induction, the exchangeable lift and strong lumpability,
+  all THM-3158 labelled counts, and the independent-Bernoulli support hostile.
+  It also verified that two genuinely distinct deterministic order kernels
+  realize the same point-mass terminal law.  Fresh normal and optimized
+  replays match the stored transcript and declared LF-normalized hashes.
 source: root/multiscale-newton-flag/product-gamma-width3-2026-08-02
 depends_on: []
 related:
@@ -30,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3163 -- universal finite-prefix Markov realization and physical sidecar boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT / INDEPENDENT AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The product-Gamma selector staircase produces probability laws on finite
 banks of legal pole-prefix states.  It is tempting to call the absence of a
