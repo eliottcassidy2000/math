@@ -1,5 +1,5 @@
 ---
-id: THM-3056
+id: THM-3057
 title: "Tame quartic inertia clutch and binary-ternary index resonance"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a monic
@@ -37,14 +37,14 @@ related:
   - THM-3042-subdirect-graph-order-common-quotient-and-singleton-owner-criterion
   - THM-3049-k4-matching-monomial-tropical-root-extraction-clutch
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
-script: 04-computation/quartic_tame_inertia_clutch_index_resonance_thm3056.py
-output: 05-knowledge/results/quartic_tame_inertia_clutch_index_resonance_thm3056.out
-script_sha256: ba817e4a6bb9c5234a7774af1a5dc0c1cfbda0f8f04e8e64d7498be4e50f3d98
-output_sha256: cb582d1e8d96a5fdb94857ef9bb2777cd02b9eb56eed3231713eedb8718c9a5b
+script: 04-computation/quartic_tame_inertia_clutch_index_resonance_thm3057.py
+output: 05-knowledge/results/quartic_tame_inertia_clutch_index_resonance_thm3057.out
+script_sha256: 6fa2cfc98b36270d4615fad4645cb6985b0bd55d57135fa71953f8ee20b51573
+output_sha256: fb66c28e57c57939bdebf84e9b639a6da83e430ec48ce45b555002f5f6169d9d
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3056 -- tame inertia has a scale-bearing matching-index clutch
+# THM-3057 -- tame inertia has a scale-bearing matching-index clutch
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
@@ -524,8 +524,8 @@ NOT PROVED:        maximality of an unknown Keller graph order;
 Run
 
 ```text
-python3 04-computation/quartic_tame_inertia_clutch_index_resonance_thm3056.py
-python3 -O 04-computation/quartic_tame_inertia_clutch_index_resonance_thm3056.py
+python3 04-computation/quartic_tame_inertia_clutch_index_resonance_thm3057.py
+python3 -O 04-computation/quartic_tame_inertia_clutch_index_resonance_thm3057.py
 ```
 
 Both modes LF-byte-match the stored transcript.  The companion enumerates

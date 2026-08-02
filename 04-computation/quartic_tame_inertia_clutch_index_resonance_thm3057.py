@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for THM-3056.
+"""Exact companion for THM-3057.
 
 The computation has two jobs.
 
@@ -254,7 +254,7 @@ def main() -> None:
     require(complement_index_at_t + 1 == trans_index, "section t index decomposition")
     require(complement_index_at_1 + 0 == trans_index, "section 1 index decomposition")
 
-    print("theorem=THM-3056")
+    print("theorem=THM-3057")
     print("status=PROVED_VERIFIED_EXACT")
     for name, e, d, lambdas, class_value in table_rows:
         print(f"inertia={name};e={e};d={d};matching={lambdas};clutch={class_value}")

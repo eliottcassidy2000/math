@@ -1,4 +1,4 @@
-theorem=THM-3056
+theorem=THM-3057
 status=PROVED_VERIFIED_EXACT
 inertia=identity;e=1;d=0;matching=(0, 0, 0);clutch=('000', 0)
 inertia=transposition;e=2;d=1;matching=(1, 0, 0);clutch=('100', 1)
