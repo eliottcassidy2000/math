@@ -11,7 +11,9 @@ status: >
   n=v(q), their common splitting-field value is 2n.  When 3 does not divide
   n, both lower resolvent traces cancel strictly and v(Disc)=4n; when 3
   divides n, the two trace values are exact and v(Disc)>4n.  The matching
-  clutch is always diagonal with zero ternary checksum.  In THM-3081's
+  clutch is always diagonal with zero ternary checksum.  Although the local
+  V4 plane splits, the leading unit of q retains exactly the tame C3
+  cubeclass raised to n.  In THM-3081's
   additional coordinate-line Keller scope, its terminal Mobius coordinate
   therefore parametrizes the same local resolvent residue field but cannot
   recover a nonzero V4 character without a second-place or marked gluing
@@ -94,6 +96,23 @@ Put `n=v(q)`.  Then
 ```text
 w(U_1)=w(U_2)=w(U_3)=2n.                                (8)
 ```
+
+There is one nonbinary phase which survives the local split.  Choose
+uniformizers `t` of `K_v` and `pi` of `M_w` so that
+
+```text
+sigma(pi)=zeta pi,                 pi^3=epsilon t,
+q=t^n q_0,                         epsilon,q_0 units.    (8a)
+```
+
+Then in the common residue field `k` of `(4)`,
+
+```text
+[bar(q_0)]=[bar(epsilon)]^n in k^*/k^(*)3.              (8b)
+```
+
+Thus `bar(q_0)` is a cube when `3|n`; when `3` does not divide `n`, it
+recovers the tame cubic extension class, up to the invertible exponent `n`.
 
 The two possible matching-Newton patterns are exactly
 
@@ -196,6 +215,32 @@ divisor cannot itself carry either of the two nonzero `V4` characters needed
 by THM-2655.  Any global carrier must be detected by gluing between places,
 global units, or `Cl[2]`.
 
+The cubic character has not disappeared.  Because `M_w/K_v` is totally
+tamely ramified of degree three, choose `pi` as in `(8a)`.  Write
+
+```text
+beta_1=pi^n(b+O(pi)),                    b in k^*.       (15a)
+```
+
+The other two leading coefficients are `zeta^n b` and `zeta^(2n)b`.
+The definitions `(5)` give the exact sign identity
+
+```text
+beta_1 beta_2 beta_3=-q.                                (15b)
+```
+
+Taking leading residues in `(15b)` and using
+`zeta^(n(0+1+2))=1` gives
+
+```text
+bar(q_0)=-bar(epsilon)^n b^3.                           (15c)
+```
+
+Since `-1` is a cube, `(15c)` proves `(8b)`.  The local information ledger is
+therefore sharp: the binary `V4` packet splits, while the ternary tame phase
+is retained by one residue cubeclass.  This cubeclass, not the common
+discriminant, is the least sidecar needed to remember the local `C3` cover.
+
 ## 4. The exact `3|n` Newton boundary
 
 Let `a` be the leading residue of `pi^(-2n)U_1`.  Inertia acts trivially on
@@ -271,6 +316,11 @@ the local quartic matching packet has a concrete terminal expression
 in(U_i)=a(theta) pi^(2n) zeta^(2ni).                    (23)
 ```
 
+Moreover `(15a)` has `b in C(theta)^*`, and `(15c)` identifies the surviving
+ternary phase as the cubeclass of `q_0`.  The terminal decoder can therefore
+record the local `C3` Kummer parameter, but not either nonzero character of
+the split `V4` kernel.
+
 But `(7)` says that every displayed matching root represents the zero local
 Kummer class.  Therefore THM-3081's square
 
@@ -312,6 +362,6 @@ The theorem does **not** assert that every `C3` place has trivial global
 `V4` torsor, that a larger decomposition group is irrelevant before strict
 henselization, that `(24)` is a physical matching root, or that an arbitrary
 Jelonek component can be straightened to a coordinate line.  It excludes a
-claimed local `C3` model only when one of `(7)`, `(9)--(11)`, or the
+claimed local `C3` model only when one of `(7)--(11)`, or the
 completion intersection ledger fails.  It does not exclude all `C3`, `S4`,
 degree-four Keller maps, or `JC(2)`.
