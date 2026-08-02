@@ -2,7 +2,7 @@
 id: THM-3081
 title: "Terminal toric residue-parameter Mobius rigidity and autonomous decoder"
 status: >
-  PROVED + VERIFIED-EXACT (independent audit pending).  In the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the
   residue-degree-one target-coordinate-line scope inherited from THM-3074,
   at the primitive terminal stage of THM-3080 choose A g+B e=1 and set
   S=R^A Z^B, Theta=Z^g/R^e.  Then w(S)=1 and the residue theta of Theta
@@ -21,6 +21,13 @@ status: >
   arbitrary-Jelonek straightening, full C3, A4/S4, or JC(2) exclusion is
   asserted.
 source: codex-jc-resolvent-bridge-2026-08-01
+audit: >
+  Root independently rederived the determinant-one terminal chart, both
+  residue-field inclusions and the degree-one rational-map argument; checked
+  the rho-gauge cancellation, Mobius square law, strict-stage mu_d kernel,
+  and three-view scope; and replayed normal and optimized execution
+  byte-for-byte against the stored output.  Python compilation, hashes,
+  dependency typing, and the stated non-consequences all passed.
 depends_on:
   - THM-3080-c3-finite-toric-key-tower-depth-partition-and-gcd-descent
 related:
@@ -36,7 +43,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3081 -- the terminal key recovers the residue coordinate
 
-**PROVED + VERIFIED-EXACT (independent audit pending).**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and new object
 
@@ -464,6 +471,15 @@ The companion checks:
 - the affine and reciprocal-affine residue decoders in `(37),(39),(41)`;
 - the exact autonomous ODE `(24)` on both multistage packets; and
 - all displayed `rho`, `theta`, target, and prefactor constants.
+
+An independent hostile audit rederived the terminal exponent matrix and its
+inverse, the two residue-field inclusions in `(15)`, the degree-one conclusion
+in `(18)`, and the gauge-covariant cancellation leading to `(25b)`.  It also
+checked the determinant-`d` torus isogeny and exact `mu_d` kernel in
+`(31)--(33)`, while keeping the additive-tomography/multiplicative-root scope
+separation in Section 8.  Fresh normal and optimized runs were byte-identical
+to the stored transcript; Python compilation and the recorded SHA-256 hashes
+passed.
 
 Reproduce with
 
