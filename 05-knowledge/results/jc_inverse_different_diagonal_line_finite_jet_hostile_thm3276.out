@@ -1,0 +1,13 @@
+THM3276 inverse-different diagonal line and finite-jet hostile exact companion
+typed_line=L_(f,xi)=K*f_T(xi)^(-1) inside inverse_different
+line_incidence: c in L_(f,xi) iff c*f_T(xi) is diagonal
+gauge=(lambda^-3 on fixed,lambda on cubic) determinant=1
+gauge_meets_diagonal_line iff lambda^4=1
+shifted_resultant=(lambda^4-1)^3
+finite_jet_hostile_checks=16 N_range=1..16
+lambda_N=1+t^N: q_N/f_T and c_N/(f_T^-1) equal 1 mod t^N
+lambda_N=1+t^N: v(rho_N-1)=N and v(Delta_N)=3N
+N=5_control: same_through_order_4=True rho_defect_order=5 Delta_order=15
+generic_q_lambda=-(-X**3*lambda**4 - 3*X**3 + 3*X**2 + lambda**4*t)/lambda
+generic_resultant_numerator=-27*t**2*(lambda - 1)**3*(lambda + 1)**3*(lambda**2 + 1)**3*(t - 1)**4/lambda**3
+generic_resultant_denominator=-27*t**2*(t - 1)**4/lambda**3
