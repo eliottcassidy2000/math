@@ -30,7 +30,7 @@ OUTPUT = ROOT / "05-knowledge/results/lrc14_j7_reflected_four_thirds_cone_closur
 EXPECTED_THREE_HALVES_SHA256 = "15bcd2d67b4867d1ac6380a10a3b9618d677b031ad4354729371ba77501b50e6"
 EXPECTED_THREE_HALVES_OUTPUT_SHA256 = "7d7ad662745d170c2492e93bf296bdd0b15372ef2ca83aed82bda41770a1089d"
 EXPECTED_THREE_HALVES_SEMANTIC = "6d2e760f3a929ad2eaa9af9eba11db1389ead59a383e11d8e8737c722b67aaaa"
-EXPECTED_SEMANTIC_SHA256 = "9f5d2561da2dbf4f1779d88cb5a17ccc199e22a43ffcc82bc7c54b5ff47ed622"
+EXPECTED_SEMANTIC_SHA256 = "d2c1b3bb27ad649db66a3b76305dd6027565cc020c31ddd4cd7e779b48d8bd53"
 
 MIN_SPREAD = 6
 MIN_LEVEL = 8
@@ -101,6 +101,33 @@ T.MIN_SPREAD = MIN_SPREAD
 T.RATIO_CAP = RATIO_CAP
 
 
+def primitive_universe(bound: F, cap: F):
+    """Every reduced unordered channel under both exact bounds.
+
+    The cap is explicit because the first four-thirds artifact changed
+    ``T.RATIO_CAP`` while inheriting a generator whose predicate still read
+    ``3Q <= 5P``.  Keeping the cap in this call's data flow prevents that
+    silent divergence from recurring.
+    """
+    rows = []
+    P = 1
+    while P * (P + 1) <= bound:
+        for Q in range(P + 1, bound.numerator // (bound.denominator * P) + 1):
+            if P * Q <= bound and gcd(P, Q) == 1 and F(Q, P) <= cap:
+                rows.append((F(Q, P), T.phase_floor(P, Q), P * Q, P, Q))
+        P += 1
+    result = tuple(rows)
+    require(all(P < Q and gcd(P, Q) == 1 and P * Q <= bound and F(Q, P) <= cap
+                for _, _, _, P, Q in result), "primitive universe soundness")
+    endpoint = (cap.denominator, cap.numerator)
+    if endpoint[0] * endpoint[1] <= bound:
+        require(any((P, Q) == endpoint for _, _, _, P, Q in result),
+                ("cap endpoint omitted", cap, bound, endpoint))
+        require(max(ratio for ratio, *_ in result) == cap,
+                ("cap interval not reached", cap, max(ratio for ratio, *_ in result)))
+    return result
+
+
 def oriented_channels_below(threshold: int, oversize: int = 2):
     return tuple(
         (P, Q)
@@ -163,7 +190,8 @@ def main() -> None:
         (T.product_bound(threshold), body, pair, threshold)
         for threshold, body, pair in threshold_rows
     )
-    primitive_rows = T.primitive_universe(maximum_bound[0])
+    primitive_rows = primitive_universe(maximum_bound[0], RATIO_CAP)
+    require(len(primitive_rows) == 2728, len(primitive_rows))
 
     closed = []
     traps = []

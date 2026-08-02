@@ -1,7 +1,7 @@
 LRC14 reflected four-thirds cone exact proof candidate
 universe=bodies:3003;arbitrary_level_bank:2442;residual:561;spread:D>=6;cone:3m>=4D
 corner=real boundary m=4D/3 decreases in D;worst_D=6;worst_m=8;ratio_cap=7/4;max_abs_eta=40/333;intermediate_slope_floor=2624/333
-phase=1/49+c/(PQ),c>=-12/49;constrained_edges=7529;max_product_bound=190249826191276797660/11872893085202803@(1, 2, 4, 6, 8, 9),(2, 4);primitive_bank=2492
+phase=1/49+c/(PQ),c>=-12/49;constrained_edges=7529;max_product_bound=190249826191276797660/11872893085202803@(1, 2, 4, 6, 8, 9),(2, 4);primitive_bank=2728
 coarse_csp=closed:530;traps:31;reverse_order_agrees;all_traps_have_short_components;largest_witness_span=2021/1212<7/4
 coarse_traps=((1, 2, 3, 4, 6, 8), (1, 2, 3, 4, 6, 9), (1, 2, 3, 4, 6, 12), (1, 2, 3, 4, 8, 12), (1, 2, 3, 4, 9, 12), (1, 2, 3, 5, 6, 10), (1, 2, 3, 6, 7, 14), (1, 2, 3, 6, 8, 12), (1, 2, 3, 6, 9, 12), (1, 2, 4, 5, 8, 10), (1, 2, 4, 6, 8, 12), (1, 2, 4, 6, 9, 12), (1, 2, 4, 6, 10, 12), (1, 2, 4, 7, 8, 14), (1, 2, 5, 6, 10, 12), (1, 2, 5, 7, 10, 14), (1, 2, 6, 8, 9, 12), (1, 3, 4, 6, 8, 12), (1, 3, 4, 6, 9, 12), (1, 3, 4, 6, 10, 12), (1, 3, 5, 6, 10, 12), (1, 3, 6, 8, 9, 12), (1, 4, 5, 6, 10, 12), (1, 4, 6, 8, 9, 12), (2, 3, 4, 6, 8, 12), (2, 3, 4, 6, 9, 12), (2, 3, 5, 6, 10, 12), (2, 3, 6, 8, 9, 12), (2, 4, 5, 6, 10, 12), (2, 4, 6, 8, 9, 12), (3, 4, 6, 8, 9, 12))
 verdict_digest=5cd75c885b270c6f56be48e5b2347a0fc3cdf294258e20bac4c13b9e4749efd1
@@ -20,6 +20,6 @@ normal_vs_python_O=BYTE_IDENTICAL
 three_halves_source_sha256=15bcd2d67b4867d1ac6380a10a3b9618d677b031ad4354729371ba77501b50e6
 three_halves_output_sha256=7d7ad662745d170c2492e93bf296bdd0b15372ef2ca83aed82bda41770a1089d
 three_halves_semantic_sha256=6d2e760f3a929ad2eaa9af9eba11db1389ead59a383e11d8e8737c722b67aaaa
-source_sha256=76f37d89d40b5ca0f190e73ce38fffb29bf01b48e45d3e0dae0d37f8b682bc35
-semantic_sha256=9f5d2561da2dbf4f1779d88cb5a17ccc199e22a43ffcc82bc7c54b5ff47ed622
+source_sha256=0b8b01a184f5862c3a32598600988773bcbefdc26c63644cddf0884b18285c3e
+semantic_sha256=d2c1b3bb27ad649db66a3b76305dd6027565cc020c31ddd4cd7e779b48d8bd53
 all_exact_controls=PASS

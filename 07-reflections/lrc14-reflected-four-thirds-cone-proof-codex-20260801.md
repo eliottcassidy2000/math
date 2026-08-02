@@ -1,8 +1,12 @@
 # LRC14 reflected levels: the four-thirds cone also closes
 
-**Proof candidate + frozen exact referee, 2026-08-01.**  This note is not a
-canon promotion.  It recursively strengthens the three-halves cone candidate
-and proves, inside the sufficient reflected `k=1` family of
+**Corrected proof candidate + frozen exact referee, 2026-08-01.**  The first
+artifact at commit `a930fcb310` was retracted after audit found that its
+primitive generator still hard-coded the inherited cap `5/3`.  The repaired
+referee takes the cap as explicit data, enumerates the missing interval, and
+re-establishes every census and located policy.  This note is not a canon
+promotion.  It recursively strengthens the three-halves cone candidate and
+proves, inside the sufficient reflected `k=1` family of
 [THM-2941](../01-canon/theorems/THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary.md),
 
 ```text
@@ -76,8 +80,12 @@ There are `7,529` constrained edges.  The largest product bound is
 190249826191276797660 / 11872893085202803 < 16025,
 ```
 
-and the resulting complete primitive bank has `2,492` unordered ratios in
-the interval `[4/7,7/4]`.
+The first artifact incorrectly reported a bank of `2,492`: monkeypatching the
+geometric cap did not change the inherited generator predicate `3Q<=5P`.
+The repaired cap-aware generator has `2,728` unordered ratios in
+`[4/7,7/4]` and explicitly checks that the reduced endpoint `(P,Q)=(4,7)` is
+present.  The additional `236` channels change neither the CSP verdicts nor
+the selected policy alphabets.
 
 The same exhaustive component solver now uses projective cap `7/4`.  Reverse
 vertex/candidate order gives identical verdicts on all `561` bodies:
@@ -208,9 +216,9 @@ verdict in two search orders, and checks all `158+314` located controls against
 direct reflected arcs.
 
 ```text
-source:   76f37d89d40b5ca0f190e73ce38fffb29bf01b48e45d3e0dae0d37f8b682bc35
-output:   fe7f5c3e7469a123fe53caa467954ee2f1f16cc485f409a7ae801ea3fa4dbfce
-semantic: 9f5d2561da2dbf4f1779d88cb5a17ccc199e22a43ffcc82bc7c54b5ff47ed622
+source:   0b8b01a184f5862c3a32598600988773bcbefdc26c63644cddf0884b18285c3e
+output:   0377aaeb146553fe7c027a81ea3589045d01f50fe11aa79848d009a48c806fb9
+semantic: d2c1b3bb27ad649db66a3b76305dd6027565cc020c31ddd4cd7e779b48d8bd53
 located:  d74273080019120cc2891ebb34baa5b2472deeafa1a9b68faa71067ca3c554fb
 heads:    c8fa54590e7104d3c790188484f77d96ae07961debfe196c4652cc4b83944b26
 ```
