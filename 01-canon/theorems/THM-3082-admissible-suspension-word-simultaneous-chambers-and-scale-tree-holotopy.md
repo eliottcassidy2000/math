@@ -2,7 +2,7 @@
 id: THM-3082
 title: "Admissible suspension-word simultaneous chambers and scale-tree holotopy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  Every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every
   finite rooted suspension word built from the one-normal operation of
   THM-3069 and the fixed-gap two-normal operation of THM-3063 thickens from
   an ordered limit to an explicit nonempty simultaneous scale chamber.  The
@@ -11,6 +11,13 @@ status: >
   strict exponential margin in every fixed width, but not a width-uniform
   angle, maximal fan, arbitrary support, or arbitrary-radial GMC theorem.
 source: root-gmc-all-width-multiscale-2026-08-01
+audit: >
+  Independent hostile audits rederived the lower-error-ideal quotients, the
+  multislow entropy lemma, the gamma-minus-J comparison, every O/P node and
+  closed carrier exponent, the all-prefix refinement, Lambert-W aperture,
+  seven-slot example, rate-space holotopy, and both sharp hostiles.  Immutable
+  normal and optimized replay matched the 677-byte stored transcript and
+  declared LF hashes; documentation passed.
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
   - THM-3063-terminal-suspension-transverse-resultant-and-five-slot-tail-holotopy
@@ -30,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3082 -- admissible suspension-word simultaneous chambers
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3069 constructs physical support towers by taking one remote limit after
 another.  THM-3063 supplies a second graft that adds a fixed-gap terminal
@@ -405,4 +412,4 @@ python -O 04-computation/gmc_admissible_suspension_word_chambers_thm3082.py
 
 Both modes must equal the stored transcript after LF normalization.
 
-**QED, pending independent audit and status promotion.**
+**QED.**
