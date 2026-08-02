@@ -9,10 +9,10 @@ not be conflated:
 * every spread ``D <= 5`` closes at every minimum level ``m >= 1``;
 * a bodywise bank closes 2,442 of the 3,003 six-label bodies at arbitrary
   positive levels; and
-* every spread ``D >= 6`` closes when ``3m >= 2D``.
+* every spread ``D >= 6`` closes when ``3m >= 4D``.
 
 Consequently the assembled certificate-failure locus is confined to the 561
-bodies not covered by that bank and ``D >= 6, 1 <= m < 2D/3``.  The uncovered
+bodies not covered by that bank and ``D >= 6, 1 <= m < 4D/3``.  The uncovered
 bodies are not thereby proved to fail some different certificate.  This is a
 theorem about the sufficient reflected residual family inherited from
 THM-2941, not a classification of
@@ -173,37 +173,6 @@ COMPONENTS = (
             "corollary=assembled reflected certificate-failure wedge is confined to 561 bodies,D>=6,1<=m<4D/3",
         ),
     ),
-    (
-        "ONE_CONE",
-        "lrc14_j7_reflected_one_cone_closure_thm2941",
-        "800395ae242860094fed3db9638a93ebc2faba7973558a3eaa51f3af62145200",
-        "e63ee74f42d8f213196cf2907bbc25dc20b93a3e64b8a40aa85d5d81c8b11ee6",
-        (
-            "conclusion=all reflected residual packets with D>=6 and m>=D close on all 3003 bodies",
-            "corollary=assembled reflected certificate-failure wedge is confined to 561 bodies,D>=6,1<=m<D",
-        ),
-    ),
-    (
-        "THREE_QUARTER_CONE",
-        "lrc14_j7_reflected_three_quarter_cone_closure_thm2941",
-        "85bb9bd1613abd5cd7a877958b5c89a10172a5034c37cae5cc0467bd8ba4c0d3",
-        "451823bd9bb11ae4af5c1fb4675fba2f163d172c178eae26c4cd115eb945ba7c",
-        (
-            "conclusion=all reflected residual packets with D>=6 and 4m>=3D close on all 3003 bodies",
-            "corollary=assembled reflected certificate-failure wedge is confined to 561 bodies,D>=6,1<=m<3D/4",
-        ),
-    ),
-    (
-        "TWO_THIRDS_CONE",
-        "lrc14_j7_reflected_two_thirds_cone_closure_thm2941",
-        "e6e64c909c6bfcc776eaf6bf2ad210f75675a6a32a46ead70d8d29a37f607eb3",
-        "e77929c87f9d9f8fb7ce3a347c48522e87f63fa7c7085eb9e2cd8fe0bb4e4a90",
-        (
-            "conclusion=all reflected residual packets with D>=6 and 3m>=2D close on all 3003 bodies",
-            "corollary=assembled reflected certificate-failure wedge is confined to 561 bodies,D>=6,1<=m<2D/3",
-            "forced_profile=(((4, 4, 1), 8), ((5, 4, 1), 24), ((5, 5, 1), 4), ((6, 4, 1), 20), ((6, 5, 1), 2), ((6, 7, 2), 7));new_5/2_edge_is_bridge_in_all=65;forced_digest=37a6b66281b9882bd6ca278db3fe6c880d955eb95b2a3de27e65e41fdae56db2",
-        ),
-    ),
 )
 
 EXPECTED_D5_RESIDUAL_COUNTS = (
@@ -223,7 +192,7 @@ EXPECTED_D5_RESIDUAL_COUNTS = (
     0,
     2,
 )
-EXPECTED_SEMANTIC_SHA256 = "9bb38234b47b63e28958b31950870ed2f2a14b99f3afcb11eaecd8be27b23e1f"
+EXPECTED_SEMANTIC_SHA256 = "396fa1a89ed555d9673c3d463f8849240bd9b40c0c1d41ef6390351df9c28b04"
 
 
 def require(condition: bool, message: object) -> None:
@@ -291,7 +260,7 @@ def main() -> None:
     require("head_crossdet_repair=choose transport orientation" in transcripts["D5_HEAD"],
             "D5 orientation repair missing")
 
-    remaining_wedge = ("D>=6", "1<=m<2D/3", arbitrary_level_residual)
+    remaining_wedge = ("D>=6", "1<=m<4D/3", arbitrary_level_residual)
     semantic_payload = (
         tuple(manifest),
         body_count,
@@ -309,7 +278,7 @@ def main() -> None:
                 ("semantic digest", semantic, EXPECTED_SEMANTIC_SHA256))
 
     lines = [
-        "LRC14 reflected D<=5 and 3m>=2D wedge exact dependency assembly",
+        "LRC14 reflected D<=5 and 3m>=4D wedge exact dependency assembly",
         "universe=E subset {1,...,14},|E|=6;3003 bodies;q_e positive integers;m=min q_e;D=max q_e-min q_e",
         "D0_D2=universal good-edge chromatic theorem:at most three level values",
         "D3=3001 complete good graphs by pigeonhole plus two exceptional proper-four-colour rays",
@@ -317,8 +286,8 @@ def main() -> None:
         "D5=head m=1..15 plus cross-determinant tail m>=16;all 3003 bodies",
         "conclusion_1=every reflected THM-2941 residual packet with D<=5 closes for every m>=1",
         "conclusion_2=bodywise bank closes 2442/3003 bodies for arbitrary positive reflected levels;561 bodies are uncovered",
-        "conclusion_3=every reflected THM-2941 residual packet with D>=6 and 3m>=2D closes",
-        "remaining_wedge=561 bank-uncovered bodies only;D>=6;1<=m<2D/3",
+        "conclusion_3=every reflected THM-2941 residual packet with D>=6 and 3m>=4D closes",
+        "remaining_wedge=561 bank-uncovered bodies only;D>=6;1<=m<4D/3",
         "logical_status=three conclusions are incomparable inputs to the final intersection;none is arbitrary k<=1 or physical-survivor classification",
         "D5_head_counts=raw:7851600;crossdet:7835524;median_residual:16076",
         f"D5_residual_counts_by_m={EXPECTED_D5_RESIDUAL_COUNTS}",

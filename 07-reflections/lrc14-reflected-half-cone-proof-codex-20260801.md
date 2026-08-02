@@ -1,16 +1,22 @@
-# LRC14 reflected levels: the `2m >= D` cone closes
+# LRC14 reflected levels: audit-required `2m >= D` candidate and finite `K4` census
+
+> **AUDIT-REQUIRED / CLOSURE NOT CURRENT (MISTAKE-347).**  The exact referee
+> verifies its internal CSP and gain-`K4` data, but its low/high analytic lanes
+> do not prove an assignment-level orientation cover.  The half-cone and
+> `m<D/2` wedge claims below are quarantined pending repair.
 
 **Proof candidate + frozen exact referee, 2026-08-01.**  Inside the sufficient
 reflected `k=1` family of
 [THM-2941](../01-canon/theorems/THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary.md),
-the exact referee proves
+the frozen referee claimed
 
 ```text
 D >= 6,                       2m >= D,
 m=min q_e,                    D=max q_e-min q_e.
 ```
 
-Together with THM-2941's arbitrary-level bank, this confines reflected
+If its missing orientation were repaired, this would combine with THM-2941's
+arbitrary-level bank to confine reflected
 certificate failure to the same `561` bodies and
 
 ```text
@@ -105,9 +111,11 @@ a unique complete zero-gain graph on relative scales
 {1, 3/2, 2, 3} = {1,x,y,xy},     x=3/2, y=2.         (8)
 ```
 
-This is a multiplicative Boolean square, or a `V4` vertex torsor as an
-unlabelled four-point representation.  Ordering its scales turns all six
-pairs into the transitive-by-scale `K4`.  The six gains are exactly
+This is a multiplicative Boolean square indexed by the four exponent bits in
+`F_2^2`.  The bit labels form a `V4` vertex torsor, but their map to positive
+rational scales is **not** a group homomorphism: toggling a bit is an incidence
+operation, not multiplication by an involution.  Ordering the scales turns all
+six pairs into the transitive-by-scale `K4`.  The six gains are exactly
 
 ```text
 x/1=3/2,       y/1=2,          xy/1=3,
@@ -128,6 +136,16 @@ The four triangular faces split without choice:
 This Boolean-square language represents the exact scale census.  It is not an
 asserted symmetry of the six body labels and does not quotient away their
 locations.
+
+The three perfect matchings expose the precise failure of a gain-preserving
+`V4` quotient.  The `x`-direction edges both have gain `x=3/2`, and the
+`y`-direction edges both have gain `y=2`.  On the diagonal direction, however,
+the two gains are `xy=3` and `y/x=4/3`, differing by `x^2=9/4`.  Thus the
+unweighted `K4` incidence matches the tetrahedral point-direction carrier of
+THM-3067, while its gain decoration remembers an origin on the diagonal
+matching.  This is the cheapest explicit obstruction to importing the
+`A4/V4=C3` quotient into the reflected certificate: forgetting the point
+forgets a load-bearing gain.
 
 Uniformly over all `55` forced components, the gain-`3` edge occurs exactly
 once, lies in the unique `K4`, and is a cycle edge.  In `53` components the

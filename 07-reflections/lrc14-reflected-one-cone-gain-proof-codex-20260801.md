@@ -1,16 +1,23 @@
-# LRC14 reflected levels: the full `m >= D` cone closes
+# LRC14 reflected levels: audit-required full `m >= D` cone candidate
+
+> **AUDIT-REQUIRED / CLOSURE NOT CURRENT (MISTAKE-347).**  The low/high
+> harmonic-body tails reverse both the ratio interval and ordered label pair,
+> so they cover `q_0<=q_1` twice and omit `q_0>q_1`.  The CSP and located
+> controls remain finite-exact evidence; the all-assignment cone claim does
+> not.
 
 **Proof candidate + frozen exact referee, 2026-08-01.**  Inside the sufficient
 reflected `k=1` family of
 [THM-2941](../01-canon/theorems/THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary.md),
-the exact referee proves
+the frozen referee claimed
 
 ```text
 D >= 6,                       m >= D,
 m=min q_e,                    D=max q_e-min q_e.
 ```
 
-Together with THM-2941's arbitrary-level bank, this confines reflected
+If its missing orientation were repaired, this would combine with THM-2941's
+arbitrary-level bank to confine reflected
 certificate failure to the same `561` bodies and the strict wedge
 
 ```text

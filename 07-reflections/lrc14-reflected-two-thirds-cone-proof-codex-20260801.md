@@ -1,16 +1,22 @@
-# LRC14 reflected levels: the `3m >= 2D` cone closes
+# LRC14 reflected levels: audit-required `3m >= 2D` cone candidate
+
+> **AUDIT-REQUIRED / CLOSURE NOT CURRENT (MISTAKE-347).**  This refinement
+> inherits the duplicated harmonic-body split-tail orientation from the
+> one-cone referee.  The bridge and CSP censuses remain finite-exact, but the
+> all-assignment cone conclusion is not proved.
 
 **Proof candidate + frozen exact referee, 2026-08-01.**  Inside the sufficient
 reflected `k=1` family of
 [THM-2941](../01-canon/theorems/THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary.md),
-the exact referee proves
+the frozen referee claimed
 
 ```text
 D >= 6,                       3m >= 2D,
 m=min q_e,                    D=max q_e-min q_e.
 ```
 
-Together with THM-2941's arbitrary-level bank, this confines reflected
+If its missing orientation were repaired, this would combine with THM-2941's
+arbitrary-level bank to confine reflected
 certificate failure to the same `561` bodies and
 
 ```text

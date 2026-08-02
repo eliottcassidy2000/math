@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-347 (2026-08-01, reflected cone split-tail orientation) -- reversing both the ratio interval and the ordered label pair covered one ordering twice
+
+- **What was done:** the reflected one-cone referee split the harmonic-body
+  tail into a low-ratio lane with ordered pair `(1,0)` and a high-ratio lane
+  with ordered pair `(0,1)`.  The cap-`7/3`, cap-`5/2`, and proposed cap-`3`
+  refinements inherited the same pattern and treated the two lanes as a cover
+  of both relative-level orientations.
+- **Minimal witness / first failed implication:** for an ordered pair `(i,j)`
+  the script's ratio is `Q/P=q_j/q_i`.  The low lane `(1,0)` with `Q/P<=1`
+  says `q_0<=q_1`; the high lane `(0,1)` with `Q/P>=1` says the same thing.
+  Thus the admissible assignment `q_0=2,q_1=1` lies in the cap-two interval
+  but in neither asserted lane.  Exhausting every channel *inside* each lane
+  did not prove that the lanes cover every assignment.
+- **Repair / strongest survivor:** the cap-`3` half-cone claim is quarantined,
+  and the promoted one, three-quarter, and two-thirds refinements are
+  `AUDIT-REQUIRED` until an assignment-level orientation cover is proved.
+  The last unaffected assembled cone is the full-interval cap-`7/4` theorem
+  `D>=6, 3m>=4D`; hence the current proved reflected certificate-failure wedge
+  is `561` bodies with `D>=6,1<=m<4D/3`.  Future split tails must assert a
+  disjunction on the original level assignment, not merely enumerate two
+  oriented channel lists.
+
 ## MISTAKE-346 (2026-08-01, concurrent THM-3063 reservations) -- two distinct results acquired the same new theorem ID
 
 - **What happened:** the audited quartic cofactor-blindness theorem was frozen
