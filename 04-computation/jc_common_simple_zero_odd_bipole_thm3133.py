@@ -284,6 +284,10 @@ for u in range(d):
             representative = alpha
 
 require(matching_count == 121, "marked matching count")
+# The two independent pole rotations translate the unmatched labels (u,v).
+# Their orbit of (0,0) is the complete d-by-d marked parameter set.
+rotation_orbit = {((0 + a) % d, (0 + b) % d) for a in range(d) for b in range(d)}
+require(len(rotation_orbit) == matching_count, "single pole-rotation orbit")
 group = PermutationGroup([Permutation(representative), Permutation(beta)])
 require(group.is_transitive(), "representative transitivity")
 require(group.order() == 2**10 * sp.factorial(11), "representative monodromy order")
