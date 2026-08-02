@@ -1,0 +1,26 @@
+LRC14 reflected midratio primitive floor and g6 closure (THM-3210)
+universe=residual_bodies:561;physical_orientations:30;same_level_exceptions_disjoint:((1, 2, 7, 9, 11, 13), (2, 4, 7, 9, 11, 13))
+physical_map=m=gP;Q=gR;g=gcd(m,Q);gcd(P,R)=1;3P<R<6P;closed primitive rays (1,4),(1,5) imply P>=2,R>=7
+restricted_fibre_floor=min_z F_(P,R)>=1/77;equality_channels:((2, 11), (3, 11));small_product_channels:11;Fourier_handles_PR>=68;floor_at_68:87/6664
+one_sided_boundary_lemma=mu(A_epsilon triangle A_0)<=c(N+1)/(gLN-c);two-clause loss=a(P+1)/(gLP-a)+b(R+1)/(gLR-b)
+boundary_hostile_audit=rows:7644;weakest_slack:(Fraction(1, 282233), 40, 1, 13)
+large_P_monotone_base=g:6;P:13;R:40;rows:16830;weakest_margin:26392028086719269675209/104017741322142148178386800;body:(1, 2, 3, 4, 6, 12);pair:(5, 4);Fourier_floor:991/50960;loss:138797/7330429;debt:18470013214620220016/71440756402570156715925
+finite_bank=P2..12;channels:135;per_P:((2, 3), (3, 6), (4, 6), (5, 12), (6, 6), (7, 18), (8, 12), (9, 18), (10, 12), (11, 30), (12, 12));rows:2272050;formula:135*561*30;analytic_failures:150;failure_body_histogram:(((1, 2, 3, 4, 6, 12), 136), ((1, 2, 3, 4, 8, 12), 2), ((1, 2, 3, 6, 8, 12), 3), ((1, 2, 4, 6, 8, 12), 3), ((1, 3, 4, 6, 8, 12), 3), ((2, 3, 4, 6, 8, 12), 3))
+finite_weakest_analytic=-446346556060136476/34286705143599831615@body=(1, 2, 3, 4, 6, 12),pair=(5, 4),P=2,R=11,floor=1/77,loss=7545/308449,debt=4812556518843536/3116973194872711965
+located_repairs=150;all_positive;weakest_margin:12808546596795938/662437112164402113;body:(1, 2, 3, 4, 6, 12);pair:(3, 5);P:2;R:7;cell:152;overlap:6084/295261;debt:841300116478834/662437112164402113
+independent_engine=integer full-tooth two-pointer equals promoted Fraction interval engine on every repair cell;comparisons:14304
+monotonicity=Fourier floor increases with PR;each perturbation loss decreases in its primitive coordinate and in g;every exact debt denominator increases with P,R,g
+assembly=inside THM-2941 reflected sufficient family every live midratio primitive channel closes for gcd scale g>=6
+residual=561 bodies;m>=2;3<Q/m<6;Q/m not in {4,5};gcd(m,Q)<=5
+scope=sufficient-certificate residual only;not a physical-survivor census and not LRC14
+channel_minima_digest=355d703d1e6ae7bb854f509d81ddffd53604474318151ef2c373915aeb3ed7bd
+failure_digest=8290d39d340c24bba6f6f883933ce7a90caf73f3c65bf972731182170140f1cb
+direct_digest=90aadbacf98fb857657319f6721c273084d088ae3a4fa417d4e228ba9f884a8a
+boundary_audit_digest=d2848403cd1414fb2e75a88bb284dbd0f2a7fe0ee58fc82d106fad1e262f286b
+normal_vs_python_O=BYTE_IDENTICAL
+upstream_source_sha256=5ed1a4235466a801022b67342f6ded07cdea8e1449889ac3cc4b68ed5eb1d87f
+upstream_output_sha256=817047f36413e0ee707bcdb92dd20475b554da740651f387da86587ec281663c
+upstream_semantic_sha256=1fb9c1ee2f0c02e2033b940001b58a76232478a2ae94166e8d1f8cb3d54ae6ac
+source_sha256=207cdd0194967c2941b2d1eb35de123c05b9619edf0e25213f369bb41b9dcd08
+semantic_sha256=fb4759685fbd559d5526777b230ef94388eb0b72b337debad6e86915b47aeda5
+all_exact_controls=PASS
