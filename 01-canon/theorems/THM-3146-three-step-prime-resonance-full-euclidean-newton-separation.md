@@ -2,13 +2,20 @@
 id: THM-3146
 title: "Three-step prime resonance full Euclidean-Newton separation"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT AUDIT.  For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
   odd prime p, no exact quadratic has three zero factorial moments beginning
   at r=p+1.  At resonance d=p+3, subtracting the full linear Euclidean
   quotient gives a remainder with generic slopes 2/(p+1),2/(p-1), disjoint
   from the first polynomial's slopes 0,2/p.  The exact endpoint residues 87
   and 37 isolate p=29 and p=37; p=37 remains separated by a four-vertex
   polygon, while p=29 and p=3 lie in THM-3124's proved finite range.
+audit: >
+  An independent hostile audit rederived the full quotient and its signs,
+  the Freshman-dream low profiles, constant and midpoint residues, both high
+  coefficient identities, the p=29, p=37, and p=41 valuation chambers, all
+  polygon implications, the lawful finite fallbacks, and the four-composite
+  residual.  Fresh normal, optimized, and stored transcripts and declared
+  LF-normalized hashes agree exactly.
 source: root/multiscale-newton-flag/2026-08-02
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
@@ -25,7 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3146 -- three-step prime resonance full Euclidean-Newton separation
 
-**PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Let
 
@@ -279,4 +286,14 @@ prime gap, but no arbitrary-gap induction is asserted here.
 This is an exact `{0,1,2}` / `SFC(1)` factorial-moment theorem.  It does not
 settle arbitrary-support `SFC(3)`, `GMC(2)`, `NC(2)`, or `LRC(14)`.
 
-**End of proof candidate.**
+## 8. Independent hostile audit
+
+The audit independently recovered `(9),(10)` from the four top coefficients
+and derived the low profiles `A==6+6v`, `B==15+72v^2 (mod p)` before forming
+`R`.  It rechecked the constant `87`, midpoint transfer, both high identities,
+and all valuation thresholds.  The exceptional `p=29`, `p=37`, and raised
+penultimate `p=41` chambers were reconstructed separately, as were the
+THM-3124 fallbacks and the final four-composite residual.  Fresh normal and
+optimized runs byte-match the stored transcript and declared hashes.
+
+**End of proof.**
