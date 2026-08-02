@@ -1,0 +1,15 @@
+THM-3075 TWO-SCALE ENTROPY-NEWTON CHAMBERS
+coefficient_degrees=(360, 240, 180, 144, 120) factor_invoice=3600
+mixed_upper_cells=35 entropy_bound=3600*x*(log(6/x)+1)
+epsilon_A_in=(0.00001808125357979,0.00001808125357980)
+epsilon_B_in=(0.00006001388194673,0.00006001388194674)
+safe_rays=A:1/100000,B:1/20000
+mixed_wall_A_in=(0.34053358195087,0.34053358195088)
+mixed_wall_B_in=(0.24197406496062,0.24197406496063)
+sector_A=S3^120*E56^24*U4D^180*U5C^144*U6C^120
+sector_B=S3^120*E45^36*U4C^180*U5C^144*U6R^120
+gap_exponents=A:720,B:720;power_ledgers=A:-270/-588,B:-558/-300
+pure_upper_hostiles=A:5*x*log(5/4),B:6*x*log(3/2)
+repair=fixed-low-pivot+THM3073_triangular_norm;raw_convergence=FALSE
+scope=thin_fixed-slope_sectors;not_maximal;not_wall_crossing
+all_exact_checks=PASS
