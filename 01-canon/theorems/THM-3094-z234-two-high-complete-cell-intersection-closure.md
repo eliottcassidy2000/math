@@ -23,7 +23,7 @@ related:
   - THM-3078-z234-direct-farkas-normalization-and-four-two-high-boundary
 script: 04-computation/lrc14_j7_k3_z234_two_high_complete_cell_intersection_closure_thm3094.py
 output: 05-knowledge/results/lrc14_j7_k3_z234_two_high_complete_cell_intersection_closure_thm3094.out
-script_sha256: b50f110e08bb9175d257a941226ff4df602d4a078f22dcccda30f9b7cffe6aab
+script_sha256: c456e28c88cac8d0b687c1636463aa79642b2fb39ea187eafc836f46e3ab3e0e
 output_sha256: 6752dbac509aba6c739eb9ce3cd59da85d39ae47b6f4f60b1657ecaf4cf36a95
 semantic_sha256: 7c3fa428224d59b717770b936bb2d35aea2642dec83c77df8395c538a8015682
 hash_basis: LF-normalized bytes
