@@ -243,6 +243,23 @@ Consequently:
 The same conclusion holds on any fixed affine clock `C=an+b`, because its
 consecutive clock quotient is again rational and eventually positive.
 
+There is a finite-core consequence for the first unresolved factorial
+width.  THM-3097 proves that the minimal bad four-prefix bank `C_4` and the
+minimal bad five-prefix bank `C_5` are finite.  Suppose that every
+`c in C_4` has at least one exact good one-slot extension.  For each fixed
+`c`, `(17)` then leaves only finitely many bad terminal exponents.  Every bad
+five-support has first bad prefix in `C_4` or `C_5`; hence
+
+```text
+[every c in C_4 has one good append]  =>  B_5 is finite. (18)
+```
+
+More generally, if SFC is known through width `b` and every member of
+`C_(b+1)` has one good append, then `B_(b+2)` is finite.  This turns an
+effective version of THM-3097's finite-prefix bank into a finite exact
+certification program.  It does not control two or more free tail
+coordinates over a bad child.
+
 This result is complementary to THM-3069.  That theorem supplies an explicit
 positive leading face whenever the child resultant is nonzero.  The present
 theorem also applies when that face vanishes, but it replaces an effective
@@ -255,7 +272,7 @@ good sample or a transverse jet.
 The sign at one sample need not be the sign at infinity:
 
 ```text
-10*2^n-3^n                                                (18)
+10*2^n-3^n                                                (19)
 ```
 
 is positive at small positive `n` and negative eventually, although both
@@ -266,7 +283,7 @@ Eventual positivity of the quotients is also necessary.  If a quotient of
 `-1` is admitted, then
 
 ```text
-1+(-1)^n                                                  (19)
+1+(-1)^n                                                  (20)
 ```
 
 has infinitely many zeros without being the zero sequence.  Arbitrary
