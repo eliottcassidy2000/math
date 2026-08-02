@@ -2,8 +2,8 @@
 id: THM-3088
 title: "Punctured projective-direction algebra and exceptional parity saturation"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For every finite field F_q, punctured one-dimensional subspaces are
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every finite
+  field F_q, punctured one-dimensional subspaces are
   orthogonal Boolean idempotents and identify Fun(P1(F_q)) integrally with the
   F_q^*-invariant algebra on F_q^2 minus the origin.  This algebra exhausts
   the parity-even punctured algebra exactly for q=2,3.  The residual
@@ -12,6 +12,14 @@ status: >
   is a pointwise finite-field algebra theorem, not a physical tree, quartic,
   Keller, owner, or LRC intertwiner.
 source: root-projective-direction-algebra-2026-08-01
+audit: >
+  An immutable independent audit checked the scalar-orbit algebra over every
+  finite field, characteristic-two prime-power cases, parity saturation and
+  contrast ranks, integral saturation, Phi_q=q Psi_q and its Smith cokernel,
+  and the q=4/q=5 C3/C2 stopping examples.  It independently replayed normal
+  and optimized companions against stored output and verified both LF hashes.
+  The audit repaired one inheritance sentence: THM-3076 covers prime fields,
+  while the proof here supplies the prime-power extension independently.
 depends_on: []
 related:
   - THM-2768-modular-c2-c3-quotients-to-a4-s4-and-bass-serre-cycle-ranks
@@ -27,8 +35,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3088 -- punctured projective-direction algebra and exceptional parity saturation
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and exact claim
 
@@ -266,7 +273,7 @@ augmentation basis; and exhausts all `6,48,180` elements of `GL_2(F_q)` for
 `q=2,3,4`.
 
 ```text
-PROVED IN THE CANDIDATE:
+PROVED HERE:
   universal punctured-direction orthogonal-idempotent algebra;
   exact scalar-invariant quotient and GL2 equivariance;
   integral saturation and projector-normalized q-torsion;
@@ -274,10 +281,9 @@ PROVED IN THE CANDIDATE:
   exact larger-field internal-contrast ranks and C3/C2 first failures.
 
 NOT PROVED:
-  independent hostile audit or promotion;
   a canonical cross-field S4 gauge;
   PSL2(Z), Farey, partial-cube, or tree realization on a common carrier;
   convolutional, quartic-owner, Keller, GMC, or LRC consequence.         (22)
 ```
 
-QED (candidate).
+QED.
