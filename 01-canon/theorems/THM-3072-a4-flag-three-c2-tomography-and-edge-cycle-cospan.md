@@ -23,7 +23,7 @@ related:
   - THM-3049-k4-matching-monomial-tropical-root-extraction-clutch
 script: 04-computation/modular_a4_flag_three_quotient_tomography_thm3072.py
 output: 05-knowledge/results/modular_a4_flag_three_quotient_tomography_thm3072.out
-script_sha256: a4c7a259bb7a30a97886423acbba1ff5070c27f46bb2e09da851f2e9087be27c
+script_sha256: 856cab6338ef68560ef0b1ef5cef164a771a0a2b671a44abb0f8dec7bc75fb76
 output_sha256: e1605bb1c1ddec2d18209ab3ea003738b1b2282317d3728fd8711c735d73b18e
 hash_basis: LF-normalized bytes
 ---
@@ -312,7 +312,7 @@ mode verifies the same claims.
 LF-normalized SHA256:
 
 ```text
-script  a4c7a259bb7a30a97886423acbba1ff5070c27f46bb2e09da851f2e9087be27c
+script  856cab6338ef68560ef0b1ef5cef164a771a0a2b671a44abb0f8dec7bc75fb76
 output  e1605bb1c1ddec2d18209ab3ea003738b1b2282317d3728fd8711c735d73b18e
 ```
 

@@ -338,4 +338,3 @@ print("edge_plus_cycle_blind_dimension=3;blind_sector=X1_nontrivial_character")
 print("C3_cycles_the_three_quotients=1;odd_reflection_fixes_X0_and_swaps_X1_X2=1")
 print(f"semantic_sha256={semantic_sha256}")
 print("scope=finite_A4_permutation_module;common_atom_not_physical_quartic_LRC_or_JC_carrier")
-
