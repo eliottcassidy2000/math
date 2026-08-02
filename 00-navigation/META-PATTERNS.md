@@ -360,41 +360,22 @@ THM-2290/2292/2294 and the S79 support-Dirichlet reflection.
 
 ## Interpolant death, mechanism survival (the first-untested-point law)
 
-**Trigger / action:** before adopting a fitted recurrence, either prove a
-structural sublemma or pre-register its next structural prediction and try to
-kill it at the first untested point.
-**Mechanism / counterindication:** short interpolants have many equally short
-competitors; a mechanism removes them. First detrend availability (THM-2447),
-and distinguish threshold laws from closed forms.
-**Evidence:** S135 tabulates 24 breaks and 6 survivors; see MISTAKE-055,
-THM-2444/2453/2454, THM-2467, THM-1286, and THM-790.
+**Trigger / action:** before adopting a fitted recurrence, prove a structural sublemma or pre-register and attack its first untested prediction. Short interpolants have many competitors; detrend availability (THM-2447) and distinguish thresholds from closed forms. **Evidence:** S135's 24 breaks/6 survivors; MISTAKE-055; THM-2444/2453/2454, THM-2467, THM-1286, THM-790.
 
 ## Refine vertices and lifetimes before quotienting
 
-**Trigger:** a label is a disconnected union, or different faces may use
-different lifts, components, wall phases, or circuit times.
-**Action:** split vertices by physical component and retain integer transitions,
-full lifetime filtrations, and a baseline before taking a nerve or local
-shadow. **Mechanism:** witnesses may vary by face; total contact is the sum of
-Smith-bar lifetimes; translated bands cannot be recentered; and a negative late
-derivative need not cross the baseline. **Counterindication:** quotient only
-after a good-cover, compatible-section, monotonicity, or factorization theorem.
-**Evidence:** THM-2658/2672; THM-2983/2985 kernel holotopy;
-THM-2984/MISTAKE-334; repaired THM-2991/MISTAKE-335.
+**Trigger / action:** if labels are disconnected or faces use different lifts, components, phases, or times, split physical components and retain transitions, lifetime filtrations, and a baseline before quotienting. Witnesses vary by face; translated bands cannot be recentered; late negative derivative need not cross baseline.
+Quotient only after a good-cover, compatible-section, monotonicity, or factorization theorem. **Evidence:** THM-2658/2672, THM-2983/2985, THM-2984/MISTAKE-334, repaired THM-2991/MISTAKE-335.
 
 ## Pay algebraic rank, then audit the physical action
 
-**Trigger / action:** when a finite response looks compressible, compute its
-Hankel/circulant rank and minimal carrier, then type the physical observable,
-action, positivity, and basepoint. **Mechanism / boundary:** full rank blocks
-false compression; a signed inverse still needs a physical action/observation.
-**Evidence:** THM-2810/2815 and THM-2835/2839.
+**Trigger / action:** if a finite response looks compressible, compute its Hankel/circulant rank and minimal carrier, then type the observable, action, positivity, and basepoint. Full rank blocks false compression; a signed inverse still needs a physical realization. **Evidence:** THM-2810/2815 and THM-2835/2839.
 
 ## Dominate product kernels, then exhaust the short histogram core
 
-**Trigger / action:** if a signed observable over arbitrarily many independent
-layers factors through a finite nonnegative alphabet, delete inactive symbols,
-find a positive mode dominating all negative responses, bound their contraction
-ratios, then enumerate only shorter histograms. **Mechanism:** words collapse to histograms, turning the infinite layer quantifier into a finite exact bank.
-**Counterindication:** phases, coupling, zero dominant coordinates, or ratio-one walls retain carry data. **Evidence:** THM-3107 and its THM-2159 spectral ancestor;
-THM-2418 warns that charged projection can delete the dominant mode.
+**Trigger / action:** when a multilayer signed observable factors through a finite nonnegative alphabet, delete inactive symbols, dominate negative responses by one positive mode, bound contraction ratios, and enumerate short histograms. Phases, coupling, zero dominant coordinates, and ratio-one walls can retain carry data. **Evidence:** THM-3107/2159; THM-2418.
+
+## Audit the positive kernel before lifting through a flat square
+
+**Trigger / action:** before using deletion, transfer, or a commuting square to induct positivity, compute its kernel on the positive carrier; test a negative preimage of zero and whether known positive ghosts span the failure. Commutation transports invisibility, not order reflection.
+A positive left inverse, order-reflecting quotient, or target factorization discharges the audit; otherwise name a transverse selector. **Evidence:** THM-3122's positive derangement ghost, THM-2551's preserved all-unit kernel, and THM-3127's upset separators.
