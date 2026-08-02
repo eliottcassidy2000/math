@@ -341,13 +341,12 @@ Classify profiles under support operations; study analytic continuation and auto
   `3|v(q)` the exact Newton/discriminant gate and `[q_0]=[K]^m` saturated.
   THM-3230's marked-sheet centered norm recovers intrinsic `Lambda` even when
   `3|m`.  THM-3270 identifies the four `Gamma(3)` peripheral classes with the
-  four sheets: a coherent mark exists exactly for point-stabilizer holonomy;
-  THM-3271 instead retains all four centered norms as one algebra-valued
-  packet, with the local singleton projector controlled exactly by its
-  spectral derivative.  THM-3272 makes that derivative a unit at tame
-  unit-separated `1+3` places, and THM-3273 isolates the scalar packet's sole
-  new collision divisor.  Global sheet gluing, the chain-rule cofactor,
-  geometric realization, and Jelonek straightening remain OPEN.
+  four sheets: a coherent mark exists exactly for point-stabilizer holonomy.
+  THM-3271--3273 retain all centered norms, give the local
+  projector/integrality gate, and isolate scalar packet collisions.  In the
+  graph asymptotics THM-3274 decodes the fixed scalar in both `C3`
+  lanes, but a norm-one twist proves that root-packet data still forgets the
+  chain-rule cofactor.  Global incidence and Jelonek straightening stay OPEN.
   THM-2862/2864/2968/2971 give two sextic
   lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
   affine sidecars remain.  THM-2867 gives the regular `S3` carrier; THM-2871
@@ -381,7 +380,9 @@ Classify profiles under support operations; study analytic continuation and auto
 - **Factorial / FC:** THM-3124/3131/3138/3142/3143/3200/3204 close
   `r<=998` and prime/prime-power/even lanes.  The residual has `r>=999`,
   composite `d,d-2`, and non-prime-power `d-1`; THM-3260 removes the
-  ternary-Cantor chamber, with `D=201` its first sector-gluing hostile.
+  ternary-Cantor chamber, with `D=201` its first sector-gluing hostile;
+  THM-3148 reduces every fixed prime offset's unit-root exceptions to one
+  fixed resultant.
   THM-3116/3202/3203 close affine-coordinate quadratics; THM-3250/3251 close
   pure powers.  THM-3252/3253 prove cyclic connections, collision-safe
   splitting, and functional nonsplitting for cubics and `At^d+Bt+C`; non-pure

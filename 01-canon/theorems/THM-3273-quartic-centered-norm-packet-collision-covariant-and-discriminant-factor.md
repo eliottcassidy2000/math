@@ -2,7 +2,7 @@
 id: THM-3273
 title: "Quartic centered-norm packet collision covariant and discriminant factor"
 status: >
-  PROVED + VERIFIED-EXACT.  For a depressed separable quartic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a depressed separable quartic
   f=X^4+pX^2+qX+r and its THM-3271 centered-norm packet
   N(X)=-(20X^3+18pX+27q)/27, the packet characteristic polynomial satisfies
   disc(P_N)=(2^12/3^36) C(p,q,r)^2 disc(f), where
@@ -18,6 +18,11 @@ status: >
   Keller cofactor, forbidden collision, C3/S4 exclusion, or JC(2) theorem
   follows.
 source: jc-centered-norm-collision-covariant-2026-08-02
+audit: >
+  An independent audit checked the pair quotient, resultant discriminant
+  convention, affine weights, tame special fibre, and separable collision
+  equivalence.  Fresh normal and optimized symbolic replays byte-match the
+  archived transcript.
 depends_on:
   - THM-3271-universal-quartic-centered-norm-packet-and-local-singleton-projector
   - THM-3272-tame-pure-c3-centered-norm-packet-integral-fixed-projector
@@ -34,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3273 -- one covariant measures every new centered-packet collision
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Packet map in depressed coordinates
 

@@ -54,11 +54,11 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    (THM-1926). THM-2195 makes transitivity the scalar substitution-product boundary.
    THM-3121 restores the path-cover kernel; `C3` has three shells. Unmarked transport remains open; scalar invariants are exact only through `n<=6`.
 11. **A reciprocal integer sequence has two profiles.** THM-2000/2005/2352 separate support, multiplicity, and q-adic thresholds; THM-2438/2433/2500 give the Poisson--Newton transform and finite-hole classification.
-    THM-3055/3056 give divisor upsets/Hankel minors; THM-3124/3131/3142/3143 close quadratics through `r<=998`; THM-3260 closes the ternary-Cantor chamber and explains `D=201`; THM-3126 compresses six LRC carriers.
+    THM-3055/3056 give divisor upsets/Hankel minors; THM-3124/3131/3142/3143 close quadratics through `r<=998`; THM-3148 gives fixed-offset resultants; THM-3260 closes the ternary-Cantor chamber and explains `D=201`; THM-3126 compresses six LRC carriers.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is the exact new counterexample. THM-2063/2071 close linear/quadratic source fibers; THM-2084/2118/2102 close cubics; THM-2202 removes every twice-odd finite pole.
     THM-2214/2247 close the stated terminal degrees through `14`; THM-2371/THM-2376/THM-2406 close the inherited degree-`18` branch; THM-2671/2683/2692 and THM-2778 close the inherited nonsplit degree-`22` branch and every complete chosen-sheet split exact-prefix degree. THM-2796 exposes the live carrier `A(R_Q/q)=VG`.
     THM-3057/3059 make quartic Jelonek parity tame infinity-inertia sign; THM-3066 retains only the cofactor product, and THM-3064's pointed norm does not exclude `C3`.
-    THM-3070--3201 terminate the local `C3` decoder. THM-3230 recovers `Lambda` from a fixed sheet; THM-3270 says marks glue iff holonomy fixes one. Geometric realization remains open.
+    THM-3070--3201 terminate the local `C3` decoder. THM-3230 recovers `Lambda` from a fixed sheet; THM-3270 gives the mark-holonomy gate, while THM-3271--3274 decode the fixed centered scalar but prove that its chain-rule cofactor is independent. Geometric realization remains open.
     THM-3123 classifies the last two abstract heptic passports and finds four hostile-audited `S7` maps, but does not supply Keller-chart entry.
     THM-3133 excludes simple response zeros; THM-3140 blocks only its explicit `R=8` odd-bipole.
     Degrees `>=26`, nonpolynomial prefixes, chart entry, raising/descent, uniform Keller-`C3` exclusion, other branches, `JC(2)`, and `DC(2)` remain open.

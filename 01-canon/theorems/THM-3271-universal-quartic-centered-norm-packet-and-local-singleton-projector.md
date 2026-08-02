@@ -2,7 +2,7 @@
 id: THM-3271
 title: "Universal quartic centered-norm packet and local singleton projector"
 status: >
-  PROVED + VERIFIED-EXACT.  For every monic separable quartic f over a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every monic separable quartic f over a
   characteristic-zero field, the centered norm of the three roots
   complementary to a tautological root is one canonical cubic element nu_f
   of the quartic etale algebra.  Its explicit polynomial is
@@ -21,6 +21,12 @@ status: >
   descent, cross-place scalar section, Keller cofactor, C3/S4 exclusion, or
   JC(2) theorem follows.
 source: jc-global-norm-packet-2026-08-02
+audit: >
+  An independent audit rederived the universal cubic packet, affine cube
+  covariance, the degree-three-versus-four-root separation, unique simple
+  scalar root, spectral idempotent, exact DVR denominator equivalence, and
+  connected-field gluing obstruction.  Fresh normal and optimized replays
+  byte-match the archived transcript.
 depends_on:
   - THM-3230-marked-c3-trace-centered-norm-and-terminal-prefactor-recovery
 related:
@@ -38,7 +44,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3271 -- retain all four centered norms before choosing a sheet
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. The universal packet
 

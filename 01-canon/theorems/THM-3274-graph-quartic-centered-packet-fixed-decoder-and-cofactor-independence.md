@@ -2,7 +2,7 @@
 id: THM-3274
 title: "Graph-quartic centered-packet fixed decoder and cofactor independence"
 status: >
-  PROVED + VERIFIED-EXACT.  In the actual fixed-plus-escaping-C3 graph-quartic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the actual fixed-plus-escaping-C3 graph-quartic
   anatomy of THM-3201, rescaling the THM-3271 centered-norm packet by the
   base-field scalar pi^(3m) makes its reduction equal to
   (W-A^3)(W-7A^3/27)^3 when 3 does not divide m, and to
@@ -21,6 +21,12 @@ status: >
   and an information-independence theorem, not a C3 exclusion or JC(2)
   theorem.
 source: jc-graph-packet-cofactor-2026-08-02
+audit: >
+  An independent audit rederived both depressed leading quartics, packet
+  factors, normalized projector denominators, and covariant residues from
+  THM-3201's actual root asymptotics.  It also checked the tame cyclic
+  hostile's derivative stars, norm-one gauge, unchanged invariant list, and
+  lambda-four pointed ratio.  Fresh normal and optimized replays byte-match.
 depends_on:
   - THM-3201-c3-local-resolvent-splitting-and-matching-newton-gate
   - THM-3271-universal-quartic-centered-norm-packet-and-local-singleton-projector
@@ -39,7 +45,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3274 -- the graph packet finds the fixed scalar, but not its cofactor
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and exact scope
 

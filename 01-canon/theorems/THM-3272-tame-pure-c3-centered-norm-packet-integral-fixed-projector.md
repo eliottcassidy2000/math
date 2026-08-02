@@ -2,7 +2,7 @@
 id: THM-3272
 title: "Tame pure-C3 centered-norm packet integral fixed projector"
 status: >
-  PROVED + VERIFIED-EXACT.  Let O be a henselian DVR with 2 and 3 units,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let O be a henselian DVR with 2 and 3 units,
   and let a monic separable quartic factor integrally as
   f=(X-a)g, with g an irreducible cubic, g mod m=(X-m)^3, and a-m a unit.
   For the universal centered-norm packet nu of THM-3271, the fixed component
@@ -19,6 +19,12 @@ status: >
   incidence, chain-rule cofactor, inverse-different unit, cross-place base
   section, C3/S4 exclusion, or JC(2) theorem.
 source: jc-tame-c3-integral-packet-2026-08-02
+audit: >
+  An independent audit rederived the special-fibre packet after a splitting
+  base change, the sign and exponent in the spectral denominator, Hensel
+  selection, the packet/factor idempotent identity, and all three sharp
+  boundary mechanisms.  Fresh normal and optimized replays byte-match the
+  archived transcript.
 depends_on:
   - THM-3271-universal-quartic-centered-norm-packet-and-local-singleton-projector
 related:
@@ -35,7 +41,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3272 -- the tame centered-norm packet generates its fixed idempotent integrally
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Exact local hypotheses
 
