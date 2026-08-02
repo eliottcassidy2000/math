@@ -1,0 +1,10 @@
+THM3072_A4_FLAG_THREE_C2_TOMOGRAPHY
+flags=12;C2_quotients=3;quotient_sizes=6,6,6;right_kernel=V4
+geometry=X0:K4_edges,X1:skew_edges,X2:oriented_Hamiltonian_cycles
+edge_cycle_joint_map=injective;image=3_disjoint_K2,2;size=12
+projector_identity=P0+P1+P2=I+2PV4;PiPj=PV4
+ranks=Pi:6,PV4:3,pair_sum:9,pair_observation:9,triple_observation:12
+edge_plus_cycle_blind_dimension=3;blind_sector=X1_nontrivial_character
+C3_cycles_the_three_quotients=1;odd_reflection_fixes_X0_and_swaps_X1_X2=1
+semantic_sha256=a3e434349a8e983a2676bf841fe692ee4cd0651760f7e4041090f5ba636b88ae
+scope=finite_A4_permutation_module;common_atom_not_physical_quartic_LRC_or_JC_carrier
