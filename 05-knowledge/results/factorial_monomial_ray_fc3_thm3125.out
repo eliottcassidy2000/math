@@ -1,0 +1,4 @@
+gauss_cells=2016 v_box=0..3^3_nonzero d=1..4 n=0..7 all_exact=True digest=35f1899839e557a1f0f8139de51e28c7dfc293c692a9dc330d9f24a32b763525
+orientation_cells=252 strict_negative_I1=252 strict_negative_I2=252 digest=7ef62e116139143f38b398d0fadb11a3a10feeb5cc0f850cc507753714798396
+wrong_geometric_scale_hostile=v=(1, 2, 3),d=2,n=3,detected=True
+zero_exponent_vector_excluded=True
