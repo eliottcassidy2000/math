@@ -2,7 +2,7 @@
 id: THM-3085
 title: "Multi-normal fixed-gap cluster and unconditional all-width tail"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  Appending
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Appending
   any finite set of distinct fixed gaps at one remote scale to a lower
   physical support gives a multi-normal suspension whose only obstruction is
   the lower resultant.  Its exact normal symbol is a positive generalized
@@ -12,6 +12,13 @@ status: >
   first-window resultant in every width, uniformly with gap 27/64 for each
   fixed width.  This is not an arbitrary-support or moving-gap theorem.
 source: root-gmc-multinormal-cluster-2026-08-01
+audit: >
+  Two independent audits reconstructed the fixed-pivot normal forms,
+  generalized-Vandermonde sign, power-resultant exponent, exact carrier
+  covariance, every coefficient layer and sharp rho cell, triangular
+  quotient, relative error estimate, and the K4/K5/K6 controls.  Normal and
+  optimized replay matched the 516-byte stored transcript and declared LF
+  hashes; documentation passed.
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
   - THM-3063-terminal-suspension-transverse-resultant-and-five-slot-tail-holotopy
@@ -29,7 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3085 -- multi-normal fixed-gap cluster and unconditional all-width tail
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3063 leaves arbitrary six-slot SFC blocked when a remote **pair** is
 attached to an arbitrary four-slot base.  Change the cut: keep only an
@@ -358,4 +365,4 @@ python -O 04-computation/gmc_multinormal_fixed_gap_cluster_thm3085.py
 
 Both modes must equal the stored transcript after LF normalization.
 
-**QED, pending independent audit and status promotion.**
+**QED.**
