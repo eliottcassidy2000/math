@@ -2,17 +2,29 @@
 id: THM-3083
 title: "Exceptional binary-point/ternary-direction S4 tomography clutch"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING IMMUTABLE INDEPENDENT
-  HOSTILE AUDIT.  After choosing the exceptional identification
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  After choosing
+  the exceptional identification
   AGL_2(F_2)=S4=PGL_2(F_3), the mean-zero four-point binary module is an
   S4-equivariant similarity of the sum-zero part of the four rank-one even
   ternary line channels.  Binary Walsh characters become signed 2+2
   contrasts of ternary directions, not individual lines.  Integrally the
-  ternary channel lattice has quotient F3^3, while radial-plus-standard
-  splitting adds Z/4; the composite Smith form is 1,3,3,12.  This is a
-  representation/lattice clutch, not a physical quartic, tree, Keller,
-  owner, or LRC intertwiner.
+  projector-normalized ternary channel lattice has quotient F3^3, while
+  radial-plus-standard splitting adds Z/4; the composite Smith form is
+  1,3,3,12.  Punctured-line idempotents give a stronger nonunital
+  multiplicative clutch whose integral A3 image is saturated.  This is a
+  representation/algebra/lattice clutch, not a physical quartic, tree,
+  Keller, owner, or LRC intertwiner.
 source: root-exceptional-two-three-tomography-2026-08-01
+audit: >
+  An immutable independent audit regenerated the 24 paired S4 elements,
+  unique equivariant bijection, even projector split, Gram and Walsh formulas,
+  quartic phase hostile, both Smith forms, and odd-prime stopping law.  It
+  found and repaired the sole substantive scope defect: punctured-line
+  idempotents give an exact nonunital multiplicative clutch with saturated A3
+  image, so the F3^3 defect belongs to the displayed projector normalization.
+  The strengthened companion checks this survivor and the fixed-origin
+  obstruction to a unital full-even map; normal, optimized, and stored
+  transcripts byte-match under the updated LF hashes.
 depends_on:
   - THM-3076-finite-affine-plane-line-quotient-tomography-and-p2-three-view-law
 related:
@@ -26,15 +38,14 @@ related:
   - THM-3072-a4-flag-three-c2-tomography-and-edge-cycle-cospan
 script: 04-computation/exceptional_binary_point_ternary_direction_s4_tomography_clutch_thm3083.py
 output: 05-knowledge/results/exceptional_binary_point_ternary_direction_s4_tomography_clutch_thm3083.out
-script_sha256: dcc5de253bdee3c9a9e21a8ea2b6441e86c667a2131d7b66700c02714708ea35
-output_sha256: bf969955d11175a27bb448f7286c1622ac9f9372aee57dc58781d6493321a7ef
+script_sha256: 9aa19ae4f34472c653c50fd8165f9d083244be1e9beecbea0ee1c10c0bca18fb
+output_sha256: 7859590d051e92d7aaa221e6fed26f3015b1057fcf858d182283c80826437a91
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3083 -- exceptional binary-point/ternary-direction S4 tomography clutch
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING IMMUTABLE INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and exact claim
 
@@ -88,8 +99,9 @@ Smith[(Z R direct_sum H_(0,Z)) -> E_(Z,even)^0]
 ```
 
 Thus the rational module match exposes distinct binary and ternary integral
-defects of total index `108`.  It is not a literal identification of the two
-trees or a physical quartic decoder.
+defects of total index `108` **for this projector normalization**.  A
+different punctured-line normalization below is integrally saturated.  Neither
+is a literal identification of the two trees or a physical quartic decoder.
 
 ## 2. The exceptional four-point identification
 
@@ -190,6 +202,43 @@ For `f,g in k[B]_0`, `(14)` yields
 Equivariance follows from `(10)` and the permutation law for the `h_L`.
 Both sides of `(16)` are the standard irreducible `[31]` module, so after
 the choice `(3)` this intertwiner is unique up to scalar.
+
+There is a stronger algebraic survivor.  Put
+
+```text
+e_L=1_(L\{0})=1_L-delta_0.                               (17a)
+```
+
+Distinct ternary lines meet only at the origin, hence
+
+```text
+e_L e_M=delta_(L,M)e_L,             sum_L e_L=1-delta_0. (17b)
+```
+
+Consequently
+
+```text
+Psi:k[B] -> W^+,       Psi(delta_(phi(L)))=e_L           (17c)
+```
+
+is an `S4`-equivariant nonunital algebra embedding, and an algebra
+isomorphism onto the ideal `(1-delta_0)W^+` when that ideal is given its own
+unit `1-delta_0`.  On the augmentation module,
+
+```text
+Psi(f)=Phi(f)/3.                                          (17d)
+```
+
+Integrally, `Psi` identifies the binary point lattice with the four
+punctured-line idempotents, and carries `A3` saturately to their sum-zero
+lattice.  Thus the `(F_3)^3` in `(5)` measures the displayed `Phi=3Psi`
+projector normalization; it is not an intrinsic defect of every integral
+`S4` clutch.
+
+There is no `S4`-equivariant **unital** algebra map from `k[B]` to all of
+`W^+`.  Indeed, evaluation at the `S4`-fixed ternary origin would select an
+`S4`-fixed point of the transitive four-point set `B`, and no such point
+exists.                                                        `(17e)`
 
 ## 4. The three binary channels become matching contrasts
 
@@ -293,8 +342,9 @@ lattice has index four.  In the pair-value coordinates `(23)`, columns for
 ```
 
 and Smith invariants `(1,3,3,12)`.  This proves `(5)--(6)`.  Equivalently,
-on the saturated standard target `A3`, the map `(16)` sends the binary
-integral augmentation lattice to `3A3`, with cokernel `(F_3)^3`.
+on the saturated standard target `A3`, the projector-normalized map `(16)`
+sends the binary integral augmentation lattice to `3A3`, with cokernel
+`(F_3)^3`; the punctured algebra map `(17c)` sends it to `A3` itself.
 
 This ternary standard defect is different from THM-3045's single trivial
 `F3` defect in the six-edge lattice.
@@ -322,15 +372,19 @@ The theorem deliberately retains the following losses.
 1. The radial vector `R=(8,-1^8)` is nonzero.  Four ternary line channels are
    not three binary directions; only their sum-zero standard part matches.
 2. Binary characters map to signed `2+2` combinations, not to single lines.
-   A line-by-line tomography intertwiner has the wrong type.
-3. The map is linear, not multiplicative.  Its natural extension sends a
-   binary point basis vector `delta_(phi(L))` to `h_L`; but
-   `delta_(phi(L))^2=delta_(phi(L))` while `h_L^2!=h_L`.
-4. THM-2387 has the four `F3` projective lines and their Weil switching class,
+   An individual binary Walsh channel cannot equal one centered ternary line
+   channel; the punctured point-to-line algebra map is a different statement.
+3. The displayed projector-normalized extension `delta_(phi(L))->h_L` is not
+   multiplicative: `delta_(phi(L))^2=delta_(phi(L))`, whereas `h_L^2!=h_L`.
+   The punctured normalization `(17a)--(17d)` is the exact multiplicative
+   survivor, but it is not unital in all of `W^+`.
+4. No `S4`-equivariant unital clutch to the full even function algebra exists;
+   the fixed ternary origin has no binary counterpart.
+5. THM-2387 has the four `F3` projective lines and their Weil switching class,
    but no Galois-equivariant matching to quartic sheets or Cardano roots.  If
    such a common torsor were supplied, equality of sign characters would be a
    conditional tautology, not a new discriminant identity.
-5. Nothing here selects an affine origin, a sign of `s_c`, a Feuerbach point,
+6. Nothing here selects an affine origin, a sign of `s_c`, a Feuerbach point,
    Farey flank, physical word/current, owner, Keller graph order, or LRC
    carrier.  THM-2971's primitive discriminant-cover coordinate is not
    reconstructed.
@@ -349,7 +403,10 @@ explicit `require` gates.  It checks all 24 paired group elements and the
 unique generator-fixed bijection; the complete ternary projector algebra on
 the even basis; every group/channel action; Gram similarity and the three
 Walsh matchings; both Smith computations; the radial hostile; and both
-quartic phase controls.
+quartic phase controls.  It also checks the four punctured-line orthogonal
+idempotents, `Phi=3Psi` on the augmentation lattice, saturated integral
+punctured-line coordinates, full equivariance, and the fixed-origin
+obstruction to a unital full-even clutch.
 
 ```text
 PROVED HERE:       chosen exceptional S4 point--direction identification;
@@ -357,10 +414,11 @@ PROVED HERE:       chosen exceptional S4 point--direction identification;
                    S4 similarity of the two standard modules;
                    binary Walsh to signed matching-contrast formula;
                    exact index-27, index-4, and Smith-108 lattice defects;
+                   punctured-line multiplicative ideal clutch and saturated A3;
                    quartic square-root reinterpretation and phase hostile.
 
 NOT PROVED:        canonical identification without a chosen S4 gauge;
-                   linewise or multiplicative tomography intertwiner;
+                   individual-Walsh-to-single-line or unital full-even clutch;
                    new quartic/resolvent/discriminant information;
                    physical Cardano, Weil, owner, current, or tree carrier;
                    Keller, JC(2), DC(2), GMC, or LRC(14).                  (31)

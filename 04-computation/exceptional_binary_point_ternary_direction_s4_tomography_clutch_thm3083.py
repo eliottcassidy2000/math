@@ -206,6 +206,7 @@ def dot(first, second):
 
 ZERO = tuple(F(0) for _point in V3)
 ONE = tuple(F(1) for _point in V3)
+DELTA_ZERO = tuple(F(point == (0, 0)) for point in V3)
 H = {
     label: tuple(F(2 if point in LINES[label] else -1) for point in V3)
     for label in D
@@ -222,6 +223,29 @@ require(
         for label in D
     ),
     "channel idempotence hostile",
+)
+
+# The projector-normalized channels are not idempotents, but puncturing the
+# common origin produces an exact multiplicative S4 clutch.
+PUNCTURED = {
+    label: tuple(
+        F(point in LINES[label] and point != (0, 0)) for point in V3
+    )
+    for label in D
+}
+for left in D:
+    for right in D:
+        product = tuple(
+            a * b for a, b in zip(PUNCTURED[left], PUNCTURED[right])
+        )
+        require(
+            product == (PUNCTURED[left] if left == right else ZERO),
+            (left, right, "punctured idempotents"),
+        )
+require(
+    tuple(sum(PUNCTURED[label][index] for label in D) for index in range(9))
+    == tuple(one - delta for one, delta in zip(ONE, DELTA_ZERO)),
+    "punctured ideal unit",
 )
 
 
@@ -294,6 +318,17 @@ def phi_map(binary_function):
     )
 
 
+def psi_map(binary_function):
+    return tuple(
+        sum(
+            F(binary_function[B_INDEX[PHI[label]]])
+            * PUNCTURED[label][point_index]
+            for label in D
+        )
+        for point_index in range(9)
+    )
+
+
 def act_b(binary_function, permutation):
     inverse = [0] * 4
     for source, target in enumerate(permutation):
@@ -307,12 +342,48 @@ centered_basis = tuple(
 )
 for binary in centered_basis:
     image = phi_map(binary)
+    require(
+        image == tuple(3 * value for value in psi_map(binary)),
+        (binary, "Phi=3Psi on augmentation"),
+    )
     require(dot(image, image) == 18 * dot(binary, binary), (binary, "norm"))
     for bperm, matrix in GROUP:
         require(
             phi_map(act_b(binary, bperm)) == act_v3(image, matrix),
             (binary, bperm, matrix, "equivariance"),
         )
+
+# Psi is an equivariant algebra isomorphism from the four-point function
+# algebra onto the punctured ideal.  Its ambient integral matrix is a
+# permutation matrix, so its A3 augmentation image is saturated.
+binary_deltas = tuple(
+    tuple(1 if index == source else 0 for index in range(4))
+    for source in range(4)
+)
+for binary in binary_deltas:
+    image = psi_map(binary)
+    for bperm, matrix in GROUP:
+        require(
+            psi_map(act_b(binary, bperm)) == act_v3(image, matrix),
+            (binary, bperm, matrix, "Psi equivariance"),
+        )
+psi_integral_matrix = tuple(
+    tuple(
+        int(psi_map(binary_deltas[column])[V3_INDEX[D_VECTOR[label]]])
+        for column in range(4)
+    )
+    for label in D
+)
+require(abs(determinant(psi_integral_matrix)) == 1, psi_integral_matrix)
+
+# A unital equivariant map to the full five-orbit even algebra would have to
+# send the fixed ternary origin to an S4-fixed binary point.  None exists.
+fixed_binary_points = tuple(
+    point_index
+    for point_index in range(4)
+    if all(bperm[point_index] == point_index for bperm, _matrix in GROUP)
+)
+require(fixed_binary_points == (), fixed_binary_points)
 
 
 MATCHING_ROWS = []
@@ -412,6 +483,8 @@ def main():
         "binary_centered_to_ternary_standard=Phi(f)=sum_d f(phi(d))*h_d;gram_scale=18;S4_equivariant",
         f"channel_lattice_smith={channel_smith};index={channel_divisors[-1]};quotient=F3^3",
         f"radial_plus_standard_smith={composite_smith};index={composite_divisors[-1]};quotient=Z4+F3^3",
+        "punctured_line_algebra=Psi(delta_phi(L))=1_(L\\{0});orthogonal_idempotents;sum=1-delta0;S4_equivariant",
+        "augmentation_relation=Phi=3*Psi;saturated_integral_Psi_A3;projector_normalization_has_F3^3_defect",
     ]
     for character, positive, signs in MATCHING_ROWS:
         lines.append(
@@ -419,8 +492,9 @@ def main():
         )
     lines += [
         "quartic_phase_hostile=f_plus:T4-7T2+6T;f_minus:T4-7T2-6T;matching_squares:(1,4,9);linear_signs:opposite",
-        "multiplicative_hostile=delta_b^2=delta_b but the natural extension delta_phi(L)|h_L has h_L^2!=h_L",
-        "first_failed_implication=no line-by-line or multiplicative tomography intertwiner: binary has three Walsh channels, while ternary has four line channels plus a radial invariant",
+        "normalized_multiplicative_hostile=delta_b^2=delta_b but the displayed extension delta_phi(L)|h_L has h_L^2!=h_L",
+        "unital_boundary=no S4-equivariant unital algebra map k[B]->W_even because ternary origin is fixed and B has no S4-fixed point",
+        "first_failed_implication=no individual-Walsh-to-single-line or unital full-even algebra clutch;punctured-line ideal clutch survives",
         "scope=representation-and-integral-lattice clutch only;no physical quartic,Cardano,Weil,Keller,owner,current,or LRC consequence",
         "all_exact_controls=PASS",
     ]
