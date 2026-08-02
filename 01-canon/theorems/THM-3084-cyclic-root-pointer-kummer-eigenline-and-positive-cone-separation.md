@@ -2,7 +2,7 @@
 id: THM-3084
 title: "Cyclic root pointer, Kummer eigenline, and positive-cone separation"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  For the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the
   equal-weight norm on p cyclic coordinates, a physical root-permutation
   orbit lies in one diagonal Kummer fibre exactly when the coordinate vector
   is a single Fourier-character eigenline.  A nonconstant positive profile
@@ -12,6 +12,14 @@ status: >
   semantic arrival remains open.  The p=2 analogue needs two independent
   same-atom contrasts to reconstruct a quartic V4 plane.
 source: root-cyclic-pointer-kummer-2026-08-01
+audit: >
+  Two independent hostile audits rederived the equal-weight fibre criterion,
+  cyclic eigenline and positive-cone separation, then checked the THM-2537
+  same-cylinder pointer, point-before-sum boundary, residual semantic-arrival
+  debt, and common-atom V4 comparison.  The first audit caught and the
+  repaired theorem records the exact i_-a/P^-h orientation.  Immutable normal
+  and optimized replay matched the 521-byte stored transcript and declared LF
+  hashes; documentation passed.
 depends_on:
   - THM-2537-cayley-wall-scalarization-and-positive-selector-intertwiner
   - THM-3077-pointed-norm-relative-line-lift-and-relation-carry-obstruction
@@ -31,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3084 -- cyclic root pointer and Kummer eigenline
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3077 identifies the information lost by a weighted norm: its
 norm-augmentation fibre is a diagonal Kummer torsor.  LRC already carries a
@@ -261,4 +269,4 @@ pointer to a distinct semantic packet, create a positive charged eigenline,
 prove a target arrival, decrement an LRC row, align two separate JC views,
 or prove LRC(14), JC(2), GMC(2), NC2, or DC(2).
 
-**QED, pending independent audit and status promotion.**
+**QED.**
