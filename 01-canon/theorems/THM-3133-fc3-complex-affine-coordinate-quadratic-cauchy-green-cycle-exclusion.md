@@ -1,5 +1,5 @@
 ---
-id: THM-3130
+id: THM-3133
 title: "FC(3) complex affine-coordinate quadratics: Cauchy--Green cycle sources cannot cancel"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Let ell be an algebraic
@@ -14,24 +14,24 @@ status: >
   only its shared edge direction and leaves two distinct outer directions;
   hence a nonzero source group survives.  Functional independence and
   Beukers Corollary 1.4 at s=1 exclude the values 0 and 1/2.  The collinear
-  boundary is THM-3129 and the affine phase boundary is THM-3116.  This is
+  boundary is THM-3132 and the affine phase boundary is THM-3116.  This is
   the full degree-at-most-two affine-coordinate (univariate-aligned) branch,
   not the larger class of quadratics with rank-one Hessian and a transverse
   linear term, and not FC(3).
 source: codex-2026-08-02-fc3-simplex
 depends_on:
   - THM-3116
-  - THM-3129
+  - THM-3132
 related:
   - THM-3039
 external:
   - "Cauchy--Green formula."
   - "F. Beukers, A refined version of the Siegel--Shidlovskii theorem, Annals of Mathematics 163 (2006), 369--379, Corollary 1.4."
-script: 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3130.py
-output: 05-knowledge/results/fc3_complex_affine_coordinate_cauchy_green_thm3130.out
+script: 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3133.py
+output: 05-knowledge/results/fc3_complex_affine_coordinate_cauchy_green_thm3133.out
 ---
 
-# THM-3130 — complex affine-coordinate quadratic phases on the triangle
+# THM-3133 — complex affine-coordinate quadratic phases on the triangle
 
 ## 1. Statement and scope guard
 
@@ -63,7 +63,7 @@ not covered here.  Nor does the theorem address a nonflat leading form in
 the Factorial Conjecture or prove FC(3).
 
 If the three vertex values of `ell` are collinear, algebraically
-reparameterize their real affine line and apply THM-3129.  If `P` is
+reparameterize their real affine line and apply THM-3132.  If `P` is
 affine, `P(ell)` is affine and THM-3116 applies.  Constant cases reduce to
 Hermite--Lindemann.  It therefore remains to prove (3)--(4) when
 
@@ -98,7 +98,7 @@ Cauchy--Green gives the exact area-to-boundary identity
 W K(s)=integral_(boundary T) conjugate(t) exp(sP(t)) dt.        (8)
 ```
 
-This is the noncollinear replacement for THM-3129's one-dimensional spline
+This is the noncollinear replacement for THM-3132's one-dimensional spline
 pushforward.  It retains all three edge directions, which will be the
 sidecar preventing cancellation.
 
@@ -308,8 +308,8 @@ remaining boundary case.  This completes (3)--(4).
 Run
 
 ```text
-python3 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3130.py
-python3 -O 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3130.py
+python3 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3133.py
+python3 -O 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3133.py
 ```
 
 The frozen exact controls normalize the triangle to vertices
@@ -324,11 +324,11 @@ The frozen exact controls normalize the triangle to vertices
   source in (22);
 * the half-integral pole obstruction in (26); and
 * the exact collinear boundary `y=0`, where `W` and all three turns vanish
-  together and THM-3129's spline mechanism takes over.
+  together and THM-3132's spline mechanism takes over.
 
 The normal and optimized runs are byte-identical.
 
 ```text
-source sha256 = d240c8240a066560e778eca3324f0432e494318d5664f46df78df36927887cb5a
-output sha256 = b692bdc8e668d771a040f1803f73521c348c0f50f746e19d5585413c8e9453f1
+source sha256 = e2683b37419f6bdc32e872440db1bbbc88287e68e5c2ebc3d0ed38ad2ddbd718
+output sha256 = 9a2477aa33e7d203223721be920da2933505c4ac679c317d338efe7f0e67d7ae
 ```

@@ -1,5 +1,5 @@
 ---
-id: THM-3129
+id: THM-3132
 title: "FC(3) real affine-coordinate quadratics: the two-piece spline source cannot cancel"
 status: >
   PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  Let r be a
@@ -25,11 +25,11 @@ related:
 external:
   - "Riesz--Markov--Kakutani representation theorem."
   - "F. Beukers, A refined version of the Siegel--Shidlovskii theorem, Annals of Mathematics 163 (2006), 369--379, Corollary 1.4."
-script: 04-computation/fc3_real_affine_coordinate_quadratic_spline_thm3129.py
-output: 05-knowledge/results/fc3_real_affine_coordinate_quadratic_spline_thm3129.out
+script: 04-computation/fc3_real_affine_coordinate_quadratic_spline_thm3132.py
+output: 05-knowledge/results/fc3_real_affine_coordinate_quadratic_spline_thm3132.out
 ---
 
-# THM-3129 — real affine-coordinate quadratic phases on the triangle
+# THM-3132 — real affine-coordinate quadratic phases on the triangle
 
 ## 1. Statement and exact scope
 
@@ -326,8 +326,8 @@ factorization geometry and is not silently included here.
 Run
 
 ```bash
-python3 04-computation/fc3_real_affine_coordinate_quadratic_spline_thm3129.py
-python3 -O 04-computation/fc3_real_affine_coordinate_quadratic_spline_thm3129.py
+python3 04-computation/fc3_real_affine_coordinate_quadratic_spline_thm3132.py
+python3 -O 04-computation/fc3_real_affine_coordinate_quadratic_spline_thm3132.py
 ```
 
 The frozen controls verify:
@@ -343,6 +343,6 @@ The normal and optimized executions are byte-identical.  QED in the stated
 real/collinear affine-coordinate scope.
 
 ```text
-source sha256 = 5b5882a3294c05661c9d36cf0a5f3d6c17c7571c30c2eae413f4a0a0f121f9ff
-output sha256 = 6292a290d43a64dfaf4c4e70ce0fe15432c952272aa228daa5682b386e725c3d
+source sha256 = 9bfd4a002cd1c7a8efbc047d4b357ee1064f9b9bc7e5d6764c146eb699382d81
+output sha256 = f7becf59f9a49114a9595c5d223c6313691d070747c70b1e1c250dc5bcdffc97
 ```
