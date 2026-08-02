@@ -186,11 +186,13 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   against integer columns.  This is column-reversal sign regularity, not
   moment positivity: the order-two minor is negative.  For THM-3053's
   Beta--Gamma inventory, terminal prefix zero forces finite rank, while
-  positive terminal prefix remains an OPEN reversal problem.  THM-3060/3062
-  give the physical hierarchy: three slots have a positive face at every
-  width; at four slots it cancels but a fixed-low, fixed-gap transverse Gram
-  term is eventually positive on affine clocks.  These are fixed finite
-  banks, not one all-order Stieltjes tail.
+  positive terminal prefix remains an OPEN reversal problem.  THM-3060/3062/
+  3063 give the physical hierarchy: the three-slot face is positive; the
+  four-slot face survives one transverse level later; and every fixed-low
+  terminal pair suspends precisely its transverse `(k-2)`-slot resultant.
+  Thus five slots are unconditional by THM-2824, while six slots first meet
+  arbitrary four-slot SFC.  These give fixed finite affine-clock banks, not
+  one all-order Stieltjes tail.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent
