@@ -306,7 +306,7 @@ def main():
         [
             "direction_screen=ray_quotient_and_Farkas_checks_close_a_superset_of_every_actual_projected_assignment",
             "direction_terminal=duplicate_permitting_two_high_gap_plus_wall_at_least_one_high_forces_exactly_one_high;the_one_high_bank_uses_high_ray_suprema_and_therefore_enlarges_the_actual_assignment_set",
-            "direction_carrier=weak_complete_cells_include_strict_open_safe_points;projected_support_above_ceil(d/7)_forces_the_THM2941_completed_carrier_and_THM1166_contradiction",
+            "direction_carrier=every_weak_complete_cell_is_wholly_contained_in_the_strict_open_safe_set;projected_support_above_ceil(d/7)_leaves_one_whole_fixed_safe_cell_outside_every_translated_high_band_and_forces_the_THM2941_completed_carrier_and_THM1166_contradiction",
             f"promotion_consequence=ledger {LEDGER_BEFORE}-{LAYER_ROWS}={LEDGER_AFTER};projected_k3_cap:z1<={NEXT_CAP};next_layer:z1={NEXT_LEVEL}_rows:{next_census[0]}",
             f"next_layer=z1:{NEXT_LEVEL};rows:{next_census[0]};wall:{next_census[1]};order:{next_census[2]};row_order_sha256:{EXPECTED_NEXT_ROW_ORDER_SHA256};status:occupied_unscouted_handoff",
             "scope=projected_k3_necessary_atlas_only;z1=230_is_occupied_but_unscouted;no_physical_cover_classification_outside_the_projection;no_k<=1_or_final_rung_or_LRC14_claim",

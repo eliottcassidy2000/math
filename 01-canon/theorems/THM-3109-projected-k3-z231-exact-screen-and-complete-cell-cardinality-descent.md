@@ -15,8 +15,8 @@ depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
 script: 04-computation/lrc14_j7_k3_z231_exact_screen_complete_cell_cardinality_descent_thm3109.py
 output: 05-knowledge/results/lrc14_j7_k3_z231_exact_screen_complete_cell_cardinality_descent_thm3109.out
-script_sha256: 989e16af9980806d7a2906a9a72b3816ee7f363d2474546916887f047c47d68d
-output_sha256: ef73e01c20786e6eeae38de7b321200a68292a7bb1d360aa6c5606736f22254d
+script_sha256: f40df5b485883111fa2245cbb76fc43d8f90418a1529ff022adfeb73a1972e83
+output_sha256: 9126830064e15e7e7f4c7128f8cbb968c95e660a8dbf9171657d23c3aeb87e66
 semantic_sha256: 86fdf94cb22cd0353a28f8a47251a4c175193188de0fe78676c6e9e7d6ff899b
 hash_basis: LF-normalized bytes
 ---
@@ -172,8 +172,10 @@ SHA-256(J)=02c3c649a0cdd6808479821077de9fe142fde6efc7fc6e3daa5380276d403b93.
 It agrees cell-for-cell with both inherited scalar and vector
 implementations.  The weak inequalities are load-bearing: the minimum
 endpoint slack is zero at cell `35100`, body label `11`, left endpoint.
-Because the weak carrier contains every strict-open safe point, this is the
-correct relaxation direction.
+Because the danger comb is strict-open, every closed cell selected by
+`(14)` is wholly contained in the safe set.  Thus `J` is an inner
+complete-cell carrier; it need not contain safe points from partial boundary
+cells.
 
 For a high denominator `d`, project `J` modulo `d` and compare with the
 translated high-band capacity `kappa(d)=ceil(d/7)`:
@@ -184,7 +186,8 @@ translated high-band capacity `kappa(d)=ceil(d/7)`:
 | `51480` | `39624` | `7355` | `32269` | `e28a6df29f568e4b3835555cfe11ab504413cea3202a19e7f5f575b86eb2fb5f` |
 
 In both cases the support is larger than any translated strict high-danger
-band.  THM-2984 therefore gives `P_(E,Z)=T`.  The implication from
+band.  Hence every translated high band misses at least one whole
+fixed-safe cell, and THM-2984 gives `P_(E,Z)=T`.  The implication from
 THM-2941 used here is only
 
 ```text
@@ -208,8 +211,8 @@ optimized runs recompute the whole screen and carrier, pass every frozen
 gate, and byte-match the stored transcript.  Their LF hashes are
 
 ```text
-script:   989e16af9980806d7a2906a9a72b3816ee7f363d2474546916887f047c47d68d
-output:   ef73e01c20786e6eeae38de7b321200a68292a7bb1d360aa6c5606736f22254d
+script:   f40df5b485883111fa2245cbb76fc43d8f90418a1529ff022adfeb73a1972e83
+output:   9126830064e15e7e7f4c7128f8cbb968c95e660a8dbf9171657d23c3aeb87e66
 semantic: 86fdf94cb22cd0353a28f8a47251a4c175193188de0fe78676c6e9e7d6ff899b
 ```
 
