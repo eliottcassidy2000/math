@@ -1,0 +1,13 @@
+THM-3086 ARBITRARY CLUSTER-COMPOSITION CHAMBERS
+layer_cells=7768 survivors=288
+composition_cells_K4_to_K12=511 K12_sectors=256
+local_gap=q1:gamma_O;q>=2:m*log((m+1)/m)
+condition=J_parent(delta)<local_gap;all_internal_prefixes_controlled
+carrier=S3^(K!/6)*prod_r U_r^(K!/r)*prod_nodes E_i^(K!*m_i!/k_i!)
+every_node_alternant_exponent=K!
+K8_parts_2_3=E45^2016*E678^120;safe_ratio=1/10000000
+K8_threshold_in=(0.00000017320136922,0.00000017320136924)
+alternant_clutch_controls=56 unique_row_blocks=PASS
+multiblock_tied_permutation_controls=360
+scope=physical_fixed-gap_clusters;growing-gap_clutch_is_symbol_only
+all_exact_checks=PASS
