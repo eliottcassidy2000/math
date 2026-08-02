@@ -30,8 +30,10 @@ depends_on:
   - THM-3050-rational-product-gamma-radial-nullcone-and-critical-borel-order
 related:
   - THM-2000-support-harmonic-abel-dini-figurate-surface
+  - THM-2023-gmc2-hyperbessel-boundary-laguerre-polya
   - THM-3051-stieltjes-multiplier-gamma-flow-and-moving-lower-hankel-boundary
   - THM-3053-beta-gamma-prefix-transport-and-multiplicative-holotopy-cone
+  - THM-3054-affine-moving-lower-tropical-beta-gamma-tail-holotopy
 script: 04-computation/gmc_product_gamma_reciprocal_dual_thm3056.py
 output: 05-knowledge/results/gmc_product_gamma_reciprocal_dual_thm3056.out
 script_sha256: 66f50dc1bb117b053908add0ce2689f8f1533930d4deaf9e40069b7d427c2690
@@ -436,6 +438,28 @@ adjacent Beta edges are its elementary path moves.  Here ordered prefix
 **products** force total nonnegativity; there prefix **sums** characterize
 feasible multiplicative transport.  The shared mechanism is path incidence,
 not a metaphorical resemblance between addition and multiplication.
+
+The incoming THM-3054 carrier also marks the next boundary exactly.  For a
+THM-3053 signed inventory `n_0,...,n_N` with nonnegative prefixes
+`S_j=sum_(u<=j)n_u`, its canonical Beta--Gamma factorization gives the
+reciprocal normal form
+
+```text
+const * c^(-m)
+ * product_(j=0)^(N-1)(m+a+j)^(S_j) / (a+N)_m^(S_N).                (30)
+```
+
+If `S_N=0`, `(30)` is only a polynomial: its Hankel kernel has finite rank, so
+strict all-order sign regularity is impossible.  For `S_N>0`, extending `(11)`
+from pure Gamma carriers to this net-Gamma part of the Beta--Gamma prefix cone
+is neither a generic Hadamard question nor an opaque resultant question.  It
+is the precise problem of multiplying a reciprocal-Gamma kernel by a
+polynomial whose zeros are negative.  As a function of a continuous index,
+`(30)` lies in the Laguerre--Polya class and has infinitely many negative
+zeros; what is still missing is a proof that its additive kernel has the
+required reversal total positivity.  THM-3054's tail carrier has positive net
+Gamma count, but cannot be imported into `(11)` until that extra kernel
+statement is proved.
 
 This suggests a reusable extension criterion.  Any kernel reducible, by
 positive diagonal scalings and reversal of its parameter order, to evaluations
