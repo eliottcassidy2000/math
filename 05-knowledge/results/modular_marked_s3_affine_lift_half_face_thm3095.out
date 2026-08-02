@@ -1,0 +1,16 @@
+THM3095_MARKED_AFFINE_LIFT_FRAME
+s4_elements=24 matching_quotient=6 kernel=4
+marked_s3_pairs=6 exact_affine_lifts=48
+split_lifts=24 full_lifts=24
+lift_quadruples=48
+full_cooccurrence_triples=24 oriented_flags=4*3*2
+unoriented_flags=12 orientations_per_flag=2
+full_quotient_fibres=6x4_owners all_quotient_fibres=6x4_ownersx2_branches
+half_face_formula=w2=eta*d
+explicit_completions=split_(b,c(b))_full_(o,c^-1(b))
+full_direction_counts=8,8,8
+quartic_root_controls=4 signed_origin_hostile=2_to_-2
+representative_split=(23)+(123) word=(13)
+representative_full=(01)+(123) word=(0123) square=(02)(13)
+semantic_digest=d9ff5c9ddb62bd75aa157263872e67bfbd0904577f95926a3ab42fd2c34fa3d1
+ALL_CHECKS_PASS
