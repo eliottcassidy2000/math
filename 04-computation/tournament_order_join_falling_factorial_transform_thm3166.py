@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for THM-3164.
+"""Exact companion for THM-3166.
 
 The direct engine counts Hamiltonian paths on every vertex subset and then
 unordered spanning path covers by their least-vertex component.  It audits the
@@ -12,13 +12,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 from functools import lru_cache
+from itertools import permutations
 from math import comb, factorial
 from pathlib import Path
 
 
 HERE = Path(__file__).resolve()
 ROOT = next(parent for parent in HERE.parents if (parent / "00-navigation").is_dir())
-OUTPUT = ROOT / "05-knowledge/results/tournament_order_join_falling_factorial_transform_thm3164.out"
+OUTPUT = ROOT / "05-knowledge/results/tournament_order_join_falling_factorial_transform_thm3166.out"
 
 
 def require(condition: bool, message: object) -> None:
@@ -140,6 +141,38 @@ def path_colour_value(profile, t: int) -> int:
     return sum(profile[d] * falling_value(t, d) for d in range(1, len(profile)))
 
 
+def backward_distribution(n: int, code: int):
+    """Count permutations by backward consecutive adjacencies."""
+    counts = [0] * n
+    for order in permutations(range(n)):
+        backward = sum(
+            not beats(n, code, order[i], order[i + 1])
+            for i in range(n - 1)
+        )
+        counts[backward] += 1
+    return tuple(counts)
+
+
+def negative_colour_value(backward, m: int) -> int:
+    """The positive reciprocity coordinate (-1)^n Q_T(-m)."""
+    n = len(backward)
+    return sum(backward[b] * comb(m + b, n) for b in range(n))
+
+
+def recover_backward_from_negative(profile):
+    """Triangular inversion from Q_T(-1),...,Q_T(-n)."""
+    n = len(profile) - 1
+    recovered = [0] * n
+    for m in range(1, n + 1):
+        b = n - m
+        value = (-1) ** n * path_colour_value(profile, -m)
+        recovered[b] = value - sum(
+            recovered[c] * comb(m + c, n)
+            for c in range(b + 1, n)
+        )
+    return tuple(recovered)
+
+
 def falling_power_rows(n: int):
     rows = [(1,)]
     for d in range(1, n + 1):
@@ -242,6 +275,8 @@ def main() -> None:
 
     # All labelled tournaments through order five.
     tournament_checks = 0
+    negative_reciprocity_checks = 0
+    negative_inverse_checks = 0
     scc_checks = 0
     for n in range(1, 6):
         for code in range(1 << comb(n, 2)):
@@ -249,6 +284,17 @@ def main() -> None:
             power = power_polynomial(profile)
             require(profile_from_power(power) == profile, ("transform inverse", n, code))
             require(path_colour_value(profile, 1) == profile[1], ("endpoint", n, code))
+            backward = backward_distribution(n, code)
+            for m in range(1, 8):
+                require(
+                    (-1) ** n * path_colour_value(profile, -m)
+                    == negative_colour_value(backward, m),
+                    ("negative-colour reciprocity", n, code, m),
+                )
+                negative_reciprocity_checks += 1
+            require(recover_backward_from_negative(profile) == backward,
+                    ("negative-colour inverse", n, code))
+            negative_inverse_checks += 1
             tournament_checks += 1
 
             product = (1,)
@@ -260,6 +306,8 @@ def main() -> None:
             require(product == power, ("SCC product", n, code, scc_components(n, code)))
             scc_checks += 1
     require(tournament_checks == scc_checks == 1099, (tournament_checks, scc_checks))
+    require(negative_reciprocity_checks == 7693, negative_reciprocity_checks)
+    require(negative_inverse_checks == 1099, negative_inverse_checks)
 
     # Every ordered pair of labelled tournaments through order four.
     small = tuple(
@@ -317,21 +365,25 @@ def main() -> None:
     require(power_polynomial(c3) == (0, 2, 0, 1), c3)
 
     lines = [
-        "TOURNAMENT ORDER-JOIN FALLING-FACTORIAL TRANSFORM -- THM-3164 EXACT COMPANION",
+        "TOURNAMENT ORDER-JOIN FALLING-FACTORIAL TRANSFORM -- THM-3166 EXACT COMPANION",
         "status=PROVED+VERIFIED-EXACT;direct subset Hamilton-path/path-cover engine",
         f"labelled_tournament_controls={tournament_checks};orders=1..5;transform_inverse=PASS;endpoint=PASS",
+        f"negative_colour_reciprocity_controls={negative_reciprocity_checks};m=1..7;positive_binomial_sum=PASS",
+        f"negative_colour_inverse_controls={negative_inverse_checks};Q(-1..-n)_to_backward_distribution=PASS",
         f"SCC_factorization_controls={scc_checks};full_profile_transform_product=PASS",
         f"ordered_join_controls={join_checks};all ordered pairs of 75 labelled tournaments through order 4",
         "join_kernel=sum_k binom(a,k)binom(b,k)k!*x^(a+b-k);direct_profiles=PASS",
         f"Laguerre_basis_controls={laguerre_checks};a<=b<=20;kernel=a!*x^b*L_a^(b-a)(-x)",
         f"repeated_join_closed_form_controls={repeated_checks};75 seeds;r=1..5;all depths=PASS",
         "transform=Q_T(t)=sum_d pc_T(d)*(t)_d;Q_(A join B)=Q_A*Q_B",
+        "negative_reciprocity=(-1)^n*Q_T(-m)=sum_pi binom(m+b_T(pi),n);m>=1",
+        "negative_endpoint=Q_T(-1)=(-1)^n*H(T);negative_values_recover_full_backward_jet",
         "inverse=pc_T(d)=Delta^d Q_T(0)/d!;H(T)=Q_T(1)",
         "repeated=pc_(A^join r)(d)=1/d!*sum_j(-1)^(d-j)binom(d,j)Q_A(j)^r",
         f"hostile_order_loss=K1_join_C3 and C3_join_K1 share profile {source_c3}",
         f"cyclic_boundary=Q_transitive3={power_polynomial(transitive3)};Q_C3={power_polynomial(c3)}",
         "scope=order-join/SCC chains;not cyclic substitution;not arbitrary tournament complexity collapse",
-        "reproduction=python3 04-computation/tournament_order_join_falling_factorial_transform_thm3164.py",
+        "reproduction=python3 04-computation/tournament_order_join_falling_factorial_transform_thm3166.py",
         f"source_sha256={sha256(HERE)}",
         "all_exact_controls=PASS",
     ]

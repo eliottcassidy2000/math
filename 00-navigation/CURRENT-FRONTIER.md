@@ -213,7 +213,9 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - THM-1805 makes directed triangles the Vandermonde-cancellation atom; THM-1862/1936 make `H` and signed Rédei data multiplicative under order-join while `c3` is additive.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md) makes `d_iso` exactly `l1` on fixed order-join patches by image-swap uncrossing; the ambient quotient still has triangles and is not a partial cube.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) gives the scalar iff-transitive boundary; THM-2242/2249/2256 give its response, envelope, and scale limit.
-  THM-3121/3134 give the `C3` profile/jet; THM-3164 diagonalizes order-join and gives fixed-depth exponential sequences. Cyclic quotients need the full jet.
+  THM-3121/3134 give the `C3` profile/jet; THM-3166 diagonalizes order-join,
+  gives exponential sequences and positive negative-colour duality.
+  Cyclic quotients need full jets.
 - THM-1880/1885 give the Chebyshev--Pell/`BS(1,2)^+` transitive frame.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
@@ -294,7 +296,7 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   `21`; and distinct ancestry FINITE-EXACT through center `10^8`, ALL-n OPEN.
 - THM-3056 gives integer-shape hypergeometric supports with abscissa zero and
   prime shadow off-scale; THM-3152 gives finite Newton barcodes; THM-3156 an
-  exact period-three LRC ray; THM-3164 fixed-depth SCC-join exponential sums.
+  exact period-three LRC ray; THM-3166 SCC-join exponential sums and reciprocity.
   None transfers the underlying predicate.
 - **EXACT identities / heuristic bridge:** corrected HYP-8820 puts caterer,
   cake, Moser, bagel, and Fibonacci in one Pascal array and proves
@@ -369,7 +371,7 @@ Classify profiles under support operations; study analytic continuation and auto
   open.  THM-2799/2800/2805/2808 complete accessory `e=2`; THM-2817 the sextic `e=3`; THM-2840 the heptic `T_7` carrier.
   THM-3123 completes the heptic atlas; THM-3133 isolates the resonant equality
   cells; THM-3151 excludes every `(D,D)` cell and proves the balanced chart
-  floor `N>=4D`. THM-3165 separates diagonal, constant-field and global-owner
+  floor `N>=4D`. THM-3167 separates diagonal, constant-field and global-owner
   gates; no bounded marked jet decides the first.
   General chart entry and `JC(2)`/`DC(2)` remain open.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152 close `r<=1098` plus

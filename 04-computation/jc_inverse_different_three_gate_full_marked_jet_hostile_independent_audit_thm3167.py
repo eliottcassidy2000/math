@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Independent branch/regular-representation audit for THM-3165.
+"""Independent branch/regular-representation audit for THM-3167.
 
 Unlike the primary companion, this script does not use a quartic resultant
 or reduce the coefficientwise q formula first.  It evaluates the supplied
@@ -129,7 +129,7 @@ def main() -> None:
     require(sp.factor(inverse_determinant - 1 / (4 * U)) == 0,
             "degree-four hostile inverse determinant failed")
 
-    print("THM-3165 independent branch and regular-representation audit")
+    print("THM-3167 independent branch and regular-representation audit")
     print("companion_CRT_values=(r^3*t,-3u*y^2/r)")
     print("direct_forward_Jacobians=(r^-3,r); total_product=1")
     print("CRT_q_branch_scales=(r^3,r^-1) relative_to_f_T")
@@ -141,4 +141,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

@@ -1,4 +1,4 @@
-THM-3165 inverse-different three-gate and full marked-pair jet hostile
+THM-3167 inverse-different three-gate and full marked-pair jet hostile
 target_shear_covariance=q_preserved_exactly
 supplied_companion_q=r^-1*f_T+(r^3-r^-1)*(T^3-t) mod f
 physical_packet=(r^-3,r,r,r); total_product=1; pointed_ratio=r^4

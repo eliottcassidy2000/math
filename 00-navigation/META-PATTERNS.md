@@ -381,4 +381,4 @@ typed carrier `P_i`; test cumulative intersections and retain a transition
 cocycle if witnesses move. A fixed law beating every adversary is a coherent
 mixed section (THM-3156); per-adversary maxima are only fibres. **Caution:**
 fibres need not glue; Helly/Farkas makes convex failure finite. **Evidence:**
-THM-2292/3144/2658/3156; THM-3152 intersects supports; THM-3164 retains SCC order.
+THM-2292/3144/2658/3156; THM-3152 intersects supports; THM-3166 retains SCC order.

@@ -1,4 +1,4 @@
-THM-3165 independent branch and regular-representation audit
+THM-3167 independent branch and regular-representation audit
 companion_CRT_values=(r^3*t,-3u*y^2/r)
 direct_forward_Jacobians=(r^-3,r); total_product=1
 CRT_q_branch_scales=(r^3,r^-1) relative_to_f_T

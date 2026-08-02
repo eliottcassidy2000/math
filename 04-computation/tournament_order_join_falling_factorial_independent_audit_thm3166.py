@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Independent audit of THM-3164.
+"""Independent audit of THM-3166.
 
 This file does not import the main subset-DP engine.  It obtains path-cover
 profiles from permutation backward-adjacency cuts, checks joins directly, and
@@ -17,12 +17,12 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve()
 ROOT = next(parent for parent in HERE.parents if (parent / "00-navigation").is_dir())
-MAIN = ROOT / "04-computation/tournament_order_join_falling_factorial_transform_thm3164.py"
-MAIN_OUTPUT = ROOT / "05-knowledge/results/tournament_order_join_falling_factorial_transform_thm3164.out"
-OUTPUT = ROOT / "05-knowledge/results/tournament_order_join_falling_factorial_independent_audit_thm3164.out"
+MAIN = ROOT / "04-computation/tournament_order_join_falling_factorial_transform_thm3166.py"
+MAIN_OUTPUT = ROOT / "05-knowledge/results/tournament_order_join_falling_factorial_transform_thm3166.out"
+OUTPUT = ROOT / "05-knowledge/results/tournament_order_join_falling_factorial_independent_audit_thm3166.out"
 
-EXPECTED_MAIN_SHA256 = "331c49103e029fa35f90c3a7967248c4bcc7feda6bbb57b18d0af4f0bee96e4b"
-EXPECTED_MAIN_OUTPUT_SHA256 = "295ba7ea221824aa091f5fc711775a6c0626450610df79ac25b7939c53544bec"
+EXPECTED_MAIN_SHA256 = "5d38326311fc8fea8976f105348b131a106b7d0f2b912b50937f969152d310fd"
+EXPECTED_MAIN_OUTPUT_SHA256 = "55f31dbf60b23184d69167a26d39fad192a3230bb2163cc046c8b12df3885eff"
 
 
 def require(condition: bool, message: object) -> None:
@@ -59,6 +59,35 @@ def cut_profile(n: int, code: int):
         require(ordered % factorial(d) == 0, (n, code, d, ordered))
         profile[d] = ordered // factorial(d)
     return tuple(profile)
+
+
+def backward_distribution(n: int, code: int):
+    counts = [0] * n
+    for order in permutations(range(n)):
+        backward = sum(
+            not beats(n, code, order[i], order[i + 1])
+            for i in range(n - 1)
+        )
+        counts[backward] += 1
+    return tuple(counts)
+
+
+def negative_binomial_sum(backward, m: int) -> int:
+    n = len(backward)
+    return sum(count * comb(m + b, n) for b, count in enumerate(backward))
+
+
+def recover_backward_from_negative(profile):
+    n = len(profile) - 1
+    recovered = [0] * n
+    for m in range(1, n + 1):
+        b = n - m
+        positive = (-1) ** n * qvalue(profile, -m)
+        recovered[b] = positive - sum(
+            recovered[c] * comb(m + c, n)
+            for c in range(b + 1, n)
+        )
+    return tuple(recovered)
 
 
 def join_code(n: int, first: int, m: int, second: int) -> int:
@@ -160,20 +189,38 @@ def main() -> None:
     require(sha256(MAIN_OUTPUT) == EXPECTED_MAIN_OUTPUT_SHA256,
             ("main output changed", sha256(MAIN_OUTPUT), EXPECTED_MAIN_OUTPUT_SHA256))
     main_output = MAIN_OUTPUT.read_text(encoding="utf-8")
-    for token in ("labelled_tournament_controls=1099", "ordered_join_controls=5625",
+    for token in ("labelled_tournament_controls=1099",
+                  "negative_colour_reciprocity_controls=7693",
+                  "negative_colour_inverse_controls=1099",
+                  "ordered_join_controls=5625",
                   "repeated_join_closed_form_controls=4275", "all_exact_controls=PASS"):
         require(token in main_output, ("missing main token", token))
 
     profiles = {}
     tournament_checks = 0
+    negative_reciprocity_checks = 0
+    negative_inverse_checks = 0
     for n in range(1, 6):
         for code in range(1 << comb(n, 2)):
             profile = cut_profile(n, code)
+            backward = backward_distribution(n, code)
             values = tuple(qvalue(profile, j) for j in range(n + 1))
             require(inverse_from_values(values) == profile, ("inverse", n, code))
+            for m in range(1, 8):
+                require(
+                    (-1) ** n * qvalue(profile, -m)
+                    == negative_binomial_sum(backward, m),
+                    ("negative reciprocity", n, code, m),
+                )
+                negative_reciprocity_checks += 1
+            require(recover_backward_from_negative(profile) == backward,
+                    ("negative inverse", n, code))
+            negative_inverse_checks += 1
             profiles[n, code] = profile
             tournament_checks += 1
     require(tournament_checks == 1099, tournament_checks)
+    require(negative_reciprocity_checks == 7693, negative_reciprocity_checks)
+    require(negative_inverse_checks == 1099, negative_inverse_checks)
 
     # Complete direct joins of total order at most six, plus a hostile 4+4 grid.
     join_pairs = []
@@ -244,15 +291,17 @@ def main() -> None:
     require(tuple(qvalue(c3, j) for j in range(4)) == (0, 3, 12, 33), c3)
 
     lines = [
-        "TOURNAMENT ORDER-JOIN FALLING-FACTORIAL TRANSFORM -- THM-3164 INDEPENDENT AUDIT",
+        "TOURNAMENT ORDER-JOIN FALLING-FACTORIAL TRANSFORM -- THM-3166 INDEPENDENT AUDIT",
         "status=INDEPENDENTLY HOSTILE-AUDITED;permutation-cut profile engine;no main import",
         f"permutation_profile_controls={tournament_checks};all labelled tournaments orders 1..5",
+        f"negative_colour_reciprocity_controls={negative_reciprocity_checks};m=1..7;direct_backward_distribution=PASS",
+        f"negative_colour_inverse_controls={negative_inverse_checks};triangular_recovery=PASS",
         f"direct_join_controls={len(join_pairs)};all total-order<=6 plus 256 selected order-8 joins",
         f"falling_basis_controls={basis_checks};ordinary-power identity through a<=b<=32",
         f"fixed_depth_exponential_controls={repeated_checks};five seeds;direct convolution=PASS",
         f"order_loss_hostile=profiles_equal:{source_profile};scores={source_scores}!={sink_scores}",
         "cyclic_hostile=Q_T3(j)=(0,1,8,27);Q_C3(j)=(0,3,12,33);product law restricted to order-join",
-        "main_token_audit=1099 tournaments;5625 joins;4275 repeated controls;PASS",
+        "main_token_audit=1099 tournaments;7693 negative values;1099 negative inverses;5625 joins;4275 repeated controls;PASS",
         f"main_sha256={EXPECTED_MAIN_SHA256}",
         f"main_output_sha256={EXPECTED_MAIN_OUTPUT_SHA256}",
         "normal_vs_python_O=BYTE_IDENTICAL",

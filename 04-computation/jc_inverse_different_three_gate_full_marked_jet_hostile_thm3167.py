@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for the inverse-different three-gate theorem (THM-3165).
+"""Exact companion for the inverse-different three-gate theorem (THM-3167).
 
 The script verifies four logically separate points:
 
@@ -168,7 +168,7 @@ def main() -> None:
     require(sp.factor(q_positive - sp.diff(f4, T)) == 0,
             "punctured unit-Jacobian control failed")
 
-    print("THM-3165 inverse-different three-gate and full marked-pair jet hostile")
+    print("THM-3167 inverse-different three-gate and full marked-pair jet hostile")
     print("target_shear_covariance=q_preserved_exactly")
     print("supplied_companion_q=r^-1*f_T+(r^3-r^-1)*(T^3-t) mod f")
     print("physical_packet=(r^-3,r,r,r); total_product=1; pointed_ratio=r^4")
@@ -182,4 +182,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
