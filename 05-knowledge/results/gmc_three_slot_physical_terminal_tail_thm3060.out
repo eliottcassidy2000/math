@@ -1,0 +1,11 @@
+THM-3060 THREE-SLOT PHYSICAL TERMINAL FACE AND TAIL HOLOTOPY
+all_large_face_cells=56 line_resultant_cells=8
+physical_resultant_cells=375 all_positive=1
+physical_resultant_digest=5e3841e27f66db29e512ffdb82e418af56faa70e5dadf1e8da8ebd7c2b58afbc
+ratio_slope_cells=16 target_exponent=-7/2
+carrier_minor_cells=1008
+homotopy_minor_cells=9072
+finite_control_thresholds=[(1, 1, 2), (1, 2, 2), (1, 3, 2), (2, 1, 2), (2, 2, 2), (2, 3, 2), (3, 1, 2), (3, 2, 2), (3, 3, 2), (4, 1, 3), (4, 2, 3), (4, 3, 3)]
+higher_slot_rank_collapse_cells=6
+scope=normalized intrinsic physical inclusion resultant;not raw chart or wall-stripped core
+all_exact_checks=PASS
