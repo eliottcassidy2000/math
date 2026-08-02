@@ -27,13 +27,16 @@ status: >
   a bank of 2,442 of the 3,003 bodies, leaving 561 uncovered rather than
   proving them impossible.  A recursive cap-aware projective-CSP and
   located-transport chain closes every body for spread D>=6 and base m>=D,
-  and a residue-class corner refinement extends this to 4m>=3D.
+  and residue-class corner refinements extend this to 3m>=2D.
   At the endpoint the new zero channel 1:2 completes the balanced gain
   triangle (3/2)(4/3)=2; orientation-split tails close its four unconstrained
   bodies.  Past cap two the balanced triangle becomes interior and no
   full-cap component remains; 93 located policies and eleven tail lanes close
-  the cap-7/3 residual.  The remaining reflected certificate-failure locus is
-  confined to those 561 bodies in D>=6,1<=m<3D/4;
+  the cap-7/3 residual.  At cap 5/2 all 65 forced-full zero components contain
+  the old triangle and their unique prime-five edge is a bridge;
+  exact located policies and tails close all 172 traps.  The remaining
+  reflected certificate-failure locus is confined to those 561 bodies in
+  D>=6,1<=m<2D/3;
   the finite censuses, full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is internal
   exact computation and proof audit; there is no Lean or external peer-review
@@ -265,6 +268,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_reflected_one_cone_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_three_quarter_cone_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_three_quarter_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_two_thirds_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_two_thirds_cone_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_phase_zero_gain_atlas_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_phase_zero_gain_atlas_thm2941.out
   - 04-computation/lrc14_j7_k3_z239_gap238_z237_compositional_descent_thm3061.py
@@ -1123,12 +1128,27 @@ two bodies require an orientation split at ratio one.  Hence
 D>=6 and 4m>=3D  ==>  every reflected packet closes.            (25i13)
 ```
 
+The next cone has projective cap `5/2`.  On the integer cone `3m>=2D`, the
+two parity classes put the uniform transport maximum at `(D,m)=(6,4)`, with
+`|eta|<=29/165`.  The complete cap-aware bank has `15,995` primitive
+channels.  Its two-order CSP closes `389/561` bodies and leaves `172` traps.
+Exactly `65` traps have a forced full-span zero component.  Each contains the
+old balanced triangle, has all four gains `4/3,3/2,2,5/2`, and has exactly one
+`5/2` edge.  Since the new gain is the only edge with nonzero prime-five
+coordinate, it cannot lie on a multiplicative cycle; the exact graph audit
+indeed makes it a bridge in all `65` components.  The remaining traps close
+by `1,566` oriented controls on `160` located policies and `426` exhaustive
+heads on fourteen analytic tail lanes.  Therefore
+
+```text
+D>=6 and 3m>=2D  ==>  every reflected packet closes.            (25i13a)
+```
+
 Consequently the current reflected obligation is confined to the `561`
-bodies in the wedge `D>=6,1<=m<3D/4`.  This is a
-sufficient-certificate residual, not a physical-survivor census.  The next
-qualitative boundary is cap `5/2`, where a new phase-zero gain enters.  In
-fact the correction floor `c>=-12/49` makes phase zero imply `PQ<=12`, so the
-global zero-gain atlas is exactly
+bodies in the wedge `D>=6,1<=m<2D/3`.  This is a
+sufficient-certificate residual, not a physical-survivor census.  More
+globally, the correction floor `c>=-12/49` makes phase zero imply `PQ<=12`,
+so the zero-gain atlas is exactly
 
 ```text
 4/3, 3/2, 2, 5/2, 3, 4, 5, 6.                         (25i14)
@@ -1136,8 +1156,10 @@ global zero-gain atlas is exactly
 
 In the prime-exponent lattice `(2,3,5)`, the prefix rank across `(25i14)` is
 `1,2,2,3,3,3,3,3` and its circuit nullity is
-`0,0,1,1,2,3,4,5`.  Thus cap two creates the first circuit, while cap `5/2`
-adds an independent prime-five direction rather than a new circuit.
+`0,0,1,1,2,3,4,5`.  Thus cap two creates the first circuit, cap `5/2`
+attaches an independent coordinate by a bridge, and the next boundary cap
+`3` adds the dependent gain relation `(3/2)2=3`.  The latter should be tested
+as a second-core rather than another rank-growth transition.
 
 There is an exact all-scale functional form behind the discrepancy tail.
 Write the carrier components as
@@ -2487,12 +2509,12 @@ ordinary and optimized replays are byte-identical.
 
 The reflected wedge assembly
 `04-computation/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.py`
-pins sixteen LF-normalized terminal sources and transcripts, including the
-edge-eight block and all five recursive cone refinements.  Its
+pins seventeen LF-normalized terminal sources and transcripts, including the
+edge-eight block and all six recursive cone refinements.  Its
 source/output/semantic SHA-256 values are respectively
-`bf1ecb29c6df2f5e97dadb35a4d39be8d9db3b70678db487964ebbfaaf448aa6`,
-`93bed962c7f30fbf0cf3c585226250f3d992c0b45beb9a156620f7ee8aa7db07`,
-and `9505b322825e5c5e767942413b462a3fd7c32ad297a9f6d36fb998f85d4ba405`.
+`4af2f77fee925e3f57695d12ce8bbffb485594062df2bd513c51f6f423e9c076`,
+`f4825baeed227fae5721c121d59a03b5d8231d948d16dd2bb95b0ce97ebb76e1`,
+and `9bb38234b47b63e28958b31950870ed2f2a14b99f3afcb11eaecd8be27b23e1f`.
 Fresh ordinary and optimized replays are byte-identical to each other and to
 the stored transcript.  The edge-eight terminal source/output/semantic hashes
 are `3f2552c7e316a6da821f8d78f859aa9d73b2d8b58081c0a31f8d233f37eec2f0`,
@@ -2504,10 +2526,16 @@ The global phase-zero atlas source/output/semantic hashes are
 `bab96575535e8fa314d0a6e67e6304242f600048d64d09bd632ba01b55ab9513`,
 and `8a934cf2a5ecbc0e54a720e89d162be89fd0c4d932d1019ef167cb64443b0b18`;
 ordinary and optimized replays are byte-identical.
+The cap-`5/2` two-thirds-cone source/output/semantic hashes are
+`e6e64c909c6bfcc776eaf6bf2ad210f75675a6a32a46ead70d8d29a37f607eb3`,
+`e77929c87f9d9f8fb7ce3a347c48522e87f63fa7c7085eb9e2cd8fe0bb4e4a90`,
+and `b34db3e25b9e4c81c1549f1ec7c7ab78e935ec778610daf617934b66b3a47304`;
+both interpreter modes reproduce all `1,566+426` controls and the 65 bridge
+components exactly.
 
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,
-close the `561`-body reflected wedge `D>=6,1<=m<3D/4`, finish the remaining
+close the `561`-body reflected wedge `D>=6,1<=m<2D/3`, finish the remaining
 `k=2,3` finite decision trees, classify the zero/one-aligned multi-drift
 address hypergraph, close the six-body/seven-tail rung, or prove LRC(14).
 The independent THM-2928 divisor-status route closes `k=4`; THM-2980/2995

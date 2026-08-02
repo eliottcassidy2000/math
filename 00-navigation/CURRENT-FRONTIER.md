@@ -25,7 +25,7 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`. THM-2928 empties aligned `k>=4`; THM-2995/3061 cap projected `k=2,3` at `1579/236`; the audited THM-2941 assembly leaves the reflected bank-uncovered wedge: `561` bodies, `D>=6,1<=m<3D/4`.
+Direct frontier: `<=6`. THM-2928 empties aligned `k>=4`; THM-2995/3061 cap projected `k=2,3` at `1579/236`; THM-2941 leaves the reflected wedge: `561` bodies, `D>=6,1<=m<2D/3`.
 This is not a physical-survivor classification; arbitrary `k<=1`, the rung, and LRC remain open. Septimal floor/exception plus located phase cut the raw five-drift ledger
 `951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
@@ -37,8 +37,8 @@ THM-2981/3033/3041/3052/3061 close all projected `k=3` rows through
 and the next occupied layer has one row.
 In the reflected gain graph, cap two forces the phase-zero triangle
 `(3/2)(4/3)=2`; by cap `7/3` it is interior and no full-cap component remains.
-The global zero-gain atlas is exactly `4/3,3/2,2,5/2,3,4,5,6`; cap `5/2`
-adds a new prime-five rank direction rather than another circuit.
+The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`.  The CSP closes `3m>=2D`;
+all 65 forced-full components contain the old triangle and one `5/2` bridge.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
 supplied-root seams, not semantic-root identification (kernel `28,393`).
