@@ -2,15 +2,24 @@
 id: THM-3136
 title: "Common-simple-zero Faber exclusion and the sharp odd-bipole response boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT IN PROGRESS.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In every normalized nonsplit polynomial exact-square-prefix Faber bank of
   reduced index R>=7, a common simple zero of the response polynomials V and
-  M is impossible.  This removes THM-2831's d=s=0 hypothesis.  Consequently
+  M is impossible.  This removes THM-2831's d_F=s_F=0 hypothesis.  Consequently
   every balanced survivor in this range has no simple response zeros; the
   THM-2827 resonance then forces R=3k+2 and genuine nonsplit degree N>=2(4k+3).
   The degree bound is abstractly sharp: an explicit odd-bipole family realizes
   pole passport (d,d) and has a first-order nonvanishing coefficient
   recurrence.  The planar Jacobian conjecture and chart entry remain open.
+audit: >
+  An independent derivation rebuilt the Faber coefficients from the defining
+  differential equation, checked the polar, pure-q, and regular-H lanes with
+  every retained lower row, and verified the balanced parity consequence.
+  A separate all-degree algebra audit proved the odd-bipole ODE, leading
+  coefficient, clean passport, constant recurrence, and d=11 Nielsen count;
+  an independent script replayed R=7..18 and odd d through 25.  The canonical
+  pole-rotation orbit is now gated rather than merely printed.  Normal,
+  optimized, and stored transcripts and hashes agree.
 source: root/frontier-synthesis-2026-08-02
 depends_on:
   - THM-2760-exact-prefix-even-faber-flux-gcd-and-smooth-boundary-exclusion
@@ -23,19 +32,19 @@ related:
   - MISTAKE-317
 script: 04-computation/jc_common_simple_zero_odd_bipole_thm3136.py
 output: 05-knowledge/results/jc_common_simple_zero_odd_bipole_thm3136.out
-script_sha256: 904b0a93e59d44bacbc94f305a4bc02a840e3db3f674451e5b0ce44a5e21328a
+script_sha256: d1d9e7218176042235bc30f4a9935368fa6e1adf126da07cd5086fd5888d2d96
 output_sha256: 32d8a794ce2f25ff969de77e4c3419883cd9aefb04668d7c10baba5bb89836c3
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3136 -- common-simple-zero Faber exclusion and the sharp odd-bipole boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT IN PROGRESS.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This theorem strengthens THM-2831 at the exact place where the planar
 Jacobian response atlas still admitted formal resonances.  The new local
 lemma uses all three valuation lanes and no longer specializes the source
-coordinates `d_src,s_src` to zero.  It then identifies the sharp abstract
+coordinates `d_F,s_F` to zero.  It then identifies the sharp abstract
 balanced-response boundary, rather than mistaking the obstruction for an
 unconditional nonexistence theorem.
 
@@ -52,8 +61,8 @@ Use the THM-2827 source coordinates
 
 ```text
 T_F=A_src^2/V,
-d_src=C_0-B_src^2/(4V),
-s_src=A_src B_src/(2V)-E_0.                                  (2)
+d_F=C_0-B_src^2/(4V),
+s_F=A_src B_src/(2V)-E_0.                                  (2)
 ```
 
 The normalized flux equations are
@@ -66,7 +75,7 @@ K_Q=T_F H_Q,          A_src K_Q=lambda M,       lambda!=0,    (3)
 where the exact Faber extraction gives
 
 ```text
-H_j in Q[T_F,s_src,T_F d_src],
+H_j in Q[T_F,s_F,T_F d_F],
 H_Q=H_R+sum_(j=1)^(R-2)a_jH_j.                               (4)
 ```
 
@@ -104,14 +113,14 @@ q=A_src/U,        omega=B_src/(2U),        rho=q/omega^3.     (8)
 Then
 
 ```text
-ord(s_src)=-1,               ord(rho)=1.                      (9)
+ord(s_F)=-1,               ord(rho)=1.                      (9)
 ```
 
 The exact prefix formulas of THM-2760 are
 
 ```text
-in(phi_j)=4 in(s_src)^(j-1) P_j(rho),
-in(psi_j)=4 in(s_src)^j Q_j(rho),                             (10)
+in(phi_j)=4 in(s_F)^(j-1) P_j(rho),
+in(psi_j)=4 in(s_F)^j Q_j(rho),                             (10)
 ```
 
 with `P_j(0)Q_j(0)!=0`.  Hence
@@ -129,15 +138,15 @@ the regularity of `psi_Q`).
 Here
 
 ```text
-ord(q)=-1/2,          ord(d_src)>=0,          ord(s_src)>=0.   (12)
+ord(q)=-1/2,          ord(d_F)>=0,          ord(s_F)>=0.   (12)
 ```
 
 The unique pure-`q` top face cycles through the three flux channels.  Exact
 coefficient extraction, with the missing `R-1` row in `(1)`, gives:
 
 ```text
-R=3k+1:  phi_R has a unique pole below every retained phi_j;
-R=3k:    psi_R has a unique pole below every retained psi_j;
+R=3k+1:  phi_R has unique order -2k below every retained phi_j;
+R=3k:    psi_R has unique order -2k below every retained psi_j;
 R=3k+2:  ord(K_Q)=-(2k+1).                                  (13)
 ```
 
@@ -148,13 +157,13 @@ no equality face.
 
 #### Regular-`H` lane: `a>=1`
 
-If `b=0`, then `ord(d_src)=-1`, but
+If `b=0`, then `ord(d_F)=-1`, but
 
 ```text
-ord(T_F d_src)=2a-2>=0,        ord(s_src)>=0.                  (14)
+ord(T_F d_F)=2a-2>=0,        ord(s_F)>=0.                  (14)
 ```
 
-If `b>=1`, both `d_src` and `s_src` are regular.  In either case every
+If `b>=1`, both `d_F` and `s_F` are regular.  In either case every
 variable in the polynomial ring `(4)` is regular.  Thus
 
 ```text
@@ -180,13 +189,13 @@ Use the balanced factor normal form of THM-2796:
 ```text
 V=v S D_poles T_poles^2,
 M=S E T_poles,
-N=s+2e=sum_j p_j.                                             (16)
+N=s_resp+2e=sum_j p_j,                s_resp=deg(S).           (16)
 ```
 
 Every root of `S` is a common simple root of `V` and `M`.  The lemma forces
 
 ```text
-s=0.                                                          (17)
+s_resp=0.                                                     (17)
 ```
 
 THM-2827 then says that a surviving bank must have
@@ -196,9 +205,10 @@ R=3k+2,           D=4k+3,           p_j=D delta_j.            (18)
 ```
 
 Since `N=2e` is even and `D` is odd, `sum_j delta_j=N/D` is even.  With
-`s=0`, genuine nonsplitting requires at least one pole part `p_j` to be odd,
+`s_resp=0`, genuine nonsplitting requires at least one pole part `p_j` to be odd,
 equivalently at least one `delta_j` to be odd.  The positive integers
-`delta_j` therefore have even sum at least two.  Consequently
+`delta_j` therefore contain at least two odd entries and have even sum at
+least two.  Consequently
 
 ```text
 N>=2D=2(4k+3).                                                (19)
@@ -238,7 +248,7 @@ Termwise binomial cancellation gives the first-order identity
 
 ```text
 2T_p E_d'-2d x E_d=C_d,
-C_d=-2(-1)^m binom(d/2,m)!=0.                                 (23)
+C_d=-2(-1)^m binom(d/2,m) != 0.                               (23)
 ```
 
 Define
@@ -265,11 +275,22 @@ zero, contradicting `C_d!=0`.  Put
 W_d=E_d^2-T_p^d.                                               (26)
 ```
 
-The first omitted Laurent term in `(22)` shows `deg W_d=d-1`.  At a root of
-`W_d`, both `E_d` and `T_p` are nonzero and
+The first omitted Laurent term in `(22)` shows
 
 ```text
-W_d'=C_d E_d/T_p!=0.                                         (27)
+deg W_d=d-1,                 LC(W_d)=-C_d/(d+1).              (27)
+```
+
+Differentiating `(26)` and using `(23)` also gives
+
+```text
+T_p W_d'-2d x W_d=C_d E_d.                                  (28)
+```
+
+At a root of `W_d`, both `E_d` and `T_p` are nonzero and
+
+```text
+W_d'=C_d E_d/T_p!=0.                                         (29)
 ```
 
 Thus all three fibres are disjoint and have the clean passport
@@ -277,7 +298,7 @@ Thus all three fibres are disjoint and have the clean passport
 ```text
 zero:       2^d;
 pole:       (d,d);
-third:      (d+1,1^(d-1)).                                   (28)
+third:      (d+1,1^(d-1)).                                   (30)
 ```
 
 Because `d` is odd, `(24)` is genuinely nonsplit.  It realizes `N=2d=2D`
@@ -289,7 +310,7 @@ The constants in `(23)` themselves form an `O(1)`-state exact sequence.  If
 
 ```text
 C_0=-2,
-C_(m+1)=-(2m+3)/(2m+2) C_m.                                  (29)
+C_(m+1)=-(2m+3)/(2m+2) C_m.                                  (31)
 ```
 
 This product-Gamma recurrence is the nonvanishing sidecar missed by a bare
@@ -302,7 +323,7 @@ For `d=11`, the family is
 ```text
 E_11=x^11-(11/2)x^9+(99/8)x^7-(231/16)x^5
      +(1155/128)x^3-(693/256)x,
-C_11=693/128,                 deg W_11=10.                    (30)
+C_11=693/128,                 deg W_11=10.                    (32)
 ```
 
 The exact clean Nielsen census has `121=11^2` marked matchings.  Independent
@@ -311,7 +332,7 @@ unmarked orbit.  A representative is transitive and its generated
 permutation group has exact order
 
 ```text
-40874803200=2^10*11!.                                        (31)
+40874803200=2^10*11!.                                        (33)
 ```
 
 Only this finite-exact order is asserted; no group-isomorphism claim is
@@ -321,7 +342,7 @@ needed.
 
 The exact companion independently extracts Faber rows through `R=30`, keeps
 every allowed lower row, checks all three simple-zero lanes, and verifies the
-nonzero top-face recurrence.  A separate block verifies `(22)--(29)` for odd
+nonzero top-face recurrence.  A separate block verifies `(22)--(31)` for odd
 `d<=21` and performs the `d=11` Nielsen census.  Run
 
 ```text
@@ -336,4 +357,16 @@ balanced response is realized by a Faber bank, or that the planar Jacobian
 conjecture follows.  The common-simple-zero lemma is an all-`R` symbolic
 result; the displayed Faber and Nielsen ranges are verification sidecars.
 
-**End of proof candidate.**
+## 6. Independent hostile audit
+
+The independent audit rebuilt the Faber coefficients without importing the
+canonical companion and checked every retained lower row for `R=7..18`.
+It rederived all three valuation lanes, the balanced parity argument, the
+all-degree identities `(23)` and `(28)`, squarefreeness, disjoint fibres, and
+the exact leading coefficient in `(27)`.  Its separate `d=11` Nielsen replay
+agreed on `121` marked matchings, one rotation orbit, and the group order.
+Normal and optimized runs byte-match, and the canonical orbit assertion is
+now an executable gate.  No assertion statements or floating-point literals
+occur in either audit engine.
+
+**End of proof.**
