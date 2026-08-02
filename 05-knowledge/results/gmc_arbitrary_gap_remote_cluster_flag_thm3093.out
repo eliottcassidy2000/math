@@ -1,0 +1,15 @@
+THM-3093 ARBITRARY-GAP REMOTE-CLUSTER MONGE FLAG
+response_mlr_cells=960 strict_Monge=PASS
+jensen_cells=12532 mixed_hull=PASS
+flag_weight_cells=870 staircase_ties=PASS
+raw_atom_cells=4880 whole_system_contraction=PASS
+block_cells=945 all_composition_faces=PASS
+q3_face_cells=60 four_boundary_types=PASS
+covariance_cells=112 lambda_cancellation=PASS
+carrier_cells=1344 U_times_V=U_far=PASS
+uniform_gap_range=all_distinct_integer_vectors
+outer_error=poly(C)*(m/(m+1))^(mC) independent_of_cluster_diameter
+boundary=repeated_gaps;moving_child;growing_width;S_m_zero
+scope=fixed_child;fixed_rank;arbitrary_internal_gaps
+low_child_boundary=m1_empty_resultant;m2_positive_variance=PASS
+all_exact_checks=PASS
