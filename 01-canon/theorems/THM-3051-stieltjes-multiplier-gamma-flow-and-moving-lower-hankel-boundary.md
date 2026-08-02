@@ -2,8 +2,8 @@
 id: THM-3051
 title: "Stieltjes multiplier, Gamma flow, and moving-lower Hankel boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE-FILE AUDIT
-  REQUESTED.  Hadamard multiplication by a Stieltjes sequence preserves every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Hadamard
+  multiplication by a Stieltjes sequence preserves every
   Stieltjes sequence, and this characterizes universal Stieltjes multipliers.
   For THM-3047's fixed-lower product-Gamma flag, adjacent Gamma-shape flow gives
   a larger explicit preservation cone.  Neither adjacent log-convexity nor the
@@ -12,6 +12,16 @@ status: >
   exact four-slot factorial-resultant corner fails already at n=2.  These are
   formal-corner transport statements, not physical-width or raw-chart claims.
 source: kind-pasteur-2026-08-01-moving-lower-moment-boundary
+audit: >
+  Two independent immutable-file audits ACCEPTED the universal multiplier
+  iff, strictness boundary, Gamma inventory and both escape examples, the
+  order-three curvature identity, all-depth binary-resultant hostile, and the
+  four-slot Macaulay hostile.  Each independently reconstructed the moving
+  resultants by a path different from the companion, replayed normal and
+  optimized execution against the stored transcript, matched both LF hashes,
+  and passed the documentation checker.  Their one shared scope correction --
+  examples disprove universal preservation but not every moving path -- is
+  incorporated below.
 depends_on:
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
   - THM-2942-macaulay-extraneous-flag-factor-and-pluecker-mutation
@@ -29,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3051 -- the exact preservation cone stops before moving lower offsets
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3047 proves that the universal fixed-lower width flag is a strict
 Stieltjes moment sequence.  The natural inheritance question is whether a
@@ -373,10 +383,10 @@ lower transport factor L
 
 It preserves Stieltjes positivity when `L` has a positive multiplicative
 measure, and it also preserves the explicit non-Stieltjes Gamma-flow cone of
-Section 2.  Arbitrary literal lower motion destroys this predicate by
-Sections 4--5.  The quotient to adjacent curvatures loses the compatibility
-polynomial `Psi`; even retaining `Psi` at one index would lose all larger
-Hankel minors.
+Section 2.  Arbitrary literal lower motion need not preserve this predicate,
+as Sections 4--5 show.  The quotient to adjacent curvatures loses the
+compatibility polynomial `Psi`; even retaining `Psi` at one index would lose
+all larger Hankel minors.
 
 Consequently, a positive moving-lower theorem needs a sidecar such as a
 single multiplicative-convolution coupling, a totally-positive Gamma/Beta
@@ -412,4 +422,4 @@ python -O 04-computation/gmc_stieltjes_gamma_flow_moving_lower_thm3051.py
 
 Both modes equal the stored nine-line transcript after LF normalization.
 
-**QED, pending independent immutable-file audit and status promotion.**
+**QED.**
