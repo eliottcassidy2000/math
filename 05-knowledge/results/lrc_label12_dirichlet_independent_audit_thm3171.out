@@ -1,0 +1,9 @@
+LRC LABEL-12 DIRICHLET REFEREE -- INDEPENDENT EXACT AUDIT
+channels=11608;literal_minimal_samples=58078600
+coverage_pairs=146732;coverage_small_label_cases=25684;coverage_large_label_cases=561244;random_pairs=20000;random_small_label_cases=0
+tail_controls=1515
+near_T5_large_controls=512;tightest_large_literal_minus_floor=70846002336598091657/6815115856644788716800;case=(Fraction(750, 14011), 7, 0, 35, 5004, 5009, 12, 2)
+tightest_literal_minus_certificate=129163884373933/3805040604120071778;case=((1, 1, -1, 1, 1, 2, 12, -176, 5000), 5001, 10001)
+tightest_literal_minus_threshold=46540773131/6189967106295;case=((6, 0, 6, 2, 3, 1, 12, 942, 834), 5006, 5007)
+tightest_tail_minus_certificate=28514954210903564841013478/483452249290560640410219299295;case=((1, 1, -2, 1, 0, 2, 12, -344, 5000), 5258, 10514)
+semantic_sha256=90d882c57649754a66e1eab94af1695ca608f51cc1d62a65dcf5bd99052ebc6a

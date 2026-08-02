@@ -1,0 +1,5 @@
+LRC H SMALL HIGH-CHANNEL RAYS -- SYMBOLIC FINITE-STATE TAIL
+primitive_channels=103;ordered_edge_rays=1854;Q<=26
+finite_head_checks=126766;affine_residue_tail_classes=126892;maximum_stable_g=594
+sharp_classes=1;sharp_floor=2030/280393;sharp_channel=edge(1,6),primitive(3,5)
+semantic_sha256=848e31e090597a48909cbcc71fcc506bd667fcb016af5a9337e270ce4fc63e3a
