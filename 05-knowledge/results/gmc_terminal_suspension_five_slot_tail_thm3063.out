@@ -1,0 +1,14 @@
+THM-3063 TERMINAL SUSPENSION AND FIVE-SLOT PHYSICAL TAIL
+general_exponent_cells=10 safe_gap_cells=54
+normal_ideal_layer_cells=72
+three_low_sidecar_cells=252 all_positive=1
+three_low_sidecar_digest=577ff3c38e2c3003ec95a838a6f57fae12660bc09993854f77d7db82660bdc56
+normal_boundary_cells=8 all_positive=1
+normal_boundary_digest=296a759048e2bca3ffc48170af6b44e22a20dd588e879a156591cb1292df79ee
+beta_factor_cells=64 width_cells=36
+carrier_hankel_cells=60
+physical_macaulay_cells=36 rows=589 columns=364 full_rank=1
+physical_macaulay_digest=a21bce9b17f70d7f09e2d8f029ccffe157efa5557c475a1ebaad5ff448ca92a1
+k5_asymptotic=S3^20*(5^h-4^h)^120*U4^30*U5^24;power=-93
+scope=intrinsic_terminal_suspension;fixed_lows_and_gap;finite_order_tail
+all_exact_checks=PASS
