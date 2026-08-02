@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for THM-3054.
+"""Exact companion for THM-3056.
 
 The computation has two jobs.
 
@@ -16,6 +16,7 @@ the same verification.
 from __future__ import annotations
 
 from fractions import Fraction
+from itertools import product
 from math import lcm
 
 import sympy as sp
@@ -67,6 +68,22 @@ def skeleton(perm: tuple[int, ...]) -> dict[tuple[int, int], int]:
         edge: int(orbit[edge[0]][0] == orbit[edge[1]][0] and orbit[edge[0]][1] > 1)
         for edge in EDGES
     }
+
+
+def edge_orbits(perm: tuple[int, ...]) -> list[tuple[tuple[int, int], ...]]:
+    unseen = set(EDGES)
+    orbits = []
+    while unseen:
+        start = min(unseen)
+        orbit = []
+        edge = start
+        while edge not in orbit:
+            orbit.append(edge)
+            edge = canonical_edge(perm[edge[0]], perm[edge[1]])
+        for member in orbit:
+            unseen.remove(member)
+        orbits.append(tuple(orbit))
+    return orbits
 
 
 def matching_sums(edge_values: dict[tuple[int, int], int]) -> tuple[int, int, int]:
@@ -151,6 +168,41 @@ def main() -> None:
                 index = sum(h_values) // e
                 require(sum(correction) == e * index, f"index recovery failed for {name}")
 
+    # Inertia invariance sharply restricts the matching-index vector.  Exhaust
+    # small values on the edge orbits and verify the closed forms used in the
+    # theorem.  The divisibility filter is exactly sum(h)=e*i.
+    for name, perm in inertia:
+        c = skeleton(perm)
+        e = int(permutation_order(perm))
+        orbits = edge_orbits(perm)
+        for values in product(range(4), repeat=len(orbits)):
+            h = {edge: 0 for edge in EDGES}
+            for orbit, value in zip(orbits, values):
+                for edge in orbit:
+                    h[edge] = value
+            total = sum(h.values())
+            if total % e:
+                continue
+            x = {edge: c[edge] + h[edge] for edge in EDGES}
+            lambdas = matching_sums(x)
+            index = total // e
+            if name == "identity":
+                require(index == sum(lambdas), "identity matching cone")
+            elif name == "transposition":
+                require(lambdas[0] % 2 == 1, "transposition special parity")
+                require(lambdas[1] == lambdas[2], "transposition repeated channels")
+                require(index == (lambdas[0] - 1) // 2 + lambdas[1], "transposition index cone")
+            elif name == "double_transposition":
+                require(all(value % 2 == 0 for value in lambdas), "double-transposition even cone")
+                require(index == (sum(lambdas) - 2) // 2, "double-transposition index cone")
+            elif name == "three_cycle":
+                require(lambdas == (1 + index,) * 3, "three-cycle diagonal cone")
+            elif name == "four_cycle":
+                require(lambdas[0] == lambdas[2], "four-cycle repeated channels")
+                require(lambdas[0] % 2 == 0, "four-cycle adjacent parity")
+                require((lambdas[1] - 2) % 4 == 0, "four-cycle diagonal congruence")
+                require(index == (sum(lambdas) - 6) // 4, "four-cycle index cone")
+
     T, t, s, r = sp.symbols("T t s r")
     zeta = (-1 + sp.sqrt(-3)) / 2
 
@@ -202,19 +254,22 @@ def main() -> None:
     require(complement_index_at_t + 1 == trans_index, "section t index decomposition")
     require(complement_index_at_1 + 0 == trans_index, "section 1 index decomposition")
 
+    print("theorem=THM-3056")
     print("status=PROVED_VERIFIED_EXACT")
     for name, e, d, lambdas, class_value in table_rows:
         print(f"inertia={name};e={e};d={d};matching={lambdas};clutch={class_value}")
     print("formula=sum_edge_excess=e*order_index")
     print("formula=tau=tau_skeleton+e*order_index_mod_3")
+    print("matching_cone=transposition:(1+2a,b,b),i=a+b;three_cycle:(1+i,1+i,1+i)")
+    print("matching_cone=double_transposition:(2+2a,2b,2c);four_cycle:(2+2a,2+4b,2+2a)")
     print(f"resonance_edge_vector={tuple(x2[edge] for edge in EDGES)}")
     print(f"resonance_matching={matching_sums(x2)};stars={star_sums(x2)};clutch={clutch(matching_sums(x2))}")
-    print(f"transposition_disc={disc2};index={trans_index};fixed_owner_valuations=(1,0)")
-    print(f"three_cycle_disc={disc3};index={three_index};fixed_owner_valuations=(0,)")
-    print("transposition_owner_split=section_t:(complement_index,gluing)=(0,1);section_1:(1,0)")
+    print(f"transposition_disc={disc2};index={trans_index};fixed_sheet_gluing_valuations=(1,0)")
+    print(f"three_cycle_disc={disc3};index={three_index};fixed_sheet_gluing_valuations=(0,)")
+    print("transposition_fixed_sheet_split=section_t:(complement_index,gluing)=(0,1);section_1:(1,0)")
     print(f"base_normalized_transposition={base_x2}")
     print(f"base_normalized_three_cycle={base_x3}")
-    print("conclusion=integer-normalized edge valuations do not determine inertia, order index, or owner")
+    print("conclusion=integer-normalized edge valuations do not determine inertia, order index, or which inertia-fixed sheet splits")
 
 
 if __name__ == "__main__":

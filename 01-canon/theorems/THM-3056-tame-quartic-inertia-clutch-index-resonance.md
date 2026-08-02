@@ -1,8 +1,8 @@
 ---
-id: THM-3054
+id: THM-3056
 title: "Tame quartic inertia clutch and binary-ternary index resonance"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.  For a monic
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a monic
   integral quartic over a strictly henselian DVR with tame cyclic splitting
   inertia, its six root-difference valuations split canonically into the
   first-order inertia-orbit skeleton plus a nonnegative projection-collision
@@ -16,26 +16,37 @@ status: >
   followed by a pointed fixed-sheet star and the full graph-order/affine-owner
   sidecars.  No quartic Keller branch is excluded.
 source: codex-jc-quartic-valuation-2026-08-01
+audit: >
+  root/2026-08-01 independently checked the strict-henselian tame-cyclic
+  reduction, all five faithful cycle types, the skeleton discriminant
+  identity, the discriminant/index derivation of sum h=e*i, the fixed-sheet
+  cross-resultant formula, both hostile discriminants and indices, and the
+  owner-versus-fixed-sheet terminology boundary.  A follow-up audit derived
+  every inertia-invariant matching cone and accepted the exact ambiguity
+  classifier.  Ordinary, optimized, and stored transcripts byte-match after
+  LF normalization.
 depends_on:
   - THM-3045-k4-edge-isotypic-binary-ternary-integral-clutch
   - THM-3046-quartic-resolvent-root-valuation-binary-ternary-clutch
   - THM-3038-split-monogenic-order-cross-resultant-conductor-and-affine-owner-boundary
 related:
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
+  - THM-2633-derangement-character-obstruction-and-d4-keller-exclusion
   - THM-2992-signed-quartic-edge-block-discriminant-parity-and-keller-owner-line-boundary
   - THM-3037-cusp-braid-s4-lift-dichotomy-and-common-sheet-owner-boundary
   - THM-3042-subdirect-graph-order-common-quotient-and-singleton-owner-criterion
   - THM-3049-k4-matching-monomial-tropical-root-extraction-clutch
-script: 04-computation/quartic_tame_inertia_clutch_index_resonance_thm3054.py
-output: 05-knowledge/results/quartic_tame_inertia_clutch_index_resonance_thm3054.out
-script_sha256: 1bebb4de134f92cd85a9dc04c80c5bb895200fc4f049f74b5ffc7f2b73c590b2
-output_sha256: d4df5ed451cbdea951b29b9c8e304fd6852d0b382acb34f56b6c9a6f1e4336b2
+  - HYP-9027-twojet-disc-jelonek-odd-exponent-law
+script: 04-computation/quartic_tame_inertia_clutch_index_resonance_thm3056.py
+output: 05-knowledge/results/quartic_tame_inertia_clutch_index_resonance_thm3056.out
+script_sha256: ba817e4a6bb9c5234a7774af1a5dc0c1cfbda0f8f04e8e64d7498be4e50f3d98
+output_sha256: cb582d1e8d96a5fdb94857ef9bb2777cd02b9eb56eed3231713eedb8718c9a5b
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3054 -- tame inertia has a scale-bearing matching-index clutch
+# THM-3056 -- tame inertia has a scale-bearing matching-index clutch
 
-**PROVED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and statement
 
@@ -150,7 +161,7 @@ xbar_ij=x_ij/e in Q,            sum_(i<j)xbar_ij=d/2+i. (12)
 Thus the integer vector `x` without `e`, or equivalently without `xbar`, is
 not a scale-bearing invariant of the base divisor.
 
-There is also a pointed owner coordinate.  If `sigma` fixes `z_a`, then
+There is also a pointed fixed-sheet gluing coordinate.  If `sigma` fixes `z_a`, then
 `z_a in R`.  Writing
 
 ```text
@@ -237,6 +248,49 @@ reading only in the maximal, correctly normalized local order.  Among the
 fixed-point inertia types, a transposition has the one-hot fingerprint and a
 three-cycle the all-one fingerprint.  Section 4 shows why dropping the
 maximality/scale coordinate destroys this classifier completely.
+
+There is nevertheless an exact all-index survivor.  Valuation invariance
+forces `h` to be constant on the edge orbits of `sigma`.  Combining that
+constraint with `(7)` gives the following necessary matching cones, up to
+permuting matching coordinates; all displayed parameters are nonnegative
+integers.
+
+| inertia | complete matching vector `lambda` | order index |
+|---|---|---:|
+| identity | `(a,b,c)` | `a+b+c` |
+| transposition | `(1+2a,b,b)` | `a+b` |
+| double transposition | `(2+2a,2b,2c)` | `a+b+c` |
+| three-cycle | `(1+i,1+i,1+i)` | `i` |
+| four-cycle | `(2+2a,2+4b,2+2a)` | `a+b` |
+
+For example, a transposition has two fixed edges and two two-edge orbits on
+`E(K4)`.  The two repeated matching channels are therefore equal.  The
+remaining matching excess is even because the total excess is `2i`.  A
+three-cycle has one triangle orbit and one spoke orbit, so every matching
+gets the same excess, necessarily `i`.  The other rows follow from the two
+fixed/two paired edge orbits of a double transposition and the four-edge/two-
+edge orbit split of a four-cycle.
+
+These are necessary cones, not realizability theorems: residue units and the
+ultrametric filtration can remove lattice points.  They still give a useful
+nonmaximal classifier.  Among nontrivial inertia types with a fixed sheet:
+
+```text
+lambda non-diagonal                         => transposition;
+lambda diagonal and even                    => three-cycle;
+lambda diagonal and odd                     => ambiguous.            (18a)
+```
+
+At clutch resolution the same statement becomes
+
+```text
+transposition: kappa=(1,epsilon,epsilon), tau=1+2i mod3;
+three-cycle:  kappa=(1+i mod2)(1,1,1),     tau=0.         (18b)
+```
+
+Thus a one-hot `kappa` forces the transposition lane, zero `kappa` forces the
+three-cycle lane, and only `(kappa,tau)=(111,0)` remains ambiguous.  The
+hostile in Section 4 realizes the smallest such ambiguity.
 
 ## 4. Sharp binary-ternary index resonance
 
@@ -335,7 +389,7 @@ all four unpointed star valuations.                      (29)
 The cheapest repair is to retain `e` or the base-normalized rational vector
 `xbar`, then retain the inertia orbit labels.
 
-## 5. One scalar index can move between owner gluing and the complement
+## 5. One scalar index can move between fixed-sheet gluing and the complement
 
 The transposition hostile `(20)` has two inertia-fixed sections, `a=t` and
 `a=1`.  They distribute the same total order index in opposite ways.
@@ -368,7 +422,8 @@ a=1:                  (i_comp,v(q_a))=(1,0).            (32)
 The first fixed section is glued in the monogenic quartic order; the second
 already splits.  Yet the total quartic index and the total standard-resolvent
 index are both one in either pointed decomposition.  This gives a sharp
-internal hostile to using a scalar discriminant/order tax as an owner test.
+internal hostile to using a scalar discriminant/order tax as a fixed-sheet
+splitting test.
 
 The necessary pointed refinement is
 
@@ -413,6 +468,23 @@ counterfeit pair also explains why the primes `2` and `3` co-occur here
 without yielding an exclusion: a binary ramification scale with one order
 tax exactly imitates a ternary maximal orbit after integer normalization.
 
+There is a direct warning for the open odd-Jelonek-exponent programme.  The
+base discriminant exponent is
+
+```text
+v(Disc(f))=2 sum_m lambda_m/e=d+2i.                     (34a)
+```
+
+Thus its parity is the parity of the actual inertia discriminant exponent
+`d`, not a function of the integer-normalized clutch.  In the resonance
+hostile, the identical matching vector `(1,1,1)` and identical `tau=0` give
+base exponents `3` in the transposition model and `2` in the three-cycle
+model.  Consequently, once HYP-9027's proposed odd exponent is identified
+with the actual integral local quartic order rather than a coefficient-chart
+artifact, it would select the transposition lane in its stated 2-jet setting.
+That law cannot be tested from THM-3046's clutch until the base ramification
+scale and integral order have been restored.
+
 This theorem decrements no planar-JC branch.  It does replace the vague
 “missing valuation normalization” warning by the exact formulas `(7)`,
 `(10)--(12)`, the pointed formula `(14)`, and the minimal hostile `(20)--(32)`.
@@ -438,7 +510,7 @@ PROVED HERE:       tame skeleton/excess decomposition;
                    clutch correction and maximal inertia table;
                    pointed fixed-sheet cross-resultant valuation;
                    full-edge transposition/three-cycle resonance;
-                   owner-gluing/complement-index relocation.
+                   fixed-sheet-gluing/complement-index relocation.
 
 NOT PROVED:        maximality of an unknown Keller graph order;
                    recovery of units or field-level square/cube roots;
@@ -452,16 +524,18 @@ NOT PROVED:        maximality of an unknown Keller graph order;
 Run
 
 ```text
-python3 04-computation/quartic_tame_inertia_clutch_index_resonance_thm3054.py
-python3 -O 04-computation/quartic_tame_inertia_clutch_index_resonance_thm3054.py
+python3 04-computation/quartic_tame_inertia_clutch_index_resonance_thm3056.py
+python3 -O 04-computation/quartic_tame_inertia_clutch_index_resonance_thm3056.py
 ```
 
 Both modes LF-byte-match the stored transcript.  The companion enumerates
 the five cyclic inertia types; checks `(16)` and every fingerprint; exhausts
 all `3^6` nonnegative correction vectors for each type as an independent
-lattice control of `(10)--(11)`; verifies both hostile discriminants, edge
-metrics, matching and star vectors, order indices, base scales, pointed
-cross-resultants, and the two complementary-cubic index decompositions.
+lattice control of `(10)--(11)`; exhausts bounded assignments on every
+inertia edge orbit to verify the necessary matching cones; and verifies both
+hostile discriminants, edge metrics, matching and star vectors, order indices,
+base scales, pointed cross-resultants, and the two complementary-cubic index
+decompositions.
 Every truth-bearing check uses an explicit runtime exception rather than a
 Python assertion.
 
