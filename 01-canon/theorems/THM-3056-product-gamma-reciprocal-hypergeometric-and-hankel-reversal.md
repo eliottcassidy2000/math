@@ -2,20 +2,28 @@
 id: THM-3056
 title: "Product-Gamma reciprocal hypergeometric dual and Hankel reversal"
 status: >
-  PROVED + VERIFIED-EXACT, with one explicitly OPEN FINITE-EXACT extension.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For a J-factor product-Gamma moment sequence w_n=c^n product_j(alpha_j)_n,
   its coefficientwise reciprocal has generating function
   _1F_J(1;alpha_1,...,alpha_J;z/c), exact entire order 1/J and type
   J*c^(-1/J).  It is strictly log-concave, so its first Hankel determinant is
   negative and reciprocalization exits the Hamburger/Stieltjes moment cone.
-  For J=1, every generalized Hankel minor has strict sign
-  (-1)^(r choose 2), with a closed contiguous determinant.  For THM-3047 at
+  For every J, every generalized Hankel minor of order h has strict sign
+  (-1)^(h choose 2); a nested-prefix-polynomial reduction factors its
+  column-reversal through a generalized Vandermonde matrix and a totally
+  nonnegative weighted-Pascal matrix.  For J=1 there is also a closed
+  contiguous determinant, and the sign law extends from integer row indices
+  to arbitrary increasing nonnegative real row nodes.  For THM-3047 at
   positive integer t, the width values form an integer support whose harmonic
   mass is an explicit hypergeometric value, whose support Dirichlet abscissa
   is zero, and whose prime-divisor shadow is exactly the primes not dividing
-  t.  All-order sign regularity for J>1 is FINITE-EXACT through the frozen
-  scout only and remains OPEN.
+  t.
 source: codex-2026-08-01-product-gamma-reciprocal-dual
+audit: >
+  An independent hostile audit ACCEPTED the row/column reduction, the
+  descending-layer prefix ordering, the weighted-Pascal tail-Jacobi
+  factorization, and the strictly positive M=T term in the Cauchy--Binet
+  expansion proving all-J strict sign regularity.
 depends_on:
   - THM-2438-poisson-newton-ternary-half-and-harmonic-divisor-incidence
   - THM-3047-formal-corner-width-product-gamma-moment-and-strict-hankel-positivity
@@ -26,22 +34,23 @@ related:
   - THM-3053-beta-gamma-prefix-transport-and-multiplicative-holotopy-cone
 script: 04-computation/gmc_product_gamma_reciprocal_dual_thm3056.py
 output: 05-knowledge/results/gmc_product_gamma_reciprocal_dual_thm3056.out
-script_sha256: 6d2c70618c4f180017c3f18f50b771ef84b98bcba5ac1ed88191a1783b3e8be1
-output_sha256: 8dd3df2e852a7acaa8dc92b4b264bdc143c5dbdea59c148edbcb8cdbf7b8b734
+script_sha256: 66f50dc1bb117b053908add0ce2689f8f1533930d4deaf9e40069b7d427c2690
+output_sha256: 1c4c8cb29bfce0d6ef028ee5a55464bb30b50259f8cdceeed241b719ac659af1
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3056 -- product-Gamma reciprocal hypergeometric dual and Hankel reversal
 
-**PROVED + VERIFIED-EXACT, with the `J>1` sign-regular extension explicitly
-OPEN / FINITE-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3047 puts the formal width flag inside the strict Stieltjes cone, and
 THM-3050 identifies its critical Borel order.  Coefficientwise reciprocalization
 does something sharply different: it creates a hypergeometric entire function
 and an extremely sparse harmonic support, but it reverses the first Hankel
 wall.  Thus the reciprocal sequence is analytically excellent and
-moment-theoretically hostile at the same time.
+moment-theoretically hostile at the same time.  Surprisingly, the entire
+reciprocal product-Gamma family still has a rigid alternating sign law at
+every generalized Hankel order.
 
 ## 1. The reciprocal product-Gamma transform
 
@@ -124,10 +133,10 @@ moment sequence.  This is the exact boundary with THM-3047: the original
 reciprocal fails at order two.  The map preserves positivity, support, and
 hypergeometric holonomy; it destroys positive-semidefinite Hankel geometry.
 
-## 3. One Gamma factor is strictly Hankel sign-regular
+## 3. Every finite product is strictly Hankel sign-regular
 
-For `J=1`, write `alpha=alpha_1`.  A stronger statement survives the negative
-minor.  For every `h>=1` and all strictly increasing nonnegative index sets
+A stronger statement survives the negative order-two minor.  For every
+`J>=1`, every `h>=1`, and all strictly increasing nonnegative index sets
 
 ```text
 p_1<...<p_h, q_1<...<q_h,
@@ -139,61 +148,148 @@ one has
 sign det [r_(p_i+q_j)]_(i,j=1)^h=(-1)^(h(h-1)/2).                    (11)
 ```
 
-Thus the reciprocal single-Gamma Hankel kernel is strictly sign-regular with
-the alternating reversal signature.
+Thus every reciprocal finite product-Gamma Hankel kernel is strictly
+sign-regular with the alternating column-reversal signature.  This is not a
+generic closure theorem for coefficientwise products of sign-regular kernels;
+it comes from a special nested-prefix factorization.
 
-### Falling-factorial proof
+### Positive prefix-polynomial proof
 
-The positive scale `c` factors from rows and columns, so it does not affect
-the sign.  Factor `1/(alpha)_(p_i)` from row `i` and put
-
-```text
-x_i=alpha+p_i.
-```
-
-The remaining matrix is `[1/(x_i)_(q_j)]`.  Let `C=q_h`.  Multiplication of
-row `i` by the positive number `(x_i)_C` turns column `j` into
+The positive powers of `c` factor from rows and columns, so they do not affect
+the sign.  For each shape and row put
 
 ```text
-(x_i+q_j)_(C-q_j).
+x_(ell,i)=alpha_ell+p_i.
 ```
 
-With `y_i=x_i+C-1` and `d_j=C-q_j`, this is the falling-factorial alternant
+Factoring `product_ell 1/(alpha_ell)_(p_i)` from row `i` leaves
 
 ```text
-det [y_i falling_(d_j)].                                             (12)
+product_ell 1/(x_(ell,i))_(q_j).
 ```
 
-The degrees satisfy `d_1>...>d_h=0`.  Put
+Let `C=q_h`.  Multiplication of row `i` by the positive number
+`product_ell(x_(ell,i))_C` turns column `j` into the polynomial
 
 ```text
-lambda_j=d_j-(h-j),                                                   (13)
+Q_j(p_i)=product_(u=q_j)^(C-1) product_(ell=1)^J
+          (p_i+alpha_ell+u).                                        (12)
 ```
 
-which is a partition.  Dividing `(12)` by the base alternant
-`det[y_i falling_(h-j)]` gives its factorial Schur polynomial.  Its tableau
-formula is strictly positive here: `p_i>=i-1` and `y_i=alpha+p_i+C-1`, while
-every shift occurring in the tableau is at most `C-1`.  Every tableau factor
-is therefore positive.  The base alternant is
+Choose `0<delta<min_ell alpha_ell` and write `z_i=p_i+delta`.  Order all the
+positive numbers
 
 ```text
-(-1)^(h(h-1)/2) product_(i<j)(y_j-y_i),                              (14)
+beta=alpha_ell+u-delta
 ```
 
-which proves `(11)`.
+first by the layer `u=C-1,C-2,...,0`, and arbitrarily but consistently within
+each layer.  If
 
-For consecutive rows and columns, `(12)` has `lambda=0` and gives the closed
-formula
+```text
+P_t(z)=product_(s=1)^t(z+beta_s),
+t_j=J(C-q_j),                                                        (13)
+```
+
+then `Q_j(p_i)=P_(t_j)(z_i)`.  The original `q_j` increase, so the `t_j`
+strictly decrease.  Reversing the `h` columns makes their prefix lengths
+strictly increase and contributes exactly `(-1)^(h(h-1)/2)` to the original
+determinant.
+
+It remains to show that the reversed evaluation determinant is positive.
+Let
+
+```text
+B_(m,t)=[z^m]P_t(z).
+```
+
+The infinite upper-unitriangular coefficient matrix `B` is totally
+nonnegative.  Indeed
+
+```text
+B_(m,t)=beta_t B_(m,t-1)+B_(m-1,t-1),                               (14)
+```
+
+with the out-of-range entries zero.  There is a direct finite Jacobi
+factorization which fixes the network orientation.  Truncate at any
+`0<=m,t<=T`, transpose, and write
+
+```text
+M_(n,k)=B_(k,n)=e_(n-k)(beta_1,...,beta_n),
+L_i=I+beta_i sum_(r=i)^T E_(r,r-1).                                  (14a)
+```
+
+The prefix recurrence gives exactly
+
+```text
+M=L_T L_(T-1) ... L_1.                                               (14b)
+```
+
+Each `L_i` is a nonnegative lower-bidiagonal tail Jacobi matrix, hence is
+totally nonnegative; equivalently, it is the path matrix of one oriented
+layer with a stay edge of weight one and a downward edge of weight `beta_i`.
+Cauchy--Binet makes their ordered product `M`, and therefore `B=M^T`, totally
+nonnegative.  This factorization is also the precise weighted-Pascal planar
+network behind `(14)`.
+
+Now let `E_(i,m)=z_i^m`.  Every minor of `E` with increasing rows and degrees
+is a positive generalized Vandermonde determinant because
+`0<z_1<...<z_h`.  The reversed matrix factors as
+
+```text
+[P_(t_j)(z_i)] = E B[:,T].
+```
+
+where `T={t_1<...<t_h}` after reversal.  Cauchy--Binet makes its determinant
+a sum of nonnegative terms.  It is strictly positive: take the degree set
+`M=T`.  The selected coefficient minor `B[T,T]` is upper triangular with
+diagonal one, while the generalized Vandermonde minor `E[:,T]` is positive.
+Undoing the column reversal proves `(11)`.
+
+### Mixed continuous--discrete extension
+
+Nothing in the proof used integrality of the row nodes.  Define, for `x>=0`
+and `n` a nonnegative integer,
+
+```text
+K(x,n)=c^(-(x+n)) product_(ell=1)^J
+       Gamma(alpha_ell)/Gamma(alpha_ell+x+n).                        (15a)
+```
+
+For arbitrary strictly increasing real `x_1<...<x_h` in `[0,infinity)` and
+strictly increasing integer `q_1<...<q_h`, positive row and column factors
+reduce `[K(x_i,q_j)]` to
+
+```text
+[product_ell 1/(alpha_ell+x_i)_(q_j)].
+```
+
+The same prefix-polynomial argument therefore gives
+
+```text
+sign det[K(x_i,q_j)]=(-1)^(h(h-1)/2).                               (15b)
+```
+
+This half-discrete kernel is the natural interpolation of the reciprocal
+sequence on one coordinate.  Allowing arbitrary real nodes on **both**
+coordinates is not proved here: the integer prefix lengths in `(13)` are the
+mechanism, so erasing that coordinate would require a different argument.
+
+### Closed one-factor contiguous determinant
+
+For `J=1`, consecutive rows and columns also admit the closed formula
 
 ```text
 det [r_(m+i+j)]_(0<=i,j<h)
  =(-1)^(h(h-1)/2) c^(-hm-h(h-1))
    * product_(j=1)^(h-1) j!
-   / product_(i=0)^(h-1) (alpha)_(m+i+h-1).                          (15)
+   / product_(i=0)^(h-1) (alpha)_(m+i+h-1).                         (15c)
 ```
 
-This is the exact reciprocal-Pochhammer determinant evaluation sought by the
-Hankel scout.
+After the same positive row clearing, this is the ordinary
+falling-factorial alternant; its Vandermonde product gives the displayed
+evaluation.  This is the exact reciprocal-Pochhammer determinant sought by
+the original Hankel scout.
 
 ## 4. Integer formal-width supports
 
@@ -311,33 +407,58 @@ preserves eventual prime occurrence but destroys magnitude and term
 multiplicity; `(28)` is the sidecar that restores the latter.  This is an
 exact example of a quotient crossing the Abel--Dini/Bertrand boundary.
 
-## 6. Open multi-factor Hankel sign question
+## 6. Why the multi-factor closure is special
 
-For `J>1`, the sequence `(r_n)` is the coefficientwise product of `J`
-single-factor reciprocal-Pochhammer sequences.  Equation `(10)` still proves
-the negative order-two sign, but `(11)` does **not** follow from a generic
-Hadamard-product closure: the available Stieltjes/Hankel multiplier theorems
-apply to positive Hankel kernels, while these factors are sign-regular and
-already indefinite.  THM-3051 and THM-3053 make this transport distinction
-load-bearing.
+For `J>1`, `(r_n)` is the coefficientwise product of `J` single-factor
+reciprocal-Pochhammer sequences.  The proof of `(11)` deliberately does not
+invoke a generic Hadamard-product closure: the available Stieltjes/Hankel
+multiplier theorems apply to positive Hankel kernels, while these factors are
+sign-regular and already indefinite.  Such a generic closure would be false
+without further hypotheses.
 
-The exact companion finds the same signature `(-1)^(h choose 2)` in `4,250`
-multi-factor generalized minors, including the seven-factor `k=3` width
-families, with two independent determinant evaluations.  This is a
-**FINITE-EXACT SCOUT, not an all-order theorem**.  The live obligation is to
-prove a special reciprocal-Pochhammer Hadamard closure (for example through a
-positive factorial-Schur expansion) or find its first hostile minor.
+The actual preserved object is narrower and more informative.  After positive
+row and column scalings and one global column reversal, every finite minor is
+an evaluation matrix of **nested polynomials whose zeros are negative and
+whose new linear factors arrive in positive layers**.  The weighted-Pascal
+coefficient matrix remembers the nesting sidecar that an undifferentiated
+Hadamard-product description loses.  THM-3051 and THM-3053 make the same kind
+of distinction elsewhere: transport works because a concrete positive kernel
+or prefix structure is retained, not merely because each factor separately
+has a sign label.
+
+There is also a precise Maclaurin--Gregory--Newton bridge.  The polynomials
+`P_t` are the ordered block-Newton/falling-factorial basis forced by the Gamma
+increments, while `B` changes that basis to Maclaurin monomials.  The tail
+Jacobi factors in `(14b)` say that this basis change is an ordered path
+incidence map.  THM-3053's Beta--Gamma cone uses the same grammar on exponent
+inventory: prefix sums are the cut coordinates of an oriented path, and
+adjacent Beta edges are its elementary path moves.  Here ordered prefix
+**products** force total nonnegativity; there prefix **sums** characterize
+feasible multiplicative transport.  The shared mechanism is path incidence,
+not a metaphorical resemblance between addition and multiplication.
+
+This suggests a reusable extension criterion.  Any kernel reducible, by
+positive diagonal scalings and reversal of its parameter order, to evaluations
+`P_t(z_i)` with positive increasing nodes and nested products
+`P_t=P_(t-1)(z+beta_t)`, `beta_t>0`, inherits strict total positivity after
+the permutation.  The reciprocal product-Gamma family is one exact instance;
+arbitrary sign-regular Hadamard products are not.
 
 ## 7. Exact companion and scope
 
 The dependency-free rational companion checks:
 
 - `162` hypergeometric coefficient ratios and `144` negative Hankel-two cells;
-- `270` closed determinants `(15)` and `26,460` generalized single-factor
+- `270` closed determinants `(15c)` and `26,460` generalized single-factor
   sign-regular minors, with elimination and Leibniz paths agreeing;
+- `2,550` mixed continuous--discrete sign minors at exact rational row nodes,
+  with both determinant paths agreeing;
+- `8,820` minors of three weighted-Pascal coefficient matrices, all
+  nonnegative;
 - `135` THM-3047 integer-width cells and the exact `k=2` collision boundary;
 - `5,040` prime-valuation cells for `(26)--(28)`;
-- the separately labelled `4,250`-minor multi-factor scout.
+- `4,250` generalized multi-factor sign minors, including the seven-factor
+  `k=3` width families, with two determinant paths agreeing.
 
 Reproduce with
 
@@ -348,5 +469,6 @@ python -O 04-computation/gmc_product_gamma_reciprocal_dual_thm3056.py
 
 Both modes byte-match the stored eight-line transcript.  No claim here turns
 the reciprocal coefficients into a moment law, a physical moving-lower
-resultant, or a new GMC/NC2 proof.  The only `J>1` all-order sign statement is
-explicitly open.
+resultant, or a new GMC/NC2 proof.  Equation `(11)` is an all-order theorem for
+every **finite** positive-shape product; no infinite-product limit or generic
+Hadamard sign-regular closure is asserted.

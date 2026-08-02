@@ -4,9 +4,9 @@
 Proof-level asymptotics are recorded, not inferred from floats.  Exact
 rational arithmetic independently checks the hypergeometric coefficients,
 the negative order-two Hankel wall, the single-factor determinant formula,
-the integer width specialization, and its prime-incidence formula.  The
-multi-factor all-order sign experiment is printed explicitly as a finite scout
-and is not used as a theorem.
+the weighted-Pascal total-nonnegativity mechanism behind the all-factor
+Hankel-sign theorem and its mixed continuous-discrete extension, the integer
+width specialization, and its prime-incidence formula.
 """
 
 from fractions import Fraction
@@ -87,6 +87,20 @@ def product(values) -> Fraction:
     return answer
 
 
+def matrix_multiply(
+    left: list[list[Fraction]], right: list[list[Fraction]]
+) -> list[list[Fraction]]:
+    rows = len(left)
+    middle = len(right)
+    columns = len(right[0])
+    require(len(left[0]) == middle, "matrix product shape mismatch")
+    return [
+        [sum((left[i][k] * right[k][j] for k in range(middle)), Fraction(0))
+         for j in range(columns)]
+        for i in range(rows)
+    ]
+
+
 def character(k: int) -> tuple[int, int, int]:
     harmonic = sum((Fraction(1, j) for j in range(1, k + 1)), Fraction(0))
     scale = factorial(k)
@@ -163,6 +177,34 @@ for c in (Fraction(1, 2), Fraction(1), Fraction(7, 3)):
                     single_generalized_cells += 1
 
 
+# The proof does not use integrality on the row side.  After positive row
+# scaling, the mixed kernel at a rational row node p and integer column q is
+# exactly product_alpha 1/(alpha+p)_q.
+mixed_row_cells = 0
+mixed_rows = (
+    Fraction(1, 7),
+    Fraction(2, 5),
+    Fraction(7, 6),
+    Fraction(9, 4),
+    Fraction(11, 3),
+    Fraction(29, 5),
+)
+for shapes in shape_families[1::2]:
+    for size in range(2, 5):
+        target = (-1) ** (size * (size - 1) // 2)
+        for rows in combinations(mixed_rows, size):
+            for columns in combinations(range(6), size):
+                matrix = [
+                    [1 / product(rising(alpha + row, column) for alpha in shapes)
+                     for column in columns]
+                    for row in rows
+                ]
+                actual = determinant_elimination(matrix)
+                require(actual == determinant_leibniz(matrix), "mixed-row determinant paths disagree")
+                require(sign(actual) == target, "mixed continuous-discrete sign mismatch")
+                mixed_row_cells += 1
+
+
 # THM-3047 integer-width specialization.
 width_cells = 0
 collision_rows = 0
@@ -226,9 +268,71 @@ for k in range(2, 6):
                 prime_cells += 1
 
 
-# Finite-exact multi-factor generalized-Hankel scout.  No all-order theorem is
-# inferred: generic sign-regular Hadamard closure is unavailable.
-multi_scout_cells = 0
+# The coefficient matrix of nested positive-root prefix polynomials is a
+# weighted Pascal path matrix.  Its total nonnegativity is the bridge from
+# generalized Vandermonde positivity to the all-J Hankel-sign theorem.
+pascal_tn_cells = 0
+beta_families = (
+    tuple(Fraction(j) for j in range(1, 7)),
+    tuple(Fraction(j) for j in range(6, 0, -1)),
+    (
+        Fraction(1, 3),
+        Fraction(7, 2),
+        Fraction(2, 5),
+        Fraction(11, 4),
+        Fraction(5, 7),
+        Fraction(13, 6),
+    ),
+)
+for betas in beta_families:
+    columns = [[Fraction(1)]]
+    coefficients = [Fraction(1)]
+    for beta in betas:
+        next_coefficients = [Fraction(0)] * (len(coefficients) + 1)
+        for degree, coefficient in enumerate(coefficients):
+            next_coefficients[degree] += beta * coefficient
+            next_coefficients[degree + 1] += coefficient
+        coefficients = next_coefficients
+        columns.append(coefficients)
+
+    coefficient_matrix = [
+        [columns[prefix][degree] if degree <= prefix else Fraction(0)
+         for prefix in range(7)]
+        for degree in range(7)
+    ]
+    tail_jacobi_product = [
+        [Fraction(int(row == column)) for column in range(7)]
+        for row in range(7)
+    ]
+    for index, beta in enumerate(betas, start=1):
+        tail_jacobi = [
+            [Fraction(int(row == column)) for column in range(7)]
+            for row in range(7)
+        ]
+        for row in range(index, 7):
+            tail_jacobi[row][row - 1] = beta
+        tail_jacobi_product = matrix_multiply(tail_jacobi, tail_jacobi_product)
+    require(
+        tail_jacobi_product
+        == [[coefficient_matrix[degree][prefix] for degree in range(7)]
+            for prefix in range(7)],
+        "weighted Pascal tail-Jacobi factorization failed",
+    )
+    for size in range(1, 5):
+        for degrees in combinations(range(7), size):
+            for prefixes in combinations(range(7), size):
+                minor = determinant_elimination(
+                    [[coefficient_matrix[degree][prefix] for prefix in prefixes]
+                     for degree in degrees]
+                )
+                require(minor >= 0, "weighted Pascal total nonnegativity failed")
+                pascal_tn_cells += 1
+
+
+# Multi-factor generalized-Hankel checks exercise the theorem's conclusion
+# outside the single-factor closed-form regime.  The proof uses the special
+# prefix-polynomial factorization, not a generic Hadamard-product closure.
+multi_sign_cells = 0
 multi_shape_families = shape_families[3:] + (
     (Fraction(1),) * 5 + (Fraction(2),) * 2,
     (Fraction(1, 2),) * 5 + (Fraction(3, 2),) * 2,
@@ -242,18 +346,22 @@ for shapes in multi_shape_families:
                 matrix = [[values[row + column] for column in columns] for row in rows]
                 actual = determinant_elimination(matrix)
                 require(actual == determinant_leibniz(matrix), "multi-factor determinant paths disagree")
-                require(sign(actual) == target, "multi-factor finite scout sign mismatch")
-                multi_scout_cells += 1
+                require(sign(actual) == target, "multi-factor all-J sign mismatch")
+                multi_sign_cells += 1
 
 
 print("theorem=reciprocal product-Gamma series is _1F_J with order 1/J and type J*c^(-1/J)")
 print(f"hypergeometric_ratio_cells={hypergeometric_cells};negative_H2_cells={hankel_two_cells}")
 print(
     f"single_gamma_closed_formula_cells={single_formula_cells};"
-    f"generalized_SSR_cells={single_generalized_cells};two determinant paths"
+    f"generalized_SSR_cells={single_generalized_cells};"
+    f"mixed_row_SSR_cells={mixed_row_cells};two determinant paths"
 )
 print(f"integer_width_cells={width_cells};duplicate_one_rows={collision_rows};only k=2")
 print(f"prime_valuation_cells={prime_cells};prime shadow=all primes not dividing t")
 print("support=Dirichlet abscissa 0;counting ~ log(x)/(I loglog(x));harmonic mass hypergeometric")
 print("divisor_scar=THM2438 mean loss equals support harmonic mass")
-print(f"multi_factor_sign_cells={multi_scout_cells};status=FINITE-EXACT_SCOUT_NOT_THEOREM")
+print(
+    f"weighted_pascal_TN_cells={pascal_tn_cells};"
+    f"multi_factor_sign_cells={multi_sign_cells};status=ALL_J_SSR_PROVED"
+)

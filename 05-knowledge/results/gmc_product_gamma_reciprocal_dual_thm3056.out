@@ -1,8 +1,8 @@
 theorem=reciprocal product-Gamma series is _1F_J with order 1/J and type J*c^(-1/J)
 hypergeometric_ratio_cells=162;negative_H2_cells=144
-single_gamma_closed_formula_cells=270;generalized_SSR_cells=26460;two determinant paths
+single_gamma_closed_formula_cells=270;generalized_SSR_cells=26460;mixed_row_SSR_cells=2550;two determinant paths
 integer_width_cells=135;duplicate_one_rows=3;only k=2
 prime_valuation_cells=5040;prime shadow=all primes not dividing t
 support=Dirichlet abscissa 0;counting ~ log(x)/(I loglog(x));harmonic mass hypergeometric
 divisor_scar=THM2438 mean loss equals support harmonic mass
-multi_factor_sign_cells=4250;status=FINITE-EXACT_SCOUT_NOT_THEOREM
+weighted_pascal_TN_cells=8820;multi_factor_sign_cells=4250;status=ALL_J_SSR_PROVED
