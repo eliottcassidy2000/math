@@ -1,0 +1,29 @@
+LRC14 reflected one-cone exact proof candidate
+universe=bodies:3003;arbitrary_level_bank:2442;residual:561;spread:D>=6;cone:m>=D
+corner=real boundary m=D decreases in D;worst_D=6;worst_m=6;ratio_cap=2;max_abs_eta=23/166;intermediate_slope_floor=973/166
+phase=1/49+c/(PQ),c>=-12/49;constrained_edges=7161;max_product_bound=6879371187357084/5210641623133@(1, 2, 4, 6, 8, 12),(0, 1);primitive_bank=279;cap_endpoint=(1,2)
+phase_zero_channels=((1, 2), (2, 3), (3, 4));balanced_gain_circuit=(3/2)*(4/3)=2
+coarse_csp=closed:492;traps:69;reverse_order_agrees;largest_witness_span=2;forced_full_components=21
+coarse_traps=((1, 2, 3, 4, 6, 8), (1, 2, 3, 4, 6, 9), (1, 2, 3, 4, 6, 12), (1, 2, 3, 4, 8, 12), (1, 2, 3, 4, 9, 12), (1, 2, 3, 5, 6, 10), (1, 2, 3, 5, 6, 12), (1, 2, 3, 5, 10, 12), (1, 2, 3, 6, 7, 12), (1, 2, 3, 6, 7, 14), (1, 2, 3, 6, 8, 9), (1, 2, 3, 6, 8, 12), (1, 2, 3, 6, 9, 12), (1, 2, 3, 6, 10, 12), (1, 2, 3, 6, 12, 14), (1, 2, 3, 7, 12, 14), (1, 2, 3, 8, 9, 12), (1, 2, 4, 5, 6, 10), (1, 2, 4, 5, 6, 12), (1, 2, 4, 5, 8, 10), (1, 2, 4, 5, 10, 12), (1, 2, 4, 6, 7, 12), (1, 2, 4, 6, 7, 14), (1, 2, 4, 6, 8, 9), (1, 2, 4, 6, 8, 12), (1, 2, 4, 6, 9, 12), (1, 2, 4, 6, 10, 12), (1, 2, 4, 6, 12, 14), (1, 2, 4, 7, 8, 14), (1, 2, 4, 7, 12, 14), (1, 2, 4, 8, 9, 12), (1, 2, 5, 6, 10, 12), (1, 2, 5, 7, 10, 14), (1, 2, 6, 7, 12, 14), (1, 2, 6, 8, 9, 12), (1, 3, 4, 5, 6, 10), (1, 3, 4, 5, 6, 12), (1, 3, 4, 5, 10, 12), (1, 3, 4, 6, 8, 9), (1, 3, 4, 6, 8, 12), (1, 3, 4, 6, 9, 12), (1, 3, 4, 6, 10, 12), (1, 3, 4, 6, 12, 14), (1, 3, 4, 7, 12, 14), (1, 3, 4, 8, 9, 12), (1, 3, 5, 6, 10, 12), (1, 3, 6, 7, 12, 14), (1, 3, 6, 8, 9, 12), (1, 4, 5, 6, 10, 12), (1, 4, 6, 7, 12, 14), (1, 4, 6, 8, 9, 12), (2, 3, 4, 5, 6, 10), (2, 3, 4, 5, 6, 12), (2, 3, 4, 5, 10, 12), (2, 3, 4, 6, 8, 9), (2, 3, 4, 6, 8, 12), (2, 3, 4, 6, 9, 12), (2, 3, 4, 6, 10, 12), (2, 3, 4, 7, 12, 14), (2, 3, 4, 8, 9, 12), (2, 3, 5, 6, 10, 12), (2, 3, 6, 7, 12, 14), (2, 3, 6, 8, 9, 12), (2, 4, 5, 6, 10, 12), (2, 4, 6, 7, 12, 14), (2, 4, 6, 8, 9, 12), (3, 4, 5, 6, 10, 12), (3, 4, 6, 7, 12, 14), (3, 4, 6, 8, 9, 12))
+verdict_digest=fa66f241c9b591160db364e334e26e6db9073e16d6d6d0197e028d7fa4a43607
+gain_triangle_rows=21;core_count_profile=19x1+2x2;digest=e5e03bd0c7bb4fa9cc42ff7531fcfe5c7b5a943d0ddc7814ab9a62951512853a
+located_policies=65;oriented_controls=894;weakest=79338784432498793/8505769192234754609@body=(1, 2, 4, 6, 8, 12),pair=(0, 1),channel=(37, 19),cell=303;digest=4ffe8c58080e02517563c980ca141ad2d5956398696aef9a3a425d1fcec9044e
+tail_1=body:(1, 2, 3, 4, 6, 12);side:low;ordered_pair:(1, 0);start:8;numerator:2;margin:205300819205895603/310562583247914406640;first_step:8633453/10723814640;eta_bound:4/671;head_channels:18;head_weakest:144959308749210143/19410161452994650415@(8, 7),cell=155
+tail_2=body:(1, 2, 3, 4, 6, 12);side:high;ordered_pair:(0, 1);start:8;numerator:2;margin:416425758195796819/621588001940311547120;first_step:34539977/42955650864;eta_bound:8/1343;head_channels:18;head_weakest:42128798232366829/6797895590840153275@(7, 8),cell=155
+tail_3=body:(1, 3, 4, 6, 8, 12);side:all;ordered_pair:(0, 1);start:9;numerator:5;margin:122259342324097072/1527771971012108430609;first_step:193096258/335852050275;eta_bound:45/6046;head_channels:44;head_weakest:24774659391587927/7430997812962436713@(13, 7),cell=311
+tail_4=body:(1, 3, 4, 6, 9, 12);side:all;ordered_pair:(0, 1);start:6;numerator:5;margin:5783232069125146/2857909113466294335;first_step:138643588/76799257563;eta_bound:15/3023;head_channels:20;head_weakest:144089828939714901/15813763761180161987@(7, 4),cell=467
+tail_5=body:(2, 3, 4, 6, 8, 12);side:all;ordered_pair:(0, 1);start:7;numerator:4;margin:2707820411044740279/2692867579894378307575;first_step:71087957/60621408400;eta_bound:7/1175;head_channels:24;head_weakest:3771201096905199411/549798669590246061755@(7, 4),cell=323
+head_controls=124;weakest=24774659391587927/7430997812962436713@body=(1, 3, 4, 6, 8, 12),pair=(0, 1),channel=(13, 7),cell=311;head_digest=dd73914c6b2faf4d8c635e36f1fb38df0db0286dfcefe32191a78f0aa15fb0a4
+orientation_boundary=old H ordered pair at reverse channel (2,1),cell155 has skeleton 0;reversed labels restore skeleton 1/14 and eta 0
+transport=oriented eta_g retained;g/(PgL-a) strictly decreases;c_inverse dropped only after positive bracket;debt bounded at level six
+tail=PQ>=s^2,Pg>=s;endpoint numerator bounds exact on declared half/full intervals;losses decrease strictly;finite heads oversized-audited
+conclusion=all reflected residual packets with D>=6 and m>=D close on all 3003 bodies
+corollary=assembled reflected certificate-failure wedge is confined to 561 bodies,D>=6,1<=m<D
+scope=reflected THM-2941 sufficient family only;physical LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+four_thirds_source_sha256=0b8b01a184f5862c3a32598600988773bcbefdc26c63644cddf0884b18285c3e
+four_thirds_output_sha256=0377aaeb146553fe7c027a81ea3589045d01f50fe11aa79848d009a48c806fb9
+four_thirds_semantic_sha256=d2c1b3bb27ad649db66a3b76305dd6027565cc020c31ddd4cd7e779b48d8bd53
+source_sha256=800395ae242860094fed3db9638a93ebc2faba7973558a3eaa51f3af62145200
+semantic_sha256=dc84fbea8c3e951aa510f02776e5ad300e7d50843da6137fd967f14faff7d2d9
+all_exact_controls=PASS
