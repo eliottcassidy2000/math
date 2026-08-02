@@ -1,0 +1,14 @@
+THM3275 off-resonant packet covariant conductor clock exact companion
+abstract_tame_C3_checks=13 h_range=1..19 excluding_3Z
+pair_valuation_ledger_checks=100
+identity: v_K(s^4*C)=h
+identity: v_K(disc_cubic_packet)=v_K(disc_quartic_packet)=2h
+identity: packet_order_index_exponent=h-1
+h=1: normalized_C_valuation=1 cubic_disc=2 quartic_disc=2 index=0
+h=1_boundary: normalized_C_nonunit_but_packet_order_maximal=True
+h=2: normalized_C_valuation=2 cubic_disc=4 quartic_disc=4 index=1
+h=2_hostile: off_resonant_packet_order_nonmaximal=True
+h=1_cross_resultant=(B**3*t + 1)*(8*B**6*t**2 + 475*B**3*t + 8000)/19683
+h=2_cross_resultant=8*(B**3*t**2 + 1)*(1000*B**6*t**4 + 1757*B**3*t**2 + 1000)/19683
+h=1_normalized_C=27*B**3*t*(B**3*t + 125)*(8*B**6*t**2 + 475*B**3*t + 8000)/64
+h=2_normalized_C=-27*B**3*t**2*(1000*B**6*t**4 + 1757*B**3*t**2 + 1000)
