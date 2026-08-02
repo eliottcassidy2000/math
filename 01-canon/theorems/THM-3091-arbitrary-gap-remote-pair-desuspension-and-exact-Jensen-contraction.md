@@ -2,7 +2,7 @@
 id: THM-3091
 title: "Arbitrary-gap remote-pair desuspension and exact Jensen contraction"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  Above any
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Above any
   fixed nonzero physical child resultant, a remote pair at C,C+H is positive
   uniformly for every integer H>=1 once C is large, with the threshold in C
   independent of H.  A second exact binary normalization contracts every
@@ -12,6 +12,13 @@ status: >
   one-normal ledger.  This is fixed-width and not an arbitrary two-scale
   support theorem.
 source: root-gmc-arbitrary-gap-pair-2026-08-01
+audit: >
+  Two independent audits rederived the exact binary coefficients, response
+  bound, Jensen inequalities, whole-system covariance, raw physical atom
+  typing before signed cancellation, uniform finite-H lower-bound patch,
+  separated resultant, carrier merger, parity, and scope.  Normal and
+  optimized replay matched the 693-byte stored transcript and declared LF
+  hashes; documentation passed.
 depends_on:
   - THM-3063-terminal-suspension-transverse-resultant-and-five-slot-tail-holotopy
   - THM-3073-upper-triangular-resultant-norm-and-torsion-character-death-barcode
@@ -30,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3091 -- arbitrary-gap remote-pair desuspension
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3063 fixes the gap inside one remote pair.  THM-3089 moves a general
 cluster only through square-root diameter because its all-high form must
@@ -447,4 +454,4 @@ python -O 04-computation/gmc_arbitrary_gap_remote_pair_thm3091.py
 
 Both modes must equal the stored transcript after LF normalization.
 
-**QED, pending independent audit and status promotion.**
+**QED.**
