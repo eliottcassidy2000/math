@@ -2,7 +2,7 @@
 id: THM-3159
 title: "Right-neighbor exceptional-prime reciprocal-root zero-face separation"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.  At the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  At the
   right-neighbor prime q=249727, the two resonant quadratic factorial-moment
   polynomials have distinct positive q-adic slopes.  Their height-zero faces
   are coprime by an exact reciprocal-root descent to a degree-249727 extended
@@ -11,8 +11,11 @@ status: >
 audit: >
   The first candidate audit caught an odd partial-fraction sign error on the
   reflected cubic pole.  MISTAKE-355 records the false quartic transform.
-  The repaired linear system gives P(x)=2xU(x)+1; its exact gcd and Bezout
-  identity are being re-audited before promotion.
+  A fresh independent audit rederived the coefficient valuations and Newton
+  slopes, Wilson sign, corrected partial fractions and determinant, the
+  reciprocal polynomial P(x)=2xU(x)+1, both singular charts, and the exact
+  degree-249727 gcd and Bezout identity.  Normal and optimized replays match
+  the stored LF-normalized transcript and declared hashes.
 source: root/multiscale-newton-flag/2026-08-02
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
@@ -29,7 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3159 -- right-neighbor exceptional-prime reciprocal-root separation
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Let
 
@@ -285,3 +288,12 @@ independent audit caught that error before promotion; MISTAKE-355 records the
 minimal failed implication.  Equations `(20)--(23)`, the companion, stored
 output, and hashes were all replaced rather than silently retaining the old
 certificate.
+
+The repaired candidate then received a fresh independent hostile audit.  It
+rederived `(7)--(10)`, including all four endpoint residues; checked the
+Wilson sign in `(14)`; reconstructed the corrected partial-fraction system,
+its determinant and solution `(21)`; and verified that `(22)` is exactly the
+necessary off-chart condition.  It independently replayed the two singular
+charts, the full gcd and extended-gcd certificate, and both normal and
+optimized executions.  The repaired statement and evidence are therefore
+promotion-safe; the superseded quartic candidate is not a dependency.
