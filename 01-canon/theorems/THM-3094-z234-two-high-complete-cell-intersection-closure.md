@@ -2,19 +2,20 @@
 id: THM-3094
 title: "z234 two-high complete-cell intersection closure"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
-  AWAITING ROOT REPLAY/PROMOTION.  Exact whole-cell cardinalities close all
-  108,966,498 finite literal candidates in THM-3087's two scalar-unbounded
-  bodies.  The other two THM-3078 rows remain.  No projected-cap, ledger, or
-  LRC claim is made before canonical routing and final promotion.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Exact whole-cell
+  cardinalities close all 108,966,498 finite literal candidates in
+  THM-3087's two scalar-unbounded bodies.  The other two THM-3078 rows
+  remain.  No projected-cap, ledger, or LRC claim is made.
 source: codex-lrc-z234-boundary-scout-2026-08-02
 audit: >
-  An independent hostile audit rebuilt both literal body carriers and all
-  64,740 label/body columns without importing the claimed extrema.  It
-  reproduced the unique minima, second minima, strict pigeonhole slacks, and
-  direct extremal intersections, and accepted the strict-open endpoint,
-  distinct-label, full-cell projection, and aligned-cap typing.  Final root
-  replay and promotion remain pending.
+  Two independent hostile audits rebuilt both literal body carriers and all
+  64,740 label/body columns without importing the claimed extrema.  They
+  reproduced the unique minima, second minima, strict pigeonhole slacks,
+  direct extremal intersections, 223/431 mask bank, and the exact split of
+  108,966,498 candidates; they accepted the strict-open endpoint,
+  distinct-label, full-cell projection, and aligned-cap typing.  Root replay
+  caught and repaired a stale declared script hash and an ill-typed low-label
+  referent.  Fresh normal and optimized transcripts match stored output.
 depends_on:
   - THM-3087-z234-two-high-common-torsion-and-finite-height-reduction
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
@@ -31,8 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3094 -- z234 two-high complete-cell intersection closure
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT + INDEPENDENTLY
-HOSTILE-AUDITED; AWAITING ROOT REPLAY/PROMOTION.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
@@ -66,7 +66,7 @@ drift is `234`, and its fixed low drift is respectively
 ```
 
 Let `J` be the set of complete body `1/L` cells which are safe from both
-labels in `(3)`.  For a high label `z`, define
+`234` and the respective label in `(3)`.  For a high label `z`, define
 
 ```text
 A_z={j in J : [j/L,(j+1)/L] is disjoint from D_z}.       (4)
