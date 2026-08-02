@@ -1,0 +1,13 @@
+theorem=THM-3080
+status=PROVED_VERIFIED_EXACT_CANDIDATE
+stage=omega=U_i*dlog(M_i)^dlog(R_i);val(U_i)=sigma_i;budget_B_i=E-sigma_i
+depth_gate=1<=e_i<=B_i
+terminal=e_i=B_i;u_i*(g_i*m_i_prime-e_i*m_i*r_i_prime/r_i)=E*kappa^-1*tau
+strict=e_i<B_i;leading_coefficient_zero;m_i^(g_i/d)/r_i^(e_i/d)=constant
+transform=M_next=Z_i^(g_i/d)/(c*R_i^(e_i/d));val(R_next)=d=gcd(g_i,e_i)
+key_value=val(Z_i^(g_i/d)-c*R_i^(e_i/d))=lcm(g_i,e_i)+e_next
+budget_update=B_next=B_i-e_i;g_next=gcd(g_i,e_i)
+finite_partition=sum_i(e_i)=D;number_of_stages<=D
+c3_specialization=E=3;D=p+q+3_two_pole_or_p+3-r_one_pole
+three_stage_hostile=p=q=4;D=11;depths=4+4+3;dx_wedge_dy=du_wedge_d(s^3)
+scope=coordinate_line_local_toric_tower;no_polynomial_globalization_or_full_C3_A4_S4_JC2_claim
