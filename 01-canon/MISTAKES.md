@@ -9,7 +9,7 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-356 (2026-08-02, THM-3162 live reservation race) -- a second selector reservation landed 51 seconds after the first claimant
+## MISTAKE-356 (2026-08-02, THM-3162/3164/3167 live reservation races) -- non-atomic repairs can collide again
 
 - **What failed:** the depth-six selector non-resurrection session reserved
   `THM-3162` from a fresh snapshot, but the unrelated falling-factorial
@@ -18,11 +18,18 @@ Format per entry:
 - **Why:** a fetch-and-scan reservation is not atomic.  The selector stub was
   mathematically honest but chronologically second, so its namespace claim
   was invalid under the first-on-`main` rule.
-- **Repair:** the first claimant
-  `THM-3162-falling-factorial-order-join-path-colour-transform.md` keeps the
-  ID.  The later selector stub is coherently renamed to `THM-3164` before any
-  proof, script, output, dependency, or navigation entry uses it.  This is a
-  namespace repair only; neither theorem's mathematics changes.
+- **Failed first repair:** both sessions independently reacted to the
+  `THM-3162` collision by choosing `THM-3164`.  The proved order-join packet's
+  repair landed first; the selector repair arrived 12 minutes later and
+  recreated the duplicate under a new number.
+- **Second failed repair:** a later fresh scan made `THM-3167` appear free, but
+  an already-pushed inverse-different repair owned that ID in newer remote
+  history.  The selector packet had not yet been pushed under this name.
+- **Final repair:** the already audited order-join theorem keeps `THM-3164`,
+  and the inverse-different theorem keeps `THM-3167`.  The later selector
+  packet is coherently renamed to `THM-3169`, including theorem, script,
+  output, hashes, and headings, before its proof is promoted.  This is a
+  namespace repair only; none of the theorems' mathematics changes.
 
 ## MISTAKE-355 (2026-08-02, THM-3159 candidate audit) -- losing the odd reflected-pole sign turned the zero-face system into an unrelated quartic gcd
 
