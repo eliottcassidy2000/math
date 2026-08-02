@@ -36,10 +36,11 @@ THM-2981/3033/3041/3052/3061/3071/3078/3094/3098/3102/3106/3109/3111/3113/3114
 close projected `k=3` through `z_1=226`: cap `225`, ledger `374172`; next layer `78` rows. THM-3126 reconstructs six `z_1=229` prefix terminals as a sidecar, not the cap theorem.
 In the reflected gain graph, cap two forces the phase-zero triangle
 `(3/2)(4/3)=2`; by cap `7/3` it is interior and no full-cap component remains.
-The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`.  The MISTAKE-347 cap-`3`
-repair recomputes `561` bodies, both orientations of `253` policies, and
-`35` tail lanes/`1,600` heads, proving `2m>=D` only in the sufficient family.
-THM-3135 shows the standard single-pair uniform H lanes form a DAG; the repaired atlas succeeds through richer lane-conditioned/multi-pair cycles.
+The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`; the proved CSP chain closes
+`3m>=4D`.  MISTAKE-347 leaves later split tails **AUDIT-REQUIRED** and keeps
+`2m>=D` only inside its sufficient family.  THM-3135 blocks standard uniform
+`H` lanes; THM-3150 gives `H` a three-channel skeleton and fixed-ray tail
+from scale `62`.  Arbitrary-gcd cones remain **OPEN**.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
 supplied-root seams, not semantic-root identification (kernel `28,393`).

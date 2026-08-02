@@ -1,0 +1,20 @@
+LRC H CAP-TWO TWO-STAR SKELETON -- EXACT REFEREE
+body=(1, 2, 3, 4, 6, 12);ruler=168;cell=90;edges=((0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (1, 5))
+low_oriented_ratios=(Fraction(1, 2), Fraction(2, 3), Fraction(3, 4), Fraction(4, 3), Fraction(3, 2), Fraction(2, 1))
+quotient_exception_set=(Fraction(1, 2), Fraction(9, 16), Fraction(2, 3), Fraction(3, 4), Fraction(8, 9), Fraction(1, 1), Fraction(9, 8), Fraction(4, 3), Fraction(3, 2), Fraction(16, 9), Fraction(2, 1))
+t=1/2;candidates=(Fraction(1, 4), Fraction(1, 3), Fraction(3, 8), Fraction(2, 3), Fraction(3, 4), Fraction(4, 3), Fraction(3, 2), Fraction(2, 1));max_leaf_low=(4, (Fraction(2, 3), Fraction(3, 4)));total_low_upper=5;high_lower=4
+t=2/3;candidates=(Fraction(1, 3), Fraction(4, 9), Fraction(1, 2), Fraction(3, 4), Fraction(8, 9), Fraction(4, 3), Fraction(3, 2), Fraction(2, 1));max_leaf_low=(4, (Fraction(3, 4), Fraction(8, 9), Fraction(4, 3)));total_low_upper=5;high_lower=4
+t=3/4;candidates=(Fraction(3, 8), Fraction(1, 2), Fraction(9, 16), Fraction(2, 3), Fraction(9, 8), Fraction(4, 3), Fraction(3, 2), Fraction(2, 1));max_leaf_low=(4, (Fraction(9, 8), Fraction(4, 3), Fraction(3, 2)));total_low_upper=5;high_lower=4
+t=9/16;candidates=(Fraction(9, 32), Fraction(3, 8), Fraction(27, 64), Fraction(1, 2), Fraction(2, 3), Fraction(3, 4), Fraction(27, 32), Fraction(9, 8), Fraction(4, 3), Fraction(3, 2), Fraction(2, 1));max_leaf_low=(5, (Fraction(2, 3), Fraction(3, 4), Fraction(27, 32), Fraction(9, 8)));total_low_upper=5;high_lower=4
+t=8/9;candidates=(Fraction(4, 9), Fraction(1, 2), Fraction(16, 27), Fraction(2, 3), Fraction(3, 4), Fraction(32, 27), Fraction(4, 3), Fraction(3, 2), Fraction(16, 9), Fraction(2, 1));max_leaf_low=(6, (Fraction(2, 3), Fraction(3, 4), Fraction(32, 27), Fraction(4, 3)));total_low_upper=6;high_lower=3
+sharp_high_count=3;sharp_t=8/9;sharp_leaves=(Fraction(2, 3), Fraction(3, 4), Fraction(32, 27), Fraction(4, 3))
+pivot_blind=(Fraction(1, 2), Fraction(3, 2));pivot_blind_high_lower=4
+skeleton_sum_floor=1/35;pivot_blind_floor=4/105
+two_star_coefficient_sum=65;transport_loss=65/(42*n)
+n61_sufficient_margin=-25676690027983908791/734017257871022240108370
+n62_sufficient_margin=6445273605987946151/383853218066532083354940
+scope=common-dilation cap-two rays;arbitrary pairwise gcd remains open;LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+source_sha256=ce1af624a78791b5329ec4da8d33e849d74d5ca7d510522d19199fd88676e966
+semantic_sha256=0c70a8b48cfa8479ec0ffee21e6d2236235acb6a29b58f72c8fdf5c08cce240d
+all_exact_controls=PASS
