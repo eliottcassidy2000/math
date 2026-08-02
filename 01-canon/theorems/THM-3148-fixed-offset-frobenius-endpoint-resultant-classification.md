@@ -72,8 +72,13 @@ A_(p+a)^[p+s](v)=L((p+s-t+v t^2)^(p+a)),
 F_(a,s)(v)=L((s-t+v t^2)^a).                               (3)
 ```
 
-Applying `(1)` with `P=G=p+s-t+v t^2` gives the coefficientwise polynomial
-congruence
+Applying `(1)` with
+
+```text
+P=p+s-t+v t^2,                 G=P^a,
+```
+
+gives the coefficientwise polynomial congruence
 
 ```text
 A_(p+a)^[p+s](v) = s F_(a,s)(v)                    (mod p). (4)
@@ -127,7 +132,7 @@ their complete height-zero residual pair is
 sF_(r_0,s),                       sF_(r_0+1,s).              (10)
 ```
 
-Define the primitive fixed resultant
+Define the fixed integer resultant
 
 ```text
 delta_s=Res_v(F_(s-2,s),F_(s-1,s)).                         (11)
@@ -187,7 +192,7 @@ calculation depending only on `s`, not on the large degree `p+s`.
 
 ## 4. The first exceptional spectra are genuinely nonlocal
 
-The exact primitive resultants through `s=6` are
+The exact integer resultants through `s=6` are
 
 ```text
 s  base r_0   factorization of delta_s
@@ -237,6 +242,11 @@ The prime `61`, although it divides the leading coefficient `976` in the
 next Euclidean quotient, does **not** divide `delta_4`; its modular gcd is
 `1`.  This separates quotient-denominator walls from actual residual-root
 exceptions.
+
+The displayed resultants have not been divided by the contents of their two
+polynomials.  Those contents account for some small prime powers in `(17)`;
+they are harmless under `(9)`, but retaining them makes `(11)` and `(18)`
+literal integer identities.
 
 For every eligible exceptional prime in `(17)`, the companion computes a
 linear, nonzero residual gcd.  Higher offsets may have larger gcd degree;
