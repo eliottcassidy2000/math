@@ -4,6 +4,11 @@
 from itertools import combinations
 
 
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
+
+
 def rgs_partitions(n, blocks):
     """Restricted-growth strings for set partitions with exactly blocks blocks."""
     if n == 0:
@@ -72,9 +77,11 @@ def projected_rank(n, r):
         for omitted in range(r + 1):
             row = component_word(n, forest, omitted)
             column ^= 1 << row_index[row]
-        assert column.bit_count() == r + 1
+        require(column.bit_count() == r + 1,
+                "forest deletion flats were not distinct")
         if r % 2:
-            assert column.bit_count() % 2 == 0
+            require(column.bit_count() % 2 == 0,
+                    "odd-rank column lost its augmentation parity")
 
         reduced = column
         while reduced:
@@ -87,7 +94,8 @@ def projected_rank(n, r):
         if len(pivots) == expected:
             break
 
-    assert len(pivots) == expected, (n, r, target, len(pivots))
+    require(len(pivots) == expected,
+            f"rank mismatch at {(n, r, target, len(pivots))}")
     return target, expected, read
 
 
@@ -112,7 +120,7 @@ def tree_splits(m, edges):
             if j == omitted:
                 continue
             ra, rb = find(a), find(b)
-            assert ra != rb
+            require(ra != rb, "double-star control contained a cycle")
             parent[rb] = ra
         root0 = find(0)
         mask = sum(1 << x for x in range(m) if find(x) == root0)
@@ -132,10 +140,12 @@ def double_star_controls(m):
         edges = [(a, b)]
         edges += [(a, x) for x in range(m) if x != a and mask & (1 << x)]
         edges += [(b, x) for x in range(m) if x != b and complement & (1 << x)]
-        assert len(edges) == m - 1
+        require(len(edges) == m - 1,
+                "double-star control has the wrong edge count")
         expected = [cut_key(mask, m)]
         expected += [cut_key(1 << x, m) for x in range(m) if x not in (a, b)]
-        assert tree_splits(m, edges) == sorted(expected)
+        require(tree_splits(m, edges) == sorted(expected),
+                "double-star fundamental cuts do not match the lemma")
         checked += 1
     return checked
 
