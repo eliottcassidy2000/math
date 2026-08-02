@@ -17,10 +17,11 @@ audit: >
   Three independent immutable-file audits rederived the high-layer bases,
   length-twelve localization with multiplicity, Poisson normalization and
   orientation, full Gamma asymptotic, exact carrier and corrected width flag,
-  affine alternant, and uniform finite-bank holotopy.  All replayed normal,
-  optimized, and stored companions and matched the declared LF hashes.  The
-  final audit also supplied the all-width nonnegative norm boundary and
-  caught the repaired THM-2843 slug and THM-2942 evidence dependency.
+  affine alternant, and uniform finite-bank holotopy.  All ordinary and
+  optimized replays matched each other, the stored companion, and the
+  declared LF hashes.  The final audit also supplied the all-width
+  nonnegative norm boundary and caught the repaired THM-2843 slug and
+  THM-2942 evidence dependency.
 depends_on:
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
   - THM-2942-macaulay-extraneous-flag-factor-and-pluecker-mutation
@@ -334,6 +335,13 @@ python -O 04-computation/gmc_four_slot_physical_transverse_tail_thm3062.py
 ```
 
 Both modes equal the stored ten-line transcript after LF normalization.
+An independent replay obtained script hash
+`5b22fc39fa132127800c39718aec9a67b538f31ba30e87bdf493281dd9d5b836`
+from `12,716` bytes in `392` lines and output hash
+`27a28c55c2f61f91286acdc626815dd47192dbf9ae5e9cb83d83b1976177535b`
+from `548` bytes in `10` lines.  Ordinary, optimized, and stored outputs were
+byte-identical.  THM-2942 supplies the universal flag divided out by the
+selected-chart checks; those checks do not assert chart persistence.
 
 This theorem proves an intrinsic normalized physical-resultant asymptotic for
 two fixed lower offsets, an affine moving offset, and a fixed terminal gap.
