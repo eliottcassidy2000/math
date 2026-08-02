@@ -2,7 +2,7 @@
 id: THM-3096
 title: "Physical-support complete intersection and arbitrary-radial pair radical"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
   positive factorial support whose physical first-window resultant is
   nonzero, the first t factorial moment forms are a homogeneous complete
   intersection of degrees 1,...,t.  Consequently the two-charge family
@@ -12,6 +12,14 @@ status: >
   t(t-1)/2+1.  This realizes the sharp HYP-8765 cutoff on this family, not on
   general multi-charge or neutral-channel supports.
 source: root-gmc-radial-complete-intersection-2026-08-01
+audit: >
+  An independent hostile audit checked the determinant-one physical
+  elimination, projective zero-locus equivalence, Cohen--Macaulay regular
+  sequence and socle invoice, literal ideal membership, every Wick and
+  factorial normalization, the radical intersection, and the neutral
+  cancellation hostile.  Normal, optimized, and stored companions replayed
+  identically; the declared LF hashes, evidence counts, and documentation
+  checks all passed.
 depends_on:
   - THM-1645-gmc2-angular-layer-is-dvdk-the-gap-is-purely-radial
 related:
@@ -30,7 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3096 -- physical-support complete intersection and radial pair radical
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The pure two-charge specialization of HYP-8765 is exactly the Strong
 Factorial problem: for `H=sC(s)`, must one of `L(H),...,L(H^t)` detect every
@@ -279,4 +287,4 @@ It does not prove SFC for a support whose resultant vanishes, general
 multi-charge or neutral-channel pair radicals, arbitrary-radial GMC(2) in
 all charge patterns, LRC(14), JC(2), or DC(2).
 
-**QED, pending independent audit and status promotion.**
+**QED.**
