@@ -1,7 +1,7 @@
 LRC14 projected k3 z229 terminal and z228 screen double-layer descent
-dependency=THM3111_source:d86fcbf53f04dcc9e08d33f48c0682b063473a2d9d422a75c3ef37b58e9e1841;output:8a7b5a82e30cb84379655e50109803ea973c1df69a5affbcc7f29c0aeb76ee7e;semantic:b4dd4e0e66d0429cac12dc96d1d769d3f05ab3c503e1dcbb1b94f5e6020c9b6c
+dependency=THM3111_source:42323171481deba2371eed9947b2079976cb367dac340cf58b8f1f0c0afb5082;output:54a82d696c592162bbe3f98a3dd34e092967a0a6320e9931adb2866570cc5813;semantic:4ff290e285dbb748dac71e1b885ce220dbfe04ec6f236ea97a5526bc27baa497
 atlas=sha256:cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda;rows:6060
-layer=z1:229;rows:43;wall:36;order:7;row_order_sha256:7449dd7ad70cf3c76c32edb2cc509e29989ac008c2e9a9968bceaabf3e2a2587;states:1195;crude:571;status:512;residual:112;direct_farkas:0;legacy_farkas:512;screen_record_sha256:a3b822b2ba2413b498dd02b787b41171be51942e71e0392a7cbd53a0ff188059;order_control:(24, 24, 0, 0)
+layer=z1:229;rows:43;wall:36;order:7;row_order_sha256:7449dd7ad70cf3c76c32edb2cc509e29989ac008c2e9a9968bceaabf3e2a2587;states:1195;crude:571;status:512;residual:112;direct_farkas:0;legacy_farkas:512;screen_record_sha256:280457d7e42e19a23f83523b9290a23d0aeec1bd0dbf0b7f78ec4285fc0a125d;order_control:(24, 24, 0, 0)
 ROW;z1=229;E=(1, 2, 4, 8, 10, 12);L=1680;high=166;branch=order;states=1;crude=1;status=0;residual=0;direct=0;legacy=0;stage_sha256=87d875891594377bcb0446ea490024d84a47f779297c59d3c6f1372980f814eb;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
 ROW;z1=229;E=(1, 2, 6, 7, 9, 12);L=3528;high=348;branch=wall;states=2;crude=0;status=2;residual=0;direct=0;legacy=2;stage_sha256=b0d5cd6fc379b8c810bf4b718bdc9d3e50ec9c3567cb7382dfb47c60d7b9ee36;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
 ROW;z1=229;E=(1, 2, 6, 8, 9, 12);L=1008;high=100;branch=order;states=1;crude=1;status=0;residual=0;direct=0;legacy=0;stage_sha256=0a2365051f7ec97b15e07bfd4589a4903ec7fac0a689e45f652a420c704e8116;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
@@ -45,7 +45,7 @@ ROW;z1=229;E=(2, 8, 10, 11, 12, 14);L=129360;high=12741;branch=wall;states=110;c
 ROW;z1=229;E=(3, 4, 6, 9, 10, 12);L=2520;high=249;branch=wall;states=1;crude=1;status=0;residual=0;direct=0;legacy=0;stage_sha256=829c2a9ae108cc9b3b0047aa8d7b752cb27e7aefc800d5db121373975e7ae3cc;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
 ROW;z1=229;E=(4, 8, 10, 11, 12, 14);L=129360;high=12741;branch=wall;states=119;crude=60;status=59;residual=0;direct=0;legacy=59;stage_sha256=092598ccab023e2a684990fa38a5f145b65e7f351855b71a123c05f8f57ee789;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
 ROW;z1=229;E=(6, 8, 9, 10, 12, 14);L=35280;high=3475;branch=wall;states=89;crude=42;status=47;residual=0;direct=0;legacy=47;stage_sha256=633500da0a65b85281d620d27bc6e095e15b1f69c8c1115a3e18d4936a1623e9;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
-layer=z1:228;rows:5;wall:5;order:0;row_order_sha256:ba3819e24debb3708459e0293ca4f35127ac533b1a7491a30212fb3fd9242cda;states:99;crude:94;status:5;residual:0;direct_farkas:0;legacy_farkas:5;screen_record_sha256:71cbcedb29695778b51252c711d9dbfc6ed83e5f886ed382c1fc9c8956e22928;order_control:(0, 0, 0, 0)
+layer=z1:228;rows:5;wall:5;order:0;row_order_sha256:ba3819e24debb3708459e0293ca4f35127ac533b1a7491a30212fb3fd9242cda;states:99;crude:94;status:5;residual:0;direct_farkas:0;legacy_farkas:5;screen_record_sha256:ce13724f170a971bd769ecb2d1522e4fdaac6477cca7061d2b0326559e0ff4e6;order_control:(0, 0, 0, 0)
 ROW;z1=228;E=(1, 2, 6, 9, 12, 14);L=3528;high=348;branch=wall;states=5;crude=4;status=1;residual=0;direct=0;legacy=1;stage_sha256=3b44585696adf404234e0d26ad863a720c4ff37a69d046a48e02b2e2bc8e0ce4;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
 ROW;z1=228;E=(1, 5, 6, 9, 12, 14);L=17640;high=1738;branch=wall;states=81;crude=77;status=4;residual=0;direct=0;legacy=4;stage_sha256=284d6c1369f974603e793bb4ded61fa21a35d699cb95c687ee59455e7214b2a7;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
 ROW;z1=228;E=(1, 6, 7, 9, 12, 14);L=3528;high=348;branch=wall;states=5;crude=5;status=0;residual=0;direct=0;legacy=0;stage_sha256=53fd4aeeee0fc9d9bfe50ee218144dd427c191d659b34f786ece8025ff7facba;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
@@ -68,9 +68,10 @@ CARRIER;E=(2, 8, 10, 11, 12, 14);lows=(260, 364);cells=25798;cells_sha256=a2fbb9
 direction_screen=the_ray_quotient_and_exact_Farkas_status_checks_close_a_superset_of_every_actual_projected_assignment
 direction_terminal=at_z229_each_strictly_positive_duplicate_permitting_two_high_gap_together_with_the_wall_at_least_one_high_gate_forces_exactly_one_high;the_one_high_bank_uses_high_ray_suprema_and_enlarges_the_actual_assignment_set
 direction_carrier=each_direct_complete_cell_is_an_inner_carrier_wholly_contained_in_the_strict_open_safe_set;the_coarse_bound_or_exact_full_projected_support_above_ceil(d/7)_forces_the_completed_carrier_contradiction
+evidence_boundary=all_returned_Farkas_certificates_are_verified_exactly;screen_and_semantic_digests_bind_only_the_canonical_19_field_problem_result_rows_plus_basis_invariant_branch_counts_and_never_the_solver_selected_dual_or_contradiction_magnitude
 transition=z229_requires_the_terminal_but_z228_has_no_residual_mask_and_dies_at_the_screen
 promotion_consequence=ledger 374263-48=374215;projected_k3_cap:z1<=227;next_layer:z1=227_rows:30
 next_layer=z1:227;rows:30;wall:28;order:2;row_order_sha256:17c023b6d703e6f2930e2a2606da83e5fe34d870d6067ec202329df210957c6c;status:occupied_unscouted_handoff
 scope=projected_k3_necessary_atlas_only;no_physical_cover_classification_outside_the_projection;no_k<=1_or_final_rung_or_LRC14_claim
-semantic_sha256=a024972dce2c159096db81a751b49654ebc8fad18e2fb1229dbfa0f01784e7e4
+semantic_sha256=093ed7cea617666cae3463ae08c3429943c93dbd17b9af7a02d4601025692482
 all_exact_controls=PASS

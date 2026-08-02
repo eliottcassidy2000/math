@@ -13,7 +13,10 @@ audit: >
   the 37,702-cell carrier directly on the full Z/LZ grid without inherited
   ranges or serialized low/high tables.  Every one of the 24 projected
   supports exceeds ceil(d/7), with minimum actual slack six; hashes,
-  dependencies, the disjoint ledger, endpoint typing, and docs all pass.
+  dependencies, the disjoint ledger, endpoint typing, and docs all pass.  A
+  later MISTAKE-331/333 evidence repair retained every exact dual check while
+  repinning the screen and semantic records to the canonical nineteen-field
+  instance/result rows and basis-invariant branch counts.
 depends_on:
   - THM-3102-projected-k3-z233-exact-screen-and-complete-cell-cardinality-descent
   - THM-3078-z234-direct-farkas-normalization-and-four-two-high-boundary
@@ -22,15 +25,19 @@ depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
 script: 04-computation/lrc14_j7_k3_z232_exact_screen_complete_cell_cardinality_descent_thm3106.py
 output: 05-knowledge/results/lrc14_j7_k3_z232_exact_screen_complete_cell_cardinality_descent_thm3106.out
-script_sha256: 9c38e808e22c9ac376217b9c76da69f198a14a4060cd4af4bf3e10b2c6a604f6
-output_sha256: 286bb3e31e1ef28af5640a8ebe5e0df5e57b3e7253aa4c1e5ac0483beb9d0e63
-semantic_sha256: a14adcd1e52323baf2b791f55d5846c4fbd422e3441fa2411138bdd98acca3d3
+script_sha256: f6f64ab8d8ea9b04a1a03e26fc6026efc864e44518e9cb40df4fe8471a4a7991
+output_sha256: 97bc554952a215e2cd87504f3ec16a9966b634723ff27de7e287461a4e4a49e7
+semantic_sha256: 7ce917fe1d40b191ab562f3e6d77fe5313ef7c9e46282af37998d040a93308cf
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3106 -- projected k3 z232 exact screen and complete-cell cardinality descent
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+
+The replay evidence was later repinned under MISTAKE-331/333.  All rational
+certificates are still rebuilt and checked, but no persisted digest depends on
+the optimizer's chosen dual basis or its arbitrary contradiction scale.
 
 ## 1. Candidate statement
 
@@ -117,7 +124,7 @@ legacy Farkas certificates: 65.                            (8)
 The complete screen-record digest is
 
 ```text
-3ca9c8569f05d8adf0ff04586347700597d7875794525452b13031e15acd909a. (9)
+f0cf14299a1614aa99982d7ade1f1aa35b626ab1198eb853f6776b68c1dfb2c2. (9)
 ```
 
 The direction of this screen is essential.  Its ray quotient relaxes global
@@ -313,7 +320,7 @@ The principal digests are:
 |---|---|
 | atlas | `cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda` |
 | `z_1=232` row order | `9bda2b6c4582541b8303156c2c9a47bf8b44d6d0ca9ceeb0b30d78860eebb796` |
-| screen record | `3ca9c8569f05d8adf0ff04586347700597d7875794525452b13031e15acd909a` |
+| screen record | `f0cf14299a1614aa99982d7ade1f1aa35b626ab1198eb853f6776b68c1dfb2c2` |
 | residual bank | `588fa690d15f18a29083f40f422507462f895c8880df0fb75c6ea8c394189a66` |
 | terminal record | `56cd0b886afdb39ca3423c0cc5240f06298075138f6336ab31e65fbd65e2907c` |
 | support record | `828f0631b5743d0ecbf8f767a5f187bc373cb7aec20bbdf4850f3b81fc801772` |
@@ -332,9 +339,9 @@ optimized runs pass every frozen gate; their transcripts are LF-byte-identical
 to the stored output and end in `all_exact_controls=PASS`.  Their hashes are
 
 ```text
-script:   9c38e808e22c9ac376217b9c76da69f198a14a4060cd4af4bf3e10b2c6a604f6
-output:   286bb3e31e1ef28af5640a8ebe5e0df5e57b3e7253aa4c1e5ac0483beb9d0e63
-semantic: a14adcd1e52323baf2b791f55d5846c4fbd422e3441fa2411138bdd98acca3d3
+script:   f6f64ab8d8ea9b04a1a03e26fc6026efc864e44518e9cb40df4fe8471a4a7991
+output:   97bc554952a215e2cd87504f3ec16a9966b634723ff27de7e287461a4e4a49e7
+semantic: 7ce917fe1d40b191ab562f3e6d77fe5313ef7c9e46282af37998d040a93308cf
 ```
 
 ## 6. Exact handoff and scope

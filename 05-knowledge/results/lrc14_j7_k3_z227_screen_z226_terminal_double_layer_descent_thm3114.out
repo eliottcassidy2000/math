@@ -1,0 +1,24 @@
+LRC14 projected k3 z227 screen and z226 terminal double-layer descent
+dependency=THM3113_source:1e23ec19fa147c55fb6d38a965eedae0132f5e069b9f820bfd5c300dce4d8f89;output:5b6329e5a47a41031c2d9d3f9def36deb25509d801dbb3543a1271de0bd2e3fb;semantic:093ed7cea617666cae3463ae08c3429943c93dbd17b9af7a02d4601025692482
+atlas=sha256:cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda;rows:6060
+layer=z1:227;rows:30;wall:28;order:2;row_order_sha256:17c023b6d703e6f2930e2a2606da83e5fe34d870d6067ec202329df210957c6c;states:284;crude:143;status:141;residual:0;direct_farkas:0;legacy_farkas:141;screen_record_sha256:b4da9b80d12c969cf5561a0e30e36d282a955e77ff32a5f88fb9514cf78fb414;order_control:(9, 9, 0, 0);residual_rows:0
+layer=z1:226;rows:13;wall:13;order:0;row_order_sha256:ec2f1218d61dd69d3811d68eb87a23254d276bb75647be2d4c883affe53a520e;states:979;crude:526;status:363;residual:90;direct_farkas:0;legacy_farkas:363;screen_record_sha256:5a64104b1ca45e7dd4fe08cfc5e0bcc5a3226a7f05740dc20f361d664a2d98a7;order_control:(0, 0, 0, 0);residual_rows:3
+terminal=z1:226;rows:3;positive_two_high_gap:3;closed:3;zero_high_hostiles:84;one_high_cases:90;coarse:84;exact:6;maxgap:0;failures:0;terminal_record_sha256:f343c72ad5b49b37eca86171374b274be6ef48bd9e28115107daf9ccb140c5a3
+TERMINAL;E=(1, 5, 6, 9, 12, 14);L=17640;high=1738;masks=1;two_high_gap=2436193/902641740;zero_high_hostiles=0;one_high_cases=1;coarse=0;exact=1;failed=0;minimum_certificate_slack=1;case_certificate_sha256=2463a60a3256d7ace48c6ea420fb989c6ad8a1373a6a8f57161b571828a1aac2
+TERMINAL;E=(1, 5, 9, 11, 12, 14);L=194040;high=19111;masks=65;two_high_gap=15491357285/4724552761929;zero_high_hostiles=61;one_high_cases=65;coarse=61;exact=4;failed=0;minimum_certificate_slack=1;case_certificate_sha256=6f7c247452b41baf2e9bfbe716c8a7151b03f1dc5ddf6944c82d8e54b4d35bba
+TERMINAL;E=(1, 9, 10, 11, 12, 14);L=194040;high=19111;masks=24;two_high_gap=1545772719847/373939773753546;zero_high_hostiles=23;one_high_cases=24;coarse=23;exact=1;failed=0;minimum_certificate_slack=1;case_certificate_sha256=46c1220cb57a7b8d19ee8e769c05f674069975e94191eeaeb01d9e3bb4d067fc
+direct_carrier_audit=carriers:3;cases:90;coarse:84;exact:6;minimum_coarse_margin:1;minimum_support_slack:1;all_exact_supports:full;carrier_record_sha256:f5060567a3cc0341902c541ec6910161d509b48d16f5303a467095c40fbab66f;case_record_sha256:6eaf93061816e63631a0e5180697cc1be7fe69980705d2d87f0a4a822698cfa9
+CARRIER;E=(1, 5, 6, 9, 12, 14);lows=(234, 243);cells=3782;cells_sha256=b336c32dfe1bb0e3cf7f9ca3e2be9ef7b1e9017cb95747d6e419d2ec51018b5d;minimum_weak_endpoint=(0, 1350, 14, 'L')
+CARRIER;E=(1, 5, 9, 11, 12, 14);lows=(234, 243);cells=38756;cells_sha256=f471b80160444ce50bdee83b9ca6fe2618e6c6d8f7ea9d034688db72dc3e1812;minimum_weak_endpoint=(0, 14850, 14, 'L')
+CARRIER;E=(1, 9, 10, 11, 12, 14);lows=(234, 260);cells=39320;cells_sha256=190facf1ee0fdbbb650380de0ae914fb6af7553a365583d4bc5ae87da964480e;minimum_weak_endpoint=(0, 14850, 14, 'L')
+exact_supports=denominators:(2, 2, 3, 9, 15, 8);support_minus_kappa:(1, 1, 2, 7, 12, 6)
+direction_screen=the_ray_quotient_and_exact_Farkas_status_checks_close_a_superset_of_every_actual_projected_assignment
+direction_terminal=at_z226_each_strictly_positive_duplicate_permitting_two_high_gap_together_with_the_wall_at_least_one_high_gate_forces_exactly_one_high;the_one_high_bank_uses_high_ray_suprema_and_enlarges_the_actual_assignment_set
+direction_carrier=each_direct_complete_cell_is_an_inner_carrier_wholly_contained_in_the_strict_open_safe_set;the_coarse_bound_or_exact_full_projected_support_above_ceil(d/7)_forces_the_completed_carrier_contradiction
+evidence_boundary=all_returned_Farkas_certificates_are_verified_exactly;screen_and_semantic_digests_bind_only_the_canonical_19_field_problem_result_rows_plus_basis_invariant_branch_counts_and_never_the_solver_selected_dual_or_contradiction_magnitude
+transition=z227_dies_at_the_screen_but_z226_reenters_and_is_closed_by_the_terminal
+promotion_consequence=ledger 374215-43=374172;projected_k3_cap:z1<=225;next_layer:z1=225_rows:78
+next_layer=z1:225;rows:78;wall:78;order:0;row_order_sha256:9a4869fbb3886b058bdb2b60209b1fc88ab4c82ccbc7c56eba42b2d118ee8719;status:occupied_unscouted_handoff
+scope=projected_k3_necessary_atlas_only;no_physical_cover_classification_outside_the_projection;no_k<=1_or_final_rung_or_LRC14_claim
+semantic_sha256=ad9c2724b6468d586ae70ab120f57519350c7de440c66a3765609bd1a7880d51
+all_exact_controls=PASS

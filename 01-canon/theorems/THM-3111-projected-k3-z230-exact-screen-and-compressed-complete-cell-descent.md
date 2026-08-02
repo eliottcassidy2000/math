@@ -14,7 +14,10 @@ audit: >
   and repaired an unpromoted raw-case versus case-certificate digest type
   error.  Repaired normal, optimized, and stored transcripts are
   byte-identical; dependencies, hashes, directions, ledger, handoff, docs,
-  and diff checks pass.
+  and diff checks pass.  A later MISTAKE-331/333 evidence repair retained all
+  exact dual checks while repinning the screen and semantic records to the
+  canonical nineteen-field instance/result rows and basis-invariant branch
+  counts.
 depends_on:
   - THM-3109-projected-k3-z231-exact-screen-and-complete-cell-cardinality-descent
   - THM-3078-z234-direct-farkas-normalization-and-four-two-high-boundary
@@ -23,15 +26,19 @@ depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
 script: 04-computation/lrc14_j7_k3_z230_exact_screen_compressed_complete_cell_descent_thm3111.py
 output: 05-knowledge/results/lrc14_j7_k3_z230_exact_screen_compressed_complete_cell_descent_thm3111.out
-script_sha256: d86fcbf53f04dcc9e08d33f48c0682b063473a2d9d422a75c3ef37b58e9e1841
-output_sha256: 8a7b5a82e30cb84379655e50109803ea973c1df69a5affbcc7f29c0aeb76ee7e
-semantic_sha256: b4dd4e0e66d0429cac12dc96d1d769d3f05ab3c503e1dcbb1b94f5e6020c9b6c
+script_sha256: 42323171481deba2371eed9947b2079976cb367dac340cf58b8f1f0c0afb5082
+output_sha256: 54a82d696c592162bbe3f98a3dd34e092967a0a6320e9931adb2866570cc5813
+semantic_sha256: 4ff290e285dbb748dac71e1b885ce220dbfe04ec6f236ea97a5526bc27baa497
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3111 -- projected k3 z230 exact screen and compressed complete-cell descent
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+
+The replay evidence was later repinned under MISTAKE-331/333.  Every exact
+rational dual is still rebuilt and checked, but persisted hashes no longer
+depend on a solver-selected basis or contradiction normalization.
 
 ## 1. Exact layer statement
 
@@ -86,7 +93,7 @@ The companion pins THM-3109, reparses all `6060` atlas rows, and recomputes
 all fifty tasks.  Its complete screen-record digest is
 
 ```text
-b74351d30dced85c2697bf8da85ca0ec99f500014b014ed13bce80921f96cfba. (7)
+3c7681f663bbb9bbe6f0483918474df76c935dc6a9a6006499848b9898d57477. (7)
 ```
 
 The residual profile is:
@@ -235,7 +242,7 @@ The companion contains no truth-bearing Python `assert`.  Its semantic digest
 is
 
 ```text
-b4dd4e0e66d0429cac12dc96d1d769d3f05ab3c503e1dcbb1b94f5e6020c9b6c. (16)
+4ff290e285dbb748dac71e1b885ce220dbfe04ec6f236ea97a5526bc27baa497. (16)
 ```
 
 An independent reconstruction reproduces all fifty ordered screen tuples;
@@ -260,9 +267,9 @@ and all eight carriers and byte-match the stored transcript.  Their LF hashes
 are
 
 ```text
-script:   d86fcbf53f04dcc9e08d33f48c0682b063473a2d9d422a75c3ef37b58e9e1841
-output:   8a7b5a82e30cb84379655e50109803ea973c1df69a5affbcc7f29c0aeb76ee7e
-semantic: b4dd4e0e66d0429cac12dc96d1d769d3f05ab3c503e1dcbb1b94f5e6020c9b6c
+script:   42323171481deba2371eed9947b2079976cb367dac340cf58b8f1f0c0afb5082
+output:   54a82d696c592162bbe3f98a3dd34e092967a0a6320e9931adb2866570cc5813
+semantic: 4ff290e285dbb748dac71e1b885ce220dbfe04ec6f236ea97a5526bc27baa497
 ```
 
 This result acts solely in the pinned projected `k=3` necessary atlas.  It
