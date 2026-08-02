@@ -1,0 +1,9 @@
+THM-3121 exact referee
+C3 walk-kernel cells checked: 216
+C3 kernel: K(a,b,c)=a!b!c! times (3 if a=b=c; 1 if max-min=1; 0 otherwise)
+C3 ordered block triples checked against Held-Karp: 64
+general quotient/block controls checked against Held-Karp: 1024
+full path-cover profiles checked against exp(y W_Q): 23
+pc(C3)=(3, 3, 1); factorial transform=(3, 6, 6)
+H(C3[C3,C3,C3]) direct=formula=3159
+all checks passed
