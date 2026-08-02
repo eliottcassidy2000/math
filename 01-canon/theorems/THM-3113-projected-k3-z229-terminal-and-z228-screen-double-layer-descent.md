@@ -2,10 +2,10 @@
 id: THM-3113
 title: "Projected-k3 z229 terminal and z228 screen double-layer descent"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING IMMUTABLE INDEPENDENT
-  REPLAY.  All forty-three rows in the projected k=3, z1=229 layer and all
-  five rows in the z1=228 layer are empty.  The proposed projected ledger is
-  374215 and the proposed cap is z1<=227.  No LRC(14) claim is made.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  All forty-three
+  rows in the projected k=3, z1=229 layer and all five rows in the z1=228
+  layer are empty.  The projected ledger is 374215 and the cap is z1<=227.
+  No physical-cover or LRC(14) claim is made.
 source: root/codex-thm3088-push-2026-08-02
 depends_on:
   - THM-3111-projected-k3-z230-exact-screen-and-compressed-complete-cell-descent
@@ -23,8 +23,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3113 -- projected-k3 z229 terminal and z228 screen double-layer descent
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING IMMUTABLE INDEPENDENT
-REPLAY.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Two exact atlas layers
 
@@ -158,5 +157,10 @@ It does not classify physical covers outside that projection, alter `k<=1`,
 close the final rung, or prove LRC(14).
 
 The companion recomputes all forty-eight screens, six terminal gaps, all six
-direct/scalar/vector carriers, and every translated support.  Its normal and
-optimized executions are required to byte-match the stored transcript.
+direct/scalar/vector carriers, and every translated support.  Ordinary,
+optimized, eight-process, and single-process executions byte-match the stored
+transcript.  An independent proof-direction audit checked that the screen
+enlarges the actual assignment set, the one-high ray bank remains an outer
+relaxation, each direct complete cell is an inner safe carrier, and support
+strictly above `ceil(d/7)` supplies the contradiction in the asserted
+direction.  This is an independent hostile audit, not a second implementation.
