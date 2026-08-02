@@ -2,10 +2,10 @@
 id: THM-3089
 title: "Square-root moving-gap cluster cone and uniform alternant conditioning"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  The
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The
   fixed-gap cluster theorem remains physical uniformly for arbitrary
   distinct moving gaps of diameter o(sqrt C), and in a sufficiently small
-  fixed square-root cone.  A total-positivity compactness lemma and the
+  fixed square-root cone.  An explicit Schur-conditioning lemma and the
   regular-bipartite character of every resultant monomial convert the exact
   coefficient error O(H^2/C) into a relative resultant error with no
   exponential condition loss.  At H asymptotic to sqrt C a Gaussian
@@ -13,6 +13,13 @@ status: >
   suspension is eventually positive.  This is fixed-width and
   does not prove positivity on that boundary or for arbitrary supports.
 source: root-gmc-moving-gap-cluster-2026-08-01
+audit: >
+  Two independent hostile audits reconstructed the exact factorial ratios,
+  direct unimodular normal map, explicit Schur conditioning inequality,
+  regular-bipartite/Birkhoff resultant majorant, outer-layer moving-gap
+  invoice, parity positivity, composition-prefix extension, and square-root
+  Gaussian boundary.  Normal and optimized replay matched the 654-byte
+  stored transcript and declared LF hashes; documentation passed.
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
   - THM-3073-upper-triangular-resultant-norm-and-torsion-character-death-barcode
@@ -30,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3089 -- square-root moving-gap cluster cone
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3085 fixes every internal gap of the remote cluster.  THM-3086 retains
 the resulting generalized alternants only as fixed-gap physical sidecars and
@@ -168,8 +175,8 @@ out `(rN)^s_alpha/N^s_alpha=r^s_alpha`.  Since
  <=r H(H+1)/N.                                          (14)
 ```
 
-Thus every direct-basis coefficient differs relatively from its line-power
-model by
+Thus, throughout the bounded square-root regimes in `(6)`, every
+direct-basis coefficient differs relatively from its line-power model by
 
 ```text
 O_(m,q)(H^2/C).                                          (15)
@@ -449,4 +456,4 @@ python -O 04-computation/gmc_logarithmic_moving_gap_cluster_thm3089.py
 
 Both modes must equal the stored transcript after LF normalization.
 
-**QED, pending independent audit and status promotion.**
+**QED.**
