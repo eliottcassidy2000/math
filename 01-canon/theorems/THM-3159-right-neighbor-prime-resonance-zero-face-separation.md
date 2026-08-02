@@ -1,12 +1,12 @@
 ---
-id: THM-3157
+id: THM-3159
 title: "Right-neighbor prime resonance zero-face separation"
 status: "RESERVED / UNPROVED EMPTY STUB"
 source: root/multiscale-newton-flag/2026-08-02
 depends_on: []
 ---
 
-# THM-3157 -- right-neighbor prime resonance zero-face separation
+# THM-3159 -- right-neighbor prime resonance zero-face separation
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
