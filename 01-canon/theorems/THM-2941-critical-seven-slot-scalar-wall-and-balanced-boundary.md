@@ -26,11 +26,14 @@ status: >
   threshold-block refinements close arbitrary positive reflected levels on
   a bank of 2,442 of the 3,003 bodies, leaving 561 uncovered rather than
   proving them impossible.  A recursive cap-aware projective-CSP and
-  located-transport chain closes every body for spread D>=6 and base m>=D.
+  located-transport chain closes every body for spread D>=6 and base m>=D,
+  and a residue-class corner refinement extends this to 4m>=3D.
   At the endpoint the new zero channel 1:2 completes the balanced gain
   triangle (3/2)(4/3)=2; orientation-split tails close its four unconstrained
-  bodies.  The remaining reflected certificate-failure locus is confined to
-  those 561 bodies in D>=6,m<D;
+  bodies.  Past cap two the balanced triangle becomes interior and no
+  full-cap component remains; 93 located policies and eleven tail lanes close
+  the cap-7/3 residual.  The remaining reflected certificate-failure locus is
+  confined to those 561 bodies in D>=6,1<=m<3D/4;
   the finite censuses, full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is internal
   exact computation and proof audit; there is no Lean or external peer-review
@@ -260,6 +263,10 @@ verification:
   - 05-knowledge/results/lrc14_j7_reflected_four_thirds_cone_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_one_cone_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_one_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_three_quarter_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_three_quarter_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_phase_zero_gain_atlas_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_phase_zero_gain_atlas_thm2941.out
   - 04-computation/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.out
 ---
@@ -1067,11 +1074,11 @@ reverse ladders close the residual orientations.  The exact scale law gives
 D>=6 and m>=3D  ==>  every reflected packet closes.           (25i9)
 ```
 
-Four exact recursive refinements lower this cone boundary without assuming
+Five exact recursive refinements lower this cone boundary without assuming
 monotone interpolation:
 
 ```text
-m>=2D,       2m>=3D,       3m>=4D,       m>=D.            (25i10)
+m>=2D,       2m>=3D,       3m>=4D,       m>=D,       4m>=3D. (25i10)
 ```
 
 Each refinement regenerates the complete rational channel alphabet at its
@@ -1100,9 +1107,35 @@ exhaustive head controls.  Therefore
 D>=6 and m>=D  ==>  every reflected packet closes.             (25i12)
 ```
 
+The next cone has projective cap `7/3`.  Maximizing the transport error over
+the integer cone `4m>=3D` by the three residue classes of `m mod 3` gives the
+sharp corner `(D,m)=(8,6)`; singleton debt has the separate worst level five.
+The complete cap-aware bank has `9,857` primitive channels.  Its two-order CSP
+closes `459/561` bodies and leaves `102` traps, with no forced full-cap
+component: the gain triangle in `(25i11)` is now interior.  Ninety-three
+constrained traps close by `806` oriented located controls.  The other nine
+bodies close through eleven analytic tail lanes and `276` exhaustive heads;
+two bodies require an orientation split at ratio one.  Hence
+
+```text
+D>=6 and 4m>=3D  ==>  every reflected packet closes.            (25i13)
+```
+
 Consequently the current reflected obligation is confined to the `561`
-bodies in the wedge `D>=6,m<D`.  This is a sufficient-certificate residual,
-not a physical-survivor census.
+bodies in the wedge `D>=6,1<=m<3D/4`.  This is a
+sufficient-certificate residual, not a physical-survivor census.  The next
+qualitative boundary is cap `5/2`, where a new phase-zero gain enters.  In
+fact the correction floor `c>=-12/49` makes phase zero imply `PQ<=12`, so the
+global zero-gain atlas is exactly
+
+```text
+4/3, 3/2, 2, 5/2, 3, 4, 5, 6.                         (25i14)
+```
+
+In the prime-exponent lattice `(2,3,5)`, the prefix rank across `(25i14)` is
+`1,2,2,3,3,3,3,3` and its circuit nullity is
+`0,0,1,1,2,3,4,5`.  Thus cap two creates the first circuit, while cap `5/2`
+adds an independent prime-five direction rather than a new circuit.
 
 There is an exact all-scale functional form behind the discrepancy tail.
 Write the carrier components as
@@ -2452,22 +2485,27 @@ ordinary and optimized replays are byte-identical.
 
 The reflected wedge assembly
 `04-computation/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.py`
-pins fifteen LF-normalized terminal sources and transcripts, including the
-edge-eight block and all four recursive cone refinements.  Its
+pins sixteen LF-normalized terminal sources and transcripts, including the
+edge-eight block and all five recursive cone refinements.  Its
 source/output/semantic SHA-256 values are respectively
-`d8933b197882591eea248ac52b64b2b56d652c2b0328bf27e779e5debf9e5da0`,
-`6ed4e7c321cafcd8a18a6c70463460c9c801e223f3faae03613eeb220251f928`,
-and `168f288f5d0f73342262793977b928d827abae2e282933be8c3babe1614a7e83`.
+`bf1ecb29c6df2f5e97dadb35a4d39be8d9db3b70678db487964ebbfaaf448aa6`,
+`93bed962c7f30fbf0cf3c585226250f3d992c0b45beb9a156620f7ee8aa7db07`,
+and `9505b322825e5c5e767942413b462a3fd7c32ad297a9f6d36fb998f85d4ba405`.
 Fresh ordinary and optimized replays are byte-identical to each other and to
 the stored transcript.  The edge-eight terminal source/output/semantic hashes
 are `3f2552c7e316a6da821f8d78f859aa9d73b2d8b58081c0a31f8d233f37eec2f0`,
 `90d42c1369532e4d31cfacbf4ddf455fa330075c878b414831e489eec32ecc2b`,
 and `af12592ebd25cd5745c34711c99aaba72c45eeb2cad62ee5b35ec6a7752b8da7`;
 both fresh interpreters replay all `652,688` exact rows.
+The global phase-zero atlas source/output/semantic hashes are
+`dca35f41c7ca41955385f4f8633d8b6af435d4a15a937cfded83d6187f78be3b`,
+`bab96575535e8fa314d0a6e67e6304242f600048d64d09bd632ba01b55ab9513`,
+and `8a934cf2a5ecbc0e54a720e89d162be89fd0c4d932d1019ef167cb64443b0b18`;
+ordinary and optimized replays are byte-identical.
 
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,
-close the `561`-body reflected wedge `D>=6,m<D`, finish the remaining
+close the `561`-body reflected wedge `D>=6,1<=m<3D/4`, finish the remaining
 `k=2,3` finite decision trees, classify the zero/one-aligned multi-drift
 address hypergraph, close the six-body/seven-tail rung, or prove LRC(14).
 The independent THM-2928 divisor-status route closes `k=4`; THM-2980/2995

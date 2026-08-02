@@ -1,0 +1,16 @@
+LRC14 reflected phase-zero gain atlas
+phase_floor=1/49+c(P mod14,Q mod14)/(PQ)
+correction_min=-12/49;therefore phase_zero implies PQ<=12
+small_primitive_channels=14;global_phase_zero_channels=8
+zero_gains=('4/3', '3/2', '2', '5/2', '3', '4', '5', '6')
+prime_basis=(2,3,5);vectors=((2, -1, 0), (-1, 1, 0), (1, 0, 0), (-1, 0, 1), (0, 1, 0), (2, 0, 0), (0, 0, 1), (1, 1, 0))
+rank_profile=(1, 2, 2, 3, 3, 3, 3, 3)
+nullity_profile=(0, 0, 1, 1, 2, 3, 4, 5)
+relations=('(4/3)*(3/2)=2', '(3/2)*2=3', '2^2=4', '(5/2)*2=5', '3*2=6')
+boundary_law=rank rises at 4/3,3/2,5/2;cycle nullity rises at 2,3,4,5,6
+cap_2=unique first circuit (4/3)*(3/2)=2
+cap_5/2=new independent prime-5 direction;old circuit persists
+semantic_sha256=8a934cf2a5ecbc0e54a720e89d162be89fd0c4d932d1019ef167cb64443b0b18
+normal_vs_python_O=BYTE_IDENTICAL
+scope=exact global phase-zero atlas for the reflected THM-2941 phase floor
+all_exact_controls=PASS
