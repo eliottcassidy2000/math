@@ -177,6 +177,27 @@ require((hostile_cross_minor, control_cross_minor) == (-1, 0),
         "cross-degree missing coordinate drift")
 
 
+def one_letter_child_top(degree, m, x, y):
+    left_h = x ** (degree - 1) * (x - m)
+    right_h = y ** (degree - 1) * (y - m)
+    left_m = x ** degree - m ** degree
+    right_m = y ** degree - m ** degree
+    return left_h * right_m - left_m * right_h
+
+
+hostile_child_sequence = tuple(
+    one_letter_child_top(degree, 1, 2, 3) for degree in range(2, 9)
+)
+control_child_sequence = tuple(
+    one_letter_child_top(degree, 1, 2, 2) for degree in range(2, 9)
+)
+require(hostile_child_sequence
+        == (-2, -22, -170, -1150, -7322, -45262, -275690),
+        "all-degree hostile child sequence drift")
+require(control_child_sequence == (0,) * 7,
+        "equal-endpoint child control became nonzero")
+
+
 print("THM-3160 complete Pluecker pole holotopy")
 print("degree_two_basis=(1,h1,m2,m11)")
 print(f"commuting_prefix_square_checks={commuting_checks}")
@@ -186,6 +207,7 @@ print(f"one_letter_parent_zero_checks_through_degree8={parent_zero_checks}")
 print(f"one_letter_child_factorization_checks={factorization_checks}")
 print("hostile_parent_top_and_control=(0,0)")
 print("hostile_child_top_and_control=(-2,0)")
+print("hostile_child_top_N2_N8=" + repr(hostile_child_sequence))
 print("hostile_cross_degree_minor_and_control=(-1,0)")
 print("bifiltration_maps=(horizon_inclusion,depth_zero_extension)")
 print("survivor=full_cross_degree_endpoint_Pluecker_tensor")

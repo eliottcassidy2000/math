@@ -7,6 +7,7 @@ one_letter_parent_zero_checks_through_degree8=4224
 one_letter_child_factorization_checks=448
 hostile_parent_top_and_control=(0,0)
 hostile_child_top_and_control=(-2,0)
+hostile_child_top_N2_N8=(-2, -22, -170, -1150, -7322, -45262, -275690)
 hostile_cross_degree_minor_and_control=(-1,0)
 bifiltration_maps=(horizon_inclusion,depth_zero_extension)
 survivor=full_cross_degree_endpoint_Pluecker_tensor

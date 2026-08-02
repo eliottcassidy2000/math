@@ -21,8 +21,8 @@ related:
   - THM-3155-sharp-depth-four-selector-resurrection-through-degree-eleven
 script: 04-computation/gmc_complete_pluecker_pole_holotopy_thm3160.py
 output: 05-knowledge/results/gmc_complete_pluecker_pole_holotopy_thm3160.out
-script_sha256: ab8fc95b34c90afc02b5fdc66b5495f51cf448905bfe0592f62045e8785904e1
-output_sha256: 55864fd70809dda9610c3c308c650bc3607d6f65fb9fa6197553fbed4b191959
+script_sha256: bede46176ce3273ca84980a64f3eb61ec27f3e5b0019d81637aa29e507ff8a73
+output_sha256: 145930ef1e0044bac43703139fdbd94c9c0aab4965bb60caa3952f4d26366de6
 hash_basis: LF-normalized bytes
 ---
 
@@ -164,17 +164,31 @@ h_2[x-M]=x^2-Mx,                    m_(2)[x-M]=x^2-M^2,
 G_2^M((2))=M(x-M)(y-M)(x-y).                              (11)
 ```
 
-For `(M,x,y)=(1,2,3)`, `(11)` is `-2`; for `(1,2,2)`, it is
-zero.  Both parents have the identical input `(10)`, but their children have
-different selector currents.  Consequently there is no universal map --
+The same hostile is not confined to degree two.  For every `N>=2`,
+
+```text
+G_N^M((N))
+ =x^(N-1)(x-M)(y^N-M^N)
+  -(x^N-M^N)y^(N-1)(y-M).                                 (11a)
+```
+
+For `(M,x,y)=(1,2,3)`, the values in degrees two through eight are
+
+```text
+(-2,-22,-170,-1150,-7322,-45262,-275690),                 (11b)
+```
+
+while `(1,2,2)` gives zero in every degree.  Both parents have the identical
+input `(10)`, but their children have different selector currents, already at
+the GMC starting degree five.  Consequently there is no universal map --
 linear, positive, or even set-theoretic -- from the collection of all
 same-degree selector currents to the selector current after one pole
 subtraction.
 
-The sign also rules out positivity preservation.  In degree two the coarse
-coordinate is `(2)`, so the zero parent is Hasse-positive while the child in
-the first fixture has coarse mass `-2` and is not a nonnegative fine-to-coarse
-Hasse boundary.
+The sign also rules out positivity preservation.  The top singleton upset
+`{(N)}` has negative mass for each degree in `(11b)`, so the zero parent is
+Hasse-positive while every displayed child is not a nonnegative
+fine-to-coarse Hasse boundary.
 
 The missing datum is visible in `(9)`: for the first fixture,
 
