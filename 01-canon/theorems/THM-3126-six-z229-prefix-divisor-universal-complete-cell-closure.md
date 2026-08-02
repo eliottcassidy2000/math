@@ -2,8 +2,8 @@
 id: THM-3126
 title: "Six z229 prefix divisor-universal complete-cell closure"
 status: >
-  PROOF-COMPLETE CANDIDATE + FINITE-EXACT + VERIFIED-EXACT; AWAITING
-  INDEPENDENT HOSTILE AUDIT.  Six explicit projected z1=229 three-drift
+  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  Six explicit projected z1=229 three-drift
   prefixes cannot be extended by any fourth tail: every nonaligned
   denominator projection exceeds the sharp translated danger-band capacity,
   while an aligned extension lies in THM-2928's closed four-aligned branch.
@@ -11,6 +11,16 @@ status: >
   It does not promote THM-3113, close z1=228, lower the proved k=3 cap 229,
   classify physical covers outside these prefixes, or prove LRC(14).
 source: root/frontier-synthesis-2026-08-02
+audit: >
+  An independent hostile audit rebuilt every closed safe cell from literal
+  interval intersection with the strict danger arcs, reduced the resulting
+  Boolean group-ring carriers modulo every divisor, and reproduced all six
+  sizes, all 792 support inequalities, the 744 density closures, the 48
+  full-support boundary pairs, the ten exceptional moduli, and the sharp
+  unit slack.  It separately checked the complete-cell projection typing,
+  the d=1 aligned handoff, the d=2 cardinality hostile, and the translated
+  d=28 boundary.  Fresh normal and optimized runs are byte-identical after
+  LF normalization to the stored transcript and the declared hashes match.
 depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
   - THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff
@@ -30,8 +40,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3126 -- six z229 prefix divisor-universal complete-cell closure
 
-**PROOF-COMPLETE CANDIDATE + FINITE-EXACT + VERIFIED-EXACT; AWAITING
-INDEPENDENT HOSTILE AUDIT.**
+**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED.**
 
 ## 1. Exact scoped statement
 
@@ -181,5 +191,5 @@ cmp /tmp/thm3126.out /tmp/thm3126.opt.out
 Both modes are byte-identical to the stored transcript.  The source, output,
 and semantic LF-normalized SHA-256 values are those in the frontmatter.
 
-This is a repository-internal proof-complete finite-exact candidate.  An
-independent hostile implementation remains required before promotion.
+This is a proved finite-exact closure of the six displayed prefix families.
+The independent audit does not enlarge the scope stated in Section 5.
