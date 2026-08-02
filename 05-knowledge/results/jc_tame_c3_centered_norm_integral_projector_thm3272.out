@@ -1,0 +1,8 @@
+THM3272 tame C3 centered-norm integral projector exact companion
+special_fibre: fixed_norm=0 moving_norm=2(a-m)^3/27
+delta_residue=-8(a-m)^9/19683 unit_when_2,3,d_are_units=True
+kummer_family: singleton_norm=t Pbar=Z(Z-2d^3/27)^3
+spectral_projector_equals_factor_idempotent=True
+good_residue_controls=172
+char2_collisions=2 cross_resultant_collisions=23
+char3_boundary=center_not_integral
