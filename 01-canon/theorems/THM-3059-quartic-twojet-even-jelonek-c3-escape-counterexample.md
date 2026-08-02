@@ -10,9 +10,11 @@ status: >
   are even and cannot change this parity.  The dominant field-degree-four
   two-jet map (x,xz^2+y,xyz^2+z) has generic Galois group S4, exact Jelonek
   set {u=0}, C3 inertia there, and cleared discriminant exponent 8.  It
-  refutes HYP-9027's general-dominant odd-exponent clause.  Its nonconstant
-  Jacobian puts the separate odd discriminant factor on an ordinary critical
-  branch, so the Keller-restricted odd-inertia question and JC remain open.
+  belongs to an exact two-parameter S4 family whose Newton wall a=2b
+  separates ternary C3 escape from binary transposition escape.  This refutes
+  HYP-9027's general-dominant odd-exponent clause.  The nonconstant Jacobian
+  puts the separate odd discriminant factor on an ordinary critical branch,
+  so the Keller-restricted odd-inertia question and JC remain open.
 source: codex-jc-resolvent-bridge-2026-08-01
 depends_on:
   - THM-2455-quartic-swallowtail-scaffold-and-endpoint-corrections
@@ -24,8 +26,8 @@ related:
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
 script: 04-computation/quartic_twojet_even_jelonek_c3_escape_thm3059.py
 output: 05-knowledge/results/quartic_twojet_even_jelonek_c3_escape_thm3059.out
-script_sha256: 456bf5150b22e0b762437b0a45a1b09254d32f9c8a1016065402f1de7382b914
-output_sha256: e52e21779a55c75d425ab79eb12424dd5546ff91730ba0bc58a76261537ad92c
+script_sha256: 8f522f5fc4ad3a49c03ab38dfa5cd0b849429f5b73cb4366f84807e8a6824647
+output_sha256: ea093d86c946c628eebe6f5d7e26dfcccfc131e973f13479442e0fda80d409a6
 hash_basis: LF-normalized bytes
 ---
 
@@ -331,7 +333,72 @@ E=6*2-4=8.                                               (33)
 
 The equality `(33)` is the promised even Jelonek exponent.
 
-## 6. Where the odd discriminant went
+## 6. An infinite binary--ternary escape family
+
+The hostile is not isolated.  For integers `a>=1`, `b>=0`, put
+
+```text
+F_(a,b)=(x, x^a z^2+y, x^b y z^2+z).                    (33a)
+```
+
+Exactly as in (12)--(15), this is a dominant two-jet map of field degree
+four with primitive fiber polynomial
+
+```text
+N_(a,b)=u^(a+b)T^4-u^b vT^2-T+w.                         (33b)
+```
+
+It is finite over `u!=0`, while the specialization at `u=0` has degree at
+most two.  Puiseux continuation of the lost roots proves that its Jelonek
+set is again exactly `{u=0}`.  The same degree-four polynomial-map argument,
+degree-three rational resolvent, and odd pole at `w=infinity` prove that the
+generic Galois group is `S4` for every `(a,b)`.
+
+The full discriminant is
+
+```text
+Disc N_(a,b)
+ =256u^(3a+3b)w^3-128u^(2a+4b)v^2w^2
+  -144u^(2a+3b)vw-27u^(2a+2b)
+  +16u^(a+5b)v^4w+4u^(a+4b)v^3.                         (33c)
+```
+
+Only the last terms in the two competing groups can be initial.  Hence,
+at the generic point of the Jelonek plane,
+
+```text
+delta_(a,b)=v_u(Disc N_(a,b))
+           =min(2a+2b,a+4b),                            (33d)
+
+E_(a,b)=6(a+b)-delta_(a,b)
+ = 4(a+b),             a<=2b;
+ = 5a+2b,              a>=2b.                           (33e)
+```
+
+The formulas agree when `a=2b`.  The wall has a direct Newton meaning.  The
+reciprocal polynomial has points
+
+```text
+(0,a+b), (2,b), (3,0), (4,0).                            (33f)
+```
+
+- If `a<2b`, the first face has length three and slope `-(a+b)/3`.
+  Its inertia is `C3` when `3` does not divide `a+b`, and is trivial when
+  the slope is integral.  Formula (33e) is always even.
+- If `a>2b`, the first face has length two and slope `-a/2`, followed by
+  the integral singleton slope `-b`.  Its inertia is a transposition exactly
+  when `a` is odd.  Formula (33e) has exactly the same parity.
+- If `a=2b`, all three lost roots lie on an integral-slope face; its generic
+  residual cubic is separable over the strict-henselian residue field, so
+  inertia is trivial and (33e) is even.
+
+Thus `a=2b` is an exact phase boundary between the repo's recurring ternary
+and binary tower grammars.  It does not identify those grammars abstractly:
+the common object is the reciprocal Newton polygon, and the preserved
+predicate is precisely inertia sign.  The original example is the first
+ternary cell `(a,b)=(1,1)`.
+
+## 7. Where the odd discriminant went
 
 The Jacobian of (2) is
 
@@ -365,7 +432,7 @@ branch to carry its sign character.  This explains exactly why the example
 does not settle the Keller-restricted question, while also showing that
 dominance, field degree four, two-jet form, and generic `S4` are insufficient.
 
-## 7. Correction and surviving frontier
+## 8. Correction and surviving frontier
 
 The map (2) refutes clause 2 of HYP-9027 with its present quantifier over
 general dominant two-jet maps.  Clause 1 survives this hostile because
@@ -410,7 +477,7 @@ NOT PROVED:        existence or exclusion of a degree-four two-jet Keller map;
                    exclusion of A4, S4, G1, JC(2), or DC(2).              (40)
 ```
 
-## 8. Exact companion
+## 9. Exact companion
 
 Run
 
@@ -423,5 +490,6 @@ Both modes must LF-byte-match the stored transcript.  The companion verifies
 the eliminant, Jacobian derivative, primitive and monic discriminants,
 quartic-resolvent discriminant equality, rational-map degree certificates,
 reciprocal polynomial and Newton data, exact Puiseux chart, index invoice,
-and all five tame cycle-type parity rows.  Every truth-bearing check uses an
+all five tame cycle-type parity rows, and the discriminant-order formula on
+the exact grid `1<=a<=5`, `0<=b<=5`.  Every truth-bearing check uses an
 explicit runtime exception rather than a Python assertion.

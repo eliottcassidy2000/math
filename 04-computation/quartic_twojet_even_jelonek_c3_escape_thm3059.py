@@ -138,6 +138,24 @@ def main() -> None:
     reciprocal_order_index = (primitive_disc_order - inertia_discriminant) // 2
     require(reciprocal_order_index == 1, "reciprocal order index")
 
+    # The hostile sits in an exact two-parameter family
+    # F_{a,b}=(x,x^a z^2+y,x^b y z^2+z).  Its discriminant has competing
+    # initial terms of orders 2a+2b and a+4b; the wall a=2b is exactly the
+    # binary/ternary Newton-face transition.  A bounded symbolic grid checks
+    # the all-parameter formula used in the proof.
+    for a in range(1, 6):
+        for b in range(0, 6):
+            family_N = sp.expand(u ** (a + b) * T**4 - u**b * v * T**2 - T + w)
+            family_disc = sp.factor(sp.discriminant(family_N, T))
+            family_disc_order = valuation_u(family_disc, u)
+            predicted_order = min(2 * a + 2 * b, a + 4 * b)
+            require(family_disc_order == predicted_order, f"family discriminant order a={a},b={b}")
+            family_clearing = 6 * (a + b) - family_disc_order
+            if a <= 2 * b:
+                require(family_clearing == 4 * (a + b), f"ternary family exponent a={a},b={b}")
+            if a >= 2 * b:
+                require(family_clearing == 5 * a + 2 * b, f"binary family exponent a={a},b={b}")
+
     print("theorem=THM-3059")
     print("status=PROVED_VERIFIED_EXACT")
     print("map=(x,x*z^2+y,x*y*z^2+z)")
@@ -153,6 +171,8 @@ def main() -> None:
     print("reciprocal_discriminant_order=4;maximal_order_discriminant=2;order_index=1")
     print(f"monic_discriminant={disc_q};clearing_exponent={clearing_exponent}")
     print("parity_formula=E=6*v(leading)-(4-number_of_inertia_orbits+2*order_index)")
+    print("family=F_ab=(x,x^a*z^2+y,x^b*y*z^2+z);disc_order=min(2a+2b,a+4b);wall=a=2b")
+    print("family_clearing=a<=2b:4(a+b);a>=2b:5a+2b")
     print("conclusion=general_dominant_odd_Jelonek_law_refuted;Keller_restricted_law_open")
 
 

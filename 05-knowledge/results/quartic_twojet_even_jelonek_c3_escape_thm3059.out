@@ -13,4 +13,6 @@ reciprocal_newton_points=((0, 2), (2, 1), (3, 0), (4, 0));slopes=(-2/3,0);inerti
 reciprocal_discriminant_order=4;maximal_order_discriminant=2;order_index=1
 monic_discriminant=(16*u**2*v**4*w - 128*u**2*v**2*w**2 + 256*u**2*w**3 + 4*u*v**3 - 144*u*v*w - 27)/u**8;clearing_exponent=8
 parity_formula=E=6*v(leading)-(4-number_of_inertia_orbits+2*order_index)
+family=F_ab=(x,x^a*z^2+y,x^b*y*z^2+z);disc_order=min(2a+2b,a+4b);wall=a=2b
+family_clearing=a<=2b:4(a+b);a>=2b:5a+2b
 conclusion=general_dominant_odd_Jelonek_law_refuted;Keller_restricted_law_open
