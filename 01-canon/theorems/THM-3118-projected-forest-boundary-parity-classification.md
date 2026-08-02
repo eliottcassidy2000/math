@@ -26,7 +26,7 @@ related:
   - THM-3112-cycle-weighted-young-subgroup-gap-and-uniform-octopus-boundary
 script: 04-computation/gmc_projected_forest_boundary_parity_thm3118.py
 output: 05-knowledge/results/gmc_projected_forest_boundary_parity_thm3118.out
-script_sha256: 8af33ca0643041f3120c7d38efccdb9cf78fa1cd151e6530f8e633b30f9ed940
+script_sha256: c42d81b44d526060167ddfe533bb1705661f56440a7f794051e243ee79d0d1e9
 output_sha256: 6322d522749eec843e8fb87466da71aade48cabd67b52562fd455c32a47f7339
 hash_basis: LF-normalized bytes
 ---
@@ -132,8 +132,10 @@ their values.  The Johnson graph on the `(r+1)`-subsets of `[N]` is connected,
 so `lambda` is constant on all rank-r partitions.  The case `r=0` has a
 single target row and is immediate.
 
-Each `(r+1)`-forest has exactly `r+1` distinct deletion flats.  Therefore a
-constant left-kernel vector `c` pairs with every mod-two column as
+Each `(r+1)`-forest has exactly `r+1` distinct deletion flats: if `e!=f`,
+then the endpoints of `f` remain connected in the forest with `e` deleted,
+but are separated in the forest with `f` deleted.  Therefore a constant
+left-kernel vector `c` pairs with every mod-two column as
 
 ```text
 (r+1)c.                                                (7)
