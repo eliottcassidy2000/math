@@ -1,0 +1,12 @@
+Product-Gamma distinguished-B deletion cubic exact scout
+banks=24/25;positive_negative_masses=37/37,39/39
+singleton_suspension=W4(pi+star)=-W3(pi)/2;checks=4140
+attached_pushforward_support=rank3;nonzero_partitions=200;types=4
+TYPE0;colour=((2, 0), (1, 0), (1, 0), (1, 0), (0, 3));point_weight=1/20;count=10;orbit_mass=1/2
+TYPE1;colour=((2, 0), (1, 2), (1, 0), (1, 0), (0, 1));point_weight=-1/60;count=90;orbit_mass=-3/2
+TYPE2;colour=((2, 1), (2, 0), (1, 0), (0, 1), (0, 1));point_weight=1/60;count=90;orbit_mass=3/2
+TYPE3;colour=((3, 0), (2, 0), (0, 1), (0, 1), (0, 1));point_weight=-1/20;count=10;orbit_mass=-1/2
+orbit_mass_vector=1/2,-3/2,3/2,-1/2=one_half_times_(1-T)^3
+boundary=this_is_a_deletion_pushforward_identity_not_a_positive_decomposition_or_all_degree_closure
+record_sha256=d6eb4312e829bc15c42c0ccb8bae16315bbb38c5ce1967851557e762d0c0cb58
+all_exact_controls=PASS
