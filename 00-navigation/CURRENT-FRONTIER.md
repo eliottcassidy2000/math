@@ -37,10 +37,9 @@ close projected `k=3` through `z_1=226`: cap `225`, ledger `374172`; next `78` r
 In the reflected gain graph, cap two forces the phase-zero triangle
 `(3/2)(4/3)=2`; by cap `7/3` it is interior and no full-cap component remains.
 The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`.  The proved CSP chain closes
-`3m>=4D`.  Later cones retain exact CSP/gain data (including 65 prime-five
-bridges), but MISTAKE-347 shows
-their split tails cover one level ordering twice; those closure claims are
-AUDIT-REQUIRED. THM-3135 repairs `H2` at caps `7/3,5/2`; `H` remains a scoped DAG obstruction, so the global cones stay under audit.
+`3m>=4D`.  MISTAKE-347 leaves later split tails **AUDIT-REQUIRED**. THM-3135
+repairs `H2`; THM-3150 gives `H` a three-channel skeleton and ray tail from
+`62`.  Arbitrary-gcd cones remain **OPEN**.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
 supplied-root seams, not semantic-root identification (kernel `28,393`).
