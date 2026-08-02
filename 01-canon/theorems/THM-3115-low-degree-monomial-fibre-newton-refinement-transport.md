@@ -3,7 +3,7 @@ id: THM-3115
 title: "Low-degree monomial-fibre Newton refinement transport"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In degrees
-  five through eight, every chamber-Newton coefficient of both normalized
+  five through nine, every chamber-Newton coefficient of both normalized
   THM-3110 product-Gamma response banks is a nonnegative transport from a
   Young-subgroup fibre type to coarser fibre types.  Consequently the
   row-normalized central operator is positive semidefinite for every integer
@@ -16,10 +16,10 @@ audit: >
   biregular refinement coupling, normalized G-vector identity, sharp chamber
   degree, singleton-root completion, and positive Hasse-boundary argument.
   It also audited the exact coarsening recursion, rational max-flow, mass
-  cancellation, interpolation shells, off-grid controls, and all four LF
+  cancellation, interpolation shells, off-grid controls, and all declared LF
   hashes.  Fresh normal and optimized primary runs byte-match stored output;
-  an independent N=8 normal replay matches its separately optimized and
-  stored transcript, and documentation checks pass.
+  independent N=8 and N=9 normal replays match their separately optimized and
+  stored transcripts, and documentation checks pass.
 depends_on:
   - THM-3110-arbitrary-anchored-product-gamma-dominant-tail-and-low-histogram-reduction
   - THM-3112-cycle-weighted-young-subgroup-gap-and-uniform-octopus-boundary
@@ -33,6 +33,8 @@ secondary_script: 04-computation/gmc_monomial_fibre_refinement_n8_scout.py
 secondary_output: 05-knowledge/results/gmc_monomial_fibre_refinement_n8_scout.out
 secondary_script_sha256: 283c1d99b7a36514e97eed711e4dca2b2c2c4e15abd17e4f63732d48c7a9ada6
 secondary_output_sha256: 30ce74dc4077b5738861f5247ce963c68e869538f3e616a72dec099d2bffef3b
+tertiary_output: 05-knowledge/results/gmc_monomial_fibre_refinement_n9_scout.out
+tertiary_output_sha256: 1073bb3fa697a1363668da352aa27ff2c88ffcc29d2d36e588e0b3e352449c55
 hash_basis: LF-normalized bytes
 ---
 
@@ -45,7 +47,7 @@ Young-subgroup gaps, but its degree-five hostile proves that the signed
 product-Gamma bank is not positive term by term in that decomposition.  The
 missing operation is to forget labels only after grouping equal fibre sizes,
 and then transport negative mass upward in the refinement order.  That
-operation succeeds globally in the first four nonzero degrees.
+operation succeeds globally in the first five nonzero degrees.
 
 This theorem strengthens the scalar Schur checks in THM-3110: those prove
 `Phi_j(s_lambda)>=0`, whereas the operator below proves that the normalized
@@ -199,7 +201,7 @@ tight:  a=A+D+2,     b=A+2D+3.                                 (15)
 ```
 
 They cover, respectively, every integer `b>=2a` and every integer
-`a<b<2a`.  For `N=5,6,7,8`, expand each coefficient in `(9)` as
+`a<b<2a`.  For `N=5,6,7,8,9`, expand each coefficient in `(9)` as
 
 ```text
 G_(j,N,mu)(A,D)
@@ -239,26 +241,28 @@ N       degree bound      Newton slots per bank/chamber
 5           10                         66
 6           14                        120
 7           18                        190
-8           22                        276.                       (19)
+8           22                        276
+9           26                        378.                       (19)
 ```
 
-Thus `(18)` is checked on `2,608` exact Newton coefficient vectors across
+Thus `(18)` is checked on `4,120` exact Newton coefficient vectors across
 the two banks and two chambers.  Every rational transport is supported on
 an actual coarsening edge.  One excess interpolation shell and three
 off-grid points per case verify the polynomial reconstruction independently
 of the transport pass.  No floating-point comparison is used.
 
-The secondary `N=8` transcript prints `degree=23` because it reconstructs the
-safe `4N-9` envelope.  Its `24` zero slots are exactly that outer shell; the
-`276` live slots are precisely the sharp degree-at-most-`22` triangle counted
-in `(19)`.
+The secondary transcripts print `degree=23` at `N=8` and `degree=27` at
+`N=9` because they reconstruct the safe `4N-9` envelopes.  Their respective
+`24` and `28` zero slots are exactly those outer shells; the `276` and `378`
+live slots are precisely the sharp degree-at-most-`22` and degree-at-most-`26`
+triangles counted in `(19)`.
 
 Because every binomial factor in `(16)` is nonnegative at integer
 `A,D>=0`, summing `(18)` proves
 
 ```text
 D_(j,N)>=0
-for j=1,2, N=5,6,7,8, and every integer 0<a<b.                  (20)
+for j=1,2, N=5,6,7,8,9, and every integer 0<a<b.                (20)
 ```
 
 Equivalently, in every irreducible representation of `Sym_N`, the normalized
@@ -274,7 +278,7 @@ this debt.
 
 This theorem does **not** prove any of the following:
 
-1. the refinement transport for `N>=9`;
+1. the refinement transport for `N>=10`;
 2. strict positivity on every nontrivial representation;
 3. membership in the smaller conjugacy-averaged uniform-octopus template
    cone ruled out by THM-3112;
@@ -294,13 +298,15 @@ python 04-computation/gmc_monomial_fibre_newton_refinement_thm3115.py
 python -O 04-computation/gmc_monomial_fibre_newton_refinement_thm3115.py
 python 04-computation/gmc_monomial_fibre_refinement_n8_scout.py 8
 python -O 04-computation/gmc_monomial_fibre_refinement_n8_scout.py 8
+python 04-computation/gmc_monomial_fibre_refinement_n8_scout.py 9
+python -O 04-computation/gmc_monomial_fibre_refinement_n8_scout.py 9
 ```
 
 The primary companion independently rebuilds the `N=5,6,7` monomial
 symmetric evaluations, coarsening relation, sharp Newton triangles, excess
 shells, off-grid evaluations, and rational flows.  It hashes the complete
 coefficient/edge certificate rather than relying on printed decimal signs.
-The secondary companion independently rebuilds `N=8` by a power-sum and
+The secondary companion independently rebuilds `N=8,9` by a power-sum and
 augmented-monomial recurrence.  It additionally proves computationally that
 hooks alone, two-row types alone, and their union all miss valid slots; the
 full coarsening poset is genuinely used.
