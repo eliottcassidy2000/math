@@ -2,12 +2,20 @@
 id: THM-3153
 title: "Four-step prime resonance second Euclidean-Newton separation"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For every odd prime p, no exact quadratic has three zero factorial moments
   beginning at r=p+2.  Two full linear Euclidean cancellations separate all
   positive Newton slopes.  THM-3148's fixed offset-four resultant excludes
   the remaining unit roots, with exact lawful treatment of every arithmetic
   wall and the genuine p=4547 residual exception.
+audit: >
+  An independent hostile audit rederived the resonance normalization, both
+  quotient signs, the offset-four residual resultant, every Lucas/factorial
+  valuation tier, the midpoint transfer, both high identities, generic and
+  raised-endpoint polygons, the lawful A/R rather than spurious A/S unit-face
+  test, the p=4547 prime-window fallback, and the five-composite consequence.
+  Fresh normal and optimized replays match the stored transcript and declared
+  LF-normalized hashes exactly.
 source: root/multiscale-newton-flag/2026-08-02
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
@@ -26,7 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3153 -- four-step prime resonance second Euclidean-Newton separation
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Let
 
@@ -351,4 +359,4 @@ here.  The pattern suggests an iterated Euclidean-Newton flag indexed by the
 prime gap, but denominator and endpoint walls proliferate and no induction
 is asserted.
 
-**QED (candidate pending independent hostile audit).**
+**QED.**
