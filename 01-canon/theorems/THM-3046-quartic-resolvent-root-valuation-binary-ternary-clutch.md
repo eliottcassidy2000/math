@@ -269,7 +269,7 @@ classes, and the three root-realizable controls `(15)`.
 ## 7. Boundary ledger
 
 ```text
-PROVED IN THE CANDIDATE: root/resolvent difference factorization;
+PROVED HERE:             root/resolvent difference factorization;
                          exact valuation clutch realization;
                          half-discriminant ternary checksum;
                          S4/V4 equivariance;
