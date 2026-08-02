@@ -1,8 +1,17 @@
 ---
 id: THM-3087
 title: "z234 two-high common-torsion and finite-height reduction"
-status: CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT
+status: PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
 source: codex-lrc-z234-boundary-scout-2026-08-01
+audit: >
+  An independent hostile audit first reconstructed the common-Q pointwise
+  capacity certificate and its exact 1,045/654 mask split.  A second immutable
+  pass rederived the complete-cell discrepancy inequality, both rational
+  height cutoffs, the three exceptional loads and strict margins, and the
+  108,966,498-packet finite census; it independently replayed normal and
+  optimized modes against stored output and verified the script, output,
+  bank, dependency, and semantic hashes.  The audit confirms that this is a
+  finite reduction only and makes no projected closure, cap, or ledger claim.
 depends_on:
   - THM-3078-z234-direct-farkas-normalization-and-four-two-high-boundary
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
@@ -21,7 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3087 -- z234 two-high common-torsion and finite-height reduction
 
-**CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3078 leaves four projected `k=3`, `z_1=234` rows at the two-high
 boundary.  The present theorem isolates the genuinely scalar-unbounded part
@@ -135,7 +144,7 @@ The `654` masks left by (9) still contain infinitely many literal high-label
 pairs at the scalar level.  We now make that sector finite without confusing
 raw safe mass with the projected cover criterion.
 
-Choose any complete cell `I` from (5), so `mu(I)=1/L`.  On the normalized
+Choose any complete cell `I` from `J`, so `mu(I)=1/L`.  On the normalized
 cell, the three aligned tails occupy at most `36/91`.  THM-1094's exact
 one-comb interval discrepancy gives, for every integer high label `z`,
 
@@ -266,3 +275,5 @@ transcript.
 families and reduces the other `654` to (20).  It does **not** prove
 `mu(P_(E,Z))>36/91` for those packets, close any of the four THM-3078 rows,
 change the projected cap, or decrement the LRC ledger.
+
+QED.
