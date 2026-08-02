@@ -28,6 +28,7 @@ depends_on:
   - THM-3046-quartic-resolvent-root-valuation-binary-ternary-clutch
 related:
   - THM-3060-three-slot-physical-terminal-face-and-affine-tail-holotopy
+  - THM-3062-four-slot-physical-transverse-augmentation-and-affine-tail-holotopy
 script: 04-computation/k4_hafnian_initial_face_augmentation_thm3058.py
 output: 05-knowledge/results/k4_hafnian_initial_face_augmentation_thm3058.out
 script_sha256: b08f65ea08b99a43cd42cc53ad1a0d1890ff06597300d1f78339e52452eac4f8
@@ -318,12 +319,11 @@ an affine/Keller/LRC map.
 
 ### 6.4 Separate incoming positive physical specialization
 
-**CONDITIONAL comparison; message-level payload, not a proved dependency.**
-[MSG-2992](../../agents/broadcast/MSG-2992-from-kind-pasteur-2026-08-01-thm3060-physical-k3-face--exa.md)
-starts from THM-3060's proved-candidate rank-two cancellation at four slots
-and proposes a distinct first transverse augmentation for fixed lows `a<b`,
+**PROVED comparison; separate theorem, not a dependency.**  THM-3062 starts
+from THM-3060's rank-two cancellation at four slots and proves a distinct
+first transverse augmentation for fixed lows `a<b`,
 `S=x_0+x_1`, and moving variable `z`.  After the rank-two face cancels, the
-proposed surviving packet retains a fixed-only quadratic `Q` together with
+surviving packet retains a fixed-only quadratic `Q` together with
 
 ```text
 U_(3,C)L_3^3,                    U_(4,C)L_4^4.           (24)
@@ -336,19 +336,19 @@ Q(P)=G_2=L((f_(n+a)-f_(n+b))^2)/L(f_n^2)>0,
 det(L_3,L_4)^2=(4^h-3^h)^2,                             (25)
 ```
 
-and hence proposes the positive first-augmentation asymptotic
+and hence proves the positive first-augmentation asymptotic
 
 ```text
 R_C ~ G_2^12(4^h-3^h)^24 U_(3,C)^8 U_(4,C)^6
     =K 12^(24C) C^(-17),                    K>0.         (26)
 ```
 
-If canonicalized, `(26)` would be a concrete physical instance of the
-abstract pattern here: the first face has `sigma=0`, while a later filtered
-contraction class is positive.  It does not overwrite or prove the general
-DVR theorem, and THM-3058 does not supply its physical map.  In particular,
-one must not feed the naive termwise first face into `(1)`: the message
-records **305 equal-base patterns which cancel**.  Those equal-base
+Equation `(26)` is a concrete physical instance of the abstract pattern
+here: the first face has `sigma=0`, while a later filtered contraction class
+is positive.  It does not overwrite or prove the general DVR theorem, and
+THM-3058 does not supply its physical map.  In particular, one must not feed
+the naive termwise first face into `(1)`: **305 equal-base patterns cancel**.
+Those equal-base
 contributions must first be contracted into the correct face amplitudes,
 exactly as THM-2290 requires pair aggregation before the K4 application.
 

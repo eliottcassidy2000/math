@@ -1,0 +1,8 @@
+MODULAR V4/C3 TWO-PRIME POINT-DIRECTION DECODER
+point_walsh_det=16 smith=(1, 2, 2, 4) ranks_p2_p3=1,4
+direction_fourier_det=(-3, -6) norm=27 rank_at_1-w=1
+joint_decoder_norm=2^24*3^12=8916100448256
+affine_group=V4_semidirect_S3;maps=24 matching_equivariance_checks=72
+marked_free_factors=C2_order2,C3_order3;exceptional_primes=point:2,direction:3
+scope=abstract point-direction decoder only;no canonical physical PSL2Z,Keller,LRC,or quartic-origin map
+all_exact_checks=PASS

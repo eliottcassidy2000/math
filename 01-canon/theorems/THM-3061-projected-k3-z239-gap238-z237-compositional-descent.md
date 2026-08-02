@@ -1,8 +1,15 @@
 ---
 id: THM-3061
 title: "Projected k3 z239 gap238 z237 compositional descent"
-status: CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT
+status: PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
 source: codex-lrc-z239-z237-composition-2026-08-01
+audit: >
+  An independent hostile audit rederived the pinned-atlas and gap census,
+  necessary-relaxation directions, screen split, fourteen terminal bodies,
+  complete-cell cardinality certificates, and ledger arithmetic. Fresh
+  ordinary and optimized runs rebuilt disjoint checkpoint banks and found all
+  62/62 envelopes byte-identical; both transcripts matched the stored output,
+  and the script, output, and semantic hashes matched exactly.
 depends_on:
   - THM-3052-projected-k3-z242-gap241-z240-compositional-descent
   - THM-3033-projected-k3-z246-to-z244-descent-and-z243-high-floor-addendum
@@ -18,11 +25,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3061 -- projected k3 z239 / gap238 / z237 compositional descent
 
-**CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
-
-This file remains outside the proved dependency graph until an independent
-hostile audit and explicit status promotion. No navigation or ledger file is
-changed by this candidate.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## Statement
 
@@ -36,18 +39,16 @@ all 44 occupied z_1=237 rows.                         (1)
 ```
 
 The occupied-row decrement in `(1)` is `4+44=48`; the gap costs zero. Thus,
-**if this candidate is promoted**, THM-3052's proved projected necessary-row
-ledger and cap would update by the exact arithmetic
+THM-3052's proved projected necessary-row ledger and cap therefore update by
+the exact arithmetic
 
 ```text
 374828-48=374780,
 projected k=3 cap: z_1<=236.                          (2)
 ```
 
-Equation `(2)` is an audit target, not a live ledger or navigation mutation
-while the theorem has candidate status. This is not LRC(14), says nothing
-about `k<=1` or the final rung, and closes only the named projected necessary
-sector.
+This is not LRC(14), says nothing about `k<=1` or the final rung, and closes
+only the named projected necessary sector.
 
 ## 1. Pinned disjoint universe and the `238` gap
 
@@ -139,8 +140,7 @@ The stored output ends with `all_exact_controls=PASS`. Its semantic digest is
 
 ## 5. Scope boundary
 
-This theorem candidate is a compositional descent inside the already-defined
+This theorem is a compositional descent inside the already-defined
 projected `k=3` necessary atlas. It does not upgrade the projected rows to
 physical covers, does not change the `k<=1` debt, and does not prove LRC(14).
-The exact consequence `(2)` becomes canonical only after independent hostile
-audit and promotion.
+The exact consequence `(2)` is now canonical.

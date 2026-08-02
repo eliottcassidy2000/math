@@ -1,0 +1,10 @@
+THM-3062 FOUR-SLOT PHYSICAL TRANSVERSE AUGMENTATION
+normal_ideal_layer_cells=48 transverse_cells=12
+powered_line_cells=8 beta_factor_cells=64
+physical_resultant_cells=33 all_positive=1
+physical_ratio_digest=35e4a57c75daf43cda7e089210d1bbf4a70e371008f4c3a390b7ff704595b7f5
+tail_ratio_floor_times_1e9=25913835936,11091131268,6782003397
+carrier_minor_cells=39 homotopy_minor_cells=195
+asymptotic=G2^12*(4^h-3^h)^24*U3^8*U4^6;relative_limit=1
+scope=normalized_intrinsic_physical_resultant;fixed_two_lows_and_gap;finite_order_tail
+all_exact_checks=PASS
