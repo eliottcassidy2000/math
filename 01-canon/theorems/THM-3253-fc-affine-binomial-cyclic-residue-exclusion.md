@@ -1,12 +1,10 @@
 ---
 id: THM-3253
-title: "Affine binomial phases: cyclic residues exclude every linear perturbation of a pure power"
+title: "Affine binomial phases: cyclic-residue functional nonsplitting and the ordinary-basis gate"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  Let ell be
-  a nonconstant algebraic affine polynomial on the coordinate two-simplex.
-  For every integer d>=3 and algebraic A,B,C,h with A nonzero, the phase
-  `A(ell-h)^d+B(ell-h)+C` has exponential simplex period neither zero nor
-  `1/2`.  For B nonzero, the endpoint primitives form a rank-(d-1) cyclic
+  PROVED STRUCTURAL + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED /
+  PERIOD-VALUE EXCLUSION CONDITIONAL.  For B nonzero, the endpoint primitives
+  of `A(ell-h)^d+B(ell-h)+C` form a rank-(d-1) cyclic
   connection with residues `-j/d`.  Its spectrum is exactly the critical
   value set of `At^d+Bt`.  A weighted packet splits over endpoint
   exponentials iff every noncritical grouped source vanishes and every
@@ -15,10 +13,12 @@ status: >
   1+1+1 / 2+1 / 3 collision audit keep the triangle packet off those lines.
   The scalar annihilators of its first two primitive coordinates have
   disjoint exact Frobenius exponent sets, so the two marked copies in the
-  boundary period cannot cancel.  A doubled knot is recovered by the same
-  coordinate coprimality.  B=0 is THM-3250/3251.  This closes an infinite
-  non-pure family in every degree, not arbitrary one-variable polynomials of
-  degree at least four, genuinely multivariate phases, or FC(3).
+  boundary period cannot cancel functionally.  A doubled knot is recovered by
+  the same coordinate coprimality.  The selected independent scalar family is
+  not yet shown derivative-closed and ordinary at `s=1`, so the former
+  Beukers value exclusion was invalid; see MISTAKE-356.  B=0 remains proved by
+  THM-3250/3251.  For B nonzero, excluding values zero and `1/2` is conditional
+  on the ordinary-basis gate.
 source: codex-2026-08-02-fc3-cubic-frontier
 depends_on:
   - THM-3250-fc3-noncollinear-pure-power-turn-current-exclusion
@@ -31,11 +31,11 @@ external:
   - "F. Beukers, A refined version of the Siegel--Shidlovskii theorem, Annals of Mathematics 163 (2006), 369--379, Corollary 1.4."
 script: 04-computation/fc_affine_binomial_cyclic_residue_thm3253.py
 output: 05-knowledge/results/fc_affine_binomial_cyclic_residue_thm3253.out
-script_sha256: a31951101fd692993551ec2ffc27fe47daffcf19d505aabe5feee640895b103a
-output_sha256: 3446b498a7aeb475e9c694e1d1f9eb9a528d93917ae92982a13db4845a39b608
+script_sha256: 551be5f335985930cf7175ed89757b42b9f5421c82401e044f1ff87da1b499c4
+output_sha256: 6889e2c1ab390d09ad324b2dd3ff9a19baa2074b6cdbcf44f613170134d8cc08
 ---
 
-# THM-3253 -- every affine binomial phase is excluded
+# THM-3253 -- affine binomials: exact nonsplitting and an open value gate
 
 ## 1. Statement and novelty
 
@@ -51,15 +51,18 @@ q=A(ell-h)^d+B(ell-h)+C,
 K(s)=integral_Delta exp(sq)du dv.
 ```
 
-Then
+The desired period conclusion is
 
 ```text
 K(1)!=0,                         K(1)!=1/2.                 (2)
 ```
 
-When `B=0`, this is the pure-power result THM-3250/3251.  The new branch is
-`A*B!=0`.  It contains every depressed cubic, recovering THM-3252 at `d=3`,
-and supplies a genuinely non-pure infinite family in every higher degree.
+When `B=0`, this is the proved pure-power result THM-3250/3251.  For
+`A*B!=0`, (2) is **conditional** on the ordinary-basis gate in section 8.
+The unconditional new result is the exact cyclic connection, splitting
+classification, critical-fibre audit, and functional nonsplitting theorem.
+It contains the structural depressed-cubic result THM-3252 at `d=3` and
+supplies the same structural control in every higher degree.
 For `d>=4` it does not allow intermediate terms such as `t^2,...,t^(d-1)`;
 those destroy the monomial cyclic connection used below.  Thus (2) is not
 all affine-coordinate polynomials and not `FC(3)`.
@@ -483,7 +486,7 @@ G notin mathcal E_{a,b}.                                   (47)
 
 This treats knot multiplicity uniformly in every degree.
 
-## 8. E-functions, Beukers, and the two values
+## 8. E-functions and the remaining ordinary-basis gate
 
 For `1<=j<=r`,
 
@@ -495,14 +498,29 @@ J_(j,x)(s)=sum_(n>=0) s^n/n!
 The coefficients are algebraic with exponential conjugate and denominator
 growth, and (6),(9) give a holonomic system.  Thus all primitives, weighted
 packets, and algebraic endpoint exponentials are E-functions.  After
-augmenting (13) by those exponentials and `1`, the system has denominator
-only `s`, so `s=1` is ordinary.
+augmenting (13) by those exponentials and `1`, the **full** system has
+denominator only `s`, so it is ordinary at `s=1`.
 
 By the zero-source extension following (24), adjoin `exp(-Cs)` to the
 exponential spaces in (42) and (47) without changing either nonsplitting
-conclusion.  Distinct exponentials are independent over `Qbar(s)`.  Beukers
-Corollary 1.4 therefore transfers the functional independence to algebraic
-linear independence of values at `s=1`.
+conclusion.  Distinct exponentials are independent over `Qbar(s)`, so (42)
+and (47) prove functional independence of the selected scalar `F` or `G`
+from the endpoint exponentials.
+
+The former inference to values was invalid.  The full ordinary augmented
+vector is not known independent, and the selected independent family is not
+shown closed under differentiation.  Passing to an independent basis may
+introduce an apparent singularity at one.  As a minimal warning,
+`(s-1,exp(s))` is functionally independent although its first value vanishes;
+the minimal scalar equation for `s-1` is singular at one.  Beukers Corollary
+1.4 therefore cannot be invoked until one constructs an independent
+derivative-closed E-function basis ordinary at one containing the selected
+period scalar and the needed exponentials (or proves an equivalent regular
+relation-module specialization statement).
+
+Conditional on that ordinary-basis certificate, Beukers transfers the proved
+functional independence to `Qbar`-linear independence of values at
+`s=1`.
 
 In a three-distinct geometry, (39) says that `K(1)=0` or `1/2` would give
 
@@ -518,8 +536,9 @@ G(1)=0,
 G(1)-(L^2/2)exp(-C)=0.                                    (50)
 ```
 
-All four relations are impossible.  This proves (2) for `B!=0`; the pure
-case `B=0` is THM-3250/3251.
+All four relations would then be impossible.  Thus (2) is **conditional** for
+`B!=0`; the pure case `B=0` is proved by THM-3250/3251, whose selected block
+vectors are already independent, derivative-closed, and ordinary at one.
 
 ## 9. Exact boundary and next target
 
@@ -567,4 +586,6 @@ The exact verifier checks:
 6. 45 direct Taylor-coefficient comparisons of the three period formulas
    for non-pure phases of degrees `4,5,6`.
 
-Normal and optimized runs must be byte-identical to the archived output.
+Normal and optimized runs must be byte-identical to the archived output.  The
+verifier certifies the structural identities and functional nonsplitting
+mechanisms; it does not certify specialization at `s=1`.

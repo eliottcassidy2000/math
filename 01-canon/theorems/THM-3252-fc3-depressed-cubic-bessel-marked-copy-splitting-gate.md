@@ -1,12 +1,10 @@
 ---
 id: THM-3252
-title: "FC(3) affine-coordinate cubics: Bessel-order mismatch excludes both simplex periods"
+title: "FC(3) affine-coordinate cubics: Bessel-order functional nonsplitting and the ordinary-basis gate"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let ell be
-  any nonconstant algebraic affine polynomial on the coordinate two-simplex
-  and Q any algebraic polynomial of degree exactly three.  Then
-  `int_Delta exp(Q(ell))dA` is neither zero nor `1/2`.  After exact cubic
-  depression, the `B=0` branch is THM-3250/3251.  For `A*B!=0`, the two
+  PROVED STRUCTURAL + VERIFIED-EXACT / PERIOD-VALUE EXCLUSION CONDITIONAL.
+  After exact cubic depression, the `B=0` branch is THM-3250/3251.  For
+  `A*B!=0`, the two
   endpoint primitives form one rank-two regular-singular connection with
   residue exponents `-1/3,-2/3`, and its coordinates satisfy Bessel equations
   of orders `1/3,2/3`.  A collision-safe theorem classifies every rational
@@ -14,19 +12,25 @@ status: >
   sources must vanish, while a critical source must lie on
   `span((2B/3,2eta))`.  Triangle moment identities force a nonzero source
   transverse to every such line.  For noncollinear and three-distinct
-  collinear images, a hypothetical elementary mixed period would satisfy
+  collinear images, a hypothetical endpoint-elementary mixed period would satisfy
   both unequal Bessel-order equations and hence vanish packetwise, a
   contradiction.  For a doubled knot, one cyclic row recovers the whole
-  nonsplit packet.  Beukers Corollary 1.4 excludes the two values.  This
-  closes all algebraic affine-coordinate cubics, not arbitrary bivariate
-  cubics, the projective-leading-form reduction, or FC(3).
+  nonsplit packet.  These conclusions prove functional nonsplitting, but do
+  not by themselves produce a linearly independent derivative-closed
+  E-function basis ordinary at `s=1`.  The former Beukers specialization was
+  invalid; see MISTAKE-356.  Excluding period values zero and `1/2` in the
+  non-pure cubic branch remains conditional on that ordinary-basis gate.
 audit: >
   An independent audit rederived both Euclidean divisions, the collision-safe
   rational splitting classification (including its critical top-degree
   obstruction), the turn and divided-difference moment packets, the critical
   fibre directions, the 1/3-versus-2/3 quotient defect, doubled-knot cyclicity,
-  and the Beukers ordinary-point implication.  Fresh normal and optimized
-  runs byte-match the stored transcript and both declared hashes.
+  and the functional nonsplitting statements.  A later hostile audit found
+  that the selected independent scalar family was not shown derivative-closed;
+  the full ordinary augmented system is not known independent.  THM-3250/3251
+  survive this audit because their exact independent block vectors are already
+  derivative-closed and ordinary at one.  Fresh normal and optimized runs
+  byte-match the stored structural transcript and both declared hashes.
 source: codex-2026-08-02-fc3-cubic-frontier
 depends_on:
   - THM-3250-fc3-noncollinear-pure-power-turn-current-exclusion
@@ -40,13 +44,13 @@ external:
   - "F. Beukers, A refined version of the Siegel--Shidlovskii theorem, Annals of Mathematics 163 (2006), 369--379, Corollary 1.4."
 script: 04-computation/fc3_depressed_cubic_bessel_marked_extension_thm3252.py
 output: 05-knowledge/results/fc3_depressed_cubic_bessel_marked_extension_thm3252.out
-script_sha256: 35a948c99b3f51b8a35dd18c9c9366dc64e2f9e99991cc2e71ce129878735ca0
-output_sha256: c3103797663c6b848de2f90553d2d8e423a090bf253bcaca3de12e4721fc1003
+script_sha256: 90936f7ac2e4e096bc07a825252759120b8c4a97308acd6208fcf09107ea96ce
+output_sha256: 1d93829c3b5a6678984426521b998d901fdda54ad91dd92dc46a274e04547e1a
 ---
 
-# THM-3252 -- every algebraic affine-coordinate cubic is excluded
+# THM-3252 -- affine-coordinate cubics: exact nonsplitting and an open value gate
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED STRUCTURAL + VERIFIED-EXACT / PERIOD-VALUE EXCLUSION CONDITIONAL.**
 
 ## 1. Result and sharp scope
 
@@ -58,18 +62,22 @@ ell in Qbar[u,v] affine and nonconstant,
 Q in Qbar[z],                              deg Q=3.          (T0)
 ```
 
-Then
+The desired period conclusion is
 
 ```text
 int_Delta exp(Q(ell(u,v)))du dv !=0,
 int_Delta exp(Q(ell(u,v)))du dv !=1/2.                      (T1)
 ```
 
-This is the complete algebraic **affine-coordinate cubic** branch of the
-simplex exponential obstruction.  It is the first branch here beyond pure
-powers and all quadratics.  It does not cover a genuinely bivariate cubic,
-nonalgebraic coefficients, the projective-leading-form reduction for a
-general homogeneous Factorial-Conjecture input, or `FC(3)` itself.
+For the non-pure depressed branch, (T1) is **not yet proved**.  What is proved
+below is the exact primitive connection, its collision-safe rational splitting
+classification, and functional nonsplitting of the scalar period packets from
+the endpoint exponentials.  The missing step is to realize the relevant
+independent functions inside a derivative-closed E-function basis whose system
+is ordinary at `s=1`.  Conditional on that gate, (T1) follows.  Pure cubics
+remain covered unconditionally by THM-3250/3251.  Nothing here covers a
+genuinely bivariate cubic, nonalgebraic coefficients, the projective-leading-
+form reduction, or `FC(3)` itself.
 
 The coupled mechanism is stated first.  Let
 
@@ -115,7 +123,8 @@ The structural core below is an exact **one-copy splitting classification**.
 It identifies every way a weighted packet `Y_w=sum_x w_xY_x` can become a
 rational combination of its endpoint exponentials.  Sections 8--10 then use
 the geometry retained by the triangle weights to rule out the remaining
-mixed-coordinate cancellation and prove (T1).
+mixed-coordinate cancellation and prove functional nonsplitting.  Section 10
+states the additional specialization hypothesis that would imply (T1).
 
 ## 2. Exact depression of an arbitrary affine-coordinate cubic
 
@@ -572,7 +581,7 @@ The doubled-knot scalar row is cyclic for the rank-two connection.  This is
 the multiplicity boundary that the three-distinct mixed-coordinate proof
 cannot cover directly.
 
-## 10. E-functions, Beukers, and both forbidden values
+## 10. E-functions and the remaining ordinary-basis gate
 
 The splitting theorem remains unchanged if `mathcal E_X` is enlarged by
 finitely many algebraic exponentials having zero source.  In the proof of
@@ -591,12 +600,37 @@ J_(k,x)(s)=sum_(n>=0) s^n/n!
 has algebraic coefficients with the required conjugate and denominator
 growth, and (11)--(12) are holonomic.  Hence these primitives, their
 weighted combinations, and the algebraic exponentials are E-functions.
-Their first-order system has denominator only `s`, so `s=1` is ordinary.
+The **full augmented primitive vector** satisfies a first-order system with
+denominator only `s`, so that system is ordinary at `s=1`.  Equations (43)
+and (50), after adjoining `exp(-C_0s)`, prove that the selected scalar `F` or
+`G` is functionally independent from the distinct endpoint exponentials.
 
-Distinct exponentials are independent over `Qbar(s)`.  Equations (43) and
-(50), after adjoining `exp(-C_0s)`, therefore give the functional
-independence required by Beukers Corollary 1.4.  In a three-distinct geometry,
-(35) shows that either forbidden value would give respectively
+These two facts cannot be spliced without another argument.  The full
+augmented vector is not known to be linearly independent, while the selected
+independent list containing `F` or `G` is not shown closed under
+differentiation.  Replacing a dependent ordinary system by an independent
+basis can introduce an apparent singularity at `s=1`.  The elementary pair
+`(s-1,exp(s))` is the minimal warning: it is functionally independent, but its
+first value vanishes and the minimal scalar equation for `s-1` is singular at
+one.  Thus Beukers Corollary 1.4 does not presently apply to the selected
+family.
+
+The precise remaining gate is any proof of one of the following equivalent-
+purpose certificates:
+
+1. a linearly independent, derivative-closed E-function vector ordinary at
+   `s=1` that contains `F` (respectively `G`) and the needed distinct
+   exponentials;
+2. a basis of the generated differential module, regular at `s=1`, in which
+   those functions have coefficients regular at one and nonzero specialized
+   coordinate rows; or
+3. a direct specialization theorem controlling the full relation module at
+   `s=1`.
+
+Conditional on such a certificate, Beukers transfers the proved functional
+independence to `Qbar`-linear independence of the relevant values.  Indeed, in a
+three-distinct geometry, (35) shows that either forbidden value would give
+respectively
 
 ```text
 F(1)=0,
@@ -610,14 +644,16 @@ G(1)=0,
 G(1)-(L^2/2)exp(-C_0)=0.                                   (53)
 ```
 
-Each is an impossible algebraic relation among values at the ordinary
-algebraic point `s=1`.  This proves (T1) for `A*B!=0`.
+Each would contradict the conditional ordinary-basis certificate.  Hence
+(T1) follows **conditionally** for `A*B!=0`.
 
 If the depressed coefficient `B` is zero, THM-3250 and THM-3251 prove the
-same conclusion using the split residue blocks (15).  Noncollinear,
-three-distinct collinear, and doubled-knot images exhaust every nonconstant
-affine coordinate on a triangle.  Together with the exact depression in
-section 2, this completes every cubic `Q` in (T0).
+same conclusion using independent derivative-closed split residue blocks
+ordinary at one; their Beukers step is unaffected by MISTAKE-356.
+Noncollinear, three-distinct collinear, and doubled-knot images exhaust every
+nonconstant affine coordinate on a triangle.  Thus the exact structural
+reduction is complete for every cubic `Q` in (T0), while the non-pure cubic
+period-value conclusion remains at the stated gate.
 
 ## 11. Precise C3 dictionary with the Jacobian sidecar
 
@@ -674,4 +710,6 @@ The verifier checks, over exact SymPy arithmetic:
    three-distinct collinear, and doubled-knot period formulas under
    `p=t^3+3t`.
 
-Normal and optimized runs must be byte-identical to the archived output.
+Normal and optimized runs must be byte-identical to the archived output.  The
+verifier certifies the structural identities and nonsplitting mechanisms; it
+does not certify specialization at `s=1`.

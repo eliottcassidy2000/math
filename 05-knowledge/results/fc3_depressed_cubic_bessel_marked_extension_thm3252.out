@@ -9,4 +9,4 @@ C7:critical_group_direction=(1,-r);split_direction=(1,2r);cross_order_defect=-1/
 C8:moments=turn(0,0,-W)+spline(0,0,-1);doubled_cyclic_row=NONZERO
 C9:nonpure_period_formula_coefficients=18
 semantic_sha256=bdb0c1beb839db9ba90187005d1ec71e2986cc6f400b2c1ef69484926d7f68f8
-CONCLUSION=ALL_AFFINE-COORDINATE_CUBIC_BRANCHES_REDUCED_AND_EXCLUDED
+CONCLUSION=STRUCTURAL_NONSPLITTING_VERIFIED;VALUE_SPECIALIZATION_GATE_OPEN

@@ -9,6 +9,37 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-356 (2026-08-02, THM-3252/3253 Beukers specialization) -- functional nonsplitting was confused with an ordinary independent differential system
+
+- **What was claimed:** THM-3252 and THM-3253 proved that their non-pure
+  affine-coordinate cubic/binomial periods avoid `0` and `1/2`.  The argument
+  first proved that the selected scalar period packet `F` or `G` is not in the
+  rational span of the endpoint exponentials, observed that the full augmented
+  primitive system is ordinary at `s=1`, and then invoked Beukers Corollary 1.4.
+- **First failed implication:** Beukers requires the linearly independent
+  functions to occur in a homogeneous first-order system ordinary at the
+  specialization point.  The full primitive vector is ordinary but may be
+  functionally dependent; the selected independent list containing `F` or `G`
+  was not shown derivative-closed.  Passing from the former to a basis for the
+  latter may create an apparent singularity at one.  The minimal warning is
+  `(s-1,exp(s))`: the pair is independent over `Qbar(s)`, but its first value
+  vanishes, and the minimal scalar equation for `s-1` is singular at one.
+- **Repair / strongest survivor:** THM-3252/3253 are downgraded to **PROVED
+  STRUCTURAL + VERIFIED-EXACT / PERIOD-VALUE EXCLUSION CONDITIONAL**.  Their
+  exact primitive connections, critical-value spectra, rational splitting
+  criteria, collision audits, Bessel/Frobenius coordinate mismatch, and
+  functional nonsplitting all survive.  Their remaining gate is an independent
+  derivative-closed E-function basis ordinary at one containing the scalar
+  packet and required exponentials, or an equivalent regular specialization
+  theorem for the full relation module.
+- **Scope audit:** THM-3250 and THM-3251 are unaffected: their surviving
+  primitive blocks together with the distinct exponentials are proved jointly
+  independent and already form the displayed derivative-closed system with
+  denominator `s`.  THM-3116, THM-3202, and both the rank-deficient and
+  full-rank branches of THM-3203 likewise explicitly prove independence of the
+  exact displayed system vector before applying Beukers; the full-rank theorem
+  already records and avoids this very apparent-singularity shortcut.
+
 ## MISTAKE-354 (2026-08-02, THM-3210 located-scale quantifier bridge) -- analytic monotonicity was transferred to a selected-cell exact overlap
 
 - **What was claimed:** the first pre-routing version of

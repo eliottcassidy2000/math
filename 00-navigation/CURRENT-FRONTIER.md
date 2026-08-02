@@ -382,33 +382,26 @@ Classify profiles under support operations; study analytic continuation and auto
   `r<=998` and prime/prime-power/even lanes.  The residual has `r>=999`,
   composite `d,d-2`, and non-prime-power `d-1`; THM-3260 removes the
   ternary-Cantor chamber, with `D=201` its first sector-gluing hostile.
-  THM-3116/3202/3203 close affine-coordinate quadratics, THM-3250/3251 pure
-  powers, and THM-3252 all cubics.  Higher/multivariate phases, mixed-prime
-  composites, and `FC(3)`/`SFC(3)` stay OPEN.
+  THM-3116/3202/3203 close affine-coordinate quadratics; THM-3250/3251 close
+  pure powers.  THM-3252/3253 prove cyclic connections, collision-safe
+  splitting, and functional nonsplitting for cubics and `At^d+Bt+C`; non-pure
+  value exclusion is CONDITIONAL on an independent derivative-closed E-basis
+  ordinary at one (MISTAKE-356).  Higher/multivariate phases and FC stay OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
 ### Arithmetic-Kakeya forcing certificates (opened 2026-07-28, klein-S691)
 
-**OPEN external benchmark; in-repo workbench live.** Certificate score s
-claims AK(s) (benchmark's theorem, CITED); human record 1.67513 (Katz–Tao
-2002); target ≤ 1.675. Session facts (FINITE-EXACT): literal spec rule-(1)
-UNSOUND (score→1 family; 14/9 at n=9 — report upstream); proved floor
-score ≥ 1; k=1 paths floor 2 (exhaustive small, greedy-seed caveat);
-strict record **13/7** on [2,2,2]; per-suffix merge-free record **7/4 =
-the KT99 exponent** (3 independent witnesses — a plateau exactly at the
-human rung); with identifications **12/7**. Label algebras: verifiable =
-(prefix+step), intuitive same-H = (step+suffix) — complementary; the
-compilation lemmas between them are the benchmark's unstated equivalence
-claims and the workbench's top theory target. Mechanism: species-flow
-with junction algebra; firing = illegal (1,−1)-junction; foreign seeds =
-reusable junction fuel; merges = free hubs (NOT denominator savings).
-Files: `04-computation/ak_forcing_engine.py` (+exploit, +search, +anneal,
-+mode3), `06-writeups/AK-FORCING-WORKBENCH-klein-S691.md`,
-`05-knowledge/results/AK-RUNG-LADDER-WITNESSES-klein-S691.md`. Next: 5/3
-hunt (< 1.675 modulo soundness+format), same-H legal 7/4, compilation
-lemmas, k=1 floor proof. Related external raid: mac-mini-S171 owns other
-Epoch lanes (sensitivity, Legendre, del Pezzo, three-slot `SFC(1)`, Grechuk).
+**OPEN external benchmark; in-repo workbench live.** AK(s) is the cited
+benchmark theorem; human record `1.67513`, target `<=1.675`. FINITE-EXACT:
+literal rule-(1) is UNSOUND (`14/9` at `n=9`, score tending to one); proved
+floor `>=1`, small exhaustive `k=1` floor `2`; records `13/7` on `[2,2,2]`,
+merge-free `7/4`, and `12/7` with identifications.  The complementary label
+algebras `(prefix+step)` and `(step+suffix)` still need compilation lemmas.
+Mechanism: species-flow junction algebra; firing is illegal, foreign seeds
+are reusable fuel, merges free hubs.  Files: `ak_forcing_engine.py`,
+`AK-FORCING-WORKBENCH-klein-S691.md`, `AK-RUNG-LADDER-WITNESSES-klein-S691.md`.
+Next: sound `5/3`, same-H `7/4`, compilation, and the `k=1` proof.
 
 ## Cross-domain connection discipline
 
@@ -433,8 +426,6 @@ HYP-8810's “JC(2) and LRC(14) share AP-rigidity” is a **wildcard frame, not 
 proved reduction**. LRC has the one-way THM-1017 supplier; the planar-JC wall
 still needs an exact map and preserved predicate. THM-2045 supplies one exact
 JC-side sector obstruction to compare, not an AP reduction. A bridge must name its map, preserved predicate, loss, sidecar, and hostile control.
-
-
 ## External open-problem lane (Epoch FrontierMath) — mac-mini S171, 2026-07-28
 
 Orthogonal to LRC/JC; recorded so later sessions do not re-derive.
