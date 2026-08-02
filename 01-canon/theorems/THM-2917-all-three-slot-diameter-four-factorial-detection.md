@@ -4,7 +4,7 @@ title: "Diameter-four three-slot resultant atlas and sharpness corollary"
 status: >
   PROVED COROLLARY + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   This is an explicit finite-pattern resultant atlas inside the stronger
-  arbitrary-support THM-2824, not a new SFC(3) range.  The six translated
+  arbitrary-support THM-2824, not a new SlotSFC_1(3) range.  The six translated
   diameter-at-most-four patterns have coefficient-positive one-variable
   resultants.  Combined with THM-2173, the bound is sharp with full
   support and every positive-depth two-charge lift has exact uniform
@@ -27,7 +27,7 @@ hash_basis: LF-normalized bytes
 
 **PROVED COROLLARY + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-THM-2824 already proves first-window SFC(3) on **every** arbitrary
+THM-2824 already proves first-window SlotSFC_1(3) on **every** arbitrary
 three-slot support.  The purpose of this corollary is narrower and
 computationally different: it gives a compact, explicit elimination atlas
 for all coordinate faces of a five-consecutive-slot window.  Those
@@ -59,7 +59,7 @@ at least one of
 L(H),                  L(H^2),                  L(H^3) (4)
 ```
 
-is nonzero.  Equivalently, first-window SFC(3) holds for every
+is nonzero.  Equivalently, first-window SlotSFC_1(3) holds for every
 three-slot support of diameter at most four.
 
 The bound is exact on every support: there is a full-support `H` for

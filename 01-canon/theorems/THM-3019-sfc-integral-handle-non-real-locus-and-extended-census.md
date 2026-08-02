@@ -1,6 +1,6 @@
 ---
 id: THM-3019
-title: "SFC: the integral handle, the non-real locus, a proved infinite 2-slot family, and an extended census"
+title: "Univariate slot-SFC: integral handle, non-real locus, an infinite 2-slot family, and a census"
 status: >
   PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT. Four results
   on the Strong Factorial Conjecture with L(z^n) = n!. (S1) L(f^m) =
@@ -11,15 +11,16 @@ status: >
   is NON-REAL. This holds for every slot count N and every window k.
   (S3) For N = 2 the even-index member therefore has no real root, so
   Res(I_{k+1}, I_{k+2}) is a product over conjugate pairs of |.|^2 and is
-  ALWAYS >= 0: SFC(2) at window k is equivalent to Res > 0, never to a sign
+  ALWAYS >= 0: SlotSFC_1(2) at window k is equivalent to Res > 0, never to a sign
   condition. (S4) For the 2-slot family f = a + b z the exact recurrence
   I_m = 1 + m lambda I_{m-1} holds, so I_m = I_{m+1} = 0 forces
-  I_{m+1} = 1: SFC(2) is PROVED for that family at EVERY window, unbounded.
-  Census (one-way modular / rank certificates): SFC(2) verified on 648 cells
+  I_{m+1} = 1: SlotSFC_1(2) is PROVED for that family at EVERY window, unbounded.
+  Census (one-way modular / rank certificates): SlotSFC_1(2) verified on 648 cells
   with p <= 8, s <= 8, k <= 8 (top exponent q <= 16, windows to 8), and
-  SFC(3) verified on 1430 cells with 0 <= p < q < r <= 12 and k <= 4 by
-  Macaulay surjectivity -- both extending THM-2836's box (supports <= 9,
-  k <= 6). The unbounded SFC(3) remains OPEN.
+  SlotSFC_1(3) verified on 1430 cells with 0 <= p < q < r <= 12 and k <= 4 by
+  Macaulay surjectivity.  The latter is now a contained control for
+  THM-2836's later support-12/window-8 extension.  The unbounded
+  SlotSFC_1(3) remains OPEN.
 source: death-star-2026-07-31-coinC2
 depends_on: []
 related:
@@ -35,12 +36,14 @@ script2: 04-computation/sfc3_macaulay_census_thm3019.py
 output2: 05-knowledge/results/sfc3_macaulay_census_thm3019.out
 ---
 
-# THM-3019 -- SFC: integral handle, non-real locus, and an extended census
+# THM-3019 -- univariate slot-SFC: integral handle, non-real locus, and an extended census
 
 Throughout `L : C[z] -> C` is linear with `L(z^n) = n!`, and for a support
-`p_1 < ... < p_N` we write `f = sum_i a_i z^{p_i}`. `SFC(N)` at **window
+`p_1 < ... < p_N` we write `f = sum_i a_i z^{p_i}`. `SlotSFC_1(N)` at **window
 `k`** asserts that the `N` consecutive moments `L(f^{k+1}), ..., L(f^{k+N})`
-have no common nonzero zero.
+have no common nonzero zero.  This is the local notation fixed by
+MISTAKE-350 for an `N`-monomial restriction inside ambient `SFC(1)`; it is
+not the original ambient conjecture `SFC(N)`.
 
 ## 1. (S1) The functional is an integral (PROVED)
 
@@ -87,7 +90,7 @@ the resultant from that side writes it as `lc^{...}` times a product over
 conjugate root pairs of `|I(.)|^2`. Hence
 
 ```text
-Res(I_{k+1}, I_{k+2}) >= 0 always, and SFC(2) at window k  <=>  Res > 0.  (3)
+Res(I_{k+1}, I_{k+2}) >= 0 always, and SlotSFC_1(2) at window k  <=>  Res > 0.  (3)
 ```
 
 This explains the census below, in which every computed resultant sign is
@@ -106,7 +109,7 @@ I_m = [-g^m e^{-t}]_0^inf + m int g^{m-1} g' e^{-t} dt
 
 (Verified symbolically for `m = 1..8`.) If `I_m(lambda) = I_{m+1}(lambda) = 0`
 then (4) at `m+1` gives `I_{m+1} = 1 + (m+1) lambda I_m = 1`, contradiction.
-So **SFC(2) holds for `f = a + b z` at every window `k`, with no bound on
+So **SlotSFC_1(2) holds for `f = a + b z` at every window `k`, with no bound on
 `k`** -- the first unbounded-window family in this lane. Equivalently
 `I_m(lambda) = m! lambda^m e_m(1/lambda)` with `e_m` the truncated
 exponential, and `e_{m+1} = e_m + x^{m+1}/(m+1)!` forces a common root to be
@@ -114,7 +117,7 @@ exponential, and `e_{m+1} = e_m + x^{m+1}/(m+1)!` forces a common root to be
 
 ## 5. Extended censuses (FINITE-EXACT, one-way certificates)
 
-**SFC(2).** `Res(I_{k+1}, I_{k+2}) != 0` certified modulo large primes
+**SlotSFC_1(2).** `Res(I_{k+1}, I_{k+2}) != 0` certified modulo large primes
 (nonzero mod one prime is a sound one-way certificate) for
 
 ```text
@@ -123,7 +126,7 @@ exponential, and `e_{m+1} = e_m + x^{m+1}/(m+1)!` forces a common root to be
 
 i.e. top exponent `q = p + s <= 16` and windows to `8`.
 
-**SFC(3).** For `f = a z^p + b z^q + c z^r`, `L(f^m)` is the form
+**SlotSFC_1(3).** For `f = a z^p + b z^q + c z^r`, `L(f^m)` is the form
 `M_m(a,b,c) = sum_{i+j+l=m} m!/(i!j!l!) (pi+qj+rl)! a^i b^j c^l`. If the
 Macaulay map `S_{D-d_1} (+) S_{D-d_2} (+) S_{D-d_3} -> S_D` with
 `d_i = k+i`, `D = sum(d_i - 1) + 1`, is **surjective** over a field, the ideal
@@ -134,18 +137,20 @@ implies it over `Q` (rank only drops under reduction). Certified for
 0 <= p < q < r <= 12,  0 <= k <= 4          -- 1430 cells, 0 failures.
 ```
 
-Both boxes extend THM-2836 (supports `<= 9`, `k <= 6`) in the support
-direction; the SFC(2) box also extends the window direction to `8`.
+The `SlotSFC_1(2)` box extends the earlier two-slot tests in both support and
+window.  The three-slot box originally extended THM-2836's 9/6 core in the
+support direction; it is now contained in THM-2836's later 12/8 extension and
+serves as an independently generated sub-box.
 
 ## 6. Scope
 
 (S1)-(S4) are proofs; section 5 is a finite census with one-way certificates
-and proves nothing outside its box. **The unbounded SFC(3) remains OPEN**, as
-does unbounded SFC(2) outside the family of section 4. What (S2) contributes
+and proves nothing outside its box. **The unbounded SlotSFC_1(3) remains OPEN**, as
+does unbounded SlotSFC_1(2) outside the family of section 4. What (S2) contributes
 to the open problem is that the search may be restricted to the non-real
 locus at every slot count and window, and what (S3) contributes is that for
 `N = 2` only exact vanishing can occur, never a sign change -- so a proof of
-SFC(2) needs a strict-positivity mechanism, not a discriminant sign analysis.
+SlotSFC_1(2) needs a strict-positivity mechanism, not a discriminant sign analysis.
 Section 4 shows such a mechanism exists when the leading factor `g'` is
 constant; the obstruction to generalising is that for `s >= 2` or `p >= 1`,
 `u g' = c g` has no polynomial solution `u`, so integration by parts leaves

@@ -34,7 +34,9 @@ not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
 `1580..1679`, giving cap `1579`.  For `k=3`, torsion/status closes through `297`;
 THM-2981/3033/3041/3052/3061/3071/3078/3094/3098/3102/3106/3109/3111/3113/3114
 close projected `k=3` rows through `z_1=226`: cap `225`, ledger `374172`;
-the next layer has `78` rows.
+the next layer has `78` rows. THM-3126 independently reconstructs the six
+`z_1=229` prefix terminals and is now a corroborating sidecar rather than the
+cap theorem.
 In the reflected gain graph, cap two forces the phase-zero triangle
 `(3/2)(4/3)=2`; by cap `7/3` it is interior and no full-cap component remains.
 The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`.  The MISTAKE-347 cap-`3`
@@ -213,7 +215,8 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 
 - THM-1805 makes directed triangles the Vandermonde-cancellation atom; THM-1862/1936 make `H` and signed Rédei data multiplicative under order-join while `c3` is additive.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md) makes `d_iso` exactly `l1` on fixed order-join patches by image-swap uncrossing; the ambient quotient still has triangles and is not a partial cube.
-- [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) classifies the universal product iff transitive. THM-2242/2249 give the transitive response and universal forced-pair envelope; THM-2256 separates bounded contact from linear scale. Nontransitive quotients and unpinned transport remain open.
+- [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) gives the scalar iff-transitive boundary; THM-2242/2249/2256 give its response, envelope, and scale limit.
+  Audited [THM-3121](../01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md) gives the exact profile kernel; `C3` yields `3159` linearly. Unpinned transport remains open.
 - THM-1880/1885 give the Chebyshev--Pell/`BS(1,2)^+` transitive frame.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
@@ -371,12 +374,10 @@ Classify profiles under support operations; study analytic continuation and auto
   the local simple-pole pair; THM-2827 restricts balanced passports and
   THM-2831 excludes the cyclic `d=s=0` residual.  Nonzero `d` or `s`, other
   carriers/fluxes, global chart entry, and nonpolynomial-prefix degrees stay
-  open.  At the abstract accessory layer, THM-2799/2800/2805/2808 complete
-  `e=2`, THM-2817 completes the sextic `N=6,e=3` layer, and THM-2840 closes
-  the highest-symmetry heptic `(2,2,2,1)` multiset as the single unmarked
-  `T_7` carrier with six marked charts.  The heptic `(4,1,1,1)` and
-  `(3,2,1,1)` multisets remain open.  None of these scoped charts proves
-  `JC(2)` or `DC(2)`.
+  open.  THM-2799/2800/2805/2808 complete accessory `e=2`; THM-2817 the sextic `e=3`; THM-2840 the heptic `T_7` carrier.
+  Audited THM-3123 makes the two remaining accessory algebras reduced length six and yields `1+3` nonsplit `S_7` maps, completing the abstract heptic atlas.
+  This supplies no Keller-chart entry and proves neither `JC(2)` nor `DC(2)`.
+- **Factorial:** MISTAKE-350 fixes typing; THM-2836 is finite `SlotSFC_1(3)`, THM-3018 is partly audit-required, THM-3124 gives the quadratic recurrence through starts `<=200`, and THM-3125 proves anchored rays. Full `FC(3)`/`SFC(3)` remain OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
@@ -400,7 +401,7 @@ Files: `04-computation/ak_forcing_engine.py` (+exploit, +search, +anneal,
 `05-knowledge/results/AK-RUNG-LADDER-WITNESSES-klein-S691.md`. Next: 5/3
 hunt (< 1.675 modulo soundness+format), same-H legal 7/4, compilation
 lemmas, k=1 floor proof. Related external raid: mac-mini-S171 owns other
-Epoch lanes (sensitivity, Legendre, del Pezzo, SFC(3), Grechuk).
+Epoch lanes (sensitivity, Legendre, del Pezzo, three-slot `SFC(1)`, Grechuk).
 
 ## Cross-domain connection discipline
 
@@ -438,7 +439,7 @@ Orthogonal to LRC/JC; recorded so later sessions do not re-derive.
   invariance, orders >= 7, <= 25 orbits; extends arXiv:2607.20765),
   THM-2834 (char-3 klt del Pezzo X_14 in P(2,2,7,7), nine tame singular
   points, arithmetic rank one — answers Epoch's del Pezzo challenge;
-  Method-A cap at 4 proved), THM-2836 (SFC(3) certified census: supports
+  Method-A cap at 4 proved), THM-2836 (three-slot `SFC(1)` certified census: supports
   <= 12, windows k <= 8 — extends the GMC-lane THM-2812 in both open
   directions), THM-2837 (Grechuk cubic Diophantine divisor/Mordell reduction
   + polynomial-family exclusions).

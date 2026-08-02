@@ -9,28 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-350 (2026-08-02, THM-3018 truth-surface audit) -- an internally retracted Laplace closure remained advertised as proved
+## MISTAKE-350 (2026-08-02, THM-3018 truth/type audit) -- a suspended Laplace closure and two indexing errors remained on the truth surface
 
-- **What was claimed:** THM-3018's frontmatter, section-4b heading, and scope
-  paragraph said that a maximum-modulus Laplace argument proved the
-  homogeneous Factorial-Conjecture slice in every dimension.  The same file's
-  later audit had already suspended that conclusion, but the high-signal
-  surfaces were not repaired.  The file also called the homogeneous slice
-  `FC(n)`, although the full conjecture permits inhomogeneous polynomials.
-- **First failed implication:** at an interior maximum of `|g|`, rotating the
-  value to the positive real axis need not kill the linear imaginary phase.
-  A local model `A+i b w-cw^2` contributes
-  `exp(mA-mb^2/(4c))`, not automatically `exp(mA)`.  The alternative
-  exponential-type argument reads the type from the already-vanishing moment
-  coefficients and is circular.  Compactness alone therefore supplies no
-  no-cancellation theorem.
-- **Repair / strongest survivor:** THM-3018 sections 1--4a retain the exact
-  product-exponential integral, homogeneous simplex reduction, scoped arc and
-  low-degree results, and the `C3` eigenspace mechanism.  Section 4b is now
-  labelled `AUDIT-REQUIRED / UNPROVED`, and the object is named `HomFC(n)` to
-  distinguish it from full FC(n).  THM-3116 independently proves a different
-  inhomogeneous **flat-top** radial coefficient by a finite Gamma-ratio
-  expansion; it does not repair the nonflat homogeneous Laplace gap.
+- **What was claimed:** THM-3018 advertised a maximum-modulus Laplace proof
+  for every homogeneous slice, called that slice full `FC(n)`, and elsewhere
+  used `SFC(N)` when `N` counted monomial slots rather than ambient variables.
+- **First analytic failure:** at an interior maximum of `|g|`, rotating the
+  value to the positive real axis need not kill the imaginary linear phase.
+  The local model `A+i b w-cw^2` contributes
+  `exp(mA-mb^2/(4c))`, not automatically `exp(mA)`.  Reading exponential
+  type from the already-vanishing moments is circular.  Compactness alone
+  therefore supplies no no-cancellation theorem.
+- **First type failure / minimal witnesses:** original `FC(m)` quantifies over
+  every polynomial in `m` variables; `1+x` has no single homogeneous degree,
+  so the polar Gamma identity cannot be a full-FC equivalence.  Original
+  `SFC(m)` also indexes ambient dimension, while `N(f)` separately records
+  support size and window length.  Thus `1+x+x^2` is a three-slot restriction
+  of `SFC(1)`, whereas `1+x+y+z` is an ambient `SFC(3)` input.
+- **Repair / strongest survivors:** THM-3018 sections 1--4a retain the exact
+  exponential integral, homogeneous simplex/Bernstein dictionary, scoped arc
+  and degree-three results, and the `C3` selection rule.  Section 4b is
+  `AUDIT-REQUIRED / UNPROVED`; write `HFC(n)` for the homogeneous subclass.
+  Retype univariate exact work as an `N`-slot restriction of `SFC(1)`; its
+  computations survive.  THM-3116's inhomogeneous flat-top Gamma-ratio
+  theorem is independent and does not repair the nonflat Laplace gap.
+- **Rule:** record `(ambient dimension m, support size N(f))`, and never pass
+  from a homogeneous polar slice to full FC without a power-preserving map.
 
 ## MISTAKE-349 (2026-08-02, THM-3101 post-promotion module audit) -- treating a normal-variable lower quotient as a finite base algebra
 

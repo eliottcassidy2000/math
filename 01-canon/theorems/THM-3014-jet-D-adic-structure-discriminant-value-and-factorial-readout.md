@@ -117,11 +117,11 @@ for `k=2..8`.
 | depth parameter | power `m`, up to `t` | edge index `k` |
 | atom parameter | term count `t` | cluster count `K` (THM-3004) |
 
-The decisive difference is the middle row: SFC(`t`) asks whether
+The decisive difference is the middle row: `SlotSFC_1(t)` asks whether
 `L(f), ..., L(f^t)` can all vanish for a `t`-term `f`, which is a question about
 `L` on **powers**; `Lambda_k` is `L` on an object **linear** in the jets.  Nothing
-here proves, reduces to, or is implied by SFC(2) (proved, Edo--van den Essen 2013)
-or SFC(3) (THM-2836's certified census box, THM-2812's consecutive case).
+here proves, reduces to, or is implied by SlotSFC_1(2) (proved, Edo--van den Essen 2013)
+or SlotSFC_1(3) (THM-2836's certified census box, THM-2812's consecutive case).
 MISTAKE-237 retracted one NC2 -> JC(2) "bridge"; this file deliberately claims a
 common evaluation functional and an index dictionary, nothing more.
 

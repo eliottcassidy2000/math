@@ -1,27 +1,20 @@
 ---
 id: THM-3018
-title: "The homogeneous Factorial-Conjecture slice is a simplex moment problem"
+title: "The homogeneous Factorial-Conjecture subclass as a simplex moment problem"
 status: >
-  MIXED STATUS: SECTIONS 1--4a PROVED + VERIFIED-EXACT; SECTION 4b
-  AUDIT-REQUIRED / UNPROVED. Let
-  L(x^alpha) = alpha! on C[x_1..x_n]. Then L(f) = int_{[0,inf)^n} f e^{-|x|_1}
-  dx, and for f HOMOGENEOUS of degree d the polar substitution x = r u gives
-  L(f^m) = (dm+n-1)! * int_{Delta_{n-1}} g^m dA with g = f|_Delta; since
-  f |-> f|_Delta is a linear BIJECTION onto polynomials of degree <= d in
-  n-1 variables (Bernstein basis), the HOMOGENEOUS SLICE HomFC(n) is
-  EQUIVALENT to: for every complex polynomial g in n-1 variables,
-  int_{Delta_{n-1}} g^m dA = 0 for all m >= 1 implies g = 0. In particular
-  HomFC(2) is exactly the POLYNOMIAL MOMENT PROBLEM on [0,1] with h(u) = u,
-  and HomFC(3) the same problem on a triangle. Consequences proved here:
-  HomFC(2) holds whenever the image arc g([0,1]) has connected complement
-  (Cauchy-transform/Plemelj argument), and holds outright for deg g <= 3
-  (exact Groebner elimination); and for HomFC(3) the area-preserving 3-cycle
-  on barycentric coordinates makes every moment with 3 not dividing m vanish
-  AUTOMATICALLY on its omega-eigenspace, so only m = 3,6,9,... can obstruct.
-  Section 4b's proposed all-n Laplace closure is SUSPENDED: its exponential
-  type shortcut is circular and its interior maximum can carry an unhandled
-  imaginary linear phase. This file gives an exact homogeneous dictionary
-  and scoped subcases, not HomFC(n), full FC(n), or SFC.
+  CORRECTED / PARTIALLY PROVED + VERIFIED-EXACT + AUDIT-REQUIRED.  For the
+  factorial functional on all polynomials in n variables, the exponential
+  integral identity is exact.  On the homogeneous degree-d subclass only,
+  polar substitution gives L(f^m)=(dm+n-1)! times the simplex moment of
+  g=f|_Delta, and restriction is a Bernstein-basis bijection.  Hence the
+  homogeneous FC(n) subclass, not full FC(n), is equivalent to a polynomial
+  moment problem on Delta_(n-1).  The connected-complement argument, exact
+  degree-at-most-three elimination, and the triangle 3-cycle selection rule
+  survive with that homogeneous scope.  Section 4b's proposed Laplace
+  closure remains AUDIT-REQUIRED because maximum-modulus localization does
+  not control oscillatory cancellation at an interior saddle.  MISTAKE-350
+  also corrects the former slot-count use of SFC(N): the univariate N-slot
+  lane is a restriction of ambient SFC(1), not SFC(N).
 source: death-star-2026-07-31-coinC2
 depends_on: []
 related:
@@ -30,13 +23,14 @@ related:
   - THM-2849
   - THM-1435
 external:
+  - "E. Edo and A. van den Essen, The Strong Factorial Conjecture, arXiv:1304.3956v2, Definitions 2.1 and 2.7, Conjectures 2.4 and 2.8."
   - "A. van den Essen, D. Wright, W. Zhao, On the image conjecture (2010ish)."
   - "F. Pakovich, M. Muzychuk, Solution of the polynomial moment problem (2009)."
 script: 04-computation/factorial_conjecture_simplex_reduction_thm3018.py
 output: 05-knowledge/results/factorial_conjecture_simplex_reduction_thm3018.out
 ---
 
-# THM-3018 -- the homogeneous Factorial-Conjecture slice as a simplex moment problem
+# THM-3018 -- the homogeneous Factorial-Conjecture subclass as a simplex moment problem
 
 ## 1. The functional is an integral
 
@@ -47,11 +41,11 @@ prod_i (alpha_i)!`. Since `int_0^inf x^a e^{-x} dx = a!`,
 L(f) = int_{[0,inf)^n} f(x) e^{-(x_1 + ... + x_n)} dx.                (1)
 ```
 
-The full **FC(n)** of van den Essen--Wright--Zhao permits arbitrary
-`f in C[x_1,...,x_n]`.  Write **HomFC(n)** here for its homogeneous slice:
-for homogeneous `f`, if `L(f^m)=0` for all `m>=1`, then `f=0`.  The polar
-compactification below applies to `HomFC(n)`, not to general inhomogeneous
-`FC(n)`.
+**FC(n)** quantifies over every `f in C[x_1,...,x_n]`: if `L(f^m)=0` for all
+`m>=1`, then `f=0`.  Homogeneity is not part of the original definition.
+Write **HFC(n)** locally for its restriction to homogeneous polynomials.
+The legal FC(1) input `1+x` is the minimal witness that this distinction is
+load-bearing: it has no single polar degree.
 
 ## 2. The polar reduction (PROVED)
 
@@ -72,16 +66,16 @@ basis `u^beta (1 - sum u)^{d-|beta|}` (referee R2, ranks full for
 `n = 2, d = 3,5` and `n = 3, d = 2,3`). Hence:
 
 ```text
-HomFC(n)  <=>  for every complex polynomial g in n-1 variables,
+HFC(n) <=>  for every complex polynomial g in n-1 variables,
             int_{Delta_{n-1}} g^m dA = 0 for all m >= 1  =>  g = 0.   (3)
 ```
 
 Referee R1 verifies (2) symbolically for `n = 2` (`d <= 3`, `m <= 3`) and
 `n = 3` (`d <= 2`, `m <= 2`).
 
-## 3. HomFC(2) is the polynomial moment problem
+## 3. The homogeneous FC(2) subclass is the polynomial moment problem
 
-By (3), **HomFC(2) says exactly**: for a complex polynomial `g` of one variable,
+By (3), **HFC(2) says exactly**: for a complex polynomial `g` of one variable,
 `int_0^1 g(u)^m du = 0` for all `m >= 1` forces `g = 0`. Equivalently, with
 `mu := g_*(Lebesgue on [0,1])` a probability measure on `C`,
 
@@ -124,13 +118,13 @@ in this repo with the Pakovich-Muzychuk circle of results (repo-wide grep:
 zero prior hits for "polynomial moment problem", "composition conjecture",
 "Pakovich", "Briskin", "Yomdin").
 
-## 4. HomFC(3): the symmetry mechanism (PROVED)
+## 4. The homogeneous FC(3) subclass: the symmetry mechanism (PROVED)
 
-By (3), HomFC(3) asks: does `int_T g^m dA = 0` for all `m >= 1` force `g = 0`,
+By (3), HFC(3) asks: does `int_T g^m dA = 0` for all `m >= 1` force `g = 0`,
 `T` the triangle? Here the pushforward is **two-dimensional**, and any
 rotationally symmetric image measure kills all moments `m >= 1` (e.g. the
-uniform measure on a disc centred at `0`). So HomFC(3) is genuinely more
-dangerous than HomFC(2), and the search for a counterexample is the search for
+uniform measure on a disc centred at `0`). So HFC(3) is genuinely more
+dangerous than HFC(2), and the search for a counterexample is the search for
 a polynomial with a "rotationally balanced" image measure.
 
 The triangle has an area-preserving symmetry: the 3-cycle
@@ -157,12 +151,12 @@ i.e. exactly the moments of `u` itself. So this particular eigenvector is
 *not* a counterexample, but it isolates the residual obstruction: a
 counterexample in the eigenspace must kill the sparse family `m = 3k`.
 
-## 4b. Proposed compact Laplace closure (AUDIT-REQUIRED / UNPROVED)
+## 4b. Proposed compact/homogeneous Laplace closure (AUDIT-REQUIRED / UNPROVED)
 
-**The argument in this subsection is retained as a proof candidate only.**
-The audit below identifies a circular exponential-type shortcut and an
-unhandled interior-phase cancellation. Nothing in this subsection belongs
-to the proved dependency graph.
+The argument in this subsection is retained as a proof candidate only. The
+audit below identifies a circular exponential-type shortcut and an unhandled
+interior-phase cancellation. Nothing here belongs to the proved dependency
+graph.
 
 The reduction makes the generating function **entire and constant**: since
 `g` is bounded on the compact simplex,
@@ -172,10 +166,12 @@ Phi(t) := int_{Delta} e^{t g} dA = sum_{m>=0} (t^m/m!) int_Delta g^m dA
         = Area(Delta)   for every t in C.                            (5)
 ```
 
-**Unproved candidate.** If `g` is a polynomial on `Delta_{n-1}` with (5),
-then `g = 0`. The following historical argument does not establish it.
+**Candidate statement.** If `g` is a polynomial on `Delta_{n-1}` with (5),
+then `g=0`.  This would prove HFC(n) for every `n`, but the proof below has
+the oscillatory-saddle gap recorded at the end of this file and is not canon.
 
-*Proof.* Suppose `g != 0` and set `A := max_Delta |g| > 0`, attained at
+*Unproved proof candidate.* Suppose `g != 0` and set
+`A := max_Delta |g| > 0`, attained at
 `u_1`. Choose `theta` with `e^{i theta} g(u_1) = A` and put
 `psi := e^{i theta} g`. For every `u`,
 `Re psi(u) <= |g(u)| <= A`, with equality **iff** `psi(u) = A`; so the
@@ -201,32 +197,32 @@ Numerical confirmation (script, real and complex `g` on `[0,1]`):
 `|Phi(s e^{i theta})|` tracks `e^{sA}/sqrt(s)` over `s = 5 .. 120` across
 14 orders of magnitude.
 
-**No consequence is licensed from this historical paragraph.** Homogeneity
-does compactify the integral onto a simplex, but the audit below shows that
-this alone does not prevent complex saddle cancellation. The inhomogeneous
-functional is additionally noncompact; that does not prove the compact case
-or identify it with the repo's distinct SFC lane.
+**No consequence is licensed from this historical paragraph.** Homogeneity compactifies the integral onto
+a simplex, but compactness does not itself prevent complex saddle
+cancellation.  If the gap below is repaired, the homogeneous subclass would
+close and the remaining full-FC difficulty would be nonhomogeneous on the
+noncompact orthant.  At present both that homogeneous closure and full FC
+remain open beyond the proved fragments above.
 
 ## 5. Scope, and the relation to the repo's SFC lane
 
-This file is a **reformulation with an exact dictionary**, not a proof of
-HomFC(n) or FC(n) for `n >= 2`. Section 3(a) proves the HomFC(2) moment
-problem only under a topological hypothesis on `g([0,1])`; 3(c) proves it
-outright only for `deg g <= 3`; section 4 reduces HomFC(3)'s symmetric
-obstruction to `3 | m`; section 4b is unproved and settles nothing.
+This file gives a **homogeneous-subclass reformulation**, not a proof of full
+`FC(n)` for any `n>=2`.  Section 3(a) proves the HFC(2) implication under a
+topological hypothesis on `g([0,1])`; section 3(c) verifies it through degree
+three; section 4 gives the HFC(3) cyclic selection rule; section 4b is an
+unproved candidate.
 
-**Type warning (cf. MISTAKE-237).** The repo's large Strong Factorial
-Conjecture lane (THM-2812/2824/2836/2849/2854, `sfc3_*`/`sfc4_*` scripts)
-uses a *different* functional and a *different* parameter: one variable,
-`L(z^n) = n!`, and `SFC(N)` indexes the number of TERMS in the support,
-asking whether the first `N` moments detect an `N`-term polynomial. The
-`HomFC(n)` slice here instead uses `n` VARIABLES with
-`L(x^alpha)=alpha!` and homogeneous `f`. No arrow between these indexed
-problems is claimed; anyone building one must state the map, the dimension
-change, the preserved predicate and the loss.
+**Type warning (MISTAKE-350).** The functional is not different from the
+repo's univariate lane: setting `n=1` gives exactly `L(z^j)=j!`.  What differs
+is the restriction.  Original `FC(n)` and `SFC(n)` index **ambient variable
+dimension** and quantify over all polynomials.  For `SFC(n)`, the separate
+quantity `N(f)` is the support size and the window length.  Therefore the
+legacy `sfc3_*`/`sfc4_*` artifacts are three-/four-slot restrictions of
+`SFC(1)`, not ambient `SFC(3)`/`SFC(4)`.  Their exact computations survive;
+their old names are provenance only.
 
-Referee: R1--R4 verify only the exact identities and finite checks in
-sections 1--4a. They do not audit or prove section 4b.
+Referees R1--R4 verify the displayed polar identities, finite eliminations,
+and cyclic selection rule.  They do not verify section 4b.
 
 ## AUDIT FLAG, 2026-08-01 (death-star, on my own section 4b)
 
@@ -280,8 +276,8 @@ refuted by the obvious continuous witness: `h(u) = e^{2 pi i u}` has all moments
 on **all** of `[0,1]`, whereas for a polynomial `|g|^2` is a real polynomial and
 its maximum is attained at finitely many points. So (F1) is not a refutation.
 
-**Consequence for downstream claims.** Anything asserting "HomFC(n) is proved
-for every n" -- including the inference that HomFC(2) is thereby
+**Consequence for downstream claims.** Anything asserting "the homogeneous case
+of FC(n) is proved for every n" -- including the inference that HFC(2) is thereby
 closed and the `int e^Q` route redundant, and the reading of kps-S166's residual
 as already-settled -- is **suspended** until (G1)/(G2) are resolved. THM-3031's
 bridge is unaffected: it is an implication about what would follow from the
