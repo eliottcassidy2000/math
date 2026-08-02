@@ -2,7 +2,7 @@
 id: THM-3175
 title: "First-Witt Hensel wedge and infinitesimal Pluecker covariance"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   A lift-independent first-Witt determinant obstructs a common lift of two
   residual polynomial branches and transforms by the determinant of every
   polynomial two-row frame.  Applied to the fixed factorial residuals, it
@@ -11,10 +11,11 @@ status: >
 audit: >
   Two independent derivations proved lift independence, the first-order
   Hensel criterion, polynomial-frame covariance, and the determinant-wall
-  boundary.  Independent O(p) recurrence-and-automatic-differentiation runs
-  reproduced every displayed exceptional-prime jet and wedge.  The canonical
-  exact companion replays normally and under optimization against its stored
-  transcript; final immutable file-level audit is pending before promotion.
+  boundary.  An independent immutable audit also rederived the slope-zero
+  integrality argument and the sharp zero-derivative hostile.  Independent
+  O(p) recurrence-and-automatic-differentiation runs reproduced every
+  displayed exceptional-prime jet and wedge.  Fresh normal and optimized
+  replays byte-match the stored transcript and declared LF hashes.
 source: root/multiscale-newton-flag/2026-08-02
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
@@ -34,7 +35,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3175 -- first-Witt Hensel wedge and infinitesimal Pluecker covariance
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This theorem isolates a reusable first-order replacement for a failed
 residual resultant.  It is stated over a DVR because the mechanism is not
@@ -151,9 +152,11 @@ and the fixed resultant
 delta_s=Res(F_(s-2,s),F_(s-1,s)).                          (9)
 ```
 
-For `s=3,4,5,6`, the eligible prime divisors of `(9)` give exactly ten
-residual exceptions.  Every residual gcd is simple linear.  Values and
-derivatives modulo `p^2` are computed in `O(p)` ring operations from the
+For `s=3,4,5,6`, THM-3148's untruncated-degree condition is
+`p>2(s-1)`.  The eligible prime divisors of `(9)` therefore give exactly ten
+residual exceptions (in particular, the factor `p=7` of `delta_6` is below
+the eligibility boundary).  Every residual gcd is simple linear.  Values
+and derivatives modulo `p^2` are computed in `O(p)` ring operations from the
 division-free THM-3124 recurrence
 
 ```text
