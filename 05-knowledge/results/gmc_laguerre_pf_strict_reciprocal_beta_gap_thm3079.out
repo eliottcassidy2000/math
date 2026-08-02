@@ -1,0 +1,12 @@
+THM-3079 LAGUERRE PF STRICT RECIPROCAL BETA GAP
+laguerre_falling_cells=363 gaps=0..10
+laguerre_toeplitz_minor_cells=223398 positive=113702 negative=0
+row_transform_cells=342 parameters=18
+cauchy_binet_cells=36 terms=6372
+direct_generalized_minor_cells=6444 orders=2..6
+generic_pf_transform_minor_cells=30 families=3
+newton_pf_multi_edge_cells=225273 multi_edge_generalized_minor_cells=65
+open_strict_prefix_hostile_cells=128 orders=3..6 finite_only
+exact_value_digest=e1df2f5b865aa7e8b566d626baf95d55736914c5d32cda1fd48e8c453b3fe0dc
+scope=integer_mesh_terminal_minus_one_tail_all_orders;general_strict_prefix_open
+all_exact_checks=PASS
