@@ -1,5 +1,6 @@
 THM-3136 one-sided fixed-reference elementary-tail Hasse no-go
 all_degree_control=P:(36, -108, -72);poles:(5, 4, 3, 3, 2, 2, 2, 1, 1, 1, 1);tail_flag:(36, 144, 72);Q:(1, 1, 2, 3, 4, 5);H_1^6:11969920
+partial_reference_N6=power:(11969920, -11342040, 7634700, -23715000, 38250000, -30600000, 9562500);bernstein:(Fraction(11969920, 1), Fraction(10079580, 1), Fraction(8698220, 1), Fraction(6640090, 1), Fraction(5269440, 1), Fraction(3400520, 1), Fraction(1760080, 1));uniform_bottom>=1760080
 elementary_response=(16*t^5+40*t^6)/(1+5*t)
 infinite_hostile=scalar_positive_all_N>=5;bottom_facet_fails_even_N>=6
 current=Phi^R(h_N)m_mu(Q)-Phi^R(m_mu)h_N(Q)

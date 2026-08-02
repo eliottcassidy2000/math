@@ -2,11 +2,13 @@
 id: THM-3136
 title: "One-sided fixed-reference elementary-tail Hasse no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On the certified support (a,b)=(1,2), the I1 prefix obtained by subtracting
   the top reduced pole 5 has a strictly positive scalar row response in every
   degree N>=5, but its fixed-reference normalized Young current violates the
-  bottom-complement upset facet for every even N>=6.  In the complete
+  bottom-complement upset facet for every even N>=6.  At N=6 the violation
+  persists uniformly along the entire plethystic reference interval from the
+  fixed reference Q to the co-shifted reference Q-5.  In the complete
   THM-3120 active-prefix census through N=9, all 8,241 degree-five currents
   pass, while 43 later failures require genuinely nonprincipal upsets.
 source: root/multiscale-newton-flag/low-child-flag-extension-2026-08-02
@@ -17,15 +19,22 @@ depends_on:
   - THM-3129-bounded-poset-upset-facet-irredundancy
 script: 04-computation/gmc_one_sided_fixed_reference_hasse_no_go_thm3136.py
 output: 05-knowledge/results/gmc_one_sided_fixed_reference_hasse_no_go_thm3136.out
-script_sha256: a2742adcf256a974be9947b45ccf9ddf2838ffee107ee667d143fceae96e4de0
-output_sha256: b9895befd396a0878416cd41f8cef6cfc62c2978c3fe6092ff6ed6854449cfc4
+audit: >
+  Two independent mathematical audits rederived the scalar tail flag,
+  elementary geometric tail, degree-six coordinate, top-facet sign law,
+  nonprincipal upset witness, and reconstruction boundary.  The continuous
+  partial-reference addendum was independently checked from both its power
+  polynomial and Bernstein coefficients.  Fresh normal and optimized full
+  censuses agree byte-for-byte with the stored transcript.
+script_sha256: f80cfbb31fc14dedc5fc4040fbe894517d17fbf751ca886f2d008818aaf6b8ac
+output_sha256: e74102d9517ea965b79b945c54d73981d3598dbacb658c7a0640c5dcd3da19bc
 semantic_sha256: 8a81f4b9cbd76aca6695deb6a685bf698336aa00d83a12eb63af48e2a1aeaa0a
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3136 -- one-sided fixed-reference elementary-tail Hasse no-go
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3128 rules out repairing the first active pole-prefix hostile while
 keeping its labelled-deletion image fixed.  There is a natural transverse
@@ -166,6 +175,57 @@ but H^(5)_N is not Hasse-positive for every even N>=6.        (19)
 This is an all-degree stopping theorem for the one-sided fixed-reference
 proposal.
 
+### 2.1 The whole partial-reference interval already fails
+
+The two endpoint conventions are not separated by a hidden feasible region.
+Keep the shifted bank `Phi^(5)` fixed and interpolate the reference alphabet
+plethystically by
+
+```text
+Q_z=Q-[5z],                         0<=z<=1.              (19a)
+```
+
+Thus `z=0` is the fixed reference and `z=1` is the co-shifted reference.
+The generating functions give
+
+```text
+H_(Q_z)(t)=H_Q(t)(1-5zt),
+E_(Q_z)(t)=E_Q(t)/(1+5zt).                               (19b)
+```
+
+In particular
+
+```text
+h_6(Q_z)=297412-253410z,
+e_6(Q_z)=product_(q in {1,1,2,3,4,5})(q-5z).             (19c)
+```
+
+The degree-six bottom coordinate is therefore
+
+```text
+B(z)=612e_6(Q_z)+40h_6(Q_z)
+    =11969920-11342040z+7634700z^2-23715000z^3
+      +38250000z^4-30600000z^5+9562500z^6.              (19d)
+```
+
+In the degree-six Bernstein basis on `[0,1]`, its coefficients are
+
+```text
+(11969920,10079580,8698220,6640090,
+ 5269440,3400520,1760080).                               (19e)
+```
+
+They are all positive (indeed strictly decreasing), so
+
+```text
+B(z)>=1760080>0                    for every 0<=z<=1.     (19f)
+```
+
+The bottom-complement upset has mass `-B(z)`.  Hence every partial-reference
+interpolation fails the same facet at degree six while the scalar response
+remains the positive value `612`.  The obstruction is a connected holotopy
+barrier, not an accident of choosing either endpoint convention.
+
 ## 3. Complete active-prefix census through degree nine
 
 The exact companion also scans both banks on all `115` THM-3120 supports,
@@ -286,9 +346,9 @@ and compare byte-for-byte with
 05-knowledge/results/gmc_one_sided_fixed_reference_hasse_no_go_thm3136.out.
 ```
 
-The companion reconstructs `(7)--(18)`, evaluates every current in `(20)`
+The companion reconstructs `(7)--(19f)`, evaluates every current in `(20)`
 by a bank-wide exact monomial recurrence, enumerates every upset, and checks
 the equivalent max-flow certificate independently.  Only integers and exact
 fractions are used.
 
-**QED (candidate pending independent hostile audit).**
+**QED.**
