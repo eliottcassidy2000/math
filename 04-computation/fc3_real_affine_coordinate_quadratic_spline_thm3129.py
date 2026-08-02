@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for THM-3128.
+"""Exact controls for THM-3129.
 
 The theorem treats q=Q(r), where r is a real algebraic affine coordinate on
 the two-simplex and Q has degree at most two.  When the three vertex values
@@ -10,8 +10,8 @@ quadratic endpoint collision, and a sharp transcendental cancellation
 hostile.
 
 Reproduce:
-  python3 04-computation/fc3_rank_one_quadratic_spline_thm3128.py
-  python3 -O 04-computation/fc3_rank_one_quadratic_spline_thm3128.py
+  python3 04-computation/fc3_real_affine_coordinate_quadratic_spline_thm3129.py
+  python3 -O 04-computation/fc3_real_affine_coordinate_quadratic_spline_thm3129.py
 """
 
 from __future__ import annotations
@@ -29,7 +29,7 @@ def simplex_integral(poly: sp.Expr, u: sp.Symbol, v: sp.Symbol) -> sp.Expr:
     return sp.simplify(sp.integrate(sp.integrate(poly, (v, 0, 1 - u)), (u, 0, 1)))
 
 
-print("THM-3128 FC(3) REAL AFFINE-COORDINATE QUADRATIC SPLINE AUDIT")
+print("THM-3129 FC(3) REAL AFFINE-COORDINATE QUADRATIC SPLINE AUDIT")
 
 t, u, v = sp.symbols("t u v", real=True)
 a = sp.symbols("a", real=True)
@@ -163,4 +163,4 @@ hostile_value = sp.simplify(hostile_formula.subs(g, 2 * sp.pi * sp.I))
 check(hostile_value == 0, "transcendental spline cancellation")
 print("C6 hostile knots=(0,1,2): transform=(e^g-1)^2/(2g^2), value at g=2*pi*i is 0")
 
-print("ALL THM-3128 CONTROLS PASSED")
+print("ALL THM-3129 CONTROLS PASSED")
