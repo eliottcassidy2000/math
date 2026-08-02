@@ -1,0 +1,16 @@
+status=PROVED_VERIFIED_EXACT
+inertia=identity;e=1;d=0;matching=(0, 0, 0);clutch=('000', 0)
+inertia=transposition;e=2;d=1;matching=(1, 0, 0);clutch=('100', 1)
+inertia=double_transposition;e=2;d=2;matching=(2, 0, 0);clutch=('000', 2)
+inertia=three_cycle;e=3;d=2;matching=(1, 1, 1);clutch=('111', 0)
+inertia=four_cycle;e=4;d=3;matching=(2, 2, 2);clutch=('000', 0)
+formula=sum_edge_excess=e*order_index
+formula=tau=tau_skeleton+e*order_index_mod_3
+resonance_edge_vector=(1, 1, 0, 1, 0, 0)
+resonance_matching=(1, 1, 1);stars=(2, 2, 2, 0);clutch=('111', 0)
+transposition_disc=4*t**3*(t - 1)**6;index=1;fixed_owner_valuations=(1,0)
+three_cycle_disc=-27*t**2*(t - 1)**2;index=0;fixed_owner_valuations=(0,)
+transposition_owner_split=section_t:(complement_index,gluing)=(0,1);section_1:(1,0)
+base_normalized_transposition=(Fraction(1, 2), Fraction(1, 2), Fraction(0, 1), Fraction(1, 2), Fraction(0, 1), Fraction(0, 1))
+base_normalized_three_cycle=(Fraction(1, 3), Fraction(1, 3), Fraction(0, 1), Fraction(1, 3), Fraction(0, 1), Fraction(0, 1))
+conclusion=integer-normalized edge valuations do not determine inertia, order index, or owner
