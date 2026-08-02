@@ -9,6 +9,21 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-344 (2026-08-01, THM-3052 pre-promotion evidence audit) -- a final wording repair changed the frozen transcript length without updating the theorem's byte count
+
+- **What was done:** THM-3052's status-neutral evidence repair changed the
+  canonical output wording and refreshed the output artifact and hash, but
+  the theorem retained the earlier claim that the LF transcript had `22,683`
+  bytes.
+- **Why it was wrong:** the immutable stored transcript, both fresh disjoint
+  ordinary/optimized rebuilds, and the declared SHA all agree on `22,664` LF
+  bytes and `96` lines.  The stale count differed by exactly the final
+  wording repair's `19`-byte contraction; no mathematical census changed.
+- **Correct framing / rule:** the theorem now records `22,664`.  Whenever a
+  frozen transcript is regenerated, refresh and independently compare its
+  byte count, line count, and content hash as one evidence tuple; a matching
+  hash does not excuse stale human-readable metadata.
+
 ## MISTAKE-343 (2026-08-01, THM-3043 evidence audit) -- zero measure was still labelled COVERED, and a composite-denominator witness family was overstated
 
 - **What was done:** THM-3043's prose correctly repaired the implication

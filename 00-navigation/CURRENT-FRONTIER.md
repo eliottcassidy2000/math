@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — 2026-07-30.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
+**Rolling state — 2026-08-01.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -32,8 +32,9 @@ and LRC are open.  Septimal floor/exception plus located phase cut the raw five-
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
 not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
 `1680..1742` `k=2` atlas, giving cap `1679`; three canonical atlases check `78,078` rows and give cap `1656` with five boundary rows. For `k=3`, torsion/status closes through `297`;
-THM-2981/3033/3041 close all projected `k=3` rows through `z_1=243`:
-cap `242`, ledger `374900`, and the next occupied layer has `20` rows.
+THM-2981/3033/3041/3052 close all projected `k=3` rows through `z_1=240`,
+including the empty `z_1=241` layer: cap `239`, ledger `374828`, and the next
+occupied layer has `4` rows.
 Separate HYP-8871 leaves `165` rows; THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close supplied-root seams, not semantic-root identification (kernel `28,393`); THM-2545/2549/3044 give Hall/pointed dual; THM-2565/2604/2613 point scoped packets; THM-3048 forces arrival from nonzero holonomy only for a whole-table parallel carrier, still absent; THM-2547 is only an external control after
 MISTAKE-281.  THM-2551--2712 recover determinant/carry/root/quotient sidecars
