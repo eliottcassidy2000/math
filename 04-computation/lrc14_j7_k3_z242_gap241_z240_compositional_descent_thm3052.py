@@ -398,8 +398,8 @@ def main():
         "first_failed_implication=crude_plus_status closes 9412 of 9449 states, not the 37 residuals",
         "repair=all six residual bodies have positive two-high gap and all 37 one-high cases pass strict complete-cell cardinality",
         "safety=no null-set inference;literal covers map to the relaxation and terminal cells retain actual safe residues",
-        "conditional_only=if THM3041 is promoted then ledger 374900-72=374828 and projected cap z1<=239",
-        "scope=scratch exact candidate only;no theorem id,status,navigation,ledger mutation,or LRC consequence",
+        "promotion_consequence=ledger 374900-72=374828;projected cap z1<=239",
+        "scope=projected necessary sector only;this computation makes no navigation/ledger mutation or LRC consequence",
         f"semantic_sha256={semantic}",
         "all_exact_controls=PASS",
     ]
@@ -410,6 +410,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
