@@ -41,7 +41,8 @@ status: >
   cap-3 theorem subsumes both cones.  The dependent gain relation (3/2)2=3
   accompanies its coupled-debt repair.  The remaining proved
   reflected certificate-failure locus is confined to those 561 bodies in
-  D>=6,1<=m<D/2;
+  D>=6,1<=m<D/2, with the exact boundary slice (D,m)=(6,1) now closed by
+  the physical global-min/global-max pair;
   the finite censuses, full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is internal
   exact computation and proof audit; there is no Lean or external peer-review
@@ -1199,8 +1200,53 @@ The stored old-policy witnesses `(3,4,5,8,6,9)` on `H` and
 pair certificate, proving that the first obstruction was the selector rather
 than the boundary assignments.
 
+The exact global-extreme pair also closes the first point *below* the cap-3
+cone.  The two bodies on which the universal same-level graph is not `K6`
+are disjoint from the `561`-body residual.  Thus every still-uncertified word
+on a residual body has six distinct levels.  At `(D,m)=(6,1)`, fix the
+physical ordered slots `(i,j)` with `q_i=1` and `q_j=7`.  The four other
+levels are distinct elements of `{2,3,4,5,6}`.  For `e<f` and `q<r`, the
+gain from assigning the larger label to the smaller level is exactly
+
+```text
+ L(r-q)(f-e)(qrL^2-ef)
+ ---------------------------------------  > 0,
+ 7 product_((s,x) in {q,r}x{e,f})(sL-x)
+```
+
+so the worst singleton debt uses levels `2,3,4,5`, assigned in decreasing
+label order.  All `561*30=16,830` physical endpoint orientations and every
+integer body-safe cell were then checked exactly.  Every best extreme-pair
+overlap beats that worst compatible debt.  The weakest strict margin is
+
+```text
+4942672624/429463642167
+```
+
+on `E=(1,2,3,4,6,12)`, physical orientation `(0,3)`, cell `143`, with
+the debt-maximizing word `(1,5,4,7,3,2)`.  The independent two-pointer
+intersection formula agrees with the promoted interval engine at every
+maximizing cell.  Therefore
+
+```text
+PROVED: within the reflected sufficient family, (D,m)=(6,1) is empty.
+```
+
+This finite slice uses both the `K6` repeated-level sidecar and the exact
+ordered extreme pair; charging all six singleton terms at the minimum would
+lose the proof.  The verifier is
+`04-computation/lrc14_j7_reflected_extreme_pair_d6_m1_distinct_debt_closure_thm2941.py`,
+with LF source hash
+`e605c2e02ba253c687c7fb8c082d543fde9b59ff4212cb4107b85705238a89ed`
+and LF output hash
+`c5fe094fcdf3092f96957c9d80ac2589460f6050072cb490270bca45f2d2c16c`,
+and semantic hash
+`a74dfc2377029e62aa549e7ccfcf84b14348c56b507074efdb92e97fa9ca5dfd`.
+This remains a sufficient-certificate statement, not a physical-survivor
+census or LRC(14).
+
 Consequently the current **proved** reflected obligation is confined to the
-`561` bodies in the wedge `D>=6,1<=m<D/2`.  This is a
+`561` bodies in the wedge `D>=6,1<=m<D/2`, excluding `(D,m)=(6,1)`.  This is a
 sufficient-certificate residual, not a physical-survivor census.  More
 globally, the correction floor `c>=-12/49` makes phase zero imply `PQ<=12`,
 so the zero-gain atlas is exactly

@@ -1,0 +1,19 @@
+LRC14 reflected extreme-pair (D,m)=(6,1) exact closure
+universe=residual_bodies:561;physical_orientations_per_body:30;rows:16830
+same_level_gate=the two non-K6 bodies are disjoint from the 561 residual bodies:((1, 2, 7, 9, 11, 13), (2, 4, 7, 9, 11, 13));every uncertified residual word therefore has six distinct levels
+extreme_pair=ordered slots (i,j) retain their physical meaning:q_i=1 is the exact global minimum,q_j=7 is the exact global maximum;reduced channel=(1,7)>3
+distinct_debt=maximized by intermediate levels (2,3,4,5),assigned from largest remaining body label to smallest level;5P4=120 hostile assignments checked per row
+rearrangement=swap gap L(r-q)(f-e)(qrL^2-ef)/(7 product_{q,r;e,f}(level*L-label)) is strictly positive
+maximum_distinct_debt=8699774082/549491317375@body=(1, 2, 3, 4, 6, 12),orientation=(5, 0),levels=(7, 5, 4, 3, 2, 1)
+weakest_margin=4942672624/429463642167@body=(1, 2, 3, 4, 6, 12),orientation=(0, 3),cell=143,overlap=1020/48931,debt=669634815172/71720428241889,levels=(1, 5, 4, 7, 3, 2)
+cell_audit=every integer body-safe cell scanned;independent two-pointer overlap agrees with the promoted interval engine at every maximizing cell
+conclusion=within the reflected THM-2941 sufficient family,every packet with (D,m)=(6,1) closes by either a same-level pair or its exact global-min/global-max pair
+remaining_scope=other points in D>=6,1<=m<D/2 remain open;this is not a physical-survivor census and not LRC14
+row_digest=68a666030d9124474cbbe7b381fa1daab77d13521a84f5080ae62cc94d4aebe4
+normal_vs_python_O=BYTE_IDENTICAL
+half_source_sha256=d53b9ebb76930fc6eb4cdc697c11f57413747e834e0ee4a11ea81ee47c884398
+half_output_sha256=a5cfde4f3ba447c92d5486017bddd484a0cebfad87330cd19c25d307327a5d87
+half_semantic_sha256=1a8a6cac81420388034c849ca0ba852a9b87416c85eeedcb12e1cbafea572f5a
+source_sha256=e605c2e02ba253c687c7fb8c082d543fde9b59ff4212cb4107b85705238a89ed
+semantic_sha256=a74dfc2377029e62aa549e7ccfcf84b14348c56b507074efdb92e97fa9ca5dfd
+all_exact_controls=PASS
