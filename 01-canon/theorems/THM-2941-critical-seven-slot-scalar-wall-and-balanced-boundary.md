@@ -41,16 +41,20 @@ status: >
   cap-3 theorem subsumes both cones.  The dependent gain relation (3/2)2=3
   accompanies its coupled-debt repair.  The remaining proved
   reflected certificate-failure locus is confined, inside the inherited
-  D>=6 stage, to 561 bodies with m>=2, 3<Q/m<23,
-  Q/m not in {4,5,6}, and gcd(m,Q)<=47.  The complete m=1
+  D>=6 stage, to 561 bodies with m>=2, 3<Q/m<6,
+  Q/m not in {4,5}, and gcd(m,Q)<=47; the ratio-six boundary is closed.
+  The complete m=1
   branch is closed by its exact finite head and phase-free periodic-comb
   tail.  For m>=2, the physical global-min/global-max pair has exactly m
   full low teeth; its exact m=2 base, positive ray increment, and positive
   Q-increment close the opposite cone D>=22m.  Exact primitive-cell profiles,
   875,160 finite rows, and affine tails close the complete ratio rays 4,5,6;
   the inherited 1/105 high-phase floor closes every other ratio above three
-  when the gcd scale is at least 48;
-  the finite censuses, full
+  when the gcd scale is at least 48.  An exact circle-window discrepancy
+  formula then closes every physical extreme pair with Q>6m, at every gcd
+  scale; its delicate Q=6m+1 boundary reduces to the sharp body inequality
+  14*lcm(E)>=6*sum(E).
+  The finite censuses, full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is internal
   exact computation and proof audit; there is no Lean or external peer-review
   claim.
@@ -295,6 +299,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_reflected_extreme_pair_q23m_cone_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_extreme_pair_resonance_g48_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_extreme_pair_resonance_g48_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_extreme_pair_q_gt_6m_window_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_extreme_pair_q_gt_6m_window_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -1630,6 +1636,186 @@ and `1fb9c1ee2f0c02e2033b940001b58a76232478a2ae94166e8d1f8cb3d54ae6ac`.
 Ordinary and optimized replays are byte-identical.  The body-bound profile,
 finite-prefix, independent-engine, affine-tail, and generic-tail digests are
 recorded in the output.
+
+There is a sharper phase-free estimate which closes the entire open side of
+the ratio-six boundary.  Keep the physical notation from `(25i13l)--(25i13m)`
+and put
+
+```text
+z_1=mL-a,       z_2=QL-b,       alpha=z_2/z_1.            (25i13ae)
+```
+
+The high channel has period `h=L/z_2` and occupies one interval of length
+`h/7` in each period.  In high-period units, each full low tooth has length
+
+```text
+W = [L/(7z_1)]/[L/z_2] = alpha/7.                         (25i13af)
+```
+
+For a period-one comb consisting of one interval of length `1/7`, the exact
+minimum mass in an arbitrarily placed real window of length `W` is
+
+```text
+J(W)=floor(W)/7 + max(0,{W}-6/7).                         (25i13ag)
+```
+
+Indeed, `floor(W)` complete periods contribute `floor(W)/7`.  The remaining
+arc has length `{W}` on the quotient circle; its minimum intersection with a
+fixed arc of length `1/7` is exactly
+`max(0,{W}+1/7-1)`.  Applying `(25i13ag)` separately to all `m` full low
+teeth gives the phase-free bound
+
+```text
+overlap >= [mL/z_2] J(alpha/7).                           (25i13ah)
+```
+
+This loses no whole endpoint periods.  It is also sharp as a phase-free
+statement: at `alpha=6`, the window has length `6/7` and may be the exact
+complement of the high tooth, so `J(6/7)=0`.  Thus the already proved located
+ratio-six ray cannot simply be recovered by continuity from this estimate.
+
+First suppose `alpha>=7`.  Write `W=n+s`, where `n>=1` and `0<=s<1`.  If
+`s<=6/7`, then
+
+```text
+J(W)/W = (n/7)/W >= n/(7n+6) >= 1/13.
+```
+
+If `s>=6/7`, then `(25i13ag)` and `s>=6/7` give
+
+```text
+13J(W)-W >= 6(n-1)/7 >= 0.
+```
+
+Consequently
+
+```text
+J(alpha/7)/alpha >= 1/91,                                (25i13ai)
+```
+
+with equality exactly at `W=13/7`, or `alpha=13`.  Since
+`mL/z_1>1`, `(25i13ah)` is strictly larger than `1/91`.
+
+The complete singleton debt admits a smaller uniform bound.  For every
+six-element `E subset {1,...,14}` one has the sharp body inequality
+
+```text
+L=14 lcm(E) >= 6 sum_(e in E)e,                           (25i13aj)
+```
+
+with equality only for `H=(1,2,3,4,6,12)`.  To see this without the
+`561`-body census, put `N=lcm(E)`.  If `N>=30`, then
+`L>=420>6(9+10+11+12+13+14)=414`.  If `N<30`, an integer with six divisors
+at most `14` can only give `N=12` or `24`: for `12` the six labels are exactly
+`H`, while for `24` the largest possible six-label sum is
+`2+3+4+6+8+12=35<56=L/6`.  Equivalently, among the only sub-30 integers with
+at least six divisors, `18,20,28` lose their sixth divisor because the integer
+itself exceeds `14`.
+
+Every label `x` is at most `L/14`.  For `m>=2`, the low endpoint contributes
+at most `(14/27)(a/L)` before the outer factor `1/7`; each of the other five
+distinct levels is at least `m+1>=3`, so each contributes at most
+`(14/41)(x/L)`.  Therefore `(25i13aj)` gives
+
+```text
+debt <= (1/7)[14a/(27L)+14(sum(E)-a)/(41L)]
+     <= 11/1107
+      < 1/91,                                             (25i13ak)
+
+1/91-11/1107 = 106/100737.
+```
+
+Equations `(25i13ah)--(25i13ak)` close every row with `alpha>=7`.
+
+It remains to treat `6<alpha<7`.  Since `Q>6m` is integral,
+`Q>=6m+1`, and
+
+```text
+z_2-6z_1=(Q-6m)L+6a-b >= L+6a-b>0.                       (25i13al)
+```
+
+On this single ramp, `(25i13ag)` turns `(25i13ah)` into
+
+```text
+overlap >= mL/(7z_1)-6mL/(7z_2).                         (25i13am)
+```
+
+Fix `m,E,a,b`.  The low-endpoint and four interior debts do not depend on
+`Q`, while the high-endpoint debt is `b/(7z_2)`.  Hence the full lower
+invoice has the form
+
+```text
+constant - (6mL+b)/(7z_2)
+```
+
+and strictly increases with `Q`.  It is enough to prove the first integer
+point `Q=6m+1`.  There, subtracting the two endpoint debts from `(25i13am)`
+cancels exactly:
+
+```text
+ overlap - a/(7z_1) - b/(7z_2)
+ = (L-2b)/(7z_2),       z_2=(6m+1)L-b.                   (25i13an)
+```
+
+Let `e_r` be the four remaining labels assigned, in decreasing order, to
+the debt-maximizing levels `m+r`, `r=1,...,4`, and put
+`d_r=(m+r)L-e_r`.  Then
+
+```text
+6d_r-z_2=(6r-1)L-6e_r+b>0,                               (25i13ao)
+```
+
+because already `r=1`, `L>=168`, `e_r<=14`, and `b>=1` give a positive
+lower bound.  Thus `e_r/d_r<6e_r/z_2`.  On the other hand, if
+`S=sum(E)`, the sharp body inequality gives
+
+```text
+L-2b-6 sum_(r=1)^4 e_r
+ = (L-6S)+6a+4b > 0.                                    (25i13ap)
+```
+
+Combining `(25i13an)--(25i13ap)` shows that the endpoint remainder strictly
+dominates all four interior debts.  The first ramp is therefore positive,
+and monotonicity in `Q` closes it completely.  We have proved
+
+```text
+PROVED: within the reflected sufficient family, every physical extreme pair
+        with integer m>=2 and Q>6m is closed, with no gcd restriction.
+                                                                    (25i13aq)
+```
+
+The verifier checks `(25i13aj)` on all `3,003` bodies, including its unique
+equality; the hostile `alpha=6` complement; every window breakpoint through
+`alpha=21`; the `alpha=13` equality in `(25i13ai)`; the exact cancellation
+and both strict slacks at `m=2,3,47` on all `561*30` orientations; and
+`117,810` independent full-tooth/interval-engine controls.  The weakest
+checked first-ramp row is positive, with margin
+
+```text
+4803382322146/83393333248086015
+```
+
+at `m=47,Q=283` on `H`, orientation `(0,1)`.  This finite value is a control,
+not the source of the all-`m` quantifier.  The exact verifier is
+`04-computation/lrc14_j7_reflected_extreme_pair_q_gt_6m_window_closure_thm2941.py`.
+Its LF source/output/semantic hashes are, respectively,
+`1e4f12a23b7e57b56a44786591bb0d1664b70cdd044cdb14c2382a10b5735151`,
+`020ef846ddd31a2cd519593fa25c30343d9df42ee4a300ebbbf4ace8cdbd300e`,
+and `cac060914df0e16366945480c259e920d6afc8b41038ebcdc4ed19549b72c094`.
+Ordinary and optimized replays are byte-identical.
+
+Combining `(25i13aq)` with the complete resonance rays `4,5,6` and the
+generic gcd-scale tail `(25i13ac)` replaces `(25i13ad)` by the strictly
+smaller proved residual
+
+```text
+561 bodies; m>=2; 3<Q/m<6; Q/m not in {4,5};
+gcd(m,Q)<=47.                                             (25i13ar)
+```
+
+The ratio-six ray is the closed boundary of `(25i13ar)`.  This remains a
+sufficient-certificate residual, not a physical-survivor census or a proof
+of LRC(14).
 
 More globally, the correction floor `c>=-12/49` makes phase zero imply `PQ<=12`,
 so the zero-gain atlas is exactly

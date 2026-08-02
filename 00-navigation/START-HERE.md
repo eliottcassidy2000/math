@@ -20,7 +20,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) open.** Sectors remain. THM-2941 closes `m=1,D>=22m`, rays `4/5/6`, gcd `>=48`; residual: `561`, `m>=2,3<Q/m<23`, off rays, gcd `<=47`. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
+1. **LRC(14) open.** Sectors remain. THM-2941 closes `m=1`, all `Q>6m`, rays `4/5/6`, and the other gcd-`>=48` channels; reflected residual: `561`, `m>=2,3<Q/m<6`, off `4/5`, gcd `<=47` (ray `6` is closed). [Sources](../05-knowledge/reference/CORE-PAPERS.md).
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
