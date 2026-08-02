@@ -1,0 +1,23 @@
+frobenius_universe=primes_le_97,s_1_through_8,a_0_through_6 prime_count=25 cases=1400
+coefficientwise_frobenius_congruence=True
+independent_small_bivariate_expansion=True
+untruncated_leading_degree_controls=True
+base_window_scaling_identity=True checks=420
+zero_root_exclusion_recurrence=True checks=420
+s=2 base_r=0 delta=1 factorization=1 eligible_exceptional_primes=[]
+s=3 base_r=1 delta=116 factorization=2^2*29 eligible_exceptional_primes=[29]
+s=4 base_r=2 delta=586672128 factorization=2^11*3^2*7*4547 eligible_exceptional_primes=[7, 4547]
+s=5 base_r=3 delta=2246282972173187481600 factorization=2^16*3^7*5^2*11^2*20747*249721 eligible_exceptional_primes=[11, 20747, 249721]
+s=6 base_r=4 delta=44965855750876894470144533873830133760000 factorization=2^47*3^15*5^4*7*139*3767*12041*807241 eligible_exceptional_primes=[139, 3767, 12041, 807241]
+exception_s=3 p=29 monic_gcd=[1, 1] nonzero_root=28
+exception_s=4 p=7 monic_gcd=[2, 1] nonzero_root=5
+exception_s=4 p=4547 monic_gcd=[1304, 1] nonzero_root=3243
+exception_s=5 p=11 monic_gcd=[9, 1] nonzero_root=2
+exception_s=5 p=20747 monic_gcd=[15102, 1] nonzero_root=5645
+exception_s=5 p=249721 monic_gcd=[26953, 1] nonzero_root=222768
+exception_s=6 p=139 monic_gcd=[26, 1] nonzero_root=113
+exception_s=6 p=3767 monic_gcd=[2126, 1] nonzero_root=1641
+exception_s=6 p=12041 monic_gcd=[3037, 1] nonzero_root=9004
+exception_s=6 p=807241 monic_gcd=[784752, 1] nonzero_root=22489
+quotient_denominator_wall_s=4_p=61_monic_gcd=[1]
+all_exact_checks=True
