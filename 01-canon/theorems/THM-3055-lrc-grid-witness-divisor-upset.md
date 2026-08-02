@@ -2,7 +2,8 @@
 id: THM-3055
 title: "LRC grid witnesses form the unhit-divisor upset"
 status: >
-  PROVED + VERIFIED-EXACT.  For every modulus q>=2 and every nonempty finite
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every modulus
+  q>=2 and every nonempty finite
   integer speed set S, the threshold-1/q witnesses on the q-grid are exactly
   the reduced fractions b/d whose denominators d|q divide no speed in S.
   These surviving denominators form an upward-closed divisor upset, generated
@@ -13,6 +14,12 @@ status: >
   divisor d>1 of q divides at least one speed.  This classifies the grid
   carrier, not the full safe set, its measure, or tightness.
 source: codex-2026-08-01-grid-witness-divisor-upset
+audit: >
+  An independent hostile audit ACCEPTED the iff q|av versus reduced-denominator
+  divisibility, the disjoint totient layers, the upset and adjoining-speed
+  laws, the exact top-layer boundary, and the scoped LRC consequence.  It
+  replayed normal, optimized, and stored output byte-for-byte and matched both
+  frozen LF hashes.
 depends_on: []
 related:
   - THM-3043-lrc-tight-instances-are-not-only-APs-and-what-FC2-does-not-transfer
@@ -25,7 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3055 -- LRC grid witnesses form the unhit-divisor upset
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The small tight instances in THM-3043 suggest that the important object is the
 witness set rather than the shape of the speed set.  On the distinguished
