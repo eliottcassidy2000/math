@@ -1,0 +1,15 @@
+weights=w_lambda=product_i(lambda_i!):unique_up_to_global_scale
+intertwining=W_N^-1*block_delete*W_(N+1)=labelled_delete
+labelled_delete=delete_same_uniform_label:refinement_stochastic
+carrier=Kbar_lambda=w_lambda*Lbar_lambda:coarsening_monotone
+N2:partitions=2:lowerings=2:covers=1:labelled_equal=1:raw_sign=neg0/zero1/pos0
+N3:partitions=3:lowerings=4:covers=2:labelled_equal=0:raw_sign=neg0/zero1/pos1
+N4:partitions=5:lowerings=7:covers=5:labelled_equal=0:raw_sign=neg2/zero2/pos1
+N5:partitions=7:lowerings=12:covers=9:labelled_equal=0:raw_sign=neg6/zero2/pos1
+N6:partitions=11:lowerings=19:covers=17:labelled_equal=0:raw_sign=neg14/zero2/pos1
+N7:partitions=15:lowerings=30:covers=28:labelled_equal=0:raw_sign=neg25/zero2/pos1
+N8:partitions=22:lowerings=45:covers=47:labelled_equal=0:raw_sign=neg44/zero2/pos1
+N9:partitions=30:lowerings=67:covers=73:labelled_equal=0:raw_sign=neg70/zero2/pos1
+totals=partitions:95:lowerings:186:covers:182:labelled_equal:1:flow_support:340/325:raw_sign:neg161/zero14/pos7:min_weight_ratio:2
+first_raw_hostiles=(3,1)->(4):-Lbar_(2,1);(2,2)->(4):Lbar_3-2Lbar_(2,1)
+all_exact_checks=PASS
