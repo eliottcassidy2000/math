@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-07-30; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — refreshed 2026-08-01; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
@@ -20,7 +20,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; THM-2928 empties aligned `k>=4`; THM-2995/3033 cap projected `k=2,3` at `1579/243`; the audited THM-2941 assembly leaves the reflected bank-uncovered wedge `561` bodies, `D>=6,1<=m<3D`. Arbitrary `k<=1` and the rung remain open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
+1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; THM-2928 empties aligned `k>=4`; THM-2995/3052 cap projected `k=2,3` at `1579/239`; the audited THM-2941 assembly leaves the reflected bank-uncovered wedge `561` bodies, `D>=6,1<=m<D`. Arbitrary `k<=1` and the rung remain open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
@@ -56,14 +56,14 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    quotient-automorphism minimum still fails; its marked partial-automorphism cost is the weighted cyclic derivative of exterior incidence words. Unmarked transport remains open. The known invariant lattice is exact only through `n <= 6`.
 11. **A reciprocal integer sequence has two profiles.** THM-2000/2005 separate support from multiplicity; THM-2352 separates q-adic thresholds.
     THM-2438 gives the formal Poisson--Newton EGF transform and reciprocal support = mean divisor scar at the Abel--Dini/Bertrand boundary.
-    THM-2433/2500 classify finite holes: additive atoms stop linearly; prime holes emit exact disjoint prime rays.
+    THM-2433/2500 classify finite holes: additive atoms stop linearly; prime holes emit exact disjoint prime rays. THM-3055 identifies q-grid witnesses with an exact unhit-divisor upset; THM-3056 proves every generalized Hankel minor of every finite-factor reciprocal product-Gamma sequence has strict sign `(-1)^(h choose 2)`, even though reciprocalization exits the moment cone.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is the exact new counterexample. THM-2063/2071 close linear/quadratic source fibers; THM-2084/2118/2102 close cubics; THM-2202 removes every twice-odd finite pole.
     THM-2214 closes nonsplit terminal degrees `2,6,10`, THM-2217 forces the odd train, and THM-2247 closes degree `14`.
     At degree `18`, THM-2297 closes one-sparse strata plus `B=D=0`;
     THM-2314/2316/2320/2324/2328 close all `31` exactly two-sparse ratios.
     THM-2332 leaves squarefree branch degree `0`, `2`, or `4`; THM-2335 eliminates `0`; THM-2345/2347 close two divisors.
     THM-2359 closes the perfect-quartic divisor. THM-2371 and THM-2376 close the full degree-eighteen `H_2S_5^2` stratum; hostile-audited THM-2406 closes the remaining `H_4` locus and hence the inherited reduced degree-eighteen branch.
-    At degree `22`, THM-2671/2683/2692 close the inherited nonsplit branch and THM-2725/2745/2752/2755 the split family. THM-2778 closes every complete chosen-sheet split polynomial exact-prefix degree. THM-2796 classifies balanced nonsplit `e<=1` responses and exposes the live carrier `A(R_Q/q)=VG`. Degrees `>=26`, nonpolynomial prefixes, chart entry, raising/descent, other branches, `JC(2)`, and `DC(2)` remain open.
+    At degree `22`, THM-2671/2683/2692 close the inherited nonsplit branch and THM-2725/2745/2752/2755 the split family. THM-2778 closes every complete chosen-sheet split polynomial exact-prefix degree. THM-2796 classifies balanced nonsplit `e<=1` responses and exposes the live carrier `A(R_Q/q)=VG`. THM-3057/3059 make quartic Jelonek parity exactly tame infinity-inertia sign and refute the former general-dominant “every component odd” claim; on the degree-four `S4` Keller lane only existence of some odd component is proved, while uniform exclusion of `C3` components remains open. Degrees `>=26`, nonpolynomial prefixes, chart entry, raising/descent, other branches, `JC(2)`, and `DC(2)` remain open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed

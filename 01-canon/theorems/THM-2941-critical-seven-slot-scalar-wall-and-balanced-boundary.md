@@ -15,7 +15,7 @@ status: >
   finite-low-pair torsion, torsion-density pigeonhole, scalar-splice,
   status-descent, and cardinality translated-band addenda improve the
   k=2/k=3 first-drift caps from 2142/380
-  to 1579/243.
+  to 1579/239 (using the THM-3041/3052 continuation).
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -25,9 +25,12 @@ status: >
   five and its fully periodized high-channel fibre has sharp floor 1/105;
   threshold-block refinements close arbitrary positive reflected levels on
   a bank of 2,442 of the 3,003 bodies, leaving 561 uncovered rather than
-  proving them impossible.  A three-reverse-ladder certificate closes every
-  body for spread D>=6 and base m>=3D.  The remaining reflected
-  certificate-failure locus is confined to those 561 bodies in D>=6,m<3D;
+  proving them impossible.  A recursive cap-aware projective-CSP and
+  located-transport chain closes every body for spread D>=6 and base m>=D.
+  At the endpoint the new zero channel 1:2 completes the balanced gain
+  triangle (3/2)(4/3)=2; orientation-split tails close its four unconstrained
+  bodies.  The remaining reflected certificate-failure locus is confined to
+  those 561 bodies in D>=6,m<D;
   the finite censuses, full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is internal
   exact computation and proof audit; there is no Lean or external peer-review
@@ -239,6 +242,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_reflected_robust_edge10_threshold_block_uniform_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_robust_edge9_threshold_block_uniform_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_robust_edge9_threshold_block_uniform_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_robust_edge8_threshold_block_uniform_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_robust_edge8_threshold_block_uniform_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_d5_crossdet_tail_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_d5_crossdet_tail_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_d5_head_median_cell_closure_thm2941.py
@@ -247,6 +252,16 @@ verification:
   - 05-knowledge/results/lrc14_j7_reflected_c4_central_exception_cone_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_c3_three_reverse_ladder_cone_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_c3_three_reverse_ladder_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_c2_full_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_c2_full_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_three_halves_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_three_halves_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_four_thirds_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_four_thirds_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_one_cone_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_one_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -1052,9 +1067,42 @@ reverse ladders close the residual orientations.  The exact scale law gives
 D>=6 and m>=3D  ==>  every reflected packet closes.           (25i9)
 ```
 
+Four exact recursive refinements lower this cone boundary without assuming
+monotone interpolation:
+
+```text
+m>=2D,       2m>=3D,       3m>=4D,       m>=D.            (25i10)
+```
+
+Each refinement regenerates the complete rational channel alphabet at its
+own projective cap, solves the gain-graph CSP in two search orders, and closes
+the residual bodies by oriented located controls plus analytic tails with
+exhaustive finite heads.  MISTAKE-345 records why the cap is an explicit
+generator argument: the first `4D/3` transcript accidentally retained the old
+literal `5/3` cutoff.  Its repaired `7/4` bank has `2,728` rows and reproduces
+the verdict only after the omitted channels are actually included.
+
+At `m=D`, the projective cap is two and the phase-zero gains are
+
+```text
+2, 3/2, 4/3,                  (3/2)(4/3)=2.              (25i11)
+```
+
+The cap-aware CSP closes `492/561` residual bodies and leaves `69`; `21`
+full-span components all contain the balanced gain triangle `(25i11)`.
+Complete policies close `65` traps by `894` oriented controls.  Four bodies
+are unconstrained.  On `H=(1,2,3,4,6,12)`, the reverse `2:1` channel makes the
+old ordered cell vanish, so the proof reverses the label pair below ratio one;
+the two half-interval tails and three whole-interval tails have `124`
+exhaustive head controls.  Therefore
+
+```text
+D>=6 and m>=D  ==>  every reflected packet closes.             (25i12)
+```
+
 Consequently the current reflected obligation is confined to the `561`
-bodies in the wedge `D>=6,m<3D`.  No monotonic interpolation between finite
-spread slices and the cone is assumed.
+bodies in the wedge `D>=6,m<D`.  This is a sufficient-certificate residual,
+not a physical-survivor census.
 
 There is an exact all-scale functional form behind the discrepancy tail.
 Write the carrier components as
@@ -2404,11 +2452,12 @@ ordinary and optimized replays are byte-identical.
 
 The reflected wedge assembly
 `04-computation/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.py`
-pins eleven LF-normalized terminal sources and transcripts, including the
-edge-eight block.  Its source/output/semantic SHA-256 values are respectively
-`12f64132b0ee51896f5991e153daf19d476b5cccdf7738edade1e9edd6cebfa2`,
-`3d630d3fff4aad69ddb9c69b627366fc670a1418ff3d5accf2d1c04961f8de3f`,
-and `0119bd0d359d97f2881de56cd9e115e695c7ecac006e8981c31a5f1c20d95ef5`.
+pins fifteen LF-normalized terminal sources and transcripts, including the
+edge-eight block and all four recursive cone refinements.  Its
+source/output/semantic SHA-256 values are respectively
+`d8933b197882591eea248ac52b64b2b56d652c2b0328bf27e779e5debf9e5da0`,
+`6ed4e7c321cafcd8a18a6c70463460c9c801e223f3faae03613eeb220251f928`,
+and `168f288f5d0f73342262793977b928d827abae2e282933be8c3babe1614a7e83`.
 Fresh ordinary and optimized replays are byte-identical to each other and to
 the stored transcript.  The edge-eight terminal source/output/semantic hashes
 are `3f2552c7e316a6da821f8d78f859aa9d73b2d8b58081c0a31f8d233f37eec2f0`,
@@ -2418,9 +2467,9 @@ both fresh interpreters replay all `652,688` exact rows.
 
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,
-close the `561`-body reflected wedge `D>=6,m<3D`, finish the remaining
+close the `561`-body reflected wedge `D>=6,m<D`, finish the remaining
 `k=2,3` finite decision trees, classify the zero/one-aligned multi-drift
 address hypergraph, close the six-body/seven-tail rung, or prove LRC(14).
 The independent THM-2928 divisor-status route closes `k=4`; THM-2980/2995
-and THM-2981/3033 lower the composed `k=2,3` caps to `1579/243`, respectively,
+and THM-2981/3052 lower the composed `k=2,3` caps to `1579/239`, respectively,
 without emptying the sectors below those caps.

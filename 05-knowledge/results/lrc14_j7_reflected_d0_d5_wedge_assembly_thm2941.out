@@ -1,4 +1,4 @@
-LRC14 reflected D<=5 and m>=3D wedge exact dependency assembly
+LRC14 reflected D<=5 and m>=D wedge exact dependency assembly
 universe=E subset {1,...,14},|E|=6;3003 bodies;q_e positive integers;m=min q_e;D=max q_e-min q_e
 D0_D2=universal good-edge chromatic theorem:at most three level values
 D3=3001 complete good graphs by pigeonhole plus two exceptional proper-four-colour rays
@@ -6,8 +6,8 @@ D4=3001 complete good graphs by pigeonhole plus two exceptional proper-word lane
 D5=head m=1..15 plus cross-determinant tail m>=16;all 3003 bodies
 conclusion_1=every reflected THM-2941 residual packet with D<=5 closes for every m>=1
 conclusion_2=bodywise bank closes 2442/3003 bodies for arbitrary positive reflected levels;561 bodies are uncovered
-conclusion_3=every reflected THM-2941 residual packet with D>=6 and m>=3D closes
-remaining_wedge=561 bank-uncovered bodies only;D>=6;1<=m<3D
+conclusion_3=every reflected THM-2941 residual packet with D>=6 and m>=D closes
+remaining_wedge=561 bank-uncovered bodies only;D>=6;1<=m<D
 logical_status=three conclusions are incomparable inputs to the final intersection;none is arbitrary k<=1 or physical-survivor classification
 D5_head_counts=raw:7851600;crossdet:7835524;median_residual:16076
 D5_residual_counts_by_m=(12985, 1511, 773, 427, 235, 53, 43, 23, 8, 9, 5, 2, 0, 0, 2)
@@ -24,8 +24,12 @@ dependency=ARBITRARY_LEVEL_EDGE9;source_lf_sha256=b708f0fc3b5e89d9a17301201b112c
 dependency=ARBITRARY_LEVEL_EDGE8;source_lf_sha256=3f2552c7e316a6da821f8d78f859aa9d73b2d8b58081c0a31f8d233f37eec2f0;output_lf_sha256=90d42c1369532e4d31cfacbf4ddf455fa330075c878b414831e489eec32ecc2b
 dependency=C4_CONE;source_lf_sha256=48a21cfd26c6250a317d37a59523012548204f7b217538d74a5c4b2e21b6f9ae;output_lf_sha256=fe4a949e68fe71fadab5068f688ac1b0d3aeb0c32b13d94a6d49bb2212342aa3
 dependency=C3_CONE;source_lf_sha256=102ef691101bf8d00721e08e1b9b229c893fb532d06dc59959a26a31cb87cbe8;output_lf_sha256=e997189c3cebb693d9b04d56be088842a532cd6c95d8ba6db2dbc1377af93875
-semantic_sha256=0119bd0d359d97f2881de56cd9e115e695c7ecac006e8981c31a5f1c20d95ef5
-source_lf_sha256=12f64132b0ee51896f5991e153daf19d476b5cccdf7738edade1e9edd6cebfa2
+dependency=C2_FULL_CONE;source_lf_sha256=f7eb06c50b11fd810320146a2cded2590790fdbcf6db58cff2a358470fcfd0b6;output_lf_sha256=7449cb0ab6b969fa4653d98582423df262329e087cc73d8ea33499cb23ec8422
+dependency=THREE_HALVES_CONE;source_lf_sha256=15bcd2d67b4867d1ac6380a10a3b9618d677b031ad4354729371ba77501b50e6;output_lf_sha256=7d7ad662745d170c2492e93bf296bdd0b15372ef2ca83aed82bda41770a1089d
+dependency=FOUR_THIRDS_CONE;source_lf_sha256=0b8b01a184f5862c3a32598600988773bcbefdc26c63644cddf0884b18285c3e;output_lf_sha256=0377aaeb146553fe7c027a81ea3589045d01f50fe11aa79848d009a48c806fb9
+dependency=ONE_CONE;source_lf_sha256=800395ae242860094fed3db9638a93ebc2faba7973558a3eaa51f3af62145200;output_lf_sha256=e63ee74f42d8f213196cf2907bbc25dc20b93a3e64b8a40aa85d5d81c8b11ee6
+semantic_sha256=168f288f5d0f73342262793977b928d827abae2e282933be8c3babe1614a7e83
+source_lf_sha256=d8933b197882591eea248ac52b64b2b56d652c2b0328bf27e779e5debf9e5da0
 normal_vs_python_O=BYTE_IDENTICAL
 scope=PROVED+VERIFIED-EXACT only for the reflected THM-2941 sufficient family;LRC14 remains open
 all_exact_controls=PASS

@@ -25,7 +25,7 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`. THM-2928 empties aligned `k>=4`; THM-2995/3033 cap projected `k=2,3` at `1579/243`; the audited THM-2941 assembly leaves the reflected bank-uncovered wedge: `561` bodies, `D>=6,1<=m<3D`.
+Direct frontier: `<=6`. THM-2928 empties aligned `k>=4`; THM-2995/3052 cap projected `k=2,3` at `1579/239`; the audited THM-2941 assembly leaves the reflected bank-uncovered wedge: `561` bodies, `D>=6,1<=m<D`.
 This is not a physical-survivor classification; arbitrary `k<=1`, the rung, and LRC remain open. Septimal floor/exception plus located phase cut the raw five-drift ledger
 `951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
@@ -216,7 +216,14 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   THM-2969/73/78/82 give strict ULC through M34; THM-2997's `R2>R1` is
   conditional beyond. THM-3040/47/50 give corner, Gamma/Hankel, radial-NC2
   laws; THM-3051/53/54 give moving-lower hostiles, prefix flow and affine
-  finite-order tail re-entry. All-order Stieltjes transport stays open.
+  finite-order tail re-entry.  Hostile-audited THM-3056 proves that for every
+  finite positive-shape product-Gamma sequence, every generalized minor of
+  its reciprocal has strict sign `(-1)^(h choose 2)`, including real row nodes
+  against integer columns.  This is column-reversal sign regularity, not
+  moment positivity: the order-two minor is negative.  For THM-3053's
+  Beta--Gamma inventory, terminal prefix zero forces finite rank, while
+  positive terminal prefix and THM-3060's nonintegral Beta gap remain separate
+  OPEN reversal problems.  All-order Stieltjes transport stays open.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent
@@ -315,6 +322,11 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   retains labelled fibres: parity/square swap walls; closure
   `N\{1,4,6}` with dyadic frontier; local A014574 recurrence refuted at term
   `21`; and distinct ancestry FINITE-EXACT through center `10^8`, ALL-n OPEN.
+- THM-3056 turns each integer-shape width family into a sparse integer support
+  with hypergeometric harmonic mass, absolute Dirichlet abscissa zero, and
+  prime-divisor shadow exactly the primes not dividing its scale.  This is the
+  arithmetic shadow of its all-order Hankel reversal law, not a moment
+  representation.
 - **EXACT identities / heuristic bridge:** corrected HYP-8820 puts caterer,
   cake, Moser, bagel, and Fibonacci in one Pascal array and proves
   `bagel(n)-cake(n)=T_n-1`; Klein-S313 realizes full-rank g-bonacci kernels.
@@ -346,7 +358,15 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2703/2708 identify the general boundary object as the saturated
   `H^1(U,mu_2)` gain-holonomy kernel, not a scalar Gram rank.  THM-2743--2780
   refine the `V4`, opposition, and inertia typing but still supply no
-  equivariant Kummer realization.  THM-2862/2864/2968/2971 give two sextic
+  equivariant Kummer realization.  THM-3057 gives the exact tame height-one
+  quartic invoice, and THM-3059 shows after reciprocal reversal that the
+  cleared discriminant exponent is odd exactly when infinity inertia is an
+  odd permutation.  Its generic-`S4` two-jet and planar families have exact
+  Jelonek loci with `C3` escape and even exponent, refuting HYP-9027 only in
+  its former general-dominant scope.  On the `S4` Keller lane at least one odd
+  component is forced, but excluding every Keller `C3` component remains
+  OPEN and needs branchwise Jacobian-cofactor unit data, not another
+  discriminant scalar.  THM-2862/2864/2968/2971 give two sextic
   lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
   affine sidecars remain.  THM-2867 gives the regular `S3` carrier.  THM-2871 makes that face unramified and
   puts the first paired escape at `A=B=0`: `C in (B)` gives integral

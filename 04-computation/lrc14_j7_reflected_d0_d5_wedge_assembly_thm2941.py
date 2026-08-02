@@ -9,10 +9,10 @@ not be conflated:
 * every spread ``D <= 5`` closes at every minimum level ``m >= 1``;
 * a bodywise bank closes 2,442 of the 3,003 six-label bodies at arbitrary
   positive levels; and
-* every spread ``D >= 6`` closes when ``m >= 3D``.
+* every spread ``D >= 6`` closes when ``m >= D``.
 
 Consequently the assembled certificate-failure locus is confined to the 561
-bodies not covered by that bank and ``D >= 6, 1 <= m < 3D``.  The uncovered
+bodies not covered by that bank and ``D >= 6, 1 <= m < D``.  The uncovered
 bodies are not thereby proved to fail some different certificate.  This is a
 theorem about the sufficient reflected residual family inherited from
 THM-2941, not a classification of
@@ -143,6 +143,46 @@ COMPONENTS = (
             "corollary=the still-open reflected D>=6 wedge is confined to m<3D",
         ),
     ),
+    (
+        "C2_FULL_CONE",
+        "lrc14_j7_reflected_c2_full_cone_closure_thm2941",
+        "f7eb06c50b11fd810320146a2cded2590790fdbcf6db58cff2a358470fcfd0b6",
+        "7449cb0ab6b969fa4653d98582423df262329e087cc73d8ea33499cb23ec8422",
+        (
+            "conclusion=all reflected residual packets with D>=6,m>=2D close on all 3003 bodies",
+            "corollary=the assembled reflected certificate-failure wedge is confined to 561 bodies,D>=6,1<=m<2D",
+        ),
+    ),
+    (
+        "THREE_HALVES_CONE",
+        "lrc14_j7_reflected_three_halves_cone_closure_thm2941",
+        "15bcd2d67b4867d1ac6380a10a3b9618d677b031ad4354729371ba77501b50e6",
+        "7d7ad662745d170c2492e93bf296bdd0b15372ef2ca83aed82bda41770a1089d",
+        (
+            "conclusion=all reflected residual packets with D>=6 and 2m>=3D close on all 3003 bodies",
+            "corollary=assembled reflected certificate-failure wedge is confined to 561 bodies,D>=6,1<=m<3D/2",
+        ),
+    ),
+    (
+        "FOUR_THIRDS_CONE",
+        "lrc14_j7_reflected_four_thirds_cone_closure_thm2941",
+        "0b8b01a184f5862c3a32598600988773bcbefdc26c63644cddf0884b18285c3e",
+        "0377aaeb146553fe7c027a81ea3589045d01f50fe11aa79848d009a48c806fb9",
+        (
+            "conclusion=all reflected residual packets with D>=6 and 3m>=4D close on all 3003 bodies",
+            "corollary=assembled reflected certificate-failure wedge is confined to 561 bodies,D>=6,1<=m<4D/3",
+        ),
+    ),
+    (
+        "ONE_CONE",
+        "lrc14_j7_reflected_one_cone_closure_thm2941",
+        "800395ae242860094fed3db9638a93ebc2faba7973558a3eaa51f3af62145200",
+        "e63ee74f42d8f213196cf2907bbc25dc20b93a3e64b8a40aa85d5d81c8b11ee6",
+        (
+            "conclusion=all reflected residual packets with D>=6 and m>=D close on all 3003 bodies",
+            "corollary=assembled reflected certificate-failure wedge is confined to 561 bodies,D>=6,1<=m<D",
+        ),
+    ),
 )
 
 EXPECTED_D5_RESIDUAL_COUNTS = (
@@ -162,7 +202,7 @@ EXPECTED_D5_RESIDUAL_COUNTS = (
     0,
     2,
 )
-EXPECTED_SEMANTIC_SHA256 = "0119bd0d359d97f2881de56cd9e115e695c7ecac006e8981c31a5f1c20d95ef5"
+EXPECTED_SEMANTIC_SHA256 = "168f288f5d0f73342262793977b928d827abae2e282933be8c3babe1614a7e83"
 
 
 def require(condition: bool, message: object) -> None:
@@ -230,7 +270,7 @@ def main() -> None:
     require("head_crossdet_repair=choose transport orientation" in transcripts["D5_HEAD"],
             "D5 orientation repair missing")
 
-    remaining_wedge = ("D>=6", "1<=m<3D", arbitrary_level_residual)
+    remaining_wedge = ("D>=6", "1<=m<D", arbitrary_level_residual)
     semantic_payload = (
         tuple(manifest),
         body_count,
@@ -248,7 +288,7 @@ def main() -> None:
                 ("semantic digest", semantic, EXPECTED_SEMANTIC_SHA256))
 
     lines = [
-        "LRC14 reflected D<=5 and m>=3D wedge exact dependency assembly",
+        "LRC14 reflected D<=5 and m>=D wedge exact dependency assembly",
         "universe=E subset {1,...,14},|E|=6;3003 bodies;q_e positive integers;m=min q_e;D=max q_e-min q_e",
         "D0_D2=universal good-edge chromatic theorem:at most three level values",
         "D3=3001 complete good graphs by pigeonhole plus two exceptional proper-four-colour rays",
@@ -256,8 +296,8 @@ def main() -> None:
         "D5=head m=1..15 plus cross-determinant tail m>=16;all 3003 bodies",
         "conclusion_1=every reflected THM-2941 residual packet with D<=5 closes for every m>=1",
         "conclusion_2=bodywise bank closes 2442/3003 bodies for arbitrary positive reflected levels;561 bodies are uncovered",
-        "conclusion_3=every reflected THM-2941 residual packet with D>=6 and m>=3D closes",
-        "remaining_wedge=561 bank-uncovered bodies only;D>=6;1<=m<3D",
+        "conclusion_3=every reflected THM-2941 residual packet with D>=6 and m>=D closes",
+        "remaining_wedge=561 bank-uncovered bodies only;D>=6;1<=m<D",
         "logical_status=three conclusions are incomparable inputs to the final intersection;none is arbitrary k<=1 or physical-survivor classification",
         "D5_head_counts=raw:7851600;crossdet:7835524;median_residual:16076",
         f"D5_residual_counts_by_m={EXPECTED_D5_RESIDUAL_COUNTS}",
