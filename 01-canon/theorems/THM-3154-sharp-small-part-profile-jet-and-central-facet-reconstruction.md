@@ -2,7 +2,7 @@
 id: THM-3154
 title: "Sharp small-part profile jet and central-class/facet reconstruction"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For partitions of N, length together with the multiplicities of parts
   1 through floor((N-2)/2) is a faithful code.  The cutoff is sharp among
   initial small-part flags.  Its multivariate endpoint factorial jet recovers
@@ -13,6 +13,13 @@ status: >
   observer, not a positivity proof or a source of unspecified coefficient
   values.
 source: root/multiscale-newton-flag/low-child-flag-extension-2026-08-02
+audit: >
+  Two independent hostile audits rederived the sharp faithful-code bound and
+  witnesses, marked one-letter and virtual-pole kernels, multivariate upper
+  binomial inversion, full Hasse-facet typing, conjugacy-class and specified
+  central-function scope, and the labelled-charge/Frobenius-shadow boundary.
+  Fresh normal and optimized executions both reproduce the stored transcript
+  and declared LF hashes exactly.
 depends_on:
   - THM-3127-partition-refinement-strassen-upset-dual-and-filter-response
   - THM-3129-bounded-poset-upset-facet-irredundancy
@@ -32,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3154 -- sharp small-part profile jet and central-class/facet reconstruction
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3147 finds that length and one singleton coordinate expose every
 nonprincipal Hasse failure in its finite active-prefix bank.  That empirical
@@ -327,4 +334,4 @@ exists, that a central operator is positive semidefinite, or that a positive
 holotopy exists.  It proves no new instance of NC2, GMC, LRC(14), JC(2), or
 DC(2).
 
-**QED (candidate pending independent hostile audit).**
+QED.
