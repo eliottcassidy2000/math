@@ -336,7 +336,9 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-3068 shows pole/residue/trace ledgers still permit a punctured `C3`;
   polynomial `A2` regularity and constant units are the missing gate.
   THM-3067's 12-flag `A4` bitorsor loses its `V4` origin in the `C3` quotient;
-  odd reflection and physical realization remain sidecars.
+  THM-3072 shows that all three conjugate `C2` quotient tables reconstruct it,
+  while the edge/cycle pair alone loses an exact three-dimensional character
+  sector.  Odd reflection and physical realization remain sidecars.
   THM-2862/2864/2968/2971 give two sextic
   lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
   affine sidecars remain.  THM-2867 gives the regular `S3` carrier.  THM-2871 makes that face unramified and

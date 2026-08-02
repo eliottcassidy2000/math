@@ -2,8 +2,8 @@
 id: THM-3072
 title: "A4 flag three-C2 tomography and edge-cycle cospan"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  The regular twelve-flag A4 torsor has three conjugate C2
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The regular
+  twelve-flag A4 torsor has three conjugate C2
   quotients.  One is the six edges of K4, one is the six oriented
   Hamiltonian cycles, and the third is their missing conjugate chart.  The
   edge/cycle joint label is pointwise injective, with image three disjoint
@@ -30,8 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3072 -- A4 flag three-C2 tomography and edge-cycle cospan
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Three binary quotients of one tetrahedral flag torsor
 
@@ -310,7 +309,10 @@ fibre laws; left-`A_4` equivariance; the three `K_(2,2)` joint components;
 the rational projector identities; every rank in `(22)`; the explicit blind
 basis `(26)--(27)`; and the odd-reflection action `(12)`.  Every truth-bearing
 gate uses an explicit exception rather than Python `assert`, so optimized
-mode verifies the same claims.
+mode verifies the same claims.  The independent hostile audit rebuilt the
+quotient partitions and all ranks without importing the companion, rederived
+the projector algebra and explicit blind basis, and checked the edge/cycle,
+odd-conjugation, characteristic, and nonphysical-scope boundaries.
 
 LF-normalized SHA256:
 
@@ -319,4 +321,4 @@ script  33fd5a86dc4c3e538b6571b887664bbf5a65dbd50abf11cb4026e05f3dffbb96
 output  7108138115636f551c7baa0027eccdc5c370af00a6d286ed9230fc3ccdf65b97
 ```
 
-**QED, conditional only on independent hostile audit for promotion.**
+**QED.**
