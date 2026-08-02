@@ -328,23 +328,19 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2703/2708 identify the general boundary object as the saturated
   `H^1(U,mu_2)` gain-holonomy kernel, not a scalar Gram rank.  THM-2743--2780
   refine the `V4`, opposition, and inertia typing but still supply no
-  equivariant Kummer realization.  THM-3057 gives the exact tame height-one
-  quartic invoice, and THM-3059 shows after reciprocal reversal that the
-  cleared discriminant exponent is odd exactly when infinity inertia is an
-  odd permutation.  Its generic-`S4` two-jet and planar families have exact
-  Jelonek loci with `C3` escape and even exponent, refuting HYP-9027 only in
-  its former general-dominant scope.  On the `S4` Keller lane at least one odd
-  component is forced, but excluding every Keller `C3` component remains
-  OPEN and needs branchwise cofactor units.  THM-3066 retains only their
-  product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
+  equivariant Kummer realization.  THM-3057/3059 identify cleared-discriminant
+  parity with tame inertia sign and supply non-Keller `C3` hostiles; uniform
+  Keller-`C3` exclusion remains OPEN.  THM-3064 decodes a supplied pointed
+  pair, while THM-3066 retains only the sheetwise cofactor product.
   THM-3068 permits `C3`; THM-3070/3074/3080 force a finite local Laurent-key
   tower ending at gcd one, and THM-3081 makes its terminal residue Mobius with
-  a square decoder.  Globalization and arbitrary Jelonek straightening remain
-  OPEN.
-  THM-3067's `A4` bitorsor loses `V4` origin under `C3`.  THM-3072 recovers it
-  from three `C2` tables; edge/cycle loses a 3D character sector.  THM-3076
-  extends this to prime affine-plane tomography, with the characteristic-`p`
-  nilpotent boundary.  Reflection/physical realization are sidecars.
+  a square decoder.  THM-3127 identifies the genuine local resolvent map: at
+  a pure `C3` place the ramified source and full `S4/V4` resolvent completions
+  coincide, all matching Kummer roots are squares, and `v(q)` gives an exact
+  `3|v(q)` Newton/discriminant gate.  The decoder therefore needs multi-place,
+  marked, unit, or class-group gluing to recover nonzero `V4` data.
+  Globalization and arbitrary Jelonek straightening remain OPEN.  THM-3067/
+  3072/3076 locate the complementary marked/tomographic sidecars.
   THM-2862/2864/2968/2971 give two sextic
   lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
   affine sidecars remain.  THM-2867 gives the regular `S3` carrier.  THM-2871 makes that face unramified and
