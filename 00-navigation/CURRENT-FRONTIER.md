@@ -338,9 +338,10 @@ Classify profiles under support operations; study analytic continuation and auto
   congruence shadow loses its `V4` origin; THM-3067/3072/3076 locate marked and
   tomographic sidecars.  THM-3201 splits the pure-`C3` Kummer packet, with
   `3|v(q)` the exact Newton/discriminant gate and `[q_0]=[K]^m` saturated.
-  THM-3230's marked-sheet trace-centered norm recovers intrinsic
-  `Lambda=[L theta^(A-1)]` even when `3|m`; global marking, multi-place gluing,
-  and arbitrary Jelonek straightening remain OPEN.
+  THM-3230's marked-sheet centered norm recovers intrinsic `Lambda` even when
+  `3|m`.  THM-3270 identifies the four `Gamma(3)` peripheral classes with the
+  four sheets: a coherent mark exists exactly for point-stabilizer holonomy;
+  geometric realization, unit gluing, and Jelonek straightening remain OPEN.
   THM-2862/2864/2968/2971 give two sextic
   lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
   affine sidecars remain.  THM-2867 gives the regular `S3` carrier; THM-2871

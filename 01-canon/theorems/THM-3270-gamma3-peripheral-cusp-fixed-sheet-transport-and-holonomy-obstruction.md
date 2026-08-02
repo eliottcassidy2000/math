@@ -2,7 +2,7 @@
 id: THM-3270
 title: "Gamma(3) peripheral-cusp fixed-sheet transport and holonomy obstruction"
 status: >
-  PROVED + VERIFIED-EXACT.  For G=PSL2(Z)=C2*C3, N=barGamma(3),
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For G=PSL2(Z)=C2*C3, N=barGamma(3),
   and T=SR, the four N-cusps N\G/<T> are equivariantly identical to
   P1(F3), hence to the four sheets of the tetrahedral A4 action.  The cusp
   represented by g carries the N-conjugacy class of g<T^3>g^-1; in the
@@ -19,6 +19,12 @@ status: >
   pure-C3 stabilizers do.  This constructs no geometric/rational section,
   cross-place norm gluing, Keller cofactor, C3/S4 exclusion, or JC(2)
   theorem.
+audit: >
+  An independent audit rederived the cusp double-coset bijection, parabolic
+  normalizer gate, integral tetrahedral face basis, A4/S4 orientation rule,
+  lift-independent conjugacy transport, subgroup fixed-point criterion,
+  V4 and two-C3 hostiles, and twelve-flag completion.  Fresh normal and
+  optimized runs byte-match the stored transcript and declared hashes.
 source: jc-global-mark-gamma3-2026-08-02
 depends_on:
   - THM-3141-quartic-v4-modular-congruence-shadow-and-gamma3-sidecar-boundary
@@ -38,7 +44,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3270 -- the lost level-three cycle carries a sheet exactly when it is peripheral
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and exact answer
 
