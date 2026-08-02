@@ -2,7 +2,7 @@
 id: THM-3086
 title: "Arbitrary cluster-composition chambers and alternant clutch holotopy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  Every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every
   ordered composition of the remote slots into fixed-gap clusters gives an
   explicit nonempty simultaneous scale chamber above an arbitrary physical
   three-slot base.  The final carrier has a closed factorial ledger, every
@@ -11,6 +11,13 @@ status: >
   alternant-clutch theorem identifies the symbolic gluing law, but its
   growing-gap physical realization is not asserted here.
 source: root-gmc-cluster-composition-2026-08-01
+audit: >
+  Two independent hostile audits reconstructed the exact node quotient,
+  q=1 and multi-normal gaps, entropy invoice without a factor two, closed
+  carrier and determinant exponents, automatic internal-prefix control,
+  eight-slot threshold, and the arbitrary multiblock clutch sign and rate
+  gap.  Normal and optimized replay matched the 630-byte stored transcript
+  and declared LF hashes; documentation passed.
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
   - THM-3069-one-normal-remote-terminal-suspension-and-physical-tropical-flag
@@ -30,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3086 -- arbitrary cluster-composition chambers
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3082 allows one-point and two-point suspension words.  THM-3085 supplies
 one cluster of arbitrary fixed size.  Combining the exact quotient before
@@ -384,4 +391,4 @@ python -O 04-computation/gmc_cluster_composition_chambers_thm3086.py
 
 Both modes must equal the stored transcript after LF normalization.
 
-**QED, pending independent audit and status promotion.**
+**QED.**
