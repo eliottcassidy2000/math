@@ -11,10 +11,11 @@ status: >
   two-jet map (x,xz^2+y,xyz^2+z) has generic Galois group S4, exact Jelonek
   set {u=0}, C3 inertia there, and cleared discriminant exponent 8.  It
   belongs to an exact two-parameter S4 family whose Newton wall a=2b
-  separates ternary C3 escape from binary transposition escape.  This refutes
-  HYP-9027's general-dominant odd-exponent clause.  The nonconstant Jacobian
-  puts the separate odd discriminant factor on an ordinary critical branch,
-  so the Keller-restricted odd-inertia question and JC remain open.
+  separates ternary C3 escape from binary transposition escape, and it has a
+  simpler planar S4 shadow (x,x^m y^4+y) with cleared exponent 4m.  This
+  refutes HYP-9027's general-dominant odd-exponent clause.  The nonconstant
+  Jacobians put the separate odd discriminant factors on ordinary critical
+  branches, so the Keller-restricted odd-inertia question and JC remain open.
 source: codex-jc-resolvent-bridge-2026-08-01
 depends_on:
   - THM-2455-quartic-swallowtail-scaffold-and-endpoint-corrections
@@ -26,8 +27,8 @@ related:
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
 script: 04-computation/quartic_twojet_even_jelonek_c3_escape_thm3059.py
 output: 05-knowledge/results/quartic_twojet_even_jelonek_c3_escape_thm3059.out
-script_sha256: 8f522f5fc4ad3a49c03ab38dfa5cd0b849429f5b73cb4366f84807e8a6824647
-output_sha256: ea093d86c946c628eebe6f5d7e26dfcccfc131e973f13479442e0fda80d409a6
+script_sha256: 16a1d4813950bc623a48f99e0d140f5aff69b465ff872378cd14815084abb694
+output_sha256: af579b31fd427579cfcf6797e9d10a7c794646d8452e6a65d60ba7809fd50b26
 hash_basis: LF-normalized bytes
 ---
 
@@ -348,11 +349,25 @@ four with primitive fiber polynomial
 N_(a,b)=u^(a+b)T^4-u^b vT^2-T+w.                         (33b)
 ```
 
-It is finite over `u!=0`, while the specialization at `u=0` has degree at
-most two.  Puiseux continuation of the lost roots proves that its Jelonek
-set is again exactly `{u=0}`.  The same degree-four polynomial-map argument,
-degree-three rational resolvent, and odd pole at `w=infinity` prove that the
-generic Galois group is `S4` for every `(a,b)`.
+It is finite over `u!=0`.  At `u=0`, the specialization is `-T+w` when
+`b>0`, of degree one, and `-vT^2-T+w` when `b=0`, of degree at most two.
+For every fixed `(v,w)`, projective root specialization therefore puts at
+least two roots at infinity; Newton--Puiseux continuation supplies Laurent
+branches above the exact target curve `(u,v,w)=(s^e,v,w)`.  Hence every point
+of the plane is nonproper and the Jelonek set is again exactly `{u=0}`.
+
+The same degree-four polynomial-map argument proves quartic irreducibility.
+For the monic quartic, the standard resolvent equation solves as
+
+```text
+w=u^(a+b)(W-vu^(-a))^2/4-1/(4W u^(a+b)).                 (33b1)
+```
+
+After putting the right side over a common denominator, its numerator has
+degree three in `W`; the nonzero constant term prevents a common `W` factor.
+Thus this is a reduced degree-three rational map and the resolvent is
+irreducible.  Together with the odd pole of the discriminant at `w=infinity`,
+this proves that the generic Galois group is `S4` for every `(a,b)`.
 
 The full discriminant is
 
@@ -397,6 +412,108 @@ and binary tower grammars.  It does not identify those grammars abstractly:
 the common object is the reciprocal Newton polygon, and the preserved
 predicate is precisely inertia sign.  The original example is the first
 ternary cell `(a,b)=(1,1)`.
+
+There is a sharper unit-level stopping boundary.  For the whole family,
+
+```text
+J_(a,b)=1+2x^b y z-2x^(a+b)z^3,
+(partial_T N_(a,b))|_F=-J_(a,b).                         (33g)
+```
+
+In the ternary regime `a<2b`, put `u=s^3` and
+`z=s^(-(a+b))Z`.  After multiplying the fiber equation by `s^(a+b)`,
+the escaping face is
+
+```text
+Z^4-s^(2b-a)vZ^2-Z+ws^(a+b)=0.                          (33h)
+```
+
+At an escaping root `Z^3 -> 1`, while
+
+```text
+partial_T N_(a,b)
+ =4Z^3-2s^(2b-a)vZ-1 -> 3.                              (33i)
+```
+
+The finite root has `T->w` and derivative `-1`.  Hence the Jacobian residues
+on the four branches are
+
+```text
+finite branch: 1;                 C3 orbit: -3,-3,-3.    (33j)
+```
+
+All four Jacobian valuations are zero.  Thus a valuation-only or matching-
+clutch test cannot see why this family is non-Keller; the obstruction is the
+incompatible **unit residues** in (33j).  In a general primitive-element
+chart the chain rule inserts the cofactor
+
+```text
+det(partial(u,v,z)/partial(x,y,z))                       (33k)
+```
+
+between `partial_T N` and the physical Jacobian.  Any attempt to exclude a
+Keller `C3` component must therefore retain that cofactor and its residue on
+each normalization branch.  This is a more precise sidecar than another
+discriminant valuation.
+
+### 6.1 The planar quartic shadow
+
+The same object occurs before any three-variable two-jet presentation.  For
+`m>=1`, define the planar polynomial map
+
+```text
+G_m:A^2 -> A^2,             G_m(x,y)=(x,x^m y^4+y).       (33l)
+```
+
+Its primitive fiber quartic is
+
+```text
+P_m(T)=u^mT^4+T-v,                                       (33m)
+```
+
+and direct calculation gives
+
+```text
+Disc(P_m)=-u^(2m)(27+256u^m v^3),
+Disc(P_m/u^m)=-(27+256u^m v^3)/u^(4m).                  (33n)
+```
+
+Thus the primitive discriminant order is `2m` and the cleared exponent is
+`4m`, always even.  The map is finite over `u!=0`; at `u=0` its fiber degree
+drops from four to one, and the same Puiseux argument proves that its Jelonek
+set is exactly the line `{u=0}`.
+
+Irreducibility follows from the degree-four polynomial map
+`T -> u^mT^4+T`.  The cubic resolvent is irreducible because solving it gives
+
+```text
+v=(1-u^(2m)W^3)/(4u^mW),                                 (33n1)
+```
+
+a reduced rational function of degree three.  The second factor in (33n)
+has odd degree three in `v`, hence is nonsquare.  Therefore the generic
+Galois group is again `S4`.  At `m=1`, the arithmetic control
+
+```text
+T^4+T-1,        W^3+4W-1,        Disc=-283              (33o)
+```
+
+has irreducible quartic modulo two, irreducible cubic by the rational-root
+test, and nonsquare discriminant.
+
+The reciprocal Newton points are `(0,m),(3,0),(4,0)`.  Hence the escaping
+inertia is `C3` exactly when `3` does not divide `m`, and is trivial when the
+slope is integral.  Finally,
+
+```text
+J_(G_m)=1+4x^m y^3=(partial_T P_m)|_(u,v)=G_m(x,y).      (33p)
+```
+
+The finite branch again has Jacobian residue `1`, while the three escaping
+branches have residue `-3`.  This planar family proves that the
+parity/inertia and unit-residue phenomena belong to the quartic inverse
+object itself.  They are not artifacts of suspension or of the vector
+two-jet frame.
 
 ## 7. Where the odd discriminant went
 
@@ -491,5 +608,6 @@ the eliminant, Jacobian derivative, primitive and monic discriminants,
 quartic-resolvent discriminant equality, rational-map degree certificates,
 reciprocal polynomial and Newton data, exact Puiseux chart, index invoice,
 all five tame cycle-type parity rows, and the discriminant-order formula on
-the exact grid `1<=a<=5`, `0<=b<=5`.  Every truth-bearing check uses an
-explicit runtime exception rather than a Python assertion.
+the exact grid `1<=a<=5`, `0<=b<=5`.  It also checks the planar formulas for
+`1<=m<=6` and the arithmetic `S4` specialization (33o).  Every truth-bearing
+check uses an explicit runtime exception rather than a Python assertion.

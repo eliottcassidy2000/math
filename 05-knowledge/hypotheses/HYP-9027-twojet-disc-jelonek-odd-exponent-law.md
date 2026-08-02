@@ -94,7 +94,9 @@ unramified-fiber checks).
   `N=6v(ell)-(d_sigma+2i)`, hence `N mod 2` is the sign of infinity inertia.
   The remaining Keller task is geometric: exclude C3 infinity inertia at a
   Jelonek component, or prove that it forces a forbidden finite critical
-  divisor.
+  divisor.  THM-3059's family shows that all Jacobian valuations can remain
+  zero; the missing local sidecar is the branchwise unit residue of the
+  primitive-element Jacobian cofactor.
 - G6 (decoupling search): a proper 2-jet map with
   Galois not contained in A_4 would decouple "square disc" from
   "proper".  The other requested decoupling now exists: THM-3059 is a

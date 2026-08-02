@@ -84,6 +84,10 @@ def main() -> None:
     require(sp.expand(hensel_poly.subs(s, 0) - Z * (Z**3 - 1)) == 0, "special escape fiber")
     require(sp.diff(hensel_poly, Z).subs({s: 0, Z: 0}) == -1, "finite branch is simple")
     require(sp.diff(hensel_poly, Z).subs({s: 0, Z: 1}) == 3, "escaping Hensel branch is simple")
+    derivative_escape_chart = sp.expand(sp.diff(N, T).subs({u: s**3, T: s**-2 * Z}))
+    require(sp.expand(derivative_escape_chart - (4 * Z**3 - 2 * s * v * Z - 1)) == 0, "escape derivative chart")
+    require(derivative_escape_chart.subs({s: 0, Z: 1}) == 3, "escaping derivative residue")
+    require(sp.diff(N, T).subs({u: 0, T: w}) == -1, "finite derivative residue")
 
     # Standard cubic resolvent.  X=uW changes it into a generic degree-three
     # rational map in X; the quartic itself is a generic degree-four
@@ -156,6 +160,25 @@ def main() -> None:
             if a >= 2 * b:
                 require(family_clearing == 5 * a + 2 * b, f"binary family exponent a={a},b={b}")
 
+    # Planar shadow G_m=(x,x^m y^4+y).  This carries the same one-finite plus
+    # C3-escape anatomy without the two-jet presentation.
+    planar_map = sp.Matrix((x, x * y**4 + y))
+    planar_jacobian = sp.factor(planar_map.jacobian((x, y)).det())
+    require(sp.expand(planar_jacobian - (1 + 4 * x * y**3)) == 0, "planar shadow Jacobian")
+    for m in range(1, 7):
+        planar_N = sp.expand(u**m * T**4 + T - v)
+        planar_disc = sp.factor(sp.discriminant(planar_N, T))
+        expected_planar_disc = -u ** (2 * m) * (27 + 256 * u**m * v**3)
+        require(sp.expand(planar_disc - expected_planar_disc) == 0, f"planar family discriminant m={m}")
+        require(valuation_u(planar_disc, u) == 2 * m, f"planar family discriminant order m={m}")
+        require(6 * m - valuation_u(planar_disc, u) == 4 * m, f"planar family clearing m={m}")
+    planar_control = sp.Poly(T**4 + T - 1, T, domain=sp.QQ)
+    planar_resolvent_control = sp.Poly(W**3 + 4 * W - 1, W, domain=sp.QQ)
+    require(sp.Poly(T**4 + T + 1, T, modulus=2).is_irreducible, "planar quartic control mod 2")
+    require(planar_control.is_irreducible, "planar quartic control over Q")
+    require(planar_resolvent_control.is_irreducible, "planar resolvent control over Q")
+    require(sp.discriminant(planar_control.as_expr(), T) == -283, "planar S4 control discriminant")
+
     print("theorem=THM-3059")
     print("status=PROVED_VERIFIED_EXACT")
     print("map=(x,x*z^2+y,x*y*z^2+z)")
@@ -173,6 +196,9 @@ def main() -> None:
     print("parity_formula=E=6*v(leading)-(4-number_of_inertia_orbits+2*order_index)")
     print("family=F_ab=(x,x^a*z^2+y,x^b*y*z^2+z);disc_order=min(2a+2b,a+4b);wall=a=2b")
     print("family_clearing=a<=2b:4(a+b);a>=2b:5a+2b")
+    print("C3_unit_residues=finite_Jacobian:1;three_escaping_Jacobian:-3")
+    print("planar_family=G_m=(x,x^m*y^4+y);disc=-u^(2m)*(27+256*u^m*v^3);clearing=4m")
+    print("planar_S4_specialization=m=1,u=1,v=1;quartic=T^4+T-1;resolvent=W^3+4W-1;disc=-283")
     print("conclusion=general_dominant_odd_Jelonek_law_refuted;Keller_restricted_law_open")
 
 

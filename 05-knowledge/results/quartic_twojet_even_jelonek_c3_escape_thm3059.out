@@ -15,4 +15,7 @@ monic_discriminant=(16*u**2*v**4*w - 128*u**2*v**2*w**2 + 256*u**2*w**3 + 4*u*v*
 parity_formula=E=6*v(leading)-(4-number_of_inertia_orbits+2*order_index)
 family=F_ab=(x,x^a*z^2+y,x^b*y*z^2+z);disc_order=min(2a+2b,a+4b);wall=a=2b
 family_clearing=a<=2b:4(a+b);a>=2b:5a+2b
+C3_unit_residues=finite_Jacobian:1;three_escaping_Jacobian:-3
+planar_family=G_m=(x,x^m*y^4+y);disc=-u^(2m)*(27+256*u^m*v^3);clearing=4m
+planar_S4_specialization=m=1,u=1,v=1;quartic=T^4+T-1;resolvent=W^3+4W-1;disc=-283
 conclusion=general_dominant_odd_Jelonek_law_refuted;Keller_restricted_law_open
