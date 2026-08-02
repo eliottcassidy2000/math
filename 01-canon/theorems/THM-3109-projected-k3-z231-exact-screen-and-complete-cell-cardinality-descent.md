@@ -2,11 +2,19 @@
 id: THM-3109
 title: "Projected k3 z231 exact screen and complete-cell cardinality descent"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING IMMUTABLE INDEPENDENT AUDIT.
-  All nine rows in the pinned projected k=3, z1=231 necessary layer are
-  empty.  Promotion would make the projected ledger 374313 and its cap
-  z1<=230.  The fifty z1=230 rows remain occupied.  No LRC(14) claim is made.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  All nine rows
+  in the pinned projected k=3, z1=231 necessary layer are empty.  The
+  projected ledger is 374313 and its cap is z1<=230.  The fifty z1=230
+  rows remain occupied.  No LRC(14) claim is made.
 source: root/lrc14-projected-k3-z231-2026-08-02
+audit: >
+  An independent referee rebuilt all nine screens and the sole terminal,
+  scanned every one of the 360360 complete cells without serialized carrier
+  data, and checked both projected supports.  A first immutable audit caught
+  and repaired a reversed prose inclusion: the weak complete cells form an
+  inner carrier in the strict-open safe set.  Repaired normal, optimized,
+  and stored transcripts are byte-identical; dependencies, hashes, semantic
+  digest, directions, ledger, next-layer census, docs, and diff checks pass.
 depends_on:
   - THM-3106-projected-k3-z232-exact-screen-and-complete-cell-cardinality-descent
   - THM-3078-z234-direct-farkas-normalization-and-four-two-high-boundary
@@ -23,7 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3109 -- projected k3 z231 exact screen and complete-cell cardinality descent
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING IMMUTABLE INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Exact layer statement
 
@@ -227,4 +235,4 @@ pinned projected `k=3` necessary atlas.  It does not classify physical
 covers outside that projection, treat arbitrary `k<=1` packets or the final
 rung, or prove LRC(14).
 
-**QED candidate, pending immutable independent audit.**
+**QED.**
