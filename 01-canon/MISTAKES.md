@@ -9,6 +9,22 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-346 (2026-08-01, concurrent THM-3063 reservations) -- two distinct results acquired the same new theorem ID
+
+- **What happened:** the audited quartic cofactor-blindness theorem was frozen
+  as THM-3063 on a topic branch while a concurrent session reserved THM-3063
+  on `origin/main` for the five-slot terminal-suspension theorem.  Both landed
+  in one merge before the cross-branch identifier check was repeated.
+- **Why it was wrong:** filename checks in one worktree do not see an unmerged
+  remote topic reservation, and a clean fetch cannot prevent a reservation
+  pushed after that fetch.  The mathematical statements were distinct, but
+  the shared YAML ID made theorem references ambiguous.
+- **Repair / rule:** the cofactor-blindness theorem, companion, output, and
+  current routes move together to THM-3066; the empty THM-3063 suspension stub
+  retains its first-on-main namespace.  Before final promotion, recheck IDs
+  against both `origin/main` and all fetched topic refs, and repeat after the
+  last merge; a reservation is not complete until its ID is globally unique.
+
 ## MISTAKE-344 (2026-08-01, THM-3052 pre-promotion evidence audit) -- a final wording repair changed the frozen transcript length without updating the theorem's byte count
 
 - **What was done:** THM-3052's status-neutral evidence repair changed the

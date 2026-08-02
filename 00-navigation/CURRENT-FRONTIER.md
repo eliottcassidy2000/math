@@ -333,7 +333,7 @@ Classify profiles under support operations; study analytic continuation and auto
   its former general-dominant scope.  On the `S4` Keller lane at least one odd
   component is forced, but excluding every Keller `C3` component remains
   OPEN and needs branchwise Jacobian-cofactor unit data, not another
-  discriminant scalar.  THM-3063 proves the natural THM-3058 matching
+  discriminant scalar.  THM-3066 proves the natural THM-3058 matching
   augmentation cannot supply it: vertex-gauged matchings retain only the
   product of four cofactors, while a `C3`-equivariant product-one twist changes
   the sheetwise Keller values.  The missing invariant is the pointed

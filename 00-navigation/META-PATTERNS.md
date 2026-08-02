@@ -54,7 +54,7 @@ if it vanishes, locate common zero and evaluate a target-bearing
 transverse layer. **Mechanism:** this exposes the valuation,
 carry, or Gram defect; physical structure may select a finite next layer when
 arbitrary lifts cannot. **Counterindication:** require a seed and labels:
-THM-3058 has no bounded jet on an arbitrary zero face, while THM-3063 erases
+THM-3058 has no bounded jet on an arbitrary zero face, while THM-3066 erases
 the pointed Keller ratio. **Evidence:** THM-2022, THM-2159/2165,
 THM-2193/2298, THM-3058, and the THM-3060/3062 transverse hierarchy.
 
