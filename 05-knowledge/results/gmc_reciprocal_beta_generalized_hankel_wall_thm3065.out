@@ -1,0 +1,11 @@
+THM-3065 RECIPROCAL BETA GENERALIZED HANKEL WALL
+gregory_newton_cells=1152 integer_termination_cells=162
+generalized_minor_cells=53312 forward=9996 equal=6664 nonintegral=23324 integer=13328
+one_sided_alternant_cells=5712 contiguous_formula_cells=504
+integer_wall_cells=72 wall_table_digest=69a16aa0cd2a895c91d503ea018ad6e75b0fd7adcaf9baeecc0a776551f94e7e
+mesh_prefix_cells=27 base_prefixes=26,32,40,46,54,60,46 actual_gap_cells=120 terminal_prefix=46
+reciprocal_carrier_minor_cells=26656 finite_signature=(-1)^binom(order,2)
+dual_prefix_hostile_signs=H3:1,H4:-1 h2_survivor_cells=441 strict_repair_cells=6664
+exact_value_digest=f652d6f6865e4a725d53431fa8b389baabd56e066f65edccc21278123618adde
+scope=single_ratio_all_orders;carrier_reciprocal_higher_orders_finite_only
+all_exact_checks=PASS
