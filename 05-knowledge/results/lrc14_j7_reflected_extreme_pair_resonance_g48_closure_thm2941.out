@@ -1,0 +1,32 @@
+LRC14 reflected extreme-pair resonance rays and g48 tail
+universe=residual_bodies:561;physical_orientations:30;profiles:50490;same_level_exceptions_disjoint:((1, 2, 7, 9, 11, 13), (2, 4, 7, 9, 11, 13))
+ratio_classification=for coprime P<Q with Q>3P,the condition P+Q<=7 gives exactly ((1, 4), (1, 5), (1, 6));all other channels have inherited primitive floor 1/105
+primitive_optimizer=on each safe integer range,minimize the convex endpoint radius at range endpoints and integers adjacent to kL/h-1/2;h=P*b-Q*a;h=0 uses first safe cell
+R4_profile=minimum:3/112;row:((1, 2, 3, 4, 6, 12), (5, 4), 155, 39, 42, -42, 168)
+R5_profile=minimum:2/105;row:((1, 2, 3, 4, 6, 12), (5, 3), 155, 52, 56, -56, 168)
+R6_profile=minimum:1/42;row:((1, 2, 3, 4, 5, 6), (0, 1), 779, 4, 244, -4, 840)
+finite_prefixes=R4:g2..16;R5:g2..21;R6:g2..18;rows:875160;weakest_margin:8011730170/531042645861;body:(1, 2, 3, 4, 6, 12);pair:(5, 0);R:6;g:2;cell:151;overlap:48/2015;debt:23192086126/2655213229305
+independent_engine_controls=g2 on every profile;rows:50490;integer_full-tooth_two-pointer_equals_promoted_Fraction_engine
+affine_transport=under u=(r+x)/g,the primitive fibre loses at most 4(a+b)/(gL);exact distinct debt and transport both decrease strictly with g
+R4_tail=start_g:17;weakest:1830813628341083957/4081224172991372132880@body=(1, 2, 3, 4, 6, 12),pair=(5, 4),cell=155,floor=3/112;prior_hostile_invoice:-12848328910247272/10754449400337062805
+R5_tail=start_g:22;weakest:949961811207548632/1178577790606909135905@body=(1, 2, 3, 4, 6, 12),pair=(5, 3),cell=155,floor=2/105;prior_hostile_invoice:-2045008180052/33444939832927623
+R6_tail=start_g:19;weakest:249759800474998027/949285825547992885050@body=(1, 2, 3, 4, 6, 12),pair=(5, 4),cell=155,floor=1/42;prior_hostile_invoice:-32185011642260912/30857807938406456805
+generic_high_phase_tail=all nonresonant Q/P>3 channels with gcd scale g>=48;g48_weakest:2726527595145600839/13843540499574717938160@body=(1, 2, 3, 4, 6, 12),pair=(5, 4);g47_hostile:-48791489743358/36036573362694791523;g47_nonpositive_rows:1
+assembly=the physical extreme pair closes the complete rays Q/m=4,5,6;every other reduced channel with Q/m>3 closes when gcd(m,Q)>=48
+residual=inside the inherited D>=6 stage:561 bodies;m>=2;3<Q/m<23;Q/m not in {4,5,6};gcd(m,Q)<=47
+scope=reflected THM-2941 sufficient family only;not a physical-survivor census and not LRC14
+profile_digest=0ef8854e16019b4b20588f4528a91af922af859f378b58d30528124d12c992db
+finite_digest=eb4bf1b44d21794157ab384547eafe39402fb120c7fb954859d2162700e74450
+engine_digest=c0f387eefa34abe7f219f5e3c1ab090e786baa5627f6e8c0828dc25c98650a95
+tail_digest=02250a5bc50c59335367f831144833422a5fb377e964e39e2de60691da7a0572
+generic_digest=c2dcd8c542e6d38fc4b9032398807c0f75999008c32a1a98861c4d1f60125b1f
+normal_vs_python_O=BYTE_IDENTICAL
+q23_source_sha256=135e94154c400cb612c3f93d03557b121ddafe51f5f6cf064c057848acb72a1d
+q23_output_sha256=e97426ea5016b23beeee3e00ee24439bee37caddbc0528fc3ec53a112fc93131
+q23_semantic_sha256=88644e8527610dcfd9c1108889a533ceee5883aeb56a84ed0da5edb6891c7e5e
+low_source_sha256=416c36f16f7c821feb8d260882711d2717069147b8604a93ba60432785cf1d1c
+low_output_sha256=1a2863c10f32c0580ab7a5ac866df29f0ba38def1b9b713551cc27ae76676601
+low_semantic_sha256=0063d2beb7c627f1836576081689720d41f45a078b4b7b3e06aeb81574039248
+source_sha256=5ed1a4235466a801022b67342f6ded07cdea8e1449889ac3cc4b68ed5eb1d87f
+semantic_sha256=1fb9c1ee2f0c02e2033b940001b58a76232478a2ae94166e8d1f8cb3d54ae6ac
+all_exact_controls=PASS

@@ -20,7 +20,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) is first open.** THM-2923: `<=6` bodies; THM-2928: no aligned `k>=4`; THM-2995/3114: `k=2,3 <= 1579/225`; THM-2941's extreme-pair comb closes `m=1` and `D>=22m`, leaving `561` reflected bodies at `m>=2,2m<D<22m`. `k<=1`/rung open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
+1. **LRC(14) open.** Sectors remain. THM-2941 closes `m=1,D>=22m`, rays `4/5/6`, gcd `>=48`; residual: `561`, `m>=2,3<Q/m<23`, off rays, gcd `<=47`. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see

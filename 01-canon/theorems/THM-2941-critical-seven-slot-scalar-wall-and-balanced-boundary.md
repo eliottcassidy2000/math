@@ -41,11 +41,15 @@ status: >
   cap-3 theorem subsumes both cones.  The dependent gain relation (3/2)2=3
   accompanies its coupled-debt repair.  The remaining proved
   reflected certificate-failure locus is confined, inside the inherited
-  D>=6 stage, to those 561 bodies with m>=2 and 2m<D<22m.  The complete m=1
+  D>=6 stage, to 561 bodies with m>=2, 3<Q/m<23,
+  Q/m not in {4,5,6}, and gcd(m,Q)<=47.  The complete m=1
   branch is closed by its exact finite head and phase-free periodic-comb
   tail.  For m>=2, the physical global-min/global-max pair has exactly m
   full low teeth; its exact m=2 base, positive ray increment, and positive
-  Q-increment close the opposite cone D>=22m;
+  Q-increment close the opposite cone D>=22m.  Exact primitive-cell profiles,
+  875,160 finite rows, and affine tails close the complete ratio rays 4,5,6;
+  the inherited 1/105 high-phase floor closes every other ratio above three
+  when the gcd scale is at least 48;
   the finite censuses, full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is internal
   exact computation and proof audit; there is no Lean or external peer-review
@@ -289,6 +293,8 @@ verification:
   - 05-knowledge/results/lrc14_j7_reflected_extreme_pair_m1_complete_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_extreme_pair_q23m_cone_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_extreme_pair_q23m_cone_closure_thm2941.out
+  - 04-computation/lrc14_j7_reflected_extreme_pair_resonance_g48_closure_thm2941.py
+  - 05-knowledge/results/lrc14_j7_reflected_extreme_pair_resonance_g48_closure_thm2941.out
 ---
 
 # THM-2941 -- critical scalar wall, projected aligned closure, and A6 boundary
@@ -1476,9 +1482,156 @@ Consequently the current **proved** reflected obligation is confined to the
 m>=2,                    2m<D<22m.                        (25i13u)
 ```
 
-This is a
-sufficient-certificate residual, not a physical-survivor census.  More
-globally, the correction floor `c>=-12/49` makes phase zero imply `PQ<=12`,
+There is a further exact reduction inside this wedge.  Write the physical
+extreme levels in primitive coordinates
+
+```text
+m=gP,       Q=gR,       gcd(P,R)=1,       R>3P.           (25i13v)
+```
+
+The low-phase condition from `(25i5)` is `P+R<=7`.  In the range
+`R>3P`, coprimality and this sum bound force exactly
+
+```text
+(P,R)=(1,4),(1,5),(1,6).                                 (25i13w)
+```
+
+These three resonance rays admit a stronger located description.  Let `a`
+be the label at level `g`, let `b` be the label at level `Rg`, and put
+`h=b-Ra`.  On a body-safe integer cell `[j,j+1]`, the primitive fibre has
+transverse coordinate `z(s)=h(j+s)/L`.  For `d=||z||`, its exact density is
+
+```text
+F_(1,R)(z) = 1/(7R),                         d<=(R-1)/14,
+             ((R+1)/14-d)/R,     (R-1)/14<d<(R+1)/14,
+             0,                              d>=(R+1)/14. (25i13x)
+```
+
+For a fixed integer lift `k`, the largest distance on the cell is
+
+```text
+M(j,k)=max(|h j-kL|,|h(j+1)-kL|).
+```
+
+This is convex in `j` and is minimized at a safe-range endpoint or an
+integer adjacent to `kL/h-1/2`; when `h=0`, the first safe cell is exact.
+Enumerating only those complete candidates over all `561*30` physical
+orientations gives the uniform cellwise primitive floors
+
+```text
+R=4: 3/112,          R=5: 2/105,          R=6: 1/42.     (25i13y)
+```
+
+The minima for `R=4,5` occur on `H=(1,2,3,4,6,12)` in orientations
+`(5,4),(5,3)`, both at cell `155`; the `R=6` primitive minimum is `1/42`
+on `(1,2,3,4,5,6)`, orientation `(0,1)`, cell `779`.
+
+The passage from a primitive fibre to the reflected slopes is uniform in
+the scale.  Subdivide by `u=(r+x)/g`.  The exact phases are
+
+```text
+P x-a(gj+r+x)/(gL),          R x-b(gj+r+x)/(gL).
+```
+
+Dropping the two final `x/(gL)` terms gives the primitive fibre above, and
+the total symmetric difference of the two clauses is at most
+`4(a+b)/(gL)`.  Hence at the selected cell
+
+```text
+pair overlap >= primitive floor - 4(a+b)/(gL).           (25i13z)
+```
+
+Subtract the exact six-distinct-level debt, with the four smallest interior
+levels `g+1,...,g+4` assigned in decreasing-label order.  Both the affine
+loss and every debt term decrease strictly with `g`.  The exact starting
+invoices are positive for
+
+```text
+R=4, g>=17;            R=5, g>=22;            R=6, g>=19.
+```
+
+The same invoices are negative one scale earlier on their hostile rows, so
+these thresholds are sharp for `(25i13z)` plus that debt invoice, not for the
+physical pair.  The finite prefixes `g=2..16`, `2..21`, and `2..18` are
+checked directly at the same selected cells: all
+
+```text
+561*30*(15+20+17)=875,160
+```
+
+rows are positive.  The weakest has `R=6,g=2` on `H`, orientation `(5,0)`,
+cell `151`:
+
+```text
+overlap = 48/2015,
+debt    = 23192086126/2655213229305,
+margin  = 8011730170/531042645861 > 0.                   (25i13aa)
+```
+
+An independent integer two-pointer formula uses the exactly `g` and `Rg`
+full teeth on the selected safe cell.  It agrees with the promoted Fraction
+interval engine on all `561*30*3=50,490` scale-two controls.  Together with
+the already proved `m=1` branch, this proves that the complete physical
+extreme-pair rays
+
+```text
+Q/m=4,5,6
+```
+
+are closed inside the reflected sufficient family.
+
+Every other reduced channel in `(25i13v)` has `P+R>=8`, so `(25i4)` supplies
+the phase-independent primitive floor `1/105`.  Also `P>=1` and `R>=7`.
+Consequently the actual distinct-level debt is termwise at most the
+surrogate debt with extreme levels `g,7g` and interior levels
+`g+1,...,g+4`.  On any safe cell,
+
+```text
+overlap-debt >= 1/105 - 4(a+b)/(gL)
+                       - debt_E,a,b(g,7g;g+1,...,g+4).   (25i13ab)
+```
+
+All `561*30` right sides are positive at `g=48`; the weakest is
+
+```text
+2726527595145600839/13843540499574717938160
+```
+
+on `H`, orientation `(5,4)`.  Each transport term and debt term strictly
+improves from `g` to `g+1`, proving the whole tail.  At `g=47`, exactly one
+surrogate row is nonpositive, the same `H,(5,4)` row, with value
+`-48791489743358/36036573362694791523`.  Thus `48` is sharp for the uniform
+surrogate invoice `(25i13ab)`, not for the underlying pair.  We have proved
+
+```text
+PROVED: if Q/m>3, Q/m not in {4,5,6}, and gcd(m,Q)>=48,
+        the physical extreme pair closes the reflected packet.             (25i13ac)
+```
+
+Combining `(25i13t)`, the three complete resonance rays, and `(25i13ac)`
+confines the current reflected sufficient-certificate obligation, inside
+the inherited `D>=6` stage, to
+
+```text
+561 bodies; m>=2; 3<Q/m<23; Q/m not in {4,5,6};
+gcd(m,Q)<=47.                                               (25i13ad)
+```
+
+This is not yet a finite primitive-channel box: for each of the remaining
+gcd scales, unbounded coprime `(P,R)` still occur.  It is a
+sufficient-certificate residual, not a physical-survivor census.
+
+The exact verifier is
+`04-computation/lrc14_j7_reflected_extreme_pair_resonance_g48_closure_thm2941.py`.
+Its LF source/output/semantic hashes are, respectively,
+`5ed1a4235466a801022b67342f6ded07cdea8e1449889ac3cc4b68ed5eb1d87f`,
+`817047f36413e0ee707bcdb92dd20475b554da740651f387da86587ec281663c`,
+and `1fb9c1ee2f0c02e2033b940001b58a76232478a2ae94166e8d1f8cb3d54ae6ac`.
+Ordinary and optimized replays are byte-identical.  The body-bound profile,
+finite-prefix, independent-engine, affine-tail, and generic-tail digests are
+recorded in the output.
+
+More globally, the correction floor `c>=-12/49` makes phase zero imply `PQ<=12`,
 so the zero-gain atlas is exactly
 
 ```text
