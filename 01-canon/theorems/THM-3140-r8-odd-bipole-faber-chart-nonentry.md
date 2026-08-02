@@ -8,9 +8,10 @@ status: >
   source chart.  Divisor support forces A_src=c(x^2-1)^6 and
   (x^2-1)^7|B_src; the exact infinity fan then forces s_F constant and d_F of
   degree at most two, making ord_infinity(K_Q)>=2, whereas the response
-  identity requires ord_infinity(K_Q)=-1.  This excludes the canonical
-  explicit odd-bipole, not every response with passport (11,11), and does not
-  prove the planar Jacobian conjecture.
+  identity requires ord_infinity(K_Q)=-1.  THM-3151 subsequently supersedes
+  this scope boundary by excluding every response in the (11,11) cell and
+  all later resonant equality cells; neither theorem proves the planar
+  Jacobian conjecture.
 audit: >
   An independent hostile derivation rebuilt the Faber rows, divisor argument,
   R=8 pole orders, all three infinity chambers, zero-polynomial boundaries,
@@ -25,6 +26,7 @@ depends_on:
   - THM-3133-common-simple-zero-faber-exclusion-and-odd-bipole-boundary
 related:
   - MISTAKE-317
+  - THM-3151-resonant-odd-bipole-equality-cell-nonentry-and-degree-floor
 script: 04-computation/jc_r8_odd_bipole_faber_chart_nonentry_thm3140.py
 output: 05-knowledge/results/jc_r8_odd_bipole_faber_chart_nonentry_thm3140.out
 script_sha256: 077b1f00db153af66e2666fb22e1ff448cf423756588a712fb1f0dfc6e5827da
@@ -261,9 +263,10 @@ flux cancellation.  Valuation alone forgets coefficients, the missing
 `R-1` row, and zero-polynomial boundaries; the exact wall resultant,
 polynomial-ring sidecar, and squarefree response are load-bearing.
 
-This theorem excludes one canonical realization of the first abstract
-passport `(11,11)`.  It does **not** exclude another response with that
-passport, another Faber branch, arbitrary chart entry, a Keller map, or
-`JC(2)`.
+This theorem itself excludes one canonical realization of the first abstract
+passport `(11,11)`.  THM-3151 later excludes every response with that
+passport by a response-independent infinity fan.  Neither result excludes
+another Faber branch or arbitrary chart entry, constructs a Keller map, or
+proves `JC(2)`.
 
 **End of proof.**

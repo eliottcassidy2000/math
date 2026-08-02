@@ -370,7 +370,9 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2831 excludes the cyclic `d=s=0` residual.  Nonzero `d` or `s`, other
   carriers/fluxes, global chart entry, and nonpolynomial-prefix degrees stay
   open.  THM-2799/2800/2805/2808 complete accessory `e=2`; THM-2817 the sextic `e=3`; THM-2840 the heptic `T_7` carrier.
-  THM-3123 completes the heptic atlas; THM-3133 isolates the first formal cell `R=8,N=22,(11,11)`; THM-3140 blocks its explicit odd-bipole, not every response.
+  THM-3123 completes the heptic atlas; THM-3133 isolates the resonant equality
+  cells; THM-3151 excludes every `(D,D)` cell and proves the balanced chart
+  floor `N>=4D`.
   General chart entry and `JC(2)`/`DC(2)` remain open.
 - **Factorial:** THM-3124/3131/3142/3143 close `r<=998` and every prime `d=r+2`, prime-power `d-1`, or prime `d-2`. Residual: `r>=999`; `d,d-2` composite; `d-1` not a prime power. `FC(3)`/`SFC(3)` remain OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
