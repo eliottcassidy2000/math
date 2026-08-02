@@ -2,7 +2,7 @@
 id: THM-3155
 title: "Sharp depth-four selector resurrection and degree-twelve death barcode"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   At support (1,3), bank I2, the cumulative selector space through degree 11
   is empty for all physical pole prefixes of depth at most three but becomes
   nonempty at depth four.  An explicit four-state rational law is strictly
@@ -13,6 +13,16 @@ status: >
   barcode cell.  This is an averaged virtual-prefix theorem, not a sequential
   stopping process or an original-response decomposition.
 source: root/multiscale-newton-flag/product-gamma-width3-2026-08-02
+audit: >
+  Two independent immutable audits reconstructed the depth/horizon
+  monotonicity, the 8+33+93+200 state census, the exact four-state law, all
+  23,941 strict upset inequalities and their unique minima, and every exact
+  max-flow equality through degree 11.  They separately rederived the
+  degree-12 singleton/max-flow hostile and the primitive five-positive-row
+  Farkas contradiction on all 334 states, including the exact range and
+  equality sets.  Both audits confirm the length-singleton compression and
+  the fixed-Q averaged-current scope.  Fresh normal and optimized runs
+  byte-match the stored 2,128-byte transcript and both declared LF hashes.
 depends_on:
   - THM-3115-low-degree-monomial-fibre-newton-refinement-transport
   - THM-3120-row-pole-prefix-newton-flag-positivity
@@ -31,8 +41,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3155 -- sharp depth-four selector resurrection and degree-twelve death barcode
 
-**PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3149 proves that allowing every physical pole prefix through depth three
 does not repair the THM-3144 common-section death at degree 11.  Depth four is
@@ -262,4 +271,4 @@ NC2, or Gaussian Moment Conjecture.  The next exact question is whether the
 two-dimensional barcode continues after adjoining depth-five states; that is
 a new theorem, not a consequence of `(17)`.
 
-QED (candidate pending independent theorem audit).
+QED.
