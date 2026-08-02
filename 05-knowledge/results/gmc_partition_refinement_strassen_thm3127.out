@@ -1,0 +1,8 @@
+duality:N=2:types=2:edges=1:upsets=3:vectors=5:passing=3:digest=9459046bd8bc6c995f57683d6684f7837b7a0315176e3c835d7e6a10646ed4b2
+duality:N=3:types=3:edges=2:upsets=4:vectors=19:passing=9:digest=8c65792caf749d9cd2bad9e011e16fe8ce0e646299b0c2fedf4144106d0e677a
+duality:N=4:types=5:edges=5:upsets=7:vectors=381:passing=105:digest=da219f76b70b6ae570040bef0b4e489841a911d4ab4c57112048972105912d62
+duality:N=5:types=7:edges=9:upsets=10:vectors=393:passing=112:digest=939e4d52c7584931b6e51aabec94ab74c961164fd99564ab7688e34805f9b5a8
+principal_hostile:N=4:vector=(1,-1,-1,1,0):principal_min=0:nonprincipal_upset=-1:PASS
+kernel_hostile:N=3:vector=(-1,3,-2):coarsest_upset=-1:PASS
+filter_identity:N=4:upsets=7:hq=1701:phih=3242:digest=9d9aee29240026aa8d71b781d7e1c0af1aa496db5816c5a26a212c959d4603dc:PASS
+all_exact_checks=PASS
