@@ -33,7 +33,7 @@ HOSTILE AUDIT.**
 ## 1. Inheritance and exact claim
 
 [THM-3076, finite affine-plane line tomography](THM-3076-finite-affine-plane-line-quotient-tomography-and-p2-three-view-law.md)
-separates the `q+1` projective directions in `F_q^2`.
+separates the `p+1` projective directions in `F_p^2` for prime `p`.
 [THM-3083, the exceptional binary/ternary clutch](THM-3083-exceptional-binary-point-ternary-direction-s4-tomography-clutch.md)
 then found two apparently competing integral facts at `q=3`: the normalized
 line projectors carry an `F_3^3` defect, while punctured-line idempotents give
