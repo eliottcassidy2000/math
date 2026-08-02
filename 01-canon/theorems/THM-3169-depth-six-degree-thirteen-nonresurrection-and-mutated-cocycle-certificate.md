@@ -225,4 +225,4 @@ kernel, no decomposition of the original response, and no statement about
 depth seven or the full 16-pole bank.  It does not establish arbitrary-radial
 NC2, the Gaussian Moment Conjecture, or LRC(14).
 
-QED (candidate pending independent audit).
+QED.

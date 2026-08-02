@@ -9,6 +9,19 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-358 (2026-08-02, THM-3169 stale post-QED status) -- a promoted theorem retained its candidate disclaimer
+
+- **What failed:** THM-3169's frontmatter and audit record correctly marked the
+  depth-six certificate `PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED`, but its final line still said
+  `QED (candidate pending independent audit)`.
+- **Why:** the promotion changed the maintained theorem status without removing
+  the provisional EOF suffix.  That contradiction is especially harmful here
+  because the exact depth-seven successor uses THM-3169 as its immediate
+  dependency.
+- **Repair:** replace the stale suffix by plain `QED.`.  No mathematical claim,
+  dependency, script, output, or hash changes.
+
 ## MISTAKE-357 (2026-08-02, THM-3163 stale post-QED status) -- a promoted theorem retained its candidate disclaimer
 
 - **What failed:** THM-3163's frontmatter and headline were correctly promoted
