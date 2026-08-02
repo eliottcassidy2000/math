@@ -2,7 +2,7 @@
 id: THM-3077
 title: "Pointed norm-augmentation lift and relation-carry obstruction"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  A weighted
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A weighted
   norm together with the full augmentation/relative phase class is a finite
   isogeny whose exact kernel is the diagonal group mu_W, where W is the sum
   of the weights.  Its fibre is a canonical Kummer lift torsor.  A point,
@@ -12,6 +12,13 @@ status: >
   physical pointer/common-atom and zero-carrier boundaries in GMC, LRC, and
   JC applications.
 source: root-norm-phase-sidecar-2026-08-01
+audit: >
+  Independent hostile audits rederived the weighted norm-augmentation
+  isogeny and its diagonal mu_W kernel, the fppf Kummer lift torsor, the
+  based continuation and exact winding carry, every torsion and Bezout
+  sidecar control, and the GMC/LRC/JC scope boundaries.  The immutable audit
+  additionally replayed normal and optimized execution against the stored
+  transcript, verified the declared LF hashes, and passed documentation.
 depends_on:
   - THM-3069-one-normal-remote-terminal-suspension-and-physical-tropical-flag
   - THM-3073-upper-triangular-resultant-norm-and-torsion-character-death-barcode
@@ -32,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3077 -- pointed norm-augmentation lift and relation-carry obstruction
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3073 proves that a separated resultant is a weighted norm of its lower
 and normal resultants.  Its scalar remembers magnitude and one relation but
@@ -358,4 +365,4 @@ does not supply the required physical pointer, common atom, parallel table,
 Kummer plane, simultaneous scale cone, root origin, semantic arrival, LRC
 row decrement, arbitrary-radial GMC(2), NC2, LRC(14), JC(2), or DC(2).
 
-**QED, pending independent audit and status promotion.**
+**QED.**
