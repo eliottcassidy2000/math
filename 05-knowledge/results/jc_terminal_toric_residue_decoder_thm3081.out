@@ -1,0 +1,14 @@
+theorem=THM-3081
+status=PROVED_VERIFIED_EXACT_CANDIDATE
+terminal_chart=Ag+Be=1;rho=r^A*m^B;theta=m^g/r^e
+initial_decoder=in_w(F)=rho^w*H_F(theta);H_F_rational
+residue_field=C(u)=C(theta)
+mobius=u=H_P(theta);degree(H_P)*degree(theta(u))=1
+target_initial=tau=rho^E*K(theta)
+prefactor_initial=u_N=rho^(E-e)*L(theta)
+autonomous_decoder=theta_prime=E*kappa^-1*theta^(1-A)*K(theta)/L(theta)
+strict_torsor=(m^g/r^e,m^gamma*r^delta);degree=gcd(g,e);kernel=mu_gcd(g,e)
+one_stage=theta=3u;H=theta/3
+two_stage=theta=9/u;H=9/theta;theta_prime=-theta^2/9
+three_stage=theta=81u;H=theta/81;theta_prime=81
+scope=terminal_associated_graded_residue_decoder;no_polynomial_globalization_or_C3_A4_S4_JC2_exclusion
