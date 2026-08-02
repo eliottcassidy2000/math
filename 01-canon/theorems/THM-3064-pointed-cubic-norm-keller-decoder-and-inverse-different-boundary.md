@@ -13,12 +13,16 @@ status: >
   cofactor to generate the inverse different, with exact ramified valuation
   -2.  But the fixed sheet is already separated by a unit cross-resultant:
   the THM-3038/3042 graph order is a direct product and supplies no
-  orbit/fixed congruence.  An exact local family changes the normalized
-  inverse-different unit, and hence rho, without changing the order or pole
-  data.  This is an abstract local-order hostile, not a polynomial-map
-  realization or a C3 Keller exclusion.
+  orbit/fixed congruence.  THM-2621 identifies the cofactor as the reciprocal
+  inverse-Jacobian numerator.  Its reduced degree makes the single shifted
+  resultant equivalent to the full sheetwise Keller congruence; only the
+  constant-field gate remains.  An exact split local pair
+  changes the normalized inverse-different unit, and hence rho, without
+  changing the order or pole data.  This is not a polynomial-map realization
+  or a C3 Keller exclusion.
 source: codex-jc-resolvent-bridge-2026-08-01
 depends_on:
+  - THM-2621-planar-degree-four-inverse-spectral-keller-congruence-and-sheet-defect-pole-ledger
   - THM-3038-split-monogenic-order-cross-resultant-conductor-and-affine-owner-boundary
   - THM-3042-subdirect-graph-order-common-quotient-and-singleton-owner-criterion
   - THM-3057-tame-quartic-inertia-clutch-index-resonance
@@ -28,8 +32,8 @@ related:
   - THM-3066-k4-initial-face-product-quotient-blind-to-keller-sheetwise-cofactor
 script: 04-computation/pointed_cubic_norm_keller_decoder_thm3064.py
 output: 05-knowledge/results/pointed_cubic_norm_keller_decoder_thm3064.out
-script_sha256: 06d6332425bd3b4c4303fb301e6d788975fc95bf17b04a0ae409ec03dc642eec
-output_sha256: 0b96d45307d6d9c5100e4e3bcbc115ac6d63d700a2ab881f785b9f7a5c101413
+script_sha256: fb82a95d8ccd17e4d509157353590e895e55a0fb90c14ba8d9f3b5fb82dcd696
+output_sha256: 9b51211a8c6f24a29f79d74db4311242719e15b1ad84789411eb80fcf6686458
 hash_basis: LF-normalized bytes
 ---
 
@@ -114,6 +118,81 @@ Every denominator in `(7)` is explicitly nonzero under `(1)` and `(6)`.
 This is a fixed-sheet-pointed, `C3`-symmetric scalar.  It is not available
 from the unpointed `S4/V4` matching packet because that quotient chooses
 neither `a` nor the two cofactor projections.
+
+### 2.1 Exact specialization to the inverse-spectral pair
+
+[THM-2621](THM-2621-planar-degree-four-inverse-spectral-keller-congruence-and-sheet-defect-pole-ledger.md)
+supplies the cofactor rather than leaving it abstract.  For its inverse pair
+
+```text
+f(T;u,v),                         y=b(x;u,v),
+q(T)=f_v b_u-f_u b_v mod f,                              (7a)
+```
+
+coefficientwise differentiation at fixed `T` gives
+
+```text
+det partial(x,y)/partial(u,v)=q(x)/f_T(x),
+J_phys(x)=f_T(x)/q(x).                                  (7b)
+```
+
+In a split completion `f=(T-a)g`, put
+
+```text
+q_0=q(a),                         q_C=q(y),
+q_0!=0,                           Res(g,q)!=0.           (7c)
+```
+
+Thus `(3)` has `c_0=q_0^(-1)` and `c=q_C^(-1)`, and
+
+```text
+rho_q = q_0 (y-a)g'(y)/(d q(y)),                        (7d)
+
+Delta_(f,b)=
+ Res_T(g, q_0(T-a)g'(T)-d q(T))
+ ------------------------------------------ .           (7e)
+ d^3 Res_T(g,q(T))
+```
+
+The formula is independent of the representative of `q mod f`: both its
+fixed evaluation and its cubic residue are unchanged.  Choose the unique
+reduced representative with `deg q<=3`.  Then the shifted resultant is
+stronger than a branchwise test:
+
+```text
+Delta_(f,b)=0
+ iff d q(T)=q_0 f_T(T) in K[T]
+ iff q == kappa^(-1)f_T mod f,             kappa=d/q_0. (7f)
+```
+
+Here is the clean proof, in the slightly more general `1+p` scope.  Let `g`
+be irreducible of degree `p`, assume `deg q<=p` and
+`q(a)d Res(g,q)!=0`, and put
+
+```text
+r(T)=q(a)(T-a)g'(T)-d q(T).                              (7g)
+```
+
+The polynomial `r` has degree at most `p`.  If its resultant with `g`
+vanishes, irreducibility gives `r=lambda g`.  Evaluation at `T=a` gives
+`-d q(a)=lambda d`, hence `lambda=-q(a)`.  Rearranging yields
+
+```text
+d q=q(a)[g+(T-a)g']=q(a)f_T,                            (7h)
+```
+
+which is `(7f)`; the converse is immediate.  Therefore a nonzero `(7e)` is
+an exact obstruction to the THM-2621 congruence for a supplied inverse pair.
+For a polynomial Keller map one retains one final scalar gate:
+
+```text
+kappa=d/q_0 must lie in the constant field C*.          (7i)
+```
+
+For a specified `kappa_0 in C*`, the exact two conditions are
+`Delta_(f,b)=0` and `d=kappa_0 q_0`.  Even these algebraic conditions prove
+the rational inverse-spectral congruence, not polynomial realization of that
+pair on `A^2`.
 
 The norm is applied to the **difference**, not separately to the ratio.
 The distinction is sharp.  In `L=K(s)`, `s^3=t`, one has
@@ -228,68 +307,78 @@ Fixed-sheet affine regularity does not provide it: that predicate tests the
 source-coordinate valuations at the fixed trace, not the cofactor at the
 different cubic trace.
 
-## 5. Exact split-order hostile
+## 5. Exact split-order supplied-pair hostile
 
-The smallest local model makes every boundary visible.  Over
-`R=Q[[t]]`, take
-
-```text
-g(T)=T^3-t,                    f(T)=(T-1)(T^3-t),
-S=R[s]/(s^3-t)=Q[[s]].                                  (20)
-```
-
-The cubic is transitive over `Q((t))` by Eisenstein at `t`, its local
-inertia is tame `C3`, and
+The smallest rational inverse-spectral model makes every boundary visible.
+Use target coordinates `(u,t)`, put `R=Q(u)[[t]]`, and take
 
 ```text
-d=g(1)=1-t in R*,              R[T]/(f)=R x S.          (21)
+g(T)=T^3-t,                    f(T)=(T-u)(T^3-t),
+S=Q(u)[[s]],                   s^3=t,
+d=g(u)=u^3-t in R*.                                    (20)
 ```
 
-The pointed derivatives are
+The cubic is transitive by Eisenstein at `t`, its local inertia is tame
+`C3`, and
 
 ```text
-D_0=1-t,                       D_C=3s^2(s-1),
-w(D_0)=0,                      w(D_C)=2.                (22)
+R[T]/(f)=R x S,                 e=g(T)/d=(1,0).         (21)
 ```
 
-For any base unit `r in R*`, define the abstract cofactor packet
+For any nonzero base scalar `r`, define the companion element
 
 ```text
-c_0=1/(1-t),                   c_r=r/[3s^2(s-1)].       (23)
+b_r(T)=t e-(3u/r)T^2(1-e).                              (22)
 ```
 
-Then
+It has the two exact branch descriptions
 
 ```text
-J_0=1,                         J_C=r,
-rho=r,                         Delta_J=(r-1)^3.         (24)
+fixed:       x=u,      y=b_r(u)=t;
+cubic:       x=s,      y=b_r(s)=-(3u/r)s^2.             (23)
 ```
 
-Both `r=1` and `r=2` have the identical split graph order, fixed idempotent,
-derivative valuations, and inverse-different cofactor valuation `-2`.
-Their pointed ratios are respectively one and two.  Over `F_7`, the
-normalized cubic derivative residue is `-3=4`; the normalized cofactor
-residues are respectively `2` and `4`, giving Jacobian residues `1` and `2`.
-The missing datum is exactly the normalized inverse-different unit.
-
-The resultant form of `(24)` is literal.  With
+Their inverse Jacobians with respect to `(u,t)` are respectively `1` and
+`1/r`.  Equivalently, direct coefficientwise calculation gives
 
 ```text
-b(T)=3T^2(T-1),                  h(T)=r,                (25)
+q_r=f_t(b_r)_u-f_u(b_r)_t
+    ==g(T)+(T-u)g'(T)/r                    modulo f,     (24)
+
+q_r(u)=d,                    q_r(y)=(y-u)g'(y)/r.
 ```
 
-one has
+Consequently
 
 ```text
-Res(g,b)=27t^2(t-1),
-Res(g,(r-1)b)=27t^2(t-1)(r-1)^3.                       (26)
+J_0=1,                        J_C=r,
+rho_q=r,                      Delta_(f,b_r)=(r-1)^3.    (25)
 ```
 
-This hostile is an abstract local order plus branch-cofactor packet.  It
-does **not** assert that either packet, especially `r=2`, is realized by a
-polynomial map with the same target data.  That non-realization guard is
-essential: physical realizability is precisely where the unresolved
-Jacobian geometry lives.
+At `r=1`, `(24)` is exactly `q_1=f_T mod f`, so the rational pair satisfies
+the THM-2621 congruence with `kappa=1`.  At `r=2`, the fixed scalar gate still
+holds but the pointed norm defect is one.  The two packets have the same
+quartic, split graph order, fixed idempotent, derivative valuations, and
+inverse-different cofactor valuation `-2`; only the normalized unit differs.
+
+The resultant normalization in `(7e)` is literal:
+
+```text
+Res(g,q_r)=-27t^2 d/r^3,
+Res(g,d(T-u)g'-d q_r)=-27t^2 d^4(r-1)^3/r^3.            (26)
+```
+
+After specializing the residue of `u` to one in `F_7`, the normalized cubic
+derivative residue is `-3=4`; the normalized cofactor residues at `r=1,2`
+are respectively `2,4`, giving Jacobian residues `1,2`.  The missing datum is
+exactly the normalized inverse-different unit.
+
+This is an exact rational inverse-spectral pair on a **split local cover**.
+It is not the irreducible generic inverse quartic of a polynomial map, and it
+does **not** assert a polynomial realization of `r=1` or `r=2` with the same
+global target data.  That non-realization guard is essential: physical
+global realization is precisely where the unresolved Jacobian geometry
+lives.
 
 ## 6. Keller transport and the affine boundary
 
@@ -297,7 +386,7 @@ For an actual polynomial Keller map, once the cofactor in `(3)` is the true
 chain-rule cofactor, the source identity
 
 ```text
-det JF=kappa in K*                                      (27)
+det JF=kappa in C* subset K*                            (27)
 ```
 
 maps to `J_0=J_C=kappa` in every completed branch field.  Therefore `(27)`
@@ -322,6 +411,7 @@ calculation cannot substitute for this obligation.
 ```text
 PROVED HERE:       the pointed cubic norm/resultant Keller decoder;
                    its exact irreducible-field scope;
+                   the THM-2621 supplied-pair degree-p decoder;
                    graph-order congruence (11) and C3 product collapse;
                    derivative=different and cofactor=inverse-different;
                    exact valuation -2 and scoped lower-bound exclusion;
@@ -344,7 +434,8 @@ python3 -O 04-computation/pointed_cubic_norm_keller_decoder_thm3064.py
 
 Both modes must LF-byte-match the stored transcript.  The companion checks
 the generic pointed derivative decomposition, exact singleton idempotent,
-cubic norm/resultant quotient, tame different and inverse-different
-valuations, residue-7 compensation, the `r=1,2` hostile, and the separate
-trace/norm-one failures.  Every truth-bearing check uses explicit runtime
-exceptions rather than Python assertions.
+cubic norm/resultant quotient, the supplied inverse-spectral companion and
+its coefficientwise `q=f_t b_u-f_u b_t`, tame different and
+inverse-different valuations, residue-7 compensation, the `r=1,2` hostile,
+and the separate trace/norm-one failures.  Every truth-bearing check uses
+explicit runtime exceptions rather than Python assertions.
