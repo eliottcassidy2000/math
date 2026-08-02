@@ -1,6 +1,6 @@
 ---
 id: THM-3128
-title: "FC(3) real rank-one quadratics: the two-piece spline source cannot cancel"
+title: "FC(3) real affine-coordinate quadratics: the two-piece spline source cannot cancel"
 status: >
   PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  Let r be a
   real-valued affine polynomial on the coordinate two-simplex with algebraic
@@ -29,7 +29,7 @@ script: 04-computation/fc3_rank_one_quadratic_spline_thm3128.py
 output: 05-knowledge/results/fc3_rank_one_quadratic_spline_thm3128.out
 ---
 
-# THM-3128 — real rank-one quadratic phases on the triangle
+# THM-3128 — real affine-coordinate quadratic phases on the triangle
 
 ## 1. Statement and exact scope
 
@@ -62,6 +62,11 @@ with `r` real-valued, and `P in Qbar[t]`, `deg P<=2`: replace `Q(t)` by
 must lie on one real affine line with an algebraic parameter.  The theorem
 does not order noncollinear complex vertex images and makes no claim there.
 
+The scope is the exact factorization `q=Q(r)`, also called
+**univariate-aligned** here.  It is not the larger class of quadratics whose
+Hessian merely has rank one: such a polynomial may still have a transverse
+linear term and need not factor through `r`.
+
 If `r` is constant, (2)--(3) are Hermite--Lindemann for
 `exp(Q(r))/2`.  If exactly two vertex values agree, algebraically normalize
 the other two values to `0,1`; then `Q(r)` is a degree-at-most-two polynomial
@@ -74,7 +79,8 @@ r(vertex set)={a,b,c},       a<b<c in Qbar intersect R,
 Q(t)=A t^2+B t+C,            A!=0.                              (5)
 ```
 
-The result closes the full **real rank-one quadratic** branch of the flat
+The result closes the full **real affine-coordinate / univariate-aligned
+quadratic** branch of the flat
 simplex exponential obstruction.  It does not address a genuinely
 bivariate quadratic, a nonflat leading form in the Factorial Conjecture, or
 FC(3) itself.
@@ -301,7 +307,7 @@ both sharp boundaries:
 1. RMK positivity does not prevent a Fourier--Laplace transform from
    vanishing;
 2. the arithmetic `E`-function independence, not positivity, excludes the
-   algebraic rank-one quadratic branch.
+   algebraic affine-coordinate quadratic branch.
 
 The hostile coordinate `r` itself is still real-valued, collinear, and
 algebraic.  What lies outside the theorem is precisely the phase coefficient:
@@ -312,8 +318,8 @@ real/collinear direction hypothesis proved here.
 If the three complex vertex images of an affine coordinate are noncollinear,
 there is no real interval order, no two-piece density (7), and no knot path
 to which (18) applies.  The pushforward then lives on a genuine triangle in
-the complex plane.  That is a different, still-open rank-one-as-an-algebraic-
-expression geometry and is not silently included here.
+the complex plane.  That is a different, still-open affine-coordinate
+factorization geometry and is not silently included here.
 
 ## 7. Exact verification
 
@@ -334,9 +340,9 @@ The frozen controls verify:
 * the exact hostile transform (25) and its zero at `2 pi i`.
 
 The normal and optimized executions are byte-identical.  QED in the stated
-real/collinear rank-one scope.
+real/collinear affine-coordinate scope.
 
 ```text
-source sha256 = f865cd2ff3128f3c40de52f13b86d48295f00d2ff71ffa356be17926d196b9b6
-output sha256 = 7d3177f55ec4a1951d7a0f934e4a4bbe2dc962b1c916d2ad4d7821b8c2d1a08f
+source sha256 = 28aea6e451bc78fb942da25df7be1eb946786fb475c7a0f308851dd8dfb5192a
+output sha256 = 7823382c1df94a04e2e3e18d7159f829d1e23e9b0d77ba6cb3f7c81be48aab61
 ```

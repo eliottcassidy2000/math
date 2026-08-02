@@ -29,7 +29,7 @@ def simplex_integral(poly: sp.Expr, u: sp.Symbol, v: sp.Symbol) -> sp.Expr:
     return sp.simplify(sp.integrate(sp.integrate(poly, (v, 0, 1 - u)), (u, 0, 1)))
 
 
-print("THM-3128 FC(3) REAL RANK-ONE QUADRATIC SPLINE AUDIT")
+print("THM-3128 FC(3) REAL AFFINE-COORDINATE QUADRATIC SPLINE AUDIT")
 
 t, u, v = sp.symbols("t u v", real=True)
 a = sp.symbols("a", real=True)

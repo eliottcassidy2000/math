@@ -1,4 +1,4 @@
-THM-3128 FC(3) REAL RANK-ONE QUADRATIC SPLINE AUDIT
+THM-3128 FC(3) REAL AFFINE-COORDINATE QUADRATIC SPLINE AUDIT
 C1 two-piece spline mass=1/2; direct/pushforward moments=7
 C2 quadratic segment ODE coefficient recurrences=14
 C3 corrected-period sources=(d_a^2/(2Ap), -span*d_b^2/(2Apq), d_c^2/(2Aq))
