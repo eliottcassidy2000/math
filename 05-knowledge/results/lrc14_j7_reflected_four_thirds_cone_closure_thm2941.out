@@ -1,0 +1,25 @@
+LRC14 reflected four-thirds cone exact proof candidate
+universe=bodies:3003;arbitrary_level_bank:2442;residual:561;spread:D>=6;cone:3m>=4D
+corner=real boundary m=4D/3 decreases in D;worst_D=6;worst_m=8;ratio_cap=7/4;max_abs_eta=40/333;intermediate_slope_floor=2624/333
+phase=1/49+c/(PQ),c>=-12/49;constrained_edges=7529;max_product_bound=190249826191276797660/11872893085202803@(1, 2, 4, 6, 8, 9),(2, 4);primitive_bank=2492
+coarse_csp=closed:530;traps:31;reverse_order_agrees;all_traps_have_short_components;largest_witness_span=2021/1212<7/4
+coarse_traps=((1, 2, 3, 4, 6, 8), (1, 2, 3, 4, 6, 9), (1, 2, 3, 4, 6, 12), (1, 2, 3, 4, 8, 12), (1, 2, 3, 4, 9, 12), (1, 2, 3, 5, 6, 10), (1, 2, 3, 6, 7, 14), (1, 2, 3, 6, 8, 12), (1, 2, 3, 6, 9, 12), (1, 2, 4, 5, 8, 10), (1, 2, 4, 6, 8, 12), (1, 2, 4, 6, 9, 12), (1, 2, 4, 6, 10, 12), (1, 2, 4, 7, 8, 14), (1, 2, 5, 6, 10, 12), (1, 2, 5, 7, 10, 14), (1, 2, 6, 8, 9, 12), (1, 3, 4, 6, 8, 12), (1, 3, 4, 6, 9, 12), (1, 3, 4, 6, 10, 12), (1, 3, 5, 6, 10, 12), (1, 3, 6, 8, 9, 12), (1, 4, 5, 6, 10, 12), (1, 4, 6, 8, 9, 12), (2, 3, 4, 6, 8, 12), (2, 3, 4, 6, 9, 12), (2, 3, 5, 6, 10, 12), (2, 3, 6, 8, 9, 12), (2, 4, 5, 6, 10, 12), (2, 4, 6, 8, 9, 12), (3, 4, 6, 8, 9, 12))
+verdict_digest=5cd75c885b270c6f56be48e5b2347a0fc3cdf294258e20bac4c13b9e4749efd1
+located_policies=28;oriented_controls=158;weakest=52699395718360336279/2852106844532436934905@body=(1, 2, 4, 6, 8, 12),pair=(0, 1),channel=(5, 3),cell=290;digest=d74273080019120cc2891ebb34baa5b2472deeafa1a9b68faa71067ca3c554fb
+tail_1=body:(1, 2, 3, 4, 6, 12);pair:(0, 1);start:25;numerator:20/7;margin:7048708348487489/561486400263755841875;first_step:216950273/7300431263125;head_channels:270;head_weakest:17153514794501781/42754802494577813255@(7, 4),cell=155
+tail_2=body:(1, 3, 4, 6, 8, 12);pair:(1, 2);start:8;numerator:32/7;margin:647017906068727/563281145404748848;first_step:15353761/19077977520;head_channels:28;head_weakest:1374113346114887419/275831735890387951505@(7, 4),cell=311
+tail_3=body:(2, 3, 4, 6, 8, 12);pair:(0, 1);start:6;numerator:26/7;margin:59758498142995026/88595783439538489345;first_step:15395302/8522769675;head_channels:16;head_weakest:4643681833350909199/620522403772656370755@(7, 4),cell=323
+head_controls=314;head_digest=c8fa54590e7104d3c790188484f77d96ae07961debfe196c4652cc4b83944b26
+fixed_H_cell=155;uniform_primitive_skeleton>=1/126 on oriented ratio interval [4/7,7/4];unique_equality=(3,2)
+transport=oriented eta_g retained;g/(PgL-a) strictly decreases;c_inverse dropped only after positive bracket;debt bounded at level eight
+tail=PQ>=s^2,Pg>=s;endpoint numerator bounds 20/7,32/7,26/7;losses decrease strictly;finite heads oversized-audited
+conclusion=all reflected residual packets with D>=6 and 3m>=4D close on all 3003 bodies
+corollary=assembled reflected certificate-failure wedge is confined to 561 bodies,D>=6,1<=m<4D/3
+scope=reflected THM-2941 sufficient family only;physical LRC14 remains open
+normal_vs_python_O=BYTE_IDENTICAL
+three_halves_source_sha256=15bcd2d67b4867d1ac6380a10a3b9618d677b031ad4354729371ba77501b50e6
+three_halves_output_sha256=7d7ad662745d170c2492e93bf296bdd0b15372ef2ca83aed82bda41770a1089d
+three_halves_semantic_sha256=6d2e760f3a929ad2eaa9af9eba11db1389ead59a383e11d8e8737c722b67aaaa
+source_sha256=76f37d89d40b5ca0f190e73ce38fffb29bf01b48e45d3e0dae0d37f8b682bc35
+semantic_sha256=9f5d2561da2dbf4f1779d88cb5a17ccc199e22a43ffcc82bc7c54b5ff47ed622
+all_exact_controls=PASS
