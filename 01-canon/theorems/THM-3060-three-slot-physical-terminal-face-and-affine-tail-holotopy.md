@@ -2,8 +2,8 @@
 id: THM-3060
 title: "Three-slot physical terminal face and affine tail holotopy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE-FILE AUDIT
-  REQUESTED.  For the actual normalized three-slot inclusion system with
+  PROVED + VERIFIED-EXACT + TWO INDEPENDENTLY HOSTILE-AUDITED.  For the actual
+  normalized three-slot inclusion system with
   support (0,C,C+h), the physical all-large face is a pair of distinct
   powered lines.  Three-slot factorial detection makes its intrinsic
   resultant positive at every width; it is asymptotic to a positive
@@ -14,6 +14,13 @@ status: >
   and its multivariate resultant vanishes, isolating the next cancellation
   jet rather than claiming a higher-slot result.
 source: kind-pasteur-2026-08-01-three-slot-physical-tail
+audit: >
+  Two independent audits reconstructed the physical inclusion pencil,
+  Stirling face, powered-line resultant, all-width THM-2824 sign, corrected
+  THM-3047 width flag, Beta-Gamma carrier, affine alternant, and higher-slot
+  rank collapse.  Both replayed normal and optimized execution against the
+  stored transcript; the first candidate's one-step flag shift was repaired
+  before promotion and both final delta audits accepted the canonical blobs.
 depends_on:
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
@@ -30,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3060 -- the first actual terminal face survives exactly through three slots
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + TWO INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3054 controls the coefficientwise formal terminal corner.  The physical
 specialization does not set the terminal exponentials to zero, so its
@@ -308,4 +315,8 @@ or an arbitrary nonlinear moving clock.  It does not prove a new NC2, GMC,
 SFC, LRC, or Jacobian statement.  All-width scalar positivity `(4c)` does
 not upgrade the sequence to one all-order Stieltjes tail.
 
-**QED, pending independent immutable-file audit and status promotion.**
+Two independent hostile audits rederived the asymptotic and holotopy by
+separate paths.  A final delta audit also checked the THM-2824 all-width
+strengthening and the standard Sylvester orientation.  No defect remains.
+
+**QED.**
