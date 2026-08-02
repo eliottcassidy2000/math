@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for THM-3134 endpoint jets and C3 Newton substitution.
+"""Exact controls for THM-3135 endpoint jets and C3 Newton substitution.
 
 Repository files are not imported.  The two engines are:
   (1) coefficient powering of the proved C3 quotient-walk content kernel;
