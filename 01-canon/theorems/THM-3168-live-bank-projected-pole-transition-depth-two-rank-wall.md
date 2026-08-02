@@ -1,5 +1,5 @@
 ---
-id: THM-3166
+id: THM-3168
 title: "Live-bank projected pole transition and sharp depth-two rank wall"
 status: >
   PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM AUDIT.
@@ -20,14 +20,14 @@ depends_on:
 related:
   - THM-3158-sharp-depth-five-selector-resurrection-and-degree-thirteen-death-barcode
   - THM-3163-universal-finite-prefix-markov-realization-and-physical-sidecar-boundary
-script: 04-computation/gmc_live_bank_projected_pole_transition_thm3166.py
-output: 05-knowledge/results/gmc_live_bank_projected_pole_transition_thm3166.out
-script_sha256: c66c62fc94fbc535cb8fecf1b6198b3d5bc3697818db2518efd9baac35c8ef44
-output_sha256: 0c1b2f9dfc408ed69f15b91147bfc924f9166d459753d06d9be4774566385758
+script: 04-computation/gmc_live_bank_projected_pole_transition_thm3168.py
+output: 05-knowledge/results/gmc_live_bank_projected_pole_transition_thm3168.out
+script_sha256: 59368b5e08f3654bc7f2da4849f1bad2b3e8d23d6023a206a59a6ec185fa4e16
+output_sha256: 5f210a22561cd8d798f07264fdeb5a6a55645c6b24441d5f3cc6faf3011778f6
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3166 -- live-bank projected pole transition and sharp depth-two rank wall
+# THM-3168 -- live-bank projected pole transition and sharp depth-two rank wall
 
 **PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM
 AUDIT.**
@@ -207,14 +207,14 @@ scales are removed.
 Run
 
 ```text
-python 04-computation/gmc_live_bank_projected_pole_transition_thm3166.py
-python -O 04-computation/gmc_live_bank_projected_pole_transition_thm3166.py
+python 04-computation/gmc_live_bank_projected_pole_transition_thm3168.py
+python -O 04-computation/gmc_live_bank_projected_pole_transition_thm3168.py
 ```
 
 and compare byte-for-byte with
 
 ```text
-05-knowledge/results/gmc_live_bank_projected_pole_transition_thm3166.out.
+05-knowledge/results/gmc_live_bank_projected_pole_transition_thm3168.out.
 ```
 
 The companion reconstructs all live currents from the upstream exact signed

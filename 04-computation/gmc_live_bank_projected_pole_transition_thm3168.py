@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for THM-3166's live-bank projected transition wall."""
+"""Exact controls for THM-3168's live-bank projected transition wall."""
 
 import ast
 from collections import Counter
@@ -272,7 +272,7 @@ require(ROW_DIFFERENCE == (-1, -2, -1, -2, -1, -2, -2),
         "normalized child/parent top-row difference drift")
 
 
-print("THM-3166 live-bank projected pole transition wall")
+print("THM-3168 live-bank projected pole transition wall")
 print("poles=" + repr(POLES))
 print("empty_through_depth3_states=" + repr(len(STATES)))
 print("depth1_pair_counts_M1_M8=" + repr(tuple(SHALLOW_PAIR_COUNTS)))
