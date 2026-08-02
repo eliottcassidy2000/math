@@ -1,7 +1,7 @@
 THM3110 exact arbitrary-anchored product-Gamma reduction
 banks=24/25;balanced_masses=37/39;dominant_coefficients=1/2
 majorization_intervals=4;prefix_checks=552
-common_root_symbolic_checks=196;spot_cells=248;tail_gap_cells=2970
+common_root_symbolic_checks=196;spot_cells=248;tail_gap_symbolic_checks=25;tail_gap_cells=2970
 common_divisors=P_a^3*P_max;P_a^3*P_max^2
 collision_divisors=a^4*b^2*(b-a)^3;a^3*b^2*(b-a)^4
 closest_gaps=min(a^2,2b(b-a));a*min(a,b-a)

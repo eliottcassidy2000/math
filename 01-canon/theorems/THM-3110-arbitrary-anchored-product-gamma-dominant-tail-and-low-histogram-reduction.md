@@ -2,7 +2,7 @@
 id: THM-3110
 title: "Arbitrary-anchored product-Gamma dominant tail and low-histogram reduction"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  On every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On every
   anchored support {0,a,b}, 1<=a<b, the two cleared width-three invariants
   have universal 24- and 25-row response banks.  After an exact
   chamber-dependent common-root deletion, one positive Ferrers row
@@ -14,6 +14,15 @@ status: >
   a signed current supported exactly in atomic rank four, reducing the
   missing argument to a relative rank-four cycle/edge-slide problem.
 source: root/multiscale-newton-flag-2026-08-02
+audit: >
+  An independent hostile audit rederived the cleared bank signs, exact
+  common-root witnesses, all four ratio chambers and unique dominant rows,
+  the elementary-symmetric contraction, the formal U/V/W collision
+  divisor, Faulhaber degree bound, degree-five content sign, dual-Cauchy
+  implication, Newton globality, and the labelled micro-packet Ewens zeta
+  formula and scope.  Fresh normal and optimized runs of both companions
+  byte-match their stored outputs; all four LF hashes and the documentation
+  checker pass.
 depends_on:
   - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
   - THM-3107-finite-layer-product-gamma-consecutive-width-three-orientation
@@ -22,8 +31,8 @@ related:
   - THM-3100-product-gamma-response-monge-compactification-and-bad-prefix-spectrum
 script: 04-computation/gmc_product_gamma_arbitrary_anchored_tail_thm3110.py
 output: 05-knowledge/results/gmc_product_gamma_arbitrary_anchored_tail_thm3110.out
-script_sha256: 4bc0a6e39ac4034f5f702e4eb4ffca20349ebed05e57a160dba58524318f9244
-output_sha256: b1c2927ce73d866f1b52faf8d916dda4c80f2bf4f1da0983b71f1ccf12b5567b
+script_sha256: 63b1e00020eee6ace0deeeb4ece8254331e65b483079c62a7399d1d3b4675a9d
+output_sha256: 4cb2541201c9a9860551c08535ff2cb4e873226028bc49395c6ebc9ef0c9c721
 secondary_script: 04-computation/gmc_product_gamma_arbitrary_anchored_schur_thm3110.py
 secondary_output: 05-knowledge/results/gmc_product_gamma_arbitrary_anchored_schur_thm3110.out
 secondary_script_sha256: 15b94691d53afbcdc6aefda89fc7cd5497534ca70fb780a686892dabb5646d6f
@@ -33,7 +42,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3110 -- arbitrary-anchored product-Gamma dominant tail and low-histogram reduction
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3107 proves every anchored arithmetic progression `{0,d,2d}` for an
 arbitrary finite product of positive Gamma shapes.  The same response
@@ -231,7 +240,7 @@ rho_(j,lambda)=1-Delta_(j,lambda)/D_j,                 (20)
 ```
 
 where `T(lambda)=sum_i T(lambda_i)`.  Then `(17)` proves that the exact
-tail threshold is
+one-dominant-mode majorant threshold is
 
 ```text
 L_j(a,b)=min { ell>=0:
@@ -242,6 +251,9 @@ Every present response coefficient whose histogram has at least `L_j(a,b)`
 active Gamma layers is strictly positive, with every per-layer degree lying
 within the dominant residual degree.  Degrees above that bound vanish in
 every row.  This is an exact finite formula, not an asymptotic statement.
+Discarded positive rows can make the true first positive histogram length
+smaller; `(21)` is exact for this certificate, not asserted optimal among
+all possible orientations.
 
 For reference,
 
@@ -506,12 +518,12 @@ an unstructured search through histograms.
 
 The zeta expansion `(41)--(44)` applies to the undeleted bank.  Division by
 the common response factor in `(11)` is triangular with constant term one,
-but it is not a positive zeta operation; the rank-four current is therefore
-a topological reduction of the residual `Phi`, not already a positive
-decomposition of it.  This also explains why the proved Schur and
-two-layer faces do not yet prove the full result: they test large explicit
-faces of `(43)`, but do not provide the required cycle-space injection for
-an arbitrary tuple of layers.
+but it is not a positive zeta operation.  The rank-four current is therefore
+a topological reduction of the undeleted coefficient problem, not already a
+positive decomposition of the residual `Phi`.  This also explains why the
+proved Schur and two-layer faces do not yet prove the full result: they test
+large explicit faces of `(43)`, but do not provide the required cycle-space
+injection for an arbitrary tuple of layers.
 
 ## 6. Exact scope
 
@@ -540,9 +552,10 @@ python -O 04-computation/gmc_product_gamma_arbitrary_anchored_tail_thm3110.py
 ```
 
 It derives the two multilinear banks, the polarized collision orders, the
-four-chamber Ferrers comparisons, the exact common-root counters, the tail
-gaps, the one- and two-layer Newton faces, and the complete labelled Ewens
-zeta census.  Both executions byte-match the stored output.
+four-chamber Ferrers comparisons, the exact common-root counters, the
+symbolic nearest-tail-gap identities, the one- and two-layer Newton faces,
+and the complete labelled Ewens zeta census.  Both executions byte-match
+the stored output.
 
 The independent Schur/Newton route is reproduced by
 
@@ -560,4 +573,4 @@ output.  Every count and sign in this theorem is therefore an exact integer
 or rational identity; the remaining all-degree step is mathematical, not a
 floating-point extrapolation.
 
-**QED candidate, pending independent hostile audit.**
+**QED.**

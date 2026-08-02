@@ -312,6 +312,51 @@ def h_value(row, a_value, b_value):
     return sum(triangular(value(form, a_value, b_value)) for form in row)
 
 
+# The nearest-gap formulas used in the uniform tail are global polynomial
+# identities, not conclusions extrapolated from the finite cell scan below.
+# Write b=a+d.  For every negative row its gap from the dominant row
+# coefficientwise dominates at least one of the two displayed candidates;
+# both candidates are attained by actual rows.
+a_symbol, d_symbol = sp.symbols("a_symbol d_symbol")
+b_symbol = a_symbol + d_symbol
+
+
+def symbolic_triangular(argument):
+    return sp.expand(argument * (argument - 1) / 2)
+
+
+def symbolic_h(row):
+    return sp.expand(
+        sum(
+            symbolic_triangular(value(form, a_symbol, b_symbol))
+            for form in row
+        )
+    )
+
+
+tail_gap_symbolic_checks = 0
+tail_gap_targets = (
+    (a_symbol**2, 2 * d_symbol * (a_symbol + d_symbol)),
+    (a_symbol**2, a_symbol * d_symbol),
+)
+for bank, dominant, targets in zip(banks, dominant_forms, tail_gap_targets):
+    attained = [False] * len(targets)
+    for coefficient, row in bank:
+        if coefficient >= 0:
+            continue
+        gap = sp.expand(symbolic_h(dominant) - symbolic_h(row))
+        comparisons = []
+        for index, target in enumerate(targets):
+            difference = sp.Poly(sp.expand(gap - target), a_symbol, d_symbol)
+            comparisons.append(all(entry >= 0 for entry in difference.coeffs()))
+            if difference.is_zero:
+                attained[index] = True
+        require(any(comparisons), "symbolic closest-gap lower bound")
+        tail_gap_symbolic_checks += 1
+    require(all(attained), "symbolic closest-gap target not attained")
+require(tail_gap_symbolic_checks == 25, "symbolic closest-gap census")
+
+
 tail_cells = 0
 for a_value in range(1, 61):
     for b_value in range(a_value + 1, 81):
@@ -623,7 +668,9 @@ print("banks=24/25;balanced_masses=37/39;dominant_coefficients=1/2")
 print(f"majorization_intervals=4;prefix_checks={majorization_checks}")
 print(
     f"common_root_symbolic_checks={common_root_symbolic_checks};"
-    f"spot_cells={common_root_cells};tail_gap_cells={tail_cells}"
+    f"spot_cells={common_root_cells};"
+    f"tail_gap_symbolic_checks={tail_gap_symbolic_checks};"
+    f"tail_gap_cells={tail_cells}"
 )
 print("common_divisors=P_a^3*P_max;P_a^3*P_max^2")
 print("collision_divisors=a^4*b^2*(b-a)^3;a^3*b^2*(b-a)^4")
