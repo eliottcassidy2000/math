@@ -1,0 +1,13 @@
+theorem=THM-3068
+status=PROVED_VERIFIED_EXACT_CANDIDATE
+eliminant=t*T^4-u*t*T^3-T+u;lead=t;specialization=-T+u;k_D=1
+coefficient_pole=a1=-1/t;exact_base_order=-1;three_sheets_escape
+split_idempotent=e=(t*T^3-1)/(t*u^3-1);cross_resultant_unit_at_t=0
+companion=b=t*e+3*u*t^2*T^2*(1-e)
+inverse_spectral=q=f_t*b_u-f_u*b_t=f_T_mod_f;shifted_decoder=0
+rational_C3_map=(x,y)->(u=x^4*y/3,t=x^-3);Jacobian=1;source_has_unit_x
+branch_Liouville=fixed_0;C3_each_d(3*u*t);trace=d(9*u*t);residues=0
+reciprocal_law=D_Z=-P_z*z_i^2*D_X;c_Z=-c_X/(P_z*z_i^2)
+C3_w_s=1:val(q_X^-1)=3,val(P_z)=3,val(z)=1,val(c_Z)=-2
+conclusion=coefficient_poles_and_Laurent_exactness_permit_inverse_different_principal_part
+missing_gate=polynomial_target_realization_and_affine_space_constant_unit_condition
