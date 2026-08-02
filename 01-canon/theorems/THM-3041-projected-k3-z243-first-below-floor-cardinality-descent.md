@@ -2,11 +2,20 @@
 id: THM-3041
 title: "Projected k3 z243 first-below-floor cardinality descent"
 status: >
-  CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
-  The candidate reuses THM-3033's hash-pinned exact evaluator on the disjoint
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  The theorem reuses THM-3033's hash-pinned exact evaluator on the disjoint
   bank of 151 first-below-high-floor z1=243 rows.  No projected cap or ledger
-  change is active at candidate status.
+  claim is made outside this lossless projected necessary sector.
 source: modular-farey-quartic-bridge-2026-08-01
+audit: >
+  An independent hostile audit rederived the selector, wall implication,
+  duplicate-permitting two-high upper, one-high cardinality direction, exact
+  Farkas orientation, and pointwise complete-cell conclusion. A separate
+  ordinary/optimized reduced replay reproduced the 154=151+3 universe and
+  frozen digests for crude, status, and residual representatives; the owner
+  supplied disjoint fresh complete normal and optimized banks matching the
+  stored 229-line transcript and hashes. Namespace, cap, and ledger
+  arithmetic were independently checked.
 depends_on:
   - THM-3033-projected-k3-z246-to-z244-descent-and-z243-high-floor-addendum
   - THM-2984-projected-k3-signed-ray-attainment-and-unit-phase-gate
@@ -21,9 +30,9 @@ hash_basis: LF-normalized bytes
 
 # THM-3041 -- projected k3 z243 first-below-floor cardinality descent
 
-**CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-## Candidate statement
+## Statement
 
 In the lossless projected `k=3` scalar atlas inherited from THM-3033, every
 one of the `151` `z_1=243` rows whose first label lies strictly below its
@@ -44,16 +53,13 @@ Their exact `(states,crude,status,residual)` profiles are respectively
 (1,1,0,0), (13,13,0,0), (1,0,1,0).                   (2)
 ```
 
-No projected-cap or necessary-ledger update is active while this theorem is a
-candidate.  If the proof and evidence below pass independent hostile audit,
-the prospective arithmetic is the disjoint decrement
+The independently audited disjoint decrement is
 
 ```text
 375251 - 197 - 3 - 151 = 374900,                      (3)
 ```
 
-and the projected cap would descend from `z_1<=243` to `z_1<=242`.  Equation
-`(3)` is an audit target, not current canon at candidate status.  The result is
+and the projected cap descends from `z_1<=243` to `z_1<=242`.  The result is
 only a projected necessary-sector statement and is not LRC(14).
 
 ## 1. Frozen universe
@@ -162,7 +168,7 @@ The stronger affine maximum-gap fallback is retained as a hostile control.
 It is compared against literal affine cyclic-block containment for every
 subset and every unit modulo `d=1,...,12`, giving `8190` exact checks,
 including empty, singleton, and wraparound boundaries.  It is not used in
-the candidate closure.
+the closure.
 
 Combining the `88` screen closures with the `63` terminal closures accounts
 for all `151` rows, with no survivor.
@@ -240,5 +246,4 @@ THM-3033 semantic SHA-256
 ```
 
 This theorem neither proves a literal LRC row exists nor closes `k<=1`, the
-final rung, or LRC(14).  It may not be cited as proved before an independent
-hostile audit promotes its status.
+final rung, or LRC(14).
