@@ -374,10 +374,10 @@ Classify profiles under support operations; study analytic continuation and auto
   floor `N>=4D`. THM-3167 separates diagonal, constant-field and global-owner
   gates; no bounded marked jet decides the first.
   General chart entry and `JC(2)`/`DC(2)` remain open.
-- **Factorial:** THM-3124/3131/3142/3143/3146/3152 close `r<=1098` plus
-  prime `d,d-2,d-3` and prime-power `d-1` exits. THM-3152's exact
-  degree barcode closes all 56 three-exit residuals through `d=1100`.
-  Residual: `r>=1099`; `d,d-2,d-3` composite; `d-1` not a prime power. `FC(3)`/`SFC(3)` remain OPEN.
+- **Factorial:** THM-3124/3131/3142/3143/3146/3152/3161 close exact
+  `{0,1,2}` windows through `r=1998`; THM-3161 closes all 511 four-exit rows
+  through `d=2000` and proves the digital predecessor polygon. The `p>2m`
+  full-flag formula is VERIFIED only. Residual `r>=1999`; `FC(3)`/`SFC(3)` OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

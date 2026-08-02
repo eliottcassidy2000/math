@@ -1,0 +1,9 @@
+LARGE DIVISOR FLAG BLOCK EXACT PROBE
+d=22 p=11 m=2 pair=(('1/11', 11, 11),) flag=(('1/11', 11, 11),) expected_flag=(('1/11', 11, 11),) match=True degree1=False
+d=214 p=107 m=2 pair=(('1/107', 107, 107),) flag=(('1/107', 107, 107),) expected_flag=(('1/107', 107, 107),) match=True degree1=False
+d=999 p=37 m=27 pair=(('1/37', 370, 37),) flag=(('1/37', 370, 37),) expected_flag=(('1/37', 962, 37),) match=False degree1=False
+d=1002 p=167 m=6 pair=(('1/167', 835, 167),) flag=(('1/167', 835, 167),) expected_flag=(('1/167', 835, 167),) match=True degree1=False
+d=1384 p=173 m=8 pair=(('1/173', 1211, 173),) flag=(('1/173', 1211, 173),) expected_flag=(('1/173', 1211, 173),) match=True degree1=False
+symbolic-lane probe p>2m, p<=43, 2<=m<=8 tested=68 failures=0
+symbolic-lane failures=[]
+STATUS=PASS
