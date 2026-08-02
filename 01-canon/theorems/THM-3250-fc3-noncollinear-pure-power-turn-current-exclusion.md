@@ -26,6 +26,7 @@ related:
   - THM-3039-the-FC-n-exponential-period-bridge-forced-level-is-the-simplex-volume
   - THM-3116-fc3-flat-top-simplex-singular-coefficient-and-affine-nonvanishing
   - THM-3202-fc3-real-affine-coordinate-quadratic-two-piece-spline-exclusion
+  - THM-3251-fc3-collinear-pure-power-spline-residue-exclusion
 external:
   - "Cauchy--Green formula."
   - "F. Beukers, A refined version of the Siegel--Shidlovskii theorem, Annals of Mathematics 163 (2006), 369--379, Corollary 1.4."

@@ -1,0 +1,9 @@
+THM-3251 FC(3) COLLINEAR PURE-POWER SPLINE-RESIDUE AUDIT
+C1:spline_pushforward_and_orientation=99
+C2:distinct_weight_moments=(0,0,-1)
+C3:primitive_moment_coefficients=216
+C4:distinct_collision_profiles=[('even-endpoints', 2, 1), ('cubic-endpoints', 2, 2), ('zero-endpoint', 3, 2)]
+C5:doubled_alive_G0_G1=[('symmetric-even-G1-dies', 1, 0), ('unique-zero-G0-dies', 0, 1), ('repeated-zero', 1, 1), ('generic', 1, 1)]
+C6:nonintegral_residues=114;quadratic_boundary=2/2
+semantic_sha256=f281a1b9b425f0e159f20f4fc1bc1a40dbe12233080492172999030d8e5d6093
+CONCLUSION=EXACT_IDENTITIES_VERIFIED;TRANSCENDENCE_STEP=CITED_BEUKERS
