@@ -210,14 +210,17 @@ lim_(M->infinity)
 ```
 
 Consequently a fixed compactification block `I=[a,b]`, with local gaps
-`d_j=h_j-h_a`, has line matrix, up to positive column multipliers,
+`d_j=h_j-h_a`, has positive within-block potential multipliers `Lambda_j`
+and full line matrix
 
 ```text
-L_(i,j)=(r_i^A)^d_j/(r_i^A)^d_i.                      (16)
+L_(i,j)=(r_i^A)^d_j Lambda_j/
+        ((r_i^A)^d_i Lambda_i).                       (16)
 ```
 
 Put `x_i=r_i^A`.  Since `A>=1`, the positive nodes `x_i` are strictly
-increasing.  The generalized alternant is a Vandermonde times a Schur
+increasing.  The row and column `Lambda` factors cancel in the determinant.
+The remaining generalized alternant is a Vandermonde times a Schur
 polynomial, and the Schur polynomial contains the staircase monomial with
 coefficient one.  Hence
 

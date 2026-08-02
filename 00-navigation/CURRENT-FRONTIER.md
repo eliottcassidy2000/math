@@ -187,8 +187,8 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   `(-1)^binom(h,2)`, not moment positivity.  THM-3060/62/63 prove the
   fixed-low hierarchy. THM-3069 gives towers; THM-3075 opens k6
   bracketings; THM-3082 opens finite `O/P` words simultaneously.
-  THM-3073/77 give norm/carry; THM-3093/97 give arbitrary-gap tails and finite
-  `B_4`, not emptiness. THM-3065 gives reciprocal-Beta
+  THM-3073/77: norm/carry; THM-3093/97/3100: Gamma tails and finite banks
+  (first widths `4/3`), not emptiness. THM-3065 gives reciprocal-Beta
   Gregory--Newton walls; nonpositive signed prefixes force H2 only, as exact
   zero-cut H3/H4 hostiles refute the higher lift.  Strict-negative-prefix
   repair remains OPEN.  These are fixed finite banks, not one all-order tail.
