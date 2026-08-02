@@ -2,17 +2,25 @@
 id: THM-3120
 title: "Pole-prefix Newton flag and 115-support all-degree row positivity"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.  For each of
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For each of
   the 115 integer supports 1<=a<=10, a<b<=min(3a+4,21), both THM-3110 row
   generating functions admit an exact reduced positive pole-prefix flag.
   All 8,241 ordinary/confluent Newton coefficients are strictly positive,
   proving the complete-homogeneous row response in every degree n>=5 for
   those supports.  Arbitrary supports and nonrow histograms remain OPEN.
 source: root/multiscale-newton-flag/low-child-flag-extension-2026-08-02
+audit: >
+  An independent hostile audit rederived the reduced rational typing,
+  triangular pole basis, reciprocal ordinary/confluent Newton identity,
+  strict suffix-denominator proof in every degree, coprime minimal
+  recurrence, plethystic commutator scope, cancellation boundary, and all
+  three hostile controls.  Fresh normal and optimized runs byte-match the
+  stored output; the full census, LF hashes, and documentation checker pass.
 depends_on:
   - THM-3110-arbitrary-anchored-product-gamma-dominant-tail-and-low-histogram-reduction
 related:
   - THM-3115-low-degree-monomial-fibre-newton-refinement-transport
+  - THM-3119-factorial-normalized-labelled-deletion-and-young-carrier-order
 script: 04-computation/gmc_product_gamma_row_pole_flag_thm3120.py
 output: 05-knowledge/results/gmc_product_gamma_row_pole_flag_thm3120.out
 script_sha256: 93828710e859ef2215ee164708b835d339594d241dcd70a090050ad3187901dd
@@ -22,7 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3120 -- pole-prefix Newton flag and 115-support all-degree row positivity
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3110 reduces each anchored product-Gamma width-three invariant to an
 exact signed bank of residual root alphabets.  Its finite Schur certificate
@@ -262,36 +270,56 @@ a=2k,              b=3k,              R=4k=2a.               (26)
 ```
 
 The raw envelope has multiplicity three at `R`.  Only two `I_1` atoms can
-contribute to the numerator at `t=1/R`; their bank coefficients are `2,-4`
-and their local constants, normalized by the first, are
+contribute to the numerator at `t=1/R`.  Their row-length multisets are
 
 ```text
-1, (-1)^k/2.                                                (27)
+(6k,6k,5k,2k),                 (6k,5k,5k,3k),                (27)
 ```
 
-Only three `I_2` atoms contribute; their coefficients and normalized local
-constants are
+and their bank coefficients are `2,-4`.  The chamber-common deletions and
+the pole envelope cancel in the ratio of their local constants.  The raw
+interval multiplicity difference in `(27)` gives, symbolically for every
+positive integer `k`,
 
 ```text
-(1,-4,4),                  (1,(-1)^k/2,1/4).                 (28)
+L_2/L_1
+ =product_(r=5k)^(6k-1)(1-r/(4k))
+   /product_(r=2k)^(3k-1)(1-r/(4k))
+ =(-1)^k [k(k+1)...(2k-1)]/[(k+1)...(2k)]
+ =(-1)^k/2.                                                   (28)
 ```
 
-In either bank the normalized local residue is therefore
+Only three `I_2` atoms contribute.  Their row-length multisets are
 
 ```text
-2-2(-1)^k.                                                   (29)
+(6k,6k,6k,2k,2k),
+(6k,6k,5k,3k,2k),
+(6k,5k,5k,3k,3k).                                      (29)
 ```
 
-The factor `(1-4kt)` cancels exactly when `k` is even.  Formula
-`(27)--(29)` follows by grouping the missing root intervals in the two or
-three displayed atoms; the companion checks every factor as an exact
-rational product for `1<=k<=10`.
+Relative to the first, the second multiplicity difference is again the one
+in `(28)`, while the third is twice that difference.  Their coefficients and
+normalized local constants are therefore
+
+```text
+(1,-4,4),                  (1,(-1)^k/2,1/4).                 (30)
+```
+
+In either bank the normalized local residue is
+
+```text
+2-2(-1)^k.                                                   (31)
+```
+
+Thus the factor `(1-4kt)` cancels exactly when `k` is even.  This conclusion
+is symbolic for every `k`; the companion additionally checks every factor as
+an exact rational product for `1<=k<=10`.
 
 Within the finite universe `(19)`, the only cancellations are one copy of
 
 ```text
 (1-8t)  at (a,b)=(4,6),
-(1-16t) at (a,b)=(8,12),                                    (30)
+(1-16t) at (a,b)=(8,12),                                    (32)
 ```
 
 in each bank.  The flag always uses the poles remaining *after* these
@@ -302,14 +330,14 @@ cancellations.
 Multiplication by `1-Mt` is plethystic subtraction of one virtual letter:
 
 ```text
-H_X(t) product (1-Mt)=H_(X-M)(t).                            (31)
+H_X(t) product (1-Mt)=H_(X-M)(t).                            (33)
 ```
 
 This gives a clean comparison with labelled occupancy deletion.  If
 `A` denotes the factorial-normalized labelled-deletion operator satisfying
 
 ```text
-A Mtilde_(N+1)[X]=p_1[X]Mtilde_N[X],                         (32)
+A Mtilde_(N+1)[X]=p_1[X]Mtilde_N[X],                         (34)
 ```
 
 and `P_M` substitutes `X-M` for `X`, then naturality gives the strict
@@ -318,7 +346,7 @@ commutator identity
 ```text
 A P_M Mtilde_(N+1)[X]
  =P_M A Mtilde_(N+1)[X]
- =(p_1[X]-M)Mtilde_N[X-M].                                  (33)
+=(p_1[X]-M)Mtilde_N[X-M].                                  (35)
 ```
 
 Every prefix `q_j` is a composition of such virtual-letter subtractions,
@@ -327,11 +355,11 @@ the signed bank summation.
 
 It is not a positive deletion theorem.  At `(a,b)=(1,2)`, the top pole
 `M=5` is absent from `21/24` `I_1` alphabets and `21/25` `I_2` alphabets.
-Thus `(31)` cannot mean deletion of a letter physically present in each
-atom.  Virtual alphabets are signed, and `(33)` supplies no Hasse-positive
+Thus `(33)` cannot mean deletion of a letter physically present in each
+atom.  Virtual alphabets are signed, and `(35)` supplies no Hasse-positive
 current or row-to-nonrow transport.  This is exactly the distinction needed
-when comparing the pole flag with the separately reserved labelled-deletion
-program.
+when comparing the pole flag with the proved THM-3119 labelled-deletion
+carrier.
 
 ## 9. Sharp hostiles to stronger mechanisms
 
@@ -341,7 +369,7 @@ Three tempting strengthenings fail already at `(a,b)=(1,2)`.
 2. Sequential coefficientwise removal of the two largest poles fails:
 
    ```text
-   [t^17](1-5t)(1-4t)F_1(t)=-5,901,696.                     (34)
+   [t^17](1-5t)(1-4t)F_1(t)=-5,901,696.                     (36)
    ```
 
    The full positive sum `(11)` survives; its individual prefixes do not
@@ -349,7 +377,7 @@ Three tempting strengthenings fail already at `(a,b)=(1,2)`.
 3. Giving independent cycle variables `z_j` to the power sums and expanding
 
    ```text
-   sum_R epsilon_R exp(sum_(j>=1)p_j(S_R)z_j)                (35)
+   sum_R epsilon_R exp(sum_(j>=1)p_j(S_R)z_j)                (37)
    ```
 
    does not produce a positive cycle cone.  In both banks the coefficient
@@ -383,10 +411,10 @@ The sharp universal next question is finite and explicit:
 
 ```text
 For every 0<a<b, are all confluent divided differences
-Q_i[r_1,...,r_(j+1)] strictly positive?                       (36)
+Q_i[r_1,...,r_(j+1)] strictly positive?                       (38)
 ```
 
-A chamber formula or variation-diminishing theorem for `(36)` would extend
+A chamber formula or variation-diminishing theorem for `(38)` would extend
 `(22)` from the exact support bank to every anchored triple without any
 additional degree induction.
 
@@ -406,4 +434,4 @@ confluent Newton differences), verifies the positive rational decomposition,
 replays the exact cancellation products and hostile controls, and pins the
 complete census.  Both executions must byte-match the stored output.
 
-**QED (candidate pending independent audit).**
+**QED.**
