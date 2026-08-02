@@ -2,10 +2,11 @@
 id: THM-3060
 title: "Three-slot physical terminal face and affine tail holotopy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE-FILE AUDIT
-  REQUESTED.  For the actual normalized three-slot inclusion system with
+  PROVED + VERIFIED-EXACT + TWO INDEPENDENTLY HOSTILE-AUDITED.  For the actual
+  normalized three-slot inclusion system with
   support (0,C,C+h), the physical all-large face is a pair of distinct
-  powered lines.  Its intrinsic resultant is asymptotic to a positive
+  powered lines.  Three-slot factorial detection makes its intrinsic
+  resultant positive at every width; it is asymptotic to a positive
   constant times 46656^C C^(-7/2).  After multiplication by the exact width
   flag, every fixed finite generalized-Hankel bank is eventually positive,
   uniformly along an explicit Beta-Gamma-carrier homotopy and every affine
@@ -13,22 +14,30 @@ status: >
   and its multivariate resultant vanishes, isolating the next cancellation
   jet rather than claiming a higher-slot result.
 source: kind-pasteur-2026-08-01-three-slot-physical-tail
+audit: >
+  Two independent audits reconstructed the physical inclusion pencil,
+  Stirling face, powered-line resultant, all-width THM-2824 sign, corrected
+  THM-3047 width flag, Beta-Gamma carrier, affine alternant, and higher-slot
+  rank collapse.  Both replayed normal and optimized execution against the
+  stored transcript; the first candidate's one-step flag shift was repaired
+  before promotion and both final delta audits accepted the canonical blobs.
 depends_on:
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
+  - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
   - THM-3047-formal-corner-width-product-gamma-moment-and-strict-hankel-positivity
   - THM-3054-affine-moving-lower-tropical-beta-gamma-tail-holotopy
 related:
   - THM-3051-stieltjes-multiplier-gamma-flow-and-moving-lower-hankel-boundary
 script: 04-computation/gmc_three_slot_physical_terminal_tail_thm3060.py
 output: 05-knowledge/results/gmc_three_slot_physical_terminal_tail_thm3060.out
-script_sha256: f6724f8d171688ceb13a821a4fc57ffda2a86f0edaf278c292a079705f020294
-output_sha256: 8ba66d651aec8283ede5cb524a9af2da57a4e776cdb9c3cbedc42fb63adc2290
+script_sha256: 4021e3cc59c40bc338ba7640108aaedba607b20b7e46b3ab9707755a3b961b8f
+output_sha256: 14b5e527271e683c5bb54ffe350f73d3280b6de4b3aeb72755e1d8f5dddd7aa7
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3060 -- the first actual terminal face survives exactly through three slots
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + TWO INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3054 controls the coefficientwise formal terminal corner.  The physical
 specialization does not set the terminal exponentials to zero, so its
@@ -71,6 +80,34 @@ R_C=Res(P_(2,C),P_(3,C)).                              (4)
 
 These are the actual normalized physical inclusion forms at width `C+h`.
 No formal substitution `2^M=3^M=0` has been made.
+
+There is already an exact all-width sign theorem.  In the normalized
+factorial basis `f_j=s^j/j!`, set
+
+```text
+H=x(f_n-f_(n+M))+z(f_(n+C)-f_(n+M)).                 (4a)
+```
+
+Then `L(H)=0`, and, up to the positive factors `L(f_n^m)`, the forms in
+`(4)` are exactly `L(H^2)` and `L(H^3)`.  THM-2824 says that a nonzero
+polynomial on any three distinct factorial slots cannot have its first
+three moments all zero.  Thus `P_(2,C)` and `P_(3,C)` have no common point
+in `C P^1`.
+
+Moreover `P_(2,C)` is a positive-definite real binary quadratic.  If
+`alpha,conj(alpha)` are its dehomogenized roots and `a>0` its leading
+coefficient, the standard Sylvester orientation gives
+
+```text
+R_C=a^3 P_(3,C)(alpha)P_(3,C)(conj(alpha))
+   =a^3 |P_(3,C)(alpha)|^2>0.                         (4b)
+```
+
+Consequently
+
+```text
+R_C>0 for every n>=1, h>=1, C>=1.                    (4c)
+```
 
 ## 2. The physical all-large face
 
@@ -128,11 +165,8 @@ R_C=K_(n,h) 46656^C C^(-7/2)(1+O(C^-1)),              (11)
 K_(n,h)=kappa_2^3 kappa_3^2(3^h-2^h)^6>0.            (12)
 ```
 
-Again `(11)` has a full inverse-power expansion.  In particular
-
-```text
-R_C>0 for every sufficiently large C.                 (13)
-```
+Again `(11)` has a full inverse-power expansion.  Its leading sign agrees
+with, and independently explains the tail of, the all-width theorem `(4c)`.
 
 This is a genuinely physical terminal-face result.  The exponent `-7/2`
 comes from three quadratic coefficient blocks of weight `-1/2` and two cubic
@@ -143,7 +177,7 @@ blocks of weight `-1`.
 For three slots, THM-3047's exact width flag is
 
 ```text
-F_M=(n+1)_M^5(n+2)_M^2/n^(7M).                        (14)
+F_M=(n)_M^5(n+1)_M^2/n^(7M).                          (14)
 ```
 
 Set
@@ -259,7 +293,8 @@ The dependency-free exact companion checks:
 
 - `56` all-large finite-difference coefficients and eight powered-line
   resultants;
-- `375` exact physical resultants for `1<=n,h<=5`, `1<=C<=15`, all positive;
+- `375` exact physical resultants for `1<=n,h<=5`, `1<=C<=15`, all positive
+  as independently required by THM-2824;
 - `16` exact ratio-slope controls around the predicted `-7/2` exponent;
 - `1,008` strict carrier minors and `9,072` rational homotopy minors;
 - the rank collapse for every `4<=k<=9`.
@@ -277,7 +312,11 @@ This theorem concerns the normalized intrinsic inclusion resultant at fixed
 depth.  It does not prove persistence of a selected denominator-cleared
 Macaulay chart, positivity of a wall-stripped core, a global jet polynomial,
 or an arbitrary nonlinear moving clock.  It does not prove a new NC2, GMC,
-SFC, LRC, or Jacobian statement.  The finite scan does not upgrade eventual
-positivity in `(13)` to all `C`.
+SFC, LRC, or Jacobian statement.  All-width scalar positivity `(4c)` does
+not upgrade the sequence to one all-order Stieltjes tail.
 
-**QED, pending independent immutable-file audit and status promotion.**
+Two independent hostile audits rederived the asymptotic and holotopy by
+separate paths.  A final delta audit also checked the THM-2824 all-width
+strengthening and the standard Sylvester orientation.  No defect remains.
+
+**QED.**
