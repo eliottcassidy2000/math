@@ -26,6 +26,11 @@ def carrier(degree, N, gap):
     )
 
 
+def normalized_inner(left, right):
+    """L(f_left f_right) for f_n=s^n/n! over the factorial functional."""
+    return Fraction(factorial(left + right), factorial(left) * factorial(right))
+
+
 def compositions(total, parts):
     if parts == 1:
         yield (total,)
@@ -346,6 +351,24 @@ for degree in range(4, 9):
     require(determinant([[1, 1], [1, 1]]) == 0, "repeated-gap boundary")
 require((5 // 5) % 2 == 1, "one-normal parity boundary")
 
+# Low-child conventions used in the theorem.  At m=1 there are no lower
+# equations or variables, so the empty resultant and empty product are one.
+# At m=2 the eliminated child is the positive factorial variance of two
+# distinct normalized monomials.  These exact samples exercise both nearby
+# and widely separated physical slots.
+low_child_cells = 0
+require(determinant([]) == 1, "empty resultant convention")
+require(Fraction(1) == 1, "empty lower product")
+low_child_cells += 1
+for left, right in ((1, 2), (1, 7), (3, 11), (17, 73)):
+    variance = (
+        normalized_inner(left, left)
+        - 2 * normalized_inner(left, right)
+        + normalized_inner(right, right)
+    )
+    require(variance > 0, "two-slot factorial variance")
+    low_child_cells += 1
+
 
 print("THM-3093 ARBITRARY-GAP REMOTE-CLUSTER MONGE FLAG")
 print(f"response_mlr_cells={response_cells} strict_Monge=PASS")
@@ -360,5 +383,5 @@ print("uniform_gap_range=all_distinct_integer_vectors")
 print("outer_error=poly(C)*(m/(m+1))^(mC) independent_of_cluster_diameter")
 print("boundary=repeated_gaps;moving_child;growing_width;S_m_zero")
 print("scope=fixed_child;fixed_rank;arbitrary_internal_gaps")
-print("low_child_boundary=m1_empty_resultant;m2_positive_variance=PASS")
+print(f"low_child_cells={low_child_cells} empty_resultant_and_variance=PASS")
 print("all_exact_checks=PASS")

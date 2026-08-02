@@ -11,5 +11,5 @@ uniform_gap_range=all_distinct_integer_vectors
 outer_error=poly(C)*(m/(m+1))^(mC) independent_of_cluster_diameter
 boundary=repeated_gaps;moving_child;growing_width;S_m_zero
 scope=fixed_child;fixed_rank;arbitrary_internal_gaps
-low_child_boundary=m1_empty_resultant;m2_positive_variance=PASS
+low_child_cells=5 empty_resultant_and_variance=PASS
 all_exact_checks=PASS

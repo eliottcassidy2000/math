@@ -22,8 +22,8 @@ related:
   - THM-3091-arbitrary-gap-remote-pair-desuspension-and-exact-Jensen-contraction
 script: 04-computation/gmc_arbitrary_gap_remote_cluster_flag_thm3093.py
 output: 05-knowledge/results/gmc_arbitrary_gap_remote_cluster_flag_thm3093.out
-script_sha256: 00423cfee27205ca351154ac3804a23310bf2e28c226ca33e7784bd2afde8f6d
-output_sha256: 610f64ad04c0eecf18fa699dbdf371a424544b0461bfa35f28b2bd71ef4ff279
+script_sha256: 808b69c71533d576f41bbc38f12cec70907665e5b2a90371f5572c335c02750d
+output_sha256: d120b193190a83ea3af4b0f2b1e15a845aa9338cfffae9a1d4c6c26ad8806b81
 hash_basis: LF-normalized bytes
 ---
 
@@ -290,9 +290,13 @@ a_i^(-1)Q_atom product_t lambda_t^beta_t
 ```
 
 These estimates are unsigned and precede all inclusion cancellation.  The
-flag normalization never enlarges a nonsurviving physical layer.  The
-THM-3085 `(j,ell)` proof extends verbatim to `m=1,2` (with the lower block
-empty for `m=1`); its base-one bank still has only
+flag normalization never enlarges a nonsurviving physical layer.  For
+`m=2`, the same atom inequalities apply with its one-variable lower block
+and the strictly positive factorial variance `S_2`.  For `m=1` there are no
+lower variables or lower forms: set `H_p=0`, use the convention
+`Res_empty=S_1=1`, and apply THM-3073 only to the `q`-dimensional normal
+block.  With these explicit low-child conventions, the base-one bank still
+has only
 
 ```text
 H_2,...,H_m,H_p+B_1,B_2,...,B_q                         (27)
@@ -422,8 +426,9 @@ The exact companion verifies:
 6. all `60` displayed rank-three boundary faces;
 7. `112` exact lambda-covariance cancellations and `1,344` carrier
    telescopes;
-8. repeated-gap, one-normal parity, empty-child, and positive-variance
-   boundary controls.
+8. five explicit low-child controls: the empty resultant/product at `m=1`
+   and four exact positive two-slot factorial variances at `m=2`, together
+   with the repeated-gap and one-normal parity boundaries.
 
 Run
 
