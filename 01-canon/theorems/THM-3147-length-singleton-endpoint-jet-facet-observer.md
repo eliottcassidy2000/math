@@ -17,6 +17,7 @@ depends_on:
   - THM-3129-bounded-poset-upset-facet-irredundancy
   - THM-3136-one-sided-fixed-reference-elementary-tail-hasse-no-go
 related:
+  - THM-3123-heptic-e3-remaining-accessory-classification-and-s7-monodromy
   - THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform
   - THM-3137-finite-stochastic-pole-selector-polytope-and-portability-wall
   - THM-3144-mixed-depth-selector-persistence-death-barcode
@@ -238,6 +239,31 @@ has identically zero length profile, but `V` assigns it mass `1`.  Marking
 `m_1(lambda)` separates the two shapes.  This proves minimality only relative
 to statistics that depend on length alone; it does not assert a unique or
 globally minimal refinement of the full partition profile.
+
+### 4.1 A heptic monodromy interpretation of the new coordinate
+
+The singleton statistic is not an arbitrary separator on the degree-seven,
+length-four slice.  Independently, THM-3123 classifies the complete heptic
+`e=3` accessory atlas indexed by exactly the same three partitions:
+
+```text
+passport          m_1        unmarked monodromy
+(4,1,1,1)          3                 S_7
+(3,2,1,1)          2                 S_7
+(2,2,2,1)          1                 D_14.                  (23a)
+```
+
+Therefore, on that proved passport atlas,
+
+```text
+m_1>=2   iff   the unmarked cover has full monodromy S_7.   (23b)
+```
+
+The `w`-coordinate in `(4)` is exactly the symmetry-breaking coordinate
+separating the two full-symmetric strata from the Chebyshev/dihedral wall.
+This is a shared partition-indexed classifier, not a map from the GMC Young
+current to a response cover: no monodromy, accessory parameter, Keller-chart
+entry, or JC consequence is transported between the two problems.
 
 ## 5. Positivity and partial-reference boundaries
 
