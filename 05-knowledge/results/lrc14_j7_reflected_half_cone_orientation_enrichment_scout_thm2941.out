@@ -1,0 +1,63 @@
+LRC14 reflected cap-3 physical-orientation half-cone repair
+predecessor_half_cone_conclusion=RETRACTED_AND_NOT_INHERITED;partition_and_policies_recomputed_from_primitive_predicates
+universe=bodies:3003;inherited_arbitrary_level_bank:2442;recomputed_residual:561;spread:D>=6;cone:2m>=D;ratio_cap:3
+transport_corner=(D,m)=(6,3);max_abs_eta=35/164@body=(1, 2, 3, 4, 6, 12),pair=(0, 5);constrained_edges=5666;primitive_bank=8796
+coarse_csp=closed:282;traps:279;constrained_policies:253;unconstrained_tails:26;trap_digest=35fceb70d1e960ee5e0590c990adde5c4848b657a15455714585354bee322380;verdict_digest=fe8193713f596b6f3f0182066a8937cfe75f681ea760fd31bac4642b7eb0f7cc
+physical_policy_audit=both_orientations_per_unordered_gain;controls:3062;weakest=4389035249640369833/461756458190054127555@body=(3, 4, 6, 8, 9, 12),pair=(0, 1),channel=(9, 26);orientation_digest=b307dd0fbe4379fe12c9d5492aca899b85efd4b0ed584353e680e3711ae219e2;located_digest=8968666298108aabbf926de452354ed554728aa2fe2cc2ed5f5aaea3598f4201
+old_single_pair_family=whole_interval:23;no_whole:((1, 2, 3, 4, 6, 12), (1, 3, 4, 6, 8, 12), (2, 3, 4, 6, 8, 12))
+old_full_side_failure_graphs=(((1, 2, 3, 4, 6, 12), ((1, 0), (2, 1)), ((0, 1),), ((1, 0), (2, 1), (1, 0)), None), ((1, 3, 4, 6, 8, 12), ((1, 0), (2, 1), (3, 2)), ((0, 1),), ((1, 0), (2, 1), (3, 2), (1, 0)), None), ((2, 3, 4, 6, 8, 12), ((0, 1), (1, 0), (2, 0), (2, 1), (3, 2)), ((0, 2),), ((0, 1), (1, 0), (2, 0), (2, 1), (3, 2), (2, 0)), (0, 1, 0)))
+stored_H_hostile=(3, 4, 5, 8, 6, 9);lane_truth=(False, False, False, False, False, False, False);stored_H2_hostile=(5, 4, 3, 6, 7, 9);lane_truth=(False, False);all_distinct;corner:m=3,D=6
+corner_direct_certificate=H:3600/3600,H2:3600/3600;weakest_H=151480151406464/2641051743800701@(9, 8, 7, 4, 5, 3),(1, 3);weakest_H2=285989563781330/4777236334436643@(9, 7, 8, 5, 4, 3),(2, 4);digest=7be99021aacb759c3eebfd23828760e8f4e44b03001c02e8acc98ceaede3362b
+enrichment=on ratio lane [u,v],pair_max>=alpha*reduced_min with alpha=1/v below 1,u above 1,1 across 1;q_max<=3m gives m>=ceil(alpha*s/3)
+new_atlas=assignment_complete_lanes:35;head_channels:1600;whole_bodies:23;H3_failure_two_cycle;H_fixed_pair_lanes:6;H2_fixed_pair_lanes:4
+lane_1=body:(1, 2, 3, 4, 6, 8);interval:[1/3,3];pair:(0, 1);start:6;N:10/3;alpha:1;debt_level:3;margin:2740210795379578/10534037130640534875;previous:-119990669477005351/43887464869343568375;heads:40;kind:whole
+lane_2=body:(1, 2, 3, 4, 6, 9);interval:[1/3,3];pair:(0, 1);start:5;N:10/3;alpha:1;debt_level:3;margin:27275135411692048337/16789062677723097536775;previous:-642368752088244893/165291287974407629580;heads:24;kind:whole
+lane_3=body:(1, 2, 3, 4, 6, 12);interval:[1/3,3/8];pair:(0, 1);start:56;N:10/3;alpha:8/3;debt_level:50;margin:245922071192858349745681/24407635848938854320124474704;previous:-69443237731345075711/27083847466907970046733425;heads:314;kind:H-fixed-pair
+lane_4=body:(1, 2, 3, 4, 6, 12);interval:[3/8,3/7];pair:(0, 1);start:35;N:13/4;alpha:7/3;debt_level:28;margin:2822011079296169655389/351907564155723821876103900;previous:-5770501578841256275901/162060644542851856760948990;heads:121;kind:H-fixed-pair
+lane_5=body:(1, 2, 3, 4, 6, 12);interval:[3/7,1/2];pair:(0, 1);start:26;N:22/7;alpha:2;debt_level:18;margin:11645039466334688292/1441431576529049072991205;previous:-186835795967266139/1870931713966666658125;heads:68;kind:H-fixed-pair
+lane_6=body:(1, 2, 3, 4, 6, 12);interval:[1/2,2/3];pair:(0, 1);start:23;N:3;alpha:3/2;debt_level:12;margin:14104192201731135380/153459138563165948143631;previous:-882866729395461598/6631458766860572926281;heads:76;kind:H-fixed-pair
+lane_7=body:(1, 2, 3, 4, 6, 12);interval:[2/3,1];pair:(0, 1);start:19;N:8/3;alpha:1;debt_level:7;margin:2410284442747443683/5624261672316383694325;previous:-528948133072156712/2361068238382826172165;heads:51;kind:H-fixed-pair
+lane_8=body:(1, 2, 3, 4, 6, 12);interval:[1,3];pair:(0, 1);start:10;N:2;alpha:1;debt_level:4;margin:956953088636/34748473879133175;previous:-46343625167687087/17928933166784138625;heads:56;kind:H-fixed-pair
+lane_9=body:(1, 2, 3, 4, 8, 12);interval:[1/3,3];pair:(0, 1);start:7;N:10/3;alpha:1;debt_level:3;margin:1795744151465343901/1496580661554073417875;previous:-3170654513712578/5235479531994996375;heads:48;kind:whole
+lane_10=body:(1, 2, 3, 4, 9, 12);interval:[1/3,3];pair:(0, 1);start:5;N:10/3;alpha:1;debt_level:3;margin:351457434226645457/334443479635918277625;previous:-73426017937201063/16463275694662114500;heads:24;kind:whole
+lane_11=body:(1, 2, 3, 5, 6, 10);interval:[1/3,3];pair:(0, 1);start:6;N:10/3;alpha:1;debt_level:3;margin:189608213172933446/73244199387029719125;previous:-271974493307126219/671351853770198167875;heads:40;kind:whole
+lane_12=body:(1, 2, 3, 6, 8, 12);interval:[1/3,3];pair:(0, 1);start:7;N:10/3;alpha:1;debt_level:3;margin:909719522838112717/995732950117650441375;previous:-3106777346950526/3483366859932925875;heads:48;kind:whole
+lane_13=body:(1, 2, 3, 6, 9, 12);interval:[1/3,3];pair:(0, 1);start:5;N:10/3;alpha:1;debt_level:3;margin:191638441100115041/222666613762905802875;previous:-662619844676433097/142492489633110025500;heads:24;kind:whole
+lane_14=body:(1, 2, 4, 5, 8, 10);interval:[1/3,3];pair:(0, 1);start:5;N:10/3;alpha:1;debt_level:3;margin:29759333179322962889/14197912056577631826675;previous:-31025459999902702057/9085852117092480931740;heads:24;kind:whole
+lane_15=body:(1, 2, 4, 6, 8, 12);interval:[1/3,3];pair:(0, 1);start:7;N:10/3;alpha:1;debt_level:3;margin:2875694839671682001/3730283141485526280375;previous:-13501170663289378/13049628087211408875;heads:48;kind:whole
+lane_16=body:(1, 2, 4, 6, 9, 12);interval:[1/3,3];pair:(0, 1);start:5;N:10/3;alpha:1;debt_level:3;margin:127792253147214569/166889291031044707125;previous:-38982538042651771/8215272762147496500;heads:24;kind:whole
+lane_17=body:(1, 3, 4, 5, 6, 10);interval:[1/3,3];pair:(0, 1);start:5;N:16/3;alpha:1;debt_level:3;margin:166817929712896905059/63833814901558311785175;previous:-402413215989719254393/138894111257868417351516;heads:24;kind:whole
+lane_18=body:(1, 3, 4, 5, 6, 12);interval:[1/3,3];pair:(0, 1);start:5;N:16/3;alpha:1;debt_level:3;margin:635525636860439359/254317987655610803925;previous:-31664085512570352953/10513896868125497727804;heads:24;kind:whole
+lane_19=body:(1, 3, 4, 5, 10, 12);interval:[1/3,3];pair:(0, 1);start:5;N:16/3;alpha:1;debt_level:3;margin:345942230901173311/152348006924960171325;previous:-20405521352159781473/6298300987826968805916;heads:24;kind:whole
+lane_20=body:(1, 3, 4, 6, 8, 12);interval:[1/3,2/5];pair:(0, 1);start:10;N:16/3;alpha:5/2;debt_level:9;margin:127211958381720181534/270081582124943848288575;previous:-4394472996163052203/14367365740337814288315;heads:15;kind:H2-fixed-pair
+lane_21=body:(1, 3, 4, 6, 8, 12);interval:[2/5,3/5];pair:(0, 1);start:10;N:26/5;alpha:5/3;debt_level:6;margin:93608531605936408/1571833857288465045275;previous:-7092654288563871683/7082185582695366598455;heads:24;kind:H2-fixed-pair
+lane_22=body:(1, 3, 4, 6, 8, 12);interval:[3/5,1];pair:(0, 1);start:10;N:24/5;alpha:1;debt_level:4;margin:2566788723851144/76016213805524326075;previous:-206842616590462873/117349316023003288875;heads:19;kind:H2-fixed-pair
+lane_23=body:(1, 3, 4, 6, 8, 12);interval:[1,3];pair:(0, 1);start:9;N:4;alpha:1;debt_level:3;margin:72652942577788427/117349316023003288875;previous:-11402572002588771/61811075513176234000;heads:44;kind:H2-fixed-pair
+lane_24=body:(1, 3, 4, 6, 9, 12);interval:[1/3,3];pair:(0, 1);start:7;N:16/3;alpha:1;debt_level:3;margin:57223328916745151399/38141070633413065807125;previous:-203481164045459876/667159212169721032125;heads:48;kind:whole
+lane_25=body:(1, 3, 4, 6, 10, 12);interval:[1/3,3];pair:(0, 1);start:5;N:16/3;alpha:1;debt_level:3;margin:280944830717243503/126906192647233224225;previous:-17296562871166886117/5246497244333001848268;heads:24;kind:whole
+lane_26=body:(1, 3, 5, 6, 10, 12);interval:[1/3,3];pair:(0, 1);start:5;N:16/3;alpha:1;debt_level:3;margin:3721178218901143907/1725238240582657075275;previous:-14070444133742133983/4195529592844991939076;heads:24;kind:whole
+lane_27=body:(1, 4, 5, 6, 10, 12);interval:[1/3,3];pair:(0, 1);start:6;N:22/3;alpha:1;debt_level:3;margin:3199285537199377412/1179640939906307263539;previous:-21414356511674519/76083212039997987825;heads:40;kind:whole
+lane_28=body:(1, 4, 6, 7, 12, 14);interval:[1/3,3];pair:(0, 1);start:5;N:22/3;alpha:1;debt_level:3;margin:3773591225816164915081/1457771984961301690092825;previous:-545182135363611841903/186586879272611038571364;heads:24;kind:whole
+lane_29=body:(1, 4, 6, 8, 9, 12);interval:[1/3,3];pair:(0, 1);start:5;N:22/3;alpha:1;debt_level:3;margin:38836270396727798161/26957192237235649191075;previous:-2421134333298485149/594887830279937326860;heads:24;kind:whole
+lane_30=body:(2, 3, 4, 6, 8, 12);interval:[1/3,1];pair:(0, 1);start:10;N:14/3;alpha:1;debt_level:4;margin:18227293585637674/56952748687899273825;previous:-44311345877415994/29298500540842372875;heads:56;kind:H3-two-cycle
+lane_31=body:(2, 3, 4, 6, 8, 12);interval:[1/3,1];pair:(1, 0);start:6;N:2;alpha:1;debt_level:3;margin:3823911716151374/1445642610699700875;previous:-421333740373199/1204343098928662875;heads:20;kind:H3-two-cycle
+lane_32=body:(2, 3, 4, 6, 9, 12);interval:[1/3,3];pair:(0, 1);start:7;N:6;alpha:1;debt_level:3;margin:50256567313495432/635083691559617993875;previous:-57545227299077062/33324856446453151125;heads:48;kind:whole
+lane_33=body:(2, 4, 5, 6, 10, 12);interval:[1/3,3];pair:(0, 1);start:5;N:20/3;alpha:1;debt_level:3;margin:30644166139048224073/67537996489281935688225;previous:-43715478451650693691/8643833909900285470836;heads:24;kind:whole
+lane_34=body:(2, 4, 6, 8, 9, 12);interval:[1/3,3];pair:(0, 1);start:5;N:20/3;alpha:1;debt_level:3;margin:13832299149288005917/6735731732978727754275;previous:-229268377669985137/66314468828055755580;heads:24;kind:whole
+lane_35=body:(3, 4, 5, 6, 10, 12);interval:[1/3,3];pair:(0, 2);start:6;N:8;alpha:1;debt_level:3;margin:2593466380687707040/1440066848770123016289;previous:-35799332244231753817/29997818961128679270225;heads:40;kind:whole
+head_audit=PASS:1600;weakest_tail_margin=508374102558227956/234246433355178759099585@body=(1, 2, 3, 4, 6, 12),pair=(0, 1),channel=(81, 29),g_tail=1;maximum_direct_prefix=6@body=(1, 2, 3, 4, 6, 12),channel=(14, 5),g0=1,g_tail=7
+infinite_suffix=primitive skeleton fixed;phase displacement nonincreasing;transport displacement strictly decreasing;ceiling debt nonincreasing;first-tail transport and every earlier g checked exactly
+lane_digest=f67d8c2cb80ce8278eff88577c81144e26077511c3768f2af5058ab00ce2d256;head_digest=81dc1b57dc7cf3dfe2dc92dfeadf6af375afacee40486ebc6a4b43efa51eb443
+proved_statement=within_the_pinned_reflected_THM-2941_k=1_sufficient_family,every_packet_with_D>=6_and_2m>=D_closes_on_all_3003_bodies;the_old_failure_was_a_tail_selector_obstruction_not_a_boundary_runner_obstruction
+corollary=the_assembled_reflected_certificate-failure_wedge_is_confined_to_561_bodies_with_D>=6_and_1<=m<D/2
+not_proved=physical_LRC14_or_absence_of_survivors_outside_the_reflected_THM-2941_sufficient_family
+normal_vs_python_O=BYTE_IDENTICAL
+old_source_sha256=01b0ef11060585cfdd8dcf001cf0488ffde69118cb4da1bbbd964b195e3cd910
+old_output_sha256=afe07bc18ae2fa257cca7eda51999e064411bc168a409c9d932b951e87a4d7e3
+old_semantic_sha256=e7edbeec8933409bb36eab7d4a1867a10b3f7683a4898ec30f244a9e81601673
+two_thirds_repair_source_sha256=420d21d0c65cfbd57d8cc926c04993b14e61d2554fb291a836af949d1fd664ed
+two_thirds_repair_output_sha256=87db762ba3ff6794748a2a19a4bf192a8cef8d6cebe7c619c871579da669864f
+two_thirds_repair_semantic_sha256=525c8d2d89cf11c9fcc6260dbf81e57d0e47c999049c89b9148ae731dbac4730
+source_sha256=d53b9ebb76930fc6eb4cdc697c11f57413747e834e0ee4a11ea81ee47c884398
+semantic_sha256=1a8a6cac81420388034c849ca0ba852a9b87416c85eeedcb12e1cbafea572f5a
+all_exact_controls=PASS
