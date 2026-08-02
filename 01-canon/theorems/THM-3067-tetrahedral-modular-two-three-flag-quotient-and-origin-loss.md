@@ -2,8 +2,8 @@
 id: THM-3067
 title: "Tetrahedral modular two-three flag quotient and origin loss"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  After choosing an affine origin and a cyclic orientation of the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  After choosing
+  an affine origin and a cyclic orientation of the
   three nonzero directions of F_2^2, its twelve directed point-direction
   flags form a regular A_4 bitorsor.  Right edge reversal S and right
   direction rotation R satisfy S^2=R^3=(SR)^3=1 and give the tetrahedral
@@ -13,13 +13,28 @@ status: >
   an additional sidecar, not the modular involution already used as a V_4
   translation.  No physical LRC/JC intertwiner or closure is claimed.
 source: root-2026-08-01-modular-two-three-tetrahedral-flags
+audit: >
+  An independent read-only hostile audit rederived the right-action
+  convention and tetrahedral relation, the regular A4 identification, the
+  C3 direction image and V4 kernel, the six-edge no-descent hostile, the odd
+  reflection laws, and the complete fixed-R involution census.  It replayed
+  normal and optimized modes against the stored eleven-line transcript and
+  independently matched both LF hashes.  The final wording distinguishes
+  the induced-action kernel from the set projection and separates this A4
+  translation quotient from THM-2595's linear-reflection S3/S4 lifts.
 depends_on:
   - THM-2950-three-conjugate-pair-v-four-torsor-and-quartic-resolvent-frame
 related:
   - THM-2056-kelvin-polar-farey-defect-certificate
+  - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
+  - THM-2597-six-vertex-bicycle-modular-abelianization-cycle
+  - THM-2606-affine-v4-parity-channels-partial-cubes-and-feuerbach-origin
   - THM-2951-fifth-compound-reconstruction-and-v-four-phase-scalarization-boundary
+  - THM-3049-k4-matching-monomial-tropical-root-extraction-clutch
   - THM-3064-pointed-cubic-norm-keller-decoder-and-inverse-different-boundary
   - THM-3066-k4-initial-face-product-quotient-blind-to-keller-sheetwise-cofactor
+external:
+  - "Mario Krenn, Xuemei Gu, and Daniel Soltesz, Questions on the Structure of Perfect Matchings Inspired by Quantum Physics, arXiv:1902.06023v2."
 script: 04-computation/modular_tetrahedral_flag_bitorsor_thm3067.py
 output: 05-knowledge/results/modular_tetrahedral_flag_bitorsor_thm3067.out
 script_sha256: faa8205afbab9aebf48c2be9aadfa59ef193997380d138588dad7d35f6af40b0
@@ -29,8 +44,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3067 -- tetrahedral modular two-three flag quotient and origin loss
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. The twelve flags
 
@@ -143,7 +157,8 @@ On the right action,
 pi S=pi,                       pi R=rho pi.                  (14)
 ```
 
-The image is `C_3`, and the kernel is exactly the four translations `V_4`.
+The induced right action on directions has image `C_3`, and its kernel is
+exactly the four translations `V_4`.
 Thus
 
 ```text
@@ -230,8 +245,8 @@ information ledger is present.
 
 ## 6. Relation to the current frontiers
 
-This theorem makes four existing boundaries compatible without erasing their
-scope.
+This theorem makes the following existing boundaries compatible without
+erasing their scope.
 
 1. The Farey tessellation underlying
    `THM-2056-kelvin-polar-farey-defect-certificate` admits the literal local
@@ -239,18 +254,37 @@ scope.
    chosen affine origin, a cyclic direction orientation, and transport of the
    polar owner inequality.  None is supplied here.
 
-2. `THM-2950-three-conjugate-pair-v-four-torsor-and-quartic-resolvent-frame`
+2. `THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go`
+   sends the modular involution to a **linear direction reflection** and
+   classifies its affine `S_3/S_4` lifts.  Here the modular involution is
+   instead a **translation** in `V_4`, so the image is `A_4`.  These are
+   different homomorphisms, separated exactly by the census `(21)`.
+
+3. `THM-2606-affine-v4-parity-channels-partial-cubes-and-feuerbach-origin`
+   classifies the six unordered quartic edges and their association-scheme
+   and tournament boundaries.  The new datum here is the twelve-flag cover,
+   its regular right action, and the explicit proof `(17)` that the ternary
+   move does not survive the six-edge quotient.
+
+4. `THM-2950-three-conjugate-pair-v-four-torsor-and-quartic-resolvent-frame`
    supplies the four-point `V_4` torsor and the three-direction `S_3`
    quotient.  After choosing its missing `C_3` orientation, `(1)--(20)` give
    the exact tetrahedral modular quotient.  Without that choice, odd
    reflections act semilinearly as in `(19)`.
 
-3. `THM-2951-fifth-compound-reconstruction-and-v-four-phase-scalarization-boundary`
+5. `THM-3049-k4-matching-monomial-tropical-root-extraction-clutch` identifies
+   the three disjoint perfect matchings of `K_4` as the positive
+   Krenn--Gu--Soltesz `n=4,d=3` carrier.  They are exactly the three
+   direction fibres in `(13)`.  THM-3067 lifts a matching direction to its
+   four endpoint flags; it does not recover a matching-fibre amplitude after
+   contraction.
+
+6. `THM-2951-fifth-compound-reconstruction-and-v-four-phase-scalarization-boundary`
    proves that no signed-pair-equivariant linear descent recovers the balanced
    phase sector from the fifth compound.  The finite flag bitorsor does not
    manufacture the missing cross-pair contraction.
 
-4. `THM-3066-k4-initial-face-product-quotient-blind-to-keller-sheetwise-cofactor`
+7. `THM-3066-k4-initial-face-product-quotient-blind-to-keller-sheetwise-cofactor`
    and `THM-3064-pointed-cubic-norm-keller-decoder-and-inverse-different-boundary`
    show that a fixed sheet plus a true cofactor contrast is load-bearing for
    Keller decoding.  A combinatorial point in `V_4` is not yet that physical
