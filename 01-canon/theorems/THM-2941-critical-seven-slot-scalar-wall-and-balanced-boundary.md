@@ -15,7 +15,7 @@ status: >
   finite-low-pair torsion, torsion-density pigeonhole, scalar-splice,
   status-descent, and cardinality translated-band addenda improve the
   k=2/k=3 first-drift caps from 2142/380
-  to 1579/239 (using the THM-3041/3052 continuation).
+  to 1579/236 (using the THM-3041/3052/3061 continuation).
   THM-2928's later
   divisor-status/local-needle chain empties k=4, so only k=2,3 remain
   finite-but-uncensused; k=5,6,7 are also empty.  A lossless projection-mass
@@ -2509,5 +2509,5 @@ close the `561`-body reflected wedge `D>=6,1<=m<3D/4`, finish the remaining
 `k=2,3` finite decision trees, classify the zero/one-aligned multi-drift
 address hypergraph, close the six-body/seven-tail rung, or prove LRC(14).
 The independent THM-2928 divisor-status route closes `k=4`; THM-2980/2995
-and THM-2981/3052 lower the composed `k=2,3` caps to `1579/239`, respectively,
+and THM-2981/3061 lower the composed `k=2,3` caps to `1579/236`, respectively,
 without emptying the sectors below those caps.
