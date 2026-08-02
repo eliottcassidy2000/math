@@ -1,0 +1,12 @@
+cycle_colouring=N3:alphabet=(0, 1, 2):perms=6:colourings=27;N4:alphabet=(1, 2):perms=24:colourings=16;N5:alphabet=(0, 1, 3):perms=120:colourings=243
+universal_identity=Omega_N(S)=sum_f a_f*P_Hf;sum_f_a_f=h_N(S)
+gap_decomposition=beta_N(S)=sum_f a_f*(identity-P_Hf):direct_PSD
+singleton_boundary=N*beta_N((1))=alpha_[N]
+central_alpha_N6=classes=10:generators=5:rank=5
+I1_N6=rate=198/74353:positive_nonidentity=(2, 1, 1, 1, 1):146677056/74353:q411=-9741852/74353:q2211=-32006680/74353:augmented_rank=6:min_nontrivial_spectrum=737590/74353
+I2_N6=rate=103/92692:positive_nonidentity=(2, 1, 1, 1, 1):368938435/185384:q411=-22944341/185384:q2211=-73957487/185384:augmented_rank=6:min_nontrivial_spectrum=112775/23173
+uniform_octopus_boundary=D6_not_in_conjugacy_averaged_span_of_alpha_A
+signed_beta_hostile_I1=mu(2,1,1,1):row=6/8447:monomial=10/3007:difference=-66428/25400129
+signed_beta_hostile_I2=mu(2,1,1,1):row=16/62019:monomial=5/4484:difference=-238351/278093196
+open_target=bank_level_stochastic_refinement_or_rooted_star_mesh_inequality
+all_exact_checks=PASS

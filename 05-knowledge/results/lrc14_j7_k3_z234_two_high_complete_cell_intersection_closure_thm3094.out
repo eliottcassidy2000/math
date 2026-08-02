@@ -1,0 +1,8 @@
+LRC14 z234 two-high complete-cell intersection closure THM3094
+dependency=THM3087_source:440077a9fda3f9f5cb8898659d0e5006b6e2529b6bbb8c12ced37d7a67e5c69a;output:cd3059f6a83b2b5cd63176ea359ec76bd3f46fe75e144cef95752f6b462f5bff;bank:b3d424991e816bd5ddc0540554483cd3bc40efbaf44a3f3064197c337ae6ca8d
+BODY;E=(1, 5, 9, 11, 12, 14);low=243;L=194040;clean=44062;minimum=48510:22020;second=48512:25066;distinct_pair_slack=3024;extremal_intersection=11798;witness_cell=14850;count_sha256=9149b88558e7220fcf60aa1d265470cf7f1e34808b99efc1b00a48ff4a8b7c96
+BODY;E=(1, 9, 10, 11, 12, 14);low=260;L=194040;clean=44616;minimum=48510:22308;second=48512:24816;distinct_pair_slack=2508;extremal_intersection=11792;witness_cell=14850;count_sha256=190ecd77e97f4a59d83d9052a13559a124ea7991423e06fa972ae1475f3ef509
+consequence=every_distinct_pair_in_[19111,51480]^2_has_a_common_complete_safe_cell;P_(E,Z)=T;both_scalar-unbounded_THM3078_rows_close
+scope=108966498_THM3087_candidates_removed;the_other_two_THM3078_rows_remain;no_projected_cap_or_ledger_or_LRC_claim
+semantic_sha256=7c3fa428224d59b717770b936bb2d35aea2642dec83c77df8395c538a8015682
+all_exact_controls=PASS

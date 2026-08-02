@@ -1,0 +1,10 @@
+THM3107 exact product-Gamma initial width-three orientation
+generic_banks=I1:20;I2:23;clearing=-r1^2
+dominant_vectors=I1:1,16,100,310,499,394,120;I2:1,17,115,395,724,668,240
+tail_thresholds=I1:14:33354436230658959/36028797018963968;I2:16:94169758536521331158/48661191875666868481
+finite_histograms=I1:27132:zeros12:min16;I2:54264:zeros12:min12
+coefficient_boundary=box_0_to_6;zero_below_degree_5;positive_in_box_from_degree_5
+shape2=I1:-1/2;I2:-11/36;atomic_D:-1/12
+nonreal_response_hostile=P:n3+n2+6n+1000;disc:-26896828;F1:-1229376/3814697265625;F2:1539056/3814697265625
+direct_bank_fixtures=9;gauss_multiplication_checks=126;anchored_AP=0,d,2d
+translated_AP_boundary=quadratic_tilt_2a_vs_cubic_tilt_3a

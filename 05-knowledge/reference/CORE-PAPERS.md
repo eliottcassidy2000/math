@@ -329,6 +329,9 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
 
 ## Gaussian Moments Conjecture / NC2
 
+### [BGKP](https://arxiv.org/abs/2310.18020)
+- Thms. 1.4/2.11: `m<=n` gives Schur-ratio monotonicity including zeros; THM-3110 slides only, not its signed bank.
+
 ### Derksen--van den Essen--Zhao — *The Gaussian Moments Conjecture and the Jacobian Conjecture*
 
 - **Primary / freshness:** [arXiv:1506.05192](https://arxiv.org/abs/1506.05192),

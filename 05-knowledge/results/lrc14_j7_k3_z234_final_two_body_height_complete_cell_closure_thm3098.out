@@ -1,0 +1,28 @@
+LRC14 z234 final two-body height and complete-cell closure
+dependency=THM3078_source:2a051babe109f56056fe61476870f8e2e13cfc99b2f9bb7ac122b8780c8fa168;output:d5fc52e922b7e083f5cbe5aa5a6066304c4e5c8c7963904dd3b649477caf5e42;semantic:749a2292da58925c9653ce919d5bab6b374f64f8b713ac52efa1f18fba74c918
+dependency=THM3094_source:c456e28c88cac8d0b687c1636463aa79642b2fb39ea187eafc836f46e3ab3e0e;output:6752dbac509aba6c739eb9ce3cd59da85d39ae47b6f4f60b1657ecaf4cf36a95;semantic:7c3fa428224d59b717770b936bb2d35aea2642dec83c77df8395c538a8015682
+ledger_dependency=THM3071_source:c8735a0e1328b08e98e9f27b86f901d2b0c491f832381d98f7a8a14f11e4f345;output:c04e6f57ac7025100645f1a0f546e3e5f79f6444fa2269469c09b38e746e772f;semantic:d4cfb4c7e497007f044041e9f7e56d3b109107d033421d592f7f3f74e0995f02;atlas:cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda
+mask_bank=rows:1154;bodies:2;sha256:a1b3959152cc87b05d352492870803cc23e04fb6b38dd7cbf09d2e9605850144
+BODY;E=(1, 5, 6, 9, 12, 14);L=17640;high=1738;masks=16;low=324;deficit=37/3611790;clean_cells=4446;ray_checks=12421
+THREE_HIGH;E=(1, 5, 6, 9, 12, 14);closed=16;minimum_gap=13734121/4337473140;witness_mask=(2, 980, 1764, 1960);record_sha256=3743ced91482150afec840220b11dd8b5966a36a76660e9507c2da7629284e2f
+TWO_HIGH_UPPER;E=(1, 5, 6, 9, 12, 14);raw_expansions=2748;survivors=3;same_high_denominator=0;margin=31396/122542875..26554/71461845;record_sha256=1fd3d18d3a4fd592a2391643fe7fdef1ed196e2a237916093e611c3bba76a87f
+HEIGHT;E=(1, 5, 6, 9, 12, 14);stage1_boundary=393120/29;smaller_high_ceiling=13555;exceptions=8820,11760,13230;final_box=[1738,4680]
+EXCEPTIONS;E=(1, 5, 6, 9, 12, 14);z=8820,load=1/7,cell=1350,far_cutoff=196560/29,margin_at_w=z=47/637;z=11760,load=3/28,cell=1350,far_cutoff=262080/43,margin_at_w=z=435/2548;z=13230,load=2/21,cell=1591,far_cutoff=29484/5,margin_at_w=z=388/1911
+FINITE;E=(1, 5, 6, 9, 12, 14);survivors=3;raw_box_pairs=0;ordered_literal_candidates=0;empty_masks=3;per_mask_sha256=f73fe2699430f02465a78ae555f36adfeead70a062d1008cbc08f7331f4b11cf;packet_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
+EXIT;E=(1, 5, 6, 9, 12, 14);mechanism=all_three_scalar_survivors_require_high_denominator_2_but_no_label_in_height_box_has_denominator_2
+STRICT_OPEN;E=(1, 5, 6, 9, 12, 14);body_label=14;cell=1350;left_endpoint_slack=0;weak_endpoint_inequalities_are_load_bearing
+BODY;E=(2, 5, 9, 11, 12, 14);L=194040;high=19111;masks=1138;low=243;deficit=4117/39729690;clean_cells=44364;ray_checks=184941
+THREE_HIGH;E=(2, 5, 9, 11, 12, 14);closed=1138;minimum_gap=3429147350803/807271369268364;witness_mask=(1260, 10780, 16170, 21560);record_sha256=f1e2936db2fb6a6af702f600c970d3c208d16cc6a16505d129e40de03298de27
+TWO_HIGH_UPPER;E=(2, 5, 9, 11, 12, 14);raw_expansions=1512196;survivors=69;same_high_denominator=0;margin=1063/30830239440..138056623/3349673731404;record_sha256=ae7d6b1b307992b48ade07543354798f85ea4d4136eb1b1de01b58b959151a77
+HEIGHT;E=(2, 5, 9, 11, 12, 14);stage1_boundary=4324320/29;smaller_high_ceiling=149114;exceptions=97020,129360,145530;final_box=[19111,51480]
+EXCEPTIONS;E=(2, 5, 9, 11, 12, 14);z=97020,load=1/7,cell=6930,far_cutoff=2162160/29,margin_at_w=z=47/637;z=129360,load=3/28,cell=6930,far_cutoff=2882880/43,margin_at_w=z=435/2548;z=145530,load=2/21,cell=6931,far_cutoff=324324/5,margin_at_w=z=388/1911
+FINITE;E=(2, 5, 9, 11, 12, 14);survivors=69;raw_box_pairs=7366342;ordered_literal_candidates=1018;empty_masks=0;per_mask_sha256=370d9fe277735f693d3867e5f8506dfaadc1e70d9df686a35cdcf1f4ded5259f;packet_sha256=3277b423430c9fe955d78e056942b0e73e0f8ec740f2f240e108451d46ceefe0
+EXIT;E=(2, 5, 9, 11, 12, 14);mechanism=literal_complete_cell_intersection;candidate_pairs=1018;minimum_bonferroni=15470@(20174, 48540);minimum_actual_intersection=19908@(20174, 48540);witness=6930;intersection_sha256=4c245c14a867a219dea91a7e428fe7de2ba0cce27b1300064ba6fcbf6107fe79
+STRICT_OPEN;E=(2, 5, 9, 11, 12, 14);body_label=2;cell=6930;left_endpoint_slack=0;weak_endpoint_inequalities_are_load_bearing
+projection_logic=a_common_complete_1/L_cell_is_contained_in_S_(E,Z);phi_L(t)=Lt_mod_1_maps_it_surjectively_to_T;therefore_P_(E,Z)=T
+THM2941_direction=a_literal_completion_forces_P_(E,Z)_subset_U_A;THM1166_gives_mu(U_A)<=36/91<1;contradiction
+composition=THM3078_closed_377_plus_boundary_4;THM3094_closed_2;THM3098_closes_final_2;all_381_z1=234_rows_empty
+promotion_consequence=ledger 374768-381=374387;projected_k3_cap:z1<=233;next_layer:z1=233_rows:62
+scope=projected_k3_necessary_atlas_only;no_physical_cover_classification_outside_the_projection;no_k<=1_or_final_rung_or_LRC14_claim
+semantic_sha256=f5427dc8392ed287162f076df9b5e418afcec2a2f3a63a3b94a840c313a5b6bd
+all_exact_controls=PASS

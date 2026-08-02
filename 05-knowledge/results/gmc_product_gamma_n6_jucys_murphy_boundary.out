@@ -1,0 +1,10 @@
+normalization=q_rho=Phi(p_rho)/base;Z6=(1/720)*sum_sigma q_type(sigma)*sigma
+class_support_N6=111111,21111,2211,3111,222,321,411
+universal_classes=q411:36;q321:-21;q222:48;q311:9*(18a+18b-5)
+content_basis=1,p1,p2,p1^2,p3,p1*p2,p1^3;rank=7
+universal_cubic=(8*p1^3-93*p1*p2+280*p3)/720
+same_p1_pair=(411),(33);delta_I1=(4a+18b+31)/10;delta_I2=(4a+11b+31)/10
+top_cubic_values=295/16,0,-295/16:on:(6),(321),(111111)
+no_go=not_p1_only;not_N5_linear_multiple;universal_cubic_not_PSD
+needed_sidecar=p2,p3_or_rooted_NBC_flag
+all_exact_checks=PASS

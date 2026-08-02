@@ -1,0 +1,12 @@
+THM-3099 FINITE GAMMA-SUM QUASIANALYTICITY
+ratio_cells=60 positive_rational_shift=PASS
+identity_cells=25 exact_dependency=PASS
+shift_cells=20 rational_evaluation_determinant=PASS
+sign_hostile=10*2^n-3^n;good_sample_does_not_preserve_sign
+oscillation_cells=24 positivity_boundary=PASS
+remote_coefficient_cells=324 factorial_shapes=PASS
+remote_resultant_cells=165 two_slot_physical=PASS
+remote_dichotomy=exact_zero_sequence_or_eventual_fixed_nonzero_sign
+one_exact_good_extension=eventual_remote_nonvanishing
+boundary=one_parameter;no_effective_threshold;no_sign_preservation
+all_exact_checks=PASS

@@ -9,6 +9,50 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-349 (2026-08-02, THM-3101 post-promotion module audit) -- treating a normal-variable lower quotient as a finite base algebra
+
+- **What was claimed:** after quotienting the remotely perturbed lower moment
+  forms, the first repaired proof called the result a finite real algebra
+  `A_C` and the subsequent upper quotient a finite-free `A_C`-algebra.  It
+  then described multiplication by `h_m` as a scalar extension of an
+  `o(tau)` operator on `A_C`.
+- **First failed implication:** the perturbed lower forms contain the normal
+  variables `v`.  Their quotient is finite free over `R[v]`, not finite over
+  `R`; imposing the upper equations is a quotient, not a scalar extension.
+  Thus the displayed finite-free tower did not literally justify the
+  operator estimate, even though the scheme-zero mechanism remained
+  available.
+- **Repair / strongest survivor:** keep the lower quotient as a finite-free
+  `R[v]`-module.  The exact scheme-zero identity
+  `e_0 h_m=sum a_r H_r` becomes
+  `e_0 h_m=-sum a_r delta_(r,C)=o(tau)` after the lower deformation.
+  THM-3093 bounds the upper roots on finitely many compact composition
+  charts, so fixed monomial reduction preserves this estimate after the
+  upper quotient.  Pure upper perturbations cannot create `h_m`, because
+  the identity already vanishes before any upper relation is imposed.  The
+  An independent hostile re-audit verified the `R[v]` finite-free bases,
+  bounded upper reduction, and the spectral projector formed only after the
+  finite upper quotient.  The repaired theorem is promoted.
+
+## MISTAKE-348 (2026-08-01, THM-3097 post-promotion scope audit) -- pointwise good supports were given the remote family's uniform condition-number bound
+
+- **What was claimed:** after proving that every sufficiently translated
+  fixed-width support has a normalized resultant uniformly bounded away from
+  zero, Section 7 said that the normalized Bezout map has a width-only
+  smallest-singular-value floor on every resultant-good support.
+- **First failed implication:** a good extension may approach a gap face over
+  a bad child.  Every finite extension can have nonzero resultant while the
+  limiting lower-child resultant, and hence the limiting singular value,
+  vanishes.  Pointwise surjectivity does not make the full good-support family
+  a compact subset of the surjective locus.
+- **Repair / strongest survivor:** the width-only right-inverse bound is scoped
+  to the remote translated family `N>=N_tr(t)`, whose compactified closure was
+  actually proved positive.  Every other good support still has the literal
+  complete-intersection certificates, but no uniform norm bound.  The same
+  repair checkpoint displays both row and column potential multipliers in the
+  block line matrix and describes a gap face by its lower-child zero-locus
+  support with the correct resultant multiplicities.
+
 ## MISTAKE-347 (2026-08-01, reflected cone split-tail orientation) -- reversing both the ratio interval and the ordered label pair covered one ordering twice
 
 - **What was done:** the reflected one-cone referee split the harmonic-body

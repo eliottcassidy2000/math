@@ -1,0 +1,15 @@
+Punctured projective-direction algebra and exceptional parity saturation
+identity=e_L=1_(L\{0});e_L*e_M=delta_LM*e_L;sum_L e_L=1-delta0
+algebra=Fun(P1(Fq))=Fun(Fq^2\{0})^(Fq*) is GL2-equivariant and integrally saturated
+q=2;char=2;directions=3;parity_orbits_per_direction=1;parity_ideal_rank=3;internal_contrast_rank=0;full_parity_saturation=1;GL2_exhausted=6
+q=3;char=3;directions=4;parity_orbits_per_direction=1;parity_ideal_rank=4;internal_contrast_rank=0;full_parity_saturation=1;GL2_exhausted=48
+q=4;char=2;directions=5;parity_orbits_per_direction=3;parity_ideal_rank=15;internal_contrast_rank=10;full_parity_saturation=0;GL2_exhausted=180
+q=5;char=5;directions=6;parity_orbits_per_direction=2;parity_ideal_rank=12;internal_contrast_rank=6;full_parity_saturation=0;GL2_exhausted=0
+q=7;char=7;directions=8;parity_orbits_per_direction=3;parity_ideal_rank=24;internal_contrast_rank=16;full_parity_saturation=0;GL2_exhausted=0
+q=9;char=3;directions=10;parity_orbits_per_direction=4;parity_ideal_rank=40;internal_contrast_rank=30;full_parity_saturation=0;GL2_exhausted=0
+exceptional_fields=q2(singleton punctured lines),q3(antipodal-pair punctured lines)
+first_failures=q4 leaves residual C3 within each line;q5 leaves residual F5*/{+-1}=C2
+projector_relation=on augmentation,h_L=q*1_L-1 gives Phi_q=q*Psi_q;Smith=q repeated q
+larger_field_boundary=internal line contrasts survive with rank (q+1)(q-2) in char2 and (q+1)(q-3)/2 in odd characteristic
+scope=pointwise finite-field algebra only;no convolution,Farey-tree,quartic-owner,Keller,or LRC intertwiner
+all_exact_controls=PASS

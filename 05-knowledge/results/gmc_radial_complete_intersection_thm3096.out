@@ -1,0 +1,11 @@
+THM-3096 PHYSICAL-SUPPORT COMPLETE INTERSECTION
+resultant_cells=7 F1_elimination=PASS
+hilbert_cells=8 socle_D=t*(t-1)/2 length=t!=PASS
+certificate_cells=17 unknown_columns=241 literal_radicals=PASS
+moment_cells=7890 odd_zero_even_factorization=PASS
+radical_grid_cells=1415 VJ=V(alpha)_union_V(c)=PASS
+cutoff=2t=(K-1)*R primitive_return_R=2
+certificate=(alpha*x_i)^(D+1)_in_<M2,...,M2t>
+neutral_hostile=M1=0;M2=0;M3=2*i*sqrt(2)
+scope=arbitrary_complex_radial_coefficients_on_resultant_good_support
+all_exact_checks=PASS

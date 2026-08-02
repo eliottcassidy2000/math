@@ -1,0 +1,7 @@
+THM-3105 WEIGHTED JORDAN REPAIR NEWTON ATTACHMENT SPECTRUM
+partition_cells=66 generic_face_cells=217 support_cells=672 arc_cells=4224
+dominance_cells=46014 smith_hostile_cells=8 sign_hostile_cells=11
+sparse_attachment_sha256=b55c691dd2e4ee79754e26262cdc785f0b3931c990428d9767aa536d2840e8b0
+generic_faces=s^k*z^(d-prefix_lambda_k); pure_repair_threshold=s=o(z^lambda1)
+scope=finite_determinant_newton_support;generic_error_direction;smith_sum_not_smith_only;physical_direction_requires_separate_audit
+all_exact_checks=PASS

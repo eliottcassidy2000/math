@@ -25,16 +25,16 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`. THM-2928 empties aligned `k>=4`; THM-2995/3071 cap projected `k=2,3` at `1579/234`; corrected THM-2941 leaves `561` reflected bodies, `D>=6,1<=m<2D/3`.
+Direct frontier: `<=6`. THM-2928 empties aligned `k>=4`; THM-2995/3111 cap projected `k=2,3` at `1579/229`; corrected THM-2941 leaves `561` reflected bodies, `D>=6,1<=m<2D/3`.
 This is not a physical-survivor classification; arbitrary `k<=1`, the rung, and LRC remain open. Septimal floor/exception plus located phase cut the raw five-drift ledger
 `951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
 not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
 `1680..1742` `k=2` atlas; THM-2980/2995 then close every row at
 `1580..1679`, giving cap `1579`.  For `k=3`, torsion/status closes through `297`;
-THM-2981/3033/3041/3052/3061/3071 close all projected `k=3` rows through
-`z_1=235`, with empty `z_1=241` and `z_1=238`: cap `234`, ledger `374768`,
-and the next occupied layer has `381` rows.
+THM-2981/3033/3041/3052/3061/3071/3078/3094/3098/3102/3106/3109/3111 close
+projected `k=3` rows through `z_1=230`: cap `229`, ledger `374263`; next
+has `43` rows.
 In the reflected gain graph, cap two forces the phase-zero triangle
 `(3/2)(4/3)=2`; by cap `7/3` it is interior and no full-cap component remains.
 The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`.  A fixed-owner Farey repair
@@ -183,11 +183,17 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   laws; THM-3051/53/54 give moving-lower hostiles, prefix flow and affine
   finite-order tail re-entry.  THM-3056 gives reciprocal product-Gamma sign
   `(-1)^binom(h,2)`, not moment positivity.  THM-3060/62/63 prove the
-  fixed-low suspension hierarchy: five slots are unconditional; six first
-  meet arbitrary four-slot SFC.  THM-3065's nonpositive prefixes force H2;
-  zero-cut H3/H4 refute the higher lift.  THM-3079 repairs all orders for
-  integer meshes ending at `-1` past `alpha_0+u_min+v_min>M`; globally if
-  `alpha_0>M`. Other endings, gaps, and strict prefixes stay OPEN.
+  fixed-low hierarchy: five slots are unconditional; six meet four-slot SFC.
+  THM-3069/3075/3082 give towers, k6 bracketings and finite
+  `O/P` words. THM-3073/77 give norm/carry; THM-3093/97/3100 give finite Gamma
+  banks. THM-3107 closes `{0,1,2}` for
+  every finite layer count and anchored AP; other triples stay open.
+  THM-3101/3105 need the endpoint jet. THM-3065's zero-cut H3/H4 refute the
+  higher lift. THM-3079 gives
+  an all-order repair for integer meshes ending at `-1` past
+  `alpha_0+u_min+v_min>M` (globally if `alpha_0>M`). Other terminals, gaps and
+  strict-negative prefixes remain OPEN; newer results are finite banks or
+  tail reductions, not all-order.
   THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent

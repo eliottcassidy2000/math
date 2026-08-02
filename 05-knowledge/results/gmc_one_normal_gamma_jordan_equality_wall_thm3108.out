@@ -1,0 +1,9 @@
+THM3108 exact one-normal Gamma/Jordan equality wall
+carrier_cells=160;normalization_cells=160
+T=U_m^(m+1)/U_(m+1)^m;shift_quotient=positive_rational;T_to_zero=Stirling
+attachment=det(J2+sE21+zI)=z^2-s;equality=s=z^2
+matrix_wall_cells=17;smith_bars=0,2;error=o(repair)
+cyclic_degree_cells=270;v^(2m)=u*v^(m-1);norm_scale=T^2
+unscaled_error=U_m^2/U_(m+1);normalized_error=tau^2
+scope=formal_degree_compatible_local_hostile;physical_endpoint_jet_realization=OPEN
+all_exact_checks=PASS

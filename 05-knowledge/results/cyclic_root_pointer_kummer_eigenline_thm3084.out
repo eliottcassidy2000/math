@@ -1,0 +1,11 @@
+THM-3084 CYCLIC ROOT POINTER AND KUMMER EIGENLINE
+field=F53 zeta13=16 order=13
+character_shift_norm_cells=156
+criterion=F(Px)=F(x) iff Px=lambda*x iff x_j=c*lambda^(-j)
+positive_binary_profiles=8192 aligned=2 failed=8190
+generic_non_eigen_hostiles=100 norm_still_invariant=PASS
+singleton_pointer_character_cells=156
+V4=two_characters_bijective;single_character_fibres=2+2
+LRC=point_fixed_THM2537_selector_before_character_projection
+boundary=cross_packet_transport;zeros;composite_or_unequal_weight
+all_exact_checks=PASS

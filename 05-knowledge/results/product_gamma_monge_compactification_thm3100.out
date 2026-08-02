@@ -1,0 +1,17 @@
+THM-3100 PRODUCT-GAMMA RESPONSE-MONGE COMPACTIFICATION
+response_cells=1620 degree_one_and_base_zero=PASS
+jensen_cells=12384 factorwise_convexity=PASS
+flag_cells=972 staircase_dual=PASS
+face_cells=540 nodes_r_power_A=PASS
+covariance_cells=1458 common_offset=PASS
+adjacent_cells=63 permutation_cells=6 A_layer_model=PASS
+variance_cells=36 widths_one_two_good=PASS
+width3_atomic_hostile=theta2_support012_D=-1/12_I1=-1/2_I2=-11/36
+boundary_cells=9 A0_and_moving_theta=PASS
+translation_face=fixed_A;fixed_positive_theta;fixed_width
+remote_error=poly(C)*(m/(m+1))^(A*m*C)
+minimal_bad_prefix_width_at_least_3
+bad_support_count=O_t(X^(t-3))
+conditional_SFC3_count=O_t(X^(t-4))
+boundary=width3_open;A0_degenerate;no_parameter_uniformity
+all_exact_checks=PASS

@@ -1,0 +1,15 @@
+THM-3097 TRANSLATED-SUPPORT MONGE COMPACTIFICATION
+response_cells=840 degree_one_endpoint=PASS
+jensen_cells=7602 full_degree_coefficients=PASS
+flag_cells=540 lambda1_equals_lambda2=PASS
+face_cells=372 composition_cube=PASS
+covariance_cells=209 common_offset_and_lambda=PASS
+small_face_cells=20 rank2_rank3_limits=PASS
+cylinder_cells=45 exact_extension_counts=PASS
+density_cells=15 codimension_four_hostile=PASS
+translation_face=uniform_all_internal_gaps;fixed_width
+first_bad_prefix_bank=finite;minimum_width=4
+bad_support_count=O_t(X^(t-4))
+conditional_count=O_t(X^(t-b-1));SFC_through_width_b
+boundary=non_effective_threshold;growing_width;bad_child_cylinder
+all_exact_checks=PASS

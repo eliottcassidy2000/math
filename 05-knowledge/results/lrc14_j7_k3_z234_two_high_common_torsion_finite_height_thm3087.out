@@ -1,0 +1,17 @@
+LRC14 z234 two-high common-torsion and finite-height reduction
+dependency=THM3078_source:2a051babe109f56056fe61476870f8e2e13cfc99b2f9bb7ac122b8780c8fa168;output:d5fc52e922b7e083f5cbe5aa5a6066304c4e5c8c7963904dd3b649477caf5e42;semantic:749a2292da58925c9653ce919d5bab6b374f64f8b713ac52efa1f18fba74c918
+mask_bank=rows:1699;sha256:b3d424991e816bd5ddc0540554483cd3bc40efbaf44a3f3064197c337ae6ca8d;bodies:2;nonpositive_threshold:1699
+common_torsion=closed:1045;unresolved:654;criterion:|S_mod_Q|>ceil(d1/7)Q/d1+ceil(d2/7)Q/d2;pointwise_projection:T
+BODY;E=(1, 5, 9, 11, 12, 14);low=243;excess=34729/119189070;clean_cells=44062;masks=886;torsion_closed=663;unresolved=223;positive_slack=1575..17434;worst=-80678;equalities=1@high_pair(2,2)
+BODY;E=(1, 9, 10, 11, 12, 14);low=260;excess=3307/4414410;clean_cells=44616;masks=813;torsion_closed=382;unresolved=431;positive_slack=700..13482;worst=-80124;equalities=1@high_pair(2,2)
+height_stage1=if_both_high>4324320/29_then_36/91+2/7+12L/(49N)<1;therefore_min_high<=149114
+height_stage2=complete_cell_safe_for_every_19111<=z<=149114_except:97020,129360,145530;ordinary_cutoff:other_high<=51480
+exception_controls=z97020:load=1/7,cell=14850,far_cutoff=2162160/29,margin_at_w=z=47/637;z129360:load=3/28,cell=14850,far_cutoff=2882880/43,margin_at_w=z=435/2548;z145530:load=2/21,cell=14851,far_cutoff=324324/5,margin_at_w=z=388/1911
+finite_contract=both_high_in_[19111,51480];unresolved_masks:654;ordered_scalar_candidates:108966498
+FINITE;E=(1, 5, 9, 11, 12, 14);masks=223;ordered_candidates=36200669;zero_masks=9;record_sha256=508bcf817b141de20f5e17c968145652a8af0162f75acfd2958b68d059917c5f
+FINITE;E=(1, 9, 10, 11, 12, 14);masks=431;ordered_candidates=72765829;zero_masks=5;record_sha256=a19945ad57a3fa6c59ec0a6b931fc7c587d537cdeea0fc4cd33852b66170d2aa
+displayed_maximizer_control=E=(1, 5, 6, 9, 12, 14):P=T,slack=502,raw_safe=191990179/1000465830;E=(1, 5, 9, 11, 12, 14):P=T,slack=9504,raw_safe=7803086659/46609560270;E=(1, 9, 10, 11, 12, 14):P=T,slack=13482,raw_safe=7485939823/44226712530;E=(2, 5, 9, 11, 12, 14):P=T,slack=8566,raw_safe=302562628919/1794468070395
+first_failed_implication=finite_height_or_positive_raw_safe_mass=>mu(P_(E,Z))>36/91_for_every_remaining_packet
+missing_coordinate=the_three-aligned_tail_section_U_A_inside_the_exact_four-drift_projection_P_(E,Z);the_108966498_candidates_are_not_closed
+scope=no_ledger_or_projected_cap_decrement;the_common-torsion successes_close_mask_families_but_654_finite_masks_remain
+semantic_sha256=e7f27276343813afa2b34471e8d3b98a28f32491b2be49204e6ca5acc3bc144d

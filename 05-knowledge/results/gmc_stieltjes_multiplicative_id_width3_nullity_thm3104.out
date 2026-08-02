@@ -1,0 +1,14 @@
+THM-3104 MULTIPLICATIVE-ID STIELTJES WIDTH-THREE NULLITY
+symbolic_I_numerators=20,23;denominators=w1^5*w2^3,w1^5*w2^4
+levy_normalization=Gamma(-3/2)=4*sqrt(pi)/3
+a_center=101128546502785376754010485709/10000000000000000000000000000000;a_radius=1/1000000000000
+b_center=38728340591575303661743380503/2000000000000000000000000000000;b_radius=1/10000000000000
+N1_left=(-7.13e-16,-4.00e-16);N1_right=(4.00e-16,7.13e-16)
+H_bottom=(-3.24e-16,-3.22e-16);H_top=(3.22e-16,3.24e-16)
+taylor_remainders=N1<1.8e-26,H<1.2e-25
+poincare_miranda_common_zero=PASS
+N1_a>1/2000;jacobian_d(N1,H)>17/10^7;unique_box_zero=PASS
+g11=(0.0482,0.0483);g22=(0.0526,0.0527)
+gram_determinant=(0.000295,0.000297);strict_positive=PASS
+scope=full_support_strict_Stieltjes_and_multiplicative_ID_not_product_Gamma
+all_rigorous_symbolic_and_Arb_checks=PASS

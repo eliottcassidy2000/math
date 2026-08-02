@@ -1,0 +1,13 @@
+THM-3101 SCHEME-ZERO-PRIMARY NEXT-MOMENT-UNIT SUSPENSION
+tau_exponent_cells=8 exact_power_1_over_2p=PASS
+newton_cells=3422 lower=910 upper=2512 equality_cells=16 unique_lower_and_upper_pair=PASS
+row_replacement_cells=978 singleton_faces=6 composition_faces=186 positive_alternants=PASS
+scheme_zero_unit_cells=30 nonunit_cells=30 transverse_power=PASS
+frozen_nilpotent_cells=15 deformation_hostiles=18 physical_weight_hostiles=8 weighted_Rees_boundary=PASS
+aggregate_hostile=nonzero_trace_but_zero_divisor
+conjugate_norm_cells=240 real_residue_hostiles=6 sign_boundary=PASS
+normal_exponent_cells=60 finite_free_rank_and_even_sign=PASS
+persistent_root_cells=99 zero_new_coefficient=PASS
+conditional_count_cells=36 general_sfc_cells=30 max_t_minus_5_and_general_drop=PASS
+scope=fixed_child;finite_complete_intersection;scheme_zero_primary;pointwise_unit;fixed_normal_rank;conditional_count;nilpotent_open
+all_exact_checks=PASS
