@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-355 (2026-08-02, THM-3159 candidate audit) -- losing the odd reflected-pole sign turned the zero-face system into an unrelated quartic gcd
+
+- **What failed:** the first THM-3159 candidate converted a partial fraction
+  written with denominator `(beta*t-1)^3` to the normalized pole
+  `(1-beta*t)^3` without the required minus sign.  Solving that incorrectly
+  signed `F_2=F_3=0` system produced a quartic numerator `N` and the
+  degree-`q+2` test polynomial `x^2(x-1)U(x)-N(x)`.
+- **Why it was load-bearing:** exact coprimality of that quartic transform did
+  not imply coprimality of the actual two endpoint faces.  Re-expanding the
+  partial fractions gives
+  `(beta*t-1)^(-3)=-(1-beta*t)^(-3)` and changes the solved values to
+  `U(alpha)=-1/(2alpha)` and
+  `U(1-alpha)=-1/[2(1-alpha)]`.  Thus the lawful transformed polynomial is
+  `P(x)=2xU(x)+1`, of degree `q`, not the old quartic expression.
+- **Repair / strongest survivor:** at `q=249727`, a fresh exact FLINT gcd and
+  extended-gcd verification give `gcd(P(x),P(1-x))=1`; the singular charts
+  `alpha=0,1,1/2` are checked separately.  THM-3159 therefore survives, but
+  its theorem text, script, transcript, and hashes were replaced before
+  promotion.  The old candidate SHA `67450bdb4` is not a proved dependency.
+- **Reusable rule:** when normalizing partial fractions, parity is data.
+  Convert every pole denominator before collecting residues, and audit the
+  solved linear system against a direct finite-field face evaluation before
+  launching a large resultant or gcd computation.
+
 ## MISTAKE-354 (2026-08-02, THM-3155 selector-barcode scope audit) -- treating abstract terminal-law realization as a substantive sequential obstruction
 
 - **What failed:** THM-3155's scope said that an arbitrary law on legal

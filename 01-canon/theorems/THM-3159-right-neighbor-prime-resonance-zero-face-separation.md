@@ -5,9 +5,14 @@ status: >
   PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.  At the
   right-neighbor prime q=249727, the two resonant quadratic factorial-moment
   polynomials have distinct positive q-adic slopes.  Their height-zero faces
-  are coprime by an exact reciprocal-root descent to a degree-249729 extended
+  are coprime by an exact reciprocal-root descent to a degree-249727 extended
   gcd over F_q.  Consequently the window r=q-3=249724 is null-free.  The
   theorem does not claim the analogous finite-field gcd for every prime q.
+audit: >
+  The first candidate audit caught an odd partial-fraction sign error on the
+  reflected cubic pole.  MISTAKE-355 records the false quartic transform.
+  The repaired linear system gives P(x)=2xU(x)+1; its exact gcd and Bezout
+  identity are being re-audited before promotion.
 source: root/multiscale-newton-flag/2026-08-02
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
@@ -17,8 +22,8 @@ related:
   - THM-3153-four-step-prime-resonance-second-euclidean-newton-separation
 script: 04-computation/factorial_right_neighbor_exception_reciprocal_root_thm3159.py
 output: 05-knowledge/results/factorial_right_neighbor_exception_reciprocal_root_thm3159.out
-script_sha256: 7b14e2f4cda580d43b699c07734f31ef4b74a3ec3344569cebc920eac880530b
-output_sha256: 2139b36ee8464a805caddc0bb75cc9e714809c777c883451b54cf66617c4a89a
+script_sha256: 7b57f5df8969a8f78cdb54f8b6fe05865a2b817553c83bc386e8aa82740110bc
+output_sha256: cbce9ea29197c5e40aff38f8f7a707bf415650db285dcdb406173816ff08c77d
 hash_basis: LF-normalized bytes
 ---
 
@@ -180,43 +185,42 @@ S_3(alpha)=(U(alpha)-alpha+1)/(2alpha^2).                   (19)
 ```
 
 Apply the ordinary partial-fraction decompositions of `H^-2` and `H^-3`
-and substitute `(19)`.  The two equations `F_2=F_3=0` are a linear system
-for `U(alpha),U(1-alpha)`.  Its determinant, after the harmless displayed
-denominators are cleared, is
+and substitute `(19)`.  The odd pole on the reflected branch carries the
+minus sign
 
 ```text
--4 alpha^2(alpha-1)^2(2alpha-1)^2.                          (20)
+(beta*t-1)^(-3)=-(1-beta*t)^(-3).                           (20)
 ```
 
-Solving gives
+With that sign retained, `F_2=F_3=0` is a linear system for
+`U(alpha),U(1-alpha)`.  After clearing the displayed denominators, its
+determinant is `-2alpha(alpha-1)(2alpha-1)^3`, and solving gives
 
 ```text
-U(alpha)=N(alpha)/(alpha^2(alpha-1)),                        (21)
-
-N(x)=x^4-x^3-x^2/2+x-1/4,                                  (22)
+U(alpha)=-1/(2alpha),
+U(1-alpha)=-1/[2(1-alpha)].                                 (21)
 ```
 
-and the reflected equation obtained by replacing `alpha` with `1-alpha`.
 Equivalently, every common root away from the three singular charts would
 be a common root of
 
 ```text
-P(x)=x^2(x-1)U(x)-N(x),            P*(x)=P(1-x).             (23)
+P(x)=2xU(x)+1,                     P*(x)=P(1-x).             (22)
 ```
 
-These are explicit polynomials in `F_q[x]` of degree `q+2=249729`.
+These are explicit polynomials in `F_q[x]` of degree `q=249727`.
 
 ## 5. Exact certificate and the singular charts
 
-The companion constructs `(16),(22),(23)` coefficient by coefficient in
+The companion constructs `(16),(22)` coefficient by coefficient in
 `F_q[x]` and performs both a gcd and an extended gcd.  It obtains
 
 ```text
 gcd(P,P*)=1,
-S(x)P(x)+T(x)P*(x)=1                                      (24)
+S(x)P(x)+T(x)P*(x)=1.                                      (23)
 ```
 
-and verifies `(24)` by exact polynomial multiplication.  No floating point,
+and verifies `(23)` by exact polynomial multiplication.  No floating point,
 random evaluation, or truncated subresultant is used.
 
 The divisions in `(19)--(21)` excluded two values of `v`.  Direct exact
@@ -224,11 +228,11 @@ coefficient recurrences give
 
 ```text
 (F_2(0),F_3(0))                 =(25306,112210),
-(F_2(-1/4),F_3(-1/4))           =(191906,38381)   in F_q^2. (25)
+(F_2(-1/4),F_3(-1/4))           =(191906,38381)   in F_q^2. (24)
 ```
 
 Both charts are therefore disjoint from the common zero locus.  Equations
-`(20)--(25)` prove `gcd(F_2,F_3)=1`.  Together with `(10),(14)`, this proves
+`(20)--(24)` prove `gcd(F_2,F_3)=1`.  Together with `(10),(14)`, this proves
 that `A,B` are coprime over `Q`, contradicting `(3)`.  QED.
 
 ## 6. Exact companion
@@ -241,11 +245,10 @@ python -O 04-computation/factorial_right_neighbor_exception_reciprocal_root_thm3
 ```
 
 and compare byte-for-byte with the declared output.  Besides the
-degree-`249729` gcd and verified Bezout identity, the companion checks
+degree-`249727` gcd and verified Bezout identity, the companion checks
 primality of `q`, all four Newton endpoints, both singular charts, and the
-reciprocal-root transform at every odd prime from `5` through `47`.  At
-`q=5,7` the transformed pair shares only the repeated-root chart discarded
-by `(20)`; after removing that chart every small control is coprime.
+reciprocal-root transform at every odd prime from `5` through `47`.  Every
+one of those corrected small transformed pairs is coprime.
 
 ## 7. Connection contract and scope
 
@@ -261,15 +264,24 @@ The number `249721` is the largest eligible prime in THM-3148's offset-five
 endpoint resultant.  Its window has
 
 ```text
-d=249721+5=249726=q-1,       r=d-2=q-3,                     (26)
+d=249721+5=249726=q-1,       r=d-2=q-3,                     (25)
 ```
 
 so this theorem closes that exact exceptional window.  It does not by itself
 prove the generic positive-slope analysis for the entire offset-five family;
 that Euclidean-Newton layer must be stated and audited separately.
 
-Most importantly, the exact computation `(24)` is for `q=249727`.  Small
+Most importantly, the exact computation `(23)` is for `q=249727`.  Small
 controls suggest the analogous `gcd(P_q,P_q*)=1` for every odd prime, but no
 all-prime symbolic identity is claimed.  Nor does the theorem settle an
 arbitrary prime gap, arbitrary-support `SFC(3)`, `GMC(2)`, `NC(2)`, or
 `LRC(14)`.
+
+## 8. Candidate-audit correction
+
+The first pushed candidate used a quartic polynomial in place of `(22)`.
+Its derivation converted the reflected cubic pole with the wrong sign.  The
+independent audit caught that error before promotion; MISTAKE-355 records the
+minimal failed implication.  Equations `(20)--(23)`, the companion, stored
+output, and hashes were all replaced rather than silently retaining the old
+certificate.

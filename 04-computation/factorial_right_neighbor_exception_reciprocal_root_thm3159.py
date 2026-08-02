@@ -3,8 +3,9 @@
 
 The load-bearing computation is one extended gcd in F_q[a] at
 q=249727.  It is intentionally performed on the linear-size reverse
-truncated exponential P(a), rather than constructing the two original
-degree-124863 endpoint faces by a quadratic-time bivariate expansion.
+truncated exponential P(a)=2*a*U(a)+1, rather than constructing the two
+original degree-124863 endpoint faces by a quadratic-time bivariate
+expansion.
 """
 
 from math import isqrt
@@ -81,20 +82,11 @@ def small_transform_controls():
     for prime in (5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47):
         x = nmod_poly([0, 1], prime)
         u = reverse_truncated_exponential(prime)
-        half = pow(2, -1, prime)
-        quarter = pow(4, -1, prime)
-        numerator = x**4 - x**3 - half * x**2 + x - quarter
-        polynomial = x**2 * (x - 1) * u - numerator
+        polynomial = 2 * x * u + 1
         reflected = polynomial.compose(1 - x)
         common = polynomial.gcd(reflected)
-        # At p=5,7 the only common transformed point is the repeated-root
-        # chart a=1/2, where the divided-difference derivation is singular.
-        repeated = 2 * x - 1
-        residual = common
-        while residual.gcd(repeated).degree() > 0:
-            residual //= residual.gcd(repeated)
-        require(residual.degree() == 0, f"small transform p={prime}")
-        records.append((prime, common.degree(), residual.degree()))
+        require(common.degree() == 0, f"small transform p={prime}")
+        records.append((prime, common.degree()))
     return records
 
 
@@ -126,10 +118,7 @@ def main():
 
     x = nmod_poly([0, 1], Q)
     u = reverse_truncated_exponential(Q)
-    half = pow(2, -1, Q)
-    quarter = pow(4, -1, Q)
-    numerator = x**4 - x**3 - half * x**2 + x - quarter
-    polynomial = x**2 * (x - 1) * u - numerator
+    polynomial = 2 * x * u + 1
     reflected = polynomial.compose(1 - x)
 
     gcd_direct = polynomial.gcd(reflected)
@@ -139,6 +128,8 @@ def main():
         bezout_left * polynomial + bezout_right * reflected == 1,
         "extended-gcd identity",
     )
+    chart_values = tuple(int(polynomial(value)) for value in (0, 1, pow(2, -1, Q)))
+    require(all(chart_values), "reciprocal-root chart boundary")
 
     small = small_transform_controls()
     require(len(small) == 13, "small-control count")
@@ -157,9 +148,10 @@ def main():
         "reciprocal_gcd="
         f"degree:{gcd_direct.degree()},bezout:{int(gcd_extended == 1)}"
     )
+    print(f"reciprocal_chart_P_0_1_half={chart_values}")
     print(
         "small_transform_controls="
-        + ",".join(f"{p}:{before}->{after}" for p, before, after in small)
+        + ",".join(f"{p}:{degree}" for p, degree in small)
     )
     print("THM3159_CHECKS_PASSED")
 
