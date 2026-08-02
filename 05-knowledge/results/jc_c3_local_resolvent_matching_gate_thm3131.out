@@ -1,0 +1,8 @@
+THM-3131 exact controls
+disc_identity=PASS
+disc_formula=16*p**4*r - 4*p**3*q**2 - 128*p**2*r**2 + 144*p*q**2*r - 27*q**4 + 256*r**3
+intersection_sizes I_V4,I_Hmoved,I_Hfixed=1,1,3
+nondivisible_n,vp,ve2,vdisc=1,oo,oo,4
+divisible_n,vp,ve2,vdisc=3,2,4,14
+thm3059_n,vp,ve2,vdisc=-2,-1,-2,-8
+all_exact_controls=PASS
