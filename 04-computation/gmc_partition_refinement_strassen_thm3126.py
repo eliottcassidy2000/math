@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Exact controls for THM-3123.
+"""Exact controls for THM-3126.
 
-The proof of THM-3123 is finite max-flow duality.  This companion checks the
+The proof of THM-3126 is finite max-flow duality.  This companion checks the
 orientation and all boundary conventions exhaustively in the first branching
 partition posets, verifies the normalized filter identity on a genuine signed
 alphabet bank, and records two minimal hostile controls.
@@ -12,6 +12,11 @@ from __future__ import annotations
 from collections import deque
 from hashlib import sha256
 from itertools import permutations, product
+
+
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
 
 
 def partitions(n: int, cap: int | None = None):
@@ -72,7 +77,7 @@ def all_upsets(types, closures):
 
 def maxflow_feasible(c, edges):
     """Whether c is a nonnegative Hasse boundary."""
-    assert sum(c) == 0
+    require(sum(c) == 0, "max-flow input must have total mass zero")
     q = len(c)
     source, sink = q, q + 1
     total = sum(max(0, -x) for x in c)
@@ -159,7 +164,7 @@ def exhaustive_duality_controls():
             checked += 1
             flow = maxflow_feasible(c, edges)
             dual = upset_feasible(c, upsets)
-            assert flow == dual
+            require(flow == dual, f"duality mismatch at N={n}, c={c}")
             passing += int(flow)
             digest.update(bytes(x + radius for x in c))
             digest.update(bytes((int(flow),)))
@@ -187,16 +192,16 @@ def hostile_controls():
         c4[i4[mu]] = value
     principal = [sum(c4[j] for j in closure4[i]) for i in range(len(types4))]
     bad = frozenset(i4[mu] for mu in ((4,), (3, 1), (2, 2)))
-    assert min(principal) == 0
-    assert sum(c4[i] for i in bad) == -1
-    assert bad in upsets4
-    assert not maxflow_feasible(c4, edges4)
+    require(min(principal) == 0, "principal-upset hostile failed its controls")
+    require(sum(c4[i] for i in bad) == -1, "nonprincipal cut value changed")
+    require(bad in upsets4, "declared nonprincipal set is not an upset")
+    require(not maxflow_feasible(c4, edges4), "principal hostile became feasible")
 
     types3 = tuple(partitions(3))
     edges3 = hasse_edges(types3)
     c3 = [-1, 3, -2]  # order: (3),(2,1),(1,1,1)
-    assert types3 == ((3,), (2, 1), (1, 1, 1))
-    assert not maxflow_feasible(c3, edges3)
+    require(types3 == ((3,), (2, 1), (1, 1, 1)), "N=3 type order changed")
+    require(not maxflow_feasible(c3, edges3), "kernel hostile became feasible")
 
     return (
         "principal_hostile:N=4:vector=(1,-1,-1,1,0):"
@@ -224,14 +229,14 @@ def filter_response_control():
     hq = sum(q.values())
     phih = sum(phi.values())
     g = {mu: phih * q[mu] - phi[mu] * hq for mu in types}
-    assert sum(g.values()) == 0
+    require(sum(g.values()) == 0, "normalized filter current lost zero mass")
     digest = sha256()
     for upset in upsets:
         lhs = sum(g[types[i]] for i in upset)
         fq = sum(q[types[i]] for i in upset)
         phif = sum(phi[types[i]] for i in upset)
         rhs = phih * fq - phif * hq
-        assert lhs == rhs
+        require(lhs == rhs, f"filter identity failed on upset {sorted(upset)}")
         digest.update(f"{sorted(upset)}:{lhs};".encode())
     return (
         f"filter_identity:N=4:upsets={len(upsets)}:hq={hq}:phih={phih}:"
