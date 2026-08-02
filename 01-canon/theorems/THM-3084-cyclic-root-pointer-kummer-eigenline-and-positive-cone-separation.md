@@ -171,8 +171,12 @@ Across the thirteen physical root translates it becomes
 (c_a zeta_13^(-a h))_(h in F_13),                         (12)
 ```
 
-which is exactly the eigenline `(7)`.  The selected physical root `s_tau`
-fixes its phase and hence points the `mu_13` lift by `(9)`.  Therefore:
+which is exactly the eigenline `i_(-a)(c_a)` in the indexing of `(7)`.  With
+the convention `(P x)_j=x_(j-1)`, physical translation by `+h` acts on this
+orbit vector as `P^(-h)` and multiplies it by `zeta_13^(-a h)`.  Thus the
+inversion is only an orientation convention, and `(9)` still gives the exact
+torsor isomorphism.  The selected physical root `s_tau` fixes its phase and
+hence points the `mu_13` lift.  Therefore:
 
 > On each fixed THM-2537 selector cylinder, the selected predecessor-root
 > current has no internal diagonal-Kummer ambiguity after nonzero character
