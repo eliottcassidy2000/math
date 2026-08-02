@@ -359,10 +359,8 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2671/2683/2692 empty all support strata of the inherited
   nonsplit degree-22 branch.  On the chosen split sheet THM-2719--2778 close
   every reduced exact-square-prefix terminal degree `M=4k-2`; the engine is
-  the all-degree response truncation, exact-prefix gcd, unique infinity pole,
-  and `q/h^3` slope-four contradiction.  THM-2781 proves the sharp abstract
-  `d-1` terminal-coefficient perfect-power certificate, but does not enter an
-  arbitrary Keller pair into the Faber chart.
+  response truncation, prefix gcd, infinity pole and `q/h^3` contradiction.
+  THM-2781 gives the sharp abstract terminal certificate, not chart entry.
   On the genuine nonsplit deck THM-2784/2796 reduce to
   `F=VG^2`, `2VG'+V'G=2kappa` and a three-value passport.  THM-2823/2826 close
   the local simple-pole pair; THM-2827 restricts balanced passports and
@@ -371,7 +369,8 @@ Classify profiles under support operations; study analytic continuation and auto
   open.  THM-2799/2800/2805/2808 complete accessory `e=2`; THM-2817 the sextic `e=3`; THM-2840 the heptic `T_7` carrier.
   THM-3123 completes the heptic atlas; THM-3133 isolates the resonant equality
   cells; THM-3151 excludes every `(D,D)` cell and proves the balanced chart
-  floor `N>=4D`.
+  floor `N>=4D`. THM-3165 separates diagonal, constant-field and global-owner
+  gates; no bounded marked jet decides the first.
   General chart entry and `JC(2)`/`DC(2)` remain open.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152 close `r<=1098` plus
   prime `d,d-2,d-3` and prime-power `d-1` exits. THM-3152's exact
