@@ -87,7 +87,7 @@ Fibonacci            0                 0                 0                  0
 So:
 
 1. **Factorial**: `R_w != 0` throughout, three-slot threshold 3 -- consistent
-   with THM-2824, which proves first-window SFC(3) on arbitrary three-slot
+   with THM-2824, which proves first-window SlotSFC_1(3) on arbitrary three-slot
    supports by much heavier machinery. `R_w` gives a one-line certificate per
    support.
 2. **`[0,1]` Lebesgue weight**: `R_w != 0` throughout. **New**: the

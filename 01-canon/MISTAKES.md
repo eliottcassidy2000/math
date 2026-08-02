@@ -9,6 +9,39 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-350 (2026-08-02, factorial-conjecture type audit) -- indexing SFC by slot count and restricting FC to homogeneous polynomials
+
+- **What was claimed:** THM-3018 defined `FC(m)` only for homogeneous
+  polynomials and promoted its simplex polar reduction as an equivalence for
+  the full Factorial Conjecture.  A separate univariate lane then wrote
+  `SFC(N)` when `N` was the number of monomial slots, so in particular a
+  three-term polynomial in one variable was repeatedly called `SFC(3)`.
+- **First failed implication / minimal typed witnesses:** in Edo--van den
+  Essen, arXiv:1304.3956v2, Definition 2.1 and Conjecture 2.4 quantify
+  `FC(m)` over **every** polynomial in `m` variables.  The legal input
+  `1+x` has no single homogeneous degree and hence no single radial Gamma
+  factor, so the homogeneous polar identity cannot be a global equivalence.
+  Definition 2.7 and Conjecture 2.8 likewise use `m` for ambient variable
+  dimension and `N(f)` separately for the number of nonzero monomials and
+  the length of each shifted window.  Thus `1+x+x^2` is a three-slot slice
+  of `SFC(1)`, while `1+x+y+z` is an ambient `SFC(3)` input with a
+  four-moment window.
+- **Repair / strongest survivors:** THM-3018 now states only the proved
+  exponential-integral identity and the exact **homogeneous-subclass**
+  simplex/Bernstein dictionary; its claimed all-homogeneous Laplace closure
+  remains `AUDIT-REQUIRED` because of the already recorded oscillatory-saddle
+  gap.  The univariate exact results are retyped as `N`-slot restrictions of
+  `SFC(1)`; their polynomial systems, Macaulay certificates, resultants, and
+  finite ranges are unchanged.  Historical filenames and output labels such
+  as `sfc3_*` are provenance only and must be read through this correction.
+  Full `FC(3)` and ambient `SFC(3)` remain open.
+- **Rule:** always record the pair `(ambient dimension m, support size N(f))`.
+  Never use the same index for both, and never pass from a homogeneous polar
+  slice to the full nonhomogeneous conjecture without a map that preserves
+  all powers of the factorial functional.  When a short label is needed,
+  write `SlotSFC_1(N)` for the `N`-monomial restriction inside ambient
+  `SFC(1)`.
+
 ## MISTAKE-349 (2026-08-02, THM-3101 post-promotion module audit) -- treating a normal-variable lower quotient as a finite base algebra
 
 - **What was claimed:** after quotienting the remotely perturbed lower moment

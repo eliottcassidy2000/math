@@ -1,6 +1,6 @@
 ---
 id: THM-3020
-title: "Closing the K(alpha,beta) gap: the SFC two-slot calculus closes, with an equal-degree reduction"
+title: "Closing the K(alpha,beta) gap: the univariate two-slot calculus and equal-degree reduction"
 status: >
   PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT. For the SFC
   two-slot integrals K(alpha,beta) = int_0^inf t^alpha (1+lam t^s)^beta e^{-t}dt
@@ -18,12 +18,12 @@ status: >
   lam^{s+1}, so every lam != 0 is an ORDINARY point and mult_{lam_0}(I_m) <= s;
   (K5) for p = 0 a common root forces mult(W(theta)I_m) = mult(I_m) =: mu with
   W = V_s of order s, whence mu <= s-1 and mult(I_{m+1}) >= mu+1 -- for s = 1
-  a contradiction, so SFC(2) holds for p = 0, s = 1 at EVERY window;
+  a contradiction, so SlotSFC_1(2) holds for p = 0, s = 1 at EVERY window;
   (K6) EQUAL-DEGREE REDUCTION: since I_{m+1} = K(0,m) + lam K(s,m) and
-  I_m(0) = 1, gcd(I_m, I_{m+1}) = gcd(K(0,m), K(s,m)), so SFC(2) at window k
+  I_m(0) = 1, gcd(I_m, I_{m+1}) = gcd(K(0,m), K(s,m)), so SlotSFC_1(2) at window k
   (p=0) is equivalent to Res(K(0,k+1), K(s,k+1)) != 0 -- a pair of the SAME
   degree differing only by the diagonal multiplier w_j = prod_{i=1}^s (sj+i).
-  Scope: the gap of THM-3019 is closed as a calculus; SFC(2) for s >= 2 and
+  Scope: the gap of THM-3019 is closed as a calculus; SlotSFC_1(2) for s >= 2 and
   the p >= 1 families remain OPEN, now in the sharper equal-degree form.
 source: death-star-2026-07-31-coinC2
 depends_on:
@@ -39,7 +39,10 @@ output: 05-knowledge/results/sfc_k_calculus_closure_thm3020.out
 
 # THM-3020 -- the K-calculus closes
 
-THM-3019 section 4 proved SFC(2) for `f = a + b z` by integration by parts,
+Here `SlotSFC_1(2)` has the corrected MISTAKE-350 meaning: the two-monomial
+restriction inside ambient `SFC(1)`, not the original ambient `SFC(2)`.
+
+THM-3019 section 4 proved SlotSFC_1(2) for `f = a + b z` by integration by parts,
 and identified the obstruction to generalising: for `s >= 2` or `p >= 1`
 there is no polynomial `u` with `u g' = c g`, so integrating by parts opens
 onto the two-parameter family
@@ -124,7 +127,7 @@ mu <= s-1,        and       mult(I_{m+1}) >= mu + 1.
 
 For `s = 1` this gives `mu <= 0`, contradicting `mu >= 1`:
 
-**SFC(2) holds for `p = 0`, `s = 1` at every window `k`** -- recovering
+**SlotSFC_1(2) holds for `p = 0`, `s = 1` at every window `k`** -- recovering
 THM-3019 (S4) from the calculus, and now as one case of a general bound.
 
 ## 5. The equal-degree reduction (K6)
@@ -139,7 +142,7 @@ gcd(I_m, I_{m+1}) = gcd(K(0,m), lam K(s,m)) = gcd(K(0,m), K(s,m)).
 Therefore, for `p = 0`,
 
 ```text
-SFC(2) at window k   <=>   Res( K(0,k+1), K(s,k+1) ) != 0,             (K6)
+SlotSFC_1(2) at window k   <=>   Res( K(0,k+1), K(s,k+1) ) != 0,             (K6)
 ```
 
 a resultant of two polynomials of the **same** degree `m = k+1`, whose

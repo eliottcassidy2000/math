@@ -128,18 +128,17 @@ current fills every cell and every admissible parabolic sector.
 **Counterindication:** division is not functorial--Lorentzian factors and copied masks need a typed strict transform, lawful action, saturated ideal, or other multiplicative functor.
 **Evidence:** THM-2452/2345/2576, MISTAKE-287/215/223, THM-2348/2033, and THM-2942/2969's open coloured wall lift.
 
-## Controlled forgetting requires a sidecar
+## Controlled forgetting and unlabeled quotients require a sidecar
 
-**Trigger / action:** before quotienting or replacing an object by an invariant,
-name the consumer, preserved predicate, kernel, lost coordinate, and legal
-sidecar.  For a norm/resultant/determinant, compute the diagonal kernel and
-retain augmentation plus a pointed continuation carry before contraction.
-**Mechanism:** a kernel is gauge only if every consumer kills it; weighted norm
-plus augmentation is a finite isogeny whose Kummer lift torsor is reconstructed
-by a point or based path. **Counterindication:** omit only after factorization;
-zeros, incompatible gauges/common atoms, and fixed physical phase slices need
-separate checks. **Evidence:** THM-840/2355, THM-2237/2240, THM-2548/3048,
-THM-2962/3072, THM-3073/3077, MISTAKE-310/THM-2744, and THM-2646/HYP-2033.
+**Trigger / action:** before quotienting, name the consumer, preserved predicate,
+kernel, lost coordinate, and sidecar.  For distinct component occurrences,
+factorial-conjugate to labels and quotient only after checking freeness; retain
+profiles that later operations consume. **Mechanism:** kernels are gauge only
+when every consumer kills them; factorial weights count occurrence bijections
+(THM-3119/3121), and pointed continuation restores lift torsors.
+**Counterindication:** zeros, incompatible gauges, physical phases, stabilizers,
+and scalarized consumed profiles need separate checks. **Evidence:** THM-840/2355,
+2237/2240, 2548/3048, 2962/3072, 3119/3121, and MISTAKE-310.
 
 ## Test whether a central extension changes the base signature
 
