@@ -286,32 +286,41 @@ layers with per-layer degrees `k_1,...,k_ell`.  Every coefficient of total
 degree below five vanishes.
 
 The polynomial dependence on the support indices carries a universal
-degree-nine divisor.  Work in the formal response ring `Q[a,b][[X]]` and
-introduce the continuous-index response
+degree-nine divisor.  Work in the formal response ring `Q[a,b][[X,Y]]` and
+introduce the continuous-index moment response
 
 ```text
 F_t(X)=exp(sum_(r>=1)(-1)^(r-1) p_r(t)p_r(X)/r),
 p_r(t)=sum_(j=1)^(t-1)j^r.                            (26)
 ```
 
-Faulhaber's formula makes every `p_r(t)` a polynomial and gives
-`F_0=F_1=1` and
+Faulhaber's formula makes every coefficient of `F_t` a polynomial in `t`
+and gives `F_0=F_1=1`.  Adjoin the group-like formal exponentials
+`y_t=exp(tY)`, define the moment functional by
 
 ```text
-F_(t+h)-F_t in (h).                                   (27)
+L_X(y_t)=F_t(X),                 f_t=y_t/F_t(X).       (27)
 ```
 
 At positive integer `t`, `(26)` is exactly
-`product_(x in X)P_t(x)`.  Thus the collision differences below are
-coefficientwise divisibilities in the actual response series, not a
-heuristic interpolation.
+`product_(x in X)P_t(x)`, so `(27)` is the normalized monomial of the
+actual response model.  Since `F_t` has constant coefficient one, it is a
+unit.  Formal Taylor divisibility, applied to both `y_t` and `F_t^(-1)`,
+therefore gives
+
+```text
+f_(t+h)-f_t in (h).                                   (28)
+```
+
+Thus the collision differences below are coefficientwise divisibilities
+in the normalized response algebra, not a heuristic interpolation.
 
 Each term of `I1` is multihomogeneous of degree four in `U` and degree
 three in `V`; each term of `I2` has degrees three and four.  Therefore
 
 ```text
-U=F_a-F_0       supplies a^4 in I1 and a^3 in I2,
-V=F_b-F_a       supplies (b-a)^3 in I1 and (b-a)^4 in I2.  (28)
+U=f_a-f_0       supplies a^4 in I1 and a^3 in I2,
+V=f_b-f_a       supplies (b-a)^3 in I1 and (b-a)^4 in I2.  (29)
 ```
 
 There are also two factors at the third collision.  Put `W=U+V=f_b-f_0`
@@ -320,7 +329,7 @@ direct multilinearity gives
 
 ```text
 I1(U,epsilon W-U)=epsilon^2 A+epsilon^3 B,
-I2(U,epsilon W-U)=-epsilon^2 A+epsilon^3 C+epsilon^4 D, (29)
+I2(U,epsilon W-U)=-epsilon^2 A+epsilon^3 C+epsilon^4 D, (30)
 
 A=3gUU^2 tUWW-6gUU gUW tUUW-gUU gWW tUUU+4gUW^2 tUUU,
 B=-gUU^2 tWWW+3gUU gWW tUUW-2gUW gWW tUUU,
@@ -328,14 +337,16 @@ C=2gUU^2 tWWW-6gUU gWW tUUW+4gUW gWW tUUU,
 D=-2gUU gUW tWWW+3gUU gWW tUWW-gWW^2 tUUU.
 ```
 
-Here `W=F_b-F_0` lies in `(b)`, so `(29)` supplies `b^2` in both
-invariants.  The three polynomials `a,b,b-a` are pairwise coprime.  Dividing by the common
-response polynomial in `(11)` preserves these coefficient ideals because
-that polynomial has constant coefficient one: formal series division is
-triangular.  Consequently
+Here `W=f_b-f_0` lies in `(b)`, so `(30)` supplies `b^2` in both
+invariants.  Multiplying `I1,I2` by their clearing factors
+`F_a^5F_b^3,F_a^5F_b^4` only multiplies by units and preserves all three
+ideals.  The polynomials `a,b,b-a` are pairwise coprime.  Dividing by the
+common response polynomial in `(11)` likewise preserves these coefficient
+ideals because that polynomial has constant coefficient one: formal series
+division is triangular.  Consequently
 
 ```text
-base1=a^4b^2(b-a)^3,             base2=a^3b^2(b-a)^4  (30)
+base1=a^4b^2(b-a)^3,             base2=a^3b^2(b-a)^4  (31)
 ```
 
 divide every response multicoefficient, and a coefficient of total response
@@ -349,14 +360,14 @@ root alphabet.  Dual Cauchy gives
 
 ```text
 product_(x in X) product_(r in S_R)(1+rx)
- =sum_mu s_mu(X)s_(mu')(S_R).                          (31)
+ =sum_mu s_mu(X)s_(mu')(S_R).                          (32)
 ```
 
 Therefore
 
 ```text
 K_j(X)=sum_mu A_(j,mu)s_mu(X),
-A_(j,mu)=Phi_j(s_(mu')).                               (32)
+A_(j,mu)=Phi_j(s_(mu')).                               (33)
 ```
 
 Schur functions have nonnegative monomial coefficients.  It is therefore
@@ -367,21 +378,21 @@ For one active layer, the degree-five coefficients factor as
 
 ```text
 Phi_1(e5)=a^4 b^2 (b-a)^3(3a+5b-5)/2,
-Phi_2(e5)=a^3 b^2 (b-a)^4(3a+4b-5)/2.                 (33)
+Phi_2(e5)=a^3 b^2 (b-a)^4(3a+4b-5)/2.                 (34)
 ```
 
 More generally, for every partition `mu` of five, let `f^mu` be the number
 of standard tableaux and put
 
 ```text
-kappa_mu=sum_i mu_i(mu_i-2i+1).                        (34)
+kappa_mu=sum_i mu_i(mu_i-2i+1).                        (35)
 ```
 
 Exact character algebra gives
 
 ```text
 A_(1,mu)=base1 f^mu/2 (3a+5b-kappa_mu/4),
-A_(2,mu)=base2 f^mu/2 (3a+4b-kappa_mu/4).              (35)
+A_(2,mu)=base2 f^mu/2 (3a+4b-kappa_mu/4).              (36)
 ```
 
 Since `kappa_mu<=5*4=20`, every degree-five Schur coefficient is strictly
@@ -392,7 +403,7 @@ coordinates
 
 ```text
 wide:   a=A+1,       b=2a+D,
-tight:  a=A+D+2,     b=A+2D+3.                         (36)
+tight:  a=A+D+2,     b=A+2D+3.                         (37)
 ```
 
 For every partition `mu` of size `N`, `5<=N<=12`, the exact binomial
@@ -400,19 +411,19 @@ Newton expansion
 
 ```text
 A_(j,mu)/base_j
- =sum_(r+s<=2N-9) c_(r,s) binom(A,r)binom(D,s)         (37)
+ =sum_(r+s<=2N-9) c_(r,s) binom(A,r)binom(D,s)         (38)
 ```
 
 has `c_(r,s)>=0` in both chambers.  The complete exact census is
 
 ```text
 N       5     6      7      8      9      10      11      12
-slots  84   440   1260   3168   6600   13104   23520   41888. (38)
+slots  84   440   1260   3168   6600   13104   23520   41888. (39)
 ```
 
 There are `90,064` slots in all: `89,916` are positive, `148` are zero, and
 none is negative.  The zeros are structural boundary/degree deficiencies.
-By `(31)--(32)`, every layer-histogram coefficient of total degree between
+By `(32)--(33)`, every layer-histogram coefficient of total degree between
 five and twelve is therefore nonnegative, for an arbitrary number of
 Gamma layers and every anchored support.
 
@@ -427,7 +438,7 @@ It does not cover histograms with three or more active layers in degrees
 A finite exact hostile scan on the six supports
 
 ```text
-(1,2),(1,3),(2,3),(1,4),(2,5),(4,5)                  (39)
+(1,2),(1,3),(2,3),(1,4),(2,5),(4,5)                  (40)
 ```
 
 finds no negative Schur coefficient through degree fourteen (`5,952`
@@ -447,7 +458,7 @@ that colour type.  If `omega(pi)` is the resulting signed weight, define
 its upper zeta transform
 
 ```text
-W(kappa)=sum_(pi>=kappa) omega(pi).                    (40)
+W(kappa)=sum_(pi>=kappa) omega(pi).                    (41)
 ```
 
 For a permutation `sigma` of the microletters, let `orb_macro(sigma)` be
@@ -456,14 +467,14 @@ equivalently, join macro packets whenever a cycle meets both.  The cycle
 enumerator identity
 
 ```text
-P_pi(x)=sum_(sigma: orb_macro(sigma)<=pi) x^(defect(sigma))  (41)
+P_pi(x)=sum_(sigma: orb_macro(sigma)<=pi) x^(defect(sigma))  (42)
 ```
 
 shows that for any number of Gamma layers each coefficient is a positive
 weighted sum of
 
 ```text
-W(join_nu orb_macro(sigma_nu)).                        (42)
+W(join_nu orb_macro(sigma_nu)).                        (43)
 ```
 
 The tempting claim `W>=0` is false, but the failure is extremely rigid.
@@ -473,12 +484,12 @@ macro partitions gives
 ```text
                          positive   negative   zero
 B1 rank-four current        285        195     3660
-B2 rank-four current        720        900    19527.  (43)
+B2 rank-four current        720        900    19527.  (44)
 ```
 
 Every nonzero value of `W` has atomic rank exactly four.  For `B1` its
 positive minimum is `1/30` and its negative minimum is `-1/15`; for `B2`
-they are `1/60` and `-1/30`.  The zero column in `(43)` counts all Bell
+they are `1/60` and `-1/30`.  The zero column in `(44)` counts all Bell
 partitions; among rank-four partitions alone the zero counts are `1221`
 and `5331`.
 
@@ -493,13 +504,13 @@ rank-four join carries a redundant insertion edge.  The remaining problem
 is therefore a relative rank-four cycle/edge-slide positivity theorem, not
 an unstructured search through histograms.
 
-The zeta expansion `(40)--(43)` applies to the undeleted bank.  Division by
+The zeta expansion `(41)--(44)` applies to the undeleted bank.  Division by
 the common response factor in `(11)` is triangular with constant term one,
 but it is not a positive zeta operation; the rank-four current is therefore
 a topological reduction of the residual `Phi`, not already a positive
 decomposition of it.  This also explains why the proved Schur and
 two-layer faces do not yet prove the full result: they test large explicit
-faces of `(42)`, but do not provide the required cycle-space injection for
+faces of `(43)`, but do not provide the required cycle-space injection for
 an arbitrary tuple of layers.
 
 ## 6. Exact scope
