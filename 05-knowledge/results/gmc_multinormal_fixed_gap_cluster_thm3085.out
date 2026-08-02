@@ -1,0 +1,11 @@
+THM-3085 MULTI-NORMAL FIXED-GAP CLUSTER
+layer_non_survivors=5296 survivors=112 sharp_equalities=16
+general_gap=rho_m=(m/(m+1))^m;base3_rho=27/64
+generalized_vandermonde_cells=381 det_power_positive=PASS
+covariance_cells=60 widths=4..14:11
+carrier=Sm^(K!/m!)*E^(m!)*prod_r U_r^(K!/r)
+base3= S3^(K!/6)*E_4..K^6*prod_r U_r^(K!/r)
+normal_symbol=det[r^h]^(K!);distinct_gaps=positive
+K6_gaps_012=det:2;base:120;power:858;symbol:2^720
+boundaries=repeated_gaps;zero_child;moving_gaps;arbitrary_support
+all_exact_checks=PASS
