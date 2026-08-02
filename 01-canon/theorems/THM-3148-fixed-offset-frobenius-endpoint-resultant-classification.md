@@ -2,12 +2,19 @@
 id: THM-3148
 title: "Fixed-offset Frobenius endpoint-resultant classification"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The factorial functional modulo p is a Frobenius endpoint projector.  At
   every fixed offset d=p+s it identifies the complete height-zero residual
   of A_(p+a) with a fixed degree-a polynomial.  For the resonant pair this
   descends the large window r=p+s-2 to the base window r=s-2, and its fixed
   resultant exactly classifies the exceptional primes on the unit-root face.
+audit: >
+  An independent hostile audit rederived the general Frobenius-projector
+  typing, the untruncated-degree guard, zero-root exclusion, base-window
+  scaling and resultant equivalence, and every scope boundary.  Independent
+  normal and optimized replays match the stored transcript and declared
+  LF-normalized hashes; all 1,400 congruences, 420 scaling/recurrence checks,
+  exact resultants, modular gcds, and the p=61 hostile pass.
 source: root/multiscale-newton-flag/2026-08-02
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
@@ -25,7 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3148 -- fixed-offset Frobenius endpoint-resultant classification
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The prime-resonance theorems THM-3131, THM-3138, THM-3143, and THM-3146
 computed their low Newton faces one offset at a time.  The common mechanism is
@@ -297,4 +304,4 @@ scaling and zero-root recurrences, Bareiss resultants, exact factorizations,
 all eligible modular gcds through `s=6`, and the hostile `p=61` denominator
 wall.
 
-**QED (candidate pending independent hostile audit).**
+**QED.**
