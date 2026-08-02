@@ -1,0 +1,13 @@
+theorem=THM-3063
+status=PROVED_VERIFIED_EXACT
+contraction=(c0c1c2c3)*(P1,-P2,P3);sum=0_by_Pluecker
+cofactor_quotient=matching_triple_depends_only_on_product_c0c1c2c3
+Keller_predicate=c_i*product_(j!=i)(z_i-z_j)_constant_for_i=0..3
+invisible_group={(d0,d1,d2,d3):product_di=1}
+C3_invariant_twist=(2,2,2,1/8);product=1;orbit_vs_fixed_not_equal
+C3_edge_order=(01,02,03,12,13,23);valuations=(1,1,0,1,0,0);matching_valuations=(1,1,1)
+C3_signed_initial_residues_F7=(2,4,1);sigma=0
+C3_derivative_valuations=(2,2,2,0);cofactor_valuations=(-2,-2,-2,0)
+C3_Keller_residues=(1,1,1,1);twisted_residues=(2,2,2,1)
+gauged_matching_face=(-5,-5,-5);twist_preserves_full_matching_triple
+conclusion=THM3058_vertex_gauge_augmentation_cannot_test_sheetwise_Keller_constancy
