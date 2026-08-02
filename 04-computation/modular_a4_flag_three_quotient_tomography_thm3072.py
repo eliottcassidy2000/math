@@ -329,7 +329,10 @@ semantic = repr((
 semantic_sha256 = sha256(semantic).hexdigest()
 
 print("THM3072_A4_FLAG_THREE_C2_TOMOGRAPHY")
-print("flags=12;C2_quotients=3;quotient_sizes=6,6,6;right_kernel=V4")
+print(
+    "flags=12;C2_quotients=3;quotient_sizes=6,6,6;"
+    "right_direction_kernel=V4"
+)
 print("geometry=X0:K4_edges,X1:skew_edges,X2:oriented_Hamiltonian_cycles")
 print("edge_cycle_joint_map=injective;image=3_disjoint_K2,2;size=12")
 print("projector_identity=P0+P1+P2=I+2PV4;PiPj=PV4")

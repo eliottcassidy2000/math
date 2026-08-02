@@ -23,8 +23,8 @@ related:
   - THM-3049-k4-matching-monomial-tropical-root-extraction-clutch
 script: 04-computation/modular_a4_flag_three_quotient_tomography_thm3072.py
 output: 05-knowledge/results/modular_a4_flag_three_quotient_tomography_thm3072.out
-script_sha256: 856cab6338ef68560ef0b1ef5cef164a771a0a2b671a44abb0f8dec7bc75fb76
-output_sha256: e1605bb1c1ddec2d18209ab3ea003738b1b2282317d3728fd8711c735d73b18e
+script_sha256: 33fd5a86dc4c3e538b6571b887664bbf5a65dbd50abf11cb4026e05f3dffbb96
+output_sha256: 7108138115636f551c7baa0027eccdc5c370af00a6d286ed9230fc3ccdf65b97
 hash_basis: LF-normalized bytes
 ---
 
@@ -269,9 +269,12 @@ Over the quartic discriminant cover,
 [THM-2971](THM-2971-discriminant-cover-edge-orientation-sextic-algebra-intertwiner.md)
 proves that the edge and oriented-cycle sextic **algebras** become
 isomorphic.  Equations `(8)--(15)` give a different object: a common regular
-set-theoretic double cover of their six-sheet `A_4` actions.  No polynomial
-map from a quartic source to `Omega`, no multiplication-preserving rank-
-twelve algebra, and no common physical coefficient is constructed here.
+set-theoretic double cover of their six-sheet `A_4` actions.  The ambient
+coordinate algebra `k^Omega` and the pullbacks from the quotient coordinate
+algebras are multiplication-preserving, but no quartic or physical polynomial
+realization of this rank-twelve algebra, no multiplicative reconstruction from
+the three **averaged** tables, and no common physical coefficient is
+constructed here.
 The exact algebraic sidecar remains THM-2971's discriminant orientation and
 primitive-coordinate map.
 
@@ -312,8 +315,8 @@ mode verifies the same claims.
 LF-normalized SHA256:
 
 ```text
-script  856cab6338ef68560ef0b1ef5cef164a771a0a2b671a44abb0f8dec7bc75fb76
-output  e1605bb1c1ddec2d18209ab3ea003738b1b2282317d3728fd8711c735d73b18e
+script  33fd5a86dc4c3e538b6571b887664bbf5a65dbd50abf11cb4026e05f3dffbb96
+output  7108138115636f551c7baa0027eccdc5c370af00a6d286ed9230fc3ccdf65b97
 ```
 
 **QED, conditional only on independent hostile audit for promotion.**

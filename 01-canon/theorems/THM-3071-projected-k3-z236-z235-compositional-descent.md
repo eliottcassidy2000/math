@@ -1,7 +1,7 @@
 ---
 id: THM-3071
 title: "Projected k3 z236 z235 compositional descent"
-status: PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT
+status: PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
 source: codex-lrc-z236-z235-composition-2026-08-01
 depends_on:
   - THM-3061-projected-k3-z239-gap238-z237-compositional-descent
@@ -15,8 +15,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3071 -- projected k3 z236 z235 compositional descent
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## Statement
 
@@ -29,8 +28,7 @@ all eleven occupied z_1=235 rows.                     (1)
 ```
 
 These twelve rows are disjoint from THM-3061's already-closed `4+44` rows at
-`z_1=239,237`. Subject to independent hostile audit and status promotion, the
-candidate consequence is therefore
+`z_1=239,237`. The proved consequence is therefore
 
 ```text
 374780-12=374768,
@@ -124,7 +122,10 @@ ab43b8e07f31e2b37adcf445d2a1d6b76828dd7439e86b4f00beb7155dd473e9.
 
 Fresh normal and optimized runs used disjoint empty checkpoint directories.
 All `16/16` serialized envelopes were byte-identical, and both LF-normalized
-transcripts were byte-identical to the stored output:
+transcripts were byte-identical to the stored output.  The independent hostile
+audit also rederived the atlas set difference, the order/wall split, the
+positive two-high gaps, the exact one-high exhaustiveness, and the minimum
+strict cardinality slack `1`:
 
 ```text
 python 04-computation/lrc14_j7_k3_z236_z235_compositional_descent_thm3071.py --processes 4 --checkpoint-dir <fresh-normal> --output <normal-output>
@@ -138,10 +139,9 @@ and the semantic SHA-256 is
 Every truth-bearing check uses explicit `require` and therefore remains active
 under `python -O`.
 
-## 5. Scope and promotion boundary
+## 5. Scope
 
-This is a proof-complete exact candidate inside an already-defined projected
-necessary atlas. Until an independent hostile audit promotes it, `(2)` is not
-canonical. Even after promotion, the only conclusion would be the twelve-row
-projected decrement and cap `z_1<=234`. The `381` rows at `z_1=234`, all
+This is a proved exact theorem inside an already-defined projected necessary
+atlas.  Its only conclusion is the twelve-row projected decrement and cap
+`z_1<=234`. The `381` rows at `z_1=234`, all
 physical-carrier reconstruction, the `k<=1` debt, and LRC(14) remain open.

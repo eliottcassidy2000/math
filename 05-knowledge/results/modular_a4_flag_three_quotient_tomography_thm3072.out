@@ -1,5 +1,5 @@
 THM3072_A4_FLAG_THREE_C2_TOMOGRAPHY
-flags=12;C2_quotients=3;quotient_sizes=6,6,6;right_kernel=V4
+flags=12;C2_quotients=3;quotient_sizes=6,6,6;right_direction_kernel=V4
 geometry=X0:K4_edges,X1:skew_edges,X2:oriented_Hamiltonian_cycles
 edge_cycle_joint_map=injective;image=3_disjoint_K2,2;size=12
 projector_identity=P0+P1+P2=I+2PV4;PiPj=PV4
