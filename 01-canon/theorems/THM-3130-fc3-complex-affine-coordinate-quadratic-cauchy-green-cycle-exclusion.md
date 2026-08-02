@@ -1,6 +1,6 @@
 ---
-id: THM-3129
-title: "Reserved: FC(3) complex rank-one quadratic Cauchy--Green cycle exclusion"
+id: THM-3130
+title: "Reserved: FC(3) complex affine-coordinate quadratic Cauchy--Green cycle exclusion"
 status: "RESERVED / UNPROVED EMPTY STUB"
 source: codex-2026-08-02-fc3-simplex
 depends_on: []
@@ -9,7 +9,7 @@ related:
   - THM-3128
 ---
 
-# THM-3129 — reserved namespace
+# THM-3130 — reserved namespace
 
 **RESERVED / UNPROVED EMPTY STUB.**  This file reserves the theorem ID and
 filename for an independently auditable Cauchy--Green candidate on
