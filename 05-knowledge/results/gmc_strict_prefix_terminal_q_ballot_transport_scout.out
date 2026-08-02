@@ -1,0 +1,10 @@
+strict_prefix_terminal_q_ballot_transport=finite_exact
+universe=cases:106:alpha0=1:integer_offsets<=4:edges<=2:terminal_Q=2,3:residual_degree<=5:ceiling=3
+structure=factorizations:742:root_events:318:matched_old_roots:1527:fixed_operator_steps:318
+monomial_coefficient_minors=158730:negative=0:zero=61752
+newton_coefficient_minors=158730:negative=0:zero=61752
+independent_generalized_hankel_minors=23850:wrong_sign=0
+generic_root_matching_hostile=coefficient_det:-15565881/125000:evaluation_det:-7111716618502761/31250000000000000000
+local_root_deletion_transition=(1+z)^3/(1+5z):linear_coefficient=-2
+zero_prefix_control_order3=4914161/84138683904000:wrong_checkerboard_sign
+verdict=integer_lattice_coefficient_network_is_load_bearing:all_exact_checks=PASS
