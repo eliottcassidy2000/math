@@ -2,7 +2,7 @@
 id: THM-3178
 title: "Resultant tangent cone, conormal norm, and squarefree first-Witt factorization"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Along any degree-r common residual factor, the resultant vanishes to order
   at least r and its first possible coefficient is the norm of one intrinsic
   conormal Pluecker coordinate.  This formula does not require the common
@@ -16,7 +16,9 @@ audit: >
   independence, branchwise first-Witt recovery, polynomial-frame norm
   scaling, a determinant wall, and the non-full-gcd boundary.  The canonical
   pure-integer companion replays normally and under optimization against its
-  stored transcript.  Final immutable file-level audit is pending.
+  stored transcript and declared LF hashes.  The immutable audit rederived
+  every sign and hypothesis and repaired the cubic consumer's characteristic-
+  three degree-loss boundary before promotion.
 source: root/multiscale-newton-flag/2026-08-02
 depends_on: []
 related:
@@ -33,7 +35,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3178 -- resultant tangent cone, conormal norm, and squarefree first-Witt factorization
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The first-Witt wedge of THM-3175 is the degree-one case of a larger
 determinant-line identity.  The correct object is not a list of chosen roots:
@@ -123,13 +125,26 @@ phi_F -> phi_F-u f,              phi_G -> phi_G-u g.
 
 The two added terms cancel in `(4)`, proving that `theta` is intrinsic.
 
-The coefficient of `pi^r` in the resultant depends only on the conormal
-classes.  Replace `pi` temporarily by a dual deformation parameter `eps` and
-consider
+Exact monic division by `Htilde` gives
+
+```text
+F=Htilde ftilde+pi Phi_F,          G=Htilde gtilde+pi Phi_G,
+```
+
+where `ftilde,gtilde` reduce to `f,g` and `Phi_F,Phi_G` reduce to
+`phi_F,phi_G`.  Introduce an independent parameter `eps` in those two exact
+identities.  At `eps=0` the pair has the exact common factor `Htilde`, so its
+resultant is divisible by `eps^r`; at `eps=pi` it is the original resultant.
+After division by `pi^r` and reduction modulo `pi`, only the coefficient of
+`eps^r` survives.  It is therefore enough to calculate the residue
+deformation
 
 ```text
 F_eps=Hf+eps phi_F,               G_eps=Hg+eps phi_G.         (9)
 ```
+
+This proves, rather than assumes, that the tangent coefficient depends only
+on the conormal classes.
 
 Over the universal characteristic-zero coefficient ring, it is enough to
 prove the coefficient identity on the Zariski-dense locus where `H`, `f`, and
@@ -299,8 +314,9 @@ THM-2598's homogeneous quartic boundary supplies the integral cubic
 S_A(U)=U^3+2pU^2+(p^2-4Ar)U-Aq^2.                          (20)
 ```
 
-Take `A` as the DVR uniformizer and assume the residue characteristic is not
-two and `p` is a unit.  At `A=0`,
+Take `A` as the DVR uniformizer, assume the residue characteristic is outside
+`{2,3}`, and assume `p` is a unit.  (In characteristic three, `S_A'` loses
+degree, so the preserved-degree hypothesis of Section 1 fails.)  At `A=0`,
 
 ```text
 S_0=U(U+p)^2,
