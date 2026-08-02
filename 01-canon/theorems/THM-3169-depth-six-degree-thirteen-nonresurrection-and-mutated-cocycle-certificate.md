@@ -2,7 +2,7 @@
 id: THM-3169
 title: "Depth-six degree-thirteen non-resurrection and mutated-cocycle certificate"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT / INDEPENDENT AUDIT REQUIRED.  For
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For
   support (1,3), bank I2, adjoining all 507 physical depth-six prefix states
   does not resurrect the cumulative degree-13 selector cone.  The THM-3158
   nine-row separator is crossed by exactly 24 new states, but an explicit
@@ -10,6 +10,15 @@ status: >
   on all 1,189 states of depth at most six.  This is a finite averaged-prefix
   theorem, not a pole-local transition or an NC2/GMC closure.
 source: root/gmc3000-audit-2026-08-02
+audit: >
+  An independent immutable audit regenerated all 1,189 multiplicity-valid
+  states and all 10,701 degree-indexed zero-mass vectors, using a separate
+  partition generator and independent bin-packing coarsening test.  It
+  rechecked the exact 483/0/24 old-wall split and 24-state list, every upset
+  closure and size, coefficient positivity and primitive gcd one, the strict
+  all-state range and unique extrema, both transitive dependency hashes, and
+  the averaged-prefix/no-NC2 scope.  Fresh normal and optimized runs matched
+  the stored transcript and both declared LF-normalized hashes exactly.
 depends_on:
   - THM-3127-partition-refinement-strassen-upset-dual-and-filter-response
   - THM-3158-depth-five-selector-resurrection-through-degree-twelve
@@ -28,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3169 -- depth-six degree-thirteen non-resurrection and mutated-cocycle certificate
 
-**PROVED CANDIDATE + VERIFIED-EXACT / INDEPENDENT AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3158 found the first two cells of a selector staircase.  Physical
 prefixes of depth five resurrect the support-`(1,3)`, bank-`I2` selector
