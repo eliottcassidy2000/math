@@ -131,7 +131,10 @@ Format per entry:
   `D>=6, 3m>=4D`; hence the current proved reflected certificate-failure wedge
   is `561` bodies with `D>=6,1<=m<4D/3`.  Future split tails must assert a
   disjunction on the original level assignment, not merely enumerate two
-  oriented channel lists.
+  oriented channel lists.  THM-3135 later supplies exactly that disjunction
+  for `H2` at caps `7/3` and `5/2` by keeping one pair fixed and using both
+  halves; it also proves that the eligible standard single-pair uniform lanes
+  for `H` form a DAG, so the global cone claims remain `AUDIT-REQUIRED`.
 
 ## MISTAKE-346 (2026-08-01, concurrent THM-3063 reservations) -- two distinct results acquired the same new theorem ID
 

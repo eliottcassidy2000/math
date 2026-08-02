@@ -40,7 +40,7 @@ The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`.  The proved CSP chain closes
 `3m>=4D`.  Later cones retain exact CSP/gain data (including 65 prime-five
 bridges), but MISTAKE-347 shows
 their split tails cover one level ordering twice; those closure claims are
-AUDIT-REQUIRED.
+AUDIT-REQUIRED. THM-3135 repairs `H2` at caps `7/3,5/2`; `H` remains a scoped DAG obstruction, so the global cones stay under audit.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
 supplied-root seams, not semantic-root identification (kernel `28,393`).
@@ -214,7 +214,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - THM-1805 makes directed triangles the Vandermonde-cancellation atom; THM-1862/1936 make `H` and signed Rédei data multiplicative under order-join while `c3` is additive.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md) makes `d_iso` exactly `l1` on fixed order-join patches by image-swap uncrossing; the ambient quotient still has triangles and is not a partial cube.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) gives the scalar iff-transitive boundary; THM-2242/2249/2256 give its response, envelope, and scale limit.
-  Audited [THM-3121](../01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md) gives the exact profile kernel; `C3` yields `3159` linearly. Unpinned transport remains open.
+  THM-3121 gives the profile kernel; THM-3134 gives its endpoint jet and exact cubic `C3` transform through `729` vertices, not a fixed-order scalar recurrence.
 - THM-1880/1885 give the Chebyshev--Pell/`BS(1,2)^+` transitive frame.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
@@ -371,9 +371,9 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2831 excludes the cyclic `d=s=0` residual.  Nonzero `d` or `s`, other
   carriers/fluxes, global chart entry, and nonpolynomial-prefix degrees stay
   open.  THM-2799/2800/2805/2808 complete accessory `e=2`; THM-2817 the sextic `e=3`; THM-2840 the heptic `T_7` carrier.
-  Audited THM-3123 makes the two remaining accessory algebras reduced length six and yields `1+3` nonsplit `S_7` maps, completing the abstract heptic atlas.
-  This supplies no Keller-chart entry and proves neither `JC(2)` nor `DC(2)`.
-- **Factorial:** MISTAKE-350 fixes typing; THM-2836 is finite `SlotSFC_1(3)`, THM-3018 is partly audit-required, THM-3124 gives the quadratic recurrence through starts `<=200`, and THM-3125 proves anchored rays. Full `FC(3)`/`SFC(3)` remain OPEN.
+  THM-3123 completes the abstract heptic atlas; THM-3133 excludes common simple zeros for `R>=7` and isolates the first sharp formal cell `R=8,N=22,(11,11)`.
+  Neither supplies source-chart entry or proves `JC(2)`/`DC(2)`.
+- **Factorial:** THM-3124 gives the quadratic recurrence through `r<=200`; THM-3125 proves anchored rays; THM-3131 excludes prime `r+2`. Any residual has `r>=201` and composite `r+2`; full `FC(3)`/`SFC(3)` remain OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

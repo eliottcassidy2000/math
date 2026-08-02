@@ -30,6 +30,10 @@ status: >
   3m>=4D.  The later m>=D, 4m>=3D, and 3m>=2D refinements are
   AUDIT-REQUIRED by MISTAKE-347: their split-tail lanes reverse both ratio
   and ordered labels and omit one physical ordering.
+  THM-3135 repairs the H2 tail at caps 7/3 and 5/2 by a genuine directed
+  two-cycle, but proves that the eligible standard single-pair uniform lanes
+  for H form a DAG; the global cone refinements therefore remain
+  AUDIT-REQUIRED.
   At the endpoint the new zero channel 1:2 completes the balanced gain
   triangle (3/2)(4/3)=2; orientation-split tails close its four unconstrained
   bodies.  Past cap two the balanced triangle becomes interior and no
@@ -1150,6 +1154,16 @@ heads on fourteen analytic tail lanes.  Therefore
 ```text
 AUDIT-REQUIRED CLAIM: D>=6 and 3m>=2D.                           (25i13a)
 ```
+
+THM-3135 gives the exact post-correction boundary for the split-tail step.
+For `H2=(1,3,4,6,8,12)`, keeping pair `(0,1)` fixed and combining its high
+and low halves produces a directed two-cycle and closes all level assignments
+at caps `7/3` and `5/2`, with exhaustive positive heads.  For
+`H=(1,2,3,4,6,12)`, however, all asymptotically eligible standard-half/full-
+interval single-pair uniform lanes form the DAG `0->1->2->3` at caps `2` and
+`7/3`, and `0->1->2` at cap `5/2`.  Thus no selection from that envelope class
+covers all assignments.  This repairs `H2` but does not repair
+`(25i12)--(25i13a)` globally; multi-pair or nonuniform designs remain open.
 
 Consequently the current **proved** reflected obligation is confined to the
 `561` bodies in the wedge `D>=6,1<=m<4D/3`.  This is a
@@ -2545,7 +2559,7 @@ assignment orientation and are no longer dependencies of the proved assembly.
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,
 close the `561`-body reflected wedge `D>=6,1<=m<4D/3`, repair the split-tail
-orientation suffix, finish the remaining
+orientation suffix beyond the scoped THM-3135 `H2` repair, finish the remaining
 `k=2,3` finite decision trees, classify the zero/one-aligned multi-drift
 address hypergraph, close the six-body/seven-tail rung, or prove LRC(14).
 The independent THM-2928 divisor-status route closes `k=4`; THM-2980/2995
