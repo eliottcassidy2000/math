@@ -2,7 +2,7 @@
 id: THM-3170
 title: "Five-step prime resonance Euclidean--Newton holotopy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.  For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
   odd prime p, no exact quadratic has three zero factorial moments beginning
   at r=p+3.  Two Euclidean frame changes separate all positive Newton slopes;
   the offset-five resultant and two proved neighboring-prime transports close
@@ -11,9 +11,11 @@ status: >
 audit: >
   A separate exact derivation independently reconstructed both Euclidean
   quotients, every valuation tier, the midpoint and high-coefficient formulas,
-  all arithmetic-wall polygons, and the two prime-neighbor coordinates.  The
-  canonical script and transcript replay normally and under optimization;
-  immutable theorem-file audit is still pending before promotion.
+  all arithmetic-wall polygons, the lawful A/R zero-face splice, both
+  prime-neighbor coordinates, and the exterior/resultant transport.  A final
+  immutable file-level hostile audit accepted the proof and scope.  The
+  canonical script replays normally and under optimization exactly against
+  the stored transcript, with both declared LF-normalized hashes verified.
 source: root/multiscale-newton-flag/2026-08-02
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
@@ -32,7 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3170 -- five-step prime resonance Euclidean--Newton holotopy
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Let
 
@@ -427,13 +429,3 @@ or to a polynomial in `p` with fixed constant term.
 This proves one exact `{0,1,2}` / `SFC(1)` offset.  It is not an arbitrary
 fixed-offset induction, arbitrary support, `SFC(3)`, `NC(2)`, or the full
 Gaussian Moment Conjecture in two dimensions.
-
-This file reserves the namespace for the offset-five exact-quadratic
-factorial-moment theorem.  The proposed proof uses two Euclidean remainder
-frames, a finite arithmetic Newton-wall atlas, THM-3148's lawful fixed
-zero-face resultant, and neighboring-prime transports through THM-3146 and
-THM-3159.
-
-No proof dependency, all-prime conclusion, arbitrary-support statement,
-NC(2), or Gaussian Moment Conjecture claim is made until the full candidate
-and exact companion are pushed and independently audited.
