@@ -1,0 +1,16 @@
+Exceptional binary-point / ternary-direction S4 tomography clutch
+group_order=24;equivariant_bijections_after_generator_fix=1
+generators=S:translation_(1,1)<->z|-1/z;R:linear_order3<->z|-1/(z+1);J:affine_reflection<->z|-z
+ternary_even_split=constant_rank1+four_centered_direction_channels_rank1
+channel_vectors=h_L=3*1_L-1;gram=18*I4;sum=radial(8_at_0,-1_elsewhere)
+binary_centered_to_ternary_standard=Phi(f)=sum_d f(phi(d))*h_d;gram_scale=18;S4_equivariant
+channel_lattice_smith=(1, 3, 3, 3);index=27;quotient=F3^3
+radial_plus_standard_smith=(1, 3, 3, 12);index=108;quotient=Z4+F3^3
+binary_character=(1, 0);positive_directions=('0', '1');signs=(-1, 1, 1, -1)
+binary_character=(0, 1);positive_directions=('I', '1');signs=(1, -1, 1, -1)
+binary_character=(1, 1);positive_directions=('1', '2');signs=(-1, -1, 1, 1)
+quartic_phase_hostile=f_plus:T4-7T2+6T;f_minus:T4-7T2-6T;matching_squares:(1,4,9);linear_signs:opposite
+multiplicative_hostile=delta_b^2=delta_b but the natural extension delta_phi(L)|h_L has h_L^2!=h_L
+first_failed_implication=no line-by-line or multiplicative tomography intertwiner: binary has three Walsh channels, while ternary has four line channels plus a radial invariant
+scope=representation-and-integral-lattice clutch only;no physical quartic,Cardano,Weil,Keller,owner,current,or LRC consequence
+all_exact_controls=PASS
