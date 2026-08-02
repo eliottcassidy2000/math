@@ -482,8 +482,9 @@ Since in both C3 geometries the initial complementary value `g_0=h` divides
 D congruent to 3 modulo h.                              (49)
 ```
 
-When `3` does not divide `h`, the partition sum already prevents every depth
-from sharing a common divisor with `h`.  When `3|h`, an all-`3`-divisible
+When `3` does not divide `h`, the partition sum already prevents any **fixed
+nontrivial divisor of `h`** from dividing every depth.  Individual depths may
+still meet different proper factors of `h`.  When `3|h`, an all-`3`-divisible
 partition is arithmetically possible, but `(36)` forbids the tower from
 remaining in that inertia-aligned lattice: some key depth must break the
 surviving factor three.  This is a precise local sense in which the prime
