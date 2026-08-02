@@ -1,0 +1,10 @@
+THM-3103 LOW-DEPTH DIAMETER-FORTY MACAULAY ATLAS
+prime=1000003 selected_rows=36 constructor_checks=20 repeated_zero_controls=3
+universe=0<=n<=3;0<a<b<M<=40 total=39520 zero_minors=0 unresolved=0
+depth=0 supports=9880 residue_sha256=e94ec287613d51aec483395e3db1754031bb42cea3943990bfeb08d2e2c635f5
+depth=1 supports=9880 residue_sha256=0407e0e1827b296e8ff895036869e1b0b4fd1faa7f69c2d16a393df60b97d370
+depth=2 supports=9880 residue_sha256=7ee997517f9f5816de10f161e6749c61e3d03406ff4d85ff2c459d4ab8c97474
+depth=3 supports=9880 residue_sha256=6cc4f5945fe68895d76c27d1713277fa6375e9f425db4f5908840e3d2dac644e
+diameter3_count=4 diameter40_count=2964 global_residue_sha256=ab967b007c811e0a55c5aa48542beab6c317ee86f553bafddb16c49c447107eb
+scope=finite_exact_modular_nonvanishing;fixed_macaulay_chart;no_sign;no_all_depth;no_width5
+all_exact_checks=PASS
