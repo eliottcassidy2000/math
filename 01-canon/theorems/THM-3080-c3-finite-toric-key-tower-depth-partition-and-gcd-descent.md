@@ -2,7 +2,7 @@
 id: THM-3080
 title: "C3 finite toric key-tower depth partition and gcd descent"
 status: >
-  PROVED + VERIFIED-EXACT (independent audit pending).  In a completed
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In a completed
   residue-degree-one divisorial field, suppose a nonzero two-form has a
   toric presentation Omega=U_i dlog(M_i) wedge dlog(R_i), where M_i has
   constant nonzero residue, R_i has positive value g_i, and Omega is the
@@ -37,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3080 -- the C3 toric Jacobian tower has a finite depth budget
 
-**PROVED + VERIFIED-EXACT (independent audit pending).**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. The missing step after the first key
 
@@ -482,8 +482,8 @@ Since in both C3 geometries the initial complementary value `g_0=h` divides
 D congruent to 3 modulo h.                              (49)
 ```
 
-When `3` does not divide `h`, the partition sum already prevents every depth
-from sharing a common divisor with `h`.  When `3|h`, an all-`3`-divisible
+When `3` does not divide `h`, no fixed nontrivial divisor of `h` can divide
+every depth.  When `3|h`, an all-`3`-divisible
 partition is arithmetically possible, but `(36)` forbids the tower from
 remaining in that inertia-aligned lattice: some key depth must break the
 surviving factor three.  This is a precise local sense in which the prime
@@ -514,6 +514,18 @@ The companion checks:
 - the exact one- and two-stage controls inherited from THM-3074;
 - the new three-stage identities `(46)--(48)`; and
 - the telescoping prefactors at every stage of that packet.
+
+An independent audit rederived the wedge orientation from `(Z_i,R_i)` to
+`(M_(i+1),R_(i+1))`, the exponent budget `B_i=E-sigma_i`, and the exact key
+value `lcm(g_i,e_i)+e_(i+1)`.  It checked that algebraic independence makes
+`M_(i+1)-1` nonzero of finite completed-field value, and that at the terminal
+stage the least-weight Laurent coefficient is a nonzero Laurent polynomial
+in the nonconstant parameter `theta^(-1)`.  Thus normalization of the full
+divisorial value group really forces `gcd(g_N,e_N)=1`; this conclusion is not
+being inferred merely from the first lattice.  The one-, two-, and
+three-stage packets were also recomputed symbolically.  Ordinary Python,
+optimized Python, and the stored transcript agree byte-for-byte at the pinned
+hashes.
 
 Reproduce with
 

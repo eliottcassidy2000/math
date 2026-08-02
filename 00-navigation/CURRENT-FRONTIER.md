@@ -331,8 +331,9 @@ Classify profiles under support operations; study analytic continuation and auto
   component is forced, but excluding every Keller `C3` component remains
   OPEN and needs branchwise cofactor units.  THM-3066 retains only their
   product; THM-3064 decodes a supplied pointed pair with tame valuation `-2`.
-  THM-3068 shows pole/residue/trace ledgers still permit a punctured `C3`;
-  polynomial `A2` regularity and constant units are the missing gate.
+  THM-3068 permits a punctured `C3`; THM-3070/3074/3080 force a finite local
+  Laurent-key tower ending at gcd one.  Polynomial globalization and arbitrary
+  Jelonek straightening remain OPEN.
   THM-3067's 12-flag `A4` bitorsor loses its `V4` origin in the `C3` quotient;
   THM-3072 shows that all three conjugate `C2` quotient tables reconstruct it,
   while the edge/cycle pair alone loses an exact three-dimensional character
