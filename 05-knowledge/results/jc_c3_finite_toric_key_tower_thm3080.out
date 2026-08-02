@@ -8,6 +8,7 @@ transform=M_next=Z_i^(g_i/d)/(c*R_i^(e_i/d));val(R_next)=d=gcd(g_i,e_i)
 key_value=val(Z_i^(g_i/d)-c*R_i^(e_i/d))=lcm(g_i,e_i)+e_next
 budget_update=B_next=B_i-e_i;g_next=gcd(g_i,e_i)
 finite_partition=sum_i(e_i)=D;number_of_stages<=D
+terminal_primitive=theta_nonconstant;no_equal_weight_cancellation;gcd(g_N,e_N)=1
 c3_specialization=E=3;D=p+q+3_two_pole_or_p+3-r_one_pole
 three_stage_hostile=p=q=4;D=11;depths=4+4+3;dx_wedge_dy=du_wedge_d(s^3)
 scope=coordinate_line_local_toric_tower;no_polynomial_globalization_or_full_C3_A4_S4_JC2_claim

@@ -13,12 +13,15 @@ status: >
   a unimodular Laurent normalization produces the next toric pair with
   B_(i+1)=B_i-e_i and g_(i+1)=gcd(g_i,e_i).  Hence the differential
   cancellation tower always terminates, its positive depths partition B_0,
-  and it has at most B_0 stages.  For the coordinate-line C3 branches of
-  THM-3074 this gives sum e_i=p+q+3 in the two-pole case and
-  sum e_i=p+3-r in the one-pole case.  The normalized keys are Laurent key
-  forms in the completed field, not asserted polynomial MacLane keys; no
-  polynomial globalization, arbitrary-Jelonek straightening, full C3,
-  A4/S4, or JC(2) exclusion follows.
+  and it has at most B_0 stages.  At the terminal stage the nonzero wedge
+  makes the primitive coefficient ratio nonconstant, so no equal-weight
+  Laurent initial sum can cancel.  Normalization of the divisorial value
+  group then forces gcd(g_N,e_N)=1.  For the coordinate-line C3 branches of
+  THM-3074 this gives sum e_i=p+q+3 in the two-pole case and sum
+  e_i=p+3-r in the one-pole case, with a terminal primitive lattice.  The
+  normalized keys are Laurent key forms in the completed field, not asserted
+  polynomial MacLane keys; no polynomial globalization, arbitrary-Jelonek
+  straightening, full C3, A4/S4, or JC(2) exclusion follows.
 source: codex-jc-resolvent-bridge-2026-08-01
 depends_on:
   - THM-3074-c3-two-pole-binomial-cancellation-and-first-key-form-depth-lattice
@@ -27,8 +30,8 @@ related:
   - HYP-9070-jc2-leading-form-circuit-and-the-euclidean-depth-search-order
 script: 04-computation/jc_c3_finite_toric_key_tower_thm3080.py
 output: 05-knowledge/results/jc_c3_finite_toric_key_tower_thm3080.out
-script_sha256: 0f26da4b11b084ae55a857e8e292927f768ba9e50eeff72287b755c3e7063332
-output_sha256: 54f310a533db5e9997e4c7cf28cb45e20bd20cd08e5cceffc2622c9b0db05838
+script_sha256: f813fefec6e81ff1ba2db767a9699929f1d9fab0d5514e1c9da1c742cc7072a9
+output_sha256: 9a07e8b2fc7292044b1e6e0d837a6f7d6fb4db003f1a16772d319f6bc975b907
 hash_basis: LF-normalized bytes
 ---
 
@@ -270,13 +273,86 @@ It does not say that a global polynomial approximate-root algorithm
 terminates, because the transformations `(14)` allow negative powers and
 are made only in the completed function field.
 
+### 5.1 The terminal lattice is primitive
+
+There is one more consequence at the terminal stage.  Write
+
+```text
+g=g_N,               e=e_N,               d=gcd(g,e),
+G=g/d,                H=e/d,
+theta=m_N^G/r_N^H in C(u)*.                              (29)
+```
+
+The terminal coefficient `(9)` is nonzero, so
+
+```text
+theta'/theta
+ =(g m_N'/m_N-e r_N'/r_N)/d !=0.                        (30)
+```
+
+Thus `theta` is a nonconstant rational function of `u`, hence
+transcendental over `C`.
+
+Let `F` be a nonzero Laurent polynomial in `M_N,R_N`.  Group it uniquely as
+
+```text
+F=sum_j R_N^j f_j(M_N),          f_j in C[M_N,M_N^(-1)]. (31)
+```
+
+If
+
+```text
+f_j(c_N(1+Z_N))=a_j Z_N^(n_j)+higher,
+a_j in C*,                                           (32)
+```
+
+then its least predicted weight is the minimum of `jg+n_j e`.  For two
+pairs on the same least-weight line,
+
+```text
+(j-j_0)g+(n_j-n_0)e=0
+```
+
+implies, for a unique integer `k`,
+
+```text
+j-j_0=Hk,                  n_j-n_0=-Gk.                  (33)
+```
+
+After factoring one nonzero leading monomial, the complete least-weight
+coefficient is therefore a nonzero Laurent polynomial in
+
+```text
+r_N^H/m_N^G=theta^(-1).                                 (34)
+```
+
+It cannot vanish because `theta` is transcendental over `C`.  Consequently
+
+```text
+w(F)=min_j(jg+n_j e) in dZ                              (35)
+```
+
+for every nonzero Laurent polynomial `F` in the terminal coordinates.
+Since `M_N,R_N` generate `C(x,y)`, every nonzero field element is a quotient
+of two such Laurent polynomials.  Hence the entire value group would lie in
+`dZ`.  The divisorial valuation was normalized to have value group `Z`, so
+
+```text
+gcd(g_N,e_N)=1.                                         (36)
+```
+
+This is precisely where the early-lattice hostile of THM-3074 ceases to be
+an obstruction: early resonant ratios are constant and permit off-lattice
+values after cancellation; the terminal ratio is nonconstant and makes the
+last lattice monomially injective.
+
 ## 6. Coordinate-line C3 specialization
 
 For the `C3` branches of THM-3074, take `E=3`.  Its initial unimodular chart
 has
 
 ```text
-Omega=xy dlog(M_0) wedge dlog(R_0),                     (29)
+Omega=xy dlog(M_0) wedge dlog(R_0),                     (37)
 ```
 
 so `U_0=xy`.
@@ -285,24 +361,25 @@ In the two-pole case
 
 ```text
 w(x)=-p,             w(y)=-q,
-sigma_0=-(p+q),       B_0=p+q+3.                        (30)
+sigma_0=-(p+q),       B_0=p+q+3.                        (38)
 ```
 
 In the one-pole case inherited from THM-3070,
 
 ```text
 w(x)=-p,             w(y)=r,
-sigma_0=r-p,          B_0=p+3-r.                        (31)
+sigma_0=r-p,          B_0=p+3-r.                        (39)
 ```
 
 Therefore the respective key-depth partitions are
 
 ```text
 two poles:       e_0+...+e_N=p+q+3,
-one pole:        e_0+...+e_N=p+3-r.                     (32)
+one pole:        e_0+...+e_N=p+3-r,
+both cases:      gcd(g_N,e_N)=1.                        (40)
 ```
 
-The first summand `e_0` is THM-3074's `ell`; `(32)` closes the previously
+The first summand `e_0` is THM-3074's `ell`; `(40)` closes the previously
 unbounded **local differential** depth lane in that exact scope.  It neither
 bounds global polynomial degrees nor proves that every Laurent key in the
 partition is represented by a polynomial in `x,y`.
@@ -312,7 +389,7 @@ partition is represented by a polynomial in `x,y`.
 All controls use `t=s^3` and satisfy
 
 ```text
-dx wedge dy=3s^2 du wedge ds=du wedge dt.               (33)
+dx wedge dy=3s^2 du wedge ds=du wedge dt.               (41)
 ```
 
 ### 7.1 One stage: `5`
@@ -321,14 +398,14 @@ The equality packet from THM-3074 is
 
 ```text
 x=s^(-1),
-y=s^(-1)+3u s^4.                                       (34)
+y=s^(-1)+3u s^4.                                       (42)
 ```
 
 Here `p=q=1`, `B_0=5`, and
 
 ```text
 R=s,                M=y/x=1+3u s^5,
-(e_0)=(5).                                                (35)
+(e_0)=(5).                                                (43)
 ```
 
 ### 7.2 Two stages: `4+3`
@@ -339,7 +416,7 @@ Put
 R=u s^2,
 M_1=1-3u s^3,
 M_0=1+R^2 M_1,
-x=R^(-1),                 y=M_0 R^(-1).                 (36)
+x=R^(-1),                 y=M_0 R^(-1).                 (44)
 ```
 
 Then `p=q=2`, `B_0=7`, and
@@ -347,7 +424,7 @@ Then `p=q=2`, `B_0=7`, and
 ```text
 Z_0=M_0-1=R^2M_1,
 M_1=Z_0/R^2,
-(e_0,e_1)=(4,3).                                        (37)
+(e_0,e_1)=(4,3).                                        (45)
 ```
 
 This is THM-3074's off-first-lattice hostile written in its normalized
@@ -363,7 +440,7 @@ R=u s^4,
 M_2=1+3u s^3,
 M_1=1+R M_2,
 M_0=1+R M_1,
-x=R^(-1),                 y=M_0 R^(-1).                 (38)
+x=R^(-1),                 y=M_0 R^(-1).                 (46)
 ```
 
 Both source coordinates have pole order four, so `B_0=11`.  The normalized
@@ -372,7 +449,7 @@ keys are exact:
 ```text
 M_1=(M_0-1)/R,
 M_2=(M_1-1)/R,
-(e_0,e_1,e_2)=(4,4,3),          4+4+3=11.               (39)
+(e_0,e_1,e_2)=(4,4,3),          4+4+3=11.               (47)
 ```
 
 Moreover
@@ -382,7 +459,7 @@ dx wedge dy
  =R^(-3)dM_0 wedge dR
  =R^(-2)dM_1 wedge dR
  =R^(-1)dM_2 wedge dR
- =3s^2du wedge ds.                                      (40)
+ =3s^2du wedge ds.                                      (48)
 ```
 
 Thus the finite bound is not merely a formal stopping argument: strict
@@ -393,10 +470,24 @@ symplectic packets, not polynomial Keller maps.
 ## 8. Structural consequences and remaining obstruction
 
 The proved recursion refines the open `C3` problem to a finite family of
-positive compositions of `D`, decorated by the gcd chain `(28)` and by the
-constant primitive ratios `(12)`.  For fixed pole orders, the local
-differential anatomy is therefore finite-depth even though the coefficients
-remain functional.
+positive compositions of `D`, decorated by the gcd chain `(28)`, the
+constant primitive ratios `(12)`, and the terminal primitivity `(36)`.  For
+fixed pole orders, the local differential anatomy is therefore finite-depth
+even though the coefficients remain functional.
+
+Since in both C3 geometries the initial complementary value `g_0=h` divides
+`p` and the other displayed source order, one has
+
+```text
+D congruent to 3 modulo h.                              (49)
+```
+
+When `3` does not divide `h`, the partition sum already prevents every depth
+from sharing a common divisor with `h`.  When `3|h`, an all-`3`-divisible
+partition is arithmetically possible, but `(36)` forbids the tower from
+remaining in that inertia-aligned lattice: some key depth must break the
+surviving factor three.  This is a precise local sense in which the prime
+three is exceptional in the `C3` budget.
 
 This also explains the resemblance to the Euclidean leading-form tower in
 [HYP-9070](../../05-knowledge/hypotheses/HYP-9070-jc2-leading-form-circuit-and-the-euclidean-depth-search-order.md):
@@ -418,8 +509,10 @@ The companion checks:
 - every Bezout sign, logarithmic wedge, and gcd update for
   `1<=g_i,e_i<=24`;
 - all `2^18-1` positive compositions through total budget eighteen;
+- the primitive parametrization of every equal-weight terminal line on the
+  same `24 x 24` grid;
 - the exact one- and two-stage controls inherited from THM-3074;
-- the new three-stage identities `(38)--(40)`; and
+- the new three-stage identities `(46)--(48)`; and
 - the telescoping prefactors at every stage of that packet.
 
 Reproduce with

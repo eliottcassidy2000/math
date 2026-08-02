@@ -117,6 +117,25 @@ def main() -> None:
                 comparison = (sigma + depth - 1) - (ramification - 1)
                 require(comparison == depth - budget, "uniform ramification budget")
 
+    # At a terminal stage, equal-weight exponent pairs are parameterized by
+    # one primitive kernel direction.  Their leading ratios are distinct
+    # powers of theta=m^(g/d)/r^(e/d), so nonconstant theta forbids
+    # cancellation.  Check the integer parametrization exhaustively.
+    for g in range(1, 25):
+        for e in range(1, 25):
+            divisor = math.gcd(g, e)
+            alpha = g // divisor
+            beta = e // divisor
+            for j0 in range(-5, 6):
+                for n0 in range(0, 6):
+                    for kernel_step in range(-5, 6):
+                        j1 = j0 + beta * kernel_step
+                        n1 = n0 - alpha * kernel_step
+                        require(
+                            (j1 - j0) * g + (n1 - n0) * e == 0,
+                            "terminal equal-weight kernel",
+                        )
+
     u, s = sp.symbols("u s", nonzero=True)
 
     # One-stage equality control from THM-3074: D=e_0=5.
@@ -199,6 +218,7 @@ def main() -> None:
     print("key_value=val(Z_i^(g_i/d)-c*R_i^(e_i/d))=lcm(g_i,e_i)+e_next")
     print("budget_update=B_next=B_i-e_i;g_next=gcd(g_i,e_i)")
     print("finite_partition=sum_i(e_i)=D;number_of_stages<=D")
+    print("terminal_primitive=theta_nonconstant;no_equal_weight_cancellation;gcd(g_N,e_N)=1")
     print("c3_specialization=E=3;D=p+q+3_two_pole_or_p+3-r_one_pole")
     print("three_stage_hostile=p=q=4;D=11;depths=4+4+3;dx_wedge_dy=du_wedge_d(s^3)")
     print("scope=coordinate_line_local_toric_tower;no_polynomial_globalization_or_full_C3_A4_S4_JC2_claim")
