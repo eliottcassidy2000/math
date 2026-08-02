@@ -1,0 +1,7 @@
+THM3271 universal quartic centered-norm packet exact companion
+formula_degree=3 leading=-20/27 synthetic_identity=True
+rootwise_checks=4 affine_cube_covariance_checks=4
+cyclic_control: cubic_discriminant=81 fixed_norm=-1 unique_simple_root=True
+spectral_denominator=424/729 projector=x^3/3-x+1/3 idempotent=True
+irreducible_1plus3_separation_controls=360
+collision_hostile_values=(0,0,160/27,-160/27) scalar_packet_not_sheet_injective=True
