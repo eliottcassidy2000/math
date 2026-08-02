@@ -1,0 +1,13 @@
+THM-3077 POINTED NORM-AUGMENTATION CARRY
+kernel_cells=1488 kernel=diagonal_mu_gcd(q,W)
+sidecar_cells=1600 bezout_cells=400
+monomial_q_injective=iff_gcd(a*beta-b*alpha,q)=1
+sidecar_exists=iff_gcd(a,b,q)=1
+carry_cells=833 carry=wind(N)-sum(w_i*wind(r_i))_i>=2
+germ_cells=5 normalized_logarithmic_lifts=PASS
+pointed_dft_cells=20 primes=7,13
+k14_one_weights=(14,13!);k14_two_weights=(182,12!);C91_kernel=C7
+flag_carry_cells=2925 model_relation_carry_inverse=PASS
+hostile=diagonal_mu_W_endpoint_invisible;zeros_break_torus_lift
+scope=nonzero_common_line_gauge;point_or_continuation_required
+all_exact_checks=PASS
