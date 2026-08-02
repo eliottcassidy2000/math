@@ -2,7 +2,7 @@
 id: THM-3116
 title: "FC(3) flat-top simplex coefficient: exact radial limit, affine nonvanishing, and derivative-aligned quadratic families"
 status: >
-  PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  Let
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let
   L_3(x^a y^b z^c)=a!b!c!, let f have exact degree D, and suppose its top
   form is a(x+y+z)^D with a nonzero.  If A_1 is the restriction of f_(D-1)
   to the coordinate two-simplex, then
@@ -560,6 +560,16 @@ The frozen controls verify:
   (31), and numerical convergence to (3).
 
 The two execution modes are byte-identical.  QED in the stated flat scope.
+
+An independent hostile audit on 2026-08-02 checked the flat-limit
+multinomial/Gamma domination, every affine confluent
+Lindemann--Weierstrass case, the derivative-aligned quadratic slice and
+forced-level collision cases, the affine `E`-function ODE/relation, and the
+polynomial-antiderivative classification.  It found no mathematical defect.
+The audit rechecked the displayed exact identities and proof mechanisms but
+did **not** supply a second independent implementation of the verification
+script; `VERIFIED-EXACT` continues to refer to the frozen implementation
+listed below.
 
 ```text
 source sha256 = ebd11cfc10dd6a24b8eae53efa7d06edcc29e2f4ed4d28a46a382aa606acc103
