@@ -174,8 +174,10 @@ By `(8)`, its scalar on `V_lambda` is
 
 Therefore `D_N>=0` is exactly the assertion that the normalized response is
 minimized by the row partition `(N)`.  In the THM-3110 banks every residual
-alphabet is coordinatewise dominated by `Q`.  If `s_lambda(Q)=0`, all terms
-in `(14)` vanish; otherwise `(14)>=0` is equivalent to
+alphabet is coordinatewise dominated by `Q`.  Because Schur functions have
+nonnegative monomial coefficients, `s_lambda(Q)=0` then forces
+`s_lambda(S_R)=0` for every `R`; hence all terms in `(14)` vanish.  Otherwise
+`(14)>=0` is equivalent to
 
 ```text
 Phi(s_lambda)/(c_Q s_lambda(Q)) >= Phi(h_N)/(c_Q h_N(Q)).        (15)
@@ -192,8 +194,9 @@ prove that the signed combination in `(13)` is positive.
 
 ## 4. Why the published uniform octopus cone cannot suffice
 
-For `2<=k<=N`, conjugacy-average `alpha_A` over all `k`-subsets `A` of
-`[N]`.  At a nonidentity permutation moving exactly `s` points, its
+For `2<=k<=N`, conjugacy-sum `alpha_A` over all `k`-subsets `A` of
+`[N]`.  (Dividing by `binom(N,k)` would only rescale the generator.)  At a
+nonidentity permutation moving exactly `s` points, its
 coefficient is
 
 ```text
@@ -201,7 +204,7 @@ coefficient is
 ```
 
 when `k>=s`, and zero otherwise.  It depends only on support size, not on
-cycle type.  Hence every conjugacy-averaged linear combination of all
+cycle type.  Hence every conjugacy-symmetrized linear combination of all
 `alpha_A` lies in the `(N-1)`-dimensional support-size span.
 
 Every operator difference in the ordinary octopus inequality and in the
