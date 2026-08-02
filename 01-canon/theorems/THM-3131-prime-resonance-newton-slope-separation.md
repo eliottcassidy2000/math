@@ -2,13 +2,21 @@
 id: THM-3131
 title: "Prime-resonance Newton-slope separation for quadratic factorial windows"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.  For an exact
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For an exact
   quadratic q(t)=a+bt+ct^2, three consecutive zero factorial moments beginning
   at r force the THM-3124 resonance -a/b=r+2.  If r+2 is prime, the two
   remaining resonant moment polynomials have disjoint p-adic Newton slopes and
   hence no common root.  Thus every possible bad exact-quadratic window has
   composite r+2.  The argument is uniform in the prime and is not a finite
   census.
+audit: >
+  An independent derivation rechecked the resonance scaling, coefficient
+  reduction, both Newton polygons, the p=3 boundary, and the common-factor
+  base-change argument.  A separate recurrence constructor and slow
+  bivariate engine verified primes through 227 over the integers, a mod-p^2
+  control at p=1009, pure-rational gcds, planted common factors, and 48
+  composite slope-overlap hostiles through d=40.  Canonical normal,
+  optimized, and stored transcripts and hashes agree.
 source: root/frontier-synthesis-2026-08-02
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
@@ -21,7 +29,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3131 -- prime-resonance Newton-slope separation for quadratic factorial windows
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Let
 
@@ -147,6 +155,10 @@ Newton slope to both polynomials.  Equations `(10)`--`(12)` make this
 impossible.  The pair is therefore coprime over `Q`, so it has no common
 complex root.  This contradicts `(4)` and proves the claim.  QED.
 
+Both constant coefficients are `p`-adic units.  Thus a hypothetical common
+factor also has nonzero constant term and contributes a finite slope; no root
+at zero or slope at infinity is hidden by the polygon comparison.
+
 ## 4. Connection contract and hostile boundary
 
 The source object is THM-3124's resonant common-root pair `(4)`.  The map is
@@ -193,4 +205,16 @@ python3 -O 04-computation/factorial_prime_resonance_newton_slopes_thm3131.py
 
 and compare byte-for-byte with the declared output.
 
-**End of proof candidate.**
+## 6. Independent hostile audit
+
+The independent audit did not import the canonical companion.  It rebuilt
+the coefficients by a recurrence, used a separate slow bivariate expansion,
+and checked primes `3,5,7,11,13,211,227`, including starts beyond the earlier
+finite census.  A mod-`p^2` endpoint check at `p=1009`, exact rational gcds,
+and planted common-factor controls tested the implications in both
+directions.  Composite `d<=40` supplied `48` slope-overlap hostiles; in
+particular `d=4,6` still have rational gcd one, confirming that `(14)` marks
+observer loss rather than a counterexample.  Canonical normal, optimized,
+and stored output agree byte for byte.
+
+**End of proof.**
