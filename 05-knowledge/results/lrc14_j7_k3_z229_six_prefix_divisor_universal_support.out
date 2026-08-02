@@ -1,0 +1,24 @@
+LRC14 z229 six-prefix divisor-universal complete-cell support
+source_sha256=ba8ef1ef8d93a5d51f5933ab9753c62b6012f24661e108455b4976fc827ce7fe
+scope=the six explicit prefix carriers are reconstructed directly;THM-3113 screen exhaustion and the cap-227 consequence are not assumed
+CARRIER;E=(1, 4, 5, 9, 11, 14);L=194040;lows=(234, 243);cells=34442;cells_sha256=4a0831c8736b30d822f646e570c2cd5a11c97d4ad7fbf1de14c60b2fdbf4a38e;divisors=143;full=124;density_closed=133;exact_needed=10;minimum=(d:2,support:2,kappa:1,coarse:1)
+EXACT;E=(1, 4, 5, 9, 11, 14);rows=((2, 2, 1, 1, True), (3, 3, 1, 1, True), (4, 4, 1, 1, True), (5, 5, 1, 1, True), (8, 8, 2, 2, True), (9, 9, 2, 2, True), (10, 10, 2, 2, True), (11, 11, 2, 2, True), (15, 15, 3, 3, True), (22, 22, 4, 4, True))
+CARRIER;E=(1, 5, 6, 8, 9, 14);L=35280;lows=(234, 246);cells=6812;cells_sha256=53cecffe9a47e74ebded39d293e5de79e803481473bc0b04c47e448924186ca5;divisors=89;full=71;density_closed=81;exact_needed=8;minimum=(d:2,support:2,kappa:1,coarse:1)
+EXACT;E=(1, 5, 6, 8, 9, 14);rows=((2, 2, 1, 1, True), (3, 3, 1, 1, True), (4, 4, 1, 1, True), (5, 5, 1, 1, True), (8, 8, 2, 2, True), (9, 9, 2, 2, True), (10, 10, 2, 2, True), (15, 15, 3, 3, True))
+CARRIER;E=(1, 5, 9, 11, 12, 14);L=194040;lows=(234, 243);cells=35738;cells_sha256=ce4e7355f63f2576bfaeafcd9d84f32a1157a69cd889f7a0fc0bad3708797e6d;divisors=143;full=126;density_closed=135;exact_needed=8;minimum=(d:2,support:2,kappa:1,coarse:1)
+EXACT;E=(1, 5, 9, 11, 12, 14);rows=((2, 2, 1, 1, True), (3, 3, 1, 1, True), (4, 4, 1, 1, True), (5, 5, 1, 1, True), (8, 8, 2, 2, True), (9, 9, 2, 2, True), (10, 10, 2, 2, True), (15, 15, 3, 3, True))
+CARRIER;E=(1, 8, 10, 11, 12, 14);L=129360;lows=(260, 312);cells=25358;cells_sha256=1fceea75eb8835bc70d8aef1a0c0cd9ee5ec4066fd5dce83f34a0c109b64fadc;divisors=119;full=102;density_closed=112;exact_needed=7;minimum=(d:2,support:2,kappa:1,coarse:1)
+EXACT;E=(1, 8, 10, 11, 12, 14);rows=((2, 2, 1, 1, True), (3, 3, 1, 1, True), (4, 4, 1, 1, True), (5, 5, 1, 1, True), (8, 8, 2, 2, True), (10, 10, 2, 2, True), (15, 15, 3, 3, True))
+CARRIER;E=(2, 5, 8, 9, 11, 14);L=388080;lows=(234, 246);cells=73130;cells_sha256=8b96033a89cc4ea040a41786855d155b509ddb6b0e8ca3295d0833e30a47b996;divisors=179;full=160;density_closed=171;exact_needed=8;minimum=(d:2,support:2,kappa:1,coarse:1)
+EXACT;E=(2, 5, 8, 9, 11, 14);rows=((2, 2, 1, 1, True), (3, 3, 1, 1, True), (4, 4, 1, 1, True), (5, 5, 1, 1, True), (8, 8, 2, 2, True), (9, 9, 2, 2, True), (10, 10, 2, 2, True), (15, 15, 3, 3, True))
+CARRIER;E=(2, 8, 10, 11, 12, 14);L=129360;lows=(260, 364);cells=25798;cells_sha256=a2fbb9979e653e4857a94e5ac9657118d871cc5f0c9c494c9abeddcbe48b58cb;divisors=119;full=100;density_closed=112;exact_needed=7;minimum=(d:2,support:2,kappa:1,coarse:1)
+EXACT;E=(2, 8, 10, 11, 12, 14);rows=((2, 2, 1, 1, True), (3, 3, 1, 1, True), (4, 4, 1, 1, True), (5, 5, 1, 1, True), (8, 8, 2, 2, True), (10, 10, 2, 2, True), (15, 15, 3, 3, True))
+bulk=minimum_density:17221/97020;uniform_threshold:d>=25;threshold_margin:173/19404
+summary=divisor_pairs:792;density_closed:744;exact_needed:48;failures:0;exact_moduli:(2, 3, 4, 5, 8, 9, 10, 11, 15, 22)
+hostile=d2_same_size_even_support:1;actual_support:2;kappa:1
+translated_control=d28_beta:3;kappa:4
+direction=for every d>1 dividing L, support exceeds ceil(d/7);THM-2984 therefore makes the projected residual full for every fourth nonaligned tail
+aligned_boundary=d=1 is the four-aligned/three-drift branch closed by THM-2928
+candidate_boundary=THM-3113 must still prove screen exhaustion, identify these six prefixes,and close z1=228;this artifact alone does not lower the proved cap 229
+semantic_sha256=9f58b66c5ed2930023e1023efeb9fb9d873a856afe895ff2768a31889bd9500a
+all_exact_controls=PASS
