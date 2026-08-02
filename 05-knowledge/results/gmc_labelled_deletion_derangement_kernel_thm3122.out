@@ -1,0 +1,13 @@
+labelled_deletion_hook_kernel_and_derangement_laplacian
+n derangements irreps positive zero min_positive max_positive
+2 1 2 1 1 2 2
+3 2 3 1 2 3 3
+4 9 5 4 1 6 12
+5 44 7 6 1 40 55
+6 265 11 10 1 250 318
+7 1854 15 14 1 1788 2163
+8 14833 22 21 1 14462 16952
+9 133496 30 29 1 131024 150183
+10 1334961 42 41 1 1315890 1483290
+group_coefficients=identity_Dn;partial_support_0;full_support_-1
+all_exact_checks_pass
