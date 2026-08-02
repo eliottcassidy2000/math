@@ -321,6 +321,21 @@ ternary phase as the cubeclass of `q_0`.  The terminal decoder can therefore
 record the local `C3` Kummer parameter, but not either nonzero character of
 the split `V4` kernel.
 
+Because `C(theta)` is a rational function field over `C`, its cubeclasses are
+detected exactly by divisor multiplicities modulo three.  Equation `(8b)`
+therefore has the immediately executable residue-divisor form
+
+```text
+div_theta(q_0)=n div_theta(epsilon) mod 3.               (23a)
+```
+
+In particular, if `3|n`, every zero and pole of `q_0(theta)` has multiplicity
+divisible by three.  A single simple zero or pole excludes that local branch.
+If `3` does not divide `n`, `(23a)` reconstructs the divisor class of the tame
+cubic unit `epsilon` because `n` is invertible modulo three.  This is cheaper
+than running the Laurent-key tower: depress the graph quartic, read `q`, and
+factor only its leading residue along the proposed component.
+
 But `(7)` says that every displayed matching root represents the zero local
 Kummer class.  Therefore THM-3081's square
 
