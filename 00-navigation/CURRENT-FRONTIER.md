@@ -213,7 +213,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - THM-1805 makes directed triangles the Vandermonde-cancellation atom; THM-1862/1936 make `H` and signed Rédei data multiplicative under order-join while `c3` is additive.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md) makes `d_iso` exactly `l1` on fixed order-join patches by image-swap uncrossing; the ambient quotient still has triangles and is not a partial cube.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) gives the scalar iff-transitive boundary; THM-2242/2249/2256 give its response, envelope, and scale limit.
-  THM-3121 gives the profile kernel; THM-3134 gives its endpoint jet and exact cubic `C3` transform through `729` vertices, not a fixed-order scalar recurrence.
+  THM-3121/3134 give the `C3` profile/jet; THM-3162 diagonalizes order-join and gives fixed-depth exponential sequences. Cyclic quotients need the full jet.
 - THM-1880/1885 give the Chebyshev--Pell/`BS(1,2)^+` transitive frame.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
@@ -293,9 +293,9 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   `N\{1,4,6}` with dyadic frontier; local A014574 recurrence refuted at term
   `21`; and distinct ancestry FINITE-EXACT through center `10^8`, ALL-n OPEN.
 - THM-3056 gives integer-shape hypergeometric supports with abscissa zero and
-  prime shadow off the scale. THM-3152 gives finite Newton-barcode supports;
-  THM-3156 gives an exact period-three rational LRC-overlap sequence. These
-  efficient laws do not transfer their underlying predicates.
+  prime shadow off-scale; THM-3152 gives finite Newton barcodes; THM-3156 an
+  exact period-three LRC ray; THM-3162 fixed-depth SCC-join exponential sums.
+  None transfers the underlying predicate.
 - **EXACT identities / heuristic bridge:** corrected HYP-8820 puts caterer,
   cake, Moser, bagel, and Fibonacci in one Pascal array and proves
   `bagel(n)-cake(n)=T_n-1`; Klein-S313 realizes full-rank g-bonacci kernels.
