@@ -1,8 +1,11 @@
-THM-3143 FC(3) COMPLEX AFFINE-COORDINATE CAUCHY-GREEN AUDIT
+THM-3143 FC(3) RANK-AT-MOST-ONE QUADRATIC EDGE-CURRENT AUDIT
 C1 Cauchy-Green oriented monomial checks=7; W=2*i*y
 C2 conjugate-line and endpoint-correction checks=6
 C3 closed-cycle coefficient relations=6; complex segment ODE recurrences=6; locally derived turning-square sources=3
 C4 noncollinear turns and reflection-collision sources: cases=3
 C5 rational coefficient pole multipliers -n+1/2 nonzero for n=1..12
-C6 collinear boundary y=0: W and all three turning factors vanish exactly
+C6 aligned collinear boundary y=0: W and all three turns vanish exactly
+C7 transverse restrictions/ODEs=12; Cauchy-Green coefficients=3
+C8 discriminant-block sources: singleton=1; path currents=2d,3d,4d; cycle partitions=3; odd-sign controls=8
+C9 Green vertical-edge monomial checks=10; collision currents=2d,3d; all-value opposite-gap obstruction exact
 ALL THM-3143 CONTROLS PASSED

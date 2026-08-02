@@ -1,23 +1,22 @@
 ---
 id: THM-3143
-title: "FC(3) complex affine-coordinate quadratics: Cauchy--Green cycle sources cannot cancel"
+title: "FC(3) rank-at-most-one quadratic phases: discriminant-class edge currents cannot cancel"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Let ell be an algebraic
-  affine polynomial on the coordinate two-simplex and let P in Qbar[t] have
-  degree at most two.  Then int_Delta exp(P(ell)) dA is nonzero, and it is
-  1/2 iff P(ell) is identically zero.  For noncollinear complex vertex
-  images, Cauchy--Green converts the area period into a weighted cycle of
-  three edge E-functions.  Its common quadratic differential operator has
-  vertex source S_j=P'(z_j)(b_(j-1)-b_j).  Locally this is the derivative
-  square times the turn of the two adjacent unoriented edge directions.
-  After grouping every equality P(z_j)=P(z_k), a reflection pair cancels
-  only its shared edge direction and leaves two distinct outer directions;
-  hence a nonzero source group survives.  Functional independence and
-  Beukers Corollary 1.4 at s=1 exclude the values 0 and 1/2.  The collinear
-  boundary is THM-3142 and the affine phase boundary is THM-3116.  This is
-  the full degree-at-most-two affine-coordinate (univariate-aligned) branch,
-  not the larger class of quadratics with rank-one Hessian and a transverse
-  linear term, and not FC(3).
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For every algebraic
+  quadratic q on the coordinate two-simplex with Hessian rank at most one,
+  int_Delta exp(q) dA is nonzero, and it is 1/2 iff q is identically zero.
+  The rank-zero boundary is THM-3116.  THM-3142 and the inherited first part
+  of this theorem handle quadratics aligned with one affine coordinate.  A
+  rank-one phase with a transverse linear term is converted by Cauchy--Green
+  (noncollinear leading coordinate) or Green (collinear leading coordinate)
+  into edge E-functions.  Equal edge discriminants, rather than raw edges,
+  are the correct first-order blocks.  Singleton, two-edge-path, full-cycle,
+  and vertical-edge source audits show that every discriminant block survives
+  every endpoint-value quotient.  The full-cycle obstruction is the fact
+  that an odd three-cycle of nonzero equal-square edge increments cannot
+  close.  The jointly independent discriminant-block system has sole
+  denominator s, so Beukers Corollary 1.4 at s=1 excludes 0 and 1/2.  This
+  closes Hessian rank at most one, not full-rank quadratics and not FC(3).
 source: codex-2026-08-02-fc3-simplex
 depends_on:
   - THM-3116
@@ -31,9 +30,60 @@ script: 04-computation/fc3_complex_affine_coordinate_cauchy_green_thm3143.py
 output: 05-knowledge/results/fc3_complex_affine_coordinate_cauchy_green_thm3143.out
 ---
 
-# THM-3143 — complex affine-coordinate quadratic phases on the triangle
+# THM-3143 — rank-at-most-one quadratic phases on the triangle
 
-## 1. Statement and scope guard
+## 0. Promoted statement and reduction map
+
+Let
+
+```text
+Delta={(u,v):u>=0, v>=0, u+v<=1},       area(Delta)=1/2,
+q in Qbar[u,v],                          deg q<=2,
+K_q(s)=int_Delta exp(s q(u,v))du dv.                         (0.1)
+```
+
+If the Hessian of `q` has rank at most one, then
+
+```text
+K_q(1)!=0,                                                     (0.2)
+K_q(1)=1/2       iff       q=0 identically.                    (0.3)
+```
+
+The rank-zero case is the affine theorem THM-3116.  If the Hessian has rank
+one, its homogeneous quadratic part is
+
+```text
+q_2=A ell^2,              A!=0,                               (0.4)
+```
+
+for an algebraic nonconstant linear form `ell`.  There are two faithful
+normal forms.
+
+* If the three vertex images of `ell` are noncollinear in `C`, put `z=ell`.
+  Then `z` and `conjugate(z)` span the two-dimensional algebraic affine-linear
+  space modulo constants, so uniquely
+
+  ```text
+  q=A z^2+Bz+C+lambda conjugate(z).                            (0.5)
+  ```
+
+  The case `lambda=0` is the aligned Cauchy--Green proof in sections 1--7.
+  The transverse case `lambda!=0` is proved in sections 8--11.
+* If the images of `ell` are collinear, divide by an algebraic direction of
+  that line and write `ell=eta x`, with `x` real-valued and algebraic.  After
+  choosing an independent real algebraic affine coordinate `y`,
+
+  ```text
+  q=A x^2+Bx+C+lambda y.                                      (0.6)
+  ```
+
+  The case `lambda=0` is THM-3142; the transverse case is section 12.
+
+Thus the former affine-coordinate restriction is discharged, not silently
+dropped.  Full-rank Hessians remain outside the theorem, and (0.2)--(0.3) do
+not prove `FC(3)`.
+
+## 1. Inherited aligned statement and scope
 
 Let
 
@@ -55,12 +105,12 @@ K(1)!=0,                                                       (3)
 K(1)=1/2       iff       P(ell)=0 identically.                 (4)
 ```
 
-The exact factorization `q=P(ell)` is essential.  We call this the
-**affine-coordinate** or **univariate-aligned** quadratic class.  A
-quadratic may have Hessian rank one and still contain a transverse linear
-term, in which case it need not factor through one affine coordinate and is
-not covered here.  Nor does the theorem address a nonflat leading form in
-the Factorial Conjecture or prove FC(3).
+Sections 1--7 prove the inherited **affine-coordinate** or
+**univariate-aligned** core `q=P(ell)`.  The factorization is essential for
+the common-operator argument in those sections, but it is not a restriction
+on the promoted theorem: sections 8--12 supply the missing transverse
+linear term.  The theorem still does not address a full-rank leading form
+or prove `FC(3)`.
 
 If the three vertex values of `ell` are collinear, algebraically
 reparameterize their real affine line and apply THM-3142.  If `P` is
@@ -326,9 +376,292 @@ The frozen exact controls normalize the triangle to vertices
 * the exact collinear boundary `y=0`, where `W` and all three turns vanish
   together and THM-3142's spline mechanism takes over.
 
-The normal and optimized runs are byte-identical.
+The normal and optimized runs are byte-identical.  Section 13 records the
+current combined source and output hashes after the transverse controls.
+
+## 8. Noncollinear transverse normal form
+
+Assume now that the leading coordinate has noncollinear vertex images and
+that the transverse coefficient in (0.5) is nonzero:
 
 ```text
-source sha256 = e2683b37419f6bdc32e872440db1bbbc88287e68e5c2ebc3d0ed38ad2ddbd718
-output sha256 = 9a2477aa33e7d203223721be920da2933505c4ac679c317d338efe7f0e67d7ae
+q(z,conjugate(z))=A z^2+Bz+C+lambda conjugate(z),
+A lambda!=0.                                                  (29)
+```
+
+Orient its image triangle counterclockwise, write its vertices as `z_j`, and
+put
+
+```text
+J=Im(conjugate(z_1-z_0)(z_2-z_0))>0,
+m_j=conjugate(z_(j+1)-z_j)/(z_(j+1)-z_j),
+b_j=conjugate(z_j)-m_j z_j.                                  (30)
+```
+
+On edge `j`, `conjugate(z)=m_jz+b_j`, so the restriction of `q` is
+
+```text
+Q_j(z)=Az^2+beta_j z+gamma_j,
+beta_j=B+lambda m_j,       gamma_j=C+lambda b_j,
+delta_j=beta_j^2-4A gamma_j.                                 (31)
+```
+
+Define the edge and endpoint E-functions
+
+```text
+H_j(s)=integral_(z_j)^(z_(j+1)) exp(sQ_j(z))dz,
+E_j(s)=exp(s q(z_j,conjugate(z_j))).                          (32)
+```
+
+Since `d_bar exp(sq)=s lambda exp(sq)`, Cauchy--Green gives
+
+```text
+2 i s lambda J K_q(s)=N(s):=H_0(s)+H_1(s)+H_2(s).             (33)
+```
+
+The zero at `s=0` on the right is removable.  Unlike (14), the transverse
+cycle need not vanish: the three edge restrictions are different
+quadratics.
+
+For an endpoint `z_k` incident to edge `j`, set
+
+```text
+d_k^(j)=2A z_k+beta_j.                                       (34)
+```
+
+The quadratic identity
+
+```text
+(2Az+beta_j)^2=4A Q_j(z)+delta_j                              (35)
+```
+
+gives the exact edge equation
+
+```text
+D_(delta_j)H_j=d_(j+1)^(j)E_(j+1)-d_j^(j)E_j,
+D_delta=4As d/ds+2A+delta s.                                 (36)
+```
+
+The operators in (36) are generally different.  This is the point at which
+the aligned proof cannot simply be copied.
+
+## 9. The discriminant blocks and their source audit
+
+Let `F=Qbar(s)`, and let `mathcal E` be the `F`-span of the distinct endpoint
+exponentials together with `1` (with `1` identified with the endpoint class
+of value zero when necessary).  For every edge-discriminant value `delta`,
+put
+
+```text
+I_delta={j:delta_j=delta},       G_delta=sum_(j in I_delta)H_j. (37)
+```
+
+Equation (36) makes each `G_delta` a first-order block modulo `mathcal E`.
+We first prove that no block belongs to `mathcal E`.
+
+Suppose a block did.  After grouping equal endpoint values `xi`, write
+
+```text
+G_delta=sum_xi R_xi(s)exp(xi s),        R_xi in F.             (38)
+```
+
+Applying `D_delta` shows that a grouped source coefficient `tau_xi` obeys
+
+```text
+4AsR_xi'+[2A+(delta+4Axi)s]R_xi=tau_xi.                       (39)
+```
+
+Whenever
+
+```text
+tau_xi!=0,                 delta+4Axi!=0,                     (40)
+```
+
+equation (39) has no rational solution.  A pole away from zero gains one
+order under the derivative.  At zero, a pole of order `n>=1` has nonzero
+leading multiplier `2A(1-2n)`.  Thus `R_xi` is a polynomial, whose top term
+then gains one degree from `(delta+4Axi)sR_xi`.  This contradicts the
+nonzero constant right side.
+
+It remains to find (40) for every possible block and endpoint-value
+partition.
+
+### 9.1 One edge
+
+On one edge from `a` to `b`, the two endpoint derivatives differ by
+`2A(b-a)!=0`.  If the endpoint values differ, at least one source is nonzero
+and its square is
+
+```text
+delta+4Aq(a)=d_a^2       or       delta+4Aq(b)=d_b^2.         (41)
+```
+
+If the values agree, quadratic reflection gives `d_b=-d_a!=0`, and the
+grouped source is `d_b-d_a!=0`.  A third vertex in the same exponential
+class contributes no source to this singleton block.  Hence (40) holds.
+
+### 9.2 Two adjacent edges
+
+Write the directed path as `a -> b -> c`.  Equal discriminants give equal
+squares for the incoming and outgoing derivatives at `b`.  The two edge
+slopes are distinct in a nondegenerate triangle, and `lambda!=0`, so those
+derivatives are distinct.  Therefore they are `d` and `-d`, with `d!=0`.
+The middle source is `2d`, and its square witnesses (40).
+
+If `q(b)` merges with `q(a)`, reflection on the first edge makes the source
+at `a` equal to `d`, so the grouped source is `3d`.  The same statement holds
+for a merge with `c`.  If only `q(a)=q(c)`, the middle singleton still has
+source `2d`.  If all three values merge and `a!=c`, the sole grouped source
+is `4d=2A(c-a)!=0`.  Thus every two-edge block survives every endpoint
+partition.
+
+### 9.3 All three edges: the odd-cycle obstruction
+
+If all three discriminants agree, the source at vertex `j` is
+
+```text
+c_j=d_j^(j-1)-d_j^(j)=lambda(m_(j-1)-m_j).                   (42)
+```
+
+Adjacent slopes are distinct, so `c_j!=0`.  The two derivatives in (42)
+have equal squares but are distinct; hence they are opposite and their
+common square `delta+4Aq(z_j)` is nonzero.  With three distinct endpoint
+values, every source survives.  If exactly two values merge, their grouped
+source is `-c_k`, because `sum_j c_j=0`, and is again nonzero.
+
+Only a merger of all three endpoint values could erase (42).  That merger
+is incompatible with a common discriminant.  Indeed, equality of the values
+at the ends of edge `j` makes its endpoint derivatives opposite, whence
+
+```text
+delta+4Axi=A^2(z_(j+1)-z_j)^2.                               (43)
+```
+
+The left side is independent of `j`.  Thus the three nonzero edge increments
+are each one of the two square roots `+h,-h`.  Three signs of one nonzero
+number cannot sum to zero, whereas the increments around a cycle must sum
+to zero.  This odd-cycle contradiction completes the source audit and proves
+
+```text
+G_delta notin mathcal E             for every delta.          (44)
+```
+
+## 10. Joint functional independence, not total-period independence alone
+
+On the quotient by `mathcal E`, let
+
+```text
+T=d/ds+1/(2s),             kappa_delta=delta/(4A).             (45)
+```
+
+Equations (36)--(37) say
+
+```text
+T[G_delta]=-kappa_delta[G_delta].                             (46)
+```
+
+The distinct discriminant blocks are jointly independent over `F`.  If a
+relation with a minimal number of blocks existed, divide by one coefficient
+and write its first coefficient as one.  Applying `T+kappa_0` removes that
+block.  Minimality forces every remaining rational coefficient `R_delta` to
+satisfy
+
+```text
+R_delta'/R_delta=kappa_delta-kappa_0!=0.                      (47)
+```
+
+No nonzero rational function has a nonzero constant logarithmic derivative.
+Together with (44) and the usual independence of distinct exponentials,
+this proves that
+
+```text
+{G_delta: delta occurs} union {exp(xi s): xi occurs} union {1} (48)
+```
+
+is linearly independent over `Qbar(s)`.
+
+Every function in (48) is an E-function: the coefficient-and-denominator
+argument of section 5 applies edgewise to every algebraic `Q_j`, and finite
+sums preserve the class.  Summing (36) within a class gives a first-order
+system for exactly this vector, with common denominator `s`;
+the endpoint exponentials satisfy `E_xi'=xi E_xi`.  Therefore `s=1` is an
+ordinary algebraic point, and Beukers Corollary 1.4 makes the values in (48)
+linearly independent over `Qbar`.
+
+There is a validity warning here.  It is not enough to prove only that the
+raw total `N=sum_jH_j` is independent from the endpoint exponentials and then
+invoke Beukers on that list.  When the `delta_j` differ, that list is not
+closed under differentiation; an arbitrary basis completion can introduce
+an apparent singularity at `s=1`.  The discriminant-class vector (48) is the
+required ordinary-point repair.  The raw-`N` shortcut is forbidden.
+
+## 11. The transverse noncollinear values
+
+Since `N=sum_delta G_delta`, equation (33) at `s=1` gives
+
+```text
+2 i lambda J K_q(1)=sum_delta G_delta(1).                     (49)
+```
+
+If `K_q(1)=0`, (49) is a nontrivial algebraic relation among the values in
+(48).  If `K_q(1)=1/2`, subtracting the nonzero algebraic constant
+`i lambda J` gives another such relation after adjoining `1`.  Both are
+impossible.  This proves (0.2)--(0.3) in the noncollinear transverse case.
+
+## 12. Collinear leading coordinate and the vertical-edge boundary
+
+In normal form (0.6), let the real algebraic `(x,y)` coordinates map `Delta`
+to an oriented nondegenerate triangle of Jacobian `J>0`.  Green's formula is
+
+```text
+-s lambda J K_q(s)=integral_(boundary T) exp(sq)dx.            (50)
+```
+
+Every nonvertical edge has a finite line equation `y=m_jx+b_j`; its
+restriction is exactly (31), with `z` replaced by `x`, and satisfies
+(35)--(36).  A vertical edge contributes zero because `dx=0`.
+
+If the three vertex `x`-values are distinct, all three edges are active and
+sections 9--11 apply verbatim with real slopes.  In particular, the
+all-value/full-discriminant collision would again force three nonzero signed
+equal-square `x`-increments to sum to zero.
+
+If two `x`-values agree, the edge between them is vertical and the other two
+active edges form a directed path whose initial and final `x`-coordinates
+agree.  For distinct discriminants both blocks are singletons.  For a common
+discriminant, the derivatives at the shared vertex are `d,-d`, `d!=0`, and
+the middle source is `2d`.  A collision with either vertical endpoint gives
+the grouped source `3d`; a collision of the two vertical endpoints leaves
+the middle source unchanged.  An all-three collision would require the two
+signed active-edge increments both to equal `d/A`, but those increments are
+opposites.  It is therefore impossible.  This covers vertical edges,
+repeated leading-coordinate values, and every endpoint-value collision.
+
+The discriminant-class system remains ordinary at one, and (50) excludes
+`K_q(1)=0,1/2` exactly as in section 11.  Together with THM-3116, THM-3142,
+and sections 1--7, this completes the reduction in section 0.
+
+## 13. Extended exact verification and sharp scope
+
+The same script now additionally checks:
+
+* every transverse edge restriction and its discriminant ODE;
+* the singleton reflection source;
+* the `2d`, `3d`, and `4d` two-edge path currents;
+* all endpoint partitions of the three-cycle current and the eight-sign
+  odd-cycle obstruction;
+* Green orientation on a triangle with a vertical edge; and
+* the vertical-path collision formulas and repeated-coordinate boundary.
+
+The verifier does not numerically sample periods and does not inject the
+desired conclusion.  It checks the algebraic identities used by the proof;
+the E-function value step is the cited Beukers theorem.  Full-rank Hessians
+are the exact remaining quadratic boundary.
+
+Run the two byte-comparison controls displayed in section 7.  The current
+frozen hashes are:
+
+```text
+source sha256 = ab46ba7df9b66159154715b71d0099c3c875c3cd104dde2f641c27604cb43a2e
+output sha256 = 273a4cc7fb40fb7c8411653cf5c894fbcc397e83a23cd7ea0235a1921b93cd2a
 ```
