@@ -7,9 +7,10 @@ status: >
   prefixes cannot be extended by any fourth tail: every nonaligned
   denominator projection exceeds the sharp translated danger-band capacity,
   while an aligned extension lies in THM-2928's closed four-aligned branch.
-  This statement is independent of candidate THM-3113's screen exhaustion.
-  It does not promote THM-3113, close z1=228, lower the proved k=3 cap 229,
-  classify physical covers outside these prefixes, or prove LRC(14).
+  This statement is independent of THM-3113's screen construction and now
+  supplies a second proof for its six terminal prefixes.  Exhaustiveness,
+  z1=228 closure, and the later cap/ledger changes remain consequences of
+  THM-3113/3114, not of this theorem alone.  No LRC(14) claim is made.
 audit: >
   An independent implementation reconstructed every carrier from intersections
   of closed safe tooth intervals, with a second exact-Fraction replay on the
@@ -30,6 +31,7 @@ depends_on:
 related:
   - THM-3111-projected-k3-z230-exact-screen-and-compressed-complete-cell-descent
   - THM-3113-projected-k3-z229-terminal-and-z228-screen-double-layer-descent
+  - THM-3114-projected-k3-z227-screen-and-z226-terminal-double-layer-descent
   - MISTAKE-334
 script: 04-computation/lrc14_j7_k3_z229_six_prefix_divisor_universal_support.py
 output: 05-knowledge/results/lrc14_j7_k3_z229_six_prefix_divisor_universal_support.out
@@ -156,20 +158,21 @@ MISTAKE-334 is also load-bearing.  At `d=28`, the centered count is
 `beta(28)=3`, but an arbitrarily translated strict band has capacity
 `kappa(28)=4`.  Every gate here uses `(7)`, never the centered proxy.
 
-## 5. Unconditional result versus candidate consumer
+## 5. Unconditional result and proved consumer
 
 The definitions, all `792` divisor checks, and the six prefix closures are
-independent of THM-3113.  Candidate THM-3113 is needed only for the stronger
-composition claims that:
+independent of THM-3113.  Proved THM-3113 supplies the stronger composition
+claims that:
 
 1. its `z1=229` screen is exhaustive;
 2. all screen residuals land on precisely these six prefixes; and
 3. the complete `z1=228` layer has no residual state.
 
-Until that screen receives its required immutable independent replay,
-THM-3126 does **not** prove the proposed ledger subtraction
-`374263-48=374215` or the proposed cap `z1<=227`.  The proved projected
-`k=3` cap remains `229` by THM-3111.
+That screen has now passed immutable normal/optimized/stored replay, so
+THM-3113 proves `374263-48=374215` and cap `z1<=227`; THM-3114 continues the
+descent to ledger `374172` and cap `z1<=225`.  THM-3126 remains an independent
+terminal proof for the six `z1=229` prefixes and does not establish those
+exhaustive layer consequences by itself.
 
 ## 6. Exact verification
 
