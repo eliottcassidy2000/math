@@ -205,6 +205,9 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-3121/3134 give the `C3` profile/jet; THM-3166 diagonalizes order-join,
   gives exponential sequences and positive negative-colour duality.
   Cyclic quotients need full jets.
+  THM-3173 separates `C2*C3`, regular `S3`, and regular `C6`; their joint
+  quotient has order 18, while pointed oriented quartic frames form `Q3`.
+  These are semantic action data, not a physical current or Keller bridge.
 - THM-1880/1885 give the Chebyshev--Pell/`BS(1,2)^+` transitive frame.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
@@ -333,8 +336,8 @@ Classify profiles under support operations; study analytic continuation and auto
   from three `C2` tables; edge/cycle loses a 3D character sector.  THM-3076
   extends this to prime affine-plane tomography, with the characteristic-`p`
   nilpotent boundary.  Reflection/physical realization are sidecars.
-  THM-3157 aligns a supplied sheet owner/matching orientation with the local
-  `C3` edge hexagon and THM-2597 tournament; THM-2681 still blocks a global resolvent.
+  THM-3157/3173 align supplied owner/orientation data with the local `C3`
+  hexagon/frame cube; THM-2681 still blocks a global resolvent.
   THM-2862/2864/2968/2971 give two sextic
   lifts, signed-pair complements, and a discriminant-cover algebra isomorphism;
   affine sidecars remain.  THM-2867 gives the regular `S3` carrier.  THM-2871 makes that face unramified and

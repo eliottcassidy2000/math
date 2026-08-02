@@ -62,7 +62,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     THM-2332 leaves squarefree branch degree `0`, `2`, or `4`; THM-2335 eliminates `0`; THM-2345/2347 close two divisors.
     THM-2359 closes the perfect-quartic divisor. THM-2371 and THM-2376 close the full degree-eighteen `H_2S_5^2` stratum; hostile-audited THM-2406 closes the remaining `H_4` locus and hence the inherited reduced degree-eighteen branch.
     At degree `22`, THM-2671/2683/2692 close the inherited nonsplit branch and THM-2725/2745/2752/2755 the split family. THM-2778 closes every complete chosen-sheet split polynomial exact-prefix degree; THM-2796 exposes the live carrier `A(R_Q/q)=VG`.
-    THM-3057/3059 make quartic Jelonek parity tame infinity-inertia sign; THM-3066 retains only the cofactor product, and THM-3064's pointed norm does not exclude `C3`. THM-3157 aligns supplied owner/orientation data locally, not a global resolvent/current.
+    THM-3057/3059 make quartic Jelonek parity tame infinity-inertia sign; THM-3066 retains only the cofactor product, and THM-3064's pointed norm does not exclude `C3`. THM-3157/3173 align supplied owner/orientation data locally, not a global resolvent/current.
     THM-3123 classifies the last two abstract heptic passports and finds four hostile-audited `S7` maps, but does not supply Keller-chart entry.
     THM-3133 excludes simple response zeros; THM-3140 blocks only its explicit `R=8` odd-bipole.
     Degrees `>=26`, nonpolynomial prefixes, chart entry, raising/descent, uniform Keller-`C3` exclusion, other branches, `JC(2)`, and `DC(2)` remain open.
