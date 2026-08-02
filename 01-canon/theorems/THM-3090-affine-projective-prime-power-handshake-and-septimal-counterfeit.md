@@ -2,8 +2,8 @@
 id: THM-3090
 title: "Affine/projective prime-power handshake and septimal counterfeit"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Equal natural permutation degrees between AGL_2(F_q) on F_q^2 and
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Equal natural
+  permutation degrees between AGL_2(F_q) on F_q^2 and
   PGL_2(F_r) on P1(F_r), for prime powers q,r, occur only at (q,r)=(2,3)
   and (3,8).  Equal group order, permutation-group equivalence, or
   three-transitivity of the affine action selects only (2,3), yielding the
@@ -13,6 +13,14 @@ status: >
   No canonical modular generator, tree, quartic owner, Keller, or LRC map is
   asserted.
 source: root-affine-projective-handshake-2026-08-01
+audit: >
+  An immutable independent audit rederived the prime-power degree and
+  group-order classification, all pair/triple transitivity claims, the exact
+  F_2/F_3/F_8 orbit sizes, and the F_8^*=C7 rank-54 contrast boundary.  It
+  caught and repaired the general affine triple atlas: for q>2 there are q-2
+  collinear ratio orbits and one noncollinear orbit, rather than always two.
+  It then replayed the repaired normal and optimized companions byte-for-byte
+  against stored output and verified both LF hashes.
 depends_on:
   - THM-3088-punctured-projective-direction-algebra-and-exceptional-parity-saturation
 related:
@@ -21,15 +29,14 @@ related:
   - THM-3083-exceptional-binary-point-ternary-direction-s4-tomography-clutch
 script: 04-computation/affine_projective_prime_power_handshake_thm3090.py
 output: 05-knowledge/results/affine_projective_prime_power_handshake_thm3090.out
-script_sha256: e4eead4d76cee45d9895ff88b6e73fc5757269cab23d6ada6198350f849331d0
-output_sha256: c8660421ce2bf79be662a62a06658364f4a1f3c672e95dfbafb1e1aa78ed0fe5
+script_sha256: ffc396b2bb731c5e89859f5ea3652d707c964e3d89a1ebf4dd1dbe47793ffcc9
+output_sha256: 20706c83909849021a735ec6644b8a38ddde37af0c5a05598679b640ac9aba55
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3090 -- affine/projective prime-power handshake and septimal counterfeit
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Exact classification
 
@@ -134,9 +141,11 @@ side use a fractional-linear map.  The projective action is in fact sharply
 three-transitive for every `r`, since one fractional-linear map is uniquely
 determined by the images of three distinct points.
 
-The affine action is three-transitive only at `q=2`.  For `q>2`, ordered
-triples split into collinear and noncollinear orbits.  At the counterfeit
-`q=3`, their exact sizes are
+The affine action is three-transitive only at `q=2`.  For every `q>2`, it has
+`q-2` collinear ordered-triple orbits indexed by the affine ratio
+`t in F_q\{0,1}`, each of size `q^2(q^2-1)`, and one noncollinear orbit of
+size `|A(q)|`.  Thus it has exactly `q-1` triple orbits.  At the counterfeit
+`q=3`, these specialize to exactly two orbits, of sizes
 
 ```text
 72 and 432,                                                (11)
@@ -219,17 +228,16 @@ prime powers through `4096` as a finite hostile control, constructs exact
 natural actions, and computes every ordered-pair and ordered-triple orbit.
 
 ```text
-PROVED IN THE CANDIDATE:
+PROVED:
   the complete prime-power degree atlas (2,3),(3,8);
   exact group-order separation and exceptional S4 equality;
   two-/three-transitivity hierarchy and triple-orbit sizes;
   the C7 scalar fibre and rank-54 parity/direction defect at (3,8).
 
 NOT PROVED:
-  independent hostile audit or promotion;
   a canonical generator or cross-field gauge;
   a common PSL2(Z), Farey, partial-cube, or tree carrier;
   a quartic-owner, Keller, GMC, or LRC consequence.                       (15)
 ```
 
-QED (candidate).
+QED.

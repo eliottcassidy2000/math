@@ -224,6 +224,12 @@ for q in range(2, 100):
     difference = projective_order(r) - affine_order(q)
     require(difference == q**2 * (q**2 - 1) * (q - 2), (q, difference))
 
+for q in range(3, 100):
+    collinear = q**2 * (q**2 - 1)
+    noncollinear = affine_order(q)
+    total = q**2 * (q**2 - 1) * (q**2 - 2)
+    require((q - 2) * collinear + noncollinear == total, (q, "triple atlas"))
+
 AFFINE2 = affine_permutations(F2)
 AFFINE3 = affine_permutations(F3)
 PROJECTIVE3 = projective_permutations(F3)
@@ -267,6 +273,7 @@ def main():
     lines += [
         "exceptional=(2,3):both_natural_actions_are_S4_and_sharply_three_transitive",
         "counterfeit=(3,8):equal_degree_and_two_transitivity_but_orders_432_vs504;AGL_triple_orbits=72+432;PGL_sharp_triples=504",
+        "affine_triple_atlas=q>2 has q-2 collinear ratio orbits of size q^2(q^2-1) plus one noncollinear orbit of size |AGL2(q)|",
         "septimal_boundary=F8* is C7;parity_is_trivial;direction_rank=9;internal_contrast_rank=54",
         "scope=permutation_degree/order/transitivity_and_scalar_fibre_only;no_canonical_generator_pair,tree,quartic_owner,Keller,or_LRC_map",
         "prime_power_scan_through_4096=PASS;all_exact_controls=PASS",

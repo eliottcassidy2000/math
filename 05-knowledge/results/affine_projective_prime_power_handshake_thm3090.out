@@ -9,6 +9,7 @@ ACTION;name=AGL2F3;order=432;ordered_pair_orbits=72;ordered_triple_orbits=72,432
 ACTION;name=PGL2F8;order=504;ordered_pair_orbits=72;ordered_triple_orbits=504
 exceptional=(2,3):both_natural_actions_are_S4_and_sharply_three_transitive
 counterfeit=(3,8):equal_degree_and_two_transitivity_but_orders_432_vs504;AGL_triple_orbits=72+432;PGL_sharp_triples=504
+affine_triple_atlas=q>2 has q-2 collinear ratio orbits of size q^2(q^2-1) plus one noncollinear orbit of size |AGL2(q)|
 septimal_boundary=F8* is C7;parity_is_trivial;direction_rank=9;internal_contrast_rank=54
 scope=permutation_degree/order/transitivity_and_scalar_fibre_only;no_canonical_generator_pair,tree,quartic_owner,Keller,or_LRC_map
 prime_power_scan_through_4096=PASS;all_exact_controls=PASS
