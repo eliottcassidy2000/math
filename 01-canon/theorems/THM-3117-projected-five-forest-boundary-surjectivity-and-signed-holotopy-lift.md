@@ -2,7 +2,7 @@
 id: THM-3117
 title: "Projected five-forest boundary surjectivity and signed holotopy lift"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; independent audit pending.  On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the
   actual K8 and K9 macro spaces of THM-3110, the projected boundary from
   five-edge forest chains onto rank-four component partitions is surjective
   over Q.  Hence every rational rank-four current, including both labelled
@@ -19,8 +19,11 @@ audit: >
   Gaussian elimination: 1701/1701 for K8 and 6951/6951 for K9, with K6/K7
   controls.  The secondary exact companion reconstructs both live Ewens
   currents and kills every literal forest variable by simultaneous one-sign
-  face propagation.  Normal, optimized, stored-output, hash, and independent
-  mathematical audits are still required before promotion.
+  face propagation.  Independent normal and optimized replays of both
+  companions match the stored outputs byte-for-byte.  Two independent hostile
+  mathematical audits rederived the chain typing, the mod-two-to-rational rank
+  inference, the cycle lift, and the exhaustive positivity-failure dichotomy;
+  neither found a theorem defect.
 depends_on:
   - THM-3110-arbitrary-anchored-product-gamma-dominant-tail-and-low-histogram-reduction
 related:
@@ -38,7 +41,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3117 -- projected five-forest boundary surjectivity and signed holotopy lift
 
-**PROVED CANDIDATE + VERIFIED-EXACT; independent audit pending.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3110 reduces the open arbitrary-anchored width-three product-Gamma
 coefficient problem to two rational currents on rank-four set partitions of
