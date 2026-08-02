@@ -29,7 +29,7 @@ Format per entry:
   the lost `T^3` coordinate, plus a common physical atom.  The corrected
   reflection now states this and scopes `C2*C3` only as a search grammar.
 
-## MISTAKE-351 (2026-08-02, two live theorem-reservation races) -- a fresh fetch is only a snapshot, and moving both colliders to the same next ID repeats the collision
+## MISTAKE-351 (2026-08-02, live theorem-reservation races) -- a fresh fetch is only a snapshot, and a reported collision is useless unless it gates the commit
 
 - **What happened:** two independently valid results acquired `THM-3130`
   while their reservation pushes crossed.  The later prime-resonance
@@ -37,9 +37,14 @@ Format per entry:
   tournament endpoint-jet theorem and the fixed-reference Hasse no-go at
   `THM-3134`.  Before the later owner completed its repair, the tournament
   theorem moved to the apparently free `THM-3135`; the other session made the
-  same move from its own snapshot, creating a second collision.
+  same move from its own snapshot, creating a second collision.  A third race
+  later put the first-on-main quartic congruence reservation and a later
+  prime-power factorial stub at `THM-3141`.  The reservation command actually
+  printed the collision after fetching, but `grep ... || true` was chained to
+  the commit, so the discovery did not stop the write.
 - **First failed mechanism:** `fetch; search; choose next; push` is not an
-  atomic reservation.  It cannot see a reservation pushed after the search.
+  atomic reservation.  It cannot see a reservation pushed after the search,
+  and a diagnostic search is not a safety check when its result is ignored.
   Once a collision exists, “both choose the next free integer” has the same
   race and is not a repair protocol.  The mathematics and file contents were
   sound; the YAML namespace was not.
@@ -47,12 +52,19 @@ Format per entry:
   ownership.  The current distinct allocation is `THM-3130` for the
   divisor-antichain response theorem, `THM-3131` for prime-resonance
   factorial closure, `THM-3134` for the tournament endpoint-jet theorem, and
-  `THM-3136` for the later fixed-reference Hasse no-go.  (`THM-3135` is now
-  free.)  After every
+  `THM-3136` for the later fixed-reference Hasse no-go.  (`THM-3135` was free
+  at that checkpoint and now names the directed-cycle LRC theorem.)  The later
+  prime-power factorial stub moved from `THM-3141` to `THM-3142`, leaving the
+  first-on-main quartic reservation fixed; it was later promoted as the
+  congruence-shadow theorem.  Later allocations include promoted `THM-3143`
+  for the two-step-prime Euclidean--Newton lane and reservations `THM-3144`
+  and `THM-3146` for their declared lanes.  After every
   reservation push, fetch again and search YAML IDs on the resulting remote
   history.  If a collision appears, inspect the two add commits, keep the
   first-on-`main` ID fixed, and move only the later reservation.  Repeat the
   global ID check after the repair lands; do not move both sides speculatively.
+  Run the collision check as a separate hard gate: never append `|| true` and
+  then continue to commit in the same shell command.
 
 ## MISTAKE-350 (2026-08-02, factorial-conjecture type audit) -- indexing SFC by slot count and restricting FC to homogeneous polynomials
 

@@ -1,0 +1,14 @@
+THM-3140 R=8, D=11, N=22 ODD-BIPOLE FABER-CHART NONENTRY -- exact
+rows j=1..8: direct multinomial = independent logarithmic recurrence
+H_j ring gate: H_j in Q[T,s,Td] for every j=1..8
+odd-bipole E_11 = x**11 - 11*x**9/2 + 99*x**7/8 - 231*x**5/16 + 1155*x**3/128 - 693*x/256
+odd-bipole C_11 = 693/128
+divisor gate: A=c*(x^2-1)^6; B divisible by (x^2-1)^7
+therefore q^2=unit/(x^2-1), and d,s are polynomials
+infinity face regions: D<2S+2, D=2S+2, D>2S+2
+wall normalized resultant = 65536
+flux consequence: s is constant (possibly zero); d is zero or has degree <=2
+Faber K order at infinity >= 2
+required K=lambda*M/A order at infinity = -1
+CONCLUSION: the explicit THM-3133 d=11 odd-bipole cannot enter the normalized R=8 nonsplit exact-square-prefix Faber/source chart
+ALL EXACT HOSTILE CONTROLS PASS

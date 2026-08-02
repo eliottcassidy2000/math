@@ -54,7 +54,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    kernel; THM-3134 makes its profile an endpoint jet and gives an exact cubic
    `C3` Gregory--Newton transform, not a fixed-order scalar recurrence.
 11. **A reciprocal integer sequence has two profiles.** THM-2000/2005/2352 separate support, multiplicity, and q-adic thresholds; THM-2438/2433/2500 give the Poisson--Newton transform and finite-hole classification.
-    THM-3055/3056 give divisor upsets and Hankel minors; THM-3124/3131 close quadratic moments at `r<=200` and every prime resonance; THM-3134 gives the exact `C3` profile transform.
+    THM-3055/3056 give divisor upsets/Hankel minors; THM-3124/3131/3142/3143 close exact quadratics through `r<=998`, and all prime `d`, prime-power `d-1`, or prime `d-2`.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is the exact new counterexample. THM-2063/2071 close linear/quadratic source fibers; THM-2084/2118/2102 close cubics; THM-2202 removes every twice-odd finite pole.
     THM-2214 closes nonsplit terminal degrees `2,6,10`, THM-2217 forces the odd train, and THM-2247 closes degree `14`.
     At degree `18`, THM-2297 closes one-sparse strata plus `B=D=0`;
@@ -64,7 +64,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     At degree `22`, THM-2671/2683/2692 close the inherited nonsplit branch and THM-2725/2745/2752/2755 the split family. THM-2778 closes every complete chosen-sheet split polynomial exact-prefix degree; THM-2796 exposes the live carrier `A(R_Q/q)=VG`.
     THM-3057/3059 make quartic Jelonek parity tame infinity-inertia sign; THM-3066 retains only the cofactor product, and THM-3064's pointed norm does not exclude `C3`.
     THM-3123 classifies the last two abstract heptic passports and finds four hostile-audited `S7` maps, but does not supply Keller-chart entry.
-    THM-3133 excludes common simple response zeros for `R>=7` but supplies no source-chart entry.
+    THM-3133 excludes simple response zeros; THM-3140 blocks only its explicit `R=8` odd-bipole.
     Degrees `>=26`, nonpolynomial prefixes, chart entry, raising/descent, uniform Keller-`C3` exclusion, other branches, `JC(2)`, and `DC(2)` remain open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The

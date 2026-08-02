@@ -1,0 +1,9 @@
+LRC H UPPER-MEDIAN TWO-STAR MATCHING -- INDEPENDENT SUBSET-DP AUDIT
+D=6;m=6;certificate=(6287836145125, (6, 10), 9658256329649, 3370420184524, 'relaxed-tail');matching_calls=4;feasible=0
+D=8;m=8;certificate=(625580509807, (8, 12), 3248767010812, 2623186501005, 'relaxed-tail');matching_calls=3;feasible=0
+D=10;m=10;certificate=(1104080853003, (10, 15), 3243847160143, 2139766307140, 'relaxed-tail');matching_calls=3;feasible=0
+D=12;m=12;certificate=(1433690505442, (12, 18), 3240569405890, 1806878900448, 'relaxed-tail');matching_calls=4;feasible=0
+D=15;m=45;certificate=(13785506157733, (48, 60), 14304498334791, 518992177058, 'relaxed-tail');matching_calls=0;feasible=0
+D=20;m=20;certificate=(2120108331125, (20, 30), 3234019043478, 1113910712353, 'relaxed-tail');matching_calls=5;feasible=0
+semantic_sha256=c7f1b19a2facf164842de7fcd2b39cc81b3aea0358b42f9fb8097bacb2080567
+independent_subset_DP_and_direct_interval_route=PASS
