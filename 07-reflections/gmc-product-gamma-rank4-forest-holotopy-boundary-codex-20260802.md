@@ -172,25 +172,27 @@ Equations `(9)--(10)` are the quotient/star--mesh lane untouched by the
 forest no-go.  At this checkpoint they are a proof target being tested, not
 a new proved dependency of this reflection.
 
-## 5. The surviving signed-holotopy lane
+## 5. The exact surviving signed-holotopy lane
 
-A separate sparse numerical solve gives useful but explicitly noncanonical
-evidence.  If all four-forests are allowed arbitrary signed coefficients and
+The numerical signal at the time of this reflection has since been replaced
+by proved `THM-3117-projected-five-forest-boundary-surjectivity-and-signed-holotopy-lift.md`.
+If all four-forests are allowed arbitrary rational signed coefficients and
 zero macro fibres may carry cancelling null-pairs, the simultaneous system
 
 ```text
 partial C=0,                 sum_(pi(F)=pi) C_F=W(pi)  (11)
 ```
 
-has numerical solutions in both banks: relative residuals about `7e-12` in
-`K_8` and `1.5e-10` in `K_9`.  This is not an exact existence theorem and is
-not part of the companion transcript.  Its value is diagnostic: together
-with `(4)`, it points specifically to **intra-fibre signed null-pairs**, not
-to a missing amount of positive mass.
+has exact rational solutions in both banks.  Indeed, THM-3117 proves that the
+projected boundary `P_4 partial_5` is surjective over `Q` by an exact full-rank
+certificate modulo two.  If `P_4 partial_5 Y=W`, then `C=partial_5Y` solves
+`(11)` because `partial_4 partial_5=0`.  Together with `(4)`, this proves that
+the missing datum is specifically **intra-fibre signed null-pairs**, not a
+missing amount of positive mass or a residual linear-topological obstruction.
 
 The cheapest decisive continuation is therefore one of:
 
-1. construct a rational rooted/NBC lift of `(11)` by deletion--contraction;
+1. make THM-3117's rational lift sparse, local, or insertion-compatible;
 2. prove the occupancy-type refinement flow for the coefficients in `(9)`
    symbolically in every degree; or
 3. find a small exact dual witness showing that even a chosen rooted local
