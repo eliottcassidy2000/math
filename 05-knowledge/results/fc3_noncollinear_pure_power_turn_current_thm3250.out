@@ -1,0 +1,9 @@
+THM-3250 FC(3) NONCOLLINEAR PURE-POWER TURN-CURRENT AUDIT
+C1:cauchy_green=24
+C2:vertex_turn_identity=SYMBOLIC
+C3:primitive_ode_coefficients=288
+C4:collision_profiles=[('all-cubic', 1, 1), ('all-quartic', 1, 1), ('partial-cubic', 2, 2), ('zero-vertex', 3, 2)]
+C5:direct_moment_coefficients=90
+C6:nonintegral_residue_and_gap=114;quadratic_boundary=2/2
+semantic_sha256=96f3e089d99624487fd950b9da4f7a2151dd45c520dd39fcab9953a870e5d188
+CONCLUSION=EXACT_IDENTITIES_VERIFIED;TRANSCENDENCE_STEP=CITED_BEUKERS
