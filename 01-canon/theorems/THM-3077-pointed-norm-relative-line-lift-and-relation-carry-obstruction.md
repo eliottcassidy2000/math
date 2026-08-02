@@ -341,8 +341,7 @@ The exact companion verifies:
 3. `833` exact winding/carry reconstructions;
 4. five truncated rational unit-germ logarithm/exponential lifts;
 5. exact pointed Fourier cyclotomic reductions at `p=7,13`;
-6. both `k=14` exponent-pair `C91` controls and the fixed-normal physical
-   boundary; and
+6. both `k=14` exponent-pair `C91` controls; and
 7. `2,925` recursive model-flag carry cells.
 
 Run
