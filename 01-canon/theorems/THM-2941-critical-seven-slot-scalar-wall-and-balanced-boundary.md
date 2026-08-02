@@ -25,18 +25,20 @@ status: >
   five and its fully periodized high-channel fibre has sharp floor 1/105;
   threshold-block refinements close arbitrary positive reflected levels on
   a bank of 2,442 of the 3,003 bodies, leaving 561 uncovered rather than
-  proving them impossible.  A recursive cap-aware projective-CSP and
-  located-transport chain closes every body for spread D>=6 and base m>=D,
-  and residue-class corner refinements extend this to 3m>=2D.
+  proving them impossible.  The audited recursive cap-aware projective-CSP
+  and located-transport chain closes every body for spread D>=6 and
+  3m>=4D.  The later m>=D, 4m>=3D, and 3m>=2D refinements are
+  AUDIT-REQUIRED by MISTAKE-347: their split-tail lanes reverse both ratio
+  and ordered labels and omit one physical ordering.
   At the endpoint the new zero channel 1:2 completes the balanced gain
   triangle (3/2)(4/3)=2; orientation-split tails close its four unconstrained
   bodies.  Past cap two the balanced triangle becomes interior and no
   full-cap component remains; 93 located policies and eleven tail lanes close
   the cap-7/3 residual.  At cap 5/2 all 65 forced-full zero components contain
   the old triangle and their unique prime-five edge is a bridge;
-  exact located policies and tails close all 172 traps.  The remaining
-  reflected certificate-failure locus is confined to those 561 bodies in
-  D>=6,1<=m<2D/3;
+  exact located policies and tails are finite-exact data but do not yet close
+  all assignments.  The remaining proved reflected certificate-failure locus
+  is confined to those 561 bodies in D>=6,1<=m<4D/3;
   the finite censuses, full
   six-body/seven-tail rung, and LRC(14) remain open.  Verification is internal
   exact computation and proof audit; there is no Lean or external peer-review
@@ -264,12 +266,6 @@ verification:
   - 05-knowledge/results/lrc14_j7_reflected_three_halves_cone_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_four_thirds_cone_closure_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_four_thirds_cone_closure_thm2941.out
-  - 04-computation/lrc14_j7_reflected_one_cone_closure_thm2941.py
-  - 05-knowledge/results/lrc14_j7_reflected_one_cone_closure_thm2941.out
-  - 04-computation/lrc14_j7_reflected_three_quarter_cone_closure_thm2941.py
-  - 05-knowledge/results/lrc14_j7_reflected_three_quarter_cone_closure_thm2941.out
-  - 04-computation/lrc14_j7_reflected_two_thirds_cone_closure_thm2941.py
-  - 05-knowledge/results/lrc14_j7_reflected_two_thirds_cone_closure_thm2941.out
   - 04-computation/lrc14_j7_reflected_phase_zero_gain_atlas_thm2941.py
   - 05-knowledge/results/lrc14_j7_reflected_phase_zero_gain_atlas_thm2941.out
   - 04-computation/lrc14_j7_k3_z239_gap238_z237_compositional_descent_thm3061.py
@@ -1081,11 +1077,12 @@ reverse ladders close the residual orientations.  The exact scale law gives
 D>=6 and m>=3D  ==>  every reflected packet closes.           (25i9)
 ```
 
-Five exact recursive refinements lower this cone boundary without assuming
-monotone interpolation:
+Three proved recursive refinements lower this cone boundary without assuming
+monotone interpolation.  The final two displayed refinements are retained as
+`AUDIT-REQUIRED` finite evidence after MISTAKE-347:
 
 ```text
-m>=2D,       2m>=3D,       3m>=4D,       m>=D,       4m>=3D. (25i10)
+m>=2D,       2m>=3D,       3m>=4D;      [m>=D, 4m>=3D under audit]. (25i10)
 ```
 
 Each refinement regenerates the complete rational channel alphabet at its
@@ -1096,7 +1093,8 @@ generator argument: the first `4D/3` transcript accidentally retained the old
 literal `5/3` cutoff.  Its repaired `7/4` bank has `2,728` rows and reproduces
 the verdict only after the omitted channels are actually included.
 
-At `m=D`, the projective cap is two and the phase-zero gains are
+**Audit boundary.**  At `m=D`, the projective cap is two and the phase-zero
+gains are
 
 ```text
 2, 3/2, 4/3,                  (3/2)(4/3)=2.              (25i11)
@@ -1111,8 +1109,17 @@ the two half-interval tails and three whole-interval tails have `124`
 exhaustive head controls.  Therefore
 
 ```text
-D>=6 and m>=D  ==>  every reflected packet closes.             (25i12)
+AUDIT-REQUIRED CLAIM: D>=6 and m>=D.                            (25i12)
 ```
+
+The implication in `(25i12)` is not currently proved.  For pair `(i,j)` the
+tail variable is `Q/P=q_j/q_i`.  Its low lane used pair `(1,0)` with
+`Q/P<=1`, while its high lane used `(0,1)` with `Q/P>=1`; both say
+`q_0<=q_1`.  The admissible opposite ordering `q_0=2,q_1=1` lies in neither
+lane.  Exhausting channels inside those lanes therefore did not establish an
+assignment-level cover.  The same defect propagates through `(25i13)` and
+`(25i13a)`; their CSP and gain-matroid censuses remain finite-exact sidecars,
+not closure theorems.
 
 The next cone has projective cap `7/3`.  Maximizing the transport error over
 the integer cone `4m>=3D` by the three residue classes of `m mod 3` gives the
@@ -1125,7 +1132,7 @@ bodies close through eleven analytic tail lanes and `276` exhaustive heads;
 two bodies require an orientation split at ratio one.  Hence
 
 ```text
-D>=6 and 4m>=3D  ==>  every reflected packet closes.            (25i13)
+AUDIT-REQUIRED CLAIM: D>=6 and 4m>=3D.                           (25i13)
 ```
 
 The next cone has projective cap `5/2`.  On the integer cone `3m>=2D`, the
@@ -1141,11 +1148,11 @@ by `1,566` oriented controls on `160` located policies and `426` exhaustive
 heads on fourteen analytic tail lanes.  Therefore
 
 ```text
-D>=6 and 3m>=2D  ==>  every reflected packet closes.            (25i13a)
+AUDIT-REQUIRED CLAIM: D>=6 and 3m>=2D.                           (25i13a)
 ```
 
-Consequently the current reflected obligation is confined to the `561`
-bodies in the wedge `D>=6,1<=m<2D/3`.  This is a
+Consequently the current **proved** reflected obligation is confined to the
+`561` bodies in the wedge `D>=6,1<=m<4D/3`.  This is a
 sufficient-certificate residual, not a physical-survivor census.  More
 globally, the correction floor `c>=-12/49` makes phase zero imply `PQ<=12`,
 so the zero-gain atlas is exactly
@@ -2509,12 +2516,13 @@ ordinary and optimized replays are byte-identical.
 
 The reflected wedge assembly
 `04-computation/lrc14_j7_reflected_d0_d5_wedge_assembly_thm2941.py`
-pins seventeen LF-normalized terminal sources and transcripts, including the
-edge-eight block and all six recursive cone refinements.  Its
+pins fourteen LF-normalized terminal sources and transcripts, including the
+edge-eight block and the recursive cone refinements through the unaffected
+cap-`7/4` theorem.  Its
 source/output/semantic SHA-256 values are respectively
-`4af2f77fee925e3f57695d12ce8bbffb485594062df2bd513c51f6f423e9c076`,
-`f4825baeed227fae5721c121d59a03b5d8231d948d16dd2bb95b0ce97ebb76e1`,
-and `9bb38234b47b63e28958b31950870ed2f2a14b99f3afcb11eaecd8be27b23e1f`.
+`96ac39161a21a860e91abc657f0ab6c2d2a22fa76076b90fdb72fa8b05a9ef97`,
+`30defe20e8d6e100260e83ac38c40a863c920fef44b1a0f6bae75a7078914e2e`,
+and `396fa1a89ed555d9673c3d463f8849240bd9b40c0c1d41ef6390351df9c28b04`.
 Fresh ordinary and optimized replays are byte-identical to each other and to
 the stored transcript.  The edge-eight terminal source/output/semantic hashes
 are `3f2552c7e316a6da821f8d78f859aa9d73b2d8b58081c0a31f8d233f37eec2f0`,
@@ -2526,16 +2534,18 @@ The global phase-zero atlas source/output/semantic hashes are
 `bab96575535e8fa314d0a6e67e6304242f600048d64d09bd632ba01b55ab9513`,
 and `8a934cf2a5ecbc0e54a720e89d162be89fd0c4d932d1019ef167cb64443b0b18`;
 ordinary and optimized replays are byte-identical.
-The cap-`5/2` two-thirds-cone source/output/semantic hashes are
+The audit-required cap-`5/2` source/output/semantic hashes are
 `e6e64c909c6bfcc776eaf6bf2ad210f75675a6a32a46ead70d8d29a37f607eb3`,
 `e77929c87f9d9f8fb7ce3a347c48522e87f63fa7c7085eb9e2cd8fe0bb4e4a90`,
 and `b34db3e25b9e4c81c1549f1ec7c7ab78e935ec778610daf617934b66b3a47304`;
 both interpreter modes reproduce all `1,566+426` controls and the 65 bridge
-components exactly.
+components exactly.  Those finite facts do not repair MISTAKE-347's missing
+assignment orientation and are no longer dependencies of the proved assembly.
 
 This theorem does not give a uniform lower bound for `Delta` or `kappa`,
 turn the `803` nonpositive actual-top-seven tree margins into certificates,
-close the `561`-body reflected wedge `D>=6,1<=m<2D/3`, finish the remaining
+close the `561`-body reflected wedge `D>=6,1<=m<4D/3`, repair the split-tail
+orientation suffix, finish the remaining
 `k=2,3` finite decision trees, classify the zero/one-aligned multi-drift
 address hypergraph, close the six-body/seven-tail rung, or prove LRC(14).
 The independent THM-2928 divisor-status route closes `k=4`; THM-2980/2995

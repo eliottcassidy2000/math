@@ -10,7 +10,8 @@ import sys
 
 from flint import fmpq_mat, nmod_mat
 
-sys.set_int_max_str_digits(0)
+if hasattr(sys, "set_int_max_str_digits"):
+    sys.set_int_max_str_digits(0)
 
 
 def require(condition, message):

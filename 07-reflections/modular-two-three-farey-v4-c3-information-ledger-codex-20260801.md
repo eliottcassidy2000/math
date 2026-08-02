@@ -156,10 +156,22 @@ new exponent direction outside the old span -> rank / bridge payload;
 new direction inside the old span            -> nullity / circuit payload. (10)
 ```
 
-The independently audited exact branch census reports the predicted bridge in
-all `65` forced-full components.  This closes the reflected cone
-`D>=6, 3m>=2D`; the remaining certificate-failure locus is the `561`-body
-wedge `D>=6, 1<=m<2D/3`, not a physical-survivor census.
+The exact finite branch census reports the predicted bridge in all `65`
+forced-full components.  MISTAKE-347 separates that structural fact from the
+former cone claim: the split analytic tails covered one physical level
+ordering twice, so `3m>=2D` is `AUDIT-REQUIRED`.  The last unaffected proved
+cone is `3m>=4D`, leaving the `561`-body certificate-failure wedge
+`D>=6,1<=m<4D/3`, not a physical-survivor census.
+
+The audit-required cap-`3` scout makes the comparison with THM-3067 sharper.
+Its `55` forced components contain the scale `K4`
+`{1,3/2,2,3}={1,x,y,xy}`.  The vertices may be indexed by `F_2^2`, but the
+gain decoration does not descend through point-forgetting: the two
+`x`-matching edges both have gain `3/2`, the two `y`-matching edges both have
+gain `2`, while the diagonal matching has gains `3` and `4/3`.  Their ratio
+`9/4=x^2` is an exact origin defect.  Thus the tetrahedral incidence object
+is visible in the finite CSP, but the `A4` action is not a gain symmetry and
+the unfinished analytic cover cannot be supplied by quotienting the point.
 
 ## 5. The missing commuting square
 
