@@ -2,17 +2,26 @@
 id: THM-3054
 title: "Affine moving-lower tropical Beta-Gamma tail holotopy"
 status: >
-  PROVED + VERIFIED-EXACT + TWO INDEPENDENTLY HOSTILE-AUDITED.  Along every
+  PROVED + VERIFIED-EXACT + THREE INDEPENDENTLY HOSTILE-AUDITED.  Along every
   affine penultimate-lower path with fixed terminal
   gap, the unique top tropical face of the formal factorial resultant is an
   explicit strict Beta-Gamma moment sequence.  Every other face is smaller
-  by the sharp exponential gap ((k-1)^(k-1)/k^k)^C.  Conditional on the
+  by the explicit exponential gap ((k-1)^(k-1)/k^k)^C.  Conditional on the
   frozen lower-face resultant, every fixed finite bank of generalized Hankel
   minors is eventually positive, uniformly along the straight
   carrier-to-resultant homotopy.  The sidecar is automatic for k<=4 and at
   every sufficiently large depth for fixed general k.  Quantifiers do not
   commute: no one infinite Stieltjes tail or physical-width claim follows.
 source: kind-pasteur-2026-08-01-affine-moving-lower-tail
+audit: >
+  A third independent hostile audit ACCEPTED the multihomogeneous top-face
+  selection, Poisson specialization, Beta-Gamma factorization, affine
+  pushforward, fixed-bank alternant asymptotics, perturbative homotopy,
+  k<=4 sidecar, and all scope hostiles.  Fresh ordinary and optimized runs
+  matched the stored eleven-line LF transcript and both declared hashes.
+  The reconciliation clarifies that rho_k is the relaxed redistribution bound,
+  attained by the exact three-slot correction, rather than a claimed census
+  of every resultant Newton monomial.
 depends_on:
   - THM-2925-general-width-terminal-pole-cancellation-and-macaulay-degree-law
   - THM-3040-formal-corner-resultant-width-quotient-and-all-order-bernoulli-law
@@ -30,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3054 -- affine moving-lower corners return to every finite Hankel chamber
 
-**PROVED + VERIFIED-EXACT + TWO INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + THREE INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3051 proves that literal moving lower offsets can leave the Stieltjes
 cone at the first nontrivial widths.  THM-3053 identifies the right positive
@@ -116,25 +125,27 @@ sigma S^k U_C^mu, sigma in {+1,-1}.                   (7)
 
 Here `sigma` is one fixed resultant-orientation sign.
 
-There is a partition-sharp universal gap, attained for `k>=3`.  If one pure
-coefficient is removed, its
-weight `k` is best redistributed as `(k-1)+1`, so the ratio of exponential
-bases is
+There is a universal gap with a partition-sharp relaxed constant.  The
+relaxed redistribution bound is attained for every `k>=3`.  If one pure
+coefficient is removed, its weight `k` is best redistributed as `(k-1)+1`,
+so the ratio of exponential bases is
 
 ```text
 rho_k=(k-1)^(k-1)/k^k<1.                              (8)
 ```
 
-Removing more copies does no better.  One exact proof writes `L` for the
-number removed.  For `1<=L<=k-1`, convex integer redistribution gives
+Removing more copies does no better.  Ignore the additional constraints of
+the actual resultant Newton support and write `L` for the number removed.
+For `1<=L<=k-1`, convex integer redistribution gives the upper bound
 
 ```text
 max ratio=(rho_k L)^L<=rho_k,                         (9)
 ```
 
-with equality only at `L=1`; increasing `L` by `k-1` multiplies the ratio by
-`((k-1)/k)^(k(k-1))`.  Thus `(9)` handles every `L>=1`.  In particular
-`rho_3=4/27`.
+with equality in the relaxed partition only at `L=1`; increasing `L` by
+`k-1` multiplies the ratio by `((k-1)/k)^(k(k-1))`.  Thus `(9)` bounds every
+actual face for every `L>=1`.  The exact three-slot resultant attains the
+constant, where `rho_3=4/27`.
 
 The resultant has finite Newton support.  Fixed-shift Gamma-ratio bounds,
 `(6)--(9)`, and `S!=0` therefore give effective constants `D,K>0` such that,
@@ -182,7 +193,9 @@ mu copies of Beta(n+q/k,1-q/k) for every q=1,...,k-1. (15)
 ```
 
 It has full positive support and is strictly generalized-Hankel totally
-positive by THM-3053.
+positive by the product-support/Andreief argument used in THM-3053; that
+strictness argument does not require its shape parameters to lie on the
+integer lattice.
 
 The affine subsequence in `(1)` remains strict Stieltjes without any new
 calculation:
@@ -437,7 +450,7 @@ The dependency-free exact referee performs:
 - `320` all-positive lower resultants, `3,360` termwise factor identities,
   and `1,050` arbitrary-pair translation identities;
 - `120` unit-clock and `864` affine-subsequence Beta-Gamma carrier identities;
-- `45` sharp tropical-gap optimization cells for `k=2..10`;
+- `45` relaxed tropical-gap optimization cells for `k=2..10`;
 - six exact polynomial-alternant leading-coefficient identities `(23)`;
 - `648` straight-homotopy finite-window recovery controls;
 - the correction, inverse-Hausdorff, nonaffine-clock, and varying-gap hostiles
