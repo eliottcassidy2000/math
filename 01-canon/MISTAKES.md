@@ -9,6 +9,18 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-357 (2026-08-02, THM-3163 stale post-QED status) -- a promoted theorem retained its candidate disclaimer
+
+- **What failed:** THM-3163's frontmatter and headline were correctly promoted
+  to `PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED`, but its final
+  line still said `QED (candidate pending independent audit)`.
+- **Why:** the promotion patch updated the maintained status surfaces but
+  missed the provisional suffix at EOF.  The contradiction could make later
+  consumers treat an audited theorem as unavailable even though its proof and
+  exact evidence were already accepted.
+- **Repair:** replace the stale suffix by plain `QED.`.  No mathematical claim,
+  dependency, script, output, or hash changes.
+
 ## MISTAKE-356 (2026-08-02, THM-3162/3164/3167 live reservation races) -- non-atomic repairs can collide again
 
 - **What failed:** the depth-six selector non-resurrection session reserved

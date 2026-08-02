@@ -245,4 +245,4 @@ be stopping distributions.  They all can.  It is whether one can choose a
 lawful transition kernel that simultaneously carries the original response,
 the required cross-degree endpoint data, and Hasse positivity.
 
-QED (candidate pending independent audit).
+QED.
