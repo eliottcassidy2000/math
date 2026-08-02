@@ -2,7 +2,7 @@
 id: THM-3260
 title: "Ternary-Cantor Bessel--Cartier residual exclusion"
 status: >
-  PROVED + VERIFIED-EXACT.  Let D>=3 be odd and divisible by 3.  If every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let D>=3 be odd and divisible by 3.  If every
   ternary digit of D-1 is 0 or 2, then the resonant exact-quadratic
   factorial-moment pair at D is coprime.  Both full moment polynomials have
   their terminal Bessel lower faces; their only shared Newton slope is 1/2.
@@ -10,6 +10,12 @@ status: >
   Frobenius recurrences prove the sectors coprime for every such ternary
   word.  This gives an infinite mixed-prime closure, not a finite
   extrapolation.
+audit: >
+  An independent audit rederived the 12-state carry potential, all local
+  induction inequalities and strictness, the factorial-unit contraction,
+  both Cartier digit recurrences, residual gcd induction, Newton-edge use,
+  and the D=201 Frobenius hostile.  Fresh normal and optimized runs byte-match
+  the stored transcript and declared hashes after the MISTAKE-355 repair.
 source: root/factorial-composite-newton-2026-08-02
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
@@ -26,7 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3260 -- ternary-Cantor Bessel--Cartier residual exclusion
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Let
 

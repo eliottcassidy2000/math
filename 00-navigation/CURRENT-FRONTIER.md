@@ -373,7 +373,7 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-3123 completes the abstract heptic atlas; THM-3133 isolates the first
   formal cell `R=8,N=22,(11,11)`, and THM-3140 blocks its explicit odd-bipole,
   not every response.  General chart entry and `JC(2)`/`DC(2)` remain open.
-- **Factorial:** THM-3124/3131/3138/3142/3143/3200/3204 close `r<=998` and resonance lanes; residual: `r>=999`, composite `d,d-2`, non-prime-power `d-1`.
+- **Factorial:** THM-3124/3131/3138/3142/3143/3200/3204 close `r<=998` and prime/prime-power/even lanes; residual: `r>=999`, composite `d,d-2`, non-prime-power `d-1`.  THM-3260 closes the ternary-Cantor chamber; `D=201` is its first sector-gluing hostile.
   THM-3116/3202/3203 close quadratics, THM-3250/3251 affine pure powers (`d>=3`), and THM-3252 affine cubics (splitting, `1/3`--`2/3` mismatch, doubled-knot cyclicity).  Higher/multivariate phases, mixed-prime composites, and `FC(3)`/`SFC(3)` stay OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
