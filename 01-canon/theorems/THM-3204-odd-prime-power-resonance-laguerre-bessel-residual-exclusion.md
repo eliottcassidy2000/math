@@ -1,5 +1,5 @@
 ---
-id: THM-3144
+id: THM-3204
 title: "Odd-prime-power resonance Laguerre--Bessel residual exclusion"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For every odd prime
@@ -19,17 +19,17 @@ audit: >
 source: root/factorial-composite-newton-2026-08-02
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
-  - THM-3140-even-resonance-bessel-residual-newton-exclusion
+  - THM-3200-even-resonance-bessel-residual-newton-exclusion
 related:
   - THM-3131-prime-resonance-newton-slope-separation
-script: 04-computation/factorial_odd_prime_power_laguerre_residual_thm3144.py
-output: 05-knowledge/results/factorial_odd_prime_power_laguerre_residual_thm3144.out
-script_sha256: 6bcb9584197639cbf6e0a3d76ecec057a4b4ef7533da6230ba1aa1c9b5fb36fe
+script: 04-computation/factorial_odd_prime_power_laguerre_residual_thm3204.py
+output: 05-knowledge/results/factorial_odd_prime_power_laguerre_residual_thm3204.out
+script_sha256: 791d728bbdd2abb56c5c4dcf75d89ab034d25cf599e5fd7b51bb2c0b28507385
 output_sha256: 5b26e4f8999189c128dc85bd015338fcab057123e0f6228845c7bb5f9531b789
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3144 -- odd-prime-power Laguerre--Bessel residual exclusion
+# THM-3204 -- odd-prime-power Laguerre--Bessel residual exclusion
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
@@ -54,7 +54,7 @@ L(q^r), L(q^(r+1)), L(q^(r+2))                               (3)
 
 cannot all vanish.
 
-Together with THM-3131 and THM-3140, this leaves only odd composite
+Together with THM-3131 and THM-3200, this leaves only odd composite
 resonances having at least two distinct prime divisors.  Together also with
 THM-3124's finite-exact census, any still-open exact-quadratic bad window
 must satisfy
@@ -323,7 +323,7 @@ would divide `Z^M`, but `Z` does not divide `R_0`.  Therefore
 gcd(R_0,R_1)=1 in F_p[Z].                                   (36)
 ```
 
-The tame residual-Newton lemma of THM-3140 now excludes a common root of the
+The tame residual-Newton lemma of THM-3200 now excludes a common root of the
 only shared valuation `(31)`.  The raw slope sets exclude every other
 valuation.  Hence the two polynomials in `(6)` are coprime over `Q`, proving
 the theorem.  QED.
@@ -359,8 +359,8 @@ These checks audit the implementation.  The theorem is proved uniformly by
 `(10)`--`(36)`, not by the cutoff.  Run
 
 ```text
-python3 04-computation/factorial_odd_prime_power_laguerre_residual_thm3144.py
-python3 -O 04-computation/factorial_odd_prime_power_laguerre_residual_thm3144.py
+python3 04-computation/factorial_odd_prime_power_laguerre_residual_thm3204.py
+python3 -O 04-computation/factorial_odd_prime_power_laguerre_residual_thm3204.py
 ```
 
 and compare both byte-for-byte with the declared output.

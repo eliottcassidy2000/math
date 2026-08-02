@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for THM-3144's odd-prime-power residual theorem."""
+"""Exact controls for THM-3204's odd-prime-power residual theorem."""
 
 from fractions import Fraction
 from math import comb, isqrt
@@ -47,7 +47,7 @@ def integer_binomial(top: int, bottom: int) -> int:
 
 
 def generalized_laguerre_at_minus_d(m: int, alpha: int, d: int):
-    """L_m^(alpha)(-d) in the convention used by THM-3144."""
+    """L_m^(alpha)(-d) in the convention used by THM-3204."""
     return sum(
         Fraction(integer_binomial(m + alpha, m - k) * d**k, FACTORIAL[k])
         for k in range(m + 1)
