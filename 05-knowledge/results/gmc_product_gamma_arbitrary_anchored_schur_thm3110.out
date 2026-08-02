@@ -1,0 +1,19 @@
+atom_banks=I1:24:mass37;I2:25:mass39;primitive=1,1
+common_roots=I1:3*[0,a)+1*[0,max(2a,b));I2:3*[0,a)+2*[0,max(2a,b))
+divisors=I1:a^4*b^2*(b-a)^3;I2:a^3*b^2*(b-a)^4
+degree5_kappa=I1:(3a+5b-5)/2;I2:(3a+4b-5)/2
+dual_cauchy=F_i(X)=sum_lambda s_lambda(X)*Phi_i(s_lambda_conjugate)
+schur_n=5:partitions=7:degree=1:slots=84:positive=84:zero=0:min=2
+schur_n=6:partitions=11:degree=3:slots=440:positive=440:zero=0:min=5
+schur_n=7:partitions=15:degree=5:slots=1260:positive=1258:zero=2:min=156
+schur_n=8:partitions=22:degree=7:slots=3168:positive=3164:zero=4:min=628/3
+schur_n=9:partitions=30:degree=9:slots=6600:positive=6589:zero=11:min=420
+schur_n=10:partitions=42:degree=11:slots=13104:positive=13083:zero=21:min=9984
+schur_n=11:partitions=56:degree=13:slots=23520:positive=23479:zero=41:min=8400
+schur_n=12:partitions=77:degree=15:slots=41888:positive=41819:zero=69:min=2672
+generic_total=slots:90064:positive:89916:zero:148:negative:0
+finite_supports=1-2,1-3,2-3,1-4,2-5,4-5
+finite_schur_n5_14=checked:5952:positive:5520:zero:432:negative:0
+first_order_transport=I1-tight:edges58:capacity28:residual9;I1-wide:edges61:capacity28:residual9;I2-tight:edges66:capacity28:residual11;I2-wide:edges66:capacity28:residual11
+degree_and_offgrid_guards=PASS
+status=PASS
