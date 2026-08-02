@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-350 (2026-08-02, THM-3018 truth-surface audit) -- an internally retracted Laplace closure remained advertised as proved
+
+- **What was claimed:** THM-3018's frontmatter, section-4b heading, and scope
+  paragraph said that a maximum-modulus Laplace argument proved the
+  homogeneous Factorial-Conjecture slice in every dimension.  The same file's
+  later audit had already suspended that conclusion, but the high-signal
+  surfaces were not repaired.  The file also called the homogeneous slice
+  `FC(n)`, although the full conjecture permits inhomogeneous polynomials.
+- **First failed implication:** at an interior maximum of `|g|`, rotating the
+  value to the positive real axis need not kill the linear imaginary phase.
+  A local model `A+i b w-cw^2` contributes
+  `exp(mA-mb^2/(4c))`, not automatically `exp(mA)`.  The alternative
+  exponential-type argument reads the type from the already-vanishing moment
+  coefficients and is circular.  Compactness alone therefore supplies no
+  no-cancellation theorem.
+- **Repair / strongest survivor:** THM-3018 sections 1--4a retain the exact
+  product-exponential integral, homogeneous simplex reduction, scoped arc and
+  low-degree results, and the `C3` eigenspace mechanism.  Section 4b is now
+  labelled `AUDIT-REQUIRED / UNPROVED`, and the object is named `HomFC(n)` to
+  distinguish it from full FC(n).  THM-3116 independently proves a different
+  inhomogeneous **flat-top** radial coefficient by a finite Gamma-ratio
+  expansion; it does not repair the nonflat homogeneous Laplace gap.
+
 ## MISTAKE-349 (2026-08-02, THM-3101 post-promotion module audit) -- treating a normal-variable lower quotient as a finite base algebra
 
 - **What was claimed:** after quotienting the remotely perturbed lower moment
