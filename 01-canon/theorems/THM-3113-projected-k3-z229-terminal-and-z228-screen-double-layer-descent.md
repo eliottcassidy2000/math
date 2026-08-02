@@ -2,10 +2,11 @@
 id: THM-3113
 title: "Projected-k3 z229 terminal and z228 screen double-layer descent"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING IMMUTABLE INDEPENDENT
-  REPLAY.  All forty-three rows in the projected k=3, z1=229 layer and all
-  five rows in the z1=228 layer are empty.  The proposed projected ledger is
-  374215 and the proposed cap is z1<=227.  No LRC(14) claim is made.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; CERTIFICATE-FREE
+  EVIDENCE REPIN COMPLETE UNDER MISTAKE-331/333.  All
+  forty-three rows in the projected k=3, z1=229 layer and all five rows in the
+  z1=228 layer are empty.  The projected ledger is 374215 and the cap is
+  z1<=227.  No LRC(14) claim is made.
 source: root/codex-thm3088-push-2026-08-02
 depends_on:
   - THM-3111-projected-k3-z230-exact-screen-and-compressed-complete-cell-descent
@@ -15,16 +16,22 @@ depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
 script: 04-computation/lrc14_j7_k3_z229_terminal_z228_screen_double_layer_descent_thm3113.py
 output: 05-knowledge/results/lrc14_j7_k3_z229_terminal_z228_screen_double_layer_descent_thm3113.out
-script_sha256: 59922de78673b94711d0cfe45c9954b8b2056b85f06e904d690ef18f389d111e
-output_sha256: a872fe57e12f878b8e237ba71611a39c1f03ba893d45d3c3ae4dd6480e660595
-semantic_sha256: a024972dce2c159096db81a751b49654ebc8fad18e2fb1229dbfa0f01784e7e4
+script_sha256: 1e23ec19fa147c55fb6d38a965eedae0132f5e069b9f820bfd5c300dce4d8f89
+output_sha256: 5b6329e5a47a41031c2d9d3f9def36deb25509d801dbb3543a1271de0bd2e3fb
+semantic_sha256: 093ed7cea617666cae3463ae08c3429943c93dbd17b9af7a02d4601025692482
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3113 -- projected-k3 z229 terminal and z228 screen double-layer descent
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING IMMUTABLE INDEPENDENT
-REPLAY.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+CERTIFICATE-FREE EVIDENCE REPIN COMPLETE UNDER MISTAKE-331/333.**
+
+The first candidate exactly verified every returned Farkas dual, but its
+screen and semantic digests inherited THM-3078 worker field `row[21]`, which
+binds a solver-selected dual representative and contradiction scale.  Those
+historical hashes are noncanonical.  The completed repair keeps every exact
+check while repinning only `tuple(row[:19])` and basis-invariant branch counts.
 
 ## 1. Two exact atlas layers
 
@@ -53,8 +60,8 @@ z1=228:   99 states =  94 crude +   5 status +   0 residual. (3)
 The screen-record digests are
 
 ```text
-a3b822b2ba2413b498dd02b787b41171be51942e71e0392a7cbd53a0ff188059,
-71cbcedb29695778b51252c711d9dbfc6ed83e5f886ed382c1fc9c8956e22928. (4)
+280457d7e42e19a23f83523b9290a23d0aeec1bd0dbf0b7f78ec4285fc0a125d,
+ce13724f170a971bd769ecb2d1522e4fdaac6477cca7061d2b0326559e0ff4e6. (4)
 ```
 
 All seven `z1=229` order rows close crudely (`24/24` states); every residual
@@ -149,7 +156,7 @@ z1=227: 30 rows = 28 wall + 2 order,
 row digest 17c023b6d703e6f2930e2a2606da83e5fe34d870d6067ec202329df210957c6c. (12)
 ```
 
-This is the exact handoff.  The candidate makes no assertion about that layer.
+This is the exact handoff.  The theorem makes no assertion about that layer.
 
 ## 5. Scope and evidence
 
@@ -159,4 +166,7 @@ close the final rung, or prove LRC(14).
 
 The companion recomputes all forty-eight screens, six terminal gaps, all six
 direct/scalar/vector carriers, and every translated support.  Its normal and
-optimized executions are required to byte-match the stored transcript.
+optimized executions are required to byte-match the stored transcript.  Each
+returned Farkas certificate is checked over exact rationals, but the persisted
+screen/semantic evidence excludes the solver-selected dual representative and
+its arbitrary contradiction normalization.

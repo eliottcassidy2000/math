@@ -68,7 +68,7 @@ EXPECTED_SCREEN = (1642, 570, 1039, 33)
 EXPECTED_ORDER = (85, 53, 32, 0)
 EXPECTED_AUDIT = (0, 1039)
 EXPECTED_SCREEN_RECORD_SHA256 = (
-    "2d24fe53a76095d32e7dfe0667ac1247fc01a6301a76f91dd8e5645be5c92313"
+    "cfbf69eb229839ca0cdf5cf37986fb6ed978e107c0151a67f067ecb71ea89c42"
 )
 EXPECTED_TERMINAL = (4, 4, 4, 23, 33, 23, 10, 0, 0, 0)
 EXPECTED_TERMINAL_RECORD_SHA256 = (
@@ -77,7 +77,7 @@ EXPECTED_TERMINAL_RECORD_SHA256 = (
 EXPECTED_HOSTILE_RECORD_SHA256 = (
     "6db491bfaf2a70f0c12f0a690198cac8ab7a9adedfa70cb132606596ce6afa79"
 )
-EXPECTED_SEMANTIC_SHA256 = "6cf01affce52a5dcc67a8634da815780e3d357e72b295a7c4951211c6f12b0da"
+EXPECTED_SEMANTIC_SHA256 = "c97a5424b26401a94fb6389c8225ac56a72ce7b79b3fea51d761dc575619750f"
 
 LEDGER_BEFORE = 374387
 LAYER_ROWS = 62
@@ -161,11 +161,10 @@ def ftext(value):
 
 
 require(sha(SOURCE_3078) == SOURCE_3078_SHA256, "THM-3078 source changed")
-require(sha(OUTPUT_3078) == OUTPUT_3078_SHA256, "THM-3078 output changed")
-require(
-    f"semantic_sha256={SEMANTIC_3078_SHA256}" in OUTPUT_3078.read_text(),
-    "THM-3078 semantic changed",
-)
+# THM-3078 is imported only as a proof-engine implementation.  Its historical
+# output/semantic digest included the solver-selected row[21] audit witness;
+# descendants build a fresh certificate-free instance ledger instead of
+# inheriting that noncanonical evidence (MISTAKE-331/333).
 require(sha(SOURCE_3098) == SOURCE_3098_SHA256, "THM-3098 source changed")
 require(sha(OUTPUT_3098) == OUTPUT_3098_SHA256, "THM-3098 output changed")
 require(
@@ -248,8 +247,10 @@ def screen_audit(rows):
     audit = (sum(row[19] for row in rows), sum(row[20] for row in rows))
     require(audit == EXPECTED_AUDIT, audit)
     require(all(row[16] == row[11] for row in rows), "unverified status row")
-    record_sha = hashlib.sha256(repr(rows).encode()).hexdigest()
-    require(record_sha == EXPECTED_SCREEN_RECORD_SHA256, record_sha)
+    canonical_rows = tuple(row[:19] for row in rows)
+    record_sha = hashlib.sha256(repr(canonical_rows).encode()).hexdigest()
+    if EXPECTED_SCREEN_RECORD_SHA256 is not None:
+        require(record_sha == EXPECTED_SCREEN_RECORD_SHA256, record_sha)
     residual_rows = tuple(row for row in rows if row[12])
     require(tuple(row[1] for row in residual_rows) == tuple(RESIDUAL), residual_rows)
     for row in residual_rows:
@@ -407,10 +408,8 @@ def main():
     require(LEDGER_BEFORE - LAYER_ROWS == LEDGER_AFTER, "ledger arithmetic")
 
     semantic_packet = (
-        "lrc14-k3-z233-screen-terminal-v1",
+        "lrc14-k3-z233-screen-terminal-v2",
         SOURCE_3078_SHA256,
-        OUTPUT_3078_SHA256,
-        SEMANTIC_3078_SHA256,
         SOURCE_3098_SHA256,
         OUTPUT_3098_SHA256,
         SEMANTIC_3098_SHA256,
@@ -418,7 +417,8 @@ def main():
         LEVEL,
         tuple(sorted(neighbor_census.items())),
         row_order,
-        rows,
+        tuple(row[:19] for row in rows),
+        (screen_totals, order_totals, audit_totals),
         terminals,
         hostile_records,
         endpoints,
@@ -430,7 +430,7 @@ def main():
 
     lines = [
         "LRC14 projected k3 z233 exact screen and complete-cell cardinality descent",
-        f"dependency=THM3078_source:{SOURCE_3078_SHA256};output:{OUTPUT_3078_SHA256};semantic:{SEMANTIC_3078_SHA256}",
+        f"screen_engine=THM3078_source:{SOURCE_3078_SHA256};historical_output_semantic_not_inherited:MISTAKE331_333",
         f"predecessor=THM3098_source:{SOURCE_3098_SHA256};output:{OUTPUT_3098_SHA256};semantic:{SEMANTIC_3098_SHA256};ledger:{LEDGER_BEFORE};cap:{LEVEL}",
         f"atlas=sha256:{thm.ATLAS_SHA256};rows:6060;neighbor_census:{tuple(sorted(neighbor_census.items()))}",
         f"layer=z1:{LEVEL};rows:{len(tasks)};wall:{NEIGHBOR_COUNTS[LEVEL][1]};order:{NEIGHBOR_COUNTS[LEVEL][2]};row_order_sha256:{EXPECTED_ROW_ORDER_SHA256}",
@@ -451,6 +451,7 @@ def main():
     lines.extend(
         [
             f"hostile_terminal_audit=scalar_vector_cell_sets_equal;cases:{len(hostile_records)};coarse:23;exact:10;minimum_support_slack:1;record_sha256:{hostile_sha}",
+            "evidence_boundary=all_returned_Farkas_certificates_are_verified_exactly;screen_and_semantic_digests_bind_only_canonical_19_field_problem_result_rows_and_basis_invariant_counts",
             "strict_open_controls=" + ";".join(
                 f"E={body},lows={labels},cells={count},minimum={minimum}"
                 for body, labels, count, minimum in endpoints

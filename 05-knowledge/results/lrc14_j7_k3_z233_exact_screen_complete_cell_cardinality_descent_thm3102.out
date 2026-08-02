@@ -1,9 +1,9 @@
 LRC14 projected k3 z233 exact screen and complete-cell cardinality descent
-dependency=THM3078_source:2a051babe109f56056fe61476870f8e2e13cfc99b2f9bb7ac122b8780c8fa168;output:d5fc52e922b7e083f5cbe5aa5a6066304c4e5c8c7963904dd3b649477caf5e42;semantic:749a2292da58925c9653ce919d5bab6b374f64f8b713ac52efa1f18fba74c918
+screen_engine=THM3078_source:2a051babe109f56056fe61476870f8e2e13cfc99b2f9bb7ac122b8780c8fa168;historical_output_semantic_not_inherited:MISTAKE331_333
 predecessor=THM3098_source:744be96e68469afcf1864fadedfecfa237490b6ec3819f69bac16c52c5b558ed;output:722acc446f90a57df8ae84d50eb05d04250b1ffd688fb02e52ac0fcdd4111d07;semantic:f5427dc8392ed287162f076df9b5e418afcec2a2f3a63a3b94a840c313a5b6bd;ledger:374387;cap:233
 atlas=sha256:cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda;rows:6060;neighbor_census:((232, (3, 3, 0)), (233, (62, 45, 17)), (234, (381, 330, 51)))
 layer=z1:233;rows:62;wall:45;order:17;row_order_sha256:c503a3402cb2243ab586284d9d0773d07d0d0bddc95aae941c00ff7b2bf348ac
-screen=states:1642;crude:570;status:1039;residual:33;residual_bodies:4;direct_farkas:0;legacy_farkas:1039;screen_record_sha256:2d24fe53a76095d32e7dfe0667ac1247fc01a6301a76f91dd8e5645be5c92313
+screen=states:1642;crude:570;status:1039;residual:33;residual_bodies:4;direct_farkas:0;legacy_farkas:1039;screen_record_sha256:cfbf69eb229839ca0cdf5cf37986fb6ed978e107c0151a67f067ecb71ea89c42
 order_control=rows:17;states:85;crude:53;status:32;residual:0;order_rows_never_enter_wall_terminal
 ROW;E=(1, 2, 3, 8, 10, 12);L=1680;high=166;branch=order;states=3;crude=3;status=0;residual=0;direct=0;legacy=0;stage_sha256=774fb5909228070027b14c101abeacd114afa02975861cb8a8493b99cec9e05b;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
 ROW;E=(1, 2, 3, 9, 12, 14);L=3528;high=348;branch=wall;states=2;crude=0;status=2;residual=0;direct=0;legacy=2;stage_sha256=37970975dfa8fa175f813d0883fc3df74f2b6aedab7c95ffa1982f5bf40130ab;residual_sha256=2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
@@ -73,6 +73,7 @@ TERMINAL;E=(1, 4, 5, 9, 12, 14);L=17640;high=1738;masks=2;two_high_gap=2583751/7
 TERMINAL;E=(1, 5, 6, 9, 12, 14);L=17640;high=1738;masks=3;two_high_gap=233977/93059967;gap_witness=((2, 980, 1960, 17640), 5, ((2, 8820, True, Fraction(0, 1)), (980, 234, False, Fraction(11, 1372)), (1960, 1881, True, Fraction(439, 645183))));zero_high_hostiles=0;one_high_cases=3;low_label_sets=3;coarse_cardinality=0;exact_cardinality=3;maxgap=0;failed=0;minimum_slack=1;case_sha256=b07ec9fc8f3b7b00cd5f00f9cb4c2593661c9a78317c0b640c66f8e5a87526a4
 TERMINAL;E=(1, 5, 9, 11, 12, 14);L=194040;high=19111;masks=26;two_high_gap=39679901180/9741776933889;gap_witness=((1260, 10780, 21560, 194040), 5, ((1260, 20174, True, Fraction(6091, 88967340)), (10780, 234, False, Fraction(58783, 8828820)), (21560, 19521, True, Fraction(33893, 491018220))));zero_high_hostiles=23;one_high_cases=26;low_label_sets=1;coarse_cardinality=23;exact_cardinality=3;maxgap=0;failed=0;minimum_slack=1;case_sha256=f6288fd9f7eceac090acee225c6a6d9f7e654f1bfa3d0ca1d80b5af62f3ef5d3
 hostile_terminal_audit=scalar_vector_cell_sets_equal;cases:33;coarse:23;exact:10;minimum_support_slack:1;record_sha256:6db491bfaf2a70f0c12f0a690198cac8ab7a9adedfa70cb132606596ce6afa79
+evidence_boundary=all_returned_Farkas_certificates_are_verified_exactly;screen_and_semantic_digests_bind_only_canonical_19_field_problem_result_rows_and_basis_invariant_counts
 strict_open_controls=E=(1, 2, 5, 9, 12, 14),lows=(234, 243),cells=3516,minimum=(0, 1350, 14, 'L');E=(1, 4, 5, 9, 12, 14),lows=(234, 243),cells=3388,minimum=(0, 1350, 14, 'L');E=(1, 5, 6, 9, 12, 14),lows=(234, 243),cells=3556,minimum=(0, 1350, 14, 'L');E=(1, 5, 6, 9, 12, 14),lows=(234, 324),cells=3648,minimum=(0, 1350, 14, 'L');E=(1, 5, 6, 9, 12, 14),lows=(234, 402),cells=3654,minimum=(0, 1350, 14, 'L');E=(1, 5, 9, 11, 12, 14),lows=(234, 243),cells=36550,minimum=(0, 14850, 14, 'L')
 direction_screen=ray_quotient_relaxes_global_suffix_order_but_preserves_fixed_first_label_distinct_label_witness_denominators_and_wall_high_gate;crude_and_exact_Farkas_status_exclusions_close_the_enlarged_state_set
 direction_terminal=positive_duplicate_permitting_two_high_gap_plus_wall_at_least_one_high_gate_forces_exactly_one_high;one_high_cases_uses_a_high_ray_supremum_and_is_a_superset_of_actual_literal_assignments
@@ -80,5 +81,5 @@ translated_gate=complete_cell_support_uses_ceil(d/7),not_centered_beta;support_a
 zero_high_hostile=23_scalar_zero_high_passes_in_E=(1,5,9,11,12,14)_are_excluded_by_the_inherited_wall_high_gate_and_are_not_counted_as_terminal_closures
 promotion_consequence=ledger 374387-62=374325;projected_k3_cap:z1<=232;next_layer:z1=232_rows:3
 scope=projected_k3_necessary_atlas_only;no_physical_cover_classification_outside_the_projection;no_k<=1_or_final_rung_or_LRC14_claim
-semantic_sha256=6cf01affce52a5dcc67a8634da815780e3d357e72b295a7c4951211c6f12b0da
+semantic_sha256=c97a5424b26401a94fb6389c8225ac56a72ce7b79b3fea51d761dc575619750f
 all_exact_controls=PASS

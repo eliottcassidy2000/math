@@ -13,7 +13,12 @@ audit: >
   Z/LZ grid rather than through the inherited body-range representation.
   Every direct cell set had support strictly larger than ceil(d/7), with
   minimum actual slack one.  Hashes, the 62-row disjoint ledger, weak
-  endpoint typing, and documentation checks passed.
+  endpoint typing, and documentation checks passed.  A later dependency audit
+  repaired the replay evidence under MISTAKE-331/333: every returned dual is
+  still checked exactly, while the screen and semantic digests now bind only
+  the canonical nineteen-field instance/result rows and basis-invariant
+  branch counts, never the optimizer-selected dual basis or contradiction
+  magnitude.
 depends_on:
   - THM-3098-z234-final-two-body-height-and-complete-cell-closure
   - THM-3078-z234-direct-farkas-normalization-and-four-two-high-boundary
@@ -22,15 +27,21 @@ depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
 script: 04-computation/lrc14_j7_k3_z233_exact_screen_complete_cell_cardinality_descent_thm3102.py
 output: 05-knowledge/results/lrc14_j7_k3_z233_exact_screen_complete_cell_cardinality_descent_thm3102.out
-script_sha256: 3db29155f4c1332c91605e5589dfdc19319eb81dc309a33ff8af161abb39a036
-output_sha256: f358eae14c52783b561b8b799b02fb07f2988ef6b1b9f6cd33f3030ce177727d
-semantic_sha256: 6cf01affce52a5dcc67a8634da815780e3d357e72b295a7c4951211c6f12b0da
+script_sha256: 83b02c3dcaf383ece8106ca4a9008da5bbcb8216d5196001be8f21b5da821b18
+output_sha256: 3b518c82bbe451fa13d53363d30cf9766ca5d71f31a2f4541271383f83e0a0a8
+semantic_sha256: c97a5424b26401a94fb6389c8225ac56a72ce7b79b3fea51d761dc575619750f
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3102 -- projected k3 z233 exact screen and complete-cell cardinality descent
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+
+The replay evidence was repinned after MISTAKE-331/333 exposed an inherited
+noncanonical LP-witness digest.  This changes no state, terminal, carrier,
+ledger, or cap conclusion: the script continues to rebuild and verify every
+rational certificate, but persists only the deterministic infeasible-instance
+record and basis-invariant branch census.
 
 ## 1. Theorem statement
 
@@ -121,7 +132,7 @@ The complete screen-record digest, committing to every row, state count,
 status audit, and residual tuple, is
 
 ```text
-2d24fe53a76095d32e7dfe0667ac1247fc01a6301a76f91dd8e5645be5c92313. (10)
+cfbf69eb229839ca0cdf5cf37986fb6ed978e107c0151a67f067ecb71ea89c42. (10)
 ```
 
 The order subbank is independently visible inside `(2)`:
@@ -372,9 +383,9 @@ are LF-byte-identical to the stored output and end in
 `all_exact_controls=PASS`.  The evidence hashes are
 
 ```text
-script:   3db29155f4c1332c91605e5589dfdc19319eb81dc309a33ff8af161abb39a036
-output:   f358eae14c52783b561b8b799b02fb07f2988ef6b1b9f6cd33f3030ce177727d
-semantic: 6cf01affce52a5dcc67a8634da815780e3d357e72b295a7c4951211c6f12b0da
+script:   83b02c3dcaf383ece8106ca4a9008da5bbcb8216d5196001be8f21b5da821b18
+output:   3b518c82bbe451fa13d53363d30cf9766ca5d71f31a2f4541271383f83e0a0a8
+semantic: c97a5424b26401a94fb6389c8225ac56a72ce7b79b3fea51d761dc575619750f
 ```
 
 **Scope.**  This theorem acts only in the pinned projected `k=3`

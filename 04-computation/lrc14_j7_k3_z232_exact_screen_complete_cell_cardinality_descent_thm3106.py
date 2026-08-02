@@ -47,9 +47,9 @@ OUTPUT = ROOT / (
 SOURCE_3078_SHA256 = "2a051babe109f56056fe61476870f8e2e13cfc99b2f9bb7ac122b8780c8fa168"
 OUTPUT_3078_SHA256 = "d5fc52e922b7e083f5cbe5aa5a6066304c4e5c8c7963904dd3b649477caf5e42"
 SEMANTIC_3078_SHA256 = "749a2292da58925c9653ce919d5bab6b374f64f8b713ac52efa1f18fba74c918"
-SOURCE_3102_SHA256 = "3db29155f4c1332c91605e5589dfdc19319eb81dc309a33ff8af161abb39a036"
-OUTPUT_3102_SHA256 = "f358eae14c52783b561b8b799b02fb07f2988ef6b1b9f6cd33f3030ce177727d"
-SEMANTIC_3102_SHA256 = "6cf01affce52a5dcc67a8634da815780e3d357e72b295a7c4951211c6f12b0da"
+SOURCE_3102_SHA256 = "83b02c3dcaf383ece8106ca4a9008da5bbcb8216d5196001be8f21b5da821b18"
+OUTPUT_3102_SHA256 = "3b518c82bbe451fa13d53363d30cf9766ca5d71f31a2f4541271383f83e0a0a8"
+SEMANTIC_3102_SHA256 = "c97a5424b26401a94fb6389c8225ac56a72ce7b79b3fea51d761dc575619750f"
 
 LEVEL = 232
 NEXT_LEVEL = 231
@@ -67,7 +67,7 @@ EXPECTED_NEXT_ROW_ORDER_SHA256 = (
 EXPECTED_SCREEN = (147, 58, 65, 24)
 EXPECTED_AUDIT = (0, 65)
 EXPECTED_SCREEN_RECORD_SHA256 = (
-    "3ca9c8569f05d8adf0ff04586347700597d7875794525452b13031e15acd909a"
+    "f0cf14299a1614aa99982d7ade1f1aa35b626ab1198eb853f6776b68c1dfb2c2"
 )
 EXPECTED_TERMINAL = (1, 1, 1, 23, 24, 23, 1, 0, 0, 0)
 EXPECTED_TERMINAL_RECORD_SHA256 = (
@@ -80,7 +80,7 @@ EXPECTED_CARRIER_SHA256 = (
     "656bb385012dd08368a49ef6d365dbaa34362d6e6707313afbfb20128e4945fa"
 )
 EXPECTED_SEMANTIC_SHA256 = (
-    "a14adcd1e52323baf2b791f55d5846c4fbd422e3441fa2411138bdd98acca3d3"
+    "7ce917fe1d40b191ab562f3e6d77fe5313ef7c9e46282af37998d040a93308cf"
 )
 
 LEDGER_BEFORE = 374325
@@ -150,11 +150,9 @@ def ftext(value):
 
 
 require(sha(SOURCE_3078) == SOURCE_3078_SHA256, "THM-3078 source changed")
-require(sha(OUTPUT_3078) == OUTPUT_3078_SHA256, "THM-3078 output changed")
-require(
-    f"semantic_sha256={SEMANTIC_3078_SHA256}" in OUTPUT_3078.read_text(),
-    "THM-3078 semantic changed",
-)
+# THM-3078 is a proof-engine implementation only here.  Its historical
+# output/semantic digest bound the noncanonical solver-selected row[21]
+# witness, so this descendant reconstructs a certificate-free ledger.
 require(sha(SOURCE_3102) == SOURCE_3102_SHA256, "THM-3102 source changed")
 require(sha(OUTPUT_3102) == OUTPUT_3102_SHA256, "THM-3102 output changed")
 require(
@@ -247,8 +245,10 @@ def screen_audit(rows):
     audit = (sum(row[19] for row in rows), sum(row[20] for row in rows))
     require(audit == EXPECTED_AUDIT, audit)
     require(all(row[16] == row[11] for row in rows), "unverified status row")
-    record_sha = hashlib.sha256(repr(rows).encode()).hexdigest()
-    require(record_sha == EXPECTED_SCREEN_RECORD_SHA256, record_sha)
+    canonical_rows = tuple(row[:19] for row in rows)
+    record_sha = hashlib.sha256(repr(canonical_rows).encode()).hexdigest()
+    if EXPECTED_SCREEN_RECORD_SHA256 is not None:
+        require(record_sha == EXPECTED_SCREEN_RECORD_SHA256, record_sha)
     residual_rows = tuple(row for row in rows if row[12])
     require(len(residual_rows) == 1, residual_rows)
     require(
@@ -424,10 +424,8 @@ def main():
     require(LEDGER_BEFORE - LAYER_ROWS == LEDGER_AFTER, "ledger arithmetic")
 
     semantic_packet = (
-        "lrc14-k3-z232-screen-terminal-v1",
+        "lrc14-k3-z232-screen-terminal-v2",
         SOURCE_3078_SHA256,
-        OUTPUT_3078_SHA256,
-        SEMANTIC_3078_SHA256,
         SOURCE_3102_SHA256,
         OUTPUT_3102_SHA256,
         SEMANTIC_3102_SHA256,
@@ -436,7 +434,8 @@ def main():
         tuple(sorted(neighbor_census.items())),
         row_order,
         next_rows,
-        rows,
+        tuple(row[:19] for row in rows),
+        (screen_totals, audit_totals),
         terminals,
         hostile_records,
         carriers,
@@ -449,7 +448,7 @@ def main():
 
     lines = [
         "LRC14 projected k3 z232 exact screen and complete-cell cardinality descent",
-        f"dependency=THM3078_source:{SOURCE_3078_SHA256};output:{OUTPUT_3078_SHA256};semantic:{SEMANTIC_3078_SHA256}",
+        f"screen_engine=THM3078_source:{SOURCE_3078_SHA256};historical_output_semantic_not_inherited:MISTAKE331_333",
         f"predecessor=THM3102_source:{SOURCE_3102_SHA256};output:{OUTPUT_3102_SHA256};semantic:{SEMANTIC_3102_SHA256};ledger:{LEDGER_BEFORE};cap:{LEVEL}",
         f"atlas=sha256:{thm.ATLAS_SHA256};rows:6060;neighbor_census:{tuple(sorted(neighbor_census.items()))}",
         f"layer=z1:{LEVEL};rows:{len(tasks)};wall:{NEIGHBOR_COUNTS[LEVEL][1]};order:{NEIGHBOR_COUNTS[LEVEL][2]};row_order_sha256:{EXPECTED_ROW_ORDER_SHA256}",
@@ -481,6 +480,7 @@ def main():
     lines.extend(
         [
             f"strict_open_control=E={RESIDUAL_BODY};lows={endpoints[0][0]};cells={endpoints[0][1]};minimum={endpoints[0][2]}",
+            "evidence_boundary=all_returned_Farkas_certificates_are_verified_exactly;screen_and_semantic_digests_bind_only_canonical_19_field_problem_result_rows_and_basis_invariant_counts",
             "direction_screen=ray_quotient_relaxes_global_suffix_order_but_preserves_fixed_first_label_distinct_label_witness_denominators_and_wall_high_gate;crude_and_exact_Farkas_status_exclusions_close_the_enlarged_state_set",
             "direction_terminal=positive_duplicate_permitting_two_high_gap_plus_wall_at_least_one_high_gate_forces_exactly_one_high;one_high_cases_uses_a_high_ray_supremum_and_is_a_superset_of_actual_literal_assignments",
             "translated_gate=complete_cell_support_uses_ceil(d/7),not_centered_beta;support_above_that_cap_gives_P_(E,Z)=T_for_every_high_label_on_the_denominator_ray;THM2941_completion_forces_P_subset_U_A_and_THM1166_gives_mu(U_A)<=36/91<1",

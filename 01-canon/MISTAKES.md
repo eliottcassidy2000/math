@@ -592,6 +592,17 @@ Format per entry:
   now exclude the certificate basis and every magnitude derived from its
   arbitrary normalization.  The cap-`1656` lineage uses this canonical
   boundary throughout.
+- **Projected-k3 follow-through audit (2026-08-02):** THM-3078 appended an
+  exact-audit digest as worker field `row[21]`, but that digest itself hashed
+  the solver-selected certificate and contradiction magnitude.  THM-3102,
+  THM-3106, THM-3109, THM-3111, and the first THM-3113 candidate then hashed
+  or imported the complete worker rows.  Their state, Farkas, terminal,
+  carrier, ledger, and cap mathematics survives.  The repaired descendant
+  chain still rebuilds and exactly checks every returned dual, but screen and
+  semantic digests bind only `tuple(row[:19])` plus the basis-invariant
+  direct/legacy branch counts.  THM-3078's historical semantic hash remains a
+  noncanonical evidence artifact and is never inherited by the repaired
+  descendants.
 - **Rule:** a proof search may use a noncanonical optimizer witness, but a
   reproducibility digest must bind canonical problem data or a separately
   canonicalized certificate, not an arbitrary valid basis or a scalar derived

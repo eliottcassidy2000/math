@@ -15,6 +15,9 @@ audit: >
   inner carrier in the strict-open safe set.  Repaired normal, optimized,
   and stored transcripts are byte-identical; dependencies, hashes, semantic
   digest, directions, ledger, next-layer census, docs, and diff checks pass.
+  A later MISTAKE-331/333 evidence repair retained every exact certificate
+  check but repinned the screen/semantic records to the canonical
+  nineteen-field instance/result rows and basis-invariant branch counts.
 depends_on:
   - THM-3106-projected-k3-z232-exact-screen-and-complete-cell-cardinality-descent
   - THM-3078-z234-direct-farkas-normalization-and-four-two-high-boundary
@@ -23,15 +26,19 @@ depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
 script: 04-computation/lrc14_j7_k3_z231_exact_screen_complete_cell_cardinality_descent_thm3109.py
 output: 05-knowledge/results/lrc14_j7_k3_z231_exact_screen_complete_cell_cardinality_descent_thm3109.out
-script_sha256: f40df5b485883111fa2245cbb76fc43d8f90418a1529ff022adfeb73a1972e83
-output_sha256: 9126830064e15e7e7f4c7128f8cbb968c95e660a8dbf9171657d23c3aeb87e66
-semantic_sha256: 86fdf94cb22cd0353a28f8a47251a4c175193188de0fe78676c6e9e7d6ff899b
+script_sha256: 1f74f2b2368c04f514f2c388b54c70a9ee66c9387fbc437093884b807b3eb23c
+output_sha256: e6d56fa6a419ffe229b8334090e02d98c9d2cdf5f2fa5e24baedd5f722dadf70
+semantic_sha256: 5be5c2fc680d6873600e77227f51264d74a7cd353652795e5ef74215e0fda843
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3109 -- projected k3 z231 exact screen and complete-cell cardinality descent
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+
+The replay evidence was later repinned under MISTAKE-331/333.  Exact rational
+dual verification is unchanged; persisted hashes exclude the optimizer's
+noncanonical basis choice and contradiction scale.
 
 ## 1. Exact layer statement
 
@@ -104,7 +111,7 @@ the repaired direct branch is not invoked.  The complete screen-record
 digest is
 
 ```text
-80cc1065fb84319d2d063b911cfe24576e088596ecf815a98d50e38a6f32a685. (7)
+8fa535bb4e987a6ee21657503b769c202d743d99577cf8e05019a5ec93f525f1. (7)
 ```
 
 The ray quotient enlarges the physical assignment universe while retaining
@@ -219,9 +226,9 @@ optimized runs recompute the whole screen and carrier, pass every frozen
 gate, and byte-match the stored transcript.  Their LF hashes are
 
 ```text
-script:   f40df5b485883111fa2245cbb76fc43d8f90418a1529ff022adfeb73a1972e83
-output:   9126830064e15e7e7f4c7128f8cbb968c95e660a8dbf9171657d23c3aeb87e66
-semantic: 86fdf94cb22cd0353a28f8a47251a4c175193188de0fe78676c6e9e7d6ff899b
+script:   1f74f2b2368c04f514f2c388b54c70a9ee66c9387fbc437093884b807b3eb23c
+output:   e6d56fa6a419ffe229b8334090e02d98c9d2cdf5f2fa5e24baedd5f722dadf70
+semantic: 5be5c2fc680d6873600e77227f51264d74a7cd353652795e5ef74215e0fda843
 ```
 
 The `z_1=230` layer has `50=48` wall `+2` order rows, ordered digest

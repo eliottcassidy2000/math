@@ -1,7 +1,10 @@
 ---
 id: THM-3078
 title: "z234 direct-Farkas normalization and four two-high boundary"
-status: PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
+status: >
+  PROVED + MATHEMATICS VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+  HISTORICAL SCREEN/SEMANTIC DIGEST NONCANONICAL UNDER MISTAKE-331/333.
+  Downstream replay must reconstruct the certificate-free row[:19] ledger.
 source: codex-lrc-z234-boundary-scout-2026-08-01
 audit: >
   An immutable hostile audit rederived the direct Farkas subset certificate,
@@ -9,8 +12,12 @@ audit: >
   cardinality argument for 1,245,093 one-high cases, and all four literal
   interval safe-mass controls.  It independently replayed normal and
   optimized execution from frozen checkpoints against stored output and
-  verified the LF and semantic hashes.  The four two-high rows remain open;
-  no ledger or projected-cap change is asserted.
+  verified the LF and then-current semantic hashes.  A later dependency audit
+  found that the historical semantic packet includes row[21], a digest of the
+  solver-selected dual representative and contradiction scale.  Every dual
+  remains exactly valid and every mathematical count survives, but that
+  historical replay digest is not canonical.  The four two-high rows remain
+  open; no ledger or projected-cap change is asserted.
 depends_on:
   - THM-3071-projected-k3-z236-z235-compositional-descent
   - THM-3061-projected-k3-z239-gap238-z237-compositional-descent
@@ -28,7 +35,13 @@ hash_basis: LF-normalized bytes
 
 # THM-3078 -- z234 direct-Farkas normalization and four two-high boundary
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + MATHEMATICS VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED;
+HISTORICAL SCREEN/SEMANTIC DIGEST NONCANONICAL UNDER MISTAKE-331/333.**
+
+The source remains the exact proof engine, but its historical stored semantic
+packet must not be inherited as reproducibility evidence: descendants rebuild
+and hash `tuple(row[:19])` plus basis-invariant branch counts while continuing
+to check every returned rational dual.
 
 This theorem freezes the exact first boundary encountered when the proved
 THM-3071 descent is continued into the occupied projected `k=3`, `z_1=234`
