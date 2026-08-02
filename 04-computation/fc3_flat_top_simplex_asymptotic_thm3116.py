@@ -4,10 +4,13 @@
 This checks the three-variable radial/projective Jacobian and Gamma shifts,
 the E_{D,3}/E_{D,4} coefficient bookkeeping, the finite multinomial radial
 formula, the affine-simplex exponential formula (including all confluent
-cases), and two hostile controls:
+cases), a derivative-aligned quadratic family, and two hostile controls:
 
 * q=u+v has the algebraic period 1, so a blanket two-dimensional
-  transcendence extension is false;
+  transcendence extension is false.  Its parameter integral is an
+  E-function, but the exceptional value at z=1 is already explained by an
+  exact functional relation with exp(z); this is a hostile control against
+  using E-function status without auditing the relation module;
 * q=a(u+v), a=1+W_1(-e^{-1}), has zero simplex exponential integral, so
   positivity of the representing measure alone does not prevent complex
   cancellation.  Hermite--Lindemann forces this nonzero a to be
@@ -26,7 +29,7 @@ import mpmath as mp
 import sympy as sp
 
 
-u, v, r = sp.symbols("u v r")
+u, v, r, zz = sp.symbols("u v r zz")
 w = 1 - u - v
 
 
@@ -153,6 +156,38 @@ check(
 )
 print(f"C4 affine divided-difference formulas exact; generic controls={affine_checks}")
 
+# C4b.  For any barycentric coordinate lambda_i, s=1-lambda_i has
+# pushforward density s ds.  The phase c+b*s^2 is therefore aligned with the
+# derivative of its exponent and reduces to a boundary difference.  Check all
+# three barycentric choices directly on the triangle.
+c, b = sp.symbols("c b", nonzero=True)
+s, t = sp.symbols("s t", real=True)
+quadratic_boundary = sp.exp(c) * (sp.exp(b) - 1) / (2 * b)
+charts = ((t, s - t), (1 - s, t), (t, 1 - s))
+for i, ((up, vp), si) in enumerate(zip(charts, (u + v, 1 - u, 1 - v))):
+    check(
+        sp.simplify(si.subs({u: up, v: vp}) - s) == 0,
+        f"derivative-aligned phase coordinate i={i}",
+    )
+    check(
+        abs(sp.det(sp.Matrix([[sp.diff(up, s), sp.diff(up, t)],
+                              [sp.diff(vp, s), sp.diff(vp, t)]]))) == 1,
+        f"derivative-aligned chart Jacobian i={i}",
+    )
+quadratic_antiderivative = sp.exp(c + b * s**2) / (2 * b)
+check(
+    sp.simplify(sp.diff(quadratic_antiderivative, s) - s * sp.exp(c + b * s**2))
+    == 0,
+    "derivative-aligned quadratic antiderivative",
+)
+check(
+    sp.simplify(quadratic_antiderivative.subs(s, 1)
+                - quadratic_antiderivative.subs(s, 0)
+                - quadratic_boundary) == 0,
+    "derivative-aligned quadratic boundary value",
+)
+print("C4b derivative-aligned quadratics: 3 barycentric boundary formulas exact")
+
 # C5. The forced homogeneous level is Area=1/2 at Q=0.  The
 # two-dimensional transcendence extension is nevertheless false even for an
 # affine algebraic phase: q=u+v gives exactly 1 (not merely a decimal).
@@ -164,6 +199,34 @@ print(
     "C5 affine forced level: Q=0 gives 1/2; hostile nonconstant q=u+v "
     f"gives {algebraic_period} exactly"
 )
+
+# C5b.  The whole parameter integral for q=u+v is an E-function,
+#
+#   F(z)=sum_{m>=0} z^m/(m! (m+2))=((z-1)e^z+1)/z^2.
+#
+# Its algebraic specialization F(1)=1 is not a transcendence contradiction:
+# the value relation is the specialization of a functional relation involving
+# e^z.  Equivalently F satisfies a second-order polynomial-coefficient ODE.
+# This isolates the extra datum needed by any E-function attack: the full
+# functional-relation module, not holonomicity alone.
+Fzz = ((zz - 1) * sp.exp(zz) + 1) / zz**2
+check(
+    sp.simplify(zz**2 * Fzz - (zz - 1) * sp.exp(zz) - 1) == 0,
+    "affine E-function relation",
+)
+check(
+    sp.simplify(zz * sp.diff(Fzz, zz, 2) + (3 - zz) * sp.diff(Fzz, zz) - 2 * Fzz)
+    == 0,
+    "affine E-function differential equation",
+)
+for m in range(9):
+    check(
+        sp.expand(Fzz.series(zz, 0, 10).removeO()).coeff(zz, m)
+        == sp.Rational(1, factorial(m) * (m + 2)),
+        f"affine E-function coefficient m={m}",
+    )
+check(sp.limit(Fzz, zz, 1) == 1, "affine E-function value at one")
+print("C5b E-function hostile: F(1)=1 lifts from z^2 F-(z-1)e^z-1=0; ODE exact")
 
 # C6. Positivity of the measure does not prevent cancellation for a complex
 # phase.  The Lambert-W equation makes the numerator vanish exactly.

@@ -3,7 +3,9 @@ C1 jacobian=r**2; exact Dirichlet/Gamma monomials=125
 C2 Gamma(Dn+3), E_(D,3), E_(D,4) coefficient checks=54
 C3 direct factorial == finite radial-layer formula, n=0..6: 7
 C4 affine divided-difference formulas exact; generic controls=4
+C4b derivative-aligned quadratics: 3 barycentric boundary formulas exact
 C5 affine forced level: Q=0 gives 1/2; hostile nonconstant q=u+v gives 1 exactly
+C5b E-function hostile: F(1)=1 lifts from z^2 F-(z-1)e^z-1=0; ODE exact
 C6 Lambert-W hostile a=1+W_1(-e^-1)
    a=(-2.0888430156130438559570867167749 + 7.4614892856542545569061166121864j)
    numerator residual=5.4700848e-81

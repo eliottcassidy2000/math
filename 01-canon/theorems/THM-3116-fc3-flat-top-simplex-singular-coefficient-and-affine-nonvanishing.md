@@ -1,6 +1,6 @@
 ---
 id: THM-3116
-title: "FC(3) flat-top simplex coefficient: exact Gamma/Mittag--Leffler shifts, a radial limit, and affine arithmetic nonvanishing"
+title: "FC(3) flat-top simplex coefficient: exact radial limit, affine nonvanishing, and derivative-aligned quadratic families"
 status: >
   PROVED + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT.  Let
   L_3(x^a y^b z^c)=a!b!c!, let f have exact degree D, and suppose its top
@@ -11,15 +11,17 @@ status: >
   counterexample forces this simplex exponential integral to vanish.  After
   algebraic specialization it cannot vanish when A_1/(Da) is affine:
   exact divided-difference formulas plus Lindemann--Weierstrass handle every
-  confluent case. The same calculation proves that an algebraic affine Q has
-  int_Delta exp(Q)=1/2 iff Q=0, sharpening THM-3039's forced-level bridge.
+  confluent case. It also cannot vanish on the three derivative-aligned
+  quadratic families c+b(1-lambda_i)^2. The same calculations prove that an
+  algebraic phase in either family has int_Delta exp(Q)=1/2 iff Q=0,
+  sharpening THM-3039's forced-level bridge.
   Hence a flat-top counterexample must have projective
   subleading degree at least two; in particular none has exact degree at
   most two.  This does NOT exclude nonflat leading forms and does not prove
   FC(3).  Exact controls verify the r^2 Jacobian, 125 Dirichlet monomials,
-  Gamma(Dm+3), E_(D,3)/E_(D,4), seven direct layer expansions, affine
-  formulas, and two hostile cancellation examples, identically under normal
-  and -O execution.
+  Gamma(Dm+3), E_(D,3)/E_(D,4), seven direct layer expansions, affine and
+  derivative-aligned quadratic formulas, and two hostile cancellation
+  examples, identically under normal and -O execution.
 source: codex-2026-08-02-fc3-simplex
 depends_on: []
 related:
@@ -29,6 +31,7 @@ related:
   - THM-3039
 external:
   - "Riesz--Markov--Kakutani representation theorem."
+  - "F. Beukers, A refined version of the Siegel--Shidlovskii theorem, Annals of Mathematics 163 (2006), 369--379."
   - "octonion/mathematics/fc, revised research draft (not peer reviewed; only the radial and flat-symbol calculations are independently recovered here)."
 script: 04-computation/fc3_flat_top_simplex_asymptotic_thm3116.py
 output: 05-knowledge/results/fc3_flat_top_simplex_asymptotic_thm3116.out
@@ -81,6 +84,14 @@ counterexample must have
 
 ```text
 deg_Delta A_1 >= 2.                                             (5)
+```
+
+There is a further exact exclusion inside the first remaining degree.  Put
+`lambda_0=w, lambda_1=u, lambda_2=v`.  For no `i` can the algebraically
+specialized first projective layer have
+
+```text
+A_1/(Da)=c+b(1-lambda_i)^2.                                    (5a)
 ```
 
 In particular there is no flat-top counterexample of exact degree `D=1` or
@@ -327,19 +338,86 @@ Q affine over Qbar and int_Delta exp(Q)=1/2   iff   Q=0.          (26)
 This does not prove the nonlinear exponential-period condition in THM-3039,
 but it completely removes its affine locus.
 
+### A derivative-aligned quadratic family
+
+There is a small nonlinear family where the simplex density itself supplies
+the antiderivative missing in the general quadratic problem.  Let
+`lambda_i` be any barycentric coordinate and set `s=1-lambda_i`.  A slice of
+the triangle at fixed `s` has coordinate length `s`, so for every continuous
+`Phi`,
+
+```text
+int_Delta Phi(1-lambda_i) du dv = int_0^1 s Phi(s) ds.          (26a)
+```
+
+Consequently, for algebraic `b,c`,
+
+```text
+int_Delta exp(c+b(1-lambda_i)^2) du dv
+ = exp(c)(exp(b)-1)/(2b),                         b!=0,
+ = exp(c)/2,                                      b=0.          (26b)
+```
+
+The value is nonzero: for nonzero algebraic `b`, Hermite--Lindemann excludes
+`exp(b)=1`.  It equals the forced level `1/2` only when `b=c=0`.  Indeed, for
+`b!=0`, equality would give the algebraic linear relation
+
+```text
+exp(b+c)-exp(c)-b exp(0)=0.                                   (26c)
+```
+
+Lindemann--Weierstrass excludes it when the three exponents are distinct.
+The only collisions are `c=0` and `b+c=0`; each would make respectively
+`exp(b)` or `exp(-b)` algebraic.  The case `b=0` reduces to
+`exp(c)=1`, hence `c=0`.
+
+The mechanism is dimension-free and explains why the exponent is a square
+for FC(3).  On `Delta_(N-1)`, the pushforward of coordinate volume by
+`s=1-lambda_i` has density `s^(N-2)/(N-2)!`.  Hence
+
+```text
+int_(Delta_(N-1)) exp(c+b(1-lambda_i)^(N-1)) dV
+ = exp(c)(exp(b)-1)/(b (N-1)!),                 b!=0,           (26d)
+```
+
+with the continuous value `exp(c)/(N-1)!` at `b=0`.  The same argument gives
+nonvanishing and equality with the simplex volume only at `b=c=0` over
+`Qbar`.  For `N=3`, (26d) is exactly (26b).
+
+This square family is not an arbitrary lucky example; it is the maximal
+genuinely quadratic case detected by a polynomial antiderivative.  For a
+one-coordinate phase `q=P(s)`, such a certificate has the form
+
+```text
+d/ds [R(s) exp(P(s))]=s exp(P(s)),
+R'(s)+P'(s)R(s)=s.                                             (26e)
+```
+
+A degree comparison classifies polynomial solutions `R`.  Constant `P`
+admits `R=s^2/2`.  If `P=Bs+C`, `B!=0`, then
+`R=s/B-1/B^2`.  If `P=As^2+Bs+C`, `A!=0`, the highest-degree term forces
+`R` to be constant, after which (26e) forces `B=0` and `R=1/(2A)`.
+For `deg P>=3`, the highest term of `P'R` cannot be cancelled by `R'`, so no
+nonzero polynomial solution exists.  Thus (26b) is exactly the last
+one-coordinate polynomial phase reducible to endpoints by this mechanism;
+the generic quadratic `As^2+Bs+C` with `AB!=0` is a precise next barrier.
+
 Algebraic specialization is legitimate and load-bearing.  If a complex
 counterexample satisfies (2), scale it so the leading form is exactly
 `S^D`.  Parameterize only the lower coefficients (and, when relevant, the
-linear subspace on which `A_1` is affine).  All equations `L_3(f^m)=0` have
+linear subspace on which `A_1` is affine or lies in one fixed span
+`<1,(1-lambda_i)^2>`).  All equations `L_3(f^m)=0` have
 rational polynomial coefficients.  Their ideal is proper at the assumed
 complex point and is finitely generated by Noetherianity, so the weak
-Nullstellensatz supplies a point over `Qbar` in the same flat/affine
-subspace.  Applying (19)--(22) contradicts (4).
+Nullstellensatz supplies a point over `Qbar` in the same constrained
+subspace.  Applying (19)--(22) or (26b) contradicts (4).
 
 For `D=2`, `A_1` is automatically the restriction of a linear form, and for
 `D=1` it is constant.  This proves the final assertion of section 1.  More
 generally, for `D>=2`, an affine `A_1` is equivalent to
 `S^(D-2)` dividing `f_(D-1)`; a flat counterexample must avoid that divisor.
+If its first projective layer is quadratic, it must also avoid each of the
+three derivative-aligned subspaces (5a).
 
 ## 5. Riesz--Markov: the exact measure statement and the cancellation gap
 
@@ -396,6 +474,39 @@ Thus blanket **transcendence** of nonconstant algebraic simplex exponential
 periods is false.  Formula (30) does not threaten (4), because its value is
 nonzero.
 
+This hostile also identifies the exact missing coordinate in a naive
+`E`-function repair.  Introduce the parameter integral
+
+```text
+F(z)=int_Delta exp(z(u+v)) du dv
+    =((z-1)exp(z)+1)/z^2
+    =sum_(m>=0) z^m/(m!(m+2)).                                  (30a)
+```
+
+It is an `E`-function: its algebraic coefficients `1/(m+2)` have
+exponentially bounded heights and common denominators, and it satisfies
+
+```text
+z F''(z)+(3-z)F'(z)-2F(z)=0.                                   (30b)
+```
+
+Nevertheless `F(1)=1`, because there is already the exact functional
+relation
+
+```text
+z^2 F(z)-(z-1)exp(z)-1=0.                                      (30c)
+```
+
+The value relation `F(1)-1=0` is precisely the specialization of (30c): the
+coefficient of `exp(z)` vanishes at `z=1`.  This is fully consistent with
+Beukers' lifting theorem.  Therefore holonomicity or `E`-function status of
+a general simplex parameter integral cannot by itself supply the needed
+arithmetic obstruction.  One must control its complete functional-relation
+module (or prove the relevant independence) and audit coefficient
+degeneration at the evaluation point.  Affine phases are especially hostile:
+their divided-difference formulas make such exponential-polynomial relations
+systematic, not exceptional.
+
 Over unrestricted complex coefficients even nonvanishing fails.  Choose a
 nonprincipal Lambert branch and put
 
@@ -442,13 +553,15 @@ The frozen controls verify:
 * `54` coefficient checks for `Gamma(Dm+3)`, `E_(D,3)`, and `E_(D,4)`;
 * the direct factorial functional against (12) for `m=0,...,6` on a
   nonradial quadratic with every lower layer present;
-* all generic and confluent affine formulas;
-* the exact affine forced-level law (26), algebraic-period hostile (30),
-  Lambert cancellation (31), and numerical convergence to (3).
+* all generic and confluent affine formulas and the derivative-aligned
+  quadratic boundary formula (26b);
+* the exact affine forced-level law (26), algebraic-period hostile (30), its
+  exact `E`-function relation and ODE (30a)--(30c), Lambert cancellation
+  (31), and numerical convergence to (3).
 
 The two execution modes are byte-identical.  QED in the stated flat scope.
 
 ```text
-source sha256 = 91282b41aeaf3712dc89de47c22724ca17719d98d938cc48828e263a48c530d9
-output sha256 = 68adfea560b4fd728524ac22127001899902a1899f2c5edc66195bc4471bea0d
+source sha256 = ebd11cfc10dd6a24b8eae53efa7d06edcc29e2f4ed4d28a46a382aa606acc103
+output sha256 = bf1b634a84f37d566713b5b3fde787982e8f860a658d6272888f06d3fb9db13c
 ```
