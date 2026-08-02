@@ -2,19 +2,21 @@
 id: THM-3176
 title: "Six-step prime resonance third Euclidean--Newton separation"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; IMMUTABLE CANONICAL AUDIT PENDING.  For
-  every odd prime p, no exact quadratic has three zero factorial moments
-  beginning at r=p+4.  Three Euclidean rows separate the first genuine
-  two-row slope collision, a complete wall atlas handles every projected
-  degeneration, and first-Witt Hensel wedges close all four offset-six
-  zero-face resultant exceptions intrinsically.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every odd
+  prime p, no exact quadratic has three zero factorial moments beginning at
+  r=p+4.  Three Euclidean rows separate the first genuine two-row slope
+  collision, a complete wall atlas handles every projected degeneration, and
+  first-Witt Hensel wedges close all four offset-six zero-face resultant
+  exceptions intrinsically.
 audit: >
-  An independent hostile audit accepted the repaired precanonical package:
-  normal and optimized replay agree with the 33-line transcript; the direct
-  coefficient sum agrees with the corrected full recurrence; p=109 and
-  p=232961 normalized walls, every Hensel digit, and the general wedge
-  covariance were independently rederived.  Promotion awaits an immutable
-  audit of these canonical blobs.
+  Two independent immutable audits accepted the theorem.  Normal and
+  optimized replay agree with the 33-line transcript and declared hashes;
+  the direct coefficient sum agrees with the corrected full recurrence;
+  symbolic quotient and endpoint identities, every wall factorization and
+  primality check, the p=109 and p=232961 normalized polygons, and all four
+  first-Witt closures were independently rederived.  The precanonical
+  constant-term double-count was repaired before the candidate commit and is
+  guarded by an exact direct-sum/full-recurrence equality control.
 source: root/multiscale-newton-flag/2026-08-02
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
@@ -32,7 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3176 -- six-step prime resonance third Euclidean--Newton separation
 
-**PROVED CANDIDATE + VERIFIED-EXACT; IMMUTABLE CANONICAL AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
