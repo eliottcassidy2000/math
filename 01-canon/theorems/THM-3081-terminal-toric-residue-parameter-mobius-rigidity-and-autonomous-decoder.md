@@ -2,8 +2,9 @@
 id: THM-3081
 title: "Terminal toric residue-parameter Mobius rigidity and autonomous decoder"
 status: >
-  PROVED + VERIFIED-EXACT (independent audit pending).  At the primitive
-  terminal stage of THM-3080, choose A g+B e=1 and set
+  PROVED + VERIFIED-EXACT (independent audit pending).  In the
+  residue-degree-one target-coordinate-line scope inherited from THM-3074,
+  at the primitive terminal stage of THM-3080 choose A g+B e=1 and set
   S=R^A Z^B, Theta=Z^g/R^e.  Then w(S)=1 and the residue theta of Theta
   generates the full residue field: C(u)=C(theta).  Consequently theta is a
   Mobius function of u, and every terminal initial coefficient has the form
@@ -65,6 +66,12 @@ The same exponent calculation also exposes what every earlier strict stage
 forgets if it records only a nonprimitive scalar relation: an exact `mu_d`
 root torsor.  This is the precise contact with THM-3077's relation/carry
 formalism.
+
+The residue parameter throughout is the actual coordinate-line parameter
+`u=P` from THM-3074.  The abstract terminal exponent algebra makes sense
+over other coefficient fields, but the identification `P=u`, the residue
+field equality `C(u)`, and the Mobius conclusion below do **not** straighten
+an arbitrary Jelonek component.
 
 ## 2. A terminal value-one/residue chart
 
@@ -177,7 +184,8 @@ This is stronger than merely saying that `theta` is nonconstant.
 
 ## 4. Mobius rigidity of the residue parameter
 
-Apply `(14)` to the target coordinate `P=u`, which has value zero.  There is
+In the inherited coordinate-line setup, apply `(14)` to the target coordinate
+`P=u`, which has value zero.  There is
 a rational function `H_P in C(T)` such that
 
 ```text
