@@ -2,13 +2,21 @@
 id: THM-3132
 title: "Projected forest-boundary parity and augmentation"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.  For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
   complete graph K_n and 0<=r<=n-2, the projection of the oriented
   (r+1)-forest boundary onto rank-r component partitions is surjective over
   Q when r is even.  When r is odd, its image is exactly the augmentation-zero
   hyperplane.  Thus THM-3117's K8/K9 rank-four surjectivity is an instance of
   a sharp all-rank parity law rather than a sporadic modular computation.
 source: root/multiscale-newton-flag/2026-08-02
+audit: >
+  An independent hostile audit rederived the endpoint-swap cancellation,
+  realization of every one-point transfer, fixed-rank-layer connectivity,
+  augmentation-zero pair span, parity ranks over F_2, characteristic-zero
+  rank inference, signed augmentation obstruction, and boundary-lift scope.
+  It independently replayed normal and optimized modes against the stored
+  output, matched the declared LF hashes, and confirmed the exact relation
+  to THM-3117 without importing its separate positivity no-go.
 depends_on: []
 related:
   - THM-3117-projected-five-forest-boundary-surjectivity-and-signed-holotopy-lift
@@ -22,7 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3132 -- projected forest-boundary parity and augmentation
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3117 proves by exact modular rank computation that every rational
 rank-four current on the actual `K_8` and `K_9` product-Gamma macro spaces is
@@ -250,4 +258,4 @@ This theorem is a general combinatorial holotopy theorem.  It does not prove
 a positive forest lift, product-Gamma width-three positivity, the Gaussian
 Moment Conjecture, NC2, LRC(14), JC(2), or DC(2).
 
-**QED (candidate pending independent audit).**
+QED.
