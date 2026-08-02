@@ -1,0 +1,14 @@
+theorem=THM-3070
+status=PROVED_VERIFIED_EXACT_CANDIDATE
+wedge_lead=(r*A_prime*B+p*A*B_prime)*s^(r-p-1)
+nondegenerate_C3_order=2_forces=r-p=3
+weight0=x^((p+3)/g) y^(p/g) powers;weight3=xy_times_weight0_powers
+p_divisible_by_3_checked=p=3,6,9,12,15,18,21,24;g=3
+autonomous_ODE=C_prime=(3*kappa^-1/g)*C*H(C)
+rational_ODE_only=H(z)=a*z;C=-1/(lambda*a*(u-u0))
+polynomial_P_contradiction=u=G(C);G_polynomial;C_tends_0_at_u_infinity
+hostile1=P_polynomial,Q_Laurent,p=1,r=4,Jacobian=1
+hostile2=P_Laurent,Q_polynomial,p=2,r=5,Jacobian=1
+cancellation_control=p=1,r=1;A*B=1;dx_wedge_dy=du_wedge_d(s^3)
+necessary_survivor=r<=p+2;A^r*B^p=constant;not_sufficient
+scope=no_full_C3_A4_S4_or_JC2_exclusion
