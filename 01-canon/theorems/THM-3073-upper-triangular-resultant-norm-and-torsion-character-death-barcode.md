@@ -2,7 +2,7 @@
 id: THM-3073
 title: "Upper-triangular resultant norm and torsion-character death barcode"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  A pure
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  A pure
   lower complete intersection followed by an arbitrary upper-triangular
   homogeneous block has resultant S^(upper degree product) times T^(lower
   degree product), with canonical positive sign.  Hence its scalar phase is
@@ -11,6 +11,14 @@ status: >
   barcodes, and separates genuine pullback holotopy from norm contraction.
   It is an information-loss theorem, not an LRC, JC, or GMC closure.
 source: root-gmc-lrc-jc-norm-barcode-2026-08-01
+audit: >
+  Two independent hostile audits rederived the universal vanishing-set and
+  multidegree proof, canonical sign, both physical GMC exponent maps, every
+  direct and iterated torsion-death row, the phase-placement and relative
+  cancellation controls, and the mixed-lower hostile.  The immutable audit
+  additionally checked eighteen small normalized resultants, every proved
+  dependency, the pullback/Kummer and LRC scope boundaries, normal and
+  optimized replay, stored bytes, declared LF hashes, and documentation.
 depends_on:
   - THM-2542-seven-chart-cech-holonomy-and-c91-arrival-obstruction
   - THM-2962-planar-suspension-resolvent-and-v4-kummer-descent
@@ -30,7 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3073 -- upper-triangular resultant norm and torsion-character death barcode
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Several maintained arguments add a coordinate and then ask whether an old
 phase, owner, root origin, or Kummer class survives.  There are two different
@@ -46,7 +54,7 @@ heuristic.  It follows from one universal resultant identity.
 
 ## 1. The upper-triangular product theorem
 
-Let `K` be a field, let
+Let `K` be a field, let `a,b>=1`, and let
 
 ```text
 y=(y_1,...,y_a),       z=(z_1,...,z_b),                    (1)
@@ -331,8 +339,8 @@ The exact companion verifies:
 
 1. all `7,056` degree-block pairs with one to three equations per block and
    degrees one through four, comprising `38,304` multidegree equalities;
-2. `324` exact phase image/kernel cells for moduli through `91` and both GMC
-   exponent families;
+2. `324` exact phase image/kernel cells for the selected nine-modulus bank
+   through `91` and both GMC exponent families;
 3. every direct first-death stage in the table;
 4. `76` iterated tower cells and the prime/`C91` duration formulas;
 5. the `k=8` placement hostile and `k=4` two-input cancellation hostile; and
@@ -354,4 +362,4 @@ simultaneous moving-scale cone, arbitrary-radial GMC(2), NC2, LRC(14), JC(2),
 or DC(2).  Its purpose is to prevent a positive norm from being mistaken for
 the sidecar it has erased.
 
-**QED, pending independent audit and status promotion.**
+**QED.**
