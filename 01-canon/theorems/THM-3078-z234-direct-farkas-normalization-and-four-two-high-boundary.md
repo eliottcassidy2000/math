@@ -1,8 +1,16 @@
 ---
 id: THM-3078
 title: "z234 direct-Farkas normalization and four two-high boundary"
-status: CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT HOSTILE AUDIT
+status: PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
 source: codex-lrc-z234-boundary-scout-2026-08-01
+audit: >
+  An immutable hostile audit rederived the direct Farkas subset certificate,
+  all 381 row and 74 terminal-body quantifiers, the exact complete-cell
+  cardinality argument for 1,245,093 one-high cases, and all four literal
+  interval safe-mass controls.  It independently replayed normal and
+  optimized execution from frozen checkpoints against stored output and
+  verified the LF and semantic hashes.  The four two-high rows remain open;
+  no ledger or projected-cap change is asserted.
 depends_on:
   - THM-3071-projected-k3-z236-z235-compositional-descent
   - THM-3061-projected-k3-z239-gap238-z237-compositional-descent
@@ -20,9 +28,9 @@ hash_basis: LF-normalized bytes
 
 # THM-3078 -- z234 direct-Farkas normalization and four two-high boundary
 
-**CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-This candidate freezes the exact first boundary encountered when the proved
+This theorem freezes the exact first boundary encountered when the proved
 THM-3071 descent is continued into the occupied projected `k=3`, `z_1=234`
 layer.  It makes **no** ledger decrement and **no** projected-cap change.
 
@@ -38,7 +46,7 @@ A narrowly repaired audit of the inherited necessary screen, followed by a
 memory-bounded exact terminal computation, gives
 
 ```text
-377 rows closed by exact candidate certificates,
+377 rows closed by exact projected certificates,
   4 rows left open by a nonpositive duplicate-two-high gap.  (2)
 ```
 
@@ -56,7 +64,7 @@ The four rows left by `(3)` are
 (1,9,10,11,12,14), (2,5,9,11,12,14).                        (4)
 ```
 
-Because `(4)` is nonempty, this file is a boundary theorem candidate rather
+Because `(4)` is nonempty, this file is a boundary theorem rather
 than a descent theorem.  In particular, the proved THM-3071 ledger `374768`
 and cap `z_1<=234` remain unchanged.
 
@@ -185,7 +193,7 @@ smallest positive gap is
 13057/124176780 at body (1,6,9,10,12,14).                   (13)
 ```
 
-This proves the candidate split `(2)` inside the projected relaxation.
+This proves the split `(2)` inside the projected relaxation.
 
 ## 4. The exact four-body boundary
 
@@ -244,7 +252,7 @@ identical and end in `all_exact_controls=PASS`.
 
 ## 6. Scope
 
-This candidate acts only inside the already-defined projected `k=3`
+This theorem acts only inside the already-defined projected `k=3`
 necessary atlas.  It does not promote the `377` provisional closures into the
 canonical ledger before an independent hostile audit, does not lower the
 proved cap `z_1<=234`, and does not reconstruct a physical cover or current.
