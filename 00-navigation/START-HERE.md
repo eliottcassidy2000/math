@@ -56,14 +56,9 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 11. **A reciprocal integer sequence has two profiles.** THM-2000/2005/2352 separate support, multiplicity, and q-adic thresholds; THM-2438/2433/2500 give the Poisson--Newton transform and finite-hole classification.
     THM-3055/3056 give divisor upsets and signed Hankel minors; THM-3124 gives `O(N)` quadratic moments, while THM-3126 compresses six LRC carriers.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is the exact new counterexample. THM-2063/2071 close linear/quadratic source fibers; THM-2084/2118/2102 close cubics; THM-2202 removes every twice-odd finite pole.
-    THM-2214 closes nonsplit terminal degrees `2,6,10`, THM-2217 forces the odd train, and THM-2247 closes degree `14`.
-    At degree `18`, THM-2297 closes one-sparse strata plus `B=D=0`;
-    THM-2314/2316/2320/2324/2328 close all `31` exactly two-sparse ratios.
-    THM-2332 leaves squarefree branch degree `0`, `2`, or `4`; THM-2335 eliminates `0`; THM-2345/2347 close two divisors.
-    THM-2359 closes the perfect-quartic divisor. THM-2371 and THM-2376 close the full degree-eighteen `H_2S_5^2` stratum; hostile-audited THM-2406 closes the remaining `H_4` locus and hence the inherited reduced degree-eighteen branch.
-    At degree `22`, THM-2671/2683/2692 close the inherited nonsplit branch and THM-2725/2745/2752/2755 the split family. THM-2778 closes every complete chosen-sheet split polynomial exact-prefix degree; THM-2796 exposes the live carrier `A(R_Q/q)=VG`.
+    THM-2214/2247 close the stated terminal degrees through `14`; THM-2371/THM-2376/THM-2406 close the inherited degree-`18` branch; THM-2671/2683/2692 and THM-2778 close the inherited nonsplit degree-`22` branch and every complete chosen-sheet split exact-prefix degree. THM-2796 exposes the live carrier `A(R_Q/q)=VG`.
     THM-3057/3059 make quartic Jelonek parity tame infinity-inertia sign; THM-3066 retains only the cofactor product, and THM-3064's pointed norm does not exclude `C3`.
-    THM-3070/3074/3080/3081 terminate the coordinate-line `C3` key tower in a Mobius decoder. THM-3131 identifies its local full-resolvent field and proves the `V4` Kummer packet splits there, forcing a multi-place or marked gluing sidecar.
+    THM-3070/3074/3080/3081 terminate the coordinate-line `C3` key tower in a Mobius decoder. THM-3131 identifies its local full-resolvent field and proves the `V4` Kummer packet splits there; its graph-quartic addendum proves the surviving `q_0` cubeclass is automatically saturated and isolates the uncontrolled terminal-prefactor class `[L]`, forcing a multi-place, marked, or companion sidecar.
     THM-3123 classifies the last two abstract heptic passports and finds four hostile-audited `S7` maps, but does not supply Keller-chart entry.
     Degrees `>=26`, nonpolynomial prefixes, chart entry, raising/descent, uniform Keller-`C3` exclusion, other branches, `JC(2)`, and `DC(2)` remain open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043

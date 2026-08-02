@@ -340,8 +340,12 @@ Classify profiles under support operations; study analytic continuation and auto
   a square decoder.  THM-3131 identifies the genuine local resolvent map: at
   a pure `C3` place the ramified source and full `S4/V4` resolvent completions
   coincide, all matching Kummer roots are squares, and `v(q)` gives an exact
-  `3|v(q)` Newton/discriminant gate.  The decoder therefore needs multi-place,
-  marked, unit, or class-group gluing to recover nonzero `V4` data.
+  `3|v(q)` Newton/discriminant gate.  Its graph-quartic addendum proves the
+  residual law `q_0=c_m A_X^3 tau^m` is automatically saturated, and transports
+  it through THM-3081 as `[q_0]=[K]^m`: the decoder fixes `K/L` but leaves the
+  terminal-prefactor cubeclass `[L]` uncontrolled.  The decoder therefore
+  needs multi-place, marked, companion, unit, or class-group gluing to recover
+  new data.
   Globalization and arbitrary Jelonek straightening remain OPEN.  THM-3067/
   3072/3076 locate the complementary marked/tomographic sidecars.
   THM-2862/2864/2968/2971 give two sextic
