@@ -2,12 +2,21 @@
 id: THM-3098
 title: "z234 final two-body height and complete-cell closure"
 status: >
-  PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT HOSTILE AUDIT REQUIRED.
-  The candidate closes the final two THM-3078 rows by exact height and
-  complete-cell certificates.  If promoted, composition with THM-3094
-  empties the full pinned z1=234 layer, updates the projected k=3 ledger to
-  374387, and lowers its cap to z1<=233.  It makes no LRC(14) claim.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Exact height and
+  complete-cell certificates close the final two THM-3078 rows.  Composition
+  with THM-3094 empties the full pinned z1=234 layer, updates the projected
+  k=3 ledger to 374387, and lowers its cap to z1<=233.  It makes no LRC(14)
+  claim.
 source: codex-thm3094-hostile-audit-2026-08-02
+audit: >
+  Root independently rederived both height inequalities and every exceptional
+  cutoff, checked that all scalar filters are necessary upper relaxations,
+  and rebuilt the 1,018 literal pair intersections with pure-Python integer
+  bitsets rather than the companion's NumPy path.  This reproduced the empty
+  denominator-two box, minimum Bonferroni slack 15470, actual minimum 19908
+  at (20174,48540), strict-open endpoint controls, and the atlas composition
+  374768-381=374387 with next-layer census 62=45+17.  Fresh normal and
+  optimized runs byte-match stored output; LF hashes and documentation pass.
 depends_on:
   - THM-3078-z234-direct-farkas-normalization-and-four-two-high-boundary
   - THM-3094-z234-two-high-complete-cell-intersection-closure
@@ -29,7 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3098 -- z234 final two-body height and complete-cell closure
 
-**PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT HOSTILE AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Statement
 
@@ -60,8 +69,8 @@ one has a common complete safe cell.  Thus no packet remains in `(1)`.
 
 The exact composition consequence is not left implicit.  THM-3078 proves
 that the `381` pinned `z_1=234` rows split as `377` closed rows plus its four
-boundary rows.  THM-3094 closes two boundary rows and this candidate closes
-the other two.  Therefore, upon promotion,
+boundary rows.  THM-3094 closes two boundary rows and this theorem closes
+the other two.  Therefore
 
 ```text
 all 381 z_1=234 rows are empty,
@@ -368,9 +377,7 @@ z_1=233:  62 rows =  45 wall + 17 order.                 (31)
 ```
 
 Thus the decrement in `(3)` is a disjoint set difference in the canonical
-projected necessary-row ledger, not an inferred numerical slogan.  Because
-this file remains a proof candidate, navigation should retain the promoted
-cap `234` until an independent hostile audit accepts the result.
+projected necessary-row ledger, not an inferred numerical slogan.
 
 Run
 
@@ -383,9 +390,9 @@ The script contains no truth-bearing Python `assert`.  Normal, optimized,
 and stored transcripts are LF-byte-identical and end in
 `all_exact_controls=PASS`.
 
-**Scope.**  The candidate empties the complete pinned projected `k=3`,
+**Scope.**  The theorem empties the complete pinned projected `k=3`,
 `z_1=234` layer and proves only the projected cap/ledger consequence `(3)`.
 It does not classify physical covers outside this necessary projection, say
 anything about arbitrary `k<=1` packets or the final rung, or prove LRC(14).
 
-QED, pending independent hostile audit.
+QED.
