@@ -2,7 +2,7 @@
 id: THM-3147
 title: "Length-singleton endpoint-jet facet observer and finite portability wall"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The length endpoint jet gives exact rank-tail Hasse facets and evolves under
   virtual pole subtraction by a triangular Gregory recurrence.  On the full
   THM-3136 active-prefix bank through degree nine it detects exactly 27 of the
@@ -11,6 +11,13 @@ status: >
   detects all 43.  This is a finite obstruction observer, not a positive
   current or original-response reconstruction theorem.
 source: root/multiscale-newton-flag/low-child-flag-extension-2026-08-02
+audit: >
+  Two independent hostile audits rederived both marked generating factors,
+  the virtual-pole kernels, Gregory recurrence, endpoint/binomial inversion,
+  rank-tail and singleton facet geometry, information-loss hostile, and the
+  related-only heptic S7/D14 classifier.  Fresh normal and optimized runs
+  both reproduce the stored transcript, exact 27+16 census, witnesses,
+  counts, and declared LF hashes.
 depends_on:
   - THM-3120-row-pole-prefix-newton-flag-positivity
   - THM-3127-partition-refinement-strassen-upset-dual-and-filter-response
@@ -30,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3147 -- length-singleton endpoint-jet facet observer and finite portability wall
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3134 shows that a scalar endpoint can hide a complete tournament
 path-cover profile.  The analogous sidecar for the THM-3136 Young current is
@@ -330,4 +337,4 @@ profile from monomial symmetric functions, checks both pole kernels on every
 successive prefix, verifies the facet connectivity, and performs the exact
 `27+16` census.
 
-**QED (candidate pending independent hostile audit).**
+QED.
