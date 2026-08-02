@@ -216,7 +216,9 @@ E_(k-1,k;L,h)
 ```
 
 for all sufficiently large `L`.  Fixed-layer normal leakage is strictly
-smaller than the gap in `(6)` and remains in the complementary bank.
+smaller than the gap in `(6)` and remains in the complementary bank.  The
+exact `E`, including its `O(L^-1)` symbol correction, stays in the carrier;
+it is not part of that exponentially small leakage.
 
 Equations `(14)--(16)` are grouped identities.  They make no claim that the
 arbitrary upper coefficients converge.  Every resultant term outside the
@@ -229,6 +231,12 @@ cost is
 ```text
 O(poly(T) exp(-sigma_i[gamma_type(k_i)-J_(k_i)(delta_i)]T)).  (18)
 ```
+
+There is no hidden factor two in `(18)`: each error atom starts at boundary
+rate at most `-gamma_type`, and `(10)--(12)` raise its absolute rate by at
+most `J_k`; the exact grouped carrier has nonnegative child-scale rate by
+induction because its `U` factors grow, its `E` factors are subexponential,
+and `S_3` is fixed.  Hence the relative rate is at most `-gamma_type+J_k`.
 
 The strict inequality `(7)` is therefore the exact sufficient chamber gate.
 
