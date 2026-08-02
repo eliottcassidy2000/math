@@ -1,0 +1,17 @@
+THM3076_FINITE_AFFINE_PLANE_LINE_QUOTIENT_TOMOGRAPHY
+scope=prime_fields:2,3,5,7;coefficient_field=Q;symbolic_proof=all_prime_p_with_p_invertible
+FIELD;p=2;points=4;directions=3;subbank_ranks=2,3,4;hostile_checks=6;char_p_cleared_rank=3;good_char=3;operator_span_rank=4
+FIELD;p=3;points=9;directions=4;subbank_ranks=3,5,7,9;hostile_checks=12;char_p_cleared_rank=6;good_char=2;operator_span_rank=5
+FIELD;p=5;points=25;directions=6;subbank_ranks=5,9,13,17,21,25;hostile_checks=30;char_p_cleared_rank=15;good_char=2;operator_span_rank=7
+FIELD;p=7;points=49;directions=8;subbank_ranks=7,13,19,25,31,37,43,49;hostile_checks=56;char_p_cleared_rank=28;good_char=2;operator_span_rank=9
+operator_law=sum_L_P_L=I+pP_V;distinct_P_L_P_M=P_V
+centered_law=E_L=P_L-P_V;E_L^2=E_L;E_LE_M=0;sum_E_L=I-P_V
+rank_law=rank(s_labelled_views)=1+s(p-1);kernel=(p+1-s)(p-1)
+label_table_boundary=two_joint_quotient_labels_are_bijective;two_separate_averages_have_kernel_(p-1)^2
+good_char_boundary=char_dividing_(p+1)_is_allowed;raw_projector_sum_kills_constants_but_corrected_formula_reconstructs
+char_p_boundary=A_L^2=pA_L;A_LA_M=A_V;sum_A_L=A_V_mod_p;full_cleared_rank=p(p+1)/2
+small_prime_bridge=F2^2_semidirect_C3=A4=PSL2(F3);generatorwise_S_to_translation,ST_to_rho;orders=2,3,3
+p2_direction_cycle=(2, 0, 1);A4_permutations=12
+scope_boundary=no_binary_or_ternary_tree_intertwiner;no_quartic,Farey,Keller,LRC_realization
+semantic_sha256=8c66f1f34cef942536b5002b18bff6790af21211e84237a648d88ded4eb1abd4
+all_exact_controls=PASS
