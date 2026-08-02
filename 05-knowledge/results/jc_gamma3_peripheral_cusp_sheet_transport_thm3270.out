@@ -1,0 +1,11 @@
+THM3270 gamma3 peripheral cusp / fixed-sheet transport exact companion
+A4_order=12 cusp_cosets=4 C3_stabilizers=4
+T3_matrix=((1, 3), (0, 1)) nontrivial_integrally=True identity_mod3=True
+cusp_sheet_bijection=4 stabilizers_match=True
+opposite_face_cycles=4 H1_rank=3 sum_zero=True any_three_unimodular=True
+equivariant_transport_checks=48
+unoriented_PGL_transport_checks=96 odd_reverses_orientation=True
+cusp_owner_x_direction_flags=12 regular_A4_torsor=True
+A4_subgroups=10 section_subgroups=5 section_iff_in_C3=True
+distinct_C3_pairs=6 all_generate_A4=True
+hostiles: V4_loop_fixed_cusps=0 kernel_T3_fixed_cusps=4
