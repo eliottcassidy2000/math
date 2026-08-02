@@ -1,0 +1,8 @@
+factorial_unit_contraction_n_lt_1536=True
+cantor_bessel_universe=all_256_words_length_le_8 bessel_face_integrality=True cartier_recursions=True
+direct_chamber_words_length_le_7=64 simple_faces=True residual_gcds_one=True
+thickened_cantor_terms_length_le_6=6412320 all_on_or_above_and_k_positive_strict=True
+full_moment_equals_terminal_faces_D=21,57,75,165,183,219,237 result=True
+full_moment_hulls=[(21, [[(0, 8), (1, 8), (19, 17)], [(0, 8), (20, 18)]]), (57, [[(0, 26), (1, 26), (55, 53)], [(0, 26), (56, 54)]]), (75, [[(0, 34), (1, 34), (73, 70)], [(0, 34), (74, 71)]]), (165, [[(0, 80), (1, 80), (163, 161)], [(0, 80), (164, 162)]]), (183, [[(0, 88), (1, 88), (181, 178)], [(0, 88), (182, 179)]]), (219, [[(0, 106), (1, 106), (217, 214)], [(0, 106), (218, 215)]]), (237, [[(0, 114), (1, 114), (235, 231)], [(0, 114), (236, 232)]])]
+hostile_D=201 ternary=21110 unit_ternary=2111 hulls=[[(0, 97), (1, 97), (10, 101), (37, 114), (199, 195)], [(0, 97), (9, 101), (36, 114), (200, 196)]] left_half=[(0, 1), (81, 1)] right_half=[(0, 1), (1, 1), (81, 1), (82, 1)] gcd_degree=81 gcd_sparse=[(0, 1), (81, 1)]
+broader_rule_hostiles=D525:unit20111_3,D1731:unit210101_3 reason=more_than_one_digit_1
