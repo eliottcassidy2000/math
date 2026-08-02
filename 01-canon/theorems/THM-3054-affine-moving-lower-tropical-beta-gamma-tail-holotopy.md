@@ -2,8 +2,8 @@
 id: THM-3054
 title: "Affine moving-lower tropical Beta-Gamma tail holotopy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE-FILE AUDIT
-  REQUESTED.  Along every affine penultimate-lower path with fixed terminal
+  PROVED + VERIFIED-EXACT + TWO INDEPENDENTLY HOSTILE-AUDITED.  Along every
+  affine penultimate-lower path with fixed terminal
   gap, the unique top tropical face of the formal factorial resultant is an
   explicit strict Beta-Gamma moment sequence.  Every other face is smaller
   by the sharp exponential gap ((k-1)^(k-1)/k^k)^C.  Conditional on the
@@ -30,7 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3054 -- affine moving-lower corners return to every finite Hankel chamber
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + TWO INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3051 proves that literal moving lower offsets can leave the Stieltjes
 cone at the first nontrivial widths.  THM-3053 identifies the right positive
@@ -51,7 +51,7 @@ Fix:
 ```text
 slot number k>=2,          integer depth n>=1,
 fixed lower offsets 0<=d_0<...<d_(k-3),
-affine moving offset C_c=s c+b, s>=1, b>=0,
+affine moving offset C_c=s c+b, integers s>=1, b>=0,
 fixed terminal gap h>=1,  M_c=C_c+h.                  (1)
 ```
 
@@ -116,7 +116,8 @@ sigma S^k U_C^mu, sigma in {+1,-1}.                   (7)
 
 Here `sigma` is one fixed resultant-orientation sign.
 
-There is a sharp universal gap.  If one pure coefficient is removed, its
+There is a partition-sharp universal gap, attained for `k>=3`.  If one pure
+coefficient is removed, its
 weight `k` is best redistributed as `(k-1)+1`, so the ratio of exponential
 bases is
 
@@ -451,4 +452,10 @@ python -O 04-computation/gmc_affine_moving_lower_tail_holotopy_thm3054.py
 
 Both modes equal the stored eleven-line transcript after LF normalization.
 
-**QED, pending independent immutable-file audit and status promotion.**
+Two independent immutable-file audits rederived the all-`k` tropical
+optimization, the exact Beta--Gamma factorization, the rational-ratio
+alternant, the `k<=4` sidecar, and the three-slot correction by paths
+independent of the companion.  Both replayed normal and optimized execution
+against the stored transcript and found no defect.
+
+**QED.**
