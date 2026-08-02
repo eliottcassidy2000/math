@@ -1,0 +1,13 @@
+prime_power_universe=odd_powers_le_400 count=12 values=9,25,27,49,81,121,125,169,243,289,343,361 coefficients=3672
+independent_bivariate_d9=True
+negative_parameter_laguerre_identity_d_le_49=True
+ratio_valuations_nonnegative_d_le_125=True
+ratio_equality_only_j_delta_k1=True
+predicted_newton_hulls=True
+digit_sum_face_index_sets=True
+scalar_prefix_residual_identity=True
+common_residual_gcds_one=True
+hostile_p3_nDminus1_j1_lifts=[(9, 1), (27, 1), (81, 1), (243, 1)]
+hostile_p5_nDminus2_j2_lifts=[(25, 1), (125, 1)]
+hostile_d15 p=3 A_hull=[(0, 5), (1, 5), (4, 6), (13, 10)] B_hull=[(0, 5), (3, 6), (12, 10), (13, 11), (14, 13)] shared=[slope=1/3:tame=False:gcd=[2, 1],slope=4/9:tame=False:gcd=[1, 1]]
+hostile_d15 p=5 A_hull=[(0, 2), (1, 2), (11, 4), (13, 6)] B_hull=[(0, 2), (10, 4), (14, 6)] shared=[slope=1/5:tame=False:gcd=[3, 3, 1]]
