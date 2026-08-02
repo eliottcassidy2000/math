@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-352 (2026-08-02, modular free-factor synthesis) -- an invariant cyclic substitution was called a `C3` action, and the four-point torsor was mistaken for a faithful modular carrier
+
+- **What was claimed:** the first version of the modular free-factor reflection
+  said that THM-3121/3134 cyclic substitution supplied an actual order-three
+  action on the full endpoint jet, and treated a pointed involution on the
+  THM-2950 `V4` torsor as a candidate faithful `C2*C3` carrier.
+- **First failed implication / exact witness:** the genuine `C3` action is
+  rotation of the **labelled input triple**; the substitution output is
+  invariant under it and forgets the rooted slot.  On the four-point torsor a
+  chosen pair flip `S` and oriented pair-cycle `R` satisfy the extra relation
+  `(SR)^3=1` and generate `V4 semidirect C3 = A4 = PSL2(F3)`.  In
+  `PSL2(Z)`, `(SR)^3=T^3` is nontrivial; for example it sends slope `(0,1)`
+  to `(3,1)`, although those slopes coincide modulo `3`.
+- **Repair / strongest survivor:** the exact intrinsic object is the
+  level-three congruence shadow, not a faithful modular action.  A genuine
+  lift needs both a rooted `C3` block and a `Gamma(3)`/Farey sidecar carrying
+  the lost `T^3` coordinate, plus a common physical atom.  The corrected
+  reflection now states this and scopes `C2*C3` only as a search grammar.
+
 ## MISTAKE-351 (2026-08-02, two live theorem-reservation races) -- a fresh fetch is only a snapshot, and moving both colliders to the same next ID repeats the collision
 
 - **What happened:** two independently valid results acquired `THM-3130`
