@@ -1,6 +1,6 @@
 ---
 id: THM-3154
-title: "Sharp small-part profile jet and central/facet reconstruction"
+title: "Sharp small-part profile jet and central-class/facet reconstruction"
 status: >
   PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
   For partitions of N, length together with the multiplicities of parts
@@ -8,14 +8,17 @@ status: >
   initial small-part flags.  Its multivariate endpoint factorial jet recovers
   every partition coordinate and hence every Hasse facet, while an exact
   rational kernel transports the whole jet through virtual pole subtraction.
-  The same code reconstructs every symmetric-group conjugacy class and
-  central coefficient.  This is a complete observer, not a positivity proof.
+  The same code reconstructs every symmetric-group conjugacy-class index and
+  hence evaluates any specified central class function.  This is a complete
+  observer, not a positivity proof or a source of unspecified coefficient
+  values.
 source: root/multiscale-newton-flag/low-child-flag-extension-2026-08-02
 depends_on:
   - THM-3127-partition-refinement-strassen-upset-dual-and-filter-response
   - THM-3129-bounded-poset-upset-facet-irredundancy
   - THM-3147-length-singleton-endpoint-jet-facet-observer
 related:
+  - THM-2022-gmc2-frobenius-lowest-balanced-face
   - THM-3112-cycle-weighted-young-subgroup-gap-and-uniform-octopus-boundary
   - THM-3123-heptic-e3-remaining-accessory-classification-and-s7-monodromy
   - THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform
@@ -27,7 +30,7 @@ output_sha256: 6833ba109704e4029f073122c3467e86b2c7e60da88016f16c4c46f5f408cad2
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3154 -- sharp small-part profile jet and central/facet reconstruction
+# THM-3154 -- sharp small-part profile jet and central-class/facet reconstruction
 
 **PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
 
@@ -37,7 +40,7 @@ compression has a sharp universal completion.  In fixed degree one need not
 mark every part size: length plus an initial half-range of small-part counts
 already determines the entire partition.  The resulting endpoint jet is a
 complete coordinate chart for Hasse facets, virtual-pole holotopies, and
-central symmetric-group coefficients.
+specified central symmetric-group class functions.
 
 Completeness is deliberately separated from sign.  THM-3129 makes every
 nontrivial upset a genuine facet, and the inversion below has alternating
@@ -210,7 +213,7 @@ This is a coordinate reconstruction, not a facet compression.  There are
 exactly `p(N)` admissible codes because `(7)` is injective, and the alternating
 signs in `(14)` provide no automatic positivity.
 
-## 4. Symmetric-group central reconstruction
+## 4. Symmetric-group central-class reconstruction
 
 Apply `(7)` to the cycle partition of a permutation `sigma in S_N`.  Then
 
@@ -219,18 +222,20 @@ ell(lambda)=number of cycles of sigma,
 m_r(lambda)=number of r-cycles of sigma.                     (16)
 ```
 
-The faithful code therefore determines the complete conjugacy class.  In
-particular it reconstructs every central class function and every central
-group-algebra coefficient.  For the cycle-weighted operator of THM-3112,
+The faithful code therefore determines the complete conjugacy-class index.
+Consequently, once a central class function is specified by a formula or
+class table, its value can be evaluated from the code.  The code does not
+invent or recover an arbitrary table of coefficient values which was never
+supplied.  For the specified cycle-weighted operator of THM-3112,
 
 ```text
 p_lambda(S)=product_(r>=1) p_r(S)^m_r(lambda)                (17)
 ```
 
-is exactly recoverable from the code even though only the initial `m_r` are
+is exactly evaluable from the code even though only the initial `m_r` are
 displayed: the missing large cycle, if present, is reconstructed by `(8)`.
-This supplies the full central coefficient data behind `Omega_N(S)` and its
-signed product-Gamma combinations.
+Together with the given alphabets and signed-bank formula, this evaluates the
+central coefficients of `Omega_N(S)` and its product-Gamma combinations.
 
 It supplies no positive-semidefinite sign.  THM-3112's equal-support-size
 hostile cycle types `(4,1,1)` and `(2,2,1,1)` are separated by `(7)`, but
@@ -260,6 +265,37 @@ Likewise, reconstruction of a partition or conjugacy class does not recover
 labels, incidence, endpoint phase, or a root-sheet coupling.  The theorem
 cannot be used as an LRC or tournament bridge when the target varies inside
 a profile fibre.
+
+There is a particularly sharp boundary against replacing the successful
+GMC2 face argument by a still larger partition jet.  In characteristic `p`,
+
+```text
+m_lambda[X]^p=m_(p lambda)[X],                              (18)
+```
+
+so the Kummer/Frobenius layer of THM-2022 has an exact unlabeled shadow on
+the dilated partition types `p lambda`.  The code recognizes this shadow:
+
+```text
+m_r(p lambda)=0 unless p divides r,
+m_(pr)(p lambda)=m_r(lambda).                               (19)
+```
+
+But sorting a labelled multiplicity vector into a partition erases its
+charge assignment.  The minimal hostile is
+
+```text
+charges q=(1,-1,2),
+s=(1,1,0),              q dot s=0,
+t=(1,0,1),              q dot t=3.                          (20)
+```
+
+The positive entries of both `s` and `t` have the identical partition
+`(1,1)`, hence identical complete profile code, while only `s` is balanced.
+Thus no refinement by further unlabeled `m_r` coordinates can recover the
+labelled balanced face or its coefficient phase `Q^p`.  The indispensable
+THM-2022 sidecar is the support/charge assignment together with the whole-face
+coefficient sum, not another partition statistic.
 
 ## 6. Exact companion and scope
 
