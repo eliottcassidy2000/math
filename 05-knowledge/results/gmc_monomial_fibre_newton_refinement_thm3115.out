@@ -1,0 +1,19 @@
+fibre_identity=beta_N(S)=sum_mu m_mu(S)*Lbar_mu
+refinement_order=nu_coarsens_mu_implies_Lbar_mu<=Lbar_nu
+coefficient=G_mu=(Phi(hN)*m_mu(Q)-Phi(m_mu)*hN(Q))/base
+degree_bound=4N-10;excess_shell_zero
+N5:I1:tight:degree=10:slots=66:vectors=66:transport=66:direct=0:zero=0:used_edges=302:max_edges=6:edge_union=7:shell=PASS:offgrid=PASS
+N6:I1:tight:degree=14:slots=120:vectors=120:transport=120:direct=0:zero=0:used_edges=903:max_edges=10:edge_union=17:shell=PASS:offgrid=PASS
+N7:I1:tight:degree=18:slots=190:vectors=190:transport=190:direct=0:zero=0:used_edges=2000:max_edges=14:edge_union=32:shell=PASS:offgrid=PASS
+N5:I1:wide:degree=10:slots=66:vectors=66:transport=66:direct=0:zero=0:used_edges=302:max_edges=6:edge_union=9:shell=PASS:offgrid=PASS
+N6:I1:wide:degree=14:slots=120:vectors=120:transport=120:direct=0:zero=0:used_edges=903:max_edges=10:edge_union=23:shell=PASS:offgrid=PASS
+N7:I1:wide:degree=18:slots=190:vectors=190:transport=190:direct=0:zero=0:used_edges=1999:max_edges=14:edge_union=37:shell=PASS:offgrid=PASS
+N5:I2:tight:degree=10:slots=66:vectors=66:transport=66:direct=0:zero=0:used_edges=302:max_edges=6:edge_union=7:shell=PASS:offgrid=PASS
+N6:I2:tight:degree=14:slots=120:vectors=120:transport=120:direct=0:zero=0:used_edges=903:max_edges=10:edge_union=18:shell=PASS:offgrid=PASS
+N7:I2:tight:degree=18:slots=190:vectors=190:transport=190:direct=0:zero=0:used_edges=2000:max_edges=14:edge_union=32:shell=PASS:offgrid=PASS
+N5:I2:wide:degree=10:slots=66:vectors=66:transport=66:direct=0:zero=0:used_edges=302:max_edges=6:edge_union=9:shell=PASS:offgrid=PASS
+N6:I2:wide:degree=14:slots=120:vectors=120:transport=120:direct=0:zero=0:used_edges=903:max_edges=10:edge_union=23:shell=PASS:offgrid=PASS
+N7:I2:wide:degree=18:slots=190:vectors=190:transport=190:direct=0:zero=0:used_edges=1999:max_edges=14:edge_union=37:shell=PASS:offgrid=PASS
+certificate_sha256=6425cb28d1e7753ac9b21a36a0a425e4e1a05d3a92c1edfeb86abb4a098abd9b
+global_scope=N=5,6,7;both_banks;all_integer_0<a<b
+all_exact_checks=PASS
