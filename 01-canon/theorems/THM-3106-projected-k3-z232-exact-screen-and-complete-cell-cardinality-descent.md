@@ -2,12 +2,18 @@
 id: THM-3106
 title: "Projected k3 z232 exact screen and complete-cell cardinality descent"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / INDEPENDENT HOSTILE AUDIT
-  REQUIRED.  The candidate closes all three rows in the pinned projected
-  k=3, z1=232 necessary layer.  If promoted, it updates the projected ledger
-  to 374322 and lowers the cap to z1<=231.  The nine z1=231 rows remain
-  occupied and unscouted.  No LRC(14) claim is made.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  All three rows in
+  the pinned projected k=3, z1=232 necessary layer are empty.  The projected
+  ledger is 374322 and its cap is z1<=231.  The nine z1=231 rows remain
+  occupied.  No LRC(14) claim is made.
 source: codex-thm3094-hostile-audit-2026-08-02
+audit: >
+  An independent audit replayed normal and optimized modes byte-for-byte,
+  rederived the scalar terminal and all implication directions, and rebuilt
+  the 37,702-cell carrier directly on the full Z/LZ grid without inherited
+  ranges or serialized low/high tables.  Every one of the 24 projected
+  supports exceeds ceil(d/7), with minimum actual slack six; hashes,
+  dependencies, the disjoint ledger, endpoint typing, and docs all pass.
 depends_on:
   - THM-3102-projected-k3-z233-exact-screen-and-complete-cell-cardinality-descent
   - THM-3078-z234-direct-farkas-normalization-and-four-two-high-boundary
@@ -24,8 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3106 -- projected k3 z232 exact screen and complete-cell cardinality descent
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / INDEPENDENT HOSTILE AUDIT
-REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Candidate statement
 
@@ -52,15 +57,13 @@ strictly positive.  Since every row in `(1)` is a wall row, the inherited
 wall gate requires at least one high suffix label; therefore the residual
 sector has exactly one high label.  The complete one-high enumeration has
 `24` cases, and complete-cell translated-band cardinality closes every one.
-Thus the candidate conclusion is
+Thus
 
 ```text
 all three projected k=3, z_1=232 necessary rows are empty. (3)
 ```
 
-No ledger or cap change follows before independent audit and promotion.  If
-the candidate is promoted, composition with THM-3102 gives the disjoint
-layer subtraction
+Composition with THM-3102 gives the disjoint layer subtraction
 
 ```text
 374325-3=374322,
@@ -353,10 +356,9 @@ The `z_1=231` census in `(6)` consists exactly of:
 This table is only an occupied handoff.  None of its nine rows has been
 screened by the companion, and no emptiness claim is made at `z_1=231`.
 
-**Scope.**  This proof-complete candidate acts only in the pinned projected
+**Scope.**  This theorem acts only in the pinned projected
 `k=3` necessary atlas.  It does not classify physical covers outside that
 projection, say anything about arbitrary `k<=1` packets or the final rung,
-or prove LRC(14).  Until independent hostile audit and explicit promotion,
-THM-3102's proved ledger `374325` and cap `z_1<=232` remain canonical.
+or prove LRC(14).
 
-QED (candidate; audit required).
+QED.
