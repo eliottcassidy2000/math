@@ -14,6 +14,8 @@ general structural tools.
    when their directed graph contains a cycle.  This repairs the exceptional
    body `H2` at caps `7/3` and `5/2`, while proving that the standard
    single-pair uniform-envelope lanes for `H` form a DAG and cannot cover.
+   Independently, THM-3113/3114 close the projected `k=3` layers
+   `z1=229,228,227,226`, lowering that cap to `225` and the ledger to `374172`.
 2. For the **planar Jacobian response lane**, a common simple zero of `V` and
    `M` is impossible throughout the normalized nonsplit exact-square-prefix
    Faber bank for `R>=7`.  The first possible balanced boundary is therefore
@@ -43,6 +45,7 @@ with exact failure mechanisms and cheap next tests.
 | lane | proved new mathematics | exact frontier gain | live bottleneck |
 |---|---|---|---|
 | LRC(14), grid response | [THM-3130](../01-canon/theorems/THM-3130-divisor-antichain-totient-response-and-supermodular-witness-loss.md) | principal totient-tail product, antichain inclusion--exclusion, decreasing supermodular insertion loss, divisor-death barcode | fixed grid is not the continuous loneliness profile; normalized upward transport fails at `q=6` |
+| LRC(14), projected `k=3` | THM-3113/3114 | all `43+5+30+13` rows at `z1=229..226` close; cap `225`, ledger `374172`; THM-3126 independently reproves the six `z1=229` terminal prefixes | next layer is the exact `78`-row wall bank at `z1=225`; arbitrary `k<=1`, the rung, and LRC(14) remain open |
 | LRC(14), reflected levels | [THM-3135](../01-canon/theorems/THM-3135-directed-cycle-weak-order-lane-cover-and-reflected-h-boundary.md) | exact cycle/DAG cover criterion; `H2` repaired at caps `7/3,5/2`; `H` isolated as a scoped DAG obstruction | find a multi-pair, nonuniform, median, or tree certificate for `H`; reflected global residual stays `561` |
 | planar Jacobian response | [THM-3133](../01-canon/theorems/THM-3133-common-simple-zero-faber-exclusion-and-odd-bipole-boundary.md) | all common simple zeros excluded; balanced survivor has `s_resp=0`, `R=3k+2`, `N>=2(4k+3)`; bound abstractly sharp | enter the first equality cell `R=8,N=22,(11,11)` into the actual Faber/source chart or exclude it |
 | factorial, exact quadratics | [THM-3131](../01-canon/theorems/THM-3131-prime-resonance-newton-slope-separation.md) | infinitely many shifted windows closed uniformly: every prime `r+2`; residual begins beyond the old `r<=200` census | composite resonances; Newton polygons may overlap and require residual/unit data or another place |
@@ -56,7 +59,8 @@ is the tournament substitution kernel, [THM-3123](../01-canon/theorems/THM-3123-
 completes the abstract heptic accessory atlas, [THM-3124](../01-canon/theorems/THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census.md)
 gives the quadratic factorial recurrence and `r<=200` census, and
 [THM-3126](../01-canon/theorems/THM-3126-six-z229-prefix-divisor-universal-complete-cell-closure.md)
-closes six named `z1=229` LRC prefix families.
+independently reproves the six `z1=229` terminal prefixes inside the now
+promoted THM-3113/3114 descent.
 
 ## Inheritance pass
 
@@ -361,6 +365,29 @@ positive mass transport.  Before invoking monotonicity, add a cemetery state,
 an upset dual, or a transverse selector explicitly and test whether that
 addition preserves the original target predicate.
 
+### E. The binary/ternary modular frame is a sidecar-completion problem
+
+The formal grammar `PSL_2(Z)=C2*C3` is useful only after typing both moves on
+one carrier.  The ternary move is honest `C3` substitution, but it acts on the
+complete tournament endpoint jet, not on `H`.  On the quartic/cubic-resolvent
+side, `S4/V4=S3` retains the quotient while losing the point of the `V4` lift
+torsor; a candidate `C2` generator must therefore be a pointed involution,
+not the unpointed torsor or a scalar cofactor.
+
+No common carrier or faithful modular action is proved.  The strongest
+survivor is a typed search grammar:
+
+```text
+C3 move sidecar = complete endpoint jet;
+C2 move sidecar = pointed V4 half-system plus pair orientation.             (16)
+```
+
+The cheapest tests are a Farey-flank determinant check, reduced-word collision
+search under `S^2=R^3=1`, and two orthogonal hostiles that vary one sidecar
+while holding the other fixed.  An extra relation would prove factorization
+through a proper quotient; absence in a bounded search would remain evidence,
+not faithfulness.
+
 ## Specific niche problems considered
 
 | niche problem | current status | decisive evidence | next move |
@@ -368,10 +395,11 @@ addition preserves the original target predicate.
 | Repair the reflected `H2` split tails | **PROVED + FINITE-EXACT** | corrected same-pair low/high two-cycle; all `59` and `114` heads positive | integrate only into the two named caps; do not promote the global cones |
 | Repair `H` by another standard single-pair tail | **REFUTED in the declared envelope class** | all `90` pair/side choices give a DAG; complementary limits are negative | introduce a genuinely multi-pair/nonuniform response or a median/tree cell |
 | Fixed cell-90 two-star insertion for `H` | **FINITE-EXACT SCOUT** | all `569,520` injections into `[D,2D]`, `6<=D<=10`, have a winning single edge; tree was unnecessary | derive why the winning edge exists and extend with the actual inherited filters before canonization |
-| Exhaust the six named `z1=229` LRC prefixes | **PROVED for named prefixes** | THM-3126: `792=744+48` divisor/support proof | independently replay THM-3113 before claiming the prefixes are exhaustive or cap `228` |
+| Projected `k=3` layers `z1=229..226` | **PROVED + VERIFIED-EXACT** | THM-3113/3114 close `91` rows; THM-3126 independently reproves the six `z1=229` terminal carriers | attack the exact `78` wall rows at `z1=225`; do not infer a physical-cover census |
 | Composite quadratic factorial resonance | **OPEN, sharply typed** | prime resonances excluded; composite `d=4,6` defeat slope-only inference while gcd remains one | build a prime-place/residual-unit atlas and isolate the true exceptional `d` classes |
 | First balanced JC equality cell `R=8,N=22,(11,11)` | **OPEN chart-entry problem** | THM-3133 proves it is the first possible cell and constructs the abstract odd-bipole boundary | solve or eliminate the source equations `A_src,B_src,d_F,s_F` and all fluxes in this one cell |
 | Other tournament quotients with fast transforms | **OPEN classification problem** | `C3` denominator has one diagonal pole and finite-difference separability | enumerate small quotients by denominator geometry and minimal profile-state width, not only by `H` |
+| Common `C2*C3` carrier for quartic lifts and tournament substitution | **STRUCTURAL SYNTHESIS / OPEN** | exact local moves exist only after different sidecars: pointed `V4` origin and endpoint jet | run Farey-flank and reduced-word tests; do not call the shared arities a modular action |
 | Positive Young selector after signed forest lift | **OPEN with exact hostile** | even-rank signed surjectivity, but active coarsest upset `-2324160` | find a selector transverse to the deletion kernel or prove an invariant-upset no-go for a wider class |
 
 ## Next decisive work
@@ -386,9 +414,10 @@ addition preserves the original target predicate.
    inequality from the `569,520` finite wins, then replay it with the full
    THM-2941 inherited filters through at least `D<=20` and hostile boundary
    levels.
-3. **Keep the independent cap lane alive.**  Give THM-3113 an immutable
-   independent screen replay before turning THM-3126's six named prefixes
-   into an exhaustive `z1=229` statement.
+3. **Continue the projected cap descent.**  THM-3113/3114 and the independent
+   THM-3126 route now agree at `z1=229`; the next declared universe is exactly
+   the `78` all-wall rows at `z1=225`.  Preserve certificate-free semantic
+   hashes and the zero-high hostile while extending the terminal construction.
 
 ### Niche -- factorial sequences
 
