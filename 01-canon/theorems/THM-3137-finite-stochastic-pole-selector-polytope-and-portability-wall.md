@@ -2,7 +2,7 @@
 id: THM-3137
 title: "Finite stochastic pole-selector polytope, moment separation, and portability wall"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   At support (1,3), bank I2, the probability laws on the eight physical
   one-pole virtual-prefix currents that are Hasse-positive in every degree
   5 through 9 form an exact two-facet polytope with 24 vertices, all of
@@ -15,6 +15,15 @@ status: >
   This is a finite averaged-current theorem, not an original-response
   decomposition or a stochastic pole flag.
 source: root/multiscale-newton-flag/product-gamma-width3-2026-08-02
+audit: >
+  An independent theorem audit reconstructed the upset/antichain criterion,
+  all 815 primitive rows, the B-alpha A redundancy, active-system vertex
+  completeness, all 24 support-two vertices, both fixed-support bank laws,
+  the same-mean variance hostile, and the cross-support Farkas wall.  A
+  separate degree-ten enumeration recovered both nested-tail rows, their
+  R+11S certificate, the zero idle coordinate, and the strictly negative
+  33-state two-pole row with its declared range.  Normal and optimized exact
+  replays match the stored transcript and LF hashes.
 depends_on:
   - THM-3110-arbitrary-anchored-product-gamma-dominant-tail-and-low-histogram-reduction
   - THM-3115-low-degree-monomial-fibre-newton-refinement-transport
@@ -31,8 +40,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3137 -- finite stochastic pole-selector polytope, moment separation, and portability wall
 
-**PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3120 gives a positive scalar Newton pole flag, but the associated
 one-letter virtual-prefix Young current need not lie in the nonnegative Hasse
@@ -424,4 +432,4 @@ The strongest positive survivor is the exact two-facet convex repair through
 degree nine.  The strongest stopping result is the degree-ten Farkas wall for
 one-pole, lazy one-pole, and pure two-pole probability selectors.
 
-QED (candidate pending independent theorem audit).
+QED.
