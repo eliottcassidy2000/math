@@ -1,0 +1,7 @@
+degree_reason=deg(m_mu)<=N+length(mu);base_degree=9
+relevant_degree=4N-10 because Lbar_(1^N)=0
+N8:I1:tight:degree=23:flow=276:zero=24:sign_patterns=13:used_edges=209:max_edges=20:edge_union=37:max_posneg=21/7:restricted=row:229,hooks:241,two_row:229,union:241:singleton={'negative': 276, 'zero': 24}:shell=PASS:offgrid=PASS:digest=93164dbdcd5b58aae4f989451bf9feb11ca22f10edd4b732d75eefb2633e6330
+N8:I1:wide:degree=23:flow=276:zero=24:sign_patterns=14:used_edges=295:max_edges=20:edge_union=47:max_posneg=21/8:restricted=row:219,hooks:230,two_row:219,union:230:singleton={'zero': 25, 'negative': 275}:shell=PASS:offgrid=PASS:digest=84dc6f171a7c5a6699686ec70c4d3ce733afbfa6124f247ca5a52dfd46e3abb2
+N8:I2:tight:degree=23:flow=276:zero=24:sign_patterns=13:used_edges=272:max_edges=20:edge_union=38:max_posneg=21/7:restricted=row:219,hooks:234,two_row:219,union:234:singleton={'negative': 276, 'zero': 24}:shell=PASS:offgrid=PASS:digest=0c3cb60aa6a0598083eb0ede822fb10de055f3c952ae000dd8b93b0cbbc1cf85
+N8:I2:wide:degree=23:flow=276:zero=24:sign_patterns=14:used_edges=299:max_edges=20:edge_union=46:max_posneg=21/8:restricted=row:219,hooks:230,two_row:219,union:230:singleton={'zero': 25, 'negative': 275}:shell=PASS:offgrid=PASS:digest=b82af11957d7e9a7b0f7584302d4bdef002f16e33fe239234d5577fbf30de1ec
+all_exact_checks=PASS

@@ -1,0 +1,9 @@
+projected_five_forest_boundary=exact_mod2_rank_certificate
+K6=rank4_partitions:31:rank_F2:31:lex_five_forests_to_full_rank:433
+K7=rank4_partitions:301:rank_F2:301:lex_five_forests_to_full_rank:3187
+K8=rank4_partitions:1701:rank_F2:1701:lex_five_forests_to_full_rank:13683
+K9=rank4_partitions:6951:rank_F2:6951:lex_five_forests_to_full_rank:44524
+actual_product_gamma_spaces=K8,K9:full_row_rank_over_F2
+integer_signed_matrix=full_row_rank_over_Q:odd_maximal_minor
+every_rational_rank4_current=projection_of_rational_forest_cycle
+all_exact_checks=PASS
