@@ -1,0 +1,14 @@
+N=2:types=2:edges=1:upsets=3:nontrivial_facets=1:digest=b744d600fbe3853702978ec726c166d26274fe7b09b2c600ddf2d7d895667b24
+N=3:types=3:edges=2:upsets=4:nontrivial_facets=2:digest=181e9a30c4cbe7d2259e7950c73d23a8bfed164d7b2737bd68693aa40b68f264
+N=4:types=5:edges=5:upsets=7:nontrivial_facets=5:digest=8f13d6073af43f8182028be13bfcb1b1124049aab7e6256d53b688d0ec97c10a
+N=5:types=7:edges=9:upsets=10:nontrivial_facets=8:digest=212458b3f56ed87431524a191a529920170c836679c55eff89f460c793493f7f
+N=6:types=11:edges=17:upsets=27:nontrivial_facets=25:digest=d18becb9c427f86092cbd5f29fbc0cc2f9feb433a2f5022cd93a3d21dfc97ab3
+N=7:types=15:edges=28:upsets=47:nontrivial_facets=45:digest=9c7cfc837dbe57f4d348b6c0e198e3790be202870002661979439eb38584246b
+N=8:types=22:edges=47:upsets=168:nontrivial_facets=166:digest=db30ad5c91834b693f41b1a47f8b908efee5d3a6f5b5ab44cc808280b9a65fc9
+N=9:types=30:edges=73:upsets=573:nontrivial_facets=571:digest=4ddc01edf3d2aa6db95c31709defb01f49ee175e0b4833f4932fbe5255ddbe52
+N=10:types=42:edges=114:upsets=3588:nontrivial_facets=3586:digest=a87752de7bbd524a49c22978445ed764e93cf4b0009faa56ccb028a3db76d43a
+N=11:types=56:edges=170:upsets=19542:nontrivial_facets=19540:digest=53043b63883b4809530a62244f59b5a41cd1169df7ad27ee53f08ec7ab9153a8
+disconnected_upset=two_maxima:indicator=sum_components:PASS
+disconnected_complement=two_minima:quotient_difference=constant_one:PASS
+bounded_partition_poset=every_nontrivial_upset_is_a_bond_facet
+all_exact_checks=PASS
