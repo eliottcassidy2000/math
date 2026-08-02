@@ -127,6 +127,12 @@ def main() -> None:
         sp.factor(h_mobius.subs(t, theta_mobius) - u) == 0,
         "general Mobius right inverse",
     )
+    mobius_determinant = alpha * delta - beta * gamma
+    mobius_square = (delta + gamma * theta_mobius) ** 2 / mobius_determinant
+    require(
+        sp.factor(sp.diff(theta_mobius, u) - mobius_square) == 0,
+        "Mobius derivative square law",
+    )
 
     # One-stage packet: g=1,e=5, theta=3u and P=u=theta/3.
     theta_one = 3 * u
@@ -179,6 +185,7 @@ def main() -> None:
     print("target_initial=tau=rho^E*K(theta)")
     print("prefactor_initial=u_N=rho^(E-e)*L(theta)")
     print("autonomous_decoder=theta_prime=E*kappa^-1*theta^(1-A)*K(theta)/L(theta)")
+    print("mobius_square=K(T)/L(T)=kappa/(E*(ad-bc))*T^(A-1)*(a-cT)^2")
     print("strict_torsor=(m^g/r^e,m^gamma*r^delta);degree=gcd(g,e);kernel=mu_gcd(g,e)")
     print("one_stage=theta=3u;H=theta/3")
     print("two_stage=theta=9/u;H=9/theta;theta_prime=-theta^2/9")

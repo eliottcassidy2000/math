@@ -8,7 +8,9 @@ status: >
   generates the full residue field: C(u)=C(theta).  Consequently theta is a
   Mobius function of u, and every terminal initial coefficient has the form
   rho^w H(theta) with H rational.  The target, two-form prefactor, and exact
-  Keller coefficient reduce to one autonomous rational decoder for theta.
+  Keller coefficient reduce to one autonomous rational decoder for theta;
+  Mobius differentiation further forces its target/prefactor quotient to be
+  a monomial times the square of one linear form.
   At every earlier strict stage, retaining the nonprimitive relation
   m^g/r^e=c^d and a Bezout complement is a degree-d torus isogeny with exact
   kernel mu_d; retaining the primitive c makes it unimodular.  Thus the gcd
@@ -26,8 +28,8 @@ related:
   - THM-3077-pointed-norm-relative-line-lift-and-relation-carry-obstruction
 script: 04-computation/jc_terminal_toric_residue_decoder_thm3081.py
 output: 05-knowledge/results/jc_terminal_toric_residue_decoder_thm3081.out
-script_sha256: 8dba9d6b52e761d4c47521e44f338269c51b0871edd8db015779124c75e24e60
-output_sha256: d46b611978b56cf17355bbd12b047b4c92fb7f10063806509e43c134fe789e56
+script_sha256: 46d63117fe376e13d534707453824db2e8578e52aba7106ee9e30981431bee46
+output_sha256: 6e25871afd87df7c0057871a8ab4aacf740455454757d665b45f7343f94bcd09
 hash_basis: LF-normalized bytes
 ---
 
@@ -252,6 +254,24 @@ Combining `(24)` with `u=H_P(theta)` yields the rational identity
 ```text
 H_P'(T) E kappa^(-1) T^(1-A) K(T)/L(T)=1.               (25)
 ```
+
+The Mobius form `(19)` makes `(25)` completely explicit.  With
+`Delta=ad-bc`, direct differentiation and substitution of the inverse map
+give
+
+```text
+theta'=(a-c theta)^2/Delta,                              (25a)
+
+K(T)/L(T)
+ =kappa/(E Delta) T^(A-1)(a-cT)^2.                      (25b)
+```
+
+Thus away from the toric points `T=0,infinity`, the terminal
+target-to-prefactor ratio has at most one zero and it has even multiplicity
+two; it has no other finite zero or pole.  The square marks the point
+`u=infinity` in the Mobius coordinate.  This resembles the square sidecars
+in the repo's cubic resolvent/discriminant anatomy, but no identification
+with a physical quartic resolvent is asserted here.
 
 Thus the terminal stage separates into a value-one scale `rho` and one
 Mobius residue coordinate `theta`; the Keller equation lives entirely on
