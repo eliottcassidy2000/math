@@ -66,15 +66,26 @@ Format per entry:
   Thus the admissible assignment `q_0=2,q_1=1` lies in the cap-two interval
   but in neither asserted lane.  Exhausting every channel *inside* each lane
   did not prove that the lanes cover every assignment.
-- **Repair / strongest survivor:** the cap-`3` half-cone remains quarantined,
-  as do the old one- and three-quarter-cone split proofs.  A replacement
-  cap-`5/2` referee fixes one physical pair across a closed Farey cover,
-  recomputes every surviving `561`-body obligation, couples channel scale to
-  singleton debt, and checks both hostile orientations.  It independently
-  restores `D>=6,3m>=2D`, so the proved reflected certificate-failure wedge is
-  now `561` bodies with `D>=6,1<=m<2D/3`.  Future split tails must assert a
-  disjunction on the original level assignment, not merely enumerate two
-  oriented channel lists.
+- **Initial repair / strongest survivor:** the cap-`3` half-cone claim was
+  quarantined, and the promoted one, three-quarter, and two-thirds refinements
+  became `AUDIT-REQUIRED` until an assignment-level orientation cover could be
+  proved.  The last unaffected assembled cone was the full-interval cap-`7/4`
+  theorem `D>=6, 3m>=4D`, leaving `561` bodies with
+  `D>=6,1<=m<4D/3`.  Future split tails must assert a disjunction on the
+  original level assignment, not merely enumerate two oriented channel lists.
+- **Promoted repair (2026-08-02):** the cap-`5/2` repair uses adjacent closed
+  intervals on one fixed physical pair, recomputes the CSP and both ordered
+  controls, and proves `D>=6,3m>=2D`.  The stronger cap-`3` repair recomputes
+  all `561` residual bodies and couples a lane `[u,v]` to the forced lower
+  bound `m>=ceil(alpha s/3)`, where `alpha=1/v` below one, `u` above one, and
+  `1` across one.  Fixed-pair interval chains cover the two acyclic hostile
+  bodies; an inverse-pair low-lane 2-cycle covers the third.  All `253`
+  constrained policies, `3,062` ordered controls, `35` tail lanes, and `1,600`
+  heads replay exactly.  Thus the reflected sufficient-family theorem now
+  proves `D>=6,2m>=D`, and its remaining wedge is
+  `561` bodies with `D>=6,1<=m<D/2`.  The original faulty sources remain
+  audit-required correction-lineage controls; their conclusions are
+  superseded by the repaired referees.
 
 ## MISTAKE-346 (2026-08-01, concurrent THM-3063 reservations) -- two distinct results acquired the same new theorem ID
 
