@@ -235,7 +235,8 @@ when
 gcd(q,w_1,...,w_r)=1.                                       (21)
 ```
 
-At `k=14`, both physical GMC families hit the unavoidable case for `C7`:
+At `k=14`, both GMC exponent pairs hit the unavoidable case for `C7` on the
+unrestricted two-input phase torus:
 
 ```text
 THM-3069: (a,b)=(14,13!),
@@ -245,7 +246,12 @@ gcd(a,b,91)=gcd(a+b,91)=7.                                 (22)
 
 No single endpoint monomial complement repairs the full `C91` pair.  Norm
 plus the relative line preserves the `C13` components but loses diagonal
-`C7`; a point or based lift restores it.
+`C7`; a point or based lift restores it.  This is not a new obstruction on
+the literal physical slices of THM-3063/3069: there the normal-resultant phase
+has fixed positive orientation (and `(-1)^14=1` in the one-normal case), so
+`r=T/S` already recovers the variable base phase.  The diagonal hostile
+applies when both input phases are genuinely variable, as in a proposed
+transport of independently labelled sidecars.
 
 ## 5. The tropical flag becomes a carry spectrum
 
@@ -332,7 +338,8 @@ The exact companion verifies:
 3. `833` exact winding/carry reconstructions;
 4. five truncated rational unit-germ logarithm/exponential lifts;
 5. exact pointed Fourier cyclotomic reductions at `p=7,13`;
-6. both `k=14` physical `C91` controls; and
+6. both `k=14` exponent-pair `C91` controls and the fixed-normal physical
+   boundary; and
 7. `2,925` recursive model-flag carry cells.
 
 Run
