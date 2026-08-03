@@ -2,8 +2,8 @@
 id: THM-3244
 title: "Unique-reset Rips routing and one-pole deletion-flow boundary"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On
-  the complete 4,319-state THM-3238 physical bank, the exact exposed-reset
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the complete
+  4,319-state THM-3238 physical bank, the exact exposed-reset
   functional has 32 nonreset one-pole local maxima, so global exposure does
   not induce a local deletion flow.  Its one-pole superlevel merge tree has
   33 births, 32 finite bars, and as many as 19 simultaneous components; the
@@ -41,9 +41,12 @@ audit: >
   dynamic program.  Exact edge differences verify the sharp two-state
   constant-blend obstruction.  Two independent audits compared the rank,
   cover, direction, and edge-difference certificates pointwise against the
-  full exact response cache and rederived the graph, dynamic program,
-  rational trap intervals, and scope implications.  One reconstruction of
-  all 22 unscaled response rows on all 4,319 states gave exact row-bank digest
+  full exact response cache.  They confirmed pairwise distinctness, the unique
+  maximum, and zero rank-certificate mismatches; rederived the merge tree,
+  induced graphs, dynamic program, rational trap intervals, and scope
+  implications; and matched every cover, direction, and displayed edge
+  difference.  One reconstruction of all 22 unscaled response rows on all
+  4,319 states gave exact row-bank digest
   366905601b960854d249e1f12ce02edeb55af17a638bb56673bd49c6dbba26e9.
   Fresh normal and optimized runs byte-match the stored output and declared
   hashes.  The audits repaired the folded reset-distance-preorder, local-flow,
@@ -271,7 +274,14 @@ Thus no one-hub two-jump routing exists.  The particular lower hub `A` in
 
 The failure in Section 2 belongs to the single combined functional `H`, not
 to the full lawful response bank.  Number the 22 positive upset rows exactly
-as in THM-3238 and write `f_i` for the unscaled response of row `i`.  Thus row
+as in THM-3238 and write
+
+```text
+f_i=r_(N_i,U_i)
+```
+
+for the unscaled response in `(5)` of that theorem.  Every stitched multiplier
+is positive, so this rescaling does not change a strict comparison.  Thus row
 2 is the degree-14 upset with minimal generators
 
 ```text
@@ -291,10 +301,10 @@ The exact target-bank split for rows 2 and 10 is
 |C_2\C_10|=304, |C_10\C_2|=103, uncovered=0.          (19)
 ```
 
-Consequently every nonreset state has a strict reset-monotone one-pole ascent
-in at least one of these two lawful coordinates.  A one-pole monotone move
-decreases `d(sigma,Q)` by exactly one.  Reapplying `(19)` therefore routes
-every state to `Q` in exactly `d(sigma,Q)` moves.
+Consequently every nonreset state has a strict reset-distance-monotone
+one-pole ascent in at least one of these two lawful coordinates.  Such a move
+decreases `d(sigma,Q)` by exactly one.  Reapplying `(19)` therefore routes every
+state to `Q` in exactly `d(sigma,Q)` moves.
 
 This pair is not an isolated coincidence.  The complete covering-pair census
 is
@@ -312,21 +322,24 @@ is
 (17,22) (18,19) (19,22) (21,22).                    (20)
 ```
 
-There are exactly 31 pairs.  No one-row atlas exists: the best single row is
-row 22, which covers 4,227 of the 4,318 nonreset states and misses 91.
+There are exactly 31 pairs.  No one-row atlas exists within these 22 THM-3238
+rows: the best single row is row 22, which covers 4,227 of the 4,318 nonreset
+states and misses 91.  This does not exhaust every possible lawful upset
+response outside the stitched bank.
 
 The selector in `(19)` is load-bearing.  Its choice of row may change after
-every pole edit.  Thus `(19)` is not one positive lawful dual, a convex
-combination of rows, a probability/Markov transport, or a scalar height
-function.  It is a finite local gauge atlas whose transition problem remains
-separate.
+every pole edit.  The certificate `(19)` does not furnish one positive lawful
+dual, a convex combination of rows, a probability/Markov transport, or a
+scalar height function.  It furnishes a finite state-dependent local gauge
+atlas whose transition problem remains separate.
 
 ### Transition geometry and sharp switch depth
 
-The ordinary nerve of the cover `{C_2,C_10}` has two vertices and one edge,
-so it is contractible.  In fact the overlap is connected in the physical
-one-pole graph.  The three induced-region statistics `(vertices, components,
-edges, cycle rank)` are
+The abstract set-cover nerve of `{C_2,C_10}` has two vertices and one edge, so
+it is contractible.  This is a statement about the finite cover, not a nerve
+lemma for a topological or simplicial model.  Separately, the overlap is
+connected in the physical one-pole graph.  The three induced-region statistics
+`(vertices, components, edges, cycle rank)` are
 
 ```text
 C_2\C_10: (304,29,  603,  328),
@@ -346,16 +359,17 @@ overlap states        3453   294  113  45  6.            (22)
 
 Thus 3,453 overlap states have no common local ascent direction.  More
 globally, minimize the number of row-label switches along a complete
-`Q`-monotone one-pole ascent route.  Exact dynamic programming along the
-`Q`-distance grading gives
+reset-distance-monotone one-pole ascent route.  Exact dynamic programming
+along the `Q`-distance grading gives
 
 ```text
 minimum switches        0     1  2
 nonreset states        716  3600  2.                     (23)
 ```
 
-There are 534 all-row-2 routes and 182 all-row-10 routes.  The two states
-sharply requiring two switches are
+There are 534 nonreset states admitting an all-row-2 route and 182 admitting
+an all-row-10 route; those state sets are disjoint.  The two states whose
+minimum is exactly two chart-label switches are
 
 ```text
 (1,2,2,3,3,4,4,5,5,6,7,8),
@@ -414,7 +428,7 @@ lambda>=L=44548722230872990/295146673301558860624447.   (29)
 
 Direct rational comparison gives `L<U`.  Thus `(27)` and `(29)` cover every
 positive `lambda`, proving that no constant positive combination of rows 2
-and 10 supplies a reset-monotone one-pole ascent everywhere.
+and 10 supplies a reset-distance-monotone one-pole ascent everywhere.
 
 Two trap states are sharp.  No single state can remain trapped in both pure
 limits: `(19)` says every state has an `f_2`-raising or `f_10`-raising edge,

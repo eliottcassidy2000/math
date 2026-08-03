@@ -112,11 +112,14 @@ The active new theorem packages sharpen this picture further:
   whose unique zero is the reset on the complete `4,319`-state physical bank.
   It closes one support-`(1,3)`/bank-`I2` face, not a local deletion flow or
   the other `229` faces.
-- **PROVED [THM-3244](../01-canon/theorems/THM-3244-unique-reset-exposure-deletion-graph-nonmorse-boundary.md)** proves that the exposed reset has `32` nonreset one-pole local maxima,
-  while radius `10` is the sharp reset-distance-monotone unique-sink scale and two
-  explicit hubs route the entire bank in at most two jumps.  The audit also
-  types the routing as a folded reset-distance preorder, not an orthant or an
-  arbitrary discrete-Morse conclusion.
+- **PROVED [THM-3244](../01-canon/theorems/THM-3244-unique-reset-exposure-deletion-graph-nonmorse-boundary.md)** proves that the exposed `H`-reset has `32` nonreset one-pole local
+  maxima, while lawful rows 2 and 10 cover every nonreset state by a
+  reset-distance-monotone one-pole ascent.  Among the 22 stitched rows there
+  are 31 covering pairs and no singleton cover; two chart-label switches are
+  sharply necessary.  Separately, radius `10` is the sharp `H`-unique-sink
+  scale and two hubs route the bank in at most two jumps.  The audit types
+  these as a state-dependent selector and folded preorder, not one scalar
+  gauge, an orthant, or an arbitrary discrete-Morse conclusion.
 - **PROVED [THM-3248](../01-canon/theorems/THM-3248-q4-paired-owner-stirling-compiler.md)** factors the full Q4 walk resolvent through two owner pairs and gives
   an exact all-depth finite-difference contraction, a positive one-sum
   Hamiltonian formula, and fixed-depth `O_d(M(r)+r log r)` unit-cost
@@ -141,7 +144,7 @@ do not identify the objects.
 | LRC owner/divisor shadows | cyclic word of length `168` plus pointed `Div(g)` intervals | gcd-carry Hodge split; median metric; saturated-top and label-loss boundaries | dilation, restoration, Singer compactification | branch stabilization, labelled supplier map, physical entry, cellwise safety |
 | minimal four-jet carrier | `H_13/K` on `169` points; full flags `E=V disjoint_union H_13` | full `13+156` response; exceptional module has exact generator width two | Heisenberg action, current orbit, Singer/blowup transport | target-preserving physical intertwiner and common ancestry |
 | carrier address | `G_delta` of size `13^3`, or `G_full` of size `13^4` | target axis, carrier imbalance; charged intertwiner and determinant gate | typed section, quotient gauge, exact `H_13` clutch | physical coefficient frame, positivity, neutral data, factor colours, ancestry |
-| factorial contact/reset flag | finite etale contact algebra plus one `4,319`-state physical bank | contact spectrum/order, exposed reset and sharp radius-10 routing | Hasse contact, upset stitching, Rips/edit scale, PRS step | other faces, cross-face flow, selected branch and global root choice |
+| factorial contact/reset flag | finite etale contact algebra plus one `4,319`-state physical bank | contact spectrum/order; exposed reset; lawful two-row one-pole selector; sharp radius-10 routing | Hasse contact, upset stitching, chart switching, Rips/edit scale, PRS step | other faces, common scalar gauge, cross-face flow, selected branch and global root choice |
 | exceptional normal coordinate | pivot or infinity parameter before specialization | strict-transform coefficient after leading cancellations | blow-up, reciprocal Newton polygon | physical/Keller chart entry and global continuation |
 | tournament quotient operator | multivariate determinant `D_Q` and walk series `W_Q` | Neumann domain, saddle, Q4 paired-owner numerator | substitution, order join, transitive blow-up | generic minimal response-equivalent sidecar |
 | sequence response state | fixed/moving jet, paired Stirling rows, or bounded transfer | exact coefficient or recurrence law | finite difference, decimation, continuant convolution | bit complexity, converse closure, generic seed computation |
@@ -214,9 +217,11 @@ charged multiplicities exceed the corresponding cyclic-module bounds `1`
 and `13`, so `K[E]` is not `H_13`-cyclic.  It needs exactly two generators:
 one point delta generates `K[V]` and another generates the regular summand.
 In THM-3247's characteristic-zero and certified specializations, its canonical
-current may replace the first delta.  The proved two-hub reset atlas has
-the same numerical response width, but no map between the structures is
-claimed.
+current may replace the first delta.  THM-3244's lawful reset selector also has
+width two, but the types differ: module width two means simultaneous linear
+generators, whereas the reset state chooses a lawful row and two states require
+two chart-label switches.  The coarse two-hub atlas is different again.  No map
+between these structures is claimed.
 
 ### 3.2 Carrier imbalance to the nonnormal Heisenberg clutch
 
@@ -459,7 +464,7 @@ cannot change the face and degree nine is the first live boundary term.
 | path-colour profile plus radius identifies tournament continuation | order-six exhaustive pair and transitive lifts | **REFUTED** | retain determinant/walk placement |
 | the Q4 denominator/owner pair computes its blowup sequence | compare denominator-only and full walk diagonals at `r=1` | **REFUTED** (`1` versus `5`) | retain `N=Y+Z+YZ+2CY`; paired Stirling contraction survives |
 | a depth-nine reset dual should extend unchanged | evaluate the first complete depth-ten layer | **REFUTED**, then stitched | 19 positive depth-ten hostiles; THM-3238's eight overlap rows repair the complete bank |
-| a globally exposed reset supplies an `H`-increasing one-pole deletion flow | enumerate exact one-pole maxima | **REFUTED** | THM-3244 proves 32 local maxima; sharp radius-10 two-hub routing is the survivor |
+| a globally exposed reset supplies an `H`-increasing one-pole deletion flow | enumerate exact one-pole maxima | **REFUTED, THEN REPAIRED WITH A SELECTOR** | THM-3244 proves 32 `H`-local maxima; rows 2/10 give a state-dependent one-pole atlas, while radius-10 two-hub routing repairs the single-height route coarsely |
 | every efficient sequence formula should be C-finite | compare fixed join jet, moving cyclic jet, and time-varying transfer | **REFUTED** | operation-specific C-finite, P-recursive, decimation, or moving-jet forms |
 
 The recurring lesson is not “keep all information.”  It is “name the next
@@ -530,18 +535,19 @@ The exact row atlas now reaches `r=2498`; the first unaudited row remains
 `r=2499,d=2501`.  THM-3238 has now glued the complete `4,319`-state physical
 bank for one support/bank face, while THM-3222 supplies `230` local collars
 and THM-3231 preserves the normal direction at a simple PRS wall.  Audited
-THM-3244 gives the exact failure and sharp coarse repair of the one-pole route
-on this bank.
+THM-3244 gives both the exact failure of the single-height one-pole route and
+two repairs on this bank: a lawful state-dependent rows-(2,10) selector at
+one-pole scale, and a sharp coarse radius-10/two-hub `H` route.
 
 The highest-value tests are:
 
 1. transport the twenty-two-row overlap cocircuit to the other `229` faces,
    first testing whether the eight nonprincipal transition rows have a
    face-independent construction;
-2. use THM-3244's independently rebuilt rank order, escape histogram and
-   minimal two-hub routing; ask whether strict-transform/pole labels lawfully
-   factor its macro-edges, then transport the coarse atlas rather than seeking
-   a nonexistent `H`-increasing local flow;
+2. transport THM-3244's 31 covering row pairs to the other faces, carrying the
+   direction masks and switch-depth invariant as sidecars; test whether one
+   pair is face-stable before asking for a common positive scalar gauge, and
+   use the radius-10/two-hub route only where the lawful local selector fails;
 3. use the strict-transform row at a resonance as the transition state across
    a reset wall, and audit whether the proved twice-Pell extracted-factor clock and
    quotient-tail tower remain compatible with the physical pole labels;
@@ -670,11 +676,13 @@ separately packaged.
    but its response state is the full Fourier bank rather than a scalar
    covariance law.
 6. **Exposed reset versus local flow.**  THM-3238 proves a global singleton.
-   Hostile-audited THM-3244 finds `32` one-pole local maxima and a
-   long merge-tree obstruction, refuting a deletion/Morse reading, but also a
-   sharp radius-`10` unique-sink graph and a minimal two-hub, two-jump atlas.
-   The immediate task is lawful macro-edge realization and cross-face
-   transport, not a renewed search for one-pole monotonicity on this bank.
+   Hostile-audited THM-3244 finds `32` one-pole `H`-local maxima and a long
+   merge-tree obstruction, refuting a deletion/Morse reading.  The full lawful
+   bank nevertheless has 31 covering row pairs; rows 2/10 route every state at
+   one-pole scale, with switch histogram `716/3,600/2`.  A separate
+   radius-`10` two-hub atlas repairs the single-height route coarsely.  The next
+   task is cross-face transport of the row selector and its direction sidecar,
+   not another search for `H`-monotonicity on this bank.
 
 These scouts all instantiate the same procedure: compile the operation,
 measure response-state width, exhibit the smallest controlled forgetting,
