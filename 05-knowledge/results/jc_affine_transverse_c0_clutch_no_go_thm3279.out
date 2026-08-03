@@ -1,0 +1,15 @@
+affine transverse C0 clutch critical no-go
+dependency_hash_checks=4
+universal=Res_y(R1,R2)=V^3*K_C;terms=(F40,K20);affine_nonconstant_degK=96;unique_top=32*A_lead^2*V_lead^5*d^3
+T_boundary_rows=((3, 8), (4, 11), (5, 14), (6, 17));lead=32*m*(m-1)/(m-2)^2*c*v^3
+S_boundary=ord(K_C)>=3;wall1:c=-2*v2/(3*v1^2);wall2:d=(45*v1^3-54*v1*v3+28*v2^2)/(90*v1^3)
+S_untunable=q5=-32*v2*R_S/(315*v1^2)
+case=4111 jets=(v1_nonzero,v2_nonzero,R_S_nonzero)=(1,1,1);wall=(c_nonzero,d_nonzero)=(1,1)
+case=4111 wall_control=unit_mod_ST;degrees=(K,H)=(96,52);ord_S(H)=2;gcd(H,T)=1;digest=c07d66a389368e57ff32cdcc1c10f134951a0f2008ed65b707033d8ea8844e8e
+case=4111 consequence=off_owner_resultant_multiplicity>=50
+case=3211 jets=(v1_nonzero,v2_nonzero,R_S_nonzero)=(1,1,1);wall=(c_nonzero,d_nonzero)=(1,1)
+case=3211 wall_control=unit_mod_ST;degrees=(K,H)=(96,52);ord_S(H)=2;gcd(H,T)=1;digest=41228f21741350a603d05efd59a11ec6157d5d0fb17b6b77f03f360cd81e78ad
+case=3211 consequence=off_owner_resultant_multiplicity>=50
+case_digests=('c07d66a389368e57ff32cdcc1c10f134951a0f2008ed65b707033d8ea8844e8e', '41228f21741350a603d05efd59a11ec6157d5d0fb17b6b77f03f360cd81e78ad')
+scope=all_affine_C0_with_B=1_and_constant_E0;constant_C0_inherited_THM3212;not_inverse_cover_not_JC2
+source_ast=(assert_nodes=0,float_literals=0)
