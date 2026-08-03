@@ -1,5 +1,5 @@
 ---
-id: THM-3246
+id: THM-3247
 title: "Heisenberg central-Fourier decomposition and canonical current cyclicity"
 status: "RESERVED / UNPROVED EMPTY STUB"
 source: root/creative-reframes/2026-08-03
@@ -7,7 +7,7 @@ depends_on: []
 related: []
 ---
 
-# THM-3246 -- Heisenberg central-Fourier decomposition and canonical current cyclicity
+# THM-3247 -- Heisenberg central-Fourier decomposition and canonical current cyclicity
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
