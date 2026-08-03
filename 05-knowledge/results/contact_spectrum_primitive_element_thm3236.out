@@ -1,0 +1,14 @@
+dependency_thm3232_sha256=dcf42b70cad1bc940aaeea13d7d0a4b981678b8d6ca87e828b06624c242d77a3
+assert_nodes=0,float_literals=0
+quadratic_power_orders=2..6,checks=5
+quadratic_generator_pattern=PCPCP
+quadratic_m2_spectrum=[-8,0,1]
+quadratic_m3_spectrum=[64,-16,1]
+quadratic_delayed=spectrum[-8,-16,1],kappa6
+cubic_collapsed_spectrum=[108,0,-9,1]
+cubic_delayed_spectrum=[-216,-108,-9,1]
+cubic_exceptional_kappa=[0,-162,0,216]
+discriminant_identity=Disc(chi)=Disc(S)*kappa^2
+f2_joint_pair_boundary=primitive_value_counts_2,2
+scope=coefficient-label-reconstruction-not-root-order-or-physical-carrier
+all_exact_checks=PASS
