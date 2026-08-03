@@ -2,7 +2,7 @@
 id: THM-3206
 title: "Heterogeneous factorial exterior reflection groupoid and fixed-plane holonomy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Every off-discriminant normalized factorial exterior block factors as
   iota F pi through one parameter-independent two-plane, with pi iota=I and
   F a projective involution.  Hence arbitrary heterogeneous products retain
@@ -18,8 +18,11 @@ audit: >
   pair invariant, a directly constructed Sylvester resultant, and the sharp
   scalar classification.  It also checks 119,256 heterogeneous words through
   lengths 5,4,3 over p=3,5,7 and two exact p=5 hostiles.  Normal and optimized
-  replay agree with the stored transcript.  Independent immutable audit is
-  pending.
+  replay agree with the stored transcript.  An independent immutable audit
+  rederived the split carrier, arbitrary-word atlas, binary-root involution,
+  Sylvester resultant, commutator and parabolic walls, including the
+  projective-infinity boundary; replayed both modes; and accepted the hashes
+  and scope.
 source: root/multiscale-newton-flag/low-child-flag-extension/2026-08-02
 depends_on:
   - THM-3191-factorial-block-exterior-clifford-law-and-global-carry-smith-profile
@@ -36,8 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3206 -- heterogeneous factorial exterior reflection groupoid and fixed-plane holonomy
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT
-PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3191 closes repeated factorial blocks with fixed residues by the cubic
 law `D^3=s^2 Delta D`.  Parameter variation does not destroy the exterior
@@ -360,4 +362,4 @@ determinant, kernel, conormal, and image-plane chart.  Finally it checks every
 entry of `(25)--(27)`.  Normal and optimized executions agree with the stored
 transcript.
 
-**QED (candidate pending independent immutable audit).**
+**QED.**

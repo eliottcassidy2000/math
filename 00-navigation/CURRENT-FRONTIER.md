@@ -50,18 +50,13 @@ quotient sidecars plus six-step nilpotence, but no transverse physical gluing
 (MISTAKE-281/300); THM-2721's current-zero `C3` corolla misses all `1134`
 placements.
 
-THM-2720/2742 restore target sections and primitive characters;
-THM-2744/2749 retain private units and both endpoint masks, with MISTAKE-310's
-half-tooth overlap.  MISTAKE-313 restores clock `e=1`; THM-2750/2751/2754/2757
-show that unit-pair, two-clock and marked-`K4` data still lack a physical
-carrier action.  THM-2763--2839 rebuild address, ancestry, positive-copy,
-half-step, Boolean and full-character sidecars, but either change source data,
-remain carry-blind/signed, or have empty endpoint fibre product.
-
-THM-2847--2894 add q3/q11/E3 ranks, borrow-aware convolution, Galois `C13`,
-Hermitian/Prony, `V4`, `Q8` and dicyclic channels.  Flat carry and unmarked
-central-sign descent remain the obstruction.  Next: `e9=(-9,+9,QB)`, clutch
-`(13,13,-1)`; ledger `165`.
+THM-2720--2839 restore target, character, endpoint, address, ancestry and
+Boolean sidecars; MISTAKE-310/313 repair half-tooth/clock typing, but no
+physical carrier survives every quotient. THM-2847--2894 build the Galois,
+Prony, `V4`, `Q8` and dicyclic channels. THM-3190 supplies a root-neutral
+central-odd bispectrum; THM-3208 proves that fibrewise positive sparse
+orbit-and-mass transport would forbid its `-1` clutch. Missing: that transport
+and `e9=(-9,+9,QB)` on one packet; ledger `165`.
 
 ### Independent routes that remain live
 
@@ -191,9 +186,9 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   reset, its two integral lattices, the full carry hierarchy, quadratic-character
   pre-reset holonomy, and the fixed-parameter exterior Clifford law with exact
   p-primary Smith profile. THM-3186 gives order-two/three P-recursive tails;
-  THM-3210 gives the exact nonmonotone window visible/invisible/invisible/visible
-  on a rational ray. A complementary chart survives, but these linear-time
-  scalar laws do not choose the coefficient-degree PRS chart.
+  THM-3210 realizes a visible/invisible/invisible/visible rational window.
+  THM-3206 keeps the complementary plane under heterogeneous blocks and makes
+  its parabolic wall a binary-quadratic resultant. None yet chooses the PRS chart.
 
 ### Live work
 

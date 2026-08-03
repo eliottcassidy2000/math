@@ -2,7 +2,7 @@
 id: THM-3208
 title: "Positive sparse-unit bispectrum charged line and central-clutch obstruction"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Over an odd cyclic root group, every nonzero nonnegative one- or two-site
   fibre is automatically a group-algebra unit.  Its normalized bispectrum
   reconstructs the projective cyclic orbit, while its raw Hermitian
@@ -18,8 +18,10 @@ audit: >
   orientations; and exhausts 10,416 normalized-bispectrum collision pairs
   over p=5,7.  It also checks the even-radix, broad-support, signed-mass,
   unequal-scale, and normalized-same/raw-opposite boundaries.  Normal and
-  optimized replay agree with the stored transcript.  Independent hostile
-  audit is pending.
+  optimized replay agree with the stored transcript.  An independent hostile
+  audit rederived the unit, equality-fibre, positive-orientation, varying-root
+  translation, integrated nonvanishing, and conditional clutch arguments;
+  replayed the immutable companion; and accepted every stated scope boundary.
 source: root/2026-08-02
 depends_on:
   - THM-2312-sparse-root-bispectrum-positive-word-current
@@ -37,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3208 -- positive sparse-unit bispectrum charged line and central-clutch obstruction
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2312 proves that a complete raw bispectrum face is positive on every
 active one/two-root word fibre.  THM-2802 proves, in a different part of the
@@ -282,4 +284,4 @@ an independent control of `(8)` on positive one/two-site banks; the proof of
 the unrestricted unit statement remains THM-2802.  There is no floating point,
 random sampling, imported executable, or assertion-sensitive test.
 
-**QED (candidate pending independent hostile audit).**
+**QED.**
