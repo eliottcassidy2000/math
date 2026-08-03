@@ -216,8 +216,9 @@ Additive nonsingularity does not preserve the full multiplicative phase label.
 
 ## 6. Necessary and sufficient sidecar
 
-Let `V` be any additional coefficient-plane word and allow all its phase
-translations.  Since `M_g` is already nonzero on the other 157 characters,
+Let `V in Q[C_168]` be any additional coefficient-plane word and allow all
+its phase translations.  Since `M_g` is already nonzero on the other 157
+characters,
 
 ```text
 span_C168(M_g,V)=Q[C_168]
