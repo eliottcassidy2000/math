@@ -396,4 +396,4 @@ A positive left inverse, order-reflecting quotient, or target factorization disc
 **Mechanism:** pre-scalar defects live in typed co-support, transition cones, base ideals, or incidence circuits; retaining one gives a stopping reason or low-rank update.
 **Caution:** fibres need not glue; require a target-preserving map, explicit basepoint and lawful composition. Empty intersections, base loci and vector kernels differ.
 Adjacency powers count relation walks, not time; chronology additionally needs lifetime and composition.
-**Evidence:** THM-2292/3144/2658/3156/3285--3288/3305/3306; the 2026-08-03 LRC/FC closures and Reynolds-power no-go.
+**Evidence:** THM-2292/3144/2658/3156/3285--3309/3311; support-minimal LRC/sequence circuits and the FC ancestry no-go retain one common object through its next operation.

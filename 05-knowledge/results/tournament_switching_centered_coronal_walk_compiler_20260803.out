@@ -1,0 +1,16 @@
+Tournament switching centered-coronal walk compiler
+operation=intrinsic_cut_switching_reverses_every_arc_between_the_two_sign_parts;centered_adjacency_C=2A-J_transforms_by_C_to_DCD;switch_sign_d_is_retained_up_to_global_negation
+identity=P(z)=det(I-zC);U_d(z)=dT(I-zC)^(-1)d=N_d(z)/P(z);G_(T^d)(2z)=sum_k_2^k_walk_k(T^d)z^k=U_d/(1-zU_d)=N_d/(P-zN_d)
+characteristic=det(I-2zA_(T^d))=P-zN_d;the_complete_scaled_walk_sequence_has_a_constant_coefficient_recurrence_from_this_degree_at_most_n_denominator
+coefficient_compiler=s_0=u_0=n;s_k=u_k+sum_(i=0)^(k-1)_u_i_s_(k-1-i),where_u_k=dT_C^k_d_and_s_k=2^k_walk_k(T^d)
+switching_class_average=average_d_U_d=tr((I-zC)^(-1));average_d_N_d=nP-zPprime;average_d_det(I-2zA_(T^d))=(1-nz)P+z^2Pprime
+exhaustion=orders_1_to_5;tournaments:1099;switch_cases:16933;moment_cells:252811;order_counts:((1, 1, 1), (2, 2, 4), (3, 8, 32), (4, 64, 512), (5, 1024, 16384));case_sha256:f5edbe1308c1f43503d0f790acbdabb9b09dbd741d6eed7c3df2ce1eb0057ad4;average_sha256:8289c5c82f0194084af60048cf055219ada6739fb6d76887603f5477c7fcde6f
+target_profile_census=(((1, 1), 1), ((2, 1), 2), ((3, 2), 8), ((4, 1), 16), ((4, 2), 48), ((5, 4), 384), ((5, 5), 640))
+hostile=transitive_T3_two_singleton_cuts_have_the_same_cut_size_and_centered_denominator_P:(1, 3, 6, 4);source_N:(3, 6, 4);middle_N:(3, 6, 12);source_adjacency_denominator:(1, 0, 0, 0);middle_adjacency_denominator:(1, 0, 0, -8);source_walks:(3, 3, 1, 0, 0, 0, 0, 0);middle_walks:(3, 3, 3, 3, 3, 3, 3, 3)
+first_failed_implication=centered_spectrum_or_switching_class_plus_cut_cardinality_does_not_determine_the_walk_sequence;the_observer_numerator_N_d_is_load_bearing
+source_target_map=source_is_the_centered_switching_class_with_a_signed_cut_observer_d;map_is_diagonal_conjugation_then_one_rank_one_J_update;target_is_the_total_directed_walk_sequence_and_adjacency_recurrence_of_the_selected_switched_tournament
+preserved_and_lost=P_is_switching_invariant_and_N_d_restores_the_selected_total_walk_series;forgetting_d_or_N_d_loses_the_fixed_all_ones_observer;the_interface_does_not_restore_Hamiltonian_paths_path_cover_profiles_SCC_order_or_substitution_run_content
+cheapest_decisive_test=the_three_vertex_transitive_tournament_switched_at_a_source_versus_at_the_middle_vertex
+truth_gates=assert_nodes:0;float_literals:0
+semantic_sha256=282a0c09458e9b539e349135f3800cd8bfc850971b4e8782fc14de75ea36c1be
+all_exact_controls=PASS
