@@ -2,7 +2,7 @@
 id: THM-3228
 title: "Four-jet Heisenberg minimal faithful permutation carrier gate"
 status: >
-  PROVED CANDIDATE / INDEPENDENT AUDIT PENDING.  For every prime p, any
+  PROVED + INDEPENDENTLY HOSTILE-AUDITED.  For every prime p, any
   permutation action of the mod-p tangent four-jet group on fewer than p^2
   points kills its central commutator.  The bound is sharp: a noncentral
   order-p coset action, equivalently the standard affine action on F_p^2,
@@ -13,7 +13,9 @@ source: root/2026-08-02
 audit: >
   The proof composes THM-3220's exact four-jet/Heisenberg identification with
   THM-2779's sharp permutation-degree theorem and restates the orbit-size
-  argument in center-faithful form.  Independent audit is pending.
+  argument in center-faithful form.  An independent hostile audit rechecked
+  every group/action sign, the orbit and core arguments, the D8 boundary, and
+  the cardinality-only LRC scope.
 depends_on:
   - THM-2779-bockstein-symplectic-decoder-frame-torsor-and-heisenberg-root-degree-gate
   - THM-3220-root-four-jet-schwarzian-heisenberg-transgression-and-oriented-discriminant-holonomy
@@ -25,14 +27,15 @@ related:
 
 # THM-3228 -- four-jet Heisenberg minimal faithful permutation carrier gate
 
-**PROVED CANDIDATE / INDEPENDENT AUDIT PENDING.**
+**PROVED + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3220 identifies the selected-root tangent four-jet group over an odd
 residue field with the finite Heisenberg group, and identifies its raw
 characteristic-two boundary with `D_8=H_2`.  THM-2779 proves that the minimum
 degree of a faithful permutation action of `H_p` is `p^2`.  The useful joint
 conclusion is sharper than a cardinality slogan: every smaller permutation
-model kills precisely the central commutator that carries the four-jet area.
+model kills the central commutator that carries the four-jet area (and its
+kernel may be larger).
 
 ## 1. The four-jet group
 
@@ -157,4 +160,11 @@ Cardinality and abstract group isomorphism do not provide such a map.
 4. Multiple-root and root-at-infinity charts remain outside THM-3220 and
    therefore outside this corollary.
 
-QED, conditional only on independent audit for status promotion.
+An independent hostile audit rechecked THM-2779's multiplication and action
+signs, the `1/p` orbit dichotomy below `p^2`, normality and commutator
+containment of every index-`p` stabilizer, the trivial-core coset action, and
+the reflection-stabilizer `D_8` endpoint.  It also confirmed that `(8)` is a
+center-faithful statement and that `(9)` asserts only a minimal cardinality,
+not a physical LRC realization.
+
+QED.
