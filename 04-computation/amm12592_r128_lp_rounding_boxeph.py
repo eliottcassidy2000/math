@@ -330,15 +330,13 @@ def lp_step_candidates(sigma, d, nbranch, maxoff, sign_branch=False):
         if sign_branch:
             signs = (1, -1)
         else:
-            # deterministic: steer the evaluation-at-1 walk toward 0
-            # (ev_next = sum(res[1:]) - w0); tiebreak = residual clamp
-            S = sum(res[1:])
-            if S > 0:
-                signs = (1,)
-            elif S < 0:
-                signs = (-1,)
-            else:
-                signs = (1,) if res[d] >= 0 else (-1,)
+            # deterministic residual clamp (the R=64 winner's rule):
+            # w0 = parity-adjusted clip of res[d] to +-1, downward bias
+            rd = res[d]
+            w = -1 if rd < -1 else (1 if rd > 1 else rd)
+            if (w - 1) % 2:
+                w = w - 1 if w - 1 >= -1 else w + 1
+            signs = (w,)
         for w0 in signs:
             r2 = list(res)
             r2[d] -= w0
@@ -379,7 +377,8 @@ def solve_lp_round(d, beam=400, nbranch=2, maxoff=2, end_nbranch=3,
         budget = R - 1 - i          # |sigma_i(1)| <= # remaining rows
         for acc, sig, debts, overs in states:
             for de, ns, debt, over in lp_step_candidates(
-                    list(sig), d[i], nbranch, maxoff, sign_branch=True):
+                    list(sig), d[i], nbranch, maxoff,
+                    sign_branch=(i >= R - 32)):
                 if not ns or abs(ns[0]) != 1:
                     continue
                 if abs(sum(ns)) > budget:   # evaluation-at-1 ballot cut
