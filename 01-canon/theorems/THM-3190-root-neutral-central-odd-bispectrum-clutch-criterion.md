@@ -5,11 +5,12 @@ status: >
   PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
   THM-2312's nonzero cubic word-current vector has exact bidegree
   (root-translation character zero, common-scalar charge one).  It is
-  therefore invariant under cyclic root reindexing but changes sign under
-  the THM-2889 quaternionic center.  On a common equivariant horn carrier,
-  the full 132-coordinate bispectrum vector would detect the central clutch
-  after the known torus action is removed.  That common carrier, physical
-  e9 edge, and torus normalization are not constructed here.
+  therefore invariant under cyclic root reindexing but changes sign under a
+  common scalar -1.  On a common equivariant horn carrier where THM-2889's
+  quaternionic center acts by that scalar, the full 132-coordinate
+  bispectrum vector would detect the central clutch after the known torus
+  action is removed.  That common carrier, physical e9 edge, and torus
+  normalization are not constructed here.
 source: root/2026-08-02
 audit: >
   The integer/exponent companion pins the THM-2312 and THM-3187 exact
