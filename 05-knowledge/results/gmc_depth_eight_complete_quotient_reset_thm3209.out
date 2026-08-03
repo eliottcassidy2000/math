@@ -1,0 +1,22 @@
+THM-3209 depth-eight complete quotient reset exact control
+dependency_hash_checks=4
+poles=(8, 7, 6, 5, 5, 4, 4, 3, 3, 2, 2, 2, 1, 1, 1, 1)
+dominant_quotient_roots=(1, 3, 3, 4, 5, 6, 7, 8)
+depth_eight_state_count=678
+state_counts_depth1_depth8_total=((8, 33, 93, 200, 348, 507, 631, 678), 2498)
+all_degree_reset_state=(1, 3, 3, 4, 5, 6, 7, 8)
+empty_quotient_monomial_checks_through14=507
+reset_response_checks_degrees5_through14=PASS
+depth_eight_cocircuit_signs_positive_negative_zero=(15, 662, 1)
+depth_eight_cocircuit_unique_zero=((1, 3, 3, 4, 5, 6, 7, 8),)
+depth_eight_degree_five_unique_zero=((1, 3, 3, 4, 5, 6, 7, 8),)
+through_depth_eight_degree_five_unique_zero=((1, 3, 3, 4, 5, 6, 7, 8),)
+one_exchange_neighbour_count=25
+sharp_one_exchange_state_response_components=((2, 3, 3, 4, 5, 6, 7, 8), Fraction(-44640, 1), (1440, -1, 0, -31))
+legal_negative_singleton_tangent_roots=(1, 2, 4, 5)
+negative_singleton_formula_checks=2024
+tangent_phi_h5=((1, 1440), (2, 1440), (4, 1440), (5, 1440))
+tangent_coarsest_degree_five_responses=((1, Fraction(-1440, 1)), (2, Fraction(-46080, 1)), (4, Fraction(-1474560, 1)), (5, Fraction(-4500000, 1)))
+tangent_star_degree_five_principal_upset=STRICTLY_NEGATIVE
+scope=reset_and_first_tangent_star_only_no_depth9_global_claim
+all_exact_checks=PASS
