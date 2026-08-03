@@ -5,6 +5,7 @@ import ast
 from fractions import Fraction
 from hashlib import sha256
 from itertools import combinations, permutations, product
+from math import lcm
 from pathlib import Path
 
 
@@ -23,7 +24,7 @@ DEPENDENCIES = {
     ROOT / "05-knowledge/results/gmc_first_shell_pair_clutch_thm3254.out":
         "dd415c8ce6e2e196c115421d3508addabb724305a16843509264a8b3205beee9",
     ROOT / "01-canon/theorems/THM-3255-twelve-balance-multiplicative-singer-rank-defect-and-phase-marker-boundary.md":
-        "24bb6f620b10f76eccff8e7e4941b56903aadcecec9b0b86a95d1658c18584c1",
+        "8d827a3c1c93904db6715240373e8626323802240a4831d14394f3637389609d",
 }
 
 
@@ -179,6 +180,140 @@ swap_17_21 = tuple(21 if vertex == 17 else 17 if vertex == 21 else vertex
                    for vertex in core_vertices)
 require(tuple(sorted(automorphisms)) == tuple(sorted((identity, swap_17_21))),
         ("core automorphism group", automorphisms))
+
+
+# Adjoining the eight delayed edges gives a second, relative-homology layer.
+# It adds precisely the two vertices 9 and 12.  The relative cellular boundary
+# has rank two, so the six-dimensional kernel is H_1(H,G;Z).
+full_vertices = vertices(covering_pairs)
+require((len(full_vertices), len(covering_pairs), connected(covering_pairs))
+        == (15, 31, True), "full covering graph census")
+full_cycle_rank = len(covering_pairs) - len(full_vertices) + 1
+require(full_cycle_rank == 17, "full covering graph Betti number")
+
+full_bridges = []
+for edge in covering_pairs:
+    remainder = list(covering_pairs)
+    remainder.remove(edge)
+    if not connected(tuple(remainder), full_vertices):
+        full_bridges.append(edge)
+require(tuple(full_bridges) == ((3, 9),), "full covering graph bridge")
+
+new_vertices = tuple(vertex for vertex in full_vertices
+                     if vertex not in all_vertices)
+delayed_edges = tuple(edge for edge in covering_pairs if edge in delayed_pairs)
+require(new_vertices == (9, 12), "relative vertices")
+
+
+def rational_rank(matrix):
+    work = [[Fraction(value) for value in row] for row in matrix]
+    rows = len(work)
+    columns = len(work[0]) if rows else 0
+    pivot_row = 0
+    for column in range(columns):
+        pivot = next((row for row in range(pivot_row, rows)
+                      if work[row][column]), None)
+        if pivot is None:
+            continue
+        work[pivot_row], work[pivot] = work[pivot], work[pivot_row]
+        scale = work[pivot_row][column]
+        work[pivot_row] = [value / scale for value in work[pivot_row]]
+        for row in range(rows):
+            if row == pivot_row or not work[row][column]:
+                continue
+            scale = work[row][column]
+            work[row] = [left - scale * right
+                         for left, right in zip(work[row], work[pivot_row])]
+        pivot_row += 1
+    return pivot_row
+
+
+relative_boundary = []
+for vertex in new_vertices:
+    relative_boundary.append(tuple(
+        (-1 if left == vertex else 0) + (1 if right == vertex else 0)
+        for left, right in delayed_edges
+    ))
+relative_boundary_rank = rational_rank(relative_boundary)
+relative_cycle_rank = len(delayed_edges) - relative_boundary_rank
+require((relative_boundary_rank, relative_cycle_rank,
+         full_cycle_rank - cycle_rank) == (2, 6, 6),
+        "relative homology rank")
+
+
+# The uncoloured full graph has exactly S_3 x C_2 symmetry: S_3 permutes
+# {10,17,21}, C_2 swaps {14,18}, and all other vertices are fixed.  Retaining
+# the reset/delayed edge colours cuts this back to the core C_2.
+full_graph = adjacency(covering_pairs, full_vertices)
+full_edge_set = {frozenset(edge) for edge in covering_pairs}
+full_degree_classes = {}
+for vertex in full_vertices:
+    full_degree_classes.setdefault(len(full_graph[vertex]), []).append(vertex)
+full_classes = tuple(tuple(sorted(group)) for _, group
+                     in sorted(full_degree_classes.items()))
+full_automorphisms = []
+for images in product(*(permutations(group) for group in full_classes)):
+    mapping = {}
+    for group, image_group in zip(full_classes, images):
+        mapping.update(zip(group, image_group))
+    image_edges = {frozenset((mapping[left], mapping[right]))
+                   for left, right in covering_pairs}
+    if image_edges == full_edge_set:
+        full_automorphisms.append(tuple(mapping[vertex]
+                                        for vertex in full_vertices))
+
+expected_full_automorphisms = []
+for triple_image in permutations((10, 17, 21)):
+    for swap_pair in ((14, 18), (18, 14)):
+        mapping = dict(zip((10, 17, 21), triple_image))
+        mapping.update(zip((14, 18), swap_pair))
+        expected_full_automorphisms.append(tuple(mapping.get(vertex, vertex)
+                                                 for vertex in full_vertices))
+require(tuple(sorted(full_automorphisms))
+        == tuple(sorted(expected_full_automorphisms)),
+        "full automorphism group S3xC2")
+
+
+def permutation_order(image, ordered_vertices):
+    mapping = dict(zip(ordered_vertices, image))
+    seen = set()
+    answer = 1
+    for start in ordered_vertices:
+        if start in seen:
+            continue
+        length = 0
+        vertex = start
+        while vertex not in seen:
+            seen.add(vertex)
+            length += 1
+            vertex = mapping[vertex]
+        answer = lcm(answer, length)
+    return answer
+
+
+full_automorphism_orders = tuple(sorted({
+    permutation_order(image, full_vertices) for image in full_automorphisms
+}))
+require(full_automorphism_orders == (1, 2, 3, 6),
+        "no order-7 or order-12 full automorphism")
+
+reset_edge_set = {frozenset(edge) for edge in reset_link_edges}
+coloured_automorphisms = []
+for image in full_automorphisms:
+    mapping = dict(zip(full_vertices, image))
+    image_reset_edges = {frozenset((mapping[left], mapping[right]))
+                         for left, right in reset_link_edges}
+    if image_reset_edges == reset_edge_set:
+        coloured_automorphisms.append(image)
+expected_coloured = []
+for swap in (False, True):
+    expected_coloured.append(tuple(
+        (21 if vertex == 17 else 17 if vertex == 21 else vertex)
+        if swap else vertex for vertex in full_vertices
+    ))
+require(tuple(sorted(coloured_automorphisms))
+        == tuple(sorted(expected_coloured)),
+        "coloured full automorphism group C2")
 
 
 # Enumerate all unordered decompositions of the 22 core edges into two
@@ -365,6 +500,10 @@ print("full_graph=(V13,E23,beta11),unique_bridge=(13,14),leaf=14")
 print("core_graph=(V12,E22,beta11),bipartition=%s" % (color_parts,))
 print("kuratowski=K33_subdivision,left=(10,3,18),right=(11,16,22),PASS")
 print("automorphism_group=C2,nontrivial=(17 21)")
+print("covering_graph=(V15,E31,beta17),unique_bridge=(3,9)")
+print("relative_layer=(8 delayed edges,2 new vertices,boundary_rank2,H1_rank6)")
+print("covering_automorphism_group=S3(10,17,21)xC2(14,18),orders=(1,2,3,6)")
+print("edge_coloured_automorphism_group=C2,nontrivial=(17 21)")
 print("unordered_two_tree_decompositions=4960,digest=%s" % decomposition_digest)
 print("symmetric_exchange_graph=(V4960,E43408,min_degree13,max_degree27,connected)")
 print("nontrivial_automorphism_fixed_tree_pairs=0")
@@ -373,6 +512,6 @@ print("second_tree=%s" % (tuple(core_edges[index] for index in second_tree),))
 print("incidence_determinants=%s,transition_det=%d" %
       (determinants, transition_determinant))
 print("transition_digest=%s" % transition_digest)
-print("conditional_bridge=C12_vertex_label+tree_pair_gives_integral_11D_polarization")
-print("scope=no_intrinsic_C12_action,no_planar_dual,no_canonical_owner_phase_map")
+print("conditional_bridge=cyclic_difference+C12_vertex_label+tree_pair_gives_integral_11D_polarization")
+print("scope=no_faithful_C12_torsor_action,no_order7_action,no_planar_dual,no_canonical_owner_phase_map")
 print("all_exact_checks=PASS")
