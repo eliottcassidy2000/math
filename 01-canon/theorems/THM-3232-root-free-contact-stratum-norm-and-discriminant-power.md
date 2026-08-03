@@ -2,7 +2,7 @@
 id: THM-3232
 title: "Root-free contact-stratum norm and discriminant power"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Every nonempty first-contact stratum of the THM-3229 squarefree
   Hasse--Pluecker gcd flag carries a canonical etale unit c_m.  Its norm is
   the nonzero root-free resultant quotient
@@ -20,7 +20,10 @@ audit: >
   weights, the balanced invariant, diagonal/swap/general-GL2 frame laws, an
   irreducible F5 Frobenius norm, and the coarse-stratum and repeated-root
   boundaries.  Normal and optimized runs byte-match the stored transcript
-  and the LF-normalized hashes below.  Independent hostile audit is pending.
+  and the LF-normalized hashes below.  An independent hostile audit rederived
+  the etale-unit typing, resultant sign, split/Galois product, target-frame
+  law, affine and discriminant weights, balanced invariant, finite-field
+  norm, and both sharp boundaries, and found no defect.
 depends_on:
   - THM-3229-hasse-pluecker-simple-root-contact-gcd-flag-and-degree-termination
 related:
@@ -37,7 +40,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3232 -- root-free contact-stratum norm and discriminant power
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3229 replaces a list of selected common roots by a squarefree divisor
 flag, but its first-live coefficient is still stated one root at a time.  A
@@ -338,4 +341,4 @@ Normal and optimized runs byte-match
 
 and the LF-normalized hashes are pinned in the frontmatter.
 
-QED, pending independent hostile audit.
+QED.
