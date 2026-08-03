@@ -203,12 +203,12 @@ global rational section appears.
 
 ### FC support-five probe
 
-Use `(7)--(8)` as an entry oracle for the `13972 x 12650` sparse degree-21
-Macaulay map.  A scout rank is not yet a theorem.  Promotion requires a
-deterministic sparse PLUQ/maximal-minor certificate or an independently
-checkable exact elimination trace at a guarded prime `p>86`.  If a kernel
-survives, reinterpret its exact weight components on `uv=r^3` before adding
-higher moments.
+Degree `21` cannot close the five-variable ideal: the complete-intersection
+and Koszul count forces quotient dimension at least `1670`, hence rank at most
+`10980`.  Use `(7)--(8)` to test whether the Hesse map attains that bound, then
+move to degree `29`, the first candidate not excluded by the formal count, or
+an exact saturation argument.  Promotion still requires a deterministic
+guarded certificate, not a probabilistic sparse rank.
 
 ### Tournament wildcard
 

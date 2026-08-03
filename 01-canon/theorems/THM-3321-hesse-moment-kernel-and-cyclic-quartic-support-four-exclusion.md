@@ -178,14 +178,31 @@ the seven conditions through `M_21` already exclude it.
 
 Full support five is the only open coefficient chart in this eigenspace.  It
 has one lawful projective normalization and no continuous Hesse-torus
-reduction.  The direct degree-21 five-variable Macaulay map has
+reduction.  The degree-21 five-variable Macaulay map has
 
 ```text
 13972 rows,       12650 columns.                            (16)
 ```
 
-A sparse guarded rank certificate is the next exact test.  Nothing here
-proves `FC(3)` outside this degree-four cyclic eigenspace, treats
+It **cannot** have full column rank.  For the first five generator degrees
+`3,6,9,12,15`, the complete-intersection Hilbert coefficient in degree `21`
+is `1705`, a universal lower bound for the quotient by five forms in five
+variables.  Adding `M_18` can remove at most `dim R_3-1=34` dimensions because
+the Koszul relation with `M_3` kills one multiplier; `M_21` removes at most
+one.  Therefore
+
+```text
+dim (R/I)_21 >=1670,              rank Mac_21 <=10980.      (17)
+```
+
+The formal product-series coefficient remains positive through degree `28`
+(`39`) and first becomes nonpositive in degree `29`.  Thus degree `29`, whose
+raw map is `66486 x 40920`, is the first full-rank candidate not excluded by
+this count; no generic-Hilbert-series claim is made.  A lower-degree rank scout
+cannot prove projective emptiness.  A proof needs a guarded exact certificate
+at a sufficient degree or a different saturation/affine-chart argument.
+
+Nothing here proves `FC(3)` outside this degree-four cyclic eigenspace, treats
 non-eigenvectors, or supplies a Jacobian-conjecture consequence.
 
 QED.

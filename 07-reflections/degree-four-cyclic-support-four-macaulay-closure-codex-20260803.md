@@ -305,23 +305,36 @@ It has one lawful projective normalization and no continuous torus reduction.
 The toric representation (11)--(12), the closed kernel (7), and the
 support-four boundary certificate are now the three reusable inputs.
 
-A direct degree-21 homogeneous Macaulay map in five variables would have
+A direct degree-21 homogeneous Macaulay map in five variables has
 
 ```text
 13,972 rows, 12,650 columns,
 4,755,220 raw sparse incidences before modular cancellations.          (24)
 ```
 
-This is too large for a casual dense matrix but small enough for a dedicated
-sparse finite-field rank implementation.  The cheapest decisive next test is:
+It is structurally incapable of full column rank.  For five forms of degrees
+`3,6,9,12,15` in five variables, the degree-21 quotient is at least the
+complete-intersection coefficient `1705`.  The `M_18` row block can remove at
+most `dim R_3-1=34` dimensions: multiplication by `M_3` supplies one universal
+Koszul overlap.  `M_21` removes at most one more.  Hence
 
-1. implement black-box multiplication by (17) and its transpose from (7)--(10);
-2. scout rank at guarded primes `p>86` without claiming proof from a
-   probabilistic projection;
-3. on a full-rank signal, freeze a deterministic PLUQ/maximal-minor certificate
-   or an independently checkable sparse elimination trace;
-4. if rank remains deficient, extract the degree-21 dual kernel and reinterpret
-   it in the invariant surface `uv=r^3` before adding higher moments.
+```text
+dim (R/I)_21 >=1670,             rank Mac_21 <=10980.        (25)
+```
+
+This repairs the first proposed support-five experiment: no degree-21
+full-rank certificate can exist.  The formal product
+
+```text
+product_(d=3,6,...,21)(1-t^d)/(1-t)^5                      (26)
+```
+
+has coefficient `39` at degree `28` and first becomes nonpositive at degree
+`29`.  Degree `29` is therefore the first full-rank candidate not ruled out by
+this count, with a raw `66486 x 40920` map; this is not a generic-Hilbert-series
+claim.  A degree-21 sparse run can test only whether the Hesse ideal reaches
+the maximal possible rank `10980`.  Promotion needs a sufficient-degree
+guarded certificate or a different exact saturation/affine-chart argument.
 
 The fallback lower-dimensional slice is the common-radial-factor locus
 
@@ -347,6 +360,6 @@ cyclic eigenspace; all non-eigenvector cases; and any claim that (12) makes the
 moment functional torus-invariant.
 
 The stopping certificate is constructive: support four is closed by (20), and
-support five has the explicit sparse matrix dimensions (24), an exact entry
-oracle (7)--(10), a boundary certificate, and a criterion for turning a scout
-rank into a proof-grade artifact.
+support five has the exact entry oracle (7)--(10), the universal obstruction
+(25), the first degree-29 candidate not excluded by that count, and a complete
+boundary certificate.

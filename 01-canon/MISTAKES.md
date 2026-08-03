@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-364 (2026-08-03, cyclic-quartic support-five Macaulay target) -- a dimensionally impossible degree-21 full-rank certificate was proposed as the next proof test
+
+- **What failed:** the first THM-3321 boundary paragraph and its synthesis
+  proposed full column rank of the five-variable degree-21 Macaulay map for
+  `M_3,M_6,...,M_21` as the next support-five emptiness certificate.  The map
+  has `13,972` rows and `12,650` columns, which made full rank look plausible.
+- **Why it was wrong:** row count ignores universal syzygies.  The first five
+  forms have degrees `3,6,9,12,15`; the complete-intersection Hilbert
+  coefficient in degree `21` is `1705`, a lower bound for the quotient by any
+  five such forms in five variables.  `M_18 R_3` removes at most `34`, not
+  `35`, dimensions because the `M_3 M_18` Koszul overlap is already zero in
+  the quotient, and `M_21` removes at most one.  Thus every such map has
+  quotient dimension at least `1670` and rank at most `10980`.  Full degree-21
+  rank is impossible independently of the Hesse coefficients.
+- **Repair:** THM-3321's support-`<=4` theorem is unchanged, but its open
+  support-five boundary now records the rank bound.  The formal product has
+  coefficient `39` at degree `28` and first becomes nonpositive at degree
+  `29`; the raw degree-29 map is `66,486 x 40,920`.  Degree 29 is only the
+  first candidate not excluded by this count, not a generic-Hilbert-series
+  theorem.  Projective emptiness needs a sufficient-degree certificate or a
+  different saturation/chart argument.
+- **Reusable rule:** before budgeting a Macaulay rank computation, compute the
+  Hilbert/Koszul lower bound.  More rows than columns do not imply that full
+  column rank is algebraically possible.
+
 ## MISTAKE-363 (2026-08-03, simplex moments mod p) -- a modular reduction silently corrupted every moment because the prime divided the factorial denominator
 
 - **What failed:** while searching the degree-four cyclic eigenspace on

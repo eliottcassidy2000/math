@@ -399,9 +399,10 @@ Classify profiles under support operations; study analytic continuation and auto
   An ancestry pullback, chronology, positivity, arbitrary faces and FC(3) remain OPEN.
   THM-3303 proves `JC(2) => HFC(3)` in the constant-Jacobian sector. THM-3310
   gives the cyclic quartic basis and independently excludes support `<=3`;
-  THM-3321's Hesse kernel and five guarded minors exclude support `<=4`.
-  Support five, other representation cells, HFC(3), and FC(3) remain OPEN;
-  MISTAKE-363's guard `p>4m+2` is mandatory and only projective scaling normalizes.
+  THM-3321's Hesse kernel and guarded minors exclude support `<=4`, while its
+  degree-21 support-five map has rank `<=10980`. Support five is OPEN; degree 29
+  is only the first candidate not count-excluded. Other cells, HFC(3), and FC(3)
+  remain OPEN; guard `p>4m+2` is mandatory and only projective scaling normalizes.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
