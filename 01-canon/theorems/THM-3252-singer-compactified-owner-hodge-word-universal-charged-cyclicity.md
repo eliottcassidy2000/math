@@ -2,7 +2,7 @@
 id: THM-3252
 title: "Singer-compactified owner Hodge word universal charged cyclicity"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Adjoin to THM-3246's exact 168-owner second-corrector word the unique
   completion value making its THM-3234 Singer-plane sum zero.  In every one
   of the 8,064 Singer-equivariant cyclic gauges, the resulting 13 by 13
@@ -20,9 +20,12 @@ audit: >
   integer determinants modulo 1,000,000,007.  Both the zero and zero-sum
   completions are nonsingular in every gauge; exact Bareiss determinants at
   the identity gauge and the rational central-contrast Fourier transform
-  provide separate controls.  Normal, optimized and stored transcript
-  replay and LF-normalized hashes are required.  Independent audit is
-  pending.
+  provide separate controls.  An independent implementation reconstructed
+  the word from the all-dilation numerator table, found every determinant
+  nonzero modulo two additional primes, and checked the central contrast in
+  two independent cyclotomic finite fields.  It also rederived the orbit-span
+  and physical-scope implications.  Fresh normal and optimized runs
+  byte-match the stored transcript and declared LF-normalized hashes.
 depends_on:
   - THM-3234-singer-owner-compactification-and-pointed-heisenberg-carrier-gate
   - THM-3246-all-dilation-second-owner-seam-stabilization-and-sign-word
@@ -39,7 +42,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3252 -- Singer-compactified owner Hodge word universal charged cyclicity
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3246 promotes an exact signed word on the 168 cyclic owners.  THM-3234
 identifies those owners, after one-point completion, with the punctured
@@ -215,9 +218,9 @@ blocks, so `(17)` yields
 dim span_K(H_13.W^(a,b))=12*169=2028.                  (21)
 ```
 
-Thus `(19)` saturates the entire charged subspace and avoids exactly the
-156-dimensional neutral rank defect isolated in THM-3250.  It avoids that
-defect by centering and signing, not by constructing a full positive carrier.
+Thus `(19)` saturates the entire charged subspace and sidesteps the neutral
+sector in which THM-3250 isolates an exact 156-dimensional rank defect.  It
+does so by centering and signing, not by constructing a full positive carrier.
 
 ## 5. Scope and the surviving physical gate
 
@@ -254,4 +257,4 @@ uses exact rational, integer, finite-field and modular arithmetic only.  It
 contains no randomness, floating point, discovery cache or optimization-
 sensitive assertions.
 
-QED, pending independent hostile audit.
+QED.
