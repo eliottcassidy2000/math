@@ -169,10 +169,10 @@ does not itself provide the external arm selector.
 
 ## The same representation is not the same carrier
 
-**Trigger / action:** when two frontiers contain the same group module, identify the module exactly, then separately type the realization functor and test whether the module lifts through it.
-**Mechanism:** character tables preserve symmetry but forget positivity, occurrences, affine source geometry, and endpoint phase. An abstract submodule can be necessary and sufficient for a cover while still being unrealizable by the target object.
-**Counterindication:** transfer a conclusion only when an explicit functor intertwines the module action and the target predicate.
-**Evidence:** THM-2648's matchings and THM-2655's quartic `V4` characters are the same `F2[S3]` plane, but their realizations differ.  Likewise THM-2455/2598's `S4/V4` resolvent preserves the quartic branch divisor, not a normal attachment phase: THM-3105/3108's exact `det(J2+sE21+zI)=z^2-s` wall can vanish at `s=z^2`.  Retain a characteristic/Fitting face unless THM-3101's scheme-zero hypothesis removes the old Jordan edge.
+**Trigger / action:** when two frontiers share a group module or become isomorphic after isotypic projection, identify the sector, commutant/multiplicity space, and realization functor; test neutral blocks and the target predicate.
+**Mechanism:** characters forget positivity, occurrences, base geometry, endpoint phase, and stabilizers. A charged isomorphism can coexist with a neutral rank defect; one observer removes multiplicity ambiguity only through an exact cyclic determinant.
+**Counterindication:** transfer only through an explicit predicate-preserving functor. A nonzero determinant gives a linear frame, not a positive, set-level, or larger-symmetry clutch.
+**Evidence:** THM-2648/2655, THM-2455/2598/3105/3108, and THM-3243/3250.
 
 ## After a scalar quotient, choose between a coherent lift and orbit incidence
 
