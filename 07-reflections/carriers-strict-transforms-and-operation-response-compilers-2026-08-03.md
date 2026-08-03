@@ -63,6 +63,11 @@ The active new theorem packages sharpen this picture further:
   exactly when that coefficient is a primitive element of the root algebra;
   a second observer generically resplits collisions.  It still gives no root
   ordering or physical carrier.
+- **PROVED [THM-3241](../01-canon/theorems/THM-3241-finite-field-contact-Singer-realization-and-order-gate.md)** realizes every prescribed nonzero irreducible finite-field contact
+  coefficient and, over `F_169`, the exact THM-3234 Singer matrix.  Its
+  same-norm field generator of order `24` proves that contact-algebra
+  generation is strictly weaker than Singer transitivity; no physical LRC
+  provenance is supplied.
 - **PROVED [THM-3235](../01-canon/theorems/THM-3235-transitive-tournament-blowup-saddle-and-hypergeometric-decimation.md)** gives a general substitution determinant, exact saddle/radius
   renormalization under uniform transitive blow-up, and hypergeometric
   decimation of the full coefficient sequence.  Its order-six observer twins
@@ -80,7 +85,7 @@ The active new theorem packages sharpen this picture further:
   `239`.  Its parity makes the new wall nonzero at every integer, but the
   all-depth primitive-factor pattern is not claimed.
 
-All six statements remain governed by their literal theorem statuses; this
+All seven statements remain governed by their literal theorem statuses; this
 reflection does not itself promote them.
 
 ## 2. Live concept board
@@ -93,7 +98,7 @@ do not identify the objects.
 | LRC complete owner orbit | cyclic word of length `168`; Bernoulli bulk plus gcd-carry Hodge split | nonzero periodic `g^-2` harmonic and owner exact part | dilation, reflection, Singer compactification | branch stabilization, physical entry, cellwise safety |
 | minimal four-jet carrier | `H_13/K` on `169` points, `K` noncentral of order `13` | central commutator and oriented four-jet curvature | Heisenberg action, Singer conjugation | lawful owner/root/current map and common ancestry |
 | carrier address | `G_delta` of size `13^3`, or `G_full` of size `13^4` | target axis, carrier imbalance, optionally common harmonic | typed section, quotient gauge, exact `H_13` clutch | factor colours, all-unit mask, integral/Bockstein carry |
-| factorial contact flag | squarefree gcd strata and finite etale contact algebra | first-live contact order and nonvanishing norm | Hasse contact, resultant norm, PRS step | selected branch label, additive carry, global root choice |
+| factorial contact flag | squarefree gcd strata and finite etale contact algebra | first-live contact order, spectrum, and Singer-order gate | Hasse contact, resultant norm/order, PRS step | selected branch label, physical provenance, global root choice |
 | exceptional normal coordinate | pivot or infinity parameter before specialization | strict-transform coefficient after leading cancellations | blow-up, reciprocal Newton polygon | physical/Keller chart entry and global continuation |
 | tournament quotient operator | multivariate determinant `D_Q` and walk series `W_Q` | Neumann domain, saddle, continuation response | substitution, order join, transitive blow-up | minimal response-equivalent sidecar |
 | sequence response state | fixed jet, moving jet, or bounded time-varying transfer | exact coefficient or recurrence law | finite difference, decimation, continuant convolution | bit complexity, converse closure, seed computation |
@@ -122,6 +127,14 @@ is visible in the finite owner scout: its twelve negative boundary owners
 occupy twelve distinct residues modulo `14`.  Under every Singer gauge, a
 punctured vector line meets them in at most one point.  Adding zero therefore
 does not turn the negative class into a line.
+
+THM-3241 now supplies an exact algebraic source for the same target:
+`f=S`, `g=S+S^2(1+10x)` over `F_13`, with `S=x^2-2`, has first-live contact
+`c_2=1+2x`, and multiplication by `c_2` is literally the THM-3234 matrix.
+This preserves contact depth and exact multiplicative order but destroys all
+LRC provenance.  The hostile `c_2^49=7x` has the same primitive norm and still
+generates `F_169`, yet has order `24`; the root-free order-resultant tests are
+therefore an indispensable sidecar rather than a consequence of THM-3236.
 
 ### 3.2 Carrier imbalance to the nonnormal Heisenberg clutch
 
@@ -256,6 +269,7 @@ cannot change the face and degree nine is the first live boundary term.
 | twelve negative owners plus zero form an affine line | exhaust Singer gauges / residues mod `14` | **REFUTED** | multiplicity is real; placement is not linear |
 | the old additive target grid should carry `H_13` | inspect stabilizer and central kernel | **REFUTED**, then repaired | carrier imbalance supplies the nonnormal stabilizer clutch |
 | a root-free trace should detect first contact | split examples with cancelling branches | **REFUTED** | etale norm preserves simultaneous nonvanishing |
+| a primitive norm or full contact-field generator should be Singer | compare exact multiplicative order | **REFUTED by THM-3241 hostile** | retain the prime-divisor resultant order gates |
 | a vanishing PRS row has no further information | divide by the wall parameter | **REFUTED** | nonzero square-normalized osculating row |
 | affine `B` exhausts the planar Jacobian source family | degree filtration of top resultant coefficients | **REFUTED as a search boundary** | nonlinear degree nine changes the infinity face |
 | path-colour profile plus radius identifies tournament continuation | order-six exhaustive pair and transitive lifts | **REFUTED** | retain determinant/walk placement |
@@ -324,18 +338,17 @@ The highest-value tests are:
 2. test depth ten as a stitching problem between already classified collars,
    not another statewise sign scan;
 3. use the strict-transform row at a resonance as the transition state across
-   a reset wall, and audit whether the candidate Pell normal clock and
+   a reset wall, and audit whether the proved Pell normal clock and
    quotient-tail tower remain compatible with the physical pole labels;
 4. use the THM-3232 norm only as a nonvanishing gate, retaining a selected
    branch/carry sidecar whenever the recurrence consumes additive data;
 5. continue the exact first-unaudited row in parallel, because finite closure
    and structural stitching are independent evidence lanes; and
-6. keep three finite-field gates separate at `p=13`: irreducibility of the
-   degree-two root algebra, algebra generation by the contact coefficient,
-   and multiplicative order `168`.  Only their conjunction makes
-   multiplication by that coefficient a Singer operator on `F_13^2`; a
-   nonzero contact norm or squarefree spectrum alone does not; and
-7. treat the candidate degree-28 sixth PRS wall as a fixed-offset arithmetic
+6. use THM-3241's exact separation of the three `p=13` gates:
+   irreducibility, contact-algebra generation, and multiplicative order `168`.
+   Its order-24 hostile shows why norm or squarefree spectrum cannot replace
+   the order-resultant tests; and
+7. treat the proved degree-28 sixth PRS wall as a fixed-offset arithmetic
    atlas, not as an all-depth selector: its integer nonvanishing and Pell
    content still need a lawful stitch to the full exterior/physical state.
 

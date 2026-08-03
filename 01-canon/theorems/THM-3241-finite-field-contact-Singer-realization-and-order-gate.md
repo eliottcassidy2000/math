@@ -2,7 +2,7 @@
 id: THM-3241
 title: "Finite-field contact Singer realization and multiplicative-order gate"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Every prescribed nonzero element of an irreducible finite-field contact
   algebra can be realized as the uniform first-live normalized coefficient
   of an explicit polynomial pair.  Multiplication by that coefficient is a
@@ -24,8 +24,11 @@ audit: >
   norm 6 of order 12, all three prime-divisor resultant gates, and the exact
   THM-3234 matrix; and proves that alpha^49 has the same norm, generates F169,
   has order 24, and gives seven punctured orbits.  Normal and optimized runs
-  byte-match the stored transcript and LF-normalized hashes below.
-  Independent hostile audit is pending.
+  byte-match the stored transcript and LF-normalized hashes below.  An
+  independent hostile audit rederived the prescribed-contact formula and
+  deformation isomorphism, the resultant order gate, all explicit F13
+  arithmetic and the order-24 same-norm hostile, and confirmed that the
+  Heisenberg pullback is only a formal deformation reparametrization.
 depends_on:
   - THM-3232-root-free-contact-stratum-norm-and-discriminant-power
   - THM-3234-singer-owner-compactification-and-pointed-heisenberg-carrier-gate
@@ -42,7 +45,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3241 -- finite-field contact Singer realization and multiplicative-order gate
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3232 turns first-live root jets into units of finite etale contact
 algebras.  THM-3234 independently identifies a Singer multiplier on the
@@ -388,4 +391,4 @@ byte-match
 
 and the LF-normalized hashes are pinned in the frontmatter.
 
-QED, pending independent hostile audit.
+QED.
