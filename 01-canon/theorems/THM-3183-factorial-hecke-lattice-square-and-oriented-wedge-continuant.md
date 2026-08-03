@@ -50,7 +50,7 @@ X_n=int_0^infinity x q(x)^n e^(-x) dx,
 D_n=d^n.                                                       (1)
 ```
 
-Use the two states
+For `n>=1`, use the two states
 
 ```text
 z_n=(M_n,X_n,D_n)^t,            Y_n=(M_n,M_(n-1),D_n)^t.       (2)
@@ -96,7 +96,7 @@ the rational Gauss--Manin intertwining
 P_(n+1) S_n = G_n P_n.                                     (7)
 ```
 
-Thus `(7)` is a commuting square of integral lattices whenever its displayed
+Thus `(7)` is a commuting square of integral lattices for `n>=1` whenever its displayed
 denominators are units.  Its determinants are
 
 ```text
@@ -113,9 +113,10 @@ val(det G_n)=val(det S_n)+val(det P_(n+1))-val(det P_n).    (9)
 
 ## 2. The prime-reset Hecke square
 
-Let the base be a DVR of odd residue characteristic `p`, put `d=p+s`, and
-assume `svDelta` is a unit.  At `n=p-1`, the four maps in `(7)` have Smith
-types
+Let the base be the height-one DVR `Z_p[v]_(p)`, or an unramified DVR
+extension in which `p` is a uniformizer.  Assume `p` is odd, put `d=p+s`,
+and assume `svDelta` is a unit.  At `n=p-1`, the four maps in `(7)` have
+Smith types
 
 ```text
 P_(p-1): (1,1,1),             S_(p-1): (1,1,p),
@@ -266,7 +267,7 @@ J=256p^4-27648p^3-365600p^2-1528800p-2096649.             (27)
 
 Thus, in THM-3176's `p>=197` range, `H` and `J` are precisely the nontrivial
 arithmetic wall factors of the leading coefficient-degree Schur-complement
-pivots.  The next polynomial `K` of THM-3176 enters the connection coefficient
+pivots.  The next polynomial `K` of THM-3176 enters the inherited connection coefficient
 
 ```text
 P_0=4(p+6)(2p+1)K                                          (28)
@@ -309,6 +310,8 @@ python -O 04-computation/factorial_hecke_lattice_wedge_continuant_thm3183.py
 and compare LF-normalized bytes with the declared output.  The companion uses
 exact symbolic and integer arithmetic only.  It checks `(7)--(14)`, the
 complete exterior matrix `(16)`, the two-step formula `(18)--(20)`, all three
-hostile tails `(21)--(24)`, and the offset-six identities `(25)--(29)`.
+hostile tails `(21)--(24)`, the offset-six leading identities `(25)--(27)`,
+and the bare pivot `(29)`.  Equation `(28)` is inherited verbatim from
+THM-3176 and is not an independent companion check here.
 
 **QED (candidate pending independent audit).**
