@@ -2,7 +2,7 @@
 id: THM-3222
 title: "Universal product-Gamma reset upper-filter collar"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.  On every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On every
   one of the 115 maintained anchored supports and both THM-3110 product-Gamma
   banks, the distinguished Ferrers alphabet is a physical submultiset of the
   reduced pole alphabet.  Its first live complete-row coefficient is positive,
@@ -16,8 +16,8 @@ audit: >
   their generating scripts, reconstructs all 230 reduced fractions, proves
   Q<=P in every case, checks the vanished complete and power rows, and runs
   5,442 direct virtual-alphabet response controls including every full collar.
-  Normal replay matches the stored output; optimized replay and independent
-  theorem audit are pending.
+  An independent hostile audit rederived the algebra and scope; fresh normal
+  and optimized replays both byte-match the stored output and declared hashes.
 depends_on:
   - THM-3110-arbitrary-anchored-product-gamma-dominant-tail-and-low-histogram-reduction
   - THM-3120-row-pole-prefix-newton-flag-positivity
@@ -33,7 +33,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3222 -- universal product-Gamma reset upper-filter collar
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3219 isolates one complete reset in its whole physical upper filter.
 The same mechanism is present on every maintained product-Gamma support and
@@ -250,4 +250,12 @@ also records a SHA-256 digest of every exact `P,Q,R,c` case record.  The
 all-`tau` quantifier in `(17)` is the displayed algebraic identity, not an
 attempt to enumerate up to `187406683791040512` states.
 
-**QED (candidate pending independent audit).**
+An independent hostile audit rechecked physical containment after the same
+reduced-row cancellation, the two distinct common-prefix invariances, the
+all-`tau` sign formula, the simplex implication, the full negative-alphabet
+hostile, and the local-versus-global boundary.  Fresh normal and optimized
+runs took independent paths through the assertion-free companion, matched
+each other and the stored transcript byte-for-byte, and reproduced both
+declared LF hashes.
+
+QED.
