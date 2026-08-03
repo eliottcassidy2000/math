@@ -1,0 +1,27 @@
+universal_resultant=PASS
+local_jet_elimination=PASS
+case=4111
+A_prime_spectrum=(('2', 1), ('-1/2', 1), ('-2', 3))
+eta_coefficients=(Fraction(-4786369, 131072), Fraction(-2131157, 32768), Fraction(-873425, 32768))
+universal_parameter_coefficient_quotient_degrees=(((0, 0, 0), 28), ((0, 0, 3), 52), ((0, 1, 1), 36), ((1, 0, 2), 43), ((1, 1, 0), 27), ((2, 0, 1), 34), ((2, 1, 2), 35), ((2, 2, 0), 19), ((3, 0, 0), 25), ((3, 1, 1), 26), ((4, 0, 2), 19), ((4, 1, 0), 17), ((5, 0, 1), 10))
+jet_PRS_degrees=((5, 3), (3, 2), (2, 1), (1, 0)) jet_gcd=1
+J3_sha256=c3ce97d55e4e4153275a3e3e062d6d5d5dff22bf0e24fc33d3930091e129715d
+J5_sha256=3537740f07a6535f132ec1bd36654487f9d07a8e59fb97d4c923f5ea595a612c
+control=('generic_52', 52, 0, '693ed1fc7e01eb82f54ec029b5a92fc1a5f6dacf9634368c335717ef3de015bc')
+control=('k0_28', 28, 0, 'dfca81fca17fccbd70b9e260f741ae723049c1d1f797fccd0dcf22e5fb47188e')
+control=('k0_S_escape', 28, 1, '291d01e0a96c262566689c4eedd1d6c0e4b8485b815c6bf01931e94a5992a259')
+control=('k1_S_escape', 52, 1, '54dc40d7f51d1cc9e152a03f8cfa47432b8a5e6c6a057f3d192a760a703b2dfb')
+case=3211
+A_prime_spectrum=(('2', 1), ('-2/3', 1), ('-1', 1), ('-2', 2))
+eta_coefficients=(Fraction(-139515593, 1679616), Fraction(340202737, 3359232), Fraction(50530025, 3359232))
+universal_parameter_coefficient_quotient_degrees=(((0, 0, 0), 28), ((0, 0, 3), 52), ((0, 1, 1), 36), ((1, 0, 2), 43), ((1, 1, 0), 27), ((2, 0, 1), 34), ((2, 1, 2), 35), ((2, 2, 0), 19), ((3, 0, 0), 25), ((3, 1, 1), 26), ((4, 0, 2), 19), ((4, 1, 0), 17), ((5, 0, 1), 10))
+jet_PRS_degrees=((5, 3), (3, 2), (2, 1), (1, 0)) jet_gcd=1
+J3_sha256=964e1a4e649b3c78d0cb33ce1fafe61c8d904f18434f412b2650f11c49f2aa81
+J5_sha256=6f4cf2449c78a0bc9b29f62e578022a4ec1ecd435a3d723eb929d2c2291455a6
+control=('generic_52', 52, 0, '9728fcc417f5a432c6233f8e2d8813695bf96bfa42554dbd9ff1a441ce2d545a')
+control=('k0_28', 28, 0, '1cb241ca08696864f27ed68f3d39ae6a9a6360a2c6b7cfefe2aef4553347c3d5')
+control=('k0_S_escape', 28, 1, '665a60d5f5a7a1911706e67aff211a500945e6cdf9ebe128df64310fc74b7d8c')
+control=('k1_S_escape', 52, 1, '18ec14f45e26ac317fe0fbaaae16ed524607feca23274ac9f72feb445b72b1a3')
+finite_case=4111 good_reduction=(p=113,u=85,eta=101) rows=(('generic_52', 52, 0, 0), ('k0_28', 28, 0, 0), ('k0_S_escape', 28, 1, 0), ('k1_S_escape', 52, 1, 0))
+finite_case=3211 good_reduction=(p=101,u=64,eta=43) rows=(('generic_52', 52, 0, 0), ('k0_28', 28, 0, 0), ('k0_S_escape', 28, 1, 0), ('k1_S_escape', 52, 1, 0))
+FAILED_CHECKS=NONE

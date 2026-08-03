@@ -1,0 +1,9 @@
+TOURNAMENT P-RECURSIVE RADIUS EXACT CONTROLS
+grid=r_1_12,d_1_12;positive=126;zero=18;record_sha256=d318c35386b7eaf8c1b297b96cb52988230be676624c25ad072fd013e51d7641
+same_H=120;different_C3_lifts=(178036299, 193215375)
+normalizations=factorial_cube_and_fixed_d_binomial;checked_records=144
+prime_denominator_P_recursive_hostile=1/n!;primes=(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47)
+regular_C5=row_col_sum_2;alpha=1/2;uniform_det={0: 1, 4: -5, 3: -5, 5: -2};W_equal=5t/(1-2t)
+strong_Q4_uniform_det={0: 1, 3: -2, 4: -1};log_gradients=({3: -1, 4: -1}, {3: -2, 4: -1}, {3: -2, 4: -1}, {3: -1, 4: -1})
+analytic_dependency=THM3213_asymptotic_and_transcendental_radius_lemma
+FAILED_CHECKS=NONE

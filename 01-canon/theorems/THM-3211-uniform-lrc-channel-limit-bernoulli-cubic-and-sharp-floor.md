@@ -1,6 +1,6 @@
 ---
 id: THM-3211
-title: "Uniform LRC channel limit, Bernoulli cubic, and sharp floor"
+title: "Uniform LRC channel limit, Bernoulli cubic, sharp floor, and boundary cocycle"
 status: >
   PROVED + VERIFIED-EXACT.  In every admissible primitive cap-two channel
   P<Q<=2P, P+Q>=8 and every ordered lane of THM-3171's nine-edge reflected
@@ -11,7 +11,11 @@ status: >
   forms and approach 1/105 strictly from above.  Every ray has an exact signed
   1/g correction given by an endpoint overlap barycenter; all residue
   dependence in the eventual numerator begins in the constant term.  Every
-  ordered lane realizes both correction signs.  A hostile lane approaches
+  ordered lane realizes both correction signs.  The correction is an exact
+  periodic-Bernoulli-quadratic phase coboundary.  Around a complete reflected
+  cell orbit it sums to zero, the bulk sums to T/49, and the exact finite
+  aggregate differs from T/49 by at most T h_g^2/(3n_gm_g)=O(g^-2).
+  A hostile lane approaches
   17/1680 from below and has g=2 mass 2030/280393 below 1/105, so neither the
   limit nor its correction replaces finite heads, proves physical entry, or
   proves LRC(14).
@@ -27,6 +31,11 @@ audit: >
   second exact certificate checks the signed correction on all 27,342 rays
   through Q=100 and the common residue-linear term on 190,786 states through
   Q=30; its uniform statement follows from the corrector proof and THM-3200.
+  A dependency-free boundary-cocycle companion checks the endpoint Bbar_2
+  identity, closed-path telescoping, reflection palindrome, universal T/49
+  bulk, exact closed-geodesic reduction, and the all-g aggregate bound on
+  246,186 phase states through Q=25.  Its zero-correction and negative-
+  aggregate hostiles prevent cellwise or one-sided overclaims.
 source: root/frontier-synthesis-cont-2026-08-02
 depends_on:
   - THM-3171-global-high-channel-cell90-floor-and-all-width-uniform-two-star-law
@@ -43,12 +52,16 @@ correction_script: 04-computation/lrc_signed_one_over_g_correction_certificate_t
 correction_output: 05-knowledge/results/lrc_signed_one_over_g_correction_certificate_thm3211.out
 correction_script_sha256: 275610333bda349a997c9a73c85709f50ee265f9a1746d037838fa2f773e1be6
 correction_output_sha256: 2b89b1ec33a457d15fe8441d16fe74705e0440d693feabe148387eba646f5218
+cocycle_script: 04-computation/lrc_boundary_cocycle_complete_orbit_thm3211.py
+cocycle_output: 05-knowledge/results/lrc_boundary_cocycle_complete_orbit_thm3211.out
+cocycle_script_sha256: e02886ce5f0bc3e9171809bc1cf70939817397b724bcd0602bfdd9e14a62c93e
+cocycle_output_sha256: e32f996441b7e487d137afad1a5125b41a70b4bb1aa8bd99f403d847d9274a83
 independent_engine_commit: 75d0c078d2c204b5fd37051e4fb2d2e1b64f286e
 independent_engine_sha256: d73273a4cf4b88bea2890e001166d96cb07dd9b61f3a248ff1538ec44579796a
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3211 -- uniform LRC channel limits and the Bernoulli cubic
+# THM-3211 -- uniform LRC channel limits, Bernoulli bulk, and boundary cocycle
 
 **PROVED + VERIFIED-EXACT.**
 
@@ -415,7 +428,156 @@ classify the correction; the phase-dependent barycenter `(30)` is the missing
 sidecar.  The certificate's absence of a zero through `Q<=100` is
 **FINITE-EXACT only**, not a global nonvanishing theorem.
 
-## 9. Failure boundary and next test
+## 9. Boundary cocycle and complete reflected-cell orbit
+
+The first correction has an exact operation law.  For a phase
+`phi=(alpha,beta)` in the two-torus, put
+
+```text
+S_phi={x in R/Z: chi(Px-alpha)chi(Qx-beta)=1},
+B(phi)=integral_0^1 ({x}-1/2)1_(S_phi)(x)dx.              (BC1)
+```
+
+Write the signed BV boundary of the reduced interval representation as
+
+```text
+partial 1_(S_phi)=sum_(xi in partial S_phi)sigma_xi delta_xi,
+sigma=+1 at an entry and -1 at an exit,                    (BC2)
+```
+
+and let
+
+```text
+Bbar_2(x)={x}^2-{x}+1/6.                                  (BC3)
+```
+
+Then
+
+```text
+B(phi)=-1/2 sum_(xi in partial S_phi)sigma_xi Bbar_2(xi). (BC4)
+```
+
+Indeed, every reduced component `[ell,r]` contributes
+`(Bbar_2(r)-Bbar_2(ell))/2`; splitting at zero changes nothing because
+`Bbar_2(0)=Bbar_2(1)`.  Thus `(30)` is the exact phase coboundary
+
+```text
+C(phi_0,phi_1)=B(phi_1)-B(phi_0).                         (BC5)
+```
+
+It is additive on polygonal phase paths and sums to zero on closed loops.
+For fixed `P,Q`, the finite endpoint-order/activation atlas makes `B`
+piecewise quadratic.  Hence the zero/sign locus of a fixed phase-step
+correction is a finite exact semialgebraic problem, rather than a grid
+nonvanishing question.
+
+### 9.1 Closed reflected-cell path
+
+Now allow the reflected-cell address to run.  With `L_0=168`, fixed labels
+`e,f`, define
+
+```text
+d=gcd(L_0,e,f),              T=L_0/d,
+phi_j=(je/L_0,jf/L_0),       delta=(e/L_0,f/L_0).          (BC6)
+```
+
+The cell-`j` overlap is
+
+```text
+I_(g,j)=integral_0^1
+ chi(gPu-e(j+u)/L_0)chi(gQu-f(j+u)/L_0)du.               (BC7)
+```
+
+The corrector proof gives
+
+```text
+I_(g,j)=L_j+c_j/g+O_j(g^-2),
+L_j=integral_0^1 A(phi_j+s delta)ds,
+c_j=B(phi_(j+1))-B(phi_j).                               (BC8)
+```
+
+Therefore every consecutive block telescopes and the complete orbit obeys
+
+```text
+sum_(j=a)^(b-1)c_j=B(phi_b)-B(phi_a),
+sum_(j=0)^(T-1)c_j=0.                                    (BC9)
+```
+
+The substitution `x->1-x` gives `B(-phi)=-B(phi)`.  Since
+`phi_(T-j)=-phi_j`, the correction word is a reflection palindrome:
+
+```text
+c_(T-1-j)=c_j.                                           (BC10)
+```
+
+Thus any nonzero complete correction orbit contains both signs; there can be
+no uniform positive `1/g` improvement around the whole reflected cell.
+
+### 9.2 Universal bulk and all-`g` aggregate bound
+
+Assume the standing nondegeneracy `Qe-Pf!=0`, and set
+
+```text
+a=e/d,                     b=f/d,
+n_g=gPT-a,                 m_g=gQT-b,
+h_g=gcd(n_g,m_g),          K=|Qe-Pf|/d.                  (BC11)
+```
+
+The full orbit has universal bulk
+
+```text
+sum_(j=0)^(T-1)L_j=T/49.                                 (BC12)
+```
+
+To prove this, the integer torus map
+`(x,u)->(Px-au,Qx-bu)` has nonzero determinant `(Qe-Pf)/d`, so it pushes Haar
+measure to Haar measure; each target interval has mass `1/7`.
+
+Concatenating the finite cells also gives an exact closed geodesic:
+
+```text
+J_g:=sum_(j=0)^(T-1)I_(g,j)
+ =T integral_0^1 chi(n_gu)chi(m_gu)du.                   (BC13)
+```
+
+Moreover `Qn_g-Pm_g=(Pf-Qe)/d`, so `h_g|K`.  Reducing the two frequencies by
+`h_g` and applying the absolutely convergent Fourier bound from Section 5
+gives, for every `g>=1`,
+
+```text
+|J_g-T/49|
+ <=T h_g^2/(3n_gm_g)
+ <=T K^2/(3n_gm_g).                                      (BC14)
+```
+
+The complete orbit therefore cancels its entire `1/g` term and has an
+explicit two-sided `O(g^-2)` error, including finite heads.
+
+This aggregate law is not cellwise safety.  The exact control
+
+```text
+(P,Q;e,f;j)=(5,6;1,12;56)
+```
+
+has `c_j=0` and `L_j=4/189`, but its finite errors at `g=1,2,6,9` have signs
+`-,+,-,-`.  The complete-orbit hostile `(3,5;1,12;g=2)` has
+
+```text
+J_2-T/49=-10/979811.                                     (BC15)
+```
+
+Thus zero first correction does not kill the periodic constant, and the
+aggregate bound is not a lower bound.  It also forgets the cell owner, so it
+does not replace exact finite heads, prove physical survivor entry, settle
+the rung, or prove `LRC(14)`.
+
+The exact companion checks `(BC4),(BC9)--(BC15)` on `246,186` rational phase
+states through `Q<=25`, all eighteen lanes and their full `84`/`168`-cell
+orbits.  Its finite census has `133,412` positive, `111,024` negative, and
+four zero cell corrections; this census is not an all-channel zero
+classification.
+
+## 10. Failure boundary and next test
 
 The lane
 
@@ -435,11 +597,13 @@ replace a finite physical head by its limit.  The finite period scout in the
 certificate for `(P,Q;e,f)=(Q-1,Q;12,1)`, `5<=Q<=30`, is **FINITE-EXACT only**;
 it does not prove that minimal periods are unbounded.
 
-The signed correction and residue-linear term are now classified.  The next
-lawful experiments are to determine the zero/sign chambers of `(30)`, retain
-the periodic constants and exact finite heads, and test the mechanism in a
-different reflected cell.  Nothing here establishes physical survivor entry,
-the rung, or `LRC(14)`.
+The signed correction, its chamber type, and its complete-orbit cancellation
+are now classified.  The next lawful experiment is the next
+Euler--Maclaurin rung: identify the residue-periodic `g^-2` coefficient as a
+signed endpoint-owner functional, or exhibit its minimal obstruction.  Exact
+cell owners and finite heads must remain attached while testing partial-cell
+telescoping or a different reflected cell.  Nothing here establishes physical
+survivor entry, the rung, or `LRC(14)`.
 
 ## Exact reproduction
 
@@ -450,12 +614,17 @@ python3 04-computation/lrc_uniform_channel_limit_bernoulli_certificate_thm3211.p
 python3 -O 04-computation/lrc_uniform_channel_limit_bernoulli_certificate_thm3211.py
 python3 04-computation/lrc_signed_one_over_g_correction_certificate_thm3211.py
 python3 -O 04-computation/lrc_signed_one_over_g_correction_certificate_thm3211.py
+python3 04-computation/lrc_boundary_cocycle_complete_orbit_thm3211.py
+python3 -O 04-computation/lrc_boundary_cocycle_complete_orbit_thm3211.py
 ```
 
-Both mode pairs must reproduce their declared outputs byte for byte.  The engine
+All three mode pairs must reproduce their declared outputs byte for byte.  The engine
 uses exact integer floor sums and rational arithmetic.  The certificate uses
 explicit exceptions rather than `assert`, hash-pins its independent historical
 engine, and labels its finite period scout separately from the proved theorem.
 The correction companion imports the same exact engine and uses no floating
-point or random choices.  QED for sections 1--5 and 7--9; section 6 is
+point or random choices.  The cocycle companion is dependency-free and checks
+the exact endpoint, closed-path, reflection, bulk, aggregate, and hostile
+identities over its declared finite universe.  QED for sections 1--5 and
+7--10; section 6 is
 verified-exact in its stated infinite integer universe.

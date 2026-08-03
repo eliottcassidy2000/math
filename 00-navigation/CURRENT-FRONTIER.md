@@ -295,9 +295,11 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   retains labelled fibres: parity/square swap walls; closure
   `N\{1,4,6}` with dyadic frontier; local A014574 recurrence refuted at term
   `21`; and distinct ancestry FINITE-EXACT through center `10^8`, ALL-n OPEN.
-- THM-3056 gives hypergeometric supports; THM-3200/3211 split LRC rays into
-  Bernoulli bulk, signed correction, periodic constant, and head. THM-3181 gives minimal join recurrences;
-  THM-3202/3213 give a fast cyclic jet and normalized non-C-finite diagonals.
+- THM-3200/3211 split LRC rays into Bernoulli bulk, `Bbar_2` coboundary,
+  periodic constant, and head; complete cell orbits cancel at `1/g` and have
+  a two-sided `O(g^-2)` aggregate. THM-3181/3202/3213 give minimal join laws,
+  a fast cyclic jet, and fixed-depth non-P-recursiveness for C3 and balanced
+  quotients on at least three blocks.
 - **EXACT identities / heuristic bridge:** corrected HYP-8820 puts caterer,
   cake, Moser, bagel, and Fibonacci in one Pascal array and proves
   `bagel(n)-cake(n)=T_n-1`; Klein-S313 realizes full-rank g-bonacci kernels.
@@ -375,13 +377,14 @@ Classify profiles under support operations; study analytic continuation and auto
   cells; THM-3151 excludes every `(D,D)` cell and proves the balanced chart
   floor `N>=4D`. THM-3167 separates diagonal, constant-field and global-owner
   gates; no bounded marked jet decides the first. THM-3172 freezes the
-  differential-owner filtration for Keller owners. THM-3212 gives five
-  centered Morse points; two local repairs each have `52` global Morse points.
-  New sources, chart entry, and JC(2) stay open.
+  differential-owner filtration for Keller owners. THM-3212 excludes the full
+  constant family `(Vz^2+bz+c)^2+A_src z+kx`: finite clutch and `S`-escape
+  walls always leave a critical point; generic counts are `52`/`28`. Nonconstant
+  source deformations, chart entry, and JC(2) stay open.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
-  close exact `{0,1,2}` windows through `r=2403`; all `50` seven-exit rows in
-  `2201<=d<=2400` close independently, and exits close `d=2401..2405`.
-  First unaudited: `r=2404,d=2406`. THM-3182 lifts the
+  close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
+  `2201<=d<=2400` and all `35` residuals in `2401<=d<=2500` close by matching
+  independent multi-place traces.  First unaudited: `r=2499,d=2501`. THM-3182 lifts the
   recurrence to a three-state Gauss--Manin system with rank-one prime reset and
   Smith type `(1,p,p)`; THM-3185/3188/3191 give its exact carried p-primary
   thickness, pre-reset character holonomy, common exterior plane and two-state

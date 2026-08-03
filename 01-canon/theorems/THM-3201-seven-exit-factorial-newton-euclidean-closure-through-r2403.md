@@ -1,16 +1,17 @@
 ---
 id: THM-3201
-title: "Seven-exit factorial Newton--Euclidean closure through r=2403"
+title: "Seven-exit factorial Newton--Euclidean closure through r=2498"
 status: >
   PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Seven proved arithmetic exits leave exactly 50 residuals with
   2201<=d<=2400.  THM-3152's first full Euclidean row and the fixed prime
   bank through 47 close all 50; independent Fraction-hull and determinant-
-  hull implementations agree on every progressive degree-set trace.  The
-  largest killing prime is 37.  The same exits close d=2401,...,2405, so
-  every exact three-term quadratic factorial window beginning at
-  1<=r<=2403 contains a nonzero moment.  The first next seven-exit residual
-  is d=2406, r=2404.  This is bounded exact support and does not prove FC(3).
+  hull implementations agree on every progressive degree-set trace.  A dual
+  extension audit closes all 35 seven-exit residuals in 2401<=d<=2500; the
+  two implementations agree on every complete trace and need no prime above
+  13 there.  Thus every exact three-term quadratic factorial window beginning
+  at 1<=r<=2498 contains a nonzero moment.  The first next seven-exit residual
+  is d=2501, r=2499.  This is bounded exact support and does not prove FC(3).
 audit: >
   The primary companion hash-pins the proved THM-3180 Fraction-hull engine,
   which in turn pins THM-3152's recurrence, first Euclidean remainder, and
@@ -21,6 +22,9 @@ audit: >
   global semantic trace digests, the killer-prime histogram, and the d=2201
   hostile-boundary trace.  Planted factors v+1 and v survive.  AST audits
   find no assert node; normal and optimized transcripts agree byte-for-byte.
+  The extension companion pins both audited THM-3201 engines, reconstructs
+  the 35 new rows in four balanced chunks, and requires literal equality of
+  their complete progressive degree-set traces.
 source: root/frontier-synthesis/factorial-next-range/2026-08-02
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
@@ -44,13 +48,20 @@ independent_script: 04-computation/factorial_seven_exit_first_flag_2400_independ
 independent_output: 05-knowledge/results/factorial_seven_exit_first_flag_2400_independent_audit_thm3201.out
 independent_script_sha256: afe3ec56c7efe99ff4a09c1af856b4e144312d48ec45e729d063a5fd83b0f0b0
 independent_output_sha256: 2561407b6a41e7286de5ef739cc22355eb222617e92522e76cd6bf15a857fa8e
+extension_script: 04-computation/factorial_seven_exit_extension_2500_thm3201.py
+extension_output: 05-knowledge/results/factorial_seven_exit_extension_2500_thm3201.out
+extension_script_sha256: 3c4732e855147b03bc189c01ca75058809148e017e32dcaf5007cbb90eced95d
+extension_output_sha256: 63cd0b4e406111da0ef00d414b613f77fcbd0191d246a36cd23983ec5467590a
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3201 -- seven-exit factorial Newton--Euclidean closure through r=2403
+# THM-3201 -- seven-exit factorial Newton--Euclidean closure through r=2498
 
 **PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY
 HOSTILE-AUDITED.**
+
+The historical `through-r2403` filename is retained as a stable inbound path;
+the current title, status, and theorem boundary are `r=2498`.
 
 ## 1. Statement and scope
 
@@ -60,7 +71,7 @@ Let
 L(t^m)=m!,                    q(t)=a+bt+ct^2,               (1)
 ```
 
-with `abc!=0`.  For every integer `1<=r<=2403`, the three moments
+with `abc!=0`.  For every integer `1<=r<=2498`, the three moments
 
 ```text
 L(q^r),                 L(q^(r+1)),                 L(q^(r+2)) (2)
@@ -182,7 +193,8 @@ d=2404: d-5=2399 prime                    (THM-3170),
 d=2405: d-6=2399 prime                    (THM-3176).       (14)
 ```
 
-Thus `(2)` holds through `d=2405`, equivalently `r=d-2=2403`.  QED.
+Thus the inherited scan first reaches `d=2405`, equivalently `r=d-2=2403`.
+Section 6 continues the same audited flag rather than changing observers.
 
 ## 4. Exact traces and independent audit
 
@@ -250,24 +262,58 @@ Consequently neither theorem supplies a row-preservation implication here.
 They are not dependencies of `(13)` or the bound; no Smith band,
 Gauss--Manin projection, or continuant heuristic is used in the proof.
 
-## 6. Exact first next residual
+## 6. Dual extension through `d=2500`
 
-The first seven-exit residual after the proved interval is `d=2406`, hence
-`r=2404`:
+The former first residual `d=2406` is not a survivor.  Run the same first
+Euclidean flag on the full interval `2401<=d<=2500`.  Its progressive
+seven-exit census is
 
 ```text
-d   =2406=2*3*401,
-d-1 =2405=5*13*37                       (not a prime power),
-d-2 =2404=2^2*601,
-d-3 =2403=3^3*89,
-d-4 =2402=2*1201,
-d-5 =2401=7^4,
-d-6 =2400=2^5*3*5^2.                                      (19)
+(90,79,68,58,49,40,35).                                  (19)
 ```
 
-Thus none of the seven uniform exits applies at `r=2404`, and the finite
-first-flag scan stops immediately before it.  Equation `(19)` is an exact
-boundary invoice, not a common-root witness or counterexample.
+The exact residual list consists of
+
+```text
+2406..2410,
+2430..2436,
+2454..2458, 2466,
+2484..2500.                                               (20)
+```
+
+The primary Fraction-hull engine and the independent determinant-lower-hull
+engine agree literally on every progressive degree set for all `35` rows.
+Their common semantic-trace digest is
+
+```text
+0dfbdc64262504cc5a60059e2ec72a99d07839fa83b86364fa28c428c439e5ff. (21)
+```
+
+Every intersection becomes empty.  The first killing-prime histogram is
+
+```text
+2:1, 3:5, 5:9, 7:12, 11:6, 13:2,                        (22)
+```
+
+so no prime above `13` is needed in this extension.  Together with the seven
+proved exits, this closes every `2401<=d<=2500`.  Hence `(2)` holds for
+every `1<=r<=2498`.
+
+The first next seven-exit residual is `d=2501`, hence `r=2499`, with invoice
+
+```text
+d   =2501=41*61,
+d-1 =2500=2^2*5^4                       (not a prime power),
+d-2 =2499=3*7^2*17,
+d-3 =2498=2*1249,
+d-4 =2497=11*227,
+d-5 =2496=2^6*3*13,
+d-6 =2495=5*499.                                          (23)
+```
+
+Equation `(23)` is the new exact boundary invoice, not a common-root witness
+or counterexample.  This remains a finite exact-support theorem and supplies
+no translated-support or full `FC(3)` conclusion.
 
 ## 7. Reproduction
 
@@ -278,8 +324,14 @@ python3 04-computation/factorial_seven_exit_first_flag_2400_thm3201.py
 python3 -O 04-computation/factorial_seven_exit_first_flag_2400_thm3201.py
 python3 04-computation/factorial_seven_exit_first_flag_2400_independent_audit_thm3201.py
 python3 -O 04-computation/factorial_seven_exit_first_flag_2400_independent_audit_thm3201.py
+python3 04-computation/factorial_seven_exit_extension_2500_thm3201.py
+python3 -O 04-computation/factorial_seven_exit_extension_2500_thm3201.py
 ```
 
-Compare LF-normalized bytes with the two declared stored outputs.  Each
+Compare LF-normalized bytes with the three declared stored outputs.  Each
 companion resolves its pinned inherited engine relative to its own file, so
-dependency lookup is independent of the caller's current directory.
+dependency lookup is independent of the caller's current directory.  The
+extension companion runs both earlier engines and requires their full traces
+to agree before printing `(19)--(23)`.
+
+**QED.**

@@ -1,0 +1,13 @@
+THM-3201 SEVEN-EXIT EXTENSION THROUGH d=2500 DUAL AUDIT
+primary=factorial_seven_exit_first_flag_2400_thm3201.py sha256=1cf067eb3cc8da29e51ee8f560f4100fb66a4b9684a2da8b1f7ef14d380e4171
+independent=factorial_seven_exit_first_flag_2400_independent_audit_thm3201.py sha256=afe3ec56c7efe99ff4a09c1af856b4e144312d48ec45e729d063a5fd83b0f0b0
+universe=2401<=d<=2500 census=(90, 79, 68, 58, 49, 40, 35)
+seven_exit_residuals=35 residual_digest=ee60713d85dfa69bbf2f4e542684399938216ca4f6da4b6ae49b5ac27c90f004
+balanced_chunks=((2401, 2433), (2434, 2466), (2467, 2492), (2493, 2500))
+dual_semantic_trace_digest=0dfbdc64262504cc5a60059e2ec72a99d07839fa83b86364fa28c428c439e5ff
+closed=35 survivors=0
+killer_histogram=((2, 1), (3, 5), (5, 9), (7, 12), (11, 6), (13, 2)) max_killer_prime=13
+first_next_seven_exit_residual=d=2501 r=2499
+first_next_factorization=(((41, 1), (61, 1)), ((2, 2), (5, 4)), ((3, 1), (7, 2), (17, 1)), ((2, 1), (1249, 1)), ((11, 1), (227, 1)), ((2, 6), (3, 1), (13, 1)), ((5, 1), (499, 1)))
+consequence=every exact {0,1,2} quadratic window 1<=r<=2498 is nonzero in at least one slot
+STATUS=PASS

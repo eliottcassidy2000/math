@@ -14,7 +14,13 @@ status: >
   congruence puts a fresh p^3 in the singly normalized denominator for every
   fixed d and all but finitely many primes.  More generally, for every fixed
   q-block quotient tournament Q, F_(Q[T_r,...,T_r])(d)/(r!)^q has fresh p^q
-  denominators and is not C-finite.  P-recursiveness remains open.
+  denominators and is not C-finite.  A rational D-finite germ with finite
+  nonzero radius has algebraic radius; the C3 diagonal instead has radius
+  (log 2)^3.  Hence all three fixed-depth C3 normalizations are not
+  P-recursive.  The same pole/saddle argument closes every strongly connected
+  Perron-balanced quotient on q>=3 blocks, including every nontrivial regular
+  tournament quotient;
+  arbitrary unbalanced quotients remain open.
 audit: >
   The exact transform companion checks 262 coordinates for K1, C3, and the
   same-H mask-40/mask-76 hostile.  The exact modular companion reconstructs
@@ -23,10 +29,14 @@ audit: >
   constant 1944, the p-index Fermat-quotient near miss, and its finite scout;
   an independent vertex/set-partition companion reconstructs the full U_2
   path-cover profile and 1944 without the quotient kernel.  The all-depth and
-  quotient-wide proofs are algebraic below.  A floating 80-digit companion
+  quotient-wide proofs are algebraic below.  A sixth exact companion checks
+  the finite positivity and normalization boundaries, the 1/n! fresh-prime
+  P-recursive hostile, a regular C5 control, and a strong unbalanced Q4
+  hostile.  A floating 80-digit companion
   checks the analytically proved asymptotic for d=1..4 and r=40..640 and is
   explicitly labelled NUMERICAL CONTROL ONLY.  All five
-  normal/-O/stored transcripts agree and all scripts have no assert node.
+  inherited normal/-O/stored transcripts and the sixth pair agree; all
+  scripts have no assert node.
 source: root/frontier-synthesis-cont-2026-08-02
 depends_on:
   - THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence
@@ -54,6 +64,10 @@ asymptotic_control_script: 04-computation/tournament_normalized_diagonal_asympto
 asymptotic_control_output: 05-knowledge/results/tournament_normalized_diagonal_asymptotic_control_thm3213.out
 asymptotic_control_script_sha256: e298e38884709b9bdb6f18fa808413571b0682168217635f4e795a55c62cab34
 asymptotic_control_output_sha256: 65b6b105a8c7343689e72bb4999d159a19c68b0db9bd927a449ab82cbfaebd90
+precursive_script: 04-computation/tournament_precursive_radius_exact_controls_thm3213.py
+precursive_output: 05-knowledge/results/tournament_precursive_radius_exact_controls_thm3213.out
+precursive_script_sha256: c15c14dd38ae620d77cdab351f4c1404b24d6fbe9a89a9ca7a54ea9c1f4f9dad
+precursive_output_sha256: 5a0e1c6df072c7038cd547d2f4d69987c6ac01491955a5993a7c3e0bd62ed127
 hash_basis: LF-normalized bytes
 ---
 
@@ -447,34 +461,292 @@ has a factorial-normalized sequence which is not C-finite.  This
 quotient-wide statement concerns recurrence class only; it supplies no
 uniform algorithm for growing quotient or output depth.
 
-## 6. Recurrence taxonomy and operational boundary
+## 6. Transcendental radius closes P-recursiveness
+
+The missing obstruction is analytic rather than p-adic.
+
+### 6.1 Rational D-finite germs have algebraic radius
+
+```text
+rational P-recursive coefficients + 0<R<infinity  =>  R algebraic. (34)
+```
+
+Let `(a_n)` be rational and suppose its OGF `A(z)=sum_n a_nz^n` has finite
+nonzero radius `R`.  If `(a_n)` were P-recursive over `C`, then it would have
+an eventual recurrence over `Q[n]`.  Indeed, after fixing the recurrence order
+and coefficient-degree bound, all recurrence coefficients form one finite
+vector in the kernel of an infinite matrix whose entries are rational numbers
+`n^k a_(n+j)`.  The rank is witnessed by finitely many rows, and row reduction
+over `Q` supplies a nonzero rational kernel vector.
+
+Thus `A(z)` is D-finite over `Q`.  Choose an annihilator
+
+```text
+sum_(k=0)^s q_k(z)D^k,                 q_k in Q[z],       (35)
+```
+
+with `q_s!=0`.  Some point `zeta` on `|z|=R` is a genuine singularity;
+otherwise finitely many overlapping continuations through the compact circle
+would enlarge the Taylor disk.  Every finite singularity of `(35)` is a zero
+of `q_s`, so `zeta` is algebraic.  Hence
+
+```text
+R=|zeta|=sqrt(zeta conjugate(zeta))
+```
+
+is algebraic.  Therefore a rational sequence with finite positive
+**transcendental** radius cannot be P-recursive over `C`.  In the nonnegative
+case, Pringsheim gives the shorter version: the positive point `R` itself is
+a singularity and hence a zero of `q_s`.
+
+For fixed `d`, `(13)` gives
+
+```text
+lim_(r->infinity) A_(r,d)^(1/r)=(log 2)^(-3),
+radius sum_r A_(r,d)z^r=(log 2)^3.                       (36)
+```
+
+Hermite--Lindemann makes `log 2` transcendental: if it were a nonzero
+algebraic number, its exponential `2` would be transcendental.  If its cube
+were algebraic, then `log 2` would be algebraic over the algebraic numbers and
+hence algebraic over `Q`, again impossible.  Thus `(36)` and the lemma prove
+
+```text
+{A_(r,d)}_(r>=1) is not P-recursive for every fixed d>=1. (37)
+```
+
+Fresh denominator primes alone would not prove this: `1/r!` has a new prime
+in its denominator at every prime index but satisfies
+`(r+1)a_(r+1)-a_r=0`.  The prime shift in Section 5 is therefore the correct
+C-finite obstruction; the transcendental radius is the orthogonal
+P-recursive obstruction.
+
+### 6.2 Hypergeometric return to every C3 normalization
 
 The three normalizations
 
 ```text
 F_(U_r)(d),             A_(r,d)=F_(U_r)(d)/(r!)^3,
-B_(r,d)=A_(r,d)/binom(r-1,d-1)                            (34)
+B_(r,d)=A_(r,d)/binom(r-1,d-1)                            (38)
 ```
 
-differ by nonzero hypergeometric terms for fixed `d`.  Termwise
-multiplication by a hypergeometric sequence and by its reciprocal preserves
-P-recursiveness.  Consequently the three sequences in `(34)` are
-P-recursive either all together or not at all.  Their P-recursive status is
-**OPEN**.
+differ by nonzero hypergeometric terms for fixed `d`.  Multiplication by a
+hypergeometric term and its reciprocal preserves P-recursiveness: substitute
+the rational shift ratio into a recurrence and clear denominators.  Finite
+heads are irrelevant.  Consequently `(37)` proves that **all three sequences
+in `(38)` are not P-recursive** for every fixed `d>=1`.  Equivalently, none of
+their formal OGFs is D-finite.  The raw OGF itself has radius zero, so the
+finite-radius argument must first be made after factorial normalization and
+then transported back.
 
-By contrast, their C-finite behavior differs sharply:
+## 7. Perron-balanced quotient extension
 
-| sequence | fixed-`d` status |
+The same mechanism extends beyond `C_3`, but balance is load-bearing.  Let
+`Q` be a strongly connected tournament on `q>=3` vertices, let `A=A_Q` use the
+convention `A_(ij)=1` iff `i->_Qj`, and let
+
+```text
+X=diag(X_1,...,X_q),             W_Q(X)=1^T X(I-A X)^(-1)1,
+A v=rho v,                         w^T A=rho w^T          (39)
+```
+
+with positive Perron vectors `v,w`.  Call `Q` **Perron-balanced** when
+
+```text
+w_i v_i=(w^T v)/q                         for every i.   (40)
+```
+
+The lower bound `q>=3` is essential.  For `Q=K_1`, the lift is `T_r` and
+
+```text
+F_(T_r)(d)=d! S(r,d)=sum_(j=0)^d(-1)^(d-j)binom(d,j)j^r.
+```
+
+Its raw fixed-`d` sequence is C-finite, and division by `r!` preserves
+P-recursiveness.  Thus the one-vertex regular quotient is a hostile boundary,
+not an instance of the Perron-radius theorem.
+
+Put `V_r=Q[T_r,...,T_r]`.  THM-3121 and `(10)` give the exact diagonal
+
+```text
+a_(Q,d)(r):=F_(V_r)(d)/(r!)^q
+ =[x_1^r...x_q^r]
+   W_Q(u(x_1),...,u(x_q))^d.                             (41)
+```
+
+Set
+
+```text
+alpha=1/rho,                    lambda=log(1+alpha).      (42)
+```
+
+At `X=alpha I`, the Perron eigenvalue of `AX` is one and simple.  Its
+spectral projector is `Pi=vw^T/(w^Tv)`, so the pole part of `(39)` has
+positive residue
+
+```text
+1^T(alpha I)Pi1
+ =alpha(1^Tv)(w^T1)/(w^Tv)>0.                            (43)
+```
+
+Thus no numerator cancellation lowers the order-`d` pole in `(41)`.
+Logarithmic eigenvalue differentiation gives
+
+```text
+partial_(log X_i) log rho(A X)=w_i v_i/(w^Tv),            (44)
+```
+
+so `(40)` is exactly the condition that the equal positive pole be critical
+for the main diagonal.
+
+### 7.1 Global product boundary and strict minimality
+
+The balance condition also proves global minimality.  With
+`D_v=diag(v)`, the matrix
+
+```text
+C=rho^(-1)D_v^(-1)AD_v                                  (45)
+```
+
+is doubly stochastic: the right Perron equation gives row sums one, while
+`w_i v_i` constant and the left Perron equation give column sums one.  For
+positive diagonal `S=diag(s_i)`, let `mu,y>0` be the Perron pair of `CS`.
+Applying concavity of `log` row by row and using both stochastic sum laws
+gives
+
+```text
+rho(A S)>=rho (prod_i s_i)^(1/q).                        (46)
+```
+
+Also `g(t)=log u(exp(t))` has
+
+```text
+g''(t)=x[1-(1+x)exp(-x)]/(1-exp(-x))^2>0,
+x=exp(t),                                                (47)
+```
+
+so Jensen gives
+
+```text
+(prod_i u(x_i))^(1/q)
+ >=u((prod_i x_i)^(1/q)),                                (48)
+```
+
+with equality only when all `x_i` agree.  The positive Neumann domain in
+`(41)` is `rho(A diag(u(x_i)))<1`.  Equations `(42),(46),(48)` imply
+
+```text
+prod_i x_i<lambda^q,                                    (49)
+```
+
+with the unique positive boundary equality at
+`x_1=...=x_q=lambda`.
+
+It is also the only singular point in the closed polydisc
+`|x_i|<=lambda`.  Perron comparison forces every modulus to reach its bound,
+and equality in `|u(x)|<=u(|x|)` forces `x=lambda` because `u` has consecutive
+positive exponents.  This supplies strict complex minimality.
+
+### 7.2 Nondegenerate saddle and quotient radius
+
+Let `psi(eta)=log rho(A diag(exp(eta_i)))`.  Perron log-convexity makes its
+Hessian positive semidefinite.  In logarithmic local variables
+`x_i=lambda exp(y_i)`, set `f(y)=log u(lambda exp(y))` and
+`G(y)=psi(f(y_1),...,f(y_q))`.  At the balanced point,
+
+```text
+Hess G(0)
+ =f'(0)^2 Hess psi(log(alpha)1)+(f''(0)/q)I,             (50)
+```
+
+which is positive definite by `(47)`.  Twice differentiating the singular
+equation along a tangent vector with coordinate sum zero gives a strictly
+negative second derivative of the diagonal phase.  Hence the pole has a
+nondegenerate `(q-1)`-dimensional saddle.
+
+The same Cauchy residue calculation as Section 3 now yields, for every fixed
+`d>=1`,
+
+```text
+a_(Q,d)(r)
+ ~C_(Q,d) r^(d-1-(q-1)/2) lambda^(-qr),
+C_(Q,d)>0.                                               (51)
+```
+
+The OGF radius is therefore
+
+```text
+R_Q=lambda^q=(log(1+1/rho))^q.                           (52)
+```
+
+The Perron root of the integer matrix `A` is algebraic, while its displayed
+nonzero logarithm and every positive integer power are transcendental by
+Hermite--Lindemann.  The lemma in Section 6 proves that both
+
+```text
+F_(Q[T_r,...,T_r])(d)/(r!)^q
+and F_(Q[T_r,...,T_r])(d)                                (53)
+```
+
+are not P-recursive for every fixed `d>=1`.
+
+Every nontrivial regular tournament `Q` (`q=2k+1>=3`) is strongly connected:
+otherwise the first and
+last SCCs in condensation order would each have at least `k+1` vertices,
+more than `q=2k+1` in total.  It is Perron-balanced with `rho=k` and
+`v=w=1`.  Thus
+
+```text
+lambda=log((q+1)/(q-1)).                                 (54)
+```
+
+For the cyclic regular `C_5`, the exact equal-weight resolvent is
+`5t/(1-2t)` and `(52)` is `log(3/2)^5`.
+
+### 7.3 The unbalanced boundary
+
+Strong connectivity alone is insufficient.  Take the strong tournament
+
+```text
+1->2->3->1,                       3->4, 4->1, 4->2.      (55)
+```
+
+It has
+
+```text
+det(I-A diag(X))
+ =1-X1X2X3-X2X3X4-X1X2X3X4.                             (56)
+```
+
+At the equal positive root of `1-2t^3-t^4`, the four logarithmic derivatives
+are
+
+```text
+-t^3(t+1), -t^3(t+2), -t^3(t+2), -t^3(t+1),             (57)
+```
+
+so the equal pole is not diagonal-critical.  Its true saddle is unequal and
+its exact product radius is not classified here.  Arbitrary unbalanced fixed
+quotients therefore remain **OPEN**.  Reducible and transitive quotients also
+require separate treatment.
+
+## 8. Recurrence taxonomy and operational boundary
+
+| sequence/family | fixed-depth status |
 |---|---|
-| raw `F_(U_r)(d)` | not C-finite for every `d`, by THM-3202's factorial growth |
-| `A_(r,d)` | not C-finite for every `d`, by the prime shift `(33a)--(33f)` |
-| `B_(r,d)` | not C-finite for every `d`, by `(25)` |
+| raw `F_(U_r)(d)` | not P-recursive, by `(37)--(38)` |
+| C3-normalized `A_(r,d)` | not P-recursive, by transcendental radius `(36)` |
+| C3 twice-normalized `B_(r,d)` | not P-recursive, by hypergeometric return |
+| Perron-balanced fixed quotient on `q>=3` blocks (including nontrivial regular quotients) | raw and factorial-normalized sequences not P-recursive, by `(39)--(54)` |
+| one-block quotient `K_1` | raw sequence C-finite; factorial-normalized sequence P-recursive |
+| arbitrary other unbalanced/reducible fixed quotient | factorial-normalized sequence not C-finite by Section 5; no uniform P-recursive classification |
 
-This separates three notions that finite sequence fitting tends to conflate:
-fast exact evaluation, a fixed constant-coefficient closed form, and a
+This separates three notions that finite fitting tends to conflate: fast
+exact evaluation, a fixed constant-coefficient closed form, and a
 polynomial-coefficient recurrence.  Equation `(5)` supplies the first;
-equations `(27),(33f)` refute the second at every fixed depth; the third
-remains open.
+Sections 4--5 refute the second at every fixed depth; Sections 6--7 refute the
+third on the cyclic and Perron-balanced scopes without claiming a complexity
+lower bound, SCC reconstruction, or a growing-depth algorithm.
 
 ## Exact reproduction
 
@@ -491,9 +763,13 @@ python3 04-computation/tournament_d4_prime_shift_vertex_audit_thm3213.py
 python3 -O 04-computation/tournament_d4_prime_shift_vertex_audit_thm3213.py
 python3 04-computation/tournament_normalized_diagonal_asymptotic_control_thm3213.py
 python3 -O 04-computation/tournament_normalized_diagonal_asymptotic_control_thm3213.py
+python3 04-computation/tournament_precursive_radius_exact_controls_thm3213.py
+python3 -O 04-computation/tournament_precursive_radius_exact_controls_thm3213.py
 ```
 
 Each pair must reproduce its declared output byte for byte.  The first four
-companions use exact integer/rational arithmetic.  The fifth is explicitly a
-floating numerical control and is not a proof dependency for `(13)`.  All
-checks use explicit exceptions, so optimized mode retains them.  QED.
+and sixth companions use exact integer/rational arithmetic.  The fifth is
+explicitly a floating numerical control and is not a proof dependency for
+`(13)`.  The analytic radius and Perron-saddle arguments are proved above;
+the sixth companion supplies their finite controls and hostiles.  All checks
+use explicit exceptions, so optimized mode retains them.  QED.
