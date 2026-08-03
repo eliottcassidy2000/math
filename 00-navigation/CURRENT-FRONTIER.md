@@ -37,7 +37,11 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
 
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
-- **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves all-`n` sparse fragility; the physical lift remains open.
+- **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves
+  all-`n` sparse fragility.  THM-3325 exposes a genuinely composite failure of
+  the boundary projection: the even flat modulo `2p` has many boundary blockers
+  but only zero is full-cell, by a `nu_2`-descending activation graph.  The
+  speed/residue realization and physical lift remain open.
 - **Foreign-base phase.** The FINITE-EXACT `C_221` stalk has a typed
   `4/17 <-> 13/17` two-cycle, but no exclusive source, lawful return, or
   semantic endpoint current.
@@ -372,7 +376,9 @@ Classify profiles under support operations; study analytic continuation and auto
   [subresultant sidecar](../07-reflections/jc-critical-inverse-cover-cofactor-jacobian-probe-agent-20260803.md)
   gives a two-pivot inverse graph and mate-integrability class on two controls.
   THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
-  THM-3318's gradient-unit torsion ladder is a separate excluded family, not a JC case.
+  THM-3318/3326 classify an excluded gradient-unit linear-in-`z` response:
+  constant `g` is exact, one root gives jet-marked finite torsion, and multiple
+  roots give a free class by residues.  This refines THM-2063, not `JC(2)`.
   No base root choice follows; residual degree 119, Keller mate/inverse cover, `JC(2)` and `DC(2)` remain OPEN.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in

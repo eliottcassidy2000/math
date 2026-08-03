@@ -21,8 +21,9 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 ## Sixteen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; projected caps are
-   `1579/216`. THM-3308/3313 give exact threshold circuits and ledger `373157`:
-   `353` `z1=216` wall rows in `31` families. The rung and physical entry remain open.
+   `1579/216`. THM-3308/3313/3320 give exact threshold circuits and ledger
+   `373153`: `349` `z1=216` wall rows in `29` families. The rung and physical
+   entry remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
@@ -60,7 +61,8 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     THM-3288 gives static orders `10/14/15`; THM-3307 derives six minimal
     visibility circuits; THM-3315 gives `N_d/(P-zN_d)`. THM-3314 copies
     endpoints but blocks centered-current and ancestry cloning.
-    THM-3310 excludes cyclic degree-four FC support `<=3`; supports `4/5` remain.
+    THM-3310 excludes cyclic degree-four FC support `<=3`; THM-3321 closes
+    support `4`, while support `5` remains open after THM-3323's exact rank.
     `FC(3)`/`SFC(3)` remain OPEN.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close linear through cubic fibers and twice-odd finite poles; THM-2214/2217/2247 close the inherited nonsplit train through degree `14`.
     THM-2371/THM-2376 close named degree-`18` strata; later sheet/quotient losses remain.
@@ -69,7 +71,8 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     THM-3306 gives a nonsplit quadratic deck of degree `2/72`; THM-3309 points
     it but finds `P_x=P_z=0`, so gradient unimodularity fails before the mate.
     THM-3303 proves `JC(2) => HFC(3)` only in the constant-Jacobian sector by
-    forcing a boundary collision. `JC(2)` and `DC(2)` remain OPEN.
+    forcing a boundary collision. THM-3326 refines the already closed
+    linear-in-`z` stratum by an exact response trichotomy; `JC(2)` and `DC(2)` remain OPEN.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
