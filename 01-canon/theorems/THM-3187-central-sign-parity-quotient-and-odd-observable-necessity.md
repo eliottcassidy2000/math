@@ -2,7 +2,7 @@
 id: THM-3187
 title: "Central-sign parity quotient and odd-observable necessity"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   If a central involution acts as -I on a linear carrier, every homogeneous
   observable of even total degree factors through the central-sign quotient,
   while every odd-degree observable is sign-sensitive when nonzero.  Applied
@@ -13,11 +13,13 @@ status: >
   but not supplied.
 source: root/2026-08-02
 audit: >
-  The pure Gaussian-integer companion reconstructs THM-2889's Pauli lifts,
-  proves their common square is -I4, checks all four-variable monomials
-  through degree eight, all tensor/symmetric/exterior parity layers through
-  degree four, and the fixed-reference versus co-shifted-correlation split.
-  Normal/-O/stored replay and an independent immutable audit are pending.
+  Two independent hostile audits rederived the central and multihomogeneous
+  parity laws, the Pauli -I4 center, all tensor/symmetric/exterior/Hermitian
+  signs, the fixed-reference versus jointly co-shifted split, and the typed
+  right-word-to-left-representation clutch comparison.  The pure
+  Gaussian-integer companion checks 495 monomials, 341 tensor basis vectors,
+  70 symmetric basis vectors, 16 exterior basis vectors, and 36 multidegrees.
+  Normal, optimized, and stored outputs agree and the LF hashes match.
 depends_on:
   - THM-2889-dicyclic-reverse-action-joint-carrier-and-skew-lift-separation
 related:
@@ -33,7 +35,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3187 -- central-sign parity quotient and odd-observable necessity
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2889 constructs a faithful four-channel representation of the abstract
 joint LRC carrier.  Its quaternionic center acts by `-I_4`, and the proposed
