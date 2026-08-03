@@ -293,3 +293,9 @@ section obstruction, or jet budget with a hostile control.               (7)
 
 Only after `(7)` survives should one ask for dynamics, positivity, or a global
 open-problem consequence.
+
+## Continuation
+
+All four ranked probes above were subsequently run.  Their exact answers and
+the sharpened “next-operation closure” rule are synthesized in
+[Four frontiers after the next operation](four-frontier-next-operation-closure-synthesis-codex-20260803.md).

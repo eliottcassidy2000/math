@@ -390,10 +390,10 @@ Quotient only after a good-cover, compatible-section, monotonicity, or factoriza
 **Trigger / action:** before using deletion, transfer, or a commuting square to induct positivity, compute its kernel on the positive carrier; test a negative preimage of zero and whether known positive ghosts span the failure. Commutation transports invisibility, not order reflection.
 A positive left inverse, order-reflecting quotient, or target factorization discharges the audit; otherwise name a transverse selector. **Evidence:** THM-3122's positive derangement ghost, THM-2551's preserved all-unit kernel, and THM-3127's upset separators.
 
-## Audit sections, not only fibres
+## Audit and close sections under their next native operation
 
-**Trigger / action:** put separately chosen positive witnesses in one typed carrier `P_i`; test cumulative intersections and retain a transition cocycle if witnesses move.
-A fixed law beating every adversary is a coherent mixed section (THM-3156); per-adversary maxima are only fibres.
-**Caution:** fibres need not glue; after gluing, require a target-preserving map from relation arrows to composable physical updates.
-Adjacency powers count relation walks, not time; chronology needs lawful updates, basepoint, lifetime and composition.
-**Evidence:** THM-2292/3144/2658/3156/3285--3288; THM-3152 intersects supports; THM-3166 retains SCC order.
+**Trigger / action:** join chosen witnesses in one typed carrier, then apply the next target operation before scalarizing; retain a transition cocycle if witnesses move.
+**Mechanism:** pre-scalar defects live in typed co-support, transition cones, base ideals, or incidence circuits; retaining one gives a stopping reason or low-rank update.
+**Caution:** fibres need not glue; require a target-preserving map, explicit basepoint and lawful composition. Empty intersections, base loci and vector kernels differ.
+Adjacency powers count relation walks, not time; chronology additionally needs lifetime and composition.
+**Evidence:** THM-2292/3144/2658/3156/3285--3288/3305/3306; the 2026-08-03 LRC/FC closures and Reynolds-power no-go.

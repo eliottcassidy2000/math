@@ -1,0 +1,18 @@
+independent affine-C critical-section degeneracy audit
+dependency_hash_checks=6
+generic_subresultants=(3,3,2,1,0);Res_y=V^3*K40;degrees_in_C=(K,a,b)=(2,0,1);R1_y_lead=4
+case=4111;H_bidegree=(c:2,x:53);a_degree=36;a_irreducible_squarefree=1;b=b0+c*b1;b1_unit_mod_a=1;cstar_degree=24;H_mod_a=H2*(c-cstar)^2;H2_unit_mod_a=1
+case=4111;D_degree=36;D_irreducible_squarefree=1;Krylov_rank=36;Res_x(a,b)=field_unit*D;Res_x(a,H)=field_unit*D^2;gcd_a_H_nontrivial_iff_D=0
+case=4111;base_ideal=(a,b)_is_transverse;Jacobian_det=a_prime*b1_is_a_unit=1;quadratic_subresultant_nonzero_pattern=(1,1,1);generic_y_gcd_degree_on_D=2;R2_y_lead_unit_on_D=1
+case=4111;H_x_at_incidence=0;H_xx_at_incidence_is_unit=1;D_incidence_exact_x_multiplicity=2
+case=4111;finite_wall_degree=5;finite_factor_profile=(1,1,1,2);boundary_wall_degree=6;boundary_factor_profile=(1,1,1,1,2);boundary=field_unit*finite*live_q3;live_q3_degree=1;exceptional_q4_midpoint=1;D_disjoint_all_named_walls=1
+case=4111;D_digest=ea68e596a40d6f54763f736ec8f016f342d2cc05cb9935153e67025d60400e74
+case=3211;H_bidegree=(c:2,x:53);a_degree=36;a_irreducible_squarefree=1;b=b0+c*b1;b1_unit_mod_a=1;cstar_degree=24;H_mod_a=H2*(c-cstar)^2;H2_unit_mod_a=1
+case=3211;D_degree=36;D_irreducible_squarefree=1;Krylov_rank=36;Res_x(a,b)=field_unit*D;Res_x(a,H)=field_unit*D^2;gcd_a_H_nontrivial_iff_D=0
+case=3211;base_ideal=(a,b)_is_transverse;Jacobian_det=a_prime*b1_is_a_unit=1;quadratic_subresultant_nonzero_pattern=(1,1,1);generic_y_gcd_degree_on_D=2;R2_y_lead_unit_on_D=1
+case=3211;H_x_at_incidence=0;H_xx_at_incidence_is_unit=1;D_incidence_exact_x_multiplicity=2
+case=3211;finite_wall_degree=5;finite_factor_profile=(1,1,1,2);boundary_wall_degree=6;boundary_factor_profile=(1,1,1,1,2);boundary=field_unit*finite*live_q3;live_q3_degree=1;exceptional_q4_midpoint=1;D_disjoint_all_named_walls=1
+case=3211;D_digest=80dbe3e2eb681a1dc223483c539dfc8258940dd54eb8d736075f66416d2288f9
+independent_D_digests=('ea68e596a40d6f54763f736ec8f016f342d2cc05cb9935153e67025d60400e74', '80dbe3e2eb681a1dc223483c539dfc8258940dd54eb8d736075f66416d2288f9')
+scope=FINITE-EXACT_PARTIAL_independent_quotient_norm_audit;full_repeated_H_parameter_discriminant_not_claimed;no_inverse_cover_not_JC2
+source_ast=(assert_nodes=0,float_literals=0,audited_primary_import_or_execution_paths=0)

@@ -45,15 +45,27 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    cofinite aperiodic return set with infinitely many zero odd constant terms.
    HYP-8930's fixed-support unique-channel lemma survives. HYP-8931 is vacuous:
    `lambda=0, delta=-1, F=empty`; `98/116` is a bounded census, not a theorem (MISTAKE-240).
-9. **Whole-packet Frobenius is not an LRC proof.** THM-3255 has ranks `157/168`, additive rank at most 7 and marker ranks `11/12`; THM-3267 gives the Singer phase ladder. THM-3285 proves a literal `R-M-R` horn on `63` labels. A finite-exact subatom test has `169` middle origins; outer typed/vertical-affine lift fails. Normal/current data and the LRC(14) exit remain OPEN.
+9. **Whole-packet Frobenius is not an LRC proof.** THM-3255/3267 give rank and
+   phase; THM-3285 gives a literal `R-M-R` horn. Its FINITE-EXACT `13`-label
+   normal atlas has two middle completions but no outer co-support. A two-axis
+   atom, current and LRC(14) remain OPEN.
 10. **Tournament structure is operational.** THM-1862/1936/2195 give join/substitution laws; THM-3181/3202/3248 give response laws.
-   THM-3260/3273 give a nonplanar bispanning graph and intrinsic order-12 critical quotient, but only six vertex classes: relative phase, not a torsor or tournament. THM-3287 gives exact static dominance sections, but its relation arrows have count-vector `L1=2` versus `L1=1` for physical one-pole transitions; it is not a tournament or time evolution. Q4 radius stays open.
+   THM-3260/3273 give relative phase, not a tournament. THM-3287 gives static
+   sections; THM-3305 an exact rank-two edge update. These remain static, not
+   tournaments or time.
 11. **Sequences need support and multiplicity profiles.** THM-2000/2005/2352 separate support, collision tax, and q-adic thresholds; THM-2438/2500 give Poisson--Newton and finite-hole laws.
-    THM-3186 gives P-recursive tails; THM-3268 gives an abstract order-two law, not a physical LRC walk. THM-3288 gives rational series for THM-3287's static witness walks, with minimal orders `10/14/15`; the full core has a degree-14 tail but a `-1392` initial residual and Hankel order 15. THM-3286/3287 prove neither `FC(3)` nor `SFC(3)`, which remain OPEN. Q4 radius/non-P stays open.
+    THM-3186 gives P-recursive tails; THM-3288 gives static series of orders
+    `10/14/15`. THM-3305 gives mass `3/5`, head `-108`, a `2 x 2` update and a
+    separate `14 -> 12` order drop. FC closure has `854` typed nodes and four
+    blockers; `FC(3)`/`SFC(3)` remain OPEN.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close linear through cubic fibers and twice-odd finite poles; THM-2214/2217/2247 close the inherited nonsplit train through degree `14`.
     At degree `18`, THM-2297--2359 reduce the sparse/squarefree branches; THM-2371/THM-2376 close `H_2S_5^2`, and hostile-audited THM-2406 closes the remaining `H_4` locus. THM-2671--2755 close the inherited degree-22 split/nonsplit families; THM-2778 closes chosen-sheet polynomial exact prefixes, while THM-2796 retains `A(R_Q/q)=VG`.
     THM-3057/3059 tame infinity-inertia sign, but THM-3064/3066 retain quotient loss. THM-3123's abstract `S7` maps lack Keller-chart entry; THM-3133/3140 only close their stated response cells.
-    THM-3212/3225 leave critical points; THM-3237--3265 give the infinity staircase. THM-3279/3289 close affine `C,E` (`B=1`) on both pairs: an owner collision or at least 50 off-owner resultant-multiplicity units. No inverse cover follows; cofactor data, deformations, other branches, `JC(2)` and `DC(2)` stay OPEN.
+    THM-3212/3225 leave critical points; THM-3237--3265 give the infinity
+    staircase; THM-3279/3289 close affine `C,E` on both pairs. THM-3306 proves
+    on `C=c+x,E'=1`: degree-36 `D` gives `Res_x(a,H)=unit*D^2`, transverse `(a,b)`
+    and an exact quadratic fibre. This is a blow-up target, not an inverse;
+    `JC(2)` and `DC(2)` remain OPEN.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed

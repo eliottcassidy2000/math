@@ -1,0 +1,38 @@
+LRC14 CANONICAL HORN FIRST-NORMAL-LIFT PARTIAL SCOUT
+status=FINITE-EXACT PARTIAL;not_a_canonical_theorem
+dependency_hashes=BEGIN
+5f1258cd19561941de93135b857bc4187435d10bfa0c1ca0be186c3d8e039e0c  04-computation/lrc14_endpoint_origin_k4_horn_partial_scout_20260803.py
+af9c946d7832c8dfc6442846e7616fadb153cda33f4ef5386272671fe856cbe7  05-knowledge/results/lrc14_endpoint_origin_k4_horn_partial_scout_20260803.out
+c42d66498f460f2142ea375fe9d4047b82c62b872b35d5a1634d2bb4c80a68ee  04-computation/lrc14_allocation_switching_same_ancestry_horn_scout_20260803.py
+e89dce3307e5d374e8583f92e1b2da1214e44929e52fdd42c6532d61adb3e246  05-knowledge/results/lrc14_allocation_switching_same_ancestry_horn_scout_20260803.out
+255ce911a18f33d6b700213d6362886970b12170c324d39bed82a69a51b63e83  04-computation/lrc14_affine_lift_transvection_horn_decoder_thm2813.py
+32f61740a0e7e73384c3d1ff1a83ba30d4cd3ebeca5d228b57e0bf2510928d58  05-knowledge/results/lrc14_affine_lift_transvection_horn_decoder_thm2813.out
+8f9a51e0fd616cd616eef0080bcd054b2a0c191704e1f289e78ea28364476376  04-computation/lrc14_boolean_norm_cotangent_boundary_thm2820.py
+d9f5cf1e0999f414e0c9af838070441def6baf1c65df266fbdb44b9f578cce58  05-knowledge/results/lrc14_boolean_norm_cotangent_boundary_thm2820.out
+779e2fab9b6aa80097b4d3756c32cdb040d4c2a2e9dd31ec9c7effcf11b780ae  04-computation/lrc14_residue8_common_allocation_covariance_thm2820.py
+e4809c77178a3b66901e4b68eca517cfcb74e2516e16ece719cfca1efe4cbe7e  05-knowledge/results/lrc14_residue8_common_allocation_covariance_thm2820.out
+7fea18161046f8de35b2e6ef04c88a13485de61045bc363f89c5ebfec8f76480  04-computation/lrc14_tau12_simplex_allocation_support_no_go_addendum_thm2806.py
+cba545e7beff4fe889c76ae681c47c806969ccd33aa79def54527709a6ffafc6  05-knowledge/results/lrc14_tau12_simplex_allocation_support_no_go_addendum_thm2806.out
+10b681f575fb51eb4b1af4bc909fba89846b85bd5da36fc069dac97ae2ebe409  04-computation/lrc14_carrier_allocation_pullback_k4_segre_thm2772.py
+9cd1e82634822e4997d9966a8252b566d099050e42593a47c49b8a0f387190e5  05-knowledge/results/lrc14_carrier_allocation_pullback_k4_segre_thm2772.out
+dependency_hashes=END
+universe=rail8;(physical_clock,sigma,tau)=(1,0,3);source_addresses=(3454614, 3454627, 4143978);source_residue=7;successor_target_residue=8;normal_labels=F13;endpoint_origin_sidecar=F13^2_but_not_DFT_evaluated_without_gate_survivor;certified_fields_available=2
+lawful_normal_map=A_t(n)=n+t*13^5*(n-7_mod13);source_addresses_fixed;target_successors_move_by_t*13^5;physical_target_shift=q_alloc*T/13;q_alloc=7t_mod13;normal_decoder=t=2*q_alloc_mod13
+factor_order=('E3', 'clock', 'q1', 'q2', 'c2', 'c3');source_signatures=((False, True, True, True, False, True), (True, True, True, True, True, True), (False, True, True, True, True, True));target_signatures_by_vertex_then_t=(((1, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 0, 1, 1, 1), (1, 1, 1, 0, 1, 1), (0, 1, 0, 1, 1, 1), (0, 1, 1, 0, 1, 1), (0, 1, 1, 1, 1, 1)), ((1, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 0, 1, 1, 1), (0, 1, 1, 0, 1, 1), (0, 1, 0, 1, 1, 1), (0, 1, 1, 0, 1, 1), (0, 1, 1, 1, 1, 1)), ((1, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 0, 1, 1, 1), (1, 1, 1, 0, 1, 1), (0, 1, 0, 1, 1, 1), (0, 1, 1, 0, 1, 1), (0, 1, 1, 1, 1, 1)))
+raw_K4_order=(bare,source,target,both);formula_at_harmonics_(k,l)=(1,delta0(k),delta_q(l),delta0(k)*delta_q(l));unique_raw_cosupport=(0,q)_with_K4_(1,1,1,1)_and_mixed_face_0;raw_mixed_aggregate_support=144_joint_absent_cells_disjoint_from_cosupport
+raw_table_checks=6591;raw_table_x_endpoint_origin_cross_product_size=1113879;raw_flatness_is_uniform_in_all_169_endpoint_origins_before_DFT
+normal_rows_(t,q,target_images,target_factor_signatures_at_3_vertices,outer_semantic_cosupport,middle_semantic_cosupport,all_common_faces_nonflat)=((0, 0, (3454615, 3454628, 4143979), ((1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1)), False, True, False), (1, 7, (3825908, 3825921, 4515272), ((0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1)), False, False, False), (2, 1, (4197201, 4197214, 59756), ((0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1)), False, False, False), (3, 8, (4568494, 4568507, 431049), ((0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1)), False, False, False), (4, 2, (112978, 112991, 802342), ((0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1)), False, False, False), (5, 9, (484271, 484284, 1173635), ((0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1)), False, False, False), (6, 3, (855564, 855577, 1544928), ((1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1)), False, True, False), (7, 10, (1226857, 1226870, 1916221), ((0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1)), False, False, False), (8, 4, (1598150, 1598163, 2287514), ((0, 1, 0, 1, 1, 1), (0, 1, 0, 1, 1, 1), (0, 1, 0, 1, 1, 1)), False, False, False), (9, 11, (1969443, 1969456, 2658807), ((1, 1, 1, 0, 1, 1), (0, 1, 1, 0, 1, 1), (1, 1, 1, 0, 1, 1)), False, False, False), (10, 5, (2340736, 2340749, 3030100), ((0, 1, 0, 1, 1, 1), (0, 1, 0, 1, 1, 1), (0, 1, 0, 1, 1, 1)), False, False, False), (11, 12, (2712029, 2712042, 3401393), ((0, 1, 1, 0, 1, 1), (0, 1, 1, 0, 1, 1), (0, 1, 1, 0, 1, 1)), False, False, False), (12, 6, (3083322, 3083335, 3772686), ((0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1), (0, 1, 1, 1, 1, 1)), False, False, False))
+normal_row_digest=0b54b699402fddd2592b70844d824c7568f1d96b7d06fb7560ba8648d4e5266c
+middle_local_six_gate_survivors=((0, 0), (6, 3));strongest=(t=6,q_alloc=3):all_six_source_and_target_gates_at_middle;raw_cosupport=(0,3);raw_K4=(1,1,1,1);mixed_face=0
+outer_semantic_cosupport_survivors=0_of_13;n0_source_invariantly_loses_(E3,c2);na_source_invariantly_loses_E3;A_t_fixes_the_residue7_source_sheet
+t0_control=reproduces_frozen_pre_DFT_failure;inherited_downstream_control=middle_169_origins_present_but_raw_common_face_flat_and_vertical_affine_covariance_absent
+THM2820_external_exclusive_cell_control=q3_keeps_all_six_fixed_factors_but_loses_translated_endpoint_companion;q11_keeps_two_point_endpoint_edge_but_loses_q2;different_(sigma,tau)_cell_not_folded_into_this_horn
+tau12_target_only_control_(A,B,M,L,R)_piece_counts=(240, 241, 0, 240, 241);M_empty_before_address_or_normal_label
+endpoint_scan_entrants=();endpoint_169x2_covariance_scan_calls=0;cheap_gate_correctly_stopped_all_candidates
+FIRST_HORN_GLOBAL_FAILURE=the_normal_lift_moves_only_the_target_successor_and_cannot_restore_the_outer_source_E3_semantic_gates
+FIRST_STRONG_LOCAL_FAILURE=one_faithful_target_axis_normal_translation_only_reindexes_delta_q_and_preserves_raw_common_K4_flatness;it_does_not_supply_two_independent_endpoint_translations_or_Delta
+STRONGEST_SURVIVOR=t_is_recovered_exactly_from_q_alloc_and_t6_has_a_fully_typed_middle_successor_pair_on_the_transported_raw_carrier_copy;the_endpoint_difference_q_E=(L-R),endpoint_origin_(L,R),and_Delta=det(L,R)_remain_unconstructed_and_must_not_be_identified_with_q_alloc
+RESELECTION_BOUNDARY=neighboring_semantic_cells_may_change_the_q3_q11_factor_endpoint_tradeoff_but_are_a_separate_typed_branch_requiring_fresh_carrier_weight_ancestry_address_and_endpoint_audits
+scope=canonical_integral_unit_subatoms_and_all_13_inherited_first_normal_labels;no_claim_against_semantic_cell_reselection_or_arbitrary_endpoint_couplings;no_root_Cech_map;no_row_exclusion;no_LRC14
+source_ast=(assert_nodes=0,float_literals=0)
+ALL EXACT CHECKS PASSED
