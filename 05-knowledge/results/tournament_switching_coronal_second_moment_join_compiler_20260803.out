@@ -1,0 +1,17 @@
+Tournament switching coronal second moment and order-join compiler
+objects=P(z)=det(I-zC);B(z)=adj(I-zC);N_d(z)=dT_B(z)_d;M(z)=tr_B(z)=nP-zPprime;D(z,w)=sum_i_Bii(z)_Bii(w)
+second_moment=E_d[N_d(z)N_d(w)]=M(z)M(w)+Ksame(z,w)+Ktranspose(z,w)-2D(z,w),where_Ksame=tr(B(z)B(w))_and_Ktranspose=tr(B(z)B(w)^T)
+spectral_closure=(z-w)Ksame=zM(z)P(w)-wP(z)M(w);(z+w+2zw)Ktranspose=zM(z)P(w)+wP(z)M(w);therefore_only_D_beyond_P_survives_the_second_average
+variance=Ksame(z,z)+Ktranspose(z,z)-2D(z,z);Ksame(z,z)=P(M+zMprime)-zMPprime;Ktranspose(z,z)=PM/(1+z)
+determinant_second_moment=for_Q_d=P-zN_d,E_Q_is_(1-nz)P+z^2Pprime_and_Cov(Q_d(z),Q_d(w))=zw_Cov(N_d(z),N_d(w))
+sidecar_type=D_is_the_Gram_kernel_of_the_vertex_deleted_centered_characteristic_polynomials_Bii;it_is_switching_and_relabel_invariant_but_forgets_the_individual_deck_assignment_individual_degree_two_Walsh_coefficients_and_higher_distribution_moments
+labelled_audit=orders_1_to_5;tournaments:1099;cuts:16933;counts:((1, 1, 1), (2, 2, 4), (3, 8, 32), (4, 64, 512), (5, 1024, 16384));moment_sha256:32541a343cc90cc1a0573f3e9851b7b7700d9e8e05f911a4471b1506262e5726
+transitive_C3_control=((1, 3, 6, 4), ((1, 2, 2), (1, 2, 2), (1, 2, 2)), (((3, 6, 4), 3), ((3, 6, 12), 1)))
+minimal_P_without_D_collision=no_collision_all_labelled_orders_1_to_6:((1, 1, 1), (2, 2, 1), (3, 8, 1), (4, 64, 2), (5, 1024, 2), (6, 32768, 6));first_order_7_masks:4164,5122;common_P:(1, 7, 42, 140, 360, 576, 576, 256);score_sequences:(6, 5, 3, 2, 2, 2, 1),(5, 5, 3, 3, 2, 2, 1);D_first_minus_second=128*z^4*w^4*(1+2z+4z^2)*(1+2w+4w^2);second_moment_first_minus_second_is_minus_twice_this;collision_sha256:a8b584345412058b846292e376e52e922ddfce1930f4990d49aaea79963d1dad
+order_join_law=for_selected_targets_S_i=T_i^d_i,P_(S1_join_S2)=P1P2+z^2N1N2_and_N_(S1_join_S2)=N1P2+P1N2;equivalently_P_plus_or_minus_zN_multiplies
+join_audit=all_labelled_marked_pairs_total_order_at_most_5;cases:1369;join_sha256:fab670744525cfeecf0bd2f0b43a09a86b60f1d90b8e8c065dd8ae747026ff63
+join_loss_hostile=singleton_join_C3_versus_C3_join_singleton_have_common_P:(1, 4, 12, 16, 16);common_N:(4, 12, 24, 16);different_scores:(3, 1, 1, 1)_versus_(2, 2, 2, 0);the_commutative_pair_law_forgets_SCC_order_and_source_versus_sink
+nonconsequences=neither_second_moment_nor_join_pair_restores_cut_labels_higher_distribution_moments_Hamiltonian_or_path_cover_profiles_SCC_order_substitution_run_content_or_chronology
+truth_gates=assert_nodes:0;float_literals:0
+semantic_sha256=40427da1f4e5a2d18a971f25c3a81ccaac48314b81d16b2e1cc4f409142ba345
+all_exact_controls=PASS
