@@ -512,98 +512,42 @@ THM-2191 uses prime-decomposition cancellation and the four-ball crossing metric
 
 ## Arrangements and tournament games
 
-### De Concini--Procesi — *On the geometry of toric arrangements*
-
-- **Primary / freshness:** [arXiv:math/0505351v4](https://arxiv.org/abs/math/0505351),
-  revised 2005-06-08.
-- **Imported role:** defines a toric arrangement as a finite family of
-  codimension-one subtori or their cosets and computes complement cohomology.
-  It supplies the standard object against which HYP-8830's LRC terminology is
-  audited.
-- **Repo consumer:** the
-  [corrected phase-height reflection](../../07-reflections/orlik-solomon-is-a-repo-wide-pattern-toric-arrangements-are-the-lrc-lens-boxeph-S209.md).
-- **Does not prove:** that the infinite Fourier annihilator
-  `{k:k.v=0}` is a layer poset, that a thickened safe set is an ordinary
-  complement, or that complement cohomology retains LRC height, wall side,
-  owner, sign, or deletion data.
-
-### Moci — *A Tutte polynomial for toric arrangements*
-
-- **Primary / freshness:** [arXiv:0911.4823v5](https://arxiv.org/abs/0911.4823),
-  revised 2010-11-09; final journal version in *Transactions of the AMS*.
-- **Imported role:** introduces the multiplicity Tutte polynomial, proves
-  deletion--restriction and positivity, and obtains characteristic and
-  Poincare polynomials of a toric arrangement as specializations.
-- **Repo consumer:** corrected HYP-8830 and MISTAKE-224.
-- **Does not prove:** that the cutoff statistic `N_R`,
-  [THM-1820's sinc-weighted Fourier series](../../01-canon/theorems/THM-1820-lrc-is-a-moment-nullcone-problem-relation-lattice-pairing.md),
-  or an LRCMod count is an arithmetic Tutte or
-  Mobius specialization. A finite character list and its actual layers must be
-  stated first.
-
-### Stanley — *Hyperplane Arrangements, Interval Orders and Trees*
-
-- **Primary / freshness:** [author-hosted survey PDF](https://math.mit.edu/~rstan/papers/nas.pdf),
-  version dated 1995-12-01.
-- **Imported role:** records the braid characteristic polynomial and its `n!`
-  real chambers, and the Shi formulas
-  `chi(q)=q(q-n)^(n-1)` and `r=(n+1)^(n-1)`. These are the exact classical
-  controls replayed in the corrected S209 computation.
-- **Repo consumer:** corrected HYP-8830, MISTAKE-224, and the
-  [S209 arrangement reflection](../../07-reflections/orlik-solomon-is-a-repo-wide-pattern-toric-arrangements-are-the-lrc-lens-boxeph-S209.md).
-- **Does not prove:** that Shi walls are LRC safety walls, that braid
-  cohomology is a per-tournament invariant, or that finite-field arrangement
-  counts solve the LRC(14) AP-core extraction problem.
-
-### Fisher--Ryan — *Tournament games and positive tournaments*
-
-- **Primary / freshness:** [DOI 10.1002/jgt.3190190208](https://doi.org/10.1002/jgt.3190190208),
-  *Journal of Graph Theory* **19** (1995), 217--236.
-- **Imported role:** the tournament game has a unique optimal strategy with
-  odd-cardinality support. The repo's elementary parity reading restores the
-  essential second coordinate: an even principal tournament payoff block is
-  nonsingular modulo two.
-- **Repo consumer:** the
-  [corrected antisymmetry reflection](../../07-reflections/antisymmetry-is-the-hinge-tori-odd-functions-saddles-and-tournaments-boxeph-S210.md).
-- **Does not prove:** that pure optimum is equivalent to transitivity, that
-  every intransitive tournament has recurrent replicator dynamics, or that a
-  game saddle is a Morse saddle. Pure optimum means a Condorcet winner.
+Detailed source/import/guardrail records for De Concini--Procesi, Moci,
+Stanley (arrangement surveys), and Fisher--Ryan are preserved verbatim in the
+[arrangements/games sidecar](CORE-PAPERS-ARRANGEMENTS-GAMES.md). All four are
+consumed by corrected reflections (S209/S210, MISTAKE-223/224 lineage): toric
+arrangements and Shi/braid counts are audit controls, not LRC carriers, and a
+tournament-game pure optimum means a Condorcet winner, not transitivity.
 
 ## Reciprocal integer sequences
 
-### Downey--Ong--Sellers — *Beyond the Basel Problem: Sums of Reciprocals of Figurate Numbers*
+Detailed records for Downey--Ong--Sellers (figurate telescoping seeds) and
+Applegate--Pol--Sloane (toothpick automaton) are preserved verbatim in the
+[reciprocal-sequences sidecar](CORE-PAPERS-RECIPROCAL-SEQUENCES.md). They seed
+THM-2000/THM-2005's support surfaces; neither proves the support-versus-
+multiplicity collision law or the Abel--Stieltjes/Dini criterion.
 
-- **Primary / freshness:** [author-hosted preprint](https://www.d.umn.edu/~jsellers/downey_ong_sellers_cmj_preprint.pdf),
-  [archived copy](https://web.archive.org/web/20130529032918/http://www.math.psu.edu/sellersj/downey_ong_sellers_cmj_preprint.pdf),
-  *College Mathematics Journal* **39** (2008), 391--394,
-  [JSTOR 27646686](https://www.jstor.org/stable/27646686).
-- **Imported role:** supplies the classical telescoping program and exact
-  reciprocal sums for figurate-number families, including the triangular
-  identity `sum 1/T_n=2`.  These are the seed rows for the repo's polygonal,
-  simplex, digamma, and trigamma mass surfaces.
-- **Repo consumers:**
-  [THM-2000 support-harmonic/figurate surface](../../01-canon/theorems/THM-2000-support-harmonic-abel-dini-figurate-surface.md),
-  [THM-2005 support-Dirichlet atlas](../../01-canon/theorems/THM-2005-support-dirichlet-automatic-tournament-atlas.md).
-- **Does not prove:** the repo's support-versus-multiplicity collision law,
-  Abel--Stieltjes/Dini iff criterion, iterated Bertrand boundary, full
-  support-Dirichlet profile, or tournament reciprocal atlas.
+## Unstable homotopy
 
-### Applegate--Pol--Sloane — *The Toothpick Sequence and Other Sequences from Cellular Automata*
+Ivanov--Mikhailov--Wu ([arXiv:1506.00952](https://arxiv.org/abs/1506.00952),
+*HHA* **18** (2016) 337--344; `pi_n(S^2)` nontrivial for `n>=2`) is recorded in
+the [homotopy sidecar](CORE-PAPERS-HOMOTOPY.md); repo consumers THM-3204/3205
+(continuant gate, odd-primary lambda-algebra engine). It does not prove any
+new homotopy group, `p=2` statement, or LRC/GMC consequence.
 
-- **Primary / freshness:** [arXiv:1004.3036v2](https://arxiv.org/abs/1004.3036),
-  *Congressus Numerantium* **206** (2010), 157--191.
-- **Imported role:** develops the toothpick cellular automaton and its dyadic
-  recurrences and product-like generating functions.  The repo uses the exact
-  A139250 formula as an automatic-sequence test case and as a model for
-  operation-generated tournament-adjacent sequences.
-- **Repo consumers:**
-  [THM-2000](../../01-canon/theorems/THM-2000-support-harmonic-abel-dini-figurate-surface.md),
-  [toothpick bridge tangent](../../00-navigation/TANGENTS.md),
-  [Perron/toothpick experiment](../../04-computation/perron_toothpick_klein_S315.py).
-- **Does not prove:** convergence or a closed form for the support reciprocal
-  mass, a tournament interpretation, or novelty of any repo-generated
-  sequence.  Cellular-automaton multiplicities must still be collapsed before
-  applying the support-harmonic lens.
+## Probability and extraction
+
+### Kontorovich — *TV Homogenization Inequalities*
+
+- **Primary / freshness:** [arXiv:2601.04079v3](https://arxiv.org/abs/2601.04079),
+  submitted 2026-01, revised 2026-02. **PREPRINT.**
+- **Imported role:** homogenization (each Bernoulli parameter mapped to the
+  block mean) reduces TV distance up to a universal constant; the atomic
+  `n=2` lemma `TV(Bin(2,pbar),Bin(2,qbar)) <= d1+d2-d1*d2` with closed form
+  `TV = |x-y|(1+|x+y-1|)` is verified exactly in-repo (2026-08-03 boxeph
+  session; see `05-knowledge/results/tv-fusion-homogenization-lemma-boxeph.md`).
+- **Does not prove:** any AMM 12592 deadline bound; summation vs
+  homogenization are different maps and only summation is a Markov kernel.
 
 ## Maintenance rule
 
