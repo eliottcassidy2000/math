@@ -226,16 +226,18 @@ p^(-2)Lambda^2B(w_01)==-Delta w_01.                        (21)
 ```
 
 Thus the invertible pre-reset tail may shear the two visible exterior
-coordinates, but it cannot rotate, delay, or rephase the missing-wedge flag.
-Any later projected cancellation must occur after this complete-block layer,
-not inside the bare factorial tail.
+coordinates, but it cannot rotate or rephase the named missing-wedge line or
+the named left conormal.  A chosen visible coordinate or path sum can still
+cancel across the invertible tail; only loss of these canonical exterior flags
+is forced to occur downstream.
 
 ## 5. Sharp discriminant wall
 
 If `Delta=0` in the residue field, `(7)` becomes first order and its central
 factor `(2n+1)x` vanishes.  Since `s!=0`, the wall equation forces `v!=0`.
-Both homogeneous coordinates are therefore zero by the end of the pre-reset
-tail:
+The recurrence first kills `M_(p-2),M_(p-1)`, and the `Delta=0` specialization
+of `(13)` then kills `X_(p-1)`.  Both homogeneous coordinates are therefore
+zero by the end of the pre-reset tail:
 
 ```text
 Abar|H=0,                      Lambda^2Abar=0.               (22)
