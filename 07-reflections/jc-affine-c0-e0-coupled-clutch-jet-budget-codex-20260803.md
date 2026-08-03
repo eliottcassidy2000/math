@@ -214,20 +214,48 @@ coefficient of `C_0` or `E_0`.  A quadratic `E_0` might buy another local wall,
 but `(14)--(17)` predict another infinity charge and give a cheap reason not
 to privilege that route.
 
-## Next problem: retain the cofactor or second coordinate
+## Follow-up: the rational controls are global critical graphs
+
+The finite-exact
+[linear-subresultant scout](jc-affine-c0-e0-linear-subresultant-critical-section-codex-20260803.md)
+retains the first lost cofactor for `C_0=1+x,E_0'=1` in both accessory fields.
+Its chosen standard sequence has degree profile `(3,3,2,1,0)`, and the linear
+row has the exact form
+
+```text
+S_1=unit * boundary_i * (a(x)y+b(x)),
+deg(a)=36,       deg(b)=44.
+```
+
+On the squarefree degree-`53` residual `H`, the boundary, `V`, and `a` are all
+units.  Exact substitution gives
+
+```text
+y=-b/a,       R_1=R_2=0 in K_i[x]/(H).
+```
+
+Thus each reduced residual critical scheme is one global graph, with a
+degree-`52` representative for `y` and hence also `z=y/V`.  No rootwise
+selector split is needed.  This upgrades resultant existence to a coherent
+critical section for two controls only; it is not an inverse cover, mate, or
+statement about every affine parameter.
+
+## Next problem: generalize the section or retain a second coordinate
 
 The next underexplored object should live before scalar elimination.  Two
 concrete versions are:
 
-1. **Gradient cofactor sidecar.**  Retain a subresultant/Bezout relation
+1. **Parameter-uniform subresultant sidecar.**  Retain the affine-parameter
+   version of
 
    ```text
-   U(x,y)R_1(x,y)+W(x,y)R_2(x,y)=H(x),                  (18)
+   U R_1+W R_2=boundary * (a y+b),                      (18)
    ```
 
-   together with its residues on `S` and `T`.  The current calculation keeps
-   only `H`.  The cofactor pair may expose which deformation of `V,A,B,C_0,E_0`
-   changes the boundary map rather than merely its scalar valuation.
+   and compute the degeneracy divisor `Res_x(a,H)` in parameter space.  Where
+   `a` vanishes, keep the homogeneous pair `(a,b)` rather than divide it away.
+   The rational controls are positive controls; the finite-clutch and
+   exceptional-slope walls are hostiles.
 
 2. **Second-coordinate jet.**  Introduce a bounded `z`-degree ansatz for `Q`
    and impose
@@ -249,7 +277,8 @@ predicate is the exact response and owner geometry.  The essential retained
 information is the cofactor/branch label that the scalar resultant destroys.
 
 The stopping reason for the present lane is therefore structural, not merely
-computational: in this family, simultaneous affine `C_0,E_0` freedom spends its new
-jet entirely on a matching infinity degree.  Progress now requires changing
-the kind of object retained, not adding one more coefficient to the same
-scalar quotient.
+computational: simultaneous affine `C_0,E_0` freedom spends its new jet on a
+matching infinity degree.  Retaining one earlier object recovers a global
+critical graph for the controls; progress now requires its parameter-uniform
+degeneracy locus or a genuine second-coordinate ansatz, not one more scalar
+coefficient.

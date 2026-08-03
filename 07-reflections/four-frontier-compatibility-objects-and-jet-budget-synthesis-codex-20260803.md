@@ -1,12 +1,12 @@
 # Four frontier reframes: compatibility objects before scalar closure
 
 **Status:** procedural synthesis.  The proved exact claims live in THM-3279,
-THM-3285--3289, and incoming THM-3300/3301 at their literal current statuses
-(the latter two still await independent immutable audit).  The endpoint-origin
-horn result is only a
-[finite-exact partial scout](lrc14-endpoint-origin-k4-horn-partial-scout-codex-20260803.md).
-This reflection is not a proof source.  It records why the newly audited
-objects belong on one concept board without identifying them.
+THM-3285--3289, and THM-3300--3302 at their literal current statuses (the
+latter three still await their declared independent/cross-session audits).
+The endpoint horn, move-decorated face section, linear-subresultant critical
+section, and selector half-transfer are only finite-exact partial scouts linked
+below.  This reflection is not a proof source.  It records why the objects
+belong on one concept board without identifying them.
 
 ## Inheritance board
 
@@ -40,10 +40,10 @@ overstated.
 
 | object | map and preserved predicate | sharp obstruction | destroyed information | cheapest next test |
 |---|---|---|---|---|
-| LRC allocation horn | decompose the pulled target carrier as `B=M disjoint R`, then attach all `169` origins on canonical unit subatoms; whole-cylinder data and literal ancestry are preserved | the middle fibre is full, but `R` is semantic-section loss rather than source-allocation absence; the outer typed fibres and `Z2^4079` covariance fail | a typed ancestry-to-`(L,R,q,Delta)` map, normal jet, raw nonflat K4, global current | test THM-2813's `13` first-normal lifts, gating all six factors and the raw mixed face before covariance |
-| three-face FC nerve | each face/state maps to its set of strict reset-directed lawful rows | state `(5)` is the unique proper missing two-simplex; binary origin width suffices locally, but the fixed `(16,17)` policy has no global extension | response magnitude, realizing neighbour, history, positivity | retain the actual one-pole successor and ascent margin, then recompute move-decorated Helly width |
-| backbone dominance section | an oriented row edge maps to its large-ratio-to-small-ratio maximizing witness relation | every backbone path lifts and four global sections exist, but relation arrows have count-vector `L1=2` while physical one-pole arrows have `L1=1` | ratio endpoint and chronological response state | ask for one original-response-compatible kernel; do not reinterpret a static relation as it |
-| affine transverse JC clutch | affine `C_0,E_0` jets map to saturated critical-resultant contact at `S` and `T` | adding `E_0'` moves `(deg K,deg H,ord_S H)` from `(96,52,2)` to `(97,53,3)`, so the exact off-owner lower bound remains `50` | inverse cover, cofactor, second coordinate, deformations of `V,A` | retain a specialization-safe linear subresultant and its Bezout row before trying another scalar jet |
+| [LRC allocation horn](lrc14-endpoint-origin-k4-horn-partial-scout-codex-20260803.md) | decompose the pulled target carrier as `B=M disjoint R`, then attach all `169` origins on canonical unit subatoms; whole-cylinder data and literal ancestry are preserved | the middle fibre is full, but `R` is semantic-section loss rather than source-allocation absence; the outer typed fibres and `Z2^4079` covariance fail | a typed ancestry-to-`(L,R,q,Delta)` map, normal jet, raw nonflat K4, global current | test THM-2813's `13` first-normal lifts, gating all six factors and the raw mixed face before covariance |
+| [three-face FC move section](three-support-face-move-decorated-section-partial-codex-20260803.md) | restore `(row,actual one-pole successor)` on the inherited `94` triple states | decoration creates pair-empty counts `13/5/0` and `16` triple defects, but one binary colouring `F12|(F13,F23)` survives and its internal graph is acyclic | active-face changes, post-exit history, positivity, full `8,394`-decision control | close the selected-successor carrier before calling the finite potential chronological |
+| [backbone half-transfer](selector-paired-half-transfer-observer-quotient-codex-20260803.md) | split the witness relation by selector sign, then square its adjacency | `A=(0,X;X^T,0)` is exact, but the selector alone is not equitable; refinements need `11/14/16` cells | individual path identity and chronological response state | retain parity boundaries, active starts, and the full-core zero-mode head under graph operations |
+| [affine JC critical section](jc-affine-c0-e0-linear-subresultant-critical-section-codex-20260803.md) | affine `C_0,E_0` jets map to saturated contact; the primitive linear subresultant maps two rational controls back to their critical graph | the jet invoice remains `50`; in the controls, boundary content removes exactly and `a` is a unit on degree-53 `H`, giving one global `y=-b/a` section | inverse cover, mate, parameter-uniform cofactor, deformations of `V,A` | classify where `a` stays a unit as affine parameters move, with a homogeneous selector on its failure locus |
 
 ## The order-two objects are not the same bit
 
@@ -77,7 +77,7 @@ not an arbitrary amount of owner multiplicity.
 
 ## A genuine beach crossing: FC is an invariant Gaussian lane
 
-Incoming THM-3300 supplies an actual map rather than an analogy.  For
+THM-3300 supplies an actual map rather than an analogy.  For
 independent standard complex Gaussians,
 
 ```text
@@ -169,8 +169,53 @@ has denominator degree `14`.  Thus the practical closed form is a rational
 generating function or a sum over the roots of the displayed characteristic
 factors, not a high-dimensional matrix power.
 
+The finite-exact
+[selector half-transfer scout](selector-paired-half-transfer-observer-quotient-codex-20260803.md)
+now explains that parity structurally.  The exact selector splits are
+`13+5`, `14+9`, and `14+12`, and in each case
+
+```text
+A=[0 X; X^T 0],                 A^2=diag(XX^T,X^TX).
+```
+
+The selector bit is only a parity carrier, not a two-state quotient: vertices
+on the same side have different degrees.  Stable equitable refinement gives
+`11/14/16` cells, while the all-ones observer orders remain `10/14/15`.
+Their even/odd half-orders are `5+5`, `7+7`, and `8+7`.  In the full core the
+order mismatch is the explicit kernel vector `h=p_C(A^2)1`, with
+
+```text
+Ah=0,       1^T h=-1392,       ||h||^2=2516736,
+zero spectral mass=87/113.
+```
+
+Thus the degree-14 rational tail and order-15 initial observer are two views
+of one zero-mode head, not a recurrence-fitting anomaly.
+
 Equation `(6)` counts static witness-decorated walks.  It does not repair the
 chronological loss in `(1)`.
+
+## Two squaring laws, one boundary debt
+
+THM-3302 supplies an unrelated but illuminating closed-form doubling law.  Its
+epoch coordinate satisfies
+
+```text
+p^R+q^R=L_R(pq),       L_(2R)=L_R^2-2(pq)^R,
+```
+
+and two exact witnesses close the `R=64` floor profile, attaining the stated
+golden rate through `n=127`.  The all-`R` and `R=128` statements remain open.
+Naive iteration fails because the doubling transport does not preserve witness
+slimness; the explicit middle-pair term and a slimming sidecar are load-bearing.
+
+The selector half-transfer and Lucas doubling are not the same objects, but
+they expose the same procedural hazard.  Squaring makes the scalar closed form
+shorter while hiding a boundary defect: the zero-mode head `h` for the walk
+observer, and the `-2(pq)^R` correction plus witness slimness for the epoch.
+The cheapest decisive test after any proposed doubling formula is therefore to
+transport its boundary vector/correction class, not only verify the scalar
+identity.  This is a two-thread synthesis rule, not yet a promoted meta-pattern.
 
 ## Anchor / niche / wildcard update
 
@@ -180,25 +225,29 @@ chronological loss in `(1)`.
   bank is `0/169`, and the vertical target bank has no affine covariance.  The
   next debt is a first-normal typed endpoint map, not another origin scan.
 - **Niche -- FC/tournament structure:** the three-face availability nerve has
-  one proper missing simplex but binary global width.  This is a concrete
-  small model for separating Helly dimension, colouring width, and physical
-  realization.  Independently, THM-3300/3301 identify HFC with a torus-
-  invariant Gaussian lane and rule out pure-character refutations; the two
-  cheapest probes are move-decorated width and a mixed-weight invariant-locus
+  one proper missing simplex, while move decoration creates `16` triple
+  defects yet leaves the unique colouring `F12|(F13,F23)` and a six-step
+  finite potential.  The section exits its `94`-state carrier, and `(16,17)`
+  still fails on the full domain.  Independently, THM-3300/3301 identify HFC
+  with a torus-invariant Gaussian lane and rule out pure-character
+  refutations; next are carrier closure and a mixed-weight invariant-locus
   sieve, not another symmetry-only scan.
 - **Wildcard -- planar JC:** THM-3279/3289 now close all simultaneous affine
   `C_0,E_0` clutches with `B=1` for the two response pairs.  The `E_0` slope
   adds one residual degree and one possible owner-contact unit, leaving the
-  lower bound at `50`.  The next useful object is a cofactor or critical-cover
-  section, not another low scalar jet.
+  lower bound at `50`.  Both rational controls now have one global degree-52
+  linear-subresultant section over their reduced degree-53 residuals.  The next
+  problem is the parameter locus where its leading coefficient ceases to be a
+  unit, not another low scalar jet.
 - **Sequence lane:** witness retention turns the static dominance structure
-  into genuinely efficient rational series, providing a reusable exact route
-  from finite operation-response data to closed forms.
+  into rational series; selector-paired half-transfers explain their parity,
+  minimal orders, and full-core head.  THM-3302's Lucas doubling supplies a
+  second closed-form route whose missing coordinate is witness slimness.
 
-## Ranked next exact probes
+## Ranked research board after the cheap probes
 
-These are proposals, not theorem dependencies.  Each is deliberately staged
-so that its first failure is informative.
+These are partial results and next tests, not theorem dependencies.  Each is
+staged so that its first failure remains informative.
 
 1. **First-normal endpoint horn.**  Map the THM-3285 horn into pairs
    `(endpoint origin, THM-2813 normal-lift label)`.  Preserve the six semantic
@@ -208,27 +257,31 @@ so that its first failure is informative.
    affine covariance.  Normal label zero must reproduce the present hostile;
    `tau=12` and THM-2820's exclusive cells are additional controls.
 
-2. **Jacobian critical-cover section.**  Map the localized gradient ideal to
-   its primitive linear subresultant `a(x)y+b(x)` over `K[x]/(H)`, retaining a
-   Bezout row and recovering `y=-b/a` when lawful.  This imports the
-   specialization-safe section move used in factorial-conjecture work without
-   identifying the problems.  The cheap test is `gcd(a,H)=1` plus direct
-   substitution in both squarefree controls and both accessory fields;
-   `a=0`, owner content, repeated `H`, and PRS unit normalization are hostiles.
+2. **Jacobian section degeneracy.**  The two rational controls pass the first
+   test: the raw linear row has exactly the owner boundary as content,
+   `gcd(a,H)=1`, and `y=-b/a` kills both gradients modulo `H`.  Next compute
+   the affine-parameter resultant of `a` with `H` and keep the homogeneous
+   selector when `a=0`.  Owner content, repeated `H`, and PRS unit changes
+   remain hostiles; no result for all affine parameters is being inferred.
 
-3. **Move-decorated three-face width.**  Replace a lawful row set by pairs
-   `(row, actual one-pole successor)`.  Projection recovers THM-3286's static
-   availability, while intersection now requires the same physical move.
-   Exhaust the `94` triple states under the four lawful binary colourings
-   before any history scan.  State `(5)`, the failed `(16,17)` policy, and
-   incompatible resets are the decisive controls.
+3. **Close the move-decorated carrier.**  On the `94` inherited states the
+   unique binary colouring survives and all internal edges are acyclic, but
+   selected moves can exit the carrier.  Enlarge only to the exact closure of
+   those exits while retaining active-face changes and the reset potential.
+   The full-domain `(16,17)` failure and the minimal incompatible-reset state
+   are controls.  Success would still be a finite controller, not `FC(3)`.
 
-4. **Selector-paired half-transfer.**  Test whether the THM-3288 decorated
-   adjacency, after the exact selector split, has a two-step block description
-   whose equitable/Krylov quotient explains the recurrences in `z^2`.  Retain
-   both boundary vectors and the full-core zero-mode impulse; discarding that
-   impulse must reproduce the `-1392` head failure.  A selector-only quotient
-   is a hostile because it cannot by itself support orders `10/14/15`.
+4. **Compile graph operations to rational series.**  The selector half-transfer
+   now explains the three present sequences.  Next add one relation edge or
+   one active witness fibre at a time and update the equitable/Krylov observer,
+   carrying the active-start vector and zero-mode head explicitly.  The path
+   `2-17-16` and selector-only lumping must remain negative controls.
+
+5. **Torus-invariant mixed-weight sieve.**  Take one known GMC counterexample
+   family with several weights, solve its exact parameter locus inside the
+   `U(1)^n`-invariant subalgebra, and test the surviving simplex moments.  An
+   empty locus is a structural stop; a pure eigenvector is rejected in advance
+   by THM-3301.  Neither outcome alone decides `FC(3)` or `HFC(3)`.
 
 The common procedural rule is now:
 
