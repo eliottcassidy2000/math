@@ -345,6 +345,7 @@ require(multiplicative_order(alpha_norm, singer_s, prime) == 12, "norm order 12"
 # The full truncated deformation slice H -> c_2=S'H is a 169-state affine
 # carrier; alpha is compatible with this linear identification.
 deformation_contacts = set()
+helper_by_contact = {}
 deformation_intertwining_checks = 0
 singer_derivative = derivative(singer_s, prime)
 for constant in range(prime):
@@ -353,6 +354,7 @@ for constant in range(prime):
         contact = class_mul(singer_derivative, helper, singer_s, prime)
         padded_contact = tuple(contact + [0] * (2 - len(contact)))
         deformation_contacts.add(padded_contact)
+        helper_by_contact[padded_contact] = tuple(helper + [0] * (2 - len(helper)))
         shifted_helper = class_mul(alpha, helper, singer_s, prime)
         shifted_contact = class_mul(singer_derivative, shifted_helper, singer_s, prime)
         require(
@@ -362,6 +364,25 @@ for constant in range(prime):
         deformation_intertwining_checks += 1
 require(len(deformation_contacts) == 169, "contact deformation atlas is bijective")
 require((0, 0) in deformation_contacts, "zero is delayed-contact class")
+
+
+# Pull back THM-3234's full affine Heisenberg action through the deformation
+# isomorphism.  This is a moduli reparametrization, not a physical LRC map.
+heisenberg_pullback_checks = 0
+for shift_r in range(prime):
+    for shear in range(prime):
+        for shift_w in range(prime):
+            for coordinate_r, coordinate_w in deformation_contacts:
+                moved_contact = (
+                    (coordinate_r + shift_r) % prime,
+                    (coordinate_w + shift_w - shear * coordinate_r) % prime,
+                )
+                require(
+                    moved_contact in helper_by_contact,
+                    "Heisenberg action pulls back through contact atlas",
+                )
+                heisenberg_pullback_checks += 1
+require(heisenberg_pullback_checks == 13 ** 5, "full Heisenberg deformation census")
 
 
 # Same norm and open algebra-generation gate do not imply Singer order.
@@ -392,6 +413,7 @@ print("p13_stratum=x2-2,alpha=%s,H=%s" % (format_poly(alpha), format_poly(alpha_
 print("alpha_matrix=1,4;2,1")
 print("alpha_order=%d,norm=%s,norm_order=12" % (alpha_order, format_poly(alpha_norm)))
 print("deformation_atlas=169,nonzero_exact_contact=168,intertwining_checks=%d" % deformation_intertwining_checks)
+print("heisenberg_moduli_pullback_checks=%d" % heisenberg_pullback_checks)
 print("singer_prime_gates=%s" % ",".join(str(value) for value in order_primes))
 print("singer_gate_residues=%s" % ";".join(format_poly(value) for value in gate_residues))
 print("singer_gate_resultants=%s" % ",".join(str(value) for value in gate_resultants))

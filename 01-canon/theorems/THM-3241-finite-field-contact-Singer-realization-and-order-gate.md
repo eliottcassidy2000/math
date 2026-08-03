@@ -16,8 +16,9 @@ source: root/multiscale-newton-flag/low-child-flag-extension/2026-08-02
 audit: >
   The assertion-independent exact companion verifies eight prescribed-unit
   contact realizations in irreducible degree-two and degree-three algebras;
-  enumerates the full 169-class deformation atlas and all 169 Singer
-  intertwining identities; checks the explicit p=13 helper, contact
+  enumerates the full 169-class deformation atlas, all 169 Singer
+  intertwining identities, and all 371,293 affine-Heisenberg pullbacks;
+  checks the explicit p=13 helper, contact
   numerator/denominator, order 168,
   norm 6 of order 12, all three prime-divisor resultant gates, and the exact
   THM-3234 matrix; and proves that alpha^49 has the same norm, generates F169,
@@ -33,8 +34,8 @@ related:
   - THM-2022-gmc2-frobenius-lowest-balanced-face
 script: 04-computation/finite_field_contact_singer_gate_thm3241.py
 output: 05-knowledge/results/finite_field_contact_singer_gate_thm3241.out
-script_sha256: b81973d686ead242e11753ff73eec251b8e28d8cff7ad1122f1101607c0d252a
-output_sha256: f859210577b452137468df269abb7a609a3fa6f646a35eaaec9220168ce214b7
+script_sha256: a4de526002b926caaf1f184fddb3e73e2c79bc06ebc6c914ff2e4925d02688c7
+output_sha256: e12ee1ec196ab7ae64bc8ae3bde21814636f419089b883deefbedc7550a8b103
 hash_basis: LF-normalized bytes
 ---
 
@@ -138,6 +139,18 @@ by `a` multiplies `c_m` by `a`.  Hence a primitive `a` makes the `q^r-1`
 exact-contact deformation classes one Singer orbit and fixes the unique
 delayed-contact class.  This is a genuine algebraic deformation carrier,
 not merely the underlying set of the field viewed after the fact.
+
+More generally, every `F_q`-affine map `L:A->A` pulls back through `(8b)` to
+the explicit coefficient reparametrization
+
+```text
+H |-> (S')^(1-m) L((S')^(m-1)H).                         (8d)
+```
+
+For `q=13,r=2`, `(8d)` realizes THM-3234's entire affine Heisenberg action on
+the same deformation atlas.  This is an action on the **moduli of truncated
+polynomial pairs**.  It depends on the chosen basis and derivative
+trivialization, and it is not a physical operation on one fixed LRC packet.
 
 ## 3. The Singer order gate
 
@@ -255,7 +268,8 @@ A={0} disjoint union A^*,
 
 Under `(8b)`, this is exactly one delayed-contact deformation class plus all
 `168` exact-order-two deformation classes.  The companion enumerates all
-`169` classes and all `169` Singer intertwining identities.
+`169` classes, all `169` Singer intertwining identities, and all
+`13^5=371,293` state/group-element Heisenberg pullbacks.
 
 ## 5. Sharp hierarchy hostile
 
@@ -309,13 +323,14 @@ Singer--Heisenberg construction.  Combining it with the standard affine
 Heisenberg action then generates `AGL_2(F_13)` exactly as proved there.
 
 The new content here is the polynomial-contact deformation realization of
-the Singer carrier.  The Heisenberg translations and transvection are not
-derived from the same polynomial family, and no LRC owner, endpoint, or root
-packet is identified with an element of `A`.  Hence `(22)` is an algebraic
-deformation carrier, not a lawful physical owner map.  In particular the
-delayed-contact zero is fixed by the Singer action, whereas THM-3234 proves
-that a center-faithful `169`-point Heisenberg action cannot preserve it as a
-distinguished head.
+the Singer carrier and the affine reparametrization `(8d)` of the Heisenberg
+action.  No LRC owner, endpoint, or root packet is identified with an element
+of `A`, and `(8d)` is not an intrinsic transformation of a fixed physical
+pair.  Hence `(22)` is an algebraic deformation-moduli carrier, not a lawful
+physical owner map.  In particular the delayed-contact zero is fixed by the
+Singer action but moved by Heisenberg translations, exactly matching
+THM-3234's proof that a center-faithful `169`-point action cannot preserve it
+as a distinguished head.
 
 ## 7. Consequences and boundaries
 
@@ -363,9 +378,10 @@ The assertion-independent companion
 
 uses exact finite-field polynomial arithmetic.  It checks eight prescribed
 contact realizations over `F_5,F_7,F_13` in degrees two and three, enumerates
-the full `169`-class deformation atlas, reconstructs `(15)--(18)`, verifies
-all order/resultant/norm claims, and compares the Singer element with the
-exact `beta` hostile.  Normal and optimized runs
+the full `169`-class deformation atlas and `371,293` Heisenberg pullbacks,
+reconstructs `(15)--(18)`, verifies all order/resultant/norm claims, and
+compares the Singer element with the exact `beta` hostile.  Normal and
+optimized runs
 byte-match
 
 ```text
