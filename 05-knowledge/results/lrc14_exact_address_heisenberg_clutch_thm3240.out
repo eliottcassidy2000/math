@@ -1,0 +1,11 @@
+EXACT-ADDRESS HEISENBERG CLUTCH EXACT AUDIT
+p=13;H_order=2197;minimal_orbit=169;composition_pairs=4826809
+G_delta_size=2197;orbit_census=13x169;G_full_size=28561;orbit_census=169x169
+faithful_permutation_image=2197;base_stabilizer=(0,y,0):13;stabilizer_nonnormal=TRUE;center_fixed_points=0
+generators=X:(s,d)->(s,d+s);Y:(s,d)->(s+1,d);Z:(s,d)->(s,d+1);[X,Y]=Z
+raw_constraint_checks=371293;section_conjugacy_checks=4826809
+chosen_axis=a;typed_bezout=e0;L_rank=6;K_rank=8;alternative_section=CONJUGATE_NOT_IDENTICAL
+carrier_forgetting_projection_image=13;center_killed=TRUE
+integral_lift_hostile=O_vs_Y;carry_wall_states=13;Y^13=I;O^13=Z
+EXTENDED_FACTOR_CURRENT=NOT_CONSTRUCTED;ALL_91_UNIT_COVARIANCE=NOT_CLAIMED;OWNER_OR_ROOT_MAP=NOT_CLAIMED
+FAILED_CHECKS=NONE
