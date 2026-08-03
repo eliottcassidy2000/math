@@ -1,0 +1,14 @@
+dependency_pins=4:PASS
+support_universe=115:banks=2:cases=230
+physical_reset_alphabet=Q<=P:230/230
+depths=P:11..133,Q:6..62,R:5..71
+first_live_c5=positive:230/230:min32:max410879700000:distinct225
+filter_states=min16:max187406683791040512:sum476976523236717752
+common_prefix_identity=G5(Q+tau,(5))=-c5*sum(tau^5)
+direct_virtual_alphabet_controls=5442:PASS
+full_nonzero_h5_negative_alphabet_controls=230/230
+sharp_nonempty_response_magnitude=32
+largest_full_response_magnitude=348352284053812500000
+case_digest_sha256=91818ef3170d4247f52053389e1d336e252a46aaedb837718ca2d78f2863e825
+scope=principal_upper_filters_only:not_global_all_state_selector_cones
+status=PASS
