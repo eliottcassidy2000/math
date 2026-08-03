@@ -1,0 +1,14 @@
+THM-3310 DEGREE-FOUR CYCLIC EIGENSPACE ON DELTA_2 EXACT CONTROL
+complex coordinate=z = s1 + omega s2 + omega^2 s3 (vertices 1,omega,omega^2)
+rot(z)=omega^2 z; z^a zbar^b is an omega-eigenvector iff a-b=2 mod 3
+eigenspace_dimensions_degree_1_to_7=[1, 2, 3, 5, 7, 9, 12]
+degree_four_basis=['zbar', 'z^2', 'z zbar^2', 'z^3 zbar', 'zbar^4']
+degree_four_basis_exponents=[(0, 1), (2, 0), (1, 2), (3, 1), (0, 4)]
+lower_degree_eigenspaces_are_coordinate_subloci=True
+mixed_moments_through_degree_six={(0, 0): '1', (0, 3): '1/10', (0, 6): '1/28', (1, 1): '1/4', (1, 4): '2/35', (2, 2): '1/10', (3, 0): '1/10', (3, 3): '29/560', (4, 1): '2/35', (6, 0): '1/28'}
+coordinate_lines_excluded=10/10 exact Q(omega)
+coordinate_planes_excluded=10/10 guarded mod-p resultant, p=1000000009
+plane_resultant_degrees=[(18, 27), (18, 27), (18, 27), (18, 27), (18, 27), (18, 27), (18, 27), (18, 27), (18, 27), (18, 27)]
+modular_guard=p>4m+2; forbidden example p=7 kills 16 moment denominators by degree 12
+scope=support<=3 excluded rigorously; support 4 and 5 stay OPEN
+ALL EXACT CHECKS PASSED
