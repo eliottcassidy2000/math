@@ -1,0 +1,13 @@
+FACTORIAL MULTIBLOCK WITT-CARRY RESET EXACT CONTROL
+multiblock_state_descent_checks=720
+rank_one_block_propagator_checks=744
+resonant_pair_descent_checks=24
+carry_thickness_reset_checks=6
+discriminant_wall_checks=2
+global_carry_ledger_checks=15
+primitive_colour_cycle_checks=3
+X_smith=1,p^h,p^h
+scalar_smith=1,1,p^h
+exterior_smith=p^h,p^h,p^(2h)
+wall_X_smith=1,p^h,p^(h+t)
+ALL EXACT CHECKS PASSED
