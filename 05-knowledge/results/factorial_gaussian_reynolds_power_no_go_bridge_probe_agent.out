@@ -1,0 +1,13 @@
+status=FINITE-EXACT SCRATCH; not canon
+factorial_gaussian_radial_identity=k! for k=0..12
+thm3290_P_terms=23
+thm3290_weight_set=-2,0,2,4,6,8
+R(P)=q*(q-4*t^2)*(q+t^2)^4
+R(P^2)=q^2*(q+t^2)^8*(q^2-20*q*t^2+24*t^4)
+power_defect=-4*q^2*t^2*(q+t^2)^8*(3*q-2*t^2)
+E_RP=0
+E_RP2_projection=0
+E_RP_squared=3212537328000
+E_power_defect=-3212537328000
+consequence=Reynolds projection preserves expectation but not powers
+hostile=the THM-3290 null sequence does not descend via P -> R(P)

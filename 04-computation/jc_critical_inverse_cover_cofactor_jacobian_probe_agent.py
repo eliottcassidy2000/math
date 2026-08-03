@@ -192,6 +192,26 @@ def poly_digest(poly) -> str:
     return sha256(canonical_poly_text(poly.monic()).encode("ascii")).hexdigest()
 
 
+def projective_pair_digest(left, right) -> str:
+    """Hash a polynomial pair modulo one *common* nonzero scalar.
+
+    Normalizing the entries separately would erase their relative scale and
+    therefore would not determine the rational section ``-right/left``.
+    """
+
+    require(left != 0, "the section denominator is zero")
+    common_scale = left.LC
+    normalized_left = left.quo_ground(common_scale)
+    normalized_right = right.quo_ground(common_scale)
+    return sha256(
+        (
+            canonical_poly_text(normalized_left)
+            + "\n"
+            + canonical_poly_text(normalized_right)
+        ).encode("ascii")
+    ).hexdigest()
+
+
 def build_accessory_case(name: str, universal) -> tuple[str, str]:
     u, x = sp.symbols("u x")
     if name == "4111":
@@ -264,20 +284,14 @@ def build_accessory_case(name: str, universal) -> tuple[str, str]:
     require(poly_digest(H) == EXPECTED_H_DIGESTS[name], f"{name} H digest")
 
     h_digest = poly_digest(H)
-    section_digest = sha256(
-        (
-            canonical_poly_text(ell1.monic())
-            + "\n"
-            + canonical_poly_text(ell0.monic())
-        ).encode("ascii")
-    ).hexdigest()
+    section_digest = projective_pair_digest(ell1, ell0)
     print(
         f"case={name};control=(C,Eprime)=(1+x,1);"
         "critical_scheme=Spec(K[x]/H)_graph_y=-l0/l1;"
         f"degrees=(H,a,l1,l0,Y)=({H.degree()},{a2.degree()},"
         f"{ell1.degree()},{ell0.degree()},fractional);"
         "gcds=(H,Hprime)=(1);(H,owner)=(1);(H,a)=(1);(H,l1)=(1);"
-        f"H_digest={h_digest};section_pair_digest={section_digest}"
+        f"H_digest={h_digest};section_projective_pair_digest={section_digest}"
     )
     return h_digest, section_digest
 

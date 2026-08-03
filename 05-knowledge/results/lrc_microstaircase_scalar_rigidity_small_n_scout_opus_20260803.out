@@ -1,0 +1,15 @@
+Small-n micro-staircase scalar-rigidity scout
+scope=FINITE-EXACT n=3..12 residue-cell systems; dependent encoding
+n=2;normalized_nonzero=TRIVIALLY_EMPTY
+n=3;patterns=6;candidates=18;variables=6;clauses=28;normalized_nonzero=UNSAT
+n=4;patterns=16;candidates=64;variables=12;clauses=87;normalized_nonzero=UNSAT
+n=5;patterns=30;candidates=150;variables=20;clauses=196;normalized_nonzero=UNSAT
+n=6;patterns=60;candidates=360;variables=30;clauses=442;normalized_nonzero=UNSAT
+n=7;patterns=84;candidates=588;variables=42;clauses=722;normalized_nonzero=UNSAT
+n=8;patterns=144;candidates=1152;variables=56;clauses=1357;normalized_nonzero=UNSAT
+n=9;patterns=198;candidates=1782;variables=72;clauses=2080;normalized_nonzero=UNSAT
+n=10;patterns=280;candidates=2800;variables=90;clauses=3216;normalized_nonzero=UNSAT
+n=11;patterns=352;candidates=3872;variables=110;clauses=4434;normalized_nonzero=UNSAT
+n=12;patterns=504;candidates=6048;variables=132;clauses=6787;normalized_nonzero=UNSAT
+n=13;status=OPEN_IN_THIS_SCOUT
+all_claimed_dimensions=PASS

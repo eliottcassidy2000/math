@@ -25,44 +25,16 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`; THM-2928 empties aligned `k>=4`; THM-2995/3251 cap
-projected `k=2,3` at `1579/216`; corrected THM-2941 leaves `561` reflected
-bodies (`D>=6,1<=m<4D/3`). Arbitrary `k<=1`, the rung, physical entry and LRC
-remain open. Septimal floor/exception plus located phase cut the raw five-drift ledger
-`951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
-`21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
-not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
-`1680..1742` `k=2` atlas; THM-2980/2995 then close every row at
-`1580..1679`, giving cap `1579`.  For `k=3`, torsion/status closes through `297`;
-Projected `k=3` is closed through `z1=219` (THM-2981--3230 chain). THM-3251/3242 set cap `216`. THM-3261+3264+3270+3281 lower the ledger to `373186`; `z216=382` wall plus `0` order. Open: two costly gcd-8 wall rows and the remaining gcd `24/36/72` wall families; pointed divisors remain metadata.
-Cap two forces the phase-zero triangle `(3/2)(4/3)=2`; by cap `7/3` no
-full-cap component remains. The zero-gain atlas is
-`4/3,3/2,2,5/2,3,4,5,6`; CSP closes `3m>=4D`. THM-3135 repairs `H2`;
-THM-3150/3156 give the body-`H` skeleton. THM-3171 closes cell 90/cap two for
-all `D>=6` and gcd cones; THM-3200/3211 give ray quasipolynomials, sharp
-`1/105`, signed `1/g`, and constant residue. THM-3224 gives the complete
-orbit's nonzero periodic `g^-2` gcd-carry (sharp `9/49`) and owner Hodge split; audited THM-3246 closes one 12-cell seam for all dilations, with a fixed `156+ / 12-` second-corrector word but no row exclusion.
-THM-3234/3240/3247/3250/3259 close charged/free-factor algebra; THM-3255/3267 give the norm phase ladder. THM-3274 invoices transfers `12/48/168`; THM-3269/3277 give a generator, sampler and phase backbone. THM-3285 proves a literal `R-M-R` horn on `63` labels. A finite-exact subatom test has `169` middle origins; outer typed/vertical-affine lift fails. Normal/current data and LRC exit remain open.
-Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
-THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
-supplied-root seams, not semantic-root identification (kernel `28,393`).
-THM-2545--2712 recover Hall, pointed-dual, determinant, carry, root and
-quotient sidecars plus six-step nilpotence, but no transverse physical gluing
-(MISTAKE-281/300); THM-2721's current-zero `C3` corolla misses all `1134`
-placements.
-
-THM-2720--2839 restore target, character, endpoint, address, ancestry and
-Boolean sidecars; MISTAKE-310/313 repair half-tooth/clock typing, but no
-physical carrier survives every quotient. THM-2847--2894 build the Galois,
-Prony, `V4`, `Q8` and dicyclic channels. THM-3190 supplies a root-neutral
-central-odd bispectrum; THM-3208 proves that fibrewise positive sparse
-orbit-and-mass transport would forbid its `-1` clutch. Missing: that transport
-and `e9=(-9,+9,QB)` on one packet; ledger `165`.
+Direct frontier: `<=6`; THM-2928 empties aligned `k>=4`; THM-2995/3251 cap projected `k=2,3` at `1579/216`; corrected THM-2941 leaves `561` reflected bodies. Arbitrary `k<=1`, the rung, physical entry and LRC remain open. Five-/four-drift screens cut `951,545,890,235 -> 200,141,092,521` and `21,357,714,101 -> 2,548,901,482`; these are necessary-state, not physical-cover, counts.
+THM-2970--2995 close projected `k=2` above `1579`; THM-2981--3230 close projected `k=3` through `z1=219`. THM-3261/3264/3270/3281 give ledger `373186`; the independently audited **FINITE-EXACT** [gcd-eight closure](../05-knowledge/results/lrc14-z216-costly-gcd8-closure-opus-20260803.md) gives `373184`, with `z216=380` wall plus `0` order, and completes gcd eight. Gcd `24/36/72` wall families remain open.
+The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures; THM-3285 has `169` middle origins but no outer lift. Normal/current data and the LRC exit remain open.
+Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
 
 ### Independent routes that remain live
 
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
+- **FINITE-EXACT micro-staircase:** independent encodings prove [HYP-1823](../05-knowledge/hypotheses/HYP-1823-lrc-scalar-gauge-quotient.md) at `n=14`: exactly the `14` scalar ramps block every cell; normalized `n=15` is UNSAT. Speed/residue, endpoints/gcd, physical cover and LRC(14) remain open.
 - **Foreign-base phase.** The FINITE-EXACT `C_221` stalk has a typed
   `4/17 <-> 13/17` two-cycle, but no exclusive source, lawful return, or
   semantic endpoint current.
@@ -387,7 +359,8 @@ Classify profiles under support operations; study analytic continuation and auto
   constant family `(Vz^2+bz+c)^2+A_src z+kx`; generic counts are `52`/`28`.
   THM-3225 excludes every affine `B` in `(Vz^2+Bz)^2+A_src z+x`: no `T`
   escape, at most two at `S`, and at least `50` intersection units remain.
-  THM-3237--3276 give the infinity staircase and close `B` through degree eight. THM-3279/3289 close affine `C,E` (`B=1`) on both pairs: an owner point or at least `50` off-owner resultant-multiplicity units. Cofactor/inverse-cover data, deformations, `JC(2)` and `DC(2)` remain OPEN.
+  THM-3237--3276 close `B` through degree eight; THM-3279/3289 close affine `C,E` (`B=1`) on both pairs. A **FINITE-EXACT** [subresultant sidecar](../07-reflections/jc-critical-inverse-cover-cofactor-jacobian-probe-agent-20260803.md) gives unique critical `y` and a two-pivot graph criterion for two degree-53 controls.
+  Its canonical divergence class is the mate-integrability obstruction after gradient unimodularity; no Keller cofactor/mate follows. Broader deformations, `JC(2)` and `DC(2)` remain OPEN.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
   `2201<=d<=2400` and all `35` residuals in `2401<=d<=2500` close by matching

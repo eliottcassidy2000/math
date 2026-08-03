@@ -2,9 +2,11 @@
 
 **Status:** NON-CANONICAL RESEARCH REFLECTION.  The universal identities below
 are proved symbolically, and the two named accessory controls are
-**FINITE-EXACT**.  This file does not reserve a theorem ID and does not promote
-the reserved candidate
-[THM-3289 -- affine transverse `C_0,E_0` coupled clutch](../01-canon/theorems/THM-3289-affine-transverse-c0-e0-coupled-clutch-critical-no-go.md).
+**FINITE-EXACT**.  While this probe ran,
+[THM-3289 -- affine transverse `C_0,E_0` coupled clutch](../01-canon/theorems/THM-3289-affine-transverse-c0-e0-coupled-clutch-critical-no-go.md)
+was independently promoted to PROVED.  This note reconstructs its two named
+controls but does not claim an independent audit of its universal parameter
+argument or reserve a theorem ID.
 
 The matching exact artifact is
 [`jc_critical_inverse_cover_cofactor_jacobian_probe_agent.py`](../04-computation/jc_critical_inverse_cover_cofactor_jacobian_probe_agent.py),
@@ -57,7 +59,7 @@ proposed from one lane.
 
 ## Universal cubic-to-linear sidecar
 
-Retain the coupled affine gradient pair from the reserved THM-3289 scout,
+Retain the coupled affine gradient pair from THM-3289,
 but treat it here as an algebraic object rather than a proved universal
 no-go.  On `V!=0`, with `y=Vz`, write
 
@@ -173,7 +175,7 @@ C=1+x,                       d=1,                       k=1.              (13)
 
 It uses a literal Sylvester determinant for the `40`-term universal factor,
 divides the exact degree-`44` passport boundary, and obtains the same monic
-degree-`53` `H` digests printed by the reserved candidate scout.  It then
+degree-`53` `H` digests printed by the THM-3289 companion.  It then
 computes the new sidecars directly in characteristic zero:
 
 | passport | `deg H` | `deg a` | `deg ell_1` | `deg ell_0` | exact unit tests |
@@ -181,20 +183,24 @@ computes the new sidecars directly in characteristic zero:
 | `(4,1,1,1)` | 53 | 32 | 80 | 88 | `gcd(H,H')=gcd(H,ST)=gcd(H,a)=gcd(H,ell_1)=1` |
 | `(3,2,1,1)` | 53 | 32 | 80 | 88 | `gcd(H,H')=gcd(H,ST)=gcd(H,a)=gcd(H,ell_1)=1` |
 
-The selected-section pair digests `(ell_1,ell_0)` are
+The common-scale-normalized projective pair digests `(ell_1,ell_0)` are
 
 ```text
 (4,1,1,1):
-6a34ad75464bf4ca13cd957a2927827d646563cf7e2777b8bcb670c1c0c9da92,
+5ea209d5455f7fb13488cb11fd1e82aded97ded1f6c3681b27b3b5ebc6904a95,
 
 (3,2,1,1):
-eb61163d6761a5c533cb90ad59f31a0b57a500ec9025d63b1a3cbcecc7472f4c.
+7436a32bbdd517c27a9ed7a977784ff64706f7ab5f7e108891d13e68995cbae2.
 ```
+
+The pair is normalized by one common scalar (the leading coefficient of
+`ell_1`), not by making both entries monic separately; the digest therefore
+retains the relative scale and freezes the rational section `-ell_0/ell_1`.
 
 Hence each fixed control has exactly the graph description `(12)` and the
 unimodular elimination-cofactor pair `(7)--(8)`.  This is stronger data than
 the scalar statement “`H` has 53 squarefree roots,” but only for the two
-named controls.  It neither proves nor audits THM-3289's universal affine
+named controls.  It neither proves nor independently audits THM-3289's universal affine
 `C_0,E_0` PRS argument.
 
 ## Hostiles and failure anatomy
@@ -263,6 +269,106 @@ standard signs and confirms broken swap antisymmetry in the installed
 routine.  No load-bearing calculation in the companion calls
 `sympy.resultant`; the call occurs only in this explicit hazard test.
 
+## A canonical divergence class for the missing Keller sidecar
+
+The distinction between an elimination cofactor and a Keller mate can be
+made exact before choosing any ansatz.  Let `R=K[x,z]` in characteristic
+zero, let
+
+```text
+D_P=P_x partial_z-P_z partial_x,
+```
+
+and suppose first that the gradient ideal is the unit ideal.  Choose any
+Bezout row
+
+```text
+A P_x+B P_z=1.                                           (16a)
+```
+
+Define
+
+```text
+mu(P)=[A_x+B_z] in coker(D_P)=R/D_P(R).                 (16b)
+```
+
+This refines the repo's HYP-8950 Hamiltonian-cokernel formulation
+`1 in im(D_P)`: after gradient unimodularity supplies any transverse Bezout
+row, the remaining obstruction has the canonical lower-degree representative
+`mu(P)`.
+
+This class is independent of the chosen row.  Indeed, coprimality of
+`P_x,P_z` says every other row is uniquely of the form
+
+```text
+(A+hP_z, B-hP_x),
+```
+
+and its divergence is `(A_x+B_z)-D_P(h)`.  Moreover,
+
+```text
+P has a polynomial mate Q with Jac(P,Q)=1
+  iff (P_x,P_z)=R and mu(P)=0.                           (16c)
+```
+
+For the forward implication take `(A,B)=(Q_z,-Q_x)`, whose divergence is
+zero.  Conversely, if `D_P(h)=A_x+B_z`, the adjusted Bezout row has zero
+divergence.  The polynomial one-form
+
+```text
+-(B-hP_x) dx+(A+hP_z) dz
+```
+
+is therefore closed, hence exact on affine two-space.  Its primitive `Q`
+satisfies `Q_x=-(B-hP_x)`, `Q_z=A+hP_z`, and `(16a)` becomes
+`Jac(P,Q)=1`.
+
+Thus Keller entry splits into two typed gates:
+
+```text
+no critical point / gradient-unimodularity,
+then vanishing of the canonical divergence class mu(P). (16d)
+```
+
+The second gate is not cosmetic.  For the standard punctured-fibre hostile
+
+```text
+P=x+x^2 z,
+```
+
+the gradient is unimodular because
+
+```text
+(1-2xz)P_x+4z^2P_z=1,
+```
+
+but this row has divergence `6z`.  Here
+
+```text
+D_P=(1+2xz)partial_z-x^2partial_x,
+```
+
+and `6z` is not in its image.  To see this, write
+`h=sum_j a_j(x)z^j`.  If its top `z`-degree is `m>1`, the top equation forces
+`a_m=c x^(2m)`; subtracting `cP^m` lowers the degree without changing
+`D_P(h)`.  Reduction therefore reaches degree at most one.  At degree one,
+the constant and linear equations would give
+
+```text
+a_1=x^2a_0',               -x^4a_0''=6,
+```
+
+which has no polynomial solution.  Hence `mu(P)=[6z]` is nonzero.  This
+recovers the global obstruction missed by critical-point tests on a minimal
+example and turns the vague request for an "integrable cofactor" into one
+explicit Hamiltonian-cokernel class.
+
+The class does not rescue the two degree-53 controls above: those controls
+already have critical points, so their gradient ideals are not units.  Its
+role is upstream.  For any future deformation that kills the critical
+divisor, compute one global gradient Bezout row and then test `(16b)`, rather
+than searching blindly for both coefficients of a mate.
+
 ## Connection contract and integration recommendation
 
 The new typed connection is
@@ -275,11 +381,11 @@ preserved:   every off-owner common gradient zero and its x-coordinate;
 restored:    the unique y-coordinate and a unimodular gradient cofactor pair;
 destroyed:   primitive inverse-sheet label, Keller cofactor, mate Q, global chart;
 sidecars:    a and ell_1;
-test:        gcd(H,a)=gcd(H,ell_1)=1.                   (16)
+test:        gcd(H,a)=gcd(H,ell_1)=1.                   (17)
 ```
 
 This changes the search priority.  On a squarefree boundary-disjoint control
-that passes `(16)`, selecting and gluing critical roots is no longer the
+that passes `(17)`, selecting and gluing critical roots is no longer the
 hard part: the scalar divisor already has a canonical rational graph after
 one subresultant row.  Those roots are obstructions, not candidate inverse
 sheets.  The unresolved planar-JC information lies earlier and in a different
@@ -293,10 +399,12 @@ Recommended integration:
 2. Do not treat “missing inverse cover” as one undifferentiated debt.
    Critical-root inversion is cheap on the squarefree locus; Keller-sheet
    inversion remains open.
-3. Put the next serious calculation before scalar elimination: introduce a
-   bounded `z`-degree ansatz for `Q`, impose
-   `P_xQ_z-P_zQ_x=1`, and reduce its coefficient module simultaneously on
-   the five owner branches and the infinity normalization.
+3. Put the next serious calculation before scalar elimination.  If the
+   gradient ideal is a unit, compute one Bezout row and test the canonical
+   class `mu(P)` in `(16b)` by bounded Hamiltonian reduction.  This replaces
+   a two-component mate ansatz by the single equation
+   `D_P(h)=A_x+B_z`; only after that gate survives should one reconstruct
+   `Q`.
 4. If a future broader deformation removes all critical points, retain the
    primitive-element cofactor of THM-3064 immediately.  The pair `(U,W)` here
    is a useful audit control but cannot substitute for it.
@@ -316,8 +424,8 @@ The computation is exact, deterministic, has no floating literals or Python
 assertions, and reconstructs both accessory fields internally.
 
 ```text
-script SHA-256:    25af9cebd9611cd57e83c32de589bf208c2be521f21a0a9ec92a3202d912efae
-LF output SHA-256: bc64b7a1780e40f28be0446705d2a5cf37abdc2b7162f61aed06041decc4caba
+script SHA-256:    a719b2582b93a0a6d110b1f13b65e9d54800e8669914da9f21a9371545bbae31
+LF output SHA-256: 67067d9448caa6a809520b190208a561ab4cc14517455d6da0eef9210ccce1ff
 ```
 
 ## Honest frontier
@@ -329,6 +437,5 @@ LF output SHA-256: bc64b7a1780e40f28be0446705d2a5cf37abdc2b7162f61aed06041decc4c
 - **Niche progress:** scalar-resultant loss is repaired on these controls.
 - **Refuted/narrowed:** squarefreeness alone does not provide a uniform
   cofactor chart, and an inverse critical cover is not a Keller inverse cover.
-- **Still open:** the universal reserved THM-3289 audit, broader simultaneous
-  `B/C/E` deformation, a polynomial mate, primitive branchwise Keller units,
-  `JC(2)`, and `DC(2)`.
+- **Still open:** broader simultaneous `B/C/E` deformations beyond THM-3289,
+  a polynomial mate, primitive branchwise Keller units, `JC(2)`, and `DC(2)`.

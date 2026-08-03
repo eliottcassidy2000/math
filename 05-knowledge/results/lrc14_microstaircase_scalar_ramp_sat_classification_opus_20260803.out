@@ -1,0 +1,21 @@
+Full micro-staircase scalar-ramp SAT classification
+scope=FINITE-EXACT residue-cell model; not LRC(14)
+runtime=python:3.13.14;pysat:1.9.dev5
+n=14
+  patterns=812 candidates=11368
+  variables=182 normalized_clauses=12566
+  normalized_dimacs_sha256=0bd83e51677b8d75f97b3fc001b4feea5e970597655dd74c74365dc8f03dd5c8
+  normalized_clause_widths=((1, 1), (2, 1183), (14, 511), (21, 332), (26, 9744), (28, 610), (35, 24), (42, 72), (49, 4), (56, 34), (63, 4), (70, 12), (77, 4), (84, 12), (91, 4), (98, 2), (112, 2), (126, 2), (140, 2), (154, 2), (156, 1), (168, 2), (182, 2))
+  cadical195_normalized_nonzero=UNSAT
+  glucose4_normalized_nonzero=UNSAT
+  ungauged_models=14
+  ungauged_scalar_multipliers=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  ungauged_nonscalar_models=0
+n=15
+  patterns=960 candidates=14400
+  variables=210 normalized_clauses=15886
+  normalized_dimacs_sha256=497541f291bf2227b2129c4208e05a4e8c3aef6fd128a03a122d255cf5ce63ca
+  normalized_clause_widths=((1, 1), (2, 1470), (15, 552), (20, 300), (21, 120), (24, 640), (25, 732), (27, 1720), (28, 7680), (30, 2184), (33, 40), (35, 132), (36, 40), (39, 40), (40, 12), (42, 40), (45, 62), (50, 12), (55, 12), (60, 36), (65, 12), (70, 12), (75, 6), (90, 6), (105, 10), (120, 2), (135, 2), (150, 2), (165, 2), (180, 2), (182, 1), (195, 2), (210, 2))
+  cadical195_normalized_nonzero=UNSAT
+  glucose4_normalized_nonzero=UNSAT
+ALL_CHECKS_PASSED

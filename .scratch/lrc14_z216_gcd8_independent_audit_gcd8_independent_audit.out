@@ -1,0 +1,12 @@
+LRC14 z216 costly gcd8 independent audit
+atlas_rows=480;z216_row_sha256=53db9e1d3df2cf2b0398847682d909da81705e43a53ae2553d102fd152337649;targets=(238, 370)
+composition=low_cost_g8:17;order:33;natural_wall:47;target_overlap:0
+row=238;body=(1, 8, 10, 11, 13, 14);L=560560;components=34;high_floor=55207;cost=19059040;first_d=70070;wall=True
+screen=states:1035;crude:237;status:683;residual:115;exact_duals:683;quotient:((8, 115),);canonical_sha256:ab213499b0b774678caa4b3658539f192e2b423e2b4832d28eb384e7b3884de7;mask_sha256:f7db818098c70097349459e472e3da4a70daf21627d5f8158b2dc4963ff7210a;instance_sha256:c27a30dac2b5ecb26aa52be61dd0c4f19af6b2a6ade173caa0178b72b185df01
+terminal=gap:66973458766897/29716657283313000;zero:109;cases:137;label_sets:9;coarse:131;exact:6;maxgap:0;failures:0;minimum_slack:1;ray_checks:524599;terminal_sha256:83dcd9a3c35c3b6a1da315881b3ba0cd469239b9f8007d19146fc628ead2c9bf;direct_packet_sha256:41f39a0c11faee66093756aaa311068b8608f5eb03b70bbc22caeece7c18335b
+row=370;body=(2, 8, 10, 11, 13, 14);L=560560;components=34;high_floor=55207;cost=19059040;first_d=70070;wall=True
+screen=states:354;crude:213;status:122;residual:19;exact_duals:122;quotient:((8, 19),);canonical_sha256:f724cac04852034b8d813e0b1c9259579494511e836ba4f5ab2cd7e8462de971;mask_sha256:4c383892c25798129ad19799bee95996d78c3bb7506501ab9ea0f9f34662d05d;instance_sha256:06c7b04f221bca1751faaa06433eed10604a05ec9ddc0f915186714e4a4d7749
+terminal=gap:3668224417997/1297249202749500;zero:16;cases:19;label_sets:2;coarse:16;exact:3;maxgap:0;failures:0;minimum_slack:1;ray_checks:70839;terminal_sha256:428ea1129fcbd8c1e607a26b9322aee7f2a82553d6dee1603a5329887b0ce3b3;direct_packet_sha256:3ab27f737107bdba49d889d834a651029acbb7e9eeabfab6997ee612d806449e
+hostiles=negative_Farkas_alpha_rejected;zero_high_not_used;two_high_gap_strict;full_grid_complete_cells;translated_kappa28_4_not_centered_beta28_3
+consequence=373186-2=373184;z216:382wall_to_380wall;cap_stays_216
+all_exact_controls=PASS
