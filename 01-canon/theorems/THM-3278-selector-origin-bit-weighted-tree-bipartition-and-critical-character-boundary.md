@@ -2,7 +2,7 @@
 id: THM-3278
 title: "Selector origin bit, weighted-core bipartition, and critical-character boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The two THM-3275 selector conflicts induce the same 5+7 availability
   partition on THM-3269's twelve-row core, and it is exactly the unique
   root-normalized bipartition of all 22 core edges.  The canonical primitive
@@ -25,8 +25,11 @@ audit: >
   and norm-fibre Krylov determinant.  It also checks the global canonical
   covering pair, the phase-backbone completion and every raw seam-coordinate
   projection through the sharp seven-count cut decoder.  Normal, optimized
-  and stored replay plus LF hashes are required.  Independent hostile audit
-  is pending.
+  and stored replay plus LF hashes agree.  An independent hostile audit
+  rederived both conflict cuts, all core crossings, the global pair and
+  backbone completion, every sampler orientation and character hostile, the
+  augmentation Smith calculation in an independent basis, the norm-fibre
+  cyclic vector and both decoder censuses.  It found no repair.
 depends_on:
   - THM-3266-all-common-two-face-row-pairs-require-one-origin-bit
   - THM-3269-scale-invariant-clutch-strength-and-canonical-weighted-bispanning-polarization
@@ -45,7 +48,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3278 -- selector origin bit, weighted-core bipartition, and critical-character boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3275 proves that an untagged count vector admits no common response-row
 selector on exactly two states.  THM-3269 independently selects a rooted,
@@ -317,5 +320,4 @@ The companion uses exact integer, finite-field-transcript and polynomial
 arithmetic only.  It has no assertion node, floating literal, randomness or
 fitted recurrence.
 
-QED, conditional only on the pending independent audit required for status
-promotion.
+QED.
