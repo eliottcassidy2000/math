@@ -2,10 +2,7 @@
 id: THM-3269
 title: "Scale-invariant clutch strength and canonical weighted bispanning polarization"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED through the
-  canonical polarization and abstract C12 bridge.  The six-edge integral
-  unimodular sampler sharpening is VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-  PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The exact reset-link trap intervals canonically weight every edge of
   THM-3260's bispanning core by a positive row-scale- and orientation-invariant
   overlap ratio.  Among all 9,920 ordered complementary-tree charts, the
@@ -45,8 +42,10 @@ audit: >
   second delta audit of the completed sidecar claims independently rebuilt
   the full critical Smith/adjugate coordinate, unique incident generator,
   twelve distinct exponents, rank compression, normalized edge sampler and
-  augmentation embedding. Both audits passed with no repair. The six-edge
-  unimodular delta is pending an independent hostile audit.
+  augmentation embedding. A third delta audit independently rederived the
+  five in-tree phase-orbit clutch minima, root-selected delayed edge, all
+  eleven directed residues and integral determinant minus one. All audits
+  passed with no repair.
 depends_on:
   - THM-3254-first-shell-two-row-clutch-and-graded-gauge-no-go
   - THM-3260-bispanning-reset-link-holotopy-atlas-and-nonplanar-c12-boundary
@@ -330,7 +329,7 @@ A_norm  --> Aug(Q[J_12]) --> Q^(directed core + two delayed)       (23)
 is a canonical injective `48 by 11` coefficient map.  Its image carries the
 transported scalar action `-I` from `(22)`.
 
-**Six-edge sharpening: VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 There is a smaller integral form of this sampler.  For an edge `e={u,v}`, let
 
