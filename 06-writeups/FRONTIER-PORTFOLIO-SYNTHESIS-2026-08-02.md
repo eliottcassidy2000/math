@@ -30,8 +30,11 @@ structural tools, with later exact audits promoted directly into the map below.
    owner filtration: a polynomial Keller owner freezes it at `k[x,y]`, while
    a nonconstant first-stage unit refutes the punctured cubic hostile.  Its
    transverse derivative recurrence converts THM-2241's automorphism tail
-   into one exact minimal-polynomial divisibility test, but does not prove
-   `JC(2)` or force the remaining `A4/S4` branches into a source chart.
+   into one exact minimal-polynomial divisibility test.  THM-3212 then applies
+   a genuine source lift to all four THM-3123 heptic covers: every canonical
+   centered source has five forced Morse critical points.  The off-center
+   residue clutch identifies exactly how to remove those five local points,
+   but does not supply a mate, the remaining fluxes, or `JC(2)`.
 3. For **quadratic factorial windows**, the prime/prime-power exits at offsets
    `0..6` now compose with THM-3152's first Euclidean flag. THM-3180 closes
    all `79` six-exit rows in `2001<=d<=2200`; THM-3201 closes all `50`
@@ -91,7 +94,7 @@ with exact failure mechanisms and cheap next tests.
 | LRC(14), grid response | [THM-3130](../01-canon/theorems/THM-3130-divisor-antichain-totient-response-and-supermodular-witness-loss.md) | principal totient-tail product, antichain inclusion--exclusion, decreasing supermodular insertion loss, divisor-death barcode | fixed grid is not the continuous loneliness profile; normalized upward transport fails at `q=6` |
 | LRC(14), projected `k=3` | THM-3113/3114/3139/3174 | projected layers close through `z1=223`; cap `222`, ledger `374025` | next `219` rows; arbitrary `k<=1`, the rung, and LRC(14) remain open |
 | LRC(14), reflected levels | [THM-3135](../01-canon/theorems/THM-3135-directed-cycle-weak-order-lane-cover-and-reflected-h-boundary.md), [THM-3171](../01-canon/theorems/THM-3171-global-high-channel-cell90-floor-and-all-width-uniform-two-star-law.md), [THM-3200](../01-canon/theorems/THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary.md) | exact cycle/DAG boundary; an all-width cell-90 theorem; and fixed-channel residue quadratics with rational OGF | periods and stabilization are not uniform; other cells, arbitrary `k<=1`, the rung, and physical entry remain open; this is not LRC(14) |
-| planar Jacobian response | [THM-3151](../01-canon/theorems/THM-3151-resonant-odd-bipole-equality-cell-nonentry-and-degree-floor.md), [THM-3167](../01-canon/theorems/THM-3167-inverse-different-three-gate-target-shear-descent-and-full-marked-jet-no-go.md), [THM-3172](../01-canon/theorems/THM-3172-shear-invariant-differential-owner-filtration-and-transverse-recurrence.md) | every balanced equality cell is excluded; owner/constant-field/diagonal gates are separated; the differential-owner filtration gives a one-jet unit obstruction and an exact transverse divisibility recurrence | apply the owner ring to an actual quartic/heptic source lift; general chart entry and `JC(2)` stay open |
+| planar Jacobian response | [THM-3151](../01-canon/theorems/THM-3151-resonant-odd-bipole-equality-cell-nonentry-and-degree-floor.md), [THM-3167](../01-canon/theorems/THM-3167-inverse-different-three-gate-target-shear-descent-and-full-marked-jet-no-go.md), [THM-3172](../01-canon/theorems/THM-3172-shear-invariant-differential-owner-filtration-and-transverse-recurrence.md), [THM-3212](../01-canon/theorems/THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch.md) | every balanced equality cell is excluded; owner/constant-field/diagonal gates are separated; the differential-owner filtration gives a one-jet unit obstruction; and the canonical heptic centered lift has five forced Morse critical points | audit the off-center unit clutch away from `g=ST` and the remaining Faber fluxes; general chart entry and `JC(2)` stay open |
 | factorial, exact quadratics | [THM-3180](../01-canon/theorems/THM-3180-six-exit-factorial-newton-euclidean-closure-through-r2198.md), [THM-3201](../01-canon/theorems/THM-3201-seven-exit-factorial-newton-euclidean-closure-through-r2403.md), [THM-3186](../01-canon/theorems/THM-3186-full-exterior-continuant-path-convolution-and-cancellation-wall.md), [THM-3210](../01-canon/theorems/THM-3210-factorial-exterior-double-cancellation-ray-and-two-step-invisible-window.md) | exact-support `{0,1,2}` closes through `r=2403`; the signed exterior tail is P-recursive, yet has an exact two-step nonmonotone invisible window on a rational ray | first unaudited `r=2404,d=2406`; selected-chart cancellation and same-Smith data still do not determine Euclidean depth; translated/arbitrary supports and `FC(3)` remain open |
 | factorial, sparse `FC(3)` | [THM-3125](../01-canon/theorems/THM-3125-monomial-ray-first-window-factorial-closure-in-three-variables.md) | genuine anchored three-variable monomial-ray subclass via positive Gamma layers | translated rays, off-ray supports, shifted windows, full `FC(3)`/`SFC(3)` |
 | tournaments | [THM-3134](../01-canon/theorems/THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform.md), [THM-3181](../01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md), [THM-3202](../01-canon/theorems/THM-3202-c3-repeated-join-moving-jet-formula-and-cfinite-obstruction.md) | endpoint-jet dictionary; half-grid reconstruction; minimal repeated-join recurrences; exact quadratic-time cyclic moving jets with a factorial-cube non-C-finite boundary | cyclic substitution still needs the complete moving jet; SCC order, P-recursive status, and arbitrary-profile complexity are not recovered |
@@ -105,7 +108,7 @@ with exact failure mechanisms and cheap next tests.
 |---|---|---|---|---|
 | LRC reflected | THM-2941 head/tail envelope and located transport | `H=(1,2,3,4,6,12)` | MISTAKE-347 duplicated one order by reversing both pair and inequality | directed graph of the actual weak inequalities; upper-median/tree response |
 | LRC grid | THM-3055 divisor upset and THM-3129 upset facets | `q=6`, where normalized upset mass decreases | death was mistaken for upward transport | minimal divisor antichain plus `phi(d)` death barcode |
-| planar JC | THM-2241 transverse response tail and THM-3167's three-gate split | the punctured cubic and its diagonal control have identical bounded marked jets and both fail the polynomial-owner gate | exact trace or finite-jet data were mistaken for global owner regularity | differential-owner ring, unit/idempotent test, and inverse-minimal-polynomial divisibility |
+| planar JC | THM-2241 transverse response tail, THM-3123's four heptic covers, and THM-3167's three-gate split | the punctured cubic and its diagonal control have identical bounded marked jets; the canonical centered heptic lift has five unavoidable Morse critical points | abstract response reconstruction or exact trace was mistaken for global source entry | differential-owner ring; the residue pair `(B,B E_0'-A_src'C_0) mod ST`; and inverse-minimal-polynomial divisibility |
 | factorial | THM-3124 recurrence, THM-3152's first Euclidean row, and THM-3183/3186's oriented continuant convolution | nonempty local barcodes, nonzero transfer paths, and even identical reset Smith types need not determine the projected Newton row | MISTAKE-350 confused ambient dimension with support size | arithmetic exits, empty multi-place degree intersections, the signed exit-time amplitude, and an independent lower hull |
 | tournaments | THM-3121 walk-content kernel, THM-3134 endpoint jet, and THM-3166 order-join transform | `K1▷C3` and `C3▷K1` have the same profile but different SCC order; cyclic scalar plethysm gives `33` instead of `3159` | finite sequence fitting is not a closed form (MISTAKE-342) | parity inverse, positive half-grid, and the quotient's full run-content jet |
 | product-Gamma refinement | THM-3119 labelled deletion and THM-3127 upset dual | deterministic prefix fails, but THM-3137's mixture works only through degree nine and only at fixed support | exact commutation was mistaken for positive transport | selector-polytope facets, moment sidecar, and persistence-death barcode |
@@ -138,8 +141,10 @@ all eight rather than only with its home conjecture.
    degree/support where every physical law dies.
 8. **Differential-owner filtration:** adjoins all target derivatives to the
    marked inverse order.  A polynomial Keller owner freezes the filtration;
-   a nonconstant unit or idempotent refutes ownership, while finite entry alone
-   does not decide the diagonal inverse-different gate.
+   a nonconstant unit or idempotent refutes ownership.  On the heptic source
+   lift, the cheaper preceding observer is the degree-five residue clutch
+   `(B,B E_0'-A_src'C_0) mod ST`, while finite entry alone still does not
+   decide the diagonal inverse-different gate.
 
 Two relations are already exact.  A forest is optimal for independent signed
 difference reconstruction, while a directed cycle is necessary for weak-order
@@ -317,6 +322,37 @@ partial_v^n xi=A_n(xi)/f_T(xi)^(2n-1).
 Under THM-2241's monic complex polynomial-Keller hypotheses, automorphy is
 equivalent to `f` dividing `A_(d+1)`.  This is a finite reformulation for an
 actual source lift, not a proof that every Keller pair passes it.
+
+THM-3212 performs the missing first source-lift test on all four canonical
+heptic `S_7` covers of THM-3123.  With
+
+```text
+g=ST,               A_src=VG=2SET/C,
+P=V^2z^4+A_src z+E_0,
+```
+
+the polynomial `g` is squarefree of degree five, divides both `V` and
+`A_src`, and is coprime to `A_src'`.  Every root `alpha` of `g` therefore
+forces the unique critical point
+
+```text
+(alpha,-E_0'(alpha)/A_src'(alpha)),
+det Hess(P)=-A_src'(alpha)^2 !=0.
+```
+
+Thus every centered source in this canonical family has five distinct Morse
+critical points and cannot be a Keller coordinate.  For the off-center lift
+
+```text
+P=(Vz^2+Bz+C_0)^2+A_src z+E_0,
+```
+
+a unit `B mod g` leaves one candidate point per fibre, and all five disappear
+exactly when `B E_0'-A_src'C_0` is also a unit modulo `g`.  The control
+`(B,C_0,E_0)=(1,0,x)` clears this local gate but may fail elsewhere and changes
+the Faber coordinates to `d_F=-1/(4V), s_F=G/2-x`.  The next honest experiment
+is therefore a global critical/flux/owner-ring audit of that off-center
+control, not another centered `E_0` scan.
 
 ### 4. Factorial resonances separate by slopes or an exact syzygy
 

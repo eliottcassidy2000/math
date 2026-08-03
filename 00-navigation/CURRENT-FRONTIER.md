@@ -376,10 +376,10 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-3123 completes the heptic atlas; THM-3133 isolates the resonant equality
   cells; THM-3151 excludes every `(D,D)` cell and proves the balanced chart
   floor `N>=4D`. THM-3167 separates diagonal, constant-field and global-owner
-  gates; no bounded marked jet decides the first. THM-3172's shear-invariant
-  differential-owner filtration freezes for polynomial Keller owners, detects
-  a cubic one-jet unit, and gives the transverse `A_n` divisibility recurrence.
-  It needs an actual source lift; general chart entry and `JC(2)`/`DC(2)` stay open.
+  gates; no bounded marked jet decides the first. THM-3172 freezes the
+  differential-owner filtration for polynomial Keller owners. THM-3212 tests
+  all four heptic covers: every centered source has five forced Morse points;
+  its off-center unit clutch clears only a local gate. Chart entry and JC(2) stay open.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2403`; all `50` seven-exit rows in
   `2201<=d<=2400` close independently, and exits close `d=2401..2405`.
