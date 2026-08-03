@@ -101,7 +101,9 @@ structural tools, with later exact audits promoted directly into the map below.
    depth works for all degrees.  THM-3228 proves a
    sharp carrier gate: every permutation action of the full mod-`p` four-jet
    group on fewer than `p^2` points kills its center, so a `p`-root permutation
-   chart necessarily loses the commutator.
+   chart necessarily loses the commutator.  Even the regular action on the
+   correct-size abelian prefix `F_p^2` kills the center; a minimal carrier needs
+   an oblique nonnormal order-`p` stabilizer line.
    Global root selection and a lawful physical carrier remain open.
    THM-3217 is independently hostile-audited proved canon:
    it gives a universal degree-parametric three-row PRS wall atlas and a
@@ -109,11 +111,18 @@ structural tools, with later exact audits promoted directly into the map below.
    depth or growing-offset separation theorem.  THM-3223 is a **VERIFIED-EXACT
    PROVED CANDIDATE awaiting independent audit**: it extends the atlas through
    rows four and five, finds primitive walls of degrees `13,20`, and exhibits
-   a killed fourth pivot resurrecting at the fifth row.  THM-3227 is a separate
+   a killed fourth pivot resurrecting at the fifth row before the next row
+   vanishes identically.  THM-3227 is a separate
    **VERIFIED-EXACT PROVED CANDIDATE awaiting immutable audit**: selected-root
    residue contacts form a labelled `q`-ary prefix trie with exact-order-`p`
    charged edges.  Its divided carry additionally requires an unramified lift
    and `p`-divisible lower jets; no global selector or carrier is supplied.
+   THM-3229 is another **VERIFIED-EXACT PROVED CANDIDATE awaiting immutable
+   audit**: after squarefree gcd and saturation to common simple roots,
+   Hasse--Pluecker minors give a root-selection-free nested contact-gcd flag;
+   for a nonproportional degree-at-most-`D` pair it terminates at `G_D=1`, but
+   does not order roots or form the
+   factorial-moment PRS.
 4. For **tournaments and exact sequences**, THM-3181 proves pure parity
    `Q_T(-t)=(-1)^nQ_T(t)` and the rational integer-value series
    `sum Q_T(m)x^m=xB_T(x)/(1-x)^(n+1)`.  Only
@@ -152,14 +161,14 @@ structural tools, with later exact audits promoted directly into the map below.
    transport even to a nearby support, giving a sharp finite barcode rather
    than a uniform positive flag.  THM-3219 is now independently hostile-
    audited proved canon: one degree-five principal-upset facet excludes every
-   nonempty physical completion above one complete reset, but says nothing
-   about incomparable states or global selector feasibility.  Two broader
-   **VERIFIED-EXACT PROVED CANDIDATES remain audit-pending**: THM-3216 claims
-   the reset atom is the only feasible probability law on a `3,129`-state
-   depth-at-most-nine bank at every horizon `D>=14` and in the all-degree
-   intersection, while THM-3222 claims the principal-filter collar mechanism
-   on all `230` maintained support/bank resets.  Neither is used as proved
-   canon here.
+   nonempty physical completion above one complete reset.  THM-3216 now proves
+   that reset atom is the only feasible probability law on the support-`(1,3)`,
+   bank-`I2` `3,129`-state depth-at-most-nine universe at every horizon
+   `D>=14`, including the all-
+   degree intersection; exterior `omega` does not preserve the selector cone.
+   THM-3222 proves the local collar on all `230` maintained support/bank resets.
+   Depth ten, states outside those filters, arbitrary supports, and uniform
+   global stitching remain open.
 8. The proposed **binary/ternary modular frame** is now exactly classified at
    its first quotient: the pointed four-sheet action is
    `PSL_2(F3)=A4`, with first extra relation `(SR)^3=1`.  A faithful lift must
@@ -204,7 +213,9 @@ permutation action of the full mod-`13` four-jet group on fewer than
 `13^2=169` points kills its center.  Therefore any proposed `H_13` bridge
 acting only by permuting those 168 owners must kill the central commutator;
 at least one additional sidecar state is necessary.  No `H_13` action on the
-LRC owners, and no lawful carrier map, is asserted.
+LRC owners, and no lawful carrier map, is asserted.  Even 169 obvious prefix
+labels would be insufficient: the regular `F_13^2` quotient action still kills
+the center, so the missing sidecar must encode the nonnormal stabilizer clutch.
 
 ## Executive frontier map
 
@@ -216,14 +227,15 @@ LRC owners, and no lawful carrier map, is asserted.
 | planar Jacobian response | [THM-3151](../01-canon/theorems/THM-3151-resonant-odd-bipole-equality-cell-nonentry-and-degree-floor.md), [THM-3167](../01-canon/theorems/THM-3167-inverse-different-three-gate-target-shear-descent-and-full-marked-jet-no-go.md), [THM-3172](../01-canon/theorems/THM-3172-shear-invariant-differential-owner-filtration-and-transverse-recurrence.md), [THM-3212](../01-canon/theorems/THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch.md), [THM-3225](../01-canon/theorems/THM-3225-affine-jacobian-clutch-resultant-and-two-boundary-no-escape.md) | every balanced equality cell is excluded; owner/constant-field/diagonal gates are separated; every constant and affine-`B` heptic clutch has a critical point; generic affine strata have `52` Morse points | leave the affine clutch family via nonlinear accessories; retain every Faber flux; use `B_1` only after a marked inverse pair; `JC(2)` stays open |
 | factorial, exact quadratics | [THM-3180](../01-canon/theorems/THM-3180-six-exit-factorial-newton-euclidean-closure-through-r2198.md), [THM-3201](../01-canon/theorems/THM-3201-seven-exit-factorial-newton-euclidean-closure-through-r2403.md), [THM-3186](../01-canon/theorems/THM-3186-full-exterior-continuant-path-convolution-and-cancellation-wall.md), [THM-3192](../01-canon/theorems/THM-3192-reciprocal-coefficient-jet-transfer-and-z-adic-pluecker-return.md), [THM-3214](../01-canon/theorems/THM-3214-two-jet-pseudo-division-locality-and-catalan-sharpness.md), [THM-3215](../01-canon/theorems/THM-3215-arbitrary-degree-root-jet-hamiltonian-affine-dihedral-holonomy-and-p-fold-carry.md), [THM-3220](../01-canon/theorems/THM-3220-root-four-jet-schwarzian-heisenberg-transgression-and-oriented-discriminant-holonomy.md) | exact-support `{0,1,2}` closes through `r=2498`; pseudo-division has the sharp `2k`/`2k+1` budget; selected-root transport extends from the affine-dihedral two-jet cocycle to an exact four-jet Heisenberg/discriminant layer | first unaudited `r=2499,d=2501`; global root/carrier selection, full-depth/growing-offset atlas selection, translated supports, and `FC(3)` remain open |
 | factorial PRS atlas | [THM-3217](../01-canon/theorems/THM-3217-universal-resonant-degree-prs-wall-atlas-and-fixed-offset-exception-set.md) | **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED:** universal first-three-row degree-line atlas and finite fixed-offset exception integer `Xi_s` | no arbitrary-depth or growing-offset separation claim |
-| factorial PRS rows four/five | [THM-3223](../01-canon/theorems/THM-3223-fourth-fifth-resonant-prs-primitive-walls-pell-content-and-pivot-resurrection.md) | **PROVED CANDIDATE + VERIFIED-EXACT / AUDIT PENDING:** primitive degree-`13,20` walls, Pell content clock, and exact fourth-pivot death/fifth-pivot resurrection | independent theorem audit required before canon use; no all-depth theorem |
-| selected-root carrier | [THM-3221](../01-canon/theorems/THM-3221-selected-root-osculating-separation-and-minimal-jet-prime-carry.md), [THM-3228](../01-canon/theorems/THM-3228-four-jet-heisenberg-minimal-faithful-permutation-carrier-gate.md) | first live osculating tensor is canonical; its divided carry has mixed-characteristic unit hypotheses; a center-faithful full mod-`p` four-jet permutation action has sharp minimum `p^2` points | supplied-degree reconstruction is not a fixed-depth selector; no lawful factorial, JC, or LRC carrier map |
+| factorial PRS rows four/five | [THM-3223](../01-canon/theorems/THM-3223-fourth-fifth-resonant-prs-primitive-walls-pell-content-and-pivot-resurrection.md) | **PROVED CANDIDATE + VERIFIED-EXACT / AUDIT PENDING:** primitive degree-`13,20` walls, Pell content clock, and a fourth-pivot death whose fifth-pivot resurrection lasts exactly one row | independent theorem audit required before canon use; no all-depth theorem |
+| selected-root carrier | [THM-3221](../01-canon/theorems/THM-3221-selected-root-osculating-separation-and-minimal-jet-prime-carry.md), [THM-3228](../01-canon/theorems/THM-3228-four-jet-heisenberg-minimal-faithful-permutation-carrier-gate.md) | first live osculating tensor is canonical; a center-faithful full mod-`p` four-jet permutation action needs `p^2` points; the correct-size abelian prefix action still kills the center | supplied-degree reconstruction is not fixed-depth; a minimal physical carrier needs an oblique nonnormal stabilizer clutch |
+| root-selection-free contact-gcd divisor candidate | [THM-3229](../01-canon/theorems/THM-3229-hasse-pluecker-simple-root-contact-gcd-flag-and-degree-termination.md) | **PROVED CANDIDATE + VERIFIED-EXACT / AUDIT PENDING:** after squarefree gcd and common-simple-root saturation, Hasse--Pluecker numerators cut first-contact strata into a nested flag; a nonproportional degree-at-most-`D` pair has `G_D=1` | root-selection-free is not root selection; the flag is not the factorial-moment PRS |
 | factorial, sparse `FC(3)` | [THM-3125](../01-canon/theorems/THM-3125-monomial-ray-first-window-factorial-closure-in-three-variables.md) | genuine anchored three-variable monomial-ray subclass via positive Gamma layers | translated rays, off-ray supports, shifted windows, full `FC(3)`/`SFC(3)` |
 | tournaments | [THM-3134](../01-canon/theorems/THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform.md), [THM-3181](../01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md), [THM-3202](../01-canon/theorems/THM-3202-c3-repeated-join-moving-jet-formula-and-cfinite-obstruction.md), [THM-3213](../01-canon/theorems/THM-3213-tournament-normalized-cyclic-diagonal-and-fast-moving-jet-transform.md), [THM-3226](../01-canon/theorems/THM-3226-unbalanced-q4-unequal-saddle-and-transcendence-wall.md) | endpoint-jet dictionary; minimal join recurrences; a one-product fast cyclic jet; fixed-depth balanced non-P-recursiveness; one variational saddle for every fixed strong quotient on `q>=3`; explicit unbalanced `Q4` with transcendental `p,s/t` | arithmetic status of unbalanced product radii, quotient state width, SCC order, and growing output depth remain open |
 | modular congruence shadow | [THM-3141](../01-canon/theorems/THM-3141-quartic-v4-modular-congruence-shadow-and-gamma3-sidecar-boundary.md) | pointed `V4` frame gives exactly `PSL_2(F3)=A4`; `(SR)^3=T^3` is the first lost modular word; rooted ternary input is separately forgotten | build a `Gamma(3)`/Farey lift on one common physical carrier; no faithful modular action or JC/LRC transfer yet |
 | signed forest lifts | [THM-3132](../01-canon/theorems/THM-3132-projected-forest-boundary-parity-and-augmentation.md) | all-rank parity classification: even rank surjective, odd rank augmentation-zero | positivity, locality, denominator, symmetry, and operation compatibility are not supplied |
 | positive refinement | [THM-3137](../01-canon/theorems/THM-3137-finite-stochastic-pole-selector-polytope-and-portability-wall.md), [THM-3219](../01-canon/theorems/THM-3219-complete-reset-upper-filter-principal-upset-exclusion.md) | exact one-pole selector polytope through degrees `5..9`; one degree-five facet excludes all 63 nonreset states in the 64-state principal filter | degree `10` kills every physical one-/two-pole law; incomparable states and global selector feasibility remain open |
-| positive refinement candidates | [THM-3216](../01-canon/theorems/THM-3216-depth-nine-degree-fourteen-unique-reset-face-and-omega-cone-boundary.md), [THM-3222](../01-canon/theorems/THM-3222-universal-product-gamma-reset-upper-filter-collar.md) | **PROVED CANDIDATES + VERIFIED-EXACT / AUDIT PENDING:** proposed unique depth-at-most-nine reset face and 230-reset universal principal collar | do not use as canon until independently audited; depth ten and states outside the stated filters remain open |
+| positive refinement reset faces | [THM-3216](../01-canon/theorems/THM-3216-depth-nine-degree-fourteen-unique-reset-face-and-omega-cone-boundary.md), [THM-3222](../01-canon/theorems/THM-3222-universal-product-gamma-reset-upper-filter-collar.md) | **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED:** unique support-`(1,3)`, bank-`I2` depth-at-most-nine reset law for every `D>=14`; 230 physical principal-filter collars | depth ten, arbitrary supports, states outside the collars, and uniform global stitching remain open |
 
 ## Inheritance pass
 
@@ -263,9 +275,10 @@ all eight rather than only with its home conjecture.
    the missing oriented area and, on quadratic germs, an oriented cubic
    discriminant.  THM-3221 makes the first unequal osculating layer canonical;
    THM-3228 proves its center cannot survive on fewer than `p^2` permutation
-   points.  The audit-pending THM-3227 trie is a precise finite-family probe,
-   not canon.  Root permutation, a physical carrier, and further jets are
-   deliberately retained.
+   points, while its correct-size prefix quotient is still a hostile.  The
+   audit-pending THM-3227 contact trie and THM-3229 root-free contact-gcd flag
+   are precise finite-family probes, not canon.  Root permutation, the
+   nonnormal stabilizer clutch, a physical carrier, and further jets are retained.
 4. **Pole valuation fan:** forgets other response families but can isolate the
    unique top Faber face locally and, with wall coefficients, obstruct source
    entry at infinity.
@@ -282,8 +295,9 @@ all eight rather than only with its home conjecture.
 7. **Upset dual / stochastic selector polytope:** detects whether a signed or
    averaged lift lies in the positive refinement cone and records the first
    degree/support where every physical law dies.  THM-3219 proves one complete
-   reset collar; audit-pending THM-3216 proposes a global depth-at-most-nine
-   singleton face, while THM-3222 proposes 230 principal-filter collars.
+   reset collar; THM-3216 proves the fixed-bank depth-at-most-nine singleton face,
+   while THM-3222 proves 230 principal-filter collars.  Depth ten and stitching
+   across filters are retained.
 8. **Differential-owner filtration:** adjoins all target derivatives to the
    marked inverse order.  A polynomial Keller owner freezes the filtration;
    a nonconstant unit or idempotent refutes ownership.  On the heptic source
@@ -768,8 +782,10 @@ five, factoring those pivots into inherited factors and new primitive
 irreducible walls `W13,W20`, and shows
 they are `1 mod 2`, preserving a finite fixed-offset exceptional-prime set.
 Its offset-two hostile is structurally useful: `p=43` kills the fourth pivot
-but the fifth returns as a unit.  Thus a dead pivot need not terminate the
-atlas.  None of this is a proved dependency until the audit promotes it.
+but the fifth returns as a unit by a whole-row clutching identity, after which
+the next row vanishes identically.  Thus resurrection is possible but lasts
+exactly one row in this hostile.  None of this is a proved dependency until
+the audit promotes it.
 
 THM-3215 identifies the degree-independent local mechanism.  For any
 polynomial or formal function at a selected root `a`,
@@ -819,6 +835,13 @@ full mod-`p` Heisenberg jet group that is faithful on its center has at least
 therefore too small; `p=13` suggests a minimal 169-point carrier only by
 cardinality, not a lawful LRC map.
 
+Correct cardinality is not sufficient.  Pulling back the regular action of
+the abelian prefix quotient `J_4(p)/Z=F_p^2` gives `p^2` labels but kills the
+center by construction.  The sharp faithful carriers are coset actions by a
+noncentral, hence nonnormal, order-`p` stabilizer.  Any physical bridge must
+therefore supply that oblique stabilizer-line clutch, not merely 169 labels or
+the obvious `(A,B)` prefix coordinates.
+
 THM-3227 is a **PROVED CANDIDATE + VERIFIED-EXACT awaiting immutable audit**.
 It organizes a finite family into a labelled `q`-ary residue-contact trie whose
 charged edges have exact additive order `p`.  Its primitive divided carry is
@@ -826,6 +849,16 @@ only claimed over an unramified `p`-adic lift when every lower jet is
 `p`-divisible; delayed resplitting and ramified contamination are sharp
 hostiles.  It remains evidence, not canon, and supplies neither root ownership
 nor a physical carrier.
+
+THM-3229 is a **PROVED CANDIDATE + VERIFIED-EXACT awaiting immutable audit**.
+For two polynomials, the Hasse--Pluecker minors
+`Omega_m=f^[m]g'-g^[m]f'` cut derivative-normalized contact at every common
+simple root.  Squarefree gcd and simple-root saturation turn them into a
+nested divisor flag whose successive quotient is exactly the first-contact-
+`m` stratum; for nonproportional degrees at most `D`, the flag terminates at
+`G_D=1`.  Hasse derivatives are essential in small characteristic.  This is a
+root-selection-free divisor census, not an ordering/owner rule and not the
+resonant factorial-moment PRS.
 
 ### 5. Tournament profiles are endpoint jets
 
@@ -998,16 +1031,15 @@ in the 64-state principal filter, through depth sixteen.  This is a proved
 upper-filter theorem, not a global selector no-go: incomparable states and
 other supports still require their own facets.
 
-Two larger exact computations are explicit audit targets, not proved canon.
-THM-3216 (**PROVED CANDIDATE + VERIFIED-EXACT**) gives an 18-row positive
-cocircuit claimed to make the reset atom the only feasible probability law on
-the `3,129`-state depth-at-most-nine bank at horizon `D=14`, hence at every
+Two formerly candidate computations are now independently audited canon.
+THM-3216 gives an 18-row positive cocircuit that makes the reset atom the only
+feasible probability law on the support-`(1,3)`, bank-`I2`
+`3,129`-state depth-at-most-nine universe at horizon `D=14`, hence at every
 later horizon; it also
 shows that the exterior `omega` symmetry does not preserve the selector cone.
-THM-3222 (**PROVED CANDIDATE + VERIFIED-EXACT**) claims the degree-five reset
-collar on every one of the `230` maintained support/bank pairs.  Both await
-independent audit; neither controls states outside its stated universe or filter,
-and THM-3216 leaves depth ten open.
+THM-3222 proves the degree-five reset collar on every one of the `230`
+maintained support/bank pairs.  Neither controls states outside its stated
+universe or filter, and THM-3216 leaves depth ten open.
 
 ## Connection contracts
 
@@ -1167,13 +1199,14 @@ that prevents the physically relevant path from closing trivially.
 | Fixed LRC dilation sequence | **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED** | [THM-3200](../01-canon/theorems/THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary.md) gives residue quadratics; [THM-3211](../01-canon/theorems/THM-3211-uniform-lrc-channel-limit-bernoulli-cubic-and-sharp-floor.md) gives the sharp bulk and first coboundary; [THM-3224](../01-canon/theorems/THM-3224-complete-lrc-orbit-bernoulli-gcd-carry-and-owner-hodge-splitting.md) gives the exact nonzero periodic `g^-2` curvature, sharp `9/49`, exact `O(g^-3)` remainder, and owner Hodge split | identify the physical owner/cell map, certify finite heads, and control growing periods; do not promote the finite 168-owner scout |
 | Projected `k=3` descent | **PROVED + VERIFIED-EXACT** | THM-3113/3114/3139/3174/3207 lower the cap through `z1=221`, giving cap `220` | continue the exact next wall without inferring physical-cover counts |
 | Residual quadratic factorial resonance | **CLOSED through `r=2498`** | [THM-3180](../01-canon/theorems/THM-3180-six-exit-factorial-newton-euclidean-closure-through-r2198.md) closes `79` six-exit rows; [THM-3201](../01-canon/theorems/THM-3201-seven-exit-factorial-newton-euclidean-closure-through-r2403.md) closes the next `50` plus all `35` seven-exit residuals through `d=2500` by matching independent traces | begin at `r=2499,d=2501`; change observer only on an actual survivor |
-| Factorial exterior visibility and root carrier | **PROVED + INDEPENDENTLY HOSTILE-AUDITED** | [THM-3215](../01-canon/theorems/THM-3215-arbitrary-degree-root-jet-hamiltonian-affine-dihedral-holonomy-and-p-fold-carry.md) and [THM-3220](../01-canon/theorems/THM-3220-root-four-jet-schwarzian-heisenberg-transgression-and-oriented-discriminant-holonomy.md) give two-/four-jet transport; [THM-3221](../01-canon/theorems/THM-3221-selected-root-osculating-separation-and-minimal-jet-prime-carry.md) gives supplied-degree reconstruction; [THM-3228](../01-canon/theorems/THM-3228-four-jet-heisenberg-minimal-faithful-permutation-carrier-gate.md) proves the sharp `p^2` center-faithful full-group action gate | solve global root/owner selection and construct a lawful physical carrier; a `p`-root permutation chart is provably too small |
-| Fixed-offset PRS wall atlas | **THREE ROWS PROVED; ROWS FOUR/FIVE CANDIDATE** | [THM-3217](../01-canon/theorems/THM-3217-universal-resonant-degree-prs-wall-atlas-and-fixed-offset-exception-set.md) proves eight coordinates and `Xi_s`; [THM-3223](../01-canon/theorems/THM-3223-fourth-fifth-resonant-prs-primitive-walls-pell-content-and-pivot-resurrection.md) is a verified-exact audit-pending continuation with pivot resurrection | audit THM-3223 before use, then seek full `floor(s/2)` selection rather than another isolated offset |
+| Factorial exterior visibility and root carrier | **PROVED + INDEPENDENTLY HOSTILE-AUDITED** | [THM-3215](../01-canon/theorems/THM-3215-arbitrary-degree-root-jet-hamiltonian-affine-dihedral-holonomy-and-p-fold-carry.md) and [THM-3220](../01-canon/theorems/THM-3220-root-four-jet-schwarzian-heisenberg-transgression-and-oriented-discriminant-holonomy.md) give two-/four-jet transport; [THM-3221](../01-canon/theorems/THM-3221-selected-root-osculating-separation-and-minimal-jet-prime-carry.md) gives supplied-degree reconstruction; [THM-3228](../01-canon/theorems/THM-3228-four-jet-heisenberg-minimal-faithful-permutation-carrier-gate.md) gives the `p^2` gate and prefix-quotient hostile | solve global root/owner selection and construct the nonnormal stabilizer clutch on a lawful physical carrier |
+| Fixed-offset PRS wall atlas | **THREE ROWS PROVED; ROWS FOUR/FIVE CANDIDATE** | [THM-3217](../01-canon/theorems/THM-3217-universal-resonant-degree-prs-wall-atlas-and-fixed-offset-exception-set.md) proves eight coordinates and `Xi_s`; [THM-3223](../01-canon/theorems/THM-3223-fourth-fifth-resonant-prs-primitive-walls-pell-content-and-pivot-resurrection.md) is a verified-exact audit-pending continuation whose pivot resurrection lasts exactly one row | audit THM-3223 before use, then seek full `floor(s/2)` selection rather than another isolated offset |
 | Selected-root residue contact trie | **PROVED CANDIDATE + VERIFIED-EXACT / AUDIT PENDING** | [THM-3227](../01-canon/theorems/THM-3227-selected-root-residue-contact-trie-primitive-carry-and-delayed-resplitting.md) proposes a `q`-ary labelled trie, exact-order-`p` charged edges, and an unramified divided carry under `p`-divisible lower jets | independent immutable audit; then test whether any physical owner map realizes the trie |
+| Hasse--Pluecker contact-gcd flag | **PROVED CANDIDATE + VERIFIED-EXACT / AUDIT PENDING** | [THM-3229](../01-canon/theorems/THM-3229-hasse-pluecker-simple-root-contact-gcd-flag-and-degree-termination.md) proposes, after squarefree gcd and common-simple-root saturation, a nested first-contact flag with `G_D=1` for nonproportional degree-at-most-`D` pairs | independent immutable audit; then test a physical owner map without conflating the flag with root selection or the factorial PRS |
 | Differential owner for planar JC | **PROVED affine-family exclusion / JC OPEN** | THM-3172 freezes polynomial owners; [THM-3212](../01-canon/theorems/THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch.md) closes constant accessories; [THM-3225](../01-canon/theorems/THM-3225-affine-jacobian-clutch-resultant-and-two-boundary-no-escape.md) closes every affine `B`, leaves at least `50` residual multiplicity, and gives generic `52` Morse points | use genuinely nonlinear `B` or deform `C_0,E_0`; retain every Faber flux; apply `B_1` only after a marked inverse pair survives |
 | Tournament closed forms | **PROVED join law + strong-quotient saddle theorem** | [THM-3181](../01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md) gives the minimal triangular recurrence; [THM-3213](../01-canon/theorems/THM-3213-tournament-normalized-cyclic-diagonal-and-fast-moving-jet-transform.md) gives the fast jet and balanced non-P-recursiveness; [THM-3226](../01-canon/theorems/THM-3226-unbalanced-q4-unequal-saddle-and-transcendence-wall.md) gives the unique saddle for every fixed strong quotient on `q>=3` and an explicit unbalanced `Q4` | decide the arithmetic of `R_Q4` and other unbalanced product radii; retain the full jet and measure state width for growing quotients/depths |
 | Common `C2*C3` carrier for quartic lifts and tournament substitution | **PROVED CONGRUENCE SHADOW / FAITHFUL LIFT OPEN** | THM-3141 identifies `PSL_2(F3)`, first relation `(SR)^3`, and the separately forgotten cyclic root | add rooted triple, `Gamma(3)`/Farey coordinate, and a common physical atom |
-| Positive Young selector after signed forest lift | **PROVED FINITE CHAMBER + ONE PRINCIPAL FILTER / BROADER CANDIDATES** | THM-3137 gives the finite chamber; [THM-3219](../01-canon/theorems/THM-3219-complete-reset-upper-filter-principal-upset-exclusion.md) proves one reset collar; audit-pending [THM-3216](../01-canon/theorems/THM-3216-depth-nine-degree-fourteen-unique-reset-face-and-omega-cone-boundary.md) proposes a global depth-at-most-nine singleton face, while [THM-3222](../01-canon/theorems/THM-3222-universal-product-gamma-reset-upper-filter-collar.md) proposes 230 collars | audit both candidates; then classify depth ten and states outside the reset filters |
+| Positive Young selector after signed forest lift | **PROVED FIXED-BANK DEPTH-AT-MOST-NINE SINGLETON + 230 COLLARS / GLOBAL OPEN** | THM-3137 gives the finite chamber; [THM-3216](../01-canon/theorems/THM-3216-depth-nine-degree-fourteen-unique-reset-face-and-omega-cone-boundary.md) proves the support-`(1,3)`, bank-`I2` reset law through depth nine for `D>=14`; [THM-3222](../01-canon/theorems/THM-3222-universal-product-gamma-reset-upper-filter-collar.md) proves 230 collars | classify depth ten, arbitrary supports, states outside the filters, and uniform global stitching |
 
 ## Next decisive work
 
@@ -1202,10 +1235,13 @@ that prevents the physically relevant path from closing trivially.
 3. Use THM-3186's linear-time tail, THM-3192's reciprocal top-jet map, and
    THM-3214's sharp `2k`/`2k+1` budget.  THM-3215/3220/3221 make the selected-
    root transport and variable-depth reconstruction exact; THM-3228 says every
-   full-group permutation action below `p^2` points kills the center.  Retain root permutation, the center,
-   and a lawful physical carrier.  THM-3217 covers three PRS rows; audit the
-   THM-3223 row-four/five continuation and THM-3227 residue trie before using
-   either, then target all-depth chart selection.
+   full-group action below `p^2` points kills the center, while the obvious
+   correct-size prefix action also fails.  Retain root permutation, the center,
+   the nonnormal stabilizer clutch, and a lawful carrier.  THM-3217 covers
+   three PRS rows; audit the THM-3223 row-four/five continuation and the
+   THM-3227/3229 contact structures before using them.  THM-3229 is not the
+   factorial PRS: identify an input-pair bridge before any comparison, then
+   target all-depth chart selection.
 
 ### Wildcard -- planar Jacobian
 
@@ -1239,10 +1275,12 @@ that prevents the physically relevant path from closing trivially.
    all selector moments.
 2. Use THM-3219's audited identity
    `G_5^(Q+tau)((5))=-1440 sum_(r in tau)r^5` to remove every nonreset state
-   in one principal filter.  Search incomparable states; the theorem does not
-   decide them or global feasibility.
-3. Independently audit THM-3216's proposed unique depth-at-most-nine reset face and
-   THM-3222's proposed 230-reset collar before using either as canon.
+   in one principal filter.  Then use THM-3216's audited support-`(1,3)`,
+   bank-`I2` singleton certificate and
+   THM-3222's audited collars to close the full depth-at-most-nine bank and all
+   230 maintained filters on their literal scopes.
+3. Attack depth ten, states outside those filters, and uniform global stitching;
+   do not infer any of them from the proved collars.
 4. Test support portability with the existing two-upset Farkas wall before
    searching a universal law.  Any augmentation must remain a physical
    current and preserve total mass.
@@ -1343,15 +1381,18 @@ python3 -O 04-computation/jc_heptic_affine_B_source_obstruction_thm3225.py
 python3 04-computation/tournament_unbalanced_q4_saddle_thm3226.py
 python3 -O 04-computation/tournament_unbalanced_q4_saddle_thm3226.py
 
-# Candidate artifacts: replay does not replace independent theorem audit.
 python3 04-computation/gmc_depth_nine_unique_reset_face_omega_boundary_thm3216.py
 python3 -O 04-computation/gmc_depth_nine_unique_reset_face_omega_boundary_thm3216.py
 python3 04-computation/gmc_universal_reset_upper_filter_thm3222.py
 python3 -O 04-computation/gmc_universal_reset_upper_filter_thm3222.py
+
+# Candidate artifacts: replay does not replace independent theorem audit.
 python3 04-computation/factorial_fourth_fifth_prs_primitive_walls_thm3223.py
 python3 -O 04-computation/factorial_fourth_fifth_prs_primitive_walls_thm3223.py
 python3 04-computation/selected_root_residue_contact_trie_carry_thm3227.py
 python3 -O 04-computation/selected_root_residue_contact_trie_carry_thm3227.py
+python3 04-computation/hasse_pluecker_contact_gcd_flag_thm3229.py
+python3 -O 04-computation/hasse_pluecker_contact_gcd_flag_thm3229.py
 ```
 
 The exact outputs and hashes are recorded in the theorem files.  Matching a

@@ -180,10 +180,8 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 - THM-3115/27/58/69: partition-Hasse selectors die at degree 13 through depth
   six; THM-3177 resurrects degree 13 at depth seven, while THM-3184 kills
   degree 14 there. THM-3209 gives the unique all-degree reset atom through
-  depth eight; THM-3219 excludes all 63 nonreset states in its 64-state filter
-  through depth 16. THM-3216 proves the reset is the unique feasible law on
-  all 3,129 depth-at-most-nine states at `D>=14`; THM-3222 proves only the
-  230 local collars. Depth ten and global stitching remain open. THM-3189
+  depth eight; THM-3219 excludes 63 nonreset states through depth 16; THM-3216 proves the support-`(1,3)`/bank-`I2` unique law on all 3,129 states through depth nine at
+  `D>=14`; THM-3222 proves 230 collars. Depth ten/stitching stay open. THM-3189
   rules out an affine two-degree factorization. THM-3170/3176 force bad resonances to have
   `d,...,d-6` composite. THM-3182/3183/3185/3188/3191 expose the rank-one
   reset, its two integral lattices, the full carry hierarchy, quadratic-character
