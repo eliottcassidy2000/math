@@ -2,7 +2,7 @@
 id: THM-3238
 title: "Complete physical product-Gamma bank unique-reset stitch"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.  For the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For the
   support-(1,3), bank-I2 product-Gamma selector, one explicit positive
   twenty-two-row combination of lawful coarsening-upset responses vanishes
   at Q=(1,3,3,4,5,6,7,8) and is strictly negative on every other nonempty
@@ -18,8 +18,10 @@ audit: >
   evaluates all 4,319 integer coordinates.  It also replays the 173-state
   THM-3216 tail resurrection, proves the exact degree-five two-endpoint no-go,
   and exhausts all 486 principal upsets (28 point correctly at both endpoint
-  hostiles; none repairs the full bank alone).  Normal and optimized runs pass;
-  independent replay and theorem audit are pending.
+  hostiles; none repairs the full bank alone).  Independent proof/typing and
+  separate-cache audits accept every implication and exact object.  Fresh
+  cache-free normal and optimized replays both reproduce the immutable stored
+  transcript and all declared hashes.
 depends_on:
   - THM-3127-partition-refinement-strassen-upset-dual-and-filter-response
   - THM-3216-depth-nine-degree-fourteen-unique-reset-face-and-omega-cone-boundary
@@ -35,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3238 -- complete physical product-Gamma bank unique-reset stitch
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3216 exposed the reset through depth nine but its eighteen-row functional
 turns positive on 173 deeper states.  THM-3222 supplies universal principal
