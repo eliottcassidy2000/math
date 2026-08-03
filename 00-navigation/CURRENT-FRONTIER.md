@@ -179,9 +179,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   `30`.  The unbounded shared-line, general norm, and scalar multiplier-access
   problems remain open.
 - THM-3115/27/58/69: partition-Hasse selectors die at degree 13 through depth
-  six; 24 new cells cross the old wall, but a new eleven-row wall persists.
-  THM-3160/63/68 separate Pluecker, abstract Markov and fixed-pole transport;
-  depth seven is open. THM-3170/3176 force bad resonances to have
+  six; THM-3177 resurrects degree 13 at depth seven, while THM-3184 kills
+  degree 14 there. THM-3209 gives the unique all-degree reset atom through
+  depth eight and blocks its depth-nine tangent star; unrelated depth-nine
+  states remain open. THM-3189 rules out a linear or affine two-degree
+  response factorization. THM-3170/3176 force bad resonances to have
   `d,...,d-6` composite. THM-3182/3183/3185/3188/3191 expose the rank-one
   reset, its two integral lattices, the full carry hierarchy, quadratic-character
   pre-reset holonomy, and the fixed-parameter exterior Clifford law with exact

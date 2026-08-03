@@ -2,7 +2,7 @@
 id: THM-3209
 title: "Depth-eight complete quotient reset and negative-singleton tangent"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For support (1,3), bank I2, the dominant quotient alphabet is exactly
   sigma0=(1,3,3,4,5,6,7,8).  Removing this complete alphabet makes every
   positive-degree partition response vanish, so delta_sigma0 is an
@@ -18,7 +18,11 @@ audit: >
   degree-five response on all 2,498 states through depth eight, verifies all
   25 one-exchange neighbours, and replays the negative-singleton formula on
   all partitions through degree fourteen.  Normal, optimized, and stored
-  replay agree exactly.  An independent immutable audit is pending.
+  replay agree exactly.  An independent immutable audit rederived the
+  all-degree empty-alphabet reset, uniqueness implication, one-exchange
+  hostile, negative-singleton specialization, and local-star separation;
+  replayed both modes; matched both hashes; and accepted the local-versus-
+  global depth-nine boundary.
 depends_on:
   - THM-3115-low-degree-monomial-fibre-newton-refinement-transport
   - THM-3127-partition-refinement-strassen-upset-dual-and-filter-response
@@ -36,7 +40,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3209 -- depth-eight complete quotient reset and negative-singleton tangent
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3184 proves that the complete support-`(1,3)`, bank-`I2` selector cone is
 empty through physical prefix depth seven once degree fourteen is imposed.
