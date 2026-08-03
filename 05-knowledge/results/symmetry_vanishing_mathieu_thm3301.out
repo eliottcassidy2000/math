@@ -1,0 +1,13 @@
+THM-3301 SYMMETRY VANISHING IS MATHIEU-COMPATIBLE EXACT CONTROL
+setting=Gaussian functional on rho=t^2+xy; torus weight of x^a y^b t^c = a-b
+eigenvector_rows=24
+eigenvector_fact=nonzero weight => L(P^m)=0 for every m>=1
+mathieu_rows=18
+mathieu_fact=for fixed Q the exceptional m are those with a weight of Q equal to -m*weight(P); finitely many, so L(Q P^m)=0 for m >> 0
+nonzero_windows=[(1, 'y^2', (2,)), (1, 'y^4', (4,)), (1, 'x^2+y^6', (6,)), (2, 'y^2', (1,)), (2, 'y^4', (2,)), (2, 'x^2+y^6', (3,)), (3, 'x^2+y^6', (2,))]
+thm3290_weights=[-2, 0, 2, 4, 6, 8]
+thm3290_is_eigenvector=False
+thm3290_violation_m=[1, 2, 3, 4]
+finite_order_survivors=[(2, 4), (3, 4), (4, 4), (5, 4)]
+scope=mechanism classification only; no conjecture is proved or refuted
+ALL EXACT CHECKS PASSED
