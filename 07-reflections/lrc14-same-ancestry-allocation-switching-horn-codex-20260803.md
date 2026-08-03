@@ -1,12 +1,15 @@
 # The allocation square becomes an allocation word along the address horn
 
-**Status:** NON-CANONICAL SYNTHESIS around a newly replayed `FINITE-EXACT`
-scout.  The executable claim is frozen in
+**Status:** NON-CANONICAL SYNTHESIS around the `PROVED + VERIFIED-EXACT +
+INDEPENDENTLY HOSTILE-AUDITED`
+[THM-3285](../01-canon/theorems/THM-3285-same-ancestry-allocation-switching-horn.md).
+The primary executable claim is frozen in
 [`lrc14_allocation_switching_same_ancestry_horn_scout_20260803.py`](../04-computation/lrc14_allocation_switching_same_ancestry_horn_scout_20260803.py)
 and its matching
 [`out`](../05-knowledge/results/lrc14_allocation_switching_same_ancestry_horn_scout_20260803.out).
-No theorem ID, endpoint current, row exclusion, or LRC(14) conclusion is
-asserted here.
+Its independent address-first audit is
+[`lrc14_allocation_switching_same_ancestry_horn_independent_audit_20260803.py`](../04-computation/lrc14_allocation_switching_same_ancestry_horn_independent_audit_20260803.py).
+No endpoint current, row exclusion, or LRC(14) conclusion is asserted here.
 
 ## Trigger and inheritance
 
@@ -188,6 +191,12 @@ the switching coordinate.
 - MISTAKE-300 forbids identifying two selectors by shared vocabulary.  The
   direct constructor forms `A`, `B`, `M`, and `R` from their truth sets; the
   canonical constructor is only a second exact replay.
+- The independent audit reverses the construction order and also tests three
+  stronger interpretations.  Translation of the uncut full `R` carrier to
+  the full `M` carrier fails, diagonal periodicity of the uncut full `R`
+  carrier fails, and the complete fixed-clock factor section is not covariant
+  under the first horn step.  Thus the theorem is exactly address-local and
+  cannot be read as a global allocation or packet action.
 
 ## What this changes on the live board
 

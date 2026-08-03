@@ -2,16 +2,28 @@
 id: THM-3285
 title: "Same-ancestry allocation-switching horn"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On the fixed rail-eight, clock-one THM-2806 common-label bank, exactly
   63 labels give a three-address target carrier whose allocation type is
   right-cofiber/common/right-cofiber.  Every positive vertex is one exact
   whole cylinder with the same mass and carry-six coefficient, and all three
-  translations preserve the literal THM-2791 rail ancestry sheet.  This
-  statement is not promoted into the proved dependency graph until a fresh
-  hostile audit independently reconstructs the carrier typing, label census,
-  and ancestry chamber.
+  translations preserve the literal THM-2791 rail ancestry sheet.  An
+  independent address-first target-chart audit reproduces the complete
+  label census, all translations, and the literal path sets at all three
+  vertices.  The identities fail on the uncut allocation carriers and full
+  factor section, so they give no global action, endpoint current, or LRC(14).
 source: root/creative-synthesis-recover/2026-08-03
+audit: >
+  The primary companion has two exact carrier constructions and fresh
+  normal/optimized/stored agreement.  The independent hostile audit does not
+  import it: it manually rebuilds all 81 fixed-clock sections, pushes the
+  source into the target chart, cuts by each address first, and only then
+  forms M=B intersection A and R=B minus A.  It agrees on all 486 cells,
+  reproduces the 63/9/9 census, verifies 216 whole-cylinder statistics and
+  all 189 horn translations, and separately enumerates identical complete U
+  and V ancestry label sets at all three vertices.  Sigma-one, sigma-two,
+  tau-twelve, uncut-translation and factor-covariance hostiles all behave as
+  stated.  Both audit modes byte-match their stored transcript.
 depends_on:
   - THM-2782-semantic-arm-right-wing-local-unit-and-endpoint-deck-boundary
   - THM-2791-full-arm-orbit-transfer-and-lower-central-chord
@@ -24,21 +36,24 @@ script: 04-computation/lrc14_allocation_switching_same_ancestry_horn_scout_20260
 output: 05-knowledge/results/lrc14_allocation_switching_same_ancestry_horn_scout_20260803.out
 script_sha256: c42d66498f460f2142ea375fe9d4047b82c62b872b35d5a1634d2bb4c80a68ee
 output_sha256: e89dce3307e5d374e8583f92e1b2da1214e44929e52fdd42c6532d61adb3e246
+audit_script: 04-computation/lrc14_allocation_switching_same_ancestry_horn_independent_audit_20260803.py
+audit_output: 05-knowledge/results/lrc14_allocation_switching_same_ancestry_horn_independent_audit_20260803.out
+audit_script_sha256: 8b61ec07d21bd1946b506185e96cc9f5eccb00a6bda3239ce4f2feab886ce8f9
+audit_output_sha256: de9f240d7dbdd697cb2dbf2be412d45e8f03590673a39dd54dc631a19081e07b
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3285 -- same-ancestry allocation-switching horn
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The exact companion has completed its primary normal/optimized/stored audit
-and contains two exact carrier constructions.  The candidate below remains
-outside the proved dependency graph until a fresh implementation has checked
-the one-sided carrier types, the complete label universe, and the literal
-ancestry claim.
+and contains two exact carrier constructions.  A fresh address-first
+target-chart implementation independently checks the one-sided carrier types,
+the complete label universe, every translation and the literal ancestry
+claim.
 
-## 1. Candidate universe and common-carrier typing
+## 1. Universe and common-carrier typing
 
 Use the THM-2782/2806 fixed rail-eight geometry.  Fix
 
@@ -86,7 +101,7 @@ n_a=n_0+689364=4143978,                                (4)
 whose central indices are `(0,1,53028)`.  Denote the resulting target-chart
 cylinder restrictions by `M_n`, `R_n`, and `B_n`.
 
-## 2. Candidate statement: the exact 63-label horn
+## 2. The exact 63-label horn
 
 Put
 
@@ -159,6 +174,24 @@ source carrier `A` meets it only at the middle cylinder.  Its disjoint
 decomposition consequently switches right cofiber, common overlap, right
 cofiber.  Scalarizing `B` forgets precisely this switching coordinate.
 
+### 3.1 The address restriction is sharp
+
+The independent hostile audit tests the corresponding uncut objects at the
+canonical horn label `(clock,sigma,tau)=(1,0,3)`.  If `M^full,R^full` denote
+the full target-chart allocation pieces before the address cut and `S_03`
+the complete fixed-clock present section, exact interval comparison gives
+
+```text
+T_(epsilon_1) R^full != M^full,
+T_(epsilon_d) R^full != R^full,
+T_(epsilon_1) S_03    != S_03.                         (11a)
+```
+
+Thus `(11)` neither extends to a global allocation action nor makes the full
+factor packet covariant.  The whole-cylinder statement is sharp at the three
+specified address restrictions.  In particular, it cannot be composed with
+an endpoint origin or current that has not separately been constructed.
+
 ## 4. Literal same-ancestry audit
 
 THM-2791 types the rail-eight weight before Perron marginalization as the
@@ -169,7 +202,7 @@ U(a,b) x V(e'),
 (a,b) in Z/(13^5) x Z/169,       e' in Z/(13^5).       (12)
 ```
 
-The candidate companion rebuilds every raw `Q`, `E`, and rotated-`E`
+The primary companion rebuilds every raw `Q`, `E`, and rotated-`E`
 contributor wall.  All three cylinders in `(4)` lie strictly inside the one
 common chamber
 
@@ -215,10 +248,10 @@ No relabeling or orbit normalization was used to hide `sigma=1,2`.
 
 There is also an external hostile already in canon.  The `tau=12` label is
 not in `T`; THM-2806 proves that its selected THM-2807 simplex is target-only
-before address restriction.  The present candidate does not revive a common
+before address restriction.  The present theorem does not revive a common
 atom there and does not contradict that no-go.
 
-## 6. Exact proof candidate and reproducibility
+## 6. Exact verification and reproducibility
 
 The companion uses two calculation paths.
 
@@ -265,8 +298,17 @@ e89dce3307e5d374e8583f92e1b2da1214e44929e52fdd42c6532d61adb3e246.
 ```
 
 The source has zero Python `assert` nodes and zero floating-point literals.
-These checks make the primary candidate reproducible; they do not replace the
-pending fresh hostile theorem audit.
+
+The independent hostile companion reverses the construction order.  It
+manually spells out the clock and four graft factors for each of the `81`
+labels, pushes the full source carrier into the target chart, restricts the
+target carrier to an address cylinder, and only then forms `M` and `R`.  It
+reproduces all `486` allocated cells, the `63/9/9` label census and digest,
+all `216` positive whole-cylinder statistics, and all `189` horn
+translations.  It also enumerates the complete `U` and `V` contributor sets
+separately at all three vertices and finds literal equality, not only equal
+counts or digests.  Fresh normal and optimized runs byte-match its stored
+transcript and declared hashes.
 
 ## 7. Connection contract and sharp scope
 
@@ -298,10 +340,12 @@ cheapest next test:
   compute all four literal allocation states at all three vertices.        (19)
 ```
 
-This candidate supplies a genuine common-carrier middle vertex between the
+This theorem supplies a genuine common-carrier middle vertex between the
 two THM-2791 `tau=3` endpoint cylinders on one literal ancestry sheet.  It
 does **not** supply endpoint allocation, a determinant/root-Cech current,
 Fourier noncancellation, row exclusion, or `LRC(14)`.
 
 The procedural synthesis and correction-lineage discussion are recorded in
 [`lrc14-same-ancestry-allocation-switching-horn-codex-20260803.md`](../../07-reflections/lrc14-same-ancestry-allocation-switching-horn-codex-20260803.md).
+
+QED.

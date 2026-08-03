@@ -1,0 +1,28 @@
+THM-3285 SAME-ANCESTRY ALLOCATION HORN INDEPENDENT HOSTILE AUDIT
+status=FINITE-EXACT independent audit;candidate_not_promoted_here
+dependency_hashes=BEGIN
+c42d66498f460f2142ea375fe9d4047b82c62b872b35d5a1634d2bb4c80a68ee  04-computation/lrc14_allocation_switching_same_ancestry_horn_scout_20260803.py
+e89dce3307e5d374e8583f92e1b2da1214e44929e52fdd42c6532d61adb3e246  05-knowledge/results/lrc14_allocation_switching_same_ancestry_horn_scout_20260803.out
+f696867c5242e86593de64f3ee7944bf44a3887e7818291ed059c7358f959c1a  04-computation/lrc14_opposite_wing_common_atom_virtual_sector_audit_thm2782.py
+1e00b6711db0d878fca70047f5f1532518084dbf6928551cd28fe51283fde543  04-computation/lrc14_full_arm_orbit_path_sheet_audit_thm2791.py
+2325aa126dc4a97af4ba4bde0348389bfdfe5720dec6f88792b9a06baa40afd3  05-knowledge/results/lrc14_full_arm_orbit_path_sheet_audit_thm2791.out
+7fea18161046f8de35b2e6ef04c88a13485de61045bc363f89c5ebfec8f76480  04-computation/lrc14_tau12_simplex_allocation_support_no_go_addendum_thm2806.py
+cba545e7beff4fe889c76ae681c47c806969ccd33aa79def54527709a6ffafc6  05-knowledge/results/lrc14_tau12_simplex_allocation_support_no_go_addendum_thm2806.out
+dependency_hashes=END
+universe=clock1_x_sigma(0, 1, 2, 3, 8, 9, 10, 11, 12)_x_tau(3, 4, 5, 6, 7, 8, 9, 10, 11)=81;manual_clocked_sections=81/81
+independent_route=push_source_to_target_chart_then_address_cut_then_M=B_intersect_A_and_R=B_minus_A;cut_decomposition_checks=486/486
+pattern_histogram=M010_R101:63,M000_R001:9,M000_R101:9;pattern_digest=9fd5090fb89493d07115ee753a0eadeba82d70d0e52663aa11d60c121f4f9d4f
+horn_factorization=clock1_x_sigma(0, 3, 8, 9, 10, 11, 12)_x_tau(3, 4, 5, 6, 7, 8, 9, 10, 11)=63:PASS
+sigma1_hostile=M000_R001_on_all_9_tau:PASS
+sigma2_hostile=M000_R101_on_all_9_tau:PASS
+positive_cells=216;whole_cylinder=(weight:27581135604,mass:60781651775958960/371293,coefficient:790161473087466480);coefficient=13^6*mass:PASS
+translation_fractions=(Fraction(7, 371293), Fraction(28553, 28561), Fraction(371196, 371293));horn_translation_checks=189/189;sigma2_endpoint_controls=9/9
+global_hostiles=full_R_to_M_step_fails;full_R_diagonal_periodicity_fails;full_factor_section_step_covariance_fails
+ancestry_probes=(142082432180573, 142088047310093, 142004622528653);three_literal_enumerations=((966606, 28534, '15c804c7cea9f61feab3b641eccdc035d937142b446d1cc14e059210eb1534fd'), (966606, 28534, '15c804c7cea9f61feab3b641eccdc035d937142b446d1cc14e059210eb1534fd'), (966606, 28534, '15c804c7cea9f61feab3b641eccdc035d937142b446d1cc14e059210eb1534fd'))
+ancestry_wall_counts=(U:34,V:14);common_no_wall_chamber=(140890500190440, 144190879112280);literal_UV_identity_at_all_three=PASS
+supplied_path=(59162, 26, 56658):active;collision_labels=((5, 6, 12), (5, 6, 12), (5, 6, 12))
+tau12_external_hostile=common_carrier_empty_before_address:PASS
+scope_audit=no_endpoint_origin_enumerated;no_current_observable_evaluated;no_K4_allocation;no_factorwise_or_global_action;no_LRC14
+mistake_controls=281_same_atom_only;300_truth_sets_not_vocabulary;310_physical_support_literal;313_clock_factor_explicit
+source_ast=(assert_nodes=0,float_literals=0)
+verdict=ACCEPT_THM3285_FINITE_RESPONSE_CARRIER_CLAIMS_WITH_STATED_SCOPE
