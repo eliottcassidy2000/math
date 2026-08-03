@@ -15,7 +15,10 @@ status: >
   row covers all states.  The ordinary two-chart nerve is contractible, but
   3,453 of the 3,911 overlap states have no common ascent direction.  Minimal
   chart-switch depth has histogram 716/3,600/2 at depths 0/1/2, so two
-  switches are sharply necessary.
+  switches are sharply necessary.  Moreover no fixed positive blend of rows
+  2 and 10 removes the switching: two explicit states have complementary
+  rational trap intervals covering every positive blend ratio, and two
+  states are minimal.
   The reset-monotone escape radius is at most 10, with a unique sharp
   radius-10 trap; at radius 10 the reset is the unique directed sink.  More
   strongly, two explicit hubs route every state to the reset in at most two
@@ -34,8 +37,9 @@ audit: >
   row covers, the distinguished row-(2,10) atlas, the 31-pair census, and the
   no-single-row boundary.  A direction-bit certificate additionally checks
   the overlap graph, common-direction histogram, and exact switch-depth
-  dynamic program.  Normal and optimized runs reproduce the stored output.
-  Independent hostile theorem audit is pending.
+  dynamic program.  Exact edge differences verify the sharp two-state
+  constant-blend obstruction.  Normal and optimized runs reproduce the
+  stored output.  Independent hostile theorem audit is pending.
 depends_on:
   - THM-3238-complete-physical-product-gamma-bank-unique-reset-stitch
 related:
@@ -43,8 +47,8 @@ related:
   - THM-3216-depth-nine-degree-fourteen-unique-reset-face-and-omega-cone-boundary
 script: 04-computation/gmc_unique_reset_rips_nonmorse_thm3244.py
 output: 05-knowledge/results/gmc_unique_reset_rips_nonmorse_thm3244.out
-script_sha256: b05b35ce006f8adc52822ac325b2769f1ac979ed03b833e4f379c3730ef2e636
-output_sha256: e79fbeb23a53940dd11435d70a36b708b2b8feee4d61bfa6d27e6a026748db5f
+script_sha256: 3ff0babc41e35e6a185b0ff442cfb9284d9688360c0b96cd947c1128e16400ba
+output_sha256: 27dcd7c68e628465a1f09a564be0be366ded6075ef009a3d85d029f8f18605c9
 hash_basis: LF-normalized bytes
 ---
 
@@ -352,6 +356,61 @@ atlas.  It is not a Čech class or monodromy representation: defining either
 would require canonical transition maps on the overlap, while `(22)` shows
 that even a common ascent direction is usually absent.
 
+### A sharp constant-gauge clutch obstruction
+
+The switching cannot be removed merely by replacing the two charts with one
+fixed positive blend.  Put
+
+```text
+H_lambda=lambda f_2+f_10,  lambda>0.                    (25)
+```
+
+A state is trapped for `(25)` when every `Q`-directed one-pole edge `e`
+satisfies `Delta_e H_lambda<=0`; equality belongs to the trap because ascent
+is strict.  At
+
+```text
+A=(2,2,2,3,3,4,5,5,6,7,8),                            (26)
+```
+
+the only edge with positive `Delta f_2` is delete-2, with
+
+```text
+(Delta f_2,Delta f_10)
+ =(647427527551915200,-82016379613632).
+```
+
+The other two directed edges have both differences negative.  Hence `A` is
+trapped throughout
+
+```text
+0<lambda<=U=427168643821/3372018372666225.              (27)
+```
+
+At
+
+```text
+B=(1,3,3,4,5),                                         (28)
+```
+
+the insert-6, insert-7, and insert-8 edges all have negative `Delta f_2` and
+positive `Delta f_10`.  Insert-6 gives the largest zero, so `B` is trapped
+throughout
+
+```text
+lambda>=L=44548722230872990/295146673301558860624447.   (29)
+```
+
+Direct rational comparison gives `L<U`.  Thus `(27)` and `(29)` cover every
+positive `lambda`, proving that no constant positive combination of rows 2
+and 10 supplies a reset-monotone one-pole ascent everywhere.
+
+Two trap states are sharp.  No single state can remain trapped in both pure
+limits: `(19)` says every state has an `f_2`-raising or `f_10`-raising edge,
+which breaks the trap for sufficiently large or sufficiently small positive
+`lambda`, respectively.  This is a clutch obstruction inside the two-row
+cone only; it does not rule out every scalar combination of all 22 rows.
+
 ## 6. Exact proof and hostile boundary
 
 The companion performs only integer and finite combinatorial operations.  It
@@ -367,7 +426,8 @@ decompresses and verifies the exact rank permutation `(8)`, and then exhausts:
 7. all 22 lawful row covers, all 231 unordered row pairs, and the distinguished
    split `(19)`; and
 8. the induced graphs `(21)`, direction histogram `(22)`, and switch dynamic
-   program `(23)--(24)`.
+   program `(23)--(24)`; and
+9. the exact edge differences and complementary intervals `(25)--(29)`.
 
 The independently extracted rank certificate is deliberately separate from
 the expensive product-Gamma reconstruction in THM-3238.  An independent
@@ -397,6 +457,7 @@ on `(24)`.  THM-3160's
 flat order-independent pole holotopy, the `H`-oriented coarse routing, and the
 row-selector atlas are therefore three different structures.  A genuine
 identification still requires a lawful transition or positive common gauge;
-none is supplied here.
+none is supplied here, and `(25)--(29)` rule out the cheapest constant gauge
+inside the distinguished two-row cone.
 
 QED.

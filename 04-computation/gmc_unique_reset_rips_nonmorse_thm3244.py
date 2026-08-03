@@ -7,6 +7,7 @@ import hashlib
 import struct
 import zlib
 from collections import Counter
+from fractions import Fraction
 from itertools import product
 from pathlib import Path
 
@@ -245,6 +246,21 @@ ROW_TWO_TEN_DIRECTION_RAW_SHA256 = (
     "2253c0f3b59b57966f9b2357f46c7d396fb8803b9f63bf285cbc9f105ef5388c"
 )
 
+# Exact (Delta row 2, Delta row 10) values on the Q-directed edges of two
+# sharp states.  Together they cover every positive constant blend ratio.
+BLEND_TRAP_A = (2, 2, 2, 3, 3, 4, 5, 5, 6, 7, 8)
+BLEND_TRAP_B = (1, 3, 3, 4, 5)
+BLEND_TRAP_A_DELTAS = (
+    (-685954250014060056, -13986661762200),       # insert 1
+    (647427527551915200, -82016379613632),         # delete 2
+    (-26061685060581752400, -36145322647680),      # delete 5
+)
+BLEND_TRAP_B_DELTAS = (
+    (-42501120955424475929920368, 6415016001245710560),  # insert 6
+    (-61290274303868901672848544, 7303226904731459520),  # insert 7
+    (-30235956848857099232025408, 3561194191531466880),  # insert 8
+)
+
 VALUES = tuple(range(1, 9))
 CAPACITIES = (4, 3, 2, 2, 2, 1, 1, 1)
 RESET = (1, 3, 3, 4, 5, 6, 7, 8)
@@ -337,6 +353,36 @@ common_direction_histogram = tuple(sorted(Counter(
 require(common_direction_histogram
         == ((0, 3453), (1, 294), (2, 113), (3, 45), (4, 6)),
         "overlap common-direction histogram")
+
+
+def positive_blend_trap_interval(deltas):
+    lower = Fraction(0)
+    upper = None
+    for delta_two, delta_ten in deltas:
+        if delta_two > 0:
+            bound = Fraction(-delta_ten, delta_two)
+            upper = bound if upper is None else min(upper, bound)
+        elif delta_two < 0:
+            lower = max(lower, Fraction(-delta_ten, delta_two))
+        else:
+            require(delta_ten <= 0, "empty constant-blend trap interval")
+    require(upper is None or lower <= upper, "inconsistent blend interval")
+    return lower, upper
+
+
+blend_interval_a = positive_blend_trap_interval(BLEND_TRAP_A_DELTAS)
+blend_interval_b = positive_blend_trap_interval(BLEND_TRAP_B_DELTAS)
+require(blend_interval_a == (
+    Fraction(0), Fraction(427168643821, 3372018372666225),
+), "small-ratio blend trap")
+require(blend_interval_b == (
+    Fraction(44548722230872990, 295146673301558860624447), None,
+), "large-ratio blend trap")
+require(blend_interval_b[0] < blend_interval_a[1],
+        "two-state blend intervals lost overlap")
+require(state_index[BLEND_TRAP_A] in row_two - row_ten
+        and state_index[BLEND_TRAP_B] in row_ten - row_two,
+        "blend traps lost exclusive-chart typing")
 
 rank_raw = zlib.decompress(base64.b64decode("".join(RANK_CERTIFICATE)))
 require(hashlib.sha256(rank_raw).hexdigest() == RANK_RAW_SHA256, "rank digest")
@@ -721,6 +767,13 @@ print("row2_only_graph=(vertices=304,components=29,edges=603,cycle_rank=328)")
 print("row10_only_graph=(vertices=103,components=6,edges=179,cycle_rank=82)")
 print("overlap_graph=(vertices=3911,components=1,edges=18554,cycle_rank=14644)")
 print("direction_certificate_sha256=%s" % ROW_TWO_TEN_DIRECTION_RAW_SHA256)
+print("constant_blend_trap_A=(0,%s],state=%s" % (
+    str(blend_interval_a[1]), repr(BLEND_TRAP_A),
+))
+print("constant_blend_trap_B=[%s,infinity),state=%s" % (
+    str(blend_interval_b[0]), repr(BLEND_TRAP_B),
+))
+print("no_constant_positive_row2_row10_blend=PASS,two_states_sharp=PASS")
 print("reset_monotone_escape_histogram=%s" % repr(escape_histogram))
 print("reset_monotone_sink_spectrum_radius1_to10=%s" % repr(sink_spectrum))
 print("sharp_radius10_trap=%s" % repr(sharp_traps[0]))
