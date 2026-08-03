@@ -1,0 +1,14 @@
+LRC14 THM3270 projected-k3 z216 complete order-row screen descent
+engine=THM3139_source:92e1c22088998d37db89020ac1ebbb7d1ee17e3539152ab205f8b0cd92532e36;output:4f0ae623d0134406f83f466c0a9f1353525a992acb8ee82c2e92f2f0537f32c5;semantic:1eb7e8faefafe41fd6f6cbc108ba09295dbcbb7fe8016d7ec0cbdc258adf358a
+dependency=THM3264_source:d9841a86850c6609e62d0522b50ea38722cd5850f7173374a3b143ef577e0e3e;output:2eebe5f7acb2d1c02fa126ee03166cd274ed209cc52d4b8a729a8fbc5f0a9782;semantic:64604458a454f7da3468b07ec5697a6dd62ac4413625a92dbd8e8ffff15e1a7e
+atlas=sha256:cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda;rows:6060
+layer=z1:216;rows:480;wall:447;order:33;row_sha256:53db9e1d3df2cf2b0398847682d909da81705e43a53ae2553d102fd152337649;strata:((8, 19), (18, 1), (24, 135), (36, 15), (72, 310))
+selection=order_rows:(0, 1, 2, 4, 12, 13, 16, 20, 22, 29, 48, 51, 70, 73, 74, 85, 86, 99, 100, 114, 128, 130, 172, 241, 244, 253, 255, 267, 287, 289, 291, 317, 397);families:((24, 1176, 1, 25872), (24, 1680, 23, 836640), (72, 504, 1, 9072), (72, 1008, 8, 157248));by_gcd:((24, 24, 862512), (72, 9, 166320));cost:1028832;packet_sha256:ce13ef797ac9962b3a5cee0fa41450ccb6a2545e5df03463c375b620080c6060
+disjointness=THM3264_wall_indices:(8, 23, 39, 57, 64, 66, 115, 142, 150, 152, 197, 272, 277, 300, 304, 306, 338);intersection:0;prior_wall:17;selected_order:33
+screen=rows:33;states:481;crude:463;status:18;residual:0;direct_farkas:0;legacy_farkas:18;screen_sha256:f35dcbe7658ea48df9cfe08c18602ec17242afaeacfcdc88f21d310bfd328ced
+residual=bodies:0;masks:0;residual_sha256:2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
+direction=the_complete_THM3139_screen_is_an_upper_relaxation_and_excludes_every_order_row_without_terminal_analysis
+consequence=ledger:373266-33=373233;projected_k3_cap:z1<=216;remaining_z216:429=429wall+0order
+scope=complete_z216_order_sublayer_only;no_terminal_probe_divisor_action_parity_tower_common_carrier_physical_cover_or_LRC14_claim
+semantic_sha256=a8eb670dbb06bedc9c9180dc23041a77cb5c5f717f1d2ba2b1de52f8322bc602
+all_exact_controls=PASS

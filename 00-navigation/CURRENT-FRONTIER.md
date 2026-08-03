@@ -34,7 +34,7 @@ remain open. Septimal floor/exception plus located phase cut the raw five-drift 
 not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
 `1680..1742` `k=2` atlas; THM-2980/2995 then close every row at
 `1580..1679`, giving cap `1579`.  For `k=3`, torsion/status closes through `297`;
-Projected `k=3` is closed through `z1=219` (THM-2981--3230 chain). THM-3251/3242 set cap `216`. THM-3261+3264 lower the ledger to `373266`; `z216=429` wall plus `33` order. Open: two costly gcd-8 rows and gcd `24/36/72`; pointed divisors remain metadata.
+Projected `k=3` is closed through `z1=219` (THM-2981--3230 chain). THM-3251/3242 set cap `216`. THM-3261+3264+3270 lower the ledger to `373233`; `z216=429` wall plus `0` order. Open: two costly gcd-8 wall rows and gcd `24/36/72` wall strata; pointed divisors remain metadata.
 Cap two forces the phase-zero triangle `(3/2)(4/3)=2`; by cap `7/3` no
 full-cap component remains. The zero-gain atlas is
 `4/3,3/2,2,5/2,3,4,5,6`; CSP closes `3m>=4D`. THM-3135 repairs `H2`;
