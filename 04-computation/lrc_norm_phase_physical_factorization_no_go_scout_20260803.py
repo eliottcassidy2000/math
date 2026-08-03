@@ -466,7 +466,8 @@ print(
     "alpha^1=(1,2)->(2,2)=alpha^40:phase_1_to_4_parity_break"
 )
 print(
-    "all_nonzero_translations=28056;phase_preserving=2184;"
+    "nonzero_translations=168;nonzero_to_nonzero_transitions=28056;"
+    "phase_preserving=2184;"
     "each_nonzero_phase_difference=2352"
 )
 print(

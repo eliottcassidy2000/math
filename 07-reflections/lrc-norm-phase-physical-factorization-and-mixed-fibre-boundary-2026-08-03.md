@@ -1,8 +1,9 @@
 # LRC norm phase: physical factorization and mixed-fibre boundary
 
-**Status: FINITE-EXACT SCOUT + SELECTED TYPE AUDIT.**  This note records an
-exact factorization/no-go boundary.  It is not a theorem promotion, a
-physical owner current, a row exclusion, or progress closing `LRC(14)`.
+**Status: FINITE-EXACT SCOUT + SELECTED TYPE AUDIT, promoted after independent
+hostile reconstruction as THM-3267.**  This note records an exact
+factorization/no-go boundary. It is not a physical owner current, a row
+exclusion, or progress closing `LRC(14)`.
 
 ## Inheritance pass and bounded question
 

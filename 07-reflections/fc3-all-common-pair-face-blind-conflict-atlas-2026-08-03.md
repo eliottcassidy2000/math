@@ -158,10 +158,10 @@ can recover the face, nor does it optimize threshold trees, DAGs, formulas,
 queries, switches, or routes.  Pair identity is supplied and not charged as
 sidecar information.
 
-The statement also cannot be enlarged to a selector allowed to use arbitrary
-rows among all 22: row 12 is lawful on both faces at `(5)`, so this witness
-does not obstruct the unrestricted atlas.  Nor does it compare other
-support/bank faces or imply Gaussian-moment positivity.
+The singleton `(5)` does not itself obstruct a selector allowed to use
+arbitrary rows among all 22; the present result makes no claim about that
+larger selector problem. Nor does it compare other support/bank faces or imply
+Gaussian-moment positivity.
 
 ## 6. Reproduction and integrity
 

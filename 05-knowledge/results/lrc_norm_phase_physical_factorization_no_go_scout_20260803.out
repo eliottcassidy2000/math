@@ -11,7 +11,7 @@ negative_seam=one_per_C12_phase+12_distinct_projective_directions_in_every_8064_
 canonical_seam_phase_to_line=0:0,1:1,2:2,3:3,4:4,5:5,6:8,7:9,8:10,9:11,10:12,11:13;missing_lines=6,7
 translation_(1,0)_nonzero_transitions=167;phase_preserving=13;each_nonzero_phase_difference=14
 translation_hostiles=alpha^0=(1,0)->(2,0)=alpha^70:phase_0_to_10;alpha^1=(1,2)->(2,2)=alpha^40:phase_1_to_4_parity_break
-all_nonzero_translations=28056;phase_preserving=2184;each_nonzero_phase_difference=2352
+nonzero_translations=168;nonzero_to_nonzero_transitions=28056;phase_preserving=2184;each_nonzero_phase_difference=2352
 nearest_physical_source=THM2791_same_ancestry_partial_rail_sheet_germ;nearest_current=THM3247_J_q(R)=P_(R+q)Q_R
 first_missing_field=allocated_full_increment_q_and_endpoint_origin_R_on_the_same_literal_ancestry_sheet
 additional_phase_sidecar=chosen_F169_Singer_structure_or_equivalent_absolute_norm_gauge;projective_direction_is_insufficient
