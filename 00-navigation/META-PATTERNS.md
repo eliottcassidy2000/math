@@ -136,7 +136,7 @@ predicate, kernel, lost coordinate and sidecar; quotient occurrences only
 after checking freeness. If a finite label controls a later choice, retain it
 as a marker and, after abelianization, as a catalytic variable. **Mechanism /
 caution:** kernels are gauge only when every consumer kills them; signed complements need not be positive observables. **Evidence:** THM-840/2355,
-2548/3048, 3119/3121, 3255/3262, THM-2000/2005, and MISTAKE-310.
+3119/3121, 3255/3262, THM-2000/2005, and MISTAKE-310.
 
 ## Test whether a central extension changes the base signature
 
