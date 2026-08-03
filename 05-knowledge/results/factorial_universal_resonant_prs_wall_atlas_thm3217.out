@@ -1,0 +1,10 @@
+THM-3217 exact universal resonant-degree PRS wall atlas
+dependency_pins=2
+input_top_jets=8 derived_coordinates=8 exact_symbolic=PASS
+direct_moment_controls=16 coordinate_checks=128 PASS
+universal_walls=H,J,K,U,V offset_six_specialization=PASS
+no_integer_root_certificates=6 offsets_2_through_64=PASS
+fixed_offset_exception_integer=nonzero_for_every_integer_s_ge_2
+normalization_exponents=1,1,3,7,17 chi1=4 chi2=10
+isolated_offset_six_wall_primes=109,232961,2767,1067703961,52511
+scope=first_three_reciprocal_remainders_not_arbitrary_depth
