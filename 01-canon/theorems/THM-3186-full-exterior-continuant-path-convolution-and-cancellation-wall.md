@@ -2,7 +2,7 @@
 id: THM-3186
 title: "Full exterior continuant path convolution and cancellation wall"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Every arbitrary-length hidden-to-visible coefficient of the scalar
   factorial exterior transfer is an exact exit-time convolution of a Jacobi
   continuant with the invariant-line tail.  The formula includes the
@@ -16,7 +16,9 @@ audit: >
   an independent monomer-dimer expansion of every continuant, and checks the
   length-one and length-two boundaries.  It then verifies an exact factorial
   two-path cancellation whose transfers and path weights are all 11-adic
-  units.  Normal/-O/stored replay and independent immutable audit are pending.
+  units, and directly compares all three scalar and exterior Boolean support
+  patterns with the same-Smith positive control.  Normal/-O/stored replay and
+  two independent immutable hostile audits pass.
 source: root/multiscale-newton-flag/2026-08-02
 depends_on:
   - THM-3183-factorial-hecke-lattice-square-and-oriented-wedge-continuant
@@ -25,14 +27,14 @@ related:
   - THM-3185-iterated-factorial-frobenius-descent-and-witt-carry-reset-hierarchy
 script: 04-computation/factorial_exterior_path_convolution_thm3186.py
 output: 05-knowledge/results/factorial_exterior_path_convolution_thm3186.out
-script_sha256: 5ee9c3924113be5e6c9769d2c2bf67dbffae3d63d4917101f86278b1c3e8813c
-output_sha256: 8966f0979ed97b4acfc0105e9781f7cdacbe654c9f8ae6729c50166aa9559754
+script_sha256: 87b994ee4ce659eaecfdad9e76e34fa98df510ad54d097e02b44626775007dde
+output_sha256: 652b4921a73f42d47cef0df9555864df4eb2a27494c7178458f4bb1395938655
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3186 -- full exterior continuant path convolution and cancellation wall
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3183 found the first two-step route from the hidden scalar wedge to the
 visible moment wedge.  The whole finite tail admits a closed formula.  It is
@@ -167,6 +169,22 @@ a monomer-dimer walk counted by `C_(j-1)`.  It exits at the unique time `j`
 through `e_1 -> e_0` of weight `-c_(n+j)`, then remains on the invariant line
 through the weights `u_(n+j+1),...,u_(n+L-1)`.  Summing over the mutually
 exclusive exit times gives `(14)`.
+
+The cancellation wall is only a selected-chart wall on the local-unit
+locus.  Indeed, put `q_j=(t_j,d t_(j-1))^t`.  Then
+
+```text
+q_(j+1)=[alpha_(n+j) beta_(n+j); d 0]q_j,
+det=-d beta_(n+j).                                         (19a)
+```
+
+If `d beta_n prod_(j=1)^(L-1) beta_(n+j)` is nonzero, these `2x2`
+transverse steps are invertible over the fraction field and
+`q_1=(beta_n,0)^t` is nonzero.  Hence `q_L` cannot vanish.  In particular,
+`V_L=0` never means death of the full exterior state on this locus: at least
+one of the complementary `e_1,e_2` charts remains visible.  This is the
+precise scalar-frame form of a Pluecker-chart transition, not yet an
+identification with a coefficient-row PRS chart.
 
 ## 4. The complete cancellation wall
 

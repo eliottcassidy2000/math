@@ -6,7 +6,9 @@ length3_exit_polynomial=c_(n+1)u_(n+2)+c_(n+2)alpha_(n+1)
 factorial_hostile=(n=1,d=5,v=4/105,Delta=5/21)
 hostile_path_contributions=(2000/147,-2000/147)
 hostile_visibility=(V2=-100/21,V3=0)
+hostile_V3_zero_but_transverse_chart_nonzero=PASS
 hostile_local_11adic_profiles=all_unimodular
 same_smith_positive_control=(n=1,d=5,v=1,V3=115140_unit)
+hostile_positive_scalar_exterior_support_patterns=identical
 scope=bare_scalar_exterior_tail_not_PRS_or_GMC_closure
 ALL EXACT CHECKS PASSED

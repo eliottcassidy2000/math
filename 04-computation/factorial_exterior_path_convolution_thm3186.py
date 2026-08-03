@@ -99,6 +99,9 @@ require(sp.expand((matrices[1] * matrices[0] * source)[0]
 require(sp.expand((matrices[2] * matrices[1] * matrices[0] * source)[0]
                   + beta[0] * (c[1] * u[2] + c[2] * alpha[1])) == 0,
         "length-three two-path formula")
+transverse_step = sp.Matrix([[alpha[1], beta[1]], [scalar_d, 0]])
+require(sp.factor(sp.det(transverse_step) + scalar_d * beta[1]) == 0,
+        "transverse-step determinant")
 
 
 # Factorial specialization.
@@ -176,6 +179,15 @@ require((path_one, path_two)
         "hostile cancelling path values")
 require(hostile_v2 == sp.Rational(-100, 21) and hostile_v3 == 0,
         "hostile visibility profile")
+hostile_full_v3 = (
+    compound(scalar_transfer(3))
+    * compound(scalar_transfer(2))
+    * compound(scalar_transfer(1))
+    * source
+).subs(HOSTILE)
+require(hostile_full_v3[0] == 0
+        and (hostile_full_v3[1] != 0 or hostile_full_v3[2] != 0),
+        "hostile selected-chart rather than exterior-death boundary")
 
 
 def valuation_rational(value, prime):
@@ -247,11 +259,28 @@ positive_v3 = sp.factor(factorial_v3.subs(POSITIVE))
 require(positive_v3 == 115140
         and valuation_rational(positive_v3, 11) == 0,
         "same-Smith positive visible control")
-hostile_support = tuple(entry != 0 for entry in local_weights[:5])
-positive_data = factorial_data(1) + factorial_data(2) + factorial_data(3)
-require(all(entry.subs(POSITIVE) != 0 for entry in positive_data),
-        "positive control support graph")
-require(all(hostile_support), "hostile support graph")
+
+
+def support_pattern(matrix):
+    return tuple(entry != 0 for entry in matrix)
+
+
+hostile_scalar_support = tuple(
+    support_pattern(matrix) for matrix in hostile_scalar_matrices
+)
+positive_scalar_support = tuple(
+    support_pattern(matrix) for matrix in positive_scalar_matrices
+)
+hostile_exterior_support = tuple(
+    support_pattern(matrix) for matrix in hostile_exterior_matrices
+)
+positive_exterior_support = tuple(
+    support_pattern(matrix) for matrix in positive_exterior_matrices
+)
+require(hostile_scalar_support == positive_scalar_support,
+        "scalar support-pattern mismatch")
+require(hostile_exterior_support == positive_exterior_support,
+        "exterior support-pattern mismatch")
 
 
 print("THM-3186 FULL EXTERIOR CONTINUANT PATH CONVOLUTION EXACT CONTROL")
@@ -262,7 +291,9 @@ print("length3_exit_polynomial=c_(n+1)u_(n+2)+c_(n+2)alpha_(n+1)")
 print("factorial_hostile=(n=1,d=5,v=4/105,Delta=5/21)")
 print("hostile_path_contributions=(2000/147,-2000/147)")
 print("hostile_visibility=(V2=-100/21,V3=0)")
+print("hostile_V3_zero_but_transverse_chart_nonzero=PASS")
 print("hostile_local_11adic_profiles=all_unimodular")
 print("same_smith_positive_control=(n=1,d=5,v=1,V3=115140_unit)")
+print("hostile_positive_scalar_exterior_support_patterns=identical")
 print("scope=bare_scalar_exterior_tail_not_PRS_or_GMC_closure")
 print("ALL EXACT CHECKS PASSED")
