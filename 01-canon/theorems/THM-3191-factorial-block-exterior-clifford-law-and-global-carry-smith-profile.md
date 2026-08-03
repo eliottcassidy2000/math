@@ -6,8 +6,9 @@ status: >
   The normalized exterior transfer of one fixed factorial prime block is an
   extension-independent rank-two operator D satisfying D^3=s^2 Delta D.
   Through K blocks, the exact carry thickness and p-free factorial unit
-  multiply D^K, giving global state Smith type (1,p^H,p^H), exterior type
-  (p^H,p^H,p^(2H)), and an explicit squared-scale return.
+  multiply D^K, giving the global-across-blocks p-primary state Smith type
+  (1,p^H,p^H), exterior type (p^H,p^H,p^(2H)), and an explicit squared-scale
+  return over Z_p.  No Smith claim at primes different from p is made.
 audit: >
   The pure-integer companion checks 300 one-block parameter systems, 38,336
   nonzero quotient vectors in the complementary chart atlas, 456 carried
@@ -20,10 +21,11 @@ depends_on:
   - THM-3188-quadratic-character-pre-reset-holonomy-and-exterior-flag-rigidity
 related:
   - THM-3186-full-exterior-continuant-path-convolution-and-cancellation-wall
+  - THM-2624-two-clock-root-tomography-and-disjoint-carrier-holotopy-boundary
 script: 04-computation/factorial_block_exterior_clifford_carry_thm3191.py
 output: 05-knowledge/results/factorial_block_exterior_clifford_carry_thm3191.out
-script_sha256: 70e7f697a757b985909a9deea48c2df40277b6f250b72c19b8e2505168ca0043
-output_sha256: 21a6643a6bf008a55665bb5cfcec1639f727d29b48431977337de2c9862b8516
+script_sha256: b95da466c338c396ccd4e5e805a30c9070bd89189f1bed83ec7ea77e93fd023c
+output_sha256: 77127ab63593b3264f982e2c52893013479d7cdc4a6b0a08c5c8751bfac26a58
 hash_basis: LF-normalized bytes
 ---
 
@@ -182,16 +184,19 @@ tail flags.
 The state determinant has valuation `2H_K`, and THM-3185's rank-one block
 reduction gives one unit invariant factor.  Since the right side of `(16)`
 has rank two, its two smallest exterior determinantal divisors have valuation
-`H_K`.  Therefore
+`H_K`.  Therefore, over `Z_p` (equivalently over the DVR `Z_(p)` for these
+valuation statements),
 
 ```text
-Smith(P_K)=(1,p^H_K,p^H_K),
-Smith(Lambda^2P_K)=(p^H_K,p^H_K,p^(2H_K)).                  (17)
+Smith_p(P_K)=(1,p^H_K,p^H_K),
+Smith_p(Lambda^2P_K)=(p^H_K,p^H_K,p^(2H_K)).                (17)
 ```
 
-This global Smith statement is stronger than merely summing determinant
-lengths: it proves that the two transverse thicknesses remain exactly equal
-after every carried block.
+This global-across-blocks p-primary Smith statement is stronger than merely
+summing `p`-adic determinant lengths: it proves that the two transverse
+`p`-thicknesses remain exactly equal after every carried block.  Other prime
+divisors coming from the integral parameters, `Delta`, or intermediate
+determinantal divisors are uncontrolled and are not part of `(17)`.
 
 ## 5. Global missing-wedge return
 
@@ -223,6 +228,12 @@ the selected path coordinate to one of these two charts, plus an adaptive
 permission to switch charts.  Visible path sums can cancel, and neither
 Smith data nor `(11)` chooses the required projection.
 
+THM-2624 is a useful hostile boundary for this last step: two signed charts
+can give exact tomography without furnishing a physical carrier transport.
+Here the two charts share one exterior image plane, but no proved map sends a
+PRS-selected coordinate into that plane with a lawful chart switch.  The
+atlas is therefore reconstruction data, not yet a selector theorem.
+
 The odd/even alternation in `(12)` and the p-free unit cocycle in `(15)` are
 formal analogues of central parity and carry towers elsewhere in the
 repository.  No owner, root, current, or LRC object map is known.  No
@@ -242,8 +253,10 @@ integer arithmetic only.  It checks all 300 off-wall parameter systems over
 `p=3,5,7,11,13`; every one of 38,336 nonzero quotient vectors in their two
 projective charts; 456 ordinary/carried local blocks through `ell=p+2`; and
 392 exact global products through seven blocks for `p=3,5,7`.  The global
-checks derive both state and exterior determinantal divisors and the squared
-return from the full integer transfer product.  There is no floating point,
-random sampling, imported executable, or assertion-sensitive test.
+checks derive the `p`-primary state and exterior determinantal-divisor
+valuations and the squared return from the full integer transfer product;
+they make no claim about invariant factors at other primes.  There is no
+floating point, random sampling, imported executable, or assertion-sensitive
+test.
 
 **QED.**

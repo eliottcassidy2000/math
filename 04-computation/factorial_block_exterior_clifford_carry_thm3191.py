@@ -321,8 +321,8 @@ def main():
     print(f"carried_local_block_checks={carried_checks}")
     print(f"global_fixed_parameter_product_checks={global_checks}")
     print("one_block_cubic=D^3=s^2*Delta*D")
-    print("global_state_smith=1,p^H,p^H")
-    print("global_exterior_smith=p^H,p^H,p^(2H)")
+    print("global_p_primary_state_smith=1,p^H,p^H")
+    print("global_p_primary_exterior_smith=p^H,p^H,p^(2H)")
     print("ALL EXACT CHECKS PASSED")
 
 
