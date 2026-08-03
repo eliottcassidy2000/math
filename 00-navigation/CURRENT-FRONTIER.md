@@ -39,9 +39,9 @@ In the reflected gain graph, cap two forces the phase-zero triangle
 The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`; the CSP chain closes
 `3m>=4D`. THM-3135 repairs `H2`. THM-3150/3156 give the body-`H` skeleton and
 `D<=100` law; THM-3171 closes fixed `H`, cell 90, and the cap-two family for
-every `D>=6` and gcd cone. THM-3200 compiles each fixed channel's cleared
-numerator into a quadratic quasipolynomial, but periods grow across channels.
-Other cells, the rung, and physical entry remain **OPEN**; not LRC(14).
+  every `D>=6` and gcd cone. THM-3200 gives fixed-ray quasipolynomials; THM-3211
+  gives their Bernoulli-cubic limits, sharply `>=1/105` with three equality lanes.
+  Finite heads, other cells, the rung, and physical entry remain **OPEN**; not LRC(14).
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
 supplied-root seams, not semantic-root identification (kernel `28,393`).

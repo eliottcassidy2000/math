@@ -19,9 +19,12 @@ structural tools, with later exact audits promoted directly into the map below.
    classification or LRC(14).  THM-3200 now compiles each fixed primitive
    channel and label lane into an eventual quadratic quasipolynomial with a
    rational OGF; the normalized mass is residue-wise rational and generically
-   not C-finite.  Periods and stabilization are not uniform across channels.
-   Independently, the projected `k=3` cap is now `222` by THM-3174, with the
-   next exact wall still open.
+   not C-finite.  THM-3211 identifies every channel's common-dilation limit by
+   a periodic Bernoulli cubic and proves the sharp uniform floor `1/105`, with
+   exactly three primitive-`3:5` equality lanes.  Those lanes approach from
+   above, while a certified finite hostile lies below the limit floor, so
+   periods, convergence, and finite heads still need their sidecars.
+   Independently, the projected `k=3` cap is now `222` by THM-3174.
 2. For the **planar Jacobian response lane**, THM-3151 excludes every balanced
    `(D,D)` Faber cell and proves the chart floor `N>=4D`; THM-3167 separates
    diagonal response, constant-field membership, and ownership by one
@@ -93,7 +96,7 @@ with exact failure mechanisms and cheap next tests.
 |---|---|---|---|
 | LRC(14), grid response | [THM-3130](../01-canon/theorems/THM-3130-divisor-antichain-totient-response-and-supermodular-witness-loss.md) | principal totient-tail product, antichain inclusion--exclusion, decreasing supermodular insertion loss, divisor-death barcode | fixed grid is not the continuous loneliness profile; normalized upward transport fails at `q=6` |
 | LRC(14), projected `k=3` | THM-3113/3114/3139/3174 | projected layers close through `z1=223`; cap `222`, ledger `374025` | next `219` rows; arbitrary `k<=1`, the rung, and LRC(14) remain open |
-| LRC(14), reflected levels | [THM-3135](../01-canon/theorems/THM-3135-directed-cycle-weak-order-lane-cover-and-reflected-h-boundary.md), [THM-3171](../01-canon/theorems/THM-3171-global-high-channel-cell90-floor-and-all-width-uniform-two-star-law.md), [THM-3200](../01-canon/theorems/THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary.md) | exact cycle/DAG boundary; an all-width cell-90 theorem; and fixed-channel residue quadratics with rational OGF | periods and stabilization are not uniform; other cells, arbitrary `k<=1`, the rung, and physical entry remain open; this is not LRC(14) |
+| LRC(14), reflected levels | [THM-3135](../01-canon/theorems/THM-3135-directed-cycle-weak-order-lane-cover-and-reflected-h-boundary.md), [THM-3171](../01-canon/theorems/THM-3171-global-high-channel-cell90-floor-and-all-width-uniform-two-star-law.md), [THM-3200](../01-canon/theorems/THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary.md), [THM-3211](../01-canon/theorems/THM-3211-uniform-lrc-channel-limit-bernoulli-cubic-and-sharp-floor.md) | exact cycle/DAG boundary; an all-width cell-90 theorem; fixed-channel residue quadratics; and a sharp Bernoulli-cubic limit floor `1/105` | a finite hostile lies below the limit floor; periods and stabilization are not uniform; other cells, the rung, and physical entry remain open |
 | planar Jacobian response | [THM-3151](../01-canon/theorems/THM-3151-resonant-odd-bipole-equality-cell-nonentry-and-degree-floor.md), [THM-3167](../01-canon/theorems/THM-3167-inverse-different-three-gate-target-shear-descent-and-full-marked-jet-no-go.md), [THM-3172](../01-canon/theorems/THM-3172-shear-invariant-differential-owner-filtration-and-transverse-recurrence.md), [THM-3212](../01-canon/theorems/THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch.md) | every balanced equality cell is excluded; owner/constant-field/diagonal gates are separated; the differential-owner filtration gives a one-jet unit obstruction; and the canonical heptic centered lift has five forced Morse critical points | audit the off-center unit clutch away from `g=ST` and the remaining Faber fluxes; general chart entry and `JC(2)` stay open |
 | factorial, exact quadratics | [THM-3180](../01-canon/theorems/THM-3180-six-exit-factorial-newton-euclidean-closure-through-r2198.md), [THM-3201](../01-canon/theorems/THM-3201-seven-exit-factorial-newton-euclidean-closure-through-r2403.md), [THM-3186](../01-canon/theorems/THM-3186-full-exterior-continuant-path-convolution-and-cancellation-wall.md), [THM-3210](../01-canon/theorems/THM-3210-factorial-exterior-double-cancellation-ray-and-two-step-invisible-window.md) | exact-support `{0,1,2}` closes through `r=2403`; the signed exterior tail is P-recursive, yet has an exact two-step nonmonotone invisible window on a rational ray | first unaudited `r=2404,d=2406`; selected-chart cancellation and same-Smith data still do not determine Euclidean depth; translated/arbitrary supports and `FC(3)` remain open |
 | factorial, sparse `FC(3)` | [THM-3125](../01-canon/theorems/THM-3125-monomial-ray-first-window-factorial-closure-in-three-variables.md) | genuine anchored three-variable monomial-ray subclass via positive Gamma layers | translated rays, off-ray supports, shifted windows, full `FC(3)`/`SFC(3)` |
@@ -121,7 +124,8 @@ all eight rather than only with its home conjecture.
 1. **Weak-order / two-star channel graph:** remembers which literal
    inequalities or overlap thresholds a certificate proves; directed cycles
    control uniform-lane coverage, while leaf matching controls the scoped
-   upper-median response.
+   upper-median response.  Its fixed-ray observer splits into a Bernoulli-cubic
+   bulk limit, roots-of-unity residue modes, and a finite head.
 2. **Divisor-death barcode:** remembers when each `phi(d)` grid layer is killed
    by speed insertion; it is a deletion process, not a transport process.
 3. **Local Newton flag / oriented exit amplitude:** a polygon forgets root
@@ -248,6 +252,35 @@ appears.  Thus the uniform nine-edge law has expected overlap at least
 `1/315` and closes the fixed cell for every `D>=6` and every gcd cone.  The
 remaining debt is semantic entry into other cells and the rung, not another
 dilation scan of this fixed family.
+
+THM-3211 now identifies the asymptotic bulk for **every** admissible primitive
+channel and ordered lane.  If `C=Qe-Pf`, then `C!=0`, the overlap limit exists,
+and an exact two-torus/Fourier reduction gives
+
+```text
+L=1/49+28 Psi/(PQC),
+```
+
+where `Psi` is an explicit eight-term periodic Bernoulli cubic.  The Fourier
+tail gives `|L-1/49|<=1/(3PQ)`.  Thus `PQ>=31` is strictly above `1/105`; the
+only four smaller primitive channels can be evaluated exactly.  The global
+minimum is `1/105`, attained only at `(P,Q)=(3,5)` in lanes `(1,2),(3,1),(2,3)`.
+Their cleared numerators are respectively
+
+```text
+4032g^2+96g,       4032g^2+744g,       4032g^2+48g,
+```
+
+so all three approach the floor strictly from above.  Conversely the hostile
+`(3,5;6,1;g=2)` has mass `2030/280393<1/105` but limit `17/1680>1/105`.
+This cleanly separates bulk, residue modes, and finite head: the limit is a
+classification tool, not a substitute for the exact physical head.
+
+Combining the limit with THM-3200 also identifies the common quadratic
+coefficient on every residue.  After subtracting
+`168^2PQL g^2`, the cleared numerator is only degree-one quasipolynomial and
+is annihilated by `(E^|C|-1)^2`.  The nontrivial roots-of-unity modes therefore
+carry at most a linear jet; all quadratic growth belongs to the global mode.
 
 ### 3. The planar-JC simple-zero wall is empty
 
@@ -644,7 +677,7 @@ the root, endpoint jet, and pointed `V4` origin independently.  Until then
 | niche problem | current status | decisive evidence | next move |
 |---|---|---|---|
 | Fixed cell-90 two-star for `H` | **PROVED, fixed-family only** | THM-3171 closes every `D>=6` and gcd cone; one sharp weak edge forces three regular companions | transfer the mechanism to another cell or prove physical entry; do not call it LRC(14) |
-| Fixed LRC dilation sequence | **PROVED + VERIFIED-EXACT** | [THM-3200](../01-canon/theorems/THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary.md): the cleared numerator is eventual quadratic quasipolynomial; normalized mass is generically not C-finite | use residue quadratics instead of ray scans; control growing periods across primitive channels |
+| Fixed LRC dilation sequence | **PROVED + VERIFIED-EXACT** | [THM-3200](../01-canon/theorems/THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary.md) gives residue quadratics; [THM-3211](../01-canon/theorems/THM-3211-uniform-lrc-channel-limit-bernoulli-cubic-and-sharp-floor.md) gives the Bernoulli-cubic bulk, sharp floor, three closed equality rays, and a finite-head hostile | classify the signed `1/g` residue correction; keep exact heads; control growing periods across primitive channels |
 | Projected `k=3` descent | **PROVED + VERIFIED-EXACT** | THM-3113/3114/3139/3174 lower the cap through `z1=223` | continue the exact next wall without inferring physical-cover counts |
 | Residual quadratic factorial resonance | **CLOSED through `r=2403`** | [THM-3180](../01-canon/theorems/THM-3180-six-exit-factorial-newton-euclidean-closure-through-r2198.md) closes `79` six-exit rows and [THM-3201](../01-canon/theorems/THM-3201-seven-exit-factorial-newton-euclidean-closure-through-r2403.md) closes `50` seven-exit rows by independent multi-prime flags | begin at `r=2404,d=2406`; change observer only on an actual survivor |
 | Factorial exterior visibility sequence | **PROVED + INDEPENDENTLY AUDITED** | [THM-3186](../01-canon/theorems/THM-3186-full-exterior-continuant-path-convolution-and-cancellation-wall.md) gives the differential OGF and order-three law; [THM-3210](../01-canon/theorems/THM-3210-factorial-exterior-double-cancellation-ray-and-two-step-invisible-window.md) gives a rational two-step invisible ray and exact return at length five | identify the missing Schur/connection sidecar before transferring the law to coefficient-degree PRS depth; never infer monotone visibility from graph distance |
@@ -660,9 +693,9 @@ the root, endpoint jet, and pointed `V4` origin independently.  Until then
 1. Treat THM-3171's all-width cell-90 result as a completed local certificate.
    The next semantic target is another cell, the rung, or a proof that the
    physical residual enters this family--not a wider scan of the same rays.
-2. Use fixed-channel quasipolynomial numerators to replace every dilation scan
-   by residue-wise quadratic inequalities, then identify a uniform period or
-   monotone envelope across the primitive channels actually used by a new cell.
+2. Use THM-3211's Bernoulli bulk plus THM-3200's residue quadratics to replace
+   every dilation scan.  Classify the signed `1/g` correction and retain exact
+   heads; the `g=2` hostile forbids a limit-only floor argument.
 3. Continue the projected `k=3` cap descent with exact wall universes and
    certificate-free semantic hashes; never read it as a physical-cover census.
 
