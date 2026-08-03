@@ -7,7 +7,7 @@ checks longer heterogeneous words over the three smallest fields.  It uses
 only integer arithmetic modulo p.
 """
 
-from itertools import product
+from itertools import permutations, product
 
 
 PRIMES = (3, 5, 7, 11, 13)
@@ -47,6 +47,21 @@ def eye(n):
 
 def det2(a, p):
     return (a[0][0] * a[1][1] - a[0][1] * a[1][0]) % p
+
+
+def det_square(a, p):
+    n = len(a)
+    require(all(len(row) == n for row in a), "square determinant")
+    total = 0
+    for perm in permutations(range(n)):
+        inversions = sum(
+            perm[i] > perm[j] for i in range(n) for j in range(i + 1, n)
+        )
+        term = 1
+        for i, j in enumerate(perm):
+            term = term * a[i][j] % p
+        total += (-1 if inversions % 2 else 1) * term
+    return total % p
 
 
 def trace2(a, p):
@@ -103,8 +118,20 @@ def is_scalar_2(a, p):
         and (a[0][0] - a[1][1]) % p == 0
 
 
+def fixed_degree_resultant(s1, v1, s2, v2, p):
+    sylvester = [
+        [v1, -1, s1, 0],
+        [0, v1, -1, s1],
+        [v2, -1, s2, 0],
+        [0, v2, -1, s2],
+    ]
+    return det_square(sylvester, p)
+
+
 def check_one_blocks():
     checks = 0
+    root_checks = 0
+    binary_checks = 0
     require(mmul(PI, IOTA, 101) == eye(2), "split carrier")
     for p in PRIMES:
         for s, v in states(p):
@@ -121,13 +148,34 @@ def check_one_blocks():
                     "common right kernel")
             require(mmul(LEFT, e, p) == [[0, 0, 0]],
                     "common left conormal")
+            for x in range(p):
+                q = (v * x * x - x + s) % p
+                qprime = (-1 + 2 * v * x) % p
+                eigenline = [[1], [(1 + x) % p]]
+                expected = [
+                    [qprime],
+                    [(qprime * (1 + x) - 2 * q) % p],
+                ]
+                require(mmul(f, eigenline, p) == expected,
+                        "quadratic-root eigenline defect")
+                root_checks += 1
+            for x, z in [(x, 1) for x in range(p)] + [(1, 0)]:
+                line = [[z], [(z + x) % p]]
+                image = mmul(f, line, p)
+                wedge = (line[0][0] * image[1][0]
+                         - line[1][0] * image[0][0]) % p
+                q_homogeneous = (v * x * x - x * z + s * z * z) % p
+                require(wedge == -2 * q_homogeneous % p,
+                        "binary quadratic fixed-line identity")
+                binary_checks += 1
             checks += 1
-    return checks
+    return checks, root_checks, binary_checks
 
 
 def check_pairs():
     checks = 0
     scalar_checks = 0
+    resultant_checks = 0
     for p in PRIMES:
         ss = states(p)
         for (s1, v1), (s2, v2) in product(ss, repeat=2):
@@ -152,13 +200,19 @@ def check_pairs():
             discriminant = (tau * tau - 4 * determinant) % p
             require(det2(comm, p) == (-discriminant) % p,
                     "commutator discriminant")
+            resultant = fixed_degree_resultant(s1, v1, s2, v2, p)
+            require(discriminant == 16 * resultant % p,
+                    "pair discriminant resultant")
+            require(det2(comm, p) == -16 * resultant % p,
+                    "commutator resultant")
 
             scalar = is_scalar_2(q, p)
             require(scalar == ((s1, v1) == (s2, v2)),
                     "sharp scalar pair classification")
             checks += 1
             scalar_checks += 1
-    return checks, scalar_checks
+            resultant_checks += 1
+    return checks, scalar_checks, resultant_checks
 
 
 def check_words():
@@ -220,7 +274,12 @@ def hostile_control():
     require(q2 == [[4, 0], [2, 1]], "hostile square")
     require(not is_scalar_2(q, p), "hostile pair nonscalar")
     require(not is_scalar_2(q2, p), "hostile square nonscalar")
-    return f1, f2, q, q2
+    infinity_pair = mmul(fmat(2, 0, p), fmat(1, 0, p), p)
+    require(infinity_pair == [[1, 0], [2, 1]],
+            "shared-infinity parabolic hostile")
+    require(fixed_degree_resultant(1, 0, 2, 0, p) == 0,
+            "shared-infinity resultant")
+    return f1, f2, q, q2, infinity_pair
 
 
 def compact(a):
@@ -228,19 +287,23 @@ def compact(a):
 
 
 def main():
-    one = check_one_blocks()
-    pairs, scalar = check_pairs()
+    one, roots, binary_roots = check_one_blocks()
+    pairs, scalar, resultants = check_pairs()
     words = check_words()
-    f1, f2, q, q2 = hostile_control()
+    f1, f2, q, q2, infinity_pair = hostile_control()
     print("HETEROGENEOUS FACTORIAL EXTERIOR REFLECTION EXACT CONTROL")
     print(f"one_block_parameter_checks={one}")
+    print(f"quadratic_root_eigenline_defect_checks={roots}")
+    print(f"binary_root_line_identity_checks={binary_roots}")
     print(f"ordered_pair_invariant_checks={pairs}")
+    print(f"sylvester_resultant_checks={resultants}")
     print(f"sharp_scalar_pair_classification_checks={scalar}")
     print(f"heterogeneous_word_checks={words}")
     print(f"p5_F1={compact(f1)}")
     print(f"p5_F2={compact(f2)}")
     print(f"p5_F2F1={compact(q)}")
     print(f"p5_(F2F1)^2={compact(q2)}")
+    print(f"p5_shared_infinity_pair={compact(infinity_pair)}")
     print("common_kernel=e0")
     print("common_image=y0-y1+y2=0")
     print("ALL EXACT CHECKS PASSED")
