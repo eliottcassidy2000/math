@@ -2,7 +2,7 @@
 id: THM-3258
 title: "Depth-two affine Farkas clutch and complete reset-distance gauge no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the complete support-(1,3), bank-I2 physical state space, none of
   THM-3244's 31 lawful two-row covering pairs can be flattened to a positive
   gauge whose two coefficients depend only on reset distance.  THM-3254
@@ -22,8 +22,11 @@ audit: >
   their exact positive null weights, strictly negative affine constants,
   target-dominance domains, and complete interval coverage.  No discovered
   response value or circuit weight is trusted.  Normal, optimized and stored
-  transcript replay and the LF hashes are required.  Independent audit is
-  pending, so this candidate is not yet a proved dependency.
+  transcript replay and the LF hashes are required.  An independent hostile
+  audit replayed both interpreter modes against stored output, verified the
+  declared hashes, and separately rederived the arbitrary-target maximum,
+  all 109 cells including the unbounded ones, envelope seams, circuit signs,
+  and exact Farkas contradiction.  No defect remained.
 depends_on:
   - THM-3238-complete-physical-product-gamma-bank-unique-reset-stitch
   - THM-3254-first-shell-two-row-clutch-and-graded-gauge-no-go
@@ -39,7 +42,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3258 -- depth-two affine Farkas clutch and complete reset-distance gauge no-go
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3244 constructs 31 two-row local atlases on the complete physical state
 bank: at every nonreset state, at least one of the two rows has a strict
@@ -281,5 +284,4 @@ choices are treated only as proposed witnesses: every target, weight,
 constant and domain is rebuilt and checked independently from THM-3238's
 original formulas.
 
-QED, conditional only on the pending independent audit required for status
-promotion.
+QED.
