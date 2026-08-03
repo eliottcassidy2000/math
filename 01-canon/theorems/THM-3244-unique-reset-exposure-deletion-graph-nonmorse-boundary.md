@@ -433,9 +433,9 @@ The independently extracted rank certificate is deliberately separate from
 the expensive product-Gamma reconstruction in THM-3238.  An independent
 audit must compare it against that full exact vector; matching only the
 certificate's own digest would not establish provenance.  The same boundary
-applies to the row-cover and direction certificates: their finite arithmetic
-is self-contained, but their lawful-response provenance requires comparison
-with the exact THM-3238 rows.
+applies to the row-cover, direction, and displayed edge-difference
+certificates: their finite arithmetic is self-contained, but their
+lawful-response provenance requires comparison with the exact THM-3238 rows.
 
 ## 7. Scope and holotopy reading
 
