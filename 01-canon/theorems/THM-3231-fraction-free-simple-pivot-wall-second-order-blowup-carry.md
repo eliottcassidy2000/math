@@ -2,13 +2,19 @@
 id: THM-3231
 title: "Fraction-free simple-pivot wall and second-order blowup carry"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The row after a simple fraction-free pivot clutch is universally divisible
   coefficientwise by the square of the vanishing pivot.  Its strict transform
   is an explicit 4-by-4 osculating Toeplitz determinant, equivalently the
   third-and-higher tail of one reciprocal quotient.  At the THM-3223 p=43
   wall, the mod-p terminal row lifts after division by 43^2 to the unit 19.
 source: root/multiscale-newton-flag/2026-08-02
+audit: >
+  An independent hostile audit rederived the exceptional-square cancellation,
+  every determinant index and sign, the quotient-tail convolution and repaired
+  unit-scoped iff, the DVR strict-transform law, and all p=43 residues.  Fresh
+  ordinary and optimized replays byte-match the stored transcript and the
+  declared LF-normalized hashes.
 depends_on:
   - THM-3223-fourth-fifth-resonant-prs-primitive-walls-pell-content-and-pivot-resurrection
 related:
@@ -24,8 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3231 -- fraction-free simple-pivot wall and second-order blowup carry
 
-**PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3223 proves that a simple anchored pivot wall is a one-row clutch modulo
 the wall: the next row is a shifted copy and the following ordinary row is
@@ -245,4 +250,4 @@ the thirteen factorial top jets without importing a discovery cache; and
 proves every valuation and residue in `(16)--(19)` modulo `43^10`.  It uses
 no floating point, randomness, optimizer, or assertion-sensitive check.
 
-QED, conditional only on independent audit for status promotion.
+QED.
