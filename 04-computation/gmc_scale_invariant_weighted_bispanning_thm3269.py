@@ -8,6 +8,7 @@ import runpy
 from fractions import Fraction
 from hashlib import sha256
 from itertools import combinations, permutations, product
+from math import gcd
 from pathlib import Path
 
 
@@ -18,6 +19,7 @@ def require(condition, detail):
 
 ROOT = Path(__file__).resolve().parents[1]
 THM3254_SCRIPT = ROOT / "04-computation/gmc_first_shell_pair_clutch_thm3254.py"
+THM3273_SCRIPT = ROOT / "04-computation/gmc_critical_group_phase_carrier_thm3273.py"
 DEPENDENCIES = {
     ROOT / "01-canon/theorems/THM-3254-first-shell-two-row-clutch-and-graded-gauge-no-go.md":
         "c7c5948d5181dc845da8f40683517c06e3eecfe837e17cb84d356b91eae1a081",
@@ -31,6 +33,18 @@ DEPENDENCIES = {
         "7adf81a692bf477d493860483f50b291c01dd267ed578caa12dd31bca9128616",
     ROOT / "05-knowledge/results/gmc_bispanning_reset_link_holotopy_thm3260.out":
         "eb0b2d2de4808ae1aabdede94640390aeb35cc7a7deec55b193da44dcd043e37",
+    ROOT / "01-canon/theorems/THM-3273-critical-group-c12-quotient-and-relative-c7-equivariance-boundary.md":
+        "00bd27bbc69f58f4fae7d76bc0147a69660098f5bf8718b22913099336fb17b2",
+    THM3273_SCRIPT:
+        "ab50ab5f2c5ea0fd9f7c25504f38bc3982fbfa9cc8fa6892b9ee3dfdf13b738b",
+    ROOT / "05-knowledge/results/gmc_critical_group_phase_carrier_thm3273.out":
+        "da1d102a73ae19b3d28b54dbe6a8243b1ef587c0782bda7172fb17e6f019d7d0",
+    ROOT / "01-canon/theorems/THM-3268-nonzero-translation-norm-phase-walk-closed-form-and-rank-eleven-mixing-mode.md":
+        "d39b6216320ed0d6c4b4a03934cf02c9eb983d253237d9a99669beaaf5c75bda",
+    ROOT / "04-computation/lrc_norm_phase_translation_walk_closed_form_thm3268.py":
+        "fd26af6cba1cad5019556fd2235b319f7d089273b64d7f0dc01d2877ca0a4985",
+    ROOT / "05-knowledge/results/lrc_norm_phase_translation_walk_closed_form_thm3268.out":
+        "a9d8f74c6f9a101b81fd1c6a652c8f9379d945d2883c502452252fdbfc1fe844",
 }
 
 
@@ -58,6 +72,8 @@ require(float_literals == 0, "floating literal")
 sink = io.StringIO()
 with contextlib.redirect_stdout(sink):
     clutch = runpy.run_path(str(THM3254_SCRIPT))
+with contextlib.redirect_stdout(sink):
+    carrier = runpy.run_path(str(THM3273_SCRIPT))
 
 trap_interval = clutch["trap_interval"]
 link_states = tuple(clutch["link_states"])
@@ -248,6 +264,79 @@ for images in product(*(permutations(group) for group in classes)):
 require(automorphism_count == 1, "canonical tree not rigid")
 
 
+# THM-3273's full cyclic Jacobian separates the vertices even though its C12
+# quotient does not.  The weighted tree supplies a root and a unique incident
+# primitive direction, so normalization and circular ordering are intrinsic.
+critical_order = carrier["core_order"]
+carrier_vertices = tuple(carrier["core_vertices"])
+primitive_row = tuple(carrier["primitive_row"])
+critical_coordinate = {22: 0}
+critical_coordinate.update({
+    vertex: primitive_row[index] for index, vertex in enumerate(carrier_vertices)
+})
+require(critical_order == 74748 and set(critical_coordinate) == set(core_vertices),
+        "critical carrier drift")
+critical_root = centers[0]
+rooted_class = {
+    vertex: (value - critical_coordinate[critical_root]) % critical_order
+    for vertex, value in critical_coordinate.items()
+}
+root_neighbors = tuple(sorted(best_graph[critical_root]))
+primitive_neighbors = tuple(
+    vertex for vertex in root_neighbors
+    if gcd(rooted_class[vertex], critical_order) == 1
+)
+require(root_neighbors == (2, 16), "canonical-root neighbor drift")
+require((rooted_class[2], gcd(rooted_class[2], critical_order)) == (53470, 2),
+        "nonprimitive root branch drift")
+require((primitive_neighbors, rooted_class[16]) == ((16,), 55507),
+        "unique primitive root direction drift")
+generator = rooted_class[16]
+generator_inverse = pow(generator, -1, critical_order)
+require(generator_inverse == 4891, "critical generator inverse drift")
+normalized_exponent = {
+    vertex: (value * generator_inverse) % critical_order
+    for vertex, value in rooted_class.items()
+}
+EXPECTED_EXPONENTS = {
+    2: 53266, 3: 60022, 7: 48259, 10: 39646,
+    11: 9088, 13: 2344, 16: 1, 17: 0,
+    18: 289, 19: 25012, 21: 49832, 22: 21481,
+}
+require(normalized_exponent == EXPECTED_EXPONENTS,
+        "normalized critical exponents")
+require(len(set(normalized_exponent.values())) == len(core_vertices),
+        "critical vertex collision")
+canonical_vertex_order = tuple(sorted(core_vertices,
+                                      key=normalized_exponent.__getitem__))
+require(canonical_vertex_order
+        == (17, 16, 18, 13, 11, 22, 19, 10, 7, 21, 2, 3),
+        "canonical critical circular order")
+canonical_c12_label = {
+    vertex: index for index, vertex in enumerate(canonical_vertex_order)
+}
+require(len(set(canonical_c12_label.values())) == 12
+        and canonical_c12_label[17] == 0,
+        "canonical C12 rank label")
+
+# The primitive direction also canonically normalizes THM-3273's genuine J12
+# quotient.  This identifies THM-3268's -I norm-phase augmentation mode with
+# the full-rank repaired edge sampler, but only as an abstract representation.
+critical_phase = carrier["phase"]
+normalized_j12_phase = {
+    vertex: ((value - critical_phase[critical_root]) * 7) % 12
+    for vertex, value in critical_phase.items()
+}
+require(normalized_j12_phase == {
+    2: 10, 3: 10, 7: 7, 10: 10, 11: 4, 13: 4,
+    16: 1, 17: 0, 18: 1, 19: 4, 21: 8, 22: 1,
+}, "canonical J12 phase normalization")
+repaired_sampler = carrier["repaired_sampler"]
+require((repaired_sampler.rows, repaired_sampler.cols,
+         repaired_sampler.rank()) == (48, 11, 11),
+        "repaired augmentation sampler drift")
+
+
 def determinant_bareiss(matrix):
     work = [row[:] for row in matrix]
     previous = 1
@@ -340,9 +429,18 @@ print("canonical_complement=%s" % (complement_edges,))
 print("second_over_best=%s" % second_ratio)
 print("intrinsic_C2_image_over_best=%s,strict_ordered_rank=4" % image_ratio)
 print("canonical_tree=(Aut1,center17,radius4,diameter8,leaves=(7,10,13,18))")
+print("critical_root_directions=(to2:class53470,gcd2;to16:class55507,gcd1,inverse4891)")
+print("canonical_full_Jac_vertex_order=%s" % (canonical_vertex_order,))
+print("canonical_C12_rank_label=%s" %
+      (tuple((vertex, canonical_c12_label[vertex])
+             for vertex in sorted(canonical_c12_label)),))
+print("canonical_J12_phase=%s" %
+      (tuple((vertex, normalized_j12_phase[vertex])
+             for vertex in sorted(normalized_j12_phase)),))
+print("norm_phase_to_edge_sampler=(Q=-I_on_dim11,48x11_rank11,abstract_only)")
 print("incidence_determinants=%s,transition_det=%d" %
       (incidence_determinants, transition_determinant))
 print("canonical_transition_sha256=%s" % transition_digest)
-print("conditional_bridge=external_C12_vertex_label_only;tree_pair_sidecar_removed")
-print("scope=first_link_analytic_selector,no_C12_label,no_C7_carrier,no_LRC_or_GMC_decrement")
+print("abstract_THM3260_sidecars=both_removed;rank_compression_not_group_or_physical_intertwiner")
+print("scope=canonical_abstract_C12_bridge,no_owner_phase,no_C7_carrier,no_LRC_or_GMC_decrement")
 print("all_exact_checks=PASS")

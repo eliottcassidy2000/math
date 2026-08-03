@@ -7,31 +7,43 @@ status: >
   THM-3260's bispanning core by a positive row-scale- and orientation-invariant
   overlap ratio.  Among all 9,920 ordered complementary-tree charts, the
   product weight has one exact minimizer.  Hence the analytic clutch data
-  selects an ordered integral polarization and removes THM-3260's external
-  tree-pair sidecar.  It does not supply the remaining C12 vertex label.
+  selects a rigid ordered integral polarization with unique center 17.
+  Combining its unique incident primitive direction with THM-3273's full
+  cyclic Jacobian orders all twelve distinct Abel--Jacobi vertex classes and
+  canonically removes both of THM-3260's abstract sidecars.  The resulting
+  rank-compressed C12 label is not a group or physical phase intertwiner.
+  The primitive direction separately identifies THM-3268's norm-phase
+  augmentation with THM-3273's repaired rank-eleven edge sampler.
 source: root/multiscale-newton-flag/low-child-flag-extension/2026-08-03
 audit: >
-  The assertion-independent exact companion pins promoted THM-3254 and
-  THM-3260.  It recovers THM-3254's directly reconstructed response bank but
+  The assertion-independent exact companion pins promoted THM-3254,
+  THM-3260, THM-3268 and THM-3273.  It recovers
+  THM-3254's directly reconstructed response bank but
   trusts none of its chosen covers; rebuilds every endpoint trap and overlap
   strength; verifies orientation invariance; independently enumerates all
   complementary spanning trees and both orderings; proves the minimum unique
   by exact rational comparison; compares the intrinsic C2 image; and rebuilds
   the selected chart's two unimodular incidence matrices and GL11 transition.
   It also exhausts the selected tree's degree-compatible automorphisms and
-  checks its unique center, radius, diameter and leaf set.
+  checks its unique center, radius, diameter and leaf set; then reconstructs
+  the full critical coordinate, unique incident primitive generator, twelve
+  distinct normalized exponents, circular order and rank-compressed C12
+  bijection.  Finally it checks the generator-normalized J12 chart and the
+  repaired 48-by-11 sampler's full rank.
   Normal, optimized and stored replay plus LF hashes are required.
   Independent hostile audit is pending.
 depends_on:
   - THM-3254-first-shell-two-row-clutch-and-graded-gauge-no-go
   - THM-3260-bispanning-reset-link-holotopy-atlas-and-nonplanar-c12-boundary
+  - THM-3268-nonzero-translation-norm-phase-walk-closed-form-and-rank-eleven-mixing-mode
+  - THM-3273-critical-group-c12-quotient-and-relative-c7-equivariance-boundary
 related:
   - THM-3255-twelve-balance-multiplicative-singer-rank-defect-and-phase-marker-boundary
   - THM-3249-cross-support-upset-atlas-local-sections-and-no-constant-gauge
 script: 04-computation/gmc_scale_invariant_weighted_bispanning_thm3269.py
 output: 05-knowledge/results/gmc_scale_invariant_weighted_bispanning_thm3269.out
-script_sha256: ff4583490afbeefb6a507215604b697d412c1ebd7c547b32d05c9dac19f0c474
-output_sha256: 721ba5ec05adbeeba6bf9cf6dceb1fe5e4c1585ad999cf2c240c04284263f645
+script_sha256: 7f7e63f3441ca23850adc4670e2f0e90da0acb147563fb0edda844365542b9b2
+output_sha256: cd07cf620c813a22ec94671441150b89062d4302093e76a89edcaab54253a5f5
 hash_basis: LF-normalized bytes
 ---
 
@@ -202,32 +214,113 @@ two incidence matrices give dual cut coordinates.  Equations `(3)` and `(8)`
 make this polarization canonical from the normalized response problem itself;
 no external tree-pair choice remains.
 
-## 4. Consequence for the `C_12` bridge
+## 4. The full Jacobian orders the vertices
+
+The proved critical-group portion of THM-3273 gives
+
+```text
+Jac(G_0)=C_74748.                                      (15)
+```
+
+Use the canonical tree center 17 as Abel--Jacobi root.  Its two neighbors in
+`T_*` are 2 and 16.  In THM-3273's exact primitive cyclic coordinate their
+rooted classes satisfy
+
+```text
+[2-17]=53470,       gcd(53470,74748)=2,
+[16-17]=55507,      gcd(55507,74748)=1.               (16)
+```
+
+Thus `16` is the unique neighbor whose difference from the canonical root
+generates the full Jacobian.  Put
+
+```text
+g=[16-17],       g |--> 1 in Z/74748,
+g^(-1)=4891 in the displayed cyclic coordinate.       (17)
+```
+
+This normalization is independent of THM-3273's initially chosen cyclic
+coordinate: multiplying every class and `g` by the same unit cancels in the
+quotient.  The twelve normalized Abel--Jacobi exponents are distinct.  In
+increasing cyclic order they are
+
+```text
+vertex:   17 16  18   13   11    22    19    10    7     21    2     3
+exponent:  0  1 289 2344 9088 21481 25012 39646 48259 49832 53266 60022.
+                                                               (18)
+```
+
+Let `ell(v)` be the rank `0,...,11` of `v` in `(18)`.  Equivalently,
+
+```text
+ell={17:0,16:1,18:2,13:3,11:4,22:5,
+     19:6,10:7,7:8,21:9,2:10,3:11}.                  (19)
+```
+
+Every ingredient--the weighted tree, its center, its unique incident
+primitive direction, Abel--Jacobi differences and the generator order--is
+functorial under isomorphism of the weighted response graph.  Hence `(19)` is
+a canonical bijection
+
+```text
+V(G_0) --> C_12,       17 |--> 0.                     (20)
+```
+
+This is rank compression of a twelve-point subset of `C_74748`, not a group
+homomorphism.  Indeed every homomorphism `C_74748 -> C_12` factors through the
+order-twelve quotient of THM-3273, whose vertex landing has only six classes;
+`(19)` has twelve.  Therefore `(20)` is an abstract combinatorial phase label,
+not the missing physical owner-phase intertwiner.
+
+## 5. The abstract `C_12` bridge is now canonical
 
 THM-3260's integral bridge
 
 ```text
-Aug(Z[C_12]) --> H_1(G_0;Z)                           (15)
+Aug(Z[C_12]) --> H_1(G_0;Z)                           (21)
 ```
 
-was conditional on two sidecars: a cyclic vertex label with a selected root,
-and an ordered tree-pair chart.  The chart `(T_*,T_*')` and its center 17
-supply the second sidecar and the root canonically.  Therefore `(15)` now
-needs only an external bijection
-
-```text
-V(G_0) <--> C_12,       17 |--> 0.                    (16)
-```
-
+was conditional on a cyclic vertex bijection and an ordered tree-pair chart.
+Equations `(8)--(9)` provide the chart, while `(20)` provides the bijection and
+root.  Thus both formal sidecars are now internal to the exact response graph.
 The load-bearing cyclic-difference map `Z[C_12]/Z N -> Aug(Z[C_12])` from
 THM-3260 remains unchanged.
 
 This is a genuine positive holotopy move: the unweighted exchange atlas has
 no preferred origin, while the exact analytic clutch supplies a discrete
-potential with one global minimum.  It selects a chart; it does not create
-phase labels.
+potential with one global minimum, and the full Jacobian separates the
+otherwise colliding order-twelve phases.  The result is a canonical abstract
+integral bridge, not a physical one.
 
-## 5. Failure boundary and scope
+## 6. Norm-phase mixing embeds in the repaired edge sampler
+
+THM-3268 identifies the nonconstant norm-phase sector of the freely varying
+translation quotient with
+
+```text
+A_norm=Aug(Q[C_12]),       Q|_(A_norm)=-I.             (22)
+```
+
+The primitive direction `g` in `(17)` also fixes the generator of
+THM-3273's genuine critical quotient `J_12`.  It therefore gives a canonical
+group isomorphism `C_12 -> J_12`, distinct from the nonlinear vertex-rank map
+`(19)`.  THM-3273's directed core-edge sampler has one-dimensional kernel,
+and the two delayed edges `(11,17),(11,21)` fill it.  Consequently the
+composition
+
+```text
+A_norm  --> Aug(Q[J_12]) --> Q^(directed core + two delayed)       (23)
+```
+
+is a canonical injective `48 by 11` coefficient map.  Its image carries the
+transported scalar action `-I` from `(22)`.
+
+This is an abstract representation embedding only.  The edge sampler
+evaluates coefficient functions at phase increments; it is not a transition
+operator on the response graph, does not realize THM-3268's freely varying
+walk, and does not make the rank label `(19)` into a physical phase observable.
+
+## 7. Failure boundary and scope
 
 The selector uses only THM-3254's eleven reset-link states and the 22
 first-link-blocked core edges.  It is special to the complete support-(1,3),
@@ -238,13 +331,14 @@ the graph, its Betti number, its critical group, or the unordered interval
 cover does not imply uniqueness; the exact rational endpoint values are
 load-bearing.
 
-The theorem does not provide the cyclic vertex label `(16)`, an owner/phase
-map, a `C_7` carrier on the delayed relative layer, a positive physical
+The theorem does not turn the rank label `(19)` into an owner/phase observable,
+does not identify it with THM-3255's physical phase marker, and does not
+provide a `C_7` carrier on the delayed relative layer, a positive physical
 current, or a scalar Gaussian-moment response.  It proves no row exclusion,
 no arbitrary-radial NC2 theorem, no Gaussian Moment Conjecture consequence,
 and no `LRC(14)` decrement.
 
-## 6. Exact verification
+## 8. Exact verification
 
 Run
 
