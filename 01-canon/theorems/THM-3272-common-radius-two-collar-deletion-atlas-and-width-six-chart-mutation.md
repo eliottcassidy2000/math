@@ -1,12 +1,12 @@
 ---
-id: THM-3266
+id: THM-3272
 title: "Common radius-two collar-deletion atlas and width-six chart mutation"
 status: "RESERVED / UNPROVED EMPTY STUB"
 source: root/multiscale-newton-flag/product-gamma-width3/2026-08-03
 depends_on: []
 ---
 
-# THM-3266 -- common radius-two collar-deletion atlas and width-six chart mutation
+# THM-3272 -- common radius-two collar-deletion atlas and width-six chart mutation
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
