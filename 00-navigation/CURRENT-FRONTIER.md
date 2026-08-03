@@ -25,8 +25,10 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`; THM-2928 empties aligned `k>=4`; THM-2995/3207 cap projected `k=2,3` at `1579/220`; corrected THM-2941 leaves `561` reflected bodies, `D>=6,1<=m<4D/3`.
-This is not a physical-survivor classification; arbitrary `k<=1`, the rung, and LRC remain open. Septimal floor/exception plus located phase cut the raw five-drift ledger
+Direct frontier: `<=6`; THM-2928 empties aligned `k>=4`; THM-2995/3207 cap
+projected `k=2,3` at `1579/220`; corrected THM-2941 leaves `561` reflected
+bodies (`D>=6,1<=m<4D/3`). Arbitrary `k<=1`, the rung, physical entry and LRC
+remain open. Septimal floor/exception plus located phase cut the raw five-drift ledger
 `951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
 not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
@@ -34,13 +36,13 @@ not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
 `1580..1679`, giving cap `1579`.  For `k=3`, torsion/status closes through `297`;
 THM-2981/3033/3041/3052/3061/3071/3078/3094/3098/3102/3106/3109/3111/3113/3114/3139/3174/3179/3207
 close projected `k=3` through `z_1=221`: cap `220`, ledger `373716`; next `289` rows.
-In the reflected gain graph, cap two forces the phase-zero triangle
-`(3/2)(4/3)=2`; by cap `7/3` it is interior and no full-cap component remains.
-The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`; the CSP chain closes
-`3m>=4D`. THM-3135 repairs `H2`; THM-3150/3156 give the body-`H` skeleton.
-THM-3171 closes cell 90/cap two for every `D>=6` and gcd cone; THM-3200/3211
-give ray quasipolynomials, sharp floor `1/105`, signed `1/g`, and constant residue.
-Finite heads, other cells, the rung, and physical entry remain **OPEN**; not LRC(14).
+Cap two forces the phase-zero triangle `(3/2)(4/3)=2`; by cap `7/3` no
+full-cap component remains. The zero-gain atlas is
+`4/3,3/2,2,5/2,3,4,5,6`; CSP closes `3m>=4D`. THM-3135 repairs `H2`;
+THM-3150/3156 give the body-`H` skeleton. THM-3171 closes cell 90/cap two for
+all `D>=6` and gcd cones; THM-3200/3211 give ray quasipolynomials, sharp floor
+`1/105`, signed `1/g`, and constant residue. Finite heads, other cells, the
+rung and physical entry remain **OPEN**; not LRC(14).
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
 supplied-root seams, not semantic-root identification (kernel `28,393`).
@@ -145,15 +147,12 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   difference positivity for integer/Gamma shapes.  THM-2842 identifies the
   missing multipliers as radial-variance jets; THM-2844 gives the exact support-
   cut boundary and shows subthreshold failure is only a certificate failure.
-- THM-2843 reduces every four-slot window either to an immediate
-  positive-dimensional common zero or to a nonnegative complete-intersection
-  norm of length `d(d+1)(d+2)`.  In the first window, common nullity is a
-  moving-real-plane divisibility problem, equivalently a binary
-  sextic--octic resultant; two exact certificates close `{0,1,2,3}`, while an
-  abstract hidden plane proves coordinate faces insufficient.  Its
-  conjugate-pair/three-plane count does not carry the holomorphic `C_2*C_3`
-  action. THM-2845 classifies scalar detectors; THM-2846 gives a positive
-  cone line invisible through moment six but seen at eight by a variance jet.
+- THM-2843 reduces four slots to a positive-dimensional common zero or a
+  nonnegative complete-intersection norm of length `d(d+1)(d+2)`. The first
+  window is a binary sextic--octic resultant: two certificates close
+  `{0,1,2,3}`, while a hidden plane defeats coordinate faces and loses the
+  holomorphic `C_2*C_3` action. THM-2845 classifies scalar detectors;
+  THM-2846's positive cone line is invisible through moment six but seen at eight.
   THM-2848 reduces four slots to
   `F^o=0` or a shared cubic--quartic line; THM-2866 excludes the first.
   THM-2879/2890/2891 close consecutive cone-cutting planes.
@@ -394,12 +393,10 @@ Classify profiles under support operations; study analytic continuation and auto
 ### Arithmetic-Kakeya forcing certificates (opened 2026-07-28, klein-S691)
 
 **OPEN external benchmark; workbench live.** Human record `1.67513`, target
-`<=1.675`. FINITE-EXACT: literal rule-(1) is UNSOUND (score-to-1 family);
-floor `>=1`, k=1-path floor `2` (greedy caveat), records `13/7`, merge-free
-`7/4` (KT99 rung), and `12/7` with identifications. Prefix+step and
-step+suffix label algebras are complementary; their compilation is open.
-Mechanism/files: species-flow junction algebra and `ak_forcing_engine.py` plus
-`AK-FORCING-WORKBENCH-klein-S691.md`. Next: sound `5/3`, compilation, k=1 proof.
+`<=1.675`. FINITE-EXACT: rule-(1) is UNSOUND; floor `>=1`, k=1 path floor `2`
+(greedy caveat), records `13/7`, merge-free `7/4`, and `12/7` with
+identifications. Prefix+step and step+suffix algebras remain uncompiled.
+Workbench: `ak_forcing_engine.py`; next: sound `5/3`, compilation, k=1 proof.
 
 ## Cross-domain connection discipline
 
@@ -407,41 +404,33 @@ The most reusable current bridges are not literal object identifications:
 
 | Mechanism | Proven source | Legitimate transfer question |
 |---|---|---|
-| Whole-layer Frobenius / orbit norm | NC2/TNC | Packet preservation transfers; LRC still lacks seed/exit, and a `-1` stabilizer needs orientation. |
+| Whole-layer Frobenius / orbit norm | NC2/TNC | Packet preservation transfers; LRC lacks seed/exit and a `-1` stabilizer needs orientation. |
 | Quotient + sidecar | spectrum/SCC/support quotients | Which lost coordinate restores the target predicate? |
-| Bulk / boundary / null | THM-2058 phase height | Strict templates occur on all large prime grids; tight support lies on finitely many level-14 pair-sum clocks; subthreshold packets vanish. |
-| Operation-response | tournament joins/support unions | THM-2183/2195 give the transitive product; THM-2221/2242/2249/2256 its response, energy, and scale walls. Classify bounded-contact cores first. |
+| Bulk / boundary / null | THM-2058 | Large-prime grids are strict; tight support uses finitely many level-14 clocks; subthreshold packets vanish. |
+| Operation-response | tournament joins/support unions | THM-2183/2195 give the product; THM-2221/2242/2249/2256 its response and walls. |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
-| Finite observer / recurrence | THM-3171/3172/3180/3181 | Is the observer invertible, a one-sided refuter, or only an address, and which period/owner/run sidecar makes its termination lawful? |
-| Continuation congruence / min-plus kernel | Gordian connected-sum profile and THM-840/853 | Which finite sidecar is a target-preserving quotient under every named future operation? |
-| Relation-cone circuit/carry atlas | THM-2196/2199 | Affine carry charts still need phase, SCC order, continuation kernel, or JC residue/flux sidecars. |
-| Transverse-information tax | THM-2612/2615/2573 | Retain a Jelonek pole, endpoint axis, or boundary normal when a locus erases charge; these are parallel moves, not object identifications. |
+| Finite observer / recurrence | THM-3171/3172/3180/3181 | Is it invertible, a refuter, or only an address; which sidecar makes termination lawful? |
+| Continuation / min-plus kernel | Gordian profile; THM-840/853 | Which sidecar remains target-preserving under every future operation? |
+| Relation-cone carry atlas | THM-2196/2199 | Carry charts still need phase, SCC order, continuation, or JC residue/flux. |
+| Transverse-information tax | THM-2612/2615/2573 | Retain a pole, endpoint, or normal when a locus erases charge. |
 | Phase reconstruction | THM-2307/2022 | Scalar codes can be impostors; retain signed coefficient current. Not a GMC-to-LRC reduction. |
-| Integrality/support-hole spectrum | THM-2200 | Scalar holes can fill under powers while prime dilates die; retain semigroup coefficients and operation sidecars, not convex support alone. |
+| Integrality/support holes | THM-2200 | Holes can fill under powers while prime dilates die; retain coefficients and sidecars. |
 | Weighted-sector obstruction | THM-2045 factorized `R` family | Does the unique constant-producing sector fail on a broader Lee–Li inner edge? |
 
-HYP-8810's “JC(2) and LRC(14) share AP-rigidity” is a **wildcard frame, not a
-proved reduction**. LRC has the one-way THM-1017 supplier; the planar-JC wall
-still needs an exact map and preserved predicate. THM-2045 supplies one exact
-JC-side sector obstruction to compare, not an AP reduction. A bridge must name its map, preserved predicate, loss, sidecar, and hostile control.
+HYP-8810's JC/LRC AP-rigidity is a **wildcard, not a reduction**. THM-1017 is
+one-way; planar JC still needs a map and preserved predicate. THM-2045 is one
+sector obstruction. Every bridge must name map, predicate, loss, sidecar and hostile.
 
 
 ## External open-problem lane (Epoch FrontierMath) — mac-mini S171, 2026-07-28
 
 Orthogonal to LRC/JC; recorded so later sessions do not re-derive.
 
-- **PROVED/FINITE-EXACT:** THM-2832 (max point sensitivity of degree-3 Boolean
-  functions = 6; Kushilevitz optimal; two engines), THM-2838 (m(4) = 9,
-  CP-SAT single-engine with bidirectional controls — independent-engine audit
-  wanted), THM-2833 (no Legendre-333 pair with asymmetric multiplier
-  invariance, orders >= 7, <= 25 orbits; extends arXiv:2607.20765),
-  THM-2834 (char-3 klt del Pezzo X_14 in P(2,2,7,7), nine tame singular
-  points, arithmetic rank one — answers Epoch's del Pezzo challenge;
-  Method-A cap at 4 proved), THM-2836 (three-slot `SFC(1)` certified census: supports
-  <= 12, windows k <= 8 — extends the GMC-lane THM-2812 in both open
-  directions), THM-2837 (Grechuk cubic Diophantine divisor/Mordell reduction
-  + polynomial-family exclusions).
-- **OPEN residuals:** (5,14) sensitivity cell (needs > 8 GB CP-SAT or a DRAT
-  engine); book-Ramsey R(B_99, B_100) 398-vertex witness (two-level annealer
-  at class-energy ~400-530, best sizes |U|=94, |D|=104 by budget-slack scan);
-  unrestricted Legendre-333; Apery-style irrationality cluster untouched.
+- **PROVED/FINITE-EXACT:** THM-2832 (degree-3 Boolean sensitivity `6`, two
+  engines); THM-2838 (`m(4)=9`, single-engine CP-SAT); THM-2833 (no asymmetric
+  Legendre-333 pair in the tested range); THM-2834 (char-3 klt del Pezzo
+  `X_14`, nine tame points, arithmetic rank one); THM-2836 (three-slot
+  `SFC(1)`, supports `<=12`, windows `k<=8`); THM-2837 (Grechuk cubic
+  divisor/Mordell reduction and polynomial-family exclusions).
+- **OPEN:** sensitivity `(5,14)`; a 398-vertex book-Ramsey
+  `R(B_99,B_100)` witness; unrestricted Legendre-333; the Apéry cluster.
