@@ -2,7 +2,7 @@
 id: THM-3217
 title: "Universal resonant-degree PRS wall atlas and fixed-offset exception set"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For the degree-d resonant factorial pair, the first three fraction-free
   reciprocal remainders have eight explicit pivot, neighbor, and connection
   coordinates.  Five universal wall polynomials H,J,K,U,V
@@ -26,8 +26,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3217 -- universal resonant-degree PRS wall atlas and fixed-offset exception set
 
-**PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The offset-six scalars `H,J,K,H8,H9` in THM-3176 and THM-3192 look at first
 like artifacts of one large Euclidean calculation.  They are not.  They are
@@ -326,5 +325,13 @@ specializations; proves the modular no-integer-root certificates in `(21)`;
 checks `Xi_s` on the independent control range `2<=s<=64`; verifies the
 normalization exponents; and confirms all five isolated wall primes in `(24)`.
 It contains no floating point and no optimization-sensitive `assert`.
+
+An independent hostile audit rederived the top multinomial formula, the
+orientation of `E`, all eight coordinates at five fresh degrees, the literal
+`d=p+6` specializations, all six modular no-root certificates, and the five
+isolating primes.  It also caught, before promotion, a stale dependency hash
+and the omitted `P_1(r,a)` scaling exponent; the immutable candidate repairs
+both.  Fresh normal and `-O` runs byte-match the stored transcript and the
+declared LF-normalized hashes.
 
 QED.

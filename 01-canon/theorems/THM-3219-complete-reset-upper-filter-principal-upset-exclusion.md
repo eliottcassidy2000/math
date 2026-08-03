@@ -2,7 +2,7 @@
 id: THM-3219
 title: "Complete reset upper-filter principal-upset exclusion"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the support-(1,3), bank-I2 selector model, every nonempty physical
   completion above THM-3209's complete quotient reset has strictly negative
   degree-five principal-upset response.  The exact value is
@@ -15,8 +15,9 @@ audit: >
   verifies the base complete/power functional rows, exhausts all 63 nonempty
   legal completions, and checks the formula, strict signs, depth census,
   sharp minimum, and the 25 multi-negative-alphabet cases where h_5[-tau]
-  is nonzero.  Normal and `-O` replay byte-match the stored output; independent
-  audit is pending.
+  is nonzero.  An independent hostile audit rederived the common-prefix
+  identities and every physical count.  Normal and `-O` replay byte-match the
+  stored output.
 depends_on:
   - THM-3209-depth-eight-complete-quotient-reset-and-negative-singleton-tangent
 script: 04-computation/gmc_complete_reset_upper_filter_thm3219.py
@@ -28,7 +29,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3219 -- complete reset upper-filter principal-upset exclusion
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3209 proves that the complete quotient reset is isolated along its four
 one-extra-pole directions.  The isolation is much larger: one degree-five
@@ -189,4 +190,10 @@ explicitly includes all 25 cases with nonzero `h_5[-tau]`.  The all-prefix
 quantifier in `(6),(7),(10)` comes from the displayed lambda-ring identities;
 the finite run verifies the physical application.
 
-**QED (candidate pending independent audit).**
+An independent hostile audit checked the two distinct invariance mechanisms:
+`Phi^sigma(h_5)=Phi(h_5)` uses the five vanished complete rows, whereas
+`Phi^sigma(p_5)=Phi(p_5)` uses `Phi(1)=0`.  It then rederived all 64 physical
+states, the depth census, the 25 nonzero-`h_5[-tau]` hostiles, both sharp
+constants, and fresh normal/`-O` transcript equality.
+
+QED.

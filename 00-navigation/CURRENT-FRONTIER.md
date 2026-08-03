@@ -179,8 +179,8 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 - THM-3115/27/58/69: partition-Hasse selectors die at degree 13 through depth
   six; THM-3177 resurrects degree 13 at depth seven, while THM-3184 kills
   degree 14 there. THM-3209 gives the unique all-degree reset atom through
-  depth eight and blocks its depth-nine tangent star; unrelated depth-nine
-  states remain open. THM-3189 rules out a linear or affine two-degree
+  depth eight; THM-3219 excludes its full 64-state principal upper filter
+  through depth 16. Unrelated states remain open. THM-3189 rules out a linear or affine two-degree
   response factorization. THM-3170/3176 force bad resonances to have
   `d,...,d-6` composite. THM-3182/3183/3185/3188/3191 expose the rank-one
   reset, its two integral lattices, the full carry hierarchy, quadratic-character
@@ -189,7 +189,8 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   THM-3210 realizes a visible/invisible/invisible/visible rational window.
   THM-3206 keeps the complementary plane under heterogeneous blocks and makes
   its parabolic wall a binary-quadratic resultant. THM-3192 identifies the
-  offset-six `H,J,K` charts; THM-3214 proves sharp universal pseudo-division
+  offset-six `H,J,K` charts; THM-3217 gives a universal three-row fixed-offset
+  PRS atlas with finite exceptional primes. THM-3214 proves sharp pseudo-division
   jet costs `2k`/`2k+1`. THM-3215 upgrades any selected common simple root to
   a flat arbitrary-degree affine-dihedral two-jet transport with primitive
   `p`-fold carry. Global root selection and higher jets remain open.
