@@ -13,8 +13,8 @@ status: >
   separate. No physical LRC walk or LRC(14) decrement is asserted. A
   post-promotion VERIFIED-EXACT addendum proves that the seam's raw twelve
   target-phase counts already decode all 168 sources without being given the
-  source phase, with seven coordinates necessary and sufficient; independent
-  delta audit is pending.
+  source phase, with seven coordinates necessary and sufficient; that delta
+  is independently hostile-audited.
 source: root/2026-08-03
 audit: >
   The assertion-independent companion pins THM-3246, THM-3267 and THM-3268,
@@ -29,7 +29,8 @@ audit: >
   exhausts all source pairs for the raw seam decoder, its exact separation
   metrics, every six- and seven-coordinate projection, degree sidecar, cyclic
   window and scalar-normalized straight-arc conjugacy; independent audit of
-  only this delta is pending.
+  this delta independently reconstructed every stated census and accepted the
+  simple-module and scope conclusions without repair.
 depends_on:
   - THM-3246-all-dilation-second-owner-seam-stabilization-and-sign-word
   - THM-3267-norm-phase-factorization-ladder-and-projective-determinant-blindness
