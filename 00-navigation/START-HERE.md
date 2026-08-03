@@ -20,7 +20,9 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; THM-2995/3251 cap projected `k=2,3` at `1579/216`; THM-2941 leaves `561` reflected bodies. FINITE-EXACT `z1=216` closures give ledger `373161` and `357` wall rows; arbitrary `k<=1`, the rung and physical entry remain open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
+1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; projected caps are
+   `1579/216`. THM-3308/3313 give exact threshold circuits and ledger `373157`:
+   `353` `z1=216` wall rows in `31` families. The rung and physical entry remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
@@ -49,22 +51,23 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    phase; THM-3285 gives a literal `R-M-R` horn. Its FINITE-EXACT `13`-label
    normal atlas has two middle completions but no outer co-support. A two-axis
    atom, current and LRC(14) remain OPEN.
-10. **Tournament structure is operational.** THM-1862/1936/2195 give join/substitution laws; THM-3181/3202/3248 give response laws.
+10. **Tournament structure is operational.** THM-3312 compiles cut-switched walks
+    from centered spectrum plus a signed-observer numerator.
    THM-3260/3273 give relative phase, not a tournament. THM-3287 gives static
    sections; THM-3305 an exact rank-two edge update. These remain static, not
    tournaments or time.
 11. **Sequences need support and multiplicity profiles.** THM-2000/2005/2352 separate support, collision tax, and q-adic thresholds; THM-2438/2500 give Poisson--Newton and finite-hole laws.
-    THM-3186 gives P-recursive tails; THM-3288 gives static series of orders
-    `10/14/15`. THM-3305 gives mass `3/5`, head `-108`, a `2 x 2` update and a
-    separate `14 -> 12` order drop. The full edge lattice has six minimal
-    circuits; a conditional FC copy still leaves `31` `{16,17}` blockers.
+    THM-3288 gives static orders `10/14/15`; THM-3307 derives six minimal
+    visibility circuits; THM-3312 gives `N_d/(P-zN_d)`. THM-3311 copies
+    endpoints but blocks centered-current and ancestry cloning.
+    THM-3310 excludes cyclic degree-four FC support `<=3`; supports `4/5` remain.
     `FC(3)`/`SFC(3)` remain OPEN.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close linear through cubic fibers and twice-odd finite poles; THM-2214/2217/2247 close the inherited nonsplit train through degree `14`.
     THM-2371/THM-2376 close named degree-`18` strata; later sheet/quotient losses remain.
     THM-3212/3225 leave critical points; THM-3237--3265 give the infinity
     staircase; THM-3279/3289 close affine `C,E` on both pairs. On `C=c+x,E'=1`,
-    THM-3306 gives a transverse exact quadratic fibre; its FINITE-EXACT blow-up
-    is nonsplit of degree `2/72`, with no residue-field root choice or inverse.
+    THM-3306 gives a nonsplit quadratic deck of degree `2/72`; THM-3309 points
+    it but finds `P_x=P_z=0`, so gradient unimodularity fails before the mate.
     THM-3303 proves `JC(2) => HFC(3)` only in the constant-Jacobian sector by
     forcing a boundary collision. `JC(2)` and `DC(2)` remain OPEN.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
