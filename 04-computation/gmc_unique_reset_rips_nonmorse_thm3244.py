@@ -155,6 +155,96 @@ RANK_CERTIFICATE = (
 )
 RANK_RAW_SHA256 = "ac7aeaf94958c04034137dbbffaf18f494485446421ad9006b6657a15b3487d7"
 
+# For each of the 22 lawful response rows in the immutable THM-3238
+# certificate, this row-major bit bank records the states admitting a strict
+# one-pole, Q-monotone ascent in that row.  As with the H-rank certificate
+# above, provenance is established by comparison with the complete exact
+# response bank, not by this certificate's self-digest alone.
+ROW_COVER_CERTIFICATE = (
+    "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"
+    "sA=="
+)
+ROW_COVER_RAW_SHA256 = "cf8a66dce650ea90fbdc6333fc571506c9bb9d626a9dc2f7ccdaedd2e7ab6cdb"
+ROW_COVER_SIZES = (
+    4127, 4215, 4094, 4113, 4208, 4154, 4137, 4039, 4211, 4014, 4211,
+    4157, 4039, 4218, 3963, 4207, 4146, 4224, 4154, 4038, 4143, 4227,
+)
+ROW_COVERING_PAIRS = (
+    (2, 7), (2, 10), (2, 13), (2, 17), (2, 19), (2, 21),
+    (3, 9), (3, 11), (3, 16), (3, 22), (7, 14), (7, 18),
+    (7, 22), (10, 11), (10, 16), (10, 22), (11, 13), (11, 17),
+    (11, 21), (12, 13), (12, 19), (13, 14), (13, 18), (13, 22),
+    (14, 19), (16, 17), (16, 21), (17, 22), (18, 19), (19, 22),
+    (21, 22),
+)
+
+# Coordinate bits 0,...,7 record which Q-directed one-pole moves raise row 2
+# or row 10.  The first 4,319 bytes are row 2 and the second 4,319 are row 10.
+ROW_TWO_TEN_DIRECTION_CERTIFICATE = (
+    "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"
+    "hkqkmHzqY/F8m4KBAfc5D/8BT3KHKw=="
+)
+ROW_TWO_TEN_DIRECTION_RAW_SHA256 = (
+    "2253c0f3b59b57966f9b2357f46c7d396fb8803b9f63bf285cbc9f105ef5388c"
+)
+
 VALUES = tuple(range(1, 9))
 CAPACITIES = (4, 3, 2, 2, 2, 1, 1, 1)
 RESET = (1, 3, 3, 4, 5, 6, 7, 8)
@@ -189,6 +279,65 @@ count_vectors = tuple(
 )
 reset_counts = count_vectors[state_index[RESET]]
 
+mask_bytes = (len(states) + 7) // 8
+row_cover_raw = zlib.decompress(base64.b64decode("".join(ROW_COVER_CERTIFICATE)))
+require(hashlib.sha256(row_cover_raw).hexdigest() == ROW_COVER_RAW_SHA256,
+        "row-cover certificate digest")
+require(len(row_cover_raw) == 22 * mask_bytes, "row-cover byte length")
+row_cover_sets = tuple(
+    frozenset(
+        index for index in range(len(states))
+        if row_cover_raw[(row - 1) * mask_bytes + index // 8]
+        & (1 << (index % 8))
+    )
+    for row in range(1, 23)
+)
+require(tuple(map(len, row_cover_sets)) == ROW_COVER_SIZES,
+        "lawful-row cover sizes")
+nonreset_indices = frozenset(range(len(states))) - {state_index[RESET]}
+require(all(cover <= nonreset_indices for cover in row_cover_sets),
+        "row cover contains reset")
+covering_pairs = tuple(
+    (left + 1, right + 1)
+    for left in range(22) for right in range(left + 1, 22)
+    if row_cover_sets[left] | row_cover_sets[right] == nonreset_indices
+)
+require(covering_pairs == ROW_COVERING_PAIRS, "covering-pair census")
+require(max(map(len, row_cover_sets)) == 4227 < len(nonreset_indices),
+        "one-row selector boundary")
+row_two, row_ten = row_cover_sets[1], row_cover_sets[9]
+require(
+    (len(row_two), len(row_ten), len(row_two & row_ten),
+     len(row_two - row_ten), len(row_ten - row_two),
+     len(nonreset_indices - (row_two | row_ten)))
+    == (4215, 4014, 3911, 304, 103, 0),
+    "distinguished two-row atlas",
+)
+
+direction_raw = zlib.decompress(base64.b64decode(
+    "".join(ROW_TWO_TEN_DIRECTION_CERTIFICATE)
+))
+require(hashlib.sha256(direction_raw).hexdigest()
+        == ROW_TWO_TEN_DIRECTION_RAW_SHA256, "direction certificate digest")
+require(len(direction_raw) == 2 * len(states), "direction byte length")
+row_direction_masks = (
+    tuple(direction_raw[:len(states)]),
+    tuple(direction_raw[len(states):]),
+)
+require(
+    tuple(frozenset(index for index, mask in enumerate(masks) if mask)
+          for masks in row_direction_masks)
+    == (row_two, row_ten),
+    "direction supports disagree with row covers",
+)
+common_direction_histogram = tuple(sorted(Counter(
+    (row_direction_masks[0][index] & row_direction_masks[1][index]).bit_count()
+    for index in row_two & row_ten
+).items()))
+require(common_direction_histogram
+        == ((0, 3453), (1, 294), (2, 113), (3, 45), (4, 6)),
+        "overlap common-direction histogram")
+
 rank_raw = zlib.decompress(base64.b64decode("".join(RANK_CERTIFICATE)))
 require(hashlib.sha256(rank_raw).hexdigest() == RANK_RAW_SHA256, "rank digest")
 require(len(rank_raw) == 2 * len(states), "rank byte length")
@@ -220,6 +369,120 @@ def physical_neighbors(counts):
             changed[coordinate] -= 1
             answer.append(tuple(changed))
     return tuple(answer)
+
+
+def q_neighbor_index(index, coordinate):
+    counts = list(count_vectors[index])
+    if counts[coordinate] < reset_counts[coordinate]:
+        counts[coordinate] += 1
+    elif counts[coordinate] > reset_counts[coordinate]:
+        counts[coordinate] -= 1
+    else:
+        return None
+    if not any(counts):
+        return None
+    return state_index[state_from_counts(tuple(counts))]
+
+
+# The direction certificate turns the two-chart cover into a finite directed
+# atlas.  Dynamic programming along the strictly decreasing Q-distance grades
+# computes the least possible number of chart switches on a complete route.
+q_distances = tuple(edit_distance(counts, reset_counts) for counts in count_vectors)
+infinity = len(states)
+switch_cost_by_first_chart = [[infinity, infinity] for _ in states]
+for index in sorted(range(len(states)), key=lambda item: q_distances[item]):
+    if index == state_index[RESET]:
+        continue
+    for chart in range(2):
+        candidates = []
+        mask = row_direction_masks[chart][index]
+        for coordinate in range(8):
+            if not mask & (1 << coordinate):
+                continue
+            target_index = q_neighbor_index(index, coordinate)
+            require(target_index is not None, "illegal certified direction")
+            require(q_distances[target_index] + 1 == q_distances[index],
+                    "certified direction not Q-monotone")
+            if target_index == state_index[RESET]:
+                candidates.append(0)
+            else:
+                candidates.append(min(
+                    switch_cost_by_first_chart[target_index][next_chart]
+                    + int(next_chart != chart)
+                    for next_chart in range(2)
+                ))
+        if candidates:
+            switch_cost_by_first_chart[index][chart] = min(candidates)
+
+minimum_switches = tuple(
+    min(costs) for index, costs in enumerate(switch_cost_by_first_chart)
+    if index != state_index[RESET]
+)
+require(all(cost < infinity for cost in minimum_switches),
+        "two-chart atlas lost a routed state")
+switch_histogram = tuple(sorted(Counter(minimum_switches).items()))
+require(switch_histogram == ((0, 716), (1, 3600), (2, 2)),
+        "two-chart switch-depth histogram")
+fixed_row_routes = tuple(
+    sum(switch_cost_by_first_chart[index][chart] == 0
+        for index in nonreset_indices)
+    for chart in range(2)
+)
+require(fixed_row_routes == (534, 182), "fixed-row route census")
+require(sum(min(costs) == 0 for index, costs in enumerate(
+    switch_cost_by_first_chart) if index != state_index[RESET]) == 716,
+        "zero-switch union census")
+sharp_switch_states = tuple(sorted(
+    states[index] for index in nonreset_indices
+    if min(switch_cost_by_first_chart[index]) == 2
+))
+require(sharp_switch_states == (
+    (1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 7, 8),
+    (2, 2, 3, 3, 4, 4, 5, 5, 6, 7, 8),
+), "sharp two-switch states")
+
+
+def induced_region_stats(vertices):
+    vertices = frozenset(vertices)
+    edge_twice = 0
+    unseen = set(vertices)
+    component_sizes = []
+    while unseen:
+        start = unseen.pop()
+        stack = [start]
+        size = 0
+        while stack:
+            vertex = stack.pop()
+            size += 1
+            neighbors = tuple(
+                state_index[state_from_counts(neighbor)]
+                for neighbor in physical_neighbors(count_vectors[vertex])
+            )
+            edge_twice += sum(neighbor in vertices for neighbor in neighbors)
+            new = set(neighbors) & unseen
+            unseen.difference_update(new)
+            stack.extend(new)
+        component_sizes.append(size)
+    edges = edge_twice // 2
+    components = tuple(sorted(component_sizes, reverse=True))
+    return (len(vertices), edges, components,
+            edges - len(vertices) + len(components))
+
+
+row_two_only_stats = induced_region_stats(row_two - row_ten)
+row_ten_only_stats = induced_region_stats(row_ten - row_two)
+row_overlap_stats = induced_region_stats(row_two & row_ten)
+require(row_two_only_stats == (
+    304, 603,
+    (155, 56, 11, 7, 7, 7, 6, 5, 5, 5, 4, 4, 4, 4, 4, 3,
+     2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+    328,
+), "row-two-exclusive transition geometry")
+require(row_ten_only_stats == (
+    103, 179, (37, 35, 12, 7, 7, 5), 82,
+), "row-ten-exclusive transition geometry")
+require(row_overlap_stats == (3911, 18554, (3911,), 14644),
+        "row-overlap transition geometry")
 
 
 # Strict one-pole local maxima of the exact supporting functional.
@@ -441,6 +704,23 @@ print("dependency_hash_checks=2")
 print("assert_nodes=%d,float_literals=%d" % (assert_nodes, float_literals))
 print("state_bank=4319,rank_certificate_sha256=%s" % RANK_RAW_SHA256)
 print("one_pole_nonreset_local_maxima=%d" % len(local_traps))
+print("lawful_row_cover_sizes=%s" % repr(ROW_COVER_SIZES))
+print("lawful_row2_row10_split=(4215,4014,3911,304,103,0)")
+print("lawful_two_row_covering_pairs=%d" % len(covering_pairs))
+print("best_single_lawful_row_cover=4227_of_4318")
+print("row_cover_certificate_sha256=%s" % ROW_COVER_RAW_SHA256)
+print("row2_row10_one_pole_selector_routes_in_exact_Q_distance=PASS")
+print("row2_row10_overlap_common_direction_histogram=%s" % repr(
+    common_direction_histogram
+))
+print("row2_row10_switch_histogram=%s" % repr(switch_histogram))
+print("row2_row10_fixed_routes=%s,sharp_states=%s" % (
+    repr(fixed_row_routes), repr(sharp_switch_states),
+))
+print("row2_only_graph=(vertices=304,components=29,edges=603,cycle_rank=328)")
+print("row10_only_graph=(vertices=103,components=6,edges=179,cycle_rank=82)")
+print("overlap_graph=(vertices=3911,components=1,edges=18554,cycle_rank=14644)")
+print("direction_certificate_sha256=%s" % ROW_TWO_TEN_DIRECTION_RAW_SHA256)
 print("reset_monotone_escape_histogram=%s" % repr(escape_histogram))
 print("reset_monotone_sink_spectrum_radius1_to10=%s" % repr(sink_spectrum))
 print("sharp_radius10_trap=%s" % repr(sharp_traps[0]))
@@ -457,5 +737,5 @@ print("low_hub_and_radius10_trap_bars=%s" % repr((
     bar_by_birth[hub_low], bar_by_birth[sharp_traps[0]]
 )))
 print("merge_tree_sha256=6f6aeb54bb02aa89cc063396f25c7883dc254c7c97339f1459d1c6125ba65ce2")
-print("scope=fixed_THM3238_order_not_local_deletion_flow_or_simplicial_contraction")
+print("scope=fixed_THM3238_bank_state_dependent_row_selector_not_one_dual_or_simplicial_contraction")
 print("all_exact_checks=PASS")
