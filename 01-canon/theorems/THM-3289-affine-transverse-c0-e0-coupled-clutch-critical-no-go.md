@@ -2,25 +2,27 @@
 id: THM-3289
 title: "Affine transverse C0-E0 coupled clutch critical no-go"
 status: >
-  RESERVED / PROVISIONAL CANDIDATE UNDER INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For either THM-3212 cubic accessory response pair, every simultaneous
-  affine C_0,E_0 clutch with B=1 appears to leave a critical point.  The
-  genuinely coupled lane has a degree-53 saturated resultant; the finite
-  clutch controls all T contact, and exact cubic-field PRS calculations cap
-  the remaining S contact at three, apparently leaving at least 50 units of
-  off-owner critical-resultant multiplicity.  This is not yet proved canon.
+  affine C_0,E_0 clutch with B=1 leaves a critical point.  The genuinely
+  coupled lane has a degree-53 saturated resultant; the finite clutch
+  controls all T contact, and exact cubic-field PRS calculations cap the
+  remaining S contact at three, leaving at least 50 units of off-owner
+  critical-resultant root multiplicity.  This is multiplicity, not a claim
+  of 50 distinct critical points.
 source: root/creative-synthesis-recover/2026-08-03
 audit: >
-  The primary exact scout derives the localized gradient pair, a literal
-  6-by-6 Sylvester determinant, the 40-term quotient, the unique degree-97
-  infinity term, all four T rows, the factored S q3, the exceptional q4
-  slope and its finite-clutch meaning, and the q5/q6 wall pair.  Direct exact
-  Euclidean algorithms in both cubic accessory fields have profiles
-  (4,3)->(3,2)->(2,1)->(1,0) and terminal units.  Rational C=1+x,E'=1
-  controls are finite-gate units with squarefree boundary-disjoint degree-53
-  residuals.  Normal, optimized, and stored transcripts agree; source has
-  zero assertion nodes and zero floating literals.  Independent hostile
-  audit and status promotion remain pending.
+  The primary exact scout uses a literal 6-by-6 Sylvester determinant and
+  direct number-field Euclidean algorithms.  The independent audit does not
+  import or execute it: it rebuilds both response pairs, uses SymPy's builtin
+  resultant, derives the generic S jets with coefficient-list arithmetic,
+  and recomputes the final wall ideals with its own rational-triple cubic
+  arithmetic and dense PRS.  Both routes verify the 40-term quotient, unique
+  degree-97 infinity term, four finite-gate T rows, q3/q4 hostile walls,
+  terminal-unit q5/q6 ideals, rad(V)=ST, disjoint degree-44 boundary,
+  degree-53 residual, and squarefree owner-disjoint controls.  Normal,
+  optimized, and stored transcripts agree; both sources have zero assertion
+  nodes and zero floating literals.
 depends_on:
   - THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch
   - THM-3279-affine-transverse-clutch-critical-no-go
@@ -30,17 +32,18 @@ script: 04-computation/jc_affine_transverse_c0_e0_coupled_clutch_no_go_thm3289.p
 output: 05-knowledge/results/jc_affine_transverse_c0_e0_coupled_clutch_no_go_thm3289.out
 script_sha256: f63ff06e3f5ed30f3f6bc5be99756c347d6af5f8e9b220ce8336abff2cd2ca31
 output_sha256: 1aef4341650cdfaf1043a8699e3a1725a0100af6d9848d99dfa924b6f054dba1
+audit_script: 04-computation/jc_affine_transverse_c0_e0_coupled_clutch_no_go_thm3289_independent_audit.py
+audit_output: 05-knowledge/results/jc_affine_transverse_c0_e0_coupled_clutch_no_go_thm3289_independent_audit.out
+audit_script_sha256: b2fa8c96854549ccb9e515485214c119b685b31456fb7c53c5e2bd83f7933831
+audit_output_sha256: 48d50289c98c9dd17e099497d21cd9648cac27a097b339a1f75a1e13d8fd8837
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3289 -- affine transverse C0-E0 coupled clutch critical no-go
 
-**RESERVED / PROVISIONAL CANDIDATE UNDER INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-Nothing in this file is proved canon until an independent hostile audit and
-an explicit status promotion land.
-
-## 1. Candidate statement
+## 1. Statement
 
 Let `K_i` be either cubic accessory field of
 [THM-3212](THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch.md),
@@ -50,10 +53,11 @@ the response pair and owner divisor
 ```text
 V=4SDT^2/Gamma^2,       A=2SET/Gamma,
 g=ST,                   2VA'-AV'=2V,
+rad(V)=g,
 deg V=16,               deg A=8.                         (1)
 ```
 
-For arbitrary affine polynomials
+For arbitrary `c_0,d,e_0,k in K_0`, put
 
 ```text
 C=c_0+d x,              E=e_0+k x                       (2)
@@ -65,19 +69,19 @@ put
 P_(C,E)(x,z)=(V(x)z^2+z+C(x))^2+A(x)z+E(x).             (3)
 ```
 
-The candidate conclusion is that every polynomial `(3)` has a critical
-point.  More precisely:
+Then every polynomial `(3)` has a critical point.  The constant `e_0` is
+gradient-inert, and the proof uses the following disjoint parameter lanes:
 
 1. if `d=0`, this is the complete constant-clutch lane of THM-3212;
-2. if `k=0`, this is THM-3279; and
+2. if `d!=0` and `k=0`, this is THM-3279; and
 3. if `dk!=0`, either the finite clutch fails and gives an explicit critical
    point over `g`, or at least `50` units of saturated critical-resultant
-   multiplicity remain away from `g`.
+   root multiplicity remain away from `g`.
 
 At any critical point of `(3)`, `Jac(P_(C,E),Q)=0` for every polynomial `Q`.
-Thus the candidate would exclude `(3)` from being one coordinate of a
-polynomial Keller pair.  It constructs no mate or inverse cover and proves no
-case of the planar Jacobian conjecture.
+Thus `(3)` cannot be one coordinate of a polynomial Keller pair.  The theorem
+constructs no mate or inverse cover and proves no case of the planar Jacobian
+conjecture.
 
 ## 2. Exact finite clutch
 
@@ -107,8 +111,8 @@ Delta=k-A'C                                                (6)
 ```
 
 is a unit modulo `g`.  If it is not, `(alpha,-C(alpha))` is an explicit
-critical point over any common root.  The rest of the candidate proof assumes
-that `(6)` is a unit.
+critical point over any common root.  The rest of the proof assumes that `(6)`
+is a unit.
 
 ## 3. Localized gradient pair and the 40-term quotient
 
@@ -201,8 +205,11 @@ boundary_(4111)=S^3T^8x^9,
 boundary_(3211)=S^3T^8x^6(x-1)^3.                       (18)
 ```
 
-Both boundaries have degree `44`, and the response identity supplies the
-universal `S^3` factor.  Hence
+The four owner factors are pairwise disjoint.  Equation `(17)` gives the
+stated local order at every `T` root, while direct expansion at the simple
+`S` root makes the first three coefficients vanish universally.  These local
+orders, rather than the later rational control, prove divisibility by the
+degree-`44` boundary in `(18)`.  Hence
 
 ```text
 K_(C,k)=boundary_i H_(C,k),        deg H_(C,k)=53.       (19)
@@ -326,6 +333,11 @@ either accessory field.  It follows that
 ord_S K_(C,k)<=6,             ord_S H_(C,k)<=3.          (32)
 ```
 
+Only the generated ideal and its unit gcd are load-bearing here.  Raw PRS
+representatives and intermediate normalizations may differ by field units;
+the displayed degree profiles record these two exact routes and are not
+treated as canonical coefficient lists (MISTAKE-360).
+
 ## 7. Residual count and hostile controls
 
 Equations `(17)`, `(19)`, and `(32)` leave at least
@@ -334,9 +346,12 @@ Equations `(17)`, `(19)`, and `(32)` leave at least
 53-3=50                                                   (33)
 ```
 
-units of resultant multiplicity away from `g`.  Since the leading
-`y`-coefficient of `R_1` is the constant `4`, every such root supports an
-affine common zero of `(8),(9)`, hence a critical point of `(3)`.
+units of resultant-root multiplicity away from `g`.  This is multiplicity,
+not a count of `50` distinct roots or critical points.  Homogenizing in `y`,
+the leading `y`-coefficient `4` of `R_1` excludes a common projective root at
+`y=infinity`.  Consequently every distinct off-owner root supporting this
+multiplicity yields an affine common zero of `(8),(9)`, hence a critical point
+of `(3)`.
 
 The rational coupled control
 
@@ -359,10 +374,10 @@ Its monic residual digests are
 ```
 
 These controls show that the degree-53 invoice and boundary separation are
-attained; they are not used to turn the provisional universal argument into
-proved canon.
+attained; the universal boundary divisibility comes from the disjoint local
+orders above, not from the controls.
 
-## 8. Loss ledger and audit boundary
+## 8. Loss ledger and audit record
 
 The inheritance map is
 
@@ -380,6 +395,10 @@ PRS `(30)`.
 
 The primary companion uses exact rational and number-field arithmetic, has no
 floating literals or Python `assert` nodes, and agrees in normal and optimized
-modes with its stored transcript.  An independent implementation must still
-rederive the Sylvester quotient, truncated S jets, field PRS, and finite/global
-controls before this reservation can be promoted.
+modes with its stored transcript.  The independent audit rebuilds the response
+pairs and uses a builtin resultant rather than the primary literal Sylvester
+determinant; coefficient-list jets rather than the primary symbolic series;
+and independent rational-triple cubic arithmetic and dense PRS rather than the
+primary field-polynomial Euclidean route.  It separately verifies the finite
+hostile, exceptional-slope hostile, `rad(V)=ST`, disjoint local boundary
+orders, two wall ideals, and squarefree global controls.

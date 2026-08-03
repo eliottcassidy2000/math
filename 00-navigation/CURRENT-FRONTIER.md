@@ -42,7 +42,7 @@ THM-3150/3156 give the body-`H` skeleton. THM-3171 closes cell 90/cap two for
 all `D>=6` and gcd cones; THM-3200/3211 give ray quasipolynomials, sharp
 `1/105`, signed `1/g`, and constant residue. THM-3224 gives the complete
 orbit's nonzero periodic `g^-2` gcd-carry (sharp `9/49`) and owner Hodge split; audited THM-3246 closes one 12-cell seam for all dilations, with a fixed `156+ / 12-` second-corrector word but no row exclusion.
-THM-3234/3240/3247/3250/3259 close charged/free-factor algebra; THM-3255/3267 give the norm phase ladder. THM-3274 invoices transfers `12/48/168`; THM-3269/3277 give a generator, sampler and phase backbone. THM-3285 gives an address-local `R-M-R` horn on `63` labels with literal THM-2791 ancestry; uncut covariance fails. Global action, endpoint origin/current and LRC exit remain open.
+THM-3234/3240/3247/3250/3259 close charged/free-factor algebra; THM-3255/3267 give the norm phase ladder. THM-3274 invoices transfers `12/48/168`; THM-3269/3277 give a generator, sampler and phase backbone. THM-3285 proves a literal `R-M-R` horn on `63` labels. A finite-exact subatom test has `169` middle origins but no outer typed/vertical-affine lift. Normal/current data and LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
 supplied-root seams, not semantic-root identification (kernel `28,393`).
@@ -388,7 +388,7 @@ Classify profiles under support operations; study analytic continuation and auto
   constant family `(Vz^2+bz+c)^2+A_src z+kx`; generic counts are `52`/`28`.
   THM-3225 excludes every affine `B` in `(Vz^2+Bz)^2+A_src z+x`: no `T`
   escape, at most two at `S`, and at least `50` intersection units remain.
-  THM-3237--3276 give the infinity staircase and close `B` through degree eight. THM-3279 closes only affine `C`, `B=1`, constant `E`: an owner critical point or at least `50` off-owner resultant units. Cofactor/inverse-cover data, broader deformations, `JC(2)` and `DC(2)` remain OPEN.
+  THM-3237--3276 give the infinity staircase and close `B` through degree eight. THM-3279/3289 close affine `C,E` (`B=1`) on both pairs: an owner point or at least `50` off-owner resultant-multiplicity units. Cofactor/inverse-cover data, broader deformations, `JC(2)` and `DC(2)` remain OPEN.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
   `2201<=d<=2400` and all `35` residuals in `2401<=d<=2500` close by matching
@@ -421,7 +421,7 @@ The most reusable current bridges are not literal object identifications:
 | Quotient + sidecar | spectrum/SCC/support quotients | Which lost coordinate restores the target predicate? |
 | Bulk / boundary / null | THM-2058 | Large-prime grids are strict; tight support uses finitely many level-14 clocks; subthreshold packets vanish. |
 | Operation-response | tournament/FC/sequence | THM-3275/3286--3288 separate origin tax, static Helly colourings/sections, rational relation walks, and physical history. |
-| Strict transform | factorial PRS / JC infinity | THM-3257/3263/3265/3276/3279 close successive infinity edges plus `B` and affine `C`; cofactors or new gradient coordinates remain. |
+| Strict transform | factorial PRS / JC infinity | THM-3257/3263/3265/3276/3279/3289 close successive infinity edges plus `B` and affine `C,E`; cofactors or new gradient coordinates remain. |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Finite observer / recurrence | THM-3171/3172/3180/3181 | Is it invertible, a refuter, or only an address; which sidecar makes termination lawful? |
 | Continuation / min-plus kernel | Gordian profile; THM-840/853 | Which sidecar remains target-preserving under every future operation? |

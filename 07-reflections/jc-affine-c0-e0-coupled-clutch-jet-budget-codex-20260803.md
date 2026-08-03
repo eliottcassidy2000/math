@@ -1,14 +1,17 @@
 # Coupled affine clutch: one more residual degree, no smaller obstruction
 
-**Status: NON-CANONICAL SYNTHESIS AROUND RESERVED / PROVISIONAL CANDIDATE
-THM-3289.**  This reflection is not a proof source.  Every exact claim below
-must be checked against the literal current status of
+**Status: NON-CANONICAL SYNTHESIS AROUND PROVED, VERIFIED-EXACT,
+INDEPENDENTLY HOSTILE-AUDITED THM-3289.**  This reflection is not a proof
+source.  Every exact claim below must be checked against
 [THM-3289](../01-canon/theorems/THM-3289-affine-transverse-c0-e0-coupled-clutch-critical-no-go.md)
 and its frozen primary
-[`scout`](../04-computation/jc_affine_transverse_c0_e0_coupled_clutch_no_go_thm3289.py)
+[`companion`](../04-computation/jc_affine_transverse_c0_e0_coupled_clutch_no_go_thm3289.py)
 and
-[`output`](../05-knowledge/results/jc_affine_transverse_c0_e0_coupled_clutch_no_go_thm3289.out).
-Independent hostile audit and promotion are pending at the time of writing.
+[`output`](../05-knowledge/results/jc_affine_transverse_c0_e0_coupled_clutch_no_go_thm3289.out),
+plus the independent
+[`audit`](../04-computation/jc_affine_transverse_c0_e0_coupled_clutch_no_go_thm3289_independent_audit.py)
+and its
+[`output`](../05-knowledge/results/jc_affine_transverse_c0_e0_coupled_clutch_no_go_thm3289_independent_audit.out).
 
 ## Why this was the next coordinate
 
@@ -45,7 +48,7 @@ Delta(alpha)=k-A'(alpha)C_0(alpha).                     (3)
 ```
 
 This is the exact finite-clutch gate.  What is structurally satisfying in the
-candidate calculation is that `(3)` reappears without translation in every
+proved calculation is that `(3)` reappears without translation in every
 `T`-boundary leading row.  If `ord_alpha(V)=m` and
 `A'(alpha)=2/(2-m)`, then
 
@@ -74,7 +77,7 @@ V=v_1t+v_2t^2+...,
 C_0=c+dt.                                                (5)
 ```
 
-The first candidate coefficient factors as
+The first nontrivial coefficient factors as
 
 ```text
 q_3=(8/3)v_1^2(2c-k)(6cv_1^2+3kv_1^2+4v_2).            (6)
@@ -133,7 +136,7 @@ After saturating by the excluded factor `(8)`, the live profile is
 (4,2) -> (2,1) -> (1,0).                                (12)
 ```
 
-Thus the candidate mechanism is not that one of `q_5,q_6` is universally
+Thus the proved mechanism is not that one of `q_5,q_6` is universally
 nonzero.  Each can vanish on a genuine algebraic locus.  The obstruction is
 compatibility: their zero loci have empty intersection, witnessed by a unit
 PRS terminal.  This is precisely the kind of two-polynomial sidecar that a
@@ -246,7 +249,7 @@ predicate is the exact response and owner geometry.  The essential retained
 information is the cofactor/branch label that the scalar resultant destroys.
 
 The stopping reason for the present lane is therefore structural, not merely
-computational: simultaneous affine `C_0,E_0` freedom appears to spend its new
+computational: in this family, simultaneous affine `C_0,E_0` freedom spends its new
 jet entirely on a matching infinity degree.  Progress now requires changing
 the kind of object retained, not adding one more coefficient to the same
 scalar quotient.

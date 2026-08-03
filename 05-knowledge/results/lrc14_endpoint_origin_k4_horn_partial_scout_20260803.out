@@ -1,0 +1,36 @@
+LRC14 ENDPOINT-ORIGIN K4 HORN PARTIAL SCOUT
+status=FINITE-EXACT PARTIAL;not_a_canonical_theorem
+dependency_hashes=BEGIN
+c42d66498f460f2142ea375fe9d4047b82c62b872b35d5a1634d2bb4c80a68ee  04-computation/lrc14_allocation_switching_same_ancestry_horn_scout_20260803.py
+e89dce3307e5d374e8583f92e1b2da1214e44929e52fdd42c6532d61adb3e246  05-knowledge/results/lrc14_allocation_switching_same_ancestry_horn_scout_20260803.out
+10b681f575fb51eb4b1af4bc909fba89846b85bd5da36fc069dac97ae2ebe409  04-computation/lrc14_carrier_allocation_pullback_k4_segre_thm2772.py
+9cd1e82634822e4997d9966a8252b566d099050e42593a47c49b8a0f387190e5  05-knowledge/results/lrc14_carrier_allocation_pullback_k4_segre_thm2772.out
+11cdbe3c6cc7f9d5b6b24863ced71eb91cc84adc67fe38a3f8a3e637362453fb  04-computation/lrc14_positive_graded_address_two_simplex_thm2807.py
+a6fbc42c5a9fa7b84fa42a6fb625228851385777155e22653e360e190ea765d9  05-knowledge/results/lrc14_positive_graded_address_two_simplex_thm2807.out
+255ce911a18f33d6b700213d6362886970b12170c324d39bed82a69a51b63e83  04-computation/lrc14_affine_lift_transvection_horn_decoder_thm2813.py
+32f61740a0e7e73384c3d1ff1a83ba30d4cd3ebeca5d228b57e0bf2510928d58  05-knowledge/results/lrc14_affine_lift_transvection_horn_decoder_thm2813.out
+8f9a51e0fd616cd616eef0080bcd054b2a0c191704e1f289e78ea28364476376  04-computation/lrc14_boolean_norm_cotangent_boundary_thm2820.py
+d9f5cf1e0999f414e0c9af838070441def6baf1c65df266fbdb44b9f578cce58  05-knowledge/results/lrc14_boolean_norm_cotangent_boundary_thm2820.out
+311d0d85500f0c65945ebe5913f09d34a16293119c942b42eeaa854fbf85f71e  04-computation/lrc14_literal_fixed_sheet_allocation_thm2806.py
+a970776ed95128b5745c1fd370af768778b409d931a57b68006e04271e00813f  05-knowledge/results/lrc14_literal_fixed_sheet_allocation_thm2806.out
+f696867c5242e86593de64f3ee7944bf44a3887e7818291ed059c7358f959c1a  04-computation/lrc14_opposite_wing_common_atom_virtual_sector_audit_thm2782.py
+dependency_hashes=END
+universe=rail8;(physical_clock,sigma,tau)=(1,0,3);addresses=(3454614, 3454627, 4143978);central_indices=(0, 1, 53028);both_relative_safeties;target_root1;delayed_carry6;endpoint_origins=F13^2=169;certified_fields=2
+inheritance=THM2772_K4_requires_one_common_endpoint_atom;THM2807_supplies_the_address_triangle;THM2813_says_the_residue7_horn_is_fixed_and_needs_a_normal_jet;THM2820_separates_raw_common_support_from_target_only_endpoint_motion
+whole_cylinder_word=R-M-R;B=1-1-1;weight=27581135604;mass=60781651775958960/371293;coefficient=790161473087466480;whole_cylinder_translations=3/3
+canonical_target_unit_atoms=(((142082432180573, 142082432180574, 1),), ((142088047310093, 142088047310094, 1),), ((142004622528653, 142004622528654, 1),));canonical_source_unit_atoms=(((142082000247533, 142082000247534, 1),), ((142087615377053, 142087615377054, 1),), ((142004190595613, 142004190595614, 1),));unit_translations=3/3
+raw_carrier_twist_supports=(((0,), (0,)), ((0,), (0,)), ((0,), (0,)))
+six_factor_names=('E3', 'clock', 'q1', 'q2', 'c2', 'c3');source_signatures=((False, True, True, True, False, True), (True, True, True, True, True, True), (False, True, True, True, True, True));target_signatures=((True, True, True, True, True, True), (True, True, True, True, True, True), (True, True, True, True, True, True))
+first_typed_failure=n0_loses_(E3,c2);na_loses_E3_only;raw_source_carrier_is_present_at_all_three
+endpoint_support_rows_(address,field,left,right)=((3454614, 352341050142921841, 169, 169), (3454614, 956354278959359281, 169, 169), (3454627, 352341050142921841, 169, 169), (3454627, 956354278959359281, 169, 169), (4143978, 352341050142921841, 0, 169), (4143978, 956354278959359281, 0, 169))
+explicit_origin00_rows_(address,field,(left,right))=((3454614, 352341050142921841, (93139741941715911, 55846846208753388)), (3454614, 956354278959359281, (752032664919432295, 889340730416083895)), (3454627, 352341050142921841, (217164758098570837, 9366449861706094)), (3454627, 956354278959359281, (240770923428182654, 330542147584671122)), (4143978, 352341050142921841, (0, 199849486328444172)), (4143978, 956354278959359281, (0, 444326171470978060)))
+typed_origin00_K4_rows_(address,field,(Pbare,Ppresent,Qbare,Qpresent),(B,S,T,H),Hadamard)=((3454614, 352341050142921841, (0, 0, 21326900427950362, 55846846208753388), (0, 0, 0, 0), (0, 0, 0, 0)), (3454614, 956354278959359281, (0, 0, 85178147896779263, 889340730416083895), (0, 0, 0, 0), (0, 0, 0, 0)), (3454627, 352341050142921841, (4413454138046153, 217164758098570837, 121763848202179222, 9366449861706094), (85548272376494745, 33683794039955122, 33683794039955122, 56797376486599908), (209713236943004897, 28750895889894837, 28750895889894837, 74978060783184409)), (3454627, 956354278959359281, (260959167688296659, 240770923428182654, 471630802763287462, 330542147584671122), (499410453694649562, 38416188745742274, 38416188745742274, 76520805208084735), (652763636394218845, 422889648486564827, 422889648486564827, 499098881411249749)), (4143978, 352341050142921841, (0, 0, 131655971269321349, 199849486328444172), (0, 0, 0, 0), (0, 0, 0, 0)), (4143978, 956354278959359281, (0, 0, 38114555366559094, 444326171470978060), (0, 0, 0, 0), (0, 0, 0, 0)))
+middle_endpoint_fibre=all_169_left_and_right_origins_nonzero_in_both_fields;origin00_has_four_nonzero_central_allocation_states;raw_twist00_vector_is_flat_and_has_Mobius_face_zero
+outer_typed_current_fibres=empty;na_underlying_left_endpoint_bank=0_of_169_before_semantic_gating;target_R_cylinders_remain_positive
+target_endpoint_affine_covariances_(field,n0_to_nplus,nplus_to_na,n0_to_na)=((352341050142921841, (((0, 0), (0, 0), 85672738390772541),), (), ()), (956354278959359281, (((0, 0), (0, 0), 503393058368290190),), (), ()))
+full_depth_edge=nplus_to_na=Z2^4079;quotient_mod169_collapses_nplus_and_na;target_endpoint_affine_companion_on_vertical_edge=none_in_both_fields
+FIRST_MISSING_COORDINATE=a_typed_map_from_the_address_and_outer_rail_ancestry_sheet_to_one_common_(L,R,q,Delta)_endpoint_atom_that_transports_E3_and_the_endpoint_present_selector;R_is_not_a_source_allocation_absence_bit
+VERDICT=OUTCOME_2:middle_endpoint_fibre_present_but_outer_typed_endpoint_companions_and_the_Z2^4079_affine_lift_fail
+scope=canonical_unit_subatom_inside_each_THM3285_whole_cylinder;fixed_origin00_plus_complete_169_origin_support_and_affine_covariance_census;no_claim_against_arbitrary_new_couplings;no_root_Cech_map;no_row_exclusion;no_LRC14
+source_ast=(assert_nodes=0,float_literals=0)
+ALL EXACT CHECKS PASSED
