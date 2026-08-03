@@ -8,8 +8,9 @@ status: >
   2k-jet and its kth connection through the initial (2k+1)-jet.  Neither
   bound can be lowered: a one-coefficient Catalan deformation preserves every
   earlier input jet and every earlier pivot while changing the indicated
-  pivot or connection.  Thus the empirical floor(s/2) PRS depth is the sharp
-  information budget, although simultaneous nonvanishing remains open.
+  pivot or connection.  Thus floor(s/2) is the sharp universal
+  pseudo-division information budget, although simultaneous nonvanishing
+  remains open.
 source: root/multiscale-newton-flag/2026-08-02
 audit: >
   The exact companion pins THM-3192, checks the universal coefficient formula,
@@ -17,8 +18,9 @@ audit: >
   steps, and sharp pivot/connection deformations through ten steps.  It also
   verifies the leading-order perturbation recurrence coefficient by
   coefficient.  An independent audit rederived the ratio formula, locality
-  induction, Catalan orbit, exact terminal perturbations, and offset-six map;
-  normal and `-O` replay byte-match the stored output and both declared
+  induction, Catalan orbit, and exact terminal perturbations; it also detected
+  and repaired the raw-chain scaling omitted from the first version of `(25)`.
+  Normal and `-O` replay byte-match the stored output and both declared
   LF-normalized hashes.
 depends_on:
   - THM-3192-reciprocal-coefficient-jet-transfer-and-z-adic-pluecker-return
@@ -248,21 +250,27 @@ not division by a vanishing earlier pivot.
 
 ## 6. Exact explanation of the offset-six budget
 
-Apply `(10)` to THM-3192's reciprocal top jets.  After the standard `p`-unit
-row renormalizations used by its fraction-free PRS, the corresponding
-coordinates are
+Apply `(10)` to THM-3192's reciprocal top jets.  For the raw universal chain
+`mathcal R_(-1)=b`, `mathcal R_0=a`, its exact truncated identities and chart
+units give
 
 ```text
-P_2(a,b),  generating the H ideal, at Jet_2,
-P_2(r,a),  generating the J ideal, at Jet_4,
-P_1(s,r),  generating the K ideal, at Jet_5.                (25)
+Jet_3 E(a,b)=U_H Jet_3(r),       Jet_1 E(r,a)=U_J Jet_1(s),
+
+rho_1=P_2(a,b)=U_H r_3                         ~_p H,
+rho_2=U_H^2 P_2(r,a)=U_H^2 U_J s_2             ~_p J,
+chi_2=U_H^3 U_J P_1(s,r)=U_H^3 U_J U_K K       ~_p K.      (25)
 ```
 
-Thus the offset-six heights `2,4,5` are forced by the universal filtered
-operator; they are not accidental sizes in the symbolic formulas.  More
-generally, an available top jet of order `s` determines `rho_k` only for
-`k<=floor(s/2)`, and the Catalan family proves this ceiling is exact for the
-universal pseudo-division problem.
+Here `~_p` denotes equality up to a unit of `Z_(p)` for `p>=197`.  The extra
+powers of `U_H,U_J` record the fraction-free scaling of the raw chain:
+`E(cf,g)=c^2E(f,g)` and `P_1(cf,dg)=cdP_1(f,g)`.  All displayed `U` factors
+are p-units, so they change neither the chart ideals nor the offset-six
+heights `2,4,5`.  Those heights are forced by the universal filtered operator;
+they are not accidental sizes in the symbolic formulas.  More generally, an
+available top jet of order `s` can determine at most the first `floor(s/2)`
+pivots, and the Catalan family proves this ceiling is exact for the universal
+pseudo-division problem, not specifically inside the factorial-moment family.
 
 What remains open is geometric rather than local: a sufficient jet does not
 force its selected pivot to be nonzero, and `(9)` does not choose a surviving

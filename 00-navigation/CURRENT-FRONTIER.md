@@ -37,11 +37,10 @@ close projected `k=3` through `z_1=221`: cap `220`, ledger `373716`; next `289` 
 In the reflected gain graph, cap two forces the phase-zero triangle
 `(3/2)(4/3)=2`; by cap `7/3` it is interior and no full-cap component remains.
 The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`; the CSP chain closes
-`3m>=4D`. THM-3135 repairs `H2`. THM-3150/3156 give the body-`H` skeleton and
-`D<=100` law; THM-3171 closes fixed `H`, cell 90, and the cap-two family for
-  every `D>=6` and gcd cone. THM-3200 gives fixed-ray quasipolynomials; THM-3211
-  gives their Bernoulli-cubic limits, sharply `>=1/105` with three equality lanes.
-  Finite heads, other cells, the rung, and physical entry remain **OPEN**; not LRC(14).
+`3m>=4D`. THM-3135 repairs `H2`; THM-3150/3156 give the body-`H` skeleton.
+THM-3171 closes cell 90/cap two for every `D>=6` and gcd cone; THM-3200/3211
+give ray quasipolynomials, sharp floor `1/105`, signed `1/g`, and constant residue.
+Finite heads, other cells, the rung, and physical entry remain **OPEN**; not LRC(14).
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
 supplied-root seams, not semantic-root identification (kernel `28,393`).
@@ -191,9 +190,8 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   THM-3210 realizes a visible/invisible/invisible/visible rational window.
   THM-3206 keeps the complementary plane under heterogeneous blocks and makes
   its parabolic wall a binary-quadratic resultant. THM-3192 identifies the
-  offset-six `H,J,K` PRS charts. THM-3214 proves the sharp universal budget:
-  pivot `k` uses exactly `2k` coefficient jets and connection `k` exactly
-  `2k+1`; arbitrary-offset simultaneous nonvanishing is still open.
+  offset-six `H,J,K` charts; THM-3214 proves sharp universal pseudo-division
+  jet costs `2k`/`2k+1`. Factorial-family simultaneous nonvanishing is open.
 
 ### Live work
 
@@ -297,7 +295,7 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   `N\{1,4,6}` with dyadic frontier; local A014574 recurrence refuted at term
   `21`; and distinct ancestry FINITE-EXACT through center `10^8`, ALL-n OPEN.
 - THM-3056 gives hypergeometric supports; THM-3200/3211 split LRC rays into
-  Bernoulli bulk, residue modes, and heads. THM-3181 gives minimal join recurrences;
+  Bernoulli bulk, signed correction, periodic constant, and head. THM-3181 gives minimal join recurrences;
   THM-3202/3213 give a fast cyclic jet and normalized non-C-finite diagonals.
 - **EXACT identities / heuristic bridge:** corrected HYP-8820 puts caterer,
   cake, Moser, bagel, and Fibonacci in one Pascal array and proves
@@ -376,9 +374,9 @@ Classify profiles under support operations; study analytic continuation and auto
   cells; THM-3151 excludes every `(D,D)` cell and proves the balanced chart
   floor `N>=4D`. THM-3167 separates diagonal, constant-field and global-owner
   gates; no bounded marked jet decides the first. THM-3172 freezes the
-  differential-owner filtration for polynomial Keller owners. THM-3212 tests
-  all four heptic covers: every centered source has five forced Morse points;
-  its off-center unit clutch clears only a local gate. Chart entry and JC(2) stay open.
+  differential-owner filtration for Keller owners. THM-3212 gives five
+  centered Morse points; two local repairs each have `52` global Morse points.
+  New sources, chart entry, and JC(2) stay open.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2403`; all `50` seven-exit rows in
   `2201<=d<=2400` close independently, and exits close `d=2401..2405`.

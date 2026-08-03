@@ -4,11 +4,9 @@
 
 ## Separate observer type, recurrence class, and finite head
 
-**Trigger/action:** label an observer inverse/refuter/address; for a sequence,
-record evaluator, C-finite/P-recursive class, zero geometry, and bulk/residue/head
-separately. **Counterindication:** recurrences need not make zeros monotone;
-limits need not control heads; normalization can change C-finiteness. **Evidence:**
-THM-3172/3186/3210, THM-3200/3211, and THM-3202/3213.
+**Action/caution:** separate observer role, evaluator, C/P class, zeros, and
+bulk/residue/head; no column determines another. **Evidence:**
+THM-3172/3186/3210, THM-3200/3211, THM-3202/3213.
 
 ## Peel the distinguished prime, then force a small torsion collision
 

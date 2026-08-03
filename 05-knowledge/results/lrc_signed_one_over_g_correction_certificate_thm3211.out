@@ -1,0 +1,7 @@
+LRC SIGNED ONE-OVER-G CORRECTION CERTIFICATE
+counts={'channels': 1519, 'rays': 27342, 'positive': 15213, 'negative': 12129, 'zero': 0};record_sha256=1722a51c796d26b5dee6870ecc91a1b340f18296122b0e29f1867d4e1ac3cea6
+exact_residue_classes_Q_le_30=190786
+equality_corrections=((1, 2, Fraction(71, 264600)), (3, 1, Fraction(23, 12600)), (2, 3, Fraction(1, 5400)))
+hostile_correction=-8213/1411200;largest_abs_Q_le_100=(Fraction(8213, 1411200), 3, 5, 6, 1, Fraction(-8213, 1411200))
+mixed_sign_lanes=18
+FAILED_CHECKS=NONE

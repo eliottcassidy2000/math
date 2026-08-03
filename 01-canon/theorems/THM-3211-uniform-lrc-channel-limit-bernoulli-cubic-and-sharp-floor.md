@@ -8,18 +8,25 @@ status: >
   periodic-Bernoulli-cubic expression and is at least 1/105.  Equality occurs
   exactly for primitive channel (3,5) and ordered lanes (1,2), (3,1), and
   (2,3).  The three equality numerators have exact all-g quadratic closed
-  forms and approach 1/105 strictly from above.  A hostile lane has g=2 mass
-  2030/280393 below 1/105 but limit 17/1680 above it, so the limit theorem
-  does not replace finite heads, prove physical entry, or prove LRC(14).
+  forms and approach 1/105 strictly from above.  Every ray has an exact signed
+  1/g correction given by an endpoint overlap barycenter; all residue
+  dependence in the eventual numerator begins in the constant term.  Every
+  ordered lane realizes both correction signs.  A hostile lane approaches
+  17/1680 from below and has g=2 mass 2030/280393 below 1/105, so neither the
+  limit nor its correction replaces finite heads, proves physical entry, or
+  proves LRC(14).
 audit: >
   A dependency-free exact floor-sum engine agrees with the Bernoulli formula
   on 27,342 lanes through Q=100 and exhausts the only four primitive channels
   with PQ<=30.  A hash-pinned independent THM-3171 affine-branch engine proves
   the three equality-ray formulas after checking every residue branch and
   finite head.  Ordinary, optimized, and stored certificate transcripts are
-  byte-identical; both new scripts have no assert node.  The uniform limit,
+  byte-identical; all three maintained scripts have no assert node.  The uniform limit,
   Fourier/Bernoulli identity, large-PQ bound, and small-channel reduction are
-  proved analytically below rather than inferred from the finite audit.
+  proved analytically below rather than inferred from the finite audit.  A
+  second exact certificate checks the signed correction on all 27,342 rays
+  through Q=100 and the common residue-linear term on 190,786 states through
+  Q=30; its uniform statement follows from the corrector proof and THM-3200.
 source: root/frontier-synthesis-cont-2026-08-02
 depends_on:
   - THM-3171-global-high-channel-cell90-floor-and-all-width-uniform-two-star-law
@@ -32,6 +39,10 @@ script: 04-computation/lrc_uniform_channel_limit_bernoulli_certificate_thm3211.p
 output: 05-knowledge/results/lrc_uniform_channel_limit_bernoulli_certificate_thm3211.out
 script_sha256: e279ac590748c37083d151b018d38b713646f158d69070cba246f2075e5a7b13
 output_sha256: ae53bf9e1367f1dfbcb04305a2b89a8ddaf00da1c0cb3f988b448f102f4c7f9f
+correction_script: 04-computation/lrc_signed_one_over_g_correction_certificate_thm3211.py
+correction_output: 05-knowledge/results/lrc_signed_one_over_g_correction_certificate_thm3211.out
+correction_script_sha256: 275610333bda349a997c9a73c85709f50ee265f9a1746d037838fa2f773e1be6
+correction_output_sha256: 2b89b1ec33a457d15fe8441d16fe74705e0440d693feabe148387eba646f5218
 independent_engine_commit: 75d0c078d2c204b5fd37051e4fb2d2e1b64f286e
 independent_engine_sha256: d73273a4cf4b88bea2890e001166d96cb07dd9b61f3a248ff1538ec44579796a
 hash_basis: LF-normalized bytes
@@ -307,19 +318,116 @@ the quadratic growth is a single global mode.  This sharpens the universal
 `(E^M-1)^3` numerator recurrence of THM-3200 without making the normalized
 mass C-finite.
 
-## 8. Failure boundary and next test
+## 8. Signed first correction and constant-only residue modes
+
+For rational phases `alpha,beta`, define the centered static overlap
+barycenter
+
+```text
+B_(P,Q)(alpha,beta)
+ =integral_0^1 (x-1/2) chi(Px-alpha)chi(Qx-beta) dx.       (29)
+```
+
+Then every fixed admissible channel and ordered lane has the exact first
+correction
+
+```text
+c(P,Q;e,f):=lim_(g->infinity) g(I_g-L)
+ =B_(P,Q)((R+e)/168,(S+f)/168)
+  -B_(P,Q)(R/168,S/168),                                  (30)
+
+I_g=L+c/g+O_(P,Q,e,f)(g^-2).                              (31)
+```
+
+To prove `(30)`, put
+
+```text
+F(x,s)=chi(Px-(R+es)/168)chi(Qx-(S+fs)/168),
+bar F(s)=integral_0^1 F(x,s)dx.                            (32)
+```
+
+Let `G` be the one-periodic, x-mean-zero primitive with
+`partial_x G=F-bar F`.  The finite affine interval arrangement makes `G`
+Lipschitz and piecewise polynomial; its almost-everywhere `s` derivative is
+bounded and Riemann integrable.  The a.e. chain rule, periodicity, and integer
+`g` give
+
+```text
+g(I_g-L)=G(0,1)-G(0,0)
+          -integral_0^1 partial_s G(gt,t)dt.               (33)
+```
+
+Two-scale equidistribution sends the last integral to its torus mean, which
+is zero because `G` has x-mean zero.  With the explicit normalization
+
+```text
+G(x,s)=integral_0^x(F(u,s)-bar F(s))du
+       -integral_0^1 integral_0^v(F(u,s)-bar F(s))du dv,
+```
+
+one has `G(0,s)=B_(P,Q)((R+es)/168,(S+fs)/168)`.  This proves
+`(30)`.
+
+Now set
+
+```text
+d_2=168^2 P Q,                    d_1=-168(Pf+Qe).         (34)
+```
+
+THM-3200 makes `N_g` eventually quadratic on every residue modulo `M`.
+Comparing its ratio with `(30)` forces the linear coefficient on every
+residue to equal `d_2c+d_1L`.  Hence rational constants `kappa_r` exist such
+that, for all sufficiently large `g`,
+
+```text
+N_g=d_2L g^2+(d_2c+d_1L)g+kappa_(g mod M).                (35)
+```
+
+Dividing `(35)` by `z_gw_g=d_2g^2+d_1g+ef` proves the rate `(31)`.  It also
+sharpens `(28)` to
+
+```text
+(E-1)^2(E^M-1)N_g=0                                      (36)
+```
+
+eventually: every nontrivial root-of-unity mode has degree zero, not one.
+Equivalently, subtracting the displayed global quadratic and linear terms
+leaves an eventually `M`-periodic sequence.
+
+Formula `(29)` is terminating and rational.  Intersect the two finite
+interval combs in `[0,1]`; each overlap component `[ell,r]` contributes
+
+```text
+((r-1/2)^2-(ell-1/2)^2)/2.                               (37)
+```
+
+The three equality rays and the canonical hostile have
+
+```text
+c(3,5;1,2)=71/264600,      c(3,5;3,1)=23/12600,
+c(3,5;2,3)=1/5400,         c(3,5;6,1)=-8213/1411200.      (38)
+```
+
+Thus the equality rays approach `1/105` from above, while the hostile
+approaches `17/1680` from below.  Exact witnesses of both signs occur in each
+of the eighteen ordered lanes.  Therefore lane and orientation alone do not
+classify the correction; the phase-dependent barycenter `(30)` is the missing
+sidecar.  The certificate's absence of a zero through `Q<=100` is
+**FINITE-EXACT only**, not a global nonvanishing theorem.
+
+## 9. Failure boundary and next test
 
 The lane
 
 ```text
-(P,Q;e,f;g)=(3,5;6,1;2)                                  (29)
+(P,Q;e,f;g)=(3,5;6,1;2)                                  (39)
 ```
 
 is the required hostile control:
 
 ```text
 I_2=2030/280393 < 1/105,
-lim I_g=17/1680 > 1/105.                                  (30)
+lim I_g=17/1680 > 1/105.                                  (40)
 ```
 
 Hence a proof may use `(21)` to classify tails or equality modes, but may not
@@ -327,11 +435,11 @@ replace a finite physical head by its limit.  The finite period scout in the
 certificate for `(P,Q;e,f)=(Q-1,Q;12,1)`, `5<=Q<=30`, is **FINITE-EXACT only**;
 it does not prove that minimal periods are unbounded.
 
-The next lawful experiment is to classify the signed `1/g` correction (and
-its residue dependence) for all eighteen lanes.  That can separate rays that
-approach `(21)` from above from finite hostile heads approaching from below,
-while retaining THM-3171's exact head certificate.  Nothing here establishes
-physical survivor entry, another reflected cell, the rung, or `LRC(14)`.
+The signed correction and residue-linear term are now classified.  The next
+lawful experiments are to determine the zero/sign chambers of `(30)`, retain
+the periodic constants and exact finite heads, and test the mechanism in a
+different reflected cell.  Nothing here establishes physical survivor entry,
+the rung, or `LRC(14)`.
 
 ## Exact reproduction
 
@@ -340,11 +448,14 @@ Run
 ```text
 python3 04-computation/lrc_uniform_channel_limit_bernoulli_certificate_thm3211.py
 python3 -O 04-computation/lrc_uniform_channel_limit_bernoulli_certificate_thm3211.py
+python3 04-computation/lrc_signed_one_over_g_correction_certificate_thm3211.py
+python3 -O 04-computation/lrc_signed_one_over_g_correction_certificate_thm3211.py
 ```
 
-Both modes must reproduce the declared output byte for byte.  The new engine
+Both mode pairs must reproduce their declared outputs byte for byte.  The engine
 uses exact integer floor sums and rational arithmetic.  The certificate uses
 explicit exceptions rather than `assert`, hash-pins its independent historical
 engine, and labels its finite period scout separately from the proved theorem.
-QED for sections 1--5 and 7; section 6 is verified-exact in its stated infinite
-integer universe.
+The correction companion imports the same exact engine and uses no floating
+point or random choices.  QED for sections 1--5 and 7--9; section 6 is
+verified-exact in its stated infinite integer universe.

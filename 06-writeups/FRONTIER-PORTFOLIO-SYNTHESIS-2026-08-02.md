@@ -21,9 +21,11 @@ structural tools, with later exact audits promoted directly into the map below.
    rational OGF; the normalized mass is residue-wise rational and generically
    not C-finite.  THM-3211 identifies every channel's common-dilation limit by
    a periodic Bernoulli cubic and proves the sharp uniform floor `1/105`, with
-   exactly three primitive-`3:5` equality lanes.  Those lanes approach from
-   above, while a certified finite hostile lies below the limit floor, so
-   periods, convergence, and finite heads still need their sidecars.
+   exactly three primitive-`3:5` equality lanes.  Its endpoint-barycenter
+   formula now gives the signed `1/g` correction on every ray: those equality
+   lanes approach from above, the canonical hostile approaches from below,
+   and every lane realizes both signs.  Residue dependence begins only in the
+   eventual constant term, while finite heads still need their sidecars.
    Independently, THM-3207 now lowers the projected `k=3` cap to `220`.
 2. For the **planar Jacobian response lane**, THM-3151 excludes every balanced
    `(D,D)` Faber cell and proves the chart floor `N>=4D`; THM-3167 separates
@@ -36,8 +38,10 @@ structural tools, with later exact audits promoted directly into the map below.
    into one exact minimal-polynomial divisibility test.  THM-3212 then applies
    a genuine source lift to all four THM-3123 heptic covers: every canonical
    centered source has five forced Morse critical points.  The off-center
-   residue clutch identifies exactly how to remove those five local points,
-   but does not supply a mate, the remaining fluxes, or `JC(2)`.
+   residue clutch removes those five local points, but exact global saturation
+   finds 52 reduced Morse points away from `ST`; the nearest adjacent control
+   has the same degree-52 obstruction.  Neither supplies the marked inverse
+   pair required by the owner filtration, a mate, or `JC(2)`.
 3. For **quadratic factorial windows**, the prime/prime-power exits at offsets
    `0..6` now compose with THM-3152's first Euclidean flag. THM-3180 closes
    all `79` six-exit rows in `2001<=d<=2200`; THM-3201 closes all `50`
@@ -54,9 +58,11 @@ structural tools, with later exact audits promoted directly into the map below.
    selected amplitude can cancel while a complementary chart survives, and
    normalizes its continuant to a D-finite OGF.  The full selected visibility
    tail has a cleared order-three P-recursive law and is linearly evaluable for
-   fixed parameters.  THM-3192 now supplies the missing reciprocal map for the
-   offset-six PRS: `H,J,K` are literal top-jet Pluecker charts.  THM-3206 keeps
-   the complementary plane under heterogeneous blocks.  THM-3210 then
+   fixed parameters.  THM-3192 supplies the reciprocal map for the offset-six
+   PRS: `H,J,K` are top-jet Pluecker charts up to explicit units.  THM-3214
+   proves the sharp universal pseudo-division budget: pivot `k` needs exactly
+   `2k` jets and connection `k` exactly `2k+1`.  THM-3206 keeps the complementary
+   plane under heterogeneous blocks.  THM-3210 then
    finds the rational ray `d=n+4`, `v=(n+3)/(3(n+4)(2n+5))`, where the exact
    profile is visible/invisible/invisible/visible: visibility is nonmonotone
    even though its whole sequence has a closed recurrence.  Arbitrary-offset
@@ -103,9 +109,9 @@ with exact failure mechanisms and cheap next tests.
 |---|---|---|---|
 | LRC(14), grid response | [THM-3130](../01-canon/theorems/THM-3130-divisor-antichain-totient-response-and-supermodular-witness-loss.md) | principal totient-tail product, antichain inclusion--exclusion, decreasing supermodular insertion loss, divisor-death barcode | fixed grid is not the continuous loneliness profile; normalized upward transport fails at `q=6` |
 | LRC(14), projected `k=3` | THM-3113/3114/3139/3174/3207 | projected layers close through `z1=221`; cap `220`, ledger `373716` | next `289` rows; arbitrary `k<=1`, the rung, and LRC(14) remain open |
-| LRC(14), reflected levels | [THM-3135](../01-canon/theorems/THM-3135-directed-cycle-weak-order-lane-cover-and-reflected-h-boundary.md), [THM-3171](../01-canon/theorems/THM-3171-global-high-channel-cell90-floor-and-all-width-uniform-two-star-law.md), [THM-3200](../01-canon/theorems/THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary.md), [THM-3211](../01-canon/theorems/THM-3211-uniform-lrc-channel-limit-bernoulli-cubic-and-sharp-floor.md) | exact cycle/DAG boundary; an all-width cell-90 theorem; fixed-channel residue quadratics; and a sharp Bernoulli-cubic limit floor `1/105` | a finite hostile lies below the limit floor; periods and stabilization are not uniform; other cells, the rung, and physical entry remain open |
-| planar Jacobian response | [THM-3151](../01-canon/theorems/THM-3151-resonant-odd-bipole-equality-cell-nonentry-and-degree-floor.md), [THM-3167](../01-canon/theorems/THM-3167-inverse-different-three-gate-target-shear-descent-and-full-marked-jet-no-go.md), [THM-3172](../01-canon/theorems/THM-3172-shear-invariant-differential-owner-filtration-and-transverse-recurrence.md), [THM-3212](../01-canon/theorems/THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch.md) | every balanced equality cell is excluded; owner/constant-field/diagonal gates are separated; the differential-owner filtration gives a one-jet unit obstruction; and the canonical heptic centered lift has five forced Morse critical points | audit the off-center unit clutch away from `g=ST` and the remaining Faber fluxes; general chart entry and `JC(2)` stay open |
-| factorial, exact quadratics | [THM-3180](../01-canon/theorems/THM-3180-six-exit-factorial-newton-euclidean-closure-through-r2198.md), [THM-3201](../01-canon/theorems/THM-3201-seven-exit-factorial-newton-euclidean-closure-through-r2403.md), [THM-3186](../01-canon/theorems/THM-3186-full-exterior-continuant-path-convolution-and-cancellation-wall.md), [THM-3192](../01-canon/theorems/THM-3192-reciprocal-coefficient-jet-transfer-and-z-adic-pluecker-return.md), [THM-3210](../01-canon/theorems/THM-3210-factorial-exterior-double-cancellation-ray-and-two-step-invisible-window.md) | exact-support `{0,1,2}` closes through `r=2403`; the exterior tail is P-recursive; reciprocal reversal identifies the offset-six `H,J,K` PRS charts; visibility still has a two-step nonmonotone window | first unaudited `r=2404,d=2406`; arbitrary-offset simultaneous chart selection, translated supports, and `FC(3)` remain open |
+| LRC(14), reflected levels | [THM-3135](../01-canon/theorems/THM-3135-directed-cycle-weak-order-lane-cover-and-reflected-h-boundary.md), [THM-3171](../01-canon/theorems/THM-3171-global-high-channel-cell90-floor-and-all-width-uniform-two-star-law.md), [THM-3200](../01-canon/theorems/THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary.md), [THM-3211](../01-canon/theorems/THM-3211-uniform-lrc-channel-limit-bernoulli-cubic-and-sharp-floor.md) | exact cycle/DAG boundary; all-width cell-90 theorem; sharp `1/105` bulk; exact signed `1/g` barycenter; residue modes only in the constant term | finite heads, periodic constants, other cells, the rung, and physical entry remain open |
+| planar Jacobian response | [THM-3151](../01-canon/theorems/THM-3151-resonant-odd-bipole-equality-cell-nonentry-and-degree-floor.md), [THM-3167](../01-canon/theorems/THM-3167-inverse-different-three-gate-target-shear-descent-and-full-marked-jet-no-go.md), [THM-3172](../01-canon/theorems/THM-3172-shear-invariant-differential-owner-filtration-and-transverse-recurrence.md), [THM-3212](../01-canon/theorems/THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch.md) | every balanced equality cell is excluded; owner/constant-field/diagonal gates are separated; centered heptic lifts have five forced Morse points; two local off-center repairs each have exactly 52 global Morse points | search a genuinely different source lift; retain every Faber flux; use `B_1` only after a marked inverse pair; `JC(2)` stays open |
+| factorial, exact quadratics | [THM-3180](../01-canon/theorems/THM-3180-six-exit-factorial-newton-euclidean-closure-through-r2198.md), [THM-3201](../01-canon/theorems/THM-3201-seven-exit-factorial-newton-euclidean-closure-through-r2403.md), [THM-3186](../01-canon/theorems/THM-3186-full-exterior-continuant-path-convolution-and-cancellation-wall.md), [THM-3192](../01-canon/theorems/THM-3192-reciprocal-coefficient-jet-transfer-and-z-adic-pluecker-return.md), [THM-3214](../01-canon/theorems/THM-3214-two-jet-pseudo-division-locality-and-catalan-sharpness.md), [THM-3210](../01-canon/theorems/THM-3210-factorial-exterior-double-cancellation-ray-and-two-step-invisible-window.md) | exact-support `{0,1,2}` closes through `r=2403`; the tail is P-recursive; universal reciprocal pseudo-division has the sharp `2k`/`2k+1` jet budget; visibility still has a two-step nonmonotone window | first unaudited `r=2404,d=2406`; simultaneous chart nonvanishing in the factorial family, translated supports, and `FC(3)` remain open |
 | factorial, sparse `FC(3)` | [THM-3125](../01-canon/theorems/THM-3125-monomial-ray-first-window-factorial-closure-in-three-variables.md) | genuine anchored three-variable monomial-ray subclass via positive Gamma layers | translated rays, off-ray supports, shifted windows, full `FC(3)`/`SFC(3)` |
 | tournaments | [THM-3134](../01-canon/theorems/THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform.md), [THM-3181](../01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md), [THM-3202](../01-canon/theorems/THM-3202-c3-repeated-join-moving-jet-formula-and-cfinite-obstruction.md), [THM-3213](../01-canon/theorems/THM-3213-tournament-normalized-cyclic-diagonal-and-fast-moving-jet-transform.md) | endpoint-jet dictionary; minimal join recurrences; a one-product fast cyclic jet; exact transitive diagonals; every fixed-quotient factorial normalization is non-C-finite | cyclic substitution still consumes the complete moving jet; P-recursive status, quotient state width, SCC order, and growing output depth remain open |
 | modular congruence shadow | [THM-3141](../01-canon/theorems/THM-3141-quartic-v4-modular-congruence-shadow-and-gamma3-sidecar-boundary.md) | pointed `V4` frame gives exactly `PSL_2(F3)=A4`; `(SR)^3=T^3` is the first lost modular word; rooted ternary input is separately forgotten | build a `Gamma(3)`/Farey lift on one common physical carrier; no faithful modular action or JC/LRC transfer yet |
@@ -282,14 +288,29 @@ Their cleared numerators are respectively
 
 so all three approach the floor strictly from above.  Conversely the hostile
 `(3,5;6,1;g=2)` has mass `2030/280393<1/105` but limit `17/1680>1/105`.
-This cleanly separates bulk, residue modes, and finite head: the limit is a
-classification tool, not a substitute for the exact physical head.
+For every ray, THM-3211 now gives the exact first correction
 
-Combining the limit with THM-3200 also identifies the common quadratic
-coefficient on every residue.  After subtracting
-`168^2PQL g^2`, the cleared numerator is only degree-one quasipolynomial and
-is annihilated by `(E^|C|-1)^2`.  The nontrivial roots-of-unity modes therefore
-carry at most a linear jet; all quadratic growth belongs to the global mode.
+```text
+c=B_(P,Q)((R+e)/168,(S+f)/168)-B_(P,Q)(R/168,S/168),
+B_(P,Q)(a,b)=integral_0^1(x-1/2)chi(Px-a)chi(Qx-b)dx.
+```
+
+The equality corrections are `71/264600,23/12600,1/5400`, while the hostile
+correction is `-8213/1411200`.  Exact witnesses of both signs occur in every
+ordered lane, so orientation alone loses the phase barycenter.  This cleanly
+separates bulk, signed convergence, residue modes, and finite head.
+
+Combining the correction with THM-3200 identifies both the common quadratic
+and common linear coefficient on every residue.  If
+`d2=168^2PQ,d1=-168(Pf+Qe),M=|C|`, then eventually
+
+```text
+N_g=d2 L g^2+(d2 c+d1 L)g+kappa_(g mod M),
+(E-1)^2(E^M-1)N_g=0.
+```
+
+Every nontrivial root-of-unity mode is constant; all quadratic and linear
+growth belongs to the global mode.  Periodic constants and finite heads remain.
 
 ### 3. The planar-JC simple-zero wall is empty
 
@@ -391,10 +412,23 @@ P=(Vz^2+Bz+C_0)^2+A_src z+E_0,
 
 a unit `B mod g` leaves one candidate point per fibre, and all five disappear
 exactly when `B E_0'-A_src'C_0` is also a unit modulo `g`.  The control
-`(B,C_0,E_0)=(1,0,x)` clears this local gate but may fail elsewhere and changes
-the Faber coordinates to `d_F=-1/(4V), s_F=G/2-x`.  The next honest experiment
-is therefore a global critical/flux/owner-ring audit of that off-center
-control, not another centered `E_0` scan.
+`(B,C_0,E_0)=(1,0,x)` clears this local gate, but on `V!=0` its gradient is
+equivalent after `y=Vz` to
+
+```text
+4y^3+6y^2+2y+VA_src=0,
+V^3+V^2y-V'y^2(y+1)=0.
+```
+
+Exact saturation in both accessory algebras leaves a squarefree degree-52
+resultant coprime to `V`.  Thus every one of the four covers has exactly 52
+away-`g` Morse critical points.  The adjacent control `(1,1,x)` also clears
+its local clutch `1-A_src'` and has the same degree-52 obstruction.  This is
+the first failed implication: local clutch unit does not imply global source
+viability.  Neither control may be fed to THM-3172's `B_1`, which requires a
+complete marked inverse pair; their critical points preclude any Keller mate.
+The next honest experiment needs a genuinely different source lift while
+retaining the formal Faber fluxes, not another centered or constant-clutch scan.
 
 ### 4. Factorial resonances separate by slopes or an exact syzygy
 
@@ -492,7 +526,11 @@ offset-six factors `H,J,K` are exactly two Toeplitz Pluecker charts and one
 wedge chart, up to explicit units.  THM-3206 separately proves that
 heterogeneous exterior blocks retain one common two-plane and carry a genuine
 `PGL_2` reflection holonomy inside it.  These theorems identify the carrier
-and charts; they do not prove simultaneous nonvanishing for arbitrary offsets.
+and charts.  THM-3214 then proves the universal locality law
+`Jet_(h+2k)(F,G) -> Jet_h(R_k)`: pivot `k` consumes exactly `2k` input jets
+and connection `k` exactly `2k+1`.  Catalan one-coefficient deformations make
+both bounds sharp while keeping all earlier pivots regular.  The remaining
+gap is simultaneous nonvanishing, not an unknown information budget.
 
 ### 5. Tournament profiles are endpoint jets
 
@@ -735,8 +773,8 @@ zero/extremal geometry, and finite-head behavior are not interchangeable:
 
 | lane | exact evaluator / bulk law | recurrence boundary | separate hostile geometry |
 |---|---|---|---|
-| factorial exterior visibility | normalized continuant and differential OGF | order-three P-recursive law; THM-3192 identifies the offset-six PRS charts only | THM-3210 is visible/invisible/invisible/visible on one rational ray |
-| reflected LRC channel | residue quadratics plus Bernoulli-cubic limit | cleared numerator quasipolynomial; normalized mass generically not C-finite | equality tails approach `1/105` from above; one finite head lies below it |
+| factorial exterior visibility | normalized continuant and differential OGF | order-three P-recursive law does not determine the zero set | THM-3214 gives the sharp `2k`/`2k+1` jet budget, while THM-3210 is visible/invisible/invisible/visible |
+| reflected LRC channel | Bernoulli-cubic bulk plus endpoint barycenter correction | global quadratic/linear part plus periodic constant; normalized mass generically not C-finite | every lane has both correction signs; one finite head still lies below the limit floor |
 | cyclic tournament diagonal | one-product moving jet and smooth diagonal | both factorial-normalized sequences are not C-finite at every fixed depth; P-recursiveness open | scalar `H` loses the jet; prime shifts add `p^q` for every fixed quotient and depth |
 
 The reusable audit is
@@ -755,11 +793,11 @@ imply a fixed closed form.
 | niche problem | current status | decisive evidence | next move |
 |---|---|---|---|
 | Fixed cell-90 two-star for `H` | **PROVED, fixed-family only** | THM-3171 closes every `D>=6` and gcd cone; one sharp weak edge forces three regular companions | transfer the mechanism to another cell or prove physical entry; do not call it LRC(14) |
-| Fixed LRC dilation sequence | **PROVED + VERIFIED-EXACT** | [THM-3200](../01-canon/theorems/THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary.md) gives residue quadratics; [THM-3211](../01-canon/theorems/THM-3211-uniform-lrc-channel-limit-bernoulli-cubic-and-sharp-floor.md) gives the Bernoulli-cubic bulk, sharp floor, three closed equality rays, and a finite-head hostile | classify the signed `1/g` residue correction; keep exact heads; control growing periods across primitive channels |
+| Fixed LRC dilation sequence | **PROVED + VERIFIED-EXACT** | [THM-3200](../01-canon/theorems/THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary.md) gives residue quadratics; [THM-3211](../01-canon/theorems/THM-3211-uniform-lrc-channel-limit-bernoulli-cubic-and-sharp-floor.md) gives the sharp bulk, exact signed `1/g` barycenter, and constant-only residue modes | classify zero/sign chambers and periodic constants; keep exact heads; control growing periods across primitive channels |
 | Projected `k=3` descent | **PROVED + VERIFIED-EXACT** | THM-3113/3114/3139/3174/3207 lower the cap through `z1=221`, giving cap `220` | continue the exact next wall without inferring physical-cover counts |
 | Residual quadratic factorial resonance | **CLOSED through `r=2403`** | [THM-3180](../01-canon/theorems/THM-3180-six-exit-factorial-newton-euclidean-closure-through-r2198.md) closes `79` six-exit rows and [THM-3201](../01-canon/theorems/THM-3201-seven-exit-factorial-newton-euclidean-closure-through-r2403.md) closes `50` seven-exit rows by independent multi-prime flags | begin at `r=2404,d=2406`; change observer only on an actual survivor |
-| Factorial exterior visibility sequence | **PROVED + INDEPENDENTLY AUDITED** | [THM-3186](../01-canon/theorems/THM-3186-full-exterior-continuant-path-convolution-and-cancellation-wall.md) gives the differential OGF; [THM-3192](../01-canon/theorems/THM-3192-reciprocal-coefficient-jet-transfer-and-z-adic-pluecker-return.md) identifies offset-six `H,J,K`; [THM-3210](../01-canon/theorems/THM-3210-factorial-exterior-double-cancellation-ray-and-two-step-invisible-window.md) gives a two-step invisible ray and return | extend the chart map beyond offset six and solve simultaneous selection; never infer monotone visibility from graph distance |
-| Differential owner for planar JC | **PROVED gate + centered heptic exclusion / JC OPEN** | THM-3172 freezes polynomial owners; [THM-3212](../01-canon/theorems/THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch.md) gives five forced Morse points for every centered heptic lift and the exact off-center residue clutch | audit `(B,C_0,E_0)=(1,0,x)` globally away from `ST`, then apply `B_1` and remaining fluxes only to a survivor |
+| Factorial exterior visibility sequence | **PROVED + INDEPENDENTLY AUDITED** | [THM-3186](../01-canon/theorems/THM-3186-full-exterior-continuant-path-convolution-and-cancellation-wall.md) gives the differential OGF; [THM-3192](../01-canon/theorems/THM-3192-reciprocal-coefficient-jet-transfer-and-z-adic-pluecker-return.md) identifies offset-six `H,J,K`; [THM-3214](../01-canon/theorems/THM-3214-two-jet-pseudo-division-locality-and-catalan-sharpness.md) proves the sharp universal pseudo-division jet budget; [THM-3210](../01-canon/theorems/THM-3210-factorial-exterior-double-cancellation-ray-and-two-step-invisible-window.md) gives a two-step invisible ray and return | solve simultaneous chart nonvanishing inside the factorial family; never infer monotone visibility from graph distance |
+| Differential owner for planar JC | **PROVED gate + heptic source exclusions / JC OPEN** | THM-3172 freezes polynomial owners; [THM-3212](../01-canon/theorems/THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch.md) gives five forced centered points and exactly 52 global Morse points for each of two local off-center repairs | vary the source beyond constant clutch controls, retain every Faber flux, and apply `B_1` only after a complete marked inverse pair survives |
 | Tournament closed forms | **PROVED join law + fast cyclic boundary** | [THM-3181](../01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md) gives the minimal triangular recurrence; [THM-3213](../01-canon/theorems/THM-3213-tournament-normalized-cyclic-diagonal-and-fast-moving-jet-transform.md) gives the one-product jet, exact diagonal asymptotic, all-depth normalized non-C-finiteness, and a quotient-wide `p^q` obstruction | decide P-recursiveness; retain the full jet and measure state width for growing quotients/depths |
 | Common `C2*C3` carrier for quartic lifts and tournament substitution | **PROVED CONGRUENCE SHADOW / FAITHFUL LIFT OPEN** | THM-3141 identifies `PSL_2(F3)`, first relation `(SR)^3`, and the separately forgotten cyclic root | add rooted triple, `Gamma(3)`/Farey coordinate, and a common physical atom |
 | Positive Young selector after signed forest lift | **PROVED FINITE CHAMBER / GLOBAL OPEN** | THM-3137 gives `24` support-two laws through degree nine, then exact degree-ten and cross-support Farkas death | classify mixed-depth persistence without calling it an original-response decomposition |
@@ -771,9 +809,9 @@ imply a fixed closed form.
 1. Treat THM-3171's all-width cell-90 result as a completed local certificate.
    The next semantic target is another cell, the rung, or a proof that the
    physical residual enters this family--not a wider scan of the same rays.
-2. Use THM-3211's Bernoulli bulk plus THM-3200's residue quadratics to replace
-   every dilation scan.  Classify the signed `1/g` correction and retain exact
-   heads; the `g=2` hostile forbids a limit-only floor argument.
+2. Use THM-3211's Bernoulli bulk and endpoint barycenter to replace every
+   dilation scan.  Classify zero/sign chambers and periodic constants while
+   retaining exact heads; the `g=2` hostile forbids a tail-only floor argument.
 3. Continue the projected `k=3` cap descent with exact wall universes and
    certificate-free semantic hashes; never read it as a physical-cover census.
 
@@ -784,18 +822,18 @@ imply a fixed closed form.
    independent lower hull.  Do not spend a new prime or row before a survivor.
 2. On any survivor, retain the full progressive degree trace and shared face;
    then choose a second Euclidean row, residual polynomial, or new place.
-3. Use THM-3186's linear-time tail and THM-3192's reciprocal top-jet map on the
-   offset-six `H,J,K` charts.  The next structural task is arbitrary-offset
-   simultaneous selection; THM-3210 forbids assuming visibility is monotone.
+3. Use THM-3186's linear-time tail, THM-3192's reciprocal top-jet map, and
+   THM-3214's sharp `2k`/`2k+1` budget.  The next structural task is
+   simultaneous chart selection; THM-3210 forbids assuming visibility is
+   monotone.
 
 ### Wildcard -- planar Jacobian
 
-1. Treat the centered THM-3123 lift as closed by THM-3212.  For the off-center
-   control `(B,C_0,E_0)=(1,0,x)`, compute the full critical resultant away from
-   `g=ST` and audit the changed Faber coordinates and remaining fluxes.
-2. Only if that control survives, build THM-3172's `B_1` with every
-   conductor/Jelonek denominator retained; print a certified unit, idempotent,
-   or surviving owner order.
+1. Treat the centered lift and constant controls `(1,0,x),(1,1,x)` as closed
+   by THM-3212's five-point and degree-52 Morse obstructions.  Search a source
+   deformation that changes the global resultant mechanism, not only `Delta_B`.
+2. Retain every Faber flux.  Only after a complete marked inverse pair survives
+   may THM-3172's `B_1` be built with conductor/Jelonek denominators retained.
 3. Apply the transverse `A_n` divisibility recurrence only after a genuine
    monic polynomial-Keller source lift; an abstract response does not define
    its inverse minimal polynomial.

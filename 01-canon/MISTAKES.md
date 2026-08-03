@@ -22,10 +22,12 @@ Format per entry:
   chart ideals nor the `2,4,5` jet-locality budget, and the universal locality
   and Catalan sharpness statements never use the mistaken literal equality.
 - **Repair:** state `(25)` after the standard `p`-unit row renormalizations and
-  identify the three canonical `P_2/P_1` coordinates by their generated ideals
-  and jet orders.  When comparing a homogeneous fraction-free recurrence with
-  a normalized PRS atlas, track the row gauge before asserting equality;
-  equality of principal ideals is not equality of raw representatives.
+  display the raw scales
+  `rho_2=U_H^2P_2(r,a)` and `chi_2=U_H^3U_JP_1(s,r)`, then identify the
+  normalized coordinates by their generated ideals and jet orders.  Equality
+  of principal ideals is not equality of raw representatives.  Catalan
+  sharpness is universal pseudo-division sharpness, not necessity inside the
+  thinner factorial-moment family.
 
 ## MISTAKE-359 (2026-08-02, THM-3183 top-jet evidence) -- an exact symbolic helper admitted a float and constructed two truncated rows without their predecessors
 
