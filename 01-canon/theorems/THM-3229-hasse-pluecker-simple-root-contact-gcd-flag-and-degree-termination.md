@@ -2,7 +2,7 @@
 id: THM-3229
 title: "Hasse--Pluecker simple-root contact gcd flag and degree termination"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For two polynomials, the Hasse--Pluecker numerators
   Omega_m=f^[m]g'-g^[m]f' cut the derivative-normalized contact order at
   every common simple root, with the exact THM-3221 orientation
@@ -22,7 +22,11 @@ audit: >
   bounds and constant-scaling laws, the proportional boundary, the F3
   x versus x+x^3 Hasse-only third contact, and the multiple-root saturation
   boundary.  Normal/-O/stored replay agrees with the LF-normalized hashes
-  below.  Independent immutable audit is pending.
+  below.  An independent immutable audit rederived the Hasse--Pluecker
+  orientation and degree bound, the squarefree simple-root saturation, every
+  nested gcd stratum, and degree-bound termination.  It also checked the
+  proportional, multiple-root, and small-characteristic boundaries and
+  accepted both exact replays and the pinned hashes.
 depends_on:
   - THM-3221-selected-root-osculating-separation-and-minimal-jet-prime-carry
 related:
@@ -39,8 +43,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3229 -- Hasse--Pluecker simple-root contact gcd flag and degree termination
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT
-PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3221 proves that a selected common simple root has a canonical first
 separating normalized coefficient.  The missing elimination question is
@@ -327,4 +330,4 @@ Ordinary and optimized runs byte-match
 
 and the LF-normalized hashes are pinned in the frontmatter.
 
-QED, conditional only on independent immutable audit for status promotion.
+QED.
