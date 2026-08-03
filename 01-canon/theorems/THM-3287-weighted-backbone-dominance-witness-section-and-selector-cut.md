@@ -2,7 +2,7 @@
 id: THM-3287
 title: "Weighted-backbone dominance witness section and selector cut"
 status: >
-  RESERVED / PROVISIONAL CANDIDATE UNDER INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the canonically weighted support-(1,3), bank-I2 response core, orient
   every maximizing clutch witness from its large-ratio trap state to its
   small-ratio trap state.  Every oriented simple path in THM-3277's
@@ -12,11 +12,12 @@ status: >
   edge and realizes THM-3278's selector cut as the exact response-sign cut;
   an explicit positive integral blend is trapped there on every core edge
   and on all twelve rows.  This is a static dominance section, not a
-  chronological response composition.  The statement remains outside the
-  proved dependency graph until its independent audit lands.
+  chronological response composition.  A separate direct-sign hostile audit
+  reconstructs the response bank, relations, sections, path hostiles and
+  transition boundary without importing the primary companion.
 source: root/creative-synthesis-recover/2026-08-03
 audit: >
-  The exact candidate companion rebuilds all eleven reset-link states and 22
+  The exact primary companion rebuilds all eleven reset-link states and 22
   response rows directly from THM-3238's coefficient formulas; reconstructs
   every clutch maximum and oriented witness relation; reverses every edge as
   an orientation control; enumerates all simple paths in the backbone,
@@ -24,9 +25,16 @@ audit: >
   replays THM-3277's fourteen phase minima; checks the common Q+{4} witness,
   selector-sign cut, primitive integral blends and canonical nonlift; and
   verifies that all physical Q-directed link transitions instead end at Q.
-  Normal, optimized and stored outputs agree, and the source has zero
-  assertion nodes and zero floating literals.  A separate hostile audit is
-  still required before promotion.
+  The independent hostile audit imports neither the primary companion nor its
+  relation bank: it builds the reset link by admissible add/delete operations,
+  solves every source-blend inequality directly in both orientations, verifies
+  reciprocal endpoint bounds, and independently reproduces the relation,
+  path, section, Q+{4}, selector-cut, equal-margin and hostile censuses.  It
+  strengthens the chronology no-go: the eighteen distinct dominance arrows
+  across both orientations all have count-vector L1 distance two, whereas a
+  physical one-pole arrow has distance one and every Q-directed link arrow
+  ends at Q.  Both implementations agree in normal, optimized and stored mode
+  and contain no assertion node or floating literal.
 depends_on:
   - THM-3254-first-shell-two-row-clutch-and-graded-gauge-no-go
   - THM-3269-scale-invariant-clutch-strength-and-canonical-weighted-bispanning-polarization
@@ -39,16 +47,20 @@ script: 04-computation/gmc_backbone_maximizing_witness_section_scout_20260803.py
 output: 05-knowledge/results/gmc_backbone_maximizing_witness_section_scout_20260803.out
 script_sha256: aed89d67ec7acabfe5b4feae4a83f7c57b78053928be44a6cc319d81fa4a9cc6
 output_sha256: 89200bc6cff7284dd33f636352f4f7f56294d90bcd2902fa96092d9f967f5fe3
+independent_audit_script: 04-computation/gmc_backbone_maximizing_witness_section_independent_audit_20260803.py
+independent_audit_output: 05-knowledge/results/gmc_backbone_maximizing_witness_section_independent_audit_20260803.out
+independent_audit_script_sha256: bab55f108a2dd1695465b4195b6565b15c8b8646028ebe756972ea0230621a98
+independent_audit_output_sha256: 123ddb9ed988907fd758e6470c1474eaa36c5d52e394ea6efb42d9d114cdf332
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3287 -- weighted-backbone dominance witness section and selector cut
 
-**RESERVED / PROVISIONAL CANDIDATE UNDER INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-The exact candidate and its primary replay are complete.  Nothing in this
-file is a proved dependency until a separate hostile audit checks the witness
-typing, path universe, common-state sign cut and chronological boundary.
+The exact primary reconstruction and a separately implemented hostile audit
+agree on the witness typing, path universe, global sections, common-state sign
+cut and chronological boundary.  Both modes byte-match their stored outputs.
 
 ## 1. Oriented maximizing-witness relation
 
@@ -192,7 +204,7 @@ order, take the primitive positive integral weights
 22:         11546066017636615857249.                     (14)
 ```
 
-Let
+For the full twelve-row core, let
 
 ```text
 M=612782438251008238327605167443444079001600.            (15)
@@ -211,13 +223,15 @@ full twelve-row blend has source value
 ```
 
 Restricting to the nine backbone rows gives another primitive integral blend
-with common edge margin
+with the distinct backbone-only common edge margin
 
 ```text
-355648542223452256719445831365899059200                   (17)
+M_B=355648542223452256719445831365899059200.              (17)
 ```
 
-and full nine-row margin three times `(17)`.
+Its full nine-row margin is `3M_B`.  Thus `M` in `(15)` is the full-core
+twenty-two-edge margin, whereas `M_B` is the separately normalized primitive
+backbone-only seven-edge margin; they are not the same normalization.
 
 ## 4. Sharp failure beyond the backbone
 
@@ -242,9 +256,14 @@ not follow merely from every individual edge relation being nonempty.
 ## 5. Chronological-transition no-go
 
 Every state appearing in `(3)` lies on the eleven-state physical reset link.
-Its unique Q-directed physical transition ends at `Q`.  By contrast every
-arrow in `(3)` joins two nonreset link states, and none is a physical
-Q-directed transition.  Consequently
+Across both row orientations there are exactly eighteen distinct dominance
+arrows.  Every such arrow changes two entries of the pole-count vector, so
+its count-vector `L1` distance is exactly two.  A physical one-pole transition
+has count-vector distance one.  Hence no dominance arrow is a physical
+one-pole transition in either direction, not merely no Q-directed one.
+
+Moreover, each link state has a unique Q-directed physical transition and
+all eleven such transitions end at `Q`.  Consequently
 
 ```text
 dominance witness lift != chronological response-state path.              (20)
@@ -269,7 +288,7 @@ sidecars: reset Q and the ordered row-dominance gauge;
 hostile: path 2-17-16 with disjoint Q-1/Q-8 middle fibres.                 (21)
 ```
 
-The candidate is confined to the complete support-(1,3), bank-I2 reset-link
+The theorem is confined to the complete support-(1,3), bank-I2 reset-link
 response core.  It is not a Gaussian-moment functional, response composition,
 owner phase, same-ancestry carrier, physical walk, `GMC` consequence or
 `LRC(14)` decrement.  MISTAKE-354's boundary applies: abstract compatible
@@ -290,8 +309,39 @@ and compare LF-normalized bytes with
 05-knowledge/results/gmc_backbone_maximizing_witness_section_scout_20260803.out.
 ```
 
-The companion pins fifteen established artifacts, reconstructs the response
+The primary companion pins fifteen established artifacts, reconstructs the response
 bank from coefficient formulas, has no assertion node or floating literal,
 and prints every consequence object used above.
 
-**End of provisional candidate; independent audit pending.**
+The independent audit builds the eleven link states through admissible
+add/delete operations rather than filtering the primary state enumeration.
+It imports or executes neither the primary companion nor its relation bank.
+For every ordered edge it solves
+
+```text
+lambda f_u(s)+f_v(s)>=0
+```
+
+directly at the source state, checks that large-ratio witnesses have positive
+first response and small-ratio witnesses have positive second response,
+solves the reversed orientation independently, and verifies reciprocal
+endpoint bounds.  It reproduces the response-bank, relation, section and
+full-core lift digests, all path censuses, the exact Q+{4} weights and margins,
+and the canonical hostile fibres.  It also proves the count-vector `L1`
+transition separation above.
+
+Run
+
+```text
+python3 04-computation/gmc_backbone_maximizing_witness_section_independent_audit_20260803.py
+python3 -O 04-computation/gmc_backbone_maximizing_witness_section_independent_audit_20260803.py
+```
+
+and compare LF-normalized bytes with
+
+```text
+05-knowledge/results/gmc_backbone_maximizing_witness_section_independent_audit_20260803.out.
+```
+
+The independent executable deliberately does not pin this theorem file, so
+promotion creates no theorem--audit hash cycle.
