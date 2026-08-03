@@ -263,6 +263,15 @@ So GVC fails in three variables for `Delta^6`, `Delta^20`, `Delta^42`, ... .
   dimension boundary of GMC is the appearance of an Archimedes coordinate.**
   This is a structural reading of the known `2`/`3` boundary, not a new proof
   of either side.
+- **The threshold is about the `x`-direction, not about witness degree.**
+  `(15)` covers only witnesses `Q=x^(2delta)`, and there the gate is
+  `delta>=nu`.  It must NOT be read as "a witness of degree `<2nu` cannot
+  exist".  A hostile monomial sweep at `nu=2` (where `P_2=R_2^2` has degree 40)
+  finds that `x^2` indeed fails, exactly as `(15)` predicts, but `y^2`, `xy`
+  and `t^2` all give `L(Q P_2) != 0`.  So the minimal witness degree is `2` for
+  both `nu=1` and `nu=2` and does not grow with `nu`; the earlier guess that it
+  would was refuted by this probe before it was recorded anywhere.  Witnesses
+  odd in `t` always vanish, since `P_nu` is even in `t`.
 - **No minimality claim.**  Long's `arXiv:2607.18186` reports a three-variable
   GMC counterexample of degree `4` with five terms; the `nu=1` object here has
   degree `12` and 23 terms and is therefore not minimal.  The contribution is
