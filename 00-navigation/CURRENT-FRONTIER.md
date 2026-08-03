@@ -25,15 +25,15 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`; THM-2928 empties aligned `k>=4`; THM-2995/3179 cap projected `k=2,3` at `1579/221`; corrected THM-2941 leaves `561` reflected bodies, `D>=6,1<=m<4D/3`.
+Direct frontier: `<=6`; THM-2928 empties aligned `k>=4`; THM-2995/3207 cap projected `k=2,3` at `1579/220`; corrected THM-2941 leaves `561` reflected bodies, `D>=6,1<=m<4D/3`.
 This is not a physical-survivor classification; arbitrary `k<=1`, the rung, and LRC remain open. Septimal floor/exception plus located phase cut the raw five-drift ledger
 `951,545,890,235 -> 200,141,092,521`; mean/one-spike screens cut four drifts
 `21,357,714,101 -> 2,548,901,482`.  These are necessary-state compressions,
 not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
 `1680..1742` `k=2` atlas; THM-2980/2995 then close every row at
 `1580..1679`, giving cap `1579`.  For `k=3`, torsion/status closes through `297`;
-THM-2981/3033/3041/3052/3061/3071/3078/3094/3098/3102/3106/3109/3111/3113/3114/3139/3174/3179
-close projected `k=3` through `z_1=222`: cap `221`, ledger `373806`; next `90` rows.
+THM-2981/3033/3041/3052/3061/3071/3078/3094/3098/3102/3106/3109/3111/3113/3114/3139/3174/3179/3207
+close projected `k=3` through `z_1=221`: cap `220`, ledger `373716`; next `289` rows.
 In the reflected gain graph, cap two forces the phase-zero triangle
 `(3/2)(4/3)=2`; by cap `7/3` it is interior and no full-cap component remains.
 The zero-gain atlas is `4/3,3/2,2,5/2,3,4,5,6`; the CSP chain closes

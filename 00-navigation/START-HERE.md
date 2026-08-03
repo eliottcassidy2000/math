@@ -20,7 +20,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; THM-2995/3179 cap projected `k=2,3` at `1579/221`; THM-2941 leaves `561` reflected bodies. THM-3126 verifies six THM-3113 prefixes; THM-3135 repairs `H2` at caps `7/3,5/2`, but `H` leaves cones under audit. Arbitrary `k<=1` and the rung remain open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
+1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; THM-2995/3207 cap projected `k=2,3` at `1579/220`; THM-2941 leaves `561` reflected bodies. THM-3126 verifies six THM-3113 prefixes; THM-3135 repairs `H2` at caps `7/3,5/2`, but `H` leaves cones under audit. Arbitrary `k<=1` and the rung remain open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see

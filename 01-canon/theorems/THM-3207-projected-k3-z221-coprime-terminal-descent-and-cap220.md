@@ -1,7 +1,7 @@
 ---
 id: THM-3207
 title: "Projected-k3 z221 coprime terminal descent and cap220"
-status: "PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT"
+status: "PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED"
 source: root/projected-k3-z221/2026-08-02
 depends_on:
   - THM-3179-projected-k3-z222-composite-divisor-square-terminal-descent-and-cap221
@@ -19,12 +19,19 @@ hash_basis: LF-normalized bytes
 script_sha256: b3d1f0c451087017c1363d42be8789df78d5eec7db7a05b49dc5ca9e194f2091
 output_sha256: 1e4b01f6e5bfb179ad5fe6ba786124ff2c9fdf3833eed4917c0b3ce0abb7b76d
 semantic_sha256: aad27ae040933935c6eacfd2801cef1644df3de3a8f031aebf7d1b238ac35e74
+audit: >
+  An independent hostile audit reconstructed all 90 atlas rows, all 4,420
+  exact Farkas exclusions, the 22 residual bodies and 387 individually bound
+  masks, the coprime fixed-modulus identities, and every terminal bank.  It
+  confirmed the sharp positive gap, all 392 one-high closures, the ledger and
+  cap arithmetic, and the occupied z220 metadata.  Canonical normal and
+  optimized replays agree byte-for-byte with the stored transcript and the
+  declared LF hashes.
 ---
 
 # THM-3207 -- projected-k3 z221 coprime terminal descent and cap220
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Exact layer and the coprime reset
 
@@ -135,10 +142,9 @@ semantic, closure, and case-vector digests are
 6c0bb93eee6fb06bed9ff192b54d3eb7a3d508161d0b0313e3917834ce18fb7b. (10)
 ```
 
-## 5. Candidate consequence and next layer
+## 5. Consequence and next layer
 
-The layer contains `90` rows, so after independent audit the candidate
-consequence would be
+The layer contains `90` rows, so the proved consequence is
 
 ```text
 373806 - 90 = 373716,               z1 <= 220.           (11)
@@ -164,7 +170,7 @@ MISTAKE-331/333, the screen digest binds only `row[:19]`; the terminal closure
 digest omits the chosen duplicate-gap maximizer witness.  Both are
 solver-witness-free.
 
-This candidate concerns only the maintained projected `k=3` necessary
+This theorem concerns only the maintained projected `k=3` necessary
 atlas.  Coprimality alone does not close a wall row.  The result does not
 classify physical covers outside that projection, alter `k<=1`, close the
 final rung, or prove LRC(14).
