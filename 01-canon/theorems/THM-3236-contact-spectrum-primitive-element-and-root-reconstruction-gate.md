@@ -25,7 +25,8 @@ audit: >
   etale radical/minimal-polynomial statement, all five primitive-element
   equivalences, the Vandermonde/Krylov discriminant identity, affine and
   swap covariance, reconstruction, the pencil bound, and every exact hostile,
-  and found no defect.
+  including a raw cubic confirming that the unnormalized resultant quotient
+  is already monic and exact, and found no defect.
 depends_on:
   - THM-3232-root-free-contact-stratum-norm-and-discriminant-power
 related:
