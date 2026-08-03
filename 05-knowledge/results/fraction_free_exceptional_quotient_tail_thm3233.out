@@ -1,0 +1,11 @@
+THM-3233 exact exceptional quotient-tail renormalization
+dependency_pin=THM-3231
+scalar_homogeneity_symbolic_coefficients=5 PASS
+common_factor_covariance_symbolic_coefficients=5 PASS
+exceptional_base_quotient_tail_coefficients=5 PASS
+first_recursive_exceptional_row_coefficients=3 PASS
+normal_exponents=0,2,4,10,24,58,140 twice_Pell=PASS
+scalar_gauge_initial=t0*v0,-t0*v0^3 next=t0^3*v0^9 PASS
+tail_boundaries=quadratic_zero,geometric_terminal,delayed_simple_return,delayed_double_zero PASS
+scope=exceptional_special_fibre_not_generic_root_or_physical_selector
+all_exact_checks=PASS
