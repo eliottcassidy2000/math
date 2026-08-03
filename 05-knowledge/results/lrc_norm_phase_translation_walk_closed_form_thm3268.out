@@ -1,0 +1,26 @@
+LRC nonzero-translation norm-phase walk exact closed form
+dependency_hash_checks=4
+assert_nodes=0,float_literals=0
+field=F13[u]/(u^2-2);alpha=(1,2);nonzero_points=168;norm_phases=12*14
+allowed_step=(x,t,x+t)_all_nonzero;translation_graph=loopless_complete_digraph_K168;outdegree=167
+equitable_quotient=14*J_12-I_12;J_12=12x12_all_ones;relative_row=(13,14,14,14,14,14,14,14,14,14,14,14)
+quotient_spectrum=(167:multiplicity_1,-1:multiplicity_11)
+centered_phase_markers=rank_11_augmentation_eigenspace_with_eigenvalue_-1
+definition=C_n(d)=point_walks_(x0,...,xn)_with_consecutive_unequal_and_phase(xn)-phase(x0)=d
+closed_form_C_n(0)=14*(167^n+11*(-1)^n)
+closed_form_C_n(d_nonzero)=14*(167^n-(-1)^n)
+recurrence=C_(n+2)=166*C_(n+1)+167*C_n
+ogf_C0=168*(1-153*z)/((1-167*z)*(1+z))
+ogf_Cnonzero=2352*z/((1-167*z)*(1+z))
+preserving_terms_n0_to_n5=(168, 2184, 390600, 65204328, 10889148648, 1818487798344)
+each_nonzero_shift_terms_n0_to_n5=(0, 2352, 390432, 65204496, 10889148480, 1818487798512)
+point_level_dp_profiles_n0_to_n5_sha256=8fade61988652656a9716bd2168294a7c836ca50cfbc5e7204274031bb16081c
+normalized_augmentation_multiplier_per_step=-1/167
+general_prime_power_q_quotient=(q+1)*J_(q-1)-I_(q-1);spectrum=(q^2-2,-1^(q-2))
+general_C_n(identity)=(q+1)*((q^2-2)^n+(q-2)*(-1)^n)
+general_C_n(nonidentity)=(q+1)*((q^2-2)^n-(-1)^n)
+general_recurrence=C_(n+2)+(3-q^2)*C_(n+1)+(2-q^2)*C_n=0
+general_symbolic_consequence_checks_q2_to_q30=29
+fixed_translation_hostile_t=(1,0):n1=(13,14*11);n2=(12,14*11);n13=(156,0*11)
+scope=translations_may_vary_each_step;not_repeated_fixed_translation_or_physical_ancestry;no_LRC14_decrement
+all_exact_checks=PASS

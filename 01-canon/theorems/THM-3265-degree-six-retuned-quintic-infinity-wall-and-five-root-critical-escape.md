@@ -16,7 +16,7 @@ source: root/creative-synthesis-cont/2026-08-03
 audit: >
   The exact companion pins sixteen artifacts from THM-3237, THM-3257,
   THM-3263 and the cofactor/inertia boundary chain; expands the universal
-  reciprocal jet through x^94; extracts a canonical 58-term quintic
+  reciprocal jet through x^94; extracts a canonical 58-term quintic-edge
   invariant; reconstructs both accessory fields; proves every denominator
   and leading carry nonzero by exact norms; computes the degree-50 quotients;
   and supplies two good squarefree boundary-disjoint reductions. Normal and

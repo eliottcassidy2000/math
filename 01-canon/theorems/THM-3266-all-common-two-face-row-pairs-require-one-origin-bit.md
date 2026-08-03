@@ -18,8 +18,9 @@ audit: >
   The exact companion pins the promoted THM-3249 pair atlas, the direct
   THM-3244 full bank, and the repaired THM-3262 joint companion; reconstructs
   all small-face response vectors and full-face cover sets; enumerates all
-  231 row pairs, every exclusive-label conflict and every static face-aware
-  selection; and contains no assertion node or floating literal. Normal and
+  231 row pairs and every exclusive-label conflict; verifies one static
+  face-aware selection on every pair/face/state case; and contains no
+  assertion node or floating literal. Normal and
   optimized runs byte-match the frozen transcript. An independent
   reconstruction regenerated both banks without trusting the atlas
   constants, recovered all 24 pairs, the singleton bipartition, every
@@ -131,8 +132,8 @@ intersection has exactly six:
 (5), (4,5), (1,3,5), (1,4,5), (3,4,5), (1,3,4,5).    (6)
 ~~~
 
-For every pair, (5) is the unique conflict having pole-cardinality one. The
-conflict-pair multiplicity histogram is
+For every pair, the singleton state `(5)` is the unique conflict having
+pole-cardinality one. The conflict-pair multiplicity histogram is
 
 ~~~text
 (number of incident pairs, number of states)=

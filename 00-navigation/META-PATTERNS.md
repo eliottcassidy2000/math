@@ -136,7 +136,7 @@ predicate, kernel, lost coordinate and sidecar; quotient occurrences only
 after checking freeness. If a finite label controls a later choice, retain it
 as a marker and, after abelianization, as a catalytic variable. **Mechanism /
 caution:** kernels are gauge only when every consumer kills them; signed complements need not be positive observables. **Evidence:** THM-840/2355,
-3119/3121, 3255/3262, THM-2000/2005, and MISTAKE-310.
+3255/3262/3266/3267, THM-2000/2005, and MISTAKE-310.
 
 ## Test whether a central extension changes the base signature
 
@@ -169,7 +169,7 @@ does not itself provide the external arm selector.
 **Trigger / action:** when two frontiers share a group module or become isomorphic after isotypic projection, identify the sector, commutant/multiplicity space, and realization functor; test neutral blocks and the target predicate.
 **Mechanism:** characters forget positivity, occurrences, base geometry, endpoint phase, and stabilizers. A charged isomorphism can coexist with a neutral rank defect; one observer removes multiplicity ambiguity only through an exact cyclic determinant.
 **Counterindication:** transfer only through an explicit predicate-preserving functor. A nonzero determinant gives a linear frame, not a positive, set-level, or larger-symmetry clutch.
-**Evidence:** THM-2648/2655, THM-2455/2598/3105/3108, THM-3243/3250/3255.
+**Evidence:** THM-2648/2655, THM-2455/2598/3105/3108, THM-3243/3250/3255/3260.
 
 ## After a scalar quotient, choose between a coherent lift and orbit incidence
 
@@ -362,15 +362,15 @@ THM-2290/2292/2294 and the S79 support-Dirichlet reflection.
 ## Classify response-state growth before naming the closed form
 
 **Trigger / action:** for repeated joins, substitutions, block lifts, or transfers, derive the operation response before naming a closed form; classify the sufficient state as fixed jet, moving endpoint jet, bounded time-varying transfer, or gauged arithmetic section.
-**Mechanism / limit:** these respectively expose polynomial--exponential tails, efficient non-C-finite evolution, P-recursive elimination, or exact decimation, but do not compute an arbitrary seed or imply a converse or low bit complexity. **Evidence:** THM-3181/3202/3186/3235.
+**Mechanism / limit:** these respectively expose polynomial--exponential tails, efficient non-C-finite evolution, P-recursive elimination, or exact decimation, but do not compute an arbitrary seed or imply a converse or low bit complexity. **Evidence:** THM-3181/3202/3186/3235/3268.
 
 ## Divide exceptional multiplicity before judging a wall
 
 **Trigger / action:** when a leading row or degree vanishes on a wall, retain the transverse parameter, divide the proved exceptional multiplicity, then recompute support and the first normal coefficient (reciprocally at infinity).
 **Mechanism / limit:** strict transforms activate inert terms, but need units
 and lose root labels/Keller data; a lower term may reopen the prior layer and
-force retuning. Odd resultant inertia is not cover inertia. **Evidence:**
-THM-3231/3233/3237/3257/3263.
+force retuning. Resultant-cycle parity is not cover inertia. **Evidence:**
+THM-3231/3233/3237/3257/3263/3265.
 
 ## Refine vertices and lifetimes before quotienting
 
