@@ -108,6 +108,12 @@ The active new theorem packages sharpen this picture further:
   pointed current fixes the `GL_13` multiplicity frame exactly when its
   `13`-by-`13` coefficient determinant is nonzero.  Independent audits accept
   the signs, spectra, commutant, determinant and scope boundaries.
+- **PROVED [THM-3252](../01-canon/theorems/THM-3252-singer-compactified-owner-hodge-word-universal-charged-cyclicity.md)** zero-sum compactifies THM-3246's owner-Hodge word into a `13`-by-`13`
+  matrix that is nonsingular in all `8,064` Singer cyclic gauges.  A rational
+  signed central contrast combines its twelve cyclic blocks into one packet
+  spanning all `2,028` charged dimensions.  This closes the exact owner-word
+  multiplicity gate, not positivity, endpoint provenance, target covariance,
+  ancestry, or an LRC row.
 - **PROVED [THM-3238](../01-canon/theorems/THM-3238-complete-physical-product-gamma-bank-unique-reset-stitch.md)** glues twenty-two lawful coarsening-upset rows into a positive cocircuit
   whose unique zero is the reset on the complete `4,319`-state physical bank.
   It closes one support-`(1,3)`/bank-`I2` face, not a local deletion flow or
@@ -116,10 +122,11 @@ The active new theorem packages sharpen this picture further:
   maxima, while lawful rows 2 and 10 cover every nonreset state by a
   reset-distance-monotone one-pole ascent.  Among the 22 stitched rows there
   are 31 covering pairs and no singleton cover; two chart-label switches are
-  sharply necessary.  Separately, radius `10` is the sharp `H`-unique-sink
-  scale and two hubs route the bank in at most two jumps.  The audit types
-  these as a state-dependent selector and folded preorder, not one scalar
-  gauge, an orthant, or an arbitrary discrete-Morse conclusion.
+  sharply necessary.  No fixed positive blend of rows 2 and 10 removes the
+  switching: two rational trap intervals cover every blend ratio.  Separately,
+  radius `10` is the sharp `H`-unique-sink scale and two hubs route the bank in
+  at most two jumps.  The audit types these as a state-dependent selector and
+  folded preorder, not an orthant or an arbitrary discrete-Morse conclusion.
 - **PROVED [THM-3248](../01-canon/theorems/THM-3248-q4-paired-owner-stirling-compiler.md)** factors the full Q4 walk resolvent through two owner pairs and gives
   an exact all-depth finite-difference contraction, a positive one-sum
   Hamiltonian formula, and fixed-depth `O_d(M(r)+r log r)` unit-cost
@@ -141,10 +148,10 @@ do not identify the objects.
 
 | concept | representation | invariant now retained | operation being tested | information still missing |
 |---|---|---|---|---|
-| LRC owner/divisor shadows | cyclic word of length `168` plus pointed `Div(g)` intervals | gcd-carry Hodge split; median metric; saturated-top and label-loss boundaries | dilation, restoration, Singer compactification | branch stabilization, labelled supplier map, physical entry, cellwise safety |
+| LRC owner/divisor shadows | cyclic word of length `168` plus pointed `Div(g)` intervals | gcd-carry Hodge split; universal charged cyclicity after zero-sum completion; median and label-loss boundaries | dilation, restoration, Singer compactification | positivity, endpoint provenance, labelled supplier map, physical entry, cellwise safety |
 | minimal four-jet carrier | `H_13/K` on `169` points; full flags `E=V disjoint_union H_13` | full `13+156` response; exceptional module has exact generator width two | Heisenberg action, current orbit, Singer/blowup transport | target-preserving physical intertwiner and common ancestry |
-| carrier address | `G_delta` of size `13^3`, or `G_full` of size `13^4` | target axis, carrier imbalance; charged intertwiner and determinant gate | typed section, quotient gauge, exact `H_13` clutch | physical coefficient frame, positivity, neutral data, factor colours, ancestry |
-| factorial contact/reset flag | finite etale contact algebra plus one `4,319`-state physical bank | contact spectrum/order; exposed reset; lawful two-row one-pole selector; sharp radius-10 routing | Hasse contact, upset stitching, chart switching, Rips/edit scale, PRS step | other faces, common scalar gauge, cross-face flow, selected branch and global root choice |
+| carrier address | `G_delta` of size `13^3`, or `G_full` of size `13^4` | target axis, carrier imbalance; charged intertwiner; signed owner frame spans all `2,028` charged dimensions | typed section, quotient gauge, exact `H_13` clutch | physical coefficient frame, positivity, neutral data, factor colours, ancestry |
+| factorial contact/reset flag | finite etale contact algebra plus one `4,319`-state physical bank | contact spectrum/order; exposed reset; lawful two-row one-pole selector; sharp radius-10 routing | Hasse contact, upset stitching, chart switching, Rips/edit scale, PRS step | other faces, scalar gauge beyond the row-(2,10) cone, cross-face flow, selected branch and global root choice |
 | exceptional normal coordinate | pivot or infinity parameter before specialization | strict-transform coefficient after leading cancellations | blow-up, reciprocal Newton polygon | physical/Keller chart entry and global continuation |
 | tournament quotient operator | multivariate determinant `D_Q` and walk series `W_Q` | Neumann domain, saddle, Q4 paired-owner numerator | substitution, order join, transitive blow-up | generic minimal response-equivalent sidecar |
 | sequence response state | fixed/moving jet, paired Stirling rows, or bounded transfer | exact coefficient or recurrence law | finite difference, decimation, continuant convolution | bit complexity, converse closure, generic seed computation |
@@ -168,12 +175,20 @@ sidecar:     an owner-to-address/current map preserving the LRC predicate;
 hostiles:    fixed-head lower bound 170 and the refuted sign-line reframe.
 ```
 
-This is a genuine common carrier but not a physical carrier.  Candidate
-THM-3246 now proves for every dilation in one exact lane that the twelve
+This is a genuine common carrier but not a physical carrier.  THM-3246 proves
+for every dilation in one exact lane that the twelve
 negative second-corrector owners are the boundary cells
 `0,...,5,162,...,167`, occupying twelve distinct residues modulo `14`.
 Under every Singer gauge, a punctured vector line meets them in at most one
 point.  Adding zero therefore does not turn the negative class into a line.
+
+THM-3252 shows that this sign-line failure is not a charged-rank failure.
+After adjoining the unique zero-sum completion, the owner word is a
+nonsingular `13`-by-`13` coefficient matrix in every one of the `8,064`
+Singer cyclic gauges.  Its signed rational central contrast spans the entire
+`2,028`-dimensional charged address sector.  The preserved coordinate is the
+multiplicity frame; the destroyed predicates are positivity, endpoint origin,
+target semantics and ancestry.
 
 THM-3241 now supplies an exact algebraic source for the same target:
 `f=S`, `g=S+S^2(1+10x)` over `F_13`, with `S=x^2-2`, has first-live contact
@@ -297,6 +312,13 @@ spectra remain different: `G_delta` has `p` copies of only the characters
 `chi_(a,0)`, whereas the regular flag orbit has every `chi_(a,b)` once.  A
 charged block is `pi_kappa tensor K^p`; its frame ambiguity is `GL_p`, and a
 pointed coefficient matrix `A` is cyclic exactly when `det(A)!=0`.
+
+THM-3252 supplies that determinant for one precise cross-thread object: the
+zero-sum compactification of THM-3246's signed owner-Hodge word.  It is
+nonsingular in all Singer cyclic gauges, and one rational signed packet is
+cyclic on all twelve charged blocks simultaneously.  Thus gauge-uniform
+charged rank is closed for this word; converting it into a positive,
+factor-coloured endpoint current is the exact remaining type change.
 
 This closes the representation-level bridge, but does not supply a physical
 clutch.  Its charged-space unitarity supplies no positive point-mass
@@ -451,10 +473,10 @@ cannot change the face and degree nine is the first live boundary term.
 | `168+1=169`, so the LRC owner orbit is the four-jet carrier | Singer plus one transvection; pointed degree bound | **partly true** abstractly | common 169-set, but full affine mixing and mobile completion point |
 | every residual has `g=3,q=3`, so the LRC layer carries a `C3` symmetry | inspect occupied quotient support and internal restorations | **REFUTED** | the top of ambient chain `{1,3}` is saturated; restorations form an idempotent band |
 | the sorted-position triangle is a supplier `S3` carrier | restore weights and inspect the checkpoint's label map | **REFUTED** | weighted symmetry is trivial and sorting has discarded supplier labels |
-| twelve negative owners plus zero form an affine line | exhaust Singer gauges / residues mod `14` | **REFUTED FOR ALL DILATIONS** | THM-3246 fixes the `156+ / 12-` word in one lane; placement is not linear |
+| twelve negative owners plus zero form an affine line | exhaust Singer gauges / residues mod `14` | **REFUTED FOR ALL DILATIONS** | THM-3246 fixes the `156+ / 12-` word and nonlinearity; THM-3252 shows its zero-sum completion is nevertheless charged-cyclic in all gauges |
 | the old additive target grid should carry `H_13` | inspect stabilizer and central kernel | **REFUTED**, then repaired | carrier imbalance supplies the nonnormal stabilizer clutch |
 | all charged central modes should already imply a full carrier | test the thirteen center-neutral transverse characters | **REFUTED as an implication, then completed** | THM-3247 supplies all thirteen scalar blocks and rank `169` |
-| full coefficient-carrier rank should imply a physical LRC current | track endpoint target, ancestry and Bezout section through the frame map | **REFUTED** | algebraic rank is closed; frame-bundle physical naturality is the exact remaining invoice |
+| full coefficient-carrier rank should imply a physical LRC current | track sign, endpoint target, ancestry and Bezout section through the frame map | **REFUTED** | THM-3247 and THM-3252 close endpoint and signed-owner rank; frame-bundle physical naturality is the exact remaining invoice |
 | blowing up the delayed-contact point should carry the whole affine action | apply the universal lifting criterion to a translation | **REFUTED**, then repaired globally | one centre keeps its stabilizer; the full rational centre orbit restores `AGL_2` and splits into `169+2,197` Heisenberg strata |
 | the `2,197` nonvertical flags are the `2,197` address carrier | compare Heisenberg stabilizer/orbit spectra | **REFUTED as sets; repaired after charge localization** | THM-3250 gives explicit charged-sector Fourier isomorphisms; neutral spectra still differ |
 | a root-free trace should detect first contact | split examples with cancelling branches | **REFUTED** | etale norm preserves simultaneous nonvanishing |
@@ -464,7 +486,7 @@ cannot change the face and degree nine is the first live boundary term.
 | path-colour profile plus radius identifies tournament continuation | order-six exhaustive pair and transitive lifts | **REFUTED** | retain determinant/walk placement |
 | the Q4 denominator/owner pair computes its blowup sequence | compare denominator-only and full walk diagonals at `r=1` | **REFUTED** (`1` versus `5`) | retain `N=Y+Z+YZ+2CY`; paired Stirling contraction survives |
 | a depth-nine reset dual should extend unchanged | evaluate the first complete depth-ten layer | **REFUTED**, then stitched | 19 positive depth-ten hostiles; THM-3238's eight overlap rows repair the complete bank |
-| a globally exposed reset supplies an `H`-increasing one-pole deletion flow | enumerate exact one-pole maxima | **REFUTED, THEN REPAIRED WITH A SELECTOR** | THM-3244 proves 32 `H`-local maxima; rows 2/10 give a state-dependent one-pole atlas, while radius-10 two-hub routing repairs the single-height route coarsely |
+| a globally exposed reset supplies an `H`-increasing one-pole deletion flow | enumerate exact one-pole maxima | **REFUTED, THEN REPAIRED WITH A SELECTOR** | THM-3244 proves 32 `H`-local maxima; rows 2/10 give a state-dependent atlas, no fixed positive blend of them works, and radius-10 routing repairs the single-height route coarsely |
 | every efficient sequence formula should be C-finite | compare fixed join jet, moving cyclic jet, and time-varying transfer | **REFUTED** | operation-specific C-finite, P-recursive, decimation, or moving-jet forms |
 
 The recurring lesson is not “keep all information.”  It is “name the next
@@ -477,7 +499,10 @@ consumer.”
 
 The abstract group computation and coefficient rank are now complete:
 THM-3247 proves the canonical endpoint current fills the entire `169`-state
-module.  The decisive test is physical naturality before marginalization.
+module.  THM-3252 separately proves that the exact signed owner-Hodge word
+passes every charged multiplicity determinant in all `8,064` Singer gauges
+and yields a `2,028`-dimensional signed packet.  The decisive test is therefore
+physical naturality before marginalization, not another abstract rank scout.
 
 1. Replace the fixed-`q` chart by the frame bundle `(q,u)` with
    `det(q,u)=1`, so the endpoint target `q` transforms rather than remaining
@@ -489,9 +514,11 @@ module.  The decisive test is physical naturality before marginalization.
    survival.
 4. Use THM-2782/2806 and the fixed cell-90 carry values as hostiles: central
    marginalization or a residue-blind section must fail visibly.
-5. Form the twelve THM-3250 charged coefficient matrices `A_kappa(s,t)` of
-   the factor-coloured address current.  The exact gate is
-   `det(A_kappa)!=0` in every nonzero central sector.
+5. Use THM-3252's owner matrix as the positive rank control, then form the
+   twelve THM-3250 matrices `A_kappa(s,t)` of the factor-coloured physical
+   current.  The exact gate remains `det(A_kappa)!=0` in every nonzero sector,
+   but failure must now be attributed to the physical lift rather than the
+   owner word.
 6. If those gates pass, solve the pointed equations `A_kappa U_kappa=B_kappa`
    against a target-side current and audit positivity, neutral data, target
    and ancestry.  Only after physical frame covariance survives should the
@@ -531,7 +558,7 @@ it is not evidence for or against `JC(2)`.
 
 ### Factorial conjecture in three variables: stitch, do not rescan
 
-The exact row atlas now reaches `r=2498`; the first unaudited row remains
+The exact recurrence-row atlas now reaches `r=2498`; the first unaudited row remains
 `r=2499,d=2501`.  THM-3238 has now glued the complete `4,319`-state physical
 bank for one support/bank face, while THM-3222 supplies `230` local collars
 and THM-3231 preserves the normal direction at a simple PRS wall.  Audited
@@ -546,8 +573,9 @@ The highest-value tests are:
    face-independent construction;
 2. transport THM-3244's 31 covering row pairs to the other faces, carrying the
    direction masks and switch-depth invariant as sidecars; test whether one
-   pair is face-stable before asking for a common positive scalar gauge, and
-   use the radius-10/two-hub route only where the lawful local selector fails;
+   pair is face-stable, retain its state-dependent selector because every fixed
+   positive rows-(2,10) blend is obstructed, and test the full 22-row cone only
+   if the next consumer truly needs one scalar gauge;
 3. use the strict-transform row at a resonance as the transition state across
    a reset wall, and audit whether the proved twice-Pell extracted-factor clock and
    quotient-tail tower remain compatible with the physical pole labels;
@@ -664,8 +692,11 @@ separately packaged.
    its `2,197` nonvertical flags form one regular orbit, not the thirteen
    affine orbits of the address carrier.  THM-3250 nevertheless
    identifies every charged sector by an explicit Fourier map and reduces a
-   pointed current to a `13`-by-`13` determinant gate.  Neutral characters,
-   positivity, Singer covariance and physical provenance remain missing.
+   pointed current to a `13`-by-`13` determinant gate.  THM-3252 clears that
+   gate for the zero-sum signed owner-Hodge word in all `8,064` cyclic gauges
+   and combines the blocks into one `2,028`-dimensional signed packet.  Neutral
+   characters, positivity, endpoint provenance, Singer covariance and physical
+   ancestry remain missing.
    Contact zero is delayed contact, not empty physical support.
 5. **Direction scaling is a full mode bank.**  The dual-field all-direction
    scout found `28,392/28,392` nonzero two-dimensional modes per field, so
@@ -679,10 +710,11 @@ separately packaged.
    Hostile-audited THM-3244 finds `32` one-pole `H`-local maxima and a long
    merge-tree obstruction, refuting a deletion/Morse reading.  The full lawful
    bank nevertheless has 31 covering row pairs; rows 2/10 route every state at
-   one-pole scale, with switch histogram `716/3,600/2`.  A separate
+   one-pole scale, with switch histogram `716/3,600/2`, while two sharp trap
+   intervals rule out every fixed positive blend of that pair.  A separate
    radius-`10` two-hub atlas repairs the single-height route coarsely.  The next
-   task is cross-face transport of the row selector and its direction sidecar,
-   not another search for `H`-monotonicity on this bank.
+   task is cross-face transport of the selector and direction sidecar, plus a
+   wider 22-row gauge test—not another search for `H`-monotonicity on this bank.
 
 These scouts all instantiate the same procedure: compile the operation,
 measure response-state width, exhibit the smallest controlled forgetting,
