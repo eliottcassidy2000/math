@@ -2,7 +2,7 @@
 id: THM-3182
 title: "Factorial Gauss--Manin rank-one reset and two transverse Smith bands"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The quadratic factorial moments and their first x-weighted companions form
   an exact three-state Gauss--Manin transfer.  At d=p+s each p-period has a
   rank-one Frobenius reset, the entire state descends from
@@ -11,13 +11,12 @@ status: >
   p-adic directions in that specified lattice but does not by itself prove
   the observed floor(s/2) Euclidean-depth staircase.
 audit: >
-  The pure-integer companion checks the transfer against direct multinomial
-  rows, the determinant, the eliminated scalar recurrence, the full
-  three-state Frobenius descent, generic Smith determinantal divisors, the
-  exterior-square first and second layers, the scalar-companion
-  non-unimodular gauge boundary, and the discriminant and p|s walls.  Normal
-  and optimized replay agree with the stored transcript.  Independent
-  immutable audit is pending.
+  Two independent immutable audits rederived the transfer and scalar
+  recurrence, rank-one reset and all-a descent, both Smith types, complete
+  exterior-square first and second layers, scalar-companion gauge/index
+  boundary, discriminant wall, and p=2/odd-p scopes.  The repaired companion
+  checks the actual scalar unit minor -s.  Fresh normal and optimized replay
+  agree with the 13-line stored transcript and declared LF hashes.
 source: root/multiscale-newton-flag/low-child-flag-extension/2026-08-02
 depends_on: []
 related:
@@ -33,7 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3182 -- factorial Gauss--Manin rank-one reset and two transverse Smith bands
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The factorial Frobenius projector has a stronger state-space form.  Its
 first singular transfer forgets two directions modulo `p`, but it remembers
