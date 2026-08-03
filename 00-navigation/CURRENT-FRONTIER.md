@@ -196,10 +196,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   PRS atlas with finite exceptional primes. THM-3214 proves sharp pseudo-division
   jet costs `2k`/`2k+1`. THM-3215 upgrades any selected common simple root to
   a flat arbitrary-degree affine-dihedral two-jet transport with primitive
-  `p`-fold carry. THM-3220/3221 give the four-jet Heisenberg layer and
-  degree-adaptive osculating separation. THM-3228 forces `p^2` points before
-  the full jet-group action can be center-faithful. Global root choice and a
-  lawful physical carrier remain open.
+  `p`-fold carry. THM-3220 adds the four-jet Heisenberg/Schwarzian center;
+  THM-3221 makes the first live osculating layer canonical; a selected root,
+  derivative anchor and full normalized tower through `D` reconstruct degree `<=D`.
+  THM-3228 forces `p^2` points before a full mod-`p` four-jet permutation
+  action can be center-faithful. Global root choice and lawful carrier stay open.
 
 ### Live work
 
