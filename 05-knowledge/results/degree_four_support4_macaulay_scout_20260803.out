@@ -1,0 +1,79 @@
+DEGREE-FOUR CYCLIC EIGENSPACE: CLOSED MOMENTS + SUPPORT-4
+python_flint=0.9.0
+status_closed_moment=PROVED algebraic identity; exact controls
+status_support4=FINITE-EXACT projective Macaulay certificate
+status_support5=OPEN
+
+CLOSED MIXED MOMENT
+denominator_product=1-X^3-Y^3-3XY
+C(a,b)=sum multinomial(i+j+k;i,j,k)*3^k
+constraints=3i+k=a,3j+k=b
+mu(a,b)=2*a!*b!*C(a,b)/(a+b+2)!
+independent_barycentric_pairs_checked=66 (a+b<=10)
+C(a,b)=C(a-3,b)+C(a,b-3)+3*C(a-1,b-1)+[a=b=0]
+recurrence_lattice_points_checked=7225 (0<=a,b<=84)
+selection_rule=mu(a,b)=0 iff a-b is nonzero mod 3
+
+INVARIANT / NORMALIZATION AUDIT
+r=z*zbar, u=z^3, v=zbar^3, relation=u*v-r^3=0
+z*g=A*r+B*u+C*r^2+D*r*u+E*r*v
+formal_torus_weights=(-1, 2, -1, 2, -4)
+pure_M3_torus_weights=(-3, 6, -3, 6, -12)
+pure_M3_coefficients=(1/10,1/28,37/1540,137/10010,1/91)
+continuous_torus_covariance=FAILS (three distinct nonzero weights)
+t^3=1_action=common coefficient scalar; projectively trivial
+lawful_normalization=one projective coefficient only
+
+MODULAR / PROJECTIVE GUARDS
+prime=101
+max_order=21
+max_simplex_degree_plus_2=86
+guard=101>86: PASS
+empty_control_rows_cols_rank=(40, 20, 20)
+hostile_control_rows_cols_rank=(30, 20, 19)
+
+SUPPORT-4 MACAULAY RANKS
+columns=all monomials of displayed target degree in four variables
+delete degree rows columns rank deficiency
+     A     18 1596    1330 1251         79
+     A     19 1974    1540 1494         46
+     A     20 2415    1771 1764          7
+     A     21 2926    2024 2024          0
+     A     22 3514    2300 2300          0
+     B     18 1596    1330 1251         79
+     B     19 1974    1540 1494         46
+     B     20 2415    1771 1764          7
+     B     21 2926    2024 2024          0
+     B     22 3514    2300 2300          0
+     C     18 1596    1330 1251         79
+     C     19 1974    1540 1494         46
+     C     20 2415    1771 1764          7
+     C     21 2926    2024 2024          0
+     C     22 3514    2300 2300          0
+     D     18 1596    1330 1251         79
+     D     19 1974    1540 1494         46
+     D     20 2415    1771 1764          7
+     D     21 2926    2024 2024          0
+     D     22 3514    2300 2300          0
+     E     18 1596    1330 1251         79
+     E     19 1974    1540 1494         46
+     E     20 2415    1771 1764          7
+     E     21 2926    2024 2024          0
+     E     22 3514    2300 2300          0
+
+DISPLAYED DEGREE-21 MAXIMAL MINORS MOD 101
+ordering=generators M3..M21; shifts/columns use compositions order
+rows=leading columns of RREF(Macaulay_transpose), zero-based
+delete determinant pivot_rows
+     A          27 0-1690,2146-2310,2315-2320,2601-2716,2821-2866
+     B          67 0-1690,2146-2310,2315-2320,2601-2716,2821-2866
+     C          42 0-1690,2146-2310,2315-2320,2601-2716,2821-2866
+     D          50 0-1690,2146-2310,2315-2320,2601-2716,2821-2866
+     E          82 0-1690,2146-2310,2315-2320,2601-2716,2821-2866
+
+degree21=FULL for every deletion; every degree-21 monomial is in ideal
+projective_infinity=EXCLUDED, including each pure 21st power
+degree22=FULL for every deletion (fresh-build constancy guard)
+rank_lift=each displayed nonzero maximal minor mod 101 is nonzero over Q
+conclusion=no nonzero common zero on any coefficient hyperplane
+combined_with_THM3310=support<=4 excluded; support5 remains open
