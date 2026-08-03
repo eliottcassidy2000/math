@@ -1,7 +1,7 @@
 ---
 id: THM-3245
 title: "Pointed divisor median cubes, saturation-band no-go, and the z219 sorted-position boundary"
-status: "PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT"
+status: "PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED"
 source: root/modular-divisor-synthesis/2026-08-03
 depends_on:
   - THM-3174-projected-k3-z223-terminal-descent-and-cap222
@@ -26,7 +26,7 @@ semantic_sha256: 58491fb73468826a3cab7e689ff66a20e46e409f0d391c1d7881c30beaef9e8
 
 # THM-3245 -- pointed divisor median cubes, saturation-band no-go, and the z219 sorted-position boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Pointed divisor intervals are median partial cubes
 
