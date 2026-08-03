@@ -10,6 +10,13 @@ This audit independently freezes the same counts and laminar inequalities from
 the inherited ray/status engine.  It is not a separate physical-cover theorem
 and does not prove LRC(14).
 
+**Subsequent continuation.**
+[THM-3320](../01-canon/theorems/THM-3320-projected-k3-z216-fourth-ruler-prefix-and-affine-multicover-closure.md)
+closes the next singleton and three-row family identified here, moving the
+historical endpoint `373157 / 353 / 31` to ledger `373153`, `349` wall rows,
+and `29` families.  This note's exact `373161->373157`, `357->353`, and
+`33->31` audit remains the preceding step, not the current frontier.
+
 The exact companion is
 [`lrc14_j7_k3_z216_third_complete_ruler_cost_prefix_laminar_status_audit_20260803.py`](../04-computation/lrc14_j7_k3_z216_third_complete_ruler_cost_prefix_laminar_status_audit_20260803.py),
 with [frozen output](../05-knowledge/results/lrc14_j7_k3_z216_third_complete_ruler_cost_prefix_laminar_status_audit_20260803.out).

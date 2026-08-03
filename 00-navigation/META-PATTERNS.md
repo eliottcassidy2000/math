@@ -392,8 +392,8 @@ A positive left inverse, order-reflecting quotient, or target factorization disc
 
 ## Audit and close sections under their next native operation
 
-**Trigger / action:** join chosen witnesses in one typed carrier, then apply the next target operation before scalarizing; retain a transition cocycle if witnesses move. Before naming intrinsic arity/isolation, complete the native affine/relative coordinate (dual constant or transverse external parameters). **Counterindication:** the coordinate action must preserve the target functional.
+**Trigger / action:** apply the next target operation before scalarizing; retain moving labels/cocycles. Complete native affine/relative coordinates before naming arity, but only when they preserve the target.
 **Mechanism:** pre-scalar defects live in typed co-support, transition cones, base ideals, or incidence circuits; retaining one gives a stopping reason or low-rank update.
 **Caution:** fibres need not glue; require a target-preserving map, explicit basepoint and lawful composition. Empty intersections, base loci and vector kernels differ.
 Adjacency powers count relation walks, not time; chronology additionally needs lifetime and composition.
-**Evidence:** THM-2292/3144/2658/3156/3285--3315; THM-3320's half-affine circuits, THM-3319's etale germ, and THM-3321's noncovariant torus.
+**Evidence:** THM-2292/3144/2658/3156/3285--3315 and THM-3319--3324.

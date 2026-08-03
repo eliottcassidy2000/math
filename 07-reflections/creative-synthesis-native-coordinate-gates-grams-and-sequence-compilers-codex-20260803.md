@@ -1,7 +1,7 @@
 # Creative synthesis: native coordinates, first gates, Gram sidecars, and sequence compilers
 
 **Status:** current research synthesis across
-[THM-3316](../01-canon/theorems/THM-3316-prime-right-boundary-interpolation-forces-scalar-rigidity.md)--[THM-3322](../01-canon/theorems/THM-3322-tournament-switching-second-moment-deletion-gram-and-order-join-law.md).
+[THM-3316](../01-canon/theorems/THM-3316-prime-right-boundary-interpolation-forces-scalar-rigidity.md)--[THM-3324](../01-canon/theorems/THM-3324-tournament-deletion-response-gram-ordered-join-compiler.md).
 `LRC(14)`, `JC(2)`, `DC(2)`, `FC(3)`, and the global tournament problems
 remain OPEN.  The point of this note is to identify what genuinely moved,
 which new objects are reusable, and which next tests can decide something.
@@ -14,9 +14,9 @@ which new objects are reusable, and which next tests can decide something.
 | LRC projected atlas | fourth `z1=216` ruler prefix closes; full-dual arity is smaller than integral-template arity on two packets | ledger `373153`; `349` wall rows in `29` families; next complete family has `19` rows |
 | planar Jacobian | the exceptional quadratic critical deck is a connected algebraic etale germ over both clutch slopes | no global component, rational section, mate, or inverse |
 | divergence obstruction | a separate gradient-unimodular family has the exact annihilator ladder `(P^r),(P^(r-1))` | poles still block a polynomial mate; no carrier map to the critical deck |
-| factorial conjecture | all mixed triangle moments have one Hesse-kernel formula; cyclic-quartic coefficient support `<=4` is excluded projectively | full support five is the sole open chart in this eigenspace |
-| tournaments | the switching-cube second moment is `P` plus a deletion-Gram sidecar; `(P,N)` has an exact order-join law | third moments, deletion-Gram composition, and SCC order sidecars remain open |
-| sequences | Hesse coefficients have a one-sum formula and lattice recurrence; tournament walks have rational OGFs and join multipliers | bit complexity and broader operation interfaces are separate questions |
+| factorial conjecture | mixed triangle moments have one Hesse kernel; support `<=4` is excluded; the support-five degree-21 map has exact rank `10980` and quotient dimension `1670` | full support five is still the sole open chart; degree `29` is only count-eligible |
+| tournaments | the switching second moment is `P` plus a deletion Gram; the full two-coordinate response Gram closes under joins and diagonalizes | third tensors, substitution response, and SCC-order sidecars remain open |
+| sequences | Hesse coefficients have a one-sum/lattice recurrence; tournament walks and repeated-join Gram channels have product-power closed forms | bit complexity and broader operation interfaces are separate questions |
 
 These are not shadows of one theorem.  They share a productive research
 procedure, while their carriers and target predicates remain distinct.
@@ -91,8 +91,8 @@ The same procedural gate appears elsewhere:
 
 - in FC, projective boundary closure must precede an affine normalization;
 - in LRC, exact marginal feasibility must precede naming circuit arity; and
-- in tournaments, the consumer must decide whether `P`, `(P,N)`, or
-  `(P,D_T)` is the first sufficient interface.
+- in tournaments, the operation must decide whether `P`, `s=(P,zN)`, scalar
+  `D_T`, or the full response Gram `Gamma_T` is the first closed interface.
 
 ## 4. Gram sidecars measure what scalarization forgets
 
@@ -108,7 +108,24 @@ D_T(z,w)=sum_i p_i(z)p_i(w),                               (6)
 where `p_i` is the centered characteristic polynomial after deleting vertex
 `i`.  At order seven, two tournaments have the same `P` but a rank-one
 difference of deletion Grams.  Thus `D_T` is precisely the second-order
-coordinate lost by spectrum.
+coordinate lost by spectrum.  THM-3324 then asks what the **next operation
+consumes**.  Put
+
+```text
+r_v=(p_v,z*nu_v)^T,       Gamma_T=sum_v r_v(z)r_v(w)^T.    (7)
+```
+
+The answer is not scalar `D_T` but the full two-coordinate response Gram:
+
+```text
+Gamma_(X join Y)
+ =H_Y(z)Gamma_X H_Y(w)^T+H_X(z)Gamma_Y H_X(w)^T.           (8)
+```
+
+Order-six masks `73,83` agree on `(P,N,D,E,E^T)` and differ only in the final
+`F=sum z*nu(z)w*nu(w)` block; joining a singleton exposes that difference in
+`D`.  This is a sharp example of a quotient that suffices for one consumer
+(the switching second moment) but not for its next native operation (join).
 
 This is structurally comparable, but not identical, to two other sidecars:
 
@@ -126,13 +143,13 @@ The factorial lane now has the rational kernel
 
 ```text
 C(a,b)=[X^aY^b](1-X^3-Y^3-3XY)^(-1),
-mu(a,b)=2*a!*b!*C(a,b)/(a+b+2)!,                            (7)
+mu(a,b)=2*a!*b!*C(a,b)/(a+b+2)!,                            (9)
 ```
 
 with
 
 ```text
-C(a,b)=C(a-3,b)+C(a,b-3)+3C(a-1,b-1)+[a=b=0].              (8)
+C(a,b)=C(a-3,b)+C(a,b-3)+3C(a-1,b-1)+[a=b=0].             (10)
 ```
 
 This replaces a six-index barycentric expansion by either a one-sum formula
@@ -141,19 +158,32 @@ or constant work per lattice cell.
 The tournament lane has a different compiler.  For a selected switch,
 
 ```text
-G(2z)=N(z)/(P(z)-zN(z)),                                    (9)
+G(2z)=N(z)/(P(z)-zN(z)),                                   (11)
 ```
 
 so its total-walk sequence is constant-recursive.  Under order join,
 
 ```text
-P_join +/- zN_join=(P_1 +/- zN_1)(P_2 +/- zN_2).           (10)
+P_join +/- zN_join=(P_1 +/- zN_1)(P_2 +/- zN_2).          (12)
 ```
 
-Equation `(10)` is an efficient closed form for repeated joins, but its
+Equation `(12)` is an efficient closed form for repeated joins, but its
 commutativity forgets factor order: `K1 triangle C3` and `C3 triangle K1`
 have the same `(P,N)` and different source/sink structure.  A fast compiler
-is not automatically an injective classifier.
+is not automatically an injective classifier.  THM-3324 extends the compiler
+to every diagonal Gram channel.  If `u_a=P+a*zN`, then for
+`J=T_1 triangle ... triangle T_k`,
+
+```text
+Gamma_hat_(J,ab)
+ =sum_i Gamma_hat_(T_i,ab)
+        product_(j!=i)u_(T_j,a)(z)u_(T_j,b)(w).           (13)
+```
+
+For `k` identical factors this is
+`k*Gamma_hat_(T,ab)*(u_(T,a)(z)u_(T,b)(w))^(k-1)`.  The
+closed form accelerates exact evaluation while making the order loss
+transparent.
 
 ## 6. LRC: the next combined test
 
@@ -203,20 +233,24 @@ global rational section appears.
 
 ### FC support-five probe
 
-Degree `21` cannot close the five-variable ideal: the complete-intersection
-and Koszul count forces quotient dimension at least `1670`, hence rank at most
-`10980`.  Use `(7)--(8)` to test whether the Hesse map attains that bound, then
-move to degree `29`, the first candidate not excluded by the formal count, or
-an exact saturation argument.  Promotion still requires a deterministic
-guarded certificate, not a probabilistic sparse rank.
+THM-3323 shows that degree `21` attains the universal ceiling exactly: rank
+`10980`, quotient dimension `1670`, and no hidden early degeneracy.  Do not
+build the full degree-29 rectangle yet.  Continue the sparse quotient degree
+by degree from the frozen pivot basis and decompose its dual through the Hesse
+surface `uv=r^3`, while imposing THM-3310's phase and modulus barriers.  The
+decisive output is an exact saturation certificate, a structural recurrence
+for the quotient, or its first departure from the formal count.  Degree `29`
+remains only the first count-eligible fallback.
 
 ### Tournament wildcard
 
-Derive the order-join law for `D_T`.  If it does not close on
-`(P,N,D_T)`, identify the smallest factorwise marked-deletion sidecar and a
-minimal pair of joins with equal proposed interface but unequal joined Gram.
-Then attack the third cut-cube moment, where even-degree triples of edge Walsh
-characters predict the first triangle-shaped tensor beyond `D_T`.
+The join law and its diagonal closed form are now solved.  Derive the third
+marked-response tensor under join and compare it with the third switching-cube
+moment, whose degree-two Walsh characters first close in triangle-shaped
+triples.  In parallel test one nontransitive substitution quotient while
+retaining quotient owner and SCC order.  The hostile target is a minimal pair
+agreeing on the proposed tensor but diverging after one more substitution or
+in a triangle Walsh coefficient.
 
 ## 8. Connection boundary
 

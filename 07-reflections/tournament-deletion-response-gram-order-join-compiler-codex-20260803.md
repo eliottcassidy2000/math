@@ -1,9 +1,10 @@
 # Tournament deletion-response Gram: an exact order-join compiler
 
 **Status: PROVED by exact algebra + VERIFIED-EXACT in the stated finite
-universes.  This is a theorem-level continuation of
-[THM-3322](../01-canon/theorems/THM-3322-tournament-switching-second-moment-deletion-gram-and-order-join-law.md),
-but this note does not reserve a theorem ID or edit canon.**
+universes, canonized as
+[THM-3324](../01-canon/theorems/THM-3324-tournament-deletion-response-gram-ordered-join-compiler.md).
+This is a continuation of
+[THM-3322](../01-canon/theorems/THM-3322-tournament-switching-second-moment-deletion-gram-and-order-join-law.md).**
 
 THM-3322 identifies the vertex-deletion Gram
 
@@ -231,6 +232,29 @@ algebra has two coordinates, and its quadratic closure is exactly the
 three kernels in (12).  This is the minimal closed Gram interface native to
 the operation.
 
+There is also a closed nonrecursive form.  In the basis
+`u_+=P+zN,u_-=P-zN`, put `Gamma_hat=S Gamma S^T` with
+`S=((1,1),(1,-1))`.  Each channel satisfies
+
+```text
+Gamma_hat_(X join Y,ab)
+ =u_(Y,a)(z)u_(Y,b)(w) Gamma_hat_(X,ab)
+ +u_(X,a)(z)u_(X,b)(w) Gamma_hat_(Y,ab).
+```
+
+Hence for `J=T_1 join ... join T_k`,
+
+```text
+Gamma_hat_(J,ab)
+ =sum_i Gamma_hat_(T_i,ab)
+        product_(j!=i)u_(T_j,a)(z)u_(T_j,b)(w),
+```
+
+and identical factors give
+`k*Gamma_hat_(T,ab)*(u_(T,a)(z)u_(T,b)(w))^(k-1)`.
+This completes the diagonal-channel probe and supplies an exact repeated-join
+sequence compiler without restoring factor order.
+
 ## 5. A sharp missing-coordinate hostile
 
 Use the labelled-mask convention of THM-3322.  At order six, masks
@@ -379,8 +403,8 @@ No consequence for any of these targets follows from (15).
 
 The next bounded probes are:
 
-1. diagonalize `Gamma` in the `P +/- zN` basis and test whether the two pure
-   channels admit a smaller presentation for special factor classes;
+1. determine whether the diagonal channels admit a smaller presentation for
+   special factor classes without erasing the hostile `F` contribution;
 2. derive the third marked-deletion tensor needed for one more switching-cube
    moment, where triangle-shaped Walsh interactions should first appear; and
 3. test the same response-Gram closure under a single nontransitive

@@ -21,6 +21,7 @@ depends_on:
   - THM-3309-exceptional-quadratic-deck-passport-and-gradient-unimodularity-obstruction
 related:
   - THM-3289-affine-transverse-c0-e0-coupled-clutch-critical-no-go
+  - THM-3312-exceptional-quadratic-trace-norm-and-cofactor-antidescent
   - THM-3318-hamiltonian-divergence-torsion-ladder-for-x-plus-xr-z
 script: 04-computation/jc_exceptional_quadratic_two_clutch_formal_persistence_scout_20260803.py
 output: 05-knowledge/results/jc_exceptional_quadratic_two_clutch_formal_persistence_scout_20260803.out

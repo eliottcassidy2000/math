@@ -4,7 +4,7 @@
 
 ## 2026-08-03 current control panel
 
-**Status: OPEN.** THM-2923 leaves at most six body speeds. THM-2995/3251 cap projected `k=2,3` at `1,579/216`; THM-3313/3320 leave `z1=216` at ledger `373,153`, `349` rows in `29` families, next `gcd72/L7056`. Corrected THM-2941 leaves `561` reflected-`k=1` bodies. Arbitrary `k<=1`, the rung, and LRC(14) remain open; `q<=25` is false.
+**Status: OPEN.** Projected `k=2,3` caps are `1,579/216`; at `z1=216`, THM-3313/3320 leave ledger/rows/families `373,153/349/29`, next `gcd72/L7056`. Corrected THM-2941 leaves `561` reflected-`k=1` bodies. Arbitrary `k<=1`, the rung, and LRC(14) remain open; `q<=25` is false.
 **Scalable quotient.**  Support transfer/Möbius counting reduce `k=3/2` to `26,970/27,163` rows; septimal and located-phase screens cut raw occurrences `21.36b/951.55b -> 2.55b/200.14b`.  These are necessary-state quotients, not physical covers; most location/unit data remain.
 **Status theorem.**  For upward `A`, real maximum is `min(1,tau_H)`, `H=min(A)`: `p` cover variables replace `2^p` cells, losing integer location, threshold coupling, and needle shape.
 **Missing coordinate.**  For drifts `Z`, `P=phi_L(C_E minus union_z D_z)`; aligned completion is `P subset union_(a in A)D_a`.  Compact strict-open seams are pointwise, not a.e.

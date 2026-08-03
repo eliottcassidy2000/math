@@ -25,6 +25,8 @@ script: 04-computation/jc_exceptional_quadratic_cofactor_passport_thm3312.py
 output: 05-knowledge/results/jc_exceptional_quadratic_cofactor_passport_thm3312.out
 script_sha256: f2c87512b3d67c005822e934bb8ba8f8011f6ea4a0bda42f6202c10723cd0106
 output_sha256: 2ce88681395c40081f5bb68c9de81a5bac2e7d7f56626834bbfac6c304f547d0
+imported_response_script: 04-computation/jc_affine_c_exceptional_quadratic_blowup_scout_20260803.py
+imported_response_script_sha256: 6f050a583004172f812c3f7729427079d5df45c3a985c2e470b2a0d34ad8f337
 hash_basis: LF-normalized bytes
 ---
 
@@ -188,6 +190,6 @@ python -O 04-computation/jc_exceptional_quadratic_cofactor_passport_thm3312.py
 
 from the repository root.  The computation uses exact polynomial and finite
 extension arithmetic and imports only the frozen exceptional-quadratic
-response constructor.
+response constructor pinned in the frontmatter.
 
 **QED.**

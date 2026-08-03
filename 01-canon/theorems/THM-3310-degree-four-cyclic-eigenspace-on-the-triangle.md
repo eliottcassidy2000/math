@@ -16,8 +16,9 @@ status: >
   is a table lookup and every basis element is a SINGLE monomial.  All ten
   coordinate lines are excluded in exact `Q(omega)` and all ten coordinate
   planes by guarded modular resultants, so no `g` supported on at most three
-  of the five monomials can satisfy `<g^m>=0` for all `m`.  Support four and
-  five remain OPEN.
+  of the five monomials can satisfy `<g^m>=0` for all `m`.  This theorem leaves
+  supports four and five untreated; THM-3321 subsequently excludes support
+  four.  Support five remains OPEN.
 audit: >
   The exact companion verifies the rotation eigenvalues, `<z>=0`, `<|z|^2>=1/4`,
   and that the monomial model reproduces the projection-computed eigenspace
@@ -42,6 +43,8 @@ related:
   - THM-3300-factorial-gaussian-torus-bridge-and-the-archimedes-no-go
   - THM-3304-fourier-dirichlet-kernel-and-alternating-quintic-hfc3-exclusion
   - THM-3018-factorial-conjecture-as-a-simplex-moment-problem
+  - THM-3321-hesse-moment-kernel-and-cyclic-quartic-support-four-exclusion
+  - THM-3323-cyclic-quartic-support-five-exact-degree-21-rank
 script: 04-computation/degree_four_cyclic_eigenspace_thm3310.py
 output: 05-knowledge/results/degree_four_cyclic_eigenspace_thm3310.out
 script_sha256: 1a46fb4311a44d7807eccaf9339b291b8d930710d9f7c1fc8ebd03ac0c7acba6
@@ -205,16 +208,19 @@ In the basis order `(2)`, the radii are
 
 Thus at every projective cubic zero, the second-largest coefficient modulus is
 strictly greater than `1/23` of the largest.  These phase/coamoeba exclusions
-use only the necessary cubic moment; they do not close support four or five.
+use only the necessary cubic moment; by themselves they close neither support
+four nor support five.
 
 ## 4. What remains open
 
-Support four and support five.  The obstacle is not conceptual but the
-elimination: with three or four projective parameters the resultant chain
-requires bivariate interpolation at degrees in the thousands.  An exhaustive
-rational scan of `P^4(F_q)` at the smallest valid prime `q=61` was implemented
-and then dropped from the companion: it costs about `1.4 x 10^7` points and,
-being a search for `F_q`-rational points only, would not be decisive anyway.
+This theorem's resultant route leaves supports four and five untreated: with
+three or four projective parameters the chain requires bivariate interpolation
+at degrees in the thousands.  Subsequently, THM-3321 excludes support four by
+five guarded homogeneous Macaulay certificates.  THM-3323 proves that the
+support-five degree-21 map has exact rank `10980` and quotient dimension
+`1670`; support five remains OPEN.  An exhaustive rational scan of
+`P^4(F_q)` at the smallest valid prime `q=61` was dropped from this companion:
+it costs about `1.4 x 10^7` points and would not be decisive anyway.
 
 ## 5. The modular guard, and why it is load-bearing
 
@@ -244,10 +250,11 @@ THM-3300 is unaffected.
 Proved: Theorem 1, the basis `(2)`, the nesting flag, and the moment table
 `(3)`.  Finite-exact: `(4)` and `(5)`, hence the support-`<=3` exclusion.
 
-**Not proved:** `FC(3)`, `HFC(3)`, or any statement about supports four and
-five.  Nothing here bears on `FC(n)` for `n != 3`, on non-eigenvector
-candidates, or on THM-3018's outstanding Laplace closure.  The exclusions
-concern cyclic eigenvectors of degree at most four only.
+**Not proved by this theorem:** `FC(3)`, `HFC(3)`, or any statement about
+supports four and five.  Later theorems have the scoped consequences just
+listed; support five is still open.  Nothing here bears on `FC(n)` for
+`n != 3`, on non-eigenvector candidates, or on THM-3018's outstanding Laplace
+closure.  The exclusions concern cyclic eigenvectors of degree at most four.
 
 Run
 

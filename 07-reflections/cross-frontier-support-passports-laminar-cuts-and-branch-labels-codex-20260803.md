@@ -4,6 +4,15 @@
 note connects THM-3308--3313 and the concurrent `z1=216` audit.  It introduces
 no reduction between LRC, HFC/FC, and JC and closes none of the conjectures.
 
+**Subsequent continuation.**  THM-3321 completes the proposed cyclic-quartic
+support-four exclusion, so every surviving candidate now uses all five
+coefficients; THM-3323 gives the exact degree-21 support-five quotient
+dimension `1670` without closing that chart.  THM-3319 releases both JC clutch
+slopes `(d,k)` as an algebraic etale germ, without transporting THM-3312's
+particular cofactor ratio.  THM-3320 completes the next four LRC prefix rows,
+moving `353/31` wall rows/families to `349/29`.  The statements below retain
+their original scoped proposal boundaries.
+
 ## The common pattern
 
 The source snippet's gauge warning is the right abstraction: two coordinate

@@ -31,6 +31,7 @@ related:
   - THM-3018-factorial-conjecture-as-a-simplex-moment-problem
   - THM-3300-factorial-gaussian-torus-bridge-and-the-archimedes-no-go
   - THM-3303-keller-simplex-null-moments-force-a-boundary-collision
+  - THM-3323-cyclic-quartic-support-five-exact-degree-21-rank
 script: 04-computation/degree_four_support4_macaulay_scout_20260803.py
 output: 05-knowledge/results/degree_four_support4_macaulay_scout_20260803.out
 script_sha256: 74bb6fd1c0019f5fe934fa27744bfab68bfbfdc6bb746857500b91c8507792e1
@@ -195,12 +196,21 @@ one.  Therefore
 dim (R/I)_21 >=1670,              rank Mac_21 <=10980.      (17)
 ```
 
-The formal product-series coefficient remains positive through degree `28`
-(`39`) and first becomes nonpositive in degree `29`.  Thus degree `29`, whose
-raw map is `66486 x 40920`, is the first full-rank candidate not excluded by
-this count; no generic-Hilbert-series claim is made.  A lower-degree rank scout
-cannot prove projective emptiness.  A proof needs a guarded exact certificate
-at a sufficient degree or a different saturation/affine-chart argument.
+[THM-3323](THM-3323-cyclic-quartic-support-five-exact-degree-21-rank.md)
+proves that this bound is sharp for the actual moment forms:
+
+```text
+rank_Q Mac_21=10980,              dim_Q (R/I)_21=1670.      (18)
+```
+
+Its explicit maximal minor modulo `101` lifts to characteristic zero, and a
+second guarded prime gives the same rank.  Thus there is no hidden rank defect
+at this slice, but the slice cannot prove projective emptiness.  The formal
+product-series coefficient is `39` in degree `28` and `-354` in degree `29`,
+so degree `29` is only the first full-rank candidate not excluded by this
+count; no generic-Hilbert-series or degree-29 rank claim is made.  A proof
+needs a guarded exact certificate at a sufficient degree or a different
+saturation/affine-chart argument.
 
 Nothing here proves `FC(3)` outside this degree-four cyclic eigenspace, treats
 non-eigenvectors, or supplies a Jacobian-conjecture consequence.

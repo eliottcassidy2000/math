@@ -4,7 +4,9 @@ Status: **PROVED structural rank ceiling and characteristic-zero rank** +
 **FINITE-EXACT guarded sparse certificates**; full support five remains
 **OPEN**.
 
-This continues
+This is canonized as
+[THM-3323](../01-canon/theorems/THM-3323-cyclic-quartic-support-five-exact-degree-21-rank.md)
+and continues
 [THM-3321](../01-canon/theorems/THM-3321-hesse-moment-kernel-and-cyclic-quartic-support-four-exclusion.md)
 without changing its coefficient chart.  Retain
 

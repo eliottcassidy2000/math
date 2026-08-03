@@ -9,6 +9,13 @@ while the universal trace/norm passport and independent replay are in
 This note determines the exceptional quadratic and its first normal motion.
 It does not construct a root section and proves no inverse or Keller mate.
 
+**Subsequent continuation.**
+[THM-3319](../01-canon/theorems/THM-3319-exceptional-quadratic-two-clutch-etale-persistence.md)
+releases both external slopes `(d,k)` and proves that this fixed deck persists
+as a connected finite-etale `C2` deck over a local algebraic etale germ.  It
+does not produce a global component or rational section, and it does not yet
+transport THM-3312's specific elimination-cofactor ratio across the germ.
+
 THM-3312 universalizes the next native algebraic operation without choosing a branch.
 For every `a+bt` in the quadratic field it records trace, norm, and conjugate-
 difference square.  Applied to the critical `y`-root, first-normal velocity, and
