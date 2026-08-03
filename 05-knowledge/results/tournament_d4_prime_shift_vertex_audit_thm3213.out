@@ -1,0 +1,6 @@
+U2 DIRECT VERTEX PATH-COVER AUDIT
+set_partition_counts=(1, 31, 90, 65, 15, 1)
+unordered_path_cover_profile=(45, 171, 186, 81, 15, 1)
+ordered_factorial_profile=(45, 342, 1116, 1944, 1800, 720)
+d4_constant=1944=2^3*3^5
+implementation=canonical set partitions plus direct induced-path permutations

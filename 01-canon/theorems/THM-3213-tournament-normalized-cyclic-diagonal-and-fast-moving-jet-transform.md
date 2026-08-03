@@ -10,25 +10,29 @@ status: >
   coordinate has an exact trivariate diagonal formula.  Smooth-point analysis
   gives its full leading constant after factorial-cube normalization; dividing
   once more by binom(r-1,d-1) produces a lambda^r/r asymptotic and proves the
-  twice-normalized sequence is not C-finite for every fixed d.  For d=1,2,3,
-  a separate all-prime congruence puts a new p^3 in the reduced denominator at
-  every prime index p>3, so even the singly normalized sequence is not
-  C-finite there.  Singly normalized C-finiteness for d>=4 and P-recursiveness
-  for any normalization remain open.
+  twice-normalized sequence is not C-finite for every fixed d.  A prime-shift
+  congruence puts a fresh p^3 in the singly normalized denominator for every
+  fixed d and all but finitely many primes.  More generally, for every fixed
+  q-block quotient tournament Q, F_(Q[T_r,...,T_r])(d)/(r!)^q has fresh p^q
+  denominators and is not C-finite.  P-recursiveness remains open.
 audit: >
   The exact transform companion checks 262 coordinates for K1, C3, and the
   same-H mask-40/mask-76 hostile.  The exact modular companion reconstructs
-  the C3 quotient kernel and checks primes 5,7,11,13,17,19; the proof below
-  establishes the congruence for every prime p>3.  A floating 80-digit
-  companion checks the analytically proved asymptotic for d=1..4 and
-  r=40..640 and is explicitly labelled NUMERICAL CONTROL ONLY.  All three
+  the C3 quotient kernel and checks primes 5,7,11,13,17,19.  A second exact
+  modular companion checks the prime-shift identity through d=12, the d=4
+  constant 1944, the p-index Fermat-quotient near miss, and its finite scout;
+  an independent vertex/set-partition companion reconstructs the full U_2
+  path-cover profile and 1944 without the quotient kernel.  The all-depth and
+  quotient-wide proofs are algebraic below.  A floating 80-digit companion
+  checks the analytically proved asymptotic for d=1..4 and r=40..640 and is
+  explicitly labelled NUMERICAL CONTROL ONLY.  All five
   normal/-O/stored transcripts agree and all scripts have no assert node.
 source: root/frontier-synthesis-cont-2026-08-02
 depends_on:
   - THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence
   - THM-3202-c3-repeated-join-moving-jet-formula-and-cfinite-obstruction
-related:
   - THM-3121-path-cover-walk-content-substitution-kernel
+related:
   - THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform
 fast_script: 04-computation/tournament_fast_binomial_transform_thm3213.py
 fast_output: 05-knowledge/results/tournament_fast_binomial_transform_thm3213.out
@@ -38,6 +42,14 @@ prime_script: 04-computation/tournament_normalized_prime_denominator_thm3213.py
 prime_output: 05-knowledge/results/tournament_normalized_prime_denominator_thm3213.out
 prime_script_sha256: a8c512ad551e08329d23a0c9f36d36bf4053e1240a172895872e60755d26f4db
 prime_output_sha256: e3b9c1b8de55b12296b3b7956ab57b2fc3a4ea6ca98184a62b57a72614f0f9c1
+prime_shift_script: 04-computation/tournament_prime_shift_all_depth_thm3213.py
+prime_shift_output: 05-knowledge/results/tournament_prime_shift_all_depth_thm3213.out
+prime_shift_script_sha256: 9e6dd5129fea3c069e218b425e6376a156a5503df08b7c08572f90918aa942d1
+prime_shift_output_sha256: d3622e0237ec1d1f8c09bfa2499922277050159c9164f5bceaa20e5c85b07ce2
+d4_vertex_script: 04-computation/tournament_d4_prime_shift_vertex_audit_thm3213.py
+d4_vertex_output: 05-knowledge/results/tournament_d4_prime_shift_vertex_audit_thm3213.out
+d4_vertex_script_sha256: 49d2532ebbc9d9562fb8c28cf26faa7a94eed30519ec6d9b4ae0709d88d9d6ba
+d4_vertex_output_sha256: 699d51258140dad404b6db9529d73f6c12a02d21a065c301f2a6af56236c933f
 asymptotic_control_script: 04-computation/tournament_normalized_diagonal_asymptotic_control_thm3213.py
 asymptotic_control_output: 05-knowledge/results/tournament_normalized_diagonal_asymptotic_control_thm3213.out
 asymptotic_control_script_sha256: e298e38884709b9bdb6f18fa808413571b0682168217635f4e795a55c62cab34
@@ -275,11 +287,13 @@ would lower the exponential growth rate.  Therefore
 Equivalently, its ordinary generating function in `r` is not rational.  This
 is an asymptotic proof, not a finite recurrence fit.
 
-## 5. A new-prime obstruction for `d=1,2,3`
+## 5. Prime-shift new-denominator obstruction at every depth
 
 The singly normalized sequence `A_(r,d)` needs a separate argument because
 its leading form `r^(d-2)lambda^(-3r)` is compatible with a repeated
 characteristic root when `d>=2`.
+
+### 5.1 The zero-shift control `d=1,2,3`
 
 Let `p>3` be prime.  Falling-factorial inversion and Fermat's congruence give
 
@@ -329,8 +343,109 @@ of primes.  Equations `(31)--(32)` contradict that confinement.  Thus
 {A_(r,d)} is not C-finite for d=1,2,3.                    (33)
 ```
 
-For `d>=4`, `(30)` makes this particular prime test silent.  No C-finite
-claim for singly normalized `A_(r,d)` is made there.
+For `d>=4`, `(30)` makes the **zero-shift** test silent.  The repair is to
+move the prime index while keeping its residue profile fixed.
+
+### 5.2 The all-depth prime shift
+
+Fix any `d>=1` and put
+
+```text
+m=ceil(d/3),                    s=m-1.                    (33a)
+```
+
+For every prime `p` and every `c`, Fermat's congruence gives
+
+```text
+F_(T_(p+s))(c)
+ =Delta^c(j^(p+s))|_(j=0)
+ =Delta^c(j^(s+1))|_(j=0)
+ =F_(T_(s+1))(c)                                  mod p. (33b)
+```
+
+The equality includes `c>s+1`: both sides there are zero modulo `p`, because
+the right finite difference exceeds the degree.  THM-3202 expresses
+`F_(U_r)(d)` as an integer cubic form in the complete transitive profile.
+Therefore `(33b)` implies
+
+```text
+F_(U_(p+s))(d)=F_(U_m)(d)                         mod p. (33c)
+```
+
+Set
+
+```text
+K_d=F_(U_m)(d).                                           (33d)
+```
+
+This integer is strictly positive.  The tournament `U_m` has `3m>=d`
+vertices; every tournament has a Hamilton path, and cutting such a path into
+`d` nonempty consecutive paths gives a `d`-path cover.
+
+Now take any prime `p>s` not dividing `K_d` and put `r=p+s`.  Then
+`p<=r<2p`, so `v_p(r!)=1`, while `(33c)` makes the numerator a `p`-adic unit.
+The reduced denominator of
+
+```text
+A_(p+s,d)=F_(U_(p+s))(d)/((p+s)!)^3                       (33e)
+```
+
+therefore contains exactly `p^3`.  Only finitely many primes are excluded by
+`p<=s` or `p|K_d`.  Infinitely many fresh denominator primes prove
+
+```text
+{A_(r,d)} is not C-finite for every fixed d>=1.           (33f)
+```
+
+For `d=4`, the cheapest shift is `s=1` and
+
+```text
+K_4=F_(U_2)(4)=1944=2^3 3^5.                             (33g)
+```
+
+Thus **every** prime `p>3` contributes a new `p^3` denominator at `r=p+1`.
+For `p>5`, the first layer at the unshifted index `r=p` is instead the
+Fermat-quotient combination
+
+```text
+12(24q_p(2)-21q_p(3)+5q_p(5)) mod p.                     (33h)
+```
+
+Here `q_p(a)=(a^(p-1)-1)/p mod p` for `p` not dividing `a`.  The combination
+vanishes at `p=13`; exact controls give
+`v_5(F_(U_5)(4))=3` and `v_13(F_(U_13)(4))=2`.  The finite scout finds no
+other zero first layer through `10^6`, but this is only finite evidence.  The
+unshifted test is therefore the corrected near miss, not the uniform proof.
+
+### 5.3 Quotient-wide form
+
+The same argument is not special to `C_3`.  Fix any tournament `Q` on `q>=1`
+vertices and put
+
+```text
+V_r=Q[T_r,...,T_r].                                      (33i)
+```
+
+THM-3121 writes `F_(V_r)(d)` as an integer polynomial in `q` copies of the
+complete factor profile.  Hence `(33b)` gives
+
+```text
+F_(V_(p+s))(d)=F_(V_(s+1))(d)                     mod p. (33j)
+```
+
+Choose `m=ceil(d/q)`, `s=m-1`, and
+`K_(Q,d)=F_(V_m)(d)>0`; positivity again follows by cutting a Hamilton path
+on the `qm>=d` vertices.  For every prime `p>s` not dividing `K_(Q,d)`, the
+reduced denominator of
+
+```text
+F_(V_(p+s))(d)/((p+s)!)^q                                (33k)
+```
+
+contains exactly `p^q`.  Thus every fixed quotient and fixed positive depth
+has a factorial-normalized sequence which is not C-finite.  This
+quotient-wide statement concerns recurrence class only; it supplies no
+uniform algorithm for growing quotient or output depth.
 
 ## 6. Recurrence taxonomy and operational boundary
 
@@ -352,13 +467,13 @@ By contrast, their C-finite behavior differs sharply:
 | sequence | fixed-`d` status |
 |---|---|
 | raw `F_(U_r)(d)` | not C-finite for every `d`, by THM-3202's factorial growth |
-| `A_(r,d)` | not C-finite for `d=1,2,3`; open here for `d>=4` |
+| `A_(r,d)` | not C-finite for every `d`, by the prime shift `(33a)--(33f)` |
 | `B_(r,d)` | not C-finite for every `d`, by `(25)` |
 
 This separates three notions that finite sequence fitting tends to conflate:
 fast exact evaluation, a fixed constant-coefficient closed form, and a
 polynomial-coefficient recurrence.  Equation `(5)` supplies the first;
-equations `(27),(33)` refute the second in their stated scopes; the third
+equations `(27),(33f)` refute the second at every fixed depth; the third
 remains open.
 
 ## Exact reproduction
@@ -370,11 +485,15 @@ python3 04-computation/tournament_fast_binomial_transform_thm3213.py
 python3 -O 04-computation/tournament_fast_binomial_transform_thm3213.py
 python3 04-computation/tournament_normalized_prime_denominator_thm3213.py
 python3 -O 04-computation/tournament_normalized_prime_denominator_thm3213.py
+python3 04-computation/tournament_prime_shift_all_depth_thm3213.py
+python3 -O 04-computation/tournament_prime_shift_all_depth_thm3213.py
+python3 04-computation/tournament_d4_prime_shift_vertex_audit_thm3213.py
+python3 -O 04-computation/tournament_d4_prime_shift_vertex_audit_thm3213.py
 python3 04-computation/tournament_normalized_diagonal_asymptotic_control_thm3213.py
 python3 -O 04-computation/tournament_normalized_diagonal_asymptotic_control_thm3213.py
 ```
 
-Each pair must reproduce its declared output byte for byte.  The first two
-companions use exact integer/rational arithmetic.  The third is explicitly a
+Each pair must reproduce its declared output byte for byte.  The first four
+companions use exact integer/rational arithmetic.  The fifth is explicitly a
 floating numerical control and is not a proof dependency for `(13)`.  All
 checks use explicit exceptions, so optimized mode retains them.  QED.

@@ -24,7 +24,7 @@ structural tools, with later exact audits promoted directly into the map below.
    exactly three primitive-`3:5` equality lanes.  Those lanes approach from
    above, while a certified finite hostile lies below the limit floor, so
    periods, convergence, and finite heads still need their sidecars.
-   Independently, the projected `k=3` cap is now `222` by THM-3174.
+   Independently, THM-3207 now lowers the projected `k=3` cap to `220`.
 2. For the **planar Jacobian response lane**, THM-3151 excludes every balanced
    `(D,D)` Faber cell and proves the chart floor `N>=4D`; THM-3167 separates
    diagonal response, constant-field membership, and ownership by one
@@ -54,10 +54,13 @@ structural tools, with later exact audits promoted directly into the map below.
    selected amplitude can cancel while a complementary chart survives, and
    normalizes its continuant to a D-finite OGF.  The full selected visibility
    tail has a cleared order-three P-recursive law and is linearly evaluable for
-   fixed parameters, without becoming a PRS-depth theorem.  THM-3210 then
+   fixed parameters.  THM-3192 now supplies the missing reciprocal map for the
+   offset-six PRS: `H,J,K` are literal top-jet Pluecker charts.  THM-3206 keeps
+   the complementary plane under heterogeneous blocks.  THM-3210 then
    finds the rational ray `d=n+4`, `v=(n+3)/(3(n+4)(2n+5))`, where the exact
    profile is visible/invisible/invisible/visible: visibility is nonmonotone
-   even though its whole sequence has a closed recurrence.
+   even though its whole sequence has a closed recurrence.  Arbitrary-offset
+   simultaneous chart selection remains open.
 4. For **tournaments and exact sequences**, THM-3181 proves pure parity
    `Q_T(-t)=(-1)^nQ_T(t)` and the rational integer-value series
    `sum Q_T(m)x^m=xB_T(x)/(1-x)^(n+1)`.  Only
@@ -69,9 +72,10 @@ structural tools, with later exact audits promoted directly into the map below.
    coordinate has a factorial-cube floor and is not C-finite.  THM-3213
    accelerates the complete factor jet to one polynomial product, gives an
    exact trivariate diagonal for transitive cyclic lifts, and proves every
-   twice-normalized fixed coordinate is still non-C-finite.  New-prime
-   denominators close the singly normalized cases `d=1,2,3`; `d>=4` and
-   P-recursiveness remain open.  SCC order and run data are still destroyed.
+   twice-normalized fixed coordinate is still non-C-finite.  A prime shift
+   now closes the singly normalized sequence at every fixed depth and, more
+   generally, produces `p^q` denominators for every fixed `q`-block quotient.
+   P-recursiveness remains open.  SCC order and run data are still destroyed.
 5. A fixed-grid **LRC divisor upset** has an exact totient inclusion--exclusion
    response and a supermodular death law, but its normalized mass does not
    transport upward.
@@ -98,12 +102,12 @@ with exact failure mechanisms and cheap next tests.
 | lane | proved new mathematics | exact frontier gain | live bottleneck |
 |---|---|---|---|
 | LRC(14), grid response | [THM-3130](../01-canon/theorems/THM-3130-divisor-antichain-totient-response-and-supermodular-witness-loss.md) | principal totient-tail product, antichain inclusion--exclusion, decreasing supermodular insertion loss, divisor-death barcode | fixed grid is not the continuous loneliness profile; normalized upward transport fails at `q=6` |
-| LRC(14), projected `k=3` | THM-3113/3114/3139/3174 | projected layers close through `z1=223`; cap `222`, ledger `374025` | next `219` rows; arbitrary `k<=1`, the rung, and LRC(14) remain open |
+| LRC(14), projected `k=3` | THM-3113/3114/3139/3174/3207 | projected layers close through `z1=221`; cap `220`, ledger `373716` | next `289` rows; arbitrary `k<=1`, the rung, and LRC(14) remain open |
 | LRC(14), reflected levels | [THM-3135](../01-canon/theorems/THM-3135-directed-cycle-weak-order-lane-cover-and-reflected-h-boundary.md), [THM-3171](../01-canon/theorems/THM-3171-global-high-channel-cell90-floor-and-all-width-uniform-two-star-law.md), [THM-3200](../01-canon/theorems/THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary.md), [THM-3211](../01-canon/theorems/THM-3211-uniform-lrc-channel-limit-bernoulli-cubic-and-sharp-floor.md) | exact cycle/DAG boundary; an all-width cell-90 theorem; fixed-channel residue quadratics; and a sharp Bernoulli-cubic limit floor `1/105` | a finite hostile lies below the limit floor; periods and stabilization are not uniform; other cells, the rung, and physical entry remain open |
 | planar Jacobian response | [THM-3151](../01-canon/theorems/THM-3151-resonant-odd-bipole-equality-cell-nonentry-and-degree-floor.md), [THM-3167](../01-canon/theorems/THM-3167-inverse-different-three-gate-target-shear-descent-and-full-marked-jet-no-go.md), [THM-3172](../01-canon/theorems/THM-3172-shear-invariant-differential-owner-filtration-and-transverse-recurrence.md), [THM-3212](../01-canon/theorems/THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch.md) | every balanced equality cell is excluded; owner/constant-field/diagonal gates are separated; the differential-owner filtration gives a one-jet unit obstruction; and the canonical heptic centered lift has five forced Morse critical points | audit the off-center unit clutch away from `g=ST` and the remaining Faber fluxes; general chart entry and `JC(2)` stay open |
-| factorial, exact quadratics | [THM-3180](../01-canon/theorems/THM-3180-six-exit-factorial-newton-euclidean-closure-through-r2198.md), [THM-3201](../01-canon/theorems/THM-3201-seven-exit-factorial-newton-euclidean-closure-through-r2403.md), [THM-3186](../01-canon/theorems/THM-3186-full-exterior-continuant-path-convolution-and-cancellation-wall.md), [THM-3210](../01-canon/theorems/THM-3210-factorial-exterior-double-cancellation-ray-and-two-step-invisible-window.md) | exact-support `{0,1,2}` closes through `r=2403`; the signed exterior tail is P-recursive, yet has an exact two-step nonmonotone invisible window on a rational ray | first unaudited `r=2404,d=2406`; selected-chart cancellation and same-Smith data still do not determine Euclidean depth; translated/arbitrary supports and `FC(3)` remain open |
+| factorial, exact quadratics | [THM-3180](../01-canon/theorems/THM-3180-six-exit-factorial-newton-euclidean-closure-through-r2198.md), [THM-3201](../01-canon/theorems/THM-3201-seven-exit-factorial-newton-euclidean-closure-through-r2403.md), [THM-3186](../01-canon/theorems/THM-3186-full-exterior-continuant-path-convolution-and-cancellation-wall.md), [THM-3192](../01-canon/theorems/THM-3192-reciprocal-coefficient-jet-transfer-and-z-adic-pluecker-return.md), [THM-3210](../01-canon/theorems/THM-3210-factorial-exterior-double-cancellation-ray-and-two-step-invisible-window.md) | exact-support `{0,1,2}` closes through `r=2403`; the exterior tail is P-recursive; reciprocal reversal identifies the offset-six `H,J,K` PRS charts; visibility still has a two-step nonmonotone window | first unaudited `r=2404,d=2406`; arbitrary-offset simultaneous chart selection, translated supports, and `FC(3)` remain open |
 | factorial, sparse `FC(3)` | [THM-3125](../01-canon/theorems/THM-3125-monomial-ray-first-window-factorial-closure-in-three-variables.md) | genuine anchored three-variable monomial-ray subclass via positive Gamma layers | translated rays, off-ray supports, shifted windows, full `FC(3)`/`SFC(3)` |
-| tournaments | [THM-3134](../01-canon/theorems/THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform.md), [THM-3181](../01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md), [THM-3202](../01-canon/theorems/THM-3202-c3-repeated-join-moving-jet-formula-and-cfinite-obstruction.md), [THM-3213](../01-canon/theorems/THM-3213-tournament-normalized-cyclic-diagonal-and-fast-moving-jet-transform.md) | endpoint-jet dictionary; minimal join recurrences; a one-product fast cyclic jet; exact transitive diagonals; normalized non-C-finite and prime-denominator boundaries | cyclic substitution still needs the complete moving jet; singly normalized `d>=4`, P-recursive status, SCC order, and growing output depth remain open |
+| tournaments | [THM-3134](../01-canon/theorems/THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform.md), [THM-3181](../01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md), [THM-3202](../01-canon/theorems/THM-3202-c3-repeated-join-moving-jet-formula-and-cfinite-obstruction.md), [THM-3213](../01-canon/theorems/THM-3213-tournament-normalized-cyclic-diagonal-and-fast-moving-jet-transform.md) | endpoint-jet dictionary; minimal join recurrences; a one-product fast cyclic jet; exact transitive diagonals; every fixed-quotient factorial normalization is non-C-finite | cyclic substitution still consumes the complete moving jet; P-recursive status, quotient state width, SCC order, and growing output depth remain open |
 | modular congruence shadow | [THM-3141](../01-canon/theorems/THM-3141-quartic-v4-modular-congruence-shadow-and-gamma3-sidecar-boundary.md) | pointed `V4` frame gives exactly `PSL_2(F3)=A4`; `(SR)^3=T^3` is the first lost modular word; rooted ternary input is separately forgotten | build a `Gamma(3)`/Farey lift on one common physical carrier; no faithful modular action or JC/LRC transfer yet |
 | signed forest lifts | [THM-3132](../01-canon/theorems/THM-3132-projected-forest-boundary-parity-and-augmentation.md) | all-rank parity classification: even rank surjective, odd rank augmentation-zero | positivity, locality, denominator, symmetry, and operation compatibility are not supplied |
 | positive refinement | [THM-3137](../01-canon/theorems/THM-3137-finite-stochastic-pole-selector-polytope-and-portability-wall.md) | exact one-pole selector polytope through degrees `5..9`: two facets, `24` support-two vertices; same-mean deterministic replacement fails | degree `10` kills every physical one-/two-pole law; nearby support has a two-upset Farkas wall |
@@ -478,6 +482,18 @@ Smith-band implication is used. A nonempty barcode remains only a necessary
 observer. Continue the sequential exit/flag census from `d=2406`, changing
 Euclidean row or local place only on actual survivors.
 
+The structural transfer has also reached the actual offset-six PRS chart.
+THM-3186's reciprocal continuant gives a P-recursive selected tail but permits
+signed cancellations; THM-3210 makes the nonmonotone
+visible/invisible/invisible/visible window exact.  THM-3192 repairs the former
+typing gap by reversing coefficients: fixed top jets propagate homogeneously,
+the hidden wedge returns at the next `z`-adic layer, and the maintained
+offset-six factors `H,J,K` are exactly two Toeplitz Pluecker charts and one
+wedge chart, up to explicit units.  THM-3206 separately proves that
+heterogeneous exterior blocks retain one common two-plane and carry a genuine
+`PGL_2` reflection holonomy inside it.  These theorems identify the carrier
+and charts; they do not prove simultaneous nonvanishing for arbitrary offsets.
+
 ### 5. Tournament profiles are endpoint jets
 
 Let `F_T(d)=d!pc_T(d)` count ordered spanning path covers, and let `b_T(pi)`
@@ -564,11 +580,11 @@ F_(U_r)(d)/(r!)^3
 The unique smooth point is `(log 2,log 2,log 2)`.  Its pole and Gaussian
 Hessian yield an explicit leading constant times
 `r^(d-2)(log 2)^(-3r)`.  Dividing again by `binom(r-1,d-1)` leaves a nonzero
-`(log 2)^(-3r)/r` tail, which no C-finite sequence can have.  At every prime
-index `p>3`, a separate congruence puts a new `p^3` in the reduced denominator
-of the singly normalized coordinates `d=1,2,3`.  Hence fast evaluation,
-C-finiteness, and P-recursiveness are three different questions; the last
-remains open.
+`(log 2)^(-3r)/r` tail, which no C-finite sequence can have.  A shifted-prime
+congruence puts a new `p^3` in the reduced denominator at every fixed depth;
+for a fixed `q`-block quotient the same mechanism gives `p^q`.  Hence fast
+evaluation, C-finiteness, and P-recursiveness are three different questions;
+only the last remains open here.
 
 ### 6. Signed lift is not positive lift
 
@@ -719,9 +735,9 @@ zero/extremal geometry, and finite-head behavior are not interchangeable:
 
 | lane | exact evaluator / bulk law | recurrence boundary | separate hostile geometry |
 |---|---|---|---|
-| factorial exterior visibility | normalized continuant and differential OGF | order-three P-recursive law, not a coefficient-degree PRS theorem | THM-3210 is visible/invisible/invisible/visible on one rational ray |
+| factorial exterior visibility | normalized continuant and differential OGF | order-three P-recursive law; THM-3192 identifies the offset-six PRS charts only | THM-3210 is visible/invisible/invisible/visible on one rational ray |
 | reflected LRC channel | residue quadratics plus Bernoulli-cubic limit | cleared numerator quasipolynomial; normalized mass generically not C-finite | equality tails approach `1/105` from above; one finite head lies below it |
-| cyclic tournament diagonal | one-product moving jet and smooth diagonal | twice-normalized sequence not C-finite; P-recursiveness open | scalar `H` loses the jet; prime indices add new denominators for `d<=3` |
+| cyclic tournament diagonal | one-product moving jet and smooth diagonal | both factorial-normalized sequences are not C-finite at every fixed depth; P-recursiveness open | scalar `H` loses the jet; prime shifts add `p^q` for every fixed quotient and depth |
 
 The reusable audit is
 
@@ -740,11 +756,11 @@ imply a fixed closed form.
 |---|---|---|---|
 | Fixed cell-90 two-star for `H` | **PROVED, fixed-family only** | THM-3171 closes every `D>=6` and gcd cone; one sharp weak edge forces three regular companions | transfer the mechanism to another cell or prove physical entry; do not call it LRC(14) |
 | Fixed LRC dilation sequence | **PROVED + VERIFIED-EXACT** | [THM-3200](../01-canon/theorems/THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary.md) gives residue quadratics; [THM-3211](../01-canon/theorems/THM-3211-uniform-lrc-channel-limit-bernoulli-cubic-and-sharp-floor.md) gives the Bernoulli-cubic bulk, sharp floor, three closed equality rays, and a finite-head hostile | classify the signed `1/g` residue correction; keep exact heads; control growing periods across primitive channels |
-| Projected `k=3` descent | **PROVED + VERIFIED-EXACT** | THM-3113/3114/3139/3174 lower the cap through `z1=223` | continue the exact next wall without inferring physical-cover counts |
+| Projected `k=3` descent | **PROVED + VERIFIED-EXACT** | THM-3113/3114/3139/3174/3207 lower the cap through `z1=221`, giving cap `220` | continue the exact next wall without inferring physical-cover counts |
 | Residual quadratic factorial resonance | **CLOSED through `r=2403`** | [THM-3180](../01-canon/theorems/THM-3180-six-exit-factorial-newton-euclidean-closure-through-r2198.md) closes `79` six-exit rows and [THM-3201](../01-canon/theorems/THM-3201-seven-exit-factorial-newton-euclidean-closure-through-r2403.md) closes `50` seven-exit rows by independent multi-prime flags | begin at `r=2404,d=2406`; change observer only on an actual survivor |
-| Factorial exterior visibility sequence | **PROVED + INDEPENDENTLY AUDITED** | [THM-3186](../01-canon/theorems/THM-3186-full-exterior-continuant-path-convolution-and-cancellation-wall.md) gives the differential OGF and order-three law; [THM-3210](../01-canon/theorems/THM-3210-factorial-exterior-double-cancellation-ray-and-two-step-invisible-window.md) gives a rational two-step invisible ray and exact return at length five | identify the missing Schur/connection sidecar before transferring the law to coefficient-degree PRS depth; never infer monotone visibility from graph distance |
+| Factorial exterior visibility sequence | **PROVED + INDEPENDENTLY AUDITED** | [THM-3186](../01-canon/theorems/THM-3186-full-exterior-continuant-path-convolution-and-cancellation-wall.md) gives the differential OGF; [THM-3192](../01-canon/theorems/THM-3192-reciprocal-coefficient-jet-transfer-and-z-adic-pluecker-return.md) identifies offset-six `H,J,K`; [THM-3210](../01-canon/theorems/THM-3210-factorial-exterior-double-cancellation-ray-and-two-step-invisible-window.md) gives a two-step invisible ray and return | extend the chart map beyond offset six and solve simultaneous selection; never infer monotone visibility from graph distance |
 | Differential owner for planar JC | **PROVED gate + centered heptic exclusion / JC OPEN** | THM-3172 freezes polynomial owners; [THM-3212](../01-canon/theorems/THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch.md) gives five forced Morse points for every centered heptic lift and the exact off-center residue clutch | audit `(B,C_0,E_0)=(1,0,x)` globally away from `ST`, then apply `B_1` and remaining fluxes only to a survivor |
-| Tournament closed forms | **PROVED join law + fast cyclic boundary** | [THM-3181](../01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md) gives the minimal triangular recurrence; [THM-3213](../01-canon/theorems/THM-3213-tournament-normalized-cyclic-diagonal-and-fast-moving-jet-transform.md) gives the one-product jet, exact diagonal asymptotic, all-`d` twice-normalized non-C-finiteness, and new-prime obstruction for `d<=3` | test singly normalized `d>=4` and P-recursiveness; retain the full jet for cyclic consumers |
+| Tournament closed forms | **PROVED join law + fast cyclic boundary** | [THM-3181](../01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md) gives the minimal triangular recurrence; [THM-3213](../01-canon/theorems/THM-3213-tournament-normalized-cyclic-diagonal-and-fast-moving-jet-transform.md) gives the one-product jet, exact diagonal asymptotic, all-depth normalized non-C-finiteness, and a quotient-wide `p^q` obstruction | decide P-recursiveness; retain the full jet and measure state width for growing quotients/depths |
 | Common `C2*C3` carrier for quartic lifts and tournament substitution | **PROVED CONGRUENCE SHADOW / FAITHFUL LIFT OPEN** | THM-3141 identifies `PSL_2(F3)`, first relation `(SR)^3`, and the separately forgotten cyclic root | add rooted triple, `Gamma(3)`/Farey coordinate, and a common physical atom |
 | Positive Young selector after signed forest lift | **PROVED FINITE CHAMBER / GLOBAL OPEN** | THM-3137 gives `24` support-two laws through degree nine, then exact degree-ten and cross-support Farkas death | classify mixed-depth persistence without calling it an original-response decomposition |
 
@@ -768,10 +784,9 @@ imply a fixed closed form.
    independent lower hull.  Do not spend a new prime or row before a survivor.
 2. On any survivor, retain the full progressive degree trace and shared face;
    then choose a second Euclidean row, residual polynomial, or new place.
-3. Use THM-3186's normalized continuant and order-three selected-visibility
-   recurrence as the exact linear-time tail engine.  THM-3210's two-step
-   invisible ray is the mandatory hostile: do not identify this scalar chart
-   with the coefficient-degree PRS flag or assume visibility is monotone.
+3. Use THM-3186's linear-time tail and THM-3192's reciprocal top-jet map on the
+   offset-six `H,J,K` charts.  The next structural task is arbitrary-offset
+   simultaneous selection; THM-3210 forbids assuming visibility is monotone.
 
 ### Wildcard -- planar Jacobian
 
@@ -790,11 +805,12 @@ imply a fixed closed form.
 1. Use THM-3181's half-grid/minimal recurrence on order joins.  For cyclic
    substitution, compute the complete moving jet with THM-3213's one-product
    transform; do not replace it by scalar `H`.
-2. Attack singly normalized `d>=4` by the next p-adic profile layer or a
-   subleading smooth-diagonal term.  Separately test P-recursiveness, which is
-   invariant under all three hypergeometric normalizations.
+2. Test P-recursiveness of one fixed-depth diagonal, which is invariant under
+   all three hypergeometric normalizations; require an exact annihilator or an
+   obstruction, not a finite fit.
 3. Classify small quotient kernels by operational state width and diagonal-band
-   geometry, with same-`H`/different-jet factors as mandatory hostiles.
+   geometry, with same-`H`/different-jet factors as mandatory hostiles; then
+   isolate what fails when quotient size or output depth grows.
 
 ### Positivity / selector lane
 
