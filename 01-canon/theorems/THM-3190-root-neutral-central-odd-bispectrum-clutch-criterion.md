@@ -98,7 +98,9 @@ Thus the bispectrum has the commuting bidegree
 (C_13 root character, common U(1) scalar charge)=(0,1).     (7)
 ```
 
-At the central phase `lambda=-1`, every coordinate changes sign.
+At the order-two common scalar phase `lambda=-1`, every coordinate changes
+sign.  This becomes the THM-2889 central action only under the equivariant
+identification hypothesized in Section 3.
 
 ### Proof
 
@@ -111,7 +113,7 @@ an arbitrary common `U(1)` phase; it has charge one under that action.  Calling
 it simply gauge-invariant would erase the very coordinate which detects the
 central sign.
 
-## 2. A proved nonzero root-neutral, central-odd word current
+## 2. A proved nonzero root-neutral, common-scalar-odd word current
 
 Fix any positive THM-2312/THM-2305 canonical word `Q`.  Integrate `(3)` on
 that word:
@@ -134,7 +136,9 @@ C(Q)=(C_(k,l)(Q))_(k,l allowed) in C^132                  (10)
 
 is nonzero.  Equations `(5)--(7)` hold pointwise and survive integration.
 Consequently `C(Q)` is an already-proved nonzero word current which is
-root-translation neutral and central-odd.
+root-translation neutral and odd under a common scalar `-1`.  It has the
+formal parity required of a central-odd current; it is not literally a
+THM-2889 central representation until the Section 3 hypotheses are supplied.
 
 This does not contradict THM-2312's phase boundary.  On a one-sheet fibre
 the bispectrum is blind to the root address precisely because of `(5)`, but
