@@ -188,7 +188,8 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   p-primary Smith profile. THM-3186 gives order-two/three P-recursive tails;
   THM-3210 realizes a visible/invisible/invisible/visible rational window.
   THM-3206 keeps the complementary plane under heterogeneous blocks and makes
-  its parabolic wall a binary-quadratic resultant. None yet chooses the PRS chart.
+  its parabolic wall a binary-quadratic resultant. THM-3192 identifies the
+  offset-six `H,J,K` PRS charts; arbitrary-offset simultaneous selection is open.
 
 ### Live work
 

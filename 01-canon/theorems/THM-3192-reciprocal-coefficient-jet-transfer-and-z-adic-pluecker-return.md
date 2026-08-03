@@ -2,7 +2,7 @@
 id: THM-3192
 title: "Reciprocal coefficient-jet transfer and z-adic Pluecker return"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Reciprocal reversal turns the inhomogeneous quadratic factorial-moment
   recurrence into an exact polynomial three-state transfer.  Its z-adic
   Smith types are (1,z,z) and, on exterior squares, (z,z,z^2); the hidden
@@ -22,8 +22,11 @@ audit: >
   chart identities, five symbolic p-unit tests, and 54 direct integer
   A/B/R/S top coefficients at p=5,7,11.
   Exact path-cancellation and algebraic chart hostiles retain complementary
-  coordinates.  Normal/-O/stored replay and independent immutable audit are
-  pending.
+  coordinates.  Normal and optimized replay agree with the stored output.
+  An independent immutable audit rederived the reciprocal gauge, Smith and
+  exterior layers, arbitrary first-layer words, truncation boundary, all
+  three H/J/K unit-chart identities, the U_K denominator, and both hostiles;
+  it matched the LF hashes and accepted the scope.
 depends_on:
   - THM-3124-quadratic-factorial-moment-recurrence-and-shifted-window-census
   - THM-3176-six-step-prime-resonance-third-euclidean-newton-separation
@@ -40,7 +43,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3192 -- reciprocal coefficient-jet transfer and z-adic Pluecker return
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3186 gives the complete oriented path convolution for the bare scalar
 exterior transfer, but it deliberately stops before the coefficient-degree
@@ -431,4 +434,4 @@ values at `p=5,7,11`.  It also verifies every coordinate and local determinant i
 `(30)` and the complementary chart in `(31)`.  There is no floating point,
 random sampling, imported executable, or assertion-sensitive test.
 
-**QED (candidate pending independent audit).**
+**QED.**
