@@ -1,0 +1,10 @@
+seed=K1;levels=1..12
+seed=C3;levels=1..7
+seed=mask40;levels=1..4
+seed=mask76;levels=1..4
+exact_profile_coordinates_checked=262
+same_H_hostile_C3_lift_H=(178036299, 193215375)
+identity=F_r(c)/c!=[z^c](sum_j Q_A(j)^r z^j/j!)(sum_l (-z)^l/l!)
+algorithm=one truncated polynomial product plus endpoint scaling
+scope=complete_factor_moving_jet_and_fixed_output_depths_not_all_growing_cyclic_depths
+FAILED_CHECKS=NONE

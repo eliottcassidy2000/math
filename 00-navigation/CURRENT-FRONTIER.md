@@ -292,10 +292,9 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   retains labelled fibres: parity/square swap walls; closure
   `N\{1,4,6}` with dyadic frontier; local A014574 recurrence refuted at term
   `21`; and distinct ancestry FINITE-EXACT through center `10^8`, ALL-n OPEN.
-- THM-3056 gives hypergeometric supports; THM-3152 finite Newton bars;
-  THM-3200 roots-of-unity quasipolynomials for cleared LRC rays; THM-3181
-  minimal repeated-join recurrences. THM-3202 proves cyclic moving jets are
-  exact but non-C-finite. Normalization and predicates do not transfer.
+- THM-3056 gives hypergeometric supports; THM-3200/3211 split LRC rays into
+  Bernoulli bulk, residue modes, and heads. THM-3181 gives minimal join recurrences;
+  THM-3202/3213 give a fast cyclic jet and normalized non-C-finite diagonals.
 - **EXACT identities / heuristic bridge:** corrected HYP-8820 puts caterer,
   cake, Moser, bagel, and Fibonacci in one Pascal array and proves
   `bagel(n)-cake(n)=T_n-1`; Klein-S313 realizes full-rank g-bonacci kernels.
