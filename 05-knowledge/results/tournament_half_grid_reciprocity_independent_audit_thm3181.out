@@ -1,0 +1,9 @@
+TOURNAMENT HALF-GRID RECIPROCITY -- THM-3181 INDEPENDENT AUDIT
+status=VERIFIED-EXACT;no-permutation-enumeration
+selected_tournament_cases=283;orders=1..8;fixed_code_sampler=LCG
+engines=last_vertex_backward_polynomial_DP + Held_Karp_paths + canonical_set_partition_profile
+truncated_deletion_DP_checks=803;Q(k)_from_A(0..k-1);PASS
+half_grid_parity_and_recovery=PASS;positive_and_negative_profile_evaluations=independent
+SCC_chain=C3_join_K1_join_C3;factor_Q_jets=direct_profile_Q_jet;PASS
+cyclic_substitution_hostile=C3[C3,C3,C3];direct_H=3159;naive_Q_plethysm=33;REFUTED
+cyclic_positive_control=order_9_half_grid_values=[0, 3159, 48924, 390501, 2155896, 9282195];direct_subset_A_recovered;PASS
