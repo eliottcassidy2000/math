@@ -190,7 +190,9 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   THM-3206 keeps the complementary plane under heterogeneous blocks and makes
   its parabolic wall a binary-quadratic resultant. THM-3192 identifies the
   offset-six `H,J,K` charts; THM-3214 proves sharp universal pseudo-division
-  jet costs `2k`/`2k+1`. Factorial-family simultaneous nonvanishing is open.
+  jet costs `2k`/`2k+1`. THM-3215 upgrades any selected common simple root to
+  a flat arbitrary-degree affine-dihedral two-jet transport with primitive
+  `p`-fold carry. Global root selection and higher jets remain open.
 
 ### Live work
 

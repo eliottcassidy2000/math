@@ -2,7 +2,7 @@
 id: THM-3215
 title: "Arbitrary-degree root-jet Hamiltonian, affine-dihedral holonomy, and p-fold carry"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Every polynomial has a universal trace-zero two-jet Hamiltonian whose square
   is scalar.  At a selected common simple root these Hamiltonians normalize to
   affine reflections, arbitrary words have one explicit alternating shear,
@@ -18,7 +18,11 @@ audit: >
   factorial common-root pairs, 2,184 nontrivial exact-order-p pairs, and
   24,660 longer words.  It verifies the heterogeneous scalar four-word,
   five exact p-adic carries, and sharp higher-jet, multiple-root, and infinity
-  boundaries.  Normal/-O/stored replay passes; independent audit is pending.
+  boundaries.  An independent immutable audit rederived the conjugacy,
+  word order/sign, coordinate law, flat cocycle, Pluecker orientation,
+  transition-germ and original-frame signs, exact projective order and carry,
+  and every stated scope boundary.  Fresh normal and `-O` replay byte-match
+  the stored output and both LF-normalized hashes.
 depends_on:
   - THM-3206-heterogeneous-factorial-exterior-reflection-groupoid-and-fixed-plane-holonomy
 related:
@@ -36,7 +40,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3215 -- arbitrary-degree root-jet Hamiltonian, affine-dihedral holonomy, and p-fold carry
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3206 identifies every quadratic factorial exterior block with a
 projective reflection, but its common-root wall was described only through a
@@ -452,4 +456,4 @@ quadratic pairs and `24,660` longer words over the stated finite fields,
 checks exact projective order on all `2,184` nontrivial pairs, and carries the
 four sharp boundaries above.  There is no floating point or randomness.
 
-**QED (candidate pending independent audit).**
+**QED.**
