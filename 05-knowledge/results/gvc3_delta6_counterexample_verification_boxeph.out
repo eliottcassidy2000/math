@@ -15,21 +15,24 @@ Delta = 4 d/dx d/dy + d^2/dt^2 ; exact sympy arithmetic
 --- Claim 2: key identity x*C == rho^3 - t^2*(rho + x^2)^2 ---
 [PASS] x*C == rho^3 - t^2*A^2
 
---- Claim 3: Delta^(6m)(P^m) == 0 for m = 1, 2, 3 ---
+--- Claim 3: Delta^(6m)(P^m) == 0 for m = 1, 2, 3, 4 ---
     P^1: degree 12, 23 terms
-    timing: Delta^6(P^1) computed in 1.244 s
+    timing: Delta^6(P^1) computed in 1.327 s
 [PASS] Delta^6(P^1) == 0
     P^2: degree 24, 78 terms
-    timing: Delta^12(P^2) computed in 9.065 s
+    timing: Delta^12(P^2) computed in 11.403 s
 [PASS] Delta^12(P^2) == 0
     P^3: degree 36, 168 terms
-    timing: Delta^18(P^3) computed in 28.875 s
+    timing: Delta^18(P^3) computed in 39.248 s
 [PASS] Delta^18(P^3) == 0
+    P^4: degree 48, 290 terms
+    timing: Delta^24(P^4) computed in 94.059 s
+[PASS] Delta^24(P^4) == 0
 
---- Claim 4: Delta^(6m+1)(Q*P^m) == 2^(8m+1)*(6m+1)!*(2m)!*(12m+3)!!/(4m+1)!! , m = 1, 2 ---
+--- Claim 4: Delta^(6m+1)(Q*P^m) == 2^(8m+1)*(6m+1)!*(2m)!*(12m+3)!!/(4m+1)!! , m = 1, 2, 4 ---
     Q*P^1: degree 14 (predicted 12m+2 = 14), 23 terms
 [PASS] deg(Q*P^1) == 12m+2 = 14
-    timing: Delta^7(Q*P^1) computed in 1.471 s
+    timing: Delta^7(Q*P^1) computed in 1.398 s
 [PASS] Delta^7(Q*P^1) is a constant
     computed  Delta^7(Q*P^1) = 697426329600
     predicted 2^9*7!*2!*15!!/5!! = 697426329600
@@ -37,22 +40,30 @@ Delta = 4 d/dx d/dy + d^2/dt^2 ; exact sympy arithmetic
 [PASS] Delta^7(Q*P^1) != 0 (m=1)
     Q*P^2: degree 26 (predicted 12m+2 = 26), 78 terms
 [PASS] deg(Q*P^2) == 12m+2 = 26
-    timing: Delta^13(Q*P^2) computed in 9.369 s
+    timing: Delta^13(Q*P^2) computed in 10.310 s
 [PASS] Delta^13(Q*P^2) is a constant
     computed  Delta^13(Q*P^2) = 4424683459217616116121600000
     predicted 2^17*13!*4!*27!!/9!! = 4424683459217616116121600000
 [PASS] Delta^13(Q*P^2) == predicted constant (m=2)
 [PASS] Delta^13(Q*P^2) != 0 (m=2)
+    Q*P^4: degree 50 (predicted 12m+2 = 50), 290 terms
+[PASS] deg(Q*P^4) == 12m+2 = 50
+    timing: Delta^25(Q*P^4) computed in 133.947 s
+[PASS] Delta^25(Q*P^4) is a constant
+    computed  Delta^25(Q*P^4) = 464619583232514672136642398314969858038492568266525900800000000000
+    predicted 2^33*25!*8!*51!!/17!! = 464619583232514672136642398314969858038492568266525900800000000000
+[PASS] Delta^25(Q*P^4) == predicted constant (m=4)
+[PASS] Delta^25(Q*P^4) != 0 (m=4)
 
     m = 0 edge case:
     Delta(x^2) = 0; formula at m=0 would give 2^1*1!*0!*3!!/1!! = 6
 [PASS] m=0 edge case FAILS as claimed (Delta(x^2)=0 != 6)
 
 --- Claim 5: Delta^(6m)(Q*P^m) != 0 for m = 1, 2 ---
-    timing: Delta^6(Q*P^1) computed in 0.349 s
+    timing: Delta^6(Q*P^1) computed in 0.730 s
 [PASS] Delta^6(Q*P^1) != 0 (m=1)
     Delta^6(Q*P) = 2372198400*(15*t**2 + 17*x**2 + 66*x*y)
-    timing: Delta^12(Q*P^2) computed in 2.038 s
+    timing: Delta^12(Q*P^2) computed in 3.618 s
 [PASS] Delta^12(Q*P^2) != 0 (m=2)
 
 --- Claim 6: structure probes (mechanism, not just verdict) ---
@@ -88,7 +99,7 @@ Delta = 4 d/dx d/dy + d^2/dt^2 ; exact sympy arithmetic
 [PASS] Q*P == A*(rho^3 - t^2*A^2)^2 (claim-2 consequence)
 
 ========================================================================
-TOTAL: 30 PASS, 0 FAIL (wall time 59.58 s)
-ALL CHECKS PASSED: the checked instances (m = 1, 2, 3 vanishing; m = 1, 2 nonvanishing)
-refute GVC(3) for Lambda = Delta^6 *provided* Delta^(6m)(P^m) = 0 for ALL m (verified only m <= 3 here; all-m claim needs the paper's induction and stays CITED-UNVERIFIED).
-NOTE: nonvanishing for infinitely many m is what contradicts GVC's 'for m >> 0' conclusion; m = 1, 2 alone already bound any threshold claim below m = 3.
+TOTAL: 35 PASS, 0 FAIL (wall time 316.03 s)
+ALL CHECKS PASSED: the checked instances (m = 1, 2, 3, 4 vanishing; m = 1, 2, 4 nonvanishing)
+refute GVC(3) for Lambda = Delta^6 *provided* Delta^(6m)(P^m) = 0 for ALL m (verified only m <= 4 here; all-m claim needs the paper's induction and stays CITED-UNVERIFIED).
+NOTE: nonvanishing for infinitely many m is what contradicts GVC's 'for m >> 0' conclusion; m = 1, 2, 4 already exclude any vanishing threshold m0 <= 4.

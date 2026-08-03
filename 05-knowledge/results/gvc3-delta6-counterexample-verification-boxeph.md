@@ -27,11 +27,11 @@ All of the following were checked by full expansion in sympy (no floats, no nump
 1. **deg(P) = 12** and **P has exactly 23 terms** fully expanded; P is homogeneous. — FINITE-EXACT
 2. **Key identity**: `x*C == rho^3 - t^2*(rho + x^2)^2` exactly. Consequence (also checked): `Q*P = x^2*A*C^2 = A*(rho^3 - t^2*A^2)^2`. — FINITE-EXACT
 3. **Vanishing**: Delta^6(P) == 0; Delta^12(P^2) == 0; Delta^18(P^3) == 0.
-   Timings: 1.2 s / 9.1 s / 28.9 s (P^3 is degree 36, 168 terms — cheap). — FINITE-EXACT for m = 1, 2, 3
-4. **Nonvanishing with exact constants**, for m = 1, 2: since Q*P^m is homogeneous of degree 12m+2 (checked) and each Delta drops degree by exactly 2, Delta^(6m+1)(Q*P^m) is a constant (checked: no free symbols). Exact values:
+   Timings: 1.2 s / 9.1 s / 28.9 s (P^3 is degree 36, 168 terms — cheap). Session extension: Delta^24(P^4) = 0 as well (66.9 s). — FINITE-EXACT for m = 1, 2, 3, 4
+4. **Nonvanishing with exact constants**, for m = 1, 2, 4: since Q*P^m is homogeneous of degree 12m+2 (checked) and each Delta drops degree by exactly 2, Delta^(6m+1)(Q*P^m) is a constant (checked: no free symbols). Exact values:
    - m = 1: Delta^7(Q*P) = **697 426 329 600** = 2^9 * 7! * 2! * 15!!/5!!  (matches claimed formula)
    - m = 2: Delta^13(Q*P^2) = **4 424 683 459 217 616 116 121 600 000** = 2^17 * 13! * 4! * 27!!/9!!  (matches)
-   - m = 0 edge case **FAILS as claimed**: Delta(x^2) = 0 while the formula would give 2*3!! = 6; the closed form is for m >= 1 only. — FINITE-EXACT for m = 1, 2
+   - m = 0 edge case **FAILS as claimed**: Delta(x^2) = 0 while the formula would give 2*3!! = 6; the closed form is for m >= 1 only. Session extension: Delta^25(Q*P^4) = 464619583232514672136642398314969858038492568266525900800000000000 = 2^33*25!*8!*51!!/17!! exactly (70.2 s). — FINITE-EXACT for m = 1, 2, 4
 5. **Consistency**: Delta^(6m)(Q*P^m) != 0 for m = 1, 2 (as forced by 4: one more Delta of zero is zero). Explicitly Delta^6(Q*P) = 2372198400*(15*t^2 + 17*x^2 + 66*x*y). — FINITE-EXACT
 
 ## STATUS UPDATE 2026-08-03 (death-star): (V) and (N) are now PROVED
@@ -51,10 +51,10 @@ be read unconditionally.
 
 The refutation of GVC(3) needs two **all-m** statements, of which only finite instances are verified here:
 
-- **(V)** Delta^(6m)(P^m) = 0 for **all** m >= 1. Verified m = 1, 2, 3 only. The claimed source's induction (unlocatable; cited arXiv id resolves to an unrelated paper) is required for all m. — CITED-UNVERIFIED
-- **(N)** Delta^(6m+1)(Q*P^m) = 2^(8m+1) * (6m+1)! * (2m)! * (12m+3)!! / (4m+1)!! (hence != 0) for **all** m >= 1. Verified m = 1, 2 only. This is the claimed closed form to be recorded; nonvanishing for infinitely many m is what contradicts "for m >> 0". — CITED-UNVERIFIED
+- **(V)** Delta^(6m)(P^m) = 0 for **all** m >= 1. Verified m = 1, 2, 3, 4 only. The claimed source's induction (unlocatable; cited arXiv id resolves to an unrelated paper) is required for all m. — CITED-UNVERIFIED
+- **(N)** Delta^(6m+1)(Q*P^m) = 2^(8m+1) * (6m+1)! * (2m)! * (12m+3)!! / (4m+1)!! (hence != 0) for **all** m >= 1. Verified m = 1, 2, 4 only. This is the claimed closed form to be recorded; nonvanishing for infinitely many m is what contradicts "for m >> 0". — CITED-UNVERIFIED
 
-Conditional conclusion: **if** (V) and (N) hold for all m (finite instances above are consistent and exact), then GVC(3) fails for Lambda = Delta^6, P = A*C^2, Q = x^2. The finite checks alone refute only a vanishing threshold m0 <= 2 and prove Lambda is "admissible-so-far" up to m = 3. Status of the counterexample as a whole: **OPEN pending (V), (N)**; every individually checked instance: **FINITE-EXACT**.
+Conditional conclusion: **if** (V) and (N) hold for all m (finite instances above are consistent and exact), then GVC(3) fails for Lambda = Delta^6, P = A*C^2, Q = x^2. The finite checks alone refute any vanishing threshold m0 <= 4 and prove Lambda is "admissible-so-far" up to m = 4. Status of the counterexample as a whole: **OPEN pending (V), (N)**; every individually checked instance: **FINITE-EXACT**.
 
 ## Structural observations (mechanism probes)
 

@@ -115,8 +115,8 @@ rhs2 = sp.expand(rho**3 - t**2*(rho + x**2)**2)
 check("x*C == rho^3 - t^2*A^2", sp.expand(lhs2 - rhs2) == 0)
 
 # ---------------------------------------------------------------- claim 3
-print("\n--- Claim 3: Delta^(6m)(P^m) == 0 for m = 1, 2, 3 ---")
-for m in (1, 2, 3):
+print("\n--- Claim 3: Delta^(6m)(P^m) == 0 for m = 1, 2, 3, 4 ---")
+for m in (1, 2, 3, 4):
     f = sp.expand(P**m)
     fp = sp.Poly(f, x, y, t)
     print(f"    P^{m}: degree {fp.total_degree()}, {len(fp.terms())} terms")
@@ -125,8 +125,8 @@ for m in (1, 2, 3):
 
 # ---------------------------------------------------------------- claim 4
 print("\n--- Claim 4: Delta^(6m+1)(Q*P^m) == "
-      "2^(8m+1)*(6m+1)!*(2m)!*(12m+3)!!/(4m+1)!! , m = 1, 2 ---")
-for m in (1, 2):
+      "2^(8m+1)*(6m+1)!*(2m)!*(12m+3)!!/(4m+1)!! , m = 1, 2, 4 ---")
+for m in (1, 2, 4):
     f = sp.expand(Q*P**m)
     fp = sp.Poly(f, x, y, t)
     d = fp.total_degree()
@@ -279,11 +279,11 @@ if FAIL:
     for f in FAIL:
         print("  -", f)
     raise SystemExit(1)
-print("ALL CHECKS PASSED: the checked instances (m = 1, 2, 3 vanishing; "
-      "m = 1, 2 nonvanishing)")
+print("ALL CHECKS PASSED: the checked instances (m = 1, 2, 3, 4 vanishing; "
+      "m = 1, 2, 4 nonvanishing)")
 print("refute GVC(3) for Lambda = Delta^6 *provided* Delta^(6m)(P^m) = 0 "
-      "for ALL m (verified only m <= 3 here; all-m claim needs the paper's "
+      "for ALL m (verified only m <= 4 here; all-m claim needs the paper's "
       "induction and stays CITED-UNVERIFIED).")
 print("NOTE: nonvanishing for infinitely many m is what contradicts GVC's "
-      "'for m >> 0' conclusion; m = 1, 2 alone already bound any threshold "
-      "claim below m = 3.")
+      "'for m >> 0' conclusion; m = 1, 2, 4 already exclude any vanishing "
+      "threshold m0 <= 4.")
