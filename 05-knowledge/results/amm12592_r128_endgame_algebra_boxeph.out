@@ -1,0 +1,22 @@
+=== amm12592_r128_endgame_algebra_boxeph.py: canonical output (2026-08-03) ===
+
+== SELFTEST: endgame algebra ==
+dual formula b_m = sum_j s_j C(d-j,m): PASS
+band identity C(e+1, m-k) for k < da (grid of (da,e)): PASS
+e=0 DP vs brute force at (5,5): agree=60 (pos=30 neg=30) PASS
+e=1 sandwich at (5,6): feasible=30 constructed=30 missed-by-sandwich=0 methods={'dp-dfs': 29, 'dp-downgrade-lift': 1} necessity=PASS
+== SELFTEST PASSED ==
+
+== R64 CHECK: S_2 on the real witness endgame + full pipeline ==
+sigma_61 (= Delta_62 + x Delta_63): deg=1 L1=2  degrees=(75,75) e=0
+absorb2_solve: SUCCESS via dp-e0; pair verifies=True
+spliced full witness verifies: admissible=True identity=True
+full R=64 pipeline (l1deg beam 400 + S_2 completion):
+  -> SOLVED-C1(dp-e0)
+  pipeline witness: admissible=True identity=True
+== R64 CHECK PASSED ==
+
+== EXACT RE-VERIFICATION of R=128 witness JSONs present ==
+amm12592_floor_witness_R128_direct.json: admissible=True identity=True max box saturation=1.000e+00
+amm12592_floor_witness_R128_lp.json: admissible=True identity=True max box saturation=1.000e+00
+amm12592_floor_witness_R128_rule_boxeph.json: admissible=True identity=True max box saturation=1.000e+00
