@@ -45,7 +45,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    cofinite aperiodic return set with infinitely many zero odd constant terms.
    HYP-8930's fixed-support unique-channel lemma survives. HYP-8931 is vacuous:
    `lambda=0, delta=-1, F=empty`; `98/116` is a bounded census, not a theorem (MISTAKE-240).
-9. **Whole-packet Frobenius is not an LRC proof.** THM-2041 preserves packets; THM-3245 makes the residual divisor shadow an idempotent band, not a group action; THM-3234/3240 give carriers; THM-3243/3247 close blowup/rank algebra. Physical target/ancestry/exit remain missing.
+9. **Whole-packet Frobenius is not an LRC proof.** THM-2041 preserves packets; THM-3245 makes the divisor shadow an idempotent band; THM-3234/3240/3243/3247 close carrier/blowup/rank algebra. Audited THM-3250 bridges charged sectors only. Physical positivity, neutral data, target/ancestry/exit remain missing.
 10. **Tournament structure is operational.** THM-1862/1936 give join laws; THM-1926 the strong core; THM-2195 the scalar substitution boundary; and THM-3121 the path-cover kernel.
    THM-3181/3202 separate fixed/moving jets; THM-3226/3235 give saddles and blowup decimation; THM-3248 compiles paired-owner Q4 blowups. Observer twins block generic scalar compression; the Q4 radius is open.
 11. **A reciprocal integer sequence has two profiles.** THM-2000/2005/2352 separate support, multiplicity, and q-adic thresholds; THM-2438/2433/2500 give the Poisson--Newton transform and finite-hole classification.

@@ -43,6 +43,7 @@ related:
   - THM-2806-literal-fixed-sheet-central-allocation-scalar-law-and-endpoint-translation-no-go
   - THM-3240-exact-address-heisenberg-clutch-on-carrier-imbalance
   - THM-3243-contact-deformation-blowup-equivariance-and-full-orbit-resolution
+  - THM-3250-charged-heisenberg-blowup-address-intertwiner-and-pointed-multiplicity-gate
 script: 04-computation/lrc14_heisenberg_central_fourier_current_cyclicity_thm3247.py
 output: 05-knowledge/results/lrc14_heisenberg_central_fourier_current_cyclicity_thm3247.out
 script_sha256: b33f88d792135c44b0c8c7ddb7982e40f11af905f7856a71ceb12f2f298303c3

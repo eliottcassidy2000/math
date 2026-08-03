@@ -81,6 +81,11 @@ The active new theorem packages sharpen this picture further:
   group image.  At `z_1=219` the apparent supplier graph is only a graph of
   sorted positions; its weighted automorphism group is trivial and the label
   map needed for a physical carrier has already been quotiented away.
+- **VERIFIED-EXACT CANDIDATE [THM-3246](../01-canon/theorems/THM-3246-all-dilation-second-owner-seam-stabilization-and-sign-word.md)** gives exact quadratics for all `168` cell masses in one THM-3224 lane at
+  every dilation.  Its twelve seam cells are the only negative second
+  correctors, the other `156` are positive, and the Hodge sum is `1/24696`.
+  This upgrades the Singer-line hostile to all dilations but awaits audit and
+  supplies no row exclusion.
 - **PROVED [THM-3235](../01-canon/theorems/THM-3235-transitive-tournament-blowup-saddle-and-hypergeometric-decimation.md)** gives a general substitution determinant, exact saddle/radius
   renormalization under uniform transitive blow-up, and hypergeometric
   decimation of the full coefficient sequence.  Its order-six observer twins
@@ -97,6 +102,12 @@ The active new theorem packages sharpen this picture further:
   canonical endpoint current hits all `25` blocks and is cyclic of rank `169`
   in both certified fields for every nonzero direction.  This closes the
   coefficient-carrier rank debt, not physical ancestry or target naturality.
+- **PROVED [THM-3250](../01-canon/theorems/THM-3250-charged-heisenberg-blowup-address-intertwiner-and-pointed-multiplicity-gate.md)** gives an explicit unitary-normalizable Fourier intertwiner between every
+  nonzero central sector of the exact-address and nonvertical-flag carriers.
+  Their entire representation mismatch is neutral.  In each charged sector a
+  pointed current fixes the `GL_13` multiplicity frame exactly when its
+  `13`-by-`13` coefficient determinant is nonzero.  Independent audits accept
+  the signs, spectra, commutant, determinant and scope boundaries.
 - **PROVED [THM-3238](../01-canon/theorems/THM-3238-complete-physical-product-gamma-bank-unique-reset-stitch.md)** glues twenty-two lawful coarsening-upset rows into a positive cocircuit
   whose unique zero is the reset on the complete `4,319`-state physical bank.
   It closes one support-`(1,3)`/bank-`I2` face, not a local deletion flow or
@@ -129,7 +140,7 @@ do not identify the objects.
 |---|---|---|---|---|
 | LRC owner/divisor shadows | cyclic word of length `168` plus pointed `Div(g)` intervals | gcd-carry Hodge split; median metric; saturated-top and label-loss boundaries | dilation, restoration, Singer compactification | branch stabilization, labelled supplier map, physical entry, cellwise safety |
 | minimal four-jet carrier | `H_13/K` on `169` points; full flags `E=V disjoint_union H_13` | full `13+156` response; exceptional module has exact generator width two | Heisenberg action, current orbit, Singer/blowup transport | target-preserving physical intertwiner and common ancestry |
-| carrier address | `G_delta` of size `13^3`, or `G_full` of size `13^4` | target axis, carrier imbalance, optionally common harmonic | typed section, quotient gauge, exact `H_13` clutch | factor colours, all-unit mask, endpoint-target semantics, integral carry |
+| carrier address | `G_delta` of size `13^3`, or `G_full` of size `13^4` | target axis, carrier imbalance; charged intertwiner and determinant gate | typed section, quotient gauge, exact `H_13` clutch | physical coefficient frame, positivity, neutral data, factor colours, ancestry |
 | factorial contact/reset flag | finite etale contact algebra plus one `4,319`-state physical bank | contact spectrum/order, exposed reset and sharp radius-10 routing | Hasse contact, upset stitching, Rips/edit scale, PRS step | other faces, cross-face flow, selected branch and global root choice |
 | exceptional normal coordinate | pivot or infinity parameter before specialization | strict-transform coefficient after leading cancellations | blow-up, reciprocal Newton polygon | physical/Keller chart entry and global continuation |
 | tournament quotient operator | multivariate determinant `D_Q` and walk series `W_Q` | Neumann domain, saddle, Q4 paired-owner numerator | substitution, order join, transitive blow-up | generic minimal response-equivalent sidecar |
@@ -154,11 +165,12 @@ sidecar:     an owner-to-address/current map preserving the LRC predicate;
 hostiles:    fixed-head lower bound 170 and the refuted sign-line reframe.
 ```
 
-This is a genuine common carrier but not a physical carrier.  The distinction
-is visible in the finite owner scout: its twelve negative boundary owners
-occupy twelve distinct residues modulo `14`.  Under every Singer gauge, a
-punctured vector line meets them in at most one point.  Adding zero therefore
-does not turn the negative class into a line.
+This is a genuine common carrier but not a physical carrier.  Candidate
+THM-3246 now proves for every dilation in one exact lane that the twelve
+negative second-corrector owners are the boundary cells
+`0,...,5,162,...,167`, occupying twelve distinct residues modulo `14`.
+Under every Singer gauge, a punctured vector line meets them in at most one
+point.  Adding zero therefore does not turn the negative class into a line.
 
 THM-3241 now supplies an exact algebraic source for the same target:
 `f=S`, `g=S+S^2(1+10x)` over `F_13`, with `S=x^2-2`, has first-live contact
@@ -266,8 +278,26 @@ THM-3243 rules out one tempting shortcut to that sidecar.  The nonvertical
 exceptional flags and `G_delta` both have `2,197` points, but their Heisenberg
 orbit/stabilizer spectra differ.  Any bridge must therefore be a typed
 representation-level map with a multiplicity/pointing coordinate, not an
-equivariant bijection of the underlying finite sets.  THM-3250 reserves that
-question only; its empty stub contributes no proved implication.
+equivariant bijection of the underlying finite sets.
+
+THM-3250 now constructs exactly the charged linear bridge.  For
+every `kappa!=0`, its two-stage Fourier map is
+
+```text
+T_kappa(E_(s,t)^kappa)=F_(s-kappa^(-1)t,t)^kappa,
+```
+
+an `H_p`-intertwiner that becomes unitary after normalization.  The neutral
+spectra remain different: `G_delta` has `p` copies of only the characters
+`chi_(a,0)`, whereas the regular flag orbit has every `chi_(a,b)` once.  A
+charged block is `pi_kappa tensor K^p`; its frame ambiguity is `GL_p`, and a
+pointed coefficient matrix `A` is cyclic exactly when `det(A)!=0`.
+
+This closes the representation-level bridge, but does not supply a physical
+clutch.  Its charged-space unitarity supplies no positive point-mass
+kernel, and no Singer/AGL equivariance or canonical source/target current has
+been shown to pass the determinant gate.  Neutral data, target semantics,
+ancestry and the all-`91`-unit mask remain outside it.
 
 ### 3.3 Tournament operation to sequence compiler
 
@@ -416,12 +446,12 @@ cannot change the face and degree nine is the first live boundary term.
 | `168+1=169`, so the LRC owner orbit is the four-jet carrier | Singer plus one transvection; pointed degree bound | **partly true** abstractly | common 169-set, but full affine mixing and mobile completion point |
 | every residual has `g=3,q=3`, so the LRC layer carries a `C3` symmetry | inspect occupied quotient support and internal restorations | **REFUTED** | the top of ambient chain `{1,3}` is saturated; restorations form an idempotent band |
 | the sorted-position triangle is a supplier `S3` carrier | restore weights and inspect the checkpoint's label map | **REFUTED** | weighted symmetry is trivial and sorting has discarded supplier labels |
-| twelve negative owners plus zero form an affine line | exhaust Singer gauges / residues mod `14` | **REFUTED** | multiplicity is real; placement is not linear |
+| twelve negative owners plus zero form an affine line | exhaust Singer gauges / residues mod `14` | **CANDIDATE-REFUTED FOR ALL DILATIONS** | THM-3246 fixes the `156+ / 12-` word in one lane; placement is not linear |
 | the old additive target grid should carry `H_13` | inspect stabilizer and central kernel | **REFUTED**, then repaired | carrier imbalance supplies the nonnormal stabilizer clutch |
 | all charged central modes should already imply a full carrier | test the thirteen center-neutral transverse characters | **REFUTED as an implication, then completed** | THM-3247 supplies all thirteen scalar blocks and rank `169` |
 | full coefficient-carrier rank should imply a physical LRC current | track endpoint target, ancestry and Bezout section through the frame map | **REFUTED** | algebraic rank is closed; frame-bundle physical naturality is the exact remaining invoice |
 | blowing up the delayed-contact point should carry the whole affine action | apply the universal lifting criterion to a translation | **REFUTED**, then repaired globally | one centre keeps its stabilizer; the full rational centre orbit restores `AGL_2` and splits into `169+2,197` Heisenberg strata |
-| the `2,197` nonvertical flags are the `2,197` address carrier | compare Heisenberg stabilizer/orbit spectra | **REFUTED** | regular torsor versus thirteen affine orbits; a pointed multiplicity sidecar is necessary |
+| the `2,197` nonvertical flags are the `2,197` address carrier | compare Heisenberg stabilizer/orbit spectra | **REFUTED as sets; repaired after charge localization** | THM-3250 gives explicit charged-sector Fourier isomorphisms; neutral spectra still differ |
 | a root-free trace should detect first contact | split examples with cancelling branches | **REFUTED** | etale norm preserves simultaneous nonvanishing |
 | a primitive norm or full contact-field generator should be Singer | compare exact multiplicative order | **REFUTED by THM-3241 hostile** | retain the prime-divisor resultant order gates |
 | a vanishing PRS row has no further information | divide by the wall parameter | **REFUTED** | nonzero square-normalized osculating row |
@@ -454,12 +484,13 @@ module.  The decisive test is physical naturality before marginalization.
    survival.
 4. Use THM-2782/2806 and the fixed cell-90 carry values as hostiles: central
    marginalization or a residue-blind section must fail visibly.
-5. Respect THM-3243's orbit-spectrum obstruction: test a charged
-   representation-level map from nonvertical flags to the address carrier
-   with an explicit pointing/multiplicity frame, never a set bijection.
-6. Only after frame covariance survives, test the Singer conjugates.  Singer
-   does not normalize the chosen central line, so the lawful closure is
-   `AGL_2(F_13)`, not one charged packet.
+5. Form the twelve THM-3250 charged coefficient matrices `A_kappa(s,t)` of
+   the factor-coloured address current.  The exact gate is
+   `det(A_kappa)!=0` in every nonzero central sector.
+6. If those gates pass, solve the pointed equations `A_kappa U_kappa=B_kappa`
+   against a target-side current and audit positivity, neutral data, target
+   and ancestry.  Only after physical frame covariance survives should the
+   Singer conjugates be tested; Singer does not preserve the polarization.
 7. Zero-extend a certified THM-3247 current to the vertical exceptional flags,
    add the one Singer generator on all `2,366` flags, and compute its exact
    affine orbit rank.  In parallel compare Singer-transported `J_q` with the
@@ -571,8 +602,8 @@ Demanding one syntax for all these regimes destroys useful structure.
 ## 7. Portfolio after this synthesis
 
 ```text
-ANCHOR:   LRC(14) frame-bundle/ancestry intertwiner from the cyclic endpoint
-          current to the exact-address H_13 clutch.
+ANCHOR:   LRC(14) factor-coloured address current whose twelve charged
+          multiplicity matrices pass the determinant and physical sidecars.
 NICHE:    paired-owner factorizations beyond Q4 and the minimal full-walk
           response state for tournament substitution.
 WILDCARD: reciprocal strict-transform walls linking planar Jacobian infinity
@@ -582,14 +613,16 @@ WILDCARD: reciprocal strict-transform walls linking planar Jacobian infinity
 The wildcard has already paid: it found the degree-nine infinity threshold
 and the paired square-root escape.  The niche has paid: it produced an exact
 blow-up/decimation law, the Q4 Stirling compiler, and sharp numerator/observer
-hostiles.  The anchor has paid algebraically: the current is cyclic.  It stays
-the anchor because its target-preserving physical map is still missing.
+hostiles.  The anchor has paid algebraically: the current is cyclic, and
+THM-3250 supplies the charged linear bridge.  It stays the anchor
+because positivity, neutral data and a target-preserving physical map are
+still missing.
 
 The next session should begin from these three precise objects, not from the
 numerical coincidences that suggested them:
 
 ```text
-LRC:       a frame-covariant factor-coloured current on G_full;
+LRC:       audited THM-3250 plus twelve physical address-current determinants;
 JC:        a Keller-constrained reciprocal two-root wall;
 FC(3):     transport of the reset cocircuit plus an audited coarse routing atlas;
 tournament:paired-owner classification beyond the special Q4 operator;
@@ -623,8 +656,11 @@ separately packaged.
    normalize the fixed center line; joint closure costs the full affine group.
    THM-3243 realizes that closure only after blowing up all rational centres:
    its `2,197` nonvertical flags form one regular orbit, not the thirteen
-   affine orbits of the address carrier.  Contact zero is delayed contact,
-   not empty physical support.
+   affine orbits of the address carrier.  THM-3250 nevertheless
+   identifies every charged sector by an explicit Fourier map and reduces a
+   pointed current to a `13`-by-`13` determinant gate.  Neutral characters,
+   positivity, Singer covariance and physical provenance remain missing.
+   Contact zero is delayed contact, not empty physical support.
 5. **Direction scaling is a full mode bank.**  The dual-field all-direction
    scout found `28,392/28,392` nonzero two-dimensional modes per field, so
    translations alone make every `J_q` cyclic.  But for `q->2q`, every one of

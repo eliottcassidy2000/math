@@ -4,36 +4,42 @@ title: "Charged Heisenberg blowup-address intertwiner and pointed multiplicity g
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For every nonzero central character of H_p, an explicit two-stage Fourier
-  transform identifies THM-3240's p-copy exact-address carrier with
-  THM-3243's regular nonvertical blowup-flag orbit.  The equally sized
-  permutation carriers are not isomorphic before localization: their entire
-  mismatch is the central-neutral character spectrum.  In each charged
-  block all intertwiners are a frame on a p-dimensional multiplicity space,
-  and
-  a pointed current supplies that frame exactly when its p-by-p coefficient
-  determinant is nonzero.  The bridge is unitary after normalization but is
-  neither positive nor Singer-equivariant and supplies no physical clutch.
+  transform identifies the charged blocks of the standard p-copy
+  exact-address generalization with those of THM-3243's regular nonvertical
+  blowup-flag orbit; at p=13 the source is literally THM-3240's G_delta.
+  The equally sized permutation carriers are not isomorphic before
+  localization: their entire mismatch is the central-neutral character
+  spectrum.  In each charged block the isomorphisms form a GL_p(K)
+  multiplicity-frame torsor.  A pointed current trivializes one side's frame
+  exactly when its p-by-p coefficient determinant is nonzero; cyclic points
+  on both sides select a unique inter-module isomorphism.  The bridge is
+  unitary after normalization but supplies neither a positive point-mass
+  kernel nor Singer/AGL equivariance, and gives no physical clutch.
 source: root/multiscale-newton-flag/low-child-flag-extension/2026-08-03
 audit: >
-  The assertion-independent exact companion pins THM-3240 and THM-3243;
-  exhaustively checks the charged intertwining formula at p=3,5,7,13
+  The assertion-independent exact companion pins the THM-3240/3243 point
+  actions; exhaustively checks the derived charged phase and base-coordinate
+  intertwining identities at p=3,5,7,13
   (4,455,516 p=13 state/character tests); verifies the neutral character
-  multiplicities, Weyl orthogonality and full matrix-algebra dimensions;
-  checks the normalized energy factors and exact cyclic/noncyclic determinant
-  controls; and records the p=13 dimensions 169+2028=2197.  Normal and
-  optimized runs byte-match the stored transcript and LF-normalized hashes
-  below.  An independent hostile audit rederived both actions and their group
-  law, every Fourier phase and sign, the neutral character multiplicities,
-  unitary normalization, Weyl span, orbit-rank formula, pointed uniqueness,
-  and all scope boundaries, and found no defect.  A post-promotion independent
-  audit also verified the sharp full-module rank defect and the nonnegative
-  neutral-mass obstruction in Section 4.
+  multiplicities, equal-shift root-sum orthogonality and the p^2 Weyl-label
+  census; checks normalized energy factors and exact cyclic/noncyclic
+  rank/determinant controls, the sharp full-module rank defect, and the p=13
+  dimensions 169+2028=2197.  The full matrix-algebra implication is proved in
+  Section 5 rather than delegated to the script.  Normal and optimized runs
+  byte-match the stored transcript and LF-normalized hashes below.  Independent
+  hostile audits rederived the point actions and group law, Fourier signs,
+  index shear, neutral spectra, commutant and determinant gate, unitary scale,
+  p=13 multiplicities, sharp rank defect, and nonnegative neutral-mass
+  obstruction; a separate implementation reproduced all four prime censuses
+  and controls.  The audits also repaired the prime quantifier, pointed-frame,
+  positivity, Singer/AGL and companion-coverage typing boundaries.
 depends_on:
   - THM-3240-exact-address-heisenberg-clutch-on-carrier-imbalance
   - THM-3243-contact-deformation-blowup-equivariance-and-full-orbit-resolution
 related:
   - THM-3234-singer-owner-compactification-and-pointed-heisenberg-carrier-gate
   - THM-3236-contact-spectrum-primitive-element-and-root-reconstruction-gate
+  - THM-3247-heisenberg-central-fourier-decomposition-and-canonical-current-cyclicity
 script: 04-computation/heisenberg_charged_blowup_address_intertwiner_thm3250.py
 output: 05-knowledge/results/heisenberg_charged_blowup_address_intertwiner_thm3250.out
 script_sha256: 52df74d7468c78bd791eb02f5bb8f9555edab8286e5f7cb14024b5b74a61008b
@@ -45,21 +51,23 @@ hash_basis: LF-normalized bytes
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-THM-3240's exact-address carrier and THM-3243's nonvertical exceptional
-flags both have `p^3` points, but they are not isomorphic `H_p`-sets.  The
-first is `p` affine orbits with stabilizer `p`; the second is one regular
-orbit.  This theorem identifies the precise sense in which the two carriers
-nevertheless agree: every nonzero central-Fourier sector is explicitly and
-unitarily isomorphic.  All of the representation mismatch lives at central
-charge zero.
+The standard `p`-copy generalization of THM-3240's exact-address carrier and
+the standard nonvertical-flag model of THM-3243 both have `p^3` points, but
+they are not isomorphic `H_p`-sets.  At `p=13` they are literally the two
+carriers in those theorems.  The first is `p` affine orbits with stabilizer
+`p`; the second is one regular orbit.  This theorem identifies the precise
+sense in which they nevertheless agree: every nonzero central-Fourier sector
+is explicitly and unitarily isomorphic.  All of the representation mismatch
+lives at central charge zero.
 
-The surviving ambiguity is a multiplicity frame.  One pointed current kills
-that ambiguity exactly when a finite coefficient matrix is invertible.  This
-is a linear charged-sector bridge, not a positive physical identification.
+The surviving ambiguity is a multiplicity frame.  One cyclic pointed current
+trivializes the frame on its module exactly when a finite coefficient matrix
+is invertible; cyclic points on both modules then select a unique isomorphism.
+This is a linear charged-sector bridge, not a positive physical identification.
 
 ## 1. The two carriers
 
-Use the THM-3240 convention
+Let `p` be prime.  Use the THM-3240 convention
 
 ```text
 H_p={(x,y,c):x,y,c in F_p},
@@ -335,11 +343,13 @@ stratum.
 
 ## 7. Boundaries: positivity, Singer mixing, and physical typing
 
-The transform `(10)` is a cyclotomic linear combination of point masses.
-Although its normalized form is unitary, it is not a positive kernel, a map
-of sets, a Boolean packet map, or a Markov intertwiner.  It cannot by itself
-transport a positive physical current or a common-support chart.  The
-positive-cone problem survives intact.
+The transform `(10)` is defined only on a charged subspace, so positivity is
+not an intrinsic predicate there.  Unitarity supplies no positive, Boolean or
+Markov map between the ambient point-mass modules: expanding the central
+projector followed by `(10)` gives cyclotomic coefficients which are not all
+nonnegative.  Thus no positive point-mass kernel is constructed, and the map
+cannot by itself transport a positive physical current or common-support
+chart.  The positive-cone problem survives intact.
 
 In fact every nonzero nonnegative point function has positive total mass,
 so its central-neutral projection is nonzero.  The charged bridge therefore
@@ -351,8 +361,10 @@ The nonvertical flag stratum and the central polarization are `H_p`-invariant
 but not Singer-invariant.  THM-3243's Singer cycle moves all `p+1`
 directions transitively, hence mixes the vertical and nonvertical strata;
 THM-3234 also shows that it does not normalize the chosen Heisenberg group.
-Therefore `(10)` is not Singer- or `AGL_2`-equivariant and does not identify
-an owner cycle.
+No Singer or `AGL_2` action on the source `G` is supplied, and the target
+stratum `R` is not Singer-invariant.  Thus `(10)` supplies no Singer/AGL
+equivariance, cannot extend on that stratum alone, and does not identify an
+owner cycle.
 
 Finally, the source coordinates in THM-3240 already require a labelled
 target axis and Bezout section, while the target coordinates in THM-3243
@@ -373,10 +385,12 @@ python3 -O 04-computation/heisenberg_charged_blowup_address_intertwiner_thm3250.
 ```
 
 The companion uses exact modular, cyclotomic-exponent, and rational linear
-algebra only.  It checks the two actions independently before testing the
-intertwiner, records the complete neutral multiplicity defect, and verifies
-the Weyl/cyclicity controls without floating point or optimization-sensitive
-assertions.  Ordinary and optimized runs must byte-match the pinned
-transcript.
+algebra only.  It pins the two inherited point actions, checks the derived
+charged intertwining identities, records the complete neutral multiplicity
+defect, checks equal-shift Weyl root sums and label censuses, and verifies the
+rank/determinant and normalization controls without floating point or
+optimization-sensitive assertions.  It does not instantiate a full Weyl
+Gram matrix; the full matrix-algebra conclusion is proved in Section 5.
+Ordinary and optimized runs must byte-match the pinned transcript.
 
 QED.
