@@ -40,9 +40,10 @@ Cap two forces the phase-zero triangle `(3/2)(4/3)=2`; by cap `7/3` no
 full-cap component remains. The zero-gain atlas is
 `4/3,3/2,2,5/2,3,4,5,6`; CSP closes `3m>=4D`. THM-3135 repairs `H2`;
 THM-3150/3156 give the body-`H` skeleton. THM-3171 closes cell 90/cap two for
-all `D>=6` and gcd cones; THM-3200/3211 give ray quasipolynomials, sharp floor
-`1/105`, signed `1/g`, and constant residue. Finite heads, other cells, the
-rung and physical entry remain **OPEN**; not LRC(14).
+all `D>=6` and gcd cones; THM-3200/3211 give ray quasipolynomials, sharp
+`1/105`, signed `1/g`, and constant residue. THM-3224 gives the complete
+orbit's nonzero periodic `g^-2` gcd-carry (sharp `9/49`) and owner Hodge split.
+Finite heads, other cells, the rung and physical entry stay **OPEN**; not LRC(14).
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
 supplied-root seams, not semantic-root identification (kernel `28,393`).
@@ -179,11 +180,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 - THM-3115/27/58/69: partition-Hasse selectors die at degree 13 through depth
   six; THM-3177 resurrects degree 13 at depth seven, while THM-3184 kills
   degree 14 there. THM-3209 gives the unique all-degree reset atom through
-  depth eight; THM-3219 excludes its full 64-state principal upper filter
-  through depth 16. THM-3216 closes all 3,129 states through depth nine at
-  degree 14; THM-3222 transports only the local collar to 230 support-bank
-  cases. Depth ten and uniform global stitching remain open. THM-3189 rules
-  out a linear or affine two-degree response factorization. THM-3170/3176 force bad resonances to have
+  depth eight; THM-3219 excludes all 63 nonreset states in its 64-state filter
+  through depth 16. THM-3216 proves the reset is the unique feasible law on
+  all 3,129 depth-at-most-nine states at `D>=14`; THM-3222 proves only the
+  230 local collars. Depth ten and global stitching remain open. THM-3189
+  rules out an affine two-degree factorization. THM-3170/3176 force bad resonances to have
   `d,...,d-6` composite. THM-3182/3183/3185/3188/3191 expose the rank-one
   reset, its two integral lattices, the full carry hierarchy, quadratic-character
   pre-reset holonomy, and the fixed-parameter exterior Clifford law with exact
@@ -194,10 +195,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   offset-six `H,J,K` charts; THM-3217 gives a universal three-row fixed-offset
   PRS atlas with finite exceptional primes. THM-3214 proves sharp pseudo-division
   jet costs `2k`/`2k+1`. THM-3215 upgrades any selected common simple root to
-  a flat affine-dihedral two-jet transport; THM-3220/3221 give the four-jet
-  Heisenberg layer and degree-adaptive osculating separation. THM-3228 forces
-  `p^2` points for a center-faithful permutation carrier. Global root choice
-  and a lawful physical carrier remain open.
+  a flat arbitrary-degree affine-dihedral two-jet transport with primitive
+  `p`-fold carry. THM-3220/3221 give the four-jet Heisenberg layer and
+  degree-adaptive osculating separation. THM-3228 forces `p^2` points before
+  the full jet-group action can be center-faithful. Global root choice and a
+  lawful physical carrier remain open.
 
 ### Live work
 
@@ -217,8 +219,10 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-3121/3134 give the `C3` profile/jet; THM-3166 diagonalizes order join.
   THM-3181 proves `Q(-t)=(-1)^nQ(t)`, half-grid profile recovery, and exact
   fixed-tail polynomial--exponential recurrences of minimal triangular order.
-  THM-3202 gives an exact quadratic-time moving-jet `C3` evaluator, while its
-  factorial-cube floor rules out C-finite fixed coordinates. SCC order remains lost.
+  THM-3202 gives an exact quadratic-time moving-jet `C3` evaluator and a
+  factorial-cube C-finite obstruction. THM-3213 closes balanced fixed-depth
+  non-P-recursiveness; THM-3226 gives every fixed strong quotient on `q>=3`
+  one saddle and solves `Q4`, but its radius and unconditional non-P result stay OPEN.
   THM-3173 separates `C2*C3`, regular `S3`, and regular `C6`; their joint
   quotient has order 18, while pointed oriented quartic frames form `Q3`.
   These are semantic action data, not a physical current or Keller bridge.
@@ -300,11 +304,11 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   retains labelled fibres: parity/square swap walls; closure
   `N\{1,4,6}` with dyadic frontier; local A014574 recurrence refuted at term
   `21`; and distinct ancestry FINITE-EXACT through center `10^8`, ALL-n OPEN.
-- THM-3200/3211 split LRC rays into Bernoulli bulk, `Bbar_2` coboundary,
-  periodic constant, and head; complete cell orbits cancel at `1/g` and have
-  a two-sided `O(g^-2)` aggregate. THM-3181/3202/3213 give minimal join laws,
-  a fast cyclic jet, and fixed-depth non-P-recursiveness for C3 and balanced
-  quotients on at least three blocks.
+- THM-3200/3211/3224 split LRC rays into Bernoulli bulk, `Bbar_2` coboundary,
+  nonzero gcd-carry curvature, owner exact part, periodic constant, and head.
+  THM-3181/3202/3213 give minimal join laws, a fast cyclic jet, and balanced
+  fixed-depth non-P-recursiveness; THM-3226 extends exact saddle geometry to
+  every fixed strong quotient on `q>=3`, but leaves the Q4 radius OPEN.
 - **EXACT identities / heuristic bridge:** corrected HYP-8820 puts caterer,
   cake, Moser, bagel, and Fibonacci in one Pascal array and proves
   `bagel(n)-cake(n)=T_n-1`; Klein-S313 realizes full-rank g-bonacci kernels.
@@ -383,9 +387,10 @@ Classify profiles under support operations; study analytic continuation and auto
   floor `N>=4D`. THM-3167 separates diagonal, constant-field and global-owner
   gates; no bounded marked jet decides the first. THM-3172 freezes the
   differential-owner filtration for Keller owners. THM-3212 excludes the full
-  constant family `(Vz^2+bz+c)^2+A_src z+kx`: finite clutch and `S`-escape
-  walls always leave a critical point; generic counts are `52`/`28`. Nonconstant
-  source deformations, chart entry, and JC(2) stay open.
+  constant family `(Vz^2+bz+c)^2+A_src z+kx`; generic counts are `52`/`28`.
+  THM-3225 excludes every affine `B` in `(Vz^2+Bz)^2+A_src z+x`: no `T`
+  escape, at most two at `S`, and at least `50` intersection units remain. Nonconstant `C_0`,
+  nonlinear `E_0`, quadratic `B`, chart entry and JC(2) stay open.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
   `2201<=d<=2400` and all `35` residuals in `2401<=d<=2500` close by matching

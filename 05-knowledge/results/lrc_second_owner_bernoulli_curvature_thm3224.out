@@ -1,0 +1,12 @@
+LRC SECOND-OWNER BERNOULLI CURVATURE EXACT AUDIT
+lane_xi=(Fraction(-8, 49), Fraction(-6, 49), Fraction(-5, 49), Fraction(-3, 49), Fraction(1, 49), Fraction(2, 49), Fraction(3, 49), Fraction(4, 49), Fraction(5, 49), Fraction(8, 49), Fraction(9, 49));sharp_abs=9/49;zero=NONE
+complete_orbit_controls=((3, 5, 1, 2, 1), (3, 5, 1, 12, 2), (3, 5, 1, 12, 4), (4, 5, 1, 6, 11))
+orbit_sign_switch=(3,5;1,12): generic -1/24696; g=4 mod 31 gives 961/15435
+census_states=92352;Q<=25;signs={'positive': 58969, 'negative': 33383, 'zero': 0};sha256=3a89e17cb1a056b30886c22e773142b58f87420651f491fc7357fad6d763426b
+cell90_q_mod3=(Fraction(-343771, 395136000), Fraction(48229, 395136000), Fraction(-10057, 131712000));static_endpoint_functional=REFUTED
+zero_first_correction_cell=(5,6;1,12;j=56);q_mod9=(Fraction(-17, 666792), Fraction(11483, 13335840), Fraction(7243, 6667920), Fraction(1129, 2667168), Fraction(1721, 3333960), Fraction(-697, 13335840), Fraction(9551, 13335840), Fraction(18161, 13335840), Fraction(-1, 3333960))
+owner_word_FINITE_SCOUT=(3,5;1,2);signs=(156, 12, 0);sum=1/24696;sha256=b53d77a69f39a5f8c893b4cdceaaeecdd0dc70a16be02e6d28f3f6d7b520feef
+SECOND_ORDER_HODGE=Bernoulli_gcd_carry_harmonic_plus_residue_owner_coboundary
+CELLWISE_SAFETY=NOT_CLAIMED;FINITE_HEAD_REPLACEMENT=NOT_CLAIMED;
+PHYSICAL_LRC14=NOT_CLAIMED
+FAILED_CHECKS=NONE

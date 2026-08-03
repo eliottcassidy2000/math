@@ -1,0 +1,20 @@
+universal_resultant_and_local_jets=PASS
+case=4111
+parameter_quotient_degrees=(52, 44, 36, 28, 23, 15)
+S_escape_PRS_degrees=((5, 3), (3, 2), (2, 1), (1, 0)) gcd=1
+Q4_sha256=22387ed0e02ea7aeb65393c18e9b8ea910b05094624472048f4de8ba7a41254f
+Q5_sha256=5ef96f3e1a67d031f104ed1375209e3a1a497771795f4713a647df7cd12d411e
+t_escape_coefficients=(Fraction(3314677, 1003275), Fraction(5096464, 1003275), Fraction(2852, 819))
+escape_H_degree=52 escape_S_multiplicity=1 escape_H_sha256=47b8893fc15b0251532c5e10c2a26792ddf70545287dad8f7dcd023380dc6860
+control_B=1+x H_degree=52 H_sha256=5c7f8bfa8d57f7ff84fe97ffb97207274bde69aa548509266fbff29ab3972d44
+case=3211
+parameter_quotient_degrees=(52, 44, 36, 28, 23, 15)
+S_escape_PRS_degrees=((5, 3), (3, 2), (2, 1), (1, 0)) gcd=1
+Q4_sha256=292ef3b24c580cb1c370aae21483825c78f784f26ea2b92ac2cf5d20d73f4856
+Q5_sha256=109a4997d6f82124270097f772d7abb1f21c54d35b0fb306b4dcc089b7f139d4
+t_escape_coefficients=(Fraction(1070723664593, 191547723339), Fraction(538215861527, 191547723339), Fraction(-9857175289, 1303045737))
+escape_H_degree=52 escape_S_multiplicity=1 escape_H_sha256=b113757def639ae111981136504e9cad03dd328843b037e9e618bf5fe8494bbd
+control_B=1+x H_degree=52 H_sha256=03f16b374a849811008ae207c2546773add03374453f1db6b2825dbfaf19e838
+finite_case=4111 good_reduction=(p=113,u=85) control=(degree=52,gcd_g=0,gcd_derivative=0) escape=(t=35,degree=52,gcd_g=1,gcd_derivative=0) collision_B=1-x_gcd_g=1
+finite_case=3211 good_reduction=(p=101,u=64) control=(degree=52,gcd_g=0,gcd_derivative=0) escape=(t=67,degree=52,gcd_g=1,gcd_derivative=0) collision_B=1-x_gcd_g=1
+FAILED_CHECKS=NONE
