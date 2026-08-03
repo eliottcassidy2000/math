@@ -77,7 +77,7 @@ the finite-`R`/finite-`m` Stirling transfer lemma.
 | Reduction of the general class to the forward transportation model (per-shell demand `binom(m-1,d)`, supply = (ARCH) boxes of the extremal profile, forward-only routing) | **MODELLING PREMISE, not proved.** Nowhere derived from THM-2966/THM-3008 word-level structure. This is the load-bearing step and it is missing. |
 | (G1) "the degree-blind cut is a valid Hall cut for any routing rule in d, so opus's sign flip proves infeasibility unconditionally" | **UNSOUND as an unconditional claim.** (i) opus's S4 script computes the *per-shell* continuum (ARCH) margin (mpmath 25 dps, delta-grid 1/100, x-grid 1/4000) -- it never computes any cross-shell cut; the one cross-shell sentence is asserted, not computed. (ii) When the aggregate/tail cuts ARE computed (audit part 4, exact integers), they do **not** flip at golden: see (G3) row. |
 | (G2) decoupling into per-(M,d) tail cuts | The Hall argument (disjoint forward chains, closed sets = unions of tails) is a genuine proof **given** the degree-preservation premise. But the premise ("forward routing preserves absolute degree") is a plausibility statement about the carry mechanism, and it **contradicts** the scale-invariance ("the band rebinds at the deeper shell's own delta*") that opus's aggregate argument implicitly needs. Under preservation the floor argument fails (see next row); under rescaling the decoupling proof fails. Neither transport law is derived. Answer to the audit question: (G2) has a full proof of a conditional statement whose hypothesis is unproved -- i.e. the decoupling *argument* is fine, the *decoupling premise* is a plausibility argument. |
-| (G3) "the cuts add nothing" (float computation, shells 8..512) | The float numbers reproduce exactly, but the reading is wrong. In exact integers (audit part 4): at `gamma = 71/125` (certified below gamma*), every violated tail cut lives at degrees `d` that only the deepest shell in the window can demand or supply (`supply_m(d) = demand_m(d) = 0` for `d >= m`), i.e. the "binding degree-resolved cut" is the deepest shell's own per-shell (ARCH) constraint -- a **truncation edge artifact**. Any per-shell deficit interior to the window is absorbed by the next shell at the same absolute degree with exponential room (audit 4.2: deficit ~2^249 vs slack ~2^580 at (m,2m) = (256,512), d = 155). At fixed absolute `d`, demand `binom(m-1,d)` grows polynomially in `m` while supply grows exponentially, so in the model as stated (unbounded forward routing) **every** tail cut with a deeper shell available is satisfied for any `gamma > 0`: the transportation relaxation yields no general-class floor at all. |
+| (G3) "the cuts add nothing" (float computation, shells 8..512) | The equality it reports is real, but the reading is wrong. In exact integers (audit part 4): at `gamma = 71/125` (certified below gamma*), per-shell (ARCH) fails at m = 64, 128, 256, 512, yet of the **819** violated degree-resolved tail cuts over the window, **all 819** live at degrees `d > 255` where only the deepest shell (m = 512) has any demand or supply (`demand_m(d) = supply_m(d) = 0` for `d >= m`), and **zero** have genuine multi-shell content. The "binding degree-resolved cut" is the deepest shell's own per-shell (ARCH) constraint -- a **truncation edge artifact**. Any per-shell deficit interior to the window is absorbed by the next shell at the same absolute degree with exponential room (audit 4.2: at (m, 2m) = (64, 128), d = 36, deficit ~2^55 vs slack ~2^143; the two-shell tail cut is satisfied with ~2^88 to spare). At fixed absolute `d`, demand `binom(m-1,d)` grows polynomially in `m` while supply grows exponentially, so in the model as stated (unbounded forward routing) **every** tail cut with a deeper shell available is satisfied for any `gamma > 0`: the transportation relaxation yields no general-class floor at all. (The exact integer-profile per-shell verdicts fail earlier in m than THM-3024's float continuum control -- floors lower supply -- which changes nothing above.) |
 
 **Consequence.** `C*_general = C*_block = log_5(5 phi^2)` is unsupported.
 The gap is not cosmetic: the model itself, taken at its word, is *feasible
@@ -164,13 +164,16 @@ m      largest refuted C     gamma_m      vs gamma* (exact)   gap
 All ten refuted rates certified `< gamma*` by the integer test; the ladder is
 strictly increasing; every committed value reproduced (m <= 1024 by full
 independent binary search; 2048/4096 by exact re-verification of the refuted
-candidate, its successor candidate passing, and `C = 8/5` passing). The
-finite-m flip location at m = 4096 is bracketed in `(6709/4201, next
-candidate]` and sits `0.00099` below gamma*, consistent with the fold
-prediction `~ c log2(m)/m`; both sandwich rationals behave as the closed form
-predicts on every shell tested. D0-robustness: at m = 2048, `gamma = 59/100`
-fails (ARCH) with the floor profile at D0 = 0 **and** D0 = +2, so the
-refutation is not an artifact of the profile offset convention.
+candidate, its successor candidate passing, and `C = 8/5` passing). Exact
+finite-m flip brackets: `(3890/2437, 423/265]` at m = 2048 (first failure at
+d = 1262, d/m = 0.6162) and `(6709/4201, 1704/1067]` at m = 4096 (first
+failure at d = 2527, d/m = 0.6169 vs 1/phi = 0.618034); the m = 4096 flip
+sits `0.00099` below gamma*, consistent with the fold prediction
+`~ c log2(m)/m`, and the binding-degree fraction converges to `1/phi`.
+D0-robustness: at m = 2048, `gamma = 59/100` fails (ARCH) with the floor
+profile `a_k = floor(gamma(m+k)) + D0` at D0 = 0 (d = 1165) **and** D0 = +2
+(d = 1173), so the refutation is not an artifact of the profile offset
+convention.
 
 **Tangency algebra (sympy 1.9).** Eliminating the multipliers from
 (S)+(T)+(V) collapses, with residuals identically zero, to

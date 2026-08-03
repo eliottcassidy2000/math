@@ -98,3 +98,72 @@ PART 3 -- EXACT (ARCH) RE-REFEREE (integers / Fraction only)
   m=4096: committed refuted candidate C=6709/4201 (gamma=0.597001): first (ARCH) failure at d=2527 (d/m=0.6169);  gamma_m < gamma* exact: True
           next candidate 1704/1067 = 1.5970009: PASSES
           C = 8/5 (gamma = 3/5 > gamma*): PASSES
+
+3.5  D0-robustness of the refutation (floor profile a_k = floor(g(m+k)) + D0):
+  m=2048, gamma=59/100, D0=0: FAILS at d=1165
+  m=2048, gamma=59/100, D0=2: FAILS at d=1173
+  => the refutation below gamma* is not an artifact of the -1 offset; bounded
+     additive slack D0 does not rescue a rate below gamma* at large m (THM-3029 (D0)).
+
+==============================================================================
+PART 4 -- EXACT AUTOPSY OF THE THM-3024 CROSS-SHELL HALL MODEL
+==============================================================================
+rate gamma = 71/125 = 0.568 (certified BELOW gamma*), shells [8, 16, 32, 64, 128, 256, 512]
+
+4.1  per-shell (ARCH) verdicts (exact):
+  m=   8: pass
+  m=  16: pass
+  m=  32: pass
+  m=  64: FAIL at d=36 (d/m=0.562)
+  m= 128: FAIL at d=69 (d/m=0.539)
+  m= 256: FAIL at d=133 (d/m=0.520)
+  m= 512: FAIL at d=263 (d/m=0.514)
+
+4.2  the rescue: shell 128 absorbs shell 64's deficit at the SAME absolute degree d=36:
+  shell 64:  demand has 59 bits, supply 59 bits -> deficit 55 bits
+  shell 128: demand has 106 bits, supply 143 bits -> slack  143 bits
+  two-shell tail cut at (M=64, d=36): SATISFIED (slack exceeds deficit by ~2^88)
+
+4.3  ALL degree-resolved tail cuts over the window, exact:
+  violated tail cuts: 819 total; of these, 819 have d > 255, where ONLY the deepest shell (m=512) has any demand or supply
+  violated tail cuts with genuine multi-shell content (d <= 255): 0
+  violated degrees: d in [263, 379]  (deepest shell's binding band, d/512 ~ 0.514..0.740)
+
+  => every violated cut lives at degrees only the deepest shell reaches: the
+     'binding degree-resolved cut' of THM-3024 (G3) is the deepest shell's OWN
+     per-shell (ARCH) constraint -- a TRUNCATION EDGE ARTIFACT, not a cross-shell
+     obstruction.  Any per-shell deficit interior to the window is absorbed by
+     the next shell with exponential room (4.2).  In the model AS STATED
+     (unbounded forward routing at fixed absolute degree), demand at fixed d
+     grows polynomially in m while supply grows exponentially, so EVERY tail
+     cut with an unbounded (or merely one-shell-deeper) tail is satisfied for
+     ANY gamma > 0: the transportation relaxation yields NO general-class floor.
+
+==============================================================================
+AUDIT SUMMARY
+==============================================================================
+  THM-3009: floor direction SOUND.  Finite-m certified bounds reproduced
+            exactly; every refuted rate certified < gamma* by integer
+            Fibonacci/Lucas tests; candidate-ladder monotonicity validated;
+            tangency algebra re-proved symbolically.  Remaining gaps: the
+            finite-m Stirling transfer lemma (sec 10.3) is sketched, not
+            written (LOW severity, one direction, routine); threshold
+            EXACTNESS from above still rests on an uncertified numeric scan
+            (MODERATE, not load-bearing for the floor).
+  THM-3017: SOUND within scope (H=1 checkpoint-closure criterion).  Its
+            20-digit numerics are superseded by the symbolic collapse.
+  THM-3027: SOUND.  Collapse (S)+(T)+(V) => (1-tau)^2 = tau re-derived
+            symbolically; inner concavity + gamma-monotonicity PROVED here,
+            making the floor direction scan-free; sigma* interiority upgraded
+            to an exact certificate.  Laplace/Stirling rate passage remains
+            ASSUMED (needs an error-term lemma; routine for the barrier
+            direction).
+  THM-3024: GAP FOUND (HIGH).  Within its own transportation model the
+            degree-resolved Hall cuts do NOT bind below golden once the
+            window extends past the binding shell; the reported binding cuts
+            are truncation edge artifacts, and the model as stated admits
+            unbounded forward absorption at any gamma > 0.  (G2)'s
+            degree-preservation premise also contradicts the degree-rescaling
+            invariance opus's aggregate argument needs.  C*_general =
+            log_5(5 phi^2) is NOT established; general-class floor OPEN.
+
