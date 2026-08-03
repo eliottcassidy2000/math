@@ -1,0 +1,18 @@
+LRC14 THM3242 projected-k3 z217 exact-status annihilation
+dependency=THM3109_source:1f74f2b2368c04f514f2c388b54c70a9ee66c9387fbc437093884b807b3eb23c;output:e6d56fa6a419ffe229b8334090e02d98c9d2cdf5f2fa5e24baedd5f722dadf70;semantic:5be5c2fc680d6873600e77227f51264d74a7cd353652795e5ef74215e0fda843;atlas:cee82237ce1f51729813b9c916edd3353204c18172abe1d71278dee2c5562eda
+layer=z1:217;census:(8, 7, 1);row_sha256:885fa20869364ee4a808324612ad373278464a339bf47e183418c1731af4ea6d;all_gcd_seven:1;first_d_equals_L_over_7:1
+screen=total:(66, 0, 66, 0);wall:(64, 0, 64, 0);order:(2, 0, 2, 0);farkas:(0, 66);wall_farkas:(0, 64);order_farkas:(0, 2);screen_sha256:69e3333a4b1dfbbcdd8530d933aa787b7a9b295f01308fcb613f3e65e8eed11b
+residual=bodies:0;masks:0;sha256:2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
+ROW;index=0;E=1,2,6,9,10,12;wall=1;L=2520;high=249;first_d=360;states=16;crude=0;status=16;residual=0;direct_farkas=0;legacy_farkas=16
+ROW;index=1;E=1,3,4,8,10,12;wall=0;L=1680;high=166;first_d=240;states=2;crude=0;status=2;residual=0;direct_farkas=0;legacy_farkas=2
+ROW;index=2;E=1,3,4,9,10,12;wall=1;L=2520;high=249;first_d=360;states=10;crude=0;status=10;residual=0;direct_farkas=0;legacy_farkas=10
+ROW;index=3;E=1,3,6,9,10,12;wall=1;L=2520;high=249;first_d=360;states=20;crude=0;status=20;residual=0;direct_farkas=0;legacy_farkas=20
+ROW;index=4;E=1,4,6,9,10,12;wall=1;L=2520;high=249;first_d=360;states=13;crude=0;status=13;residual=0;direct_farkas=0;legacy_farkas=13
+ROW;index=5;E=1,6,7,9,12,14;wall=1;L=3528;high=348;first_d=504;states=3;crude=0;status=3;residual=0;direct_farkas=0;legacy_farkas=3
+ROW;index=6;E=2,4,6,9,10,12;wall=1;L=2520;high=249;first_d=360;states=1;crude=0;status=1;residual=0;direct_farkas=0;legacy_farkas=1
+ROW;index=7;E=2,6,7,9,12,14;wall=1;L=3528;high=348;first_d=504;states=1;crude=0;status=1;residual=0;direct_farkas=0;legacy_farkas=1
+direction=all_66_states_are_excluded_by_raw_verified_legacy_Farkas_certificates;no_terminal_step_is_needed
+consequence=z217_is_empty_but_the_current_cap_remains218_and_ledger373411_until_z218_is_independently_discharged
+scope=z217_layer_only;gcd7_is_a_pointed_divisor_condition_not_a_C7_action_or_common_carrier;no_k_le_1_final_rung_or_LRC14_claim
+semantic_sha256=a28872885af6aef23f3aa00fe026b5f4c23b6d48302924fab37279cc2a4daf50
+all_exact_controls=PASS
