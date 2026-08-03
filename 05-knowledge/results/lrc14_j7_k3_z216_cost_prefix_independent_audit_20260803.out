@@ -1,0 +1,19 @@
+LRC14 projected-k3 z216 intrinsic-ruler cost-prefix independent audit
+atlas=rows:480;wall:447;order:33;row_sha256:53db9e1d3df2cf2b0398847682d909da81705e43a53ae2553d102fd152337649;dual_parser_match:PASS
+prior_partition=gcd8:19=low:17+costly:2;gcd18:1;order:33;natural:47;union:100;pairwise_disjoint:PASS
+baseline=lineage:373284-1-17-33-47-2=373184;z216_wall:447-19-1-47=380;costly_indices:(238, 370);pinned_prior_outputs:PASS
+first_queue=live:380;families:39;head:((243936, 1, 72, 11088, (210,)), (443520, 1, 24, 18480, (50,)), (517440, 3, 24, 5880, (18, 140, 299)), (609840, 1, 72, 27720, (134,)))
+first_prefix=families:3;rows:5;indices:(210, 50, 18, 140, 299);cost:1204896;complete_fibres:PASS;strict_boundary:PASS
+first_screen=states:42;crude:38;status:4;residual:0;taxonomy:(4, 0, 0, 0);certificate_counts:(5, 0, 0);exact_Farkas_checked:4
+second_queue=live:375;families:36;head:((609840, 1, 72, 27720, (134,)), (655200, 1, 72, 32760, (121,)), (1361808, 16, 72, 3528, (17, 27, 46, 56, 79, 89, 126, 138, 205, 248, 258, 286, 298, 347, 376, 425)), (1729728, 1, 72, 72072, (157,)), (2121504, 3, 24, 25872, (53, 293, 357)))
+second_prefix=families:3;rows:18;indices:(134, 121, 17, 27, 46, 56, 79, 89, 126, 138, 205, 248, 258, 286, 298, 347, 376, 425);cost:2626848;complete_fibres:PASS;strict_boundary:PASS;disjoint_from_first:PASS
+second_screen=states:750;crude:479;status:271;residual:0;taxonomy:(248, 1, 11, 11);certificate_counts:(264, 1, 11);exact_Farkas_checked:271
+by_row=index,screen_counts,taxonomy:((210, (8, 8, 0, 0), (0, 0, 0, 0)), (50, (22, 21, 1, 0), (1, 0, 0, 0)), (18, (2, 1, 1, 0), (1, 0, 0, 0)), (140, (4, 3, 1, 0), (1, 0, 0, 0)), (299, (6, 5, 1, 0), (1, 0, 0, 0)), (134, (29, 28, 1, 0), (0, 0, 0, 1)), (121, (95, 79, 16, 0), (15, 0, 0, 1)), (17, (25, 12, 13, 0), (12, 0, 0, 1)), (27, (36, 18, 18, 0), (16, 0, 0, 2)), (46, (1, 1, 0, 0), (0, 0, 0, 0)), (56, (64, 40, 24, 0), (23, 0, 0, 1)), (79, (3, 3, 0, 0), (0, 0, 0, 0)), (89, (9, 9, 0, 0), (0, 0, 0, 0)), (126, (5, 5, 0, 0), (0, 0, 0, 0)), (138, (234, 136, 98, 0), (89, 1, 5, 3)), (205, (12, 9, 3, 0), (3, 0, 0, 0)), (248, (3, 3, 0, 0), (0, 0, 0, 0)), (258, (4, 4, 0, 0), (0, 0, 0, 0)), (286, (2, 0, 2, 0), (2, 0, 0, 0)), (298, (207, 118, 89, 0), (81, 0, 6, 2)), (347, (9, 6, 3, 0), (3, 0, 0, 0)), (376, (2, 2, 0, 0), (0, 0, 0, 0)), (425, (10, 6, 4, 0), (4, 0, 0, 0)))
+taxonomy_soundness=all_status_instances_rebuilt_from_divisors;all_returned_duals_exactly_checked;coordinate_union_bound:tail_le_sum_marginals;zero_reduced_bound:zero_marginal_deletes_incident_patterns;two_fan_bound:mB+min(mA,mC+mD);weighted_core_exact_only:11
+consequence=ledger:373184-5=373179-18=373161;z216_wall:380-5=375-18=357;remaining_families:33
+next_head:((1729728, 1, 72, 72072, (157,)), (2121504, 3, 24, 25872, (53, 293, 357)));cost_is_work_order_only_not_safety_invariant
+direction=empty_exact_necessary_upper_screen_excludes_each_selected_projected_wall_row;no_converse_or_physical_lift
+scope=projected_k3_z216_necessary_atlas_only;no_arbitrary_k_le_1_rung_endpoint_owner_phase_current_physical_cover_or_LRC14_claim
+truth_gates=assert_nodes:0;float_literals:0
+semantic_sha256=4bb4eca9949eb4f07b618f9e49bbb5de63492364a29a4a5abfc84a6acf105e11
+all_exact_controls=PASS

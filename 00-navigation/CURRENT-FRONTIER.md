@@ -26,7 +26,8 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 ### Exact live obligation
 
 Direct frontier: `<=6`; THM-2928 empties aligned `k>=4`; THM-2995/3251 cap projected `k=2,3` at `1579/216`; corrected THM-2941 leaves `561` reflected bodies. Arbitrary `k<=1`, the rung, physical entry and LRC remain open. Five-/four-drift screens cut `951,545,890,235 -> 200,141,092,521` and `21,357,714,101 -> 2,548,901,482`; these are necessary-state, not physical-cover, counts.
-THM-2970--2995 close projected `k=2` above `1579`; THM-2981--3230 close projected `k=3` through `z1=219`. THM-3261/3264/3270/3281 give ledger `373186`; the independently audited **FINITE-EXACT** [gcd-eight closure](../05-knowledge/results/lrc14-z216-costly-gcd8-closure-opus-20260803.md) gives `373184`, with `z216=380` wall plus `0` order, and completes gcd eight. Gcd `24/36/72` wall families remain open.
+THM-2970--2995 close projected `k=2` above `1579`; THM-2981--3230 close projected `k=3` through `z1=219`.
+The audited **FINITE-EXACT** [gcd-eight closure](../05-knowledge/results/lrc14-z216-costly-gcd8-closure-opus-20260803.md) and [two ruler-cost prefixes](../07-reflections/lrc14-z216-intrinsic-ruler-cost-prefix-independent-audit-codex-20260803.md) give ledger `373161`, with `357` `z216` wall rows in `33` families and cap `216` unchanged. Gcd `24/36/72` wall families remain open.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
 
@@ -276,7 +277,8 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   THM-3181/3186/3202/3213 separate finite jets, P-recursive tails, and fixed-depth non-P-recursiveness; THM-3226/3235/3248 give saddles, decimation, and Q4 Stirling.
   THM-3256/3262 split factored distance from signed continuation by a catalytic face label (signed tax `80`).
   Abstract THM-3268 has `Q=14J-I`, spectrum `167/-1`, and `C[n+2]=166C[n+1]+167C[n]`.
-  THM-3274 gives invoices `12/48/168`; THM-3288 gives rational static series of orders `10/14/15`. THM-3305 exhausts `11` one-edge updates: one gives zero mass `3/5`, head `-108` and a `2 x 2` Woodbury update; another lowers order `14 -> 12`. No dynamics or bit-complexity claim.
+  THM-3274 gives invoices `12/48/168`; THM-3288 gives rational static series of orders `10/14/15`. THM-3305 exhausts `11` one-edge updates: one gives zero mass `3/5`, head `-108` and a `2 x 2` Woodbury update; another lowers order `14 -> 12`.
+  The [multi-edge audit](../07-reflections/multi-edge-visible-kernel-and-bordered-resolvent-independent-audit-codex-20260803.md) finds one persistent singleton and five fragile triple circuits and compiles all `55` pairs locally. No dynamics or bit-complexity claim.
   Q4 radius/non-P stay OPEN.
 - **EXACT identities / heuristic bridge:** corrected HYP-8820 puts caterer,
   cake, Moser, bagel, and Fibonacci in one Pascal array and proves
@@ -361,10 +363,14 @@ Classify profiles under support operations; study analytic continuation and auto
   escape, at most two at `S`, and at least `50` intersection units remain.
   THM-3237--3289 close stated `B` and affine `C,E` lanes. THM-3306 proves on
   `C=c+x,E'=1` a degree-36 square discriminant, transverse base ideal, exact
-  quadratic fibre and double root, disjoint from known walls. A **FINITE-EXACT**
+  quadratic fibre and double root, disjoint from known walls. Its **FINITE-EXACT**
+  [blow-up](../07-reflections/jc-affine-c-exceptional-quadratic-c2-blowup-codex-20260803.md)
+  keeps the degree-36/32 pivots distinct: `F_0` is irreducible over each `A_i`,
+  of relative/total degree `2/72`, with fibrewise conjugate nonstationary directions. A **FINITE-EXACT**
   [subresultant sidecar](../07-reflections/jc-critical-inverse-cover-cofactor-jacobian-probe-agent-20260803.md)
   gives a two-pivot inverse graph and mate-integrability class on two controls.
-  Blow-up, residual degree 119, Keller mate/inverse cover, `JC(2)` and `DC(2)` remain OPEN.
+  No `A_i` root choice follows; residual degree 119, Keller mate/inverse cover,
+  `JC(2)` and `DC(2)` remain OPEN.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
   `2201<=d<=2400` and all `35` residuals in `2401<=d<=2500` close by matching
@@ -375,7 +381,7 @@ Classify profiles under support operations; study analytic continuation and auto
   fixed-parameter Clifford law. THM-3186 gives P-recursive tails; THM-3210's
   two-step nonmonotone cancellation ray still blocks the staircase. The `p>2m`
   full-flag formula is VERIFIED only; `FC(3)`/`SFC(3)` remain OPEN.
-  THM-3249--3275 give the two-face atlas; THM-3286--3288 give three-face Helly width and static sections/walks. Their FINITE-EXACT all-choice closure has `854` typed nodes and four shared blockers; the fork is no earlier than the `F12` reset on all `94` starts. Rebind, interleaving, history, positivity, arbitrary faces, `FC(3)` and `SFC(3)` remain OPEN.
+  THM-3249--3275 give the two-face atlas; THM-3286--3288 give three-face Helly width and static sections/walks. Their FINITE-EXACT closure has four blockers and no inherited rebind. A [new copy sidecar](../07-reflections/three-support-face-f12-release-copy-rebind-gate-codex-20260803.md) closes all `94` starts but leaves `31` full-domain `{16,17}` blockers. Deriving the copy, chronology, positivity, arbitrary faces, `FC(3)` and `SFC(3)` remain OPEN.
   THM-3303 proves `JC(2) => HFC(3)` in the constant-Jacobian sector via a forced boundary collision. THM-3304 gives the exact Fourier moment kernel and excludes alternating quintics; its cyclic quartic cell remains OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
@@ -398,7 +404,7 @@ The most reusable current bridges are not literal object identifications:
 | Quotient + sidecar | spectrum/SCC/support quotients | Which lost coordinate restores the target predicate? |
 | Bulk / boundary / null | THM-2058 | Large-prime grids are strict; tight support uses finitely many level-14 clocks; subthreshold packets vanish. |
 | Operation-response | tournament/FC/sequence | THM-3275/3286--3288 separate static sections from history; THM-3305 gives an exact low-rank edge update. Close under the next native operation before scalarizing. |
-| Strict transform | factorial PRS / JC infinity | THM-3257--3289 close stated edges; THM-3306 gives a transverse affine-`c` base ideal, but its blow-up and inverse cover remain. |
+| Strict transform | factorial PRS / JC infinity | THM-3306 gives a transverse base ideal; its fixed-slice blow-up is nonsplit, while deformation and inverse cover remain. |
 | HFC--JC boundary | THM-3303 | Constant-Jacobian null moments force a boundary collision; classify the boundary/multiplicity passport without claiming equivalence. |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Finite observer / recurrence | THM-3171/3172/3180/3181 | Is it invertible, a refuter, or only an address; which sidecar makes termination lawful? |

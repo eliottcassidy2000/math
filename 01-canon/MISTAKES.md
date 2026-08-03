@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-362 (2026-08-03, exceptional quadratic geometric count) -- a relative two-point fibre was reported as the total geometric base change
+
+- **What failed:** the first frozen output and reflection for the affine-`c`
+  exceptional quadratic printed `geometric_points=2` and said that the
+  degree-72 closed point becomes two points over an algebraic closure, without
+  specifying the base field.
+- **Why it was wrong:** the quadratic algebra `B_i/A_i` has relative degree
+  two, but `A_i/K_i` has degree `36`.  After fixing one geometric embedding of
+  `A_i`, the relative fibre has two directions exchanged by `C_2`; after base
+  change from `K_i` to an algebraic closure, all `36` base embeddings split,
+  giving `72` geometric points in `36` conjugate pairs.
+- **Repair:** the transcript now records both
+  `relative_geometric_fibre_points=2` and
+  `total_geometric_points_over_K=72`; the reflection and synthesis use
+  fibrewise deck language.  The irreducibility, nonsquare norm certificates,
+  degree `2/72`, lack of an `A_i`-rational direction, and first-normal
+  nonstationarity are unchanged.  Reusable rule: every geometric-point count
+  must name the field being algebraically closed.
+
 ## MISTAKE-361 (2026-08-03, THM-3024 general-class floor promotion) -- a truncation-edge Hall cut was read as a cross-shell floor
 
 - **What failed:** THM-3024 promoted the balanced-block archimedean floor

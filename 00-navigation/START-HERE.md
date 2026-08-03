@@ -20,7 +20,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; THM-2995/3251 cap projected `k=2,3` at `1579/216`; THM-2941 leaves `561` reflected bodies. The audited gcd-eight closure gives projected ledger `373184`; gcd `24/36/72`, arbitrary `k<=1`, the rung and physical entry remain open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
+1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; THM-2995/3251 cap projected `k=2,3` at `1579/216`; THM-2941 leaves `561` reflected bodies. FINITE-EXACT `z1=216` closures give ledger `373161` and `357` wall rows; arbitrary `k<=1`, the rung and physical entry remain open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
@@ -56,15 +56,15 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 11. **Sequences need support and multiplicity profiles.** THM-2000/2005/2352 separate support, collision tax, and q-adic thresholds; THM-2438/2500 give Poisson--Newton and finite-hole laws.
     THM-3186 gives P-recursive tails; THM-3288 gives static series of orders
     `10/14/15`. THM-3305 gives mass `3/5`, head `-108`, a `2 x 2` update and a
-    separate `14 -> 12` order drop. FC closure has `854` typed nodes and four
-    blockers; `FC(3)`/`SFC(3)` remain OPEN.
+    separate `14 -> 12` order drop. The full edge lattice has six minimal
+    circuits; a conditional FC copy still leaves `31` `{16,17}` blockers.
+    `FC(3)`/`SFC(3)` remain OPEN.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close linear through cubic fibers and twice-odd finite poles; THM-2214/2217/2247 close the inherited nonsplit train through degree `14`.
-    At degree `18`, THM-2297--2359 reduce the sparse/squarefree branches; THM-2371/THM-2376 close `H_2S_5^2`, and hostile-audited THM-2406 closes the remaining `H_4` locus. THM-2671--2755 close the inherited degree-22 split/nonsplit families; THM-2778 closes chosen-sheet polynomial exact prefixes, while THM-2796 retains `A(R_Q/q)=VG`.
-    THM-3057/3059 tame infinity-inertia sign, but THM-3064/3066 retain quotient loss. THM-3123's abstract `S7` maps lack Keller-chart entry; THM-3133/3140 only close their stated response cells.
+    THM-2371/THM-2376 close named degree-`18` strata; later sheet/quotient losses remain.
     THM-3212/3225 leave critical points; THM-3237--3265 give the infinity
-    staircase; THM-3279/3289 close affine `C,E` on both pairs. THM-3306 proves
-    on `C=c+x,E'=1`: degree-36 `D` gives `Res_x(a,H)=unit*D^2`, transverse `(a,b)`
-    and an exact quadratic fibre. This is a blow-up target, not an inverse;
+    staircase; THM-3279/3289 close affine `C,E` on both pairs. On `C=c+x,E'=1`,
+    THM-3306 gives a transverse exact quadratic fibre; its FINITE-EXACT blow-up
+    is nonsplit of degree `2/72`, with no residue-field root choice or inverse.
     THM-3303 proves `JC(2) => HFC(3)` only in the constant-Jacobian sector by
     forcing a boundary collision. `JC(2)` and `DC(2)` remain OPEN.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
