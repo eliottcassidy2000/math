@@ -2,7 +2,7 @@
 id: THM-3236
 title: "Contact spectrum, primitive-element gate, and root reconstruction"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On every THM-3232 etale first-contact stratum, the characteristic
   polynomial chi_m(T)=Norm(T-c_m) is the exact root-free resultant quotient
   Res_x(S_m,Tf'g'+Omega_m)/Res_x(S_m,f'g').  Its squarefree radical is the
@@ -20,8 +20,12 @@ audit: >
   identity, exact root reconstruction, quadratic and cubic delayed
   resplitting, the cubic three-slope exceptional polynomial, and a sharp F2
   small-field pencil boundary.  Normal and optimized runs byte-match the
-  stored transcript and the LF-normalized hashes below.  Independent hostile
-  audit is pending.
+  stored transcript and the LF-normalized hashes below.  An independent
+  hostile audit rederived the resultant normalization and constant term, the
+  etale radical/minimal-polynomial statement, all five primitive-element
+  equivalences, the Vandermonde/Krylov discriminant identity, affine and
+  swap covariance, reconstruction, the pencil bound, and every exact hostile,
+  and found no defect.
 depends_on:
   - THM-3232-root-free-contact-stratum-norm-and-discriminant-power
 related:
@@ -38,7 +42,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3236 -- contact spectrum, primitive-element gate, and root reconstruction
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3232 takes the product of all first-live coefficients on one contact
 stratum.  That norm cannot say whether two roots carry the same coefficient.
@@ -409,4 +413,4 @@ runs byte-match
 
 and the LF-normalized hashes are pinned in the frontmatter.
 
-QED, pending independent hostile audit.
+QED.
