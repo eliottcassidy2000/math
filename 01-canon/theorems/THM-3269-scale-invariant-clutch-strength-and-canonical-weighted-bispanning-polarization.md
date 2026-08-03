@@ -2,7 +2,7 @@
 id: THM-3269
 title: "Scale-invariant clutch strength and canonical weighted bispanning polarization"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The exact reset-link trap intervals canonically weight every edge of
   THM-3260's bispanning core by a positive row-scale- and orientation-invariant
   overlap ratio.  Among all 9,920 ordered complementary-tree charts, the
@@ -30,8 +30,14 @@ audit: >
   distinct normalized exponents, circular order and rank-compressed C12
   bijection.  Finally it checks the generator-normalized J12 chart and the
   repaired 48-by-11 sampler's full rank.
-  Normal, optimized and stored replay plus LF hashes are required.
-  Independent hostile audit is pending.
+  Normal, optimized and stored replay plus LF hashes agree. An independent
+  hostile audit rebuilt the response bank, all 74,748 spanning trees, all
+  9,920 ordered bispanning charts, the unique weighted minimizer, incidence
+  transition and rigid rooted geometry without importing this theorem. A
+  second delta audit of the completed sidecar claims independently rebuilt
+  the full critical Smith/adjugate coordinate, unique incident generator,
+  twelve distinct exponents, rank compression, normalized edge sampler and
+  augmentation embedding. Both audits passed with no repair.
 depends_on:
   - THM-3254-first-shell-two-row-clutch-and-graded-gauge-no-go
   - THM-3260-bispanning-reset-link-holotopy-atlas-and-nonplanar-c12-boundary
@@ -49,7 +55,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3269 -- scale-invariant clutch strength and canonical weighted bispanning polarization
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3260 proves that the 22-edge reset-link core has 4,960 complementary
 spanning-tree decompositions, connected by symmetric exchanges.  Any ordered
@@ -358,5 +364,4 @@ floating point, randomness, discovery cache, graph-library dependency, or
 optimization-sensitive assertion.  It independently reconstructs all
 complementary tree pairs and the selected integral transition.
 
-QED, conditional only on the pending independent audit required for status
-promotion.
+QED.
