@@ -383,7 +383,8 @@ class Steer:
         return val
 
 def sweep_E(R2, dt, E, W=10, L=10, teleport=False, tele_bound_shift=0,
-            tele_frac=Fraction(1, 4), tele_buffer=8, verbose=False):
+            tele_frac=Fraction(1, 4), tele_buffer=8, verbose=False,
+            debug_fallback=None):
     """generalized carry sweep over arbitrary rows E (identity assumed:
     sum_j x^j E_j == q^{R2-1}).  With teleport=True, leftover bulk cells
     beyond ~ box scale are re-expressed forward into E via exact split-jump
@@ -419,6 +420,11 @@ def sweep_E(R2, dt, E, W=10, L=10, teleport=False, tele_bound_shift=0,
                     P[k] = presc[k]
                     continue
                 nfall += 1
+                if debug_fallback is not None:
+                    debug_fallback.append(
+                        (j, k, d - k, 'parity' if abs(e) <= cap else 'mag',
+                         float(Fraction(abs(e), cap)),
+                         float(Fraction(abs(presc[k]), cap))))
             v = pclamp(X[k], cap)
             cells[k] = v
             P[k] = X[k] - v
@@ -426,7 +432,9 @@ def sweep_E(R2, dt, E, W=10, L=10, teleport=False, tele_bound_shift=0,
         if teleport and j + 1 < R2:
             moved = False
             for k in range(d):
-                bound = comb(d - 1, k) << tele_bound_shift if k <= d - 1 else 1
+                b0 = comb(d - 1, k)
+                bound = (b0 << tele_bound_shift if tele_bound_shift >= 0
+                         else max(1, b0 >> (-tele_bound_shift)))
                 if abs(P[k]) <= bound:
                     continue
                 keep = max(-bound, min(bound, P[k]))
