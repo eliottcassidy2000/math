@@ -20,7 +20,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
-1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; THM-2995/3251 cap projected `k=2,3` at `1579/216`; THM-2941 leaves `561` reflected bodies. THM-3126 verifies six THM-3113 prefixes; THM-3135 repairs `H2` at caps `7/3,5/2`, but `H` leaves cones under audit. Arbitrary `k<=1` and the rung remain open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
+1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; THM-2995/3251 cap projected `k=2,3` at `1579/216`; THM-2941 leaves `561` reflected bodies. The audited gcd-eight closure gives projected ledger `373184`; gcd `24/36/72`, arbitrary `k<=1`, the rung and physical entry remain open. [Sources](../05-knowledge/reference/CORE-PAPERS.md).
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
@@ -65,7 +65,8 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     staircase; THM-3279/3289 close affine `C,E` on both pairs. THM-3306 proves
     on `C=c+x,E'=1`: degree-36 `D` gives `Res_x(a,H)=unit*D^2`, transverse `(a,b)`
     and an exact quadratic fibre. This is a blow-up target, not an inverse;
-    `JC(2)` and `DC(2)` remain OPEN.
+    THM-3303 proves `JC(2) => HFC(3)` only in the constant-Jacobian sector by
+    forcing a boundary collision. `JC(2)` and `DC(2)` remain OPEN.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed

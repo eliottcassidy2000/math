@@ -376,6 +376,7 @@ Classify profiles under support operations; study analytic continuation and auto
   two-step nonmonotone cancellation ray still blocks the staircase. The `p>2m`
   full-flag formula is VERIFIED only; `FC(3)`/`SFC(3)` remain OPEN.
   THM-3249--3275 give the two-face atlas; THM-3286--3288 give three-face Helly width and static sections/walks. Their FINITE-EXACT all-choice closure has `854` typed nodes and four shared blockers; the fork is no earlier than the `F12` reset on all `94` starts. Rebind, interleaving, history, positivity, arbitrary faces, `FC(3)` and `SFC(3)` remain OPEN.
+  THM-3303 proves `JC(2) => HFC(3)` in the constant-Jacobian sector via a forced boundary collision. THM-3304 gives the exact Fourier moment kernel and excludes alternating quintics; its cyclic quartic cell remains OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
@@ -397,7 +398,8 @@ The most reusable current bridges are not literal object identifications:
 | Quotient + sidecar | spectrum/SCC/support quotients | Which lost coordinate restores the target predicate? |
 | Bulk / boundary / null | THM-2058 | Large-prime grids are strict; tight support uses finitely many level-14 clocks; subthreshold packets vanish. |
 | Operation-response | tournament/FC/sequence | THM-3275/3286--3288 separate static sections from history; THM-3305 gives an exact low-rank edge update. Close under the next native operation before scalarizing. |
-| Strict transform | factorial PRS / JC infinity | THM-3257--3289 close stated edges; the finite-exact affine-`c` base ideal is transverse, but its blow-up and inverse cover remain. |
+| Strict transform | factorial PRS / JC infinity | THM-3257--3289 close stated edges; THM-3306 gives a transverse affine-`c` base ideal, but its blow-up and inverse cover remain. |
+| HFC--JC boundary | THM-3303 | Constant-Jacobian null moments force a boundary collision; classify the boundary/multiplicity passport without claiming equivalence. |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Finite observer / recurrence | THM-3171/3172/3180/3181 | Is it invertible, a refuter, or only an address; which sidecar makes termination lawful? |
 | Continuation / min-plus kernel | Gordian profile; THM-840/853 | Which sidecar remains target-preserving under every future operation? |
