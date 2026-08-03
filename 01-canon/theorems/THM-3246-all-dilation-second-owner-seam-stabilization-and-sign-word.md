@@ -17,16 +17,19 @@ audit: >
   checks 9,360 exact interior term-branch certificates and 1,008 direct
   interval controls; verifies the seam component and unaligned-pair bounds;
   reconstructs all 168 quadratics, limits, first corrections, and second
-  correctors; and exhausts 672 Singer gauges.  Normal, optimized, and stored
-  transcript replay and LF-normalized hashes are required.  An independent
-  hostile audit rederived the cleared centre-difference bounds, the unique
-  aligned seam family and its endpoint contributions, the reflected seam,
-  the complete sign word/Hodge sum, and the Singer-line scope.  Fresh normal
-  and optimized runs byte-match the stored transcript and declared hashes.
+  correctors; and exhausts the 672 projective Singer-gauge classes modulo
+  radial F_13^* scaling.  Normal, optimized, and stored transcripts and
+  LF-normalized hashes agree.  Independent hostile audits rederived the
+  cleared centre-difference bounds, unique aligned seam family and endpoint
+  contributions, reflected seam, strict unaligned bounds, ray/head
+  quantifiers, complete quadratic and corrector tables, Hodge sum, and
+  projective Singer census; a separate implementation matched 5,040 direct
+  controls through g=30, both pinned digests, and the THM-3224 complete-orbit
+  sum.
 depends_on:
   - THM-3224-complete-lrc-orbit-bernoulli-gcd-carry-and-owner-hodge-splitting
-related:
   - THM-3234-singer-owner-compactification-and-pointed-heisenberg-carrier-gate
+related:
   - THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary
   - THM-3211-uniform-lrc-channel-limit-bernoulli-cubic-and-sharp-floor
 script: 04-computation/lrc_second_owner_all_dilation_seam_thm3246.py
@@ -101,9 +104,10 @@ Each cell has
 3 residue indices * 10 shift indices * 2 triangle kernels = 60           (6)
 ```
 
-affine endpoint terms.  At the first ray step, the compiler verifies the
+affine endpoint terms.  At the first stable ray step, the compiler verifies the
 affine endpoint slopes and all max/min branch inequalities; those inequalities
-then persist on the whole positive ray.  The resulting
+then persist for every `g>=2`.  The separately checked `g=1` head agrees with
+the same quadratic.  The resulting
 
 ```text
 156*60=9360                                                   (7)
@@ -155,7 +159,7 @@ clearing by `zw`, the three contributions are
 
 ```text
 t=0:          z(2j+12),
-1<=t<=g-1:   (g-1)24z,
+sum_(t=1)^(g-1): (g-1)24z,
 t=g:          z max(10-2j,0).                            (12)
 ```
 
@@ -168,8 +172,8 @@ z[(2j+12)+24(g-1)+max(10-2j,0)]
 ```
 
 At `j=5`, the last term is zero and `(13)` is unchanged.  The map `x -> 1-x`
-identifies cell `j` with cell `167-j`, proving the opposite seam.  Strict-open
-arc endpoints affect only a null set and not the masses.
+identifies cell `j` with cell `167-j`, proving the opposite seam.  Open/closed
+endpoint conventions affect only a null set and not the masses.
 
 ## 3. Exact second-owner sign word
 
@@ -211,7 +215,9 @@ N={0,1,2,3,4,5,162,163,164,165,166,167}.                (19)
 ```
 
 These are the negative owners for every `g>=1`.  Their residues modulo `14`
-are twelve distinct classes.  Under any Singer-equivariant gauge
+are twelve distinct classes.  Use THM-3234's identification
+`F_169~=F_13^2`, fix a primitive `alpha in F_169^*`, and let
+`c in F_169^*` and `a in (Z/168Z)^*`.  Under the Singer-equivariant gauge
 
 ```text
 j |-> c alpha^(aj),              gcd(a,168)=1,           (20)
@@ -222,9 +228,18 @@ modulo `14`.  Multiplication by the unit `a` and the phase shift `c` preserve
 the distinctness of the twelve residues in `(19)`.  Therefore
 
 ```text
-max_(Singer gauges, vector lines L through 0)
- |{alpha^j:j in N} intersect (L\{0})| = 1.              (21)
+max_(c in F_169^*, gcd(a,168)=1, vector lines L through 0)
+|{c alpha^(aj):j in N} intersect (L\{0})| = 1.         (21)
 ```
+
+Multiplying `c` by `F_13^*` only rescales a vector line.  Thus the complete
+projective census has
+
+```text
+phi(168) * 14 = 48 * 14 = 672
+```
+
+classes, exactly the number exhausted by the companion.
 
 This promotes THM-3234's finite sign-line hostile to an all-dilation theorem:
 even after adjoining the completion point, the negative owner class cannot
@@ -249,15 +264,16 @@ than the interior.
 Run
 
 ```text
-python 04-computation/lrc_second_owner_all_dilation_seam_thm3246.py
-python -O 04-computation/lrc_second_owner_all_dilation_seam_thm3246.py
+python3 04-computation/lrc_second_owner_all_dilation_seam_thm3246.py
+python3 -O 04-computation/lrc_second_owner_all_dilation_seam_thm3246.py
 ```
 
 and compare LF-normalized bytes with the declared output.  The companion
 pins and replays THM-3224; checks the symbolic seam decomposition, every
 interior ray certificate, and `1008` direct interval controls; reconstructs
-the complete `q` word and its two independent digests; and exhausts all unit
-Singer gauges.  It uses exact rational arithmetic and no optimization-
-sensitive assertions, floating point, randomness, or discovery cache.
+the complete `q` word and pins the row-table and `q`-word digests; and exhausts
+all projective unit/phase Singer-gauge classes.  It uses exact rational
+arithmetic and no optimization-sensitive assertions, floating point,
+randomness, or discovery cache.
 
 QED.

@@ -42,7 +42,7 @@ full-cap component remains. The zero-gain atlas is
 THM-3150/3156 give the body-`H` skeleton. THM-3171 closes cell 90/cap two for
 all `D>=6` and gcd cones; THM-3200/3211 give ray quasipolynomials, sharp
 `1/105`, signed `1/g`, and constant residue. THM-3224 gives the complete
-orbit's nonzero periodic `g^-2` gcd-carry (sharp `9/49`) and owner Hodge split; candidate THM-3246 closes one 12-cell seam for all dilations, with a fixed `156+ / 12-` second-corrector word but no row exclusion.
+orbit's nonzero periodic `g^-2` gcd-carry (sharp `9/49`) and owner Hodge split; audited THM-3246 closes one 12-cell seam for all dilations, with a fixed `156+ / 12-` second-corrector word but no row exclusion.
 THM-3234/3240 give the Singer/address carriers; THM-3247 makes each endpoint current translation-cyclic on `169` states. Audited THM-3250 interwines address/nonvertical charged sectors but not neutral, positive or Singer data. Physical target/ancestry, finite heads, other cells, rung, entry and LRC(14) stay **OPEN**.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close

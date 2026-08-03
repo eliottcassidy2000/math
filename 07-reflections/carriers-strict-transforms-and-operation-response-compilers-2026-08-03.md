@@ -81,11 +81,11 @@ The active new theorem packages sharpen this picture further:
   group image.  At `z_1=219` the apparent supplier graph is only a graph of
   sorted positions; its weighted automorphism group is trivial and the label
   map needed for a physical carrier has already been quotiented away.
-- **VERIFIED-EXACT CANDIDATE [THM-3246](../01-canon/theorems/THM-3246-all-dilation-second-owner-seam-stabilization-and-sign-word.md)** gives exact quadratics for all `168` cell masses in one THM-3224 lane at
+- **PROVED [THM-3246](../01-canon/theorems/THM-3246-all-dilation-second-owner-seam-stabilization-and-sign-word.md)** gives exact quadratics for all `168` cell masses in one THM-3224 lane at
   every dilation.  Its twelve seam cells are the only negative second
   correctors, the other `156` are positive, and the Hodge sum is `1/24696`.
-  This upgrades the Singer-line hostile to all dilations but awaits audit and
-  supplies no row exclusion.
+  This upgrades the Singer-line hostile to all dilations but supplies no row
+  exclusion.
 - **PROVED [THM-3235](../01-canon/theorems/THM-3235-transitive-tournament-blowup-saddle-and-hypergeometric-decimation.md)** gives a general substitution determinant, exact saddle/radius
   renormalization under uniform transitive blow-up, and hypergeometric
   decimation of the full coefficient sequence.  Its order-six observer twins
@@ -446,7 +446,7 @@ cannot change the face and degree nine is the first live boundary term.
 | `168+1=169`, so the LRC owner orbit is the four-jet carrier | Singer plus one transvection; pointed degree bound | **partly true** abstractly | common 169-set, but full affine mixing and mobile completion point |
 | every residual has `g=3,q=3`, so the LRC layer carries a `C3` symmetry | inspect occupied quotient support and internal restorations | **REFUTED** | the top of ambient chain `{1,3}` is saturated; restorations form an idempotent band |
 | the sorted-position triangle is a supplier `S3` carrier | restore weights and inspect the checkpoint's label map | **REFUTED** | weighted symmetry is trivial and sorting has discarded supplier labels |
-| twelve negative owners plus zero form an affine line | exhaust Singer gauges / residues mod `14` | **CANDIDATE-REFUTED FOR ALL DILATIONS** | THM-3246 fixes the `156+ / 12-` word in one lane; placement is not linear |
+| twelve negative owners plus zero form an affine line | exhaust Singer gauges / residues mod `14` | **REFUTED FOR ALL DILATIONS** | THM-3246 fixes the `156+ / 12-` word in one lane; placement is not linear |
 | the old additive target grid should carry `H_13` | inspect stabilizer and central kernel | **REFUTED**, then repaired | carrier imbalance supplies the nonnormal stabilizer clutch |
 | all charged central modes should already imply a full carrier | test the thirteen center-neutral transverse characters | **REFUTED as an implication, then completed** | THM-3247 supplies all thirteen scalar blocks and rank `169` |
 | full coefficient-carrier rank should imply a physical LRC current | track endpoint target, ancestry and Bezout section through the frame map | **REFUTED** | algebraic rank is closed; frame-bundle physical naturality is the exact remaining invoice |
