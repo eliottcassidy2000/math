@@ -1,0 +1,26 @@
+THM3259 charge-paired modular free-factor exact referee
+p=13
+S=(0, 8, 5, 0)
+S0=(0, 12, 1, 0)
+R=(0, 1, 12, 12)
+determinants=(12, 1)
+orders=(2, 3, 52)
+SR=(5, 5, 0, 5)
+RS=(5, 0, 8, 5)
+symplectic_checks=57122
+heisenberg_states=2197
+flag_checks=2197
+generated_group_order=4368
+projective_image_order=1092
+scalar_kernel=[1, 5, 8, 12]
+determinant_image=[1, 12]
+sl2_order=2184
+honest_sl2_involutions=[(1, 0, 0, 1), (12, 0, 0, 12)]
+charge_orbits=[(1, 12), (2, 11), (3, 10), (4, 9), (5, 8), (6, 7)]
+minimal_nonzero_stable_charge_support=2
+paired_permutation_dimension=338
+paired_irreducible_dimension=26
+idempotent_localization=invertible_image_is_identity
+generic_p_controls=((5, 2, 240, (1, 2, 3, 4), 20), (13, 5, 4368, (1, 5, 8, 12), 52), (17, 4, 9792, (1, 4, 13, 16), 68), (29, 12, 48720, (1, 12, 17, 28), 116))
+semantic_sha256=0017e80fd7a3793e2712d7359ce9cba371a9993584db1708db5b9a93af0963e2
+all_exact_controls=PASS
