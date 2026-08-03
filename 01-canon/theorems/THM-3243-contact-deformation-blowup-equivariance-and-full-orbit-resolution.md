@@ -2,7 +2,7 @@
 id: THM-3243
 title: "Contact-deformation blowup equivariance and full-orbit resolution"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   An affine automorphism lifts over the blowup at one marked point exactly
   when it fixes that point.  Hence the Singer action on the F13 contact
   deformation plane lifts over the delayed-contact origin, but the full
@@ -22,7 +22,11 @@ audit: >
   stabilizers; and replays the order-168 Singer, order-14 projective, and
   order-12 radial factors together with the 169-class contact chart.
   Normal and optimized runs byte-match the stored transcript and
-  LF-normalized hashes below.  Independent hostile audit is pending.
+  LF-normalized hashes below.  An independent hostile audit rederived the
+  universal-property lifting criterion, full-centre ideal invariance,
+  rational exceptional boundary, both Heisenberg orbit stabilizers, the
+  AGL flag stabilizer, Singer order split, and the exact-address orbit-spectrum
+  obstruction, and found no defect.
 depends_on:
   - THM-3234-singer-owner-compactification-and-pointed-heisenberg-carrier-gate
   - THM-3240-exact-address-heisenberg-clutch-on-carrier-imbalance
@@ -39,7 +43,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3243 -- contact-deformation blowup equivariance and full-orbit resolution
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3241 identifies the order-two contact-deformation slice over `F_13`
 with an affine plane and makes its zero class the delayed-contact point.
