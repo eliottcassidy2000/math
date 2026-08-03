@@ -2,7 +2,7 @@
 id: THM-3249
 title: "Cross-support upset atlas local sections and no constant gauge"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.  The fixed
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The fixed
   twenty-two lawful upset templates of THM-3238 have strictly positive
   unique-reset sections on both complete support-(1,2), bank-I2 and
   support-(1,3), bank-I2 physical selector faces.  On the 239-state small
@@ -24,8 +24,11 @@ audit: >
   THM-3238 weights, all 52 small-face covering pairs, the exact 24-pair
   intersection with promoted THM-3244, the small-face two-state blend clutch,
   and every coordinate of the nineteen-state Farkas mixture using rational
-  arithmetic.  Normal and optimized runs byte-match the stored transcript;
-  independent proof and replay audit are pending.
+  arithmetic.  An independent cache-free reconstruction rederived the two
+  sharp clutch intervals, all 52 and 31 facewise covering pairs and their
+  24-pair intersection, and all nineteen Farkas rows; it found positive
+  expectation in all twenty-two coordinates.  Normal and optimized runs
+  byte-match the stored transcript and the declared LF hashes.
 depends_on:
   - THM-3127-partition-refinement-strassen-upset-dual-and-filter-response
   - THM-3238-complete-physical-product-gamma-bank-unique-reset-stitch
@@ -43,7 +46,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3249 -- cross-support upset atlas local sections and no constant gauge
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3238 closes one complete physical product-Gamma face with twenty-two
 lawful coarsening-upset charts.  Transporting an atlas and transporting one
