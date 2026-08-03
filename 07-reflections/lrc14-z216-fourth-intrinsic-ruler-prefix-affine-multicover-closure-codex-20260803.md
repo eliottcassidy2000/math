@@ -1,7 +1,9 @@
 # LRC(14) `z1=216`: fourth ruler prefix and affine multicover closure
 
-**Status: FINITE-EXACT DIRECT PROGRESS, PROJECTED-ATLAS SCOPE ONLY.**  After
-THM-3313, the next deterministic intrinsic-cost prefix is the
+**Status: PROVED + VERIFIED-EXACT DIRECT PROGRESS, PROJECTED-ATLAS SCOPE
+ONLY; canonical statement
+[THM-3320](../01-canon/theorems/THM-3320-projected-k3-z216-fourth-ruler-prefix-and-affine-multicover-closure.md).**
+After THM-3313, the next deterministic intrinsic-cost prefix is the
 `gcd24/L76440` singleton followed by the complete three-row
 `gcd24/L30576` family.  All four labelled projected `k=3,z1=216` necessary
 upper screens are empty.  The implied ledger change is
@@ -24,7 +26,6 @@ Companions:
 - [`lrc14_j7_k3_z216_fourth_intrinsic_ruler_cost_prefix_affine_multicover_closure_scout_20260803.py`](../04-computation/lrc14_j7_k3_z216_fourth_intrinsic_ruler_cost_prefix_affine_multicover_closure_scout_20260803.py);
 - its [frozen exact output](../05-knowledge/results/lrc14_j7_k3_z216_fourth_intrinsic_ruler_cost_prefix_affine_multicover_closure_scout_20260803.out).
 
-No maintained navigation, ledger, theorem-ID, or canon file is changed here.
 The result remains inside a necessary projected quotient and restores no
 physical speed entry, endpoint origin, owner, phase, current, arbitrary
 `k<=1`, rung, or LRC(14) conclusion.

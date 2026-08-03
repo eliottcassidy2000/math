@@ -1,7 +1,9 @@
 # Tournament switching coronals: second moments, deletion Gram, and order join
 
 **Status: PROVED (EXACT ALGEBRA) + VERIFIED-EXACT IN THE STATED FINITE
-UNIVERSES.**  This note extends
+UNIVERSES; canonical statement
+[THM-3322](../01-canon/theorems/THM-3322-tournament-switching-second-moment-deletion-gram-and-order-join-law.md).**
+This note extends
 [THM-3315 -- tournament cut-switching centered-coronal walk
 compiler](../01-canon/theorems/THM-3315-tournament-cut-switching-centered-coronal-walk-compiler.md)
 in two directions:

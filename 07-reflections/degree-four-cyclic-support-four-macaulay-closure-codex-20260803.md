@@ -1,9 +1,11 @@
 # The Hesse moment kernel closes support four in the degree-four cyclic eigenspace
 
 **Status:** PROVED algebraic mixed-moment formula + FINITE-EXACT projective
-support-`<=4` exclusion, pending canonical audit.  Support five remains OPEN.
-This note does not prove `FC(3)`, does not treat non-eigenvectors, and does not
-promote itself into canon.
+support-`<=4` exclusion, pending independent immutable audit; canonical
+statement
+[THM-3321](../01-canon/theorems/THM-3321-hesse-moment-kernel-and-cyclic-quartic-support-four-exclusion.md).
+Support five remains OPEN.  This note does not prove `FC(3)` and does not
+treat non-eigenvectors.
 
 The exact artifact is
 [`degree_four_support4_macaulay_scout_20260803.py`](../04-computation/degree_four_support4_macaulay_scout_20260803.py),
