@@ -20,8 +20,11 @@ audit: >
   Vandermonde triples, 4,018 direct nonzero order-p coefficient jets, 68
   Frobenius-character cases, six full divided carries, coordinate weights,
   and the nonconstant-unit and higher-jet hostiles.  Two independent hostile
-  proof audits accepted every algebraic sign and scope boundary;
-  normal/-O/stored replay passes.
+  proof audits accepted every algebraic sign and scope boundary.  A second
+  implementation pins the primary script and output, rebuilds the laws from
+  raw truncated series, checks nonlinear coordinate cancellation, 300
+  quadratic-extension Frobenius eigenvectors, 492 direct order-p controls,
+  and 24 raw full carries.  Both normal/-O/stored replays pass byte-for-byte.
 depends_on:
   - THM-3215-arbitrary-degree-root-jet-hamiltonian-affine-dihedral-holonomy-and-p-fold-carry
 related:
@@ -34,6 +37,10 @@ script: 04-computation/root_four_jet_schwarzian_heisenberg_thm3220.py
 output: 05-knowledge/results/root_four_jet_schwarzian_heisenberg_thm3220.out
 script_sha256: f399b6e86b639e9b27859dcbc9d2fcc6b44f4fb24aae51706e205a39e38c9e98
 output_sha256: 1255b5ceebdf2d6b26ee92d9cbc3901e686728ba7ee79fdf6dbe7be52934e743
+independent_script: 04-computation/root_four_jet_schwarzian_heisenberg_independent_audit_thm3220.py
+independent_output: 05-knowledge/results/root_four_jet_schwarzian_heisenberg_independent_audit_thm3220.out
+independent_script_sha256: b3b4044295ef875b00eaa8b06569db2f074b17dfe9e1654c320db519e130c3f0
+independent_output_sha256: d2365ee5cd397f530c5757d6bcd83ff323284cd947d4eaa069cfe71d824739fd
 hash_basis: LF-normalized bytes
 ---
 
@@ -488,6 +495,8 @@ Run
 ```text
 python 04-computation/root_four_jet_schwarzian_heisenberg_thm3220.py
 python -O 04-computation/root_four_jet_schwarzian_heisenberg_thm3220.py
+python 04-computation/root_four_jet_schwarzian_heisenberg_independent_audit_thm3220.py
+python -O 04-computation/root_four_jet_schwarzian_heisenberg_independent_audit_thm3220.py
 ```
 
 and compare LF-normalized bytes with the declared output.  The companion is
@@ -508,4 +517,14 @@ honest.  A fresh immutable normal replay byte-matches the stored transcript;
 the candidate's recorded normal and optimized replays and LF hashes remain
 unchanged.
 
-QED.
+The independent companion imports no primary implementation.  Its generic
+raw-series engine separately derives composition and inversion; checks `216`
+strict triangles and `72` genuinely nonlinear source-coordinate changes;
+reconstructs the characteristic-two group, twisted cubic, oriented
+discriminant, and positive-Witt sign; computes the deck action and Frobenius
+eigencharacter in `300` explicit quadratic algebras; and replays `492`
+nonzero order-`p` jets and `24` full first carries.  It pins the immutable
+hashes of the primary script and output, and its normal, optimized, and stored
+outputs agree byte-for-byte.
+
+**QED.**
