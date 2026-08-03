@@ -711,6 +711,29 @@ lost `Gamma(3)`/Farey coordinate on a common physical carrier and then vary
 the root, endpoint jet, and pointed `V4` origin independently.  Until then
 `C2*C3` is a search grammar, not a common action.
 
+### F. Sequence structure has four independent axes
+
+The LRC, factorial, and tournament results expose the same procedural error
+on three different objects.  Efficient evaluation, recurrence class,
+zero/extremal geometry, and finite-head behavior are not interchangeable:
+
+| lane | exact evaluator / bulk law | recurrence boundary | separate hostile geometry |
+|---|---|---|---|
+| factorial exterior visibility | normalized continuant and differential OGF | order-three P-recursive law, not a coefficient-degree PRS theorem | THM-3210 is visible/invisible/invisible/visible on one rational ray |
+| reflected LRC channel | residue quadratics plus Bernoulli-cubic limit | cleared numerator quasipolynomial; normalized mass generically not C-finite | equality tails approach `1/105` from above; one finite head lies below it |
+| cyclic tournament diagonal | one-product moving jet and smooth diagonal | twice-normalized sequence not C-finite; P-recursiveness open | scalar `H` loses the jet; prime indices add new denominators for `d<=3` |
+
+The reusable audit is
+
+```text
+state/evaluator | recurrence class | zero or extremal geometry | finite head.
+```
+
+Only a theorem connecting two columns permits transport.  This is why the
+factorial recurrence does not give monotone visibility, the LRC limit does
+not replace a head certificate, and the tournament fast transform does not
+imply a fixed closed form.
+
 ## Specific niche problems considered
 
 | niche problem | current status | decisive evidence | next move |
@@ -720,7 +743,7 @@ the root, endpoint jet, and pointed `V4` origin independently.  Until then
 | Projected `k=3` descent | **PROVED + VERIFIED-EXACT** | THM-3113/3114/3139/3174 lower the cap through `z1=223` | continue the exact next wall without inferring physical-cover counts |
 | Residual quadratic factorial resonance | **CLOSED through `r=2403`** | [THM-3180](../01-canon/theorems/THM-3180-six-exit-factorial-newton-euclidean-closure-through-r2198.md) closes `79` six-exit rows and [THM-3201](../01-canon/theorems/THM-3201-seven-exit-factorial-newton-euclidean-closure-through-r2403.md) closes `50` seven-exit rows by independent multi-prime flags | begin at `r=2404,d=2406`; change observer only on an actual survivor |
 | Factorial exterior visibility sequence | **PROVED + INDEPENDENTLY AUDITED** | [THM-3186](../01-canon/theorems/THM-3186-full-exterior-continuant-path-convolution-and-cancellation-wall.md) gives the differential OGF and order-three law; [THM-3210](../01-canon/theorems/THM-3210-factorial-exterior-double-cancellation-ray-and-two-step-invisible-window.md) gives a rational two-step invisible ray and exact return at length five | identify the missing Schur/connection sidecar before transferring the law to coefficient-degree PRS depth; never infer monotone visibility from graph distance |
-| Differential owner for planar JC | **PROVED gate / JC OPEN** | THM-3172 freezes polynomial owners and finds the cubic one-jet unit | build `B_1` for an actual quartic/heptic source lift with all conductors retained |
+| Differential owner for planar JC | **PROVED gate + centered heptic exclusion / JC OPEN** | THM-3172 freezes polynomial owners; [THM-3212](../01-canon/theorems/THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch.md) gives five forced Morse points for every centered heptic lift and the exact off-center residue clutch | audit `(B,C_0,E_0)=(1,0,x)` globally away from `ST`, then apply `B_1` and remaining fluxes only to a survivor |
 | Tournament closed forms | **PROVED join law + fast cyclic boundary** | [THM-3181](../01-canon/theorems/THM-3181-tournament-half-grid-reciprocity-and-repeated-join-recurrence.md) gives the minimal triangular recurrence; [THM-3213](../01-canon/theorems/THM-3213-tournament-normalized-cyclic-diagonal-and-fast-moving-jet-transform.md) gives the one-product jet, exact diagonal asymptotic, all-`d` twice-normalized non-C-finiteness, and new-prime obstruction for `d<=3` | test singly normalized `d>=4` and P-recursiveness; retain the full jet for cyclic consumers |
 | Common `C2*C3` carrier for quartic lifts and tournament substitution | **PROVED CONGRUENCE SHADOW / FAITHFUL LIFT OPEN** | THM-3141 identifies `PSL_2(F3)`, first relation `(SR)^3`, and the separately forgotten cyclic root | add rooted triple, `Gamma(3)`/Farey coordinate, and a common physical atom |
 | Positive Young selector after signed forest lift | **PROVED FINITE CHAMBER / GLOBAL OPEN** | THM-3137 gives `24` support-two laws through degree nine, then exact degree-ten and cross-support Farkas death | classify mixed-depth persistence without calling it an original-response decomposition |
@@ -752,11 +775,14 @@ the root, endpoint jet, and pointed `V4` origin independently.  Until then
 
 ### Wildcard -- planar Jacobian
 
-1. Build THM-3172's `B_1` for an actual quartic or heptic source-lift candidate,
-   retaining conductor/Jelonek denominators; print a certified unit,
-   idempotent, or surviving owner order.
-2. Apply the transverse `A_n` divisibility recurrence only after a genuine
-   monic polynomial-Keller source lift; abstract Faber passports do not define
+1. Treat the centered THM-3123 lift as closed by THM-3212.  For the off-center
+   control `(B,C_0,E_0)=(1,0,x)`, compute the full critical resultant away from
+   `g=ST` and audit the changed Faber coordinates and remaining fluxes.
+2. Only if that control survives, build THM-3172's `B_1` with every
+   conductor/Jelonek denominator retained; print a certified unit, idempotent,
+   or surviving owner order.
+3. Apply the transverse `A_n` divisibility recurrence only after a genuine
+   monic polynomial-Keller source lift; an abstract response does not define
    its inverse minimal polynomial.
 
 ### Tournament / closed-form lane

@@ -2,12 +2,13 @@
 
 **Status:** CURRENT. **Role/Use:** compact defaults from repeated successes and failures; scan triggers and evidence. Each card states applicability, action, mechanism, and counterindication; new cards require distinct-thread evidence or a severe repaired failure.
 
-## Classify finite observers before deciding
+## Separate observer type, recurrence class, and finite head
 
-**Trigger/action:** label each finite observer inverse, refuter, or address;
-state its gate and sidecar. **Caution:** a unit or empty degree intersection
-only refutes; nonempty bars, first-owner entry, scalar values, unlabelled
-floor moments lose data. **Evidence:** THM-3171/3172/3180/3181/3183/3200/3201/3202.
+**Trigger/action:** label an observer inverse/refuter/address; for a sequence,
+record evaluator, C-finite/P-recursive class, zero geometry, and bulk/residue/head
+separately. **Counterindication:** recurrences need not make zeros monotone;
+limits need not control heads; normalization can change C-finiteness. **Evidence:**
+THM-3172/3186/3210, THM-3200/3211, and THM-3202/3213.
 
 ## Peel the distinguished prime, then force a small torsion collision
 
