@@ -2,7 +2,7 @@
 id: THM-3189
 title: "Even-degree response nonfactorization and minimal signed circuit"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On THM-3184's complete 1,820-state depth-seven bank, none of its ten
   selected degree-N+2 upset rows is a linear or affine function of the
   complete degree-N partition response.  Exact ranks are certified modulo
@@ -18,7 +18,11 @@ audit: >
   verifies the four maximal zero-mass ranks, all ten linear and affine rank
   jumps, response injectivity at each source degree, and the exact primitive
   twelve-state circuit including every proper deletion.  Normal, optimized,
-  and stored replay agree exactly.  An independent immutable audit is pending.
+  and stored replay agree exactly.  An independent immutable audit rederived
+  the modular-to-rational rank bounds, affine factorization criterion,
+  probability split, target separation, and circuit minimality; replayed the
+  full 1,820-state normal computation; matched both hashes; and accepted the
+  nonlinear/Markov scope boundary.
 depends_on:
   - THM-3127-partition-refinement-strassen-upset-dual-and-filter-response
   - THM-3184-depth-seven-degree-fourteen-farkas-death
@@ -34,7 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3189 -- even-degree response nonfactorization and minimal signed circuit
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3184's separator uses degrees `8,10,12,14`.  A tempting explanation is
 that a single two-step response operator generates each higher-degree facet
