@@ -2,7 +2,7 @@
 id: THM-3188
 title: "Quadratic-character pre-reset holonomy and exterior-flag rigidity"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Before every factorial prime reset, the homogeneous Gauss--Manin plane has
   the exact Legendre-scaled unipotent holonomy
   -chi(Delta)[[1,0],[-1,1]].  Its determinant wedge is fixed, so the complete
@@ -13,8 +13,9 @@ audit: >
   The pure-integer companion proves the closed continuant formula through
   length twelve, exhausts 948 unit/wall parameter triples over seven odd
   primes, and checks 300 exact full-block compound flags.  Normal and
-  optimized replay agree with the stored transcript.  Independent immutable
-  audit is pending.
+  optimized replay agree with the stored transcript.  Two independent
+  immutable audits rederived the continuant, all boundary cases, compound
+  flags, squared return, wall collapse, and scope.
 source: root/multiscale-newton-flag/low-child-flag-extension/2026-08-02
 depends_on:
   - THM-3185-iterated-factorial-frobenius-descent-and-witt-carry-reset-hierarchy
@@ -30,7 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3188 -- quadratic-character pre-reset holonomy and exterior-flag rigidity
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3185 identifies the final transfer in each prime block as a rank-one
 reset.  The invertible tail immediately before that reset is not arbitrary:
