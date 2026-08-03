@@ -1,0 +1,12 @@
+THM-3239 exact universal sixth strict-transform wall
+dependency_pins=THM-3223,THM-3231,THM-3223-script
+input_top_jets=13 row_lengths=13,11,9,7,5,3,1
+direct_moment_controls=7 quotient_and_full_checks=14 PASS
+strict_quotient=-(d-1)^46*H^16*J^6*U^4*W28/DQ
+full_rho6=-(d-1)^70*H^24*J^10*U^4*W13^2*W28/D6
+W28=primitive_degree28_irreducible_mod73_parity1
+DQ_2_power=112 exponents=1,2,3,4,5,6,11,16,27,38,65,92
+D6_2_power=168 exponents=1,2,3,4,7,10,17,24,41,58,99,140
+pell_pivot_exponents=1,2,5,12,29,70 gauge=1,1,3,7,17,41,99,239
+fixed_offset_extension=finite_exception_set_through_row6
+scope=selected_sixth_pivot_and_strict_transform_not_arbitrary_depth
