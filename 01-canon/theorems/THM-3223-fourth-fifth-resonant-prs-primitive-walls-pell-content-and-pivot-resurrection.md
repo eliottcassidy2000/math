@@ -2,7 +2,7 @@
 id: THM-3223
 title: "Fourth/fifth resonant PRS primitive walls, Pell content, and pivot resurrection"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The fourth and fifth fraction-free reciprocal pivots of the universal
   degree-d resonant factorial pair factor into inherited walls and two new
   primitive irreducibles W13,W20 of degrees 13,20.  Both new walls are 1
@@ -12,6 +12,12 @@ status: >
   the following row then vanishes identically, so the resurrection is sharp
   and lasts exactly one row.
 source: root/multiscale-newton-flag/2026-08-02
+audit: >
+  Two independent hostile audits rederived the factor walls, Rabin
+  certificates, fixed-offset quantifiers, Pell/gauge recurrences, p=41 and
+  p=43 reductions, and the whole-row clutch with its following terminal
+  collapse.  Fresh ordinary and optimized replays byte-match the stored
+  transcript and the declared LF-normalized hashes.
 depends_on:
   - THM-3217-universal-resonant-degree-prs-wall-atlas-and-fixed-offset-exception-set
 related:
@@ -26,8 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3223 -- fourth/fifth resonant PRS primitive walls, Pell content, and pivot resurrection
 
-**PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3217 identifies the first three degree-parametric reciprocal rows and
 their fixed-offset exception divisor.  Two questions remained deliberately
