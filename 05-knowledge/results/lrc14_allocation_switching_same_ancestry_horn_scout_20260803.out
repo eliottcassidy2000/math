@@ -1,0 +1,24 @@
+LRC14 SAME-ANCESTRY ALLOCATION-SWITCHING HORN SCOUT
+status=FINITE-EXACT candidate;not-yet-canonical
+dependency_hashes=BEGIN
+f696867c5242e86593de64f3ee7944bf44a3887e7818291ed059c7358f959c1a  04-computation/lrc14_opposite_wing_common_atom_virtual_sector_audit_thm2782.py
+7fbc6bb1ec303ded98eaad6e5d8205eb3d247258ada32b6f9904fc439ebb11fb  04-computation/lrc14_semantic_arm_right_wing_central_digit_thm2782.py
+1e00b6711db0d878fca70047f5f1532518084dbf6928551cd28fe51283fde543  04-computation/lrc14_full_arm_orbit_path_sheet_audit_thm2791.py
+2325aa126dc4a97af4ba4bde0348389bfdfe5720dec6f88792b9a06baa40afd3  05-knowledge/results/lrc14_full_arm_orbit_path_sheet_audit_thm2791.out
+dependency_hashes=END
+universe=rail8;physical_clock=1;sigma=(0, 1, 2, 3, 8, 9, 10, 11, 12);tau=(3, 4, 5, 6, 7, 8, 9, 10, 11);addresses=(3454614, 3454627, 4143978);central_indices=(0, 1, 53028);both_relative_safeties;target_root1;delayed_carry6
+typing=A=source_one_sided;B=pulled_target_one_sided;M=A_intersect_B;R=B_minus_A;M_and_R_are_pushed_to_the_common_target_coordinate_before_cylinder_cut
+implementation_A=full_weighted_one_sided_carriers_plus_direct_set_operations;implementation_B=canonical_carrier_objects_plus_inherited_filter_order;exact_MR_cell_agreement=486/486
+complete_81_label_pattern_histogram=M010_R101:63,M000_R001:9,M000_R101:9
+horn_labels=63=clock1_x_sigma(0, 3, 8, 9, 10, 11, 12)_x_tau(3, 4, 5, 6, 7, 8, 9, 10, 11);allocation_word=R-M-R;B_word=1-1-1
+nonhorn_boundary=sigma1:M000_R001;sigma2:M000_R101;pattern_digest=9fd5090fb89493d07115ee753a0eadeba82d70d0e52663aa11d60c121f4f9d4f
+positive_whole_cylinder=(pieces:1,weight:27581135604,mass:60781651775958960/371293,coefficient:790161473087466480)
+translation_fractions=(R_n0_to_M_nplus:7/371293,M_nplus_to_R_na:28553/28561,R_n0_to_R_na:371196/371293);exact_translation_checks=189/189
+ancestry_wall_counts=(U:34,V:14);common_chamber=(140890500190440, 144190879112280);probes=(142082432180573, 142088047310093, 142004622528653)
+middle_literal_factor_counts=(966606,28534);product=27581135604;path_set_digest=15c804c7cea9f61feab3b641eccdc035d937142b446d1cc14e059210eb1534fd;same_chamber_identity_for_all_three_vertices=yes
+supplied_path=(59162, 26, 56658);active_at_all_three=yes;collision_labels=((5, 6, 12), (5, 6, 12), (5, 6, 12))
+MECHANISM=the_full_target_carrier_B_is_one_positive_three_vertex_address_horn_while_its_disjoint_allocation_decomposition_switches_right_cofiber_to_common_carrier_to_right_cofiber_on_one_literal_rail_ancestry_chamber
+CONNECTION=the_THM2791_tau3_endpoint_chord_acquires_a_genuine_common_middle_vertex_inside_the_THM2806_common_label_bank;the_tau12_target_only_hostile_remains_outside_this_bank
+LOSS=no_endpoint_origin_or_endpoint_current;no_four_state_K4_face;no_factorwise_translation_covariance;no_global_packet_action;no_row_exclusion;no_LRC14
+source_ast=(assert_nodes=0,float_literals=0)
+ALL EXACT CHECKS PASSED
