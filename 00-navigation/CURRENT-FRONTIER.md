@@ -390,7 +390,7 @@ Classify profiles under support operations; study analytic continuation and auto
   fixed-parameter Clifford law. THM-3186 gives P-recursive, linearly evaluable
   tails, but its cancellation wall still blocks the depth staircase. The `p>2m`
   full-flag formula is VERIFIED only; `FC(3)`/`SFC(3)` remain OPEN.
-  THM-3204/3205/3209 open the continuant-gate lane.
+  Continuant gates: THM-3204/3205/3209.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

@@ -38,6 +38,8 @@ related:
 external:
   - "S. O. Ivanov, R. Mikhailov, J. Wu, On nontriviality of homotopy groups of
     spheres, arXiv:1506.00952v1; Homology Homotopy Appl. 18 (2016) 337-344.
+    Full source entry and convention warnings:
+    05-knowledge/reference/CORE-PAPERS-HOMOTOPY.md.
     Section 2 of that paper supplies the presentation of Lambda replayed here;
     its Lemma 3 is strengthened in section 4 below."
   - "A. K. Bousfield, E. B. Curtis, D. M. Kan, D. G. Quillen, D. L. Rector,

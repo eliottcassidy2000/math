@@ -4,8 +4,11 @@
 **Trigger:** an owner request to read Ivanov--Mikhailov--Wu, *On nontriviality
 of homotopy groups of spheres* (arXiv:1506.00952; Homology Homotopy Appl. 18
 (2016) 337--344), and connect it to the repository's frontiers.
-**Outcome:** THM-3204, THM-3205, THM-3209, one new reference file, and one
-candidate META-PATTERNS card.  This reflection records provenance and the
+**Outcome:** THM-3204, THM-3205, THM-3209,
+`05-knowledge/reference/CORE-PAPERS-HOMOTOPY.md`, and one candidate
+META-PATTERNS card.  Both `CORE-PAPERS.md` and `META-PATTERNS.md` are at the
+shared startup byte budget and could not take a pointer or a card; a
+compaction pass on the startup surface should add both.  This reflection records provenance and the
 reasoning that produced the connection, not truth; the theorem files are the
 truth surface.
 

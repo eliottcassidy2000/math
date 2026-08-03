@@ -1,8 +1,11 @@
 # Core papers: homotopy groups of spheres (opened 2026-08-02)
 
-Overflow entry for [`CORE-PAPERS.md`](CORE-PAPERS.md), which is at its bounded
-startup-surface byte budget.  Same contract: what the repository imports, where
-it is consumed, and what the source does **not** establish.
+Overflow entry for [`CORE-PAPERS.md`](CORE-PAPERS.md).  That file is at its
+bounded startup-surface byte budget and could not take even a pointer line, so
+this sits beside it under the deliberately adjacent name.  Same contract: what
+the repository imports, where it is consumed, and what the source does **not**
+establish.  A future compaction pass on the startup surface should add the
+pointer.
 
 ## Ivanov--Mikhailov--Wu — *On nontriviality of homotopy groups of spheres*
 

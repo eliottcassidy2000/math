@@ -37,6 +37,8 @@ related:
 external:
   - "S. O. Ivanov, R. Mikhailov, J. Wu, On nontriviality of homotopy groups of
     spheres, arXiv:1506.00952v1; Homology Homotopy Appl. 18 (2016) 337-344.
+    Full source entry and convention warnings:
+    05-knowledge/reference/CORE-PAPERS-HOMOTOPY.md.
     Its Lemma 3 is the parabolic instance of section 3 below."
 script: 04-computation/parabolic_continuant_single_gate_thm3204.py
 output: 05-knowledge/results/parabolic_continuant_single_gate_thm3204.out
