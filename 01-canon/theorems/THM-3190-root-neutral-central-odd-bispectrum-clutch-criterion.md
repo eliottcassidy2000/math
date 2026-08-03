@@ -2,7 +2,7 @@
 id: THM-3190
 title: "Root-neutral central-odd bispectrum and clutch criterion"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   THM-2312's nonzero cubic word-current vector has exact bidegree
   (root-translation character zero, common-scalar charge one).  It is
   therefore invariant under cyclic root reindexing but changes sign under a
@@ -13,11 +13,14 @@ status: >
   normalization are not constructed here.
 source: root/2026-08-02
 audit: >
-  The integer/exponent companion pins the THM-2312 and THM-3187 exact
-  evidence, enumerates all 132 allowed character pairs and their 66/66 carry
-  split, checks 1,716 root translations, 495 finite scalar phases, and 3,432
-  commuting root/central actions.  Normal/-O/stored replay and an independent
-  immutable audit are pending.
+  An independent hostile audit rederived the root exponent and 66/66 carry
+  split, the common U(1) charge lambda^2 conjugate(lambda)=lambda, the
+  THM-2312 nonzero 132-vector handoff, and the conditional -U_tau clutch
+  identity.  It verified that common-scalar oddness is not called a literal
+  THM-2889 central action before the equivariant-carrier hypotheses.  The
+  integer/exponent companion pins both dependencies and checks 1,716 root
+  translations, 495 scalar phases, and 3,432 commuting bidegrees.  Normal,
+  optimized, and stored outputs agree and the LF hashes match.
 depends_on:
   - THM-2312-sparse-root-bispectrum-positive-word-current
   - THM-3187-central-sign-parity-quotient-and-odd-observable-necessity
@@ -34,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3190 -- root-neutral central-odd bispectrum and clutch criterion
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3187 proves that an odd observable is necessary to see THM-2889's
 quaternionic central sign.  A seemingly unrelated earlier construction
