@@ -1,0 +1,60 @@
+jacobian_divergence_family_agent_exact
+status=GENERIC-SYMBOLIC + FINITE-EXACT HOSTILE BANK
+python=3.13.14
+sympy=1.14.0
+assertion_nodes=0
+float_literals=0
+convention=D_P(f)=P_x*f_z-P_z*f_x=Jac(P,f)
+generic_bezout=A*P_x+B*P_z=1
+generic_mu=lambda*r*(r+1)*x^(r-2)*z
+generic_local_correction=r*z/x-lambda^(-1)*x^(-r)
+generic_local_mate=x^(1-r)/(lambda*(r-1))
+annihilator_theta=(P^(r-1));annihilator_mu=(P^r)
+torsion_bridge=P*mu=-(r-1)*theta
+generic_symbolic_checks=PASS
+finite_identity_bank_begin
+r=2;lambda=1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=1;deck_factor_degrees=(1,)
+r=2;lambda=-1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=1;deck_factor_degrees=(1,)
+r=2;lambda=2;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=1;deck_factor_degrees=(1,)
+r=2;lambda=-3;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=1;deck_factor_degrees=(1,)
+r=3;lambda=1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=2;deck_factor_degrees=(2,)
+r=3;lambda=-1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=2;deck_factor_degrees=(2,)
+r=3;lambda=2;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=2;deck_factor_degrees=(2,)
+r=3;lambda=-3;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=2;deck_factor_degrees=(2,)
+r=4;lambda=1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=3;deck_factor_degrees=(3,)
+r=4;lambda=-1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=3;deck_factor_degrees=(3,)
+r=4;lambda=2;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=3;deck_factor_degrees=(3,)
+r=4;lambda=-3;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=3;deck_factor_degrees=(3,)
+r=5;lambda=1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=4;deck_factor_degrees=(4,)
+r=5;lambda=-1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=4;deck_factor_degrees=(4,)
+r=5;lambda=2;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=4;deck_factor_degrees=(4,)
+r=5;lambda=-3;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=4;deck_factor_degrees=(4,)
+r=6;lambda=1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=5;deck_factor_degrees=(5,)
+r=6;lambda=-1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=5;deck_factor_degrees=(5,)
+r=6;lambda=2;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=5;deck_factor_degrees=(5,)
+r=6;lambda=-3;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=5;deck_factor_degrees=(5,)
+r=7;lambda=1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=6;deck_factor_degrees=(6,)
+r=7;lambda=-1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=6;deck_factor_degrees=(6,)
+r=7;lambda=2;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=6;deck_factor_degrees=(6,)
+r=7;lambda=-3;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=6;deck_factor_degrees=(6,)
+r=8;lambda=1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=7;deck_factor_degrees=(7,)
+r=8;lambda=-1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=7;deck_factor_degrees=(7,)
+r=8;lambda=2;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=7;deck_factor_degrees=(7,)
+r=8;lambda=-3;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=7;deck_factor_degrees=(7,)
+r=9;lambda=1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=8;deck_factor_degrees=(8,)
+r=9;lambda=-1;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=8;deck_factor_degrees=(8,)
+r=9;lambda=2;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=8;deck_factor_degrees=(8,)
+r=9;lambda=-3;identities=PASS;theta_boundary_orders=(-1, 0);mu_boundary_orders=(-1, 0);deck_degree=8;deck_factor_degrees=(8,)
+finite_identity_bank_end
+bounded_rank_bank_begin
+r=2;matrix=(38, 35);rank=31;rank_with_mu=32;rank_with_image_control=31
+r=3;matrix=(53, 45);rank=42;rank_with_mu=43;rank_with_image_control=42
+r=4;matrix=(66, 55);rank=52;rank_with_mu=53;rank_with_image_control=52
+r=5;matrix=(80, 65);rank=62;rank_with_mu=63;rank_with_image_control=62
+r=6;matrix=(94, 75);rank=72;rank_with_mu=73;rank_with_image_control=72
+r=7;matrix=(108, 85);rank=82;rank_with_mu=83;rank_with_image_control=82
+r=8;matrix=(122, 95);rank=92;rank_with_mu=93;rank_with_image_control=92
+bounded_rank_bank_end
+semantic_sha256=e4967a77d8de10ac9bb54367846170185e3606f37cd3396d3175e3da7690fcad
+script_sha256_lf=fc95ebad308c9d953c5a331a6c545c273907665cbc24bb0b32639775492f3731
+PASS

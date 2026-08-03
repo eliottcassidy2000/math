@@ -38,7 +38,7 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
 
 - **PROVED:** [THM-2928](../01-canon/theorems/THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff.md)/2941: literal zero/one/two/three-drift sectors are empty; `k=2,3` are finite.
 - **Orthogonal routes.** THM-1017 is HYP-6820; THM-2047/2050 keep phase/exit; THM-731/2048 prune; THM-1290 ends at `55`; HYP-8900 nonuniform.
-- **FINITE-EXACT micro-staircase:** independent encodings prove [HYP-1823](../05-knowledge/hypotheses/HYP-1823-lrc-scalar-gauge-quotient.md) at `n=14`: exactly the `14` scalar ramps block every cell; normalized `n=15` is UNSAT. Speed/residue, endpoints/gcd, physical cover and LRC(14) remain open.
+- **PROVED micro-staircase:** THM-3316 closes every prime and THM-3317 proves all-`n` sparse fragility; the physical lift remains open.
 - **Foreign-base phase.** The FINITE-EXACT `C_221` stalk has a typed
   `4/17 <-> 13/17` two-cycle, but no exclusive source, lawful return, or
   semantic endpoint current.
@@ -377,10 +377,9 @@ Classify profiles under support operations; study analytic continuation and auto
   of relative/total degree `2/72`, with fibrewise conjugate nonstationary directions. A **FINITE-EXACT**
   [subresultant sidecar](../07-reflections/jc-critical-inverse-cover-cofactor-jacobian-probe-agent-20260803.md)
   gives a two-pivot inverse graph and mate-integrability class on two controls.
-  THM-3309's pointed deck separates conjugate branches and has unit inverse
-  different, but `P_x=P_z=0`; the mate pipeline fails before `mu(P)` exists.
-  No `A_i` root choice over the base follows; residual degree 119, Keller mate/inverse cover,
-  `JC(2)` and `DC(2)` remain OPEN.
+  THM-3309's pointed deck has unit inverse different, but `P_x=P_z=0`, so its mate pipeline fails before `mu(P)` exists.
+  THM-3318 computes the exact `(P^r,P^(r-1))` torsion ladder for a separate excluded family, not a JC case.
+  No base root choice follows; residual degree 119, Keller mate/inverse cover, `JC(2)` and `DC(2)` remain OPEN.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
   `2201<=d<=2400` and all `35` residuals in `2401<=d<=2500` close by matching

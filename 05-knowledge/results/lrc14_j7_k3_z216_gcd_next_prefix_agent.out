@@ -1,0 +1,16 @@
+LRC14 projected-k3 z216 gcd next-prefix exact probe
+atlas=rows:480;wall:447;order:33;row_sha256:53db9e1d3df2cf2b0398847682d909da81705e43a53ae2553d102fd152337649;dual_parser_match:PASS
+current_queue=live:357;families:33;head:((1729728, 1, 72, 72072, (157,)), (2121504, 3, 24, 25872, (53, 293, 357)), (2293200, 1, 24, 76440, (141,)), (2629536, 3, 24, 30576, (133, 219, 359)))
+selection=families:2;rows:4;indices:(157, 53, 293, 357);keys:((72, 72072), (24, 25872));cost:3851232;derived_from_complete_cost_rank:PASS;strict_boundary:PASS
+screen=states:423;crude:289;status:134;residual:0;exact_Farkas_rechecked:134;canonical_sha256:17bd632e09975d5a84d4e5f8667023eb9c1b9de21c8ae16f639612ff3d380e74
+taxonomy=coordinate_union,zero_reduced_union,two_fan,two_threshold_overlap,weighted_core:(128, 2, 3, 1, 0);certificate_counts:(143, 2, 3, 1);taxonomy_sha256:200685294acf28f60a63327b743dd4469e2967300addd2370a7f5ba5f8840293
+by_row=index,screen,direct_inherited,taxonomy:((157, (111, 93, 18, 0), (0, 18), (17, 0, 0, 1, 0)), (53, (27, 17, 10, 0), (0, 10), (10, 0, 0, 0, 0)), (293, (14, 9, 5, 0), (0, 5), (5, 0, 0, 0, 0)), (357, (271, 170, 101, 0), (0, 101), (96, 2, 3, 0, 0)))
+two_threshold_overlap_record:((157, (99, 616, 1001, 8008), 9009, 8, (1365, 1287, 1287, 1287), (2, 3, 4, 8), ((0, 99), (1, 1338), (2, 2382), (3, 1992), (4, 2874), (5, 324)), (2, 8, 3, 8, 8, 8, 8, 8, 3, 8, 4, 8, 8, 8, 8, 8), ((3, 4, 5, (0, 2), (10,), 1, 5190, 3198, 2652, 546, 5226, 5736, 510),)),)
+overlap_lemma=if_low_tail_statuses_are_nonempty_and_every_high_tail_status_outside_coordinate_union_S_has_at_least_1+e_bits_then_total_incidence_ge_Tlow+e*max(0,Thigh-sum_S_mj)
+hostile_controls=index,screen,direct,inherited,quotient,mask_sha256:((64, (115, 50, 57, 8), 0, 57, ((8, 8),), '098c78ce3def914ca1c0ad26458558898fe624040222f429e6163b9a8e9855c4'), (238, (1035, 237, 683, 115), 0, 683, ((8, 115),), 'f7db818098c70097349459e472e3da4a70daf21627d5f8158b2dc4963ff7210a'), (370, (354, 213, 122, 19), 0, 122, ((8, 19),), '4c383892c25798129ad19799bee95996d78c3bb7506501ab9ea0f9f34662d05d'));negative_alpha_mutations_rejected:4
+consequence=ledger:373161-4=373157;z216_wall:357-4=353;remaining_families:31;next_head:((2293200, 1, 24, 76440, (141,)), (2629536, 3, 24, 30576, (133, 219, 359)))
+direction=empty_exact_necessary_upper_screen_excludes_each_selected_projected_wall_row;no_terminal_needed;no_converse_or_physical_lift
+scope=projected_k3_z216_necessary_atlas_only;no_arbitrary_k_le_1_rung_endpoint_owner_phase_current_physical_cover_or_LRC14_claim
+truth_gates=assert_nodes:0;float_literals:0
+semantic_sha256=45a88091b7a1d6963807c81cde810ded1b3d0dc14f2fdc468dba6669295a5ef2
+all_exact_controls=PASS

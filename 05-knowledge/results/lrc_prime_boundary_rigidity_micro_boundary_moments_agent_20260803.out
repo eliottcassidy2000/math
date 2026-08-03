@@ -1,0 +1,10 @@
+Prime right-boundary micro-staircase rigidity audit
+scope=PROVED_elementary_theorem_plus_FINITE-EXACT_controls;not_LRC
+right_boundary_pattern_cases=3196;status=PASS
+normalized_exhaustive_rows=((3, 3, 1, 54), (5, 125, 1, 4977), (7, 16807, 1, 788065))
+constructive_dense_rows=((11, 546, 32765, 1, 9), (13, 1058, 69096, 1, 11), (17, 1058, 68811, 1, 15), (19, 1058, 77180, 1, 17))
+scalar_gauge_candidate_equivalences=5780507;status=PASS
+critical_support_moment_audit=primes=23,zero_sum_constants=1128,maximum_root_multiplicity=1;status=PASS
+composite_hostile=n14_(0,1,0^11);boundary_covered=196/196;prime_field_step_is_essential
+source_lf_sha256=774288510f30ff36cc0b2f863f0f9d3af809c0ff958d8fc035b311ff7dea5cd8
+ALL_CHECKS_PASSED

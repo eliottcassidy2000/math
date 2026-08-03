@@ -1,0 +1,31 @@
+n=13 prime-unit orbit micro-staircase rigidity audit
+scope=FINITE-EXACT residue/open-cell model; not LRC
+python=3.13.14 python_sat=1.9.dev5
+script_lf_sha256=bb82843db8a43f655993b99dad0cf69e420249269ed954487385dcf3276d024e
+breakpoints=599 atomic_open_intervals=598 distinct_patterns=598 full_candidates=7774
+open_cell_samples=one_third,two_thirds agree_on_every_interval
+shift_zero=universally_blocked
+reflection=(s,b)->(-s,12-b); representative_shifts=(1,2,3,4,5,6)
+residue_encoding=4_bits+equality_atoms_iff variables=204 base_clauses=816 representative_covers=3588
+binary_domain_and_equality_truth_tables=PASS
+gauge=v_i-v_1*i; prime_unit_scaling=v->c*v reindexes_nonzero_shifts
+orbit_branches=first_nonzero_coordinate_2_through_12,value_1
+branch_first_nonzero=2;dimacs_sha256=7ef07afa5e758cbb6a5a17ba245549ecc0239d2994e091cee75cc1cbb09fdca0
+branch_first_nonzero=3;dimacs_sha256=dfaaa8c8f76e69e63aaf33245bd5aeaac703dc37ff61ac2b505b0c19efc7276c
+branch_first_nonzero=4;dimacs_sha256=879c4533d548bf9d9a59a5167c40410bdcfb59700d48ca121474233b46bb2481
+branch_first_nonzero=5;dimacs_sha256=817dabbc7ae4a9c273f7612b4dc1e1aabf3c0b63b296abe6605be010c4325ca7
+branch_first_nonzero=6;dimacs_sha256=a178e78e1c9370f26645faf03203a9bcbc152d2a26b2f104f28c949824e96b39
+branch_first_nonzero=7;dimacs_sha256=e9d4e366afbe74d2fd1603454fda9566e937fa9c6b6564257ae71b6cb84fd9b4
+branch_first_nonzero=8;dimacs_sha256=b67fe8cc3f9889b45d2a318c5d9b211ebb76b06db222771e2b80792760cc2ae4
+branch_first_nonzero=9;dimacs_sha256=aa511d0252dad13bdcaf4044a636599739f92f429996631261ed5036b3b9214a
+branch_first_nonzero=10;dimacs_sha256=17a03ec5019550aa7b2933bc5293350bdc738a74865ff8fb1bf02fe5debad21f
+branch_first_nonzero=11;dimacs_sha256=33cc46c736d871009f839a899eec47809d121bfb873ec21743f638c03f78586a
+branch_first_nonzero=12;dimacs_sha256=d26f2985735302ac7907d10622b6a2d9faff9d89b63f28cb4fe20b765a9e22d1
+branch_digest_bank_sha256=1b8b514d2eb7d6375cd75516e6d279d791daa598cd15a49c2a4098b85d2ce6e7
+cadical195_budget_per_branch=250000;unsat_first_nonzero_coordinates=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+maplesat_budget_per_branch=250000;unsat_first_nonzero_coordinates=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+positive_control=13_of_13_scalar_ramps_block_all_7774_candidates
+hostile_control=(0,1,0,0,0,0,0,0,0,0,0,0);misses=242;first_miss=shift_1_cell_311_[27/52,61/117)
+boundary_affine_cover_support_1_scanned=132;survivors=0;support_2_scanned=7920;survivors=0
+classification=exactly_13_scalar_ramps;normalized_nonzero=UNSAT
+ALL_CHECKS_PASSED

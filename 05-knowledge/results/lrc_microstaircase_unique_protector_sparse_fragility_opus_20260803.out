@@ -1,0 +1,15 @@
+Micro-staircase unique-protector and sparse-fragility audit
+scope=PROVED_elementary_lemma_plus_FINITE-EXACT_controls;not_LRC
+explicit_singleton_bank=n3..30:PASS
+singleton_rows=(n,patterns,min_per_coordinate,max_per_coordinate)
+((3, 6, 2, 2), (4, 16, 2, 4), (5, 30, 2, 6), (6, 60, 4, 10), (7, 84, 4, 12), (8, 144, 4, 20), (9, 198, 6, 24), (10, 280, 6, 30), (11, 352, 8, 34), (12, 504, 12, 50), (13, 598, 4, 52), (14, 812, 8, 58), (15, 960, 12, 64), (16, 1152, 16, 78), (17, 1360, 16, 86), (18, 1728, 22, 112), (19, 1938, 12, 120), (20, 2400, 18, 146), (21, 2688, 16, 158), (22, 3080, 20, 170), (23, 3450, 20, 180), (24, 4128, 28, 216), (25, 4500, 16, 222), (26, 5200, 26, 222), (27, 5724, 24, 240), (28, 6440, 36, 274), (29, 7018, 24, 290), (30, 8100, 48, 338))
+congruence_cardinality_cases=71978;status=PASS
+exhaustive_normalized_consequence_n3..8=((3, 2), (4, 6), (5, 60), (6, 164), (7, 2550), (8, 5082))
+normalized_n=13;residue_weight_multiplicities=((2, 12),);certified_nonzero_classes=1501621044;all_nonzero_classes=1792160394036
+normalized_n=14;residue_weight_multiplicities=((2, 12), (7, 1));certified_nonzero_classes=2970296364;all_nonzero_classes=56693912375295
+normalized_n=15;residue_weight_multiplicities=((2, 8), (3, 4), (5, 2));certified_nonzero_classes=7588647950;all_nonzero_classes=1946195068359374
+prime_critical_layer=p7..97:PASS;prime_cases=22;max_distinct_roots=2;max_total_root_multiplicity=2;p13_moment_multisets=0;p13_forced_roots=(7,)
+strictness_hostile=n14_two_halfturns;cost=14;safe_witness=(254, 1, (4, 8, 13, 3, 7, 12, 2, 7, 11, 1, 6, 10, 1));criterion_makes_no_claim
+source_ast=(assert_nodes=0,float_literals=0)
+source_sha256=4ab6544d589f90263ecbeb4fc39b175d9cb788d406de911c76deeb45d87b96f0
+ALL_CHECKS_PASSED
