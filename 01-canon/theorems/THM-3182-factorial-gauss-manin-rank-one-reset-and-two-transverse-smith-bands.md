@@ -1,12 +1,12 @@
 ---
-id: THM-3180
+id: THM-3182
 title: "Factorial Gauss--Manin rank-one reset and two transverse Smith bands"
 status: "RESERVED / UNPROVED EMPTY STUB."
 source: root/multiscale-newton-flag/low-child-flag-extension/2026-08-02
 depends_on: []
 ---
 
-# THM-3180 -- factorial Gauss--Manin rank-one reset and two transverse Smith bands
+# THM-3182 -- factorial Gauss--Manin rank-one reset and two transverse Smith bands
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
