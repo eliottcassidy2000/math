@@ -2,7 +2,7 @@
 id: THM-3220
 title: "Root four-jet Schwarzian--Heisenberg transgression and oriented-discriminant holonomy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Tangent-to-identity four-jets form the exact Heisenberg central extension
   of their abelian three-jet quotient.  At a selected common simple root the
   first coordinate lifts THM-3215's affine shear, the Schwarzian is the
@@ -19,8 +19,9 @@ audit: >
   strict transition triangles, 110 positive-Witt brackets, 4,023 quadratic
   Vandermonde triples, 4,018 direct nonzero order-p coefficient jets, 68
   Frobenius-character cases, six full divided carries, coordinate weights,
-  and the nonconstant-unit and higher-jet hostiles.  Normal/-O/stored replay
-  passes; independent immutable audit is pending.
+  and the nonconstant-unit and higher-jet hostiles.  Two independent hostile
+  proof audits accepted every algebraic sign and scope boundary;
+  normal/-O/stored replay passes.
 depends_on:
   - THM-3215-arbitrary-degree-root-jet-hamiltonian-affine-dihedral-holonomy-and-p-fold-carry
 related:
@@ -38,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3220 -- root four-jet Schwarzian--Heisenberg transgression and oriented-discriminant holonomy
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3215 proves that the selected-simple-root two-jet connection is flat.
 The first noncommutative layer occurs two orders later.  It is not an
@@ -498,4 +499,13 @@ triples, `4,018` direct coefficient-jet order computations, `68` Frobenius
 character cases, six full carries, all displayed coordinate weights, and the
 two sharp hostiles `(39)--(40)`.
 
-**QED (candidate pending independent immutable audit).**
+Two independent hostile audits rederived the outer-left group law, the exact
+THM-2779 dictionary and characteristic-two square form, the Schwarzian and
+covariant fourth coordinate, strict transition transgression, source-change
+weights, every quadratic orientation sign, the Witt sign convention, deck
+character, and divided prime carry.  Both found the carrier/no-selector scope
+honest.  A fresh immutable normal replay byte-matches the stored transcript;
+the candidate's recorded normal and optimized replays and LF hashes remain
+unchanged.
+
+QED.
