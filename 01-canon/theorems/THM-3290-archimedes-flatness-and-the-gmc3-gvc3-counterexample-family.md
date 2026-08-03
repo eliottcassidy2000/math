@@ -30,10 +30,15 @@ audit: >
   the underlying hypergeometric identity to `m=40`, that the vanishing is
   created by the `t`-average and not termwise, and a hostile control showing
   the flatness/degree collision is sharp.  Normal and `-O` replay are
-  byte-identical.  Independent immutable audit is pending.
+  byte-identical.  A concurrent session (boxeph, 2026-08-03) independently
+  verified the same finite instances by full sympy expansion and recorded the
+  two all-`m` statements as open; this theorem proves both, and the two
+  implementations agree on every shared instance.  Independent immutable audit
+  of the proof itself is pending.
 source: death-star-gvc3-counterexample-2026-08-03
 depends_on: []
 related:
+  - 05-knowledge/results/gvc3-delta6-counterexample-verification-boxeph.md
   - THM-2022-gmc2-frobenius-lowest-balanced-face
   - THM-1435-zhao-vc-witness-transport-machinery-and-the-closed-shortcut
   - THM-1490-the-gaussian-moment-counterexample-verified-proved-shortened-and-obstructed

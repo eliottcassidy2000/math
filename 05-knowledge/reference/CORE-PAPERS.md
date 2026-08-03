@@ -548,6 +548,31 @@ new homotopy group, `p=2` statement, or LRC/GMC consequence.
   session; see `05-knowledge/results/tv-fusion-homogenization-lemma-boxeph.md`).
 - **Does not prove:** any AMM 12592 deadline bound; summation vs
   homogenization are different maps and only summation is a Markov kernel.
+- **Repo consumer:** [THM-3291](../../01-canon/theorems/THM-3291-two-block-tv-homogenization-rigidity.md)
+  proves the `n=2` case from a box constraint plus AM-GM and classifies the
+  equality locus; its 62 nontrivial equality points are boxeph's 351 minus the
+  degenerate faces, an exact two-implementation cross-confirmation.
+
+### Zhao's GVC in three variables — the supplied object, and its dictionary
+
+- **Provenance UNRESOLVED — do not cite.**  The three-variable object
+  `rho=t^2+xy`, `A=rho+x^2`, `C=(rho^3-t^2A^2)/x`, `P=AC^2`, `Q=x^2`,
+  `Delta=4d_x d_y+d_t^2` was supplied with the identifier `arXiv:2606.17854`.
+  That identifier resolves to Ajwani--Gajjala--Raman--Ray, *Counterexamples to
+  Wegner's Conjecture for Rectangles* (cs.CG), which contains none of it.  The
+  mathematics is correct; the source is unknown.  Attach no priority claim.
+- **Dictionary (reusable).**  For a nondegenerate quadratic form `rho` with
+  Laplacian `Delta` and `L(f)=(exp(Delta/2)f)(0)`, a degree-`2k` form has
+  `L(f)=Delta^k f/(2^k k!)`.  So a *Generalized Vanishing Conjecture* statement
+  about `Delta^j` in `n` variables **is** a *Gaussian Moments Conjecture*
+  statement in `n` variables; they are not separate lanes.  Zhao's equivalence
+  with the Jacobian Conjecture is for `j=1` only, so no statement about powers
+  of `Delta` touches `JC`, `JC(2)`, or THM-1435's VC-witness bracket.
+- **Repo consumers:** boxeph's FINITE-EXACT instance verification
+  (`05-knowledge/results/gvc3-delta6-counterexample-verification-boxeph.md`)
+  and [THM-3290](../../01-canon/theorems/THM-3290-archimedes-flatness-and-the-gmc3-gvc3-counterexample-family.md),
+  which proves both all-`m` statements that verification left open and
+  generalizes them to an infinite family.
 
 ## Maintenance rule
 
@@ -557,4 +582,3 @@ the first consumer; sharpen **does not prove** and attribution before routing.
 ## External intake
 
 [2026-07-28 owner puzzle bundle — **CITED-ABSTRACT only**](CORE-PAPERS-INTAKE-2026-07-28.md).
-[GMC/TV overflow (2026-08-03)](CORE-PAPERS-GMC-TV.md).

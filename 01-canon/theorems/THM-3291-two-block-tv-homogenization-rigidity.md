@@ -22,11 +22,17 @@ audit: >
   each of the three proof ingredients separately on its own complete grid, and
   carries a hostile control showing that doubling the multiplicative
   correction breaks the bound at 11,520 points.  Normal and `-O` replay are
-  byte-identical.  Independent immutable audit is pending.
+  byte-identical.  A concurrent session (boxeph, 2026-08-03) reached the same
+  closed form and equality classification by a different route (sign-resolved
+  symbolic certificates plus a ragged-denominator hostile scan); its 351-point
+  equality set is exactly this file's 62 nontrivial points together with the
+  degenerate faces, so the two classifications cross-confirm.  Independent
+  immutable audit is pending.
 source: death-star-gvc3-counterexample-2026-08-03
 depends_on: []
 related:
   - THM-3290-archimedes-flatness-and-the-gmc3-gvc3-counterexample-family
+  - 05-knowledge/results/tv-fusion-homogenization-lemma-boxeph.md
 external:
   - "The general block inequality `delta_N <= delta_I + delta_J - delta_I
     delta_J` for the homogenization map is CITED, not proved here: A.

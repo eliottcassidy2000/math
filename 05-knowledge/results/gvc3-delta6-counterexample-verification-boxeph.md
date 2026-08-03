@@ -34,7 +34,20 @@ All of the following were checked by full expansion in sympy (no floats, no nump
    - m = 0 edge case **FAILS as claimed**: Delta(x^2) = 0 while the formula would give 2*3!! = 6; the closed form is for m >= 1 only. — FINITE-EXACT for m = 1, 2
 5. **Consistency**: Delta^(6m)(Q*P^m) != 0 for m = 1, 2 (as forced by 4: one more Delta of zero is zero). Explicitly Delta^6(Q*P) = 2372198400*(15*t^2 + 17*x^2 + 66*x*y). — FINITE-EXACT
 
-## CITED-UNVERIFIED — what remains for a genuine GVC(3) refutation
+## STATUS UPDATE 2026-08-03 (death-star): (V) and (N) are now PROVED
+
+The two all-`m` obligations recorded below as CITED-UNVERIFIED are discharged by
+[THM-3290](../../01-canon/theorems/THM-3290-archimedes-flatness-and-the-gmc3-gvc3-counterexample-family.md),
+which proves both for every `m >= 1` (not by induction on the source, which
+remains unlocatable, but by a spherical-average collapse: on `rho=1` the
+configuration reduces to one complex variable and the average becomes a single
+generalized binomial coefficient `C(k-nu,k-delta)*2^(2k)(2k)!/(4k+1)!!`).  The
+finite verification below is retained as an INDEPENDENT implementation — sympy
+full expansion, versus THM-3290's dict-based engine and closed form — and the
+two agree on every shared instance.  The conditional conclusion below may now
+be read unconditionally.
+
+## CITED-UNVERIFIED as of the original boxeph run — what remained then
 
 The refutation of GVC(3) needs two **all-m** statements, of which only finite instances are verified here:
 
