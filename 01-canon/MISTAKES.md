@@ -9,6 +9,35 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-363 (2026-08-03, simplex moments mod p) -- a modular reduction silently corrupted every moment because the prime divided the factorial denominator
+
+- **What failed:** while searching the degree-four cyclic eigenspace on
+  `Delta_2` for a homogeneous-Factorial-Conjecture counterexample, an
+  exploratory cascade reduced the uniform-simplex moment
+  `<s_1^a s_2^b s_3^c> = 2 a! b! c! / (D+2)!` modulo small primes `p = 7, 13`.
+  It reported `743` surviving points of `P^4(F_7)` at the very first condition
+  and identical survivor counts at `m = 3, 6, 9`, which is not how a cascade of
+  independent conditions behaves.
+- **Why it was wrong:** the test polynomials have barycentric degree up to 4,
+  so `<g^m>` involves monomials of total degree `D = 4m` and denominators
+  `(4m+2)!`.  For `p = 7` already `(4*3+2)! = 14!` is divisible by `7`, so the
+  denominator is `0 mod p`, the naive `pow(den, p-2, p)` returns `0`, and every
+  moment silently becomes garbage.  Sixteen distinct moment denominators
+  through degree 12 die at `p = 7`.  No exception is raised; the run simply
+  produces confident nonsense.
+- **Repair:** the reduction is sound only when `p > D + 2`, i.e. `p > 4m + 2`.
+  `THM-3310` enforces this with an explicit `require`, refuses to invert zero,
+  and records the thresholds `m = 3, 6, 9, 12, 15, 18 -> p >= 19, 31, 43, 61,
+  67, 79`.  The published modular certificate in `THM-3300` was audited against
+  this and is unaffected: it uses barycentric degree 3 with `m <= 9`, so
+  denominators are at most `29!` against `p = 10^9 + 9`.
+- **Genus, and where else it can recur:** any reduction of a rational
+  combinatorial constant -- simplex or sphere moments, Beta and multinomial
+  weights, Bernstein coefficients -- must check that the prime exceeds every
+  factorial in the denominator.  Prefer a prime far larger than the maximal
+  degree, and make the inverse routine fail loudly on zero rather than return
+  it.
+
 ## MISTAKE-362 (2026-08-03, exceptional quadratic geometric count) -- a relative two-point fibre was reported as the total geometric base change
 
 - **What failed:** the first frozen output and reflection for the affine-`c`
