@@ -2,7 +2,7 @@
 id: THM-3255
 title: "Twelve-balance multiplicative Singer rank defect and phase-marker boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The positive all-dilation owner-mass word of THM-3253 and the signed Hodge
   word of THM-3252 both have multiplicative C_168 translation rank exactly
   157.  Their common eleven-dimensional defect is the augmentation
@@ -20,8 +20,9 @@ audit: >
   over Z without a CAS; proves exact divisibility and all complementary
   nonvanishing by two integral remainders and eight finite-field quadratic
   certificates; and checks the rank, unit-decimation invariance, phase-atom
-  repair and constant hostile.  Normal, optimized and stored transcript
-  replay and the declared LF hashes are required.  Independent audit pending.
+  repair and constant hostile.  An independent SymPy route reproduced the
+  exact gcds at six hostile dilations.  Normal, optimized and stored transcript
+  replay and the declared LF hashes all pass.
 depends_on:
   - THM-3246-all-dilation-second-owner-seam-stabilization-and-sign-word
   - THM-3252-singer-compactified-owner-hodge-word-universal-charged-cyclicity
@@ -38,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3255 -- twelve-balance multiplicative Singer rank defect and phase-marker boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3252 and THM-3253 prove a striking additive statement: after placing
 the 168 owner coefficients on the punctured Singer plane, every primitive
@@ -260,4 +261,4 @@ exact integer and rational arithmetic only.  It has no floating point,
 randomness, discovery cache, CAS dependency, or optimization-sensitive
 assertion.
 
-QED, pending independent hostile audit.
+QED.
