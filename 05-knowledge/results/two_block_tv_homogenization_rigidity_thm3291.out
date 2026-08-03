@@ -1,0 +1,16 @@
+THM-3291 TWO-BLOCK TV HOMOGENIZATION RIGIDITY EXACT CONTROL
+closed_form=TV(Bin(2,x),Bin(2,y))=|x-y|(1+|x+y-1|)
+closed_form_checks=625
+inequality=delta_N <= delta_1+delta_2-delta_1*delta_2
+grid_points=83521
+violations=0
+nontrivial_equalities=62
+rigid_face=same sign AND delta_1=delta_2 AND (min(p_i,q_i)=0 both i OR max(p_i,q_i)=1 both i)
+face_points=62
+mixed_equalities=0
+box_constraint_checks=83521
+amgm_checks=289
+opposite_sign_checks=289
+hostile_doubled_correction_failures=11520
+scope=two single-observation blocks only; the general block statement is the cited external theorem, not proved here
+ALL EXACT CHECKS PASSED
