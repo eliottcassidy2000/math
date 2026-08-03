@@ -2,10 +2,7 @@
 id: THM-3273
 title: "Critical-group C12 quotient and relative C7 equivariance boundary"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED for the critical
-  groups, six-class C12 landing and relative C7 boundary.  POST-PROMOTION
-  DELAYED-SAMPLER/C131 ADDENDUM: PROVED CANDIDATE + VERIFIED-EXACT;
-  INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   THM-3260's twelve-vertex core has cyclic critical group C_74748 and
   therefore a canonical Hall-{2,3} quotient C12.  Its Abel--Jacobi vertex
   image occupies only six classes, with multiplicities 3,3,3,1,1,1, so it
@@ -31,7 +28,9 @@ audit: >
   the automorphism multiplier, the full saturated relative kernel and both
   possible affine-C7 involution signatures. It also closed the companion's
   nonblocking lattice-index audit gap directly from the kernel equations.
-  The exact delayed-sampler and C131 addendum awaits immutable replay.
+  A second immutable audit rederived the delayed increments 8 and 4, the
+  rank-ten kernel and rank-eleven repaired sampler, the C2 anti-line, the
+  C131 null chart and the exhaustive order-13 affine nonpreservation scan.
 depends_on:
   - THM-3260-bispanning-reset-link-holotopy-atlas-and-nonplanar-c12-boundary
 related:
@@ -46,9 +45,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3273 -- critical-group C12 quotient and relative C7 equivariance boundary
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED BASE;
-POST-PROMOTION DELAYED-SAMPLER/C131 ADDENDUM IS A PROVED CANDIDATE PENDING
-INDEPENDENT IMMUTABLE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3260 shows that the first-link core has Betti number eleven and the delayed
 relative layer has rank six, matching the dimensions of the `C_12` and `C_7`
@@ -270,4 +267,4 @@ and compare LF-normalized bytes with the declared output.  The companion uses
 exact integer Smith reduction and adjugate arithmetic, contains no floating
 point or randomness, and raises explicitly on every failed certificate.
 
-QED for the promoted base; addendum pending independent immutable audit.
+QED.
