@@ -1,7 +1,7 @@
 ---
 id: THM-3251
 title: "Projected-k3 z218 terminal descent and composed cap216"
-status: "PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT"
+status: "PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED"
 source: root/z218-terminal/2026-08-03
 depends_on:
   - THM-3139-projected-k3-z225-terminal-and-z224-screen-double-layer-descent
@@ -17,11 +17,20 @@ hash_basis: LF-normalized bytes
 script_sha256: d92a6b825268d8fa7147ebcd5229bf8fa1d4cd2ffa3e9c1ec140024bd926832f
 output_sha256: 66f7f6bb81992659d5cedf01aa2f22b12872810888a022460eb6a5ce1c05d674
 semantic_sha256: fe1f0e0df1c652be79b1e9d1e964bc4db64f1930e25b8fb8a6f7d3c5f47ccedb
+audit: >
+  An independent hostile audit checked the final theorem against the exact
+  companion and transcript, replayed normal and optimized metadata, verified
+  all six pinned dependency hashes and semantic sentinels, confirmed that the
+  script contains no optimization-sensitive Python assert, and reproduced the
+  residual-index and overall semantic digests.  Normal, optimized, generated,
+  and stored transcripts have the same LF-normalized hash with empty stderr.
+  Every implication direction, quotient boundary, and ledger/cap transition
+  was accepted without repair.
 ---
 
 # THM-3251 -- projected-k3 z218 terminal descent and composed cap216
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Exact layer and the pointed divisor interval
 
@@ -98,9 +107,9 @@ Hence the complete residual quotient census is
 (g,q,count)=(2,2,936).                                    (10)
 ```
 
-Equation `(10)` says only that every residual occupies the top point of the
-same pointed two-chain (indeed `D=L`).  It creates no involution, common
-carrier, owner map, or phase transport.
+Equation `(10)` says only that every residual occupies the top point of its
+rowwise pointed two-chain, abstractly isomorphic to `{1,2}` (indeed `D=L`).
+It creates no involution, common carrier, owner map, or phase transport.
 
 ## 3. Exact one-high terminal descent
 
@@ -184,7 +193,7 @@ interleaved copies of each record is neither an input nor an ordering witness.
 The theorem proves only a contiguous decrement in the projected `k=3`
 necessary atlas.  In particular:
 
-1. all screen and terminal exclusions are upper relaxations, so excluding
+1. all screen and terminal state spaces are upper relaxations, so excluding
    them is lawful while reversing any implication would not be;
 2. the common `g=q=2` quotient is not a physical `C2` action or modular
    free-factor carrier;
@@ -193,5 +202,6 @@ necessary atlas.  In particular:
 4. there is no projected `k<=1`, final-rung, or LRC(14) conclusion.
 
 Normal and optimized replays LF-normalize byte-for-byte to the stored
-transcript with empty standard error.  An independent hostile audit remains
-required before promotion.
+transcript with empty standard error.  The independent hostile audit also
+reproduced every dependency, metadata, quotient, and ledger check and found
+no defect.
