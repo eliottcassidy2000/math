@@ -1,6 +1,6 @@
 ---
 id: THM-3244
-title: "Unique-reset Rips routing and deletion-graph non-Morse boundary"
+title: "Unique-reset Rips routing and one-pole deletion-flow boundary"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On
   the complete 4,319-state THM-3238 physical bank, the exact exposed-reset
@@ -10,28 +10,29 @@ status: >
   second-highest state persists as a separate component for 2,096 rank steps.
   Nevertheless, rows 2 and 10 of the lawful THM-3238 response bank form a
   state-dependent one-pole atlas: at every nonreset state at least one row has
-  a strict reset-monotone ascent.  Iteration reaches the reset in exactly the
-  edit distance.  There are exactly 31 covering row pairs, while no single
-  row covers all states.  The ordinary two-chart nerve is contractible, but
-  3,453 of the 3,911 overlap states have no common ascent direction.  Minimal
-  chart-switch depth has histogram 716/3,600/2 at depths 0/1/2, so two
-  switches are sharply necessary.  Moreover no fixed positive blend of rows
-  2 and 10 removes the switching: two explicit states have complementary
-  rational trap intervals covering every positive blend ratio, and two
-  states are minimal.
-  The reset-monotone escape radius is at most 10, with a unique sharp
+  a strict reset-distance-monotone ascent.  Iteration reaches the reset in
+  exactly the edit distance.  Among the 22 rows there are exactly 31 covering
+  pairs, while no single row covers all states.  The abstract two-chart
+  set-cover nerve is contractible, but 3,453 of the 3,911 overlap states have
+  no common ascent direction.  Minimal chart-switch depth has histogram
+  716/3,600/2 at depths 0/1/2, so two switches are sharply necessary.  No
+  fixed positive blend of rows 2 and 10 removes the switching: two explicit
+  states have complementary rational trap intervals covering every positive
+  blend ratio, and two states are minimal.
+  The reset-distance-monotone escape radius is at most 10, with a unique sharp
   radius-10 trap; at radius 10 the reset is the unique directed sink.  More
   strongly, two explicit hubs route every state to the reset in at most two
-  strict, reset-monotone radius-10 jumps, and no one-hub two-level atlas can
-  do so.  This is a finite directed-graph theorem, not a simplicial collapse
-  or a result for another support/bank.
+  strict, reset-distance-monotone radius-10 jumps, and no one-hub two-level
+  atlas can do so.  This is a finite directed-graph theorem, not a simplicial
+  collapse or a result for another support/bank.
 source: root/multiscale-newton-flag/2026-08-03
 audit: >
   The exact companion reconstructs the canonical 4,319 physical
   submultisets, pins the immutable THM-3238 script and output, verifies an
   independently extracted exact rank certificate for all THM-3238 integer
-  coordinates, and exhausts every one-pole neighbor, every reset-monotone
-  upward pair, every possible radius-10 hub, and the complete elder-rule
+  coordinates, and exhausts every one-pole neighbor, every
+  reset-distance-monotone upward pair, every possible radius-10 hub, and the
+  complete elder-rule
   union-find merge tree of the one-pole superlevel filtration.  A second
   independently extracted bit certificate verifies all 22 lawful one-pole
   row covers, the distinguished row-(2,10) atlas, the 31-pair census, and the
@@ -39,10 +40,14 @@ audit: >
   the overlap graph, common-direction histogram, and exact switch-depth
   dynamic program.  Exact edge differences verify the sharp two-state
   constant-blend obstruction.  Two independent audits compared the rank,
-  cover, direction and edge-difference certificates pointwise against the
-  full exact response cache and rederived the graph, dynamic-programming,
-  interval and scope implications.  Fresh normal and optimized runs
-  byte-match the stored output and declared hashes.
+  cover, direction, and edge-difference certificates pointwise against the
+  full exact response cache and rederived the graph, dynamic program,
+  rational trap intervals, and scope implications.  One reconstruction of
+  all 22 unscaled response rows on all 4,319 states gave exact row-bank digest
+  366905601b960854d249e1f12ce02edeb55af17a638bb56673bd49c6dbba26e9.
+  Fresh normal and optimized runs byte-match the stored output and declared
+  hashes.  The audits repaired the folded reset-distance-preorder, local-flow,
+  one-row-universe, set-cover-nerve, route-count, and scalar-gauge boundaries.
 depends_on:
   - THM-3238-complete-physical-product-gamma-bank-unique-reset-stitch
 related:
@@ -55,7 +60,7 @@ output_sha256: 27dcd7c68e628465a1f09a564be0be366ded6075ef009a3d85d029f8f18605c9
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3244 -- unique-reset Rips routing and deletion-graph non-Morse boundary
+# THM-3244 -- unique-reset Rips routing and one-pole deletion-flow boundary
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
@@ -94,13 +99,15 @@ d(sigma,tau)=sum_(j=1)^8 |n_j(sigma)-n_j(tau)|.          (4)
 ```
 
 The one-pole graph joins states at distance one.  Say that `tau` is
-`Q`-monotone from `sigma`, and write `tau <=_Q sigma`, when
+reset-distance-monotone from `sigma`, and write `tau <=_Q sigma`, when
 
 ```text
 |n_j(tau)-n_j(Q)| <= |n_j(sigma)-n_j(Q)|                (5)
 ```
 
-for every `j`.  For an integer `r>=1`, define the directed reset-Rips graph
+for every `j`.  This is a folded coordinatewise preorder on absolute distance
+from `Q`; it is not a single orthant and may cross `Q`.  For an integer
+`r>=1`, define the directed reset-Rips graph
 `R_r^+(H,Q)` by
 
 ```text
@@ -128,7 +135,7 @@ Rank zero is the largest coordinate, namely `Q`.  The certificate is an exact
 ordering of the full THM-3238 integer vector, not a floating approximation;
 the companion pins the dependency script and output hashes before using it.
 
-## 2. One-pole exposure is not Morse
+## 2. One-pole exposure does not induce a local deletion flow
 
 Exhausting every legal insertion and deletion in the nonempty physical bank
 gives exactly
@@ -138,11 +145,11 @@ gives exactly
 ```
 
 nonreset states whose `H`-value is strictly larger than the value at every
-one-pole neighbor.  Hence the unique global maximum `Q` does not produce a
-strict one-pole ascent, a deletion gradient, or an `H`-induced discrete-Morse
-matching.
+one-pole neighbor.  Hence the unique global maximum `Q` does not by itself
+supply an `H`-increasing one-pole edge from every nonreset state and therefore
+does not induce a local deletion flow.  No discrete-Morse conclusion is drawn.
 
-The reset-monotone obstruction is larger still.  For `sigma!=Q`, define its
+The reset-distance-monotone obstruction is larger still.  For `sigma!=Q`, define its
 escape radius
 
 ```text
@@ -158,9 +165,10 @@ radius       1    2   3   4  5  6  7  8  9 10
 states    4231   45  23  10  1  2  2  2  1  1.          (11)
 ```
 
-Thus 87 nonreset states have no radius-one reset-monotone ascent, even though
-only 32 of them are local maxima in the full one-pole graph.  This separates
-failure of the chosen reset orthant from failure of every local direction.
+Thus 87 nonreset states have no radius-one reset-distance-monotone ascent,
+even though only 32 of them are local maxima in the full one-pole graph.  This
+separates failure under the folded reset-distance preorder from failure of
+every local direction.
 
 ### The order-persistent obstruction
 
@@ -215,8 +223,8 @@ T=(1,1,1,1,2,2,2,3,3,4).                               (13)
 
 Consequently `Q` and `T` are both sinks at radius 9, while `Q` is the unique
 sink at radius 10.  Every state therefore has a directed path to `Q` in
-`R_10^+(H,Q)`.  Radius 10 is sharp for this fixed metric, order, and monotone
-orthant.
+`R_10^+(H,Q)`.  Radius 10 is sharp for this fixed metric, order, and folded
+reset-distance preorder.
 
 ## 4. A two-hub, two-jump atlas
 
@@ -232,8 +240,8 @@ B=(1,1,2,2,3,3,4,5,6,7,8).                             (14)
 Their distances to `Q` are 7 and 3.  Among the 133 far states:
 
 ```text
-A is a strict reset-monotone radius-10 ascent from  36 states,
-B is a strict reset-monotone radius-10 ascent from 127 states,
+A is a strict reset-distance-monotone radius-10 ascent from  36 states,
+B is a strict reset-distance-monotone radius-10 ascent from 127 states,
 both are available from                              30 states. (15)
 ```
 
@@ -421,7 +429,7 @@ reconstructs the complete capacity box `(3)`, checks the state digest `(7)`,
 decompresses and verifies the exact rank permutation `(8)`, and then exhausts:
 
 1. every one-pole neighbor for `(9)`;
-2. every reset-monotone upward pair for `(11)` and `(12)`;
+2. every reset-distance-monotone upward pair for `(11)` and `(12)`;
 3. the sharp state `(13)`;
 4. every far-state incidence with the two hubs in `(14)`; and
 5. every possible hub within radius 10 of `Q` for the minimality claim `(17)`;
@@ -433,17 +441,18 @@ decompresses and verifies the exact rank permutation `(8)`, and then exhausts:
 9. the exact edge differences and complementary intervals `(25)--(29)`.
 
 The independently extracted rank certificate is deliberately separate from
-the expensive product-Gamma reconstruction in THM-3238.  An independent
-audit must compare it against that full exact vector; matching only the
-certificate's own digest would not establish provenance.  The same boundary
-applies to the row-cover, direction, and displayed edge-difference
-certificates: their finite arithmetic is self-contained, but their
-lawful-response provenance requires comparison with the exact THM-3238 rows.
+the expensive product-Gamma reconstruction in THM-3238.  The hostile audits
+compared it against that full exact vector; matching only the certificate's
+own digest would not have established provenance.  They also independently
+reconstructed the complete 22-row exact bank before comparing every row-cover,
+direction, and displayed edge-difference value.  Thus none of the row-atlas
+certificates is promoted from a self-digest alone.
 
 ## 7. Scope and holotopy reading
 
 This is a theorem about the fixed support `(1,3)`, bank `I2`, physical
-submultiset metric `(4)`, reset orthant `(5)`, and exact THM-3238 functional.
+submultiset metric `(4)`, folded reset-distance preorder `(5)`, and exact
+THM-3238 functional.
 It proves neither an analogous radius for the other maintained faces nor a
 uniform statement for arbitrary radial coefficients.  It also gives no
 probability transport, Markov deletion law, single scalar local gauge,
@@ -456,11 +465,10 @@ may enlarge metric scale while keeping one height (`H` first has a unique sink
 at radius 10), or retain elementary scale while enlarging the gauge (`f_2`
 and `f_10` cover every one-pole obstruction).  The latter repair is strictly
 local but nonlinear because its chart changes with the state, sharply twice
-on `(24)`.  THM-3160's
-flat order-independent pole holotopy, the `H`-oriented coarse routing, and the
-row-selector atlas are therefore three different structures.  A genuine
-identification still requires a lawful transition or positive common gauge;
-none is supplied here, and `(25)--(29)` rule out the cheapest constant gauge
-inside the distinguished two-row cone.
+on `(24)`.  THM-3160's flat order-independent pole holotopy, the `H`-oriented
+coarse routing, and the row-selector atlas are therefore three different
+structures.  A genuine identification still requires a lawful transition or
+positive common gauge; none is supplied here, and `(25)--(29)` rule out the
+cheapest constant gauge inside the distinguished two-row cone.
 
 QED.

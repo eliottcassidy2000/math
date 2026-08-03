@@ -35,7 +35,7 @@ not physical-cover counts. THM-2970/2972 close all `19+39` rows in the
 `1680..1742` `k=2` atlas; THM-2980/2995 then close every row at
 `1580..1679`, giving cap `1579`.  For `k=3`, torsion/status closes through `297`;
 THM-2981/3033/3041/3052/3061/3071/3078/3094/3098/3102/3106/3109/3111/3113/3114/3139/3174/3179/3207/3218/3230 close projected `k=3` through `z_1=219`: cap `218`, ledger `373411`; next `119` rows.
-[THM-3242 (projected-k3 z217)](../01-canon/theorems/THM-3242-projected-k3-z217-exact-status-annihilation.md) separately kills all `66` states on its eight rows, but is out of order: open `z_1=218` intervenes, so the cap and ledger do not yet change.
+THM-3245 proves `g=2` at open `z_1=218` is atlas metadata, not an action; THM-3251 is only RESERVED. THM-3242 precloses `z_1=217`, but `218` still blocks any cap/ledger change.
 Cap two forces the phase-zero triangle `(3/2)(4/3)=2`; by cap `7/3` no
 full-cap component remains. The zero-gain atlas is
 `4/3,3/2,2,5/2,3,4,5,6`; CSP closes `3m>=4D`. THM-3135 repairs `H2`;
@@ -181,7 +181,7 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   six; THM-3177 resurrects degree 13 at depth seven, while THM-3184 kills
   degree 14 there. THM-3209 gives the unique all-degree reset atom through
   depth eight; THM-3219 excludes 63 states through depth 16; THM-3216 reaches depth nine; audited THM-3238 stitches all `4,319` physical states of that face to one reset for `D>=14`/all degree.
-  Candidate THM-3244 reports `32` one-pole maxima but sharp radius-10/two-hub routing; the other 229 faces remain open. THM-3189
+  Audited THM-3244 proves `32` one-pole maxima but sharp radius-10/two-hub routing; the other 229 faces remain open. THM-3189
   rules out an affine two-degree factorization. THM-3170/3176 force bad resonances to have
   `d,...,d-6` composite. THM-3182/3183/3185/3188/3191 expose the rank-one
   reset, its two integral lattices, the full carry hierarchy, quadratic-character

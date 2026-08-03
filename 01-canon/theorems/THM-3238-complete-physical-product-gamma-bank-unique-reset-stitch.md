@@ -32,6 +32,7 @@ depends_on:
 related:
   - THM-3219-complete-reset-upper-filter-principal-upset-exclusion
   - THM-3222-universal-product-gamma-reset-upper-filter-collar
+  - THM-3244-unique-reset-exposure-deletion-graph-nonmorse-boundary
 script: 04-computation/gmc_complete_physical_bank_unique_reset_thm3238.py
 output: 05-knowledge/results/gmc_complete_physical_bank_unique_reset_thm3238.out
 script_sha256: 201e7348cc4f1e7fe4cfd51cfda42db85b8943d8d33f2d9080f20df562ecccaa
