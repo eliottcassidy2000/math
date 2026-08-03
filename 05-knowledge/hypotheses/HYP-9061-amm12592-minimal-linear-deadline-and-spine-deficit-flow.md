@@ -30,8 +30,8 @@ output: 05-knowledge/results/amm12592_artanh_certificate_decode_deathstar.out
 > satisfied for ANY `gamma > 0` (exact, independently confirmed twice), so
 > the model yields no general floor at all and the reported binding cuts
 > were truncation-edge artifacts. Current honest state:
-> `C* <= 8/5` (n <= 127 verified construction, THM-3002 5b) with
-> `C = log_5(5 phi^2)` attained for n <= 63 (THM-3029); balanced-block-class
+> `C = log_5(5 phi^2)` attained for ALL n <= 127 (THM-3029 + THM-3302's
+> R = 64 closure by two independent witnesses); balanced-block-class
 > floor `C*_block > 1.5970` exact (THM-3009, audit-hardened, ladder to
 > m = 4096, certified rational bracket
 > `115939/193882 < gamma* < 105183/175895`); GENERAL-class floor OPEN —

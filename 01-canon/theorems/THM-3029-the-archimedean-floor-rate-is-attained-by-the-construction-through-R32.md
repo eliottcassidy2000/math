@@ -32,9 +32,14 @@ status: >
   floor profile. Effective rates 0.583333, 0.592593, 0.596774 against the 3/5
   profile's 0.600000.
   Hence C = 1 + gamma* = log_5(5 phi^2) is ATTAINED for n <= 63, matching the
-  proved lower bound exactly on that range. Whether it extends to R = 64 and
-  beyond is OPEN (in progress); the standing global statement remains
-  C <= 8/5 for n <= 127 from THM-3002 5b.
+  proved lower bound exactly on that range. UPDATE 2026-08-03: R = 64 is now
+  CLOSED by two independent, distinct, hostile-re-verified witnesses
+  (THM-3302), extending attainment to n <= 127 and superseding C <= 8/5
+  there; R = 128 and all-R remain OPEN. Also note MISTAKE-361: the "proved
+  lower bound" matched here is the BALANCED-BLOCK floor (THM-3009); the
+  general-class promotion (THM-3024) is demoted. Toolchain note: the lost
+  liftrate/gammac imports were reconstructed 2026-08-03 with byte-identical
+  referee output (05-knowledge/results/amm12592-thm3029-toolchain-repair-boxeph.md).
 source: death-star-2026-08-01-coinC2
 depends_on:
   - THM-3026

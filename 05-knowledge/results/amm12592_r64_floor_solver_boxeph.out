@@ -1,0 +1,28 @@
+AMM 12592 / R = 64 gamma* floor-profile closure (extends THM-3029 (A))
+floor profile d_i = floor(gamma*(64+i)), i=0..63, gamma* = 5979874356654402/10000000000000000 (= log(phi)/log(sqrt 5) to 16 digits):
+  d = [38, 38, 39, 40, 40, 41, 41, 42, 43, 43, 44, 44, 45, 46, 46, 47, 47, 48, 49, 49, 50, 50, 51, 52, 52, 53, 53, 54, 55, 55, 56, 56, 57, 58, 58, 59, 59, 60, 60, 61, 62, 62, 63, 63, 64, 65, 65, 66, 66, 67, 68, 68, 69, 69, 70, 71, 71, 72, 72, 73, 74, 74, 75, 75]
+witness blocks: 64; all admissible at profile degree: True
+epoch identity sum_i x^i Delta_i == (1-x)^63 exact in Z[x]: True
+effective rate max_i d_i/(64+i) = 58/97 = 0.597938 (3/5 profile: 0.600000; gamma* = 0.597987)
+provenance: gamma* floor (direct, no lift); H = [1] (THM-3002 (*) normal form, no H != 1 widening needed, no lift needed)
+sign word delta_(i,0): +---++---++--+---++-------++++++++++---------+++++---+-++++++++-
+
+search provenance (NOT part of the proof; negatives are artefacts,
+THM-3029 sec 1): deterministic beam, rows 0..61 ranked by
+(residual degree, residual L1) -- 'l1deg', beam 400, ctrl 2, span 2,
+full-residual dedup -- then exhaustive 2-row completion, row 62
+steered over the (ctrl 3, span 6) target grid, row 63 by exact
+Bernstein decode.  The L1 rank is decisive: winning trajectories
+shed residual L1 monotonically (2 by row 61), while the
+(degree, |first 6|) key of the committed 3/5 solver keeps states
+whose mid coefficients overshoot final-decode capacity ~1000x.
+
+CONCLUSION: the gamma* floor profile CLOSES at R = 64, directly,
+with D0 = 0 and H = 1.  With THM-3029 (A) (R = 8, 16, 32) every
+dyadic epoch through [64,127] closes at the floor profile:
+C = 1 + gamma* = log_5(5 phi^2) = 1.5979874356654402 is ATTAINED
+for all critical values n <= 127, matching the archimedean floor
+(THM-3009/THM-3017/THM-3024) exactly on that range.  R = 128 and
+the all-R statement (which would give C* = log_5(5 phi^2) exactly)
+remain OPEN.
+ALL R64 FLOOR-WITNESS CHECKS PASSED

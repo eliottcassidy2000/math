@@ -1,0 +1,80 @@
+==============================================================================
+S1  backbone + correction structure; endgame attractor
+==============================================================================
+  [PASS] ballot block (p-q) admissible and rep = 2x-1 at d in {5,12,30,75}
+  [PASS] endgame attractor: E_m - (2x-1) = x E_{m-1} for m <= 40
+R=  8: tags head..tail: head, mid rows p-q+window, tail ['p-q', 'p-q', 'CONST-1']; attractor entered after row 3
+       max|c| over mid rows = 8,  median = 2
+  [PASS] R=8: corrections even in every cell (parity class of backbone)
+  [PASS] R=8: last block = -1 (full box), residual enters E_m attractor
+R= 16: tags head..tail: head, mid rows p-q+window, tail ['p-q', 'p-q', 'CONST-1']; attractor entered after row 8
+       max|c| over mid rows = 3432,  median = 168
+  [PASS] R=16: corrections even in every cell (parity class of backbone)
+  [PASS] R=16: last block = -1 (full box), residual enters E_m attractor
+R= 32: tags head..tail: head, mid rows p-q+window, tail ['p-q', 'p-q', 'CONST-1']; attractor entered after row 28
+       max|c| over mid rows = 184756,  median = 56962
+  [PASS] R=32: corrections even in every cell (parity class of backbone)
+  [PASS] R=32: last block = -1 (full box), residual enters E_m attractor
+
+==============================================================================
+S2  reduced identity qC = p^R + q^R - p(p-q); Lucas / middle-pair doubling
+==============================================================================
+  [PASS] R=8: q*C == p^R + q^R - p(p-q) exactly
+  [PASS] R=16: q*C == p^R + q^R - p(p-q) exactly
+  [PASS] R=32: q*C == p^R + q^R - p(p-q) exactly
+  [PASS] R=8: Lucas doubling L_2R = L_R^2 - 2(pq)^R (middle pair, THM-2160)
+  [PASS] R=16: Lucas doubling L_2R = L_R^2 - 2(pq)^R (middle pair, THM-2160)
+  [PASS] R=32: Lucas doubling L_2R = L_R^2 - 2(pq)^R (middle pair, THM-2160)
+  [PASS] Fibonacci mass: sum_m binom(R-m,m) = F_{R+1} for R <= 64 (phi enters)
+
+==============================================================================
+S3  differenced carve E_j = D_j - D_{j-1}: exact identity, overshoot collapse
+==============================================================================
+  8-> 16: carve identity exact: True;  worst overshoot differenced =     7.0   naive q*D_j =       6.0
+  [PASS] 8->16: carve identity sum p^j E_j = q^(2R-1)
+ 16-> 32: carve identity exact: True;  worst overshoot differenced =     9.0   naive q*D_j =      11.0
+  [PASS] 16->32: carve identity sum p^j E_j = q^(2R-1)
+ 32-> 64: carve identity exact: True;  worst overshoot differenced =    25.0   naive q*D_j =      31.0
+  [PASS] 32->64: carve identity sum p^j E_j = q^(2R-1)
+
+==============================================================================
+S4  the carry sweep: doubling map closes 8->16, 16->32, 32->64 (floor, D0=0)
+==============================================================================
+  8-> 16: CLOSED, fallbacks=18, verified exact: True  [0.0s]
+  [PASS] 8->16: carry sweep closes at floor profile D0=0, verified
+ 16-> 32: CLOSED, fallbacks=22, verified exact: True  [0.0s]
+  [PASS] 16->32: carry sweep closes at floor profile D0=0, verified
+ 32-> 64: CLOSED, fallbacks=0, verified exact: True  [0.3s]
+  [PASS] 32->64: carry sweep closes at floor profile D0=0, verified
+      R=64 gamma* floor witness SAVED; effective rate = 0.597938  (3/5 profile would be 0.600000)
+  [PASS] 32->64: zero steering fallbacks (map is deterministic)
+
+64->128 attempts from the (fat) sweep output at 64 -- reported as transport
+artifacts per THM-3029 sec 1, NOT as evidence of infeasibility:
+  64->128 D0= 0: runaway -- row 122: forced top cell = 381311912409290471054804151  (max carry cell ~ 1e44)  [4.8s]
+  64->128 D0=12: runaway -- row 124: forced top cell = 24355857609260944541563530255  (max carry cell ~ 1e48)  [6.7s]
+
+==============================================================================
+S5  obstruction quantified: output fatness and multi-fold overshoot growth
+==============================================================================
+  beam/lift witness R= 16: max|c| = 3432
+  beam/lift witness R= 32: max|c| = 184756
+  sweep output    R= 64: max|c| = 3400359520022008934936   <-- FAT: box-scale corrections
+  multi-fold carve overshoot from slim seeds (identity exact in all cases):
+    seed R0= 32 x 2^1 ->   64: identity=True  worst overshoot =         25.0
+  [PASS] multi-fold carve identity R0=32 s=1
+    seed R0= 16 x 2^2 ->   64: identity=True  worst overshoot =        341.0
+  [PASS] multi-fold carve identity R0=16 s=2
+    seed R0= 32 x 2^2 ->  128: identity=True  worst overshoot =       5739.0
+  [PASS] multi-fold carve identity R0=32 s=2
+    seed R0= 16 x 2^3 ->  128: identity=True  worst overshoot =    1413027.0
+  [PASS] multi-fold carve identity R0=16 s=3
+
+==============================================================================
+S6  floor-profile guard: GS rational floors == true gamma* floors, m <= 512
+==============================================================================
+  [PASS] GS floors exact for m <= 512 (min dist to integer = 0.000500)
+
+==============================================================================
+LEDGER: 27 checks, 0 failures
+ALL DOUBLING-STRUCTURE CHECKS PASSED
