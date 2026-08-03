@@ -1,5 +1,5 @@
 FC3 joint two-face row-(2,10) policy/sidecar beach audit
-dependency_hash_checks=6
+dependency_hash_checks=8
 faces=(support_(1,2)_I2:239,support_(1,3)_I2:4319),joint=4558
 exclusive_records=(small=71,full=407,joint=478)
 primitive_tests=(small_axis=11,full_axis=16,joint_axis=16,joint_plus_face=17)

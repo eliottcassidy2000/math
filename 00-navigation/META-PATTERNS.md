@@ -131,15 +131,12 @@ current fills every cell and every admissible parabolic sector.
 
 ## Controlled forgetting and unlabeled quotients require a sidecar
 
-**Trigger / action:** before quotienting, name the consumer, preserved predicate,
-kernel, lost coordinate, and sidecar.  For distinct component occurrences,
-factorial-conjugate to labels and quotient only after checking freeness; retain
-profiles that later operations consume. **Mechanism:** kernels are gauge only
-when every consumer kills them; factorial weights count occurrence bijections
-(THM-3119/3121), and pointed continuation restores lift torsors.
-**Counterindication:** zeros, incompatible gauges, physical phases, stabilizers,
-and scalarized consumed profiles need separate checks. **Evidence:** THM-840/2355,
-2237/2240, 2548/3048, 2962/3072, 3119/3121, and MISTAKE-310.
+**Trigger / action:** before quotienting, name the consumer, preserved
+predicate, kernel, lost coordinate and sidecar; quotient occurrences only
+after checking freeness. If a finite label controls a later choice, retain it
+as a marker and, after abelianization, as a catalytic variable. **Mechanism /
+caution:** kernels are gauge only when every consumer kills them; signed complements need not be positive observables. **Evidence:** THM-840/2355,
+2548/3048, 3119/3121, 3255/3262, THM-2000/2005, and MISTAKE-310.
 
 ## Test whether a central extension changes the base signature
 
@@ -172,7 +169,7 @@ does not itself provide the external arm selector.
 **Trigger / action:** when two frontiers share a group module or become isomorphic after isotypic projection, identify the sector, commutant/multiplicity space, and realization functor; test neutral blocks and the target predicate.
 **Mechanism:** characters forget positivity, occurrences, base geometry, endpoint phase, and stabilizers. A charged isomorphism can coexist with a neutral rank defect; one observer removes multiplicity ambiguity only through an exact cyclic determinant.
 **Counterindication:** transfer only through an explicit predicate-preserving functor. A nonzero determinant gives a linear frame, not a positive, set-level, or larger-symmetry clutch.
-**Evidence:** THM-2648/2655, THM-2455/2598/3105/3108, and THM-3243/3250.
+**Evidence:** THM-2648/2655, THM-2455/2598/3105/3108, THM-3243/3250/3255.
 
 ## After a scalar quotient, choose between a coherent lift and orbit incidence
 
@@ -370,7 +367,10 @@ THM-2290/2292/2294 and the S79 support-Dirichlet reflection.
 ## Divide exceptional multiplicity before judging a wall
 
 **Trigger / action:** when a leading row or degree vanishes on a wall, retain the transverse parameter, divide the proved exceptional multiplicity, then recompute support and the first normal coefficient (reciprocally at infinity).
-**Mechanism / limit:** strict transforms can activate ambiently inert terms, but need units and lose root labels and physical/Keller data. THM-3233 iterates PRS normalization; THM-3257 tunes THM-3237's wall. **Evidence:** THM-3231/3233/3237/3257.
+**Mechanism / limit:** strict transforms activate inert terms, but need units
+and lose root labels/Keller data; a lower term may reopen the prior layer and
+force retuning. Odd resultant inertia is not cover inertia. **Evidence:**
+THM-3231/3233/3237/3257/3263.
 
 ## Refine vertices and lifetimes before quotienting
 

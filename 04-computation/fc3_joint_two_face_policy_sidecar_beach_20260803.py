@@ -27,6 +27,10 @@ DEPENDENCIES = {
         "05efd37eeedeca7e3be581977a894592a7873d94a966f06d9533482cc8498fee",
     ROOT / "05-knowledge/results/gmc_first_shell_pair_clutch_thm3254.out":
         "dd415c8ce6e2e196c115421d3508addabb724305a16843509264a8b3205beee9",
+    ROOT / "04-computation/gmc_unique_reset_rips_nonmorse_thm3244.py":
+        "3ff0babc41e35e6a185b0ff442cfb9284d9688360c0b96cd947c1128e16400ba",
+    ROOT / "05-knowledge/results/gmc_unique_reset_rips_nonmorse_thm3244.out":
+        "27dcd7c68e628465a1f09a564be0be366ded6075ef009a3d85d029f8f18605c9",
     ROOT / "04-computation/fc3_two_row_decision_policy_compiler_beach_20260803.py":
         "8910a0bc1a6bc10ac27742781142c28d89209b57bc0f6f5e461da314d0e0e197",
     ROOT / "05-knowledge/results/fc3_two_row_decision_policy_compiler_beach_20260803.out":
@@ -630,7 +634,7 @@ require(route_digest
         "joint route digest drift")
 
 print("FC3 joint two-face row-(2,10) policy/sidecar beach audit")
-print("dependency_hash_checks=6")
+print("dependency_hash_checks=8")
 print("faces=(support_(1,2)_I2:239,support_(1,3)_I2:4319),joint=4558")
 print("exclusive_records=(small=71,full=407,joint=478)")
 print("primitive_tests=(small_axis=11,full_axis=16,joint_axis=16,joint_plus_face=17)")

@@ -9,9 +9,11 @@ status: >
   representation of C_12: precisely the nonzero frequencies 14,28,...,154
   vanish.  Every primitive Singer decimation preserves this defect, so all
   8,064 relabellings remain in the same 157-space despite their additive
-  13 by 13 nonsingularity.  A joint sidecar repairs the phase span iff it is
-  nonzero on all eleven missing characters; one labeled phase atom suffices,
-  while constants and every mixture of the two owner words fail.
+  13 by 13 nonsingularity. Each of the twelve individual norm-phase slices
+  instead has multiplicative rank 168, although its additive support has rank
+  at most 7. A centered norm-fibre marker is the exact rank-11 complement;
+  every nonzero nonnegative filling marker has rank at least 12, sharply
+  attained by one Boolean norm-fibre indicator.
 source: root/2026-08-03
 audit: >
   The assertion-independent companion pins THM-3246, THM-3252 and THM-3253;
@@ -20,20 +22,30 @@ audit: >
   over Z without a CAS; proves exact divisibility and all complementary
   nonvanishing by two integral remainders and eight finite-field quadratic
   certificates; and checks the rank, unit-decimation invariance, phase-atom
-  repair and constant hostile.  An independent SymPy route reproduced the
-  exact gcds at six hostile dilations.  Normal, optimized and stored transcript
-  replay and the declared LF hashes all pass.
+  repair and constant hostile. A secondary SymPy companion identifies the
+  C_12 quotient with the exact F_169/F_13 norm phase, proves all 24 individual
+  Hodge/mass phase-slice unit statements, checks the additive support bound,
+  and constructs the sharp signed and nonnegative markers. Independent
+  finite-field DFT and field-norm reconstructions reproduced the ranks,
+  fibres, gauges and positivity boundary. Normal, optimized and stored
+  transcript replay and all declared LF hashes pass.
 depends_on:
+  - THM-3234-singer-owner-compactification-and-pointed-heisenberg-carrier-gate
   - THM-3246-all-dilation-second-owner-seam-stabilization-and-sign-word
   - THM-3252-singer-compactified-owner-hodge-word-universal-charged-cyclicity
   - THM-3253-positive-owner-mass-newton-cyclicity-and-maximal-common-heisenberg-module
 related:
   - THM-3254-first-shell-two-row-clutch-and-graded-gauge-no-go
   - THM-3249-cross-support-upset-atlas-local-sections-and-no-constant-gauge
+  - THM-2543-augmentation-norm-relative-phase-local-system-dichotomy
 script: 04-computation/lrc_twelve_balance_singer_rank_defect_thm3255.py
 output: 05-knowledge/results/lrc_twelve_balance_singer_rank_defect_thm3255.out
 script_sha256: e1b42874879ae1057418bb9aa0f95bf8d5af2140af415e49ea8a0c7f72cfd35f
 output_sha256: 7a229b92d63577a3d79eb78b34418a39b42d083ab0a2f065a6bc1106978d6e45
+secondary_script: 04-computation/lrc_multiplicative_singer_twelve_balance_discovery_20260803.py
+secondary_output: 05-knowledge/results/lrc_multiplicative_singer_twelve_balance_discovery_20260803.out
+secondary_script_sha256: 1066ed22d8f6e2ac8a424f62a2d8ea2649133642ebf9c133853893d7b580e143
+secondary_output_sha256: cb4a89fe66d7ae38dd11266b66d5a2c6509999cabcef9a7e02e252df71462d4f
 hash_basis: LF-normalized bytes
 ---
 
@@ -214,7 +226,69 @@ multiplicative C168 phase-orbit rank = 157 < 168.       (16)
 
 Additive nonsingularity does not preserve the full multiplicative phase label.
 
-## 6. Necessary and sufficient sidecar
+## 6. Norm phase and representation-rank reversal
+
+In THM-3234's deterministic field F_169/F_13, the chosen generator alpha
+satisfies
+
+~~~text
+Norm(alpha)=6,          ord_(F_13^*)(6)=12.             (17)
+~~~
+
+Hence
+
+~~~text
+Norm(alpha^j)=6^j,
+Norm(alpha^j)=Norm(alpha^k) iff j=k mod 12.             (18)
+~~~
+
+The twelve residue classes are exactly the twelve multiplicative norm phases,
+each with fourteen points. Equation (3) or (4) says precisely that the
+weighted norm pushforward is uniform. Its nontrivial eleven characters are
+the vanished modes in (6).
+
+The negative seam owners
+
+~~~text
+0,1,2,3,4,5,162,163,164,165,166,167
+~~~
+
+form one complete norm-phase transversal. Each Hodge phase therefore contains
+thirteen positive owners and one negative owner.
+
+For a residue r, restrict the two words to one fibre:
+
+~~~text
+Q_r(x)=sum_(j=r mod 12) scale*q_j*x^j,
+M_(g,r)(x)=sum_(j=r mod 12) N_(g,j)*x^j.               (19)
+~~~
+
+The secondary companion proves, for every r and every integer g>=1,
+
+~~~text
+gcd(Q_r,x^168-1)=gcd(M_(g,r),x^168-1)=1.               (20)
+~~~
+
+Thus every individual signed Hodge slice and every fourteen-point positive
+mass slice has multiplicative translation rank 168. Cancellation appears
+only after the twelve individually cyclic slices are summed, when the rank
+drops to 157.
+
+The additive Singer-plane carrier behaves oppositely. The support of one norm
+phase meets either eight rows and seven columns or seven rows and eight
+columns, alternating with r. Every matrix supported on one phase therefore
+has additive rank at most seven, while the sum of all phases has additive
+rank thirteen by THM-3253. The same decomposition consequently gives
+
+~~~text
+one norm phase: multiplicative rank 168, additive rank at most 7;
+sum of phases:   multiplicative rank 157, additive rank 13.
+~~~
+
+This is a representation change, not an intertwiner: phase disintegration can
+raise one rank while lowering the other.
+
+## 7. Necessary and sufficient sidecar
 
 Let `V in Q[C_168]` be any additional coefficient-plane word and allow all
 its phase translations.  Since `M_g` is already nonzero on the other 157
@@ -222,8 +296,27 @@ characters,
 
 ```text
 span_C168(M_g,V)=Q[C_168]
-iff Vhat(k)!=0 for every k in (6).                     (17)
+iff Vhat(k)!=0 for every k in (6).                     (21)
 ```
+
+Let e_r be the Boolean indicator of one norm fibre and put
+
+~~~text
+C_r=12*e_r-1.                                          (22)
+~~~
+
+The centered marker C_r has Fourier support exactly on the eleven missing
+characters. Its translation orbit has rank 11 and is the exact direct
+complement to the rank-157 owner ideal. It has zero total and is necessarily
+signed: fourteen entries are positive and 154 are negative.
+
+The Boolean marker e_r is nonnegative and has orbit rank 12. It contains the
+same eleven missing characters plus the trivial character, so adjoining it
+fills the regular module with exactly one trivial-line overlap. This is the
+sharp positivity tax. Any nonzero nonnegative rational word has positive
+total mass and therefore a nonzero trivial Fourier coefficient; if it also
+fills all eleven missing modes, its orbit rank is at least twelve. The fibre
+indicator attains that lower bound.
 
 A single labeled phase atom `V=delta_j` has a root of unity, hence a nonzero
 coefficient, at every character and repairs all eleven missing modes.  This
@@ -232,9 +325,9 @@ has only the trivial Fourier coefficient and repairs none of `(6)`.
 
 The theorem therefore identifies the cheapest missing datum: not another
 unlabeled mass or asymptotic corrector, but an absolute phase marker (or any
-sidecar meeting the eleven tests in `(17)`).
+sidecar meeting the eleven tests in `(21)`).
 
-## 7. Scope and holotopy boundary
+## 8. Scope and holotopy boundary
 
 This is a coefficient-plane theorem.  It neither constructs a canonical
 owner-to-Singer identification nor produces a physical LRC endpoint marker.
@@ -248,18 +341,21 @@ the dilation, or adjoining THM-3252's signed Hodge word cannot recover the
 lost `C_12` augmentation directions.  Any proposed transport through the
 THM-3253 frame must supply a sidecar that breaks twelve-balance.
 
-## 8. Exact companion
+## 9. Exact companions
 
 Run
 
 ```text
-python 04-computation/lrc_twelve_balance_singer_rank_defect_thm3255.py
-python -O 04-computation/lrc_twelve_balance_singer_rank_defect_thm3255.py
+python3 04-computation/lrc_twelve_balance_singer_rank_defect_thm3255.py
+python3 -O 04-computation/lrc_twelve_balance_singer_rank_defect_thm3255.py
+python3 04-computation/lrc_multiplicative_singer_twelve_balance_discovery_20260803.py
+python3 -O 04-computation/lrc_multiplicative_singer_twelve_balance_discovery_20260803.py
 ```
 
-and compare LF-normalized bytes with the declared output.  The companion uses
-exact integer and rational arithmetic only.  It has no floating point,
-randomness, discovery cache, CAS dependency, or optimization-sensitive
-assertion.
+and compare LF-normalized bytes with their declared outputs. The primary
+companion uses a CAS-independent exact cyclotomic certificate. The secondary
+companion uses exact SymPy polynomial arithmetic for the phase-slice and
+marker strengthening. Neither has floating point, randomness, a discovery
+cache, or an optimization-sensitive assertion.
 
 QED.

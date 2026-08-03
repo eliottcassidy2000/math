@@ -42,7 +42,7 @@ THM-3150/3156 give the body-`H` skeleton. THM-3171 closes cell 90/cap two for
 all `D>=6` and gcd cones; THM-3200/3211 give ray quasipolynomials, sharp
 `1/105`, signed `1/g`, and constant residue. THM-3224 gives the complete
 orbit's nonzero periodic `g^-2` gcd-carry (sharp `9/49`) and owner Hodge split; audited THM-3246 closes one 12-cell seam for all dilations, with a fixed `156+ / 12-` second-corrector word but no row exclusion.
-THM-3234/3240/3247/3250/3259 close the abstract charged/free-factor bridge; THM-3252/3253 give signed/positive ranks `2,028/2,041`. Placement remains abstract: endpoint/target/ancestry, heads, other cells, rung, entry and LRC(14) stay **OPEN**.
+THM-3234/3240/3247/3250/3259 close the charged/free-factor bridge; THM-3252/3253 give additive ranks `2,028/2,041`. THM-3255 gives whole/slice multiplicative ranks `157/168`, slice additive rank at most seven, and marker ranks `11/12`. No physical norm-phase handoff or LRC(14) result is known.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
 supplied-root seams, not semantic-root identification (kernel `28,393`).
@@ -305,7 +305,7 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   nonzero gcd-carry curvature, owner exact part, periodic constant, and head.
   THM-3181/3202/3213 give minimal join laws, a fast cyclic jet, and balanced
   fixed-depth non-P-recursiveness; THM-3226/3235 give saddles and blowup
-  decimation; THM-3248 gives the Q4 Stirling compiler; THM-3256 separates a compact FC selector/factored distance sequence from injective signed continuation. Q4 radius/non-P stay OPEN.
+  decimation; THM-3248 gives the Q4 Stirling compiler; THM-3256 separates a compact FC selector/factored distance sequence from injective signed continuation. THM-3262 marks a second face: unmarking preserves distance but loses the selector and `80` signed classes. Q4 radius/non-P stay OPEN.
 - **EXACT identities / heuristic bridge:** corrected HYP-8820 puts caterer,
   cake, Moser, bagel, and Fibonacci in one Pascal array and proves
   `bagel(n)-cake(n)=T_n-1`; Klein-S313 realizes full-rank g-bonacci kernels.
@@ -387,7 +387,7 @@ Classify profiles under support operations; study analytic continuation and auto
   constant family `(Vz^2+bz+c)^2+A_src z+kx`; generic counts are `52`/`28`.
   THM-3225 excludes every affine `B` in `(Vz^2+Bz)^2+A_src z+x`: no `T`
   escape, at most two at `S`, and at least `50` intersection units remain.
-  THM-3237 gives the first degree-nine monomial infinity face. THM-3257 tunes degree eight on its wall to a cubic-root C3 escape; `52` critical points remain. Keller chart/cofactor units, other deformations and JC(2) stay open.
+  THM-3237 gives the first degree-nine monomial infinity face. THM-3257 tunes degree eight to cubic escape; THM-3263 reopens/retunes degree seven to an odd quartic resultant escape. `51` critical points remain; Keller cofactors, an inverse cover and JC(2) stay open.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
   `2201<=d<=2400` and all `35` residuals in `2401<=d<=2500` close by matching
@@ -398,7 +398,7 @@ Classify profiles under support operations; study analytic continuation and auto
   fixed-parameter Clifford law. THM-3186 gives P-recursive tails; THM-3210's
   two-step nonmonotone cancellation ray still blocks the staircase. The `p>2m`
   full-flag formula is VERIFIED only; `FC(3)`/`SFC(3)` remain OPEN.
-  THM-3249 proves the two-face atlas/no-common-gauge boundary; THM-3254 proves all 31 pairs have a two-state clutch, 23 a graded no-go. THM-3256 gives row 2/10 an optimal depth-5/15-leaf policy; signed continuation keeps all `4,319` starts while distance factors. Other faces stay open; gates THM-3204/3205/3210.
+  THM-3249 gives the two-face/no-common-gauge atlas; THM-3254 gives 31 clutches and 23 graded no-gos. THM-3256 gives row 2/10 a depth-5/15-leaf policy; THM-3262 proves its two-face join needs one bit, has Pareto points `(6,23),(8,22)`, and signed tax `80`. Other faces stay open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
@@ -419,8 +419,8 @@ The most reusable current bridges are not literal object identifications:
 | Whole-layer Frobenius / orbit norm | NC2/TNC | Packet preservation transfers; LRC lacks seed/exit and a `-1` stabilizer needs orientation. |
 | Quotient + sidecar | spectrum/SCC/support quotients | Which lost coordinate restores the target predicate? |
 | Bulk / boundary / null | THM-2058 | Large-prime grids are strict; tight support uses finitely many level-14 clocks; subthreshold packets vanish. |
-| Operation-response | tournament/FC/sequence operations | THM-3248 retains Q4's numerator; THM-3256 separates selector, signed trace, and abelianized sequence. Compile only the response consumed downstream. |
-| Strict transform | factorial PRS / JC infinity | [Divide and recompute](../07-reflections/positive-masses-cubic-walls-and-policy-compilers-2026-08-03.md): THM-3257 makes degree eight live on THM-3237's wall; retain cofactors/root type. |
+| Operation-response | tournament/FC/sequence operations | THM-3248 retains Q4's numerator; THM-3256 separates selector/trace/sequence; THM-3262 makes the face bit catalytic. |
+| Strict transform | factorial PRS / JC infinity | THM-3257 makes degree eight live; THM-3263 reopens/retunes degree seven. Retain cofactors and root type. |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Finite observer / recurrence | THM-3171/3172/3180/3181 | Is it invertible, a refuter, or only an address; which sidecar makes termination lawful? |
 | Continuation / min-plus kernel | Gordian profile; THM-840/853 | Which sidecar remains target-preserving under every future operation? |

@@ -45,15 +45,15 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    cofinite aperiodic return set with infinitely many zero odd constant terms.
    HYP-8930's fixed-support unique-channel lemma survives. HYP-8931 is vacuous:
    `lambda=0, delta=-1, F=empty`; `98/116` is a bounded census, not a theorem (MISTAKE-240).
-9. **Whole-packet Frobenius is not an LRC proof.** THM-3234/3240/3243/3247/3250/3252/3259 close charged/free-factor algebra; THM-3253 adds positive rank 2,041. Physical placement, endpoint/target/ancestry and exit remain open.
+9. **Whole-packet Frobenius is not an LRC proof.** THM-3234/3240/3243/3247/3250/3252/3259 close charged/free-factor algebra; THM-3253 adds positive rank 2,041. THM-3255 gives whole/single-phase multiplicative ranks 157/168 and single-phase additive rank at most 7. Physical placement and exit remain open.
 10. **Tournament structure is operational.** THM-1862/1936 give join laws; THM-1926 the strong core; THM-2195 the scalar substitution boundary; and THM-3121 the path-cover kernel.
    THM-3181/3202 separate fixed/moving jets; THM-3226/3235 give saddles and blowup decimation; THM-3248 compiles paired-owner Q4 blowups. Observer twins block generic scalar compression; the Q4 radius is open.
 11. **A reciprocal integer sequence has two profiles.** THM-2000/2005/2352 separate support, multiplicity, and q-adic thresholds; THM-2438/2433/2500 give the Poisson--Newton transform and finite-hole classification.
-    THM-3186 gives P-recursive tails; THM-3231 strict transforms; THM-3238/3244 one `4,319`-state two-row bank. THM-3256 gives its optimal depth-5/15-leaf policy, injective signed continuation, and factored distance. Other faces, the next row and `FC(3)` remain open.
+    THM-3186 gives P-recursive tails; THM-3231 strict transforms; THM-3238/3244 one `4,319`-state two-row bank. THM-3256 gives its depth-5/15-leaf policy; THM-3262 joins a second face with one necessary bit, Pareto points 6/23 and 8/22, signed tax 80, and a marked factored distance polynomial. Other faces, the next row and `FC(3)` remain open.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close linear through cubic fibers and twice-odd finite poles; THM-2214/2217/2247 close the inherited nonsplit train through degree `14`.
     At degree `18`, THM-2297--2359 reduce the sparse/squarefree branches; THM-2371/THM-2376 close `H_2S_5^2`, and hostile-audited THM-2406 closes the remaining `H_4` locus. THM-2671--2755 close the inherited degree-22 split/nonsplit families; THM-2778 closes chosen-sheet polynomial exact prefixes, while THM-2796 retains `A(R_Q/q)=VG`.
     THM-3057/3059 tame infinity-inertia sign, but THM-3064/3066 retain quotient loss. THM-3123's abstract `S7` maps lack Keller-chart entry; THM-3133/3140 only close their stated response cells.
-    THM-3212/3225 leave critical points; THM-3237 the first monomial infinity face. THM-3257 tunes degree eight to cubic-root C3 escape, but 52 critical points remain. Chart/cofactor units, other branches, `JC(2)`, and `DC(2)` stay open.
+    THM-3212/3225 leave critical points; THM-3237 the first monomial infinity face. THM-3257 tunes degree eight to cubic escape; THM-3263 retunes degree seven to an odd quartic escape, but 51 critical points remain. This is resultant, not Jelonek inertia. Chart/cofactor units, an inverse cover, other branches, `JC(2)`, and `DC(2)` stay open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
