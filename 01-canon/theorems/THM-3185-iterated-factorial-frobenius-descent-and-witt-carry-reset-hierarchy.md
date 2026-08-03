@@ -2,7 +2,7 @@
 id: THM-3185
 title: "Iterated factorial Frobenius descent and Witt-carry reset hierarchy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The factorial Gauss--Manin state descends through arbitrarily many prime
   blocks: z_(Kp+a)^[d]=s^K z_a^[s] modulo p when d=s modulo p.  At the
   ell-th reset, h=1+v_p(ell) is exactly the thickness of both transverse
@@ -14,7 +14,9 @@ audit: >
   reset determinantal divisors at ordinary and carried block numbers,
   exact compound-matrix reconstruction and both normalized exterior layers,
   and discriminant walls of orders one and two.  Normal and optimized replay
-  agree with the stored transcript.  Independent immutable audit is pending.
+  agree with the stored transcript.  Two independent immutable audits
+  rederived the state and matrix descents, every Smith/gauge/wall formula,
+  both exterior layers, and the global ledger.
 source: root/multiscale-newton-flag/low-child-flag-extension/2026-08-02
 depends_on:
   - THM-3182-factorial-gauss-manin-rank-one-reset-and-two-transverse-smith-bands
@@ -30,7 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3185 -- iterated factorial Frobenius descent and Witt-carry reset hierarchy
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3182 isolates the first prime reset.  The same mechanism repeats at every
 prime block, but not with constant thickness: the block number contributes
