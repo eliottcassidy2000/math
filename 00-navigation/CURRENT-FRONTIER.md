@@ -190,15 +190,15 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   THM-3210 realizes a visible/invisible/invisible/visible rational window.
   THM-3206 keeps the complementary plane under heterogeneous blocks and makes
   its parabolic wall a binary-quadratic resultant. THM-3192 identifies the
-  offset-six `H,J,K` charts; THM-3217 gives a universal three-row fixed-offset
-  PRS atlas with finite exceptional primes. THM-3214 proves sharp pseudo-division
-  jet costs `2k`/`2k+1`. THM-3215 upgrades any selected common simple root to
-  a flat arbitrary-degree affine-dihedral two-jet transport with primitive
-  `p`-fold carry. THM-3220 adds the four-jet Heisenberg/Schwarzian center;
-  THM-3221 makes the first live osculating layer canonical; a selected root,
-  derivative anchor and full normalized tower through `D` reconstruct degree `<=D`.
-  THM-3228 forces `p^2` points before a full mod-`p` four-jet permutation
-  action can be center-faithful. Global root choice and lawful carrier stay open.
+  offset-six `H,J,K` charts; THM-3217/3223 give a fixed-offset PRS atlas through
+  row five with finite exceptional primes. At offset two, `p=43` kills pivot four,
+  pivot five returns, and the next row vanishes; no all-depth theorem follows.
+  THM-3214 proves sharp `2k`/`2k+1` jet costs. THM-3215/3220 give selected-root
+  two-/four-jet transport and its Heisenberg center; THM-3221 makes the first live
+  osculating layer canonical; a selected root, derivative anchor, and full tower reconstruct degree `<=D`.
+  THM-3227 gives the selected-root contact trie; THM-3229 gives the root-free
+  simple-root contact-gcd flag, not a selector or factorial PRS. THM-3228 forces
+  `p^2` points for center faithfulness. Global root choice/lawful carrier stay open.
 
 ### Live work
 
