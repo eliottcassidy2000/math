@@ -1,6 +1,11 @@
 # Degree-at-most-eight polynomial clutch no-go
 
-**PROVED CANDIDATE + VERIFIED-EXACT; independent hostile audit pending.**
+**PROMOTED AS
+[THM-3276](../01-canon/theorems/THM-3276-degree-at-most-eight-polynomial-clutch-critical-no-go.md),
+VERIFIED-EXACT, AND INDEPENDENTLY HOSTILE-AUDITED.** The independent audit
+rederived the gradient resultant, degree/boundary ledgers, exact triangular
+jet slope, good-reduction coprimality and critical-point consequence through
+separate engines.
 
 ## Inheritance
 
@@ -63,7 +68,8 @@ Hence `H_B` has no `T` root in the coprime lane.
 At the simple `S` root write `c=B(s)!=0` and expand `B` in its nine Taylor
 coefficients. The `S^3` boundary is automatic. Successively killing the
 coefficients of `K_B` in degrees 3 through 10 uniquely solves for the eight
-remaining jets of `B`. Each slope is a nonzero scalar times `c^4`. The first
+remaining jets of `B`. The exact slope at jet `j` is
+`16j*c^4*v_1^3`, hence nonzero. The first
 two coefficients no longer controlled by a degree-eight jet are
 
 ```text

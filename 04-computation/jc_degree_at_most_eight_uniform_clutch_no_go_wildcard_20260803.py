@@ -385,6 +385,11 @@ def build_case(name: str):
         two_value = critical_resultant_series(
             V_series, A_series, B_series, laurent_field
         )[target_degree]
+        expected_slope = 16 * jet * C**4 * V_series[1] ** 3
+        require(
+            slope == expected_slope,
+            f"{name} jet {jet} exact triangular slope",
+        )
         require(
             two_value - constant == 2 * slope,
             f"{name} jet {jet} triangular affine dependence",

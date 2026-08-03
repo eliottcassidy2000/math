@@ -2,7 +2,7 @@
 id: THM-3276
 title: "Degree-at-most-eight polynomial clutch critical no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING. For
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For
   either THM-3212 cubic accessory response pair and every polynomial clutch
   B of degree at most eight, the displayed first coordinate P_B has a
   critical point. If B is a unit on the owner divisor, at least 43 units of
@@ -16,8 +16,11 @@ audit: >
   the universal degree and boundary ledgers, and uses a fresh exact Laurent
   engine to eliminate the eight available simple-boundary jets successively.
   In each field it proves that the first two untunable Laurent coefficients
-  have coprime numerators. Normal, optimized and stored outputs agree
-  byte-for-byte. Independent hostile audit is pending.
+  have coprime numerators. An independent audit rederived the elimination,
+  degree and boundary ledgers, proved the exact triangular slope
+  16*j*c^4*v_1^3, and reconstructed the two coprime untunable pairs through
+  separate rational-function and good-reduction engines. Normal, optimized
+  and stored outputs agree byte-for-byte.
 depends_on:
   - THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch
   - THM-3225-affine-jacobian-clutch-resultant-and-two-boundary-no-escape
@@ -27,14 +30,14 @@ related:
   - THM-3265-degree-six-retuned-quintic-infinity-wall-and-five-root-critical-escape
 script: 04-computation/jc_degree_at_most_eight_uniform_clutch_no_go_wildcard_20260803.py
 output: 05-knowledge/results/jc_degree_at_most_eight_uniform_clutch_no_go_wildcard_20260803.out
-script_sha256: e0db8c53517949b207da82737d12670cd40a1a6575496c7299bc86a4dfc5d092
+script_sha256: acdd3b274f3e2692040219626c93302bd14e3bc729790c1a2d7aab5798f35790
 output_sha256: 0472f414b5d55f04aaa0c165734daff6a3144fb456bd1ee651283b041e511c29
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3276 -- degree-at-most-eight polynomial clutch critical no-go
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Universe and statement
 
@@ -180,24 +183,30 @@ B=c+b_1t+...+b_8t^8,              c!=0.                  (14)
 The coefficient of `t^2` in `(6)` cancels identically, giving the inherited
 `S^3` factor. After the earlier jets have been fixed, the coefficient of
 `t^(j+2)` is affine in the new jet `b_j`, for `j=1,...,8`. In both exact
-accessory fields its slope is a nonzero scalar times `c^4`. Therefore there
-is a unique successive tuning which kills the eight coefficients
+accessory fields its exact slope is
 
 ```text
-[t^3]K_B,...,[t^10]K_B.                                  (15)
+16j c^4 v_1^3 !=0.                                      (15)
+```
+
+Therefore there is a unique successive tuning which kills the eight
+coefficients
+
+```text
+[t^3]K_B,...,[t^10]K_B.                                  (16)
 ```
 
 Working exactly in the Laurent field `K_i[c,c^(-1)]`, the tuned jet degree
 profiles `(numerator degree, denominator degree)` are
 
 ```text
-(1,0),(3,2),(4,3),(6,5),(7,6),(9,8),(10,9),(12,11).      (16)
+(1,0),(3,2),(4,3),(6,5),(7,6),(9,8),(10,9),(12,11).      (17)
 ```
 
-No degree-eight jet remains after `(15)`. Put
+No degree-eight jet remains after `(16)`. Put
 
 ```text
-F_11(c)=[t^11]K_B,              F_12(c)=[t^12]K_B.       (17)
+F_11(c)=[t^11]K_B,              F_12(c)=[t^12]K_B.       (18)
 ```
 
 The exact two-field calculation gives
@@ -207,15 +216,15 @@ The exact two-field calculation gives
 F_11                       13              c^8
 F_12                       15              c^10,
 
-gcd(num(F_11),num(F_12))=1                               (18)
+gcd(num(F_11),num(F_12))=1                               (19)
 ```
 
-in each `K_i[c]`. Since `c!=0`, `(18)` says the two untunable coefficients
+in each `K_i[c]`. Since `c!=0`, `(19)` says the two untunable coefficients
 cannot vanish together over any algebraic closure of `K_i`. Thus every
 degree-at-most-eight clutch satisfies
 
 ```text
-ord_S(K_B)<=12,                  ord_S(H_B)<=9.           (19)
+ord_S(K_B)<=12,                  ord_S(H_B)<=9.           (20)
 ```
 
 This is the load-bearing finite-dimensional obstruction: eight adjustable
@@ -224,11 +233,11 @@ root.
 
 ## 5. Surviving critical points
 
-In the coprime lane, `(12)` excludes every `T` root and `(19)` absorbs at
+In the coprime lane, `(12)` excludes every `T` root and `(20)` absorbs at
 most nine of the 52 units in `(10)` at `S`. Hence at least
 
 ```text
-52-9=43                                                     (20)
+52-9=43                                                     (21)
 ```
 
 units remain at roots of `H_B` away from `g`, where `V!=0`.
@@ -236,7 +245,7 @@ units remain at roots of `H_B` away from `g`, where `V!=0`.
 The leading `y` coefficient of `R_1` is the constant four. Therefore each
 such resultant root supports an affine common zero of `(4)`, and the exact
 localized gradient reduction turns it into a critical point of `P_B`.
-Multiplicity, not distinctness, is counted in `(20)`; only existence is used.
+Multiplicity, not distinctness, is counted in `(21)`; only existence is used.
 
 ## 6. Failure anatomy and scope
 
@@ -277,5 +286,4 @@ exact rational and cubic-field arithmetic only, has no assertion node,
 floating literal, randomness or optimization-sensitive branch, and pins six
 direct inherited artifacts.
 
-QED, conditional only on the pending independent audit required for status
-promotion.
+QED.
