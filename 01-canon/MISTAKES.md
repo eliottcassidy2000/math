@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-359 (2026-08-02, THM-3183 top-jet evidence) -- an exact symbolic helper admitted a float and constructed two truncated rows without their predecessors
+
+- **What failed:** THM-3183's maintained companion described its offset-six
+  top-jet calculation as exact, but the codimension-zero branch formed
+  `1/1` with Python division and therefore introduced `Float(1.0)`.  The same
+  helper constructed the unused lower entries `R[0],S[0],S[1]` after replacing
+  unavailable predecessor coefficients by zero.  For example, at `p=5` its
+  displayed internal `R[0]` was `1428382771200`, whereas direct multinomial
+  expansion gives `-36838416384000`.
+- **Why it did not invalidate the theorem:** the asserted and independently
+  audited THM-3183 identities use only the leading entries `R[3]` and `S[2]`.
+  Those entries require no omitted predecessor, agree with direct integer
+  expansion, and still factor by the stated `H` and `J`.  No proved matrix,
+  Smith, continuant, wall, or PRS-leading formula changes.
+- **Repair:** use an explicit SymPy `Rational` factorial normalization, allow
+  exact negative factorial shifts relative to `(2p)!`, extend `A,B,R` far
+  enough that every constructed row has its true predecessor, and compare all
+  66 resulting `A/B/R/S` entries directly with integer multinomial sums at
+  `p=5,7,11`.  The reusable rule is that an unused symbolic row is still part
+  of the evidence surface: either construct it lawfully or do not construct
+  it, and never infer exactness merely because a `1.0` coefficient is
+  mathematically integral.
+
 ## MISTAKE-358 (2026-08-02, THM-3169 stale post-QED status) -- a promoted theorem retained its candidate disclaimer
 
 - **What failed:** THM-3169's frontmatter and audit record correctly marked the

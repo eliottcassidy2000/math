@@ -2,7 +2,7 @@
 """Exact controls for THM-3183's Hecke square and wedge continuant."""
 
 from itertools import combinations
-from math import factorial
+from math import comb, factorial
 
 import sympy as sp
 
@@ -178,9 +178,12 @@ offset6 = p + 6
 
 def factorial_ratio(argument):
     shift = sp.expand(argument - 2 * p)
-    require(shift.is_Integer and shift >= 0,
-            "invalid top-factorial shift")
-    return sp.prod(2 * p + index for index in range(1, int(shift) + 1))
+    require(shift.is_Integer, "invalid top-factorial shift")
+    shift = int(shift)
+    if shift >= 0:
+        return sp.prod(2 * p + index for index in range(1, shift + 1))
+    return sp.cancel(1 / sp.prod(2 * p - index
+                                for index in range(0, -shift)))
 
 
 def top_coefficient(degree_shift, coefficient_shift):
@@ -190,7 +193,7 @@ def top_coefficient(degree_shift, coefficient_shift):
     require(codimension >= 0, "negative top codimension")
     choose = (sp.prod(p + degree_shift - index
                       for index in range(codimension))
-              / factorial(codimension))
+              * sp.Rational(1, factorial(codimension)))
     total = sum(
         sp.binomial(codimension, ell)
         * offset6 ** (codimension - ell)
@@ -201,16 +204,16 @@ def top_coefficient(degree_shift, coefficient_shift):
     return sp.factor(sp.cancel(choose * total))
 
 
-A = {shift: top_coefficient(4, shift) for shift in range(5)}
-B = {shift: top_coefficient(5, shift) for shift in range(6)}
+A = {shift: top_coefficient(4, shift) for shift in range(-2, 5)}
+B = {shift: top_coefficient(5, shift) for shift in range(-1, 6)}
 C = (2 * p + 10) * (2 * p + 9)
 R = {
     shift: sp.factor(
         (2 * p + 7) * B[shift]
-        - (2 * p + 7) * C * A.get(shift - 1, 0)
+        - (2 * p + 7) * C * A[shift - 1]
         + 2 * (p + 5) * (p + 6) * A[shift]
     )
-    for shift in range(4)
+    for shift in range(-1, 4)
 }
 H = 24 * p + 109
 D2 = (p + 5) * (2 * p + 3) * H**2
@@ -218,7 +221,7 @@ N1 = -2 * (2 * p + 5) * (2 * p + 7) * (2 * p + 3) * H
 N0 = 4 * (p + 6) * (2 * p + 5) * (28 * p + 123)
 S_prs = {
     shift: sp.factor(D2 * A[shift]
-                     - N1 * R.get(shift - 1, 0)
+                     - N1 * R[shift - 1]
                      - N0 * R[shift])
     for shift in range(3)
 }
@@ -230,6 +233,60 @@ expected_S = (4 * sp.prod(p + index for index in range(1, 6))
               * (2 * p + 7) * J)
 require(sp.factor(R[3] - expected_R) == 0, "offset-six H pivot")
 require(sp.factor(S_prs[2] - expected_S) == 0, "offset-six J pivot")
+
+
+def direct_moment_coefficient(order, scalar_d, coefficient_index):
+    return comb(order, coefficient_index) * sum(
+        comb(order - coefficient_index, ell)
+        * scalar_d ** (order - coefficient_index - ell)
+        * (-1) ** ell
+        * factorial(2 * coefficient_index + ell)
+        for ell in range(order - coefficient_index + 1)
+    )
+
+
+DIRECT_TOP_JET_CHECKS = 0
+for prime in (5, 7, 11):
+    denominator = factorial(2 * prime)
+    scalar_d = prime + 6
+    direct_a = {
+        shift: direct_moment_coefficient(prime + 4, scalar_d,
+                                         prime + shift)
+        for shift in A
+    }
+    direct_b = {
+        shift: direct_moment_coefficient(prime + 5, scalar_d,
+                                         prime + shift)
+        for shift in B
+    }
+    direct_r = {
+        shift: ((2 * prime + 7) * direct_b[shift]
+                - (2 * prime + 7) * ((2 * prime + 10) * (2 * prime + 9))
+                  * direct_a[shift - 1]
+                + 2 * (prime + 5) * (prime + 6) * direct_a[shift])
+        for shift in R
+    }
+    h_value = 24 * prime + 109
+    d2_value = (prime + 5) * (2 * prime + 3) * h_value**2
+    n1_value = (-2 * (2 * prime + 5) * (2 * prime + 7)
+                * (2 * prime + 3) * h_value)
+    n0_value = (4 * (prime + 6) * (2 * prime + 5)
+                * (28 * prime + 123))
+    direct_s = {
+        shift: (d2_value * direct_a[shift]
+                - n1_value * direct_r[shift - 1]
+                - n0_value * direct_r[shift])
+        for shift in S_prs
+    }
+    for symbolic, direct, label in ((A, direct_a, "A"),
+                                    (B, direct_b, "B"),
+                                    (R, direct_r, "R"),
+                                    (S_prs, direct_s, "S")):
+        for shift, expression in symbolic.items():
+            require(expression.subs(p, prime)
+                    == sp.Rational(direct[shift], denominator),
+                    ("direct top jet", label, prime, shift))
+            DIRECT_TOP_JET_CHECKS += 1
 
 j = sp.symbols("j", integer=True)
 bare_pivot = sp.factor(expected_pivot.subs({n: p + j, d: p + 6}))
@@ -250,6 +307,7 @@ print("smith_fixture_count=" + str(len(fixtures)))
 print("two_step_pivot=(n+2-d)n(n+1)Delta*d")
 print("same_smith_hostile_observed_valuations=(infinity,1,2)")
 print("offset6_prs_leading_pivots=(H,J)")
+print("offset6_direct_top_jet_checks=" + str(DIRECT_TOP_JET_CHECKS))
 print("offset6_bare_wall=(j-4)(p+j)(p+j+1)(p+6)Delta")
 print("scope=no_floor_s_over_2_or_arbitrary_offset_claim")
 print("ALL EXACT CHECKS PASSED")

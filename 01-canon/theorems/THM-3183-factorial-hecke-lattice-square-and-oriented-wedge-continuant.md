@@ -19,6 +19,10 @@ audit: >
   rederived every matrix, Smith profile, length identity, pivot, wall, and
   hostile.  A separate pure-integer multinomial interpolation at p=0..20,
   with degree bounds 11 and 15, independently proves the H and J identities.
+  MISTAKE-359 repairs an evidence-only float/truncated-window defect in the
+  original top-jet helper: the maintained script now uses exact Rational
+  normalization, constructs every required predecessor coefficient, and
+  matches 66 direct integer A/B/R/S coefficients at three primes.
 source: root/multiscale-newton-flag/2026-08-02
 depends_on:
   - THM-3182-factorial-gauss-manin-rank-one-reset-and-two-transverse-smith-bands
@@ -27,8 +31,8 @@ related:
   - THM-3160-complete-pluecker-pole-holotopy-and-selector-projection-no-go
 script: 04-computation/factorial_hecke_lattice_wedge_continuant_thm3183.py
 output: 05-knowledge/results/factorial_hecke_lattice_wedge_continuant_thm3183.out
-script_sha256: 7f4996b05d4555b19fd4d34b32aefa4ea34efd6c57febc169932a433dcb7ac2c
-output_sha256: e4322d175a00fbd94690a892ec7eeba48b119e98acf4a98b10fba6340cd33d42
+script_sha256: 5da6dea97dd8cb51b332d4a133a448fc8d7f0f15a2c07463d721043cd976ac65
+output_sha256: 2ba36ca1337b74b111300f1eac8fc45b422d499495e87d4a0080908d81630b19
 hash_basis: LF-normalized bytes
 ---
 
