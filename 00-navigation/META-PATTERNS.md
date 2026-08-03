@@ -2,6 +2,13 @@
 
 **Status:** CURRENT. **Role/Use:** compact defaults from repeated successes and failures; scan triggers and evidence. Each card states applicability, action, mechanism, and counterindication; new cards require distinct-thread evidence or a severe repaired failure.
 
+## Classify finite observers before deciding
+
+**Trigger/action:** label each finite observer inverse, refuter, or address;
+state its gate and sidecar. **Caution:** a unit or empty degree intersection
+only refutes; nonempty bars, first-owner entry, scalar values, unlabelled
+floor moments lose data. **Evidence:** THM-3171/3172/3180/3181/3183/3200/3201/3202.
+
 ## Peel the distinguished prime, then force a small torsion collision
 
 **Trigger/action:** for density-`1/p` combs on `D`, prove the quotient-index dichotomy after `D=pq`, split transverse sections from vertical spikes, and
