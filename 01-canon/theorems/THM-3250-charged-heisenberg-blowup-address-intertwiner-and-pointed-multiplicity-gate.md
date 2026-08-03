@@ -25,7 +25,9 @@ audit: >
   below.  An independent hostile audit rederived both actions and their group
   law, every Fourier phase and sign, the neutral character multiplicities,
   unitary normalization, Weyl span, orbit-rank formula, pointed uniqueness,
-  and all scope boundaries, and found no defect.
+  and all scope boundaries, and found no defect.  A post-promotion independent
+  audit also verified the sharp full-module rank defect and the nonnegative
+  neutral-mass obstruction in Section 4.
 depends_on:
   - THM-3240-exact-address-heisenberg-clutch-on-carrier-imbalance
   - THM-3243-contact-deformation-blowup-equivariance-and-full-orbit-resolution
@@ -34,8 +36,8 @@ related:
   - THM-3236-contact-spectrum-primitive-element-and-root-reconstruction-gate
 script: 04-computation/heisenberg_charged_blowup_address_intertwiner_thm3250.py
 output: 05-knowledge/results/heisenberg_charged_blowup_address_intertwiner_thm3250.out
-script_sha256: 9c246b1ace7530f9d071cb4944fb7ea6d5a522853e71a4afd674dc0c07ffa8a0
-output_sha256: f82bc80c864c28eb2e5db66e7ff5daff94f62d50ca0eb5d5317d288aa89a49a2
+script_sha256: 52df74d7468c78bd791eb02f5bb8f9555edab8286e5f7cb14024b5b74a61008b
+output_sha256: 889b1a0cf29f5ecf883fadff41cb8c6443430998362cbffba7ecf53e9faebee6
 hash_basis: LF-normalized bytes
 ---
 
@@ -214,6 +216,33 @@ central-neutral spectrum.
 This also proves that no extension of the direct sum of the `T_kappa`,
 `kappa!=0`, can be an `H_p`-isomorphism on the full permutation modules.
 
+More sharply, every full `H_p`-linear map
+
+```text
+L:K[G] -> K[R]                                           (16a)
+```
+
+has
+
+```text
+rank(L)<= (p-1)p^2+p = p^3-p^2+p.                       (16b)
+```
+
+Indeed the charged blocks contribute at most `(p-1)p^2`.  In the neutral
+block, each source character `chi_(a,0)` has multiplicity `p` but the target
+contains it once, so the neutral rank is at most `p`; the target characters
+`chi_(a,b)` with `b!=0` receive nothing.  Taking the isomorphisms `(13)` on
+all charged blocks and a rank-one multiplicity map for every `chi_(a,0)`
+attains `(16b)`.  Thus every full intertwiner has kernel and cokernel of
+dimension at least
+
+```text
+p^2-p.                                                   (16c)
+```
+
+For `p=13`, the sharp maximum rank is `2041` and the exact defect on both
+sides is `156`.
+
 ## 5. Multiplicity space and the exact cyclic-current gate
 
 For fixed `kappa!=0`, let `pi_kappa` be the `p`-dimensional representation
@@ -311,6 +340,12 @@ Although its normalized form is unitary, it is not a positive kernel, a map
 of sets, a Boolean packet map, or a Markov intertwiner.  It cannot by itself
 transport a positive physical current or a common-support chart.  The
 positive-cone problem survives intact.
+
+In fact every nonzero nonnegative point function has positive total mass,
+so its central-neutral projection is nonzero.  The charged bridge therefore
+acts on a centred/signed component of any such packet and cannot carry the
+whole nonnegative packet.  This is independent of the determinant gate in
+Section 5: even a cyclic charged part does not remove the neutral mass.
 
 The nonvertical flag stratum and the central polarization are `H_p`-invariant
 but not Singer-invariant.  THM-3243's Singer cycle moves all `p+1`

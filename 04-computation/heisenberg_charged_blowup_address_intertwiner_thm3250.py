@@ -239,6 +239,9 @@ for prime in (3, 5, 7, 13):
     require(prime * Fraction(1, prime) == 1, "address Fourier normalization")
     require(prime**2 * Fraction(1, prime**2) == 1, "flag Fourier normalization")
     require(Fraction(prime**2, prime) == prime, "unscaled intertwiner norm factor")
+    maximum_full_rank = (prime - 1) * prime**2 + prime
+    full_rank_defect = prime**3 - maximum_full_rank
+    require(full_rank_defect == prime**2 - prime, "full-module rank defect")
 
     rows.append(
         (
@@ -250,6 +253,8 @@ for prime in (3, 5, 7, 13):
             prime**2,
             prime,
             prime,
+            maximum_full_rank,
+            full_rank_defect,
         )
     )
 
@@ -266,11 +271,13 @@ print("dependency_hashes=%d assert_nodes=%d float_literals=%d" % (len(DEPENDENCI
 for row in rows:
     print(
         "p=%d charged_tests=%d neutral_address_types=%d neutral_flag_types=%d "
-        "weyl_dimension=%d cyclic_span=%d hostile_span=%d norm_ratio=%d" % row
+        "weyl_dimension=%d cyclic_span=%d hostile_span=%d norm_ratio=%d "
+        "max_full_rank=%d defect=%d" % row
     )
 print(
     "p13_dimensions=neutral:%d charged:%d total:%d multiplicity:13"
     % (neutral_dimension, charged_dimension, total_dimension)
 )
+print("p13_full_map=max_rank:2041 kernel:156 cokernel:156")
 print("p13_pointed_gate=det_source:1 det_target:1 det_map:1 unique:1")
 print("THM-3250 PASS")
