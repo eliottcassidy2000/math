@@ -138,11 +138,13 @@ At the first coordinate,
 C_0=t_0 P_1(E(v,t),v)=-t_0v_0^4 q_3.                    (12)
 ```
 
-Therefore the exceptional row vanishes identically exactly when `t/v` is a
-polynomial of degree at most two.  Its first coordinate is nonzero exactly
-when the third reciprocal-quotient coefficient is nonzero.  This is the
-sharp boundary: the ordinary special-fibre recurrence sees zero, while the
-normal cone sees the first unremoved quotient tail.
+On the simple wall locus `t_0v_0 in R^*`, the exceptional row vanishes
+identically exactly when `t/v` is a polynomial of degree at most two.  Its
+first coordinate is nonzero exactly when the third reciprocal-quotient
+coefficient is nonzero.  Without the `t_0` unit hypothesis, `(10)` remains
+the exact statement but this iff can fail by scalar annihilation.  This is
+the sharp boundary: the ordinary special-fibre recurrence sees zero, while
+the normal cone sees the first unremoved quotient tail.
 
 ## 4. DVR carry law
 
