@@ -29,9 +29,9 @@ DEPENDENCIES = (
     (ROOT / "05-knowledge/results/factorial_six_step_prime_resonance_third_euclidean_newton_thm3176.out",
      "71b73fdcf2247d23ef602d1879b55206846687a03c1891efa560f3beb975cd66"),
     (HERE / "factorial_exterior_path_convolution_thm3186.py",
-     "87b994ee4ce659eaecfdad9e76e34fa98df510ad54d097e02b44626775007dde"),
+     "5bacf9a0d7da1e467f9f22fc0d21d0c0b1968dab955736440e9010fb00e21eff"),
     (ROOT / "05-knowledge/results/factorial_exterior_path_convolution_thm3186.out",
-     "652b4921a73f42d47cef0df9555864df4eb2a27494c7178458f4bb1395938655"),
+     "66d600435bdb58b0fd0b3c82c49c7f9b2154b51e624a12e8b6bb3424ccac5776"),
 )
 for dependency, expected_hash in DEPENDENCIES:
     require(lf_hash(dependency) == expected_hash,
