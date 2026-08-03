@@ -1,21 +1,246 @@
 ---
 id: THM-3260
 title: "Bispanning reset-link holotopy atlas and nonplanar C12 boundary"
-status: "RESERVED / UNPROVED EMPTY STUB"
+status: >
+  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  THM-3254's 23 first-link-blocked row pairs form a connected bipartite
+  graph with one leaf bridge.  Its leafless core has 12 vertices, 22 edges
+  and first Betti number 11.  It is nonplanar, has intrinsic automorphism
+  group C2, and has no intrinsic C12 action.  Positively, it is bispanning:
+  exactly 4,960 unordered complementary spanning-tree pairs form one
+  connected 43,408-edge symmetric-exchange atlas.  Every chart gives an
+  integral unimodular 11-dimensional polarization.  The C2 symmetry fixes
+  no chart.  Hence the dimension-11 match with THM-3255's C12 augmentation
+  defect is noncanonical, but a supplied C12 vertex label plus one tree-pair
+  chart gives the exact missing integral sidecar.
 source: root/2026-08-03
-depends_on: []
-related:
+audit: >
+  The assertion-independent companion pins THM-3254's theorem, script and
+  output plus THM-3255; parses only the two literal pair banks; reconstructs
+  the graph; verifies connectivity, bridge, bipartition, Betti number, an
+  explicit K3,3 subdivision and all degree-compatible automorphisms; exhausts
+  all 4,960 complementary tree pairs and every symmetric exchange; checks
+  connectedness and the free C2 action; and builds an explicit pair of
+  unimodular reduced incidence matrices with integral GL11 transition.
+  Normal, optimized and stored replay and the declared LF hashes are required.
+  Independent hostile audit is pending.
+depends_on:
   - THM-3254-first-shell-two-row-clutch-and-graded-gauge-no-go
   - THM-3255-twelve-balance-multiplicative-singer-rank-defect-and-phase-marker-boundary
+related:
+  - THM-3249-cross-support-upset-atlas-local-sections-and-no-constant-gauge
+  - THM-3244-unique-reset-exposure-deletion-graph-nonmorse-boundary
+script: 04-computation/gmc_bispanning_reset_link_holotopy_thm3260.py
+output: 05-knowledge/results/gmc_bispanning_reset_link_holotopy_thm3260.out
+script_sha256: 404e1eb8bee8b514473a521876271ae97276fbc4b040b2ebd52bb9fa1809e1f0
+output_sha256: e012e06dcc2b437f874857c84cd840bf4c270475c6c36e2ffde7f2a83ab8c443
+hash_basis: LF-normalized bytes
 ---
 
 # THM-3260 -- bispanning reset-link holotopy atlas and nonplanar C12 boundary
 
-**RESERVED / UNPROVED EMPTY STUB.**
+**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
 
-This namespace is reserved for the exact two-spanning-tree atlas of
-THM-3254's leafless reset-link graph, its connected symmetric-exchange
-groupoid, and the nonplanar/non-equivariant boundary to THM-3255's
-eleven-dimensional `C_12` augmentation defect.  No statement in this file is
-presently a proved dependency.
+THM-3254 proves that every lawful two-row covering pair has a sharp two-state
+positive clutch, and that 23 of the 31 pairs already fail on the first link of
+the reset.  THM-3255 independently finds an eleven-dimensional multiplicative
+phase defect.  The equality of dimensions suggests a transport, but dimension
+alone is not structure.
 
+The reset-link graph supplies a surprisingly rich answer.  It has no planar
+or cyclic symmetry capable of identifying the two spaces canonically, yet it
+admits a complete atlas of integral tree/cotree polarizations.  This is the
+precise sense in which the bridge is a holotopy: locally trivial and globally
+connected by exchanges, but with no distinguished chart.
+
+## 1. The reset-link graph and its core
+
+Let the vertices be the response-row labels occurring in THM-3254's 31
+covering pairs.  Delete its eight delayed pairs and retain the 23 pairs whose
+positive ratio line is already covered by reset-link traps.  Call the resulting
+graph `G`.
+
+Exact reconstruction gives
+
+```text
+|V(G)|=13, |E(G)|=23, beta_1(G)=11.                    (1)
+```
+
+The graph is connected.  It has one bridge, `(13,14)`, and row 14 is a leaf.
+Delete that leaf and bridge.  The resulting core `G_0` has
+
+```text
+|V(G_0)|=12, |E(G_0)|=22, beta_1(G_0)=22-12+1=11.      (2)
+```
+
+Its bipartition is
+
+```text
+{2,11,16,18,22} | {3,7,10,13,17,19,21}.               (3)
+```
+
+Thus the core has exactly twice a spanning-tree edge count.
+
+## 2. Two canonical routes fail
+
+First, `G_0` is nonplanar.  An explicit subdivision of `K_(3,3)` has branch
+parts
+
+```text
+{10,3,18} | {11,16,22}.                                (4)
+```
+
+Six branch paths are direct.  The remaining three are
+
+```text
+18-13-11,
+18-19-2-21-16,
+18-7-22.                                               (5)
+```
+
+Their interiors are pairwise disjoint and avoid the six branch vertices.
+Consequently there is no planar-dual cycle/cut Hodge star.
+
+Second, exhaustive degree-compatible permutation gives
+
+```text
+Aut(G_0)=C_2,                                           (6)
+```
+
+where the nontrivial element swaps rows 17 and 21 and fixes every other
+vertex.  In particular the unlabeled graph carries no intrinsic order-12
+action.  The equality
+
+```text
+beta_1(G_0)=dim Aug(Q[C_12])=11                         (7)
+```
+
+is therefore not an equivariant identification with THM-3255's missing
+character module.
+
+## 3. The bispanning atlas
+
+Despite `(4)--(7)`, the 22 edges of `G_0` split into two edge-disjoint spanning
+trees.  One exact ordered example is
+
+```text
+T = {(2,10),(2,13),(2,17),(2,19),(3,11),(3,16),
+     (7,18),(10,11),(10,22),(13,18),(16,21)},
+
+T'={(2,21),(3,22),(7,22),(10,16),(11,13),(13,22),
+     (16,17),(17,22),(18,19),(19,22),(21,22)}.          (8)
+```
+
+Exhausting all 11-edge subsets and identifying a tree with its complement
+gives exactly
+
+```text
+4,960 unordered decompositions E(G_0)=T disjoint_union T'. (9)
+```
+
+Their ordered edge-index digest is
+
+```text
+28285b3925c94703da8a0267642ffe8d20c30f5d76b443c52c146aa525c2b822. (10)
+```
+
+Join two decompositions when one can be obtained from the other by exchanging
+one edge of `T` with one edge of `T'` while both sides remain trees.  On
+unordered decompositions this symmetric-exchange graph has
+
+```text
+4,960 vertices,
+43,408 edges,
+minimum/maximum degree 13/27,
+one connected component.                               (11)
+```
+
+Thus every tree-pair chart is reachable from every other by lawful local
+exchanges.
+
+## 4. Integral polarization in each chart
+
+Choose a root vertex and orientations.  For a tree pair `(T,T')`, let `B_T`
+and `B_T'` be the two reduced `11 by 11` incidence matrices.  Each is
+unimodular.  For the chart `(8)`, rooted at row 22,
+
+```text
+det B_T=det B_T'=-1,
+U=B_T^(-1)B_T' in GL_11(Z),
+det U=1.                                                (12)
+```
+
+The exact matrix digest is
+
+```text
+4d692df61815d6f39e0dbe40259ab9fe6e0dc19ef26722497834ec25ad6019cc. (13)
+```
+
+The columns `(-Uz,z)` are the fundamental integral cycles obtained by adding
+the `T'` edges to `T`.  Dually, either reduced incidence matrix identifies
+vertex potentials modulo constants with integral tree-edge differences.
+Every symmetric exchange changes these bases by an integral unimodular
+transition.  Equation `(11)` therefore gives one connected `GL_11(Z)` atlas
+of local cycle/cut frames.
+
+This atlas has genuine holonomy rather than a preferred origin.  The
+nontrivial automorphism in `(6)` fixes none of the 4,960 unordered tree pairs;
+it acts freely in 2,480 pairs of charts.  No tree decomposition is intrinsic
+to the unlabeled response graph.
+
+## 5. Conditional bridge to the missing `C_12` modes
+
+Suppose two additional choices are supplied:
+
+1. a bijection from `V(G_0)` to `C_12`, including a selected zero/root; and
+2. one ordered tree-pair chart `(T,T')`.
+
+The first identifies `Aug(Q[C_12])` with vertex potentials modulo constants.
+The reduced incidence of `T'` converts those potentials to integral `T'`
+coordinates, and `(12)` lifts them to the fundamental cycle frame
+`(-Uz,z)`.  This constructs an explicit integral isomorphism
+
+```text
+Aug(Q[C_12])  -->  H_1(G_0;Q).                         (14)
+```
+
+Changing the tree pair transports `(14)` through the connected exchange atlas.
+Thus the numerical resonance in `(7)` is not empty: it becomes an exact bridge
+once an external cyclic vertex label and a polarization chart are provided.
+
+Neither sidecar is presently canonical.  The response rows do not come with
+owner phases, and `(6)` cannot generate them.  The tree-pair atlas supplies
+transport between chosen charts, not a distinguished choice.
+
+## 6. Scope
+
+The theorem uses only which two-row pairs are first-link blocked.  It does not
+transport the signs, rational clutch thresholds, physical state labels or
+positive cones attached to those edges.  It constructs no row-to-owner map,
+no `C_12` action, no physical Gaussian-moment response, and no positive LRC
+current.  The conditional isomorphism `(14)` is not a consequence of
+THM-3254 or THM-3255 without its two explicit sidecars.
+
+In particular, the shared number 11 is a proved source of a possible chart,
+not a proof that the two eleven-dimensional spaces are the same.  The exact
+gain is the replacement of a vague dimensional analogy by a complete
+bispanning exchange atlas and a precise statement of the missing data.
+
+No row exclusion, factorial staircase closure, arbitrary-radial NC2 theorem,
+Gaussian Moment Conjecture, or `LRC(14)` decrement follows.
+
+## 7. Exact companion
+
+Run
+
+```text
+python 04-computation/gmc_bispanning_reset_link_holotopy_thm3260.py
+python -O 04-computation/gmc_bispanning_reset_link_holotopy_thm3260.py
+```
+
+and compare LF-normalized bytes with the declared output.  The companion uses
+only exact integer and rational arithmetic.  It has no floating point,
+randomness, discovery cache, graph-library dependency, or
+optimization-sensitive assertion.
+
+QED, pending independent hostile audit.
