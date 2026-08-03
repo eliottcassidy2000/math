@@ -43,7 +43,7 @@ THM-3150/3156 give the body-`H` skeleton. THM-3171 closes cell 90/cap two for
 all `D>=6` and gcd cones; THM-3200/3211 give ray quasipolynomials, sharp
 `1/105`, signed `1/g`, and constant residue. THM-3224 gives the complete
 orbit's nonzero periodic `g^-2` gcd-carry (sharp `9/49`) and owner Hodge split.
-THM-3234 compactifies its abstract `168`-cycle to a mobile 169-point Singer/Heisenberg carrier; THM-3240 realizes the exact-address `H_13` clutch, but no coefficient-current covariance. Finite heads, other cells, the rung, physical entry and LRC(14) stay **OPEN**.
+THM-3234/3240 give the mobile Singer carrier and exact-address `H_13` clutch; THM-3247 makes every canonical endpoint current translation-cyclic on all `169` states. The physical target/ancestry intertwiner, finite heads, other cells, rung, entry and LRC(14) stay **OPEN**.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars;
 THM-2417/2426/2436 close the other valuation lane; THM-2440--2539 close
 supplied-root seams, not semantic-root identification (kernel `28,393`).
@@ -180,8 +180,8 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 - THM-3115/27/58/69: partition-Hasse selectors die at degree 13 through depth
   six; THM-3177 resurrects degree 13 at depth seven, while THM-3184 kills
   degree 14 there. THM-3209 gives the unique all-degree reset atom through
-  depth eight; THM-3219 excludes 63 nonreset states through depth 16; THM-3216 proves the support-`(1,3)`/bank-`I2` unique law on all 3,129 states through depth nine at
-  `D>=14`; THM-3222 proves 230 collars. Depth ten/stitching stay open. THM-3189
+  depth eight; THM-3219 excludes 63 states through depth 16; THM-3216 reaches depth nine; audited THM-3238 stitches all `4,319` physical states of that face to one reset for `D>=14`/all degree.
+  Candidate THM-3244 reports `32` one-pole maxima but sharp radius-10/two-hub routing; the other 229 faces remain open. THM-3189
   rules out an affine two-degree factorization. THM-3170/3176 force bad resonances to have
   `d,...,d-6` composite. THM-3182/3183/3185/3188/3191 expose the rank-one
   reset, its two integral lattices, the full carry hierarchy, quadratic-character
@@ -196,8 +196,8 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   THM-3214 proves sharp `2k`/`2k+1` jet costs. THM-3215/3220 give selected-root two-/four-jet transport and its Heisenberg center; THM-3221 makes the first live
   osculating layer canonical; a selected root, derivative anchor, and full tower reconstruct degree `<=D`.
   THM-3227/3229 give the selected-root trie and root-free contact-gcd flag; THM-3232/3236 add the norm and contact-spectrum primitive gate.
-  [THM-3241](../01-canon/theorems/THM-3241-finite-field-contact-Singer-realization-and-order-gate.md) realizes every nonzero irreducible contact-algebra unit and the exact `p=13` Singer matrix; its same-norm, field-generating order-24 hostile makes multiplicative order a separate gate. It supplies no physical LRC map.
-  THM-3231 divides the simple-pivot exceptional square; hostile-audited THM-3233/3239 extend its quotient-tail/extracted-factor atlas. THM-3228 forces `p^2` points for center faithfulness. Global root choice, lawful physical carrier and depth-ten reset stitching stay open.
+  THM-3241 realizes the `p=13` contact Singer; THM-3243 proves the one-centre lift obstruction and full-centre `AGL_2` repair, whose regular `2,197` flags are not the address carrier. Neither supplies a physical LRC map.
+  THM-3231 divides the pivot square; audited THM-3233/3239 extend its quotient-tail atlas; THM-3228 forces `p^2` faithful points; THM-3238 closes one reset bank. Root choice, physical carrier, other faces and cross-face routing stay open.
 
 ### Live work
 
@@ -220,7 +220,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-3202 gives an exact quadratic-time moving-jet `C3` evaluator and a
   factorial-cube C-finite obstruction. THM-3213 closes balanced fixed-depth
   non-P-recursiveness; THM-3226 gives every fixed strong quotient on `q>=3`
-  one saddle. THM-3235 gives exact transitive-blowup saddle/radius scaling and hypergeometric decimation; order-six observer twins refute profile-plus-radius compression. The `Q4` radius and unconditional non-P result stay OPEN.
+  one saddle. THM-3235 gives blowup scaling/decimation; THM-3248 factors Q4's walk resolvent and gives all-depth finite differences plus a fixed-depth Stirling compiler. Observer twins block generic scalar compression; Q4 radius/non-P stay OPEN.
   THM-3173 separates `C2*C3`, regular `S3`, and regular `C6`; their joint
   quotient has order 18, while pointed oriented quartic frames form `Q3`.
   These are semantic action data, not a physical current or Keller bridge.
@@ -305,8 +305,8 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
 - THM-3200/3211/3224 split LRC rays into Bernoulli bulk, `Bbar_2` coboundary,
   nonzero gcd-carry curvature, owner exact part, periodic constant, and head.
   THM-3181/3202/3213 give minimal join laws, a fast cyclic jet, and balanced
-  fixed-depth non-P-recursiveness; THM-3226/3235 extend exact saddle geometry
-  and add transitive-blowup hypergeometric decimation, but leave the Q4 radius OPEN.
+  fixed-depth non-P-recursiveness; THM-3226/3235 give saddles and blowup
+  decimation; THM-3248 gives the Q4 Stirling compiler, but its radius/non-P result stay OPEN.
 - **EXACT identities / heuristic bridge:** corrected HYP-8820 puts caterer,
   cake, Moser, bagel, and Fibonacci in one Pascal array and proves
   `bagel(n)-cake(n)=T_n-1`; Klein-S313 realizes full-rank g-bonacci kernels.
@@ -420,7 +420,7 @@ The most reusable current bridges are not literal object identifications:
 | Whole-layer Frobenius / orbit norm | NC2/TNC | Packet preservation transfers; LRC lacks seed/exit and a `-1` stabilizer needs orientation. |
 | Quotient + sidecar | spectrum/SCC/support quotients | Which lost coordinate restores the target predicate? |
 | Bulk / boundary / null | THM-2058 | Large-prime grids are strict; tight support uses finitely many level-14 clocks; subthreshold packets vanish. |
-| Operation-response | tournament joins/support unions | THM-2183/2195 give the product; THM-2221/2242/2249/2256 its response and walls. |
+| Operation-response | tournament joins/substitution/support unions | THM-2183/2195 give product boundaries; THM-2221/2242/2249/2256 response walls; THM-3248 compiles paired Q4 while retaining its numerator. |
 | Strict transform | factorial PRS / JC infinity | [Divide exceptional multiplicity](../07-reflections/carriers-strict-transforms-and-operation-response-compilers-2026-08-03.md) before specialization; retain the first nonzero normal coefficient, without identifying the underlying problems. |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Finite observer / recurrence | THM-3171/3172/3180/3181 | Is it invertible, a refuter, or only an address; which sidecar makes termination lawful? |

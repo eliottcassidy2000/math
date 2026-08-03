@@ -19,7 +19,11 @@ audit: >
   THM-3216 tail resurrection, proves the exact degree-five two-endpoint no-go,
   and exhausts all 486 principal upsets (28 point correctly at both endpoint
   hostiles; none repairs the full bank alone).  Independent proof/typing and
-  separate-cache audits accept every implication and exact object.  Fresh
+  separate-cache audits accept every implication and exact object.  A further
+  independent hostile audit rebuilt the 4,319-state bank, every upset/minimal
+  antichain, the full sign census and singleton-cone inference, and confirmed
+  that the first depth-ten hostile Q+{2,4} changes from positive under the old
+  functional to strictly negative under the stitched cocircuit.  Fresh
   cache-free normal and optimized replays both reproduce the immutable stored
   transcript and all declared hashes.
 depends_on:

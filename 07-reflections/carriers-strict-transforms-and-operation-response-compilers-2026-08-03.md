@@ -44,10 +44,11 @@ open problems.  They are five sharper kinds of intermediate object.
    carry.  Thus a root-free scalar is a gate, not a selector.
 
 5. **Sequence formulas should be compiled from the operation, not guessed
-   from terms.**  Order join, cyclic substitution, transitive blow-up, and a
-   time-varying factorial transfer have different lawful response states.
+   from terms.**  Order join, cyclic substitution, generic transitive
+   blow-up, paired-owner Q4 blow-up, and a time-varying factorial transfer
+   have different lawful response states.
    The recent tournament and factorial work gives exact formulas or linear/
-   quadratic arithmetic evaluators in all four regimes, together with sharp
+   quadratic arithmetic evaluators in all five regimes, together with sharp
    reasons that the formulas cannot be compressed to the same recurrence
    class.
 
@@ -69,6 +70,11 @@ The active new theorem packages sharpen this picture further:
   same-norm field generator of order `24` proves that contact-algebra
   generation is strictly weaker than Singer transitivity; no physical LRC
   provenance is supplied.
+- **PROVED [THM-3243](../01-canon/theorems/THM-3243-contact-deformation-blowup-equivariance-and-full-orbit-resolution.md)** identifies the exact blowup-equivariance boundary.  A one-point blowup
+  lifts precisely the affine stabilizer of its centre; blowing up all `169`
+  rational contact classes restores `AGL_2(F_13)`.  Its exceptional boundary
+  is one `169`-point affine Heisenberg orbit plus one regular `2,197`-point
+  orbit, and the latter is not the equal-cardinality THM-3240 address carrier.
 - **PROVED [THM-3235](../01-canon/theorems/THM-3235-transitive-tournament-blowup-saddle-and-hypergeometric-decimation.md)** gives a general substitution determinant, exact saddle/radius
   renormalization under uniform transitive blow-up, and hypergeometric
   decimation of the full coefficient sequence.  Its order-six observer twins
@@ -80,13 +86,31 @@ The active new theorem packages sharpen this picture further:
 - **PROVED [THM-3240](../01-canon/theorems/THM-3240-exact-address-heisenberg-clutch-on-carrier-imbalance.md)** realizes the nonnormal minimal `H_13` stabilizer clutch on the
   exact THM-2763 carrier-imbalance address quotient.  It is an address action,
   not yet a coefficient-current action.
+- **PROVED [THM-3247](../01-canon/theorems/THM-3247-heisenberg-central-fourier-decomposition-and-canonical-current-cyclicity.md)** decomposes the standard affine Heisenberg permutation module into
+  thirteen scalar lines and twelve charged `13`-dimensional packets.  Every
+  canonical endpoint current hits all `25` blocks and is cyclic of rank `169`
+  in both certified fields for every nonzero direction.  This closes the
+  coefficient-carrier rank debt, not physical ancestry or target naturality.
+- **PROVED [THM-3238](../01-canon/theorems/THM-3238-complete-physical-product-gamma-bank-unique-reset-stitch.md)** glues twenty-two lawful coarsening-upset rows into a positive cocircuit
+  whose unique zero is the reset on the complete `4,319`-state physical bank.
+  It closes one support-`(1,3)`/bank-`I2` face, not a local deletion flow or
+  the other `229` faces.
+- **VERIFIED-EXACT CANDIDATE [THM-3244](../01-canon/theorems/THM-3244-unique-reset-exposure-deletion-graph-nonmorse-boundary.md)** reports that the exposed reset has `32` nonreset one-pole local maxima,
+  while radius `10` is the sharp reset-monotone unique-sink scale and two
+  explicit hubs route the entire bank in at most two jumps.  Independent
+  hostile audit is still pending, so this is not yet proved canon here.
+- **PROVED [THM-3248](../01-canon/theorems/THM-3248-q4-paired-owner-stirling-compiler.md)** factors the full Q4 walk resolvent through two owner pairs and gives
+  an exact all-depth finite-difference contraction, a positive one-sum
+  Hamiltonian formula, and fixed-depth `O_d(M(r)+r log r)` unit-cost
+  evaluation.  Its observer group is not `Aut(Q4)`, and the radius/non-P
+  frontiers remain open.
 - **PROVED [THM-3239](../01-canon/theorems/THM-3239-universal-sixth-resonant-prs-strict-transform-wall-and-pell-atlas.md)** computes the sixth universal resonant PRS strict transform: after
   the inherited square is removed, one primitive irreducible degree-28 wall
   remains, the Pell content reaches `70`, and the normalization gauge reaches
   `239`.  Its parity makes the new wall nonzero at every integer, but the
   all-depth primitive-factor pattern is not claimed.
 
-All seven statements remain governed by their literal theorem statuses; this
+All statements remain governed by their literal theorem statuses; this
 reflection does not itself promote them.
 
 ## 2. Live concept board
@@ -97,16 +121,16 @@ do not identify the objects.
 | concept | representation | invariant now retained | operation being tested | information still missing |
 |---|---|---|---|---|
 | LRC complete owner orbit | cyclic word of length `168`; Bernoulli bulk plus gcd-carry Hodge split | nonzero periodic `g^-2` harmonic and owner exact part | dilation, reflection, Singer compactification | branch stabilization, physical entry, cellwise safety |
-| minimal four-jet carrier | `H_13/K` on `169` points, `K` noncentral of order `13` | central commutator and oriented four-jet curvature | Heisenberg action, Singer conjugation | lawful owner/root/current map and common ancestry |
-| carrier address | `G_delta` of size `13^3`, or `G_full` of size `13^4` | target axis, carrier imbalance, optionally common harmonic | typed section, quotient gauge, exact `H_13` clutch | factor colours, all-unit mask, integral/Bockstein carry |
-| factorial contact flag | squarefree gcd strata and finite etale contact algebra | first-live contact order, spectrum, and Singer-order gate | Hasse contact, resultant norm/order, PRS step | selected branch label, physical provenance, global root choice |
+| minimal four-jet carrier | `H_13/K` on `169` points; vertical blowup flags give another copy | full `13+156` Fourier response and oriented commutator | Heisenberg action, current orbit, Singer/blowup transport | target-preserving physical intertwiner and common ancestry |
+| carrier address | `G_delta` of size `13^3`, or `G_full` of size `13^4` | target axis, carrier imbalance, optionally common harmonic | typed section, quotient gauge, exact `H_13` clutch | factor colours, all-unit mask, endpoint-target semantics, integral carry |
+| factorial contact/reset flag | finite etale contact algebra plus one `4,319`-state physical bank | contact spectrum/order, exposed reset, candidate radius-10 routing | Hasse contact, upset stitching, Rips/edit scale, PRS step | other faces, audited cross-face flow, selected branch and global root choice |
 | exceptional normal coordinate | pivot or infinity parameter before specialization | strict-transform coefficient after leading cancellations | blow-up, reciprocal Newton polygon | physical/Keller chart entry and global continuation |
-| tournament quotient operator | multivariate determinant `D_Q` and walk series `W_Q` | Neumann domain, saddle, continuation response | substitution, order join, transitive blow-up | minimal response-equivalent sidecar |
-| sequence response state | fixed jet, moving jet, or bounded time-varying transfer | exact coefficient or recurrence law | finite difference, decimation, continuant convolution | bit complexity, converse closure, seed computation |
+| tournament quotient operator | multivariate determinant `D_Q` and walk series `W_Q` | Neumann domain, saddle, Q4 paired-owner numerator | substitution, order join, transitive blow-up | generic minimal response-equivalent sidecar |
+| sequence response state | fixed/moving jet, paired Stirling rows, or bounded transfer | exact coefficient or recurrence law | finite difference, decimation, continuant convolution | bit complexity, converse closure, generic seed computation |
 
-Every new idea was compared with all seven concepts.  Three comparisons
-survived as exact maps; two survived only as mechanism analogies; several
-tempting identifications failed hostile tests.
+Every new idea was compared with all seven concepts.  Several comparisons
+survived as exact maps or compilers; others survived only as mechanism
+analogies; the tempting object identifications failed hostile tests.
 
 ## 3. Exact connection contracts
 
@@ -136,6 +160,23 @@ This preserves contact depth and exact multiplicative order but destroys all
 LRC provenance.  The hostile `c_2^49=7x` has the same primitive norm and still
 generates `F_169`, yet has order `24`; the root-free order-resultant tests are
 therefore an indispensable sidecar rather than a consequence of THM-3236.
+
+THM-3243 makes the resolution boundary equally exact.  Blowing up only the
+delayed-contact origin carries the Singer lift because Singer fixes that
+centre, but no nontrivial Heisenberg translation self-lifts there.  Blowing
+up the complete `169`-point rational centre orbit restores full affine
+equivariance and produces
+
+```text
+vertical flags:      one H_13 orbit of size 169;
+nonvertical flags:   one regular H_13 orbit of size 2,197.
+```
+
+The second number equals `|G_delta|` but the objects are not equivariantly
+interchangeable: the flag orbit has trivial stabilizer, whereas `G_delta` is
+thirteen `169`-point orbits with stabilizer order `13`.  Thus resolving centre
+drift supplies a new carrier and a sharp obstruction, not the missing address
+identification.
 
 ### 3.2 Carrier imbalance to the nonnormal Heisenberg clutch
 
@@ -168,18 +209,48 @@ hostile:     projection to the old target quotient kills y and the center.
 ```
 
 This is stronger than the cardinality observation and weaker than LRC
-covariance.  It identifies the correct oblique clutch on an LRC-native
-address, but no proved coefficient is yet acted on.
+covariance.  THM-3247 now puts a proved coefficient on the isomorphic
+endpoint-plane carrier: after a frame `(q,u)` with `det(q,u)=1`, pull back
+
+```text
+C_(q,u)(a,delta)
+  =P_((delta+1)q+a*u) Q_(delta*q+a*u).                 (A)
+```
+
+The central Fourier decomposition is
+
+```text
+13 center-blind scalar lines + 12 charged packets of dimension 13,
+```
+
+and `(A)` hits every packet, so its `H_13` orbit spans all `169` states.  The
+old coarse projection is precisely the center-neutral sector: every
+equivariant map from a center-trivial old current to a charged packet is zero.
+
+The abstract map is nevertheless not target-preserving.  It identifies the
+address target coordinate `a` with the endpoint determinant `det(q,R)`, while
+the old endpoint target difference is the fixed vector `q`.  A fixed-`q`
+fibre therefore cannot intertwine the old target under the transverse
+generator.  The next sidecar is a frame bundle varying `q`, together with
+ancestry and exact-address Bezout/physical-section compatibility.
+
+THM-3243 rules out one tempting shortcut to that sidecar.  The nonvertical
+exceptional flags and `G_delta` both have `2,197` points, but their Heisenberg
+orbit/stabilizer spectra differ.  Any bridge must therefore be a typed
+representation-level map with a multiplicity/pointing coordinate, not an
+equivariant bijection of the underlying finite sets.  THM-3250 reserves that
+question only; its empty stub contributes no proved implication.
 
 ### 3.3 Tournament operation to sequence compiler
 
-There are now three sharply different tournament regimes.
+There are now four sharply different tournament regimes.
 
 | operation | lawful state | exact computational form | recurrence boundary |
 |---|---|---|---|
 | repeated order join | fixed positive-colour jet `Q_A(1),...,Q_A(k)` | fixed polynomial-exponential formula; triangular-order C-finite tail | loses SCC order; only fixed extreme depth |
 | cyclic substitution | complete moving finite-difference jet plus `W_Q` | `O(N^2)` arithmetic and `O(N)` storage at fixed output depth | factorial-cube growth rules out C-finite; endpoint range grows |
 | uniform transitive blow-up | base determinant/saddle and the subsequence at `mr` | exact variable substitution, radius scaling, hypergeometric decimation | inherits the base radius wall; does not compute the seed operator |
+| equal Q4 transitive blow-up | paired variables `Y,Z,C` plus the full walk numerator | one Stirling sum for `H`; all-depth finite differences; fixed-depth quasi-linear arithmetic | moving width; no P-recursiveness or radius conclusion |
 
 For `P^[m]=P[T_m,...,T_m]`, the exact laws are
 
@@ -205,6 +276,19 @@ uniform transitive-lift Hamiltonian counts already differ at block size two.
 Their determinant symmetry groups have orders `48` and `6`.  The consumer
 needs multivariate cycle placement, represented by `W_Q` or a proved
 response-equivalent state.
+
+For the Q4 lane, THM-3248 supplies that state in one special quotient:
+
+```text
+Y=(1+X1)(1+X4)-1,  Z=(1+X2)(1+X3)-1,  C=X2X3,
+D=1-CY,            N=Y+Z+YZ+2CY.
+```
+
+The denominator alone gives `1` at block size one, while the true Hamiltonian
+count is `5`; the numerator is load-bearing.  The paired observer symmetry is
+the Klein four group on `{1,4}|{2,3}`, whereas the labelled tournament
+automorphism group is trivial.  This is controlled forgetting for this
+consumer, not a generic tournament quotient.
 
 ### 3.4 Factorial transfer to efficient P-recursive evaluation
 
@@ -269,11 +353,18 @@ cannot change the face and degree nine is the first live boundary term.
 | every residual has `g=3,q=3`, so the LRC layer carries a `C3` symmetry | inspect the literal quotient and its transition law | **REFUTED** | a two-point divisor chain `{1,3}` and a complete terminal descent |
 | twelve negative owners plus zero form an affine line | exhaust Singer gauges / residues mod `14` | **REFUTED** | multiplicity is real; placement is not linear |
 | the old additive target grid should carry `H_13` | inspect stabilizer and central kernel | **REFUTED**, then repaired | carrier imbalance supplies the nonnormal stabilizer clutch |
+| all charged central modes should already imply a full carrier | test the thirteen center-neutral transverse characters | **REFUTED as an implication, then completed** | THM-3247 supplies all thirteen scalar blocks and rank `169` |
+| full coefficient-carrier rank should imply a physical LRC current | track endpoint target, ancestry and Bezout section through the frame map | **REFUTED** | algebraic rank is closed; frame-bundle physical naturality is the exact remaining invoice |
+| blowing up the delayed-contact point should carry the whole affine action | apply the universal lifting criterion to a translation | **REFUTED**, then repaired globally | one centre keeps its stabilizer; the full rational centre orbit restores `AGL_2` and splits into `169+2,197` Heisenberg strata |
+| the `2,197` nonvertical flags are the `2,197` address carrier | compare Heisenberg stabilizer/orbit spectra | **REFUTED** | regular torsor versus thirteen affine orbits; a pointed multiplicity sidecar is necessary |
 | a root-free trace should detect first contact | split examples with cancelling branches | **REFUTED** | etale norm preserves simultaneous nonvanishing |
 | a primitive norm or full contact-field generator should be Singer | compare exact multiplicative order | **REFUTED by THM-3241 hostile** | retain the prime-divisor resultant order gates |
 | a vanishing PRS row has no further information | divide by the wall parameter | **REFUTED** | nonzero square-normalized osculating row |
 | affine `B` exhausts the planar Jacobian source family | degree filtration of top resultant coefficients | **REFUTED as a search boundary** | nonlinear degree nine changes the infinity face |
 | path-colour profile plus radius identifies tournament continuation | order-six exhaustive pair and transitive lifts | **REFUTED** | retain determinant/walk placement |
+| the Q4 denominator/owner pair computes its blowup sequence | compare denominator-only and full walk diagonals at `r=1` | **REFUTED** (`1` versus `5`) | retain `N=Y+Z+YZ+2CY`; paired Stirling contraction survives |
+| a depth-nine reset dual should extend unchanged | evaluate the first complete depth-ten layer | **REFUTED**, then stitched | 19 positive depth-ten hostiles; THM-3238's eight overlap rows repair the complete bank |
+| a globally exposed reset supplies a one-pole deletion gradient | enumerate exact one-pole maxima | **REFUTED by verified candidate THM-3244** | 32 local maxima; candidate sharp radius-10 two-hub routing survives, pending hostile audit |
 | every efficient sequence formula should be C-finite | compare fixed join jet, moving cyclic jet, and time-varying transfer | **REFUTED** | operation-specific C-finite, P-recursive, decimation, or moving-jet forms |
 
 The recurring lesson is not “keep all information.”  It is “name the next
@@ -282,24 +373,28 @@ consumer.”
 
 ## 6. Frontier-specific next tests
 
-### LRC(14): make the address action touch a coefficient
+### LRC(14): make the cyclic coefficient current physical and target-preserving
 
-The next group computation is not useful; the action law is already exact.
-The decisive test is coefficient covariance before marginalization.
+The abstract group computation and coefficient rank are now complete:
+THM-3247 proves the canonical endpoint current fills the entire `169`-state
+module.  The decisive test is physical naturality before marginalization.
 
-1. Build a factor-coloured extension
-   `A_tilde(s,t,delta)` or `A_tilde(s,t,k,l)` of one proved THM-2334/2763
-   current.
-2. Apply the three generators
-   `X(s,delta)=(s,delta+s)`, `Y(s,delta)=(s+1,delta)`, and
-   `Z(s,delta)=(s,delta+1)` at the atomic-factor level.
-3. Test exact preservation of common ancestry, the all-`91`-unit mask,
-   target survival, and endpoint current.
-4. Use the fixed cell-90 carry values modulo `13` as the hostile: a
-   residue-blind `delta` section should fail.
-5. Only after covariance survives should the Singer owner cycle be mapped to
-   the same address.  The sign-line counterfeit is the mandatory negative
-   control.
+1. Replace the fixed-`q` chart by the frame bundle `(q,u)` with
+   `det(q,u)=1`, so the endpoint target `q` transforms rather than remaining
+   frozen while the address target changes.
+2. Lift `(A)` to a factor-coloured `A_tilde(a,t,k,l)` on `G_full`, keeping
+   source/target factor labels and common ancestry.
+3. Audit the three `H_13` generators at the atomic-factor level, including
+   exact-address Bezout-section changes, the all-`91`-unit mask and target
+   survival.
+4. Use THM-2782/2806 and the fixed cell-90 carry values as hostiles: central
+   marginalization or a residue-blind section must fail visibly.
+5. Respect THM-3243's orbit-spectrum obstruction: test a charged
+   representation-level map from nonvertical flags to the address carrier
+   with an explicit pointing/multiplicity frame, never a set bijection.
+6. Only after frame covariance survives, test the Singer conjugates.  Singer
+   does not normalize the chosen central line, so the lawful closure is
+   `AGL_2(F_13)`, not one charged packet.
 
 This route does not replace the direct LRC obligations: finite heads, other
 cells, arbitrary `k<=1`, the rung, physical entry, and the remaining reflected
@@ -328,22 +423,26 @@ it is not evidence for or against `JC(2)`.
 ### Factorial conjecture in three variables: stitch, do not rescan
 
 The exact row atlas now reaches `r=2498`; the first unaudited row remains
-`r=2499,d=2501`.  Independently, reset results isolate strict one-sided
-collars on 230 product-Gamma banks, while THM-3231 preserves the normal
-direction at a simple PRS wall.
+`r=2499,d=2501`.  THM-3238 has now glued the complete `4,319`-state physical
+bank for one support/bank face, while THM-3222 supplies `230` local collars
+and THM-3231 preserves the normal direction at a simple PRS wall.  Candidate
+THM-3244 already reports the exact failure and sharp coarse repair of the
+one-pole route on this bank; it still needs independent hostile audit.
 
 The highest-value tests are:
 
-1. complete and audit the reserved full physical-bank stitch (THM-3238),
-   keeping its physical pole labels rather than only the quotient reset;
-2. test depth ten as a stitching problem between already classified collars,
-   not another statewise sign scan;
+1. transport the twenty-two-row overlap cocircuit to the other `229` faces,
+   first testing whether the eight nonprincipal transition rows have a
+   face-independent construction;
+2. audit THM-3244's independent rank certificate, `32` one-pole maxima,
+   radius-`10` escape histogram and minimal two-hub routing; if accepted,
+   transport that coarse atlas rather than seeking a nonexistent local flow;
 3. use the strict-transform row at a resonance as the transition state across
    a reset wall, and audit whether the proved twice-Pell extracted-factor clock and
    quotient-tail tower remain compatible with the physical pole labels;
 4. use the THM-3232 norm only as a nonvanishing gate, retaining a selected
    branch/carry sidecar whenever the recurrence consumes additive data;
-5. continue the exact first-unaudited row in parallel, because finite closure
+5. continue `r=2499,d=2501` in parallel, because finite closure
    and structural stitching are independent evidence lanes; and
 6. use THM-3241's exact separation of the three `p=13` gates:
    irreducibility, contact-algebra generation, and multiplicative order `168`.
@@ -360,10 +459,12 @@ The highest-value tests are:
    response class.
 2. Treat uniform transitive blow-up as a solved renormalization operation.
    It inherits the Q4 radius; it cannot prove its transcendence.
-3. Attack the Q4 product radius through its two-log arithmetic, not through
-   more blow-ups or balanced approximations.
-4. Search for a response-equivalent compression of `W_Q`; prove sufficiency
-   for a named operation before discussing minimality.
+3. Use THM-3248's paired variables to attack the Q4 product radius through its
+   two-log arithmetic, while retaining the walk numerator; the compiler alone
+   implies no fixed recurrence.
+4. Classify which strong quotients admit a bounded paired-owner
+   factorization of both `D_Q` and `N_Q`.  The generic response-equivalent
+   compression problem remains open.
 5. Keep `H>=disc` on its intrinsic strong-core lane.  None of the carrier or
    sequence analogies changes that inequality.
 
@@ -375,41 +476,93 @@ Given a new sequence arising from an operation, ask in this order:
    and finite differences; fixed extreme jets may be C-finite.
 2. Does a block substitution linearize under `X=e^x-1`?  Use block sums,
    saddle renormalization, and exact hypergeometric decimation.
-3. Can the quotient revisit a factor?  Expect a moving endpoint jet; seek a
+3. Does the full walk numerator share a bounded owner factorization with the
+   denominator?  Use paired finite-difference/Stirling rows, but keep the
+   numerator and certify state-width growth.
+4. Can the quotient revisit a factor?  Expect a moving endpoint jet; seek a
    banded kernel and an `O(N^2)` evaluator rather than a fixed recurrence.
-4. Is there a bounded time-varying transfer?  Eliminate the state to a
+5. Is there a bounded time-varying transfer?  Eliminate the state to a
    polynomial-coefficient recurrence and retain signed path sums.
-5. Before fitting anything, pre-register the next unused term and run a
+6. Before fitting anything, pre-register the next unused term and run a
    same-summary/different-continuation hostile.
 
 This is a practical closed-form hierarchy.  “Closed form” may mean a fixed
 polynomial-exponential sum, a D-finite differential equation, a
 hypergeometric decimation, or a moving finite sum with proved complexity.
-Demanding one syntax for all four destroys useful structure.
+Demanding one syntax for all these regimes destroys useful structure.
 
 ## 7. Portfolio after this synthesis
 
 ```text
-ANCHOR:   LRC(14) coefficient covariance on the exact-address H_13 clutch.
-NICHE:    determinant-owner groups and continuation twins for tournament
-          substitution, with operation-specific sequence compilers.
+ANCHOR:   LRC(14) frame-bundle/ancestry intertwiner from the cyclic endpoint
+          current to the exact-address H_13 clutch.
+NICHE:    paired-owner factorizations beyond Q4 and the minimal full-walk
+          response state for tournament substitution.
 WILDCARD: reciprocal strict-transform walls linking planar Jacobian infinity
-          escape to the factorial exceptional-square procedure.
+          escape to factorial reset transition cocircuits.
 ```
 
 The wildcard has already paid: it found the degree-nine infinity threshold
 and the paired square-root escape.  The niche has paid: it produced an exact
-blow-up/decimation law and a minimal hostile against scalar observer
-compression.  Neither displaces the anchor until it supplies a target-
-preserving map or a theorem on an open frontier.
+blow-up/decimation law, the Q4 Stirling compiler, and sharp numerator/observer
+hostiles.  The anchor has paid algebraically: the current is cyclic.  It stays
+the anchor because its target-preserving physical map is still missing.
 
 The next session should begin from these three precise objects, not from the
 numerical coincidences that suggested them:
 
 ```text
-LRC:       a factor-coloured coefficient on G_delta;
+LRC:       a frame-covariant factor-coloured current on G_full;
 JC:        a Keller-constrained reciprocal two-root wall;
-FC(3):     a physical reset-collar stitch carrying the strict transform;
-tournament:a response-equivalent quotient operator state;
-sequence:  an operation compiler with an explicit state-width certificate.
+FC(3):     transport of the reset cocircuit plus an audited coarse routing atlas;
+tournament:paired-owner classification beyond the special Q4 operator;
+sequence:  compiler complexity with explicit response-width and bit costs.
 ```
+
+## 8. Procedural beach residue: precise niche problems worth retaining
+
+The searches that did not become the three promoted theorems still produced
+specific, cheaply testable objects.  They are **NON-CANONICAL SCOUTS** until
+separately packaged.
+
+1. **SCC Euler product with order loss.**  For order join, the candidate
+   identity `1+W_(R▷S)=(1+W_R)(1+W_S)` turns fixed path-cover depth into a
+   rank-at-most-`d+1` convolution kernel.  It forgets SCC order, so it is a
+   compiler sidecar, not a tournament reconstruction theorem.  The decisive
+   next test is a same-factor-multiset/different-SCC-order continuation pair.
+2. **Duality blindness.**  The determinant and scalar walk observer satisfy
+   the scouted symmetry `D_(Q^op)=D_Q` and `W_(Q^op)=W_Q`; endpoint-resolved
+   resolvents distinguish a source-over-cycle from its opposite.  This is a
+   clean example of a one-coordinate sidecar restoring destroyed direction.
+3. **Mixed transitive sections.**  Blowups
+   `T_m[T_(r+1)^s,T_r^(m-s)]=T_(mr+s)` realize every residue section.
+   All `m` response lanes reconstruct the sequence, while one decimation lane
+   cannot.  The niche question is an iff theorem for P-recursiveness under the
+   complete section vector, with one-lane hostiles kept explicit.
+4. **Contact/address carrier bridge.**  After a basis, target-axis and Bezout
+   section are declared, THM-3241's contact deformation plane and a fixed
+   THM-3240 address fibre have the identical standard `H_13` action.  The
+   contact Singer transports to `(a,delta)->(a+4delta,2a+delta)`, but does not
+   normalize the fixed center line; joint closure costs the full affine group.
+   THM-3243 realizes that closure only after blowing up all rational centres:
+   its `2,197` nonvertical flags form one regular orbit, not the thirteen
+   affine orbits of the address carrier.  Contact zero is delayed contact,
+   not empty physical support.
+5. **Direction scaling is a full mode bank.**  The dual-field all-direction
+   scout found `28,392/28,392` nonzero two-dimensional modes per field, so
+   translations alone make every `J_q` cyclic.  But for `q->2q`, every one of
+   the `169` physical-frequency ratios is distinct for every `q`; no direction
+   admits a constant or affine-character gauge.  All `2,366` complete
+   twelve-step generator-cycle products telescope to one.  Propagation exists,
+   but its response state is the full Fourier bank rather than a scalar
+   covariance law.
+6. **Exposed reset versus local flow.**  THM-3238 proves a global singleton.
+   Verified-exact candidate THM-3244 finds `32` one-pole local maxima and a
+   long merge-tree obstruction, refuting a deletion/Morse reading, but also a
+   sharp radius-`10` unique-sink graph and a minimal two-hub, two-jump atlas.
+   The immediate task is hostile audit and then cross-face transport, not a
+   renewed search for one-pole monotonicity on this bank.
+
+These scouts all instantiate the same procedure: compile the operation,
+measure response-state width, exhibit the smallest controlled forgetting,
+and invoice exactly the coordinate needed by the next consumer.
