@@ -721,6 +721,106 @@ def sweep_E2(R2, dt, E, tele_rmax=24, tele_frac=Fraction(1, 8),
             return None, 'final carry nonzero', nfall, maxcarry, ntele
     return sol, 'CLOSED', nfall, maxcarry, ntele
 
+def _presc_with_override(E, dt, R2, j, W, L, override):
+    """Steer prescriptions for row j, with the m=0 target sign of row j+1
+    forced to `override` (+1/-1); deeper rows use the canonical min-abs
+    choice.  Fresh memo (exact recomputation each call)."""
+    memo = {}
+    def rho(jj, m, depth):
+        if (jj, m) in memo:
+            return memo[(jj, m)]
+        if jj + 1 >= R2:
+            val = 0
+        else:
+            d = dt[jj]; dn = dt[jj + 1]; r = dn - (d - 1)
+            fixed = 0
+            for u in range(max(0, m - r), m):
+                fixed += comb(r, m - u) * rho(jj, u, depth)
+            base = E[jj + 1][dn - m] + fixed
+            if m == 0:
+                if jj == j and override is not None:
+                    val = override - base
+                else:
+                    val = min((1 - base, -1 - base), key=abs)
+            elif depth < L:
+                b = 0 if comb(dn, dn - m) % 2 == 0 else 1
+                val = (rho(jj + 1, m - 1, depth + 1) + b) - base
+            else:
+                val = pclamp(base, comb(dn, dn - m)) - base
+        memo[(jj, m)] = val
+        return val
+    d = dt[j]
+    return {d - 1 - m: rho(j, m, 0) for m in range(min(W, d))}
+
+def sweep_beam(R2, dt, E, W=10, L=8, beam=64, verbose=False):
+    """Beam sweep: branch on the +-1 top-target of each next row (the only
+    self-consistent dial in the Steer chain -- E edits get re-planned
+    around, measured).  State = (carry, nfall, pain, emitted-rows); rank by
+    (nfall, near-top leftover pain).  Returns (sol, msg)."""
+    states = [(None, None, 0, 0, [])]    # K, dK, nfall, pain, rows
+    for j in range(R2):
+        d = dt[j]
+        nxt = []
+        for K, dK, nfall, pain, rows in states:
+            X = list(E[j])
+            if K is not None:
+                if dK > d:
+                    continue
+                KL = lift(K, dK, d) if dK < d else list(K)
+                for k, v in enumerate(KL):
+                    X[k] += v
+            if abs(X[d]) != 1:
+                continue
+            opts = [None] if j + 1 >= R2 else [1, -1]
+            for ov in opts:
+                presc = ({} if ov is None else
+                         _presc_with_override(E, dt, R2, j, W, L, ov))
+                cells = [0] * (d + 1)
+                cells[d] = X[d]
+                P = [0] * d
+                nf2, pain2 = nfall, pain
+                for k in range(d - 1, -1, -1):
+                    cap = comb(d, k)
+                    if k in presc:
+                        e = X[k] - presc[k]
+                        if abs(e) <= cap and (e - cap) % 2 == 0:
+                            cells[k] = e
+                            P[k] = presc[k]
+                            continue
+                        nf2 += 1
+                    v = pclamp(X[k], cap)
+                    cells[k] = v
+                    P[k] = X[k] - v
+                for m in range(min(14, d)):
+                    c = abs(P[d - 1 - m])
+                    cc = comb(d - 1, d - 1 - m)
+                    if c > cc:
+                        pain2 += (c // max(1, cc)).bit_length()
+                nxt.append((P, d - 1, nf2, pain2, rows + [cells]))
+        if not nxt:
+            return None, f'beam died at row {j}'
+        nxt.sort(key=lambda s: (s[2], s[3]))
+        seen, keep = set(), []
+        for st in nxt:
+            key = tuple(st[0][-30:])
+            if key in seen:
+                continue
+            seen.add(key)
+            keep.append(st)
+            if len(keep) >= beam:
+                break
+        states = keep
+        if verbose and (j % 16 == 0 or j > R2 - 4):
+            print(f'    beamsweep row {j:3d}: states={len(states)} '
+                  f'best nfall={states[0][2]} pain={states[0][3]}', flush=True)
+    for K, dK, nfall, pain, rows in states:
+        if not any(K):
+            return rows, f'CLOSED (nfall={nfall}, pain={pain})'
+    best = states[0]
+    return None, (f'final carry nonzero in all {len(states)} states; best '
+                  f'nfall={best[2]} pain={best[3]} '
+                  f'carryL1~1e{len(str(sum(abs(x) for x in best[0])))-1}')
+
 def repair_sweep(R2, dt, E, W=10, L=8, max_repairs=400, verbose=True):
     """THE REBALANCER RUNNING DURING THE SWEEP (surgical form).  Iterate:
     run the deterministic Steer sweep; on the FIRST prescription fallback
