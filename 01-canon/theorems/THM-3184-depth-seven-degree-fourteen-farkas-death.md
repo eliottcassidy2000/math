@@ -2,7 +2,7 @@
 id: THM-3184
 title: "Depth-seven degree-fourteen even-skeleton Farkas death"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For support (1,3), bank I2, no probability law on the complete 1,820-state
   physical prefix bank through depth seven has nonnegative
   partition-coarsening upset response in every degree through 14.  A readable
@@ -19,7 +19,10 @@ audit: >
   all state-degree zero-mass identities, clears the readable normalized dual
   to primitive positive integers, and proves the combined coordinate is
   strictly negative on all states.  Normal, optimized, and stored replay agree
-  exactly.  An independent immutable audit is pending.
+  exactly.  An independent immutable referee replayed the immutable candidate,
+  independently recomputed all ten minimal antichains, matched both LF hashes,
+  and accepted the Farkas logic, strict margin, hard-face anatomy, scope, and
+  barcode interpretation.
 depends_on:
   - THM-3115-low-degree-monomial-fibre-newton-refinement-transport
   - THM-3127-partition-refinement-strassen-upset-dual-and-filter-response
@@ -37,7 +40,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3184 -- depth-seven degree-fourteen even-skeleton Farkas death
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3177 proves that the support-`(1,3)`, bank-`I2` cumulative selector cone
 is nonempty through degree `13` at physical prefix depth seven.  Its final
