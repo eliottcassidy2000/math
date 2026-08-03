@@ -1,0 +1,11 @@
+THM-3190 root-neutral central-odd bispectrum exact control
+dependency_hash_checks=4
+allowed_pairs=132
+carry_zero_one=(66, 66)
+root_translation_checks=1716
+global_phase_checks=495
+commuting_bidegree_checks=3432
+bidegree=(root_character_0,global_scalar_charge_1)
+central_sign=-1
+scope=common_carrier_and_torus_normalization_still_open
+all_exact_checks=PASS
