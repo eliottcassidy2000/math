@@ -1,0 +1,24 @@
+THM-3278 SELECTOR-ORIGIN BIPARTITION AND PHASE BRIDGE EXACT AUDIT
+dependency_hash_checks=15
+assert_nodes=0,float_literals=0
+conflict_states=((3,4,5),(1,3,4,5))
+core=(V12,E22);availability_bipartition=(small5,full7)
+small_core=(2,11,16,18,22);full_core=(3,7,10,13,17,19,21)
+rooted_F2_cochain=(root17=0,dc=1_on_all22_edges,unique)
+primitive_endpoint_selector=(small:16,full:17,both_conflicts)
+global_controller=(canonical_pair_(16,17),pair_identity_sidecar_0,face_origin_bits_1)
+canonical_pair_conflicts=(19,one_orientation_small16_full17)
+phase_backbone_completion=((2,13),(2,17),(3,16),(16,17));origin_edge_in_completion
+small_to_full_six_edge_sampler=((1, 16, 17, 11), (2, 2, 21, 10), (3, 18, 19, 3), (4, 11, 17, 8), (5, 22, 21, 7), (6, 22, 7, 6))
+forward_reverse_phase_residues=all_nonzero_C12
+critical_character_mismatches=(Jac/J12:(2,7,11),rank:(2,3,10,11,13,18,21))
+common_character_hostile=row11:(colour1,Jac9088,J12_4,rank_4)
+rank_cut_polynomial=x+x^2+x^4+x^5+x^10
+rank_cut_resultant=175;circulant_SNF=(1^10,5,35)
+cyclic_difference=-x+x^3-x^4+x^6-x^10+x^11
+difference_orbit=(rank11,index35_in_integral_augmentation,SNF_1^10_35_0)
+primitive_phase_vector=e1-e0;norm_fibre_Krylov_det=-30396564468585450830924251521449984
+seam_rank_cut_decoder=(raw_min7_sets95,degree_min7_sets122,first_(0,1,2,3,4,5,11))
+scope=localized_origin_bit_internalized_not_erased;abstract_transfers_only
+no_memoryless_selector_no_physical_walk_no_FC3_or_LRC_or_GMC_decrement
+all_exact_checks=PASS
