@@ -362,6 +362,16 @@ THM-2290/2292/2294 and the S79 support-Dirichlet reflection.
 
 **Trigger / action:** before adopting a fitted recurrence, prove a structural sublemma or pre-register and attack its first untested prediction. Short interpolants have many competitors; detrend availability (THM-2447) and distinguish thresholds from closed forms. **Evidence:** S135's 24 breaks/6 survivors; MISTAKE-055; THM-2444/2453/2454, THM-2467, THM-1286, THM-790.
 
+## Classify response-state growth before naming the closed form
+
+**Trigger / action:** for repeated joins, substitutions, block lifts, or transfers, derive the operation response before naming a closed form; classify the sufficient state as fixed jet, moving endpoint jet, bounded time-varying transfer, or gauged arithmetic section.
+**Mechanism / limit:** these respectively expose polynomial--exponential tails, efficient non-C-finite evolution, P-recursive elimination, or exact decimation, but do not compute an arbitrary seed or imply a converse or low bit complexity. **Evidence:** THM-3181/3202/3186/3235.
+
+## Divide exceptional multiplicity before judging a wall
+
+**Trigger / action:** when a row, degree, or leading coefficient vanishes on a parameter wall, retain the transverse parameter, prove and divide the common exceptional multiplicity, then read the first normal coefficient—reciprocally if degree escapes to infinity.
+**Mechanism / limit:** the strict transform retains the erased osculating row or escape polynomial, but needs unit hypotheses and need not preserve a root label, physical current, or Keller condition. **Evidence:** THM-3231/3237.
+
 ## Refine vertices and lifetimes before quotienting
 
 **Trigger / action:** if labels are disconnected or faces use different lifts, components, phases, or times, split physical components and retain transitions, lifetime filtrations, and a baseline before quotienting. Witnesses vary by face; translated bands cannot be recentered; late negative derivative need not cross baseline.
