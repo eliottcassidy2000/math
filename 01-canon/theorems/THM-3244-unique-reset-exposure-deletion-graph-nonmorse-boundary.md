@@ -1,5 +1,5 @@
 ---
-id: THM-3242
+id: THM-3244
 title: "Unique-reset exposure and deletion-graph non-Morse boundary"
 status: "RESERVED / UNPROVED EMPTY STUB"
 source: root/multiscale-newton-flag/2026-08-03
@@ -7,7 +7,7 @@ depends_on: []
 related: []
 ---
 
-# THM-3242 -- unique-reset exposure and deletion-graph non-Morse boundary
+# THM-3244 -- unique-reset exposure and deletion-graph non-Morse boundary
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
