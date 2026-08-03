@@ -11,10 +11,11 @@ and differentiates the *generic* subresultant row in the ``d`` and ``k``
 directions.  In each THM-3212 accessory field it solves the exact implicit
 tangent equations for the moving base point ``(x,c)``.  It then checks whether
 the two clutch tangents are independent and whether the fixed deck units needed
-for formal persistence remain present.
+for algebraic etale and formal persistence remain present.
 
-This is local formal geometry.  It does not construct a Keller mate, an
-inverse, a global component, or a JC(2)/DC(2) consequence.
+This is local algebraic geometry at the declared degree-36 points.  It does
+not construct a Keller mate, an inverse, a global component, or a
+JC(2)/DC(2) consequence.
 """
 
 from __future__ import annotations
@@ -389,7 +390,8 @@ def audit_case(name: str, generic) -> tuple[str, ...]:
     print(
         f"case={name};base_field_degree=36;linear_row=(a,b);"
         "base_Jacobian_det=a_x*b_c_is_unit=1;"
-        "formal_parameters=(d-1,k-1);formal_solution=(x(d,k),c(d,k))_unique"
+        "V(a,b)_etale_over_(d,k)_at_the_point=1;"
+        "completion_parameters=(d-1,k-1);formal_solution=(x(d,k),c(d,k))_unique"
     )
     for parameter in ("d", "k"):
         xdot, cdot = tangents[parameter]
@@ -410,7 +412,7 @@ def audit_case(name: str, generic) -> tuple[str, ...]:
         f"delta_digest={element_digest(delta)};"
         f"quadratic_subresultant_nonzero_pattern={quadratic_nonzero_pattern};"
         "resultant_tangent_vanishes_in_both_clutch_directions=1;"
-        "nonsplit_etale_residue_deck_lifts_to_a_connected_C2_cover_over_A[[h_d,h_k]];"
+        "nonsplit_residue_deck_lifts_to_a_connected_finite_etale_C2_cover_on_the_local_germ;"
         "quadratic_subresultant_and_cubic_degrees_persist_formally;"
         "critical_C2_deck_and_gradient_vanishing_persist_formally"
     )
@@ -435,8 +437,8 @@ def source_audit() -> None:
 
 
 def main() -> None:
-    print("JC EXCEPTIONAL QUADRATIC TWO-CLUTCH FORMAL PERSISTENCE SCOUT")
-    print("status=VERIFIED-EXACT_TANGENT_PLUS_PROVED_FORMAL_IMPLICIT_CONSEQUENCE")
+    print("JC EXCEPTIONAL QUADRATIC TWO-CLUTCH ALGEBRAIC ETALE PERSISTENCE SCOUT")
+    print("status=VERIFIED-EXACT_TANGENT_PLUS_PROVED_ETALE_GERM_CONSEQUENCE")
     for relative_path, expected in DEPENDENCIES.items():
         actual = lf_hash(ROOT / relative_path)
         require(actual == expected, f"dependency drift: {relative_path}")
@@ -446,21 +448,22 @@ def main() -> None:
     require(packets[0] != packets[1], "accessory cases must remain distinguishable")
     print(
         "mechanism=transverse_(x,c)_base_ideal_absorbs_both_physical_clutch_slopes;"
-        "the_formal_implicit_theorem_lifts_the_quadratic_common_root_divisor;"
-        "finite_etale_idempotents_over_the_complete_local_base_are_detected_on_the_residue_deck"
+        "the_relative_Jacobian_criterion_produces_an_algebraic_etale_germ;"
+        "completion_gives_the_unique_formal_lift;"
+        "finite_etale_idempotents_over_the_local_base_are_detected_on_the_residue_deck"
     )
     print(
         "hostile=frozen_(x,c)_base_fails_in_each_d_and_k_direction;"
         "repair=move_the_point_by_the_exact_implicit_tangent;"
-        "gradient_gate=still_proper_on_the_formal_C2_deck"
+        "gradient_gate=still_proper_on_the_algebraic_C2_deck"
     )
     print(
-        "scope=two_THM3212_accessory_fields;formal_neighborhood_of_(d,k)=(1,1);"
+        "scope=two_THM3212_accessory_fields;etale_germ_over_(d,k)=(1,1);"
         "tangent_paths=symbolic_chain_rule_plus_exact_central_difference;"
         "no_global_component_no_owner_wall_classification_no_mate_no_inverse_no_JC2_no_DC2"
     )
     source_audit()
-    print("ALL EXACT TWO-CLUTCH FORMAL-PERSISTENCE CHECKS PASSED")
+    print("ALL EXACT TWO-CLUTCH ETALE-PERSISTENCE CHECKS PASSED")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
-# The exceptional critical deck moves with both physical clutch slopes
+# The exceptional critical deck is an algebraic etale two-clutch germ
 
 **Status:** structural synthesis for
-[THM-3319](../01-canon/theorems/THM-3319-exceptional-quadratic-two-clutch-formal-persistence.md).
+[THM-3319](../01-canon/theorems/THM-3319-exceptional-quadratic-two-clutch-etale-persistence.md).
 The exact evidence is the
 [two-clutch tangent scout](../04-computation/jc_exceptional_quadratic_two_clutch_formal_persistence_scout_20260803.py)
 and its
@@ -42,7 +42,7 @@ a=b=0,                     det partial_(x,c)(a,b)=a_x b_c in A_i^*.   (3)
 ```
 
 For `p=d,k`, the physical derivatives include the chain rule
-`partial_d C=x`.  The formal tangent equations are
+`partial_d C=x`.  The infinitesimal equations are
 
 ```text
 a_x dot x_p+a_p=0,
@@ -57,22 +57,24 @@ dot x_d dot c_k-dot x_k dot c_d !=0.                      (5)
 ```
 
 Thus the clutch plane is not absorbed through one hidden scalar direction:
-it moves the critical base point with full tangent rank.  The formal implicit
-theorem upgrades `(4)` from a tangent signal to unique series
+it moves the critical base point with full tangent rank.  More is already
+available before completion.  The relative Jacobian criterion makes the
+algebraic zero scheme `V(a,b)` etale over the `(d,k)`-plane at the degree-36
+point.  Completing that algebraic germ gives the unique series
 `x(d,k),c(d,k)`.
 
-On that series the linear row vanishes, the quadratic row stays unit-leading,
-and the cubic degrees stay three.  The quadratic row is therefore the exact
-gcd.  Its discriminant has a nonsquare unit constant term.  Finite-etale
-idempotents over the complete local base are detected on the residue field,
-so the nonsplit special fibre lifts as a connected rank-two cover rather than
-two chosen branches.
+On that algebraic germ the linear row vanishes, the quadratic row stays
+unit-leading, and the cubic degrees stay three.  The quadratic row is
+therefore the exact gcd over the germ's function field.  Its discriminant is
+a unit with nonsquare residue.  Idempotents in the local finite-etale algebra
+are detected on the residue field, so the nonsplit special fibre lifts as a
+connected rank-two algebraic cover rather than two chosen branches.
 
 This changes the geometric verdict:
 
 ```text
-fixed isolated critical pair             REFUTED as the right picture;
-formal two-parameter critical C2 surface PROVED in the declared fields.    (6)
+fixed isolated critical pair                REFUTED as the right picture;
+algebraic etale two-parameter critical germ PROVED in the declared fields. (6)
 ```
 
 The fixed `(x,c)` hostile remains useful.  If either `d` or `k` moves while
@@ -85,10 +87,10 @@ fixed certificate.
 
 ```text
 source:      fixed transverse base point plus physical clutch plane;
-target:      connected rank-two formal critical cover;
-map:         solve (a,b)=0 for (x,c) over A_i[[d-1,k-1]];
+target:      connected rank-two algebraic critical cover;
+map:         project V(a,b) to (d,k), then complete at the degree-36 point;
 preserved:   quadratic gcd, deck exchange, true gradient vanishing;
-destroyed:   global component identity, distant owner-wall incidence;
+destroyed:   global component identity, rational section, distant walls;
 sidecar:     moving internal base point (x(d,k),c(d,k));
 test:        exact two-clutch tangent determinant and residue discriminant. (7)
 ```
@@ -117,25 +119,24 @@ gate before computing a later invariant.
 
 ## Cheapest next tests
 
-1. **Algebraization test.**  Eliminate `(a,b)` over `K_i[d,k]` only after the
-   formal surface has named the expected two-dimensional component.  Check
-   whether its projection is dominant and whether the local component remains
-   reduced.
+1. **Global-component test.**  Saturate and eliminate `(a,b)` over
+   `K_i[d,k]` to identify the closure containing the etale germ, its degree,
+   and the first locus where the projection stops being etale.
 2. **Ramification/owner test.**  Compute the quadratic discriminant and the
    finite-clutch/owner resultants along one exact algebraic curve through the
-   formal surface.  The present theorem gives only local units.
+   etale germ.  The present theorem gives only local units.
 3. **Gate stratification.**  For new planar source-fibre families, first split
    the parameter locus into gradient-proper and gradient-unimodular strata;
    compute the Hamiltonian divergence class only on the second.
 4. **Hostile against global optimism.**  Search for the first parameter value
-   where the formal component meets a wall, ramifies, or ceases to algebraize.
-   Formal persistence is not global continuation.
+   where the component closure meets a wall, ramifies, or changes gcd degree.
+   Local algebraic persistence is not global continuation.
 
 The reusable move is a version of “audit the next native operation”: when an
 exceptional point is transverse in its internal coordinates, release all
 available external directions before declaring it isolated.  The correct
-object may be the formal graph of the base ideal, with the deck carried over
-it, rather than one slice or one selected root.
+object may be the algebraic etale graph of the base ideal, with the deck
+carried over it, rather than one slice or one selected root.
 
 ## Reproduction
 
