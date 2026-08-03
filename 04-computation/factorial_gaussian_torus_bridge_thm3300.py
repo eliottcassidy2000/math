@@ -343,6 +343,15 @@ require(any(not c.is_zero() for c in CUBIC), "the cubic is not identically 0")
 GCD_TWO = univariate_gcd(CUBIC, SEXTIC)
 require(len(GCD_TWO) <= 1,
         "degree 2: <g^3> and <g^6> share no root, family excluded")
+
+# The affine parameter B0+a*B1 misses the projective point [0:1].  Audit it
+# explicitly so the exclusion is genuinely projective rather than chart-local.
+DEGREE_TWO_INFINITY_CUBIC = simplex_average(cpow(DEGREE_TWO[1], 3), 3)
+DEGREE_TWO_INFINITY_SEXTIC = simplex_average(cpow(DEGREE_TWO[1], 6), 3)
+require(DEGREE_TWO_INFINITY_CUBIC == Cyclo(Fraction(1, 11340)),
+        "degree 2: exact cubic at the infinity point")
+require(DEGREE_TWO_INFINITY_SEXTIC == Cyclo(Fraction(1, 43783740)),
+        "degree 2: exact sextic at the infinity point")
 EXCLUSION_ROWS.append((2, 2, "gcd"))
 
 # Machinery control: a polynomial shares every root with itself.
@@ -554,9 +563,35 @@ for other, sample in ((6, 40), (9, 60)):
 GCD_THREE = fgcd(RESULTANTS[6][:], RESULTANTS[9][:])
 require(len(GCD_THREE) <= 1,
         "degree 3: the resultants share no root, family excluded")
+
+
+def moment_on_infinity_line(exponent):
+    """Coefficients in t of <(B1+t*B2)^exponent> on c0=0."""
+    coefficients = []
+    for j in range(exponent + 1):
+        term = fmul(fpow(BASIS_THREE[2], j),
+                    fpow(BASIS_THREE[1], exponent - j))
+        coefficients.append(faverage(term) * comb(exponent, j) % PRIME)
+    while coefficients and coefficients[-1] == 0:
+        coefficients.pop()
+    return coefficients
+
+
+INFINITY_MOMENTS = {m: moment_on_infinity_line(m) for m in (3, 6, 9)}
+require(tuple(len(INFINITY_MOMENTS[m]) - 1 for m in (3, 6, 9)) == (3, 6, 9),
+        "degree 3: full moment degrees on the missing line c0=0")
+require(all(INFINITY_MOMENTS[m][0] and INFINITY_MOMENTS[m][-1]
+            for m in (3, 6)),
+        "degree 3: both projective endpoints are nonzero")
+INFINITY_GCD_36 = fgcd(INFINITY_MOMENTS[3][:], INFINITY_MOMENTS[6][:])
+INFINITY_GCD_39 = fgcd(INFINITY_MOMENTS[3][:], INFINITY_MOMENTS[9][:])
+require(len(INFINITY_GCD_36) == len(INFINITY_GCD_39) == 1,
+        "degree 3: the missing projective line contains no common zero")
 EXCLUSION_ROWS.append((3, 3, "resultant gcd mod p"))
 require(len(fgcd(RESULTANTS[6][:], RESULTANTS[6][:])) > 1,
         "positive control: mod-p gcd detects a shared root")
+require(len(fgcd(INFINITY_MOMENTS[3][:], INFINITY_MOMENTS[3][:])) > 1,
+        "positive control: missing-line gcd detects a shared root")
 
 
 print("THM-3300 FACTORIAL-GAUSSIAN TORUS BRIDGE EXACT CONTROL")
@@ -572,5 +607,8 @@ print("eigenspace_dims=(deg1,deg2,deg3)=("
 print("cyclic_exclusions=" + repr(EXCLUSION_ROWS))
 print("resultant_degrees=(Res36,Res39)=("
       + str(len(RESULTANTS[6]) - 1) + "," + str(len(RESULTANTS[9]) - 1) + ")")
+print("projective_controls=deg2_infinity=(1/11340,1/43783740);"
+      " deg3_c0_zero_degrees=(3,6,9); gcds=(constant,constant);"
+      " endpoints_nonzero")
 print("scope=HFC route analysis only; no FC(n) proof or refutation")
 print("ALL EXACT CHECKS PASSED")

@@ -26,11 +26,13 @@ audit: >
   identity on 43 rows, and the closed form
   `<(sum omega^j s_j)^m> = (n-1)! m!/(m+n-1)! [n|m]` for `m=1..12`.  It then
   excludes the degree-1 cyclic line explicitly, the degree-2 plane by an exact
-  `Q(omega)` gcd of `<g^3>` and `<g^6>`, and the degree-3 space by a mod-p
-  resultant certificate (`p=10^9+9`, `p=1 mod 3`) with interpolated resultants
-  of degree 18 and 27 whose gcd is constant.  Positive controls confirm that
-  both gcd routines detect a shared root when one exists.  Normal and `-O`
-  replay are byte-identical.  Independent immutable audit is pending.
+  `Q(omega)` gcd of `<g^3>` and `<g^6>` plus its missing projective point, and
+  the degree-3 space by a mod-p resultant certificate (`p=10^9+9`, `p=1 mod
+  3`) with interpolated resultants of degree 18 and 27 whose gcd is constant.
+  The omitted line `c0=0` is separately parameterized and has constant moment
+  gcds, with both endpoints nonzero.  Positive controls confirm that all gcd
+  routines detect a shared root when one exists.  Normal and `-O` replay are
+  byte-identical.  Independent immutable audit is pending.
 source: death-star-fc-archimedes-port-2026-08-03
 depends_on: []
 related:
@@ -39,8 +41,8 @@ related:
   - THM-2022-gmc2-frobenius-lowest-balanced-face
 script: 04-computation/factorial_gaussian_torus_bridge_thm3300.py
 output: 05-knowledge/results/factorial_gaussian_torus_bridge_thm3300.out
-script_sha256: 1f9c286a687ce895e521de526257eb22c363233a6305e678d7dae72279fd0ed0
-output_sha256: 74bf0604d3759a20b3a116a68de8f0006e58b168c9a6c3ef96c16b90d086693c
+script_sha256: f0384ba08f857491d28fba27c048bb9bb8e7da65277014bbbd66abbd91c13f2c
+output_sha256: 708e2493a7d4a941a12d8bcbba7c3e71490672f5f3cda179eee5b73e74e8d31d
 hash_basis: LF-normalized bytes
 ---
 
@@ -171,14 +173,22 @@ d=3: eigenspace has dim 3;   gcd_a( Res_b(<g^3>,<g^6>),
                                     Res_b(<g^3>,<g^9>) ) is constant. (8)
 ```
 
-Hence no member of these families satisfies even the first two surviving
-conditions, let alone all of them.  `(7)` is computed in exact `Q(omega)`;
-`(8)` uses a mod-`p` certificate at `p=10^9+9` (`p=1 mod 3`, so `omega` exists
-in `F_p`), with the two resultants recovered by interpolation in degrees 18
-and 27.  A nonconstant gcd in characteristic zero would reduce to a nonconstant
-gcd mod `p`, so a constant gcd mod `p` is a sound exclusion certificate.  Both
-gcd routines carry a positive control confirming they report a shared root when
-one exists.
+Hence no member of these families satisfies all of the displayed surviving
+conditions: degrees one and two already fail within the first two, while the
+degree-three certificate uses the first three.  `(7)` is computed in exact
+`Q(omega)` on the chart `g=B0+a B1`; its missing point `[0:1]` has
+`(<B1^3>,<B1^6>)=(1/11340,1/43783740)`, so the projective line is complete.
+For `(8)`, the chart `g=B0+a B1+b B2` uses a mod-`p` certificate at
+`p=10^9+9` (`p=1 mod 3`, so `omega` exists in `F_p`), with the two resultants
+recovered by interpolation in degrees 18 and 27.  On its missing projective
+line `c0=0`, write `g=B1+t B2`; the gcds of `M3` with `M6` and with `M9` are
+both constant modulo `p`, and both projective endpoints are nonzero already
+for `M3` and `M6`.  Thus both projective charts are empty.  All denominators
+are prime to `p`, and the input/resultant degrees are retained modulo `p`.
+After primitive denominator clearing, a characteristic-zero common factor
+would therefore retain positive degree modulo `p`; the constant modular gcd
+is a sound exclusion certificate.  Every gcd routine carries a positive
+control confirming it reports a shared root when one exists.
 
 ## 5. Scope
 

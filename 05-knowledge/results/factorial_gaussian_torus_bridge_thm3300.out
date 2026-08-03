@@ -8,5 +8,6 @@ closed_form_rows=12
 eigenspace_dims=(deg1,deg2,deg3)=(1,2,3)
 cyclic_exclusions=[(1, 1, 'explicit'), (2, 2, 'gcd'), (3, 3, 'resultant gcd mod p')]
 resultant_degrees=(Res36,Res39)=(18,27)
+projective_controls=deg2_infinity=(1/11340,1/43783740); deg3_c0_zero_degrees=(3,6,9); gcds=(constant,constant); endpoints_nonzero
 scope=HFC route analysis only; no FC(n) proof or refutation
 ALL EXACT CHECKS PASSED
