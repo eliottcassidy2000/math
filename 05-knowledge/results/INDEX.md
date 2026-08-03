@@ -1,5 +1,7 @@
 # Script Results Index
 
+| `gmc_coprime_selector_geodesic_potentials_thm3280.out` + independent audit | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3280] | In the saturated augmentation basis of `Z[C12]`, the selector word has SNF `(1^10,35)` and the clutch-product-minimizer edge-parity word has SNF `(1^9,9,9)`, so their coprime defects complete the full rank-eleven lattice; a direct mixed minor is `+1`, and completion holds after any integral alignment. The independent no-SymPy audit refutes a physical common-vertex reading: `j12(16)=j12(18)` while `ell(16)!=ell(18)`, the pulled-back word has mass eight, rank eight and SNF `(1^7,2,0,0,0)`, and ordinary hop parity has index eight/SNF `(1^8,2,2,2)` rather than defect 81. This is abstract gauge completion only, with no FC/LRC/GMC decrement. Primary script/output SHA-256: `85d86e7707a852425a33108182559437a73f92979d9491f1221b19296336c017` / `97065ac5eeaaaa12136cf1f4c9d2e7aed665e6d10f9f37aaed27f7a41fc6a10c`; independent: `27d8f6b736649783ad8a4c7542fc0460c9cb1b52db80f177785af7f6783c1b6c` / `35728e8928c7b7a7686dbf3d2c148be84b0329f9a617f8dbe18940d5c5f0e49f`. | root/cross-frontier-35-81-2026-08-03 |
+
 - `lrc14_projected_k3_signed_ray_gate_thm2984.py` -> matching `.out`
   [THM-2984 PROVED + FINITE-EXACT + HOSTILE-AUDITED + LEAN-CORE-FORMALIZED].
   Exact residue replay checks the centered bad-band cardinality and transporter,

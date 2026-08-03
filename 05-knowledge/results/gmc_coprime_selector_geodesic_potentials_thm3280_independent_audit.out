@@ -1,0 +1,11 @@
+INDEPENDENT THM-3280 LATTICE/TYPE AUDIT (NO SYMPY)
+selector_det=35,delta10=1,SNF=(1^10,35),unit10=((0, 1, 2, 3, 4, 5, 6, 7, 8, 9), (0, 1, 3, 4, 5, 6, 7, 8, 9, 10), -1)
+geodesic_det=81,delta10=9,unit9=((0, 1, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 7, 8), -1),SNF=(1^9,9,9)
+combined_unimodular_minor=1,selector_shifts=(0, 1, 2, 3, 5, 6, 7, 8, 10, 11),geodesic_shift=0,SNF=(1^11)
+bezout=1=(-37)*35+16*81
+vertex_fibre_hostile=(j12(16)=j12(18)=1;ell(16)=1,ell(18)=2)
+edge_hostile=(3->16;ell_increment=2,j12_increment=3)
+wrong_physical_pullback_support=(0, 1, 2, 3, 4, 5, 6, 9),mass=8,rank=8,SNF=(1^7,2,0,0,0),det=0
+ordinary_hop_parity_support=(4, 8),index=8,SNF=(1^8,2,2,2)
+metric_scope=defect81_is_edge_count_parity_of_clutch_product_minimizers_not_ordinary_hop_distance
+verdict=abstract_gauge_identity_valid;physical_vertex_identification_false

@@ -2,21 +2,28 @@
 id: THM-3280
 title: "Coprime selector-geodesic potentials and integral augmentation completion"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT.  THM-3278's selector cut potential and
-  THM-3277's even-geodesic-length potential have augmentation indices 35 and
-  81 in their canonically root-normalized abstract C12 coordinates.  Their
-  orbit lattices therefore generate the full integral augmentation lattice;
-  exact Smith computation gives the stronger statement directly, including
-  explicit sparse unimodular bases.  Promotion awaits independent hostile
-  audit of the saturated-basis calculation and the cross-coordinate scope.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  THM-3278's
+  selector-cut potential and THM-3277's clutch-product-minimizer edge-parity
+  potential have augmentation indices 35 and 81 in their root-normalized
+  abstract C12 coordinates.  Their orbit lattices therefore generate the full
+  integral augmentation lattice, in fact after any integral alignment of the
+  two rank-eleven ambient lattices.  The coordinate identity is gauge-only:
+  the physical vertex pullback is rank eight, and ordinary hop-distance parity
+  has index eight rather than 81.  Exact Smith computation and an independent
+  no-SymPy audit verify the completion, sparse unimodular bases, and both
+  hostile boundaries.
 source: root/2026-08-03
 audit: >
   The assertion-independent exact companion pins all four dependency
   surfaces, reconstructs both words from their promoted transcripts, and
   checks the uncentered and augmentation Smith forms in the saturated basis
   x^j-1.  It verifies the coprime completion, every one-vector extension,
-  all 792 sparse 10+1 trials and all 220 reverse 2+9 trials.  Normal,
-  optimized and stored output agree.  Independent audit is pending.
+  all 792 sparse 10+1 trials and all 220 reverse 2+9 trials.  An independent
+  implementation uses Bareiss determinants and determinantal divisors without
+  importing the companion or SymPy.  It reproduces indices 35/81 and a direct
+  determinant-one minor, then checks the physical-pullback rank-eight hostile,
+  the vertex/edge mismatch, and the ordinary-hop index-eight control.  Normal,
+  optimized and stored outputs agree for both implementations.
 depends_on:
   - THM-3260-bispanning-reset-link-holotopy-atlas-and-nonplanar-c12-boundary
   - THM-3269-scale-invariant-clutch-strength-and-canonical-weighted-bispanning-polarization
@@ -28,12 +35,16 @@ script: 04-computation/gmc_coprime_selector_geodesic_potentials_thm3280.py
 output: 05-knowledge/results/gmc_coprime_selector_geodesic_potentials_thm3280.out
 script_sha256: 85d86e7707a852425a33108182559437a73f92979d9491f1221b19296336c017
 output_sha256: 97065ac5eeaaaa12136cf1f4c9d2e7aed665e6d10f9f37aaed27f7a41fc6a10c
+independent_script: 04-computation/gmc_coprime_selector_geodesic_potentials_thm3280_independent_audit.py
+independent_output: 05-knowledge/results/gmc_coprime_selector_geodesic_potentials_thm3280_independent_audit.out
+independent_script_sha256: 27d8f6b736649783ad8a4c7542fc0460c9cb1b52db80f177785af7f6783c1b6c
+independent_output_sha256: 35728e8928c7b7a7686dbf3d2c148be84b0329f9a617f8dbe18940d5c5f0e49f
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3280 -- coprime selector-geodesic potentials and integral augmentation completion
 
-**PROVED CANDIDATE + VERIFIED-EXACT.  INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Two canonical binary potentials have appeared on the order-twelve response
 coordinate, but each one separately misses part of the integral lattice.
@@ -70,7 +81,8 @@ Independently, THM-3277 uses the genuine critical quotient gauge
 j_12(17)=0,     j_12(16)=1.                            (4)
 ```
 
-Its twelve minimum path lengths, indexed by target residue, are
+The edge counts of its exact clutch-product-minimizing vertex-simple paths,
+indexed by target residue, are
 
 ```text
 (2,2,1,1,2,1,1,1,2,1,1,2).                           (5)
@@ -162,6 +174,24 @@ SNF [L_A L_B]=(1^11),                                  (15)
 ```
 
 so `(14)` is an exact integral equality, not merely rational spanning.
+
+This argument is stronger than the chosen residue alignment.  If `M_A,M_B`
+are any two copies of a free rank-eleven lattice, `L_A subset M_A` has index
+35, `L_B subset M_B` has index 81, and `u:M_B -> M_A` is **any** integral
+isomorphism, then `M_A/(L_A+u(L_B))` is a quotient of both `M_A/L_A` and
+`M_A/u(L_B)`.  Its order divides both 35 and 81 and is therefore one.  Thus
+full-lattice completion is alignment-independent.  The promoted gauge remains
+useful only for the displayed sparse basis and for tracing provenance; it is
+not what makes completion true.
+
+Equivalently, `35 M_A subset L_A` and `81 M_A subset u(L_B)`, while
+
+```text
+1=(-37)*35+16*81.                                      (15a)
+```
+
+Applying `(15a)` to any `m in M_A` writes `m` explicitly as an element of
+`L_A+u(L_B)`.
 
 ## 4. Sparse unimodular certificates and asymmetry
 
@@ -259,7 +289,8 @@ The connection proved here is
 
 ```text
 source A: selector face cut in the nonlinear rank C12 coordinate;
-source B: parity of canonical minimum-path lengths in genuine target J12;
+source B: parity of the edge counts of exact clutch-product-minimizing
+          vertex-simple paths in genuine target J12;
 map:      root- and primitive-normalized identity of the abstract C12 copies,
           then cyclic difference and the selected THM-3260 chart;
 target:   the integral response cycle lattice H_1(G_0;Z);
@@ -274,6 +305,35 @@ critical-group character, identify a geodesic target with a response row, or
 show that the two marker events can occur simultaneously.  The sparse bases
 are coefficient/cycle bases, not physical walks.
 
+The independent hostile audit makes this loss quantitative.  If `(6)` is
+illicitly pulled back through `j_12` as an absolute vertex marker and then
+written in `ell` order, its support is
+
+```text
+{0,1,2,3,4,5,6,9},       mass=8,                       (26)
+```
+
+and its augmentation multiplication matrix has rank eight with Smith data
+
+```text
+(1^7,2,0,0,0),                                           (27)
+```
+
+not finite index 81.  The smallest vertex witness is
+`j_12(16)=j_12(18)=1` while `ell(16)=1, ell(18)=2`; on the actual edge
+`3 -> 16`, the increments are respectively 3 and 2.  So a common physical
+vertex system is **refuted**, not merely unproved.
+
+There is a second metric type check.  Literal ordinary hop distances have even
+support `{4,8}` and augmentation Smith form
+
+```text
+(1^8,2,2,2),       index=8.                             (28)
+```
+
+The defect 81 belongs specifically to parity of the edge count of the exact
+clutch-product minimizer.  It is not an ordinary shortest-hop-distance defect.
+
 Accordingly `(24)` proves no row exclusion, no positive moment functional,
 no `FC(3)` or `SFC(3)`, no `LRC(14)` decrement, and no new Gaussian Moment
 Conjecture case.
@@ -285,16 +345,20 @@ Run
 ```text
 python 04-computation/gmc_coprime_selector_geodesic_potentials_thm3280.py
 python -O 04-computation/gmc_coprime_selector_geodesic_potentials_thm3280.py
+python 04-computation/gmc_coprime_selector_geodesic_potentials_thm3280_independent_audit.py
+python -O 04-computation/gmc_coprime_selector_geodesic_potentials_thm3280_independent_audit.py
 ```
 
 and compare LF-normalized bytes with
 
 ```text
-05-knowledge/results/gmc_coprime_selector_geodesic_potentials_thm3280.out.
+05-knowledge/results/gmc_coprime_selector_geodesic_potentials_thm3280.out
+05-knowledge/results/gmc_coprime_selector_geodesic_potentials_thm3280_independent_audit.out.
 ```
 
-The companion uses exact integer, Smith-normal-form and finite enumeration
-only.  It has no assertion node, floating literal, randomness or fitted
-recurrence.
+The primary companion uses exact integer, Smith-normal-form and finite
+enumeration only.  The independent companion uses exact rational elimination,
+Bareiss determinants and determinantal divisors.  Neither has an assertion
+node, floating literal, randomness or fitted recurrence.
 
 QED.

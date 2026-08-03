@@ -93,8 +93,7 @@ and `e9=(-9,+9,QB)` on one packet; ledger `165`.
 - **FORMALIZATION COMPLETE:** `GMC2Main` exposes unconditional `dvdK1`, `nc2`,
   and `gmc2`, kernel-pure up to `propext`, choice, and quotient soundness;
   `singlePolyCrux_holds` discharges the legacy `DvdK1` premise.  THM-2101's
-  additive routes remain optional; THM-2111 is the effective seed and THM-2067
-  only the historical small-root-product route.
+  additive routes remain optional; THM-2111 is the effective seed and THM-2067 the historical small-root-product route.
 
 ### Why THM-2022 works
 
