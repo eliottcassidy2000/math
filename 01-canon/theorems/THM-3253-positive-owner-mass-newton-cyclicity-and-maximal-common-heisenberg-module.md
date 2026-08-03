@@ -8,10 +8,11 @@ status: >
   The resulting 13 by 13 matrix is nonsingular in all 8,064 primitive Singer
   gauges.  Exact degree-26 Newton certificates handle the natural 672-gauge
   family; exact Z-polynomial factorization plus finite-field root-free
-  certificates handle all twelve multiplier classes.  Placing any mass
-  matrix on one central slice gives a nonnegative packet whose H_13 orbit
-  spans the sharp 2,041-dimensional common submodule from THM-3250.  The
-  plane relocation remains abstract and is not a canonical endpoint current.
+  certificates handle all twelve multiplier classes.  A separate shifted
+  Newton certificate independently proves all 84 reduced classes.  Placing
+  any mass matrix on one central slice gives a nonnegative packet whose H_13
+  orbit spans the sharp 2,041-dimensional common submodule from THM-3250.
+  The plane relocation remains abstract and is not a canonical endpoint current.
 source: root/2026-08-03
 audit: >
   The assertion-independent companion pins THM-3234, promoted THM-3246 and
@@ -28,6 +29,10 @@ audit: >
   Independent reconstruction additionally checked all 8,064 gauges at g=1,
   all symmetry identities, the exceptional exact-order lane, the finite-field
   certificates, normal and optimized replay, and the declared LF hashes.
+  A second independently developed companion computes every reduced
+  determinant by fraction-free elimination, checks a 57-step exact head and
+  one-sign Newton tails from the sharp common base 58, and matches 64,512
+  two-prime hostile determinants plus separate domain-determinant controls.
 depends_on:
   - THM-3234-singer-owner-compactification-and-pointed-heisenberg-carrier-gate
   - THM-3246-all-dilation-second-owner-seam-stabilization-and-sign-word
@@ -39,6 +44,10 @@ script: 04-computation/lrc_positive_owner_mass_newton_cyclicity_thm3253.py
 output: 05-knowledge/results/lrc_positive_owner_mass_newton_cyclicity_thm3253.out
 script_sha256: 89aa2a399848ae52e8dd18de9967c7ea2940c04521434ad99407f7be96bdd700
 output_sha256: a96010c22126d391bf490f8535dcb3b93809f63e8b705fd23c6223a962bdae58
+secondary_script: 04-computation/lrc_positive_owner_mass_uniform_newton_audit_thm3253.py
+secondary_output: 05-knowledge/results/lrc_positive_owner_mass_uniform_newton_audit_thm3253.out
+secondary_script_sha256: a57b12a6f4ccd2cc35007896f567656b11ec95748bda408380373730874e2719
+secondary_output_sha256: 908dd123de44e169cca80f4349e6c976937e129ba5925c0da36f83f72e3eeb87
 hash_basis: LF-normalized bytes
 ---
 
@@ -339,10 +348,60 @@ modulo 31 makes the apparent order at zero rise from seven to eight because
 31 divides the exact seventh coefficient.  Factoring only a modular order
 would be invalid; the exact quotient instead receives root-free prime 59.
 
-## 6. A nonnegative packet attaining the common-module ceiling
+## 6. Independent uniform Newton proof for all gauges
 
-Fix any case in `(7)` and abbreviate its mass matrix by `A`.  On THM-3250's
-exact-address carrier define the rational packet
+The secondary companion proves the all-gauge theorem by a disjoint exact
+route.  Use the twelve multiplier representatives in (17) and phases
+b=0,...,6.  For each of the resulting 84 classes, put
+
+~~~text
+P_(a,b)(g)=det B_g^(a,b).                               (33a)
+~~~
+
+Every P_(a,b) has degree exactly 26.  Exact Bareiss elimination gives:
+
+~~~text
+P_(a,b)(g)!=0,                         1<=g<=57;         (33b)
+
+Delta^k P_(a,b)(58), 0<=k<=26,
+are all nonzero and have one common sign for fixed (a,b).                  (33c)
+~~~
+
+The first line comprises 4,788 exact head determinants.  The second comprises
+2,268 exact Newton coefficients, with 44 positive-sign and 40 negative-sign
+classes.  Their ordered digests are
+
+~~~text
+head:
+97260646b6d140268a649f6f5d4e3a8c0d6af6849945e81b172a2170e310a63f,
+
+tail:
+31fe23e30c06e0ddde4bb19f19c5d44e5795f00d0456e6a5e71c846d88a9c008. (33d)
+~~~
+
+Newton's identity (19) makes every summand one-signed for g>=58, so
+(33b)--(33c) independently prove nonvanishing for every positive integer g.
+The head is load-bearing: sixteen classes change sign at adjacent positive
+integers, and
+
+~~~text
+P_(43,1)(57) P_(43,1)(58)<0.                            (33e)
+~~~
+
+Thus no common one-sign Newton tail can start before 58.
+
+As an indexing and elimination hostile, the companion also checks all 8,064
+gauges at g in {1,57,58,1000} modulo each of 1000000007 and 1000000009.
+All 64,512 determinants are nonzero.  A separate SymPy domain determinant
+matches 18 boundary, identity, and sign-transition controls.  This uniform
+Newton proof and Section
+5's exact-factor/root-free proof share the mass table and Singer model but
+not their all-dilation nonvanishing certificate.
+
+## 7. A nonnegative packet attaining the common-module ceiling
+
+Fix any case in `(7)` and abbreviate its mass matrix by `A`.  Let `K` be
+THM-3250's splitting field.  On its exact-address carrier define the rational packet
 
 ```text
 W_A=sum_(s,t in F_13) A_(s,t)[s,t,0].                  (34)
@@ -382,19 +441,19 @@ dim_K span(H_13.W_A)=2028+13=2041.                     (38)
 
 THM-3250 proves that 2041 is the maximum rank of any equivariant map from
 the exact-address carrier to the regular nonvertical blowup carrier.  The
-module in `(30)` has all charged blocks plus one copy of every common neutral
-character, so it is precisely a maximal common submodule.  The positive
+module in `(38)` has all charged blocks plus one copy of every common neutral
+character, so it is precisely a maximal common submodule.  The nonnegative
 packet uses the neutral overlap; it does not contradict or eliminate the
 remaining 156-dimensional neutral mismatch.
 
-## 7. Scope
+## 8. Scope
 
 The entries in `(6)` are genuine positive THM-3246 cell masses, but placing
 them at Singer-plane points and on the central slice `delta=0` is an abstract
 relocation.  No physical LRC owner-to-plane map, canonical endpoint packet,
 Boolean observable, positive equivariant map, Markov clutch, or compatibility
 with the full affine/Singer action is constructed.  In particular `(34)` is
-not the canonical current reserved in THM-3247.
+not the canonical current treated in THM-3247.
 
 The theorem treats one ordered `(3,5;1,2)` lane and all 8,064 primitive
 Singer gauges.
@@ -404,17 +463,20 @@ owner weights and maximal charged/neutral cyclic rank coexist at every
 dilation.  The remaining obstruction is realization and equivariant
 transport, not matrix rank.
 
-## 8. Exact companion
+## 9. Exact companions
 
 Run
 
 ```text
-python 04-computation/lrc_positive_owner_mass_newton_cyclicity_thm3253.py
-python -O 04-computation/lrc_positive_owner_mass_newton_cyclicity_thm3253.py
+python3 04-computation/lrc_positive_owner_mass_newton_cyclicity_thm3253.py
+python3 -O 04-computation/lrc_positive_owner_mass_newton_cyclicity_thm3253.py
+python3 04-computation/lrc_positive_owner_mass_uniform_newton_audit_thm3253.py
+python3 -O 04-computation/lrc_positive_owner_mass_uniform_newton_audit_thm3253.py
 ```
 
-and compare LF-normalized bytes with the declared output.  The companion
-uses exact integer and finite-field arithmetic only, with no floating point,
-randomness, discovery cache, or optimization-sensitive assertions.
+and compare LF-normalized bytes with the two declared outputs.  The
+companions use exact integer and finite-field arithmetic only, with no
+floating point, randomness, discovery cache, or optimization-sensitive
+assertions.
 
 QED.

@@ -369,8 +369,8 @@ THM-2290/2292/2294 and the S79 support-Dirichlet reflection.
 
 ## Divide exceptional multiplicity before judging a wall
 
-**Trigger / action:** when a row, degree, or leading coefficient vanishes on a parameter wall, retain the transverse parameter, prove and divide the common exceptional multiplicity, then read the first normal coefficient—reciprocally if degree escapes to infinity.
-**Mechanism / limit:** the strict transform retains the erased osculating row or escape polynomial, but needs unit hypotheses and need not preserve a root label, physical current, or Keller condition. **Evidence:** THM-3231/3237.
+**Trigger / action:** when a leading row or degree vanishes on a wall, retain the transverse parameter, divide the proved exceptional multiplicity, then recompute support and the first normal coefficient (reciprocally at infinity).
+**Mechanism / limit:** strict transforms can activate ambiently inert terms, but need units and lose root labels and physical/Keller data. THM-3233 iterates PRS normalization; THM-3257 tunes THM-3237's wall. **Evidence:** THM-3231/3233/3237/3257.
 
 ## Refine vertices and lifetimes before quotienting
 

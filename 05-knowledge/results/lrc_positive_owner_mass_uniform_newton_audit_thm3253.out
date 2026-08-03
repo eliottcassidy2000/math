@@ -1,0 +1,20 @@
+THM-3253 UNIVERSAL POSITIVE OWNER-MASS NEWTON CYCLICITY EXACT AUDIT
+dependency_hash_checks=5
+assert_nodes=0,float_literals=0
+owner_numerator_polynomials=168,degree=2,all_positive_for_g>=1
+singer_plane=F13[u]/(u^2-2),alpha=(1,2),orbit=168
+primitive_multiplier_representatives=(1, 5, 11, 17, 19, 23, 29, 31, 43, 47, 59, 71)
+phase_classes=7,multiplier_classes=12,determinant_classes=84
+finite_head=g1..57,nonzero_checks=84*57=4788,base1_one_sign=68
+head_sign_transitions=((1, 4), (2, 4), (3, 1), (6, 1), (7, 1), (9, 2), (17, 2), (57, 1)),base58_is_sharp=PASS
+finite_head_digest=97260646b6d140268a649f6f5d4e3a8c0d6af6849945e81b172a2170e310a63f
+newton_base=58,degree26_classes=84,strict_one_sign_coefficients=84*27
+newton_tail_signs=(44, 40),minimum_signed_coefficient=31583339331193330095097135851612043896766825662862153422608271409152000000
+newton_tail_digest=31fe23e30c06e0ddde4bb19f19c5d44e5795f00d0456e6a5e71c846d88a9c008
+full_gauge_count=8064,modular_controls=2*4*8064=64512
+modular_control_summaries=((1000000007, 1, 168, 4839674, 995160333), (1000000007, 57, 168, 2858857, 997141150), (1000000007, 58, 168, 7164805, 992835202), (1000000007, 1000, 168, 2824485, 997175522), (1000000009, 1, 168, 4758785, 995241224), (1000000009, 57, 168, 579214, 999420795), (1000000009, 58, 168, 7198070, 992801939), (1000000009, 1000, 168, 5476327, 994523682))
+full_gauge_modular_digest=4c7cb86935def79998900ee220ca758ef9788d2d5b4d16b420995802f60ff12d
+all_integer_dilations_all_primitive_gauges_nonsingular=PASS
+nonnegative_delta0_packet_orbit_span=12*169+13=2041
+scope=abstract-positive-owner-mass-relocation-not-canonical-endpoint-current
+all_exact_checks=PASS
