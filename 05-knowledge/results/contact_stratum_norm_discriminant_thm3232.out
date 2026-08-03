@@ -1,0 +1,14 @@
+dependency_thm3229_sha256=316f13d5a896d185124555ce5e32bdd041cd391497517c000538a03b5ddf0aab
+assert_nodes=0,float_literals=0
+split_contact_strata=2,3
+split_stratum_checks=2,split_branch_checks=4
+irreducible_power_family_orders=2..6
+irreducible_power_norms=-8,64,-512,4096,-32768
+trace_hostile=Q[x]/(x2-2):trace(2x)=0,norm(2x)=-8
+affine_covariance=r3,m4,rho3:weight9
+balanced_invariant=262144
+target_frame=diagonal-invariant,swap-balanced,GL2-weight-checked
+finite_field_frobenius=F5:x2+2:norm3
+boundaries=coarse-mixed-depth-zero,repeated-discriminant-zero
+scope=root-free-orbit-product-not-root-selector-or-additive-carry
+all_exact_checks=PASS
