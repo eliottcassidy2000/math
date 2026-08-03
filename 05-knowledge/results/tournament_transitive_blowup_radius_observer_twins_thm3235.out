@@ -1,0 +1,25 @@
+THM-3235 exact companion
+assertion-independent AST Assert nodes: 0
+mask convention: vertices 1..6; pairs lexicographic; bit 0=(1,2); bit 1 means i->j
+strong Hamilton cycles: 408 (1, 5, 3, 2, 6, 4) ; 1332 (1, 4, 2, 6, 3, 5)
+determinant orbit sizes for 1332: (6, 2, 6, 3, 6, 1)
+determinant-owner group orders: 408 48 ; 1332 6
+determinant-owner vertex orbits: 408 ((1, 2, 3, 4, 5, 6),) ; 1332 ((1, 2, 3, 4, 5, 6),)
+diagonal determinants: 408 (1, 0, 0, -8, -12, -6, -1) ; 1332 (1, 0, 0, -8, -9, -12, -4)
+common positive factor: t^2+2t-1; alpha=sqrt(2)-1; rho=1+sqrt(2)
+backward-adjacency histogram (both): (45, 117, 198, 198, 117, 45)
+ordered path-cover profile F (both): (45, 342, 1116, 1944, 1800, 720)
+unordered path-cover profile p (both): (45, 171, 186, 81, 15, 1)
+path-colour ordinary coefficients [t^0..t^6] (both): (0, 0, 28, 0, 16, 0, 1)
+uniform transitive determinant evaluations checked: 16
+C3[T2,T2,T2] isomorphism for mask 408: PASS
+general block determinant value: -17125
+general block internal determinants: (-5, 1, -5)
+general block internal observers: (Fraction(-7, 1), Fraction(14, 1), Fraction(-7, 1))
+transitive substitution associativity controls: 4
+generic walk observers at X=(1,2,3,4,5,6): 408 -12829/3894 ; 1332 -3547/1081
+uniform transitive lift Hamilton responses r=1,2,3:
+  408: (45, 421425, 73948095585)
+  1332: (45, 411513, 71347853961)
+response minor using r=1,2: -446040
+all exact checks: PASS
