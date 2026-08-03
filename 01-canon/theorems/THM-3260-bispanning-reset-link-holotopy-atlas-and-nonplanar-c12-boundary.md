@@ -2,7 +2,7 @@
 id: THM-3260
 title: "Bispanning reset-link holotopy atlas and C12/C7 carrier boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   THM-3254's 23 first-link-blocked row pairs form a connected bipartite
   graph with one leaf bridge.  Its leafless core has 12 vertices, 22 edges
   and first Betti number 11.  It is nonplanar, has intrinsic automorphism
@@ -27,7 +27,11 @@ audit: >
   connectedness and the free C2 action; and builds an explicit pair of
   unimodular reduced incidence matrices with integral GL11 transition.
   Normal, optimized and stored replay and the declared LF hashes are required.
-  Independent hostile audit is pending.
+  An independent NetworkX/SymPy reconstruction rederived the original and
+  delayed graph censuses, automorphism groups, relative boundary, tree-pair
+  atlas and integral cyclic-difference typing; it replayed normal, optimized
+  and stored bytes exactly.  Accepted after the faithful-action, integral
+  lattice and loop-holonomy scope repairs.
 depends_on:
   - THM-3254-first-shell-two-row-clutch-and-graded-gauge-no-go
   - THM-3255-twelve-balance-multiplicative-singer-rank-defect-and-phase-marker-boundary
@@ -43,7 +47,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3260 -- bispanning reset-link holotopy atlas and C12/C7 carrier boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3254 proves that every lawful two-row covering pair has a sharp two-state
 positive clutch, and that 23 of the 31 pairs already fail on the first link of
@@ -295,8 +299,8 @@ transport between chosen charts, not a distinguished choice.
 The theorem uses only which two-row pairs are first-link blocked.  It does not
 transport the signs, rational clutch thresholds, physical state labels or
 positive cones attached to those edges.  It constructs no row-to-owner map,
-no faithful `C_12` torsor action, no `C_7` relative-layer action, no physical
-Gaussian-moment response, and no positive LRC
+no faithful `C_12` torsor action, no faithful/order-seven graph action on the
+`C_7`-sized relative layer, no physical Gaussian-moment response, and no positive LRC
 current.  The conditional isomorphism `(14)` is not a consequence of
 THM-3254 or THM-3255 without its two explicit sidecars.
 
@@ -322,4 +326,4 @@ only exact integer and rational arithmetic.  It has no floating point,
 randomness, discovery cache, graph-library dependency, or
 optimization-sensitive assertion.
 
-QED, pending independent hostile audit.
+QED.
