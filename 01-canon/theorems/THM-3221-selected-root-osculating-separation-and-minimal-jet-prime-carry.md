@@ -2,7 +2,7 @@
 id: THM-3221
 title: "Selected-root osculating separation and minimal-jet prime carry"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   At one selected common simple root, the first unequal coefficient of two
   derivative-normalized polynomial germs is exactly the first nonidentity
   coefficient of their transition germ.  It is a weighted cotangent tensor
@@ -19,9 +19,9 @@ audit: >
   charts; checks 44 minimal-quotient compositions and coordinate weights,
   561 nonzero exact-order-p classes, 231 divided carries, 30 finite-degree
   reconstructions, ten fixed-depth hostiles, the same-divisor nonconstant-unit
-  hostile, and the F3 higher-Nottingham-tail hostile.  Normal/-O/stored replay
-  passes with LF-normalized hashes below.  Independent immutable audit is
-  pending.
+  hostile, and the F3 higher-Nottingham-tail hostile.  An independent hostile
+  audit rederived every mechanism and scope boundary.  Normal/-O/stored
+  replay passes with LF-normalized hashes below.
 depends_on:
   - THM-3215-arbitrary-degree-root-jet-hamiltonian-affine-dihedral-holonomy-and-p-fold-carry
 related:
@@ -38,8 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3221 -- selected-root osculating separation and minimal-jet prime carry
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT
-PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3215 extracts the universal two-jet reflection at a selected simple root,
 and THM-3220 identifies the first simultaneous nonabelian four-jet layer.  The
@@ -325,4 +324,13 @@ Ordinary and optimized runs byte-match
 
 and the LF-normalized hashes are pinned in the frontmatter.
 
-QED, conditional only on independent immutable audit for status promotion.
+An independent hostile audit separately rederived the first unequal
+coefficient formula, cancellation of an arbitrary nonlinear source chart,
+the cotangent weight, associated-graded additivity, exact quotient order and
+divided carry, degree-adaptive reconstruction, and every stated hostile.  It
+confirmed that `(14)` is deliberately quotient-only and that neither a full
+Nottingham exponent nor a global root selector is smuggled into the result.
+Fresh normal and optimized runs each byte-match the stored transcript and the
+declared LF-normalized hashes.
+
+QED.
