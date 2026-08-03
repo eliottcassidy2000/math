@@ -7,9 +7,12 @@ status: >
   unique-reset sections on both complete support-(1,2), bank-I2 and
   support-(1,3), bank-I2 physical selector faces.  On the 239-state small
   face, six rows already suffice and an explicit positive perturbation uses
-  all twenty-two.  Nevertheless an exact positive nineteen-state Farkas
-  mixture has strictly positive expectation in every chart coordinate, so
-  no one nonzero nonnegative chart weighting can expose both resets at once.
+  all twenty-two.  The same adaptive row-(2,10) one-pole atlas routes both
+  faces; exactly 24 unordered row pairs work on both.  On each face a sharp
+  two-state clutch rules out every constant positive row-(2,10) blend.
+  More strongly, an exact positive nineteen-state Farkas mixture has strictly
+  positive expectation in every chart coordinate, so no one nonzero
+  nonnegative weighting of all twenty-two charts exposes both resets at once.
   This is a two-face transition-gauge obstruction, not arbitrary-support
   product-Gamma positivity or the Gaussian Moment Conjecture.
 source: root/multiscale-newton-flag/product-gamma-width3/2026-08-03
@@ -18,20 +21,23 @@ audit: >
   the sixteen additional full-face witness states from the pinned
   product-Gamma formula.  It verifies the six-row primitive certificate, the
   all-twenty-two positive perturbation, the failure of the transported
-  THM-3238 weights, and every coordinate of the nineteen-state Farkas
-  mixture using rational arithmetic.  Normal and optimized runs byte-match
-  the stored transcript; independent proof and replay audit are pending.
+  THM-3238 weights, all 52 small-face covering pairs, the exact 24-pair
+  intersection with promoted THM-3244, the small-face two-state blend clutch,
+  and every coordinate of the nineteen-state Farkas mixture using rational
+  arithmetic.  Normal and optimized runs byte-match the stored transcript;
+  independent proof and replay audit are pending.
 depends_on:
   - THM-3127-partition-refinement-strassen-upset-dual-and-filter-response
   - THM-3238-complete-physical-product-gamma-bank-unique-reset-stitch
+  - THM-3244-unique-reset-exposure-deletion-graph-nonmorse-boundary
 related:
   - THM-3222-universal-product-gamma-reset-upper-filter-collar
   - THM-2267-static-owner-coverage-is-flag-and-transition-holonomy-is-a-cut-kernel
   - THM-2292-common-catalytic-section-and-helly-calibration-nerve
 script: 04-computation/gmc_cross_support_upset_atlas_holonomy_thm3249.py
 output: 05-knowledge/results/gmc_cross_support_upset_atlas_holonomy_thm3249.out
-script_sha256: 831f9086cfa34b85e63eb7095243ae5de398eed626f24b2feadd91fff25b83b3
-output_sha256: bab45455dff1080caf47303615abbfd32f538b32b165cd67ad6373e0aeaaf816
+script_sha256: bb901e92687544c69d67a55d057f8293ecbf516b80d491a636c4a62af19eebef
+output_sha256: 76d037d4f0737b37ad48531e23be1a0a37509ce0a3d029d3cefdd42662ec04f2
 hash_basis: LF-normalized bytes
 ---
 
@@ -153,7 +159,86 @@ negative/zero/positive=115/1/123,                    (11)
 and its largest positive state is `(3,3)`.  The failure is therefore a gauge
 change, not a failure of the twenty-two-chart atlas.
 
-## 3. Exact nineteen-state common-gauge obstruction
+## 3. A cross-support adaptive atlas and its clutch
+
+For a nonreset state `sigma`, call row `i` available when some one-pole move
+`tau` toward the appropriate reset satisfies
+
+```text
+r_i^f(tau)>r_i^f(sigma).                               (11a)
+```
+
+Every such move lowers multiset `l1` distance to the reset by exactly one.
+On the small face, the exact row-(2,10) split is
+
+```text
+row 2 / row 10 / overlap / 2-only / 10-only / missed
+ 219  /   186  /   167   /   52   /    19   /   0.    (11b)
+```
+
+There are exactly 52 covering row pairs on this face.  Promoted THM-3244
+proves that the target face has 31, with row-(2,10) split
+`4215/4014/3911/304/103/0`.  Intersecting the two exact pair families leaves
+precisely the following 24 cross-support charts:
+
+```text
+(2,10) (2,13) (2,19)
+(3,9) (3,11) (3,16) (3,22)
+(7,18) (7,22)
+(10,11) (10,16) (10,22)
+(11,13) (11,17)
+(13,14) (13,18) (13,22)
+(14,19)
+(16,17) (16,21)
+(17,22) (18,19) (19,22) (21,22).                    (11c)
+```
+
+Their ordered-list digest is
+
+```text
+e622d25bfc96d28269eb9ecb86ec43211754530ba819361d880989321640dd63. (11d)
+```
+
+In particular, repeatedly choosing an available member of rows 2 and 10
+routes every state on either face to its reset in exactly its multiset `l1`
+distance.  This is one transported adaptive atlas, not one transported
+linear functional.
+
+The distinction is already sharp on the small face.  Put
+
+```text
+H_lambda^12=lambda r_2^12+r_10^12,  lambda>0.          (11e)
+```
+
+A state is trapped when every reset-directed one-pole difference of `(11e)`
+is nonpositive.  The state
+
+```text
+A_12=(1,1,2,2,3,4,5)
+```
+
+has only the delete-1 edge, with difference
+`(Delta r_2,Delta r_10)=(312637160,-191504)`, and is trapped for
+
+```text
+0<lambda<=23938/39079645.                              (11f)
+```
+
+At `B_12=(1,2,2)`, the insert-3, insert-4, and insert-5 edges give the
+complementary exact interval
+
+```text
+lambda>=66495115323/16401877394431324.                 (11g)
+```
+
+The lower endpoint in `(11g)` is strictly below the upper endpoint in
+`(11f)`, so these two states trap every positive blend.  Two states are
+minimal because `(11b)` prevents one state from remaining trapped in both
+pure-chart limits.  THM-3244 proves the analogous sharp two-state clutch on
+the target face.  Thus the same two charts transport across support, while a
+constant positive ratio does not even localize on either face separately.
+
+## 4. Exact nineteen-state common-gauge obstruction
 
 Write `12:sigma` and `13:sigma` for a state in the corresponding face.  The
 following positive rational mixture is the full Farkas witness.
@@ -219,7 +304,7 @@ twenty-two templates is a strict common section for both faces.
 The mixture in the table is a dual certificate for a chart-cone intersection.
 It is not asserted to be a selector-feasible probability law on either face.
 
-## 4. Holotopy interpretation and boundary
+## 5. Holotopy interpretation and boundary
 
 For a face `f`, define its positive exposure cone
 
@@ -235,25 +320,30 @@ THM-3238 and `(8)--(9)` say `K_13` and `K_12` are both nonempty.  Equations
 K_12 intersection K_13=empty.                         (18)
 ```
 
-Thus the chart atlas transports but a constant positive gauge does not.  In
-holotopy language, there are local positive sections and a nontrivial
-transition requirement.  This is not yet a loop or a nonzero Cech class: a
-third face and pairwise-compatible transition sections would be required for
-that stronger conclusion.
+Thus the adaptive chart atlas transports but a constant positive gauge does
+not.  The two-state clutches show that switching is already necessary inside
+the distinguished two-chart cones, while the Farkas witness rules out every
+constant nonnegative gauge on the full fixed atlas.  In holotopy language,
+there are local positive sections and a nontrivial transition requirement.
+This is not yet a loop or a nonzero Čech class: a third face and
+pairwise-compatible transition sections would be required for that stronger
+conclusion.
 
 THM-2267 and THM-2292 are useful abstract precedents for static charts whose
 transition gluing carries extra information.  Their owner-cut and signed
 gain-graph invariants are different types; neither proves `(18)`.  Here the
 obstruction is exactly convex and is witnessed by the positive Farkas mixture.
 
-## 5. Scope
+## 6. Scope
 
 The theorem concerns only bank `I2`, supports `(1,2)` and `(1,3)`, their
 complete physical submultiset banks, and the twenty-two THM-3238 templates.
 It proves neither that the atlas works on support `(1,4)` nor that some larger
 atlas lacks a common gauge.  It does not establish arbitrary-support
 product-Gamma positivity, arbitrary radial coefficients, NC2, or the Gaussian
-Moment Conjecture.  Its positive conclusion is the complete `(1,2),I2` face;
-its negative conclusion is precisely the constant-gauge transport wall.
+Moment Conjecture.  Its positive conclusions are the complete `(1,2),I2`
+face and the 24-pair adaptive atlas shared with `(1,3),I2`; its negative
+conclusions are the two-row local clutches and the full-atlas constant-gauge
+transport wall.
 
 QED.

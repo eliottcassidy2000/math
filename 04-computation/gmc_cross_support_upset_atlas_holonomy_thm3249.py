@@ -25,11 +25,21 @@ THM3238_SCRIPT = ROOT / (
 THM3238_OUTPUT = ROOT / (
     "05-knowledge/results/gmc_complete_physical_bank_unique_reset_thm3238.out"
 )
+THM3244_SCRIPT = ROOT / (
+    "04-computation/gmc_unique_reset_rips_nonmorse_thm3244.py"
+)
+THM3244_OUTPUT = ROOT / (
+    "05-knowledge/results/gmc_unique_reset_rips_nonmorse_thm3244.out"
+)
 PINS = {
     THM3238_SCRIPT:
         "201e7348cc4f1e7fe4cfd51cfda42db85b8943d8d33f2d9080f20df562ecccaa",
     THM3238_OUTPUT:
         "77b6a45b1715e9412732e3e89103809071eab4e3225f95510b7b59b022ddc93b",
+    THM3244_SCRIPT:
+        "3ff0babc41e35e6a185b0ff442cfb9284d9688360c0b96cd947c1128e16400ba",
+    THM3244_OUTPUT:
+        "27dcd7c68e628465a1f09a564be0be366ded6075ef009a3d85d029f8f18605c9",
 }
 
 
@@ -188,6 +198,34 @@ EXPECTED_SMALL_COVERING_PAIRS = (
     (17, 18), (17, 22), (18, 19), (18, 21),
     (19, 22), (21, 22),
 )
+EXPECTED_TARGET_COVERING_PAIRS = (
+    (2, 7), (2, 10), (2, 13), (2, 17), (2, 19), (2, 21),
+    (3, 9), (3, 11), (3, 16), (3, 22),
+    (7, 14), (7, 18), (7, 22),
+    (10, 11), (10, 16), (10, 22),
+    (11, 13), (11, 17), (11, 21),
+    (12, 13), (12, 19),
+    (13, 14), (13, 18), (13, 22),
+    (14, 19),
+    (16, 17), (16, 21),
+    (17, 22), (18, 19), (19, 22), (21, 22),
+)
+EXPECTED_COMMON_COVERING_PAIRS = (
+    (2, 10), (2, 13), (2, 19),
+    (3, 9), (3, 11), (3, 16), (3, 22),
+    (7, 18), (7, 22),
+    (10, 11), (10, 16), (10, 22),
+    (11, 13), (11, 17),
+    (13, 14), (13, 18), (13, 22),
+    (14, 19),
+    (16, 17), (16, 21),
+    (17, 22), (18, 19), (19, 22), (21, 22),
+)
+EXPECTED_COMMON_PAIR_DIGEST = (
+    "e622d25bfc96d28269eb9ecb86ec43211754530ba819361d880989321640dd63"
+)
+SMALL_BLEND_TRAP_A = (1, 1, 2, 2, 3, 4, 5)
+SMALL_BLEND_TRAP_B = (1, 2, 2)
 
 
 def clear_positive_weights(weights):
@@ -229,6 +267,26 @@ def toward_reset_neighbours(state, poles, reset):
         if candidate:
             answer.append(candidate)
     return tuple(answer)
+
+
+def positive_blend_trap_interval(state, state_index, rows, poles, reset):
+    """Closed local-trap interval for lambda*row_2 + row_10, lambda>0."""
+
+    lower = Fraction(0)
+    upper = None
+    for target in toward_reset_neighbours(state, poles, reset):
+        delta_two = rows[state_index[target]][1] - rows[state_index[state]][1]
+        delta_ten = rows[state_index[target]][9] - rows[state_index[state]][9]
+        if delta_two > 0:
+            bound = Fraction(-delta_ten, delta_two)
+            require(bound > 0, "empty small blend trap interval")
+            upper = bound if upper is None else min(upper, bound)
+        elif delta_two < 0:
+            lower = max(lower, Fraction(-delta_ten, delta_two))
+        else:
+            require(delta_ten <= 0, "empty small blend trap interval")
+    require(upper is None or lower <= upper, "inconsistent small blend interval")
+    return lower, upper
 
 
 def main():
@@ -333,6 +391,50 @@ def main():
              len(covers[9] - covers[1])) == (219, 186, 167, 52, 19),
             "small distinguished pair cover split drift")
 
+    # THM-3244 independently verifies the complete target-face family.  Read
+    # its pinned exact constant rather than silently duplicating provenance.
+    thm3244_syntax = ast.parse(THM3244_SCRIPT.read_text(encoding="utf-8"))
+    target_pair_nodes = tuple(
+        node.value for node in thm3244_syntax.body
+        if isinstance(node, ast.Assign)
+        and len(node.targets) == 1
+        and isinstance(node.targets[0], ast.Name)
+        and node.targets[0].id == "ROW_COVERING_PAIRS"
+    )
+    require(len(target_pair_nodes) == 1, "THM-3244 pair constant missing")
+    require(ast.literal_eval(target_pair_nodes[0])
+            == EXPECTED_TARGET_COVERING_PAIRS,
+            "THM-3244 target covering-pair drift")
+
+    # Their set-theoretic intersection is the exact cross-support atlas.
+    common_covering_pairs = tuple(
+        pair for pair in covering_pairs
+        if pair in frozenset(EXPECTED_TARGET_COVERING_PAIRS)
+    )
+    require(common_covering_pairs == EXPECTED_COMMON_COVERING_PAIRS,
+            "cross-support covering-pair intersection drift")
+
+    # The adaptive choice is necessary even on the small face: no one fixed
+    # positive blend of the distinguished two rows has a Q-directed ascent
+    # everywhere.  Equality stays in the trap because ascent is strict.
+    small_blend_interval_a = positive_blend_trap_interval(
+        SMALL_BLEND_TRAP_A, state_index, small_rows, SMALL_POLES, SMALL_RESET
+    )
+    small_blend_interval_b = positive_blend_trap_interval(
+        SMALL_BLEND_TRAP_B, state_index, small_rows, SMALL_POLES, SMALL_RESET
+    )
+    require(small_blend_interval_a == (
+        Fraction(0), Fraction(23938, 39079645),
+    ), "small-ratio small-face blend trap")
+    require(small_blend_interval_b == (
+        Fraction(66495115323, 16401877394431324), None,
+    ), "large-ratio small-face blend trap")
+    require(small_blend_interval_b[0] < small_blend_interval_a[1],
+            "small-face blend traps lost overlap")
+    require(SMALL_BLEND_TRAP_A in covers[1] - covers[9]
+            and SMALL_BLEND_TRAP_B in covers[9] - covers[1],
+            "small-face blend traps lost exclusive-chart typing")
+
     witness_rows = []
     for a_value, b_value, state, weight in WITNESS:
         poles = SMALL_POLES if b_value == 2 else FULL_POLES
@@ -375,12 +477,16 @@ def main():
         for state in SMALL_STATES if state != SMALL_RESET
     )
     pair_payload = tuple(f"{left},{right}" for left, right in covering_pairs)
+    common_pair_payload = tuple(
+        f"{left},{right}" for left, right in common_covering_pairs
+    )
     state_digest = digest(state_payload)
     primitive_digest = digest((",".join(map(str, primitive)),))
     witness_digest = digest(witness_payload)
     expectation_digest = digest(expectation_payload)
     cover_digest = digest(cover_payload)
     pair_digest = digest(pair_payload)
+    common_pair_digest = digest(common_pair_payload)
     require(state_digest == EXPECTED_STATE_DIGEST, "small state digest drift")
     require(primitive_digest == EXPECTED_PRIMITIVE_DIGEST,
             "small primitive digest drift")
@@ -392,8 +498,10 @@ def main():
             "small chart-cover digest drift")
     require(pair_digest == EXPECTED_SMALL_PAIR_DIGEST,
             "small covering-pair digest drift")
+    require(common_pair_digest == EXPECTED_COMMON_PAIR_DIGEST,
+            "cross-support covering-pair digest drift")
 
-    print("dependency_pins=2:PASS")
+    print("dependency_pins=4:PASS")
     print("faces=support_(1,2)_I2_and_support_(1,3)_I2")
     print("small_poles=" + repr(SMALL_POLES))
     print("small_reset=" + repr(SMALL_RESET))
@@ -423,6 +531,17 @@ def main():
     print("small_pair_digest=" + pair_digest)
     print("small_pair_(2,10)_split=219,186,167,52,19,0")
     print("small_pair_(2,10)=Q_monotone_one_pole_atlas:PASS")
+    print("target_covering_pair_count=31")
+    print("cross_support_covering_pair_count=24")
+    print("cross_support_covering_pairs=" + repr(common_covering_pairs))
+    print("cross_support_pair_digest=" + common_pair_digest)
+    print("small_constant_blend_trap_A=(0,%s],state=%s" % (
+        str(small_blend_interval_a[1]), repr(SMALL_BLEND_TRAP_A),
+    ))
+    print("small_constant_blend_trap_B=[%s,infinity),state=%s" % (
+        str(small_blend_interval_b[0]), repr(SMALL_BLEND_TRAP_B),
+    ))
+    print("no_constant_positive_small_row2_row10_blend=PASS,two_states_sharp=PASS")
     print("farkas_witness_count=19:small=3:full=16")
     for index, record in enumerate(WITNESS, 1):
         print("farkas_%02d=" % index + repr(record))
@@ -430,7 +549,7 @@ def main():
     print("farkas_expectation_signs=" + repr(sign_census(expectations)))
     print("farkas_expectation_digest=" + expectation_digest)
     print("constant_nonnegative_common_gauge=IMPOSSIBLE_on_these_22_templates")
-    print("scope=two_complete_I2_faces_and_fixed_thm3238_atlas_only")
+    print("scope=two_complete_I2_faces_adaptive_atlas_and_no_constant_gauge_only")
     print("status=PASS")
 
 
