@@ -1,0 +1,17 @@
+degree-at-most-eight uniform polynomial clutch no-go wildcard
+dependency_hash_checks=6
+universal_degree_ledger_d=0..8=(96, 96, 96, 96, 96, 96, 96, 96, 96);unique_top_term=64*V^6
+universal_boundary=S_order>=3;T_rows=((3, 8), (4, 11), (5, 14), (6, 17));T_lead=16*m*(m-1)/(m-2)*b^5*v^3
+case=4111 degrees=(V,A,boundary)=(16,8,44) S_response=(ordV=1,A1=2)
+case=4111 tuned_B_jets=8 jet_degrees=((1, 0), (3, 2), (4, 3), (6, 5), (7, 6), (9, 8), (10, 9), (12, 11))
+case=4111 slope_degrees=((4, 0), (4, 0), (4, 0), (4, 0), (4, 0), (4, 0), (4, 0), (4, 0))
+case=4111 untunable=(F11_num_degree=13,F11_den_degree=8,F12_num_degree=15,F12_den_degree=10,gcd_degree=0) digest=6241cc936e35e6a2999f0ea2e1d251cd4b5f313d0a53331723aa1397e8a47a05
+case=4111 consequence=ord_S(K)<=12;ord_S(H)<=9;off_boundary_resultant_multiplicity>=43
+case=3211 degrees=(V,A,boundary)=(16,8,44) S_response=(ordV=1,A1=2)
+case=3211 tuned_B_jets=8 jet_degrees=((1, 0), (3, 2), (4, 3), (6, 5), (7, 6), (9, 8), (10, 9), (12, 11))
+case=3211 slope_degrees=((4, 0), (4, 0), (4, 0), (4, 0), (4, 0), (4, 0), (4, 0), (4, 0))
+case=3211 untunable=(F11_num_degree=13,F11_den_degree=8,F12_num_degree=15,F12_den_degree=10,gcd_degree=0) digest=bace7cc5c6c0123742a242cbbddc147595c87f307507b5f67d9dcec6e97951e4
+case=3211 consequence=ord_S(K)<=12;ord_S(H)<=9;off_boundary_resultant_multiplicity>=43
+case_digests=('6241cc936e35e6a2999f0ea2e1d251cd4b5f313d0a53331723aa1397e8a47a05', 'bace7cc5c6c0123742a242cbbddc147595c87f307507b5f67d9dcec6e97951e4')
+scope=critical-resultant-first-coordinate-family-not-JC2
+source_ast=(assert_nodes=0,float_literals=0)
