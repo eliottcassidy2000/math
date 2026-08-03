@@ -197,7 +197,7 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   osculating layer canonical; a selected root, derivative anchor, and full tower reconstruct degree `<=D`.
   THM-3227/3229 give the selected-root trie and root-free contact-gcd flag; THM-3232/3236 add the norm and contact-spectrum primitive gate.
   [THM-3241](../01-canon/theorems/THM-3241-finite-field-contact-Singer-realization-and-order-gate.md) realizes every nonzero irreducible contact-algebra unit and the exact `p=13` Singer matrix; its same-norm, field-generating order-24 hostile makes multiplicative order a separate gate. It supplies no physical LRC map.
-  THM-3231 divides the simple-pivot exceptional square; hostile-audited THM-3233/3239 extend its quotient-tail/Pell atlas. THM-3228 forces `p^2` points for center faithfulness. Global root choice, lawful physical carrier and depth-ten reset stitching stay open.
+  THM-3231 divides the simple-pivot exceptional square; hostile-audited THM-3233/3239 extend its quotient-tail/extracted-factor atlas. THM-3228 forces `p^2` points for center faithfulness. Global root choice, lawful physical carrier and depth-ten reset stitching stay open.
 
 ### Live work
 
