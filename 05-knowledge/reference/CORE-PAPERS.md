@@ -557,3 +557,4 @@ the first consumer; sharpen **does not prove** and attribution before routing.
 ## External intake
 
 [2026-07-28 owner puzzle bundle — **CITED-ABSTRACT only**](CORE-PAPERS-INTAKE-2026-07-28.md).
+[GMC/TV overflow (2026-08-03)](CORE-PAPERS-GMC-TV.md).

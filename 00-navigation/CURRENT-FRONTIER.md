@@ -86,8 +86,8 @@ and `e9=(-9,+9,QB)` on one packet; ledger `165`.
 - **PROVED:** [THM-2022](../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md)
   proves NC2 and hence unrestricted GMC(2).
 - **REFUTED for higher dimensions:** explicit GMC(3) counterexamples now exist;
-  GMC is false for every dimension at least 3. See the current external preprint
-  entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md);
+  GMC is false for every dimension >= 3; see [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
+  THM-3290 proves a supplied family and puts the 2/3 boundary at Archimedes;
   [THM-2801](../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md)
   sharply gives `SIC(1)` true / `SIC(n>=2)` false, not `JC(2)`.
 - **FORMALIZATION COMPLETE:** `GMC2Main` exposes unconditional `dvdK1`, `nc2`,
