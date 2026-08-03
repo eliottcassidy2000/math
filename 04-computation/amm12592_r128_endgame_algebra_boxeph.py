@@ -406,17 +406,23 @@ def absorb2_deficit(sigma, da, db):
 # ---------------------------------------------------------------------------
 def solve_endgame(d, beam=400, ctrl=2, span=2, seed=None, rand_frac=0.0,
                   dedup=999, rank="l1deg", a2_from=64, prefilter=1200,
-                  c2_ctrl=3, c2_span=6, skip_c2=False, log=print, ckpt=None):
+                  c2_ctrl=3, c2_span=6, skip_c2=False, log=print, ckpt=None,
+                  late_from=None, late_ctrl=None, late_span=None,
+                  eprune=False):
     R = len(d)
     rng = random.Random(seed)
     states = [([], base.qpow(R - 1))]
     states_prev = None
     t0 = time.time()
     for i in range(R - 2):
-        opts = [None] + list(range(-span, span + 1))
+        c_i, s_i = ctrl, span
+        if late_from is not None and i >= late_from:
+            c_i = late_ctrl if late_ctrl is not None else ctrl
+            s_i = late_span if late_span is not None else span
+        opts = [None] + list(range(-s_i, s_i + 1))
         nxt = []
         for acc, sig in states:
-            for tg in product(opts, repeat=ctrl):
+            for tg in product(opts, repeat=c_i):
                 if tg[0] not in (1, -1):
                     continue
                 r = base.step(sig, d[i], tg)
@@ -424,6 +430,11 @@ def solve_endgame(d, beam=400, ctrl=2, span=2, seed=None, rand_frac=0.0,
                     continue
                 de, ns = r
                 if not ns or abs(ns[0]) != 1:
+                    continue
+                if eprune and abs(sum(ns)) > R - 1 - i:
+                    # E-wall (exact necessity): sigma_i(1) walks by the forced
+                    # delta_{j,0} = +-1 each remaining row and must end at 0,
+                    # so |sigma_i(1)| > R-1-i can never close.
                     continue
                 nxt.append((acc + [de], ns))
         if not nxt:
@@ -726,7 +737,9 @@ def hunt(args):
         rand_frac=args.rand_frac, dedup=args.dedup, rank=args.rank,
         a2_from=args.a2_from, prefilter=args.prefilter,
         c2_ctrl=args.c2_ctrl, c2_span=args.c2_span, skip_c2=args.skip_c2,
-        log=log, ckpt=ckpt)
+        log=log, ckpt=ckpt, late_from=args.late_from,
+        late_ctrl=args.late_ctrl, late_span=args.late_span,
+        eprune=args.eprune)
     log(f"  -> {msg}")
     log(f"  absorb2 method hits: {STATS['methods']}  "
         f"unknown(relaxed-pass, unconstructed): {STATS['unknown']}")
@@ -779,6 +792,10 @@ def main():
     ap.add_argument("--c2-ctrl", type=int, default=3, dest="c2_ctrl")
     ap.add_argument("--c2-span", type=int, default=6, dest="c2_span")
     ap.add_argument("--skip-c2", action="store_true", dest="skip_c2")
+    ap.add_argument("--late-from", type=int, default=None, dest="late_from")
+    ap.add_argument("--late-ctrl", type=int, default=None, dest="late_ctrl")
+    ap.add_argument("--late-span", type=int, default=None, dest="late_span")
+    ap.add_argument("--eprune", action="store_true")
     ap.add_argument("--tag", default=None)
     ap.add_argument("--out", default=None)
     args = ap.parse_args()
