@@ -1,0 +1,43 @@
+SELECTOR-PAIRED HALF-TRANSFER FINITE-EXACT PARTIAL SCOUT
+status=FINITE-EXACT_PARTIAL;no_theorem_id;static_relation_walks_only
+dependency_hashes=BEGIN
+aed89d67ec7acabfe5b4feae4a83f7c57b78053928be44a6cc319d81fa4a9cc6  04-computation/gmc_backbone_maximizing_witness_section_scout_20260803.py
+89200bc6cff7284dd33f636352f4f7f56294d90bcd2902fa96092d9f967f5fe3  05-knowledge/results/gmc_backbone_maximizing_witness_section_scout_20260803.out
+f442ff0dfd999fc314f420aacfc7102ba2ba17e033d3fd13e91407727af8a8da  04-computation/gmc_maximizing_witness_lifted_walk_rational_series_thm3288.py
+44a85f317bf9cb35c437e468633a88014de268cc3fb452836960655c4b764951  05-knowledge/results/gmc_maximizing_witness_lifted_walk_rational_series_thm3288.out
+dependency_hashes=END
+family=backbone;active_nodes=18;directed_arrows=32;selector_split=(13, 5);X_shape=(13, 5);block_off_diagonal=PASS
+family=backbone;selector_only_lumping=FAIL;plus_degree_histogram=((1, 10), (2, 3));minus_degree_histogram=((1, 1), (2, 1), (4, 2), (5, 1));hostile=(((1, (11, 'Q+1')), (2, (22, 'Q+4'))), ((1, (3, 'Q-1')), (5, (19, 'Q-1'))))
+family=backbone;equitable_cells=11;cell_sizes=(1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 4);observer_order=10;observer_unseen_equitable_modes=1;quotient_digest=de4dc6a0bc1e204036c33ac99e5590eadc719141eea143c503df95b33d11abdb
+family=backbone;equitable_cell_labels=(((18, 'Q+1'), (18, 'Q+2'), (18, 'Q+4'), (18, 'Q+5')), ((22, 'Q+1'), (22, 'Q+2'), (22, 'Q+5')), ((11, 'Q+1'), (11, 'Q+2'), (11, 'Q+5')), ((2, 'Q+4'),), ((22, 'Q+4'),), ((11, 'Q+4'),), ((3, 'Q-1'),), ((21, 'Q-1'),), ((10, 'Q-1'),), ((7, 'Q-7'),), ((19, 'Q-1'),))
+family=backbone;equitable_quotient_rows=((0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1), (0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0), (0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0), (0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1), (0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0), (0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0), (0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0), (0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0), (0, 0, 3, 0, 0, 1, 0, 0, 0, 0, 0), (0, 3, 0, 0, 1, 0, 0, 0, 0, 0, 0), (4, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0))
+family=backbone;equitable_charpoly_factor=z*(z**4 - 5*z**2 + 3)*(z**6 - 11*z**4 + 36*z**2 - 31);observer_characteristic=(z**4 - 5*z**2 + 3)*(z**6 - 11*z**4 + 36*z**2 - 31);observer_companion_digest=2a8afe73d62511e31eda2f389399e2bc0e701e7e9d651c7de6ea7ddbb10e1f12
+family=backbone;half_transfer_orders=(even=5,odd=5);even_characteristic=(t**2 - 5*t + 3)*(t**3 - 11*t**2 + 36*t - 31);odd_characteristic=(t**2 - 5*t + 3)*(t**3 - 11*t**2 + 36*t - 31)
+family=backbone;half_transfer_head=zero
+family=backbone;sequence_prefix=(18, 32, 84, 160, 412, 798, 2060, 4012, 10426, 20362, 53286, 104272, 274628, 538258, 1425644);hankel_rank=10;parity_hankel_ranks=(5,5)
+family=selected_tree;active_nodes=23;directed_arrows=40;selector_split=(14, 9);X_shape=(14, 9);block_off_diagonal=PASS
+family=selected_tree;selector_only_lumping=FAIL;plus_degree_histogram=((1, 10), (2, 3), (4, 1));minus_degree_histogram=((1, 5), (2, 1), (4, 2), (5, 1));hostile=(((1, (11, 'Q+1')), (4, (2, 'Q+4'))), ((1, (3, 'Q-1')), (5, (19, 'Q-1'))))
+family=selected_tree;equitable_cells=14;cell_sizes=(1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 4);observer_order=14;observer_unseen_equitable_modes=0;quotient_digest=137cd64446a6985deaac8e8e070bb94ad29b7ca4474633b131f2813783c2861d
+family=selected_tree;equitable_cell_labels=(((18, 'Q+1'), (18, 'Q+2'), (18, 'Q+4'), (18, 'Q+5')), ((22, 'Q+1'), (22, 'Q+2'), (22, 'Q+5')), ((11, 'Q+1'), (11, 'Q+2'), (11, 'Q+5')), ((22, 'Q+4'),), ((11, 'Q+4'),), ((16, 'Q+1'),), ((2, 'Q+4'),), ((13, 'Q-1'), (17, 'Q-1')), ((3, 'Q-8'), (17, 'Q-8')), ((3, 'Q-1'),), ((21, 'Q-1'),), ((10, 'Q-1'),), ((7, 'Q-7'),), ((19, 'Q-1'),))
+family=selected_tree;equitable_quotient_rows=((0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 1, 0, 0, 1), (0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0), (0, 0, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0), (0, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (4, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0))
+family=selected_tree;equitable_charpoly_factor=(z**2 - 2)*(z**4 - 5*z**2 + 3)*(z**8 - 13*z**6 + 54*z**4 - 77*z**2 + 24);observer_characteristic=(z**2 - 2)*(z**4 - 5*z**2 + 3)*(z**8 - 13*z**6 + 54*z**4 - 77*z**2 + 24);observer_companion_digest=0cc288979152fd2d9cc9e585a447d65c9c5d2255d6d8dcebdb8da8bfc51bbe2a
+family=selected_tree;half_transfer_orders=(even=7,odd=7);even_characteristic=(t - 2)*(t**2 - 5*t + 3)*(t**4 - 13*t**3 + 54*t**2 - 77*t + 24);odd_characteristic=(t - 2)*(t**2 - 5*t + 3)*(t**4 - 13*t**3 + 54*t**2 - 77*t + 24)
+family=selected_tree;half_transfer_head=zero
+family=selected_tree;sequence_prefix=(23, 40, 104, 212, 536, 1174, 2950, 6700, 16850, 39058, 98502, 231232, 584846, 1384502, 3510318);hankel_rank=14;parity_hankel_ranks=(7,7)
+family=full_core;active_nodes=26;directed_arrows=68;selector_split=(14, 12);X_shape=(14, 12);block_off_diagonal=PASS
+family=full_core;selector_only_lumping=FAIL;plus_degree_histogram=((1, 5), (2, 5), (3, 1), (4, 1), (5, 1), (7, 1));minus_degree_histogram=((1, 5), (2, 3), (5, 1), (6, 3));hostile=(((1, (11, 'Q+2')), (7, (22, 'Q+4'))), ((1, (3, 'Q-8')), (6, (19, 'Q-1'))))
+family=full_core;equitable_cells=16;cell_sizes=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 4);observer_order=15;observer_unseen_equitable_modes=1;quotient_digest=cc2f113e46d1137e28eaf1753514a68d10bdc1b70849ec9b476c72b70a7ba375
+family=full_core;equitable_cell_labels=(((11, 'Q+2'), (11, 'Q+5')), ((22, 'Q+1'), (22, 'Q+2'), (22, 'Q+5')), ((18, 'Q+2'), (18, 'Q+4'), (18, 'Q+5')), ((11, 'Q+4'),), ((11, 'Q+1'),), ((18, 'Q+1'),), ((16, 'Q+1'),), ((2, 'Q+4'),), ((22, 'Q+4'),), ((3, 'Q-8'), (10, 'Q-8'), (17, 'Q-8'), (21, 'Q-8')), ((13, 'Q-8'),), ((17, 'Q-1'), (21, 'Q-1')), ((3, 'Q-1'),), ((7, 'Q-7'),), ((13, 'Q-1'), (19, 'Q-1')), ((10, 'Q-1'),))
+family=full_core;equitable_quotient_rows=((0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 2, 1), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 1, 2, 1), (0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0), (0, 3, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0), (0, 0, 3, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0), (2, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0))
+family=full_core;equitable_charpoly_factor=z**2*(z - 2)*(z + 2)*(z**12 - 30*z**10 + 284*z**8 - 1149*z**6 + 2105*z**4 - 1676*z**2 + 452);observer_characteristic=z*(z - 2)*(z + 2)*(z**12 - 30*z**10 + 284*z**8 - 1149*z**6 + 2105*z**4 - 1676*z**2 + 452);observer_companion_digest=da0039f3b554361d7a246fb7f89a3420b9ae237ceae0783d8de319b4ec1bc048
+family=full_core;half_transfer_orders=(even=8,odd=7);even_characteristic=t*(t - 4)*(t**6 - 30*t**5 + 284*t**4 - 1149*t**3 + 2105*t**2 - 1676*t + 452);odd_characteristic=(t - 4)*(t**6 - 30*t**5 + 284*t**4 - 1149*t**3 + 2105*t**2 - 1676*t + 452)
+family=full_core;half_transfer_head=sum=-1392;norm=2516736;p0=-1808;zero_mass=87/113;support=(((2, 'Q+4'), -384), ((11, 'Q+2'), 192), ((11, 'Q+4'), -384), ((11, 'Q+5'), 192), ((18, 'Q+1'), 1008), ((18, 'Q+2'), -336), ((18, 'Q+4'), -336), ((18, 'Q+5'), -336), ((22, 'Q+1'), -464), ((22, 'Q+2'), -464), ((22, 'Q+4'), 384), ((22, 'Q+5'), -464));digest=a7039170823b9a29e12b4a7e87835b3bd9b2256334d1f2fb44f9031f45915815
+family=full_core;sequence_prefix=(26, 68, 274, 1018, 4134, 16400, 67270, 270718, 1114054, 4498562, 18529428, 74885666, 308530344, 1247186562, 5138801640);hankel_rank=15;parity_hankel_ranks=(8,7)
+active_node_creation=backbone_to_tree:((3, 'Q-8'), (13, 'Q-1'), (16, 'Q+1'), (17, 'Q-1'), (17, 'Q-8'));tree_to_core:((10, 'Q-8'), (13, 'Q-8'), (21, 'Q-8'))
+projected_path_hostile=2-17-16;middle_fibres=(Q-1,Q-8);decorated_length2_lifts=0
+mechanism=selector_bipartition_gives_A_block_(0,X;X^T,0)_and_two_step_half_transfer
+preserved=all_static_walk_counts_via_equitable_and_Krylov_observers
+lost=individual_walk_identity_and_all_chronological_response_state
+scope=no_tournament_no_response_composition_no_GMC_FC_or_LRC_consequence_no_bit_complexity_claim
+source_ast=(assert_nodes=0,float_literals=0)
+ALL EXACT CHECKS PASSED
