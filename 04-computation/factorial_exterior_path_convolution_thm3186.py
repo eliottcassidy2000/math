@@ -67,6 +67,7 @@ for index in range(1, MAX_STEPS):
 
 product = sp.eye(3)
 ABSTRACT_PRODUCT_CHECKS = 0
+visible_by_length = [sp.Integer(0)]
 for length in range(1, MAX_STEPS + 1):
     product = matrices[length - 1] * product
     direct = product * source
@@ -81,7 +82,28 @@ for length in range(1, MAX_STEPS + 1):
             ("abstract transverse continuant", length))
     require(sp.expand(direct[2] - scalar_d * t[length - 1]) == 0,
             ("abstract returning coordinate", length))
+    visible_by_length.append(sp.expand(direct[0]))
     ABSTRACT_PRODUCT_CHECKS += 1
+
+# Eliminate the transverse state without dividing by an exit coefficient.
+# This leaves a scalar polynomial-coefficient recurrence that remains valid
+# at the isolated indices where one c-factor vanishes.
+VISIBLE_RECURRENCE_CHECKS = 0
+for index in range(1, MAX_STEPS - 1):
+    left = c[index] * c[index - 1] * (
+        u[index + 1] * visible_by_length[index + 1]
+        - visible_by_length[index + 2])
+    right = (
+        c[index + 1] * c[index - 1] * alpha[index]
+        * (u[index] * visible_by_length[index]
+           - visible_by_length[index + 1])
+        + c[index + 1] * c[index] * beta[index] * scalar_d
+        * (u[index - 1] * visible_by_length[index - 1]
+           - visible_by_length[index])
+    )
+    require(sp.expand(left - right) == 0,
+            ("cleared visible recurrence", index))
+    VISIBLE_RECURRENCE_CHECKS += 1
 
 MATCHING_COUNTS = []
 for length in range(MAX_STEPS):
@@ -124,6 +146,51 @@ def factorial_data(index):
     b_i = index * (index + 1) * Delta
     c_i = d - index - 1
     return -b_i, c_i, a_i * d, b_i * d
+
+
+# The factorial transverse continuant has a smaller normalized recurrence.
+# Define G_r without division, so the identity remains meaningful on d=0.
+NORMALIZED_CONTINUANT_CHECKS = 0
+NORMALIZED_OGF_COEFFICIENT_CHECKS = 0
+normalized_g = [sp.Integer(1)]
+factorial_continuant = [sp.Integer(1)]
+for length in range(1, MAX_STEPS + 1):
+    previous_two = (normalized_g[length - 2]
+                    if length >= 2 else sp.Integer(0))
+    normalized_g.append(sp.expand(
+        2 * v * (2 * n + 2 * length + 1) * normalized_g[length - 1]
+        + Delta * previous_two))
+
+    if length == 1:
+        next_continuant = factorial_data(n + 1)[2]
+    else:
+        next_continuant = (
+            factorial_data(n + length)[2]
+            * factorial_continuant[length - 1]
+            + d * factorial_data(n + length)[3]
+            * factorial_continuant[length - 2]
+        )
+    factorial_continuant.append(sp.expand(next_continuant))
+    expected = d**length * sp.rf(n + 2, length) * normalized_g[length]
+    require(sp.expand(factorial_continuant[length] - expected) == 0,
+            ("normalized factorial continuant", length))
+    NORMALIZED_CONTINUANT_CHECKS += 1
+
+# Coefficientwise audit of
+# 4v z^2 G' + [2v(2n+3)z + Delta z^2 - 1]G + 1 = 0.
+for degree in range(MAX_STEPS + 1):
+    coefficient = -normalized_g[degree]
+    if degree == 0:
+        coefficient += 1
+    if degree >= 1:
+        coefficient += (4 * v * (degree - 1)
+                        + 2 * v * (2 * n + 3)) \
+            * normalized_g[degree - 1]
+    if degree >= 2:
+        coefficient += Delta * normalized_g[degree - 2]
+    require(sp.expand(coefficient) == 0,
+            ("normalized OGF differential equation", degree))
+    NORMALIZED_OGF_COEFFICIENT_CHECKS += 1
 
 
 index = sp.symbols("i", integer=True)
@@ -285,6 +352,12 @@ require(hostile_exterior_support == positive_exterior_support,
 
 print("THM-3186 FULL EXTERIOR CONTINUANT PATH CONVOLUTION EXACT CONTROL")
 print("abstract_direct_product_checks=" + str(ABSTRACT_PRODUCT_CHECKS))
+print("cleared_order3_visibility_recurrence_checks="
+      + str(VISIBLE_RECURRENCE_CHECKS))
+print("normalized_factorial_continuant_checks="
+      + str(NORMALIZED_CONTINUANT_CHECKS))
+print("normalized_ogf_differential_coefficient_checks="
+      + str(NORMALIZED_OGF_COEFFICIENT_CHECKS))
 print("continuant_matching_counts=" + repr(tuple(MATCHING_COUNTS)))
 print("boundary_visible_coefficients=(0,-c_(n+1)beta_n)")
 print("length3_exit_polynomial=c_(n+1)u_(n+2)+c_(n+2)alpha_(n+1)")

@@ -1,5 +1,8 @@
 THM-3186 FULL EXTERIOR CONTINUANT PATH CONVOLUTION EXACT CONTROL
 abstract_direct_product_checks=7
+cleared_order3_visibility_recurrence_checks=5
+normalized_factorial_continuant_checks=7
+normalized_ogf_differential_coefficient_checks=8
 continuant_matching_counts=(1, 1, 2, 3, 5, 8, 13)
 boundary_visible_coefficients=(0,-c_(n+1)beta_n)
 length3_exit_polynomial=c_(n+1)u_(n+2)+c_(n+2)alpha_(n+1)
