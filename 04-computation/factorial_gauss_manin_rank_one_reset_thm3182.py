@@ -271,8 +271,10 @@ def main():
         # n*Delta/(2v), unit at n=p-1 and p-divisible at n=p.
         scalar_b = (prime - 1) * prime * discriminant
         scalar_determinant = -scalar_b * d
+        scalar_unit_minor = -(d - prime)
         require(valuation(d, prime) == 0, "scalar first divisor")
-        require(valuation(d, prime) == 0, "scalar unit 2x2 minor")
+        require(valuation(scalar_unit_minor, prime) == 0,
+                "scalar unit 2x2 minor")
         require(valuation(scalar_determinant, prime) == 1,
                 "scalar companion determinant")
         require(valuation((prime - 1) * discriminant, prime) == 0,
