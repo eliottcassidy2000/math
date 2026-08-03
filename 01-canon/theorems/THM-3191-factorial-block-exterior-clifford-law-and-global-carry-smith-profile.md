@@ -2,7 +2,7 @@
 id: THM-3191
 title: "Factorial-block exterior Clifford law and global carry Smith profile"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The normalized exterior transfer of one fixed factorial prime block is an
   extension-independent rank-two operator D satisfying D^3=s^2 Delta D.
   Through K blocks, the exact carry thickness and p-free factorial unit
@@ -13,8 +13,10 @@ audit: >
   The pure-integer companion checks 300 one-block parameter systems, 38,336
   nonzero quotient vectors in the complementary chart atlas, 456 carried
   local blocks, and 392 global fixed-parameter products.  Normal and optimized
-  replay agree with the stored transcript.  Independent immutable audit is
-  pending.
+  replay agree with the stored transcript.  An independent immutable audit
+  rederived the extension cancellation, cubic law, two-chart cover, carried
+  unit layer, p-primary determinantal divisors, and squared missing-wedge
+  return, and separately replayed both modes against the stored output.
 source: root/multiscale-newton-flag/low-child-flag-extension/2026-08-02
 depends_on:
   - THM-3185-iterated-factorial-frobenius-descent-and-witt-carry-reset-hierarchy
@@ -31,7 +33,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3191 -- factorial-block exterior Clifford law and global carry Smith profile
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3185 gives the thickness of each factorial reset, while THM-3188 gives
 the exact quadratic-character holonomy of the invertible pre-reset tail.  The
