@@ -116,6 +116,20 @@ minimum center-faithful permutation degree of J_4(p)
  =minimum faithful permutation degree of J_4(p)=p^2.      (8)
 ```
 
+The correct-size hostile is already instructive.  The abelian prefix quotient
+
+```text
+J_4(p)/Z isomorphic F_p^2                                  (8a)
+```
+
+also has `p^2` elements, but pulling back its regular action kills `Z` by
+construction.  The faithful minimal sets are instead the coset sets `J_4(p)/K`
+with `K` a noncentral order-`p` subgroup.  Such `K` is necessarily nonnormal.
+THM-2779 classifies `p+1` minimal transitive classes for odd `p` and the two
+reflection-stabilizer classes for `D_8`.  Thus correct cardinality plus the
+obvious `(A,B)` prefix labels is still insufficient: a minimal carrier needs
+an oblique nonnormal stabilizer-line clutch.
+
 ## 4. The 13-root/169-target gate
 
 At the LRC prime `p=13`, equation `(8)` reads
@@ -155,8 +169,9 @@ Cardinality and abstract group isomorphism do not provide such a map.
    actually establishes the center-faithful lower bound `(5)`, which is the
    load-bearing statement for curvature.
 3. A disjoint collection with at least `p^2` labels is not automatically a
-   carrier.  The action, common ancestry, and physical typing must still be
-   supplied.
+   carrier.  Even the regular quotient action on `(8a)` kills the center.
+   The nonnormal stabilizer clutch, common ancestry, and physical typing must
+   still be supplied.
 4. Multiple-root and root-at-infinity charts remain outside THM-3220 and
    therefore outside this corollary.
 
