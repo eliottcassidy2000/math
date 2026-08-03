@@ -2,7 +2,7 @@
 id: THM-3239
 title: "Universal sixth resonant PRS strict-transform wall and Pell atlas"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   After dividing the universal sixth reciprocal pivot by the exceptional
   square rho_4^2 from THM-3231, the strict transform factors into inherited
   walls and one new primitive irreducible W28 of degree 28.  W28 is
@@ -10,6 +10,13 @@ status: >
   Pell content 70 and normalization gauge 239, and every fixed offset retains
   a finite explicit exceptional-prime atlas through row six.
 source: root/multiscale-newton-flag/2026-08-02
+audit: >
+  An independent theorem audit reconstructed both denominator exponent tables
+  and the full numerator factorization, checked that the Rabin tests at 73
+  are exactly the prime-divisor tests for degree 28, verified the fixed-offset
+  exceptional-prime update and the p=43 strict-transform control, and replayed
+  normal and optimized companions byte-for-byte against the stored output.
+  No theorem, typing, or scope defect was found.
 depends_on:
   - THM-3223-fourth-fifth-resonant-prs-primitive-walls-pell-content-and-pivot-resurrection
   - THM-3231-fraction-free-simple-pivot-wall-second-order-blowup-carry
@@ -25,8 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3239 -- universal sixth resonant PRS strict-transform wall and Pell atlas
 
-**PROVED CANDIDATE + VERIFIED-EXACT / AWAITING INDEPENDENT THEOREM
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3223 factors the fourth and fifth selected pivots.  THM-3231 then proves
 that the sixth row has a universal exceptional square: if `rho_k` is the
@@ -259,4 +265,4 @@ verifies the Rabin certificate, parity, Pell content, gauge, and both
 denominator exponent tables; and uses no floating point, randomness,
 optimizer, or assertion-sensitive check.
 
-QED, conditional only on independent audit for status promotion.
+QED.
