@@ -17,7 +17,8 @@ audit: >
   The assertion-independent exact companion verifies eight prescribed-unit
   contact realizations in irreducible degree-two and degree-three algebras;
   enumerates the full 169-class deformation atlas, all 169 Singer
-  intertwining identities, and all 371,293 affine-Heisenberg pullbacks;
+  intertwining identities, and, as a scoped formal pullback control, all
+  371,293 affine-Heisenberg state/action pairs;
   checks the explicit p=13 helper, contact
   numerator/denominator, order 168,
   norm 6 of order 12, all three prime-divisor resultant gates, and the exact
@@ -139,18 +140,6 @@ by `a` multiplies `c_m` by `a`.  Hence a primitive `a` makes the `q^r-1`
 exact-contact deformation classes one Singer orbit and fixes the unique
 delayed-contact class.  This is a genuine algebraic deformation carrier,
 not merely the underlying set of the field viewed after the fact.
-
-More generally, every `F_q`-affine map `L:A->A` pulls back through `(8b)` to
-the explicit coefficient reparametrization
-
-```text
-H |-> (S')^(1-m) L((S')^(m-1)H).                         (8d)
-```
-
-For `q=13,r=2`, `(8d)` realizes THM-3234's entire affine Heisenberg action on
-the same deformation atlas.  This is an action on the **moduli of truncated
-polynomial pairs**.  It depends on the chosen basis and derivative
-trivialization, and it is not a physical operation on one fixed LRC packet.
 
 ## 3. The Singer order gate
 
@@ -323,14 +312,23 @@ Singer--Heisenberg construction.  Combining it with the standard affine
 Heisenberg action then generates `AGL_2(F_13)` exactly as proved there.
 
 The new content here is the polynomial-contact deformation realization of
-the Singer carrier and the affine reparametrization `(8d)` of the Heisenberg
-action.  No LRC owner, endpoint, or root packet is identified with an element
-of `A`, and `(8d)` is not an intrinsic transformation of a fixed physical
-pair.  Hence `(22)` is an algebraic deformation-moduli carrier, not a lawful
-physical owner map.  In particular the delayed-contact zero is fixed by the
-Singer action but moved by Heisenberg translations, exactly matching
-THM-3234's proof that a center-faithful `169`-point action cannot preserve it
-as a distinguished head.
+the Singer carrier.  There is one useful but strictly formal related
+observation.  After choosing a basis and the derivative trivialization
+`(8b)`, any `F_q`-affine map `L:A->A` can be transported to the coefficient
+reparametrization
+
+```text
+H |-> (S')^(1-m) L((S')^(m-1)H).                         (28)
+```
+
+The companion checks all `371,293` state/action pairs for THM-3234's affine
+Heisenberg formulas.  This does **not** supply THM-3240's exact-address
+clutch: no LRC owner, endpoint, or root packet is identified with an element
+of `A`, and `(28)` is not an intrinsic transformation of one fixed physical
+pair.  Hence `(22)` remains an algebraic deformation-moduli carrier, not a
+lawful physical owner map.  The delayed-contact zero is fixed by the Singer
+action but moved by formal Heisenberg translations, matching THM-3234's
+fixed-head obstruction only at the abstract carrier level.
 
 ## 7. Consequences and boundaries
 
