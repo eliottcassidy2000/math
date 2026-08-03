@@ -518,7 +518,8 @@ physical naturality before marginalization, not another abstract rank scout.
    twelve THM-3250 matrices `A_kappa(s,t)` of the factor-coloured physical
    current.  The exact gate remains `det(A_kappa)!=0` in every nonzero sector,
    but failure must now be attributed to the physical lift rather than the
-   owner word.
+   owner word.  THM-3253 is only a **RESERVED / UNPROVED EMPTY STUB** for the
+   positive owner-mass Newton version of this test; it supplies no result yet.
 6. If those gates pass, solve the pointed equations `A_kappa U_kappa=B_kappa`
    against a target-side current and audit positivity, neutral data, target
    and ancestry.  Only after physical frame covariance survives should the
