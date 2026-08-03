@@ -2,7 +2,7 @@
 id: THM-3177
 title: "Depth-seven degree-thirteen strict selector resurrection"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; PROMOTION PENDING INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For support (1,3), bank I2, an explicit primitive thirteen-state law of
   denominator 100,000,000 is strictly positive on every nontrivial
   partition-coarsening upset in every degree 5 through 13.  Hence the
@@ -14,12 +14,14 @@ status: >
   stopping process, original-response decomposition, or GMC extension.
 source: root/multiscale-newton-flag/product-gamma-width3-2026-08-02
 audit: >
-  Fresh normal and optimized candidate replays match the stored transcript
-  byte-for-byte after LF normalization.
-  It checks 361 partitions, 22,809 coarsening pairs, 16,380 state-degree
-  zero-mass identities, all nine strict minimum-upset certificates, and the
-  exact THM-3163 posterior-chain/lumping census.  Independent immutable audit
-  and status promotion remain pending.
+  Fresh normal and optimized immutable replays match the stored 18-line
+  transcript byte-for-byte after LF normalization.  A separately written
+  exact auditor used the pinned response vectors, an independent partition
+  generator and bin-packing coarsening test, and NetworkX integer min-cut; it
+  reproduced all nine strict minima, cut sizes, and complete generator
+  antichains.  Static hostile audit also accepted the nontrivial-upset cut,
+  infinity capacity, posterior reach/lumping, transitive hashes, scope, and
+  time-only positive-hazard no-go.  No theorem defect was found.
 depends_on:
   - THM-3115-low-degree-monomial-fibre-newton-refinement-transport
   - THM-3127-partition-refinement-strassen-upset-dual-and-filter-response
@@ -40,7 +42,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3177 -- depth-seven degree-thirteen strict selector resurrection
 
-**PROVED CANDIDATE + VERIFIED-EXACT; PROMOTION PENDING INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3158 proves that the support-`(1,3)`, bank-`I2` selector resurrects
 through degree 12 at physical prefix depth five.  THM-3169 then shows that
@@ -246,4 +248,4 @@ infeasibility certificate.  The next exact question is whether
 `C_14^(<=7)` contains a strict rational law, only a boundary law on named zero
 facets, or admits a positive rational Farkas separator.
 
-QED (candidate pending independent audit).
+QED.
