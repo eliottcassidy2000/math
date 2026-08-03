@@ -2,7 +2,7 @@
 id: THM-3216
 title: "Depth-nine degree-fourteen unique-reset face and omega cone boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For the support-(1,3), bank-I2 product-Gamma selector, the complete
   depth-at-most-nine degree-fourteen feasibility cone is the singleton
   delta_(1,3,3,4,5,6,7,8).  An explicit positive 18-row combination of
@@ -22,7 +22,9 @@ audit: >
   gaps.  It separately verifies all 631 depth-nine/depth-seven complement
   identities and derives the degree-four and degree-six omega images by an
   exact power-sum/monomial change of basis.  Normal, optimized, and stored
-  replay agree byte-for-byte.  An independent hostile audit is pending.
+  replay agree byte-for-byte.  Two independent hostile audits checked the
+  cone implication, exact finite evidence, complement typing, and omega
+  boundary.
 depends_on:
   - THM-3127-partition-refinement-strassen-upset-dual-and-filter-response
   - THM-3160-complete-pluecker-pole-holotopy-and-selector-projection-no-go
@@ -37,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3216 -- depth-nine degree-fourteen unique-reset face and omega cone boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3209 found an all-degree reset at depth eight and proved only that its
 four one-extra-pole tangent rays point out of the selector cone.  The other
@@ -350,4 +352,12 @@ uses exact integers and `Fraction`s only after importing and hash-pinning the
 promoted THM-3209 companion/output.  It uses no discovery pickle, floating
 point, randomness, imported executable, or assertion-sensitive test.
 
-**QED (candidate pending independent audit).**
+Independent audits separately reconstructed the 3,129-state census, every
+lawful upset and its size, positivity and primitive digest of the eighteen
+multipliers, and the supporting-face implication.  They rederived the
+virtual complement signs and both omega cone hostiles, and confirmed the
+weak-boundary, depth-ten, and no-physical-carrier scope.  The immutable owner
+replays supply the exact 3,129-state sign matrix; normal and optimized output
+byte-match the stored transcript and declared LF hashes.
+
+QED.
