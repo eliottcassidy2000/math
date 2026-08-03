@@ -423,8 +423,7 @@ def sweep_E(R2, dt, E, W=10, L=10, teleport=False, tele_bound_shift=0,
                 if debug_fallback is not None:
                     debug_fallback.append(
                         (j, k, d - k, 'parity' if abs(e) <= cap else 'mag',
-                         float(Fraction(abs(e), cap)),
-                         float(Fraction(abs(presc[k]), cap))))
+                         e, cap))
             v = pclamp(X[k], cap)
             cells[k] = v
             P[k] = X[k] - v
@@ -443,11 +442,11 @@ def sweep_E(R2, dt, E, W=10, L=10, teleport=False, tele_bound_shift=0,
                 A = P[k] - keep           # even excess to teleport
                 z = j + d - k             # monomial exponent of x
                 i2hi = min(R2 - 1, z - tele_buffer)
-                i2 = i2hi
-                while A and i2 >= j + 2:
+                for i2 in range(j + 2, i2hi + 1):   # NEAREST first: far
+                    if not A:                       # teleports pay 2^r mass
+                        break
                     r = (i2 + dt[i2]) - (j + d)
-                    if r < 1 or k + r > dt[i2]:
-                        i2 -= 1
+                    if r < 1 or r > 24 or k + r > dt[i2]:
                         continue
                     # chunk limited by tele_frac of target boxes
                     chunk = abs(A) // 2
@@ -469,7 +468,6 @@ def sweep_E(R2, dt, E, W=10, L=10, teleport=False, tele_bound_shift=0,
                         ntele += 1
                         telemass_log = max(telemass_log, abs(amt))
                         moved = True
-                    i2 -= 1
                 P[k] = keep + A           # whatever could not be teleported
             if moved:
                 st.memo.clear()
@@ -540,6 +538,252 @@ def band_vacuum(R2, dt, E, M0=40, spread=3, keep=Fraction(1, 1),
             print(f'    bandvac depth {m:2d}: residual band overshoot '
                   f'{float(ov):.3g} stuck={stuck}', flush=True)
     return E, stuck, stuckmass
+
+def vacuum_fix(R2, dt, E, M0=45, passes=40, verbose=False):
+    """iterated r<=2 band vacuum: excess at (j, dt_j - m) beyond its box is
+    gathered ONLY into row j-1 (r = s_j - s_{j-1} in {1,2}; splash at most
+    2A into (j,k-1) + A into (j,k-2), re-cleaned by later depth passes /
+    iterations).  Runs to fixpoint or `passes`.  Identity exact throughout."""
+    E = [list(r) for r in E]
+    for p in range(passes):
+        moved = 0
+        for m in range(M0 + 1):
+            for j in range(1, R2):
+                k = dt[j] - m
+                if k < 0:
+                    continue
+                cap = comb(dt[j], k)
+                v = E[j][k]
+                kp = max(-cap, min(cap, v))
+                A = v - kp
+                if A == 0:
+                    continue
+                i0 = j - 1
+                r = (j + dt[j]) - (i0 + dt[i0])
+                k0 = k - r
+                if k0 < 0 or not move_ok(dt, i0, k0, j):
+                    continue
+                cap0 = comb(dt[i0], k0)
+                sg = 1 if A > 0 else -1
+                room = cap0 - sg * E[i0][k0]
+                a = min(abs(A), room) if room > 0 else 0
+                if a <= 0:
+                    continue
+                apply_move(E, dt, i0, k0, j, -sg * a)
+                moved += 1
+        ov, at = rows_overshoot(dt, E)
+        if verbose:
+            print(f'    vacuum_fix pass {p:2d}: moves={moved} '
+                  f'overshoot={float(ov):.4g} at {at}', flush=True)
+        if moved == 0:
+            break
+    return E
+
+def sweep_E2(R2, dt, E, tele_rmax=24, tele_frac=Fraction(1, 8),
+             tele_buffer=8, debug=None):
+    """Engine 2: deterministic sweep with an EXACT 2-row top planner.
+    The old Steer rho chain assumed its own prescriptions hold; with
+    fallbacks the 'fixed' terms are wrong and tops break by +-2/4 (measured).
+    Here everything is computed from ACTUAL state at emission time:
+      next top      = E[j+1][dn]   + P[d-1]                      (exact)
+      next (dn-1)   = E[j+1][dn-1] + P[d-2] + r2 P[d-1]          (exact)
+      next (dn-2)   = E[j+1][dn-2] + P[d-3] + r2 P[d-2] + C(r2,2) P[d-1]
+    with r2 = dn - (d-1).  The planner enumerates the small grid of carry
+    tops (P[d-1] targeting +-1 next top; |P[d-2]|,|P[d-3]| <= 3), requires
+    exact emission feasibility at cells d-1..d-3 (box + parity), and scores
+    1-row-lookahead plannability of row j+1.  All other cells pclamp; bulk
+    leftovers beyond box scale teleport NEAREST-FIRST (r <= tele_rmax --
+    far teleports multiply mass by 2^r and are always net losers)."""
+    E = [list(r) for r in E]
+    K, dK = None, None
+    sol, nfall, maxcarry, ntele = [], 0, 0, 0
+    for j in range(R2):
+        d = dt[j]
+        X = list(E[j])
+        if K is not None:
+            if dK > d:
+                return None, f'carry degree {dK} > {d} at row {j}', nfall, maxcarry, ntele
+            KL = lift(K, dK, d) if dK < d else list(K)
+            for k, v in enumerate(KL):
+                X[k] += v
+        if abs(X[d]) != 1:
+            return None, f'row {j}: forced top cell = {X[d]}', nfall, maxcarry, ntele
+        cells = [0] * (d + 1)
+        cells[d] = X[d]
+        P = [0] * d
+        planned = {}
+        if j + 1 < R2 and d >= 3:
+            dn = dt[j + 1]
+            r2 = dn - (d - 1)
+            En = E[j + 1]
+            Enn_top = E[j + 2][dt[j + 2]] if j + 2 < R2 else None
+            best = None
+            for s in (X[d], -X[d]):        # prefer keeping the sign pattern
+                p1 = s - En[dn]
+                e1 = X[d - 1] - p1
+                c1 = comb(d, d - 1)
+                if abs(e1) > c1 or (e1 - c1) % 2:
+                    continue
+                for p2 in (0, 1, -1, 2, -2, 3, -3):
+                    e2 = X[d - 2] - p2
+                    c2 = comb(d, d - 2)
+                    if abs(e2) > c2 or (e2 - c2) % 2:
+                        continue
+                    for p3 in (0, 1, -1, 2, -2, 3, -3):
+                        e3 = X[d - 3] - p3
+                        c3 = comb(d, d - 3)
+                        if abs(e3) > c3 or (e3 - c3) % 2:
+                            continue
+                        # 1-row lookahead: can row j+1 be planned?
+                        ok2 = True
+                        if Enn_top is not None:
+                            Xn1 = En[dn - 1] + p2 + r2 * p1
+                            cn1 = dn
+                            feas = False
+                            for s2 in (1, -1):
+                                q1 = s2 - Enn_top
+                                en1 = Xn1 - q1
+                                if abs(en1) <= cn1 and (en1 - cn1) % 2 == 0:
+                                    feas = True
+                                    break
+                            ok2 = feas
+                        cost = (0 if ok2 else 1, abs(p2) + abs(p3),
+                                abs(e1) + abs(e2) + abs(e3))
+                        if best is None or cost < best[0]:
+                            best = (cost, p1, p2, p3)
+                    if best and best[0][0] == 0 and best[0][1] == 0:
+                        break
+                if best and best[0][0] == 0 and best[0][1] == 0:
+                    break
+            if best is not None:
+                _, p1, p2, p3 = best
+                planned = {d - 1: p1, d - 2: p2, d - 3: p3}
+                if best[0][0] != 0:
+                    nfall += 1
+                    if debug is not None:
+                        debug.append((j, 'lookahead-infeasible'))
+            else:
+                nfall += 1
+                if debug is not None:
+                    debug.append((j, f'no feasible top plan, X top3 = '
+                                  f'{X[d-1:d+1]}'))
+        for k in range(d - 1, -1, -1):
+            cap = comb(d, k)
+            if k in planned:
+                cells[k] = X[k] - planned[k]
+                P[k] = planned[k]
+                continue
+            v = pclamp(X[k], cap)
+            cells[k] = v
+            P[k] = X[k] - v
+        sol.append(cells)
+        if j + 1 < R2:
+            moved = False
+            for k in range(d - 3 if d >= 3 else d):
+                b0 = comb(d - 1, k) if k <= d - 1 else 1
+                bound = max(1, b0 >> 2)
+                if abs(P[k]) <= bound:
+                    continue
+                keep = max(-bound, min(bound, P[k]))
+                if (P[k] - keep) % 2:
+                    keep += 1 if keep < P[k] else -1
+                A = P[k] - keep
+                z = j + d - k
+                for i2 in range(j + 2, min(R2 - 1, z - tele_buffer) + 1):
+                    if A == 0:
+                        break
+                    r = (i2 + dt[i2]) - (j + d)
+                    if r < 1 or r > tele_rmax or k + r > dt[i2]:
+                        continue
+                    chunk = abs(A) // 2
+                    sg = 1 if A > 0 else -1
+                    for t in range(r + 1):
+                        kk = k + r - t
+                        cap2 = comb(dt[i2], kk)
+                        lim = (tele_frac.numerator * cap2) // tele_frac.denominator
+                        room = lim - sg * E[i2][kk]
+                        c2 = comb(r, t)
+                        chunk = min(chunk, room // (2 * c2) if room > 0 else 0)
+                        if chunk <= 0:
+                            break
+                    if chunk > 0:
+                        amt = sg * 2 * chunk
+                        for t in range(r + 1):
+                            E[i2][k + r - t] += amt * comb(r, t)
+                        A -= amt
+                        ntele += 1
+                        moved = True
+                P[k] = keep + A
+        if P:
+            maxcarry = max(maxcarry, max(abs(x) for x in P))
+        K, dK = P, d - 1
+        if j == R2 - 1 and any(P):
+            return None, 'final carry nonzero', nfall, maxcarry, ntele
+    return sol, 'CLOSED', nfall, maxcarry, ntele
+
+def repair_sweep(R2, dt, E, W=10, L=8, max_repairs=400, verbose=True):
+    """THE REBALANCER RUNNING DURING THE SWEEP (surgical form).  Iterate:
+    run the deterministic Steer sweep; on the FIRST prescription fallback
+    (j,k) -- overflow e beyond the box by a small even amount -- apply one
+    exact split-jump gather that shifts E[j][k] by -sign(e)*(overflow),
+    donating to an earlier row's deeper cell (i0, k-r) with hard-cap room
+    checks on donor and splash cells; re-run.  Identity preserved by
+    construction at every step; the final witness is verified exactly."""
+    E = [list(r) for r in E]
+    history = []
+    last_first = None
+    stall = 0
+    for it in range(max_repairs):
+        dbg = []
+        sol, msg, nfall, mc, nt = sweep_E(R2, dt, E, W=W, L=L, teleport=False,
+                                          debug_fallback=dbg)
+        if sol is not None:
+            return sol, E, history, f'CLOSED after {it} repairs'
+        if not dbg:
+            return None, E, history, f'no fallback to repair; {msg}'
+        j, k, depth, kind, e, cap = dbg[0]
+        if kind == 'mag':
+            over = abs(e) - cap
+            shift = -(1 if e > 0 else -1) * (over + (over % 2))
+        else:
+            shift = 2 if e < 0 else -2   # parity: nudge by odd? e-parity is
+            # fixed by X-parity; a 2-shift changes magnitude side.
+        done = False
+        for i0 in range(j - 1, max(-1, j - 9), -1):
+            r = (j + dt[j]) - (i0 + dt[i0])
+            k0 = k - r
+            if k0 < 0 or not move_ok(dt, i0, k0, j):
+                continue
+            cap0 = comb(dt[i0], k0)
+            if abs(E[i0][k0] - shift) > cap0:
+                continue
+            ok = True
+            for t in range(1, r + 1):
+                kk = k0 + r - t
+                if abs(E[j][kk] + shift * comb(r, t)) > comb(dt[j], kk) * 2:
+                    ok = False
+                    break
+            if not ok:
+                continue
+            apply_move(E, dt, i0, k0, j, -shift)
+            history.append((it, j, k, kind, e, cap, i0, k0, shift))
+            done = True
+            break
+        if not done:
+            return None, E, history, (f'no donor for repair at row {j} cell '
+                                      f'{k} ({kind}, e={e}, cap={cap}); {msg}')
+        if verbose and (it < 12 or it % 25 == 0):
+            print(f'    repair {it}: {kind} at ({j},{k}) depth {depth} '
+                  f'e={e} cap={cap} shift={shift} donor=({i0},{k0}); '
+                  f'sweep had died: {msg}', flush=True)
+        if dbg[0][:2] == last_first:
+            stall += 1
+            if stall > 6:
+                return None, E, history, (f'stalled repairing ({j},{k}); {msg}')
+        else:
+            stall = 0
+        last_first = dbg[0][:2]
+    return None, E, history, f'repair budget exhausted; {msg}'
 
 def carve_pow(R0, dsrc, blocks, s):
     """s-fold carve (from the doubling module, verbatim math): source rows are

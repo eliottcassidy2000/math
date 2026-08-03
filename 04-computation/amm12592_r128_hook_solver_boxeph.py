@@ -187,11 +187,22 @@ def solve_hook(R, d, caps, beam, ctrl, span, dedup, log, ckpt_path, tag,
             eng.write_json(ckpt_path, {
                 "R": R, "tag": tag, "row": i,
                 "states": [{"acc": a, "sigma": sg} for a, sg in states[:40]]})
-    # final row exact decode fallback (states are sigma_{R-2})
-    for acc, sig in states:
-        fin = eng.final_decode(sig, d[R - 1])
-        if fin is not None:
-            return acc + [fin], "SOLVED-final-decode"
+    # states are sigma_{R-3} after the loop (i stopped at R-2 pre-expansion);
+    # dump the full population for offline repair, then run the exact banded
+    # 2-row repair as the endgame.
+    if ckpt_path:
+        dump = ckpt_path.replace(".json", "_final_states.json")
+        eng.write_json(dump, {
+            "R": R, "tag": tag, "row": R - 3,
+            "states": [{"acc": a, "sigma": sg} for a, sg in states]})
+        log(f"  [final population dumped: {dump} ({len(states)} states)]")
+    import amm12592_r128_repair2_boxeph as rp2
+    for si, (acc, sig) in enumerate(states):
+        for sgn in (1, -1):
+            r = rp2.repair2(sig, d[R - 2], d[R - 1], sgn)
+            if r is not None:
+                log(f"  repair2 endgame: state {si} sign {sgn}")
+                return acc + [r[0], r[1]], f"REPAIR2@state{si}sign{sgn}"
     return None, "exhausted"
 
 def main():
