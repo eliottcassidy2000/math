@@ -16,7 +16,9 @@ open problems.  They are five sharper kinds of intermediate object.
    closes all sixteen projected `z_1=219` rows, lowers the `k=3` cap to `218`,
    and leaves `119` rows at the next layer.  Every residual at `219` has
    `g=3,q=3`, but the quotient is the two-point divisor chain `{1,3}`, not a
-   `C3` action or torsor.
+   `C3` action or torsor.  [THM-3242 (projected-k3 z217)](../01-canon/theorems/THM-3242-projected-k3-z217-exact-status-annihilation.md)
+   also kills all `66` states on its eight rows, but out of order: open
+   `z_1=218` still blocks any cap or ledger change.
 
 2. **A carrier can now be costed before it is interpreted.**
    [THM-3228](../01-canon/theorems/THM-3228-four-jet-heisenberg-minimal-faithful-permutation-carrier-gate.md)
@@ -287,7 +289,8 @@ The decisive test is coefficient covariance before marginalization.
 This route does not replace the direct LRC obligations: finite heads, other
 cells, arbitrary `k<=1`, the rung, physical entry, and the remaining reflected
 ledger all stay open.  On the projected `k=3` lane the exact next finite task
-is the `119`-row layer `z_1=218`, with current ledger `373411`.
+is the `119`-row layer `z_1=218`, with current ledger `373411`; `z_1=217` is
+already preclosed for the subsequent contiguous descent.
 
 ### Planar Jacobian: turn an infinity bifurcation into a Keller gate
 
