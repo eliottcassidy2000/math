@@ -2,7 +2,7 @@
 id: THM-3227
 title: "Selected-root residue contact trie, primitive carry, and delayed resplitting"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Derivative-normalized jets of a finite family at one selected common simple
   root form a coordinate-invariant residue contact ultrametric.  Its prefix
   partitions are a rooted q-ary trie over a residue field of size q; every
@@ -22,7 +22,12 @@ audit: >
   carries with p-divisible lower jets, 15 exact ramified-tail formulas, and
   the delayed depth-two to depth-three/four resplitting hostile.  Normal,
   optimized, and stored transcripts agree with the LF-normalized hashes below.
-  Independent immutable audit is pending.
+  An independent immutable audit rederived the contact ultrametric and affine
+  leading-difference law, checked the q-branch versus p-order distinction,
+  reconstructed the unramified divided-carry factorization, and verified the
+  delayed-resplitting and ramified counterexamples.  It replayed both normal
+  and optimized companions against the stored transcript and accepted the
+  pinned LF-normalized hashes.
 depends_on:
   - THM-3221-selected-root-osculating-separation-and-minimal-jet-prime-carry
 related:
@@ -40,8 +45,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3227 -- selected-root residue contact trie, primitive carry, and delayed resplitting
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE AUDIT
-PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3221 canonically isolates the first live osculating coefficient of one
 selected-root transition.  A finite family has more structure than a bag of
@@ -353,4 +357,4 @@ Ordinary and optimized runs byte-match
 
 and the LF-normalized hashes are pinned in the frontmatter.
 
-QED, conditional only on independent immutable audit for status promotion.
+QED.
