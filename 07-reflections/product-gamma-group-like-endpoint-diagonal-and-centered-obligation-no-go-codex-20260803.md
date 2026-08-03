@@ -1,7 +1,7 @@
 # The product-Gamma carrier copies endpoint units, not centered obligations or their ancestry
 
 **Status:** structural synthesis for
-[THM-3311](../01-canon/theorems/THM-3311-product-gamma-endpoint-diagonal-and-centered-current-counit-obstruction.md).
+[THM-3314](../01-canon/theorems/THM-3314-product-gamma-endpoint-diagonal-and-centered-current-counit-obstruction.md).
 The executable evidence is the
 [group-like endpoint / augmentation no-go scout](../04-computation/fc3_product_gamma_group_like_endpoint_diagonal_augmentation_no_go_scout_20260803.py)
 and its
@@ -315,8 +315,8 @@ and compare LF-normalized bytes with the frozen output.  The source and
 output SHA-256 hashes are
 
 ```text
-afec8bac55f103486e5aad64b3987cacc3d13c203f13e766beb52c3b307af83b
-ad33cf69f6da6d1ccf495c74d7e25f45c9ecd91a9a7726dbdd51eec23db64d63
+fe3f86af7b2ef998ce725c8d928475b5f5ebef9351081497c1b4bd3d8478c4dc
+8bf0cfad2589462845e0bed552b951f894a38fd16ad1fd5d64235c33a2b8d969
 ```
 
 The script contains no assertion node or floating literal.  Its conclusion

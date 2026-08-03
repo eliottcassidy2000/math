@@ -1,5 +1,5 @@
 ---
-id: THM-3312
+id: THM-3315
 title: "Tournament cut-switching centered-coronal walk compiler"
 status: >
   PROVED by exact algebra + VERIFIED-EXACT through order five.  For a
@@ -43,7 +43,7 @@ semantic_sha256: 282a0c09458e9b539e349135f3800cd8bfc850971b4e8782fc14de75ea36c1b
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3312 -- tournament cut-switching centered-coronal walk compiler
+# THM-3315 -- tournament cut-switching centered-coronal walk compiler
 
 **PROVED by exact algebra + VERIFIED-EXACT through order five.**
 

@@ -1,7 +1,7 @@
 # Tournament cut switching: centered coronal and total-walk compiler
 
 **Status:** structural synthesis for
-[THM-3312](../01-canon/theorems/THM-3312-tournament-cut-switching-centered-coronal-walk-compiler.md).
+[THM-3315](../01-canon/theorems/THM-3315-tournament-cut-switching-centered-coronal-walk-compiler.md).
 This note gives a loss-aware sequence compiler for a native tournament operation:
 cut switching.  It is a theorem-scale algebraic identity, not a literature
 novelty claim.  The finite computation is an independent hostile audit of

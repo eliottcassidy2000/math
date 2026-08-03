@@ -14,7 +14,7 @@ There are two different objects that can be called a copy.
 The scout reconstructs the exact three-face response bank, tests the first
 object on the four reachable blockers and the thirty-one full-domain
 rows-{16,17} hostiles, and locates the remaining face-tag and ancestry losses.
-It is the exact companion for THM-3311's bounded endpoint/counit statement.
+It is the exact companion for THM-3314's bounded endpoint/counit statement.
 It adds no inherited transition and proves no FC(3), SFC(3), GMC, positivity,
 or shared chronology statement.
 """
@@ -491,7 +491,7 @@ def main():
     )
 
     print("FC3 PRODUCT-GAMMA ENDPOINT DIAGONAL / CENTERED OBLIGATION NO-GO SCOUT")
-    print("status=FINITE-EXACT_PARTIAL;theorem_scope=THM-3311")
+    print("status=FINITE-EXACT_PARTIAL;theorem_scope=THM-3314")
     print("dependency_hashes=BEGIN")
     for path, actual in ACTUAL_HASHES:
         print(f"{actual}  {path.relative_to(ROOT)}")

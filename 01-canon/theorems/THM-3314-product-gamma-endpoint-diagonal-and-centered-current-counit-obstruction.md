@@ -1,5 +1,5 @@
 ---
-id: THM-3311
+id: THM-3314
 title: "Product-Gamma endpoint diagonal and centered-current counit obstruction"
 status: >
   PROVED algebraically + VERIFIED-EXACT on the declared three-face bank.  In
@@ -35,12 +35,12 @@ related:
   - THM-3286-three-face-availability-helly-defect-and-binary-origin-width
 script: 04-computation/fc3_product_gamma_group_like_endpoint_diagonal_augmentation_no_go_scout_20260803.py
 output: 05-knowledge/results/fc3_product_gamma_group_like_endpoint_diagonal_augmentation_no_go_scout_20260803.out
-script_sha256: afec8bac55f103486e5aad64b3987cacc3d13c203f13e766beb52c3b307af83b
-output_sha256: ad33cf69f6da6d1ccf495c74d7e25f45c9ecd91a9a7726dbdd51eec23db64d63
+script_sha256: fe3f86af7b2ef998ce725c8d928475b5f5ebef9351081497c1b4bd3d8478c4dc
+output_sha256: 8bf0cfad2589462845e0bed552b951f894a38fd16ad1fd5d64235c33a2b8d969
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3311 -- product-Gamma endpoint diagonal and centered-current counit obstruction
+# THM-3314 -- product-Gamma endpoint diagonal and centered-current counit obstruction
 
 **PROVED algebraically + VERIFIED-EXACT on the declared three-face bank.**
 

@@ -1,5 +1,5 @@
 FC3 PRODUCT-GAMMA ENDPOINT DIAGONAL / CENTERED OBLIGATION NO-GO SCOUT
-status=FINITE-EXACT_PARTIAL;theorem_scope=THM-3311
+status=FINITE-EXACT_PARTIAL;theorem_scope=THM-3314
 dependency_hashes=BEGIN
 90387770e45f2b560cdebc547ac295cb682935445fcbbbf0a7484f6a0a6e7200  04-computation/fc3_three_support_face_f12_release_copy_rebind_gate_scout_20260803.py
 6ba33a9f578a08a63b06d81b994818dc9c18f64e3d4cfce971ef5b8eee3b7357  05-knowledge/results/fc3_three_support_face_f12_release_copy_rebind_gate_scout_20260803.out
