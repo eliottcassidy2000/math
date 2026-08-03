@@ -7,8 +7,8 @@ rate it witnesses is gamma_eff.  Only as R -> infinity does a bounded D0 become 
 Correct statement of the constant: C = 1 + gamma requires ONE gamma closing at EVERY
 R with BOUNDED D0.  Since gamma_c(R) increases to gamma*, the binding regime is large R.
 """
-import sys
-sys.path.insert(0, '/tmp/math-wt-coinC2/04-computation')
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # repo 04-computation (was a deleted session worktree)
 import amm12592_gamma35_beam_deathstar as beam
 from gammac import gamma_c, GSTAR
 from fractions import Fraction as F

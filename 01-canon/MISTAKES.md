@@ -9,6 +9,37 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-361 (2026-08-03, THM-3024 general-class floor promotion) -- a truncation-edge Hall cut was read as a cross-shell floor
+
+- **What failed:** THM-3024 promoted the balanced-block archimedean floor
+  `C*_block >= log_5(5 phi^2)` to ALL exactly fair AMM 12592 extractors via a
+  forward-routing transportation model, citing (G1) an aggregate Hall-cut sign
+  flip at golden and (G3) numeric equality of degree-resolved and per-shell
+  cuts. The cited script computed only per-shell continuum (ARCH) margins in
+  floats; no cross-shell cut was ever computed. In exact arithmetic, within
+  the theorem's own model (forward routing at preserved absolute degree),
+  every tail cut with a deeper shell available is satisfied for ANY
+  `gamma > 0`: at fixed degree `d`, demand `binom(m-1,d)` is outrun by supply
+  exponentially. Independently confirmed twice (audit agent + orchestrator):
+  at `gamma = 71/125 < gamma*`, the genuine per-shell deficit `2^242` at
+  `(m,d) = (256,155)` is absorbed by shell `512` with `~2^128` room. The
+  reported binding cuts were truncation-edge artifacts — the deepest
+  windowed shell's own per-shell constraint, i.e. the balanced-block floor
+  read back circularly.
+- **Why it was wrong:** an aggregated Hall cut is only as strong as the
+  model's routing bound. With an unbounded forward window the relaxation has
+  no floor at all, so the "most generous possible degree mobility" reading
+  inverts the logic: generosity destroys the cut rather than validating it.
+- **Correct framing:** the general-class `C*` floor is OPEN again. Surviving:
+  balanced-block `C* > 1.5970` exact through `m = 4096` and the asymptotic
+  block/checkpoint barrier `log_5(5 phi^2)` modulo one unwritten Stirling
+  transfer lemma (THM-3009 sec 10.3); THM-3027's tangency collapse, now
+  scan-free in the floor direction (concavity + gamma-monotonicity upgrades).
+  The missing ingredient for a general floor is a DEADLINE-BOUNDED routing
+  window derived from the extractor axioms — the pathwise deadline is exactly
+  what the transportation relaxation forgot. Audit with exact certificates:
+  `05-knowledge/results/amm12592-golden-floor-audit-boxeph.md`.
+
 ## MISTAKE-360 (2026-08-02, THM-3214 offset-six application) -- canonical PRS rows were identified literally with unnormalized iterates
 
 - **What failed:** the first promoted wording of THM-3214 equation `(25)`

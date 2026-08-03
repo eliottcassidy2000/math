@@ -1,15 +1,32 @@
-"""PROFILE MONOTONICITY (THM-3026 lemma L) turns a search result into a THEOREM.
+"""liftrate: profile / lift / admissibility / epoch-identity toolkit (THM-3029).
 
-If an epoch closes with degree profile (d_i), it closes with ANY pointwise-larger
-profile (d'_i >= d_i): each block lifts by convolving its deltas with
-[binom(d'-d,k)]_k, which is the admissible block representing the CONSTANT 1
-(since x + (1-x) = 1).  The epoch identity sum_i x^i Delta_i = q^{R-1} is unchanged.
+RECONSTRUCTED 2026-08-03 (boxeph). The original module lived only in the
+deleted session worktree /tmp/math-wt-coinC2/04-computation and was never
+committed, breaking the reproduction chain of THM-3029's referee
+amm12592_floor_rate_attained_thm3029.py. The definitions below are taken
+verbatim from the committed amm12592_profile_monotonicity_thm3029.py, whose
+module body (kept here, at module level, as in the original) prints exactly
+the first 7 lines of the committed expected output
+05-knowledge/results/amm12592_floor_rate_attained_thm3029.out -- that
+byte-level match is the validation of this reconstruction.
 
-So the beam FAILING at a larger profile while SUCCEEDING at a smaller one is a pure
-search artefact.  Exploit it: lift the gamma=1/2 solutions onto sub-3/5 profiles.
+Semantics (THM-2966 / THM-3002 / THM-3026):
+  A block at degree d is a coefficient vector (delta_k)_{k=0..d} in the basis
+      B_{d,k}(x) = x^{d-k} (1-x)^k,
+  ADMISSIBLE iff  |delta_k| <= binom(d,k)  and  delta_k == binom(d,k) (mod 2)
+  (Lucas-box capacity + parity).
+  prof(R, g1, g2, D0)[i] = floor((g1/g2)*(R+i)) + D0,  i = 0..R-1.
+  lift_block(delta, d, dp): convolution with [binom(dp-d,k)]_k, the admissible
+  block representing the CONSTANT 1 (x + (1-x) = 1); re-expresses the same
+  polynomial at degree dp >= d, still admissible (THM-3026 (L)+(M)).
+  epoch_identity(R, sol, d): the exact epoch-closure identity of THM-3002 (*):
+      sum_{i=0}^{R-1} x^i Delta_i(x) == (1-x)^{R-1}   in Z[x],
+      Delta_i(x) = sum_k delta_{i,k} B_{d_i,k}(x).
+  eff(R, d) = max_i d_i/(R+i) as an exact Fraction (the effective rate;
+  guards against the D0 slack trap of THM-3029 sec. 2).
 """
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # repo 04-computation (was a deleted session worktree)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import amm12592_gamma35_beam_deathstar as beam
 from math import comb
 from fractions import Fraction as F
@@ -42,6 +59,10 @@ def epoch_identity(R, sol, d):
 
 def eff(R, d): return max(F(d[i], R + i) for i in range(R))
 
+# ---------------------------------------------------------------------------
+# Module-level demonstration (as in the original lost module): lines 1-7 of
+# the committed expected output of THM-3029's referee. Runs at import time.
+# ---------------------------------------------------------------------------
 print("R=32: solve at gamma=1/2, D0=3, then LIFT onto sub-3/5 profiles.")
 R = 32
 src = prof(R, 1, 2, 3)

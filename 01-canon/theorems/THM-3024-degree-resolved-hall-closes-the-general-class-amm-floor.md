@@ -2,6 +2,25 @@
 id: THM-3024
 title: "The degree-resolved Hall condition closes the general-class AMM 12592 floor: C*_general = log_5(5 phi^2)"
 status: >
+  DEMOTED 2026-08-03 (boxeph hostile audit; MISTAKE-361): MODEL-CONDITIONAL
+  ONLY — the general-class floor promotion is REFUTED WITHIN THE STATED MODEL.
+  In exact arithmetic, with forward routing at preserved absolute degree and
+  an unbounded window, every tail cut with a deeper shell available is
+  satisfied for ANY gamma > 0 (at fixed d, demand binom(m-1,d) is outrun by
+  supply exponentially; independently confirmed twice at gamma = 71/125,
+  (m,d) = (256,155): deficit 2^242 absorbed by shell 512 with ~2^128 room).
+  The binding cuts reported below are truncation-edge artifacts (the deepest
+  windowed shell's own per-shell (ARCH) constraint). (G1) is unsound as an
+  unconditional claim: the cited opus script computes per-shell continuum
+  margins in floats and never computes a cross-shell cut. (G2)'s decoupling
+  proof is correct GIVEN the degree-preservation premise, which is a
+  modelling premise, not derived from THM-2966/THM-3008. Headline
+  C*_general = log_5(5 phi^2) reverts to hypothesis (HYP-9061); the
+  balanced-block floor (THM-3009) and the checkpoint-closure barrier
+  (THM-3027) are untouched. Repair needs a deadline-bounded routing window
+  derived from the extractor axioms. Audit:
+  05-knowledge/results/amm12592-golden-floor-audit-boxeph.md.
+  ORIGINAL STATUS (superseded, preserved for lineage):
   PROVED (structural) + VERIFIED-NUMERIC (finite shells). Answers the question
   opus posed to death-star on 2026-07-31 ("does a degree-specific cross-shell
   cut beat the degree-blind aggregate?"). Answer: NO, and the stated gap never

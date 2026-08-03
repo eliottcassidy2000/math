@@ -14,7 +14,7 @@
 | Closed form `TV(Bin(2,x),Bin(2,y)) = \|x-y\|(1+\|x+y-1\|)` on `[0,1]^2` | **VERIFIED** (symbolic region-resolved identities + exact 33×33 Fraction grid vs raw definition) |
 | Fusion inequality `TV(Bin(2,pbar),Bin(2,qbar)) <= delta_1+delta_2-delta_1*delta_2` on `[0,1]^4` | **VERIFIED** (two-case polynomial certificates, manifestly nonnegative term-by-term, + exhaustive 17^4 exact grid + 20000-pt ragged-denominator hostile scan: zero violations) |
 | Rigid equality face = `F0 ∪ F1 ∪ F2 ∪ F3 ∪ F4` (stated below) | **VERIFIED** (forced by vanishing of every certificate term; grid equality set = predicted set pointwise, 351 = 351, both directions; cross-checked by inclusion–exclusion 289+68−6) |
-| General block statement `delta_N <= delta_I + delta_J - delta_I*delta_J` for fusing blocks `I ⊔ J` (arbitrary sizes) | **CITED** (arXiv 2601.04079v3; NOT independently verified here beyond the `\|I\|=\|J\|=1` case above) |
+| General block statement `delta_N <= delta_I + delta_J - delta_I*delta_J` for fusing blocks `I ⊔ J` (arbitrary sizes) | **OPEN — this is Kontorovich's stated CONJECTURE, not his theorem** (scope correction 2026-08-03 after full-text read, see `gvc-tv-provenance-hunt-boxeph.md`: the paper PROVES only Lemma 1.4 `delta_N <= 2(delta_I+delta_J)` and remarks the product-form sharpening is conjecturally optimal with "no pathway" via its methods; "rigid face" is not the paper's term). **The `\|I\|=\|J\|=1` certificate above is therefore the FIRST PROVED CASE of that open conjecture**, strictly stronger than Lemma 1.4 at n=2. |
 | Transfer to AMM 12592 exact-extraction deadline lane | **REFUTED as a transfer** — verdict NO TRANSFER (six-field spec below) |
 
 ## 1. Closed form (proof sketch)

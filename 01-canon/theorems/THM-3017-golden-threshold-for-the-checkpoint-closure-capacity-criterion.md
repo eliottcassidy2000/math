@@ -3,7 +3,12 @@ id: THM-3017
 title: "The golden threshold: the checkpoint-closure capacity criterion has critical rate log_5(phi^2)"
 status: >
   PROVED (variational derivation) + VERIFIED-EXACT to 20-40 digits /
-  AWAITING INDEPENDENT HOSTILE AUDIT. The asymptotic capacity criterion of
+  HOSTILE AUDIT DISCHARGED 2026-08-03 within stated scope (boxeph audit,
+  05-knowledge/results/amm12592-golden-floor-audit-boxeph.md): the
+  closed-form solution rho = sqrt5, sigma = phi is now PROVED via the
+  THM-3027 tangency collapse rather than numerics; the scope sentence below
+  (necessary criterion for one sufficient program, not C*) is confirmed
+  correct and load-bearing — cf. MISTAKE-361 for the general-class floor. The asymptotic capacity criterion of
   THM-3002 for the H=1 dyadic-checkpoint program has critical rate exactly
   gamma* = log_5(phi^2) = 2 log(phi)/log 5 = 0.59798743566544014974...,
   i.e. deadline slope C = 1 + gamma* = log_5(5 phi^2) = 1.59798743566544...,

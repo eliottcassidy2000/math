@@ -1,0 +1,9 @@
+R= 8 direct: SOLVED; profile=[4, 5, 5, 6, 7, 7, 8, 8]
+      blocks admissible + epoch identity exact: True; eff rate = 7/12 = 0.583333
+R=16 direct: SOLVED; profile=[9, 10, 10, 11, 11, 12, 13, 13, 14, 14, 15, 16, 16, 17, 17, 18]
+      blocks admissible + epoch identity exact: True; eff rate = 16/27 = 0.592593
+R=32 lifted from (gamma=1/2, D0=3) source (SOLVED); profile=[19, 19, 20, 20, 21, 22, 22, 23, 23, 24, 25, 25, 26, 26, 27, 28, 28, 29, 29, 30, 31, 31, 32, 32, 33, 34, 34, 35, 35, 36, 37, 37]
+      blocks admissible + epoch identity exact: True; eff rate = 37/62 = 0.596774
+
+wrote /tmp/math-wt-boxeph-multifront/04-computation/amm12592_floor_witnesses_R8_R16_R32.json
+ALL WITNESSES VERIFIED EXACTLY (admissibility + THM-3002 epoch identity).

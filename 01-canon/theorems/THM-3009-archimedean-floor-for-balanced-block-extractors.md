@@ -30,6 +30,18 @@ status: >
   The inner argmax slides from the profile kink x = kappa down to x = 0 as
   delta grows, so no one-variable reduction is available. The finite-m
   certified bounds converge to exactly this constant.
+  AUDIT NOTE 2026-08-03 (boxeph,
+  05-knowledge/results/amm12592-golden-floor-audit-boxeph.md): independent
+  exact re-referee PASSED — full (ARCH) ladder re-derived from scratch for
+  m <= 1024 (all values match), m = 2048/4096 refuted candidates re-verified,
+  ladder monotonicity swept exhaustively at m = 8,16,32, and every refuted
+  rate certified below gamma* by Fibonacci/Lucas integer comparison
+  (certified bracket 115939/193882 < gamma* < 105183/175895). Residual debt:
+  the sec 10.3 Stirling transfer lemma is the one unwritten analytic step of
+  the asymptotic floor; after the audit's concavity/gamma-monotonicity
+  upgrades the delta-scan is load-bearing only for threshold
+  exactness-from-above. Scope: balanced-block class; the general-class
+  promotion attempt is demoted (THM-3024, MISTAKE-361).
 source: opus-2026-07-31-amm12592-writeup
 depends_on:
   - THM-3007

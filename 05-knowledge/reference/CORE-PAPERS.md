@@ -294,6 +294,15 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   `NC2 -> GMC(2) -> JC(2)` chain, or full JC(2) from the binary homogeneous
   calculation. VC(4), planar Jelonek/leading-form descent, and Newton/Lame
   descent remain separate programs.
+- **In-repo GVC(3) witness (2026-08-03, provenance UNKNOWN):** a supplied
+  homogeneous `Lambda = Delta^6` witness (`Delta = 4 d_x d_y + d_t^2`,
+  `P = A C^2` deg 12, `Q = x^2`) is FINITE-EXACT through `m = 4` with exact
+  nonvanishing constants and tight exponent; absent from indexed literature
+  after documented search, plausibly a homogeneous lift of Long's GMC(3)
+  example via `E[f] = (e^{Delta/2}f)(0)`; dimension-minimal if the all-`m`
+  induction holds (de Bondt proved homogeneous-operator GVC in 2 variables).
+  See `05-knowledge/results/gvc3-delta6-counterexample-verification-boxeph.md`
+  and `gvc-tv-provenance-hunt-boxeph.md`.
 
 ### Lee--Li — *On the two-dimensional Jacobian conjecture: Magnus' formula revisited, IV*
 
@@ -542,12 +551,16 @@ new homotopy group, `p=2` statement, or LRC/GMC consequence.
 - **Primary / freshness:** [arXiv:2601.04079v3](https://arxiv.org/abs/2601.04079),
   submitted 2026-01, revised 2026-02. **PREPRINT.**
 - **Imported role:** homogenization (each Bernoulli parameter mapped to the
-  block mean) reduces TV distance up to a universal constant; the atomic
-  `n=2` lemma `TV(Bin(2,pbar),Bin(2,qbar)) <= d1+d2-d1*d2` with closed form
-  `TV = |x-y|(1+|x+y-1|)` is verified exactly in-repo (2026-08-03 boxeph
-  session; see `05-knowledge/results/tv-fusion-homogenization-lemma-boxeph.md`).
-- **Does not prove:** any AMM 12592 deadline bound; summation vs
-  homogenization are different maps and only summation is a Markov kernel.
+  block mean) reduces TV distance up to a universal constant. Lemma 1.4
+  PROVES `delta_N <= 2(delta_I + delta_J)` for a block partition; the
+  product form `delta_N <= delta_I + delta_J - delta_I delta_J` is the
+  paper's stated CONJECTURE ("no pathway" via its methods). The repo PROVES
+  that conjecture's first case (`|I|=|J|=1`, i.e. `n=2`) by an exact
+  positivity certificate, with the equality face characterized — see
+  `05-knowledge/results/tv-fusion-homogenization-lemma-boxeph.md`.
+- **Does not prove:** the product-form conjecture beyond `n=2` (OPEN); any
+  AMM 12592 deadline bound (transfer refuted in the repo note); "rigid face"
+  is repo/user terminology, not the paper's.
 - **Repo consumer:** [THM-3291](../../01-canon/theorems/THM-3291-two-block-tv-homogenization-rigidity.md)
   proves the `n=2` case from a box constraint plus AM-GM and classifies the
   equality locus; its 62 nontrivial equality points are boxeph's 351 minus the
