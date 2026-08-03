@@ -408,7 +408,7 @@ def solve_endgame(d, beam=400, ctrl=2, span=2, seed=None, rand_frac=0.0,
                   dedup=999, rank="l1deg", a2_from=64, prefilter=1200,
                   c2_ctrl=3, c2_span=6, skip_c2=False, log=print, ckpt=None,
                   late_from=None, late_ctrl=None, late_span=None,
-                  eprune=False):
+                  eprune=False, ebranch=False, ecap=None):
     R = len(d)
     rng = random.Random(seed)
     states = [([], base.qpow(R - 1))]
@@ -431,12 +431,31 @@ def solve_endgame(d, beam=400, ctrl=2, span=2, seed=None, rand_frac=0.0,
                 de, ns = r
                 if not ns or abs(ns[0]) != 1:
                     continue
-                if eprune and abs(sum(ns)) > R - 1 - i:
-                    # E-wall (exact necessity): sigma_i(1) walks by the forced
-                    # delta_{j,0} = +-1 each remaining row and must end at 0,
-                    # so |sigma_i(1)| > R-1-i can never close.
-                    continue
-                nxt.append((acc + [de], ns))
+                variants = [(de, ns)]
+                if ebranch and de and de[0] in (1, -1):
+                    # the forced k=0 cell (B_{d,0} = x^d) admits BOTH signs;
+                    # flipping delta_{i,0}: v -> -v only shifts the residual's
+                    # x^{d} coefficient by +2v, i.e. ns[d-1] += 2v.  This is
+                    # the ONLY control surface of the E-walk.
+                    v = de[0]
+                    ns2 = list(ns) + [0] * (max(0, d[i] - len(ns)))
+                    ns2[d[i] - 1] += 2 * v
+                    ns2 = base.trim(ns2)
+                    if ns2 and abs(ns2[0]) == 1:
+                        de2 = list(de)
+                        de2[0] = -v
+                        variants.append((de2, ns2))
+                lim = R - 1 - i
+                if ecap is not None:
+                    lim = min(lim, ecap)
+                for dev, nsv in variants:
+                    if eprune and abs(sum(nsv)) > lim:
+                        # E-wall (exact necessity for lim = R-1-i): sigma_i(1)
+                        # walks by the forced delta_{j,0} = +-1 each remaining
+                        # row and must end at 0.  ecap further restricts to
+                        # the empirical witness corridor (heuristic).
+                        continue
+                    nxt.append((acc + [dev], nsv))
         if not nxt:
             return None, f"died at row {i}", states
         nxt.sort(key=lambda st: (len(st[1]), sum(abs(x) for x in st[1])))
@@ -739,7 +758,7 @@ def hunt(args):
         c2_ctrl=args.c2_ctrl, c2_span=args.c2_span, skip_c2=args.skip_c2,
         log=log, ckpt=ckpt, late_from=args.late_from,
         late_ctrl=args.late_ctrl, late_span=args.late_span,
-        eprune=args.eprune)
+        eprune=args.eprune, ebranch=args.ebranch, ecap=args.ecap)
     log(f"  -> {msg}")
     log(f"  absorb2 method hits: {STATS['methods']}  "
         f"unknown(relaxed-pass, unconstructed): {STATS['unknown']}")
@@ -796,6 +815,8 @@ def main():
     ap.add_argument("--late-ctrl", type=int, default=None, dest="late_ctrl")
     ap.add_argument("--late-span", type=int, default=None, dest="late_span")
     ap.add_argument("--eprune", action="store_true")
+    ap.add_argument("--ebranch", action="store_true")
+    ap.add_argument("--ecap", type=int, default=None)
     ap.add_argument("--tag", default=None)
     ap.add_argument("--out", default=None)
     args = ap.parse_args()

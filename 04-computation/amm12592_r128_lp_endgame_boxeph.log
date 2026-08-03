@@ -1,0 +1,13 @@
+endgame widener: 100 states, headn=3 headoff=8 tailn=3 tailoff=4
+  ... state 10/100 done, decodes=15114, 12.3s
+  ... state 20/100 done, decodes=24786, 17.8s
+  ... state 30/100 done, decodes=28014, 18.7s
+  ... state 40/100 done, decodes=38148, 27.0s
+  ... state 50/100 done, decodes=43566, 31.0s
+  ... state 60/100 done, decodes=48696, 34.8s
+  ... state 70/100 done, decodes=60432, 42.7s
+  ... state 80/100 done, decodes=64896, 43.8s
+  ... state 90/100 done, decodes=69456, 45.0s
+  ... state 100/100 done, decodes=73266, 46.0s
+no completion: 73266 decodes over 100 states, 46.0s  (search negative, NOT evidence)
+EXIT=3

@@ -1,0 +1,8 @@
+
+==========================================================================
+PHASE C-ladder: pipeline validation at R = 8, 16, 32, 64
+==========================================================================
+R=  8 beam=200: SOLVED in 0.0s; verify adm=True id=True (**)=True; winner debt total=19 max=4, overshoot total=27 max=22
+R= 16 beam=200: SOLVED in 0.3s; verify adm=True id=True (**)=True; winner debt total=73 max=9, overshoot total=14647 max=12498
+R= 32 beam=300: SOLVED in 4.0s; verify adm=True id=True (**)=True; winner debt total=311 max=23, overshoot total=3926716903 max=1290644129
+R= 64 beam=400: SOLVED in 49.9s; verify adm=True id=True (**)=True; winner debt total=1467 max=42, overshoot total=27224173096070043232 max=8020565806387027614
