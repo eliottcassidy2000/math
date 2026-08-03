@@ -2,13 +2,14 @@
 id: THM-3250
 title: "Charged Heisenberg blowup-address intertwiner and pointed multiplicity gate"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For every nonzero central character of H_p, an explicit two-stage Fourier
   transform identifies THM-3240's p-copy exact-address carrier with
   THM-3243's regular nonvertical blowup-flag orbit.  The equally sized
   permutation carriers are not isomorphic before localization: their entire
   mismatch is the central-neutral character spectrum.  In each charged
-  block all intertwiners are a p-dimensional multiplicity-frame choice, and
+  block all intertwiners are a frame on a p-dimensional multiplicity space,
+  and
   a pointed current supplies that frame exactly when its p-by-p coefficient
   determinant is nonzero.  The bridge is unitary after normalization but is
   neither positive nor Singer-equivariant and supplies no physical clutch.
@@ -21,7 +22,10 @@ audit: >
   checks the normalized energy factors and exact cyclic/noncyclic determinant
   controls; and records the p=13 dimensions 169+2028=2197.  Normal and
   optimized runs byte-match the stored transcript and LF-normalized hashes
-  below.  Independent hostile audit is pending.
+  below.  An independent hostile audit rederived both actions and their group
+  law, every Fourier phase and sign, the neutral character multiplicities,
+  unitary normalization, Weyl span, orbit-rank formula, pointed uniqueness,
+  and all scope boundaries, and found no defect.
 depends_on:
   - THM-3240-exact-address-heisenberg-clutch-on-carrier-imbalance
   - THM-3243-contact-deformation-blowup-equivariance-and-full-orbit-resolution
@@ -37,7 +41,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3250 -- charged Heisenberg blowup-address intertwiner and pointed multiplicity gate
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3240's exact-address carrier and THM-3243's nonvertical exceptional
 flags both have `p^3` points, but they are not isomorphic `H_p`-sets.  The
