@@ -2,7 +2,7 @@
 id: THM-3253
 title: "Positive owner-mass all-gauge cyclicity and maximal common Heisenberg module"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For every integer dilation in THM-3246's (3,5;1,2) lane, compactify its
   168 strictly positive cell masses by zero on the THM-3234 Singer plane.
   The resulting 13 by 13 matrix is nonsingular in all 8,064 primitive Singer
@@ -25,8 +25,9 @@ audit: >
   for every residue.  It tests the 672 Newton gauges at four independent
   dilations and verifies the charged/neutral dimension arithmetic.  Normal,
   optimized and stored transcript replay and the LF hashes are required.
-  The 672-gauge theorem has passed an independent hostile audit; the all-gauge
-  modular extension is pending a delta audit.
+  Independent reconstruction additionally checked all 8,064 gauges at g=1,
+  all symmetry identities, the exceptional exact-order lane, the finite-field
+  certificates, normal and optimized replay, and the declared LF hashes.
 depends_on:
   - THM-3234-singer-owner-compactification-and-pointed-heisenberg-carrier-gate
   - THM-3246-all-dilation-second-owner-seam-stabilization-and-sign-word
@@ -43,7 +44,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3253 -- positive owner-mass all-gauge cyclicity and maximal common Heisenberg module
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3252 shows that the signed second-corrector word clears THM-3250's
 charged determinant gate.  The determinant is not merely an asymptotic
@@ -416,4 +417,4 @@ and compare LF-normalized bytes with the declared output.  The companion
 uses exact integer and finite-field arithmetic only, with no floating point,
 randomness, discovery cache, or optimization-sensitive assertions.
 
-QED, pending independent hostile delta audit of the all-gauge extension.
+QED.
