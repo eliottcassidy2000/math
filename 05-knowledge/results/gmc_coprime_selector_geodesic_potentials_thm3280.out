@@ -1,0 +1,19 @@
+THM-3280 COPRIME SELECTOR-GEODESIC POTENTIAL EXACT AUDIT
+dependency_hash_checks=8
+assert_nodes=0,float_literals=0
+coordinate_contract=(rank_C12_and_genuine_J12_both_root17_to0_primitive16_to1;identity_abstract_only)
+selector_word=x+x^2+x^4+x^5+x^10,mass5
+geodesic_even_word=1+x+x^4+x^8+x^11,mass5,lengths=(2, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2)
+uncentered_selector=(det175,SNF_1^10_5_35)
+uncentered_geodesic=(det405,SNF_1^10_9_45)
+uncentered_combined=(index5,SNF_1^11_5,mass_mod5_obstruction)
+augmentation_selector=(index35,SNF_1^10_35)
+augmentation_geodesic=(index81,SNF_1^9_9_9)
+coprime_completion=(gcd_35_81=1,combined_SNF_1^11,Aug_ZC12_exact)
+single_geodesic_extension_indices_j1_to11=(1, 1, 7, 5, 1, 7, 1, 5, 7, 1, 1)
+single_selector_extension_indices_j1_to11=(9, 9, 9, 27, 9, 9, 9, 27, 9, 9, 9)
+sparse_basis_at_geodesic_shift0=(((0, 1, 2, 3, 5, 6, 7, 8, 10, 11), 1), ((0, 2, 4, 5, 6, 7, 8, 9, 10, 11), -1))
+sparse_basis=(2_per_geodesic_shift,24_total,digest=a3647950d8a1429d1d8b86f0ada1a574531979767b3152b187ef1191af040734)
+reverse_sparse_basis=(canonical_A_relative_1_2,7_of_220_B_nines,first=((0, 1, 2, 4, 5, 7, 8, 10, 11), -1),digest=7cae89e963cac813632630f80c9a33fdfee81864f2cf22136d6bf2f7ced3e8fd)
+scope=canonical_coordinate_identification_not_vertex_equivariant_or_physical,no_FC3_LRC_GMC_decrement
+all_exact_checks=PASS
