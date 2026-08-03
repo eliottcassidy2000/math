@@ -20,7 +20,7 @@ DEPENDENCIES = {
     ROOT / "01-canon/theorems/THM-3252-singer-compactified-owner-hodge-word-universal-charged-cyclicity.md":
         "1f8797de2d5fac74814fb78ca4f4d500de8c42eb14a6e1721e5f3e2a2810a873",
     ROOT / "01-canon/theorems/THM-3253-positive-owner-mass-newton-cyclicity-and-maximal-common-heisenberg-module.md":
-        "8b45d02e592c465d1624bafcbb63dcf20db63cad4af4ee87851d89a843c07430",
+        "b94aea11abe97a6cc1a3826a91fab59d4c04e15f0e6acd9c924c5463b7bd63e8",
 }
 
 
