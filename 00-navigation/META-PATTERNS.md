@@ -4,9 +4,9 @@
 
 ## Separate observer type, recurrence class, and finite head
 
-**Action/caution:** separate observer role, evaluator, C/P class, zeros, and
-bulk/residue/head; no column determines another. **Evidence:**
-THM-3172/3186/3210, THM-3200/3211, THM-3202/3213.
+**Action/caution:** separate observer role, evaluator, C/P class, zeros, and bulk/residue/head; no column determines another.
+THM-3288's degree-14 tail with prefix/Hankel order 15 is a sharp head tax.
+**Evidence:** THM-3172/3186/3210, THM-3200/3211, THM-3202/3213/3288.
 
 ## Peel the distinguished prime, then force a small torsion collision
 
@@ -392,9 +392,8 @@ A positive left inverse, order-reflecting quotient, or target factorization disc
 
 ## Audit sections, not only fibres
 
-**Trigger / action:** separately chosen positive witnesses must be put in one
-typed carrier `P_i`; test cumulative intersections and retain a transition
-cocycle if witnesses move. A fixed law beating every adversary is a coherent
-mixed section (THM-3156); per-adversary maxima are only fibres. **Caution:**
-fibres need not glue; Helly/Farkas makes convex failure finite. **Evidence:**
-THM-2292/3144/2658/3156; THM-3152 intersects supports; THM-3166 retains SCC order.
+**Trigger / action:** put separately chosen positive witnesses in one typed carrier `P_i`; test cumulative intersections and retain a transition cocycle if witnesses move.
+A fixed law beating every adversary is a coherent mixed section (THM-3156); per-adversary maxima are only fibres.
+**Caution:** fibres need not glue; after gluing, require a target-preserving map from relation arrows to composable physical updates.
+Adjacency powers count relation walks, not time; chronology needs lawful updates, basepoint, lifetime and composition.
+**Evidence:** THM-2292/3144/2658/3156/3285--3288; THM-3152 intersects supports; THM-3166 retains SCC order.
