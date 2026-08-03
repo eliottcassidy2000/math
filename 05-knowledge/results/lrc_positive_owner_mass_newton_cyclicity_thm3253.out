@@ -1,4 +1,4 @@
-THM-3253 POSITIVE OWNER-MASS NEWTON CYCLICITY EXACT AUDIT
+THM-3253 POSITIVE OWNER-MASS ALL-GAUGE CYCLICITY EXACT AUDIT
 dependency_hash_checks=5
 assert_nodes=0,float_literals=0
 owner_numerator_polynomials=168,degree=2,all_positive_for_g>=1
@@ -13,6 +13,12 @@ phase6_tail_digest=5fb6da1e11014bec9e2e97daa588f982ff318d6a437ebfc08da15141c2da4
 phase7_symmetry=D_(b+7)=-D_b,scalar_phase_period=14
 restricted_multipliers=(1,13,155,167),gauge_count=672
 direct_restricted_gauge_controls=672*4=2688
+unit_multiplier_orbits=48/4=12,phase_classes=7,modular_polynomials=84
+exact_g_orders=[(4, 2), (5, 18), (6, 47), (7, 15), (8, 2)]
+root_free_prime_cover=[(29, 34), (31, 21), (37, 9), (41, 5), (43, 7), (47, 4), (53, 2), (59, 1), (61, 1)]
+modular_certificate_digest=34771ce3677e1fa9cb1932324b54aa743e6e9b97304805e65459071d3b9fc132
+exceptional_(a,b)=(17,3),exact_r=7,c7=-266920406286336,c7_mod31=0,c7_mod59=44
+all_primitive_singer_gauges=48*168=8064
 all_integer_dilations_nonsingular=PASS
 nonnegative_delta0_packet_orbit_span=12*169+13=2041
 scope=abstract_positive-owner-mass-relocation-not-canonical-endpoint-current

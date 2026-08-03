@@ -2,9 +2,10 @@
 """Exact companion for THM-3253's positive owner-mass cyclicity theorem."""
 
 import ast
+from fractions import Fraction
 from functools import lru_cache
 from hashlib import sha256
-from math import comb
+from math import comb, gcd
 from pathlib import Path
 
 
@@ -210,7 +211,7 @@ for shift in range(7):
 # alpha^14=6 is scalar, so all 12 radial translates give simultaneous row
 # and column permutations.  Frobenius is (x,y)->(x,-y), and owner reflection
 # turns multiplier -a into +a with a phase correction.  These identities
-# expand the fourteen certified projective phases to 672 restricted gauges.
+# first expand the fourteen Newton-certified phases to 672 gauges.
 restricted_multipliers = (1, 13, 155, 167)  # +/-1,+/-13 modulo 168
 restricted_gauge_count = len(restricted_multipliers) * 168
 require(restricted_gauge_count == 672, "restricted gauge census")
@@ -223,6 +224,150 @@ for multiplier in restricted_multipliers:
             require(determinant(multiplier, shift, dilation) != 0,
                     ("restricted gauge direct control",
                      multiplier, shift, dilation))
+
+
+# The remaining primitive Singer generators need not share the one-sign
+# Newton tails above.  Reduce all 48 unit multipliers by the exact
+# {+/-1,+/-13} symmetry and all phases by the scalar/anti-diagonal symmetries.
+# This leaves 12*7=84 determinant polynomials.  We recover each polynomial in
+# the ordinary monomial basis over Z, factor its exact zero at g=0, and find a
+# prime for which the remaining factor has no root.  An integer zero of the
+# remaining factor would reduce to a root in every finite field, so one such
+# prime is an all-integer certificate.
+unit_multipliers = tuple(value for value in range(168)
+                         if gcd(value, 168) == 1)
+symmetry_multipliers = (1, 13, 155, 167)
+multiplier_orbits = []
+unseen = set(unit_multipliers)
+while unseen:
+    representative = min(unseen)
+    orbit = {representative * symmetry % 168
+             for symmetry in symmetry_multipliers}
+    require(len(orbit) == 4 and orbit <= unseen,
+            ("multiplier orbit", representative, orbit, unseen & orbit))
+    multiplier_orbits.append(tuple(sorted(orbit)))
+    unseen -= orbit
+multiplier_representatives = tuple(orbit[0]
+                                   for orbit in multiplier_orbits)
+require(multiplier_representatives ==
+        (1, 5, 11, 17, 19, 23, 29, 31, 43, 47, 59, 71),
+        "multiplier quotient representatives")
+require(len(unit_multipliers) == 48 and len(multiplier_orbits) == 12,
+        "unit multiplier quotient census")
+
+
+def monomial_coefficients(values):
+    """Interpolate a degree<=26 integer polynomial exactly from g=0..26."""
+    rows = list(values)
+    forward = []
+    while rows:
+        forward.append(rows[0])
+        rows = [rows[index + 1] - rows[index]
+                for index in range(len(rows) - 1)]
+
+    polynomial = [Fraction(0) for _ in range(len(values))]
+    binomial_basis = [Fraction(1)]
+    for degree, coefficient in enumerate(forward):
+        for exponent, value in enumerate(binomial_basis):
+            polynomial[exponent] += coefficient * value
+        if degree + 1 < len(values):
+            next_basis = [Fraction(0)
+                          for _ in range(len(binomial_basis) + 1)]
+            for exponent, value in enumerate(binomial_basis):
+                next_basis[exponent] -= value * degree / (degree + 1)
+                next_basis[exponent + 1] += value / (degree + 1)
+            binomial_basis = next_basis
+    require(all(value.denominator == 1 for value in polynomial),
+            "integer monomial coefficients")
+    return tuple(value.numerator for value in polynomial)
+
+
+def evaluate_mod(coefficients, value, prime):
+    result = 0
+    for coefficient in reversed(coefficients):
+        result = (result * value + coefficient) % prime
+    return result
+
+
+def monomial_coefficients_mod(values, prime):
+    """Independent Newton interpolation directly in F_prime."""
+    rows = [value % prime for value in values]
+    forward = []
+    while rows:
+        forward.append(rows[0])
+        rows = [(rows[index + 1] - rows[index]) % prime
+                for index in range(len(rows) - 1)]
+
+    polynomial = [0 for _ in range(len(values))]
+    binomial_basis = [1]
+    for degree, coefficient in enumerate(forward):
+        for exponent, value in enumerate(binomial_basis):
+            polynomial[exponent] = (
+                polynomial[exponent] + coefficient * value) % prime
+        if degree + 1 < len(values):
+            inverse = pow(degree + 1, -1, prime)
+            next_basis = [0 for _ in range(len(binomial_basis) + 1)]
+            for exponent, value in enumerate(binomial_basis):
+                next_basis[exponent] = (
+                    next_basis[exponent] - degree * value * inverse) % prime
+                next_basis[exponent + 1] = (
+                    next_basis[exponent + 1] + value * inverse) % prime
+            binomial_basis = next_basis
+    return tuple(polynomial)
+
+
+certificate_primes = (29, 31, 37, 41, 43, 47, 53, 59, 61)
+certificate_table = []
+exact_polynomials = {}
+order_counts = {}
+prime_counts = {}
+for multiplier in multiplier_representatives:
+    for shift in range(7):
+        values = tuple(determinant(multiplier, shift, dilation)
+                       for dilation in range(27))
+        coefficients = monomial_coefficients(values)
+        exact_polynomials[(multiplier, shift)] = coefficients
+        order = next((exponent for exponent, coefficient
+                      in enumerate(coefficients) if coefficient), None)
+        require(order is not None and order > 0,
+                ("exact positive vanishing order", multiplier, shift, order))
+        require(sum(coefficient * (80 ** exponent)
+                    for exponent, coefficient in enumerate(coefficients))
+                == determinant(multiplier, shift, 80),
+                ("all-gauge polynomial extrapolation", multiplier, shift))
+        quotient = coefficients[order:]
+        certificate = next(
+            (prime for prime in certificate_primes
+             if all(evaluate_mod(quotient, value, prime) != 0
+                    for value in range(prime))), None)
+        require(certificate is not None,
+                ("missing root-free prime", multiplier, shift, order))
+        direct_modular = monomial_coefficients_mod(values, certificate)
+        require(direct_modular == tuple(coefficient % certificate
+                                        for coefficient in coefficients),
+                ("exact/modular interpolation comparison",
+                 multiplier, shift, certificate))
+        certificate_table.append((multiplier, shift, certificate, order))
+        order_counts[order] = order_counts.get(order, 0) + 1
+        prime_counts[certificate] = prime_counts.get(certificate, 0) + 1
+
+require(len(certificate_table) == 84, "modular certificate census")
+require(order_counts == {4: 2, 5: 18, 6: 47, 7: 15, 8: 2},
+        ("exact g-adic order census", order_counts))
+require(prime_counts == {29: 34, 31: 21, 37: 9, 41: 5,
+                         43: 7, 47: 4, 53: 2, 59: 1, 61: 1},
+        ("root-free prime cover census", prime_counts))
+certificate_digest = sha256("\n".join(
+    ",".join(map(str, row)) for row in certificate_table
+).encode("ascii")).hexdigest()
+require(certificate_digest ==
+        "34771ce3677e1fa9cb1932324b54aa743e6e9b97304805e65459071d3b9fc132",
+        "modular certificate table digest")
+exceptional_lead = exact_polynomials[(17, 3)][7]
+require(exceptional_lead == -266920406286336,
+        "exceptional exact seventh coefficient")
+require(exceptional_lead % 31 == 0 and exceptional_lead % 59 == 44,
+        "exceptional modular-order hostile")
 
 
 def digest_nested(rows):
@@ -251,7 +396,7 @@ require(phase_six_tail_digest ==
         "5fb6da1e11014bec9e2e97daa588f982ff318d6a437ebfc08da15141c2da40b4",
         "phase-six tail digest")
 
-print("THM-3253 POSITIVE OWNER-MASS NEWTON CYCLICITY EXACT AUDIT")
+print("THM-3253 POSITIVE OWNER-MASS ALL-GAUGE CYCLICITY EXACT AUDIT")
 print("dependency_hash_checks=%d" % len(DEPENDENCIES))
 print("assert_nodes=%d,float_literals=%d" % (assert_nodes, float_literals))
 print("owner_numerator_polynomials=168,degree=2,all_positive_for_g>=1")
@@ -267,6 +412,12 @@ print("phase7_symmetry=D_(b+7)=-D_b,scalar_phase_period=14")
 print("restricted_multipliers=(1,13,155,167),gauge_count=672")
 print("direct_restricted_gauge_controls=672*4=%d" %
       (restricted_gauge_count * 4))
+print("unit_multiplier_orbits=48/4=12,phase_classes=7,modular_polynomials=84")
+print("exact_g_orders=%s" % sorted(order_counts.items()))
+print("root_free_prime_cover=%s" % sorted(prime_counts.items()))
+print("modular_certificate_digest=%s" % certificate_digest)
+print("exceptional_(a,b)=(17,3),exact_r=7,c7=-266920406286336,c7_mod31=0,c7_mod59=44")
+print("all_primitive_singer_gauges=48*168=8064")
 print("all_integer_dilations_nonsingular=PASS")
 print("nonnegative_delta0_packet_orbit_span=12*169+13=2041")
 print("scope=abstract_positive-owner-mass-relocation-not-canonical-endpoint-current")
