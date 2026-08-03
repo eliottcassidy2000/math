@@ -2,14 +2,26 @@
 id: THM-3279
 title: "Affine transverse clutch critical no-go"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For either THM-3212 cubic accessory response pair, every affine transverse
   clutch C_0 in the displayed B=1, constant-E_0 family leaves a critical
   point.  A nonconstant clutch meeting the owner divisor gives an explicit
   point; otherwise at least 50 units of saturated critical-resultant
-  multiplicity remain off that divisor.  This statement is not promoted into
-  the proved dependency graph until the independent audit is complete.
+  multiplicity remain off that divisor.
 source: root/creative-synthesis/2026-08-03
+audit: >
+  The primary exact companion derives the localization, universal resultant,
+  affine degree ledger, four T rows, two S walls and both sharp field
+  controls.  Normal, optimized and stored outputs agree.  A fresh independent
+  hostile audit uses a literal 6-by-6 Sylvester determinant instead of
+  sympy.resultant, solves the response jet recursively rather than importing
+  it, and implements exact Q[u]/(q) arithmetic from three rational
+  coordinates.  It independently reproduces both characteristic-zero monic
+  residual digests, the unit controls, degrees 96/52, exact S order two and
+  no T escape.  Its normal, optimized and stored outputs agree; both sources
+  have zero assertion nodes and zero floating literals.  The audit pins the
+  primary script/output and inherited THM-3212 artifacts but deliberately
+  does not pin this theorem file, avoiding a promotion hash cycle.
 depends_on:
   - THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch
 related:
@@ -19,19 +31,21 @@ script: 04-computation/jc_affine_transverse_c0_clutch_no_go_thm3279.py
 output: 05-knowledge/results/jc_affine_transverse_c0_clutch_no_go_thm3279.out
 script_sha256: 06820b2476fc0f2cefe3982d054a7db09bb88b4892503580550a1b154564508a
 output_sha256: 4a88b5ab31eed4c9a5f90f814a6a24a614db0afecc4cf1cab7fa32dae7c991c4
+audit_script: 04-computation/jc_affine_transverse_c0_clutch_no_go_thm3279_independent_audit.py
+audit_output: 05-knowledge/results/jc_affine_transverse_c0_clutch_no_go_thm3279_independent_audit.out
+audit_script_sha256: dc345ef5f02fc922aea19931da005556f52a850638cd964ddd6b51854e5fd621
+audit_output_sha256: ee554ed2f61e2bb5e5abe02db53ee029047982ec2f021dfb0e8f139da1edb4b4
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3279 -- affine transverse clutch critical no-go
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-The exact companion has completed its primary normal/optimized/stored audit.
-The argument below remains outside the proved dependency graph until a fresh
-implementation has checked the localization, both accessory fields, and the
-scope boundary.
+The primary and independent companions complete normal/optimized/stored
+audits through separate elimination and cubic-field implementations.
 
-## 1. Candidate statement
+## 1. Statement
 
 Let `K_i` be either cubic accessory field of
 [THM-3212](THM-3212-centered-heptic-source-morse-obstruction-and-offcenter-clutch.md),
@@ -279,7 +293,7 @@ invariant `(24)` is the first untunable coefficient.  This is transverse to
 THM-3276, which varies `B` with `C=0`; it does not improve or weaken that
 theorem.
 
-The candidate concerns only the explicit family `(2)`.  It supplies no
+The theorem concerns only the explicit family `(2)`.  It supplies no
 polynomial second coordinate, marked inverse cover, branchwise cofactor,
 Jelonek component, or classification of simultaneous `B,C,E_0`
 deformations.  It proves neither `JC(2)` nor `DC(2)`.
@@ -298,3 +312,17 @@ pins four THM-3212 artifacts, derives the universal resultant and localization
 identity, checks every local coefficient symbolically, rebuilds both cubic
 fields, and verifies the sharp controls.  It has no assertion node, floating
 literal, randomness, or fitted recurrence.
+
+For the independent replay run
+
+```text
+python3 04-computation/jc_affine_transverse_c0_clutch_no_go_thm3279_independent_audit.py
+python3 -O 04-computation/jc_affine_transverse_c0_clutch_no_go_thm3279_independent_audit.py
+```
+
+and compare with its declared audit output.  This companion derives the
+resultant as a Sylvester determinant and uses its own exact cubic quotient
+arithmetic; it imports neither the primary critical-factor expression nor
+its algebraic-number-field objects.
+
+QED.
