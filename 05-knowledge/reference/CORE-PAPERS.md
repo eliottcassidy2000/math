@@ -612,4 +612,6 @@ the first consumer; sharpen **does not prove** and attribution before routing.
 
 ## External intake
 
+[Homotopy groups of spheres (2026-08-02)](CORE-PAPERS-HOMOTOPY-2026-08-02.md).
+
 [2026-07-28 owner puzzle bundle — **CITED-ABSTRACT only**](CORE-PAPERS-INTAKE-2026-07-28.md).
