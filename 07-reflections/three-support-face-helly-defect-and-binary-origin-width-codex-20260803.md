@@ -1,12 +1,16 @@
 # Three support faces: a proper Helly defect without a ternary origin tax
 
-**Status: FINITE-EXACT SCOUT / NON-CANONICAL SYNTHESIS.**  The executable
-evidence is
+**Status: NON-CANONICAL SYNTHESIS AROUND PROVED, VERIFIED-EXACT,
+INDEPENDENTLY HOSTILE-AUDITED THM-3286.**  The canonical result is
+[THM-3286](../01-canon/theorems/THM-3286-three-face-availability-helly-defect-and-binary-origin-width.md).
+Its primary executable evidence is
 [`fc3_three_support_face_availability_hypergraph_scout_20260803.py`](../04-computation/fc3_three_support_face_availability_hypergraph_scout_20260803.py)
 with its frozen
-[`output`](../05-knowledge/results/fc3_three_support_face_availability_hypergraph_scout_20260803.out).
-This note proposes a theorem-shaped interpretation; it is not a promotion and
-has no reserved theorem ID.
+[`output`](../05-knowledge/results/fc3_three_support_face_availability_hypergraph_scout_20260803.out),
+and the separate hostile reconstruction is
+[`fc3_three_support_face_availability_hypergraph_independent_audit_20260803.py`](../04-computation/fc3_three_support_face_availability_hypergraph_independent_audit_20260803.py)
+with its frozen
+[`output`](../05-knowledge/results/fc3_three_support_face_availability_hypergraph_independent_audit_20260803.out).
 
 ## Inheritance and the changed object
 
@@ -127,7 +131,14 @@ This separates two invariants that pairwise analysis conflates: the nerve
 has a genuine missing two-simplex, while the witness-colouring width is still
 binary.
 
-## Candidate theorem statement (no ID reserved)
+The hostile reconstruction also exposes a boundary hidden by the bare width:
+THM-3278's canonical row pair `(16,17)` has no global three-face extension
+under any of the four optimal binary face colourings.  One bit suffices only
+when each labelled block may choose a row state by state from all twenty-two
+lawful rows.  Binary origin width therefore does not imply a fixed binary
+row alphabet.
+
+## Proved theorem statement
 
 On the three named bank-`I2` support faces `(1,2)`, `(1,3)`, and `(2,3)`, with
 the twenty-two lawful response rows inherited from THM-3249, every nonreset
@@ -139,14 +150,20 @@ two, with exactly the four binary assignments displayed above, and every
 lawful selector must consult that bit on exactly the three obstruction
 vectors.  This is a finite response-bank theorem only; it proves no
 `FC(3)`, `SFC(3)`, Gaussian Moment Conjecture, or positive-functional claim.
+This statement is now canonical as THM-3286; this reflection records the
+object choice, loss ledger, and frontier interpretation rather than serving
+as its proof surface.
 
 ## Frontier after the signal
 
 The immediate positive lesson is that completing the support triangle does
 not force a ternary controller.  The immediate hostile lesson is that
 pairwise compatibility is not a gluing theorem: even THM-3275's singleton
-positive control can become a higher-order obstruction.  The next useful
-tests are other signed banks and history-aware selectors.  Any attempted
+positive control can become a higher-order obstruction.  The failure of the
+fixed pair `(16,17)` suggests two separate next tests: search for the smallest
+fixed row alphabet that supports a global three-face policy, and test whether
+history-aware selectors can reduce that alphabet without losing chronology.
+Other signed banks remain a second axis.  Any attempted
 moment conclusion must separately restore response magnitude, positivity,
 and a target-preserving chronological transition; the present nerve retains
 none of them.
