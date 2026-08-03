@@ -8,7 +8,9 @@ status: >
   primitive irreducibles W13,W20 of degrees 13,20.  Both new walls are 1
   modulo 2, so every fixed offset still has only a finite explicit exceptional
   prime set through row five.  At offset two, p=43 kills the fourth pivot but
-  the fifth pivot returns as a unit by the exact anchored-zero identity.
+  the fifth pivot returns as a unit by an exact whole-row clutching identity;
+  the following row then vanishes identically, so the resurrection is sharp
+  and lasts exactly one row.
 source: root/multiscale-newton-flag/2026-08-02
 depends_on:
   - THM-3217-universal-resonant-degree-prs-wall-atlas-and-fixed-offset-exception-set
@@ -17,8 +19,8 @@ related:
   - THM-3214-two-jet-pseudo-division-locality-and-catalan-sharpness
 script: 04-computation/factorial_fourth_fifth_prs_primitive_walls_thm3223.py
 output: 05-knowledge/results/factorial_fourth_fifth_prs_primitive_walls_thm3223.out
-script_sha256: a32853cbbcad3eced7a0284b649edf2d07c320a73337b6dc3f16787110f70865
-output_sha256: 1a25d3f876d87d610e336ecc8e49bf753a8c591e882fdcf83c1d6008c158e69c
+script_sha256: 2afe51afe4719922b739e4aa0ea43fc285a130864f6db1d1ba281430d4e93fdc
+output_sha256: 3938603f595f4fff35357ecc51aadb266fb2ea2e5b52e5f8fd8105765cff20e2
 hash_basis: LF-normalized bytes
 ---
 
@@ -261,22 +263,39 @@ At `p=43`, `W13(2)=0` while `W20(2)=36`; the fourth pivot dies but the fifth
 returns as a unit.  Both primes miss every numerator factor in `Xi_2` and
 all displayed denominators, so these are isolated new walls.
 
-The return at `p=43` is structural.  For arbitrary series `f,g`, if `f_0=0`,
-the constant coefficient of `(1)` is
+The return at `p=43` is structural and stronger than a constant-coefficient
+calculation.  For arbitrary series `f,g`, if `f_0=0`, then
 
 ```text
-[z^0]E(f,g)=f_1^2 g_0.                                  (20)
+E(f,g)=f_1 g_0 z^(-1)f.                                 (20)
 ```
 
-Indeed `P_1(f,g)=-f_1g_0` on that wall.  Taking `(f,g)=(w,t)` in `(20)` gives
+Indeed `P_1(f,g)=-f_1g_0` on that wall, so the first two terms in `(1)`
+reduce exactly to the right side of `(20)`.  In particular
 
 ```text
-x_0=w_1^2t_0=24^2*14=23                       (mod 43), (21)
+[z^0]E(f,g)=f_1^2g_0.                                   (21)
 ```
 
-exactly as in `(19)`.  This is the sharp atlas boundary: death of one pivot
-is not death of the reciprocal state, and the next neighbor jet can carry it
-back immediately.
+Taking `(f,g)=(w,t)` in `(20)` gives, with `c=w_1t_0`,
+
+```text
+x=E(w,t)=c z^(-1)w,
+x_0=w_1^2t_0=24^2*14=23                       (mod 43). (22)
+```
+
+Thus the whole shifted row, not only its first coordinate, crosses the wall.
+The clutch is nevertheless terminal one step later.  When `c` is a unit,
+`w=(z/c)x`, and direct substitution into `(1)` gives
+
+```text
+R_6=E(x,w)=E(x,(z/c)x)=0.                                (23)
+```
+
+If `ord_z(f)>=2`, then `f_0=f_1=0` and `(20)` already gives `E(f,g)=0`.
+Hence a simple anchored zero is the sharp boundary: death of one pivot is
+not death of the reciprocal state, the neighbor jet carries the entire row
+back once, and exact shifted proportionality kills the following row.
 
 ## 7. Consequence and boundary
 
@@ -288,11 +307,12 @@ operation:    two further fraction-free E iterates;
 target:       primitive row-four/row-five divisors W13,W20;
 preserved:    exact rational-function and fixed-offset p-adic chart data;
 destroyed:    the rest of each row and any automatic Newton-slope choice;
-sidecar:      neighboring coefficient w_1 on a rho_4 wall.                (22)
+sidecar:      neighboring coefficient w_1 on a rho_4 wall.                (24)
 ```
 
-Equations `(7),(8)` extend the atlas, while `(20),(21)` explain how charts
-glue across one genuine wall.  They do **not** prove that row five separates
+Equations `(7),(8)` extend the atlas, while `(20)--(23)` give the exact
+one-row clutch and terminal boundary across one genuine wall.  They do
+**not** prove that row five separates
 every offset, that the primitive-wall pattern continues indefinitely, or
 that one selected pivot controls the full exterior state.  No arbitrary
 radial-coefficient `SFC`, new `NC(2)`, new `GMC(2)`, or `LRC(14)` consequence
@@ -317,7 +337,8 @@ pins promoted THM-3217; constructs eleven reciprocal top coefficients and
 five `E` rows in `Q(d)`; proves `(7),(8)` exactly; checks 18 raw-moment
 coordinates by an independent expansion; verifies the two Rabin
 irreducibility certificates and parity identities; checks the Pell and gauge
-recurrences; and reproduces every residue in `(19)--(21)`.  It uses no
+recurrences; checks 24 exact whole-row clutch, delayed-collapse, and
+double-zero controls; and reproduces every residue in `(19)--(23)`.  It uses no
 floating point, interpolation, randomness, or optimization-sensitive
 `assert`.
 

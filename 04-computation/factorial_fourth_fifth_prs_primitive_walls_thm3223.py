@@ -338,6 +338,33 @@ require(WALL_TABLE[43] == (14, 0, 24, 23), WALL_TABLE[43])
 require((24**2 * 14) % 43 == 23, "anchored-zero return")
 
 
+# The wall transition is an identity of whole rows, not only constants.
+# On f_0=0, E(f,g)=f_1*g_0*z^(-1)f.  The transported row then makes the
+# following fraction-free row vanish identically.  A double anchored zero
+# already collapses at the first wall step.
+wall_clutch_controls = 0
+for seed in range(1, 9):
+    f = [0] + [seed * (index + 2) + index**2 + 1 for index in range(1, 8)]
+    g = [2 * seed + 1] + [seed + 3 * index + index**2 for index in range(1, 8)]
+    transported = pseudo(f, g)
+    scalar = f[1] * g[0]
+    require(
+        transported
+        == [scalar * f[index + 1] for index in range(len(transported))],
+        ("whole-row wall clutch", seed),
+    )
+    require(
+        all(coefficient == 0 for coefficient in pseudo(transported, f)),
+        ("post-clutch terminal collapse", seed),
+    )
+    double_zero = [0, 0] + f[2:]
+    require(
+        all(coefficient == 0 for coefficient in pseudo(double_zero, g)),
+        ("double-zero collapse", seed),
+    )
+    wall_clutch_controls += 3
+
+
 # The two new walls are isolated from every THM-3217 numerator at s=2.
 OLD_WALLS = (H, G, I, J, J_PLUS, K, U, V)
 for prime, selected, other in ((41, W20, W13), (43, W13, W20)):
@@ -379,5 +406,6 @@ print("pell_d_minus_1_exponents=1,2,5,12,29")
 print("normalization_scalings=1,1,3,7,17,41,99")
 print("offset2_p41_table=(6,15,2,0) offset2_p43_table=(14,0,24,23)")
 print("anchored_zero_return_p43=23")
+print("wall_clutch_controls=24 whole_row=PASS next_row_zero=PASS")
 print("fixed_offset_extension=finite_exception_set_through_row5")
 print("scope=selected_pivots_not_full_row_or_arbitrary_depth")
