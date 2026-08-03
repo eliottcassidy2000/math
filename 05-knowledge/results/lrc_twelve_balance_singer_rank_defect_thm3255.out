@@ -1,0 +1,17 @@
+THM-3255 TWELVE-BALANCE MULTIPLICATIVE SINGER DEFECT EXACT AUDIT
+dependency_hash_checks=3
+assert_nodes=0,float_literals=0
+mass_residue_sums=12*(120960*g^2-528*g+2)
+common_factor=(x^12-1)/(x-1)=Phi2*Phi3*Phi4*Phi6*Phi12,degree=11
+special_orders=8:-2*(504g-1)*(x-1)*(x+1)^2;24:4*(504g-1)*(x+1)*(x^6-x^2-1)
+finite_root_free_certificates=((7, 29, 2, 16, 14, 0, 16, 3), (14, 43, 3, 27, 33, 34, 18, 27), (21, 211, 2, 180, 173, 17, 163, 167), (28, 113, 3, 81, 8, 91, 46, 29), (42, 127, 3, 27, 47, 2, 76, 67), (56, 113, 3, 9, 98, 90, 71, 43), (84, 337, 10, 227, 162, 270, 146, 197), (168, 673, 5, 625, 147, 130, 250, 462))
+direct_mass_zero_orders_g=(1,2,18,80):(2, 3, 4, 6, 12)
+all_integer_g>=1_mass_phase_rank=168-11=157
+hodge_digest=b53d77a69f39a5f8c893b4cdceaaeecdd0dc70a16be02e6d28f3f6d7b520feef,scale=32006016000,residue_sums=12*108000
+hodge_zero_orders=(2, 3, 4, 6, 12),phase_rank=157
+hodge_remainder_digest=de93c88360c6e17d5cb249ff220eff9ea5a34e499dc54bf9d42d63c5cdc7ed96
+all_8064_translates_decimations_share_missing_frequencies=(14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154)
+joint_span_criterion=sidecar_nonzero_on_all_11_missing_characters
+single_labeled_phase_atom_repairs=PASS,constant_correction_repairs=FAIL
+scope=coefficient_plane_phase-translation-no-canonical-LRC-owner-marker
+all_exact_checks=PASS
