@@ -103,9 +103,10 @@ sum N_(r,s) u^r v^s/(r!s!) = 1/(1-u^3-v^3-3uv).             (5)
 ```
 
 Thus `<a^r b^s>` vanishes exactly off the balanced congruence and is strictly
-positive on it.  A degree-four cyclic null candidate must have coefficient
-phase diameter at least `pi/3`; its five moment forms through `M15` are frozen
-modulo `103`, but the projective cell remains open.  Orthogonally, every
+positive on it.  A degree-four cyclic null candidate must have shortest closed
+coefficient-phase covering width at least `pi/3`; THM-3310 later makes this
+strict and THM-3321 closes support `<=4`, while full support five remains open.
+Its five moment forms through `M15` are frozen modulo `103`.  Orthogonally, every
 alternating homogeneous quintic is
 
 ```text

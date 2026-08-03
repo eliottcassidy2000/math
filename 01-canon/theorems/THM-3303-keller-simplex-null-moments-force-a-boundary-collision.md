@@ -22,6 +22,7 @@ depends_on:
   - THM-3018-factorial-conjecture-as-a-simplex-moment-problem
 related:
   - THM-3300-factorial-gaussian-torus-bridge-and-the-archimedes-no-go
+  - THM-3328-boundary-cone-overlap-and-anti-tangent-keller-passport
 external:
   - "S. R. Bell, The Bergman kernel and quadrature domains in the plane, arXiv:math/0403371 (quadrature-domain background only; the order-one argument is given here)."
   - "M. Fleeman and E. Lundberg, The Bergman analytic content of planar domains, arXiv:1602.03615 (one-point simply connected quadrature-domain background only)."
@@ -185,6 +186,11 @@ interior-one-sheet survivor could instead have a cut, a hole, or a boundary
 identification.  Other survivors can have genuine overlap cells.  The honest
 sidecar is therefore the boundary-incidence passport together with `N_F`, not
 the multiplicity function alone.
+
+THM-3328 subsequently makes this local alternative exact: derivative-image
+inward-cone overlap forces an open double-sheet cell, while a smooth
+one-sheeted survivor must be anti-tangent and vertex survivors retain the
+full transformed cone.
 
 The cheapest next problem is to classify the winding/multiplicity cells cut
 out by the three edge images, including shared-cut and hole topologies, and

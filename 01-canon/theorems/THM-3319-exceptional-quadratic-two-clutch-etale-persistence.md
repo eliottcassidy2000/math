@@ -79,14 +79,24 @@ where `A_i/K_i` has degree `36` and
 a_0'(x)b_1(x) in A_i^*.                                  (6)
 ```
 
-The preceding quadratic subresultant specializes to the separable nonsplit
-polynomial of THM-3309.  Its residue algebra
+The preceding quadratic subresultant can be written on a neighbourhood of
+`xi_i` as
 
 ```text
-B_i=A_i[t]/(P_2t^2-Q_2t+R_2)                             (7)
+S_2=P_2y^2+Q_2y+R_2^(0).
 ```
 
-is a field of relative degree two, with discriminant a nonsquare unit.
+Here `R_2^(0)` denotes the constant coefficient of the quadratic row; `R_2`
+remains reserved for the localized gradient cubic in `(3)`.  At
+`(d,k)=(1,1)`, `S_2` specializes to the separable nonsplit polynomial of
+THM-3309.  Using the same symbols for its residue coefficients and putting
+`t=-y`, its residue algebra is
+
+```text
+B_i=A_i[t]/(P_2t^2-Q_2t+R_2^(0)).                        (7)
+```
+
+It is a field of relative degree two, with discriminant a nonsquare unit.
 
 ## 2. Algebraic etale germ and its completion
 
@@ -160,19 +170,30 @@ under a redundant parameter change.
 
 ## 3. Persistence of the connected critical deck
 
-On `Z_i`, the degree-one subresultant vanishes.  The degree-two row has a unit
-leading coefficient at `xi_i`, while both original cubics remain cubic.
-After shrinking the etale germ, these conditions persist.  The subresultant
-PRS over its function field therefore makes that quadratic the last nonzero
-row, so
+On `Z_i`, the degree-one subresultant `S_1=ay+b` vanishes.  After shrinking
+around `xi_i`, `P_2` and the leading coefficients of both original cubics are
+units, while `S_2` remains nonzero of degree two.  The inherited subresultant
+recurrence, with all row normalizations absorbed into a regular unit, gives
+
+```text
+Res_y(S_2,S_1)
+ =P_2b^2-Q_2ab+R_2^(0)a^2
+ =u Res_y(R_1,R_2),        u in O_(U_i,xi_i)^*.
+```
+
+Because `a=b=0` on `Z_i`, the cubic resultant therefore vanishes identically
+there, not merely to first order.  Thus `S_2` is the last nonzero PRS row over
+the function field of the germ, and
 
 ```text
 deg_y gcd(R_1,R_2)=2                                      (15)
 ```
 
-and the quadratic row defines the common-root cover of the germ.  Its
-completion is the formal section `(12)`.  The computation independently
-checks that the resultant has zero tangent in both clutch directions.
+Equation `(12)` describes the completed base germ only.  Over that base,
+adjoining `t=-y` subject to `S_2(-t)=0` gives the rank-two formal common-root
+algebra.  The exact tangent calculation in Section 4 is a redundant
+first-order check of the resultant identity, not the source of its all-order
+vanishing.
 
 The quadratic discriminant is a unit at `xi_i`, with the THM-3309 nonsquare
 as residue.  Thus the quadratic algebra is finite etale of rank two over the

@@ -27,7 +27,7 @@ followed by an explicit audit of what the passport destroys.
 
 | lane | labelled object | invariant passport | native operation | destroyed coordinate |
 |---|---|---|---|---|
-| cyclic HFC quartic | five complex Fourier coefficients | support face, phase diameter, modulus ratios | next surviving moments `M3,M6,M9,...` | coefficient phases if support alone is kept |
+| cyclic HFC quartic | five complex Fourier coefficients | support face, shortest closed coefficient-phase covering width, modulus ratios | next surviving moments `M3,M6,M9,...` | coefficient phases if support alone is kept |
 | alternating HFC sextic | projective point `[A:B:C]` | even-moment ideal | add the next even moment | individual common zeros after elimination |
 | JC exceptional fibre | one of two roots in `B/A` | trace, norm, difference square | quadratic conjugation / strict transform | branch label |
 | LRC projected wall | labelled body and ray states | four-bit marginals and nested capacity tails | exact status screen | physical entry, endpoint, owner, phase, current |
@@ -41,7 +41,8 @@ reversing it would identify gauge data with a labelled physical system.
 
 THM-3310 says a cyclic quartic candidate must use at least four of its five
 Fourier monomials.  That support statement alone discards phases.  The cubic
-coamoeba sidecar restores part of them: phase diameter must exceed `pi/3`, and
+coamoeba sidecar restores part of them: shortest closed coefficient-phase
+covering width must exceed `pi/3`, and
 the second-largest modulus must exceed `1/23` of the largest.  These two
 coordinates cut different directions around every projective coordinate axis.
 

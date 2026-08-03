@@ -8,8 +8,8 @@ status: >
   factorial-numerator moment kernel is 1/(1-u^3-v^3-3uv).  Thus <a^r b^s>
   vanishes exactly off the C3-balanced congruence and is strictly positive on
   it.  This gives an explicit phase obstruction for the five-dimensional
-  degree-four C3 eigenspace: a third-moment null vector must have coefficient
-  phase diameter at least pi/3.  Its complete moments M3,...,M15 were built
+  degree-four C3 eigenspace: a third-moment null vector must have shortest
+  closed coefficient-phase covering width at least pi/3.  Its complete moments M3,...,M15 were built
   modulo 103 but not projectively eliminated.  In the orthogonal S3-sign
   lane, every homogeneous alternating quintic is Vandermonde*(A e1^2+B e2),
   and its second/fourth moment numerators have resultant 846709600, with
@@ -30,6 +30,8 @@ related:
   - THM-3300-factorial-gaussian-torus-bridge-and-the-archimedes-no-go
   - THM-3301-symmetry-vanishing-is-mathieu-compatible
   - THM-3303-keller-simplex-null-moments-force-a-boundary-collision
+  - THM-3310-degree-four-cyclic-eigenspace-on-the-triangle
+  - THM-3321-hesse-moment-kernel-and-cyclic-quartic-support-four-exclusion
 support_script: 04-computation/factorial_hfc3_symmetry_cells_support_thm3304.py
 support_script_sha256: 1c7058df1bbd72b6f2eec7ebb9c06e49a09218df41a96bd4edf6d85e11d5394a
 script: 04-computation/factorial_hfc3_fourier_kernel_degree4_probe_thm3304.py
@@ -160,9 +162,10 @@ and
 <P^3> != 0.                                              (12)
 ```
 
-Thus a degree-four cyclic null candidate must have circular coefficient-phase
-diameter at least `pi/3`.  This is a rigorous necessary geometry, not a proof that
-no such candidate exists.
+Thus a degree-four cyclic null candidate must have shortest closed coefficient-
+phase covering width at least `pi/3`.  This is a rigorous necessary geometry,
+not a proof that no such candidate exists.  THM-3310 later sharpens the
+inequality to strict by auditing the closed-arc endpoint case.
 
 The exact companion constructs the complete forms `<P^m>` for
 `m=3,6,9,12,15` over `F_103`; their term counts are

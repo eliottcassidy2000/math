@@ -9,6 +9,53 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-366 (2026-08-03, THM-3321 Hesse-torus normalization) -- noncovariance of one named torus was promoted to a classification of all continuous normalizations
+
+- **What failed:** THM-3321 correctly showed that the formal Hesse torus
+  `z -> tz, zbar -> t^(-1)zbar` gives different weights to nonzero pure terms
+  of `M_3`, but then said that only global projective scaling was a lawful
+  continuous coefficient normalization.
+- **Why it was wrong:** the weight check refutes covariance of that particular
+  `C^*` action.  It does not classify every continuous automorphism of the
+  moment ideal or rule out an unrelated symmetry.  Failure of a proposed
+  action is not a universal symmetry classification.
+- **Repair:** THM-3321 now says exactly that the Hesse torus supplies no second
+  normalization.  Projective scaling is established and used, without a
+  classification of all continuous moment symmetries.  The five homogeneous
+  Macaulay certificates, projective support-`<=4`
+  exclusion, and all exact computations are unchanged.
+- **Reusable rule:** state a symmetry negative with the same quantifier as the
+  action tested.  To classify all normalizations, compute the automorphism
+  object rather than extrapolating from one failed carrier action.
+
+## MISTAKE-365 (2026-08-03, THM-3319 base/deck type collision) -- a completed base section was identified with its rank-two quadratic cover
+
+- **What failed:** THM-3319 reused `R_2` for both the localized gradient cubic
+  and the constant coefficient of a quadratic subresultant, then said that
+  the quadratic cover's completion was the formal section `(12)`.  Its prose
+  also placed a first-order resultant tangent check next to an all-orders
+  persistence claim without displaying the scheme-theoretic identity.
+- **Why it was wrong:** `(12)` parameterizes the completed base germ
+  `Spf A_i[[h_d,h_k]]`; the deck is a separate rank-two algebra obtained by
+  adjoining a root of the surviving quadratic.  Vanishing of two first
+  derivatives alone does not imply that a resultant vanishes identically on
+  the germ.
+- **Repair:** `R_2` is reserved for the gradient cubic and the quadratic
+  constant is now `R_2^(0)`.  The theorem distinguishes the base completion
+  from `R_i[t]/(S_2(-t))` and inserts the unit-scaled subresultant identity
+
+  ```text
+  P_2b^2-Q_2ab+R_2^(0)a^2=u Res_y(R_1,R_2).
+  ```
+
+  On `a=b=0` this proves all-order resultant vanishing; the unit-leading
+  nonzero quadratic row then gives gcd degree exactly two.  The etale germ,
+  connected cover, gradient obstruction, status, and scope are unchanged.
+- **Reusable rule:** never identify a parameterizing base section with a
+  finite cover over it.  Track algebra rank and type explicitly, and use an
+  all-orders identity rather than tangent vanishing for scheme-theoretic
+  persistence.
+
 ## MISTAKE-364 (2026-08-03, cyclic-quartic support-five Macaulay target) -- a dimensionally impossible degree-21 full-rank certificate was proposed as the next proof test
 
 - **What failed:** the first THM-3321 boundary paragraph and its synthesis

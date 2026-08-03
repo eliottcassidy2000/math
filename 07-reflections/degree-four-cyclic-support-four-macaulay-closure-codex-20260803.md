@@ -159,7 +159,7 @@ z g=A r+B u+C r^2+D r u+E r v.                               (12)
 
 This places the five coefficients on the affine toric surface (11), and it is
 the best current representation for attacking full support.  It does **not**
-license a second coefficient normalization.
+license the proposed Hesse-torus coefficient normalization.
 
 Indeed, the formal torus `z->t z`, `zbar->t^-1 zbar` gives the five basis
 weights
@@ -185,10 +185,10 @@ Since (14) contains three different characters attached to nonzero terms,
 destroys the simplex moment functional.  When `t^3=1`, all five coefficients
 in (1) acquire the same scalar and the action is projectively trivial.
 
-The exact symmetry audit is therefore:
+The exact audit of the named actions is therefore:
 
-- global scaling of `(A,B,C,D,E)` is the one continuous projective
-  normalization;
+- global scaling of `(A,B,C,D,E)` is a lawful projective normalization that
+  we use;
 - the cyclic permutation of the triangle acts projectively trivially on this
   eigenspace;
 - a reflection exchanges the `omega` and `omega^2` eigenspaces rather than
@@ -301,7 +301,9 @@ The only remaining coefficient chart has
 A B C D E !=0.                                                 (23)
 ```
 
-It has one lawful projective normalization and no continuous torus reduction.
+We use global projective scaling; the named Hesse torus supplies no further
+normalization.  No classification of all continuous moment symmetries is
+claimed.
 The toric representation (11)--(12), the closed kernel (7), and the
 support-four boundary certificate are now the three reusable inputs.
 

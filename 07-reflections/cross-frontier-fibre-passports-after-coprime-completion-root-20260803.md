@@ -112,9 +112,10 @@ selection from a mere vanishing rule into a positive residual kernel.
 
 For the five-dimensional degree-four cyclic cell, every coefficient of the
 cubic moment is positive.  Any cubic-null candidate must therefore have
-circular coefficient-phase diameter at least `pi/3`.  The exact forms
+shortest closed coefficient-phase covering width at least `pi/3`.  The exact forms
 `M3,M6,M9,M12,M15` have been built over `F_103`, but their common projective
-zero set has not been eliminated.  This cell remains **OPEN**.
+zero set was not eliminated there.  THM-3310/3321 later close support `<=4`;
+the full-support-five cell remains **OPEN**.
 
 The orthogonal sign lane closes.  Every alternating homogeneous quintic is
 

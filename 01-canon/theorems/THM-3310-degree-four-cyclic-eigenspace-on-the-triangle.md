@@ -35,7 +35,8 @@ audit: >
   characteristic-zero companion rebuilds the Fourier kernel over Q, excludes
   all ten lines by nonzero exact resultants and all ten planes by unit Groebner
   ideals, with no modular reduction.  A separate cubic-moment audit sharpens
-  the phase diameter to strictly greater than pi/3 and excludes five explicit
+  the shortest closed phase covering width to strictly greater than pi/3 and
+  excludes five explicit
   lopsided axis boxes.
 source: death-star-delta2-degree4-2026-08-03
 depends_on: []
@@ -45,6 +46,7 @@ related:
   - THM-3018-factorial-conjecture-as-a-simplex-moment-problem
   - THM-3321-hesse-moment-kernel-and-cyclic-quartic-support-four-exclusion
   - THM-3323-cyclic-quartic-support-five-exact-degree-21-rank
+  - THM-3327-positive-moment-tensor-covering-arc-and-factorial-phase-dispersion
 script: 04-computation/degree_four_cyclic_eigenspace_thm3310.py
 output: 05-knowledge/results/degree_four_cyclic_eigenspace_thm3310.out
 script_sha256: 1a46fb4311a44d7807eccaf9339b291b8d930710d9f7c1fc8ebd03ac0c7acba6
@@ -194,7 +196,12 @@ upper half-plane.  Vanishing would force all terms to its boundary; pure cubes
 put each occupied coefficient at an endpoint, while every ordered mixed term
 `c_i^2c_j` then forces positive imaginary part if both endpoints occur.  If
 only one endpoint occurs, all terms align and cannot cancel.  Hence every
-cubic-null vector has phase diameter **strictly greater** than `pi/3`.
+cubic-null vector has shortest closed phase covering width **strictly greater**
+than `pi/3`.
+
+THM-3327 subsequently abstracts this argument: strict positivity of every
+order-`m` tensor entry forces shortest closed coefficient covering width
+greater than `pi/m`.  That statement remains basis-dependent.
 
 A coefficientwise triangle inequality gives complementary magnitude barriers.
 If coefficient `i` is largest and all others have modulus at most `q_i` times

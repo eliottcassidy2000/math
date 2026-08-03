@@ -12,8 +12,10 @@ status: >
   minors are nonzero modulo 101; the denominator guard 101>86 lifts those
   minors to characteristic zero and excludes every projective coefficient
   support <=4.  The formal torus of the Hesse surface does not preserve the
-  simplex moment functional, so only projective scaling may normalize a
-  coefficient.  Full support five and FC(3) remain OPEN.
+  simplex moment functional, so this torus supplies no second coefficient
+  normalization beyond the always-lawful projective scaling.  No
+  classification of all continuous coefficient symmetries is claimed.  Full
+  support five and FC(3) remain OPEN.
 audit: >
   The companion proves the Hesse denominator identity in exact Q(omega),
   compares the closed formula with an independent six-index Dirichlet
@@ -115,10 +117,11 @@ z*g=A*r+B*u+C*r^2+D*r*u+E*r*v.                             (9)
 
 The formal torus `z->t z`, `zbar->t^(-1)zbar` has basis weights
 `(-1,2,-1,2,-4)`, but the five pure terms of `M_3=<g^3>` are all nonzero and
-have three distinct weights `(-3,6,-3,6,-12)`.  Hence this torus preserves
-the surface equation in `(9)` but not the moment functional.  Only global
-projective scaling is a lawful continuous coefficient normalization; setting
-two coefficients to one would lose valid candidates.
+have three distinct weights `(-3,6,-3,6,-12)`.  Hence this Hesse torus
+preserves the surface equation in `(9)` but not the moment functional.  It
+supplies no second coefficient normalization.  We use only the always-lawful
+global projective scaling; setting two coefficients to one would require an
+additional symmetry and is not justified.
 
 ## 3. Homogeneous support-four certificate
 
@@ -177,9 +180,9 @@ the seven conditions through `M_21` already exclude it.
 
 ## 4. Boundary
 
-Full support five is the only open coefficient chart in this eigenspace.  It
-has one lawful projective normalization and no continuous Hesse-torus
-reduction.  The degree-21 five-variable Macaulay map has
+Full support five is the only open coefficient chart in this eigenspace.  We
+use the lawful projective normalization; the named Hesse torus supplies no
+further reduction.  The degree-21 five-variable Macaulay map has
 
 ```text
 13972 rows,       12650 columns.                            (16)

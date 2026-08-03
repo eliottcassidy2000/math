@@ -393,11 +393,13 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-3249--3288 give the face atlas, four blockers, and no inherited rebind.
   THM-3314's new unshuffle copies endpoints on all `4+31` tests, but its `700`
   nonzero centered currents fail the counit test and endpoint fibres lose ancestry.
-  An ancestry pullback, chronology, positivity, arbitrary faces and FC(3) remain OPEN.
-  THM-3303 proves `JC(2) => HFC(3)` in the constant-Jacobian sector. THM-3310
-  gives the cyclic quartic basis/support `<=3`; THM-3321 closes support `4`; THM-3323 gives rank/quotient `10980/1670` at degree 21.
-  Support `5` is OPEN; degree 29 is only count-eligible. THM-3311 closes the alternating-sextic sign cell; other cells and FC(3) are OPEN.
-  Guard `p>4m+2` is mandatory; only projective scaling normalizes.
+  An ancestry pullback, chronology, positivity and arbitrary faces remain OPEN.
+  THM-3303/3328 split constant-J: double sheet or anti-tangent/vertex-cone data.
+  THM-3310/3321 close cyclic-quartic support `<=4`; THM-3323 leaves support `5`
+  at the `10980/1670` rank boundary. THM-3327's shortest closed covering-arc
+  gate is standard-`C3` automatic; Fourier positivity is rechecked. HFC(3)/FC(3)
+  remain OPEN; degree 29 is only count-eligible and `p>4m+2` is mandatory. The
+  Hesse torus gives no second normalization; no symmetry classification.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
@@ -420,7 +422,7 @@ The most reusable current bridges are not literal object identifications:
 | Bulk / boundary / null | THM-2058 | Large-prime grids are strict; tight support uses finitely many level-14 clocks; subthreshold packets vanish. |
 | Operation-response | tournament/sequence | THM-3315/3322/3324: walks, second moment, closed response Gram; order is still lost. |
 | Native coordinate | LRC / JC / FC | THM-3319--3323 separate affine/etale completion from symmetry and rank limits. |
-| HFC--JC boundary | THM-3303 | Constant-Jacobian null moments force a boundary collision; classify the boundary/multiplicity passport without claiming equivalence. |
+| HFC--JC boundary | THM-3303/3328 | Null moments force collision; cone overlap gives a double sheet, otherwise retain anti-tangent/vertex-cone data. |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Finite observer / recurrence | THM-3171/3172/3180/3181 | Is it invertible, a refuter, or only an address; which sidecar makes termination lawful? |
 | Continuation / min-plus kernel | Gordian profile; THM-840/853 | Which sidecar remains target-preserving under every future operation? |
