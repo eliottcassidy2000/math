@@ -121,6 +121,68 @@ require(74748 % 7 and 74748 % 13 and 5432832 % 7 and 5432832 % 13,
         "no 7-primary or 13-primary critical torsion")
 
 
+# Absence of 13-torsion does not exclude an order-13 automorphism: the
+# characteristic C_131 primary factor has Aut(C_131)=C_130.  Compute the
+# full-graph Abel--Jacobi chart mod 131 and show that no nontrivial element of
+# that order-13 subgroup, even followed by a translation, preserves its image.
+def null_vector_mod_prime(matrix, prime):
+    work = [[int(matrix[row, column]) % prime
+             for column in range(matrix.cols)]
+            for row in range(matrix.rows)]
+    pivot_columns = []
+    pivot_row = 0
+    for column in range(matrix.cols):
+        pivot = next((row for row in range(pivot_row, matrix.rows)
+                      if work[row][column]), None)
+        if pivot is None:
+            continue
+        work[pivot_row], work[pivot] = work[pivot], work[pivot_row]
+        inverse = pow(work[pivot_row][column], -1, prime)
+        work[pivot_row] = [(inverse * value) % prime
+                           for value in work[pivot_row]]
+        for row in range(matrix.rows):
+            if row == pivot_row or not work[row][column]:
+                continue
+            scale = work[row][column]
+            work[row] = [(left - scale * right) % prime
+                         for left, right in zip(work[row], work[pivot_row])]
+        pivot_columns.append(column)
+        pivot_row += 1
+    free_columns = tuple(column for column in range(matrix.cols)
+                         if column not in pivot_columns)
+    require(len(free_columns) == 1, ("modular nullity", prime, free_columns))
+    vector = [0] * matrix.cols
+    vector[free_columns[0]] = 1
+    for row, column in reversed(tuple(enumerate(pivot_columns))):
+        vector[column] = (-sum(work[row][free] * vector[free]
+                               for free in free_columns)) % prime
+    require(all(sum(int(matrix[row, column]) * vector[column]
+                    for column in range(matrix.cols)) % prime == 0
+                for row in range(matrix.rows)), "modular kernel check")
+    return tuple(vector)
+
+
+phase131_vector = null_vector_mod_prime(full_laplacian, 131)
+require(phase131_vector == (46, 117, 57, 117, 1, 59, 108,
+                            44, 91, 30, 1, 91, 41, 1),
+        "full Abel-Jacobi mod-131 chart")
+phase131 = {22: 0}
+phase131.update({vertex: phase131_vector[index]
+                 for index, vertex in enumerate(full_vertices)})
+phase131_image = set(phase131.values())
+require(len(phase131_image) == 11, "full mod-131 vertex image")
+order13_multipliers = tuple(pow(39, exponent, 131)
+                            for exponent in range(13))
+require(len(set(order13_multipliers)) == 13
+        and order13_multipliers[0] == order13_multipliers[-1] * 39 % 131,
+        "order-13 multiplier subgroup")
+require(not any({(unit * value + shift) % 131
+                 for value in phase131_image} == phase131_image
+                for unit in order13_multipliers[1:]
+                for shift in range(131)),
+        "no affine order-13 preservation of vertex image")
+
+
 # The delayed relative chain complex C_1(H,G)->C_0(H,G) has eight edge
 # generators and the two new vertex generators 9 and 12.
 new_vertices = tuple(vertex for vertex in vertices(covering_edges)
@@ -213,6 +275,42 @@ swap = {vertex: (21 if vertex == 17 else 17 if vertex == 21 else vertex)
 require(all(phase[swap[vertex]] == (5 * phase[vertex]) % 12
             for vertex in phase), "C2 acts by multiplication by 5")
 
+# The two delayed edges swapped by the graph C2 supply exactly the two missing
+# phase increments.  Consequently they kill the one-dimensional kernel of the
+# augmentation-function sampler on directed core edges.
+repair_edges = (delayed_edges[3], delayed_edges[4])
+repair_increments = tuple((phase[right] - phase[left]) % 12
+                          for left, right in repair_edges)
+require(repair_edges == ((11, 17), (11, 21)), "repair edge labels")
+require(repair_increments == (8, 4), "repair edge phases")
+
+
+def directed_evaluation_matrix(edges):
+    rows = []
+    for left, right in edges:
+        for tail, head in ((left, right), (right, left)):
+            row = [0] * 12
+            row[(phase[head] - phase[tail]) % 12] = 1
+            rows.append(row)
+    return Matrix(rows)
+
+
+augmentation_basis = zeros(12, 11)
+for column in range(11):
+    augmentation_basis[column, column] = 1
+    augmentation_basis[11, column] = -1
+core_sampler = directed_evaluation_matrix(core_edges) * augmentation_basis
+repaired_sampler = directed_evaluation_matrix(core_edges + repair_edges) \
+    * augmentation_basis
+missing_vector = zeros(12, 1)
+missing_vector[4, 0] = 1
+missing_vector[8, 0] = -1
+require(core_sampler.rank() == 10, "core augmentation sampler rank")
+require(directed_evaluation_matrix(core_edges) * missing_vector == zeros(44, 1),
+        "core sampler missing line")
+require(repaired_sampler.rank() == 11,
+        "delayed pair completes augmentation sampler")
+
 
 print("THM-3273 CRITICAL-GROUP PHASE CARRIER EXACT AUDIT")
 print("dependency_hash_checks=%d" % len(DEPENDENCIES))
@@ -221,11 +319,13 @@ print("core_critical_group=Z/74748=Z/12xZ/6229")
 print("reset_critical_group=Z/74748")
 print("full_critical_group=Z/4xZ/12xZ/113184,order=5432832")
 print("critical_primary_boundary=no_7_torsion,no_13_torsion")
+print("C131_automorphism_boundary=order13_exists,no_nontrivial_affine_element_preserves_11class_vertex_image")
 print("relative_boundary_snf=(1,1),relative_H1=Z^6,saturated")
 print("relative_C2_signature=(5,1),C7_reflection_augmentation=(3,3)")
 print("primitive_adjugate_row=%s" % (primitive_row,))
 print("C12_vertex_image=(6 classes,multiplicities 3,3,3,1,1,1)")
 print("C12_pair_differences=all12,core_edge_differences=all_except_4_8")
+print("delayed_phase_repair=((11,17)->8,(11,21)->4),Aug_sampler_rank=10_to_11")
 print("graph_C2_on_C12=multiplication_by_5")
 print("scope=relative_phase_carrier_only,no_vertex_torsor,no_absolute_marker")
 print("all_exact_checks=PASS")

@@ -2,11 +2,17 @@
 id: THM-3273
 title: "Critical-group C12 quotient and relative C7 equivariance boundary"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED for the critical
+  groups, six-class C12 landing and relative C7 boundary.  POST-PROMOTION
+  DELAYED-SAMPLER/C131 ADDENDUM: PROVED CANDIDATE + VERIFIED-EXACT;
+  INDEPENDENT IMMUTABLE AUDIT PENDING.
   THM-3260's twelve-vertex core has cyclic critical group C_74748 and
   therefore a canonical Hall-{2,3} quotient C12.  Its Abel--Jacobi vertex
   image occupies only six classes, with multiplicities 3,3,3,1,1,1, so it
-  is not a C12 torsor; all twelve pair differences nevertheless occur.
+  is not a C12 torsor; all twelve pair differences nevertheless occur.  Core
+  directed edges miss exactly phases 4 and 8, and the delayed pair
+  (11,17),(11,21) supplies exactly 8 and 4, raising the augmentation sampler
+  from rank ten to eleven.
   The delayed relative H1 is saturated Z^6, but its intrinsic C2 signature
   (5,1) is incompatible with both trivial and affine-reflection actions on
   Aug(Q[C7]).  The full critical group has no 7- or 13-primary torsion.
@@ -16,13 +22,16 @@ audit: >
   parses the literal covering-pair banks, reconstructs all three reduced
   Laplacians, computes their exact Smith forms, verifies a primitive adjugate
   coordinate and every C12 vertex/pair/edge label, computes the saturated
-  relative boundary and explicit basis, and checks both C2 signatures.
+  relative boundary and explicit basis, checks the core and repaired
+  augmentation samplers, checks both C2 signatures, and separates absence of
+  C13 torsion from the order-13 automorphisms of the C131 primary factor.
   Normal, optimized and stored output agree byte-for-byte. An independent
   reconstruction recovered all three Smith groups from determinantal
   divisors, the primitive adjugate chart, every vertex/pair/edge difference,
   the automorphism multiplier, the full saturated relative kernel and both
   possible affine-C7 involution signatures. It also closed the companion's
   nonblocking lattice-index audit gap directly from the kernel equations.
+  The exact delayed-sampler and C131 addendum awaits immutable replay.
 depends_on:
   - THM-3260-bispanning-reset-link-holotopy-atlas-and-nonplanar-c12-boundary
 related:
@@ -30,14 +39,16 @@ related:
   - THM-3254-first-shell-two-row-clutch-and-graded-gauge-no-go
 script: 04-computation/gmc_critical_group_phase_carrier_thm3273.py
 output: 05-knowledge/results/gmc_critical_group_phase_carrier_thm3273.out
-script_sha256: 6ec6ef8a4cb49aea2787143118d4fd003e3888b4fe3ad2176e7970fddf3c096d
-output_sha256: 426e3ec4e224bec3ffdf2e9334db21349e8403d8ac723571c387cbe46182f11d
+script_sha256: ab50ab5f2c5ea0fd9f7c25504f38bc3982fbfa9cc8fa6892b9ee3dfdf13b738b
+output_sha256: da1d102a73ae19b3d28b54dbe6a8243b1ef587c0782bda7172fb17e6f019d7d0
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3273 -- critical-group C12 quotient and relative C7 equivariance boundary
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED BASE;
+POST-PROMOTION DELAYED-SAMPLER/C131 ADDENDUM IS A PROVED CANDIDATE PENDING
+INDEPENDENT IMMUTABLE AUDIT.**
 
 THM-3260 shows that the first-link core has Betti number eleven and the delayed
 relative layer has rank six, matching the dimensions of the `C_12` and `C_7`
@@ -138,9 +149,38 @@ set is
 (Z/12) \ {4,8}.                                        (9)
 ```
 
+This gap is repaired exactly by two delayed edges.  Let
+`A=Aug(Q[J_12])`, regarded as the zero-sum rational functions on `J_12`, and
+for an oriented edge set `E` define the phase sampler
+
+```text
+R_E:A --> Q^E,
+(R_E f)(u,v)=f(phase(v)-phase(u)).                      (9a)
+```
+
+For the directed core edges, `(9)` gives
+
+```text
+rank R_core=10,
+ker R_core=Q(delta_4-delta_8).                          (9b)
+```
+
+The delayed edges
+
+```text
+(11,17) has increment 8,
+(11,21) has increment 4.                               (9c)
+```
+
+Adjoining their two orientations makes `(9a)` injective, of rank eleven.
+Thus the delayed layer contains precisely the missing one-dimensional sampler,
+not merely another six-dimensional coincidence.
+
 The nontrivial graph automorphism `(17 21)` acts on `J_12` as multiplication
-by 5.  This is a functorial action on the critical quotient, not a faithful
-`C_12` action on the graph.
+by 5.  It swaps phases 4 and 8 and swaps the two edges in `(9c)`.  Hence the
+anti-invariant line `delta_4-delta_8` is compatible with the graph involution.
+This is a functorial action on the critical quotient, not a faithful `C_12`
+action on the graph.
 
 ## 3. Saturated delayed layer and the wrong C2 signature
 
@@ -174,6 +214,9 @@ basis vectors.  Over `Q`, its `(+,−)` signature on `(12)` is therefore
 (5,1).                                                  (13)
 ```
 
+Its anti-invariant line is `Q(e4-e5)`, exactly the delayed detector that
+separates the two missing phase atoms in `(9b)--(9c)`.
+
 An affine involution of a `C_7` torsor is either trivial or a reflection.  On
 `Aug(Q[C_7])` these give signatures `(6,0)` and `(3,3)`, respectively.  Thus
 the relative layer is not equivariantly identifiable with the `C_7`
@@ -183,21 +226,32 @@ also rules out repairing it through a critical-group `C_7` quotient.
 
 ## 4. Carrier theorem and boundary
 
-Equations `(4)` and `(8)` are the positive result: the response graph itself
-contains a canonical order-twelve *relative-phase* carrier.  This is stronger
-than the bare dimension match in THM-3260 and requires no external finite
-group object.  It can type pairwise phase differences.
+Equations `(4)`, `(8)` and `(9a)--(9c)` are the positive result: the response
+graph itself contains a canonical order-twelve *relative-phase* carrier, and
+the core plus two delayed edges faithfully samples its full eleven-dimensional
+augmentation space.  This is stronger than the bare dimension match in
+THM-3260 and requires no external finite group object.  It can type pairwise
+phase differences and every rational augmentation word.
 
 Equations `(7)` and `(9)` locate the remaining defect.  The carrier does not
 label the twelve vertices bijectively, does not choose an absolute origin or
 generator, and misses two phases on individual first-link edges.  Therefore it
 cannot replace THM-3260's external cyclic vertex label or THM-3255's absolute
-phase marker.  Pairwise difference completeness is not absolute reference.
+phase marker.  The sampler is an injective coefficient-space map, not an edge
+action, a cycle projection or a physical response.  Pairwise difference
+completeness is not absolute reference.
 
 The delayed rank-six space is still further away: it is saturated free
 homology with neither `C_7` critical torsion nor the correct involution type.
-The same computation also excludes a graph-Jacobian `C_13` source for the
-mod-13 response labels.
+The same computation excludes a graph-Jacobian `C_13` torsion subgroup or
+quotient as a mod-13 response label.  It does **not** exclude all order-13
+automorphisms.  The characteristic `C_131` primary factor of `Jac(H)` has
+automorphism group `C_130`, hence a unique subgroup of order thirteen.
+The rooted full-graph Abel--Jacobi image modulo 131 occupies eleven classes,
+and exact enumeration shows that no nonidentity element of this order-13
+subgroup, even followed by a translation, preserves that image.  Thus an
+abstract `C_13` automorphism survives, but it does not act on the vertex-image
+chart and is not a `C_13` phase label.
 
 No map from response rows to owner phases, positive Gaussian-moment response,
 NC2 theorem, row exclusion, or `LRC(14)` decrement follows.  No claim is made
@@ -216,4 +270,4 @@ and compare LF-normalized bytes with the declared output.  The companion uses
 exact integer Smith reduction and adjugate arithmetic, contains no floating
 point or randomness, and raises explicitly on every failed certificate.
 
-QED.
+QED for the promoted base; addendum pending independent immutable audit.
