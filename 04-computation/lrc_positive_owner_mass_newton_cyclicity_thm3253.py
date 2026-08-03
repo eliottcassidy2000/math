@@ -18,18 +18,18 @@ DEPENDENCIES = {
     ROOT / "01-canon/theorems/THM-3234-singer-owner-compactification-and-pointed-heisenberg-carrier-gate.md":
         "ef77a1f8fce16eb851eb38d5110a61ab73aa693f2d0ee9e11a912aa4fc302c87",
     ROOT / "01-canon/theorems/THM-3246-all-dilation-second-owner-seam-stabilization-and-sign-word.md":
-        "d3870739d57279da6d1487ed6cec986055b15a4b5f58e598f6be3d1860efba2e",
+        "6badc0c9aba09b56d3d055a96cb8ef8b619d8492508bf21476eba5f624b13055",
     ROOT / "04-computation/lrc_second_owner_all_dilation_seam_thm3246.py":
         "e23b098b38aa2199a348f48f8ab4ac0ce5913c870ead972bd31296494fc25a4b",
     ROOT / "05-knowledge/results/lrc_second_owner_all_dilation_seam_thm3246.out":
         "d7f7dd96b01c597113e78f903cad36246cb47b10e9a1758cb831aa0e83e8cebc",
     ROOT / "01-canon/theorems/THM-3250-charged-heisenberg-blowup-address-intertwiner-and-pointed-multiplicity-gate.md":
-        "c4ec863bcb9c45c1fbca055ad79619a4bbcc57e1390430d69b4e17742151325c",
+        "7e91a07e38d6869e6621b9057594cdf4745827a98de9618681d09427102b27ea",
 }
 
 
 def lf_bytes(path):
-    return path.read_bytes().replace(b"\r\n", b"\n")
+    return path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
 
 
 for dependency, expected in DEPENDENCIES.items():
