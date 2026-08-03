@@ -1,0 +1,28 @@
+universe=ten projective coordinate lines in THM-3304 cyclic quartic basis
+pair=b,a2; gcd_M3_M6_degree=0; resultant=757893855951/12083435526620057600000000
+pair=b,ab2; gcd_M3_M6_degree=0; resultant=58331616030313569/1703337439840394218751309619200000000
+pair=b,b4; gcd_M3_M6_degree=0; resultant=1047605395169071731707790676803/80925555412570039303279099275767444000000000000
+pair=b,a3b; gcd_M3_M6_degree=0; resultant=-5046083131916400514373177083034822169/31071810331959831104622367261126942588928000000000000
+pair=a2,ab2; gcd_M3_M6_degree=0; resultant=-16986775662198669609/7844317157159710217933662720000000000000
+pair=a2,b4; gcd_M3_M6_degree=0; resultant=-1935694898786609914092520778786061/2136940447613177600352213715250734068125000000000000
+pair=a2,a3b; gcd_M3_M6_degree=0; resultant=376045196528902782538467/20006647024968172459526096863238872555520000000000
+pair=ab2,b4; gcd_M3_M6_degree=0; resultant=-4816346691254861725191/37610151877991925766198961388412919599000000000000
+pair=ab2,a3b; gcd_M3_M6_degree=0; resultant=-445803904225416891498959268305901/1127731678506352199972698099072519282378668032000000000000
+pair=b4,a3b; gcd_M3_M6_degree=0; resultant=-22389487598566574733440654111097/10306152640309183087840115466337349903686556000000000000
+nonzero_resultants=10/10
+triple=b,a2,ab2; ideal_M3_M6_M9_is_unit=True; groebner_size=1
+triple=b,a2,b4; ideal_M3_M6_M9_is_unit=True; groebner_size=1
+triple=b,a2,a3b; ideal_M3_M6_M9_is_unit=True; groebner_size=1
+triple=b,ab2,b4; ideal_M3_M6_M9_is_unit=True; groebner_size=1
+triple=b,ab2,a3b; ideal_M3_M6_M9_is_unit=True; groebner_size=1
+triple=b,b4,a3b; ideal_M3_M6_M9_is_unit=True; groebner_size=1
+triple=a2,ab2,b4; ideal_M3_M6_M9_is_unit=True; groebner_size=1
+triple=a2,ab2,a3b; ideal_M3_M6_M9_is_unit=True; groebner_size=1
+triple=a2,b4,a3b; ideal_M3_M6_M9_is_unit=True; groebner_size=1
+triple=ab2,b4,a3b; ideal_M3_M6_M9_is_unit=True; groebner_size=1
+unit_triple_charts=10/10
+projective_coverage=affine first-coordinate chart plus excluded coordinate line
+consequence=no nonzero cyclic quartic of Fourier-basis support at most three kills M3,M6,M9
+scope=support four and five remain open; no HFC(3) or FC(3) conclusion
+controls=all pair resultants; all triple unit ideals; projective boundaries; no assert or float nodes
+payload_sha256=58e1162242e06e434b7321a5f469441a33c5e8f62851516f89fdb35db16b62ec

@@ -1,10 +1,22 @@
 # The affine-c base locus carries a nonsplit exceptional quadratic
 
 **Status:** FINITE-EXACT + DUAL-DERIVATION + HOSTILE-REDUCTION PARTIAL SCOUT
-on the fixed `C=c+x`, `d=k=1` slice in both THM-3212 accessory fields.  This
-note determines the exceptional quadratic and its first normal motion.  It is
-not canon, does not construct a root section, and proves no inverse or Keller
-mate.
+on the fixed `C=c+x`, `d=k=1` slice in both THM-3212 accessory fields; its
+pointed deck and true-gradient obstruction are canonized in
+[THM-3309](../01-canon/theorems/THM-3309-exceptional-quadratic-deck-passport-and-gradient-unimodularity-obstruction.md),
+while the universal trace/norm passport and independent replay are in
+[THM-3312](../01-canon/theorems/THM-3312-exceptional-quadratic-trace-norm-and-cofactor-antidescent.md).
+This note determines the exceptional quadratic and its first normal motion.
+It does not construct a root section and proves no inverse or Keller mate.
+
+THM-3312 universalizes the next native algebraic operation without choosing a branch.
+For every `a+bt` in the quadratic field it records trace, norm, and conjugate-
+difference square.  Applied to the critical `y`-root, first-normal velocity, and
+elimination pair, it proves that the projective cofactor ratio itself generates
+the quadratic extension: only its unordered trace/norm passport descends.
+Although that elimination pair is unimodular, THM-3309 directly proves that
+both true gradient components vanish on the critical fibre, so no Keller Bezout
+row exists and the mate-integrability class is not entered.
 
 The matching exact artifact is
 [`jc_affine_c_exceptional_quadratic_blowup_scout_20260803.py`](../04-computation/jc_affine_c_exceptional_quadratic_blowup_scout_20260803.py),

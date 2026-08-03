@@ -378,6 +378,7 @@ Classify profiles under support operations; study analytic continuation and auto
   [subresultant sidecar](../07-reflections/jc-critical-inverse-cover-cofactor-jacobian-probe-agent-20260803.md)
   gives a two-pivot inverse graph and mate-integrability class on two controls.
   THM-3309's pointed deck has unit inverse different, but `P_x=P_z=0`, so its mate pipeline fails before `mu(P)` exists.
+  THM-3312 universalizes its trace/norm and cofactor anti-descent passport.
   THM-3318 computes the exact `(P^r,P^(r-1))` torsion ladder for a separate excluded family, not a JC case.
   No base root choice follows; residual degree 119, Keller mate/inverse cover, `JC(2)` and `DC(2)` remain OPEN.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
@@ -396,7 +397,8 @@ Classify profiles under support operations; study analytic continuation and auto
   An ancestry pullback, chronology, positivity, arbitrary faces and FC(3) remain OPEN.
   THM-3303 proves `JC(2) => HFC(3)` in the constant-Jacobian sector. THM-3310
   gives the cyclic quartic monomial basis and excludes support `<=3`; supports
-  `4/5` remain OPEN, with MISTAKE-363's guard `p>4m+2` mandatory.
+  `4/5` remain OPEN, with MISTAKE-363's guard `p>4m+2` mandatory. THM-3311
+  excludes alternating sextics; other cells, HFC(3), and FC(3) remain OPEN.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

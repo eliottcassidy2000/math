@@ -1,0 +1,18 @@
+scope=the cubic moment I3 in the five-dimensional cyclic quartic C3-eigencell
+basis_on_e1=1=(b,a^2,a*b^2,b^4,a^3*b)
+I3=(280280*c0**3 + 840840*c0**2*c1 + 480480*c0**2*c2 + 300300*c0**2*c3 + 435435*c0**2*c4 + 480480*c0*c1**2 + 870870*c0*c1*c2 + 600600*c0*c1*c3 + 600600*c0*c1*c4 + 300300*c0*c2**2 + 420420*c0*c2*c3 + 528528*c0*c2*c4 + 152880*c0*c3**2 + 404040*c0*c3*c4 + 202020*c0*c4**2 + 100100*c1**3 + 300300*c1**2*c2 + 264264*c1**2*c3 + 210210*c1**2*c4 + 264264*c1*c2**2 + 404040*c1*c2*c3 + 404040*c1*c2*c4 + 152880*c1*c3**2 + 354900*c1*c3*c4 + 152880*c1*c4**2 + 67340*c2**3 + 152880*c2**2*c3 + 177450*c2**2*c4 + 117600*c2*c3**2 + 288120*c2*c3*c4 + 144060*c2*c4**2 + 30800*c3**3 + 115080*c3**2*c4 + 127500*c3*c4**2 + 38360*c4**3)/2802800
+term_count=35; all coefficients strictly positive
+coefficient_sha256=c18d41b6a3f3ede0da848d51670173c8cc71826f20b10a5d2361e08cdf682255
+phase_boundary=closed coefficient-phase arc of width pi/3 is zero-free
+phase_consequence=the nonzero coefficient phases of every I3-zero have circular diameter strictly greater than pi/3
+pure_weights=(280280,100100,67340,30800,38360)
+axis_group_sums=((2057055, 4560738, 3867068), (1255254, 4645914, 4763873), (894894, 3958458, 5844449), (538440, 3317064, 6878837), (626460, 3518403, 6581918))
+axis_radii=(1/10,1/16,1/18,1/23,1/22)
+axis_margins=(6275013/250,9566079/4096,25684531/5832,6737531/12167,2657982/1331)
+axis_rule=if max_{j!=i}|c_j|<=axis_radii[i]*|c_i| for some i, then I3!=0 for every phase choice
+global_modulus_consequence=at every projective I3-zero, the second-largest |c_i| is strictly greater than 1/23 of the largest
+sharp_triangle_threshold_brackets=((27/250, 1081/10000), (637/10000, 319/5000), (293/5000, 587/10000), (441/10000, 221/5000), (237/5000, 19/400))
+interpretation=five full coamoeba fibres around the projective coordinate axes are excluded
+not_claimed=no characteristic-zero projective elimination or higher-moment common-zero theorem
+controls=complete support; pure and ordered mixed terms; exact positive margins; exact root sign brackets
+payload_sha256=1e74270bd23dcceb5073beda1e15bca18cf647daf3a2a0d4c2af8bc10be0fe70

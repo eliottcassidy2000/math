@@ -3,7 +3,7 @@ id: THM-3310
 title: "Degree-four cyclic eigenspace on the triangle"
 status: >
   PROVED + VERIFIED-EXACT (structure, basis, moment table) + FINITE-EXACT
-  (support-<=3 exclusion); INDEPENDENT IMMUTABLE AUDIT PENDING.
+  (support-<=3 exclusion) + INDEPENDENTLY VERIFIED-EXACT.
   In the complex coordinate `z = s_1 + omega s_2 + omega^2 s_3` -- which sends
   `Delta_2` to the equilateral triangle on `1, omega, omega^2` and is exactly
   THM-3300's degree-one eigenvector -- the cyclic rotation acts by
@@ -30,24 +30,36 @@ audit: >
   planes by interpolated modular resultants of degrees 18 and 27 with a
   degree-constancy check that makes the reduction sound.  Both gcd routines
   carry a positive control.  A MODULAR GUARD is enforced and demonstrated to be
-  load-bearing.  Normal and `-O` replay are byte-identical.  Independent
-  immutable audit is pending.
+  load-bearing.  Normal and `-O` replay are byte-identical.  An independent
+  characteristic-zero companion rebuilds the Fourier kernel over Q, excludes
+  all ten lines by nonzero exact resultants and all ten planes by unit Groebner
+  ideals, with no modular reduction.  A separate cubic-moment audit sharpens
+  the phase diameter to strictly greater than pi/3 and excludes five explicit
+  lopsided axis boxes.
 source: death-star-delta2-degree4-2026-08-03
 depends_on: []
 related:
   - THM-3300-factorial-gaussian-torus-bridge-and-the-archimedes-no-go
+  - THM-3304-fourier-dirichlet-kernel-and-alternating-quintic-hfc3-exclusion
   - THM-3018-factorial-conjecture-as-a-simplex-moment-problem
 script: 04-computation/degree_four_cyclic_eigenspace_thm3310.py
 output: 05-knowledge/results/degree_four_cyclic_eigenspace_thm3310.out
 script_sha256: 1a46fb4311a44d7807eccaf9339b291b8d930710d9f7c1fc8ebd03ac0c7acba6
 output_sha256: 5d7292f2cc311c727e16d379c8134371ca3f3d1ac610ab2a1748fff8c8bb757c
+independent_script: 04-computation/factorial_hfc3_cyclic_quartic_sparse_strata_thm3310_independent.py
+independent_output: 05-knowledge/results/factorial_hfc3_cyclic_quartic_sparse_strata_thm3310_independent.out
+independent_script_sha256: d5e04a22a374ba430f948dc8ab3b840076bbe8d92c18ceabed464d90a4d0b69a
+independent_output_sha256: a84049a4c4a313cb0bd61d0459d0bfba1f7906e40d578918f38831ead3b91b17
+phase_script: 04-computation/factorial_hfc3_cyclic_quartic_lopsided_thm3310_audit.py
+phase_output: 05-knowledge/results/factorial_hfc3_cyclic_quartic_lopsided_thm3310_audit.out
+phase_script_sha256: 5aec456943b0e58ad7cfc1c02bb6993b7e4c0a3d74a33215016fe89b6fab78d0
+phase_output_sha256: af05f1eb7517cb44e1d74d97b827b740bdaa39291f79da36eedea59beeacec36
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3310 -- degree-four cyclic eigenspace on the triangle
 
-**PROVED + VERIFIED-EXACT + FINITE-EXACT; INDEPENDENT IMMUTABLE AUDIT
-PENDING.**
+**PROVED + VERIFIED-EXACT + FINITE-EXACT + INDEPENDENTLY VERIFIED-EXACT.**
 
 THM-3300 left the degree-four cyclic eigenspace on `Delta_2` open: it has
 dimension five, and the resultant method used there handles two projective
@@ -138,13 +150,62 @@ all 10 coordinate PLANES: gcd_a( Res_b(<g^3>,<g^6>), Res_b(<g^3>,<g^9>) )
 
 Since a plane's complement inside itself is a coordinate line, and a line's
 complement is a coordinate point, `(4)`--`(5)` cover every `g` whose support is
-at most three of the five monomials in `(2)`.  **No such `g` satisfies even the
-first two surviving conditions.**
+at most three of the five monomials in `(2)`.  **No such `g` satisfies the first
+three surviving conditions.**
 
 Soundness of `(5)`: a nonconstant gcd in characteristic zero reduces to a
 nonconstant gcd mod `p` provided the degrees in the eliminated variable are
 preserved, and the companion checks that those degrees are constant across all
 interpolation nodes.
+
+### Independent characteristic-zero audit
+
+The independent companion uses THM-3304's exact kernel
+
+```text
+<z^a zbar^b>
+ = 2 a! b!/(a+b+2)! [u^a v^b](1-u^3-v^3-3uv)^(-1).       (6)
+```
+
+It does not import or execute the primary THM-3310 script and uses no modular
+arithmetic.  On every coordinate line it computes a nonzero exact rational
+resultant of `<g^3>,<g^6>`, including both projective endpoints.  On every
+coordinate plane it dehomogenizes at the first selected coefficient and gets
+
+```text
+< <g^3>,<g^6>,<g^9> > = <1> in Q[y,z].                   (7)
+```
+
+The missing hyperplane in each affine chart is the coordinate line already
+excluded.  All ten resultants and all ten unit-ideal tests are explicit runtime
+truth gates.  Normal and optimized outputs are byte-identical.  This supplies
+the previously pending independent audit and confirms that the support bound
+is characteristic-zero, not an artifact of the guarded prime.
+
+### Closed phase and lopsided-axis barriers
+
+The cubic moment in the five coefficients has complete degree-three support:
+all `35` coefficients are strictly positive.  Rotate any closed coefficient
+phase arc of width `pi/3` to `[0,pi/3]`.  Every cubic term lies in the closed
+upper half-plane.  Vanishing would force all terms to its boundary; pure cubes
+put each occupied coefficient at an endpoint, while every ordered mixed term
+`c_i^2c_j` then forces positive imaginary part if both endpoints occur.  If
+only one endpoint occurs, all terms align and cannot cancel.  Hence every
+cubic-null vector has phase diameter **strictly greater** than `pi/3`.
+
+A coefficientwise triangle inequality gives complementary magnitude barriers.
+If coefficient `i` is largest and all others have modulus at most `q_i` times
+its modulus, then the pure cube dominates for the following `q_i`.
+
+In the basis order `(2)`, the radii are
+
+```text
+(q_0,q_1,q_2,q_3,q_4)=(1/10,1/16,1/18,1/22,1/23).        (8)
+```
+
+Thus at every projective cubic zero, the second-largest coefficient modulus is
+strictly greater than `1/23` of the largest.  These phase/coamoeba exclusions
+use only the necessary cubic moment; they do not close support four or five.
 
 ## 4. What remains open
 
@@ -163,7 +224,7 @@ Since `deg g <= 4`, testing `<g^m>` needs
 
 ```text
 p > 4m + 2:   m=3 needs p>=19,  m=6 needs p>=31,  m=9 needs p>=43,
-              m=12 needs p>=61, m=15 needs p>=67, m=18 needs p>=79.   (6)
+              m=12 needs p>=61, m=15 needs p>=67, m=18 needs p>=79.   (9)
 ```
 
 Below that threshold the denominator is `0 mod p`, a naive modular inverse
@@ -193,6 +254,10 @@ Run
 ```text
 python 04-computation/degree_four_cyclic_eigenspace_thm3310.py
 python -O 04-computation/degree_four_cyclic_eigenspace_thm3310.py
+python 04-computation/factorial_hfc3_cyclic_quartic_sparse_strata_thm3310_independent.py
+python -O 04-computation/factorial_hfc3_cyclic_quartic_sparse_strata_thm3310_independent.py
+python 04-computation/factorial_hfc3_cyclic_quartic_lopsided_thm3310_audit.py
+python -O 04-computation/factorial_hfc3_cyclic_quartic_lopsided_thm3310_audit.py
 ```
 
 and compare LF-normalized bytes with the declared output.  Exact cyclotomic and
