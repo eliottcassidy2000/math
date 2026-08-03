@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact controls for THM-3209's factorial exterior double-cancellation ray.
+"""Exact controls for THM-3210's factorial exterior double-cancellation ray.
 
 Extends THM-3186's exit-time amplitude E_L.  Exact symbolic and rational
 arithmetic only; every gate is an explicit ``require`` so that ordinary and
@@ -156,7 +156,7 @@ require(sp.simplify(amplitude(4, CONTROL_INDEX, 6, CONTROL_V)) != 0,
         "control: moving d off the ray restores length-four visibility")
 
 
-print("THM-3209 FACTORIAL EXTERIOR DOUBLE-CANCELLATION RAY EXACT CONTROL")
+print("THM-3210 FACTORIAL EXTERIOR DOUBLE-CANCELLATION RAY EXACT CONTROL")
 print("amplitude_degree_rows=" + repr(DEGREE_ROWS))
 print("length3_locus=v=(n+3)(d-n-2)/(2d[(4n+9)d-(n+3)(4n+7)])")
 print("length3_locus_rows=" + repr([(i, str(x)) for i, x in LOCUS_ROWS]))

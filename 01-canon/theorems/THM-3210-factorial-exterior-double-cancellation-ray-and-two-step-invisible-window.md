@@ -1,5 +1,5 @@
 ---
-id: THM-3209
+id: THM-3210
 title: "Factorial exterior double-cancellation ray and two-step invisible window"
 status: >
   PROVED + VERIFIED-EXACT (locus, ray, window) + FINITE-EXACT (uniqueness and
@@ -32,14 +32,14 @@ depends_on:
 related:
   - THM-3183-factorial-hecke-lattice-square-and-oriented-wedge-continuant
   - THM-3204-parabolic-continuant-single-gate-and-jacobi-smith-obstruction
-script: 04-computation/factorial_double_cancellation_ray_thm3209.py
-output: 05-knowledge/results/factorial_double_cancellation_ray_thm3209.out
-script_sha256: 86d2e97641ec041a8c1806dcbc415c98925ac146adc095d9e4553f7c1935837d
-output_sha256: 37b29b9c33f78881b6fa72158f98e25f992a904e0051019d4be7a5714bacf0b3
+script: 04-computation/factorial_double_cancellation_ray_thm3210.py
+output: 05-knowledge/results/factorial_double_cancellation_ray_thm3210.out
+script_sha256: d76de542b5904825deae4d556b150eec97311d44f7246ec7b1f394f2676157ba
+output_sha256: f052824666dd572a569ca07d67aa1ec1489b370c963055bc35b5d958993916d2
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3209 -- factorial exterior double-cancellation ray and two-step invisible window
+# THM-3210 -- factorial exterior double-cancellation ray and two-step invisible window
 
 **PROVED + VERIFIED-EXACT + FINITE-EXACT; INDEPENDENT IMMUTABLE AUDIT
 PENDING.**
@@ -178,8 +178,8 @@ consequence, and `(10)`--`(11)` are finite-exact at `n=1,2,3` only.
 Run
 
 ```text
-python 04-computation/factorial_double_cancellation_ray_thm3209.py
-python -O 04-computation/factorial_double_cancellation_ray_thm3209.py
+python 04-computation/factorial_double_cancellation_ray_thm3210.py
+python -O 04-computation/factorial_double_cancellation_ray_thm3210.py
 ```
 
 and compare LF-normalized bytes with the declared output.  Exact symbolic and

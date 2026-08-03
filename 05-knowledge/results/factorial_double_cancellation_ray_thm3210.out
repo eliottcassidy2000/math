@@ -1,4 +1,4 @@
-THM-3209 FACTORIAL EXTERIOR DOUBLE-CANCELLATION RAY EXACT CONTROL
+THM-3210 FACTORIAL EXTERIOR DOUBLE-CANCELLATION RAY EXACT CONTROL
 amplitude_degree_rows=[(1, (0, 1, 2, 3, 4)), (2, (0, 1, 2, 3, 4)), (3, (0, 1, 2, 3, 4)), (4, (0, 1, 2, 3, 4))]
 length3_locus=v=(n+3)(d-n-2)/(2d[(4n+9)d-(n+3)(4n+7)])
 length3_locus_rows=[(1, '2*(d - 3)/(d*(13*d - 44))'), (2, '5*(d - 4)/(2*d*(17*d - 75))'), (3, '(d - 5)/(d*(7*d - 38))'), (4, '7*(d - 6)/(2*d*(25*d - 161))'), (5, '4*(d - 7)/(d*(29*d - 216))'), (6, '3*(d - 8)/(2*d*(11*d - 93))'), (7, '5*(d - 9)/(d*(37*d - 350))'), (8, '11*(d - 10)/(2*d*(41*d - 429))'), (9, '2*(d - 11)/(d*(15*d - 172))')]

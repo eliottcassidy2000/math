@@ -4,7 +4,7 @@
 **Trigger:** an owner request to read Ivanov--Mikhailov--Wu, *On nontriviality
 of homotopy groups of spheres* (arXiv:1506.00952; Homology Homotopy Appl. 18
 (2016) 337--344), and connect it to the repository's frontiers.
-**Outcome:** THM-3204, THM-3205, THM-3209,
+**Outcome:** THM-3204, THM-3205, THM-3210,
 `05-knowledge/reference/CORE-PAPERS-HOMOTOPY.md`, and one candidate
 META-PATTERNS card.  Both `CORE-PAPERS.md` and `META-PATTERNS.md` are at the
 shared startup byte budget and could not take a pointer or a card; a
@@ -135,7 +135,7 @@ coefficient is `k+1 = -1`.  The paper's Proposition 2 *assumes* an `E^2` term
 of the form `C mu_2 mu_1^(k-3) lambda_1 + ...` with `C != 0`; the generator
 supplies it canonically and pins `C`.
 
-## 5. The dividend flowed back: THM-3209
+## 5. The dividend flowed back: THM-3210
 
 Having asked "what is the *complete* wall, not one witness?" for the lambda
 algebra, I asked it of THM-3186.  Its amplitude has `deg_v E_L = L-2`, so `E_3`
@@ -193,10 +193,23 @@ the two-distinct-thread evidence bar.
 | `p=2` lambda algebra | the paper's Conjecture 1 | no `mu` generators; the excess count does not apply |
 | IMW two-gate covering | is it a method or a coincidence? | find a second lane where two singleton-complement gates cover |
 
-## 8. Honest remaining frontier
+## 8. One reservation race, resolved by moving
+
+`THM-3209` was reserved and pushed by this session at 20:42:49 and by a
+concurrent `[gmc3209-reset]` session at 20:42:52.  Three seconds of priority is
+not a claim worth defending, and that session is named after the number, so
+this session's theorem moved to **THM-3210** -- file, companion script, stored
+output, declared hashes, results index, frontier line, and cross-links all
+renumbered together, with the companion re-run so the hashes are the renamed
+bytes.  Moving is the non-destructive direction: it cannot invalidate the other
+session's work.  This is the hazard already recorded as MISTAKE-351/356, so no
+new ledger entry is opened; what it adds is the concrete repair recipe --
+renumber the *whole* evidence tuple at once and re-hash, never just the file.
+
+## 9. Honest remaining frontier
 
 Nothing here proves a new homotopy group, and nothing here touches LRC(14) or
-GMC(2).  THM-3205 section 5 and THM-3209 section 4 are finite-exact in stated
+GMC(2).  THM-3205 section 5 and THM-3210 section 4 are finite-exact in stated
 universes, not theorems for all parameters.  The `floor(s/2)` Euclidean-depth
 staircase remains open; what changed is that one candidate shape for it -- a
 single congruence in the depth -- is now excluded by an exact obstruction
