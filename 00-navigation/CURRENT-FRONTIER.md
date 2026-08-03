@@ -190,10 +190,10 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   `d,...,d-6` composite. THM-3182/3183/3185/3188/3191 expose the rank-one
   reset, its two integral lattices, the full carry hierarchy, quadratic-character
   pre-reset holonomy, and the fixed-parameter exterior Clifford law with exact
-  p-primary Smith profile. THM-3186 proves a selected exterior continuant can
-  cancel while a complementary chart survives; its continuant/visibility tails
-  obey order-two/three polynomial recurrences, the former with a first-order
-  differential OGF. These linear-time scalar laws do not choose the PRS chart.
+  p-primary Smith profile. THM-3186 gives order-two/three P-recursive tails;
+  THM-3210 gives the exact nonmonotone window visible/invisible/invisible/visible
+  on a rational ray. A complementary chart survives, but these linear-time
+  scalar laws do not choose the coefficient-degree PRS chart.
 
 ### Live work
 
@@ -387,8 +387,8 @@ Classify profiles under support operations; study analytic continuation and auto
   recurrence to a three-state Gauss--Manin system with rank-one prime reset and
   Smith type `(1,p,p)`; THM-3185/3188/3191 give its exact carried p-primary
   thickness, pre-reset character holonomy, common exterior plane and two-state
-  fixed-parameter Clifford law. THM-3186 gives P-recursive, linearly evaluable
-  tails, but its cancellation wall still blocks the depth staircase. The `p>2m`
+  fixed-parameter Clifford law. THM-3186 gives P-recursive tails; THM-3210's
+  two-step nonmonotone cancellation ray still blocks the staircase. The `p>2m`
   full-flag formula is VERIFIED only; `FC(3)`/`SFC(3)` remain OPEN.
   Continuant gates: THM-3204/3205/3210.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
