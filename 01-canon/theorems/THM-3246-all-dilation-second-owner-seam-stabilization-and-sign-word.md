@@ -2,7 +2,7 @@
 id: THM-3246
 title: "All-dilation second-owner seam stabilization and sign word"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the THM-3224 lane (P,Q;e,f)=(3,5;1,2), every one of the 168 cleared
   cell masses is one explicit quadratic for every integer dilation g>=1.
   The 156 interior cells are certified by exact affine-ray stability; the
@@ -18,8 +18,11 @@ audit: >
   interval controls; verifies the seam component and unaligned-pair bounds;
   reconstructs all 168 quadratics, limits, first corrections, and second
   correctors; and exhausts 672 Singer gauges.  Normal, optimized, and stored
-  transcript replay and LF-normalized hashes are required.  Independent
-  hostile audit is pending.
+  transcript replay and LF-normalized hashes are required.  An independent
+  hostile audit rederived the cleared centre-difference bounds, the unique
+  aligned seam family and its endpoint contributions, the reflected seam,
+  the complete sign word/Hodge sum, and the Singer-line scope.  Fresh normal
+  and optimized runs byte-match the stored transcript and declared hashes.
 depends_on:
   - THM-3224-complete-lrc-orbit-bernoulli-gcd-carry-and-owner-hodge-splitting
 related:
@@ -35,7 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3246 -- all-dilation second-owner seam stabilization and sign word
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3224 proves the owner-dependent second-corrector/Hodge formalism but
 leaves one attractive `168`-owner word as a finite exact scout.  The interior
@@ -257,4 +260,4 @@ the complete `q` word and its two independent digests; and exhausts all unit
 Singer gauges.  It uses exact rational arithmetic and no optimization-
 sensitive assertions, floating point, randomness, or discovery cache.
 
-QED, pending independent hostile audit.
+QED.
