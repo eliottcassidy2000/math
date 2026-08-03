@@ -1,0 +1,18 @@
+THM-3219 complete-reset upper-filter exact control
+dependency_hashes=(('gmc_pole_prefix_hasse_current_scout.py', '151edb9b8cee4807d3f08dc17af32e45420021ba30dfd116c04d9fcaf8bbd5b7'), ('THM-3209-depth-eight-complete-quotient-reset-and-negative-singleton-tangent.md', '52b97aa1bdf8a0e0984fd2668a7602836b8ac2c43d4950eab1856b547081d0a2'))
+poles=(8, 7, 6, 5, 5, 4, 4, 3, 3, 2, 2, 2, 1, 1, 1, 1)
+reset=(1, 3, 3, 4, 5, 6, 7, 8)
+remainder=(1, 1, 1, 2, 2, 2, 4, 5)
+base_complete_degrees0_through5=(0, 0, 0, 0, 0, 1440)
+base_power_degrees1_through5=(0, 0, 0, 0, 0)
+physical_filter_states_including_reset=64
+nonempty_completion_states=63
+completion_depth_census=(4, 8, 12, 14, 12, 8, 4, 1)
+prefix_invariance_checks=128
+nonzero_h5_negative_alphabet_hostiles=25
+sharp_nonzero_response=(1440, (1,), -1440)
+full_completion_response=-6117120
+formula=G5_Q_plus_tau_(5)=-1440*sum_tau_r^5
+principal_filter_intersection=delta_reset
+scope=complete_upper_filter_only_not_unrelated_deeper_states
+all_exact_checks=PASS
