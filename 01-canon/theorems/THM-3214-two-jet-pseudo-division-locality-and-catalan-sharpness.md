@@ -2,7 +2,7 @@
 id: THM-3214
 title: "Two-jet pseudo-division locality and Catalan sharpness"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The fraction-free reciprocal pseudo-remainder operator consumes exactly two
   coefficient jets per step.  Its kth pivot factors through the initial
   2k-jet and its kth connection through the initial (2k+1)-jet.  Neither
@@ -16,7 +16,10 @@ audit: >
   63 deterministic locality pairs, the Catalan closed orbit through eight
   steps, and sharp pivot/connection deformations through ten steps.  It also
   verifies the leading-order perturbation recurrence coefficient by
-  coefficient.  Normal/-O/stored replay and independent audit are pending.
+  coefficient.  An independent audit rederived the ratio formula, locality
+  induction, Catalan orbit, exact terminal perturbations, and offset-six map;
+  normal and `-O` replay byte-match the stored output and both declared
+  LF-normalized hashes.
 depends_on:
   - THM-3192-reciprocal-coefficient-jet-transfer-and-z-adic-pluecker-return
 script: 04-computation/factorial_two_jet_locality_catalan_sharpness_thm3214.py
@@ -28,7 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3214 -- two-jet pseudo-division locality and Catalan sharpness
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3192 identifies the offset-six walls `H,J,K` with reciprocal-jet
 pseudo-division coordinates.  The present theorem removes the offset and the
@@ -281,4 +284,4 @@ through eight steps; and verifies `(19)--(24)` through ten steps, including
 unchanged earlier pivots.  No floating point, randomness, imported executable,
 or assertion-sensitive test is used.
 
-**QED (candidate pending independent audit).**
+**QED.**

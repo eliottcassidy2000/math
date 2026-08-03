@@ -191,7 +191,9 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   THM-3210 realizes a visible/invisible/invisible/visible rational window.
   THM-3206 keeps the complementary plane under heterogeneous blocks and makes
   its parabolic wall a binary-quadratic resultant. THM-3192 identifies the
-  offset-six `H,J,K` PRS charts; arbitrary-offset simultaneous selection is open.
+  offset-six `H,J,K` PRS charts. THM-3214 proves the sharp universal budget:
+  pivot `k` uses exactly `2k` coefficient jets and connection `k` exactly
+  `2k+1`; arbitrary-offset simultaneous nonvanishing is still open.
 
 ### Live work
 
