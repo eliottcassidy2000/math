@@ -248,19 +248,21 @@ not division by a vanishing earlier pivot.
 
 ## 6. Exact explanation of the offset-six budget
 
-Apply `(10)` to THM-3192's reciprocal top jets.  In its notation,
+Apply `(10)` to THM-3192's reciprocal top jets.  After the standard `p`-unit
+row renormalizations used by its fraction-free PRS, the corresponding
+coordinates are
 
 ```text
-rho_1=P_2(a,b)  is H up to a p-unit and uses Jet_2,
-rho_2=P_2(r,a)  is J up to a p-unit and uses Jet_4,
-chi_2=P_1(s,r) is K up to a p-unit and uses Jet_5.          (25)
+P_2(a,b),  generating the H ideal, at Jet_2,
+P_2(r,a),  generating the J ideal, at Jet_4,
+P_1(s,r),  generating the K ideal, at Jet_5.                (25)
 ```
 
 Thus the offset-six heights `2,4,5` are forced by the universal filtered
 operator; they are not accidental sizes in the symbolic formulas.  More
-generally, an available top jet of order `s` can determine at most the first
-`floor(s/2)` pivots, and the Catalan family proves this ceiling is exact for
-the universal pseudo-division problem.
+generally, an available top jet of order `s` determines `rho_k` only for
+`k<=floor(s/2)`, and the Catalan family proves this ceiling is exact for the
+universal pseudo-division problem.
 
 What remains open is geometric rather than local: a sufficient jet does not
 force its selected pivot to be nonzero, and `(9)` does not choose a surviving
