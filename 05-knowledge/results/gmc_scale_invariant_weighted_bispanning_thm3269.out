@@ -16,6 +16,8 @@ canonical_full_Jac_vertex_order=(17, 16, 18, 13, 11, 22, 19, 10, 7, 21, 2, 3)
 canonical_C12_rank_label=((2, 10), (3, 11), (7, 8), (10, 7), (11, 4), (13, 3), (16, 1), (17, 0), (18, 2), (19, 6), (21, 9), (22, 5))
 canonical_J12_phase=((2, 10), (3, 10), (7, 7), (10, 10), (11, 4), (13, 4), (16, 1), (17, 0), (18, 1), (19, 4), (21, 8), (22, 1))
 norm_phase_to_edge_sampler=(Q=-I_on_dim11,48x11_rank11,abstract_only)
+canonical_six_edge_sampler=((1, (16, 17)), (2, (2, 21)), (3, (18, 19)), (4, (11, 17)), (5, (21, 22)), (6, (7, 22)))
+canonical_11_orientations=((1, 17, 16), (2, 21, 2), (3, 18, 19), (4, 17, 11), (5, 21, 22), (6, 7, 22), (7, 22, 21), (8, 11, 17), (9, 19, 18), (10, 2, 21), (11, 16, 17)),det=-1
 incidence_determinants=(1, -1),transition_det=-1
 canonical_transition_sha256=93f9ae1643ad9606f15826d8f1d3809fd0b04ce1d74c11d92d354edbdd737d4f
 abstract_THM3260_sidecars=both_removed;rank_compression_not_group_or_physical_intertwiner

@@ -2,7 +2,10 @@
 id: THM-3269
 title: "Scale-invariant clutch strength and canonical weighted bispanning polarization"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED through the
+  canonical polarization and abstract C12 bridge.  The six-edge integral
+  unimodular sampler sharpening is VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
+  PENDING.
   The exact reset-link trap intervals canonically weight every edge of
   THM-3260's bispanning core by a positive row-scale- and orientation-invariant
   overlap ratio.  Among all 9,920 ordered complementary-tree charts, the
@@ -13,7 +16,10 @@ status: >
   canonically removes both of THM-3260's abstract sidecars.  The resulting
   rank-compressed C12 label is not a group or physical phase intertwiner.
   The primitive direction separately identifies THM-3268's norm-phase
-  augmentation with THM-3273's repaired rank-eleven edge sampler.
+  augmentation with THM-3273's repaired rank-eleven edge sampler.  In fact,
+  the genuine normalized J12 phases and the clutch order canonically select
+  six undirected edges whose eleven directed phase increments form an
+  integral unimodular sampler of the augmentation lattice.
 source: root/multiscale-newton-flag/low-child-flag-extension/2026-08-03
 audit: >
   The assertion-independent exact companion pins promoted THM-3254,
@@ -29,7 +35,9 @@ audit: >
   the full critical coordinate, unique incident primitive generator, twelve
   distinct normalized exponents, circular order and rank-compressed C12
   bijection.  Finally it checks the generator-normalized J12 chart and the
-  repaired 48-by-11 sampler's full rank.
+  repaired 48-by-11 sampler's full rank; derives the six-edge selector from
+  genuine J12 sign-orbits and exact clutch minima; and checks that its eleven
+  directed evaluations have integral determinant minus one.
   Normal, optimized and stored replay plus LF hashes agree. An independent
   hostile audit rebuilt the response bank, all 74,748 spanning trees, all
   9,920 ordered bispanning charts, the unique weighted minimizer, incidence
@@ -37,7 +45,8 @@ audit: >
   second delta audit of the completed sidecar claims independently rebuilt
   the full critical Smith/adjugate coordinate, unique incident generator,
   twelve distinct exponents, rank compression, normalized edge sampler and
-  augmentation embedding. Both audits passed with no repair.
+  augmentation embedding. Both audits passed with no repair. The six-edge
+  unimodular delta is pending an independent hostile audit.
 depends_on:
   - THM-3254-first-shell-two-row-clutch-and-graded-gauge-no-go
   - THM-3260-bispanning-reset-link-holotopy-atlas-and-nonplanar-c12-boundary
@@ -48,8 +57,8 @@ related:
   - THM-3249-cross-support-upset-atlas-local-sections-and-no-constant-gauge
 script: 04-computation/gmc_scale_invariant_weighted_bispanning_thm3269.py
 output: 05-knowledge/results/gmc_scale_invariant_weighted_bispanning_thm3269.out
-script_sha256: 7f7e63f3441ca23850adc4670e2f0e90da0acb147563fb0edda844365542b9b2
-output_sha256: cd07cf620c813a22ec94671441150b89062d4302093e76a89edcaab54253a5f5
+script_sha256: 41ae9aeb01fea1384f59f3a2687b1a0482954bf202e5be2b6fc928ef579b116a
+output_sha256: 65e6e1bb04f3d42d64c2a8e5322c0f3b37c9d05ed6b053670a2cd46293742e3c
 hash_basis: LF-normalized bytes
 ---
 
@@ -321,10 +330,54 @@ A_norm  --> Aug(Q[J_12]) --> Q^(directed core + two delayed)       (23)
 is a canonical injective `48 by 11` coefficient map.  Its image carries the
 transported scalar action `-I` from `(22)`.
 
+**Six-edge sharpening: VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+
+There is a smaller integral form of this sampler.  For an edge `e={u,v}`, let
+
+```text
+d(e)=min((j(v)-j(u)) mod 12,(j(u)-j(v)) mod 12),       (24)
+```
+
+where `j` is the genuine generator-normalized `J_12` phase, not the nonlinear
+rank label `ell` from `(19)`.  The sign-orbit types occurring in `T_*` are
+exactly `1,2,3,5,6`.  Within each type choose the unique edge of least exact
+clutch strength.  Type 4 is absent from `T_*`; of THM-3273's two delayed
+repair edges, exactly `(11,17)` meets the canonical root and so supplies that
+type.  The resulting selection is
+
+```text
+d:       1        2        3         4         5         6
+edge: (16,17)  (2,21)  (18,19)  (11,17)  (21,22)   (7,22). (25)
+```
+
+Use both orientations of each selected edge, except that the self-opposite
+type 6 uses only increasing-label orientation.  Ordered by the resulting
+nonzero phase increment, the eleven directed edges are
+
+```text
+1:(17,16), 2:(21,2), 3:(18,19), 4:(17,11), 5:(21,22),
+6:(7,22),  7:(22,21), 8:(11,17), 9:(19,18), 10:(2,21),
+11:(16,17).                                             (26)
+```
+
+They evaluate an augmentation coefficient at each nonzero residue exactly
+once.  Relative to the standard integral basis of `Aug(Z[C_12])`, the
+resulting `11 by 11` evaluation matrix has
+
+```text
+det=-1.                                                  (27)
+```
+
+Thus the canonical sampler is already an integral unimodular six-edge
+subsampler; the 48-coordinate rational rank calculation is not needed for
+injectivity once the delayed type-4 edge is admitted.
+
 This is an abstract representation embedding only.  The edge sampler
 evaluates coefficient functions at phase increments; it is not a transition
 operator on the response graph, does not realize THM-3268's freely varying
 walk, and does not make the rank label `(19)` into a physical phase observable.
+In particular, `(25)--(27)` are coefficient evaluations, not six lawful
+physical transitions or an owner-labelled current.
 
 ## 7. Failure boundary and scope
 

@@ -337,6 +337,70 @@ require((repaired_sampler.rows, repaired_sampler.cols,
         "repaired augmentation sampler drift")
 
 
+def phase_orbit_type(edge):
+    left, right = edge
+    difference = (normalized_j12_phase[right]
+                  - normalized_j12_phase[left]) % 12
+    return min(difference, (-difference) % 12)
+
+
+tree_phase_banks = {}
+for edge in best_edges:
+    tree_phase_banks.setdefault(phase_orbit_type(edge), []).append(edge)
+require(set(tree_phase_banks) == {1, 2, 3, 5, 6},
+        "canonical tree phase-orbit bank")
+canonical_phase_edges = {}
+for orbit, edges in tree_phase_banks.items():
+    minimum = min(strength_bank[edge][0] for edge in edges)
+    minimizers = tuple(edge for edge in edges
+                       if strength_bank[edge][0] == minimum)
+    require(len(minimizers) == 1, ("phase-orbit clutch tie", orbit, minimizers))
+    canonical_phase_edges[orbit] = minimizers[0]
+
+# The two delayed phase-repair edges are exchanged by the old graph C2.  The
+# canonical center breaks the tie: exactly (11,17) is incident to root 17.
+repair_edges = tuple(carrier["repair_edges"])
+root_repair_edges = tuple(edge for edge in repair_edges
+                          if critical_root in edge)
+require(root_repair_edges == ((11, 17),), "root repair-edge selection")
+canonical_phase_edges[4] = root_repair_edges[0]
+EXPECTED_PHASE_EDGES = {
+    1: (16, 17), 2: (2, 21), 3: (18, 19),
+    4: (11, 17), 5: (21, 22), 6: (7, 22),
+}
+require(canonical_phase_edges == EXPECTED_PHASE_EDGES,
+        "canonical six-edge sampler")
+
+# Both directions of each selected edge cover the two residues in its sign
+# orbit.  Residue six is self-opposite, so increasing-label orientation is the
+# deterministic representative.  The eleven resulting evaluation coordinates
+# are an integral unimodular basis of the augmentation lattice.
+oriented_by_residue = {}
+for orbit in range(1, 7):
+    left, right = canonical_phase_edges[orbit]
+    for tail, head in ((left, right), (right, left)):
+        residue = (normalized_j12_phase[head]
+                   - normalized_j12_phase[tail]) % 12
+        if residue == 6 and residue in oriented_by_residue:
+            continue
+        require(residue not in oriented_by_residue,
+                ("duplicate sampler residue", residue, tail, head))
+        oriented_by_residue[residue] = (tail, head)
+require(set(oriented_by_residue) == set(range(1, 12)),
+        "nonzero phase sampler coverage")
+Matrix = carrier["Matrix"]
+augmentation_basis = carrier["augmentation_basis"]
+evaluation_rows = []
+for residue in range(1, 12):
+    row = [0] * 12
+    row[residue] = 1
+    evaluation_rows.append(row)
+integral_subsampler = Matrix(evaluation_rows) * augmentation_basis
+integral_subsampler_det = int(integral_subsampler.det())
+require(abs(integral_subsampler_det) == 1,
+        "six-edge sampler not unimodular")
+
+
 def determinant_bareiss(matrix):
     work = [row[:] for row in matrix]
     previous = 1
@@ -438,6 +502,11 @@ print("canonical_J12_phase=%s" %
       (tuple((vertex, normalized_j12_phase[vertex])
              for vertex in sorted(normalized_j12_phase)),))
 print("norm_phase_to_edge_sampler=(Q=-I_on_dim11,48x11_rank11,abstract_only)")
+print("canonical_six_edge_sampler=%s" %
+      (tuple((orbit, canonical_phase_edges[orbit]) for orbit in range(1, 7)),))
+print("canonical_11_orientations=%s,det=%d" %
+      (tuple((residue,) + oriented_by_residue[residue]
+             for residue in range(1, 12)), integral_subsampler_det))
 print("incidence_determinants=%s,transition_det=%d" %
       (incidence_determinants, transition_determinant))
 print("canonical_transition_sha256=%s" % transition_digest)
