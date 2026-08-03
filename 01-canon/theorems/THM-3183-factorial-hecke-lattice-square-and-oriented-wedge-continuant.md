@@ -2,7 +2,7 @@
 id: THM-3183
 title: "Factorial Hecke lattice square and oriented wedge continuant"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The scalar-moment and x-weighted factorial Gauss--Manin frames form an
   exact commuting square of integral lattices.  At the prime reset its
   cokernel lengths split as 2=1+1-0, and on exterior squares as 4=2+2-0.
@@ -15,7 +15,10 @@ audit: >
   all four reset Smith profiles and their exterior-square profiles, the
   oriented two-step pivot, three same-Smith hostile tails, and the offset-six
   leading PRS pivots H and J.  Normal and optimized replay agree with the
-  stored transcript.  Independent immutable audit and promotion are pending.
+  stored transcript and declared hashes.  An independent immutable audit
+  rederived every matrix, Smith profile, length identity, pivot, wall, and
+  hostile.  A separate pure-integer multinomial interpolation at p=0..20,
+  with degree bounds 11 and 15, independently proves the H and J identities.
 source: root/multiscale-newton-flag/2026-08-02
 depends_on:
   - THM-3182-factorial-gauss-manin-rank-one-reset-and-two-transverse-smith-bands
@@ -31,7 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3183 -- factorial Hecke lattice square and oriented wedge continuant
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3182 found two different integral Smith profiles for the same rational
 quadratic-moment system.  The `x`-weighted frame has reset type `(1,p,p)`,
@@ -314,4 +317,4 @@ hostile tails `(21)--(24)`, the offset-six leading identities `(25)--(27)`,
 and the bare pivot `(29)`.  Equation `(28)` is inherited verbatim from
 THM-3176 and is not an independent companion check here.
 
-**QED (candidate pending independent audit).**
+**QED.**
