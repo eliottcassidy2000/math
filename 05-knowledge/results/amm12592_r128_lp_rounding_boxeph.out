@@ -1,0 +1,72 @@
+==========================================================================
+PHASE A: f-coordinate (transportation) claim checks
+==========================================================================
+R=   8: delta-witness admissible=True identity=True | f=(binom-delta)/2 integral=True in-bounds=True | T_R integral=True | (**) sum x^i F_i == T_R exact: True
+R=  16: delta-witness admissible=True identity=True | f=(binom-delta)/2 integral=True in-bounds=True | T_R integral=True | (**) sum x^i F_i == T_R exact: True
+R=  32: delta-witness admissible=True identity=True | f=(binom-delta)/2 integral=True in-bounds=True | T_R integral=True | (**) sum x^i F_i == T_R exact: True
+R=  64: delta-witness admissible=True identity=True | f=(binom-delta)/2 integral=True in-bounds=True | T_R integral=True | (**) sum x^i F_i == T_R exact: True
+R= 128: delta-witness admissible=True identity=True | f=(binom-delta)/2 integral=True in-bounds=True | T_R integral=True | (**) sum x^i F_i == T_R exact: True
+
+CLAIM CONFIRMED: the parity condition is absorbed exactly -- every
+verified delta-witness maps to an INTEGER point of the capacitated
+transportation polytope 0 <= f <= binom with sum_i x^i F_i = T_R, and
+back.  Any integer f in the polytope is automatically parity-correct.
+
+T_128 integrality: all binom(127,j) odd (127 = 2^7 - 1, Lucas): True
+
+==========================================================================
+PHASE B: real relaxation at R = 128 -- exact feasibility + slack
+==========================================================================
+The translated R=128 point is itself an exact integer point of the
+real relaxation: RELAXATION FEASIBLE (certificate = the point; no
+floating point anywhere).  Box-saturation anatomy of that point:
+  total cells 14721, saturated (f=0 or f=cap) 3127 (21.24%)
+  most saturated rows (i, d_i, cells, at0, atcap): (127,152,153,1,129), (79,123,124,118,4), (68,117,118,111,5), (59,111,112,105,5), (52,107,108,101,5), (46,104,105,96,6), (41,101,102,93,6), (37,98,99,90,7)
+  min per-row interior slack (i, minslack): (0,0), (1,0), (2,0), (3,0), (4,0), (5,0), (6,0), (7,0)
+  rows with some cell ON its bound: 128/128 (the forced top
+  cell f_(i,d_i) in {0,1} = Delta_i(0) = +-1 saturates EVERY row --
+  the transportation polytope has no interior in that direction;
+  integer infeasibility can never be excluded by margin alone).
+  transportation-form integer point saved: /tmp/math-wt-boxeph-multifront/04-computation/amm12592_r128_transportation_point_boxeph.json
+
+==========================================================================
+PHASE C-ladder: pipeline validation at R = 8, 16, 32, 64
+==========================================================================
+R=  8 beam=200: SOLVED in 0.0s; verify adm=True id=True (**)=True; winner debt total=19 max=4, overshoot total=27 max=22
+R= 16 beam=200: SOLVED in 0.3s; verify adm=True id=True (**)=True; winner debt total=73 max=9, overshoot total=14647 max=12498
+R= 32 beam=300: SOLVED in 4.0s; verify adm=True id=True (**)=True; winner debt total=311 max=23, overshoot total=3926716903 max=1290644129
+R= 64 beam=400: SOLVED in 49.9s; verify adm=True id=True (**)=True; winner debt total=1467 max=42, overshoot total=27224173096070043232 max=8020565806387027614
+(re-validated after ev1-cut patch: R=8 0.0s, R=16 0.4s, R=32 2.9s, R=64 40.9s -- all SOLVED + verified)
+
+==========================================================================
+PHASE C-r128: final (v5) hunt -- ev1 ballot cut + late sign-branch, beam 400
+==========================================================================
+  row 110: states=   64 deg=141 L1=3211135479173 ev1=13 debt=0 over=3162443093229 t=274.6s
+  row 111: states=  140 deg=141 L1=1577948241734 ev1=14 debt=18 over=1539495436292 t=275.0s
+  row 112: states=  400 deg=142 L1=1142665098677 ev1=13 debt=0 over=1126469230115 t=276.4s
+  row 113: states=  400 deg=143 L1=150767281778 ev1=14 debt=0 over=150151243290 t=282.8s
+  row 114: states=  400 deg=143 L1=82711543217 ev1=13 debt=0 over=80146032273 t=287.9s
+  row 115: states=  400 deg=144 L1=53807083628 ev1=12 debt=0 over=52151081428 t=292.9s
+  row 116: states=  400 deg=144 L1=23692453605 ev1=9 debt=0 over=22980581891 t=298.1s
+  row 117: states=  400 deg=145 L1=511460198 ev1=10 debt=2 over=481425406 t=303.3s
+  row 118: states=  400 deg=146 L1=40322829 ev1=9 debt=2 over=39809699 t=308.7s
+  row 119: states=  400 deg=146 L1=24495984 ev1=8 debt=0 over=21456114 t=314.5s
+  row 120: states=  400 deg=147 L1=16781695 ev1=7 debt=0 over=14708357 t=319.8s
+  row 121: states=  400 deg=147 L1=8714558 ev1=6 debt=0 over=7650698 t=325.4s
+  row 122: states=  400 deg=148 L1=918633 ev1=5 debt=0 over=830919 t=330.9s
+  row 123: states=  400 deg=149 L1=141128 ev1=4 debt=2 over=106414 t=337.6s
+  row 124: states=  400 deg=149 L1=44769 ev1=3 debt=7 over=33976 t=343.2s
+  row 125: states=  400 deg=150 L1=1012 ev1=2 debt=4 over=504 t=349.0s
+  -> SOLVED  (350.7s, endgame decodes=49)
+  EXACT VERIFY: admissible=True epoch-identity=True f-integral=True f-bounded=True (**)-identity=True
+  winner rounding-debt profile: total=5973 max=87 rows>0: 127
+  winner overshoot profile: total=1145124104230394272545927748156676844810 max=166156619463837596987456411067699024243 last row>0: 126
+  WITNESS WRITTEN: /tmp/math-wt-boxeph-multifront/04-computation/amm12592_floor_witness_R128_lp.json
+EXIT=0
+
+HOSTILE INDEPENDENT REFEREE on amm12592_floor_witness_R128_lp.json:
+  profile == exact gamma* floor (Fib/Lucas): True
+  profile_ok=True adm_ok=True identity_ok=True unit_ok=True eff_rate=58/97
+  signword: ++--+++--+++--+++--+++-++--+-++---+++--++++--++++-+-----------------------------------+--+++++++++-+++++-+--+-+--+++++++++++++++
+  blocks differing from the direct-beam witness: 126/128 (distinct witness)
+R128 LP WITNESS: ALL CHECKS PASSED

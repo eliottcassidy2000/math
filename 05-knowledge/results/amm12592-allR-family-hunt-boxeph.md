@@ -80,7 +80,7 @@ dies by ~0.62R whenever it survives the bottom-edge race, sec. 5).
 |---|---|---|---|---|---|---|---|
 | gamma* floor, D0=0 | CLOSED | CLOSED | CLOSED | CLOSED (0.4s) | **CLOSED (6s)** | die row 61 | — |
 | floor + 1 (D0=1)  | CLOSED | CLOSED | CLOSED | CLOSED | CLOSED | **CLOSED (103s)** | die row 110 |
-| floor + D0, D0=2..4 | | | | | | | scan running |
+| floor + D0, D0=2/3/4 | | | | | | | die rows 113/116/121 |
 
 - The D0=0 rule reproduces, in 6 seconds and zero search, the R = 128 floor
   closure that the direct beam needed width-1000 + banded repair to find
@@ -94,14 +94,18 @@ dies by ~0.62R whenever it survives the bottom-edge race, sec. 5).
   a CONSTANT D0 is far inside the envelope: if rule A at D0 = 1 closes all dyadic
   epochs, C* = log_5(5 phi^2) follows with THM-3024's floor. D0 = 1 also closes
   all of R = 8..128 (uniform family statement, same rule, same constant).
-- R = 512, D0 = 1, EXACT Fib/Lucas floor profile: dies at row 110 (const ~2^277)
-  (`amm12592_r512_ruleA_D01_boxeph.{py,out}`); D0 = 2..4 scan launched
-  (`amm12592_r512_ruleA_D0scan_boxeph.{py,out}`). Empirical slack law so far:
-  D0_needed(R) = 0 for R <= 128, 1 for 256, >= 2 for 512 — consistent with
-  D0 = O(log R) (still far inside the o(R) envelope for C* = 1 + gamma*), and the
-  proof target below sharpens accordingly. Bonus check banked: the GS rational
-  proxy floors EQUAL the exact gamma* floors for all m in [512, 1023] (extends
-  the proven m <= 512 range empirically; `.out` line `proxy==exact ... True`).
+- R = 512, EXACT Fib/Lucas floor profile (`amm12592_r512_ruleA_D01_boxeph.*`,
+  `..._D0scan_boxeph.*`): D0 = 1 dies row 110 (const 2^277), D0 = 2 row 113
+  (2^284), D0 = 3 row 116 (2^284) — **slack is nearly useless at 512** (+3 rows
+  per unit, deficit stuck at ~2^280): the same non-monotonicity in slack that the
+  doubling lane saw in W. Cut-offset variants (truncate at d_i - s, s = 4..32,
+  `amm12592_r512_cutoffset_boxeph.py` script; tested at R=256 D0=0) are ALSO null
+  (die row 61, const 2^139 for every s): the junk is NOT the truncation
+  discontinuity — it is the clamp residue of the binomial bulk itself, which
+  single-row greedy chewing leaves at a relative deficit growing like
+  2^{(H(gamma*) - gamma* log2 3) m} ~ 2^{0.023 m} per head row. Bonus check
+  banked: the GS rational proxy floors EQUAL the exact gamma* floors for all
+  m in [512, 1023] (extends the proven m <= 512 range empirically).
 
 **Junk-decay law (proof handle).** Measuring J_i := sigma_i - E_{R-2-i} along
 closing runs: junk enters at log2 max|J| ~ R (the q-tail), decays superexponentially
@@ -130,6 +134,19 @@ row 58 of R=256: junk mass ~2^136 descends into guarded coefficients whose cell
 boxes binom(d,j) are smaller than the junk — capacity there is real, absorption
 scheduling is the whole game. Per THM-3029 these negatives are scheme artifacts;
 the D0=1 closure PROVES the 256 identity itself is feasible within +1 of floor.
+
+**Due-date reading (the sharpest formulation of what remains).** The /x shift
+gives every residual coefficient a DUE DATE: mass at absolute degree j must be
+fully emitted by row j (when it reaches residual degree 0). Aggregate capacity is
+never the problem (rows 0..R/2 hold ~2^{1.42R} >> 2^R); the greedy fails because
+its cellwise L-infinity clamp is due-date-blind — it burns row-i capacity on
+far-from-due mid coefficients while the soon-due low band accumulates deficit.
+Rule B (bottom-exact) is the opposite extreme (due-date-obsessed, absorption-
+blind) and parks junk at the top. The construction that should settle all R:
+a due-date-aware clamp — emit exactly at low degrees (due within ~w rows),
+capacity-share the bulk band across its whole feasible row interval (the
+halved-box G_R transportation of sec. 2 with the interval structure made
+explicit). That is a finite, explicit scheduling problem, no search.
 
 ## 6. What this changes
 
