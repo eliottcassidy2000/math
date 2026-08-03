@@ -2,7 +2,7 @@
 id: THM-3244
 title: "Unique-reset Rips routing and deletion-graph non-Morse boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.  On
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On
   the complete 4,319-state THM-3238 physical bank, the exact exposed-reset
   functional has 32 nonreset one-pole local maxima, so global exposure does
   not induce a local deletion flow.  Its one-pole superlevel merge tree has
@@ -38,8 +38,11 @@ audit: >
   no-single-row boundary.  A direction-bit certificate additionally checks
   the overlap graph, common-direction histogram, and exact switch-depth
   dynamic program.  Exact edge differences verify the sharp two-state
-  constant-blend obstruction.  Normal and optimized runs reproduce the
-  stored output.  Independent hostile theorem audit is pending.
+  constant-blend obstruction.  Two independent audits compared the rank,
+  cover, direction and edge-difference certificates pointwise against the
+  full exact response cache and rederived the graph, dynamic-programming,
+  interval and scope implications.  Fresh normal and optimized runs
+  byte-match the stored output and declared hashes.
 depends_on:
   - THM-3238-complete-physical-product-gamma-bank-unique-reset-stitch
 related:
@@ -54,7 +57,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3244 -- unique-reset Rips routing and deletion-graph non-Morse boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3238 exposes the reset
 
