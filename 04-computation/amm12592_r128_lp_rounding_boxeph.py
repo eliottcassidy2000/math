@@ -240,7 +240,7 @@ def phase_ab(out):
 # ---------------------------------------------------------------------------
 # PHASE C: LP-clamp + parity-rounding beam
 # ---------------------------------------------------------------------------
-def lp_step_candidates(sigma, d, nbranch, maxoff):
+def lp_step_candidates(sigma, d, nbranch, maxoff, sign_branch=False):
     """One residual row at block degree d.  Returns list of
     (deltas, sigma_next, debt, overshoot).  Cell processing order
     k = d-1 .. 0 handles res positions j = d-k = 1..d triangularly; the
@@ -301,10 +301,14 @@ def lp_step_candidates(sigma, d, nbranch, maxoff):
         prefix = nxt
         if not prefix:
             return []
-    # deterministic tail
+    # deterministic tail down to cell k=1; cell k=0 (the sign cell
+    # delta_{i,0} = Delta_i(1) = +-1, cap 1, parity odd) is BRANCHED BOTH
+    # ways: it alone drives the evaluation-at-1 ballot walk
+    # sigma_i(1) = sigma_{i-1}(1) -+ 1, whose budget |sigma_i(1)| <= R-1-i
+    # is a hard LP cut (see solve_lp_round) that the local clamp cannot see.
     out = []
     for res, de, debt, over in prefix:
-        for k in range(d - 1 - nbranch, -1, -1):
+        for k in range(d - 1 - nbranch, 0, -1):
             j = d - k
             cap = comb(d, k)
             rj = res[j]
@@ -323,7 +327,25 @@ def lp_step_candidates(sigma, d, nbranch, maxoff):
                     res[off + s] -= w * tq[s]
         if res[0] != 0:
             continue
-        out.append((de, trim(res[1:]), debt, over))
+        if sign_branch:
+            signs = (1, -1)
+        else:
+            # deterministic: steer the evaluation-at-1 walk toward 0
+            # (ev_next = sum(res[1:]) - w0); tiebreak = residual clamp
+            S = sum(res[1:])
+            if S > 0:
+                signs = (1,)
+            elif S < 0:
+                signs = (-1,)
+            else:
+                signs = (1,) if res[d] >= 0 else (-1,)
+        for w0 in signs:
+            r2 = list(res)
+            r2[d] -= w0
+            d2 = list(de)
+            d2[0] = w0
+            out.append((d2, trim(r2[1:]),
+                        debt + abs(w0 - max(-1, min(1, res[d]))), over))
     return out
 
 def final_decode(sigma, d):
@@ -354,35 +376,49 @@ def solve_lp_round(d, beam=400, nbranch=2, maxoff=2, end_nbranch=3,
     stats = {"rows": []}
     for i in range(R - 2):
         nxt = []
+        budget = R - 1 - i          # |sigma_i(1)| <= # remaining rows
         for acc, sig, debts, overs in states:
             for de, ns, debt, over in lp_step_candidates(
-                    list(sig), d[i], nbranch, maxoff):
+                    list(sig), d[i], nbranch, maxoff, sign_branch=True):
                 if not ns or abs(ns[0]) != 1:
+                    continue
+                if abs(sum(ns)) > budget:   # evaluation-at-1 ballot cut
                     continue
                 nxt.append((acc + (tuple(de),), tuple(ns),
                             debts + (debt,), overs + (over,)))
         if not nxt:
             return None, f"died at row {i}", stats
-        nxt.sort(key=lambda st: (len(st[1]), sum(abs(x) for x in st[1])))
-        seen, uniq = set(), []
+        nxt.sort(key=lambda st: (len(st[1]), sum(abs(x) for x in st[1]),
+                                 abs(sum(st[1]))))
+        # dedup + diversity cap: the k=0 sign branch produces "twins" that
+        # differ only in the top few coefficients; cap each low-part group
+        # at 2 so twins cannot flood the beam and starve trajectory
+        # diversity (the row-7 death mode of the all-branch run).
+        seen, gcount, uniq = set(), {}, []
         for st in nxt:
             if st[1] in seen:
                 continue
             seen.add(st[1])
+            g = (len(st[1]), st[1][:len(st[1]) - 4])
+            c = gcount.get(g, 0)
+            if c >= 2:
+                continue
+            gcount[g] = c + 1
             uniq.append(st)
         states = uniq[:beam]
         b = states[0][1]
         row = {"i": i, "states": len(states), "bestdeg": len(b) - 1,
-               "bestL1": sum(abs(x) for x in b),
+               "bestL1": sum(abs(x) for x in b), "bestev1": sum(b),
                "bestdebt": states[0][2][-1], "bestover": states[0][3][-1],
                "t": round(time.time() - t0, 1)}
         stats["rows"].append(row)
         if log:
             print(f"  row {i:3d}: states={row['states']:5d} "
                   f"deg={row['bestdeg']:3d} L1={row['bestL1']} "
+                  f"ev1={row['bestev1']} "
                   f"debt={row['bestdebt']} over={row['bestover']} "
                   f"t={row['t']}s", file=log, flush=True)
-        if ckpt_path and (i % ckpt_every == 0 or i == R - 3):
+        if ckpt_path and (i % ckpt_every == 0 or i >= R - 16):
             json.dump({"row": i,
                        "states": [[list(map(list, st[0])), list(st[1]),
                                    list(st[2]), list(st[3])]
@@ -394,7 +430,7 @@ def solve_lp_round(d, beam=400, nbranch=2, maxoff=2, end_nbranch=3,
     tried = 0
     for acc, sig, debts, overs in states:
         for de, ns, debt, over in lp_step_candidates(
-                list(sig), da, end_nbranch, end_maxoff):
+                list(sig), da, end_nbranch, end_maxoff, sign_branch=True):
             if not ns or abs(ns[0]) != 1:
                 continue
             tried += 1
