@@ -44,6 +44,12 @@ Singer_arc_normalization=alpha^6*N={alpha^0,...,alpha^11}
 phase_census=one_increment_per_C12_phase
 phase_partition=not_equitable;first_outgoing_refinement_has_168_singletons
 coarsest_outgoing_equitable_refinement_of_phase=full_Singer_point_or_exponent
+raw_target_phase_histogram=168_distinct_without_source_phase
+raw_decoder_metrics=(min_L1_2,min_Hamming_2,affine_rank_12)
+sharp_coordinate_decoder=(min_7,injective_7sets_21,first_(0,1,2,5,8,9,11),max_6_signatures_166,best_6_(0,1,3,5,6,8))
+degree_sidecar=six_coordinates_still_max_166
+cyclic_window_decoder=(min_8,starts_(4,7,8,9,10,11))
+straight_arc_raw_decoder=168_distinct_by_alpha^6_scalar_conjugacy
 GL2_F13_set_stabilizer=identity_only
 punctured_transfer_degrees=out_(12*156,11*12);in_(12*156,11*12)
 full_additive_Cayley_character_representatives=((1, 0), (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (1, 12), (0, 1))

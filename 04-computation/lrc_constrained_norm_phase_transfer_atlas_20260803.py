@@ -16,6 +16,7 @@ claimed.
 import ast
 import hashlib
 from collections import Counter, defaultdict
+from itertools import combinations
 from pathlib import Path
 
 import sympy as sp
@@ -686,6 +687,99 @@ require(
     "seam does not split each phase into fourteen singletons",
 )
 
+# The source phase is not needed: the raw twelve target-phase counts already
+# locate the source among all 168 punctured points.  Record the exact nearest
+# separation and affine dimension, then verify the scalar-normalized straight
+# arc by its conjugacy rather than by a second discovery path.
+seam_raw_profiles = tuple(
+    outgoing_phase_profile(source, seam) for source in points
+)
+require(len(set(seam_raw_profiles)) == POINT_COUNT,
+        "seam raw phase histogram is not a point decoder")
+seam_decoder_l1 = min(
+    sum(abs(left - right) for left, right in zip(first, second))
+    for first, second in combinations(seam_raw_profiles, 2)
+)
+seam_decoder_hamming = min(
+    sum(left != right for left, right in zip(first, second))
+    for first, second in combinations(seam_raw_profiles, 2)
+)
+seam_decoder_affine_rank = sp.Matrix([
+    [value - seam_raw_profiles[0][index]
+     for index, value in enumerate(profile)]
+    for profile in seam_raw_profiles[1:]
+]).rank()
+require((seam_decoder_l1, seam_decoder_hamming,
+         seam_decoder_affine_rank) == (2, 2, 12),
+        "seam decoder metric drift")
+
+
+def projected_signature_count(coordinates, include_degree=False):
+    signatures = set()
+    for profile in seam_raw_profiles:
+        projection = tuple(profile[index] for index in coordinates)
+        signatures.add((projection, sum(profile)) if include_degree else projection)
+    return len(signatures)
+
+
+six_projection_counts = {
+    coordinates: projected_signature_count(coordinates)
+    for coordinates in combinations(range(PHASE_COUNT), 6)
+}
+best_six_count = max(six_projection_counts.values())
+best_six_sets = tuple(coordinates for coordinates, count
+                      in six_projection_counts.items()
+                      if count == best_six_count)
+require((best_six_count, best_six_sets)
+        == (166, ((0, 1, 3, 5, 6, 8),)),
+        "sharp six-coordinate decoder boundary")
+
+degree_six_counts = {
+    coordinates: projected_signature_count(coordinates, include_degree=True)
+    for coordinates in combinations(range(PHASE_COUNT), 6)
+}
+require(max(degree_six_counts.values()) == 166
+        and all(count < POINT_COUNT for count in degree_six_counts.values()),
+        "degree sidecar unexpectedly repairs six coordinates")
+
+injective_seven_sets = tuple(
+    coordinates for coordinates in combinations(range(PHASE_COUNT), 7)
+    if projected_signature_count(coordinates) == POINT_COUNT
+)
+require(len(injective_seven_sets) == 21
+        and injective_seven_sets[0] == (0, 1, 2, 5, 8, 9, 11),
+        "sharp seven-coordinate decoder census")
+
+cyclic_window_starts = {}
+for length in range(1, PHASE_COUNT + 1):
+    starts = tuple(
+        start for start in range(PHASE_COUNT)
+        if projected_signature_count(tuple(
+            (start + offset) % PHASE_COUNT for offset in range(length)
+        )) == POINT_COUNT
+    )
+    if starts:
+        cyclic_window_starts[length] = starts
+require(cyclic_window_starts[min(cyclic_window_starts)]
+        == (4, 7, 8, 9, 10, 11)
+        and min(cyclic_window_starts) == 8,
+        "cyclic window decoder threshold")
+
+straight_arc = tuple(points[exponent] for exponent in range(12))
+straight_profiles = tuple(
+    outgoing_phase_profile(source, straight_arc) for source in points
+)
+require(len(set(straight_profiles)) == POINT_COUNT,
+        "straight Singer arc is not a raw point decoder")
+scale = points[6]
+scale_phase = phase[scale]
+for source, profile in zip(points, seam_raw_profiles):
+    scaled_source = field_multiply(scale, source)
+    expected = tuple(profile[(residue - scale_phase) % PHASE_COUNT]
+                     for residue in range(PHASE_COUNT))
+    require(outgoing_phase_profile(scaled_source, straight_arc) == expected,
+            "Singer arc scalar conjugacy drift")
+
 # The seam also has no nonidentity F_13-linear set stabilizer.
 def matrix_action(matrix, point):
     return (
@@ -979,6 +1073,12 @@ print("Singer_arc_normalization=alpha^6*N={alpha^0,...,alpha^11}")
 print("phase_census=one_increment_per_C12_phase")
 print("phase_partition=not_equitable;first_outgoing_refinement_has_168_singletons")
 print("coarsest_outgoing_equitable_refinement_of_phase=full_Singer_point_or_exponent")
+print("raw_target_phase_histogram=168_distinct_without_source_phase")
+print("raw_decoder_metrics=(min_L1_2,min_Hamming_2,affine_rank_12)")
+print("sharp_coordinate_decoder=(min_7,injective_7sets_21,first_(0,1,2,5,8,9,11),max_6_signatures_166,best_6_(0,1,3,5,6,8))")
+print("degree_sidecar=six_coordinates_still_max_166")
+print("cyclic_window_decoder=(min_8,starts_(4,7,8,9,10,11))")
+print("straight_arc_raw_decoder=168_distinct_by_alpha^6_scalar_conjugacy")
 print("GL2_F13_set_stabilizer=identity_only")
 print("punctured_transfer_degrees=out_(12*156,11*12);in_(12*156,11*12)")
 print("full_additive_Cayley_character_representatives=" + repr(character_representatives))

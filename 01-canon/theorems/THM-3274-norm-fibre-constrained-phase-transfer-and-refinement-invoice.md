@@ -10,7 +10,11 @@ status: >
   no proper phase-refining equitable quotient, requiring all 168 points, but
   its punctured transfer has an exact Fourier/derivative characteristic
   polynomial and matrix recurrence order 168. Fixed-increment hostiles are
-  separate. No physical LRC walk or LRC(14) decrement is asserted.
+  separate. No physical LRC walk or LRC(14) decrement is asserted. A
+  post-promotion VERIFIED-EXACT addendum proves that the seam's raw twelve
+  target-phase counts already decode all 168 sources without being given the
+  source phase, with seven coordinates necessary and sufficient; independent
+  delta audit is pending.
 source: root/2026-08-03
 audit: >
   The assertion-independent companion pins THM-3246, THM-3267 and THM-3268,
@@ -21,7 +25,11 @@ audit: >
   polynomials, resultant-based Fourier norms and separate Rabin powering. It
   reproduced every quotient, recurrence, factorization, digest and hostile
   without importing the target companion. Normal, optimized and stored
-  outputs agree byte-for-byte.
+  outputs agree byte-for-byte. The post-promotion companion additionally
+  exhausts all source pairs for the raw seam decoder, its exact separation
+  metrics, every six- and seven-coordinate projection, degree sidecar, cyclic
+  window and scalar-normalized straight-arc conjugacy; independent audit of
+  only this delta is pending.
 depends_on:
   - THM-3246-all-dilation-second-owner-seam-stabilization-and-sign-word
   - THM-3267-norm-phase-factorization-ladder-and-projective-determinant-blindness
@@ -30,8 +38,8 @@ related:
   - THM-3273-critical-group-c12-quotient-and-relative-c7-equivariance-boundary
 script: 04-computation/lrc_constrained_norm_phase_transfer_atlas_20260803.py
 output: 05-knowledge/results/lrc_constrained_norm_phase_transfer_atlas_20260803.out
-script_sha256: 00ac273344020cdc569b75ba314438497d5462f8871f3343e83419ceba95387a
-output_sha256: 680359f4fd51bdfb89bfb66b7bfae709ebb1e96a453f3ac6ec73707cf93a7597
+script_sha256: 24a77d063bc36b45c43d10427124a33b68e8972e63fa97ddfdeba305d0cdb523
+output_sha256: bdd318c9cd54a7ac26aaacf6e7bd199288192aaf8d7c5413b7641deeb5915b99
 hash_basis: LF-normalized bytes
 ---
 
@@ -106,6 +114,17 @@ gcd(x^(331^6)-x,p)=gcd(x^(331^4)-x,p)=1 mod 331.         (6)
 
 Hence `(5)` is irreducible over `Q`. Because `(4)` is symmetric, it has
 twelve distinct real algebraic eigenvalues.
+
+There is therefore no nonzero proper rational `Q_0`-invariant phase sector.
+For every nonzero `v in Q^12`, the cyclic list
+
+```text
+v,Q_0v,...,Q_0^11v                                      (6a)
+```
+
+is a basis. Symmetry gives the dual observability statement as well. In this
+precise rational sense, restricting to one norm fibre destroys THM-3268's
+constant-plus-augmentation split maximally.
 
 Let `C_n(d)` count paths aggregated over sources whose terminal/source phase
 difference is `d`. Every `C_n(d)` obeys the order-12 recurrence defined by
@@ -211,6 +230,46 @@ all fourteen points have distinct outgoing profiles. The first outgoing
 refinement therefore has 168 singleton cells. Hence the coarsest
 outgoing-equitable refinement which refines phase is the full point/Singer-
 exponent partition. The setwise stabilizer of `N` in `GL_2(F_13)` is trivial.
+
+The source phase used by that refinement is in fact redundant. Define the raw
+target-phase histogram
+
+```text
+H_N(x)_r=#{t in N:x+t!=0, phi(x+t)=r},       r in C_12. (15a)
+```
+
+The 168 vectors `H_N(x)` are pairwise distinct. Their minimum pairwise `L1`
+distance is 2, their minimum number of differing coordinates is 2, and their
+affine span has dimension 12. Thus `(15a)` is a complete discrete tomography
+chart `X -> Z_nonnegative^12`, without an externally supplied source phase.
+
+Only seven count coordinates are needed, and seven is sharp. Exactly 21 of
+the `binom(12,7)` coordinate sets remain injective; the lexicographically
+first is
+
+```text
+{0,1,2,5,8,9,11}.                                      (15c)
+```
+
+No six-coordinate projection is injective. The best one,
+`{0,1,3,5,6,8}`, has 166 signatures, consisting of 164 singleton fibres and
+two double fibres. Appending the total degree `sum_r H_N(x)_r in {11,12}`
+still leaves every six-coordinate projection noninjective. Among cyclic
+consecutive windows the sharp length is eight, attained for starting phases
+`4,7,8,9,10,11`.
+
+Multiplication by `alpha^6` sends `N` to the straight arc
+`{alpha^0,...,alpha^11}`. More generally, for `c in X`,
+
+```text
+H_(cN)(cx)=shift_(phi(c)) H_N(x).                       (15b)
+```
+
+Here `shift_s(h)_r=h_(r-s)`. Hence every scalar copy, including the straight
+arc, is again a raw point decoder. Frobenius conjugacy preserves the same
+conclusion. This is still an
+abstract varying-increment query: it does not construct a physical seam
+measurement or same-ancestry packet.
 
 Restore zero and let `B_N` be the 169-vertex additive Cayley adjacency for
 increment set `N`. Let `A_N` be its principal submatrix on `X`. Additive
