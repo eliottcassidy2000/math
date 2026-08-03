@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-360 (2026-08-02, THM-3214 offset-six application) -- canonical PRS rows were identified literally with unnormalized iterates
+
+- **What failed:** the first promoted wording of THM-3214 equation `(25)`
+  identified the raw second pivot and connection literally with
+  `P_2(r,a)` and `P_1(s,r)`.  The fraction-free operator is homogeneous:
+  rescaling an earlier row propagates accumulated unit powers into later
+  iterates.  The displayed `r,s` in THM-3192 are canonical renormalized PRS
+  rows, not the unnormalized iterates of THM-3214 equation `(7)`.
+- **Why it did not invalidate the theorem:** the accumulated factors are
+  `p`-units on the stated `p>=197` range.  They neither change the `H,J,K`
+  chart ideals nor the `2,4,5` jet-locality budget, and the universal locality
+  and Catalan sharpness statements never use the mistaken literal equality.
+- **Repair:** state `(25)` after the standard `p`-unit row renormalizations and
+  identify the three canonical `P_2/P_1` coordinates by their generated ideals
+  and jet orders.  When comparing a homogeneous fraction-free recurrence with
+  a normalized PRS atlas, track the row gauge before asserting equality;
+  equality of principal ideals is not equality of raw representatives.
+
 ## MISTAKE-359 (2026-08-02, THM-3183 top-jet evidence) -- an exact symbolic helper admitted a float and constructed two truncated rows without their predecessors
 
 - **What failed:** THM-3183's maintained companion described its offset-six
