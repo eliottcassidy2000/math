@@ -65,6 +65,35 @@ def transfer_matrix(n, d, v):
     ]
 
 
+def exterior_square(matrix):
+    pairs = [(0, 1), (0, 2), (1, 2)]
+    return [
+        [
+            (matrix[row_a][column_a] * matrix[row_b][column_b]
+             - matrix[row_a][column_b] * matrix[row_b][column_a])
+            for column_a, column_b in pairs
+        ]
+        for row_a, row_b in pairs
+    ]
+
+
+def determinant_three(matrix):
+    return (
+        matrix[0][0]
+        * (matrix[1][1] * matrix[2][2] - matrix[1][2] * matrix[2][1])
+        - matrix[0][1]
+        * (matrix[1][0] * matrix[2][2] - matrix[1][2] * matrix[2][0])
+        + matrix[0][2]
+        * (matrix[1][0] * matrix[2][1] - matrix[1][1] * matrix[2][0])
+    )
+
+
+def minimum_entry_valuation(matrix, prime):
+    entries = [entry for row in matrix for entry in row if entry]
+    require(entries, "nonzero determinantal-divisor matrix")
+    return min(valuation(entry, prime) for entry in entries)
+
+
 def transfer_product(length, d, v, prime):
     answer = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
     for n in range(length):
@@ -171,7 +200,24 @@ def check_unit_resets():
         require(d % prime and discriminant % prime, "unit reset fixture")
         h = valuation(n_block, prime)
 
-        x_minor = -n_block * d
+        weighted = transfer_matrix(n_block - 1, d, v)
+        compound = exterior_square(weighted)
+        expected_compound = [
+            [-n_block**2 * discriminant, 2 * n_block * d**2,
+             -n_block * d],
+            [0, -n_block * d, 2 * n_block * v * d],
+            [0, -n_block * d * (2 * n_block + 1 + 2 * d),
+             n_block * d * (1 + 2 * v * (2 * n_block + 1))],
+        ]
+        require(compound == expected_compound,
+                "exact exterior-square reconstruction")
+        require(
+            all(entry == 0 or valuation(entry, prime) >= h
+                for row in compound for entry in row),
+            "all weighted 2x2 minors contain reset thickness",
+        )
+
+        x_minor = compound[0][2]
         x_determinant = -d * n_block**2 * discriminant
         require(valuation(x_minor, prime) == h, "X second divisor")
         require(valuation(x_determinant, prime) == 2 * h,
@@ -188,11 +234,23 @@ def check_unit_resets():
         require(valuation(n_block * discriminant, prime) == h,
                 "output gauge index")
 
+        require(all(entry % n_block == 0 for row in compound for entry in row),
+                "exact N divisibility of exterior layer")
         first_layer = [
+            [entry // n_block for entry in row]
+            for row in compound
+        ]
+        expected_first_layer = [
             [0, 2 * d**2, -d],
             [0, -d, 2 * v * d],
             [0, -d * (1 + 2 * d), d * (1 + 2 * v)],
         ]
+        require(
+            [[entry % prime for entry in row] for row in first_layer]
+            == [[entry % prime for entry in row]
+                for row in expected_first_layer],
+            "derived normalized exterior first layer",
+        )
         minors = []
         for row_a, row_b in [(0, 1), (0, 2), (1, 2)]:
             minors.append(
@@ -201,8 +259,26 @@ def check_unit_resets():
             )
         expected = (-d**2 * discriminant) % prime
         require(minors == [expected] * 3, "exterior first-layer minors")
-        require((4 * d * v - 1) % prime == -discriminant % prime,
-                "exterior second-layer return")
+        require(expected != 0, "normalized exterior rank two")
+        require([row[0] % prime for row in first_layer] == [0, 0, 0],
+                "normalized exterior right kernel")
+        require(
+            [
+                (first_layer[0][column] - first_layer[1][column]
+                 + first_layer[2][column]) % prime
+                for column in range(3)
+            ] == [0, 0, 0],
+            "normalized exterior left kernel",
+        )
+        require(
+            all(compound[row][0] % n_block**2 == 0 for row in range(3)),
+            "exact N-squared missing-column divisibility",
+        )
+        second_layer_column = [
+            compound[row][0] // n_block**2 % prime for row in range(3)
+        ]
+        require(second_layer_column == [-discriminant % prime, 0, 0],
+                "derived exterior second-layer return")
     return len(fixtures)
 
 
@@ -215,15 +291,41 @@ def check_discriminant_walls():
         h = valuation(n_block, prime)
         require(valuation(discriminant, prime) == t,
                 "discriminant-wall order")
-        require(
-            valuation(-d * n_block**2 * discriminant, prime) == 2 * h + t,
-            "X wall determinant",
-        )
-        require(
-            valuation(-(n_block - 1) * n_block * discriminant * d, prime)
-            == h + t,
-            "scalar wall determinant",
-        )
+
+        weighted = transfer_matrix(n_block - 1, d, v)
+        weighted_minors = exterior_square(weighted)
+        weighted_determinant = determinant_three(weighted)
+        require(minimum_entry_valuation(weighted, prime) == 0,
+                "X wall first divisor")
+        require(minimum_entry_valuation(weighted_minors, prime) == h,
+                "X wall second determinantal divisor")
+        require(valuation(weighted_determinant, prime) == 2 * h + t,
+                "X wall determinant")
+
+        scalar = [
+            [2 * n_block * (2 * n_block - 1) * v,
+             (n_block - 1) * n_block * discriminant,
+             d - n_block],
+            [1, 0, 0],
+            [0, 0, d],
+        ]
+        scalar_minors = exterior_square(scalar)
+        scalar_determinant = determinant_three(scalar)
+        require(minimum_entry_valuation(scalar, prime) == 0,
+                "scalar wall first divisor")
+        require(minimum_entry_valuation(scalar_minors, prime) == 0,
+                "scalar wall second determinantal divisor")
+        require(valuation(scalar_determinant, prime) == h + t,
+                "scalar wall determinant")
+
+        exterior_minors = exterior_square(weighted_minors)
+        exterior_determinant = determinant_three(weighted_minors)
+        require(minimum_entry_valuation(weighted_minors, prime) == h,
+                "exterior wall first divisor")
+        require(minimum_entry_valuation(exterior_minors, prime) == 2 * h + t,
+                "exterior wall second determinantal divisor")
+        require(valuation(exterior_determinant, prime) == 4 * h + 2 * t,
+                "exterior wall determinant")
         require(valuation((n_block - 1) * discriminant, prime) == t,
                 "wall input gauge")
         require(valuation(n_block * discriminant, prime) == h + t,

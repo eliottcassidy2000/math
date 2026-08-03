@@ -12,9 +12,9 @@ audit: >
   The pure-integer companion checks 720 complete multiblock state descents,
   744 full rank-one block-propagator identities, the resonant-pair corollary,
   reset determinantal divisors at ordinary and carried block numbers,
-  universal normalized exterior layers, and discriminant walls of orders one
-  and two.  Normal and optimized replay agree with the stored transcript.
-  Independent immutable audit is pending.
+  exact compound-matrix reconstruction and both normalized exterior layers,
+  and discriminant walls of orders one and two.  Normal and optimized replay
+  agree with the stored transcript.  Independent immutable audit is pending.
 source: root/multiscale-newton-flag/low-child-flag-extension/2026-08-02
 depends_on:
   - THM-3182-factorial-gauss-manin-rank-one-reset-and-two-transverse-smith-bands
@@ -23,7 +23,7 @@ related:
   - THM-3178-squarefree-resultant-tangent-cone-and-first-witt-norm
 script: 04-computation/factorial_multiblock_witt_carry_reset_thm3185.py
 output: 05-knowledge/results/factorial_multiblock_witt_carry_reset_thm3185.out
-script_sha256: 890bc509395817290d9d3628720fd9e28d7f42f9bda00223192ac33df3aa7106
+script_sha256: 7b30fe78ca9d93bd843a6d0b110396650723c13c2aa2578e87424cf259e3b733
 output_sha256: 1c0b963c5e4eb15f213829feb67d2bb6968a264a356f429c08560ca68bcab407
 hash_basis: LF-normalized bytes
 ---
@@ -168,9 +168,10 @@ with
 det G_(N-1)=-dN^2 Delta.                                    (12)
 ```
 
-Work over the height-one `p`-adic DVR and assume first that `d Delta` is a
-unit.  The entry `d` is a unit, every `2x2` minor is divisible by `N`, and the
-minor on rows `(1,3)` and columns `(1,3)` is exactly `-Nd`.  Therefore
+Work over `Z_p`, or an unramified `p`-adic DVR with valuation normalized by
+`v_p(p)=1`, and assume first that `d Delta` is a unit.  The entry `d` is a
+unit, every `2x2` minor is divisible by `N`, and the minor on rows `(1,3)` and
+columns `(1,3)` is exactly `-Nd`.  Therefore
 
 ```text
 Smith(G_(N-1))=(1,p^h,p^h)                                  (13)
@@ -273,7 +274,7 @@ rephases the displayed layer.
 
 ## 6. Complete discriminant-wall valuation
 
-More generally suppose `Delta!=0` and put
+More generally retain `d` as a `p`-adic unit, suppose `Delta!=0`, and put
 
 ```text
 t=v_p(Delta)>=0.                                            (25)
@@ -387,8 +388,11 @@ and compare LF-normalized bytes with the declared output.  The companion uses
 integer arithmetic only.  It reconstructs direct `M,X,D` rows for 720
 multiblock tests, verifies 744 complete rank-one block propagators, checks the
 resonant-pair specialization, and verifies ordinary, carried, and twice-carried
-reset thicknesses.  It checks the normalized exterior layer, both finite
-discriminant-wall orders, the global Legendre/telescoping ledger, and primitive
+reset thicknesses.  It reconstructs the exact compound transfer from `(11)`,
+checks its divisibility by `N`, derives `(21)`, and separately derives the
+`N^2`-normalized missing-column return `(23)`.  It also checks both finite
+discriminant-wall orders from the actual weighted, scalar, and exterior
+determinantal divisors, the global Legendre/telescoping ledger, and primitive
 block-colour cycles.  There is no floating point, random sampling, imported
 executable, or assertion-sensitive test.
 
