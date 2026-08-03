@@ -46,8 +46,8 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    HYP-8930's fixed-support unique-channel lemma survives. HYP-8931 is vacuous:
    `lambda=0, delta=-1, F=empty`; `98/116` is a bounded census, not a theorem (MISTAKE-240).
 9. **Whole-packet Frobenius is not an LRC proof.** THM-3255 has multiplicative ranks `157/168`, slice additive rank at most 7, and marker ranks `11/12`. THM-3267's chosen-Singer phase ladder is full `q:C_12`, `[q]:C_2` parity, `det(q,R):trivial`. Same-ancestry `(q,R)` allocation and LRC exit remain open.
-10. **Tournament structure is operational.** THM-1862/1936/2195 give join/substitution laws; THM-3181/3202/3248 give exact jet/Q4 response.
-   THM-3260's nonplanar bispanning reset-link core has `beta_1=11` but only `C_2` symmetry: a cycle/cut atlas, not a `C_12` or tournament carrier. Observer twins block scalar compression; Q4 radius stays open.
+10. **Tournament structure is operational.** THM-1862/1936/2195 give join/substitution laws; THM-3181/3202/3248 give response laws.
+   THM-3260/3273 give a nonplanar bispanning graph and intrinsic order-12 critical quotient, but only six vertex classes: relative phase, not a torsor or tournament. Q4 radius stays open.
 11. **Sequences need support and multiplicity profiles.** THM-2000/2005/2352 separate support, collision tax, and q-adic thresholds; THM-2438/2500 give Poisson--Newton and finite-hole laws.
     THM-3186 gives P-recursive tails; THM-3256/3262 separate factored distance, signed continuation, and a catalytic face label. THM-3268 gives abstract `Q=14J-I`, spectrum `167/-1`, and `C[n+2]=166C[n+1]+167C[n]`; this is not a physical LRC walk. Q4 radius/non-P and `FC(3)` stay open.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close linear through cubic fibers and twice-odd finite poles; THM-2214/2217/2247 close the inherited nonsplit train through degree `14`.

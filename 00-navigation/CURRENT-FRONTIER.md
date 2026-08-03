@@ -398,7 +398,7 @@ Classify profiles under support operations; study analytic continuation and auto
   fixed-parameter Clifford law. THM-3186 gives P-recursive tails; THM-3210's
   two-step nonmonotone cancellation ray still blocks the staircase. The `p>2m`
   full-flag formula is VERIFIED only; `FC(3)`/`SFC(3)` remain OPEN.
-  THM-3249 gives the two-face atlas. THM-3256/3262 give row 2/10 a compact policy, one-bit join, and signed tax `80`. THM-3266 proves one static face bit exact for all 24 common fixed pairs (pair identity supplied); THM-3260 gives their noncanonical bispanning cycle atlas. Unrestricted 22-row selection and other faces stay open.
+  THM-3249 gives the two-face atlas; THM-3256/3262 give row 2/10 a policy, one-bit join, and signed tax `80`; THM-3266 makes one bit exact for all 24 common fixed pairs (pair identity supplied). THM-3260/3273 add a bispanning atlas and relative `C_12`, not a torsor. Unrestricted 22-row selection and other faces stay open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
@@ -426,7 +426,7 @@ The most reusable current bridges are not literal object identifications:
 | Continuation / min-plus kernel | Gordian profile; THM-840/853 | Which sidecar remains target-preserving under every future operation? |
 | Relation-cone carry atlas | THM-2196/2199 | Carry charts still need phase, SCC order, continuation, or JC residue/flux. |
 | Transverse-information tax | THM-2612/2615/2573 | Retain a pole, endpoint, or normal when a locus erases charge. |
-| Phase reconstruction | THM-2307/2022 | Scalar codes can be impostors; retain signed coefficient current. Not a GMC-to-LRC reduction. |
+| Phase reconstruction | THM-3267/3273 | Absolute norm phase and relative critical quotient differ; retain generator and row-to-owner map. Not an LRC reduction. |
 | Integrality/support holes | THM-2200 | Holes can fill under powers while prime dilates die; retain coefficients and sidecars. |
 | Weighted-sector obstruction | THM-2045 factorized `R` family | Does the unique constant-producing sector fail on a broader Lee–Li inner edge? |
 

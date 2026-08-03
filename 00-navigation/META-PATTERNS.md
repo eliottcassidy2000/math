@@ -136,7 +136,7 @@ predicate, kernel, lost coordinate and sidecar; quotient occurrences only
 after checking freeness. If a finite label controls a later choice, retain it
 as a marker and, after abelianization, as a catalytic variable. **Mechanism /
 caution:** kernels are gauge only when every consumer kills them; signed complements need not be positive observables. **Evidence:** THM-840/2355,
-3255/3262/3266/3267, THM-2000/2005, and MISTAKE-310.
+3255/3262/3266/3267/3273, THM-2000/2005, and MISTAKE-310.
 
 ## Test whether a central extension changes the base signature
 
@@ -169,7 +169,7 @@ does not itself provide the external arm selector.
 **Trigger / action:** when two frontiers share a group module or become isomorphic after isotypic projection, identify the sector, commutant/multiplicity space, and realization functor; test neutral blocks and the target predicate.
 **Mechanism:** characters forget positivity, occurrences, base geometry, endpoint phase, and stabilizers. A charged isomorphism can coexist with a neutral rank defect; one observer removes multiplicity ambiguity only through an exact cyclic determinant.
 **Counterindication:** transfer only through an explicit predicate-preserving functor. A nonzero determinant gives a linear frame, not a positive, set-level, or larger-symmetry clutch.
-**Evidence:** THM-2648/2655, THM-2455/2598/3105/3108, THM-3243/3250/3255/3260.
+**Evidence:** THM-2648/2655, THM-2455/2598/3105/3108, THM-3243/3250/3255/3260/3273.
 
 ## After a scalar quotient, choose between a coherent lift and orbit incidence
 

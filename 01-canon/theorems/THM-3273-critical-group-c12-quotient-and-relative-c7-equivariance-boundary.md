@@ -2,7 +2,7 @@
 id: THM-3273
 title: "Critical-group C12 quotient and relative C7 equivariance boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   THM-3260's twelve-vertex core has cyclic critical group C_74748 and
   therefore a canonical Hall-{2,3} quotient C12.  Its Abel--Jacobi vertex
   image occupies only six classes, with multiplicities 3,3,3,1,1,1, so it
@@ -17,8 +17,12 @@ audit: >
   Laplacians, computes their exact Smith forms, verifies a primitive adjugate
   coordinate and every C12 vertex/pair/edge label, computes the saturated
   relative boundary and explicit basis, and checks both C2 signatures.
-  Normal, optimized and stored output agree byte-for-byte.  Independent
-  hostile audit is pending.
+  Normal, optimized and stored output agree byte-for-byte. An independent
+  reconstruction recovered all three Smith groups from determinantal
+  divisors, the primitive adjugate chart, every vertex/pair/edge difference,
+  the automorphism multiplier, the full saturated relative kernel and both
+  possible affine-C7 involution signatures. It also closed the companion's
+  nonblocking lattice-index audit gap directly from the kernel equations.
 depends_on:
   - THM-3260-bispanning-reset-link-holotopy-atlas-and-nonplanar-c12-boundary
 related:
@@ -33,7 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3273 -- critical-group C12 quotient and relative C7 equivariance boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3260 shows that the first-link core has Betti number eleven and the delayed
 relative layer has rank six, matching the dimensions of the `C_12` and `C_7`
@@ -204,12 +208,12 @@ that a critical-group character is an existing physical observable.
 Run
 
 ```text
-python 04-computation/gmc_critical_group_phase_carrier_thm3273.py
-python -O 04-computation/gmc_critical_group_phase_carrier_thm3273.py
+python3 04-computation/gmc_critical_group_phase_carrier_thm3273.py
+python3 -O 04-computation/gmc_critical_group_phase_carrier_thm3273.py
 ```
 
 and compare LF-normalized bytes with the declared output.  The companion uses
 exact integer Smith reduction and adjugate arithmetic, contains no floating
 point or randomness, and raises explicitly on every failed certificate.
 
-QED, pending independent hostile audit.
+QED.

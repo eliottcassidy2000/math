@@ -1,6 +1,6 @@
 # Cross-frontier information-loss atlas and next exact tests
 
-**Status: CURRENT SYNTHESIS of proved canon through THM-3268.** The theorem
+**Status: CURRENT SYNTHESIS of proved canon through THM-3273.** The theorem
 files named below are the proof sources. This note connects mechanisms and
 open contracts; it does not assert a reduction among `LRC(14)`, `FC(3)`,
 `JC(2)`, tournament problems, or sequence problems.
@@ -21,7 +21,9 @@ The present portfolio has one anchor, one niche cluster, and one wildcard.
   rail-sheet germ, stopping just before endpoint allocation.
 - New exact boundary: THM-3267 says precisely which abstract endpoint data
   retains the norm phase; THM-3268 says how that phase mixes under freely
-  varying nonzero increments.
+  varying nonzero increments. THM-3273 supplies an intrinsic order-twelve
+  relative divisor quotient on the response graph, but no absolute generator,
+  vertex torsor or row-to-owner map.
 
 The anchor remains open because none of these objects constructs the required
 same-ancestry physical `(q,R)` record, owner-to-endpoint intertwiner, lawful
@@ -36,8 +38,9 @@ positive current, row exclusion or LRC decrement.
 - New exact boundary: THM-3262 prices this loss for rows `{2,10}`; THM-3266
   proves it for every one of the 24 row pairs covering both promoted faces.
 - Least-used graph sidecar: THM-3260 turns the first-link-blocked pair graph
-  into a complete bispanning exchange atlas while proving that its numerical
-  phase-rank matches are noncanonical.
+  into a complete bispanning exchange atlas. THM-3273 strengthens its bare
+  rank match to a canonical order-twelve critical-group quotient: all twelve
+  pair differences occur, but the vertices occupy only six absolute classes.
 
 This niche remains short of `FC(3)`: availability on two bank-I2 faces is not
 Gaussian-moment positivity, and no unrestricted 22-row selector or other-face
@@ -59,8 +62,9 @@ The wildcard remains a controlled local atlas, not progress closing `JC(2)`.
 
 | theorem | exact gain | mechanism | hard boundary |
 |---|---|---|---|
-| THM-3255 | whole/single-phase multiplicative ranks `157/168`; whole additive rank `13`, slice rank at most `7`; centered/signed marker rank `11`, nonnegative marker minimum `12` | disintegrate by the `C_12` norm phase before changing representation | no physical endpoint marker or LRC exit |
-| THM-3260 | reset-link core: `12` vertices, `22` edges, `beta_1=11`, nonplanar, `Aut=C_2`; `4,960` complementary tree pairs in one exchange component; delayed relative rank `6` | integral tree/cotree polarizations and symmetric exchange | no canonical `C_12`/`C_7` label, chart, tournament, positive response or LRC carrier |
+| THM-3255 | whole/single-phase multiplicative ranks `157/168`; whole additive rank `13`, slice rank at most `7`; centered/signed marker rank `11`; every nonzero nonnegative filling marker has rank at least `12`, sharply | disintegrate by the `C_12` norm phase before changing representation | no physical endpoint marker or LRC exit |
+| THM-3260 | reset-link core: `12` vertices, `22` edges, `beta_1=11`, nonplanar, `Aut=C_2`; `4,960` complementary tree pairs in one exchange component; delayed relative rank `6` | integral tree/cotree polarizations and symmetric exchange | no faithful `C_12`/`C_7` graph action or vertex torsor; THM-3273 supplies only a relative divisor quotient |
+| THM-3273 | `Jac(G_0)=C_74748` has a canonical order-12 quotient; vertices occupy six classes with multiplicities `3,3,3,1,1,1`; all 12 pair differences occur, while core edges miss `4,8`; delayed `Z^6` has involution signature `(5,1)` | reduced-Laplacian Smith form, Abel--Jacobi differences and saturated relative homology | no absolute generator, vertex torsor, row-to-owner phase map, `C_7` equivariance, positive response or LRC carrier |
 | THM-3262 | rows `{2,10}` need one face bit; threshold-tree Pareto points `(6,23)` and `(8,22)`; collision taxes raw `239`, signed-Parikh `80`, controller-ordered `22` | retain the origin face as a static/catalytic label | tree optimum is only in the declared threshold class; no FC(3) |
 | THM-3266 | exactly `24` common fixed row pairs; every pair is obstructed at singleton `(5)`; conflict union `47`, common intersection `6`; one static face bit is exact for all `109,344` tagged cases | the singleton availability sets form a seven-by-seven bipartition and every common pair crosses it | pair identity is supplied; unrestricted 22-row selection and other faces remain open |
 | THM-3263 | degree seven reopens and retunes the old infinity wall, leaving a nonzero quartic edge and degree-`51` residual | divide the wall multiplicity, retain the transverse parameter, then retune | four critical-resultant roots escape; this is not cover inertia |
@@ -69,7 +73,8 @@ The wildcard remains a controlled local atlas, not progress closing `JC(2)`.
 | THM-3268 | `Q=14J_12-I_12`, spectrum `167,(-1)^11`; two closed forms, order-two recurrence and rational OGFs; uniform `F_(q^2)/F_q` theorem | equitable quotient of the loopless complete nonzero-point walk | increments vary freely; repeating one translation and physical ancestry do not obey `Q` |
 
 Every row above has an exact companion, frozen output and normal/optimized
-replay. THM-3265--3268 also passed an independent hostile reconstruction.
+replay. THM-3260, THM-3265--3268 and THM-3273 also passed independent hostile
+reconstruction.
 
 ## 3. One real meta-mechanism: price information loss
 
@@ -85,9 +90,9 @@ The current instances are:
 
 | source and map | preserved predicate | destroyed information | exact sidecar / next test |
 |---|---|---|---|
-| `q -> [q] -> det(q,R)` in THM-3267 | norm-phase parity survives `[q]`; determinant-fibre sizes remain exact | the internal `C_6` phase, then all absolute phase | retain full `q` plus a chosen norm gauge; allocate `(q,R)` on one THM-2791 ancestry sheet |
+| parallel maps `(q,R)->q->[q]`, `(q,R)->v=det(q,R)`, and `(q,R)->([q],v)` in THM-3267 | full `q` retains phase; `[q]` and `([q],v)` retain parity; `v` retains none | projectivization loses the internal `C_6`; determinant alone loses all phase | retain full `q` plus a chosen norm gauge; allocate `(q,R)` on one THM-2791 ancestry sheet |
 | `(face,n,pair) -> (n,pair)` in THM-3262/3266 | unmarked distance data and the fixed pair | which endpoint is lawful | one face-origin bit; test other faces and then the unrestricted 22-row bank |
-| labelled reset graph -> unlabeled graph in THM-3260 | cycle rank and the connected tree-pair atlas | cyclic vertex label and distinguished polarization | one supplied `C_12` vertex label plus one ordered tree pair; verify any transported predicate, not just rank |
+| `(v,w)->[v-w]` from `V(G_0)^2` to `Jac(G_0)/12Jac(G_0)` in THM-3273 | all twelve pair-difference classes | absolute origin/generator and vertex injectivity; the core-edge image omits `4,8` | supply a physical row-to-owner phase map and absolute marker; test the response predicate on edges |
 | full point walk -> norm phase in THM-3268 | endpoint phase-difference multiplicities | point, increment word, intermediate geometry and ancestry | retain the increment automaton; the repeated-fixed-translation walk is the hostile |
 | critical divisor -> saturated reciprocal resultant in THM-3263/3265 | local intersection multiplicity and Newton edge | root identity, cofactor unit, normalization sheet and affine second coordinate | rebuild a branchwise Keller/cofactor record before reading the cycle as cover inertia |
 
@@ -98,7 +103,11 @@ equal. In particular:
   abstract phase-coordinate space in the chosen model.
 - THM-3260's `beta_1=11` is only dimensionally resonant with that space. Its
   graph has no faithful `C_12` action; an external vertex label and tree chart
-  are load-bearing.
+  remain load-bearing for THM-3260's conditional integral bridge.
+- THM-3273 supplies a genuine intrinsic order-twelve quotient for relative
+  divisor classes, not an identification with the THM-3255 norm phase. Its
+  six-class vertex image, missing edge differences and absent generator leave
+  the absolute marker and row-to-owner map open.
 - THM-3262/3266's one face bit is an origin tag, not a norm phase or graph
   polarization.
 
@@ -142,16 +151,18 @@ forms while testing exactly the sidecars a physical LRC bridge would need.
 
 None of the newest cross-frontier carriers is naturally a tournament.
 
-- The FC pair atlas is an undirected covering graph. At a state, rows can tie,
-  both fail, or both be lawful; forcing an orientation would erase the
-  availability predicate.
-- THM-3260's useful structure is bipartite cycle/cut duality and tree
-  exchange. Its nonplanarity and small automorphism group are information, not
-  defects to hide with a total orientation.
+- The FC pair atlas is an undirected covering graph. On a covering edge and
+  declared face, ties and both-lawful states occur; joint failure occurs for
+  non-covering pairs or outside that face universe. Forcing an orientation
+  would erase the availability predicate.
+- THM-3260/3273's useful structures are bipartite cycle/cut duality, tree
+  exchange and relative divisor classes. Their nonplanarity, small
+  automorphism group and six-class vertex image are information, not defects
+  to hide with a total orientation.
 - THM-3268's point graph contains both directed arcs between distinct points;
   choosing one arc would halve the operation and destroy `Q=14J-I`.
-- Critical-resultant roots in the JC chart have no intrinsic pairwise
-  observable whose orientation preserves the Keller target.
+- No intrinsic pairwise observable preserving the Keller target has been
+  supplied or proved for the critical-resultant roots in these JC charts.
 
 The legitimate tournament lane remains operation-response: joins,
 substitutions, SCC cores, duality, switching and observer coordinates. A new
@@ -208,9 +219,10 @@ fails.
 4. **JC cofactor test:** attach branch labels and the Keller cofactor to the
    degree-six strict transform. Count success only if the target is an inverse
    cover or a genuine obstruction, not another resultant statistic.
-5. **Graph/tournament discipline:** study the THM-3260 exchange graph with its
-   native symmetric-exchange operation. Introduce an orientation only if a
-   pairwise observable is intrinsic and the response predicate survives it.
+5. **Graph/tournament discipline:** test whether THM-3273's relative divisor
+   classes interact lawfully with the FC response operation, including the
+   missing edge phases `4,8`. Study the THM-3260 exchange graph through native
+   symmetric exchange; orient only an intrinsic, target-preserving observable.
 6. **Catalytic sequence consumption:** when combining the two FC faces, keep
    separate variables for origin face and pair identity. Specializing the face
    variable to one preserves the distance shadow but is known to destroy the
@@ -222,10 +234,11 @@ The session produced progress on all requested lanes without blending their
 truth types:
 
 - a sharper abstract LRC phase boundary and a concrete physical next object;
-- a universal two-face fixed-pair obstruction for the FC3 response program;
+- an obstruction for all 24 common covering pairs on the two promoted bank-I2
+  faces in the FC3 response program;
 - one further exact planar-JC infinity-wall step with a named stopping debt;
-- a native graph/cycle atlas that marks where tournament language is and is
-  not lawful; and
+- a native graph/cycle atlas and canonical relative order-twelve quotient that
+  mark where tournament language is and is not lawful; and
 - a uniform finite-field closed form that computes an exponential path
   sequence in logarithmically many integer multiplications.
 
