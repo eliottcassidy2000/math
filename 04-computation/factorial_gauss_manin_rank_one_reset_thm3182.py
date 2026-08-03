@@ -127,6 +127,7 @@ def compound_matrix(matrix):
 def main():
     transfer_checks = 0
     scalar_checks = 0
+    gauge_checks = 0
     determinant_checks = 0
     for d in [3, 8, 17]:
         for n in range(8):
@@ -146,6 +147,21 @@ def main():
                     "eliminated scalar recurrence mismatch",
                 )
                 scalar_checks += 1
+                gauge_left = scale(shift_v(state[1]), 2)
+                gauge_right = add(
+                    add(
+                        current,
+                        scale(shift_v(current), 2 * (2 * n + 1)),
+                    ),
+                    add(
+                        add(scale(previous, n),
+                            scale(shift_v(previous), -4 * d * n)),
+                        [-state[2]],
+                    ),
+                )
+                require(gauge_left == gauge_right,
+                        "weighted/scalar gauge identity")
+                gauge_checks += 1
 
     descent_checks = 0
     reset_checks = 0
@@ -181,6 +197,7 @@ def main():
 
     smith_checks = 0
     compound_checks = 0
+    scalar_smith_checks = 0
     for prime, offset, v in [(7, 2, 2), (11, 3, 2), (13, 5, 4), (17, 6, 3)]:
         d = prime + offset
         discriminant = 1 - 4 * d * v
@@ -249,6 +266,21 @@ def main():
         )
         compound_checks += 1
 
+        # The scalar companion lattice Y=(M_n,M_(n-1),D_n) has reset
+        # Smith type (1,1,p).  The gauge to X has determinant
+        # n*Delta/(2v), unit at n=p-1 and p-divisible at n=p.
+        scalar_b = (prime - 1) * prime * discriminant
+        scalar_determinant = -scalar_b * d
+        require(valuation(d, prime) == 0, "scalar first divisor")
+        require(valuation(d, prime) == 0, "scalar unit 2x2 minor")
+        require(valuation(scalar_determinant, prime) == 1,
+                "scalar companion determinant")
+        require(valuation((prime - 1) * discriminant, prime) == 0,
+                "input gauge determinant")
+        require(valuation(prime * discriminant, prime) == 1,
+                "output gauge determinant")
+        scalar_smith_checks += 1
+
     # Simple discriminant wall: p=7,d=9,v=1 has Delta=-35.
     wall_prime, wall_d, wall_v = 7, 9, 1
     wall_discriminant = 1 - 4 * wall_d * wall_v
@@ -280,11 +312,13 @@ def main():
     print("FACTORIAL GAUSS--MANIN RANK-ONE RESET EXACT CONTROL")
     print(f"transfer_direct_checks={transfer_checks}")
     print(f"scalar_recurrence_checks={scalar_checks}")
+    print(f"weighted_scalar_gauge_checks={gauge_checks}")
     print(f"determinant_checks={determinant_checks}")
     print(f"rank_one_reset_checks={reset_checks}")
     print(f"full_state_descent_checks={descent_checks}")
     print(f"smith_type_1_p_p_checks={smith_checks}")
     print(f"exterior_square_p_p_p2_checks={compound_checks}")
+    print(f"scalar_companion_smith_1_1_p_checks={scalar_smith_checks}")
     print("simple_discriminant_wall_smith=1,p,p^2")
     print("p_divides_s_hostile=zero_reset")
     print("ALL EXACT CHECKS PASSED")

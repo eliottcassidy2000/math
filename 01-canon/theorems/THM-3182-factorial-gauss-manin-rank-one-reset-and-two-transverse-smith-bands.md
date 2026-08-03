@@ -6,16 +6,18 @@ status: >
   The quadratic factorial moments and their first x-weighted companions form
   an exact three-state Gauss--Manin transfer.  At d=p+s each p-period has a
   rank-one Frobenius reset, the entire state descends from
-  degree p+a to degree a, and its generic height-one Smith type is (1,p,p).
-  This exposes two transverse p-adic directions but does not by itself prove
+  degree p+a to degree a, and its generic height-one Smith type in the
+  x-weighted integral lattice is (1,p,p).  This exposes two transverse
+  p-adic directions in that specified lattice but does not by itself prove
   the observed floor(s/2) Euclidean-depth staircase.
 audit: >
   The pure-integer companion checks the transfer against direct multinomial
   rows, the determinant, the eliminated scalar recurrence, the full
   three-state Frobenius descent, generic Smith determinantal divisors, the
-  exterior-square first and second layers, and the discriminant and p|s
-  walls.  Normal and optimized replay agree with the stored transcript.
-  Independent immutable audit is pending.
+  exterior-square first and second layers, the scalar-companion
+  non-unimodular gauge boundary, and the discriminant and p|s walls.  Normal
+  and optimized replay agree with the stored transcript.  Independent
+  immutable audit is pending.
 source: root/multiscale-newton-flag/low-child-flag-extension/2026-08-02
 depends_on: []
 related:
@@ -24,8 +26,8 @@ related:
   - THM-3176-six-step-prime-resonance-third-euclidean-newton-separation
 script: 04-computation/factorial_gauss_manin_rank_one_reset_thm3182.py
 output: 05-knowledge/results/factorial_gauss_manin_rank_one_reset_thm3182.out
-script_sha256: f045e762211dfd111e74ffaaaf2f92f4b606e90eedcf61b872e65efaf3ef8a26
-output_sha256: d4149785f20897d8a7c864845487995e140391f833d493186e37eab92e288259
+script_sha256: a964ed41752007cd5a509cd8995fa21fbaf4c0ad93f008a93f755672fa584a2a
+output_sha256: b63165b6a95dbc124e041f871f3ee0ddf3d9f2e7195c8e4d6df029574658e546
 hash_basis: LF-normalized bytes
 ---
 
@@ -35,8 +37,10 @@ hash_basis: LF-normalized bytes
 
 The factorial Frobenius projector has a stronger state-space form.  Its
 first singular transfer forgets two directions modulo `p`, but it remembers
-both directions to first `p`-adic order.  This gives an exact source for the
-two positive-height bands in the fixed-offset Newton calculations.
+both directions to first `p`-adic order in the `x`-weighted integral lattice.
+This gives a precise candidate source for the two positive-height bands in
+the fixed-offset Newton calculations, with a load-bearing lattice-gauge
+boundary recorded in Section 5.
 
 ## 1. Three-state integration-by-parts transfer
 
@@ -251,7 +255,10 @@ Thus `(17)` induces exterior-square Smith type
 Equations `(22)--(24)` identify the precise first-order Pluecker plane and
 the single second-order direction.  They are stronger than the scalar
 determinant valuation: the left covector `(1,-1,1)` records the unique
-first-layer relation among the three projected wedge coordinates.
+first-layer relation among the three projected wedge coordinates.  Every
+Smith type, kernel, and transverse direction in Sections 3--4 is a property
+of the specified integral lattice `z=(M,X,D)`, not an invariant under
+rational conjugacy of the underlying Gauss--Manin system.
 
 ## 5. Filtered-holotopy meaning and boundary
 
@@ -263,20 +270,54 @@ one mod-p survivor  +  two height-one transverse directions. (26)
 
 The fixed tail `T_p,...,T_(p+s-2)` consists of matrices affine in `v`.
 Consequently every fixed-offset Newton calculation is the projection of a
-two-column transverse lattice through a bounded affine tail.  This explains
-why the established offset theorems repeatedly see two positive valuation
-bands and why a vanishing pivot mutates the active Euclidean row rather than
-destroying common-factor transport.
+two-column transverse lattice through a bounded affine tail.  When that
+projection is compatible with the `x`-weighted lattice, `(17)` is a candidate
+mechanism for the two positive valuation bands and for pivot mutation of the
+active Euclidean row.  The Smith data alone do not supply that compatibility.
+
+The words *transverse lattice* are load-bearing.  For odd `p`, assume `v`
+and `Delta=1-4dv` are units and instead use the scalar companion state
+
+```text
+Y_n=(M_n,M_(n-1),D_n)^t.                                   (27)
+```
+
+Equation `(9)` gives its transfer
+
+```text
+Y_(n+1)=
+[a_n b_n c_n; 1 0 0; 0 0 d]Y_n,
+
+a_n=2(n+1)(2n+1)v,
+b_n=n(n+1)Delta,
+c_n=d-n-1.                                                  (28)
+```
+
+At `n=p-1` this companion matrix has Smith type `(1,1,p)`, not
+`(1,p,p)`: its reduction has rank two and its determinant has valuation one.
+The exact change to the `x`-weighted state is
+
+```text
+2vX_n=[1+2(2n+1)v]M_n+n Delta M_(n-1)-D_n.                 (29)
+```
+
+Its determinant is `n Delta/(2v)`.  It is a unit at `n=p-1` but gains one
+factor of `p` at the output index `n=p`.  Thus the extra transverse factor in
+`(17)` is a genuine layer of the chosen weighted-response lattice, not a
+coordinate-free Smith invariant of the rational Gauss--Manin system.  An
+index-dependent non-unimodular gauge can move that layer between the reset
+and the output lattice; in the scalar companion framing one band is absorbed
+by this output index.
 
 What `(17)` does **not** prove is equally important.  Projection through the
 tail can cancel coordinates, and successive pseudo-quotients depend on
 continuant minors of the whole tail.  The observed statement
 
 ```text
-first separating Euclidean depth=floor(s/2)                 (27)
+first separating Euclidean depth=floor(s/2)                 (30)
 ```
 
-away from arithmetic pivot walls remains open.  A proof of `(27)` requires a
+away from arithmetic pivot walls remains open.  A proof of `(30)` requires a
 closed transfer-minor/continuant formula plus a wall atlas.  No arbitrary
 fixed-offset theorem, `NC(2)`, `GMC(2)`, or `LRC(14)` consequence is claimed.
 
@@ -297,7 +338,8 @@ generic `(1,p,p)` determinantal divisors and the simple discriminant-wall
 thickening.  It reconstructs the complete exterior-square matrix, its
 rank-two first layer, both kernels, all three nonzero minors, and the
 returning second-order direction.  It also freezes a `p|s` hostile.  There
-is no floating point, random sampling, imported executable, or
-assertion-sensitive test.
+is an independent exact check of the scalar-companion gauge identity, its
+`(1,1,p)` reset, and the one-factor output index.  There is no floating point,
+random sampling, imported executable, or assertion-sensitive test.
 
 **QED.**
