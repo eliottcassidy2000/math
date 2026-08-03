@@ -2,7 +2,7 @@
 id: THM-3254
 title: "First-shell two-row clutch and graded-gauge no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.  For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
   one of THM-3244's 31 lawful two-row covering pairs on the complete
   support-(1,3), bank-I2 physical state space, no fixed positive blend gives
   a strict Q-monotone one-pole ascent at every nonreset state.  Exactly two
@@ -23,9 +23,12 @@ audit: >
   two-state interval covers for the remaining eight pairs, and rederives the
   row-(2,10) rational thresholds and two-inequality Farkas determinant.  It
   uses neither a scratch cache nor an embedded response-value certificate.
-  Fresh normal and optimized runs byte-match the stored transcript and the
-  declared LF-normalized hashes.  Independent hostile audit is pending, so
-  this candidate is not yet a proved dependency.
+  An independent audit rechecked the upstream 31-pair list, all eleven unique
+  reset-link edges, the exact 23/8 split, every delayed threshold, the
+  row-(2,10) Farkas circuit, the interval-cover minimality argument, and the
+  fixed-ratio versus reset-distance-graded scope boundary.  Fresh normal and
+  optimized runs byte-match the stored transcript and the declared
+  LF-normalized hashes.
 depends_on:
   - THM-3238-complete-physical-product-gamma-bank-unique-reset-stitch
   - THM-3244-unique-reset-exposure-deletion-graph-nonmorse-boundary
@@ -41,7 +44,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3254 -- first-shell two-row clutch and graded-gauge no-go
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Let
 
@@ -272,5 +275,4 @@ Fresh normal and optimized runs reproduce
 
 byte for byte.
 
-QED, conditional only on the pending independent audit required for status
-promotion.
+QED.
