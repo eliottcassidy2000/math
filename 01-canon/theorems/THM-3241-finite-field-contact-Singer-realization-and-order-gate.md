@@ -296,7 +296,9 @@ by `beta` has
 punctured orbits instead of one.  It too is realized by `(3)`: at `m=2`, its
 helper is the constant `H=10`.
 
-Equations `(23)--(26)` prove that the hierarchy
+Section 1 with prescribed `a=1` in any degree `r>1` proves that a nonzero
+contact unit need not generate the contact field.  Equations `(23)--(26)`
+prove the second strict separation.  Hence the hierarchy
 
 ```text
 nonzero contact unit
