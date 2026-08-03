@@ -541,7 +541,8 @@ int main(int argc, char** argv) {
       std::cout << "degree21_projective_exclusion=IMPOSSIBLE_FROM_THIS_MAP\n";
       std::cout << "formal_product_coefficient_degree28=39\n";
       std::cout << "formal_product_coefficient_degree29=-354\n";
-      std::cout << "degree29=FIRST_NOT_RULED_OUT_BY_FORMAL_COUNT_ONLY\n\n";
+      std::cout << "degree29=FIRST_NOT_RULED_OUT_BY_FORMAL_COUNT_ONLY\n";
+      if (prime != primes.back()) std::cout << '\n';
     }
     return 0;
   } catch (const std::exception& error) {

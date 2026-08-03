@@ -23,7 +23,8 @@ audit: >
   per-generator rank increments recur.  Independent controls rebuild the
   delete-E support-four map at full rank, leave nullity 46 when the last three
   moments are omitted, and reject the hostile prime 83 before elimination.
-  Optimized builds byte-match the frozen p=101 transcript; no floating point,
+  The optimized full two-prime run byte-matches the frozen transcript, while
+  separate optimized builds agree on the p=101 prefix.  No floating point,
   randomness, or probabilistic rank inference is used.
 source: root/creative-synthesis-next/2026-08-03
 depends_on:
@@ -33,8 +34,8 @@ related:
   - THM-3018-factorial-conjecture-as-a-simplex-moment-problem
 script: 04-computation/degree_four_support5_degree21_sparse_rank_scout_20260803.cpp
 output: 05-knowledge/results/degree_four_support5_degree21_sparse_rank_scout_20260803.out
-script_sha256: efcc67123d15092724e523d64cc696fa4cb07e7af8c4b5b5b80d3c437eaf99cb
-output_sha256: 4fe40cfc209ac3ada3cb5e29e4fcf362dac9adb283b6a3f830038e7439aad215
+script_sha256: 43f6b338fae6237d72499341457bc7bc0ceb3036d4c776a2c26058dcb7b414d9
+output_sha256: 47414caed573abf3344c9cfbb0f668f9d7ba9b867f4dd0a1e70be6498c746824
 hash_basis: LF-normalized bytes
 ---
 
