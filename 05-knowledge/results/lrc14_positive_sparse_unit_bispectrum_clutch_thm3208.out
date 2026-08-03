@@ -1,0 +1,10 @@
+POSITIVE SPARSE UNIT-BISPECTRUM CLUTCH EXACT CONTROL
+automatic_unit_fourier_checks=5605
+positive_scale_translation_checks=5605
+whole_face_orientation_checks=541
+finite_collision_pair_checks=10416
+finite_collision_equalities=1128
+normalized_fibre=positive_scale_times_cyclic_translation
+equal_mass_raw_line=positive_orientation
+signed_scalar_hostile=normalized_same,raw_opposite
+ALL EXACT CHECKS PASSED
