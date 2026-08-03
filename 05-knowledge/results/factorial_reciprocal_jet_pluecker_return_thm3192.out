@@ -1,0 +1,21 @@
+THM-3192 RECIPROCAL COEFFICIENT-JET / PRS PLUECKER RETURN
+dependency_hash_checks=6
+reciprocal_gauge=J_n=D_(n+1)S_n(1/z)D_n^-1
+z_smith_J=(1,z,z)
+z_smith_Lambda2J=(z,z,z^2)
+normalized_exterior_residue_rank=2
+first_layer_flag_word_checks=5
+first_layer_single_gate_checks=5
+first_layer_diagonal_ratio=2n/(2n+1)
+hidden_e12_return_layer=z^2_to_-4d^2n(n+1)e02
+reciprocal_coefficient_checks=45
+homogeneous_truncation_checks=35
+direct_prs_top_coefficient_checks=54
+offset6_chart_map=(P2(A,B)=U_H*R3,P2(R,A)=U_J*S2,P1(S,R)=U_K*K)
+offset6_unit_range=p>=197
+offset6_symbolic_p_unit_checks=5
+reciprocal_path_hostile=(d=5,z=105/4,e01=0,e02e12_nonzero)
+H_algebraic_chart_hostile=(p=-109/24,P2=0,P1_nonzero)
+sympy_float_atoms=0
+scope=exact_jet_carrier_and_HJK_chart_map_not_arbitrary_offset_or_GMC2
+all_exact_checks=PASS
