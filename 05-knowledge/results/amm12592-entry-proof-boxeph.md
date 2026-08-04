@@ -15,12 +15,20 @@ Scripts (04-computation/):
 scanner (verbatim certified-engine semantics; memory-trimmed top-band feed
 coefficients; stops after the S-cone-fc certificate row + persistence
 window; validated bit-exactly against the stored E1 fcscan/feedend records);
+`amm12592_entry_feedphase_scan_v2_boxeph.py` — same semantics, list-based
+with Pascal-rule cap updates (6.4x faster; validated field-by-field
+against v1 ledgers at 1024/2048/4096, which are themselves E1-validated);
 `amm12592_entry_mixedcone_referee_boxeph.py` — 600-trial exact certificates
 for the new lemmas (independent clamp implementation);
+`amm12592_entry_certificate_referee_boxeph.py` — INDEPENDENT re-check of
+each new-scale certificate (fresh math.comb clamp; re-evolves
+i_pf..i_fc from the saved snapshot; recomputes the clocks by the
+mul//div staircase, diverse from the scanner's Pascal adds);
 `amm12592_entry_window_constants_boxeph.py` — exact-rational wide-window
 budget certification (dyadic 2^9..2^40).
-Outputs (05-knowledge/results/): `amm12592_entry_scan_R*_D0*_boxeph.json`
-(22 configs), `amm12592_entry_mixedcone_referee_boxeph.{out,json}`,
+Outputs (05-knowledge/results/): `amm12592_entry_scan_R*_D0*_boxeph.json`,
+`amm12592_entry_certreferee_R*_D0*_boxeph.json`,
+`amm12592_entry_mixedcone_referee_boxeph.{out,json}`,
 `amm12592_entry_window_constants_boxeph.{out,json}`.
 
 Status labels: **PROVED** (complete argument, machine-checkable algebra),
@@ -322,6 +330,14 @@ at 22/22 configs (dyadic 2^7..2^17, both eps), always with
 |---|-----|-------------|-------------|--------------------|------------------------|-----------|
 | [table filled at session close from the 22 scan JSONs] |
 
+**Convention note (prevents a phantom discrepancy).** The r_t column is
+computed against the ROW-i_pf caps `2C(d_{i_pf}-1, t)` — the caps the
+F3 check actually uses at the first post-feed row. The E1 feed-end
+table used the feed-end degree `d_fe = d_{i_pf - 1}` (caps one degree
+lower), so its values exceed these by a factor `~ d/(d-t)` per
+delta-step (e.g. 1.0004 there vs 0.999906 here at (16384, 1/32), ratio
+`1 + t/d` at t ~ 5). Both are exact; F3-relevance selects this one.
+
 **Margin trend.** (i) The feed-end surface excess `max_t r_t - 1`
 shrinks with R (1.0038 at 2^10 down to 1.0009 at 2^15, [new scales
 below]); (ii) the certifying delay `i_fc - i_pf` stays in [0, 8] across
@@ -344,6 +360,60 @@ delta-row, i.e. `~ 1 + g t k / D` after k rows) overtakes η within the
 window — with the window now Theta(R) (EN-W), (β) needs only
 `η(R) <= c t` for some fixed c, an enormously weaker target than the
 old 64-row window demanded. The quantitative content of EN-CORE is (α).
+
+## 8b. The self-healing target EN-H (proof-shape for EN-CORE (d), with two proved lemmas)
+
+The route-negative says the eventual proof must handle states ON the
+surface. The right formulation makes the surface excess a PARAMETER and
+lets cap drift heal it inside the R/8 window. Two ingredients are PROVED:
+
+**Corollary EN-G (relaxed growth law; from S1).** Post-feed, all-negative
+state, one row at degree D': for t >= 1,
+`a'_t <= a_t + [spill_t - 2C(D'-1,t)]^+` with `spill_t = 2a_{t-1} +
+a_{t-2}` (both kernels dominated); support advances <= 2 cells/row, and a
+cell beyond the old front is created with value at most its
+`[spill - cap]^+`; `a'_0 = max(0, a_0 - 2)`. So an over-cap cell grows
+per row by AT MOST its spill excess — never multiplicatively.
+
+**Lemma EN-DR (cap-drift lower bound; PROVED).** With
+`s_k := D_k - D_0 >= floor(g_lo k)`:
+`2C(D_k-1, t) >= 2C(D_0-1, t) · (1 + t·s_k/(D_k - 1))`
+(each degree step multiplies the cap at cell t by `j/(j-t) >= 1 +
+t/(D_k-1)`; telescope and expand). Caps at cell t gain a factor
+`1 + Theta(g k t / D)` in k rows — fastest at the high cells, slowest at
+t = 2.
+
+**The healing budget.** Over the full window K = floor(R/8), the t = 2
+cap gains `>= 2 g_lo K / D_K ~ 0.19` — so surface excess up to ~19% at
+t = 2 (more at higher t) is drift-curable IN PRINCIPLE. What is NOT yet
+proved is the compounding control: an over-cell's growth (EN-G) feeds
+the spills of the cells above it, extending THEIR healing horizons. Two
+bookkeeping facts, recorded for the successor:
+
+- a naive uniform Gronwall (every cell allowed the worst-case growth
+  `eta·capref_t` per row for K rows) DIVERGES: the cross-feeding ratio
+  `(2capref_{t-1}+capref_{t-2})/capref_t ~ 2t/D` summed over K ~ eta·D
+  rows gives `~ eta·t` — useless for t ~ m ~ sqrt(R). This is a
+  ROUTE-NEGATIVE for the crude envelope inside the healing argument too.
+- the per-cell-horizon bookkeeping closes at SECOND order: cell t heals
+  within `K_t ~ eta·D/(g t)` rows (EN-DR), so its total growth is
+  `<= eta·capref_t·K_t/2`-scale, and its relative contribution to the
+  spill at t+1 is `~ eta^2/g` — t-INDEPENDENT. The compounding series is
+  geometric with ratio `~ 2 eta^2/g_lo`, convergent for eta <= 1/4.
+
+**EN-H (pinned target; OPEN).** There is an explicit `eta_0 >= 1/16`
+such that for dyadic R (>= an explicit R_1) and D0 = ceil(eps R): if at
+some post-feed row i0 the state is all-negative with support m,
+`m + 2K + 2 < D_0/12` (K := floor(R/8)), F2 holds, and
+`spill_t <= (1 + eta_0) · 2C(D_0-1, t)` for all t in [2, m+2], then some
+row `i0' in [i0, i0 + K]` satisfies F1 ∧ F2 ∧ F3 exactly — i.e. EN-CORE
+(d) weakens from the razor `eta = 0` to the fat `eta <= 1/16`, a >= 10x
+margin over the measured feed-end excess (max_t r_t - 1 <= 0.7% for
+R >= 2^10, <= 0.1% for R >= 2^13, shrinking). Completing EN-H is a
+finite second-order bookkeeping on EN-G + EN-DR (the convergent branch
+above); it was not completed this session and is labeled OPEN — the
+successor should treat it as the highest-leverage provable step, since
+EN-H + any o(1) feed-end surface law = ENTRY.
 
 ## 9. The final theorem (conditional form) and the dependency chain
 
