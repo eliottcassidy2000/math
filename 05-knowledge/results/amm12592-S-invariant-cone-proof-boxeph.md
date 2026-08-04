@@ -43,19 +43,23 @@ OPEN** (precise statement, open), **REFUTED** (with certificate).
    clock/budget check (F4) using only the certified floor profile — the
    flow provably captures by row R-2 with no death: **S(R) follows from a
    one-row certificate.** No asymptotics; every hypothesis is decidable by
-   integer arithmetic at that row.
+   integer arithmetic at that row. Moreover F4 is AUTOMATIC given F1–F3
+   for every dyadic R >= 512 (a-priori corollary, exact-rationally
+   certified to 2^40): the hypothesis is really F1 ∧ F2 ∧ F3.
 3. **The certificate fires AT feed-end (VERIFIED-exact).** The scan
    `fcscan` finds the first certifying row `i_fc`: it is the feed-end row
-   itself or 1–3 rows after it at every tested scale, and the theorem's
-   capture bound is sharp to a few rows (e.g. R = 512: bound 314, actual
-   313; R = 1024: bound 620, actual 616). The unproved content of S(R) is
-   thereby reduced to the feed phase handing over a state in the cone —
-   nothing about the autonomous evolution remains unproved.
+   itself or 1–8 rows after it at every tested scale (16/16 configs), and
+   the theorem's capture bound is sharp to O(1)–O(50) rows (e.g. R = 512:
+   bound 314, actual 313; R = 16384: bound 10128, actual 10090). The
+   unproved content of S(R) is thereby reduced to the feed phase handing
+   over a state in the cone — nothing about the autonomous evolution
+   remains unproved.
 4. **The marginal-surface law (NEW, VERIFIED-exact).** At feed-end the
    full-cap inflow ratios `r_t = (2a_{t-1}+a_{t-2})/2C(d-1,t)` are
-   `1.000 +- 0.005` ACROSS THE WHOLE BLOCK, with the deviation shrinking
-   as R grows (max_t r_t: 0.9872 at 256, 0.9906 at 512, 1.0038 at 1024,
-   1.0047 at 4096, 1.0001 at 8192, 1.0004 at 16384). The feed delivers the
+   `1.000 +- 0.01` ACROSS THE WHOLE BLOCK, with the excess over 1 tiny and
+   shrinking (max_t r_t: 0.9872 at 256, 0.9906 at 512, 1.0038 at 1024,
+   1.0097 at 2048, 1.0047 at 4096, 1.0001 at 8192, 1.0026 at 16384; both
+   eps behave alike). The feed delivers the
    autonomous phase a CRITICAL state sitting exactly on the absorb
    boundary — "the profile rides just above the caps, frozen" (D2) made
    exact. Cap drift (degree growth along the Beatty word) immediately
@@ -226,8 +230,8 @@ certifying state. (c) A half-cap variant (spill <= capref/2, uniform
 1/2-cap decay per row, Lambda-free clocks) is proved the same way and
 fires mid-flight (~0.38 R, `iconescan`); the full-cap form is the sharp
 one. (d) F3's role is exactly the marginal-surface law: the feed-end
-state has `r_t <= 1.005` everywhere, and the certificate fires as soon as
-the O(0.5%) excess cells dip under 1 — measured: 0–3 rows.
+state has `r_t <= 1.01` everywhere, and the certificate fires as soon as
+the O(1%) excess cells dip under 1 — measured: 0–8 rows (16/16).
 
 ## 6. Certificates — VERIFIED-exact
 
@@ -247,9 +251,16 @@ t >= 1 never revives); extinction strictly top-down; cell 0 always last
 - Marginal surface: max_t r_t [eps = 1/32 / eps = 1/16] =
   0.8639/0.8494 (128), 0.9727/0.9872 (256), 0.9552/0.9906 (512),
   1.0038/0.9949 (1024), 0.9949/1.0097 (2048), 1.0018/1.0047 (4096),
-  1.0001/0.9999 (8192), 1.0004/1.0026 (16384); the whole profile
-  `r_2..r_m` lies within ~1% of 1 from R = 1024 up — the feed-end state
-  IS the marginal state, and the excess over 1 never exceeds 0.0097.
+  1.0001/0.9999 (8192), 1.0004/1.0026 (16384). Shape (16384/512
+  profile): r_t = 0.9998, 1.0000, 1.0004, 0.9997, 0.9984 at
+  t = 2,4,6,8,10 — the LOW-CELL CORE sits on the surface to within
+  0.2% — then declines monotonically toward the front (0.98 at t~13-30,
+  0.93 at 40, 0.64 at 80, 0.03 at 118). Cells with r_t > 1 are few
+  (0-4 per state), confined to the core, with excess <= 1%, and appear
+  in single-parity runs (e.g. {2,4,6,8} or {3,5,7,9} — an alternation-
+  calculus fingerprint). The binding clock cell (t = 2, always) is
+  exactly where the state is most marginal: the certificate's sharpness
+  is the law's sharpness.
 - `A_1 = a_1/(2(d_fe-1))`: log2 = 4.33, 5.55, 6.56, 7.62, 8.61, 9.62,
   10.62, 11.62 (eps = 1/32) and 4.39, 5.61, 6.58, 7.64, 8.66, 9.64,
   10.65, 11.65 (eps = 1/16), R = 128..16384: exactly +1 bit/doubling,
@@ -261,7 +272,7 @@ t >= 1 never revives); extinction strictly top-down; cell 0 always last
 
 **fcscan (the theorem in action).** All scans: `F3_persist_ok = True`
 (the propagation clause re-verified in flight); worst clock always at
-t = 2; the capture bound is drain-dominated and sharp to O(1)–O(20) rows:
+t = 2; the capture bound is drain-dominated and sharp to 1–47 rows:
 
 | R | D0 | i_pf | i_fc | i_fc-i_pf | thm capture bound | actual | budget margin |
 |------|-----|------|------|-----|------|------|------|
@@ -280,7 +291,8 @@ t = 2; the capture bound is drain-dominated and sharp to O(1)–O(20) rows:
 | 8192 | 256 | 1902 | 1902 | 0 | 5063 | 5040 | 3127 |
 | 8192 | 512 | 1742 | 1742 | 0 | 4987 | 4964 | 3203 |
 | 16384 | 512 | 3803 | 3803 | 0 | 10128 | 10090 | 6254 |
-| 16384/1024, 32768 | | | [landed this session] | | | | |
+| 16384 | 1024 | 3482 | 3490 | 8 | 9984 | 9937 | 6398 |
+| 32768 | | | [landed this session] | | | | |
 
 Every certifying row proves S at its (R, D0) by Theorem S-cone-fc alone
 (the continued run is a consistency check, not part of the proof). The
@@ -290,15 +302,18 @@ binding.
 **Basin experiments (comparison lemma).** x2-scaled feed-end states (all
 cells t >= 1 doubled) capture: 2048 -> 1581 (<= 2046), 8192 -> 6556
 (<= 8190) — each such run proves S for its entire order-interval, so the
-cone has at least one binary order of depth above the true trajectory.
+basin has at least one binary order of depth above the true trajectory.
+x4-scaled states do NOT capture in time (OPEN_RESIDUAL at row R-2, no
+death, both 2048 and 8192; clean re-runs from regenerated snapshots):
+the basin radius in the uniform-scaling direction is between x2 and x4.
 The uniform corner (a_t = 2047 * 2C(d-1,t) on [1, 2 sqrt R], a_0 = d+64)
-does NOT capture at 16384 (OPEN_RESIDUAL at row R-2; no death) — the
-uniform profile overloads the low-cell clocks; fatness requires the
-graded (marginal) shape. [x4 and x16 experiments: first runs were
-contaminated by a snapshot-overwrite bug (corner/fromsnap modes stomped
-three feed-end archives; bug fixed, snapshots regenerated from re-runs,
-affected results discarded and re-established — recorded per hazard
-discipline.]
+does NOT capture at 16384 (OPEN_RESIDUAL) — fatness requires the graded
+(marginal) shape, consistently with the x4 boundary. [A
+snapshot-overwrite bug (corner/fromsnap modes stomped three feed-end
+archives) was caught by the A_1 anomaly, fixed, and all affected data
+regenerated; contaminated first-pass x4/x16 results discarded —
+hazard discipline. Dual-path validation: full-feed fcscan and
+snapshot-replay fcscan agree bit-exactly at both 16384 configs.]
 
 **R = 32768.** [Landed this session: outcomes of both runs, feed-end
 snapshot laws, fcscan certificates.]
@@ -316,6 +331,9 @@ this session's R = 32768 certificates, D2's Hypothesis S(eps) holds in
 full. Consequently (D2 Theorem D + LIFT + THM-3329 assembly):
 `C* <= 1 + gamma* + eps`; in particular S(1/32) gives
 `C* <= 1 + gamma* + 1/32 < 427095/262144 = 1.6292382`.
+(No death can occur in the window [i_pf, i0): the T6a front-speed bound
+gives support <= m + 2*64 + 2 << d there — the window is death-free
+independently of the hypothesis.)
 
 **What ENTRY-fc asks.** Only that the feed phase delivers (within 64
 rows) a state that is: all-negative (D2's certified N), debt at the edge

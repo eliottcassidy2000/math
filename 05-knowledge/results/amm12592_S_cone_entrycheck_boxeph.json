@@ -390,5 +390,61 @@
   "K2R": 3217,
   "thm_capture_ub": 9829,
   "PASS": false
+ },
+ {
+  "R": 16384,
+  "D0": 512,
+  "i_pf": 3803,
+  "d_fe": 12582,
+  "m": 118,
+  "a0": 12576,
+  "a0_minus_d": -6,
+  "G_L": 0,
+  "L": 0,
+  "H1": true,
+  "H2": false,
+  "H3": true,
+  "H4star": false,
+  "BUD": false,
+  "worstA_bits_t": [
+   12,
+   1
+  ],
+  "worstH4_bits_t": [
+   1,
+   2
+  ],
+  "K1R": 15726,
+  "K2R": 6288,
+  "thm_capture_ub": 19529,
+  "PASS": false
+ },
+ {
+  "R": 16384,
+  "D0": 1024,
+  "i_pf": 3482,
+  "d_fe": 12903,
+  "m": 119,
+  "a0": 12912,
+  "a0_minus_d": 9,
+  "G_L": 50,
+  "L": 5,
+  "H1": true,
+  "H2": false,
+  "H3": true,
+  "H4star": false,
+  "BUD": false,
+  "worstA_bits_t": [
+   12,
+   1
+  ],
+  "worstH4_bits_t": [
+   1,
+   2
+  ],
+  "K1R": 16092,
+  "K2R": 6436,
+  "thm_capture_ub": 19579,
+  "PASS": false
  }
 ]
