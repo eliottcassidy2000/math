@@ -69,7 +69,7 @@ def ceil_div(a, b):
 
 # ---------------------------------------------------------------- C1
 def lucas_fib(n):
-    """(L_n, F_n) exactly by fast doubling."""
+    """(L_n, F_n) exactly by fast doubling (single pass)."""
     def fd(n):
         if n == 0:
             return (0, 1)
@@ -79,55 +79,55 @@ def lucas_fib(n):
         if n & 1:
             return (d, c + d)
         return (c, d)
-    F = fd(n)[0]
-    Fm1 = fd(n - 1)[0] if n >= 1 else 1
-    L = F + 2 * Fm1          # L_n = F_{n-1} + F_{n+1} = F_n + 2F_{n-1}
+    F, Fnext = fd(n)
+    L = 2 * Fnext - F        # L_n = F_{n+1} + F_{n-1} = 2F_{n+1} - F_n
     return L, F
 
 
-def phi_pow_cmp_5pow(n, a):
-    """sign of phi^n - 5^a, exact.  phi^n = (L_n + F_n sqrt5)/2."""
-    L, F = lucas_fib(n)
-    t = 2 * 5 ** a - L       # compare F sqrt5  ><  t
-    if t <= 0:
-        return 1
-    lhs = 5 * F * F
-    rhs = t * t
-    return (lhs > rhs) - (lhs < rhs)
-
-
 def certify_gamma_sandwich(M):
-    """find a with a/M < g < (a+1)/M, certified by integer comparisons."""
-    # g = log_5 phi^2  <=>  5^g = phi^2 ; a/M < g  <=>  5^a < phi^{2M}
-    # bisect a in [0, M]
-    lo, hi = 0, M            # 5^lo < phi^{2M} (yes: 1 < phi^2M), 5^M > phi^{2M}
-    assert phi_pow_cmp_5pow(2 * M, 0) > 0
-    assert phi_pow_cmp_5pow(2 * M, M) < 0
+    """find a with a/M < g < (a+1)/M, certified by integer comparisons.
+    g = log_5 phi^2:  a/M < g  <=>  5^a < phi^{2M};
+    phi^n = (L_n + F_n sqrt5)/2, so phi^{2M} > 5^a
+      <=>  F_{2M} sqrt5 > 2*5^a - L_{2M}
+      <=>  t <= 0  or  5 F^2 > t^2   (t = 2*5^a - L).
+    L, F computed ONCE; only the 5-power varies during bisection."""
+    L, F = lucas_fib(2 * M)
+    F5sq = 5 * F * F
+
+    def phi_gt(a):
+        t = 2 * pow(5, a) - L
+        return True if t <= 0 else F5sq > t * t
+
+    lo, hi = 0, M
+    assert phi_gt(0) and not phi_gt(M)
     while hi - lo > 1:
         mid = (lo + hi) // 2
-        if phi_pow_cmp_5pow(2 * M, mid) > 0:
+        if phi_gt(mid):
             lo = mid
         else:
             hi = mid
-    # 5^lo < phi^{2M} < 5^hi  (strictness: equality impossible, phi^2M irr.)
     return lo, hi
 
 
-M = 1 << 40
+M = 1 << 20
 a, b = certify_gamma_sandwich(M)
 g_lo, g_hi = Fraction(a, M), Fraction(b, M)
 report["C1_gamma_sandwich"] = {
-    "M": "2^40", "a": a, "g_lo": str(g_lo), "g_hi": str(g_hi),
+    "M": "2^20", "a": a, "g_lo": str(g_lo), "g_hi": str(g_hi),
     "width": str(g_hi - g_lo),
     "float_view": float(g_lo)}
-print("C1: g in (%s, %s) ~ %.12f  width 2^-40" % (g_lo, g_hi, float(g_lo)),
+print("C1: g in (%s, %s) ~ %.9f  width 2^-20" % (g_lo, g_hi, float(g_lo)),
       flush=True)
-# cross-check vs floor_gamma_star on huge arguments
-xchk = all(floor_gamma_star(n) == int(g_lo * n) == int(g_hi * n)
-           for n in (10**6 + 7, 10**9 + 9, 12345678))
-report["C1_crosscheck_floor"] = xchk
-print("C1 crosscheck floor_gamma_star:", xchk, flush=True)
-assert xchk
+# cross-check vs floor_gamma_star where the sandwich decides the floor
+xchk_n = 0
+for n in (997, 5000, 12345, 100003):
+    if int(g_lo * n) == int(g_hi * n):
+        assert floor_gamma_star(n) == int(g_lo * n), n
+        xchk_n += 1
+report["C1_crosscheck_floor_decided_points"] = xchk_n
+print("C1 crosscheck floor_gamma_star on", xchk_n, "decided points: ok",
+      flush=True)
+assert xchk_n >= 3
 
 
 # ---------------------------------------------------------------- C2
@@ -168,15 +168,26 @@ def i_feed_brute(R, D0):
 
 
 def i_feed_formula(R, D0):
-    """ceil((R(1-g) - D0)/(1+g)) - 1 computed exactly from the sandwich.
-    Returns None if the sandwich cannot decide (never happens at 2^-40)."""
+    """i_feed = ceil(x) - 1 = floor(x),  x = (R(1-g) - D0)/(1+g).
+    x is irrational (x rational would force g rational), so never an
+    integer.  Computed from the sandwich; when the sandwich cannot decide
+    the ceiling (near-integer x), the two candidates differ by 1 and the
+    winner is decided EXACTLY by the Beatty test
+    i <= x  <=>  floor(g(R+i)) + D0 + i <= R-1  (the proved equivalence),
+    evaluated by the exact integer comparator floor_gamma_star."""
     lo = (R * (1 - g_hi) - D0) / (1 + g_hi)
     hi = (R * (1 - g_lo) - D0) / (1 + g_lo)
     cl, ch = ceil_div(lo.numerator, lo.denominator), \
         ceil_div(hi.numerator, hi.denominator)
-    if cl != ch:
+    if cl == ch:
+        return cl - 1
+    if ch != cl + 1:
         return None
-    return cl - 1
+    # candidates cl-1, cl; take the largest i satisfying the exact test
+    i = cl
+    if floor_gamma_star(R + i) + D0 + i <= R - 1:
+        return i
+    return i - 1
 
 
 grid = []

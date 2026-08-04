@@ -355,5 +355,22 @@
   "T6b_bound": 1229,
   "front0_eq_R-2-d0": false,
   "elapsed_s": 0.7
+ },
+ {
+  "R": 16384,
+  "D0": 512,
+  "d0": 10309,
+  "eps_num": 512,
+  "eps_den": 16384,
+  "outcome": {
+   "status": "CLOSED",
+   "capture_row": 10090
+  },
+  "capture_row": 10090,
+  "minus2_rows": 8191,
+  "front0": 6073,
+  "T6b_bound": 4236,
+  "front0_eq_R-2-d0": true,
+  "elapsed_s": 377.0
  }
 ]

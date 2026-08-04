@@ -70,7 +70,18 @@ VARIANTS = {
     "descw32": dict(shape=True,  vent=2, Wwin=32,   asc=False),
     "descw128": dict(shape=True, vent=2, Wwin=128,  asc=False),
     "descw512": dict(shape=True, vent=2, Wwin=512,  asc=False),
+    "train":   dict(shape=True,  vent=6, Wwin=None, asc=False, guard=48,
+                    rho0=2),
+    "train16": dict(shape=True,  vent=6, Wwin=None, asc=False, guard=16,
+                    rho0=2),
+    "trainv2": dict(shape=True,  vent=2, Wwin=None, asc=False, guard=48,
+                    rho0=2),
+    "train3":  dict(shape=True,  vent=6, Wwin=None, asc=False, guard=48,
+                    rho0=3),
 }
+for _v in VARIANTS.values():
+    _v.setdefault("guard", None)
+    _v.setdefault("rho0", 2)
 
 
 def t4_row_load(R, d):
@@ -148,8 +159,9 @@ def choose_row(w, d, dn, S, cfg, record_u):
     nfail = 0
     fail_cells = []
     nshaped = 0
-    # vent preference: pre-cancel the front cell's unavoidable edge transport
-    vent_pref = 0
+    # vent preference ladder: pre-cancel the front cell's unavoidable edge
+    # transport with an alternating halving chain above the front
+    vent_prefs = {}
     if shape and vent and thi > tb:
         loF = -2 * comb(d - 1, tb) if tb <= d - 1 else 0
         hiF = 2 * comb(d - 1, tb - 1) if 1 <= tb <= d else 0
@@ -160,8 +172,12 @@ def choose_row(w, d, dn, S, cfg, record_u):
         hiN = 2 * (comb(dn - 1, out - 1) if 1 <= out <= dn else 0)
         excess = oF - min(hiN, max(loN, oF))      # unabsorbable part
         if excess:
-            p = -excess if S == 1 else -(excess // 2)
-            vent_pref = 2 * (p // 2)              # force even
+            for k in range(1, thi - tb + 1):
+                p = (-1) ** k * (excess if S == 1 else (excess >> k))
+                pe = 2 * (p // 2)
+                if pe == 0:
+                    break
+                vent_prefs[tb + k] = pe
     if asc:
         rng = range(tlo, thi + 1)
         Ab = AscBinom(d - 1, tlo)          # C(d-1, t)      -> lo = -2*
@@ -187,7 +203,8 @@ def choose_row(w, d, dn, S, cfg, record_u):
         j = oplain
         if shape and t < d and t >= tcut:
             inc = (2 * j1 + j2) if S == 2 else j1
-            pref = vent_pref if (not asc and t == tb + 1) else oplain
+            pref = vent_prefs.get(t, oplain) if (not asc and t > tb) \
+                else oplain
             flo = max(v - hi, -2 * An.v - inc)
             fhi = min(v - lo, 2 * Bn.v - inc)
             if flo <= fhi:
@@ -200,6 +217,22 @@ def choose_row(w, d, dn, S, cfg, record_u):
                     j = v - lo            # I entirely below target: take max
                 elif (v - hi) > 2 * Bn.v - inc:
                     j = v - hi            # I entirely above target: take min
+            # TRAIN GUARD (front layer): keep the junk train alternating
+            # with envelope ratio >= rho0 (plateau/hole kill); boosts only
+            # within I_t, never flips a forced sign.
+            K = cfg.get("guard")
+            if K is not None and j and t <= tb and t >= tb - K and not asc:
+                rho0 = cfg["rho0"]
+                if j1:
+                    tsgn, m = (1 if j1 < 0 else -1), rho0 * abs(j1)
+                elif j2:
+                    tsgn, m = (1 if j2 > 0 else -1), rho0 * rho0 * abs(j2)
+                else:
+                    tsgn, m = 0, 0
+                if tsgn and ((j > 0) == (tsgn > 0)) and abs(j) < m:
+                    jb = min(m, v - lo) if j > 0 else max(-m, v - hi)
+                    if jb != j:
+                        j = jb
         if j != oplain:
             nshaped += 1
         u = v - j
@@ -515,3 +548,88 @@ if __name__ == "__main__":
                                        "boxeph.json" % (R, D0, var))
             res = run_bulk(R, D0, var, keep_rows=False, trace_path=tp)
             log(summarize(res))
+
+
+def nu_profile(R, D0, variant="plain", rows=None):
+    """Exact anatomy: per row, the pairwise-sum residue nu = (1+sigma)j
+    (nonalternating content), its band profile, and front-envelope ratios.
+    Pure measurement (plain flow unless variant says else)."""
+    cfg = VARIANTS[variant]
+    g = two_G_coeffs(R)
+    j = {}
+    d_prev = None
+    out = []
+    for i in range(0, R - 1):
+        d = floorgs(R + i) + D0
+        dn = floorgs(R + i + 1) + D0
+        S = 1 + (dn - d)
+        if i == 0:
+            w = {t: v for t, v in enumerate(t4_row_load(R, d)) if v}
+        else:
+            delta = d - d_prev
+            w = {}
+            K = (1, 1) if delta == 0 else (1, 2, 1)
+            for t, v in j.items():
+                for s, ks in enumerate(K):
+                    w[t + s] = w.get(t + s, 0) + ks * v
+            if d + i <= R - 1:
+                w[0] = w.get(0, 0) + g[d + i]
+            if delta == 1 and d - 1 + i <= R - 1:
+                w[0] = w.get(0, 0) + g[d - 1 + i]
+                w[1] = w.get(1, 0) + g[d - 1 + i]
+            w = {t: v for t, v in w.items() if v}
+        if not w:
+            break
+        jn, us, c0, junkL1, diag = choose_row(w, d, dn, S, cfg, record_u=False)
+        died = d in jn
+        if jn and (rows is None or i in rows):
+            T = max(jn)
+            # nu = pairwise sums (nonalternating content), band L1 bits
+            nu = {}
+            for t in sorted(jn):
+                nu[t] = jn.get(t, 0) + jn.get(t - 1, 0)
+                nu[t + 1] = nu.get(t + 1, 0) + 0  # ensure boundary term seen
+            for t in list(nu):
+                nu[t] = jn.get(t, 0) + jn.get(t - 1, 0)
+            nbands = 8
+            bl = [0] * nbands
+            jl = [0] * nbands
+            for t, v in nu.items():
+                if 0 <= t <= T:
+                    bl[min(nbands - 1, t * nbands // (T + 1))] += abs(v)
+            for t, v in jn.items():
+                jl[min(nbands - 1, t * nbands // (T + 1))] += abs(v)
+            # front envelope: |j| at T, T-1, ..., T-6 (bits) + exact ratios
+            env = []
+            for k in range(7):
+                v = jn.get(T - k, 0)
+                env.append(v.bit_length() if v >= 0 else -((-v).bit_length()))
+            rec = {"i": i, "d": d, "front": T, "gap": d - T,
+                   "junkL1_bits": junkL1.bit_length(),
+                   "nu_bits": [b.bit_length() for b in bl],
+                   "j_bits": [b.bit_length() for b in jl],
+                   "env_sgnbits": env, "died": died}
+            out.append(rec)
+        j = jn
+        d_prev = d
+        if died or not j:
+            break
+    return out
+
+
+def cmd_nu():
+    import sys as _s
+    R, D0 = int(_s.argv[2]), int(_s.argv[3])
+    var = _s.argv[4] if len(_s.argv) > 4 else "plain"
+    rows = set(range(0, 130)) | set(range(130, 400, 5))
+    prof = nu_profile(R, D0, var, rows)
+    p = os.path.join(RESULTS, "amm12592_bulkrule_nuprof_R%d_D0%d_%s_boxeph.json"
+                     % (R, D0, var))
+    json.dump(prof, open(p, "w"))
+    for r in prof[:0]:
+        pass
+    print("saved", p, len(prof), "rows", flush=True)
+
+
+if len(sys.argv) > 1 and sys.argv[1] == "nu":
+    cmd_nu()
