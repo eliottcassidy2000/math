@@ -93,5 +93,79 @@
   "ok": true,
   "secs": 21.8,
   "run_ok": true
+ },
+ "wit2048b": {
+  "label": "R2048 ruleA D0=128",
+  "R": 2048,
+  "D0": 128,
+  "adm": true,
+  "identity": true,
+  "x2": true,
+  "unit": true,
+  "traj": true,
+  "debt": true,
+  "last_corner": true,
+  "ok": true,
+  "secs": 23.4,
+  "run_ok": true
+ },
+ "proofs": {
+  "A_alg": true,
+  "A_lift1": true,
+  "A_lift3": true,
+  "B_ifeed": true,
+  "B_lastfed": true,
+  "B_eq": true,
+  "B_eps": true,
+  "B_g": true,
+  "B_ord": false,
+  "B_win": true,
+  "B_surv": true,
+  "C_rat": true,
+  "C_N": true,
+  "C_A": true,
+  "C_F": true,
+  "G1_ti": true,
+  "G1_zs": true,
+  "G1_dm": true,
+  "G1_rl": true,
+  "G1_cx": true,
+  "G2": true,
+  "G3_reg": true,
+  "G3_512": false,
+  "G3_1024": false,
+  "G3_ctrl": true,
+  "Lstar": true,
+  "D_arith": true
+ },
+ "g3x": {
+  "band_512": true,
+  "full_512": true,
+  "band_1024": true,
+  "full_1024": true
+ },
+ "fix1": {
+  "ord": true,
+  "sweep": true,
+  "feedend": true,
+  "g3led": true,
+  "r2048": true
+ },
+ "wit4096": {
+  "desc1_87": {
+   "label": "R4096 desc1 D0=87",
+   "R": 4096,
+   "D0": 87,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "unit": true,
+   "traj": true,
+   "debt": true,
+   "last_corner": true,
+   "ok": true,
+   "secs": 174.1,
+   "run_ok": true
+  }
  }
 }

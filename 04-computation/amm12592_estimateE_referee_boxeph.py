@@ -394,9 +394,12 @@ def replay_plain(R, D0, keep_states=None, theta_watch=False):
 # fresh G3 chain checker
 # ---------------------------------------------------------------------------
 
-def g3_chain(R, D0, i0, d, j, seeded):
+def g3_chain(R, D0, i0, d, j, seeded, band=False):
     """Run the G3 forced diagonal from state (after clamp of row i0).
-    Fresh implementation of D3's chain.  Returns (valid, predicted_death)."""
+    Fresh implementation of D3's chain.  seeded=False -> psi == 0 (NI class);
+    seeded=True, band=False -> the note's F3 majorant on the FULL layer;
+    seeded=True, band=True  -> D3's CODE truncation (band top advancing at
+    kernel speed from an empty start).  Returns (valid, predicted_death)."""
     if not j:
         return False, None
     L = max(j)
@@ -428,7 +431,12 @@ def g3_chain(R, D0, i0, d, j, seeded):
             return False, None
         if seeded:
             npsi = {}
-            for c in range(Lf + 1, dpr + 1):
+            if band:
+                hi_old = max(psi) if psi else L
+                hi = min(dpr, max(hi_old + 1 + delta, Lf + 1 + delta))
+            else:
+                hi = dpr
+            for c in range(Lf + 1, hi + 1):
                 if delta == 1:
                     v = (psi.get(c, 0) + 2 * psi.get(c - 1, 0)
                          + psi.get(c - 2, 0))
@@ -1137,7 +1145,207 @@ def stage_summary():
     print("\nCHECKER FAILURES: %s" % (FAILS or "NONE"))
 
 
-STAGES = {"quick": stage_quick, "wit1024": stage_wit1024,
+def stage_fix1():
+    print("=" * 78)
+    print("STAGE fix1 -- corrected eps_phi ordering; ledger-count audits; "
+          "plain (2048,38) closure via the FRESH replay (4th implementation)")
+    print("=" * 78, flush=True)
+    out = {}
+    glo, ghi = Fraction(627035, 1048576), Fraction(156759, 262144)
+    eps = lambda g: 2 * (1 - g - g * g) / (3 + 2 * g)
+    e_lo = eps(ghi)
+    N = 10 ** 40
+    s = isqrt(5 * N * N)
+    invphi_hi = Fraction(s + 1 - N, 2 * N)
+    invphi_lo = Fraction(s - N, 2 * N)
+    eph_hi = invphi_hi - glo
+    eph_lo = invphi_lo - ghi
+    out["ord"] = audit("constant ordering eps_phi = 1/phi - g < eps* < 1/32 "
+                       "(exact sqrt5 + g sandwiches; fixes referee's own "
+                       "first-pass arithmetic slip)", eph_hi < e_lo,
+                       "eps_phi in (%.9f, %.9f), eps*_lo = %.9f"
+                       % (float(eph_lo), float(eph_hi), float(e_lo)))
+    # D2 ledger counts
+    sw = json.load(open(R5 + "/amm12592_Elin_sweep_boxeph.json"))
+    prim = [r for r in sw if r["D0"] in ((r["R"] + 31) // 32,
+                                          (r["R"] + 15) // 16)]
+    okd = all(r["minus2_rows"] == (r["R"] - 2) // 2 and
+              r["outcome"]["status"] == "CLOSED" for r in sw)
+    out["sweep"] = audit("D2 sweep ledger: 23 runs (16 primary eps=1/32,1/16 "
+                         "dyadic 128..16384 + 7 probes), ALL CLOSED, debt "
+                         "(R-2)/2 exact in every record", okd and
+                         len(sw) == 23 and len(prim) >= 16,
+                         "%d records, %d primary" % (len(sw), len(prim)))
+    fe = json.load(open(R5 + "/amm12592_Elin_feedend_state_boxeph.json"))
+    flags = [all(v for k, v in r.items() if isinstance(v, bool)) for r in fe]
+    out["feedend"] = audit("D2 feed-end certificates: 16/16 records all six "
+                           "N/C/W/F/D/DL flags true (D2 note sec. 7 says "
+                           "'14/14' -- typo for 16/16, JSON is authoritative)",
+                           len(fe) == 16 and all(flags))
+    # D3 certificate JSON counts vs note
+    gsb = json.load(open(R5 + "/amm12592_golden_superblock_certificate_boxeph.json"))
+    okg3 = (len(gsb["deaths"]) == 6 and len(gsb["controls"]) == 5
+            and all(d["chain_noseed"]["predicted_death_row"]
+                    == d["outcome"]["DIE"]
+                    and d["chain_seeded"]["predicted_death_row"]
+                    == d["outcome"]["DIE"]
+                    and d["chain_seeded"]["validated"]
+                    for d in gsb["deaths"])
+            and all(c["precond_rows"] == 0 for c in gsb["controls"]))
+    out["g3led"] = audit("D3 G3 ledger: 6 death certificates + 5 controls "
+                         "present; controls fire on zero rows", okg3)
+    note("D1 table cell 'desc1 @ R=128 D0=0' has NO desc1 run in the D1 "
+         "ledger (.out has tr15/plain only at 128) -- immaterial to "
+         "best-of-family (plain closes at 0) but the cell is unevidenced.")
+    note("transient-theorem note sec. 7 gives i_feed(128,0) = 31 via the "
+         "d_i+i+1 <= R-1 convention; the certified engine actually feeds at "
+         "row 32 (first branch d_i+i <= R-1) and can feed once more at "
+         "i_feed+1 via the delta=1 band (seen at (512,32): row 109). "
+         "D2's formula matches the first branch; both notes should adopt "
+         "'last fed row <= i_feed + 1' as the safe convention.")
+    # fresh replay at a big scale: plain (2048,38) must CLOSE with capture 1271
+    t0 = time.time()
+    rp = replay_plain(2048, 38)
+    o = rp["outcome"]
+    out["r2048"] = audit("fresh replay (4th implementation): plain R=2048 "
+                         "D0=38 CLOSED at capture 1271, debt 1023 -- "
+                         "pins D0*(2048) = 38 close-side independently",
+                         o == {"status": "CLOSED", "capture_row": 1271}
+                         and rp["minus2"] == 1023,
+                         "%s, minus2=%d, %.0fs" % (o, rp["minus2"],
+                                                   time.time() - t0))
+    led_update("fix1", out)
+    print("fix1 done; FAILS: %s" % (FAILS or "none"), flush=True)
+
+
+def stage_wit4096():
+    print("=" * 78)
+    print("STAGE wit4096 -- R=4096: desc1 D0=87 (D1 record) AND plain D0=89 "
+          "(growth-table record): rebuild + full fresh verification")
+    print("=" * 78, flush=True)
+    out = {}
+    # desc1 D0=87
+    spec = importlib.util.spec_from_file_location(
+        "sweep", C4 + "/amm12592_bulkrule_design_sweep_boxeph.py")
+    sweep = importlib.util.module_from_spec(spec)
+    sv = sys.argv
+    sys.argv = ["x", "noop"]
+    with contextlib.redirect_stdout(io.StringIO()):
+        spec.loader.exec_module(sweep)
+    sys.argv = sv
+    t0 = time.time()
+    res = sweep.run_bulk(4096, 87, "desc1", keep_rows=False, collect_u=True,
+                         spot=True)
+    ok_run = (res["outcome"]["status"] == "CLOSED"
+              and res["capture_row"] == 2537
+              and res["minus2_rows"] == 2047
+              and res["spots"] == {"x2": True, "x3": True, "debt": True})
+    check("desc1 R=4096 D0=87 rerun reproduces D1 ledger (CLOSED@2537, "
+          "debt 2047, spots pass)", ok_run, "%.0fs" % (time.time() - t0))
+    r = verify_stream("R4096 desc1 D0=87", 4096, 87,
+                      urows_rows(4096, 87, res["_urows"]))
+    audit("D1 NEW RECORD: R=4096 closes at D0=87 (desc1) -- now FULLY "
+          "verified", r["ok"] and ok_run)
+    r["run_ok"] = ok_run
+    out["desc1_87"] = r
+    del res
+    led_update("wit4096", out)
+    # plain D0=89
+    spec = importlib.util.spec_from_file_location(
+        "fast", C4 + "/amm12592_transient_fast_junkflow_boxeph.py")
+    fast = importlib.util.module_from_spec(spec)
+    with contextlib.redirect_stdout(io.StringIO()):
+        spec.loader.exec_module(fast)
+    tmp = R5 + "/_ref_tmp_wit_R4096_D089.json"
+    t0 = time.time()
+    res = fast.run_fast(4096, 89, witness_path=tmp, keep_rows=False)
+    ok_run = (res["outcome"]["status"] == "CLOSED"
+              and res["outcome"].get("capture_row") == 2537
+              and res["minus2_rows"] == 2047)
+    check("plain R=4096 D0=89 rerun reproduces growth table (CLOSED@2537, "
+          "debt 2047)", ok_run, "%.0fs" % (time.time() - t0))
+    W = json.load(open(tmp))
+    sc = {int(k): {int(kk): vv for kk, vv in v.items()}
+          for k, v in W["sparse_c"].items()}
+
+    def gen():
+        R, D0 = 4096, 89
+        for i in range(R):
+            d = fgs(R + i) + D0
+            if i == R - 1:
+                yield [-c for c in crow(d)]
+                continue
+            b = ballot(d)
+            if i == 0:
+                load = t4_load(R, d)
+                P, Pp = 1, 0
+                for t in range(d + 1):
+                    lo, hi = -2 * P, 2 * Pp
+                    b[t] += min(hi, max(lo, load[t]))
+                    Pp = P
+                    P = P * (d - 1 - t) // (t + 1) if t < d - 1 else 0
+            else:
+                for t, v in sc.get(i, {}).items():
+                    b[t] += v
+            yield b
+    r = verify_stream("R4096 ruleA D0=89", 4096, 89, gen())
+    audit("growth-law table: plain D0*(4096) = 89 close-side now FULLY "
+          "verified (prior referee's open obligation at 4096 discharged)",
+          r["ok"] and ok_run)
+    r["run_ok"] = ok_run
+    out["plain_89"] = r
+    os.remove(tmp)
+    led_update("wit4096", out)
+    print("wit4096 done; FAILS: %s" % (FAILS or "none"), flush=True)
+
+
+def stage_g3x():
+    print("=" * 78)
+    print("STAGE g3x -- G3 seeded-chain audit: band truncation vs the "
+          "note's full-layer F3 majorant")
+    print("=" * 78, flush=True)
+    out = {}
+    for (R, D0, row_ns, row_sd, death, hi_scan) in (
+            (512, 4, 15, 25, 121, 90), (1024, 14, 21, 42, 250, 160)):
+        keep = set(range(row_ns - 1, hi_scan + 1))
+        rp = replay_plain(R, D0, keep_states=keep)
+        d, j = rp["states"][row_sd]
+        okb, pb = g3_chain(R, D0, row_sd, d, j, seeded=True, band=True)
+        out["band_%d" % R] = audit(
+            "(%d,%d): reproducing D3's CODE (band-truncated psi): seeded "
+            "chain validates at row %d predicting %d -- discrepancy with "
+            "the full-layer run is exactly the band truncation"
+            % (R, D0, row_sd, death), okb and pb == death,
+            "valid=%s pred=%s" % (okb, pb))
+        first_full = None
+        for i0 in range(row_sd, hi_scan + 1):
+            if i0 not in rp["states"]:
+                continue
+            d, j = rp["states"][i0]
+            okf, pf = g3_chain(R, D0, i0, d, j, seeded=True, band=False)
+            if okf:
+                first_full = (i0, pf)
+                break
+        out["full_%d" % R] = audit(
+            "(%d,%d): with the note's FULL-layer F3 majorant the seeded "
+            "chain first validates at row %s (death still predicted "
+            "exactly)" % (R, D0, first_full),
+            first_full is not None and first_full[1] == death,
+            str(first_full))
+    note("VERDICT G3: the noseed (NI-class) certificates are fully "
+         "confirmed; the 'every admissible continuation' seeded "
+         "certificates in D3's ledger use a band-truncated psi that does "
+         "NOT implement the note's F3 recursion -- the full-layer majorant "
+         "validates only later (see rows above).  G3 the THEOREM is sound "
+         "(full-layer psi); the ledger's seeded validation ROWS and "
+         "psi-margin values are artifacts of the truncation and must be "
+         "restated from the full-layer runs.")
+    led_update("g3x", out)
+    print("g3x done; FAILS: %s" % (FAILS or "none"), flush=True)
+
+
+STAGES = {"quick": stage_quick, "wit1024": stage_wit1024, "fix1": stage_fix1,
+          "wit4096": stage_wit4096, "g3x": stage_g3x,
           "witD2": stage_witD2, "wit2048a": stage_wit2048a,
           "wit2048b": stage_wit2048b, "proofs": stage_proofs,
           "summary": stage_summary}
