@@ -1,0 +1,6 @@
+PASS  T1 ballot decode/admissibility/corner, d = 1..200
+PASS  T6 Pascal kernel (1,1)/(1,2,1), d = 2..59, all t < d
+PASS  T6 feed cells subset {0,1} for j in {d'-1, d'}, d' = 2..59
+PASS  T7 drain v x^{d-1} -> (v+2) x^{d'-1}, c0 = -2; d = 3..39, even -d<=v<=-2
+PASS  ME master-equation recovery from rule-A closures, R = 32, 64
+ALL CERTIFICATES PASS

@@ -1,0 +1,57 @@
+[
+ {
+  "R": 8,
+  "D0": 0,
+  "ruleA": "CLOSED",
+  "err_dyn": "CLOSED",
+  "blocks_equal": true,
+  "admissible": true,
+  "identity": true,
+  "parity_fires": 0,
+  "match": true
+ },
+ {
+  "R": 16,
+  "D0": 0,
+  "ruleA": "CLOSED",
+  "err_dyn": "CLOSED",
+  "blocks_equal": true,
+  "admissible": true,
+  "identity": true,
+  "parity_fires": 0,
+  "match": true
+ },
+ {
+  "R": 32,
+  "D0": 0,
+  "ruleA": "CLOSED",
+  "err_dyn": "CLOSED",
+  "blocks_equal": true,
+  "admissible": true,
+  "identity": true,
+  "parity_fires": 0,
+  "match": true
+ },
+ {
+  "R": 64,
+  "D0": 0,
+  "ruleA": "CLOSED",
+  "err_dyn": "CLOSED",
+  "blocks_equal": true,
+  "admissible": true,
+  "identity": true,
+  "parity_fires": 0,
+  "match": true
+ },
+ {
+  "R": 128,
+  "D0": 0,
+  "ruleA": "CLOSED",
+  "err_dyn": "CLOSED",
+  "blocks_equal": true,
+  "admissible": true,
+  "identity": true,
+  "parity_fires": 0,
+  "match": true
+ }
+]

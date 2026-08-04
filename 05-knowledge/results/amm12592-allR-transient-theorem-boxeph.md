@@ -10,7 +10,7 @@ Scripts (04-computation/):
 margin windows), `amm12592_transient_lemma_certificates_boxeph.py` (T1/T6/T7/
 master-equation finite certificates). Outputs (05-knowledge/results/):
 `amm12592_transient_conjugacy_{small,R256,R512}_boxeph.json`,
-`amm12592_transient_trace_R{128,256,512}_D0*_boxeph.json`,
+`amm12592_transient_trace_R{128,256,512,1024}_D0*_boxeph.json`,
 `amm12592_transient_initial_decode_boxeph.json`, `amm12592_transient_*.out`.
 New witness: `04-computation/amm12592_witness_R512_ruleA_D0_5_boxeph.json`.
 
@@ -209,7 +209,8 @@ cells `>= d_{i-1} - 1` (only cells d, d-1 of `J` touch `[x^0]e`, via
 ```
                  no death before row   d_0 - t_lo + 1  ,
 ```
-which by T4/T5 is `>= (c_1 - o(1)) R`, `c_1 = gamma*(1-tau*) = 0.19597...`.
+which by the T4 window is `>= (c_1 - o(1)) R`, `c_1 = gamma*(1-tau*) =
+0.19597...`.
 
 **Sharpness (VERIFIED-finite).** Deaths (all detected by `e[0]` leaving
 {0,2}, the only failure mode ever observed):
@@ -326,7 +327,7 @@ monotone in D0 on the tested range, so the D0scan gap 5..7 is now closed and
   inertness at dyadic R (variants coincide); T4 closed form `w_t`; T5
   peel/absorption/capture; T6 transport kernel + feed support + i_feed
   formula; T6a avalanche bounds; T6b death-delay `>= d_0 - t_lo + 1`;
-  T7 drain; T8 ballot debt + capture `>= (R-2)/2`.
+  T7 drain; T8 ballot debt + capture `>= (R-2)/2 - 1`.
 - VERIFIED-finite: conjugacy R = 8..512 (incl. stored-witness equality);
   parity zero-fires everywhere; T4 tables to R = 8192; death table + march
   speed; winning-trace anatomy (stall, capture rows, debt bookkeeping,
