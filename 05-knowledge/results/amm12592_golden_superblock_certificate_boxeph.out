@@ -1,0 +1,9 @@
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+GRID d=60: L*=40  L*-2d/3=0  tau*=40/60=0.66667  star0_identity=True
+GRID d=100: L*=67  L*-2d/3=1  tau*=67/100=0.67000  star0_identity=True
+GRID d=153: L*=77  L*-2d/3=-25  tau*=77/153=0.50327  star0_identity=True
+GRID d=306: L*=204  L*-2d/3=0  tau*=204/306=0.66667  star0_identity=True
+GRID d=612: L*=408  L*-2d/3=0  tau*=408/612=0.66667  star0_identity=True
+GRID d=1262: L*=842  L*-2d/3=1  tau*=842/1262=0.66719  star0_identity=True
+GRID d=2538: L*=1692  L*-2d/3=0  tau*=1692/2538=0.66667  star0_identity=True
