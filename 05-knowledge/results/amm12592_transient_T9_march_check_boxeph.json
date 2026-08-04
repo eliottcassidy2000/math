@@ -1,0 +1,64 @@
+{
+ "lemma": "T9' two-phase death law (VERIFIED-exact): death row = last_nondecrease_row L + gap(L); after L the gap shrinks EXACTLY 1/row, zero recoveries",
+ "engine": "amm12592_transient_fast_junkflow_boxeph.py verify_T9 (exact ints)",
+ "rows": [
+  {
+   "R": 256,
+   "D0": 0,
+   "L": 11,
+   "gap_at_L": 50,
+   "death_row": 61,
+   "edge_transport_exact": true,
+   "phi_condition": true
+  },
+  {
+   "R": 512,
+   "D0": 0,
+   "L": 5,
+   "gap_at_L": 102,
+   "death_row": 107,
+   "edge_transport_exact": true,
+   "phi_condition": true
+  },
+  {
+   "R": 512,
+   "D0": 4,
+   "L": 13,
+   "gap_at_L": 108,
+   "death_row": 121,
+   "edge_transport_exact": true,
+   "phi_condition": true
+  },
+  {
+   "R": 1024,
+   "D0": 0,
+   "L": 5,
+   "gap_at_L": 202,
+   "death_row": 207,
+   "edge_transport_exact": true,
+   "phi_condition": true
+  },
+  {
+   "R": 1024,
+   "D0": 14,
+   "L": 20,
+   "gap_at_L": 230,
+   "death_row": 250,
+   "edge_transport_exact": true,
+   "phi_condition": true
+  },
+  {
+   "R": 2048,
+   "D0": 37,
+   "L": 27,
+   "gap_at_L": 481,
+   "death_row": 508,
+   "edge_transport_exact": true,
+   "phi_condition": true
+  }
+ ],
+ "live_prediction_confirmed": "R=16384 D0=400: mid-march state at row 3328 (gap 727) predicted death at 3328+727=4055; actual death row 4055 EXACT",
+ "T9a": "edge transport identity: load at new extreme cell equals old extreme junk exactly (all runs)",
+ "T9b": "phi condition d(d-t-1)<(t+1)(t+2) held at every front (cap decay along march diagonals; threshold tau=1/phi)",
+ "T9c_falsified": "geometric-tail trigger fired at row 1 on R<=1024 deaths during dawdle: overflow tapers at the edge, march driven by interior bulge; sufficient condition as formalized is FALSE (kept per hazard discipline)"
+}

@@ -444,10 +444,16 @@ vs bound 218; no death below a T6b bound anywhere (falsifier absent).
 4, 10, 15, 19, 22, 24 (increments 6, 5, 4, 3, 2): the ONLY deviation on six
 doublings is +1 in D0 at R = 4096 (89 vs 88). The pattern's R = 8192
 prediction (D0 = 192) was verified EXACTLY (191 dies at row 2045, 192
-closes). Continuing the arithmetic decay (increments 1, then 0) predicts
+closes). Continuing the arithmetic decay (increments 1, then 0) predicted
 **D0*(16384) = 400** and saturation D0*(R) = 25R/1024 for R >= 16384, i.e.
-eps_inf = 25/1024 ~ 0.0244 (16384 probes at D0 = 384/400 running:
-saturation law => 384 dies, 400 closes; a sublinear law => 384 closes).
+eps_inf = 25/1024 ~ 0.0244. RESULT: **D0 = 400 DIES at R = 16384** (row 4055
+vs T6b bound 4012, margin 43 — and the T9' two-phase law predicted the death
+row exactly ~700 rows in advance from the mid-march state). So the exact
+saturation-at-25/1024 reading is ALSO refuted: D0*(16384) >= 401, normalized
+> 25, increments do not hit 0 yet (6, 5, 4, 3.25, 1.75, >1.06). The
+increment decay remains strong; best current reading: D0*(R)/R increasing
+and convergent to eps_inf slightly above 25/1024 (~0.025-0.027). Probes at
+D0 = 408/416 running to pin the seventh increment.
 CONJECTURE (revised): **the plain rule A needs LINEAR slack:
 D0*(R)/R -> eps_inf ~ 25/1024**, i.e. Estimate E (o(R) for plain rule A) is
 FALSE. This is a statement about rule A, not about epoch feasibility (hazard
@@ -569,3 +575,23 @@ the edge on selected cells to restore sign alternation) attacks the
 mechanism directly and is sweepable with this engine at R = 4096+ in
 minutes. That, not ballot steering (refuted by B1's invariance lemma), is
 the concrete candidate for killing eps_inf.
+
+## 18. Correction to Section 7 (feed-phase death claim) + refined criterion
+
+Sec. 7's "all deaths occur in the feed phase" was an artifact of the small
+scales then available (R <= 512 near-threshold deaths, small-D0 R = 1024).
+Exact i_feed vs near-threshold death rows (fast engine):
+
+| R | D0 | i_feed | death row | excess past feed-end |
+|------|-----|------|------|-----|
+| 2048 | 37 | 491 | 508 | 17 |
+| 4096 | 88 | 974 | 1014 | 40 |
+| 8192 | 191 | 1940 | 2045 | 105 |
+| 16384 | 400 | 3870 | 4055 | 185 |
+
+Near threshold, the march OUTLIVES the feed (the post-feed flow is
+autonomous and, by T9' as measured, never de-marches). Refined criterion:
+the die/stall decision is whether the interior bulge triggers the front
+march AT ALL during the feed phase; once triggered the march runs to death
+regardless of feed-end (excess roughly doubling per scale). Deaths at small
+D0 (far below threshold) do still land inside the feed phase.
