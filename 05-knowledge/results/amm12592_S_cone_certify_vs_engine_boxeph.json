@@ -1,0 +1,52 @@
+{
+ "R128_D08": {
+  "outcome_equal": true,
+  "row_mismatches": 0,
+  "fast": {
+   "status": "CLOSED",
+   "capture_row": 78
+  },
+  "mine": {
+   "status": "CLOSED",
+   "capture_row": 78
+  }
+ },
+ "R256_D016": {
+  "outcome_equal": true,
+  "row_mismatches": 0,
+  "fast": {
+   "status": "CLOSED",
+   "capture_row": 150
+  },
+  "mine": {
+   "status": "CLOSED",
+   "capture_row": 150
+  }
+ },
+ "R512_D032": {
+  "outcome_equal": true,
+  "row_mismatches": 0,
+  "fast": {
+   "status": "CLOSED",
+   "capture_row": 313
+  },
+  "mine": {
+   "status": "CLOSED",
+   "capture_row": 313
+  }
+ },
+ "R512_D04": {
+  "outcome_equal": true,
+  "row_mismatches": 0,
+  "fast": {
+   "status": "DIE",
+   "row": 121,
+   "const_bits": 292
+  },
+  "mine": {
+   "status": "DIE",
+   "row": 121,
+   "const_bits": 292
+  }
+ }
+}
