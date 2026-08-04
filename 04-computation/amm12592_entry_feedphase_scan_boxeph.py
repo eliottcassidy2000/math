@@ -70,6 +70,7 @@ def scan(R, D0, persist_rows=64, stride=256, postfeed_diag_rows=12,
     d_prev = floor_gamma_star(R) + D0
     d0 = d_prev
     g = two_G_coeffs_top(R, d0 - 2)
+    glow = max(1, d0 - 2)          # all indices < glow already freed
     j, junkL1, c0 = initial_junk(R, d_prev)
     minus2 = 1 if c0 == -2 else 0
     if max_scan_past_pf is None:
@@ -258,9 +259,9 @@ def scan(R, D0, persist_rows=64, stride=256, postfeed_diag_rows=12,
             w[0] = w.get(0, 0) + g[d - 1 + i]
             w[1] = w.get(1, 0) + g[d - 1 + i]; fed = True
         if g is not None:
-            for jj in list(g):
-                if jj <= d + i - 2:
-                    del g[jj]
+            while glow <= d + i - 2:
+                g.pop(glow, None)
+                glow += 1
         # ---- clamp (verbatim engine semantics)
         jn = {}
         c0 = 0
