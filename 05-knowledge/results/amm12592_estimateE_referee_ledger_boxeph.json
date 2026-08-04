@@ -166,6 +166,21 @@
    "ok": true,
    "secs": 174.1,
    "run_ok": true
+  },
+  "plain_89": {
+   "label": "R4096 ruleA D0=89",
+   "R": 4096,
+   "D0": 89,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "unit": true,
+   "traj": true,
+   "debt": true,
+   "last_corner": true,
+   "ok": true,
+   "secs": 168.3,
+   "run_ok": true
   }
  }
 }
