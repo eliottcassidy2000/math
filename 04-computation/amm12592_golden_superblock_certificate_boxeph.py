@@ -72,6 +72,11 @@ choose_row = sweep.choose_row
 VARIANTS = sweep.VARIANTS
 
 RES = {}
+if os.path.exists(JS):
+    try:
+        RES = json.load(open(JS))
+    except Exception:
+        RES = {}
 
 
 def log(line):
@@ -310,12 +315,14 @@ def mode_grid():
             c = comb(d, L - 1)
             tail = 0
             cc = comb(d, L)
+            failed = False
             for t in range(L, d + 1):
                 tail += cc
-                cc = cc * (d - t) // (t + 1) if t < d else 0
-                if tail >= c:
+                if tail > c:
+                    failed = True          # full tail can only be larger
                     break
-            if c >= tail:
+                cc = cc * (d - t) // (t + 1) if t < d else 0
+            if not failed and c >= tail:
                 Ls = L
                 break
         # (star-0): C(d,L-1) >= C(d,L)  <=>  2L >= d+1  (exact check on window)
