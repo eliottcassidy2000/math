@@ -1,0 +1,4 @@
+regression plain-vs-engine (256/512, D0 0/1/4/5): ALL OK
+desc R=256 D0=0: {'status': 'CLOSED', 'capture_row': 154}  T6b=52 cap=154 minus2=127 front0=101 maxfront=112 mingap=48 peakL1b=244 failrows=3970 shaped=36 spots={'x2': True, 'x3': True, 'debt': True} (0.0s)
+REFEREE desc R=256 D0=0: ok=True adm=True identity=True debt=127
+desc R=512 D0=0: {'status': 'DIE', 'row': 109, 'const_bits': 281}  T6b=102 cap=None minus2=49 front0=204 maxfront=371 mingap=0 peakL1b=492 failrows=22486 shaped=280 spots=None (0.2s)
