@@ -1,0 +1,19 @@
+{
+ "stage": "apriori",
+ "pass": 8,
+ "fail": 0,
+ "fails": [],
+ "text": [
+  "==========================================================================",
+  "STAGE apriori -- F4-automatic corollary re-check at R = 2^16, 2^17 (worst case)",
+  "==========================================================================",
+  "  [PASS] F4 automatic at R=65536 eps=1/32: worst-case clocks fit budget  -- i0=15271 Tmax=25349 ub=40620 R-2=65534 margin=24914",
+  "  [PASS]   T_t <= T_2 on probe set (E1 monotonicity claim)  -- [(1, 19862), (2, 25349), (3, 17561), (4, 13448), (6, 9165), (10, 5602), (20, 2841), (50, 1146), (200, 287), (1000, 57), (5000, 11)]",
+  "  [PASS] F4 automatic at R=65536 eps=1/16: worst-case clocks fit budget  -- i0=13989 Tmax=25993 ub=39982 R-2=65534 margin=25552",
+  "  [PASS]   T_t <= T_2 on probe set (E1 monotonicity claim)  -- [(1, 20367), (2, 25993), (3, 18007), (4, 13789), (6, 9397), (10, 5743), (20, 2913), (50, 1175), (200, 294), (1000, 58), (5000, 10)]",
+  "  [PASS] F4 automatic at R=131072 eps=1/32: worst-case clocks fit budget  -- i0=30477 Tmax=50681 ub=81158 R-2=131070 margin=49912",
+  "  [PASS]   T_t <= T_2 on probe set (E1 monotonicity claim)  -- [(1, 39709), (2, 50681), (3, 35111), (4, 26887), (6, 18324), (10, 11201), (20, 5682), (50, 2293), (200, 576), (1000, 115), (5000, 23)]",
+  "  [PASS] F4 automatic at R=131072 eps=1/16: worst-case clocks fit budget  -- i0=27913 Tmax=51971 ub=79884 R-2=131070 margin=51186",
+  "  [PASS]   T_t <= T_2 on probe set (E1 monotonicity claim)  -- [(1, 40720), (2, 51971), (3, 36005), (4, 27572), (6, 18791), (10, 11486), (20, 5827), (50, 2352), (200, 591), (1000, 118), (5000, 24)]"
+ ]
+}
