@@ -8,7 +8,8 @@
   "1024": 15,
   "2048": 38,
   "4096": 89,
-  "8192": 192
+  "8192": 192,
+  "16384": "in [401, 416] (400 dies row 4055, 416 closes capture 10126; 408 was marching at kill, unverified)"
  },
  "death_rows_at_threshold_minus_1": {
   "1024_D014": {
@@ -70,13 +71,24 @@
    "1024": 15,
    "2048": 19,
    "4096": 22.25,
-   "8192": 24
+   "8192": 24,
+   "16384": "(25.06, 26.0]"
   },
   "arithmetic_pattern": "4,10,15,19,22,24 (increments 6,5,4,3,2); only deviation on six doublings: +1 in D0 at R=4096 (89 vs 88)",
   "R8192_prediction_of_pattern_VERIFIED_EXACTLY": 192,
   "pre_registered_prediction_R16384": "saturation law: D0*=400 (384 dies); sublinear law: 384 closes. Probes running.",
   "implication_if_saturates": "eps_inf = 25/1024 ~ 0.0244; plain rule A needs LINEAR slack; Estimate E false for plain rule; C* <= 1+gamma*+eps via (E-lin) would still need proof; golden constant requires bulk-modified rule",
-  "status": "CONJECTURED; six-doubling exact data"
+  "status": "CONJECTURED; six-doubling exact data",
+  "R16384_RESULT": "D0=400 DIES (row 4055 = T9'-predicted exactly; bound 4012); D0=416 CLOSES; exact-saturation-at-25/1024 law REFUTED; increments (in 1024ths): 6, 5, 4, 3.25, 1.75, then in (1.06, 2.0]",
+  "threshold_ratios_D0_2R_over_D0_R": [
+   5,
+   3,
+   2.533,
+   2.342,
+   2.157,
+   "2.09..2.17"
+  ],
+  "best_reading": "D0*(R)/R monotone increasing, ratio D0(2R)/D0(R) declining to ~2 from above: linear growth with decaying correction; eps_inf >= 401/(16*1024) ~ 0.0245, best estimate 0.025-0.028"
  },
  "hazard": "rule-A deaths at D0 below threshold are NEVER epoch-infeasibility evidence; the R=128 LP already showed scheduled solutions exist where greedy variants die",
  "T4b_edge_lemma": {
@@ -91,5 +103,27 @@
   "phi_condition": "d(d-t-1) < (t+1)(t+2) at every front in every run (front depth stays below 1/phi cap-growth threshold)",
   "geometric_tail_trigger_FALSIFIED": "first formalization fired at row 1 on R=256..1024 deaths while the front still dawdles: the front's own junk is small (overflow tapers at the edge) and is absorbed at landing; the march is driven by the interior bulge, not edge transport",
   "verified_invariant": "in every death run the gap decreases by exactly 1/row after the last non-decrease row (R=2048 D0=37: 480 consecutive -1 steps)"
+ },
+ "feed_phase_correction": {
+  "old_claim_falsified": "'all deaths occur in feed phase' (first sitting, R<=512 data)",
+  "exact": {
+   "2048_D037": {
+    "i_feed": 491,
+    "death": 508
+   },
+   "4096_D088": {
+    "i_feed": 974,
+    "death": 1014
+   },
+   "8192_D0191": {
+    "i_feed": 1940,
+    "death": 2045
+   },
+   "16384_D0400": {
+    "i_feed": 3870,
+    "death": 4055
+   }
+  },
+  "reading": "near-threshold marches outlive the feed; die/stall is decided by whether the march triggers DURING feed"
  }
 }

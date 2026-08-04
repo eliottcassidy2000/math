@@ -425,6 +425,7 @@ dawdle:
 | 2048 | 38 | 508 | 476 | 1271 |
 | 4096 | 89 | 1014 | 980 | 2537 |
 | 8192 | 192 | 2045 | 1988 | 5064 |
+| 16384 | in [401, 416] | 4055 (D0=400) | 4012 | 10126 (D0=416) |
 
 Pre-registered first-sitting predictions came true: R = 1024 D0 = 0 died at
 207 vs bound 202 (margin 5, inside the predicted 5-15); D0 = 8 died at 227
@@ -449,11 +450,13 @@ closes). Continuing the arithmetic decay (increments 1, then 0) predicted
 eps_inf = 25/1024 ~ 0.0244. RESULT: **D0 = 400 DIES at R = 16384** (row 4055
 vs T6b bound 4012, margin 43 — and the T9' two-phase law predicted the death
 row exactly ~700 rows in advance from the mid-march state). So the exact
-saturation-at-25/1024 reading is ALSO refuted: D0*(16384) >= 401, normalized
-> 25, increments do not hit 0 yet (6, 5, 4, 3.25, 1.75, >1.06). The
-increment decay remains strong; best current reading: D0*(R)/R increasing
-and convergent to eps_inf slightly above 25/1024 (~0.025-0.027). Probes at
-D0 = 408/416 running to pin the seventh increment.
+saturation-at-25/1024 reading is ALSO refuted: **D0*(16384) in [401, 416]**
+(400 dies verified; 416 CLOSES verified, capture 10126, debt 8191 exact;
+D0 = 408 was mid-march when its run was reallocated — unverified). Increments
+of the normalized threshold: 6, 5, 4, 3.25, 1.75, then in (1.06, 2.0].
+Threshold ratios D0*(2R)/D0*(R): 5, 3, 2.53, 2.34, 2.16, ~2.1 — declining to
+2 from above, the signature of LINEAR growth with a decaying correction.
+Best reading: eps_inf >= 401/16384 ~ 0.0245, estimate 0.025-0.028.
 CONJECTURE (revised): **the plain rule A needs LINEAR slack:
 D0*(R)/R -> eps_inf ~ 25/1024**, i.e. Estimate E (o(R) for plain rule A) is
 FALSE. This is a statement about rule A, not about epoch feasibility (hazard
@@ -563,8 +566,9 @@ D0 = 5 (rule A AND rule B files) and R = 1024 D0 = 15; B1's slow runner
 independently found the same D0 thresholds 0/1/5/15 at R <= 1024 and the
 same die rows 227..250 at R = 1024 D0 = 8..14 — bit-level agreement with
 the fast engine across three implementations and two sessions. The slow
-error-dynamics cross-check at R = 1024 D0 = 14 matches row-for-row (193/193
-rows at time of writing, run continuing to its death row).
+error-dynamics cross-check at R = 1024 D0 = 14 is COMPLETE: death at row 250
+with const_bits 599, bit-identical to the fast engine, all 251 rows matching
+on every compared stat (d, nclamped, tmin, tmax, junkL1_bits, c0, e_in0).
 
 Design note for the bulk rule (the golden route): the initial junk profile
 ALTERNATES in sign cell-to-cell (T4's (-1)^{d-t}), and the kernel (1,2,1)
