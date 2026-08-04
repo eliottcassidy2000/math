@@ -1,0 +1,236 @@
+{
+ "blocks_equal_vs_slow": {
+  "8": {
+   "blocks_equal": true,
+   "admissible": true,
+   "identity": true
+  },
+  "16": {
+   "blocks_equal": true,
+   "admissible": true,
+   "identity": true
+  },
+  "32": {
+   "blocks_equal": true,
+   "admissible": true,
+   "identity": true
+  },
+  "64": {
+   "blocks_equal": true,
+   "admissible": true,
+   "identity": true
+  },
+  "128": {
+   "blocks_equal": true,
+   "admissible": true,
+   "identity": true
+  }
+ },
+ "trace_equal_vs_stored": {
+  "R256_D00": {
+   "rows_compared": 62,
+   "mismatches": [],
+   "n_mismatch": 0,
+   "slow_outcome": {
+    "status": "DIE",
+    "row": 61,
+    "const_bits": 139
+   },
+   "fast_outcome": {
+    "status": "DIE",
+    "row": 61,
+    "const_bits": 139
+   }
+  },
+  "R256_D01": {
+   "rows_compared": 256,
+   "mismatches": [
+    [
+     160,
+     "missing"
+    ],
+    [
+     161,
+     "missing"
+    ],
+    [
+     162,
+     "missing"
+    ],
+    [
+     163,
+     "missing"
+    ],
+    [
+     164,
+     "missing"
+    ],
+    [
+     165,
+     "missing"
+    ],
+    [
+     166,
+     "missing"
+    ],
+    [
+     167,
+     "missing"
+    ],
+    [
+     168,
+     "missing"
+    ],
+    [
+     169,
+     "missing"
+    ]
+   ],
+   "n_mismatch": 96,
+   "slow_outcome": {
+    "status": "CLOSED"
+   },
+   "fast_outcome": {
+    "status": "CLOSED",
+    "capture_row": 159
+   }
+  },
+  "R512_D00": {
+   "rows_compared": 108,
+   "mismatches": [],
+   "n_mismatch": 0,
+   "slow_outcome": {
+    "status": "DIE",
+    "row": 107,
+    "const_bits": 277
+   },
+   "fast_outcome": {
+    "status": "DIE",
+    "row": 107,
+    "const_bits": 277
+   }
+  },
+  "R512_D04": {
+   "rows_compared": 122,
+   "mismatches": [],
+   "n_mismatch": 0,
+   "slow_outcome": {
+    "status": "DIE",
+    "row": 121,
+    "const_bits": 292
+   },
+   "fast_outcome": {
+    "status": "DIE",
+    "row": 121,
+    "const_bits": 292
+   }
+  },
+  "R512_D05": {
+   "rows_compared": 512,
+   "mismatches": [
+    [
+     313,
+     "missing"
+    ],
+    [
+     314,
+     "missing"
+    ],
+    [
+     315,
+     "missing"
+    ],
+    [
+     316,
+     "missing"
+    ],
+    [
+     317,
+     "missing"
+    ],
+    [
+     318,
+     "missing"
+    ],
+    [
+     319,
+     "missing"
+    ],
+    [
+     320,
+     "missing"
+    ],
+    [
+     321,
+     "missing"
+    ],
+    [
+     322,
+     "missing"
+    ]
+   ],
+   "n_mismatch": 199,
+   "slow_outcome": {
+    "status": "CLOSED"
+   },
+   "fast_outcome": {
+    "status": "CLOSED",
+    "capture_row": 312
+   }
+  },
+  "R512_D08": {
+   "rows_compared": 512,
+   "mismatches": [
+    [
+     320,
+     "missing"
+    ],
+    [
+     321,
+     "missing"
+    ],
+    [
+     322,
+     "missing"
+    ],
+    [
+     323,
+     "missing"
+    ],
+    [
+     324,
+     "missing"
+    ],
+    [
+     325,
+     "missing"
+    ],
+    [
+     326,
+     "missing"
+    ],
+    [
+     327,
+     "missing"
+    ],
+    [
+     328,
+     "missing"
+    ],
+    [
+     329,
+     "missing"
+    ]
+   ],
+   "n_mismatch": 192,
+   "slow_outcome": {
+    "status": "CLOSED"
+   },
+   "fast_outcome": {
+    "status": "CLOSED",
+    "capture_row": 319
+   }
+  }
+ },
+ "witness_full_check": {}
+}

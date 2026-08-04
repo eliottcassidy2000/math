@@ -1,0 +1,1 @@
+{"R": 1024, "D0": 8, "partial_row": 0, "trace": [{"i": 0, "d": 620, "nclamped": 403, "tmin": 0, "tmax": 402, "junkL1_bits": 985, "c0": 0, "e_in0": 2, "degE": 1022, "minsupp": 217, "L1_bits": 1023, "front": 217}], "parity_fires": 0, "elapsed_s": 15.1}

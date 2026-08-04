@@ -1,0 +1,1 @@
+INDEPENDENT REFEREE R=1024 D0=15: profile=floor+15:True admissible:True identity:True unit:True source=rule B ballot-scheduled (cellwise-none), d_i = exact_floor(gamma*(R+i)) + 15
