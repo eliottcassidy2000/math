@@ -57,6 +57,11 @@ two_G_coeffs = fastflow.two_G_coeffs
 initial_junk = fastflow.initial_junk
 
 RES = {}
+if os.path.exists(JS):
+    try:
+        RES = json.load(open(JS))
+    except Exception:
+        RES = {}
 
 
 def log(line):

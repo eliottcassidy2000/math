@@ -2511,5 +2511,251 @@
     }
    ]
   }
+ ],
+ "G1": {
+  "identity_trials": 400,
+  "zero_sum_trials": 400,
+  "defect_mass_L1_trials": 400,
+  "ratio_law": [
+   {
+    "rho": 2,
+    "delta": 0,
+    "interior_multiplier_exact": true
+   },
+   {
+    "rho": 2,
+    "delta": 1,
+    "interior_multiplier_exact": true
+   },
+   {
+    "rho": 3,
+    "delta": 0,
+    "interior_multiplier_exact": true
+   },
+   {
+    "rho": 3,
+    "delta": 1,
+    "interior_multiplier_exact": true
+   },
+   {
+    "rho": 4,
+    "delta": 0,
+    "interior_multiplier_exact": true
+   },
+   {
+    "rho": 4,
+    "delta": 1,
+    "interior_multiplier_exact": true
+   },
+   {
+    "rho": 5,
+    "delta": 0,
+    "interior_multiplier_exact": true
+   },
+   {
+    "rho": 5,
+    "delta": 1,
+    "interior_multiplier_exact": true
+   }
+  ],
+  "naive_envelope_counterexample": {
+   "a": "M on even cells, 0 on odd; M=100, N=8",
+   "first_violations": [
+    [
+     1,
+     200,
+     100
+    ],
+    [
+     2,
+     200,
+     0
+    ],
+    [
+     3,
+     200,
+     0
+    ],
+    [
+     4,
+     200,
+     0
+    ]
+   ],
+   "verdict": "naive claim FALSE (hazard record)"
+  }
+ },
+ "G2": [
+  {
+   "R": 256,
+   "D0": 0,
+   "d": 153,
+   "front": 101,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 53,
+   "last_sub2_cell": 52,
+   "first_super2_cell": 53,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 100,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    101
+   ]
+  },
+  {
+   "R": 256,
+   "D0": 1,
+   "d": 154,
+   "front": 100,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 55,
+   "last_sub2_cell": 54,
+   "first_super2_cell": 55,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 99,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    100
+   ]
+  },
+  {
+   "R": 512,
+   "D0": 0,
+   "d": 306,
+   "front": 204,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 103,
+   "last_sub2_cell": 103,
+   "first_super2_cell": 104,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 203,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    204
+   ]
+  },
+  {
+   "R": 512,
+   "D0": 5,
+   "d": 311,
+   "front": 199,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 113,
+   "last_sub2_cell": 112,
+   "first_super2_cell": 113,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 198,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    199
+   ]
+  },
+  {
+   "R": 1024,
+   "D0": 0,
+   "d": 612,
+   "front": 410,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 203,
+   "last_sub2_cell": 203,
+   "first_super2_cell": 204,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 409,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    410
+   ]
+  },
+  {
+   "R": 1024,
+   "D0": 15,
+   "d": 627,
+   "front": 395,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 233,
+   "last_sub2_cell": 232,
+   "first_super2_cell": 233,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 394,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    395
+   ]
+  },
+  {
+   "R": 2048,
+   "D0": 38,
+   "d": 1262,
+   "front": 784,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 479,
+   "last_sub2_cell": 478,
+   "first_super2_cell": 479,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 783,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    784
+   ]
+  },
+  {
+   "R": 4096,
+   "D0": 89,
+   "d": 2538,
+   "front": 1556,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 983,
+   "last_sub2_cell": 982,
+   "first_super2_cell": 983,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 1555,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    1556
+   ]
+  },
+  {
+   "R": 8192,
+   "D0": 192,
+   "d": 5090,
+   "front": 3100,
+   "sign_law_ok": true,
+   "support_T4b_ok": true,
+   "t2_pred_2d-R+3": 1991,
+   "last_sub2_cell": 1990,
+   "first_super2_cell": 1991,
+   "cells_outside_pred_window8": 0,
+   "n_concave_cells": 0,
+   "n_convex_cells": 3099,
+   "concave_range": null,
+   "convex_range": [
+    2,
+    3100
+   ]
+  }
  ]
 }

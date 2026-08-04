@@ -54,12 +54,13 @@ fallback this note delivers the sharpest provable structure instead:
    junk cells are same-signed and large enough (exact conditions below),
    then **every admissible continuation** — any in-box even choices at
    every later row, not just the rule that produced the state — dies, at an
-   exactly computed row. Machine-certified on 5 near-threshold deaths
-   (plain 512/1024/2048/4096(/8192), desc1 1024): the certificate validates
-   at rows 15/21/20/39/39 — within a few rows of D1's observational
-   first-super — and **predicts the actual death row exactly, 106..975 rows
-   in advance, in all 5 runs**. Hostile controls: on the adjacent CLOSING
-   runs the precondition never fires (0 rows in 4/4 runs).
+   exactly computed row. Machine-certified on 6 near-threshold deaths
+   (plain 512/1024/2048/4096/8192, desc1 1024): the certificate validates
+   at rows 15/21/20/39/39/57 — within a few rows of D1's observational
+   first-super — and **predicts the actual death row exactly, 106..1988
+   rows in advance, in all 6 runs**. Hostile controls: on the adjacent
+   CLOSING runs the precondition never fires (0 rows in 5/5 runs,
+   including 8192 D0=192).
 4. **The tau = 2/3 threshold (PROVED + VERIFIED).** The closed-form
    sufficient condition for G3's invariant propagation is the binomial tail
    inequality `C(d, L-1) >= sum_{t>=L} C(d,t)`, whose exact threshold is
@@ -70,9 +71,9 @@ fallback this note delivers the sharpest provable structure instead:
    profile.** Everything reduces to one design inequality (Section 6): keep
    `sup_rows m_i / Theta'_i < 1` (no super-pair) through the feed phase at
    slack o(R), then D2's Hypothesis-S machinery closes. Exact margins: at
-   D0* the order parameter stays < 1 (never fires, 4/4 scales); at D0*-1 it
-   crosses 1 at rows = 0.029R, 0.021R/0.020R, 0.019R, 0.0095R — a declining
-   fraction of R along the critical line.
+   D0* the order parameter stays < 1 (never fires, 5/5 scales); at D0*-1 it
+   crosses 1 at rows = 0.029R, 0.021R/0.020R, 0.019R, 0.0095R, 0.0070R — a
+   declining fraction of R along the critical line.
 
 ---
 
@@ -185,7 +186,9 @@ Dying runs nucleate a FRONT-REGION defect at rows 10/15 (2 cells behind the
 front, before D1's first-super at 13/17); closing runs keep the front band
 defect-free for Theta(R) rows (their first defects are deep-interior,
 feed/drain-related, and harmless). The dichotomy of K4/D1 is now anchored
-at the defect-birth event.
+at the defect-birth event. (These replays are a THIRD independent
+implementation of the plain clamp — die rows 121/250 and capture rows
+312/639 agree with the certified fast engine and the D1 sweep engine.)
 
 ## 3. Lemma G3 (super-pair death certificate) — PROVED
 
@@ -244,13 +247,18 @@ continuation — death (T2/T6: survival requires zero junk at cell d) — at
 row `i_0 + (d_{i_0} - L_{i_0})` exactly (the gap d-L decreases by exactly 1
 per step).
 
-*Proof.* Induction on k. By F3 the layer is psi-bounded, so the two load
+*Proof.* Induction on k, with hypothesis: junk at cells (L_k - 1, L_k) has
+sign s and magnitudes >= (b_k, a_k), and junk at every cell > L_k is
+<= psi_k cellwise. (At k = 0 the layer is empty since L = max supp; after
+the first step the tracked diagonal may have psi-bounded junk above it —
+that is exactly what F3 controls.) Given the hypothesis, the two load
 lower bounds hold, with sign s (fl > 0 forces the s-part to dominate the
 layer disturbance). By F1 the junk at both diagonal cells is forced, sign
-s, with magnitudes >= (a_{k+1}, b_{k+1}) — for every admissible u. The new
-state satisfies the induction hypothesis at (L_{k+1}, d_{k+1}). At the
-final step the front cell equals the bottom cell d', whose box is [0, 2];
-fl > end forces nonzero junk there. Feed never interferes (cells {0,1};
+s, with magnitudes >= (a_{k+1}, b_{k+1}) — for every admissible u; and by
+F3 the new layer is psi_{k+1}-bounded. At the final step the front cell
+equals the bottom cell d', whose box is [0, 2]; fl > end forces nonzero
+junk there — death at that row or earlier (junk reaching the bottom cell
+by any other route only hastens it). Feed never interferes (cells {0,1};
 L_k >= 4 and increasing). QED
 
 **Variant (no-injection class NI; PROVED).** For continuations that take
@@ -271,23 +279,25 @@ first row the psi==0 / full-psi chain validates to death:
 | desc1 1024 D0=13 | 245 | 20 | 20 | 38 | 245 | EXACT | 16 |
 | plain 2048 D0=37 | 508 | 39 | 39 | 70 | 508 | EXACT | 27 |
 | plain 4096 D0=88 | 1014 | 39 | 39 | 87 | 1014 | EXACT | 31 |
+| plain 8192 D0=191 | 2045 | 57 | 57 | 113 | 2045 | EXACT | — |
 
-Margins: noseed min front margin 3–5 bits (the forced overflow beats the
-box end by >= 8x at the tightest row); seeded chains validate with 13–21
-bit margins and the layer majorant psi stays 3–7 bits BELOW the pair value
+Margins: noseed min front margin 3–8 bits (the forced overflow beats the
+box end by >= 8x at the tightest row); seeded chains validate with 13–24
+bit margins and the layer majorant psi stays 3–8 bits BELOW the pair value
 at every step (the compounding adversary loses: mass lingering above the
 front is eaten at the front's forced speed — the (2r)^offset path-weight
 geometry converges for tau > 2/3). **Death rows predicted exactly, 106,
-229, 225, 469, 975 rows in advance.** T9's two-phase law "death = L +
-gap(L)" is now a per-run THEOREM (for all admissible continuations), not a
-measurement.
+229, 225, 469, 975, 1988 rows in advance — 6/6.** T9's two-phase law
+"death = L + gap(L)" is now a per-run THEOREM (for all admissible
+continuations), not a measurement.
 
-**Hostile controls (4/4).** On the adjacent CLOSING runs — plain 512 D0=5,
-plain 1024 D0=15, desc1 1024 D0=14, plain 2048 D0=38 — the precondition
-fires on ZERO rows (sup m/Theta' < 1 throughout). No contradiction is
-possible (a validated closing run would refute the lemma); none occurs.
-Replay outcomes reproduce the known table (die 121/250/245/508/1014,
-capture 312/639/628/1271) through D1's regression-certified choose_row.
+**Hostile controls (5/5).** On the adjacent CLOSING runs — plain 512 D0=5,
+plain 1024 D0=15, desc1 1024 D0=14, plain 2048 D0=38, plain 8192 D0=192 —
+the precondition fires on ZERO rows (sup m/Theta' < 1 throughout). No
+contradiction is possible (a validated closing run would refute the
+lemma); none occurs. Replay outcomes reproduce the known table (die
+121/250/245/508/1014/2045, capture 312/639/628/1271/5064) through D1's
+regression-certified choose_row.
 
 ## 4. The closed-form corollary and the tau = 2/3 threshold — PROVED + VERIFIED
 
@@ -309,17 +319,17 @@ geometric majorization `tail <= C(d,L)/(1-r)`, r = (d-L)/(L+1), gives
 tau >= 2/3 asymptotically: `tau/(1-tau) >= tau/(2tau-1) iff tau >= 2/3`).
 The front position tau = L/d only increases along the march (L grows
 1+delta, d grows delta), so the condition is absorbing. Structural
-remarks: the initial front tau_0 = (1-g)/g = 0.6728 > 2/3 at D0 = O(1);
+remarks: the initial front tau_0 = (1-g)/g = 0.67228 > 2/3 at D0 = O(1);
 the initial front sits at tau >= 2/3 exactly when
 d_0 <= (3R-6)/5, i.e. D0 <= (3/5 - g) R + O(1) with
-3/5 - g = 0.00243...; at larger slack the certified runs enter the
+3/5 - g = 0.0020131...; at larger slack the certified runs enter the
 tau >= 2/3 regime a few rows into the march (the chain checks every row
 exactly, so no asymptotic step is used anywhere).
 
 ## 5. What is proved about the D1 rule class (the negative half, made sharp)
 
 Combining G3 with D1's exact sweeps: at D0*(R) - 1, the plain and desc1
-flows reach a certified super-pair state at row ~0.01R-0.03R, after which
+flows reach a certified super-pair state at row ~0.007R-0.03R, after which
 NO admissible modification of all later choices — bulk, ballot, vent,
 lookahead, anything in the T2-licensed class — can avoid death. All
 shaping must act BEFORE the certificate validates. The no-return window
@@ -352,9 +362,10 @@ the flow alternating is not a heuristic: the kernel annihilates alternation
 exactly, with survival budget = 2 x (convexity-defect mass) per row
 (G1-c); the initial data is exactly alternating, globally convex, with the
 contraction/expansion boundary at the T6b scale t_2 = 2d-R+3 (G2); defects
-are born only at the clamp taper and the feed cells (G2-c/d); and death is
-exactly the G3 state, which is reached only via defect growth (G2-d: the
-first front defect precedes first-super by 2-3 rows in every dying run).
+are born only at the clamp taper and the feed cells (G2-c/d); and every
+observed death passes through the G3 state, reached via defect growth
+(G2-d: the first front defect precedes first-super by 2-3 rows in every
+dying run; the converse "death only via G3" is not claimed or needed).
 An admissible schedule beats eps_inf iff it manages the defect-mass budget
 through the feed phase — cross-row scheduling of WHERE the clamp absorbs,
 as D1's handoff anticipated, now with the exact objective function.
@@ -369,9 +380,10 @@ as D1's handoff anticipated, now with the exact objective function.
 | 1024 (desc1) | < 1 | 20 | 0.0195 |
 | 2048 | < 1 | 39 | 0.0190 |
 | 4096 | < 1 | 39 | 0.0095 |
+| 8192 | < 1 | 57 | 0.0070 |
 
-At the crossing the state sits within 0-1 bits of Theta' (m_bits vs
-theta_bits: 292/292, 600/599, 596/595, 1214/1214, 2452/2452): the
+At the crossing the state sits within 0-5 bits of Theta' (m_bits vs
+theta_bits: 292/292, 600/599, 596/595, 1214/1214, 2452/2452, 4938/4933): the
 threshold crossing is razor-thin at every scale, then margins grow
 monotonically — the sup is attained on a knife edge, which is why
 one-unit D0 changes flip the outcome. A future golden-schedule attempt
@@ -397,7 +409,7 @@ D2-certified structure (up to S').
   floor engine (Lucas/Fibonacci integer comparisons).
 - The seeded G3 chain covers every admissible continuation; the noseed
   chain covers the no-injection class only (plain is in it; desc1 is not —
-  its run is covered by the seeded chain, 5/5 validated).
+  its run is covered by the seeded chain, 6/6 validated).
 
 ## 8. Status ledger
 
@@ -412,9 +424,9 @@ D2-certified structure (up to S').
 - **VERIFIED-exact (new):** G1 batteries (400 trials x 3 laws, ratio 8/8,
   counterexample); G2 sign/support/crossover/convexity at 9 grids to
   R = 8192 (crossover within 1 cell, 0 concave cells); L*(d) = ceil(2d/3)
-  + {0,1} at 8 degrees; G3 death certificates 5/5 with EXACT death-row
-  prediction (512/1024/1024-desc1/2048/4096; 8192 pending at close),
-  margins 3-21 bits, psi below pair value throughout; hostile controls 4/4
+  + {0,1} at 8 degrees; G3 death certificates 6/6 with EXACT death-row
+  prediction (512/1024/1024-desc1/2048/4096/8192),
+  margins 3-24 bits, psi below pair value throughout; hostile controls 5/5
   (precondition never fires on closures); defect-birth dichotomy (front
   defects rows 10/15 in dying runs; none for Theta(R) rows in closing
   runs).

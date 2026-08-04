@@ -249,6 +249,46 @@
    },
    "death_row": 1014,
    "elapsed_s": 38.2
+  },
+  {
+   "R": 8192,
+   "D0": 191,
+   "variant": "plain",
+   "outcome": {
+    "DIE": 2045
+   },
+   "first_precond_row": 57,
+   "precond_rows": 1988,
+   "first_valid_noseed": 57,
+   "first_valid_seeded": 113,
+   "attempts_noseed": 1,
+   "attempts_seeded": 57,
+   "precond_state": {
+    "i": 57,
+    "d": 5123,
+    "L": 3135,
+    "gap": 1988,
+    "m_bits": 4938,
+    "theta_bits": 4933
+   },
+   "chain_noseed": {
+    "validated": true,
+    "predicted_death_row": 2045,
+    "steps": 1988,
+    "min_front_margin_bits": 8,
+    "max_psi_vs_a_bits": null,
+    "gap_at_valid": 1988
+   },
+   "chain_seeded": {
+    "validated": true,
+    "predicted_death_row": 2045,
+    "steps": 1932,
+    "min_front_margin_bits": 24,
+    "max_psi_vs_a_bits": -8,
+    "gap_at_valid": 1932
+   },
+   "death_row": 2045,
+   "elapsed_s": 326.0
   }
  ],
  "controls": [
@@ -311,6 +351,21 @@
    "attempts_noseed": 0,
    "attempts_seeded": 0,
    "elapsed_s": 2.6
+  },
+  {
+   "R": 8192,
+   "D0": 192,
+   "variant": "plain",
+   "outcome": {
+    "CLOSED_capture": 5064
+   },
+   "first_precond_row": null,
+   "precond_rows": 0,
+   "first_valid_noseed": null,
+   "first_valid_seeded": null,
+   "attempts_noseed": 0,
+   "attempts_seeded": 0,
+   "elapsed_s": 107.4
   }
  ]
 }

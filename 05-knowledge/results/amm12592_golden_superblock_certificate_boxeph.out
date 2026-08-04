@@ -99,3 +99,13 @@ CONTROL plain R=512 D0=5: outcome={'CLOSED_capture': 312} precond_rows=0 first_p
 CONTROL plain R=1024 D0=15: outcome={'CLOSED_capture': 639} precond_rows=0 first_precond=None -> OK (never fires) (0.5s)
 CONTROL desc1 R=1024 D0=14: outcome={'CLOSED_capture': 628} precond_rows=0 first_precond=None -> OK (never fires) (0.7s)
 CONTROL plain R=2048 D0=38: outcome={'CLOSED_capture': 1271} precond_rows=0 first_precond=None -> OK (never fires) (2.6s)
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+DEATH plain R=8192 D0=191: outcome={'DIE': 2045} first_precond=57 ({'i': 57, 'd': 5123, 'L': 3135, 'gap': 1988, 'm_bits': 4938, 'theta_bits': 4933})
+   noseed: first_valid=57 predicted_death=2045 actual=2045 match=True min_front_margin_bits=8 attempts=1
+   seeded: first_valid=113 predicted_death=2045 match=True min_front_margin_bits=24 max_psi_vs_a_bits=-8 attempts=57  (326.0s)
+done in 326.0s
+========================================================================
+LANE D3 script B: super-pair death certificate (exact ints)
+CONTROL plain R=8192 D0=192: outcome={'CLOSED_capture': 5064} precond_rows=0 first_precond=None -> OK (never fires) (107.4s)
+done in 107.5s
