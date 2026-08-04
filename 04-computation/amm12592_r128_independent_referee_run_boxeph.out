@@ -1,0 +1,4 @@
+R128 profile == exact gamma* floor profile (Fib/Lucas): True
+profile_ok=True adm_ok=True adm_bad=[] identity_ok=True unit_ok=True eff_rate=58/97
+signword: ++--+++--+++--+++--++++------+++-+-+----+++++------++++++----------+++++++++------------------+++++++++++++++++----------+++++++
+R128 INDEPENDENT REFEREE: ALL CHECKS PASSED

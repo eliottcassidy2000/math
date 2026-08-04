@@ -1,0 +1,157 @@
+
+================ R = 8 ================  (identity + admissibility re-verified)
+row R-1: -fullbox=True +fullbox=False
+attractor entry: sigma_i = E_m first at i=3 m=3
+rows with c_i != 0: 5 of 8
+  row   0 d=  4: cell-support k=[1,4] max|c|=6
+  row   1 d=  5: cell-support k=[0,5] max|c|=8
+  row   2 d=  5: cell-support k=[0,1] max|c|=2
+  row   3 d=  6: cell-support k=[0,2] max|c|=4
+  row   7 d=  8: cell-support k=[0,7] max|c|=70
+C(witness) == closed_C(R): True
+
+================ R = 16 ================  (identity + admissibility re-verified)
+row R-1: -fullbox=True +fullbox=False
+attractor entry: sigma_i = E_m first at i=8 m=6
+rows with c_i != 0: 10 of 16
+  row   0 d=  9: cell-support k=[0,9] max|c|=140
+  row   1 d= 10: cell-support k=[0,10] max|c|=210
+  row   2 d= 10: cell-support k=[1,3] max|c|=168
+  row   3 d= 11: cell-support k=[1,9] max|c|=216
+  row   4 d= 11: cell-support k=[0,10] max|c|=252
+  row   5 d= 12: cell-support k=[0,11] max|c|=924
+  row   6 d= 13: cell-support k=[0,4] max|c|=36
+  row   7 d= 13: cell-support k=[0,12] max|c|=924
+  row   8 d= 14: cell-support k=[0,14] max|c|=3432
+  row  15 d= 18: cell-support k=[0,17] max|c|=48620
+C(witness) == closed_C(R): True
+
+================ R = 32 ================  (identity + admissibility re-verified)
+row R-1: -fullbox=True +fullbox=False
+attractor entry: sigma_i = E_m first at i=28 m=2
+rows with c_i != 0: 30 of 32
+  row   0 d= 19: cell-support k=[0,19] max|c|=87516
+  row   1 d= 19: cell-support k=[1,12] max|c|=97240
+  row   2 d= 20: cell-support k=[1,12] max|c|=184756
+  row   3 d= 20: cell-support k=[0,10] max|c|=151164
+  row   4 d= 21: cell-support k=[0,10] max|c|=109820
+  row   5 d= 22: cell-support k=[1,8] max|c|=44050
+  row   6 d= 22: cell-support k=[0,7] max|c|=59886
+  row   7 d= 23: cell-support k=[0,7] max|c|=39230
+  row   8 d= 23: cell-support k=[0,6] max|c|=40260
+  row   9 d= 24: cell-support k=[0,6] max|c|=31916
+  row  10 d= 25: cell-support k=[0,7] max|c|=52648
+  row  11 d= 25: cell-support k=[1,6] max|c|=33976
+  row  12 d= 26: cell-support k=[0,7] max|c|=56962
+  row  13 d= 26: cell-support k=[1,6] max|c|=38698
+  row  14 d= 27: cell-support k=[0,7] max|c|=64884
+  row  15 d= 28: cell-support k=[1,7] max|c|=69600
+  row  16 d= 28: cell-support k=[0,7] max|c|=74138
+  row  17 d= 29: cell-support k=[1,7] max|c|=80484
+  row  18 d= 29: cell-support k=[1,7] max|c|=80898
+  row  19 d= 30: cell-support k=[1,7] max|c|=89560
+  row  20 d= 31: cell-support k=[1,8] max|c|=123622
+  row  21 d= 31: cell-support k=[1,7] max|c|=92598
+  row  22 d= 32: cell-support k=[1,7] max|c|=96688
+  row  23 d= 32: cell-support k=[1,6] max|c|=29672
+  row  24 d= 33: cell-support k=[0,7] max|c|=31126
+  row  25 d= 34: cell-support k=[1,6] max|c|=1680
+  row  26 d= 34: cell-support k=[0,5] max|c|=344
+  row  27 d= 35: cell-support k=[0,5] max|c|=38
+  row  28 d= 35: cell-support k=[0,4] max|c|=12
+  row  31 d= 37: cell-support k=[0,36] max|c|=18150270600
+C(witness) == closed_C(R): True
+
+================ R = 64 ================  (identity + admissibility re-verified)
+row R-1: -fullbox=True +fullbox=False
+attractor entry: sigma_i = E_m first at i=55 m=7
+rows with c_i != 0: 57 of 64
+  row   0 d= 38: cell-support k=[1,38] max|c|=35345263800
+  row   1 d= 38: cell-support k=[0,37] max|c|=35345263800
+  row   2 d= 39: cell-support k=[0,39] max|c|=67156001220
+  row   3 d= 40: cell-support k=[0,27] max|c|=137846528820
+  row   4 d= 40: cell-support k=[1,23] max|c|=137846528820
+  row   5 d= 41: cell-support k=[1,23] max|c|=262564816800
+  row   6 d= 41: cell-support k=[0,20] max|c|=226760523600
+  row   7 d= 42: cell-support k=[0,20] max|c|=178528440186
+  row   8 d= 43: cell-support k=[0,41] max|c|=538257874440
+  row   9 d= 43: cell-support k=[1,42] max|c|=1076515748880
+  row  10 d= 44: cell-support k=[1,15] max|c|=50202210062
+  row  11 d= 44: cell-support k=[0,13] max|c|=18901289758
+  row  12 d= 45: cell-support k=[1,13] max|c|=31320679466
+  row  13 d= 46: cell-support k=[0,13] max|c|=36074712038
+  row  14 d= 46: cell-support k=[0,12] max|c|=20301191820
+  row  15 d= 47: cell-support k=[0,13] max|c|=29934168324
+  row  16 d= 47: cell-support k=[0,46] max|c|=8233430727600
+  row  17 d= 48: cell-support k=[0,48] max|c|=32247603683100
+  row  18 d= 49: cell-support k=[0,13] max|c|=46386276964
+  row  19 d= 49: cell-support k=[0,12] max|c|=45006825544
+  row  20 d= 50: cell-support k=[0,12] max|c|=36897293512
+  row  21 d= 50: cell-support k=[1,11] max|c|=12774992562
+  row  22 d= 51: cell-support k=[0,11] max|c|=3500843886
+  row  23 d= 52: cell-support k=[0,8] max|c|=146677346
+  row  24 d= 52: cell-support k=[0,7] max|c|=62426826
+  row  25 d= 53: cell-support k=[0,8] max|c|=112052444
+  row  26 d= 53: cell-support k=[0,7] max|c|=47799584
+  row  27 d= 54: cell-support k=[0,8] max|c|=87800146
+  row  28 d= 55: cell-support k=[0,8] max|c|=103697638
+  row  29 d= 55: cell-support k=[1,7] max|c|=51654330
+  row  30 d= 56: cell-support k=[1,8] max|c|=83016746
+  row  31 d= 56: cell-support k=[1,7] max|c|=57979350
+  row  32 d= 57: cell-support k=[1,8] max|c|=68164512
+  row  33 d= 58: cell-support k=[1,8] max|c|=99818844
+  row  34 d= 58: cell-support k=[1,7] max|c|=72576504
+  row  35 d= 59: cell-support k=[1,8] max|c|=80950716
+  row  36 d= 59: cell-support k=[1,7] max|c|=80950716
+  row  37 d= 60: cell-support k=[1,8] max|c|=90114948
+  row  38 d= 60: cell-support k=[1,7] max|c|=45190826
+  row  39 d= 61: cell-support k=[1,7] max|c|=69718058
+  ... (17 more)
+C(witness) == closed_C(R): True
+
+================ R = 128 ================  (identity + admissibility re-verified)
+row R-1: -fullbox=False +fullbox=False
+attractor entry: sigma_i = E_m first at i=None m=None
+rows with c_i != 0: 128 of 128
+  row   0 d= 76: cell-support k=[1,76] max|c|=6892620648693261354600
+  row   1 d= 77: cell-support k=[1,52] max|c|=13431773571812509306400
+  row   2 d= 77: cell-support k=[0,51] max|c|=13785241297386522709200
+  row   3 d= 78: cell-support k=[0,77] max|c|=27217014869199032015600
+  row   4 d= 78: cell-support k=[1,78] max|c|=27217014869199032015600
+  row   5 d= 79: cell-support k=[1,79] max|c|=54434029738398064031200
+  row   6 d= 80: cell-support k=[1,79] max|c|=107507208733336176461620
+  row   7 d= 80: cell-support k=[0,80] max|c|=107507208733336176461620
+  row   8 d= 81: cell-support k=[0,81] max|c|=215014417466672352923240
+  row   9 d= 81: cell-support k=[1,80] max|c|=209770163382119368705600
+  row  10 d= 82: cell-support k=[1,82] max|c|=424784580848791721628840
+  row  11 d= 83: cell-support k=[1,43] max|c|=713580421418056277438568
+  row  12 d= 83: cell-support k=[0,39] max|c|=683812085751754719505200
+  row  13 d= 84: cell-support k=[0,83] max|c|=927526188045513526160284
+  row  14 d= 84: cell-support k=[1,84] max|c|=1678910486211891090247320
+  row  15 d= 85: cell-support k=[1,83] max|c|=1678910486211891090247320
+  row  16 d= 86: cell-support k=[1,85] max|c|=3357820972423782180494640
+  row  17 d= 86: cell-support k=[0,85] max|c|=3357820972423782180494640
+  row  18 d= 87: cell-support k=[0,86] max|c|=6637553085023755473070800
+  row  19 d= 87: cell-support k=[1,86] max|c|=6637553085023755473070800
+  row  20 d= 88: cell-support k=[1,87] max|c|=26248505381684851188961800
+  row  21 d= 89: cell-support k=[1,27] max|c|=10916670518712130520908
+  row  22 d= 89: cell-support k=[1,25] max|c|=2097843327871731957190
+  row  23 d= 90: cell-support k=[0,23] max|c|=454997365867985148364
+  row  24 d= 90: cell-support k=[0,89] max|c|=52497010763369702377923600
+  row  25 d= 91: cell-support k=[0,91] max|c|=103827421287553411369671120
+  row  26 d= 92: cell-support k=[0,92] max|c|=207654842575106822739342240
+  row  27 d= 92: cell-support k=[0,92] max|c|=410795449442059149332177040
+  row  28 d= 93: cell-support k=[0,22] max|c|=376453229493362944594
+  row  29 d= 93: cell-support k=[1,21] max|c|=163457700647817674224
+  row  30 d= 94: cell-support k=[1,21] max|c|=77085246610450650476
+  row  31 d= 95: cell-support k=[1,20] max|c|=10728760811412498002
+  row  32 d= 95: cell-support k=[0,18] max|c|=2922307801304083052
+  row  33 d= 96: cell-support k=[1,18] max|c|=1279269942092026370
+  row  34 d= 96: cell-support k=[0,16] max|c|=121854059647341104
+  row  35 d= 97: cell-support k=[1,16] max|c|=27577357742568308
+  row  36 d= 98: cell-support k=[0,97] max|c|=12870134027732597816843206200
+  row  37 d= 98: cell-support k=[0,98] max|c|=25477612258980856902730428600
+  row  38 d= 99: cell-support k=[0,14] max|c|=5319722975070758
+  row  39 d= 99: cell-support k=[0,98] max|c|=25477612258980856902730428600
+  ... (88 more)
+C(witness) == closed_C(R): None  [row R-1 not -fullbox; C-form needs Delta_(R-1)=-1]

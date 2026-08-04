@@ -1,0 +1,5 @@
+exact floor profile computed (0s); d_0=307 d_last=612
+proxy==exact on m in [512,1023]: True
+  row 0 done (1s)
+  row 64 done (60s)
+DIE row 110: const 2^277

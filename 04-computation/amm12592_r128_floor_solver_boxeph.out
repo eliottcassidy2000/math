@@ -1,0 +1,4 @@
+AMM 12592 / R = 128 gamma* floor-profile closure referee
+witness blocks: 128; admissible=True identity=True
+effective rate max_i d_i/(128+i) = 0.597938 (gamma* = 0.597987)
+ALL R128 FLOOR-WITNESS CHECKS PASSED

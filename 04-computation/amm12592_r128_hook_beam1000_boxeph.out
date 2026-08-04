@@ -1,0 +1,36 @@
+HOOK SOLVER R=128 beam=1000 ctrl=2 span=2 rank=l1deg (exact caps prune + attractor hook)
+  ride feasibility: sign +1 rideable from row 0, sign -1 from row 0 (of 128)
+  row   0: kept=    4 bestdeg=126 bestL1=168924678844171432443777716099766351655 t=   0.0s
+  row   5: kept=   60 bestdeg=121 bestL1=120514773887421208248932405161452770982 t=   0.2s
+  row  10: kept= 1000 bestdeg=116 bestL1=2871276540998663784966394268828797489 t=   4.5s
+  row  15: kept= 1000 bestdeg=111 bestL1=578914448544865439198377992226406 t=  20.7s
+  row  20: kept= 1000 bestdeg=106 bestL1=212151977875767547008600009 t=  41.1s
+  row  25: kept= 1000 bestdeg=101 bestL1=13579774320635408903280 t=  61.3s
+  row  30: kept= 1000 bestdeg= 96 bestL1=3312852146380407827955 t=  83.0s
+  row  35: kept= 1000 bestdeg= 96 bestL1=15764463280102159518 t= 115.7s
+  row  40: kept= 1000 bestdeg= 99 bestL1=288956303302615247 t= 150.1s
+  row  45: kept= 1000 bestdeg=102 bestL1=42812851763126362 t= 179.7s
+  row  50: kept= 1000 bestdeg=105 bestL1=3281814085551757 t= 215.8s
+  row  55: kept= 1000 bestdeg=108 bestL1=275782716704868 t= 255.6s
+  row  60: kept= 1000 bestdeg=111 bestL1=359942309300293 t= 300.2s
+  row  65: kept= 1000 bestdeg=114 bestL1=45084387284864 t= 346.7s
+  row  70: kept= 1000 bestdeg=117 bestL1=24825164229401 t= 383.2s
+  row  75: kept= 1000 bestdeg=120 bestL1=9804626109222 t= 422.3s
+  row  80: kept= 1000 bestdeg=123 bestL1=1343972955831 t= 462.7s
+  row  85: kept= 1000 bestdeg=126 bestL1=1683439159468 t= 506.1s
+  row  90: kept= 1000 bestdeg=129 bestL1=799767592781 t= 545.8s
+  row  95: kept= 1000 bestdeg=132 bestL1=68818256752 t= 585.1s
+  row 100: kept= 1000 bestdeg=135 bestL1=70886914089 t= 625.5s
+  row 105: kept= 1000 bestdeg=138 bestL1=69458119298 t= 670.3s
+  row 110: kept= 1000 bestdeg=141 bestL1=8179567703 t= 711.6s
+  row 115: kept= 1000 bestdeg=144 bestL1=1608928554 t= 752.5s
+  row 117: kept= 1000 bestdeg=145 bestL1=1253574694 t= 769.6s
+  row 118: kept= 1000 bestdeg=146 bestL1=825689863 t= 778.6s
+  row 119: kept= 1000 bestdeg=146 bestL1=324179180 t= 787.6s
+  row 120: kept= 1000 bestdeg=147 bestL1=33873519 t= 796.6s
+  row 121: kept= 1000 bestdeg=147 bestL1=19383932 t= 805.0s
+  row 122: kept= 1000 bestdeg=148 bestL1=16366861 t= 813.8s
+  row 123: kept=  870 bestdeg=149 bestL1=11671644 t= 822.0s
+  row 124: kept=  707 bestdeg=149 bestL1=3700783 t= 828.7s
+  row 125: kept=  745 bestdeg=150 bestL1=255192 t= 835.1s
+  -> exhausted

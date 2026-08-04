@@ -1,0 +1,5 @@
+(p-q)*geom == E_{R-2} + 2x^{R-1}: PASS for R=2..299
+backbone + K + (-x^{R-1}) == q^{R-1}: PASS (master equation equivalence)
+R with q^(R-1)-E_(R-1) even (pure-backbone parity-consistent): [2, 4, 8, 16, 32, 64, 128, 256, 512]
+== powers of 2: True
+closed_C identity  q*C == p^R + q^R - p(p-q)  verified for R in {3..256} sample: PASS

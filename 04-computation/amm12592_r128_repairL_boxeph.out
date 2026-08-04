@@ -1,0 +1,4 @@
+repairL on amm12592_r128_beam1000_row119_ckpt_boxeph.json (row 119, 40 states, K=12, J=12)
+  repairL state 0 sign 1: verify adm=True id=True
+  WITNESS WRITTEN: /tmp/math-wt-boxeph-multifront/04-computation/amm12592_floor_witness_R128_direct.json
+CLOSED (0.3s)

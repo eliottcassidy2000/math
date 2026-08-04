@@ -1,0 +1,28 @@
+HOOK SOLVER R=128 beam=400 ctrl=2 span=2 (l1deg + exact caps prune + attractor hook)
+  ride feasibility: sign +1 rideable from row 0, sign -1 from row 0 (of 128)
+  row   0: kept=    4 bestdeg=126 bestL1=168924678844171432443777716099766351655 t=   0.0s
+  row   5: kept=   60 bestdeg=121 bestL1=120514773887421208248932405161452770982 t=   0.2s
+  row  10: kept=  400 bestdeg=116 bestL1=2871276540998663784966394268828797489 t=   3.3s
+  row  15: kept=  400 bestdeg=111 bestL1=578914448544865439198377992226406 t=  10.1s
+  row  20: kept=  400 bestdeg=106 bestL1=212151977875767547008600009 t=  17.3s
+  row  25: kept=  400 bestdeg=101 bestL1=13579774320635408903280 t=  24.9s
+  row  30: kept=  400 bestdeg= 96 bestL1=3312852146380407827955 t=  33.7s
+  row  35: kept=  400 bestdeg= 96 bestL1=69227722978982049774 t=  46.1s
+  row  40: kept=  400 bestdeg= 99 bestL1=70754546796566328527 t=  60.0s
+  row  45: kept=  400 bestdeg=102 bestL1=8627408510337402484 t=  73.8s
+  row  50: kept=  400 bestdeg=105 bestL1=380696936964063263 t=  83.3s
+  row  55: kept=  400 bestdeg=108 bestL1=360418546873960 t=  93.7s
+  row  60: kept=  400 bestdeg=111 bestL1=303867711584659 t= 106.2s
+  row  65: kept=  400 bestdeg=114 bestL1=142722143679792 t= 118.6s
+  row  70: kept=  400 bestdeg=117 bestL1=44022610629205 t= 130.2s
+  row  75: kept=  400 bestdeg=120 bestL1=38528049496174 t= 147.7s
+  row  80: kept=  400 bestdeg=123 bestL1=54648814463275 t= 172.7s
+  row  85: kept=  400 bestdeg=126 bestL1=96518366700924 t= 199.0s
+  row  90: kept=  400 bestdeg=129 bestL1=75358966797057 t= 225.7s
+  row  95: kept=  400 bestdeg=132 bestL1=89121426989242 t= 253.6s
+  row 100: kept=  400 bestdeg=135 bestL1=113843176010033 t= 284.3s
+  row 105: kept=  400 bestdeg=138 bestL1=234699444444556 t= 315.0s
+  row 110: kept=  178 bestdeg=141 bestL1=831924975869443 t= 323.8s
+  row 115: kept=   76 bestdeg=144 bestL1=236169222604613555693022590667647384974376524633782984107672 t= 333.5s
+  row 116: BEAM DIED
+  -> died@row116
