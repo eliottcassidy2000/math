@@ -151,3 +151,21 @@ STAGE D -- beam over cross-row action schedules (alphabet: plain,desc,desc1,desc
   beam 512 D0=0 : {"status": "ALL_DIE", "row": 109, "elapsed": 53.43374967575073, "stats": {"deaths": 300, "rows_done": 108, "peak_states": 226, "pure_alive": 0}}
   beam 512 D0=1 : {"status": "ALL_DIE", "row": 111, "elapsed": 53.57211709022522, "stats": {"deaths": 312, "rows_done": 110, "peak_states": 267, "pure_alive": 0}}
   beam 512 D0=2 : {"status": "ALL_DIE", "row": 113, "elapsed": 54.391403675079346, "stats": {"deaths": 312, "rows_done": 112, "peak_states": 288, "pure_alive": 0}}
+  beam 512 D0=3 : {"status": "ALL_DIE", "row": 202, "elapsed": 84.3956651687622, "stats": {"deaths": 312, "rows_done": 201, "peak_states": 261, "pure_alive": 0}}
+### done mode=D fails=0 elapsed=255.0s
+
+ANNOTATION (2026-08-04): the FIRST stage-D block above (control ALL_DIE@97,
+beam 512 D0=0 ALL_DIE@107) is the initial beam WITHOUT protected pure lanes:
+its score function pruned the known (256,0) desc1 winner -- kept on record as
+a live demonstration that search negatives are score artifacts.  The run was
+killed and rerun with protected pure lanes (every pure rule in the alphabet
+survives ranking by construction) + two-key ranking; the SECOND block is the
+one of record: control (256,0) CLOSED@153; (512, D0=0/1/2/3) ALL_DIE at rows
+109/111/113/202 (best pure-rule deaths 107/111?/113?/174; at D0=3 cross-row
+mixing gains 28 rows over every pure rule and still dies -- G3 no-return).
+No feasibility conclusion is drawn from any of these negatives.
+CORRECTION to the annotation: exact best pure-rule death rows at R=512 from
+the stage-C ledger are 109 (desc1/trainv2), 111 (19 rules), 114 (fill),
+174 (train16) at D0 = 0/1/2/3.  The beam alphabet excludes 'fill'; its
+D0=2 death row 114 slightly outlives the beam's 113.  Beam gains over its
+own 12-action alphabet: +0/+0/+0/+28 rows at D0 = 0/1/2/3.

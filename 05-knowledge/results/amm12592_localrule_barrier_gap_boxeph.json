@@ -331,6 +331,17 @@
     "peak_states": 288,
     "pure_alive": 0
    }
+  },
+  "beam_512_3": {
+   "status": "ALL_DIE",
+   "row": 202,
+   "elapsed": 84.3956651687622,
+   "stats": {
+    "deaths": 312,
+    "rows_done": 201,
+    "peak_states": 261,
+    "pure_alive": 0
+   }
   }
  }
 }
