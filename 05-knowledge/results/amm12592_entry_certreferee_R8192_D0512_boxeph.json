@@ -1,0 +1,21 @@
+{
+ "R": 8192,
+ "D0": 512,
+ "i_pf": 1742,
+ "i_fc": 1742,
+ "checks": {
+  "T8_identity": true,
+  "F1_neg": true,
+  "F1_front": true,
+  "F2": true,
+  "F3": true,
+  "clocks_finish": true,
+  "drain_eq": true,
+  "Tmax_eq": true,
+  "capture_ub_eq": true,
+  "budget_margin_eq": true,
+  "F4_budget": true
+ },
+ "S_R_established": true,
+ "elapsed_s": 4.2
+}

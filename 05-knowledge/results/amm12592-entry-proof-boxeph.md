@@ -345,14 +345,23 @@ lower), so its values exceed these by a factor `~ d/(d-t)` per
 delta-step (e.g. 1.0004 there vs 0.999906 here at (16384, 1/32), ratio
 `1 + t/d` at t ~ 5). Both are exact; F3-relevance selects this one.
 
-**Margin trend.** (i) The feed-end surface excess `max_t r_t - 1`
-shrinks with R (1.0038 at 2^10 down to 1.0009 at 2^15, [new scales
-below]); (ii) the certifying delay `i_fc - i_pf` stays in [0, 8] across
-ten doublings; (iii) the sign-collapse row precedes i_pf everywhere;
-(iv) the support ratio `m/sqrt(R)` sits at 0.93 +- 0.01 from 2^13 up.
-Growing/stable margins on every axis + the PROVED cap-drift dip
-mechanism = the standard "PROVED for R >= R_1 + FINITE-EXACT below"
-endgame shape, with the missing piece being the surface law itself.
+**Margin trend** (all values in the F3 convention of this note).
+(i) The feed-end surface excess `eta_meas := max(0, max_t r_t - 1)`
+peaks at 0.72% (2^11, eps = 1/16) and shrinks to <= 0.3% from 2^12 and
+<= 0.09% from 2^15 — vs the EN-H allowance 4.69%; (ii) the certifying
+delay `i_fc - i_pf` stays in [0, 8] across ten doublings; (iii) the
+sign-collapse row precedes i_pf everywhere (npos = 0 at i_pf, last
+positive cell 3-4 rows earlier); (iv) the support ratio `m/sqrt(R)`
+sits at 0.92 +- 0.01 from 2^13 up, so EN-H's lam <= 1/64 holds from
+2^13 on (and with orders of slack at the 2^18 frontier).
+
+**The healing mechanism, observed quantitatively (2^15, eps = 1/32).**
+At i_pf = 7604: over-cells {3, 5, 7} (single parity), excess 8.9e-4;
+the per-delta-row drift at t = 5 is `t/D ~ 2.0e-4` (EN-DR), and the
+excess decays 8.9 -> 4.9 -> 2.9 -> 2.9 -> 0 (x1e-4) over exactly the
+two delta-1 rows plus two delta-0 rows to i_fc = i_pf + 4 — the EN-H
+clock, running 50x faster than its eta_0 worst case. The theorem's
+mechanism is the measured mechanism.
 
 **ROUTE-NEGATIVE (exact).** At i_pf the measured r_t on t in [2, 10] is
 `1.000 +- 0.01` at every scale >= 2^10 (E1 marginal-surface law,
@@ -406,8 +415,10 @@ Then, with `Delta-bar` the certified fixed point (below) and
 - the support NEVER leaves [0, m0+2] (front freeze without F3!), no
   death occurs, negativity and E2 persist, and
 - **F1 ∧ F2 ∧ F3 hold exactly at every row `i0 + k` with
-  `k* <= k <= K`** — in particular the S-cone-fc certificate fires
-  inside the EN-W window and S(R) follows (a-priori F4, Section 6).
+  `k* <= k <= K`** — in particular, applied at `i0 = i_pf` (the
+  EN-CORE' use; for later i0 the same argument works whenever
+  `i0 + k* <= i_pf + K`), the S-cone-fc certificate fires inside the
+  EN-W window and S(R) follows (a-priori F4, Section 6).
 
 *Proof.* Write `E^(k)_t := [a^(k)_t - a_t]^+` (excess over the initial
 state), `cap^(k)_t := 2C(D_k-1,t)`, `phi_k := s_k/D_K`, and for t >= 2
