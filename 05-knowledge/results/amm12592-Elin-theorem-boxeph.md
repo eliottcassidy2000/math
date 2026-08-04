@@ -8,11 +8,14 @@ Scripts (04-computation/):
 `amm12592_Elin_linear_slack_sweep_boxeph.py` (exact closures at D0 = ceil(eps R)),
 `amm12592_Elin_epsstar_certificates_boxeph.py` (certificates C1–C6),
 `amm12592_Elin_feedend_state_certificate_boxeph.py` (feed-end state N/C/W/F/D/DL),
-`amm12592_Elin_postfeed_signstructure_boxeph.py` (exact mechanism instrumentation).
+`amm12592_Elin_postfeed_signstructure_boxeph.py` (exact mechanism instrumentation),
+`amm12592_Elin_witness_referee_C7_boxeph.py` (independent-referee witness check).
 Outputs (05-knowledge/results/): `amm12592_Elin_sweep_boxeph.json`,
-`amm12592_Elin_epsstar_certificates_boxeph.json`,
+`amm12592_Elin_epsstar_certificates_boxeph.json` (+ `_c15` stage file),
 `amm12592_Elin_feedend_state_boxeph.json`,
-`amm12592_Elin_postfeed_signstructure_boxeph.json`.
+`amm12592_Elin_postfeed_signstructure_boxeph.json`,
+`amm12592_Elin_witnessC7_boxeph.json`,
+`amm12592_fastflow_trace_R32768_D02048_boxeph.json` (R = 32768 probe; see 4.1).
 
 Throughout: `g = gamma* = log_5(phi^2)`, epoch problem (*) at slack D0 is
 `sum_{i<R} x^i Delta_i = (1-x)^{R-1}` with `Delta_i` admissible at
@@ -55,8 +58,8 @@ transient theorem (T1–T9', all citations to that note).
 5. **Conditional theorem (E-lin).** Modulo one precisely-stated hypothesis
    S(eps) about the autonomous phase (Section 5) — exactly verified for all
    dyadic `128 <= R <= 16384`, open for `R >= 32768` —
-   `C* <= 1 + gamma* + 1/16 < 1.660488`, and with S(1/32),
-   `C* <= 1 + gamma* + 1/32 < 1.629238`.
+   `C* <= 1 + gamma* + 1/16 < 435287/262144 = 1.6604882`, and with S(1/32),
+   `C* <= 1 + gamma* + 1/32 < 427095/262144 = 1.6292382`.
    Unconditionally and independent of S, the sweep gives the attainment
    `T(n) <= n + 1 + floor(gamma* n) + ceil(n/16) + O(1)` on the verified
    range (weaker than the constant-slack records for small n; recorded for
@@ -82,9 +85,10 @@ so the degree-(d+1) cells are `delta'_t = delta_t + delta_{t-1}`. Then
 `delta'_t == C(d,t) + C(d,t-1) = C(d+1,t) (mod 2)`. The polynomial — hence
 the epoch identity — is unchanged. Iterate rowwise. QED
 
-Certificate C6 (`..._epsstar_certificates_...json`): the R = 512, D0 = 5
-rule-A witness lifted by +1 and by +7 re-verifies admissibility and the
-epoch identity exactly.
+Certificate C6 (`amm12592_Elin_lift_C6_standalone_boxeph.json`): the
+R = 128 rule-A witnesses at D0 = 4 and 8 lifted by +1 and by +7 re-verify
+admissibility and the epoch identity exactly (a second instance at
+R = 512, D0 = 5 is in the full battery JSON when its C6 stage lands).
 
 **Consequence for E-lin.** The C*-relevant statement is epoch FEASIBILITY at
 slack `<= eps R`, not the behavior of rule A at exactly `ceil(eps R)`:
@@ -259,6 +263,15 @@ were extended past 2R/3;
 `R-2-d_0` (front ~ d_0/3.4 at the d_0 ~ R probes), so the T4b description
 genuinely ends — the window hypothesis (ii) is not an artifact.
 
+**R = 32768 probe (launched this session).** Rule A at D0 = 2048
+(eps = 1/16) is running on the certified engine at session close; its trace
+(partial flushes every 128 rows) is at
+`amm12592_fastflow_trace_R32768_D02048_boxeph.json`. If it CLOSES, the
+verified range of Hypothesis S moves up one doubling (open only for
+R >= 65536); a death would FALSIFY S(1/16) as stated and sharpen the
+frontier — either outcome is informative. No claim is made pending the
+exact outcome.
+
 **Hostile-referee check (C7, `amm12592_Elin_witnessC7_boxeph.json`).** Full
 witnesses reconstructed at (R, D0) = (256, 16) and (512, 32) and verified by
 the INDEPENDENT referee implementation (its own admissible(), polynomial
@@ -345,8 +358,10 @@ eps R):
 C*  <=  1 + gamma* + eps .
 ```
 
-In particular: under S(1/16), `C* <= 1 + g + 1/16 < 1.660488`;
-under S(1/32), `C* <= 1 + g + 1/32 < 1.629238`.
+In particular (rational upper bounds via the certified sandwich
+`g < 156759/262144`): under S(1/16),
+`C* <= 1 + g + 1/16 < 435287/262144 = 1.6604882`; under S(1/32),
+`C* <= 1 + g + 1/32 < 427095/262144 = 1.6292382`.
 
 **What a full proof of S needs (the envelope program, sharpened).** The
 feed-phase collapse is the sole hard core: prove that at `D0 >= eps R` the
@@ -354,9 +369,14 @@ alternating component of the junk stays dominant through the feed phase
 (measured: alt-fraction 1.0 for the first ~0.15R rows, decaying only after
 L1 has collapsed), e.g. via a signed envelope
 `j_t = (-1)^{d-t} a_t + r_t` with `a_t` log-concave and
-`|r|` cap-dominated; the kernel is a second difference on `a` and the
-(1,2,1)-annihilation gives the measured ~2-4 bits/row L1 decay, while
-Theorem B guarantees no death while this burns down. Post-feed, C-N/C-A/C-F
+`|r|` cap-dominated; the kernel is a second difference on `a`:
+`(K * j)_t = ±(a_t - 2a_{t-1} + a_{t-2}) = ± a_{t-1}(rho_t - 2 + 1/rho_{t-1})`
+with down-cell ratios `rho_t = a_t/a_{t-1}`, single-signed while `a` is
+log-concave with `rho > 1` (which the T4 initial data satisfies on the
+block: `A_{t-1}/A_t = (R-1-t)/(d-t+1)`), giving per-row magnitude factor
+`~ (1 - 1/rho)^2` — e.g. `rho ~ 1.8` at the front predicts
+`~ 2.4 bits/row` decay vs 3.7 measured (right order; the clamp corrections
+add decay). Theorem B guarantees no death while this burns down. Post-feed, C-N/C-A/C-F
 reduce extinction to a per-cell ratio-envelope
 `A_t <= 2^{c (m0 - t)}`-type invariant (measured c ~ 6.5 bits/cell at
 feed-end) whose one-step propagation is already proved in C-A; the missing
@@ -376,6 +396,10 @@ families of exact binomial inequalities of C-A type.
   beyond the probed `eps <= 0.4` (where d_0 = R-2 exactly at R = 512).
 - Non-dyadic R are not claimed anywhere (epochs are dyadic; T3 parity
   freeness holds at dyadic R and evenness is asserted at every clamp).
+- Engine change this session: `initial_junk` now advances `C(d,t)`
+  incrementally (performance only; O(d^2) -> O(d)); certified bit-identical
+  to the direct closed-form clamp at four scales and by re-reproducing the
+  R = 256, D0 = 16 closure (capture row 150) before any use at R = 32768.
 
 ## 7. Status ledger
 

@@ -400,5 +400,7 @@
    "junkL1_bits": 15137
   }
  ],
- "C5_all": true
+ "C5_all": true,
+ "C6_lift_on_witness": "SKIPPED (run separately)",
+ "ALL_PASS_C1_C5": true
 }
