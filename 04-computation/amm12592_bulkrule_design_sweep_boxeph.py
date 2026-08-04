@@ -78,7 +78,26 @@ VARIANTS = {
                     rho0=2),
     "train3":  dict(shape=True,  vent=6, Wwin=None, asc=False, guard=48,
                     rho0=3),
+    "tr15":    dict(shape=True,  vent=6, Wwin=None, asc=False, guard=16,
+                    rho0=(3, 2)),
+    "fill":    dict(shape=True,  vent=6, Wwin=None, asc=False, guard=16,
+                    rho0=2, fill=True),
+    "fill15":  dict(shape=True,  vent=6, Wwin=None, asc=False, guard=16,
+                    rho0=(3, 2), fill=True),
+    "tr54":    dict(shape=True,  vent=6, Wwin=None, asc=False, guard=16,
+                    rho0=(5, 4)),
+    "tr43":    dict(shape=True,  vent=6, Wwin=None, asc=False, guard=16,
+                    rho0=(4, 3)),
+    "tr74":    dict(shape=True,  vent=6, Wwin=None, asc=False, guard=16,
+                    rho0=(7, 4)),
+    "tr15g48": dict(shape=True,  vent=6, Wwin=None, asc=False, guard=48,
+                    rho0=(3, 2)),
+    "desc1":   dict(shape=True,  vent=2, Wwin=None, asc=False, vlad=1),
 }
+for _v in VARIANTS.values():
+    _v.setdefault("vlad", None)
+for _v in VARIANTS.values():
+    _v.setdefault("fill", False)
 for _v in VARIANTS.values():
     _v.setdefault("guard", None)
     _v.setdefault("rho0", 2)
@@ -172,7 +191,8 @@ def choose_row(w, d, dn, S, cfg, record_u):
         hiN = 2 * (comb(dn - 1, out - 1) if 1 <= out <= dn else 0)
         excess = oF - min(hiN, max(loN, oF))      # unabsorbable part
         if excess:
-            for k in range(1, thi - tb + 1):
+            _vl = cfg.get("vlad")
+            for k in range(1, min(thi - tb, _vl or (thi - tb)) + 1):
                 p = (-1) ** k * (excess if S == 1 else (excess >> k))
                 pe = 2 * (p // 2)
                 if pe == 0:
@@ -221,17 +241,27 @@ def choose_row(w, d, dn, S, cfg, record_u):
             # with envelope ratio >= rho0 (plateau/hole kill); boosts only
             # within I_t, never flips a forced sign.
             K = cfg.get("guard")
-            if K is not None and j and t <= tb and t >= tb - K and not asc:
-                rho0 = cfg["rho0"]
+            if K is not None and t <= tb and t >= tb - K and not asc:
+                r0 = cfg["rho0"]
+                num, den = r0 if isinstance(r0, tuple) else (r0, 1)
                 if j1:
-                    tsgn, m = (1 if j1 < 0 else -1), rho0 * abs(j1)
+                    tsgn = 1 if j1 < 0 else -1
+                    m = 2 * ((num * abs(j1)) // (2 * den))
                 elif j2:
-                    tsgn, m = (1 if j2 > 0 else -1), rho0 * rho0 * abs(j2)
+                    tsgn = 1 if j2 > 0 else -1
+                    m = 2 * ((num * num * abs(j2)) // (2 * den * den))
                 else:
                     tsgn, m = 0, 0
-                if tsgn and ((j > 0) == (tsgn > 0)) and abs(j) < m:
+                if j and tsgn and ((j > 0) == (tsgn > 0)) and abs(j) < m:
                     jb = min(m, v - lo) if j > 0 else max(-m, v - hi)
                     if jb != j:
+                        j = jb
+                elif (not j) and tsgn and m and cfg.get("fill"):
+                    # hole fill: keep alternation-phased junk instead of
+                    # full absorption inside the train
+                    jb = tsgn * m
+                    jb = min(max(jb, v - hi), v - lo)
+                    if (jb > 0) == (tsgn > 0) and jb:
                         j = jb
         if j != oplain:
             nshaped += 1

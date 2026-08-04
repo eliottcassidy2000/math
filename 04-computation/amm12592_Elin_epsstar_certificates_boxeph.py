@@ -59,7 +59,8 @@ spec = importlib.util.spec_from_file_location(
 fast = importlib.util.module_from_spec(spec)
 with contextlib.redirect_stdout(io.StringIO()):
     spec.loader.exec_module(fast)
-floor_gamma_star = fast.floor_gamma_star
+from functools import lru_cache
+floor_gamma_star = lru_cache(maxsize=None)(fast.floor_gamma_star)
 initial_junk = fast.initial_junk
 
 

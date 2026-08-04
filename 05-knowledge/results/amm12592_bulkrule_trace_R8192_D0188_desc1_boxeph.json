@@ -1,0 +1,1 @@
+{"R": 8192, "D0": 188, "variant": "desc1", "partial_row": 0, "trace": [{"i": 0, "d": 5086, "nclamped": 3105, "tmin": 0, "tmax": 3104, "junkL1_bits": 7836, "c0": 0, "e_in0": 2, "gap": 1982, "nfail": 3102, "nshaped": 0, "fail_cells": [3101, 3100, 3099, 3098, 3097, 3096]}], "elapsed_s": 0.7}
