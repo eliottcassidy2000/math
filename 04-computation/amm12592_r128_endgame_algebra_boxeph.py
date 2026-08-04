@@ -750,7 +750,8 @@ def hunt(args):
     log(f"HUNT R={R} floor profile, rank={args.rank} beam={args.beam} "
         f"ctrl={args.ctrl} span={args.span} a2_from={args.a2_from} "
         f"prefilter={args.prefilter} seed={args.seed} rand_frac={args.rand_frac} "
-        f"c2=({args.c2_ctrl},{args.c2_span})")
+        f"c2=({args.c2_ctrl},{args.c2_span}) eprune={args.eprune} "
+        f"ebranch={args.ebranch} ecap={args.ecap}")
     sol, msg, states = solve_endgame(
         d, beam=args.beam, ctrl=args.ctrl, span=args.span, seed=args.seed,
         rand_frac=args.rand_frac, dedup=args.dedup, rank=args.rank,
@@ -766,7 +767,8 @@ def hunt(args):
         dump = os.path.join(RESULTS, f"amm12592_r128_endgame_states_{tag}.json")
         with open(dump, "w") as f:
             json.dump({"tag": tag, "msg": msg,
-                       "residuals": [sg for _, sg in states]}, f)
+                       "residuals": [sg for _, sg in states],
+                       "top_accs": [acc for acc, _ in states[:5]]}, f)
         log(f"  final residuals dumped: {dump}")
     if STATS["unknown_samples"]:
         up = os.path.join(RESULTS, f"amm12592_r128_endgame_unknowns_{tag}.json")
