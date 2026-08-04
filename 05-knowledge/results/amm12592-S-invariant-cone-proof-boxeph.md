@@ -48,7 +48,7 @@ OPEN** (precise statement, open), **REFUTED** (with certificate).
    certified to 2^40): the hypothesis is really F1 ∧ F2 ∧ F3.
 3. **The certificate fires AT feed-end (VERIFIED-exact).** The scan
    `fcscan` finds the first certifying row `i_fc`: it is the feed-end row
-   itself or 1–8 rows after it at every tested scale (16/16 configs), and
+   itself or 1–8 rows after it at every tested scale (18/18 configs), and
    the theorem's capture bound is sharp to O(1)–O(50) rows (e.g. R = 512:
    bound 314, actual 313; R = 16384: bound 10128, actual 10090). The
    unproved content of S(R) is thereby reduced to the feed phase handing
@@ -84,9 +84,15 @@ OPEN** (precise statement, open), **REFUTED** (with certificate).
    derivative `-1/(3+2g)^2`; certified bracket
    `(1.6191617801, 1.6191618342)` (width 5.4e-8). This is the E-lin
    program's limit constant in one fraction.
-8. **R = 32768 (this session).** Both eps = 1/32, 1/16 runs launched on
-   the certified instrumented engine; outcomes, feed-end laws, and fcscan
-   certificates recorded in section 6 [landed this session].
+8. **R = 32768: S verified one doubling up (this session).** eps = 1/16:
+   CLOSED at capture 19865 = i_pf + a_0/2 - 1 exactly, debt (R-2)/2
+   exact, zero re-ignitions; Theorem S-cone-fc certificate at
+   i_fc = i_pf + 4 with bound 19955 and 39%-of-R budget margin. All four
+   feed-end laws extend to the ninth doubling at both eps (m = 169/168 vs
+   0.93 sqrt R = 168.9; a_0 - d = 0/-1; log2 A_1 = 12.65/12.62; max r_t =
+   1.0009 both, over-cells single-parity {3,5,7(,9)}). The referee's open
+   item (32768 probe died at 1.9%, "no evidence either way") is resolved:
+   S(1/16) now VERIFIED-exact for all dyadic 128 <= R <= 32768.
 
 ---
 
@@ -272,7 +278,8 @@ t >= 1 never revives); extinction strictly top-down; cell 0 always last
 
 **fcscan (the theorem in action).** All scans: `F3_persist_ok = True`
 (the propagation clause re-verified in flight); worst clock always at
-t = 2; the capture bound is drain-dominated and sharp to 1–47 rows:
+t = 2; the capture bound is drain-dominated and sharp to 1–90 rows
+(0.3–0.5% of R at the top scales):
 
 | R | D0 | i_pf | i_fc | i_fc-i_pf | thm capture bound | actual | budget margin |
 |------|-----|------|------|-----|------|------|------|
@@ -292,7 +299,8 @@ t = 2; the capture bound is drain-dominated and sharp to 1–47 rows:
 | 8192 | 512 | 1742 | 1742 | 0 | 4987 | 4964 | 3203 |
 | 16384 | 512 | 3803 | 3803 | 0 | 10128 | 10090 | 6254 |
 | 16384 | 1024 | 3482 | 3490 | 8 | 9984 | 9937 | 6398 |
-| 32768 | | | [landed this session] | | | | |
+| 32768 | 2048 | 6963 | 6967 | 4 | 19955 | 19865 | 12811 |
+| 32768 | 1024 | 7604 | 7608 | 4 | 20273 | 20185 | 12493 |
 
 Every certifying row proves S at its (R, D0) by Theorem S-cone-fc alone
 (the continued run is a consistency check, not part of the proof). The
@@ -315,8 +323,32 @@ regenerated; contaminated first-pass x4/x16 results discarded —
 hazard discipline. Dual-path validation: full-feed fcscan and
 snapshot-replay fcscan agree bit-exactly at both 16384 configs.]
 
-**R = 32768.** [Landed this session: outcomes of both runs, feed-end
-snapshot laws, fcscan certificates.]
+**R = 32768 (this session; resolves the referee's open item E).**
+
+- eps = 1/16 (D0 = 2048): **CLOSED, capture 19865** (= 0.606 R), debt
+  16383 = (R-2)/2 exact, i_pf = 6963, capture = i_pf + a_0/2 - 1 exactly,
+  zero re-ignitions, strict top-down extinction (cell 1 dies at 17133,
+  cell 0 last). The prior session's probe (killed at row ~384, "no
+  evidence either way" per the referee) is settled: **S(1/16) is
+  VERIFIED-exact at R = 32768** — the verified range of Hypothesis S
+  moves up one doubling.
+- Feed-end laws at 32768/2048: m = 169 (0.93 sqrt R = 168.9 — exact
+  continuation), a_0 - d_fe = 0 (the edge law at its sharpest),
+  log2 A_1 = 12.65 (+1 bit/doubling, ninth doubling), max_t r_t =
+  1.00090 at t = 5 with over-cells {3,5,7,9} (single-parity core,
+  excess 0.09% — the marginal surface tightens again).
+- eps = 1/32 (D0 = 1024): **CLOSED, capture 20185** — EXACTLY the
+  cell-0-clock prediction i_pf + a_0/2 - 1 = 7604 + 12582 - 1, made
+  before the run finished; debt 16383 = (R-2)/2 exact; zero
+  re-ignitions; top-down extinction (cell 1 dies at 17521, cell 0
+  last). Feed-end laws: d_fe = 25165, m = 168 (0.93 sqrt R again),
+  a_0 - d_fe = -1, log2 A_1 = 12.62 (+1 bit/doubling), max_t r_t =
+  1.00089 at t = 5, over-cells {3,5,7}: every law extends at the second
+  eps as well. **S(1/32) is verified at R = 32768.**
+- fcscan certificates: eps = 1/16: i_fc = 6967 = i_pf + 4, Tmax = 12988
+  (worst cell t = 2), capture bound 19955 vs actual 19865; eps = 1/32:
+  i_fc = 7608 = i_pf + 4, Tmax = 12665, bound 20273 vs actual 20185;
+  F3_persist_ok through all ~13000 post-feed rows in both.
 
 ## 7. The reduction, and what remains
 
@@ -389,19 +421,26 @@ can produce, now in closed form.
   variant; a-priori budget corollary; the closed form
   `1 + g + eps* = (5+3g)/(3+2g)` with certified bracket; fresh g
   sandwich.
-- **VERIFIED-exact (new):** runner bit-identical certification; 16-run
-  sweep + re-runs (captures = D2 exactly, zero re-ignitions, top-down
-  extinction, capture = i_pf + a_0/2 - 1 in every run); the
-  marginal-surface law (r_t = 1.000 +- 0.005 block-wide, tightening in
-  R); A_1 ~ 0.19R (+1 bit/doubling, 8 doublings); edge law a_0 - d_fe in
-  [-14, 7]; fcscan certificates with i_fc - i_pf in {0..3} and capture
-  bounds sharp to O(1) rows; x2 basin depth; corner non-capture;
-  R = 32768 [this session].
+- **VERIFIED-exact (new):** runner bit-identical certification; 18-run
+  sweep incl. R = 32768 both eps (captures = D2 exactly where known; NEW:
+  32768 closes at 19865 (eps = 1/16) and 20185 (eps = 1/32); zero
+  re-ignitions, top-down extinction,
+  capture = i_pf + a_0/2 - 1 in every run); the
+  marginal-surface law (low-cell core within 0.2% of r = 1, over-cells
+  single-parity with excess <= 1%, monotone decline to the front);
+  A_1 ~ 0.19R (+1 bit/doubling, NINE doublings, both eps); edge law
+  a_0 - d_fe in [-14, +9] (0 and -1 at 32768); fcscan certificates 18/18
+  with i_fc - i_pf in {0..8} and capture bounds sharp to 1-90 rows;
+  x2 basin depth (capture) vs x4 (deadline miss); corner non-capture;
+  **S(1/32) AND S(1/16) verified for ALL dyadic 128 <= R <= 32768**
+  (referee item E resolved; the 32768/1024 capture row 20185 was
+  predicted exactly by the cell-0 clock before the run completed).
 - **REFUTED (new):** fixed-Lambda feed-end cones (A_1 is linear in R);
   the uniform corner as a basin majorant at 16384.
 - **HYPOTHESIS (one item, replacing S):** ENTRY-fc(eps) for dyadic
   R >= 65536 — a one-row, statically-checkable property of the feed-end
-  state (marginal surface + edge + clocks).
+  state (negativity + debt edge + marginal surface; clocks automatic by
+  the a-priori corollary).
 
 Lane E1 verdict: the invariant-cone program's steps (1) cone, (2)
 preservation, (4) capture are PROVED (S-cone-fc); step (3) entry is

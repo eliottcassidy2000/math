@@ -446,5 +446,33 @@
   "K2R": 6436,
   "thm_capture_ub": 19579,
   "PASS": false
+ },
+ {
+  "R": 32768,
+  "D0": 2048,
+  "i_pf": 6963,
+  "d_fe": 25806,
+  "m": 169,
+  "a0": 25806,
+  "a0_minus_d": 0,
+  "G_L": 0,
+  "L": 1,
+  "H1": true,
+  "H2": false,
+  "H3": true,
+  "H4star": false,
+  "BUD": false,
+  "worstA_bits_t": [
+   13,
+   1
+  ],
+  "worstH4_bits_t": [
+   1,
+   2
+  ],
+  "K1R": 32151,
+  "K2R": 12892,
+  "thm_capture_ub": 39115,
+  "PASS": false
  }
 ]
