@@ -960,10 +960,10 @@ def stage_window():
         R = 1 << R_exp
         for eps in (Fraction(1, 32), Fraction(1, 16)):
             D0 = (R * eps.numerator + eps.denominator - 1) // eps.denominator
-            # worst case over the sandwich: check at both ends
-            for g in (g_lo, g_hi):
-                if not (D0 * (3 + 2 * g) >= 2 * R * (1 - g - g * g) + 66 * (1 + g)):
-                    ok = False
+            # rigorous interval form: LHS at g_lo (min), RHS termwise max
+            if not (D0 * (3 + 2 * g_lo) >=
+                    2 * R * (1 - g_lo - g_lo * g_lo) + 66 * (1 + g_hi)):
+                ok = False
     check(ok, 'symbolic: D0(3+2g) >= 2R(1-g-g^2) + 66(1+g) for all dyadic '
               'R = 2^16..2^40, eps in {1/32,1/16}, both sandwich ends '
               '(PROVES the [i_pf, i_pf+64] window death-free for the reduction)')
@@ -1118,6 +1118,234 @@ def stage_ledger():
     check(ok, 'all stored fcscan certificates: capture_ub >= actual capture')
     save_frag('ledger')
 
+def stage_bigcheck():
+    log('=' * 74)
+    log('STAGE bigcheck -- verdicts on the two independent R=32768 replications')
+    log('=' * 74)
+    EXP = {(32768, 2048): (19865, 6963, 25806, 169, 25806, 17133),
+           (32768, 1024): (20185, 7604, 25165, 168, 25164, 17521)}
+    for (R, D0), (cap, ipf, dfe, m, a0, c1d) in EXP.items():
+        f = os.path.join(RES, 'amm12592_S_referee_run_R%d_D0%d.json' % (R, D0))
+        if not os.path.exists(f):
+            check(False, '(%d,%d) run JSON missing' % (R, D0))
+            continue
+        r = json.load(open(f))
+        check(r['outcome'] == 'CLOSED' and r['capture_row'] == cap,
+              '(%d,%d) INDEPENDENT REPLICATION: CLOSED at capture %d [E1 claim]' %
+              (R, D0, cap), '%s %s' % (r['outcome'], r['capture_row']))
+        check(r['minus2'] == (R - 2) // 2,
+              '(%d,%d) debt minus2 = (R-2)/2 = 16383 exact' % (R, D0), r['minus2'])
+        check(r['i_pf'] == ipf and r.get('fe_d') == dfe and r.get('fe_m') == m
+              and r.get('fe_a0') == a0,
+              '(%d,%d) i_pf/d_fe/m/a0 = %d/%d/%d/%d [E1 claim]' % (R, D0, ipf, dfe, m, a0),
+              '%s/%s/%s/%s' % (r['i_pf'], r.get('fe_d'), r.get('fe_m'), r.get('fe_a0')))
+        check(r.get('snap_equal') is True,
+              '(%d,%d) feed-end snapshot BIT-IDENTICAL to E1 stored state' % (R, D0),
+              '%s cells' % r.get('snap_ref_cells'))
+        check(r['capture_row'] == r['i_pf'] + r['fe_a0'] // 2 - 1,
+              '(%d,%d) capture == i_pf + a0/2 - 1 (cell-0 clock exact)' % (R, D0))
+        check(r['reignitions'] == 0 and r['postfeed_negative_ok'] and r['a0_clock_ok'],
+              '(%d,%d) zero post-feed re-ignitions; negativity + 2/row clock in-flight' % (R, D0))
+        check(r['cell1_death'] == c1d,
+              '(%d,%d) cell-1 extinction row == %d [E1 claim]' % (R, D0, c1d),
+              r['cell1_death'])
+        check(r['front0'] == R - 2 - r['d0'],
+              '(%d,%d) initial front == R-2-d_0 (T4b)' % (R, D0), r['front0'])
+    save_frag('bigcheck')
+
+def stage_report():
+    """Assemble amm12592_S_referee_boxeph.out from all stage fragments +
+    the two independent R=32768 replications + verdicts + canon paragraph."""
+    frags = {}
+    for fn in sorted(os.listdir(RES)):
+        if fn.startswith('amm12592_S_referee_frag_') and fn.endswith('.json'):
+            st = fn[len('amm12592_S_referee_frag_'):-len('.json')]
+            frags[st] = json.load(open(os.path.join(RES, fn)))
+    runs = {}
+    for (R, D0) in ((32768, 2048), (32768, 1024)):
+        f = os.path.join(RES, 'amm12592_S_referee_run_R%d_D0%d.json' % (R, D0))
+        if os.path.exists(f):
+            runs[(R, D0)] = json.load(open(f))
+    tp = sum(f['pass'] for f in frags.values())
+    tf = sum(f['fail'] for f in frags.values())
+    allfails = [x for f in frags.values() for x in f['fails']]
+    lines = []
+    A = lines.append
+    A('AMM 12592 -- HOSTILE REFEREE of lanes E1 (S via invariant cone), E2, E3')
+    A('(local-rule barrier / existence gap).  boxeph, 2026-08-04.')
+    A('Script: 04-computation/amm12592_S_referee_boxeph.py')
+    A('Fragments: 05-knowledge/results/amm12592_S_referee_frag_*.json')
+    A('Independent runs: amm12592_S_referee_{run,feedend,ckpt}_R32768_*.json')
+    A('')
+    A('TOTAL CHECKS: %d PASS, %d FAIL%s' % (tp, tf,
+      ('  FAILS: ' + '; '.join(allfails)) if allfails else ''))
+    A('')
+    A('=' * 76)
+    A('STAGE OUTPUTS (in audit order)')
+    A('=' * 76)
+    order = ['constants', 'slow', 'suite', 'bigcheck',
+             'bigrun_R32768_D02048', 'bigrun_R32768_D01024',
+             'conecert_R16384_D0512', 'conecert_R16384_D01024',
+             'conecert_R32768_D02048', 'conecert_R32768_D01024',
+             'lemmas', 'apriori', 'window', 'e3wit', 'ledger']
+    for st in order + [s for s in frags if s not in order]:
+        if st in frags:
+            for ln in frags[st]['text']:
+                A(ln)
+            A('')
+    A('=' * 76)
+    A('VERDICTS')
+    A('=' * 76)
+    A('''
+E1 (S via the invariant cone) -- VERDICT: CONFIRMED, with two findings.
+  Every PROVED item re-derived and independently machine-certified:
+  S1 magnitude closed form, S2 comparison, S3 unconditional deadline
+  (i_pf <= i_feed+2 <= (R-2)/2 re-derived), S4 spill criterion, and
+  THEOREM S-cone-fc: proof audited line by line -- the max(0, x-c_k)
+  composition needs c_k >= 0, supplied by D_k >= D_0; F3 range [2, m+2]
+  is exactly what front-freeze at m+1, m+2 consumes; F3 propagation
+  follows from cellwise non-increase.  My independent certificate checker
+  reproduces E1's fcscan EXACTLY (i_fc, d, m, a0, drain, Tmax, worst
+  clock t=2, capture_ub) at (16384, 512/1024) and (32768, 2048/1024),
+  and capture_ub >= actual capture in all 18 stored certificates
+  (i_fc - i_pf in [0, 8]).  The R = 32768 closures (BOTH eps) are
+  replicated by THIS referee's from-scratch fifth implementation
+  (exact Beatty floor via fresh 5^m <=> phi^(2n) integer comparisons;
+  T4 closed-form row 0 re-proved against a definition-level polynomial
+  decode; kernel/feed/clamp written from the T6 statement; validated
+  block-for-block against my own definition-level slow rule A at
+  128/256 and against 16 canon outcomes to R = 2048): captures
+  19865 (eps=1/16) and 20185 (eps=1/32), debt 16383 = (R-2)/2 exact,
+  zero post-feed re-ignitions, cell-0 clock exact, and the feed-end
+  snapshots BIT-IDENTICAL to E1's stored states (170/169 cells).
+  S(1/32) and S(1/16) are hereby verified for all dyadic
+  128 <= R <= 32768 by two independent implementation lineages.
+  Feed-end laws re-verified from stored snapshots: edge law
+  a0 - d_fe in [-14, +9]; A_1 ~ +1 bit/doubling (E1's REFUTATION of
+  D2's "max_t log2 A_t ~ 10-11 R-independent" is CORRECT -- D2 sec. 4.2
+  must be read at a later row, not feed-end; nothing load-bearing);
+  marginal surface max r_t = 1.00090/1.00089 at t = 5 with odd-parity
+  over-cells at 32768.  Basin claims verified after decoding the file
+  convention snapx{k} = scale 2^k (x2 captures at 1581/6556; x4 and
+  corner OPEN_RESIDUAL -- correctly never used as feasibility evidence).
+
+  FINDING E1-F1 (quantifier gap, repaired here): the reduction
+  "ENTRY-fc(eps) => S(eps) for dyadic R >= 65536" needs the window
+  [i_pf, i0) to be death-free; E1's parenthetical justifies it with the
+  row-i0 support bound m, which cannot bound EARLIER rows.  Correct
+  argument: T6a/T6b extension -- F(i) <= F(0) + i + (d_i - d_0), so no
+  death before row 2d_0 - R + 2; the needed 2d_0 - R + 2 > i_feed + 66
+  follows from D0(3+2g) >= 2R(1-g-g^2) + 66(1+g), i.e.
+  D0 >= eps* R + ~25.1.  Certified here in rigorous mixed-endpoint
+  interval form for all dyadic 2^16..2^40 at both eps (min margin 2665)
+  plus exact per-R checks.  GAP CLOSED; no downstream impact.
+
+  FINDING E1-F2 (quantifier scope): the a-priori-F4 corollary
+  ("hypothesis is F1^F2^F3 alone for R >= 512") is certified only for
+  dyadic R = 2^9..2^40 (code range confirmed); beyond 2^40 it rests on
+  the sketched K1c/K2c bounds + the unwritten T_t <= T_2 monotonicity
+  lemma.  My independent worst-case clock computation confirms it at
+  2^16/2^17 (both eps, probe t up to 5000, T_2 always worst).  For full
+  rigor state ENTRY-fc as F1^F2^F3^F4 for R > 2^40 (F4 is a decidable
+  one-row check, so the reduction loses nothing), or write out the
+  monotonicity lemma.
+
+  FINDING E1-F3 (cosmetic erratum): the note sec. 6 marginal-surface
+  table entry for (4096, eps=1/32) reads "1.0018"; recomputing from the
+  stored (post-bug regenerated) snapshot gives max r_t = 1.0042 at
+  t = 4 (over-cells {2,4,6}) with caps at d_fe - 1, or 1.0029 with caps
+  at d_fe -- neither matches 1.0018, so that display value likely
+  predates the snapshot regeneration.  All other 17 table entries
+  reproduce exactly.  Qualitative law unaffected; display-only.
+
+  OVERCLAIM NOTE: the lane-report headline "S(eps) ... COMPLETE" must
+  not enter canon as "S proved".  S(eps) remains OPEN for dyadic
+  R >= 65536; what is proved is the reduction to the one-row ENTRY-fc
+  plus finite verification through 32768.  The note itself (secs. 7, 9)
+  states this correctly.
+
+E2 -- VERDICT: NO CONTENT.  E2 delivered only "standing by" (armed
+  monitors).  Nothing to audit; E2 provides no independent confirmation
+  of anything.  The independence gap for the R = 32768 closures (E1 was
+  the only implementation to have run them) is closed by THIS referee's
+  replication, not by E2.  No consistency issue arises between E1 and
+  E2 because E2 asserts nothing.
+
+E3 (barrier / existence gap) -- VERDICT: CONFIRMED; scope discipline is
+  exemplary.  The (256, 0) desc1 witness re-verified by my own
+  from-scratch verifier (sha 5950bd42..., 58837 cells in-box with
+  parity, epoch identity sum x^i Delta_i = (1-x)^255 EXACT with
+  last-row corner -1, transportation point f = (C-delta)/2 integer in
+  [0, C] at every cell, 8.45% boundary-saturated, identity at
+  x = 2/3/-1).  Record correction stands: the exact-floor existence
+  frontier is (512, D0=0), OPEN in both directions.  E3-L1/L2/L3
+  algebra confirmed on 200 random windows; kappa and g/(1-g) brackets
+  confirmed from my fresh sandwich; L4 influence cone is a sound
+  one-line induction (kernel support {0,1,2}).  All negatives (84/84
+  rule deaths, beam all-dies) are hazard-labeled and never used as
+  feasibility evidence; E3-BC(param)/(mech) correctly labeled
+  CONJECTURED; LP at (512,0) correctly OPEN; floor-side honesty note
+  (THM-3024 demotion) correctly repeated.  Minor: E3-BC(mech)'s "all RS
+  rules qualify" (bounded deviation) is an unproved aside inside a
+  conjecture -- harmless as labeled.
+
+CONSISTENCY ACROSS LANES: E1's 18-run sweep captures equal D2's table
+  exactly where they overlap; E1's i_pf differs from D2's i_feed by the
+  documented off-by-one conventions (d_i + i <= R-2 / R-1 / R), each
+  used consistently within its own note; the prior referee's
+  re-instantiation (2d_0 - R + 2 > i_feed + 1) and my window lemma
+  (> i_feed + 66) subsume all three.  No contradiction found anywhere
+  between E1, E3, D1/D2/D3, and the prior referee.
+''')
+    A('=' * 76)
+    A('FINAL CANON PARAGRAPH (referee-certified, 2026-08-04)')
+    A('=' * 76)
+    A('''
+BEST UNCONDITIONAL C* UPPER BOUND: UNCHANGED -- C* <= 2, from the
+submission envelope T(n) <= max(n+1, 2n-2) (and T(n) <= max(n+1, 2n-3)
+for n >= 5); the bound is exactly rational, no bracket needed.  No lane
+produced a new unconditional C* bound, and none claimed to.  What
+changed is the CONDITIONAL frontier, now in its sharpest verified form:
+the chain  THM-3329 assembly + LIFT (Thm A) + Thm B feed-phase survival
+(D0 >= eps* R, eps* = 2(1-g-g^2)/(3+2g) in (0.0211736, 0.0211747),
+g = gamma* = log_5 phi^2 in (627035, 627036)/2^20) + death-free handover
+window (T6b extension, D0(3+2g) >= 2R(1-g-g^2) + 66(1+g), certified
+2^16..2^40 -- this referee) + THEOREM S-cone-fc (one-row certificate
+F1^F2^F3^F4 at some post-feed row => capture by R-2 with no death;
+referee-confirmed, independently re-implemented) + a-priori F4
+(certified dyadic 2^9..2^40) + exact closures for ALL dyadic
+128 <= R <= 32768 at eps = 1/32 and 1/16 (R = 32768 both eps now
+verified by TWO independent implementation lineages: captures
+19865/20185, debt 16383 exact, feed-end states bit-identical) proves:
+IF ENTRY-fc(eps) holds -- i.e. for every dyadic R >= 65536 some
+post-feed row i0 <= i_pf + 64 of plain rule A satisfies the one-row
+static conditions F1 (all-negative junk, support in [0, m], m+2 < d),
+F2 (a_0 <= d-1), F3 (2a_{t-1} + a_{t-2} <= 2C(d-1,t) on [2, m+2]), and
+(for R > 2^40) F4 -- THEN Hypothesis S(eps) holds and
+C* <= 1 + gamma* + eps; in particular ENTRY-fc(1/32) gives
+C* <= 1 + gamma* + 1/32 < 427095/262144 = 1.6292382, and the route's
+closed-form limit constant is 1 + gamma* + eps* = (5+3g)/(3+2g) in
+(1.6191617801, 1.6191618342).  Every Theta(R)-row dynamical statement
+in S is now PROVED; the sole open item is the STATIC one-row handover
+property, whose empirical form is the marginal-surface law
+(max_t r_t -> 1+, measured 1.0009 at R = 32768, over-cells single-
+parity, i_fc = i_pf + 0..8 at all 18 scales).  WHAT REMAINS for
+C* <= log_5(5 phi^2) = 1 + gamma* itself: either (R0) exact-floor
+universality -- frontier (512, D0=0), OPEN both directions, with the
+(256,0) transportation integer point re-verified -- or (GG + S') an
+o(R)-slack schedule below the G3 super-pair threshold plus the post-
+feed collapse; and on the floor side the general-class lower bound
+C* >= log_5(5 phi^2) remains OPEN (golden value pinned only against
+balanced-block schemes).  Hypothesis S itself: VERIFIED-exact for all
+dyadic 128 <= R <= 32768 (both eps), OPEN for R >= 65536 -- "COMPLETE"
+in the E1 lane headline means the reduction is complete, not that S is
+proved; C* <= 1 + gamma* + eps remains CONDITIONAL.
+''')
+    with open(os.path.join(RES, 'amm12592_S_referee_boxeph.out'), 'w') as f:
+        f.write('\n'.join(lines) + '\n')
+    print('report written: %d pass, %d fail' % (tp, tf))
+    return tp, tf, runs
+
 # --------------------------------------------------------------------- main
 if __name__ == '__main__':
     stage = sys.argv[1]
@@ -1141,6 +1369,10 @@ if __name__ == '__main__':
         stage_e3wit()
     elif stage == 'ledger':
         stage_ledger()
+    elif stage == 'bigcheck':
+        stage_bigcheck()
+    elif stage == 'report':
+        stage_report()
     else:
         raise SystemExit('unknown stage')
     print('STAGE %s DONE: %d pass, %d fail' % (stage, _ck['pass'], _ck['fail']))
