@@ -1,0 +1,23 @@
+{
+ "stage": "constants",
+ "pass": 12,
+ "fail": 0,
+ "fails": [],
+ "text": [
+  "==========================================================================",
+  "STAGE constants -- fresh g sandwich, eps*, (5+3g)/(3+2g), kappa, g/(1-g)",
+  "==========================================================================",
+  "  [PASS] g sandwich: floor(2^20 g) = 627035 (fresh integer bisection)  -- 627035/2^20 < g < 627036/2^20",
+  "  [PASS] eps*(g) decreasing on the sandwich",
+  "  [PASS] eps* in (0.0211736, 0.0211747)  -- (0.021173651418803393, 0.021174659260052044)",
+  "  [PASS] eps* < 1/32",
+  "  [PASS] identity 1 + g + eps*(g) == (5+3g)/(3+2g) (200 random rationals)",
+  "  [PASS] derivative law f(a)-f(b) = -(a-b)/((3+2a)(3+2b)) => f' = -1/(3+2g)^2",
+  "  [PASS] (5+3g)/(3+2g) bracket matches E1 (1.6191617801, 1.6191618342), width < 6e-8  -- (1.6191617801, 1.6191618342)",
+  "  [PASS] 1 + g + 1/32 < 427095/262144 EXACT (equality at the strict upper end g_hi)",
+  "  [PASS] 1 + g + 1/16 < 435287/262144 EXACT (same mechanism)",
+  "  [PASS] g/(1-g) bracket matches E3 (1.4874828, 1.4874887)  -- (1.4874828, 1.4874887)",
+  "  [PASS] kappa in (0.0839815, 0.0839820) [E3 bracket 0.0839816..0.0839819]  -- (0.0839816, 0.0839819)",
+  "  [PASS] eps_phi = 1/phi - g < eps* (exact sandwiches)  -- eps_phi <= 0.0200472 < eps*_lo = 0.0211737"
+ ]
+}
