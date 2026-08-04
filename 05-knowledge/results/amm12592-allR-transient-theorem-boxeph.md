@@ -424,7 +424,7 @@ dawdle:
 | 1024 | 15 | 250 | 230 | 639 |
 | 2048 | 38 | 508 | 476 | 1271 |
 | 4096 | 89 | 1014 | 980 | 2537 |
-| 8192 | in (190, 210], refining | 2041 (D0=190) | 1986 | 5058 (D0=210) |
+| 8192 | 192 | 2045 | 1988 | 5064 |
 
 Pre-registered first-sitting predictions came true: R = 1024 D0 = 0 died at
 207 vs bound 202 (margin 5, inside the predicted 5-15); D0 = 8 died at 227
@@ -439,16 +439,22 @@ vs bound 218; no death below a T6b bound anywhere (falsifier absent).
 2. First-sitting's open reading "data does not separate polylog from
    linear-with-log corrections" is superseded by:
 
-**The measured law.** Normalized thresholds 1024·D0*/R:
-4, 10, 15, 19, 22.25 (R = 256..4096), increments 6, 5, 4, 3.25 with ratios
-0.833, 0.800, 0.813 — near-geometric decay of the per-doubling increment of
-D0*/R. Extrapolation: D0*(R)/R increasing to a POSITIVE limit
-eps_inf ~ 0.026-0.035 (geometric-sum estimate; the R = 8192 and 16384 points
-will pin the decay ratio). CONJECTURE (revised): **the plain rule A needs
-LINEAR slack: D0*(R) = eps_inf R - o(R), eps_inf in [0.024, 0.04]**, i.e.
-Estimate E (o(R) for plain rule A) is FALSE. This is a statement about rule
-A, not about epoch feasibility (hazard discipline: rule negatives never
-prove infeasibility; the LP at R = 128 already beat greedy elsewhere).
+**The measured law.** Normalized thresholds 1024·D0*/R (R = 256..8192):
+**4, 10, 15, 19, 22.25, 24** — vs the pure arithmetic-decay integer pattern
+4, 10, 15, 19, 22, 24 (increments 6, 5, 4, 3, 2): the ONLY deviation on six
+doublings is +1 in D0 at R = 4096 (89 vs 88). The pattern's R = 8192
+prediction (D0 = 192) was verified EXACTLY (191 dies at row 2045, 192
+closes). Continuing the arithmetic decay (increments 1, then 0) predicts
+**D0*(16384) = 400** and saturation D0*(R) = 25R/1024 for R >= 16384, i.e.
+eps_inf = 25/1024 ~ 0.0244 (16384 probes at D0 = 384/400 running:
+saturation law => 384 dies, 400 closes; a sublinear law => 384 closes).
+CONJECTURE (revised): **the plain rule A needs LINEAR slack:
+D0*(R)/R -> eps_inf ~ 25/1024**, i.e. Estimate E (o(R) for plain rule A) is
+FALSE. This is a statement about rule A, not about epoch feasibility (hazard
+discipline: rule negatives never prove infeasibility; the LP at R = 128
+already beat greedy elsewhere). The eerily clean arithmetic decay of the
+normalized increments (6,5,4,3,2 exactly, one +0.25 blip) is itself an
+unexplained structure — it smells of a second exact edge law one level up.
 
 **Scaling-limit reading (CONJECTURED, now precise).** With D0 = eps·R the
 whole initial data + caps + feed become R-homogeneous: junk cells live at
@@ -511,3 +517,55 @@ R = 4096-16384 in seconds-to-minutes per run.
 - The all-R golden theorem now = (bulk rule design) + (transient bound for
   that rule). The reduction chain, the engine, the exact initial data, the
   death mechanism, and the debt/drain endgame are all in place and proved.
+
+## 17. Lemma T9 (march structure) — proved parts, falsified part, exact law
+
+Script mode `T9` in the fast engine; output
+`amm12592_transient_T9_march_check_boxeph.json`.
+
+- **T9a (edge transport; PROVED + verified all runs).** The load at the new
+  extreme cell t' = tmax + 1 + delta equals the old extreme junk value
+  EXACTLY (only the edge kernel term reaches it).
+- **T9b (phi condition; exact inequality, verified at every front of every
+  run).** Caps along the march diagonal decay iff d(d-t-1) < (t+1)(t+2),
+  asymptotically tau = t/d > 1/phi = 0.618. Since the front starts at
+  tau_0 = (1-gamma*)/gamma* = 0.672 > 1/phi and only deepens, cap decay
+  holds along every march — the front, once genuinely marching, sheds cap
+  protection geometrically. (Golden ratio appears AGAIN, as the stability
+  threshold of the march.)
+- **T9c (geometric-tail trigger; FALSIFIED as a sufficient condition).** My
+  first formalization ("extreme junk > sum of remaining caps implies
+  permanent march") fires at row 1 on the R = 256..1024 deaths while the
+  front still dawdles. Reason: the OVERFLOW tapers to small values at the
+  edge cells (T4b boundary), so the front's own junk is absorbable at its
+  landing cell; the march is driven by the INTERIOR bulge pushing from
+  behind, not by edge transport. Kept on record per hazard discipline.
+- **T9' (two-phase death law; VERIFIED-exact at 6 scales incl. all
+  threshold-minus-1 deaths).** Every death trajectory is: a dawdle of
+  L rows (L = 5..27, weakly growing with R and D0), then a PURE march —
+  the gap d_i - front(i) decreases by exactly 1 EVERY row, zero recoveries,
+  and  **death row = L + gap(L)** exactly:
+  (R, D0, L, gap(L), death) = (256,0,11,50,61), (512,0,5,102,107),
+  (512,4,13,108,121), (1024,0,5,202,207), (1024,14,20,230,250),
+  (2048,37,27,481,508). With T4b's exact initial gap 2d_0 - R + 2 this
+  pins death rows to [bound, bound + L + few] and reduces the whole
+  march/stall question to the dawdle-phase decision.
+
+Cross-session confirmation: the Angle-B1 independent referee (sha-pinned,
+from-the-theorems checker) has verified ALL-PASS witnesses for R = 512
+D0 = 5 (rule A AND rule B files) and R = 1024 D0 = 15; B1's slow runner
+independently found the same D0 thresholds 0/1/5/15 at R <= 1024 and the
+same die rows 227..250 at R = 1024 D0 = 8..14 — bit-level agreement with
+the fast engine across three implementations and two sessions. The slow
+error-dynamics cross-check at R = 1024 D0 = 14 matches row-for-row (193/193
+rows at time of writing, run continuing to its death row).
+
+Design note for the bulk rule (the golden route): the initial junk profile
+ALTERNATES in sign cell-to-cell (T4's (-1)^{d-t}), and the kernel (1,2,1)
+annihilates alternating profiles — this is why the stall decays the junk at
+~1.5 bits/row at D0*. The march-driving bulge is the non-alternating
+residue. A bulk clamp that SHAPES junk toward alternation (choosing c below
+the edge on selected cells to restore sign alternation) attacks the
+mechanism directly and is sweepable with this engine at R = 4096+ in
+minutes. That, not ballot steering (refuted by B1's invariance lemma), is
+the concrete candidate for killing eps_inf.
