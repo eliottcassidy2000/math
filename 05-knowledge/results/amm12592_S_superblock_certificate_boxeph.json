@@ -326,7 +326,7 @@
   "superblock_tailmin_bits": 780,
   "superblock_margin_bits": 603,
   "PASS": true,
-  "elapsed_s": 0.1
+  "elapsed_s": 0.0
  },
  {
   "R": 1024,
@@ -373,7 +373,7 @@
   "superblock_tailmin_bits": 800,
   "superblock_margin_bits": 621,
   "PASS": true,
-  "elapsed_s": 0.1
+  "elapsed_s": 0.0
  },
  {
   "R": 2048,
@@ -420,7 +420,7 @@
   "superblock_tailmin_bits": 1567,
   "superblock_margin_bits": 1292,
   "PASS": true,
-  "elapsed_s": 0.4
+  "elapsed_s": 0.2
  },
  {
   "R": 2048,
@@ -467,7 +467,7 @@
   "superblock_tailmin_bits": 1607,
   "superblock_margin_bits": 1329,
   "PASS": true,
-  "elapsed_s": 0.4
+  "elapsed_s": 0.2
  },
  {
   "R": 4096,
@@ -514,7 +514,7 @@
   "superblock_tailmin_bits": 3139,
   "superblock_margin_bits": 2708,
   "PASS": true,
-  "elapsed_s": 1.9
+  "elapsed_s": 1.3
  },
  {
   "R": 4096,
@@ -561,7 +561,7 @@
   "superblock_tailmin_bits": 3219,
   "superblock_margin_bits": 2780,
   "PASS": true,
-  "elapsed_s": 1.8
+  "elapsed_s": 1.4
  },
  {
   "R": 8192,
@@ -608,6 +608,147 @@
   "superblock_tailmin_bits": 6285,
   "superblock_margin_bits": 5632,
   "PASS": true,
-  "elapsed_s": 10.3
+  "elapsed_s": 6.6
+ },
+ {
+  "R": 8192,
+  "D0": 512,
+  "i0": 1741,
+  "d_i0": 6451,
+  "m": 83,
+  "checks": {
+   "H_all_negative": true,
+   "H_all_even": true,
+   "H_support": true,
+   "H_W_6m_le_d": true,
+   "H_m_ge_3": true,
+   "H_debt_negative": true,
+   "REGRESSION_vs_published_record": true,
+   "T1_autonomy": true,
+   "T1_death_only_last_rows": true,
+   "DL_debt_within_budget": true,
+   "CAPTURE_within_budget": true,
+   "FREEZE_all_rows": true,
+   "CONSISTENCY_bound_ge_actual": true,
+   "CONSISTENCY_exact_prediction": true,
+   "SB_no_superblock_ever": true
+  },
+  "j0abs": 6446,
+  "debt_edge_c0": -5,
+  "i_death_min": 8109,
+  "death_window_rows": 83,
+  "deficit_budget": 82,
+  "k_end": 3223,
+  "k_debt": 3223,
+  "k_junk_stable": 2538,
+  "budget_K": 6449,
+  "capture_row_bound": 4964,
+  "freeze_first_fail_k": null,
+  "freeze_min_slack_bits": {
+   "d1_extreme": 14,
+   "d1_mate": 6,
+   "d0": null
+  },
+  "capture_row_exact_pred": 4964,
+  "capture_row_actual": 4964,
+  "superblock_value_bits_max": 667,
+  "superblock_tailmin_bits": 6444,
+  "superblock_margin_bits": 5777,
+  "PASS": true,
+  "elapsed_s": 6.8
+ },
+ {
+  "R": 16384,
+  "D0": 512,
+  "i0": 3802,
+  "d_i0": 12582,
+  "m": 118,
+  "checks": {
+   "H_all_negative": true,
+   "H_all_even": true,
+   "H_support": true,
+   "H_W_6m_le_d": true,
+   "H_m_ge_3": true,
+   "H_debt_negative": true,
+   "REGRESSION_vs_published_record": true,
+   "T1_autonomy": true,
+   "T1_death_only_last_rows": true,
+   "DL_debt_within_budget": true,
+   "CAPTURE_within_budget": true,
+   "FREEZE_all_rows": true,
+   "CONSISTENCY_bound_ge_actual": true,
+   "CONSISTENCY_exact_prediction": true,
+   "SB_no_superblock_ever": true
+  },
+  "j0abs": 12576,
+  "debt_edge_c0": -6,
+  "i_death_min": 16266,
+  "death_window_rows": 118,
+  "deficit_budget": 117,
+  "k_end": 6288,
+  "k_debt": 6288,
+  "k_junk_stable": 4958,
+  "budget_K": 12580,
+  "capture_row_bound": 10090,
+  "freeze_first_fail_k": null,
+  "freeze_min_slack_bits": {
+   "d1_extreme": 18,
+   "d1_mate": 10,
+   "d0": null
+  },
+  "capture_row_exact_pred": 10090,
+  "capture_row_actual": 10090,
+  "superblock_value_bits_max": 1001,
+  "superblock_tailmin_bits": 12574,
+  "superblock_margin_bits": 11573,
+  "PASS": true,
+  "elapsed_s": 44.0
+ },
+ {
+  "R": 16384,
+  "D0": 1024,
+  "i0": 3482,
+  "d_i0": 12903,
+  "m": 119,
+  "checks": {
+   "H_all_negative": true,
+   "H_all_even": true,
+   "H_support": true,
+   "H_W_6m_le_d": true,
+   "H_m_ge_3": true,
+   "H_debt_negative": true,
+   "REGRESSION_vs_published_record": true,
+   "T1_autonomy": true,
+   "T1_death_only_last_rows": true,
+   "DL_debt_within_budget": true,
+   "CAPTURE_within_budget": true,
+   "FREEZE_all_rows": true,
+   "CONSISTENCY_bound_ge_actual": true,
+   "CONSISTENCY_exact_prediction": true,
+   "SB_no_superblock_ever": true
+  },
+  "j0abs": 12910,
+  "debt_edge_c0": 7,
+  "i_death_min": 16266,
+  "death_window_rows": 118,
+  "deficit_budget": 117,
+  "k_end": 6455,
+  "k_debt": 6455,
+  "k_junk_stable": 5082,
+  "budget_K": 12900,
+  "capture_row_bound": 9937,
+  "freeze_first_fail_k": null,
+  "freeze_min_slack_bits": {
+   "d1_extreme": 13,
+   "d1_mate": 6,
+   "d0": null
+  },
+  "capture_row_exact_pred": 9937,
+  "capture_row_actual": 9937,
+  "superblock_value_bits_max": 1017,
+  "superblock_tailmin_bits": 12895,
+  "superblock_margin_bits": 11878,
+  "PASS": true,
+  "elapsed_s": 44.1
  }
 ]

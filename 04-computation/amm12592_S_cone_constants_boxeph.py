@@ -126,6 +126,56 @@ def main():
         out[f"Rb_eps_{eps_num}_{eps_den}"] = Rb
         out[f"R1_eps_{eps_num}_{eps_den}"] = R1
 
+    # ---- Corollary (a-priori F4): from F3 alone, a_t <= C(D0-1, t+1) for
+    # every t >= 1 and a_0 <= D0-1 (F2).  Exact clock bounds:
+    #   K1c: smallest K with sum_k 2*[s_k + 2(k-1)] >= C(Dub-1,2)*... using
+    #        sum s_k >= g_lo K^2/2 - K  (s_k = floor(g_lo k)):
+    #        (g_lo+2)K^2 - 4K >= Dub*(Dub-1)/2       [a_1 <= C(Dub-1,2)]
+    #   K2c: (g_lo K^2/2 - K)*(2 Dlb - 3) >= C(Dub-1,3) [a_2 <= C(Dub-1,3)]
+    #   and T_t <= T_2 for all t >= 2 (need decreasing, rate increasing).
+    # Verify i_ub + 2 + max(K1c, K2c) <= R - 2 for dyadic R (both eps).
+    print("\nCorollary a-priori-F4 verification (exact rationals):")
+    for eps_num, eps_den in ((1, 32), (1, 16)):
+        R0 = None
+        bad = []
+        for kk in range(7, 41):
+            R = 1 << kk
+            D0 = -((-R * eps_num) // eps_den)
+            i_ub = int((R * (1 - g_lo) - D0) / (1 + g_lo)) + 2 + 64
+            Dlb = int((2 * g_lo * R + D0) / (1 + g_hi)) - 1
+            Dub = int(g_hi * (R + i_ub)) + D0 + 1
+            need1 = Dub * (Dub - 1) // 2
+            need2 = Dub * (Dub - 1) * (Dub - 2) // 6
+            # binary search exact K's
+            def k1ok(K):
+                return (g_lo + 2) * K * K - 4 * K >= need1
+            def k2ok(K):
+                return (g_lo * K * K / 2 - K) * (2 * Dlb - 3) >= need2
+            def bs(ok):
+                lo, hi = 1, 4 * R
+                if not ok(hi):
+                    return None
+                while lo < hi:
+                    mid = (lo + hi) // 2
+                    if ok(mid):
+                        hi = mid
+                    else:
+                        lo = mid + 1
+                return lo
+            K1c, K2c = bs(k1ok), bs(k2ok)
+            ok = (K1c is not None and K2c is not None and
+                  i_ub + max(K1c, K2c) <= R - 2 and
+                  2 * i_ub <= R - 2)
+            if ok and R0 is None:
+                R0 = R
+            if not ok:
+                bad.append(R)
+                R0 = None      # require ok for ALL R >= R0
+        # find final stable R0: last bad + one doubling
+        R0 = (max(bad) * 2) if bad else (1 << 7)
+        print(f"  eps={eps_num}/{eps_den}: a-priori F4 holds for all dyadic "
+              f"R >= {R0} = 2^{R0.bit_length()-1}; failures at {bad if bad else 'none'}")
+        out[f"apriori_F4_R0_eps_{eps_num}_{eps_den}"] = R0
     json.dump(out, open(os.path.join(
         RESULTS, "amm12592_S_cone_constants_boxeph.json"), "w"), indent=1)
     print("constants JSON written.")

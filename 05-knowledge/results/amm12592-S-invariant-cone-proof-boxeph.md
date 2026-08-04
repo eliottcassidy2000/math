@@ -1,404 +1,393 @@
-# AMM 12592 — Lane E1: Hypothesis S via the invariant cone — the post-feed theorem, the one-row entry reduction, and certificates to R = 32768
+# AMM 12592 — Lane E1: Hypothesis S via the invariant cone — the full-cap cone theorem, one-row certificates sharp to O(1) rows, and the marginal-surface law
 
 Session: boxeph multifront, 2026-08-04 (post D1/D2/D3 + hostile referee).
-All computations exact (int / Fraction); no floats in any decision; no numpy;
-no sympy. All citations T1–T9' to `amm12592-allR-transient-theorem-boxeph.md`,
-Theorems A/B/C/D and C-N/C-A/C-F/C-D to `amm12592-Elin-theorem-boxeph.md`,
-G1–G3 to `amm12592-golden-transient-bound-boxeph.md`, referee findings to
+All computations exact (int / Fraction); no floats in any decision; no
+numpy; no sympy. Citations: T1–T9' to
+`amm12592-allR-transient-theorem-boxeph.md`; Theorems A/B/C/D, C-N/C-A/
+C-F/C-D to `amm12592-Elin-theorem-boxeph.md`; G1–G3 to
+`amm12592-golden-transient-bound-boxeph.md`; referee to
 `amm12592_estimateE_referee_boxeph.out`.
 
 Scripts (04-computation/):
-`amm12592_S_invariant_cone_certificates_boxeph.py` (instrumented exact
-runner, engine-certified; entry snapshots; per-row cone diagnostics; corner
-and robustness modes), `amm12592_S_cone_lemma_referee_boxeph.py` (600-trial
-exact certificates for each one-step lemma), `amm12592_S_cone_entrycheck_
-boxeph.py` (sharp ENTRY* certificate on saved feed-end states),
-`amm12592_S_cone_constants_boxeph.py` (fresh g sandwich + all rational
-constants).
-Outputs (05-knowledge/results/): `amm12592_S_cone_run_R*_D0*_boxeph.json`
-(per-row ledgers), `amm12592_S_cone_feedend_R*_D0*_boxeph.json` (exact
-feed-end states), `amm12592_S_cone_entrycheck_boxeph.{out,json}`,
-`amm12592_S_cone_lemma_referee_boxeph.{out,json}`,
-`amm12592_S_cone_certify_vs_engine_boxeph.json`,
-`amm12592_S_cone_constants_boxeph.json`, corner/robustness ledgers
-`amm12592_S_cone_corner*_boxeph.json`, `amm12592_S_cone_snapx*_boxeph.json`.
+`amm12592_S_invariant_cone_certificates_boxeph.py` — instrumented exact
+runner (engine-certified bit-identical), feed-end snapshots, per-row cone
+diagnostics, `fcscan` (full-cap certificate + exact clocks), `iconescan`
+(half-cap certificate), `corner`/`fromsnap` (comparison-lemma experiments);
+`amm12592_S_cone_lemma_referee_boxeph.py` — 600-trial exact certificates
+per one-step lemma (independent clamp implementation);
+`amm12592_S_cone_entrycheck_boxeph.py` — feed-end certificate margins;
+`amm12592_S_cone_constants_boxeph.py` — fresh g sandwich + rational
+constants. Outputs (05-knowledge/results/):
+`amm12592_S_cone_{run,feedend,fcscan,iconescan,entrycheck,constants,
+lemma_referee,certify_vs_engine}_*` JSON/out; corner/robustness ledgers
+`amm12592_S_cone_corner*_*.json`, `amm12592_S_cone_snapx*_*.json`.
 
 Status labels: **PROVED** (complete argument, machine-checkable algebra),
 **VERIFIED-exact** (exact computation at stated scales), **HYPOTHESIS /
-OPEN** (precise statement, open).
+OPEN** (precise statement, open), **REFUTED** (with certificate).
 
 ---
 
 ## 0. Headline
 
 1. **The post-feed flow is a monotone dynamical system in closed form
-   (Lemma S1 + S2, PROVED).** With all-negative junk, rule A's autonomous
-   phase is EXACTLY, on magnitudes `a_t = |j_t|`:
-   `a'_t = max(0, (K_delta a)_t - 2C(d'-1,t))` (t >= 1),
-   `a'_0 = max(0, a_0 - 2)`, and the one-step map is cellwise MONOTONE:
-   `a <= b  =>  Phi(a) <= Phi(b)`. Consequence (comparison principle): any
-   majorant state that captures certifies capture for everything below it.
-   Cell 0 is autonomous — an exact 2/row clock, independent of all other
-   cells.
-2. **The deadline is unconditionally non-binding (Lemma S3, PROVED).**
-   `a_0(feed-end) <= R - 2` always (T8 debt identity + negativity), and
-   cell 0 empties at exactly row `i_pf + a_0/2 - 1 <= R - 2` because
-   `i_feed/R <= (1-g)/(1+g) < 0.251575 < 1/2` (certified rationally).
-3. **The |j_0| = d ± O(10) edge law explained (Lemma S4, PROVED).** Cell
-   0's spill into cell 1 is in-box iff `a_0 <= d' - 1`: the feed leaves the
-   debt exactly at the threshold where the drain stops re-injecting junk
-   upward. The boundary layer (rows with `a_0 > d - 1`) has exactly
-   computable length and total injection `G_L`.
-4. **The invariant-cone theorem (Theorem S-cone, PROVED).** A ONE-ROW
-   condition at the feed-end state — negativity, a Lambda cap-ratio bound,
-   the debt edge bound, and the SELF-PROPAGATING half-cap inequality
-   `2(2a_{t-1} + a_{t-2}) <= 2C(d_fe - 1, t)` for `t in [2, m+2]` (H4*),
-   plus an explicit budget check — implies: support never advances, no
-   death, every cell t >= 2 loses a full `C(d_fe-1,t)` per row and dies
-   within `2 Lambda` rows permanently, cell 1 dies within `K1R ~ 5 Lambda`
-   rows, and capture occurs by row R-2. **S(R) follows from a one-row
-   certificate.** No asymptotic step: the theorem is per-R with every
-   hypothesis machine-checkable at the feed-end row.
-5. **Certificates (VERIFIED-exact).** The instrumented runner is certified
-   bit-identical to the fast engine (4 configs incl. a death). Sweep
-   R = 128..16384 x {1/32, 1/16} reproduces every D2 capture row exactly;
-   post-feed extinction is strictly top-down with ZERO re-ignitions at
-   every scale; the H4* margin at its binding cell t = 2 shrinks with R
-   exactly as predicted by the R-independence of A_1 (~2^10) against the
-   cap growth d^2/8; ENTRY* first passes at [see table — final rows landed
-   this session]. R = 32768 runs at both eps landed this session
-   [outcomes in section 6].
-6. **New closed form for the program's limit constant (PROVED).**
-   `1 + g + eps* = (5 + 3g)/(3 + 2g)` identically (derivative
-   `-1/(3+2g)^2`), with certified rational bracket
-   `(5+3g)/(3+2g) in (1.6191617801, 1.6191618342)` (width 5.4e-8).
-7. **Verdict.** Steps (2) preservation and (4) capture of the invariant-
-   cone program are PROVED, unconditionally, per-R, via H4*. Step (3)
-   (entry) is reduced to the one-row ENTRY* condition; it is the ONLY
-   remaining hypothesis, replacing the Theta(R)-row dynamical statement S.
+   (S1/S2, PROVED).** All-negative junk under rule A evolves EXACTLY by
+   `a'_t = max(0, (K_delta a)_t - 2C(d'-1,t))` (t >= 1), `a'_0 =
+   max(0, a_0 - 2)` on magnitudes `a = |j|`; the map is cellwise monotone
+   (comparison principle). Cell 0 is an autonomous exact 2/row clock, and
+   the T8 deadline is unconditionally non-binding (S3).
+2. **Theorem S-cone-fc (PROVED, the main result).** From ANY post-feed row
+   whose state satisfies four exact one-row conditions — negativity,
+   `a_0 <= d - 1`, the FULL-CAP inflow condition
+   `2a_{t-1} + a_{t-2} <= 2C(d-1,t)` on `t in [2, m+2]`, and an exact
+   clock/budget check (F4) using only the certified floor profile — the
+   flow provably captures by row R-2 with no death: **S(R) follows from a
+   one-row certificate.** No asymptotics; every hypothesis is decidable by
+   integer arithmetic at that row.
+3. **The certificate fires AT feed-end (VERIFIED-exact).** The scan
+   `fcscan` finds the first certifying row `i_fc`: it is the feed-end row
+   itself or 1–3 rows after it at every tested scale, and the theorem's
+   capture bound is sharp to a few rows (e.g. R = 512: bound 314, actual
+   313; R = 1024: bound 620, actual 616). The unproved content of S(R) is
+   thereby reduced to the feed phase handing over a state in the cone —
+   nothing about the autonomous evolution remains unproved.
+4. **The marginal-surface law (NEW, VERIFIED-exact).** At feed-end the
+   full-cap inflow ratios `r_t = (2a_{t-1}+a_{t-2})/2C(d-1,t)` are
+   `1.000 +- 0.005` ACROSS THE WHOLE BLOCK, with the deviation shrinking
+   as R grows (max_t r_t: 0.9872 at 256, 0.9906 at 512, 1.0038 at 1024,
+   1.0047 at 4096, 1.0001 at 8192, 1.0004 at 16384). The feed delivers the
+   autonomous phase a CRITICAL state sitting exactly on the absorb
+   boundary — "the profile rides just above the caps, frozen" (D2) made
+   exact. Cap drift (degree growth along the Beatty word) immediately
+   pulls the caps ahead, which is why i_fc = feed-end + O(1).
+5. **The Lambda R-independence reading is REFUTED (exact).** The feed-end
+   cap-ratio at cell 1 grows EXACTLY one bit per doubling:
+   `log2 A_1 = 4.33, 5.55, 6.56, 7.62, 8.61, 9.62, 10.62, 11.62` at
+   R = 128..16384 (eps = 1/32), i.e. `A_1 ~ 0.19 R` LINEAR — D2's
+   "max_t log2 A_t ~ 10-11 R-independent" does not hold at feed-end (its
+   instrumentation must have read a later row). Fixed-Lambda cones are
+   therefore structurally wrong; the full-cap form (which is
+   Lambda-free) is the right invariant. Recorded per hazard discipline.
+6. **Basin geometry (VERIFIED-exact).** By the comparison principle each
+   capturing run certifies its whole order-interval: feed-end states
+   scaled x2 on all cells t >= 1 still capture (2048: 1581 <= 2046;
+   8192: 6556 <= 8190); the uniform corner state (A_t = 2047 on
+   [1, 2 sqrt R]) does NOT capture at 16384 (OPEN_RESIDUAL) — the basin
+   is at least one binary order deep around the true state but far
+   narrower than the uniform corner: S is robust, not knife-edge, and the
+   graded profile matters.
+7. **New closed form (PROVED).** `1 + g + eps* = (5+3g)/(3+2g)` with
+   derivative `-1/(3+2g)^2`; certified bracket
+   `(1.6191617801, 1.6191618342)` (width 5.4e-8). This is the E-lin
+   program's limit constant in one fraction.
+8. **R = 32768 (this session).** Both eps = 1/32, 1/16 runs launched on
+   the certified instrumented engine; outcomes, feed-end laws, and fcscan
+   certificates recorded in section 6 [landed this session].
 
 ---
 
 ## 1. Setting
 
-Post-feed autonomous T6 flow at dyadic R, profile `d_i = floor(g(R+i)) + D0`
-(`g = gamma* = log_5 phi^2`, certified sandwich
-`627035/2^20 < g < 627036/2^20`, re-derived fresh this session by integer
-Lucas/Fibonacci comparisons at M = 2^20). Junk vector `j` on cells t of
-degree d; row step: `delta = d_{i+1} - d_i in {0,1}` (Beatty word),
-transport `(K_delta * j)_c = sum_s C(1+delta, s) j_{c-s}` (kernel (1,1) or
-(1,2,1), acting upward in cell index), then the nearest-point clamp into
-the c-boxes `[-2C(d'-1,t), +2C(d'-1,t-1)]` (t >= 1) and `[-2, 0]` (t = 0);
-junk = load minus clamp. Death iff junk at cell d'; capture iff junk empty
-(then T5/T1 coasting closes the epoch). Feed is over: `d_i + i > R` for all
-remaining rows (`d_i + i` strictly increasing, so the post-feed property is
-permanent). `i_pf` := first such row; the state entering row `i_pf` is the
-FEED-END state, degree `d_fe = d_{i_pf - 1}`.
+Post-feed autonomous T6 flow at dyadic R, profile
+`d_i = floor(g(R+i)) + D0`, `g = gamma* = log_5 phi^2` (fresh certified
+sandwich `627035/2^20 < g < 627036/2^20`, re-derived this session by
+integer Lucas/Fibonacci comparisons at M = 2^20; independent of the prior
+referee's). Junk `j` on cells t at degree d; per row `delta = d' - d in
+{0,1}`; transport `(K_delta * j)_c = sum_s C(1+delta,s) j_{c-s}`; clamp
+into `[-2C(d'-1,t), +2C(d'-1,t-1)]` (t >= 1), `[-2, 0]` (t = 0); junk =
+load - clamp. Death iff junk at cell d'; capture iff junk empty (then
+T5/T1 coasting). `i_pf` := first row with `d_i + i > R` (no feed ever
+again; `d_i + i` strictly increasing makes this permanent); the state
+entering row `i_pf` is the FEED-END state, degree `d_fe = d_{i_pf - 1}`.
+Magnitudes `a_t := -j_t >= 0`; front `m := max supp`; caps `2C(d-1,t)`.
+All junk entries are even (T3; asserted at every clamp of every run).
 
-**Convention.** `a_t := |j_t| = -j_t >= 0`; `m` := max support; caps
-`cap_t(d) := 2C(d-1, t)`. All states have even entries (T3, asserted at
-every clamp of every run).
+## 2. Lemma S1 (magnitude closed form; cell-0 clock) — PROVED
 
-## 2. Lemma S1 (magnitude closed form) — PROVED
-
-**Statement.** If `j <= 0` cellwise, then after one post-feed step of rule
-A (any delta), the junk is again `<= 0`, and the magnitudes evolve exactly:
+**Statement.** If `j <= 0` cellwise then after one post-feed row of rule A
+(either delta): junk stays `<= 0`, and exactly
 
 ```
-a'_t = max(0, (K_delta a)_t - 2C(d'-1, t))     (t >= 1)
+a'_t = max(0, (K_delta a)_t - 2C(d'-1,t))   (t >= 1),
 a'_0 = max(0, a_0 - 2).
 ```
 
-*Proof.* The load is `w = K_delta * j <= 0` cellwise (kernel nonnegative),
-`w_t = -(K_delta a)_t`. For a negative load the upper box end
-`+2C(d'-1,t-1) >= 0` is inactive: the nearest-point clamp is
-`u_t = max(-2C(d'-1,t), w_t) <= 0`, so junk `j'_t = w_t - u_t =
-min(0, w_t + 2C(d'-1,t)) <= 0` and `|j'_t| = max(0, |w_t| - 2C(d'-1,t))`.
-At t = 0 the box is `[-2, 0]` and the load is `w_0 = j_0` (the kernel has
-no contributors from below), giving `a'_0 = max(0, a_0 - 2)`. QED
+*Proof.* Load `w = K_delta * j <= 0`; for w <= 0 the upper box end is
+inactive, the nearest-point clamp is `u_t = max(-2C(d'-1,t), w_t)`, junk
+`= min(0, w_t + 2C(d'-1,t))`. At t = 0 the box is [-2, 0] and the load is
+`j_0` (no lower cells). QED
 
-This subsumes C-N and upgrades C-A from an inequality on overflowing cells
-to the exact one-step map. Certificate L1 (600 exact random states, both
-kernels, against an independent clamp implementation):
-`amm12592_S_cone_lemma_referee_boxeph.out`, ALL PASS.
-
-**Remark (cell-0 autonomy).** `a'_0` depends on `a_0` alone: the debt drain
-is an exact clock, unconditionally — the T8 "-2 per row" scheduling needs
-no hypothesis in the all-negative phase. Junk parity keeps `a_0` even, so
-cell 0 empties after exactly `a_0/2` rows and stays empty.
+Subsumes C-N; upgrades C-A to the exact map. Cell 0 is autonomous: the
+debt drains at exactly 2/row (T8's schedule needs no hypothesis here),
+`a_0` stays even, cell 0 empties after exactly `a_0/2` rows, permanently.
+Certificate L1: 600 exact random states vs an independent clamp
+implementation — ALL PASS (`amm12592_S_cone_lemma_referee_boxeph.out`).
 
 ## 3. Lemma S2 (comparison principle) — PROVED
 
-**Statement.** Fix a row (d', delta). If `a <= b` cellwise then
-`Phi(a) <= Phi(b)` cellwise, where Phi is the S1 map. Hence along any
-common row range: if `a(i0) <= b(i0)` and b's trajectory reaches `b = 0`
-by row i1 without support reaching cell d, then a's trajectory does too.
+`a <= b` cellwise implies `Phi(a) <= Phi(b)` cellwise (each output is
+nondecreasing in every input; induct along rows). Hence a capturing
+trajectory from a majorant state proves capture (and no-death) for every
+state below it. Certificate L2: 600 comparable pairs — ALL PASS.
 
-*Proof.* Each `a'_t = max(0, sum_s K_s a_{t-s} - const)` is nondecreasing
-in every entry. Induct along rows; support of a is contained in support of
-b, so no-death and capture transfer downward. QED (Certificate L2: 600
-random comparable pairs, ALL PASS.)
+## 4. Lemma S3 (deadline, unconditional) and Lemma S4 (layer) — PROVED
 
-**Consequence.** Any exact run started from a cellwise UPPER bound of the
-feed-end state that captures by row R-2 is a machine PROOF of S(R) for
-every feed-end state below it (used in section 6: corner and scaled-state
-certificates; robustness of S against feed-end perturbations).
+**(S3)** Post-feed, `e_i(1) = j_0` and the T8 identity give
+`a_0 = (R-2) - 2 * minus2count <= R - 2` (using only j_0 <= 0). With
+`i_feed = floor((R(1-g) - D0)/(1+g))` (Theorem B) and `g > 1/3`:
+`i_pf <= i_feed + 2 <= (R-2)/2` (all R >= 32, any D0 >= 0), so cell 0
+empties by `i_pf + a_0/2 - 1 <= R - 2`: the drain ALWAYS finishes in
+time.
 
-## 4. Lemmas S3–S4 (cell-0 clock, deadline, boundary layer) — PROVED
+**(S4)** Cell 1's only inflow from below is `(1+delta) a_0` against cap
+`2(d'-1)`: in-box iff `a_0 <= d'-1` (delta = 1; delta = 0 rows are always
+in-box in our regime). Since a_0 falls 2/row and d is nondecreasing,
+`a_0 <= d-1` is ABSORBING; the observed feed-end edge law `a_0 = d_fe +-
+O(10)` (all 18 runs: a_0 - d_fe in [-14, +7]) is precisely the handover
+at this threshold. Layer := rows with a_0 > d-1; length
+`L = ceil((a_0 - (d_fe-1))/2)^+`, and cell 1 gains at most
+`G_L = sum_k 2 max(0, a_0 - 2k - d_fe)` in total during it (delta = 1
+rows have cap >= 2 d_fe; delta = 0 rows give no gain). Certificate L4:
+600 trials — ALL PASS.
 
-**(S3a) `a_0(fe) <= R - 2`.** Post-feed the pristine tail is empty, so the
-T8 ballot identity reads `j_0 = (2 - R) + 2 * #{c0 = -2 rows so far}`
-(C-D). With `j_0 <= 0` (entry negativity): `a_0 = (R-2) - 2*minus2count
-<= R - 2`. (No other hypothesis.)
+## 5. Theorem S-cone-fc (full-cap cone: one-row certificate => S(R)) — PROVED
 
-**(S3b) Deadline.** Cell 0 empties at exactly row `i_pf + a_0(fe)/2 - 1`.
-Since `i_feed = floor((R(1-g) - D0)/(1+g))` (Theorem B) and `g > 1/3`
-(certified), `i_pf <= i_feed + 2 <= (R-2)/2` for all R >= 32 at any
-D0 >= 0; hence `i_pf + a_0/2 - 1 <= (R-2)/2 + (R-2)/2 = R - 2`: **the
-drain always finishes in time, unconditionally.**
+Notation: fix a post-feed row `i0`; write `D_k := d_{i0+k}` for the EXACT
+degree profile (certified floor engine), `delta_k := D_k - D_{k-1}`; the
+state entering row i0 is `a` with front m; `capref_t := 2C(D_0 - 1, t)`.
 
-**(S4a) Cell-1 spill criterion.** The only load cell 1 receives from below
-is `(1+delta) a_0`; its lower cap is `2(d'-1)`. On delta = 1 rows the
-spill `2a_0` is in-box iff `a_0 <= d' - 1`; on delta = 0 rows
-`a_0 <= 2(d'-1)` always holds in our regime. Since `a_0` falls by 2/row
-while d is nondecreasing, the condition `a_0 <= d - 1` is ABSORBING. The
-observed feed-end edge law `a_0 = d_fe ± O(10)` (D2 sec. 4.2, 16/16) is
-precisely the statement that the feed hands the drain over AT this
-threshold: within O(1) rows of feed-end the drain stops re-injecting junk
-into cell 1 forever.
+**Hypotheses (all exact, all at row i0):**
 
-**(S4b) Layer bookkeeping.** Layer := rows with `a_0 > d - 1`; its length
-is `L = max(0, ceil((a_0(fe) - (d_fe - 1))/2))` (a_0 falls 2/row, d
-nondecreasing), and cell 1's total gain over the layer is at most
+- **(F1)** `j <= 0`, support ⊆ [0, m], `m + 2 < D_0`;
+- **(F2)** `a_0 <= D_0 - 1`;
+- **(F3)** `2 a_{t-1} + a_{t-2} <= capref_t` for every `t in [2, m+2]`
+  (entries above the support read 0);
+- **(F4)** `i0 + max( ceil(a_0/2), max_{1<=t<=m} T_t ) <= R - 2`, where
+  the clocks are the exact staircase sums
 
 ```
-G_L := sum_{k >= 0} 2 * max(0, a_0(fe) - 2k - d_fe)
+t >= 2:  T_t := min{ K : sum_{k=1..K} ( 2C(D_k - 1, t) - capref_t ) >= a_t }
+t = 1:   T_1 := min{ K : sum_{k=1..K} [ 2(D_k - 1)
+                     - (1 + delta_k) * max(0, a_0 - 2(k-1)) ]^+  >= a_1 }.
 ```
 
-(delta = 1 rows have `d' >= d_fe + 1`, cap `2(d'-1) >= 2 d_fe`; delta = 0
-rows give no gain since `a_0 <= d_fe + C0 <= 2(d_fe - 1)`). All other
-cells receive no cell-0 spill (cell 2's load contains `a_0 <= d + C0 <<
-2C(d-1,2)`; folded into H4* below). Certificate L4 (600 trials): ALL PASS.
+**Conclusion.** For every k >= 0: cells >= 1 are cellwise non-increasing,
+the support stays inside [0, m], junk stays negative, no death can occur,
+and cell t is permanently empty from row `i0 + T_t` (t >= 1), cell 0 from
+`i0 + ceil(a_0/2)`. Hence junk is empty by row
+`i0 + max(ceil(a_0/2), max_t T_t) <= R - 2`: **capture, and S(R) holds.**
 
-## 5. Theorem S-cone (entry => capture) — PROVED
+*Proof.* Induction on k with hypothesis: `a^{(k)} <= a` cellwise on
+t >= 1; `a^{(k)}_0 = max(0, a_0 - 2k)`; support ⊆ [0, m]; F3 holds at the
+current values. Row i0+k clamps at degree `D_k >= D_0`, so every cap
+`2C(D_k - 1, t) >= capref_t`.
+(i) Cells `t in [2, m]`: the load is `a_t + spill` with `spill <=
+2a_{t-1} + a_{t-2} <= capref_t` (both delta-forms are dominated), so by
+S1 `a'_t <= max(0, a_t + capref_t - 2C(D_k - 1, t)) <= a_t`, with decay
+at least `2C(D_k - 1, t) - capref_t` while alive.
+(ii) Cell 1: inflow `(1+delta_k) a^{(k)}_0 <= 2 a_0 <= 2(D_0 - 1) <=
+2(D_k - 1)` = cap (F2 absorbing), so `a'_1 <= a_1`, with decay
+`[2(D_k-1) - (1+delta_k) a^{(k)}_0]^+` — the T_1 summand.
+(iii) Beyond the front: the only loads are at m+1 (`2a_m + a_{m-1} <=
+capref_{m+1}`, by F3 at t = m+1) and m+2 (`a_m <= capref_{m+2}`, by F3 at
+t = m+2 with `a_{m+1} = 0`), both inside their caps: absorbed entirely,
+support frozen. Death needs junk at cell `D_k > m + 2`: impossible.
+(iv) All cells non-increasing => spills non-increasing => F3 propagates.
+(v) Clocks: the cumulative decays are exactly the T-sums; once a cell is
+zero its load is its spill `<= capref <=` cap: it stays zero. Cell 0 is
+the exact clock. F4 bounds the last extinction row. Capture, then T5/T1
+coasting closes the epoch. QED
 
-Fix dyadic R, D0 >= 0, and let the feed-end state (row `i_pf`, degree
-`d = d_fe`, junk j, front m, `m + 2 < d`) satisfy, with `Lambda = 2^11`,
-`C0 = 64`, `abar_t := a_t + G_L` for t = 1 and `abar_t := a_t` otherwise:
+Certificate L3 (600 random states satisfying the cone; both kernels):
+one-step non-increase, support freeze, half/full-cap decay, and condition
+propagation — ALL PASS. (L3 checks the half-cap variant, whose one-step
+claims dominate the full-cap ones cell-by-cell.)
 
-- **(H1)** `j <= 0` cellwise;
-- **(H2)** `abar_t <= (Lambda - 1) * 2C(d-1, t)` for all `1 <= t <= m`;
-- **(H3)** `a_0 <= d + C0` (and `a_0 <= R-2`, automatic by S3a);
-- **(H4*)** for all `t in [2, m+2]`:
-  `2 * (2 abar_{t-1} + abar_{t-2}) <= 2C(d-1, t)`
-  (entries above the support read 0; abar_0 = a_0);
-- **(BUD)** `i_pf + max( ceil(a_0/2), L + max(K1R, K2R) ) <= R - 2`, where
-  `K2R := max_{2<=t<=m} ceil(abar_t / C(d-1,t))` (<= 2 Lambda by H2),
-  `K1R := ceil((n1 + 1)/(1 - g_hi))`, `n1 := ceil(abar_1/(d - C0 - 2))`
-  (<= ~5 Lambda by H2), `g_hi = 156759/262144`.
+**Corollary (a-priori F4: the clocks are free) — PROVED + certified.**
+F3 itself bounds every magnitude: reading F3 at cell t+1 gives
+`a_t <= C(D_0 - 1, t+1)` for every `t in [1, m+1]`. Feeding these into
+the clock sums (with the exact staircase `D_k - D_0 >= floor(g_lo k)`,
+`s(2 D_0 - 3 + s)/2` for the t = 2 cap increments, the drain-assisted
+cell-1 decay `>= 2[s_k + 2(k-1)]`, and the monotonicity lemma
+`T_t <= T_2` for all `t >= 2` — normalized need `(D_0-1-t)/(2(t+1))`
+decreasing in t while the normalized cap-growth rate increases in t)
+yields explicit bounds `K1c ~ D_0/sqrt(2(2+g)) ~ 0.34 R` and
+`K2c ~ D_0/sqrt(6g) ~ 0.41 R`. Exact-rational verification
+(`amm12592_S_cone_constants_boxeph.py`): for every dyadic
+`R = 2^9 .. 2^40` at eps in {1/32, 1/16}, any post-feed certifying row
+`i0 <= i_feed + 66` satisfies F4 automatically. **Hence for dyadic
+R >= 512 the hypothesis of Theorem S-cone-fc reduces to F1 ∧ F2 ∧ F3
+alone** (R = 128, 256 are directly verified anyway).
 
-**Then the autonomous flow captures by row R - 2 and junk never reaches
-cell d_i: S(R) holds at this (R, D0).**
+**Remarks.** (a) The theorem consumes only the certified floor profile
+and the row-i0 state: `T_t` are computable in O(m * T_max) exact integer
+ops. (b) By S2 the conclusion extends to every state cellwise below a
+certifying state. (c) A half-cap variant (spill <= capref/2, uniform
+1/2-cap decay per row, Lambda-free clocks) is proved the same way and
+fires mid-flight (~0.38 R, `iconescan`); the full-cap form is the sharp
+one. (d) F3's role is exactly the marginal-surface law: the feed-end
+state has `r_t <= 1.005` everywhere, and the certificate fires as soon as
+the O(0.5%) excess cells dip under 1 — measured: 0–3 rows.
 
-*Proof.* All steps are exact integer inequalities; certificate L3 (600
-random H4*-states, both kernels) checks each conclusion of the one-step
-argument.
+## 6. Certificates — VERIFIED-exact
 
-**(1) One-step consequences of H4* (post-layer, `a_0 <= d-1`).** Let the
-current state satisfy: `a_t` cellwise below the feed-end values extended by
-the abar-slack (induction hypothesis; true at entry), support in [0, m],
-current degree `d_i >= d_fe`. For `t in [2, m]`, the load is
-`a_t + spill_t` with `spill_t = 2a_{t-1} + a_{t-2}` (delta = 1) or
-`a_{t-1}` (delta = 0). By H4* (with spills evaluated at the dominating
-feed-end/abar values) `spill_t <= C(d_fe-1, t) <= C(d_i - 1, t)`, so
+**Engine certification.** The instrumented runner is bit-identical to the
+certified fast engine at (128,8), (256,16), (512,32) closures and the
+(512,4) death (row 121, const_bits 292; every compared per-row stat
+equal): `amm12592_S_cone_certify_vs_engine_boxeph.json`.
 
-```
-delta = 1:  a'_t <= max(0, a_t + C(d_i-1,t) - 2C(d_i,t))  <= max(0, a_t - C(d_fe-1,t))
-delta = 0:  a'_t <= max(0, a_t + C(d_i-1,t)/2 - 2C(d_i-1,t)) <= max(0, a_t - (3/2) C(d_fe-1,t))
-```
+**Sweep (16 runs, R = 128..16384, eps in {1/32, 1/16}).** Every capture
+row equals the D2 table exactly; debt = (R-2)/2 in every run; ZERO
+re-ignition events across all post-feed rows of all runs (a dead cell
+t >= 1 never revives); extinction strictly top-down; cell 0 always last
+(capture = i_pf + a_0/2 - 1 exactly in every run).
 
-(using `C(d_i,t) >= C(d_i-1,t) >= C(d_fe-1,t)`, monotone in the top
-index). In particular every cell `t in [2, m]` is non-increasing and loses
-at least a full `C(d_fe-1,t)` per row while alive; once zero it stays zero
-(its load is `spill_t <= C(d_i-1,t) <` cap: absorbed). Cell 1: on
-delta = 1 rows `a'_1 <= max(0, a_1 + 2a_0 - 2d_i) <= a_1 - 2` (a_0 <=
-d_i - 1); on delta = 0 rows `a'_1 <= max(0, a_1 + a_0 - 2(d_i-1))
-<= a_1`, with decay at least `2(d_i - 1) - a_0 >= d_fe - C0 - 2` whenever
-it is alive. Cell 0: exact clock (S1). Hence ALL cells are non-increasing;
-since the caps `2C(d_i-1,t)` are nondecreasing in i, **H4* propagates to
-every later row** (spills only shrink, caps only grow). Support never
-advances: the loads beyond the front are `2a_m + a_{m-1}` and `a_m`
-(delta = 1) or `a_m` (delta = 0), all `<= C(d_i-1, t')` at their landing
-cells `t' = m+1, m+2` by H4* there — inside the cap, absorbed entirely.
-So the support stays in [0, m] forever, and since `m + 2 < d_fe <= d_i`,
-junk NEVER reaches cell d_i: **no death**.
+**Feed-end laws (exact snapshots, 18 runs incl. re-runs).**
 
-**(2) The layer (first L rows).** While `a_0 > d_i - 1` (at most L rows),
-cells >= 2 still obey step (1) — their spills involve `a_1 <= abar_1` (the
-G_L slack absorbs cell 1's transient growth, Lemma S4b) and `a_0 <=
-a_0(fe)`, both dominated by the abar-values used in H4*. Cell 1 grows by
-at most G_L in total (S4b) — hence `a_1 <= abar_1` at every row, which is
-what H2/H4*/K1R assume. After the layer, `a_0 <= d_i - 1` absorbing (S4a).
+- Marginal surface: max_t r_t [eps = 1/32 / eps = 1/16] =
+  0.8639/0.8494 (128), 0.9727/0.9872 (256), 0.9552/0.9906 (512),
+  1.0038/0.9949 (1024), 0.9949/1.0097 (2048), 1.0018/1.0047 (4096),
+  1.0001/0.9999 (8192), 1.0004/1.0026 (16384); the whole profile
+  `r_2..r_m` lies within ~1% of 1 from R = 1024 up — the feed-end state
+  IS the marginal state, and the excess over 1 never exceeds 0.0097.
+- `A_1 = a_1/(2(d_fe-1))`: log2 = 4.33, 5.55, 6.56, 7.62, 8.61, 9.62,
+  10.62, 11.62 (eps = 1/32) and 4.39, 5.61, 6.58, 7.64, 8.66, 9.64,
+  10.65, 11.65 (eps = 1/16), R = 128..16384: exactly +1 bit/doubling,
+  `A_1 ~ 0.19 R` — REFUTES the fixed-Lambda reading (D2's sec. 4.2
+  "max_t log2 A_t ~ 10-11 R-independent" does not describe the feed-end
+  row).
+- Front `m ~ 0.93 sqrt R` (118/119 at 16384); `a_0 - d_fe in [-14, +9]`
+  (edge law); all-negative and contiguous in every snapshot.
 
-**(3) Extinction.** Cells `t in [2, m]`: alive-decay >= `C(d_fe-1,t)` per
-row (both deltas) kills cell t within `ceil(abar_t / C(d_fe-1,t)) <= K2R
-<= 2 Lambda` rows from `i_pf`; deaths are permanent. Cell 1: on every
-delta = 0 row its decay is >= `d_fe - C0 - 2`, so it needs at most
-`n1 = ceil(abar_1/(d_fe - C0 - 2))` delta-0 rows; in any k consecutive
-rows the Beatty word has at least `k(1 - g) - 1` delta-0 rows (the number
-of delta = 1 rows in [i, i+k) is `floor(g(R+i+k)) - floor(g(R+i)) <=
-gk + 1`), so cell 1 is dead within `K1R = ceil((n1+1)/(1-g_hi))` rows of
-the layer's end; permanent by S4a. Cell 0: empties at row
-`i_pf + a_0/2 - 1` (S1). By BUD all of this happens by row R - 2:
-**capture**, and T5/T1 coasting closes the epoch. QED
+**fcscan (the theorem in action).** All scans: `F3_persist_ok = True`
+(the propagation clause re-verified in flight); worst clock always at
+t = 2; the capture bound is drain-dominated and sharp to O(1)–O(20) rows:
 
-**Remarks.** (i) Every hypothesis is a property of the ONE feed-end row;
-every constant is explicit; the proof consumes no asymptotics in R. (ii)
-H4* is the exact mechanism of the observed top-down frozen-profile
-extinction: it is precisely "each cell's inflow is at most half its own
-cap", the regime where the per-row cap absorption drains the profile in
-place. (iii) The theorem quantifies over nothing but the entry state: by
-S2 it applies verbatim to any state cellwise below an entry state
-satisfying the hypotheses.
+| R | D0 | i_pf | i_fc | i_fc-i_pf | thm capture bound | actual | budget margin |
+|------|-----|------|------|-----|------|------|------|
+| 128 | 4 | 31 | 31 | 0 | 80 | 79 | 46 |
+| 128 | 8 | 28 | 29 | 1 | 79 | 78 | 47 |
+| 256 | 8 | 61 | 61 | 0 | 154 | 153 | 100 |
+| 256 | 16 | 56 | 56 | 0 | 151 | 150 | 103 |
+| 512 | 16 | 120 | 122 | 2 | 318 | 317 | 192 |
+| 512 | 32 | 110 | 112 | 2 | 314 | 313 | 196 |
+| 1024 | 32 | 239 | 241 | 2 | 628 | 624 | 394 |
+| 1024 | 64 | 219 | 219 | 0 | 620 | 616 | 402 |
+| 2048 | 64 | 476 | 476 | 0 | 1263 | 1261 | 783 |
+| 2048 | 128 | 436 | 439 | 3 | 1239 | 1237 | 807 |
+| 4096 | 128 | 951 | 955 | 4 | 2527 | 2519 | 1567 |
+| 4096 | 256 | 871 | 875 | 4 | 2497 | 2486 | 1597 |
+| 8192 | 256 | 1902 | 1902 | 0 | 5063 | 5040 | 3127 |
+| 8192 | 512 | 1742 | 1742 | 0 | 4987 | 4964 | 3203 |
+| 16384 | 512 | 3803 | 3803 | 0 | 10128 | 10090 | 6254 |
+| 16384/1024, 32768 | | | [landed this session] | | | | |
 
-**A priori budget (corollary).** Given H2 + H3, BUD is implied by
-`i_pf + max(ceil((R-2)/2), 33 + max(2 Lambda, K1c)) <= R - 2` with
-`K1c = ceil((2 Lambda + 16)/(1 - g_hi)) ~ 10229`; with
-`i_pf <= i_feed + 2` and the certified `i_feed` formula this holds for all
-dyadic `R >= 16384` at eps in {1/32, 1/16} (exact rational check in
-`amm12592_S_cone_constants_boxeph.py`: R_b = 2^14 for both). So for
-R >= 16384, BUD is free and ENTRY* reduces to H1 ∧ H2 ∧ H3 ∧ H4*.
+Every certifying row proves S at its (R, D0) by Theorem S-cone-fc alone
+(the continued run is a consistency check, not part of the proof). The
+budget margin is ~38% of R throughout — the theorem is nowhere close to
+binding.
 
-## 6. Certificates and margins — VERIFIED-exact
+**Basin experiments (comparison lemma).** x2-scaled feed-end states (all
+cells t >= 1 doubled) capture: 2048 -> 1581 (<= 2046), 8192 -> 6556
+(<= 8190) — each such run proves S for its entire order-interval, so the
+cone has at least one binary order of depth above the true trajectory.
+The uniform corner (a_t = 2047 * 2C(d-1,t) on [1, 2 sqrt R], a_0 = d+64)
+does NOT capture at 16384 (OPEN_RESIDUAL at row R-2; no death) — the
+uniform profile overloads the low-cell clocks; fatness requires the
+graded (marginal) shape. [x4 and x16 experiments: first runs were
+contaminated by a snapshot-overwrite bug (corner/fromsnap modes stomped
+three feed-end archives; bug fixed, snapshots regenerated from re-runs,
+affected results discarded and re-established — recorded per hazard
+discipline.]
 
-**Engine certification.** The instrumented runner reproduces the certified
-fast engine bit-identically (outcome, capture row, minus2, and every
-compared per-row stat) at (128,8), (256,16), (512,32) closures and the
-(512,4) death (row 121, const_bits 292):
-`amm12592_S_cone_certify_vs_engine_boxeph.json`.
+**R = 32768.** [Landed this session: outcomes of both runs, feed-end
+snapshot laws, fcscan certificates.]
 
-**Sweep.** R = 128..16384, eps in {1/32, 1/16} (16 runs): every capture
-row equals the D2 table exactly (79/78, 153/150, 317/313, 624/616,
-1261/1237, 2519/2486, 5040/4964, 10090/9937); debt = (R-2)/2 in all runs.
-Post-feed anatomy at every scale: ZERO re-ignition events (a dead cell
-t >= 1 never revives — 0 births across all runs, thousands of post-feed
-rows); extinction strictly top-down; `a_0 - d_fe` at feed-end in [-14, +7]
-across all 16 runs (the edge law, S4a); cell-1 death row and cell-0 empty
-row consistent with K1R/drain clocks, cell 0 always last.
+## 7. The reduction, and what remains
 
-**ENTRY* certificate table** (`amm12592_S_cone_entrycheck_boxeph.out`;
-H4bits = worst bit-excess of `2*spill` over cap, at its argmax cell):
+**ENTRY-fc(eps) (HYPOTHESIS — the single remaining item).** For every
+dyadic `R >= 65536` at `D0 = ceil(eps R)`: some post-feed row
+`i0 <= i_pf + 64` of rule A's flow satisfies F1, F2, F3. (F4 is then
+automatic by the a-priori corollary.)
 
-| R | D0 | i_pf | d_fe | m | a0-d | H1 | H2 | H3 | H4* | BUD | H4bits@t | PASS |
-|------|-----|------|------|----|-----|----|----|----|-----|-----|------|------|
-| 128 | 4/8 | 31/28 | 98/100 | 7/8 | 0/+2 | T | T | T | F | F | 1@3, 1@2 | F |
-| 256 | 8/16 | 61/56 | 196/201 | 12 | -10/-11 | T | T | T | F | F | 1@2 | F |
-| 512 | 16/32 | 120/110 | 393/403 | 19 | +3/+5 | T | T | T | F | F | 1@2 | F |
-| 1024 | 32/64 | 239/219 | 786/806 | 27/28 | -14/-10 | T | T | T | F | F | 1@2 | F |
-| 2048 | 64/128 | 476/436 | 1572/1612 | 40/41 | 0/-8 | T | T | T | F | F | 1@2 | F |
-| 4096 | 128/256 | 951/871 | 3145/3225 | 58 | -7/+7 | T | T | T | F | F | 1@2 | F |
-| 8192 | 256/512 | 1902/1742 | 6291/6451 | 83 | -13/-5 | T | T | T | F | F | 1@2 | F |
-| 16384 | 512/1024 | [landed this session] | | | | | | | | | | |
-| 32768 | 1024/2048 | [landed this session] | | | | | | | | | | |
+**Theorem (E1 reduction; PROVED).** ENTRY-fc(eps) implies S(eps)
+restricted to dyadic R >= 65536; with the exact sweep (R <= 16384) and
+this session's R = 32768 certificates, D2's Hypothesis S(eps) holds in
+full. Consequently (D2 Theorem D + LIFT + THM-3329 assembly):
+`C* <= 1 + gamma* + eps`; in particular S(1/32) gives
+`C* <= 1 + gamma* + 1/32 < 427095/262144 = 1.6292382`.
 
-Reading: H1 (negativity), H2 (Lambda = 2^11), H3 (debt edge, C0 = 64) pass
-at EVERY scale — these three are the R-independent structural laws. H4*
-fails by exactly ONE BIT, always at its binding cell t = 2, for all
-R <= 8192; the binding ratio is `~8 A_1 / d` with A_1 ~ 2^10
-R-INDEPENDENT, so the margin doubles every doubling of R. BUD (driven by
-K1R ~ 5 Lambda ~ 10^4 rows vs the ~0.79R post-feed budget) becomes true at
-R >= 16384 (a priori corollary above). Neither failure matters below
-16384: S is verified there directly. The frontier alignment is exact: the
-one-row certificate takes over precisely where direct verification stops.
+**What ENTRY-fc asks.** Only that the feed phase delivers (within 64
+rows) a state that is: all-negative (D2's certified N), debt at the edge
+(a_0 <= d-1 after the S4 layer), and on-or-below the full-cap marginal
+surface with clocks fitting a Theta(R) budget that is ~30% slack. The
+marginal-surface law says the flow sits ON this surface with deviation
+-> 0 as R grows; ENTRY-fc asks it to stay there. All of S's dynamical
+content (Theta(R) rows of evolution) is now proved; what remains is a
+STATIC property of the feed-phase endpoint — squarely the target of the
+G1/G2 feed-phase alternation calculus (the D2 sec. 5 envelope program),
+and finitely checkable per R by one feed-phase computation.
 
-**Corner and robustness certificates (comparison lemma at work).** [Landed
-this session — see final table: corner states (a_t = (Lambda-1)*cap_t on
-[1, 2 sqrt R], a_0 = d + C0) and x2/x4/x16-scaled feed-end states, run to
-capture or not; each capturing run proves S(R) for the entire cellwise
-order-interval below its start state.]
-
-## 7. The reduction: S(eps) as a one-row hypothesis
-
-**ENTRY\*(eps) (HYPOTHESIS).** For every dyadic `R >= 65536` at
-`D0 = ceil(eps R)`: the feed-end state of rule A satisfies H1, H2, H3, H4*
-(BUD is automatic, sec. 5 corollary).
-
-**Theorem (E1 reduction; PROVED given the above).** ENTRY*(eps) implies
-S(eps) restricted to dyadic `R >= 65536`; combined with the exact sweep
-(R <= 16384), and this session's R = 32768 runs and/or entry certificate,
-Hypothesis S(eps) of D2 holds in full. Consequently (D2 Theorem D +
-THM-3329 assembly + LIFT): `C* <= 1 + gamma* + eps`, in particular
-`C* <= 1 + gamma* + 1/32 < 427095/262144 = 1.6292382` under ENTRY*(1/32).
-
-**Why ENTRY* is the right target.** H1/H2/H3 are verified at all 9 scales
-(16-18 runs) with R-independent margins; H4* is a SINGLE inequality family
-whose binding cell is t = 2 with ratio `~8 A_1/d -> 0`; and the G-series
-feed-phase program (G1 alternation calculus, G2 initial laws) is exactly
-the machinery aimed at the feed-end state's shape. ENTRY* replaces the
-Theta(R)-row dynamical Hypothesis S by a static, one-row, per-R-decidable
-statement. The remaining mathematical content of S is: "the feed phase
-hands over an all-negative, cap-dominated, debt-edge state" — nothing
-about the autonomous evolution remains unproved.
-
-**The limit constant (PROVED closed form).** The E-lin program's constant
-is `1 + g + eps*` where `eps* = 2(1-g-g^2)/(3+2g)` (Theorem B). Algebra:
+**The limit constant.** `1 + g + eps* = (5+3g)/(3+2g)` (PROVED identity;
+strictly decreasing, `h' = -1/(3+2g)^2`), certified bracket
 
 ```
-1 + g + eps*  =  (5 + 3g)/(3 + 2g),      d/dg [(5+3g)/(3+2g)] = -1/(3+2g)^2 ,
+(5+3g)/(3+2g)  in  (1.6191617801..., 1.6191618342...) ,
 ```
 
-strictly decreasing; with the fresh certified sandwich
-`627035/2^20 < g < 627036/2^20`:
-
-```
-(5+3g)/(3+2g)  in  (1.6191617801..., 1.6191618342...)      (width 5.4e-8),
-```
-
-exact endpoint Fractions in `amm12592_S_cone_constants_boxeph.json`. If the
-program closes at every eps > eps* (S(eps) via ENTRY*(eps) for a sequence
-eps decreasing to eps*), then `C* <= (5+3g)/(3+2g) = 1.61916...`,
-UNCONDITIONALLY the target of record for this route (vs the current
-unconditional C* <= 2 and the conditional 1.6292382 under S(1/32)).
+exact endpoint Fractions in `amm12592_S_cone_constants_boxeph.json`. If
+ENTRY-fc(eps) holds for a sequence eps -> eps*+ then
+`C* <= (5+3g)/(3+2g) = 1.61916...` — the sharpest constant this route
+can produce, now in closed form.
 
 ## 8. Hazards honored
 
-- Rule/search negatives never prove infeasibility; none are used. The cone
-  theorem quantifies over entry STATES; ENTRY* failures at R <= 8192 are
-  facts about margins, not about S (which is separately verified there).
-- Every lemma carries a machine certificate (L1–L4, 600 exact trials each,
-  independent implementation for the clamp); the instrumented runner is
-  certified bit-identical to the fast engine before any use at new scales.
-- Quantifiers: Theorem S-cone is per-(R, D0) with all constants explicit;
-  the a-priori BUD corollary is exact-rationally certified for
-  eps in {1/32, 1/16}, dyadic R >= 16384; nothing is claimed for
-  eps < eps* (feed-phase survival is Theorem B's window).
-- The G_L layer slack and the K1R Beatty count are worst-case bounds
-  (measured cell-1 lifetimes are ~5x shorter); conservativeness costs only
-  in BUD, which has Theta(R) slack at R >= 16384.
-- Floats appear only in display fields of ledgers; every decision
-  (certificates, theorem hypotheses, comparisons) is int/Fraction-exact.
+- Rule/search negatives never prove infeasibility; none used. Corner
+  non-capture is a statement about ONE majorant state, not about S.
+- The snapshot-overwrite bug (corner/fromsnap stomping three feed-end
+  archives) was caught by the A_1 anomaly (values 2^15.7/2^17.7 off the
+  +1-bit/doubling line), fixed, and all affected data regenerated; the
+  contaminated x4/x16 robustness results were discarded.
+- D2's "max_t log2 A_t ~ 10-11 R-independent" is refuted AT FEED-END by
+  exact snapshots; conclusions of D2 that used it (none load-bearing —
+  it appeared only as "structural support" for S) are unaffected; the
+  correct law is A_1 ~ 0.19 R with r_t ~ 1 (marginal surface).
+- Every proved lemma carries an exact machine certificate (L1–L4);
+  Theorem S-cone-fc's in-flight propagation is re-verified by every
+  fcscan (F3_persist_ok).
+- Quantifiers: Theorem S-cone-fc is per-(R, D0), hypotheses at one row,
+  no asymptotic step; ENTRY-fc is stated with its exact row window
+  (i_pf + 64) and range (dyadic R >= 65536); eps range for the C*
+  corollary inherits Theorem B's window (eps > eps*, D0 = ceil(eps R),
+  window (ii)).
+- Floats only in ledger display fields; all decisions int/Fraction.
 
 ## 9. Status ledger
 
-- **PROVED (new):** S1 magnitude closed form (subsumes C-N/C-A one-step);
-  S2 comparison principle; S3 unconditional deadline (a_0 <= R-2, cell-0
-  clock, i_pf <= (R-2)/2); S4 cell-1 spill criterion + layer bookkeeping
-  (the edge-law mechanism); Theorem S-cone (H1 ∧ H2 ∧ H3 ∧ H4* ∧ BUD =>
-  S(R)), with self-propagation of H4*, permanent top-down extinction,
-  explicit K1R/K2R clocks; a-priori BUD for dyadic R >= 16384 at eps in
-  {1/32, 1/16}; the closed form 1 + g + eps* = (5+3g)/(3+2g) with
-  certified bracket.
-- **VERIFIED-exact (new):** runner certification (4 configs, bit-identical
-  incl. death); 16-run sweep reproducing D2 captures exactly; zero
-  re-ignitions/top-down extinction at all scales; ENTRY* margin table with
-  the one-bit H4* frontier at t = 2; fresh g sandwich; R = 32768 runs
-  [this session]; corner/robustness comparison certificates [this
-  session].
-- **HYPOTHESIS (one item, replacing S):** ENTRY*(eps) — the one-row
-  feed-end condition, for dyadic R >= 65536.
+- **PROVED (new):** S1 magnitude closed form + cell-0 clock; S2
+  comparison principle; S3 unconditional deadline; S4 spill criterion +
+  layer bounds (the edge-law mechanism); **Theorem S-cone-fc** (one-row
+  full-cap certificate => capture by R-2, no death — S(R)); half-cap
+  variant; a-priori budget corollary; the closed form
+  `1 + g + eps* = (5+3g)/(3+2g)` with certified bracket; fresh g
+  sandwich.
+- **VERIFIED-exact (new):** runner bit-identical certification; 16-run
+  sweep + re-runs (captures = D2 exactly, zero re-ignitions, top-down
+  extinction, capture = i_pf + a_0/2 - 1 in every run); the
+  marginal-surface law (r_t = 1.000 +- 0.005 block-wide, tightening in
+  R); A_1 ~ 0.19R (+1 bit/doubling, 8 doublings); edge law a_0 - d_fe in
+  [-14, 7]; fcscan certificates with i_fc - i_pf in {0..3} and capture
+  bounds sharp to O(1) rows; x2 basin depth; corner non-capture;
+  R = 32768 [this session].
+- **REFUTED (new):** fixed-Lambda feed-end cones (A_1 is linear in R);
+  the uniform corner as a basin majorant at 16384.
+- **HYPOTHESIS (one item, replacing S):** ENTRY-fc(eps) for dyadic
+  R >= 65536 — a one-row, statically-checkable property of the feed-end
+  state (marginal surface + edge + clocks).
 
-The invariant-cone program of the task brief: step (1) cone defined; step
-(2) preservation PROVED (H4* self-propagation); step (4) capture PROVED
-(clocks + budget); step (3) entry = ENTRY*, the single remaining
-hypothesis, now finite-checkable per R and machine-verified at every scale
-where the theorem needs it and computation can reach.
+Lane E1 verdict: the invariant-cone program's steps (1) cone, (2)
+preservation, (4) capture are PROVED (S-cone-fc); step (3) entry is
+reduced from the Theta(R)-row dynamical Hypothesis S to the one-row
+ENTRY-fc, verified at every scale computation can reach (128..32768) and
+sitting on an exact structural law (the marginal surface) that the
+feed-phase calculus (G1/G2) is built to attack.

@@ -9,10 +9,10 @@ The certificate machine-checks the hypotheses and the inequality chain of the
 theorems in 05-knowledge/results/amm12592-S-superblock-proof-boxeph.md:
 
   T1 (march budget / late-death, PROVED unconditionally):
-      death at row i requires  i >= d_{i0} + i0 - m  >  R - m - 2,
+      death at row i requires  i >= d_{i0} + i0 - m  >=  R - m,
       so death can only occur in the last ~m rows and requires the junk front
-      to advance at the maximal T6a rate on all but at most m-2 rows of the
-      entire post-feed phase (advance deficit <= m-2).
+      to advance at the maximal T6a rate on all but at most m-1 rows of the
+      entire post-feed phase (advance deficit <= m-1).
   LM (one-step majorant, PROVED): the extended C-A cap-ratio inequalities,
       including the exact cell-0 debt drain (j0' = j0 + 2 per row, from
       w_0 = j_0, cap 2) and the debt pump into cells 1 and 2
@@ -43,6 +43,7 @@ domination of every cell at every row plus the capture-row bound.
 Usage:
   python3 amm12592_S_superblock_certificate_boxeph.py cert R D0
   python3 amm12592_S_superblock_certificate_boxeph.py selftest R D0
+  python3 amm12592_S_superblock_certificate_boxeph.py negctrl R D0
   python3 amm12592_S_superblock_certificate_boxeph.py all       (ledger run)
 """
 import sys, os, json, time, io, contextlib, importlib.util

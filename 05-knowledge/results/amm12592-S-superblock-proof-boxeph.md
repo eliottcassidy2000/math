@@ -49,11 +49,12 @@ unproved link in the chain `C* <= 1 + gamma* + eps`. This lane:
    **S holds at that (R, D0)**.
 3. **Certificates (VERIFIED-exact).** The certificate PASSES at every
    verified feed-end state (R = 128..16384 where extracted, eps = 1/32 and
-   1/16; see table) and — new territory — at **R = 32768** if/where the
-   feed-end extraction lands (sec. 6; pending states noted honestly).
-   In every PASS the certificate also PREDICTS the capture row exactly
-   (`i0 + |j_0(i0)|/2`), matching all known sweep captures — the capture
-   clock of the linear-slack closures is identified.
+   1/16: 16/16 — the FULL original S-verified range; see table) and — new
+   territory — at **R = 32768** if/where the feed-end extraction lands
+   (sec. 6; pending states noted honestly). In every PASS the certificate
+   also PREDICTS the capture row exactly (`i0 + |j_0(i0)|/2`), matching
+   all 16 known sweep captures — the capture clock of the linear-slack
+   closures is identified.
 4. **Corollary SB (super-block impossibility; PROVED).** Under the
    certificate, no super block (D1 sec. 3b sense: same-sign run whose min
    |value| exceeds the remaining cap tail beyond the front) can EVER form in
@@ -128,9 +129,11 @@ sum_{i=i0}^{i_D - 1} def_i  =  i_D - (d_{i0} + i0 - m)  <=  (R-1) - (R-m) = m - 
 
 **Corollary 1a (freeze prefix kills death).** A row whose front does not
 advance contributes `>= 1` to the deficit. If the C-F freeze conditions hold
-at the first `m` autonomous transitions, every death row `i_D <= R - 1`
-would need deficit `>= m > m - 1` — contradiction. So death is impossible
-at every row, REGARDLESS of what the flow does after those m rows. The
+at the first `m` autonomous transitions (all of which precede any possible
+death row, since `i0 + m < R - m` with Theta(R) margin at linear slack),
+every death row `i_D <= R - 1` would need deficit `>= m > m - 1` —
+contradiction. So death is impossible at every row, REGARDLESS of what the
+flow does after those m rows. The
 no-death half of S is an O(sqrt R)-row local statement (m ~ 0.93 sqrt R
 measured). *(The certificate below verifies freeze on ALL rows anyway,
 because the capture half needs the longer horizon.)*
@@ -159,6 +162,9 @@ has no cells below 0; no feed), cap 2, so `j'_0 = j_0 + 2` if `j_0 <= -2`,
 else `j'_0 = 0`: the debt drains at EXACTLY 2 per row, independently of all
 other cells, and never revives. Hence `|j_0(i0+k)| = max(0, |j_0(i0)| - 2k)`
 and the debt is empty after exactly `|j_0(i0)| / 2` rows (evenness by T3).
+This DISCHARGES the C-D concern of the E-lin note ("what must be proved is
+that the drain actually runs — cell 0 stays saturated"): post-feed, cell-0
+saturation is automatic, not a hypothesis.
 
 **(M1) delta = 1, t >= 3.** `|w_t| <= |j_t| + 2|j_{t-1}| + |j_{t-2}|` and
 `|j'_t| = max(0, |w_t| - 2C(d,t))`; dividing by `2C(d,t)` and using the
@@ -243,9 +249,9 @@ capture = i0 + |j_0(i0)| / 2
 ```
 
 because the debt drains at exactly 2/row (M0) and is then the last junk
-standing. This reproduces every known sweep capture row (sec. 6, 13/13 so
-far: 79, 78, 153, 150, 317, 313, 624, 616, 1261, 1237, 2519, 2486, 5040 —
-all exact), identifying D2's "capture ~ 0.61R" law as
+standing. This reproduces every known sweep capture row (sec. 6, 16/16:
+79, 78, 153, 150, 317, 313, 624, 616, 1261, 1237, 2519, 2486, 5040, 4964,
+10090, 9937 — all exact), identifying D2's "capture ~ 0.61R" law as
 `i0 + |j_0|/2 ~ 0.21R + 0.79R/2`.
 
 **Corollary SB (no super block post-feed).** Under the certificate the junk
@@ -265,11 +271,14 @@ Hostile self-check first: `selftest` replays the TRUE autonomous flow
 (independent in-script implementation of the clamp) from the extracted state
 and verifies cell-by-cell, row-by-row: sign, support, the exact drain, and
 `|j_t| * 2^96 <= N_t * 2C(d-1,t)` (majorant domination), plus the capture
-bound. **PASS at (128,4), (128,8), (256,8), (256,16), (512,16), (512,32),
-(1024,32) — domination held on every row of every run.** The extractor
-regresses bit-exactly against the 16 published D2 feed-end records
-(all scalar fields + the full `A_bits_profile`, which is
-`bitlen|j_t| - bitlen(2C(d-1,t))`).
+bound. **PASS at all 13 configs run — both D0 at each of R = 128, 256,
+512, 1024, 2048, 4096, plus (8192,512): domination held on every row of
+every run (up to 3223 rows).** Falsifiability (`negctrl`): corrupting the
+(2048,128) state by blowing the front cell up 2^60 makes the certificate
+FAIL (freeze), and flipping an interior sign makes it FAIL (hypothesis
+check) — 2/2 negative controls caught. The extractor regresses bit-exactly
+against the 16 published D2 feed-end records (all scalar fields + the full
+`A_bits_profile`, which is `bitlen|j_t| - bitlen(2C(d-1,t))`).
 
 Certificate ledger (all exact; "slack" = min over rows, in bits, of the
 freeze inequalities' headroom; "SB margin" = (middle-binomial tail bits) -
@@ -291,14 +300,16 @@ freeze inequalities' headroom; "SB margin" = (middle-binomial tail bits) -
 | 4096 | 256 | 871 | 3226 | 58 | 3230 (+4) | 1267 | 1615 | 3223 | 2486 | 2486 EXACT | 12/6/5 | 2780 |
 | 8192 | 256 | 1902 | 6292 | 81 | 6276 (-16) | 2475 | 3138 | 6288 | 5040 | 5040 EXACT | 13/6/5 | 5632 |
 | 8192 | 512 | 1741 | 6451 | 83 | 6446 (-5) | 2538 | 3223 | 6449 | 4964 | 4964 EXACT | 14/6/- | 5777 |
+| 16384 | 512 | 3802 | 12582 | 118 | 12576 (-6) | 4958 | 6288 | 12580 | 10090 | 10090 EXACT | 18/10/- | 11573 |
 | 16384 | 1024 | 3482 | 12903 | 119 | 12910 (+7) | 5082 | 6455 | 12900 | 9937 | 9937 EXACT | 13/6/- | 11878 |
 
 (Ledger JSON has full detail. Pending at write time, appended on landing:
-(16384,512) extraction in flight; and the NEW scale (32768,1024),
-(32768,2048) — where a PASS proves S at R = 32768, one full doubling beyond
-the previously verified frontier, from a feed-only computation.) Readings:
+the NEW scale (32768,1024), (32768,2048) — where a PASS proves S at
+R = 32768, one full doubling beyond the previously verified frontier, from
+a feed-only computation.) Readings:
 
-- 15/15 PASS so far; capture rows predicted EXACTLY at all 15 (Corollary
+- **16/16 PASS — every scale of the original S-verification range is now
+  certified**; capture rows predicted EXACTLY at all 16 (Corollary
   C-CLOCK) — the certificate is not just sound but sharp on the clock.
 - Freeze slacks are the tight quantity (3–16 bits) but show no downward
   trend across six doublings — consistent with the R-independent feed-end
@@ -309,7 +320,7 @@ the previously verified frontier, from a feed-only computation.) Readings:
   (slightly wider than the +-11 of the 16 original records; the certificate
   does not use the edge law — it takes |j0| exactly — so this is
   informational only).
-- SB margins grow linearly in R (~0.66 bits per unit R): super blocks are
+- SB margins grow linearly in R (~0.7 bits per unit R): super blocks are
   not merely absent, they are impossible by thousands of bits.
 
 ## 7. Proposition A (uniform-envelope closure; explicit constants) — PROVED
@@ -387,7 +398,8 @@ about epoch feasibility — only that this majorant is too lossy there.
   · 2^{-...}), via FS2) envelope suffices; the envelope itself at
   unverified R remains the open FS.
 - "(3) conclude S": concluded per-epoch wherever the certificate passes
-  (13+ scales incl. — pending — R = 32768), and reduced to FS for all
+  (16 scales, the full original S range; R = 32768 pending), and reduced
+  to FS for all
   larger R; NOT claimed unconditionally.
 - EXTRA (eps below eps*): not attempted; note that Theorem 1 + the
   certificate machinery apply verbatim to any feed-end state, so a
@@ -423,13 +435,16 @@ about epoch feasibility — only that this majorant is too lossy there.
   i0 + |j0|/2); Corollary SB (post-feed super-block impossibility);
   Proposition A (static FS1–FS3 => S, explicit constants, R >= ~2^28 with
   the measured envelope).
-- **VERIFIED-exact (new):** 13/13 certificates PASS (R = 128..8192 span,
-  eps = 1/32 and 1/16 where extracted) with EXACT capture-row prediction
-  13/13; hostile domination selftest 7/7 configs; extractor regression vs
-  all published feed-end records; SB margins 58..5632 bits growing
-  linearly; freeze slacks 3..16 bits with no downward trend. Pending
-  extraction at write time: (8192,512), (16384,512), (16384,1024),
-  (32768,1024), (32768,2048) — results appended below when landed.
+- **VERIFIED-exact (new):** 16/16 certificates PASS (all of dyadic
+  R = 128..16384 at eps = 1/32 and 1/16 — the full original S-verified
+  range) with EXACT capture-row prediction 16/16; hostile domination
+  selftest 13/13 configs (through (8192,512), 3223 rows); negative
+  controls 2/2 caught; Proposition-A arithmetic grid check ALL PASS
+  (13 degrees, extremal B; first-draft P7 corrected); extractor regression
+  vs all published feed-end records; SB margins 58..11878 bits growing
+  linearly; freeze slacks 3..18 bits with no downward trend. Pending
+  extraction at write time: (32768,1024), (32768,2048) — results appended
+  below when landed.
 - **OPEN:** FS(R) for unverified R (the feed-phase envelope) — the sole
   remaining content of Hypothesis S, hence of
   `C* <= 1 + gamma* + eps` beyond the certified scales.
