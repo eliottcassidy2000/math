@@ -100,7 +100,10 @@ def extract_feedend(R, D0, outpath=None, flush_every=256):
             # first autonomous row reached; feed can never fire again because
             # d_i + i is strictly increasing (certified below).
             i0 = i
-            assert d + i > R, ("autonomy check failed", i, d)
+            # d_i + i is strictly increasing, so d_{i'} + i' >= R + 1 for all
+            # i' > i: neither feed branch (d+i <= R-1; d+i <= R with delta=1)
+            # can ever fire again.
+            assert d + i >= R, ("autonomy check failed", i, d)
             break
         if i % flush_every == 0:
             prog.append({"i": i, "d": d, "front": (max(j) if j else None),
