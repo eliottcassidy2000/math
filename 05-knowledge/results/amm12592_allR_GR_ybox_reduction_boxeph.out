@@ -1,0 +1,29 @@
+==============================================================================
+(A) S3 recompute: coefficients of 2G_R = q^{R-1} - E_{R-1}
+==============================================================================
+  [PASS] [x^0]2G_R = 2 and [x^j]2G_R = (-1)^j C(R-1,j) - 1 (j>=1), R=2..1024
+  [PASS] 2G_R even coefficientwise iff R = 2^t (R=2..1024)  -- [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
+
+==============================================================================
+(B) Y-BOX LEMMA: Delta=(p-q)+2*gamma admissible at d  <=>  cells y of gamma
+    at degree d satisfy -C(d-1,k) <= y_k <= C(d-1,k-1).  Parity vanishes.
+==============================================================================
+  [PASS] ballot parity b_k == C(d,k) mod 2 and Pascal split, d=1..199
+  [PASS] all admissible Delta at d=1..5 map to in-box y (exhaustive, 18204 blocks)
+  [PASS] all in-box y at d=1..5 map to admissible Delta (exhaustive, 18204 cells arrays)
+  [PASS] random d<=40: in-box y admissible AND out-of-box y inadmissible (4000+4000)
+
+==============================================================================
+(C) corners: y = -C(d-1,k) is gamma=-p (Delta=-1); y = +C(d-1,k-1) is gamma=q (Delta=+1)
+==============================================================================
+  [PASS] corners are -p / +q (Delta = -1 / +1), d = 1..59
+
+==============================================================================
+(D) boundary cells: y_0 = gamma(1) in {-1,0}, y_d = gamma(0) in {0,1}
+==============================================================================
+  [PASS] y_0 = gamma(1) in {-1,0} and y_d = gamma(0) in {0,1} (random)
+
+==============================================================================
+(E) atom feasibility: eps*p^a*q^b at degree d, cells eps*C(d-a-b,k-b)
+==============================================================================
+  [PASS] cells(p^a q^b) = C(d-a-b,k-b); +feasible iff b>=1, -feasible iff a>=1 (d<=15)  -- []

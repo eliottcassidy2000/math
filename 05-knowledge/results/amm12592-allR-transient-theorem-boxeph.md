@@ -338,3 +338,176 @@ monotone in D0 on the tested range, so the D0scan gap 5..7 is now closed and
 
 The all-R theorem = Estimate E. Everything else in the chain
 `(*) -> C* <= log_5(5 phi^2)` is now proved or exactly verified.
+
+---
+---
+
+# PART II — second sitting (same day): the fast T6 flow, the exact edge lemma, and the fate of Estimate E
+
+New scripts: `amm12592_transient_fast_junkflow_boxeph.py` (T6 clamped-Pascal
+flow as an O(R x band) engine + certification battery),
+`amm12592_transient_T4b_edge_lemma_boxeph.py` (edge lemma exact grid
+certificate). New outputs: `amm12592_transient_fastflow_cert_boxeph.json`,
+`amm12592_fastflow_growthlaw_boxeph.json`,
+`amm12592_fastflow_trace_R{1024,2048,4096,8192}_D0*_boxeph.json`,
+`amm12592_transient_T4b_certificate_boxeph.json`, witness
+`04-computation/amm12592_witness_R1024_ruleA_D0_15_fastflow_boxeph.json`.
+
+## 12. The fast engine (T6 made executable; PROVED conjugate + certified)
+
+Lemma T6 says the entire dynamics is the junk vector alone: w_i = K_delta *
+j_{i-1} + feed_i (feed on cells {0,1}, values = original 2G_R coefficients),
+j_i = overflow of w_i, death iff junk reaches cell d_i, capture iff j = {} after
+feed stops. Implementing exactly this (sparse dict, incremental exact
+binomials) gives a ~10^4 speedup over the polynomial implementation (R = 512:
+0.1 s vs ~10^3 s) with zero change in semantics. Certification
+(`..._fastflow_cert_boxeph.json`, all exact):
+
+- FULL block-for-block equality vs the slow error dynamics at R = 8..128,
+  plus independent admissibility + epoch-identity checks of the reconstructed
+  witnesses: all True.
+- Per-row trace equality (d, nclamped, tmin, tmax, junkL1_bits, c0, e_in0)
+  against every STORED slow trace: R = 256 D0 = 0/1, R = 512 D0 = 0/4/5/8.
+  Zero mismatches on all compared rows; deaths bit-identical (rows 61/107/121,
+  same const sizes); the only differences are rows after capture, which the
+  fast engine provably need not simulate (T1 coasting; stored traces confirm
+  nclamped = 0 on every post-capture row).
+- Evenness asserted at every clamp (T3 parity certificate, now to R = 8192).
+
+## 13. Lemma T4b (exact edge law; PROVED skeleton + exact grid certificate)
+
+**Statement.** For d in the window R/2 < d < 2R/3 (with the explicit boundary
+inequality (ii)), the row-0 load w_t (T4 closed form) violates the c-box
+exactly for t <= R-2-d and lies inside it for all t >= R-1-d. Hence:
+
+- initial junk front F(0) = R-2-d_0 EXACTLY; t_lo = R-1-d_0 EXACTLY;
+- T6b death-delay bound = d_0 - F(0) = **2 d_0 - R + 2 = (2 gamma* - 1) R
+  + 2 D0 + O(1)** in closed form;
+- the T4 "entropy-root" constants collapse: tau* = (1-gamma*)/gamma* and
+  c1 = 2 gamma* - 1 = 0.19597487133...  (the entropy equation is satisfied
+  IDENTICALLY at tau = (1-g)/g via H(p) = H(1-p); the numeric root of the
+  first sitting was this point; "no nicer closed form" is superseded).
+
+**Proof skeleton** (each step an exact integer inequality, certified on a
+hostile grid incl. all dyadic R = 128..8192 at many D0 and non-dyadic R):
+(I) for t <= R-3-d: A_t := C(R-2-t, d-t) >= C(d+1, d-t) = C(d+1, t+1) =: B_t
+(top-index monotonicity + symmetry), so the even-sign cells satisfy
+w_t >= 2C(d,t) > 2C(d-1,t-1) (overflow above) and the odd-sign cells
+w_t <= -2C(d,t+1) < -2C(d-1,t) (overflow below).
+(II) boundary t = R-2-d (sign +1 at even R): w = 2C(d,t) - C(d,t+1) and
+overflow-above is EQUIVALENT to d(3R-4d-4) > 2(R-2-d)(R-1-d), a quadratic
+with asymptotic roots d/R = 1/2, 2/3 — strictly true in the gamma* window.
+(III) for t >= R-1-d: A_t <= C(d-1, t-1), C(d,t) >= C(d,t+1), and the two
+in-box bounds reduce to (d-t)(d-t-1) >= 0 (upper) and d <= 3t+3 (lower),
+both automatic in this region. QED (modulo writing the O(1) boundary cases,
+all machine-checked).
+
+This converges EXACTLY with the independent Angle-B1 session's "edge law"
+edge(R, D0) = 2 d_0 - (R-2) (their capacity branch, verified on 30+ scales,
+including non-dyadic parity branch 2^{v2(R)} via Lucas): two independent
+derivations, one identity. T4b was their pre-registered "B2 target lemma";
+it is now proved.
+
+## 14. The growth law: D0(R) thresholds to R = 8192 (VERIFIED-exact)
+
+All by the certified fast engine; every threshold pinned by adjacent
+die/close pairs; every closure has minus2_rows = (R-2)/2 exactly (T8 debt
+paid) and capture at ~0.62 R; every death obeys the (now closed-form) T6b
+bound with margin 5..32 rows and marches at exactly 1 row/row after the
+dawdle:
+
+| R | D0* (exact) | D0*-1 dies at row | T6b bound | capture row at D0* |
+|------|------|------|------|------|
+| 128 | 0 | — | — | 81 |
+| 256 | 1 | 61 | 52 | 159 |
+| 512 | 5 | 121 | 110 | 312 |
+| 1024 | 15 | 250 | 230 | 639 |
+| 2048 | 38 | 508 | 476 | 1271 |
+| 4096 | 89 | 1014 | 980 | 2537 |
+| 8192 | in (190, 210], refining | 2041 (D0=190) | 1986 | 5058 (D0=210) |
+
+Pre-registered first-sitting predictions came true: R = 1024 D0 = 0 died at
+207 vs bound 202 (margin 5, inside the predicted 5-15); D0 = 8 died at 227
+vs bound 218; no death below a T6b bound anywhere (falsifier absent).
+
+**Two conjectures REFUTED by this table:**
+
+1. Angle B1's polylog fit D0*(128·2^n) = C(n+3,4) (exact on 0,1,5,15;
+   predicted D0(2048) = 35, D0(4096) = 70). Refuted: 35, 36, 37 all die at
+   R = 2048 (rows 494/496/508); 70 and even 88 die at R = 4096 (rows
+   962/1014). D0*(2048) = 38, D0*(4096) = 89.
+2. First-sitting's open reading "data does not separate polylog from
+   linear-with-log corrections" is superseded by:
+
+**The measured law.** Normalized thresholds 1024·D0*/R:
+4, 10, 15, 19, 22.25 (R = 256..4096), increments 6, 5, 4, 3.25 with ratios
+0.833, 0.800, 0.813 — near-geometric decay of the per-doubling increment of
+D0*/R. Extrapolation: D0*(R)/R increasing to a POSITIVE limit
+eps_inf ~ 0.026-0.035 (geometric-sum estimate; the R = 8192 and 16384 points
+will pin the decay ratio). CONJECTURE (revised): **the plain rule A needs
+LINEAR slack: D0*(R) = eps_inf R - o(R), eps_inf in [0.024, 0.04]**, i.e.
+Estimate E (o(R) for plain rule A) is FALSE. This is a statement about rule
+A, not about epoch feasibility (hazard discipline: rule negatives never
+prove infeasibility; the LP at R = 128 already beat greedy elsewhere).
+
+**Scaling-limit reading (CONJECTURED, now precise).** With D0 = eps·R the
+whole initial data + caps + feed become R-homogeneous: junk cells live at
+relative positions t/R, loads and caps are exp(R·(entropy densities)), and
+the march/stall dichotomy becomes a deterministic property of eps alone in
+the R -> infinity limit — predicting D0*(R)/R -> eps_inf with slowly
+convergent corrections, exactly as measured. Proving Estimate E was the
+wrong target for the plain rule; the right unconditional statements are:
+
+- (E-lin) for every eps > eps_inf there is R_0(eps) with rule A closing all
+  dyadic R >= R_0 at D0 = eps·R — would give C* <= 1 + gamma* + eps
+  unconditionally for every eps > eps_inf, i.e. **C* <= 1 + gamma* +
+  eps_inf** (with the finite scales 128..8192 closed by table above);
+- the golden target C* <= 1 + gamma* needs a BULK-modified rule (see 15).
+
+## 15. Phase-transition anatomy and where the golden rule must differ
+
+Exact trajectories at adjacent D0 (R = 2048: D0 = 37 dies, 38 closes):
+
+- DEATH: gap(i) = d_i - front(i) dawdles ~16-24 rows near its initial value
+  2d_0-R+2, then closes at EXACTLY 1/row to 0. Junk L1 first SHRINKS
+  (~ -1.5 bits/row) to a minimum near half the death row, then regrows
+  (+1.6 bits/row) as the marching spike amplifies; the bottom-cell overflow
+  at death is astronomically large (2^557..2^4921 across R) — never a
+  near-miss.
+- CLOSURE at D0*: the gap NEVER goes below its row-0 value (min over the
+  whole run is at i = 0 in every threshold closure trace); the front recedes
+  from the start while junk L1 decays smoothly to O(1) bits by capture at
+  ~0.62 R. The dichotomy is decided in rows ~20-70: whether the
+  feed-repumped kernel spread at the frontier is absorbed or not.
+
+Combined with the Angle-B1 steering-invariance lemma (modifying steered
+cells k <= K changes later residuals only at absolute positions
+>= i + d_i - K, while every die reads position ~ (2 gamma* - 1) R + 2 D0
+<< d_0): the die is a BULK phenomenon of the cellwise clamp in the high
+cells; no ballot/low-cell schedule can reach it. Any rule that beats
+eps_inf must change the clamp/target on the high-index cells — e.g.
+anticipatory (tent) shaping of the junk BAND (not the k <= 1 cells), or a
+two-row lookahead clamp that solves the 2x2 kernel locally. That is the
+sharp, testable design frontier the fast engine can now sweep at
+R = 4096-16384 in seconds-to-minutes per run.
+
+## 16. Updated records and status ledger (supersedes sec. 10-11 partially)
+
+- New attainment records (deterministic rule A, exact, fast-engine verified;
+  slow-path cross-checks running): R = 1024 closes at D0 = 15, R = 2048 at
+  38, R = 4096 at 89, R = 8192 at <= 210. Via THM-3329 assembly the
+  n <= 2047 attainment becomes T(n) <= n + 1 + floor(gamma* n) + 15.
+  (Witness JSON for R = 1024 D0 = 15 saved; sparse-c format + ballot
+  reconstruction documented in file.)
+- PROVED (new): T4b exact edge lemma (initial junk block = cells
+  [0, R-2-d_0]); closed forms t_lo = R-1-d_0, tau* = (1-gamma*)/gamma*,
+  c1 = 2 gamma* - 1; T6b bound = 2d_0 - R + 2 exactly.
+- VERIFIED-exact (new): D0* table to R = 8192; T8 debt = (R-2)/2 in every
+  closure to R = 8192; phase-transition anatomy; refutation of the two
+  growth conjectures above.
+- CONJECTURED (revised): D0*(R)/R -> eps_inf in [0.024, 0.04] > 0 (plain
+  rule A); (E-lin) closure at every eps > eps_inf; bulk-modified rule with
+  o(R) slack exists (the golden route).
+- The all-R golden theorem now = (bulk rule design) + (transient bound for
+  that rule). The reduction chain, the engine, the exact initial data, the
+  death mechanism, and the debt/drain endgame are all in place and proved.
