@@ -1,0 +1,227 @@
+AMM 12592 -- FINAL REFEREE CLOSE-OUT (lane F2).  boxeph, 2026-08-04.
+Script: 04-computation/amm12592_S_final_referee_boxeph.py
+Harvests: amm12592_S_referee_frag_*.json (four-process hostile referee)
+        + amm12592_S_final_referee_frag_{witness4,audit}.json (this session)
+Parent assembled report: 05-knowledge/results/amm12592_S_referee_boxeph.out
+
+TOTAL CHECKS ACROSS ALL FRAGMENTS: 169 PASS, 0 FAIL
+
+  F2:audit                        19 pass  0 fail
+  F2:witness4                     17 pass  0 fail
+  bigcheck                        16 pass  0 fail
+  bigrun_R32768_D01024             0 pass  0 fail
+  bigrun_R32768_D02048             0 pass  0 fail
+  conecert_R16384_D01024           2 pass  0 fail
+  conecert_R16384_D0512            2 pass  0 fail
+  conecert_R32768_D01024           4 pass  0 fail
+  conecert_R32768_D02048           4 pass  0 fail
+  constants                       12 pass  0 fail
+  e3wit                            9 pass  0 fail
+  ledger                           7 pass  0 fail
+  lemmas                           4 pass  0 fail
+  slow                            18 pass  0 fail
+  suite                           50 pass  0 fail
+  window                           5 pass  0 fail
+
+============================================================================
+THIS SESSION'S TWO NEW STAGES (full text)
+============================================================================
+==========================================================================
+STAGE witness4 -- (256, D0=0) desc1 witness: FOURTH implementation
+==========================================================================
+  [PASS] sha256 matches record 5950bd42...  -- 5950bd4287d499221609bfaf (181762 bytes)
+  [PASS] R = 256, D0 = 0  -- 256 0
+  [PASS] witness declares profile floor_gamma_star(R+i)+D0; recomputed fresh per-n (binary search on 5^m <=> phi^(2n))  -- d_0=153 d_255=305
+  [PASS] profile increments in {0,1} (Beatty word)
+  [PASS] main-term closed form: sum_t (C(d-1,t)-C(d-1,t-1)) x^(d-t)(1-x)^t == 2x-1 for ALL 152 distinct degrees
+  [PASS] last-row main term: -sum_t C(d,t) x^(d-t)(1-x)^t == -1  -- d=305
+  [PASS] all 58837 cells admissible: |delta_t| <= C(d_i,t)
+  [PASS] all cells parity delta_t == C(d_i,t) (mod 2)
+  [PASS] transportation point f = (C-delta)/2 integer in [0, C] everywhere  -- boundary-saturated 4973 (8.45%)
+  [PASS] cell count == 58837  -- 58837
+  [PASS] boundary-saturated count == 4973 (E3/prior-referee value)  -- 4973
+  [PASS] EPOCH IDENTITY sum_i x^i Delta_i == (1-x)^(R-1): coefficient-exact (main closed form + sparse corrections; my own poly arithmetic)
+  [PASS] identity at x = 2, definition-level (all 256 rows, every cell)
+  [PASS] identity at x = 3, definition-level (all 256 rows, every cell)
+  [PASS] identity at x = -1, definition-level (all 256 rows, every cell)
+  [PASS] identity at x = 5, definition-level (all 256 rows, every cell)
+  [PASS] identity at x = -7, definition-level (all 256 rows, every cell)
+
+==========================================================================
+STAGE audit -- independent S-cone-fc certificate + evolution + erratum
+==========================================================================
+  [PASS] (2048,128) my fresh profile: d_435 == d_fe == 1612  -- 1612
+  [PASS] (2048,128) conservative T_1 >= exact-drain T_1 (safe direction)  -- 632 >= 631
+  [PASS] (2048,128) F3 magnitude bound a_t <= C(D0-1,t+1) on [1,m] at i_fc
+  [PASS] (2048,128) my certificate == stored fcscan (all 8 fields)  -- {"i_fc": 439, "d": 1615, "m": 38, "a0": 1598, "drain": 799, "Tmax": 800, "T_worst_t": 2, "capture_ub": 1239, "budget_margin": 807}
+  [PASS] (2048,128) my evolution captures at canon row 1237  -- 1237
+  [PASS] (2048,128) capture <= certificate bound  -- 1237 <= 1239
+  [PASS] (2048,128) support frozen inside [0,m] after i_fc; zero re-ignitions
+  [PASS] (2048,128) cell 0 empties exactly at i_fc + drain - 1 (bound i_fc + drain is 1 row conservative)  -- 1237 vs 1238
+  [PASS] (4096,256) my fresh profile: d_870 == d_fe == 3225  -- 3225
+  [PASS] (4096,256) conservative T_1 >= exact-drain T_1 (safe direction)  -- 1264 >= 1264
+  [PASS] (4096,256) F3 magnitude bound a_t <= C(D0-1,t+1) on [1,m] at i_fc
+  [PASS] (4096,256) my certificate == stored fcscan (all 8 fields)  -- {"i_fc": 875, "d": 3228, "m": 56, "a0": 3224, "drain": 1612, "Tmax": 1622, "T_worst_t": 2, "capture_ub": 2497, "budget_margin": 1597}
+  [PASS] (4096,256) my evolution captures at canon row 2486  -- 2486
+  [PASS] (4096,256) capture <= certificate bound  -- 2486 <= 2497
+  [PASS] (4096,256) support frozen inside [0,m] after i_fc; zero re-ignitions
+  [PASS] (4096,256) cell 0 empties exactly at i_fc + drain - 1 (bound i_fc + drain is 1 row conservative)  -- 2486 vs 2487
+  marginal-surface recomputation from stored snapshots (caps at d_fe-1):
+    (4096,128): max r_t = 1.004211 at t=4 over=[2, 4, 6]  [note table: 1.0018]
+    (4096,256): max r_t = 1.004709 at t=7 over=[3, 5, 7, 9]  [note table: 1.0047]
+    (8192,256): max r_t = 1.000069 at t=2 over=[2]  [note table: 1.0001]
+  [PASS] E1-F3 erratum CONFIRMED: (4096,1/32) table value 1.0018 does not match stored snapshot  -- 1.004211
+  [PASS] (4096,1/16) table value 1.0047 reproduces  -- 1.004709
+  [PASS] (8192,1/32) table value 1.0001 reproduces  -- 1.000069
+
+============================================================================
+FINAL VERDICTS (lane F2)
+============================================================================
+
+V1. THEOREM S-cone-fc: CONFIRMED.  The one-row-certificate logic was
+    re-derived independently from S1 (exact post-feed magnitude law
+    a'_t = max(0,(K a)_t - 2C(d'-1,t)), a'_0 = max(0,a_0-2)) and S2
+    (comparison principle): F2 is absorbing because a_0 falls 2/row while
+    d never falls; F3 with the FIXED row-i0 reference caps propagates
+    because every cell is non-increasing (spills computed from the
+    original state dominate all later spills) and caps only grow
+    (D_k >= D_0); front-freeze at m+1, m+2 consumes exactly F3 at
+    t = m+1, m+2; death needs support at cell D_k > m+2, impossible.
+    Two deliberate conservativities verified in this session's audit
+    stage: the drain bound i0+drain is exactly 1 row above the true
+    cell-0 extinction (i0+drain-1, observed), and the T_1 staircase uses
+    a_0-2(k-1) >= the true a_0-2k (T_1^cons >= T_1^exact, observed
+    632>=631 / 1264>=1264).  My fresh implementation reproduces the
+    stored fcscan certificates in ALL 8 fields at (2048,128) and
+    (4096,256) and captures at the canon rows inside the bound.
+
+V2. R = 32768 REPLICATION: CONFIRMED, closing the last independence gap.
+    Both eps replicated from scratch by the four-process referee (fresh
+    Beatty floor, fresh kernel/feed/clamp): CLOSED at 19865 (eps=1/16)
+    and 20185 (eps=1/32), debt 16383 = (R-2)/2 exact, zero re-ignitions,
+    cell-0 clock exact, cell-1 extinction rows 17133/17521, feed-end
+    snapshots BIT-IDENTICAL to E1's stored states (170/169 cells), and
+    the S-cone-fc certificates re-derived from BOTH the E1 snapshots and
+    the referee's own independent snapshots (conecert 'mine' rows).
+    S(1/32) and S(1/16) are VERIFIED-exact for all dyadic
+    128 <= R <= 32768 by two independent implementation lineages.
+
+V3. A-PRIORI F4 + WINDOW: CONFIRMED with scope discipline.  The window
+    death-freeness [i_pf, i_pf+64] is now PROVED for all dyadic
+    2^16..2^40 (symbolic mixed-endpoint interval form
+    D0(3+2g) >= 2R(1-g-g^2) + 66(1+g), plus exact per-R checks at
+    2^16/2^17) -- E1-F1 quantifier gap CLOSED.  The a-priori F4
+    corollary is certified for dyadic 2^9..2^40 ONLY (code range
+    confirmed: R = 2^7..2^40 loops in the constants script); the
+    independent worst-case clock re-computation at 2^16/2^17 (apriori
+    stage) passes with T_2 always the worst clock.  For R > 2^40, F4
+    must be carried inside the entry hypothesis (it is a decidable
+    one-row check, so the reduction loses nothing).
+
+V4. (256, D0=0) EXACT-FLOOR WITNESS sha 5950bd42: CONFIRMED, now by a
+    FOURTH independent implementation (this session): fresh per-n Beatty
+    floor by binary search on 5^m <=> phi^(2n); incremental Pascal-row
+    admissibility (58837 cells in-box, correct parity); transportation
+    integer point f = (C-delta)/2 in [0,C] everywhere with EXACTLY 4973
+    boundary-saturated cells (8.45%); epoch identity
+    sum_i x^i Delta_i = (1-x)^255 proved COEFFICIENT-EXACT via the
+    re-proved main-term closed form (ballot(d) -> 2x-1 for all 152
+    distinct degrees; corner -> -1) plus sparse-correction accumulation,
+    and INDEPENDENTLY at definition level (all rows, every cell) at
+    x = 2, 3, -1, 5, -7.  17/17.
+
+V5. ERRATUM (display-only), adjudicated: the E1 note sec. 6 table entry
+    (4096, eps=1/32) "1.0018" is wrong; the stored (post-bug-regenerated)
+    snapshot gives max r_t = 1.004211 at t = 4, over-cells {2,4,6}.
+    Neighbors (4096,1/16) = 1.0047 and (8192,1/32) = 1.0001 reproduce
+    exactly.  Qualitative marginal-surface law unaffected.
+
+V6. STALENESS FLAG: the parent referee's drafted verdict "E2 -- NO
+    CONTENT (standing by)" predates the super-block note
+    (amm12592-S-superblock-proof-boxeph.md, this session, 00:32): that
+    lane DID deliver a second, independent per-(R,D0) S-certificate
+    mechanism, 16/16 PASS at R = 128..16384 (both eps) with the capture
+    row PREDICTED exactly (i0 + |j_0|/2) in every run -- consistent
+    row-for-row with the canon captures.  Its internal Theorems 1-2 were
+    NOT line-audited by the four-process referee; treat its PROVED labels
+    as its own note's, its 16/16 ledger as VERIFIED-exact.
+
+V7. ENTRY: still OPEN.  No lane-F1 entry proof is visible in the
+    worktree at close-out.  The older half-cap/Lambda entry ledger
+    (amm12592_S_cone_entrycheck) shows H4 failing AT i_pf itself -- which
+    is precisely why the operative certificate is the full-cap one firing
+    at i_fc = i_pf + 0..8; it is not evidence against ENTRY-fc
+    (rule/scan negatives are never infeasibility proofs).
+
+============================================================================
+THE FINAL CANON PARAGRAPH (referee-certified, 2026-08-04, lane F2)
+============================================================================
+
+UNCONDITIONAL: the best proved bound remains C* <= 2, from the submission
+envelope T(n) <= max(n+1, 2n-2) (with T(n) <= max(n+1, 2n-3) for n >= 5);
+exactly rational, no bracket.  NO lane of this program produced a new
+unconditional C* bound, and none claims to.
+
+PROVED, UNCONDITIONALLY, INSIDE THE PROGRAM (all referee-confirmed, all
+exact int/Fraction): (i) the post-feed flow of plain rule A on
+all-negative junk is the monotone system a'_t = max(0,(K a)_t-2C(d'-1,t)),
+a'_0 = max(0,a_0-2), with comparison principle and unconditional deadline
+i_pf <= (R-2)/2; (ii) THEOREM S-cone-fc: if ANY post-feed row i0
+satisfies the one-row integer conditions F1 (all-negative junk, support
+in [0,m], m+2 < d), F2 (a_0 <= d-1), F3 (2a_{t-1}+a_{t-2} <= 2C(d-1,t)
+on t in [2,m+2]) and F4 (exact staircase clocks fit the R-2 budget),
+then the flow captures by row R-2 with no death -- S(R) holds; (iii) F4
+is automatic given F1-F3 for every dyadic R in [2^9, 2^40] (exact-
+rational certification; NOT proved beyond 2^40), and the handover window
+[i_pf, i_pf+64] is death-free for every dyadic R in [2^16, 2^40] at
+eps in {1/32, 1/16} (symbolic interval certification); (iv) the closed
+form 1 + gamma* + eps* = (5+3g)/(3+2g), g = gamma* = log_5 phi^2 in
+(627035, 627036)/2^20, eps* = 2(1-g-g^2)/(3+2g) in (0.0211736,
+0.0211747), with certified bracket (1.6191617801, 1.6191618342).
+
+VERIFIED-exact (finite, two independent implementation lineages at the
+top scale): Hypothesis S at eps = 1/32 AND 1/16 for ALL dyadic
+128 <= R <= 32768 -- at 32768: captures 19865 (1/16) and 20185 (1/32),
+debt 16383 = (R-2)/2 exact, zero post-feed re-ignitions, capture =
+i_pf + a_0/2 - 1 exactly, feed-end states bit-identical across
+implementations; the one-row certificate fires at i_fc = i_pf + 0..8
+with ~38%-of-R budget margins in all 18 stored scans; the super-block
+route independently certifies S at 16/16 configs (128..16384) with exact
+capture prediction.  ATTAINMENT RECORDS: exact-floor existence at
+(256, D0=0) -- witness sha 5950bd42, verified by FOUR independent
+implementations, including a coefficient-exact epoch identity and a
+transportation integer point (58837 cells, 4973 boundary-saturated);
+best known at R = 512 is D0 = 4 (tr15, referee-verified).
+
+PROVED-MODULO-ENTRY: define ENTRY-fc(eps): for every dyadic R >= 65536,
+some post-feed row i0 <= i_pf + 64 of plain rule A satisfies F1^F2^F3
+(and F4, needed only for R > 2^40).  Then S(eps) holds in full, and by
+the D2 assembly (THM-3329 + LIFT + Theorem B, eps > eps*):
+C* <= 1 + gamma* + eps.  In particular ENTRY-fc(1/32) gives
+C* <= 1 + gamma* + 1/32 < 427095/262144 = 1.6292382; and if ENTRY-fc
+holds for a sequence eps -> eps*+, C* <= (5+3g)/(3+2g) = 1.61916...
+Every Theta(R)-row dynamical statement in S is PROVED; ENTRY-fc is a
+STATIC property of one row, whose structural basis is the verified
+marginal-surface law (max_t r_t -> 1+ from above: 1.0009 at 32768,
+over-cells single-parity, low-cell core within 0.2% of the surface).
+
+HONEST GAP LIST (everything that remains): (G1) ENTRY-fc(eps) itself --
+OPEN for all eps; no entry proof exists in the worktree at close-out.
+(G2) The a-priori F4 corollary and the window certification stop at
+dyadic 2^40; beyond, F4 rides inside ENTRY-fc (decidable per row), or
+the T_t <= T_2 monotonicity lemma must be written out in full.
+(G3) The verified eps set is {1/32, 1/16}; "every eps > eps*" is
+untested beyond those two, so the (5+3g)/(3+2g) limit needs ENTRY-fc
+along a sequence eps -> eps*+.  (G4) The S-chain quantifies over DYADIC
+R; general n enters only through the THM-3329 envelope assembly.
+(G5) Exact-floor existence frontier: (512, D0=0) OPEN in both
+directions (D0 = 1, 2, 3 also open).  (G6) The general-class floor:
+C* >= log_5(5 phi^2) is OPEN -- the golden value is pinned only against
+balanced-block schemes (THM-3024 demotion honored); so even ENTRY-fc for
+all eps > eps* would leave C* itself undetermined in [phi-side floor,
+(5+3g)/(3+2g)].  (G7) The super-block lane's internal Theorems 1-2 are
+note-local PROVED labels, not yet line-audited by an independent
+referee.  Nothing else is open: every other lemma, constant, witness,
+capture row, and certificate in the S program now carries at least two
+independent exact verifications.
+

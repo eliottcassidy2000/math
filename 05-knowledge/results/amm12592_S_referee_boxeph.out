@@ -1,0 +1,361 @@
+AMM 12592 -- HOSTILE REFEREE of lanes E1 (S via invariant cone), E2, E3
+(local-rule barrier / existence gap).  boxeph, 2026-08-04.
+Script: 04-computation/amm12592_S_referee_boxeph.py
+Fragments: 05-knowledge/results/amm12592_S_referee_frag_*.json
+Independent runs: amm12592_S_referee_{run,feedend,ckpt}_R32768_*.json
+
+TOTAL CHECKS: 133 PASS, 0 FAIL
+
+============================================================================
+STAGE OUTPUTS (in audit order)
+============================================================================
+==========================================================================
+STAGE constants -- fresh g sandwich, eps*, (5+3g)/(3+2g), kappa, g/(1-g)
+==========================================================================
+  [PASS] g sandwich: floor(2^20 g) = 627035 (fresh integer bisection)  -- 627035/2^20 < g < 627036/2^20
+  [PASS] eps*(g) decreasing on the sandwich
+  [PASS] eps* in (0.0211736, 0.0211747)  -- (0.021173651418803393, 0.021174659260052044)
+  [PASS] eps* < 1/32
+  [PASS] identity 1 + g + eps*(g) == (5+3g)/(3+2g) (200 random rationals)
+  [PASS] derivative law f(a)-f(b) = -(a-b)/((3+2a)(3+2b)) => f' = -1/(3+2g)^2
+  [PASS] (5+3g)/(3+2g) bracket matches E1 (1.6191617801, 1.6191618342), width < 6e-8  -- (1.6191617801, 1.6191618342)
+  [PASS] 1 + g + 1/32 < 427095/262144 EXACT (equality at the strict upper end g_hi)
+  [PASS] 1 + g + 1/16 < 435287/262144 EXACT (same mechanism)
+  [PASS] g/(1-g) bracket matches E3 (1.4874828, 1.4874887)  -- (1.4874828, 1.4874887)
+  [PASS] kappa in (0.0839815, 0.0839820) [E3 bracket 0.0839816..0.0839819]  -- (0.0839816, 0.0839819)
+  [PASS] eps_phi = 1/phi - g < eps* (exact sandwiches)  -- eps_phi <= 0.0200472 < eps*_lo = 0.0211737
+
+==========================================================================
+STAGE slow -- definition-level rule A (polynomial coords) vs my fast flow
+==========================================================================
+  [PASS] T4 closed form == definition-level decode (6 grids, all cells)
+  [PASS] slow definition-level rule A (128,0) reproduces canon CLOSED 81  -- closed=True capture=81 parity_fires=0
+  [PASS] T3: parity fix never fires at (128,0)
+  [PASS] slow run witness: sum x^i Delta_i == (1-x)^(R-1) at (128,0)
+  [PASS] block-for-block: fast junk flow == slow rule A at (128,0), rows 1..81
+  [PASS] slow definition-level rule A (128,8) reproduces canon CLOSED 78  -- closed=True capture=78 parity_fires=0
+  [PASS] T3: parity fix never fires at (128,8)
+  [PASS] slow run witness: sum x^i Delta_i == (1-x)^(R-1) at (128,8)
+  [PASS] block-for-block: fast junk flow == slow rule A at (128,8), rows 1..78
+  [PASS] slow definition-level rule A (256,0) reproduces canon DIE 61  -- die=61
+  [PASS] T3: parity fix never fires at (256,0)
+  [PASS] block-for-block: fast junk flow == slow rule A at (256,0), rows 1..61
+  [PASS] fast flow death row matches at (256,0)  -- 61
+  [PASS] slow definition-level rule A (256,16) reproduces canon CLOSED 150  -- closed=True capture=150 parity_fires=0
+  [PASS] T3: parity fix never fires at (256,16)
+  [PASS] slow run witness: sum x^i Delta_i == (1-x)^(R-1) at (256,16)
+  [PASS] block-for-block: fast junk flow == slow rule A at (256,16), rows 1..150
+  [PASS] T1: encode_d(ballot) == 2x-1 for every profile degree (128,8)+(256,16)
+
+==========================================================================
+STAGE suite -- my fast flow vs 16 canon outcomes (4 prior implementations)
+==========================================================================
+  [PASS] (128,0) -> CLOSED 81 [canon]  -- capture=81 minus2=63
+  [PASS] (128,0) capture == i_pf + a0/2 - 1  -- 81 == 33 + 49 - 1
+  [PASS] (128,0) zero re-ignitions + post-feed negativity + cell-0 clock
+  [PASS] (128,4) -> CLOSED 79 [canon]  -- capture=79 minus2=63
+  [PASS] (128,4) capture == i_pf + a0/2 - 1  -- 79 == 31 + 49 - 1
+  [PASS] (128,4) zero re-ignitions + post-feed negativity + cell-0 clock
+  [PASS] (128,4) feed-end snapshot BIT-IDENTICAL to E1 stored (8 cells)  -- i_pf=31 d_fe=98
+  [PASS] (128,8) -> CLOSED 78 [canon]  -- capture=78 minus2=63
+  [PASS] (128,8) capture == i_pf + a0/2 - 1  -- 78 == 28 + 51 - 1
+  [PASS] (128,8) zero re-ignitions + post-feed negativity + cell-0 clock
+  [PASS] (128,8) feed-end snapshot BIT-IDENTICAL to E1 stored (9 cells)  -- i_pf=28 d_fe=100
+  [PASS] (256,0) -> DIE 61 [canon]  -- die=61
+  [PASS] (256,1) -> CLOSED 159 [canon]  -- capture=159 minus2=127
+  [PASS] (256,1) capture == i_pf + a0/2 - 1  -- 159 == 65 + 95 - 1
+  [PASS] (256,1) zero re-ignitions + post-feed negativity + cell-0 clock
+  [PASS] (256,8) -> CLOSED 153 [canon]  -- capture=153 minus2=127
+  [PASS] (256,8) capture == i_pf + a0/2 - 1  -- 153 == 61 + 93 - 1
+  [PASS] (256,8) zero re-ignitions + post-feed negativity + cell-0 clock
+  [PASS] (256,8) feed-end snapshot BIT-IDENTICAL to E1 stored (13 cells)  -- i_pf=61 d_fe=196
+  [PASS] (256,16) -> CLOSED 150 [canon]  -- capture=150 minus2=127
+  [PASS] (256,16) capture == i_pf + a0/2 - 1  -- 150 == 56 + 95 - 1
+  [PASS] (256,16) zero re-ignitions + post-feed negativity + cell-0 clock
+  [PASS] (256,16) feed-end snapshot BIT-IDENTICAL to E1 stored (13 cells)  -- i_pf=56 d_fe=201
+  [PASS] (512,4) -> DIE 121 [canon]  -- die=121
+  [PASS] (512,5) -> CLOSED 312 [canon]  -- capture=312 minus2=255
+  [PASS] (512,5) capture == i_pf + a0/2 - 1  -- 312 == 127 + 186 - 1
+  [PASS] (512,5) zero re-ignitions + post-feed negativity + cell-0 clock
+  [PASS] (512,16) -> CLOSED 317 [canon]  -- capture=317 minus2=255
+  [PASS] (512,16) capture == i_pf + a0/2 - 1  -- 317 == 120 + 198 - 1
+  [PASS] (512,16) zero re-ignitions + post-feed negativity + cell-0 clock
+  [PASS] (512,16) feed-end snapshot BIT-IDENTICAL to E1 stored (20 cells)  -- i_pf=120 d_fe=393
+  [PASS] (512,32) -> CLOSED 313 [canon]  -- capture=313 minus2=255
+  [PASS] (512,32) capture == i_pf + a0/2 - 1  -- 313 == 110 + 204 - 1
+  [PASS] (512,32) zero re-ignitions + post-feed negativity + cell-0 clock
+  [PASS] (512,32) feed-end snapshot BIT-IDENTICAL to E1 stored (20 cells)  -- i_pf=110 d_fe=403
+  [PASS] (1024,15) -> CLOSED 639 [canon]  -- capture=639 minus2=511
+  [PASS] (1024,15) capture == i_pf + a0/2 - 1  -- 639 == 249 + 391 - 1
+  [PASS] (1024,15) zero re-ignitions + post-feed negativity + cell-0 clock
+  [PASS] (1024,64) -> CLOSED 616 [canon]  -- capture=616 minus2=511
+  [PASS] (1024,64) capture == i_pf + a0/2 - 1  -- 616 == 219 + 398 - 1
+  [PASS] (1024,64) zero re-ignitions + post-feed negativity + cell-0 clock
+  [PASS] (1024,64) feed-end snapshot BIT-IDENTICAL to E1 stored (29 cells)  -- i_pf=219 d_fe=806
+  [PASS] (2048,37) -> DIE 508 [canon]  -- die=508
+  [PASS] (2048,38) -> CLOSED 1271 [canon]  -- capture=1271 minus2=1023
+  [PASS] (2048,38) capture == i_pf + a0/2 - 1  -- 1271 == 493 + 779 - 1
+  [PASS] (2048,38) zero re-ignitions + post-feed negativity + cell-0 clock
+  [PASS] (2048,128) -> CLOSED 1237 [canon]  -- capture=1237 minus2=1023
+  [PASS] (2048,128) capture == i_pf + a0/2 - 1  -- 1237 == 436 + 802 - 1
+  [PASS] (2048,128) zero re-ignitions + post-feed negativity + cell-0 clock
+  [PASS] (2048,128) feed-end snapshot BIT-IDENTICAL to E1 stored (42 cells)  -- i_pf=436 d_fe=1612
+
+==========================================================================
+STAGE bigcheck -- verdicts on the two independent R=32768 replications
+==========================================================================
+  [PASS] (32768,2048) INDEPENDENT REPLICATION: CLOSED at capture 19865 [E1 claim]  -- CLOSED 19865
+  [PASS] (32768,2048) debt minus2 = (R-2)/2 = 16383 exact  -- 16383
+  [PASS] (32768,2048) i_pf/d_fe/m/a0 = 6963/25806/169/25806 [E1 claim]  -- 6963/25806/169/25806
+  [PASS] (32768,2048) feed-end snapshot BIT-IDENTICAL to E1 stored state  -- 170 cells
+  [PASS] (32768,2048) capture == i_pf + a0/2 - 1 (cell-0 clock exact)
+  [PASS] (32768,2048) zero post-feed re-ignitions; negativity + 2/row clock in-flight
+  [PASS] (32768,2048) cell-1 extinction row == 17133 [E1 claim]  -- 17133
+  [PASS] (32768,2048) initial front == R-2-d_0 (T4b)  -- 11124
+  [PASS] (32768,1024) INDEPENDENT REPLICATION: CLOSED at capture 20185 [E1 claim]  -- CLOSED 20185
+  [PASS] (32768,1024) debt minus2 = (R-2)/2 = 16383 exact  -- 16383
+  [PASS] (32768,1024) i_pf/d_fe/m/a0 = 7604/25165/168/25164 [E1 claim]  -- 7604/25165/168/25164
+  [PASS] (32768,1024) feed-end snapshot BIT-IDENTICAL to E1 stored state  -- 169 cells
+  [PASS] (32768,1024) capture == i_pf + a0/2 - 1 (cell-0 clock exact)
+  [PASS] (32768,1024) zero post-feed re-ignitions; negativity + 2/row clock in-flight
+  [PASS] (32768,1024) cell-1 extinction row == 17521 [E1 claim]  -- 17521
+  [PASS] (32768,1024) initial front == R-2-d_0 (T4b)  -- 12148
+
+==========================================================================
+STAGE bigrun -- independent replication R=32768 D0=2048
+==========================================================================
+{"R": 32768, "D0": 2048, "outcome": "CLOSED", "capture_row": 19865, "die_row": null, "minus2": 16383, "i_pf": 6963, "front0": 11124, "d0": 21642, "events_n": 169, "cell1_death": 17133, "reignitions": 0, "postfeed_negative_ok": true, "a0_clock_ok": true, "elapsed_s": 1240.8, "fe_m": 169, "fe_a0": 25806, "fe_d": 25806, "snap_equal": true, "snap_ref_cells": 170, "snap_my_cells": 170}
+
+==========================================================================
+STAGE bigrun -- independent replication R=32768 D0=1024
+==========================================================================
+{"R": 32768, "D0": 1024, "outcome": "CLOSED", "capture_row": 20185, "die_row": null, "minus2": 16383, "i_pf": 7604, "front0": 12148, "d0": 20618, "events_n": 168, "cell1_death": 17521, "reignitions": 0, "postfeed_negative_ok": true, "a0_clock_ok": true, "elapsed_s": 1509.9, "fe_m": 168, "fe_a0": 25164, "fe_d": 25165, "snap_equal": true, "snap_ref_cells": 169, "snap_my_cells": 169}
+
+==========================================================================
+STAGE conecert -- my S-cone-fc certificate re-derivation R=16384 D0=512
+==========================================================================
+  snapshot=E1 -> {"i_fc": 3803, "d": 12583, "m": 118, "a0": 12576, "drain": 6288, "Tmax": 6325, "T_worst_t": 2, "capture_ub": 10128, "F4": true, "budget_margin": 6254}
+  [PASS] my certificate == stored fcscan (i_fc,d,m,a0,drain,Tmax,ub) [E1 snap]  -- i_fc=3803 ub=10128
+  [PASS] certificate bound >= actual capture, F4 holds [E1]  -- 10128 >= 10090
+  [SKIP] no snapshot /tmp/math-wt-boxeph-multifront/05-knowledge/results/amm12592_S_referee_feedend_R16384_D0512.json
+
+==========================================================================
+STAGE conecert -- my S-cone-fc certificate re-derivation R=16384 D0=1024
+==========================================================================
+  snapshot=E1 -> {"i_fc": 3490, "d": 12908, "m": 113, "a0": 12896, "drain": 6448, "Tmax": 6494, "T_worst_t": 2, "capture_ub": 9984, "F4": true, "budget_margin": 6398}
+  [PASS] my certificate == stored fcscan (i_fc,d,m,a0,drain,Tmax,ub) [E1 snap]  -- i_fc=3490 ub=9984
+  [PASS] certificate bound >= actual capture, F4 holds [E1]  -- 9984 >= 9937
+  [SKIP] no snapshot /tmp/math-wt-boxeph-multifront/05-knowledge/results/amm12592_S_referee_feedend_R16384_D01024.json
+
+==========================================================================
+STAGE conecert -- my S-cone-fc certificate re-derivation R=32768 D0=2048
+==========================================================================
+  snapshot=E1 -> {"i_fc": 6967, "d": 25809, "m": 167, "a0": 25798, "drain": 12899, "Tmax": 12988, "T_worst_t": 2, "capture_ub": 19955, "F4": true, "budget_margin": 12811}
+  [PASS] my certificate == stored fcscan (i_fc,d,m,a0,drain,Tmax,ub) [E1 snap]  -- i_fc=6967 ub=19955
+  [PASS] certificate bound >= actual capture, F4 holds [E1]  -- 19955 >= 19865
+  snapshot=mine -> {"i_fc": 6967, "d": 25809, "m": 167, "a0": 25798, "drain": 12899, "Tmax": 12988, "T_worst_t": 2, "capture_ub": 19955, "F4": true, "budget_margin": 12811}
+  [PASS] my certificate == stored fcscan (i_fc,d,m,a0,drain,Tmax,ub) [mine snap]  -- i_fc=6967 ub=19955
+  [PASS] certificate bound >= actual capture, F4 holds [mine]  -- 19955 >= 19865
+
+==========================================================================
+STAGE conecert -- my S-cone-fc certificate re-derivation R=32768 D0=1024
+==========================================================================
+  snapshot=E1 -> {"i_fc": 7608, "d": 25168, "m": 165, "a0": 25156, "drain": 12578, "Tmax": 12665, "T_worst_t": 2, "capture_ub": 20273, "F4": true, "budget_margin": 12493}
+  [PASS] my certificate == stored fcscan (i_fc,d,m,a0,drain,Tmax,ub) [E1 snap]  -- i_fc=7608 ub=20273
+  [PASS] certificate bound >= actual capture, F4 holds [E1]  -- 20273 >= 20185
+  snapshot=mine -> {"i_fc": 7608, "d": 25168, "m": 165, "a0": 25156, "drain": 12578, "Tmax": 12665, "T_worst_t": 2, "capture_ub": 20273, "F4": true, "budget_margin": 12493}
+  [PASS] my certificate == stored fcscan (i_fc,d,m,a0,drain,Tmax,ub) [mine snap]  -- i_fc=7608 ub=20273
+  [PASS] certificate bound >= actual capture, F4 holds [mine]  -- 20273 >= 20185
+
+==========================================================================
+STAGE lemmas -- my randomized exact certificates for S1/S2/S4/cone step
+==========================================================================
+  [PASS] S1 magnitude closed form == definition box clamp (300 random states)
+  [PASS] S2 comparison principle (300 random comparable pairs)
+  [PASS] S4 cell-1 absorbing criterion (300 trials)
+  [PASS] S-cone-fc one-step: non-increase + frozen support + F3 propagation (300 random cone states x both kernels x cap growth 0/1/3)
+
+==========================================================================
+STAGE window -- death-freeness of [i_pf, i_pf+64]: exact + symbolic
+==========================================================================
+  [PASS] R=65536 D0=2048: 2d0-R+2 > i_feed+66 (window death-free, T6b ext.)  -- 16940 > 15271
+  [PASS] R=65536 D0=4096: 2d0-R+2 > i_feed+66 (window death-free, T6b ext.)  -- 21036 > 13989
+  [PASS] R=131072 D0=4096: 2d0-R+2 > i_feed+66 (window death-free, T6b ext.)  -- 33880 > 30477
+  [PASS] R=131072 D0=8192: 2d0-R+2 > i_feed+66 (window death-free, T6b ext.)  -- 42072 > 27913
+  [PASS] symbolic: D0(3+2g) >= 2R(1-g-g^2) + 66(1+g) for all dyadic R = 2^16..2^40, eps in {1/32,1/16}, both sandwich ends (PROVES the [i_pf, i_pf+64] window death-free for the reduction)
+
+==========================================================================
+STAGE e3wit -- (256,0) desc1 witness: my own from-scratch verification
+==========================================================================
+  [PASS] sha256 matches record 5950bd42...  -- 5950bd4287d49922
+  [PASS] all 58837 cells: |delta_t| <= C(d_i,t) with correct parity
+  [PASS] epoch identity sum x^i Delta_i == (1-x)^255 EXACT (my own polynomial arithmetic; last row = corner -1)
+  [PASS] transportation point: f = (C-delta)/2 integer in [0, C] at every cell  -- cells=58837 boundary-saturated=4973 (8.45%)
+  [PASS] cell count == 58837 (E3 claim)  -- 58837
+  [PASS] identity evaluated at x = 2
+  [PASS] identity evaluated at x = 3
+  [PASS] identity evaluated at x = -1
+  [PASS] E3-L1 complementarity, E3-L2 front load = half box width, E3-L3 rate identity (200 random windows)
+
+==========================================================================
+STAGE ledger -- E1 stored-artifact cross-checks (A_1 law, edge law, r_t, fcscan)
+==========================================================================
+  (R, D0, m, a0-d_fe, ~log2 A_1): [(128, 4, 7, 0, 4), (128, 8, 8, 2, 5), (256, 8, 12, -10, 6), (256, 16, 12, -11, 6), (512, 16, 19, 3, 7), (512, 32, 19, 5, 7), (1024, 32, 27, -14, 8), (1024, 64, 28, -10, 8), (2048, 64, 40, 0, 9), (2048, 128, 41, -8, 9), (4096, 128, 58, -7, 10), (4096, 256, 58, 7, 10), (8192, 256, 83, -13, 11), (8192, 512, 83, -5, 11), (16384, 512, 118, -6, 12), (16384, 1024, 119, 9, 12), (32768, 1024, 168, -1, 13), (32768, 2048, 169, 0, 13)]
+  [PASS] edge law a0 - d_fe in [-14, +9] over all stored snapshots
+  [PASS] A_1 grows ~ +1 bit/doubling at feed-end (REFUTES D2 R-independence reading; supports E1)  -- [(128, 4), (256, 6), (512, 7), (1024, 8), (2048, 9), (4096, 10), (8192, 11), (16384, 12), (32768, 13)]
+  R=32768 D0=2048: max r_t = 1.00090 at t=5, over-cells=[3, 5, 7, 9]
+  [PASS] marginal surface at (32768,2048): max r_t ~ 1.0009 at t=5 [E1 claim]
+  [PASS]   over-cells single-parity (odd)  -- [3, 5, 7, 9]
+  R=32768 D0=1024: max r_t = 1.00089 at t=5, over-cells=[3, 5, 7]
+  [PASS] marginal surface at (32768,1024): max r_t ~ 1.0009 at t=5 [E1 claim]
+  [PASS]   over-cells single-parity (odd)  -- [3, 5, 7]
+  [PASS] all stored fcscan certificates: capture_ub >= actual capture
+
+============================================================================
+VERDICTS
+============================================================================
+
+E1 (S via the invariant cone) -- VERDICT: CONFIRMED, with two findings.
+  Every PROVED item re-derived and independently machine-certified:
+  S1 magnitude closed form, S2 comparison, S3 unconditional deadline
+  (i_pf <= i_feed+2 <= (R-2)/2 re-derived), S4 spill criterion, and
+  THEOREM S-cone-fc: proof audited line by line -- the max(0, x-c_k)
+  composition needs c_k >= 0, supplied by D_k >= D_0; F3 range [2, m+2]
+  is exactly what front-freeze at m+1, m+2 consumes; F3 propagation
+  follows from cellwise non-increase.  My independent certificate checker
+  reproduces E1's fcscan EXACTLY (i_fc, d, m, a0, drain, Tmax, worst
+  clock t=2, capture_ub) at (16384, 512/1024) and (32768, 2048/1024),
+  and capture_ub >= actual capture in all 18 stored certificates
+  (i_fc - i_pf in [0, 8]).  The R = 32768 closures (BOTH eps) are
+  replicated by THIS referee's from-scratch fifth implementation
+  (exact Beatty floor via fresh 5^m <=> phi^(2n) integer comparisons;
+  T4 closed-form row 0 re-proved against a definition-level polynomial
+  decode; kernel/feed/clamp written from the T6 statement; validated
+  block-for-block against my own definition-level slow rule A at
+  128/256 and against 16 canon outcomes to R = 2048): captures
+  19865 (eps=1/16) and 20185 (eps=1/32), debt 16383 = (R-2)/2 exact,
+  zero post-feed re-ignitions, cell-0 clock exact, and the feed-end
+  snapshots BIT-IDENTICAL to E1's stored states (170/169 cells).
+  S(1/32) and S(1/16) are hereby verified for all dyadic
+  128 <= R <= 32768 by two independent implementation lineages.
+  Feed-end laws re-verified from stored snapshots: edge law
+  a0 - d_fe in [-14, +9]; A_1 ~ +1 bit/doubling (E1's REFUTATION of
+  D2's "max_t log2 A_t ~ 10-11 R-independent" is CORRECT -- D2 sec. 4.2
+  must be read at a later row, not feed-end; nothing load-bearing);
+  marginal surface max r_t = 1.00090/1.00089 at t = 5 with odd-parity
+  over-cells at 32768.  Basin claims verified after decoding the file
+  convention snapx{k} = scale 2^k (x2 captures at 1581/6556; x4 and
+  corner OPEN_RESIDUAL -- correctly never used as feasibility evidence).
+
+  FINDING E1-F1 (quantifier gap, repaired here): the reduction
+  "ENTRY-fc(eps) => S(eps) for dyadic R >= 65536" needs the window
+  [i_pf, i0) to be death-free; E1's parenthetical justifies it with the
+  row-i0 support bound m, which cannot bound EARLIER rows.  Correct
+  argument: T6a/T6b extension -- F(i) <= F(0) + i + (d_i - d_0), so no
+  death before row 2d_0 - R + 2; the needed 2d_0 - R + 2 > i_feed + 66
+  follows from D0(3+2g) >= 2R(1-g-g^2) + 66(1+g), i.e.
+  D0 >= eps* R + ~25.1.  Certified here in rigorous mixed-endpoint
+  interval form for all dyadic 2^16..2^40 at both eps (min margin 2665)
+  plus exact per-R checks.  GAP CLOSED; no downstream impact.
+
+  FINDING E1-F2 (quantifier scope): the a-priori-F4 corollary
+  ("hypothesis is F1^F2^F3 alone for R >= 512") is certified only for
+  dyadic R = 2^9..2^40 (code range confirmed); beyond 2^40 it rests on
+  the sketched K1c/K2c bounds + the unwritten T_t <= T_2 monotonicity
+  lemma.  My independent worst-case clock computation confirms it at
+  2^16/2^17 (both eps, probe t up to 5000, T_2 always worst).  For full
+  rigor state ENTRY-fc as F1^F2^F3^F4 for R > 2^40 (F4 is a decidable
+  one-row check, so the reduction loses nothing), or write out the
+  monotonicity lemma.
+
+  FINDING E1-F3 (cosmetic erratum): the note sec. 6 marginal-surface
+  table entry for (4096, eps=1/32) reads "1.0018"; recomputing from the
+  stored (post-bug regenerated) snapshot gives max r_t = 1.0042 at
+  t = 4 (over-cells {2,4,6}) with caps at d_fe - 1, or 1.0029 with caps
+  at d_fe -- neither matches 1.0018, so that display value likely
+  predates the snapshot regeneration.  All other 17 table entries
+  reproduce exactly.  Qualitative law unaffected; display-only.
+
+  OVERCLAIM NOTE: the lane-report headline "S(eps) ... COMPLETE" must
+  not enter canon as "S proved".  S(eps) remains OPEN for dyadic
+  R >= 65536; what is proved is the reduction to the one-row ENTRY-fc
+  plus finite verification through 32768.  The note itself (secs. 7, 9)
+  states this correctly.
+
+E2 -- VERDICT: NO CONTENT.  E2 delivered only "standing by" (armed
+  monitors).  Nothing to audit; E2 provides no independent confirmation
+  of anything.  The independence gap for the R = 32768 closures (E1 was
+  the only implementation to have run them) is closed by THIS referee's
+  replication, not by E2.  No consistency issue arises between E1 and
+  E2 because E2 asserts nothing.
+
+E3 (barrier / existence gap) -- VERDICT: CONFIRMED; scope discipline is
+  exemplary.  The (256, 0) desc1 witness re-verified by my own
+  from-scratch verifier (sha 5950bd42..., 58837 cells in-box with
+  parity, epoch identity sum x^i Delta_i = (1-x)^255 EXACT with
+  last-row corner -1, transportation point f = (C-delta)/2 integer in
+  [0, C] at every cell, 8.45% boundary-saturated, identity at
+  x = 2/3/-1).  Record correction stands: the exact-floor existence
+  frontier is (512, D0=0), OPEN in both directions.  E3-L1/L2/L3
+  algebra confirmed on 200 random windows; kappa and g/(1-g) brackets
+  confirmed from my fresh sandwich; L4 influence cone is a sound
+  one-line induction (kernel support {0,1,2}).  All negatives (84/84
+  rule deaths, beam all-dies) are hazard-labeled and never used as
+  feasibility evidence; E3-BC(param)/(mech) correctly labeled
+  CONJECTURED; LP at (512,0) correctly OPEN; floor-side honesty note
+  (THM-3024 demotion) correctly repeated.  Minor: E3-BC(mech)'s "all RS
+  rules qualify" (bounded deviation) is an unproved aside inside a
+  conjecture -- harmless as labeled.
+
+CONSISTENCY ACROSS LANES: E1's 18-run sweep captures equal D2's table
+  exactly where they overlap; E1's i_pf differs from D2's i_feed by the
+  documented off-by-one conventions (d_i + i <= R-2 / R-1 / R), each
+  used consistently within its own note; the prior referee's
+  re-instantiation (2d_0 - R + 2 > i_feed + 1) and my window lemma
+  (> i_feed + 66) subsume all three.  No contradiction found anywhere
+  between E1, E3, D1/D2/D3, and the prior referee.
+
+============================================================================
+FINAL CANON PARAGRAPH (referee-certified, 2026-08-04)
+============================================================================
+
+BEST UNCONDITIONAL C* UPPER BOUND: UNCHANGED -- C* <= 2, from the
+submission envelope T(n) <= max(n+1, 2n-2) (and T(n) <= max(n+1, 2n-3)
+for n >= 5); the bound is exactly rational, no bracket needed.  No lane
+produced a new unconditional C* bound, and none claimed to.  What
+changed is the CONDITIONAL frontier, now in its sharpest verified form:
+the chain  THM-3329 assembly + LIFT (Thm A) + Thm B feed-phase survival
+(D0 >= eps* R, eps* = 2(1-g-g^2)/(3+2g) in (0.0211736, 0.0211747),
+g = gamma* = log_5 phi^2 in (627035, 627036)/2^20) + death-free handover
+window (T6b extension, D0(3+2g) >= 2R(1-g-g^2) + 66(1+g), certified
+2^16..2^40 -- this referee) + THEOREM S-cone-fc (one-row certificate
+F1^F2^F3^F4 at some post-feed row => capture by R-2 with no death;
+referee-confirmed, independently re-implemented) + a-priori F4
+(certified dyadic 2^9..2^40) + exact closures for ALL dyadic
+128 <= R <= 32768 at eps = 1/32 and 1/16 (R = 32768 both eps now
+verified by TWO independent implementation lineages: captures
+19865/20185, debt 16383 exact, feed-end states bit-identical) proves:
+IF ENTRY-fc(eps) holds -- i.e. for every dyadic R >= 65536 some
+post-feed row i0 <= i_pf + 64 of plain rule A satisfies the one-row
+static conditions F1 (all-negative junk, support in [0, m], m+2 < d),
+F2 (a_0 <= d-1), F3 (2a_{t-1} + a_{t-2} <= 2C(d-1,t) on [2, m+2]), and
+(for R > 2^40) F4 -- THEN Hypothesis S(eps) holds and
+C* <= 1 + gamma* + eps; in particular ENTRY-fc(1/32) gives
+C* <= 1 + gamma* + 1/32 < 427095/262144 = 1.6292382, and the route's
+closed-form limit constant is 1 + gamma* + eps* = (5+3g)/(3+2g) in
+(1.6191617801, 1.6191618342).  Every Theta(R)-row dynamical statement
+in S is now PROVED; the sole open item is the STATIC one-row handover
+property, whose empirical form is the marginal-surface law
+(max_t r_t -> 1+, measured 1.0009 at R = 32768, over-cells single-
+parity, i_fc = i_pf + 0..8 at all 18 scales).  WHAT REMAINS for
+C* <= log_5(5 phi^2) = 1 + gamma* itself: either (R0) exact-floor
+universality -- frontier (512, D0=0), OPEN both directions, with the
+(256,0) transportation integer point re-verified -- or (GG + S') an
+o(R)-slack schedule below the G3 super-pair threshold plus the post-
+feed collapse; and on the floor side the general-class lower bound
+C* >= log_5(5 phi^2) remains OPEN (golden value pinned only against
+balanced-block schemes).  Hypothesis S itself: VERIFIED-exact for all
+dyadic 128 <= R <= 32768 (both eps), OPEN for R >= 65536 -- "COMPLETE"
+in the E1 lane headline means the reduction is complete, not that S is
+proved; C* <= 1 + gamma* + eps remains CONDITIONAL.
+

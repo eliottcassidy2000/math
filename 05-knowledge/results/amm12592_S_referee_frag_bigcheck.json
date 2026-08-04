@@ -1,0 +1,27 @@
+{
+ "stage": "bigcheck",
+ "pass": 16,
+ "fail": 0,
+ "fails": [],
+ "text": [
+  "==========================================================================",
+  "STAGE bigcheck -- verdicts on the two independent R=32768 replications",
+  "==========================================================================",
+  "  [PASS] (32768,2048) INDEPENDENT REPLICATION: CLOSED at capture 19865 [E1 claim]  -- CLOSED 19865",
+  "  [PASS] (32768,2048) debt minus2 = (R-2)/2 = 16383 exact  -- 16383",
+  "  [PASS] (32768,2048) i_pf/d_fe/m/a0 = 6963/25806/169/25806 [E1 claim]  -- 6963/25806/169/25806",
+  "  [PASS] (32768,2048) feed-end snapshot BIT-IDENTICAL to E1 stored state  -- 170 cells",
+  "  [PASS] (32768,2048) capture == i_pf + a0/2 - 1 (cell-0 clock exact)",
+  "  [PASS] (32768,2048) zero post-feed re-ignitions; negativity + 2/row clock in-flight",
+  "  [PASS] (32768,2048) cell-1 extinction row == 17133 [E1 claim]  -- 17133",
+  "  [PASS] (32768,2048) initial front == R-2-d_0 (T4b)  -- 11124",
+  "  [PASS] (32768,1024) INDEPENDENT REPLICATION: CLOSED at capture 20185 [E1 claim]  -- CLOSED 20185",
+  "  [PASS] (32768,1024) debt minus2 = (R-2)/2 = 16383 exact  -- 16383",
+  "  [PASS] (32768,1024) i_pf/d_fe/m/a0 = 7604/25165/168/25164 [E1 claim]  -- 7604/25165/168/25164",
+  "  [PASS] (32768,1024) feed-end snapshot BIT-IDENTICAL to E1 stored state  -- 169 cells",
+  "  [PASS] (32768,1024) capture == i_pf + a0/2 - 1 (cell-0 clock exact)",
+  "  [PASS] (32768,1024) zero post-feed re-ignitions; negativity + 2/row clock in-flight",
+  "  [PASS] (32768,1024) cell-1 extinction row == 17521 [E1 claim]  -- 17521",
+  "  [PASS] (32768,1024) initial front == R-2-d_0 (T4b)  -- 12148"
+ ]
+}

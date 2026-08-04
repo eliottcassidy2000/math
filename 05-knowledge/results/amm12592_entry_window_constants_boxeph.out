@@ -1,0 +1,3 @@
+[PASS] g sandwich 627035/2^20 < g < 627036/2^20
+[PASS] eps=1/32: W = floor(R/8) a-priori-F4 verified for ALL dyadic 2^9..2^40; min budget slack 84; min m_win/R = 0.5117; largest grid c_w passing = 3/16
+[PASS] eps=1/16: W = floor(R/8) a-priori-F4 verified for ALL dyadic 2^9..2^40; min budget slack 89; min m_win/R = 0.5312; largest grid c_w passing = 3/16

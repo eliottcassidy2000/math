@@ -1,0 +1,53 @@
+{
+ "stage": "final",
+ "pass": 0,
+ "fail": 0,
+ "fails": [],
+ "text": [
+  "==========================================================================",
+  "STAGE final -- harvest of all referee fragments + FINAL CANON PARAGRAPH",
+  "==========================================================================",
+  "",
+  "HARVEST: 16 fragments, 169 PASS, 0 FAIL",
+  "  F2:audit                      19 pass  0 fail",
+  "  F2:witness4                   17 pass  0 fail",
+  "  bigcheck                      16 pass  0 fail",
+  "  bigrun_R32768_D01024           0 pass  0 fail",
+  "  bigrun_R32768_D02048           0 pass  0 fail",
+  "  conecert_R16384_D01024         2 pass  0 fail",
+  "  conecert_R16384_D0512          2 pass  0 fail",
+  "  conecert_R32768_D01024         4 pass  0 fail",
+  "  conecert_R32768_D02048         4 pass  0 fail",
+  "  constants                     12 pass  0 fail",
+  "  e3wit                          9 pass  0 fail",
+  "  ledger                         7 pass  0 fail",
+  "  lemmas                         4 pass  0 fail",
+  "  slow                          18 pass  0 fail",
+  "  suite                         50 pass  0 fail",
+  "  window                         5 pass  0 fail",
+  "",
+  "final report written: amm12592_S_final_referee_boxeph.out (16 fragments, 169 pass, 0 fail)"
+ ],
+ "extra": {
+  "total_pass": 169,
+  "total_fail": 0,
+  "fragments": [
+   "F2:audit",
+   "F2:witness4",
+   "bigcheck",
+   "bigrun_R32768_D01024",
+   "bigrun_R32768_D02048",
+   "conecert_R16384_D01024",
+   "conecert_R16384_D0512",
+   "conecert_R32768_D01024",
+   "conecert_R32768_D02048",
+   "constants",
+   "e3wit",
+   "ledger",
+   "lemmas",
+   "slow",
+   "suite",
+   "window"
+  ]
+ }
+}
