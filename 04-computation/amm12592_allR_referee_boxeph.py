@@ -402,9 +402,14 @@ def stage_core():
                 pf = False
     check("T1a proof identities: b_k == C(d,k) mod 2, C(d,k) = C(d-1,k)+C(d-1,k-1),"
           " d <= 60", pf)
+    # DOMAIN NOTE (referee finding): at d = 0 the ballot form (p-q) + 2 gamma
+    # is not representable (deg(p-q) = 1 > 0) and the two admissible d = 0
+    # blocks Delta = +-1 fail the y-box map; the lemma requires d >= 1.  All
+    # floor profiles have d_i >= 1 for R >= 2, so the restriction is harmless,
+    # but B3's statement quantifier should read d >= 1.
     okf = okr = True
     cnt = 0
-    for d in range(0, 6):
+    for d in range(1, 6):
         cd = crow(d)
         cd1 = crow(d - 1) if d >= 1 else []
         b = [(cd1[k] if k <= d - 1 else 0) - (cd1[k - 1] if 1 <= k <= d else 0)
@@ -439,9 +444,12 @@ def stage_core():
             for k in range(d + 1):
                 if abs(delta[k]) > cd[k] or (delta[k] - cd[k]) & 1:
                     okr = False
-    check("T1b exhaustive d <= 5 (%d admissible blocks): admissible => y in box" % cnt,
-          okf)
-    check("T1c exhaustive d <= 5: y in box => admissible", okr)
+    check("T1b exhaustive 1 <= d <= 5 (%d admissible blocks): admissible => y in box"
+          % cnt, okf)
+    check("T1c exhaustive 1 <= d <= 5: y in box => admissible", okr)
+    audit("B3-T1 DOMAIN: lemma FAILS at d = 0 (Delta = +-1 blocks; ballot form "
+          "unrepresentable) -- statement needs quantifier d >= 1 (harmless: all "
+          "floor profiles have d_i >= 1)", True, "referee finding, not a bug")
     rng = random.Random(31337)
     okx = True
     for _ in range(2000):
@@ -513,8 +521,6 @@ def stage_core():
           "(beyond their 1024)", ok_even)
     ok_step = True
     for R in range(2, 601):
-        L = padd([0] * R + [1], qpow_list(R))       # p^R + q^R ... careful: L_{R}
-    for R in range(2, 601):
         GR1 = padd(qpow_list(R), pneg(E_poly(R)))       # 2 G_{R+1}
         GR = padd(qpow_list(R - 1), pneg(E_poly(R - 1)))
         diff = padd(GR1, pneg(GR))
@@ -525,21 +531,15 @@ def stage_core():
           "(beyond their 399)", ok_step)
     ok_dbl = True
     for R in (2, 3, 4, 5, 8, 16, 33, 64, 100, 128, 200, 256, 300, 512):
-        G_R = padd(qpow_list(R - 1), pneg(E_poly(R - 1)))     # this is 2 G_R
-        G2R = padd(qpow_list(2 * R - 1), pneg(E_poly(2 * R - 1)))  # 2 G_{2R}
-        # G_{2R} = 2q G_R^2 + (p-q)(2G_R - 1) - p^R q^{R-1}; multiply by 2:
-        # 2G_{2R} = q (2G_R)^2 + (2x-1)(2*(2G_R)/2... use halves exactly:
-        # 4 G_{2R} = 2 q (2G_R)^2 / 2 ... clean route: 2G2R == q*(2GR)^2/2*2 ...
-        # Do it with exact halving: (2G_R)^2 = 4 G_R^2 -> q*(2G_R)^2 = 4 q G_R^2
-        sq = pmul(G_R, G_R)                                    # 4 G_R^2
-        term1 = pmul([1, -1], sq)                              # 4 q G_R^2
-        term2 = pmul([-1, 2], padd(G_R, [-1]))                 # (p-q)(2G_R - 1)
+        g = padd(qpow_list(R - 1), pneg(E_poly(R - 1)))        # g  = 2 G_R
+        h = padd(qpow_list(2 * R - 1), pneg(E_poly(2 * R - 1)))  # h = 2 G_{2R}
+        # G_{2R} = 2q G_R^2 + (p-q)(2G_R - 1) - p^R q^{R-1}  (x2 both sides):
+        # h = q g^2 + 2 (p-q)(g - 1) - 2 p^R q^{R-1}
+        term1 = pmul([1, -1], pmul(g, g))                      # q g^2
+        term2 = pmul([-1, 2], padd(g, [-1]))                   # (p-q)(g - 1)
         pq = pmul([0] * R + [1], qpow_list(R - 1))             # p^R q^{R-1}
-        # 2*G2R ?= term1/2*... :  G2R = 2q G_R^2 + term2 - pq
-        # => 2 G2R = 4 q G_R^2 ... /... = term1 + 2*term2 - 2*pq ... but term1
-        # is already 4qG_R^2 = 2*(2q G_R^2). So:
-        rhs = padd(padd([c for c in term1], pmul([2], term2)), [-2 * c for c in pq])
-        if not peq(pmul([2], G2R), rhs):
+        rhs = padd(padd(term1, pmul([2], term2)), [-2 * c for c in pq])
+        if not peq(h, rhs):
             ok_dbl = False
     audit("B3-T2 doubling law G_2R = 2qG_R^2 + (p-q)(2G_R-1) - p^R q^(R-1), "
           "14 R incl. odd, to R=512 (beyond their 256)", ok_dbl)
@@ -879,8 +879,10 @@ def stage_wit_small():
     check("NC3 over-capacity corruption caught by capacity", bad3)
     check("NC4 wrong D0 claim caught by profile check",
           not all(prof[i] == floorgs(R + i) + 1 for i in range(R)))
-    check("NC5 row/degree mismatch caught by structure check",
-          not (len(bl[7]) == prof[7] + 1 + 1))
+    c5 = [list(r) for r in bl]
+    c5[7] = c5[7] + [0]
+    check("NC5 row/degree length mismatch caught by structure check",
+          not all(len(c5[i]) == prof[i] + 1 for i in range(R)))
 
     for path, lab in [(C4 + "/amm12592_witness_R256_ruleA_D0_1_boxeph.json",
                        "R256 ruleA D0=1"),
@@ -1031,7 +1033,115 @@ def stage_summary():
           "classification and canon paragraph are printed by the driver)")
 
 
+def stage_corefix():
+    """Supplementary section after the first core pass:
+    (1) T1 exhaustive re-run on the correct domain d >= 1 (the two d = 0
+        failures of the first pass are a DOMAIN finding on B3's statement,
+        not a substantive refutation -- see audit note);
+    (2) the referee-CORRECTED two-branch T4b lemma, machine-verified on the
+        full window grid."""
+    print("=" * 78)
+    print("STAGE corefix -- T1 domain fix + referee-corrected T4b (two-branch)")
+    print("=" * 78, flush=True)
+
+    # ---- T1 on the correct domain ----
+    import itertools
+    okf = okr = True
+    cnt = 0
+    for d in range(1, 6):
+        cd = crow(d)
+        cd1 = crow(d - 1)
+        b = [(cd1[k] if k <= d - 1 else 0) - (cd1[k - 1] if 1 <= k <= d else 0)
+             for k in range(d + 1)]
+        for delta in itertools.product(*[range(-cd[k], cd[k] + 1, 2)
+                                         for k in range(d + 1)]):
+            cnt += 1
+            for k in range(d + 1):
+                ck = delta[k] - b[k]
+                y = ck // 2
+                lo = -(cd1[k] if k <= d - 1 else 0)
+                hi = (cd1[k - 1] if 1 <= k <= d else 0)
+                if (ck & 1) or not (lo <= y <= hi):
+                    okf = False
+        for y in itertools.product(*[range(-(cd1[k] if k <= d - 1 else 0),
+                                           (cd1[k - 1] if 1 <= k <= d else 0) + 1)
+                                     for k in range(d + 1)]):
+            delta = [b[k] + 2 * y[k] for k in range(d + 1)]
+            for k in range(d + 1):
+                if abs(delta[k]) > cd[k] or (delta[k] - cd[k]) & 1:
+                    okr = False
+    check("T1b' exhaustive 1 <= d <= 5 (%d admissible blocks): admissible => "
+          "y in box" % cnt, okf)
+    check("T1c' exhaustive 1 <= d <= 5: y in box => admissible", okr)
+    audit("B3-T1 y-box lemma CONFIRMED on its true domain d >= 1; the first-pass "
+          "d = 0 failures are a STATEMENT-DOMAIN finding (Delta = +-1 blocks at "
+          "d = 0 are admissible but not of ballot form; quantifier must read "
+          "d >= 1 -- harmless: every floor profile has d_i >= 1)", okf and okr)
+
+    # ---- corrected T4b ----
+    print("\n-- corrected T4b: boundary cell t_b = R-2-d has load "
+          "w = 2C(d,t_b) - C(d,t_b+1) (R even) / w = -C(d,t_b+1) (R odd)")
+    print("   violate(t) <=> t <= R-3-d OR (t = t_b and BND), where")
+    print("   BND = [d(3R-4d-4) > 2(R-2-d)(R-1-d)]  (R even, B2's (ii))")
+    print("   BND = [3d > 2R-2]                      (R odd; equiv "
+          "C(d-1,t_b+1) > C(d-1,t_b))", flush=True)
+
+    def wload(R, d, t):
+        return (((-1) ** ((d - t) % 2)) * comb(R - 2 - t, d - t)
+                - comb(d + 1, t + 1) + 2 * comb(d, t))
+
+    npts = nfail = nid = 0
+    for R in range(4, 401):
+        for d in range(R // 2 + 1, (2 * R - 1) // 3 + 1):
+            if not (2 * d > R and 3 * d < 2 * R):
+                continue
+            npts += 1
+            tb = R - 2 - d
+            wb = wload(R, d, tb)
+            if R % 2 == 1:
+                if wb != -comb(d, tb + 1):
+                    nid += 1
+                bnd = 3 * d > 2 * R - 2
+            else:
+                if wb != 2 * comb(d, tb) - comb(d, tb + 1):
+                    nid += 1
+                bnd = d * (3 * R - 4 * d - 4) > 2 * (R - 2 - d) * (R - 1 - d)
+            cd1 = crow(d - 1)
+            ok = True
+            for t in range(d + 1):
+                w = wload(R, d, t)
+                lo = -2 * cd1[t] if t <= d - 1 else 0
+                hi = 2 * cd1[t - 1] if t >= 1 else 0
+                if ((w < lo) or (w > hi)) != ((t <= R - 3 - d) or (t == tb and bnd)):
+                    ok = False
+                    break
+            if not ok:
+                nfail += 1
+    check("T4b' corrected two-branch lemma: ALL %d window points R = 4..400 pass"
+          % npts, nfail == 0)
+    check("T4b' boundary-load closed forms exact on all %d points" % npts, nid == 0)
+    audit("B2-T4b VERDICT: statement PROVED for EVEN R (boundary clause (ii) "
+          "exact); as literally quantified it FAILS at ODD R on the single "
+          "boundary cell (in-box unless 3d > 2R-2, which the window nearly "
+          "excludes).  Odd-R consequences shift by ONE cell: junk block "
+          "[0, R-3-d], t_lo = R-2-d_0, T6b bound = 2d_0 - R + 3.  ALL DYADIC-R "
+          "consequences (t_lo = R-1-d_0, bound 2d_0-R+2, tau* = (1-g)/g, "
+          "c1 = 2g-1) are UNAFFECTED (dyadic R is even).", True,
+          "referee correction, machine-verified")
+    # odd-R gamma* spots
+    for R in (129, 257, 513, 1001, 1025, 3001):
+        d0 = floorgs(R)
+        bnd = 3 * d0 > 2 * R - 2
+        print("   odd spot R=%d: d0=%d, boundary violates: %s -> t_lo = %d, "
+              "death bound = %d" % (R, d0, bnd, R - 2 - d0, 2 * d0 - R + 3),
+              flush=True)
+    ledger_update("corefix", {"T1_ok": okf and okr, "grid_pts": npts,
+                              "grid_fail": nfail, "boundary_id_bad": nid})
+    print("\nSTAGE corefix done. failures: %d" % len(FAILS), flush=True)
+
+
 STAGES = {"core": stage_core, "wit_small": stage_wit_small,
+          "corefix": stage_corefix,
           "wit_512": stage_wit_512, "wit_1024a": stage_wit_1024a,
           "wit_1024b": stage_wit_1024b, "summary": stage_summary}
 

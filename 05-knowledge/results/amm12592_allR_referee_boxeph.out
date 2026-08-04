@@ -1,0 +1,449 @@
+AMM 12592 ALL-R INDEPENDENT REFEREE (boxeph subagent, 2026-08-03)
+fresh checker from statement (*); t-substitution identity engine; exact Fib/Lucas floor
+Tue Aug  4 03:02:56 AM UTC 2026
+
+==============================================================================
+STAGE core -- engines, S2/S3 recompute, adversarial audits of B2 and B3
+==============================================================================
+
+-- F. exact floor engine (fresh implementation)
+  [PASS] F1 floor(1e5 g*) = 59798 and floor(1e6 g*) = 597987
+  [PASS] F2 defining inequalities hold for all m <= 300
+  [PASS] F3 sympy oracle cross-check (40 random m <= 5000; guarded)
+
+-- S. master equation and 2G_R (recomputed, not trusted)
+  [PASS] S3 [x^0]2G_R = 2, [x^j]2G_R = (-1)^j C(R-1,j) - 1 (1<=j<=R-1), R=2..299 + {512,777,1024}
+  [PASS] S2 ballot reduction: (p-q)Sum_{i<R-1}x^i + 2G_R - x^{R-1} == q^{R-1} identically (same R range)
+  [PASS] S3b 2G_R even coefficientwise IFF R = 2^t, all R <= 4096 (Lucas-parity, trick spot-verified)
+
+-- B3-T1. y-box lemma: Delta=(p-q)+2gamma admissible at d <=> -C(d-1,k) <= y_k <= C(d-1,k-1)
+  [PASS] T1a proof identities: b_k == C(d,k) mod 2, C(d,k) = C(d-1,k)+C(d-1,k-1), d <= 60
+  [FAIL] T1b exhaustive d <= 5 (18206 admissible blocks): admissible => y in box
+  [FAIL] T1c exhaustive d <= 5: y in box => admissible
+  [PASS] T1d random d <= 45 (2000 trials incl. out-of-box negatives)
+  [REFUTED  ] B3-T1 y-box lemma (parity eliminates; boxes exactly as stated)
+
+-- B3-T2. Lucas diagonal / staircase expansion of 2G_R
+  [CONFIRMED] B3-T2 staircase: 2G_R = 2 + sum a_k p^k q^(k-1), a_k = (-1)^k[C(R-k,k)+C(R-k-1,k-1)], R in 2..300 + spots to 2048
+  [CONFIRMED] B3-T2 uniqueness: forward substitution recovers the SAME a_k and terminates at 0 (triangularity), 7 hostile R incl. odd
+  [CONFIRMED] B3-T2 dyadic evenness: all a_k even IFF R = 2^t, ALL R = 2..1200 (beyond their 1024)
+  [CONFIRMED] B3-T2 step law 2(G_{R+1}-G_R) = -p L_{R-1}, R = 2..600 (beyond their 399)
+  [CONFIRMED] B3-T2 doubling law G_2R = 2qG_R^2 + (p-q)(2G_R-1) - p^R q^(R-1), 14 R incl. odd, to R=512 (beyond their 256)
+
+-- B3-T6. IDENTITY M (dyadic multiscale skeleton), R = 4..2048
+  [CONFIRMED] B3-T6 IDENTITY M holds exactly for R = 4..2048 (one dyadic step beyond their 1024)
+  [CONFIRMED] B3-T6 W_l integral (dyadic Pascal interior even), pieces nonnegative, overlap <= log2 R  -- max overlaps {4: 2, 8: 3, 16: 4, 32: 5, 64: 6, 128: 7, 256: 8, 512: 9, 1024: 10, 2048: 11}
+
+-- B3. closed-form epoch witness at R = 4: gamma = (q^2, -p^2, 0)
+
+-- witness: W4 closed form (B3-T2)  (R=4, D0=0)
+  [PASS] W1 [W4 closed form (B3-T2)] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [W4 closed form (B3-T2)] profile d_i == floor(gamma*(R+i)) + 0 exactly (Fib/Lucas floor)
+  [PASS] W3 [W4 closed form (B3-T2)] all 4 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [W4 closed form (B3-T2)] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W5 [W4 closed form (B3-T2)] independent spot: identity at x = 2 exact
+  [PASS] W6 [W4 closed form (B3-T2)] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [W4 closed form (B3-T2)] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [W4 closed form (B3-T2)] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 1  -- got 1
+      effective rate max d_i/(R+i) = 4/7 = 0.571428571  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+  [CONFIRMED] B3 closed-form R=4 witness verifies at the gamma* floor profile
+
+-- B3-T3. attractor bridge sigma_i = E_{R-2-i} + 2 T_{i+1}
+  [CONFIRMED] B3-T3 bridge verified rowwise on the R=16 floor witness
+
+-- B2-T4. row-0 load closed form w_t (independent re-derivation)
+  [PASS] T4a decode basis identity x^j = sum_t C(d-j,t) B_{d,t}, random d <= 17
+  [CONFIRMED] B2-T4 closed form w_t = (-1)^(d-t)C(R-2-t,d-t) - C(d+1,t+1) + 2C(d,t) == direct decode, ALL d <= R-2, R = 5..40 + {64,100,128}
+
+-- B2-T4b. edge lemma hostile audit: violation IFF t <= R-2-d
+   window points R=4..400: 13200; pattern failures: 6699 (of which 0 satisfy boundary ineq (ii)); (ii)-points: 12936, (ii)-failures: 6501
+   sample failures (R, d, t, ii-status): [(7, 4, 1, 'ii-fails'), (8, 5, 1, 'ii-fails'), (9, 5, 2, 'ii-holds'), (10, 6, 2, 'ii-fails'), (11, 6, 3, 'ii-holds'), (13, 7, 4, 'ii-holds'), (13, 8, 3, 'ii-fails'), (14, 9, 3, 'ii-fails'), (15, 8, 5, 'ii-holds'), (15, 9, 4, 'ii-holds'), (16, 10, 4, 'ii-fails'), (17, 9, 6, 'ii-holds')]
+  [REFUTED  ] B2-T4b QUALIFIED claim (window AND boundary ineq (ii)) exhaustive R = 4..400  -- 6435/12936 (ii)-points pass
+  [REFUTED  ] B2-T4b UNQUALIFIED window claim (R/2 < d < 2R/3 alone) R = 4..400  -- 6699/13200 fail -> (ii) is LOAD-BEARING
+  [CONFIRMED] B2-T4b at ACTUAL gamma* floor profiles (13 spots to R=8192 incl. non-dyadic 1000/3000): window+(ii) hold, pattern holds, t_lo = R-1-d_0 exactly
+  [CONFIRMED] B2-T6b closed-form death bound = d_0 - t_lo + 1 = 2d_0 - R + 2 (algebraic consequence of t_lo = R-1-d_0)  -- arithmetic identity
+
+-- B2-T6b. claimed bound values (2d_0 - R + 2 with exact floor)
+  [CONFIRMED] B2-T6b bound table (13 entries to R=16384) matches exact recompute
+
+-- B2. tau* = (1-g)/g entropy identity (symbolic)
+  [CONFIRMED] B2 entropy equation holds IDENTICALLY at tau = (1-g)/g (any g)  -- simplify -> 0
+  [CONFIRMED] B2-T9b asymptotic threshold root: 1 - tau = tau^2 at tau = 1/phi
+
+STAGE core done. failures so far: 2
+
+==============================================================================
+STAGE wit_small -- R8/R16 ruleB, combined regression, R128 ruleB, R256 ruleA+ruleB
+==============================================================================
+
+-- witness: R8 combined (regression)  (R=8, D0=0)
+  [PASS] W1 [R8 combined (regression)] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R8 combined (regression)] profile d_i == floor(gamma*(R+i)) + 0 exactly (Fib/Lucas floor)
+  [PASS] W3 [R8 combined (regression)] all 8 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R8 combined (regression)] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W5 [R8 combined (regression)] independent spot: identity at x = 2 exact
+  [PASS] W6 [R8 combined (regression)] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R8 combined (regression)] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R8 combined (regression)] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 3  -- got 3
+      effective rate max d_i/(R+i) = 7/12 = 0.583333333  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+-- witness: R16 combined (regression)  (R=16, D0=0)
+  [PASS] W1 [R16 combined (regression)] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R16 combined (regression)] profile d_i == floor(gamma*(R+i)) + 0 exactly (Fib/Lucas floor)
+  [PASS] W3 [R16 combined (regression)] all 16 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R16 combined (regression)] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W5 [R16 combined (regression)] independent spot: identity at x = 2 exact
+  [PASS] W6 [R16 combined (regression)] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R16 combined (regression)] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R16 combined (regression)] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 7  -- got 7
+      effective rate max d_i/(R+i) = 16/27 = 0.592592593  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+-- witness: R32 combined (regression)  (R=32, D0=0)
+  [PASS] W1 [R32 combined (regression)] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R32 combined (regression)] profile d_i == floor(gamma*(R+i)) + 0 exactly (Fib/Lucas floor)
+  [PASS] W3 [R32 combined (regression)] all 32 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R32 combined (regression)] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W5 [R32 combined (regression)] independent spot: identity at x = 2 exact
+  [PASS] W6 [R32 combined (regression)] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R32 combined (regression)] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R32 combined (regression)] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 15  -- got 15
+      effective rate max d_i/(R+i) = 37/62 = 0.596774194  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+-- witness: R8 ruleB  (R=8, D0=0)
+  [PASS] W1 [R8 ruleB] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R8 ruleB] profile d_i == floor(gamma*(R+i)) + 0 exactly (Fib/Lucas floor)
+  [PASS] W3 [R8 ruleB] all 8 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R8 ruleB] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W5 [R8 ruleB] independent spot: identity at x = 2 exact
+  [PASS] W6 [R8 ruleB] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R8 ruleB] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R8 ruleB] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 3  -- got 3
+      effective rate max d_i/(R+i) = 7/12 = 0.583333333  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+-- witness: R16 ruleB  (R=16, D0=0)
+  [PASS] W1 [R16 ruleB] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R16 ruleB] profile d_i == floor(gamma*(R+i)) + 0 exactly (Fib/Lucas floor)
+  [PASS] W3 [R16 ruleB] all 16 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R16 ruleB] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W5 [R16 ruleB] independent spot: identity at x = 2 exact
+  [PASS] W6 [R16 ruleB] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R16 ruleB] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R16 ruleB] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 7  -- got 7
+      effective rate max d_i/(R+i) = 16/27 = 0.592592593  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+-- witness: R128 ruleB D0=0  (R=128, D0=0)
+  [PASS] W1 [R128 ruleB D0=0] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R128 ruleB D0=0] profile d_i == floor(gamma*(R+i)) + 0 exactly (Fib/Lucas floor)
+  [PASS] W3 [R128 ruleB D0=0] all 128 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R128 ruleB D0=0] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W5 [R128 ruleB D0=0] independent spot: identity at x = 2 exact
+  [PASS] W6 [R128 ruleB D0=0] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R128 ruleB D0=0] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R128 ruleB D0=0] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 63  -- got 63
+      effective rate max d_i/(R+i) = 58/97 = 0.597938144  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+-- negative controls (fresh checker must catch corruptions)
+  [PASS] NC1 +1 cell corruption caught by parity/capacity
+  [PASS] NC2 +2 cell corruption (parity+capacity fine) caught by identity
+  [PASS] NC3 over-capacity corruption caught by capacity
+  [PASS] NC4 wrong D0 claim caught by profile check
+  [PASS] NC5 row/degree length mismatch caught by structure check
+
+-- witness: R256 ruleA D0=1  (R=256, D0=1)
+  [PASS] W1 [R256 ruleA D0=1] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R256 ruleA D0=1] profile d_i == floor(gamma*(R+i)) + 1 exactly (Fib/Lucas floor)
+  [PASS] W3 [R256 ruleA D0=1] all 256 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R256 ruleA D0=1] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W5 [R256 ruleA D0=1] independent spot: identity at x = 2 exact
+  [PASS] W6 [R256 ruleA D0=1] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R256 ruleA D0=1] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R256 ruleA D0=1] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 127  -- got 127
+      effective rate max d_i/(R+i) = 77/128 = 0.601562500  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+-- witness: R256 ruleB D0=1  (R=256, D0=1)
+  [PASS] W1 [R256 ruleB D0=1] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R256 ruleB D0=1] profile d_i == floor(gamma*(R+i)) + 1 exactly (Fib/Lucas floor)
+  [PASS] W3 [R256 ruleB D0=1] all 256 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R256 ruleB D0=1] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W5 [R256 ruleB D0=1] independent spot: identity at x = 2 exact
+  [PASS] W6 [R256 ruleB D0=1] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R256 ruleB D0=1] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R256 ruleB D0=1] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 127  -- got 127
+      effective rate max d_i/(R+i) = 77/128 = 0.601562500  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+STAGE wit_small done. failures: 0
+
+==============================================================================
+STAGE wit_512 -- R512: ruleA D0=5 (NEW record), ruleA D0=8, ruleB D0=5,6,7,8
+==============================================================================
+
+-- witness: R512 ruleA D0=5  (R=512, D0=5)
+  [PASS] W1 [R512 ruleA D0=5] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R512 ruleA D0=5] profile d_i == floor(gamma*(R+i)) + 5 exactly (Fib/Lucas floor)
+  [PASS] W3 [R512 ruleA D0=5] all 512 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R512 ruleA D0=5] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W5 [R512 ruleA D0=5] independent spot: identity at x = 2 exact
+  [PASS] W6 [R512 ruleA D0=5] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R512 ruleA D0=5] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R512 ruleA D0=5] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 255  -- got 255
+      effective rate max d_i/(R+i) = 311/512 = 0.607421875  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+-- witness: R512 ruleA D0=8  (R=512, D0=8)
+  [PASS] W1 [R512 ruleA D0=8] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R512 ruleA D0=8] profile d_i == floor(gamma*(R+i)) + 8 exactly (Fib/Lucas floor)
+  [PASS] W3 [R512 ruleA D0=8] all 512 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R512 ruleA D0=8] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W5 [R512 ruleA D0=8] independent spot: identity at x = 2 exact
+  [PASS] W6 [R512 ruleA D0=8] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R512 ruleA D0=8] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R512 ruleA D0=8] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 255  -- got 255
+      effective rate max d_i/(R+i) = 157/256 = 0.613281250  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+-- witness: R512 ruleB D0=5  (R=512, D0=5)
+  [PASS] W1 [R512 ruleB D0=5] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R512 ruleB D0=5] profile d_i == floor(gamma*(R+i)) + 5 exactly (Fib/Lucas floor)
+  [PASS] W3 [R512 ruleB D0=5] all 512 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R512 ruleB D0=5] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W5 [R512 ruleB D0=5] independent spot: identity at x = 2 exact
+  [PASS] W6 [R512 ruleB D0=5] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R512 ruleB D0=5] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R512 ruleB D0=5] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 255  -- got 255
+      effective rate max d_i/(R+i) = 311/512 = 0.607421875  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+-- witness: R512 ruleB D0=6  (R=512, D0=6)
+  [PASS] W1 [R512 ruleB D0=6] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R512 ruleB D0=6] profile d_i == floor(gamma*(R+i)) + 6 exactly (Fib/Lucas floor)
+  [PASS] W3 [R512 ruleB D0=6] all 512 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R512 ruleB D0=6] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W5 [R512 ruleB D0=6] independent spot: identity at x = 2 exact
+  [PASS] W6 [R512 ruleB D0=6] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R512 ruleB D0=6] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R512 ruleB D0=6] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 255  -- got 255
+      effective rate max d_i/(R+i) = 39/64 = 0.609375000  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+-- witness: R512 ruleB D0=7  (R=512, D0=7)
+  [PASS] W1 [R512 ruleB D0=7] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R512 ruleB D0=7] profile d_i == floor(gamma*(R+i)) + 7 exactly (Fib/Lucas floor)
+  [PASS] W3 [R512 ruleB D0=7] all 512 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R512 ruleB D0=7] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W5 [R512 ruleB D0=7] independent spot: identity at x = 2 exact
+  [PASS] W6 [R512 ruleB D0=7] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R512 ruleB D0=7] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R512 ruleB D0=7] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 255  -- got 255
+      effective rate max d_i/(R+i) = 313/512 = 0.611328125  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+-- witness: R512 ruleB D0=8  (R=512, D0=8)
+  [PASS] W1 [R512 ruleB D0=8] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R512 ruleB D0=8] profile d_i == floor(gamma*(R+i)) + 8 exactly (Fib/Lucas floor)
+  [PASS] W3 [R512 ruleB D0=8] all 512 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R512 ruleB D0=8] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W5 [R512 ruleB D0=8] independent spot: identity at x = 2 exact
+  [PASS] W6 [R512 ruleB D0=8] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R512 ruleB D0=8] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R512 ruleB D0=8] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 255  -- got 255
+      effective rate max d_i/(R+i) = 157/256 = 0.613281250  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+   ruleA D0=5 vs ruleB D0=5: 273/512 rows differ (distinct witnesses: True)
+
+STAGE wit_512 done. failures: 0
+
+==============================================================================
+STAGE wit_1024a -- sha256 sidecar; ruleA fastflow sparse witness (reconstructed per its documented format)
+==============================================================================
+  [PASS] H1 sha256(R1024 ruleB file) matches committed sidecar  -- f9e84e840d4694b8a035ee146358b1b58e541337924c05c20be5aadf77889b6f
+   reconstruction: row0 = ballot + clamp(T4 load into [-2C(d-1,t), +2C(d-1,t-1)]); rows in sparse_c = ballot + c; absent rows = pure ballot; last row = corner -1
+
+-- witness: R1024 ruleA D0=15 (fastflow sparse, reconstructed)  (R=1024, D0=15)
+  [PASS] W1 [R1024 ruleA D0=15 (fastflow sparse, reconstructed)] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R1024 ruleA D0=15 (fastflow sparse, reconstructed)] profile d_i == floor(gamma*(R+i)) + 15 exactly (Fib/Lucas floor)
+  [PASS] W3 [R1024 ruleA D0=15 (fastflow sparse, reconstructed)] all 1024 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R1024 ruleA D0=15 (fastflow sparse, reconstructed)] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W6 [R1024 ruleA D0=15 (fastflow sparse, reconstructed)] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R1024 ruleA D0=15 (fastflow sparse, reconstructed)] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R1024 ruleA D0=15 (fastflow sparse, reconstructed)] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 511  -- got 511
+      effective rate max d_i/(R+i) = 629/1027 = 0.612463486  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+STAGE wit_1024a done. failures: 0
+
+==============================================================================
+STAGE wit_1024b -- R1024 ruleB D0=15 (201 MB) full fresh verification
+==============================================================================
+
+-- witness: R1024 ruleB D0=15  (R=1024, D0=15)
+  [PASS] W1 [R1024 ruleB D0=15] structure: R rows, len(row_i) = d_i + 1, all ints
+  [PASS] W2 [R1024 ruleB D0=15] profile d_i == floor(gamma*(R+i)) + 15 exactly (Fib/Lucas floor)
+  [PASS] W3 [R1024 ruleB D0=15] all 1024 blocks Lucas-box admissible (capacity + parity)
+  [PASS] W4 [R1024 ruleB D0=15] epoch identity sum x^i Delta_i == (1-x)^(R-1) (t-substitution, exact)
+  [PASS] W6 [R1024 ruleB D0=15] ballot cut: Delta_i(1) = delta_(i,0) = +-1 every row
+  [PASS] W7 [R1024 ruleB D0=15] S4 trajectory: |sigma_i(1)| <= R-1-i, parity == i+1 mod 2, ends 0
+  [PASS] W8 [R1024 ruleB D0=15] ballot debt: #{i<=R-2: Delta_i(1)=-1} = (R-2)/2 = 511  -- got 511
+      effective rate max d_i/(R+i) = 629/1027 = 0.612463486  (gamma* = 0.597987436...)
+      structure note: last block == full-box corner -1: True
+
+STAGE wit_1024b done. failures: 0
+
+==============================================================================
+STAGE summary -- ledger roll-up, claim classification, canon paragraph
+==============================================================================
+
+VERIFIED WITNESSES (16):
+   R=8     D0=0   eff_rate=7/12         debt=3     R8 combined (regression)
+   R=8     D0=0   eff_rate=7/12         debt=3     R8 ruleB
+   R=16    D0=0   eff_rate=16/27        debt=7     R16 combined (regression)
+   R=16    D0=0   eff_rate=16/27        debt=7     R16 ruleB
+   R=32    D0=0   eff_rate=37/62        debt=15    R32 combined (regression)
+   R=128   D0=0   eff_rate=58/97        debt=63    R128 ruleB D0=0
+   R=256   D0=1   eff_rate=77/128       debt=127   R256 ruleA D0=1
+   R=256   D0=1   eff_rate=77/128       debt=127   R256 ruleB D0=1
+   R=512   D0=5   eff_rate=311/512      debt=255   R512 ruleA D0=5
+   R=512   D0=8   eff_rate=157/256      debt=255   R512 ruleA D0=8
+   R=512   D0=5   eff_rate=311/512      debt=255   R512 ruleB D0=5
+   R=512   D0=6   eff_rate=39/64        debt=255   R512 ruleB D0=6
+   R=512   D0=7   eff_rate=313/512      debt=255   R512 ruleB D0=7
+   R=512   D0=8   eff_rate=157/256      debt=255   R512 ruleB D0=8
+   R=1024  D0=15  eff_rate=629/1027     debt=511   R1024 ruleA D0=15 (fastflow sparse, reconstructed)
+   R=1024  D0=15  eff_rate=629/1027     debt=511   R1024 ruleB D0=15
+
+CHECKER FAILURES (should be empty): ['T1b exhaustive d <= 5 (18206 admissible blocks): admissible => y in box', 'T1c exhaustive d <= 5: y in box => admissible']
+
+(see .out sections above for claim-by-claim audit verdicts; classification and canon paragraph are printed by the driver)
+ALL STAGES DONE
+
+==============================================================================
+STAGE corefix -- T1 domain fix + referee-corrected T4b (two-branch)
+==============================================================================
+  [PASS] T1b' exhaustive 1 <= d <= 5 (18204 admissible blocks): admissible => y in box
+  [PASS] T1c' exhaustive 1 <= d <= 5: y in box => admissible
+  [CONFIRMED] B3-T1 y-box lemma CONFIRMED on its true domain d >= 1; the first-pass d = 0 failures are a STATEMENT-DOMAIN finding (Delta = +-1 blocks at d = 0 are admissible but not of ballot form; quantifier must read d >= 1 -- harmless: every floor profile has d_i >= 1)
+
+-- corrected T4b: boundary cell t_b = R-2-d has load w = 2C(d,t_b) - C(d,t_b+1) (R even) / w = -C(d,t_b+1) (R odd)
+   violate(t) <=> t <= R-3-d OR (t = t_b and BND), where
+   BND = [d(3R-4d-4) > 2(R-2-d)(R-1-d)]  (R even, B2's (ii))
+   BND = [3d > 2R-2]                      (R odd; equiv C(d-1,t_b+1) > C(d-1,t_b))
+  [PASS] T4b' corrected two-branch lemma: ALL 13200 window points R = 4..400 pass
+  [PASS] T4b' boundary-load closed forms exact on all 13200 points
+  [CONFIRMED] B2-T4b VERDICT: statement PROVED for EVEN R (boundary clause (ii) exact); as literally quantified it FAILS at ODD R on the single boundary cell (in-box unless 3d > 2R-2, which the window nearly excludes).  Odd-R consequences shift by ONE cell: junk block [0, R-3-d], t_lo = R-2-d_0, T6b bound = 2d_0 - R + 3.  ALL DYADIC-R consequences (t_lo = R-1-d_0, bound 2d_0-R+2, tau* = (1-g)/g, c1 = 2g-1) are UNAFFECTED (dyadic R is even).  -- referee correction, machine-verified
+   odd spot R=129: d0=77, boundary violates: False -> t_lo = 50, death bound = 28
+   odd spot R=257: d0=153, boundary violates: False -> t_lo = 102, death bound = 52
+   odd spot R=513: d0=306, boundary violates: False -> t_lo = 205, death bound = 102
+   odd spot R=1001: d0=598, boundary violates: False -> t_lo = 401, death bound = 198
+   odd spot R=1025: d0=612, boundary violates: False -> t_lo = 411, death bound = 202
+   odd spot R=3001: d0=1794, boundary violates: False -> t_lo = 1205, death bound = 590
+
+STAGE corefix done. failures: 0
+
+==============================================================================
+FINAL REFEREE VERDICT (boxeph all-R referee, 2026-08-03)
+==============================================================================
+
+NOTE ON THE TWO LEDGER "FAIL" LINES: T1b/T1c first-pass failures are the d = 0
+domain artifact (see corefix: T1b'/T1c' PASS on the true domain d >= 1).  Net
+unresolved checker failures: ZERO.  Negative controls NC1-NC5 all caught.
+
+A. WITNESSES -- 16 verified by the fresh from-statement checker (exact
+   t-substitution identity engine, exact Fib/Lucas floor, admissibility,
+   S4 ballot trajectory, debt = (R-2)/2 in every file):
+   R = 8, 16, 32 (combined, regression), R = 8/16 ruleB, R = 4 closed form
+   gamma = (q^2, -p^2, 0) [B3], R = 128 ruleB D0=0, R = 256 ruleA+ruleB D0=1,
+   R = 512 ruleA D0=5 (NEW RECORD) + ruleA D0=8 + ruleB D0=5,6,7,8
+   (ruleA-D5 vs ruleB-D5 differ in 273/512 rows: distinct witnesses),
+   R = 1024 ruleB D0=15 (201 MB, sha256 = sidecar) and R = 1024 ruleA D0=15
+   (fastflow sparse; row 0 NOT stored -- reconstructed per its documented
+   T4-clamp rule, validated end-to-end by the identity closing exactly).
+   Effective rates (Fractions): 58/97 (128), 77/128 (256), 311/512 (512@D5),
+   629/1027 (1024@D15).  With THM-3329's assembly (cited, not re-proved):
+   T(n) <= n + 1 + floor(gamma* n) + 15 for ALL critical n <= 2047, now on
+   twice-independently-verified witnesses at every dyadic epoch <= 1024
+   (B1's sha-pinned referee + this independent engine).
+
+B. CLAIM CLASSIFICATION.
+   PROVED (confirmed here, some with corrections):
+   - S2 ballot reduction; S3 coefficient formula + dyadic evenness iff
+     (recomputed from scratch, R <= 4096).
+   - B3-T1 y-box lemma WITH DOMAIN d >= 1 (fails at d = 0; harmless).
+   - B3-T2 staircase expansion + uniqueness + step law (to 600) + doubling
+     law (to 512) + evenness iff (to 1200).
+   - B3-T3 attractor bridge; B3-T6 IDENTITY M (R = 4..2048, one dyadic step
+     beyond builder's range; overlap = log2 R exactly).
+   - B2-T4 closed form w_t (re-derived; all d <= R-2 at R <= 40 + spots).
+   - B2-T4b edge lemma FOR EVEN R with (ii) exact.  AS LITERALLY QUANTIFIED
+     IT IS FALSE AT ODD R: the boundary cell t = R-2-d is IN-box unless
+     3d > 2R-2 (nearly excluded by the window).  Corrected two-branch lemma
+     (boundary load = 2C(d,t)-C(d,t+1) even R / -C(d,t+1) odd R) verified on
+     ALL 13200 window points R <= 400 with zero failures.  Odd-R
+     consequences shift one cell (t_lo = R-2-d_0, bound 2d_0-R+3); ALL
+     dyadic-R consequences stand (t_lo = R-1-d_0 re-verified directly to
+     R = 8192; T6b bound = 2d_0-R+2; bound table to 16384 exact).
+   - B2 tau* = (1-gamma*)/gamma*: the entropy equation holds IDENTICALLY at
+     tau = (1-g)/g for EVERY g (H(p) = H(1-p)); c1 = 2 gamma* - 1.
+   VERIFIED-finite (builder certification accepted; spot-validated here
+   end-to-end through witness verification):
+   - B2-T2/T3/T6 conjugacy + fast junkflow engine (its R = 512/1024 outputs
+     verify from statement here -- strongest possible end-to-end check);
+   - D0 thresholds/deaths and growth-law table 2048..16384; T9' two-phase
+     death law; refutations of polylog and 25/1024-saturation conjectures.
+     NOTE: closures at R = 2048 (D0=38), 4096 (89), 8192 (192), 16384 (416)
+     have NO committed witness files -- re-verification obligation open.
+     D0*(R) is a RULE-A threshold, not an epoch-feasibility threshold.
+   - B3-T4 R/3 capacity law (exact ledger for its delimited scheme class).
+   OBSERVED: B3-T5 cancellation law and marker words.
+   CONJECTURED: Estimate E is false-in-trend for plain rule A; D0*(R)/R ->
+     eps_inf in [0.024, 0.04]; (E-lin); bulk-modified rule with o(R) slack.
+
+C. REMAINING GAP for the unconditional C* <= 1 + gamma* = log_5(5 phi^2):
+   everything in the chain (*) -> assembly -> C* bound is proved or
+   twice-verified EXCEPT the single statement: "every dyadic epoch R closes
+   at slack D0(R) = o(R)".  Exact closures exist for R <= 1024 (D0 <= 15,
+   all witness-verified); the plain attractor rule A empirically needs
+   ~0.025 R slack (would only give C* <= 1 + gamma* + eps along that route),
+   and B1's steering-invariance localizes the obstruction to the high-cell
+   bulk clamp.  The two live routes: (i) a bulk-modified clamp shaping junk
+   toward sign-alternation (K = (1,2,1) annihilates alternating profiles);
+   (ii) B3's Identity-M doubling skeleton with a row-feasible routing of the
+   scale-l pieces (positive, dyadically aligned, overlap <= log2 R) that
+   consumes the R/2 representation at top scale.  Rule negatives are NOT
+   infeasibility evidence for the profile; no known obstruction contradicts
+   o(R)-closable dyadic epochs.
+
+CANON-READY STATUS PARAGRAPH:
+  Independent referee (fresh checker from statement (*): exact Fib/Lucas
+  floor, Lucas-box admissibility, and a new t = (1-x)/x substitution engine
+  that decides the epoch identity by O(M^2) integer additions) re-verified
+  ALL new epoch witnesses: R = 128 (D0=0), 256 (D0=1, rule A + rule B),
+  512 (D0=5 NEW RECORD, 6, 7, 8; rule A and rule B distinct), 1024 (D0=15,
+  rule B 201-MB file sha-pinned, and rule A fastflow sparse with documented
+  row-0 reconstruction) -- 16/16 ALL PASS with negative controls, ballot
+  debt (R-2)/2 exact in every file, effective rates 58/97, 77/128, 311/512,
+  629/1027.  Attainment T(n) <= n + 1 + floor(gamma* n) + 15 for all
+  critical n <= 2047 therefore stands on two independent verifications per
+  epoch.  Adversarial audit: B3's y-box lemma holds exactly for d >= 1
+  (d = 0 domain slip found), the staircase/step/doubling laws and IDENTITY M
+  hold with margins extended (to R = 600/1200/2048); B2's T4 closed form and
+  tau* = (1-gamma*)/gamma* identity hold, and T4b is proved for EVEN R but
+  is FALSE as quantified at odd R -- the boundary cell t = R-2-d is in-box
+  unless 3d > 2R-2; the corrected two-branch lemma passes all 13200 window
+  points R <= 400 (boundary loads 2C(d,t)-C(d,t+1) / -C(d,t+1)), leaving
+  every dyadic-R consequence intact (t_lo = R-1-d_0 to R = 8192, T6b bound
+  2d_0-R+2, bound table to R = 16384).  The unconditional C* <= log_5(5
+  phi^2) now rests on exactly one open statement: dyadic epochs close at
+  o(R) slack -- with the plain rule A conjectured to need linear slack
+  (eps_inf ~ 0.025) and two designated routes (bulk alternation-shaping
+  clamp; Identity-M recursive routing) to beat it.  Open re-verification
+  obligation: committed witnesses for the engine-verified closures at
+  R = 2048/4096/8192/16384.

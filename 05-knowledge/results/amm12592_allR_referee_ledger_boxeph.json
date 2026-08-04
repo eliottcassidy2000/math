@@ -1,0 +1,523 @@
+{
+ "core_S": {
+  "S2": true,
+  "S3": true,
+  "even_iff": true
+ },
+ "core_T2": {
+  "staircase": true,
+  "unique": true,
+  "even_iff": true,
+  "step": true,
+  "dbl": true
+ },
+ "core_T6M": {
+  "identity": true,
+  "Wl": true,
+  "overlap": {
+   "4": 2,
+   "8": 3,
+   "16": 4,
+   "32": 5,
+   "64": 6,
+   "128": 7,
+   "256": 8,
+   "512": 9,
+   "1024": 10,
+   "2048": 11
+  }
+ },
+ "core_W4": {
+  "label": "W4 closed form (B3-T2)",
+  "R": 4,
+  "D0": 0,
+  "struct": true,
+  "profile": true,
+  "adm": true,
+  "identity": true,
+  "x2": true,
+  "units": true,
+  "ballot_traj": true,
+  "debt": 1,
+  "eff_rate": "4/7",
+  "last_corner": true,
+  "ok": true
+ },
+ "core_T4b": {
+  "grid_pts": 13200,
+  "grid_fail": 6699,
+  "ii_pts": 12936,
+  "ii_fail": 6501,
+  "fails_sample": [
+   [
+    7,
+    4,
+    1,
+    "ii-fails"
+   ],
+   [
+    8,
+    5,
+    1,
+    "ii-fails"
+   ],
+   [
+    9,
+    5,
+    2,
+    "ii-holds"
+   ],
+   [
+    10,
+    6,
+    2,
+    "ii-fails"
+   ],
+   [
+    11,
+    6,
+    3,
+    "ii-holds"
+   ],
+   [
+    13,
+    7,
+    4,
+    "ii-holds"
+   ],
+   [
+    13,
+    8,
+    3,
+    "ii-fails"
+   ],
+   [
+    14,
+    9,
+    3,
+    "ii-fails"
+   ],
+   [
+    15,
+    8,
+    5,
+    "ii-holds"
+   ],
+   [
+    15,
+    9,
+    4,
+    "ii-holds"
+   ],
+   [
+    16,
+    10,
+    4,
+    "ii-fails"
+   ],
+   [
+    17,
+    9,
+    6,
+    "ii-holds"
+   ]
+  ],
+  "spots": {
+   "R128_D0": [
+    true,
+    true,
+    true,
+    51,
+    51,
+    26
+   ],
+   "R256_D0": [
+    true,
+    true,
+    true,
+    102,
+    102,
+    52
+   ],
+   "R256_D1": [
+    true,
+    true,
+    true,
+    101,
+    101,
+    54
+   ],
+   "R512_D0": [
+    true,
+    true,
+    true,
+    205,
+    205,
+    102
+   ],
+   "R512_D5": [
+    true,
+    true,
+    true,
+    200,
+    200,
+    112
+   ],
+   "R1024_D0": [
+    true,
+    true,
+    true,
+    411,
+    411,
+    202
+   ],
+   "R1024_D15": [
+    true,
+    true,
+    true,
+    396,
+    396,
+    232
+   ],
+   "R2048_D38": [
+    true,
+    true,
+    true,
+    785,
+    785,
+    478
+   ],
+   "R4096_D89": [
+    true,
+    true,
+    true,
+    1557,
+    1557,
+    982
+   ],
+   "R1000_D0": [
+    true,
+    true,
+    true,
+    402,
+    402,
+    196
+   ],
+   "R3000_D0": [
+    true,
+    true,
+    true,
+    1206,
+    1206,
+    588
+   ],
+   "R8192_D0": [
+    true,
+    true,
+    true,
+    3293,
+    3293,
+    1606
+   ],
+   "R8192_D192": [
+    true,
+    true,
+    true,
+    3101,
+    3101,
+    1990
+   ]
+  }
+ },
+ "core_fails": [
+  "T1b exhaustive d <= 5 (18206 admissible blocks): admissible => y in box",
+  "T1c exhaustive d <= 5: y in box => admissible"
+ ],
+ "wit_small": {
+  "combined_R8": {
+   "label": "R8 combined (regression)",
+   "R": 8,
+   "D0": 0,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 3,
+   "eff_rate": "7/12",
+   "last_corner": true,
+   "ok": true
+  },
+  "combined_R16": {
+   "label": "R16 combined (regression)",
+   "R": 16,
+   "D0": 0,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 7,
+   "eff_rate": "16/27",
+   "last_corner": true,
+   "ok": true
+  },
+  "combined_R32": {
+   "label": "R32 combined (regression)",
+   "R": 32,
+   "D0": 0,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 15,
+   "eff_rate": "37/62",
+   "last_corner": true,
+   "ok": true
+  },
+  "R8_ruleB": {
+   "label": "R8 ruleB",
+   "R": 8,
+   "D0": 0,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 3,
+   "eff_rate": "7/12",
+   "last_corner": true,
+   "ok": true,
+   "file": "amm12592_floor_witness_R8_ruleB_boxeph.json"
+  },
+  "R16_ruleB": {
+   "label": "R16 ruleB",
+   "R": 16,
+   "D0": 0,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 7,
+   "eff_rate": "16/27",
+   "last_corner": true,
+   "ok": true,
+   "file": "amm12592_floor_witness_R16_ruleB_boxeph.json"
+  },
+  "R128_ruleB": {
+   "label": "R128 ruleB D0=0",
+   "R": 128,
+   "D0": 0,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 63,
+   "eff_rate": "58/97",
+   "last_corner": true,
+   "ok": true,
+   "file": "amm12592_witness_R128_ruleB_D0_0_boxeph.json"
+  },
+  "R256_ruleA_D01": {
+   "label": "R256 ruleA D0=1",
+   "R": 256,
+   "D0": 1,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 127,
+   "eff_rate": "77/128",
+   "last_corner": true,
+   "ok": true,
+   "file": "amm12592_witness_R256_ruleA_D0_1_boxeph.json"
+  },
+  "R256_ruleB_D01": {
+   "label": "R256 ruleB D0=1",
+   "R": 256,
+   "D0": 1,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 127,
+   "eff_rate": "77/128",
+   "last_corner": true,
+   "ok": true,
+   "file": "amm12592_witness_R256_ruleB_D0_1_boxeph.json"
+  }
+ },
+ "wit_small_fails": [],
+ "wit_512": {
+  "R512_ruleA_D05": {
+   "label": "R512 ruleA D0=5",
+   "R": 512,
+   "D0": 5,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 255,
+   "eff_rate": "311/512",
+   "last_corner": true,
+   "ok": true,
+   "file": "amm12592_witness_R512_ruleA_D0_5_boxeph.json"
+  },
+  "R512_ruleA_D08": {
+   "label": "R512 ruleA D0=8",
+   "R": 512,
+   "D0": 8,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 255,
+   "eff_rate": "157/256",
+   "last_corner": true,
+   "ok": true,
+   "file": "amm12592_witness_R512_ruleA_D0_8_boxeph.json"
+  },
+  "R512_ruleB_D05": {
+   "label": "R512 ruleB D0=5",
+   "R": 512,
+   "D0": 5,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 255,
+   "eff_rate": "311/512",
+   "last_corner": true,
+   "ok": true,
+   "file": "amm12592_witness_R512_ruleB_D0_5_boxeph.json"
+  },
+  "R512_ruleB_D06": {
+   "label": "R512 ruleB D0=6",
+   "R": 512,
+   "D0": 6,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 255,
+   "eff_rate": "39/64",
+   "last_corner": true,
+   "ok": true,
+   "file": "amm12592_witness_R512_ruleB_D0_6_boxeph.json"
+  },
+  "R512_ruleB_D07": {
+   "label": "R512 ruleB D0=7",
+   "R": 512,
+   "D0": 7,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 255,
+   "eff_rate": "313/512",
+   "last_corner": true,
+   "ok": true,
+   "file": "amm12592_witness_R512_ruleB_D0_7_boxeph.json"
+  },
+  "R512_ruleB_D08": {
+   "label": "R512 ruleB D0=8",
+   "R": 512,
+   "D0": 8,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "x2": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 255,
+   "eff_rate": "157/256",
+   "last_corner": true,
+   "ok": true,
+   "file": "amm12592_witness_R512_ruleB_D0_8_boxeph.json"
+  },
+  "ruleA_vs_ruleB_D5_rows_differ": 273
+ },
+ "wit_512_fails": [],
+ "wit_1024a": {
+  "sha256_match": true,
+  "R1024_ruleA_fastflow": {
+   "label": "R1024 ruleA D0=15 (fastflow sparse, reconstructed)",
+   "R": 1024,
+   "D0": 15,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 511,
+   "eff_rate": "629/1027",
+   "last_corner": true,
+   "ok": true,
+   "note": "row 0 NOT stored in file; reconstructed from documented T4-clamp rule -- reconstruction validated end-to-end by W4"
+  }
+ },
+ "wit_1024a_fails": [],
+ "wit_1024b": {
+  "R1024_ruleB": {
+   "label": "R1024 ruleB D0=15",
+   "R": 1024,
+   "D0": 15,
+   "struct": true,
+   "profile": true,
+   "adm": true,
+   "identity": true,
+   "units": true,
+   "ballot_traj": true,
+   "debt": 511,
+   "eff_rate": "629/1027",
+   "last_corner": true,
+   "ok": true,
+   "file": "amm12592_witness_R1024_ruleB_D0_15_boxeph.json"
+  }
+ },
+ "wit_1024b_fails": [],
+ "corefix": {
+  "T1_ok": true,
+  "grid_pts": 13200,
+  "grid_fail": 0,
+  "boundary_id_bad": 0
+ }
+}
