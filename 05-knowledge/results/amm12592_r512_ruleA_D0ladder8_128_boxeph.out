@@ -1,0 +1,6 @@
+  D0=8 row 0 (1s)
+  D0=8 row 128 (161s)
+  D0=8 row 256 (475s)
+  D0=8 row 384 (888s)
+D0=8: CLOSED adm=True identity=True (2328s)
+wrote amm12592_witness_R512_ruleA_D0_8_boxeph.json
