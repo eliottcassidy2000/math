@@ -1,0 +1,16 @@
+{
+ "stage": "window",
+ "pass": 5,
+ "fail": 0,
+ "fails": [],
+ "text": [
+  "==========================================================================",
+  "STAGE window -- death-freeness of [i_pf, i_pf+64]: exact + symbolic",
+  "==========================================================================",
+  "  [PASS] R=65536 D0=2048: 2d0-R+2 > i_feed+66 (window death-free, T6b ext.)  -- 16940 > 15271",
+  "  [PASS] R=65536 D0=4096: 2d0-R+2 > i_feed+66 (window death-free, T6b ext.)  -- 21036 > 13989",
+  "  [PASS] R=131072 D0=4096: 2d0-R+2 > i_feed+66 (window death-free, T6b ext.)  -- 33880 > 30477",
+  "  [PASS] R=131072 D0=8192: 2d0-R+2 > i_feed+66 (window death-free, T6b ext.)  -- 42072 > 27913",
+  "  [PASS] symbolic: D0(3+2g) >= 2R(1-g-g^2) + 66(1+g) for all dyadic R = 2^16..2^40, eps in {1/32,1/16}, both sandwich ends (PROVES the [i_pf, i_pf+64] window death-free for the reduction)"
+ ]
+}

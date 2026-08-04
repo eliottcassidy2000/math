@@ -1,0 +1,35 @@
+{
+ "stage": "bigrun_R32768_D01024",
+ "pass": 0,
+ "fail": 0,
+ "fails": [],
+ "text": [
+  "==========================================================================",
+  "STAGE bigrun -- independent replication R=32768 D0=1024",
+  "==========================================================================",
+  "{\"R\": 32768, \"D0\": 1024, \"outcome\": \"CLOSED\", \"capture_row\": 20185, \"die_row\": null, \"minus2\": 16383, \"i_pf\": 7604, \"front0\": 12148, \"d0\": 20618, \"events_n\": 168, \"cell1_death\": 17521, \"reignitions\": 0, \"postfeed_negative_ok\": true, \"a0_clock_ok\": true, \"elapsed_s\": 1509.9, \"fe_m\": 168, \"fe_a0\": 25164, \"fe_d\": 25165, \"snap_equal\": true, \"snap_ref_cells\": 169, \"snap_my_cells\": 169}"
+ ],
+ "extra": {
+  "R": 32768,
+  "D0": 1024,
+  "outcome": "CLOSED",
+  "capture_row": 20185,
+  "die_row": null,
+  "minus2": 16383,
+  "i_pf": 7604,
+  "front0": 12148,
+  "d0": 20618,
+  "events_n": 168,
+  "cell1_death": 17521,
+  "reignitions": 0,
+  "postfeed_negative_ok": true,
+  "a0_clock_ok": true,
+  "elapsed_s": 1509.9,
+  "fe_m": 168,
+  "fe_a0": 25164,
+  "fe_d": 25165,
+  "snap_equal": true,
+  "snap_ref_cells": 169,
+  "snap_my_cells": 169
+ }
+}
