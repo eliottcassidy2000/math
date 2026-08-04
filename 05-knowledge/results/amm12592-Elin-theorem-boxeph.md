@@ -247,6 +247,18 @@ eps <= 1/16 the initial front equals `R-2-d_0` exactly:
 16/16 primary closures; 7/7 probes. No death, no OPEN_RESIDUAL, no
 non-monotone behavior anywhere in the sweep.
 
+**Initial-front regimes (probe data, exact).** The probes confirm the
+three-regime structure of the row-0 junk front and hence the exact validity
+range of the T4b-based Theorem B:
+`d_0 in (R/2, 2R/3)`: `F(0) = R-2-d_0` (T4b; all eps <= 1/16 runs);
+`d_0 in (2R/3, ~3R/4)`: `F(0) = R-3-d_0` exactly (boundary cell flips
+in-box: R = 512, D0 = 64 gives 139 = R-3-d_0; R = 2048, D0 = 256 gives
+565 = R-3-d_0) — Theorem B would IMPROVE by 1 here if T4b's step (III)
+were extended past 2R/3;
+`d_0 > ~3R/4`: a second (ballot-type) overflow block appears above
+`R-2-d_0` (front ~ d_0/3.4 at the d_0 ~ R probes), so the T4b description
+genuinely ends — the window hypothesis (ii) is not an artifact.
+
 **Hostile-referee check (C7, `amm12592_Elin_witnessC7_boxeph.json`).** Full
 witnesses reconstructed at (R, D0) = (256, 16) and (512, 32) and verified by
 the INDEPENDENT referee implementation (its own admissible(), polynomial
@@ -257,8 +269,8 @@ not engine artifacts.
 
 ### 4.2 Feed-end state (`amm12592_Elin_feedend_state_boxeph.json`)
 
-At the first autonomous row of every swept (R, eps) run, R = 128..8192,
-eps in {1/32, 1/16} (14 records), certified exactly — ALL PASS:
+At the first autonomous row of every swept (R, eps) run, R = 128..16384,
+eps in {1/32, 1/16} (16 records), certified exactly — ALL PASS:
 **(N)** junk all-negative; **(C)** support a contiguous block `[0, m]`;
 **(W)** `6m <= d`; **(F)** the C-F freeze inequalities; **(D)** the debt
 identity `j_0 = (2-R) + 2 * minus2count`; **(DL)** the drain deadline.
@@ -272,21 +284,23 @@ identity `j_0 = (2-R) + 2 * minus2count`; **(DL)** the drain deadline.
 | 2048 | 128 | 435 | 39 | -1602 | 263 |
 | 4096 | 256 | 870 | 58 | -3230 | 417 |
 | 8192 | 512 | 1740 | 83 | -6446 | 636 |
+| 16384 | 1024 | 3481 | 119 | -12910 | 972 |
 
-(eps = 1/32 rows analogous; JSON has all 14.) Three OBSERVED scaling laws
+(eps = 1/32 rows analogous; JSON has all 16.) Three OBSERVED scaling laws
 of the feed-end state (exact data, no proof claimed):
 
-- `m ~ sqrt(R)` (m / sqrt(R) = 0.62, 0.75, 0.80, 0.875, 0.86, 0.91, 0.92 —
-  slowly increasing toward ~1): the autonomous problem starts on a
+- `m ~ sqrt(R)` (m / sqrt(R) = 0.62, 0.75, 0.80, 0.875, 0.86, 0.91, 0.92,
+  0.93 — slowly increasing toward ~1): the autonomous problem starts on a
   root-scale, not linear-scale, band.
-- `max_t log2 A_t ~ 10-11`, essentially R-INDEPENDENT across 6 doublings:
+- `max_t log2 A_t ~ 10-11`, essentially R-INDEPENDENT across 7 doublings:
   the cap-excess of the residue does not grow with scale, while the row
   budget `R - 2 - i_feed ~ 0.79 R` grows linearly — strong structural
   support for Hypothesis S.
-- `|j_0(feed-end)| = d(feed-end) + c` with `|c| <= 11` at ALL 14 records
-  (e.g. 6446 vs d = 6450 at R = 8192): the feed leaves the cell-0 debt
-  exactly at the T7 drain-hypothesis edge `|v| <= d`. Unexplained; smells
-  of another exact edge law (compare the T4b boundary).
+- `|j_0(feed-end)| = d(feed-end) + c` with `|c| <= 11` at ALL 16 records
+  (e.g. 12910 vs d = 12903 at R = 16384; 6446 vs 6450 at R = 8192): the
+  feed leaves the cell-0 debt exactly at the T7 drain-hypothesis edge
+  `|v| <= d`. Unexplained; smells of another exact edge law (compare the
+  T4b boundary).
 
 Measured anatomy (R = 2048, D0 = 128; instrumentation JSON):
 

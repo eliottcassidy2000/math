@@ -71,13 +71,19 @@ die/close pair; closures spot-checked, finalists referee-verified)
 | 128  | 0             | 0         | 0 (cap 81)| 0              | 0    |
 | 256  | 1             | **0** (cap 154, REFEREE ok, witness sha 5950bd42) | 0 (cap 153) | **0** | 1 |
 | 512  | 5             | 5 (4 dies @123) | **4** (cap 319, REFEREE ok; 3 dies @119) | **4** | 1 |
-| 1024 | 15            | **14** (cap 628, REFEREE ok, witness sha 81391349; 13 dies @245) | >= 16 (15 DIES @542!) | **14** | 1 |
+| 1024 | 15            | **14** (cap 628; REFEREE ok + witness sha 81391349 on the desc run, desc1 closes identically; 13 dies @245) | >= 16 (15 DIES @542!) | **14** | 1 |
 | 2048 | 38            | **36** (cap 1271; 35 dies @503) | 37 (36 dies @1051) | **36** | 2 |
 | 4096 | 89            | **87** (cap 2537; 86 dies @1019; pinned with desc1) | not run | **87** | 2 |
-| 8192 | 192           | **<= 189** (desc, cap 5064, spots ok; desc1 188/189 probe running) | — | **<= 189** | >= 3 |
+| 8192 | 192           | **<= 188** (desc1, cap 5064, spots ok; desc closes 189 too) | — | **<= 188** | >= 4 |
 
-(1024/2048/4096 desc and desc1 agree row-for-row on every compared stat;
-the two variants differ only at 256 D0=0.)
+(At 512/1024/2048/4096 desc and desc1 have identical outcomes, die rows,
+capture rows, minus2 and T6b on every pair tested; the two variants differ
+only at 256 D0=0.  A desc1 probe at R=16384 D0=400 — the exact point where
+plain DIES at row 4055, refuting the 25/1024 saturation — was launched at
+close-out; its trace flushes to
+`amm12592_bulkrule_trace_R16384_D0400_desc1_boxeph.json`.  If it closes,
+gain >= 1..16 at 16384 and the desc1 curve stays strictly below plain
+through seven doublings.)
 
 All closures have minus2 = (R-2)/2 exactly (T8 debt paid), capture at
 ~0.62R, spots x2/x3/debt all True. Witness file (with SHA-256):
@@ -87,15 +93,17 @@ tr15 512 closure and desc 1024 D0=14 closure referee ALL-PASS
 (ok/adm/identity all True, debt 511 = (R-2)/2).
 
 Reading of the curve: best-of-family normalized 1024*D0*/R =
-0 (256), 8 (512), 14 (1024), 18 (2048), 21.75 (4096), <= 23.625 (8192) —
-increments 8, 6, 4, 3.75, <= 1.875 — the same declining-increment LINEAR
+0 (256), 8 (512), 14 (1024), 18 (2048), 21.75 (4096), <= 23.5 (8192) —
+increments 8, 6, 4, 3.75, <= 1.75 — the same declining-increment LINEAR
 signature as plain (4, 10, 15, 19, 22.25, 24), shifted down. The local
-bulk-rule class does NOT produce flat or O(log R) slack; it uniformly
-dominates plain (desc/desc1 never worse anywhere measured) and shaves the
-threshold by 1..3 units with the absolute gain weakly growing in R
-(0,1,1,1,2,2,>=3) while the RELATIVE gain shrinks (1.6% at 8192): a
-boundary-layer effect, not a slope change. eps_inf estimate for the
-family: ~0.023 vs plain ~0.0245 (both still linear on this data).
+bulk-rule class does NOT produce flat or O(log R) slack on this data; it
+uniformly dominates plain (desc/desc1 never worse anywhere measured) and
+shaves the threshold by 1..4+ units with the absolute gain GROWING in R
+(0,1,1,1,2,2,>=4 — lower 8192 probes not yet run, so >=4 is a floor) while
+the relative gain stays ~2%: consistent with a boundary-layer effect on an
+unchanged slope, though the growing absolute gain leaves a slope reduction
+not yet excluded. eps_inf estimate for the family: <= 0.023 vs plain
+~0.0245 (both still linear on this data).
 
 ## 3. MECHANISM (the real yield of this lane)
 
@@ -138,7 +146,7 @@ pairwise-sum residue = non-alternating content):
    can BREAK a plain closure), and defects nucleate where the boosted layer
    meets the natural envelope.
 
-4. **Where the gain comes from.** desc's gain (1..2 units) is exactly the
+4. **Where the gain comes from.** desc's gain (1..3 units) is exactly the
    absorb-window boundary layer: choosing u inside the box (not at the
    nearest point) absorbs the front taper ~1-2 cells deeper per row and
    pre-cancels the T9a edge transport (vent). Window-depth tests (32/128/
@@ -155,6 +163,45 @@ pairwise-sum residue = non-alternating content):
    of feed-repumped loads with the (1,1)/(1,2,1) Beatty kernel word over
    MANY rows — i.e. scheduling across rows (choosing WHERE the residue
    accumulates over the whole feed phase), not cellwise-local choices.
+
+## 3b. THE SUPER-BLOCK LAW (new, exact; the sharpest result of this lane)
+
+Mode `block` of the sweep script: per row, take the longest same-sign junk
+run within 40 cells of the front; call it SUPER when its MINIMUM |value|
+exceeds the ENTIRE remaining cap tail sum_{t' > lead} 2C(d-1, t') (the
+total absorption budget strictly beyond the run's deepest cell). Exact
+outcomes on all near-threshold pairs (three rules, four scales):
+
+| run | outcome | first super row | super rows after | first run>=5 |
+|-----|---------|------|------|------|
+| 512 D0=4 plain | DIE @121 | 13 | ALL (109) | 11 |
+| 512 D0=5 plain | CLOSED | never | 0 | 82 (sub-cap) |
+| 1024 D0=14 plain | DIE @250 | 17 | ALL (232) | 18 |
+| 1024 D0=15 plain | CLOSED | never | 0 | 160 (sub-cap) |
+| 2048 D0=37 plain | DIE @508 | 27 | ALL (482) | 25 |
+| 2048 D0=38 plain | CLOSED | never | 0 | 320 (sub-cap) |
+| 1024 D0=13 desc1 | DIE @245 | 16 | ALL (228) | 18 |
+| 1024 D0=14 desc1 | CLOSED | never | 0 | 187 (sub-cap) |
+| 512 D0=3 tr15 | DIE @119 | 13 | ALL (106) | 15 |
+| 512 D0=4 tr15 | CLOSED | never | 0 | 57 (sub-cap) |
+| 4096 D0=88 plain | DIE @1014 | 31 | ALL (984) | 28 |
+| 4096 D0=89 plain | CLOSED | never | 0 | 630 (sub-cap) |
+
+Perfect 12/12 separation: **death <=> a super block forms** (and it forms
+by row 13/17/27/31 at R = 512/1024/2048/4096 — a DECLINING fraction of
+R, LONG before the visible T9' march); once super,
+super on EVERY later row (no recovery ever observed, 2141 super rows
+total); closures contain long same-sign runs too, but always sub-cap. The
+first-super row is the true point of no return; the die row is just its
+delayed consequence. This (i) explains why all local shaping fails (by
+first-super time the block already dwarfs every box it will ever meet),
+(ii) gives the E-lin scaling limit its order parameter — sup over rows of
+(block min value)/(cap tail) as a function of eps = D0/R — and (iii)
+upgrades the immortality statement to a concrete provable target:
+"super-block persistence under every admissible clamp" (the kernel adds
+same-sign contributions inside the block faster than the sub-tail boxes
+can drain; T9b gives the geometric tail). Ledgers:
+`amm12592_bulkrule_blockledger_R*_D0*_*_boxeph.json`.
 
 ## 4. Rule non-monotonicity + spec sensitivity (new hazard entries)
 
@@ -176,9 +223,11 @@ and deterministic.
 
 - The exact spec of the best rules is in `VARIANTS` + `choose_row` of the
   sweep script (desc = absorb-window + vent ladder; tr15 = + guard(16, 3/2)).
-- Exact witnesses: R=512 D0=4 (tr15, sha 311975f6...), R=256 D0=0 (desc),
-  R=1024 D0=14 (desc), R=2048 D0=36 (desc), R=4096 D0=87 (desc) — traces
-  saved; witness JSONs storable on demand (R<=1024 sizes ~1-25 MB).
+- Exact witnesses saved as files: R=256 D0=0 (desc1, sha 5950bd42),
+  R=512 D0=4 (tr15, sha 311975f6), R=1024 D0=14 (desc, sha 81391349);
+  R=2048 D0=36 / R=4096 D0=87 / R=8192 D0<=188 closures have traces +
+  x2/x3/debt spots (witness JSONs regenerable deterministically from the
+  pinned specs).
 - The march/stall dichotomy is now a statement about same-sign-block
   nucleation vs cap scale in the front boundary layer. The scaling-limit
   question (D2/E-lin) should be phrased in these variables: block value /
@@ -196,10 +245,10 @@ and deterministic.
   ratio-rho kernel action law ((1-rho)^2 / (1-rho) cellwise multipliers).
 - VERIFIED-exact: regression vs certified engine (4 configs, bit-identical);
   D0* table above with adjacent die/close pairs; referee ALL-PASS for
-  desc R=256 D0=0, tr15 R=512 D0=4 (+ witness file with SHA); x2/x3/debt
-  spots on every closure listed.
+  desc1 R=256 D0=0, tr15 R=512 D0=4, desc R=1024 D0=14 (witness files with
+  SHA); x2/x3/debt spots on every closure listed; super-block ledger 12/12.
 - MEASURED (no proof): die/close alternation signature; block-birth
-  sequence; gain pattern 0,1,1,1,2,2; eps_inf(family) ~ 0.021.
+  sequence; gain pattern 0,1,1,1,2,2,>=4; eps_inf(family) <= 0.023.
 - CONJECTURED: immortality threshold as an exact lemma (block value >
   geometric cap-tail along the T9b diagonal implies death for every
   admissible clamp rule) — this looks provable with the T9 machinery and

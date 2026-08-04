@@ -215,6 +215,7 @@ report["C3_i_feed_formula_grid"] = {"n": c3_n, "all_equal": c3_ok}
 report["C4_feed_survival"] = c4_rows
 c4_ok = all(r["survives_feed"] for r in c4_rows)
 report["C4_all"] = c4_ok
+json.dump(report, open(OUT, "w"), indent=1)   # stage-partial dump
 print(f"C3: i_feed formula == brute on {c3_n} grid points: {c3_ok}",
       flush=True)
 print(f"C4: T6b bound > i_feed at all {len(c4_rows)} grid points with "
@@ -243,10 +244,19 @@ c5_ok = all(r["support_is_full_block"] and r["front0"] == r["expected_front"]
             for r in c5)
 report["C5_all"] = c5_ok
 assert c5_ok
+json.dump(report, open(OUT, "w"), indent=1)   # stage-partial dump
+
+import sys
+if "--skip-c6" in sys.argv:
+    report["C6_lift_on_witness"] = "SKIPPED (run separately)"
+    report["ALL_PASS_C1_C5"] = True
+    json.dump(report, open(OUT.replace(".json", "_c15.json"), "w"), indent=1)
+    print("C1-C5 ALL PASS (C6 skipped) ->", OUT.replace(".json", "_c15.json"),
+          flush=True)
+    raise SystemExit(0)
 
 
 # ---------------------------------------------------------------- C6
-import sys
 sys.path.insert(0, HERE)
 from amm12592_allR_family_toolbox_boxeph import admissible, epoch_sum, qpow
 

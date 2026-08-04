@@ -53,12 +53,13 @@ def initial_junk(R, d):
     B = d + 1                 # C(d+1, t+1)   at t=0
     P = 1                     # C(d-1, t)     at t=0   (box lo = -2P)
     Pprev = 0                 # C(d-1, t-1)   at t=0   (box hi = +2Pprev)
+    CB = 1                    # C(d, t)       at t=0   (incremental)
     j = {}
     junkL1 = 0
     c0 = None
     sgn = 1 if (d % 2 == 0) else -1   # (-1)^{d-t} at t=0
     for t in range(d + 1):
-        w = sgn * A - B + 2 * comb(d, t)
+        w = sgn * A - B + 2 * CB
         lo, hi = -2 * P, 2 * Pprev
         u = min(hi, max(lo, w))
         assert (w - u) % 2 == 0 and (u - lo) % 2 == 0, ("parity", t)
@@ -73,6 +74,8 @@ def initial_junk(R, d):
             A, r = divmod(num, R - 2 - t); assert r == 0
             num = B * (d - t)
             B, r = divmod(num, t + 2); assert r == 0
+            num = CB * (d - t)
+            CB, r = divmod(num, t + 1); assert r == 0
             Pprev = P
             if t < d - 1:
                 num = P * (d - 1 - t)

@@ -663,3 +663,108 @@ def cmd_nu():
 
 if len(sys.argv) > 1 and sys.argv[1] == "nu":
     cmd_nu()
+
+
+def block_ledger(R, D0, variant="plain", maxrows=None):
+    """Exact per-row measurement for the immortality conjecture: find the
+    longest same-sign run within the 40 cells behind the front; record its
+    length, leading (deepest) cell, min/max |value| inside the run, and the
+    exact geometric cap tail sum_{t' > lead} 2 C(d-1, t') (the total box
+    budget strictly beyond the run's lead cell).  Reports first row where
+    min|run value| > cap tail (candidate point of no return)."""
+    cfg = VARIANTS[variant]
+    g = two_G_coeffs(R)
+    j = {}
+    d_prev = None
+    out = {"R": R, "D0": D0, "variant": variant, "rows": [],
+           "first_super": None, "outcome": None}
+    for i in range(0, R - 1):
+        d = floorgs(R + i) + D0
+        dn = floorgs(R + i + 1) + D0
+        S = 1 + (dn - d)
+        if i == 0:
+            w = {t: v for t, v in enumerate(t4_row_load(R, d)) if v}
+        else:
+            delta = d - d_prev
+            K = (1, 1) if delta == 0 else (1, 2, 1)
+            w = {}
+            for t, v in j.items():
+                for s2, ks in enumerate(K):
+                    w[t + s2] = w.get(t + s2, 0) + ks * v
+            if d + i <= R - 1:
+                w[0] = w.get(0, 0) + g[d + i]
+            if delta == 1 and d - 1 + i <= R - 1:
+                w[0] = w.get(0, 0) + g[d - 1 + i]
+                w[1] = w.get(1, 0) + g[d - 1 + i]
+            w = {t: v for t, v in w.items() if v}
+        if not w:
+            out["outcome"] = {"CLOSED_capture": i}
+            break
+        jn, us, c0, junkL1, diag = choose_row(w, d, dn, S, cfg, record_u=False)
+        died = d in jn
+        if jn:
+            T = max(jn)
+            # longest same-sign run in cells [T-40, T]
+            best = (0, None, None, None)   # len, lead, minv, maxv
+            runlen = 0
+            runmin = runmax = None
+            lead = None
+            prev_sign = 0
+            for t in range(max(0, T - 40), T + 1):
+                v = jn.get(t, 0)
+                sg = 0 if v == 0 else (1 if v > 0 else -1)
+                if sg != 0 and sg == prev_sign:
+                    runlen += 1
+                    runmin = min(runmin, abs(v))
+                    runmax = max(runmax, abs(v))
+                    lead = t
+                elif sg != 0:
+                    runlen = 1
+                    runmin = runmax = abs(v)
+                    lead = t
+                else:
+                    runlen = 0
+                prev_sign = sg
+                if runlen > best[0]:
+                    best = (runlen, lead, runmin, runmax)
+            L, lead, mn, mx = best
+            rec = {"i": i, "front": T, "gap": d - T, "runlen": L}
+            if L >= 2 and lead is not None:
+                tail = 0
+                c = 2 * comb(d - 1, lead)
+                for tt in range(lead + 1, d + 1):
+                    c = c * (d - tt) // tt if tt <= d - 1 else 0
+                    tail += c
+                rec["lead"] = lead
+                rec["minv_bits"] = mn.bit_length()
+                rec["maxv_bits"] = mx.bit_length()
+                rec["captail_bits"] = tail.bit_length()
+                rec["super"] = mn > tail
+                if rec["super"] and out["first_super"] is None:
+                    out["first_super"] = i
+            if maxrows is None or i < maxrows or died:
+                out["rows"].append(rec)
+        j = jn
+        d_prev = d
+        if died:
+            out["outcome"] = {"DIE": i}
+            break
+        if not j and dn + i > R - 1:
+            out["outcome"] = {"CLOSED_capture": i}
+            break
+    return out
+
+
+if len(sys.argv) > 1 and sys.argv[1] == "block":
+    R, D0 = int(sys.argv[2]), int(sys.argv[3])
+    var = sys.argv[4] if len(sys.argv) > 4 else "plain"
+    res = block_ledger(R, D0, var)
+    pth = os.path.join(RESULTS, "amm12592_bulkrule_blockledger_R%d_D0%d_%s_"
+                       "boxeph.json" % (R, D0, var))
+    json.dump(res, open(pth, "w"))
+    sup = [r for r in res["rows"] if r.get("super")]
+    long_runs = [r for r in res["rows"] if r["runlen"] >= 5]
+    print("R=%d D0=%d %s: outcome=%s first_super_row=%s n_super_rows=%d "
+          "first_run>=5_row=%s" % (R, D0, var, res["outcome"],
+          res["first_super"], len(sup),
+          long_runs[0]["i"] if long_runs else None), flush=True)
