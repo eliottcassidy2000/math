@@ -1,0 +1,23 @@
+{
+ "R": 32768,
+ "D0": 2048,
+ "outcome": "CLOSED",
+ "capture_row": 19865,
+ "die_row": null,
+ "minus2": 16383,
+ "i_pf": 6963,
+ "front0": 11124,
+ "d0": 21642,
+ "events_n": 169,
+ "cell1_death": 17133,
+ "reignitions": 0,
+ "postfeed_negative_ok": true,
+ "a0_clock_ok": true,
+ "elapsed_s": 1240.8,
+ "fe_m": 169,
+ "fe_a0": 25806,
+ "fe_d": 25806,
+ "snap_equal": true,
+ "snap_ref_cells": 170,
+ "snap_my_cells": 170
+}
