@@ -31,9 +31,11 @@ output: 05-knowledge/results/amm12592_artanh_certificate_decode_deathstar.out
 > the model yields no general floor at all and the reported binding cuts
 > were truncation-edge artifacts. Current honest state:
 > `C = log_5(5 phi^2)` attained for ALL n <= 255 exactly and for all
-> n <= 1023 with additive slack <= 9 (THM-3029 + THM-3302 + THM-3329:
-> R = 128 closed three independent ways; deterministic attractor rule closes
-> R = 256 at D0 = 1, R = 512 at D0 = 8); balanced-block-class
+> n <= 2047 with additive slack <= 16 (THM-3029/3302/3329/3330; exact slack
+> thresholds D0*(R) = 0,1,5,15,38,89,192,[401..416] for R = 128..16384 —
+> LINEAR growth for the plain rule, eps_inf ~ 0.025, so the golden route
+> needs the bulk alternation rule; Y-box/Lucas-diagonal structure proved);
+> balanced-block-class
 > floor `C*_block > 1.5970` exact (THM-3009, audit-hardened, ladder to
 > m = 4096, certified rational bracket
 > `115939/193882 < gamma* < 105183/175895`); GENERAL-class floor OPEN —
