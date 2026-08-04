@@ -396,6 +396,11 @@ def verify_T9(R, D0):
                 findings["post_trigger_gap_steps"].append(gap_prev - gap_now)
                 if gap_now > gap_prev:
                     findings["march_monotone"] = False
+            # (e) no-recovery bookkeeping: last row where gap failed to shrink
+            if prev_tmax is not None:
+                if dn - tm >= d - prev_tmax:
+                    findings["last_nondecrease_row"] = i
+                    findings["gap_at_last_nondecrease"] = dn - tm
             prev_extreme = jn.get(tm)
             prev_tmax = tm
         j = jn
