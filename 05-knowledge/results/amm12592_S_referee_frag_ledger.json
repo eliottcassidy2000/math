@@ -1,0 +1,21 @@
+{
+ "stage": "ledger",
+ "pass": 7,
+ "fail": 0,
+ "fails": [],
+ "text": [
+  "==========================================================================",
+  "STAGE ledger -- E1 stored-artifact cross-checks (A_1 law, edge law, r_t, fcscan)",
+  "==========================================================================",
+  "  (R, D0, m, a0-d_fe, ~log2 A_1): [(128, 4, 7, 0, 4), (128, 8, 8, 2, 5), (256, 8, 12, -10, 6), (256, 16, 12, -11, 6), (512, 16, 19, 3, 7), (512, 32, 19, 5, 7), (1024, 32, 27, -14, 8), (1024, 64, 28, -10, 8), (2048, 64, 40, 0, 9), (2048, 128, 41, -8, 9), (4096, 128, 58, -7, 10), (4096, 256, 58, 7, 10), (8192, 256, 83, -13, 11), (8192, 512, 83, -5, 11), (16384, 512, 118, -6, 12), (16384, 1024, 119, 9, 12), (32768, 1024, 168, -1, 13), (32768, 2048, 169, 0, 13)]",
+  "  [PASS] edge law a0 - d_fe in [-14, +9] over all stored snapshots",
+  "  [PASS] A_1 grows ~ +1 bit/doubling at feed-end (REFUTES D2 R-independence reading; supports E1)  -- [(128, 4), (256, 6), (512, 7), (1024, 8), (2048, 9), (4096, 10), (8192, 11), (16384, 12), (32768, 13)]",
+  "  R=32768 D0=2048: max r_t = 1.00090 at t=5, over-cells=[3, 5, 7, 9]",
+  "  [PASS] marginal surface at (32768,2048): max r_t ~ 1.0009 at t=5 [E1 claim]",
+  "  [PASS]   over-cells single-parity (odd)  -- [3, 5, 7, 9]",
+  "  R=32768 D0=1024: max r_t = 1.00089 at t=5, over-cells=[3, 5, 7]",
+  "  [PASS] marginal surface at (32768,1024): max r_t ~ 1.0009 at t=5 [E1 claim]",
+  "  [PASS]   over-cells single-parity (odd)  -- [3, 5, 7]",
+  "  [PASS] all stored fcscan certificates: capture_ub >= actual capture"
+ ]
+}

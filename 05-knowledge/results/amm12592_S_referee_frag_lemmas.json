@@ -1,0 +1,15 @@
+{
+ "stage": "lemmas",
+ "pass": 4,
+ "fail": 0,
+ "fails": [],
+ "text": [
+  "==========================================================================",
+  "STAGE lemmas -- my randomized exact certificates for S1/S2/S4/cone step",
+  "==========================================================================",
+  "  [PASS] S1 magnitude closed form == definition box clamp (300 random states)",
+  "  [PASS] S2 comparison principle (300 random comparable pairs)",
+  "  [PASS] S4 cell-1 absorbing criterion (300 trials)",
+  "  [PASS] S-cone-fc one-step: non-increase + frozen support + F3 propagation (300 random cone states x both kernels x cap growth 0/1/3)"
+ ]
+}

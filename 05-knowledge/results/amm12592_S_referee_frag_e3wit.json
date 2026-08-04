@@ -1,0 +1,20 @@
+{
+ "stage": "e3wit",
+ "pass": 9,
+ "fail": 0,
+ "fails": [],
+ "text": [
+  "==========================================================================",
+  "STAGE e3wit -- (256,0) desc1 witness: my own from-scratch verification",
+  "==========================================================================",
+  "  [PASS] sha256 matches record 5950bd42...  -- 5950bd4287d49922",
+  "  [PASS] all 58837 cells: |delta_t| <= C(d_i,t) with correct parity",
+  "  [PASS] epoch identity sum x^i Delta_i == (1-x)^255 EXACT (my own polynomial arithmetic; last row = corner -1)",
+  "  [PASS] transportation point: f = (C-delta)/2 integer in [0, C] at every cell  -- cells=58837 boundary-saturated=4973 (8.45%)",
+  "  [PASS] cell count == 58837 (E3 claim)  -- 58837",
+  "  [PASS] identity evaluated at x = 2",
+  "  [PASS] identity evaluated at x = 3",
+  "  [PASS] identity evaluated at x = -1",
+  "  [PASS] E3-L1 complementarity, E3-L2 front load = half box width, E3-L3 rate identity (200 random windows)"
+ ]
+}

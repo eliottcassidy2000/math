@@ -378,7 +378,8 @@ def slow_ruleA(R, D0, max_rows=None):
     sigma_i = (sigma_{i-1} - Delta_i)/x; closure iff sigma_{R-1} = 0."""
     ds = profile(R, D0, R)
     qp = qpow_list(2 * R)
-    sigma = list(qp[R - 1]) + [0]
+    LEN = 2 * R + 4          # sigma can carry junk up to degree d_i - 1 ~ 1.2R
+    sigma = list(qp[R - 1]) + [0] * (LEN - R)
     Deltas = []
     parity_fires = 0
     capture = None
@@ -1138,6 +1139,8 @@ if __name__ == '__main__':
         stage_window()
     elif stage == 'e3wit':
         stage_e3wit()
+    elif stage == 'ledger':
+        stage_ledger()
     else:
         raise SystemExit('unknown stage')
     print('STAGE %s DONE: %d pass, %d fail' % (stage, _ck['pass'], _ck['fail']))

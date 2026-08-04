@@ -1,0 +1,15 @@
+{
+ "stage": "conecert_R16384_D0512",
+ "pass": 2,
+ "fail": 0,
+ "fails": [],
+ "text": [
+  "==========================================================================",
+  "STAGE conecert -- my S-cone-fc certificate re-derivation R=16384 D0=512",
+  "==========================================================================",
+  "  snapshot=E1 -> {\"i_fc\": 3803, \"d\": 12583, \"m\": 118, \"a0\": 12576, \"drain\": 6288, \"Tmax\": 6325, \"T_worst_t\": 2, \"capture_ub\": 10128, \"F4\": true, \"budget_margin\": 6254}",
+  "  [PASS] my certificate == stored fcscan (i_fc,d,m,a0,drain,Tmax,ub) [E1 snap]  -- i_fc=3803 ub=10128",
+  "  [PASS] certificate bound >= actual capture, F4 holds [E1]  -- 10128 >= 10090",
+  "  [SKIP] no snapshot /tmp/math-wt-boxeph-multifront/05-knowledge/results/amm12592_S_referee_feedend_R16384_D0512.json"
+ ]
+}
