@@ -59,3 +59,13 @@ terminal-state anatomy (deficit vs (151,152), exact):
   huntB: min def 8, slim L1=236, E=-10, gap {m=0: 8} ONLY (E-wall is the whole obstruction)
   huntD: 147/800 E-viable, min def 482 (fat)
   huntC: 261/800 E-viable spontaneously, min def 42030, gaps {m=1: 26, m=2: 42004} (wall ladder)
+
+--- huntI: rank=a2(64) beam=1200 prefilter=3600 + ebranch (no eprune)
+  -> exhausted (C1+C2, 31200 C2 leaves); unknown: 0
+  terminal anatomy: beam captured by fat low-deficit family (L1 ~ 1.9e72,
+  def ~ 1.97e63, E in [26..]); a2 overflow term misranks while deg >> db+1.
+FINAL: 9/9 hunts exhausted with exact certificates, 0 unknowns anywhere.
+R=128 closed independently by concurrent angles (direct/lp/rule witnesses,
+re-verified above).  See amm12592-r128-endgame-algebra-boxeph.md for the
+S_L algebra, soundness arguments, E-wall/wall-ladder diagnosis, and the
+identified top-coefficient control surface.
