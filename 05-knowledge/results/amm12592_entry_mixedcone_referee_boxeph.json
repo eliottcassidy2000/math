@@ -14,5 +14,15 @@
   "pass": 600,
   "all_pass": true
  },
+ "EN_G_growthlaw": {
+  "trials": 600,
+  "pass": 600,
+  "all_pass": true
+ },
+ "EN_DR_capdrift": {
+  "trials": 600,
+  "pass": 600,
+  "all_pass": true
+ },
  "ALL": true
 }

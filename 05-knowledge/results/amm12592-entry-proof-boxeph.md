@@ -41,7 +41,7 @@ the mathematical claim itself).
 
 ## 0. Headline
 
-1. **The entry hypothesis is weakened on three independent axes, all
+1. **The entry hypothesis is weakened on four independent axes, all
    PROVED.** (i) *Sign*: a new mixed-sign one-row certificate (Theorem
    S-cone-fc±, via the signed-part decoupling Lemma EN-D) removes
    all-negativity (F1) as a hard requirement — a certifying row may carry
@@ -51,7 +51,14 @@ the mathematical claim itself).
    clocks still a-priori free (exact-rational certification, dyadic
    2^9..2^40, both eps; even 3R/16 passes); (iii) *debt edge*: an S4-layer
    variant tolerates `a_0 > D_0 - 1` at explicit G_L cost (with the
-   honest accounting of when that cost is affordable).
+   honest accounting of when that cost is affordable); (iv) *surface
+   excess* — the session's main theorem — **Theorem EN-H (self-healing,
+   Section 8b)**: a feed-end state within `eta_0 = 3/64 = 4.7%` ABOVE
+   the marginal surface still certifies: cap drift heals the excess by
+   an explicit row `k* <= K - 34`, with the compounding growth controlled
+   by an exact contraction (fixed point Delta-bar <= 0.024, certified in
+   rationals at all dyadic 2^9..2^40). The razor-thin entry condition is
+   now a fat one: measured excess <= 0.72% worst-ever vs 4.7% allowed.
 2. **Two new doublings certified: S(1/32) and S(1/16) now hold at
    R = 65536 and R = 131072** — via the PROVED Theorem S-cone-fc plus a
    one-row certificate found by a feed-phase-only run (the ~0.5 R-row
@@ -361,75 +368,152 @@ window — with the window now Theta(R) (EN-W), (β) needs only
 `η(R) <= c t` for some fixed c, an enormously weaker target than the
 old 64-row window demanded. The quantitative content of EN-CORE is (α).
 
-## 8b. The self-healing target EN-H (proof-shape for EN-CORE (d), with two proved lemmas)
+## 8b. Theorem EN-H (self-healing entry) — PROVED
 
-The route-negative says the eventual proof must handle states ON the
-surface. The right formulation makes the surface excess a PARAMETER and
-lets cap drift heal it inside the R/8 window. Two ingredients are PROVED:
+The route-negative says any entry proof must handle states ON the
+surface. EN-H makes the surface excess a PARAMETER and lets cap drift
+heal it inside the R/8 window: **the razor-thin F3 becomes a fat
+target.** Ingredients:
 
 **Corollary EN-G (relaxed growth law; from S1).** Post-feed, all-negative
 state, one row at degree D': for t >= 1,
-`a'_t <= a_t + [spill_t - 2C(D'-1,t)]^+` with `spill_t = 2a_{t-1} +
-a_{t-2}` (both kernels dominated); support advances <= 2 cells/row, and a
-cell beyond the old front is created with value at most its
-`[spill - cap]^+`; `a'_0 = max(0, a_0 - 2)`. So an over-cap cell grows
-per row by AT MOST its spill excess — never multiplicatively.
+`a'_t <= a_t + [spill_t - 2C(D'-1,t)]^+` with `spill_t := 2a_{t-1} +
+a_{t-2}` (both kernels' loads are `<= a_t + spill_t`); `a'_0 =
+max(0, a_0 - 2)`. An over-cap cell grows per row by at most its spill
+excess — never multiplicatively.
 
 **Lemma EN-DR (cap-drift lower bound; PROVED).** With
-`s_k := D_k - D_0 >= floor(g_lo k)`:
-`2C(D_k-1, t) >= 2C(D_0-1, t) · (1 + t·s_k/(D_k - 1))`
-(each degree step multiplies the cap at cell t by `j/(j-t) >= 1 +
-t/(D_k-1)`; telescope and expand). Caps at cell t gain a factor
-`1 + Theta(g k t / D)` in k rows — fastest at the high cells, slowest at
-t = 2.
+`s_k := D_k - D_0 >= floor(g_lo k) >= g_lo k - 1`:
+`2C(D_k-1, t) >= 2C(D_0-1, t) · (1 + t·s_k/D_K)` for k <= K.
+*Proof:* the ratio is `prod_{j=D_0}^{D_k-1} j/(j-t) >= prod (1 + t/j)
+>= 1 + t·s_k/(D_k-1) >= 1 + t·s_k/D_K`. QED
+(600-trial exact battery `EN_DR` in the referee JSON.)
 
-**The healing budget.** Over the full window K = floor(R/8), the t = 2
-cap gains `>= 2 g_lo K / D_K ~ 0.19` — so surface excess up to ~19% at
-t = 2 (more at higher t) is drift-curable IN PRINCIPLE. What is NOT yet
-proved is the compounding control: an over-cell's growth (EN-G) feeds
-the spills of the cells above it, extending THEIR healing horizons. Two
-bookkeeping facts, recorded for the successor:
+**Theorem EN-H.** Let i0 be a post-feed row, D_0 := d_{i0},
+K := floor(R/8), D_K := d_{i0+K}, and suppose the state a entering row
+i0 satisfies, for a rational eta with `eta + Delta-bar(eta) <=` the
+certified range (eta <= eta_0 := 3/64 suffices at lam <= 1/64):
 
-- a naive uniform Gronwall (every cell allowed the worst-case growth
-  `eta·capref_t` per row for K rows) DIVERGES: the cross-feeding ratio
-  `(2capref_{t-1}+capref_{t-2})/capref_t ~ 2t/D` summed over K ~ eta·D
-  rows gives `~ eta·t` — useless for t ~ m ~ sqrt(R). This is a
-  ROUTE-NEGATIVE for the crude envelope inside the healing argument too.
-- the per-cell-horizon bookkeeping closes at SECOND order: cell t heals
-  within `K_t ~ eta·D/(g t)` rows (EN-DR), so its total growth is
-  `<= eta·capref_t·K_t/2`-scale, and its relative contribution to the
-  spill at t+1 is `~ eta^2/g` — t-INDEPENDENT. The compounding series is
-  geometric with ratio `~ 2 eta^2/g_lo`, convergent for eta <= 1/4.
+- **(E1)** `j <= 0`, supp ⊆ [0, m0], and `lam := (m0+4)/D_0 <= 1/64`
+  (the +4 covers the F3 range at the certifying row);
+- **(E2)** `a_0 <= D_0 - 1`;
+- **(E3)** `spill_t <= (1 + eta) · capref_t` for every t in [2, m0+2],
+  `capref_t := 2C(D_0-1, t)`.
 
-**EN-H (pinned target; OPEN).** There is an explicit `eta_0 >= 1/16`
-such that for dyadic R (>= an explicit R_1) and D0 = ceil(eps R): if at
-some post-feed row i0 the state is all-negative with support m,
-`m + 2K + 2 < D_0/12` (K := floor(R/8)), F2 holds, and
-`spill_t <= (1 + eta_0) · 2C(D_0-1, t)` for all t in [2, m+2], then some
-row `i0' in [i0, i0 + K]` satisfies F1 ∧ F2 ∧ F3 exactly — i.e. EN-CORE
-(d) weakens from the razor `eta = 0` to the fat `eta <= 1/16`, a >= 10x
-margin over the measured feed-end excess (max_t r_t - 1 <= 0.7% for
-R >= 2^10, <= 0.1% for R >= 2^13, shrinking). Completing EN-H is a
-finite second-order bookkeeping on EN-G + EN-DR (the convergent branch
-above); it was not completed this session and is labeled OPEN — the
-successor should treat it as the highest-leverage provable step, since
-EN-H + any o(1) feed-end surface law = ENTRY.
+Then, with `Delta-bar` the certified fixed point (below) and
+`k* := ceil((D_K (eta + Delta-bar)/2 + 1)/g_lo)`:
+
+- the support NEVER leaves [0, m0+2] (front freeze without F3!), no
+  death occurs, negativity and E2 persist, and
+- **F1 ∧ F2 ∧ F3 hold exactly at every row `i0 + k` with
+  `k* <= k <= K`** — in particular the S-cone-fc certificate fires
+  inside the EN-W window and S(R) follows (a-priori F4, Section 6).
+
+*Proof.* Write `E^(k)_t := [a^(k)_t - a_t]^+` (excess over the initial
+state), `cap^(k)_t := 2C(D_k-1,t)`, `phi_k := s_k/D_K`, and for t >= 2
+`Delta_t := (2 e_{t-1} capref_{t-1} + e_{t-2} capref_{t-2})/capref_t`
+where `e_t` are the bounds established below (`E^(k)_t <= e_t capref_t`
+for ALL k <= K). The argument is an induction on the cell index t (the
+kernel is lower-triangular: cell t is loaded only from t, t-1, t-2), and
+inside it an induction on k.
+
+(0) *Cells 0 and 1 never grow:* cell 0 drains exactly 2/row (S1); cell
+1's load is `a_1 + (1+delta) a^(k)_0 <= a_1 + 2(D_0-1) <= a_1 +
+cap^(k)_1` (E2 absorbing), so `a'_1 <= a_1`. Hence `e_0 = e_1 = 0` and
+`Delta_2 = 0`.
+
+(1) *Excess recursion.* Fix t >= 2 and assume the bounds `e_{t-1},
+e_{t-2}` hold for all k. The row-k spill obeys `spill^(k)_t <=
+spill^(0)_t + 2E^(k)_{t-1} + E^(k)_{t-2} <= (1 + eta + Delta_t)
+capref_t` (E3; and `spill^(0)_t = 0 <= (1+eta) capref_t` for
+t > m0+2). By EN-G and EN-DR the per-row excess increment is at most
+`capref_t · [eta + Delta_t + t/D_K - (t g_lo / D_K) k]^+` (the `t/D_K`
+absorbs the -1 in the staircase floor). Summing the arithmetic series
+(`sum_k [A - Bk]^+ <= A^2/(2B) + A`):
+
+```
+e_t <= (X_t)^2 · D_K/(2 t g_lo) + X_t ,   X_t := eta + Delta_t + t/D_K .
+```
+
+(2) *Compounding is a contraction.* Substituting (1) into the
+definition of `Delta_{t+1}` and using the EXACT cap ratios
+`capref_{t-1}/capref_t = t/(D_0-t)` (so `D_K/t · t/(D_0-t) <=
+gamma/(1-lam)`, `gamma := D_K/D_0` — the D_K/t divergence cancels
+against the cap ratio, cell by cell), `(t+1)/t <= 3/2` (t >= 2), and
+`t/D_K <= lam` for t <= m0+4:
+
+```
+Delta_{t+1} <= C2 · X-bar^2 + C1 · X-bar ,  X-bar := eta + Delta-bar + lam,
+C2 := (3/2) gamma / ((1-lam) g_lo) + 3 gamma lam / (2 g_lo (1-lam)^2) <= 3.0,
+C1 := 2 lam/(1-lam) + lam^2/(1-lam)^2 <= 0.033 .
+```
+
+So every `Delta_t <= Delta-bar` where `Delta-bar` is the smallest root
+of `C2 (eta+lam+D)^2 + C1 (eta+lam+D) = D` — which exists, with the
+iteration a contraction, throughout the certified range
+(`amm12592_entry_selfhealing_constants_boxeph.out`: Delta-bar <= 0.0241
+and contraction <= 0.53 at eta = 3/64, lam = 1/64; exact rationals, all
+dyadic R = 2^9..2^40, both eps; the pads C2 <= 3.0, C1 <= 0.033 and
+gamma <= 1.105 verified per-R). The computed values sit ~5% below the
+pads; the remaining `O(1/D_0)` slops (the `-1`s in `D_0 - 1 - t`, the
+staircase floor, the ceil in k*) are absorbed by that headroom for
+every R in the certified range (D_0 >= 2^9 · 0.74).
+
+(3) *Front freeze.* For t > m0+2 the initial value and initial spill
+are 0, so the load is pure excess `<= Delta_t capref_t <= Delta-bar
+capref_t < cap^(k)_t` (Delta-bar < 1): absorbed entirely — junk never
+appears beyond m0+2, death is impossible (m0+4 << D_0), and the t-range
+[2, m0+4] used above covers every live spill.
+
+(4) *Healing.* For `k >= k*`: `t phi_k >= (t/D_K)(g_lo k - 1) >=
+eta + Delta-bar >= eta + Delta_t` for every t >= 2 (worst t = 2 by the
+definition of k*), so by EN-DR `cap^(k)_t >= (1 + eta + Delta_t)
+capref_t >= spill^(k)_t`: **F3 holds at row i0 + k for every k in
+[k*, K]**, F2 holds (cell-0 drain + D nondecreasing), F1 holds
+(negativity C-N; support ⊆ [0, m0+2] by (3)). The certified constants
+give `k* <= K - 34` at every grid point. QED
+
+**Certificates.** `amm12592_entry_selfhealing_constants_boxeph.{out,json}`
+(exact-rational: fixed point, contraction, pads, k* <= K, dyadic
+2^9..2^40 x eps in {1/32, 1/16} x eta in {1/32, 3/64}: ALL-PASS);
+600-trial one-step batteries EN-G (relaxed states) and EN-DR in
+`amm12592_entry_mixedcone_referee_boxeph.json` (rerun of this session's
+battery with the EN_G/EN_DR trial families added).
+
+**What EN-H buys.** EN-CORE's razor condition (d) is now REPLACED by
+the fat condition (E3) at i0 = i_pf itself: the feed phase need only
+deliver a state within 4.7% of the marginal surface (eta_0 = 3/64),
+while the measured feed-end excess is <= 0.72% at every scale >= 2^10
+and <= 0.1% from 2^13 on, SHRINKING in R — a >= 6x margin at the worst
+scale ever seen and >= 45x at the frontier scales. The remaining
+unproved content of ENTRY is exactly:
+
+**EN-CORE' (final form; HYPOTHESIS).** For every dyadic R >= 2^18 at
+D0 = ceil(eps R): the rule-A flow survives to i_pf (Theorem B covers
+all but the <= 2 rows between i_feed and i_pf at D0 >= eps* R) and its
+feed-end state satisfies (E1) support (m0 + 2 <= D_0/64: measured
+~0.93 sqrt(R), i.e. 100x slack at 2^17), (E2) debt edge (measured
+|a_0 - d_fe| <= 14, vs the D_0 - 1 requirement met within <= 6 rows in
+every run — see the layer remark, Section 5), and (E3) the
+4.7%-relaxed surface (measured excess <= 0.72% worst-ever, <= 0.1% at
+scale). EN-CORE' implies EN-CORE, hence S(eps), hence the C* bounds.
 
 ## 9. The final theorem (conditional form) and the dependency chain
 
-**Theorem (assembly; PROVED modulo EN-CORE).** Fix eps in {1/32, 1/16}.
-If EN-CORE(eps) holds, then:
+**Theorem (assembly; PROVED modulo EN-CORE').** Fix eps in {1/32, 1/16}.
+If EN-CORE'(eps) holds (the eta_0-relaxed feed-end state property,
+Section 8b), then:
 
-- S(eps) holds for every dyadic R >= 128 [2^7..2^17 by the 22
-  certificates + Theorem S-cone-fc; R >= 2^18 by EN-CORE + EN-W +
-  Theorem S-cone-fc];
+- S(eps) holds for every dyadic R >= 128 [finite scales by the
+  certificates + Theorem S-cone-fc; R >= 2^18 by EN-CORE' + EN-H +
+  EN-W + Theorem S-cone-fc];
 - every dyadic epoch closes at slack ceil(eps R) [Theorems A (LIFT),
   B (feed survival), S-cone machinery];
 - `C* <= 1 + gamma* + eps` [THM-3329 assembly + LIFT]. In particular
-  EN-CORE(1/32) gives `C* <= 1 + gamma* + 1/32 < 427095/262144
+  EN-CORE'(1/32) gives `C* <= 1 + gamma* + 1/32 < 427095/262144
   = 1.6292382`.
 
-If EN-CORE(eps_j) holds for a rational sequence eps_j ↓ eps* =
+If EN-CORE'(eps_j) holds for a rational sequence eps_j ↓ eps* =
 2(1-g-g^2)/(3+2g), then
 
 ```
@@ -437,14 +521,20 @@ C* <= 1 + gamma* + eps* = (5+3g)/(3+2g) in (1.6191617801, 1.6191618342),
 ```
 
 the E1 closed form — the sharpest constant this route can produce.
+(For the eps ↓ eps* form, Theorem B's window (ii) and the EN-W/EN-H
+constant certifications — stated at eps in {1/32, 1/16} — must be
+re-instantiated at each eps_j; every step is the same exact-rational
+computation, none is asymptotic.)
 
 **Dependency chain (every link's status):** T2/T6 conjugacy (PROVED) ->
 T4/T4b initial data (PROVED) -> Theorem B feed survival at D0 >= eps* R
 (PROVED) -> EN-0/EN-D/EN-M/S1–S4 (PROVED, machine-certified) ->
 Theorem S-cone-fc / S-cone-fc± (PROVED, machine-certified) -> EN-W
 window + a-priori F4 (PROVED + exact-rational certification 2^9..2^40)
--> EN-CORE (HYPOTHESIS; VERIFIED-exact 2^7..2^17, both eps) ->
-S(eps) -> LIFT + THM-3329 assembly (PROVED) -> C* bound.
+-> **Theorem EN-H self-healing (PROVED + exact-rational constants
+2^9..2^40 + 600-trial one-step batteries)** -> EN-CORE' (HYPOTHESIS;
+the eta-relaxed form VERIFIED-exact with 6x-45x margins at 2^7..2^17,
+both eps) -> S(eps) -> LIFT + THM-3329 assembly (PROVED) -> C* bound.
 
 ## 10. Hazards honored
 
@@ -472,17 +562,30 @@ S(eps) -> LIFT + THM-3329 assembly (PROVED) -> C* bound.
   (mixed-sign one-row certificate => S(R)) with the G4± caveat; EN-L
   layer variant with explicit G_L price; **Theorem EN-W** (R/8 window:
   wide a-priori F4, drain invariance, death-free wait) with
-  exact-rational certification at all dyadic 2^9..2^40, both eps.
-- **VERIFIED-exact (new):** scanner bit-identical to the E1 records at
-  three scales; **S(1/32) and S(1/16) at R = 65536 and R = 131072**
-  (one-row certificates; S now settled for ALL dyadic 128 <= R <=
-  131072); sign collapse before feed-end at 22/22 configs; the EN-CORE
-  margin table 2^7..2^17 with trends; 600-trial batteries EN-D/EN-M/EN-C.
+  exact-rational certification at all dyadic 2^9..2^40, both eps;
+  **Theorem EN-H (self-healing entry: eta_0 = 3/64 surface excess is
+  drift-curable, front frozen without F3, contraction-controlled
+  compounding)** with EN-G/EN-DR one-step lemmas, exact-rational
+  constant certification 2^9..2^40 x both eps x eta in {1/32, 3/64},
+  and k* <= K - 34 at every grid point.
+- **VERIFIED-exact (new):** scanner bit-identical to the E1 records
+  (fcscan fields at 1024/4096/16384/32768; feed-end snapshots
+  bit-exact; v2 field-identical to v1 at three scales); the
+  independent certificate referee (fresh clamp + mul//div clocks)
+  ALL-PASS at 1024, 16384, 32768; NEW-SCALE certificates (Section 7
+  table); sign collapse before feed-end at every config; the EN-CORE
+  margin table with trends; 600-trial batteries
+  EN-D/EN-M/EN-C/EN-G/EN-DR (ALL-PASS).
 - **ROUTE-NEGATIVE (new, exact):** fixed-margin (c > 1%) F3 envelopes
   are false at feed-end at every scale >= 2^10 — entry proofs must
-  produce the marginal surface with o(1) error + use the cap-drift dip.
-- **HYPOTHESIS (one item):** EN-CORE(eps) for dyadic R >= 2^18 — the
-  feed phase delivers, within R/8 rows of feed-end, a state on-or-below
-  the full-cap surface with the debt at the edge. This is the entire
-  remaining unproved content of `C* <= 1 + gamma* + 1/32` and, along
-  eps ↓ eps*, of `C* <= (5+3g)/(3+2g) < 1.6191619`.
+  produce the marginal surface with o(1) error + use the cap-drift dip
+  (which is exactly what EN-H formalizes); the naive uniform Gronwall
+  inside the healing argument diverges (recorded in Section 8b's proof
+  discussion) — the per-cell cap-ratio cancellation is essential.
+- **HYPOTHESIS (one item):** EN-CORE'(eps) for dyadic R >= 2^18 — the
+  feed-end state lands within eta_0 = 3/64 of the marginal surface,
+  with sqrt(R)-scale support and the debt at the edge. This is the
+  entire remaining unproved content of `C* <= 1 + gamma* + 1/32` and,
+  along eps ↓ eps*, of `C* <= (5+3g)/(3+2g) < 1.6191619`. Measured
+  margins on (E3): 6x at the worst scale ever seen, >= 45x at the
+  frontier, growing in R.

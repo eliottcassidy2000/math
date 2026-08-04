@@ -210,13 +210,52 @@ def trial_ENC():
     return True
 
 
+def trial_ENG():
+    """EN-G relaxed growth law: for ANY all-negative state, one row:
+    a'_t <= a_t + [spill_t - 2C(d'-1,t)]^+ (t >= 1); a'_0 = max(0,a_0-2)."""
+    d = rng.randrange(30, 300)
+    delta = rng.randrange(2)
+    dp = d + delta
+    m = rng.randrange(3, max(4, d // 2))
+    j = {}
+    for t in range(m + 1):
+        if t == 0 or rng.random() < 0.85:
+            mag = ev(rng.randrange(0, 6 * comb(d, min(t + 1, d)) + 2))
+            if mag:
+                j[t] = -mag
+    jn = clamp_row(j, d, delta)
+    a = {t: -v for t, v in j.items()}
+    if any(v > 0 for v in jn.values()):
+        return False
+    an = {t: -v for t, v in jn.items()}
+    if an.get(0, 0) != max(0, a.get(0, 0) - 2):
+        return False
+    for t in range(1, m + 3):
+        spill = 2 * a.get(t - 1, 0) + a.get(t - 2, 0)
+        bound = a.get(t, 0) + max(0, spill - 2 * comb(dp - 1, t))
+        if an.get(t, 0) > bound:
+            return False
+    return True
+
+
+def trial_ENDR():
+    """EN-DR drift: C(D0-1+s, t)*DK >= C(D0-1, t)*(DK + t*s) exactly."""
+    D0 = rng.randrange(40, 400)
+    t = rng.randrange(1, D0 // 3)
+    s = rng.randrange(0, D0 // 2)
+    DK = D0 + s + rng.randrange(0, D0)
+    return comb(D0 - 1 + s, t) * DK >= comb(D0 - 1, t) * (DK + t * s)
+
+
 def main():
     N = 600
     res = {}
     lines = []
     for name, fn in (("EN_D_decoupling", trial_END),
                      ("EN_M_monotone", trial_ENM),
-                     ("EN_C_mixedcone_step", trial_ENC)):
+                     ("EN_C_mixedcone_step", trial_ENC),
+                     ("EN_G_growthlaw", trial_ENG),
+                     ("EN_DR_capdrift", trial_ENDR)):
         ok = sum(1 for _ in range(N) if fn())
         res[name] = {"trials": N, "pass": ok, "all_pass": ok == N}
         line = f"[{'PASS' if ok == N else 'FAIL'}] {name}: {ok}/{N}"
