@@ -1,1 +1,1 @@
-{"R": 32768, "D0": 1024, "partial_row": 512, "progress": [{"i": 256, "d": 20771, "front": 12138, "junkL1_bits": 30835, "elapsed_s": 233.4}, {"i": 512, "d": 20925, "front": 12061, "junkL1_bits": 30474, "elapsed_s": 509.5}]}
+{"R": 32768, "D0": 1024, "partial_row": 256, "progress": [{"i": 256, "d": 20771, "front": 12138, "junkL1_bits": 30835, "elapsed_s": 276.5}]}

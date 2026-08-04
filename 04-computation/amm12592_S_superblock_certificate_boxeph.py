@@ -123,8 +123,8 @@ def certify(R, D0, verbose=True):
     ck["H_support"] = (min(j) >= 0 and max(j) == m)
     ck["H_W_6m_le_d"] = (6 * m <= d0c)
     ck["H_m_ge_3"] = (m >= 3)
-    j0abs = -j.get(0, 0)
-    ck["H_debt_negative"] = (j0abs > 0)
+    ck["H_debt_negative"] = (j.get(0, 0) < 0)
+    j0abs = abs(j.get(0, 0))
     rep["j0abs"] = j0abs
     rep["debt_edge_c0"] = (j0abs - d0c)          # observed edge law |j0|-d
     # regression vs the published D2 feed-end record (if present)
@@ -162,7 +162,7 @@ def certify(R, D0, verbose=True):
     caps0 = [2 * comb(d0c - 1, t) for t in range(m + 1)]
     N = [0] * (m + 1)                    # fixed point: A_t <= N_t / S, t>=1
     for t in range(1, m + 1):
-        a = -j.get(t, 0)
+        a = abs(j.get(t, 0))             # |j_t|; sign hypothesis gated by H_
         if a:
             N[t] = ceildiv(a * S, caps0[t])
     supN = list(N)
@@ -411,12 +411,53 @@ def selftest(R, D0, verbose=True):
     return ok
 
 
+def negctrl(R, D0):
+    """Falsifiability controls: corrupt the state two ways; the certificate
+    must FAIL both times.  (Corruptions in memory only; files untouched.)"""
+    import copy
+    base = os.path.join(RESULTS,
+                        "amm12592_S_feedend_R%d_D0%d_boxeph.json" % (R, D0))
+    st = json.load(open(base))
+    m = st["m"]
+    # control 1: blow the front cell up to super scale (freeze must fail)
+    st1 = copy.deepcopy(st)
+    v = int(st1["junk"][str(m)])
+    st1["junk"][str(m)] = str(v * (1 << 60))
+    # control 2: flip one interior cell positive (negativity must fail)
+    st2 = copy.deepcopy(st)
+    st2["junk"][str(1)] = str(-int(st2["junk"][str(1)]))
+    tmpdir = os.environ.get("TMPDIR", "/tmp")
+    ok = True
+    for tag, s in (("front*2^60", st1), ("sign-flip", st2)):
+        tp = os.path.join(tmpdir, "S_negctrl_%s.json" % tag.replace("*", "_"))
+        json.dump(s, open(tp, "w"))
+        real_load = globals()["load_state"]
+        def fake_load(RR, DD, _tp=tp):
+            stx = json.load(open(_tp))
+            stx["junk"] = {int(t): int(v) for t, v in stx["junk"].items()}
+            stx["j0"] = int(stx["j0"])
+            return stx
+        globals()["load_state"] = fake_load
+        try:
+            rep = certify(R, D0, verbose=False)
+        finally:
+            globals()["load_state"] = real_load
+        caught = not rep["PASS"]
+        ok = ok and caught
+        print("[%s] negative control %s: certificate %s"
+              % ("PASS" if caught else "FAIL", tag,
+                 "correctly FAILS" if caught else "WRONGLY PASSES"))
+    return ok
+
+
 if __name__ == "__main__":
     mode = sys.argv[1]
     if mode == "cert":
         certify(int(sys.argv[2]), int(sys.argv[3]))
     elif mode == "selftest":
         selftest(int(sys.argv[2]), int(sys.argv[3]))
+    elif mode == "negctrl":
+        negctrl(int(sys.argv[2]), int(sys.argv[3]))
     elif mode == "all":
         ledger = []
         for R in (128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768):

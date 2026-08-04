@@ -1,1 +1,1 @@
-{"R": 32768, "D0": 1024, "tag": "run", "i_postfeed": null, "outcome": null, "capture_row": null, "minus2_rows": 513, "front0": 12148, "entry_certificate": null, "events": [], "n_events": 0, "diags": [], "elapsed_s": 799.3, "final": false}
+{"R": 32768, "D0": 1024, "tag": "run", "i_postfeed": null, "outcome": null, "capture_row": null, "minus2_rows": 776, "front0": 12148, "entry_certificate": null, "events": [], "n_events": 0, "diags": [], "elapsed_s": 1262.1, "final": false}

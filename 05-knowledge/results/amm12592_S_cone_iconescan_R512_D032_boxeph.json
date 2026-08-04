@@ -1,0 +1,23 @@
+{
+ "R": 512,
+ "D0": 32,
+ "outcome": {
+  "status": "CLOSED",
+  "capture_row": 313
+ },
+ "capture_row": 313,
+ "i_cone": 191,
+ "cone": {
+  "i_cone": 191,
+  "d": 452,
+  "m": 2,
+  "a0": 246,
+  "drain": 123,
+  "K1": 177,
+  "K2": 44,
+  "capture_ub": 368,
+  "budget_margin": 142
+ },
+ "h4_persist_ok": true,
+ "elapsed_s": 0.1
+}

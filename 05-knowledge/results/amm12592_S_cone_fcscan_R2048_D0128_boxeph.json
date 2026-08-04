@@ -1,0 +1,24 @@
+{
+ "R": 2048,
+ "D0": 128,
+ "outcome": {
+  "status": "CLOSED",
+  "capture_row": 1237
+ },
+ "capture_row": 1237,
+ "i_fc": 439,
+ "fc": {
+  "i_fc": 439,
+  "i_pf_offset": null,
+  "d": 1615,
+  "m": 38,
+  "a0": 1598,
+  "drain": 799,
+  "Tmax": 800,
+  "T_worst_t": 2,
+  "capture_ub": 1239,
+  "budget_margin": 807
+ },
+ "F3_persist_ok": true,
+ "elapsed_s": 1.5
+}

@@ -208,12 +208,13 @@ def flow(R, D0, j=None, i_start=None, d_start=None, tag="run",
             i_pf = i
             snap = dict(j)
             entry = entry_certificate(R, D0, i_pf, d_prev, j)
-            json.dump({"R": R, "D0": D0, "i_postfeed": i_pf,
-                       "d_feedend": d_prev, "entry": entry,
-                       "junk": {str(t): str(v) for t, v in snap.items()}},
-                      open(os.path.join(RESULTS,
-                        f"amm12592_S_cone_feedend_R{R}_D0{D0}_boxeph.json"),
-                        "w"))
+            if tag == "run":     # only genuine runs may write the snapshot
+                json.dump({"R": R, "D0": D0, "i_postfeed": i_pf,
+                           "d_feedend": d_prev, "entry": entry,
+                           "junk": {str(t): str(v) for t, v in snap.items()}},
+                          open(os.path.join(RESULTS,
+                            f"amm12592_S_cone_feedend_R{R}_D0{D0}_boxeph.json"),
+                            "w"))
         if postfeed and diag_from_postfeed and (
                 (i - i_pf) % ledger_stride == 0 or (i - i_pf) < 64):
             diags.append(postfeed_diag(i, d, delta, j, R))
@@ -388,6 +389,276 @@ def fromsnap(R, D0, scale_bits):
     return res
 
 
+def iconescan(R, D0, from_snap=False):
+    """Mid-flight cone-entry scan: find the first post-feed row i_cone at
+    which the CURRENT state satisfies the Theorem S-cone hypotheses
+    (post-layer + half-cap H4* + BUD with current-state clocks), then
+    verify persistence of the half-cap condition and capture.
+    All decisions exact."""
+    from fractions import Fraction
+    g_hi = Fraction(156759, 262144)
+    t0 = time.time()
+    g = two_G_coeffs(R)
+    if from_snap:
+        S = json.load(open(os.path.join(
+            RESULTS, f"amm12592_S_cone_feedend_R{R}_D0{D0}_boxeph.json")))
+        j = {int(t): int(v) for t, v in S["junk"].items()}
+        i0, d_prev = S["i_postfeed"], S["d_feedend"]
+    else:
+        d_prev = floor_gamma_star(R) + D0
+        j, _, _ = initial_junk(R, d_prev)
+        i0 = 1
+    i_cone = None
+    cone_rec = None
+    persist_ok = True
+    outcome = None
+    capture = None
+    for i in range(i0, R - 1):
+        d = floor_gamma_star(R + i) + D0
+        delta = d - d_prev
+        postfeed = (d + i > R)
+        if postfeed and j:
+            a = {t: -v for t, v in j.items()}
+            m = max(a)
+            a0 = a.get(0, 0)
+            cap = caps_row(d, m + 3)
+            postlayer = a0 <= d - 1
+            h4 = all(2 * (2 * a.get(t - 1, 0) + a.get(t - 2, 0)) <= cap[t]
+                     for t in range(2, m + 3))
+            if i_cone is None:
+                if postlayer and h4:
+                    drain = -((-a0) // 2)
+                    K2 = 0
+                    for t in range(2, m + 1):
+                        v = a.get(t, 0)
+                        if v:
+                            K2 = max(K2, -((-v) // (cap[t] // 2)))
+                    a1 = a.get(1, 0)
+                    if a1:
+                        D0c = 2 * (d - 1) - a0
+                        # n*D0c + n(n-1) >= a1  (quadratic, exact ceil)
+                        n = 0
+                        lo, hi = 0, a1 // max(1, D0c) + 2
+                        while lo < hi:
+                            mid = (lo + hi) // 2
+                            if mid * D0c + mid * (mid - 1) >= a1:
+                                hi = mid
+                            else:
+                                lo = mid + 1
+                        n = lo
+                        K1 = int(-((-(n + 1)) // (1 - g_hi)))
+                    else:
+                        K1 = 0
+                    ub = i + max(drain, max(K1, K2))
+                    if ub <= R - 2:
+                        i_cone = i
+                        cone_rec = {"i_cone": i, "d": d, "m": m, "a0": a0,
+                                    "drain": drain, "K1": K1, "K2": K2,
+                                    "capture_ub": ub,
+                                    "budget_margin": (R - 2) - ub}
+            else:
+                if not h4:
+                    persist_ok = False   # would falsify the theorem
+        # transport + clamp (engine semantics)
+        w = {}
+        if delta == 0:
+            for t, v in j.items():
+                w[t] = w.get(t, 0) + v
+                w[t + 1] = w.get(t + 1, 0) + v
+        else:
+            for t, v in j.items():
+                w[t] = w.get(t, 0) + v
+                w[t + 1] = w.get(t + 1, 0) + 2 * v
+                w[t + 2] = w.get(t + 2, 0) + v
+        fed = False
+        if d + i <= R - 1:
+            w[0] = w.get(0, 0) + g[d + i]; fed = True
+        if delta == 1 and d - 1 + i <= R - 1:
+            w[0] = w.get(0, 0) + g[d - 1 + i]
+            w[1] = w.get(1, 0) + g[d - 1 + i]; fed = True
+        jn = {}
+        if w:
+            ts = sorted(w)
+            ta, tb = ts[0], ts[-1]
+            P = comb(d - 1, ta)
+            Pprev = comb(d - 1, ta - 1) if ta >= 1 else 0
+            for t in range(ta, tb + 1):
+                v = w.get(t, 0)
+                if v:
+                    lo, hi = -2 * P, 2 * Pprev
+                    u = min(hi, max(lo, v))
+                    if u != v:
+                        jn[t] = v - u
+                Pprev = P
+                P = P * (d - 1 - t) // (t + 1) if t < d - 1 else 0
+        if d in jn:
+            outcome = {"status": "DIE", "row": i}
+            break
+        j = jn
+        d_prev = d
+        if not j and not fed and d + i > R - 1:
+            capture = i
+            outcome = {"status": "CLOSED", "capture_row": i}
+            break
+    res = {"R": R, "D0": D0, "outcome": outcome, "capture_row": capture,
+           "i_cone": i_cone, "cone": cone_rec, "h4_persist_ok": persist_ok,
+           "elapsed_s": round(time.time() - t0, 1)}
+    json.dump(res, open(os.path.join(
+        RESULTS, f"amm12592_S_cone_iconescan_R{R}_D0{D0}_boxeph.json"), "w"),
+        indent=1)
+    print(f"[icone] R={R} D0={D0}: i_cone={i_cone} rec={cone_rec} "
+          f"persist={persist_ok} outcome={outcome} ({res['elapsed_s']}s)",
+          flush=True)
+    return res
+
+
+def fcscan(R, D0, from_snap=False, i_stop_scan=None):
+    """FULL-CAP cone scan (Theorem S-cone-fc): find the first post-feed row
+    i_fc whose state satisfies
+      F1 j <= 0, supp in [0,m], m+2 < d;
+      F2 a_0 <= d - 1;
+      F3 2a_{t-1} + a_{t-2} <= 2C(d_row - 1, t) =: capref_t, t in [2, m+2]
+         (d_row = degree of the row about to be computed at i_fc);
+      F4 i_fc + max(ceil(a0/2), max_t T_t) <= R - 2, with EXACT clocks:
+         t >= 2: T_t = first K with sum_{k=1..K} (2C(d(i_fc+k)-1,t)
+                  - capref_t) >= a_t          (cap-drift staircase);
+         t = 1:  T_1 = first K with sum_{k=1..K} max(0, 2(d(i_fc+k)-1)
+                  - (1+delta_k) * max(0, a0 - 2(k-1))) >= a_1
+                  (exact delta word; drain-assisted).
+    Then Theorem S-cone-fc forces capture by the F4 bound; the scan also
+    verifies F3-persistence and the actual capture.  All exact."""
+    t0 = time.time()
+    g = two_G_coeffs(R)
+    if from_snap:
+        S = json.load(open(os.path.join(
+            RESULTS, f"amm12592_S_cone_feedend_R{R}_D0{D0}_boxeph.json")))
+        j = {int(t): int(v) for t, v in S["junk"].items()}
+        i0, d_prev = S["i_postfeed"], S["d_feedend"]
+    else:
+        d_prev = floor_gamma_star(R) + D0
+        j, _, _ = initial_junk(R, d_prev)
+        i0 = 1
+    i_fc = None
+    fc_rec = None
+    persist_ok = True
+    capref = None
+    outcome = None
+    capture = None
+    for i in range(i0, R - 1):
+        d = floor_gamma_star(R + i) + D0
+        delta = d - d_prev
+        postfeed = (d + i > R)
+        if postfeed and j:
+            a = {t: -v for t, v in j.items()}
+            m = max(a)
+            a0 = a.get(0, 0)
+            cap = caps_row(d, m + 3)
+            F2 = a0 <= d - 1
+            F3 = all(2 * a.get(t - 1, 0) + a.get(t - 2, 0) <= cap[t]
+                     for t in range(2, m + 3))
+            if i_fc is None and F2 and F3 and m + 2 < d and \
+                    (i_stop_scan is None or i <= i_stop_scan):
+                # exact clocks
+                drain = -((-a0) // 2)
+                alive = [t for t in range(1, m + 1) if a.get(t, 0)]
+                need = {t: a[t] for t in alive}
+                cum = {t: 0 for t in alive}
+                Tt = {}
+                dd = d
+                capk = cap[:]      # 2C(dd-1, t)
+                Kmax = R - 2 - i
+                k = 0
+                while need and k < Kmax:
+                    k += 1
+                    dn = floor_gamma_star(R + i + k) + D0
+                    dl = dn - dd
+                    if dl:
+                        # C(dn-1,t) = C(dd-1,t) * dd/(dd-t)  (dn = dd+1)
+                        for t in range(0, m + 3):
+                            capk[t] = capk[t] * dd // (dd - t)
+                    a0k = max(0, a0 - 2 * (k - 1))
+                    for t in list(need):
+                        if t == 1:
+                            dec = 2 * (dn - 1) - (1 + dl) * a0k
+                            if dec > 0:
+                                cum[1] += dec
+                        else:
+                            dec = capk[t] - cap[t]
+                            if dec > 0:
+                                cum[t] += dec
+                        if cum[t] >= need[t]:
+                            Tt[t] = k
+                            del need[t]
+                    dd = dn
+                if not need:
+                    Tmax = max(Tt.values()) if Tt else 0
+                    ub = i + max(drain, Tmax)
+                    if ub <= R - 2:
+                        i_fc = i
+                        capref = cap[:]
+                        fc_rec = {"i_fc": i, "i_pf_offset": None, "d": d,
+                                  "m": m, "a0": a0, "drain": drain,
+                                  "Tmax": Tmax,
+                                  "T_worst_t": max(Tt, key=Tt.get) if Tt
+                                  else None,
+                                  "capture_ub": ub,
+                                  "budget_margin": (R - 2) - ub}
+            elif i_fc is not None:
+                if not F3:
+                    persist_ok = False
+        # transport + clamp (engine semantics)
+        w = {}
+        if delta == 0:
+            for t, v in j.items():
+                w[t] = w.get(t, 0) + v
+                w[t + 1] = w.get(t + 1, 0) + v
+        else:
+            for t, v in j.items():
+                w[t] = w.get(t, 0) + v
+                w[t + 1] = w.get(t + 1, 0) + 2 * v
+                w[t + 2] = w.get(t + 2, 0) + v
+        fed = False
+        if d + i <= R - 1:
+            w[0] = w.get(0, 0) + g[d + i]; fed = True
+        if delta == 1 and d - 1 + i <= R - 1:
+            w[0] = w.get(0, 0) + g[d - 1 + i]
+            w[1] = w.get(1, 0) + g[d - 1 + i]; fed = True
+        jn = {}
+        if w:
+            ts = sorted(w)
+            ta, tb = ts[0], ts[-1]
+            P = comb(d - 1, ta)
+            Pprev = comb(d - 1, ta - 1) if ta >= 1 else 0
+            for t in range(ta, tb + 1):
+                v = w.get(t, 0)
+                if v:
+                    lo, hi = -2 * P, 2 * Pprev
+                    u = min(hi, max(lo, v))
+                    if u != v:
+                        jn[t] = v - u
+                Pprev = P
+                P = P * (d - 1 - t) // (t + 1) if t < d - 1 else 0
+        if d in jn:
+            outcome = {"status": "DIE", "row": i}
+            break
+        j = jn
+        d_prev = d
+        if not j and not fed and d + i > R - 1:
+            capture = i
+            outcome = {"status": "CLOSED", "capture_row": i}
+            break
+    res = {"R": R, "D0": D0, "outcome": outcome, "capture_row": capture,
+           "i_fc": i_fc, "fc": fc_rec, "F3_persist_ok": persist_ok,
+           "elapsed_s": round(time.time() - t0, 1)}
+    json.dump(res, open(os.path.join(
+        RESULTS, f"amm12592_S_cone_fcscan_R{R}_D0{D0}_boxeph.json"), "w"),
+        indent=1)
+    print(f"[fcscan] R={R} D0={D0}: i_fc={i_fc} rec={fc_rec} "
+          f"persist={persist_ok} outcome={outcome} ({res['elapsed_s']}s)",
+          flush=True)
+    return res
+
+
 if __name__ == "__main__":
     mode = sys.argv[1]
     if mode == "certify":
@@ -407,3 +678,9 @@ if __name__ == "__main__":
     elif mode == "fromsnap":
         R, D0, sb = int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4])
         fromsnap(R, D0, sb)
+    elif mode == "iconescan":
+        R, D0 = int(sys.argv[2]), int(sys.argv[3])
+        iconescan(R, D0, from_snap=("--fromsnap" in sys.argv))
+    elif mode == "fcscan":
+        R, D0 = int(sys.argv[2]), int(sys.argv[3])
+        fcscan(R, D0, from_snap=("--fromsnap" in sys.argv))
