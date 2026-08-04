@@ -1,0 +1,6 @@
+{
+ "grid_points": 101,
+ "violations": [],
+ "claim": "T4b overflow block = cells [0, R-2-d] exactly; all proof-skeleton inequalities exact on grid",
+ "note": "region I sign=-1 subcase at odd R uses same algebra; non-dyadic parity fixes not modeled here (T4b is a pure box statement, parity-free)"
+}

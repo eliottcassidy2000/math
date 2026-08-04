@@ -322,9 +322,106 @@ def certify():
     return out
 
 
+def verify_T9(R, D0):
+    """Exact check of the no-return march lemma T9 on a run:
+      (a) at the new extreme cell t' = tmax+1+delta, w_{t'} = j_{tmax} exactly;
+      (b) trigger := first row where |j_{tmax}| > geometric cap tail
+          T(i) := sum_{k>=1} 2 C(d-1, tmax + k) (exact finite sum);
+      (c) after the trigger the front advances every row (gap -1/row) and the
+          extreme value loses at most the local cap per row;
+      (d) cap ratio along the diagonal < 1 requires tau = t/d > 1/phi:
+          checked exactly via  d(d-t-1) < (t+1)(t+2)  at the front.
+    Returns dict of exact findings."""
+    g = two_G_coeffs(R)
+    d = floor_gamma_star(R) + D0
+    j, _, _ = initial_junk(R, d)
+    findings = {"R": R, "D0": D0, "trigger_row": None, "march_monotone": True,
+                "edge_transport_exact": True, "phi_condition_all_rows": True,
+                "post_trigger_gap_steps": [], "outcome": None}
+    trig = None
+    prev_extreme = None
+    prev_tmax = None
+    for i in range(1, R - 1):
+        dn = floor_gamma_star(R + i) + D0
+        delta = dn - d
+        w = {}
+        K = (1, 1) if delta == 0 else (1, 2, 1)
+        for t, v in j.items():
+            for s, ks in enumerate(K):
+                w[t + s] = w.get(t + s, 0) + ks * v
+        if dn + i <= R - 1:
+            w[0] = w.get(0, 0) + g[dn + i]
+        if delta == 1 and dn - 1 + i <= R - 1:
+            w[0] = w.get(0, 0) + g[dn - 1 + i]
+            w[1] = w.get(1, 0) + g[dn - 1 + i]
+        # (a) edge transport
+        if j:
+            tm = max(j)
+            if w.get(tm + 1 + delta, 0) != j[tm]:
+                findings["edge_transport_exact"] = False
+        jn = {}
+        for t, v in sorted(w.items()):
+            if not v:
+                continue
+            lo, hi = -2 * comb(dn - 1, t), 2 * comb(dn - 1, t - 1) if t else (-2, 0)
+            if t == 0:
+                lo, hi = -2, 0
+            u = min(hi, max(lo, v))
+            if u != v:
+                jn[t] = v - u
+        if dn in jn:
+            findings["outcome"] = {"DIE": i}
+            break
+        if jn:
+            tm = max(jn)
+            # (d) phi condition at the front
+            if not d * (d - tm - 1) < (tm + 1) * (tm + 2):
+                # only meaningful once front is in the deep region; record
+                if tm > d // 2:
+                    findings["phi_condition_all_rows"] = False
+            # (b) geometric tail (exact finite sum)
+            if trig is None:
+                tail = 0
+                c = 2 * comb(dn - 1, tm)
+                for tt in range(tm + 1, dn + 1):
+                    c = c * (dn - tt) // (tt)          # 2C(dn-1, tt)
+                    tail += c
+                if abs(jn[tm]) > tail:
+                    trig = i
+                    findings["trigger_row"] = i
+            else:
+                # (c) march monotone: gap must shrink by exactly 1
+                gap_prev = d - prev_tmax
+                gap_now = dn - tm
+                findings["post_trigger_gap_steps"].append(gap_prev - gap_now)
+                if gap_now > gap_prev:
+                    findings["march_monotone"] = False
+            prev_extreme = jn.get(tm)
+            prev_tmax = tm
+        j = jn
+        d = dn
+        if not j and dn + i > R - 1:
+            findings["outcome"] = {"CLOSED_capture": i}
+            break
+    steps = findings.pop("post_trigger_gap_steps")
+    findings["post_trigger_steps_all_1"] = (all(s == 1 for s in steps)
+                                            if steps else None)
+    findings["post_trigger_rows"] = len(steps)
+    return findings
+
+
 if __name__ == "__main__":
     mode = sys.argv[1]
-    if mode == "cert":
+    if mode == "T9":
+        out = []
+        for R, D0 in ((256, 0), (512, 0), (512, 4), (1024, 14), (2048, 37),
+                      (4096, 88), (1024, 15), (2048, 38)):
+            f = verify_T9(R, D0)
+            print(f, flush=True)
+            out.append(f)
+        json.dump(out, open(os.path.join(RESULTS,
+            "amm12592_transient_T9_march_check_boxeph.json"), "w"), indent=1)
+    elif mode == "cert":
         certify()
     elif mode == "run":
         R, D0 = int(sys.argv[2]), int(sys.argv[3])

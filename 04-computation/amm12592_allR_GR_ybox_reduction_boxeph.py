@@ -89,11 +89,28 @@ def pshift(a, s): return ([0]*s + list(a)) if a else []
 def pscale(a, c): return [c*v for v in a] if c else []
 def qpow(m): return [((-1)**k)*comb(m,k) for k in range(m+1)]
 
-def bern_to_poly(cells, d):
+def bern_to_poly_slow(cells, d):
     P = []
     for k, c in enumerate(cells):
         if c: P = padd(P, pscale(pshift(qpow(k), d-k), c))
     return P
+
+def bern_to_poly(cells, d):
+    """Horner in q: U_d = delta_d; U_k = delta_k x^{d-k} + q U_{k+1}; Delta = U_0.
+    q-multiply is shift-subtract (big-int adds only)."""
+    if len(cells) != d+1:
+        return bern_to_poly_slow(cells, d)
+    U = [0]*(d+1)
+    U[0] = cells[d]
+    for k in range(d-1, -1, -1):
+        # U <- q*U  (q = 1 - x): new[i] = U[i] - U[i-1]
+        prev = 0
+        for i in range(d+1):
+            cur = U[i]
+            U[i] = cur - prev
+            prev = cur
+        U[d-k] += cells[k]
+    return ptrim(U)
 def poly_to_bern(P, d):
     assert len(P) <= d+1, (len(P), d)
     return [sum(P[j]*comb(d-j, t) for j in range(len(P))) for t in range(d+1)]
@@ -309,18 +326,18 @@ WITNESS_FILES = [
 combined = json.load(open(os.path.join(CP, "amm12592_floor_witnesses_R8_R16_R32.json")))
 
 def analyze(R, prof, blocks, label):
-    # 1. epoch identity
+    # row polynomials once (Horner), epoch identity
+    rowP = [bern_to_poly(blocks[i], prof[i]) for i in range(R)]
     S = []
     for i in range(R):
-        S = padd(S, pshift(bern_to_poly(blocks[i], prof[i]), i))
+        S = padd(S, pshift(rowP[i], i))
     ok1 = (S == qpow(R-1))
-    # 2. admissibility every row
+    # admissibility every row
     ok2 = all(admissible(blocks[i], prof[i]) for i in range(R))
-    # 3. profile flag: is prof within floor+D0 for some small D0?
+    # profile flag: is prof within floor+D0 for some small D0?
     D0 = max(prof[i] - floor_gamma_star(R+i) for i in range(R))
-    # 4. ballot normal form? Delta_{R-1} == -1 and rows 0..R-2 -> gamma in box
-    lastP = bern_to_poly(blocks[R-1], prof[R-1])
-    nf = (lastP == [-1])
+    # ballot normal form? Delta_{R-1} == -1 and rows 0..R-2 -> gamma in box
+    nf = (rowP[R-1] == [-1])
     okY = True; okG = None
     if nf:
         Gsum = []
@@ -333,7 +350,11 @@ def analyze(R, prof, blocks, label):
                 if diff % 2 != 0: bad = True; break
                 yy.append(diff//2)
             if bad or not ybox_ok(yy, d): okY = False; break
-            Gsum = padd(Gsum, pshift(bern_to_poly(yy, d), i))
+            # gamma_i = (Delta_i - (p-q))/2 as polynomial (cheap, from rowP)
+            gpoly = pscale(psub(rowP[i], [-1, 2]), 1)
+            assert all(v % 2 == 0 for v in gpoly)
+            gpoly = [v//2 for v in gpoly]
+            Gsum = padd(Gsum, pshift(gpoly, i))
         if okY:
             okG = (pscale(Gsum, 2) == twoG(R))
     check("%s: identity/admissible/D0=%d/normal-form=%s/y-box=%s/sum=G_R:%s" %

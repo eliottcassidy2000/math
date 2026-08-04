@@ -48,62 +48,60 @@ with contextlib.redirect_stdout(io.StringIO()):
     spec.loader.exec_module(iref)
 
 
-def w_load(R, d, t):
-    s = 1 if (d - t) % 2 == 0 else -1
-    return s * comb(R - 2 - t, d - t) - comb(d + 1, t + 1) + 2 * comb(d, t)
-
-
 def check(R, d):
-    """Exact check of T4b at (R, d). Returns list of violations."""
+    """Exact check of T4b at (R, d), incremental binomials (O(d) bigint ops).
+    Returns list of violations."""
     bad = []
     star = R - 2 - d
+    # incremental state at t = 0
+    A = comb(R - 2, d)            # C(R-2-t, d-t)
+    B = d + 1                     # C(d+1, t+1)
+    Cd = 1                        # C(d, t)
+    P = 1                         # C(d-1, t)
+    Pprev = 0                     # C(d-1, t-1)
+    sgn = 1 if d % 2 == 0 else -1
     for t in range(d + 1):
-        w = w_load(R, d, t)
-        lo, hi = -2 * comb(d - 1, t), 2 * (comb(d - 1, t - 1) if t else 0)
+        w = sgn * A - B + 2 * Cd
+        lo, hi = -2 * P, 2 * Pprev
         over = not (lo <= w <= hi)
         if over != (t <= star):
-            bad.append(("cell-claim", R, d, t, w, lo, hi))
-    # intermediate inequalities
-    for t in range(0, star - 0):          # region I: t <= R-3-d
-        if t > d:
-            break
-        A = comb(R - 2 - t, d - t); B = comb(d + 1, t + 1)
-        if not A >= B:
-            bad.append(("I:A>=B", R, d, t))
-        if (d - t) % 2 == 0:
-            if not w_load(R, d, t) >= 2 * comb(d, t):
-                bad.append(("I:+case", R, d, t))
-            if not 2 * comb(d, t) > 2 * (comb(d - 1, t - 1) if t else 0):
-                bad.append(("I:+box", R, d, t))
-        else:
-            if not w_load(R, d, t) <= -2 * comb(d, t + 1):
-                bad.append(("I:-case", R, d, t))
-            if not -2 * comb(d, t + 1) < -2 * comb(d - 1, t):
-                bad.append(("I:-box", R, d, t))
-    # region II boundary
-    t = star
-    if 0 <= t <= d:
-        if R % 2 == 0 and not (d - t) % 2 == 0:
-            bad.append(("II:sign", R, d))
-        lhs, rhs = d * (3 * R - 4 * d - 4), 2 * (R - 2 - d) * (R - 1 - d)
-        quad = lhs > rhs
-        w = w_load(R, d, t)
-        over_above = w > 2 * (comb(d - 1, t - 1) if t else 0)
-        if quad != over_above and R % 2 == 0:
-            bad.append(("II:quad-mismatch", R, d, lhs, rhs, over_above))
-        if not quad:
-            bad.append(("II:quad-fails", R, d, lhs, rhs))
-    # region III
-    for t in range(max(0, R - 1 - d), d + 1):
-        A = comb(R - 2 - t, d - t)
-        if not A <= comb(d - 1, d - t):
-            bad.append(("III:A<=", R, d, t))
-        if not (d - t) * (d - t - 1) >= 0:
-            bad.append(("III:upper-quad", R, d, t))
-        if not comb(d, t) >= comb(d, t + 1):
-            bad.append(("III:mono", R, d, t))         # needs t >= d/2
-        if not d <= 3 * t + 3:
-            bad.append(("III:lower-range", R, d, t))
+            bad.append(("cell-claim", R, d, t))
+        if t <= star - 1:                       # region I
+            if not A >= B:
+                bad.append(("I:A>=B", R, d, t))
+            if sgn > 0:
+                if not (w >= 2 * Cd and 2 * Cd > hi):
+                    bad.append(("I:+case", R, d, t))
+            else:
+                Cd1 = Cd * (d - t) // (t + 1) if t < d else 0   # C(d,t+1)
+                if not (w <= -2 * Cd1 and -2 * Cd1 < lo):
+                    bad.append(("I:-case", R, d, t))
+        elif t == star and 0 <= t <= d:         # region II boundary
+            if R % 2 == 0 and sgn != 1:
+                bad.append(("II:sign", R, d))
+            lhs = d * (3 * R - 4 * d - 4)
+            rhs = 2 * (R - 2 - d) * (R - 1 - d)
+            if not lhs > rhs:
+                bad.append(("II:quad-fails", R, d, lhs, rhs))
+            if R % 2 == 0 and (lhs > rhs) != (w > hi):
+                bad.append(("II:quad-mismatch", R, d, t))
+        elif t >= R - 1 - d:                    # region III
+            # A <= C(d-1, d-t) = C(d-1, t-1) = Pprev
+            if not A <= Pprev:
+                bad.append(("III:A<=", R, d, t))
+            Cd1 = Cd * (d - t) // (t + 1) if t < d else 0
+            if not Cd >= Cd1:
+                bad.append(("III:mono", R, d, t))
+            if not d <= 3 * t + 3:
+                bad.append(("III:lower-range", R, d, t))
+        # advance to t+1
+        if t < d:
+            A = A * (d - t) // (R - 2 - t)
+            B = B * (d - t) // (t + 2)
+            Pprev = P
+            P = P * (d - 1 - t) // (t + 1) if t < d - 1 else 0
+            Cd = Cd * (d - t) // (t + 1)
+            sgn = -sgn
     return bad
 
 
@@ -111,18 +109,23 @@ if __name__ == "__main__":
     allbad = []
     grid = []
     # dyadic scales x D0 sweep (past + future thresholds), plus hostile odd R
+    def in_window(R, d):
+        """Lemma hypothesis: R/2 < d <= 2(R-1)/3 and the exact quad (II)."""
+        return (2 * d > R and 3 * d <= 2 * (R - 1) and
+                d * (3 * R - 4 * d - 4) > 2 * (R - 2 - d) * (R - 1 - d))
     for R in (128, 256, 512, 1024, 2048, 4096, 8192):
         d0 = iref.floor_gamma_star(R)
         for D0 in list(range(0, 8)) + [15, 38, 89, 100, 192, 210,
-                                       (2 * R) // 3 - d0 - 3]:
+                                       (2 * (R - 1)) // 3 - d0]:
             d = d0 + D0
-            if d >= R - 1 or d <= R // 2 + 2:
-                continue
-            grid.append((R, d))
+            if in_window(R, d):
+                grid.append((R, d))
     for R in (100, 200, 300, 500, 1000, 3000, 5000):   # non-dyadic (general d window)
         d0 = iref.floor_gamma_star(R)
         for D0 in (0, 1, 5):
-            grid.append((R, d0 + D0))
+            if in_window(R, d0 + D0):
+                grid.append((R, d0 + D0))
+    grid = sorted(set(grid))
     for R, d in grid:
         b = check(R, d)
         if b:

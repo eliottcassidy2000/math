@@ -27,3 +27,28 @@
 (E) atom feasibility: eps*p^a*q^b at degree d, cells eps*C(d-a-b,k-b)
 ==============================================================================
   [PASS] cells(p^a q^b) = C(d-a-b,k-b); +feasible iff b>=1, -feasible iff a>=1 (d<=15)  -- []
+
+==============================================================================
+(F) witness map: known witnesses -> y-cells, master equation sum x^i gamma_i = G_R
+==============================================================================
+  [PASS] combined R=8: identity/admissible/D0=0/normal-form=True/y-box=True/sum=G_R:True
+  [PASS] combined R=16: identity/admissible/D0=0/normal-form=True/y-box=True/sum=G_R:True
+  [PASS] combined R=32: identity/admissible/D0=0/normal-form=True/y-box=True/sum=G_R:True
+  [PASS] floor_witness_R8_ruleB: identity/admissible/D0=0/normal-form=True/y-box=True/sum=G_R:True
+  [PASS] floor_witness_R16_ruleB: identity/admissible/D0=0/normal-form=True/y-box=True/sum=G_R:True
+  [PASS] witness_R128_ruleB_D0_0: identity/admissible/D0=0/normal-form=True/y-box=True/sum=G_R:True
+  [PASS] witness_R256_ruleA_D0_1: identity/admissible/D0=1/normal-form=True/y-box=True/sum=G_R:True
+  [PASS] witness_R512_ruleA_D0_8: identity/admissible/D0=8/normal-form=True/y-box=True/sum=G_R:True
+
+==============================================================================
+SUMMARY: ALL CHECKS PASSED
+==============================================================================
+
+REDUCED PROBLEM (proved above, no parity left):
+  find integer cell arrays y_i (i = 0..R-2), y_{i,k} in
+      [-C(d_i-1,k), C(d_i-1,k-1)],
+  with  sum_{i=0}^{R-2} x^i * (sum_k y_{i,k} B_{d_i,k}) = G_R,
+  where [x^0]G_R = 1, [x^j]G_R = ((-1)^j C(R-1,j) - 1)/2.
+Equivalently gamma_i = q*beta_i - p*alpha_i with alpha_i,beta_i subunital at
+degree d_i - 1 (cells in [0, C(d_i-1,k)]).  Corners: gamma_i = -p ... +q.
+

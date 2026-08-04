@@ -7,3 +7,5 @@ RULE-B R=2048 D0=34 [cellwise-none] start
   i= 320 d=1450 sig1=  -13 headbits=   1 maxbits=2253 junkbits=1691 ov0=0 ov1=0 t=  642.8s
   i= 384 d=1488 sig1=   -7 headbits=   1 maxbits=2304 junkbits=1793 ov0=0 ov1=0 t=  931.0s
   i= 448 d=1526 sig1=    1 headbits=   1 maxbits=2355 junkbits=1895 ov0=0 ov1=0 t= 1276.0s
+RULE-B R=2048 D0=34 [cellwise-none] NEGATIVE: {'die_row': 491, 'const_bits': 1204, 'sig1': -7, 'targ': None, 'head_bits': [1204, 1213, 1222, 1230, 1237, 1245, 1252, 1258, 1265, 1271, 1277, 1284], 'junk_bits': 1964, 'elapsed': 1571.6}
+trace: /tmp/math-wt-boxeph-multifront/05-knowledge/results/amm12592_ruleB_trace_R2048_D0_34_cellwise-none_boxeph.json
