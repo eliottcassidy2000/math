@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — 2026-08-03.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
+**Rolling state — 2026-08-08.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -54,7 +54,8 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
   scans; AP13 and its lift share germs but not maxima.
 - THM-2058 preserves every fixed lift depth but escapes at `47/113`;
   finite jets/Farey rays fail.
-- Determinant polygons are basis-dependent; analogy does not prove LRC.
+- THM-3333 gives exact Gaussian/Farey and Kelvin-cap coordinates; owner,
+  phase and exit remain, so no LRC row closes.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 
@@ -286,11 +287,10 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   THM-3321/3323 give the Hesse recurrence and exact degree-21 Hilbert slice.
   The [multi-edge audit](../07-reflections/multi-edge-visible-kernel-and-bordered-resolvent-independent-audit-codex-20260803.md) compiles all `55` pairs locally; no dynamics/bit-complexity claim.
   Q4 radius/non-P stay OPEN.
-- **EXACT identities / heuristic bridge:** corrected HYP-8820 puts caterer,
-  cake, Moser, bagel, and Fibonacci in one Pascal array and proves
-  `bagel(n)-cake(n)=T_n-1`; Klein-S313 realizes full-rank g-bonacci kernels.
-  MISTAKE-222 blocks transferring an LRC/JC predicate from these shadows; the
-  live test needs a common boundary-cell/Euler-characteristic valuation.
+- **EXACT typed identities:** corrected HYP-8820's Pascal family proves
+  `bagel(n)-cake(n)=T_n-1`; THM-3333 proves triangular Lorentz polarization,
+  in/exradii and typed graph ranks `r,2r^2` with zero flag homology.
+  MISTAKE-222 blocks cross-predicate transfer; a common valuation is still needed.
 - **EXACT arrangement shadow / blocked topology transfer:** corrected HYP-8825
   connects Vandermonde, braid chambers/transitive tournaments, and a companion
   determinant. MISTAKE-223 blocks NC2, hyper-Bessel, or Euler-characteristic
