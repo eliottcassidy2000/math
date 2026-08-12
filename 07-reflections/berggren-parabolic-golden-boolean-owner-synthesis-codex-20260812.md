@@ -12,6 +12,7 @@ open transfers; theorem files, not this narrative, are the truth sources.
 | equal-plane collisions | Gaussian factor-choice torsors `F_2^r/<1>` | **PROVED** | THM-3334 |
 | internal four-box | `W(m,n)=(n-m,m,n,n+m)` with a signed matching current | **PROVED** | THM-3339 |
 | square/triangular selector | Pell-8/Markov compiler selecting square even legs on the U-spine | **PROVED** | [THM-3335](../01-canon/theorems/THM-3335-square-triangular-pell-markov-pythagorean-selector.md) |
+| spine scalar intersections | square `C_t`, triangular `Q_t`, branch transplant, selector fibres | **PROVED** | [THM-3341](../01-canon/theorems/THM-3341-u-spine-square-hypotenuse-transplant-and-triangular-plane-torsors.md) |
 | Gaussian content curvature | intended multiplication/content cocycle | **RESERVED / OPEN** | [THM-3336](../01-canon/theorems/THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation.md) is an empty stub |
 | LRC spectral closure | owner, phase, clock, endpoint word, global exit | **OPEN** | neither THM-3334 nor THM-3339 removes a row |
 
@@ -98,6 +99,33 @@ There are therefore three typed dynamics, not one overloaded “Pell tree”:
 | square-triangular clock | `x^2-8q^2=1` | sparse depths with square even leg |
 | Fibonacci/golden ray | `|n^2-mn-m^2|=1` | irrational endpoint `1/phi`, three ancestry rays |
 
+THM-3341 closes the remaining square/triangular table.  For `t>=1`, `C_t`
+is square exactly on
+
+```text
+t=3,20,119,696,...,
+```
+
+is never triangular, and `Q_t` is never square.  The triangular `Q_t` values
+are exactly two norm-17 Pell orbits beginning
+
+```text
+t=6,23,221,798,7524,... .
+```
+
+Each THM-3335 square-triangular row joins two consecutive square-`C_t` roots
+as its fixed-two Markov coordinates.  Gaussian squaring then sends the middle
+Berggren ray to U-depths
+
+```text
+2,19,118,695,4058,...,
+```
+
+with variable drift.  Most importantly, Boolean fibre rank remains unbounded
+inside this sparse square selector.  Its first collision is
+`C_696=985^2`, where the two ancestry words are `U^695` and
+`UUUUUDADUDDU`.
+
 ## The four-versus-six puzzle is a typed diagram
 
 There are two unrelated `K4` vertex sets.
@@ -183,9 +211,9 @@ owner.  A physical use must retain the current orbit as part of its state.
 
 ## Research queue opened by the synthesis
 
-1. THM-3335 has classified the square-even-leg/square-triangular selector.
-   Classify the remaining square or triangular values of `c_t` and
-   `Q_t=2c_t+1`, keeping them separate from the now-proved selector.
+1. The square/triangular intersection table is now closed by THM-3341.  Use
+   its variable-length Gaussian branch transplant to test whether ancestry
+   depth dispersion in square-selector fibres is unbounded quantitatively.
 2. Derive the Gaussian multiplication content cocycle before quotienting by
    primitive normalization; determine whether it acts on, merely grades, or
    destroys the fixed-hypotenuse Boolean torsor.
