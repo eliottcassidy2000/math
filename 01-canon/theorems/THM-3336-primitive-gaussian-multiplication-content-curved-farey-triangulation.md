@@ -1,35 +1,40 @@
 ---
 id: THM-3336
-title: "Primitive Gaussian multiplication, content cocycle, and the weighted Farey triangulation"
+title: "Primitive Gaussian multiplication, charge cohomology, content-curved Farey faces, and Boolean groupoid"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Primitive
-  Gaussian multiplication is a raw Lorentz/norm similitude; primitive
-  reduction carries an exact multiplicative content cocycle linearized by a
-  root of minus one modulo the multiplier norm.  A transformed Farey face
-  reconstructs that norm and all endpoint contents from its three determinant
-  labels.  The same operation has exact Brahmagupta, parity-normalized
-  Pythagorean, weighted-Vieta, and in/exradius-matrix forms.  Per-column
-  contents can reverse the THM-2056 sufficient determinant gate on lawful
-  saturated positive decks, but compare different planes and do not decide
-  LRC safety.  LRC(14), owner/phase transport, and global exit remain open.
+  Gaussian multiplication is a raw Lorentz/norm similitude whose primitive
+  reduction carries an exact content cocycle, split-prime charge H^1 classes,
+  and content-curved Farey-face reconstruction.  Fixed-hypotenuse Boolean
+  directions have canonical folded weights, but multiplication acts only
+  through a section-dependent source groupoid.  Per-column contents can
+  reverse the THM-2056 sufficient determinant gate on lawful saturated decks,
+  while comparing different planes; LRC(14), owner/phase transport, a
+  tournament orientation, and JC flux remain open.
 source: codex-2026-08-12-primitive-gaussian-content-curvature
 audit: >
-  An independent arithmetic audit rederived every displayed identity and all
-  four 13-column controls, independently swept 1,008 positive-determinant
-  primitive-entry matrices over 233,856 Farey faces and 1,968,128 ordered
-  matrix cocycles, and reproduced normal/optimized/stored output byte for
-  byte.  A separate inheritance audit found no proved binary-operation
-  duplicate and checked the saturation, quotient, and LRC consequence
-  boundaries.
+  The promotion audit rederived the identities and four 13-column controls,
+  swept 1,008 positive-determinant primitive-entry matrices over 233,856
+  Farey faces and 1,968,128 ordered matrix cocycles, and reproduced the primary
+  transcript.  A second independent hostile audit covered 1,600 Smith
+  multipliers, all content patterns through norm 96, 984,960 primitive-matrix
+  Farey faces, and 8,632 represented norms at least 91; it exposed the
+  composition-domain issue recorded in MISTAKE-370, accepted the repair, and
+  verified the universal gate construction.  A separate charge/Boolean audit
+  repaired the C8 torsion, conjugation, section, shell, and H^1 typing and then
+  accepted the result.  Both companions match in normal and optimized modes,
+  and all four recorded hashes match.
 depends_on:
   - THM-2056-kelvin-polar-farey-defect-certificate
   - THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone
+  - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
 related:
   - THM-2053-rank-two-parameter-plane-geodesic-terminal
   - THM-2055-determinant-gate-normal-fan-and-tangent-sector-reduction
   - THM-2596-modular-free-factor-farey-gram-owner-cocycle
+  - THM-2622-affine-torsor-holonomy-fixed-section-spectrum-and-v4-c13-dictionary
   - THM-2632-farey-v4-theta-channel-and-hurwitz-crt-parity-sidecar
-  - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
+  - THM-2753-six-edge-parity-erasure-and-three-matching-resolvent-restoration
   - THM-3335-square-triangular-pell-markov-pythagorean-selector
   - THM-3339-fibonacci-three-ray-berggren-transplant-and-moving-owner-obstruction
   - THM-3341-u-spine-square-hypotenuse-transplant-and-triangular-plane-torsors
@@ -37,6 +42,10 @@ script: 04-computation/primitive_gaussian_content_curvature_thm3336.py
 output: 05-knowledge/results/primitive_gaussian_content_curvature_thm3336.out
 script_sha256: a63d60669e11cd22ee0ef7afd619e54885308ce55d452a95e7131d19263e881f
 output_sha256: 74cad2e39423f3f558d03f3be0b91e1d6102cf3106b6e2686c6d6f6f0a0a5709
+secondary_script: 04-computation/gaussian_content_curved_farey_thm3336.py
+secondary_output: 05-knowledge/results/gaussian_content_curved_farey_thm3336.out
+secondary_script_sha256: 70d9d105ba30eae75262d564fa40319432d515be54817701656110260d35f0cc
+secondary_output_sha256: 29247ef153043b0298414557e190d443ce20e4403ac87c8e2adaf823f88428e2
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -47,7 +56,8 @@ hash_basis: working-tree bytes (LF)
 No literature-priority or global-novelty claim is made.  The sum-of-two-squares
 and Smith-normal-form ingredients are elementary; the intended new payload is
 their typed operation-level assembly with primitive Pythagorean composition,
-Farey-face index labels, signed radii, and the current LRC determinant gate.
+split-prime charge cohomology, Farey-face index labels, fixed-hypotenuse
+Boolean fibres, signed radii, and the current LRC determinant gate.
 
 ## 1. Inheritance, objects, and the raw similitude
 
@@ -161,6 +171,177 @@ although both input spinors are primitive.  On raw triples,
 Primitive Pythagorean triples are therefore not closed under the unscaled
 Brahmagupta product.  The naive primitive product does not preserve Berggren
 depth, and no Farey-distance additivity follows.
+
+### 2A. The signed primitive group and its exact charge cohomology
+
+The fixed-multiplier notation hides a symmetric group law.  For nonzero
+signed primitive Gaussian integers define
+
+```text
+d(z,w)=d_z(w),                  z star_p w=mu_z(w).       (12a)
+```
+
+The subscript distinguishes this parameter operation from the triple product
+in (6).  Positive content is removed without an additional unit choice.
+Equations (10) imply literally
+
+```text
+(z star_p w) star_p t=z star_p (w star_p t),
+d(z,w)d(z star_p w,t)=d(w,t)d(z,w star_p t).             (12b)
+```
+
+The operation is commutative, has identity `1`, and has inverse `conj(z)`.
+It is therefore already an abelian group on signed primitive pairs.  Its
+finite torsion is `C8`, generated by `1+i`:
+
+```text
+(1+i)^star_p2=i,                    (1+i)^star_p8=1.      (12c)
+```
+
+Let
+
+```text
+tau(z)=v_(1+i)(z) in {0,1};                                 (12d)
+```
+
+equivalently, `tau(z)=1` exactly when both coordinates are odd.  The
+ramified-two content and primitive parity obey
+
+```text
+v_2(d(z,w))=tau(z)tau(w),
+tau(z star_p w)=tau(z) XOR tau(w).                       (12e)
+```
+
+Define the odd content
+
+```text
+k_odd(z,w)=d(z,w)/2^(tau(z)tau(w)).                      (12f)
+```
+
+The binary carry identity makes it a multiplicative two-cocycle:
+
+```text
+k_odd(z,w)k_odd(z star_p w,t)
+ =k_odd(w,t)k_odd(z,w star_p t).                         (12g)
+```
+
+This cocycle gives the clean primitive-triple composition law.  With
+
+```text
+T(z)=Phi(z)/2^tau(z),                                    (12h)
+```
+
+one has, for the signed triple product (6),
+
+```text
+T(z) star T(w)=k_odd(z,w)^2 T(z star_p w).               (12i)
+```
+
+Absolute values or canonical leg sorting cannot be inserted into (12i)
+without recording the resulting unit/leg gauge.  If
+
+```text
+H(z)=N(z)/2^tau(z)                                       (12j)
+```
+
+is primitive hypotenuse grade, then
+
+```text
+H(z star_p w)=H(z)H(w)/k_odd(z,w)^2,
+k_odd(z,w)^2=H(z)H(w)/H(z star_p w).                     (12k)
+```
+
+Thus the square content is intrinsically the multiplicative coboundary of
+the grade.
+
+The faithful signed coordinates are even sharper.  For every rational split
+prime `p=1 mod 4`, choose one Gaussian prime `pi_p` above it and set
+
+```text
+lambda_p(z)=v_(pi_p)(z)-v_(conj(pi_p))(z).               (12l)
+```
+
+Modulo the four Gaussian units, the primitive group is
+
+```text
+G = C2 direct-sum (direct sum over p=1 mod4 of Z),        (12m)
+```
+
+with coordinates `(tau,(lambda_p)_p)`.  Every finitely supported coordinate
+occurs, and
+
+```text
+lambda_p(z star_p w)=lambda_p(z)+lambda_p(w).             (12n)
+```
+
+With trivial coefficient actions, these are precise group-cohomology classes
+
+```text
+tau in H^1(G;F_2),                 lambda_p in H^1(G;Z). (12o)
+```
+
+They are not classes on the Farey tessellation, Berggren tree, Boolean graph,
+LRC base, or a JC complement.
+
+Odd content is coordinate cancellation:
+
+```text
+v_p(k_odd(z,w))
+ =(|lambda_p(z)|+|lambda_p(w)|
+   -|lambda_p(z)+lambda_p(w)|)/2.                        (12p)
+```
+
+After weighting coordinate `p` by `log p`, `log k_odd` is half the `l1`
+triangle defect.  It is itself an exact coboundary after choosing the prime
+orientations.  Put
+
+```text
+F_-(z)=product_p p^max(0,-lambda_p(z)).                  (12q)
+```
+
+Then
+
+```text
+k_odd(z,w)=F_-(z)F_-(w)/F_-(z star_p w).                (12r)
+```
+
+Equation (12r) is orientation-dependent; (12k) is the intrinsic statement.
+The `H^1` classes are the signed charges, while nonnegative content is their
+lossy cancellation shadow.
+
+### 2B. Binary Farey content equals the endpoint norm gcd
+
+If primitive `u,v` satisfy `|det(u,v)|=1`, then
+
+```text
+d(u,v)=gcd(N(u),N(v)),                                   (12s)
+```
+
+and this integer is odd.  At an odd shared split prime, the two norm-zero
+vectors modulo `p` must occupy opposite isotropic Gaussian lines; the same
+line would make their determinant vanish.  Opposite orientations contribute
+exactly the minimum endpoint valuation to both sides of (12s).  Inert primes
+cannot divide a primitive Gaussian norm, and two odd/odd endpoints would have
+even determinant.
+
+Writing `h=u dot v`, one obtains
+
+```text
+N(u)N(v)=h^2+1,
+N(u star_p v)=(h^2+1)/gcd(N(u),N(v))^2,
+h^2=-1 mod gcd(N(u),N(v))^2.                             (12t)
+```
+
+Adjacency is load-bearing: `d((2,1),(2,1))=1`, not `5`.  The sharp positive
+control is
+
+```text
+u=(2,1),       v=(7,4),       det(u,v)=1,
+uv=10+15i=5(2+3i),                                     (12u)
+```
+
+so the parameter content is `5`, the primitive output norm is `13`, and the
+triple content in (12i) is `25`.
 
 ## 3. A root of minus one linearizes every content
 
@@ -289,6 +470,22 @@ det(U,V)= delta kappa d_w,
 det(V,W)=-delta kappa d_u,
 det(W,U)=-delta kappa d_v.                              (26)
 ```
+
+At `p=2`, the same coprimality can also be seen directly: a Farey face has
+the three nonzero residues of `F_2^2`, hence exactly one odd/odd vertex, so
+two divides at most one endpoint content.
+
+Equations (22) and (26) use raw `Phi` lifts.  With the primitive normalized
+triple `T(x)=Phi(x)/2^tau(x)`, every image edge instead obeys
+
+```text
+<T(x_i),T(x_j)>_L
+ =2 det(x_i,x_j)^2/2^(tau(x_i)+tau(x_j)).                (26a)
+```
+
+Projectively the image is an ideal triangulation under `[G_s] in PGL_2(Q)`,
+but its weighted edges are generally not determinant-one edges of the
+standard Farey graph.
 
 Label each edge by the absolute determinant opposite a vertex:
 
@@ -473,6 +670,192 @@ with coefficient one, not four.  Primitive normalization therefore requires
 both the Gaussian product content `d_s(u)` and THM-3333's parity content
 `epsilon`; unordered legs erase the spinor gauge needed to evaluate them.
 
+In the symmetric notation of Section 2A,
+
+```text
+epsilon(x)=2^tau(x),
+d_s(u)^2 epsilon(mu_s(u))/(epsilon(s)epsilon(u))
+ =k_odd(s,u)^2.                                         (45a)
+```
+
+Thus (44) and (12i) are the same exact law.  The two-content presentation in
+(44) is convenient for fixed multipliers; the charge-cancellation presentation
+in (12i) is convenient for composition and Boolean fibres.
+
+## 7A. Fixed-hypotenuse fibres are weighted, not globally acted on
+
+Let an admissible odd hypotenuse be
+
+```text
+c=product_(j=1)^r p_j^e_j,                 p_j=1 mod 4, (45b)
+```
+
+and choose `pi_j` above each `p_j`.  The raw Gaussian allocation cube is
+
+```text
+z_x=product_j pi_j^(e_j(1-x_j)) conj(pi_j)^(e_j x_j),
+x in F_2^r.                                               (45c)
+```
+
+Global conjugation sends `x` to `x+1`.  After choosing the prime orientations
+and one affine chart, THM-3334's parent torsor is therefore
+
+```text
+X_c isomorphic to F_2^r/<1>.                             (45d)
+```
+
+For raw lifts, (12p) specializes to
+
+```text
+k_odd(z_x,z_y)=product_(j:x_j!=y_j) p_j^e_j.             (45e)
+```
+
+Conjugating one lift replaces the displayed divisor by its complement in
+`c`.  Hence a quotient direction `s=[x-y]`, represented by a subset `S`, has
+the intrinsic folded weight
+
+```text
+K_c(s)={P_S,c/P_S},
+P_S=product_(j in S)p_j^e_j.                             (45f)
+```
+
+Unique factorization makes (45f) injective on nonzero directions of (45d):
+equality of unordered divisor pairs means equality or complementation of
+subsets, exactly the quotient relation.  Every nonzero direction of an
+affine binary space is one perfect matching, so (45f) canonically weights the
+Cayley one-factorization of the complete parent graph.
+
+At `c=65`, its one matching has folded weight
+
+```text
+{5,13}.                                                   (45g)
+```
+
+At THM-3334's first affine `V4` fibre
+
+```text
+c=1105=5*13*17,                                         (45h)
+```
+
+the three prime-XOR matchings have exact weights
+
+```text
+{5,221},                    {13,85},                    {17,65}. (45i)
+```
+
+These weights distinguish all three directions but are invariant under every
+translation of the four parent vertices.  They select no owner, ancestry
+path, or tournament orientation.
+
+### Multiplication does not descend through conjugation
+
+The operation `star_p` acts on signed primitive lifts or associate classes.
+It does not directly act on the conjugation quotient (45d).  The minimal
+hostile is
+
+```text
+2+i ~ 2-i,                     w=2+i,
+(2+i) star_p w=3+4i with H=25,
+(2-i) star_p w=1 with H=1.                              (45j)
+```
+
+In charge coordinates, the raw cube (45c) is an antipodal orthotope
+
+```text
+lambda_(p_j)(z_x) in {+e_j,-e_j}.                        (45k)
+```
+
+Multiplication by a fixed lift translates charges by a constant `mu`; a bit
+flip reflects one coordinate.  No translation reflects both signs.  More
+intrinsically, representative independence would require
+
+```text
+[mu+lambda]=[mu-lambda]                                  (45l)
+```
+
+for every antipodal class.  For nonzero `lambda`, equality forces `mu=0`.
+Only zero split-charge gauges descend canonically, and they contribute no
+odd-prime Boolean motion.
+
+A chosen orientation section can make a nontrivial fixed multiplier look
+like a quotient translation.  At `c=65`, take
+
+```text
+pi_5=2+i,       pi_13=3+2i,
+z_0=4+7i,       z_1=8-i,
+alpha=(2-i)^2=3-4i.                                     (45m)
+```
+
+Then
+
+```text
+alpha star_p z_0=8+i ~ z_1,
+alpha star_p z_1=4-7i ~ z_0.                            (45n)
+```
+
+On both conjugate representatives, however, the output grade is `1625`
+rather than `65`.  The action belongs to the chosen section and does not
+descend.
+
+### The lawful Boolean motion is a Gaussian groupoid
+
+Let `g_(j,x)` denote the entire selected Gaussian prime-power factor at
+coordinate `j` of `z_x`.  For a subset `S`, define the source-dependent
+multiplier
+
+```text
+A_(S,x)=product_(j in S) conj(g_(j,x))^2.                (45o)
+```
+
+Then
+
+```text
+d(A_(S,x),z_x)=P_S,
+A_(S,x) star_p z_x=z_(x+S).                             (45p)
+```
+
+These arrows compose as a groupoid over the raw allocation cube.  Their
+dependence on `x` is not optional: it records which prime orientation must be
+cancelled before its conjugate is installed.
+
+The smallest one-sided hostile uses
+
+```text
+pi=2+i,                  alpha=pi^2=3+4i.                (45q)
+```
+
+Then `alpha conj(pi)=5pi` reduces back to grade `5`, whereas
+`alpha pi=pi^3=2+11i` has grade `125`.  A fixed multiplier flips one
+orientation and exits the grade on the other.
+
+Finally, suppose a primitive multiplier preserves `H(z)` for every primitive
+`z`.  Taking `z=1` in (12k) forces `H(alpha)=1`, so `alpha` is a Gaussian unit
+or an associate of `1+i`.  Conversely those eight lifts have
+`k_odd(alpha,z)=1` and preserve every grade.  Up to signed unit/leg gauge,
+multiplication by `1+i` on an odd/odd pair is
+
+```text
+(m,n)->((m-n)/2,(m+n)/2),                                (45r)
+```
+
+the normalizer behind THM-3339's third Fibonacci ray.  It supplies the
+ramified-two correction and no split-prime Boolean translation.
+
+### Cohomology and ancestry scope
+
+The cohomology in (12o) is group cohomology of the associate-class
+multiplication group `G`.  It makes no statement about graph cohomology.  In
+particular the external `K4` at `c=1105`, viewed as a graph, has first Betti
+number `6-4+1=3`; only its clique filling is a tetrahedron with vanishing
+positive-degree cohomology.
+
+After choosing one parent as origin, XOR displacements reconstruct all other
+vertices along paths in the fibre graph.  This is an affine calibration, not
+an intrinsic owner.  Equal-hypotenuse parents form a directed ancestry
+antichain.  The ambient Berggren tree has a unique undirected path between
+them, but that path exits the fixed-hypotenuse fibre and supplies no canonical
+fibre origin.
+
 ## 8. The determinant gate is content-weighted, not invariant
 
 For a labelled primitive coefficient deck `c_1,...,c_13` and primitive
@@ -548,10 +931,27 @@ d=(1,0),        c_k=(10,-1)+101k d                       (53)
 has contents `(1,101,...,101)` and moves `(1,1)` to `(1,101)`.  Taking
 `s=a+i` gives both displayed directions for the unbounded sequence
 `N=a^2+1`.  More generally, the pass-to-fail construction works for every
-primitive Gaussian norm `N>=91`: use the content-`N` direction `(a,-b)`, a
-Bezout neighbor, and a harmless positive shift.  No corresponding
-all-representations claim is made for the reverse direction at the fixed
-threshold `91`.
+primitive Gaussian norm `N=a^2+b^2>=91`.  Choose signs with `a,b>0`, solve
+`ar+bt=1`, and put
+
+```text
+d=(a,-b),       c=(t,r),       h=at-br,
+c_j=c+(K+j)d,                                      0<=j<=11. (53a)
+```
+
+Then
+
+```text
+G_s d=(N,0),            G_s c_j=(h+(K+j)N,1).            (53b)
+```
+
+For `K` large enough that `h+KN>N`, the source and target decks
+`{d,c_0,...,c_11}` are saturated, lie in open positive half-planes, and admit
+generic primitive covectors with positive, nonzero, distinct speeds.  Their
+content patterns are `(N,1,...,1)`, and the displayed direction changes
+`(D,q)=(1,N)` to `(1,1)`.  Thus the sufficient gate passes and then fails.
+No corresponding all-representations claim is made for the reverse direction
+at the fixed threshold `91`.
 
 These are certificate flips, not LRC safety flips.  Gate failure means only
 uncertified.  More importantly, raw left multiplication of every coefficient
@@ -580,30 +980,63 @@ invoices.  On the rational boundary, `[G_s]` sends the ideal Farey
 triangulation to a commensurator translate.  Only Gaussian units preserve the
 standard triangulation; a nonunit produces a labelled overlay.
 
-The face mechanism has a useful maximal extension.  Let `A` be any integral
-`2 x 2` matrix with positive determinant and gcd of its four entries equal to
-one.  For primitive `u`, define
+The face mechanism has a useful maximal extension, but its operation class
+must be typed carefully.  For every nonsingular integral `2 x 2` matrix `M`
+and primitive `u`, define
 
 ```text
-d_A(u)=gcd(Au),             mu_A(u)=Au/d_A(u).            (55)
+d_M(u)=gcd(Mu),             mu_M(u)=Mu/d_M(u).            (55)
 ```
 
-Smith normal form is `diag(1,|det A|)`.  Replacing `G_s,N` by
-`A,|det A|` preserves the ordered content cocycle: for nonsingular integral
-`A,B`,
+This full nonsingular class is closed under composition and obeys
 
 ```text
-d_(AB)(u)=d_B(u)d_A(mu_B(u)),
-mu_A(mu_B(u))=mu_(AB)(u).                               (55a)
+d_(ML)(u)=d_L(u)d_M(mu_L(u)),
+mu_M(mu_L(u))=mu_(ML)(u).                                (55a)
 ```
 
-It also preserves the determinant identity (9), the edge and weighted-face
-identities (19)--(31) and (35)--(36), and the intersection law (54).  The
-content-range statement (32)--(33) persists after replacing `ell_h` by the
-primitive linear row supplied by Smith normal form; a general matrix need not
-have a fixed-coordinate root of minus one.  When `|det A|` is even, exactly
-one face content is even, but it may absorb only part of the `2`-adic
-valuation.  This differs from the primitive Gaussian case, where `v_2(N)=1`.
+If `g=cont(M)` is the gcd of the four entries and `M_0=M/g`, then
+
+```text
+mu_M=mu_(M_0),       d_M=g d_(M_0),
+Delta(M)=|det M|/g^2=|det M_0|.                          (55b)
+```
+
+Thus `Delta`, not `|det M|`, is the effective primitive degree after scalar
+content is discarded.  In particular, the content-one subclass is **not**
+closed under composition.  The minimal Gaussian witness is
+
+```text
+A=B=[1 -1;1 1],       AB=[0 -2;2 0],                    (55c)
+```
+
+where `A,B` have entry-content one and determinant two, while `AB` has
+entry-content two.  Correspondingly
+
+```text
+Delta(A)=Delta(B)=2,                 Delta(AB)=1.         (55c')
+```
+
+Thus `Delta` is an objectwise effective degree, not a multiplicative grading
+of the primitive-normalized action.  The content cocycle is exactly the
+sidecar that records this loss.
+
+Now let `A` have positive determinant `N` and entry-content one.  Its Smith
+normal form is `diag(1,N)`.  Replacing `G_s,N` by `A,N` preserves the
+determinant identity (9), the edge and weighted-face identities (19)--(31) and
+(35)--(36), and the intersection law (54).  The content formula (32) also
+persists after replacing `ell_h` by the primitive linear row supplied by Smith
+normal form; a general matrix need not have a fixed-coordinate root of minus
+one.  For odd `N`, the exact range is again all pairwise-coprime divisor
+triples.  If `e=v_2(N)>0`, the contents remain pairwise coprime and exactly one
+is even, but its valuation may be any `1<=j<=e`; the residual factor
+`2^(e-j)` remains in `kappa`.  For example,
+
+```text
+A=diag(1,4),       u=(2,1),       v=(1,1)                (55d)
+```
+
+gives the Farey-face contents `(2,1,1)` and `kappa=2`.
 It does **not** preserve the Euclidean norm formula (8): for example,
 `A=diag(1,2)` and `u=(1,1)` give `N(Au)=5`, not
 `|det A|N(u)=4`.  Gaussian structure contributes conformality, the extra
@@ -613,7 +1046,7 @@ explains why content curvature is a primitive cyclic lattice phenomenon,
 while the Pythagorean/radius and determinant-gate compilers are genuinely
 Gaussian.
 
-Each hypothesis matters independently:
+Each hypothesis and boundary matters independently:
 
 ```text
 A=2I                         breaks content coprimality;
@@ -634,21 +1067,42 @@ What is proved here is:
 4. Brahmagupta composition of primitive triples requires both Gaussian and
    parity contents;
 5. the THM-2056 determinant gate acquires the per-column weights (47), which
-   can reverse its sufficient verdict on lawful positive saturated decks.
+   can reverse its sufficient verdict on lawful positive saturated decks;
+6. signed primitive multiplication has explicit `C8`/split-prime charge
+   coordinates, with `tau,lambda_p` the exact associate-group `H^1` classes
+   and odd content an orientation-dependent coboundary;
+7. fixed-hypotenuse Boolean directions have canonical folded content weights,
+   while actual flips are source-dependent groupoid arrows and multiplication
+   does not descend through conjugation without a chosen section.
+8. the primitive-matrix extension lives in the full nonsingular integral
+   composition class, with scalar content removed by the effective degree
+   `Delta`; its larger `2`-adic range is not the Gaussian range.
 
 It does **not** prove an LRC(14) row, a safety equivalence, a global Berggren
-endomorphism, a canonical phase/owner, or a global exit from the finite
-uncertified fan.  The surviving LRC opportunity is more precise: content is a
-new exact coordinate for comparing primitive deck operations, and any use of
-Gaussian composition must transport saturation, owner, phase, and clocks in
-addition to the determinant ratio.
+endomorphism, a canonical phase/owner, a tournament orientation, a JC flux
+class, or a global exit from the finite uncertified fan.  The surviving LRC
+opportunity is more precise: content is a new exact coordinate for comparing
+primitive deck operations, and any use of Gaussian composition must transport
+saturation, the conjugation section, owner, phase, and clocks in addition to
+the determinant ratio.
 
 Reproduce the exact audit with
 
 ```bash
 python3 04-computation/primitive_gaussian_content_curvature_thm3336.py
 python3 -O 04-computation/primitive_gaussian_content_curvature_thm3336.py
+python3 04-computation/gaussian_content_curved_farey_thm3336.py
+python3 -O 04-computation/gaussian_content_curved_farey_thm3336.py
 ```
 
-Both modes must byte-match
-`05-knowledge/results/primitive_gaussian_content_curvature_thm3336.out`.
+For each companion, normal and optimized modes must match its stored
+transcript after LF normalization (the repository evidence convention).  The
+primary companion checks finite Gaussian and Smith-form censuses, face
+reconstruction, Vieta/radius, parity, determinant-gate examples, and the three
+explicit non-Gaussian hostiles.  The arbitrary primitive-matrix extension and
+the universal `N>=91` construction are proved above rather than exhaustively
+enumerated by that companion.  The secondary companion independently checks
+the signed group/content cocycles,
+charge coboundary, binary Farey gcd, raw and normalized shells, Boolean
+weights/groupoid, conjugation and section hostiles, and universal grade
+preservers.

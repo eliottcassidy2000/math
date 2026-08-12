@@ -1,0 +1,15 @@
+THM-3336 VERIFIED-EXACT
+signed_primitive_torsion_C8=[(1, 1), (0, 1), (-1, 1), (-1, 0), (-1, -1), (0, -1), (1, -1), (1, 0)]
+primitive_cocycle_triples=17280
+charge_lattice_pairs=2401; split_primes=5,13
+farey_edges=319; multiplier_face_rows=17864
+farey_positive=(2+i,7+4i): content=5; output=2+3i
+composite_face=alpha(8+i); d=(1,13,5); edge_det=(5,1,13)
+ramified_two_face=d=(1,1,2); edge_det=(2,1,1)
+folded_weights_65=[(5, 13)]
+folded_weights_1105=[(5, 221), (13, 85), (17, 65)]
+conjugation_hostile=(2+i)^2:grade25; (2-i)*(2+i):grade1
+section_swap_c65=works_on_(4+7i,8-i); conjugates_exit_grade1625
+fixed_multiplier_hostile=(3+4i)*(2-i)->grade5; *(2+i)->grade125
+universal_grade_preservers_in_bank=[(1, 0), (-1, 0), (0, 1), (0, -1), (1, 1), (1, -1), (-1, 1), (-1, -1)]
+ALL CHECKS PASSED
