@@ -1,5 +1,5 @@
 ---
-id: THM-3351
+id: THM-3348
 title: "Linear-z generic puncture response and one-root valuation"
 status: >
   PROVED + FINITE-EXACT HOSTILE-AUDITED.  For P=f(x)+g(x)z over a
@@ -17,14 +17,14 @@ depends_on:
 related:
   - THM-3318-hamiltonian-divergence-torsion-ladder-for-x-plus-xr-z
   - THM-2063-one-fiber-linear-planar-keller-pairs
-script: 04-computation/jc_linear_z_generic_puncture_response_thm3346.py
-output: 05-knowledge/results/jc_linear_z_generic_puncture_response_thm3346.out
-script_sha256: 12e62dad50cb21cee52dc11f99ab704f2dfc1dc1df79f7cae38958c381341026
-output_sha256: 009988b0ec261e6a0c40819119f900ba8a09a61022994b02f7dfccb6bc7eec33
+script: 04-computation/jc_linear_z_generic_puncture_response_thm3348.py
+output: 05-knowledge/results/jc_linear_z_generic_puncture_response_thm3348.out
+script_sha256: 105bed99614bde959db73c2d3b7efb3927e94b9eb234db74717f73886520f4f6
+output_sha256: 5137ba9a2d33adb4e33f2d9823ef5f8e7e471230587b0e690fa0e622acd4a4de
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3351 -- linear-`z` generic puncture response and one-root valuation
+# THM-3348 -- linear-`z` generic puncture response and one-root valuation
 
 **PROVED + FINITE-EXACT HOSTILE-AUDITED.**
 

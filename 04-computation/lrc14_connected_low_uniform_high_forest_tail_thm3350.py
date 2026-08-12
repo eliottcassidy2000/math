@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""THM-3348 uniform high-forest tail for non-dense connected-low six-rays.
+"""THM-3350 uniform high-forest tail for non-dense connected-low six-rays.
 
 For each primitive high channel, this exact referee maximizes the rigorous
 all-channel midpoint error over the 180 ordered endpoint-label contexts that

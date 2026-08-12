@@ -1,5 +1,5 @@
 ---
-id: THM-3348
+id: THM-3350
 title: "Connected-low full-tree atlas, dense closure, and uniform high-forest tail"
 status: >
   PROVED + FINITE-EXACT + VERIFIED-EXACT.  There are exactly 305,909
@@ -13,26 +13,26 @@ status: >
 source: root/lrc-math-2026-08-12
 depends_on:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
-  - THM-3352-reflected-low-two-star-selected-half-limit-all-dilations
+  - THM-3349-reflected-low-two-star-selected-half-limit-all-dilations
 related:
   - THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary
   - THM-3211-uniform-lrc-channel-limit-bernoulli-cubic-and-sharp-floor
-atlas_script: 04-computation/lrc14_connected_low_full_tree_atlas_thm3348.py
-atlas_output: 05-knowledge/results/lrc14_connected_low_full_tree_atlas_thm3348.out
-atlas_script_sha256: f935b5154e57e5993f578fddad507ddf5f04568f40043c2e19774a55b901d7aa
+atlas_script: 04-computation/lrc14_connected_low_full_tree_atlas_thm3350.py
+atlas_output: 05-knowledge/results/lrc14_connected_low_full_tree_atlas_thm3350.out
+atlas_script_sha256: 8020b953084b19940845349980a83547a5d73bbd2e96f3cc45556402b015bb67
 atlas_output_sha256: 75aac002408daa90c63f6706b909fab6aab0fb50f4d728626282d6ffef34607b
-dense_script: 04-computation/lrc14_connected_low_dense_full_tree_all_dilations_thm3348.py
-dense_output: 05-knowledge/results/lrc14_connected_low_dense_full_tree_all_dilations_thm3348.out
-dense_script_sha256: 381b69447fd1b543968719746821095a80f18bbc0ab37659236c4f021c096bde
+dense_script: 04-computation/lrc14_connected_low_dense_full_tree_all_dilations_thm3350.py
+dense_output: 05-knowledge/results/lrc14_connected_low_dense_full_tree_all_dilations_thm3350.out
+dense_script_sha256: a44755f9cbc4f9ae91cd465ea6773744eb964988f6adf9733d28ec19e6d643b3
 dense_output_sha256: 22803a615cc75a836c359d6a6db3f19beef79642e344042b9bcdbe4bed893cd9
-tail_script: 04-computation/lrc14_connected_low_uniform_high_forest_tail_thm3348.py
-tail_output: 05-knowledge/results/lrc14_connected_low_uniform_high_forest_tail_thm3348.out
-tail_script_sha256: 32587f0b965de7da1096e0f817cee46429ed2842495790cb9d489a21d2ed24c4
+tail_script: 04-computation/lrc14_connected_low_uniform_high_forest_tail_thm3350.py
+tail_output: 05-knowledge/results/lrc14_connected_low_uniform_high_forest_tail_thm3350.out
+tail_script_sha256: 78daaf73966d283c0c0bafa1c0975684e6167d2ef6375a3abeece4e00cdc87f9
 tail_output_sha256: 2d409089c5ceb6e9ab7d3ae8aa99bc21a711fc98944e72f1da5daa31874270fa
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3348 -- connected-low full trees, dense closure, and a uniform tail
+# THM-3350 -- connected-low full trees, dense closure, and a uniform tail
 
 **PROVED + FINITE-EXACT + VERIFIED-EXACT.**
 
@@ -174,7 +174,7 @@ atlas.  It is not being smuggled into the forest-extension argument.
 
 ## 4. All-channel midpoint/shear transport
 
-The low-channel restriction in THM-3352 is unnecessary for the transport
+The low-channel restriction in THM-3349 is unnecessary for the transport
 estimate.  Fix one edge, ruler `L`, safe cell `j`, endpoint labels `e,f`, and
 raw levels `(1)`.  Put `h=sd`, `R=ej mod L`, `S=fj mod L`, and
 
@@ -185,7 +185,7 @@ H(t)=integral_0^1 F(x,t)dx,                             (12)
 ```
 
 where `chi` is the circular radius-`1/14` indicator.  Slabwise contraction
-toward each midpoint gives exactly as in THM-3352
+toward each midpoint gives exactly as in THM-3349
 
 ```text
 |I_s-J_h| <= gamma_P eP/(hLP-e)+gamma_Q fQ/(hLQ-f),     (13)

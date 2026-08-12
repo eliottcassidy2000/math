@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Exact dense-low full-tree compiler for the reflected LRC(14) atlas.
 
-This THM-3348 referee does three logically separate things.
+This THM-3350 referee does three logically separate things.
 
 1. It freezes the universal singleton-debt maximum needed by the structural
    connected-low argument.  Every six-tuple of distinct positive levels has
@@ -16,7 +16,7 @@ This THM-3348 referee does three logically separate things.
    supplies the tail and direct rational interval geometry checks the head.
 
 It is the tracked exact companion for the dense all-dilation branch of
-THM-3348.  Set LRC_REPO only to override the repository inferred from this
+THM-3350.  Set LRC_REPO only to override the repository inferred from this
 file's canonical location.
 """
 

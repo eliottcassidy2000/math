@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact THM-3348 referee for the connected intrinsic-low six-level atlas.
+"""Exact THM-3350 referee for the connected intrinsic-low six-level atlas.
 
 This file is intentionally self-contained and writes nothing.  It performs
 two complete enumerations with different duplicate control:

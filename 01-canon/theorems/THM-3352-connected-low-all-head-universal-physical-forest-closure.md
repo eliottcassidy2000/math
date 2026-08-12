@@ -1,49 +1,49 @@
 ---
-id: THM-3350
+id: THM-3352
 title: "Connected-low all-head universal physical-forest closure"
 status: >
   PROVED + FINITE-EXACT + VERIFIED-EXACT.  Every connected-low primitive
   six-level ray closes at every common integer dilation on all 649
   upper-median bodies and all 720 labellings.  The 261,254 finite heads left
-  by THM-3348 admit universal exact physical high-forest certificates, with
+  by THM-3350 admit universal exact physical high-forest certificates, with
   zero failures.  This is not the whole reflected branch or LRC(14).
 source: root/lrc-math-2026-08-12
 depends_on:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
-  - THM-3348-connected-low-full-tree-atlas-dense-closure-and-uniform-tail
-engine: 04-computation/lrc_general_reflected_pair_mass_thm3350.py
-compiler: 04-computation/lrc14_connected_low_all_heads_universal_forest_thm3350.py
-output: 05-knowledge/results/lrc14_connected_low_all_heads_universal_forest_thm3350.out
-argmin_audit: 04-computation/lrc14_all_head_channel_argmin_reference_audit_thm3350.py
-argmin_audit_output: 05-knowledge/results/lrc14_all_head_channel_argmin_reference_audit_thm3350.out
-reference_engine: 04-computation/lrc_general_reflected_pair_mass_reference_audit_thm3350.py
-reference_literal_audit: 04-computation/lrc_general_reflected_pair_mass_reference_literal_audit_thm3350.py
-reference_literal_output: 05-knowledge/results/lrc_general_reflected_pair_mass_reference_literal_audit_thm3350.out
-tail_script_sha256: 32587f0b965de7da1096e0f817cee46429ed2842495790cb9d489a21d2ed24c4
+  - THM-3350-connected-low-full-tree-atlas-dense-closure-and-uniform-tail
+engine: 04-computation/lrc_general_reflected_pair_mass_thm3352.py
+compiler: 04-computation/lrc14_connected_low_all_heads_universal_forest_thm3352.py
+output: 05-knowledge/results/lrc14_connected_low_all_heads_universal_forest_thm3352.out
+argmin_audit: 04-computation/lrc14_all_head_channel_argmin_reference_audit_thm3352.py
+argmin_audit_output: 05-knowledge/results/lrc14_all_head_channel_argmin_reference_audit_thm3352.out
+reference_engine: 04-computation/lrc_general_reflected_pair_mass_reference_audit_thm3352.py
+reference_literal_audit: 04-computation/lrc_general_reflected_pair_mass_reference_literal_audit_thm3352.py
+reference_literal_output: 05-knowledge/results/lrc_general_reflected_pair_mass_reference_literal_audit_thm3352.out
+tail_script_sha256: 78daaf73966d283c0c0bafa1c0975684e6167d2ef6375a3abeece4e00cdc87f9
 engine_sha256: afd417297131401254769e1ef172d89c109ad2f9a843ea55e2badc3e7891435b
-compiler_sha256: 5cf0cf41342d5d66001de280e6496716dafffe57c6650e9f3a8546647349672e
+compiler_sha256: 780f2049e7b5bfa99559c65b22ab1774c8b5fe495137c962006e49966b84c5da
 output_sha256: 048251e4aa79c3005eba677b1123514d64f474fefd00fe0d9c70d1da2692a961
-argmin_audit_sha256: f9538b16818a5f5aa491fa7b051636cbd86cee1649a7a3529e06f847f353d485
+argmin_audit_sha256: 712ca1a85f9786a80506016396de64af941156c3ef9e8abc17a8e139a8bcd9da
 argmin_audit_output_sha256: 0286c34ff0976c97d16510af6e9ffab35efdaed2aee8c7611d19c1327ecabd34
-reference_engine_sha256: b125427d204bd62d4440891a0e750630987ff5d395950ef5c2318ec86e7e876a
-reference_literal_audit_sha256: 68d0927ca64c7bf6d66897240ee8cd42c37222d5dd8ff7cfb9518066b7a24f25
-reference_literal_output_sha256: fcbd62d27f184636f20c79dd3f89f12dc224c806d07ad428c26264335ecae179
+reference_engine_sha256: da941a4267147d5442be81ae81880742d2f6b901bfc1d20fb667822402a2950e
+reference_literal_audit_sha256: a5091bb697e03bdf59fd6f31f61bea99d02a2d628e64d66851b0a8b1a8f02ba4
+reference_literal_output_sha256: 1f9ec86a82695b21da2aabb27514460fe87a0cae7a2fea02c47a17b3a5f79f87
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3350 -- connected-low all-head universal physical-forest closure
+# THM-3352 -- connected-low all-head universal physical-forest closure
 
 **PROVED + FINITE-EXACT + VERIFIED-EXACT.**
 
 ## 1. Statement
 
-Use the notation and hypotheses of THM-3348: six distinct positive levels
+Use the notation and hypotheses of THM-3350: six distinct positive levels
 whose reduced-ratio low graph `P+Q<=7` is connected, common integer dilation
 `s>=1`, any of the `649` upper-median bodies, any labelling, and the body's
 fixed upper-median safe cell.  Then the complete-graph Hunter certificate
 closes every such ray at every scale.
 
-THM-3348 already closed both dense one-high-edge shapes at every scale and
+THM-3350 already closed both dense one-high-edge shapes at every scale and
 all other connected-low shapes from their exact thresholds, uniformly by
 scale `11`.  Its finite complement was
 
@@ -163,7 +163,7 @@ that forest.  Its physical credit in every actual context is at least the sum
 of its floor weights.  Since any
 forest in `K_6` extends to a spanning tree and all added intersections are
 nonnegative, this is a valid Hunter lower certificate.  Comparing it with
-the universal singleton-debt envelope `D_max/s` from THM-3348 proves closure.
+the universal singleton-debt envelope `D_max/s` from THM-3350 proves closure.
 
 This explains why incompatible minimizing contexts cause no problem: the
 argument never claims that their minima occur simultaneously.  It compares

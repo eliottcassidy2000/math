@@ -1,5 +1,5 @@
 ---
-id: THM-3349
+id: THM-3351
 title: "Projected-k3 z216 sixteen-family translated two-high closure"
 status: >
   PROVED analytic mechanisms + FINITE-EXACT in the declared projected atlas.
@@ -24,7 +24,7 @@ output_sha256: a88646fbd28d807a0cc9671c509c4424056a539b49d04a2076ba17de57ef5ee4
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3349 -- projected-`k=3`, `z1=216`, sixteen-family translated two-high closure
+# THM-3351 -- projected-`k=3`, `z1=216`, sixteen-family translated two-high closure
 
 **PROVED analytic mechanisms + FINITE-EXACT in the declared projected
 atlas.**
@@ -199,7 +199,7 @@ A centered cell count is not enough.  At the distinguished address `c/L`,
 the projected local coordinate is zero, and zero lies in every aligned danger
 set.  Thus a high-drift-safe grid address can coexist with full projected
 containment.  The proof must retain every local coordinate and maximize over
-translated bands, as in `(6)--(7)`.  This is recorded as MISTAKE-371.
+translated bands, as in `(6)--(7)`.  This is recorded as MISTAKE-372.
 
 Likewise, a zero lower bound in `(7)` proves nothing, and a unique residue
 unit does not fix the height-dependent slope.  That is why the three

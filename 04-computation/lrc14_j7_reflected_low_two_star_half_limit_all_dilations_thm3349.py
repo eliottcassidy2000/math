@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact finite head for THM-3347's selected half-limit theorem.
+"""Exact finite head for THM-3349's selected half-limit theorem.
 
 The theorem supplies the analytic midpoint/shear bound.  This companion
 reconstructs the frozen lexicographically-largest-edge selector on the

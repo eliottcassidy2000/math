@@ -25,10 +25,8 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`; projected `k=2,3` caps `1579/216`; `561` reflected bodies. THM-3352 closes all-nine-low two-star dilations.
-THM-3348 classifies `305,909` connected-low shapes and supplies their uniform tail; THM-3350 closes all `261,254` remaining finite heads by universal exact physical high-forest minima.  Thus all `220,254,480` labelled connected-low primitive rays close at every common dilation.
-THM-3349 closes sixteen complete `z1=216` families and `236` rows: ledger/wall/families `372917/113/13`, cap `216`; next `L720720`, rows `191,228,332`.
-Arbitrary `k<=1`, independent component scales, rung, physical entry and LRC remain open. The screen counts are necessary-state, not physical covers.
+Direct frontier: `<=6`; projected caps `1579/216`; `561` reflected bodies. THM-3351 leaves ledger/wall/families `372917/113/13` at `z1=216`, next `L720720` on rows `191,228,332`.
+THM-3349/3350/3352 close all `220,254,480` labelled connected-low primitive rays. Disconnected component scales, arbitrary `k<=1`, rung, physical entry and LRC remain open; screens are necessary-state, not physical covers.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
 
@@ -59,8 +57,10 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
   THM-3347 makes signed log-content a Hensel-clock Gram kernel. The folded
   parent metric is CND for every positive weight through rank three but fails
   at `N=32045`; projector/cosh kernels repair positivity, while the
-  tautological line retains the lift. THM-3345 ancestry kills conjugation; no
-  LRC row closes.
+  tautological line retains the lift. THM-3353 compiles every split-prime
+  parent-torsor edge on two fixed-`p` unary lanes, modulo gauge, with valuation
+  one and unbounded rank/ancestry. Tree `H^1` stays zero; no all-source
+  transducer, LRC current, JC flux, or LRC row follows.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 
@@ -374,12 +374,10 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   [subresultant sidecar](../07-reflections/jc-critical-inverse-cover-cofactor-jacobian-probe-agent-20260803.md)
   gives a two-pivot inverse graph and mate-integrability class on two controls.
   THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
-  THM-3318/3326 classify an excluded gradient-unit linear-in-`z` response:
-  constant `g` is exact, one root gives jet-marked finite torsion, and multiple
-  roots give a free class by residues.  THM-3351 identifies the full generic
-  response with punctured-line de Rham `H^1`, gives an explicit free
-  `K[P]`-lattice, and computes the exact one-root valuation annihilator without
-  gradient-unimodularity.  These refine THM-2063, not `JC(2)`.
+  THM-3318/3326/3348 classify the linear-`z` response: exact constant,
+  one-root torsion, and generic punctured-line de Rham `H^1`, including the
+  one-root valuation annihilator without gradient-unimodularity.  This refines
+  THM-2063, not `JC(2)`.
   No base root choice follows; residual degree 119, Keller mate/inverse cover, `JC(2)` and `DC(2)` remain OPEN.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in

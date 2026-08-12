@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """General exact floor-moment reflected pair overlap, arbitrary level ratio.
 
-This extends THM-3347's low-ratio two-lift triangle evaluator.  When the
+This extends THM-3349's low-ratio two-lift triangle evaluator.  When the
 periodized tent radius spans several residue moduli, every positive and
 negative lift is summed separately; each lift is still one residue prefix or
 suffix and is evaluated by Euclidean floor moments.

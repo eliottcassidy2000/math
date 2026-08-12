@@ -8,5 +8,5 @@ PUNCTURE irregular-repeated: r=4 det=1/15120 theta_res=(-213/614656000,1001/1343
 ONE_ROOT samples (d,e,nu,N): [(2, 1, 1, 1), (5, 2, 2, 2), (7, 7, 7, 1), (10, 'inf', 10, 1)]
 ONE_ROOT hostile bank passed: 51 cases, d=2..10; sharp N-1 failure, N success, N+1 success; exact D(Q)=H(P)
 semantic_sha256=53440533bb8e511bef86c24b5827d61f5560b457bc2d116ca9e40c518b74fcfc
-source_sha256=12e62dad50cb21cee52dc11f99ab704f2dfc1dc1df79f7cae38958c381341026
+source_sha256=105bed99614bde959db73c2d3b7efb3927e94b9eb234db74717f73886520f4f6
 PASS

@@ -9,7 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-371 (2026-08-12, projected `z1=216` two-high closure) -- a safe cell address was mistaken for a safe projected section
+## MISTAKE-373 (2026-08-12, THM-3353 raw Gaussian toggle) -- a parent-torsor edge was stated on gauge-dependent lifts
+
+- **What failed:** the provisional THM-3353 candidate said its rational
+  Gaussian rotation changed exactly the local factor above `p` on the
+  displayed signed Gaussian lift.
+- **Minimal witness / first failed implication:** at `p=5,X=A,s=1`,
+  `(2+i)(16+5i)=27+26i` is sent to
+  `(2+i)(16-5i)=37+6i`.  Conjugating only the `5`-factor instead gives
+  `(2-i)(16+5i)=37-6i`, the global conjugate of the displayed target.
+- **Repair / strongest survivor:** on
+  `X_C~=F_2^omega(C)/<1>`, the two outputs define exactly the same
+  `p`-coordinate edge; raw lifts may differ by unit and global-conjugation
+  gauges, which complement every allocation bit.  The compiler, exact
+  addresses, valuation one, complementary roots, fixed-`p` transducers, and
+  arbitrary-rank/dispersion theorem all survive with this quotient typing.
+- **Reusable rule:** a one-prime allocation statement belongs on the parent
+  Boolean torsor unless a signed associate and global-conjugation section have
+  both been fixed.  Test a literal factorization before promoting a raw-lift
+  claim.
+
+## MISTAKE-372 (2026-08-12, projected `z1=216` two-high closure) -- a safe cell address was mistaken for a safe projected section
 
 - **What failed:** an exploratory terminal counted cells whose distinguished
   grid point was safe for two high drifts and inferred that the whole aligned
@@ -28,13 +48,13 @@ Format per entry:
   all `r` highs at each `y`, hence the full projected section.  The three
   denominator-two equality cases instead use a measure bound: one high removes
   at most `2/7`, so two leave at least `3/7>36/91`.  The repaired exact theorem
-  is THM-3349; no point-only artifact was promoted.
+  is THM-3351; no point-only artifact was promoted.
 - **Reusable rule:** projection statements require a witness on every local
   fibre, not a favorable section origin.  A unit-orbit collapse fixes residues,
   not affine slopes; retain translations and multiplicities until the target
   predicate has been proved.
 
-## MISTAKE-372 (2026-08-12, THM-3346 modular/full content scope) -- one sufficient fixed-grade condition was stated as necessary
+## MISTAKE-371 (2026-08-12, THM-3346 modular/full content scope) -- one sufficient fixed-grade condition was stated as necessary
 
 - **What failed:** the first promoted form of
   [THM-3346](theorems/THM-3346-u-spine-prime-toggle-root-atlas-and-conjugation-monodromy.md)

@@ -9,8 +9,8 @@ from pathlib import Path
 import argparse, os
 
 ROOT = Path(os.environ.get('LRC_REPO', Path(__file__).resolve().parents[1])).resolve()
-MASS_PATH = ROOT/'04-computation/lrc_general_reflected_pair_mass_thm3350.py'
-TAIL_PATH = ROOT/'04-computation/lrc14_connected_low_uniform_high_forest_tail_thm3348.py'
+MASS_PATH = ROOT/'04-computation/lrc_general_reflected_pair_mass_thm3352.py'
+TAIL_PATH = ROOT/'04-computation/lrc14_connected_low_uniform_high_forest_tail_thm3350.py'
 EXPECTED_MASS_SHA256 = 'afd417297131401254769e1ef172d89c109ad2f9a843ea55e2badc3e7891435b'
 EXPECTED_TAIL_SHA256 = '32587f0b965de7da1096e0f817cee46429ed2842495790cb9d489a21d2ed24c4'
 EXPECTED = {

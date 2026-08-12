@@ -11,8 +11,8 @@ from pathlib import Path
 import os,random
 
 ROOT=Path(os.environ.get('LRC_REPO',Path(__file__).resolve().parents[1])).resolve()
-ENGINE=ROOT/'04-computation/lrc_general_reflected_pair_mass_reference_audit_thm3350.py'
-EXPECTED_ENGINE='b125427d204bd62d4440891a0e750630987ff5d395950ef5c2318ec86e7e876a'
+ENGINE=ROOT/'04-computation/lrc_general_reflected_pair_mass_reference_audit_thm3352.py'
+EXPECTED_ENGINE='da941a4267147d5442be81ae81880742d2f6b901bfc1d20fb667822402a2950e'
 EXPECTED_CHECKS=1044591
 EXPECTED_SEMANTIC='b960b450d70fbfb5521b3d90eb4d8064fcb126fe7be4fd81f3c2beebbbffa4a0'
 

@@ -8,9 +8,9 @@ from pathlib import Path
 import os
 
 ROOT=Path(os.environ.get('LRC_REPO',Path(__file__).resolve().parents[1])).resolve()
-TAIL=ROOT/'04-computation/lrc14_connected_low_uniform_high_forest_tail_thm3348.py'
-FAST_PATH=ROOT/'04-computation/lrc_general_reflected_pair_mass_thm3350.py'
-REF_PATH=ROOT/'04-computation/lrc_general_reflected_pair_mass_reference_audit_thm3350.py'
+TAIL=ROOT/'04-computation/lrc14_connected_low_uniform_high_forest_tail_thm3350.py'
+FAST_PATH=ROOT/'04-computation/lrc_general_reflected_pair_mass_thm3352.py'
+REF_PATH=ROOT/'04-computation/lrc_general_reflected_pair_mass_reference_audit_thm3352.py'
 EXPECTED_TAIL='32587f0b965de7da1096e0f817cee46429ed2842495790cb9d489a21d2ed24c4'
 EXPECTED_FAST='afd417297131401254769e1ef172d89c109ad2f9a843ea55e2badc3e7891435b'
 EXPECTED_REF='b125427d204bd62d4440891a0e750630987ff5d395950ef5c2318ec86e7e876a'
