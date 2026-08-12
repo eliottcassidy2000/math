@@ -25,11 +25,8 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`; THM-2928 empties aligned `k>=4`; THM-2995/3251 cap projected `k=2,3` at `1579/216`; corrected THM-2941 leaves `561` reflected bodies. Arbitrary `k<=1`, the rung, physical entry and LRC remain open. Five-/four-drift screens cut `951,545,890,235 -> 200,141,092,521` and `21,357,714,101 -> 2,548,901,482`; these are necessary-state, not physical-cover, counts.
-THM-2970--2995 close projected `k=2` above `1579`; THM-2981--3230 close projected `k=3` through `z1=219`.
-**FINITE-EXACT:** THM-3308 classifies `271` status kills as `260/10/1` one-/two-/three-layer circuits.
-THM-3313/3320 close eight rows, leaving ledger `373153`, wall/families `349/29`, cap `216`, next `L7056` (19 rows).
-Two template-`3` circuits have full-dual support `2`; row 138 stays `3`. This is projected only.
+Direct frontier: `<=6`; projected caps `1579/216`; `561` reflected bodies. THM-3351 leaves ledger/wall/families `372917/113/13` at `z1=216`, next `L720720` on rows `191,228,332`.
+THM-3349/3350/3352 close all `220,254,480` labelled connected-low primitive rays. Disconnected component scales, arbitrary `k<=1`, rung, physical entry and LRC remain open; screens are necessary-state, not physical covers.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
 
@@ -375,9 +372,10 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   [subresultant sidecar](../07-reflections/jc-critical-inverse-cover-cofactor-jacobian-probe-agent-20260803.md)
   gives a two-pivot inverse graph and mate-integrability class on two controls.
   THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
-  THM-3318/3326 classify an excluded gradient-unit linear-in-`z` response:
-  constant `g` is exact, one root gives jet-marked finite torsion, and multiple
-  roots give a free class by residues.  This refines THM-2063, not `JC(2)`.
+  THM-3318/3326/3348 classify the linear-`z` response: exact constant,
+  one-root torsion, and generic punctured-line de Rham `H^1`, including the
+  one-root valuation annihilator without gradient-unimodularity.  This refines
+  THM-2063, not `JC(2)`.
   No base root choice follows; residual degree 119, Keller mate/inverse cover, `JC(2)` and `DC(2)` remain OPEN.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
