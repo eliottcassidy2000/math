@@ -57,8 +57,10 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
   THM-3347 makes signed log-content a Hensel-clock Gram kernel. The folded
   parent metric is CND for every positive weight through rank three but fails
   at `N=32045`; projector/cosh kernels repair positivity, while the
-  tautological line retains the lift. THM-3345 ancestry kills conjugation; no
-  LRC row closes.
+  tautological line retains the lift. THM-3353 compiles every split-prime
+  parent-torsor edge on two fixed-`p` unary lanes, modulo gauge, with valuation
+  one and unbounded rank/ancestry. Tree `H^1` stays zero; no all-source
+  transducer, LRC current, JC flux, or LRC row follows.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 

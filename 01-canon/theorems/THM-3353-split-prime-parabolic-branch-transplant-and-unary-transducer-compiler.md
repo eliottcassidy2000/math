@@ -2,15 +2,18 @@
 id: THM-3353
 title: "Split-prime parabolic branch transplant and unary transducer compiler"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT.  For every rational
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every rational
   split prime p=a^2+b^2, an explicit odd-cusp Euclidean compiler produces two
-  p^2-spaced U-spine subsequences on which conjugating the unique Gaussian
-  p-factor has an exact Berggren address D^((p-1)/2) U^(s-1) S.  The formulas,
+  p^2-spaced U-spine subsequences on which the p-coordinate edge of the
+  fixed-hypotenuse parent torsor has an exact Berggren address
+  D^((p-1)/2) U^(s-1) S, modulo unit/global-conjugation gauge.  The formulas,
   valuation-one invoice, two complementary local roots, unary transducers,
-  and arbitrary-rank dispersion are proved below and exact-tested, but remain
-  outside the proof graph pending independent hostile audit.
+  and arbitrary-rank dispersion are proved below, exact-tested, and
+  independently hostile-audited.
 source: codex-2026-08-12-split-prime-parabolic-transplants
-depends_on: []
+depends_on:
+  - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
+  - THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation
 related:
   - THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone
   - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
@@ -18,16 +21,22 @@ related:
   - THM-3345-prime-xor-ancestry-path-groupoid-and-source-dependent-berggren-cost
 script: 04-computation/split_prime_parabolic_transplants_thm3353.py
 output: 05-knowledge/results/split_prime_parabolic_transplants_thm3353.out
+script_sha256: 49c1da9fa3fdda4686dda9000b1fb2c68d33e50f07263f159695de362df25dd8
+output_sha256: 0f314f40163d1703b4e03fdf8217eca4843dd847f05bc4df158a9fbfb8e00667
+hash_basis: LF-normalized bytes
 ---
 
 # THM-3353 -- split-prime parabolic branch transplants
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-No literature-priority claim is made.  The candidate assembles elementary
+No literature-priority claim is made.  The theorem assembles elementary
 Gaussian conjugation, the Euclidean parameter form of the Berggren tree, and
-finite-state unary transduction into one explicit compiler.  Until independent
-audit promotes the frontmatter, no later theorem may use it as proved.
+finite-state unary transduction into one explicit compiler.  The quotient
+typing below is essential: the literal action on signed Gaussian lifts can
+differ from a one-bit toggle by unit and global-conjugation gauges.
+[MISTAKE-373](../MISTAKES.md)
+records the minimal raw-lift witness and repaired scope.
 
 ## 1. Inheritance and the live question
 
@@ -221,9 +230,17 @@ For path formulas below we use the harmless stronger threshold `t_X(s)>=2`.
 
 The matrix `H/p` is multiplication by `(a-ib)/(a+ib)` in real coordinates,
 up to the output conjugation chosen in (5).  The optional right factor `P` in
-(12) is an input unit/conjugation gauge.  Hence `H_X/p` changes exactly the
-local Gaussian allocation above `p`; it is not an arbitrary equal-norm
-rotation.  Equation (6) gives
+(12) is an input unit/conjugation gauge.  On the parent quotient
+
+```text
+X_(C_t) ~= F_2^omega(C_t)/<1>,
+```
+
+`H_X/p` represents the `p`-coordinate toggle.  On raw signed Gaussian lifts
+it may additionally apply unit and global-conjugation gauges, which complement
+every allocation bit.  Thus it is not an arbitrary equal-norm rotation, but
+the one-coordinate statement is a statement on the parent quotient rather
+than on a chosen raw lift.  Equation (6) gives
 
 ```text
 N(B(D^q U^(s-1)S_X)(2,1))=C_(t_X(s)),
@@ -258,7 +275,8 @@ det(h,c_X)=eta_X=+-1.                                   (24)
 
 Thus the quotient in (23) is nonzero modulo `p`.  Replacing `u_X` by
 `p^2s(1,1)+u_X` does not change its norm divided by `p` modulo `p`, proving
-(22).  The branch therefore toggles the sole Gaussian prime above `p`, with
+(22).  The branch therefore realizes the `p`-coordinate edge on the parent
+torsor quotient, modulo the unit/global-conjugation gauge just stated, with
 intrinsic folded weight
 
 ```text
@@ -401,6 +419,20 @@ complementary roots, valuation one, primitivity, norm preservation, path
 costs, and CRT rank controls.  All `50` inert primes below `500` are rootless.
 The finite sweep additionally observes `s_X,0=1` throughout its universe, but
 the universal theorem uses the explicit safe threshold (20).
+
+The independent hostile audit also checked `1,282` further split primes in
+`5,000<p<30,000` by Gaussian division (`2,564` branches and `5,128` rows),
+and an independent cusp breadth-first search found every one of the `8,156`
+coprime odd pairs with coordinate sum at most `401` exactly once.  Its
+minimal raw-lift typing witness is `p=5,X=A,s=1`:
+
+```text
+(2+i)(16+5i)=27+26i  |-->  (2+i)(16-5i)=37+6i,
+```
+
+whereas literal conjugation of only the `5`-factor gives `37-6i`, the global
+conjugate of the displayed target.  Both represent the same `5`-coordinate
+edge in the parent quotient, with folded weight `{5,281}`.
 
 Reproduce with
 
