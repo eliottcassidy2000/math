@@ -59,8 +59,9 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
   square/triangular U-spine selectors. THM-3336 gives content-weighted
   multiplication, split-prime charge classes, and a Boolean source groupoid;
   its gate reversals compare separately saturated decks on different rational
-  planes. THM-3345 proves the first prime-XOR ancestry lift is flat but
-  source-dependent and carries no ambient-tree `H^1`. None closes an LRC row.
+  planes. THM-3345 gives a flat source-dependent ancestry lift with no tree
+  `H^1`, plus simultaneous unbounded Boolean rank/path dispersion and one
+  unary prime-toggle transducer. None closes an LRC row.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 
