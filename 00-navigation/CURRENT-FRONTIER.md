@@ -54,15 +54,14 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
   scans; AP13 and its lift share germs but not maxima.
 - THM-2058 preserves every fixed lift depth but escapes at `47/113`;
   finite jets/Farey rays fail.
-- THM-3333/3334 give the raw Gaussian/Farey carrier and fixed-cusp Boolean
-  fibres; THM-3335/3339/3341 add typed Pell/Markov, golden-owner, and
-  square/triangular U-spine selectors. THM-3336 gives content-weighted
-  multiplication, split-prime charge classes, and a Boolean source groupoid;
-  its gate reversals compare separately saturated decks on different rational
-  planes. THM-3345 gives a flat source-dependent ancestry lift, unbounded
-  Boolean rank/path dispersion, and one unary toggle transducer. THM-3346 adds
-  the U-spine two-channel gcd/root atlas and one conjugation `Z/2` after square
-  filling; Pell ranks grow; ancestry kills it. No LRC row closes.
+- THM-3333/3334/3336/3339/3341 give the typed Gaussian/Farey/Pell U-spine,
+  content multiplication, and selectors; THM-3345 gives source-dependent
+  ancestry. THM-3346 adds the two-channel gcd/root cube and conjugation `Z/2`.
+  THM-3347 makes signed log-content a Hensel-clock Gram kernel. The folded
+  parent metric is CND for every positive weight through rank three but fails
+  at `N=32045`; projector/cosh kernels repair positivity, while the
+  tautological line retains the lift. THM-3345 ancestry kills conjugation; no
+  LRC row closes.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 
