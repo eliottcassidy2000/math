@@ -11,7 +11,7 @@ open transfers; theorem files, not this narrative, are the truth sources.
 | golden branch | Fibonacci parameters, three ancestry rays, affine cocycle/current no-go | **PROVED** | [THM-3339](../01-canon/theorems/THM-3339-fibonacci-three-ray-berggren-transplant-and-moving-owner-obstruction.md) |
 | equal-plane collisions | Gaussian factor-choice torsors `F_2^r/<1>` | **PROVED** | THM-3334 |
 | internal four-box | `W(m,n)=(n-m,m,n,n+m)` with a signed matching current | **PROVED** | THM-3339 |
-| square/triangular selector | intended Pell/Markov compiler | **RESERVED / OPEN** | [THM-3335](../01-canon/theorems/THM-3335-square-triangular-pell-markov-pythagorean-selector.md) is an empty stub |
+| square/triangular selector | Pell-8/Markov compiler selecting square even legs on the U-spine | **PROVED** | [THM-3335](../01-canon/theorems/THM-3335-square-triangular-pell-markov-pythagorean-selector.md) |
 | Gaussian content curvature | intended multiplication/content cocycle | **RESERVED / OPEN** | [THM-3336](../01-canon/theorems/THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation.md) is an empty stub |
 | LRC spectral closure | owner, phase, clock, endpoint word, global exit | **OPEN** | neither THM-3334 nor THM-3339 removes a row |
 
@@ -56,6 +56,47 @@ rays
 The parabolic and golden loci meet only at `(1,2)` and `(2,3)`, giving
 `(3,4,5)` and `(5,12,13)`.  The next parameters `(3,4)` and `(3,5)` already
 separate.  The initial coincidence is not a common infinite branch.
+
+## The square-triangular theorem is a sparse parabolic clock
+
+THM-3335 does not insert a fourth ancestry tree.  It selects the U-spine
+indices `t` for which
+
+```text
+T_t=q^2,             x=2t+1,             s=2q,
+x^2-8q^2=1.                                             (1)
+```
+
+At those and only those positive selector indices,
+
+```text
+P_t=(x,s^2,s^2+1),
+W=s^2+2,
+Q=2(s^2+1)+1=2W-1=x^2+2.                               (2)
+```
+
+Thus the THM-3334 plane scalar `Q` and THM-3335 skew-EW candidate scalar `W`
+are losslessly affine-related on the selector.  The first rows are
+
+```text
+t=1:     P=(3,4,5),          W=6,       Q=11,
+t=8:     P=(17,144,145),     W=146,     Q=291,
+t=49:    P=(99,4900,4901),   W=4902,    Q=9803.
+```
+
+The third row is the `29*169=4901=70^2+1` cannonball address.  In the
+Berggren tree these rows sit at U-depth `t-1`, so the selector is an
+exponentially sparse clock on one parabolic branch.  Its two-state matrix has
+eigenvalues `3+-2sqrt(2)`.  This is distinct from both the unipotent U-step
+and the golden matrix with eigenvalues `phi,-1/phi`.
+
+There are therefore three typed dynamics, not one overloaded “Pell tree”:
+
+| object | state/action | limiting or selected feature |
+|---|---|---|
+| full U-spine | unipotent `g`, `(g-I)^2=0` | rational cusp `1`, every depth |
+| square-triangular clock | `x^2-8q^2=1` | sparse depths with square even leg |
+| Fibonacci/golden ray | `|n^2-mn-m^2|=1` | irrational endpoint `1/phi`, three ancestry rays |
 
 ## The four-versus-six puzzle is a typed diagram
 
@@ -142,8 +183,9 @@ owner.  A physical use must retain the current orbit as part of its state.
 
 ## Research queue opened by the synthesis
 
-1. Classify square, triangular, and square-triangular values on `c_t` and
-   `Q_t=2c_t+1`; separate genuine Pell selectors from finite coincidences.
+1. THM-3335 has classified the square-even-leg/square-triangular selector.
+   Classify the remaining square or triangular values of `c_t` and
+   `Q_t=2c_t+1`, keeping them separate from the now-proved selector.
 2. Derive the Gaussian multiplication content cocycle before quotienting by
    primitive normalization; determine whether it acts on, merely grades, or
    destroys the fixed-hypotenuse Boolean torsor.

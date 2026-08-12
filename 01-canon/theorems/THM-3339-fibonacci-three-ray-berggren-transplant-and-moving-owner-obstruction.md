@@ -156,6 +156,17 @@ Consequently THM-3334's fixed-discriminant `-4` quadratic
 `m^2+(m+1)^2` and the present norm form of discriminant `5` are distinct
 carriers with two initial intersections, not one recurrence in disguise.
 
+THM-3335 subsequently proved a third, typed object: the sparse subsequence of
+the **parabolic** spine for which `T_t=q^2`.  Writing `x=2t+1` and `s=2q`,
+its parent and two scalar labels are
+
+```text
+P_t=(x,s^2,s^2+1),       W=s^2+2,       Q=2W-1=x^2+2.   (10a)
+```
+
+That Pell-8/Markov selector acts on the depth index of THM-3334.  It is not
+the discriminant-5 golden ancestry ray classified here.
+
 ## 3. Primitive normalization has period three
 
 Use the ordered Euclid lift
@@ -535,9 +546,10 @@ The lawful source-target maps are:
 
 Nothing here identifies the tail discriminant `-4` with a cubic
 discriminant, transports a Keller map, supplies an LRC hull owner or phase,
-or proves a global Berggren--Farey equivalence.  THM-3335 and THM-3336 are
-listed only as **RESERVED** adjacent construction lanes; this theorem does
-not depend on their intended statements.
+or proves a global Berggren--Farey equivalence.  THM-3335 is now a proved,
+related sparse selector on THM-3334's parabolic spine, linked by (10a), but it
+is not a dependency of the golden-ray proof.  THM-3336 remains a **RESERVED**
+adjacent construction lane and is not a proved dependency.
 
 ## 10. Exact reproduction
 
