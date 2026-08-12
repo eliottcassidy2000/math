@@ -258,6 +258,28 @@ literal common outer support at the same address and ancestry. THM-3285's
 phase completions but no outer co-support. Any positive-index certificate
 that fires there is semantically invalid.
 
+That hostile control has now been executed exactly.  On the three retained
+addresses, the typed support matrix is
+
+```text
+0_169 direct-sum J_r direct-sum 0_169,
+r(a,b)=(a,2a-b),
+inertia=(91,78,338),       trace=13,       Frobenius^2=169.
+```
+
+The nonzero inertia is entirely the orbit count of the imposed involution:
+13 fixed points and 78 two-cycles.  In both certified fields, exhaustive
+shift/character searches find no finite-Gabor covariance of either middle
+endpoint bank under reflection and no left/right exchange; only the 13 fixed
+diagonal points match literally.  The outer semantic co-support is empty.
+Therefore the paper's inertia mechanism does **not** currently transfer to
+LRC(14).  It supplies a reproducible negative diagnostic, not an owner or row
+certificate.  Reproduce with
+
+```bash
+python 04-computation/lrc14_c13_reflection_gabor_hostile_sidecar_20260812.py
+```
+
 ### FC(3) Macaulay rank
 
 For a moment ideal, `G_D=Phi_D Phi_D*` has
