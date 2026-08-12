@@ -1,0 +1,7 @@
+LRC14 DISCONNECTED NON35 SMALL-RULER G>=4 CLOSURE
+contexts 2530 endpoint_lanes 176 phase_correction_min -12/49
+envelope_cutoffs ((4, 12, (Fraction(1519273361, 7053735456768), (168, 12, 6))), (5, 7, (Fraction(31833757, 70060686080), (168, 12, 6))), (6, 6, (Fraction(1755070561, 1601157454848), (168, 12, 6))), (7, 5, (Fraction(267701641, 1471274407680), (168, 12, 6))), (8, 5, (Fraction(259100407, 193145487360), (168, 12, 6))), (9, 5, (Fraction(1792845401, 804632258304), (168, 12, 6))), (10, 5, (Fraction(5986062261, 2044465024000), (168, 12, 6))), (11, 5, (Fraction(6276672445, 1796331043584), (168, 12, 6))), (12, 5, (Fraction(50403388531, 12722756014080), (168, 12, 6))), (13, 4, (Fraction(365248063, 2242436501760), (168, 12, 6))), (14, 4, (Fraction(7632287107, 15083178808320), (168, 12, 6))), (15, 4, (Fraction(3186948623, 3975861254400), (168, 12, 6))))
+midpoint_residual_channels 118 literal_checks 298540
+weakest_literal_margin (Fraction(1354081, 141260826), 10, 2, 11, 4368, 2236, 8, 1, Fraction(6240, 480479))
+semantic_sha256 f27f0d82dd0f94b0614595c17b1064bb66af7beb7477ed83b102fec955adbff7
+conclusion=for all small-ruler contexts, all primitive high P<Q<8P except3:5, and all g>=4, physical overlap>=1/294
