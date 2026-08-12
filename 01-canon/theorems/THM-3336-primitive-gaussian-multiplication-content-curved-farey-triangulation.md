@@ -1,21 +1,48 @@
 ---
 id: THM-3336
 title: "Primitive Gaussian multiplication, content cocycle, and the weighted Farey triangulation"
-status: "RESERVED / UNPROVED PROVISIONAL CANDIDATE UNDER AUDIT"
+status: >
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Primitive
+  Gaussian multiplication is a raw Lorentz/norm similitude; primitive
+  reduction carries an exact multiplicative content cocycle linearized by a
+  root of minus one modulo the multiplier norm.  A transformed Farey face
+  reconstructs that norm and all endpoint contents from its three determinant
+  labels.  The same operation has exact Brahmagupta, parity-normalized
+  Pythagorean, weighted-Vieta, and in/exradius-matrix forms.  Per-column
+  contents can reverse the THM-2056 sufficient determinant gate on lawful
+  saturated positive decks, but compare different planes and do not decide
+  LRC safety.  LRC(14), owner/phase transport, and global exit remain open.
 source: codex-2026-08-12-primitive-gaussian-content-curvature
-depends_on: []
-related: []
+audit: >
+  An independent arithmetic audit rederived every displayed identity and all
+  four 13-column controls, independently swept 1,008 positive-determinant
+  primitive-entry matrices over 233,856 Farey faces and 1,968,128 ordered
+  matrix cocycles, and reproduced normal/optimized/stored output byte for
+  byte.  A separate inheritance audit found no proved binary-operation
+  duplicate and checked the saturation, quotient, and LRC consequence
+  boundaries.
+depends_on:
+  - THM-2056-kelvin-polar-farey-defect-certificate
+  - THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone
+related:
+  - THM-2053-rank-two-parameter-plane-geodesic-terminal
+  - THM-2055-determinant-gate-normal-fan-and-tangent-sector-reduction
+  - THM-2596-modular-free-factor-farey-gram-owner-cocycle
+  - THM-2632-farey-v4-theta-channel-and-hurwitz-crt-parity-sidecar
+  - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
+  - THM-3335-square-triangular-pell-markov-pythagorean-selector
+  - THM-3339-fibonacci-three-ray-berggren-transplant-and-moving-owner-obstruction
+  - THM-3341-u-spine-square-hypotenuse-transplant-and-triangular-plane-torsors
 script: 04-computation/primitive_gaussian_content_curvature_thm3336.py
 output: 05-knowledge/results/primitive_gaussian_content_curvature_thm3336.out
+script_sha256: a63d60669e11cd22ee0ef7afd619e54885308ce55d452a95e7131d19263e881f
+output_sha256: 74cad2e39423f3f558d03f3be0b91e1d6102cf3106b6e2686c6d6f6f0a0a5709
+hash_basis: working-tree bytes (LF)
 ---
 
 # THM-3336 -- primitive Gaussian multiplication curves the Farey labels
 
-**RESERVED / UNPROVED PROVISIONAL CANDIDATE UNDER AUDIT.**
-
-This proof candidate is not yet part of proved canon.  It may not be cited as
-a result until the exact companion, hostile audit, hashes, and dependencies
-have been independently checked and the status is explicitly promoted.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 No literature-priority or global-novelty claim is made.  The sum-of-two-squares
 and Smith-normal-form ingredients are elementary; the intended new payload is
@@ -128,8 +155,8 @@ although both input spinors are primitive.  On raw triples,
 ```
 
 Primitive Pythagorean triples are therefore not closed under the unscaled
-Brahmagupta product.  Berggren depth and Farey distance cannot be additive
-under this operation.
+Brahmagupta product.  The naive primitive product does not preserve Berggren
+depth, and no Farey-distance additivity follows.
 
 ## 3. A root of minus one linearizes every content
 
@@ -181,11 +208,20 @@ fibre.  Equations (13)--(15) imply
 a h=-b (mod N),              b h=a (mod N).              (18)
 ```
 
-Consequently the Gaussian gcd of `N` and `h+i` recovers `a+ib` up to a unit,
-and conjugation sends `h` to `-h`.  For coprime norms, multiplication glues
-the two roots by the Chinese remainder theorem.  Shared represented primes
-can instead cancel into the content: in (11), the roots of the two norm-five
-representations are opposite modulo `5`.
+There is an explicit factorization
+
+```text
+h+i=(a+ib)(t+ir),
+det((a,-b),(t,r))=ar+bt=1.                              (18a)
+```
+
+The two Gaussian factors in the second determinant are coprime, so the
+Gaussian gcd of `N=(a+ib)(a-ib)` and `h+i` recovers `a+ib` up to a unit.
+Conjugation sends `h` to `-h`.  For coprime multiplier norms, the other
+multiplier is invertible modulo either norm, so the product root restricts to
+the original root in both factors and is their Chinese-remainder gluing.
+Shared represented primes can instead cancel into the content: in (11), the
+roots of the two norm-five representations are opposite modulo `5`.
 
 The primitive hypothesis on `s` is load-bearing.  For `s=(2,0)`, the axis
 Farey face has contents `(2,2,2)` although `N=4`; all pairwise-coprimality and
@@ -400,7 +436,7 @@ For two null points `Phi(U),Phi(V)`, (39) becomes
 
 Consequently the three pairwise determinant polarizations of the four-radius
 matrices recover the labels (27), and hence `kappa` and `N` by (28)--(29).
-The matrix `H` is an invertible linear repackaging of the triple, not a new
+The matrix `H` is an injective linear repackaging of the triple, not a new
 quotient invariant; the content reconstruction is the substantive statement.
 
 ## 7. Primitive Pythagorean composition needs two contents
@@ -518,8 +554,10 @@ uncertified.  More importantly, raw left multiplication of every coefficient
 column by `G_s` is merely a row-basis change of one rational plane, whose
 parameter transforms contragrediently by `G_s^{-T}`.  Dividing different
 columns by different `d_i`, as in (47)--(53), generally produces a different
-saturated plane.  The examples compare two lawful primitive-column decks;
-they do not prove or disprove invariance of the LRC maximum on one fixed plane.
+rational plane, and the displayed row lattice need not remain saturated.
+The four examples are independently saturated and compare two lawful
+primitive-column decks; they do not prove or disprove invariance of the LRC
+maximum on one fixed plane.
 
 ## 9. Topological meaning and maximal generalization
 
@@ -547,12 +585,21 @@ d_A(u)=gcd(Au),             mu_A(u)=Au/d_A(u).            (55)
 ```
 
 Smith normal form is `diag(1,|det A|)`.  Replacing `G_s,N` by
-`A,|det A|` preserves the ordered content cocycle
-`mu_A(mu_B(u))=mu_(AB)(u)`, the determinant identity (9), the edge and
-weighted-face identities (19)--(31) and (35)--(36), and the intersection law
-(54).  The content-range statement (32)--(33) also persists after replacing
-`ell_h` by the primitive linear row supplied by Smith normal form; a general
-matrix need not have a fixed-coordinate root of minus one.
+`A,|det A|` preserves the ordered content cocycle: for nonsingular integral
+`A,B`,
+
+```text
+d_(AB)(u)=d_B(u)d_A(mu_B(u)),
+mu_A(mu_B(u))=mu_(AB)(u).                               (55a)
+```
+
+It also preserves the determinant identity (9), the edge and weighted-face
+identities (19)--(31) and (35)--(36), and the intersection law (54).  The
+content-range statement (32)--(33) persists after replacing `ell_h` by the
+primitive linear row supplied by Smith normal form; a general matrix need not
+have a fixed-coordinate root of minus one.  When `|det A|` is even, exactly
+one face content is even, but it may absorb only part of the `2`-adic
+valuation.  This differs from the primitive Gaussian case, where `v_2(N)=1`.
 It does **not** preserve the Euclidean norm formula (8): for example,
 `A=diag(1,2)` and `u=(1,1)` give `N(Au)=5`, not
 `|det A|N(u)=4`.  Gaussian structure contributes conformality, the extra
