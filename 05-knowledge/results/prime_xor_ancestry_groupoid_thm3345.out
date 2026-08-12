@@ -1,0 +1,25 @@
+THM-3345 VERIFIED-EXACT
+berggren_tree_nodes_through_1105=177
+vertices(bit,depth,word,odd_leg):
+  000: depth=4, word=DAUD, odd_leg=943
+  100: depth=4, word=UDUA, odd_leg=817
+  010: depth=5, word=DADDD, odd_leg=1073
+  001: depth=22, word=U^22, odd_leg=47
+c85_positive_control_distance=7
+prime_matchings(weight,source,target,lcp,distance,abs_depth_jump,path):
+  p=5, K=(5, 221), 000->100, lcp=0, distance=8, jump=0, path=D^-1 U^-1 A^-1 D^-1 U D U A
+  p=5, K=(5, 221), 010->001, lcp=0, distance=27, jump=17, path=D^-3 A^-1 D^-1 U^22
+  p=13, K=(13, 85), 000->010, lcp=2, distance=5, jump=1, path=D^-1 U^-1 D^3
+  p=13, K=(13, 85), 100->001, lcp=1, distance=24, jump=18, path=A^-1 U^-1 D^-1 U^21
+  p=17, K=(17, 65), 000->001, lcp=0, distance=26, jump=18, path=D^-1 U^-1 A^-1 D^-1 U^22
+  p=17, K=(17, 65), 100->010, lcp=0, distance=9, jump=1, path=A^-1 U^-1 D^-1 U^-1 D A D^3
+matching_costs={5: ((8, 0), (27, 17)), 13: ((5, 1), (24, 18)), 17: ((26, 18), (9, 1))}
+directed_involutions=12; affine_square_checks=24
+closed_walk_holonomy_checks=60; all_identity=True
+frozen_basepoint_V4_defects(first,second,target,length,path):
+  (5, 13, 17, 39, 'D^-1 U^-1 A^-1 D^-1 U D U A D^-1 U^-1 D^3 U^-22 D A U D')
+  (5, 17, 13, 39, 'D^-1 U^-1 A^-1 D^-1 U D U A D^-1 U^-1 A^-1 D^-1 U^22 D^-3 U D')
+  (13, 17, 5, 37, 'D^-1 U^-1 D^2 U^-1 A^-1 D^-1 U^22 A^-1 U^-1 D^-1 U^-1 D A U D')
+rooted_tree_automorphism_controls=3/3 blocked_by_depth
+colour_only_path_controls=3/3 blocked_by_distinct_labels
+ALL CHECKS PASSED
