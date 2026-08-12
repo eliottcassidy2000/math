@@ -1,0 +1,11 @@
+LRC14 REFLECTED LOW TWO-STAR HOMOGENEOUS-LIMIT SELECTOR SCOUT
+status=FINITE-EXACT;not an all-dilation or reflected-branch closure
+bodies=649;rays=11856;assignments=7694544;failures=0
+selected_body_edge_channel_groups=140711
+selected_body_edge_primitive_channel_groups=34062
+weakest_body=(2, 4, 6, 9, 11, 12);L=5544;cell=2970;centre=0;second=1;ray=(12, 6, 4, 18, 3, 9);edge=(0, 5)
+weakest_limit=1/3168;debt=20120188378425768804/99637927188239340409565;limit_gap=35897170405386504838493/315652953332342230417501920;multiplicity=1
+weakest_selected_scale_one_mass=43659/138274291;scale_one_margin=11339689171127830881/99637927188239340409565
+primitive_ratio_hist=(((1, 2), 3484871), ((1, 3), 928057), ((1, 4), 244934), ((1, 5), 80923), ((1, 6), 17054), ((2, 1), 689335), ((2, 3), 518393), ((2, 5), 15911), ((3, 1), 680538), ((3, 2), 461855), ((3, 4), 122030), ((4, 1), 259376), ((4, 3), 78823), ((5, 1), 52234), ((5, 2), 48022), ((6, 1), 12188))
+semantic_sha256=08b86820b1562f50f317be81981b762dc80c0f438da07048f2b0df6000a2a458
+source_sha256=cd8b08087f0f7e1e0c0c7d0be673629c7c2702c170c5c1e771e1d76df1d3cd1c
