@@ -151,11 +151,14 @@ safe from the first, low, and all high drifts.  Thus the projected safe set
 is the whole circle, `P_(E,Z)=T`, contradicting THM-2941 `(25h)`, which
 requires `mu(P_(E,Z))<36/91` for a completion.
 
-The integer residues in an open cyclic interval of length `d/7` form a block
-of `ceil(d/7)` consecutive cyclic positions, and every such block occurs for
-some translated open interval.  Therefore the weighted-window maximization
-in `(6)` is exact, including strict endpoints.  Exact enumeration makes
-`(7)` positive for fifteen cases; its weakest lower bound is `1,723` cells.
+The integer residues in an open cyclic interval of length `d/7` are
+contained in a block of `ceil(d/7)` consecutive cyclic positions; the
+intersection can be smaller when a strict endpoint passes through a lattice
+point.  Conversely every full block of `ceil(d/7)` positions occurs for a
+suitable translate.  Since all cell multiplicities are nonnegative, the
+maximum interval weight is therefore exactly the maximum full-block weight
+used in `(6)`, including strict endpoints.  Exact enumeration makes `(7)`
+positive for fifteen cases; its weakest lower bound is `1,723` cells.
 
 ## 5. The three denominator-two equality cases
 
