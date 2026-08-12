@@ -1,0 +1,6 @@
+[PASS] C1 dyadic layer formulas/repair bounds: 45 pairs, 8149 layers through M=512
+[PASS] C2 parity iff d,M are powers of two: 2016 pairs; 21 positives
+[PASS] C3 exhaustive rotation maps: 10 dyadic pairs, 107432 shell words, 17910 injected defects
+[PASS] C4 lexicographic donor repair bisects every exhaustive Hamming layer
+[PASS] C5 donor enumerator R(-1) is nonzero in all 45 dyadic pairs
+THM-3343 SHIFTED-DONOR AUDIT: ALL CHECKS PASS
