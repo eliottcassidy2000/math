@@ -21,7 +21,10 @@ audit: >
   independent read-only Pell/Markov/branch audit (complete intersection
   table, negative-Pell and norm-17 descents, Gaussian-square transplant,
   unbounded Boolean-fibre proof, first collision, and scope boundaries:
-  ACCEPT); dependency-free normal/-O companion replay: ACCEPT
+  ACCEPT); fresh hostile audit found and repaired the Markov orientation/
+  boundary and shared-field wording (MISTAKE-369), then accepted every
+  infinite classification, ancestry word, fibre claim, replay, and hash;
+  dependency-free normal/-O companion replay: ACCEPT
 depends_on:
   - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
   - THM-3335-square-triangular-pell-markov-pythagorean-selector
@@ -75,7 +78,7 @@ depth is `t-1` for `t>=1`.  The complete positive intersection table is:
 At the degenerate boundary, `C_0=1` is square-triangular and
 `Q_0=3=T_2`.  These are not positive-parent descendant planes.
 
-The four negative rows have elementary proofs.  Write `X=2t+1`.  If
+The five negative rows have elementary proofs.  Write `X=2t+1`.  If
 `C_t=T_n`, then with `Y=2n+1`,
 
 ```text
@@ -181,9 +184,17 @@ M_-M_+-(2R)^2=1.                                        (17)
 ```
 
 Thus `(2,M_-,M_+)` is a Markov triple and the doubled square-triangular root
-is the Pell--Cassini carry between its two nontrivial coordinates.  Conversely
-THM-3335 proves that every ordered positive Markov solution with fixed
-coordinate two occurs uniquely.  Its inverse is
+is the Pell--Cassini carry between its two nontrivial coordinates.  Conversely,
+modulo swapping the two non-two coordinates, orient a positive fixed-two
+Markov solution uniquely as
+
+```text
+1<=M_-<=M_+.
+```
+
+The equality row `(M_-,M_+)=(1,1)` is the algebraic boundary `R=N=0`.
+THM-3335 proves that the strict rows `M_-<M_+` correspond exactly and uniquely
+to positive square-triangular rows.  Their inverse is
 
 ```text
 R=(M_+-M_-)/4,              N=(M_-+M_+-2)/4.             (18)
@@ -413,7 +424,19 @@ The nearby discriminants have different jobs:
 | THM-3339 golden ray | `|n^2-mn-m^2|=1` | three exact ancestry rays |
 
 The visible intersections are typed maps, not equality of quadratic fields or
-actions.  In particular:
+actions.  The three Pell lanes in the middle of the table do share one field
+and fundamental positive unit:
+
+```text
+Q(sqrt(8))=Q(sqrt(2)),
+3+sqrt(8)=3+2sqrt(2),
+17+6sqrt(8)=(3+2sqrt(2))^2.                              (43)
+```
+
+The negative-Pell square selector and THM-3335 clock advance under the same
+unit on different norm/parity cosets; the odd-`X` norm-17 branches advance
+under its square.  Their typed states and selected predicates differ even
+though their quadratic field does not.  In particular:
 
 - THM-3335 joins adjacent negative-Pell roots by (14)--(19);
 - Gaussian squaring gives the variable-length branch map (25);

@@ -99,6 +99,12 @@ There are therefore three typed dynamics, not one overloaded “Pell tree”:
 | square-triangular clock | `x^2-8q^2=1` | sparse depths with square even leg |
 | Fibonacci/golden ray | `|n^2-mn-m^2|=1` | irrational endpoint `1/phi`, three ancestry rays |
 
+The first three Pell-style rows in this discussion are not different
+quadratic fields: `Q(sqrt(8))=Q(sqrt(2))`.  The square-`C_t` negative-Pell
+selector and THM-3335 clock advance under `3+2sqrt(2)`, while the odd-parity
+norm-17 `Q_t` branches advance under its square.  Their norm/parity cosets and
+selected predicates differ; their ambient Pell field does not.
+
 THM-3341 closes the remaining square/triangular table.  For `t>=1`, `C_t`
 is square exactly on
 
