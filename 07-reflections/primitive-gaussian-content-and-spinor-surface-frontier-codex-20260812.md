@@ -1,9 +1,9 @@
 # Primitive Gaussian content and the spinor-surface frontier
 
 **Research synthesis, 2026-08-12.**  Status labels in this note are local and
-literal.  The Gaussian multiplication theorem is `PROVED` only after
-THM-3336's promotion; the congruence-surface family below is `FINITE-EXACT` at
-five primes and remains a theorem candidate.  Nothing here proves LRC(14).
+literal.  THM-3336 is `PROVED + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED`; the congruence-surface family below is `FINITE-EXACT` at five
+primes and remains a theorem candidate.  Nothing here proves LRC(14).
 
 ## Portfolio and inheritance
 
@@ -12,7 +12,7 @@ The session kept three lanes live.
 | Lane | Starting object | Closest proved mechanism | Load-bearing loss |
 |---|---|---|---|
 | Anchor | LRC(14) determinant gate | THM-2056 Kelvin/Farey certificate and THM-2596 Gram-owner cocycle | phase, owner switches, saturation, and global exit |
-| Niche | multiplication of primitive Pythagorean spinors | THM-3333 Gaussian square and THM-3334 fixed-norm factor-choice fibre | Gaussian content and odd/odd parity content |
+| Niche | multiplication of primitive Pythagorean spinors | THM-3333 Gaussian square, THM-3334 fixed-norm fibre, and THM-3341's state-dependent self-square transplant | Gaussian content and odd/odd parity content |
 | Wildcard | reduction of the Lorentz/Farey carrier modulo odd primes | THM-2626's 84-state frame bundle and THM-3088's retained radial fibre | integral height, Kelvin denominator, and physical column incidence |
 
 The canonical hostile inherited from THM-3333 is that primitive unordered

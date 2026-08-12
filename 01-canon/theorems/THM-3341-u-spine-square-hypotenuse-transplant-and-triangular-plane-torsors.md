@@ -30,6 +30,7 @@ depends_on:
   - THM-3335-square-triangular-pell-markov-pythagorean-selector
 related:
   - THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone
+  - THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation
   - THM-3339-fibonacci-three-ray-berggren-transplant-and-moving-owner-obstruction
 script: 04-computation/u_spine_square_triangular_torsors_thm3341.py
 output: 05-knowledge/results/u_spine_square_triangular_torsors_thm3341.out

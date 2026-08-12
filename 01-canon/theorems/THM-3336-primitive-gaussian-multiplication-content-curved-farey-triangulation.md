@@ -70,6 +70,10 @@ classifies the equal-hypotenuse factor-choice fibre, while
 [THM-2632](THM-2632-farey-v4-theta-channel-and-hurwitz-crt-parity-sidecar.md)
 shows that parity is a genuine retained channel.  Neither theorem gives a
 binary operation on two primitive spinors.  That operation is the object here.
+[THM-3341](THM-3341-u-spine-square-hypotenuse-transplant-and-triangular-plane-torsors.md)
+proves a special diagonal self-square transplant on the positive Berggren
+middle ray.  Here multiplier and operand are independent and both Gaussian
+and parity contents are retained; no Berggren-depth transplant is claimed.
 
 Identify `(m,n)` with `m+in`.  Fix a primitive nonzero Gaussian multiplier
 
@@ -620,7 +624,7 @@ A=diag(1,2), u=(0,1),v=(2,1) breaks pairwise contents
 
 ## 10. Exact consequence boundary and reproduction
 
-What is proved here, after audit and promotion, is:
+What is proved here is:
 
 1. raw Gaussian multiplication is a Lorentz/norm similitude;
 2. primitive reduction is governed by the exact content cocycle (10) and

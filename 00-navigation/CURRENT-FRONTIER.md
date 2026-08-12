@@ -54,9 +54,11 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
   scans; AP13 and its lift share germs but not maxima.
 - THM-2058 preserves every fixed lift depth but escapes at `47/113`;
   finite jets/Farey rays fail.
-- THM-3333/3334 supply the carrier/spine; THM-3335's seven clocks show the
-  compressed tuple `(Phi,C,D,owner,F)` is incomplete across labelled planes;
-  every benchmark row is safe and no open LRC row closes.
+- THM-3333/3334 give the raw Gaussian/Farey carrier and fixed-cusp Boolean
+  fibres; THM-3335/3339/3341 add typed Pell/Markov, golden-owner, and
+  square/triangular U-spine selectors. THM-3336 gives content-weighted
+  primitive Gaussian multiplication; its sufficient-gate reversals compare
+  different saturated planes. None closes an LRC row.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 
