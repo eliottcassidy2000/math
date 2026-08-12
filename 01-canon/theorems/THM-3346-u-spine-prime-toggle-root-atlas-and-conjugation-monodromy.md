@@ -21,8 +21,11 @@ audit: >
   projective two-skeleton model, integral homology, small-rank boundary, and
   weighted combinatorial systole, with separate Smith computations through
   rank seven.  A third inheritance audit found no canonical duplicate and
-  fixed the dependency and quotient-loss boundary.  Normal, optimized, and
-  stored transcripts byte-match; both recorded hashes match.
+  fixed the dependency and quotient-loss boundary.  A post-promotion hostile
+  audit found and repaired MISTAKE-371: equality of selected-grade and full
+  contents is controlled by gcd(C_r,C_s)=N, not only by N=C_r.  Normal,
+  optimized, and stored transcripts match after LF normalization; both
+  recorded hashes match.
 depends_on:
   - THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone
   - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
@@ -223,7 +226,8 @@ Let
 N=product_(j=1)^k p_j^e_j,       p_j=1 mod 4,            (16)
 ```
 
-with `N>1`, and define the modular U-spine roots
+with the `p_j` pairwise distinct, every `e_j>=1`, and `N>1`.  Define the
+modular U-spine roots
 
 ```text
 R_N={t mod N : N divides C_t}.                           (17)
@@ -309,15 +313,37 @@ iff they differ.  Thus the unordered pair
 ```
 
 is exactly THM-3336's intrinsic folded content weight `{P_S,N/P_S}`.
-It gives the `N`-primary parts of the full contents in (7).  Those parts are
-the entire contents only in the literal fixed-grade specialization
-`N=C_r` with `N|C_s`; a modular root can have `C_r>N` and additional prime
-content.
+It gives the `N`-primary parts of the full contents in (7).  More exactly,
 
-The smallest sharp scope hostile is already `N=5`, with `r=6,s=23`.  Both
-indices lie in `R_5`, and `(delta_-,delta_+)=(1,5)`, while their full contents
-from (12) are `(d_-,d_+)=(17,5)`.  Thus the modular atlas sees the selected
-grade and must not be advertised as the full gcd of the two larger norms.
+```text
+delta_-(r,s)=gcd(N,d_-(r,s)),
+delta_+(r,s)=gcd(N,d_+(r,s)).                            (27a)
+```
+
+Indeed `N|C_r`, so taking `gcd(N,-)` in (6) gives (27a).  Since both pairs
+are coprime and their products are respectively `N` and `gcd(C_r,C_s)`,
+
+```text
+(delta_-,delta_+)=(d_-,d_+)
+iff gcd(C_r,C_s)=N.                                     (27b)
+```
+
+The fixed-grade specialization `N=C_r` with `N|C_s` is sufficient, but not
+necessary.  The smallest counterexample to the old necessity wording is
+`N=5,r=3,s=6`: here `(C_r,C_s)=(25,85)` and both channel pairs equal `(1,5)`
+although `N!=C_r`.
+
+The smallest modular/full-content mismatch is `N=5,r=3,s=21`.  Both indices
+lie in `R_5`, but
+
+```text
+(delta_-,delta_+)=(1,5),       (d_-,d_+)=(1,25).         (27c)
+```
+
+The distinct-prime hostile `N=5,r=6,s=23` remains useful: its selected pair
+is `(1,5)` while the full pair from (12) is `(17,5)`.  Thus the modular atlas
+sees the selected grade and must not be advertised as the full gcd of the two
+larger norms.
 
 The first nontrivial controls are
 
@@ -611,8 +637,8 @@ The companion audits `90,601` exact integer pair identities, `135,150`
 composition-radius rows, `92` modular roots, `188` explicit CRT toggles, `184`
 Gaussian reconstructions, `336` Hensel-lift rows, `154` Pell bridge identities,
 and integral cubical Smith forms through rank seven (with the rank-eight
-closed-form row recorded separately).  Normal and optimized runs byte-match
-the stored transcript.  Reproduce with
+closed-form row recorded separately).  Normal and optimized runs match the
+stored transcript after LF normalization.  Reproduce with
 
 ```bash
 python3 04-computation/u_spine_prime_toggle_atlas_thm3346.py

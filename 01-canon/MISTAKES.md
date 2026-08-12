@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-371 (2026-08-12, THM-3346 modular/full content scope) -- one sufficient fixed-grade condition was stated as necessary
+
+- **What failed:** the first promoted form of
+  [THM-3346](theorems/THM-3346-u-spine-prime-toggle-root-atlas-and-conjugation-monodromy.md)
+  said its selected `N`-primary channels could equal the full Gaussian
+  contents only in the literal specialization `N=C_r` with `N|C_s`.
+- **Minimal witness / first failed implication:** take `N=5,r=3,s=6`.
+  Then `(C_r,C_s)=(25,85)`, while both selected and full channel pairs are
+  `(1,5)` even though `N!=C_r`.  The smallest actual modular/full mismatch is
+  `N=5,r=3,s=21`, where the pairs are `(1,5)` and `(1,25)`.
+- **Repair / strongest survivor:** for every `r,s in R_N`, each signed
+  channel satisfies `delta_pm=gcd(N,d_pm)`.  Because the two channel pairs are coprime and have
+  products `N` and `gcd(C_r,C_s)`, respectively, they agree coordinatewise
+  iff `gcd(C_r,C_s)=N`.  The fixed-grade condition is sufficient, not
+  necessary.  The root cube, Hensel clocks, conjugation monodromy, metric,
+  Pell compiler, and every other conclusion of THM-3346 are unchanged.
+- **Reusable rule:** when a theorem identifies the primary part of an
+  invariant, equality with the full invariant is controlled by absence of
+  extra common factors, not by equality of one ambient object with the
+  selected modulus.
+
 ## MISTAKE-370 (2026-08-12, THM-3336 primitive matrix extension) -- primitive-entry matrices were treated as a composition class
 
 - **What failed:** the first promoted Section 9 introduced `d_A,mu_A` under
