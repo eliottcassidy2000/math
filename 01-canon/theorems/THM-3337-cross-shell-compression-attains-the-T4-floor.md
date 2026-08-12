@@ -1,5 +1,5 @@
 ---
-id: THM-3336
+id: THM-3337
 title: "Cross-shell compression attains the AMM 12592 floor T(4)=5"
 status: >
   PROVED + VERIFIED-EXACT. There is one deterministic exactly fair extractor
@@ -18,14 +18,14 @@ depends_on:
 related:
   - THM-2966-spine-normal-form-for-critical-run-fair-extractors
   - "Claude, More than two thirds of the zeros of the Riemann zeta function lie on the critical line (2026), finite-compression inspiration only"
-script: 04-computation/amm12592_cross_shell_T4_floor_thm3336.py
-output: 05-knowledge/results/amm12592_cross_shell_T4_floor_thm3336.out
-script_sha256: af57f1805817a7368d6af0f802d77eeaaa0b5aa6a8af81521b05d3f8a888b496
-output_sha256: 2a4ede61e70f2c082c936a03efda97c72c3bc99110679cda425fc67e9a84fdea
+script: 04-computation/amm12592_cross_shell_T4_floor_thm3337.py
+output: 05-knowledge/results/amm12592_cross_shell_T4_floor_thm3337.out
+script_sha256: af051babc893801ffc133448fbb15ba758f0199a2f27d387a9f3dfedc27660fd
+output_sha256: b7f80f0c98a07f08b49ae0940d5836410d9de32af6b2ea8a737c44e02b2c8685
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-3336 -- cross-shell compression gives `T(4)=5`
+# THM-3337 -- cross-shell compression gives `T(4)=5`
 
 Let independent bits satisfy
 
@@ -156,8 +156,8 @@ whole vector is needed.
 ## 5. Exact audit
 
 ```bash
-python 04-computation/amm12592_cross_shell_T4_floor_thm3336.py
-python -O 04-computation/amm12592_cross_shell_T4_floor_thm3336.py
+python 04-computation/amm12592_cross_shell_T4_floor_thm3337.py
+python -O 04-computation/amm12592_cross_shell_T4_floor_thm3337.py
 ```
 
 Both runs check causality, all 254 nonconstant length-eight words, every

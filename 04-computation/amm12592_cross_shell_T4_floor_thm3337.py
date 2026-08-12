@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact audit for THM-3336: a cross-shell AMM 12592 extractor with T(4)=5.
+"""Exact audit for THM-3337: a cross-shell AMM 12592 extractor with T(4)=5.
 
 For every nonconstant binary word of length eight, let n be the initial
 constant-run length.  The candidate rule on n <= 7 is
@@ -26,8 +26,8 @@ branches unchanged.  The program audits the finite replacement; THM-2225
 supplies the already-proved infinite tail and its deadlines.
 
 Reproduce:
-    python 04-computation/amm12592_cross_shell_T4_floor_thm3336.py
-    python -O 04-computation/amm12592_cross_shell_T4_floor_thm3336.py
+    python 04-computation/amm12592_cross_shell_T4_floor_thm3337.py
+    python -O 04-computation/amm12592_cross_shell_T4_floor_thm3337.py
 """
 
 from collections import defaultdict
@@ -180,7 +180,7 @@ def main() -> None:
     require(all(DEADLINE[n] >= n + 1 for n in DEADLINE), "deadline precedes disagreement")
 
     source_hash = sha256(Path(__file__).read_bytes()).hexdigest()
-    print("status=THM-3336_VERIFIED_EXACT")
+    print("status=THM-3337_VERIFIED_EXACT")
     print("deadline_vector_T1_to_T7=" + ",".join(str(DEADLINE[n]) for n in range(1, 8)))
     print("all_layer_heads=" + repr({k: new_all[k][0] for k in new_all}))
     print("all_layer_totals=" + repr({k: new_all[k][1] for k in new_all}))
