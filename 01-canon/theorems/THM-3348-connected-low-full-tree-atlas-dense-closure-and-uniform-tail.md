@@ -261,7 +261,26 @@ The weakest exact head margin is
 It occurs on body `(1,2,3,4,6,12)`, levels
 `(4,3,2,1,12,6)`, scale one, and tree
 `((1,4),(0,3),(3,4),(1,2),(0,5))`.  Thus both dense shapes close at every
-common dilation.
+common dilation.  Here the tail propagation uses a scaled inequality, not
+merely ordinary monotonicity.  If `s>=S`, each shear summand in `(19)` and
+the determinant summand satisfy
+
+```text
+B_e(s) <= (S/s) B_e(S),                                 (21a)
+```
+
+the determinant term in fact decaying quadratically.  Likewise the exact
+singleton debt satisfies `D(s)<=(S/s)D(S)`.  Thus, for the fixed tree chosen
+at its certified threshold `S`,
+
+```text
+I_infinity(T)-sum_(e in T) B_e(s)
+ >= (S/s)(I_infinity(T)-sum_(e in T) B_e(S)),            (21b)
+```
+
+because the omitted `(1-S/s)I_infinity(T)` is nonnegative.  Strict closure
+at `S` therefore persists at every `s>=S`; the literal checks cover exactly
+the earlier scales.
 
 ## 6. A context-aware high-forest tail by scale eleven
 
@@ -305,9 +324,20 @@ S       1       2       3      4     5    6   7   8  11
 count 101280  159228   36631   7204  1046 175 329  7   7. (26)
 ```
 
-All errors and `D_max/s` decrease along the certified tail.  Hence every row
-closes by its displayed threshold, and all close for `s>=11`.  Summing
-`S-1` over the shapes gives the residual count `(3)`.
+To propagate `(25)`, freeze the positive high forest chosen at its first
+certified scale `S`.  The contextwise maximum errors still obey
+`E_e(s)<=(S/s)E_e(S)` for `s>=S` (a maximum of quantities with the same
+bound has the same bound).  Consequently each frozen edge satisfies
+
+```text
+g_e(s) >= (S/s)g_e(S)+(1-S/s)/105 >= (S/s)g_e(S).        (26a)
+```
+
+Summing over the frozen forest and using `(25)` at `S` gives a strict lower
+bound `(S/s)(D_max/S)=D_max/s`.  This scaled monotonicity, rather than the
+mere fact that both error and debt decrease, proves that every row closes by
+its displayed threshold and that all close for `s>=11`.  Summing `S-1` over
+the shapes gives the residual count `(3)`.
 
 ## 7. Hostile boundary: low-only trees are false
 
