@@ -26,7 +26,7 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 ### Exact live obligation
 
 Direct frontier: `<=6`; projected `k=2,3` caps `1579/216`; `561` reflected bodies. THM-3347 closes all-nine-low two-star dilations.
-THM-3348 classifies `305,909` connected-low shapes, closes both dense shapes at every scale and all others from scale `11`; `261,254` unlabelled finite heads remain.
+THM-3348 classifies `305,909` connected-low shapes and supplies their uniform tail; THM-3350 closes all `261,254` remaining finite heads by universal exact physical high-forest minima.  Thus all `220,254,480` labelled connected-low primitive rays close at every common dilation.
 THM-3349 closes sixteen complete `z1=216` families and `236` rows: ledger/wall/families `372917/113/13`, cap `216`; next `L720720`, rows `191,228,332`.
 Arbitrary `k<=1`, independent component scales, rung, physical entry and LRC remain open. The screen counts are necessary-state, not physical covers.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
