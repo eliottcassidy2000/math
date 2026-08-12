@@ -9,6 +9,34 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-367 (2026-08-12, THM-1880 Chebyshev--Pell frame) -- the coupled recurrence transposed its even and odd outputs
+
+- **What failed:** [THM-1880, the a/b functional frame](theorems/THM-1880-the-a-b-functional-frame-chebyshev-pell-companions.md)
+  stated
+  `E_n=E_(n-1)+x O_(n-1)` and
+  `O_n=O_(n-1)+x E_(n-1)`, and its status incorrectly said that this
+  displayed recurrence had zero symbolic residual.
+- **Minimal witness / first failed implication:** from the defining forms,
+  `E_1=x`, `O_1=1`, and `E_2=x^2+1`.  The old first recurrence instead gives
+  `E_2=2x`.  Thus the printed formula fails already at `n=2`; a historical
+  verification claim did not match the expression canonized.
+- **Repair / strongest survivor:** direct multiplication of
+  `E_n+O_n=(x+1)^n` and `E_n-O_n=(x-1)^n` gives the corrected crossed system
+
+  ```text
+  E_n=x E_(n-1)+O_(n-1),
+  O_n=E_(n-1)+x O_(n-1).
+  ```
+
+  [THM-2142, the half-angle bridge](theorems/THM-2142-the-half-angle-bridge-ab-monoid-is-the-ctu-cyclotomic-skeleton.md)
+  had already recorded this correction; THM-1880 now agrees with it.  The
+  defining closed forms, Pell identity, cotangent roots, and triangular
+  coefficient remain valid.
+- **Reusable rule:** when a later theorem explicitly corrects a live proved
+  theorem, repair the original truth surface as well.  A verifier label such
+  as “residual zero” is not evidence unless the frozen expression is the one
+  printed in the theorem.
+
 ## MISTAKE-366 (2026-08-03, THM-3321 Hesse-torus normalization) -- noncovariance of one named torus was promoted to a classification of all continuous normalizations
 
 - **What failed:** THM-3321 correctly showed that the formal Hesse torus
