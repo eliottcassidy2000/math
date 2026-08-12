@@ -73,7 +73,11 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     constant-J boundary residual into open overlap, anti-tangent collision, or
     vertex-cone incidence. THM-3326 gives the linear-`z` response trichotomy;
     THM-3348 identifies its full generic punctured-line de Rham response and
-    exact one-root valuation annihilator.
+    exact one-root valuation annihilator. THM-3354 proves that the LRC chart,
+    Gaussian ancestry, sporadic `S3`, quartic `mu_2`, and Hamiltonian response
+    carriers admit no direct coefficient-induced D5 transport; its comparison
+    cospan is definitional, and generic response vanishing is not an integral
+    mate criterion.
     `JC(2)`/`DC(2)` remain OPEN.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The

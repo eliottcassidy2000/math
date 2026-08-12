@@ -1,44 +1,45 @@
 ---
 id: THM-3354
-title: "Inequivalent H1 carriers and the typed-obstruction cospan"
+title: "Inequivalent H1 carriers, the direct-map no-go, and a typed comparison table"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT. The proved LRC
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. The proved LRC
   seven-chart class is an F13-valued graph-Cech class; its C91 mapping torus
   is an orbit carrier, not a mixed Z/91 coefficient class. Berggren-tree
-  graph H1 and every pulled Gaussian ancestry charge are exact. All
-  coefficient homomorphisms between the odd LRC groups and the sporadic S3,
-  quartic V4, or characteristic-zero Hamiltonian-response carriers are
-  trivial in both directions. The lawful D5 object is therefore a
-  type-retaining comparison cospan, not a cohomology-class transport. The
-  proof and exact finite controls below remain outside the proof graph pending
-  independent hostile audit.
+  graph H1 vanishes and every endpoint-pulled Gaussian ancestry charge is
+  exact. All direct coefficient homomorphisms between the odd LRC groups and
+  the sporadic S3, quartic V4/mu2, or characteristic-zero integral
+  Hamiltonian-response carriers are trivial in both directions. The generic
+  Hamiltonian localization loses vertical torsion, so generic vanishing is
+  only necessary, not sufficient, for a polynomial mate. The typed comparison
+  cospan below is DEFINITIONAL bookkeeping, not theorem content, and no new
+  correspondence space or coefficient-changing sidecar is excluded.
 source: codex-2026-08-12-d5-typed-obstruction-cospan
 depends_on:
+  - THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
   - THM-2542-seven-chart-cech-holonomy-and-c91-arrival-obstruction
   - THM-2655-quartic-keller-resolvent-v4-quasietale-torsor-and-kummer-class-group-gate
   - THM-2685-equivariant-kummer-boundary-parity-completion-and-divisor-residue-gate
   - THM-2703-c3-boundary-tree-arm-determinant-standard-plane-gate
+  - THM-2708-c3-hermitian-gain-holonomy-discriminant-gate
   - THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation
   - THM-3345-prime-xor-ancestry-path-groupoid-and-source-dependent-berggren-cost
   - THM-3348-linear-z-generic-puncture-response-and-one-root-valuation
+  - THM-3353-split-prime-parabolic-branch-transplant-and-unary-transducer-compiler
 related:
-  - THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient
-  - THM-2708-c3-hermitian-gain-holonomy-discriminant-gate
   - THM-3318-hamiltonian-divergence-torsion-ladder-for-x-plus-xr-z
   - THM-3326-linear-in-z-unit-response-trichotomy-and-jet-torsion
-  - THM-3353-split-prime-parabolic-branch-transplant-and-unary-transducer-compiler
   - HYP-9031-d5-h1-dictionary-lrc-word-current-vs-jc-flux
 script: 04-computation/d5_typed_h1_no_go_thm3354.py
 output: 05-knowledge/results/d5_typed_h1_no_go_thm3354.out
-script_sha256: 6bc5389a51bea7eac74f586c6af3c471a591e8f18ca0f930c33bb3382c93d71c
-output_sha256: 907d91f08e005e8e63411a3a7929c98ce46a780372a89155f64ad90a5e1f6fa8
+script_sha256: b0b86426cedd58ca3e23ff46e9c8af7fe8504d0dcffb0a16c16dc9cf3fa02a48
+output_sha256: a6d340d8870ecccc0cdca5cf20dbfdbfcea997be7b85243ca7b5dce761035cb9
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3354 -- inequivalent H1 carriers and the typed-obstruction cospan
+# THM-3354 -- inequivalent H1 carriers, the direct-map no-go, and a typed comparison table
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This theorem audits the proposed D5 dictionary at the level of its actual
 sites, coefficient objects, classes, target predicates, and missing sidecars.
@@ -67,38 +68,53 @@ The current repo contains five relevant but inequivalent objects.
 
    on the primitive Gaussian associate multiplication group G.
 
-3. **Sporadic cubic monodromy.** On the finite-etale locus of the fixed
-   three-dimensional sporadic Keller map, the Galois-closure torsor of
-   THM-2473 has class
+3. **Sporadic cubic monodromy.** In the target coordinates of THM-2473, put
 
    ~~~text
-   [rho_F] in H^1_et(U;S_3),             Mon(F)=S_3.          (3)
+   L=27a^2c^2-18abc+16a+b^3c-b^2,
+   U=A^3_C \ Z(L).
    ~~~
 
-4. **Quartic Kummer data.** THM-2655/2685 give the standard plane
+   The Galois closure of the degree-three finite-etale cover over `U` is a
+   finite-etale `S3`-torsor. It is classified by the nonabelian pointed set
 
    ~~~text
-   W=Hom(V_4,C_2) -> H^1_et(R_reg;mu_2),                     (4)
+   [rho_F] in H^1_et(U;underline S_3),
+   geometric monodromy S_3.                                  (3)
    ~~~
 
-   together with its divisor-parity boundary and unit/class-group completion.
+4. **Quartic Kummer data.** Here the coefficient sheaf is `mu_2`, while
+   the parameter plane is
 
-5. **Planar Hamiltonian response.** For R=K[x,z],
+   ~~~text
+   W=Hom(V_4,C_2) ~= F_2^2.                                  (4)
+   ~~~
+
+   THM-2655/2685 place the three nonzero characters in
+   `H^1_et(R_reg;mu_2)`, subject to the Kummer unit and class-group rows and
+   the divisor-parity completion. The additive group of `W` happens to be
+   isomorphic to `V4`; neither is the coefficient sheaf.
+
+5. **Planar Hamiltonian response.** For `R=K[x,z]`, the integral response
+   record is
 
    ~~~text
    C_P=R/D_P(R),                    D_P(q)=Jac(P,q),          (5)
+   theta_int=[1] in C_P.
    ~~~
 
-   is a K[P]-module. In the linear-in-z scope of THM-3348,
+   This is a `K[P]`-module. In the linear-in-`z` scope of THM-3348, its
+   generic localization is a different record:
 
    ~~~text
    C_P tensor_(K[P]) K(P)
-      ~= H^1_dR(Spec K(P)[x,g^(-1)]/K(P)).                  (6)
+      ~= H^1_dR(Spec K(P)[x,g^(-1)]/K(P)),
+   theta_gen=image(theta_int).                              (6)
    ~~~
 
-Equations (1)--(6) use the glyph H1, but their sites, variance, coefficients,
-algebraic structures, and target predicates differ. They cannot be identified
-by notation.
+These records are sometimes compressed under one `H1` or flux vocabulary,
+but their sites, variance, coefficients, algebraic structures, and target
+predicates differ. They cannot be identified by notation.
 
 ## 2. The Berggren ancestry carrier is exact
 
@@ -119,23 +135,25 @@ H^1_graph(T;A)=0                                           (8)
 
 for every constant abelian coefficient group A.
 
-For the rooted Berggren tree, write w_x for the root word of vertex x. The
+For the rooted Berggren tree, write `w_x` for the root word of vertex `x`. The
 unique reduced path is
 
 ~~~text
 P(x,y)=w_x^(-1)w_y.                                       (9)
 ~~~
 
-If a character chi is evaluated on endpoint labels, put
-f_chi(x)=chi(w_x), or f_chi(x)=chi(z_x) for Gaussian labels z_x. Its path
-pullback is
+If `chi` is a character of the free Berggren word group, put
+`f_chi(x)=chi(w_x)`. Separately, after choosing endpoint Gaussian labels
+`z_x`, evaluate the genuine multiplication-group characters as
+`f_tau(x)=tau(z_x)` and `f_p(x)=lambda_p(z_x)`. Every such endpoint function
+has path pullback
 
 ~~~text
 c_chi(x,y)=f_chi(y)-f_chi(x),                             (10)
 ~~~
 
 so it is a coboundary. In particular, the genuine multiplication-group
-classes tau,lambda_p from (2) do not become Berggren-tree classes after
+classes `tau,lambda_p` from (2) do not become Berggren-tree classes after
 endpoint pullback. THM-3345's source-dependent XOR path functor and
 THM-3353's fixed-prime unary compilers therefore add exact ancestry arrows,
 not ancestry holonomy.
@@ -165,7 +183,9 @@ Because (1,a) has order lcm(7,13)=91, (13) is one cycle of length ninety-one.
 This proves a C91 mapping-torus **carrier**. It does not change the coefficient
 group in (1).
 
-More sharply, every coefficient homomorphism
+Although `C91` is not the coefficient object in (1), suppose hypothetically
+that its abstract carrier-cycle group is treated as coefficients. Every
+coefficient homomorphism
 
 ~~~text
 iota:C_13 -> C_91                                         (14)
@@ -203,13 +223,19 @@ Hom(S_3,C_13),     Hom(S_3,C_91),                          (17)
 
 Hom(C_13,V_4),     Hom(C_91,V_4),
 Hom(V_4,C_13),     Hom(V_4,C_91).                          (18)
+
+Hom(C_13,C_2),     Hom(C_91,C_2),
+Hom(C_2,C_13),     Hom(C_2,C_91).                          (18a)
 ~~~
 
 For maps from a cyclic group, the image order divides both the odd number 13
 or 91 and the target order 6 or 4; it is therefore one. Every map from S3 to
 an abelian group factors through S3^ab=C2, and every map from V4 has
-two-primary image. An odd cyclic target has no such nonzero subgroup. This
-proves (17)--(18).
+two-primary image. An odd cyclic target has no such nonzero subgroup. The
+same order argument proves (18a); over `C`, the abstract geometric fibre of
+`mu_2` is `C2`. This proves (17)--(18a). It also keeps separate the quartic
+parameter plane `W`, its abstract additive group `V4`, and its coefficient
+sheaf `mu_2`.
 
 There is an equally sharp characteristic-zero boundary. Since D_P(R) is a
 K-linear subspace, C_P in (5) is a K-vector space. Its additive group is
@@ -235,35 +261,58 @@ does not deny that a future construction could introduce a new correspondence
 space and a new coefficient-changing sidecar; such data would be the substance
 of a new theorem, not a consequence of the present carriers.
 
-## 5. The Hamiltonian class has a different target predicate
+## 5. Integral and generic Hamiltonian observers have different predicates
 
-The relevant planar mate observer is
+The relevant integral planar mate observer is
 
 ~~~text
-theta=[1] in C_P.                                         (21)
+theta_int=[1] in C_P.                                     (21)
 ~~~
 
 A polynomial Q with Jac(P,Q)=1 exists exactly when
 
 ~~~text
-theta=0.                                                  (22)
+theta_int=0.                                              (22)
 ~~~
 
-In THM-3348's generic identification, theta maps to [-dx/g]. The full generic
-de Rham group can be nonzero while this one observer vanishes; for a one-root
-coefficient, the missing obstruction can instead survive as vertical
-K[P]-torsion. Conversely, a Keller pair already has D_P(Q)=1, so (21)
-vanishes tautologically even though other cover or monodromy data may be
-nontrivial.
+Under THM-3348's generic identification, let
 
-Thus neither nonzero generic de Rham H1 nor nonzero etale monodromy is
-synonymous with failure of the planar mate equation. The observer, integral
-lattice, and localization loss must be retained.
+~~~text
+theta_gen=image(theta_int)=[-dx/g].                        (22a)
+~~~
+
+A polynomial mate implies `theta_gen=0`, but the converse is false because
+localization discards vertical `K[P]`-torsion. The minimal linear-in-`z`
+hostile is
+
+~~~text
+P=x+x^2 z,                 D_P=(1+2xz)partial_z-x^2 partial_x.
+~~~
+
+In the localized ring, `Q=1/x` satisfies `D_P(Q)=1`, so `theta_gen=0`.
+Integrally, THM-3348 gives
+
+~~~text
+Ann_(K[P])(theta_int)=(P),
+~~~
+
+so `theta_int!=0` and no polynomial mate exists. Thus the full generic de
+Rham group can be nonzero while this observer vanishes; the missing
+obstruction survives as vertical torsion. Conversely, a Keller pair already
+has `D_P(Q)=1`, so (21) vanishes tautologically even though other cover or
+monodromy data may be nontrivial.
+
+Thus neither nonzero generic de Rham H1, generic observer vanishing, nor
+nonzero etale monodromy is equivalent to the integral planar mate predicate.
+The observer, integral module, and localization loss must be retained.
 
 ## 6. The same tree can carry opposite Kummer answers
 
 Graph H1 also cannot replace THM-2655's weighted boundary lattice. Consider
 the same three-arm star with one fixed centre and three leaves, cycled by C3.
+The lattice computations below are unconditional; their geometric Kummer
+application is only under the full-rank, independent rational-surface
+completion hypotheses of THM-2703.
 
 For the negative D4 Cartan weights, its matrix is
 
@@ -298,11 +347,16 @@ Then
 
 Both underlying graphs are trees and have zero graph H1. One weighted lattice
 has exactly the quartic standard plane and the other has none. Therefore the
-intersection matrix, divisor parity, saturation, and gain sidecars are
-load-bearing. An unweighted ancestry or boundary graph cannot stand in for
-the Kummer carrier.
+intersection matrix, divisor parity, and saturation sidecars are load-bearing
+in the stated completion scope. For quotient cycles, THM-2708 adds gain
+holonomy as a further independent coordinate. An unweighted ancestry or
+boundary graph cannot stand in for the Kummer carrier.
 
-## 7. The corrected D5 map is a typed comparison cospan
+## 7. Definition: the typed comparison table
+
+**DEFINITIONAL ONLY.** This section supplies bookkeeping, not an additional
+theorem. It asserts no naturality, universal property, or cross-domain
+morphism.
 
 Define TypedObstruction to be the set of records
 
@@ -316,44 +370,54 @@ Define TypedObstruction to be the set of records
  quantifier tag).                                         (27)
 ~~~
 
-There are explicit encoding maps
+There are tautological set-theoretic encoding maps
 
 ~~~text
 LRC_record  --Phi_L-->  TypedObstruction  <--Phi_J--  JC_records,            (28)
 ~~~
 
-where JC_records is the disjoint union of the sporadic monodromy, quartic
-Kummer, and Hamiltonian-response records in (3)--(6). Their images are:
+where `JC_records` is the disjoint union of the sporadic monodromy, quartic
+Kummer, integral-response, and generic-response records in (3)--(6). Their
+images are:
 
 ~~~text
 Phi_L:
-  (C_7^graph,F_13,[7a],horizontal reversible,
+  (C_7^graph,F_13,[g]=7a,horizontal reversible,
    semantic arrival OPEN,
    positive vertical 2-cell or twisted lift missing,
    local proved / global LRC universal target);
 
 Phi_J,sporadic:
-  (U_et,S_3,[rho_F],reversible etale,
+  (U,underline S_3,[rho_F],reversible finite etale,
    fixed three-dimensional noninjectivity REALIZED,
    nonproper escape boundary retained,
    existential fixed-map counterexample);
 
 Phi_J,quartic:
-  (R_reg,mu_2,W,reversible etale,
+  (R_reg,mu_2,image of W,reversible etale,
    A4/S4 Keller exclusion OPEN,
-   weighted saturated boundary and Kummer realization missing,
+   unit row plus Cl(R_reg)[2], weighted saturated boundary,
+   and Kummer realization missing,
    universal quartic target);
 
-Phi_J,response:
-  (Spec K(P)[x,g^(-1)]_dR,K(P),theta,
+Phi_J,response-integral:
+  (K[P] subset R,C_P,theta_int,
+   additive/integral,
+   mate iff theta_int=0,
+   polynomial realization and vertical torsion retained,
+   fixed P before universal JC(2));
+
+Phi_J,response-generic:
+  (Spec K(P)[x,g^(-1)]_dR,K(P)-de-Rham module,theta_gen,
    additive/localized,
-   mate iff theta=0,
-   integral torsion/observer sidecar retained,
-   fixed P before universal JC(2)).                        (29)
+   mate implies theta_gen=0 only,
+   integral module and vertical torsion destroyed,
+   fixed linear-in-z P before universal JC(2)).            (29)
 ~~~
 
-The maps in (28) are type-retaining encodings, **not** maps on cohomology
-classes. A coarser projection of (27) preserves only this grammar:
+The maps in (28) merely package already-defined records; their existence is
+tautological. They are **not** maps on cohomology classes. A coarser
+projection of (27) preserves only this grammar:
 
 ~~~text
 a quotient/localization carries an obstruction;
@@ -376,24 +440,28 @@ The cospan identifies different next tests rather than one shared map.
    c_k in F_13,              sum_k c_k=-7a,                (31)
    ~~~
 
-   together with THM-2542's target-role intertwiner killing neutral roles and
-   detecting a positive target-active edge.
+   together with an intertwiner of the type required by THM-2542: it must kill
+   neutral roles and detect a positive target-active edge. No such
+   intertwiner is constructed there.
 
 2. **LRC twisted lift.** Instead of cancelling (1), construct a positive
    semantic vertical path on the nontrivial carrier (13), preserving the old
    common ancestry/deep/source face.
 
-3. **Quartic JC.** Construct or exclude the Q-equivariant Kummer standard
-   plane using the weighted saturated boundary lattice and its divisor
-   residues. The unweighted graph is insufficient by (23)--(26).
+3. **Quartic JC.** Construct or exclude the `Q`-equivariant Kummer standard
+   plane in the full universal Kummer row: units together with
+   `Cl(R_reg)[2]`. When the completion hypotheses of THM-2703/2708 hold, use
+   the weighted saturated boundary lattice, divisor residues, and any cyclic
+   gain coordinate. The unweighted graph is insufficient by (23)--(26).
 
-4. **Planar response.** Test the distinguished integral class theta, not
-   arbitrary generic de Rham rank, and retain the vertical torsion discarded
-   by localization.
+4. **Planar response.** Test the distinguished integral class `theta_int`,
+   not arbitrary generic de Rham rank or `theta_gen` alone, and retain the
+   vertical torsion discarded by localization.
 
-5. **Gaussian ancestry.** Any nonzero current must add a quotient, boundary,
-   or physical incidence sidecar not present in the tree, because (7)--(10)
-   make every endpoint charge exact.
+5. **Gaussian ancestry.** Any non-exact ancestry class or holonomy must add a
+   quotient, boundary, or physical incidence sidecar not present in the tree,
+   because (7)--(10) make every endpoint charge exact. Nonzero exact
+   one-cochains may of course exist on a tree.
 
 These are parallel realization problems in inequivalent cohomology theories.
 Solving one does not solve another.
@@ -401,10 +469,11 @@ Solving one does not solve another.
 ## 9. Exact finite referee and stopping boundary
 
 The companion independently enumerates every finite coefficient homomorphism
-in (17)--(18), all thirteen maps C13 -> C91 and their twelve embeddings, all
-twelve nonzero mapping-torus steps, the graph Betti controls, and the two
-weighted-star determinants and mod-two nullities. Normal and optimized
-transcripts must agree with the stored output:
+in (17)--(18a), all thirteen maps `C13 -> C91` and their twelve embeddings,
+all twelve nonzero mapping-torus steps, the graph Betti controls, and the two
+weighted-star determinants and mod-two nullities. It also checks the exact
+localized hostile `D_(x+x^2z)(1/x)=1` and the one-root annihilator exponent.
+Normal and optimized transcripts agree with the stored output:
 
 ~~~bash
 python3 04-computation/d5_typed_h1_no_go_thm3354.py
@@ -412,9 +481,10 @@ python3 -O 04-computation/d5_typed_h1_no_go_thm3354.py
 ~~~
 
 The universal conclusions rest on (7), group-order/abelianization arguments,
-and the characteristic-zero vector-space argument, not on bounded inference.
+the characteristic-zero vector-space argument, and the integral definition
+of `C_P`, not on bounded inference.
 
 No LRC current, semantic 2-cell, scalar-row exclusion, quartic Kummer
 realization, planar mate, JC(2), DC(2), or cross-domain reduction follows.
-The direct-map form of HYP-9031 must be read as superseded if this candidate
-passes audit; its useful survivor is precisely the typed grammar (27)--(30).
+The direct-map form of HYP-9031 is superseded. Its useful survivor is the
+typed grammar (27)--(30), which remains definitional and transfers no theorem.

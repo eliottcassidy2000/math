@@ -3,7 +3,8 @@
 
 The universal coefficient and divisibility statements are proved in the
 theorem.  This companion independently enumerates the finite coefficient
-homomorphisms, the C91 mapping-torus orbit, and the weighted-star hostile.
+homomorphisms, the C91 mapping-torus orbit, the weighted-star hostile, and the
+integral-versus-generic Hamiltonian localization hostile.
 """
 from itertools import permutations, product
 
@@ -80,6 +81,24 @@ def v4_to_cyclic_count(n):
     )
 
 
+def hamiltonian_on_monomial(a, b):
+    """Apply D_(x+x^2 z) to x^a z^b in the Laurent polynomial ring."""
+    out = {}
+
+    def add(exponents, coefficient):
+        out[exponents] = out.get(exponents, 0) + coefficient
+        if out[exponents] == 0:
+            del out[exponents]
+
+    # D=(1+2xz) partial_z-x^2 partial_x.
+    if b:
+        add((a, b - 1), b)
+        add((a + 1, b), 2 * b)
+    if a:
+        add((a + 1, b), -a)
+    return out
+
+
 def main():
     identity = (0, 1, 2)
     s3 = tuple(permutations(range(3)))
@@ -93,9 +112,13 @@ def main():
             ((n * x) & 1, (n * y) & 1) == (0, 0) for x, y in v4
         )
         v4_to_c = v4_to_cyclic_count(n)
-        require((c_to_s3, s3_to_c, c_to_v4, v4_to_c) == (1, 1, 1, 1),
+        c_to_c2 = sum((n * x) % 2 == 0 for x in range(2))
+        c2_to_c = sum((2 * x) % n == 0 for x in range(n))
+        require((c_to_s3, s3_to_c, c_to_v4, v4_to_c,
+                 c_to_c2, c2_to_c) == (1, 1, 1, 1, 1, 1),
                 ("nontrivial coefficient hom", n))
-        hom_rows.append((n, c_to_s3, s3_to_c, c_to_v4, v4_to_c))
+        hom_rows.append((n, c_to_s3, s3_to_c, c_to_v4, v4_to_c,
+                         c_to_c2, c2_to_c))
 
     c13_to_c91 = tuple(y for y in range(91) if 13 * y % 91 == 0)
     embeddings = tuple(y for y in c13_to_c91 if y != 0)
@@ -138,8 +161,17 @@ def main():
     cycle_h1 = 7 - 7 + 1
     require((tree_h1, cycle_h1) == (0, 1), "graph H1 controls")
 
+    localized_primitive = hamiltonian_on_monomial(-1, 0)
+    require(localized_primitive == {(0, 0): 1},
+            ("localized Hamiltonian hostile", localized_primitive))
+    d, e = 2, 1
+    nu = min(d, e)
+    annihilator_exponent = (d - 1 + nu - 1) // nu
+    require(annihilator_exponent == 1, "one-root annihilator exponent")
+
     print("D5 TYPED H1 NO-GO -- EXACT FINITE CONTROLS")
-    print("hom_counts (n,Cn_to_S3,S3_to_Cn,Cn_to_V4,V4_to_Cn)", hom_rows)
+    print("hom_counts (n,Cn_to_S3,S3_to_Cn,Cn_to_V4,V4_to_Cn,"
+          "Cn_to_C2,C2_to_Cn)", hom_rows)
     print("C13_to_C91 homs", len(c13_to_c91), "embeddings", len(embeddings),
           "all_C7_projection_zero", all(y % 7 == 0 for y in c13_to_c91))
     print("mapping_torus nonzero_a", len(orbit_lengths),
@@ -148,6 +180,8 @@ def main():
           "holonomy_7a_nonzero", True)
     print("weighted_star D4_det_nullity", (d4_det, d4_nullity),
           "odd_det_nullity", (odd_det, odd_nullity))
+    print("localization_hostile P=x+x^2z D_P(1/x)=1",
+          "Ann_K[P](theta_int)=(P)^" + str(annihilator_exponent))
     print("PASS")
 
 
