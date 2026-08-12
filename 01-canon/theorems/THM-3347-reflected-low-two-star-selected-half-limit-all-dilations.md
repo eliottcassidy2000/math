@@ -1,5 +1,5 @@
 ---
-id: THM-3346
+id: THM-3347
 title: "Reflected low-two-star selected half-limit at every dilation"
 status: >
   PROVED + FINITE-EXACT + VERIFIED-EXACT.  On all 649 upper-median bodies
@@ -20,14 +20,14 @@ selector_script: 04-computation/lrc14_j7_reflected_low_two_star_limit_selector_s
 selector_output: 05-knowledge/results/lrc14_j7_reflected_low_two_star_limit_selector_scout_20260812.out
 selector_script_sha256: cd8b08087f0f7e1e0c0c7d0be673629c7c2702c170c5c1e771e1d76df1d3cd1c
 selector_output_sha256: cda9854e4222408a4a3f4e73218e9044126a992187db6047274614a6f01c98c6
-script: 04-computation/lrc14_j7_reflected_low_two_star_half_limit_all_dilations_thm3346.py
-output: 05-knowledge/results/lrc14_j7_reflected_low_two_star_half_limit_all_dilations_thm3346.out
-script_sha256: d3d406d93a6145b93ccdbdc536a772bfb2d61983ad53b769d0c51c1bf844835a
+script: 04-computation/lrc14_j7_reflected_low_two_star_half_limit_all_dilations_thm3347.py
+output: 05-knowledge/results/lrc14_j7_reflected_low_two_star_half_limit_all_dilations_thm3347.out
+script_sha256: bbb3e6ba0cd6b4ce0a0ec5fe5c96d28c51b2a9a33bb214d8c13d4b8b60d82c04
 output_sha256: 14838fc79bc4b6062bafddd5d36300bbee3e8d11eac5e2ed867026edc03b9d71
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3346 -- selected low-two-star half-limit at every dilation
+# THM-3347 -- selected low-two-star half-limit at every dilation
 
 **PROVED + FINITE-EXACT + VERIFIED-EXACT.**
 

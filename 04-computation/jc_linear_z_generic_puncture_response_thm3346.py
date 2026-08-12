@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Exact hostile controls for THM-3345's linear-z puncture response.
+"""Exact hostile controls for THM-3346's linear-z puncture response.
 
 Standard-library ``Fraction`` arithmetic only.  These finite checks audit
 signs, residue bases, and sharp valuations; the uniform theorem is proved in
-THM-3345 and is not inferred from this bank.
+THM-3346 and is not inferred from this bank.
 """
 
 from fractions import Fraction as F
