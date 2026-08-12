@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-370 (2026-08-12, THM-3336 primitive matrix extension) -- primitive-entry matrices were treated as a composition class
+
+- **What failed:** the first promoted Section 9 introduced `d_A,mu_A` under
+  the hypothesis that the four entries of `A` have gcd one, then stated the
+  matrix composition cocycle without declaring its larger codomain.  Read as
+  closure of the declared class, this is false; it also invites the false
+  inference that the scalar-free effective determinant grades composition.
+- **Minimal witness / first failed implication:** with
+  `A=B=[1 -1;1 1]`, both factors have entry-content one and determinant two,
+  but `AB=[0 -2;2 0]` has entry-content two.  After scalar removal the
+  effective degrees are `Delta(A)=Delta(B)=2` and `Delta(AB)=1`, not four.
+- **Repair / strongest survivor:** define `d_M,mu_M` on every nonsingular
+  integral matrix.  Then
+  `d_(ML)(u)=d_L(u)d_M(mu_L(u))` and
+  `mu_M(mu_L(u))=mu_(ML)(u)` are exact.  Reserve entry-content one for the
+  Smith/range conclusions; for `g=cont(M)`, primitive normalization obeys
+  `mu_M=mu_(M/g)` and has objectwise effective degree
+  `Delta(M)=|det M|/g^2`.  All Gaussian, Farey-face, Vieta, Boolean-groupoid,
+  and determinant-gate conclusions of THM-3336 survive with this typing.
+- **Reusable rule:** after dividing every output by a content, test both
+  closure of the normalized class and multiplicativity of the proposed
+  degree.  A content cocycle can preserve the action while destroying a
+  monoid grading.
+
 ## MISTAKE-369 (2026-08-12, THM-3341 U-spine Pell synthesis) -- an unoriented Markov branch and shared Pell field were overcompressed
 
 - **What failed:** the first promoted form of
