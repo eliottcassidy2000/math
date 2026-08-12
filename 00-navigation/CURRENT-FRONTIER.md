@@ -27,6 +27,13 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 Direct frontier: `<=6`; projected caps `1579/216`; `561` reflected bodies. THM-3351 leaves ledger/wall/families `372917/113/13` at `z1=216`, next `L720720` on rows `191,228,332`.
 THM-3349/3350/3352 close all `220,254,480` labelled connected-low primitive rays. Disconnected component scales, arbitrary `k<=1`, rung, physical entry and LRC remain open; screens are necessary-state, not physical covers.
+For the disconnected-low branch, the cross graph is complete multipartite
+and always has a five-edge spanning tree.  The exact frontier note
+[`lrc14-disconnected-low-geometry-and-g4-tail-20260812.md`](../07-reflections/lrc14-disconnected-low-geometry-and-g4-tail-20260812.md)
+counts `36,520` component-shape profiles, proves the physical cone `q>=8p`,
+and closes every moderate-ratio non-`3:5` common dilation `g>=4` on the 29
+small rulers.  The repaired Dirichlet reduction leaves `22,890` affine
+resonance rays in the small-ruler `g<=3` bank; that exact bank is OPEN.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
 
