@@ -2,10 +2,13 @@
 id: HYP-9031
 title: "The D5 dictionary: LRC word-current and JC flux as explicit H^1 classes -- anti-parallel quantifiers, twin orientation sidecars"
 status: >
-  OPEN (a typed cross-domain GRAMMAR with explicit classes on both
-  sides, three falsifiable predictions, and named hostile controls --
-  NOT a reduction; per the bridge discipline this file names map,
-  preserved predicate, loss, sidecar, and cheapest test for each entry).
+  OPEN only as a typed cross-domain GRAMMAR. The former direct-map reading is
+  REFUTED: THM-2542 constructs an F13-valued graph-Cech class, while C91 is
+  its mapping-torus carrier length, not a mixed Z/91 coefficient class.
+  Berggren ancestry has zero graph H1, and the odd LRC coefficients admit no
+  nonzero homomorphism to or from the JC S3, V4, or characteristic-zero
+  response carriers. THM-3354 (under hostile audit) formalizes the corrected
+  comparison cospan. This file is NOT a reduction.
 source: opus-2026-07-26 (successor to the shape-confirmation in
   07-reflections/spectral-vs-geometric-rank-why-LRC-stays-open-and-JC-fell-opus-20260726.md)
 related:
@@ -17,6 +20,33 @@ related:
 ---
 
 # HYP-9031 -- the D5 dictionary, written out
+
+## TYPE CORRECTION -- 2026-08-12
+
+The historical proposal below overidentified objects which merely share an
+obstruction/realization grammar. The current typed facts are:
+
+- THM-2542 proves [g]=7a in H^1(C_7^graph;F_13). Its skew product is one
+  cycle of length 91, but that orbit length does not supply a nonzero C7
+  coefficient or a primitive mixed Z/91 class.
+- THM-3336's Gaussian charges live on the multiplication group. Their pullback
+  to Berggren endpoint paths is a coboundary because the ancestry graph is a
+  tree (THM-3345).
+- The sporadic S3 Galois-closure torsor, quartic V4/mu2 Kummer plane, and
+  Hamiltonian response/de Rham module are three different JC carriers. None
+  is a common "JC flux" object.
+- Every coefficient homomorphism between C13 or C91 and S3 or V4 is trivial
+  in both directions; the same holds between those finite odd groups and the
+  additive characteristic-zero response module.
+
+Therefore there is no direct LRC-class-to-JC-class map in the present canon.
+The lawful survivor is a **typed comparison cospan** recording site,
+coefficient object, distinguished class/observer, target predicate, lost
+information, missing realization sidecar, and quantifier. The historical
+same-H1 wording below is retained only for provenance and must not be cited as
+current truth. THM-3354 gives the full candidate theorem and hostile controls.
+
+## Historical proposal -- superseded as a direct map
 
 Agent D5 (opus reflection, 2026-07-26) predicted that the two hardest
 live frontiers are the *same* `H^1`-shape with different coefficient
