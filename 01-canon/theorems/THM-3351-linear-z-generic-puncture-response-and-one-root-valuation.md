@@ -1,5 +1,5 @@
 ---
-id: THM-3346
+id: THM-3351
 title: "Linear-z generic puncture response and one-root valuation"
 status: >
   PROVED + FINITE-EXACT HOSTILE-AUDITED.  For P=f(x)+g(x)z over a
@@ -24,7 +24,7 @@ output_sha256: 009988b0ec261e6a0c40819119f900ba8a09a61022994b02f7dfccb6bc7eec33
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3346 -- linear-`z` generic puncture response and one-root valuation
+# THM-3351 -- linear-`z` generic puncture response and one-root valuation
 
 **PROVED + FINITE-EXACT HOSTILE-AUDITED.**
 

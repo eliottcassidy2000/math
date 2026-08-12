@@ -25,7 +25,7 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`; projected `k=2,3` caps `1579/216`; `561` reflected bodies. THM-3347 closes all-nine-low two-star dilations.
+Direct frontier: `<=6`; projected `k=2,3` caps `1579/216`; `561` reflected bodies. THM-3352 closes all-nine-low two-star dilations.
 THM-3348 classifies `305,909` connected-low shapes and supplies their uniform tail; THM-3350 closes all `261,254` remaining finite heads by universal exact physical high-forest minima.  Thus all `220,254,480` labelled connected-low primitive rays close at every common dilation.
 THM-3349 closes sixteen complete `z1=216` families and `236` rows: ledger/wall/families `372917/113/13`, cap `216`; next `L720720`, rows `191,228,332`.
 Arbitrary `k<=1`, independent component scales, rung, physical entry and LRC remain open. The screen counts are necessary-state, not physical covers.
@@ -53,14 +53,14 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
   scans; AP13 and its lift share germs but not maxima.
 - THM-2058 preserves every fixed lift depth but escapes at `47/113`;
   finite jets/Farey rays fail.
-- THM-3333/3334 give the raw Gaussian/Farey carrier and fixed-cusp Boolean
-  fibres; THM-3335/3339/3341 add typed Pell/Markov, golden-owner, and
-  square/triangular U-spine selectors. THM-3336 gives content-weighted
-  multiplication, split-prime charge classes, and a Boolean source groupoid;
-  its gate reversals compare separately saturated decks on different rational
-  planes. THM-3345 gives a flat source-dependent ancestry lift with no tree
-  `H^1`, plus simultaneous unbounded Boolean rank/path dispersion and one
-  unary prime-toggle transducer. None closes an LRC row.
+- THM-3333/3334/3336/3339/3341 give the typed Gaussian/Farey/Pell U-spine,
+  content multiplication, and selectors; THM-3345 gives source-dependent
+  ancestry. THM-3346 adds the two-channel gcd/root cube and conjugation `Z/2`.
+  THM-3347 makes signed log-content a Hensel-clock Gram kernel. The folded
+  parent metric is CND for every positive weight through rank three but fails
+  at `N=32045`; projector/cosh kernels repair positivity, while the
+  tautological line retains the lift. THM-3345 ancestry kills conjugation; no
+  LRC row closes.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 
@@ -376,7 +376,7 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
   THM-3318/3326 classify an excluded gradient-unit linear-in-`z` response:
   constant `g` is exact, one root gives jet-marked finite torsion, and multiple
-  roots give a free class by residues.  THM-3346 identifies the full generic
+  roots give a free class by residues.  THM-3351 identifies the full generic
   response with punctured-line de Rham `H^1`, gives an explicit free
   `K[P]`-lattice, and computes the exact one-root valuation annihilator without
   gradient-unimodularity.  These refine THM-2063, not `JC(2)`.

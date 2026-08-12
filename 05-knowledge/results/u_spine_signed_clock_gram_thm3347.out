@@ -1,0 +1,14 @@
+U-SPINE SIGNED PRIME-CLOCK GRAM -- EXACT AUDIT
+unrestricted signed-content Gram pairs: 90601
+unrestricted Hilbert distance invoices: 181202
+low-rank CND weight rows/Fourier checks: 584/1600
+balanced first-positive level-4 rows (rank,coefficient): [(4, 2), (5, 1), (6, 2), (7, 2), (8, 4), (9, 5), (10, 10)]
+Catalan level-4 formula controls, ranks 4..30: 27
+dominant-section rows/Fourier checks: 5440/294080
+raw fixed-grade Gram Fourier checks: 270
+projector rows/Fourier checks: 135/135
+cosh rows/strict-positive Fourier checks: 135/135
+even-tensor rows/Fourier checks: 540/540
+rank-four arithmetic hostile N=32045 roots: [1081, 3546, 4851, 7316, 5501, 7966, 9271, 11736]
+rank-four hostile forms: d -> 16 log(5), |Lambda| -> -32 log(5)
+ALL EXACT CHECKS PASSED

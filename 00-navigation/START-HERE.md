@@ -22,7 +22,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; projected caps are
    `1579/216`. THM-3349 advances the `z1=216` ledger to `372917`: `113` wall
-   rows in `13` families, next `gcd72/L720720`. THM-3347 closes all-nine-low
+   rows in `13` families, next `gcd72/L720720`. THM-3352 closes all-nine-low
    two-star dilations; THM-3348/3350 close all `220254480` labelled
    connected-low primitive rays at every common dilation. Disconnected low
    components, the rung, physical entry and LRC remain open.
@@ -74,7 +74,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     persists it over the two-clutch etale germ. THM-3303/3328 split the
     constant-J boundary residual into open overlap, anti-tangent collision, or
     vertex-cone incidence. THM-3326 gives the linear-`z` response trichotomy;
-    THM-3346 identifies its full generic punctured-line de Rham response and
+    THM-3351 identifies its full generic punctured-line de Rham response and
     exact one-root valuation annihilator.
     `JC(2)`/`DC(2)` remain OPEN.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
@@ -115,7 +115,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 | Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2158/2180/2181/2189/2194/2202/3279/3289 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005/3288 and their frozen outputs |
-| Pythagorean / Pell / square sums | [THM-3335](../01-canon/theorems/THM-3335-square-triangular-pell-markov-pythagorean-selector.md) | THM-3333/3334/3336/3339/3341/3345; retain spinor, Gaussian/parity contents, source-dependent ancestry path, and consumer labels |
+| Pythagorean / Pell / square sums | [THM-3335](../01-canon/theorems/THM-3335-square-triangular-pell-markov-pythagorean-selector.md) | THM-3333/3334/3336/3339/3341/3345--3347; retain spinor/content, root height, signed Hensel lift or tautological line, ancestry source, and consumer labels; absolute folds can lose PSD/negative type |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177/2191; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |
 | Formalization | relevant theorem's `formalization` field | `00-navigation/*FORMALIZATION*`, then a clean build/axiom audit |
 | Research method | [`RESEARCH-PROTOCOL.md`](RESEARCH-PROTOCOL.md) | [`META-PATTERNS.md`](META-PATTERNS.md), relevant reflections |

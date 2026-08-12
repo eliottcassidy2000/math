@@ -13,7 +13,7 @@ status: >
 source: root/lrc-math-2026-08-12
 depends_on:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
-  - THM-3347-reflected-low-two-star-selected-half-limit-all-dilations
+  - THM-3352-reflected-low-two-star-selected-half-limit-all-dilations
 related:
   - THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary
   - THM-3211-uniform-lrc-channel-limit-bernoulli-cubic-and-sharp-floor
@@ -174,7 +174,7 @@ atlas.  It is not being smuggled into the forest-extension argument.
 
 ## 4. All-channel midpoint/shear transport
 
-The low-channel restriction in THM-3347 is unnecessary for the transport
+The low-channel restriction in THM-3352 is unnecessary for the transport
 estimate.  Fix one edge, ruler `L`, safe cell `j`, endpoint labels `e,f`, and
 raw levels `(1)`.  Put `h=sd`, `R=ej mod L`, `S=fj mod L`, and
 
@@ -185,7 +185,7 @@ H(t)=integral_0^1 F(x,t)dx,                             (12)
 ```
 
 where `chi` is the circular radius-`1/14` indicator.  Slabwise contraction
-toward each midpoint gives exactly as in THM-3347
+toward each midpoint gives exactly as in THM-3352
 
 ```text
 |I_s-J_h| <= gamma_P eP/(hLP-e)+gamma_Q fQ/(hLQ-f),     (13)

@@ -1,0 +1,33 @@
+THM-3353 split-prime parabolic branch-transplant exact audit
+split_prime_universe=p<5000,count=329
+branches=658,rows_per_branch=24,exact_rows=15792
+inert_hostiles=p<500,count=50,all_rootless=True
+all_sampled_branch_starts_equal_one=True
+max_cusp_tail_length=521,at_p=4289
+p=5=2^2+1^2,cusp=(7, 1),tail=DD | A:r0=1,r=1,S=ADD; D:r0=-17,r=8,S=DDD
+p=13=3^2+2^2,cusp=(17, 7),tail=AA | A:r0=-37,r=132,S=AAA; D:r0=-107,r=62,S=DAA
+p=17=4^2+1^2,cusp=(23, 7),tail=UUUD | A:r0=-109,r=180,S=AUUUD; D:r0=-147,r=142,S=DUUUD
+p=29=5^2+2^2,cusp=(41, 1),tail=DDDDDDDDDDDDDDDDDDD | A:r0=8,r=8,S=ADDDDDDDDDDDDDDDDDDD; D:r0=-792,r=49,S=DDDDDDDDDDDDDDDDDDDD
+p=37=6^2+1^2,cusp=(47, 23),tail=DDDDDDDDDDA | A:r0=-22,r=1347,S=ADDDDDDDDDDA; D:r0=-1274,r=95,S=DDDDDDDDDDDA
+p=41=5^2+4^2,cusp=(49, 31),tail=UAAU | A:r0=-611,r=1070,S=AUAAU; D:r0=-989,r=692,S=DUAAU
+p5_known_branch=U^(25s)->DD U^(s-1) ADD
+p5_companion_branch=U^(25s-18)->DD U^(s-1) DDD
+p13_branches=D^6 U^(s-1) AAA ; D^6 U^(s-1) DAA
+crt_controls(prime,extra_rank,t,hypotenuse_bits):
+  (5, 1, 301, 18)
+  (5, 2, 4851, 26)
+  (5, 3, 4851, 26)
+  (5, 4, 2888901, 44)
+  (5, 5, 85885451, 54)
+  (13, 1, 1315, 22)
+  (13, 2, 81759, 34)
+  (13, 3, 2414635, 44)
+  (13, 4, 17828280, 50)
+  (13, 5, 3177625505, 65)
+  (17, 1, 3070, 25)
+  (17, 2, 33126, 32)
+  (17, 3, 1340562, 42)
+  (17, 4, 69871999, 54)
+  (17, 5, 1722689009, 63)
+normalization=all checks exact; compare stdout after LF normalization
+ALL CHECKS PASS

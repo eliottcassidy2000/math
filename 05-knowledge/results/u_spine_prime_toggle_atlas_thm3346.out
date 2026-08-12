@@ -1,0 +1,22 @@
+U-SPINE PRIME-TOGGLE ROOT ATLAS -- EXACT AUDIT
+pairwise two-channel content checks: 90601
+primitive composition inradius checks: 135150
+admissible modulus controls through 99905: 28
+root/reflection checks: 92/92
+N-primary channel-pair checks: 520
+CRT prime-toggle involution checks: 188
+Gaussian root reconstructions: 184
+fixed-parent quotient rows: 46
+prime-power Hensel clock checks: 336
+exact valuation rows (p,e,2(p-1)): [(5, 1, 8), (5, 2, 8), (5, 3, 8), (5, 4, 8), (13, 1, 24), (13, 2, 24), (13, 3, 24), (17, 1, 32), (17, 2, 32), (17, 3, 32), (29, 1, 56), (29, 2, 56)]
+quotient 2-skeleton rows (r,V,E,F,beta2,H1tors):
+  (3, 4, 6, 3, 0, (2,))
+  (4, 8, 16, 12, 3, (2,))
+  (5, 16, 40, 40, 15, (2,))
+  (6, 32, 96, 120, 55, (2,))
+  (7, 64, 224, 336, 175, (2,))
+  (8, 128, 512, 896, 511, (2,))
+modular root controls: {65: (4, (23, 28, 36, 41)), 85: (4, (6, 23, 61, 78)), 1105: (8, (23, 231, 418, 431, 673, 686, 873, 1081)), 99905: (16, (223, 2108, 7113, 8998, 30963, 32848, 37853, 39738))}
+modular/full-content scope hostile: (1,5) versus (17,5)
+Pell/Markov two-composition bridge checks: 154
+ALL EXACT CHECKS PASSED

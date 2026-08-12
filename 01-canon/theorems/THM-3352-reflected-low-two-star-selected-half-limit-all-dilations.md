@@ -1,5 +1,5 @@
 ---
-id: THM-3347
+id: THM-3352
 title: "Reflected low-two-star selected half-limit at every dilation"
 status: >
   PROVED + FINITE-EXACT + VERIFIED-EXACT.  On all 649 upper-median bodies
@@ -27,7 +27,7 @@ output_sha256: 14838fc79bc4b6062bafddd5d36300bbee3e8d11eac5e2ed867026edc03b9d71
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3347 -- selected low-two-star half-limit at every dilation
+# THM-3352 -- selected low-two-star half-limit at every dilation
 
 **PROVED + FINITE-EXACT + VERIFIED-EXACT.**
 
