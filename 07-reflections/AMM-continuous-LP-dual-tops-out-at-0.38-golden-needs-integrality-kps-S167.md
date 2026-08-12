@@ -5,9 +5,9 @@ status: RESULT (executable) + self-correction. Built the Cohn-Elkies-style dual 
   rigorous lower bound on gamma* to ~0.38 (from the artanh 0.3727) but SATURATES there -- it does NOT approach the
   golden gamma* = log_5(phi^2) = 0.598. Corrects kps-S166's optimism ("Cohn-Elkies dual closes [0.3727,0.598]"):
   the continuous dual class tops out ~0.38-0.4; the golden lower bound MUST come from INTEGRALITY (integer
-  w_{m,k}), i.e. THM-2967's roots-of-unity mechanism, not LP duality. Large integrality gap (~0.2).
+  w_{m,k}), i.e. THM-3342's roots-of-unity mechanism, not LP duality. Large integrality gap (~0.2).
 tags: [amm12592, LP-duality, cohn-elkies, integrality, roots-of-unity, self-correction]
-related: [kps-S164, kps-S166, THM-2966, THM-2967]
+related: [kps-S164, kps-S166, THM-2966, THM-3342]
 corrects: [kps-S166 sec 3 (Cohn-Elkies closes the gap)]
 ---
 
@@ -39,10 +39,10 @@ the exact value; the qualitative gap `[~0.4, 0.598]` is robust -- box-max is cle
 kps-S166 sec 3 claimed the Cohn-Elkies positive-definite dual is "the natural tool to upgrade the artanh
 certificate to the golden." **That was too optimistic.** The continuous dual saturates ~0.4; **the missing ~0.2 up
 to the golden is an INTEGRALITY gap.** The `w_{m,k}` are integers in `{0,...,binom(d_m,k)}`, not reals in the box;
-the continuous relaxation cannot see the integer obstruction. This is exactly the mechanism of THM-2967 (`C=1`
+the continuous relaxation cannot see the integer obstruction. This is exactly the mechanism of THM-3342 (`C=1`
 impossibility): the endgame is "`A(p)+B(1-p)=1/2` with `A,B in Z[p]` -> evaluate at `p=0` -> an integer equals
 `1/2`, contradiction" -- an **integrality** contradiction, forced through the `zeta_6` pole rigidity. So:
-> **The golden lower bound is a roots-of-unity / integrality theorem (THM-2967 family), not an LP-duality bound.**
+> **A golden lower bound would need a growing-depth analogue of THM-3342's roots-of-unity/integrality mechanism, not this LP duality bound.**
 > Continuous LP duality (artanh, my LP) is stuck at ~0.4; the golden `0.598` requires the integer lattice of the
 > box. This is the same LP-vs-true-optimum gap as sphere packing (ten-proofs #1), where the linear-programming
 > bound is not tight without the combinatorial/lattice structure.
@@ -55,7 +55,7 @@ impossibility): the endgame is "`A(p)+B(1-p)=1/2` with `A,B in Z[p]` -> evaluate
   the golden lives in the INTEGER (roots-of-unity) layer, the continuous relaxation in the `~0.4` layer. Same
   Conway-Jones governor (kps-S165): the decisive step is always the integer/`2 pi i` one, never the continuous
   relaxation.
-- **Next:** the golden lower bound = extend THM-2967's `zeta_6` integrality argument from `C=1` to the growing-
+- **Next:** a quantitative general lower bound would extend THM-3342's `zeta_6` integrality argument from `C=1` to the growing-
   degree `gamma < 0.598` regime (an Erdos-Turan/cyclotomic integrality bound on the box lattice), NOT a dual LP.
 
 ## 5. THM-3027 already closed it -- via exactly the integer structure (record accurate)

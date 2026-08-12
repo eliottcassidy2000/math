@@ -1,5 +1,27 @@
 # Analytic number theory source sidecar
 
+## Integer power-series rigidity used by THM-3342
+
+- **Polya--Carlson:** F. Carlson, *Uber Potenzreihen mit ganzzahligen
+  Koeffizienten*, Math. Z. 9 (1921), 1--13. An integer-coefficient power
+  series of radius one is rational or has the unit circle as a natural
+  boundary. THM-3342 uses continuation through an open boundary arc to force
+  the rational branch.
+- **Fatou--Kronecker pole step:** P. Fatou, *Series trigonometriques et series
+  de Taylor*, Acta Math. 30 (1906), 335--400; L. Kronecker, *Zwei Satze uber
+  Gleichungen mit ganzzahligen Coefficienten*, J. reine angew. Math. 53
+  (1857), 173--175. Applied to the rational integer series with
+  subexponential coefficients, these put every pole at a root of unity.
+- **Finite-alphabet endpoint alternative:** G. Szego, *Uber Potenzreihen mit
+  endlich vielen verschiedenen Koeffizienten* (1922). Bell--Chen,
+  [*Power Series with Coefficients from a Finite Set*](https://arxiv.org/abs/1606.04986),
+  gives a modern route to the classical finite-alphabet theorem. Szego alone
+  handles bounded additive slack; THM-3342 needs Polya--Carlson for the full
+  `o(n)` range.
+- **Scope:** these classical theorems are cited dependencies, not formalized
+  locally. The repo's exact companion checks the algebraic reductions and
+  hostile controls, not the analytic dichotomies.
+
 ## Claude — *More than two thirds of the zeros of the Riemann zeta function lie on the critical line*
 
 - **Primary / freshness:** [author PDF, 2026-08-10](https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf),

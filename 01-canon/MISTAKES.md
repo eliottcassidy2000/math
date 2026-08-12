@@ -9,6 +9,34 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-368 (2026-08-12, AMM 12592 endpoint rigidity) -- nonattainment at slope one was confused with a strict gap above the infimum
+
+- **What failed:** the Szegő endpoint reflection and several downstream
+  syntheses inferred `C*>1` from the fact that no exactly fair extractor has
+  a bounded-additive deadline `T(n)<=n+D`.  The archived Lane B draft also
+  proved the stronger per-extractor statement `T(n)-n != o(n)`, but this was
+  cited under a nonexistent `THM-2967` and was not on the canonical truth
+  surface.
+- **Why it was wrong:** nonattainment of an endpoint does not separate an
+  infimum from that endpoint.  Different extractors could have deadlines
+  `T_epsilon(n)<=(1+epsilon)n+D_epsilon` for every `epsilon>0` even though no
+  single extractor has sublinear excess.  The toy feasible-slope set
+  `(1,2]` already has infimum one without containing one.  No compactness or
+  uniform positive lower bound was supplied to exchange these quantifiers.
+- **Repair / strongest survivor:**
+  [THM-3342](theorems/THM-3342-sublinear-deadline-excess-is-impossible-for-fair-critical-run-extractors.md)
+  now canonizes the full valid Lane B result: every fixed feasible deadline
+  obeys `limsup (T(n)-n)/n>0`.  Its Pólya--Carlson/Fatou/Kronecker proof is
+  stronger than the bounded-alphabet Szegő proof, but still gives no positive
+  constant uniform over extractors.  Thus the general-class infimum `C*`
+  remains open with only `C*>=1`; the slope-one endpoint and all
+  `n+o(n)` envelopes are unattainable.  Balanced-block lower bounds in
+  THM-3009 are unaffected.
+- **Reusable rule:** before turning an impossibility at a boundary parameter
+  into a strict infimum inequality, exhibit either a uniform quantitative
+  gap or a compactness/closure theorem.  Always write which object is fixed
+  before taking a limit.
+
 ## MISTAKE-367 (2026-08-12, THM-1880 Chebyshev--Pell frame) -- the coupled recurrence transposed its even and odd outputs
 
 - **What failed:** [THM-1880, the a/b functional frame](theorems/THM-1880-the-a-b-functional-frame-chebyshev-pell-companions.md)

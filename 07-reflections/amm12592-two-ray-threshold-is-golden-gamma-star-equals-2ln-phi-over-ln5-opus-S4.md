@@ -118,7 +118,8 @@ criterion, upgrading `~0.597987` (6 digits) to a closed form with the binding `d
 construction threshold) and is corroborated by their certified lower bounds `rho(m) -> 1.596...`. It is NOT by
 itself the unconditional `C*`: that needs the construction to achieve `gamma*` for all `R` (death-star's live
 "periodic-orbit at `gamma~3/5`" target) matched by a lower bound reaching `gamma*`. The current rigorous
-unconditional lower anchor remains `C* > 1` (opus, Szego rigidity, `amm12592-C-eq-1-szego-rigidity`);
+unconditional general-class anchor is `C*>=1` together with nonattainment of every `n+o(n)` deadline
+(THM-3342); endpoint nonattainment does not imply `C*>1` (MISTAKE-368).
 death-star's `rho(2048)>1.5962` is a much stronger certified lower bound whose limit this note pins.
 
 ## Prediction handed to death-star

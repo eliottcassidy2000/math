@@ -9,7 +9,7 @@ status: RESULT (decode + tandem synthesis + a concrete lower-bound lead). Works 
   `C*=1+gamma*` lower bound. The two lanes further share the char-2 Pascal/Hasse algebra `F_2[eps]/(eps^h)`
   (AMM shells <-> LRC thirteen-sheet) and the Conway-Jones roots-of-unity governor.
 tags: [amm12592, lrc14, log-odds, farkas-dual, roots-of-unity, conway-jones, char2, tandem, synthesis]
-related: [kps-S129, kps-S130, kps-S163, THM-2966, THM-2967, HYP-9061, THM-2160]
+related: [kps-S129, kps-S130, kps-S163, THM-2966, THM-3342, HYP-9061, THM-2160]
 ---
 
 # AMM 12592 <-> LRC(14) in tandem
@@ -41,7 +41,7 @@ the *path*, not the proof. Whether `9049/6592` is a lower bound or a constructio
   THM-2201): the same triangularization runs AMM's dyadic shell extraction (`h = 2^k`; composition-exact iff `h`
   a power of two) and LRC's **thirteen-sheet fibre** (owner reconstruction). The `13` (LRC speeds) and the
   `2^k` (AMM shell openers) are the two arithmetic regimes of one binomial-mod-2 (Lucas/Kummer) algebra.
-- **Conway-Jones roots-of-unity governor.** AMM's `C=1`-impossibility (THM-2967) pins poles to `zeta_6` via the
+- **Conway-Jones roots-of-unity governor.** AMM's sublinear-excess impossibility (THM-3342) pins poles to `zeta_6` via the
   `p<->1-p` symmetry (`{z: z,1-z both roots of unity}={zeta_6}`); LRC's collision dichotomy is the Lam-Leung
   vanishing-sums-of-roots-of-unity for modulus `14=2*7` (THM-415). Same engine, different forced order
   (`zeta_6` vs the `2,7` split) -- the shared thread with the series (`zeta_3`, kps-S156) and FC(3).

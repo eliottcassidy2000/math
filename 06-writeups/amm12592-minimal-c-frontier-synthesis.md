@@ -38,7 +38,7 @@ with `W_m` the depth-`d_m` decided-tree polynomial with coefficients
 degree-growth rate for which (S) is solvable. Everything below is a study
 of (S).
 
-## 2. Sublinear excess is impossible (THM-2967, PROVED, audit finalizing)
+## 2. Sublinear excess is impossible (THM-3342, PROVED + audited)
 
 **No fair extractor satisfies `T(n) = n + o(n)`.** Mechanism: with
 `d_m = o(m)`, the window series `F(p) = sum p^m (1-p) W_m(p)` has integer
@@ -126,7 +126,9 @@ recurrences, or global Farkas certificates outside the balanced-block class.
   intra-block; the only cross-spine flux is the boundary pair; budget binds
   exactly at block openers `m = 2^k`; `C = 2` is pinned by openers.
   Artifacts: `04-computation/amm12592_checksum_spine_ledger_laneA_deathstar.py`.
-- **Lane B (DONE, referee 12/12; draft secured):** THM-2967 above.
+- **Lane B (DONE, canonized):** THM-3342 above. Its exact companion has nine
+  grouped checks (the historical “12/12” counted subchecks separately), and
+  passes in normal and optimized Python modes.
 - **Lane C (DONE, THM-3340):** every pointwise optimum is `n+1`. This does
   not provide one simultaneous floor profile and does not determine `C*`.
 - **Lane D (DONE):** three PROVED ingredients — (i) band geometry: at

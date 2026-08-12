@@ -1,9 +1,10 @@
 ---
 source: opus-2026-07-31-S4 (the AMM 12592 GENERAL-class lower bound, beyond balanced-block)
 status: >
-  PARTIAL + delimitation + reframing (honest). (1) Clarifies that my C*>1 (Szego) is GENERAL, not
-  block-restricted, so the current general floor is exactly (1, golden] with only >1 proved (THM-3009's golden
-  is balanced-block only). (2) NEW rigorous delimitation: the analytic/Szego rigidity method is confined to
+  SUPERSEDED IN ITS INFIMUM CLAIM by THM-3342 and MISTAKE-368; the analytic
+  delimitation and graded-deficit reframing survive.  The general result is
+  nonattainment of every n+o(n) deadline, not C*>1.  THM-3009's golden floor
+  remains balanced-block only.  The analytic/Szego rigidity method is confined to
   EXACTLY gamma=0 -- the two-circle point e^{+-i pi/3} that drives the gamma=0 proof lies ON the boundary of
   the spine's analyticity domain at gamma=0 and EXITS it for every gamma>0 (domain value 2^gamma>1), and the
   radius of convergence drops below 1; so no quantitative general floor follows from this method. (3) Records
@@ -30,13 +31,16 @@ tree, label `a_{h,t}` of the `N_{h,t}` leaves at composition `(h,t)` with output
 with the deadline bounding leaf depths. Equivalently the spine identity
 `sum_m p^m q W_m(p) + sum_m q^m p V_m(p) = 1/2`, `deg W_m,V_m <= gamma m + D`, integer Bernstein coefficients.
 
-**My `C* > 1` is GENERAL.** The Szego proof (amm12592-C-eq-1-szego-rigidity) works from (F)/(S) directly: at
+**Slope one is unattainable in the general class.** THM-3342 works from (F)/(S) directly and proves the
+stronger statement that no fixed extractor has `T(n)=n+o(n)`.  In the bounded case,
 `gamma=0`, `d_m=D-1` is constant, so the spine coefficients take finitely many values, Szego forces the
 generating function rational, the two circles `|p|=1`, `|p-1|=1` meet only at `e^{+-i pi/3}`, and integrality
-kills every period. No block-balancedness is used. So the honest general state is
+kills every period. No block-balancedness is used.  Endpoint nonattainment does not separate an infimum, so
+the honest general state is
 
 ```
-   1 < C*_general <= C*_block = log_5(5 phi^2) = 1.59799   (THM-3009 gives the block floor; only >1 general).
+   1 <= C*_general <= C*_block,       slope 1 unattained,
+   C*_block >= log_5(5 phi^2) = 1.59799                    (THM-3009, within its transfer scope).
 ```
 
 Whether `C*_general = golden` or is strictly smaller is OPEN: the general class allows UNBALANCED splittings
@@ -64,8 +68,10 @@ The whole `gamma=0` argument runs at the two-circle point `w=e^{i pi/3}` (`|w|=|
 Simultaneously the radius of convergence `R(gamma) = min|p|` on the singular set, attained on the negative
 axis at `r(1+2r)^gamma=1`, is `R(0)=1` but `R(gamma)<1` for every `gamma>0` (`R(0.1)=0.902`, `R(1/2)=0.657`,
 `R(1)=1/2`), so the spine coefficients are UNbounded and Szego (finite value set) cannot even be invoked.
-**Conclusion: the Carlson-Szego-two-circle route proves exactly `gamma=0` impossible and, provably, nothing
-more.** A quantitative general floor must be archimedean, not analytic-rigidity. (Verified:
+**Conclusion: the Carlson-Szego-two-circle route proves exactly bounded `gamma=0` impossible and, provably,
+nothing quantitative beyond the endpoint.** THM-3342 reaches all sublinear excess by the stronger
+Polya--Carlson/Fatou/Kronecker route, but likewise supplies no uniform gap.  A quantitative general floor
+must use a new capacity mechanism. (Verified:
 `04-computation/amm12592_general_floor_szego_delimitation_opus_S4.py`.)
 
 ## 3. The resummation trap (a MISTAKES-style guard)
@@ -132,7 +138,8 @@ This says the missing lemma is one of two:
 
 ## 5. Honest status and conjecture
 
-Rigorous: `1 < C*_general <= golden`; the analytic method is exactly `gamma=0` (sec 2). Open: the value of
+Rigorous: `1 <= C*_general <= C*_block`, slope one and every `n+o(n)` envelope are unattainable; the bounded
+Szego method is exactly `gamma=0` (sec 2). Open: the value of
 `C*_general`. Conjecture (weakly supported): `C*_general = log_5(5 phi^2)` via route (a) -- because all three
 converging lines (my two-ray threshold, THM-3009's block floor, death-star's certified `rho(m)`) are the
 golden constant, and no mechanism is known by which unbalanced freedom would beat a balanced-block scheme on

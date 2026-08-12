@@ -8,7 +8,7 @@ status: RESULT (honest frontier) + SYNTHESIS + a confabulation flag. (A) FC(3) e
   constant is 9049/6592); shows my artanh decode (kps-S129/S130) IS the AMM 12592 rate certificate; and identifies
   the AMM zeta_6 lemma as the SAME Conway-Jones roots-of-unity governor as FC(3)/series/LRC.
 tags: [factorial-conjecture, amm12592, roots-of-unity, conway-jones, confabulation, honest-frontier, synthesis]
-related: [kps-S129, kps-S159, kps-S162, THM-2966, THM-2967, HYP-9061, HYP-9023]
+related: [kps-S129, kps-S159, kps-S162, THM-2966, THM-3342, HYP-9061, HYP-9023]
 ---
 
 # (A) FC(3) exact D=3: the wall is tooling, and it is precise
@@ -41,7 +41,7 @@ lane directly. The "13" link is real: `2457 = 3*sum(k^2, 1..13)` (`= 3*S_2(AP{1.
 13 speeds -- the arithmetic is shared, the problem is AMM 12592.
 
 ## B3. The zeta_6 lemma = the Conway-Jones governor (shared with FC(3)/series/LRC)
-THM-2967 (C=1 impossible) turns on **Lemma 8:** `{z : z and 1-z are both roots of unity} = {zeta_6, zeta_6-bar}`
+THM-3342 (sublinear excess impossible) turns on the lemma `{z : z and 1-z are both roots of unity} = {zeta_6, zeta_6-bar}`
 (roots of `Phi_6(p)=p^2-p+1`, `1-zeta_6 = conj(zeta_6)`; verified). The `p <-> q=1-p` (biased-coin) symmetry forces
 the pole set of the window generating function `F(p)=sum_m p^m q W_m(p)` to satisfy `z, 1-z` both roots of unity,
 pinning all poles to `zeta_6`, and integrality then contradicts `= 1/2`.
@@ -54,7 +54,7 @@ pinning all poles to `zeta_6`, and integrality then contradicts `= 1/2`.
 THM-2966: `C* = 1 + gamma*`, `gamma*` = minimal degree-growth of the box polynomials `W_m` (degree `d_m=(C-1)m+D-1`)
 solving the spine identity `sum_m p^m q W_m + sum_m q^m p V_m = 1/2`. The `C=1` lane (`d_m` **bounded**) is rigid:
 `F(p)` is radius-1 with bounded-degree numerators -> Polya-Carlson forces rational -> poles at roots of unity ->
-`zeta_6` -> contradiction (THM-2967). `C>1` (`d_m` **growing**) unlocks flexibility (no forced rationality).
+`zeta_6` -> contradiction (THM-3342). Linear excess (`d_m` **growing**) unlocks flexibility (no forced unit-circle rationality).
 > **This is the exact "capacity holds until a threshold" shape** seen across the cluster (FC(2)-true / FC(3)-open;
 > the series elementary-until-`k=P(n)`; the `n=2 | n>=3` wall). AMM's threshold is at the growth rate `gamma=0`
 > (bounded degree = rigid); the open question is the *minimal* `gamma*>0` -- the same "how much capacity does the
