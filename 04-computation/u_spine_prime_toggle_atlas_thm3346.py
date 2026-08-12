@@ -5,9 +5,10 @@ Universe
 --------
 * all pairs of U-spine indices 0 <= r,s <= 300;
 * 28 admissible prime, prime-power, and mixed moduli through N=99905;
-* explicit cubical boundary matrices for raw and antipodal-quotient
-  two-skeleta in dimensions 3 <= r <= 7, plus the r=8 formula row;
-* exact prime-power clock controls p^e <= 200000 for p=5,13,17,29.
+* explicit cubical boundary matrices for antipodal-quotient two-skeleta in
+  dimensions 3 <= r <= 7, plus the r=8 formula row;
+* selected prime-power clock controls for p=5,13,17,29, with exponent ranges
+  1..4, 1..3, 1..3, and 1..2 respectively.
 
 All arithmetic is integral.  Rank and Smith computations use SymPy exact
 domains; assertions are explicit so optimized Python performs the same audit.
@@ -314,8 +315,14 @@ def main():
             reflected_g = gaussian_gcd((n, 0), (reflected_x, 1))
             require(parent_from_gaussian(g) == parent_from_gaussian(reflected_g),
                     "root reflection did not become one parent")
+            spine_g = gaussian_gcd((n, 0), (t + 1, t))
+            require(gaussian_norm(spine_g) == n,
+                    "Gaussian gcd with z_t did not reconstruct norm N")
+            require(parent_from_gaussian(spine_g)
+                    == parent_from_gaussian(g),
+                    "z_t and x+i Gaussian reconstructions disagree")
             parents.add(parent_from_gaussian(g))
-            gaussian_reconstruction_checks += 1
+            gaussian_reconstruction_checks += 2
         require(len(parents) == len(rs) // 2,
                 "root atlas quotient did not recover parent count")
         parent_quotient_checks += len(parents)
@@ -456,6 +463,9 @@ def main():
         t_plus = 2 * square_root + n_index
         h = 4 * square_root * square_root + 1
         require(m_minus * m_plus == h, "Pell factor product failed")
+        require(h == C(n_index), "Pell bridge left the U-spine grade")
+        require(gcd(m_minus, m_plus) == 1,
+                "Pell folded-weight factors were not coprime")
         require(C(t_minus) == m_minus * m_minus
                 and C(t_plus) == m_plus * m_plus,
                 "adjacent square U-spine depths failed")
@@ -489,7 +499,7 @@ def main():
         else:
             require(selector_parent != companion_parent,
                     "positive Pell bridge parents unexpectedly collapsed")
-        pell_bridge_checks += 12
+        pell_bridge_checks += 14
 
     print("U-SPINE PRIME-TOGGLE ROOT ATLAS -- EXACT AUDIT")
     print(f"pairwise two-channel content checks: {pair_checks}")
