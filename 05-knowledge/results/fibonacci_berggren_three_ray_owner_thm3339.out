@@ -14,4 +14,8 @@ matching_image=6; kernel=4; lifts_per_matching_action=4
 owner_fixing_S3_lift_pairs=4; transitive_S4_lift_pairs=12
 lift_profile={(6, 1, 2, 2): 4, (24, 0, 2, 4): 4, (24, 0, 4, 2): 4, (24, 0, 4, 4): 4}
 v4_matching_hostile=(1,2,3,5)->(2,1,5,3)
+affine_owner_period=0,p,p,r,q,q; drift=p,0,q,p,0,q
+affine_branch_image_order=8; linear_image=2; translation_kernel=4
+signed_current_stabilizer=1; decoder=t=(s+sigma)p+sigma*q
+BA_current_hostile=(39,80,89,89)->(39,80,89,-89)
 ALL CHECKS PASSED

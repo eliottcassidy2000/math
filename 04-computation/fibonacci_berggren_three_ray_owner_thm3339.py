@@ -95,6 +95,48 @@ def edge_image(p, edge):
     return tuple(sorted((p[edge[0]], p[edge[1]])))
 
 
+def vadd(u, v):
+    return tuple((u[i] + v[i]) % 2 for i in range(2))
+
+
+def mod2mat(a):
+    return tuple(tuple(x % 2 for x in row) for row in a)
+
+
+def mod2vec(a, v):
+    return tuple(x % 2 for x in mvec(a, v))
+
+
+def affine_compose(f, g):
+    """Return f o g for affine maps (linear, translation) over F_2^2."""
+    lf, zf = f
+    lg, zg = g
+    return mod2mat(mmul(lf, lg)), vadd(mod2vec(lf, zg), zf)
+
+
+def affine_group(generators):
+    identity = (((1, 0), (0, 1)), (0, 0))
+    group = {identity}
+    frontier = [identity]
+    while frontier:
+        x = frontier.pop()
+        for g in generators:
+            y = affine_compose(g, x)
+            if y not in group:
+                group.add(y)
+                frontier.append(y)
+    return group
+
+
+def signed_current(e):
+    return (
+        e[0] * e[3],
+        2 * e[1] * e[2],
+        e[0] * e[2] + e[1] * e[3],
+        e[2] * e[3] - e[0] * e[1],
+    )
+
+
 def permutation_order(p):
     x = tuple(range(len(p)))
     for n in range(1, 25):
@@ -299,6 +341,90 @@ def main():
     require(matching_actions[v4_move] == (0, 1, 2), "V4 matching hostile failed")
     require(tuple((1, 2, 3, 5)[v4_move[i]] for i in range(4)) == (2, 1, 5, 3), "window hostile failed")
 
+    # Branch-functorial affine owner cocycle and its signed-current obstruction.
+    zero2, p2, q2, r2 = (0, 0), (1, 0), (0, 1), (1, 1)
+    I2 = ((1, 0), (0, 1))
+    J2 = ((0, 1), (1, 0))
+    linear = {letter: mod2mat(branches[letter]) for letter in "ABC"}
+    require(linear == {"A": J2, "B": J2, "C": I2}, "branch mod-two shadow failed")
+    affine_branches = {letter: (linear[letter], p2) for letter in "ABC"}
+
+    def cocycle(word):
+        z = zero2
+        for letter in word:
+            z = vadd(mod2vec(linear[letter], z), p2)
+        return z
+
+    owners = []
+    for k in range(2, 202):
+        if k % 3 == 2:
+            rr = (k - 2) // 3
+            word = "BA" * rr
+            expected_owner = r2 if rr % 2 else zero2
+        elif k % 3 == 0:
+            rr = (k - 3) // 3
+            word = "A" + "BA" * rr
+            expected_owner = vadd(p2, r2 if rr % 2 else zero2)
+        else:
+            rr = (k - 4) // 3
+            word = "C" + "BC" * rr
+            expected_owner = p2 if rr % 2 == 0 else q2
+        got_owner = cocycle(word)
+        require(got_owner == expected_owner, f"owner cocycle formula failed at k={k}")
+        owners.append(got_owner)
+    require(owners[:7] == [zero2, p2, p2, r2, q2, q2, zero2], "owner period failed")
+    drift = [vadd(owners[i], owners[i + 1]) for i in range(6)]
+    require(drift == [p2, zero2, q2, p2, zero2, q2], "owner drift failed")
+    drift_sum = zero2
+    for step in drift:
+        drift_sum = vadd(drift_sum, step)
+    require(drift_sum == zero2, "hexagon owner holonomy failed")
+
+    for t in (zero2, p2, q2, r2):
+        changed_c = vadd(vadd(p2, t), mod2vec(I2, t))
+        require(changed_c == p2, "static origin unexpectedly killed C cocycle")
+    ba_affine = affine_compose(affine_branches["A"], affine_branches["B"])
+    require(ba_affine == (I2, r2), "BA translation failed")
+    require(affine_branches["C"] == (I2, p2), "C translation failed")
+    affine_image = affine_group(tuple(affine_branches.values()))
+    require(len(affine_image) == 8, "affine branch image is not D4")
+    require(len({g[0] for g in affine_image}) == 2, "affine linear image failed")
+    require(sum(g[0] == I2 for g in affine_image) == 4, "translation kernel failed")
+
+    points = (zero2, p2, q2, r2)
+    point_index = {x: i for i, x in enumerate(points)}
+
+    def translate(e, t):
+        return tuple(e[point_index[vadd(x, t)]] for x in points)
+
+    for m in range(1, 40):
+        for n in range(m + 1, 45):
+            e = (n - m, m, n, n + m)
+            a, b, c, c_again = signed_current(e)
+            require(c == c_again == n * n + m * m, "base signed current failed")
+            expected_orbit = {
+                zero2: (a, b, c, c),
+                p2: (b // 2, 2 * a, c, c),
+                q2: (b // 2, 2 * a, c, -c),
+                r2: (a, b, c, -c),
+            }
+            orbit = {t: signed_current(translate(e, t)) for t in points}
+            require(orbit == expected_orbit, f"signed-current orbit failed at {(m, n)}")
+            require(len(set(orbit.values())) == 4, f"signed-current stabilizer failed at {(m, n)}")
+            for alpha in range(2):
+                for beta in range(2):
+                    t = ((alpha + 0) % 2, beta)
+                    value = orbit[t]
+                    switch = int(value[:2] != (a, b))
+                    sigma = int(value[3] == -c)
+                    decoded = ((switch + sigma) % 2, sigma)
+                    require(decoded == t, f"signed-current decoder failed at {t}")
+
+    require(signed_current((1, 2, 3, 5)) == (5, 12, 13, 13), "minimal current hostile failed")
+    ba_window = (3, 5, 8, 13)
+    require(signed_current(ba_window) == (39, 80, 89, 89), "BA current hostile failed")
+    require(signed_current(translate(ba_window, r2)) == (39, 80, 89, -89), "BA correction hostile failed")
+
     print("THM-3339 VERIFIED-EXACT")
     print("golden_pell_search_n_max=999; exact_converse_proved_by_descent")
     print("fibonacci_indices_checked=2..201")
@@ -315,6 +441,10 @@ def main():
     print(f"owner_fixing_S3_lift_pairs={owner_splittings}; transitive_S4_lift_pairs={transitive_lifts}")
     print(f"lift_profile={dict(sorted(lift_profile.items()))}")
     print("v4_matching_hostile=(1,2,3,5)->(2,1,5,3)")
+    print("affine_owner_period=0,p,p,r,q,q; drift=p,0,q,p,0,q")
+    print("affine_branch_image_order=8; linear_image=2; translation_kernel=4")
+    print("signed_current_stabilizer=1; decoder=t=(s+sigma)p+sigma*q")
+    print("BA_current_hostile=(39,80,89,89)->(39,80,89,-89)")
     print("ALL CHECKS PASSED")
 
 

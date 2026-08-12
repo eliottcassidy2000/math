@@ -15,26 +15,32 @@ status: >
   Each adjacent matching reflection has four S4 lifts: among the 16 lift
   pairs, exactly four generate an owner-fixing S3 (one for each owner), while
   twelve generate transitive S4.  Thus the quotient order does not choose an
-  affine owner.  No LRC, Jacobian, global Berggren--Farey, or tournament
-  equivalence follows.
+  affine owner.  A calibrated branch-functorial V4 cocycle does transport a
+  moving owner and has affine image D4, but no static origin kills it.  More
+  sharply, the full signed Pythagorean current has trivial V4 stabilizer, so
+  no correction can both flatten that owner and preserve the current; its
+  four signatures instead decode the missing translation exactly.  No LRC,
+  Jacobian, global Berggren--Farey, or tournament equivalence follows.
 source: codex-2026-08-12-fibonacci-berggren-branch-transplant
 audit: >
   independent structural audit (exact branch identities, period-three
   primitive normalization, residue hexagon, Cassini edge-order hostile,
-  S4/V4 owner-lift census, and tournament typing: ACCEPT)
+  S4/V4 owner-lift census, branch affine cocycle, signed-current stabilizer,
+  decoder, and tournament typing: ACCEPT)
 depends_on:
   - THM-2596-modular-free-factor-farey-gram-owner-cocycle
   - THM-2632-farey-v4-theta-channel-and-hurwitz-crt-parity-sidecar
   - THM-2753-six-edge-parity-erasure-and-three-matching-resolvent-restoration
   - THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone
 related:
+  - THM-2622-affine-torsor-holonomy-fixed-section-spectrum-and-v4-c13-dictionary
   - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
   - THM-3335-square-triangular-pell-markov-pythagorean-selector
   - THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation
 script: 04-computation/fibonacci_berggren_three_ray_owner_thm3339.py
 output: 05-knowledge/results/fibonacci_berggren_three_ray_owner_thm3339.out
-script_sha256: 1cef777f9920196f37f33d6208e31b53f2ce1b4aa8980df74ef8c9b446f478cf
-output_sha256: 355324c33fcb1b87bc1265776b24049be42cbf5e6b2bc9bb53443a08e40cf279
+script_sha256: 094fc254dcb7965791e59247a98f60a337725b40d169db6f3862c1da5943149b
+output_sha256: 88c5f44971df12bbd61f84925f408a253450095ee2de23b5a617efde1e4ecdfa
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -225,6 +231,13 @@ period-three content law selects three interleaved ancestry rays.  It does
 not define a `C3` action permuting Berggren's three children, consistently
 with THM-2596 and THM-2632.
 
+The Berggren depth is consequently classified exactly:
+
+```text
+depth(3r+2)=2r,
+depth(3r+3)=depth(3r+4)=2r+1.                              (19a)
+```
+
 ## 5. The intrinsic six-state object
 
 Let
@@ -352,7 +365,155 @@ a branch-dependent `V4` cocycle may be studied as extra data.  Neither is
 canonically supplied by the Fibonacci values, the bare matchings, or the
 six-state quotient.  This is the precise moving-owner boundary.
 
-## 8. Relation to THM-3334 and stopping boundary
+## 8. A branch cocycle exists, but the signed current forbids flattening
+
+The quotient ambiguity does not mean that every affine lift is unavailable.
+It means that a frame/calibration must be supplied and its compatibility with
+the target current must be checked.
+
+Write
+
+```text
+V=F_2^2={0,p,q,r},             q=Jp,             r=p+q,
+J=[0 1;1 0].                                               (31)
+```
+
+Reduction of (16) gives
+
+```text
+Abar=Bbar=J,                  Cbar=I.                       (32)
+```
+
+Fix the signed-current channel frame and calibrate the first owner
+displacement as `p`.  Define affine branch lifts
+
+```text
+Atilde(x)=Jx+p,       Btilde(x)=Jx+p,       Ctilde(x)=x+p.  (33)
+```
+
+For a root-to-child word, define the right-address cocycle
+
+```text
+Z(empty)=0,                   Z(wh)=hbar Z(w)+p.            (34)
+```
+
+Equivalently, (34) is an ordinary one-cocycle for the opposite branch
+monoid.  On the three rays (19), direct induction gives
+
+```text
+Z((BA)^r)      =(r mod 2) r,
+Z(A(BA)^r)    =p+(r mod 2) r,
+Z(C(BC)^r)    =J^r p.                                     (35)
+```
+
+Synchronizing (35) with one residue hexagon gives owners
+
+```text
+k=2,...,8:       0,p,p,r,q,q,0,
+edge drift:      p,0,q,p,0,q.                              (36)
+```
+
+The drift sums to zero, so the moving gauge `g_k=Z(w_k)` flattens the owner
+along the indexed path.  It is not statically trivial.  Moving one global
+origin by `t` changes a branch translation by
+
+```text
+z^t(h)=z(h)+t+hbar t,
+```
+
+but `Cbar=I` leaves `z^t(C)=p` for every `t`.  Moreover,
+
+```text
+Btilde followed by Atilde = translation by r,
+Ctilde                       = translation by p.           (37)
+```
+
+Those two matching-invisible words generate all translations, and the
+affine branch image is
+
+```text
+V4 semidirect <J>,
+```
+
+the order-eight dihedral group (`D4` in the repo's convention, often `D8`
+elsewhere).  Its matching image is only `<J>=C2`; `A` and `B` have the same
+finite affine shadow while remaining distinct ancestry letters.
+
+Now retain the operations that (4) said were load-bearing.  Index the window
+vertices by `(0,p,q,r)` and define the full signed current
+
+```text
+Jcal(e)=(e_0 e_r,
+         2 e_p e_q,
+         e_0 e_q+e_p e_r,
+         e_q e_r-e_0 e_p)=(a,b,c,c).                      (38)
+```
+
+Translation of the four labels gives the exact orbit
+
+| correction | translated signed current |
+|---|---|
+| `0` | `(a,b,c,c)` |
+| `p` | `(b/2,2a,c,c)` |
+| `q` | `(b/2,2a,c,-c)` |
+| `r` | `(a,b,c,-c)` |
+
+On the Fibonacci locus,
+
+```text
+|a-b/2|=|n^2-mn-m^2|=1,               c=n^2+m^2>0.         (39)
+```
+
+Therefore
+
+```text
+Stab_V4(Jcal)={0}.                                         (40)
+```
+
+If corrections `g_k` both preserved `Jcal_k` and made `o_k+g_k` constant,
+(40) would force every `g_k=0`, contradicting (36).  This no-go is affine-
+gauge invariant because changing the frame conjugates a trivial stabilizer
+to itself.
+
+The minimal numerical hostile is
+
+```text
+e=(1,2,3,5):
+0 -> (5,12,13,13),       p -> (6,10,13,13),
+q -> (6,10,13,-13),      r -> (5,12,13,-13).              (41)
+```
+
+The branch-sharp hostile occurs at the first `BA` window:
+
+```text
+e=(3,5,8,13),       Z(BA)=r,
+(39,80,89,89) -> (39,80,89,-89).                          (42)
+```
+
+Thus the antisymmetric coordinate `w_23-w_01` detects the translation that
+the matching quotient erases.
+
+In fact the obstruction is a decoder.  For `t=alpha p+beta q`, let `s=1`
+when the first pair changes from `(a,b)` to `(b/2,2a)`, and let `sigma=1`
+when the last coordinate changes from `+c` to `-c`.  The table gives
+
+```text
+s=alpha+beta,              sigma=beta,
+t=(s+sigma)p+sigma q.                                     (43)
+```
+
+The four signed-current signatures are therefore a faithful `V4` torsor.
+The lawful transport is not “flatten owner while fixing current,” but
+
+```text
+branch address -> D4 affine holonomy -> signed-current orbit.             (44)
+```
+
+The next finite object is the `6*4=24` state bundle over (21), including the
+leg-order normalizer on the `C(BC)^r` ray.  Whether that bundle interfaces
+with a physical LRC owner/current is open.
+
+## 9. Relation to THM-3334 and stopping boundary
 
 THM-3334 has an **external** `K4` when a hypotenuse such as
 `1105=5*13*17` has four Gaussian parent representations.  Its vertices are
@@ -378,7 +539,7 @@ or proves a global Berggren--Farey equivalence.  THM-3335 and THM-3336 are
 listed only as **RESERVED** adjacent construction lanes; this theorem does
 not depend on their intended statements.
 
-## 9. Exact reproduction
+## 10. Exact reproduction
 
 Run
 
@@ -392,8 +553,10 @@ indices `2..201` on all three rays; the period-three content law and normalized
 transplant; every Pell solution below `1000` as a hostile converse census;
 the generalized `K4` current; the complete six-state residue cycle; edge
 orders through `k=99`; all `24` `S4` edge/matching actions; the `V4` kernel;
-the odd isolated-swap no-go; and all `16` owner-lift pairs.  Normal and
-optimized runs byte-match the stored transcript and end in
-`ALL CHECKS PASSED`.
+the odd isolated-swap no-go; all `16` owner-lift pairs; the cocycle through
+`k=201`; the order-eight affine image; every signed-current translation on a
+bounded generalized-window bank; the trivial stabilizer; decoder; and the
+minimal/`BA` hostiles.  Normal and optimized runs byte-match the stored
+transcript and end in `ALL CHECKS PASSED`.
 
 QED.
