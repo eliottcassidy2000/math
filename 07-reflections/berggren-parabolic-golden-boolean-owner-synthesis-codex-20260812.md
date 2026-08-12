@@ -14,7 +14,8 @@ open transfers; theorem files, not this narrative, are the truth sources.
 | square/triangular selector | Pell-8/Markov compiler selecting square even legs on the U-spine | **PROVED** | [THM-3335](../01-canon/theorems/THM-3335-square-triangular-pell-markov-pythagorean-selector.md) |
 | spine scalar intersections | square `C_t`, triangular `Q_t`, branch transplant, selector fibres | **PROVED** | [THM-3341](../01-canon/theorems/THM-3341-u-spine-square-hypotenuse-transplant-and-triangular-plane-torsors.md) |
 | Gaussian content curvature | primitive product, charge `H^1`, folded XOR weights, source groupoid | **PROVED** | [THM-3336](../01-canon/theorems/THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation.md) |
-| LRC spectral closure | owner, phase, clock, endpoint word, global exit | **OPEN** | THM-3334/3336/3339 remove no row |
+| prime-XOR ancestry | flat endpoint-path groupoid with source-dependent costs | **PROVED** | [THM-3345](../01-canon/theorems/THM-3345-prime-xor-ancestry-path-groupoid-and-source-dependent-berggren-cost.md) |
+| LRC spectral closure | owner, phase, clock, endpoint word, global exit | **OPEN** | THM-3334/3336/3339/3345 remove no row |
 
 ## One interval, two genuinely different rays
 
@@ -202,6 +203,20 @@ hypotenuse.  A section turns it into source-dependent arrows, and even at
 The correct object is therefore a weighted groupoid, not a global Boolean
 action.
 
+THM-3345 transports that groupoid into actual ancestry at `c=1105`.  The two
+path costs in the prime matchings are
+
+```text
+p=5: {8,27},             p=13: {5,24},             p=17: {26,9}. (5a)
+```
+
+Thus even prime plus folded weight does not determine ancestry cost.  The
+lawful arrow is the endpoint coboundary `P(x,y)=w_x^(-1)w_y`: it is
+source-dependent but flat, and every external-`K4` loop dies in the ambient
+Berggren tree.  Freezing one basepoint arrow per colour creates nonzero words
+only by composing arrows with mismatched sources.  Those defects are not a
+tree `H^1` class.
+
 This also sharpens the proposed degree-monoid analogy.  Raw Gaussian norms do
 multiply.  Primitive matrix normalization does not preserve that grading:
 
@@ -278,16 +293,16 @@ owner.  A physical use must retain the current orbit as part of its state.
 1. The square/triangular intersection table is now closed by THM-3341.  Use
    its variable-length Gaussian branch transplant to test whether ancestry
    depth dispersion in square-selector fibres is unbounded quantitatively.
-2. THM-3336 closes the content-cocycle question: multiplication acts on signed
-   lifts, canonically grades quotient directions, and becomes a
-   section-dependent groupoid after conjugation.  Compute the ancestry cost
-   and holonomy of one prime-XOR arrow rather than assuming a global action.
+2. THM-3336 closes the content cocycle and THM-3345 closes its first-fibre
+   ancestry lift: the endpoint groupoid is flat but source-dependent.  Extend
+   the exact path table along the Boolean record ladder and decide whether one
+   uniform source-reading finite-state transducer exists.
 3. Build the exact `6*4` residue/order-current bundle, including the odd/odd
    leg-order normalizer, and test whether its `D4` holonomy has a physical
    LRC owner/phase interpretation.  The flatten-and-preserve route is closed.
-4. Test whether depth dispersion inside the rank-`r` Gaussian fibre is
-   unbounded and whether any prime-XOR toggle has a finite Berggren word
-   transducer.  The scalar plane label alone cannot see this.
+4. Test whether depth and pairwise path-cost dispersion inside rank-`r`
+   Gaussian fibres are unbounded.  The scalar plane label and folded prime
+   weight alone cannot see either statistic.
 5. For LRC, retain the fixed-cusp integral ancestor and ask for one explicit
    owner/phase/current transport on the canonical typed row.  The Boolean
    rank or residue hexagon by itself is not a spectral-closure certificate.
