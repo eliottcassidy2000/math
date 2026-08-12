@@ -536,6 +536,15 @@ Applegate--Pol--Sloane (toothpick automaton) are preserved verbatim in the
 THM-2000/THM-2005's support surfaces; neither proves the support-versus-
 multiplicity collision law or the Abel--Stieltjes/Dini criterion.
 
+## Pythagorean trees and square-pyramidal intersections
+
+The primary-source records for Berggren descendant geometry, fixed-hypotenuse
+fibres, and Bennett's global cannonball classification are in the
+[Pythagorean sidecar](CORE-PAPERS-PYTHAGOREAN.md).  THM-3334 imports the first
+two interfaces; THM-3335 uses the cannonball classification only to make one
+Pell-selector intersection global.  None of these sources supplies an LRC,
+tournament, Jacobian, or skew-EW construction.
+
 ## Unstable homotopy
 
 Ivanov--Mikhailov--Wu ([arXiv:1506.00952](https://arxiv.org/abs/1506.00952),

@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-369 (2026-08-12, THM-3341 U-spine Pell synthesis) -- an unoriented Markov branch and shared Pell field were overcompressed
+
+- **What failed:** the first promoted form of
+  [THM-3341](theorems/THM-3341-u-spine-square-hypotenuse-transplant-and-triangular-plane-torsors.md)
+  said every ordered positive fixed-two Markov solution had the displayed
+  positive inverse, called five negative intersection rows “four,” and let
+  its typed-carrier language obscure that the negative-Pell, Pell-8, and
+  norm-17 equations all live in `Q(sqrt(2))`.
+- **Minimal witnesses / first failed implication:** `(2,5,1)` is an ordered
+  positive Markov solution but the unoriented formula gives `R=-1`;
+  `(2,1,1)` gives the algebraic boundary `R=N=0`, not a positive
+  square-triangular row.  Also `sqrt(8)=2sqrt(2)` and
+  `17+6sqrt(8)=(3+2sqrt(2))^2` directly refute any different-field reading.
+- **Repair / strongest survivor:** modulo swapping the two non-two Markov
+  coordinates, orient uniquely as `1<=M_-<=M_+`; equality `(1,1)` is the
+  boundary and strict inequality is exactly the positive selector.  The
+  three recurrences share `Q(sqrt(2))` and its unit, but occupy different
+  norm/parity cosets and preserve different typed predicates.  Every infinite
+  classification, Gaussian branch transplant, Boolean-fibre theorem, and
+  norm-17 orbit in THM-3341 survives unchanged.
+- **Reusable rule:** normalize unordered Diophantine coordinates and isolate
+  zero/degenerate seeds before writing an inverse.  Distinct norm equations
+  or typed orbits inside one quadratic field are not distinct fields.
+
 ## MISTAKE-368 (2026-08-12, AMM 12592 endpoint rigidity) -- nonattainment at slope one was confused with a strict gap above the infimum
 
 - **What failed:** the Szegő endpoint reflection and several downstream

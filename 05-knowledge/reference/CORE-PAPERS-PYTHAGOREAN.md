@@ -3,6 +3,35 @@
 > **Freshness:** primary records checked 2026-08-12.  This is a routed
 > extension of `CORE-PAPERS.md`, not an independent truth surface.
 
+## Square-pyramidal / cannonball classification
+
+### Bennett -- *Lucas' Square Pyramid Problem Revisited*
+
+- **Primary:** Michael A. Bennett, *Acta Arithmetica* **105** (2002),
+  341--347, [DOI 10.4064/aa105-4-3](https://doi.org/10.4064/aa105-4-3),
+  [publisher record](https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/105/4/83879/lucas-square-pyramid-problem-revisited),
+  and [author PDF](https://personal.math.ubc.ca/~bennett/paper21.pdf).
+- **Imported role:** Bennett's Theorem 2.1 bounds the positive solutions of
+  `x(x+1)(x+2)=6y^2` by three; the paper's three displayed solutions saturate
+  that bound.  Restricting them to `x=2s,y=2t` proves that the positive integer
+  solutions of
+
+  ```text
+  1^2+2^2+...+s^2=t^2
+  ```
+
+  are exactly `(s,t)=(1,1)` and `(24,70)`.  The paper also records Watson's
+  1918 proof and gives a modern algebraic route through quartic Pell-type
+  equations.
+- **Consumer:**
+  [THM-3335](../../01-canon/theorems/THM-3335-square-triangular-pell-markov-pythagorean-selector.md),
+  where the classification makes the selector/cannonball intersection global:
+  the unique positive selector root that is square-pyramidal is `s_3=70`, at
+  pyramid height `24`.
+- **Does not prove:** THM-3335's Pell/Markov/Pythagorean compiler, its
+  even/odd split, the separate question whether `q_k` is triangular, any
+  skew-EW design, or an LRC/tournament/JC transfer.
+
 ## Berggren descendant geometry and fixed-hypotenuse fibres
 
 ### Kőszegyová--Csókási--Hirjak / Janičková--Csókási

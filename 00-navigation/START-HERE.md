@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-03; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — refreshed 2026-08-12; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
@@ -85,13 +85,15 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     the old `6mu^2` floor plus an exact integer fiber-occupancy variance tax. It
     strictly improves the uniform tail test but is not a universal proof.
 15. **Every counterexample is in a finite labelled code/deck/fan atlas.** THM-2051/2052 force support `3..5`, bounded height, and rank at least eleven; THM-2053/2055/2056 give the transverse deck, determinant gate, signed fan, and finite Kelvin/Farey certificate. THM-2057--2059 close two AP-tail families and split/join clock packets, without forcing overlap.
-    THM-2060--2069 reduce and fold the dyadic seam, make circuit-free templates finite, close divisor-complete cores through `24`, and prove the deletion-code/cogirth wheel; THM-2074 gives density-one strict LRC(14). THM-2072--2080 retain terminal/owner addresses and force size `7..10`, maximum `>=25`, depth `<=4`.
-    THM-2081--2087 make the rank-seven bound effective at `57`; THM-2088--2093 reduce no-pair cuts to finite banks; THM-2091/2094/2096 close four-`7|q`; THM-2097 makes depth-four templates finite. THM-2100 gives the uniform box `max(S)<=22,822,941,298,192,042`.
-    THM-2126's exact rank-eight spectrum refutes a universal strict tree margin; actual finite rows and cover equality remain. THM-2114--2138 route the residue through finite-ring needles, content, and scalar closure; THM-2139/2141 close `(1,5,2)` and `(2,5,1)`, leaving `(1,6,1),(1,7,0),(2,6,0),(3,5,0)`. THM-2140/2148/2168 leave scalar `5+3`.
-    THM-2187/2193 give a saturated septimal carrier and safe grids; THM-2188 retains slope/current. THM-2196/2199 prove rank twelve; THM-2203/2208/2212 give scalar transport, bounded anchors, and exact rank-eleven rulers. THM-2198--2258 leave `165` depth-one rows; THM-2323--2334 reduce the `150` strict rows to `169` coordinate twists.
-    THM-2337/2340 type pure-word landing; THM-2343/2344 expose a hostile shifted convolution inverse. THM-2368 retains root modes but permits zero drift; THM-2378--2385 leave the `(t,b)=(1,0)` multiplicity word and owner-typed dual incidence.
-    MISTAKE-260 forbids deriving anchored Fourier nonvanishing from unordered inverse roots. MISTAKE-261 records that THM-2356's refined tomography loses coarse landing through a `28,393`-dimensional kernel; THM-2363 only dominates coarse energy forward.
-    THM-2452--2542 close phase/anchor/clock seams, not arrival. THM-2763's exact-address carrier has sizes `13^4`/`13^3`, but is neither THM-2625's endpoint plane nor factor allocation; attaching it to one determinant sector and all-unit `B(q)` remains live.
+    THM-2060--2100, including THM-2081--2087 and THM-2088--2093, fold the
+    dyadic seam, retain owner addresses, and give the uniform box
+    `max(S)<=22,822,941,298,192,042`.
+    THM-2114--2168 leave four signatures and scalar `5+3`; THM-2187--2385
+    retain slope/current, prove rank twelve, and leave `165` depth-one rows
+    plus an owner-typed multiplicity word.
+    MISTAKE-260/MISTAKE-261 block inverse-root nonvanishing and expose the
+    `28,393`-dimensional landing kernel; THM-2363/THM-2368 remain sidecars.
+    THM-2452--2763 close seams, not arrival; sector attachment remains live.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.
@@ -109,6 +111,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 | Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2158/2180/2181/2189/2194/2202/3279/3289 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005/3288 and their frozen outputs |
+| Pythagorean / Pell / square sums | [THM-3335](../01-canon/theorems/THM-3335-square-triangular-pell-markov-pythagorean-selector.md) | THM-3333/3334/3339/3341; retain spinor, parity, depth, ancestry, and consumer labels |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177/2191; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |
 | Formalization | relevant theorem's `formalization` field | `00-navigation/*FORMALIZATION*`, then a clean build/axiom audit |
 | Research method | [`RESEARCH-PROTOCOL.md`](RESEARCH-PROTOCOL.md) | [`META-PATTERNS.md`](META-PATTERNS.md), relevant reflections |

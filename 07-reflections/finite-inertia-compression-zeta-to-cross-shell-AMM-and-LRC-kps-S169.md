@@ -178,11 +178,40 @@ The recurrence
 
 is a new finite-state handle on the uniform problem.
 
+### 4.5 The donor can move, but its full-bit leak is exact
+
+THM-3343 executes the first handoff.  For powers of two `d<M`, take the
+annulus of length-`M` words whose first `d` bits are equal but which are not
+constant.  Color `n>d` alternately by the parity of `n-d`.  Rotation by one
+pairs every negative branch with a positive branch ending in its initial bit;
+rotating each unmatched positive branch by `n-d` injects it into the
+critical-`d` donor.  The donor repairs each Hamming layer exactly.
+
+The annulus is composition-bisectable **if and only if both endpoints are
+dyadic**:
+
+```text
+(1+x)^(M-d)(1+x^d)=1+x^M              in F_2[x].
+```
+
+Using consecutive endpoints gives one uniform extractor
+
+```text
+T(n)=n+1 off the powers of two,       T(2^r)=2^(r+1).
+```
+
+So the donor-handoff problem is no longer existential.  Its obstruction is
+sharper: for the alternating interior coloring, the forced donor enumerator
+has `R(-1)=+-1`, hence no factor `1+x`; at least one donor stream must inspect
+the final annulus bit.  Moving the donor concentrates all factor-two cost on
+a zero-density spine, but does not reduce the worst slope.
+
 ## 5. What remains open in AMM
 
-Pointwise difficulty is gone; simultaneous difficulty remains. The donor
-family pays `M` at `n=1`. A uniform extractor must move or split the donor
-without revising already-made verdicts.
+Pointwise difficulty is gone, and a simultaneous shifted donor now exists.
+The remaining problem is to **split or smooth** its sparse factor-two cost.
+Merely moving an intact donor from one dyadic boundary to the next cannot do
+this: THM-3343's `R(-1)!=0` forces the full upper endpoint.
 
 The sharp next idea is a **donor handoff automaton**. Interpret
 `A_m(x)` and its reciprocal as the two residual channels after a dyadic
@@ -192,9 +221,11 @@ two-state carry relation to compare with THM-3009's golden capacity wall.
 
 Cheap probes:
 
-1. demand nested compatibility between horizon `M` and `2M` rules;
-2. minimize the mass of donor prefixes that must be recolored at doubling;
-3. test whether the residual factors close under two states or require a
+1. change the interior parity word so the donor residual acquires a high
+   `(1+x)`-adic valuation;
+2. split one donor across two or more future annuli and retain the signed
+   residual channel instead of closing it immediately;
+3. test whether those residual factors close under two states or require a
    growing state space;
 4. derive the spectral radius of the exact carry matrix and compare it with
    `phi` and `C_arch=1+log_5(phi^2)`;
