@@ -377,10 +377,7 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   THM-3318/3326/3348 classify the linear-`z` response: exact constant,
   one-root torsion, and generic punctured-line de Rham `H^1`, including the
   one-root valuation annihilator without gradient-unimodularity.  This refines
-  THM-2063, not `JC(2)`. THM-3354 proves HYP-9031's direct D5 map impossible:
-  the `F13`, Gaussian, `S3`, `mu_2`, and response carriers have trivial direct
-  coefficient routes. Its cospan is definitional; localization can kill
-  `theta_gen` while `theta_int` still obstructs a polynomial mate.
+  THM-2063, not `JC(2)`. THM-3354 blocks direct D5 transport; its cospan is definitional.
   No base root choice follows; residual degree 119, Keller mate/inverse cover, `JC(2)` and `DC(2)` remain OPEN.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
