@@ -1,0 +1,18 @@
+THM-3336 primitive Gaussian content-curvature exact audit
+raw multipliers/vectors/checks: 176/144/25344
+content cocycle pool/checks: 48/110592
+coprime-norm CRT root checks: 1520
+Smith multipliers/vectors/content checks: 256/176/45056
+Smith divisor-occurrence witnesses: 788
+Farey multipliers/oriented edges/faces: 176/744/130944
+opposite edge-label and radius-label checks: 392832
+diamond and reconstruction checks: 130944/392832
+radius covariance checks: 25344
+primitive-triple parity-factor checks: 25344
+content-pattern norms/residue rows/patterns: 11/50380/89
+hostile controls: 8/8
+N2-pass-to-fail: q 130->65; M 1/4->1/2; breakpoints 21542/20692
+N2-fail-to-pass: q 65->130; M 1/2->1/4; breakpoints 20312/21134
+N101-pass-to-fail: q 101->1; M 280/1131->505/1131; breakpoints 15660/20767
+N101-fail-to-pass: q 1->101; M 505/1131->280/1131; breakpoints 20767/15660
+ALL EXACT CHECKS PASSED

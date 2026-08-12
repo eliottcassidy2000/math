@@ -1,0 +1,15 @@
+GAUSSIAN SPINOR CONGRUENCE SURFACE PROBE 2026-08-12
+universe=Vp=(F_p^2-{0})/{+-1}; det^2=1 edges; all graph triangles
+spinor=Phi(m,n)=(m^2-n^2,2mn,m^2+n^2); exact arithmetic
+p=3 pmod4=3 pmod12=3 V=4 E=6 F=4 degree=3 edge_faces=2 links=C3 orientable=yes chi=2 genus=0 cover=K4 fibre=1 one_neighbor_each_other_slope=yes base_triangle_lifts=1:4 spinor_injective=yes
+p=5 pmod4=1 pmod12=5 V=12 E=30 F=20 degree=5 edge_faces=2 links=C5 orientable=yes chi=2 genus=0 cover=K6 fibre=2 one_neighbor_each_other_slope=yes base_triangle_lifts=0:10,2:10 spinor_injective=yes
+p=7 pmod4=3 pmod12=7 V=24 E=84 F=56 degree=7 edge_faces=2 links=C7 orientable=yes chi=-4 genus=3 cover=K8 fibre=3 one_neighbor_each_other_slope=yes base_triangle_lifts=1:56 spinor_injective=yes
+p=11 pmod4=3 pmod12=11 V=60 E=330 F=220 degree=11 edge_faces=2 links=C11 orientable=yes chi=-50 genus=26 cover=K12 fibre=5 one_neighbor_each_other_slope=yes base_triangle_lifts=1:220 spinor_injective=yes
+p=13 pmod4=1 pmod12=1 V=84 E=546 F=364 degree=13 edge_faces=2 links=C13 orientable=yes chi=-98 genus=50 cover=K14 fibre=6 one_neighbor_each_other_slope=yes base_triangle_lifts=0:182,2:182 spinor_injective=yes
+p13_frame: coordinates=84 law=[no inf-inf; (inf,e)~(x,t) iff e=t; (x,e)~(y,t) iff (x-y)^2=e*t]
+p13_wheels: 6 vertex-disjoint W14 disks; each V=14 E=26 F=13; infinity_faces=78; directed_Paley_arcs=78
+p2_hostile: V=3 E=3 F=1; edge_faces=1; Phi(1,0)=Phi(0,1)=(1,0,1); Phi(1,1)=(0,0,0)
+lrc_same_residue_mod13: (1,0) q=1 D=1 gate=False; (1,1183) q=1399490 D=15379 gate=True slack=1
+lrc_kelvin_hostile: primitive_spinor=(5,1) Phi=(24, 10, 26) mod13=(11,10,0); q_inverse=no
+lrc_one_tail_residue_hostile: 11x[1:0]+1x[12:1]+1xzero; zero_count=1
+ALL REQUIRE CHECKS PASSED
