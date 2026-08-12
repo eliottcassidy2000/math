@@ -21,9 +21,11 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 ## Sixteen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** THM-2923 leaves `<=6` bodies; projected caps are
-   `1579/216`. THM-3308/3313/3320 give exact threshold circuits and ledger
-   `373153`: `349` `z1=216` wall rows in `29` families. The rung and physical
-   entry remain open.
+   `1579/216`. THM-3349 advances the `z1=216` ledger to `372917`: `113` wall
+   rows in `13` families, next `gcd72/L720720`. THM-3347 closes all-nine-low
+   two-star dilations; THM-3348 closes the two dense connected-low shapes and
+   the non-dense tail from scale `11`, leaving `261254` unlabelled finite
+   shape-scale heads. The rung, physical entry and LRC remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
@@ -71,7 +73,9 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     THM-3306/3309 give a nonsplit `2/72` deck with gradient failure; THM-3319
     persists it over the two-clutch etale germ. THM-3303/3328 split the
     constant-J boundary residual into open overlap, anti-tangent collision, or
-    vertex-cone incidence. THM-3326 gives the linear-`z` response trichotomy.
+    vertex-cone incidence. THM-3326 gives the linear-`z` response trichotomy;
+    THM-3346 identifies its full generic punctured-line de Rham response and
+    exact one-root valuation annihilator.
     `JC(2)`/`DC(2)` remain OPEN.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The

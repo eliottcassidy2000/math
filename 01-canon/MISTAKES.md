@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-371 (2026-08-12, projected `z1=216` two-high closure) -- a safe cell address was mistaken for a safe projected section
+
+- **What failed:** an exploratory terminal counted cells whose distinguished
+  grid point was safe for two high drifts and inferred that the whole aligned
+  projected completion was obstructed.  A second shortcut used
+  `(Z/2Z)^*={1}` to identify two denominator-two safe-cell sets.
+- **Minimal witness / first failed implication:** every cell address `c` has
+  projected coordinate `phi_L(c/L)=0`, and `0` belongs to every aligned danger
+  set.  Thus safety of the address in the centered drift coordinate is fully
+  compatible with projected containment.  For denominator two the unit is
+  fixed, but the local slope `h+1/2` still depends on the ray height, so two
+  safe sets need not coincide.
+- **Repair / strongest survivor:** retain the local coordinate `y`.  For a
+  fixed-safe multiset `C`, maximize weighted cell multiplicity over every unit
+  and every translated open cyclic interval of length `d/7`; if
+  `sum_i m_C^tr(d_i)>(r-1)|C|`, inclusion--exclusion supplies a cell safe from
+  all `r` highs at each `y`, hence the full projected section.  The three
+  denominator-two equality cases instead use a measure bound: one high removes
+  at most `2/7`, so two leave at least `3/7>36/91`.  The repaired exact theorem
+  is THM-3349; no point-only artifact was promoted.
+- **Reusable rule:** projection statements require a witness on every local
+  fibre, not a favorable section origin.  A unit-orbit collapse fixes residues,
+  not affine slopes; retain translations and multiplicities until the target
+  predicate has been proved.
+
 ## MISTAKE-370 (2026-08-12, THM-3336 primitive matrix extension) -- primitive-entry matrices were treated as a composition class
 
 - **What failed:** the first promoted Section 9 introduced `d_A,mu_A` under
