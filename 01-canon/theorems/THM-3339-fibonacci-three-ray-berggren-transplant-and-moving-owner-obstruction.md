@@ -161,11 +161,11 @@ the **parabolic** spine for which `T_t=q^2`.  Writing `x=2t+1` and `s=2q`,
 its parent and two scalar labels are
 
 ```text
-P_t=(x,s^2,s^2+1),       W=s^2+2,       Q=2W-1=x^2+2.   (10a)
+P_(t-1)=(x,s^2,s^2+1),   W=s^2+2,   Q_(t-1)=2W-1=x^2+2. (10a)
 ```
 
-That Pell-8/Markov selector acts on the depth index of THM-3334.  It is not
-the discriminant-5 golden ancestry ray classified here.
+That Pell-8/Markov selector selects THM-3334 depths `t-1` for which
+`T_t=q^2`.  It is not the discriminant-5 golden ancestry ray classified here.
 
 ## 3. Primitive normalization has period three
 

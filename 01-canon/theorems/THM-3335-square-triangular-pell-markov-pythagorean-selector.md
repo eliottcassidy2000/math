@@ -2,7 +2,8 @@
 id: THM-3335
 title: "Square-triangular Pell/Markov selector, square-leg Pythagorean compiler, skew-EW gate, and seven-clock LRC benchmark"
 status: >
-  PROVED + VERIFIED-EXACT / INDEPENDENT HOSTILE AUDIT PASSED.  The
+  PROVED + VERIFIED-EXACT + CITED CANNONBALL CLASSIFICATION /
+  INDEPENDENT HOSTILE AUDIT PASSED.  The
   square-triangular solutions are exactly the consecutive-parameter primitive
   Pythagorean triples whose even leg is an even square.  A half-Hadamard map
   identifies the same orbit with the fixed-two Markov branch and gives a
@@ -22,6 +23,7 @@ depends_on:
   - THM-1920-the-spectral-insertion-response
   - THM-2056-kelvin-polar-farey-defect-certificate
   - THM-928-two-scale-certificate
+  - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
 related:
   - THM-1880-the-a-b-functional-frame-chebyshev-pell-companions
   - THM-2142-the-half-angle-bridge-ab-monoid-is-the-ctu-cyclotomic-skeleton
@@ -29,6 +31,8 @@ related:
   - THM-2057-scaled-zeta-core-one-tail-closure
   - THM-3010-ballot-column-newton-ratios-and-metallic-alternation
   - THM-3300-factorial-gaussian-torus-bridge-and-the-archimedes-no-go
+  - THM-3339-fibonacci-three-ray-berggren-transplant-and-moving-owner-obstruction
+  - THM-3341-u-spine-square-hypotenuse-transplant-and-triangular-plane-torsors
   - HYP-3075-lrc14-hurwitz-markov-pell-cannonball-carrier
 script: 04-computation/square_triangular_pell_markov_pythagorean_thm3335.py
 output: 05-knowledge/results/square_triangular_pell_markov_pythagorean_thm3335.out
@@ -39,7 +43,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3335 -- the square-triangular selector
 
-**PROVED + VERIFIED-EXACT / INDEPENDENT HOSTILE AUDIT PASSED.**
+**PROVED + VERIFIED-EXACT + CITED CANNONBALL CLASSIFICATION /
+INDEPENDENT HOSTILE AUDIT PASSED.**
 
 This is a repository synthesis and proof interface.  No literature-priority or
 global-novelty claim is made.  The claims about square-triangular numbers and
@@ -261,6 +266,47 @@ independent selectors, while unit side difference itself forces primitivity.
 The scaled control shows why a square leg seen after arbitrary scaling does
 not recover the selector.
 
+### Corollary 3.2 (a sparse selector on the Berggren parabolic spine)
+
+Let `U` be THM-3334's parabolic Berggren matrix
+
+```text
+U=[1 -2 2; 2 -1 2; 2 -2 3].                            (17a)
+```
+
+For every `r>=1`, its parameter intertwining law gives
+
+```text
+U Phi(r+1,r)=Phi(r+2,r+1),
+Phi(r+1,r)=U^(r-1)(3,4,5).                              (17b)
+```
+
+Consequently the square-triangular triples are exactly the sparse nodes
+
+```text
+Phi(n_k+1,n_k)=U^(n_k-1)(3,4,5),
+n_k-1=0,7,48,287,1680,...                               (17c)
+```
+
+selected from the full unit-gap spine by the square-even-leg predicate.
+This is an operation-level bridge: the Berggren step preserves primitivity
+and `C-B=1`, while the Pell state (19) decides which spine positions have a
+square even leg.
+
+It is not a new Farey path on the selected nodes.  With fixed cusp
+`s=(1,1)` and `d_r=(r+1,r)`,
+
+```text
+det(s,d_r)=-1,                 det(d_r,d_t)=t-r,
+<Phi(d_r),Phi(d_t)>_L=2(t-r)^2.                          (17d)
+```
+
+Thus all selected vertices lie in one fixed-cusp Farey fan, but successive
+positive selector depths have gaps `7,41,239,...` and are not Farey adjacent.
+The retained sidecar is Pell depth or Berggren position; an unweighted Farey
+distance through the common cusp collapses their unbounded determinant and
+Lorentz separation.
+
 ## 4. Markov mutation and an exact closed-form sequence compiler
 
 Put
@@ -424,12 +470,27 @@ At `m=12`,
 99^2+(2600+2300)^2=4901^2.                              (34)
 ```
 
-This is an exceptional intersection, not a general orbit theorem.  The exact
-companion finds only `(1,1)` and `(24,70)` in the square-pyramidal scan through
-`m=100000`.  Likewise, the bounded question whether the square-triangular root
-`q_k` is itself triangular finds only `q=1=T_1` and `q=6=T_3` through
-`k=30`, giving values `1` and `36`.  Both all-range Diophantine intersection
-questions remain open here.
+This is an exceptional intersection, not a general orbit law.  The classical
+cannonball classification, imported through [Bennett's primary-source record](../../05-knowledge/reference/CORE-PAPERS-PYTHAGOREAN.md),
+proves that the positive solutions of
+
+```text
+sum_(r=1)^N r^2=s^2                                      (34a)
+```
+
+are exactly `(N,s)=(1,1),(24,70)`.  Since every positive selector coordinate
+`s_k=2q_k` is even, (31)--(32) give the **global** selector/cannonball
+intersection
+
+```text
+(k,N,s_k)=(3,24,70).                                     (34b)
+```
+
+The exact companion independently reproduces the cannonball solutions through
+`N=100000`.  In contrast, the question whether the square-triangular root
+`q_k` is itself triangular is only **FINITE-EXACT** here: the scan through
+`k=30` finds `q=1=T_1` and `q=6=T_3`, giving square-triangular values `1` and
+`36`.  Its all-range Diophantine classification remains open in this theorem.
 
 ## 6. Two tournament-order maps: one search gate and one no-go
 
@@ -783,7 +844,8 @@ Both modes reproduce the stored transcript byte for byte.  The verifier uses:
   square-even-leg triples and checking the two valuation sheets;
 - selector depths through `k=30`, fourteen Markov mutations, six rational
   generating functions, and exact arithmetic in `Q(sqrt(2))`;
-- the square-pyramidal scan through `100000`, plus the exact even/odd split;
+- the square-pyramidal scan through `100000`, corroborating the cited global
+  classification, plus the exact even/odd split;
 - the seven LRC rungs through `n=200`, with independent pair-sum and full
   lower-envelope exact-max engines at the sharp `n=1` boundary;
 - positive controls `j=7,...,13`, lower-rung hostiles `j=2,...,6`, the

@@ -54,8 +54,9 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
   scans; AP13 and its lift share germs but not maxima.
 - THM-2058 preserves every fixed lift depth but escapes at `47/113`;
   finite jets/Farey rays fail.
-- THM-3333 gives Gaussian/Farey coordinates; THM-3334 adds a fixed-cusp
-  fan and Boolean fibres, but neither closes an LRC row.
+- THM-3333/3334 supply the carrier/spine; THM-3335's seven clocks show the
+  compressed tuple `(Phi,C,D,owner,F)` is incomplete across labelled planes;
+  every benchmark row is safe and no open LRC row closes.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 
@@ -65,11 +66,7 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
 
 - **PROVED:** [THM-2022](../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md)
   proves NC2 and hence unrestricted GMC(2).
-- **REFUTED for higher dimensions:** explicit GMC(3) counterexamples now exist;
-  GMC is false for every dimension >= 3; see [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
-  THM-3290 family + 2/3 Archimedes boundary; THM-3300 FC = torus-invariant GMC; THM-3301 no eigenvector refutes;
-  [THM-2801](../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md)
-  sharply gives `SIC(1)` true / `SIC(n>=2)` false, not `JC(2)`.
+- **REFUTED for higher dimensions:** GMC is false from dimension three; see [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md). THM-3290 gives the family/Archimedes boundary; THM-3300 identifies the factorial moment class with the `U(1)^n`-invariant Gaussian subproblem, not `FC=GMC`; THM-3301 supplies the no-eigenvector refutation. [THM-2801](../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md) gives `SIC(1)` true / `SIC(n>=2)` false, not `JC(2)`.
 - **FORMALIZATION COMPLETE:** `GMC2Main` exposes unconditional `dvdK1`, `nc2`,
   and `gmc2`, kernel-pure up to `propext`, choice, and quotient soundness;
   `singlePolyCrux_holds` discharges the legacy `DvdK1` premise.  THM-2101's
@@ -202,7 +199,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-3173 separates `C2*C3`, regular `S3`, and regular `C6`; their joint
   quotient has order 18, while pointed oriented quartic frames form `Q3`.
   These are semantic action data, not a physical current or Keller bridge.
-- THM-1880/1885 give the Chebyshev--Pell/`BS(1,2)^+` transitive frame.
+- THM-1880/1885 give the Pell frame; THM-3335 excludes nontrivial square-arc/skew-EW attainment; THM-3339's intrinsic `T6` loses affine owner.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
 - THM-2013/2016 bound cyclic temperature/reducibility; `H` remains empirical.
@@ -287,17 +284,14 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   THM-3321/3323 give the Hesse recurrence and exact degree-21 Hilbert slice.
   The [multi-edge audit](../07-reflections/multi-edge-visible-kernel-and-bordered-resolvent-independent-audit-codex-20260803.md) compiles all `55` pairs locally; no dynamics/bit-complexity claim.
   Q4 radius/non-P stay OPEN.
-- **EXACT typed identities:** corrected HYP-8820's Pascal family proves
-  `bagel(n)-cake(n)=T_n-1`; THM-3333 proves triangular Lorentz polarization,
-  in/exradii and typed graph ranks `r,2r^2` with zero flag homology.
-  MISTAKE-222 blocks cross-predicate transfer; a common valuation is still needed.
+- **EXACT typed identities:** corrected HYP-8820 proves `bagel(n)-cake(n)=T_n-1`; THM-3333 gives triangular Lorentz polarization and typed ranks; THM-3335/3341 compile the square-triangular selector, adjacent square-hypotenuse roots, and norm-17 triangular-plane orbits. MISTAKE-222 still requires a common valuation for cross-predicate transfer.
 - **EXACT arrangement shadow / blocked topology transfer:** corrected HYP-8825
   connects Vandermonde, braid chambers/transitive tournaments, and a companion
   determinant. MISTAKE-223 blocks NC2, hyper-Bessel, or Euler-characteristic
   transfers; THM-2023 proves the `Phi_(p,q)` zero theorem independently.
 
-### Live work
-Classify profiles under support operations; study analytic continuation and automatic/Mahler structure; track collision taxes; and feed support identities into tournament laws and LRC residue packets.
+### Live work: classify support/collision profiles; study analytic continuation and automatic/Mahler structure; feed typed identities into tournament and LRC laws.
+
 ## Other active portfolio
 
 - **Knots / operation-ready relations:** THM-2176/2191/2281 localize finite
