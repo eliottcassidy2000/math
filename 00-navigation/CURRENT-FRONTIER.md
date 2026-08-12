@@ -57,8 +57,9 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
 - THM-3333/3334 give the raw Gaussian/Farey carrier and fixed-cusp Boolean
   fibres; THM-3335/3339/3341 add typed Pell/Markov, golden-owner, and
   square/triangular U-spine selectors. THM-3336 gives content-weighted
-  primitive Gaussian multiplication; its sufficient-gate reversals compare
-  different saturated planes. None closes an LRC row.
+  multiplication, split-prime charge classes, and a Boolean source groupoid;
+  its gate reversals compare separately saturated decks on different rational
+  planes. None closes an LRC row.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 
