@@ -2,43 +2,54 @@
 id: THM-3346
 title: "U-spine prime-toggle root atlas, two-channel content splitter, and conjugation monodromy"
 status: >
-  RESERVED / UNPROVED PROVISIONAL CANDIDATE UNDER AUDIT.  On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the
   consecutive-parameter Pythagorean U-spine, shared Gaussian prime powers
   split exactly between the difference and reflected-sum channels.  Fixed
   admissible hypotenuse roots form an explicit CRT prime-toggle cube whose
   antipodal quotient is the fixed-hypotenuse parent torsor.  Filling commuting
   toggle squares leaves exactly one conjugation Z/2 monodromy class.  A
   square-triangular Pell row gives two exact Gaussian compositions into its
-  adjacent square-hypotenuse U-spine depths.  No Berggren, LRC, tournament, or
-  JC transfer follows.  Promotion awaits independent hostile audit and exact
-  transcript freeze.
+  adjacent square-hypotenuse U-spine depths, and these bridge grades have
+  unbounded prime-toggle rank.  No Berggren, LRC, tournament, or JC transfer
+  follows.
 source: codex-2026-08-12-u-spine-prime-toggle-atlas
+audit: >
+  An independent arithmetic hostile audit rederived all displayed Gaussian
+  products, gcd channels, primitive radius laws, CRT/root reconstruction,
+  Hensel densities, Pell compositions, folded metric, and unbounded-rank
+  indexing.  An independent topology audit proved the free antipodal cover,
+  projective two-skeleton model, integral homology, small-rank boundary, and
+  weighted combinatorial systole, with separate Smith computations through
+  rank seven.  A third inheritance audit found no canonical duplicate and
+  fixed the dependency and quotient-loss boundary.  Normal, optimized, and
+  stored transcripts byte-match; both recorded hashes match.
 depends_on:
+  - THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone
   - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
   - THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation
+  - THM-3341-u-spine-square-hypotenuse-transplant-and-triangular-plane-torsors
 related:
   - THM-2606-affine-v4-parity-channels-partial-cubes-and-feuerbach-origin
   - THM-2622-affine-torsor-holonomy-fixed-section-spectrum-and-v4-c13-dictionary
   - THM-2753-six-edge-parity-erasure-and-three-matching-resolvent-restoration
   - THM-3173-six-state-free-factor-actions-and-pointed-frame-cube
   - THM-3335-square-triangular-pell-markov-pythagorean-selector
-  - THM-3341-u-spine-square-hypotenuse-transplant-and-triangular-plane-torsors
   - THM-3345-prime-xor-ancestry-path-groupoid-and-source-dependent-berggren-cost
+  - THM-584-complement-is-antipodal-map-level-parity-spectrum
 script: 04-computation/u_spine_prime_toggle_atlas_thm3346.py
 output: 05-knowledge/results/u_spine_prime_toggle_atlas_thm3346.out
-script_sha256: a532efe5554dfcabf525110b40ca7cd08f736f895afffaa30833f77d2e074318
-output_sha256: 1bc292719b0b75023dadc0136d96eb4f70d0467cada05e692e670d2be4d24940
+script_sha256: c65c85bedc1e9ab74aab2b71c26bec7ca06f3e0dd0f3cb9f21a9f8e328846eab
+output_sha256: e9652fbf1a0f1afbfbdea020354bd85ffdbbec79b0326e99349ba1ecc528dd27
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-3346 -- U-spine prime toggles are arithmetic clocks and one topological bit
 
-**RESERVED / UNPROVED PROVISIONAL CANDIDATE UNDER AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-This file is quarantined from the proved dependency graph until its proof,
-exact companion, and hostile boundary have been independently accepted.  It
-makes no literature-priority claim.  Classical sums-of-two-squares, Hensel,
-and Pell facts are assembled here as a repository proof interface.
+No literature-priority claim is made.  Classical sums-of-two-squares,
+Hensel, Pell, and cubical-cover facts are assembled here as a repository
+proof interface.
 
 ## 1. Inheritance, board, and conventions
 
@@ -85,7 +96,7 @@ typed views of one labelled spinor, not interchangeable quotient invariants.
 The canonical hostile is THM-3345's result: knowing a prime toggle and even
 its folded arithmetic weight does not determine a fixed Berggren word or
 cost.  The least-used sidecar is the commuting-square topology implicit in
-THM-3336's raw allocation cube; Section 5 computes what survives its
+THM-3336's raw allocation cube; Section 6 computes what survives its
 conjugation quotient.
 
 ## 2. Shared primes split into exactly two content channels
@@ -120,8 +131,16 @@ gcd(C_r,C_s)=d_+(r,s)d_-(r,s),
 gcd(d_+(r,s),d_-(r,s))=1.                               (8)
 ```
 
-To prove (7), apply THM-3336's content formula to the primitive spinors, or
-take gcds directly in (4)--(5).  For (8), use
+To prove (7), apply THM-3336's content formula to the primitive spinors.  A
+direct Bezout check makes the equality transparent:
+
+```text
+(2r+1)(r+s+1)-(2rs+r+s)=C_r,
+(2r+1)(r-s)+(2rs+r+s+1)=C_r.                           (7a)
+```
+
+Together with the obvious divisibility in (4)--(5), these give the two gcds
+in (7).  For (8), use
 
 ```text
 C_s-C_r=2(s-r)(r+s+1).                                  (9)
@@ -245,7 +264,8 @@ This is global Gaussian conjugation up to a unit.  Indeed the Gaussian gcd
 G_N(t)=gcd_(Z[i])(N,z_t)                                (22)
 ```
 
-has norm `N` up to units and reconstructs the selected factor allocation.
+has norm `N`, is defined up to a unit, and reconstructs the selected factor
+allocation.
 Prime-power by prime-power, a root in (18) selects exactly one of the two
 Gaussian factors above `p_j`; consecutive coordinates make `z_t` primitive,
 so it cannot select both.  Their CRT product has norm `N`, which proves the
@@ -262,7 +282,7 @@ after a compatible unit choice.  Quotienting (17) by (21) therefore recovers
 exactly THM-3334's fixed-hypotenuse parent torsor
 
 ```text
-R_N/<T_1...T_k>  isomorphic to F_2^k/<1>.                (24)
+R_N/(t~N-1-t)  isomorphic to F_2^k/<1>.                  (24)
 ```
 
 The residue `t` is a clock/root address, not itself a parent; (22) followed
@@ -360,6 +380,14 @@ H^1(K_N;Z)=0,
 H^1(K_N;F_2)=F_2.                                       (32)
 ```
 
+Conceptually, `Q_k^(2)` is the two-skeleton of the cubical boundary
+`partial I^k`, and central reflection is the antipodal action on
+`partial I^k isomorphic to S^(k-1)`.  Hence `K_N` is exactly the two-skeleton
+of the induced quotient CW structure on `RP^(k-1)`.  The mod-two class in
+(32) is the deck class, equivalently the restriction of the standard first
+Stiefel--Whitney class.  This is not the one-cell-per-dimension CW structure
+and does not make `K_N` a surface when `k>=4`.
+
 A quotient loop lifts with coordinate-toggle parity vector either all zero
 or all one.  Any one coordinate parity evaluates the class.  Total edge-count
 parity equals `k` times this class and therefore misses it when `k` is even.
@@ -408,25 +436,32 @@ Give coordinate `j` the edge weight
 w_j=log(p_j^e_j).                                       (35)
 ```
 
-If roots differ on a subset `S`, then (25)--(26) give
+Let `d_N` be the quotient metric on the parent torsor induced from this
+weighted raw cube: minimize over the two conjugate lifts of either endpoint.
+For `k>=3`, this is exactly the weighted graph metric on `K_N^(1)`; the
+definition also remains meaningful at the small-rank boundaries.  If roots
+differ on a subset `S`, then (25)--(26) give
 
 ```text
-distance_K([r],[s])
+d_N([r],[s])
  =min(sum_(j in S)w_j,sum_(j notin S)w_j)
  =log min(delta_+(r,s),delta_-(r,s)).                   (36)
 ```
 
 Thus the folded content is literally the weighted geodesic distance invoice
-on the parent graph, not merely an edge colour.  Every essential loop lifts
-from a root to its antipode, toggles every coordinate oddly, and has weighted
-length at least
+on the quotient one-skeleton, not merely an edge colour.  The filled squares
+do not change this graph metric.  For `k>=3`, define the weighted
+combinatorial systole `sys_1^comb` to be the minimum length of an edge loop in
+`K_N^(1)` representing the nontrivial fundamental-group class, equivalently
+the nonzero class in `H_1(K_N;F_2)`.  Every such loop lifts from a root to its
+antipode, toggles every coordinate oddly, and has weighted length at least
 
 ```text
-sys_1(K_N)=sum_j w_j=log N,                              (37)
+sys_1^comb(K_N)=sum_j w_j=log N,                         (37)
 ```
 
 attained by toggling each prime once.  This is torsion energy: the stable real
-homology norm is zero because (32) is torsion.
+homology norm is zero because `H_1(K_N;Z)` is torsion.
 
 ## 8. Pell rows compile two compositions into adjacent square depths
 
@@ -475,19 +510,72 @@ u v            =M_- (t_+ + i(t_++1)).                  (43)
 The second output differs from the `z_(t_+)` convention only by the retained
 leg/unit gauge.  Its contents are exactly `M_+` and `M_-`, so primitive
 Gaussian composition lands on the two adjacent square U-spine spinors.
+Moreover,
+
+```text
+H=C_n,                 gcd(M_-,M_+)=1,
+W_H([u],[v])={M_-,M_+}.                                  (44)
+```
+
+The first equality uses `2R^2=n(n+1)`, the second follows from
+`M_-M_+-(2R)^2=1`, and the folded weight follows from the two contents in
+(43); `W_H` denotes THM-3336's folded weight, not the complex `K_H`.  Since
+`M_-<=M_+`, Section 7 turns the Pell carry itself into the exact
+parent-space geodesic invoice
+
+```text
+d_H([u],[v])=log M_-.                                   (45)
+```
+
+Thus (43) is a factor-to-height compiler: a weighted move inside the grade
+`H` fibre removes one complementary factor, and the two primitive outputs
+have the adjacent square grades `M_-^2` and `M_+^2`.  This need not be one
+prime toggle; the factor can contain several prime-power coordinates.
 
 For the first nondegenerate control `n=8,R=6`, one gets
 
 ```text
 H=145,  M_-=5, M_+=29,  t_-=3, t_+=20,
 u=9+8i, v=12+i,
-u v=5(20+21i),       u conjugate(v)=29(4+3i).            (44)
+u v=5(20+21i),       u conjugate(v)=29(4+3i).            (46)
 ```
 
 The two distinguished parents are `(17,144,145)` and `(143,24,145)`.
 At `n=1,R=1`, they collapse after leg exchange to the same `3-4-5` triangle;
 this is the minimal hostile to distinctness.  No claim is made that (42)
 exhausts every parent of `H` when `H` has additional split-prime choices.
+It is also the sharp metric boundary: `M_-=1`, so (45) gives zero distance.
+
+These bridge grades have unbounded prime-toggle rank.  To see this without a
+new recurrence argument, choose distinct odd rational primes
+`ell_1,...,ell_a`, put `L=product ell_i`, and use THM-3341's square-selector
+root
+
+```text
+M_+=pell_L.                                               (47)
+```
+
+Since `L` is odd, this is the upper coordinate of one positive bridge row;
+write its preceding selector root as `M_-`.  Strong divisibility makes the
+nontrivial integers `pell_(ell_i)` pairwise coprime divisors of `M_+`, while
+Cassini gives `gcd(M_-,M_+)=1`.  Therefore
+
+```text
+omega(H)=omega(M_-M_+)>=omega(M_+)>=a.                  (48)
+```
+
+All these primes split in `Z[i]` by THM-3341's square-selector argument.
+Consequently, for arbitrarily large `k=omega(H)`, the very Pell grades in
+(43) support the complex `K_H` with
+
+```text
+H_1(K_H;Z)=Z/2,
+rank H_2(K_H;Z)=2^(k-4)(k^2-5k+8)-1.                   (49)
+```
+
+The first invariant is persistent conjugation torsion; the second is
+unbounded free square-filling topology.  Neither survives as a nonzero
+Berggren-tree current.
 
 Section 8 unifies four proved carriers without identifying their actions:
 the square-triangular Pell compiler supplies `u`, its universal companion
@@ -497,7 +585,7 @@ Berggren branch word; THM-3341 and THM-3345 already forbid that simplification.
 
 ## 9. Exact consequence and stopping boundary
 
-The candidate proves, if promoted:
+The theorem proves:
 
 1. exact two-channel factorization of every shared U-spine prime power;
 2. a lossless CRT root-coordinate atlas for fixed-hypotenuse factor choices;
@@ -505,7 +593,8 @@ The candidate proves, if promoted:
 4. one conjugation `Z/2` class after all commuting prime squares are filled;
 5. a weighted geodesic and torsion-systole interpretation of folded content;
 6. exact primitive-composition radius invoices; and
-7. a Pell/Markov two-composition bridge to adjacent square U-spine depths.
+7. a Pell/Markov two-composition bridge to adjacent square U-spine depths,
+   occurring at unbounded prime-toggle rank.
 
 It does not prove a global prime-toggle ancestry transducer, an LRC(14) row or
 safety certificate, a tournament orientation, a planar-JC flux, or a new
@@ -516,11 +605,11 @@ height, owner, phase, saturation, labelled columns, and actual consumer data.
 The unweighted topology depends only on `k`; `N`, prime labels, exponents,
 and the metric in (35) are arithmetic sidecars.
 
-## 10. Provisional exact evidence
+## 10. Exact evidence
 
 The companion audits `90,601` exact integer pair identities, `135,150`
-composition-radius rows, `92` modular roots, `188` explicit CRT toggles, `92`
-Gaussian reconstructions, `336` Hensel-lift rows, `132` Pell bridge identities,
+composition-radius rows, `92` modular roots, `188` explicit CRT toggles, `184`
+Gaussian reconstructions, `336` Hensel-lift rows, `154` Pell bridge identities,
 and integral cubical Smith forms through rank seven (with the rank-eight
 closed-form row recorded separately).  Normal and optimized runs byte-match
 the stored transcript.  Reproduce with
@@ -530,5 +619,5 @@ python3 04-computation/u_spine_prime_toggle_atlas_thm3346.py
 python3 -O 04-computation/u_spine_prime_toggle_atlas_thm3346.py
 ```
 
-Promotion still requires final independent hostile acceptance and repository
-truth-surface checks.
+The universal claims rest on the displayed proofs; the finite sweeps are
+hostile and reproducibility evidence rather than replacements for them.
