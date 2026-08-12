@@ -164,6 +164,12 @@ independent second floor witness after THM-3337. The first pointwise value
 not settled by (7) and the earlier odd/near-shell-top constructions is now
 `n=16`.
 
+**Later supersession.** The last sentence was the frontier at this theorem's
+checkpoint. THM-3340 now proves `T_opt(n)=n+1` for every positive integer;
+there is no unresolved pointwise value. The simultaneous horizon-16 profile
+and opposite-shell defect cancellation proved here remain strictly stronger
+finite Pareto information than that pointwise statement.
+
 ## 6. Exact audit and scope
 
 ```bash

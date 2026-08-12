@@ -9,5 +9,7 @@ M32_one_sided_donor_counts=(1, 22, 316, 2908, 19384, 99664, 411100, 1396978, 398
 finite_profile=T_M(1)=M; T_M(n)=n+1 for 2<=n<M
 rotation_bijection=PASS
 unmatched_injection=PASS
+strong_one_sided_half_capacity=PASS
+closed_discrepancy_factorization=PASS
 layer_bisection=PASS
-source_sha256=1227671734cceda19647199286df6fa9fef8579cf06fa24dfb971b89bd95c637
+source_sha256=961b0cedfc2aa8f18247c8f58a5629882f0c27809cfec4fe40ad206287b4d1cc

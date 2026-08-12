@@ -62,17 +62,35 @@ def layer_data(M: int, weight: int):
 
 
 def audit_coefficients(M: int) -> None:
+    m = M - 2
+    a = []
+    for k in range(m + 1):
+        value = sum(comb(2 * i, k - 1) for i in range(m // 2)
+                    if 0 <= k - 1 <= 2 * i)
+        a.append(value)
+        if m >= 2 and k >= 1:
+            require(2 * value + (a[k - 1] if k else 0) == comb(m, k),
+                    f"A_m coefficient recurrence failed M={M}, k={k}")
     for weight in range(1, M):
         capacity, even, odd, defect, repair = layer_data(M, weight)
+        k = weight - 1
+        require(defect == a[k] + a[m - k],
+                f"closed discrepancy factorization failed M={M}, k={k}")
+        require(a[k] <= comb(m - 1, k) if k <= m - 1 else a[k] == 0,
+                f"first hockey-stick bound failed M={M}, k={k}")
+        require(a[m - k] <= comb(m - 1, k - 1) if k >= 1 else a[m] == 0,
+                f"second hockey-stick bound failed M={M}, k={k}")
         require(even + odd + 2 * capacity == comb(M, weight),
                 f"partition failure M={M}, w={weight}")
         require(defect % 2 == 0, f"defect parity failure M={M}, w={weight}")
         require(repair == capacity - defect // 2,
                 f"repair identity failure M={M}, w={weight}")
-        require(0 <= defect <= 2 * capacity,
-                f"rotation-capacity bound failed M={M}, w={weight}")
+        require(0 <= defect <= capacity,
+                f"strong one-sided capacity bound failed M={M}, w={weight}")
         require(0 <= repair <= capacity,
                 f"repair outside one donor branch M={M}, w={weight}")
+        require(2 * repair >= capacity,
+                f"repair used less than half the donor class M={M}, w={weight}")
         require(even + repair == comb(M, weight) // 2,
                 f"layer bisection failed M={M}, w={weight}")
 
@@ -170,6 +188,8 @@ def main() -> None:
     print("finite_profile=T_M(1)=M; T_M(n)=n+1 for 2<=n<M")
     print("rotation_bijection=PASS")
     print("unmatched_injection=PASS")
+    print("strong_one_sided_half_capacity=PASS")
+    print("closed_discrepancy_factorization=PASS")
     print("layer_bisection=PASS")
     print("source_sha256=" + source_hash)
 

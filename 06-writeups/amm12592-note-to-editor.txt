@@ -277,14 +277,25 @@ single linear envelope is a hull over a self-similar staircase.
     floor n+1         2  3  4  5  6  7  8   9  10  11  12  13  14  15  16
     Theorem (part c)  2  3  4  6  7  7  8  12  15  15  15  15  15  15  16
     dyadic contrast   2  4  4  8  6  8  8  16  10  12  12  16  14  16  16
-    best known        2  3  4  6  6  7  8  12  10  12  12  15  14  15  16
-    optimal?          y  y  y  ?  y  y  y   ?   y   ?   y   ?   y   y   y
+    pointwise optimum 2  3  4  5  6  7  8   9  10  11  12  13  14  15  16
+    proved?           y  y  y  y  y  y  y   y   y   y   y   y   y   y   y
 
-("Best known" minimizes over the two methods separately; no single method
-attaining the whole row is known, and on the shell m = 4 we know none exists.
-The optimum T(n) = n+1 is settled at every odd n and at n = 2^{r+1} - 2.  The
-first undetermined value is T(4), which is 5 or 6, with 6 optimal among
-shell-balanced methods.)
+(The last two rows are pointwise; the optimizing method may depend on n.  No
+single method attaining the whole row is asserted.  The value 6 remains
+optimal at n=4 only inside the shell-balanced class.)
+
+POINTWISE ADDENDUM.  For every dyadic M there is one exactly fair method with
+
+    T_M(1)=M,        T_M(n)=n+1 for 2<=n<M.
+
+Color both orientations heads when n>=2 is even and tails when n>=3 is odd.
+In a fixed weight layer, left cyclic rotation bijects odd-n words with the
+even-n words ending in their initial bit.  The unmatched even words inject
+into the n=1 layer by rotating left n-1 places.  Lucas parity then shows that
+one orientation of the delayed n=1 branch has enough integer capacity to
+bisect the layer exactly.  Splicing this finite prefix into the old checksum
+tail preserves fairness.  Choosing M>n proves T_opt(n)=n+1 for every n.  The
+method depends on the target, so this does not settle the uniform constant C*.
 
 (3) THE DYADIC STRUCTURE IS FORCED.  Call [N, N+l) a BLOCK if a method
 decides every critical value in it by flip N+l, and BALANCED if every
@@ -410,8 +421,9 @@ to 0 at n = 2^{r+1} - 2 and n = 2^{r+1} - 1.  Whether it is solvable with
 d_n = gamma*n + O(1) for some gamma < 1 is exactly the question asked, with
 C* = 1 + inf gamma.  For C = 1 the W_n range over a fixed finite set of
 polynomials, which is why we expect a rigidity argument to refute that case;
-and individual small values -- e.g. whether T(4) = 5 is attainable by any
-method at all -- are finite feasibility questions.
+The individual pointwise values are now all settled.  The remaining finite
+questions concern simultaneous Pareto profiles and whether their defect
+transfers can be made compatible with one uniform asymptotic envelope.
 
 We would be glad to learn what value of C the proposer has in mind, and
 whether the intended reading of Cn + D is uniform or asymptotic.

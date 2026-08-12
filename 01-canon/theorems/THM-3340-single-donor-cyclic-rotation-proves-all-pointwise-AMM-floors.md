@@ -10,6 +10,8 @@ status: >
   each Hamming layer. Left cyclic rotation bijects odd branches with the even
   branches ending in their initial bit. The unmatched even branches inject
   into the n=1 layer, proving the exact repair capacity 0<=r_w<=C(M-2,w-1).
+  A second polynomial factorization sharpens the unmatched defect to at most
+  one donor orientation, hence C(M-2,w-1)/2<=r_w<=C(M-2,w-1).
   Choosing M>n proves T_opt(n)=n+1 for every n>=2; M=2 handles n=1. Thus the
   pointwise optimum is exactly n+1 for every positive integer n. This does
   not construct one extractor attaining all floors simultaneously.
@@ -23,8 +25,8 @@ related:
   - THM-3338-horizon16-cross-shell-surgery-closes-the-first-fifteen-pointwise-AMM-values
 script: 04-computation/amm12592_single_donor_all_pointwise_floors_thm3340.py
 output: 05-knowledge/results/amm12592_single_donor_all_pointwise_floors_thm3340.out
-script_sha256: 1227671734cceda19647199286df6fa9fef8579cf06fa24dfb971b89bd95c637
-output_sha256: 35cf34274418caa4ab1ac6b5c0b8d9bf62f79b39160fb62d31431c3e11cec7c2
+script_sha256: 961b0cedfc2aa8f18247c8f58a5629882f0c27809cfec4fe40ad206287b4d1cc
+output_sha256: 67381c3442c2bb8ca87e93a0e86f3793c5824855cbe396d3ae2060edd1822841
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -133,6 +135,47 @@ The rotation lemma gives
 ```text
 0<=r_w<=A_w.                                                       (8)
 ```
+
+There is also a sharper algebraic certificate. Put `m=M-2` and let
+
+```text
+F_M(x)=sum_(n=2)^(M-1) (-1)^n
+       (1+x^(n-1))(1+x)^(M-n-1)=sum_(k=0)^m f_k x^k.              (8a)
+```
+
+Thus `f_(w-1)=E_w-O_w`. A geometric-series calculation factors
+
+```text
+F_M(x)=A_m(x)+x^m A_m(1/x),
+A_m(x)=((1+x)^m-1)/(x+2)
+      =x sum_(i=0)^(m/2-1) (1+x)^(2i).                           (8b)
+```
+
+If `a_k=[x^k]A_m(x)`, then
+
+```text
+a_k=sum_(i=0)^(m/2-1) binom(2i,k-1),
+f_k=a_k+a_(m-k).                                                   (8c)
+```
+
+The hockey-stick identity gives
+
+```text
+a_k<=binom(m-1,k),       a_(m-k)<=binom(m-1,k-1),
+```
+
+so `0<=f_k<=binom(m,k)=A_(k+1)`. Moreover `f_k` is even: modulo
+two, multiplying (8a) by `x` and using
+`(1+x)^M=1+x^M` makes every coefficient vanish. Consequently (7) actually
+obeys the stronger interval
+
+```text
+A_w/2<=r_w<=A_w.                                                   (8d)
+```
+
+The rotation proof supplies the conceptual injection; (8a)--(8d) supply an
+independent closed coefficient certificate and show that at least half of
+the chosen `01` donor orientation is always used.
 
 There are exactly `A_w` words of weight `w` beginning `01`. Order their
 last `M-2` bits lexicographically within their weight class and declare the

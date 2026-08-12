@@ -1,9 +1,10 @@
 # The AMM 12592 minimal-C frontier: what is now known (death-star, 2026-07-30)
 
-> **Living synthesis — refreshed 2026-07-30 during the coinC session.** Canon
-> truth lives in THM-2160, THM-2225, THM-2966, THM-2967 and HYP-9061; this
-> document is the connective narrative. Lane C/D/E results are integrated as
-> they land.
+> **Living synthesis — refreshed 2026-08-12.** Current canon routes through
+> THM-2160, THM-2225, THM-2966, THM-3006/3009, THM-3032, and
+> THM-3337/3338/3340. THM-3340 closes every *pointwise* value at
+> `T_opt(n)=n+1`; the uniform-envelope question HYP-9061 remains open. Older
+> lane prose below is provenance and does not override those theorems.
 
 ## 0. The problem
 
@@ -18,8 +19,10 @@ question (HYP-9061):
 > **(Q)** What is `C* = inf{C : exists D and a fair extractor with
 > T(n) <= Cn + D}`?
 
-All classical schemes give `C = 2`. Before this session nothing below 2 was
-known impossible beyond the trivial `T(n) >= n+1`.
+The original classical schemes give `C=2`. Later within-shell constructions
+break slope two at finite scales, and THM-3009 gives the golden archimedean
+lower wall only inside the balanced-block class. The global value of `C*`
+remains open.
 
 ## 1. The spine normal form (THM-2966, PROVED)
 
@@ -110,10 +113,10 @@ Hand analysis of smarter routings (along-the-cone-edge hopping with
 same-side opposite-sign corner pairing, debris merging, escape cascades
 along the capacity-1 edge corridor) neither closes nor excludes rates
 arbitrarily close to `gamma = 0`: the accounting requires the exact LP that
-the certificate presumably dualizes. The decisive finite experiments are
-lane C (exact truncated feasibility of `T(4)=5`-type envelopes with
-rational Farkas certificates) and lane D (exact ledger simulation of
-corner routing at `gamma in {1/2, 0.6, 0.75, 0.9}`).
+the certificate presumably dualizes. Lane C's pointwise question is now
+closed by THM-3337/3338/3340. The decisive experiments that survive must
+control one extractor uniformly: multiscale donor transport, exact residual
+recurrences, or global Farkas certificates outside the balanced-block class.
 
 ## 5. Lane results
 
@@ -124,7 +127,8 @@ corner routing at `gamma in {1/2, 0.6, 0.75, 0.9}`).
   exactly at block openers `m = 2^k`; `C = 2` is pinned by openers.
   Artifacts: `04-computation/amm12592_checksum_spine_ledger_laneA_deathstar.py`.
 - **Lane B (DONE, referee 12/12; draft secured):** THM-2967 above.
-- **Lane C (pending):** small-`n` envelope frontier.
+- **Lane C (DONE, THM-3340):** every pointwise optimum is `n+1`. This does
+  not provide one simultaneous floor profile and does not determine `C*`.
 - **Lane D (DONE):** three PROVED ingredients — (i) band geometry: at
   `gamma<1` the anti-diagonal positions `o in [d_m+2, m-1]` are cell-free
   for every row forever (band birth `m* ~ (D0+2)/(1-gamma)`; never opens at
@@ -138,7 +142,9 @@ corner routing at `gamma in {1/2, 0.6, 0.75, 0.9}`).
   tested `gamma < 1` (`1/2..99/100`), while `gamma = 1` amortizes
   doubly-exponentially. Empirical critical `gamma = 1`, i.e. **C* = 2**
   pending (a) policy-independence of the freeze and (b) the band-value
-  quasi-conservation theorem. Lane D also shows single-bias / parity-free
+  quasi-conservation theorem. **Later status:** the policy-independent
+  conclusion did not land in canon; THM-3006/3009 and the cross-shell donor
+  results supersede `C*=2` as a current forecast. Lane D also shows single-bias / parity-free
   LP tests can never obstruct, so a genuine lower bound must couple >= 2
   biases with integrality — precisely certificate (27)'s form; and
   `p_B` sits within 2.7% of the band edge `6592/9049`.
