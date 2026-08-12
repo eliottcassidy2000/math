@@ -217,6 +217,20 @@ Berggren tree.  Freezing one basepoint arrow per colour creates nonzero words
 only by composing arrows with mismatched sources.  Those defects are not a
 tree `H^1` class.
 
+The first eight-parent record at `c=99905` expands the path costs to `238` and
+the depth jumps to `216`, but the sharper result is infinite.  For `s>=1`, the
+U-spine row at `t=25s+1` has a prime-5 partner with
+
+```text
+U^(25s) |--> DD U^(s-1) ADD,
+depth jump=24s-4,                  path cost=26s+4.        (5b)
+```
+
+This is a rational transduction on that unary sublanguage.  Combining
+`t=1 mod 25` with the split-prime root conditions by CRT proves that Boolean
+rank and ancestry dispersion are simultaneously unbounded.  A uniform
+source-reading transducer across every Gaussian fibre remains open.
+
 This also sharpens the proposed degree-monoid analogy.  Raw Gaussian norms do
 multiply.  Primitive matrix normalization does not preserve that grading:
 
@@ -293,16 +307,16 @@ owner.  A physical use must retain the current orbit as part of its state.
 1. The square/triangular intersection table is now closed by THM-3341.  Use
    its variable-length Gaussian branch transplant to test whether ancestry
    depth dispersion in square-selector fibres is unbounded quantitatively.
-2. THM-3336 closes the content cocycle and THM-3345 closes its first-fibre
-   ancestry lift: the endpoint groupoid is flat but source-dependent.  Extend
-   the exact path table along the Boolean record ladder and decide whether one
-   uniform source-reading finite-state transducer exists.
+2. THM-3336 closes the content cocycle and THM-3345 proves a flat
+   source-dependent ancestry lift, its first two record tables, and a unary
+   prime-5 transducer.  Decide whether one uniform source-reading transducer
+   works across all Boolean fibres.
 3. Build the exact `6*4` residue/order-current bundle, including the odd/odd
    leg-order normalizer, and test whether its `D4` holonomy has a physical
    LRC owner/phase interpretation.  The flatten-and-preserve route is closed.
-4. Test whether depth and pairwise path-cost dispersion inside rank-`r`
-   Gaussian fibres are unbounded.  The scalar plane label and folded prime
-   weight alone cannot see either statistic.
+4. THM-3345 proves depth and path-cost dispersion are unbounded simultaneously
+   with Boolean rank.  Quantify the full cost distribution and ask whether
+   other fixed split-prime toggles admit comparable regular sublanguages.
 5. For LRC, retain the fixed-cusp integral ancestor and ask for one explicit
    owner/phase/current transport on the canonical typed row.  The Boolean
    rank or residue hexagon by itself is not a spectral-closure certificate.
