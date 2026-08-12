@@ -1,0 +1,26 @@
+LRC14 C13 REFLECTION/GABOR HOSTILE SIDECAR
+status=FINITE-EXACT HOSTILE SIDECAR;not_a_canonical_theorem
+reproduction_command=python 04-computation/lrc14_c13_reflection_gabor_hostile_sidecar_20260812.py
+stored_output=05-knowledge/results/lrc14_c13_reflection_gabor_hostile_sidecar_20260812.out
+dependency_hashes=BEGIN
+5f1258cd19561941de93135b857bc4187435d10bfa0c1ca0be186c3d8e039e0c  04-computation/lrc14_endpoint_origin_k4_horn_partial_scout_20260803.py
+af9c946d7832c8dfc6442846e7616fadb153cda33f4ef5386272671fe856cbe7  05-knowledge/results/lrc14_endpoint_origin_k4_horn_partial_scout_20260803.out
+dependency_hashes=END
+universe=THM3285_unit_subatom;(clock,sigma,tau)=(1,0,3);addresses=(3454614, 3454627, 4143978);endpoint_origins=F13^2=169;certified_fields=2
+reflection=r(a,b)=(a,2a-b)_mod13;fixed_points=13;two_cycles=78;fixed_locus=b=a
+matrix=direct_sum_over_addresses(D_v*J_r*D_v);J_r[e_(a,b)]=e_(a,2a-b);D_v=typed_common_origin_mask_across_both_certified_fields
+factor_sidecars=(E3,clock,q1,q2,c2,c3);source_signatures=((False, True, True, True, False, True), (True, True, True, True, True, True), (False, True, True, True, True, True));target_signatures=((True, True, True, True, True, True), (True, True, True, True, True, True), (True, True, True, True, True, True))
+raw_support_rows_(address,field,left,right)=((3454614, 352341050142921841, 169, 169), (3454614, 956354278959359281, 169, 169), (3454627, 352341050142921841, 169, 169), (3454627, 956354278959359281, 169, 169), (4143978, 352341050142921841, 0, 169), (4143978, 956354278959359281, 0, 169))
+origin00_provenance_(address,field,(left,right))=((3454614, 352341050142921841, (93139741941715911, 55846846208753388)), (3454614, 956354278959359281, (752032664919432295, 889340730416083895)), (3454627, 352341050142921841, (217164758098570837, 9366449861706094)), (3454627, 956354278959359281, (240770923428182654, 330542147584671122)), (4143978, 352341050142921841, (0, 199849486328444172)), (4143978, 956354278959359281, (0, 444326171470978060)))
+bank_sha256_rows_(address,field,digest)=((3454614, 352341050142921841, '557fffb23906031614503a066486392439b2d2221ebe61f0c0511e2b92be0012'), (3454614, 956354278959359281, '63bfe1c227eca9a88fb1631a2696439dbfd977d8eaf698c821f607477d3a275d'), (3454627, 352341050142921841, '7902c14f7c84bf553249c986d0c3ca73048f48110e71ebae012724866b8603da'), (3454627, 956354278959359281, 'c6a8e784ff6755c1d89774d168b97b485ebae5a44c5a535f60b34fb9e996eeb4'), (4143978, 352341050142921841, '8f62ce718e1aa652ea7d0f4d1ab4d3965c08a1c0ebecd338e0f5508e0364bfd8'), (4143978, 956354278959359281, '4f7e8d7c06c4e0eb234a3768969b50d9347de3c926f11bf3afab3b2d3238fc47'))
+typed_support_rows_(address,source_gate,target_gate,common_origins)=((3454614, False, True, 0), (3454627, True, True, 169), (4143978, False, True, 0))
+block_inertia_rows_(address,nplus,nminus,nzero,active_fixed,active_pairs,frobenius_sq)=((3454614, 0, 0, 169, 0, 0, 0), (3454627, 91, 78, 0, 13, 78, 169), (4143978, 0, 0, 169, 0, 0, 0))
+total_inertia_(nplus,nminus,nzero)=(91, 78, 338);trace=13;frobenius_sq=169
+heisenberg_gauge=f'(x)=c*zeta^(u.x)*f(x+s);exhausts_all_s,u_in_F13^2_and_nonzero_scalar_for_full_support
+identity_positive_controls_(field,left,right)=((352341050142921841, True, True), (956354278959359281, True, True))
+reflection_covariance_rows_(field,((case,strict_matches,covariances),...))=((352341050142921841, (('L_to_reflected_L', 13, ()), ('R_to_reflected_R', 13, ()), ('L_to_reflected_R', 0, ()), ('R_to_reflected_L', 0, ()))), (956354278959359281, (('L_to_reflected_L', 13, ()), ('R_to_reflected_R', 13, ()), ('L_to_reflected_R', 0, ()), ('R_to_reflected_L', 0, ()))))
+PASS_NEGATIVE=middle_support_is_reflection_invariant_but_neither_middle_bank_nor_left_right_swap_lies_in_its_reflected_exact_finite_Heisenberg_orbit_in_either_certified_field
+VERDICT=the_(91,78,338)_support_inertia_is_an_involution_orbit_constant_that_fires_on_the_hostile_middle_fibre_while_both_outer_typed_blocks_are_zero;no_native_Anthropic_inertia_to_LRC_transfer
+scope=one_canonical_THM3285_unit_subatom;address_and_outer_co-support_sidecars_retained;no_row_exclusion;no_owner_current_or_exit;no_LRC14
+source_ast=(assert_nodes=0,float_literals=0)
+ALL EXACT CHECKS PASSED
