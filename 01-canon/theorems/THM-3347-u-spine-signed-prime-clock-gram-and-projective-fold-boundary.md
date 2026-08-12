@@ -21,6 +21,9 @@ related:
   - THM-584-complement-is-antipodal-map-level-parity-spectrum
 script: 04-computation/u_spine_signed_clock_gram_thm3347.py
 output: 05-knowledge/results/u_spine_signed_clock_gram_thm3347.out
+script_sha256: be404501fb1e0f5e222f85d46e60487cdbcb06ed0a1a365a02f25c26a9d78da4
+output_sha256: 5e7e9ad9a26db55ca3c6846dee71136171f14b9a90a3a59540da29c6f3390568
+hash_basis: working-tree bytes (LF)
 ---
 
 # THM-3347 -- Signed prime clocks are Hilbertian before the antipodal fold
@@ -46,6 +49,16 @@ one has
 gcd(C_r,C_s)=d_-(r,s)d_+(r,s),
 gcd(d_-(r,s),d_+(r,s))=1.                              (3)
 ```
+
+Here `z_t` is the consecutive Euclid spinor and
+
+```text
+Phi(z_t)=(2t+1,2t(t+1),C_t)                            (3a)
+```
+
+is a primitive Pythagorean triple with inradius `t`.  Thus the prime clocks
+below live simultaneously on a sum-of-two-squares norm and on the U-spine of
+primitive right triangles.
 
 The difference channel records equal local roots of `-1`; the reflected-sum
 channel records opposite roots.  THM-3336 supplies the underlying Gaussian
@@ -129,9 +142,12 @@ kappa(r,s)=Lambda(r,s)/sqrt(log C_r log C_s)             (10)
 ```
 
 is positive semidefinite and lies in `[-1,1]`.  Equality in absolute value
-means collinearity of the clock-feature vectors.  On positive U-spine
-indices, strict growth of `C_t` makes equality occur only at `r=s`; the
-fixed-grade signed cube considered next reintroduces the conjugate antipode.
+means collinearity of the clock-feature vectors.  For `r,s>=1`, this gives
+`|kappa(r,s)|=1` if and only if `r=s` (and then `kappa=1`).  Indeed collinearity
+forces identical nonzero layer support, hence identical valuations and
+`C_r=C_s`; strict growth on the nonnegative chart gives `r=s`.  The value at
+`t=0` is not normalized because `log C_0=0`.  Allowing negative indices would
+reintroduce conjugate equality, so the chart restriction is load-bearing.
 
 ## 3. A fixed grade is a weighted sign cube
 
@@ -142,6 +158,9 @@ N=product_(j=1)^k q_j,
 q_j=p_j^e_j,                         w_j=log q_j,
 W=sum_j w_j=log N.                                      (11)
 ```
+
+Here `N>1`, the `p_j` are distinct primes congruent to `1 mod 4`, and every
+`e_j>=1`, exactly as in THM-3346.
 
 For the modular root atlas `R_N` of THM-3346, choose CRT signs
 `epsilon_j(t) in {+-1}` and define
@@ -225,8 +244,12 @@ c^T [|Lambda_N|] c=-32 log 5<0.                         (21)
 Therefore `d_N` is not of conditional negative type and `|Lambda_N|` is not
 positive semidefinite.  The first failure is Fourier level four: equal
 weights already give positive level-four coefficients in every rank `k>=4`.
-The theorem does **not** claim failure for every rank-four weight vector.  If
-one weight satisfies `w_j>=sum_(i!=j) w_i`, orient each parent by that sign;
+For `k=2m` that unnormalized quotient coefficient is
+`2 Catalan_(m-2)`; for `k=2m+1` it is `Catalan_(m-1)`.  Expanding the level-four
+Krawtchouk sum and applying Pascal twice reduces it to these Catalan values.
+The theorem does **not** claim failure for every rank-four
+weight vector.  If one weight satisfies `w_j>=sum_(i!=j) w_i`, orient each
+parent by that sign;
 then (16) unfolds to ordinary weighted Hamming distance and is CND.
 
 One tempting geometric reformulation fails with the same witness.  The naive
@@ -265,7 +288,14 @@ and every positive weight vector.  The transform in (24) is strictly
 increasing for `0<=d_N<=W/2`, so it loses no parent-distance information.
 
 On the quotient cube, `Lambda_N^2` has Fourier support exactly at levels zero
-and two.  Its rank is
+and two, directly from
+
+```text
+Lambda_N(x,y)^2=sum_j w_j^2
+ +2 sum_(i<j) w_i w_j chi_{ij}(x-y).                   (25a)
+```
+
+Its rank is
 
 ```text
 1+binom(k,2),                                            (26)
@@ -308,6 +338,11 @@ lossless for the folded content:
 d_N=(W-|Lambda_N|)/2,                                  (29)
 {delta_-,delta_+}={exp(d_N),exp(W-d_N)}.                (30)
 ```
+
+Here `arcosh` is applied entrywise.  Formula (28) follows by product-expanding
+`exp(tau sum_j w_j chi_j)`, averaging it with its antipodal sign reversal so
+only even characters remain, and halving the raw-cube Fourier sum.  Every
+displayed factor is positive.
 
 At `tau=1`, all entries and eigenvalues are rational functions of the integer
 prime powers `q_j`, since `cosh(log q)=(q+q^(-1))/2` and
@@ -391,5 +426,5 @@ python3 04-computation/u_spine_signed_clock_gram_thm3347.py
 python3 -O 04-computation/u_spine_signed_clock_gram_thm3347.py
 ```
 
-Promotion still requires final independent hostile acceptance, a frozen
-normal/optimized transcript, and repository truth-surface checks.
+The frozen normal, optimized, and stored transcripts byte-match.  The hashes
+recorded in frontmatter are for the exact working-tree bytes audited here.
