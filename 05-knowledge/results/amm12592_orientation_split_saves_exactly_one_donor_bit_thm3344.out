@@ -1,0 +1,5 @@
+[PASS] C1 odd-prefix repair: 1004 layers through d=256
+[PASS] C2 exhaustive literal extractors: 270 prefixes, 546 full words through M=16
+[PASS] C3 exact signed cancellation in 8 dyadic annuli
+[PASS] C4 orientation-sign hostile census: 2956 feasible configurations, max v_(1+x)=1
+THM-3344 ORIENTATION-SPLIT AUDIT: ALL CHECKS PASS

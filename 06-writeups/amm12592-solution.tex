@@ -472,6 +472,49 @@ The quantifiers in (***) are important: $M$, hence the method, may depend on
 the target $n$.  This does not produce one method attaining all floors and
 does not determine the asymptotic constant $C^*$ below.
 
+There is nevertheless a single method which attains almost all of these
+floors.  Partition the streams into the dyadic annuli in which the first
+$d=2^r$ bits are constant and the first $M=2d$ bits are not.  Put
+$H=M-1$.  On a nonconstant prefix of length $H$, label both orientations
+
+\[
+ n-d\text{ odd as \head,}\qquad n-d\text{ even as \tail}
+ \quad(d<n<H).
+\]
+
+In a prefix weight layer let $A_w$ count the critical-$d$ words and let
+$D_w=E_w-O_w$ be the signed count already prescribed.  The same rotation as
+above gives $0\le D_w\le A_w$.  Moreover every interior layer of this odd
+prefix shell has odd size, since over $\mathbf F_2$
+\[
+ (1+x)^{d-1}(1+x^d)=(1+x)^{2d-1},
+\]
+and all binomial coefficients in row $2d-1$ are odd.  Therefore
+$A_w-D_w$ is positive and odd.  Select
+\[
+ q_w={A_w-D_w+(-1)^w\over2}
+\]
+critical-$d$ prefixes of weight $w$ as \head.  This is feasible and leaves
+signed prefix count $(-1)^w$ in layer $w$.  Finally label
+$0^H1$ as \head{} and $1^H0$ as \tail.  The exact cancellation is
+\[
+ (1+x)\sum_{w=1}^{H-1}(-1)^w x^w+x-x^H=0.
+\]
+Thus every full $M$-bit composition layer is bisected.  Applying the rule on
+all dyadic annuli gives one fair method with
+\[
+ T(1)=2,\qquad
+ T(n)=\begin{cases}2n-1,&n\ge2\text{ a power of two},\\
+                    n+1,&\text{otherwise}.
+       \end{cases}                                             \tag{****}
+\]
+So a single method meets the pointwise floor away from a zero-density set of
+critical values.  The one-bit donor saving in (****) is sharp if every
+non-donor row is required to stop at its floor: the donor enumerator can be
+made divisible by $1+x$, but its derivative at $-1$ receives magnitude
+$M-2$ from the top row and at most $2$ from the penultimate row, so it is
+never divisible by $(1+x)^2$.
+
 \medskip
 \noindent\textbf{The linear-deadline frame.}
 The proposer's commentary poses the problem of minimizing $C$ such that, for

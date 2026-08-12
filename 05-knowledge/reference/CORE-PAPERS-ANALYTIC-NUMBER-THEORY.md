@@ -52,6 +52,8 @@
   is the resulting AMM continuation with an independent cyclic-rotation proof.
   No analytic statement from the paper is a dependency.
 - **Does not prove:** any AMM 12592, LRC(14), FC, GMC, or Jacobian claim. The
-  proposed `C_13` owner-phase transfer to LRC remains conditional on native
-  address, ancestry, outer co-support, and tail-norm sidecars; raw Gram rank is
-  provably blind to the AMM integer-capacity obstruction.
+  proposed `C_13` owner-phase transfer to LRC fails its first native hostile:
+  the support involution has inertia `(91,78,338)`, but exhaustive tests in
+  both certified fields find no finite-Gabor amplitude covariance and the
+  outer semantic co-support is empty.  Raw Gram rank is likewise blind to the
+  AMM integer-capacity obstruction.

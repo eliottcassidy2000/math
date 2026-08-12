@@ -131,12 +131,13 @@ recurrences, or global Farkas certificates outside the balanced-block class.
   passes in normal and optimized Python modes.
 - **Lane C (DONE, THM-3340):** every pointwise optimum is `n+1`. This does
   not provide one simultaneous floor profile and does not determine `C*`.
-- **Shifted-donor continuation (THM-3343):** one simultaneous extractor now
-  attains `n+1` at every nonpower of two and pays `2n` exactly at powers of
-  two.  The sparse donor deadline is sharp under its alternating interior
-  labels because the repair enumerator is nonzero at `-1`.  The next uniform
-  target is donor splitting or a different interior sign word, not another
-  intact donor translation.
+- **Shifted-donor continuation (THM-3343/3344):** one simultaneous extractor
+  now attains `n+1` at every nonpower of two and pays `2n-1` at powers
+  `n>=2` (`T(1)=2`).  Splitting the two top orientations cancels the donor's
+  value at `-1`, saving exactly one bit.  A derivative obstruction proves
+  `(1+x)`-adic valuation at most one for every shell-composition-exact rule
+  that floors all non-donor rows.  Beating slope two therefore requires
+  cross-annulus residual flow or deliberate slack on some interior rows.
 - **Lane D (DONE):** three PROVED ingredients — (i) band geometry: at
   `gamma<1` the anti-diagonal positions `o in [d_m+2, m-1]` are cell-free
   for every row forever (band birth `m* ~ (D0+2)/(1-gamma)`; never opens at
