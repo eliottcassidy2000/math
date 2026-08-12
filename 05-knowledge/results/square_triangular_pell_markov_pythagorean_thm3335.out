@@ -1,0 +1,59 @@
+THM-3335 SQUARE-TRIANGULAR / PELL / MARKOV / PYTHAGOREAN EXACT AUDIT
+universe: direct triangular scan n<=100000; primitive Euclid m<=500;
+          selector depths k<=30; LRC ladder j=7..13,n<=200;
+          independent exact max replay j=2..13 at n=1
+
+[1] selector/compiler
+  first positive rows (n,q,x,even_root,even_leg,hypotenuse,EW_candidate):
+    k=1: (1, 1, 3, 2, 4, 5, 6)
+    k=2: (8, 6, 17, 12, 144, 145, 146)
+    k=3: (49, 35, 99, 70, 4900, 4901, 4902)
+    k=4: (288, 204, 577, 408, 166464, 166465, 166466)
+    k=5: (1681, 1189, 3363, 2378, 5654884, 5654885, 5654886)
+  direct square-triangular hits through 100000: [(0, 0), (1, 1), (8, 6), (49, 35), (288, 204), (1681, 1189), (9800, 6930), (57121, 40391)]
+  2x2 matrix, affine recurrences, and six rational generating functions: PASS
+
+[2] primitive square-even-leg boundary
+  primitive Euclid hits m<=500: 134; valuation sheets: PASS
+  consecutive intersection: [(2, 1), (9, 8), (50, 49), (289, 288)]
+  hostiles: (5,12,13) gap-one/non-square; (63,16,65) square/non-gap-one;
+            (15,36,39) shows scaling can create a square leg but loses unit gap
+
+[3] fixed-two Markov and parity-typed evaluator
+  first branches (a,b,x,s,ab): [(1, 5, 3, 2, 5), (5, 29, 17, 12, 145), (29, 169, 99, 70, 4901), (169, 985, 577, 408, 166465)]
+  Markov mutation <-> Pell-unit matrix; corrected E/O evaluator: PASS
+  full silver Cassini alternates; even decimation has constant -1: PASS
+
+[4] exceptional sums-of-squares intersections
+  cannonball hits N<=100000: [(1, 1), (24, 70)]
+  70^2 = sum_{r<=12}(2r)^2 + sum_{r<=12}(2r-1)^2 = 2600+2300
+  (29,169) -> (99,4900,4901); bounded Guy-root hits k<=30: [(1, 1, 1, 1), (2, 6, 36, 3)]
+
+[5] tournament gates
+  square-leg skew-EW arithmetic candidates: [2, 6, 146, 4902, 166466] ...
+  square universal-arc-count order AND skew-EW gate through 100000: [(2, 1, 1, 1)]
+  proof factorization leaves only order 2 globally; N=86 -> (13,84,85) is the
+  necessity-only control; its restricted symmetric-ansatz failure does not decide sufficiency
+
+[6] seven-clock LRC benchmark
+  exact ladder (j,M,pair_arg,cell_arg):
+    (7, Fraction(1, 7), Fraction(1, 7), Fraction(1, 7))
+    (8, Fraction(1, 8), Fraction(3, 16), Fraction(3, 16))
+    (9, Fraction(1, 9), Fraction(1, 9), Fraction(1, 9))
+    (10, Fraction(1, 10), Fraction(3, 20), Fraction(3, 20))
+    (11, Fraction(1, 11), Fraction(1, 11), Fraction(1, 11))
+    (12, Fraction(1, 12), Fraction(5, 24), Fraction(5, 24))
+    (13, Fraction(1, 13), Fraction(1, 13), Fraction(1, 13))
+  lower-rung n=1 hostiles: {2: (Fraction(2, 17), Fraction(4, 17)), 3: (Fraction(2, 17), Fraction(3, 17)), 4: (Fraction(2, 19), Fraction(5, 38)), 5: (Fraction(2, 19), Fraction(2, 19)), 6: (Fraction(2, 23), Fraction(2, 23))}
+  j=7..12 same (C,D,owner,F) at n=8: (145, 104, '-c_13', -9319)
+  but exact M values are 1/7,...,1/12; labelled clock placement is essential
+  Kelvin safe cutoffs j<=12/j=13: 591/545; residual Pell depths: 1,8,49,288
+
+[7] stopping boundaries
+  norm 65 collision: represented determinants 1/4, Lorentz shells 2/32;
+  a torus-invariant norm quotient cannot retain the Pythagorean/Farey selector
+  every positive selector coordinate is >=7/3-lacunary: 13-term packets
+  from one selector stream are LRC-safe by THM-928(A'); hard use must be mixed
+
+semantic_digest_sha256=c898ea01e1088275cee826ceed425292159ea1cd2e38f4d587a3c9281223a3e8
+ALL EXACT CHECKS PASS
