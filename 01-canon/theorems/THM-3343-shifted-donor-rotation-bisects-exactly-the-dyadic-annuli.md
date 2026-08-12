@@ -18,6 +18,7 @@ related:
   - THM-2225-dyadic-critical-run-extractors-and-cyclic-checksum-shell-bisection
   - THM-3340-single-donor-cyclic-rotation-proves-all-pointwise-AMM-floors
   - THM-3342-sublinear-deadline-excess-is-impossible-for-fair-critical-run-extractors
+  - THM-3344-orientation-splitting-saves-exactly-one-dyadic-donor-bit
 script: 04-computation/amm12592_shifted_donor_dyadic_annuli_thm3343.py
 output: 05-knowledge/results/amm12592_shifted_donor_dyadic_annuli_thm3343.out
 script_sha256: 6e27307311e093f96b6a935392d6fbb13b72ddfb2344124e6c996169f1ed9a40
@@ -180,6 +181,8 @@ This profile is Pareto-incomparable with THM-2160: it meets every non-dyadic
 pointwise floor, but pays the full factor two at the sparse dyadic donors.
 It makes the uniform obstruction concrete: the cost is concentrated on a
 zero-density handoff spine rather than spread over every critical value.
+THM-3344 subsequently splits the two upper-boundary orientations and saves
+one donor bit while retaining every non-dyadic floor.
 
 ## 5. Sharpness of the donor inside this architecture
 

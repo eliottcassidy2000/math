@@ -194,24 +194,33 @@ dyadic**:
 (1+x)^(M-d)(1+x^d)=1+x^M              in F_2[x].
 ```
 
-Using consecutive endpoints gives one uniform extractor
+Using consecutive endpoints first gives one uniform extractor
 
 ```text
 T(n)=n+1 off the powers of two,       T(2^r)=2^(r+1).
 ```
 
-So the donor-handoff problem is no longer existential.  Its obstruction is
-sharper: for the alternating interior coloring, the forced donor enumerator
-has `R(-1)=+-1`, hence no factor `1+x`; at least one donor stream must inspect
-the final annulus bit.  Moving the donor concentrates all factor-two cost on
-a zero-density spine, but does not reduce the worst slope.
+THM-3344 then splits the two orientations at the upper boundary.  This
+cancels `R(-1)` and lets the donor stop one bit earlier:
+
+```text
+T(1)=2;  T(n)=n+1 off powers of two;  T(2^r)=2^(r+1)-1 for r>=1.
+```
+
+The gain is exactly one bit in the whole shell-local floor-interior class.
+Once `R(-1)=0`, the derivative receives magnitude `M-2` from the last row
+and at most two from the penultimate row, so `R'(-1)!=0`.  No choice of
+orientation signs can create a factor `(1+x)^2`.  Moving the donor therefore
+concentrates the factor-two asymptotics on a zero-density spine but does not
+reduce the worst slope.
 
 ## 5. What remains open in AMM
 
 Pointwise difficulty is gone, and a simultaneous shifted donor now exists.
 The remaining problem is to **split or smooth** its sparse factor-two cost.
-Merely moving an intact donor from one dyadic boundary to the next cannot do
-this: THM-3343's `R(-1)!=0` forces the full upper endpoint.
+THM-3344 proves that sign changes confined to floor-stopped interior rows can
+save at most one additive bit; a slope improvement must let residual cross an
+annulus boundary or spend slack on some interior rows.
 
 The sharp next idea is a **donor handoff automaton**. Interpret
 `A_m(x)` and its reciprocal as the two residual channels after a dyadic
@@ -221,10 +230,10 @@ two-state carry relation to compare with THM-3009's golden capacity wall.
 
 Cheap probes:
 
-1. change the interior parity word so the donor residual acquires a high
-   `(1+x)`-adic valuation;
-2. split one donor across two or more future annuli and retain the signed
+1. split one donor across two or more future annuli and retain the signed
    residual channel instead of closing it immediately;
+2. allow a sparse set of interior rows one extra bit and test whether their
+   derivative contributions cancel the `M-2` top-row leak;
 3. test whether those residual factors close under two states or require a
    growing state space;
 4. derive the spectral radius of the exact carry matrix and compare it with
