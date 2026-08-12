@@ -6,8 +6,9 @@ Universe
 * every pair 0 <= r,s <= 300 for the unrestricted Hensel-layer Gram law;
 * all positive integer weight tuples through 8 in ranks 1,2,3 for the
   low-rank conditional-negative-type boundary;
-* balanced equal-weight ranks 4..10 and dominant-weight controls in ranks
-  4..7 for the antipodal folded metric;
+* balanced equal-weight ranks 4..10, direct Catalan level-four controls
+  through rank 30, and dominant-weight controls in ranks 4..7 for the
+  antipodal folded metric;
 * exact projector and cosh kernels on selected prime-power cubes through
   rank seven;
 * the literal arithmetic hostile N=32045=5*13*17*29, using formal prime-log
@@ -20,7 +21,7 @@ bounded controls and sharp hostile witnesses.
 
 from fractions import Fraction
 from itertools import product
-from math import gcd
+from math import comb, factorial, gcd
 
 
 PAIR_LIMIT = 300
@@ -167,6 +168,56 @@ def cosh_from_ratio(ratio):
     return (ratio + 1 / ratio) / 2
 
 
+def catalan(index):
+    return comb(2 * index, index) // (index + 1)
+
+
+def equal_weight_level_four_coefficient(dimension):
+    """Exact quotient coefficient via the level-four Krawtchouk sum."""
+    total = 0
+    for weight in range(dimension + 1):
+        krawtchouk = sum(
+            (-1) ** overlap * comb(4, overlap)
+            * comb(dimension - 4, weight - overlap)
+            for overlap in range(5)
+            if 0 <= weight - overlap <= dimension - 4
+        )
+        total += min(weight, dimension - weight) * krawtchouk
+    require(total % 2 == 0, "level-four raw coefficient was not even")
+    return total // 2
+
+
+def even_power_predicted_eigenvalue(weights, full_character, half_degree):
+    """Return the quotient eigenvalue from the parity-constrained multinomial."""
+    dimension = len(weights)
+    target_parities = tuple(
+        1 if full_character & (1 << index) else 0
+        for index in range(dimension)
+    )
+    total_degree = 2 * half_degree
+    coefficient = 0
+
+    def visit(index, remaining, exponents):
+        nonlocal coefficient
+        if index == dimension - 1:
+            exponent = remaining
+            if exponent % 2 != target_parities[index]:
+                return
+            row = exponents + [exponent]
+            term = factorial(total_degree)
+            for value in row:
+                term //= factorial(value)
+            for weight, value in zip(weights, row):
+                term *= weight ** value
+            coefficient += term
+            return
+        for exponent in range(target_parities[index], remaining + 1, 2):
+            visit(index + 1, remaining - exponent, exponents + [exponent])
+
+    visit(0, total_degree, [])
+    return (1 << (dimension - 1)) * coefficient
+
+
 def roots(n):
     return tuple(t for t in range(n) if C(t) % n == 0)
 
@@ -281,6 +332,15 @@ def main():
         balanced_obstructions.append(
             (dimension, min(value for level, value in positives if level == 4)))
 
+    catalan_controls = 0
+    for dimension in range(4, 31):
+        half = dimension // 2
+        expected = (2 * catalan(half - 2) if dimension % 2 == 0
+                    else catalan(half - 1))
+        require(equal_weight_level_four_coefficient(dimension) == expected,
+                "all-rank Catalan level-four formula failed")
+        catalan_controls += 1
+
     # A dominant coordinate supplies a canonical hemisphere section.  In the
     # chart fixing that bit to zero, folded distance is ordinary Hamming on
     # all remaining coordinates and is therefore CND.
@@ -310,6 +370,8 @@ def main():
     raw_gram_fourier_checks = 0
     cosh_rows = 0
     cosh_fourier_checks = 0
+    tensor_rows = 0
+    tensor_fourier_checks = 0
     for prime_powers in COHOM_CUBES:
         dimension = len(prime_powers)
         # Use integer weights here.  The identities are polynomial in the
@@ -392,6 +454,34 @@ def main():
                     "cosh kernel spectrum was not strictly positive")
             cosh_fourier_checks += 1
 
+        # Even tensor powers expose exactly even characters through level 2m.
+        for half_degree in range(1, 5):
+            tensor_values = []
+            for representative in reps:
+                signed = total - 2 * weighted_hamming(weights, representative)
+                tensor_values.append(signed ** (2 * half_degree))
+                tensor_rows += 1
+            observed_rank = 0
+            for character in range(1 << (dimension - 1)):
+                full = even_full_character(character)
+                observed = quotient_walsh(tensor_values, character)
+                expected = even_power_predicted_eigenvalue(
+                    weights, full, half_degree
+                )
+                require(observed == expected,
+                        "even tensor multinomial spectrum failed")
+                should_be_positive = popcount(full) <= 2 * half_degree
+                require((observed > 0) == should_be_positive,
+                        "even tensor support boundary failed")
+                observed_rank += int(observed > 0)
+                tensor_fourier_checks += 1
+            expected_rank = sum(
+                comb(dimension, 2 * level)
+                for level in range(min(half_degree, dimension // 2) + 1)
+            )
+            require(observed_rank == expected_rank,
+                    "even tensor kernel rank failed")
+
     # Literal arithmetic rank-four hostile.  Fix the 5-adic bit to zero and
     # use the all-three character on the quotient chart.
     hostile_n = 5 * 13 * 17 * 29
@@ -436,6 +526,7 @@ def main():
           f"{low_rank_weight_rows}/{low_rank_fourier_checks}")
     print("balanced first-positive level-4 rows (rank,coefficient):",
           balanced_obstructions)
+    print(f"Catalan level-4 formula controls, ranks 4..30: {catalan_controls}")
     print(f"dominant-section rows/Fourier checks: "
           f"{dominant_rows}/{dominant_fourier_checks}")
     print(f"raw fixed-grade Gram Fourier checks: {raw_gram_fourier_checks}")
@@ -443,6 +534,8 @@ def main():
           f"{projector_rows}/{projector_fourier_checks}")
     print(f"cosh rows/strict-positive Fourier checks: "
           f"{cosh_rows}/{cosh_fourier_checks}")
+    print(f"even-tensor rows/Fourier checks: "
+          f"{tensor_rows}/{tensor_fourier_checks}")
     print("rank-four arithmetic hostile N=32045 roots:", hostile_reps)
     print("rank-four hostile forms: d -> 16 log(5), |Lambda| -> -32 log(5)")
     print("ALL EXACT CHECKS PASSED")

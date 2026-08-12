@@ -7,7 +7,7 @@
 1. **Chronology is not truth.** Logs, broadcasts, and reflections can contain a claim and its refutation minutes apart. Resolve status through corrections and repaired canon.
 2. **IDs can collide.** Cite `ID + slug/path`; check frontmatter, current indexes, and remote history before reserving or following a number.
 3. **Keep logical direction visible.** Mark necessary, sufficient, iff, reduction, finite-exact, heuristic, and reserved statements distinctly.
-4. **A quotient owes a loss ledger.** Record source, target, map, preserved predicate, forgotten coordinate, restoration sidecar, and hostile test.
+4. **A quotient owes a loss ledger.** Record source, target, map, preserved/lost data, restoration sidecar, and hostile. Entrywise absolute values and antipodal metric folding need not preserve PSD or negative type (THM-3347, rank-four `N=32045`).
 
 ## Lonely Runner
 

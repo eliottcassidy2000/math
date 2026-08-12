@@ -2,7 +2,7 @@
 id: THM-3347
 title: "U-spine signed prime-clock Gram kernel and projective-fold boundary"
 status: >
-  RESERVED / UNPROVED PROVISIONAL CANDIDATE UNDER AUDIT.  Signed Hensel-branch
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Signed Hensel-branch
   features make the U-spine log-content polarization an exact positive
   semidefinite Gram kernel.  At fixed admissible grade, conjugation is the
   antipode: the naive absolute Gram and folded content distance have a sharp
@@ -10,7 +10,15 @@ status: >
   positively and retain the parent state.  The projective realization embeds
   the cubical quotient but needs its tautological-line sidecar to retain the
   conjugation cover.  No LRC, Berggren, tournament, or JC transfer follows.
-  Promotion awaits independent hostile audit and transcript freeze.
+audit: >
+  Independent arithmetic and topology audits rederived the unrestricted
+  Hensel-layer Gram law, both Hilbert distance invoices, normalized equality
+  scope, fixed-grade Walsh spectra, the universal rank-three boundary, the
+  all-rank Catalan level-four obstruction, and the literal N=32045 hostile.
+  They separately checked the projector, finite even-tensor rank filtration,
+  cosh repair, tautological unit-sphere cover, and quotient-loss typing.
+  Normal, optimized, and stored transcripts byte-match; both recorded hashes
+  match.
 source: codex-2026-08-12-u-spine-prime-clock-gram
 depends_on:
   - THM-3346-u-spine-prime-toggle-root-atlas-and-conjugation-monodromy
@@ -21,18 +29,17 @@ related:
   - THM-584-complement-is-antipodal-map-level-parity-spectrum
 script: 04-computation/u_spine_signed_clock_gram_thm3347.py
 output: 05-knowledge/results/u_spine_signed_clock_gram_thm3347.out
-script_sha256: be404501fb1e0f5e222f85d46e60487cdbcb06ed0a1a365a02f25c26a9d78da4
-output_sha256: 5e7e9ad9a26db55ca3c6846dee71136171f14b9a90a3a59540da29c6f3390568
+script_sha256: c0048e61640598f88e3992579215030c3087c1664d1d07986455546eabe8c01d
+output_sha256: 9dc5417ae300384f837f983f80f0bf656fb5ea16ed1b06fa339c53d19495632e
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-3347 -- Signed prime clocks are Hilbertian before the antipodal fold
 
-**RESERVED / UNPROVED PROVISIONAL CANDIDATE UNDER AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-This file remains quarantined from the proved dependency graph until its
-proof, exact companion, and quotient hostiles receive independent acceptance.
-No literature-priority claim is made.
+The proof below is exact in its stated scopes.  No literature-priority claim
+is made.
 
 ## 1. Inheritance and the connection contract
 
@@ -348,6 +355,63 @@ At `tau=1`, all entries and eigenvalues are rational functions of the integer
 prime powers `q_j`, since `cosh(log q)=(q+q^(-1))/2` and
 `sinh(log q)=(q-q^(-1))/2`.
 
+### 5.3 The finite even-tensor hierarchy
+
+The projector and cosh repairs are the first and the generating-function ends
+of an exact hierarchy.  For `m>=1`, put
+
+```text
+K_(2m)([x],[y])=Lambda_N(x,y)^(2m)
+ =<Psi_N(x)^(tensor 2m),Psi_N(y)^(tensor 2m)>.          (30a)
+```
+
+It is PSD and descends to parents.  Index quotient characters by even subsets
+`A subset {1,...,k}` and define
+
+```text
+P_(2m,A)(w)=sum_(alpha_1+...+alpha_k=2m,
+                      alpha_j=1_A(j) mod 2)
+ (2m)!/(product_j alpha_j!) product_j w_j^alpha_j.      (30b)
+```
+
+The exact unnormalized eigenvalue is
+
+```text
+lambda_A=2^(k-1) P_(2m,A)(w).                          (30c)
+```
+
+Because every `w_j>0`, this is positive exactly when `|A|<=2m` and is zero
+otherwise.  Consequently
+
+```text
+rank K_(2m)=sum_(j=0)^min(m,floor(k/2)) binom(k,2j),    (30d)
+```
+
+and `K_(2m)` is strictly positive definite first at
+`m=max(1,floor(k/2))` among `m>=1`.  The proof expands the `2m` tensor words:
+their odd-occurrence set is precisely `A`; such a word exists exactly in the
+stated range.  Thus degree `2m` sees exactly the even prime-toggle interactions
+through size `2m`.  It is already lossless for the folded arithmetic since
+
+```text
+d_N=(W-K_(2m)([x],[y])^(1/(2m)))/2.                    (30e)
+```
+
+It still loses the oriented content channel.  Finally,
+
+```text
+K_tau=sum_(m>=0) tau^(2m) K_(2m)/(2m)!                 (30f)
+```
+
+explains why cosh activates every even character at once.
+
+Do not confuse algebraic rank with point separation.  The even Veronese map
+`[u]->u^(tensor 2m)` embeds `RP^(k-1)` for every `m>=1`, so already `K_2`
+separates every parent even when its Gram matrix is not strictly PD (the first
+case is rank `7<8` at `k=4`).  Higher `m` adds higher even interactions and
+changes the extrinsic Veronese geometry, not the underlying projective
+topology or cubical skeleton dimension.
+
 ## 6. The projective topology and the sidecar it still needs
 
 Assume throughout this section that `k>=3`; ranks one and two have the fixed-
@@ -392,7 +456,7 @@ ancestry section.
 
 ## 7. Consequence and stopping boundary
 
-The candidate proves, if promoted:
+The theorem proves:
 
 1. an unrestricted PSD U-spine kernel whose entries are signed Gaussian
    content ratios and whose norm is `log C_t`;
@@ -400,7 +464,8 @@ The candidate proves, if promoted:
    channels;
 3. the sharp universal `k<=3` survival and a literal rank-four arithmetic
    hostile for the naive projective fold;
-4. lossless projector and strictly positive cosh kernels at every grade;
+4. a graded even-tensor hierarchy from lossless projector to strictly
+   positive cosh kernel at every grade;
 5. a weighted projective realization of the prime-toggle complex with the
    tautological line as its conjugation sidecar.
 
@@ -415,10 +480,12 @@ certificates.  No Berggren, tournament, Jacobian, or design conclusion follows.
 The companion audits the unrestricted signed-content Gram law and both
 Hilbert distance invoices on all pairs `0<=r,s<=300`; exhausts positive
 integer weight rows through eight in ranks at most three; checks balanced
-level-four obstructions through rank ten and `294,080` dominant-section
-Fourier rows; verifies the raw Gram, quotient-sphere, exact projector and cosh
-spectra through rank seven; and reproduces (19)--(21) using formal prime-log
-coefficient vectors.
+level-four obstructions through rank ten, the Catalan formula through rank 30,
+and `294,080` dominant-section Fourier rows; verifies the raw Gram, quotient-
+sphere, exact projector and cosh spectra through rank seven; checks the even-
+tensor support/rank hierarchy through rank seven across eight cubes and tensor
+half-degree four; and reproduces (19)--(21) using formal prime-log coefficient
+vectors.
 Reproduce with
 
 ```bash
