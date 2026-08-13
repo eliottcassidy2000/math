@@ -11,9 +11,9 @@ ROOT=Path(os.environ.get('LRC_REPO',Path(__file__).resolve().parents[1])).resolv
 TAIL=ROOT/'04-computation/lrc14_connected_low_uniform_high_forest_tail_thm3350.py'
 FAST_PATH=ROOT/'04-computation/lrc_general_reflected_pair_mass_thm3352.py'
 REF_PATH=ROOT/'04-computation/lrc_general_reflected_pair_mass_reference_audit_thm3352.py'
-EXPECTED_TAIL='32587f0b965de7da1096e0f817cee46429ed2842495790cb9d489a21d2ed24c4'
+EXPECTED_TAIL='78daaf73966d283c0c0bafa1c0975684e6167d2ef6375a3abeece4e00cdc87f9'
 EXPECTED_FAST='afd417297131401254769e1ef172d89c109ad2f9a843ea55e2badc3e7891435b'
-EXPECTED_REF='b125427d204bd62d4440891a0e750630987ff5d395950ef5c2318ec86e7e876a'
+EXPECTED_REF='da941a4267147d5442be81ae81880742d2f6b901bfc1d20fb667822402a2950e'
 EXPECTED_CHANNEL='40472e196369baf0db300d96c028c2b7f78836bf8a06373b2170d4769ee9eff4'
 
 def req(x,d):

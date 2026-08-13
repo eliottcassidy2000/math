@@ -12,9 +12,9 @@ from math import gcd
 from hashlib import sha256
 import argparse
 ROOT=Path(__file__).resolve().parents[1]
-# The canonical THM-3352 compiler pins a pre-renumbering tail hash, so this
-# focused sequel obtains the identical feasible-context universe directly
-# from the canonical THM-3350 tail and loads the canonical exact mass engine.
+# This focused sequel obtains the feasible-context universe directly from the
+# canonical THM-3350 tail, avoiding THM-3352's much larger head-bank build,
+# and loads the canonical exact mass engine.
 TAIL=ROOT/'04-computation/lrc14_connected_low_uniform_high_forest_tail_thm3350.py'
 MASS=ROOT/'04-computation/lrc_general_reflected_pair_mass_thm3352.py'
 EXPECTED_TAIL='78daaf73966d283c0c0bafa1c0975684e6167d2ef6375a3abeece4e00cdc87f9'

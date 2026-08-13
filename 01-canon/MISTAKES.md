@@ -9,6 +9,53 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-376 (2026-08-12, disconnected-low frontier routing) -- navigation advertised two reductions absent from its proof package
+
+- **What failed:** the incoming LRC proof-map headline said the primitive
+  `3:5` lane was closed at every dilation and that a repaired Dirichlet
+  reduction left exactly `22,890` affine rays. Its attached theorem note and
+  scripts instead exclude `3:5`, prove only the non-`3:5` `g>=4` cone, and
+  contain no compiler or derivation of the `22,890` count.
+- **First failed implication:** a result anticipated by concurrent work is not
+  inherited evidence. The proof router cannot outrank the exact artifacts it
+  routes to, especially when their declared universe expressly omits the lane.
+- **Repair / strongest survivor:** retain the proved `36,520` component-profile
+  count, complete-multipartite five-edge tree, `q>=8p` physical floor, and
+  non-`3:5` moderate-ratio `g>=4` closure. Restore `3:5` at arbitrary dilation
+  and all other small-ruler `g<=3` channels to OPEN. Treat the proposed
+  `p>=264`/`22,890` reduction as exploratory until its proof and compiler land.
+- **Reusable rule:** a navigation merge must be audited against the universe
+  and exclusions in the routed artifact; never let an anticipated sequel
+  enter the current headline before its certificate.
+
+## MISTAKE-375 (2026-08-12, THM-3352 integration) -- stale dependency pins made both exact replays fail before their audits
+
+- **What failed:** the collision-safe integration of THM-3350/3352 retained
+  the pre-integration SHA-256
+  `32587f0b965de7da1096e0f817cee46429ed2842495790cb9d489a21d2ed24c4`
+  in both THM-3352 replay scripts, although the integrated THM-3350 tail
+  script, both theorem front matters, and the results index consistently use
+  `78daaf73966d283c0c0bafa1c0975684e6167d2ef6375a3abeece4e00cdc87f9`.
+  The argmin replay also retained the pre-integration reference-engine hash
+  `b125427d...` instead of the declared integrated hash `da941a42...`.
+- **Minimal witness / first failed implication:** invoking
+  `lrc14_connected_low_all_heads_universal_forest_thm3352.py --limit 1`
+  raised `RuntimeError(('tail hash', ...))` before constructing even one
+  context.  The independent argmin replay failed first at that tail pin and,
+  after it was repaired, at the stale reference-engine pin.  This was a
+  reproducibility regression, not a counterexample to any overlap or forest
+  inequality.
+- **Repair / strongest survivor:** update only the three dependency pins to
+  the already-declared LF-normalized hashes.  The repaired one-channel compiler
+  reaches its partial semantic output, and the argmin replay reaches its
+  canonical inventory `(4044,261254,4148)`.  The mass engine, expected
+  semantic digests, theorem statements, and mathematical dependencies are
+  unchanged.
+- **Reusable rule:** after integrating a proof family across branches, audit
+  reverse dependency pins, not only each file's own front matter.  A theorem
+  can have internally consistent declared hashes while downstream replay
+  scripts still pin an obsolete parent blob.
+
 ## MISTAKE-374 (2026-08-12, provisional THM-3354 response row) -- localization vanishing was mistaken for an integral polynomial mate
 
 - **What failed:** the provisional D5 comparison record placed the unit
