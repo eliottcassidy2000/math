@@ -8,9 +8,9 @@
 **Disconnected-low reduction.**  The cross-component graph is complete
 multipartite and contains a five-edge tree.  There are exactly `36,520`
 unlabelled component-shape profiles.  Physical overlaps close for `q>=8p`,
-for the all-dilation `3:5` lane, and for every non-`3:5` moderate-ratio
-common dilation `g>=4`; the live small-ruler `g<=3` resonance bank has
-`22,890` affine rays.  See the [frontier note](../07-reflections/lrc14-disconnected-low-geometry-and-g4-tail-20260812.md).
+and for every non-`3:5` moderate-ratio common dilation `g>=4`.  The `3:5`
+lane and the small-ruler moderate-ratio `g<=3` bank remain open; no exact
+`22,890`-ray compiler is frozen.  See the [frontier note](../07-reflections/lrc14-disconnected-low-geometry-and-g4-tail-20260812.md).
 **Scalable quotient.**  Support transfer/Möbius counting reduce `k=3/2` to `26,970/27,163` rows; septimal and located-phase screens cut raw occurrences `21.36b/951.55b -> 2.55b/200.14b`.  These are necessary-state quotients, not physical covers; most location/unit data remain.
 **Status theorem.**  For upward `A`, real maximum is `min(1,tau_H)`, `H=min(A)`: `p` cover variables replace `2^p` cells, losing integer location, threshold coupling, and needle shape.
 **Missing coordinate.**  For drifts `Z`, `P=phi_L(C_E minus union_z D_z)`; aligned completion is `P subset union_(a in A)D_a`.  Compact strict-open seams are pointwise, not a.e.

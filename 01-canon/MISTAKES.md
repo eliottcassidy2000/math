@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-376 (2026-08-12, disconnected-low frontier routing) -- navigation advertised two reductions absent from its proof package
+
+- **What failed:** the incoming LRC proof-map headline said the primitive
+  `3:5` lane was closed at every dilation and that a repaired Dirichlet
+  reduction left exactly `22,890` affine rays. Its attached theorem note and
+  scripts instead exclude `3:5`, prove only the non-`3:5` `g>=4` cone, and
+  contain no compiler or derivation of the `22,890` count.
+- **First failed implication:** a result anticipated by concurrent work is not
+  inherited evidence. The proof router cannot outrank the exact artifacts it
+  routes to, especially when their declared universe expressly omits the lane.
+- **Repair / strongest survivor:** retain the proved `36,520` component-profile
+  count, complete-multipartite five-edge tree, `q>=8p` physical floor, and
+  non-`3:5` moderate-ratio `g>=4` closure. Restore `3:5` at arbitrary dilation
+  and all other small-ruler `g<=3` channels to OPEN. Treat the proposed
+  `p>=264`/`22,890` reduction as exploratory until its proof and compiler land.
+- **Reusable rule:** a navigation merge must be audited against the universe
+  and exclusions in the routed artifact; never let an anticipated sequel
+  enter the current headline before its certificate.
+
 ## MISTAKE-375 (2026-08-12, THM-3352 integration) -- stale dependency pins made both exact replays fail before their audits
 
 - **What failed:** the collision-safe integration of THM-3350/3352 retained

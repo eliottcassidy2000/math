@@ -75,7 +75,8 @@ The two outputs are byte-identical and equal the frozen result.  The script
 pins the canonical THM-3350 tail and THM-3352 exact mass engine by SHA-256.
 
 This is a frontier theorem, not a closure of the disconnected branch.  The
-remaining physical bank consists of the 29 small rulers, moderate ratios
-`P<Q<8P`, and primitive common scales `g=1,2,3`.  A repaired arbitrary-ratio
-Dirichlet block argument gives a further analytic cutoff at raw smaller level
-`p>=264`; its finite affine-resonance compiler remains open.
+remaining physical bank consists of the `3:5` lane at arbitrary dilation and,
+on the 29 small rulers, every other moderate ratio `P<Q<8P` at primitive
+common scales `g=1,2,3`.  An exploratory arbitrary-ratio Dirichlet block
+argument suggests a cutoff at raw smaller level `p>=264`, but no proof or
+finite affine-resonance compiler is frozen here; that reduction is OPEN.
