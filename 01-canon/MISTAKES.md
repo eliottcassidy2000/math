@@ -27,6 +27,14 @@ Format per entry:
 - **Reusable rule:** a navigation merge must be audited against the universe
   and exclusions in the routed artifact; never let an anticipated sequel
   enter the current headline before its certificate.
+- **Superseding evidence (later 2026-08-12):** commit `365f6b8bd` subsequently
+  supplied the two artifacts that were absent at this checkpoint.  The exact
+  symbolic compiler now proves the `3:5` lane at every dilation on all 2,530
+  small-ruler contexts, and the generalized Dirichlet companion proves the
+  `p>=264` reduction and enumerates the 22,890 nonzero-resonance affine cover.
+  This does not make the earlier routing lawful retroactively, and it does not
+  certify the remaining affine rays or finite raw head; it supersedes only
+  the two "artifact absent" status statements above.
 
 ## MISTAKE-375 (2026-08-12, THM-3352 integration) -- stale dependency pins made both exact replays fail before their audits
 

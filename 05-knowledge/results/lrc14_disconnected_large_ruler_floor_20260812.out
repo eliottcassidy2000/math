@@ -1,0 +1,9 @@
+LRC14 DISCONNECTED LARGE-RULER UNIVERSAL PAIR FLOOR
+contexts 1514 rulers 12 endpoint_lanes 180
+P_ge_4_envelope_weakest (Fraction(1179868965463, 947350767068160), (5096, 14, 13))
+P_lt_4_primitive_channels 19 literal_g1_controls 28766
+tail_threshold_histogram ((1, 28766),)
+P_lt_4_tail_weakest (Fraction(23885167, 27322254960), 1, 1, 7, 5096, 2772, 14, 13)
+weakest_literal_margin (Fraction(349997, 61905522), 1, 3, 5, 5096, 2772, 14, 4, Fraction(5720, 631689))
+semantic_sha256 7473cf3d345d1710e4e7f2687444836278c42064d96b74bb5c87a5328c990d05
+conclusion=for every large-ruler context, primitive high P<Q<8P, and g>=1, physical overlap>=1/294
