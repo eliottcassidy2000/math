@@ -1,0 +1,11 @@
+DISCONNECTED RAW HEAD EXACT BULK SCAN
+contexts 2530 tasks 201377 threads 8 failures 0
+context_expected_sha256 efea6bd97522fe1c31a5a88ca9f3223f9e7a8c08e3be85c493e9f62fdfaf06e4
+task_semantic_sha256 2771f2f901f2f052952343fd77412114ae1d1d99543f42539bc28d0f0f1948af
+reference_engine_sha256 afd417297131401254769e1ef172d89c109ad2f9a843ea55e2badc3e7891435b
+context_compiler_sha256 aebfe98ab72f7eb0dc1718dfb17529e5b3f9288c6ed97d57f048bf3b29281f19
+universe g=1..3;gP<264;gcd(P,Q)=1;P<Q<8P;P+Q>=8;all 2530 L<4592 contexts
+g 1 weakest_channel 3 5 mass 158/46397 context 336 174 12 3 margin 49340690507272/210091750350356875
+g 2 weakest_channel 3 5 mass 1258/186873 context 336 174 12 3 margin 39175828493416724/11000413466859691875
+g 3 weakest_channel 3 5 mass 3254/421429 context 336 174 12 3 margin 112895188850181952/24807721002633944375
+global_weakest 1 3 5 mass 158/46397 context 336 174 12 3
