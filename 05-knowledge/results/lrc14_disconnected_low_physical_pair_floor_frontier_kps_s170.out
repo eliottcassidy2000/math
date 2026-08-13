@@ -1,0 +1,10 @@
+﻿LRC14 DISCONNECTED-LOW PHYSICAL PAIR FLOOR FRONTIER
+status=FINITE-EXACT scout + PROVED analytic reductions; universal pair floor OPEN
+contexts 4044 context_semantic_sha256 9f7c7f24f81c409c09becfa921aa53387e5093710657bd3e5a0e935ecf4ea6c2
+cap 80 high_pairs 2983 below_1_over_294 0 minimum (Fraction(158, 46397), 3, 5, 336, 174, 12, 3)
+low_channel_zero_control (168, 90, 1, 10, 3, 2) 0
+large_ratio_gate=5*(L*q-f)>=36*L*(p+1) implies mass>=1/294
+bounded_ratio_common_gcd_gate=d>=19 implies mass>=1/294
+d19_contextual_control_error 673605911/139615031640
+d19_universal_analytic_error 2501969023/426078778720 error_margin_to_3_over_490 106676561/426078778720
+five_edge_Hunter_margin 570672686921/494472037809750

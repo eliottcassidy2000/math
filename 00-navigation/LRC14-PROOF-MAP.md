@@ -9,10 +9,14 @@
 multipartite and contains a five-edge tree.  There are exactly `36,520`
 unlabelled component-shape profiles.  Physical overlaps close for `q>=8p`,
 for the all-dilation `3:5` lane, and for every non-`3:5` moderate-ratio
-common dilation `g>=4`.  The live obligation is the non-`3:5`, small-ruler
-`g<=3` resonance bank.  The proved Dirichlet block reduction leaves a raw
-head `p<264` and `22,890` affine resonance rays; both exact physical
-certificates remain open.  See the [frontier note](../07-reflections/lrc14-disconnected-low-geometry-and-g4-tail-20260812.md).
+common dilation `g>=4`; the independent two-axis compression also closes the
+bounded-ratio band at common gcd at least `19`.  The live obligation is the
+non-`3:5`, small-ruler `g<=3` resonance bank.  The proved Dirichlet block
+reduction leaves a raw head `p<264` and `22,890` affine resonance rays; both
+exact physical certificates remain open.  See the
+[geometric frontier note](../07-reflections/lrc14-disconnected-low-geometry-and-g4-tail-20260812.md)
+and the
+[two-axis compression](../07-reflections/LRC14-disconnected-low-pair-floor-two-axis-compression-kps-S170.md).
 **Scalable quotient.**  Support transfer/Möbius counting reduce `k=3/2` to `26,970/27,163` rows; septimal and located-phase screens cut raw occurrences `21.36b/951.55b -> 2.55b/200.14b`.  These are necessary-state quotients, not physical covers; most location/unit data remain.
 **Status theorem.**  For upward `A`, real maximum is `min(1,tau_H)`, `H=min(A)`: `p` cover variables replace `2^p` cells, losing integer location, threshold coupling, and needle shape.
 **Missing coordinate.**  For drifts `Z`, `P=phi_L(C_E minus union_z D_z)`; aligned completion is `P subset union_(a in A)D_a`.  Compact strict-open seams are pointwise, not a.e.
