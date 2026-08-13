@@ -97,6 +97,14 @@ the three weak `3:5` dilations, `1:7`, cone endpoints, maximal raw levels,
 and reversed orientation. All checks pass; ordinary and optimized Python
 audits are byte-identical.
 
+An independently developed screened compiler gives a second proof on the
+non-`3:5` subuniverse. It uses a downward-rounded `2^56` midpoint screen, an
+unrelated C++ floor-moment port, and 99 three-route literal controls. It
+proves all `509,476,220` non-`3:5` rows exceed `1/294` and finds their exact
+minimum `92/7645` at `(g,P,Q;L,j,e,f)=(1,4,5;168,90,12,6)`. See
+`lrc14_disconnected_low_finite_head_20260812.py`; this is an independent
+audit, not a replacement universe and not an affine-tail argument.
+
 ## Reproduction
 
 From the repository root:
