@@ -74,9 +74,27 @@ Reproduce from the repository root:
 The two outputs are byte-identical and equal the frozen result.  The script
 pins the canonical THM-3350 tail and THM-3352 exact mass engine by SHA-256.
 
-This is a frontier theorem, not a closure of the disconnected branch.  The
-remaining physical bank consists of the `3:5` lane at arbitrary dilation and,
-on the 29 small rulers, every other moderate ratio `P<Q<8P` at primitive
-common scales `g=1,2,3`.  An exploratory arbitrary-ratio Dirichlet block
-argument suggests a cutoff at raw smaller level `p>=264`, but no proof or
-finite affine-resonance compiler is frozen here; that reduction is OPEN.
+## The all-dilation 3:5 lane
+
+The companion
+`lrc14_disconnected_35_small_ruler_symbolic_20260812.py` proves on all 2,530
+small-ruler contexts that
+
+`I(3g,5g) >= 1/294` for every integer `g>=1`.
+
+It splits by the exact period `|5e-3f|`, certifies affine branch
+stabilization, checks every finite head, and minimizes the resulting exact
+quadratic on every residue ray.  There are `56,191` residue classes and the
+largest stabilization point is `g=134`; all cleared margins are strictly
+positive.  The weakest context is `(L,j,e,f)=(336,174,12,3)`, where the
+physical overlap at `g=1` is `158/46397`.
+
+This is a frontier theorem, not a closure of the disconnected branch.  After
+the far-ratio, `3:5`, and `g>=4` certificates, the remaining physical bank is
+exactly the 29 small rulers, moderate non-`3:5` ratios `P<Q<8P`, and primitive
+common scales `g=1,2,3`.  A repaired arbitrary-ratio Dirichlet block argument
+reduces its tail to `22,890` nonzero-resonance affine rays and a finite raw
+head `p<264`; see
+[`lrc14-generalized-dirichlet-resonance-reduction-20260812.md`](lrc14-generalized-dirichlet-resonance-reduction-20260812.md).
+That reduction is proved, but its exact physical ray compiler and finite head
+were still OPEN at the time of this checkpoint.
