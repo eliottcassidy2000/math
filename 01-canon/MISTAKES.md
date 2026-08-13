@@ -9,23 +9,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-375 (2026-08-12, THM-3352 clean replay) -- wrapper scripts pinned a stale dependency hash
+## MISTAKE-375 (2026-08-12, THM-3352 integration) -- stale dependency pins made both exact replays fail before their audits
 
-- **What failed:** both THM-3352 wrapper scripts pinned
-  `32587f0b...` for the THM-3350 uniform-tail dependency. The canonical file's
-  LF-normalized SHA-256 is `78daaf73...`, exactly as THM-3350 and THM-3352's
-  own theorem frontmatter state, so a clean checkout aborted before the exact
-  channel census.
-- **First failed implication:** a stored transcript and correct result hashes
-  do not imply that the committed wrapper can reproduce them. Importing
-  `lrc14_connected_low_all_heads_universal_forest_thm3352.py` raised the
-  dependency-hash `RuntimeError` before `feasible_contexts()` was available.
-- **Repair / strongest survivor:** repin both wrapper gates to the canonical
-  LF hash and replay normal/optimized modes. No mass formula, context, channel,
-  forest, semantic digest, or theorem conclusion changes.
-- **Reusable rule:** dependency hashes are executable proof gates, not
-  commentary. Test every promoted wrapper from a clean checkout even when the
-  dependency's own theorem hash and stored output are correct.
+- **What failed:** the collision-safe integration of THM-3350/3352 retained
+  the pre-integration SHA-256
+  `32587f0b965de7da1096e0f817cee46429ed2842495790cb9d489a21d2ed24c4`
+  in both THM-3352 replay scripts, although the integrated THM-3350 tail
+  script, both theorem front matters, and the results index consistently use
+  `78daaf73966d283c0c0bafa1c0975684e6167d2ef6375a3abeece4e00cdc87f9`.
+  The argmin replay also retained the pre-integration reference-engine hash
+  `b125427d...` instead of the declared integrated hash `da941a42...`.
+- **Minimal witness / first failed implication:** invoking
+  `lrc14_connected_low_all_heads_universal_forest_thm3352.py --limit 1`
+  raised `RuntimeError(('tail hash', ...))` before constructing even one
+  context.  The independent argmin replay failed first at that tail pin and,
+  after it was repaired, at the stale reference-engine pin.  This was a
+  reproducibility regression, not a counterexample to any overlap or forest
+  inequality.
+- **Repair / strongest survivor:** update only the three dependency pins to
+  the already-declared LF-normalized hashes.  The repaired one-channel compiler
+  reaches its partial semantic output, and the argmin replay reaches its
+  canonical inventory `(4044,261254,4148)`.  The mass engine, expected
+  semantic digests, theorem statements, and mathematical dependencies are
+  unchanged.
+- **Reusable rule:** after integrating a proof family across branches, audit
+  reverse dependency pins, not only each file's own front matter.  A theorem
+  can have internally consistent declared hashes while downstream replay
+  scripts still pin an obsolete parent blob.
 
 ## MISTAKE-374 (2026-08-12, provisional THM-3354 response row) -- localization vanishing was mistaken for an integral polynomial mate
 
