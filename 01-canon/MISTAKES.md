@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-374 (2026-08-12, provisional THM-3354 response row) -- localization vanishing was mistaken for an integral polynomial mate
+
+- **What failed:** the provisional D5 comparison record placed the unit
+  observer `theta=[1]` on THM-3348's generic de Rham site while asserting the
+  integral biconditional `polynomial mate iff theta=0`. This silently treated
+  localization as conservative.
+- **Minimal witness / first failed implication:** for
+  `P=x+x^2z`,
+  `D_P=(1+2xz)partial_z-x^2 partial_x`. In the localization at `x`, the
+  rational primitive `Q=1/x` gives `D_P(Q)=1`, so the generic image
+  `theta_gen` vanishes. But THM-3348's exact one-root formula gives
+  `Ann_(K[P])(theta_int)=(P)`, hence `theta_int!=0` in
+  `K[x,z]/D_P(K[x,z])` and no polynomial mate exists.
+- **Repair / strongest survivor:** split the response into the integral record
+  `(K[P] subset R,C_P,theta_int)`, where the mate biconditional is exact, and
+  the generic record `(Spec K(P)[x,g^(-1)],H^1_dR,theta_gen)`, where a mate
+  implies vanishing but the converse fails. The direct coefficient-map no-go
+  of THM-3354 survives; its comparison cospan is explicitly definitional.
+- **Reusable rule:** after localization, distinguish a necessary generic
+  obstruction from an integral existence criterion. Record the kernel of the
+  localization map--here vertical `K[P]`-torsion--before transferring an iff.
+
 ## MISTAKE-373 (2026-08-12, THM-3353 raw Gaussian toggle) -- a parent-torsor edge was stated on gauge-dependent lifts
 
 - **What failed:** the provisional THM-3353 candidate said its rational
