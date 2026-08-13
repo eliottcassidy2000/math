@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-375 (2026-08-12, THM-3352 clean replay) -- wrapper scripts pinned a stale dependency hash
+
+- **What failed:** both THM-3352 wrapper scripts pinned
+  `32587f0b...` for the THM-3350 uniform-tail dependency. The canonical file's
+  LF-normalized SHA-256 is `78daaf73...`, exactly as THM-3350 and THM-3352's
+  own theorem frontmatter state, so a clean checkout aborted before the exact
+  channel census.
+- **First failed implication:** a stored transcript and correct result hashes
+  do not imply that the committed wrapper can reproduce them. Importing
+  `lrc14_connected_low_all_heads_universal_forest_thm3352.py` raised the
+  dependency-hash `RuntimeError` before `feasible_contexts()` was available.
+- **Repair / strongest survivor:** repin both wrapper gates to the canonical
+  LF hash and replay normal/optimized modes. No mass formula, context, channel,
+  forest, semantic digest, or theorem conclusion changes.
+- **Reusable rule:** dependency hashes are executable proof gates, not
+  commentary. Test every promoted wrapper from a clean checkout even when the
+  dependency's own theorem hash and stored output are correct.
+
 ## MISTAKE-374 (2026-08-12, provisional THM-3354 response row) -- localization vanishing was mistaken for an integral polynomial mate
 
 - **What failed:** the provisional D5 comparison record placed the unit
