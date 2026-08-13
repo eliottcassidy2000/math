@@ -1,0 +1,10 @@
+LRC14 arbitrary-ratio Dirichlet d-block reduction exact audit
+perturbation_cap=888;rho_cap_at_tree_corner=2908/22169
+convolution_osc_cap=1/7;derivative_variation_cap=4;control_digest=623fae29e4dc080bf82fb3266ac0a7a4a989f5fb71241f85fef0b3c48a9f83ff
+shifted_derivatives=(('p', 36, 6373, 1926132436047849444791582976), ('L', 20, 8013, 243940218213242440512))
+tree_floor_corner=149164364417/46870975182570;tree_target=186636088362/58865718786875;tree_margin=85330033783953387991/7166476998347435667648750
+pair_floor_corner=230928115352/67372552235625;pair_target=1/294;pair_margin=3539548829/134745104471250
+small_turn_c_strict_cap=83429/1799;integer_abs_c_cap=46
+ray_count_by_d=(644, 1288, 1918, 2548, 3206, 3794, 4452, 5040);nonzero_c_affine_rays=22890;ray_digest=ed1e8d03d1f4a820e52f04448ca5e2ca3abd79e3f1b581191c5fda11d2302f40
+c_zero_primitive_channels=145;excluding_3_5=144;g_le_3_tail_c_zero=0
+status=PROVED reduction; OPEN exact certification of the affine-ray bank and finite p<264 head

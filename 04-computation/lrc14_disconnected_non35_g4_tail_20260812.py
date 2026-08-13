@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Exact scratch proof: all small-ruler non-3:5 high channels close for dilation g>=4.
 
-Uses projective phase floor 1/49-12/(49PQ), THM-3348 midpoint error,
+Uses projective phase floor 1/49-12/(49PQ), THM-3350 midpoint error,
 a one-variable monotone envelope for P>=N_g, and exact error enumeration below N_g.
 Every residual error-bound failure is then checked by the literal mass engine.
 """
