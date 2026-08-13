@@ -5,7 +5,7 @@
 ## 2026-08-12 current control panel
 
 **Status: OPEN.** Projected `k=2,3` caps are `1,579/216`; at `z1=216`, THM-3351 leaves ledger/rows/families `372,917/113/13`, next `gcd72/L720720` on rows `191,228,332`. Corrected THM-2941 leaves `561` reflected-`k=1` bodies. THM-3349 closes all-nine-low two-star dilations; THM-3350/3352 close every one of the `220,254,480` labelled connected-low primitive rays at every common dilation. Arbitrary `k<=1`, disconnected component scales, the rung, and LRC(14) remain open; `q<=25` is false.
-**Disconnected-low reduction.**  The `36,520` realizable component profiles have a complete-multipartite five-edge tree. Large rulers, `q>=8p`, all `3:5` dilations, and non-`3:5` `g>=4` close. OPEN: non-`3:5`, small-ruler `g<=3`; Dirichlet leaves `p<264` plus `22,890` affine rays. See the [frontier note](../07-reflections/lrc14-disconnected-low-geometry-and-g4-tail-20260812.md).
+**Disconnected-low reduction.**  Its `36,520` realizable component profiles have a complete-multipartite five-edge high tree; large rulers, `q>=8p`, bounded-ratio gcd `>=19`, all `3:5`, and non-`3:5` `g>=4` close. The [head-263 certificate](../07-reflections/lrc14-disconnected-head263-finite-exact-certificate-20260812.md) closes all 201,377 raw `p<264` channels by 509,483,810 exact comparisons. OPEN: the `22,890` affine tails; see the [geometric note](../07-reflections/lrc14-disconnected-low-geometry-and-g4-tail-20260812.md).
 **Scalable quotient.**  Support transfer/Möbius counting reduce `k=3/2` to `26,970/27,163` rows; septimal and located-phase screens cut raw occurrences `21.36b/951.55b -> 2.55b/200.14b`.  These are necessary-state quotients, not physical covers; most location/unit data remain.
 **Status theorem.**  For upward `A`, real maximum is `min(1,tau_H)`, `H=min(A)`: `p` cover variables replace `2^p` cells, losing integer location, threshold coupling, and needle shape.
 **Missing coordinate.**  For drifts `Z`, `P=phi_L(C_E minus union_z D_z)`; aligned completion is `P subset union_(a in A)D_a`.  Compact strict-open seams are pointwise, not a.e.
@@ -145,9 +145,7 @@ retain ties and hyperedges otherwise.
 6. Build an owner-labelled relation-overlap hypergraph. Test directed edges
    only when deletion, first exit, or owner transfer gives a real implication;
    otherwise retain the signed hypergraph and its linear rank.
-7. Partition resonance cells only after proving THM-2054's missing lifted
-   plateau; separate its numerical budget from model identification and route
-   nonlifting resonances separately.
+7. Partition resonance cells only after proving THM-2054's missing lifted plateau; keep numerical budget, model identification, and nonlifting routes separate.
 > ## 2026-07-19 S78 CONTINUATION — TWO FINITE FRONTS MOVE, AND THE FANO QUOTIENT IS LOCAL-SURJECTIVE
 >
 > THM-1258 closes the primitive proper AP-centred Hamming-six face at common

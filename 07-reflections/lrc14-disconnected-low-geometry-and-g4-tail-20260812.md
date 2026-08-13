@@ -130,5 +130,9 @@ common scales `g=1,2,3`.  A repaired arbitrary-ratio Dirichlet block argument
 reduces its tail to `22,890` nonzero-resonance affine rays and a finite raw
 head `p<264`; see
 [`lrc14-generalized-dirichlet-resonance-reduction-20260812.md`](lrc14-generalized-dirichlet-resonance-reduction-20260812.md).
-That reduction is proved, but its exact physical ray compiler and finite head
-were still OPEN at the time of this checkpoint.
+That reduction is proved.  The later
+[`head-263 finite-exact certificate`](lrc14-disconnected-head263-finite-exact-certificate-20260812.md)
+closes all 201,377 raw head channels by 509,483,810 exact physical
+comparisons.  The affine-ray tail remains OPEN; its equality face
+`T_infinity=1` must be handled explicitly rather than folded into the strict
+`T_infinity<1` chamber.
