@@ -1,4 +1,4 @@
-# Disconnected-low geometry and the non-3:5 small-ruler g>=4 tail
+# Disconnected-low geometry and reflected pair-floor reductions
 
 Status: PROVED structural/analytic reductions + VERIFIED-EXACT finite
 residual.  The disconnected branch itself remains open.
@@ -15,6 +15,16 @@ THM-3350 are
 Consequently the number of unordered component-shape profiles is
 
 `[x^6] product_(n=1)^5 (1-x^n)^(-c_n)=36520`.
+
+This coefficient counts realizable profiles, not merely formal multisets.
+For each selected normalized connected component, clear denominators and
+divide its internal gcd.  Place the first component at its primitive scale;
+if all coordinates already placed are at most `M`, multiply the next
+component by `6M+1`.  Every new/old ratio is then strictly greater than six,
+so no cross pair is low, while scaling preserves every internal low graph.
+The companion reconstructs the low components of all `36,520` resulting
+six-level sets with zero mismatch (semantic digest
+`9ad5d29562c8aa99fd6b852c8f9786042495cc93cfc5c968df2a42947970e324`).
 
 The cross-component graph is complete multipartite.  Choosing vertices
 `x in V_1`, `y in V_2`, joining `x` to every vertex outside `V_1`, and
@@ -35,7 +45,31 @@ Thus `q>=8p` implies
 `I(p,q) >= 23/4655 = 1/294 + 43/27930`.
 
 The companion `lrc14_disconnected_low_geometry_verify_20260812.py` checks
-the profile ledger, multipartite tree counts, and all displayed exact gaps.
+the connected-shape enumeration, all profile realizations, multipartite tree
+counts, and all displayed exact gaps.
+
+## The large-ruler floor
+
+The cutoff `L>=4592` is now frozen rather than inherited implicitly.  There
+are `1,514` feasible large-ruler contexts on twelve rulers and `180` ordered
+endpoint lanes.  For `P>=4`, the linked projective floor and the same
+one-variable midpoint envelope used below already close at `g=1`; the weakest
+exact envelope margin is
+
+`1179868965463/947350767068160 > 0`
+
+at lane `(L,e,f)=(5096,14,13)`.  Every loss decreases with `P` and with the
+common dilation `g`, so this one corner certifies all `P>=4,g>=1`.
+
+There are only nineteen primitive high channels with `P<4` and `Q<8P`.
+The contextwise midpoint bound closes all `28,766` channel-context rows
+already at `g=1`; its weakest tail margin is
+`23885167/27322254960`.  As an independent positive control, literal
+THM-3352 mass evaluation on the same `28,766` rows has weakest margin
+`349997/61905522`, at `(P,Q;L,j,e,f)=(3,5;5096,2772,14,4)`.
+Thus every large-ruler primitive high pair has physical mass at least
+`1/294` at every dilation.  Reproduce with
+`lrc14_disconnected_large_ruler_floor_20260812.py`.
 
 ## Common dilation g>=4
 
