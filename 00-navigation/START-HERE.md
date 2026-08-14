@@ -52,14 +52,14 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
    phase; THM-3285 gives a literal `R-M-R` horn. Its FINITE-EXACT `13`-label
    normal atlas has two middle completions but no outer co-support. A two-axis
    atom, current and LRC(14) remain OPEN.
-10. **Tournament structure is operational.** THM-3315 compiles switched walks;
-    THM-3359 makes modular supports periodic but loses apex/orientation.
-    THM-3369/3372 add skew/deletion currents and a transitivity variance,
-    not full SCC order or time. Static sections/rank-two updates are not tournaments.
+10. **Tournament structure is operational and typed.** THM-3315 compiles
+    switched walks; THM-3364 gives local labelled `T4` reset/XOR chambers;
+    THM-3369/3372 add skew/deletion currents. None supplies nonlocal arcs,
+    full SCC order or time.
 11. **Sequences need support and multiplicity profiles.** THM-2000/2005/2352
-    separate support, collision tax and q-adic thresholds; THM-2438/2500 give
-    Poisson--Newton/finite-hole laws. THM-3359 gives residue `delta` and scar
-    `delta-delta^2/2`; THM-3362 detects real odd-profile pairs in three moments; FC(3) remains open.
+    separate support and collision tax. THM-3359 gives residue/scar; THM-3364
+    restores full eventual-periodic phase and harmonic finite part; THM-3362
+    detects real odd-profile pairs in three moments. General subsets and FC(3) remain open.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close linear through cubic fibers and twice-odd finite poles; THM-2214/2217/2247 close the inherited nonsplit train through degree `14`.
     THM-2371/THM-2376 close named degree-`18` strata; later sheet/quotient losses remain.
     THM-3212/3225 leave critical points; THM-3237--3265 give the infinity

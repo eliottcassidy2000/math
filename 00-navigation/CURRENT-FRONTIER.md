@@ -204,7 +204,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-3173 separates `C2*C3`, regular `S3`, and regular `C6`; their joint
   quotient has order 18, while pointed oriented quartic frames form `Q3`.
   These are semantic action data, not a physical current or Keller bridge.
-- THM-1880/1885 give the Pell frame; THM-3335 excludes nontrivial square-arc/skew-EW attainment; THM-3339's `T6` loses owner; THM-3357 gives a local sibling `T3`, not a level tournament.
+- THM-1880/1885 give the Pell frame; THM-3335 blocks square-arc/skew-EW attainment. THM-3339's `T6` loses owner; THM-3357's sibling `T3` and THM-3364's parent-extended labelled `T4` are local, with one reset/XOR bit.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
 - THM-2013/2016 bound cyclic temperature/reducibility; `H` remains empirical.
@@ -215,10 +215,10 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 
 - [THM-1950](../01-canon/theorems/THM-1950-h-ge-disc-reduced-to-strongly-connected.md) reduces `H >= disc` to strongly connected tournaments and verifies finite
   cases; the global inequality is open.
-- THM-3315/3322/3324 compile switched walks, moments, split joins and response
-  Gram. THM-3359 is periodic but loses apex/orientation/SCC order. THM-3369/3372
-  add skew currents, a multiplicative deletion transform and sharp transitivity
-  variance, not full order/time. Next: higher responses and nontransitive substitution.
+- THM-3315/3322/3324 compile switched walks, moments, joins and response Gram.
+  THM-3359 is periodic; THM-3364 restores cyclotomic phase/local labelled `T4`;
+  THM-3369/3372 add skew/deletion currents and transitivity variance. Startup,
+  global arcs, apex/SCC order and time remain. Next: higher responses/substitution.
 - A literal Paley bridge exists only in THM-640's prime quadratic-residue scope.
   Composite modulus 14 and repeated score/node heuristics do not inherit it.
 - MISTAKE-227–229 correct the newest false syntheses: the AP chain frame is
@@ -264,9 +264,9 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   Abel--Dini/Bertrand is the boundary; Cauchy and Dirichlet convolution differ.
 - [THM-3359](../01-canon/theorems/THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar.md)
   gives periodic modular C-finite supports, harmonic residue `delta=h/p`, and
-  multiplicative scar `delta-delta^2/2`. Exact `T4`, Fibonacci, Berggren and
-  ternary-DFA controls show that the common matrix calculus loses orientation
-  and ancestry; squares and `ceil(k log(k+1))` block extension to all subsets.
+  scar `delta-delta^2/2`; [THM-3364](../01-canon/theorems/THM-3364-cyclotomic-boolean-clocks-berggren-t4-xor-and-crt-phase.md)
+  upgrades this to full cyclotomic phase, least period and harmonic finite part.
+  Neither restores ancestry; squares and `ceil(k log(k+1))` block all subsets.
 - Hostile-audited [THM-2500](../01-canon/theorems/THM-2500-finite-hole-relative-atoms-prime-rays-and-cover-bounds.md) classifies finite multiplicative hole modules. Prime-free holes have finitely
   many artificial atoms at most `max h*spf(h)`; a prime hole creates
   disjoint cage rays `m*q` with sharp `M^3/M^4` finite remainders. Additive
