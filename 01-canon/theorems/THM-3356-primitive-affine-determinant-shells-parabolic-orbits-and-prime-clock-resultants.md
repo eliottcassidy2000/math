@@ -37,9 +37,11 @@ hash_basis: working-tree bytes (LF)
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-The proof is exact in the scopes stated below.  In particular it does not
-prove the carrier inequalities or physical census reserved for THM-3355, and
-it does not decrement the open LRC(14) affine-tail ledger.
+The proof is exact in the scopes stated below. In particular it does not
+prove the affine carrier inequalities or their physical census. THM-3355 has
+since bypassed that optional route and closed the disconnected-low reflected
+branch by a weighted horn-tree proof; the present theorem does not itself
+supply that closure or settle LRC(14).
 
 ## 1. Inheritance, portfolio, and the two views
 
@@ -78,6 +80,9 @@ The session portfolio became the following three-item board.
 | anchor | the open disconnected-low rays `dq-(d+a)p=c` | can the incoming primitive quotient expose a reusable invariant? | physical context and mass; test the literal `22,890 -> 14,168` quotient |
 | niche | `S_c(u)={x:det(x,u)=c}` | how many integral parabolic orbits and contents occur? | the Lorentz scalar loses sign and orbit residue; test `c=2` |
 | wildcard | the two speeds as U-spine indices `p,q` | which shared Gaussian prime clocks can occur along one ray? | a gcd loses its two local branches; test fixed polynomial resultants |
+
+The anchor row records the problem as inherited during the THM-3356 session.
+THM-3355 subsequently closed it by a different mechanism.
 
 Both non-anchor views survive, but they preserve different predicates.
 
@@ -697,10 +702,11 @@ For the current strict target these give different cutoffs, `1898` and
 the LRC carrier certificate.  The physical context, translated cells,
 component labels, and exact mass engine remain load-bearing.
 
-Likewise, (46) does not make the open tail finite by itself: a fixed finite
-prime fingerprint can occur along infinitely many parameter values, and a
-failed sufficient certificate is not an unsafe LRC row.  THM-3355 remains
-reserved and unproved.
+Likewise, (46) does not make the affine carrier-inequality sidecar finite by
+itself: a fixed finite prime fingerprint can occur along infinitely many
+parameter values, and a failed sufficient certificate is not an unsafe LRC
+row. THM-3355 is now proved, but its weighted horn-tree mechanism bypasses
+this fingerprint route.
 
 Finally, the `22,890 -> 14,168` dilation/residue quotient has no declared cell
 complex or `H^1`, and it is not THM-3346's antipodal prime-toggle quotient.

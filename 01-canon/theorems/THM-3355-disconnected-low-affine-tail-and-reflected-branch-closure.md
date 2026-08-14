@@ -22,7 +22,7 @@ related:
   - THM-3211-uniform-lrc-channel-limit-bernoulli-cubic-and-sharp-floor
 script: 04-computation/lrc14_disconnected_weighted_horn_tree_closure_thm3355.py
 output: 05-knowledge/results/lrc14_disconnected_weighted_horn_tree_closure_thm3355.out
-script_sha256: 263dd08a61df9b1113c8542bc14707be13c3839edcce11d6df5755f5709b08bd
+script_sha256: 78975824a16471cd6aad7194443f292773a9af08c748d945733768d64c2116dd
 output_sha256: 1f18288cd8c2886f85b0a1839e1cb0737d9141a8de0e543e68a28ef6d7e9c565
 hash_basis: LF-normalized bytes
 ---
@@ -109,7 +109,8 @@ individual minimizing contexts.
 ## 3. The centered primitive-grid lemma
 
 Fix a body-safe cell, ordered endpoint labels `e,f`, ruler `L`, and the pair
-in `(1)`.  Put
+in `(1)`. Here `e` labels the lower level `gP`, while `f` labels the higher
+level `gQ`; this orientation is part of the channel data. Put
 
 ```text
 p=gP, q=gQ,       z=gLP-e, w=gLQ-f,       C=Qe-Pf.       (7)
@@ -187,10 +188,16 @@ min(B(P,P+1),B(P,8P)),                                   (14)
 
 where `B` denotes `(12)`.
 
+The value `B(P,8P)` is only the right endpoint of the relaxed algebraic
+envelope. The pair `(P,8P)` is generally nonprimitive, and the primitive-grid
+lemma is not being applied to it as a physical channel.
+
 For odd `P=421+2t` and even `P=422+2t`, clear the positive denominator in
 `294(B-eta)`.  On every small-ruler ordered lane except four listed below at
 `g=1`, and on every lane at `g=2,3`, both endpoint numerators have strictly
-positive coefficients as polynomials in `t`.  The exact bank contains
+positive coefficients as polynomials in `t`. The companion also verifies
+coefficientwise that `N'D-ND'>=0` for every cleared margin `N/D`, so the
+minimum occurs at the base point of its parity. The exact bank contains
 
 ```text
 g=1 nonhorn records   5200,
@@ -304,8 +311,8 @@ regular and `(6)` applies.
 
 Assume `0<=b<=3` and `q_12>=421`; the finite head already handles smaller
 `q_12`.  The low component on `{1,2,3,4,6}` is connected, and every low ratio
-is at most six.  Any vertex below `q_12` reaches a vertex above it through at
-most `b+1` low vertices.  Therefore each such lower level is strictly greater
+is at most six. Any vertex below `q_12` crosses at most `b+1` low edges before
+first reaching a level above `q_12`. Therefore each such lower level is strictly greater
 than
 
 ```text

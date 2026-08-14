@@ -190,7 +190,7 @@ def context_atlas():
 
 
 def centered_bound(L: int, e: int, f: int, P: int, Q: int, g: int) -> F:
-    """Primitive-ray lower bound; callers must separately enforce gcd(P,Q)=1."""
+    """Lower bound at primitive pairs; elsewhere only its algebraic envelope."""
     z, w = L * g * P - e, L * g * Q - f
     require(P >= 1 and Q > P and g >= 1 and z > 0 and w > 0,
             ("centered-bound domain", L, e, f, P, Q, g))
@@ -202,7 +202,8 @@ def centered_bound(L: int, e: int, f: int, P: int, Q: int, g: int) -> F:
 def endpoint_bound(L: int, e: int, f: int, P: int, g: int) -> F:
     # On each side of Q=Pf/e the loss is fractional-linear, hence monotone.
     # If the breakpoint lies in [P+1,8P], its determinant loss is zero and its
-    # first loss is no larger than at P+1.  Thus only these two endpoints matter.
+    # first loss is no larger than at P+1.  Thus only these two algebraic
+    # endpoints matter.  In particular Q=8P need not itself be primitive.
     return min(centered_bound(L, e, f, P, P + 1, g),
                centered_bound(L, e, f, P, 8 * P, g))
 
@@ -228,6 +229,10 @@ def p_mul(first, second):
         for j, b in enumerate(second):
             answer[i + j] += a * b
     return tuple(answer)
+
+
+def p_derivative(row):
+    return tuple(index * value for index, value in enumerate(row))[1:] or (0,)
 
 
 def polynomial_record(g: int, L: int, e: int, f: int, parity: str, side: str):
@@ -259,6 +264,12 @@ def polynomial_record(g: int, L: int, e: int, f: int, parity: str, side: str):
             ("positive polynomial denominator", g, L, e, f, parity, side, denominator))
     require(all(value > 0 for value in numerator),
             ("positive polynomial numerator", g, L, e, f, parity, side, numerator))
+    monotonicity = p_add(
+        p_mul(p_derivative(numerator), denominator),
+        p_scale(p_mul(numerator, p_derivative(denominator)), -1),
+    )
+    require(all(value >= 0 for value in monotonicity),
+            ("tail-margin monotonicity", g, L, e, f, parity, side, monotonicity))
     content = 0
     for value in numerator:
         content = gcd(content, value)
