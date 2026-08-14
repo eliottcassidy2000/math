@@ -151,8 +151,8 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   THM-3093/97/3100 give Gamma tails/finite banks, not emptiness; THM-3107
   closes product-Gamma `{0,1,2}` for finite layers and anchored APs.
   Translated/non-AP triples and THM-3101/05's physical endpoint jet stay open.
-  THM-3065 forces H2 only; exact H3/H4 hostiles block the higher all-order lift.
-  THM-2860 identifies
+  THM-3065 is H2-only; THM-3079 closes terminal-minus-one positive-strip meshes
+  at all orders; H3/H4 hostiles block the general lift. THM-2860 identifies
   Euler-tangent cubic lines with Möbius
   support chords and excludes them on all 31,465 supports through exponent
   `30`.  The unbounded shared-line, general norm, and scalar multiplier-access
@@ -215,12 +215,10 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 
 - [THM-1950](../01-canon/theorems/THM-1950-h-ge-disc-reduced-to-strongly-connected.md) reduces `H >= disc` to strongly connected tournaments and verifies finite
   cases; the global inequality is open.
-- THM-3315/3322/3324 compile switched walks, second moments, split joins and
-  response Gram. THM-3359 makes modular C-finite supports periodic with
-  rational harmonic residue, but its exact `T4` census still loses apex,
-  orientation and SCC order. THM-3369 adds an exact skew deletion current and
-  detects the sharp `K1 triangleright C3` reversal, not full order or time.
-  Next: higher skew response tensors and nontransitive substitution.
+- THM-3315/3322/3324 compile switched walks, moments, split joins and response
+  Gram. THM-3359 is periodic but loses apex/orientation/SCC order. THM-3369/3372
+  add skew currents, a multiplicative deletion transform and sharp transitivity
+  variance, not full order/time. Next: higher responses and nontransitive substitution.
 - A literal Paley bridge exists only in THM-640's prime quadratic-residue scope.
   Composite modulus 14 and repeated score/node heuristics do not inherit it.
 - MISTAKE-227–229 correct the newest false syntheses: the AP chain frame is

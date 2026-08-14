@@ -349,11 +349,7 @@ THM-2290/2292/2294 and the S79 support-Dirichlet reflection.
 
 ## Type a shared sum as a weighted fiber before transferring it
 
-**Trigger:** two problems are both written as “a sum over a kernel.”
-**Action:** record `Z(M,A,b,w)=sum_{x in M, Ax=b} w(x)`: monoid, fiber, regularization, weight ring, and target predicate.
-**Mechanism:** LRC has an infinite Fejer-regularized `Z^n` fiber with sinc weights; a GMC moment has a finite `N^s` fiber with multinomial, factorial, radial, and coefficient weights. Syntax is shared; types and quantifiers are not.
-**Counterindication:** transfer only through a map intertwining fibers and weights while preserving the target.
-**Evidence:** MISTAKE-226/234/235; THM-2059's typed CRT fiber product; THM-2330's min-plus target fibre; THM-2334's relation-orbit transform; THM-2337's gauge-lost factor jet; and THM-2340's main-effect/interaction decomposition.
+**Trigger/action:** for two “sums over a kernel,” record `Z(M,A,b,w)=sum_{x in M,Ax=b}w(x)`: monoid, fibre, regularization, weight ring and target. LRC's infinite Fejer/sinc fibre and a GMC moment's finite multinomial/factorial fibre share syntax, not types or quantifiers. Transfer only through a target-preserving map intertwining fibres and weights. **Evidence:** MISTAKE-226/234/235; THM-2059/2330/2334/2337/2340.
 
 ## Interpolant death, mechanism survival (the first-untested-point law)
 
@@ -392,8 +388,9 @@ A positive left inverse, order-reflecting quotient, or target factorization disc
 
 ## Audit and close sections under their next native operation
 
-**Trigger / action:** apply the next target operation before scalarizing; retain moving labels/cocycles. Complete native affine/relative coordinates before naming arity, but only when they preserve the target.
-**Mechanism:** pre-scalar defects live in typed co-support, transition cones, base ideals, or incidence circuits; retaining one gives a stopping reason or low-rank update.
-**Caution:** fibres need not glue; require a target-preserving map, explicit basepoint and lawful composition. Empty intersections, base loci and vector kernels differ.
-Adjacency powers count relation walks, not time; chronology additionally needs lifetime and composition.
-**Evidence:** THM-2292/3144/2658/3156/3285--3315 and THM-3319--3324.
+**Trigger/action:** apply the next target operation before scalarizing; retain moving labels/cocycles and target-preserving affine/relative coordinates. Pre-scalar defects live in co-support, transition cones, base ideals or circuits and can yield a stopping reason or low-rank update. **Caution:** fibres need not glue: require a basepoint and lawful composition; walks are not chronology. **Evidence:** THM-2292/3144/2658/3156/3285--3324.
+
+## Exteriorize a commutative response against the lost relation
+
+**Trigger/action:** if multiplicative `F_T` loses ordered-join order but `r_v=F_(T-v)` transforms factorwise, contract `r(z)(A-A^T)r(w)^T` and close `q=sum r_v`; rank-one `+J/-J` cross blocks exteriorize the first responses.
+**Counterindication/evidence:** stop for nonconstant cross blocks, unlawful deletion response, target-bearing ties or contraction-kernel loss; the current need not be injective or chronological. THM-3369 has `q=ns-zs'`, THM-3372 has `q=D'`, while the THM-3166 probe needs an independent `q` sidecar.
