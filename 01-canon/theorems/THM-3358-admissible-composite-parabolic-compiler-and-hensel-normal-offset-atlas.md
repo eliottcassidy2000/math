@@ -21,6 +21,7 @@ depends_on:
   - THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation
   - THM-3346-u-spine-prime-toggle-root-atlas-and-conjugation-monodromy
   - THM-3353-split-prime-parabolic-branch-transplant-and-unary-transducer-compiler
+  - THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar
 related:
   - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
   - THM-3341-u-spine-square-hypotenuse-transplant-and-triangular-plane-torsors
@@ -346,6 +347,42 @@ the normal unit collapses `phi(N)` genuinely different compiled rays over
 each fixed parent allocation.  In alpha gauge the same quotient is
 `(F_2^k x (Z/NZ)^x)/<({all},-1)>`; the jet gauge turns the involution into
 `({all},1)` and gives the displayed direct product.
+
+### 4A. Harmonic mass is normalized normal-state count
+
+THM-3359 gives an exact analytic readout of this finite atlas.  Let
+`B subset R_(N^2) x (Z/NZ)^x`, and let `a_b in {1,...,N^2}` be the positive
+parameter residue represented by `b` under (22b2).  The positive index set
+
+```text
+H_B={t>=1:t mod N^2 is represented by some b in B}       (23b)
+```
+
+has Dirichlet series and residue
+
+```text
+D_B(s)=N^(-2s) sum_(b in B) zeta(s,a_b/N^2),
+Res_(s=1)D_B(s)=|B|/N^2.                                (23c)
+```
+
+Thus one oriented compiler residue has harmonic coefficient `1/N^2`, one
+antipodal parent pair has coefficient `2/N^2`, and the full exact-grade shell
+has
+
+```text
+delta_exact=2^k phi(N)/N^2.                             (23d)
+```
+
+The conjugation quotient has half as many parent labels, but its pullback to
+the integer-time carrier is still the union of both residues, so its mass is
+not halved a second time.
+
+Equation (23c) is a normalized state count, not a compiler decoder.  Sets of
+labels with the same cardinality have the same harmonic residue even when
+their prime toggles, normal units, Gaussian allocations, or Berggren words
+differ.  Weighting the same ray by its geometric hypotenuse instead gives
+`1/C_t=O(t^(-2))` and a convergent series.  The index carrier and the retained
+label sidecars are therefore load-bearing.
 
 ## 5. Every exact-grade normal ray has a Berggren compiler
 

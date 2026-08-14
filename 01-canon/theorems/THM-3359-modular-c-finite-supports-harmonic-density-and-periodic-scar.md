@@ -26,6 +26,7 @@ depends_on:
   - THM-3339-fibonacci-three-ray-berggren-transplant-and-moving-owner-obstruction
   - THM-3356-primitive-affine-determinant-shells-parabolic-orbits-and-prime-clock-resultants
 related:
+  - THM-2005-support-dirichlet-automatic-tournament-atlas
   - THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary
 script: 04-computation/modular_cfinite_harmonic_supports_thm3359.py
 output: 05-knowledge/results/modular_cfinite_harmonic_supports_thm3359.out
@@ -241,6 +242,28 @@ not an identification of the underlying relations. A directed relation with
 a missing pair, a both-way pair, or a tie is not a tournament; its transfer
 sequence may still satisfy the theorem.
 
+There are two different support carriers here.  For a unary regular language
+`K subset {U}^*`, the accepted **length set** itself is ultimately periodic:
+one reads the orbit of the single DFA transition.  For a ternary regular
+language, (23) instead says that the **level count** `b_n` is C-finite, so a
+modular predicate on `b_n` is ultimately periodic in `n`.  It says nothing of
+the base-three integer set represented by the accepted addresses.
+
+The same-language hostile makes this distinction exact.  Let
+
+```text
+L_01=1{0,1}^*                                           (23a)
+```
+
+in canonical base-three notation.  Its length-`n` count is `2^(n-1)`, so the
+predicate `b_n congruent 1 mod 3` accepts exactly the odd lengths and has
+harmonic coefficient `1/2`.  But the represented value set has `2^(n-1)`
+points in `[3^(n-1),3^n)`, hence block harmonic mass at most
+`(2/3)^(n-1)` and finite total mass.  Its gap from `(3^n-1)/2` to `3^n` is
+unbounded, so it is not ultimately periodic.  This is the automatic-value
+boundary also visible in THM-2005: finite-state address recognition is not a
+unary time transition.
+
 Finite Boolean combinations of modular supports remain ultimately periodic.
 On a common cycle their harmonic residues are finitely additive, and in
 particular
@@ -444,8 +467,11 @@ carrier and `gcd(c,M)=1` must be retained.
 ## 8. Equality and failure boundaries
 
 1. Every `A subset N_(>0)` defines a harmonic subseries
-   `sum_(n in A)1/n`; finite-state structure is not automatic. Squares are an
-   infinite support of finite mass, while
+   `sum_(n in A)1/n`; finite-state structure is not automatic.  In fact
+   `a_n=n^2` is itself C-finite, with `(E-1)^3a=0`, but its **value support**
+   `{n^2:n>=1}` has unbounded gaps and reciprocal mass `zeta(2)`.  The theorem
+   applies instead to modular **index supports**: for example
+   `{n>=1:n^2=0 mod 5}=5N_(>0)` has `delta=1/5`.  Likewise
    `{ceil(k log(k+1)):k>=1}` has density zero and divergent mass.
 2. The theorem concerns the **index support** (2), not the set of distinct
    recurrence values. Collapsing repeated values can change the answer.
