@@ -257,14 +257,18 @@ def entry_certificate(profile: list[int], witness_rows: tuple[tuple[int, ...], .
             for q in range(len(kernel))
             if 0 <= t - q < len(entry)
         )
-        for t in range(d)
+        for t in range(d + 1)
     )
-    lower = tuple(-2 * comb(d - 1, t) for t in range(d))
-    upper = tuple(2 * comb(d - 1, t - 1) if t else 0 for t in range(d))
+    lower = tuple(-2 * comb(d - 1, t) if t < d else 0 for t in range(d + 1))
+    upper = tuple(
+        2 * comb(d - 1, t - 1) if t else 0 for t in range(d + 1)
+    )
     require(all(lo <= x <= hi for x, lo, hi in zip(load, lower, upper)),
             "entry load is not fully clampable")
     require(all(x == 0 for x in witness_rows[i_pf]), "next junk is not zero")
-    return i_pf, d, entry, load, margins
+    capture_clock = i_pf + (a.get(0, 0) + 1) // 2
+    require(capture_clock <= R - 2, "F4 capture budget")
+    return i_pf, d, entry, load, margins, capture_clock
 
 
 def main() -> None:
@@ -315,13 +319,14 @@ def main() -> None:
         "a hostile active inequality did not move inward",
     )
 
-    i_pf, d, entry, clamp_load, margins = entry_certificate(
+    i_pf, d, entry, clamp_load, margins, capture_clock = entry_certificate(
         profile, witness_rows
     )
     require(i_pf == 3 and d == 6, "entry row")
     require(entry == (-2, 0, 0, 0, 0), "entry state")
-    require(clamp_load == (-2, -4, -2, 0, 0, 0), "capture clamp")
+    require(clamp_load == (-2, -4, -2, 0, 0, 0, 0), "capture clamp")
     require(margins == {2: 18}, "F3 margin")
+    require(capture_clock == 4, "F4 clock")
 
     profile512 = [floor_gamma_star(512 + i) for i in range(512)]
     i_pf512 = first_feed_free_row(512, profile512)
@@ -368,7 +373,8 @@ def main() -> None:
     )
     print(
         f"entry=i_pf={i_pf};degree={d};junk={list(entry)};support_max=0;"
-        f"F1=true;F2=2<={d-1};F3_margin_t2={margins[2]}"
+        f"F1=true;F2=2<={d-1};F3_margin_t2={margins[2]};"
+        f"F4_capture_clock={capture_clock}<=R_minus_2={R-2}"
     )
     print(
         f"immediate_capture=next_load={list(clamp_load)};"

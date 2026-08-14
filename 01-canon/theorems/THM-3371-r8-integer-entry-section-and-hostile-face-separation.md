@@ -1,7 +1,7 @@
 ---
 id: THM-3371
 title: "AMM 12592: the R=8 integer entry section and hostile fractional-face separation"
-status: PROVED + FINITE-EXACT / INDEPENDENT AUDIT PENDING
+status: PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED
 source: kps-s178
 depends_on:
   - THM-3329
@@ -11,6 +11,7 @@ related:
   - THM-3342
 companion: 04-computation/amm12592_r8_integer_entry_section_kps_s178.py
 output: 05-knowledge/results/amm12592_r8_integer_entry_section_kps_s178.out
+audit: independent exact block/capacity/parity and active-lattice reconstruction
 ---
 
 # THM-3371 -- R=8 integer entry section and hostile-face separation
@@ -54,11 +55,13 @@ It satisfies THM-3332's one-row hypotheses:
 2. `F2`: `a0=-j0=2<=d-1=5`;
 3. `F3`: the only nontrivial check is at `t=2`, where
    `2a1+a0=2 <= 2*C(5,2)=20`, with margin `18`.
+4. The finite-scale `F4` budget, which is not automatic at `R=8`, is
+   `i_pf+ceil(a0/2)=3+1=4 <= R-2=6`.
 
 Pascal transport into row `3` gives the load
 
 ```text
-(-2,-4,-2,0,0,0),
+(-2,-4,-2,0,0,0,0),
 ```
 
 which lies completely inside the degree-six clamp box.  Choosing that load as
@@ -121,14 +124,25 @@ Normal and optimized replays are byte-identical.  The LF-normalized source
 hash is
 
 ```text
-195dd25c5dc12a0ee96e30ce677746d6af1b54a8092ec134c235a58fd9ce8a77
+2c3e86a23e137d1349763e9cb631fde6ba01caaef1cc11e661ee3c53d31fc9a9
 ```
 
 and the LF-normalized stored-output hash is
 
 ```text
-85cd494642f28497cb76de72908517b52e5ac61e7bfd59908a29a776f2a451fa
+f492e5cbf60a82a61be8d11f0c3bc72cf391d54b6ba1405f4f42f00fe7e5e0cd
 ```
+
+An independent reconstruction additionally checked every correction block's
+capacity and parity, the exact identity
+
+```text
+sum_(i=0)^7 x^i Delta_i(x)=(1-x)^7,
+```
+
+the full seven-cell capture load, the finite `F4` clock, both active sets,
+their ranks, and the determinant `1648=16*103`.  It found no mathematical
+failure after the two display omissions above were repaired.
 
 ## Boundary and non-consequences
 

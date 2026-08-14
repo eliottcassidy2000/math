@@ -35,8 +35,9 @@ parity round?”  At dyadic `R`, parity has already disappeared.  It is:
 > Is the integer lattice section of the active sparse polytope forced by
 > real feasibility together with the ballot cone?
 
-The computation below gives a sharp negative to the first, purely
-polyhedral version of that question.
+The computation below does **not** answer that existence question.  It gives
+a sharp negative only to the stronger shortcut “the whole real polytope is
+integral / every vertex rounds automatically.”
 
 ## Exact hostile: the sparse polytope is nonintegral already at `R=8`
 
@@ -157,7 +158,8 @@ This pins the golden constant's role precisely:
 So the golden constant is not merely an analogy, but neither is it a
 coefficient-field obstruction inside the finite LP.  It is the exact
 all-scale entropy/tangency rate.  The finite lifting problem is an integer
-active-face problem whose first explicit denominator is instead `103`.
+entry/lattice-section problem whose first hostile vertex denominator is
+instead `103`.
 
 ## Sharp next target
 
