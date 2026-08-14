@@ -2,15 +2,17 @@
 id: THM-3370
 title: "Berggren U-spine and two-cube biquadratic norm collision"
 status: >
-  PROVED + FINITE-EXACT; INDEPENDENT AUDIT PENDING.  A positive two-distinct-
+  PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.  A positive two-distinct-
   cube representation of the Berggren U-spine scalar Q_r=(2r+1)^2+2 is
   equivalent to a positive-distinct good divisor in THM-463.  After removing
   the common cube gcd, its Eisenstein cofactor is supported on 3 (to exponent
   at most one) and primes congruent to 1 or 19 modulo 24.  The depth lies in
   15 explicit classes modulo 63.  The first such scalar is exactly
-  13,712,211=107^3+232^3=3703^2+2=Q_1851.  Five intersections occur in the
-  exact box 1<=x<y<=5000.  No infinitude, density, LRC, FC or JC consequence
-  is claimed.
+  13,712,211=107^3+232^3=3703^2+2=Q_1851.  Five positive
+  intersections occur in the exact box 1<=x<y<=5000.  Separately, the
+  norm-one unit 23+4sqrt(33) gives an infinite fixed-sum Pell family with
+  distinct signed integer cubes, starting at Q_31=16^3+(-5)^3.  Positive
+  infinitude, density, LRC, FC and JC remain open.
 source: kps-s177-berggren-two-cube-2026-08-14
 depends_on:
   - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
@@ -20,14 +22,14 @@ related:
   - THM-3368-weighted-berggren-horn-defect-tariff-and-complement-clock-separation
 script: 04-computation/berggren_two_cube_norm_collision_kps_s177.py
 output: 05-knowledge/results/berggren_two_cube_norm_collision_kps_s177.out
-script_sha256: 561c79065a099e7001eb84fb4265387ce05ac9e5c6fdee9452a345ecaebbc336
-output_sha256: 436bff503840fc2d6c8bc81f90353be84f8c3db85fa9b5dbf016e8c4c260c56a
+script_sha256: e0321576b71764fb65aa15cfd843869a9846b7bea1310d7cd6de8faed0cfc665
+output_sha256: 8d61cd5dd4255ad2bd58f4bbc7172b7fb98cbe97c2943e09be31774aea11d60a
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3370 -- the Berggren/two-cube intersection is a mod-24 norm collision
 
-**PROVED + FINITE-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED.**
 
 This theorem joins two proved repository objects without identifying their
 carriers.  THM-3334 supplies the consecutive-parameter Berggren `U`-spine;
@@ -104,7 +106,7 @@ This also fixes the convention here: zero and negative summands are excluded.
 Suppose
 
 ```text
-Q_r=x^3+y^3,                    x,y positive and distinct. (11)
+Q_r=x^3+y^3,                    x,y distinct integers.    (11)
 ```
 
 Let `g=gcd(x,y)`, `X=x/g`, `Y=y/g`, and
@@ -163,7 +165,16 @@ epsilon in {0,1},             p_i=1 or 19 (mod 24).      (19)
 
 For `g=1`, this is the cofactor `q` itself.  Primes in `g` need not satisfy
 the Eisenstein condition `(14)`, so omitting the primitive reduction would
-make `(19)` false in scope.  Equation `(7)` supplies another boundary: the
+make `(19)` false in scope.  The sharp stored witness is
+
+```text
+Q_591=120^3+(-69)^3=1183^2+2,
+g=3,             q=27,441=3^2*3,049,
+q_0=3,049=1 (mod 24).                                   (20)
+```
+
+Thus `v_3(q)=2`, while the normalized `q_0` obeys `(19)`.  Equation `(7)`
+supplies another boundary: the
 Gaussian prime-toggle fibre of the native hypotenuse `C_r` cannot literally
 be the Eisenstein factor fibre of `Q_r`.  The two norms meet through the
 affine map `Q=2C+1`, not through shared prime factors.
@@ -175,14 +186,14 @@ Cubes modulo `7` and modulo `9` are `0,+1,-1`; their pairwise sums are
 
 ```text
 r mod 7 in {2,3,4},
-r mod 9 in {1,2,4,6,7}.                                 (20)
+r mod 9 in {1,2,4,6,7}.                                 (21)
 ```
 
 The CRT intersection is the following `15` classes:
 
 ```text
 r mod 63 in
-{2,4,10,11,16,24,25,31,37,38,46,51,52,58,60}.           (21)
+{2,4,10,11,16,24,25,31,37,38,46,51,52,58,60}.           (22)
 ```
 
 This removes `16/21` of depths, but it is only a local necessary sieve.  It
@@ -214,7 +225,7 @@ requires.  The first row factors more fully as
 ```text
 13,712,211=3^2*97*113*139,
 d=x+y=339=3*113,
-q=q_0=40,449=3*97*139.                                  (22)
+q=q_0=40,449=3*97*139.                                  (23)
 ```
 
 It is also the **global first positive-distinct intersection**.  If a smaller
@@ -226,25 +237,83 @@ min {Q_r=x^3+y^3 : r>=1, 1<=x<y}
  =13,712,211
  =107^3+232^3
  =3703^2+2
- =Q_1851.                                                (23)
+ =Q_1851.                                                (24)
 ```
 
 The other four rows are a coordinate-box census only.  No height-complete
 claim beyond the minimum is made.
 
-## 6. Cross-frontier interpretation and loss ledger
+## 6. An infinite signed Pell fibre
+
+The positivity restriction is genuinely load-bearing.  For arbitrary
+integer summands, put
+
+```text
+d=x+y,                 e=x-y,                 a=2r+1.
+```
+
+Then
+
+```text
+x^3+y^3=d(d^2+3e^2)/4,
+Q_r=x^3+y^3 iff (2a)^2-3d e^2=d^3-8.                    (25)
+```
+
+Thus every fixed `d` is a Pell-type conic.  The fibre `d=11` has seed
+
+```text
+(a_0,e_0)=(63,21),
+(x_0,y_0)=(16,-5),
+Q_31=3,971=16^3+(-5)^3=63^2+2.                          (26)
+```
+
+The unit
+
+```text
+23+4 sqrt(33),                    23^2-33*4^2=1,         (27)
+```
+
+gives the integral recurrence
+
+```text
+a_(m+1)=23a_m+66e_m,
+e_(m+1)=8a_m+23e_m.                                     (28)
+```
+
+Indeed, `(28)` is multiplication of `2a_m+e_m sqrt(33)` by `(27)`, so it
+preserves `(25)`.  It also preserves odd parity, and both coordinates grow
+strictly.  Hence
+
+```text
+x_m=(11+e_m)/2,              y_m=(11-e_m)/2,
+r_m=(a_m-1)/2                                             (29)
+```
+
+are integers for every `m`, with `x_m^3+y_m^3=Q_(r_m)`.  The first iterate is
+
+```text
+(a_1,e_1,x_1,y_1,r_1,Q_(r_1))
+=(2,835,987,499,-488,1,417,8,037,227).
+```
+
+This proves infinitely many **natural scalars** `Q_r` that are sums of two
+distinct signed integer cubes.  Since already `e_0=21>d=11`, every point in
+this forward orbit has one negative summand.  Distinct positive pairs are
+exactly the Pell-window points `0<|e|<d`; their infinitude is not proved.
+
+## 7. Cross-frontier interpretation and loss ledger
 
 The actual junction is
 
 ```text
 r
  -> (C_r,Q_r)                         Gaussian / sqrt(-2) norms
- -> (d,q_0,g) when Q_r=x^3+y^3        Eisenstein factorization. (24)
+ -> (d,q_0,g) when Q_r=x^3+y^3        Eisenstein factorization. (30)
 ```
 
 It preserves the depth, scalar and a witnessed cube pair.  Passing to `Q_r`
 destroys THM-3346's Gaussian factor-choice labels because of `(7)`; passing
-to the local residue set `(21)` destroys the good-divisor square condition;
+to the local residue set `(22)` destroys the good-divisor square condition;
 passing to the unordered pair destroys its orientation.  Thus the necessary
 sidecar for any later use is `(r,x,y,g,d,q_0)`, not merely a congruence class
 or a CM-field label.
@@ -252,26 +321,30 @@ or a CM-field label.
 Homogenizing `(11)` gives the smooth cubic surface
 
 ```text
-X^3+Y^3-A^2 Z-2Z^3=0.                                  (25)
+X^3+Y^3-A^2 Z-2Z^3=0.                                  (31)
 ```
 
-This makes the honest next arithmetic question geometric: classify integral
-points on `(25)` along `A` odd, rather than search for another modulus after
-`63`.  It also explains why the lane resembles FC(3)'s diagonal cubics and
-the Hessian/Jacobian work.  The observer is different, however: `(25)` asks
+Its four partial derivatives cannot vanish simultaneously in projective
+space, so it is smooth.  Section 6 gives one infinite integral curve on it;
+the honest next question is to classify the **positive chamber**, rather
+than search for another modulus after `63`.  This also explains why the lane
+resembles FC(3)'s diagonal cubics and
+the Hessian/Jacobian work.  The observer is different, however: `(31)` asks
 for integer **values**, while factorial moments ask for coefficient-weighted
 cancellation.  No implication between them is supplied here.
 
-Similarly, `(21)` is a periodic modular filter, but the exact intersection
-support need not be periodic; THM-3359's value-support warning applies.  No
+Similarly, `(22)` is a periodic modular filter, but the exact positive support
+need not be periodic; THM-3359's value-support warning applies.  No
 density or harmonic pole follows from `15/63`.
 
-## 7. Scope
+## 8. Scope
 
-Equations `(1)--(21)` and the minimum `(23)` are proved.  The five-row box
-census is FINITE-EXACT.  The theorem does not classify all integral points of
-`(25)`, prove infinitely many intersections, or show that the five displayed
-rows are the only ones below a scalar bound larger than `(23)`.  It supplies
+Equations `(1)--(31)`, the positive minimum `(24)`, and the infinite signed
+family `(26)--(29)` are proved.  The five-row positive box census is
+FINITE-EXACT and the algebra/minimum were independently audited.  The theorem
+does not classify the positive integral points of `(31)`, prove infinitely
+many positive intersections, or show that the five displayed rows are the
+only ones below a scalar bound larger than `(24)`.  It supplies
 no physical runner row, owner, phase, factorial-moment tower, Keller mate, or
 AMM integer flow.  LRC(14), FC(3), the planar Jacobian conjecture and AMM
 12592 remain open.

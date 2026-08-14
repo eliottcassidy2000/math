@@ -16,6 +16,18 @@ EXPECTED_HITS = (
     (122_025_161_043, 107, 4_960, 349_321, 174_660),
     (181_178_773_803, 4_403, 4_576, 425_651, 212_825),
 )
+PELL_D = 33
+PELL_U = 23
+PELL_V = 4
+EXPECTED_PELL_FIRST = (
+    2_835,
+    987,
+    499,
+    -488,
+    1_417,
+    8_037_227,
+)
+EXPECTED_NONPRIMITIVE_SHARP = (591, 1_183, 120, -69, 27_441, 3_049)
 
 
 def require(condition, detail):
@@ -155,11 +167,50 @@ def main():
             require(a * a != n - 2 or a % 2 == 0, ("smaller hit", x, y, n))
     require((first_x, first_y, first_a, first_r) == (107, 232, 3703, 1851), "first")
 
+    require(PELL_U * PELL_U - PELL_D * PELL_V * PELL_V == 1, "Pell unit")
+    pell_a, pell_e, pell_d = 63, 21, 11
+    require((pell_d, PELL_D) == (11, 3 * pell_d), "Pell fibre")
+    pell_rows = []
+    for index in range(6):
+        require(pell_a % 2 == pell_e % 2 == pell_d % 2 == 1, ("Pell parity", index))
+        pell_x = (pell_d + pell_e) // 2
+        pell_y = (pell_d - pell_e) // 2
+        pell_n = pell_a * pell_a + 2
+        pell_r = (pell_a - 1) // 2
+        require(pell_x**3 + pell_y**3 == pell_n == scalar(pell_r), ("Pell identity", index))
+        require((2 * pell_a) ** 2 - PELL_D * pell_e**2 == pell_d**3 - 8, ("Pell norm", index))
+        pell_rows.append((pell_a, pell_e, pell_x, pell_y, pell_r, pell_n))
+        next_a = PELL_U * pell_a + (PELL_D * PELL_V // 2) * pell_e
+        next_e = 2 * PELL_V * pell_a + PELL_U * pell_e
+        require(next_a > pell_a and next_e > pell_e, ("Pell growth", index))
+        pell_a, pell_e = next_a, next_e
+    require(pell_rows[1] == EXPECTED_PELL_FIRST, ("Pell first", pell_rows[1]))
+
+    sharp_r, sharp_a, sharp_x, sharp_y, sharp_q, sharp_q0 = EXPECTED_NONPRIMITIVE_SHARP
+    require(scalar(sharp_r) == sharp_a * sharp_a + 2 == sharp_x**3 + sharp_y**3, "sharp identity")
+    sharp_g = gcd(sharp_x, sharp_y)
+    require(sharp_g == 3, sharp_g)
+    require(sharp_q == sharp_x * sharp_x - sharp_x * sharp_y + sharp_y * sharp_y, "sharp q")
+    require(sharp_q == sharp_g * sharp_g * sharp_q0, "sharp primitive reduction")
+    require(factor(sharp_q) == ((3, 2), (3_049, 1)), factor(sharp_q))
+    require(factor(sharp_q0) == ((3_049, 1),) and 3_049 % 24 == 1, "sharp q0")
+
     semantic = sha256()
-    semantic.update(repr((mod7, mod9, mod63, tuple(details))).encode())
+    semantic.update(
+        repr(
+            (
+                mod7,
+                mod9,
+                mod63,
+                tuple(details),
+                tuple(pell_rows),
+                EXPECTED_NONPRIMITIVE_SHARP,
+            )
+        ).encode()
+    )
 
     print("BERGGREN U-SPINE / TWO-DISTINCT-CUBES NORM COLLISION")
-    print("status=PROVED algebraic filters + FINITE-EXACT box/minimum certificate")
+    print("status=PROVED filters/Pell family + FINITE-EXACT positive box/minimum")
     print("Q_r=4r(r+1)+3=(2r+1)^2+2=2C_r+1;C_r=(r+1)^2+r^2")
     print("gcd(C_r,Q_r)=1;primitive_Eisenstein_cofactor_primes_mod24=(1,19)")
     print(f"allowed_r_mod7={mod7};allowed_r_mod9={mod9};allowed_r_mod63={mod63}")
@@ -170,6 +221,10 @@ def main():
         f"global_minimum={first_n}={first_x}^3+{first_y}^3={first_a}^2+2="
         f"Q_{first_r};all_smaller_solutions_have_y<={max_y_below}"
     )
+    print(f"pell_unit=({PELL_U},{PELL_V});pell_unit_norm=1;fixed_cube_sum={pell_d}")
+    print(f"pell_signed_seed={pell_rows[0]}")
+    print(f"pell_first_signed_iterate={pell_rows[1]}")
+    print(f"nonprimitive_sharp={EXPECTED_NONPRIMITIVE_SHARP}")
     print(f"semantic_sha256={semantic.hexdigest()}")
     print("verdict=PASS")
 
