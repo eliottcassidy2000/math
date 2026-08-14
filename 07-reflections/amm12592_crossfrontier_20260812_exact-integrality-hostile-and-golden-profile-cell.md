@@ -70,9 +70,9 @@ vertex.  It is fractional.  Consequently:
 The last item is the important hostile control.  Nonintegrality of the
 polytope does **not** mean integer infeasibility.  It means that generic
 vertex selection, rational reconstruction, and total-unimodularity
-arguments cannot supply the missing lift.  A successful rounding theorem
-must exploit a distinguished face, a circuit-cancellation operation, or the
-ballot sidecar rather than arbitrary LP vertices.
+arguments cannot supply the missing lift.  A successful lift must exploit a
+typed entry section, a circuit-cancellation operation, or the ballot sidecar
+rather than arbitrary LP vertices.
 
 The prime `103` comes from this active lattice basis.  It has no visible
 relation to the golden constant.  This sharply separates the finite
@@ -162,17 +162,28 @@ active-face problem whose first explicit denominator is instead `103`.
 ## Sharp next target
 
 The fractional vertex removes “prove the whole matrix is TU/integral” from
-the live list.  The smallest surviving exact target is a **distinguished
-face theorem**:
+the live list.  THM-3371 now replaces the former **distinguished-face** target
+by a more faithful **entry-section compiler**:
 
-> identify a face selected by the ballot path and prove that this face has
-> an integer point whenever the real sparse polytope is feasible.
+> find an integer causal prefix whose first feed-free state lies in the
+> linear THM-3332 cone; the theorem then constructs the tail.
 
-At `R=8`, one can now compare the exact integer witness face against the
-`103`-denominator hostile vertex and extract the first circuit move that
-leaves the hostile face while preserving all causal equations.  At `R=512`,
-the same move can be tested without any transcendental arithmetic, using
-the rational profile selector `653/1092`.
+At `R=8`, the exact integer point has `25` active constraints of rank `22`.
+Only `8` hostile-vertex active rows, of rank `7`, remain active there; the
+other `37` become strict.  Its state entering the first feed-free row is
+`(-2,0,0,0,0)`, which satisfies `F1--F3` and captures in one clamp.  Thus the
+positive certificate leaves the hostile vertex's minimal face; no circuit
+inside that face can reach it, and no theorem says the entry section itself
+is a face.
+
+At `R=512`, the same reframe is computationally material.  The last feed row
+is `129`, the first feed-free row is `130`, and the degree is `383`.  Searching
+for an integer prefix landing in the divided `F1--F3` cone uses `44,750`
+variables and `89,146` causal inequalities, versus `234,117` variables in the
+full sparse system.  The rational profile selector `653/1092` removes all
+transcendental arithmetic from this finite sufficient search.  Feasibility of
+that prefix cone would close the exact-floor `R=512` case; infeasibility would
+exclude only first-feed-free cone entry, not every witness.
 
 ## Reproduction
 
