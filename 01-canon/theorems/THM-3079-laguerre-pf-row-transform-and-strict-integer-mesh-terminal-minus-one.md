@@ -2,8 +2,8 @@
 id: THM-3079
 title: "Newton-PF row transform and strict integer-mesh terminal-minus-one cone"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT IMMUTABLE-FILE AUDIT
-  REQUESTED.  Every finite PF-infinity row filter with positive constant
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every finite
+  PF-infinity row filter with positive constant
   coefficient preserves reversed strict total positivity of the reciprocal-
   Gamma kernel on its positive shifted strip.  If P has only negative real
   roots, its falling-factorial coefficient polynomial is PF-infinity: under
@@ -24,12 +24,24 @@ script: 04-computation/gmc_laguerre_pf_strict_reciprocal_beta_gap_thm3079.py
 output: 05-knowledge/results/gmc_laguerre_pf_strict_reciprocal_beta_gap_thm3079.out
 script_sha256: 9971f45a464c7f2fcd6a4c086a278d095f2b9eb8fb14e692497b961ba79527e5
 output_sha256: 64b1800ec7fe672ebc268389408ac24694d5436d8a1484fc84af6e25e8fa16b7
+independent_script: 04-computation/gmc_newton_pf_thm3079_independent_audit.py
+independent_output: 05-knowledge/results/gmc_newton_pf_thm3079_independent_audit.out
+independent_script_sha256: 57e2e7333db66f596429f2f428284ec6e3a84d7dcdc8302436a8b73b980585f2
+independent_output_sha256: ce94015d6dc7fc140a565ce152b71c46f1f10b1428dac8ad4d7a8f5eaa6cae34
+independent_semantic_sha256: 7c413b0b7d5c568f77e795c74150b91337621ab018801bff8450721dfa0cfaeb
+audit: >
+  An independent Fraction/Leibniz implementation reconstructs the Newton
+  coefficients by finite differences, rechecks Toeplitz and generalized
+  minors without importing the primary companion, and supplies an exact
+  below-strip hostile.  A separate line audit rederived the reciprocal-Gamma
+  orientation, Newton interlacing, distinguished Cauchy--Binet term, and tail
+  shift.  The positive-strip hypothesis remains load-bearing.
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3079 -- Newton-PF row transforms close a strict integer-mesh cone
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-3065 proves that nonpositive dual prefixes force the checkerboard sign at
 order two but not at higher order: a zero prefix permits exact order-three and
@@ -421,6 +433,16 @@ term by term.  Below that strip, individual shifted Gamma rows can meet zeros
 or leave the positive chamber before their PF sum cancels them.  No
 continuation across that boundary is claimed without a nonvanishing argument.
 
+The strip condition cannot simply be deleted from the abstract criterion.
+Take `a=1/2` and the PF filter `C(z)=1+3z` (`M=1`).  At the first base,
+
+```text
+F_0=r_0+3r_(-1)=1+3(a-1)=-1/2,                        (34)
+```
+
+although `F_n>0` for `1<=n<=6`.  Thus even the order-one sign fails below the
+positive strip; this is a boundary hostile, not merely a proof artifact.
+
 Likewise, the following stronger statement remains **OPEN**:
 
 ```text
@@ -465,4 +487,19 @@ Both modes byte-match the stored twelve-line transcript.  The LF-normalized
 script has `18,568` bytes in `459` lines and the output has `636` bytes in twelve
 lines; their hashes are pinned in the frontmatter.
 
-**QED, pending independent immutable-file audit and status promotion.**
+The independent companion does not import the primary script.  It reconstructs
+five Newton families, including rational and repeated roots, and checks `130`
+exact reconstruction cells, `15,018` Toeplitz minors, and `4,430` generalized
+minors.  Three multi-edge meshes add `30` transform identities and `2,658`
+generalized minors.  It also certifies the hostile `(34)` and records an
+independent proof-direction audit.  Reproduce with
+
+```text
+python 04-computation/gmc_newton_pf_thm3079_independent_audit.py
+python -O 04-computation/gmc_newton_pf_thm3079_independent_audit.py
+```
+
+Both modes byte-match the stored eight-line transcript; all independent hashes
+are pinned in the frontmatter.
+
+**QED.**

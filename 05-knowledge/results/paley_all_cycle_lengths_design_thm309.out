@@ -1,0 +1,20 @@
+THM-309 PALEY ALL-CYCLE-LENGTH DESIGN REPAIR
+p=7;square_affine_group=21;unordered_pair_orbit=SHARP
+p=7;k=3;cycles_mod_rotation=14;pair_lambda=2;uniform=PASS
+p=7;k=4;cycles_mod_rotation=21;pair_lambda=6;uniform=PASS
+p=7;k=5;cycles_mod_rotation=42;pair_lambda=20;uniform=PASS
+p=7;k=6;cycles_mod_rotation=35;pair_lambda=25;uniform=PASS
+p=7;k=7;cycles_mod_rotation=24;pair_lambda=24;uniform=PASS
+p=11;square_affine_group=55;unordered_pair_orbit=SHARP
+p=11;k=3;cycles_mod_rotation=55;pair_lambda=3;uniform=PASS
+p=11;k=4;cycles_mod_rotation=165;pair_lambda=18;uniform=PASS
+p=11;k=5;cycles_mod_rotation=594;pair_lambda=108;uniform=PASS
+p=11;k=6;cycles_mod_rotation=1595;pair_lambda=435;uniform=PASS
+p=11;k=7;cycles_mod_rotation=3960;pair_lambda=1512;uniform=PASS
+p=19;square_affine_group=171;unordered_pair_orbit=SHARP
+p=19;k=5;cycles_mod_rotation=11628;pair_lambda=680;uniform=PASS
+p=23;square_affine_group=253;unordered_pair_orbit=SHARP
+p=23;k=5;cycles_mod_rotation=31878;pair_lambda=1260;uniform=PASS
+semantic_sha256=81e1de44977eb1757a0bb6fe2a9e9cb75a010b7e53b493ee4e49147f117fc5c4
+scope=multiset_of_simple_directed_cycles;unordered_pairs_not_ordered_pairs
+all_exact_controls=PASS
