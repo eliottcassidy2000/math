@@ -1,0 +1,11 @@
+THM-3377 PATH-COLOUR DELETION COMPILER AND SKEW CURRENT
+labelled_tournaments=1099;compiler_D_specialization=PASS;marked_derivative_cells=5405
+negative_colour_deletion_cells=169330;coefficientwise_positive_reciprocity=PASS
+relabel_cells=2197;converse_and_variable_skew=PASS;Psi_nonzero_labelled_orders_1_to_5=0,0,0,16,320
+ordered_join_pair_cells=2553;compiler_product=PASS;full_Psi_law=PASS
+sharp_hostile_compiler=((0, 0, 2, 0, 1), (0, 2, 0, 4), (0, 0, 6), (0, 4), (1,));scalar_Psi=(((1, 3), 6), ((3, 1), -6));reverse=-forward
+sidecar_hostile_masks=16,83;common_Q=(0, 0, 8, 0, 8, 0, 1);q_left=(0, 8, 0, 24, 0, 6);q_right=(0, 4, 0, 24, 0, 6);common_scalar_Psi=0;K1_join_currents_differ=PASS;both_strong_nonisomorphic=PASS
+semantic_sha256=4403a78a56ee1c57dcb0e64865318e4f09187b26fa6a83697f852308d8e612ba
+truth_gates=THM3166_HP_cover_DP+THM3372_deletion_DP+direct_full_current
+scope=orders_1_to_5;ordered_factor_total_at_most_6;negative_colours_1_to_5;sidecar_hostile_order_7
+all_exact_controls=PASS
