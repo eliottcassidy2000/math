@@ -1,7 +1,12 @@
 # Disconnected-low geometry and reflected pair-floor reductions
 
 Status: PROVED structural/analytic reductions + VERIFIED-EXACT finite
-residual.  The disconnected branch itself remains open.
+residual.  **HISTORICAL FRONTIER: superseded by
+[THM-3355](../01-canon/theorems/THM-3355-disconnected-low-affine-tail-and-reflected-branch-closure.md),
+which closes the affine tail, the disconnected branch, and the positive
+canonical reflected-residue level sector.**  The reductions below remain
+valid evidence, but their statements that the affine/disconnected branch is
+open are no longer current.
 
 ## Structural reduction
 

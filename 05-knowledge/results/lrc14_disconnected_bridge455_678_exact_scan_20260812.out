@@ -1,0 +1,8 @@
+DISCONNECTED RAW BRIDGE 455--678 EXACT BULK SCAN
+contexts 2530 tasks 734566 threads 8 failures 0
+context_expected_sha256 efea6bd97522fe1c31a5a88ca9f3223f9e7a8c08e3be85c493e9f62fdfaf06e4
+task_semantic_sha256 3eea5e3450a6f188c9ac8574f57c8ef5f04e64595af148096df42cfe3bbd9561
+reference_engine_sha256 afd417297131401254769e1ef172d89c109ad2f9a843ea55e2badc3e7891435b
+context_compiler_sha256 aebfe98ab72f7eb0dc1718dfb17529e5b3f9288c6ed97d57f048bf3b29281f19
+universe 455<=p<=678;p<q<8p;gcd(p,q)<=3;all 2530 L<4592 contexts
+global_weakest 677 2482 mass 1496681/101324925 context 168 90 12 1 margin 16376879338245169/1411731252343479375

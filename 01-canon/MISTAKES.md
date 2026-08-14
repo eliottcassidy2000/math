@@ -9,6 +9,53 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-377 (2026-08-14, disconnected affine tail) -- an uncentered continuum and a collapsed finite/limit turn coordinate hid the superunit chamber
+
+- **What failed:** the first affine-tail continuum compiler integrated the
+  second tooth over `[x,x+lambda]`, although the physical convolution is
+  centered and therefore starts at `x-lambda/2`.  After that was repaired, a
+  second draft split finite `T<1` points only into `T_infinity<1` and
+  `T_infinity=1`; its first transport envelope also put the superunit factor
+  `97/96` on only one of the two phase-drift terms.
+- **Minimal witnesses / first failed implications:** the uncentered compiler
+  disagrees with the canonical periodized PL evaluator already at
+  `(d,a,c;L,j,e,f)=(8,0,8;168,90,1,3)`, `A=1328`: the centered value is
+  `277/13944`, while the left-anchored value is `265/13944`.  More
+  decisively,
+
+  ```text
+  d=2,a=0,c=2,p=781,q=782,
+  (L,j,e,f)=(784,420,2,1), A=1570,r=1
+  ```
+
+  has `T=612300/612302<1` but
+  `T_infinity=1570/1568>1`.  Thus a finite short path may converge to a
+  slightly superunit limiting path.  On that chamber both the within-block
+  phase drift and the start-phase drift carry `T_infinity`, so both require
+  the cap `97/96`; omitting the second produced the provisional tail start
+  `695` instead of the correct `699`.
+- **Repair / strongest survivor:** retain both coordinates.  Finite `T<1`
+  and `p>=679` imply only
+  `T_infinity<679/672=97/96`.  The centered exact compiler covers all
+  `5,053,047` compatible rows under that cap, including `362,926` superunit
+  rows, and has sharp audited floor `709/48048`.  Applying `97/96` to both
+  drift terms gives
+  `K_8^*=1792138785426/221510098565` and a strict analytic tail from
+  `p=699`; an exact `3,066,273,980`-mass bridge closes `264<=p<=698`.
+  The Peano term does not need another superunit factor: after factoring the
+  global `1/p`, finite `T<1` bounds its coefficient by
+  `d^2/(1344 omega)`, below the retained conservative term.
+- **Superseding theorem:**
+  [THM-3355](theorems/THM-3355-disconnected-low-affine-tail-and-reflected-branch-closure.md)
+  uses the centered compiler, the full superunit chamber, both drift factors,
+  and the exact finite bridge.  It closes the canonical reflected-residue
+  level branch, not arbitrary six-drift `k=1` or LRC(14).
+- **Reusable rule:** a finite path-length condition must not be identified
+  with its limiting path length when a residue remainder is present.  For
+  translated convolutions, freeze the center before compiling breakpoints;
+  then audit every coefficient that depends on the missing coordinate, not
+  merely the first one encountered.
+
 ## MISTAKE-376 (2026-08-12, disconnected-low frontier routing) -- navigation advertised two reductions absent from its proof package
 
 - **What failed:** the incoming LRC proof-map headline said the primitive

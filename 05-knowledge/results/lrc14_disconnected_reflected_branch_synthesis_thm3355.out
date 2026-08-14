@@ -1,0 +1,9 @@
+LRC14 THM-3355 DISCONNECTED/REFLECTED SYNTHESIS AUDIT
+dependency_sha256 b0eba7785cd73ecf76d2887f3d36316eae6980a76652058daa2587ecbe031276 a6f58c1a52dfc1fca61a239068dbe0b216bac41f1622b98748bc4a6d213fb6e8
+active_upper_median_bodies 649 robust_edge_max 10
+same_level_exceptions ((1, 2, 7, 9, 11, 13), (2, 4, 7, 9, 11, 13)) robust_counts (15, 15) active_intersection 0
+body_partition (2354, 649) total 3003
+Dmax 186636088362/11773143757375 per_edge_target 186636088362/58865718786875
+p699_pair_floor 1127129852179927/354263758756187280 five_edge_gap 46135211197112901571553/833326305667254599438238000
+multipartite_tree_edges 5
+status=PASS; reflected-residue level branch only, not LRC14

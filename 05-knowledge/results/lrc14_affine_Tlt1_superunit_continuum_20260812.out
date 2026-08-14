@@ -1,0 +1,3 @@
+contexts=2530;compatible_triples=4788;Tinf_le_679_over_672_checks=5053047;Tinf_gt_1_checks=362926;A0_checks=29;Tinf_eq_1_checks=11314;Tinf_eq_1_nonmean=0
+minimum=709/48048;equalities=2;witness=3,8,-1,168,90,12,1,A=-39
+status=FINITE-EXACT centered continuum floor 709/48048 on every compatible nonzero-c |c|<=13, T_infinity<=679/672 context; equality face exactly 1/49

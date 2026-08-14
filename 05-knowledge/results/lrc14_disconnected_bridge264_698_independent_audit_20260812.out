@@ -1,0 +1,7 @@
+LRC14 DISCONNECTED RAW BRIDGE 264--698 INDEPENDENT ASSEMBLY AUDIT
+rows 1211966 mass_comparisons 3066273980 failures 0
+segment_counts (397502, 734566, 79898)
+task_semantic_sha256 079e54a95dd55135dddcb9093bb98fba261939ce9cd9c9aeb7b38c8fe45866b7
+ledger_sha256 932057abf10f674e4bb31f334c1ea94f39e4e17627c6a950bd5d727f8e595186
+weakest (698, 2559, 20682154, 1400220127, 168, 90, 12, 1) margin 956138253921819066776/82424964235704398433125
+status=PASS; each segment has a separate all-argmin reference audit

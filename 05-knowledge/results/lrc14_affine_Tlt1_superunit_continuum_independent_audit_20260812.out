@@ -1,0 +1,7 @@
+LRC14 EXPANDED CENTERED CONTINUUM INDEPENDENT PERIODICPL AUDIT
+universe_seen ordinary superunit zero (4690092, 362926, 29)
+sampled ordinary superunit zero (256, 768, 29)
+exact_equalities 1053 failures 0
+sample_minimum ((5, 33, -1, 168, 90, 6, 12, 0), Fraction(13, 665))
+semantic_sha256 18fd6abeea735eb86dab487993cfab29bec77597732dabd3460c6df4eb4bd9cd
+status=PASS
