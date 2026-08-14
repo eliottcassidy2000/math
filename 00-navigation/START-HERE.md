@@ -24,7 +24,8 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    THM-3351 leaves ledger/wall/families `372917/113/13` at `z1=216`, next
    `L720720`; THM-3349/3350/3352 close all `220254480` labelled connected-low
    rays, and THM-3355 closes every disconnected-low assignment by a weighted
-   horn-tree argument. Thus the declared 561-body reflected six-level `k=1`
+   horn-tree argument; THM-3360 proves the uniform `1/294` edge floor. Thus the
+   declared 561-body reflected six-level `k=1`
    lane is closed. Arbitrary `k<=1`, projected `k=2,3`, the rung, physical
    entry and LRC remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.

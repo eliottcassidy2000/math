@@ -31,11 +31,11 @@ Its centered grid leaves four scale-one horns, paid by multipartite forests and
 a `K_(1,5)` debt repair. Thus all `561` reflected bodies close in the declared
 six-level `k=1` lane. Arbitrary `k<=1`, projected `k=2,3`, the rung, physical
 entry and LRC remain open; screens are not physical covers.
-The affine route is now a nonessential typed sidecar: MISTAKE-377 restores
-`9|c|<=p`, while THM-3356 sends its `14,168` primitive carriers to determinant
-shells with rank-five prime-clock resultants. Neither is a THM-3355 dependency;
-the carrier inequalities remain open. See the
-[geometric note](../07-reflections/lrc14-disconnected-low-geometry-and-g4-tail-20260812.md).
+MISTAKE-377 restores `9|c|<=p`; THM-3360 then proves the uniform physical edge
+floor on every admissible affine row, including THM-3355's four horn lanes.
+THM-3356 separately sends the primitive carriers to determinant shells; it is
+not a THM-3355 dependency. See the
+[affine certificate](../07-reflections/LRC14-disconnected-low-affine-limit-and-tail-certificate-kps-S171.md).
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
 
