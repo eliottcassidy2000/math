@@ -1,7 +1,7 @@
 ---
 id: THM-3373
 title: "AMM 12592: the R=8 slack-kernel displacement has exact conformal locality width five"
-status: PROVED + FINITE-EXACT / INDEPENDENT AUDIT PENDING
+status: PROVED + FINITE-EXACT + INDEPENDENTLY AUDITED
 source: kps-s180
 depends_on:
   - THM-3371
@@ -9,6 +9,7 @@ related:
   - THM-3365
 companion: 04-computation/amm12592_r8_slack_kernel_locality_kps_s180.py
 output: 05-knowledge/results/amm12592_r8_slack_kernel_locality_kps_s180.out
+audit: independent exact carrier, Farkas, allocation-equivalence, atom, and all-subset reconstruction
 ---
 
 # THM-3373 -- R=8 slack-kernel conformal locality width five
@@ -132,8 +133,15 @@ of `(3)`.  Widths six and seven provide positive hostile controls.
 
 Because each atom is conformal, any partial sum keeps every slack coordinate
 between its two nonnegative endpoint values.  Hence the atoms give a monotone
-lattice path inside the `103`-dilate of the augmented polytope.  This path
-statement is about the fixed displacement `(1)`, not arbitrary vertices.
+atom-step lattice path inside the `103`-dilate of the augmented polytope.  This
+path statement is about the fixed displacement `(1)`, not arbitrary vertices.
+
+An independent audit rebuilt the `114 x 156` augmented carrier, checked every
+Farkas multiplier columnwise, reconstructed all `42` `y` and `114` slack
+coordinates of the twelve integer atoms, and exhaustively checked all `2^12`
+atom subsets.  Every subset has nonnegative slack, so the monotone path claim
+holds for every atom ordering.  Three normal and three optimized replays were
+byte-identical to the stored output, and all pinned hashes were reproduced.
 
 Normal and optimized runs are byte-identical.  The semantic hash of the
 displacement, four Farkas certificates, and integer width-five atoms is
