@@ -187,6 +187,16 @@ transcendental arithmetic from this finite sufficient search.  Feasibility of
 that prefix cone would close the exact-floor `R=512` case; infeasibility would
 exclude only first-feed-free cone entry, not every witness.
 
+THM-3373 supplies the first exact operation law between the two `R=8` points.
+After adjoining all inequality slacks, their denominator-cleared displacement
+has conformal causal-row locality width exactly five: integer Farkas
+certificates rule out widths at most four even over the reals, while twelve
+integer width-five kernel moves give a monotone path in the `103`-dilated
+polytope.  This is more rigid than “find a circuit” and less than a Graver
+compiler.  The next lawful transfer test is to translate the twelve labelled
+atom shapes through the two `delta=0,1` Pascal steps at `R=512`, retaining cap
+slacks and the entry margin; the naked kernel vectors are insufficient.
+
 ## Reproduction
 
 ```bash
