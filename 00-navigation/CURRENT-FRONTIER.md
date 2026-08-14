@@ -218,7 +218,9 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - THM-3315/3322/3324 compile switched walks, second moments, split joins and
   response Gram. THM-3359 makes modular C-finite supports periodic with
   rational harmonic residue, but its exact `T4` census still loses apex,
-  orientation and SCC order. Next: third tensors and nontransitive substitution.
+  orientation and SCC order. THM-3369 adds an exact skew deletion current and
+  detects the sharp `K1 triangleright C3` reversal, not full order or time.
+  Next: higher skew response tensors and nontransitive substitution.
 - A literal Paley bridge exists only in THM-640's prime quadratic-residue scope.
   Composite modulus 14 and repeated score/node heuristics do not inherit it.
 - MISTAKE-227–229 correct the newest false syntheses: the AP chain frame is

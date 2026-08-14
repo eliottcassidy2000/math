@@ -53,9 +53,9 @@ Then read the routed frontier, guardrails, and theorem. Logs and reflections are
    normal atlas has two middle completions but no outer co-support. A two-axis
    atom, current and LRC(14) remain OPEN.
 10. **Tournament structure is operational.** THM-3315 compiles switched walks;
-    THM-3359 makes their modular supports periodic, but its exact `T4` audit
-    shows harmonic density loses apex and orientation. Relative phase, static
-    sections and rank-two updates are not tournaments or time.
+    THM-3359 makes modular supports periodic but loses apex/orientation.
+    THM-3369's skew deletion current detects the sharp `K1/C3` join reversal,
+    not full SCC order or time. Static sections/rank-two updates are not tournaments.
 11. **Sequences need support and multiplicity profiles.** THM-2000/2005/2352
     separate support, collision tax and q-adic thresholds; THM-2438/2500 give
     Poisson--Newton/finite-hole laws. THM-3359 gives residue `delta` and scar
