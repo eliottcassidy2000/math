@@ -1,5 +1,5 @@
 ---
-id: THM-3366
+id: THM-3367
 title: "Berggren spinor pencil Hessian gauge and affine-line Keller closure"
 status: "RESERVED / UNPROVED EMPTY STUB"
 source: root/factorial-jacobian-lrc-threebranch-2026-08-14
@@ -7,7 +7,7 @@ depends_on: []
 related: []
 ---
 
-# THM-3366 -- Berggren spinor pencil Hessian gauge and affine-line Keller closure
+# THM-3367 -- Berggren spinor pencil Hessian gauge and affine-line Keller closure
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
