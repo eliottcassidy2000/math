@@ -1,7 +1,7 @@
 ---
 id: THM-3374
 title: "AMM 12592: the R=512 rule-A death has causal repair horizon at least 58"
-status: PROVED + VERIFIED-EXACT / INDEPENDENT AUDIT PENDING
+status: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
 source: kps-s181
 depends_on:
   - THM-3329
@@ -13,11 +13,12 @@ output: 05-knowledge/results/amm12592_r512_ruleA_causal_repair_horizon_kps_s181.
 script_sha256: e2c1a18fe35d74cd445deef549f6d3eda8f87b4a472d340b809f29e3f1935a1d
 output_sha256: 8faf5284d478ce1bef1fe23a04c06084ad1221c63ac259855e33207faaf75569
 hash_basis: LF-normalized bytes
+audit: independent coefficient-capacity, recurrence-indexing, and 57/58 threshold reconstruction
 ---
 
 # THM-3374 -- the rule-A death cannot be repaired locally
 
-**PROVED + VERIFIED-EXACT / INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## Statement
 
@@ -130,6 +131,10 @@ The corresponding stored-output hash is
 ```text
 8faf5284d478ce1bef1fe23a04c06084ad1221c63ac259855e33207faaf75569.
 ```
+
+An independent audit rederived `(4)` from the reversed Bernstein basis,
+unrolled `(6)` with the row-107 indexing from scratch, recomputed `C_5`,
+`C_57`, and `C_58`, and confirmed the row-49/50 boundary with no off-by-one.
 
 This theorem is a necessary divergence bound for alternatives to one fixed
 rule-A prefix.  It neither proves infeasibility of the `R=512,D0=0` polytope,
