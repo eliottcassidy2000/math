@@ -2,7 +2,9 @@
 id: THM-3366
 title: All-sector pointwise complement-clock completion
 status: >
-  PROVED + FINITE-EXACT, with CITED input; INDEPENDENT AUDIT PENDING.
+  PROVED + FINITE-EXACT, with CITED input; the specialized k=1 census and
+  refined k=2 composition are INDEPENDENTLY AUDITED, while the unified all-k
+  census and refined k=3 composition remain under independent audit.
   On every THM-2928 body-address quotient, a pointwise cover of the
   unsupported open cells by r integer danger combs compiles any hypothetical
   k-aligned, (7-k)-drift cover into a global cover by at most 7+r nonzero
@@ -31,6 +33,10 @@ script: 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py
 output: 05-knowledge/results/lrc14_allk_universal_complement_clock_scan_kps_s174.out
 script_sha256: bd283577083c900c1001a2ed760bf3ac4c319f19840a07060b2a54611b9b88a8
 output_sha256: 1104900cd805a2af05e3c7252b7d7bacd417b36b0f015a90d1976b6913fc91c5
+k1_companion_script: 04-computation/lrc14_k1_universal_complement_clock_scan_kps_s173.py
+k1_companion_output: 05-knowledge/results/lrc14_k1_universal_complement_clock_scan_kps_s173.out
+k1_companion_script_sha256: 9c24a124ab3d527f9bdf352a4553a0f2592eb0afe9dd580cad6d3489df468b8d
+k1_companion_output_sha256: 80d37ede35c05d7b95779be31a4bef487066869af3c40c1f5f923707df3fa5cf
 composition_script: 04-computation/lrc14_k2_refined_complement_clock_composition_kps_s175.py
 composition_output: 05-knowledge/results/lrc14_k2_refined_complement_clock_composition_kps_s175.out
 composition_script_sha256: 3b1ba7576172574faea6c3c8bcc118ad50728e1a3c380b4a308f89c83cff14f9
@@ -224,6 +230,12 @@ support-row terminals.  The `k=1` count includes the one `D=14` row and its
 increment beyond THM-3363 is `19,272` rows and
 `5,116,993,586,169` occurrences, not the unadjusted total.
 
+The `k=1` line is also produced by the separately implemented specialized
+companion S173.  Its exact event sweep, strict-open atom cover and census were
+independently reconstructed; the hardened stored run pins its dependency,
+row, histogram, occurrence and semantic hashes.  This is an independent
+check of that sector, not a second theorem to be added to the ledger.
+
 For `p>=1`, the occurrence weight of a body/divisor row is the exact number
 of unordered denominator multisets with lcm `D`:
 
@@ -363,6 +375,8 @@ operation for the current `k=2` and `k=3` ledgers.
 ```bash
 python 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py
 python -O 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py
+python 04-computation/lrc14_k1_universal_complement_clock_scan_kps_s173.py
+python -O 04-computation/lrc14_k1_universal_complement_clock_scan_kps_s173.py
 python 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py --pool-max 28
 python -O 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py --pool-max 28
 python 04-computation/lrc14_k2_refined_complement_clock_composition_kps_s175.py
