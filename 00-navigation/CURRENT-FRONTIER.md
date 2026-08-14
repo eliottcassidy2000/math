@@ -61,14 +61,11 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
   scans; AP13 and its lift share germs but not maxima.
 - THM-2058 preserves every fixed lift depth but escapes at `47/113`;
   finite jets/Farey rays fail.
-- THM-3333/3334/3336/3339/3341 type the Gaussian/Farey/Pell U-spine; THM-3345
-  gives source ancestry, THM-3346 the two-channel root cube, and THM-3347 its
-  signed Hensel Gram (`N=32045` defeats the naive fold; projector/cosh repair
-  positivity). THM-3353 compiles each split-prime edge on fixed unary lanes;
-  THM-3356 organizes all incoming affine tails into parabolic determinant
-  shells with sharp rank-five content fingerprints; THM-3357 adds an
-  outer-to-middle gate Horn rule. Owner, phase/exit, physical mass, global
-  transduction, LRC current/row, and JC flux remain open.
+- THM-3333/3334/3336/3339/3341/3345--3347 type the Gaussian/Farey/Pell
+  U-spine, root cube, signed Gram, and ancestry. THM-3353/3358 compile exact
+  lanes; THM-3356 gives affine shells, THM-3357 the gate Horn rule, and
+  THM-3359 periodic index mass. Content, normal unit, order, owner/phase, and
+  mass remain sidecars; no global transduction, LRC row, or JC flux.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 
@@ -247,17 +244,19 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 
 [THM-2000](../01-canon/theorems/THM-2000-support-harmonic-abel-dini-figurate-surface.md)
 and [THM-2005](../01-canon/theorems/THM-2005-support-dirichlet-automatic-tournament-atlas.md)
-replace “the reciprocal sum of a sequence” with two explicit objects:
+separate support from indexed multiplicity and its collision tax:
 
 ```text
 support profile       D_A(z) = sum_{a in support} a^{-z}
 indexed multiplicity  = D_A(z) + collision tax.
 ```
 
-[THM-2352](../01-canon/theorems/THM-2352-q-adic-prefix-residue-collision-spectrum.md): q-adic support has abscissa zero; indexed plateaux realize thresholds. Termination is finite support, conditioning-blind.
-
-At `z=1`, Abel–Stieltjes/log occupancy is exact; density zero fails through
-the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
+[THM-3359](../01-canon/theorems/THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar.md)
+makes every modular **index** support of a C-finite sequence ultimately
+periodic; its harmonic coefficient is accepted cycle density. Unary
+regular lengths and ternary level counts enter; base-three address values and
+the value support of `n^2` do not. THM-2352 gives the separate q-adic plateau
+boundary. At `z=1`, density zero alone does not decide harmonic mass.
 
 ### Established landmarks
 
@@ -410,10 +409,12 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   An ancestry pullback, chronology, positivity and arbitrary faces remain OPEN.
   THM-3303/3328 split constant-J: double sheet or anti-tangent/vertex-cone data.
   THM-3310/3321 close cyclic-quartic support `<=4`; THM-3323 leaves support `5`
-  at the `10980/1670` rank boundary. THM-3327's shortest closed covering-arc
-  gate is standard-`C3` automatic; Fourier positivity is rechecked. HFC(3)/FC(3)
-  remain OPEN; degree 29 is only count-eligible and `p>4m+2` is mandatory. The
-  Hesse torus gives no second normalization; no symmetry classification.
+  at rank `10980/1670`. THM-3327 gives a standard-`C3` automatic phase gate.
+  THM-3357/3365 give cubic determinants: `L(P^r)=0` for odd `r` and
+  `(3r+2)!/[2(r+1)^2]` for even `r`; the Vieta Jacobian has odd moments zero
+  and `L(J^(2m))=((2m)!)^2(3m)!/m!`. Both detect at power two; bare
+  bouquets lose the observer. HFC(3)/FC(3) remain OPEN; degree 29 is only
+  count-eligible and `p>4m+2` is mandatory.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

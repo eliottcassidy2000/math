@@ -1,4 +1,4 @@
-THM-3362 FACTORIAL VANDERMONDE ALL-POWER BENCHMARK
+THM-3365 FACTORIAL VANDERMONDE ALL-POWER BENCHMARK
 assertion_nodes 0 floating_literals 0
 Vieta_map ('x + y + z', 'x*y + x*z + y*z', 'x*y*z')
 Jacobian_determinant x**2*y - x**2*z - x*y**2 + x*z**2 + y**2*z - y*z**2

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for the THM-3362 Vieta/Vandermonde FC(3) benchmark."""
+"""Exact companion for the THM-3365 Vieta/Vandermonde FC(3) benchmark."""
 
 from __future__ import annotations
 
@@ -385,7 +385,7 @@ require(
 )
 
 
-print("THM-3362 FACTORIAL VANDERMONDE ALL-POWER BENCHMARK")
+print("THM-3365 FACTORIAL VANDERMONDE ALL-POWER BENCHMARK")
 print("assertion_nodes", assertion_nodes, "floating_literals", floating_literals)
 print("Vieta_map", (str(e1), str(e2), str(e3)))
 print("Jacobian_determinant", str(determinant))
