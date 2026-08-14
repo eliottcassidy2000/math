@@ -25,15 +25,16 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`; projected caps `1579/216`. THM-3351 leaves
-ledger/rows/families `372917/113/13` at `z1=216`, next `L720720`.
-THM-3349/3350/3352/3355 close every positive canonical reflected-residue
-level assignment `z_e=q_eL-e` on all `3,003` bodies. THM-3352 handles
-connected-low levels; [THM-3355](../01-canon/theorems/THM-3355-disconnected-low-affine-tail-and-reflected-branch-closure.md)
-handles disconnected-low and repetitions, removing the former `561` residual.
-Still open: `k=0`, arbitrary six-drift `k=1`, other residues, projected
-`k=2,3`, rung, entry, and LRC. Screens are necessary-state quotients, not
-physical covers. See the [current reflection](../07-reflections/lrc14-disconnected-low-affine-tail-and-reflected-branch-closure-20260814.md).
+Direct frontier: `<=6`; projected caps `1579/216`. THM-3361 leaves
+ledger/wall/families `372914/110/12` at `z1=216`. THM-3352/3355 close the
+connected/disconnected matched-residue branch; THM-3360 gives its uniform
+`1/294` edge floor and THM-3372 an independent `>Dmax/5` affine proof.
+With same-level edges this closes `z_e=q_eL-e` on all `3,003` bodies.
+Open: `k=0`, other/arbitrary six-drift `k=1` residues, projected `k=2,3`,
+rung, entry, and LRC. Screens are not covers. THM-3356 gives determinant
+shells; THM-3366 leaves `4,056/200,069,517,203` (`k=2`) and
+`1,897/2,548,893,834` (`k=3`), with seven rigid `k=3` hits at `D=L/2`.
+THM-3368 adds a weighted Horn tariff but no clock seed. LRC remains open.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
 
@@ -58,16 +59,11 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
   scans; AP13 and its lift share germs but not maxima.
 - THM-2058 preserves every fixed lift depth but escapes at `47/113`;
   finite jets/Farey rays fail.
-- THM-3333/3334/3336/3339/3341 give the typed Gaussian/Farey/Pell U-spine,
-  content multiplication, and selectors; THM-3345 gives source-dependent
-  ancestry. THM-3346 adds the two-channel gcd/root cube and conjugation `Z/2`.
-  THM-3347 makes signed log-content a Hensel-clock Gram kernel. The folded
-  parent metric is CND for every positive weight through rank three but fails
-  at `N=32045`; projector/cosh kernels repair positivity, while the
-  tautological line retains the lift. THM-3353 compiles every split-prime
-  parent-torsor edge on two fixed-`p` unary lanes, modulo gauge, with valuation
-  one and unbounded rank/ancestry. Tree `H^1` stays zero; no all-source
-  transducer, LRC current, JC flux, or LRC row follows.
+- THM-3333/3334/3336/3339/3341/3345--3347 type the Gaussian/Farey/Pell
+  U-spine, root cube, signed Gram, and ancestry. THM-3353/3358 compile exact
+  lanes; THM-3356 gives affine shells, THM-3357 the gate Horn rule, and
+  THM-3359 periodic index mass. Content, normal unit, order, owner/phase, and
+  mass remain sidecars; no global transduction, LRC row, or JC flux.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 
@@ -210,7 +206,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-3173 separates `C2*C3`, regular `S3`, and regular `C6`; their joint
   quotient has order 18, while pointed oriented quartic frames form `Q3`.
   These are semantic action data, not a physical current or Keller bridge.
-- THM-1880/1885 give the Pell frame; THM-3335 excludes nontrivial square-arc/skew-EW attainment; THM-3339's intrinsic `T6` loses affine owner.
+- THM-1880/1885 give the Pell frame; THM-3335 excludes nontrivial square-arc/skew-EW attainment; THM-3339's `T6` loses owner; THM-3357 gives a local sibling `T3`, not a level tournament.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
 - THM-2013/2016 bound cyclic temperature/reducibility; `H` remains empirical.
@@ -221,8 +217,12 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 
 - [THM-1950](../01-canon/theorems/THM-1950-h-ge-disc-reduced-to-strongly-connected.md) reduces `H >= disc` to strongly connected tournaments and verifies finite
   cases; the global inequality is open.
-- THM-3315 compiles switched walks; THM-3322 adds second moments and split joins; THM-3324 closes join on the response Gram.
-  Its `F` block is necessary but SCC order is lost. Next: third tensors and nontransitive substitution.
+- THM-3315/3322/3324 compile switched walks, second moments, split joins and
+  response Gram. THM-3359 makes modular C-finite supports periodic with
+  rational harmonic residue, but its exact `T4` census still loses apex,
+  orientation and SCC order. THM-3369 adds an exact skew deletion current and
+  detects the sharp `K1 triangleright C3` reversal, not full order or time.
+  Next: higher skew response tensors and nontransitive substitution.
 - A literal Paley bridge exists only in THM-640's prime quadratic-residue scope.
   Composite modulus 14 and repeated score/node heuristics do not inherit it.
 - MISTAKE-227–229 correct the newest false syntheses: the AP chain frame is
@@ -244,17 +244,19 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 
 [THM-2000](../01-canon/theorems/THM-2000-support-harmonic-abel-dini-figurate-surface.md)
 and [THM-2005](../01-canon/theorems/THM-2005-support-dirichlet-automatic-tournament-atlas.md)
-replace “the reciprocal sum of a sequence” with two explicit objects:
+separate support from indexed multiplicity and its collision tax:
 
 ```text
 support profile       D_A(z) = sum_{a in support} a^{-z}
 indexed multiplicity  = D_A(z) + collision tax.
 ```
 
-[THM-2352](../01-canon/theorems/THM-2352-q-adic-prefix-residue-collision-spectrum.md): q-adic support has abscissa zero; indexed plateaux realize thresholds. Termination is finite support, conditioning-blind.
-
-At `z=1`, Abel–Stieltjes/log occupancy is exact; density zero fails through
-the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
+[THM-3359](../01-canon/theorems/THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar.md)
+makes every modular **index** support of a C-finite sequence ultimately
+periodic; its harmonic coefficient is accepted cycle density. Unary
+regular lengths and ternary level counts enter; base-three address values and
+the value support of `n^2` do not. THM-2352 gives the separate q-adic plateau
+boundary. At `z=1`, density zero alone does not decide harmonic mass.
 
 ### Established landmarks
 
@@ -264,6 +266,11 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   coefficients are central trinomials, the two Pascal halves become ternary
   walks, and reciprocal support is limiting mean divisor incidence/fibre scar.
   Abel--Dini/Bertrand is the boundary; Cauchy and Dirichlet convolution differ.
+- [THM-3359](../01-canon/theorems/THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar.md)
+  gives periodic modular C-finite supports, harmonic residue `delta=h/p`, and
+  multiplicative scar `delta-delta^2/2`. Exact `T4`, Fibonacci, Berggren and
+  ternary-DFA controls show that the common matrix calculus loses orientation
+  and ancestry; squares and `ceil(k log(k+1))` block extension to all subsets.
 - Hostile-audited [THM-2500](../01-canon/theorems/THM-2500-finite-hole-relative-atoms-prime-rays-and-cover-bounds.md) classifies finite multiplicative hole modules. Prime-free holes have finitely
   many artificial atoms at most `max h*spf(h)`; a prime hole creates
   disjoint cage rays `m*q` with sharp `M^3/M^4` finite remainders. Additive
@@ -295,7 +302,7 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   THM-3321/3323 give the Hesse recurrence and exact degree-21 Hilbert slice.
   The [multi-edge audit](../07-reflections/multi-edge-visible-kernel-and-bordered-resolvent-independent-audit-codex-20260803.md) compiles all `55` pairs locally; no dynamics/bit-complexity claim.
   Q4 radius/non-P stay OPEN.
-- **EXACT typed identities:** corrected HYP-8820 proves `bagel(n)-cake(n)=T_n-1`; THM-3333 gives triangular Lorentz polarization and typed ranks; THM-3335/3341 compile the square-triangular selector, adjacent square-hypotenuse roots, and norm-17 triangular-plane orbits. MISTAKE-222 still requires a common valuation for cross-predicate transfer.
+- **EXACT typed identities:** corrected HYP-8820 proves `bagel(n)-cake(n)=T_n-1`; THM-3333 gives triangular Lorentz polarization and typed ranks; THM-3335/3341 compile the square-triangular and norm-17 orbits; THM-3357 compiles ternary-level Walsh/moment sequences. MISTAKE-222 still requires a common valuation for transfer.
 - **EXACT arrangement shadow / blocked topology transfer:** corrected HYP-8825
   connects Vandermonde, braid chambers/transitive tournaments, and a companion
   determinant. MISTAKE-223 blocks NC2, hyper-Bessel, or Euler-characteristic
@@ -312,9 +319,9 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   remain open.  THM-2646 classifies `B3` conjugacy by modular and exponent
   classes, but exponent is not Markov-invariant.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
-- **Jacobian/Dixmier:** `JC(2)` and `DC(2)` remain open; THM-1300/1315
-  provenance is unsettled (MISTAKE-205).  THM-2473--2576 settle only the fixed
-  sporadic map.  For the `A4/S4` route, THM-2681 excludes the proposed cubic
+- **Jacobian/Dixmier:** `JC(2)` and `DC(2)` remain open; THM-3367 identifies the Berggren pencil with Hessians and tames line images only.
+  THM-1300/1315 provenance is unsettled (MISTAKE-205). THM-2473--2576 settle
+  only the fixed sporadic map. For the `A4/S4` route, THM-2681 excludes the proposed cubic
   identification and THM-2685/2686/2695 locate the surviving standard plane in
   units, `Cl[2]`, and `Pic[2]/2Pic[4]`; the spin/reflection and saturation
   coordinates remain missing.  THM-2690/2696/2700 exclude the toric,
@@ -402,10 +409,12 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   An ancestry pullback, chronology, positivity and arbitrary faces remain OPEN.
   THM-3303/3328 split constant-J: double sheet or anti-tangent/vertex-cone data.
   THM-3310/3321 close cyclic-quartic support `<=4`; THM-3323 leaves support `5`
-  at the `10980/1670` rank boundary. THM-3327's shortest closed covering-arc
-  gate is standard-`C3` automatic; Fourier positivity is rechecked. HFC(3)/FC(3)
-  remain OPEN; degree 29 is only count-eligible and `p>4m+2` is mandatory. The
-  Hesse torus gives no second normalization; no symmetry classification.
+  at rank `10980/1670`. THM-3327 gives a standard-`C3` automatic phase gate.
+  THM-3357/3365 give cubic determinants: `L(P^r)=0` for odd `r` and
+  `(3r+2)!/[2(r+1)^2]` for even `r`; the Vieta Jacobian has odd moments zero
+  and `L(J^(2m))=((2m)!)^2(3m)!/m!`. Both detect at power two; bare
+  bouquets lose the observer. THM-3362 detects real odd-profile pairs in three
+  moments; complex phases can fail. HFC(3)/FC(3) remain OPEN; `p>4m+2` is mandatory.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

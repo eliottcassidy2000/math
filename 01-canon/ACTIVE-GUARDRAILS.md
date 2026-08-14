@@ -94,8 +94,9 @@
     nodes do not imply a Paley/regular wall.
 31. **No global de-factorialization.** MISTAKE-215; THM-2040 is retired. The
     THM-2022 mechanism is prime-local initial-form normalization.
-32. **THM-2033 is special-matrix scope.** Its determinant identity does not
-    replace the general scalar Wick moment.
+32. **Support algebra is not its observer.** THM-2033 is special-matrix scope;
+    its determinant does not replace scalar Wick moments. Bare toric/bouquet
+    data retain neither signs nor factorial weights (THM-3365).
 33. **Distinguish legacy endpoints from the front door.** `nc2_of_dvdK1` and
     `gmc2_of_dvdK1` still expose `DvdK1`, but root-imported `GMC2Main.gmc2`
     now discharges the crux unconditionally and kernel-purely. HYP-8930's

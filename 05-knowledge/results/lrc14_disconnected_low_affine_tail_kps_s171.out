@@ -1,0 +1,13 @@
+LRC14 DISCONNECTED-LOW AFFINE TAIL CERTIFICATE
+status=PROVED analytic averaging/turn exits + FINITE-EXACT residual
+contexts=79;rays=22890;unique_limit_triples=17206
+limit_checks=1359274;limit_minimum=709/48048@(d,a,c,p0,q0;L,cell,e,f;n,p,q)=(3,8,-1,0,0;168,90,12,1;0,0,0);limit_gap=1273/112112
+ray_contexts=1808310;convergence_exits=1089868;turn_exits=718442;maximum_finite_head=1149
+periodic_candidates=266339875;scope_skips=73249631;envelope_skips=86241073;midpoint_skips=27106017;literal_checks=239233858
+literal_minimum=29565457/1887366115@(d,a,c,p0,q0;L,cell,e,f;n,p,q)=(8,16,-8,8,23;168,90,12,1;111,896,2687);failures_below_1/294=0
+summary_rows=22890
+conclusion=every_Dirichlet-admissible_affine-ray_incidence_in_the_remaining_gcd<=3_scope_has_mass>=1/294
+context_mask_sha256=0a36a95b906bf3fb9911d0d234fe9be8032a1d49c090bd21062c4fa9ec74a31f;mask_counts=(79,10,4)
+probe_count=99;probe_semantic_sha256=701992b74f33b263545136c87f896f239e7fb7787e18dddec33c2a3ad188a530
+ray_summary_sha256=86c21305cc7bf3f86dff2b99d29756855b6cb65bb2c20b1f7148a37d6ac45c58
+compiler_source_sha256=0804e5067a0bbaa3c96f6f3d69915b7baf55a4a8a6b4a35792ec0b4b9ed75e64

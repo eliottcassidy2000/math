@@ -1,0 +1,14 @@
+LRC14 K=2 REFINED COMPLEMENT-CLOCK COMPOSITION
+status=FINITE-EXACT intersection of post-d6 and pool-14 ledgers
+arrangement_points=206;atoms=205;support_closed_rows=19198;support_completion_histogram=((1, 12662), (2, 2764), (3, 998), (4, 1106), (5, 1668))
+pre_summary=(26899164786, 200141092521, 4354, 2966, 147)
+pre_occurrence_by_c=Counter({3: 112812921408, 2: 46320209782, 4: 39514128418, 5: 1490308157, 1: 3524756})
+refined_closed_rows=298;refined_closed_occurrences=71575318
+post_summary=(26899164065, 200069517203, 4056, 2966, 144)
+post_occurrence_by_c=Counter({3: 112778172674, 2: 46320209782, 4: 39482116896, 5: 1485493095, 1: 3524756})
+completion_semantic_sha256=7ea43d80c994de6f645edebd9872024b3106e4cf902c1518c03dd8736e05ef19
+pre_semantic_sha256=a0835d54b3ac720e57d5788945bed44a2fda134897918415d8df610634f7a973
+post_semantic_sha256=032b96bf1d9877a68c395e9508f51c20e5476cf7500891d9c5b6920bc0697238
+engine_output_sha256=49cbf8fb160a78125d426cf7348c3c35e4859f110f493bb4b03acfc2f0c92125
+solver_cache=CacheInfo(hits=57652, misses=175497, maxsize=None, currsize=175497)
+verdict=PASS

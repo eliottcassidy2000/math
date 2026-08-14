@@ -1,575 +1,383 @@
 ---
 id: THM-3355
-title: "Disconnected-low affine-tail and canonical reflected-residue branch closure"
+title: "Disconnected-low weighted horn-tree and reflected-branch closure"
 status: >
-  PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  On every
-  one of the 649 upper-median bodies, every physical pair with intrinsically
-  high reduced level ratio has overlap strictly greater than one fifth of the
-  universal singleton-debt maximum.  A five-edge complete-multipartite Hunter
-  tree closes every disconnected-low distinct-level assignment; THM-3352
-  closes the connected-low case, and the same-level graph closes repetitions.
-  Thus every positive canonical reflected-residue level assignment closes on
-  all 3,003 bodies.  This is not k=0, arbitrary six-drift k=1, other residue
-  packets, or projected k=2,3, and it does not prove LRC(14).
-source: root/lrc-math-2026-08-12
+  PROVED + FINITE-EXACT + VERIFIED-EXACT.  Every disconnected intrinsic-low
+  six-level assignment closes on every one of the 649 upper-median bodies.
+  A centered primitive-grid lemma gives the physical edge floor 1/294 except
+  on four oriented scale-one horns; an exact finite head, coefficient-positive
+  tail, complete-multipartite forest census, and debt-sensitive K1,5 repair
+  close those horns without asserting a false uniform floor.  Together with
+  THM-3352 this closes the current 561-body reflected six-distinct-level k=1
+  branch.  It does not close arbitrary k<=1, projected k=2,3, the rung,
+  physical entry, or LRC(14).
+source: codex-major-frontiers-2026-08-12
 depends_on:
   - THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary
+  - THM-1250-six-private-needles-force-fully-located-spanning-tree
   - THM-3350-connected-low-full-tree-atlas-dense-closure-and-uniform-tail
   - THM-3352-connected-low-all-head-universal-physical-forest-closure
 related:
   - THM-3200-fixed-lrc-channel-cleared-overlap-quasipolynomial-and-mass-recurrence-boundary
-verification:
-  - 04-computation/lrc14_disconnected_low_geometry_verify_20260812.py
-  - 04-computation/lrc14_disconnected_large_ruler_floor_20260812.py
-  - 04-computation/lrc14_disconnected_35_small_ruler_symbolic_20260812.py
-  - 04-computation/lrc14_disconnected_non35_g4_tail_20260812.py
-  - 04-computation/lrc14_disconnected_head263_exact_scan_20260812.c
-  - 04-computation/lrc14_generalized_dirichlet_reduction_20260812.py
-  - 04-computation/lrc14_affine_turn_band_reduction_20260812.py
-  - 04-computation/lrc14_affine_Tlt1_superunit_continuum_20260812.cpp
-  - 04-computation/lrc14_affine_Tlt1_superunit_continuum_independent_audit_20260812.py
-  - 04-computation/lrc14_affine_Tlt1_superunit_unified_K_20260812.py
-  - 04-computation/lrc14_disconnected_bridge264_698_exact_scan_20260812.c
-  - 04-computation/lrc14_disconnected_bridge264_698_independent_audit_20260812.py
-  - 04-computation/lrc14_disconnected_bridge264_454_reference_audit_20260812.py
-  - 04-computation/lrc14_disconnected_bridge455_678_all_argmins_audit_20260812.py
-  - 04-computation/lrc14_disconnected_bridge455_678_full_context_audit_20260812.py
-  - 04-computation/lrc14_disconnected_bridge679_698_all_argmins_audit_20260812.py
-  - 04-computation/lrc14_disconnected_bridge679_698_full_context_audit_20260812.py
-  - 04-computation/lrc14_disconnected_reflected_branch_synthesis_thm3355.py
-turn_band_script_sha256: 8a4d59f9eaae04f6c836c1d8081a7dbaf74fa51ed9551784324c8e17f48bbf71
-turn_band_output_sha256: 83785ea2e3d39952a7ab50e1f90e01db56a47f033de32d3b651e1a7f52bfabd8
-continuum_script_sha256: 2db0af3e0e2b678ee6b13d79dbaf4f6b8f91c8e8a83ee0a1d201de344abaf06a
-continuum_output_sha256: af1c6c944ea1e5997ed58809e4f8ddccde16326d4b90b39e3b777f4200498661
-continuum_audit_sha256: 3d10014f093b2cbee89ba524fadd2e9a5b4b1dee92d28bc550da0869a18a2aa0
-continuum_audit_output_sha256: 62a5eae88a76216fece5de8844f84a147b65392d8a77474e4cc88174096ab7c6
-unified_K_script_sha256: db8575364318a66a8635ea9acebc80d1537520eaedfb880045a906017af576fb
-unified_K_output_sha256: 427cec0fe83780fb3115fa0c4ccfc8d21d82c6d645d692122bc9abc97375bda7
-bridge_script_sha256: f5981fb354c002d68eea6a589f015c76d124cb4d0fdf7e6fe6088abcf5423046
-bridge_output_sha256: 532bedbb84d49e9dfb655bf66877483740a02259a1044a40eaada9fadf7e12ba
-bridge_audit_sha256: d95423e6e7b710e155bbfefcfaec85a7168ef251824a5c9c162a1cc5400c6355
-bridge_audit_output_sha256: 20afda5eb6592e931942334f3ab123e3f7e725ff88f3d8b5b387360cd10a98b4
-bridge_264_454_reference_audit_sha256: 1438a1265b8a8ae412094b84757739e028d699cbfebdb339de99c75a4e94b7a7
-bridge_264_454_reference_output_sha256: c5587d320666984856500960421f56ae0b808538254c5d18f9c7a2ab45dad741
-bridge_455_678_argmin_audit_sha256: faacadca6b117f7a5cf0c88dca418a0870471037f5f0c8cfc5c1bfed3ed1346d
-bridge_455_678_argmin_output_sha256: de672acb627da86bbef0e322915384742723daed408db32ea5f46debcf9031ca
-bridge_455_678_control_audit_sha256: 976accfb57c0da5531cdbd23d2c6075b95611e30db7cdf4bf613d223a6a83216
-bridge_455_678_control_output_sha256: 607a22b5d19e373d82ef0bb24540d745d27f2a481fd4c66598e7e7865297eb65
-bridge_679_698_argmin_audit_sha256: c694bacf74c42790ab74b9157ba93ad3fc162f21b47b3de661b83a6972380196
-bridge_679_698_argmin_output_sha256: bd717c2c2d69c8968043c873e8262a444390979810a8a415cac9fe38d00f74e5
-bridge_679_698_control_audit_sha256: 16689e833f9894a51c5c560f50b1e70d4737d16c3080b13a1776bec7d2c2ddd3
-bridge_679_698_control_output_sha256: 841aaaf4b0b0bbf37c6955ffb471bd865e76ab1a56c95ae6828c29e2fbfc917d
-synthesis_sha256: 8bbc4817b75732e38935a3431902d6c57886d8a3a8bb0fea4c033cea4870dbb7
-synthesis_output_sha256: ced9ee2e128290939fce706968631b20dc15e6cda966e327b22c1bd16e2fec89
+  - THM-3211-uniform-lrc-channel-limit-bernoulli-cubic-and-sharp-floor
+script: 04-computation/lrc14_disconnected_weighted_horn_tree_closure_thm3355.py
+output: 05-knowledge/results/lrc14_disconnected_weighted_horn_tree_closure_thm3355.out
+script_sha256: 78975824a16471cd6aad7194443f292773a9af08c748d945733768d64c2116dd
+output_sha256: 1f18288cd8c2886f85b0a1839e1cb0737d9141a8de0e543e68a28ef6d7e9c565
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3355 -- disconnected-low affine tail and canonical reflected-residue branch closure
+# THM-3355 -- disconnected-low weighted horn trees close the reflected branch
 
-**PROVED + FINITE-EXACT + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+**PROVED + FINITE-EXACT + VERIFIED-EXACT.**
 
 ## 1. Statement
 
-Let `E` be any of the `649` upper-median bodies behind THM-3350/3352,
-let `(L,j)` be its fixed upper-median body-safe cell, and let `e!=f` be two
-ordered endpoint labels in `E`.  For distinct positive raw levels `p,q`,
-swap the two endpoints together if necessary so that `p<q`, and write
+Use the reflected physical setup of THM-2941 and the notation of THM-3350.
+There are six distinct positive levels `q_0,...,q_5`.  For each pair write
 
 ```text
-g=gcd(p,q),       p=gP, q=gQ,       gcd(P,Q)=1.          (1)
+(q_i,q_j)=g(P,Q),             gcd(P,Q)=1, P<Q.             (1)
 ```
 
-If the reduced channel is intrinsically high,
+Join `i,j` in the intrinsic low graph when `P+Q<=7`, and suppose this graph
+is disconnected.  Fix any of the `649` upper-median bodies, its ruler `L`,
+its selected whole body-safe cell, and any assignment of its six endpoint
+labels to the levels.  Then a complete-graph Hunter tree has physical pair
+credit strictly exceeding the exact singleton debt.  Hence every such
+disconnected-low assignment closes.
+
+THM-3352 proves the same conclusion when the intrinsic low graph is
+connected.  The two cases are exhaustive, so their composition closes every
+six-distinct-level reflected assignment in the current upper-median bank and,
+through THM-2941's reflected reduction, all `561` residual bodies in this
+declared `k=1` branch.
+
+The proof does **not** establish the formerly sought uniform edge floor on
+four oriented horns.  It keeps their location and pays for them with the
+remaining forest and a smaller level-sensitive debt.
+
+## 2. Inherited component and debt geometry
+
+THM-3350 enumerates the connected intrinsic-low shapes on `r=1,...,5`
+vertices:
 
 ```text
-P+Q>=8,                                                (2)
+1, 8, 94, 1295, 19389.                                  (2)
 ```
 
-then its exact reflected physical overlap satisfies
+Consequently the unordered disconnected six-vertex component profiles have
+generating coefficient
 
 ```text
-I_(L,j,e,f)(p,q) > D_max/5,                            (3)
-
-D_max=186636088362/11773143757375,
-D_max/5=186636088362/58865718786875.                   (4)
+[x^6] product_(r=1)^5 (1-x^r)^(-c_r)=36520.             (3)
 ```
 
-The inequality is uniform over every feasible body and its fixed
-upper-median safe cell, every endpoint ordering, and every positive pair of
-levels.  It is a physical located statement, not merely a homogeneous or
-projective limit.
+Every profile is realizable: after placing one primitive connected component,
+scale the next by more than six times the current maximum.  Internal low
+ratios are unchanged and every new cross ratio is high.  Thus this is not a
+formal-partition overcount.
 
-Consequently:
+For any profile the cross-component graph is complete multipartite and hence
+connected.  Every forest in it extends to a spanning tree of `K_6`; all added
+physical overlaps are nonnegative.  It is therefore enough to find a cross
+forest whose certified edge weights exceed the debt.
 
-1. every six-distinct-level assignment whose intrinsic low graph is
-   disconnected closes by a five-edge high Hunter tree;
-2. THM-3352 supplies the complementary connected-low closure;
-3. every repeated-level assignment closes on the same `649` bodies by the
-   same-level graph from THM-2941; and
-4. every positive canonical reflected-residue assignment
-
-   ```text
-   z_e=q_e L-e,       q_e>=1,                            (5)
-   ```
-
-   closes on all `649` bodies.  Together with the `2,354` complementary
-   bodies already closed in THM-2941, this exhausts all `3,003` bodies in
-   the canonical reflected-residue branch.
-
-## 2. Inherited geometry and the exact target
-
-THM-3350 gives exactly `649` active upper-median bodies and `4,044` distinct
-ordered physical contexts `(L,j,e,f)`.  The exact context split is
+For ruler `L`, endpoint labels `e_i`, and distinct levels `q_i`, the exact
+singleton debt is
 
 ```text
-2,530 contexts with L<4592,
-1,514 contexts with L>=4592,                            (6)
+D(e,q)=sum_i e_i/[7(Lq_i-e_i)].                           (4)
 ```
 
-with maximum small ruler `4,368` and minimum large ruler `4,620`.
-Both ordered endpoint lanes are retained, so the orientation in `(1)` loses
-no physical case.
-
-For six distinct levels, join two vertices when their reduced ratio is low,
-meaning `P+Q<=7`.  If this graph is disconnected with components
-`V_1,...,V_k`, its high complement is complete multipartite.  Choose
-`x in V_1` and `y in V_2`; join `x` to every vertex outside `V_1`, then
-join `y` to every vertex of `V_1\{x}`.  These are
+The rank monotonicity and exact `649*6!` census in THM-3350 give
 
 ```text
-(6-|V_1|)+(|V_1|-1)=5                                 (7)
+D(e,q)<=Dmax=186636088362/11773143757375.                 (5)
 ```
 
-cross-component edges and form a spanning tree.  The exact disconnected
-component-shape atlas has `36,520` realizable unlabelled profiles; `(7)` is
-structural and does not depend on enumerating them.
-
-For any concrete six-level assignment, the singleton excess above `6/7` is
-at most `D_max` by the rank reduction and exact `649*720` census of THM-3350.
-Therefore the strict per-edge target `(3)` is exactly what is needed: five
-tree edges contribute more than `D_max` in total.
-
-## 3. Exhaustive pair-floor partition
-
-After the simultaneous orientation `p<q`, the following cases are disjoint
-and exhaustive.
-
-### 3.1 Far ratios, all rulers
-
-On a body-safe cell the first clause has exactly `p` full teeth.  The
-mean-zero primitive of the `q`-clause indicator has oscillation
-`6L/[49(qL-f)]`, so interval-by-interval integration gives
+The target edge weight is
 
 ```text
-I(p,q) >= pL/[49(pL-e)]-6pL/[49(qL-f)].                (8)
+eta=1/294,
+5 eta-Dmax=570672686921/494472037809750>0.                (6)
 ```
 
-Whenever `q>=8p`, the right side is at least
+Thus five `eta`-edges close without any compatibility assumption on their
+individual minimizing contexts.
+
+## 3. The centered primitive-grid lemma
+
+Fix a body-safe cell, ordered endpoint labels `e,f`, ruler `L`, and the pair
+in `(1)`. Here `e` labels the lower level `gP`, while `f` labels the higher
+level `gQ`; this orientation is part of the channel data. Put
 
 ```text
-23/4655 > 1/294 > D_max/5.                             (9)
+p=gP, q=gQ,       z=gLP-e, w=gLQ-f,       C=Qe-Pf.       (7)
 ```
 
-This case is taken first and applies to every ruler.
-
-### 3.2 Moderate ratios on large rulers
-
-Suppose `q<8p` and `L>=4592`.  The frozen large-ruler theorem proves
+The one-first-tooth response `f_0` from the full-turn decomposition has
 
 ```text
-I(p,q)>=1/294                                          (10)
+mean(f_0)=L/(49z),       osc(f_0)<=L/(7w),
+Lip(f_0)<=L/w.                                             (8)
 ```
 
-for every primitive high channel and every common dilation.  Its analytic
-envelope handles `P>=4`; the nineteen smaller primitive channels have
-`28,766` exact physical controls, all positive.
+Its superlevel sets are unions of at most two circular intervals: after
+removing the constant full-turn baseline, `f_0` is the circular convolution
+of two interval indicators, hence a periodized trapezoid.
 
-### 3.3 Moderate ratios on the 29 small rulers
-
-It remains to take `q<8p` and `L<4592`.  There are exactly the `2,530`
-ordered contexts in the first row of `(6)`.
-
-- On the primitive channel `(P,Q)=(3,5)`, an exact affine-residue compiler
-  proves `I(3g,5g)>=1/294` for every `g>=1`.  It checks `56,191` residue
-  classes; the largest stabilization point is `134`.
-- Off `3:5`, the linked phase floor plus the all-channel midpoint estimate
-  proves `I>=1/294` for every `g>=4`.  Only `118` channel-scale rows survive
-  its envelope, and all `118*2530=298,540` literal exact masses pass.
-- Thus only `g<=3` remains.  The exact integer-only head compiler closes
-  every raw pair `p<264`: `201,377` channels and `509,483,810` physical
-  masses, with zero failures and every reported argmin independently
-  replayed.
-- The finite bridge below closes every `264<=p<=698`.
-- The affine argument below closes every `p>=699`.
-
-This leaves no endpoint, orientation, common-scale, ruler, or ratio case.
-
-## 4. Refined Dirichlet turn bands
-
-For the remaining `g<=3`, small-ruler, moderate-ratio bank, Dirichlet gives
+The physical overlap is the sum of `gP` samples of `f_0` with circular step
+`w/z`.  Split them into `g` consecutive blocks of length `P`.  In one block
+replace the true step by `Q/P`.  Since `gcd(P,Q)=1`, the replacement points
+are one complete translated `P`-grid.  Layer-cake discrepancy for a union of
+at most two circular intervals gives
 
 ```text
-1<=d<=8, 0<=a<=7d, D=d+a,
-c=dq-Dp, |c|<=p/9,
-A=Lc+eD-df,
-r=p mod d, N=(p-r)/d,
-z=Lp-e, w=Lq-f,
-rho=|A|/z, T=N rho.                                    (11)
+sum_(one complete P-grid) f_0
+ >=P mean(f_0)-2 osc(f_0).                                (9)
 ```
 
-Grouping the first `dN` teeth into `d`-blocks gives a periodic piecewise
-linear function `G_d` with
+Indeed each superlevel count differs from `P` times its length by at most two;
+integrating the count inequality proves `(9)`.
+
+The two steps differ exactly by
 
 ```text
-mean(G_d)=dL/(49z),
-osc(G_d)<=dL/(7w),
-Var(G_d')<=4dL/w.                                      (12)
+w/z-Q/P=C/(Pz).                                           (10)
 ```
 
-For `m<=T<m+1`, the composite trapezoid identity and `(12)` give the hostile
-envelope
+Center the comparison at a median grid index.  The total index displacement
+in one block is
 
 ```text
-B_m(p,L)=m(p-7)/[49(m+1)p]
-          -8L/[14(L(p+1)-14)]
-          -64(m+1)^2 L/[2(L(p+1)-14)(p-7)].            (13)
+min_t sum_(r=0)^(P-1)|r-t|=floor(P^2/4).                 (11)
 ```
 
-Exact positive-coefficient derivative certificates show that `(13)`
-increases with `p` and `L` on the declared ranges.  Its exact hostile corners
-prove:
+Using `(8)`--`(11)` in all `g` blocks proves the uniform located bound
 
 ```text
-1<=T<4:  p>=264,
-4<=T<5:  p>=277,
-T>=5:    p>=264 by the inherited many-turn estimate.   (14)
+I_(L,j,e,f)(gP,gQ)
+ >= gLP/(49z)
+    -2gL/(7w)
+    -gL |Qe-Pf| floor(P^2/4)/(P wz).                     (12)
 ```
 
-If `T<1` and `c!=0`, the same inequalities sharpen the resonance to
+No phase is averaged away: the starting translate of each complete grid is
+arbitrary.  Primitivity is load-bearing.  At
 
 ```text
-1<=|c|<=13.                                            (15)
+(L,j,e,p,f,q)=(1680,870,5,1792,10,2688)                 (13)
 ```
 
-For completeness, the inherited `T>=5` lower bound is explicit.  Put
+the exact physical overlap is zero, while illegally inserting the
+nonprimitive pair `(896,1344)` into `(12)` gives the positive value
+`5457530976/271903091713`.
+
+## 4. Endpoint reduction and the regular edge floor
+
+For fixed `L,e,f,P,g`, the right side of `(12)` is fractional-linear in `Q`
+on each side of the single kink `Q=Pf/e`.  Hence its minimum on the relaxed
+interval `P+1<=Q<=8P` occurs at an endpoint or at the kink.  At the kink the
+determinant loss vanishes and the remaining loss is no worse than at `P+1`.
+It follows that every primitive `P<Q<8P` is bounded below by
 
 ```text
-R(p,L)=(Lp/9+888)/(Lp-14),
-B(p,L)=4(p-7)/(245p)
-       -4L/[7(L(p+1)-14)]
-       -L[pR(p,L)^2+8R(p,L)]/[2(L(p+1)-14)].           (15a)
+min(B(P,P+1),B(P,8P)),                                   (14)
 ```
 
-The exact generalized-Dirichlet verifier proves that `B` increases in both
-variables on `p>=264,L>=168`: after the hostile-corner shift, the two
-derivative numerators have respectively `36` and `20` positive
-coefficients.  At the corner,
+where `B` denotes `(12)`.
+
+The value `B(P,8P)` is only the right endpoint of the relaxed algebraic
+envelope. The pair `(P,8P)` is generally nonprimitive, and the primitive-grid
+lemma is not being applied to it as a physical channel.
+
+For odd `P=421+2t` and even `P=422+2t`, clear the positive denominator in
+`294(B-eta)`.  On every small-ruler ordered lane except four listed below at
+`g=1`, and on every lane at `g=2,3`, both endpoint numerators have strictly
+positive coefficients as polynomials in `t`. The companion also verifies
+coefficientwise that `N'D-ND'>=0` for every cleared margin `N/D`, so the
+minimum occurs at the base point of its parity. The exact bank contains
 
 ```text
-B(264,168)-D_max/5
-=85330033783953387991/7166476998347435667648750>0.     (15b)
+g=1 nonhorn records   5200,
+g=2,3 all records    10432,          total 15632.         (15)
 ```
 
-Thus the last line of `(14)` is a proved analytic inequality, not an unnamed
-tail assumption.  The turn-band verifier proves every other rational corner
-and both monotonicity claims without floating point.
-
-## 5. The centered superunit tail
-
-The limiting `d`-block convolution must be centered.  Put
+The weakest tail margin is
 
 ```text
-T_infinity=|A|/(Ld).                                   (16)
+1687815/5745649440454>0                                  (16)
 ```
 
-Finite `T<1` does **not** imply `T_infinity<=1`.  It implies only
+at `(g,L,e,f,P,Q)=(1,168,1,12,421,422)`.  Thus `(14)` proves
+`I>=eta` for every declared regular lane from `P=421` onward.
+
+For `P<=420`, `g=1,2,3`, all `2530` small-ruler contexts, all primitive
+`P<Q<8P` with `P+Q>=8`, and `(P,Q)!=(3,5)`, an endpoint screen closes
+`3,065,046` context/range rows.  The exact THM-3352 mass engine evaluates the
+remaining
 
 ```text
-T_infinity < (p-e/L)/(p-r) < p/(p-r)
-           <=679/672=97/96                             (17)
+6,144,244 physical masses,       failures 0.             (17)
 ```
 
-for `p>=679`, since `r<=d-1<=7`.
-
-The exact centered continuum compiler evaluates every compatible tuple
+The minimum is
 
 ```text
-1<=d<=8, 0<=a<=7d, 1<=|c|<=13, gcd(a,d)|c,
-all 2,530 contexts, |A|/(Ld)<=679/672,
-a=0 => c>0,       a=7d => c<0.                        (18)
+92/7645=1/294+19403/2247630                              (18)
 ```
 
-It performs `5,053,047` integer cross-product checks, including `362,926`
-rows with `T_infinity>1`, `11,314` equality rows, and `29` zero-step rows.
-The exact minimum is
+at `(g,P,Q;L,j,e,f)=(1,4,5;168,90,12,6)`.  Eight fixed
+context shards have separately frozen counts, minima, and semantic hashes.
+
+The inherited exact companions complete the other regimes:
+
+- every `L>=4592` lane has mass at least `eta` at every pair dilation;
+- `q>=8p` has mass at least `23/4655>eta`;
+- the primitive `3:5` lane has mass at least `eta` at every dilation; and
+- every other moderate-ratio lane with `g>=4` has mass at least `eta`.
+
+Consequently every high cross edge is **regular**, with weight at least
+`eta`, except possibly
 
 ```text
-J_0=709/48048,                                         (19)
+L=168, j=90, e=12, f in {1,2,3,4},
+g=1, P>=421, P<Q<8P.                                    (19)
 ```
 
-with two equality rows, one at
+These four oriented horns are honest.  The asymptotic values of the bound
+`(12)` minus `eta` are respectively
 
 ```text
-(d,a,c;L,j,e,f)=(3,8,-1;168,90,12,1), A=-39.          (20)
+-25/37632, -3/6272, -11/37632, -1/9408.                 (20)
 ```
 
-An independent Python `PeriodicPL` implementation reconstructs the centered
-periodic convolution from its breakpoints and checks `1,053` exact values:
-`256` ordinary, `768` superunit, and all `29` zero-step rows.  It agrees with
-the C++ compiler on every value.  Optimized, unoptimized, and sanitizer builds
-of the compiler have byte-identical output.
+So the proof must not relabel them as regular by continuity or by a sampled
+finite floor.
 
-For the finite-to-continuum comparison put
+## 5. Deleting the horns leaves almost all of the tree
+
+Identify the possible horn vertices with labels `1,2,3,4,12`; label `6` is
+the sixth vertex forced by `L=168`.  For each nontrivial set partition of six
+vertices, form its complete multipartite cross graph and delete the four
+undirected pairs `{12,f}`, `f=1,2,3,4`.  Across all `B_6-1=202` partitions,
+the resulting component census is
 
 ```text
-zeta=3167/3168, omega=3155/3168, k_f=6864/22085,
-delta_d=d-1+1/12,
-tau_d=1+delta_d/(264 zeta),
-KP_d=d k_f+(97/96)[d(d-1)/(2zeta)+d/zeta].             (21)
+components       1    2   5
+partitions     150   51   1,                              (21)
 ```
 
-Both phase-drift terms in `KP_d` require the superunit factor `97/96` from
-`(17)`.  The Peano term does not: the finite hypothesis `T<1` bounds it
-directly by a smaller quantity.  Its physical error is at most
+so the maximum regular-forest sizes are `5,4,1`.  The unique five-component
+case is
 
 ```text
-|A|Ld/(2ZWp^2).                                        (21a)
+{1,2,3,4,6} | {12}.                                     (22)
 ```
 
-Equivalently, after extracting the global `1/p`, its coefficient is at most
-`|A|Ld/(2ZWp)<d^2/[2omega(p-r)]<=d^2/(1344omega)`, below
-the conservative coefficient retained next.  A safe unified error constant is
+This census also has a direct graph proof.  All deleted edges meet `12`.
+Unless every other vertex lies in one low component as in `(22)`, the
+remaining complete multipartite graph away from `12` is connected, and at
+most one additional component can occur.
+
+If the graph in `(21)` is connected, five regular edges and `(6)` close.  If
+it has two components, take four regular forest edges.  Should one deleted
+cross edge actually have the reverse orientation or lie outside `(19)`, it
+is regular and joins the components, reducing to the five-edge case.
+Otherwise a genuine horn is present, so the level on label `12` is at least
+`421`.  Rank monotonicity then gives the sharper exact debt bound
 
 ```text
-K_d^*=tau_d KP_d/d
-      +2 tau_d delta_d/(7zeta omega)
-      +tau_d d/(42omega)+d/(14omega)
-      +d^2/(264zeta omega).                            (22)
+D<=D421=443767487288/52278303328335,
+3/294-D421=1255584224873/731896246596690>0.              (23)
 ```
 
-It increases for `1<=d<=8`, and exact arithmetic gives
+Thus even three of the available four regular edges suffice.  This closes
+all nonexceptional partitions.
+
+## 6. The exceptional `K_(1,5)` star
+
+It remains to treat `(22)`.  Its cross graph is the star from `12` to
+`1,2,3,4,6`.  The edge `12--6` is always regular.  Let
 
 ```text
-K_8^*=1792138785426/221510098565,
-K_8^*/(709/48048-D_max/5) in (698,699).                (23)
+b=#{f in {1,2,3,4}: q_f<q_12}.                           (24)
 ```
 
-Thus every nonzero-step `T<1` point with `p>=699` satisfies
+Those `b` edges have the reverse horn orientation and are regular, so the
+star contains at least `1+b` regular edges.  If `b=4`, all five edges are
+regular and `(6)` applies.
+
+Assume `0<=b<=3` and `q_12>=421`; the finite head already handles smaller
+`q_12`.  The low component on `{1,2,3,4,6}` is connected, and every low ratio
+is at most six. Any vertex below `q_12` crosses at most `b+1` low edges before
+first reaching a level above `q_12`. Therefore each such lower level is strictly greater
+than
 
 ```text
-I(p)>=J_0-K_8^*/p>D_max/5.                             (24)
+q_12/6^(b+1).                                             (25)
 ```
 
-The exact margin at `p=699` is
+If label `6` is actually above `q_12`, moving it into the relaxed lower bank
+only increases the debt bound; `(25)` remains conservative.  Debt decreases
+with every level, so the worst row occurs at `q_12=421`, with the lower levels
+the first distinct integers above `421/6^(b+1)` and all upper levels beginning
+at `422`.  Exact permutation over the endpoint labels gives:
 
 ```text
-46135211197112901571553/
-4166631528336272997191190000>0.                        (25)
+b  regular edges  first lower level  maximum debt D_b
+0       1                71          10171035532358753244424/87499329204988335395285245
+1       2                12          65302219886882882438/90087463329358292024115
+2       3                 2          140545706290782894/31861415435911397875
+3       4                 1          7350964239952/883497095223435.          (26)
 ```
 
-If `A=0`, complete `d`-blocks repeat and the separate zero-step constant is
+In every row the available regular credit is strictly larger:
 
 ```text
-KP0_d=d k_f+d(d-1)/(2zeta)+d/zeta,
-K0_d=KP0_d/d+(d-1)2/(7omega).                          (26)
+(1+b)/294-D_b =
+12072720679782123134489227/3674971826609510086601980290,
+3832763666951738490749/630612243305508044168805,
+2583990888487810609/446059816102759570250,
+32685830817806/6184479666564045,                         (27)
 ```
 
-Its maximum is `477044832/69943195`, so the `A=0` face already closes for
-`p>=589`.  Finally, `c=0` would imply `P|d<=8`, and `g<=3` would force
-`p=gP<=24`; hence it cannot occur in this tail.
+respectively.  Extend these regular star forests to complete spanning trees.
+Nonnegative added edges cannot reduce the Hunter credit, so `(27)` closes the
+exceptional partition.
 
-## 6. Exact finite bridge and independent audits
+## 7. Assembly and the affine near miss
 
-The combined integer-only C scanner covers
+Sections 4--6 prove every disconnected-low assignment.  THM-3352 proves every
+connected-low assignment.  This closes the reflected six-distinct-level
+physical branch, including independently scaled disconnected components; it
+does not assume a common scale across those components.
 
-```text
-264<=p<=698, p<q<8p, gcd(p,q)<=3,
-all 2,530 small-ruler ordered contexts.                 (27)
-```
+The earlier affine-ray route is not a dependency.  Its primitive quotient
+`22890 -> 14168` and strict carrier cutoff `14913` survive as an independent
+sidecar, but MISTAKE-377 repairs an omitted `9|c|<=p` hypothesis in its
+many-turn routing.  The corrected residual occurrence count is `8,079,264`,
+not `8,013,156`.  The weighted horn-tree proof avoids that scan entirely.
 
-Its exact universe and result are
+## 8. Verification and scope
 
-```text
-1,211,966 raw channels,
-3,066,273,980 physical mass comparisons,
-0 failures.                                            (28)
-```
+The companion pins its inherited structural, large-ruler, `3:5`, `g>=4`,
+mass-engine, and output dependencies by LF-normalized SHA-256.
+It contains no Python `assert` nodes.  Ordinary and optimized eight-worker
+replays are byte-identical to the stored transcript.
 
-The global weakest row is
+Besides `(15)--(18)` and `(21)--(27)`, it performs:
 
-```text
-(p,q)=(698,2559), (L,j,e,f)=(168,90,12,1),
-I=20682154/1400220127,
-I-D_max/5=
-956138253921819066776/82424964235704398433125>0.       (29)
-```
+- `100,000` seeded exact checks of `(12)` against physical mass;
+- nine fast/reference/literal three-route positive controls;
+- a physical low-edge zero control;
+- the nonprimitive hostile `(13)`;
+- all `467,280` body/rank debt rows; and
+- all multipartite spanning-tree counts, whose exact min/max/sum are
+  `1/1296/67392`.
 
-The omitted `49.5 MB` ledger has SHA-256
-
-```text
-932057abf10f674e4bb31f334c1ea94f39e4e17627c6a950bd5d727f8e595186. (30)
-```
-
-It is byte-identical to the concatenation of three separately generated
-segments:
-
-```text
-264..454: 397,502 rows, ledger 2865e79a...7053,
-455..678: 734,566 rows, ledger f12b9cc8...908a,
-679..698:  79,898 rows, ledger 0915c0c3...5421.         (31)
-```
-
-The repository preserves each segment scanner, frozen output, and reference
-audit.  The slower THM-3352 reference engine re-evaluates every reported
-argmin in all three segments: `397,502+734,566+79,898=1,211,966` exact
-independent checks, with zero mismatches.  Full `2,530`-context minima are
-also recomputed on `220`, `40`, and `20` deterministic hostile/spread
-controls, respectively.  The combined assembly audit checks `(30)`, every
-row of `(31)`, the exact task universe, strict target, and `(29)`.
-
-The audit scripts use the canonical reference engine and context bank.  The
-only omitted inputs are the regenerated ledgers themselves: the three segment
-scanners write the exact filenames expected by the audits.  No promoted audit
-depends on the superseded `455..823` full ledger.
-
-Together, Sections 3--6 are an exhaustive proof of `(3)`: the analytic tail
-starts at `699`, and the independently audited finite bridge ends at `698`.
-
-## 7. Hunter closure and repeated levels
-
-For six distinct levels with disconnected low graph, freeze the five-edge
-cross-component tree from `(7)`.  By `(3)` its physical credit is strictly
-greater than `D_max`.  Hunter's tree inequality therefore gives
-
-```text
-mu(union_e A_e) <= 6/7 + epsilon(E,q) - credit
-                 < 6/7,                                (32)
-```
-
-because `epsilon(E,q)<=D_max`.  This closes the disconnected-low case.
-THM-3352 closes the connected-low case, so every six-distinct-level
-assignment closes on all `649` bodies.
-
-For repeated levels, THM-2941's universal signed same-level graph is `K_6`
-on `3,001` of the `3,003` bodies.  Its only two exceptions are
-
-```text
-(1,2,7,9,11,13), (2,4,7,9,11,13).                     (33)
-```
-
-Both have all `15` robust edges.  The active `649`-body universe is exactly
-the robust-edge-`<=10` bank, so its intersection with `(33)` is empty.
-Therefore any repeated level supplies a closing same-level pair on every
-active body.  The synthesis companion independently reconstructs all `649`
-bodies, `(33)`, the disjointness, the exact debt/tree inequalities, and
-`2354+649=3003`.
-
-## 8. Corrected near misses
-
-Three tempting compressions were false or incomplete and are not used here.
-
-1. The first continuum compiler integrated `[x,x+lambda]`; the physical
-   convolution is centered at `x`, hence uses `x-lambda/2`.  The corrected
-   exact minimum is `(19)`, not the earlier provisional `13/1022`.
-2. The implication `T<1 => T_infinity<=1` is false.  A literal witness is
-
-   ```text
-   d=2,a=0,c=2,p=781,q=782,
-   (L,j,e,f)=(784,420,2,1), A=1570,
-   T=612300/612302<1, T_infinity=1570/1568>1.           (34)
-   ```
-
-   This is why `(18)` includes the superunit chamber.
-3. In the first superunit repair, only one of two phase-drift losses carried
-   the `97/96` factor.  Both do.  Correcting the second changes the rigorous
-   integer tail start from the provisional `695` to `699`; the bridge was
-   extended through `698` before promotion.
-
-These errors affect only superseded scratch estimates.  The centered census,
-the constants `(21)--(26)`, and the exact bridge are mutually dovetailed and
-independently audited.
-
-## 9. Scope and nonconsequences
-
-This theorem closes the positive **canonical reflected-residue level branch**
-`z_e=q_eL-e` on all `3,003` six-body carriers, including the former `561`
-body residual.  It does not prove that an arbitrary six-drift `k=1` packet
-has that residue form.  It does not close other residue packets, `k=0`, the
-finite-but-uncensused projected `k=2,3` sectors, the seven-tail rung, physical
-entry, or LRC(14).  LRC(14) remains open.
-
-## 10. Reproduction
-
-From the repository root, the short exact companions replay with
-
-```bash
-python3 04-computation/lrc14_affine_turn_band_reduction_20260812.py
-python3 -O 04-computation/lrc14_affine_turn_band_reduction_20260812.py
-python3 04-computation/lrc14_affine_Tlt1_superunit_unified_K_20260812.py
-python3 -O 04-computation/lrc14_affine_Tlt1_superunit_unified_K_20260812.py
-python3 04-computation/lrc14_disconnected_reflected_branch_synthesis_thm3355.py
-python3 -O 04-computation/lrc14_disconnected_reflected_branch_synthesis_thm3355.py
-```
-
-The centered continuum census is
-
-```bash
-clang++ -std=c++17 -O3 -Wall -Wextra -Wconversion -Wshadow -Werror \
-  04-computation/lrc14_affine_Tlt1_superunit_continuum_20260812.cpp \
-  -o /tmp/lrc14-affine-superunit
-git show HEAD:04-computation/lrc14_disconnected_head263_contexts_20260812.txt \
-  | /tmp/lrc14-affine-superunit
-python3 04-computation/lrc14_affine_Tlt1_superunit_continuum_independent_audit_20260812.py
-python3 -O 04-computation/lrc14_affine_Tlt1_superunit_continuum_independent_audit_20260812.py
-```
-
-The full finite bridge is intentionally expensive.  Compile the combined
-scanner and pass the canonical `2,530`-context bank, an output-ledger path,
-and a thread count:
-
-```bash
-clang -std=c11 -O3 -pthread -Wall -Wextra -Wconversion -Wshadow -Werror \
-  04-computation/lrc14_disconnected_bridge264_698_exact_scan_20260812.c \
-  -o /tmp/lrc14-bridge264-698
-/tmp/lrc14-bridge264-698 \
-  04-computation/lrc14_disconnected_head263_contexts_20260812.txt \
-  /tmp/lrc14-bridge264-698.ledger 8
-```
-
-The segment sources and audit companions provide the independent path
-described in `(31)`.  Ordinary and optimized Python replays are byte-identical;
-the stored outputs are the declared frozen transcripts.
-
-The combined assembly audit is invoked after those four ledgers exist:
-
-```bash
-python3 04-computation/lrc14_disconnected_bridge264_698_independent_audit_20260812.py \
-  /tmp/lrc14-bridge264-698.ledger \
-  /tmp/disconnected_bridge264_454_exact_scan.ledger \
-  /tmp/disconnected_bridge455_678_exact_scan.ledger \
-  /tmp/disconnected_bridge679_698_exact_scan.ledger
-```
-
-For the path-pinned segment audits, first prepare their frozen `/tmp` names:
-
-```bash
-cp 04-computation/lrc_general_reflected_pair_mass_reference_audit_thm3352.py \
-  /tmp/canonical_reference_engine_thm3352.py
-cp 04-computation/lrc14_disconnected_head263_contexts_20260812.txt \
-  /tmp/disconnected_head263_contexts.txt
-cp 04-computation/lrc14_disconnected_bridge264_454_exact_scan_20260812.c \
-  /tmp/disconnected_bridge264_454_exact_scan.c
-cp 04-computation/lrc14_disconnected_bridge455_678_exact_scan_20260812.c \
-  /tmp/disconnected_bridge455_678_exact_scan.c
-cp 04-computation/lrc14_disconnected_bridge679_698_exact_scan_20260812.c \
-  /tmp/disconnected_bridge679_698_exact_scan.c
-cp 05-knowledge/results/lrc14_disconnected_bridge264_454_exact_scan_20260812.out \
-  /tmp/disconnected_bridge264_454_exact_scan.out
-cp 05-knowledge/results/lrc14_disconnected_bridge455_678_exact_scan_20260812.out \
-  /tmp/disconnected_bridge455_678_exact_scan.out
-```
-
-Compile and run each segment source with the context path, its expected
-`/tmp/...ledger` output path, and a thread count.  Then run the five
-`bridge...audit_20260812.py` companions.  The all-argmin replays are
-deliberately slower than the integer scanners.
+This theorem closes the current `561` reflected bodies only in the declared
+six-distinct-level `k=1` lane.  Projected `k=2,3`, arbitrary `k<=1`, the
+six-body/seven-tail rung, semantic physical entry from projected states, and
+LRC(14) remain **OPEN**.

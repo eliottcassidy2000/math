@@ -9,7 +9,26 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-377 (2026-08-14, disconnected affine tail) -- an uncentered continuum and a collapsed finite/limit turn coordinate hid the superunit chamber
+## MISTAKE-379 (2026-08-14, live-canon integration) -- five theorem records retained pre-freeze source hashes after their scripts changed
+
+- **What failed:** THM-3360 and THM-3366, together with their results-index
+  rows, pinned pre-freeze SHA-256 values for five Python sources.  The stored
+  outputs and mathematical constants were unchanged, but the canonical source
+  blobs no longer matched the declared provenance.
+- **Minimal witnesses:** the declared/actual LF-normalized source pairs were
+  `6c3d0d70.../60b792ed...` for the THM-3360 wrapper, and
+  `9c24a124.../65f1e598...`, `bd283577.../372f1b0d...`,
+  `3b1ba757.../414b3777...`, `127ef53b.../27e4bff5...` for the THM-3366
+  `k=1`, all-sector, `k=2`, and `k=3` companions.
+- **Repair / strongest survivor:** update the five source pins to the actual
+  repository blobs.  The compiler/output hashes, ledgers, semantic digests,
+  theorem statements, and all exact counts remain unchanged; this is a
+  reproducibility-metadata repair, not a mathematical correction.
+- **Reusable rule:** after integrating or path-normalizing a frozen package,
+  hash every declared source from the resulting repository blob.  Matching
+  output bytes do not prove that the source/output provenance pair is current.
+
+## MISTAKE-378 (2026-08-14, independent superunit affine tail) -- an uncentered continuum and a collapsed finite/limit turn coordinate hid the superunit chamber
 
 - **What failed:** the first affine-tail continuum compiler integrated the
   second tooth over `[x,x+lambda]`, although the physical convolution is
@@ -46,15 +65,38 @@ Format per entry:
   global `1/p`, finite `T<1` bounds its coefficient by
   `d^2/(1344 omega)`, below the retained conservative term.
 - **Superseding theorem:**
-  [THM-3355](theorems/THM-3355-disconnected-low-affine-tail-and-reflected-branch-closure.md)
+  [THM-3372](theorems/THM-3372-independent-superunit-affine-tail-and-reflected-residue-closure.md)
   uses the centered compiler, the full superunit chamber, both drift factors,
-  and the exact finite bridge.  It closes the canonical reflected-residue
-  level branch, not arbitrary six-drift `k=1` or LRC(14).
+  and the exact finite bridge.  It independently closes the canonical
+  reflected-residue level branch, not arbitrary six-drift `k=1` or LRC(14).
 - **Reusable rule:** a finite path-length condition must not be identified
   with its limiting path length when a residue remainder is present.  For
   translated convolutions, freeze the center before compiling breakpoints;
   then audit every coefficient that depends on the missing coordinate, not
   merely the first one encountered.
+
+## MISTAKE-377 (2026-08-12, disconnected affine-ray workload) -- a many-turn skip omitted its short-rotation hypothesis
+
+- **What failed:** the first affine-ray quotient audit and provisional carrier
+  scanner applied the Dirichlet many-turn inequality whenever its displayed
+  turn statistic was at least five.  The proved estimate also requires the
+  short-rotation hypothesis `9|c|<=p`; neither analytic skip tested it.
+- **Minimal witness / first failed implication:** at physical pair
+  `(p,q)=(264,302)` and body-safe context `(L,j,e,f)=(168,90,2,1)`, the
+  lawful witness `(d,a,c)=(7,1,2)` has fewer than five turns.  The unrelated
+  witness `(8,1,40)` passes the provisional turn test but violates
+  `9|c|<=p`, so it caused an uncertified skip.  The exact physical mass
+  `4591428/225009725` is above `Dmax/5`; the error is routing, not a physical
+  counterexample.
+- **Repair / strongest survivor:** require `9|c|<=p` at both the universal
+  and contextwise gates.  The primitive quotient `22890 -> 14168`, carrier
+  chambers, and strict cutoff `14913` are unchanged.  The honest residual
+  occurrence count is `8,079,264`, not `8,013,156`.  Grouping all lawful
+  witnesses by physical `(p,q)` remains valid.
+- **Reusable rule:** when several affine witnesses represent one physical
+  pair, a witness may route that pair through an analytic theorem only after
+  satisfying every hypothesis of that theorem.  A stronger-looking statistic
+  cannot import a missing scale regime from another witness.
 
 ## MISTAKE-376 (2026-08-12, disconnected-low frontier routing) -- navigation advertised two reductions absent from its proof package
 
