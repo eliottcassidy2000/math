@@ -101,17 +101,20 @@ global exit.  THM-3354's typed-carrier no-go remains the correct guardrail.
 
 ## New exact targets
 
-1. **Classify slope compilers.**  For
+1. **Extend the slope compiler atlas.**  For
    `d=n^2u^2+2`, `a=mu*d+nu`, the remaining equation is
 
    ```text
    3W^2=n^2(4m^2-n^2)u^2+4(2m^2+2mn-n^2).
    ```
 
-   Enumerate coprime `n/2<m<n`, but require four exact gates: an integral
-   seed, a unit subsequence preserving the divisibility needed for `u`, an
-   odd-parity orbit, and an invariant ratio below `n`.  Minimize the regulator
-   only after those gates.
+   THM-3376 now completes the primitive parity-correct range `n<=29`: exactly
+   `(m,n)=(14,23),(26,29)` survive, and both give infinite positive rays.  The
+   `(14,23)` seed is enormous, a hostile to bounded seed searches.  Continue
+   beyond `29`, requiring four exact gates: an integral seed, a norm-one unit
+   preserving odd parity/divisibility, an invariant positive ratio, and a
+   modular obstruction certificate for every rejected slope.  Optimize the
+   regulator only after those gates.
 
 2. **Count all positive intersections.**  THM-3375 proves a logarithmic lower
    family, not an asymptotic.  The universal-torsor system

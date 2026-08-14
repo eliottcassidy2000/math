@@ -1,7 +1,7 @@
 ---
 id: THM-3375
 title: "Berggren U-spine: an infinite positive two-distinct-cube Pell ray"
-status: PROVED + VERIFIED-EXACT / INDEPENDENT AUDIT PENDING
+status: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED WITH SCOPE REPAIR
 source: kps-s181
 depends_on:
   - THM-3370
@@ -9,16 +9,18 @@ depends_on:
   - THM-463
 related:
   - THM-3359
+  - THM-3376
 companion: 04-computation/berggren_positive_two_cube_pell_ray_kps_s181.py
 output: 05-knowledge/results/berggren_positive_two_cube_pell_ray_kps_s181.out
 script_sha256: f01b96a8db812da88bbec974f58f17a5d1b794cdd5168617892ae2457a6f81d0
 output_sha256: ec04036ad35e463a04210179bed61a54f280e54db4f0642ffc5e315f9f888332
 hash_basis: LF-normalized bytes
+audit: independent Pell/positivity reconstruction and ambient-versus-orbit local-solubility repair
 ---
 
 # THM-3375 -- infinitely many positive two-cube points on the U-spine
 
-**PROVED + VERIFIED-EXACT / INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED WITH SCOPE REPAIR.**
 
 This closes the positive-infinitude question left open by THM-3370.  The key
 move is to let the cube sum `d=x+y` move on a Pell section.  Every fixed-`d`
@@ -226,17 +228,34 @@ r mod 63 in
 ```
 
 They are also sufficient for local solubility of the **ambient U-spine
-equation**: for every integer `r` in `(23)` and every prime `p`, the equation
+equation**.  In fact,
 
 ```text
-X^3+Y^3=Q_r                                             (24)
+X^3+Y^3=Q_r is soluble in every Z_p
+iff r mod 63 lies in (23).                             (24)
+```
+
+Necessity is exactly the cube-residue obstruction modulo `9` and `7` from
+THM-3370.  For sufficiency, fix an integer `r` in `(23)` and a prime `p`.
+The equation
+
+```text
+X^3+Y^3=Q_r                                             (25)
 ```
 
 has a solution in `Z_p`.
 
-- At `p=3`, cubes occupy `0,+/-1 mod 9`, and a 3-adic unit is a cube exactly
-  in the relevant `+/-1 mod 9` class.  Thus the five sums
-  `0,+/-1,+/-2 mod 9` all lift.
+- At `p=3`, the allowed depths give `Q_r=0` or `2 mod 9`.  If
+  `Q_r=2 mod 9`, then `Q_r/2` is a 3-adic cube; take `X=Y`.  If `Q_r=9M`,
+  put `X=1,Y=-1+3z`.  Then
+
+  ```text
+  X^3+Y^3=9(z-3z^2+3z^3),
+  ```
+
+  and the map on the right divided by `9` has derivative `1 mod 3`, so
+  Hensel solves it for every `M`.  This explicit mod-`9` argument is needed;
+  the original cubic derivatives are divisible by `3`.
 - At `p=7`, `(23)` is exactly the cube-sum support, and each supported residue
   has a representative with at least one nonzero coordinate, so Hensel lifts.
 - If `p=2`, choose `(1,0)` for an odd target and `(1,1)` for an even target;
@@ -248,11 +267,11 @@ has a solution in `Z_p`.
   infinity.  A zero target again uses `(1,-1)`.  Every affine point obtained
   is nonsingular and lifts.
 
-Therefore no congruence sieve based only on cube-sum representability can
-improve the exact periodic ceiling
+Therefore no congruence sieve based only on ambient cube-sum representability
+can improve the exact periodic ceiling
 
 ```text
-15/63=5/21.                                            (25)
+15/63=5/21.                                            (26)
 ```
 
 The remaining sparsity is global divisor/square geometry, not another local
@@ -263,7 +282,7 @@ Pell ray `(2)`.  Exact modular dynamics give that ray period `24` modulo `63`
 and only
 
 ```text
-r_j mod 63 in {38,51,60},             r_j=2 mod 5.     (26)
+r_j mod 63 in {38,51,60},             r_j=2 mod 5.     (27)
 ```
 
 Also `epsilon^5=(1,0) mod 11` in scalar/radical coordinates.  These are
@@ -285,8 +304,17 @@ f01b96a8db812da88bbec974f58f17a5d1b794cdd5168617892ae2457a6f81d0
 ec04036ad35e463a04210179bed61a54f280e54db4f0642ffc5e315f9f888332.
 ```
 
+An independent audit reconstructed the Pell family and positivity identities,
+then caught and repaired the possible misreading of “local saturation.”  It
+proved the ambient iff `(24)`, checked the exceptional-prime lifts explicitly,
+and verified hostile controls for every prime below `500` and through modulus
+`3^8`.  It separately confirmed that the orbit scars `(27)` are real but do
+not narrow the ambient local-solubility set.
+
 This theorem proves positive infinitude but no asymptotic for all positive
 intersections.  It does not prove the proposed fixed-`d` uniqueness, nor
 connect the Eisenstein factor labels to the coprime Gaussian carrier of
-THM-3370.  It supplies no LRC owner/phase, factorial-moment cancellation,
+THM-3370.  THM-3376 subsequently proves a second distinct positive ray and a
+finite slope atlas through denominator `29`; neither result is a classification
+of all intersections.  This theorem supplies no LRC owner/phase, factorial-moment cancellation,
 Keller mate, or AMM flow; LRC(14), FC(3), JC(2), and AMM 12592 remain open.
