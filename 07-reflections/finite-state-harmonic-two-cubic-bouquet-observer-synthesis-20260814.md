@@ -174,16 +174,18 @@ chamber then reduces the even integral to one beta integral.
 | geometric zero set | three independent planes | three root-collision planes sharing the diagonal |
 | FC consequence | fails premise at power two | fails premise at power two |
 
-There is already an exact positive family around `P`.  Off the null boundary,
-the two unimodular branches
+There is already an exact positive family around `P`.  Off the measure-zero
+switch wall `x=z`, the two unimodular branches
 
 ```text
-T(x,y,z)=(x+y,z-x,x)       when x<=z,
-T(x,y,z)=(z,x-z,y+z)       when x>=z                         (B)
+T(x,y,z)=(x+y,z-x,x)       when x<z,
+T(x,y,z)=(z,x-z,y+z)       when x>z                          (B)
 ```
 
 are inverse, preserve the positive orthant and `x+y+z`, and exchange the two
-cones.  They satisfy `P(Tx)=-P(x)`.  More generally,
+open cones.  Give the switch wall any fixed measurable tie convention; it has
+zero Gamma measure and is not used in the moment identity.  Almost everywhere
+they satisfy `P(Tx)=-P(x)`.  More generally,
 
 ```text
 F_(b,c,k)=k(x+y+z)[b y+c(z-x)][b(z-x)-c y]
