@@ -121,7 +121,8 @@ two or more high drifts.  Combining (5)--(7), every hypothetical completion
 has exactly one high drift.
 
 Enumerating the high choice and the two low labels gives `820` one-high cases
-over all `719` residual passports and `54` distinct low-label pairs:
+over all `719` residual passports and `54` rowwise-distinct low-pair classes
+(`26+26+2`):
 
 ```text
 row 191: 462 cases / 387 passports / 26 low pairs,
@@ -172,9 +173,9 @@ globally selected cell.
 
 The exact companion verifies (12) in all `820` cases.  The weakest margin is
 one: for a denominator-two case the support has two residues while the danger
-capacity is one.  The fixed-safe cell counts range from `124,168` to `139,040`
-on the first two rows and from `136,112` to `138,346` on the third.  Hence all
-cases in (8), and therefore all passports in (3), close.
+capacity is one.  The rowwise fixed-safe cell ranges are `124,168--130,496`,
+`130,334--139,040`, and `136,112--138,346` for rows `191`, `228`, and `332`.
+Hence all cases in (8), and therefore all passports in (3), close.
 
 The strict inequality in (12) is necessary for this argument.  At `d=14`, the
 support `{2,3}` is disjoint from the aligned danger interval, yet the translated
@@ -189,8 +190,8 @@ The companion also performs a second terminal search without using the
 cardinality conclusion (12).  In every one of the `820` cases it directly
 finds two fixed-safe cells whose residue difference has effective order two
 or three modulo `d`.  Their high phases differ by at least `1/3`, independently
-of the translated local coordinate, so two strict radius-`1/14` danger arcs
-cannot cover both.
+of the translated local coordinate, so one translated open danger band of
+length `1/7` cannot contain both phase values.
 
 The independent direct census is
 

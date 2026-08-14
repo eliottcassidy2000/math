@@ -25,14 +25,12 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`; projected caps `1579/216`. THM-3351 leaves ledger/wall/families `372917/113/13` at `z1=216`, next `L720720` on rows `191,228,332`.
-THM-3349/3350/3352 close connected-low; THM-3355 closes disconnected-low.
-Its centered grid leaves four scale-one horns, paid by multipartite forests and
-a `K_(1,5)` debt repair. Thus all `561` reflected bodies close in the declared
-six-level `k=1` lane. Arbitrary `k<=1`, projected `k=2,3`, the rung, physical
-entry and LRC remain open; screens are not physical covers.
-MISTAKE-377 restores `9|c|<=p`; THM-3360 then proves the uniform physical edge
-floor on every admissible affine row, including THM-3355's four horn lanes.
+Direct frontier: `<=6`; projected caps `1579/216`. At `z1=216`, THM-3361
+closes the three `L720720` rows and leaves ledger/wall/families `372914/110/12`.
+THM-3349/3350/3352/3355 close all `561` reflected six-level `k=1` bodies;
+THM-3360 proves the uniform physical edge floor, including four analytic horn
+lanes. Arbitrary `k<=1`, projected `k=2,3`, the rung, physical entry and LRC
+remain open; projected screens are not physical covers.
 THM-3356 separately sends the primitive carriers to determinant shells; it is
 not a THM-3355 dependency. See the
 [affine certificate](../07-reflections/LRC14-disconnected-low-affine-limit-and-tail-certificate-kps-S171.md).
@@ -224,11 +222,10 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 
 - [THM-1950](../01-canon/theorems/THM-1950-h-ge-disc-reduced-to-strongly-connected.md) reduces `H >= disc` to strongly connected tournaments and verifies finite
   cases; the global inequality is open.
-- THM-3315 compiles switched walks; THM-3322 adds second moments and split joins; THM-3324 closes join on the response Gram.
-  THM-3359 then makes every modular C-finite walk support ultimately periodic,
-  with rational harmonic residue, but its exact `T4` census proves that this
-  residue cannot recover apex, edge orientation, or SCC order.  The `F` block
-  remains necessary; next are third tensors and nontransitive substitution.
+- THM-3315/3322/3324 compile switched walks, second moments, split joins and
+  response Gram. THM-3359 makes modular C-finite supports periodic with
+  rational harmonic residue, but its exact `T4` census still loses apex,
+  orientation and SCC order. Next: third tensors and nontransitive substitution.
 - A literal Paley bridge exists only in THM-640's prime quadratic-residue scope.
   Composite modulus 14 and repeated score/node heuristics do not inherit it.
 - MISTAKE-227–229 correct the newest false syntheses: the AP chain frame is
@@ -271,13 +268,10 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   walks, and reciprocal support is limiting mean divisor incidence/fibre scar.
   Abel--Dini/Bertrand is the boundary; Cauchy and Dirichlet convolution differ.
 - [THM-3359](../01-canon/theorems/THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar.md)
-  proves that every modular C-finite index support is ultimately periodic,
-  with harmonic residue `delta=h/p` and weak/strict multiplicative-deletion
-  scar `delta-delta^2/2`.  Exact `T4`, Fibonacci, Berggren-depth, and ternary
-  DFA controls show the gain and the loss: finite-state trees and tournaments
-  share a matrix-support calculus, while residue forgets orientation and
-  ancestry.  Squares and `ceil(k log(k+1))` witness that arbitrary subsets of
-  `N` need not follow the periodic finite-mass/divergent dichotomy.
+  gives periodic modular C-finite supports, harmonic residue `delta=h/p`, and
+  multiplicative scar `delta-delta^2/2`. Exact `T4`, Fibonacci, Berggren and
+  ternary-DFA controls show that the common matrix calculus loses orientation
+  and ancestry; squares and `ceil(k log(k+1))` block extension to all subsets.
 - Hostile-audited [THM-2500](../01-canon/theorems/THM-2500-finite-hole-relative-atoms-prime-rays-and-cover-bounds.md) classifies finite multiplicative hole modules. Prime-free holes have finitely
   many artificial atoms at most `max h*spf(h)`; a prime hole creates
   disjoint cage rays `m*q` with sharp `M^3/M^4` finite remainders. Additive
