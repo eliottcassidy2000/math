@@ -197,6 +197,16 @@ compiler.  The next lawful transfer test is to translate the twelve labelled
 atom shapes through the two `delta=0,1` Pascal steps at `R=512`, retaining cap
 slacks and the entry margin; the naked kernel vectors are insufficient.
 
+THM-3374 supplies the hostile transfer test.  The exact `R=512,D0=0` rule-A
+trajectory reaches its row-107 death with a 277-bit fatal constant.  The total
+coefficient capacity of arbitrary admissible changes in the five immediately
+preceding rows is only 42 bits.  More generally, the capacity of the preceding
+57 rows is still too small, while the coarse bound first becomes inconclusive
+at 58 rows.  Therefore any successful prefix must already differ from rule A
+by row 49.  Width five remains an operation scale, but it is not an end-of-life
+repair scale: the live experiment must translate and compose such moves early,
+while slack is still being accumulated.
+
 ## Reproduction
 
 ```bash
