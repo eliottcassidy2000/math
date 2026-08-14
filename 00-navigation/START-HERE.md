@@ -16,15 +16,14 @@ Run the bounded packet before reading large files:
 python3 agents/start_session.py --topic "<target statement or object>"
 ```
 
-Then read the relevant frontier section, the active guardrails, and the exact theorem or evidence it links. `SESSION-LOG.md`, `TANGENTS.md`, reflections, old frontier snapshots, the full mistakes ledger, and the giant hypothesis index are searchable history—not mandatory warm-up.
+Then read the routed frontier, guardrails, and theorem. Logs and reflections are searchable history, not warm-up.
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216`.
    THM-3361 leaves ledger/wall/families `372914/110/12` at `z1=216`.
-   THM-3349/3350/3352/3355 close the declared 561-body reflected six-level
-   `k=1` lane; THM-3360 proves its uniform `1/294` edge floor. Arbitrary
-   `k<=1`, projected `k=2,3`, the rung, physical entry and LRC remain open.
+   THM-3349--3360 close the 561-body lane; THM-3366 deletes `298` refined `k=2` rows.
+   THM-3368 adds a Horn tariff, not an LRC proof; the rung, physical entry and LRC remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
@@ -60,8 +59,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 11. **Sequences need support and multiplicity profiles.** THM-2000/2005/2352
     separate support, collision tax and q-adic thresholds; THM-2438/2500 give
     Poisson--Newton/finite-hole laws. THM-3359 gives residue `delta` and scar
-    `delta-delta^2/2`; arbitrary subsets need not be periodic. The Hesse/FC(3)
-    support-five and basis-phase boundaries remain open.
+    `delta-delta^2/2`; THM-3362 detects real odd-profile pairs in three moments; FC(3) remains open.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is exact. THM-2063/2071, THM-2084/2118/2102, and THM-2202 close linear through cubic fibers and twice-odd finite poles; THM-2214/2217/2247 close the inherited nonsplit train through degree `14`.
     THM-2371/THM-2376 close named degree-`18` strata; later sheet/quotient losses remain.
     THM-3212/3225 leave critical points; THM-3237--3265 give the infinity
@@ -71,8 +69,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     constant-J boundary residual into open overlap, anti-tangent collision, or
     vertex-cone incidence. THM-3326 gives the linear-`z` response trichotomy;
     THM-3348 identifies its full generic punctured-line de Rham response and
-    exact one-root valuation annihilator.
-    `JC(2)`/`DC(2)` remain OPEN.
+    exact one-root valuation annihilator. THM-3367 tames the Berggren/Hessian line-image class only; `JC(2)`/`DC(2)` remain OPEN.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
@@ -108,7 +105,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111/3365, formal interfaces; FC(3) open |
-| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2158/2180/2181/2189/2194/2202/3279/3289 |
+| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2202/3279/3289/3367 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005/3288/3359; distinguish index, level-count, and value supports |
 | Pythagorean / Pell / square sums | [THM-3357](../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md) | THM-3333--3336/3339/3341/3345--3347/3353/3356/3358; retain content, normal unit, branch order, ancestry, and consumer labels |

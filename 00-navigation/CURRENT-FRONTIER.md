@@ -34,9 +34,7 @@ remain open; projected screens are not physical covers.
 THM-3356 separately sends the primitive carriers to determinant shells; it is
 not a THM-3355 dependency. See the
 [affine certificate](../07-reflections/LRC14-disconnected-low-affine-limit-and-tail-certificate-kps-S171.md).
-THM-3363 closes an arbitrary-residue `k=1`, `D=14` row by
-complement-clock completion into the cited nine-runner theorem; `27,239`
-body/divisor rows remain.
+THM-3363 closes one `k=1,D=14` row; THM-3366 deletes `298` refined `k=2` rows; THM-3368 adds a weighted Horn tariff but no clock seed. LRC remains open.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
 
@@ -319,9 +317,9 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   remain open.  THM-2646 classifies `B3` conjugacy by modular and exponent
   classes, but exponent is not Markov-invariant.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
-- **Jacobian/Dixmier:** `JC(2)` and `DC(2)` remain open; THM-1300/1315
-  provenance is unsettled (MISTAKE-205).  THM-2473--2576 settle only the fixed
-  sporadic map.  For the `A4/S4` route, THM-2681 excludes the proposed cubic
+- **Jacobian/Dixmier:** `JC(2)` and `DC(2)` remain open; THM-3367 identifies the Berggren pencil with Hessians and tames line images only.
+  THM-1300/1315 provenance is unsettled (MISTAKE-205). THM-2473--2576 settle
+  only the fixed sporadic map. For the `A4/S4` route, THM-2681 excludes the proposed cubic
   identification and THM-2685/2686/2695 locate the surviving standard plane in
   units, `Cl[2]`, and `Pic[2]/2Pic[4]`; the spin/reflection and saturation
   coordinates remain missing.  THM-2690/2696/2700 exclude the toric,
@@ -413,8 +411,8 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   THM-3357/3365 give cubic determinants: `L(P^r)=0` for odd `r` and
   `(3r+2)!/[2(r+1)^2]` for even `r`; the Vieta Jacobian has odd moments zero
   and `L(J^(2m))=((2m)!)^2(3m)!/m!`. Both detect at power two; bare
-  bouquets lose the observer. HFC(3)/FC(3) remain OPEN; degree 29 is only
-  count-eligible and `p>4m+2` is mandatory.
+  bouquets lose the observer. THM-3362 detects real odd-profile pairs in three
+  moments; complex phases can fail. HFC(3)/FC(3) remain OPEN; `p>4m+2` is mandatory.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

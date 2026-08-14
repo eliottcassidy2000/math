@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact audit for THM-3362 (ordered-simplex odd-profile FC(3) rays)."""
+"""Exact audit for THM-3362 (ordered-simplex odd-profile-pair FC(3) rays)."""
 
 from __future__ import annotations
 
@@ -84,33 +84,87 @@ def pair_factorial_moment(poly: PairPolynomial) -> Pair:
 
 
 def audit_tensor_formula() -> None:
-    profiles = [
-        ("t", {1: 1}),
-        ("t+t^3", {1: 1, 3: 1}),
-        ("t-2t^3", {1: 1, 3: -2}),
+    profile_pairs = [
+        ("t|t", {1: 1}, {1: 1}),
+        ("t+t^3|t+t^3", {1: 1, 3: 1}, {1: 1, 3: 1}),
+        ("t-2t^3|t-2t^3", {1: 1, 3: -2}, {1: 1, 3: -2}),
+        ("t|t^3", {1: 1}, {3: 1}),
     ]
     cells = 0
     heads: list[tuple[str, int, int, sp.Expr]] = []
-    for name, coefficients in profiles:
-        h = profile_polynomial(coefficients)
-        degree = max(coefficients)
-        hu = homogenize(coefficients, U)
-        hv = homogenize(coefficients, V)
+    for name, h_coefficients, k_coefficients in profile_pairs:
+        h = profile_polynomial(h_coefficients)
+        k = profile_polynomial(k_coefficients)
+        h_degree = max(h_coefficients)
+        k_degree = max(k_coefficients)
+        hu = homogenize(h_coefficients, U)
+        kv = homogenize(k_coefficients, V)
         for radial_exponent in range(3):
-            generator = sp.expand(T**radial_exponent * hu * hv)
-            D = 2 * degree + radial_exponent
+            generator = sp.expand(T**radial_exponent * hu * kv)
+            D = h_degree + k_degree + radial_exponent
             require(sp.Poly(generator, x, y, z).total_degree() == D, "degree mismatch")
             require(generator != 0, "generator collapsed")
             for r in range(5):
                 direct = factorial_moment(generator**r)
-                interval = sp.integrate(h**r, (t, -1, 1))
-                closed = sp.factor(sp.Integer(factorial(D * r + 2)) * interval**2 / 8)
+                h_interval = sp.integrate(h**r, (t, -1, 1))
+                k_interval = sp.integrate(k**r, (t, -1, 1))
+                closed = sp.factor(
+                    sp.Integer(factorial(D * r + 2)) * h_interval * k_interval / 8
+                )
                 require(sp.simplify(direct - closed) == 0, f"moment mismatch {name},e={radial_exponent},r={r}")
                 if r in (2, 4) and radial_exponent == 0:
                     heads.append((name, D, r, direct))
                 cells += 1
-    print("TENSOR_FORMULA", cells, "direct cells PASS")
-    print("TENSOR_HEAD", heads)
+    unequal_prefix = []
+    unequal_generator = sp.expand(U * V**3)
+    for r in range(5):
+        unequal_prefix.append(factorial_moment(unequal_generator**r))
+    require(
+        unequal_prefix == [1, 0, 86400, 0, 49249028505600],
+        "unequal-profile prefix changed",
+    )
+    print("TENSOR_PAIR_FORMULA", cells, "direct cells PASS")
+    print("TENSOR_PAIR_HEAD", heads)
+    print("UNEQUAL_ODD_PREFIX h=t,k=t^3", unequal_prefix)
+
+
+def audit_mixed_parity_hostile() -> None:
+    u, v = sp.symbols("u v")
+    ordered_angular = sp.integrate(sp.integrate(v, (v, u, 1)), (u, -1, 1))
+    simplex_angular = ordered_angular / 4
+    direct = factorial_moment(V)
+    radial_reconstruction = factorial(3) * simplex_angular
+    false_half_square = (
+        sp.Integer(factorial(3))
+        * sp.integrate(sp.Integer(1), (t, -1, 1))
+        * sp.integrate(t, (t, -1, 1))
+        / 8
+    )
+    require(ordered_angular == sp.Rational(2, 3), "mixed-parity triangle changed")
+    require(simplex_angular == sp.Rational(1, 6), "mixed-parity Jacobian changed")
+    require(direct == radial_reconstruction == 1, "mixed-parity direct moment changed")
+    require(false_half_square == 0, "mixed-parity false product is nonzero")
+    print(
+        "MIXED_PARITY_HOSTILE h=1,k=t L(V)=1 false_half_square=0",
+        "ordered_triangle=2/3 PASS",
+    )
+
+
+def audit_separate_pencil_hostile() -> None:
+    left = sp.Matrix([[0, 1], [-1, 2]])
+    middle = sp.Matrix([[0, 1], [1, 2]])
+    right = sp.Matrix([[1, 0], [2, 1]])
+    transfer_left = sp.Matrix([[1, -2, 2], [2, -1, 2], [2, -2, 3]])
+    transfer_middle = sp.Matrix([[1, 2, 2], [2, 1, 2], [2, 2, 3]])
+    transfer_right = sp.Matrix([[-1, 2, 2], [-2, 1, 2], [-2, 2, 3]])
+    q_at_one = sp.det(left + middle + right)
+    symmetric_square_det = q_at_one**3
+    p_at_one = sp.det(transfer_left + transfer_middle + transfer_right)
+    require(q_at_one == 1, "spinor pencil value changed")
+    require(symmetric_square_det == 1, "symmetric-square determinant changed")
+    require(p_at_one == -3, "triple-transfer determinant changed")
+    require(symmetric_square_det != p_at_one, "separate pencils unexpectedly agree")
+    print("SEPARATE_PENCIL_HOSTILE q=1 sym2_det=1 transfer_det=-3 PASS")
 
 
 def audit_elimination() -> None:
@@ -210,7 +264,7 @@ def audit_complex_hostile() -> None:
 
 
 def audit_first_two_hostile_example() -> None:
-    # h=t,e=0 gives R=UV, D=2 and especially small exact scalars.
+    # h=k=t,e=0 gives R=UV, D=2 and especially small exact scalars.
     p = factorial(6) // 18
     q = factorial(10) // 50
     w = factorial(14) // 98
@@ -219,11 +273,13 @@ def audit_first_two_hostile_example() -> None:
     J = p * w + 3 * p * p * q - p**4 - 3 * q * q
     require(b_squared == Fraction(-8872, 5), "small hostile changed")
     require(J > 0, "small third-moment obstruction failed")
-    print("FIRST_TWO_HOSTILE h=t,e=0 B^2", b_squared, "J", J)
+    print("FIRST_TWO_HOSTILE h=k=t,e=0 B^2", b_squared, "J", J)
 
 
 def main() -> None:
     audit_tensor_formula()
+    audit_mixed_parity_hostile()
+    audit_separate_pencil_hostile()
     audit_elimination()
     audit_factorial_gap()
     audit_determinant_specialization()
