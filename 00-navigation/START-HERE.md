@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-08-12; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — refreshed 2026-08-14; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
@@ -23,7 +23,10 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 1. **LRC(14) is first open.** Direct `<=6`; projected caps `1579/216`.
    THM-3351 leaves ledger/wall/families `372917/113/13` at `z1=216`, next
    `L720720`; THM-3349/3350/3352 close all `220254480` labelled connected-low
-   rays. Disconnected components, rung, physical entry and LRC remain open.
+   rays, and THM-3355 closes every disconnected-low assignment by a weighted
+   horn-tree argument. Thus the declared 561-body reflected six-level `k=1`
+   lane is closed. Arbitrary `k<=1`, projected `k=2,3`, the rung, physical
+   entry and LRC remain open.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see

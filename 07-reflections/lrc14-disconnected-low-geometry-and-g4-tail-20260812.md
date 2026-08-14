@@ -1,7 +1,8 @@
 # Disconnected-low geometry and reflected pair-floor reductions
 
 Status: PROVED structural/analytic reductions + VERIFIED-EXACT finite
-residual.  The disconnected branch itself remains open.
+residual, subsequently completed by THM-3355. This file preserves the route
+into that closure and the repaired affine sidecar.
 
 ## Structural reduction
 
@@ -123,16 +124,23 @@ largest stabilization point is `g=134`; all cleared margins are strictly
 positive.  The weakest context is `(L,j,e,f)=(336,174,12,3)`, where the
 physical overlap at `g=1` is `158/46397`.
 
-This is a frontier theorem, not a closure of the disconnected branch.  After
-the far-ratio, `3:5`, and `g>=4` certificates, the remaining physical bank is
-exactly the 29 small rulers, moderate non-`3:5` ratios `P<Q<8P`, and primitive
-common scales `g=1,2,3`.  A repaired arbitrary-ratio Dirichlet block argument
-reduces its tail to `22,890` nonzero-resonance affine rays and a finite raw
-head `p<264`; see
+At this historical stage these were frontier theorems rather than a closure.
+After the far-ratio, `3:5`, and `g>=4` certificates, the remaining physical
+bank was exactly the 29 small rulers, moderate non-`3:5` ratios `P<Q<8P`, and
+primitive common scales `g=1,2,3`. A repaired arbitrary-ratio Dirichlet block
+argument reduced one route to `22,890` nonzero-resonance affine rays and a
+finite raw head `p<264`; see
 [`lrc14-generalized-dirichlet-resonance-reduction-20260812.md`](lrc14-generalized-dirichlet-resonance-reduction-20260812.md).
 That reduction is proved.  The later
 [`head-263 finite-exact certificate`](lrc14-disconnected-head263-finite-exact-certificate-20260812.md)
 closes all 201,377 raw head channels by 509,483,810 exact physical
-comparisons.  The affine-ray tail remains OPEN; its equality face
-`T_infinity=1` must be handled explicitly rather than folded into the strict
-`T_infinity<1` chamber.
+comparisons.
+
+THM-3355 later bypasses the affine scan. Its centered primitive-grid lemma
+and coefficient-positive tail leave four genuine scale-one horns, and a
+weighted complete-multipartite forest plus a debt-sensitive `K_(1,5)` repair
+closes them. Hence the disconnected-low branch is now closed. MISTAKE-377
+also records that the old many-turn routing omitted `9|c|<=p`; after repair
+the honest affine residual is `8,079,264` occurrences. The affine carrier
+inequalities themselves therefore remain an optional OPEN sidecar, not a
+proof obligation for the reflected closure.

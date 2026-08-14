@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-377 (2026-08-12, disconnected affine-ray workload) -- a many-turn skip omitted its short-rotation hypothesis
+
+- **What failed:** the first affine-ray quotient audit and provisional carrier
+  scanner applied the Dirichlet many-turn inequality whenever its displayed
+  turn statistic was at least five.  The proved estimate also requires the
+  short-rotation hypothesis `9|c|<=p`; neither analytic skip tested it.
+- **Minimal witness / first failed implication:** at physical pair
+  `(p,q)=(264,302)` and body-safe context `(L,j,e,f)=(168,90,2,1)`, the
+  lawful witness `(d,a,c)=(7,1,2)` has fewer than five turns.  The unrelated
+  witness `(8,1,40)` passes the provisional turn test but violates
+  `9|c|<=p`, so it caused an uncertified skip.  The exact physical mass
+  `4591428/225009725` is above `Dmax/5`; the error is routing, not a physical
+  counterexample.
+- **Repair / strongest survivor:** require `9|c|<=p` at both the universal
+  and contextwise gates.  The primitive quotient `22890 -> 14168`, carrier
+  chambers, and strict cutoff `14913` are unchanged.  The honest residual
+  occurrence count is `8,079,264`, not `8,013,156`.  Grouping all lawful
+  witnesses by physical `(p,q)` remains valid.
+- **Reusable rule:** when several affine witnesses represent one physical
+  pair, a witness may route that pair through an analytic theorem only after
+  satisfying every hypothesis of that theorem.  A stronger-looking statistic
+  cannot import a missing scale regime from another witness.
+
 ## MISTAKE-376 (2026-08-12, disconnected-low frontier routing) -- navigation advertised two reductions absent from its proof package
 
 - **What failed:** the incoming LRC proof-map headline said the primitive

@@ -18,7 +18,7 @@ P_MAX = 14_913
 MAX_C = 46
 PERTURBATION = 888
 EXPECTED_PRIMITIVE = "cc7cc412a79baf2bd72fb3a58df0e3e0ef306de1372acc4fbfa945e9279cbb2d"
-EXPECTED_SEMANTIC = "bcc478ce2f3869bd67a6a6689bb81bad8583561b73b1f4850d31c96847370c48"
+EXPECTED_SEMANTIC = "7a4ff17393137c5e3afcf24411d3d6cf2d0078255534c0b22b82110f167abcec"
 
 
 def require(condition, detail):
@@ -118,14 +118,22 @@ def main():
             if p < q < 8 * p and gcd(p, q) <= 3:
                 relevant_occurrences += 1
                 universal_A_lower = max(0, 168 * abs(c) - PERTURBATION)
-                if (p // d) * universal_A_lower < 5 * 168 * p:
+                # The Dirichlet many-turn lemma is available only in its
+                # short-rotation regime 9|c| <= p.  A large-c affine witness
+                # may share this physical pair, but it cannot justify the
+                # analytic skip.
+                many_turn = (
+                    9 * abs(c) <= p
+                    and (p // d) * universal_A_lower >= 5 * 168 * p
+                )
+                if not many_turn:
                     residual_occurrences += 1
                     residual_by_d[d] += 1
             n += 1
 
     require(maximum_cutoff == P_MAX, maximum_cutoff)
     require(len(maximum_rows) == 56, len(maximum_rows))
-    require(residual_occurrences == 8_013_156, residual_occurrences)
+    require(residual_occurrences == 8_079_264, residual_occurrences)
     require(F(1, 294) > TARGET, (F(1, 294), TARGET))
     require(5 * F(1, 294) > DMAX, (5 * F(1, 294), DMAX))
 
