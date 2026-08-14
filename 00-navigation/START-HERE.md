@@ -56,12 +56,13 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    phase; THM-3285 gives a literal `R-M-R` horn. Its FINITE-EXACT `13`-label
    normal atlas has two middle completions but no outer co-support. A two-axis
    atom, current and LRC(14) remain OPEN.
-10. **Tournament structure is operational.** THM-3315 compiles cut-switched walks
-    from centered spectrum plus a signed-observer numerator.
-   THM-3260/3273 give relative phase, not a tournament. THM-3287 gives static
-   sections; THM-3305 an exact rank-two edge update. These remain static, not
-   tournaments or time.
-11. **Sequences need support and multiplicity profiles.** THM-2000/2005/2352 separate support, collision tax, and q-adic thresholds; THM-2438/2500 give Poisson--Newton and finite-hole laws.
+10. **Tournament structure is operational.** THM-3315 compiles cut-switched
+    walks from centered spectrum plus a signed-observer numerator. THM-3359
+    makes every modular C-finite index support ultimately periodic, but its
+    exact `T4` audit shows harmonic density still loses apex and orientation.
+    THM-3260/3273 give relative phase, not a tournament; THM-3287 gives static
+    sections and THM-3305 an exact rank-two edge update.
+11. **Sequences need support and multiplicity profiles.** THM-2000/2005/2352 separate support, collision tax, and q-adic thresholds; THM-2438/2500 give Poisson--Newton and finite-hole laws. THM-3359 identifies the modular harmonic residue `delta` and multiplicative scar coefficient `delta-delta^2/2`; arbitrary subsets need not obey its periodic dichotomy.
     THM-3288 gives static orders `10/14/15`; THM-3307 derives six minimal
     visibility circuits; THM-3315 gives `N_d/(P-zN_d)`. THM-3314 copies
     endpoints but blocks centered-current and ancestry cloning.

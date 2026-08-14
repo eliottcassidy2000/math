@@ -225,7 +225,10 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - [THM-1950](../01-canon/theorems/THM-1950-h-ge-disc-reduced-to-strongly-connected.md) reduces `H >= disc` to strongly connected tournaments and verifies finite
   cases; the global inequality is open.
 - THM-3315 compiles switched walks; THM-3322 adds second moments and split joins; THM-3324 closes join on the response Gram.
-  Its `F` block is necessary but SCC order is lost. Next: third tensors and nontransitive substitution.
+  THM-3359 then makes every modular C-finite walk support ultimately periodic,
+  with rational harmonic residue, but its exact `T4` census proves that this
+  residue cannot recover apex, edge orientation, or SCC order.  The `F` block
+  remains necessary; next are third tensors and nontransitive substitution.
 - A literal Paley bridge exists only in THM-640's prime quadratic-residue scope.
   Composite modulus 14 and repeated score/node heuristics do not inherit it.
 - MISTAKE-227–229 correct the newest false syntheses: the AP chain frame is
@@ -267,6 +270,14 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   coefficients are central trinomials, the two Pascal halves become ternary
   walks, and reciprocal support is limiting mean divisor incidence/fibre scar.
   Abel--Dini/Bertrand is the boundary; Cauchy and Dirichlet convolution differ.
+- [THM-3359](../01-canon/theorems/THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar.md)
+  proves that every modular C-finite index support is ultimately periodic,
+  with harmonic residue `delta=h/p` and weak/strict multiplicative-deletion
+  scar `delta-delta^2/2`.  Exact `T4`, Fibonacci, Berggren-depth, and ternary
+  DFA controls show the gain and the loss: finite-state trees and tournaments
+  share a matrix-support calculus, while residue forgets orientation and
+  ancestry.  Squares and `ceil(k log(k+1))` witness that arbitrary subsets of
+  `N` need not follow the periodic finite-mass/divergent dichotomy.
 - Hostile-audited [THM-2500](../01-canon/theorems/THM-2500-finite-hole-relative-atoms-prime-rays-and-cover-bounds.md) classifies finite multiplicative hole modules. Prime-free holes have finitely
   many artificial atoms at most `max h*spf(h)`; a prime hole creates
   disjoint cage rays `m*q` with sharp `M^3/M^4` finite remainders. Additive
