@@ -1,0 +1,7 @@
+LRC14 COHERENT RESIDUE-SHIFT c=84 TREE OBSTRUCTION
+bodies 649 packets 12980
+cross_failures 1 full_tree_failures 0
+cross_failure ((1, 2, 3, 4, 6, 12), 168, 90, (86, 88, 90), (85, 87, 96), Fraction(1359294768019, 1468452262420), Fraction(704349801613, 10279165836940), Fraction(596234342423, 8810713574520), Fraction(-52458412717, 61674995021640), (((3, 90), (5, 96), Fraction(1, 31)), ((3, 86), (5, 87), Fraction(886, 52459)), ((3, 90), (5, 85), Fraction(658, 52095)), ((3, 88), (5, 96), Fraction(19, 3224)), ((3, 90), (5, 87), Fraction(0, 1))), Fraction(463317907929, 1468452262420), Fraction(129336503, 523645738), (((3, 86), (3, 88), Fraction(1737, 21736)), ((3, 88), (3, 90), Fraction(191, 2392)), ((5, 85), (5, 96), Fraction(303, 4681)), ((5, 85), (5, 87), Fraction(11136, 189505)), ((3, 90), (5, 96), Fraction(1, 31))), Fraction(66228727, 112209801))
+union_minus_6/7 -209657717/785468607
+semantic_sha256 4c2629fe164b49309639f2267540299749990e6df1e61a107396591f3bbdd173
+status=FINITE-EXACT; failure is restricted to the cross-K3,3 Hunter certificate

@@ -1,0 +1,18 @@
+LRC14 REFLECTED-PAIR PROJECTED TRANSFER EXACT AUDIT
+scope=historical_THM3351_113_row_superset;post_THM3361_current_rows 110
+universe_families_rows 13 113 family_sha256 4207877022697a356026726c37f1650f7d863f38a0981592003e4875d31f21e0
+ruler_range (129360, 5045040)
+THM3360_3372_body_domain_intersection 0 robust_edge_hist ((15, 113),)
+reflected_first_drift_representations 0
+raw_high_pair_rows 113 upper_median_overlap_hist ((Fraction(0, 1), 108), (Fraction(1, 1), 5))
+upper_median_mass_type_hist ((('empty', 'empty', 'zero'), 69), (('empty', 'partial', 'zero'), 13), (('full', 'empty', 'zero'), 26), (('full', 'full', 'positive'), 5))
+zero_overlap_witness (94, (1, 3, 8, 10, 11, 14), 129360, 12741, 65835, (72, 4247), Fraction(1, 1), Fraction(0, 1), Fraction(0, 1))
+same_denominator_unit_height_witness (12741, 142101, 43120, Fraction(0, 1), Fraction(6160, 47367), Fraction(6160, 47367))
+reflected_k3_four_residue_debt_max (Fraction(123896, 5540535), (1, 2, 3, 4, 6, 12), 168, (Fraction(1, 91), Fraction(1, 189), Fraction(1, 287), Fraction(1, 385))) projected_margin 58759/5540535
+reflected_k2_five_distinct_debt_max (Fraction(183680141, 11691304625), (1, 2, 3, 4, 6, 12), 168, (12, 6, 4, 3, 2)) two_high_edge_margin 95318697414/58865718786875
+reflected_k2_connected_five_atlas 19389 high_edge_hist ((0, 2), (1, 14), (2, 82), (3, 363), (4, 1400), (5, 4969), (6, 12559))
+reflected_k2_low_high_edge_rays 16 scale1_simple_pass 11 scale1_heads ((1, 2, 3, 4, 6), (1, 2, 3, 4, 12), (1, 2, 3, 6, 12), (1, 2, 4, 6, 8), (1, 2, 4, 6, 12)) scale2_all_pass True
+reflected_k2_scale2_min_record (2, (1, 2, 3, 4, 6), 0, Fraction(11573483686, 3423705030837), (Fraction(2003819117, 263361925449), (1, 2, 3, 4, 6, 12), 168, (12, 6, 4, 3, 2)))
+record_sha256 0190e911fe87117603c8d733c3f181b70656848b86c6814bd43a378f014bad87
+conclusion=literal_transfer_refuted;body_and_affine_source_types_fail;raw_high_pair_has_no_positive_located_floor;denominator_unit_quotient_loses_height;scoped_reflected_k3_closes_by_singletons;scoped_reflected_k2_reduces_to_five_scale1_heads
+all_exact_controls=PASS

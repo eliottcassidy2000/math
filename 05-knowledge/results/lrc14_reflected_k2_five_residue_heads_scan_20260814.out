@@ -1,0 +1,9 @@
+LRC14 REFLECTED-RESIDUE PROJECTED-K2 FIVE-HEAD EXACT SCAN
+scope=649_upper_median_bodies;five_reflected_residues;five_primitive_scale1_heads
+universe 649 5 720 checks 2336400 failures 0
+weakest (Fraction(1107040893783422917, 37818341551113357325), 556, (2, 6, 7, 8, 9, 12), 7056, 3780, (1, 2, 3, 4, 6), (1, 4, 0, 3, 2), Fraction(844726860683109, 2909103196239489025), Fraction(7719078814076349, 415586170891355575), ((Fraction(43692, 7105225), 0, 4), (Fraction(224595, 37326241), 2, 3), (Fraction(95340, 16583561), 1, 2), (Fraction(6240, 9475649), 1, 4)))
+shape_minima (((1, 2, 3, 4, 6), Fraction(1107040893783422917, 37818341551113357325), (2, 6, 7, 8, 9, 12), 3780, (1, 4, 0, 3, 2)), ((1, 2, 3, 4, 12), Fraction(53892347005759, 1391782505148035), (2, 4, 5, 8, 10, 12), 900, (3, 1, 5, 2, 4)), ((1, 2, 3, 6, 12), Fraction(39801881754107, 909031176643317), (1, 4, 7, 8, 10, 14), 2030, (4, 2, 3, 0, 5)), ((1, 2, 4, 6, 8), Fraction(1542802212259606, 40141734670354317), (2, 4, 5, 6, 8, 12), 900, (5, 4, 3, 1, 2)), ((1, 2, 4, 6, 12), Fraction(602080236207, 14407575960323), (1, 2, 3, 4, 5, 12), 450, (3, 4, 1, 5, 2)))
+literal_control 10 actual_safe 126337309517223212/415586170891355575 hunter_safe 126337309517223212/415586170891355575
+semantic_sha256 9a3a9ab7b779c990d41f908469159f52c02a5e09053330b45269fdf03b5f7685
+conclusion=all_five_scale1_heads_close_by_exact_common_cell_K5_Hunter_tree
+all_exact_controls=PASS

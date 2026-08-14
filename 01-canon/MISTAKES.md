@@ -9,6 +9,54 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-381 (2026-08-14, projected transfer) -- raw high ratios and denominator passports do not retain a located reflected-pair overlap
+
+- **What failed:** the first post-reflected transfer tried to apply the
+  matched-residue high-pair floor to arbitrary projected drifts, first by
+  calling `(216,H)` high from its reduced raw ratio and then by retaining only
+  the projected denominator/unit passport `(d,u)`.
+- **Minimal witnesses / first failed maps:** none of the historical `113`
+  post-THM-3351 rows lies in the `649`-body source bank, and none represents
+  `216` as `qL-e`. On their upper-median cells the surrogate high pair has
+  overlap zero on `108/113` rows. At
+  `E=(1,3,8,10,11,14), L=129360, j=65835`, the pair `(216,12741)` has zero
+  overlap, while replacing `12741` by `12741+L` preserves `(d,u)` and changes
+  the overlap to `6160/47367`. Ray height is therefore load-bearing.
+- **Repair / strongest survivor:** retain at least `(d,u,h,j)` or the literal
+  drift and a common cell. Four distinct reflected residue rays close a
+  projected `k=3` subsector on all `3,003` bodies by singleton mass; five
+  distinct reflected residue rays close a projected `k=2` subsector on the
+  `649`-body bank using THM-3360 and five exact scale-one heads. Neither result
+  removes a live projected-wall row.
+- **Reusable rule:** before transferring a pair theorem through a quotient,
+  type the source vertices and test whether the quotient determines the edge
+  observable. A denominator is not a located phase, and a raw drift ratio is
+  not the reduced level ratio of a reflected affine ray.
+
+## MISTAKE-380 (2026-08-14, arbitrary residue extension) -- a unit residue change can annihilate a canonical high-pair overlap
+
+- **What failed:** a residue-blind extension treated changing `Lq-e` by a
+  small integer `h` as a small geometric perturbation without retaining the
+  cell phase `hj mod L`.
+- **Minimal witness / first failed implication:** for
+  `E=(1,2,3,4,6,12), (L,j)=(168,90)`, the canonical high `3:5` pair
+  `(z,w)=(492,836)` has overlap `6/209`, but `z -> z-1=491` gives overlap
+  zero. The centered phase defect is `Delta=78`, a macroscopic jump
+  `13/28`, although `|h|=1`.
+- **Repair / strongest survivor:** with centered `Delta=hj-mL`, exact affine
+  conjugacy gives
+  `sigma<=min(1,4(|Delta|+|h|)(1+L/z)/L)`. A fixed Hunter tree survives when
+  its old margin exceeds `sum_i(deg_T(i)+1)sigma_i`. Exact shifts
+  `c in {-2,-1,1,2}` pass all `32,840` tested packets. At `c=84` one
+  cross-`K_(3,3)` tree fails, but the unrestricted `K6` tree and literal union
+  still close on every one of the `12,980` packets. The equal-level partition
+  is unchanged; what fails is the sufficiency of restricting Hunter to its
+  cross edges, because within-class physical overlaps can become useful.
+- **Reusable rule:** perturb located periodic events in the centered phase
+  coordinate, and transport the whole certificate with its vertex degrees.
+  Edgewise canonical floors and cross-only Hunter certificates are not stable
+  or sufficient objects.
+
 ## MISTAKE-379 (2026-08-14, live-canon integration) -- five theorem records retained pre-freeze source hashes after their scripts changed
 
 - **What failed:** THM-3360 and THM-3366, together with their results-index
