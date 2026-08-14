@@ -33,6 +33,7 @@ EXPECTED_FIBRE_DISTRIBUTION = ((1, 12_236), (2, 1512), (3, 112), (4, 182),
                                (5, 28), (6, 14), (7, 14), (8, 70))
 EXPECTED_COHERENT_GATES = ((5, 909), (13, 135), (17, 68),
                            (29, 24), (37, 14), (41, 16))
+EXPECTED_SEMANTIC = "d356a53ce4b237c7a809d207f2d6ed5cbadfd82228568620f062af60c4d2f6af"
 
 
 def require(condition, detail):
@@ -124,6 +125,14 @@ def factorint(n):
     return factors
 
 
+def valuation(n, p):
+    value = 0
+    while n % p == 0:
+        value += 1
+        n //= p
+    return value
+
+
 def is_prime(n):
     if n < 2:
         return False
@@ -197,8 +206,11 @@ def shell_and_fingerprint_audit(row):
 
     R_minus = c * c + (a - c) * (a - c)
     R_plus = (c + d) * (c + d) + (D - c) * (D - c)
+    require(R_plus - R_minus == 2 * d * D, (row, R_minus, R_plus))
+    minus_factors = factorint(R_minus)
+    plus_factors = factorint(R_plus)
     split_support = {
-        prime for prime in set(factorint(R_minus)) | set(factorint(R_plus))
+        prime for prime in set(minus_factors) | set(plus_factors)
         if prime % 4 == 1
     }
 
@@ -242,6 +254,33 @@ def shell_and_fingerprint_audit(row):
             == R_plus + 2 * d * L_plus * (d * L_plus + a - 2 * c),
             ("plus resultant", row, n),
         )
+        channels = (
+            (a, c, L_minus, a * (p + 1) - c, R_minus, d_minus, minus_factors),
+            (b, c + d, L_plus, b * (p + 1) - (c + d),
+             R_plus, d_plus, plus_factors),
+        )
+        for coefficient, constant, H_value, J_value, resultant, channel, factors in channels:
+            require(coefficient * p + constant == d * H_value,
+                    ("linear branch", row, n, coefficient, constant, H_value))
+            require(gcd(C_p, resultant) == gcd(C_p, d * H_value * J_value),
+                    ("resultant gcd", row, n, resultant, H_value, J_value))
+            for prime in factors:
+                if C_p % prime or prime == 2:
+                    continue
+                regular = (d * gcd(coefficient, constant)) % prime != 0
+                if not regular:
+                    continue
+                H_hit = (d * H_value) % prime == 0
+                J_hit = J_value % prime == 0
+                require(H_hit != J_hit,
+                        ("branch selector", row, n, prime, H_value, J_value))
+                if H_hit:
+                    require(valuation(channel, prime)
+                            == min(valuation(C_p, prime), valuation(resultant, prime)),
+                            ("matching valuation", row, n, prime, channel, C_p, resultant))
+                else:
+                    require(channel % prime != 0,
+                            ("conjugate overcount", row, n, prime, channel))
         checks += 1
 
     return len(split_support), checks, R_minus, R_plus
@@ -438,6 +477,7 @@ def main():
 
     p, q = 14_426_006, 28_851_968
     require(q - 2 * p == -44, (p, q))
+    require(gcd(p, q) == 2 and p >= 264 and p < q < 8 * p, (p, q, gcd(p, q)))
     C_p, C_q = 2 * p * p + 2 * p + 1, 2 * q * q + 2 * q + 1
     d_minus = gcd(C_p, q - p)
     d_plus = gcd(C_p, p + q + 1)
@@ -445,6 +485,32 @@ def main():
     require(factorint(d_minus) == {17: 1, 233: 1}, factorint(d_minus))
     require(factorint(d_plus) == {5: 1, 13: 1, 61: 1}, factorint(d_plus))
     require(gcd(C_p, C_q) == 15_705_365, gcd(C_p, C_q))
+    require((C_p, C_q) == (416_219_327_076_085, 1_664_872_172_649_985),
+            (C_p, C_q))
+    require((q - p, p + q + 1) == (14_425_962, 43_277_975),
+            (q - p, p + q + 1))
+    require(p % 3961 == 44 and (3 * p - 43) % 3965 == 0, p)
+
+    overcount_hostiles = (
+        (1, 2, -1, 1, 2, "minus"),
+        (1, 6, -5, 1, 2, "plus"),
+        (5, 1, -46, 51, 52, "d-exception"),
+    )
+    for d, a, c, pp, qq, kind in overcount_hostiles:
+        Cp = 2 * pp * pp + 2 * pp + 1
+        Rm = c * c + (a - c) ** 2
+        Rp = (c + d) ** 2 + (d + a - c) ** 2
+        gm = gcd(Cp, qq - pp)
+        gp = gcd(Cp, pp + qq + 1)
+        if kind == "minus":
+            require((Cp, Rm, gm, a * (pp + 1) - c) == (5, 10, 1, 5),
+                    (kind, Cp, Rm, gm))
+        elif kind == "plus":
+            require((Cp, Rp, gp, (2 * d + a) * (pp + 1) - (c + d))
+                    == (5, 160, 1, 20), (kind, Cp, Rp, gp))
+        else:
+            require((gcd(Cp, Rm), gcd(Cp, Rp), gm, gp) == (5, 5, 1, 1),
+                    (kind, Cp, Rm, Rp, gm, gp))
 
     carrier_cutoffs = []
     for d in (6, 2):
@@ -456,6 +522,8 @@ def main():
 
     atlas_checks, allocation_checks, atlas_pairs = root_atlas_audit()
     split_primes, gate_checks = gaussian_gate_audit()
+    semantic = digest.hexdigest()
+    require(semantic == EXPECTED_SEMANTIC, semantic)
 
     print("THM-3356 PRIMITIVE AFFINE DETERMINANT-SHELL AUDIT")
     print("formal_rows", len(original), "primitive_rows", len(primitive), "by_d", by_d)
@@ -472,7 +540,7 @@ def main():
     print("unramified_root_atlases", atlas_checks, "allocation_checks", allocation_checks,
           "ordered_root_pairs", atlas_pairs)
     print("coherent_gaussian_gate_primes", split_primes, "checks", gate_checks)
-    print("semantic_sha256", digest.hexdigest())
+    print("semantic_sha256", semantic)
     print("status=ALL EXACT CHECKS PASSED; no LRC physical-tail closure claimed")
 
 

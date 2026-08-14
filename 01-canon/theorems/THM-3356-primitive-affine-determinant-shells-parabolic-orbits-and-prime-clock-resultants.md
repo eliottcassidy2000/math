@@ -1,20 +1,45 @@
 ---
 id: THM-3356
-title: "Primitive affine determinant shells, parabolic bouquets, and prime-clock resultants"
-status: RESERVED / UNPROVED PROVISIONAL CANDIDATE UNDER AUDIT
+title: "Primitive affine determinant shells, parabolic orbit decomposition, and prime-clock resultants"
+status: >
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Primitive affine
+  determinant shells split into exact parabolic residue/content orbits and
+  carry a tame CRT prime-toggle atlas.  On the current 14,168 primitive
+  incoming rays, the two U-spine content channels have fixed homogeneous-
+  resultant fingerprints of sharp split-prime rank five.  Coherent integral
+  shell toggles are much rarer and do not preserve the LRC carrier.
+audit: >
+  Two independent audits rederived the shell parametrization, raw versus
+  primitive-spinor Lorentz and inradius laws, tame affine root atlas, Gaussian
+  content channels, coherent-toggle iff and valuation boundary, homogeneous
+  endpoint resultants, branch selectors and their exception sets.  They
+  separately replayed all finite ledgers, the rank-five physical-tail witness,
+  the norm-85 carrier hostile, and normal/optimized/stored transcript equality.
+  Both recorded hashes match the frozen files.
 source: codex-2026-08-14-affine-determinant-shells
-depends_on: []
-related: []
+depends_on:
+  - THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone
+  - THM-3346-u-spine-prime-toggle-root-atlas-and-conjugation-monodromy
+related:
+  - THM-2620-endpoint-pair-parabolic-transvection-and-translation-gauge-boundary
+  - THM-3334-berggren-parabolic-spine-gaussian-collision-torsor
+  - THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation
+  - THM-3347-u-spine-signed-prime-clock-gram-and-projective-fold-boundary
+  - THM-3353-split-prime-parabolic-branch-transplant-and-unary-transducer-compiler
+script: 04-computation/primitive_affine_determinant_shells_thm3356.py
+output: 05-knowledge/results/primitive_affine_determinant_shells_thm3356.out
+script_sha256: 3754e3514aea8f5d5c32c49fe54f192817d20e2c49dec8dc92c3b51e8676e0fe
+output_sha256: 0859734a5a44b602cfcdf5ed291987e3e0f2552f8872831c2115dba1e6cdb55b
+hash_basis: working-tree bytes (LF)
 ---
 
 # THM-3356 -- primitive affine determinant shells and prime-clock resultants
 
-**RESERVED / UNPROVED PROVISIONAL CANDIDATE UNDER AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-This proof candidate is quarantined from the proved graph while its exact
-companion, scopes, and independent hostiles are audited.  In particular it
-does not prove the carrier inequalities or physical census reserved for
-THM-3355, and it does not decrement the open LRC(14) affine-tail ledger.
+The proof is exact in the scopes stated below.  In particular it does not
+prove the carrier inequalities or physical census reserved for THM-3355, and
+it does not decrement the open LRC(14) affine-tail ledger.
 
 ## 1. Inheritance, portfolio, and the two views
 
@@ -65,7 +90,7 @@ Both non-anchor views survive, but they preserve different predicates.
 | sidecar | oriented shell charge and residue modulo `|c|` | row label `(d,a,c)` and the two channel labels |
 | decisive hostile | `c=2` is two horocycles, not one | the norm-`85` toggle changes the LRC carrier coefficient |
 
-## 2. A primitive affine shell is a finite parabolic bouquet
+## 2. A primitive affine shell has finitely many parabolic orbits
 
 Let
 
@@ -118,7 +143,10 @@ x_n=x_0+n u                                               (9)
 
 interleaves those `|c|` orbits; it is one parabolic orbit exactly when
 `|c|=1`.  This is the first boundary: an arbitrary affine ray must not be
-called a single horocycle.
+called a single horocycle.  No topology is implicit in this orbit count.  If
+unit-step edges are added, the full shell is a line and its parabolic quotient
+is a cycle; with parabolic-step edges there are instead `|c|` disjoint lines.
+The positive LRC ray is only an eventual tail in each residue semiorbit.
 
 Unimodularity of `(v,u)` also gives the exact content formula
 
@@ -156,17 +184,20 @@ Equations (2)--(3) give, for every `x in S_c(u)`,
 <Phi(x),Phi(u)>_L=2c^2.                                 (13)
 ```
 
-For `x=g y`, the primitive normalized shell is
+For `x=g y`, the primitive-spinor shell is
 
 ```text
 <Phi(y),Phi(u)>_L=2(c/g)^2.                             (14)
 ```
 
-In the torus-curve language of THM-3333, `|c|` is the geometric
-intersection number.  The case `|c|=1` is precisely one oriented Farey-star
-orbit about `[u]`; larger `|c|` are higher intersection shells.  Passing to
-projective spinors identifies the two oriented signs, while retaining only
-the residues coprime to `c` as primitive determinant-`|c|` vertices.
+In the torus-curve language of THM-3333, `|c|` is algebraic intersection of
+the possibly nonprimitive homology class, or geometric intersection counted
+with multiplicity.  If `x=g y`, the primitive slope `[y]` has geometric
+intersection `|c|/g` with `[u]`.  The case `|c|=1` is precisely one oriented
+Farey-star orbit about `[u]`; larger `|c|` are higher intersection shells.
+Passing to projective spinors identifies the two oriented signs, while
+retaining only the residues coprime to `c` as primitive determinant-`|c|`
+vertices.
 
 Now fix `x_0 in S_c(u)` and put
 
@@ -191,19 +222,20 @@ hypotenuse sequence of square discriminant `-4c^2`.  The U-spine polynomial
 x_0=(1,0),        u=(1,1),        A=2, h=c=1.           (18)
 ```
 
-For a positive point `x_n=(q_n,p_n)` with `q_n>p_n`, the corresponding
-right triangle has inradius
+For a positive point `x_n=(q_n,p_n)` with `q_n>p_n`, the raw Euclid triangle
+`Phi(x_n)` has inradius
 
 ```text
 r_n=p_n(q_n-p_n).                                       (19)
 ```
 
-This is THM-3333's triangular-number defect on the same shell; it is not an
-LRC margin.
+If `x_n=g y`, its primitive normalized triangle instead has inradius
+`r_n/(g^2 epsilon(y))`.  This is THM-3333's triangular-number defect on the
+same shell; it is not an LRC margin.
 
 ### 3A. The tame affine prime-toggle atlas
 
-Let
+Let `M>1` and
 
 ```text
 M=product_j p_j^(e_j),
@@ -277,7 +309,11 @@ load-bearing.  Primes dividing `c` are discriminant-ramified, primes dividing
 `A` destroy the inverse in (21), and `2` is parity-ramified.  No Boolean
 toggle is claimed at those primes.
 
-## 4. Ramification is exactly the coherent Gaussian-toggle gate
+This is a set-level torsor and parent quotient.  It does not by itself equip
+the roots with THM-3346's cubical two-skeleton or recover its `H^1`; those
+require a separately declared toggle-cell structure.
+
+## 4. At an anchor prime, shell charge is exactly the coherent toggle gate
 
 There is a complementary law at a split prime dividing the anchor norm.  Let
 `p=1 mod 4` be prime and let `H` be a primitive integral Gaussian-rotation
@@ -317,7 +353,11 @@ one has
 ```
 
 If additionally `v_p(||u||^2)=1`, then `u'` is primitive and the conjugate
-matrix gives the inverse shell map.  A coordinate reflection or the
+matrix gives the inverse shell map.  Indeed, if a prime `ell` divided `u'`,
+then `H^T u'=p u` forces `ell=p` unless `ell` divided primitive `u`; but
+`p|u'` would force `p^2|N(u')=N(u)`.  Also
+`ker(H^T mod p)=<u' mod p>`, so the same gate makes `H^T/p` integral on the
+target shell.  A coordinate reflection or the
 unit/global-conjugation gauge of THM-3353 may reverse the displayed sign of
 `c`, but not its magnitude.
 
@@ -373,7 +413,14 @@ R_-=c^2+(a-c)^2,
 R_+=(c+d)^2+(d+a-c)^2.                                 (36)
 ```
 
-They are Gaussian norms.  More strongly, put
+They are Gaussian norms, and
+
+```text
+R_+-R_-=2d(d+a)=2dD.                                   (36a)
+```
+
+Thus every common odd fingerprint prime divides the anchor product `dD`,
+even though the actual channels remain coprime by (35).  More strongly, put
 
 ```text
 L_-=q-p,             L_+=p+q+1,          b=2d+a.
@@ -404,10 +451,72 @@ ray is bounded by the fixed quantity
 rho(d,a,c)=# {ell:ell=1 mod 4 prime, ell|R_-R_+}.        (40)
 ```
 
-The identities claim divisibility, not equality.  Primes dividing the
-coefficients `a` or `2d+a`, higher valuations, and common factors of the two
-fingerprints are precisely why one must retain (34), rather than replacing
-it by `gcd(L_-,R_-)` and `gcd(L_+,R_+)` without qualification.
+The fingerprints do not determine which Hensel branch occurs.  A precise
+local ledger is obtained as follows.  For `sigma in {-,+}`, put
+
+```text
+(A_-,K_-)=(a,c),              (A_+,K_+)=(2d+a,c+d),
+H_sigma=(A_sigma p+K_sigma)/d,
+J_sigma=A_sigma(p+1)-K_sigma.                            (40a)
+```
+
+Then `H_-=L_-`, `H_+=L_+`, and
+
+```text
+R_sigma=K_sigma^2+(A_sigma-K_sigma)^2
+       =C^h(-K_sigma,A_sigma),
+A_sigma^2 C_p=R_sigma+2d H_sigma J_sigma.               (40b)
+```
+
+Here `C^h(X,Y)=2X^2+2XY+Y^2`; the middle expression is the homogeneous
+quadratic--linear resultant fingerprint.  This homogeneous formulation is
+load-bearing at the endpoint `a=A_-=0`, where the ordinary univariate
+resultant with a constant linear form would instead be `K_-^2`.
+
+Since `C_p` is odd,
+
+```text
+gcd(C_p,R_sigma)=gcd(C_p,d H_sigma J_sigma).            (40c)
+```
+
+For an odd prime `ell` outside
+
+```text
+E_-={ell=1 mod 4:ell|d*gcd(a,c)},
+E_+={ell=1 mod 4:ell|d*gcd(2d+a,c+d)},                  (40d)
+```
+
+exactly one of `dH_sigma,J_sigma` is divisible when
+`ell|gcd(C_p,R_sigma)`.  On the matching `H_sigma` branch,
+
+```text
+v_ell(g_sigma)=min(v_ell(C_p),v_ell(R_sigma));          (40e)
+```
+
+on the conjugate `J_sigma` branch, `v_ell(g_sigma)=0`.  Thus even a regular
+fingerprint prime can be a conjugate-branch overcount.  Coefficient and
+`d`-exception primes require the original gcd (34).
+
+Here is the branch proof.  From `ell|C_p`,
+`(2p+1)^2=2C_p-1=-1 mod ell`, so `2p+1` is a unit.  If `ell` divided both
+`dH_sigma=A_sigma p+K_sigma` and
+`J_sigma=A_sigma(p+1)-K_sigma`, their sum would force
+`ell|A_sigma(2p+1)`, hence `ell|A_sigma` and then `ell|K_sigma`, contrary to
+`ell` lying outside (40d).  Thus (40c) has exactly one local factor.  On its
+unique simple Gaussian/Hensel branch, comparison of
+`A_sigma z_p` with `(A_sigma-K_sigma)-iK_sigma` gives the valuation minimum
+in (40e); on the other branch `H_sigma` is a unit.
+
+The minimal regular overcounts are
+
+```text
+(d,a,c;p,q)=(1,2,-1;1,2):   C_p=5, R_-=10, g_-=1, J_-=5,
+(d,a,c;p,q)=(1,6,-5;1,2):   C_p=5, R_+=160,g_+=1, J_+=20. (40f)
+```
+
+At the `d`-exception row `(5,1,-46;51,52)`, both
+`gcd(C_p,R_-)=gcd(C_p,R_+)=5` while `g_-=g_+=1`.  These hostiles are why
+(40) is an upper bound and why the channel sidecar cannot be discarded.
 
 ## 6. The incoming affine quotient and its exact finite fingerprint ledger
 
@@ -479,9 +588,10 @@ its own U-spine identity
 ```
 
 For `M<=8` these grades are `5,13,25,41,61,85,113,145`, with at most two
-distinct split primes.  The normalization-fibre grade therefore cannot
-encode the rank-five endpoint fingerprint in (49); the two prime-toggle
-scales are genuinely different.
+distinct split primes.  This is a numerical U-spine sidecar only: no torsor,
+action, or canonical map from the `T_M` formal lifts to a grade-`C_M` parent
+fibre is asserted.  In particular it cannot encode the rank-five endpoint
+fingerprint in (49); the two prime-toggle scales are genuinely different.
 
 The `a=1` slice has `8*92=736` rays and anchor direction
 
@@ -489,7 +599,8 @@ The `a=1` slice has `8*92=736` rays and anchor direction
 u=(d+1,d)=z_d;                                          (45)
 ```
 
-it is literally parallel to the U-spine.  The `17` low-unit carrier rows are
+it is literally parallel to a U-spine direction, not itself a Berggren
+U-spine branch.  The `17` low-unit carrier rows are
 exactly the positive-cone pieces with `d+(d+a)<8` and `|c|=1`; by Section 2
 each is a single Farey-star orbit.
 
@@ -520,7 +631,15 @@ the CRT choice
 (p,q)=(14,426,006,28,851,968)                           (48)
 ```
 
-satisfies
+satisfies `gcd(p,q)=2`, `p>=264`, and `p<q<8p`, so it lies in the literal
+filtered affine tail.  More explicitly,
+
+```text
+p=44 mod 3961,        3p=43 mod 3965,
+p=14,426,006 mod 15,705,365.                            (48a)
+```
+
+It satisfies
 
 ```text
 g_-=3961,       g_+=3965,
@@ -539,8 +658,14 @@ p : rows
 No row has two coherent gate primes, because the two smallest possible ones
 already have product `5*13>46>=|c|`.  Of these rows, `978` have anchor
 valuation one and `188` have deeper valuation, where primitive content can
-collapse.  This matching/isolates statement concerns simultaneous integral
-shell transport only; it does not bound the endpoint U-spine clock rank (46).
+collapse.  This at-most-one gate-prime label statement concerns simultaneous
+integral shell transport only; it does not bound the endpoint U-spine clock
+rank (46).
+Sufficiency is local: for primitive `u` and split `p|N(u)`, `u mod p` lies on
+exactly one of the two isotropic lines, and exactly one of the conjugate
+primitive norm-`p^2` Gaussian rotation matrices has that kernel.  Hence the
+counted condition `p|c` is the exact coherent-gate condition, not merely a
+necessary screen.
 
 ## 7. Exact boundary: arithmetic organization is not LRC transport
 
@@ -551,8 +676,10 @@ The theorem supplies three useful structures:
 3. a fixed rank-at-most-five U-spine fingerprint on the current LRC tail.
 
 None controls the physical overlap integral.  Even a coherent Gaussian
-toggle changes the coordinate data used by the carrier inequality.  For
-example the norm-`85` factor toggle relates the primitive directions
+toggle changes the coordinate data used by the carrier inequality.  The
+norm-`85` rotation in Section 4 sends `(7,6)` to `(9,-2)`; reflecting the
+second coordinate to return to the positive chamber relates the primitive
+directions
 
 ```text
 (D,d)=(7,6)   and   (9,2).                              (50)
@@ -575,9 +702,16 @@ prime fingerprint can occur along infinitely many parameter values, and a
 failed sufficient certificate is not an unsafe LRC row.  THM-3355 remains
 reserved and unproved.
 
-## 8. Exact evidence awaiting freeze
+Finally, the `22,890 -> 14,168` dilation/residue quotient has no declared cell
+complex or `H^1`, and it is not THM-3346's antipodal prime-toggle quotient.
+Likewise (13) is inherited from THM-3333, and the `|c|=1` case is its fixed-
+cusp parabolic orbit after an `SL_2(Z)` change of basis.  The new payload is
+the higher-shell orbit/content split, tame affine atlas, triangular lift
+ledger, fixed resultants, and their exact LRC boundary.
 
-The provisional companion
+## 8. Exact evidence
+
+The frozen companion
 
 ```text
 04-computation/primitive_affine_determinant_shells_thm3356.py
@@ -595,6 +729,13 @@ currently checks:
 - `82,400` coherent-toggle integrality checks for every split prime below
   `100`.
 
-Normal and optimized replays must match a frozen stored transcript before
-promotion.  The finite sweeps certify their declared universes; equations
-(3)--(40) carry the universal proof.
+Reproduce with
+
+```bash
+python3 04-computation/primitive_affine_determinant_shells_thm3356.py
+python3 -O 04-computation/primitive_affine_determinant_shells_thm3356.py
+```
+
+Normal, optimized, and stored transcripts byte-match.  The frontmatter hashes
+are for the exact working-tree bytes audited here.  The finite sweeps certify
+their declared universes; equations (3)--(40) carry the universal proof.
