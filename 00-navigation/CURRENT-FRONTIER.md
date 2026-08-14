@@ -65,8 +65,9 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
   signed Hensel Gram (`N=32045` defeats the naive fold; projector/cosh repair
   positivity). THM-3353 compiles each split-prime edge on fixed unary lanes;
   THM-3356 organizes all incoming affine tails into parabolic determinant
-  shells with sharp rank-five content fingerprints. Owner, physical mass,
-  global transduction, LRC current/row, and JC flux remain open.
+  shells with sharp rank-five content fingerprints; THM-3357 adds an
+  outer-to-middle gate Horn rule. Owner, phase/exit, physical mass, global
+  transduction, LRC current/row, and JC flux remain open.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
 
@@ -209,7 +210,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-3173 separates `C2*C3`, regular `S3`, and regular `C6`; their joint
   quotient has order 18, while pointed oriented quartic frames form `Q3`.
   These are semantic action data, not a physical current or Keller bridge.
-- THM-1880/1885 give the Pell frame; THM-3335 excludes nontrivial square-arc/skew-EW attainment; THM-3339's intrinsic `T6` loses affine owner.
+- THM-1880/1885 give the Pell frame; THM-3335 excludes nontrivial square-arc/skew-EW attainment; THM-3339's `T6` loses owner; THM-3357 gives a local sibling `T3`, not a level tournament.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
 - THM-2013/2016 bound cyclic temperature/reducibility; `H` remains empirical.
@@ -294,7 +295,7 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   THM-3321/3323 give the Hesse recurrence and exact degree-21 Hilbert slice.
   The [multi-edge audit](../07-reflections/multi-edge-visible-kernel-and-bordered-resolvent-independent-audit-codex-20260803.md) compiles all `55` pairs locally; no dynamics/bit-complexity claim.
   Q4 radius/non-P stay OPEN.
-- **EXACT typed identities:** corrected HYP-8820 proves `bagel(n)-cake(n)=T_n-1`; THM-3333 gives triangular Lorentz polarization and typed ranks; THM-3335/3341 compile the square-triangular selector, adjacent square-hypotenuse roots, and norm-17 triangular-plane orbits. MISTAKE-222 still requires a common valuation for cross-predicate transfer.
+- **EXACT typed identities:** corrected HYP-8820 proves `bagel(n)-cake(n)=T_n-1`; THM-3333 gives triangular Lorentz polarization and typed ranks; THM-3335/3341 compile the square-triangular and norm-17 orbits; THM-3357 compiles ternary-level Walsh/moment sequences. MISTAKE-222 still requires a common valuation for transfer.
 - **EXACT arrangement shadow / blocked topology transfer:** corrected HYP-8825
   connects Vandermonde, braid chambers/transitive tournaments, and a companion
   determinant. MISTAKE-223 blocks NC2, hyper-Bessel, or Euler-characteristic

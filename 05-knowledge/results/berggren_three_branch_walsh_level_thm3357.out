@@ -1,0 +1,35 @@
+THM-3357 BERGGREN THREE-BRANCH WALSH / LEVEL AUDIT
+LOCAL_CIRCUIT parents=1714 PASS
+CONVEX_GATE_HORN checks=2170 kappa_includes_91 PASS
+OUTER_HADAMARD parents=1714 swaps=L/R fixes=M raw_content=2 PASS
+WEIGHTED_TRANSFER integer_weight_triples=125 PASS
+WALSH_IDENTITIES all=M^2 Rsign=L^2 Lsign=R^2 Msign=I PASS
+LEVEL depth=0 nodes=1 spinor_sum=(1, 2) parity_counts=(0, 0, 0, 1)
+LEVEL depth=1 nodes=3 spinor_sum=(5, 12) parity_counts=(0, 1, 1, 1)
+LEVEL depth=2 nodes=9 spinor_sum=(29, 70) parity_counts=(2, 2, 2, 3)
+LEVEL depth=3 nodes=27 spinor_sum=(169, 408) parity_counts=(6, 7, 7, 7)
+LEVEL depth=4 nodes=81 spinor_sum=(985, 2378) parity_counts=(20, 20, 20, 21)
+LEVEL depth=5 nodes=243 spinor_sum=(5741, 13860) parity_counts=(60, 61, 61, 61)
+LEVEL depth=6 nodes=729 spinor_sum=(33461, 80782) parity_counts=(182, 182, 182, 183)
+PELL_MARKOV_MASS
+  depth=0 total=(1, 2) next_first=5 square_triangular_index=1
+  depth=1 total=(5, 12) next_first=29 square_triangular_index=8
+  depth=2 total=(29, 70) next_first=169 square_triangular_index=49
+  depth=3 total=(169, 408) next_first=985 square_triangular_index=288
+  depth=4 total=(985, 2378) next_first=5741 square_triangular_index=1681
+  depth=5 total=(5741, 13860) next_first=33461 square_triangular_index=9800
+CANNONBALL depth=2 second_mass=70 even_square_sum=2600 odd_square_sum=2300
+PRIME_FIVE_SIBLING_COLLISIONS counts=[0, 0, 6, 6, 24, 96, 222, 726] PASS
+TRIPLE_LEVELS
+  depth=0 triple_sum=(3, 4, 5) determinant_energy=0
+  depth=1 triple_sum=(41, 40, 59) determinant_energy=50
+  depth=2 triple_sum=(475, 476, 693) determinant_energy=7012
+  depth=3 triple_sum=(5585, 5584, 8139) determinant_energy=967510
+  depth=4 triple_sum=(65587, 65588, 95589) determinant_energy=133454152
+  depth=5 triple_sum=(770297, 770296, 1122651) determinant_energy=18407967994
+ENERGY_PREFIX [0, 50, 7012, 967510, 133454152, 18407967994]
+FACTORIAL_TRIPLE_DETERMINANT prefix=[1, 0, 2240, 0, 1743565824] PASS
+NONLINEAR_HOSTILE parameter_sum=(5, 12) triple_sum=(41, 40, 59) psi_sum=(119, 120, 169)
+MOMENT_MAX_ORDER_HOSTILES state=((5, 16), 170, (1, 5, 12), (5, 8, 9), (122, 278, 701), ((17, 35, 82), (37, 55, 62)), (3, 8), (5, 8))
+CONJUGATION_COVARIANCE PASS arbitrary_unimodular_hostile_R=((1, 1), (2, 3)) total=((1, 3), (2, 7))
+ALL CHECKS PASSED
