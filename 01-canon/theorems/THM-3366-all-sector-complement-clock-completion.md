@@ -15,9 +15,11 @@ status: >
   support-row terminals, not an assertion that every surviving row is
   physically realizable.  Exact keywise composition with the current k=2
   post-d6 ledger deletes 298 live rows and 71,575,318 occurrences, leaving
-  4,056 rows and 200,069,517,203 occurrences; other refined-ledger
-  decrements require the same explicit intersection rather than subtraction
-  of overlapping screens.
+  4,056 rows and 200,069,517,203 occurrences.  Exact keywise composition
+  with the current k=3 one-spike ledger deletes 7 live rows and 7,648
+  occurrences, leaving 1,897 rows and 2,548,893,834 occurrences.  Other
+  refined-ledger decrements require the same explicit intersection rather
+  than subtraction of overlapping screens.
 source: codex-kps-s174-2026-08-14
 depends_on:
   - THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff
@@ -33,6 +35,10 @@ composition_script: 04-computation/lrc14_k2_refined_complement_clock_composition
 composition_output: 05-knowledge/results/lrc14_k2_refined_complement_clock_composition_kps_s175.out
 composition_script_sha256: 3b1ba7576172574faea6c3c8bcc118ad50728e1a3c380b4a308f89c83cff14f9
 composition_output_sha256: 5fe0c922cf89754a9d557f3d535ab65e71995fef17fd91f123cf5673dcfa6dfd
+k3_composition_script: 04-computation/lrc14_k3_refined_complement_clock_composition_kps_s176.py
+k3_composition_output: 05-knowledge/results/lrc14_k3_refined_complement_clock_composition_kps_s176.out
+k3_composition_script_sha256: 127ef53b27f10a5c61ac273a49b13a5ae56ea4fa98809df8f6fd9accdce89d97
+k3_composition_output_sha256: 4cb8f95113123007af9fb5a1f58b3b5373dd4637615b50be7168c6bf578b696b
 hash_basis: LF-normalized bytes
 ---
 
@@ -295,7 +301,50 @@ The C++ floor/exception engine is compiled independently under `-O2` and
 Python composition runs agree.  Equation `(19)` is the honest current `k=2`
 ledger decrement supplied by this theorem.
 
-## 7. Scope and non-subtraction guard
+## 7. Exact composition with the refined `k=3` ledger
+
+The companion
+
+```text
+04-computation/lrc14_k3_refined_complement_clock_composition_kps_s176.py
+```
+
+reconstructs the final one-spike ledger of THM-2928 and independently
+reproduces
+
+```text
+(shapes,occurrences,rows,bodies,divisors)
+=(398,241,574, 2,548,901,482, 1,904, 1,823, 107).           (21)
+```
+
+The exact row-key intersection is nearly orthogonal to the raw support
+census: only `7` live refined rows are pool-14 complement-clock terminals,
+carrying `7,648` occurrences.  Their bodies are precisely
+
+```text
+{2,6,8,10,14} union {u},       u in {1,3,5,7,9,11,13},     (22)
+```
+
+and every terminal has `D=L/2`.  For `u=1,3,5,7` the divisor is `5,880`;
+for `u=9,11,13` it is respectively `17,640`, `64,680`, `76,440`.  Thus the
+seven computational hits form one odd-parameter divisor-chain family rather
+than seven unrelated accidents.
+
+Deleting those exact keys gives
+
+```text
+(398,241,574, 2,548,893,834, 1,897, 1,823, 107).           (23)
+```
+
+All `7,648` deleted occurrences lie in transverse count `c=3`, changing that
+slice from `1,065,317,472` to `1,065,309,824`; the other three slices and the
+shape union are unchanged.  Ordinary and optimized Python runs agree byte
+for byte.  The sparse intersection is also a strategic negative result:
+after the one-spike screens, enlarging an unstructured integer-clock pool is
+unlikely to be the main route through the remaining `k=3` ledger.  The
+reusable positive signal is instead the rigid core and `D=L/2` law in `(22)`.
+
+## 8. Scope and non-subtraction guard
 
 The theorem closes the listed **support rows**.  It does not claim:
 
@@ -306,11 +355,10 @@ The theorem closes the listed **support rows**.  It does not claim:
 * LRC(14).
 
 Later screens overlap this one.  Their sharper residual must be obtained by
-intersecting exact row or occurrence keys.  Section 6 performs that operation
-for the current `k=2` ledger.  The analogous current-`k=3` intersection
-remains a separate exact task.
+intersecting exact row or occurrence keys.  Sections 6 and 7 perform that
+operation for the current `k=2` and `k=3` ledgers.
 
-## 8. Reproduction
+## 9. Reproduction
 
 ```bash
 python 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py
@@ -319,6 +367,8 @@ python 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py --p
 python -O 04-computation/lrc14_allk_universal_complement_clock_scan_kps_s174.py --pool-max 28
 python 04-computation/lrc14_k2_refined_complement_clock_composition_kps_s175.py
 python -O 04-computation/lrc14_k2_refined_complement_clock_composition_kps_s175.py
+python 04-computation/lrc14_k3_refined_complement_clock_composition_kps_s176.py
+python -O 04-computation/lrc14_k3_refined_complement_clock_composition_kps_s176.py
 ```
 
 All decisions use integer arithmetic or `Fraction`.  Runtime checks remain
