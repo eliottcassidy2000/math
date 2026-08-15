@@ -36,13 +36,15 @@ Format per entry:
 
 - **What failed:** the provisional THM-3456 frontmatter said Wolfram's 2019
   announcement was used only for the prize statements and local rule, while
-  the proof text also cited its sideways two-column discussion and reported
-  finite-size observations.  The theorem then said the official page itself
-  stated that the problems remained open, although its literal evidence is an
-  active prize listing and an ongoing submission rule.
-- **Minimal witness / first failed implication:** Sections 2 and 7 explicitly
-  attribute the sideways mechanism to the announcement, outside the old
-  frontmatter scope.  On 2026-08-15 the official page listed all three prizes
+  the theorem also cited its sideways two-column discussion.  The companion
+  Rule 30 reflection separately cited the announcement's reported finite-size
+  observations.  The theorem then said the official page itself stated that
+  the problems remained open, although its literal evidence is an active prize
+  listing and an ongoing submission rule.
+- **Minimal witness / first failed implication:** THM-3456 Sections 2 and 7
+  attribute the sideways mechanism to the announcement, and the companion
+  reflection's finite-size paragraph makes the separate historical use.  On
+  2026-08-15 the official page listed all three prizes
   and accepted submissions until a satisfactory solution is achieved, but
   did not contain the literal sentence “these problems are open.”
 - **Repair / strongest survivor:** the two sources now have separate entries.
