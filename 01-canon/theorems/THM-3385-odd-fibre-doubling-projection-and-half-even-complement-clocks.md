@@ -2,8 +2,8 @@
 id: THM-3385
 title: "Odd-fibre doubling projection and q-sheet complement clocks"
 status: >
-  PROVED analytic identity + VERIFIED-EXACT literal-body census; independent
-  hostile audit pending.  Under the degree-q circle map, q-divisible danger
+  PROVED analytic identity + VERIFIED-EXACT literal-body census +
+  INDEPENDENTLY HOSTILE-AUDITED.  Under the degree-q circle map, q-divisible danger
   speeds descend exactly.  A transverse speed u blocks at most
   gcd(u,q) ceil((q/gcd(u,q))/7) sheets; if the summed capacity is below q,
   the image of the body-safe set is exactly the complement of the descended
@@ -15,6 +15,7 @@ status: >
   Capacity is sufficient, not necessary; arbitrary reflected phases,
   physical drift realization, and LRC(14) remain open.
 source: codex-2026-08-14-q-fibre-complement-clock
+audit: independent fibre proof, downward-recurrence census, strictness, phase, budget, and typing audit
 depends_on:
   - THM-2928-critical-seven-comb-grid-tensorization-and-drift-tariff
   - THM-3366-all-sector-complement-clock-completion
@@ -32,8 +33,8 @@ hash_basis: LF-normalized bytes
 
 # THM-3385 -- a transverse fibre prevents the core quotient from vanishing
 
-**PROVED analytic identity + VERIFIED-EXACT literal-body census; independent
-hostile audit pending.**
+**PROVED analytic identity + VERIFIED-EXACT literal-body census +
+INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and connection contract
 
@@ -312,9 +313,12 @@ stage.
    pairs `{1,3}` and `{1,9}` have capacity sum two.  The first still leaves a
    safe sheet for every base point; the second blocks both sheets at `y=1/9`
    (`x=1/18` is blocked by speed one and `x+1/2=5/9` by speed nine).
-2. **The open radius boundary is sharp at `q=2`.**  One transverse speed at
-   `rho=1/4` cannot contain two opposite phases because the arcs are strict.
-   For any larger radius, `x=1/4` and `x+1/2` are both dangerous.
+2. **Strict openness is load-bearing.**  At the actual LRC radius, take
+   `q=7,u=1,y=1/2`.  Two sheets lie exactly at `+/-1/14`; the strict comb
+   blocks neither, while a closed comb would block both and invalidate the
+   capacity one.  Separately, at `q=2` one transverse speed at `rho=1/4`
+   cannot contain two opposite phases, but for any larger radius `x=1/4`
+   and `x+1/2` are both dangerous.
 3. **Divisible speeds must descend.**  Treating `u=2` as transverse at `q=2`
    fails at `y=0`: both sheets are blocked.  It is core clock one.
 4. **The divisor is part of the theorem.**  On the first family body, using
@@ -352,5 +356,9 @@ python -O 04-computation/lrc14_q_fibre_complement_clock_thm3385.py
 ```
 
 Ordinary and optimized runs LF-normalized-byte-match the stored output.
+An independent audit rederived the fibre bound and both inclusions, replayed
+the census using downward divisor recurrence instead of Mobius summation, and
+verified the strictness, capacity-equality, alignment, phase, budget, and
+non-tournament controls.
 
 **QED.**

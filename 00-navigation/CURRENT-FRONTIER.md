@@ -25,16 +25,16 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`; projected caps `1579/216`. At `z1=216`, THM-3378,
-after THM-3361's three `L720720` rows, leaves ledger/wall/families
-`372913/109/12`. THM-3352/3355 close matched residues; THM-3360 gives the
-`1/294` edge floor and THM-3384 an independent `>Dmax/5` proof. With
-same-level edges, `z_e=q_eL-e` closes on all `3,003` bodies. THM-3381 proves
-the phase-aware frozen-tree perturbation gate and refutes residue-blind
-transfer. Open: `k=0`, other `k=1` residues, projected `k=2,3`, rung, entry,
-and LRC; screens are not covers. THM-3356 gives determinant shells. THM-3366
-leaves `4,056/200,069,517,203` (`k=2`) and `1,897/2,548,893,834` (`k=3`),
-with seven rigid `k=3` hits at `D=L/2`.
+Direct frontier: `<=6`; projected caps `1579/216`. After THM-3361, THM-3378
+leaves the `z1=216` ledger/wall/families at `372913/109/12`. THM-3352/3355
+close matched residues, with THM-3360's `1/294` floor and THM-3384's
+independent `>Dmax/5` proof; same-level edges then close `z_e=q_eL-e` on all
+`3,003` bodies. THM-3381 gives phase-aware tree transport and refutes
+residue-blind transfer. Open: `k=0`, other `k=1` residues, projected `k=2,3`,
+rung, entry and LRC; screens are not covers. THM-3356 gives determinant
+shells. THM-3366 leaves `4,056/200,069,517,203` (`k=2`) and
+`1,897/2,548,893,834` (`k=3`), with seven rigid `k=3` hits at `D=L/2`;
+THM-3385/3387 explain their fibre geometry without a refined decrement.
 THM-3368 adds a weighted Horn tariff but no clock seed. LRC remains open.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
