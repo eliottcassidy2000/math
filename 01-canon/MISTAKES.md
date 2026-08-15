@@ -9,6 +9,39 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-389 (2026-08-15, all-owner divisor-chart probe) -- a synchronized half-grid physical time was mistaken for a common mode centre
+
+- **What failed:** the first all-owner divisor-chart draft correctly derived
+  the necessary condition `2quc in Z` for every owner at a common THM-3398
+  mode centre, but then treated that condition as sufficient.  Its exact
+  `direct_mask` computation evaluates danger sets at the physical time `c`;
+  it does not prove that `c` is the centre of each selected consecutive mode.
+  Consequently the draft falsely labelled its ranks as zero-mode-cochain
+  ranks and compared them with the capped mobile common-centre atlas.
+- **Minimal witness / first failed implication:** at `q=15,c=1/150`, owners
+  `(5,40,50)` have exact danger sets equal to the three residue classes modulo
+  three, so they partition all sheets and satisfy `2quc in Z`.  Their active
+  gcd is `d=5`; writing `a=2qdc` and `g=gcd(q,d)` gives `(a,g)=(1,5)`.
+  THM-3405 proves that a zero mode cochain requires `g|a`, so this physical
+  half-grid partition is not a common-mode-centre certificate.  Equivalently,
+  owner five has half-grid residue `h=1`, while the THM-3398 mode formula
+  requires `gcd(15,5)=5` to divide `h`.  The first failed implication was
+  “`2quc` integral implies `c` belongs to the mode-centre lattice.”
+- **Repair / strongest survivor:** THM-3405 supplies the missing mode
+  divisibility and proves the genuine zero-cochain gauge has at most the two
+  classes `a=0,g mod 2g`.  The divisor-chart artifact is renamed and typed as
+  a **synchronized half-grid physical-time** theorem.  Its affine
+  normalization, exact q15--28 ranks
+  `(3,2,8,2,9,2,3,2,6,2,5,2,3,2)`, capacity bounds, and infinite exact
+  half-grid families of ranks two/three/five survive.  The claimed
+  zero-cochain ranks, comparison with the owner-14 mobile ranks, finite
+  “saving” support, and corresponding harmonic weights are withdrawn.  No
+  LRC row or ledger count ever followed.
+- **Reusable rule:** an interval containing a physical time is not centred at
+  that time.  After deriving a half-grid integrality condition, separately
+  verify the mode-residue divisibility (or the full centre-lattice formula)
+  before setting the affine mode cochain to zero.
+
 ## MISTAKE-384 (2026-08-15, THM-3401 scope prose) -- fixed source centre zero was identified with the entire zero-cochain locus
 
 - **What failed:** THM-3401's precise statement and proof correctly compute

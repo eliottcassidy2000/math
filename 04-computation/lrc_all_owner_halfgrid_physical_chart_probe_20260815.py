@@ -1,23 +1,26 @@
 #!/usr/bin/env python3
-"""Exact all-owner mobile common-centre rank by finite affine charts.
+"""Exact all-owner synchronized half-grid physical rank by affine charts.
 
-For theta=q*c=a/b in lowest terms, zero cochain forces b|2u for every
-owner.  If b is odd write u=bv; if b=2d write u=dv.  Exact danger blocks
-then depend on the affine forms v(a+b*ell) modulo q and
+At a physical time c satisfying 2*q*u*c in Z for every active owner, write
+theta=q*c=a/b in lowest terms.  Then b|2u.  If b is odd write u=bv; if
+b=2d write u=dv.  Exact danger blocks depend on v(a+b*ell) modulo q and
 v(a+2d*ell) modulo 2q.  Sheet-affine permutations and unit reindexing
 normalize these to
 
     O(q,g): v(1+g*ell) mod q,   g=gcd(b,q), g odd,
     E(q,g): v(1+2g*ell) mod 2q, g=gcd(d,q),
 
-for proper divisors g of q.  Thus every positive-owner zero-cochain cover
-belongs to one of finitely many exact set-cover charts.
+for proper divisors g of q.  Thus every positive-owner synchronized
+half-grid physical cover belongs to one of finitely many exact set-cover
+charts.
 
-This artifact computes their exact ranks as a zero-mode-cochain corollary of
-THM-3402 and a candidate payload for reserved THM-3405.  It has no LRC(14)
-ledger consequence.  It also checks the explicit divisor-pullback families
-proving all-owner mobile rank two for even q>=8, rank three for odd 3|q, and
-rank five for odd 5|q with 3 not dividing q (q>=25).
+MISTAKE-389 records the repaired type: the half-grid condition is necessary
+but not sufficient for c to be a THM-3398 mode centre.  THM-3405 adds the
+missing mode divisibility.  This artifact therefore computes half-grid
+physical ranks, not zero-mode-cochain ranks.  It has no LRC(14) ledger
+consequence.  It also checks divisor-pullback families proving half-grid rank
+two for even q>=8, rank three for odd 3|q, and rank five for odd 5|q with
+3 not dividing q (q>=25).
 Runtime gates survive python -O.
 """
 
@@ -44,19 +47,9 @@ PINNED = (
         "0aaff0ffe66042ccae8de3158b1cb7ece056264fe96753b0bb166167728d472f",
     ),
     (
-        "THM-3401-fixed-zero",
-        ROOT / "01-canon/theorems/THM-3401-centered-transverse-sheet-cover-rank-fifteen-through-twenty-eight.md",
-        "dae088cbda12fb64d24f84ab26a6879e94939e04cb03601d8fb996a48c077716",
-    ),
-    (
-        "capped-mobile-script",
-        ROOT / "04-computation/lrc_mobile_common_centre_crt_rank_probe_20260815.py",
-        "dd157efbd3bd7da34b75cba7f30fb55cfa0381bb6a74ece7abade7f4a2c439fa",
-    ),
-    (
-        "capped-mobile-output",
-        ROOT / "05-knowledge/results/lrc_mobile_common_centre_crt_rank_probe_20260815.out",
-        "b874f11a8f81604e8bfefe01a6437bfd10a21b909c3ee3e37d0c8a714528594f",
+        "THM-3405-zero-mode-gauge",
+        ROOT / "01-canon/theorems/THM-3405-common-centre-gcd-gauge-and-boolean-half-twist.md",
+        "d3e7dbeeb85c6f897bd9e31270bd0b6602ae4feac3b46a45eb5ce23ae5d24fe0",
     ),
 )
 
@@ -76,23 +69,7 @@ EXPECTED_GLOBAL_MINIMA = (
     (27, 3),
     (28, 2),
 )
-EXPECTED_CAPPED_MINIMA = (
-    (15, 6),
-    (16, 4),
-    (17, 8),
-    (18, 4),
-    (19, 9),
-    (20, 6),
-    (21, 8),
-    (22, 6),
-    (23, 6),
-    (24, 6),
-    (25, 7),
-    (26, 8),
-    (27, 9),
-    (28, 8),
-)
-EXPECTED_SEMANTIC_DIGEST = "a0aa8c21dbe81b3a92a8e93e51b70d8f26d13d0056d1d013262e8e142f9ee043"
+EXPECTED_SEMANTIC_DIGEST = "96c3ee717ae8e0533192722fda29e3fd659c5c711abe69aefc85ed4ca808af6b"
 
 
 def require(condition, detail):
@@ -457,39 +434,6 @@ def main():
     rank_table = tuple((q, rank) for q, rank, _ in minima)
     require(rank_table == EXPECTED_GLOBAL_MINIMA, ("global ranks", rank_table))
 
-    capped_output_paths = tuple(
-        path for name, path, _ in PINNED if name == "capped-mobile-output"
-    )
-    require(len(capped_output_paths) == 1, ("capped-output dependency", capped_output_paths))
-    capped_output = capped_output_paths[0].read_text(encoding="utf-8")
-    capped_prefix = "mobile_common_centre_ranks_owner_pool_1..14_q15_q28="
-    capped_lines = tuple(
-        line.removeprefix(capped_prefix)
-        for line in capped_output.splitlines()
-        if line.startswith(capped_prefix)
-    )
-    require(len(capped_lines) == 1, ("capped-rank line", len(capped_lines)))
-    capped_table = ast.literal_eval(capped_lines[0])
-    require(capped_table == EXPECTED_CAPPED_MINIMA, ("capped ranks", capped_table))
-    capped_by_q = dict(capped_table)
-    global_by_q = dict(rank_table)
-    rank_savings = tuple(
-        (q, capped_by_q[q] - global_by_q[q]) for q in range(15, 29)
-    )
-    strict_improvement_support = tuple(q for q, saving in rank_savings if saving > 0)
-    no_improvement_support = tuple(q for q, saving in rank_savings if saving == 0)
-    harmonic_support_weight = sum(
-        (Fraction(1, q) for q in strict_improvement_support), Fraction(0)
-    )
-    harmonic_rank_saving_weight = sum(
-        (Fraction(saving, q) for q, saving in rank_savings), Fraction(0)
-    )
-    require(
-        strict_improvement_support == (15, 16, 18, 20, 21, 22, 24, 25, 26, 27, 28),
-        strict_improvement_support,
-    )
-    require(no_improvement_support == (17, 19, 23), no_improvement_support)
-
     normalization = tuple(normalization_audit(q) for q in range(15, 29))
     capacity = tuple(
         (
@@ -528,6 +472,34 @@ def main():
             short_prime_pair_controls.append((q, key, tuple(sorted(common)), len(masks)))
     short_prime_pair_controls = tuple(short_prime_pair_controls)
 
+    # MISTAKE-389 hostile: this exact physical half-grid partition is not a
+    # zero-mode-cochain certificate.  THM-3405 requires gcd(q,d)|a, where
+    # d is the active owner gcd and a=2*q*d*c.
+    hostile_record = next(
+        record
+        for record in dict(records)[15]
+        if (record[0], record[1]) == ("E", 5)
+    )
+    hostile_centre = hostile_record[5]
+    hostile_owners = hostile_record[7]
+    hostile_owner_gcd = gcd(*hostile_owners)
+    hostile_gauge_gcd = gcd(15, hostile_owner_gcd)
+    hostile_scalar = Fraction(2 * 15 * hostile_owner_gcd) * hostile_centre
+    require(hostile_scalar.denominator == 1, ("half-grid scalar", hostile_scalar))
+    require(
+        hostile_scalar.numerator % hostile_gauge_gcd,
+        ("hostile unexpectedly zero-mode", hostile_scalar, hostile_gauge_gcd),
+    )
+    mode_centre_divisibility_hostile = (
+        15,
+        ("E", 5),
+        hostile_centre,
+        hostile_owners,
+        hostile_owner_gcd,
+        hostile_gauge_gcd,
+        hostile_scalar,
+    )
+
     divisor_pullback_records = (
         tuple(divisor_pullback_record(q, 2) for q in range(8, 501, 2)),
         tuple(divisor_pullback_record(q, 3) for q in range(9, 501, 6)),
@@ -557,12 +529,7 @@ def main():
                 capacity,
                 capacity_sharp_support,
                 short_prime_pair_controls,
-                capped_table,
-                rank_savings,
-                strict_improvement_support,
-                no_improvement_support,
-                harmonic_support_weight,
-                harmonic_rank_saving_weight,
+                mode_centre_divisibility_hostile,
                 divisor_pullback_records,
             )
         ).encode("ascii")
@@ -570,25 +537,22 @@ def main():
     if EXPECTED_SEMANTIC_DIGEST:
         require(semantic == EXPECTED_SEMANTIC_DIGEST, ("semantic digest", semantic))
 
-    print("LRC ALL-OWNER MOBILE COMMON-CENTRE FINITE AFFINE-CHART PROBE")
+    print("LRC ALL-OWNER SYNCHRONIZED HALF-GRID PHYSICAL AFFINE-CHART PROBE")
     print(f"source_sha256_lf={lf_hash(source)}")
     print(f"dependency_sha256_lf={tuple((name, expected) for name, _, expected in PINNED)}")
-    print("status=PROVED-ELEMENTARY all_q_finite_affine_chart_reduction;exact_all_positive_owner_mobile_common_centre_ranks_q15..28;all_q_rank_families_even=2_odd3multiple=3_odd5multiple_not3=5;INDEPENDENT_COMBINATION_AND_NORMALIZATION_AUDITS;THM3402_zero_mode_cochain_corollary;THM3405_candidate_payload")
+    print("status=PROVED-ELEMENTARY all_q_half_grid_physical_affine_chart_reduction;exact_all_positive_owner_half_grid_ranks_q15..28;all_q_half_grid_rank_families_even=2_odd3multiple=3_odd5multiple_not3=5;INDEPENDENT_COMBINATION_AND_NORMALIZATION_AUDITS;MISTAKE389_zero_mode_cochain_interpretation_retracted")
     print("odd_chart=theta=a/b,b_odd,u=bv;normalize_to_v(1+g*ell)_mod_q,g=gcd(b,q)_odd")
     print("even_chart=theta=a/(2d),u=dv;normalize_to_v(1+2g*ell)_mod_2q,g=gcd(d,q)")
     print("gauge=sheet_affine_permutation_plus_unit_owner_reindex;transverse_v_not_divisible_by_q/g")
-    print(f"global_minima_q15_q28=(q,rank,minimizing_charts)={minima}")
-    print(f"capped_owner_pool_1..14_minima_q15_q28={capped_table}")
-    print(f"capped_minus_all_owner_rank_savings={rank_savings}")
-    print(f"strict_improvement_support={strict_improvement_support};no_improvement_support={no_improvement_support}")
-    print(f"harmonic_support_weight={harmonic_support_weight};harmonic_rank_saving_weight={harmonic_rank_saving_weight}")
+    print(f"half_grid_minima_q15_q28=(q,rank,minimizing_charts)={minima}")
     print(f"universal_block_capacity=(q,max_block,rank_lower_bound,exact_rank)={capacity};sharp_support={capacity_sharp_support}")
     print(f"q17_q19_central_plus_pair_controls={short_prime_pair_controls}")
+    print(f"mode_centre_divisibility_hostile=(q,chart,c,owners,d,g,a)={mode_centre_divisibility_hostile}")
     print(f"divisor_pullback_family_audit_q_through_500=(prime,count,first_q,last_q,sha256)={divisor_pullback_audit}")
     print(f"normalization_audit=(q,odd_charts,odd_owner_rows,even_charts,even_owner_rows)={normalization}")
     for q, charts in records:
         print(f"q={q};charts={charts}")
-    print("scope=all_positive_transverse_owners;maximal_actual_blocks_at_exact_common_mode_centres;minimum_rank_not_literal_certificate_count;no_LRC14_decrement")
+    print("scope=all_positive_transverse_owners;maximal_actual_blocks_at_synchronized_physical_times_with_2quc_integral;NOT_zero_mode_cochain_rank;NOT_mobile_common_mode_centre_rank;minimum_rank_not_literal_certificate_count;no_LRC14_decrement")
     print(f"semantic_sha256={semantic}")
     print("verdict=PASS")
 

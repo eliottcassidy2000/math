@@ -1,65 +1,71 @@
-# All-owner mobile centres are a finite divisor-chart problem
+# Synchronized half-grid physical covers are a finite divisor-chart problem
 
 **Date:** 2026-08-15  
-**Status:** PROVED-ELEMENTARY all-`q` affine-chart reduction for the
-all-positive-owner mobile common-centre slice; PROVED-ELEMENTARY exact rank
+**Status:** PROVED-ELEMENTARY all-`q` affine-chart reduction for synchronized
+half-grid physical times; PROVED-ELEMENTARY exact half-grid rank
 families on every even `q>=8`, every odd multiple of three `q>=9`, and every
 odd multiple of five not divisible by three `q>=25`; PROVED-ELEMENTARY exact
 rank table for `15<=q<=28`, with VERIFIED-EXACT independent set-cover and
-normalization audits.  This is a zero-mode-cochain corollary of proved
-[THM-3402](../01-canon/theorems/THM-3402-atomized-sheet-covers-and-constructive-cochain-locus.md)
-and a candidate payload for reserved THM-3405.  It does not promote that
-namespace and has no LRC(14) ledger consequence.
+normalization audits.  MISTAKE-389 retracts the original zero-mode-cochain
+interpretation: proved [THM-3405](../01-canon/theorems/THM-3405-common-centre-gcd-gauge-and-boolean-half-twist.md)
+supplies an additional mode-divisibility condition.  The exact half-grid
+results survive and have no LRC(14) ledger consequence.
 
 ## 1. Inheritance and the corrected question
 
 [THM-3398](../01-canon/theorems/THM-3398-general-finite-mode-sheet-cover-cochain.md)
 turns a physical cover into a selected-mode block cover carrying a complete
-affine cochain.  THM-3402 independently refines this into repeated-owner
-atoms, reconstructs the complete physical cover locus, and compresses exactly
-back to one consecutive mode per owner.  The present result classifies the
-sub-stratum on which those **mode** centre lifts coincide, so the mode
-cochain is zero; this is not the locus where every repeated-atom gap is zero.
+affine cochain.  [THM-3402](../01-canon/theorems/THM-3402-atomized-sheet-covers-and-constructive-cochain-locus.md)
+independently refines this into repeated-owner atoms, reconstructs the
+complete physical cover locus, and compresses exactly back to one consecutive
+mode per owner.  THM-3405 then proves that a vanishing **mode** cochain has an
+extra owner-gcd divisibility law.  The present result classifies the larger
+physical slice where every owner phase lies on the common half-grid; it does
+not assert that the chosen physical time is any selected mode's centre.
 [THM-3401](../01-canon/theorems/THM-3401-centered-transverse-sheet-cover-rank-fifteen-through-twenty-eight.md)
-computes the rank at the fixed source centre zero.  MISTAKE-384 separates
-that fixed-zero slice from the larger locus on which all pair gaps vanish:
-the common centre itself is an additive gauge.
+computes the rank at fixed source centre zero.  MISTAKE-384 separates that
+slice from the genuine zero-mode-cochain locus; MISTAKE-389 in turn separates
+the genuine zero-mode-cochain locus from the still larger half-grid physical
+slice.
 
-For a positive transverse owner `u`, define its exact danger set at a common
-mode centre `c` by
+For a positive transverse owner `u`, define its exact danger set at physical
+time `c` by
 
 ```text
 D_(q,u)(c)={ell in Z/qZ: ||u(c+ell/q)||<1/14}.          (1)
 ```
 
-Let `r_mob^+(q)` be the least number of **distinct positive owners**, with no
-upper bound on their sizes, whose exact sets `(1)` cover `Z/qZ` at one common
-mode centre.  Selecting that same centre lift for every owner makes the
-complete cochain identically zero.  The superscript `+` distinguishes this
-rank from both THM-3401's fixed-zero rank and the earlier owner-capped mobile
-rank `r_mob^[14]`.
+Let `r_hg^+(q)` be the least number of **distinct positive owners**, with no
+upper bound on their sizes, whose exact sets `(1)` cover `Z/qZ` at one time
+`c` satisfying
+
+```text
+2quc in Z                  for every active owner u.   (1a)
+```
+
+This is the synchronized half-grid rank.  Every zero-mode-cochain certificate
+obeys `(1a)`, but the converse is false.
 
 The inheritance pass is:
 
 - closest proved mechanism: THM-3398's mode/cochain iff and quotient-block
   formula;
-- canonical hostile: the `q=8` cover with compatible pairs but no closed
-  cochain;
-- corrected near miss: MISTAKE-384's false identification of fixed zero with
-  the whole zero-cochain locus;
-- least-used sidecar: the reduced denominator of the surviving centre twist
-  `theta=qc mod 1`.
+- canonical hostile: the `q=15,c=1/150` physical partition whose half-grid
+  scalar fails THM-3405's mode divisibility;
+- corrected near misses: MISTAKE-384's lost additive gauge and MISTAKE-389's
+  half-grid/mode-centre conflation;
+- least-used sidecar: `gcd(q,u)|h` for each selected mode residue `h`.
 
 The connection contract for the new reduction is:
 
 | field | content |
 |---|---|
-| source | all rational common mode centres and all positive transverse owners |
+| source | rational physical times satisfying `(1a)` and all positive transverse owners |
 | target | finitely many divisor-indexed set-cover charts `O(q,g),E(q,g)` |
 | map | reduce `theta=qc=a/b`, divide the forced factor of each owner, then apply one affine sheet permutation and one unit owner reindexing |
-| preserved | exact strict danger sets, cover rank, transversality, common-centre realization, and zero cochain |
-| destroyed | literal centre numerator/denominator, literal owner size, and the chosen sheet origin |
-| required sidecar | odd/even denominator type and `g=gcd(floor(b/2),q)` |
+| preserved | exact strict danger sets, half-grid cover rank, transversality, physical realization, and common sheet-affine gauge |
+| destroyed | literal time numerator/denominator, literal owner size, chosen sheet origin, and mode-centre data |
+| required sidecar | odd/even denominator type and `g=gcd(floor(b/2),q)`; THM-3405 mode divisibility is additionally required to infer zero cochain |
 
 ## 2. The infinite centre locus collapses to finite charts
 
@@ -69,7 +75,7 @@ Write the common twist in lowest terms as
 theta=qc=a/b,                 gcd(a,b)=1.              (2)
 ```
 
-Because `c` is a centre-lattice point for owner `u`, THM-3398 gives
+By the synchronized half-grid definition `(1a)`,
 
 ```text
 2quc in Z.
@@ -81,7 +87,8 @@ Equation `(2)` therefore forces
 b divides 2u.                                           (3)
 ```
 
-This elementary divisibility is the missing finite-state coordinate.
+This elementary divisibility is the finite-state coordinate for the physical
+half-grid slice.  It is only a necessary coordinate for a common mode centre.
 
 ### Odd denominator
 
@@ -149,6 +156,29 @@ apparently infinite rational-centre problem has exactly
 
 chart types.
 
+### The missing mode-centre divisibility
+
+The chart theorem stops at synchronized physical time.  THM-3405 writes the
+active owner gcd as `d_U`, puts `g_U=gcd(q,d_U)`, and sets
+
+```text
+a_U=2q d_U c.
+```
+
+A zero mode cochain requires `g_U|a_U`.  This does not follow from `(3)`.
+At `q=15`, chart `E(15,5)` has the exact partition
+
+```text
+c=1/150,   U=(5,40,50),   d_U=g_U=5,   a_U=1.        (11a)
+```
+
+All three owners satisfy the half-grid condition and their danger sets are
+the three residue classes modulo three, but `5` does not divide `1`.
+Equivalently, owner five has half-grid residue `h=1`, while a lawful mode
+centre residue must be divisible by `gcd(15,5)=5`.  Thus `(11a)` is a
+physical partition with nonzero relative mode-centre data, not a mobile
+common-mode-centre certificate.
+
 ### Owner replicas make dominance safe
 
 In `O(q,g)` a danger set depends only on `v mod q`; in `E(q,g)` it depends
@@ -178,7 +208,7 @@ B(q)=max_(m|q,m>1) (q/m) ceil(m/7)                    (12)
 sheets.  Consequently
 
 ```text
-r_mob^+(q) >= ceil(q/B(q)).                            (13)
+r_hg^+(q) >= ceil(q/B(q)).                             (13)
 ```
 
 The following constructions attain `(13)` on three infinite divisor
@@ -202,7 +232,7 @@ The two danger sets are precisely the even and odd sheets.  Here `B(q)=q/2`,
 so
 
 ```text
-r_mob^+(q)=2                    (q even, q>=8).        (16)
+r_hg^+(q)=2                     (q even, q>=8).        (16)
 ```
 
 ### Odd multiples of three
@@ -221,7 +251,7 @@ owner.  For every odd divisor `m>=3`,
 `ceil(m/7)/m<=1/3`, so `B(q)=q/3`.  Hence
 
 ```text
-r_mob^+(q)=3       (q odd, 3|q, q>=9).                (18)
+r_hg^+(q)=3        (q odd, 3|q, q>=9).                (18)
 ```
 
 ### Odd multiples of five away from three
@@ -248,7 +278,7 @@ ceil(m/7)/m <= 1/5
 `B(q)=q/5` and
 
 ```text
-r_mob^+(q)=5       (q odd, 5|q, 3 not|q, q>=25).      (20)
+r_hg^+(q)=5        (q odd, 5|q, 3 not|q, q>=25).      (20)
 ```
 
 These are divisor pullbacks rather than mere copies of the fixed-zero
@@ -268,7 +298,7 @@ their noncentral pairs are mutually disjoint.  Covering all noncentral sheets
 therefore requires every pair, namely `(q-1)/2` owners.  This proves the two
 remaining lower bounds without search.
 
-| `q` | `r_mob^+(q)` | minimizing chart(s) | one exact owner witness |
+| `q` | `r_hg^+(q)` | minimizing chart(s) | one exact owner witness |
 |---:|---:|---|---|
 | 15 | 3 | `O(15,5), E(15,5)` | `(5,20,25)` |
 | 16 | 2 | `E(16,4), E(16,8)` | `(8,56)` |
@@ -291,28 +321,11 @@ The sequence is therefore
 3,2,8,2,9,2,3,2,6,2,5,2,3,2.                        (21)
 ```
 
-Against the literal-owner-cap sequence
-
-```text
-6,4,8,4,9,6,8,6,6,6,7,8,9,8,                       (22)
-```
-
-the strict all-owner improvement support is
-
-```text
-C_+={15,16,18,20,21,22,24,25,26,27,28}.              (23)
-```
-
-As a finite harmonic grading,
-
-```text
-sum_(q in C_+) 1/q = 804131/1544400,
-sum_(q=15)^28 (r_mob^[14](q)-r_mob^+(q))/q
-                       = 1183163/600600.              (24)
-```
-
-These scalars remember support and weighted saving, but forget every centre,
-owner, chart, and block partition.
+The original draft compared `(21)` with the owner-14 mobile common-mode-centre
+sequence.  MISTAKE-389 withdraws that comparison: the two ranks optimize
+different predicates.  Since every zero-mode-cochain cover is half-grid,
+`(21)` supplies lower bounds for the genuine all-owner mobile ranks, but no
+equality follows without imposing THM-3405's gcd gauge on every candidate.
 
 ## 5. The periodic harmonic support of the infinite theorem
 
@@ -326,7 +339,8 @@ S = {q even}
 ```
 
 They occupy respectively `15`, `5`, and `2` residue classes modulo 30.  Thus
-the exact mobile rank is now known on `22/30=11/15` of all sheet numbers, and
+the exact synchronized half-grid rank is now known on `22/30=11/15` of all
+sheet numbers, and
 [THM-3359](../01-canon/theorems/THM-3359-modular-c-finite-supports-harmonic-density-and-periodic-scar.md)
 gives
 
@@ -364,11 +378,11 @@ so `3|Q_n` exactly when `3` does not divide `n`.  Every `Q_n` is odd.  Also
 `5` never divides `Q_n`.  It follows from `(18)` that
 
 ```text
-r_mob^+(Q_n)=3                  whenever n not=0 mod 3. (29)
+r_hg^+(Q_n)=3                   whenever n not=0 mod 3. (29)
 ```
 
-Thus the mobile rank is exactly three on two thirds of the **parameter
-classes** along the hidden Berggren branch.  The value subseries
+Thus the synchronized half-grid rank is exactly three on two thirds of the
+**parameter classes** along the hidden Berggren branch.  The value subseries
 `sum 1/Q_n` nevertheless converges because `Q_n` is quadratic.  This is the
 index/value distinction emphasized by THM-3359: periodic parameter support
 does not force a divergent harmonic series on sparse represented values.
@@ -382,9 +396,9 @@ For Fibonacci numbers `F_n`, the elementary modular recurrences give
 After the finite small-value boundaries, `(16),(18),(20)` therefore imply
 
 ```text
-r_mob^+(F_n)=2  if 3|n;
-r_mob^+(F_n)=3  if 4|n and 3 not|n;
-r_mob^+(F_n)=5  if 5|n, 3 not|n, and 4 not|n.         (31)
+r_hg^+(F_n)=2  if 3|n;
+r_hg^+(F_n)=3  if 4|n and 3 not|n;
+r_hg^+(F_n)=5  if 5|n, 3 not|n, and 4 not|n.          (31)
 ```
 
 On the Pisano-60 index cycle these occupy `20+10+6=36` classes, so the exact
@@ -396,17 +410,20 @@ harmonic subset are three different carriers.
 
 ## 7. Why this is not a tournament or XOR theorem
 
-Every certificate here has complete pair observable `p_ij=0`.  Its owner
-vertices are therefore all tied.  The intrinsic object is a cyclic block
-partition or cover clutter, not a tournament.  In particular:
+The affine charts retain physical danger blocks but forget the selected mode
+centres, so they do not determine any complete pair observable.  MISTAKE-389's
+q15 witness proves in particular that the observable need not be zero.  The
+intrinsic retained object is a cyclic block partition or cover clutter, not a
+tournament.  In particular:
 
 - the two-owner family is a parity bipartition;
 - the three-owner family is a ternary residue partition, not a directed
   triangle;
 - the five-owner family is a five-colour partition;
-- the earlier capped rank-four and rank-six witnesses count owners, but do
-  not acquire orientations merely because their cardinalities are four and
-  six.
+- owner counts do not acquire orientations merely because their cardinalities
+  are four or six;
+- an orientation would require a separately reconstructed antisymmetric mode
+  cochain, which the chart quotient destroys.
 
 The ternary family does support a rooted branch-transplant picture: increasing
 the fibre degree `d` pulls the same three quotient colours back to larger
@@ -429,19 +446,19 @@ transfer.
 Run
 
 ```text
-python 04-computation/lrc_all_owner_mobile_centre_chart_probe_20260815.py
-python -O 04-computation/lrc_all_owner_mobile_centre_chart_probe_20260815.py
+python 04-computation/lrc_all_owner_halfgrid_physical_chart_probe_20260815.py
+python -O 04-computation/lrc_all_owner_halfgrid_physical_chart_probe_20260815.py
 ```
 
 The companion:
 
-1. pins THM-3398, repaired THM-3401, and the capped mobile artifact;
+1. pins THM-3398, THM-3402, and THM-3405;
 2. audits every admissible affine numerator/slope and every transverse owner
    row for `15<=q<=28` against its normalized chart;
 3. solves every chart by branch-and-bound and independently by exhaustive
    combinations;
 4. checks the universal capacity lower bounds and the `q=17,19` central-pair
-   anatomy;
+   anatomy, plus the q15 mode-divisibility hostile from MISTAKE-389;
 5. checks every explicit divisor partition through `q=500` (`247` even,
    `82` ternary, and `32` five-colour instances);
 6. contains no floating literals or `assert`, and pins a semantic digest that
@@ -453,11 +470,10 @@ The cheapest decisive continuations are:
    function, beginning with the hostile contrast `q=23,29,31`;
 2. prove a composition law for general `E(q,g)` and `O(q,g)` chart ranks, not
    only the residue partitions of orders two, three, and five;
-3. optimize positive cochain drift outside the mobile locus, beginning with
-   the unique `q=15` edge from the capped artifact;
-4. independently audit the all-`q` normalization proof and, after coordination,
-   promote the reserved THM-3405 stub under a divisor-chart rather than a
-   globally Boolean title;
+3. intersect every chart with THM-3405's active-family gcd gauge and compute
+   the genuine unrestricted zero-mode-cochain ranks;
+4. reconstruct and optimize the nonzero mode cochains on the half-grid
+   minima, beginning with `(11a)`;
 5. transport a chart certificate into an actual refined LRC row.  Until that
    final typed map exists, none of these rank collapses decrements the live
    LRC(14) ledger.
