@@ -596,6 +596,10 @@ new homotopy group, `p=2` statement, or LRC/GMC consequence.
   which proves both all-`m` statements that verification left open and
   generalizes them to an infinite family.
 
+## August 2026 preprint intake
+
+See the [August 14 intake sidecar](CORE-PAPERS-INTAKE-2026-08-14.md) for Grothendieck, Banach, `SOP2=SOP3`, and Crouzeix.  Their headlines remain **CITED PREPRINTS**; only THM-3390/3392/3395/3396 are proved canon.
+
 ## Maintenance rule
 
 For updates, refresh the primary link/version and exact imported theorem; name
