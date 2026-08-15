@@ -16,8 +16,7 @@
   `05f52e47dd904880524b09744efd98c90e6e53b4b37976dbe805ff0d8199a6c2`.
 
 - `jc_one_root_nonlinear_integral_response_thm3422.py` -> matching `.out`
-  [THM-3422 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT /
-  INDEPENDENT AUDIT REQUIRED].  For
+  [THM-3422 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
   `P=ax+b+c(x-alpha)^e z^d`, every simple-root sector is `K[lambda]`.
   For `e>1`, target sector `s-1` is a free line plus one lambda-Pruefer arm
   when `d|s(e-1)`, and is the Laurent line otherwise.  Exactly
@@ -29,8 +28,7 @@
   decomposition.  The exact companion checks 34,504 direct relations,
   30,576 orbit transitions, 30,576 lambda breaks, 2,268 torsion windows,
   50 unit primitives, and 126,360 split-fiber character dimensions.  This
-  candidate is not a proved dependency until independent audit and status
-  promotion.  Script/output LF-normalized SHA-256:
+  Script/output LF-normalized SHA-256:
   `1c862dd5dfaee00a3ee5827a9d004c160a574deb103cd3b878a6615aeac7a766` /
   `1e0abbff4bbd2ab601cbf2aee4c840789f4ebf36a1444bf2aa8c8506579e485d`.
 

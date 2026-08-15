@@ -2,8 +2,8 @@
 id: THM-3422
 title: "One-root nonlinear integral Hamiltonian response"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  Let K have characteristic zero, d>=2, and
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Let K have characteristic
+  zero, d>=2, and
   P=ax+b+c(x-alpha)^e z^d with a,c nonzero.  If e=1, every Hamiltonian
   target sector is a free rank-one K[P]-module.  If e>1, target sector s-1
   is K[lambda] plus one lambda-Pruefer arm when d divides s(e-1), and is the
@@ -13,10 +13,9 @@ status: >
   annihilator (lambda^((e-1)/d)) when d divides e-1 and annihilator zero
   otherwise.  A separately typed split-root first-window formula is included;
   no global multiple-root decomposition, new Keller case, or JC(2) conclusion
-  is claimed.  This candidate is not a proved dependency until independent
-  audit and explicit status promotion.
+  is claimed.
 source: root-2608-jc-integral-response-2026-08-15
-audit: independent line rederivation of the orbit, wrap, Pruefer, thickness, observer, and split-window arguments clean; exact companion normal/optimized outputs byte-identical; formal promotion audit pending
+audit: independent line rederivation of the orbit, wrap, Pruefer, thickness, observer, and split-window arguments clean; exact companion normal/optimized/stored outputs byte-identical; hashes, routing, and documentation audit clean
 depends_on:
   - THM-3418-one-monomial-nonlinear-fiber-keller-classification
   - THM-3419-generic-kummer-response-regular-sector-rank
@@ -32,9 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3422 -- one-root nonlinear integral Hamiltonian response
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**  Nothing in this file is a proved dependency until a
-different agent audits the derivation and the status is explicitly promoted.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Inheritance and connection contract
 

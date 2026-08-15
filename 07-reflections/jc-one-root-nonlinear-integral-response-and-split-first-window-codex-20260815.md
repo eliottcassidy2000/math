@@ -2,11 +2,10 @@
 
 **Status:** derivation companion for
 [THM-3422](../01-canon/theorems/THM-3422-one-root-nonlinear-integral-hamiltonian-response.md),
-which remains **RESERVED / PROVISIONAL + AUDIT REQUIRED**.  The one-root
-module classification and the repeated split-root first-window formula below
-have complete candidate proofs and exact replays, but are not proved canon
-until independent audit and explicit promotion.  A full multiple-root module
-decomposition is deliberately **not** claimed.
+now **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED**.  The one-root module
+classification and the repeated split-root first-window formula below have
+complete proofs and exact replays.  A full multiple-root module decomposition
+is deliberately **not** claimed.
 
 ## 1. Inheritance, portfolio, and connection contract
 
