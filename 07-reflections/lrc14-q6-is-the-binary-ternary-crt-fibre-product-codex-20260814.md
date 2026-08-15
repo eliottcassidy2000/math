@@ -1,9 +1,10 @@
 # LRC(14): q=6 is the binary--ternary CRT fibre product
 
 **Date:** 2026-08-14  
-**Status:** FINITE-EXACT PROBE + ANALYTIC PROOF CANDIDATE, UNNUMBERED AND
-NONCANONICAL.  This note interprets the exact q=6 computation.  It promotes no
-theorem, gives no refined-ledger decrement, and does not prove LRC(14).
+**Status:** FINITE-EXACT INDEPENDENT CONVERGENCE AUDIT; SUPERSEDED AS CURRENT
+STRUCTURAL SOURCE BY THM-3395.  This note retains the CRT, tournament,
+ancestry, and harmonic interpretations of the exact q=6 computation.  It
+gives no refined-ledger decrement and does not prove LRC(14).
 
 ## 1. Inheritance board
 
@@ -113,10 +114,9 @@ their total length is at most `6/7<1`, so the circular wraparound obstruction
 is impossible and one source time lies in every interval.
 
 The exact probe compares this criterion with a separate endpoint/mid-cell
-event sweep.  They agree on every literal subset.  The result is therefore
-FINITE-EXACT evidence for the literal atlas and a direct analytic proof
-candidate for the general q=6 criterion; it is deliberately not promoted
-without an independent hostile audit.
+event sweep.  They agree on every literal subset.  THM-3395 now proves the
+general q<=7 criterion and independently replays the q=6 slice; this probe is
+retained as a convergence artifact.
 
 ## 5. The quotient tower is exact, but incomplete on mixed patterns
 
