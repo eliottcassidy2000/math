@@ -1,8 +1,8 @@
 # Script Results Index
 
 - `noncommuting_smooth_hensel_heisenberg_orbits_thm3449.py` -> matching
-  `.out` [THM-3449 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  INDEPENDENT AUDIT REQUIRED].  For two equal-depth smooth Hensel
+  `.out` [THM-3449 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  two equal-depth smooth Hensel
   automorphisms, the first commutator carry is their vector-field Lie bracket
   at depth `2c`.  The naive abelian exponent action is universally valid
   through level `2c` and fails on a fibre at `2c+1` when that bracket is
@@ -18,7 +18,7 @@
   `dfe2528430981840feac984a47a45ca726ae3ec05a52966ba263230ae6356005` /
   `fa4dbd16a9f56fb350388fde53c8b3ef39cdfbc6f3092cd31aed83c506bc8154`.
   No unequal-depth noncommuting theorem, LRC, `JC(2)`, or physical transport
-  is claimed before audit.
+  is claimed.
 - `jc_weighted_cyclic_jelonek_inertia_thm3448.py` -> matching `.out`
   [THM-3448 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a
   weighted seed with `n=deg R` and `mu=ord_0 R`, the generic `C=0` inertia

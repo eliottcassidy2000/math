@@ -2,13 +2,20 @@
 id: THM-3449
 title: "Noncommuting smooth Hensel pairs: abelian cutoff and Heisenberg orbit law"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  Two equal-depth congruence-to-identity automorphisms
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Two equal-depth
+  congruence-to-identity automorphisms
   commute universally through level 2c; their first commutator carry is the
   Lie bracket, and through level 3c the exact replacement is a class-two
   Heisenberg lattice.  The dyadic depth-one square carries and the first
   higher-bracket boundary are explicit.
 source: root-noncommuting-hensel-heisenberg-2026-08-15
+audit: >
+  independent pullback/right-action sign and filtration proof; mixed-modulus
+  matrix reconstruction of the presentation, normal forms, order, and centre;
+  minimum-effective-depth, bank, dependence, dyadic restricted-square,
+  A3/A4, and G_m hostile audits; normal/optimized/stored and clean-room exact
+  replay; dependency, hash, AST/security, ID, routing, and documentation
+  gates clean
 depends_on:
   - THM-3442-smooth-hensel-fibre-vector-field-orbit-law
   - THM-3444-commuting-smooth-hensel-vector-field-lattice-action
@@ -24,12 +31,10 @@ hash_basis: LF-normalized bytes
 
 # THM-3449 -- noncommuting smooth Hensel pairs: abelian cutoff and Heisenberg orbit law
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-This file now contains a complete proof candidate and frozen exact companion.
-It remains outside the proved dependency graph until an independent
-derivation and replay audit.
+The proof and exact companion passed an independent derivation, hostile, and
+replay audit.
 
 ## 1. Exact equal-depth statement
 
@@ -511,5 +516,4 @@ python3 -B 04-computation/noncommuting_smooth_hensel_heisenberg_orbits_thm3449.p
 python3 -B -O 04-computation/noncommuting_smooth_hensel_heisenberg_orbits_thm3449.py
 ```
 
-No claim in this provisional candidate is proved canon before independent
-audit and explicit promotion.
+QED.
