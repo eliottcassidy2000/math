@@ -1,12 +1,17 @@
 # Reflected-residue perturbations: the missing phase and the fixed-tree survivor
 
-**Status.** The residue-blind extension of the THM-3360/3376 high-pair floors
+**Status.** The residue-blind extension of the THM-3360/3384 high-pair floors
 is **REFUTED** by a one-coordinate, one-unit exact witness. A phase-aware
 frozen-tree perturbation lemma is **PROVED**; noncanonical repeated-level
 packets are **FINITE-EXACT + VERIFIED**. Two independent complete censuses
 locate the first restricted cross-tree failure at coherent shift `c=67`, and
 an unrestricted physical tree closes the full all-`649` common no-wrap chamber
-through `c=155`.
+through `c=155`. Beyond no-wrap, every frozen upper-median packet through
+`c=389` still has a positive full-`K6` Hunter certificate; the first full-tree
+failure is at `c=390`, while the first literal upper-median union failure is
+only at `c=392`. Those are selector boundaries, not packet boundaries: exact
+body-safe-cell reselection closes every packet throughout the full common-
+positive chamber `1<=c<=491`.
 This is not a closure of arbitrary `k=1`, other residue packets, or LRC(14).
 
 ## 1. Inheritance and connection contract
@@ -364,6 +369,129 @@ cross pattern remains dominant, but the three new body types require two
 cross bridges.  This sharpens the lesson: the stable object is the optimized
 full overlap graph, not a fixed phase partition or a fixed cross quotient.
 
+### Beyond no-wrap: the first full-tree and literal boundaries
+
+There is a larger common-positive chamber even after shifted residues exceed
+the ruler. Requiring every nominal level-three drift to remain positive gives
+
+```text
+1<=c<=min_(E,L)[3L-max(E)-1]=491.
+```
+
+The primary exact census covers `c=156,...,491`, all `649` bodies, and all
+twenty assignments: `4,361,280` packets. It finds `1,696` restricted
+cross-tree failures, `269` failures of the optimized full-`K6` Hunter tree,
+and `187` literal upper-median unions at or above `6/7`. These broad counts
+are a single-engine finite atlas. The sharp *first* boundaries have a second
+complete implementation: Prim replaces Kruskal and pair overlap is computed
+as singleton mass plus singleton mass minus exact union mass. Together with
+the earlier independent `c<=84` census, it proves
+
+```text
+1<=c<=389: 5,049,220 packets, every packet has a positive full-K6 tree;
+c=390:      two full-K6 failures, but every literal union is below 6/7;
+c=391:      no full-K6 failure;
+c=392:      four full-K6 failures, including the first two literal failures.
+```
+
+All six full-tree failures occur at
+`E=(1,2,3,4,6,12), (L,j)=(168,90)`. At `c=390` their full-tree margins are
+
+```text
+-717819/1739713360,       -100664755/7935465258,
+```
+
+while their literal union margins are still respectively
+
+```text
+-46231783/869856680,      -35419057/1715776272.
+```
+
+At `c=392`, the first two literal failures are the complementary assignments
+
+```text
+{1,2,6} at level 3  | {3,4,12} at level 5,
+{3,4,12} at level 3 | {1,2,6} at level 5,
+```
+
+with exact excesses
+
+```text
+107944/12562795,          14324735/462619521.          (9)
+```
+
+A third self-contained verifier constructs the periodic intervals directly,
+enumerates all `81` cross-`K_(3,3)` trees and all `1,296` full-`K6` trees at
+each of the six failures, and recomputes every union by an endpoint sweep.
+
+The location of the boundary is structural rather than monotone in `c`. Put
+
+```text
+alpha=3-c/L,       beta=5-c/L=alpha+2,
+theta=-cj/L mod 1.
+```
+
+At `c=390`, `(alpha,beta)=(19/28,75/28)` and `theta=1/14`, exactly a danger
+boundary; the labels `(3,6)` also produce an exact selected `1:4` multiplier
+resonance. At `c=392`, `(alpha,beta)=(2/3,8/3)` and `theta=0`, so the common
+slopes themselves are exactly `1:4`, with label resonances `(1,4)` and
+`(3,12)`. The intervening `c=391` is safe. Effective level alone is
+therefore insufficient: the state must retain effective level, coherent cell
+phase, and the label assignment.
+
+Equation `(9)` is a literal obstruction only to the frozen upper-median
+selector. The minimum body has exactly `88` body-safe cells. For the first
+orientation, only `j=77,90` have nonpositive full-tree margin or union at
+least `6/7`; `j=17` has full-tree margin
+`270293777/665828135`. For the reverse orientation, six cells have
+nonpositive full-tree margin, but again only `j=77,90` have union at least
+`6/7`; `j=34` has full-tree margin `21275128204/50425527789`. Thus `86` of
+the `88` safe cells close each literal packet.
+[THM-2941](../01-canon/theorems/THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary.md)'s
+cell identity needs only one cell with union below `6/7`, so both `c=392`
+packets close after
+lawful reselection. Consequently every packet in this coherent-shift family
+through `c=392` closes, although the deterministic upper-median selector
+fails at two packets.
+
+The same repair persists all the way to the positivity boundary.  The broad
+upper-median census has `269` full-tree failures and `187` literal failures
+for `156<=c<=491`; every one is on the minimum body.  Exhausting all `88`
+body-safe cells for every one of the `269` packets leaves no unrescued full
+tree and no unrescued literal union.  The largest bad-cell set has size `46`,
+at `c=487`, so even the most cell-sensitive packet retains `42` lawful good
+cells.  Across packets the weakest best alternative full-tree margin is
+
+```text
+31091887/85183035 > 0,
+```
+
+and the weakest best literal union margin relative to `6/7` is
+
+```text
+-8062511/21715855 < 0.
+```
+
+A separate endpoint-slab implementation imports no interval, overlap, or
+tree engine and reconstructs all `187` selected-cell literal failures over
+`390<=c<=491`; every one has a negative-margin alternative cell and the same
+maximum of `46` bad cells.  Combined with the independently located first
+boundaries, this closes all
+
+```text
+491 * 649 * binom(6,3) = 6,373,180
+```
+
+packets in the entire common-positive coherent `3:5` shift chamber.  The
+existential cell address is load-bearing: there is no single universal rescue
+cell, but every packet has many lawful choices.
+
+This is the direct connection to the translation-uniform multi-cell terminal:
+the one-cell quotient discarded a large support of lawful cells. Here simple
+reselection already suffices; in harder packets the next sidecar is the full
+fixed-safe residue support `C mod d` and its translated danger-band capacity.
+No arbitrary-residue or LRC conclusion follows.
+
 ## 6. Boundary and next extension
 
 The right next compiler is phase-budgeted, not radius-budgeted.  For each
@@ -380,6 +508,15 @@ tree type.  The unit witness refutes `|h|` alone; the `c=84` failure at
 `Delta=0` refutes centered phase alone.  The new discrete invariant is the
 phase-cluster partition, and the natural operation is to re-optimize the tree
 in the full physical overlap graph instead of freezing the cross quotient.
+
+The `c=390/392` split adds a second regime. Once coherent shifting passes
+whole-ruler boundaries, normalize the effective levels and retain the chamber
+index before applying the phase budget. When the fixed selector fails, first
+reselect among body-safe cells; the complete common-positive census shows that
+this suffices through `c=491`. In a different family where no cell gives a
+literal closure, switch to the multi-cell residue-support terminal. This
+connects the phase sidecar to the projected-wall translation-uniform mechanism
+without pretending that a one-cell literal failure is a global survivor.
 
 Nothing here claims all noncanonical packets enter the perturbative chamber.
 Packets with large centered phase, cell reselection, changes of the low graph,
@@ -404,6 +541,18 @@ python3 04-computation/lrc14_minimum_body_no_wrap_coherent_shift_atlas_20260814.
 python3 -O 04-computation/lrc14_minimum_body_no_wrap_coherent_shift_atlas_20260814.py
 python3 04-computation/lrc14_coherent_residue_shift_uniform_no_wrap_census_20260814.py
 python3 -O 04-computation/lrc14_coherent_residue_shift_uniform_no_wrap_census_20260814.py
+python3 04-computation/lrc14_coherent_residue_shift_common_positive_census_20260814.py
+python3 -O 04-computation/lrc14_coherent_residue_shift_common_positive_census_20260814.py
+python3 04-computation/lrc14_coherent_residue_shift_fulltree_boundary_independent_prim_scan_20260814.py
+python3 -O 04-computation/lrc14_coherent_residue_shift_fulltree_boundary_independent_prim_scan_20260814.py
+python3 04-computation/lrc14_coherent_residue_shift_fulltree_boundary_failure_independent_audit_20260814.py
+python3 -O 04-computation/lrc14_coherent_residue_shift_fulltree_boundary_failure_independent_audit_20260814.py
+python3 04-computation/lrc14_coherent_residue_shift_c392_multicell_reselection_20260814.py
+python3 -O 04-computation/lrc14_coherent_residue_shift_c392_multicell_reselection_20260814.py
+python3 04-computation/lrc14_coherent_residue_shift_common_positive_multicell_rescue_20260814.py
+python3 -O 04-computation/lrc14_coherent_residue_shift_common_positive_multicell_rescue_20260814.py
+python3 04-computation/lrc14_coherent_residue_shift_literal_multicell_endpoint_independent_audit_20260814.py
+python3 -O 04-computation/lrc14_coherent_residue_shift_literal_multicell_endpoint_independent_audit_20260814.py
 ```
 
 The normal and optimized outputs are byte-identical. Hash basis:
@@ -426,4 +575,16 @@ a7a1f62d4555e704989e7dbb4ee7b44a661aef5688840f5ceeae9945ff84c28f  independent fa
 6be10b5ab80b7b610c05ae1ccb08273072cdee9a0ee6ae3c578037e4d72af664  no-wrap output
 d5244095b2e0b5120985d42c3ddf92423e81107dc9bcd5bae089302881b14c99  all-649 common no-wrap census
 9c34eb6d592ff6c05119ada4e1d3dc4f544f4d8c9413efd4438ffb755f660a12  common no-wrap output
+bade611c5935fa5d546c15be642749678c340c4c9ce772a3ff7d2f3c6acef331  common-positive upper-median census
+efa3742aeaded2ffcb379bcafe707135c24397d8225f5f3c82b0f8b3c0e72df2  common-positive output
+44383c1c42b339c5450c9e60baf78949549cb382b36c848324b930686406ae6a  independent full-tree-boundary census
+eb05e99845e6701d5d8eeaf380de5ffef44de962ab30719473f5a3b215117966  independent boundary output
+16163898a9788efafed39ca323c111311ac570445ff1a0f6bb5121f0f95dd2f7  independent six-failure diagnostics
+d3826cfa76c7916f8819be1c370d7f5c82a29eb8cd6bb1dc1fd232bc6b845694  failure-diagnostic output
+c3b853717cc7d2b5a2a0eb10f3d493e77e701ddb2f5cf6411c98fdd88be0da82  c=392 multi-cell reselection
+724c2371dcb436de056ec4705dff507cd3d235f876a12bd8ada291cc954d3ec3  multi-cell output
+bacffced63db825f47bf4683838f13c9be2b51dfc8b4c0bcb52195b7cc7d1679  common-positive multi-cell rescue
+65bd74bef5ed34692069bcb5627956b1878be9e238f1f35e94cba65fc91c98c3  rescue output
+ca796058c62012130a392a5ed08a4eb770e2302455c0cb02124477f2519918d0  independent literal endpoint audit
+93ba87ece22d1e610b8a8fa48053bebd7c2e77d105eaf7038652dd2e8b952859  endpoint-audit output
 ```

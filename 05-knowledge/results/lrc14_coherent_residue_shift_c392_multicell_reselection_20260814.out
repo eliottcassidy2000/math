@@ -1,0 +1,14 @@
+LRC14 c392 MULTI-CELL EXACT RESELECTION
+body (1, 2, 3, 4, 6, 12) L 168 safe_cells 88 ranges ((12, 13), (15, 26), (30, 39), (45, 52), (60, 69), (71, 78), (90, 97), (99, 108), (116, 123), (129, 138), (142, 153), (155, 156))
+case (393, 394, 398) (395, 396, 404)
+full_failures 2 ((77, Fraction(-5691856, 138190745), Fraction(107944, 12562795)), (90, Fraction(-5691856, 138190745), Fraction(107944, 12562795)))
+union_failures 2 ((77, Fraction(-5691856, 138190745), Fraction(107944, 12562795)), (90, Fraction(-5691856, 138190745), Fraction(107944, 12562795)))
+best (17, Fraction(270293777, 665828135), Fraction(-679717, 1496243))
+worst (77, Fraction(-5691856, 138190745), Fraction(107944, 12562795))
+case (395, 396, 404) (393, 394, 398)
+full_failures 6 ((15, Fraction(-5111277053, 420212731575), Fraction(-46133252647, 420212731575)), (60, Fraction(-1002918199, 1260638194725), Fraction(-66682354001, 1260638194725)), (77, Fraction(-80938162, 2313097605), Fraction(14324735, 462619521)), (90, Fraction(-80938162, 2313097605), Fraction(14324735, 462619521)), (107, Fraction(-1002918199, 1260638194725), Fraction(-66682354001, 1260638194725)), (152, Fraction(-5111277053, 420212731575), Fraction(-46133252647, 420212731575)))
+union_failures 2 ((77, Fraction(-80938162, 2313097605), Fraction(14324735, 462619521)), (90, Fraction(-80938162, 2313097605), Fraction(14324735, 462619521)))
+best (34, Fraction(21275128204, 50425527789), Fraction(-21602835178, 50425527789))
+worst (77, Fraction(-80938162, 2313097605), Fraction(14324735, 462619521))
+semantic_sha256 9cae9193ff51a4a1bf4581e2e5b4168f1ae577291eab1cabf854d0bd9669bc8c
+status=FINITE-EXACT cell-reselection repair of both c392 upper-median union failures

@@ -60,12 +60,32 @@ Format per entry:
   exact census closes the entire all-`649` common no-wrap chamber
   `1<=c<=155`: among `2,011,900` packets, its `31` cross-only failures all
   have a positive full-graph Hunter tree and literal union below `6/7`.
+  Beyond no-wrap, two exact implementations show that every frozen
+  upper-median packet through `c=389` still has a positive full-`K6` Hunter
+  certificate. At `c=390` exactly two full-tree margins become nonpositive,
+  although every literal union remains below `6/7` through `c=391`. At
+  `c=392`, two complementary assignments on the minimum-ruler body have the
+  first literal upper-median union excesses, `107944/12562795` and
+  `14324735/462619521`. These are one-cell certificate/predicate boundaries,
+  not arbitrary-residue survivors or LRC counterexamples. An exact scan of
+  all `88` body-safe cells finds that only `j=77,90` have union at least
+  `6/7` in either orientation; lawful cell reselection closes both packets.
+  The complete common-positive continuation `1<=c<=491` contains
+  `6,373,180` packets.  Its upper-median selector has `269` full-tree and
+  `187` literal failures, all on the minimum body, but exact reselection over
+  the `88` lawful cells rescues every one.  Even the worst packet has only
+  `46` bad cells, hence at least `42` good choices.  A separate defining-arc
+  endpoint-slab audit reconstructs and repairs all `187` literal failures.
+  Thus the entire common-positive coherent `3:5` shift chamber closes.
 - **Reusable rule:** perturb located periodic events in the centered phase
   coordinate, but rank the joint analytic budget in `|Delta|+|h|` and retain
   phase-cluster/tree type. The unit witness refutes `|h|` alone, while the
   `c=84`, `Delta=0` failure refutes phase alone. Edgewise canonical floors and
   cross-only Hunter certificates are not stable or sufficient objects; when
-  the quotient fails, re-optimize in the full physical overlap graph.
+  the quotient fails, re-optimize in the full physical overlap graph. When
+  the selected cell fails, restore the lawful cell address before inferring a
+  survivor; if every single cell fails, only then pass to the fixed-safe
+  multi-cell residue support.
 
 ## MISTAKE-382 (2026-08-14, live-canon integration) -- five theorem records retained pre-freeze source hashes after their scripts changed
 

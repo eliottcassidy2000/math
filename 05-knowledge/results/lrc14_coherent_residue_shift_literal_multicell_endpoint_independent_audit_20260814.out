@@ -1,0 +1,12 @@
+LRC14 COHERENT SHIFT LITERAL MULTI-CELL ENDPOINT AUDIT
+pinned_universe 04-computation/lrc14_coherent_residue_shift_boundary_census_20260814.py 5c69fbd209c332d76cc51814bc1ef126d8cc3dea0e9c9d16f00ccf095d6b9a7e
+body (1, 2, 3, 4, 6, 12) L 168 safe_cells 88 selected_cell 90
+shifts (390, 491) assignments 20
+selected_literal_failures 187
+failure_shift_counts ((392, 2), (403, 1), (405, 2), (416, 1), (418, 2), (429, 2), (437, 1), (438, 4), (448, 5), (450, 3), (451, 5), (453, 6), (461, 7), (462, 2), (463, 3), (464, 12), (466, 10), (472, 10), (474, 13), (475, 10), (476, 10), (477, 13), (479, 10), (485, 10), (487, 13), (488, 10), (489, 10), (490, 10))
+alternative_unrescued 0
+weakest_best_alternative_literal (Fraction(-8062511, 21715855), (429, (432, 435, 441), (430, 431, 433), Fraction(202685, 11485947)), 76)
+maximum_bad_cells (46, ((487, (490, 491, 499), (488, 489, 493), Fraction(1, 7)), (12, 23, 24, 25, 31, 32, 33, 34, 35, 36, 38, 47, 48, 51, 60, 64, 65, 66, 67, 68, 71, 72, 77, 90, 95, 96, 99, 100, 101, 102, 103, 107, 116, 119, 120, 129, 131, 132, 133, 134, 135, 136, 142, 143, 144, 155), (17, Fraction(-3019801, 6252246))))
+c392 (((392, (393, 394, 398), (395, 396, 404), Fraction(107944, 12562795)), (77, 90), (17, Fraction(-679717, 1496243))), ((392, (395, 396, 404), (393, 394, 398), Fraction(14324735, 462619521)), (77, 90), (34, Fraction(-21602835178, 50425527789))))
+semantic_sha256 db0d29f421c2533d4303d37418f5a9b853353b2cd351d3dd0b67e97459d53881
+status=INDEPENDENT FINITE-EXACT; defining arcs plus endpoint-slab unions
