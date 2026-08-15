@@ -3,7 +3,8 @@
 
 The script checks the fixed-cusp Farey fan / Berggren U-spine / Lorentz
 cross-determinant identity, the six edge-separation levels of four consecutive
-Fibonacci depths, their sharp small-index boundaries, the adjacent-versus-
+Fibonacci spine indices (whose rooted depths are one lower), their sharp
+small-index boundaries, the adjacent-versus-
 opposite S4 incidence obstruction, and finite controls for the recurrence and
 Pell converse.  It also freezes two information-loss hostiles: Farey graph
 distance is not determinant separation, and a scalar harmonic sum is not a

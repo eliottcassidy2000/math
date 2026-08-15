@@ -31,6 +31,24 @@
   `fe8414e95241ff242b1ea32238402dfea7085af43923ac004ca46bc36ed5062b` /
   `6e7c45392e5894ff13e12a413aee9196cd1a2ac2a378f5df3a4f90a0e355d60a`.
   No scalar row, grouped-current cancellation, or LRC(14) consequence follows.
+- `berggren_q_spine_cap7_fibonacci_spectrum_thm3455.py` -> matching `.out`
+  [THM-3455 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  Intersecting THM-3453's fifteen divisor atoms with
+  `q_t=4t(t+1)+3=(2t+1)^2+2` leaves exactly `9,11,51`, producing a complete
+  exact rank-`4/6/7/>7` law of minimal period `1683` with counts
+  `374/238/72/999` and cap-seven density `76/187`.  Fibonacci sampling has
+  minimal labelled rank period `360`, counts `60/90/22/188`, and cap-seven
+  index/harmonic coefficient `43/90`; reciprocal Fibonacci spine-index,
+  positive-rooted-depth, and branch-label subseries still converge.  Exact controls
+  exhaust all atom residues,
+  both full periods and every proper-period hostile, with `q_1..q_4` realizing
+  ranks `6,4,7,>7` and `q_20=1683` enforcing lower-rank priority.
+  Script/output/semantic LF SHA-256:
+  `8fc2f1b50f270f91e16b98a7834df642009ed460d592ad60be706105f1788d65` /
+  `c91aa6749e07b19ecbaba61912bf9dded21e5381ab41c6f9e47f8f43d05e815e` /
+  `e3b0a0d48656bfbf81275f271cbe95f7bacea261404f28b933db305b3d06f6f6`.
+  This is literal transverse half-twist support only; no common physical time,
+  current, decrement, LRC(14), or Jacobian consequence follows.
 - `lrc_global_literal_half_twist_cap7_support_thm3453.py` -> matching `.out`
   [THM-3453 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The theorem
   uses strong-induction period
@@ -55,7 +73,8 @@
   [THM-3454 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   On the fixed-cusp leaf chain, `P_t=U^(t-1)(3,4,5)` identifies rooted
   Berggren distance, Farey cross-determinant magnitude, and
-  `sqrt(<P_s,P_t>_L/2)` with `|t-s|`.  Four consecutive Fibonacci depths have
+  `sqrt(<P_s,P_t>_L/2)` with `|t-s|`.  Four consecutive Fibonacci spine indices
+  (at rooted depths one lower) have
   six costs
   `(F_(k-2),F_(k-1),F_k,F_k,F_(k+1),2F_k)`, hence a five-level total preorder
   and strict `K6` orientation with only the adjacent edge `02/23` missing.
@@ -65,7 +84,7 @@
   `6 x 6` Hankel determinant `393216`.  Exact controls cover `780` fan pairs,
   `3060` four-point and `3003` five-point windows, all `24` `S4` relabelings,
   and Pell pairs through `500`.  Script/output/semantic LF SHA-256:
-  `bdfef5c00d3330026b70ebdd977e90a34865bc1640d5c61b65154dde29572b9a` /
+  `fadfe97113ea1d38472face781a39f3c5f615f9aea093025269b3c72e03372fa` /
   `35c964e0635e07f16146b3c439d0eee32a0d465009ceea17e1d71729d3f68b07` /
   `ff0262595d3dea442d874294e5166c95c47c5b7514375d8b13ab604cdbd6b4f9`.
   Cross-determinant is not full Farey graph distance, pairwise costs forget

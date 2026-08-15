@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-402 (2026-08-15, THM-3454 spine-index/depth and replay typing) -- a shifted branch index was called rooted depth and raw newline bytes were overclaimed
+
+- **What failed:** THM-3454 repeatedly called the parameter `t` in
+  `P_t=U^(t-1)(3,4,5)` a rooted depth, and it said normal, optimized, and
+  stored transcripts agreed byte for byte without naming newline
+  normalization.
+- **Minimal witnesses / first failed implications:** `P_1=(3,4,5)` is the
+  root at depth zero, so `t` is the spine index and its rooted depth is `t-1`.
+  Consequently the marked index seam `c_12=x_0` becomes `c_12=h_0+1` for
+  rooted depths `h_i=x_i-1`, and the homogeneous recurrence becomes
+  `h_2=h_0+h_1+1`.  Independently, Windows stdout uses CRLF while the stored
+  artifact uses LF, so their raw bytes need not agree.
+- **Repair / strongest survivor:** all Fibonacci selections are now typed as
+  spine indices `F_n`, at rooted depths `F_n-1`.  The theorem records both
+  the homogeneous index recurrence and its affine rooted-depth form.  Every
+  metric identity, six-cost level, Pell classification, recurrence mode, and
+  semantic output is unchanged because differences erase the shift.  Replay
+  equality is asserted only after LF normalization.
+- **Reusable rule:** whenever a ray is parameterized by
+  `P_t=M^(t-t_0)P_(t_0)`, declare the index/depth shift before transporting an
+  absolute recurrence.  Difference invariants survive affine shifts;
+  homogeneous recurrences generally do not.  State the exact normalization
+  basis for every byte-equality claim.
+
 ## MISTAKE-400 (2026-08-15, provisional theorem status routing) -- an unrecognized provisional token exposed an audit-pending theorem as established canon
 
 - **What failed:** the packaged THM-3452 frontmatter began `PROVISIONAL /

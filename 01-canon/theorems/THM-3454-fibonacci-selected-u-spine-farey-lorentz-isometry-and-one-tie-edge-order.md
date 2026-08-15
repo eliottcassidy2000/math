@@ -4,12 +4,13 @@ title: "Fibonacci-selected U-spine Farey--Lorentz isometry and one-tie edge orde
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The fixed-cusp
   fraction leaf chain, parabolic Berggren U-spine, and Lorentz chord metric
-  have the same integral separation.  Four consecutive Fibonacci depths give
+  have the same integral separation.  Four consecutive Fibonacci spine indices
+  (at rooted depths one lower) give
   a transitive rooted T4, while their six edge separations form a five-level
   total preorder whose only stable tie is the adjacent pair 02/23.  Two marked
   edge equalities characterize additive four-windows, and the inherited
   Cassini/Pell unit then characterizes the Fibonacci windows.  The quadratic
-  branch labels sampled at Fibonacci depths obey a minimal order-six linear
+  branch labels sampled at Fibonacci spine indices obey a minimal order-six linear
   recurrence.  No Farey-graph, full-tree, LRC, or Jacobian equivalence follows.
 source: codex-2026-08-15-fibonacci-u-spine-distance-transplant
 audit: >
@@ -28,7 +29,7 @@ related:
   - THM-3382-fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses
 script: 04-computation/fibonacci_u_spine_farey_lorentz_one_tie_thm3454.py
 output: 05-knowledge/results/fibonacci_u_spine_farey_lorentz_one_tie_thm3454.out
-script_sha256: bdfef5c00d3330026b70ebdd977e90a34865bc1640d5c61b65154dde29572b9a
+script_sha256: fadfe97113ea1d38472face781a39f3c5f615f9aea093025269b3c72e03372fa
 output_sha256: 35c964e0635e07f16146b3c439d0eee32a0d465009ceea17e1d71729d3f68b07
 semantic_sha256: ff0262595d3dea442d874294e5166c95c47c5b7514375d8b13ab604cdbd6b4f9
 hash_basis: LF-normalized bytes
@@ -71,8 +72,8 @@ called a tournament.
 
 The least-used decisive sidecars are:
 
-- the marked root depth, because pairwise distances forget a common
-  translation; and
+- the marked spine index (equivalently rooted depth plus one), because
+  pairwise distances forget a common translation; and
 - edge incidence in `K4`, because `S4` preserves whether two edges meet.
 
 The exact objects are:
@@ -85,8 +86,8 @@ The exact objects are:
 | strict orientation | smaller separation to larger separation |
 | equality | retained as a missing strict comparison, or as one bidirected weak comparison |
 | preserved target | the five distance levels and the marked additive seams |
-| lost data | common depth translation, Cassini sign, product order, owner, phase, and off-ray ancestry word |
-| required sidecar | one absolute depth plus the labelled edge-incidence structure |
+| lost data | common index/depth translation, Cassini sign, product order, owner, phase, and off-ray ancestry word |
+| required sidecar | one absolute spine index (equivalently one rooted depth) plus the labelled edge-incidence structure |
 
 ## 2. The fixed-cusp leaf chain is the `U`-spine
 
@@ -198,7 +199,7 @@ is the discriminant-`-4` quadratic carrier.  The affine label `q_t=2c_t+1`
 itself has polynomial discriminant `-32`; these two discriminants must not be
 conflated.  The exceptional scalar `2` is not a member of `(11)`.
 
-Now sample `(11)` at Fibonacci depths.  With `F_0=0,F_1=1`, put
+Now sample `(11)` at Fibonacci spine indices.  With `F_0=0,F_1=1`, put
 
 ```text
 R_n=q_(F_n)=Q_(F_n-1)=4F_n(F_n+1)+3,        n>=1.        (14)
@@ -251,7 +252,7 @@ All six mode coefficients in `(14)` are nonzero, so no proper factor of
 `(19)` annihilates the sequence.  This proves both `(16)` and minimality over
 the rationals.
 
-## 4. Four Fibonacci depths and six common separations
+## 4. Four Fibonacci spine indices and six common separations
 
 For `k>=4`, put
 
@@ -260,7 +261,12 @@ For `k>=4`, put
 X_i=P_(e_i),                                             (20)
 ```
 
-and for `i<j` define the common separation
+Here `e_i` is the spine index.  The actual rooted depth of `X_i` is
+`h_i=e_i-1`.  Thus all metric differences below are also rooted-depth
+differences, while an additive recurrence written in the `h_i` coordinates
+acquires the affine `+1` term made explicit in Section 6.
+
+For `i<j`, define the common separation
 
 ```text
 d_ij=d_B(X_i,X_j)
@@ -340,7 +346,8 @@ orders of three channels.  Cardinality alone supplies no identification.
 
 ## 6. The sharp marked recurrence converse
 
-Let
+Let `x_i` denote positive spine-index coordinates, and put `h_i=x_i-1` for
+their actual rooted depths.  Thus let
 
 ```text
 0<x_0<x_1<x_2<x_3,          c_ij=x_j-x_i.                (26)
@@ -352,6 +359,14 @@ Then
 c_12=x_0  and  c_02=c_23
 iff
 x_2=x_0+x_1  and  x_3=x_1+x_2.                          (27)
+```
+
+Equivalently, in actual rooted-depth coordinates,
+
+```text
+c_12=h_0+1  and  c_02=c_23
+iff
+h_2=h_0+h_1+1  and  h_3=h_1+h_2+1.                     (27a)
 ```
 
 The first equality in `(27)` is exactly `x_2-x_1=x_0`.  Substituting this
@@ -380,7 +395,8 @@ recover only relative positions and are invariant under
 (x_0,x_1,x_2,x_3) -> (x_0+h,x_1+h,x_2+h,x_3+h).         (30)
 ```
 
-Thus `(27)` uses one absolute root-depth sidecar, not edge order alone.
+Thus `(27)` uses one absolute spine-index sidecar, equivalently one absolute
+rooted depth together with the known `+1` chart shift, not edge order alone.
 
 Finally define the Cassini/Pell norm
 
@@ -434,15 +450,18 @@ iff
 g_1=x_0 and g_i=g_(i-1)+g_(i-2) for 2<=i<=m-1.          (35b)
 ```
 
-In words: a vertex window is Fibonacci-recurrent exactly when its consecutive
-gap sequence is Fibonacci-recurrent and one marked seam aligns the two
-sequences.  In the forward direction `g_i=x_(i-1)`.  Conversely, `g_1=x_0`
+In words: a spine-index window is Fibonacci-recurrent exactly when its
+consecutive gap sequence is Fibonacci-recurrent and one marked seam aligns
+the two sequences.  In the forward direction `g_i=x_(i-1)`.  Conversely, `g_1=x_0`
 first gives `x_2=x_1+x_0`; then simultaneous induction using the gap
 recurrence gives
 
 ```text
 g_i=x_(i-1),              x_(i+1)=x_i+x_(i-1).           (35c)
 ```
+
+For rooted depths `h_i=x_i-1`, the same statement is affine:
+`h_(i+1)=h_i+h_(i-1)+1`, and the marked seam is `g_1=h_0+1`.
 
 For four vertices, `g_1=x_0` is `c_12=x_0`, while
 `g_2=g_1+g_0` is exactly `c_23=c_02`.  Thus the adjacent-edge tie is the
@@ -459,7 +478,7 @@ not only the four-point case.
 | the tie seam alone suffices | `(2,3,4,6)` | `c_02=c_23`, but `c_12!=x_0` | both seams are iff |
 | recurrence forces Fibonacci | `(1,3,4,7)` | recurrence holds, `|D|=5` | add the Pell unit |
 | stable order plus recurrence forces Fibonacci | `(3,4,7,11)` | stable one-tie order holds, `|D|=5` | add the Pell unit |
-| six labelled costs plus `|D|` identify the window | `(2,3,5,8)` and `(1,2,4,7)` | both have costs `(1,2,3,3,5,6)` and `|D|=1`; only the first is recurrent | retain an absolute depth and both seams |
+| six labelled costs plus `|D|` identify the index window | `(2,3,5,8)` and `(1,2,4,7)` | both have costs `(1,2,3,3,5,6)` and `|D|=1`; only the first is recurrent | retain one absolute index/rooted-depth coordinate and both seams |
 | Pell plus stable weak order suffices even with `x_0>=2` | `(2,3,6,10)` | `|D|=1` and the weak order is stable, but recurrence fails | order is not equation data |
 | same metric law holds across a Berggren fibre | THM-3345's equal-colour costs | source-dependent words have unequal lengths | restrict to one marked ray |
 
@@ -554,7 +573,8 @@ The exact companion checks, using only integral and rational arithmetic:
 - the translation, partial-recurrence, non-Pell, Farey-distance, harmonic,
   and convergence hostiles above.
 
-Normal and optimized runs reproduce the stored transcript byte for byte:
+Normal and optimized runs reproduce the stored transcript byte for byte after
+LF normalization:
 
 ```text
 python3 -B 04-computation/fibonacci_u_spine_farey_lorentz_one_tie_thm3454.py
@@ -571,9 +591,9 @@ assertions.
 |---|---|
 | source | one marked parabolic `U`-ray and its fixed-cusp leaf chain |
 | target | integral line metric, Lorentz chord metric, and labelled edge preorder |
-| preserved | root-depth differences, edge incidence, additive seams, and `Q` labels |
-| destroyed by edge metric | absolute root depth, Cassini sign, products, phase, owner, and off-ray word |
-| needed sidecar | one absolute depth and the labelled `K4` incidence structure |
+| preserved | spine-index/rooted-depth differences, edge incidence, additive seams, and `Q` labels |
+| destroyed by edge metric | absolute spine index/rooted depth, Cassini sign, products, phase, owner, and off-ray word |
+| needed sidecar | one absolute spine index (or rooted depth) and the labelled `K4` incidence structure |
 | cheapest positive | the window `(2,3,5,8)` |
 | cheapest translation hostile | `(1,2,4,7)` |
 

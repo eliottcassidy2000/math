@@ -14,10 +14,10 @@ q_t=4t(t+1)+3=(2t+1)^2+2=Q_(t-1)
 ```
 
 labels the already-proved parabolic Berggren `U`-spine.  Fibonacci does not
-create a second tree branch here.  It selects sparse depths `t=F_n` on that
-branch.
+create a second tree branch here.  It selects sparse spine indices `t=F_n`,
+at actual rooted depths `F_n-1`, on that branch.
 
-At every pair of selected depths, four observables coincide:
+At every pair of selected spine indices, four observables coincide:
 
 ```text
 leaf-chain distance
@@ -26,7 +26,7 @@ leaf-chain distance
 = sqrt(Lorentz pairing/2).
 ```
 
-For the four depths
+For the four spine indices (whose rooted depths are one lower)
 
 ```text
 (F_(k-1),F_k,F_(k+1),F_(k+2)),       k>=4,
@@ -50,7 +50,7 @@ with one missing edge, or the corresponding total preorder.  Calling it a
 | Fibonacci selector | THM-3339's exact Cassini/Pell descent |
 | canonical hostile | THM-3345's source-dependent off-ray Berggren path costs |
 | corrected near miss | MISTAKE-394's tied root admitted to a product-`T6` support sentence |
-| least-used sidecar | one absolute root depth, plus adjacent/opposite edge incidence |
+| least-used sidecar | one absolute spine index (equivalently rooted depth plus one), plus adjacent/opposite edge incidence |
 
 The key distinction is between two graphs on the same six labels:
 
@@ -71,8 +71,9 @@ The key distinction is between two graphs on the same six labels:
    index set, not on the parabolic branch transition.
 4. **Six-distance preorder.**  A recurrence equality is visible as one
    missing comparison between adjacent `K4` edges.
-5. **Origin kernel.**  Pairwise distances determine depths only modulo common
-   translation; the recurrence is not invariant under that translation.
+5. **Origin kernel.**  Pairwise distances determine spine indices, and hence
+   rooted depths, only modulo common translation; the recurrence is not
+   invariant under that translation.
 6. **Full-germ repair.**  A harmonic total loses a subset, while its full
    Dirichlet germ recovers the coefficients.
 
@@ -84,7 +85,7 @@ an independent scalar-versus-germ instance of the same loss.
 
 ## The gap transplant is the mechanism
 
-Write an increasing window in gap coordinates:
+Write an increasing spine-index window in gap coordinates:
 
 ```text
 x_0<x_1<...<x_m,             g_i=x_(i+1)-x_i.
@@ -109,6 +110,10 @@ So the adjacent-edge tie is not numerology.  It is the first recurrence law
 of the gap sequence.  The other condition aligns the gap sequence with the
 vertex sequence at one marked origin.
 
+If `h_i=x_i-1` denotes actual rooted depth, the same index recurrence becomes
+`h_(i+1)=h_i+h_(i-1)+1`, and the marked seam is `d_12=h_0+1`.  Metric
+differences do not see this affine shift; absolute recurrence equations do.
+
 This also explains the sharp hostile:
 
 ```text
@@ -126,7 +131,7 @@ accidentally preserved the absolute Pell gate, but destroyed the marked seam
 |---|---|---|---|---|---|---|
 | fixed-cusp transplant | index `t` | fraction leaf and `U`-node | index difference | full Farey graph distance | fixed cusp and branch label | `t=1,4` |
 | Lorentz lift | ordered spinor `(t+1,t)` | null triple `P_t` | determinant square | determinant sign | chart order | swap hostile `(t,t+1)` |
-| four-window quotient | absolute depths | six distances | all differences | common translation | one depth | true/false pair above |
+| four-window quotient | absolute spine indices (rooted depths plus one) | six distances | all differences | common translation | one index/depth coordinate | true/false pair above |
 | weak order | six distances | five-level preorder | comparisons and equality | magnitudes | exact weights for reconstruction | `(2,4,7,12)` |
 | harmonic valuation | subset of `N` | one scalar at `s=1` | additive mass | term labels | full Dirichlet germ | `{2}` versus `{3,6}` |
 
@@ -138,7 +143,8 @@ q: Z^4 -> Z^6,          q(x)=(x_j-x_i)_(i<j),
 ```
 
 the kernel is the diagonal translation copy of `Z`.  The recurrence locus is
-not saturated under that kernel.  One absolute depth separates every seam.
+not saturated under that kernel.  One absolute spine index, equivalently one
+rooted depth with the chart shift remembered, separates every seam.
 This is structurally parallel, but not mathematically identified, with:
 
 - the divisor seam in the exact-six `k=2` body quotient;

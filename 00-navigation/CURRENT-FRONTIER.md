@@ -63,8 +63,8 @@ Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-241
 - THM-3333/3334/3336/3339/3341/3345--3347 type the Gaussian/Farey/Pell
   U-spine, root cube, signed Gram, and ancestry. THM-3353/3358 compile exact
   lanes; THM-3356 gives affine shells, THM-3357 the gate Horn rule, and
-  THM-3359 periodic index mass. THM-3454 adds a same-`U`-ray metric that needs
-  an origin. Content, normal unit, order, owner/phase, and mass remain
+  THM-3359/3454/3455 give periodic mass and `U`-ray metric/ranks; origin/time
+  remain. Content, normal unit, order, owner/phase, and mass remain
   sidecars; no global transduction, LRC row, or JC flux.
 - Test gaps, clocks, residues, endpoints, circuits and proof obligations;
   record every quotient loss.
