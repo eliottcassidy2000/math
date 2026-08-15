@@ -16,6 +16,27 @@
   Script/output LF-normalized SHA-256:
   `e60107df6d609d210c61ded6437f9a7e5323f029e271c094695d587989aafcd0` /
   `1b194ef30b97810b1890dbd6d5f3bde8f7ba9d5228bc3f44d03b97cfd5049310`.
+- `lrc_zero_mode_cochain_rank7_ancestor_scout_20260815.py` -> matching `.out`
+  [FINITE-EXACT TARGET-FREE Q2--200 BOTH-TWIST CAP-SEVEN CENSUS;
+  ALL-q DIVISOR ANTICHAIN HYPOTHESIS ONLY].  Outside the proved rank-at-most-six
+  bases `{8,9,10,11,12,15,23,25}`, the exact primitive positives through
+  `Q=200` have minimal divisor antichain `{13,14,29,38,51,68,148}`.  Within
+  this finite window, the global rank-seven degrees are exactly the target-free
+  multiples of those seven candidates.  The atom atlas records every sheet
+  multiplicity and its collision hypergraph: `Q=13,14` are partitions;
+  `Q=29,68` have only odd multiplicities and hence still satisfy sheet
+  `OR=XOR`; `Q=38,51,148` have respectively 4, 6, and 8 even-multiplicity
+  sheets, which are exactly the XOR defects.  This parity carrier is a
+  hypergraph, not a tournament.  The conditional rank-seven harmonic
+  coefficient `165741596/1554406815` and cumulative coefficient
+  `837065119/1554406815` are reported only under the unproved all-q antichain
+  hypothesis.  The solver examines 33,508 raw types and 1,885,285 states;
+  normal, optimized, and stored outputs are byte-identical after newline
+  normalization.  Script/output/semantic LF-normalized SHA-256:
+  `bcf80194bd5697b121b08b239f096d67d7e0214bbc81abf4a9fb1f6d939fa560` /
+  `95012438ffa2e36183ef3e56a9881c3daa52ddfe118abebfd02106b1b28f65a2` /
+  `dec1ecff2442edb765582647ba529b338a99aa0e04fb7f27313fe97ac92c406a`.
+  No all-q theorem and no LRC(14) ledger decrement.
 
 - `lrc_zero_mode_cochain_rank6_support_thm3416.py` -> matching `.out`
   [THM-3416 PROVED ALL-q GLOBAL RANK-SIX SUPPORT + VERIFIED-EXACT

@@ -11,6 +11,8 @@ five iff `(10|q or 12|q)` while `8` and `9` do not divide `q`;
 [THM-3416](../01-canon/theorems/THM-3416-zero-mode-cochain-global-rank-six-support.md)
 proves and independently audits global rank six on bases `11,15,23,25` after
 excluding lower bases `8,9,10,12`;
+FINITE-EXACT target-free rank-seven scout through `Q=200`, with candidate
+divisor antichain `{13,14,29,38,51,68,148}` and no all-q promotion;
 FINITE-EXACT unrestricted positive-transverse rank table for `15<=q<=28`,
 with independent union-state and exhaustive-combination solvers and literal
 witness replay.  No LRC(14) ledger decrement.
@@ -37,6 +39,7 @@ The live concept board is:
 | rank-five atom | anchor plus four disjoint petals | OR=XOR on sheets | divisor pullback | prime-breaker sidecar |
 | rank-six atom | anchor plus five petals | OR=XOR at 11/23/25 | divisor pullback | Q15 fixed-sheet collision |
 | exceptional orders | four-vertex directed graph | complement quota | anchor elimination | missing/bidirected edges |
+| rank-seven candidate atom | sheet collision hypergraph | parity defect of multiplicity | divisor pullback | pair shadow loses higher intersections |
 
 The exact connection contract is:
 
@@ -553,6 +556,52 @@ cumulative coefficient through rank six is `149/345`.  Fibonacci indices are
 on the full ternary tree, tracking triples modulo 56925 gives an exact finite
 automaton rather than a forced tournament.
 
+The next finite scout deliberately stays below theorem status.  It searches
+both twists, with the primitive prime-breaker gate retained, for every
+target-free `2<=Q<=200`.  The exact rank-seven positives have minimal divisor
+antichain
+
+```text
+{13,14,29,38,51,68,148}.                                (15)
+```
+
+Within the scanned window, every global rank-seven degree is exactly a
+target-free multiple of one of these seven candidates.  This is a finite
+observation and an all-`q` hypothesis, not a converse theorem.  The hostile
+controls `17,19,31,37,43,67,74,95,127,149,199` have no primitive cover of rank
+at most seven.
+
+The atom anatomy identifies a better carrier than a tournament.  Given block
+masks `B_i`, put `m(x)=#{i:x in B_i}` and define the parity-defect set
+
+```text
+E={x : m(x) is even}.                                    (16)
+```
+
+For a full OR-cover, `xor_i B_i` is exactly the complement of `E`.  Thus OR
+equals XOR if and only if every sheet has odd multiplicity.  The `Q=13,14`
+atoms are disjoint partitions.  Both `Q=29` atoms retain OR=XOR despite a
+single sevenfold or threefold collision, and `Q=68` retains it despite four
+copies of the same triple collision.  By contrast, `Q=38,51,148` have parity
+defects of sizes `4,6,8`.  Their multiply-covered sheets form a collision
+hypergraph on the seven owner blocks.  Its weighted pair graph is merely the
+two-section: it forgets whether a triangle came from one triple sheet or three
+pair sheets, precisely the information XOR needs.  This is the rigorous
+survivor of the tournament-of-four/six analogy: the rank-six exceptional-order
+graph schedules a proof, while the rank-seven positive carrier is genuinely
+higher arity.
+
+Rank seven also breaks the rank-six capacity shortcut for a structural reason.
+The exact half-twist maximum `h(m)` obeys `h(m)<=(m+6)/7`, so its density tends
+to the critical value `1/7`; the inequality `7h(m)>=m` does not yield a finite
+exceptional-order cutoff analogous to `(9)`.  Any all-`q` proof of `(15)` must
+therefore control overlap, not only block mass.  The cheapest promising
+invariants are the parity defect `(16)`, reflection-orbit missed sets, and a
+bounded breaker-state recurrence indexed by prime-order and lcm interactions.
+Under the unproved antichain hypothesis only, the rank-seven harmonic
+coefficient would be `165741596/1554406815` and the cumulative coefficient
+through rank seven would be `837065119/1554406815`.
+
 ## 8. Verification and new frontiers
 
 Run
@@ -590,17 +639,21 @@ endpoint controls `Q=7` half twist and `Q=14` zero twist fail, while adjacent
 scope repairs in MISTAKE-390; neither repair changes the cover theorem or its
 rank consequences.
 
-After THM-3416 the highest-value continuations are:
+After the rank-seven scout the highest-value continuations are:
 
 1. prove or refute the observed primitive rank-at-most-six boundary: divisors
    `8,9,10,12` plus isolated `Q=11,15,22,23,25`; literal pullback alone cannot
    settle its prime-breaker converse;
-2. attack global rank seven using the same divisor-monoid grammar, beginning
-   with an exact primitive/base census and an anchored obstruction graph;
+2. prove or refute the rank-seven antichain `(15)` by replacing the failed
+   density cutoff with an overlap/reflection recurrence; the first decisive
+   target is to show that every target-free seven-cover has a divisor among
+   `13,14,29,38,51,68,148`;
 3. intersect the q23 rank-six primitive half-twist with the reserved
    exceptional-edge leakage problem, keeping cover rank distinct from LRC
    row exclusion;
-4. analyze the modulo-56925 Berggren ternary automaton spectrally, without
+4. transport the collision parity defect `(16)` through Fibonacci and
+   Berggren recurrences, then analyze the modulo-56925 ternary automaton
+   spectrally, without
    inferring a limiting tree density from the finite depth-ten prefix;
 5. transport one zero-cochain certificate through the actual LRC body/core
    sidecars.  Formula `(7)` alone closes no row and leaves LRC(14) open.
