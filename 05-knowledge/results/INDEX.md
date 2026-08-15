@@ -1,5 +1,21 @@
 # Script Results Index
 
+- `near_identity_grassmannian_hensel_orbits_thm3439.py` -> matching `.out`
+  [THM-3439 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT /
+  INDEPENDENT AUDIT REQUIRED].  For odd `p`, if the first carry of
+  `U=I+p^cE` has no invariant `k`-plane, every orbit in every depth-`c`
+  `Gr_k(Z/p^a)` fibre has length `p^(a-c)`; the fibre splits into exactly
+  `p^((k(n-k)-1)(a-c))` cycles, so transitivity is unique to `P^1`.
+  An invariant plane fixes a whole first lifting fibre, while an irreducible
+  carry at `p=2` gives the sharp two-cycle hostile.  Exact controls enumerate
+  irreducible dimensions `2,3,4`, both `Gr_1/Gr_2`, depths `c=1,2`, a
+  `6,561`-point fibre, first-carry identities, and both failure boundaries.
+  Script/output/semantic LF SHA-256:
+  `bc8c27860aa62b9816f55243fc24c1fa72b4b0e1c83767a12c3a04166b14d492` /
+  `834d376ebd73d36329b8ac4853c1d42a07bc84fefe64a7cc5abd73791e694a50` /
+  `a446d26482fdcc5ac913ca882efea17fc2cd0603c27223532884d87d6b4cc51a`.
+  No LRC transport is claimed, and this candidate is not yet a dependency.
+
 - `jc_derived_boundary_jet_euler_thm3437.py` -> matching `.out`
   [THM-3437 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  At a repeated
   geometric boundary root, derived Artin reduction

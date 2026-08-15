@@ -1,0 +1,16 @@
+near-identity Grassmannian Hensel orbit controls
+irreducible_subspace_rows=7
+irreducible_rows=((3, (1, 0, 1), 1, 4, 0), (3, (1, 2, 0, 1), 1, 13, 0), (3, (1, 2, 0, 1), 2, 13, 0), (3, (1, 0, 1, 1, 1), 1, 40, 0), (3, (1, 0, 1, 1, 1), 2, 130, 0), (3, (1, 0, 1, 1, 1), 3, 40, 0), (5, (2, 0, 1), 1, 6, 0))
+orbit_cases=7
+orbit_row=(3, 2, 1, 1, 2, 3, 3, 1)
+orbit_row=(3, 2, 1, 1, 4, 27, 27, 1)
+orbit_row=(5, 2, 1, 2, 4, 25, 25, 1)
+orbit_row=(3, 3, 1, 1, 3, 81, 9, 9)
+orbit_row=(3, 3, 2, 1, 3, 81, 9, 9)
+orbit_row=(3, 4, 2, 1, 2, 81, 3, 27)
+orbit_row=(3, 4, 2, 1, 3, 6561, 9, 729)
+first_carry_checks=18
+invariant_plane_hostile=(3, 1, 2, 3, (((0,),), ((3,),), ((6,),)))
+prime_two_hostile=(((0, 1), (1, 1)), ((1, 2), (2, 3)), ((5, 0), (0, 5)), (2, 2))
+semantic_sha256=a446d26482fdcc5ac913ca882efea17fc2cd0603c27223532884d87d6b4cc51a
+script_lf_sha256=bc8c27860aa62b9816f55243fc24c1fa72b4b0e1c83767a12c3a04166b14d492
