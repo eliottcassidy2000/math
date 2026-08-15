@@ -11,6 +11,26 @@
   `3dcfc4f3f36ed658a64f3d45b7e055eb6bab10fa536522368a1aa3e32eab6332` /
   `0d9908f5695a64895fd1d78cace03340b35bf9831e3ebd1eb53747eb563fc01c`.
   Simple roots, integral splitting, and `JC(2)` remain outside scope.
+- `lrc_dyadic_fibre_grid_decomposition_thm3435.py` and
+  `lrc_dyadic_fibre_grid_census_thm3435.py` -> matching `.out` files
+  [THM-3435 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
+  INDEPENDENT AUDIT REQUIRED].  For every `Q=2^a R`, a literal half block
+  splits into a repeated `d=2^(a-b)=7q+c` grid over each odd-base fibre,
+  with exact count `2^b(q+epsilon_j)` and a cyclic-interval location sidecar.
+  At `d=1,2,4`, the projected radii are exactly `1/14,1/7,2/7`, but literal
+  coverage additionally needs the selected dyadic coset/orientation.  The
+  all-modulus identity is elementary; the target-free even cap-seven support
+  `{14,38,68,148}` is only FINITE-EXACT through `Q=362`, with `Q=366` the
+  first unclassified boundary.  Decomposition script/output/semantic
+  LF-normalized SHA-256:
+  `f4f613e95fea20a7cba98c5c13dd99c7eae2140256cd43e392a7e8f1d829c804` /
+  `b713d888b3832e80b54b5b0389f53b06d41f9ed0f6c3fdcd17c54809f35fa114` /
+  `c8033efed04555c46a3414c9dd99121a4ffc066b7e1c6489597c69d57922220c`.
+  Census script/output/semantic hashes:
+  `d301f0cc802b311e578109a571e85e1ecf1e81a20efdd688bc4c91b8dc6c530d` /
+  `df94ab3b8b085fb9ddaf668438d6b07af92c0095a3dfee5774c2c85e13fe5b0d` /
+  `35dfbba192b4b17b72cda5a019692a9af5ee1ce406f3ca4a7d7ff551fe349096`.
+  No all-`Q` even rank-seven classification or LRC(14) consequence follows.
 
 - `lrc_seventeen_fibre_two_sided_mass_closure_thm3434.py` -> matching `.out`
   [THM-3434 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The two-sided
