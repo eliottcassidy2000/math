@@ -26,7 +26,10 @@ Format per entry:
   half-grid partition is not a common-mode-centre certificate.  Equivalently,
   owner five has half-grid residue `h=1`, while the THM-3398 mode formula
   requires `gcd(15,5)=5` to divide `h`.  The first failed implication was
-  “`2quc` integral implies `c` belongs to the mode-centre lattice.”
+  “`2quc` integral implies `c` belongs to the mode-centre lattice.”  The
+  unique containing mode centres are `(0,1/120,1/150)` and their exact
+  THM-3398 pair cochain is `(-50,-50,100)`, with norms `(L1,Linf)=(200,100)`;
+  the failure is positive drift, not an endpoint ambiguity.
 - **Repair / strongest survivor:** THM-3405 supplies the missing mode
   divisibility and proves the genuine zero-cochain gauge has at most the two
   classes `a=0,g mod 2g`.  The divisor-chart artifact is renamed and typed as

@@ -69,7 +69,7 @@ EXPECTED_GLOBAL_MINIMA = (
     (27, 3),
     (28, 2),
 )
-EXPECTED_SEMANTIC_DIGEST = "96c3ee717ae8e0533192722fda29e3fd659c5c711abe69aefc85ed4ca808af6b"
+EXPECTED_SEMANTIC_DIGEST = "36e7223a3d2359c93066e5c0097d95e77fde386591a0a8d19c09e7c1d04720f6"
 
 
 def require(condition, detail):
@@ -93,6 +93,22 @@ def direct_mask(q, owner, centre):
         if 14 * distance < 1:
             mask |= 1 << sheet
     return mask
+
+
+def containing_single_atom_mode_centre(q, owner, block, physical_time):
+    order = q // gcd(q, owner)
+    residue_classes = {sheet % order for sheet in block}
+    require(len(residue_classes) == 1, (q, owner, block, residue_classes))
+    atom = next(iter(residue_classes))
+    scaled = owner * (physical_time + Fraction(atom, q))
+    floor_scaled = scaled.numerator // scaled.denominator
+    candidates = []
+    for tooth in range(floor_scaled - 2, floor_scaled + 3):
+        centre = Fraction(tooth, owner) - Fraction(atom, q)
+        if abs(physical_time - centre) < Fraction(1, 14 * owner):
+            candidates.append(centre)
+    require(len(candidates) == 1, (q, owner, block, physical_time, candidates))
+    return candidates[0]
 
 
 def chart_masks(q, kind, g):
@@ -499,6 +515,60 @@ def main():
         hostile_gauge_gcd,
         hostile_scalar,
     )
+    hostile_blocks = hostile_record[8]
+    hostile_mode_centres = tuple(
+        containing_single_atom_mode_centre(
+            15, owner, block, hostile_centre
+        )
+        for owner, block in zip(hostile_owners, hostile_blocks)
+    )
+    hostile_cochain = tuple(
+        (
+            left,
+            right,
+            2
+            * 15
+            * hostile_owners[left]
+            * hostile_owners[right]
+            * (hostile_mode_centres[left] - hostile_mode_centres[right]),
+        )
+        for left, right in combinations(range(len(hostile_owners)), 2)
+    )
+    require(
+        all(value.denominator == 1 for _, _, value in hostile_cochain),
+        hostile_cochain,
+    )
+    hostile_cochain = tuple(
+        (left, right, value.numerator) for left, right, value in hostile_cochain
+    )
+    hostile_cochain_values = {
+        (left, right): value for left, right, value in hostile_cochain
+    }
+    require(
+        hostile_owners[2] * hostile_cochain_values[(0, 1)]
+        + hostile_owners[0] * hostile_cochain_values[(1, 2)]
+        - hostile_owners[1] * hostile_cochain_values[(0, 2)]
+        == 0,
+        ("triangle closure", hostile_cochain),
+    )
+    hostile_l1 = sum(abs(value) for _, _, value in hostile_cochain)
+    hostile_linf = max(abs(value) for _, _, value in hostile_cochain)
+    require(
+        (hostile_mode_centres, hostile_cochain, hostile_l1, hostile_linf)
+        == (
+            (Fraction(0), Fraction(1, 120), Fraction(1, 150)),
+            ((0, 1, -50), (0, 2, -50), (1, 2, 100)),
+            200,
+            100,
+        ),
+        (hostile_mode_centres, hostile_cochain, hostile_l1, hostile_linf),
+    )
+    mode_centre_drift_hostile = (
+        hostile_mode_centres,
+        hostile_cochain,
+        hostile_l1,
+        hostile_linf,
+    )
 
     divisor_pullback_records = (
         tuple(divisor_pullback_record(q, 2) for q in range(8, 501, 2)),
@@ -530,6 +600,7 @@ def main():
                 capacity_sharp_support,
                 short_prime_pair_controls,
                 mode_centre_divisibility_hostile,
+                mode_centre_drift_hostile,
                 divisor_pullback_records,
             )
         ).encode("ascii")
@@ -548,6 +619,7 @@ def main():
     print(f"universal_block_capacity=(q,max_block,rank_lower_bound,exact_rank)={capacity};sharp_support={capacity_sharp_support}")
     print(f"q17_q19_central_plus_pair_controls={short_prime_pair_controls}")
     print(f"mode_centre_divisibility_hostile=(q,chart,c,owners,d,g,a)={mode_centre_divisibility_hostile}")
+    print(f"mode_centre_drift_hostile=(centres,pairs,L1,Linf)={mode_centre_drift_hostile}")
     print(f"divisor_pullback_family_audit_q_through_500=(prime,count,first_q,last_q,sha256)={divisor_pullback_audit}")
     print(f"normalization_audit=(q,odd_charts,odd_owner_rows,even_charts,even_owner_rows)={normalization}")
     for q, charts in records:

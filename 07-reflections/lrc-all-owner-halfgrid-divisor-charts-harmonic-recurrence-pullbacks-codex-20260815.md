@@ -179,6 +179,19 @@ centre residue must be divisible by `gcd(15,5)=5`.  Thus `(11a)` is a
 physical partition with nonzero relative mode-centre data, not a mobile
 common-mode-centre certificate.
 
+The containing mode is unique for each owner.  In owner order `(5,40,50)`,
+its centres and THM-3398 pair cochain are
+
+```text
+(x_5,x_40,x_50)=(0,1/120,1/150),
+(P_(5,40),P_(5,50),P_(40,50))=(-50,-50,100),          (11b)
+```
+
+where `P_ij=2q u_i u_j(x_i-x_j)`.  Triangle closure holds exactly and
+`(||P||_1,||P||_infinity)=(200,100)`.  This turns the typing correction into
+a first explicit cochain-leakage control: half-grid synchronization does not
+make the drift small, let alone zero.
+
 ### Owner replicas make dominance safe
 
 In `O(q,g)` a danger set depends only on `v mod q`; in `E(q,g)` it depends
