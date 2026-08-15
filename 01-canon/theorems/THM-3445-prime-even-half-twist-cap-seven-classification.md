@@ -2,13 +2,19 @@
 id: THM-3445
 title: "Target-free prime-even literal half-twist cap-seven classification"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  FULL-PACKAGE AUDIT REQUIRED.  The candidate proof classifies only
-  target-free literal half-twist covers on Q=2p, p an odd prime, by at most
-  seven distinct transverse owners.  Its exact support is p=7,19.  No
-  composite-even, arbitrary-time, decrement, or LRC(14) consequence is
-  claimed.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Target-free literal
+  half-twist covers on Q=2p, p an odd prime, by at most seven distinct
+  transverse owners have exact support p=7,19.  No composite-even,
+  arbitrary-time, decrement, or LRC(14) consequence is claimed.
 source: even-prime-rank7 typed interval and weighted-clique closure, 2026-08-15
+audit: >
+  independent theorem-universe, target-free period-descent, typed-size,
+  overlap-budget, line-section, parity/AP, A-orientation, tangent-threshold,
+  successive-minima, rational-descent, mod-240 graph, clique, finite-DFS,
+  boundary-stitch, and witness audits; clean-room graph and direct-mask
+  reconstruction; normal/optimized/stored and predecessor-atlas replays;
+  dependency, hash, AST/security, ID, routing, scope, and documentation gates
+  clean
 depends_on:
   - THM-3435-dyadic-fibre-grid-decomposition-for-literal-half-twists
 related:
@@ -24,9 +30,9 @@ hash_basis: LF-normalized bytes
 
 # THM-3445 -- target-free prime-even literal half-twist cap-seven classification
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-FULL-PACKAGE AUDIT REQUIRED.**  The argument and its exact finite companion
-are frozen for audit; this file is not yet a proved dependency.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**  The analytic argument,
+exact finite companion, and predecessor atlas passed independent derivation,
+clean-room graph, direct-mask, hostile-boundary, and replay audits.
 
 ## 1. Exact scoped statement
 
@@ -480,7 +486,7 @@ contains no Python `assert`.  Normal and optimized transcripts must equal the
 stored output byte for byte.  The exact dependency and semantic hashes are in
 the frontmatter and transcript.
 
-Until a separate auditor checks the analytic quantifiers, AP existence,
+An independent audit checked the analytic quantifiers, AP existence,
 orientation lifts, periodic graph proof, finite universe, and both execution
-modes, THM-3445 remains **RESERVED / PROVISIONAL** and must not be imported as
-a proved theorem.  In particular, LRC(14) remains open.
+modes.  Thus the target-free prime-even classification is proved in its stated
+scope.  In particular, LRC(14) remains open. **QED.**

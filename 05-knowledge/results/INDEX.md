@@ -16,16 +16,16 @@
   `317fbb4d6c074e76a3886a8653f4b6bb6423f97c135cff44c2df212722e85bb2`.
   No LRC, `JC(2)`, or boundary-response transport is claimed.
 - `lrc_prime_even_half_twist_cap7_classification_thm3445.py` -> matching
-  `.out` [THM-3445 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  INDEPENDENT FULL AUDIT REQUIRED].  For the target-free literal `Q=2p`
+  `.out` [THM-3445 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For the
+  target-free literal `Q=2p`
   cap-seven lane, the typed parity-constrained interval formula reduces every
   cross pair to exact line sections; the phase-free `a<100` table and
   `a>=100` plateau leave only four mixed height-eight tangencies, whose exact
   AP counts exceed eight from prime `p=607`.  The A/A lift bit, E/E
   successive-minima floor `10`, and all `64` typed zero graphs modulo `240`
-  then give clique number `6`.  The candidate stitches the pinned
-  FINITE-EXACT `p<=599` atlas to a direct negative `p=601` row and proposes
-  exact support `p=7,19`.  It remains unproved until a separate full audit.
+  then give clique number `6`.  The theorem stitches the pinned FINITE-EXACT
+  `p<=599` atlas to a direct negative `p=601` row and proves exact support
+  `p=7,19`; an independent full-package audit reconstructed every gate.
   Script/output/semantic LF-normalized SHA-256:
   `ca061487acdf56f3d0507ad55d9b33c5e9724ddb9d7fdba815d46a1b7deb4382` /
   `bcdef4ca8e5ba5a786be31aa6757f704f4aae0e7ae0953e504701acc7a4290f2` /
