@@ -13,7 +13,9 @@ Neumann inverse on the vertical factor, and the horizontal character gauge
     A_lambda(r*p)=r*(1-lambda/(a*y))*A_0(p) mod lambda**q.
 
 It then audits the selected N versus unselected N-1 special-fibre graph rank
-and the resulting free K[lambda]/lambda**q packet on a declared exact grid.
+and enumerates the resulting derived K[lambda]/lambda**q packet instances on
+a declared exact grid.  Freeness itself comes from the universal gauge above;
+the final grid is bookkeeping evidence, not an independent Smith computation.
 """
 
 from __future__ import annotations
@@ -236,9 +238,9 @@ def selected(
     )
 
 
-def check_special_graph_and_free_packets() -> tuple[int, int, int, int]:
+def check_special_graph_and_derived_packets() -> tuple[int, int, int, int]:
     graph_rank_checks = 0
-    free_packet_checks = 0
+    derived_packet_checks = 0
     selected_packets = 0
     unselected_packets = 0
     for d in range(2, 11):
@@ -287,13 +289,13 @@ def check_special_graph_and_free_packets() -> tuple[int, int, int, int]:
                                 all(length == jet_order for length in invariant_factors),
                                 ("jet freeness", d, sigma, exponents, i, jet_order),
                             )
-                            free_packet_checks += 1
+                            derived_packet_checks += 1
                         if predicted_selected:
                             selected_packets += 1
                         else:
                             unselected_packets += 1
 
-    return graph_rank_checks, free_packet_checks, selected_packets, unselected_packets
+    return graph_rank_checks, derived_packet_checks, selected_packets, unselected_packets
 
 
 def check_named_nonsplit_and_wrap_controls() -> int:
@@ -317,8 +319,8 @@ def main() -> None:
         check_factorization_and_vertical_inverse()
     )
     horizontal_gauges, second_jets, wrap_gauges = check_horizontal_gauge()
-    graph_ranks, free_packets, selected_packets, unselected_packets = (
-        check_special_graph_and_free_packets()
+    graph_ranks, derived_packets, selected_packets, unselected_packets = (
+        check_special_graph_and_derived_packets()
     )
     descent_controls = check_named_nonsplit_and_wrap_controls()
 
@@ -330,7 +332,7 @@ def main() -> None:
     print(f"explicit q=2 extension coefficient checks: {second_jets}")
     print(f"wrap sigma=d gauge identities: {wrap_gauges}")
     print(f"special-fibre graph H0/H1 ranks: {graph_ranks}")
-    print(f"free Artin jet packets: {free_packets}")
+    print(f"derived Artin jet packet instances: {derived_packets}")
     print(f"selected rank-N packets: {selected_packets}")
     print(f"unselected rank-(N-1) packets: {unselected_packets}")
     print(f"nonsplit/wrap descent controls: {descent_controls}")

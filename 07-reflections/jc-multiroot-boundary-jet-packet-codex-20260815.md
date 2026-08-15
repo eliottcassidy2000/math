@@ -2,10 +2,9 @@
 
 ## Status
 
-**READ-ONLY PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT.**  This reflection
-has no theorem identifier and is not a proved dependency.  It records a
-candidate higher-jet extension of the now independently audited THM-3433
-first-window law; the extension itself still requires an independent audit.
+**HISTORICAL PROOF REFLECTION; PROMOTED TO THM-3436.**  The theorem file is
+the current proof source.  This reflection preserves the derivation and exact
+probe contract; its original candidate has now been independently audited.
 
 ## 1. Candidate statement
 
@@ -24,6 +23,13 @@ lambda=P-beta_i,
 N=deg(rad(g)).
 ```
 
+Base-change the target character sector before using the geometric boundary
+coordinate:
+
+```text
+Cbar_(sigma-1)=C_(sigma-1) tensor_K K'.
+```
+
 Fix a **repeated** root `e_i>1`, target character `sigma-1` with
 `1<=sigma<=d` (where `sigma=d` is wrap), and jet order `q>=1`.  Put
 
@@ -34,7 +40,7 @@ R_q=K'[lambda]/lambda^q.
 The candidate law is
 
 ```text
-C_(sigma-1)/(P-beta_i)^q C_(sigma-1)
+Cbar_(sigma-1)/(P-beta_i)^q Cbar_(sigma-1)
  ~= R_q^c,                                                (1)
 
 c=N     if root i is THM-3433-selected in character sigma,
@@ -261,8 +267,9 @@ The companion checks:
   identities and `7` explicit `q=2` coefficients;
 - `126576` special-fibre graph ranks for
   `2<=d<=10`, one to four roots, and multiplicities one through five;
-- `506304` free Artin packets at jet orders `1,2,3,5`, split across `21686`
-  selected and `104890` unselected geometric root-character profiles;
+- `506304` derived Artin-packet instances at jet orders `1,2,3,5`, split
+  across `21686` selected and `104890` unselected geometric root-character
+  profiles (bookkeeping evidence; the operator gauge proves freeness);
 - the blocked `(4,2;3,1)` hostile, wrap controls, and the nonsplit profiles in
   `(19)`.
 
@@ -273,6 +280,6 @@ python3 04-computation/jc_multiroot_boundary_jet_packet_probe_20260815.py
 ```
 
 The finite grids audit the exact identities; they are not an extrapolated
-cutoff.  Promotion requires an independent audit of the CRT derivation,
-vertical Neumann inverse, horizontal gauge, special local-system rank, and
-faithful descent.
+cutoff.  THM-3436 records the completed independent audit of the CRT
+derivation, vertical Neumann inverse, horizontal gauge, special local-system
+rank, and faithful descent.

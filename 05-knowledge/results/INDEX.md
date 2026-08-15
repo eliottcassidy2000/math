@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `jc_multiroot_boundary_jet_packet_probe_20260815.py` -> matching `.out`
+  [THM-3436 PROVED + VERIFIED-EXACT + INDEPENDENTLY DERIVATION-AUDITED].
+  At every repeated geometric root, the target-character quotient modulo
+  `(P-beta)^q` is free over `K'[lambda]/lambda^q`, of rank `N` exactly in a
+  THM-3433-selected character and `N-1` otherwise.  CRT, `28` vertical
+  Neumann inverses, `35` horizontal gauges, `126,576` graph ranks, and
+  `506,304` derived packet instances are checked.  The last count is
+  bookkeeping; the unit conjugacy proves freeness.  Script/output LF SHA-256:
+  `3dcfc4f3f36ed658a64f3d45b7e055eb6bab10fa536522368a1aa3e32eab6332` /
+  `0d9908f5695a64895fd1d78cace03340b35bf9831e3ebd1eb53747eb563fc01c`.
+  Simple roots, integral splitting, and `JC(2)` remain outside scope.
+
 - `lrc_seventeen_fibre_two_sided_mass_closure_thm3434.py` -> matching `.out`
   [THM-3434 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The two-sided
   fibre invoice closes both residual towers `17^a` and `5*17^a`, including

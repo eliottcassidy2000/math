@@ -6,7 +6,7 @@ horizontal formal-gauge identities: 35
 explicit q=2 extension coefficient checks: 7
 wrap sigma=d gauge identities: 10
 special-fibre graph H0/H1 ranks: 126576
-free Artin jet packets: 506304
+derived Artin jet packet instances: 506304
 selected rank-N packets: 21686
 unselected rank-(N-1) packets: 104890
 nonsplit/wrap descent controls: 80
