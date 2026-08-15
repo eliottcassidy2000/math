@@ -10,10 +10,10 @@ THM-3288's degree-14 tail with prefix/Hankel order 15 is a sharp head tax.
 
 ## Keep the common source under cyclic blocker quotients
 
-**Trigger/action:** when clauses use cyclic quotients of one weighted cell/fibre set `C`, retain `C` and maps `phi_i:C->Z/d_i`. If `lambda_i` is the largest pullback-band weight, `sum lambda_i<w(C)` leaves one common source point; separately optimized quotient supports do not.
-**Mechanism:** this unifies weighted two-high windows, full-fibre gcd capacity and located cosets; `m` unit blockers miss a full order-`r` coset if `m ceil(r/7)<r`.
-**Counterindications:** equality needs the Boolean cover/measure locus; nonunits collapse torsion, while phase, endpoints, owner and height remain sidecars. At denominator two, forgetting height identifies graph edge `(1,9)` with nonedge `(1,3)`.
-**Evidence:** THM-3351 §4, THM-3385 §2, THM-3387 §§2,4; THM-2941/3378.
+**Trigger/action:** for cyclic quotients of one weighted source `C`, retain `C` and its maps; atomize kernel cosets before grouping owners. If maximal pullback weights satisfy `sum lambda_i<w(C)`, a common point survives.
+**Mechanism:** weighted windows, gcd capacity and located cosets unify; atom cover plus a complete affine cochain reconstructs the common-phase locus. Also, `m` unit blockers miss an order-`r` coset if `m ceil(r/7)<r`.
+**Counterindications:** equality needs Boolean cover or measure; nonunits collapse torsion, and phase/endpoints/owner/height remain sidecars. At denominator two, losing height merges edge `(1,9)` with nonedge `(1,3)`.
+**Evidence:** THM-3351 §4, THM-3385 §2, THM-3387 §§2,4, THM-3398; THM-2941/3378.
 
 ## Inventory retained power classes before classifying base-curve genus
 
