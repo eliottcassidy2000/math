@@ -130,6 +130,19 @@ whole class-group generator.  It also tautologically kills its own torsor
 monodromy after base change to the total space.  Neither fact controls the
 signs of a chosen rational function's boundary orders.
 
+The ordinary ring conductor does not replace that missing information.  In
+fact
+
+```text
+(R_e:S)={r in R_e : rS subset R_e}=0.                   (9a)
+```
+
+If a nonzero `r` belonged to this conductor, then `rx` would lie in `R_e`,
+so `x=(rx)/r` would lie in `Frac(R_e)`.  This contradicts the nontrivial
+`mu_e` action, or equivalently the degree-`e` field extension
+`Frac(S)/Frac(R_e)`.  Conductors are effective for birational orders inside
+one fraction field; a nontrivial quotient cover is a different use case.
+
 ## 4. Exact two-boundary denominator filtration
 
 Let
@@ -242,7 +255,9 @@ two-dimensional `F_2[C3]` compatibility packet, not merely three unrelated
 classes.  On the regular locus the polynomial quotient is a connected etale
 `V4` torsor.  Its pullback sends the three classes to the principal
 coordinate divisors `(x=0),(y=0),(z=0)`, so all three classes die
-simultaneously on the UFD `T`.
+simultaneously on the UFD `T`.  For the same unequal-fraction-field reason
+as `(9a)`, the cover conductor `(R_0:T)` is zero; it contains no hidden
+boundary repair.
 
 Nevertheless consider the three conjugate rational functions
 
@@ -301,7 +316,9 @@ height-one orders are nonnegative.  Passing to `Cl` quotients the divisor
 group by principal divisors and therefore discards precisely this sign
 information.  Trivializing a torsion line bundle makes a divisor principal;
 it does not make a specified rational trivialization regular or nowhere
-vanishing.  The missing coordinate is
+vanishing.  The zero cover conductors `(9a)` and `(R_0:T)=0` likewise show
+that the order-conductor mechanism applies only after a birational
+same-field model has been supplied.  The missing coordinate here is
 
 ```text
 effective divisor / principal-part data,
