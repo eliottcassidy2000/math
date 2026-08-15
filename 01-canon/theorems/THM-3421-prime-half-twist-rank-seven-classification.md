@@ -240,12 +240,18 @@ explicit universe is
 3<=p<512, p prime;
 1<=e<=7;
 197 scalar-feasible (p,e) profiles;
-seven distinct normalized block dilates.              (16)
+seven coefficient representatives, distinct modulo sign within each
+parity bank; accidental coincident masks retained.    (16)
 ```
 
-The distinct-dilate restriction loses no negative case.  A repeated mask in
-a seven-block cover is redundant and gives a cover by at most six blocks;
-THM-3416 already classifies those shorter prime covers as `p=11,23`.
+The coefficient-representative restriction loses no negative case.  If two
+same-parity blocks repeat a coefficient modulo sign, their masks coincide;
+deleting one gives a cover by at most six blocks, and THM-3416 already
+classifies those shorter prime covers as `p=11,23`.  The census does not
+identify accidental coincidences between inequivalent coefficient
+representatives: it retains them.  In particular, its positive `p=11,e=2`
+profile uses two inequivalent even coefficients whose masks are the same
+reflection-fixed singleton.
 
 The positive support is exactly
 
