@@ -29,8 +29,8 @@ hash_basis: LF-normalized bytes
 
 ## 1. Candidate statement and scope
 
-For a prime `p` and a transverse residue `r` modulo `2p`, retain the literal
-half-twist mask from THM-3420,
+For a prime `p` and a transverse residue `r` modulo `2p` (`p` does not divide
+`r`), retain the literal half-twist mask from THM-3420,
 
 ```text
 H_(p,r)={ell in Z/pZ: ||r(2ell+1)/(2p)||<1/14}.        (1)
@@ -114,7 +114,14 @@ every odd-numerator block avoids it, so `e>=1`.  An even block has size
 
 Let `Omega` be total block mass minus `p`.  The fixed sheet already costs
 `e-1` units of overlap, while every remaining overlap comes in reflection
-pairs.  Direct substitution gives
+pairs.  If `B` is the sum, over nonfixed reflection orbits, of multiplicity
+minus one, then
+
+```text
+Omega=(e-1)+2B.
+```
+
+Direct substitution also gives
 
 ```text
 s in {1,3,5}:     Omega=e-s;
@@ -235,6 +242,10 @@ explicit universe is
 197 scalar-feasible (p,e) profiles;
 seven distinct normalized block dilates.              (16)
 ```
+
+The distinct-dilate restriction loses no negative case.  A repeated mask in
+a seven-block cover is redundant and gives a cover by at most six blocks;
+THM-3416 already classifies those shorter prime covers as `p=11,23`.
 
 The positive support is exactly
 
