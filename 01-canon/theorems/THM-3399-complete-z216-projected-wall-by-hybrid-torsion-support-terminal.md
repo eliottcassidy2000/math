@@ -1,12 +1,12 @@
 ---
-id: THM-3394
+id: THM-3399
 title: "Complete z1=216 projected wall by hybrid torsion and support terminals"
 status: "RESERVED / UNPROVED EMPTY STUB"
 source: root/lrc14-projected-wall/2026-08-14
 depends_on: []
 ---
 
-# THM-3394 -- complete z1=216 projected wall by hybrid torsion and support terminals
+# THM-3399 -- complete z1=216 projected wall by hybrid torsion and support terminals
 
 **RESERVED / UNPROVED EMPTY STUB.**
 

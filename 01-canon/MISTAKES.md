@@ -12,7 +12,7 @@ Format per entry:
 ## MISTAKE-387 (2026-08-14, projected `z1=216` wall) -- a prefix-only positive two-high gap was extrapolated to the whole live wall
 
 - **What failed:** THM-3351 established a positive duplicate-permitting
-  two-high gap on selected prefix bodies.  The first THM-3394 verifier silently
+  two-high gap on selected prefix bodies.  The first THM-3399 verifier silently
   promoted that prefix fact to every post-THM-3378 live row and required
   `two_gap>0`, thereby strengthening the lawful “at least one high” gate to
   the false statement “exactly one high everywhere.”
