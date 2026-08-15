@@ -209,8 +209,10 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
 - THM-2013/2016 bound cyclic temperature/reducibility; `H` remains empirical.
-- THM-2290 makes the endpoint-colour-selected matching kernel hafnian-complete and limits universal Pfaffian tournament gauges to orders two and four.
-  THM-2294 reconstructs an anchored contraction from its Plucker edge field: real antisymmetric signs can orient, while symmetric character data are colours. THM-2501 makes the first nonconstant even moment of a symmetric sign switching problem exactly signed-`C4`/Gram energy, whereas a skew tournament matrix has identically zero quadratic form. These swap-parity boundaries do not license tournamentizing matching or handoff fibres.
+- THM-2290 makes the endpoint-colour-selected matching kernel hafnian-complete and restricts universal Pfaffian tournament gauges to orders `2,4`.
+  THM-2294: antisymmetric signs orient; symmetric character data are colours.
+  THM-2501 identifies signed-`C4`/Gram energy as symmetric switching's first nonconstant even moment; skew quadratic forms vanish.
+  THM-3392 gives the sharp bipartite-lift law `Q<=B<=2Q`; disjoint ternary supports are the lost sidecar, and strict sign loss starts at `n=6`. None licenses tournamentizing matching or handoff fibres.
 
 ### Live work and limits
 

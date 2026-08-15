@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `switching_bipartite_synchronization_thm3392.py` -> matching `.out`
+  [THM-3392 PROVED + VERIFIED-EXACT + HOSTILE-AUDITED]. For every real
+  symmetric zero-diagonal matrix, the bipartite and synchronized sign norms
+  satisfy `Q<=B<=2Q`. Disjoint ternary polarization gives the upper bound,
+  and a Sylvester-Hadamard two-block sign family makes the factor two
+  asymptotically sharp. Exact switching-class exhaustion through order six
+  finds `B=Q` through order five and histogram `{1:1012,6/5:12}` at order
+  six; the canonical strict witness has `Q=10,B=12`. Diagonal and skew
+  `Q=0<B=2` hostiles show both hypotheses are essential. Ordinary and
+  optimized runs are byte-identical. Source/output SHA-256:
+  `fad03eca02ec8da0a4bd51ba1ff54e3830636b6c49b4fa563299e25d5865fae9` /
+  `d2ef8e250c05eeaae2930c72737f67de6315faeb0406a081302286de9913f2f3`.
+
 | `factorial_hfc3_fourier_kernel_degree4_probe_thm3304.out` + alternating-quintic companion | [PROVED + VERIFIED-EXACT; FINITE-EXACT MOD-103 SIDECAR; DEGREE-FOUR CELL OPEN IN THIS COMPUTATION; THM-3304] | In Fourier barycentric coordinates, `sum N_(r,s)u^r v^s/(r!s!)=1/(1-u^3-v^3-3uv)`, so `<a^r b^s>` vanishes exactly off the `C3`-balanced congruence and is strictly positive on it.  This forces shortest closed coefficient-phase covering width at least `pi/3` for a cubic-null vector in the five-dimensional degree-four cyclic cell; THM-3310 later sharpens the inequality to strict and THM-3321 closes support four.  Independently, every alternating quintic is `V(Ae1^2+Be2)`, and its exact second/fourth moment numerators have resultant `846709600` with nonzero infinity coefficients `7,111`, excluding that entire HFC(3) cell.  Support/Fourier/output SHA-256: `1c7058df1bbd72b6f2eec7ebb9c06e49a09218df41a96bd4edf6d85e11d5394a` / `6bb43cf838c50124677ddbb88bd034d23608d8a6e9aae1c5b4e079623a1fa817` / `74c3fd06b528bb5e858b3db413788f058ea5d272484fe73e75354c7ae26c3ca5`; sign script/output: `8b94cc7792ce79df1b78813b60acb8a2ffc6e4994b0fb646319b59932de2f239` / `21935d028698ff34400e5652a2d81ee3cb17b3e7baab240a6cc4635cb2876c8f`. | root/cross-frontier-35-81-2026-08-03 |
 
 | `gmc_coprime_selector_geodesic_potentials_thm3280.out` + independent audit | [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-3280] | In the saturated augmentation basis of `Z[C12]`, the selector word has SNF `(1^10,35)` and the clutch-product-minimizer edge-parity word has SNF `(1^9,9,9)`, so their coprime defects complete the full rank-eleven lattice; a direct mixed minor is `+1`, and completion holds after any integral alignment. The independent no-SymPy audit refutes a physical common-vertex reading: `j12(16)=j12(18)` while `ell(16)!=ell(18)`, the pulled-back word has mass eight, rank eight and SNF `(1^7,2,0,0,0)`, and ordinary hop parity has index eight/SNF `(1^8,2,2,2)` rather than defect 81. This is abstract gauge completion only, with no FC/LRC/GMC decrement. Primary script/output SHA-256: `85d86e7707a852425a33108182559437a73f92979d9491f1221b19296336c017` / `97065ac5eeaaaa12136cf1f4c9d2e7aed665e6d10f9f37aaed27f7a41fc6a10c`; independent: `27d8f6b736649783ad8a4c7542fc0460c9cb1b52db80f177785af7f6783c1b6c` / `35728e8928c7b7a7686dbf3d2c148be84b0329f9a617f8dbe18940d5c5f0e49f`. | root/cross-frontier-35-81-2026-08-03 |
