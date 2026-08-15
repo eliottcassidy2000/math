@@ -2,17 +2,17 @@
 id: THM-3389
 title: "Four-sheet typed cover clutter"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On a
-  four-sheet fibre, odd transverse speeds block singleton sheets and speeds
-  congruent to two modulo four block antipodal pairs.  Inclusion-minimal full
-  covers therefore have block partitions 2+2, 2+1+1, or 1+1+1+1.  An exact
-  complete affine gap cochain with zero triangle circulation decides common
-  phase.  The literal clutter has 36 edges of ranks (2:4,3:15,4:17),
-  independence profile (1,11,51,118,123,44,3,0,...), and classifies all 619
-  q=4 rows of THM-3387, with no core rescue.  It gives no refined-ledger
-  decrement or LRC(14).
+  PROVED analytic complete-cochain criterion + FINITE-EXACT literal q=4
+  clutter/atlas + INDEPENDENTLY HOSTILE-AUDITED.  On a four-sheet fibre, odd
+  transverse speeds block singleton sheets and speeds congruent to two modulo
+  four block antipodal pairs.  Inclusion-minimal full covers therefore have
+  block partitions 2+2, 2+1+1, or 1+1+1+1.  An exact complete affine gap
+  cochain with zero triangle circulation decides common phase.  The literal
+  clutter has 36 edges of ranks (2:4,3:15,4:17), independence profile
+  (1,11,51,118,123,44,3,0,...), and classifies all 619 q=4 rows of THM-3387,
+  with no core rescue.  This gives no refined-ledger decrement or LRC(14).
 source: codex-2026-08-14-q4-typed-cover-clutter
-audit: independent blocker-typing, affine-coboundary, generalized-CRT, circular-Helly, endpoint, census, and replay audit
+audit: independent blocker/CRT/Helly proof, 4950 rank-two pairs through 400, 6525 rank-three cases through 60, 5985 rank-four cases through 41, exact atlas replay, endpoint hostile, dilation and harmonic audit
 depends_on:
   - THM-3387-exact-cyclic-sheet-cover-atlas-and-q2-gcd-graph
 related:
@@ -20,20 +20,21 @@ related:
   - THM-3366-all-sector-complement-clock-completion
 script: 04-computation/lrc14_q4_typed_cover_clutter_thm3389.py
 output: 05-knowledge/results/lrc14_q4_typed_cover_clutter_thm3389.out
-script_sha256: bc96b1c511732f31101cfa67a954670d4799f85d9a35a1135ac686cf37b9e528
-output_sha256: 2b4192cd2fad63a8da356d3303f550ad5f3a43ba62ecd6fa6457318e2959dc03
+script_sha256: cd963c20ff47c9840222c6bfd95088e3d649ac90edd518353c0f64f4f5ec9bfd
+output_sha256: 45459e60a69bea9d7e99746fb1b1ad8dc8f79506bb27eb7f287f887c38270adc
 semantic_sha256: 5e19b6e083e8b1faf6c1a082c6e321f148b2e5ff85bf93aa1d15c92542bf87b2
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3389 -- four-sheet cover is a typed clutter, not a tournament
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED analytic complete-cochain criterion + FINITE-EXACT literal `q=4`
+clutter/atlas + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Inheritance and connection contract
 
 THM-3387 identifies full sheet cover as the exact transverse obstruction.
-THM-3388's `q=3` analysis shows why pairwise compatibility needs
+THM-3388's proved `q=3` analysis shows why pairwise compatibility needs
 an integral phase cochain.  At `q=4`, the new feature is not a larger
 tournament: blocker vertices themselves have two different sheet capacities.
 
@@ -135,14 +136,19 @@ z_i+s in (1/u_i)Z-k_i/4,
 z_j+s in (1/u_j)Z-k_j/4                                (10)
 ```
 
-are compatible.  After one common denominator is cleared, these are ordinary
-integer congruences.  Pairwise compatibility is sufficient by the generalized
-CRT, so one shift `s` puts every `z_i+s` in its required centre lattice.
+are compatible.  Choose a common denominator `M` for the potentials and the
+candidate shift.  Multiplying `(10)` by `M` produces ordinary integer
+congruences modulo `M/u_i`; their pairwise compatibility is necessary and
+sufficient by the generalized CRT.  Thus one shift `s` puts every `z_i+s` in
+its required centre lattice.
 
-The second inequality in `(7)` makes every pair of owner intervals overlap.
-A pairwise-intersecting family of circular arcs with empty total intersection
-must cover the circle, but the total length here is at most `4/7<1`.  Hence
-all owner intervals share one source time.  We have proved:
+The second inequality in `(7)` makes every pair of selected owner intervals
+overlap.  For the real lifts supplied by the CRT, ordinary one-dimensional
+Helly gives a common open interval.  Equivalently, the circular-arc argument
+works because a pairwise-intersecting family with empty total intersection
+would cover the circle, whereas these selected intervals have total length at
+most `4/7<1`.  Hence all owner intervals share one source time.  We have
+proved:
 
 ```text
 a typed partition in (3) is a full-cover edge
@@ -218,6 +224,11 @@ Orienting the pairs adds a gauge but not the integral gap value or its cycle
 class.  A simultaneous antipodal block is also literal data: replacing it by
 two cosmetic arcs forgets their common owner.
 
+Strictness is essential.  The smallest closed-boundary-only typed cover is
+`(2,5,7)` with cochain `(-2,-2,2)`: at `t=15/28`, speeds `2` and `5` touch
+their danger boundaries while speed `7` fires centrally.  Replacing `<` by
+`<=` would therefore add a false rank-three edge.
+
 Positive cochain controls are
 
 ```text
@@ -229,7 +240,7 @@ Positive cochain controls are
 
 ## 7. Typed ternary ancestry and harmonic support
 
-Multiplying every speed by an odd integer preserves blocker species.  Under
+Multiplying every speed by a positive odd integer preserves blocker species.  Under
 the source-time rescaling, sheet label `k` is permuted to `sk mod 4`; hence
 common odd dilation preserves full-cover edges.
 
@@ -250,6 +261,8 @@ the distinct-support and word-weighted masses obey
 1001W_(d+1)=311W_d.                                    (20)
 ```
 
+Here the first recurrence holds for `d>=3`, and the second for `d>=0`.
+
 The full orbit is a structured subset of the harmonic series with mass
 
 ```text
@@ -257,7 +270,7 @@ The full orbit is a structured subset of the harmonic series with mass
 =109109/64800.                                          (21)
 ```
 
-As in THM-3388's ternary orbit, ancestry words, exponent-lattice
+As in THM-3388's proved ternary orbit, ancestry words, exponent-lattice
 support, collision multiplicity, and harmonic weight remain four distinct
 representations.
 
@@ -275,6 +288,14 @@ The standard-library companion:
   rank; and
 - checks sixteen ternary dilation shells, collision counts, recurrences, and
   exact harmonic mass.
+
+An independent hostile audit then proved the blocker classification and the
+CRT/Helly converse afresh; checked all `4,950` rank-two pairs through `400`,
+all `6,525` typed rank-three cases through `60`, and all `5,985` odd
+rank-four cases through `41`; reconstructed the `36`-edge clutter and every
+one of the `2,541` atlas rows from `1,042` exact event samples; and recovered
+`619` exact rows with no core rescue.  New pairwise-only hostiles
+`(10,1,41)` and `(1,3,27,5)` survived beyond the companion's cutoffs.
 
 It has no floating literal or optimization-dependent `assert`.  Reproduce
 with

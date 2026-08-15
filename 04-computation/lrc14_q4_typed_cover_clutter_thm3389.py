@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact q=4 typed cover clutter for provisional THM-3389.
+"""Exact q=4 typed cover clutter for proved THM-3389.
 
 Odd transverse speeds block singleton sheets; speeds congruent to two modulo
 four block antipodal pairs.  Minimal full covers therefore have block-size
@@ -459,7 +459,7 @@ def main():
     print("THM-3389 Q4 TYPED COVER CLUTTER")
     print(f"source_sha256_lf={lf_hash(source)}")
     print(f"dependency_sha256_lf={tuple((name, expected) for name, _, expected in PINNED)}")
-    print("status=PROVED analytic complete-cochain criterion plus VERIFIED-EXACT literal q4 clutter and atlas;independently_hostile_audited")
+    print("status=PROVED analytic complete-cochain criterion plus FINITE-EXACT literal q4 clutter and atlas;independently_hostile_audited")
     print("blocker_species=odd:singleton;2mod4:antipodal_pair;minimal_partitions=2+2,2+1+1,1+1+1+1")
     print("gap_cochain=p_ij=4u_i u_j(x_i-x_j);affine_congruence_and_pair_overlap_plus_zero_triangle_circulation")
     print(f"audit_checks=rank2:{pair_checks},rank3:{rank3_checks},rank4:{rank4_checks}")
@@ -472,8 +472,8 @@ def main():
     print(f"q4_body_candidates={candidates};global_transverse_rows={global_rows};exact_rows={exact_rows};core_rescues={tuple(rescues)}")
     print("body_identity=3I5+3I4+I3=3*44+3*123+118=619")
     print(f"typed_ternary_dilation=roots:{roots},multipliers:{multipliers};checks={dilation_checks};orbit_mass={orbit_mass}")
-    print("harmonic_support_recurrence=1001H_d=311H_(d-1)-31H_(d-2)+H_(d-3)")
-    print("harmonic_word_recurrence=1001W_(d+1)=311W_d")
+    print("harmonic_support_recurrence=1001H_d=311H_(d-1)-31H_(d-2)+H_(d-3),d>=3")
+    print("harmonic_word_recurrence=1001W_(d+1)=311W_d,d>=0")
     print("typing=nonuniform_cover_clutter_with_block_sizes_and_exact_affine_Kr_cochain;not_tournament")
     print("scope=classifies_q4_slice_of_T3387;no_core_rescue;no_new_refined_ledger_decrement;no_LRC14")
     print(f"semantic_sha256={digest}")

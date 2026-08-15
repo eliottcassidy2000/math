@@ -1,7 +1,7 @@
 THM-3389 Q4 TYPED COVER CLUTTER
-source_sha256_lf=bc96b1c511732f31101cfa67a954670d4799f85d9a35a1135ac686cf37b9e528
+source_sha256_lf=cd963c20ff47c9840222c6bfd95088e3d649ac90edd518353c0f64f4f5ec9bfd
 dependency_sha256_lf=(('THM-3387', 'c540255a185efb54c67035d69f3fbd94f4c1ad3e30c4e31738a8800e81198613'), ('THM-3387-script', '9b0b46874a569d674b937b37cf74a8985fca2b77e3e480a75fb4924ea602f25a'), ('THM-3387-output', 'b4d9ce439bab4501bfd5e2cf13eb0b0e3685b7364f30e43b7d5ca9138d25cb5c'))
-status=PROVED analytic complete-cochain criterion plus VERIFIED-EXACT literal q4 clutter and atlas;independently_hostile_audited
+status=PROVED analytic complete-cochain criterion plus FINITE-EXACT literal q4 clutter and atlas;independently_hostile_audited
 blocker_species=odd:singleton;2mod4:antipodal_pair;minimal_partitions=2+2,2+1+1,1+1+1+1
 gap_cochain=p_ij=4u_i u_j(x_i-x_j);affine_congruence_and_pair_overlap_plus_zero_triangle_circulation
 audit_checks=rank2:1225,rank3:1900,rank4:715
@@ -14,8 +14,8 @@ positive_cochains=rank2:((0, 1, -4),);rank3:((0, 1, -2), (0, 2, 2), (1, 2, 2));r
 q4_body_candidates=2541;global_transverse_rows=619;exact_rows=619;core_rescues=()
 body_identity=3I5+3I4+I3=3*44+3*123+118=619
 typed_ternary_dilation=roots:(1, 9, 10),multipliers:(7, 11, 13);checks=816;orbit_mass=109109/64800
-harmonic_support_recurrence=1001H_d=311H_(d-1)-31H_(d-2)+H_(d-3)
-harmonic_word_recurrence=1001W_(d+1)=311W_d
+harmonic_support_recurrence=1001H_d=311H_(d-1)-31H_(d-2)+H_(d-3),d>=3
+harmonic_word_recurrence=1001W_(d+1)=311W_d,d>=0
 typing=nonuniform_cover_clutter_with_block_sizes_and_exact_affine_Kr_cochain;not_tournament
 scope=classifies_q4_slice_of_T3387;no_core_rescue;no_new_refined_ledger_decrement;no_LRC14
 semantic_sha256=5e19b6e083e8b1faf6c1a082c6e321f148b2e5ff85bf93aa1d15c92542bf87b2
