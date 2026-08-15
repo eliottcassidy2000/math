@@ -53,11 +53,12 @@
   condition for fixed literal owners.  Script/output/semantic LF-normalized
   SHA-256:
   `70c176e1a056d285471a07d1d011a26070ff288c3cee5ec39971d349d416de31` /
-  `582b901b61675baa0ea309150158d991284494ddd7aac3b72ea9e4288c4085e6` /
+  `52684d84bba6076c760285937e29cfd4a81c998324d6a9019e2919d4f764ab5d` /
   `233c092a9b73dcf8a40b9c21b52b99e322b059f003554bd79721bae317c30c7e`.
   codex-2026-08-15 THM-3405 divisor ancestry, Boolean prime-breaker
   realization, literal pullback audit, and independent rare-coordinate
-  hostile audit.
+  hostile audit.  MISTAKE-391 repairs the formerly stale indexed output hash;
+  normal and optimized fresh replays match the committed transcript exactly.
 
 - hadamard_twelve_order_bank_thm3394.py plus immutable signword data ->
   matching output [THM-3394 PROVED + VERIFIED-EXACT + INERT RECONSTRUCTION +

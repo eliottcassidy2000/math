@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-391 (2026-08-15, zero-cochain rank artifact) -- the indexed output hash did not name the committed transcript
+
+- **What failed:** the results index recorded LF-normalized output SHA-256
+  `582b901b...4085e6` for
+  `lrc_unrestricted_zero_mode_cochain_rank_probe_20260815.out`, but that hash
+  does not equal the committed file.
+- **Minimal witness / first failed implication:** direct hashing of the
+  committed `6,745` LF bytes gives
+  `52684d84bba6076c760285937e29cfd4a81c998324d6a9019e2919d4f764ab5d`.
+  Fresh normal and optimized replays are byte-identical after LF
+  normalization and give that same hash.
+- **Repair / strongest survivor:** replace only the stale index hash with
+  `52684d84...764ab5d`.  The source hash, semantic digest
+  `233c092a...30c7e`, theorem statements, witnesses, and every audit result
+  are unchanged.
+- **Reusable rule:** never copy an output hash from working notes.  Hash the
+  committed path and an independent fresh replay in both normal and
+  optimized modes before publishing the artifact tuple.
+
 ## MISTAKE-390 (2026-08-15, zero-cochain divisor ancestry) -- two lift lemmas were stated beyond their used cover scope
 
 - **What failed:** the first divisor-ancestry reflection said without a
