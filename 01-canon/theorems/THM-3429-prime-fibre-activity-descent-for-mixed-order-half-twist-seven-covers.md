@@ -2,12 +2,13 @@
 id: THM-3429
 title: "Prime-fibre activity descent for mixed-order half-twist seven-covers"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / AUDIT REQUIRED.
-  Target-free odd joint-period cap-seven covers use only primes
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Transverse target-free
+  odd joint-period cap-seven covers use only primes
   {3,5,13,17,29}; outside divisors 13,29,51 only the towers 17^a and
   5*17^a remain.  Q=51 forces an affine lift cocycle.  This is a reduction,
   not a classification; arbitrary common time and LRC(14) remain open.
 source: codex2 base descent plus rank7-reflection fixed-fibre strengthening, 2026-08-15
+audit: independent statement-universe, prime-power pullback, strict-capacity, fixed-fibre parity, support/tower, Q51 lift-cocycle, p7 closure, dual-companion, hash, normal/-O, security, and documentation audit CLEAN
 depends_on:
   - THM-3416-zero-mode-cochain-global-rank-six-support
   - THM-3421-prime-half-twist-rank-seven-classification
@@ -16,21 +17,20 @@ related:
   - THM-3428-rough-maximal-order-half-twist-rank-seven-exclusion
 script: 04-computation/lrc_prime_fibre_activity_descent_thm3429.py
 output: 05-knowledge/results/lrc_prime_fibre_activity_descent_thm3429.out
-script_sha256: ffd5d407b45891bcac30a15e0f0ea92a9ff207c539c984f3c9c55f5f8b5040a0
-output_sha256: b70350a6aa7f3278e65f22088a8d67650c05a0668a2638426a0943cace1911e3
-semantic_sha256: b1b1a9c9e3b925ae660237db6280a52321ce59b1ca0e823f53ebeadb209f2249
+script_sha256: 2de78875810a95eaa1ccdddfd4a91cac4db5ea32bcbe384a635f1045d5a692c7
+output_sha256: 75b6d84866f38c826b4e26e1374f7d45aa233704de47e37dc3499bf5b0689f99
+semantic_sha256: c46b24a98d32f83e1933276372e8bc1688ac9d3c3efa54c154ec19fcd1094c2d
 independent_script: 04-computation/lrc_rank7_prime_fibre_activity_descent_thm3429.py
 independent_output: 05-knowledge/results/lrc_rank7_prime_fibre_activity_descent_thm3429.out
-independent_script_sha256: 5ea4a9830f77a984aa7db83124ada94a498ed8f7687164533919545cd207f23f
-independent_output_sha256: 2ad7b43fd9afb14539438f2a17d4f458a7af6dbf3bd3deb947f8740099d7c316
-independent_semantic_sha256: d65463e762b3ba39e6cbbf13daeba73f9b689f9051ec460ac7d6ec27eaeece85
+independent_script_sha256: f89f31256715615babe7ffec792363f9149134a5d02cf20db906ed45c210f1a8
+independent_output_sha256: ba5196cfa2f8ec82c2cd4fb0320181375334c85525fdb8a5b9e891f2f613c2cf
+independent_semantic_sha256: c3b8596233d20f55e5c0bf0419c5f3f627cbf371e3004a5f40ab8a582a09b9f8
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3429 -- prime-fibre activity descent for mixed-order half-twist seven-covers
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Statement
 
@@ -49,7 +49,14 @@ A_6={8,9,10,11,12,15,23,25}.                           (2)
 ```
 
 Assume that no member of `A_6` divides `Q`, and that residues
-`R=(r_1,...,r_s)`, `s<=7`, satisfy
+`R=(r_1,...,r_s)`, `s<=7`, are **transverse modulo `2Q`**, meaning
+
+```text
+Q does not divide r_i for every i.                           (3a)
+```
+
+Thus neither the universal residue `r=0` nor the empty residue `r=Q` is an
+allowed owner.  Assume further that
 
 ```text
 union_i B_(Q,r_i)=Z/QZ,
@@ -112,7 +119,7 @@ all six remaining owners on that fibre.
 
 | field | exact connection |
 |---|---|
-| source | joint-period odd half-twist covers by at most seven literal blocks |
+| source | transverse joint-period odd half-twist covers by at most seven literal blocks |
 | target | active/inactive owner profiles over one prime coordinate |
 | map | `Z/QZ -> Z/(Q/p)Z` together with one fibre of size `p` |
 | preserved | strict endpoints, literal union, owner count, and the full `p`-adic order bit |
@@ -292,10 +299,11 @@ fibre in `(22)`; and verifies the strict `p=7` boundary.  Normal and optimized
 outputs are intended to be byte-identical.
 
 The independently written `lrc_rank7_prime_fibre_activity_descent_thm3429.py`
-is retained as a broader finite audit of `(11)--(15)`: it checks every residue
-on every prime fibre of all odd composite `Q<=315`.  Its `p=7` equality row is
-a sharp capacity boundary for seven active owners, not a surviving mixed-prime
-lane; Section 5's fixed-fibre restriction is the additional obstruction.
+is retained as a broader finite audit of `(11)--(15)`: it checks every
+transverse residue on every prime fibre of all odd composite `Q<=315`.  Its
+`p=7` equality row is a sharp capacity boundary for seven active owners, not a
+surviving mixed-prime lane; Section 5's fixed-fibre restriction is the
+additional obstruction.
 
 This theorem classifies neither tower in `(8)`.  It supplies no arbitrary-time
 cover, physical runner row, rank-seven antichain completeness, or LRC(14)

@@ -15,24 +15,39 @@
   No unconstrained fixed-rank, mixed rank-seven, or LRC(14) claim follows.
 
 - `lrc_prime_fibre_activity_descent_thm3429.py` -> matching `.out`
-  [THM-3429 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  INDEPENDENT AUDIT REQUIRED].  For an odd joint-period half-twist cover by
-  at most seven blocks outside the proved rank-at-most-six bases, a prime
-  coordinate omitted by some owner is one of `3,5,17,29`; an all-active
-  coordinate is `13` or `29`.  Thus the modulus has prime support inside
-  `{3,5,13,17,29}`, every quotient coindex is `{3,5,17,29}`-smooth, and after
-  removing the known divisor atoms `13,29,51`, the odd composite frontier is
-  reduced to `17^a` and `5*17^a`.  The exact companion checks inactive
-  projection, strict fibre capacity, prime powers, the `p=7` endpoint hostile,
-  and the full `Q=51,p=17` affine lift-cocycle table.  That atom proves the
-  reduction is not yet a recursive classifier: congruent coefficients modulo
-  `2p` can separate on nonfixed fibres.  Normal and optimized transcripts
-  agree.  Script/output/semantic LF-normalized SHA-256:
-  `ffd5d407b45891bcac30a15e0f0ea92a9ff207c539c984f3c9c55f5f8b5040a0` /
-  `b70350a6aa7f3278e65f22088a8d67650c05a0668a2638426a0943cace1911e3` /
-  `b1b1a9c9e3b925ae660237db6280a52321ce59b1ca0e823f53ebeadb209f2249`.
+  [THM-3429 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  In the
+  transverse universe `Q not divide r_i` (so the universal `r=0` and empty
+  `r=Q` representatives are excluded), an odd joint-period half-twist cover
+  by at most seven blocks outside the proved rank-at-most-six bases has every
+  prime coordinate in `{3,5,13,17,29}`.  A coordinate omitted by some owner
+  is one of `3,5,17,29`, while an all-active coordinate is `13` or `29`.
+  Every quotient coindex is `{3,5,17,29}`-smooth; after removing divisor atoms
+  `13,29,51`, the odd composite frontier reduces to `17^a` and `5*17^a`.
+  Exact dual companions check inactive projection, strict fibre capacity,
+  prime powers, the transverse boundary, and the full `Q=51,p=17` affine
+  lift-cocycle table.  That atom proves the reduction is not yet a recursive
+  classifier: congruent coefficients modulo `2p` can separate on nonfixed
+  fibres.  Normal and optimized transcripts agree.  Primary
+  script/output/semantic LF-normalized SHA-256:
+  `2de78875810a95eaa1ccdddfd4a91cac4db5ea32bcbe384a635f1045d5a692c7` /
+  `75b6d84866f38c826b4e26e1374f7d45aa233704de47e37dc3499bf5b0689f99` /
+  `c46b24a98d32f83e1933276372e8bc1688ac9d3c3efa54c154ec19fcd1094c2d`.
   No rank-seven antichain completeness, arbitrary-time, or LRC(14) conclusion
   is claimed.
+
+- `odd_target_free_p7_half_twist_parity_obstruction.py` -> matching `.out`
+  [THM-3429 PROVED COROLLARY + VERIFIED-EXACT].  In the transverse target-free
+  `p=7` equality lane, every active block has one point on each seven-fibre
+  only when its residue is even.  Seven such blocks share the reflection-fixed
+  sheet, so their union cannot be an exact partition; their augmented gcd is
+  also even.  The companion pins the final THM-3429 theorem hash, checks 4,080
+  active residues and 906,360 phase/fibre cells including repeated powers of
+  seven, and replays exact positive and hostile controls.  Normal and optimized
+  transcripts agree.  Script/output/semantic LF-normalized SHA-256:
+  `93472500f9515285fdef30b8c817a2e3533aef756f7b29133e885e9caba181dc` /
+  `aee4ed3f8515c4f82424bf1bdbec5e210b4d0506aba38fa761e51622867e8180` /
+  `965b6df04df298a781783af5b2cec498c30722608c8d8814133c65e15d934b82`.
+  The residual `3,5,17,29` lanes and LRC(14) remain open.
 
 - `rough_composite_odd_interval_collision_thm3426.py` -> matching `.out`
   [THM-3426 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For an odd
@@ -142,18 +157,20 @@
   `7f57f4d6acd4566699acaa1424945fb7b0b29c4740663043873d2778de4a36dd`.
 
 - `lrc_rank7_prime_fibre_activity_descent_thm3429.py` -> matching `.out`
-  [THM-3429 VERIFIED-EXACT].  For a prime `p|Q`, the script directly checks
+  [THM-3429 VERIFIED-EXACT INDEPENDENT COMPANION].  For a prime `p|Q`, the
+  script directly checks
   that `p`-divisible half-twist blocks are full pullbacks to `Q/p` and every
   active block hits at most `ceil(p/7)` points per fibre.  Its exact universe
-  is every residue on every prime fibre of all `93` odd composite `Q<=315`:
-  `2,142,888` pullback cells and `11,819,480` active cells.  It verifies the
-  activity floors for every odd prime through `997`, the Boolean defect
-  budgets `(4,2,0,1,1)` on primes `(3,5,7,17,29)`, the sharp target-free
-  `Q=51` atom, and the nonprimitive scaled-13 hostile at `Q=39`.  Normal and
-  optimized transcripts agree.  Script/output/semantic LF-normalized SHA-256:
-  `5ea4a9830f77a984aa7db83124ada94a498ed8f7687164533919545cd207f23f` /
-  `2ad7b43fd9afb14539438f2a17d4f458a7af6dbf3bd3deb947f8740099d7c316` /
-  `d65463e762b3ba39e6cbbf13daeba73f9b689f9051ec460ac7d6ec27eaeece85`.
+  is every transverse residue on every prime fibre of all `93` odd composite
+  `Q<=315`: `2,078,480` pullback cells and `11,819,480` active cells.  It
+  verifies the activity floors for every odd prime through `997`, the Boolean
+  defect budgets `(4,2,0,1,1)` on primes `(3,5,7,17,29)`, the sharp
+  target-free `Q=51` atom, and the nonprimitive scaled-13 hostile at `Q=39`.
+  Normal and optimized transcripts agree.  Script/output/semantic
+  LF-normalized SHA-256:
+  `f89f31256715615babe7ffec792363f9149134a5d02cf20db906ed45c210f1a8` /
+  `ba5196cfa2f8ec82c2cd4fb0320181375334c85525fdb8a5b9e891f2f613c2cf` /
+  `c3b8596233d20f55e5c0bf0419c5f3f627cbf371e3004a5f40ab8a582a09b9f8`.
   This independently verifies the base activity inequality; its `p=7`
   equality row is superseded as a cover lane by THM-3429's fixed-fibre gate.
   The two residual 17-adic towers and LRC(14) remain open.

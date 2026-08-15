@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for the provisional THM-3429 prime-fibre descent.
+"""Exact companion for THM-3429 prime-fibre descent.
 
 This verifies the elementary projection/fibre identities and the Q=51 lift
 cocycle hostile.  The all-q proof is analytic and depends on the pinned
@@ -27,7 +27,8 @@ PINNED = (
 )
 CONTROL_MODULI = (21, 35, 49, 51, 77, 85, 87, 119, 121, 143, 169, 203, 289, 493, 529, 841)
 EXPECTED_PRIME_SOLUTIONS = (2, 3, 5, 11, 17, 23, 29)
-EXPECTED_SEMANTIC_DIGEST = "b1b1a9c9e3b925ae660237db6280a52321ce59b1ca0e823f53ebeadb209f2249"
+TRANSVERSE_UNIVERSE = "Q_does_not_divide_each_selected_residue"
+EXPECTED_SEMANTIC_DIGEST = "c46b24a98d32f83e1933276372e8bc1688ac9d3c3efa54c154ec19fcd1094c2d"
 
 
 def require(condition, detail):
@@ -112,6 +113,8 @@ def projection_and_fibre_audit():
             inactive_even = 0
             inactive_odd = 0
             for residue in range(1, 2 * modulus):
+                if residue % modulus == 0:
+                    continue
                 mask = modulus_masks[residue]
                 if residue % divisor == 0:
                     base = half_mask(base_modulus, residue // divisor)
@@ -282,6 +285,15 @@ def prime_positive_controls():
     return tuple(rows)
 
 
+def transverse_boundary_controls():
+    rows = tuple(
+        (modulus, half_mask(modulus, 0).bit_count(), half_mask(modulus, modulus).bit_count())
+        for modulus in (13, 31, 51)
+    )
+    require(rows == ((13, 13, 0), (31, 31, 0), (51, 51, 0)), rows)
+    return rows
+
+
 def main():
     dependencies = tuple((label, lf_hash(path)) for label, path, _ in PINNED)
     for label, path, expected in PINNED:
@@ -291,21 +303,32 @@ def main():
     fibre_audit = projection_and_fibre_audit()
     q51 = q51_cocycle_hostile()
     prime_controls = prime_positive_controls()
-    semantic_surface = (dependencies, prime_solutions, fibre_audit, q51, prime_controls)
+    transverse_controls = transverse_boundary_controls()
+    semantic_surface = (
+        TRANSVERSE_UNIVERSE,
+        dependencies,
+        prime_solutions,
+        fibre_audit,
+        q51,
+        prime_controls,
+        transverse_controls,
+    )
     semantic_digest = sha256(repr(semantic_surface).encode("ascii")).hexdigest()
     if EXPECTED_SEMANTIC_DIGEST is not None:
         require(semantic_digest == EXPECTED_SEMANTIC_DIGEST,
                 (semantic_digest, EXPECTED_SEMANTIC_DIGEST))
 
     print("THM-3429 prime-fibre activity descent")
+    print(f"typed_universe={TRANSVERSE_UNIVERSE};r=0_universal_and_r=Q_empty_are_excluded")
     print(f"dependency_sha256_lf={dependencies}")
     print(f"capacity_prime_solutions={prime_solutions}")
     print("mixed_target_free_odd_primes=(3,5,17,29);all_active_target_free_primes=(13,29)")
     print(f"projection_fibre_audit=(records,projection_cells,active_fibres,active_points,p7_controls)={fibre_audit}")
     print(f"Q51_affine_lift_cocycle=(residues,orders,fibres,cells)={q51}")
     print(f"prime_positive_controls=(Q,rank)={prime_controls}")
+    print(f"transverse_boundary_controls=(Q,r0_size,rQ_size)={transverse_controls}")
     print(f"semantic_sha256={semantic_digest}")
-    print("status=PROVISIONAL_EXACT_COMPANION;analytic_reduction_not_finite_classification;residual_17adic_towers_open;no_LRC14_decrement")
+    print("status=PROVED_EXACT_COMPANION;analytic_reduction_not_finite_classification;residual_17adic_towers_open;no_LRC14_decrement")
 
 
 if __name__ == "__main__":

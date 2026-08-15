@@ -39,9 +39,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 THM3429 = ROOT / "01-canon/theorems/THM-3429-prime-fibre-activity-descent-for-mixed-order-half-twist-seven-covers.md"
-THM3429_SHA256_LF = "863f23d600939ea7290e9d694f026b7cd1c8e9161f3c2e596eda1cfa5d22c8eb"
+THM3429_SHA256_LF = "20343d8f6a5d72b298b5ec5ac6f6889e8f27e382b5c4446587209ed737a46fe3"
 TARGET_FREE_BASES = (8, 9, 10, 11, 12, 15, 23, 25)
-EXPECTED_SEMANTIC_SHA256 = "894dca5a2b15b99304e6f43d148e1a505ab8cf9519fd85109f927c5fba4d6f27"
+EXPECTED_SEMANTIC_SHA256 = "965b6df04df298a781783af5b2cec498c30722608c8d8814133c65e15d934b82"
 
 
 def require(condition, detail):
@@ -373,7 +373,7 @@ def main():
         THM3429_SHA256_LF,
         census,
         controls,
-        "THM3429_P7_PARTITION_FORCES_EVEN_RESIDUES_THEN_FIXED_SHEET_COLLISION_AND_EVEN_AUGMENTED_GCD",
+        "THM3429_TRANSVERSE_P7_PARTITION_FORCES_EVEN_RESIDUES_THEN_FIXED_SHEET_COLLISION_AND_EVEN_AUGMENTED_GCD",
     )
     semantic_digest = sha256(repr(semantic_surface).encode("ascii")).hexdigest()
     if EXPECTED_SEMANTIC_SHA256 is not None:
@@ -382,7 +382,7 @@ def main():
     print("Odd target-free p=7 half-twist parity obstruction")
     print("status=PROVED_COROLLARY_FROM_THM3429 all_Q_literal_joint_period_p7_lane_NEGATIVE;primitive_augmented_NEGATIVE")
     print(f"dependency_THM3429_sha256_lf={THM3429_SHA256_LF}")
-    print("typed_universe=Q_odd_composite_target_free;seven_distinct_half_twist_residues_mod_2Q;joint_quotient_period_Q;augmented_gcd_gcd(2Q,R)=1")
+    print("typed_universe=literal:Q_odd_composite_target_free,seven_distinct_transverse_half_twist_residues_mod_2Q(Q_not_divide_r),joint_quotient_period_Q|augmented_subuniverse:add_gcd(2Q,R)=1")
     print("THM3429_input=seven_owners;all_7_active;one_hit_per_owner_per_7_fibre;global_OR_equals_XOR")
     print("all_Q_block_identity=Q=7M,d=gcd(Q,r),7_not_divide_r:even_r_gives_size_M_and_zero_missed_fibres;odd_r_gives_size_M-d_and_d_missed_fibres")
     print("parity_conclusion=one_hit_on_every_fibre_forces_all_seven_residues_even")

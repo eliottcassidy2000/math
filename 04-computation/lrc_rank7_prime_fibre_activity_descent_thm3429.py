@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Exact referee for THM-3429's prime-fibre activity descent.
 
-The unbounded proof is elementary.  On a p-point fibre of Z/Q -> Z/(Q/p),
+The unbounded proof is elementary.  Its cover universe is transverse:
+Q does not divide any selected residue, so residues 0 and Q modulo 2Q are
+excluded.  On a p-point fibre of Z/Q -> Z/(Q/p),
 an owner with p|r is a full pullback, while an owner with p not dividing r
 hits at most ceil(p/7) points.  This companion reconstructs those statements
-directly on every odd composite Q<=315, freezes the activity/defect arithmetic,
-and audits the sharp Q=51 positive and Q=39 nonprimitive hostile.
+directly for every transverse residue on every odd composite Q<=315, freezes
+the activity/defect arithmetic, and audits the sharp Q=51 positive and Q=39
+nonprimitive hostile.
 
 No floating-point decision occurs.
 """
@@ -20,7 +23,8 @@ from math import gcd, isqrt, lcm
 TARGET_BASES = (8, 9, 10, 11, 12, 15, 23, 25)
 Q51_RESIDUES = (1, 11, 12, 18, 23, 34, 35)
 Q13_RESIDUES = (1, 2, 3, 5, 7, 9, 11)
-EXPECTED_SEMANTIC_SHA256 = "d65463e762b3ba39e6cbbf13daeba73f9b689f9051ec460ac7d6ec27eaeece85"
+EXPECTED_SEMANTIC_SHA256 = "c3b8596233d20f55e5c0bf0419c5f3f627cbf371e3004a5f40ab8a582a09b9f8"
+TRANSVERSE_UNIVERSE = "Q_does_not_divide_each_selected_residue"
 
 
 def require(condition: bool, detail: object) -> None:
@@ -103,6 +107,8 @@ def exact_fibre_universe(limit: int = 315) -> tuple[int, int, int, int, int]:
             prime_fibres += 1
             m = q // p
             for residue in range(2 * q):
+                if residue % q == 0:
+                    continue
                 if residue % p == 0:
                     reduced = residue // p
                     for sheet in range(q):
@@ -214,19 +220,35 @@ def main() -> None:
     q51 = q51_positive()
     q39 = q39_joint_period_hostile()
     boolean_budget = boolean_defect_budget()
-    semantic_surface = (fibre_universe, thresholds, q51, q39, boolean_budget)
+    transverse_controls = tuple(
+        (q, danger_mask(q, 0).bit_count(), danger_mask(q, q).bit_count())
+        for q in (13, 31, 51)
+    )
+    require(transverse_controls == ((13, 13, 0), (31, 31, 0), (51, 51, 0)),
+            transverse_controls)
+    semantic_surface = (
+        TRANSVERSE_UNIVERSE,
+        fibre_universe,
+        thresholds,
+        q51,
+        q39,
+        boolean_budget,
+        transverse_controls,
+    )
     semantic_digest = sha256(repr(semantic_surface).encode("ascii")).hexdigest()
     if EXPECTED_SEMANTIC_SHA256 is not None:
         require(semantic_digest == EXPECTED_SEMANTIC_SHA256,
                 (semantic_digest, EXPECTED_SEMANTIC_SHA256))
 
     print("THM-3429 prime-fibre activity descent -- exact referee")
-    print("status=VERIFIED_EXACT_SUPPORT_FOR_UNBOUNDED_ELEMENTARY_PROOF;odd_half_twist;cap7;joint_period_typed;no_LRC14_decrement")
+    print("status=VERIFIED_EXACT_SUPPORT_FOR_PROVED_UNBOUNDED_ELEMENTARY_PROOF;odd_half_twist;cap7;joint_period_typed;no_LRC14_decrement")
+    print(f"typed_universe={TRANSVERSE_UNIVERSE};r=0_universal_and_r=Q_empty_are_excluded")
     print(f"fibre_universe=(composite_moduli,prime_fibres,pullback_cells,active_cells,max_active_hit)={fibre_universe}")
     print(f"threshold_arithmetic=(selected_rows,activity_floor_lt7,equality_primes)={thresholds}")
     print(f"boolean_defect_budget=(single_prime,pair_full_order_floors)={boolean_budget}")
     print(f"Q51_sharp_positive=(orders,activities,defects,full_order_indices,p3,p17)={q51}")
     print(f"Q39_joint_period_hostile=(residues,orders,joint_period,a3)={q39}")
+    print(f"transverse_boundary_controls=(Q,r0_size,rQ_size)={transverse_controls}")
     print(f"semantic_sha256={semantic_digest}")
     print("scope=prime_fibre_descent_and_five_lane_reduction_only;mixed_small_prime_lanes_open;fixed_zero_open;arbitrary_time_open;LRC14_open")
 
