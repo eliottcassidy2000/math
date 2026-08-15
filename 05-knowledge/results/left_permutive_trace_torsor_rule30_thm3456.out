@@ -1,0 +1,78 @@
+Rule 30 left-permutive trace/cylinder exact obstruction
+status=FINITE-EXACT controls for an elementary proof candidate; THM-3456 RESERVED pending audit
+local_rule30=left XOR (center OR right)
+sideways_inverse=left=next_center XOR (center OR right)
+local_rule60=left XOR center
+binary_left_permutive_ECA=15,30,45,60,75,90,105,120,135,150,165,180,195,210,225,240
+free_trace_theorem=fixed x_0..x_n makes (x_-1..x_-n)->(X_1(0)..X_n(0)) a triangular bijection
+infinite_corollary=fixed right half-line gives a compatible homeomorphism from left wings to all binary temporal traces
+triangular_all_16_rules_depth=1..6
+triangular_rule30_rule60_depth=1..8
+triangular_fixed_right_maps=5568
+triangular_trace_evaluations=502400
+triangular_inverse_evaluations=5568
+triangular_rows=depth:fixed_right_maps:trace_evaluations
+  1:64:128
+  2:128:512
+  3:256:2048
+  4:512:8192
+  5:1024:32768
+  6:2048:131072
+  7:512:65536
+  8:1024:262144
+rule30_single_seed_center_64=1101110011000101100100111010111001110101011000011001010110101011
+rule60_single_seed_center_64=1111111111111111111111111111111111111111111111111111111111111111
+free_language_hostile=Rule30 and Rule60 both realize every free trace, but selected single-seed centers differ
+finite_cylinder_two_trace_theorem=two adjacent temporal columns reconstruct the whole cylinder
+finite_cylinder_period_corollary=on a periodic orbit, adjacent-pair trace period equals full orbit period
+periodic_alias_rows=width:periodic_states:one_column_traces:nonconstant_alias_classes
+  3:1:1:0
+  4:11:10:0
+  5:6:6:0
+  6:3:2:0
+  7:92:78:10
+first_nonconstant_one_column_alias_width=7
+width7_alias_trace=0110
+width7_alias_states=0100000,0111000,0000111
+width7_alias_cycle_1=0100000|1110000|1001001|0111111
+width7_alias_cycle_2=0111000|1100100|1011111|0010000
+width7_alias_cycle_3=0000111|1001100|1111011|0000010
+width7_proper_period_state=0100110
+width7_proper_period_full:center:pair=4:2:4
+cylinder_prefix_theorem=width n seed cylinder equals infinite single-seed center for 0<=t<n
+cylinder_prefix_widths_checked=1..64
+cylinder_prefix_sharp_hostile=width 3 first differs at t=3
+cylinder_prefix_first_difference_exception_to_n=width 8 first differs at t=10
+seed_orbits=width:transient:full_period:center_period:adjacent_pair_period
+  1:1:1:1:1
+  2:0:1:1:1
+  3:2:1:1:1
+  4:0:8:8:8
+  5:1:5:5:5
+  6:8:1:1:1
+  7:0:4:4:4
+  8:1:40:40:40
+  9:1:72:72:72
+  10:7:15:15:15
+  11:23:154:154:154
+  12:24:102:102:102
+  13:12:260:260:260
+  14:0:1428:1428:1428
+  15:47:1455:1455:1455
+  16:58:6016:6016:6016
+  17:56:10846:10846:10846
+  18:725:2844:2844:2844
+  19:306:247:247:247
+  20:492:3420:3420:3420
+  21:1720:597:597:597
+  22:1225:3256:3256:3256
+  23:1161:38249:38249:38249
+  24:2023:185040:185040:185040
+bounded_seed_observation=center_period=full_period for widths 4..24 (FINITE-EXACT only)
+SOP_tree_boundary=trace cylinders form a full binary prefix tree as a set system; model-theoretic SOP_2 needs a specified uniform first-order coding
+prize1_boundary=finite cylinders are eventually periodic and retain only an n-step guaranteed seed prefix; no infinite-tail inference
+prize2_boundary=free trace balance is universal under left permutivity and says nothing about selected-seed density
+prize3_boundary=existence/unique inversion is not an algorithmic lower bound for the selected nth bit
+script_sha256_lf=e7ac9717c2f5618d18cae2225c4fd68391d2e07d98f0e9b1bcb188e5ef7ad993
+semantic_sha256=1fda893b46126cb9653f758a88a9f0266fe93c6e12bee6d4de527fa09f5b42ca
+scope=no_Rule30_prize_solution;no_eventual_nonperiodicity;no_density_limit;no_O(n)_lower_bound;no_natural_SOP_interpretation
