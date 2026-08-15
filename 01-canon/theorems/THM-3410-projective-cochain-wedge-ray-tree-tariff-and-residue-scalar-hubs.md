@@ -162,13 +162,13 @@ tau_1 = minimum-spanning-tree weight of (10),
 tau_infinity = least threshold at which the graph (10) is connected. (11)
 ```
 
-Here the tariffs minimize over spanning trees on all original owners.  To
-prove `(11)`, first connect every equal-ray class by its zero edges.  Any
-remaining tree projects to a class tree and pays at least `(10)` on each
-projected edge.  Conversely choose one pair attaining `(10)` for every edge
-of a class tree and add zero trees inside the classes.  This lifts the class
-tree without extra cost.  The same argument works for the largest edge, so it
-proves both identities.
+Here the tariffs minimize over spanning trees on all original owners.  Given
+any such tree, contract each equal-ray class, discard loops, and delete cycle
+edges.  What remains contains a class tree whose edges are among the paid
+cross edges, and every one costs at least `(10)`.  Conversely choose one pair
+attaining `(10)` for every edge of a class tree and add zero trees inside the
+classes.  This lifts the class tree without extra cost.  The same argument
+works for the largest edge, so it proves both identities.
 
 If there are `K>=2` classes and their minima in increasing order are
 `mu_(1)<=...<=mu_(K)`, integrality of every `Delta_CD` gives the universal
