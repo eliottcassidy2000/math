@@ -1,7 +1,7 @@
 # SOP trace torsors, the Rule 30 odometer, and the moving-observer boundary
 
 **Research reflection -- 2026-08-15.**  Exact statements are in
-THM-3456/3458/3459; the external model-theory theorem and Rule 30 prizes remain
+THM-3456/3458/3459/3463; the external model-theory theorem and Rule 30 prizes remain
 cited/open as marked below.
 
 ## Outcome first
@@ -22,7 +22,7 @@ layer: it is a 2-adic odometer on the seed-orbit closure.  The prize sequence
 evades both closures because the seed removes the free trace coordinates and
 the center reads a coordinate whose address grows with time.
 
-This session now routes through three proved repository objects:
+This session now routes through four proved repository objects:
 
 - [THM-3456](../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md):
   the finite-alphabet trace/right-half homeomorphism, direct enriched
@@ -34,6 +34,9 @@ This session now routes through three proved repository objects:
 - [THM-3459](../01-canon/theorems/THM-3459-rule30-ternary-intersection-factorial-truth-lift-and-keller-boundaries.md):
   the mask-intersection compiler, factorial moment formulas, and the
   characteristic/representative Keller boundary.
+- [THM-3463](../01-canon/theorems/THM-3463-rule30-mealy-section-suffix-parity-current-and-complexity-boundary.md):
+  the center-section compiler, dual nonlinear-current charts, period-lift
+  restriction, spatial Walsh atlas, and robust-input complexity boundary.
 
 None settles any Rule 30 prize, LRC(14), FC(3), or JC(2).
 
@@ -52,7 +55,7 @@ asks about the isolated-single-seed center column.  The
 three prizes and accepts submissions; on that dated evidence the repo treats
 the questions as open.  The third question has to be handled with special care: its prose,
 big-O wording, and displayed predicate should not be blended without fixing a
-machine and bit-cost model.  Nothing in this session is a lower-bound proof.
+machine and bit-cost model.  Nothing here lower-bounds the fixed-seed Prize-3 task.
 
 ## Inheritance pass
 
@@ -180,6 +183,83 @@ proves that this fixed quotient state does not determine the center.  The
 center is the diagonal of an array whose columns are individually periodic.
 This names the missing observer coordinate; it does **not** prove failure for
 every width, which would already bear on the open nonperiodicity prize.
+
+### Restoring the moving observer rather than discarding it
+
+The edge map has an exact three-state, low-bit-first Mealy presentation:
+
+```text
+A=(A,B),       B=(C,B)sigma,       C=(A,B)sigma.
+```
+
+Here `A` is the packed Rule 30 map and `R_n=1 B^n(0^infinity)`.  Taking the
+zero-section `n-1` times restores the center exactly.  With `S` denoting
+strict suffix XOR, the resulting compiler is
+
+```text
+p_0=p_1=1^n,
+p_(k+1)=S p_(k-1) or S p_k,
+c_n=xor p_(n-1).
+```
+
+This costs `O(n^2)` bit operations.  It does not accelerate the known
+computation by itself, but it localizes the obstruction: replacing OR by XOR
+is a Lucas/Frobenius transport, and all remaining information lies in the
+intersection masks `(S p_(k-1)) and (S p_k)`.  Scalar parity and low Hasse
+marginals already fail at width three because they omit precisely that overlap.
+
+There is a dual spacetime chart.  With `L=1+x+x^2`, the packed row polynomial
+satisfies
+
+```text
+B_(t+1)=L B_t+D_t,
+```
+
+where `D_t` marks adjacent `11` collisions.  Rule 150 supplies a constant-one
+center; every departure from that baseline is the Green-weighted parity of those
+collisions.  A single Green weight has a two-carry-state binary digit compiler.
+At dyadic times the sideways linear contribution vanishes entirely, so the
+center is pure intersection current in both charts.
+
+This changes the complexity question.  The linear transport is already
+cheap; the live object is the labelled nonlinear current.  A shortcut must
+compress it, while a lower bound must specify a machine model in which that
+compression is impossible.
+
+### Two exact restrictions short of the prizes
+
+The edge-period lift word can never contain `111`.  Two consecutive lifts make
+the two newest bit columns exactly uniform over a four-block phase cube, so
+the next cocycle parity vanishes.  Hence
+
+```text
+P_w <= 2^(ceil(2w/3)-1),
+```
+
+improving the previous `2^(w-1)` ceiling for `w>=3`.  Runs ending at a horizontal step
+parse into `0,10,110`, a faithful ternary run-length address with multipliers
+`1,2,4`.  This resembles the prior three-spine work only at the representation
+level; no Berggren arithmetic or branch symmetry is present.
+
+At innovation depths, arrival-normalized traces across spatial phase form an
+exact Walsh cube: every joint bit pattern occurs once.  That proves perfect
+spatial balance and independence, yet the prize center is the single marked
+phase `h=0`.  This is the same warning seen in LRC owner quotients: an exactly
+uniform atlas does not control a distinguished address inside it.  It also
+omits noninnovation depths; THM-3458's depth-five word supplies the `3/8`
+unbalanced control after a harmless phase translation.
+
+Finally, on the `n+1` checkerboard perturbations
+
+```text
+{n,n-1,n-3,...,1-n}
+```
+
+around the seed, the time-`n` center has full Boolean degree `n+1`.  Its exact
+decision-tree complexity is `n+1`, and circuits with XOR/NOT free of charge
+need at least `n` binary AND gates.  This is genuine robust-input hardness.
+The one unperturbed seed point can still be hardwired, so a reduction from the
+binary time index is the missing bridge to Prize 3.
 
 ### Sequence compiler that remains lawful
 
@@ -313,17 +393,15 @@ objects are a rooted preorder, a ternary gate, and a trace-cylinder tree.
 
 The session leaves six precise next probes rather than a vague analogy.
 
-1. **Moving-observer skew product.**  Study the nonstationary system
-   `(R_t,t)` and ask which compressed scale coordinate, if any, suffices for
-   `bit_t(R_t)`.  Width six is refuted by the `7/15` hostile; no all-width
-   extrapolation is licensed.
-2. **Period-lift word.**  Analyze `epsilon_w=bit_w(R_(P_w))` structurally,
-   without recurrence-fitting its verified prefix.  It exactly controls the
-   odometer tower and may be a better invariant than raw center bits.
-3. **Seed as a section.**  The trace torsor makes the fixed seed a particular
-   section of a product coordinate system.  Characterize that section's
-   finite-state or algebraic complexity rather than conflating it with the
-   full trace language.
+1. **Unique Green channels.**  Find an infinite family in which one collision
+   event reaches the center with no cancelling partner.  This is a concrete
+   route toward nonperiodicity, not a randomness heuristic.
+2. **All-depth marked-phase discrepancy.**  First compile the noninnovation
+   readouts on the innovation cube, then compare `h=0` with their spatial
+   averages.  Both steps are needed before the atlas can bear on density.
+3. **Intersection-current complexity.**  Either compress the Mealy/spacetime
+   overlap ledgers, or prove they resist compression in a uniform binary-index
+   model with advice, preprocessing and bit cost stated explicitly.
 4. **LRC two-stage pruning.**  Benchmark ternary mask gates as a fast owner-
    disjointness sieve, but retain the full labelled star equations and phase
    witness for every survivor.
