@@ -418,15 +418,13 @@ is a proof dependency.
   supplies the closed-quadruple/Hall-set context and records multiple Smith
   classes at order `36`, showing genuine odd nonsquarefree branching.
 
-There is a precise related repair route that is intentionally **not** made
-in this commit.  THM-451 currently labels the skew tower's flat Smith profile
-conjectural beyond its computed range.  THM-447 proves that every level of
-that tower is skew-Hadamard, while the cited skew-Hadamard Smith theorem
-applies at every level.  Together they provide an all-level cited/proved
-route for that one clause of THM-451, including nonsquarefree orders.  This
-theorem neither edits THM-451 nor treats that external theorem as a dependency
-of (12); a separate correction should preserve THM-451's original evidence
-and attribution.
+THM-451 now follows precisely this separate repair route.  THM-447 proves
+that every level of the skew tower is skew-Hadamard, while the cited
+skew-Hadamard Smith theorem applies at every level; MISTAKE-384 records why
+its formerly conjectural status was wrong.  That cited all-level repair,
+including nonsquarefree tower orders, is logically separate from the
+self-contained squarefree theorem (12) here and does not become one of its
+dependencies.
 
 Finally, (6), (12), (13), (18), and (21) determine values, invariant factors,
 and code existence.  They do **not** classify binary maximizers, Hadamard
