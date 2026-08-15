@@ -1,42 +1,43 @@
 ---
-id: THM-3398
-title: "All-sheet atomized coset covers and affine cochains"
+id: THM-3402
+title: "Atomized sheet covers and constructive cochain locus"
 status: >
   PROVED analytic all-q atomized-cover/complete-cochain equivalence + PROVED
   constructive exact-locus reconstruction + PROVED base-star and finite-mode
   compressions + FINITE-EXACT controls + INDEPENDENTLY PROOF- AND
   EVENT-AUDITED.  Repeated atoms of one owner are retained until the cochain
   glues them, then compress exactly to one consecutive phase mode.  The q=8
-  singleton/domino mode criterion is analytic; its 32-edge literal census and
-  the q=8,...,14 profiles remain FINITE-EXACT.  Speeds divisible by q are core
-  speeds in body-relative uses.  The theorem determines B_q(U), while
+  singleton/domino mode criterion is analytic; corrected full-clutter counts
+  remain separately FINITE-EXACT.  Speeds divisible by q are core speeds in
+  body-relative uses.  The theorem determines B_q(U), while
   B_q(U) subset A_C and B_q(U) minus A_C subset Gamma_D remain distinct
   sidecars.  No refined-ledger decrement, physical transport, or LRC(14)
   conclusion follows.
-source: root/lrc14-all-sheet-atomized-cochain/2026-08-14
-audit: independent direct event geometry, repeated-owner tuples, q-divisible core typing, generalized CRT reconstruction, strict real-line Helly, base-star compression, constructive full-locus equality, q=6 hostiles, and ordinary/optimized replay
+source: root-2608-crouzeix-puzzle-2026-08-15
+audit: independent direct event geometry, repeated-owner tuples, q-divisible core typing, generalized CRT reconstruction, strict real-line Helly, base-star compression, constructive full-locus equality, q=6 hostiles, current MISTAKE-383 clutter scope, and ordinary/optimized replay
 depends_on:
+  - THM-3398-general-finite-mode-sheet-cover-cochain
   - THM-3387-exact-cyclic-sheet-cover-atlas-and-q2-gcd-graph
   - THM-3395-small-sheet-typed-cover-star-cochain
 related:
   - THM-3385-odd-fibre-doubling-projection-and-half-even-complement-clocks
   - THM-3388-three-sheet-phase-triangle-cover-clutter
   - THM-3389-four-sheet-typed-cover-clutter
-  - THM-3391-weighted-common-source-cyclic-support-capacity
-script: 04-computation/lrc14_all_sheet_atomized_coset_cochain_thm3398.py
-output: 05-knowledge/results/lrc14_all_sheet_atomized_coset_cochain_thm3398.out
-script_sha256: db10ae954f01c8eebb274df5e866d39b41f83954436654d65cdd4c5b66199664
-output_sha256: 58d3fa444ffc70b78eb73727a6fc0fafb53d4b0dce4ae26dcc642e0eebb51216
+  - THM-3401-centered-transverse-sheet-cover-rank-fifteen-through-twenty-eight
+script: 04-computation/lrc_atomized_sheet_cover_constructive_locus_thm3402.py
+output: 05-knowledge/results/lrc_atomized_sheet_cover_constructive_locus_thm3402.out
+script_sha256: 860aabbff366efb3f970d831d4208a4994ff6963a9bd0d572dddba8944d7567c
+output_sha256: 8ccf25b5d6b7480e44a4aace5c5eecb4ca72c05833d6c8eda42ded91bdb22f04
 semantic_sha256: 39aade82ac505a78e51d779e500acfc1d1b916c5350632311e9274b727e55aec
-audit_script: 04-computation/lrc14_all_sheet_atomized_coset_cochain_independent_audit_thm3398.py
-audit_output: 05-knowledge/results/lrc14_all_sheet_atomized_coset_cochain_independent_audit_thm3398.out
+audit_script: 04-computation/lrc_atomized_sheet_cover_constructive_locus_independent_audit_thm3402.py
+audit_output: 05-knowledge/results/lrc_atomized_sheet_cover_constructive_locus_independent_audit_thm3402.out
 audit_script_sha256: 071552bf7cdb8907932da7deae1211f702fa967623e0416057d3cc1eaa4e6f43
 audit_output_sha256: 7c87464ba1640c6f65169e9344a5e3e9c4135b56ea9d0b930a1856594e809615
 audit_semantic_sha256: bb394b88aa71ebe9a892c370a071227a3e016adb8d550163efc73dba70995ddc
 hash_basis: LF-normalized bytes
 ---
 
-# THM-3398 -- all-sheet atomized coset covers and affine cochains
+# THM-3402 -- atomized sheet covers and constructive cochain locus
 
 **PROVED analytic all-`q` atom/cochain and constructive-locus theorem +
 FINITE-EXACT controls + INDEPENDENTLY PROOF- AND EVENT-AUDITED.**
@@ -44,12 +45,11 @@ FINITE-EXACT controls + INDEPENDENTLY PROOF- AND EVENT-AUDITED.**
 ## 1. Inheritance and connection contract
 
 THM-3387 identifies the exact transverse obstruction as the full cyclic-sheet
-cover locus `B_q(U)`.  Related THM-3391 keeps one common weighted source under
-several cyclic blocker maps.  Most importantly, THM-3395 proves the complete typed
-coset/star-cochain theorem through seven sheets.  That small-sheet theorem is
-load-bearing, not superseded: it supplies the exact `q<=7` face, strict
-`q=7` endpoint convention, literal body classifications, and the first
-pairwise-compatible but globally incoherent hostiles.
+cover locus `B_q(U)`.  THM-3398 proves the exact all-sheet consecutive-mode
+compiler, while THM-3395 proves its one-coset face through seven sheets.  Those
+theorems are load-bearing, not superseded: they supply the owner-compressed
+target, the exact `q<=7` face, the strict `q=7` endpoint convention, and the
+first pairwise-compatible but globally incoherent hostiles.
 
 The new coordinate beyond seven sheets is **owner multiplicity**.  One owner
 may fire several multiplication-kernel cosets at the same phase.  Quotienting
@@ -425,8 +425,8 @@ cochains and `4,200` repeated-owner families.
 
 ## 7. Equivalent consecutive-mode compression for all q
 
-The atomic theorem also proves the previously provisional finite-mode
-candidate.  In the image phase grid of owner `u`, atom `k` has residue
+The atomic theorem refines, and compresses exactly back to, THM-3398's current
+finite-mode theorem.  In the image phase grid of owner `u`, atom `k` has residue
 
 ```text
 r=a_u k mod m_u.                                      (38)
@@ -523,58 +523,23 @@ P_ij == h_i u_j-h_j u_i       (mod 16 gcd(u_i,u_j)),
 ```
 
 together with zero triangle circulation.  Covering all eight sheets plus
-`(47)` is an exact analytic iff.  This promotes the q=8 mode-cochain
-**criterion**, but not its literal finite enumeration.
+`(47)` is an exact analytic iff.  It proves the criterion, not a literal
+finite-clutter enumeration.
 
-The incoming q8 and q8--q14 compilers remain **FINITE-EXACT** special-case
-corollaries.  For the literal q=8 transverse pool they report `32` minimal
-owner edges of ranks `(4:15,5:17)`, independence profile
-
-```text
-(1,13,78,286,700,1152,1223,777,266,42,2,0,0,0),       (48)
-```
-
-and `1,152` exact five-transverse rows with no core rescue.  The wider
-compiler gives the following finite atlas:
-
-| q | minimal edges | rank profile | I_5 | core rescues |
-|---:|---:|---|---:|---:|
-| 8 | 32 | `(4:15,5:17)` | 1,152 | 0 |
-| 9 | 22 | `(4:9,5:13)` | 1,205 | 0 |
-| 10 | 18 | `(5:18)` | 1,269 | 0 |
-| 11 | 0 | `()` | 1,287 | 0 |
-| 12 | 8 | `(4:1,5:7)` | 1,271 | 0 |
-| 13 | 0 | `()` | 1,287 | 0 |
-| 14 | 0 | `()` | 1,287 | 0 |
-
-The analytic theorem explains why the compiler is exact once its finite mode
-bank is enumerated.  It does not convert the `32` edges, the table, or any
-independence profile from `FINITE-EXACT` into an analytic classification.
-
-The exact related artifacts are
-
-```text
-04-computation/lrc14_q8_domino_mode_clutter_probe_20260814.py
-05-knowledge/results/lrc14_q8_domino_mode_clutter_probe_20260814.out
-source/output/semantic:
-cc0fd75c57d177dd2da396ff0ac2f6cb5777abcc33a1e1aa911248385812529e
-346458020b5568708eb0198966285157401f0ea862cbd6009ea011cec10f420d
-5051166544008df0a96c50e8fc2c293e4e35b6192974417abe9a487a547d98f4
-
-04-computation/lrc14_q8_q14_finite_mode_clutter_probe_20260814.py
-05-knowledge/results/lrc14_q8_q14_finite_mode_clutter_probe_20260814.out
-source/output/semantic:
-daa9904266aed8acf6eac44d6e262d45e1540287b60be0659f7e71a35f312727
-92c0e4fda7df5831787ef0d6b2e03f23e9dceae35eef493b0f6806630ca24817
-66a69a30c49b72ff8ecbf7de94f495025518e04b73969f2d970debeb6f113023
-```
+This distinction is load-bearing after MISTAKE-383.  The current independent
+full-subset audit gives the true `q=8` minimal-edge rank profile
+`(4:15,5:17,6:6)`; the older number `32` was only the rank-at-most-five part.
+Likewise the current `q=15` full profile is `(6:157,7:16,8:6)`.  Nothing in
+the atom/cochain proof depends on either finite profile.  The theorem explains
+why a correctly enumerated mode bank is exact, but never promotes a bounded
+census into an analytic clutter classification.
 
 ## 9. Small-sheet and q=6 faces
 
 When `q<=7` and `q` divides no transverse owner, every selected owner has one
 atom.  Equations `(10)`--`(12)` and the base-star formula `(27)` are exactly
 THM-3395.  Its q=2--7 literal classifications and body counts remain sourced
-there; THM-3398 does not rebrand them as new computations.
+there; THM-3402 does not rebrand them as new computations.
 
 At `q=6`, the CRT chart
 
@@ -603,7 +568,7 @@ owners.
 
 In THM-3387's body decomposition, however, every such speed is a **core**
 speed and must be routed to `A_C`; it must not remain in the transverse set
-`U`.  Every body-relative invocation of THM-3398 therefore assumes
+`U`.  Every body-relative invocation of THM-3402 therefore assumes
 
 ```text
 q does not divide u for all u in U.                    (51)
@@ -614,7 +579,7 @@ and destroys the body typing.
 
 ## 11. Body-relative and deleted-grid sidecars
 
-THM-3398 reconstructs `B_q(U)` by `(36)`--`(37)`.  It does not silently turn
+THM-3402 reconstructs `B_q(U)` by `(36)`--`(37)`.  It does not silently turn
 transverse cover into a body-relative obstruction.  For
 
 ```text
@@ -659,10 +624,10 @@ optimization-dependent assertions.
 Reproduce after installing the canonical paths with
 
 ```text
-python3 04-computation/lrc14_all_sheet_atomized_coset_cochain_thm3398.py
-python3 -O 04-computation/lrc14_all_sheet_atomized_coset_cochain_thm3398.py
-python3 04-computation/lrc14_all_sheet_atomized_coset_cochain_independent_audit_thm3398.py
-python3 -O 04-computation/lrc14_all_sheet_atomized_coset_cochain_independent_audit_thm3398.py
+python3 04-computation/lrc_atomized_sheet_cover_constructive_locus_thm3402.py
+python3 -O 04-computation/lrc_atomized_sheet_cover_constructive_locus_thm3402.py
+python3 04-computation/lrc_atomized_sheet_cover_constructive_locus_independent_audit_thm3402.py
+python3 -O 04-computation/lrc_atomized_sheet_cover_constructive_locus_independent_audit_thm3402.py
 ```
 
 Ordinary and optimized outputs must LF-normalized-byte-match their stored

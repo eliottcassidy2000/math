@@ -434,9 +434,9 @@ def main():
     if EXPECTED_SEMANTIC != "TO_BE_FROZEN":
         require(digest == EXPECTED_SEMANTIC, ("semantic", digest))
 
-    print("ALL-SHEET ATOMIZED COSET-COCHAIN THM-3398 PRIMARY VERIFIER")
+    print("ALL-SHEET ATOMIZED COSET-COCHAIN THM-3402 PRIMARY VERIFIER")
     print(f"source_sha256_lf={source_hash()}")
-    print("status=PROVED_analytic_controls_plus_declared_FINITE-EXACT_universes;THM-3398")
+    print("status=PROVED_analytic_controls_plus_declared_FINITE-EXACT_universes;THM-3402")
     print(f"local_q2_q10_multiplier_phase_checks={local_checks};local_profile={local_profile}")
     print(
         "atom_tuple_checks="

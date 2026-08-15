@@ -9,41 +9,7 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-387 (2026-08-14, projected `z1=216` wall) -- a prefix-only positive two-high gap was extrapolated to the whole live wall
-
-- **What failed:** THM-3351 established a positive duplicate-permitting
-  two-high gap on selected prefix bodies.  The first THM-3399 verifier silently
-  promoted that prefix fact to every post-THM-3378 live row and required
-  `two_gap>0`, thereby strengthening the lawful “at least one high” gate to
-  the false statement “exactly one high everywhere.”
-- **Minimal witness / first failed implication:** live row `195` has
-  `E=(1,5,8,9,13,14)`, `L=458640`, high floor `45170`, residual passport
-  `(3920,6370,32760,57330)`, and mask `6`.  Its low clause is denominator
-  `3920`, label `351`, value `4639/1203930`; the two high clauses are
-  `(32760,46634,21013/594117160)` and
-  `(57330,51176,236059/10268720280)`.  The exact gap is
-  `-17651221657/66699959142726`.  Thus universality of the positive gap is the
-  first invalid step; the inherited high gate, ray maxima, and the existing
-  support-capacity lemmas remain valid.
-- **Repair / strongest survivor:** enumerate the finite two-/three-high
-  residuals instead of discarding them.  Row `195` has `137` two-high cases
-  and no three-high mask.  For the displayed hostile pair, the common source
-  has `100,776` actual fixed-safe cells.  On the common modulus `229320`, its
-  support has size `88,746`, while the two lifted danger capacities are only
-  `32,760` each, leaving `23,226`.  Independently, the exact THM-3391 weighted
-  maxima are `19,849` and `19,867`, leaving a common-source lower bound
-  `61,060`.  The exact packet therefore closes once the source and both
-  quotient maps are restored.  The whole row and wall remain open until every
-  residual is partitioned through the inherited common-modulus, weighted
-  actual-cell, or denominator-two measure terminals and replayed normally and
-  with `-O`.
-- **Reusable rule:** a scalar extremal gap proved on a selected prefix is not
-  a universal arity reduction.  When several blockers survive, retain one
-  actual source, maximize each pullback window over every unit and translation,
-  and use strict summed capacity or its equality/correlation sidecar.  Raw cell
-  multiplicity cannot be inserted into an ambient unweighted quotient bound.
-
-## MISTAKE-384 (2026-08-14, projected transfer) -- raw high ratios and denominator passports do not retain a located reflected-pair overlap
+## MISTAKE-393 (2026-08-14, projected transfer) -- raw high ratios and denominator passports do not retain a located reflected-pair overlap
 
 - **What failed:** the first post-reflected transfer tried to apply the
   matched-residue high-pair floor to arbitrary projected drifts, first by
@@ -67,7 +33,7 @@ Format per entry:
   observable. A denominator is not a located phase, and a raw drift ratio is
   not the reduced level ratio of a reflected affine ray.
 
-## MISTAKE-383 (2026-08-14, arbitrary residue extension) -- a unit residue change can annihilate a canonical high-pair overlap
+## MISTAKE-392 (2026-08-14, arbitrary residue extension) -- a unit residue change can annihilate a canonical high-pair overlap
 
 - **What failed:** a residue-blind extension treated changing `Lq-e` by a
   small integer `h` as a small geometric perturbation without retaining the
@@ -120,6 +86,154 @@ Format per entry:
   the selected cell fails, restore the lawful cell address before inferring a
   survivor; if every single cell fails, only then pass to the fixed-safe
   multi-cell residue support.
+
+
+## MISTAKE-391 (2026-08-15, zero-cochain rank artifact) -- the indexed output hash did not name the committed transcript
+
+- **What failed:** the results index recorded LF-normalized output SHA-256
+  `582b901b...4085e6` for
+  `lrc_unrestricted_zero_mode_cochain_rank_probe_20260815.out`, but that hash
+  does not equal the committed file.
+- **Minimal witness / first failed implication:** direct hashing of the
+  committed `6,745` LF bytes gives
+  `38310799cab60e6a1e6c8b71bda28cebd6c38b0d90012e6eb0955921c2eb7c3d`.
+  Fresh normal and optimized replays are byte-identical after LF
+  normalization and give that same hash.
+- **Repair / strongest survivor:** repin the dependency-clean source and replace
+  the stale index hash with `38310799...c3d`.  The semantic digest
+  `233c092a...30c7e`, theorem statements, witnesses, and every audit result
+  are unchanged.
+- **Reusable rule:** never copy an output hash from working notes.  Hash the
+  committed path and an independent fresh replay in both normal and
+  optimized modes before publishing the artifact tuple.
+
+## MISTAKE-390 (2026-08-15, zero-cochain divisor ancestry) -- two lift lemmas were stated beyond their used cover scope
+
+- **What failed:** the first divisor-ancestry reflection said without a
+  cardinality qualifier that residues `r_1,...,r_s mod M` have positive
+  gcd-one lifts iff `gcd(M,r_1,...,r_s)=1`, and called
+  `gcd(V)=1` equivalent to `lcm_i(Q/gcd(Q,v_i))=Q` for fixed literal owners.
+- **Minimal witnesses / first failed implications:** for the singleton
+  `(M,r)=(5,2)`, the augmented gcd is one but every positive lift is
+  `2 mod 5` and no one-element family has gcd one.  For fixed
+  `Q=5,V=(2,4)`, both quotient orders are five and their lcm is five, while
+  `gcd(V)=2`.  Thus both reverse implications fail as literally written.
+- **Repair / strongest survivor:** every transverse strict full cover uses at
+  least two nonfull blocks.  In that `s>=2` scope, the CRT avoidance proof
+  gives gcd-one positive lifts exactly when the augmented gcd is one.
+  Primitive literal gcd one always **implies** the quotient-order lcm is `Q`;
+  that is the only direction used by the rank floor and rank-four
+  classification.  The finite Boolean gate, q15--28 ranks, universal floor
+  four, and `rho_ZMC(q)=4 iff 8|q or 9|q` are unchanged.  An independent
+  rare-coordinate branch-and-bound census through `Q=500` found no rank at
+  most three and only the primitive half-twist positives `Q=8,9` at rank
+  four.
+- **Reusable rule:** distinguish literal integer gcd, gcd modulo the finite
+  owner modulus, and existence of a gcd-one lift.  State the number of
+  selected types before promoting a modular gcd condition to an iff.
+
+## MISTAKE-389 (2026-08-15, all-owner divisor-chart probe) -- a synchronized half-grid physical time was mistaken for a common mode centre
+
+- **What failed:** the first all-owner divisor-chart draft correctly derived
+  the necessary condition `2quc in Z` for every owner at a common THM-3398
+  mode centre, but then treated that condition as sufficient.  Its exact
+  `direct_mask` computation evaluates danger sets at the physical time `c`;
+  it does not prove that `c` is the centre of each selected consecutive mode.
+  Consequently the draft falsely labelled its ranks as zero-mode-cochain
+  ranks and compared them with the capped mobile common-centre atlas.
+- **Minimal witness / first failed implication:** at `q=15,c=1/150`, owners
+  `(5,40,50)` have exact danger sets equal to the three residue classes modulo
+  three, so they partition all sheets and satisfy `2quc in Z`.  Their active
+  gcd is `d=5`; writing `a=2qdc` and `g=gcd(q,d)` gives `(a,g)=(1,5)`.
+  THM-3405 proves that a zero mode cochain requires `g|a`, so this physical
+  half-grid partition is not a common-mode-centre certificate.  Equivalently,
+  owner five has half-grid residue `h=1`, while the THM-3398 mode formula
+  requires `gcd(15,5)=5` to divide `h`.  The first failed implication was
+  “`2quc` integral implies `c` belongs to the mode-centre lattice.”  The
+  unique containing mode centres are `(0,1/120,1/150)` and their exact
+  THM-3398 pair cochain is `(-50,-50,100)`, with norms `(L1,Linf)=(200,100)`;
+  the failure is positive drift, not an endpoint ambiguity.
+- **Repair / strongest survivor:** THM-3405 supplies the missing mode
+  divisibility and proves the genuine zero-cochain gauge has at most the two
+  classes `a=0,g mod 2g`.  The divisor-chart artifact is renamed and typed as
+  a **synchronized half-grid physical-time** theorem.  Its affine
+  normalization, exact q15--28 ranks
+  `(3,2,8,2,9,2,3,2,6,2,5,2,3,2)`, capacity bounds, and infinite exact
+  half-grid families of ranks two/three/five survive.  The claimed
+  zero-cochain ranks, comparison with the owner-14 mobile ranks, finite
+  “saving” support, and corresponding harmonic weights are withdrawn.  No
+  LRC row or ledger count ever followed.  A subsequent exact reconstruction
+  strengthens the surviving separation: on every even `q>=8`, the same
+  even/odd rank-two partition at `c=a/q^2`, for odd `1<=a<q/7`, has unique
+  containing-mode cochain `P=-a q^2/2` and THM-3405 scalar/gauge
+  `(a,q/2)`.  Thus the quotient can hide a whole quadratic positive-drift
+  ladder, not merely the isolated q15 hostile.  Applying the corrected gauge
+  and retaining the primitive owner-gcd sidecar gives the genuine
+  unrestricted positive-transverse zero-cochain ranks
+  `(6,4,8,4,9,5,8,6,6,4,6,7,4,7)` for q15--28.  Their proof is the divisor
+  minimum over primitive fixed/half-twist covers, not a reinterpretation of
+  the physical chart minima.
+- **Reusable rule:** an interval containing a physical time is not centred at
+  that time.  After deriving a half-grid integrality condition, separately
+  verify the mode-residue divisibility (or the full centre-lattice formula)
+  before setting the affine mode cochain to zero.
+
+## MISTAKE-388 (2026-08-15, THM-451 skew-tower Smith status) -- a theorem for the ambient matrix class was left labelled as a tower conjecture
+
+- **What failed:** THM-451 correctly computed the flat Smith form of the
+  skew-doubling tower at orders 16 and 32, but labelled its continuation
+  conjectural beyond order 32.  The classification step searched the tower
+  internally and missed a theorem for every skew-Hadamard matrix.
+- **First failed implication:** THM-447 already proves that every tower level
+  is skew-Hadamard.  Michael--Wallis (1998), reproved as Theorem 2.4 of
+  Hacioglu--Keman (2014), proves that every skew-Hadamard matrix of order
+  `4m` has Smith form
+  `(1,2^(2m-1),(2m)^(2m-1),4m)`.  Thus the displayed THM-451 formula was
+  true, but its `CONJECTURED` status was false immediately after its own
+  ambient-class identification.
+- **Repair / strongest survivor:** THM-451 now marks the Smith law
+  **CITED/PROVED** at every tower order.  Its binary rank law is likewise
+  all-level through THM-482's `d^+` code theorem.  The finite Hadamard
+  equivalence, chirality, Hall-class, density, and transform computations are
+  unchanged.  The HYP-2361 half-life question must seek a different invariant;
+  neither Smith form nor binary rank can be the order-128 failure.
+- **Reusable rule:** after recognizing an object as a standard ambient class,
+  search the class theorem before promoting a few computed instances to a
+  conjecture.  A correct formula can still carry a false epistemic status.
+
+## MISTAKE-387 (2026-08-14, projected `z1=216` wall) -- a prefix-only positive two-high gap was extrapolated to the whole live wall
+
+- **What failed:** THM-3351 established a positive duplicate-permitting
+  two-high gap on selected prefix bodies.  The first THM-3399 verifier silently
+  promoted that prefix fact to every post-THM-3378 live row and required
+  `two_gap>0`, thereby strengthening the lawful “at least one high” gate to
+  the false statement “exactly one high everywhere.”
+- **Minimal witness / first failed implication:** live row `195` has
+  `E=(1,5,8,9,13,14)`, `L=458640`, high floor `45170`, residual passport
+  `(3920,6370,32760,57330)`, and mask `6`.  Its low clause is denominator
+  `3920`, label `351`, value `4639/1203930`; the two high clauses are
+  `(32760,46634,21013/594117160)` and
+  `(57330,51176,236059/10268720280)`.  The exact gap is
+  `-17651221657/66699959142726`.  Thus universality of the positive gap is the
+  first invalid step; the inherited high gate, ray maxima, and the existing
+  support-capacity lemmas remain valid.
+- **Repair / strongest survivor:** enumerate the finite two-/three-high
+  residuals instead of discarding them.  Row `195` has `137` two-high cases
+  and no three-high mask.  For the displayed hostile pair, the common source
+  has `100,776` actual fixed-safe cells.  On the common modulus `229320`, its
+  support has size `88,746`, while the two lifted danger capacities are only
+  `32,760` each, leaving `23,226`.  Independently, the exact THM-3391 weighted
+  maxima are `19,849` and `19,867`, leaving a common-source lower bound
+  `61,060`.  The exact packet therefore closes once the source and both
+  quotient maps are restored.  The whole row and wall remain open until every
+  residual is partitioned through the inherited common-modulus, weighted
+  actual-cell, or denominator-two measure terminals and replayed normally and
+  with `-O`.
+- **Reusable rule:** a scalar extremal gap proved on a selected prefix is not
+  a universal arity reduction.  When several blockers survive, retain one
+  actual source, maximize each pullback window over every unit and translation,
+  and use strict summed capacity or its equality/correlation sidecar.  Raw cell
+  multiplicity cannot be inserted into an ambient unweighted quotient bound.
 
 ## MISTAKE-386 (2026-08-14, live-canon integration) -- five theorem records retained pre-freeze source hashes after their scripts changed
 
@@ -186,6 +300,61 @@ Format per entry:
   translated convolutions, freeze the center before compiling breakpoints;
   then audit every coefficient that depends on the missing coordinate, not
   merely the first one encountered.
+
+
+## MISTAKE-384 (2026-08-15, THM-3401 scope prose) -- fixed source centre zero was identified with the entire zero-cochain locus
+
+- **What failed:** THM-3401's precise statement and proof correctly compute
+  the cover rank at physical source time `t=0`, but its status and final scope
+  sentence called this “equivalently the zero-cochain slice.”  In THM-3398,
+  `p_ij=0` says that the selected centre lifts are equal to one common
+  rational `c`; it does not force the surviving additive gauge `c` to vanish.
+- **Minimal witness / first failed implication:** at `q=16`, owners
+  `(2,6,10,14)` have selected blocks
+  `(0,7,8,15)`, `(2,5,10,13)`, `(1,6,9,14)`, and `(3,4,11,12)` at common
+  centre `c=1/32`.  They partition all sheets and every affine cochain value
+  is zero, so the mobile zero-cochain rank is four.  THM-3401 proves the
+  fixed-zero rank is five.  Translating `c` to zero would shift a common
+  sheet label by `qc=1/2`, which is not a permutation of `Z/16Z`.
+- **Repair / strongest survivor:** THM-3401 is now consistently labelled a
+  **fixed-source-centre-zero** theorem, a proper sub-slice of the zero-cochain
+  locus.  Its statement, classification, ranks, boundary theorems, script,
+  output, and semantic digest are unchanged.  The independent mobile
+  common-centre atlas on owners `1,...,14` gives ranks
+  `(6,4,8,4,9,6,8,6,6,6,7,8,9,8)` for `q=15,...,28`, strictly below the
+  fixed-zero ranks exactly at `{16,18,22,23,25,27}`.
+- **Reusable rule:** a vanishing difference cochain kills relative
+  coordinates, not a common additive gauge.  Before normalizing that gauge,
+  verify that the induced translation acts on the retained labelled fibre;
+  here it is a common cyclic sheet relabelling only when `qc` is integral.
+
+
+## MISTAKE-383 (2026-08-15, q=8--15 finite-mode probes) -- a rank-bounded edge list was used to print a global-looking profile
+
+- **What failed:** the q=8 and q=8--14 probes enumerated minimal physical
+  covers only through rank five, and the q=15 probe only through rank six,
+  but their output fields said `minimal_edges` and `independence_profile`
+  without the cutoff.  The latter profiles were those generated by the
+  truncated edge lists, not the true full physical independence profiles.
+- **Minimal witness / first failed implication:** at q=8,
+  `(1,3,5,11,13,14)` covers all eight sheets at source `17/504` and every
+  five-subset is noncovering.  Thus q=8 has six additional rank-six minimal
+  edges and true `I_6=1217`, not the truncated profile's `1223`.  At q=11
+  there are 23 rank-six edges despite the rank-at-most-five list being empty;
+  q=15 also has 16 rank-seven and six rank-eight edges beyond its 157
+  rank-six edges.
+- **Repair / strongest survivor:** the original outputs now explicitly say
+  `minimal_edges_through_rank5` / `rank6` and
+  `profile_generated_by_rank_le5_edges` / `rank_le6_edges`.  An independent
+  exact boundary-and-open-cell bitset audit of every literal subset computes
+  the full q=8--15 clutters.  All intended low-rank counts, every `I_5`
+  value, all no-rescue statements, the 155 q=15 triphase-required rank-six
+  edges, and the finite-mode/cochain formulas survive unchanged.
+- **Reusable rule:** an independence profile is global only when every rank
+  has been searched, or when a proved rank bound excludes later minimal
+  edges.  Otherwise name both the edge cutoff and the fact that the displayed
+  profile is generated by that truncated clutter.
+
 ## MISTAKE-382 (2026-08-14, THM-3387 canonical grid iff) -- openness does not remove endpoint-only sheet covers
 
 - **What failed:** THM-3387 correctly proved the pointwise image identity

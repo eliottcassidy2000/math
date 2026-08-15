@@ -4,7 +4,10 @@
 At q=8 an odd transverse speed is the first one able to block two adjacent
 phase classes.  Expanding each owner into exact singleton or domino modes
 restores a one-interval carrier.  A complete affine cochain on those modes is
-compared with independent exact event geometry on the full literal universe.
+compared with independent exact event geometry through rank five, the full
+literal rank range relevant to the body atlas.  Higher-rank physical edges
+are deliberately outside this probe and are not inferred from its truncated
+edge-generated profile.
 
 This is an unnumbered FINITE-EXACT probe plus analytic mode-cochain candidate.
 Runtime gates survive python -O.
@@ -47,6 +50,7 @@ PINNED = (
 
 SHEETS = 8
 LITERAL_VERTICES = (1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14)
+SEARCH_MAX_RANK = 5
 EXPECTED_MINIMAL_EDGES = (
     (1, 3, 5, 7),
     (1, 3, 5, 9),
@@ -361,7 +365,7 @@ def main():
     mode_minimal = []
     mode_witnesses = []
     first_pairwise_hostile = None
-    for size in range(1, 6):
+    for size in range(1, SEARCH_MAX_RANK + 1):
         for subset in combinations(LITERAL_VERTICES, size):
             if any(set(edge) <= set(subset) for edge in event_minimal):
                 continue
@@ -457,20 +461,20 @@ def main():
     print("Q8 DOMINO MODE-CLUTTER EXACT PROBE")
     print(f"source_sha256_lf={lf_hash(source)}")
     print(f"dependency_sha256_lf={tuple((name, expected) for name, _, expected in PINNED)}")
-    print("status=FINITE-EXACT literal q8 probe plus analytic singleton/domino mode-cochain candidate;unnumbered_and_not_canon")
+    print("status=FINITE-EXACT literal q8 rank<=5 probe plus analytic singleton/domino mode-cochain candidate;unnumbered_and_not_canon")
     print("mode_species=odd:8_singletons_plus_8_adjacent_dominoes;gcd2:4_antipodal_pairs;gcd4:2_parity_quadruples")
     print("mode_radii=singleton_or_coset:1/(14u);odd_domino:1/(112u)")
     print("cochain=p_ij=16u_i u_j(x_i-x_j);congruence_mod_16gcd;overlap_7|p|<w_i*u_j+w_j*u_i;zero_triangle_circulation")
-    print(f"literal_vertices={LITERAL_VERTICES};minimal_edges={len(event_minimal)};rank_profile={rank_profile};gcd_type_profile={gcd_type_profile}")
-    print(f"minimal_edge_list={event_minimal}")
-    print(f"independence_profile={independence_profile}")
+    print(f"literal_vertices={LITERAL_VERTICES};minimal_edges_through_rank5={len(event_minimal)};rank_le5_profile={rank_profile};gcd_type_profile={gcd_type_profile}")
+    print(f"minimal_edge_list_through_rank5={event_minimal}")
+    print(f"profile_generated_by_rank_le5_edges={independence_profile}")
     print(f"domino_control={domino_control}")
     print(f"q4_quotient_lift_control={quotient_control}")
     print(f"pairwise_feasible_mode_nonedge=order:{hostile_order},modes:{tuple((m[0],m[1],m[2],m[3]) for m in hostile_modes)}")
     print(f"q8_body_candidates={candidates};global_transverse_rows={global_rows};exact_rows={exact_rows};core_rescues={tuple(rescues)}")
     print("body_identity=I5=1152;all_135_unsafe_rows_leak_outside_core_clock1")
     print("typing=mode_expanded_cover_clutter_plus_complete_affine_cochain;sign_tournament_is_lossy")
-    print("scope=exact_q8_slice_probe_for_T3387;no_theorem_promotion,no_refined_decrement,no_LRC14")
+    print("scope=exact_q8_rank_le5_slice_for_T3387;higher_rank_physical_clutter_not_enumerated;no_theorem_promotion,no_refined_decrement,no_LRC14")
     print(f"semantic_sha256={digest}")
     print("verdict=PASS")
 

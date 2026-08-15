@@ -5,7 +5,9 @@ For phase count m=q/gcd(u,q), a mode is a consecutive block of
 s<=ceil(m/7) phase classes.  It has one rational centre lattice and one
 rational interval radius, so compatible mode covers are again decided by a
 complete affine star cochain.  The compiler compares this analytic carrier
-with exact event geometry on every literal subset relevant to the body atlas.
+with exact event geometry on every literal subset through rank five, the full
+rank range relevant to the body atlas.  Higher-rank physical edges are outside
+this probe and are not inferred from the truncated edge-generated profiles.
 
 This is an unnumbered FINITE-EXACT probe plus analytic theorem candidate.
 Runtime gates survive python -O.
@@ -49,12 +51,12 @@ PINNED = (
     (
         "q8-script",
         Q8_PATH,
-        "cc0fd75c57d177dd2da396ff0ac2f6cb5777abcc33a1e1aa911248385812529e",
+        "3e523a2ff8cbd6329782347c56fae2d8519a161c3d127697ca452f3891890b9c",
     ),
     (
         "q8-output",
         ROOT / "05-knowledge/results/lrc14_q8_domino_mode_clutter_probe_20260814.out",
-        "346458020b5568708eb0198966285157401f0ea862cbd6009ea011cec10f420d",
+        "0f5a421205bc559c8f12dce8462b4d570fcffba0e602740d1ea66c52cd84d045",
     ),
 )
 
@@ -136,6 +138,7 @@ EXPECTED_ATLAS_ROWS = {
     13: 1287,
     14: 1287,
 }
+SEARCH_MAX_RANK = 5
 EXPECTED_SEMANTIC_DIGEST = "66a69a30c49b72ff8ecbf7de94f495025518e04b73969f2d970debeb6f113023"
 
 
@@ -387,7 +390,7 @@ def main():
     for q in range(8, 15):
         vertices = tuple(speed for speed in range(1, 15) if speed % q != 0)
         event_minimal = []
-        for size in range(1, 6):
+        for size in range(1, SEARCH_MAX_RANK + 1):
             for subset in combinations(vertices, size):
                 if any(set(edge) <= set(subset) for edge in event_minimal):
                     continue
@@ -473,18 +476,18 @@ def main():
     print("LRC14 Q8-Q14 FINITE-MODE CLUTTER EXACT PROBE")
     print(f"source_sha256_lf={lf_hash(source)}")
     print(f"dependency_sha256_lf={tuple((name, expected) for name, _, expected in PINNED)}")
-    print("status=FINITE-EXACT literal q8..14 compiler plus analytic consecutive-mode star-cochain candidate;unnumbered_and_not_canon")
+    print("status=FINITE-EXACT literal q8..14 rank<=5 compiler plus analytic consecutive-mode star-cochain candidate;unnumbered_and_not_canon")
     print("mode_formula=m=q/gcd(u,q);1<=s<=ceil(m/7);block=s_consecutive_phase_classes")
     print("mode_centre=h/(2qu),h=-(q/m)(2r+s-1)_mod_2q;mode_radius=w/(14qu),w=(q/m)(m-7(s-1))")
     print("cochain=p_ij=2q*u_i*u_j(x_i-x_j);congruence_mod_2qgcd;overlap_7|p|<w_i*u_j+w_j*u_i;compatible_star")
     for q, vertices, edges, ranks, mode_sizes, profile, unsafe in summaries:
-        print(f"q={q};vertices={vertices};minimal_edges={len(edges)};rank_profile={ranks};mode_size_profile={mode_sizes};I5={profile[5]};unsafe_five_sets={unsafe};core_rescues=0")
-        print(f"q={q};minimal_edge_list={edges}")
-        print(f"q={q};independence_profile={profile}")
+        print(f"q={q};vertices={vertices};minimal_edges_through_rank5={len(edges)};rank_le5_profile={ranks};mode_size_profile={mode_sizes};I5={profile[5]};unsafe_five_sets={unsafe};core_rescues=0")
+        print(f"q={q};minimal_edge_list_through_rank5={edges}")
+        print(f"q={q};profile_generated_by_rank_le5_edges={profile}")
     print("doubling_lifts=q4_to_q8:(1,3,5,7)->(2,6,10,14);q5_to_q10:(1,2,3,4,7)->(2,4,6,8,14);q6_to_q12:(2,3,5,7)->(4,6,10,14)")
     print("atlas_identity=q8..14_I5=(1152,1205,1269,1287,1271,1287,1287);all_unsafe_rows_leak_outside_core_clock1")
     print("typing=finite_owner_mode_bank_plus_complete_affine_star;not_tournament")
-    print("scope=structural_reconstruction_of_T3387_q8..14_slices;no_new_row,no_refined_decrement,no_LRC14")
+    print("scope=structural_reconstruction_of_T3387_q8..14_rank_le5_slices;higher_rank_physical_clutters_not_enumerated;no_new_row,no_refined_decrement,no_LRC14")
     print(f"semantic_sha256={digest}")
     print("verdict=PASS")
 

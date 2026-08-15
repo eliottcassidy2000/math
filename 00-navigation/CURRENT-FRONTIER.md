@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — 2026-08-14.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
+**Rolling state — 2026-08-15.** Linked theorems are proof sources; this file records composition and residuals. Literal statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **REFUTED**, **SUPERSEDED**.
 
 ## LRC(14)
 
@@ -25,11 +25,16 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`; projected caps `1579/216`. At `z1=216`, THM-3361 closes the three `L720720` rows; THM-3378 closes row 94 of the next family, leaving ledger/wall/families `372913/109/12`.
-THM-2941/3349/3350/3352/3355 close the positive matched-residue branch `z_e=q_eL-e` on all `3,003` bodies; THM-3360/3384 give independent pair floors. THM-3381 bounds phase/tree drift and refutes residue-blind transfer.
-Open: `k=0`, other `k=1` residues, projected `k=2,3`, rung, physical entry and LRC; screens are not covers. THM-3356 gives determinant shells; THM-3366 leaves refined `(rows,count)` `k=2:4,056/200,069,517,203`, `k=3:1,897/2,548,893,834`.
-THM-3398 extends the q<=7 fibre canon to all-q atom/cochain and mode criteria. q=8--14 counts `(32,22,18,0,8,0,0)` stay FINITE-EXACT; q=15 needs trimodes. No decrement.
-THM-3368 adds a weighted Horn tariff but no clock seed. LRC remains open.
+Direct frontier: `<=6`; projected caps `1579/216`. At `z1=216`, THM-3361
+closes the three `L720720` rows; THM-3378 closes row 94 of the next family and
+leaves ledger/wall/families `372913/109/12` (109 rows in 12 families remain).
+THM-2941/3349/3350/3352/3355 close the positive matched-residue branch
+`z_e=q_eL-e` on all `3,003` bodies, including all `561` reflected six-level
+residual bodies; THM-3360 proves the physical edge floor and THM-3384 gives an independent canonical-residue closure. THM-3381 bounds
+phase/tree drift and refutes residue-blind transfer. Open: `k=0`, other `k=1`
+residues, projected `k=2,3`, rung, physical entry and LRC; screens are not covers.
+THM-3356/3366 leave k2/k3 `4,056/200,069,517,203` and `1,897/2,548,893,834`; THM-3385/3387--3395/3398/3402 give q2--7 and all-q mode/cochain laws.
+THM-3405/3415: ZMC 4 iff `8|q or 9|q`; 5 iff `(10|q or 12|q)` with `8,9 not|q`. THM-3414: fixed-zero rank <=6 iff one of `15,16,18,20,24` divides q. MISTAKE-389 splits HG; THM-3409 gives the q15 tariff `(50,6)/(10,3)`; THM-3410 gives wedge/MST. THM-3368 has no clock seed; LRC remains open.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
 
@@ -201,7 +206,7 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
   THM-3173 separates `C2*C3`, regular `S3`, and regular `C6`; their joint
   quotient has order 18, while pointed oriented quartic frames form `Q3`.
   These are semantic action data, not a physical current or Keller bridge.
-- THM-1880/1885 give the Pell frame; THM-3335 blocks square-arc/skew-EW. THM-3339's `T6` loses owner; THM-3357/3364 give local `T3/T4`, and THM-3379 identifies the `T4` bit with median `b` only on the Fibonacci rays.
+- THM-1880/1885 give Pell; THM-3335 blocks square-arc/skew-EW. THM-3339's `T6` loses owner; THM-3357/3364/3379 give `T3/T4`/Fibonacci quotients. An exact mod3/q15 bridge gives 4-state `S4` and 24-state frame-line packets, no owner.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
 - THM-2013/2016 bound cyclic temperature/reducibility; `H` remains empirical.
@@ -384,9 +389,9 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   [subresultant sidecar](../07-reflections/jc-critical-inverse-cover-cofactor-jacobian-probe-agent-20260803.md)
   gives a two-pivot inverse graph and mate-integrability class on two controls.
   THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
-  THM-3318/3326/3348 and THM-3386 classify generic and integral linear-`z`
-  responses, including the max-multiplicity minimal-polynomial annihilator.
-  This refines THM-2063, not `JC(2)`. THM-3354 blocks direct D5 transport.
+  THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response: exact
+  annihilators, affine `I^q`, support/thickness, and filtered torsion arms.
+  Collisions persist but `ker` after `gr` overcounts. This refines THM-2063, not `JC(2)`; THM-3354 blocks D5 transport.
   No base root choice follows; residual degree 119, Keller mate/inverse cover, `JC(2)` and `DC(2)` remain OPEN.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in

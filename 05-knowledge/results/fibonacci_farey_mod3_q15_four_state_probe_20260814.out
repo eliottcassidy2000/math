@@ -1,0 +1,18 @@
+FIBONACCI-FAREY MOD3 / Q15 FOUR-STATE EXACT PROBE
+source_sha256_lf=6ad743f478420641aae9078bcdc83b4f9eb19b037bb90f640b92b1e5933e6295
+dependency_sha256_lf=(('THM-3333-script', 'ddeb800a881fdf3576d3d03d269ced2b486fabe8bc48594416a7c343531441df'), ('THM-3333-output', '7e8eaabb73fc3f86b3099d3b43aa3c3da925fb24a3081e7611a9faddccebaf79'), ('THM-3339-script', '094fc254dcb7965791e59247a98f60a337725b40d169db6f3862c1da5943149b'), ('THM-3339-output', '88c5f44971df12bbd61f84925f408a253450095ee2de23b5a617efde1e4ecdfa'), ('THM-3379-script', '803065a6ce419554b04403b13537889547da53bd1e30aa35edc5e5caca549ae8'), ('THM-3379-output', 'd3cf7be59fe988171b73184b9cf26974b26bdfbcd1e50bbb3d40075a7d666778'), ('q15-script', '751aff937e422a6d09e7e89677ded2f40ce7c9b72c12191078d691cbc4316c33'), ('q15-output', '258ced868f662355b890ad0cc486f6375d96c04eb0f226a723974d0b79d95b8d'))
+status=VERIFIED-EXACT finite quotients plus elementary recurrence/density proof candidate;unnumbered_and_not_canon
+P1F3_states=((1, 0), (0, 1), (1, 1), (1, 2));actions=(('G', (1, 2, 3, 0)), ('A', (1, 3, 2, 0)), ('B', (1, 3, 0, 2)), ('C', (3, 1, 0, 2)), ('S', (0, 3, 2, 1)))
+q15_unit_sign_cycle=(1, 2, 4, 7);times2=(2, 4, 7, 1);inversion=(1, 7, 4, 2);blocked_pairs=((1, 14), (7, 8), (4, 11), (2, 13))
+pointed_conjugacy=times2_on_q15_classes_equals_Fibonacci_G_on_P1F3;owner_to_block_is_inversion_reflection
+groups=<A,B,C>_on_P1F3=S4_order_24;<G,S>=D4_order_8
+Farey_edges_checked=555;one_way_only_hostile=(0/1,2/5)_determinant_2
+Berggren_transition_matrix=((0, 2, 0, 1), (0, 1, 0, 2), (2, 0, 1, 0), (1, 0, 2, 0));charpoly=(x-3)(x+1)(x^2+3);level_counts_0_to_8=((1, 0, 0, 0), (0, 2, 0, 1), (1, 2, 2, 4), (8, 4, 10, 5), (25, 20, 20, 16), (56, 70, 52, 65), (169, 182, 182, 196), (560, 520, 574, 533), (1681, 1640, 1640, 1600))
+tree_state_density=1/4_each;heap_harmonic_coefficient=1/4_each;state_subsets_have_coefficient=cardinality/4
+tournament_sections=8;profile=((((0, 2, 2, 2), 1), 4), (((1, 1, 1, 3), 1), 4));C4_invariant_tournaments=0
+mod6_frame_line_states=24;SL2Z6_elements=144;fibre_size=6
+canonical_q15_edge_harmonic_mass=1019/420
+typing=four_state_cycle_and_24_state_frame_line_quotient;not_a_physical_owner_not_a_canonical_tournament
+scope=no_Farey_converse_no_full_tree_word_recovery_no_LRC_current_or_JC_flux
+semantic_sha256=f111020b7aebaa3b4108800fe981923e77befc586c8521818cd8aa8600c87baf
+verdict=PASS

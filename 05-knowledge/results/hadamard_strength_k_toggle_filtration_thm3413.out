@@ -1,0 +1,13 @@
+THM-3413 STRENGTH-K ORTHOGONAL-ARRAY TOGGLE FILTRATION
+source_sha256_lf=dbdf97d32e4114abfd71393791ac8b956d4f1e46eef9a98ec14532107dd0a1a6
+dependency_sha256_lf=(('THM-3407', 'd0d277966d34782f9272da5ea8b6200378e1b80abf3c54de1e2d796870ea0479'), ('THM-3407-script', '83f38703b126cdc9bf9358bce20803ed890a1f19d685c7644e909c1a8df45e90'), ('THM-3407-output', '46b6b6176a23ebb0554c0359315f5584227576c753b5e3e1d1f6cc8ce1f1d31f'), ('THM-3411', '624443ef3614fdc8993ef05e84e85d9e57f1f6fd97535c36d1e6c26767853c13'), ('THM-3411-script', '376c8d5bf5a9f68672bd680ea5df367b5eb752fb30228b2154abdfc37e4d3415'), ('THM-3411-output', '10fdb3d5cce9fd98e64b8ea78087ec4e66d06097a1c52af0bf518de0388ee93b'))
+status=PROVED_CANDIDATE_plus_VERIFIED_EXACT;independent_audit_requested
+abstract_transform=(checks,digest)=(7570, '8ca82c4d77a181f5a7ffcc5b1dceb6a1d8bdecaf85fa4d3f50742811dd408f72')
+parity_halfcubes=(moment_checks,size_digest)=(697004, 'fa0c85ad23aa677a746bee806045fe8ba5c2774d6647d760c2185885263c58f5')
+paley_order4_exhaustion=(position_sets,parity_tests,blind_table_digest,response_digest)=(511, 38342, '5609a55f1a090a638e1984f4bd49d6177a6c8facfba6c613195fa4adba94d155', '1b523fce3c50748e26aacf0bdae81b35d79b84b7e04e33da47b5edcd966c5e55')
+larger_paley_controls=(packets,parity_tests,records_digest)=(5, 486, 'c3bae09e5585d8400c7c57a384ca3c70bb7d70b035b3547195af211729d6d79e')
+thm3411_regression=(packets,digest)=(4, '7abe3af1c82711880210147ec007348838070e7e2c1de37cea695847767c8a71')
+convolution_spectrum=(powers,recurrence_degree,digest)=(12, 4, '0141099ab4c455078c526cfcafbefcbd37950d9b306ea58b1bf2ecced27e01cd')
+scope=distinct_toggle_positions;rows_or_columns_may_repeat;strength_k_Rademacher_laws;normalized_determinant_average;no_completion_or_existence_claim
+semantic_sha256=0db6229ea8922fb2f9c570103dd8aff7e30da424bcc196f29de19b54e2cab329
+verdict=PASS
