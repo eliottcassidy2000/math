@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 """Exact companion for the odd target-free p=7 half-twist obstruction.
 
-THM-3429 proves that a hypothetical odd composite target-free joint-period
-cap-seven cover in the p=7 lane has seven distinct owners, every owner is 7-active,
-and every owner hits every seven-point fibre exactly once.  This companion
-freezes the elementary parity closure of that equality case.
+The p=7 activity/partition clause needed here is proved directly from the
+proved rank-six support theorem THM-3416, independently of the broader proved
+THM-3429 classification.  Suppose at most seven distinct blocks cover at joint
+quotient period Q=7M.  Joint period supplies a 7-active owner.  If an
+inactive owner exists, at most six inactive blocks descend exactly to M.  As M
+is target-free, THM-3416 says that they miss a base sheet.  At most six active
+blocks remain, and each hits at most one point of the missed seven-fibre, an
+impossibility.  Hence all owners are active; fibre capacity then forces exactly
+seven owners and one hit by each owner on every fibre.
 
 Write Q=7M and d=gcd(Q,r).  Activity means 7 does not divide r, so the
 reduced order m=Q/d is 7k.  Because Q is odd, d,m,k are odd.  Direct counting
@@ -38,10 +43,10 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-THM3429 = ROOT / "01-canon/theorems/THM-3429-prime-fibre-activity-descent-for-mixed-order-half-twist-seven-covers.md"
-THM3429_SHA256_LF = "20343d8f6a5d72b298b5ec5ac6f6889e8f27e382b5c4446587209ed737a46fe3"
+THM3416 = ROOT / "01-canon/theorems/THM-3416-zero-mode-cochain-global-rank-six-support.md"
+THM3416_SHA256_LF = "42a9309145de51d1bb6fca0b7c1945302ff37a63a3183e1dfed838c07118e8bf"
 TARGET_FREE_BASES = (8, 9, 10, 11, 12, 15, 23, 25)
-EXPECTED_SEMANTIC_SHA256 = "965b6df04df298a781783af5b2cec498c30722608c8d8814133c65e15d934b82"
+EXPECTED_SEMANTIC_SHA256 = "8599e1b8ced3588d68d4cdd176de5932b72cb1ac4bc434b2dab14114f3914d89"
 
 
 def require(condition, detail):
@@ -365,25 +370,28 @@ def main():
     source = Path(__file__)
     tree = ast.parse(source.read_text(encoding="utf-8"))
     require(not any(isinstance(node, ast.Assert) for node in ast.walk(tree)), "assert found")
-    require(lf_sha256(THM3429) == THM3429_SHA256_LF, lf_sha256(THM3429))
+    require(lf_sha256(THM3416) == THM3416_SHA256_LF, lf_sha256(THM3416))
 
     census = identity_census()
     controls = sharp_controls()
     semantic_surface = (
-        THM3429_SHA256_LF,
+        THM3416_SHA256_LF,
         census,
         controls,
-        "THM3429_TRANSVERSE_P7_PARTITION_FORCES_EVEN_RESIDUES_THEN_FIXED_SHEET_COLLISION_AND_EVEN_AUGMENTED_GCD",
+        "THM3416_DESCENT_DERIVES_P7_PARTITION_THEN_PARITY_FORCES_FIXED_SHEET_COLLISION_AND_EVEN_AUGMENTED_GCD",
     )
     semantic_digest = sha256(repr(semantic_surface).encode("ascii")).hexdigest()
     if EXPECTED_SEMANTIC_SHA256 is not None:
         require(semantic_digest == EXPECTED_SEMANTIC_SHA256, semantic_digest)
 
     print("Odd target-free p=7 half-twist parity obstruction")
-    print("status=PROVED_COROLLARY_FROM_THM3429 all_Q_literal_joint_period_p7_lane_NEGATIVE;primitive_augmented_NEGATIVE")
-    print(f"dependency_THM3429_sha256_lf={THM3429_SHA256_LF}")
-    print("typed_universe=literal:Q_odd_composite_target_free,seven_distinct_transverse_half_twist_residues_mod_2Q(Q_not_divide_r),joint_quotient_period_Q|augmented_subuniverse:add_gcd(2Q,R)=1")
-    print("THM3429_input=seven_owners;all_7_active;one_hit_per_owner_per_7_fibre;global_OR_equals_XOR")
+    print("status=PROVED_FROM_THM3416_PLUS_ELEMENTARY_P7_FIBRE_AND_PARITY_LEMMAS all_Q_literal_joint_period_p7_lane_NEGATIVE;primitive_augmented_NEGATIVE")
+    print(f"dependency_THM3416_sha256_lf={THM3416_SHA256_LF}")
+    print("typed_literal_universe=Q_odd_composite_target_free;7_divides_Q;at_most_seven_distinct_transverse_half_twist_residues_mod_2Q(Q_not_divide_r);literal_sheet_cover;joint_quotient_period_Q")
+    print("typed_augmented_universe=literal_universe_plus_gcd(2Q,R)=1;literal_contradiction_precedes_augmented_gate")
+    print("distinct_owner_semantics=owners_are_distinct_residues_mod_2Q;equal_sheet_masks_if_any_still_count_as_separate_owners;descent_uses_at_most_six_inactive_owners")
+    print("direct_descent=joint_period_supplies_a_7_active_owner;if_any_owner_is_7_inactive_then_at_most_six_inactive_blocks_pull_back_from_target_free_M=Q/7_and_THM3416_makes_them_miss_a_base_sheet;at_most_six_active_blocks_each_hit_at_most_one_point_of_that_7_fibre")
+    print("derived_partition=no_inactive_owner;cover_and_cap_seven_force_exactly_seven_active_owners_and_one_hit_per_owner_per_7_fibre;global_OR_equals_XOR")
     print("all_Q_block_identity=Q=7M,d=gcd(Q,r),7_not_divide_r:even_r_gives_size_M_and_zero_missed_fibres;odd_r_gives_size_M-d_and_d_missed_fibres")
     print("parity_conclusion=one_hit_on_every_fibre_forces_all_seven_residues_even")
     print("literal_contradiction=all_even_blocks_contain_the_common_sheet_(Q-1)/2;total_mass_Q_has_overlap_defect_at_least_6")
@@ -397,7 +405,7 @@ def main():
     print(f"script_sha256_lf={lf_sha256(source)}")
     print("reproducibility=standard_library_only;no_elapsed_fields;truth_gates_survive_python_O")
     print("commands=python -B 04-computation/odd_target_free_p7_half_twist_parity_obstruction.py;python -B -O 04-computation/odd_target_free_p7_half_twist_parity_obstruction.py")
-    print("scope=closes_only_the_THM3429_p7_lane;remaining_p3_p5_p17_p29_lanes_fixed_zero_arbitrary_time_and_LRC14_remain_open")
+    print("scope=standalone_closure_of_only_the_p7_lane;proof_independently_based_on_THM3416;remaining_p3_p5_p17_p29_lanes_fixed_zero_arbitrary_time_and_LRC14_remain_open")
 
 
 if __name__ == "__main__":

@@ -32,22 +32,25 @@
   `2de78875810a95eaa1ccdddfd4a91cac4db5ea32bcbe384a635f1045d5a692c7` /
   `75b6d84866f38c826b4e26e1374f7d45aa233704de47e37dc3499bf5b0689f99` /
   `c46b24a98d32f83e1933276372e8bc1688ac9d3c3efa54c154ec19fcd1094c2d`.
-  No rank-seven antichain completeness, arbitrary-time, or LRC(14) conclusion
-  is claimed.
+  The second companion also verifies the general activity floor and Boolean
+  defect budgets, while the standalone parity proof closes `p=7`.  No
+  rank-seven antichain completeness,
+  arbitrary-time, or LRC(14) conclusion is claimed.
 
 - `odd_target_free_p7_half_twist_parity_obstruction.py` -> matching `.out`
-  [THM-3429 PROVED COROLLARY + VERIFIED-EXACT].  In the transverse target-free
-  `p=7` equality lane, every active block has one point on each seven-fibre
-  only when its residue is even.  Seven such blocks share the reflection-fixed
-  sheet, so their union cannot be an exact partition; their augmented gcd is
-  also even.  The companion pins the final THM-3429 theorem hash, checks 4,080
-  active residues and 906,360 phase/fibre cells including repeated powers of
-  seven, and replays exact positive and hostile controls.  Normal and optimized
-  transcripts agree.  Script/output/semantic LF-normalized SHA-256:
-  `93472500f9515285fdef30b8c817a2e3533aef756f7b29133e885e9caba181dc` /
-  `aee4ed3f8515c4f82424bf1bdbec5e210b4d0506aba38fa761e51622867e8180` /
-  `965b6df04df298a781783af5b2cec498c30722608c8d8814133c65e15d934b82`.
-  The residual `3,5,17,29` lanes and LRC(14) remain open.
+  [PROVED COROLLARY + VERIFIED-EXACT, independent of THM-3429].  Directly
+  from THM-3416, a target-free odd joint-period cap-seven cover with `7|Q`
+  would have seven active owners and exactly one hit per owner on every
+  seven-fibre.  Exact block sizes force all seven residues even, so they
+  collide at the reflection-fixed sheet; the augmented gcd also remains
+  even.  The all-`Q` proof is checked against repeated-seven hostiles and
+  exact small-cover controls.  Normal, optimized, and stored outputs agree.
+  Script/output/semantic LF-normalized SHA-256:
+  `397b5678e0c8a1600a1bf34c9e8ba4408e155264d2af6c6302fcb53a202f5a89` /
+  `dbc55b66973a3a06c00cec8ef0b446e32679d946944b5c97167738e4904f567c` /
+  `8599e1b8ced3588d68d4cdd176de5932b72cb1ac4bc434b2dab14114f3914d89`.
+  This closes only the `p=7` lane; fixed zero, arbitrary time, and LRC(14)
+  remain open.
 
 - `rough_composite_odd_interval_collision_thm3426.py` -> matching `.out`
   [THM-3426 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For an odd
@@ -103,7 +106,7 @@
   No LRC(14) ledger decrement.
 
 - `d5_secondary_h1_descent_defects_thm3431.py` -> matching `.out`
-  [THM-3431 PROVISIONAL / VERIFIED-EXACT].  The degree-13 cyclic cover sends
+  [THM-3431 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The degree-13 cyclic cover sends
   the LRC chart class to the deck defect of its primitive, explicitly
   `h(j+7)-h(j)=7a`, while a selected JC observer embeds into
   `H^1_(lambda)(K[lambda])` as `[lambda^(-q_sigma)]`.  The companion checks
@@ -115,8 +118,8 @@
   `9bcd3f10c1741b7328905b31d8401a205a6916b2a0767c3860a8f5a2b45e0ee7` /
   `41375ee1c22b2ed1c39adf5a6a985896f7fbd976980cb1753d93b69fa39f5b52` /
   `79f37de16658ac1e755e0acb5640507dba716756d9b3136f378004a4d29bcc21`.
-  No cross-coefficient map, current, LRC(14), or JC(2) follows; independent
-  theorem audit is required before promotion.
+  No cross-coefficient map, universal common-image property, current,
+  LRC(14), or JC(2) follows.
 
 - `jc_all_sector_constant_observer_thm3427.py` -> matching `.out`
   [THM-3427 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
@@ -171,6 +174,16 @@
   `f89f31256715615babe7ffec792363f9149134a5d02cf20db906ed45c210f1a8` /
   `ba5196cfa2f8ec82c2cd4fb0320181375334c85525fdb8a5b9e891f2f613c2cf` /
   `c3b8596233d20f55e5c0bf0419c5f3f627cbf371e3004a5f40ab8a582a09b9f8`.
+  is every residue on every prime fibre of all `93` odd composite `Q<=315`:
+  `2,142,888` pullback cells and `11,819,480` active cells.  It verifies the
+  activity floors for every odd prime through `997`, the Boolean defect
+  budgets `(4,2,0,1,1)` on primes `(3,5,7,17,29)` (with the same zero
+  defect at the surviving all-active prime `13`), the sharp target-free
+  `Q=51` atom, and the nonprimitive scaled-13 hostile at `Q=39`.  Normal and
+  optimized transcripts agree.  Script/output/semantic LF-normalized SHA-256:
+  `5ea4a9830f77a984aa7db83124ada94a498ed8f7687164533919545cd207f23f` /
+  `2ad7b43fd9afb14539438f2a17d4f458a7af6dbf3bd3deb947f8740099d7c316` /
+  `d65463e762b3ba39e6cbbf13daeba73f9b689f9051ec460ac7d6ec27eaeece85`.
   This independently verifies the base activity inequality; its `p=7`
   equality row is superseded as a cover lane by THM-3429's fixed-fibre gate.
   The two residual 17-adic towers and LRC(14) remain open.

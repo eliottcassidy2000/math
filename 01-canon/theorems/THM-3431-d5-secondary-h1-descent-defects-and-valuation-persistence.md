@@ -2,16 +2,17 @@
 id: THM-3431
 title: "D5 secondary H1 descent defects and valuation persistence"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  The degree-13 LRC trivialization induces an explicit
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  The degree-13 LRC
+  trivialization induces an explicit
   isomorphism H1(C7;F13) -> H1(C13_deck;F13), sending chart holonomy to the
   deck defect of the cover primitive.  Every selected one-root JC observer
   has a canonical cyclic embedding into H1_(lambda)(K[lambda]) sending it to
-  [lambda^(-q_sigma)].  Their only lawful common image is a lossy
-  valuation-indexed death barcode: all additive cross-maps vanish in both
+  [lambda^(-q_sigma)].  A lawful common forgetting constructed here is the
+  lossy valuation-indexed DeathBar record: all additive cross-maps vanish in both
   directions, even when bar lengths agree.  This constructs no semantic
   current, polynomial mate, LRC(14), or JC(2) result.
 source: codex2-d5-secondary-defects-2026-08-15
+audit: independent graph/group cohomology, cover primitive, action convention, JC cyclic injection and annihilator, affine normalization, both-direction additive no-go, DeathBar scope, q=1 hostile, normal/-O/stored replay, and hash audit CLEAN after removing unproved uniqueness/minimality language
 depends_on:
   - THM-2542-seven-chart-cech-holonomy-and-c91-arrival-obstruction
   - THM-3354-inequivalent-h1-carriers-and-typed-obstruction-cospan
@@ -30,9 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3431 -- D5 secondary H1 descent defects and valuation persistence
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**  Nothing in this file is a proved dependency before a
-different agent audits it and the status is explicitly promoted.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. What the repaired D5 construction is
 
@@ -42,7 +41,7 @@ sites, with incompatible coefficients and target predicates.  It leaves open
 the introduction of a new correspondence space or coefficient-changing
 sidecar.
 
-The minimal lawful replacement is a pair of **secondary trivialization
+The construction supplies a pair of explicit **secondary trivialization
 defects**:
 
 ```text
@@ -82,6 +81,16 @@ delta h=pi^*g.                                             (3)
 
 The primitive is unique up to a constant.  Since `tau` commutes with
 `delta`,
+
+We use the forward pullback convention
+
+```text
+((tau^m)^*h)(j)=h(tau^m(j))=h(j+7m).
+```
+
+With the inverse left-action convention, `chi_g` and `T_L` are replaced by
+their negatives; the isomorphism and death law are unchanged.  Under the
+forward convention,
 
 ```text
 chi_g(tau^m)=tau^(m)*h-h                                  (4)
@@ -305,4 +314,4 @@ optimized outputs agree exactly with the LF-normalized stored transcript.
 The theorem constructs no LRC semantic vertical path, physical current,
 coefficient-changing correspondence, polynomial mate, Keller inverse,
 LRC(14), or JC(2) conclusion.  It does not identify group, graph, local,
-de Rham, or etale cohomology.  **QED for the provisional candidate.**
+de Rham, or etale cohomology.  **QED.**

@@ -8,7 +8,7 @@ status: >
   5*17^a remain.  Q=51 forces an affine lift cocycle.  This is a reduction,
   not a classification; arbitrary common time and LRC(14) remain open.
 source: codex2 base descent plus rank7-reflection fixed-fibre strengthening, 2026-08-15
-audit: independent statement-universe, prime-power pullback, strict-capacity, fixed-fibre parity, support/tower, Q51 lift-cocycle, p7 closure, dual-companion, hash, normal/-O, security, and documentation audit CLEAN
+audit: independent statement-universe, prime-power pullback, strict capacity, fixed-fibre parity, activity budgets, support/tower reconstruction, Q51 lift hostile, standalone p7 closure, dual companions, hashes, normal/-O, security, and documentation CLEAN
 depends_on:
   - THM-3416-zero-mode-cochain-global-rank-six-support
   - THM-3421-prime-half-twist-rank-seven-classification
@@ -34,8 +34,8 @@ hash_basis: LF-normalized bytes
 
 ## 1. Statement
 
-For odd `Q`, an integer residue `r` modulo `2Q`, and a sheet `ell` modulo
-`Q`, put
+For odd `Q`, a positive transverse representative `1<=r<=Q-1`, and a sheet
+`ell` modulo `Q`, put
 
 ```text
 B_(Q,r)={ell: ||r(2ell+1)/(2Q)||<1/14},
@@ -48,15 +48,17 @@ Let
 A_6={8,9,10,11,12,15,23,25}.                           (2)
 ```
 
-Assume that no member of `A_6` divides `Q`, and that residues
-`R=(r_1,...,r_s)`, `s<=7`, are **transverse modulo `2Q`**, meaning
+Assume that no member of `A_6` divides `Q`, and that **distinct** positive
+transverse representatives `R=(r_1,...,r_s)`, `s<=7`, satisfy
 
 ```text
-Q does not divide r_i for every i.                           (3a)
+1<=r_i<=Q-1.                                             (3a)
 ```
 
-Thus neither the universal residue `r=0` nor the empty residue `r=Q` is an
-allowed owner.  Assume further that
+This is the sign-normalized transverse universe `Q not|r_i`; it excludes the
+universal residue `r=0` and the empty residue `r=Q`.  Repeated or
+sign-equivalent masks can be deleted before this normalization.  Assume
+further that
 
 ```text
 union_i B_(Q,r_i)=Z/QZ,
@@ -200,6 +202,46 @@ Writing `p=7k+s` solves `(14)` exactly.  Its prime solutions are
 Oddness removes `2`, while target-freeness `(2)` removes `11,23`.  This proves
 `(4)`.  Notice in particular that `7` is not in `(15)`.
 
+The broader activity invoice from the same fibre argument remains useful.
+Let
+
+```text
+a_p=#{i:i is p-active},             c_p=ceil(p/7).       (15a)
+```
+
+Then every prime divisor satisfies
+
+```text
+a_p c_p>=p,
+a_p>=ceil(p/c_p).                                      (15b)
+```
+
+Indeed, if `a_p c_p<p`, the active owners cannot fill a fibre missed by the
+inactive owners, so the inactive owners descend to a cover of `Z/NZ`.
+Joint period gives `a_p>=1`, hence at most six inactive owners, contradicting
+THM-3416 and target-freeness.  This argument includes repeated prime factors.
+
+A target-free cap-seven cover has exactly seven owners.  On the prime support
+eventually allowed by `(4)--(5)`, the inactive-owner defect budgets are
+
+```text
+|D_3|<=4,  |D_5|<=2,  |D_13|=0,  |D_17|<=1,  |D_29|<=1, (15c)
+```
+
+where `D_p={i:p|r_i}`.  Thus
+
+```text
+#{i:gcd(Q,r_i)=1}
+ >=max(0,7-sum_(p|Q)|D_p|).                            (15d)
+```
+
+Before the fixed-fibre gate is applied, the equality case at `p=7` would
+force all seven owners active and exactly one hit by each owner on every
+seven-point fibre.  Hence it would be a global exact partition.  Section 5
+rules this case out already; the separate parity companion gives an
+independent contradiction by forcing all seven residues even and then
+colliding them at the common reflection-fixed sheet.
+
 ## 5. The all-active prime fibre and parity gate
 
 Suppose first that every owner is `p`-active.  Use the reflection-fixed base sheet
@@ -305,6 +347,10 @@ transverse residue on every prime fibre of all odd composite `Q<=315`.  Its
 surviving mixed-prime lane; Section 5's fixed-fibre restriction is the
 additional obstruction.
 
+The independent parity companion
+`odd_target_free_p7_half_twist_parity_obstruction.py` freezes the strict
+`p=7` equality boundary by a different all-`Q` proof.
+
 This theorem classifies neither tower in `(8)`.  It supplies no arbitrary-time
 cover, physical runner row, rank-seven antichain completeness, or LRC(14)
-decrement.
+decrement.  **QED.**

@@ -1,8 +1,11 @@
 Odd target-free p=7 half-twist parity obstruction
-status=PROVED_COROLLARY_FROM_THM3429 all_Q_literal_joint_period_p7_lane_NEGATIVE;primitive_augmented_NEGATIVE
-dependency_THM3429_sha256_lf=20343d8f6a5d72b298b5ec5ac6f6889e8f27e382b5c4446587209ed737a46fe3
-typed_universe=literal:Q_odd_composite_target_free,seven_distinct_transverse_half_twist_residues_mod_2Q(Q_not_divide_r),joint_quotient_period_Q|augmented_subuniverse:add_gcd(2Q,R)=1
-THM3429_input=seven_owners;all_7_active;one_hit_per_owner_per_7_fibre;global_OR_equals_XOR
+status=PROVED_FROM_THM3416_PLUS_ELEMENTARY_P7_FIBRE_AND_PARITY_LEMMAS all_Q_literal_joint_period_p7_lane_NEGATIVE;primitive_augmented_NEGATIVE
+dependency_THM3416_sha256_lf=42a9309145de51d1bb6fca0b7c1945302ff37a63a3183e1dfed838c07118e8bf
+typed_literal_universe=Q_odd_composite_target_free;7_divides_Q;at_most_seven_distinct_transverse_half_twist_residues_mod_2Q(Q_not_divide_r);literal_sheet_cover;joint_quotient_period_Q
+typed_augmented_universe=literal_universe_plus_gcd(2Q,R)=1;literal_contradiction_precedes_augmented_gate
+distinct_owner_semantics=owners_are_distinct_residues_mod_2Q;equal_sheet_masks_if_any_still_count_as_separate_owners;descent_uses_at_most_six_inactive_owners
+direct_descent=joint_period_supplies_a_7_active_owner;if_any_owner_is_7_inactive_then_at_most_six_inactive_blocks_pull_back_from_target_free_M=Q/7_and_THM3416_makes_them_miss_a_base_sheet;at_most_six_active_blocks_each_hit_at_most_one_point_of_that_7_fibre
+derived_partition=no_inactive_owner;cover_and_cap_seven_force_exactly_seven_active_owners_and_one_hit_per_owner_per_7_fibre;global_OR_equals_XOR
 all_Q_block_identity=Q=7M,d=gcd(Q,r),7_not_divide_r:even_r_gives_size_M_and_zero_missed_fibres;odd_r_gives_size_M-d_and_d_missed_fibres
 parity_conclusion=one_hit_on_every_fibre_forces_all_seven_residues_even
 literal_contradiction=all_even_blocks_contain_the_common_sheet_(Q-1)/2;total_mass_Q_has_overlap_defect_at_least_6
@@ -12,8 +15,8 @@ finite_profile_records=((21, 36, 18, 18, ((('even', 1, 21, 3, 3, 0, 1), 12), (('
 sharp_certificates=(Q13_partition,Q51_mixed_positive,Q91_pullback_partition,Q21_joint_period_near_miss)=((13, (1, 2, 3, 5, 7, 9, 11), (2, 1, 2, 2, 2, 2, 2), ((13, 7),), 13, 1, None, 13, ((1, 13),), True), (51, (1, 11, 12, 18, 23, 34, 35), (8, 8, 9, 9, 8, 17, 8), ((3, 1), (17, 2), (51, 4)), 51, 1, None, 51, ((1, 42), (2, 4), (3, 3), (4, 2)), False), (91, (7, 14, 21, 35, 49, 63, 77), (14, 7, 14, 14, 14, 14, 14), ((13, 7),), 13, 7, 0, 91, ((1, 91),), True), (21, (2, 4, 6, 8, 10, 16, 20), (3, 3, 3, 3, 3, 3, 3), ((7, 1), (21, 6)), 21, 2, 7, 15, ((0, 6), (1, 14), (7, 1)), False))
 exact_search_controls=((13, 'augmented', 6, None, 2, 1, 0, 24, 7, 7), (13, 'augmented', 7, (1, 2, 3, 5, 7, 9, 11), 8, 7, 0, 24, 7, 7), (21, 'literal', 7, None, 2, 1, 0, 32, 14, 8), (35, 'literal', 7, None, 2, 1, 0, 58, 26, 26), (49, 'literal', 7, None, 2, 1, 0, 90, 43, 43), (51, 'augmented', 6, None, 269, 287, 19, 98, 49, 49), (51, 'augmented', 7, (1, 11, 12, 18, 23, 34, 35), 8, 7, 0, 98, 49, 49), (91, 'literal', 7, (7, 14, 21, 35, 49, 63, 77), 8, 7, 0, 174, 80, 80), (91, 'augmented', 7, None, 10, 9, 0, 174, 80, 80))
 hostile_meaning=Q91_shows_partition_without_7_activity_or_joint_period;Q21_shows_7_activity_fibre_saturation_and_joint_period_without_cover_or_augmented_primitivity
-semantic_sha256=965b6df04df298a781783af5b2cec498c30722608c8d8814133c65e15d934b82
-script_sha256_lf=93472500f9515285fdef30b8c817a2e3533aef756f7b29133e885e9caba181dc
+semantic_sha256=8599e1b8ced3588d68d4cdd176de5932b72cb1ac4bc434b2dab14114f3914d89
+script_sha256_lf=397b5678e0c8a1600a1bf34c9e8ba4408e155264d2af6c6302fcb53a202f5a89
 reproducibility=standard_library_only;no_elapsed_fields;truth_gates_survive_python_O
 commands=python -B 04-computation/odd_target_free_p7_half_twist_parity_obstruction.py;python -B -O 04-computation/odd_target_free_p7_half_twist_parity_obstruction.py
-scope=closes_only_the_THM3429_p7_lane;remaining_p3_p5_p17_p29_lanes_fixed_zero_arbitrary_time_and_LRC14_remain_open
+scope=standalone_closure_of_only_the_p7_lane;proof_independently_based_on_THM3416;remaining_p3_p5_p17_p29_lanes_fixed_zero_arbitrary_time_and_LRC14_remain_open

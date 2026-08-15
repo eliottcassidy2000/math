@@ -8,8 +8,11 @@ status: >
   Berggren ancestry has zero graph H1, and the odd LRC coefficients admit no
   nonzero homomorphism to or from the JC S3, V4, or characteristic-zero
   response carriers. THM-3354 proves the direct-map no-go and records the
-  corrected comparison cospan as DEFINITIONAL bookkeeping. This file is NOT a
-  reduction.
+  corrected comparison cospan as DEFINITIONAL bookkeeping. THM-3431 now
+  proves a secondary refinement: a deck-group H1 transgression on the LRC
+  side and a vertical local-H1 injection on the selected one-root JC side,
+  with zero additive cross-maps and only a lossy valuation DeathBar cospan.
+  This file is NOT a reduction.
 source: opus-2026-07-26 (successor to the shape-confirmation in
   07-reflections/spectral-vs-geometric-rank-why-LRC-stays-open-and-JC-fell-opus-20260726.md)
 related:
@@ -46,7 +49,12 @@ coefficient object, distinguished class/observer, target predicate, lost
 information, missing realization sidecar, and quantifier. The historical
 same-H1 wording below is retained only for provenance and must not be cited as
 current truth. THM-3354 gives the proved direct-map no-go, the integral versus
-generic response split, and the exact hostile controls.
+generic response split, and the exact hostile controls. THM-3431 proves the
+strongest current secondary replacement: chart holonomy transgresses to the
+degree-13 cover primitive's deck defect, a selected one-root JC observer
+embeds as `[lambda^(-q)]` in vertical local cohomology, and the two classes
+still admit no nonzero additive map in either direction. Their shared
+DeathBar record is explicitly lossy and has no universal-property claim.
 
 ## Historical proposal -- superseded as a direct map
 

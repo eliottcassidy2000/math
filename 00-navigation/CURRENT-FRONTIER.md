@@ -35,7 +35,7 @@ remain open; projected screens are not physical covers.
 THM-3356/3366 leave k2/k3 `4,056/200,069,517,203` and `1,897/2,548,893,834`; THM-3385/3387--3395/3398 give q2--7 and all-q mode/cochain laws.
 THM-3414--3416 give ZMC rank-4/5/6 bases `8,9` / `10,12` / `11,15,23,25`.
 THM-3425 gives primitive half cap-six support and its joint-period/parity breaker.
-Audited THM-3429 confines transverse target-free mixed rank seven to `17^a` and `5*17^a`; its `p=7` parity closure is exact, while composite classification/LRC stay open.
+Audited THM-3429 reduces transverse target-free odd cap7 to atoms `13,29,51` or towers `17^a,5*17^a`; composite classification/LRC stay open.
 THM-3432 proves the order-two fixed/half parity transplant; half projection loses even multiplicity and, for odd `R`, its augmented parity breaker.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
@@ -391,7 +391,9 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   [subresultant sidecar](../07-reflections/jc-critical-inverse-cover-cofactor-jacobian-probe-agent-20260803.md)
   gives a two-pivot inverse graph and mate-integrability class on two controls.
   THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
-  THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response (collisions persist; `gr` overcounts); THM-3354 blocks D5. THM-3418/3419 close sparse Keller/rank; THM-3422/3424/3427 give integral/all-character observer laws. THM-3427 recovers multiplicities generically; THM-3430 lifts this to the full wrap `d=1` response and its Prüfer arms, not a multiroot nonwrap split. Base roots, degree 119, mates/covers, `JC(2)`/`DC(2)` remain open.
+  THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response (collisions persist; `gr` overcounts); THM-3354 blocks direct D5 transport.
+  THM-3431 proves the secondary typed cospan: LRC deck `H^1`, selected one-root JC local `H^1`, zero additive cross-maps, and a lossy DeathBar only.
+  THM-3418/3419 close sparse Keller/rank; THM-3422/3424/3427 give integral/all-character laws. THM-3430 identifies the full wrap `d=1` response and Prüfer arms, not a multiroot nonwrap split. Base roots, degree 119, mates/covers, `JC(2)`/`DC(2)` remain open.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
   `2201<=d<=2400` and all `35` residuals in `2401<=d<=2500` close by matching
