@@ -130,12 +130,13 @@ current fills every cell and every admissible parabolic sector.
 
 ## Controlled forgetting and unlabeled quotients require a sidecar
 
-**Trigger / action:** before quotienting, name the consumer, preserved
-predicate, kernel, lost coordinate and sidecar; quotient occurrences only
-after checking freeness. If a finite label controls a later choice, retain it
-as a marker and, after abelianization, as a catalytic variable. **Mechanism /
-caution:** kernels are gauge only when every consumer kills them; signed complements need not be positive observables. **Evidence:** THM-840/2355,
-3255/3262/3266/3267/3273, THM-2000/2005, and MISTAKE-310.
+**Trigger/action:** for `q:X->Y`, inspect `X times_Y X`: a path lifts iff its
+seams are diagonal.  Separate off-diagonal seams; the finite minimum is their
+conflict chromatic number.  For an action
+`rho`, retain `ker(q)/(ker(q) intersect ker(rho))`. **Caution:** “minimal”
+depends on the law/path/category; kernels are gauge only when every consumer
+kills them. **Evidence:** exact-six divisor lift, THM-3450, THM-3449,
+MISTAKE-310/400.
 
 ## Test whether a central extension changes the base signature
 

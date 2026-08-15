@@ -39,6 +39,30 @@
   stored replay, dependency, hash, semantic, AST/security, ID, scope, and
   documentation gates passed; MISTAKE-400 records and repairs the provisional
   status-routing defect.  No LRC, `JC(2)`, or physical consequence is claimed.
+- `lrc14_exact_six_divisor_feature_lift_20260815.py` -> matching `.out`
+  [PROVED finite graph reduction + FINITE-EXACT + INDEPENDENTLY AUDITED].
+  The current `k=3` ledger has `1823` full-period self keys, `20` unique
+  half-ruler nonself edges, and `54` no-six keys.  Its twenty-edge body graph
+  is a DAG under
+  `Phi(F)=1_[1 in F]+2*1_[5 in F]-2*1_[10 in F]`, with maximum path length
+  two.  Retaining the divisor sends eight targets outside the current ledger
+  and twelve to self keys; `38` common GF feature classes representing
+  `298227` occurrences survive, all terminating at those self keys.  The sole
+  refined `k=2` body `C3` splices divisor rows `17640,17640,4410` and becomes
+  acyclic on `(F,D)`.  This is not physical mutation or an LRC(14) terminal.
+  Script/output/semantic LF SHA-256:
+  `e20dd7dda94afef1d8a044fd130832018f8b5c8b6859bb8a078b6f6dbaa16943` /
+  `eddf99812bceda20fddef6d5cad649232b1ab4d3796ef2a96d1e1329ae17c0a1` /
+  `c423bca65a43fdbfddc25b972a373002890f2c0a6f42c6aea96a8c2e2dacb8e5`.
+- `lrc14_refined_exact_six_scc_sidecar_20260815.py` -> matching `.out`
+  [FINITE-EXACT structural sidecar; MISTAKE-401 PORTABILITY REPAIR].  The raw
+  two-three-cycle reduction and refined `k=2` body-quotient / acyclic `k=3`
+  conclusions are unchanged.  Dependency paths now serialize with POSIX
+  separators, so normal/optimized replay is byte-identical on Windows too.
+  Script/output/semantic LF SHA-256:
+  `cb0c02afe0d9bcf44f9790ea51c2499de41ce7f3b2df4571f56809153bade2f2` /
+  `c7e711150aded2449064ac633c3316b7141081e232fb2553af55dd2fef9e28b1` /
+  `d3be3507d47946f2fa688f70faa572aad1312b8e2ecee30330af9e684bbbed31`.
 - `d5_marked_carrier_full_germ_obstruction_thm3450.py` -> matching `.out`
   [THM-3450 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Under linked
   degree-91 root, inertia, branch, action, and amplitude markings, one LRC

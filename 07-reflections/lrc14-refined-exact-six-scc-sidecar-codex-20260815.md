@@ -86,12 +86,15 @@ the targeted k2 C++ engine.  It builds only the six body/divisor inputs.  The
 k2 engine receives only their finite queries and must agree under `-O2` and
 `-O3`; k3 evaluates only divisors `4410`, `8820`, and `17640`.  There is no
 floating point, assertion-dependent truth gate, user input, or network call.
+MISTAKE-401 repaired the original platform-dependent path serialization by
+printing dependency paths in POSIX form; the graph data and semantic digest
+did not change.
 
 The LF-normalized hashes are
 
 ```text
-script  a6ca23c79fac56fddd6503dec46da7162f10ec61e72a622961bd09c9c6278dd0
-output  cebb631596ca3cb04d95a39fa7a6edfdd8dea6bf89be96d1f751d5392b812496
+script  cb0c02afe0d9bcf44f9790ea51c2499de41ce7f3b2df4571f56809153bade2f2
+output  c7e711150aded2449064ac633c3316b7141081e232fb2553af55dd2fef9e28b1
 ```
 
 The targeted engine transcript hash is

@@ -33,7 +33,26 @@ Format per entry:
   before `VERIFIED-EXACT`.  Before and after promotion, run a topic-specific
   bounded-startup replay and inspect the actual canon/candidate group, not
   only the human-readable status sentence.
+## MISTAKE-401 (2026-08-15, refined exact-six transcript portability) -- native path separators defeated byte-for-byte replay
 
+- **What failed:** the refined exact-six SCC sidecar serialized dependency
+  paths with `str(Path)`.  Its stored transcript used POSIX `/`, while a fresh
+  Windows replay printed `\\`, contradicting the stated cross-platform
+  byte-for-byte reproduction even though every graph count agreed.
+- **Minimal witness / first failed implication:** on Windows the fresh and
+  stored LF hashes were respectively
+  `2930d926be17346497d6371d5238726d1130d06c6b44b7cdd8435c5468a269b3`
+  and
+  `cebb631596ca3cb04d95a39fa7a6edfdd8dea6bf89be96d1f751d5392b812496`;
+  replacing only printed `\\` by `/` made the transcripts identical.
+- **Repair / strongest survivor:** dependency paths now use `.as_posix()`,
+  the stored transcript is refreshed, and the verdict explicitly says
+  `k2_body_quotient`.  The exact weights, SCCs, engine hash, and semantic hash
+  `d3be3507...bed31` are unchanged.
+- **Reusable rule:** deterministic outputs must serialize paths with an
+  explicit platform-independent convention.  LF normalization alone does not
+  normalize directory separators, and semantic agreement does not justify a
+  byte-identical replay claim.
 ## MISTAKE-399 (2026-08-15, concurrent theorem reservation race) -- filename merges did not protect a shared semantic ID
 
 - **What failed:** THM-3448 was absent when the weighted-Keller boundary

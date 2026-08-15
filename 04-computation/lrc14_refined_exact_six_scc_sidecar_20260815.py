@@ -378,10 +378,10 @@ def main() -> None:
     print("scope=all possible refined nontrivial SCCs exhausted through the two frozen raw SCCs")
     print(f"targeted_k2_engine_output_sha256={engine_hash}")
     print(f"semantic_sha256={semantic}")
-    print("dependency_lf_sha256=" + repr(tuple((str(path.relative_to(ROOT)), digest) for path, digest in EXPECTED_DEPENDENCIES.items())))
+    print("dependency_lf_sha256=" + repr(tuple((path.relative_to(ROOT).as_posix(), digest) for path, digest in EXPECTED_DEPENDENCIES.items())))
     print(f"script_sha256_lf={lf_sha256(source)}")
     print("reproducibility=exact Fraction/bitsets/current-row ledgers;targeted O2/O3 engine;no assert/no float/no network")
-    print("verdict=PASS;k2_exactly_one_three_cycle;k3_acyclic")
+    print("verdict=PASS;k2_body_quotient_exactly_one_three_cycle;k3_acyclic")
 
 
 if __name__ == "__main__":

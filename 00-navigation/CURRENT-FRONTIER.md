@@ -32,7 +32,7 @@ THM-3349/3350/3352/3355 close all `561` reflected six-level `k=1` bodies;
 THM-3360 proves the physical edge floor. THM-3381 bounds phase/tree drift and
 refutes residue-blind transfer. Arbitrary `k<=1`, projected `k=2,3`, rung, physical entry and LRC
 remain open; projected screens are not physical covers.
-THM-3356/3366 leave k2/k3 `4,056/200,069,517,203` and `1,897/2,548,893,834`; THM-3385/3387--3395/3398 give q2--7 and all-q mode/cochain laws.
+THM-3356/3366 leave k2/k3 `4056/1897` rows; exact-six: k3's 20 half-ruler edges form a `Phi`-DAG; k2's `C3` is divisor-spliced, not recursive. THM-3385/3387--3395/3398 give q2--7 and all-q mode/cochain laws.
 THM-3414--3416 give ZMC rank-4/5/6 bases `8,9` / `10,12` / `11,15,23,25`.
 THM-3425 gives primitive half cap-six support and its joint-period/parity breaker.
 THM-3432--3435 give fixed-chart/odd-cap7/dyadic-grid results (`Q<=362` FINITE-EXACT); THM-3445/3451 close target-free `Q=2p/4p` at `p={7,19}/{17,37}`; composite-even rank7/LRC remains open.
