@@ -1,0 +1,14 @@
+THM-3388 INDEPENDENT Q3 PHASE-TRIANGLE AUDIT
+source_sha256_lf=310adb54a18e07f3441bd9ae332eae13ce35ddaf5d6718baa926141af08bae0b
+pair_checks=8778;cycle_gluing_tuples=63725;p_local_checks=4245
+literal_ordered_checks=720;glued_witnesses=288
+hostile_147_gap_sets=((1,), (-2, 1), (1,));closed=None
+positive_145_gap_sets=((1,), (-1,), (-1,));closed=(1, -1, -1)
+cover_edges=48;pair_triangles=82;false_positives=34
+independence_profile=(1, 10, 45, 72, 38, 6, 0, 0, 0, 0, 0);maximal_five_sets=((1, 2, 4, 7, 14), (1, 2, 4, 8, 11), (1, 2, 4, 8, 13), (1, 2, 5, 10, 13), (2, 4, 7, 8, 13), (2, 4, 7, 8, 14))
+single_core_containments=(((8, 11, 13), 2),)
+core2_rescue_cells_den3696=((583, 584), (648, 649), (1815, 1816), (1880, 1881), (3047, 3048), (3112, 3113));min_margin=1/336
+body_candidates=2793;global_rows=585;exact_rows=588;core_rescues=(((1, 2, 3), (8, 11, 13)), ((1, 2, 4), (8, 11, 13)), ((2, 3, 4), (8, 11, 13)))
+ternary_shells=0..12;checks=455;root_mass=29/20;orbit_mass=29029/14400
+audit_semantic_sha256=9399e655a199791e5dbd207da046407d6c59a1ca5786506a5bb04b84dfb43c73
+verdict=PASS

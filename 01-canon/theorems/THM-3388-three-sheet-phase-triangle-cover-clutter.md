@@ -3,7 +3,7 @@ id: THM-3388
 title: "Three-sheet phase triangles and the q=3 cover clutter"
 status: >
   PROVED analytic phase-triangle criterion + FINITE-EXACT literal q=3
-  clutter/atlas + INDEPENDENTLY HOSTILE-AUDITED.  For three sheets, full
+  clutter/atlas + INDEPENDENTLY AUDITED.  For three sheets, full
   transverse cover is a 3-uniform clutter.  For speeds u,v,w coprime to
   three, define the finite affine gap set
   P(u,v)={p congruent uv mod 3 gcd(u,v):14|p|<3(u+v)}.  The triple covers iff
@@ -17,7 +17,7 @@ status: >
   The result classifies the q=3 slice of THM-3387 but proves no new
   refined-ledger decrement or LRC(14).
 source: codex-2026-08-14-q3-phase-triangle
-audit: independent CRT valuation proof, 506598 gluing instances, 47905 triples through speed 100, exact atlas replay, dilation sign hostile, and harmonic audit
+audit: independent CRT valuation proof plus a canonical no-import Fraction/event audit of 63725 gluing tuples, the literal atlas, the core-2 rescue locus, and the ternary harmonic formulas
 depends_on:
   - THM-3387-exact-cyclic-sheet-cover-atlas-and-q2-gcd-graph
   - THM-3385-odd-fibre-doubling-projection-and-half-even-complement-clocks
@@ -29,13 +29,18 @@ output: 05-knowledge/results/lrc14_q3_phase_triangle_clutter_thm3388.out
 script_sha256: 5323346310a9a6b188caa0131b177b2ae8e23c7113808cda8955f89828e62154
 output_sha256: 5a32319fb8a91b476d292da292ae3cc9933f5f94aad7eb0e834f49e52252c535
 semantic_sha256: 082e97aa25d8019ba7de49c0a76333c7a3a221dd19cb4bc3e8d5b43ef9a42216
+audit_script: 04-computation/lrc14_q3_phase_triangle_clutter_independent_audit_thm3388.py
+audit_output: 05-knowledge/results/lrc14_q3_phase_triangle_clutter_independent_audit_thm3388.out
+audit_script_sha256: 310adb54a18e07f3441bd9ae332eae13ce35ddaf5d6718baa926141af08bae0b
+audit_output_sha256: 195120ecb17f1c7869a699a156254f0410dcafbd51ae93d3061bc61eca38c179
+audit_semantic_sha256: 9399e655a199791e5dbd207da046407d6c59a1ca5786506a5bb04b84dfb43c73
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3388 -- three-sheet cover is phase closure, not a triangle of pair tests
 
 **PROVED analytic phase-triangle criterion + FINITE-EXACT literal `q=3`
-clutter/atlas + INDEPENDENTLY HOSTILE-AUDITED.**
+clutter/atlas + INDEPENDENTLY AUDITED.**
 
 ## 1. Inheritance and the missing coordinate
 
@@ -148,12 +153,17 @@ that `(11)` and this relation are equivalent to the existence of integers
 va-ub=A, wb-vc=B, uc-wa=C.                    (12)
 ```
 
-For completeness, solve the first two equations as congruences for `b`
-modulo `v/gcd(u,v)` and `v/gcd(v,w)`.  Their generalized-CRT compatibility,
-prime by prime, is exactly `gcd(u,w)|C`; after choosing `b`, the first two
-equations give `a,c`, and `wA+uB+vC=0` forces the third.  Thus `(9)` really
-glues one triple of centres; it is not three independently chosen pair
-witnesses.
+For completeness, this is an integral lattice statement, not a heuristic
+CRT splice.  Work prime by prime and put
+`m=min(v_p(u),v_p(v),v_p(w))`.  Condition `(11)` implies that `p^m` divides
+`A,B,C`, so divide all six quantities by `p^m`.  At least one divided speed
+is a `p`-adic unit.  If it is `u`, set `a=0`, `b=-A/u`, and `c=C/u`; then the
+first and third equations in
+`(12)` hold, while `wA+uB+vC=0` forces the second.  The cases in which `v` or
+`w` is the unit are cyclic.  Smith normal form (equivalently, rational plus
+all-`p` local membership) then puts `(A,B,C)` in the integral image of the
+cycle-difference matrix.  Thus `(9)` really glues one triple of centres; it
+is not three independently chosen pair witnesses.
 
 The bounds in `(6)` make the three selected single-tooth arcs pairwise
 intersect.  Three pairwise-intersecting circular arcs with no common point
@@ -238,6 +248,23 @@ Hence the q=3 slice has exactly
 pointwise-exact rows, reproducing the q=3 entry of THM-3387 by a structural
 classification rather than a black-box interval total.
 
+The three rescues have one exact mechanism.  The no-import Fraction audit
+decomposes the transverse cover locus for `U=(8,11,13)` into the six open
+cells
+
+```text
+(583,584),(648,649),(1815,1816),
+(1880,1881),(3047,3048),(3112,3113),          (21)
+```
+
+on denominator `3696`.  Every cell lies strictly inside the speed-six danger
+comb, i.e. core clock `2`, with minimum endpoint clearance
+`11/3696=1/336`.  Among all `48` literal cover triples and core clocks
+`1,2,3,4`, this is the unique single-core containment.  Consequently exactly
+the three core triples in `(19)`--the triples containing clock `2`--destroy
+the transverse cover.  The correction is geometric, not an unexplained
+three-row enumeration.
+
 ## 5. Ternary ancestry, subsets, and harmonic weight
 
 Common dilation by any positive integer `s` coprime to three preserves `(13)`.
@@ -258,14 +285,14 @@ Let `H_d` be the harmonic mass of the **distinct integer support** at depth
 ```text
 sum_(e in E)1/e=29/20,
 1/7+1/11+1/13=311/1001,
-1/(7*11)+1/(7*13)+1/(11*13)=31/1001,          (21)
+1/(7*11)+1/(7*13)+1/(11*13)=31/1001,          (22)
 ```
 
 the complete-homogeneous recurrence and multinomial theorem give
 
 ```text
 1001 H_d=311 H_(d-1)-31 H_(d-2)+H_(d-3),       d>=3,
-1001 W_(d+1)=311 W_d,                           d>=0.    (22)
+1001 W_(d+1)=311 W_d,                           d>=0.    (23)
 ```
 
 The whole integer orbit is a convergent subseries of the harmonic series:
@@ -273,7 +300,7 @@ The whole integer orbit is a convergent subseries of the harmonic series:
 ```text
 sum_(n in orbit)1/n
 =(29/20)(1-1/7)^(-1)(1-1/11)^(-1)(1-1/13)^(-1)
-=29029/14400.                                  (23)
+=29029/14400.                                  (24)
 ```
 
 More generally, for every subset `A subset N^3`, take exactly the blocks
@@ -288,7 +315,7 @@ subalgebra of the subsets of this integer orbit (complements are relative to
 the orbit), and
 
 ```text
-sum_(n in S_A)1/n=(29/20)sum_((i,j,k) in A)7^(-i)11^(-j)13^(-k). (24)
+sum_(n in S_A)1/n=(29/20)sum_((i,j,k) in A)7^(-i)11^(-j)13^(-k). (25)
 ```
 
 This is an exact structured realization of subsets as harmonic subseries.
@@ -328,7 +355,7 @@ from that audit are now frozen in the companion:
 (1,4,41): every pair gap set is nonempty, but no phase triangle closes;
 2*(1,4,5): the lawful scaled gaps are (-2,2,2), not (2,-2,-2);
 C=(1,3,4), U=(8,11,13), t=389/2464:
-  all sheets fire and only the omitted core clock 2 is dangerous.          (25)
+  all sheets fire and only the omitted core clock 2 is dangerous.          (26)
 ```
 
 It contains no floating literal or optimization-dependent `assert`.  Reproduce
@@ -337,9 +364,11 @@ with
 ```text
 python 04-computation/lrc14_q3_phase_triangle_clutter_thm3388.py
 python -O 04-computation/lrc14_q3_phase_triangle_clutter_thm3388.py
+python 04-computation/lrc14_q3_phase_triangle_clutter_independent_audit_thm3388.py
+python -O 04-computation/lrc14_q3_phase_triangle_clutter_independent_audit_thm3388.py
 ```
 
-Ordinary and optimized runs LF-normalized-byte-match the stored output.
+Ordinary and optimized runs LF-normalized-byte-match both stored outputs.
 
 This theorem classifies the q=3 slice inside THM-3387.  It gives no new
 refined-ledger subtraction, physical drift realization, arbitrary-phase
