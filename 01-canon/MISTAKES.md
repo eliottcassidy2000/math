@@ -9,7 +9,7 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-398 (2026-08-15, THM-3446 group and alignment typing) -- a direct product was called free, and a sharp universal bound was called every packet's exact level
+## MISTAKE-398 (2026-08-15, THM-3446 group and alignment typing) -- a direct product was called a free product, and a sharp universal bound was called every packet's exact level
 
 - **What failed:** the provisional THM-3446 truth surfaces called the finite
   abelian exponent group a "free product," imposed `r<=d` even though the
