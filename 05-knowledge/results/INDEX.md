@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `jc_derived_boundary_jet_euler_thm3437.py` -> matching `.out`
+  [THM-3437 RESERVED / PROVISIONAL PROOF CANDIDATE; INDEPENDENT AUDIT
+  REQUIRED].  At a repeated geometric boundary root, derived Artin reduction
+  has free `(Tor_0,Tor_1)` ranks `(N-1+epsilon,epsilon)`, so the Euler rank is
+  always `N-1`; inverse limits recover the divisible Pruefer-presence channel
+  which ordinary completion loses, but not its DeathBar slope/intercept.
+  Exact checks cover `379,225` selected-profile rows, `2,275,350` jet ranks,
+  principal-part kernels/transitions, and foreign-support invertibility.
+  Script/output/semantic LF SHA-256:
+  `1326ce34ad7aa32f56ff8b79a87335a93a688bd9a4bd6ddb962d8988a2271a5c` /
+  `e6e25bac54d1f55eb29f04912f80fb04f3578f6ea2606dc39b03c8e2ce13ee08` /
+  `20bd151f40a3991b0fc85108f85339ebf9b48b24bc3113d8d480468b3ecef3f7`.
+  No JC/LRC transfer follows.
 - `jc_multiroot_boundary_jet_packet_probe_20260815.py` -> matching `.out`
   [THM-3436 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].
   At every repeated geometric root, the target-character quotient modulo
