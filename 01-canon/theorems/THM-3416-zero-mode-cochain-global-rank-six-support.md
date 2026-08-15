@@ -2,430 +2,523 @@
 id: THM-3416
 title: "Zero-mode-cochain global rank-six support"
 status: >
-  PROVED all-q global rank-six support theorem + VERIFIED-EXACT companion +
-  INDEPENDENTLY AUDITED.  The global zero-mode-cochain rank is
-  six exactly when one of 11,15,23,25 divides q and none of 8,9,10,12 does.
-  The converse is analytic: two exact complement classifiers remove orders
-  three and five, and a reflection-orbit/CRT argument removes every mixture
-  of orders 17 and 29 with arbitrary low-density companions.  The independent
-  primitive cap-six census is FINITE-EXACT only through Q=200.  No arbitrary
-  physical-time or LRC(14) conclusion is claimed.
-source: q8-multiblocker-2026-08-15
-audit: independent formula, complement-colour, reflection/CRT, divisor-ancestry, atom, arithmetic, hash, routing, scope, and normal/-O replay audit CLEAN
+  PROVED all-q global rank-six theorem, downstream of THM-3414's
+  COMPUTER-ASSISTED PROVED fixed-zero atlas and THM-3415's rank-four/five
+  divisor minimum, with an elementary all-q half-twist anchored-complement
+  proof; VERIFIED-EXACT primitive hostile census for 2<=Q<=300 and exact
+  harmonic/Farey/Fibonacci/Berggren transports; INDEPENDENTLY PROOF- AND
+  ARITHMETIC-AUDITED, including a clean-room target-free Q<=1000 scan and five
+  larger hostile moduli.  LRC(14) remains open.
+source: codex-2026-08-15-major-frontiers
+audit: half-twist capacity tail and four anchored complement gates; exact 17/29 lcm-493 mixed control; THM-3414 independently audited fixed-zero input; literal Q11/Q15/Q23/Q25 witness replay; rare-coordinate Q<=300 hostile census; normal/optimized transcripts byte-identical; independent proof/arithmetic audit PASS with clean-room target-free Q<=1000 and Q=1479,1972,2465,3451,4913 hostiles
+referee_audit: independent formula, complement-colour, reflection/CRT, divisor-ancestry, atom, arithmetic, hash, routing, scope, and normal/-O replay audit CLEAN
 depends_on:
-  - THM-3405-common-centre-gcd-gauge-and-boolean-half-twist
   - THM-3414-fixed-zero-six-owner-base-classification
   - THM-3415-zero-mode-cochain-global-rank-five-support
 related:
-  - THM-3398-general-finite-mode-sheet-cover-cochain
+  - THM-3405-common-centre-gcd-gauge-and-boolean-half-twist
   - THM-3408-fixed-zero-additive-order-duality-and-six-core-corridor
   - THM-3410-projective-cochain-wedge-ray-tree-tariff-and-residue-scalar-hubs
-script: 04-computation/lrc_zero_mode_cochain_rank6_support_thm3416.py
-output: 05-knowledge/results/lrc_zero_mode_cochain_rank6_support_thm3416.out
-script_sha256: c946cf9a66daa13da790cc9b1129993f9b5c1a8a2bdc6dec1bcc07b644989122
-output_sha256: 733a3ed02910348b87b561df7f1c79eef2dc431a8d702f2c0f807db33c1298cc
-semantic_sha256: 99892baf39b3d2b1b6a802bf21e0fe4164f155030d8ad051bc7ae26513b01ca3
+script: 04-computation/lrc_zero_mode_cochain_rank6_support_probe_20260815.py
+output: 05-knowledge/results/lrc_zero_mode_cochain_rank6_support_probe_20260815.out
+script_sha256: ed7672fd75b7c5ede23c0b7752e06849faa9c693d18e0639eee5b39f17d03a21
+output_sha256: 3eb932643e76f2ac7836d8d435bf259183e2c3778216b0458bf4487b5894102a
+semantic_sha256: 18abbdc82a40b0299d9dc59cd745d52a09e9706d3cf0cb0379ab5ed2f064df22
+independent_script: 04-computation/lrc_zero_mode_cochain_rank6_support_thm3416.py
+independent_output: 05-knowledge/results/lrc_zero_mode_cochain_rank6_support_thm3416.out
+independent_script_sha256: c946cf9a66daa13da790cc9b1129993f9b5c1a8a2bdc6dec1bcc07b644989122
+independent_output_sha256: 733a3ed02910348b87b561df7f1c79eef2dc431a8d702f2c0f807db33c1298cc
+independent_semantic_sha256: 99892baf39b3d2b1b6a802bf21e0fe4164f155030d8ad051bc7ae26513b01ca3
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3416 -- zero-mode-cochain global rank-six support
 
-**PROVED all-q + VERIFIED-EXACT companion + INDEPENDENTLY AUDITED.**
+**PROVED (with THM-3414's COMPUTER-ASSISTED PROVED fixed-zero atlas as an
+explicit dependency) + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-## 1. Exact statement
+## 1. Statement
 
-Retain THM-3415's notation.  For `q>=2`, `rho_ZMC(q)` is the least number of
-distinct positive transverse owners whose strict danger blocks cover all
-`q` cyclic sheets at one common THM-3398 mode centre and whose complete mode
-cochain vanishes.  Put `rho_ZMC(q)=infinity` if there is no such family.
-
-Define
+For `q>=2`, let `rho_ZMC(q)` be the minimum number of distinct positive
+transverse owners whose strict danger blocks cover all `q` sheets at a common
+THM-3398 mode centre and whose complete mode cochain vanishes.  Then
 
 ```text
-L={8,9,10,12},       N={11,15,23,25},
-S=L union N={8,9,10,11,12,15,23,25}.                 (1)
+rho_ZMC(q)=6
+iff
+(11|q or 15|q or 23|q or 25|q)
+and 8,9,10,12 all do not divide q.                                 (1)
 ```
 
-Then the proposed theorem is
+Together with THM-3415, the complete support through rank six is
 
 ```text
-rho_ZMC(q)<=6  iff  s|q for some s in S,              (2)
+rho_ZMC(q)=4 iff 8|q or 9|q;
 
-rho_ZMC(q)=6   iff  n|q for some n in N
-                       and l does not divide q for every l in L.   (3)
+rho_ZMC(q)=5 iff (10|q or 12|q) and 8,9 do not divide q;
+
+rho_ZMC(q)=6 iff (11|q or 15|q or 23|q or 25|q)
+                    and 8,9,10,12 do not divide q.                 (2)
 ```
 
-The lower layers from THM-3415 are
+At half twist, let `r_(1/2)(Q)` be the minimum number of literal sheet blocks
+covering `Z/QZ`, before imposing the augmented primitive gcd gate.  Then
 
 ```text
-rho_ZMC(q)=4 iff 8|q or 9|q,
-rho_ZMC(q)=5 iff (10|q or 12|q) and 8 does not divide q
-                                      and 9 does not divide q.     (4)
+r_(1/2)(Q)<=6
+iff some member of {8,9,10,11,12,15,23,25} divides Q.              (3)
 ```
 
-Thus `(3)` is an exact rank statement, not merely a six-owner construction.
-It concerns the zero-complete-cochain/common-mode-centre category.  It is not
-a classification of arbitrary common physical times or positive cochains,
-and it gives no LRC(14) ledger decrement.
+Every primitive augmented half-twist cover by at most six owners therefore
+has modulus divisible by one of the eight bases in `(3)`.  The converse is
+not a primitive statement: pullback can destroy the breaker coordinate.  For
+example, the `Q=33` pullback of the `Q=11` atom covers all sheets with residues
+`(3,6,9,15,21,27)` but has augmented gcd three; the companion finds no
+primitive rank-at-most-six cover at `Q=33`.
 
-## 2. Inheritance and connection contract
-
-THM-3405 reduces every zero-cochain family, after a common sheet relabelling,
-to a fixed-zero layer or a Boolean half-twist layer.  THM-3415 then supplies
-the exact primitive divisor minimum.  For an active speed family,
+The new minimal positive atoms are
 
 ```text
-U=dV,  gcd(V)=1,  g=gcd(q,d),  Q=q/g,                 (5)
+Q=11, half twist: (1,2,3,5,7,9);
+Q=15, zero twist: (1,2,3,4,5,7);
+Q=15, half twist: (1,4,6,7,8,10);
+Q=23, half twist: (1,4,5,7,9,11);
+Q=25, half twist: (1,9,10,11,19,21).                              (4)
 ```
 
-the cover is the `g`-fold pullback of a primitive `Q`-sheet cover at
-`epsilon=0` or `1`.  Its normalized residues satisfy
+Each row satisfies the augmented gcd gate.  The `Q=11,23,25` rows are exact
+sheet partitions, so OR equals XOR there.  Both `Q=15` rows instead have one
+distinguished multiply covered sheet.  No augmented-mask XOR claim follows.
+
+## 2. Divisor ancestry and the half-twist order model
+
+THM-3415 records the proved divisor-minimum formula
 
 ```text
-gcd(M_epsilon,r_1,...,r_k)=1,
-M_0=Q, M_1=2Q.                                        (6)
+rho_ZMC(q)=min_(Q|q,Q>=2,epsilon in {0,1}) rho_epsilon^prim(Q).     (5)
 ```
 
-Only the necessity of this reduction is used in the converse.
-
-| field | exact connection |
-|---|---|
-| source | primitive THM-3405 Boolean half-twist covers by at most six blocks |
-| target | quotient-order cylinders on odd reflection orbits |
-| map | send residue `r` to `m=Q/gcd(Q,r)`, then reduce its mask to `Z/mZ` |
-| preserved | strict danger predicate, block size, cyclic pullback, reflection, and cover |
-| destroyed | the location of individual points inside a reflection pair and the residue lift |
-| required sidecar | the common fixed point of `ell -> -1-ell` and CRT independence of the 17/29 cylinders |
-| cheapest decisive tests | the sharp low block at `Q=43` and the mixed hostile `Q=17*29=493` |
-
-The proof board is therefore: exact block density; order-three complement;
-order-five complement; reflection pairs; CRT cylinder product; positive
-atoms.  The complement classifiers remove the two tempting small orders,
-while the reflection sidecar closes the mixed large-order case that density
-alone leaves open.
-
-## 3. Exact half-twist block counts
-
-On the primitive half layer put
+For a half-twist owner residue `r`, put
 
 ```text
-H_(Q,r)={ell in Z/QZ:
-         ||r(2ell+1)/(2Q)||<1/14},
-m=Q/gcd(Q,r).                                         (7)
+m=Q/gcd(Q,r),              r=(Q/m)s,              gcd(m,s)=1.      (6)
 ```
 
-The mask in `(7)` is the pullback of a mask on `Z/mZ`.  Let `z(m)` be the
-zero-like count and `a(m)` the odd-coset count.  Direct reduction modulo
-`2m` gives
+Dividing the phase word by `Q/m` reduces the strict predicate to modulus
+`2m`.  Its sheet mask is `m`-periodic, and intersections of orders `a,m`
+descend exactly to `lcm(a,m)`.  The maximum block size per `m` sheets is
 
 ```text
 z(m)=1+2 floor((m-1)/14),
 a(m)=2 ceil(floor((m-1)/7)/2),
-
-h(m)=a(m)                     if m is even,
-h(m)=max(a(m),z(m))           if m is odd.             (8)
+h(m)=a(m)                         if m is even,
+h(m)=max(a(m),z(m))               if m is odd.                     (7)
 ```
 
-Indeed, when the reduced numerator is odd it permutes the odd residue coset
-modulo `2m`; an even reduced numerator is possible only for odd `m` and gives
-the zero-like coset.  Strict endpoints are already built into `(8)`.
-
-Both counts satisfy
+Both branches satisfy
 
 ```text
-h(m)<=(m+6)/7.                                        (9)
+h(m)<=(m+6)/7.                                                    (8)
 ```
 
-For `z`, multiply by seven and use the defining floor.  For `a`, write
-`k=floor((m-1)/7)`: if `k` is even then `a=k`, and if `k` is odd then
-`a=k+1`; both give `7a<=m+6`.
-
-If six blocks cover, at least one has density at least `1/6`.  The tail
-`m>=37` is excluded by `(9)`, and direct evaluation for `m<=36` gives the
-complete all-order list
+Consequently `h(m)/m<1/6` for every `m>=37`; direct evaluation below that
+cutoff gives the all-order list
 
 ```text
 6h(m)>=m iff
-m in H6={3,5,8,9,10,11,12,15,17,22,23,24,29,36}.     (10)
+m in {3,5,8,9,10,11,12,15,17,22,23,24,29,36}.                    (9)
 ```
 
-Call `Q` **S-free** when no member of `S` divides it.  Since every selected
-order divides `Q`, `(10)` says that an S-free six-cover contains an owner of
-order
+Assume for contradiction that `Q` avoids all eight bases in `(3)` but has a
+cover by at most six blocks.  Total block mass forces at least one selected
+block of density greater than `1/6`.  Removing from `(9)` all orders already
+carrying a forbidden base leaves exactly
 
 ```text
-3, 5, 17, or 29.                                      (11)
+E={3,5,17,29}.                                                     (10)
 ```
 
-The next two sections show that none is possible.
+An actual order-17 or order-29 block above density `1/6` is necessarily a
+maximal `z`-branch block, of sizes `3/17` and `5/29` respectively.
 
-## 4. Exact complement classifiers eliminate orders three and five
+## 3. The four anchored-complement gates
 
-### 4.1 An order-three anchor
-
-Every nonempty order-three half block is the same pullback singleton.  Its
-complement has density `2/3`.  If five remaining blocks cover that
-complement, one of them contributes at least `2/15` of all sheets.
-
-For a companion of order `m`, reduce the intersection exactly to
-`lcm(3,m)`.  If `gcd(3,m)=1`, work on `3m` sheets.  Each covered quotient
-point has three lifts and exactly one belongs to the order-three class, so
-the maximum complement contribution is `2h(m)`.  The threshold is therefore
+For a maximal order-`a` anchor in `(10)`, let `C_a` be its complement.  Five
+remaining slots must contribute on average
 
 ```text
-5h(m)>=m.                                             (12)
+theta_3 = 2/15,
+theta_5 = 4/25,
+theta_17=14/85,
+theta_29=24/145                                                   (11)
 ```
 
-By `(9)`, `(12)` forces `m<=15`; direct evaluation of the coprime cases
-leaves `m in {5,8,10}`.
+of all `Q` sheets to `C_a`.  We eliminate the possible anchors in the order
+`3,5,17,29`.
 
-If `3|m`, multiplication by a unit makes the removed order-three class one
-colour of the centred interval.  Hence the complement contribution `c`
-satisfies
+### Order three
+
+The order-three block is one residue class modulo three, so `|C_3|=2Q/3`.
+If `3` does not divide a companion order `m`, CRT leaves exactly two thirds
+of that block in `C_3`.  The all-order density classification
 
 ```text
-c<=ceil(2h(m)/3).                                     (13)
+5h(m)>=m iff m in {3,5,8,9,10,15}                                 (12)
 ```
 
-The necessary inequality `c/m>=2/15`, together with `(9)` and
-`ceil(x)<=x+2/3`, forces `m<=32`.  Exact evaluation of the multiples of
-three through 32 leaves `m in {9,12,15}`.  Thus the all-order classifier is
+shows that the contribution is below `2Q/15` unless `m=5` or a forbidden
+base divides `m`.  But an order-three anchor and an order-five companion
+would force `15|Q`, also forbidden.
+
+If `3|m`, the dangerous phase words run through residue classes modulo three
+in a balanced interval.  At most `ceil(2h(m)/3)` of the `m` phase positions
+avoid the anchor.  From `(8)`, for `m>=33`,
 
 ```text
-an order-three anchor forces a companion order in
-{5,8,9,10,12,15}.                                     (14)
+ceil(2h(m)/3)/m <= (2m+26)/(21m) < 2/15.                           (13)
 ```
 
-For reference, the qualifying rows `(m,lcm(3,m),complement size,maximum
-contribution)` are
+The only target-free multiples of three below 33 are `3,6,21`; their exact
+complement contributions are `0,0,2/21`.  Thus every companion contributes
+strictly less than `2Q/15`, and five cannot cover `C_3`.
+
+### Order five
+
+Now suppose no order-three block occurs.  The maximal order-five block is a
+single residue class modulo five, with complement `4Q/5`.  By `(8)`, orders
+above 50 have density below `4/25`.  Exact evaluation through 50 shows that,
+after deleting forbidden bases and order three, only
 
 ```text
-(5,15,10,2), (8,24,16,4), (9,9,6,2),
-(10,30,20,4), (12,12,8,2), (15,15,10,2).              (15)
+m in {5,17,29,31,37,43}                                           (14)
 ```
 
-### 4.2 An order-five anchor
-
-An order-five half block is likewise one pullback singleton; its complement
-has density `4/5`.  One of five companions must contribute at least `4/25`.
-For `gcd(5,m)=1`, reduction to `5m` gives complement contribution `4h(m)`,
-and again the condition is `(12)`.  The coprime survivors are `{3,8,9}`.
-
-For `5|m`, the balanced-colour bound is
+can even meet the required total density.  Exact descent to `lcm(5,m)` gives
 
 ```text
-c<=ceil(4h(m)/5).                                     (16)
+m:                    5,     17,     29,    31,     37,      43
+max |B_m meet C_5|/Q: 0,   12/85,   4/29,  4/31,  24/185,  28/215,             (15)
 ```
 
-Using `ceil(x)<=x+4/5`, the threshold `c/m>=4/25` and `(9)` again force
-`m<=32`.  The divisible survivors are `10,25`.  Therefore
+all strictly below `4/25`.  Five companions again fall short.
+
+### Order seventeen
+
+Suppose neither order three nor order five occurs and select an order-17
+anchor if one is present.  Its complement has size `14Q/17`.  The analytic
+tail at the quota `14/85`, followed by exact evaluation below 40, leaves only
+orders `17,29` after the inherited exclusions.  Their exact contributions are
 
 ```text
-an order-five anchor forces a companion order in
-{3,8,9,10,25}.                                        (17)
+order 17 into C_17: 2/17,
+order 29 into C_17: 70/493,                                       (16)
 ```
 
-The qualifying rows are
+both strictly below `14/85`.  Equation `(16)` is the decisive mixed
+`17/29` control: it is computed on `lcm(17,29)=493`, not inferred from raw
+density.  Five companions cannot cover `C_17`.
+
+### Order twenty-nine
+
+Finally suppose only order 29 remains from `(10)`.  Its complement has size
+`24Q/29`.  At quota `24/145`, the analytic tail begins at order 38; after the
+same exclusions only order 29 survives the finite critical list.  Two maximal
+order-29 blocks overlap enough that a second contributes at most
 
 ```text
-(3,15,12,4), (8,40,32,8), (9,45,36,8),
-(10,10,8,2), (25,25,20,4).                            (18)
+4/29 < 24/145                                                       (17)
 ```
 
-Now suppose that `Q` is S-free.  If order three occurs, `(14)` leaves only
-order five; then `15=lcm(3,5)|Q`, contradiction.  Hence order three is
-absent.  If order five occurs, `(17)` leaves either order three or an order
-forcing a member of `S` to divide `Q`; both are impossible.  Thus neither
-order in `{3,5}` can occur in an S-free six-cover.
+to the first complement.  This last contradiction proves the necessary
+direction of `(3)`.
 
-## 5. Reflection and CRT eliminate every 17/29 mixture
+### Independent reflection/CRT closure of the 17/29 tail
 
-By `(10)--(11)` an S-free cover must now contain an order-17 or order-29
-owner.  Every remaining non-17/non-29 selected order has block density at most
+Concurrent work found a second all-order mechanism for the last two anchors.
+After orders three and five and all target-bearing orders are removed, every
+order other than 17 and 29 has density at most
 
 ```text
-7/43.                                                 (19)
+7/43.                                                              (17a)
 ```
 
-For `m>=43`, this follows from `(9)` because
-`(m+6)/(7m)<=7/43`.  Direct evaluation below 43, after removing the orders
-already excluded, has maximum `6/37<7/43`.  The constant is sharp at the
-hostile order `m=43`, where `h(43)=7`; nevertheless six such blocks have
-total capacity only `42/43`.
+The bound follows from `(8)` for `m>=43`; exact evaluation below 43 has
+target-free maximum `6/37`, while order 43 attains `7/43`.
 
-The half-twist predicate is invariant under
+Every half-twist mask is invariant under the reflection
 
 ```text
-sigma(ell)=-1-ell.                                     (20)
+sigma(ell)=-1-ell.                                                  (17b)
 ```
 
-On `Z/17Z` and `Z/29Z`, `sigma` has one common fixed point and all other
-orbits are pairs.  An order-17 block has size at most three, so `a` such
-blocks cover at most `1+2a` quotient points.  An order-29 block has size at
-most five, so `b` such blocks cover at most `1+4b` quotient points.  Hence
-the fractions missed by all high blocks are at least
+On `Z/17Z` and `Z/29Z`, this reflection has one fixed point and all other
+orbits are pairs.  Thus `a>=1` order-17 blocks cover at most `1+2a` quotient
+points, and `b>=1` order-29 blocks cover at most `1+4b`.  Their missed
+fractions are at least
 
 ```text
-A_a=(16-2a)/17 if a>0, and A_0=1,
-B_b=(28-4b)/29 if b>0, and B_0=1.                     (21)
+A_a=(16-2a)/17,          B_b=(28-4b)/29.                           (17c)
 ```
 
-These are cylinder bounds, not an assumption that the masks coincide.  If
-both orders occur, then `493|Q`, and the equal-fibre map
+When both orders occur, `493|Q` and the equal-fibre CRT map to
+`Z/17Z x Z/29Z` makes the jointly missed set a product cylinder of density at
+least `A_a B_b`.  Put `c=6-a-b`; the remaining blocks cover at most `7c/43`.
+The three exact gaps are
 
 ```text
-Z/QZ -> Z/17Z x Z/29Z                                (22)
+b=0:       A_a-7(6-a)/43       =(33a-26)/731      >=7/731,
+a=0:       B_b-7(6-b)/43       =(31b-14)/1247     >=17/1247,
+a,b>=1:    A_a B_b-7c/43
+             =(344ab+1043a+699b-1442)/21199       >=644/21199.     (17d)
 ```
 
-makes the set missed by every high block have density at least `A_a B_b`.
-This exact product is the sidecar lost by a scalar density estimate.
+All are positive.  This independently removes every pure or mixed 17/29
+profile, with the product cylinder supplying the coordinate that scalar
+density forgets.  It agrees with the anchored `70/493` gate but explains the
+same obstruction through symmetry and CRT rather than pairwise complement
+pricing.  The independently written `lrc_zero_mode_cochain_rank6_support_thm3416.py`
+freezes `(17a)--(17d)` and a separate primitive census through `Q=200`.
 
-Pad a cover by empty slots to six owners and put `c=6-a-b`.  The remaining
-blocks cover at most `7c/43`.  The three possible cases give
+## 4. Positive half-twist bases and the primitive boundary
+
+The complete minimal witness bank is
+
+| `Q` | residues | quotient-order profile |
+|---:|---|---|
+| 8 | `(1,3,5,7)` | `8^4` |
+| 9 | `(1,5,6,7)` | `(3,9^3)` |
+| 10 | `(1,3,4,7,9)` | `(5,10^4)` |
+| 11 | `(1,2,3,5,7,9)` | `11^6` |
+| 12 | `(1,5,7,8,11)` | `(3,12^4)` |
+| 15 | `(1,4,6,7,8,10)` | `(3,5,15^4)` |
+| 23 | `(1,4,5,7,9,11)` | `23^6` |
+| 25 | `(1,9,10,11,19,21)` | `(5,25^5)` |
+
+Every row covers literally and has augmented gcd one.  Scaling a row by
+`Q/a` pulls the literal sheet cover from base `a` back to every multiple `Q`
+of `a`, proving the reverse direction of `(3)`.  Such scaling need not retain
+augmented gcd one; this is why `(3)` is deliberately a literal-cover theorem
+and only its necessary direction is used for primitive quotients.
+
+The new partition atoms have block-size profiles
 
 ```text
-b=0, a>=1:
-  A_a-7(6-a)/43=(33a-26)/731 >= 7/731;
-
-a=0, b>=1:
-  B_b-7(6-b)/43=(31b-14)/1247 >= 17/1247;
-
-a,b>=1:
-  A_a B_b-7(6-a-b)/43
-   =(344ab+1043a+699b-1442)/21199
-   >=644/21199.                                       (23)
+Q=11: (2,1,2,2,2,2),
+Q=23: (4,3,4,4,4,4),
+Q=25: (4,4,5,4,4,4).                                               (18)
 ```
 
-Every right-hand side is positive.  Thus the low blocks cannot fill the
-reflection/CRT core missed by the high blocks.  This contradiction proves:
+Each is one anchor plus five disjoint petals.  The `Q=15` zero-twist row has
+fourteen sheets of multiplicity one and its fixed sheet of multiplicity six;
+the half-twist row has multiplicities `1^14,4^1`.
+
+## 5. Zero twist and proof of the global classification
+
+THM-3414 proves, for every `Q>=2`,
 
 ```text
-every primitive half-twist cover by at most six owners has Q divisible
-by a member of S.                                      (24)
+a fixed-zero cover by at most six owners exists
+iff one of {15,16,18,20,24} divides Q.                              (19)
 ```
 
-The mixed hostile `Q=493` is load-bearing: pairwise density alone does not
-remember that order-17 and order-29 complements occupy independent CRT
-coordinates, whereas `(22)` does.
-
-## 6. Fixed zero and the all-q converse
-
-THM-3414 proves that a fixed-zero cover by at most six owners exists exactly
-when its sheet number is divisible by one of
+This is a COMPUTER-ASSISTED PROVED all-`Q` finite-profile atlas, independently
+audited; it is not a bounded-modulus scan.  Each base in `(19)` contains one
+of the eight half-twist/global bases:
 
 ```text
-15,16,18,20,24.                                       (25)
+15;       16 -> 8;       18 -> 9;       20 -> 10;       24 -> 12. (20)
 ```
 
-Each number in `(25)` has a divisor in `S`: respectively `15,8,9,10,12`.
-Therefore every primitive zero-layer cover also forces an `S` divisor.
-Together with `(24)` and the primitive divisor reduction `(5)--(6)`, every
-global cover by at most six owners forces `s|q` for some `s in S`.
+Hence any primitive cover by at most six owners, at either twist, has quotient
+divisible by one of the eight bases in `(3)`.
 
-Conversely, the four new atoms have the following exact covers.  Here
-`epsilon=0` denotes fixed zero and `epsilon=1` the half twist.
+The four rows in `(4)` give rank at most six on every multiple of
+`11,15,23,25`.  If none of `8,9,10,12` divides `q`, the rank-four and rank-five
+classifications `(2)` exclude every lower rank, proving the reverse direction
+of `(1)`.
+
+Conversely, if `rho_ZMC(q)=6`, the divisor minimum `(5)` supplies a primitive
+quotient `Q|q` covered by at most six owners.  Sections 3 and `(19)--(20)`
+force one of the eight bases to divide `Q` and hence `q`.  A lower base
+`8,9,10,12` would make the global rank at most five, contradiction.  Therefore
+one of `11,15,23,25` divides `q`, and all lower bases are absent.  This proves
+`(1)`.
+
+## 6. The exceptional-order generalized tournament
+
+There is one lawful tournament-like object here, but it is a proof sidecar,
+not the cover carrier.  On vertices `E={3,5,17,29}`, define the observable
 
 ```text
-Q=11, epsilon=1: (1,2,3,5,7,9),
-  block sizes (2,1,2,2,2,2), a partition;
-
-Q=15, epsilon=0: (1,2,3,4,5,7),
-  multiplicity one on 14 sheets and six at sheet 0;
-
-Q=15, epsilon=1: (1,4,6,7,8,10),
-  multiplicity one on 14 sheets and four at sheet 7;
-
-Q=23, epsilon=1: (1,4,5,7,9,11),
-  block sizes (4,3,4,4,4,4), a partition;
-
-Q=25, epsilon=1: (1,9,10,11,19,21),
-  block sizes (4,4,5,4,4,4), a partition.             (26)
+c(a,b)=maximum fraction of an order-b block lying in C_a.          (21)
 ```
 
-The lower atoms `8,9,10,12` are inherited from THM-3415.  THM-3405 dilation
+The exact matrix, with rows indexed by anchors, is
+
+| `a\b` | 3 | 5 | 17 | 29 |
+|---:|---:|---:|---:|---:|
+| 3 | `0` | `2/15` | `2/17` | `10/87` |
+| 5 | `4/15` | `0` | `12/85` | `4/29` |
+| 17 | `14/51` | `14/85` | `2/17` | `70/493` |
+| 29 | `8/29` | `24/145` | `72/493` | `4/29` |
+
+Orient `a -> b` when `c(a,b)<theta_a`.  The strict arcs are
 
 ```text
-(Q,u,c) -> (lambda Q,lambda u,c/lambda)               (27)
+3 -> 17,29;
+5 -> 17,29;
+17 <-> 29.                                                         (22)
 ```
 
-pulls every atom back to each positive multiple, preserving the cover and
-zero cochain.  This proves `(2)`.  Subtracting the exact lower support `(4)`
-gives `(3)`.
+The pair `{3,5}` is a missing edge at equality, but its lcm is the forbidden
+base 15.  The pair `{17,29}` is genuinely bidirected.  Thus the intrinsic
+sidecar is exactly a four-vertex generalized tournament with one missing
+target-killed edge and one both-way edge.  Choosing the elimination order
+`3,5,17,29` turns it into a proof scheduler.  It forgets residue orientation,
+prime breakers, and literal sheet union, so it is not equivalent to a cover.
+The reflection/CRT proof restores a different sidecar for the bidirected pair:
+the product of the two missed cylinders.  Neither representation subsumes the
+other; together they explain both the pairwise obstruction and its all-mixture
+stability.
 
-## 7. Periodic and arithmetic corollaries
+The actual positive objects remain six-edge pointed partition clutters.  This
+distinction explains why tournament language is useful for the obstruction
+grammar but not for reconstructing the atoms.
 
-The exact rank-six predicate is periodic modulo
+## 7. Harmonic, Farey, Fibonacci, and Berggren transports
+
+The exact rank-six support is periodic modulo
 
 ```text
-lcm(S)=455400.                                        (28)
+M=lcm(8,9,10,11,12,15,23,25)=455400.                              (23)
 ```
 
-Inclusion-exclusion, independently matched by a direct residue census, gives
-exactly `55000` accepting residues.  Consequently
+Exactly `55,000` residues are accepted, so
 
 ```text
-#{q<=X:rho_ZMC(q)=6}=(25/207)X+O(1),
-sum_(q<=X,rho_ZMC(q)=6) 1/q=(25/207)log X+O(1).        (29)
+#{q<=N:rho_ZMC(q)=6}=(25/207)N+O(1),
+sum_(q<=N,rho_ZMC(q)=6) 1/q=(25/207)log N+O(1).                    (24)
 ```
 
-The rank-four, rank-five, and rank-six layers are disjoint and have densities
-`2/9`, `4/45`, and `25/207`.  Hence
+The disjoint support through rank six has density and harmonic coefficient
 
 ```text
-#{q<=X:rho_ZMC(q)<=6}=(149/345)X+O(1),
-sum_(q<=X,rho_ZMC(q)<=6) 1/q=(149/345)log X+O(1).      (30)
+2/9 + 4/45 + 25/207 = 149/345.                                   (25)
 ```
 
-Two exact transport sidecars follow.
-
-For Fibonacci numbers `F_n` with `n>=3`, the ranks of apparition at the bases
-in `(1)` are
+For reduced fractions, retain `(numerator,denominator) mod M`.  The exact
+primitive state count and accepting count are
 
 ```text
-z(8,9,10,12,11,15,23,25)=(6,12,15,12,10,20,24,25).   (31)
+J_2(M)=131,383,296,000,
+N_6(M)=16,682,793,600,                                             (26)
 ```
 
-Using `gcd(F_m,F_n)=F_gcd(m,n)`, divisibility by each base occurs exactly on
-multiples of its rank.  Thus
+so the limiting Farey/Stern--Brocot denominator proportion is
 
 ```text
-rho_ZMC(F_n)=6 iff
-(10|n or 24|n or 25|n) and 6 does not divide n
-                                  and 15 does not divide n.        (32)
+N_6(M)/J_2(M)=157981/1244160.                                     (27)
 ```
 
-This indicator has period 600, with 48 accepting residues and density
-`2/25`.
+The child maps act on this finite residue-pair state space; no ordering of
+fractions is lost, but only denominator acceptance is read out.
 
-On the Berggren `U`-spine `q(n)=4n^2+12n+11` for `n>=0`, the polynomial is
-odd and has no root modulo five; its discriminant is a nonsquare modulo 23.
-Hence among the new bases only 11 can divide it, exactly for `n=0,8 mod 11`.
-Among the lower bases only 9 can divide it, exactly for `n=1,5 mod 9`.
+The Fibonacci sequence modulo `M` has period 1200.  For `n>=3`,
+
+```text
+rho_ZMC(F_n)=6
+iff (10|n or 25|n) and 6 does not divide n and 15 does not divide n. (28)
+```
+
+Equivalently the accepted indices modulo 150 are
+
+```text
+10,20,25,40,50,70,80,100,110,125,130,140,                         (29)
+```
+
+of density `2/25` among indices.
+
+For the Berggren `U`-spine label
+
+```text
+Q_n=4n^2+12n+11=2c_n+1,                                           (30)
+```
+
+the candidates 15,23,25 never divide `Q_n`, while `11|Q_n` exactly at
+`n=0,8 mod 11`; the lower odd obstruction `9|Q_n` occurs at `n=1,5 mod 9`.
 Therefore
 
 ```text
-rho_ZMC(4n^2+12n+11)=6 iff
-n=0 or 8 (mod 11), and n is not 1 or 5 (mod 9).        (33)
+rho_ZMC(Q_n)=6
+iff n mod 11 is 0 or 8 and n mod 9 is neither 1 nor 5.             (31)
 ```
 
-There are 14 accepting classes modulo 99.  Rank five is absent on this
-spine.
+This gives 14 classes modulo 99, of density `14/99`.  On the full ternary
+Berggren tree every label `2c+1` is odd, so exact rank six is the finite-state
+condition
 
-## 8. Exact companion and evidence boundary
+```text
+(11 or 15 or 23 or 25) divides 2c+1,          9 does not.          (32)
+```
 
-The standard-library companion freezes:
+Tracking the Pythagorean triple modulo `lcm(9,11,15,23,25)=56925` under the
+three Berggren matrices gives a literal ternary automaton.  The companion
+counts accepted nodes through depth ten as
 
-1. the exact formula `(8)`, bound `(9)`, and list `(10)`;
-2. both all-order complement cutoffs, including every boundary tie;
-3. all order-17/order-29 mask sizes and exact union maxima through six;
-4. the `Q=493` cylinder product and every rational deficit in `(23)`;
-5. all five displayed positive controls in `(26)`;
-6. an independent augmented-prime-breaker primitive cap-six census for both
-   twists through `Q=200`; and
-7. the period, Fibonacci, and Berggren arithmetic in `(28)--(33)`.
+```text
+1,0,2,5,10,41,133,378,1210,3519,10634.                            (33)
+```
 
-The finite primitive census is explicitly **FINITE-EXACT only through
-`Q=200`**.  It is a hostile audit of the analytic proof, not an extrapolation
-and not a dependency of `(2)--(3)`.  No primitive pattern beyond that cutoff
-is claimed.  The theorem has no tournament: the decisive observable is a
-reflection-orbit cylinder with a CRT sidecar, not a pairwise orientation.
+This is a finite exact prefix, not a claimed limiting tree density.
+
+## 8. Exact companion and scope
+
+The standard-library companion independently constructs augmented banks and
+runs a rare-uncovered-coordinate branch-and-bound solver for both twists and
+every `2<=Q<=300`.  It examines
+
+```text
+133,058 raw types,
+65,604 unique augmented types,
+65,063 maximal types,
+734,163 memoized states,
+751,364 branches.                                                  (34)
+```
+
+It finds 64 primitive rank-six twist instances and exactly 35 global rank-six
+degrees through 300, reconstructs every finite critical-order and complement
+gate, verifies all atoms and transports, and freezes event and semantic
+digests
+
+```text
+354654b682bb9f9796e11e6f67cc4511bcb4d403a5ba3604e2471abbe14e0706,
+18abbdc82a40b0299d9dc59cd745d52a09e9706d3cf0cb0379ab5ed2f064df22.
+```
+
+Normal and optimized Python outputs are byte-identical.  The finite primitive
+census is not promoted beyond `Q=300`; the all-`q` global theorem instead uses
+the analytic tails, exact order descents, divisor ancestry, and THM-3414.
+
+The separate reflection/CRT companion has script/output/semantic hashes
+
+```text
+c946cf9a66daa13da790cc9b1129993f9b5c1a8a2bdc6dec1bcc07b644989122,
+733a3ed02910348b87b561df7f1c79eef2dc431a8d702f2c0f807db33c1298cc,
+99892baf39b3d2b1b6a802bf21e0fe4164f155030d8ad051bc7ae26513b01ca3.
+```
+
+It independently freezes the all-order order-three/order-five classifiers,
+reflection union maxima, CRT deficits, positive atoms, arithmetic transports,
+and a primitive cap-six census through `Q=200`.
+
+An independent clean-room audit reconstructed the capacity and all four
+anchored-complement gates, searched every target-free half-twist modulus
+through `Q=1000`, and checked the larger hostiles
+`1479,1972,2465,3451,4913` together with their proper divisors.  It also
+replayed direct factor-997 pullbacks and THM-3414's fixed-zero transcript.
+No counterexample was found.
+
+Nothing here constructs a physical current, embeds an atom into an LRC(14)
+row, or decrements the live ledger.  LRC(14) remains open.
+
+**QED.**

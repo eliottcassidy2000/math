@@ -8,6 +8,9 @@ half-twist quotients eight and nine, and global rank four iff the sheet degree
 is divisible by eight or nine; [THM-3415](../01-canon/theorems/THM-3415-zero-mode-cochain-global-rank-five-support.md)
 proves, downstream of THM-3408's COMPUTER-ASSISTED PROVED cutoff, global rank
 five iff `(10|q or 12|q)` while `8` and `9` do not divide `q`;
+[THM-3416](../01-canon/theorems/THM-3416-zero-mode-cochain-global-rank-six-support.md)
+proves and independently audits global rank six on bases `11,15,23,25` after
+excluding lower bases `8,9,10,12`;
 FINITE-EXACT unrestricted positive-transverse rank table for `15<=q<=28`,
 with independent union-state and exhaustive-combination solvers and literal
 witness replay.  No LRC(14) ledger decrement.
@@ -32,6 +35,8 @@ The live concept board is:
 | physical half-grid cover | divisor chart | block rank | affine normalization | selected-mode centre/cochain |
 | rank-four witness | four-block clutter | full union plus gcd gate | dilation | no intrinsic pair orientation |
 | rank-five atom | anchor plus four disjoint petals | OR=XOR on sheets | divisor pullback | prime-breaker sidecar |
+| rank-six atom | anchor plus five petals | OR=XOR at 11/23/25 | divisor pullback | Q15 fixed-sheet collision |
+| exceptional orders | four-vertex directed graph | complement quota | anchor elimination | missing/bidirected edges |
 
 The exact connection contract is:
 
@@ -500,6 +505,54 @@ vertices its denominator density is `43/864`.  Fibonacci indices are exactly
 is the precise ancestry/Boolean/recurrence transport sought here; it remains
 a cover-clutter theorem, not a tournament or an LRC exit.
 
+[THM-3416](../01-canon/theorems/THM-3416-zero-mode-cochain-global-rank-six-support.md)
+closes the next grade:
+
+```text
+rho_ZMC(q)=6
+iff (11|q or 15|q or 23|q or 25|q)
+and 8,9,10,12 all do not divide q.
+```
+
+This is the first grade where the generalized-tournament grammar appears
+intrinsically rather than metaphorically.  Capacity reduces every target-free
+half-twist six-cover to exceptional quotient orders `{3,5,17,29}`.  If
+`c(a,b)` is the largest fraction of an order-`b` block inside the complement
+of a maximal order-`a` anchor, the strict arcs are
+
+```text
+3 -> 17,29;        5 -> 17,29;        17 <-> 29.
+```
+
+The `{3,5}` edge is missing at equality but is killed by forbidden lcm 15;
+the `17/29` edge is genuinely both-way.  This four-vertex generalized
+tournament schedules the proof, while the positive objects themselves are
+six-block pointed clutters.  The mixed exact number `70/493<14/85` is the one
+pairwise load raw density cannot decide.
+
+Concurrent work supplied an orthogonal closure of that same bidirected edge.
+The involution `ell -> -1-ell` makes the order-17 and order-29 missed sets
+unions of reflection orbits; CRT turns a mixed missed set into a product
+cylinder.  Its worst mixed margin is `644/21199>0`, while the pure margins are
+`7/731` and `17/1247`.  The generalized tournament exposes the pairwise proof
+scheduler; the reflection/CRT sidecar proves that arbitrary mixtures cannot
+escape it.  This is a genuine two-representation agreement, not duplicate
+finite search.
+
+The three odd atoms `Q=11,23,25` are literal partitions with one anchor and
+five petals, so sheet OR equals XOR.  The `Q=15` zero atom instead has one
+sixfold fixed-sheet collision and fourteen singleton sheets.  Literal
+half-twist support pulls back to every multiple of
+`{8,9,10,11,12,15,23,25}`, but primitive augmented support does not: the
+scaled `Q=33` cover has gcd three.  Global divisor ancestry is precisely what
+separates those statements.
+
+The rank-six subset of the harmonic series has coefficient `25/207`, and the
+cumulative coefficient through rank six is `149/345`.  Fibonacci indices are
+12 classes modulo 150.  On the Berggren U-spine they are 14 classes modulo 99;
+on the full ternary tree, tracking triples modulo 56925 gives an exact finite
+automaton rather than a forced tournament.
+
 ## 8. Verification and new frontiers
 
 Run
@@ -537,17 +590,17 @@ endpoint controls `Q=7` half twist and `Q=14` zero twist fail, while adjacent
 scope repairs in MISTAKE-390; neither repair changes the cover theorem or its
 rank consequences.
 
-After THM-3415 the highest-value continuations are:
+After THM-3416 the highest-value continuations are:
 
-1. classify the primitive rank-five pattern beyond the finite `Q<=500`
-   audit, where the only observed families are `Q=16,18` at zero twist and
-   the `8/9` breaker lifts plus atoms `10,12` at half twist;
-2. combine the PROVED THM-3414 fixed-zero six-owner bases
-   `{15,16,18,20,24}` with a half-twist six-owner classification to decide
-   global rank six; THM-3414 inherits THM-3408's computer-assisted cutoff and
-   is not an independent proof of that arithmetic gate;
+1. prove or refute the observed primitive rank-at-most-six boundary: divisors
+   `8,9,10,12` plus isolated `Q=11,15,22,23,25`; literal pullback alone cannot
+   settle its prime-breaker converse;
+2. attack global rank seven using the same divisor-monoid grammar, beginning
+   with an exact primitive/base census and an anchored obstruction graph;
 3. intersect the q23 rank-six primitive half-twist with the reserved
    exceptional-edge leakage problem, keeping cover rank distinct from LRC
    row exclusion;
-4. transport one zero-cochain certificate through the actual LRC body/core
+4. analyze the modulo-56925 Berggren ternary automaton spectrally, without
+   inferring a limiting tree density from the finite depth-ten prefix;
+5. transport one zero-cochain certificate through the actual LRC body/core
    sidecars.  Formula `(7)` alone closes no row and leaves LRC(14) open.

@@ -38,6 +38,36 @@
   `8ae459feb969e00cbb92acd718cdeb49b0d20d86323cdb98e6c31a8fd6a4fe2f` /
   `4bce9383f966c05468d4c61de5e7bdd3ce77f4a0ce9a8e997e0fed4cfc5dfe05` /
   `90d08019ad87638fecc375d76258e282bc6a4de17f53e01ca87802c8f05c5c92`.
+- `lrc_zero_mode_cochain_rank6_support_probe_20260815.py` -> matching
+  `.out` [THM-3416 PROVED ALL-q GLOBAL RANK-SIX SUPPORT DOWNSTREAM OF
+  THM-3414's COMPUTER-ASSISTED PROVED FIXED-ZERO ATLAS + ELEMENTARY HALF-TWIST
+  ANCHORED-COMPLEMENT PROOF + VERIFIED-EXACT Q2--300 HOSTILE CENSUS +
+  INDEPENDENT PROOF/ARITHMETIC AUDIT PASS].  For unrestricted positive
+  transverse owners with zero complete mode cochain, `rho_ZMC(q)=6` iff one
+  of `11,15,23,25` divides `q` and none of `8,9,10,12` does.  Literal
+  half-twist rank at most six occurs exactly on multiples of
+  `{8,9,10,11,12,15,23,25}`; this is not a primitive iff, since pullback can
+  lose the breaker coordinate (`Q=33` is the canonical hostile).  Capacity
+  leaves target-free orders `{3,5,17,29}`.  Four successive complement quotas
+  `2/15,4/25,14/85,24/145` eliminate them; the mixed load
+  `70/493<14/85` closes the formerly live 17/29 gap.  Their exact pairwise
+  loads form a four-vertex generalized tournament with missing equality edge
+  `{3,5}` (killed by base 15) and bidirected edge `17<->29`; this is a proof
+  sidecar, not the six-block cover carrier.  The `Q=11,23,25` atoms are exact
+  sheet partitions, while `Q=15` has one multiply covered fixed sheet.  The
+  rank-six support has natural/harmonic coefficient `25/207`; cumulative
+  rank-at-most-six coefficient is `149/345`; Farey density is
+  `157981/1244160`; Fibonacci indices are 12 classes modulo 150; the Berggren
+  U-spine has 14 classes modulo 99, and the full ternary tree is a finite
+  automaton modulo 56925.  The canonical solver scans both twists through
+  `Q=300` with 133,058 raw types, 734,163 states, and 751,364 branches; normal
+  and optimized outputs are byte-identical.  A clean-room audit additionally
+  checks every target-free `Q<=1000` and hostiles
+  `1479,1972,2465,3451,4913`.  Script/output/semantic LF-normalized SHA-256:
+  `ed7672fd75b7c5ede23c0b7752e06849faa9c693d18e0639eee5b39f17d03a21` /
+  `3eb932643e76f2ac7836d8d435bf259183e2c3778216b0458bf4487b5894102a` /
+  `18abbdc82a40b0299d9dc59cd745d52a09e9706d3cf0cb0379ab5ed2f064df22`.
+  No LRC(14) ledger decrement.
 
 - `lrc_zero_mode_cochain_rank5_support_probe_20260815.py` -> matching
   `.out` [THM-3415 PROVED ALL-q GLOBAL RANK-FIVE SUPPORT DOWNSTREAM OF
