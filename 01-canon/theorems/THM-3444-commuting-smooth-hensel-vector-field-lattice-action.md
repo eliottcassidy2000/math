@@ -2,13 +2,13 @@
 id: THM-3444
 title: "Commuting smooth Hensel vector fields give a free lattice action"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  Pointwise independence of the first-carry vector fields
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Pointwise independence
+  of the first-carry vector fields
   of r commuting congruence-to-identity automorphisms gives a free
   (Z/p^(a-c)Z)^r action on every smooth depth-c Hensel fibre, with an exact
-  orbit-bank invoice and first-lift converse.  This candidate is not a
-  proved dependency before audit.
+  orbit-bank invoice and first-lift converse.
 source: root-smooth-hensel-lattice-action-2026-08-15
+audit: independent mixed-valuation proof reconstruction; 729-exponent nonlinear stress; dependent and two-adic hostile audits; normal/optimized/stored replay; dependency, hash, AST, ID, routing, and documentation gates clean
 depends_on:
   - THM-3442-smooth-hensel-fibre-vector-field-orbit-law
 related:
@@ -23,11 +23,10 @@ hash_basis: LF-normalized bytes
 
 # THM-3444 -- commuting smooth Hensel vector fields give a free lattice action
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-This file contains a complete proof candidate.  It remains outside the
-proved dependency graph until an independent derivation and replay audit.
+The proof and exact companion have passed an independent derivation and
+replay audit.
 
 ## 1. Exact statement
 
@@ -238,4 +237,4 @@ python3 -B 04-computation/commuting_smooth_hensel_lattice_action_thm3444.py
 python3 -B -O 04-computation/commuting_smooth_hensel_lattice_action_thm3444.py
 ```
 
-No result in this candidate is a proved dependency before independent audit.
+QED.

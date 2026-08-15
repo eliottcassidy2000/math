@@ -1,8 +1,8 @@
 # Script Results Index
 
 - `commuting_smooth_hensel_lattice_action_thm3444.py` -> matching `.out`
-  [THM-3444 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
-  INDEPENDENT AUDIT REQUIRED].  For `r` commuting automorphisms of a smooth
+  [THM-3444 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For `r`
+  commuting automorphisms of a smooth
   `d`-dimensional `Z_p`-scheme, pointwise independence of their first-carry
   fields gives a free `(Z/p^(a-c)Z)^r` action on every depth-`c` fibre, orbit
   size `p^(r(a-c))`, and `p^((d-r)(a-c))` orbit banks; first-lift freeness is
