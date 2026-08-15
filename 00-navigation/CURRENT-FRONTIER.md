@@ -25,17 +25,16 @@ THM-2051/2052 leave a rank-`>=11` sparse code; failed gates are not danger.
 
 ### Exact live obligation
 
-Direct frontier: `<=6`; projected caps `1579/216`. After THM-3361, THM-3378
-leaves the `z1=216` ledger/wall/families at `372913/109/12`. THM-3352/3355
-close matched residues, with THM-3360's `1/294` floor and THM-3384's
-independent `>Dmax/5` proof; same-level edges then close `z_e=q_eL-e` on all
-`3,003` bodies. THM-3381 gives phase-aware tree transport and refutes
-residue-blind transfer. Open: `k=0`, other `k=1` residues, projected `k=2,3`,
-rung, entry and LRC; screens are not covers. THM-3356 gives determinant
+Direct frontier: `<=6`; projected caps `1579/216`. THM-3378 leaves the
+`z1=216` ledger/wall/families at `372913/109/12`. THM-3352/3355 close matched
+residues; THM-3360/3384 give pair floors, and same-level edges close
+`z_e=q_eL-e` on all `3,003` bodies. THM-3381 gives phase-aware transport and
+refutes residue-blind transfer. Open: `k=0`, other `k=1` residues, projected
+`k=2,3`, rung, entry and LRC; screens are not covers. THM-3356 gives determinant
 shells. THM-3366 leaves `4,056/200,069,517,203` (`k=2`) and
-`1,897/2,548,893,834` (`k=3`), with seven rigid `k=3` hits at `D=L/2`;
-THM-3385/3387/3391 explain fibre geometry without a refined decrement.
-THM-3368 adds a weighted Horn tariff but no clock seed. LRC remains open.
+`1,897/2,548,893,834` (`k=3`), with seven rigid hits at `D=L/2`. THM-3385/
+3387--3389/3391 classify q=2--4 fibre geometry; the q=6 CRT probe matches its
+atlas slice without a refined decrement. THM-3368 adds a tariff, not a clock seed.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
 
@@ -211,8 +210,10 @@ THM-2070 refutes the general HYP-8890/8895 bypasses.  Transfer
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
 - THM-2013/2016 bound cyclic temperature/reducibility; `H` remains empirical.
-- THM-2290 makes the endpoint-colour-selected matching kernel hafnian-complete and limits universal Pfaffian tournament gauges to orders two and four.
-  THM-2294 reconstructs an anchored contraction from its Plucker edge field: real antisymmetric signs can orient, while symmetric character data are colours. THM-2501 makes the first nonconstant even moment of a symmetric sign switching problem exactly signed-`C4`/Gram energy, whereas a skew tournament matrix has identically zero quadratic form. These swap-parity boundaries do not license tournamentizing matching or handoff fibres.
+- THM-2290 makes the endpoint-colour-selected matching kernel hafnian-complete and restricts universal Pfaffian tournament gauges to orders `2,4`.
+  THM-2294: antisymmetric signs orient; symmetric character data are colours.
+  THM-2501 identifies signed-`C4`/Gram energy as symmetric switching's first nonconstant even moment; skew quadratic forms vanish.
+  THM-3392 gives the sharp bipartite-lift law `Q<=B<=2Q`; disjoint ternary supports are the lost sidecar, and strict sign loss starts at `n=6`. None licenses tournamentizing matching or handoff fibres.
 
 ### Live work and limits
 

@@ -20,7 +20,7 @@ related:
   - THM-3385-odd-fibre-doubling-projection-and-half-even-complement-clocks
   - THM-3388-three-sheet-phase-triangle-cover-clutter
   - THM-3389-four-sheet-typed-cover-clutter
-  - THM-3390-complete-z216-projected-wall-by-hybrid-torsion-support-terminal
+  - THM-3394-complete-z216-projected-wall-by-hybrid-torsion-support-terminal
 script: 04-computation/lrc14_weighted_common_source_cyclic_support_capacity_thm3391.py
 output: 05-knowledge/results/lrc14_weighted_common_source_cyclic_support_capacity_thm3391.out
 script_sha256: 22c2ea187e3d43ca55dd61611a0f6d8a70cf7b1111b1f01cb7338bc1aef7e195
@@ -297,10 +297,10 @@ The exact twenty-one-case boundary is:
 Thus the weighted common-source theorem is already a proved projected
 mechanism, not merely a proposed extension.
 
-### 5.3 Prospective THM-3390 one-high terminal
+### 5.3 Prospective THM-3394 one-high terminal
 
 The current projected complete-wall verifier remains under exact replay and
-THM-3390 remains `RESERVED / UNPROVED`.  For one high denominator `d`, it
+THM-3394 remains `RESERVED / UNPROVED`.  For one high denominator `d`, it
 forms the **deduplicated** support
 
 ```text
@@ -570,7 +570,7 @@ cyclic blockers acting on one weighted source; its counterindications are
 lost source identity, erased numerator gcd type, changed endpoint convention,
 or a deleted target grid.  The next concrete extensions are the q=3
 circulation sidecar, the q=4 typed equality clutter, and exact
-`lambda_S(a)` replacement of the two coarse one-high terminals in THM-3390.
+`lambda_S(a)` replacement of the two coarse one-high terminals in THM-3394.
 
 This theorem changes no refined ledger.  It proves no physical entry, rung,
 arbitrary projected sector, arbitrary-residue sector, or LRC(14).

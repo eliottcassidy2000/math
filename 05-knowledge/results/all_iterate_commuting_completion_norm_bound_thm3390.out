@@ -1,0 +1,9 @@
+THM-3390 ALL-ITERATE COMMUTING COMPLETION AUDIT
+mass_inequality=PASS rows=4 c>=2 kappa>c
+sharp_unitary_dilation=PASS matrix=cJ2 E_n=0 checked_n=1..64
+sharp_boundary=PASS norm(cJ2)=c
+noncommuting_hostile=PASS Q=0 T=3J2 commutator=[[9,0],[0,-9]]
+raw_compression=PASS E1=T* commutator=[[-1,0],[0,1]]
+uniformity_hostile=PASS scalar_T=3 E_n=-3^n
+tail_gate=PASS bounded_E_plus_contraction_implies_power_bounded_T
+semantic_sha256=ad59ba4dea8c755a57c1947ff114593e383caf8597ec185497b4c952f4969c88

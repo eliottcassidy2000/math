@@ -1,0 +1,22 @@
+THM-3389 Q4 TYPED COVER CLUTTER
+source_sha256_lf=cd963c20ff47c9840222c6bfd95088e3d649ac90edd518353c0f64f4f5ec9bfd
+dependency_sha256_lf=(('THM-3387', 'c540255a185efb54c67035d69f3fbd94f4c1ad3e30c4e31738a8800e81198613'), ('THM-3387-script', '9b0b46874a569d674b937b37cf74a8985fca2b77e3e480a75fb4924ea602f25a'), ('THM-3387-output', 'b4d9ce439bab4501bfd5e2cf13eb0b0e3685b7364f30e43b7d5ca9138d25cb5c'))
+status=PROVED analytic complete-cochain criterion plus FINITE-EXACT literal q4 clutter and atlas;independently_hostile_audited
+blocker_species=odd:singleton;2mod4:antipodal_pair;minimal_partitions=2+2,2+1+1,1+1+1+1
+gap_cochain=p_ij=4u_i u_j(x_i-x_j);affine_congruence_and_pair_overlap_plus_zero_triangle_circulation
+audit_checks=rank2:1225,rank3:1900,rank4:715
+literal_vertices=(1, 2, 3, 5, 6, 7, 9, 10, 11, 13, 14);minimal_edges=36;rank_profile=((2, 4), (3, 15), (4, 17))
+minimal_edge_list=((2, 14), (6, 10), (6, 14), (10, 14), (1, 9, 10), (1, 10, 11), (1, 10, 13), (1, 11, 14), (1, 13, 14), (2, 7, 9), (2, 9, 11), (2, 11, 13), (3, 7, 10), (3, 10, 13), (3, 11, 14), (5, 6, 11), (5, 9, 14), (6, 7, 13), (9, 13, 14), (1, 3, 5, 7), (1, 3, 5, 9), (1, 3, 7, 11), (1, 3, 9, 11), (1, 5, 7, 11), (1, 5, 7, 13), (1, 5, 9, 13), (1, 7, 9, 13), (1, 7, 11, 13), (1, 9, 11, 13), (3, 5, 7, 9), (3, 5, 7, 11), (3, 5, 11, 13), (3, 7, 11, 13), (5, 7, 9, 11), (5, 9, 11, 13), (7, 9, 11, 13))
+edge_degrees=((1, 15), (2, 4), (3, 11), (5, 12), (6, 4), (7, 14), (9, 14), (10, 7), (11, 17), (13, 15), (14, 8))
+independence_profile=(1, 11, 51, 118, 123, 44, 3, 0, 0, 0, 0, 0);maximal_six_sets=((1, 2, 3, 5, 6, 13), (1, 2, 3, 6, 9, 13), (2, 3, 5, 6, 9, 13))
+rank3_pairwise_hostile=(2,7,11);rank4_pairwise_hostile_order=(1,3,11,5)
+positive_cochains=rank2:((0, 1, -4),);rank3:((0, 1, -2), (0, 2, 2), (1, 2, 2));rank4:((0, 1, -1), (0, 2, -2), (0, 3, -1), (1, 2, 1), (1, 3, 2), (2, 3, 3))
+q4_body_candidates=2541;global_transverse_rows=619;exact_rows=619;core_rescues=()
+body_identity=3I5+3I4+I3=3*44+3*123+118=619
+typed_ternary_dilation=roots:(1, 9, 10),multipliers:(7, 11, 13);checks=816;orbit_mass=109109/64800
+harmonic_support_recurrence=1001H_d=311H_(d-1)-31H_(d-2)+H_(d-3),d>=3
+harmonic_word_recurrence=1001W_(d+1)=311W_d,d>=0
+typing=nonuniform_cover_clutter_with_block_sizes_and_exact_affine_Kr_cochain;not_tournament
+scope=classifies_q4_slice_of_T3387;no_core_rescue;no_new_refined_ledger_decrement;no_LRC14
+semantic_sha256=5e19b6e083e8b1faf6c1a082c6e321f148b2e5ff85bf93aa1d15c92542bf87b2
+verdict=PASS
