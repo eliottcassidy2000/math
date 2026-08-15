@@ -8,21 +8,21 @@ collide, links—not bare IDs—are canonical.
 
 ## Fast frontier snapshot
 
-- **LRC:** fourteen runners remains open; April 2026 reaches twelve nonzero speeds.
+- **LRC:** fourteen runners is open; April 2026 reaches twelve nonzero speeds.
 - **Moments:** [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md) gives GMC exactly through 2; [THM-2801](../../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md) gives SIC only at 1; JC-bearing restrictions remain.
 - **Tournament citations:** 2412.10572 Irving--Omar; 2307.05569 Grinberg--Stanley; 2406.09697 Klanderman et al.
 - **Flows:** [THM-2177](../../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes the exact-cost conjecture; cost-free `d_max` and planar `2d_max` survive.
 - **Reciprocals:** support differs from indexed multiplicity; figurate formulas omit repo extensions.
-- **JC/DC:** THM-1300 refutes `JC(n>=3)`; `JC(2),DC(1),DC(2)` are open.  THM-2071 is local; THM-2044 refutes the two-pair Poisson claim.
+- **JC/DC:** THM-1300 refutes `JC(n>=3)`; `JC(2),DC(1),DC(2)` are open. THM-2071 is local; THM-2044 refutes the two-pair Poisson claim.
 
 ## Rule 30
 
 - **Sources (checked 2026-08-15):** Wolfram's [2019 announcement](https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/)
-  gives the questions, rule, sideways argument, and finite observations.  The
-  active [prize page](https://rule30prize.org/) supports treating them as open.
-- **Boundary:** the `RESERVED` [THM-3456 candidate](../../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md)
+  gives questions, rule, sideways/finite observations.  The active
+  [prize page](https://rule30prize.org/) supports treating them as open.
+- **Boundary:** proved [THM-3456](../../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md)
   isolates the seed sidecar; the [LRC probe](../results/lrc14_rule30_depth_observer_no_go_20260815.out)
-  is finite-exact.  Neither source proves a prize claim or LRC(14).
+  is finite-exact.  Sources prove no prize claim or LRC(14).
 
 ## Lonely Runner Conjecture
 
@@ -594,7 +594,9 @@ new homotopy group, `p=2` statement, or LRC/GMC consequence.
 
 ## August 2026 preprint intake
 
-See the [August 14 intake sidecar](CORE-PAPERS-INTAKE-2026-08-14.md) for Grothendieck, Banach, `SOP2=SOP3`, and Crouzeix.  Their headlines remain **CITED PREPRINTS**; only THM-3390/3392/3395/3396 are proved canon.
+The [August 14 intake](CORE-PAPERS-INTAKE-2026-08-14.md) covers Grothendieck,
+Banach, `SOP2=SOP3`, and Crouzeix: headlines **CITED**; proved consumers
+THM-3390/3392/3395/3396/3456 only.
 
 ## Maintenance rule
 

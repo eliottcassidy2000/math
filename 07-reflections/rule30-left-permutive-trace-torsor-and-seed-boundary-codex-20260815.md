@@ -1,10 +1,9 @@
 # Rule 30 left-permutive trace torsor and the seed boundary
 
 **Research synthesis, 2026-08-15.**  This is the proof-and-loss ledger for the
-prospective [THM-3456](../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md)
-package and its exact companion.  THM-3456 is still `RESERVED` while the
-package is assembled and audited; this reflection is not an established
-dependency.  The current official page was checked on 2026-08-15: it still
+proved and independently audited
+[THM-3456](../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md)
+package and its exact companion.  The current official page was checked on 2026-08-15: it still
 lists all three prizes and accepts submissions until a satisfactory solution
 is achieved, so the problems are treated here as open.
 

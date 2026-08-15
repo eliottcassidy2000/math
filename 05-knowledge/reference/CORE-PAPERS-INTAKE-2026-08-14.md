@@ -45,8 +45,8 @@
   witness--parameter pairs rather than quotienting to bare vertices.
 - **Repo consumers:** [THM-3395](../../01-canon/theorems/THM-3395-small-sheet-typed-cover-star-cochain.md)
   cites that typing move as motivation only; its theorem is instead an
-  elementary coset/cochain/CRT/Helly argument.  The `RESERVED`
-  [THM-3456 candidate](../../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md)
+  elementary coset/cochain/CRT/Helly argument.  Proved
+  [THM-3456](../../01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md)
   gives a self-contained enriched trace-incidence special case, while the
   [typed-incidence reflection](../../07-reflections/sop2-sop3-typed-incidence-compiler-and-rule30-trace-boundary-codex-20260815.md)
   conditionally repackages the paper's compiler as a set-system lemma.

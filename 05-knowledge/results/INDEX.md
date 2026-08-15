@@ -1,8 +1,8 @@
 # Script Results Index
 
 - `left_permutive_trace_torsor_rule30_thm3456.py` -> matching `.out`
-  [THM-3456 RESERVED PROOF CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT
-  REQUIRED].  For a radius-one CA permutive in its left input, the center
+  [THM-3456 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a
+  radius-one CA permutive in its left input, the center
   trace and positive initial half-line form a triangular coordinate system.
   The exact companion checks all `16` binary left-permutive ECA through depth
   `6`, Rules 30/60 through depth `8`, `502,400` forward traces, `5,568`
@@ -14,8 +14,8 @@
   `e7ac9717c2f5618d18cae2225c4fd68391d2e07d98f0e9b1bcb188e5ef7ad993` /
   `a04fc7d1c6124888b772f10f0ee5ab22d62c43b669b56f15a440de4e51bce9fd` /
   `1fda893b46126cb9653f758a88a9f0266fe93c6e12bee6d4de527fa09f5b42ca`.
-  The three Rule 30 prizes and LRC(14) remain open; the candidate is outside
-  the proved dependency graph pending an immutable audit.
+  Two proof/computation audits and a separate primary-source audit passed.
+  The three Rule 30 prizes and LRC(14) remain open.
 - `lrc14_rule30_depth_observer_no_go_20260815.py` -> matching `.out`
   [UNNUMBERED FINITE-EXACT OBSERVER PROBE + ELEMENTARY TYPED NO-GO].
   Sampling the literal single-seed Rule 30 centre trace at the three depths

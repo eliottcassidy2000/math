@@ -2,8 +2,7 @@
 id: THM-3456
 title: "Left-permutive trace bijections and the Rule 30 seed boundary"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT COMPANION /
-  INDEPENDENT AUDIT REQUIRED.  For every finite-alphabet radius-one cellular
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For every finite-alphabet radius-one cellular
   automaton permutive in its left input, the center trace together with the
   positive initial half-line is a homeomorphic coordinate system: every fixed
   right boundary compiles each finite target trace to one and only one left
@@ -27,7 +26,7 @@ output: 05-knowledge/results/left_permutive_trace_torsor_rule30_thm3456.out
 
 # THM-3456 -- left-permutive trace bijections and the Rule 30 seed boundary
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE.  INDEPENDENT AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Statement
 
@@ -375,3 +374,22 @@ deterministic redundant graph.  Separately,
 carry the required odd phase; a nonlinear four-bit encoding can carry a
 13-cycle only by explicitly restoring thirteen labelled states.  The probe
 excludes zero scalar rows and records `LRC(14)` as open.
+
+## 9. Independent audit
+
+Two independent immutable-package audits of commit `1259c28e5521` rederived
+the finite compiler, inverse-limit homeomorphism, Bernoulli product law,
+fixed-formula `SOP_2`, direct strict-order/`SOP_3` witness, Rule 30/Rule 60
+hostile, sideways reconstruction, alias boundary, and periodic-lift prefix
+law.  Separate clean-room implementations reproduced every triangular census
+row, the periodic-state profiles through width `7`, all canonical alias
+representatives and adjacent traces, and the prefix checks through width `64`.
+Normal, optimized, and stored outputs and all three declared hashes matched.
+
+A third primary-source audit reread arXiv:2608.13291v1, the 2019 announcement,
+and the current prize page.  MISTAKE-403 records the repaired citation scope
+and the distinction between a page's active listing and this repository's
+dated openness inference.  The external model-theory theorem remains cited
+context only, and none of the three prize questions or LRC(14) is claimed.
+
+**QED.**
