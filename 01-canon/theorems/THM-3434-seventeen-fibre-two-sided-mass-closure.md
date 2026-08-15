@@ -2,13 +2,13 @@
 id: THM-3434
 title: "Seventeen-fibre two-sided mass closure and odd half-rank-seven support"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  The residual 17^a and 5*17^a half-twist towers are
-  excluded by an order-sensitive two-sided fibre invoice; consequently the
-  ordinary transverse literal half-twist rank is at most seven exactly on
-  odd multiples of 9,11,13,15,23,25,29,or51.  This is not an arbitrary-time
-  or physical LRC(14) result.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  The residual 17^a and
+  5*17^a half-twist towers are excluded by an order-sensitive two-sided fibre
+  invoice; consequently the ordinary transverse literal half-twist rank is at
+  most seven exactly on odd multiples of 9,11,13,15,23,25,29,or51.  This is
+  not an arbitrary-time or physical LRC(14) result.
 source: root seventeen-adic fibre session, 2026-08-15
+audit: independent period-descent, dependency and live-main THM-3429 repin delta, strict-endpoint, quotient-density, owner-count, two-sided-invoice, tower-inequality, Q85 two-prime, fixed-order-two, clean-room solver, normal/-O/stored-output, hash, AST/security, and documentation audit CLEAN
 depends_on:
   - THM-3416-zero-mode-cochain-global-rank-six-support
   - THM-3421-prime-half-twist-rank-seven-classification
@@ -19,16 +19,15 @@ related:
   - THM-3428-rough-maximal-order-half-twist-rank-seven-exclusion
 script: 04-computation/lrc_seventeen_fibre_two_sided_mass_closure_thm3434.py
 output: 05-knowledge/results/lrc_seventeen_fibre_two_sided_mass_closure_thm3434.out
-script_sha256: 075a6c796d14418ca6a20f2ddac140dce0096076a77b844f77062b380dd79625
-output_sha256: d9fb62e7147705c0b6c7e841b0024568523e6e9659d849eb7ec6384540d65a98
-semantic_sha256: 3cbad49feac7b2ce24e906f9e25e21813caf96d50ffe65c50e33d178309413ad
+script_sha256: c885efc06c62743e5fe823d6e943dc1352e786425e48c4df3429b0161016cac8
+output_sha256: 119a7bac30d89ea4b8553331c9411632cab95c10d8361e5b23b7ec892f7f29d4
+semantic_sha256: 13984be8cee76a72b5d1ff98011538e56eb9c5f86ff3db41ed80f7c536189f2d
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3434 -- seventeen-fibre two-sided mass closure and odd half-rank-seven support
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Statement
 
@@ -354,4 +353,4 @@ mobile centre, forgetting the odd half-chart, or replacing literal union by a
 fractional density likewise lies outside the theorem.  No LRC(14) consequence
 is claimed.
 
-**QED (provisional pending independent audit).**
+**QED.**

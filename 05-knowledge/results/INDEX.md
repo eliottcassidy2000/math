@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `lrc_seventeen_fibre_two_sided_mass_closure_thm3434.py` -> matching `.out`
+  [THM-3434 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Transverse
+  literal half-twist covers by at most seven blocks on odd `Q` exist exactly
+  when one of `9,11,13,15,23,25,29,51` divides `Q`.  A two-sided prime-fibre
+  invoice closes the residual `17^a` and `5*17^a` towers, with a separate
+  five-coordinate mass closure at `Q=85`; THM-3432 transfers the result to
+  conditional fixed-zero covers required to contain the order-two residue.
+  The companion checks exact fibre and quotient-order bounds, replays `Q=85`
+  by complete search, and reproduces the divisor support for every odd
+  `Q<=101`.  Script/output/semantic LF-normalized SHA-256:
+  `c885efc06c62743e5fe823d6e943dc1352e786425e48c4df3429b0161016cac8` /
+  `119a7bac30d89ea4b8553331c9411632cab95c10d8361e5b23b7ec892f7f29d4` /
+  `13984be8cee76a72b5d1ff98011538e56eb9c5f86ff3db41ed80f7c536189f2d`.
+  No arbitrary-time, physical common-centre, or LRC(14) conclusion follows.
+
 - `lrc_order2_fixed_half_parity_transplant_thm3432.py` -> matching `.out`
   [THM-3432 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For every
   `R>=2` and strict `0<delta<=1/2`, restricting fixed-zero blocks on `2R` to

@@ -28,7 +28,7 @@ PINNED = (
     (
         "THM-3429",
         ROOT / "01-canon/theorems/THM-3429-prime-fibre-activity-descent-for-mixed-order-half-twist-seven-covers.md",
-        "20343d8f6a5d72b298b5ec5ac6f6889e8f27e382b5c4446587209ed737a46fe3",
+        "58ebf850fc79fc9afed57966b7599e7376a6684fa3bbc5a2aa2e1a8e6e0ca148",
     ),
     (
         "THM-3432",
@@ -36,7 +36,7 @@ PINNED = (
         "2d3d0e6b59d9f8f7d2d4da6d7e23c78660634b54b5f6b807540ea6c82490135b",
     ),
 )
-EXPECTED_SEMANTIC_DIGEST = "3cbad49feac7b2ce24e906f9e25e21813caf96d50ffe65c50e33d178309413ad"
+EXPECTED_SEMANTIC_DIGEST = "13984be8cee76a72b5d1ff98011538e56eb9c5f86ff3db41ed80f7c536189f2d"
 SUPPORT_DIVISORS = (9, 11, 13, 15, 23, 25, 29, 51)
 
 
