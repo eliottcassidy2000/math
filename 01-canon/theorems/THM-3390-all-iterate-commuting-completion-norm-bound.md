@@ -2,7 +2,7 @@
 id: THM-3390
 title: "All-iterate commuting completion norm bound"
 status: >
-  PROVED + VERIFIED-EXACT.  Let c>=2, let T act on a finite-dimensional
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Let c>=2, let T act on a finite-dimensional
   complex Hilbert space, and suppose an isometric embedding V and a
   contraction Q give uniformly bounded defects
   E_n=c V^*Q^{*n}V-T^{*n}, n>=1, each commuting with T.  Then ||T||<=c.
@@ -18,6 +18,7 @@ status: >
   conjecture; the present theorem is self-contained and does not promote
   that external claim to established literature.
 source: root-2608-crouzeix-puzzle-2026-08-14
+audit: independent recurrence, singular-vector, square-completion, tail, sharp-dilation, omission-hostile, and raw-compression line audit
 related:
   - THM-2222-scalar-transfer-parity-tower-and-four-checkpoint-survivor-reduction
   - THM-3315-tournament-cut-switching-centered-coronal-walk-compiler
@@ -31,7 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3390 -- a bounded commuting completion of every adjoint power controls the norm
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. The theorem
 
