@@ -13,11 +13,11 @@ normalize these to
 for proper divisors g of q.  Thus every positive-owner zero-cochain cover
 belongs to one of finitely many exact set-cover charts.
 
-This unnumbered artifact computes their exact ranks.  It does not fill the
-reserved THM-3402 namespace and has no LRC(14) ledger consequence.  It also
-checks the explicit divisor-pullback families proving all-owner mobile rank
-two for even q>=8, rank three for odd 3|q, and rank five for odd 5|q with
-3 not dividing q (q>=25).
+This artifact computes their exact ranks as a zero-mode-cochain corollary of
+THM-3402 and a candidate payload for reserved THM-3405.  It has no LRC(14)
+ledger consequence.  It also checks the explicit divisor-pullback families
+proving all-owner mobile rank two for even q>=8, rank three for odd 3|q, and
+rank five for odd 5|q with 3 not dividing q (q>=25).
 Runtime gates survive python -O.
 """
 
@@ -37,6 +37,11 @@ PINNED = (
         "THM-3398",
         ROOT / "01-canon/theorems/THM-3398-general-finite-mode-sheet-cover-cochain.md",
         "01901da2bb382184cfe4466550afe79255598f580f00a761fc32731a52ec9378",
+    ),
+    (
+        "THM-3402-constructive-locus",
+        ROOT / "01-canon/theorems/THM-3402-atomized-sheet-covers-and-constructive-cochain-locus.md",
+        "0aaff0ffe66042ccae8de3158b1cb7ece056264fe96753b0bb166167728d472f",
     ),
     (
         "THM-3401-fixed-zero",
@@ -452,7 +457,11 @@ def main():
     rank_table = tuple((q, rank) for q, rank, _ in minima)
     require(rank_table == EXPECTED_GLOBAL_MINIMA, ("global ranks", rank_table))
 
-    capped_output = PINNED[3][1].read_text(encoding="utf-8")
+    capped_output_paths = tuple(
+        path for name, path, _ in PINNED if name == "capped-mobile-output"
+    )
+    require(len(capped_output_paths) == 1, ("capped-output dependency", capped_output_paths))
+    capped_output = capped_output_paths[0].read_text(encoding="utf-8")
     capped_prefix = "mobile_common_centre_ranks_owner_pool_1..14_q15_q28="
     capped_lines = tuple(
         line.removeprefix(capped_prefix)
@@ -564,7 +573,7 @@ def main():
     print("LRC ALL-OWNER MOBILE COMMON-CENTRE FINITE AFFINE-CHART PROBE")
     print(f"source_sha256_lf={lf_hash(source)}")
     print(f"dependency_sha256_lf={tuple((name, expected) for name, _, expected in PINNED)}")
-    print("status=PROVED-ELEMENTARY all_q_finite_affine_chart_reduction;exact_all_positive_owner_mobile_common_centre_ranks_q15..28;all_q_rank_families_even=2_odd3multiple=3_odd5multiple_not3=5;INDEPENDENT_COMBINATION_AND_NORMALIZATION_AUDITS;unnumbered_THM3402_input")
+    print("status=PROVED-ELEMENTARY all_q_finite_affine_chart_reduction;exact_all_positive_owner_mobile_common_centre_ranks_q15..28;all_q_rank_families_even=2_odd3multiple=3_odd5multiple_not3=5;INDEPENDENT_COMBINATION_AND_NORMALIZATION_AUDITS;THM3402_zero_mode_cochain_corollary;THM3405_candidate_payload")
     print("odd_chart=theta=a/b,b_odd,u=bv;normalize_to_v(1+g*ell)_mod_q,g=gcd(b,q)_odd")
     print("even_chart=theta=a/(2d),u=dv;normalize_to_v(1+2g*ell)_mod_2q,g=gcd(d,q)")
     print("gauge=sheet_affine_permutation_plus_unit_owner_reindex;transverse_v_not_divisible_by_q/g")

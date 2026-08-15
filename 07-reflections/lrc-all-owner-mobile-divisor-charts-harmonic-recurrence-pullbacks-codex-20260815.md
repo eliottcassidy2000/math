@@ -6,15 +6,21 @@ all-positive-owner mobile common-centre slice; PROVED-ELEMENTARY exact rank
 families on every even `q>=8`, every odd multiple of three `q>=9`, and every
 odd multiple of five not divisible by three `q>=25`; PROVED-ELEMENTARY exact
 rank table for `15<=q<=28`, with VERIFIED-EXACT independent set-cover and
-normalization audits.  This is unnumbered input to the reserved THM-3402
-project.  It does not fill that namespace and has no LRC(14) ledger
-consequence.
+normalization audits.  This is a zero-mode-cochain corollary of proved
+[THM-3402](../01-canon/theorems/THM-3402-atomized-sheet-covers-and-constructive-cochain-locus.md)
+and a candidate payload for reserved THM-3405.  It does not promote that
+namespace and has no LRC(14) ledger consequence.
 
 ## 1. Inheritance and the corrected question
 
 [THM-3398](../01-canon/theorems/THM-3398-general-finite-mode-sheet-cover-cochain.md)
 turns a physical cover into a selected-mode block cover carrying a complete
-affine cochain.  [THM-3401](../01-canon/theorems/THM-3401-centered-transverse-sheet-cover-rank-fifteen-through-twenty-eight.md)
+affine cochain.  THM-3402 independently refines this into repeated-owner
+atoms, reconstructs the complete physical cover locus, and compresses exactly
+back to one consecutive mode per owner.  The present result classifies the
+sub-stratum on which those **mode** centre lifts coincide, so the mode
+cochain is zero; this is not the locus where every repeated-atom gap is zero.
+[THM-3401](../01-canon/theorems/THM-3401-centered-transverse-sheet-cover-rank-fifteen-through-twenty-eight.md)
 computes the rank at the fixed source centre zero.  MISTAKE-384 separates
 that fixed-zero slice from the larger locus on which all pair gaps vanish:
 the common centre itself is an additive gauge.
@@ -449,8 +455,9 @@ The cheapest decisive continuations are:
    only the residue partitions of orders two, three, and five;
 3. optimize positive cochain drift outside the mobile locus, beginning with
    the unique `q=15` edge from the capped artifact;
-4. determine whether an atom-level constructive locus can honestly promote
-   the reserved THM-3402 stub;
+4. independently audit the all-`q` normalization proof and, after coordination,
+   promote the reserved THM-3405 stub under a divisor-chart rather than a
+   globally Boolean title;
 5. transport a chart certificate into an actual refined LRC row.  Until that
    final typed map exists, none of these rank collapses decrements the live
    LRC(14) ledger.

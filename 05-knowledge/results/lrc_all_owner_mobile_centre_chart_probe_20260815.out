@@ -1,7 +1,7 @@
 LRC ALL-OWNER MOBILE COMMON-CENTRE FINITE AFFINE-CHART PROBE
-source_sha256_lf=0fb2e0d783feaa501c1ce082419ed9c43937890893762d4b38418049cd09eed7
-dependency_sha256_lf=(('THM-3398', '01901da2bb382184cfe4466550afe79255598f580f00a761fc32731a52ec9378'), ('THM-3401-fixed-zero', 'dae088cbda12fb64d24f84ab26a6879e94939e04cb03601d8fb996a48c077716'), ('capped-mobile-script', 'dd157efbd3bd7da34b75cba7f30fb55cfa0381bb6a74ece7abade7f4a2c439fa'), ('capped-mobile-output', 'b874f11a8f81604e8bfefe01a6437bfd10a21b909c3ee3e37d0c8a714528594f'))
-status=PROVED-ELEMENTARY all_q_finite_affine_chart_reduction;exact_all_positive_owner_mobile_common_centre_ranks_q15..28;all_q_rank_families_even=2_odd3multiple=3_odd5multiple_not3=5;INDEPENDENT_COMBINATION_AND_NORMALIZATION_AUDITS;unnumbered_THM3402_input
+source_sha256_lf=0e74014d6aae98508e309f614be10332fded288c9a5e7fc891c21a5a3a6c5bde
+dependency_sha256_lf=(('THM-3398', '01901da2bb382184cfe4466550afe79255598f580f00a761fc32731a52ec9378'), ('THM-3402-constructive-locus', '0aaff0ffe66042ccae8de3158b1cb7ece056264fe96753b0bb166167728d472f'), ('THM-3401-fixed-zero', 'dae088cbda12fb64d24f84ab26a6879e94939e04cb03601d8fb996a48c077716'), ('capped-mobile-script', 'dd157efbd3bd7da34b75cba7f30fb55cfa0381bb6a74ece7abade7f4a2c439fa'), ('capped-mobile-output', 'b874f11a8f81604e8bfefe01a6437bfd10a21b909c3ee3e37d0c8a714528594f'))
+status=PROVED-ELEMENTARY all_q_finite_affine_chart_reduction;exact_all_positive_owner_mobile_common_centre_ranks_q15..28;all_q_rank_families_even=2_odd3multiple=3_odd5multiple_not3=5;INDEPENDENT_COMBINATION_AND_NORMALIZATION_AUDITS;THM3402_zero_mode_cochain_corollary;THM3405_candidate_payload
 odd_chart=theta=a/b,b_odd,u=bv;normalize_to_v(1+g*ell)_mod_q,g=gcd(b,q)_odd
 even_chart=theta=a/(2d),u=dv;normalize_to_v(1+2g*ell)_mod_2q,g=gcd(d,q)
 gauge=sheet_affine_permutation_plus_unit_owner_reindex;transverse_v_not_divisible_by_q/g
