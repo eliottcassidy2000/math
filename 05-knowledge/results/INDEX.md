@@ -1,7 +1,7 @@
 # Script Results Index
 
 - `jc_generic_kummer_response_thm3419.py` -> matching `.out`
-  [THM-3419 PROVED + VERIFIED-EXACT].  For
+  [THM-3419 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
   `P=ax+b+g(x)z^d`, `a!=0`, every one of the `d` generic Hamiltonian
   response sectors has `K[P]`-rank `N=deg(rad(g))`; after adjoining the
   `d`th roots of unity, the response is `N` copies of the regular `mu_d`

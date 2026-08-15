@@ -2,7 +2,7 @@
 id: THM-3419
 title: "Generic Kummer response and regular sector rank"
 status: >
-  PROVED + VERIFIED-EXACT.  Let K have characteristic zero, d>=2,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Let K have characteristic zero, d>=2,
   P=ax+b+g(x)z^d with a!=0, and C_P=K[x,z]/D_P(K[x,z]).  For nonzero g,
   put N=deg(rad(g)).  Every one of the d fiber-exponent sectors of C_P has
   K[P]-rank N, so the total generic response has dimension dN.  After a
@@ -29,7 +29,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3419 -- generic Kummer response and regular sector rank
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Statement and inheritance
 
