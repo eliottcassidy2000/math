@@ -39,9 +39,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 THM3429 = ROOT / "01-canon/theorems/THM-3429-prime-fibre-activity-descent-for-mixed-order-half-twist-seven-covers.md"
-THM3429_SHA256_LF = "238b56edc95c0ad2f145f102bd0dc6cac2a766702662c518b88df9684ef2d86a"
+THM3429_SHA256_LF = "863f23d600939ea7290e9d694f026b7cd1c8e9161f3c2e596eda1cfa5d22c8eb"
 TARGET_FREE_BASES = (8, 9, 10, 11, 12, 15, 23, 25)
-EXPECTED_SEMANTIC_SHA256 = "492c6c41dcf9fc4361e02a278a75f43f442c42f8eb157d518ebf35a0870409d1"
+EXPECTED_SEMANTIC_SHA256 = "894dca5a2b15b99304e6f43d148e1a505ab8cf9519fd85109f927c5fba4d6f27"
 
 
 def require(condition, detail):
