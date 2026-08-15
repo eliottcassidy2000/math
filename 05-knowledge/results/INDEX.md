@@ -1,5 +1,25 @@
 # Script Results Index
 
+- `lrc_prime_fibre_activity_descent_thm3429.py` -> matching `.out`
+  [THM-3429 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
+  INDEPENDENT AUDIT REQUIRED].  For an odd joint-period half-twist cover by
+  at most seven blocks outside the proved rank-at-most-six bases, a prime
+  coordinate omitted by some owner is one of `3,5,17,29`; an all-active
+  coordinate is `13` or `29`.  Thus the modulus has prime support inside
+  `{3,5,13,17,29}`, every quotient coindex is `{3,5,17,29}`-smooth, and after
+  removing the known divisor atoms `13,29,51`, the odd composite frontier is
+  reduced to `17^a` and `5*17^a`.  The exact companion checks inactive
+  projection, strict fibre capacity, prime powers, the `p=7` endpoint hostile,
+  and the full `Q=51,p=17` affine lift-cocycle table.  That atom proves the
+  reduction is not yet a recursive classifier: congruent coefficients modulo
+  `2p` can separate on nonfixed fibres.  Normal and optimized transcripts
+  agree.  Script/output/semantic LF-normalized SHA-256:
+  `ffd5d407b45891bcac30a15e0f0ea92a9ff207c539c984f3c9c55f5f8b5040a0` /
+  `b70350a6aa7f3278e65f22088a8d67650c05a0668a2638426a0943cace1911e3` /
+  `b1b1a9c9e3b925ae660237db6280a52321ce59b1ca0e823f53ebeadb209f2249`.
+  No rank-seven antichain completeness, arbitrary-time, or LRC(14) conclusion
+  is claimed.
+
 - `rough_composite_odd_interval_collision_thm3426.py` -> matching `.out`
   [THM-3426 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For an odd
   modulus `n` with `spf(n)>h`, the exact complement of the unit-multiplier
@@ -85,7 +105,9 @@
   `5ea4a9830f77a984aa7db83124ada94a498ed8f7687164533919545cd207f23f` /
   `2ad7b43fd9afb14539438f2a17d4f458a7af6dbf3bd3deb947f8740099d7c316` /
   `d65463e762b3ba39e6cbbf13daeba73f9b689f9051ec460ac7d6ec27eaeece85`.
-  Mixed small-prime rank seven and LRC(14) remain open.
+  This independently verifies the base activity inequality; its `p=7`
+  equality row is superseded as a cover lane by THM-3429's fixed-fibre gate.
+  The two residual 17-adic towers and LRC(14) remain open.
 
 - `rough_maximal_order_half_twist_rank7_finite_boundary_20260815.py` ->
   matching `.out` [FINITE-EXACT INDEPENDENT THM-3428 BOUNDARY].  The complete

@@ -2,270 +2,301 @@
 id: THM-3429
 title: "Prime-fibre activity descent for mixed-order half-twist seven-covers"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For an odd composite
-  joint-period-Q half-twist cover by at most seven blocks, if Q/p has no
-  six-block cover then the number a_p of owners active on the p-fibres obeys
-  a_p*ceil(p/7)>=p.  Consequently every target-free primitive mixed-order
-  seven-cover has a prime factor in {3,5,7,17,29}; in particular none exists
-  when spf(Q)>29.  The exceptional-prime activity sets have exact Boolean
-  defect budgets, and p=7 forces a fibrewise exact partition.  The five
-  remaining small-prime lanes, fixed zero, arbitrary common time, and LRC(14)
-  remain open.
-source: independent prime-fibre proposal plus codex2 proof reconstruction and hostile audit, 2026-08-15
-audit: direct fibre derivation including repeated prime factors; joint-period valuation audit; THM-3416 descent and THM-3428 full-order closure; Q=51 positive and Q=39 nonprimitive hostile; normal/optimized/stored exact replay
+  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / AUDIT REQUIRED.
+  Target-free odd joint-period cap-seven covers use only primes
+  {3,5,13,17,29}; outside divisors 13,29,51 only the towers 17^a and
+  5*17^a remain.  Q=51 forces an affine lift cocycle.  This is a reduction,
+  not a classification; arbitrary common time and LRC(14) remain open.
+source: codex2 base descent plus rank7-reflection fixed-fibre strengthening, 2026-08-15
 depends_on:
   - THM-3416-zero-mode-cochain-global-rank-six-support
-  - THM-3428-rough-maximal-order-half-twist-rank-seven-exclusion
+  - THM-3421-prime-half-twist-rank-seven-classification
 related:
   - THM-3425-half-twist-rank-six-primitive-breaker-profile-closure
-  - THM-3426-rough-composite-odd-interval-collision-and-dyadic-clique-law
-script: 04-computation/lrc_rank7_prime_fibre_activity_descent_thm3429.py
-output: 05-knowledge/results/lrc_rank7_prime_fibre_activity_descent_thm3429.out
-script_sha256: 5ea4a9830f77a984aa7db83124ada94a498ed8f7687164533919545cd207f23f
-output_sha256: 2ad7b43fd9afb14539438f2a17d4f458a7af6dbf3bd3deb947f8740099d7c316
-semantic_sha256: d65463e762b3ba39e6cbbf13daeba73f9b689f9051ec460ac7d6ec27eaeece85
+  - THM-3428-rough-maximal-order-half-twist-rank-seven-exclusion
+script: 04-computation/lrc_prime_fibre_activity_descent_thm3429.py
+output: 05-knowledge/results/lrc_prime_fibre_activity_descent_thm3429.out
+script_sha256: ffd5d407b45891bcac30a15e0f0ea92a9ff207c539c984f3c9c55f5f8b5040a0
+output_sha256: b70350a6aa7f3278e65f22088a8d67650c05a0668a2638426a0943cace1911e3
+semantic_sha256: b1b1a9c9e3b925ae660237db6280a52321ce59b1ca0e823f53ebeadb209f2249
+independent_script: 04-computation/lrc_rank7_prime_fibre_activity_descent_thm3429.py
+independent_output: 05-knowledge/results/lrc_rank7_prime_fibre_activity_descent_thm3429.out
+independent_script_sha256: 5ea4a9830f77a984aa7db83124ada94a498ed8f7687164533919545cd207f23f
+independent_output_sha256: 2ad7b43fd9afb14539438f2a17d4f458a7af6dbf3bd3deb947f8740099d7c316
+independent_semantic_sha256: d65463e762b3ba39e6cbbf13daeba73f9b689f9051ec460ac7d6ec27eaeece85
 hash_basis: LF-normalized bytes
 ---
 
 # THM-3429 -- prime-fibre activity descent for mixed-order half-twist seven-covers
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
+AUDIT REQUIRED.**
 
 ## 1. Statement
 
-For odd `Q` and `r` modulo `2Q`, put
+For odd `Q`, an integer residue `r` modulo `2Q`, and a sheet `ell` modulo
+`Q`, put
 
 ```text
-B_(Q,r)={ell in Z/QZ: ||r(2ell+1)/(2Q)||<1/14},          (1)
-m_Q(r)=Q/gcd(Q,r).                                       (2)
+B_(Q,r)={ell: ||r(2ell+1)/(2Q)||<1/14},
+m_Q(r)=Q/gcd(Q,r).                                      (1)
 ```
 
-Let `R` be a family of at most seven residues whose blocks cover `Z/QZ`, and
-assume its joint quotient period is primitive:
+Let
 
 ```text
-lcm_(r in R) m_Q(r)=Q.                                   (3)
+A_6={8,9,10,11,12,15,23,25}.                           (2)
 ```
 
-Fix a prime `p|Q`, put `M=Q/p`, and assume that `Z/MZ` has no half-twist
-cover by at most six blocks.  Define
+Assume that no member of `A_6` divides `Q`, and that residues
+`R=(r_1,...,r_s)`, `s<=7`, satisfy
 
 ```text
-a_p=#{r in R:p does not divide r},
-c_p=ceil(p/7).                                           (4)
+union_i B_(Q,r_i)=Z/QZ,
+L(R)=lcm_i m_Q(r_i)=Q.                                  (3)
 ```
 
-Then
+For a prime `p|Q`, call owner `i` **p-active** when
 
 ```text
-a_p c_p>=p,
-a_p>=A(p):=ceil(p/ceil(p/7)).                            (5)
+v_p(m_Q(r_i))=v_p(Q),
 ```
 
-This includes repeated prime factors: no squarefreeness hypothesis is used.
-If a base sheet not covered by the `p`-divisible owners is covered at equality
-`a_p c_p=p`, then the active blocks partition its `p`-point fibre and each
-active block meets that fibre in exactly `c_p` points.
+equivalently `p` does not divide `r_i`; otherwise call it **p-inactive**.
+Then:
 
-Call `Q` **rank-six target-free** when no member of
+1. if at least one owner is `p`-inactive, then
+
+   ```text
+   p in {3,5,17,29};                                    (4)
+   ```
+
+2. if every owner is `p`-active, then
+
+   ```text
+   p in {13,29}.                                        (5)
+   ```
+
+More generally, `(5)` holds whenever there is no **even** `p`-inactive
+residue.  In particular, each of the mixed primes `3,5,17` must divide an
+even selected residue.
+
+Consequently
 
 ```text
-T={8,9,10,11,12,15,23,25}                               (6)
+prime_support(Q) subset {3,5,13,17,29},                 (6)
+Q/m_Q(r_i)=gcd(Q,r_i) is {3,5,17,29}-smooth for every i. (7)
 ```
 
-divides `Q`.  By THM-3416, this is equivalent to the absence of a literal
-half-twist cover by at most six blocks.  If `Q` is odd, composite, target-free,
-and admits a cover satisfying `(3)`, then
+Since `(2)` forces `v_3(Q),v_5(Q)<=1` and forbids `15|Q`, a composite `Q`
+with no divisor among `13,29,51` is necessarily
 
 ```text
-some p in {3,5,7,17,29} divides Q.                       (7)
+Q=17^a       (a>=2),
+or Q=5*17^a  (a>=1).                                    (8)
 ```
 
-In particular,
+Formula `(8)` is only a reduction of the remaining odd composite lane.  The
+literal atoms at `13,29,51`, together with global divisor ancestry, already
+give rank-seven covers on their target-free multiples; this does **not** say
+that the primitive joint-period certificate in `(3)` descends from that
+divisor.  The theorem does not exclude either tower in `(8)` and does not
+assert completeness of the candidate rank-seven divisor antichain.
+
+## 2. Connection contract
+
+THM-3416 closes literal half-twist cap six on every modulus.  THM-3421 closes
+literal full-order half-twist cap seven on primes.  The present theorem uses
+one prime fibre to decide whether a lower-order arm descends or instead spends
+all six remaining owners on that fibre.
+
+| field | exact connection |
+|---|---|
+| source | joint-period odd half-twist covers by at most seven literal blocks |
+| target | active/inactive owner profiles over one prime coordinate |
+| map | `Z/QZ -> Z/(Q/p)Z` together with one fibre of size `p` |
+| preserved | strict endpoints, literal union, owner count, and the full `p`-adic order bit |
+| destroyed | the integer lift of an active coefficient modulo `2p` |
+| required sidecar | the affine lift character in Section 6 |
+| positive boundary | the mixed `(3,17,17,51,51,51,51)` atom at `Q=51` |
+| cheapest hostiles | `p=7` for strict endpoints and `Q=51,p=17` for recursive descent |
+
+The corrected near miss is a support-only prime projection: away from the
+reflection-fixed fibre, congruent active coefficients modulo `2p` need not
+induce the same local block.  The least-used coordinate is their relative
+integer lift.
+
+## 3. Exact inactive descent
+
+Fix `p|Q` and write
 
 ```text
-Q odd composite, spf(Q)>29
-  => no joint-period-Q half-twist cover by at most seven blocks.  (8)
+Q=pN.                                                   (9)
 ```
 
-Equation `(7)` reduces the arbitrary mixed-order composite frontier to five
-small-prime lanes; it does not close those lanes.
-
-## 2. Exact fibre dichotomy
-
-Fix a base sheet `ell_0 modulo M`.  Its fibre under
-`Z/QZ -> Z/MZ` is
+The reduction map `pi:Z/QZ -> Z/NZ` has fibres
 
 ```text
-ell_j=ell_0+jM,                  0<=j<p.                  (9)
+F_y={y+Nt:t in Z/pZ}.                                  (10)
 ```
 
-If `p|r`, write `r=pr_0`.  Directly from `(1)`,
+If `r=pu` is `p`-inactive, direct division of the strict phase word gives
 
 ```text
-||r(2ell_j+1)/(2Q)||
- =||r_0(2ell_0+1)/(2M)||,                                (10)
+B_(Q,pu)=pi^(-1)(B_(N,u)).                              (11)
 ```
 
-because changing `j` adds the integer `jr_0`.  Thus `B_(Q,r)` is the full
-pullback of `B_(M,r_0)`.
+This remains true when `p^2|Q`; no coprimality between `p` and `N` is used.
+Condition `L(R)=Q` says that at least one owner is `p`-active.  Hence, if an
+inactive owner exists, there are at most six inactive owners.
 
-If `p` does not divide `r`, the `p` phases on `(9)` are
+If their descended masks in `(11)` covered all of `Z/NZ`, THM-3416 would
+force a member of `A_6` to divide `N`, hence to divide `Q`, contradicting
+`(2)`.  Choose a base sheet `y` missed by every inactive mask.  On `F_y`, the
+active blocks alone must cover all `p` points.
+
+## 4. The strict fibre capacity
+
+For an active residue `r`, substitution of `(10)` into `(1)` gives the phase
+set
 
 ```text
-x_0+jr/p modulo 1.                                      (11)
+r(2(y+Nt)+1)/(2Q)
+ = r(2y+1)/(2pN) + rt/p                 (mod 1).        (12)
 ```
 
-Multiplication by `r` permutes `Z/pZ`, so `(11)` is a translated regular
-`p`-gon.  The danger arc has open circular length `1/7`.  If it contains `h`
-grid points, the circular distance from the first to the last is
-`(h-1)/p<1/7`; hence
+Because `p` does not divide `r`, the second term runs through a translate of
+the complete `p`-grid.  The danger region is one open circular arc of length
+`1/7`.  If `n` grid points lie in such an arc, the first and last have
+distance at least `(n-1)/p` and strictly less than `1/7`.  Therefore
 
 ```text
-h<=ceil(p/7)=c_p.                                        (12)
+n<=ceil(p/7).                                           (13)
 ```
 
-This is a strict-interval count.  It does not cancel `r`, assume that `M` is
-coprime to `p`, or replace nonunits by a quotient set.
+The strict inequality is load-bearing at `p=7`: one active block meets a
+seven-fibre in at most one point, not two.
 
-## 3. Descent proof and the joint-period gate
-
-Suppose `a_p c_p<p`.  If the `p`-divisible owners missed some base sheet,
-then `(12)` would let all active owners cover fewer than `p` points of its
-fibre, contradicting the cover.  Therefore the `p`-divisible owners alone
-cover every base sheet via `(10)`.
-
-Condition `(3)` forces `a_p>=1`: if every `r` were divisible by `p`, every
-order `m_Q(r)` would lose one power of `p`, so their least common multiple
-could not contain the full `p`-part of `Q`.  The descended cover consequently
-uses at most
+There are at most six active owners when an inactive owner exists, so `(13)`
+gives
 
 ```text
-|R|-a_p<=6                                               (13)
+p<=6 ceil(p/7).                                         (14)
 ```
 
-blocks, contrary to the hypothesis on `M`.  This proves `(5)`.  If equality
-holds in the fibre-capacity invoice, coverage forces every inequality in
-`(12)` to be an equality and forbids overlaps, proving the partition clause.
-
-The joint-period hypothesis is load bearing.  At `Q=39`, scaling the order-13
-atom gives
+Writing `p=7k+s` solves `(14)` exactly.  Its prime solutions are
 
 ```text
-R=(3,6,9,15,21,27,33).                                  (14)
+{2,3,5,11,17,23,29}.                                   (15)
 ```
 
-These seven blocks cover and `39` is target-free, but all residues are
-divisible by `3` and their joint period is only `13`.  Thus `(14)` is a
-literal pullback, not a primitive mixed-order counterexample to `(5)`.
+Oddness removes `2`, while target-freeness `(2)` removes `11,23`.  This proves
+`(4)`.  Notice in particular that `7` is not in `(15)`.
 
-## 4. Five-prime reduction
+## 5. The all-active prime fibre and parity gate
 
-If `Q` is target-free, every divisor `M=Q/p` is target-free as well.  THM-3416
-therefore supplies the local rank-six hypothesis used in `(5)` for every
-prime divisor.  The activity floors are
-
-| `p` | `3` | `5` | `7` | `11` | `13` | `17` | `19` | `23` | `29` | `p>=31` |
-|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| `c_p` | `1` | `1` | `1` | `2` | `2` | `3` | `3` | `4` | `5` | `ceil(p/7)` |
-| `A(p)` | `3` | `5` | `7` | `6` | `7` | `6` | `7` | `6` | `6` | `7` |
-
-The last entry follows directly at `p=31`; for `p>=37`,
+Suppose first that every owner is `p`-active.  Use the reflection-fixed base sheet
 
 ```text
-6 ceil(p/7)<=6(p+6)/7<p.                                 (15)
+y_0=(N-1)/2.                                            (16)
 ```
 
-Target-freeness excludes prime factors `11` and `23`.  If none of the five
-primes in `(7)` divided `Q`, the table would give `a_p=7` for every `p|Q`.
-Thus there are exactly seven owners and every one is coprime to every prime
-dividing `Q`; all seven blocks have full quotient order `Q`.  Since then
-`spf(Q)>7`, THM-3428 says that a cover is possible only for
-`Q in {11,13,23,29}`.  None is composite and target-free.  This contradiction
-proves `(7)`, and `(8)` follows immediately.
-
-For bookkeeping, an odd target-free modulus has no factors `11,23`, has
-`v_3(Q)<=1`, `v_5(Q)<=1`, and cannot contain both `3` and `5`.  Equation `(7)`
-adds that at least one of `3,5,7,17,29` occurs.  These are restrictions on the
-modulus, not a classification of positive covers.
-
-## 5. Boolean activity and defect budgets
-
-A target-free cover in the theorem has exactly seven owners.  For each prime
-factor define the intrinsic subsets
+Then `2y_0+1=N`, so `(12)` becomes
 
 ```text
-A_p={i:p does not divide r_i},       D_p={1,...,7}\A_p.  (16)
+r(2t+1)/(2p).                                           (17)
 ```
 
-The active set records which owners retain the full `p`-primary quotient
-period; its complement is the descent defect.  On the five surviving lanes,
-`(5)` gives
+Thus restriction to `F_(y_0)` is a literal full-order half-twist block on the
+prime modulus `p`.  The restrictions of the at most seven global blocks cover
+that fibre.  Repeated local masks are harmless and may be discarded.  By
+THM-3421,
 
 ```text
-|D_3|<=4,  |D_5|<=2,  |D_7|=0,  |D_17|<=1,  |D_29|<=1. (17)
+p in {11,13,23,29}.                                    (18)
 ```
 
-Every other allowed prime has zero defect.  Consequently the number of
-full-order owners obeys the Boolean union bound
+Target-freeness removes `11,23`, proving `(5)`.
+
+The same argument needs only the absence of an **even** inactive residue.  If
+`r=pu` is inactive, its restriction to the fixed fibre is constant, and
 
 ```text
-#{i:gcd(Q,r_i)=1}
- =|intersection_(p|Q) A_p|
- >=max(0,7-sum_(p|Q)|D_p|).                              (18)
+||r(2(y_0+Nt)+1)/(2Q)||=||u/2||.                       (19)
 ```
 
-Useful pairwise floors are
+It covers the whole fibre exactly when `u`, equivalently `r`, is even, and
+misses it exactly when `u` is odd.  Thus if every inactive residue is odd,
+the active restrictions still cover the fixed fibre and `(18)` applies.
+Intersecting `(18)` with the mixed list `(4)` leaves only `p=29`; hence a
+mixed coordinate `p=3,5,17` necessarily has an even inactive owner.
+
+If a prime divides the coindex `Q/m_Q(r_i)=gcd(Q,r_i)`, owner `i` is inactive
+at that prime, so `(4)` proves `(7)`.  Combining `(4)` and `(5)` proves `(6)`,
+and the elementary divisibility deductions after `(7)` prove `(8)`.
+
+## 6. Why this is not yet a finite recursive compiler
+
+For an active residue write, relative to one prime fibre,
 
 ```text
-3*17 or 3*29: at least 2 full-order owners;
-5*17 or 5*29: at least 4 full-order owners;
-17*29:        at least 5 full-order owners.              (19)
+r=bar(r)+2pk,        0<=bar(r)<2p,        k mod N.      (20)
 ```
 
-At `p=7`, `(17)` says every owner is active and `(12)` gives at most one hit
-per seven-point fibre.  Coverage therefore makes the seven blocks an exact
-partition on every fibre.  In particular the global multiplicity polynomial
-is `Q X`: OR and XOR agree, and the overlap defect is zero.  This equality
-case is a stronger prospective handle on the seven-lane than scalar density.
-
-The sets `(16)` are a Boolean incidence carrier, not a tournament: there is
-no intrinsic orientation between two owners.  Pairwise collision or overlap
-data would be an additional sidecar.
-
-## 6. Sharp positive and stopping boundary
-
-The target-free atom at `Q=51=3*17`,
+Equation `(12)` refines to
 
 ```text
-R=(1,11,12,18,23,34,35),                                (20)
+bar(r)t/p + bar(r)(2y+1)/(2pN)
+             + k(2y+1)/N                    (mod 1).   (21)
 ```
 
-is a genuine positive boundary.  It covers, has order histogram
+The last term is an affine character of the base sheet.  It vanishes modulo
+one on the fixed fibre `(16)`, but not on a general missed fibre.  Therefore
+the order multiset, collision polynomial, joint period, and coefficients
+reduced modulo `2p` do not determine the recursive fibre blocks.  A faithful
+factor-tree state must retain the relative lift vector `k mod N`, or a proved
+quotient of its affine characters.
+
+The `Q=51` atom is the sharp stopping hostile:
 
 ```text
-3^1 17^2 51^4,                                          (21)
+R=(1,11,12,18,23,34,35),
+orders=(51,51,17,17,51,3,51).                          (22)
 ```
 
-and has activities
+Take `p=17,N=3`.  The unique inactive block is `r=34`; it descends to the
+order-three mask and covers only the fixed base sheet `y=1`.  On each missed
+base sheet `y=0,2`, the six active restrictions all have size three and cover
+the seventeen-point fibre, with total overlap one.  In particular `r=1` and
+`r=35` have the same reduction modulo `34`, but their lift indices `k=0,1`
+make their missed-fibre blocks disjoint.  They coincide only on the fixed
+fibre already covered by `r=34`.
 
-```text
-a_3=5,                  a_17=6.                          (22)
+Thus `(22)` is not a counterexample to the descent theorem; it is the reason
+the theorem stops at finite prime support rather than claiming that a mixed
+cover descends to a smaller cover.
+
+## 7. Exact companion and non-consequences
+
+Run
+
+```bash
+python3 04-computation/lrc_prime_fibre_activity_descent_thm3429.py
+python3 -O 04-computation/lrc_prime_fibre_activity_descent_thm3429.py
 ```
 
-Thus the `17`-activity floor is attained exactly, while four owners are full
-order.  On each of the two base fibres missed by the unique `17`-divisible
-owner, every one of the six active owners hits three points; the resulting
-total mass `18` pays one overlap above the `17` sheets.  This explains why the
-prime-fibre theorem reduces but cannot exclude the `3*17` lane.
+The standard-library companion pins THM-3416 and THM-3421; solves `(14)` over
+all primes below a rigorous cutoff; checks the exact projection and fibre
+bound on a finite hostile bank including prime powers; reconstructs every
+fibre in `(22)`; and verifies the strict `p=7` boundary.  Normal and optimized
+outputs are intended to be byte-identical.
 
-The exact companion directly checks `(10)--(12)` for every residue on every
-prime fibre of all `93` odd composite moduli through `315`, including repeated
-prime factors.  It audits `2,142,888` pullback cells and `11,819,480` active
-cells, verifies the threshold table for every odd prime through `997`, and
-reconstructs `(14)` and `(20)--(22)`.  Normal and optimized executions match
-the LF-normalized stored output exactly.
+The independently written `lrc_rank7_prime_fibre_activity_descent_thm3429.py`
+is retained as a broader finite audit of `(11)--(15)`: it checks every residue
+on every prime fibre of all odd composite `Q<=315`.  Its `p=7` equality row is
+a sharp capacity boundary for seven active owners, not a surviving mixed-prime
+lane; Section 5's fixed-fibre restriction is the additional obstruction.
 
-No completeness result for the five lanes, fixed-zero cover, zero-mode
-cochain classification at rank seven, arbitrary common time, physical runner
-cover, current, or LRC(14) follows.  **QED.**
+This theorem classifies neither tower in `(8)`.  It supplies no arbitrary-time
+cover, physical runner row, rank-seven antichain completeness, or LRC(14)
+decrement.
