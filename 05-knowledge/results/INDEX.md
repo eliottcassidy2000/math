@@ -41,19 +41,19 @@
 
 - `lrc_dyadic_fibre_grid_decomposition_thm3435.py` and
   `lrc_dyadic_fibre_grid_census_thm3435.py` -> matching `.out` files
-  [THM-3435 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED for the
-  all-modulus identity; bounded census FINITE-EXACT / INDEPENDENT CENSUS
-  AUDIT REQUIRED].  For every `Q=2^aR`, a literal half block splits into a
+  [THM-3435 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; bounded census
+  FINITE-EXACT only].  For every `Q=2^aR`, a literal half block splits into a
   repeated `d=2^(a-b)=7q+c` grid over each odd-base fibre, with exact count
   `2^b(q+epsilon_j)` and an affine cyclic-interval sidecar.  The remainder
   `c` cycles through `2,4,1`; two and four coefficient branches are disjoint
   (OR=XOR), while eight cover with multiplicity one or two and only a
   sheet-local cyclic order.  The primary companion reconstructs `4,755,520`
-  sheet cells and `449,888` fibre rows through `Q=192`, including all `24,580`
+  sheet cells and `449,888` active fibre rows through `Q=192`, including all `24,580`
   inactive endpoint laws.  The all-`Q` even cap-seven lane is reduced to
   two- and four-colour affine sections, not classified.  The separate census
-  finds primitive support `{14,38,68,148}` through `Q=362`; `Q=366` is the
-  first unclassified boundary.  Decomposition script/output/semantic
+  finds primitive support `{14,38,68,148}` through `Q=362`; an independent
+  no-dominance search of the same `60` rows agrees in `1,835,142` states.
+  `Q=366` is the first unclassified boundary.  Decomposition script/output/semantic
   LF-normalized SHA-256:
   `a79a7757c93bb903c10a157a9bce4b942c74548a25dd395157f273d8f8c67cb9` /
   `5c7dff656d867a81d75dafb504ca6adc21b41dfd936a0bef0491bf658b1e1428` /

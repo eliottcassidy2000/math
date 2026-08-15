@@ -2,16 +2,15 @@
 id: THM-3435
 title: "Dyadic fibre-grid decomposition for literal half twists"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED for the all-modulus fibre
-  identity, endpoint law, Boolean branch boundary, and target-free necessary
-  conditions.  Literal half-twist masks on Q=2^a R split into repeated dyadic
-  grids over the odd base R; their exact counts have a period-three mod-7
-  carry, while literal coverage additionally needs an affine coset sidecar.
-  The separate even cap-seven census through Q=362 is FINITE-EXACT and still
-  awaits an independent census audit; Q=366 and the all-Q classification are
-  open.  No LRC(14) consequence is claimed.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Literal half-twist masks
+  on Q=2^a R split into repeated dyadic grids over the odd base R; their exact
+  counts have a period-three mod-7 carry, while literal coverage additionally
+  needs an affine coset sidecar.  The endpoint, Boolean, and target-free gates
+  are all-modulus.  The even cap-seven census through Q=362 is independently
+  audited FINITE-EXACT only; Q=366 and the all-Q classification remain open.
+  No LRC(14) consequence is claimed.
 source: root even-half-rank7 and codex2 dyadic-fibre sessions, 2026-08-15
-audit: independent pullback, cyclic-interval, residual-mask, strict/weak endpoint, central-fibre, target-free cap-seven, positive-hostile, normal/-O/stored-output, hash, AST/security, and exact-grid audit CLEAN; MISTAKE-393 repairs the covering degree and two-sheet sign-representative scope; bounded census independently unaudited
+audit: independent pullback, cyclic-interval, residual-mask, strict/weak endpoint, central-fibre, target-free cap-seven, positive-hostile, normal/-O/stored-output, hash, AST/security, and exact-grid audit CLEAN; MISTAKE-393 repairs the covering degree and two-sheet sign-representative scope; independent census audit checked the exact universe and exclusions, dependency pins, joint-period descent, prime breakers, deduplication/dominance safety, all 60 canonical rows, a second no-dominance exact search, all four witnesses and multiplicities, Q7 hostile, Q366 boundary, hashes, security, docs, and normal/-O/stored replay CLEAN
 depends_on:
   - THM-3416-zero-mode-cochain-global-rank-six-support
   - THM-3434-seventeen-fibre-two-sided-mass-closure
@@ -33,9 +32,9 @@ hash_basis: LF-normalized bytes
 
 # THM-3435 -- dyadic fibre-grid decomposition for literal half twists
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED** for the all-modulus
-identity and its proved deductions below.  The bounded census is separately
-**FINITE-EXACT / INDEPENDENT CENSUS AUDIT REQUIRED**.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**  The all-modulus identity
+and deductions are proved as stated; the bounded census is independently
+audited **FINITE-EXACT** only.
 
 ## 1. Exact all-modulus statement
 
@@ -501,13 +500,20 @@ PYTHONHASHSEED=1 python3 -B -O 04-computation/lrc_dyadic_fibre_grid_census_thm34
 
 The first standard-library companion compares `(4)--(7b)` directly with
 literal masks for every residue through `Q=192`: `4,755,520` sheet cells and
-`449,888` fibre rows.  It audits zero active endpoint hits, all `24,580`
+`449,888` active fibre rows.  It audits zero active endpoint hits, all `24,580`
 inactive endpoint laws, the `Q=14,r=2` hostile, all three Boolean branch
 depths, and the `Q=8` affine-loss hostile.  The second companion checks the earlier
 fibre formulation through `Q=160` (`1,812,487` fibre rows), checks `5,700`
 complementary two-sheet rows, replays `(14)` and `(19)`, and performs exactly
 the bounded inductive census `(17)`.  Normal and optimized outputs are
 byte-identical for both companions.
+
+The independent census audit additionally searched every distinct exact
+augmented mask on the same `60` joint-period rows without the companion's
+subset-dominance pruning.  Its `1,835,142` states again found only atoms
+`14,38,68,148`.  Direct reconstruction independently gives the multiplicity
+histograms in `(19)`, the sole visible `Q=7` sheet `3`, and the untouched
+boundary `Q=366`.
 
 The all-modulus content is the elementary fibre identity and its proved
 endpoint, carry, Boolean, and target-free consequences.  The census is
