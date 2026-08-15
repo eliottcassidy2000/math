@@ -7,6 +7,7 @@ PIN 04-computation/hadamard_twelve_order_bank_thm3394.py 7ae931b3cf268550287bd06
 PIN 04-computation/hadamard_twelve_order_signword_thm3394.b85 68f7ceebb67005bf1b968171f7e6897cc33bde68adbd63f14bd45edfeb7b3f06
 PIN 05-knowledge/results/hadamard_twelve_order_bank_thm3394.out d8efee90947015a7e6fc28a1685cc3d378357a85e1d4814953b32b17c5cd76a9
 ORDER668 normalized_sha256=73f1de1539849e1dc7e6085cc69c563fd2965c44970263e8203384bd1a46aa63 product_counts=333,334 responses(one,low,high)=(333/334,166/167,55445/55778) shell_counts=49555629432,49407259284 row_swap=2x334:rho=-1
+TRIPLE_PALETTE offdiagonal_states=64 minor_by_negative_pairs=0:{-4,0};1:{0};2:{0,4};3:{4} orientation_needed_exactly_for_even_pair_parity
 PALEY N=4 m=1 two_shells(low,high)=(0,1/2) counts(low,high)=(24,12) direct_pair_checks=36
    window masks=512 mobius_nonzero=1,9,12,6,0,0,0,0,0,0 equality_sizes=[(4, 3), (6, 2)] same_line_tests=4 row_column_swap=4,4
 PALEY N=8 m=2 two_shells(low,high)=(1/2,5/8) counts(low,high)=(672,504) direct_pair_checks=1176
@@ -18,6 +19,6 @@ PALEY N=12 m=3 two_shells(low,high)=(2/3,13/18) counts(low,high)=(3960,3300) dir
 PALEY N=20 m=5 two_shells(low,high)=(4/5,41/50) counts(low,high)=(34200,30780) direct_pair_checks=4
    window masks=512 mobius_nonzero=1,9,12,6,0,0,0,0,0,0 equality_sizes=[] same_line_tests=20 row_column_swap=20,20
    triple_hostile pair_data=(-1, -1, 1) signed_minors=(4, 0) responses=('92/125', '37/50') determinants=(14375000, 14453125)
-semantic_sha256=223ed9bfbb321b843ca725345744661a93050fd71c87cfd6cf3d2bcbf37746da
+semantic_sha256=6333b6b8292916e6917b9d04c82bb7b4bf86d6fe2c9dfda45acfce5e3eb98a09
 FINITE CONTROLS ONLY; UNIVERSAL FORMULAS AND TRADE FLOOR USE THE PROOF
 ALL CHECKS PASSED

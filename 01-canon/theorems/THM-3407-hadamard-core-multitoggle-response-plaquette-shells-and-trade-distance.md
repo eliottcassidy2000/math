@@ -18,9 +18,9 @@ related:
   - THM-451-skew-tower-hadamard-chirality
 script: 04-computation/hadamard_core_multitoggle_response_thm3407.py
 output: 05-knowledge/results/hadamard_core_multitoggle_response_thm3407.out
-script_sha256: 38ddc988150920223e7aacf0266189b16a32babc49ce87cc5b07449bd4c90caf
-output_sha256: 7eda8b61e1e1a9522e7f2b2c961eaad82065ea5e0e58e31f3ea4a0313ce1d237
-semantic_sha256: 223ed9bfbb321b843ca725345744661a93050fd71c87cfd6cf3d2bcbf37746da
+script_sha256: 83f38703b126cdc9bf9358bce20803ed890a1f19d685c7644e909c1a8df45e90
+output_sha256: 46b6b6176a23ebb0554c0359315f5584227576c753b5e3e1d1f6cc8ce1f1d31f
+semantic_sha256: 6333b6b8292916e6917b9d04c82bb7b4bf86d6fe2c9dfda45acfce5e3eb98a09
 hash_basis: working-tree bytes with LF line endings
 ---
 
@@ -249,6 +249,29 @@ If the three events use distinct rows and columns, `mu_123` is a signed
 from the other two, while Hadamard's bound is less than six.  A repeated row
 or column makes the minor zero.
 
+The orientation debt is exactly one bit.  Indeed
+
+~~~text
+gamma_123 gamma_132=chi_12 chi_13 chi_23.                    (18)
+~~~
+
+Let `s` be the number of negative `chi` values.  Equations (16) and (18)
+give the complete abstract palette
+
+| `s` | possible `mu_123` | extra datum needed beyond labelled `chi` |
+|---:|:---:|:---|
+| 0 | `0,-4` | `gamma_123` |
+| 1 | `0` | none |
+| 2 | `0,+4` | `gamma_123` |
+| 3 | `+4` | none |
+
+Thus labelled pair data determines the triple response when its plaquette
+product is negative (`s` odd).  When that product is positive (`s` even),
+the directed 3-cycle gain selects one of two algebraic shells.  The exact
+companion exhausts all `2^6=64` oriented off-diagonal sign assignments and
+checks this palette; realizability of every abstract state inside a specified
+Hadamard core is not asserted.
+
 Label pair data in the order `(12,13,23)`.  The independently constructed
 Paley-I controls contain the following exact hostile pairs; coordinates are
 zero-based positions in `K`:
@@ -272,20 +295,20 @@ Suppose every entry of a full `a by b` rectangle `R by C` is toggled.  Then
 `D=L` in (5), so
 
 ~~~text
-rho=det(I_a-LL^T/(2m)).                                      (18)
+rho=det(I_a-LL^T/(2m)).                                      (19)
 ~~~
 
 If `L=uw^T` has real rank one, with sign vectors `u,w`, then
 
 ~~~text
-rho=1-ab/(2m)=1-2ab/N.                                      (19)
+rho=1-ab/(2m)=1-2ab/N.                                      (20)
 ~~~
 
 THM-3403's global binary maxdet bound gives `|rho|<=1`; consequently every
 rank-one sign rectangle in a Hadamard core has
 
 ~~~text
-ab<=N.                                                       (20)
+ab<=N.                                                       (21)
 ~~~
 
 The three exact regimes are
@@ -293,13 +316,13 @@ The three exact regimes are
 ~~~text
 0<ab<N:   strict determinant loss;
 ab=N/2:   singular toggled core;
-ab=N:     rho=-1 and another Hadamard maximizer.              (21)
+ab=N:     rho=-1 and another Hadamard maximizer.              (22)
 ~~~
 
 A `t`-toggle set in one row or one column is the special case
 
 ~~~text
-rho=1-t/(2m).                                                (22)
+rho=1-t/(2m).                                                (23)
 ~~~
 
 It is singular at `t=2m`; at `t=v` its signed response is
@@ -323,7 +346,7 @@ For every nonempty core toggle set,
 
 ~~~text
 |rho(T)|<=1,
-|rho(T)|=1  iff  the bordered flipped sign matrix is Hadamard. (23)
+|rho(T)|=1  iff  the bordered flipped sign matrix is Hadamard. (24)
 ~~~
 
 Moreover equality is impossible when `|T|<N`.  This trade floor has the
@@ -334,7 +357,7 @@ its changed columns and define `x` by
 
 ~~~text
 x_c=H_ic for c in S,              x_c=0 otherwise,
-y=Hx.                                                          (24)
+y=Hx.                                                          (25)
 ~~~
 
 Then `||y||^2=N||x||^2=Na` and `|y_j|<=a`.  If row `j` is unchanged,
@@ -342,7 +365,7 @@ orthogonality of that row with row `i` both before and after the flip gives
 `y_j=0`.  Hence `support(y)<=r`, and
 
 ~~~text
-Na=||y||^2<=r a^2,              ra>=N,              t>=ra>=N. (25)
+Na=||y||^2<=r a^2,              ra>=N,              t>=ra>=N. (26)
 ~~~
 
 The row-swap trades above attain equality.  Therefore, inside the labelled
@@ -350,11 +373,11 @@ cube `{0,1}^{v^2}`, the set of binary core maximizers descended with the fixed
 all-plus border has exact minimum Hamming distance
 
 ~~~text
-d_min=N=4m.                                                   (26)
+d_min=N=4m.                                                   (27)
 ~~~
 
-Equation (23) follows directly from THM-3403's border determinant identity
-and equality case.  Equations (25)--(26) prove the sharp distance and do not
+Equation (24) follows directly from THM-3403's border determinant identity
+and equality case.  Equations (26)--(27) prove the sharp distance and do not
 depend on the external trade citation in Section 9.
 
 ## 7. Odd full circuits forbid closed quadruples but not higher shells
@@ -362,13 +385,13 @@ depend on the external trade citation in Section 9.
 For lower core rows define the pair-product signature
 
 ~~~text
-x_(rs)(j)=K_rj K_sj.                                         (27)
+x_(rs)(j)=K_rj K_sj.                                         (28)
 ~~~
 
 The event response samples these signatures:
 
 ~~~text
-Q_ab=x_(i_a,i_b)(j_a).                                       (28)
+Q_ab=x_(i_a,i_b)(j_a).                                       (29)
 ~~~
 
 A closed quadruple is exactly a collision of two disjoint unordered
@@ -378,7 +401,7 @@ When `m` is odd, THM-3403 proves that the lower binary rows form one full
 binary circuit.  Therefore
 
 ~~~text
-S subseteq {lower rows}  ->  product_(i in S) K_i             (29)
+S subseteq {lower rows}  ->  product_(i in S) K_i             (30)
 ~~~
 
 is injective modulo complementation: two products agree exactly when their
@@ -412,7 +435,7 @@ max                 =2*167^334,
 one toggle          =333*167^333,             rho=333/334,
 two-toggle low      =332*167^333,             rho=166/167,
 two-toggle high     =55445*167^332,           rho=55445/55778,
-high-low difference =167^332.                                  (30)
+high-low difference =167^332.                                  (31)
 ~~~
 
 The exact shell multiplicities are
@@ -420,7 +443,7 @@ The exact shell multiplicities are
 ~~~text
 low =49,555,629,432,
 high=49,407,259,284,
-sum =98,962,888,716=binom(667^2,2).                            (31)
+sum =98,962,888,716=binom(667^2,2).                            (32)
 ~~~
 
 The actual difference set of any two lower rows has `334` core columns, so
@@ -440,6 +463,8 @@ orders `4,8,12,20`.  Its explicit universe and controls are:
 - every one of the `512` masks in a fixed `3 by 3` core window is checked by
   direct determinant, event response, and both support responses, and its
   entire Boolean Mobius transform is compared with (8)--(10);
+- all `64` oriented `3 by 3` event sign matrices with diagonal one are
+  exhausted against the parity/orientation palette following (18);
 - all same-row and same-column prefix sizes `0<=t<=v`, universal row and
   column swaps, and the explicit order-8 closed-quadruple field are checked;
 - the three hostile pairs in Section 4 are frozen, including their literal
@@ -472,7 +497,7 @@ priority claims.
   [*Trades in complex Hadamard matrices*](https://arxiv.org/abs/1502.02353),
   Theorem 4, prove that every trade in a real Hadamard matrix of order `N`
   has at least `N` entries.  Their introduction also records the universal
-  `2 by N/2` row trades and `4 by N/4` closed-quadruple trades.  Equation (25)
+  `2 by N/2` row trades and `4 by N/4` closed-quadruple trades.  Equation (26)
   gives a self-contained proof of the real trade floor needed here.
 - Orrick,
   [*Switching operations for Hadamard matrices*](https://arxiv.org/abs/math/0507515),
@@ -480,7 +505,7 @@ priority claims.
 - Brent and Osborn,
   [*On minors of maximal determinant matrices*](https://arxiv.org/abs/1208.3819),
   and the Jacobi/Szollosi complementary-minor route are adjacent determinant-
-  minor literature.  They are not used to derive (5)--(17).
+  minor literature.  They are not used to derive (5)--(18).
 
 The support/event compilers, Boolean response packaging, two-shell accounting,
 and oriented triple controls are presented here as an elementary repository

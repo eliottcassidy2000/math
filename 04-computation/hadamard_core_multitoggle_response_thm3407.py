@@ -14,14 +14,14 @@ for those proofs.
 
 from fractions import Fraction
 from hashlib import sha256
-from itertools import combinations, permutations
+from itertools import combinations, product
 import json
 from math import comb
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED_SEMANTIC_SHA256 = "223ed9bfbb321b843ca725345744661a93050fd71c87cfd6cf3d2bcbf37746da"
+EXPECTED_SEMANTIC_SHA256 = "6333b6b8292916e6917b9d04c82bb7b4bf86d6fe2c9dfda45acfce5e3eb98a09"
 
 DEPENDENCY_PINS = (
     (
@@ -561,6 +561,56 @@ def trade_and_rectangle_audit(order, hadamard, sign_core, binary_core, determina
     }
 
 
+def abstract_triple_palette_audit():
+    """Exhaust the 64 oriented sign matrices with diagonal one."""
+    counts = {}
+    allowed = {
+        0: {0, -4},
+        1: {0},
+        2: {0, 4},
+        3: {4},
+    }
+    for values in product((-1, 1), repeat=6):
+        q_matrix = [
+            [1, values[0], values[1]],
+            [values[2], 1, values[3]],
+            [values[4], values[5], 1],
+        ]
+        chis = (
+            q_matrix[0][1] * q_matrix[1][0],
+            q_matrix[0][2] * q_matrix[2][0],
+            q_matrix[1][2] * q_matrix[2][1],
+        )
+        gamma = q_matrix[0][1] * q_matrix[1][2] * q_matrix[2][0]
+        gamma_reverse = q_matrix[0][2] * q_matrix[2][1] * q_matrix[1][0]
+        require(
+            gamma * gamma_reverse == chis[0] * chis[1] * chis[2],
+            "triple cycle-product identity failed",
+        )
+        negative_pairs = sum(value == -1 for value in chis)
+        minor = determinant_bareiss(q_matrix)
+        require(minor in allowed[negative_pairs], "triple palette escaped")
+        key = "%d:%+d:%+d" % (negative_pairs, gamma, minor)
+        counts[key] = counts.get(key, 0) + 1
+    expected = {
+        "0:-1:-4": 4,
+        "0:+1:+0": 4,
+        "1:-1:+0": 12,
+        "1:+1:+0": 12,
+        "2:-1:+0": 12,
+        "2:+1:+4": 12,
+        "3:-1:+4": 4,
+        "3:+1:+4": 4,
+    }
+    require(counts == expected, "abstract triple palette multiplicities changed")
+    print(
+        "TRIPLE_PALETTE offdiagonal_states=64 "
+        "minor_by_negative_pairs=0:{-4,0};1:{0};2:{0,4};3:{4} "
+        "orientation_needed_exactly_for_even_pair_parity"
+    )
+    return counts
+
+
 TRIPLE_HOSTILES = {
     8: (
         (((0, 0), (1, 2), (2, 1)), ((0, 0), (1, 1), (2, 3))),
@@ -662,7 +712,12 @@ def dependency_and_order668_audit():
 def main():
     print("THM-3407 HADAMARD CORE MULTI-TOGGLE RESPONSE: EXACT CONTROLS")
     order668 = dependency_and_order668_audit()
-    semantic = {"order668": order668, "orders": {}}
+    triple_palette = abstract_triple_palette_audit()
+    semantic = {
+        "order668": order668,
+        "triple_palette": triple_palette,
+        "orders": {},
+    }
 
     for prime in (3, 7, 11, 19):
         hadamard = paley_type_i(prime)
