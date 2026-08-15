@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `weighted_depth_commuting_hensel_lattice_thm3446.py` -> matching `.out`
+  [THM-3446 RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT;
+  INDEPENDENT AUDIT REQUIRED].  For commuting generators at depths `c_i`,
+  pointwise-independent first carries give a free product of cyclic exponent
+  channels on every depth-`C` fibre.  The orbit-bank exponent is
+  `(d-r)(a-C)+sum(c_i-C)`, so full rank is transitive only at equal depths;
+  dependence creates a stabilizer at the exact alignment level `M+1`.
+  Controls include a three-depth affine packet, all nine nonlinear weighted
+  fibres, the delayed dependence hostile, and `p=2` depths `(2,3)`.
+  Script/output/semantic LF SHA-256:
+  `117f9a3a27aacdbc7f3576fb8edd53b35c12e39c35fe5b1d46577b8a708280b2` /
+  `cec4e30c279d284fc657ca72b781c7163f911947dfef0c9188307d644bb2d2f3` /
+  `317fbb4d6c074e76a3886a8653f4b6bb6423f97c135cff44c2df212722e85bb2`.
+  No LRC, `JC(2)`, or boundary-response transport is claimed.
+
 - `commuting_smooth_hensel_lattice_action_thm3444.py` -> matching `.out`
   [THM-3444 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For `r`
   commuting automorphisms of a smooth
