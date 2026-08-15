@@ -53,6 +53,23 @@
   `4ac644546e4f81631b5c12a404779397c5c63da67f3e4dd5c1b88da1fa8beda1`.
   No LRC(14) ledger decrement.
 
+- `jc_all_sector_constant_observer_thm3427.py` -> matching `.out`
+  [THM-3427 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For
+  `P=ax+b+g(x)z^d`, the generic sector operator
+  `L_sigma(q)=sigma q+(t-x)(sigma(g'/g)q-dq')` has an exact polynomial
+  presentation of rank `deg(rad(g))`, including the separately repaired wrap
+  input.  The constant observer in character `sigma` dies generically exactly
+  for one-root `g=c(x-alpha)^e` with `d|sigma(e-1)`; its integral annihilator
+  is the corresponding power `(P-(a alpha+b))^(sigma(e-1)/d)`.  The canonical
+  resonant wrap defect recovers every multiplicity excess `e_i-1` when the
+  radical is taken monic.  The companion checks `585` nonwrap profiles,
+  `1,554` wrap residue profiles, `74` exact defect completions, closed
+  primitives, integral arrows, and multiroot hostiles.  Normal, optimized, and
+  stored outputs agree.  Script/output LF-normalized SHA-256:
+  `cffd6e8d2bf92ce6e793769320e9c2f1798337a8ccb221a6ef5d324774818895` /
+  `be694f75fccc2398b7072ac59c8529a27ceb2c34ba3db6e667dbf002ad495654`.
+  No polynomial mate or JC(2) conclusion follows.
+
 - `lrc_rank7_prime_fibre_activity_descent_thm3429.py` -> matching `.out`
   [THM-3429 VERIFIED-EXACT].  For a prime `p|Q`, the script directly checks
   that `p`-divisible half-twist blocks are full pullbacks to `Q/p` and every

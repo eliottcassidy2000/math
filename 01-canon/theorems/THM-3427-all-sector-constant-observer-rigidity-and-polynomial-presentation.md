@@ -2,8 +2,8 @@
 id: THM-3427
 title: "All-sector constant-observer rigidity and polynomial presentation"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-  AUDIT REQUIRED.  Let K have characteristic zero, d>=2, a!=0, and
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Let K have characteristic
+  zero, d>=2, a!=0, and
   P=ax+b+g(x)z^d with nonconstant g.  Every generic fiber-character sector
   has an explicit polynomial differential presentation of dimension
   deg(rad(g)); the wrap sector requires a separate evaluation-at-t splitting
@@ -14,10 +14,9 @@ status: >
   g=c(x-alpha)^e with e>1 and d divides sigma(e-1).  Its exact integral
   annihilator is then ((P-(a alpha+b))^(sigma(e-1)/d)), and is zero otherwise.
   THM-3424 is the sigma=1 specialization.  No full multiroot integral module,
-  polynomial mate, new Keller case, or JC(2) conclusion is claimed.  This
-  candidate is not a proved dependency before independent audit and explicit
-  status promotion.
+  polynomial mate, new Keller case, or JC(2) conclusion is claimed.
 source: root-2608-jc-all-sector-observer-packet-2026-08-15
+audit: independent operator, pole-intersection, wrap-seam, resonant-basis, one-root iff, and THM-3422 annihilator reconstruction; monic-radical normalization hostile repaired explicitly; normal/optimized/stored exact replay and hashes clean
 depends_on:
   - THM-3419-generic-kummer-response-regular-sector-rank
   - THM-3422-one-root-nonlinear-integral-hamiltonian-response
@@ -35,9 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-3427 -- all-sector constant-observer rigidity and polynomial presentation
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
-AUDIT REQUIRED.**  Nothing in this file is a proved dependency before a
-different agent audits it and the status is explicitly promoted.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 ## 1. Statement and connection contract
 
@@ -86,7 +83,7 @@ as in Section 2 and set
 
 ```text
 F=K(t),                  B=F[x,g^(-1)],
-S=rad(g),                N=deg(S),
+S=the monic rad(g),      N=deg(S),
 
 L_sigma(q)=sigma q+(t-x)(sigma(g'/g)q-dq').              (6)
 ```
@@ -350,7 +347,9 @@ A_sigma(u,t)
  =sum_(n>=0) A_(sigma,n)(t)u^n.                          (33b)
 ```
 
-The fractional powers in `(33b)` are the unique characteristic-zero formal
+The monic normalization of `S` makes both series in `(33a)` have constant
+coefficient one.  The fractional powers in `(33b)` are the unique
+characteristic-zero formal
 powers with constant coefficient one, so every `A_(sigma,n)` lies in
 `K[t]`.  Truncate at the resonance excess:
 
@@ -609,5 +608,4 @@ The boundaries are exact:
   MISTAKE-374 forbids transferring that vanishing back as integral exactness.
 
 No full multiroot integral decomposition, new polynomial mate, new Keller
-stratum, or conclusion about the remaining cases of `JC(2)` follows.  QED
-for the provisional candidate.
+stratum, or conclusion about the remaining cases of `JC(2)` follows.  **QED.**

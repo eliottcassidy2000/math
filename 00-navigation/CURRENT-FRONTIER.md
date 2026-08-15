@@ -391,7 +391,7 @@ boundary. At `z=1`, density zero alone does not decide harmonic mass.
   gives a two-pivot inverse graph and mate-integrability class on two controls.
   THM-3309 has `P_x=P_z=0`; THM-3312 gives its trace/norm passport; THM-3319 gives a local etale clutch germ, not a section.
   THM-3318/3326/3348/3386/3406/3412 classify linear-`z` response; collisions persist and `ker` after `gr` overcounts. This refines THM-2063, not `JC(2)`; THM-3354 blocks D5 transport.
-  THM-3418/3419 close sparse Keller/generic rank; THM-3422 gives the one-root integral response/first window; THM-3424 classifies unit localization and annihilator. Full multiroot fibers remain open.
+  THM-3418/3419 close sparse Keller/generic rank; THM-3422 gives the one-root integral response/first window; THM-3424 classifies unit localization and annihilator. THM-3427 gives every generic character-sector presentation, classifies all constant observers and annihilators, and recovers root multiplicities from the canonical wrap defect. Full multiroot integral fibers remain open.
   No base root choice follows; residual degree 119, Keller mate/inverse cover, `JC(2)` and `DC(2)` remain OPEN.
 - **Factorial:** THM-3124/3131/3142/3143/3146/3152/3153/3161/3170/3176/3180/3201
   close exact `{0,1,2}` windows through `r=2498`; all `50` seven-exit rows in
