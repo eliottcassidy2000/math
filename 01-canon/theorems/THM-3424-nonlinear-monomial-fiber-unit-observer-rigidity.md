@@ -5,26 +5,24 @@ status: >
   RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
   AUDIT REQUIRED.  Let K have characteristic zero, d>=2, a!=0, and
   P=ax+b+g(x)z^d with nonconstant g.  The generic Hamiltonian unit class
-  vanishes exactly when g=c(x-alpha)^(1+qd) for some q>=1.  Subject to the
-  explicitly blocked provisional THM-3422 one-root dependency, its exact
+  vanishes exactly when g=c(x-alpha)^(1+qd) for some q>=1.  Its exact
   integral K[P]-annihilator is then ((P-(a alpha+b))^q), and is zero for
   every other nonconstant g.  No full multiroot module decomposition,
   polynomial mate, new Keller case, or JC(2) conclusion is claimed.  This
-  candidate is not a proved dependency until independent audit, promotion
-  of THM-3422, and explicit status promotion here.
+  candidate is not a proved dependency until independent audit and explicit
+  status promotion here.
 source: root-2608-jc-unit-observer-rigidity-2026-08-15
 depends_on:
   - THM-3418-one-monomial-nonlinear-fiber-keller-classification
   - THM-3419-generic-kummer-response-regular-sector-rank
-candidate_dependency_blocked_on:
   - THM-3422-one-root-nonlinear-integral-hamiltonian-response
 related:
   - THM-3348-linear-z-generic-puncture-response-and-one-root-valuation
   - THM-3354-inequivalent-h1-carriers-and-typed-obstruction-cospan
 script: 04-computation/jc_nonlinear_multiroot_unit_rigidity_thm3424.py
 output: 05-knowledge/results/jc_nonlinear_multiroot_unit_rigidity_thm3424.out
-script_sha256: PENDING
-output_sha256: PENDING
+script_sha256: 22c29c3e0086dbe1a592d39027b41e1626484d032e3f7ddc9499629d4f294e38
+output_sha256: 2d14bebf31cc736d158a74ce135d36f57c42663668630799e5d89d163f545921
 hash_basis: LF-normalized bytes
 ---
 
@@ -32,10 +30,9 @@ hash_basis: LF-normalized bytes
 
 **RESERVED / PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT / INDEPENDENT
 AUDIT REQUIRED.**  The generic rigidity proof below is self-contained.  The
-exact positive integral annihilator imports the provisional one-root module
-calculation in THM-3422 and is blocked until that theorem is independently
-promoted.  Nothing here is a proved dependency before explicit status
-promotion.
+exact positive integral annihilator imports the proved and independently
+audited one-root module calculation in THM-3422.  Nothing here is a proved
+dependency before explicit status promotion.
 
 ## 1. Statement and inheritance
 
@@ -61,7 +58,7 @@ iff g(x)=c(x-alpha)^(1+qd)
     for c in K*, alpha in K, and an integer q>=1.          (3)
 ```
 
-Combining `(3)` with the provisional one-root integral classification in
+Combining `(3)` with the proved one-root integral classification in
 [THM-3422](THM-3422-one-root-nonlinear-integral-hamiltonian-response.md)
 gives the candidate exact annihilator
 
@@ -314,9 +311,9 @@ arrows before the unique zero arrow and proves
 Ann_(K[P])(theta)=((P-(a alpha+b))^q).                    (30)
 ```
 
-This last import is the explicitly blocked candidate dependency in the front
-matter.  Promotion of THM-3422 is required before `(30)` or the full theorem
-can enter the proved dependency graph.
+This last step is precisely the integral information imported from THM-3422;
+the generic rigidity argument does not silently infer an integral exponent
+from localization.
 
 ## 7. Hostiles, computation, and boundaries
 
@@ -348,13 +345,13 @@ The boundaries are sharp:
 - constant nonzero `g` has `C_P=0` integrally, so `[1]=0`; it is outside the
   nonconstant statement;
 - `g=0` is a separate non-Kummer zero-response boundary;
-- at `d=1`, the same argument regresses to THM-3348's classification: the
-  generic unit vanishes exactly for a single repeated root;
+- at `d=1`, the conclusion matches THM-3348's classification: the generic
+  unit vanishes exactly for a single repeated root.  The present weight-sector
+  proof is stated only for `d>=2`;
 - characteristic zero is load bearing in `(12)--(14)`;
 - even in `(3)`, generic vanishing is not a polynomial mate.  MISTAKE-374
   requires retention of the nonzero vertical torsion in `(4)`.
 
 No full multiroot `K[P]`-module decomposition, polynomial mate, new Keller
 stratum, or conclusion about the remaining cases of `JC(2)` follows.  QED
-for the generic candidate; the integral line remains blocked as stated.
-
+for the provisional candidate.

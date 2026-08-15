@@ -12,7 +12,7 @@ classify the full multiple-root Hamiltonian module.
 proves that a nonconstant top coefficient `g` admits no polynomial mate.
 [THM-3419](../01-canon/theorems/THM-3419-generic-kummer-response-regular-sector-rank.md)
 identifies the generic Hamiltonian response with `N` copies of the regular
-Kummer packet, where `N=deg(rad(g))`.  The provisional
+Kummer packet, where `N=deg(rad(g))`.  The proved and independently audited
 [THM-3422](../01-canon/theorems/THM-3422-one-root-nonlinear-integral-hamiltonian-response.md)
 computes the complete integral module when `N=1`.  MISTAKE-374 is the closest
 corrected near miss: generic vanishing of `[1]` loses integral vertical
@@ -63,7 +63,7 @@ vanishes if and only if there are `c in K*`, `alpha in K`, and integers
 g(x)=c(x-alpha)^(1+qd).                                  (3)
 ```
 
-Combining this rigidity with the provisional one-root calculation in
+Combining this rigidity with the one-root calculation in
 THM-3422 gives the exact integral annihilator
 
 ```text
@@ -306,8 +306,8 @@ Boundaries are exact:
 - for constant nonzero `g`, THM-3419 gives `C_P=0`, so `[1]=0` rather than
   nonzero torsion;
 - `g=0` is a separate non-Kummer zero-response boundary;
-- at `d=1`, the argument regresses to THM-3348: generic vanishing occurs
-  exactly for a single repeated root;
+- at `d=1`, the conclusion matches THM-3348: generic vanishing occurs exactly
+  for a single repeated root.  The weight-sector proof here assumes `d>=2`;
 - characteristic zero is load bearing in `(12)--(13)` and in descent of the
   unique root;
 - generic vanishing in `(3)` is still only localization-torsion.  By
