@@ -4,10 +4,10 @@ title: "Hadamard-core multi-toggle response, plaquette shells, and trade distanc
 status: >
   PROVED (exact determinant algebra and self-contained trade-floor proof) +
   VERIFIED-EXACT (three-path Paley controls and hostile triples) + THM-3394
-  DEPENDENT FINITE COROLLARY.  The Hadamard-trade and switching comparisons
+  DEPENDENT FINITE COROLLARY + INDEPENDENTLY AUDITED.  The Hadamard-trade and switching comparisons
   are CITED classical context; no novelty or priority claim is made.
 source: hadamard-multitoggle-2026-08-15
-audit: determinant-sign/type audit, direct/event/two-support replay, Boolean-Mobius audit, boundary/equality audit, and normal/-O byte-identical controls; independent external proof audit remains welcome
+audit: determinant-sign/type audit, direct/event/two-support replay, Boolean-Mobius audit, boundary/equality audit, and normal/-O byte-identical controls; independent nonsymmetric H8 and Paley H4/H12 proof/replay audit clean
 depends_on:
   - THM-3403-hadamard-core-maxdet-smith-and-circuit-descent
   - THM-3394-twelve-formerly-missing-hadamard-orders-through-2000
@@ -26,7 +26,8 @@ hash_basis: working-tree bytes with LF line endings
 
 # THM-3407 -- Hadamard-core multi-toggle response, plaquette shells, and trade distance
 
-**PROVED + VERIFIED-EXACT + THM-3394 DEPENDENT FINITE COROLLARY.**
+**PROVED + VERIFIED-EXACT + THM-3394 DEPENDENT FINITE COROLLARY +
+INDEPENDENTLY AUDITED.**
 
 Let `m>=1`, put `N=4m` and `v=N-1`, and normalize a real Hadamard
 matrix as

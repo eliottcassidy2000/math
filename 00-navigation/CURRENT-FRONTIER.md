@@ -32,9 +32,9 @@ THM-3349/3350/3352/3355 close all `561` reflected six-level `k=1` bodies;
 THM-3360 proves the physical edge floor. THM-3381 bounds phase/tree drift and
 refutes residue-blind transfer. Arbitrary `k<=1`, projected `k=2,3`, rung, physical entry and LRC
 remain open; projected screens are not physical covers.
-THM-3356/3366 leave `(rows,count)` `k=2:4,056/200,069,517,203`, `k=3:1,897/2,548,893,834`; THM-3385/3387--3395 classify q2--7 and THM-3398 proves all-q mode/cochain iff+dilation.
-THM-3405 ancestry gives q15--28 zero-cochain ranks `6,4,8,4,9,5,8,6,6,4,6,7,4,7`; MISTAKE-389 leaves smaller chart ranks half-grid with quadratic leakage. THM-3409 prices q15's excluded edge at pair/tree `(50,6)/(10,3)`. No cut.
-THM-3368 adds a weighted Horn tariff but no clock seed. LRC remains open.
+THM-3356/3366 leave k2/k3 `4,056/200,069,517,203` and `1,897/2,548,893,834`; THM-3385/3387--3395/3398 give q2--7 and all-q mode/cochain laws.
+THM-3405 gives q15--28 zero ranks `6,4,8,4,9,5,8,6,6,4,6,7,4,7`; THM-3408 excludes base-free six-covers through q20000 exact. MISTAKE-389 keeps smaller chart ranks half-grid; THM-3409 prices q15 at pair/tree `(50,6)/(10,3)`. No cut.
+THM-3368 has no clock seed; LRC remains open.
 The cap-two/gain atlas and CSP route run through THM-3135/3150/3156/3171. THM-3200/3211 give exact ray laws; THM-3224/3246 give gcd-carry and one audited seam. THM-3234--3285 supply charged-factor and phase structures. THM-3285 has `169` middle origins; its FINITE-EXACT `13`-label normal atlas has two middle completions but empty outer co-support. A two-axis common atom, current and the LRC exit remain open.
 Separate HYP-8871 leaves `165` rows. THM-2363 and THM-2368 are sidecars; THM-2417--2539 close valuation and supplied-root seams, not semantic-root identification (kernel `28,393`). THM-2545--2894 recover many quotient/carrier sidecars but no transverse physical gluing (MISTAKE-281/300/310/313). THM-3190/3208 reduce one channel to positive sparse orbit-and-mass transport; that transport and `e9=(-9,+9,QB)` remain missing.
 

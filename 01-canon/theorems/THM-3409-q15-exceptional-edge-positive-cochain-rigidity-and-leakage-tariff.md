@@ -1,7 +1,7 @@
 ---
 id: THM-3409
 title: "Q15 exceptional edge positive-cochain rigidity and leakage tariff"
-status: PROVED + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED
+status: PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED
 source: root-2608-crouzeix-puzzle-2026-08-15
 depends_on:
   - THM-3398-general-finite-mode-sheet-cover-cochain
@@ -246,10 +246,11 @@ uniqueness inputs.
 Artifact hashes after LF normalization:
 
 ```text
-script   f696cc6cd6e880be11966eaea80e17e0204040722700f2c3851146b56eeca445
-output   b948b61bb665e28a09b564210abaa0a1c3ba0fbe8e0953c41aec6bdf68e24cad
+script   1d8528e187fa2804a61e3632dac4bb546473dd7c1e93749f6236f9ccb30f8243
+output   ef1a0fa0f17411046f77c3c90fbe71009c6cddb14a91ae1df647e1a8ff2e1b20
 semantic 80ecee351d7648a6a4c00f879a649d8fd4dbe87119929e5a5ded72d693c9859d
 ```
 
-The independent immutable-file audit is still requested; until it lands,
-the status line retains that qualifier.
+An independent no-import `Fraction` event census reconstructed every event,
+packet, reversal pair, cochain, tariff, and hash, and normal/optimized replays
+both byte-match the stored output.

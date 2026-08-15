@@ -500,7 +500,7 @@ def main() -> None:
     print("THM-3409 Q15 EXCEPTIONAL POSITIVE-COCHAIN RIGIDITY AND TARIFF")
     print(f"source_sha256_lf={sha256_lf(source)}")
     print(f"dependency_sha256_lf={tuple((name, expected) for name, _, expected in PINS)}")
-    print("status=PROVED exact event-cell classification plus VERIFIED-EXACT companion;independent_audit_requested")
+    print("status=PROVED exact event-cell classification plus VERIFIED-EXACT companion;independently_audited")
     print(f"edge=q{Q}:{SPEEDS};inherited_boundary=unique_rank6_physical_edge_outside_capped_zero_cochain_slice")
     print(f"event_universe=(scale,boundaries,samples,interval_checks)=({scale},{boundaries},{samples},{interval_checks})")
     print(f"cover_locus=(open_cells,boundary_covers,width_histogram,total_measure)=({cover_samples},{boundary_covers},{widths},{total_measure})")
